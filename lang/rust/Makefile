@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2019/04/04 11:11:06 he Exp $
+# $NetBSD: Makefile,v 1.93 2019/04/08 14:18:39 gdt Exp $
 
 DISTNAME=	rustc-1.33.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -18,9 +18,8 @@ USE_TOOLS+=		bash ggrep gmake perl:build pkg-config
 BUILD_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
 
 # The NetBSD bootstraps are built for NetBSD 8 (because rust doesn't
-# build on 7).  Mark 2-7 as broken (leave 1 out, because 10 will be
-# here soon).
-BROKEN_ON_PLATFORM+=	NetBSD-[2-7]*-*
+# build on 7).  Mark earlier versions as broken.
+BROKEN_ON_PLATFORM+=	NetBSD-[1-7].*-*
 
 CHECK_PORTABILITY_SKIP+=vendor/openssl-src/openssl/.travis-create-release.sh
 
