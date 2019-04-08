@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2017/11/19 15:08:25 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.13 2019/04/08 21:42:57 cheusov Exp $
 bin/mkc_check_compiler
 bin/mkc_check_custom
 bin/mkc_check_decl
@@ -34,6 +34,8 @@ share/examples/mk-configure/check_compiler_opts/Makefile
 share/examples/mk-configure/check_compiler_opts/expect.out
 share/examples/mk-configure/check_compiler_opts/hello_world.c
 share/examples/mk-configure/check_compiler_opts/test.mk
+share/examples/mk-configure/fts/Makefile
+share/examples/mk-configure/fts/fts.c
 share/examples/mk-configure/hello_RBTREE/Makefile
 share/examples/mk-configure/hello_RBTREE/expect.out
 share/examples/mk-configure/hello_RBTREE/hello_RBTREE.c
@@ -225,7 +227,7 @@ share/examples/mk-configure/hello_lua2/Makefile
 share/examples/mk-configure/hello_lua2/bar.lua
 share/examples/mk-configure/hello_lua2/expect.out
 share/examples/mk-configure/hello_lua2/foo.lua
-share/examples/mk-configure/hello_lua2/foobar
+share/examples/mk-configure/hello_lua2/foobar.in
 share/examples/mk-configure/hello_lua2/test.mk
 share/examples/mk-configure/hello_lua3/Makefile
 share/examples/mk-configure/hello_lua3/expect.out
@@ -448,6 +450,7 @@ share/mk-configure/features/progname/progname.c
 share/mk-configure/features/strlcat/strlcat.c
 share/mk-configure/features/strlcpy/strlcpy.c
 share/mk-configure/features/warn/warn.c
+share/mkc-mk/mkc.conf.mk
 share/mkc-mk/mkc.configure.mk
 share/mkc-mk/mkc.files.mk
 share/mkc-mk/mkc.init.mk
@@ -464,7 +467,6 @@ share/mkc-mk/mkc_imp.arch.mk
 share/mkc-mk/mkc_imp.checkprogs.mk
 share/mkc-mk/mkc_imp.conf-cleanup.mk
 share/mkc-mk/mkc_imp.conf-final.mk
-share/mkc-mk/mkc_imp.conf.mk
 share/mkc-mk/mkc_imp.dep.mk
 share/mkc-mk/mkc_imp.dpvars.mk
 share/mkc-mk/mkc_imp.f_CIRCLEQ.mk
