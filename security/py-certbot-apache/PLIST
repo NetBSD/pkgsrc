@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/02/12 12:57:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/04/08 15:48:31 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -65,6 +65,9 @@ ${PYSITELIB}/certbot_apache/tests/augeas_configurator_test.pyo
 ${PYSITELIB}/certbot_apache/tests/autohsts_test.py
 ${PYSITELIB}/certbot_apache/tests/autohsts_test.pyc
 ${PYSITELIB}/certbot_apache/tests/autohsts_test.pyo
+${PYSITELIB}/certbot_apache/tests/centos6_test.py
+${PYSITELIB}/certbot_apache/tests/centos6_test.pyc
+${PYSITELIB}/certbot_apache/tests/centos6_test.pyo
 ${PYSITELIB}/certbot_apache/tests/centos_test.py
 ${PYSITELIB}/certbot_apache/tests/centos_test.pyc
 ${PYSITELIB}/certbot_apache/tests/centos_test.pyo
@@ -95,6 +98,11 @@ ${PYSITELIB}/certbot_apache/tests/obj_test.pyo
 ${PYSITELIB}/certbot_apache/tests/parser_test.py
 ${PYSITELIB}/certbot_apache/tests/parser_test.pyc
 ${PYSITELIB}/certbot_apache/tests/parser_test.pyo
+${PYSITELIB}/certbot_apache/tests/testdata/centos6_apache/apache/httpd/conf.d/README
+${PYSITELIB}/certbot_apache/tests/testdata/centos6_apache/apache/httpd/conf.d/ssl.conf
+${PYSITELIB}/certbot_apache/tests/testdata/centos6_apache/apache/httpd/conf.d/test.example.com.conf
+${PYSITELIB}/certbot_apache/tests/testdata/centos6_apache/apache/httpd/conf.d/welcome.conf
+${PYSITELIB}/certbot_apache/tests/testdata/centos6_apache/apache/httpd/conf/httpd.conf
 ${PYSITELIB}/certbot_apache/tests/testdata/centos7_apache/apache/httpd/conf.d/README
 ${PYSITELIB}/certbot_apache/tests/testdata/centos7_apache/apache/httpd/conf.d/autoindex.conf
 ${PYSITELIB}/certbot_apache/tests/testdata/centos7_apache/apache/httpd/conf.d/centos.example.com.conf
@@ -233,12 +241,6 @@ ${PYSITELIB}/certbot_apache/tests/testdata/gentoo_apache/apache/apache2/vhosts.d
 ${PYSITELIB}/certbot_apache/tests/testdata/gentoo_apache/apache/apache2/vhosts.d/gentoo.example.com.conf
 ${PYSITELIB}/certbot_apache/tests/testdata/gentoo_apache/apache/conf.d/apache2
 ${PYSITELIB}/certbot_apache/tests/testdata/gentoo_apache/apache/sites
-${PYSITELIB}/certbot_apache/tests/tls_sni_01_test.py
-${PYSITELIB}/certbot_apache/tests/tls_sni_01_test.pyc
-${PYSITELIB}/certbot_apache/tests/tls_sni_01_test.pyo
 ${PYSITELIB}/certbot_apache/tests/util.py
 ${PYSITELIB}/certbot_apache/tests/util.pyc
 ${PYSITELIB}/certbot_apache/tests/util.pyo
-${PYSITELIB}/certbot_apache/tls_sni_01.py
-${PYSITELIB}/certbot_apache/tls_sni_01.pyc
-${PYSITELIB}/certbot_apache/tls_sni_01.pyo

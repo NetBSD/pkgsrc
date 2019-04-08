@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2019/03/10 15:23:51 adam Exp $
+# $NetBSD: Makefile,v 1.3 2019/04/08 15:48:31 adam Exp $
 
-DISTNAME=	certbot-dns-luadns-0.32.0
+DISTNAME=	certbot-dns-luadns-0.33.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/certbot-dns-luadns/}
