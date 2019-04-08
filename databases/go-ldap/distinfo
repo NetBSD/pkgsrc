@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/04/08 16:15:41 adam Exp $
+
+SHA1 (ldap-3.0.2.tar.gz) = da39324c3d46fc884b7c5e075bfb0d6b72308e26
+RMD160 (ldap-3.0.2.tar.gz) = 1eb491495768a214265ed51a519b232353731c91
+SHA512 (ldap-3.0.2.tar.gz) = 5158d7a7935a3c1f88e041788f1b0c0b48ae2716217280e3e9426413cb52e45fc7be3c5531d52318e40c3138b47f8f2c6bc3f6ae39f09afca57ef209a73da7fe
+Size (ldap-3.0.2.tar.gz) = 41053 bytes

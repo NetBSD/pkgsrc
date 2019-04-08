@@ -1,0 +1,12 @@
+Basic LDAP v3 functionality for the GO programming language.
+
+Features:
+* Connecting to LDAP server (non-TLS, TLS, STARTTLS)
+* Binding to LDAP server
+* Searching for entries
+* Filter Compile / Decompile
+* Paging Search Results
+* Modify Requests / Responses
+* Add Requests / Responses
+* Delete Requests / Responses
+* Modify DN Requests / Responses
