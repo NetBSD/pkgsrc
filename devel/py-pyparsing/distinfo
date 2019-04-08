@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2019/01/15 11:37:21 adam Exp $
+$NetBSD: distinfo,v 1.12 2019/04/08 10:41:05 adam Exp $
 
-SHA1 (pyparsing-2.3.1.tar.gz) = 616f04f73e8f168140df4d2c349dfae3259bf496
-RMD160 (pyparsing-2.3.1.tar.gz) = 90fca0886feae2fc8718fdd35a4390c55cc3cf5c
-SHA512 (pyparsing-2.3.1.tar.gz) = fc8342780c38fd08c07d0b885c4d6c77d59f38098aa13c3abd05a790ee6caf2065a0bdab33bc290a6e2da123f4ac7e38c049e389b740546499dc48eba7ae431f
-Size (pyparsing-2.3.1.tar.gz) = 596497 bytes
+SHA1 (pyparsing-2.4.0.tar.gz) = dfddeaf3e8973875693d1a40ccee87f39dd120bd
+RMD160 (pyparsing-2.4.0.tar.gz) = 6d139406b6b5bee25d04df435c8b42c0dabf10ea
+SHA512 (pyparsing-2.4.0.tar.gz) = 71877dc006cce5c1b1d45e7cc89cd60e03cb80353387fb0c6498cfc0d69af465dc574d1bceb87248033e7a82694aa940e9fce1ca80b2ef538a8df51f697ef530
+Size (pyparsing-2.4.0.tar.gz) = 611956 bytes
