@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2019/03/06 14:35:49 gdt Exp $
+# $NetBSD: Makefile,v 1.8 2019/04/08 19:46:45 gdt Exp $
 
+# Upgrade to 1.5.1 is on hold because it requires proj 6
+#DISTNAME=	libgeotiff-1.5.1
 DISTNAME=	libgeotiff-1.4.3
 CATEGORIES=	graphics
-MASTER_SITES=	http://download.osgeo.org/geotiff/libgeotiff/
+MASTER_SITES=	https://download.osgeo.org/geotiff/libgeotiff/
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://trac.osgeo.org/geotiff/
