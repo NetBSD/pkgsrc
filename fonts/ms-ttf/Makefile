@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2015/11/25 12:50:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.24 2019/04/08 07:59:24 wiz Exp $
 
 DISTNAME=	# empty
 PKGNAME=	ms-ttf-20020306
@@ -22,16 +22,11 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
-
 DIST_SUBDIR=	ms-ttf
 EXTRACT_CMD=	${LOCALBASE}/bin/cabextract -q $${extract_file}
-FONTDIR=	${PREFIX}/share/fonts/X11/TTF
 DOCDIR=		${PREFIX}/share/doc/ms-ttf
-FONTS_DIRS.ttf=	${FONTDIR}
 
-INSTALLATION_DIRS=	${FONTDIR} ${DOCDIR}
+INSTALLATION_DIRS+=	${DOCDIR}
 
 post-extract:
 	${RUN}								\
@@ -40,9 +35,7 @@ post-extract:
 	done
 
 do-install:
-	cd ${WRKSRC} && for f in *.ttf ; do \
-		${INSTALL_DATA} $$f ${DESTDIR}${FONTDIR}/$$f; \
-	done
 	${INSTALL_DATA} ${.CURDIR}/../../licenses/${LICENSE} ${DESTDIR}${DOCDIR}
 
+.include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"
