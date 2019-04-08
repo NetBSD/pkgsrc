@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/01/30 11:46:26 leot Exp $
+$NetBSD: distinfo,v 1.3 2019/04/08 20:56:14 leot Exp $
 
-SHA1 (noice-0.7.tar.gz) = 6a6eff0ea260b527faf7b681f0bd36556e2807f4
-RMD160 (noice-0.7.tar.gz) = d1f972fd74325f9060e42d854cda8606bd0a877d
-SHA512 (noice-0.7.tar.gz) = f871cb32cb2840529b6dd7ad3af8a28c2df0a43cb40aef0e4f4aef54c5fb5cf221c03150c6f27aa614bffca4b8aca62369cc3f6c77d6a66a39ae551741b8d563
-Size (noice-0.7.tar.gz) = 10465 bytes
+SHA1 (noice-0.8.tar.gz) = d80c41bdfdfcd5f8f73183b98eb4bcdbdff6bba4
+RMD160 (noice-0.8.tar.gz) = ac3991fa327d9fd9bee2940c64a69a55bec0f23a
+SHA512 (noice-0.8.tar.gz) = 96e7115eb97e7ea82490d92498e495bb96d2a458f7043904abdadf1d44dd7577dc52ecc420f450c5c2bfbfab9c0340b5814410e4eb26c0e62ef94298f7f86eeb
+Size (noice-0.8.tar.gz) = 10492 bytes
