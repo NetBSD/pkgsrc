@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2019/04/03 14:23:06 adam Exp $
+# $NetBSD: Makefile,v 1.65 2019/04/08 18:35:58 adam Exp $
 
-DISTNAME=	samba-4.10.1
+DISTNAME=	samba-4.10.2
 CATEGORIES=	net
 MASTER_SITES=	http://download.samba.org/pub/samba/stable/
 
