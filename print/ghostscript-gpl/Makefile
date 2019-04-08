@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2019/03/18 16:17:50 gdt Exp $
+# $NetBSD: Makefile,v 1.50 2019/04/08 23:41:08 gdt Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-gpl/}
@@ -9,6 +9,8 @@ MASTER_SITES+=	https://ghostscript.com/releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
+# Despite having a HOMEPAGE, this package does not have an upstream,
+# because upstream maintains what we call ghostscript-agpl.
 HOMEPAGE=	https://ghostscript.com/
 COMMENT=	Postscript interpreter
 
