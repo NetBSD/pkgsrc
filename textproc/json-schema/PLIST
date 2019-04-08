@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2018/12/23 17:22:21 wiz Exp $
-include/Pointer.h
-include/SchemaValidator.h
-include/URI.h
+@comment $NetBSD: PLIST,v 1.2 2019/04/08 15:45:01 wiz Exp $
+include/json/Pointer.h
+include/json/SchemaValidator.h
+include/json/URI.h
 lib/libjson-schema.a
 lib/pkgconfig/json-schema.pc
