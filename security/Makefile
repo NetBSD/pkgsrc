@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.700 2019/03/21 13:33:41 leot Exp $
+# $NetBSD: Makefile,v 1.701 2019/04/08 16:14:51 adam Exp $
 #
 
 COMMENT=	Security tools
@@ -97,6 +97,7 @@ SUBDIR+=	gnupg
 SUBDIR+=	gnupg-pkcs11-scd
 SUBDIR+=	gnupg2
 SUBDIR+=	gnutls
+SUBDIR+=	go-asn1-ber
 SUBDIR+=	go-crypt
 SUBDIR+=	go-crypto
 SUBDIR+=	go-mkcert
