@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1644 2019/04/08 10:41:22 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1645 2019/04/08 15:45:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2578,3 +2578,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/py-yaml to 5.1 [adam 2019-04-07]
 	Updated devel/py-isort to 4.3.17 [adam 2019-04-08]
 	Updated devel/py-pyparsing to 2.4.0 [adam 2019-04-08]
+	Updated textproc/json-schema to 1.1 [wiz 2019-04-08]
