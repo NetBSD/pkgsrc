@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2018/03/12 11:16:37 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/04/09 00:21:03 gdt Exp $
 #
 
+# Update to 1.5.4 is 99% done, but stalled due to incompatibility with
+# modern qt.  Please check with $MAINTAINER before changing.
 DISTNAME=	gpsbabel-1.5.2
 PKGREVISION=	3
 CATEGORIES=	geography
