@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/01/18 17:11:38 adam Exp $
+$NetBSD: distinfo,v 1.5 2019/04/09 06:04:13 adam Exp $
 
-SHA1 (cmark-0.28.3.tar.gz) = b133cae62bdb0a97409a4d6bd1155057f8f3079b
-RMD160 (cmark-0.28.3.tar.gz) = 46f2cf107eee4d2893f7845106b62e1a60b32298
-SHA512 (cmark-0.28.3.tar.gz) = 409105a3228a8ae22ba6acf95cd99bc9a2c20f8603aa0e803a33172eb6ef53f80f8f0262d2258b77f9fd6e1f2e9017a6c906b88f761e053c09ef88c9ffab7d29
-Size (cmark-0.28.3.tar.gz) = 229391 bytes
+SHA1 (cmark-0.29.0.tar.gz) = d294240c6f889beb14936f75f8183a2bc19a1ab8
+RMD160 (cmark-0.29.0.tar.gz) = 1f6feada790727a924352edfefe80f83fc1be162
+SHA512 (cmark-0.29.0.tar.gz) = 06eb110cfd90c9e980c022b7588e28864d15a4da5d07d61ad4b27c6de47367492b9e58e9434e62b07517aa6dc484f17af13916808be3188f38c37d20cbf33112
+Size (cmark-0.29.0.tar.gz) = 234545 bytes
