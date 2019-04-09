@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/02/25 08:49:12 adam Exp $
+$NetBSD: distinfo,v 1.3 2019/04/09 08:42:19 adam Exp $
 
-SHA1 (Flask-Caching-1.5.0.tar.gz) = a10efa72088f9ea37c8abae814070f9b3244d73b
-RMD160 (Flask-Caching-1.5.0.tar.gz) = 7cb751e15e4539fd15cbdadc05655bb5de205b89
-SHA512 (Flask-Caching-1.5.0.tar.gz) = 2a06377d74089062de689aeeb624fe238826b4131f04dbad02f4745a7632075061bae6164400fb1b95260fdcdeafce5da46d02b13fda94511bb12b215f8cc07f
-Size (Flask-Caching-1.5.0.tar.gz) = 64783 bytes
+SHA1 (Flask-Caching-1.7.0.tar.gz) = 577248446cd1af764f22812379e150e3142ba066
+RMD160 (Flask-Caching-1.7.0.tar.gz) = 19c47547bbf5c9d1640adb25114888edb2277dd8
+SHA512 (Flask-Caching-1.7.0.tar.gz) = a19fb6a6d8cd69b7ec883f4d9faa49124a132cb1529c08c14f4c45467f6352a365e019d50a2352b4e957f582dcf6244b793cccd8820f5c1a43f736535c0b0bf2
+Size (Flask-Caching-1.7.0.tar.gz) = 66017 bytes
