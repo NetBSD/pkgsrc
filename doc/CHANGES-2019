@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1656 2019/04/09 08:11:04 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1657 2019/04/09 08:42:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2603,3 +2603,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/json-schema to 1.2 [wiz 2019-04-09]
 	Updated devel/py-tox to 3.8.6 [adam 2019-04-09]
 	Updated devel/py-path.py to 11.5.2 [adam 2019-04-09]
+	Updated devel/py-pexpect to 4.7.0 [adam 2019-04-09]
+	Updated www/py-flask-caching to 1.7.0 [adam 2019-04-09]
