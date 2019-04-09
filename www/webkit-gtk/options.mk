@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2018/11/05 16:50:48 bsiegert Exp $
+# $NetBSD: options.mk,v 1.15 2019/04/09 15:34:04 leot Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.webkit-gtk
@@ -11,6 +11,10 @@ PLIST_VARS=	introspection
 
 #
 # Platforms that support the webkit-jit option
+#
+# Please see:
+#  Source/cmake/WebKitFeatures.cmake
+#  Source/WTF/wtf/Platform.h
 #
 WEBKIT_JIT_MACHINE_PLATFORMS+=	Darwin-*-*
 WEBKIT_JIT_MACHINE_PLATFORMS+=	DragonFly-*-*
