@@ -1,7 +1,10 @@
-$NetBSD: patch-encfs_FileUtils.cpp,v 1.1 2019/04/09 16:32:28 maya Exp $
+$NetBSD: patch-encfs_FileUtils.cpp,v 1.2 2019/04/09 16:43:10 maya Exp $
 
-Unclear FUSE API mismatch. fuse_unmount as of FUSE 3.0 seems to take
-a single argument, but NetBSD perfuse thinks it's since FUSE 2.2.
+NetBSD ReFUSE doesn't have the fuse_unmount from FUSE 2.2 - FUSE 2.9.
+Workaround by using the version belonging to FUSE >= 3.0.
+
+This might be a temporal aberration: NetBSD ReFUSE had the newer FUSE
+API before upstream FUSE did.
 
 --- encfs/FileUtils.cpp.orig	2018-01-28 21:07:41.000000000 +0000
 +++ encfs/FileUtils.cpp
