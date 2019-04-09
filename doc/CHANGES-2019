@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1654 2019/04/09 07:09:22 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1655 2019/04/09 07:33:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2600,3 +2600,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated geography/gama to 2.04 [gdt 2019-04-08]
 	Updated textproc/cmark to 0.29.0 [adam 2019-04-09]
 	Updated textproc/jsoncpp to 1.8.4nb2 [wiz 2019-04-09]
+	Updated textproc/json-schema to 1.2 [wiz 2019-04-09]
