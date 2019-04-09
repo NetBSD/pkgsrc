@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.65 2019/04/03 06:02:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.66 2019/04/09 13:09:43 ryoon Exp $
 bin/gimp
 bin/gimp-2.10
 bin/gimp-console
@@ -228,6 +228,7 @@ include/gimp-2.0/libgimpwidgets/gimpruler.h
 include/gimp-2.0/libgimpwidgets/gimpscaleentry.h
 include/gimp-2.0/libgimpwidgets/gimpscrolledpreview.h
 include/gimp-2.0/libgimpwidgets/gimpsizeentry.h
+include/gimp-2.0/libgimpwidgets/gimpspinbutton.h
 include/gimp-2.0/libgimpwidgets/gimpstringcombobox.h
 include/gimp-2.0/libgimpwidgets/gimpunitcombobox.h
 include/gimp-2.0/libgimpwidgets/gimpunitmenu.h
@@ -280,6 +281,7 @@ lib/gimp/2.0/plug-ins/file-cel/file-cel
 lib/gimp/2.0/plug-ins/file-compressor/file-compressor
 lib/gimp/2.0/plug-ins/file-csource/file-csource
 lib/gimp/2.0/plug-ins/file-darktable/file-darktable
+lib/gimp/2.0/plug-ins/file-dds/file-dds
 lib/gimp/2.0/plug-ins/file-desktop-link/file-desktop-link
 lib/gimp/2.0/plug-ins/file-dicom/file-dicom
 lib/gimp/2.0/plug-ins/file-faxg3/file-faxg3
@@ -3610,6 +3612,7 @@ share/gtk-doc/html/libgimpwidgets/GimpUnitComboBox.html
 share/gtk-doc/html/libgimpwidgets/GimpUnitMenu.html
 share/gtk-doc/html/libgimpwidgets/GimpUnitStore.html
 share/gtk-doc/html/libgimpwidgets/GimpZoomModel.html
+share/gtk-doc/html/libgimpwidgets/api-index-2-10-10.html
 share/gtk-doc/html/libgimpwidgets/api-index-2-10-4.html
 share/gtk-doc/html/libgimpwidgets/api-index-2-10.html
 share/gtk-doc/html/libgimpwidgets/api-index-2-2.html
