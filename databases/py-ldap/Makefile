@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.82 2018/10/23 08:58:27 adam Exp $
+# $NetBSD: Makefile,v 1.83 2019/04/09 11:51:20 adam Exp $
 
-DISTNAME=	python-ldap-3.1.0
+DISTNAME=	python-ldap-3.2.0
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-ldap/}
@@ -12,6 +12,10 @@ LICENSE=	python-software-foundation
 
 DEPENDS+=	${PYPKGPREFIX}-asn1>=0.3.7:../../security/py-asn1
 DEPENDS+=	${PYPKGPREFIX}-asn1-modules>=0.1.5:../../security/py-asn1-modules
+TEST_DEPENDS+=	openldap-server-[0-9]*:../../databases/openldap-server
+TEST_ENV+=	BIN=${PREFIX}/bin
+TEST_ENV+=	SBIN=${PREFIX}/sbin
+TEST_ENV+=	SLAPD=${PREFIX}/libexec/slapd
 
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
