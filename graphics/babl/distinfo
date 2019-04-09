@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.20 2018/11/22 12:59:07 ryoon Exp $
+$NetBSD: distinfo,v 1.21 2019/04/09 13:08:00 ryoon Exp $
 
-SHA1 (babl-0.1.60.tar.bz2) = 3582b064d9c605d669ea74df2bc7437d9f322b40
-RMD160 (babl-0.1.60.tar.bz2) = 599e621a0f7458257eed64de9daac78834f67601
-SHA512 (babl-0.1.60.tar.bz2) = a65533b4527c4334c7ab14fb16be41e3e2e93f51bbeb24dd427fa9263e25fa8ad83337b73a805bebc2414fb57bccceaa681f89ce5c5187bd0a03703bf07cccc2
-Size (babl-0.1.60.tar.bz2) = 685707 bytes
+SHA1 (babl-0.1.62.tar.bz2) = aed2d7c093174a76179b4916f09da2769070dc2b
+RMD160 (babl-0.1.62.tar.bz2) = 58cb4dbd495251c598281ef801be62c0f1b9520f
+SHA512 (babl-0.1.62.tar.bz2) = 4d2ba25e39b8dcb122913731861fa04cafd97388a1c354afb2188e8582ac78e9e32f838e2be8e9f41ee9ac582081fdee1d79accb60e824b8b2c12995f96a8293
+Size (babl-0.1.62.tar.bz2) = 698161 bytes
 SHA1 (patch-extensions_gggl.c) = fd0c5258436ebacfc0e866a236fb863b0dfd9bc0
