@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1659 2019/04/09 12:07:00 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1660 2019/04/09 12:45:42 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2609,3 +2609,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/py-scp to 0.13.2 [adam 2019-04-09]
 	Updated databases/py-ldap to 3.2.0 [adam 2019-04-09]
 	Updated databases/py-ldap3 to 2.6 [adam 2019-04-09]
+	Updated www/webkit-gtk to 2.24.1 [leot 2019-04-09]
