@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2019/01/13 18:02:41 adam Exp $
+# $NetBSD: Makefile,v 1.16 2019/04/09 07:51:41 adam Exp $
 
-DISTNAME=	tox-3.7.0
+DISTNAME=	tox-3.8.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tox/}
@@ -18,6 +18,8 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.0.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-toml>=0.9.4:../../textproc/py-toml
 DEPENDS+=	${PYPKGPREFIX}-virtualenv>=1.11.2:../../devel/py-virtualenv
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun>=0.3.11:../../devel/py-freezegun
+TEST_DEPENDS+=	${PYPKGPREFIX}-pathlib2>=2.3.3:../../devel/py-pathlib2
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.0.0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.5.1:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=1.10.0:../../devel/py-test-mock
