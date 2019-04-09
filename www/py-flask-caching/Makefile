@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2019/02/25 08:49:12 adam Exp $
+# $NetBSD: Makefile,v 1.3 2019/04/09 08:42:19 adam Exp $
 
-DISTNAME=	Flask-Caching-1.5.0
+DISTNAME=	Flask-Caching-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Caching/}
@@ -11,7 +11,9 @@ COMMENT=	Caching support to your Flask application
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask
+TEST_DEPENDS+=	${PYPKGPREFIX}-libmc-[0-9]*:../../devel/py-libmc
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xprocess-[0-9]*:../../devel/py-test-xprocess
 
