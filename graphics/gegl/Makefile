@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.70 2018/11/22 13:00:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.71 2019/04/09 13:09:03 ryoon Exp $
 
-DISTNAME=	gegl-0.4.12
+DISTNAME=	gegl-0.4.14
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.gimp.org/pub/gegl/0.4/
 EXTRACT_SUFX=	.tar.bz2
@@ -38,6 +38,7 @@ BUILDLINK_API_DEPENDS.babl+=	babl>=0.1.52
 .include "../../graphics/babl/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
+.include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"

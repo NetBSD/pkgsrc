@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2018/11/22 13:00:03 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.22 2019/04/09 13:09:03 ryoon Exp $
 bin/gegl
 bin/gegl-gcut
 bin/gegl-imgcmp
@@ -8,8 +8,8 @@ include/gegl-0.4/gegl-buffer-backend.h
 include/gegl-0.4/gegl-buffer-cl-iterator.h
 include/gegl-0.4/gegl-buffer-enums.h
 include/gegl-0.4/gegl-buffer-iterator.h
-include/gegl-0.4/gegl-buffer-iterator2.h
 include/gegl-0.4/gegl-buffer-matrix2.h
+include/gegl-0.4/gegl-buffer-swap.h
 include/gegl-0.4/gegl-buffer.h
 include/gegl-0.4/gegl-color.h
 include/gegl-0.4/gegl-cpuaccel.h
@@ -20,15 +20,18 @@ include/gegl-0.4/gegl-graph-debug.h
 include/gegl-0.4/gegl-init.h
 include/gegl-0.4/gegl-lookup.h
 include/gegl-0.4/gegl-matrix.h
+include/gegl-0.4/gegl-memory.h
 include/gegl-0.4/gegl-node.h
 include/gegl-0.4/gegl-op.h
 include/gegl-0.4/gegl-operations-util.h
+include/gegl-0.4/gegl-parallel.h
 include/gegl-0.4/gegl-paramspecs.h
 include/gegl-0.4/gegl-path.h
 include/gegl-0.4/gegl-plugin.h
 include/gegl-0.4/gegl-processor.h
 include/gegl-0.4/gegl-random.h
 include/gegl-0.4/gegl-rectangle.h
+include/gegl-0.4/gegl-scratch.h
 include/gegl-0.4/gegl-tile-backend.h
 include/gegl-0.4/gegl-tile-handler.h
 include/gegl-0.4/gegl-tile-source.h
@@ -81,6 +84,7 @@ include/gegl-0.4/sc/sc-outline.h
 include/gegl-0.4/sc/sc-sample.h
 lib/gegl-0.4/exr-load.la
 lib/gegl-0.4/exr-save.la
+lib/gegl-0.4/gegl-common-cxx.la
 lib/gegl-0.4/gegl-common-gpl3.la
 lib/gegl-0.4/gegl-common.la
 lib/gegl-0.4/gegl-core.la
@@ -90,6 +94,7 @@ lib/gegl-0.4/grey2.json
 lib/gegl-0.4/jp2-load.la
 lib/gegl-0.4/jpg-load.la
 lib/gegl-0.4/jpg-save.la
+lib/gegl-0.4/lcms-from-profile.la
 lib/gegl-0.4/npd.la
 lib/gegl-0.4/npy-save.la
 lib/gegl-0.4/path.la
@@ -103,7 +108,7 @@ lib/gegl-0.4/rgbe-save.la
 lib/gegl-0.4/save-pixbuf.la
 lib/gegl-0.4/seamless-clone-compose.la
 lib/gegl-0.4/seamless-clone.la
-lib/gegl-0.4/svg-load.la
+${PLIST.svg}lib/gegl-0.4/svg-load.la
 lib/gegl-0.4/text.la
 lib/gegl-0.4/transformops.la
 lib/gegl-0.4/vector-fill.la
