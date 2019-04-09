@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1660 2019/04/09 12:45:42 leot Exp $
+$NetBSD: CHANGES-2019,v 1.1661 2019/04/09 13:08:21 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2610,3 +2610,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/py-ldap to 3.2.0 [adam 2019-04-09]
 	Updated databases/py-ldap3 to 2.6 [adam 2019-04-09]
 	Updated www/webkit-gtk to 2.24.1 [leot 2019-04-09]
+	Updated graphics/babl to 0.1.62 [ryoon 2019-04-09]
