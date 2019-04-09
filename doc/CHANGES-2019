@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1652 2019/04/08 23:09:26 gdt Exp $
+$NetBSD: CHANGES-2019,v 1.1653 2019/04/09 06:04:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2598,3 +2598,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/noice to 0.8 [leot 2019-04-08]
 	Updated devel/mk-configure to 0.31.0 [cheusov 2019-04-08]
 	Updated geography/gama to 2.04 [gdt 2019-04-08]
+	Updated textproc/cmark to 0.29.0 [adam 2019-04-09]
