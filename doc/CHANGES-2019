@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1657 2019/04/09 08:42:38 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1658 2019/04/09 10:53:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2605,3 +2605,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-path.py to 11.5.2 [adam 2019-04-09]
 	Updated devel/py-pexpect to 4.7.0 [adam 2019-04-09]
 	Updated www/py-flask-caching to 1.7.0 [adam 2019-04-09]
+	Updated devel/py-rply to 0.7.7 [adam 2019-04-09]
+	Updated net/py-scp to 0.13.2 [adam 2019-04-09]
