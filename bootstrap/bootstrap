@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.261 2019/02/06 17:38:54 triaxx Exp $
+# $NetBSD: bootstrap,v 1.262 2019/04/10 08:24:03 adam Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -1249,7 +1249,7 @@ $shprog ./configure $configure_quiet_flags --enable-static --disable-shared \
 --disable-bsdtar --disable-bsdcpio --disable-posix-regex-lib --disable-xattr \
 --disable-maintainer-mode --disable-acl --without-zlib --without-bz2lib \
 --without-lzmadec --without-iconv --without-lzma --without-lzo2 --without-lz4 \
---without-nettle --without-openssl --without-xml2 --without-expat \
+--without-nettle --without-openssl --without-xml2 --without-expat --without-zstd \
 MAKE=$bmake && $bmake $make_quiet_flags -j$make_jobs)"
 copy_src $pkgsrcdir/pkgtools/pkg_install/files pkg_install
 run_cmd "(cd $wrkdir/pkg_install; env $BSTRAP_ENV \
