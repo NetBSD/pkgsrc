@@ -8,7 +8,8 @@ NAME
      archive_write_add_filter_lzip, archive_write_add_filter_lzma,
      archive_write_add_filter_lzop, archive_write_add_filter_none,
      archive_write_add_filter_program, archive_write_add_filter_uuencode,
-     archive_write_add_filter_xz — functions enabling output filters
+     archive_write_add_filter_xz, archive_write_add_filter_zstd, — functions
+     enabling output filters
 
 LIBRARY
      Streaming Archive Library (libarchive, -larchive)
@@ -58,6 +59,9 @@ SYNOPSIS
      int
      archive_write_add_filter_xz(struct archive *);
 
+     int
+     archive_write_add_filter_zstd(struct archive *);
+
 DESCRIPTION
      archive_write_add_filter_bzip2(), archive_write_add_filter_compress(),
 	     archive_write_add_filter_grzip(),
@@ -65,6 +69,7 @@ DESCRIPTION
 	     archive_write_add_filter_lrzip(), archive_write_add_filter_lz4(),
 	     archive_write_add_filter_lzip(), archive_write_add_filter_lzma(),
 	     archive_write_add_filter_lzop(), archive_write_add_filter_xz(),
+	     archive_write_add_filter_zstd(),
 	     The resulting archive will be compressed as specified.  Note that
 	     the compressed output is always properly blocked.
 

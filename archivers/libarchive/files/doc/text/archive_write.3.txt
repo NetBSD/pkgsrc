@@ -31,7 +31,7 @@ DESCRIPTION
      functions to enable the corresponding compression and format support.
 
    Set options
-     See archive_read_set_options(3).
+     See archive_write_set_options(3).
 
    Open archive
      See archive_write_open(3).

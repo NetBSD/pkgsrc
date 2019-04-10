@@ -6,7 +6,7 @@ NAME
      archive_read_support_filter_lz4, archive_read_support_filter_lzma,
      archive_read_support_filter_none, archive_read_support_filter_rpm,
      archive_read_support_filter_uu, archive_read_support_filter_xz,
-     archive_read_support_filter_program,
+     archive_read_support_filter_zstd, archive_read_support_filter_program,
      archive_read_support_filter_program_signature — functions for reading
      streaming archives
 
@@ -56,6 +56,9 @@ SYNOPSIS
      archive_read_support_filter_xz(struct archive *);
 
      int
+     archive_read_support_filter_zstd(struct archive *);
+
+     int
      archive_read_support_filter_program(struct archive *, const char *cmd);
 
      int
@@ -74,7 +77,8 @@ DESCRIPTION
 	     archive_read_support_filter_none(),
 	     archive_read_support_filter_rpm(),
 	     archive_read_support_filter_uu(),
-	     archive_read_support_filter_xz()
+	     archive_read_support_filter_xz(),
+	     archive_read_support_filter_zstd(),
 	     Enables auto-detection code and decompression support for the
 	     specified compression.  These functions may fall back on external
 	     programs if an appropriate library was not available at build

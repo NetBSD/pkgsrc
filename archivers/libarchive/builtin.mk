@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.9 2018/06/07 14:28:42 leot Exp $
+# $NetBSD: builtin.mk,v 1.10 2019/04/10 08:24:03 adam Exp $
 
 BUILTIN_PKG:=	libarchive
 
@@ -93,11 +93,11 @@ MAKEVARS+=	USE_BUILTIN.libarchive
 ### The section below only applies if we are not including this file
 ### solely to determine whether a built-in implementation exists.
 ###
-CHECK_BUILTIN.libarchive?= no
+CHECK_BUILTIN.libarchive?=	no
 .if !empty(CHECK_BUILTIN.libarchive:M[nN][oO])
 .  if !empty(USE_BUILTIN.libarchive:M[yY][eE][sS])
 
-BUILDLINK_TARGETS+=     fake-libarchive-pc
+BUILDLINK_TARGETS+=	fake-libarchive-pc
 
 _FAKE_LIBARCHIVE_PC=	${BUILDLINK_DIR}/lib/pkgconfig/libarchive.pc
 _LIBARCHIVE_LIBS=	-llzma -lbz2 -lz

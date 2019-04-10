@@ -40,7 +40,7 @@ functions to enable the corresponding compression and format
 support. 
 === Set options=== 
 See 
-[[ManPagerchiveeadetptions3]]. 
+[[ManPagerchiveriteetptions3]]. 
 === Open archive=== 
 See 
 [[ManPagerchiveritepen3]]. 

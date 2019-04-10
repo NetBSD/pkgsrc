@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.22.3 -->
-<!-- CreationDate: Mon Jul 10 02:32:55 2017 -->
+<!-- CreationDate: Mon Sep  3 22:55:08 2018 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -36,6 +36,7 @@ ARCHIVE_READ_FILTER(3)</p>
 <b>archive_read_support_filter_rpm</b>,
 <b>archive_read_support_filter_uu</b>,
 <b>archive_read_support_filter_xz</b>,
+<b>archive_read_support_filter_zstd</b>,
 <b>archive_read_support_filter_program</b>,
 <b>archive_read_support_filter_program_signature</b> &mdash;
 functions for reading streaming archives</p>
@@ -118,6 +119,11 @@ functions for reading streaming archives</p>
 <p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
 
 
+<p style="margin-left:12%;"><b>archive_read_support_filter_zstd</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
+
+<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
+
+
 <p><b>archive_read_support_filter_program</b>(<i>struct&nbsp;archive&nbsp;*</i>,
 <i>const&nbsp;char&nbsp;*cmd</i>);</p>
 
@@ -141,7 +147,8 @@ archive_read_support_filter_bzip2</b>(),
 <b>archive_read_support_filter_none</b>(),
 <b>archive_read_support_filter_rpm</b>(),
 <b>archive_read_support_filter_uu</b>(),
-<b>archive_read_support_filter_xz</b>()</p>
+<b>archive_read_support_filter_xz</b>(),
+<b>archive_read_support_filter_zstd</b>(),</p>
 
 <p style="margin-left:17%;">Enables auto-detection code and
 decompression support for the specified compression. These
