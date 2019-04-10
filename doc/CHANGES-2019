@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1668 2019/04/10 08:24:37 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1669 2019/04/10 12:56:06 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2619,3 +2619,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated misc/mate-utils to 1.22.0nb1 [gutteridge 2019-04-10]
 	Updated archivers/libarchive to 3.3.3 [adam 2019-04-10]
 	Updated archivers/bsdtar to 3.3.3 [adam 2019-04-10]
+	Removed graphics/gegl0.2 [ryoon 2019-04-10]
