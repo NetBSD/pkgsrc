@@ -1,0 +1,17 @@
+$NetBSD: patch-gsearchtool_help_Makefile.in,v 1.1 2019/04/10 01:07:10 gutteridge Exp $
+
+Disable the pt translation, since it causes itstool to fail at random.
+This is PR pkg/54071 in pkgsrc.
+Upstream is https://github.com/itstool/itstool/issues/36
+
+--- gsearchtool/help/Makefile.in.orig	2019-02-25 18:52:25.000000000 +0000
++++ gsearchtool/help/Makefile.in
+@@ -338,7 +338,7 @@ HELP_FILES = index.docbook legal.xml
+ HELP_MEDIA = figures/mate-search-tool_window.png
+ 
+ # Add linguas to be ignored, e.g. IGNORE_HELP_LINGUAS = ca de es fr
+-IGNORE_HELP_LINGUAS = 
++IGNORE_HELP_LINGUAS = pt
+ HELP_LINGUAS = $(if $(IGNORE_HELP_LINGUAS), \
+ 	$(filter-out $(IGNORE_HELP_LINGUAS),$(subst /,,$(dir $(wildcard */*.po)))), \
+ 	$(subst /,,$(dir $(wildcard */*.po))) )
