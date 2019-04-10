@@ -2115,7 +2115,7 @@ void assertVersion(const char *prog, const char *base)
 	int r;
 	char *p, *q;
 	size_t s;
-	unsigned int prog_len = strlen(base);
+	size_t prog_len = strlen(base);
 
 	r = systemf("%s --version >version.stdout 2>version.stderr", prog);
 	if (r != 0)
@@ -2313,6 +2313,21 @@ canLz4(void)
 	if (!tested) {
 		tested = 1;
 		if (systemf("lz4 -V %s", redirectArgs) == 0)
+			value = 1;
+	}
+	return (value);
+}
+
+/*
+ * Can this platform run the zstd program?
+ */
+int
+canZstd(void)
+{
+	static int tested = 0, value = 0;
+	if (!tested) {
+		tested = 1;
+		if (systemf("zstd -V %s", redirectArgs) == 0)
 			value = 1;
 	}
 	return (value);
