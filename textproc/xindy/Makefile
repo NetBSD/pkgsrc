@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2019/03/07 18:02:16 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2019/04/10 11:49:43 markd Exp $
 
 DISTNAME=	texlive-20180414-source
 PKGNAME=	xindy-2.5.1
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2018/
 EXTRACT_SUFX=	.tar.xz
@@ -34,6 +35,9 @@ post-install:
                 ${MAKE_PROGRAM} install-exec-hook
 	rm -rf ${DESTDIR}${PREFIX}/${PKGMANDIR}
 
+.include "../../devel/libffcall/buildlink3.mk"
+.include "../../devel/libsigsegv/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 BUILDLINK_DEPMETHOD.clisp=	build
 .include "../../lang/clisp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
