@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.62 2019/01/17 22:49:12 schmonz Exp $
+# $NetBSD: options.mk,v 1.63 2019/04/10 22:24:57 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=		eai inet6 pam syncdir tai-system-clock tls
@@ -105,10 +105,8 @@ MAKEVARS+=	PKG_SYSCONFDIR.libtai
 PLIST_VARS+=			tls
 .if !empty(PKG_OPTIONS:Mtls)
 PLIST.tls=			yes
-BUILDLINK_API_DEPENDS.openssl+=	openssl<1.1
-BUILDLINK_ABI_DEPENDS.openssl+=	openssl<1.1
 .  include "../../security/openssl/buildlink3.mk"
-CFLAGS+=			-DTLS=20160918	# NOTE: match what's _in_ the patch
+CFLAGS+=			-DTLS=20190408	# NOTE: match what's _in_ the patch
 USE_TOOLS+=			openssl
 SUBST_CLASSES+=			tmprsadh
 SUBST_STAGE.tmprsadh=		do-configure
