@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/04/04 10:08:12 he Exp $
+# $NetBSD: Makefile,v 1.23 2019/04/10 17:47:33 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -45,6 +45,9 @@ ZABBIX_USER?=		zabbix
 PKG_GROUPS+=		${ZABBIX_GROUP}
 PKG_USERS+=		${ZABBIX_USER}:${ZABBIX_GROUP}
 PKG_GECOS.${ZABBIX_USER}=Zabbix user
+
+FILES_SUBST+=		ZABBIX_USER=${ZABBIX_USER}
+FILES_SUBST+=		ZABBIX_GROUP=${ZABBIX_GROUP}
 
 post-install:
 	cd ${WRKSRC}/database/${ZABBIX_DB_TYPE}; \
