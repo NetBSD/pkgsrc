@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.109 2019/01/17 22:49:12 schmonz Exp $
+# $NetBSD: Makefile,v 1.110 2019/04/10 22:24:57 schmonz Exp $
 #
 
 DISTNAME=		netqmail-1.06
 PKGNAME=		qmail-1.03
-PKGREVISION=		44
+PKGREVISION=		45
 CATEGORIES=		mail
 MASTER_SITES=		http://qmail.org/
 
@@ -147,7 +147,7 @@ READMES=		README.pkgsrc
 QMAILPATCHES=			netqmail:${DEFAULT_DISTFILES}
 
 QMAILPATCHES+=			tls:${TLSREMOTE_PATCH}
-TLSREMOTE_PATCH=		netqmail-1.06-tls-20160918-onlyremote-20181107.patch
+TLSREMOTE_PATCH=		netqmail-1.06-tls-20190408-onlyremote-20190408.patch
 PATCHFILES+=			${TLSREMOTE_PATCH}
 SITES.${TLSREMOTE_PATCH}=	https://schmonz.com/qmail/tlsonlyremote/
 
@@ -207,13 +207,6 @@ post-extract:
 	mkdir ${WRKSRC}/doc &&						\
 	for i in INSTALL SENDMAIL; do					\
 		${MV} ${WRKSRC}/$$i ${WRKSRC}/doc/$$i;			\
-	done
-
-post-patch:
-	cd ${WRKSRC}; \
-	for i in ssl_timeoutio.c tls.c; do \
-		( ${ECHO} '#ifdef TLS'; ${CAT} $$i; ${ECHO} '#endif' ) > $$i.new; \
-		mv $$i.new $$i; \
 	done
 
 post-build:
