@@ -1,14 +1,14 @@
-$NetBSD: patch-ag,v 1.1.1.1 2011/07/09 15:27:11 tron Exp $
+$NetBSD: patch-ag,v 1.2 2019/04/10 21:37:51 maya Exp $
 
 Fix build under NetBSD.
 
 --- fuse-ext2/fuse-ext2.probe.c.orig	2009-11-03 13:50:57.000000000 +0000
-+++ fuse-ext2/fuse-ext2.probe.c	2011-07-09 14:05:33.000000000 +0100
-@@ -35,6 +35,13 @@
++++ fuse-ext2/fuse-ext2.probe.c
+@@ -35,6 +35,13 @@ static const char *usage_msg =
  "%s\n"
  "\n";
  
-+#ifdef __NetBSD__
++#if !HAVE_DECL_FUSE_VERSION
 +static int fuse_version (void)
 +{
 +	return FUSE_VERSION;
