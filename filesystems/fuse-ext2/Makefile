@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2015/10/11 10:56:43 tron Exp $
+# $NetBSD: Makefile,v 1.8 2019/04/10 21:37:51 maya Exp $
 
 DISTNAME=	fuse-ext2-0.0.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fuse-ext2/fuse-ext2/${DISTNAME}/}
 

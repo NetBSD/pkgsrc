@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2012/05/10 10:49:49 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2019/04/10 21:37:51 maya Exp $
 
 Make automake-1.12 happy.
 Add NetBSD support.
@@ -19,7 +19,16 @@ Add NetBSD support.
       *)			arch=unknown;;
  esac
  
-@@ -137,7 +140,7 @@ AC_CHECK_FUNCS([	\
+@@ -96,6 +99,8 @@ dnl Check to see if ssize_t was decleare
+ AC_CHECK_TYPE(ssize_t,[AC_DEFINE(HAVE_TYPE_SSIZE_T, 1, [Define to 1 if you have the `ssize_t' prototype.])],,
+ 		[#include <sys/types.h>])
+ 
++AC_CHECK_DECLS([fuse_version], [], [], [[#include <fuse.h>]])
++
+ # Checks for library functions.
+ AC_FUNC_VPRINTF
+ AC_FUNC_CHOWN
+@@ -137,7 +142,7 @@ AC_CHECK_FUNCS([	\
  ])
  
  # Checks for libraries
@@ -28,7 +37,7 @@ Add NetBSD support.
  
  AC_MSG_CHECKING([if FUSE on this system is too new for us])
  AC_EGREP_CPP([fuse_version_yes], [
-@@ -193,6 +196,7 @@ AC_SUBST(pkgconfigdir)
+@@ -193,6 +198,7 @@ AC_SUBST(pkgconfigdir)
  
  AM_CONDITIONAL(LINUX, test "$arch" = linux)
  AM_CONDITIONAL(DARWIN, test "$arch" = darwin)
