@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q1,v 1.1.2.2 2019/04/07 15:00:50 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q1,v 1.1.2.3 2019/04/10 11:46:30 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q1 branch:
 
@@ -13,4 +13,34 @@ chat/unrealircd: build fix
 
 Pullup ticket #5929 - requested by tsutsui
 devel/protobuf, devel/py-protobuf: update (mozc-server build fix)
+
+Pullup ticket #5941 - requested by gutteridge
+net/wget: security fix
+
+Pullup ticket #5930 - requested by taca
+www/apache24: security fix
+
+Pullup ticket #5931 - requested by taca
+databases/redis: security fix
+
+Pullup ticket #5932 - requested by taca
+graphics/openjpeg: security fix
+
+Pullup ticket #5933 - requested by taca
+net/samba4: security fix
+
+Pullup ticket #5935 - requested by taca
+lang/php: build fix
+
+Pullup ticket #5936 - requested by taca
+lang/php71: security fix
+
+Pullup ticket #5937 - requested by taca
+lang/php72: security fix
+
+Pullup ticket #5938 - requested by taca
+lang/php73: security fix
+
+Pullup ticket #5940 - requested by taca
+www/contao35: security fix
 
