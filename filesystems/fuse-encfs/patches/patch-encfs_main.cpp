@@ -1,4 +1,10 @@
-$NetBSD: patch-encfs_main.cpp,v 1.3 2018/03/21 22:38:57 gdt Exp $
+$NetBSD: patch-encfs_main.cpp,v 1.4 2019/04/10 12:33:02 gdt Exp $
+
+Work around older FUSE API on NetBSD.
+  
+\todo Determine how to qualify this by version.
+\todo Enhance API in NetBSD.
+\todo File with encfs upstream.
 
 --- encfs/main.cpp.orig	2018-01-28 21:07:41.000000000 +0000
 +++ encfs/main.cpp
