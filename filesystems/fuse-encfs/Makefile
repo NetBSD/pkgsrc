@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2019/04/09 16:32:28 maya Exp $
+# $NetBSD: Makefile,v 1.17 2019/04/10 12:33:01 gdt Exp $
 #
 
 GITHUB_PROJECT=	encfs
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	encfs-1.9.4
 PKGNAME=	fuse-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vgough/}
 
@@ -22,6 +22,17 @@ USE_LANGUAGES=	c c++
 CONFIGURE_DIRS=	${WRKDIR}/build
 CMAKE_ARG_PATH=	${WRKSRC}
 
+# Remediate open-coding in cmake that badly reimplements autoconf's
+# --mandir=.
+# \todo File a bug upstream.
+SUBST_CLASSES+=		mandir
+SUBST_STAGE.mandir=	pre-configure
+SUBST_MESSAGE.mandir=	Remediating cmake PKGMANDIR
+SUBST_FILES.mandir=	CMakeLists.txt
+SUBST_SED.mandir=	-E -e "/MAN_DESTINATION/s,share/man,${PKGMANDIR},"
+
+# \todo Add TEST_DEPENDS for unittest, after finding it or packaging
+# it.
 TEST_TARGET=	test
 
 post-extract:
