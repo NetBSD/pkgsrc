@@ -269,6 +269,7 @@ main(int argc, char *argv[])
 		case OPTION_LZ4:
 		case OPTION_LZMA: /* GNU tar, others */
 		case OPTION_LZOP: /* GNU tar, others */
+		case OPTION_ZSTD:
 			cpio->compress = opt;
 			break;
 		case 'm': /* POSIX 1997 */
@@ -498,7 +499,7 @@ long_help(void)
 static void
 version(void)
 {
-	fprintf(stdout,"bsdcpio %s - %s\n",
+	fprintf(stdout,"bsdcpio %s - %s \n",
 	    BSDCPIO_VERSION_STRING,
 	    archive_version_details());
 	exit(0);
@@ -545,6 +546,9 @@ mode_out(struct cpio *cpio)
 		break;
 	case OPTION_LZOP:
 		r = archive_write_add_filter_lzop(cpio->archive);
+		break;
+	case OPTION_ZSTD:
+		r = archive_write_add_filter_zstd(cpio->archive);
 		break;
 	case 'j': case 'y':
 		r = archive_write_add_filter_bzip2(cpio->archive);
