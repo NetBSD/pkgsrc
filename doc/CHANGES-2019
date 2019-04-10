@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1665 2019/04/09 16:32:47 maya Exp $
+$NetBSD: CHANGES-2019,v 1.1666 2019/04/10 00:39:03 fox Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2615,3 +2615,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/contao35 to 3.5.39 [taca 2019-04-09]
 	Updated graphics/gimp to 2.10.10 [ryoon 2019-04-09]
 	Updated filesystems/fuse-encfs to 1.9.4nb1 [maya 2019-04-09]
+	Updated audio/fasttracker2 to 2.147 [fox 2019-04-10]
