@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.22.3 -->
-<!-- CreationDate: Mon Jul 10 02:32:56 2017 -->
+<!-- CreationDate: Mon Sep  3 22:55:09 2018 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -40,7 +40,8 @@ ARCHIVE_WRITE_FILTER(3)</p>
 <b>archive_write_add_filter_none</b>,
 <b>archive_write_add_filter_program</b>,
 <b>archive_write_add_filter_uuencode</b>,
-<b>archive_write_add_filter_xz</b> &mdash; functions
+<b>archive_write_add_filter_xz</b>,
+<b>archive_write_add_filter_zstd</b>, &mdash; functions
 enabling output filters</p>
 
 <p style="margin-top: 1em"><b>LIBRARY</b></p>
@@ -124,6 +125,11 @@ enabling output filters</p>
 
 <p style="margin-left:12%;"><b>archive_write_add_filter_xz</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
 
+<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
+
+
+<p style="margin-left:12%;"><b>archive_write_add_filter_zstd</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
+
 <p style="margin-top: 1em"><b>DESCRIPTION <br>
 archive_write_add_filter_bzip2</b>(),
 <b>archive_write_add_filter_compress</b>(),
@@ -134,7 +140,8 @@ archive_write_add_filter_bzip2</b>(),
 <b>archive_write_add_filter_lzip</b>(),
 <b>archive_write_add_filter_lzma</b>(),
 <b>archive_write_add_filter_lzop</b>(),
-<b>archive_write_add_filter_xz</b>(),</p>
+<b>archive_write_add_filter_xz</b>(),
+<b>archive_write_add_filter_zstd</b>(),</p>
 
 <p style="margin-left:17%;">The resulting archive will be
 compressed as specified. Note that the compressed output is

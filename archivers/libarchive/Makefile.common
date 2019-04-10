@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.8 2017/08/01 22:27:28 joerg Exp $
+# $NetBSD: Makefile.common,v 1.9 2019/04/10 08:24:03 adam Exp $
 # used by archivers/bsdtar/Makefile
 # used by archivers/libarchive/Makefile
 
-DISTNAME=	libarchive-3.3.2
+DISTNAME=	libarchive-3.3.3
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.libarchive.org/downloads/
 DISTFILES=	# empty
@@ -17,4 +17,5 @@ CONFIGURE_ARGS+=	--without-expat
 CONFIGURE_ARGS+=	--without-lzo2
 CONFIGURE_ARGS+=	--without-nettle
 CONFIGURE_ARGS+=	--without-xml2
+CONFIGURE_ARGS+=	--without-zstd
 CONFIGURE_ARGS+=	--disable-maintainer-mode
