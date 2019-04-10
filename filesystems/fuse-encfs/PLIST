@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2018/03/21 22:38:57 gdt Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/04/10 12:33:01 gdt Exp $
 bin/encfs
 bin/encfsctl
 bin/encfssh
+man/man1/encfs.1
+man/man1/encfsctl.1
+man/man1/encfssh.1
 share/locale/ar/LC_MESSAGES/encfs.mo
 share/locale/be/LC_MESSAGES/encfs.mo
 share/locale/bg/LC_MESSAGES/encfs.mo
@@ -52,6 +55,3 @@ share/locale/vi/LC_MESSAGES/encfs.mo
 share/locale/zh_CN/LC_MESSAGES/encfs.mo
 share/locale/zh_HK/LC_MESSAGES/encfs.mo
 share/locale/zh_TW/LC_MESSAGES/encfs.mo
-share/man/man1/encfs.1
-share/man/man1/encfsctl.1
-share/man/man1/encfssh.1
