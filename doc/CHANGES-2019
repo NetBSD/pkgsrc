@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1680 2019/04/11 16:46:43 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.1681 2019/04/11 20:56:54 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2633,3 +2633,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/firefox to 66.0.3 [ryoon 2019-04-11]
 	Updated www/firefox-l10n to 66.0.3 [ryoon 2019-04-11]
 	Updated devel/p5-Test-BDD-Cucumber to 0.57 [schmonz 2019-04-11]
+	Added games/etlegacy version 2.76 [nia 2019-04-11]
