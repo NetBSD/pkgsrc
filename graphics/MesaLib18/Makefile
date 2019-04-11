@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/02/22 15:40:35 tnn Exp $
+# $NetBSD: Makefile,v 1.19 2019/04/11 15:52:08 maya Exp $
 
 DISTNAME=	mesa-18.3.4
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -105,4 +105,5 @@ post-install:
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
