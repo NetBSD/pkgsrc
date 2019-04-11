@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/08/07 08:36:58 adam Exp $
+$NetBSD: distinfo,v 1.3 2019/04/11 08:29:45 adam Exp $
 
-SHA1 (iso3166-0.9.tar.gz) = 29ceeccde684d2e07799f4f3d19e43e62c2c8bf8
-RMD160 (iso3166-0.9.tar.gz) = e052949a008195904dcc8b252bac93c4ae2178fb
-SHA512 (iso3166-0.9.tar.gz) = ea492f337057b8bc895e36cdf7bacf4715785f1caf79e7f6037f5cb73b5209a884ec2a6393fba73fc1ff57dd55b9a7c296bc3a6fc67a4c4087449fd3072c2fe7
-Size (iso3166-0.9.tar.gz) = 9026 bytes
+SHA1 (iso3166-1.0.tar.gz) = 7eb9f7c28a6d4b6b398a8b9f871c0261b89f3803
+RMD160 (iso3166-1.0.tar.gz) = 0ef64b17e57d3a90579a9cb35006755decc40cdc
+SHA512 (iso3166-1.0.tar.gz) = 8e864708c58716221925855297ef8eed9836ce119029df3cdee40adc4bc3bbb71dbec2d886db9b8d671dfcea1a3372cd7551a06fdaa5d285faffbf4a76263b75
+Size (iso3166-1.0.tar.gz) = 9162 bytes
