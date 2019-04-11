@@ -1,4 +1,4 @@
-# $NetBSD: dri.mk,v 1.1 2018/10/07 23:49:31 ryoon Exp $
+# $NetBSD: dri.mk,v 1.2 2019/04/11 16:27:03 maya Exp $
 #
 # Currently, this is for convenience only.
 #
@@ -19,7 +19,6 @@ BUILDLINK_API_DEPENDS.libdrm+=		libdrm>=2.4.60
 BUILDLINK_API_DEPENDS.libxcb+=	libxcb>=1.9.3
 .    endif
 .  endif
-.  include "../../textproc/expat/buildlink3.mk"
 .  include "../../x11/xorgproto/buildlink3.mk"
 # XXX these do not have builtin.mk
 .  if ${X11_TYPE} == "modular"
