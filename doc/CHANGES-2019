@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1675 2019/04/11 03:56:39 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.1676 2019/04/11 07:48:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2626,3 +2626,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/qmail to 1.03nb45 [schmonz 2019-04-10]
 	Updated audio/fasttracker2 to 2.148 [fox 2019-04-10]
 	Updated graphics/mate-icon-theme to 1.22.1 [gutteridge 2019-04-11]
+	Updated time/py-pytz to 2019.1 [adam 2019-04-11]
+	Updated time/py-tzdata to 2019.1 [adam 2019-04-11]
