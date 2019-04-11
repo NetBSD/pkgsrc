@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2019/04/11 20:56:34 nia Exp $
+
+pak0.pk3, pak1.pk3 and pak2.pk3 must be copied from the official game
+files to ${PREFIX}/share/etlegacy/etmain to play Enemy Territory.
+
+===========================================================================

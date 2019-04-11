@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.423 2019/02/10 12:39:10 nia Exp $
+# $NetBSD: Makefile,v 1.424 2019/04/11 20:56:34 nia Exp $
 #
 
 COMMENT=	Games
@@ -90,6 +90,7 @@ SUBDIR+=	eboard
 SUBDIR+=	einstein-puzzle
 SUBDIR+=	enigma
 SUBDIR+=	et
+SUBDIR+=	etlegacy
 SUBDIR+=	eus-demo
 SUBDIR+=	exchess
 SUBDIR+=	exchess-book-medium
