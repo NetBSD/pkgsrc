@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2019/01/26 21:28:29 tnn Exp $
+# $NetBSD: options.mk,v 1.12 2019/04/11 16:27:03 maya Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -273,8 +273,6 @@ CONFIGURE_ARGS+=	--disable-gles1
 CONFIGURE_ARGS+=	--disable-gles2
 CONFIGURE_ARGS+=	--enable-xlib-glx
 CONFIGURE_ARGS+=	--with-platforms=x11
-# XXX configure looks for expat but doesn't actually need it in non-dri case
-CONFIGURE_ENV+=		EXPAT_CFLAGS=" " EXPAT_LIBS=" "
 .if !empty(PKG_OPTIONS:Mllvm)
 PKG_FAIL_REASON+=	"The llvm PKG_OPTION must also be disabled when dri is disabled"
 .endif
