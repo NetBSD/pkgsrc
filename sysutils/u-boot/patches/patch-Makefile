@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile,v 1.1 2019/04/12 07:08:15 skrll Exp $
+
+--- Makefile.orig	2018-11-14 16:10:06.000000000 +0000
++++ Makefile
+@@ -1472,7 +1472,7 @@ prepare: prepare0
+ 
+ define filechk_version.h
+ 	(echo \#define PLAIN_VERSION \"$(UBOOTRELEASE)\"; \
+-	echo \#define U_BOOT_VERSION \"U-Boot \" PLAIN_VERSION; \
++	echo \#define U_BOOT_VERSION \"U-Boot \" PLAIN_VERSION \"$(UBOOT_PKGREVISION)\"; \
+ 	echo \#define CC_VERSION_STRING \"$$(LC_ALL=C $(CC) --version | head -n 1)\"; \
+ 	echo \#define LD_VERSION_STRING \"$$(LC_ALL=C $(LD) --version | head -n 1)\"; )
+ endef
