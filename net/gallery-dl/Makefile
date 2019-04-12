@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2019/03/31 20:37:10 leot Exp $
+# $NetBSD: Makefile,v 1.30 2019/04/12 09:48:41 leot Exp $
 
-DISTNAME=	gallery_dl-1.8.1
+DISTNAME=	gallery_dl-1.8.2
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gallery-dl/}
@@ -11,7 +11,14 @@ COMMENT=	Command-line program to download image galleries and collections
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
-DEPENDS+=	${PYPKGPREFIX}-requests>=2.4.2:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-requests>=2.11.0:../../devel/py-requests
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_MESSAGE.paths=	Adjust hard-coded paths
+SUBST_FILES.paths=	setup.py
+SUBST_SED.paths+=	-e 's,etc/bash_completion\.d,share/bash_completion.d,'
+SUBST_SED.paths+=	-e 's,share/man,${PKGMANDIR},g'
 
 USE_LANGUAGES=			# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
