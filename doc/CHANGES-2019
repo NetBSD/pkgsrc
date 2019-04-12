@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1685 2019/04/12 09:48:56 leot Exp $
+$NetBSD: CHANGES-2019,v 1.1686 2019/04/12 13:02:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2671,3 +2671,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/u-boot-sopine-baseboard to 2018.11nb3 [skrll 2019-04-12]
 	Updated textproc/ripgrep to 0.10.0 [maya 2019-04-12]
 	Updated net/gallery-dl to 1.8.2 [leot 2019-04-12]
+	Updated devel/apr to 1.7.0 [wiz 2019-04-12]
