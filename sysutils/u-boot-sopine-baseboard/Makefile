@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/03/15 14:01:00 martin Exp $
+# $NetBSD: Makefile,v 1.4 2019/04/12 07:08:18 skrll Exp $
 
 UBOOT_TARGET=		sopine-baseboard
 UBOOT_CONFIG=		sopine_baseboard_defconfig
 UBOOT_BIN=		u-boot-sunxi-with-spl.bin
 UBOOT_ENV+=		DEVICE_TREE=sun50i-a64-sopine-baseboard
 
-PKGREVISION=		2
+PKGREVISION=		3
 
 # Switch to EL1 before booting kernel (required for 32-bit support)
 PKG_DEFAULT_OPTIONS+=	el1
