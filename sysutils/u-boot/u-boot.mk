@@ -1,4 +1,4 @@
-# $NetBSD: u-boot.mk,v 1.13 2019/03/24 14:57:47 tnn Exp $
+# $NetBSD: u-boot.mk,v 1.14 2019/04/12 07:08:15 skrll Exp $
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
@@ -30,6 +30,10 @@ REPLACE_FILES.python2=	scripts/fill_scrapyard.py \
 			tools/binman/binman.py \
 			tools/genboardscfg.py \
 			tools/moveconfig.py
+
+.if defined(PKGREVISION) && !empty(PKGREVISION) && (${PKGREVISION} != "0")
+UBOOT_ENV+=	UBOOT_PKGREVISION=nb${PKGREVISION}
+.endif
 
 MAKE_ENV+=	${UBOOT_ENV}
 
