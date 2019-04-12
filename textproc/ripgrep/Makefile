@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2019/01/05 02:58:54 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2019/04/12 08:08:48 maya Exp $
 
 GITHUB_PROJECT=	ripgrep
-DISTNAME=	0.8.1
+DISTNAME=	0.10.0
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BurntSushi/}
@@ -12,54 +12,85 @@ HOMEPAGE=	https://github.com/BurntSushi/ripgrep/
 COMMENT=	Line-oriented search tool
 LICENSE=	unlicense
 
-WRKSRC=		${WRKDIR}/ripgrep-0.8.1
+WRKSRC=		${WRKDIR}/${PKGNAME}
 USE_LANGUAGES=	c
 
-CARGO_CRATE_DEPENDS+=		\
-	atty-0.2.6		\
-	bytecount-0.3.1		\
-	cfg-if-0.1.2		\
-	clap-2.30.0		\
-	crossbeam-0.3.2		\
-	encoding_rs-0.7.2	\
-	glob-0.2.11		\
-	globset-0.3.0		\
-	grep-0.1.8		\
-	ignore-0.4.0		\
-	lazy_static-1.0.0	\
-	libc-0.2.36		\
-	log-0.4.1		\
-	memchr-2.0.1		\
-	memmap-0.6.2		\
-	num_cpus-1.8.0		\
-	regex-0.2.6		\
-	regex-syntax-0.4.2	\
-	same-file-1.0.2		\
-	simd-0.2.1		\
-	aho-corasick-0.6.4	\
-	fnv-1.0.6		\
-	termcolor-0.3.4		\
-	termion-1.5.1		\
-	redox_syscall-0.1.37	\
-	redox_termios-0.1.1	\
-	strsim-0.7.0		\
-	textwrap-0.9.0		\
-	unicode-width-0.1.4	\
-	ansi_term-0.10.2	\
-	thread_local-0.3.5	\
-	walkdir-2.1.4		\
-	winapi-0.3.4		\
-	winapi-i686-pc-windows-gnu-0.4.0	\
-	winapi-x86_64-pc-windows-gnu-0.4.0	\
-	utf8-ranges-1.0.0	\
-	unreachable-1.0.0	\
-	tempdir-0.3.5		\
-	void-1.0.2		\
-	rand-0.4.2		\
-	rand-0.3.22		\
-	fuchsia-zircon-0.3.3	\
-	fuchsia-zircon-sys-0.3.3	\
-	bitflags-1.0.1
+CARGO_CRATE_DEPENDS+=	aho-corasick-0.6.8
+CARGO_CRATE_DEPENDS+=	arrayvec-0.4.7
+CARGO_CRATE_DEPENDS+=	atty-0.2.11
+CARGO_CRATE_DEPENDS+=	base64-0.9.2
+CARGO_CRATE_DEPENDS+=	bitflags-1.0.4
+CARGO_CRATE_DEPENDS+=	bytecount-0.3.2
+CARGO_CRATE_DEPENDS+=	byteorder-1.2.6
+CARGO_CRATE_DEPENDS+=	cc-1.0.24
+CARGO_CRATE_DEPENDS+=	cfg-if-0.1.5
+CARGO_CRATE_DEPENDS+=	clap-2.32.0
+CARGO_CRATE_DEPENDS+=	cloudabi-0.0.3
+CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.2.4
+CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.5.2
+CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.5.0
+CARGO_CRATE_DEPENDS+=	encoding_rs-0.8.6
+CARGO_CRATE_DEPENDS+=	encoding_rs_io-0.1.2
+CARGO_CRATE_DEPENDS+=	fnv-1.0.6
+CARGO_CRATE_DEPENDS+=	fuchsia-zircon-0.3.3
+CARGO_CRATE_DEPENDS+=	fuchsia-zircon-sys-0.3.3
+CARGO_CRATE_DEPENDS+=	glob-0.2.11
+CARGO_CRATE_DEPENDS+=	itoa-0.4.2
+CARGO_CRATE_DEPENDS+=	lazy_static-1.1.0
+CARGO_CRATE_DEPENDS+=	libc-0.2.43
+CARGO_CRATE_DEPENDS+=	lock_api-0.1.3
+CARGO_CRATE_DEPENDS+=	log-0.4.5
+CARGO_CRATE_DEPENDS+=	memchr-2.0.2
+CARGO_CRATE_DEPENDS+=	memmap-0.6.2
+CARGO_CRATE_DEPENDS+=	memoffset-0.2.1
+CARGO_CRATE_DEPENDS+=	nodrop-0.1.12
+CARGO_CRATE_DEPENDS+=	num_cpus-1.8.0
+CARGO_CRATE_DEPENDS+=	owning_ref-0.3.3
+CARGO_CRATE_DEPENDS+=	parking_lot-0.6.4
+CARGO_CRATE_DEPENDS+=	parking_lot_core-0.3.0
+CARGO_CRATE_DEPENDS+=	pcre2-0.1.0
+CARGO_CRATE_DEPENDS+=	pcre2-sys-0.1.1
+CARGO_CRATE_DEPENDS+=	pkg-config-0.3.14
+CARGO_CRATE_DEPENDS+=	proc-macro2-0.4.18
+CARGO_CRATE_DEPENDS+=	quote-0.6.8
+CARGO_CRATE_DEPENDS+=	rand-0.4.3
+CARGO_CRATE_DEPENDS+=	rand-0.5.5
+CARGO_CRATE_DEPENDS+=	rand_core-0.2.1
+CARGO_CRATE_DEPENDS+=	redox_syscall-0.1.40
+CARGO_CRATE_DEPENDS+=	redox_termios-0.1.1
+CARGO_CRATE_DEPENDS+=	regex-1.0.5
+CARGO_CRATE_DEPENDS+=	regex-syntax-0.6.2
+CARGO_CRATE_DEPENDS+=	remove_dir_all-0.5.1
+CARGO_CRATE_DEPENDS+=	ryu-0.2.6
+CARGO_CRATE_DEPENDS+=	safemem-0.2.0
+CARGO_CRATE_DEPENDS+=	same-file-1.0.3
+CARGO_CRATE_DEPENDS+=	scopeguard-0.3.3
+CARGO_CRATE_DEPENDS+=	serde-1.0.77
+CARGO_CRATE_DEPENDS+=	serde_derive-1.0.77
+CARGO_CRATE_DEPENDS+=	serde_json-1.0.27
+CARGO_CRATE_DEPENDS+=	simd-0.2.2
+CARGO_CRATE_DEPENDS+=	smallvec-0.6.5
+CARGO_CRATE_DEPENDS+=	stable_deref_trait-1.1.1
+CARGO_CRATE_DEPENDS+=	strsim-0.7.0
+CARGO_CRATE_DEPENDS+=	syn-0.15.1
+CARGO_CRATE_DEPENDS+=	tempdir-0.3.7
+CARGO_CRATE_DEPENDS+=	termcolor-1.0.3
+CARGO_CRATE_DEPENDS+=	termion-1.5.1
+CARGO_CRATE_DEPENDS+=	textwrap-0.10.0
+CARGO_CRATE_DEPENDS+=	thread_local-0.3.6
+CARGO_CRATE_DEPENDS+=	ucd-util-0.1.1
+CARGO_CRATE_DEPENDS+=	unicode-width-0.1.5
+CARGO_CRATE_DEPENDS+=	unicode-xid-0.1.0
+CARGO_CRATE_DEPENDS+=	unreachable-1.0.0
+CARGO_CRATE_DEPENDS+=	utf8-ranges-1.0.1
+CARGO_CRATE_DEPENDS+=	version_check-0.1.4
+CARGO_CRATE_DEPENDS+=	void-1.0.2
+CARGO_CRATE_DEPENDS+=	walkdir-2.2.5
+CARGO_CRATE_DEPENDS+=	winapi-0.3.5
+CARGO_CRATE_DEPENDS+=	winapi-i686-pc-windows-gnu-0.4.0
+CARGO_CRATE_DEPENDS+=	winapi-util-0.1.1
+CARGO_CRATE_DEPENDS+=	winapi-x86_64-pc-windows-gnu-0.4.0
+CARGO_CRATE_DEPENDS+=	wincolor-1.0.1
 
 INSTALLATION_DIRS=	bin
 
