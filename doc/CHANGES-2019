@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1684 2019/04/12 08:09:05 maya Exp $
+$NetBSD: CHANGES-2019,v 1.1685 2019/04/12 09:48:56 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2670,3 +2670,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/u-boot-rockpro64 to 2017.09nb1 [skrll 2019-04-12]
 	Updated sysutils/u-boot-sopine-baseboard to 2018.11nb3 [skrll 2019-04-12]
 	Updated textproc/ripgrep to 0.10.0 [maya 2019-04-12]
+	Updated net/gallery-dl to 1.8.2 [leot 2019-04-12]
