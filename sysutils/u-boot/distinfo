@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.20 2019/01/03 04:07:18 thorpej Exp $
+$NetBSD: distinfo,v 1.21 2019/04/12 07:08:15 skrll Exp $
 
 SHA1 (u-boot-2018.11.tar.bz2) = e58e86c633ad3e2613196e0c0b0a7760ae5966d6
 RMD160 (u-boot-2018.11.tar.bz2) = f63c67750951d0e2883935a5d4cc3252f51a5453
 SHA512 (u-boot-2018.11.tar.bz2) = 1ea0bbb5f5e6d4c60b3a6bd345d1fa6e9da025daf36f47e8392bab34cb432c2e3633d903efb260f71fff87dffd6f2bf09ac900e96b3d4247073958d83b89ceff
 Size (u-boot-2018.11.tar.bz2) = 13045125 bytes
+SHA1 (patch-Makefile) = 45f505041a586b75953c34c1ab6fffaa56b43601
 SHA1 (patch-arch_arm_cpu_armv8_Kconfig) = 63cbbf2e3cebd46793fc03cc8e62297f6dc01aa9
 SHA1 (patch-configs_jetson-tk1_defconfig) = e25d89b9440f9bb4486ac22fc47083ed24abdd95
 SHA1 (patch-configs_p2371-2180_defconfig) = 2a3f1ad4f9963af403c2c9f2f01b892bbe55188c
@@ -12,4 +13,5 @@ SHA1 (patch-include_configs_tegra-common-post.h) = dfc081d2a3f7cd32e340b03f6c77c
 SHA1 (patch-include_configs_tegra-common.h) = 4cda8f9df2c7fc2b9cd9d4139ec679a42648e4f8
 SHA1 (patch-include_image.h) = c9b134b2b5624a1e6c9f091a2192185b8d0f85fe
 SHA1 (patch-lib_bch.c) = b1f1c7418f1004c151b9e5e06ab7047a1736ae47
+SHA1 (patch-lib_efi__loader_efi__variable.c) = 1955870b22e358a4bded9e85fd89c74419aeed0d
 SHA1 (patch-tools_imx__cntr__image.sh) = 715647e3b77b505513ae79b4fe673f4f7f9bf042

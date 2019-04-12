@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2019/03/15 14:00:36 martin Exp $
+# $NetBSD: Makefile,v 1.8 2019/04/12 07:08:18 skrll Exp $
 
 UBOOT_TARGET=		pine64
 UBOOT_CONFIG=		pine64_plus_defconfig
 UBOOT_BIN=		u-boot-sunxi-with-spl.bin
 
-PKGREVISION=		2
+PKGREVISION=		3
 
 # Switch to EL1 before booting kernel (required for 32-bit support)
 PKG_DEFAULT_OPTIONS+=	el1
