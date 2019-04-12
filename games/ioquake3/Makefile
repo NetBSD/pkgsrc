@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2016/07/16 00:10:33 markd Exp $
+# $NetBSD: Makefile,v 1.7 2019/04/12 18:39:34 nia Exp $
 #
 
 DISTNAME=	ioquake3-1.36
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	http://ioquake3.org/files/1.36/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ioquake3.org/
 COMMENT=	Open source Quake 3 distribution
+LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake
 BUILD_TARGET=	release
@@ -27,6 +28,10 @@ QUAKE_ARCH=	${MACHINE_ARCH}
 .endif
 
 PLIST_SUBST+=	QUAKE_ARCH=${QUAKE_ARCH:Q}
+
+# recursive error after: VM_CompileX86: mprotect failed
+NOT_PAX_MPROTECT_SAFE+=	lib/ioquake3/ioq3ded.${QUAKE_ARCH}
+NOT_PAX_MPROTECT_SAFE+=	lib/ioquake3/ioquake3.${QUAKE_ARCH}
 
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
