@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/01/30 01:03:47 fox Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/04/13 13:56:43 fox Exp $
 bin/din
 share/applications/din.desktop
 share/din/factory/2600
@@ -300,9 +300,7 @@ share/din/factory/d_min_max
 share/din/factory/d_morpher
 share/din/factory/d_number
 share/din/factory/d_octave_shift
-share/din/factory/d_parameter_limits
 share/din/factory/d_parameters
-share/din/factory/d_pitch_bend
 share/din/factory/d_plugin_browser
 share/din/factory/d_rose_milker
 share/din/factory/d_sine_mixer
@@ -310,8 +308,6 @@ share/din/factory/d_spiraler
 share/din/factory/d_starrer
 share/din/factory/d_superformula
 share/din/factory/d_warper
-share/din/factory/d_waveform_display
-share/din/factory/daccel.crv
 share/din/factory/dash.crv
 share/din/factory/decay.crv
 share/din/factory/decay.ed
@@ -328,7 +324,6 @@ share/din/factory/drone.crv
 share/din/factory/drone.ed
 share/din/factory/droner.help.tcl
 share/din/factory/droner.patch.tcl
-share/din/factory/dvel.crv
 share/din/factory/echo.help.tcl
 share/din/factory/equal-temperament.tuning
 share/din/factory/fader.crv
@@ -406,10 +401,17 @@ share/din/factory/p_Sine_Mixer
 share/din/factory/p_Spiraler
 share/din/factory/p_Starrer
 share/din/factory/p_Superformula
+share/din/factory/pitch-vol.ed
+share/din/factory/pitch.crv
 share/din/factory/pythagoras.tuning
+share/din/factory/range-height.crv
+share/din/factory/range-height.crv.default
 share/din/factory/range-mod-height.crv
 share/din/factory/range-mod-width.crv
 share/din/factory/range-modulation.ed
+share/din/factory/range-width-height.ed
+share/din/factory/range-width.crv
+share/din/factory/range-width.crv.default
 share/din/factory/rose_milker.scr
 share/din/factory/rose_milker_cos.crv
 share/din/factory/rose_milker_cos.ed
@@ -459,6 +461,7 @@ share/din/factory/tuning.help.tcl
 share/din/factory/velocity.crv
 share/din/factory/velocity.ed
 share/din/factory/velocity.lib
+share/din/factory/vol.crv
 share/din/factory/volume-l.crv
 share/din/factory/volume-r.crv
 share/din/factory/warper.ed
