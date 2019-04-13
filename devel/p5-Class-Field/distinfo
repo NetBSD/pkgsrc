@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 03:28:01 agc Exp $
+$NetBSD: distinfo,v 1.4 2019/04/13 14:22:37 wen Exp $
 
-SHA1 (Class-Field-0.23.tar.gz) = 0990713eb10273a83e470d4a4eb6f082c1619cda
-RMD160 (Class-Field-0.23.tar.gz) = 4b5d330aa27c92bf0e2580b2b0f2d6caec2b4ee9
-SHA512 (Class-Field-0.23.tar.gz) = bd9d119762a10750d1840ec24f7f69b7b330442880fc973ab568e845c7d2cf9836fd81edc03e29fd82edcf1f954f533d55967a752bdfdae711c787033c5a96fc
-Size (Class-Field-0.23.tar.gz) = 12582 bytes
+SHA1 (Class-Field-0.24.tar.gz) = 82a24f0d12a33f85d85d171179be4fe7a980c96a
+RMD160 (Class-Field-0.24.tar.gz) = 01d5680a48e4cf955ca9de33dab9a2488c5ac1af
+SHA512 (Class-Field-0.24.tar.gz) = 4956190f6f1e6d6714a823421adf6c74ab1c884d059efad9ada5d8671d45ca4766c9ca9253a50784802ee0997fd5aa5dc870b16eb3e804564930e8fc68788472
+Size (Class-Field-0.24.tar.gz) = 12972 bytes
