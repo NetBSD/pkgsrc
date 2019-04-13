@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1691 2019/04/13 14:10:26 wen Exp $
+$NetBSD: CHANGES-2019,v 1.1692 2019/04/13 14:23:14 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2677,3 +2677,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added games/powder-toy version 94.1 [nia 2019-04-13]
 	Updated audio/din to 41 [fox 2019-04-13]
 	Updated devel/p5-B-Keywords to 1.20 [wen 2019-04-13]
+	Updated devel/p5-Class-Field to 0.24 [wen 2019-04-13]
