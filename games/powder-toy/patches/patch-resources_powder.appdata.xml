@@ -1,0 +1,14 @@
+$NetBSD: patch-resources_powder.appdata.xml,v 1.1 2019/04/13 12:08:04 nia Exp $
+
+Rename application to powder-toy.
+
+--- resources/powder.appdata.xml.orig	2019-02-21 05:23:45.000000000 +0000
++++ resources/powder.appdata.xml
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <component type="desktop">
+-  <id>powder.desktop</id>
++  <id>powder-toy.desktop</id>
+   <metadata_license>CC0-1.0</metadata_license>
+   <project_license>GPL-3.0</project_license>
+   <name>Powder Toy</name>
