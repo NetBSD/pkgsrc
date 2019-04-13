@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1688 2019/04/12 13:24:10 hauke Exp $
+$NetBSD: CHANGES-2019,v 1.1689 2019/04/13 12:08:19 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2674,3 +2674,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/apr to 1.7.0 [wiz 2019-04-12]
 	Updated devel/py-setuptools to 41.0.0 [wiz 2019-04-12]
 	Updated www/php-glpi to 9.4.2 [hauke 2019-04-12]
+	Added games/powder-toy version 94.1 [nia 2019-04-13]
