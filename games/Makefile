@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.424 2019/04/11 20:56:34 nia Exp $
+# $NetBSD: Makefile,v 1.425 2019/04/13 12:08:04 nia Exp $
 #
 
 COMMENT=	Games
@@ -283,6 +283,7 @@ SUBDIR+=	plib
 SUBDIR+=	pmars
 SUBDIR+=	polyglot
 SUBDIR+=	powder
+SUBDIR+=	powder-toy
 SUBDIR+=	powermanga
 SUBDIR+=	powwow
 SUBDIR+=	prboom
