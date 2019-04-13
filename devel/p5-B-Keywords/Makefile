@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2018/08/26 06:17:26 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2019/04/13 14:08:10 wen Exp $
 
-DISTNAME=	B-Keywords-1.19
+DISTNAME=	B-Keywords-1.20
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=B/}
