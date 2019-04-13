@@ -1,0 +1,9 @@
+#!/bin/sh -e
+if [ ${XDG_DATA_HOME} ]; then
+	mkdir -p ${XDG_DATA_HOME}/powder-toy
+	cd ${XDG_DATA_HOME}/powder-toy
+else
+	mkdir -p ${HOME}/.local/share/powder-toy
+	cd ${HOME}/.local/share/powder-toy
+fi
+exec @PREFIX@/libexec/powder-toy "$@"
