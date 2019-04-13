@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2018/01/20 20:44:49 christos Exp $
+$NetBSD: distinfo,v 1.11 2019/04/13 23:09:40 maya Exp $
 
 SHA1 (go1.4.3.src.tar.gz) = 486db10dc571a55c8d795365070f66d343458c48
 RMD160 (go1.4.3.src.tar.gz) = b1fbb2805a777c8107e7c946f36a881303ac5e35
@@ -38,14 +38,20 @@ SHA1 (patch-src_runtime_cgo_setenv.c) = f3b56885fa54cabf78944fad75c21f04bea5cd88
 SHA1 (patch-src_runtime_debug__netbsd.go) = 3a54698e749dcd362e5fe4284a4c1f59d654b095
 SHA1 (patch-src_runtime_defs__netbsd.go) = 5f433bb92bd50707fcde5f941e9ca084eac4f659
 SHA1 (patch-src_runtime_defs__netbsd__arm.h) = 150973e3fdb118e11fadea910f7e9f39a70b6067
+SHA1 (patch-src_runtime_defs__openbsd__386.h) = 314a5bdc4ff0ee5f9fb969cdb134fe6183acebb6
+SHA1 (patch-src_runtime_defs__openbsd__amd64.h) = 72335c404604df53b943f3bb3d1088ae784fef0e
+SHA1 (patch-src_runtime_malloc.h) = c41776870b4d95657ad45711b5d921cda4febd29
+SHA1 (patch-src_runtime_mem__openbsd.c) = 2800a500d3bd5bde0bb3a05ac6aec5630b098bca
 SHA1 (patch-src_runtime_mgc0.c) = 6cd1a52376efbf3f825fc511044af4a82528eccc
 SHA1 (patch-src_runtime_mheap.c) = 646f4ba1abf407936ec6c3c0783dd59922079fe3
 SHA1 (patch-src_runtime_netpoll__solaris.c) = ae399518bb02d6b898734a52dfa7fe18f041e1ec
 SHA1 (patch-src_runtime_os__netbsd.c) = 8bb3a4612f5693727f66f6d3a16261e9087b01f0
+SHA1 (patch-src_runtime_os__openbsd.c) = a32f610eba883d17140aea8639953f76593266c0
 SHA1 (patch-src_runtime_os__solaris.c) = eec5b293fe4a72f58e4cd51cd23ea6e6fce714b6
 SHA1 (patch-src_runtime_os__solaris.h) = c0a39aa6ab57eca7056178c87ebb00bb21236499
 SHA1 (patch-src_runtime_proc.c) = 0167ab97ea9229f57d21c549201c2d17965e4c69
 SHA1 (patch-src_runtime_runtime.h) = ab89a3da0870c346529cfe5b8bda202aba0b59f7
+SHA1 (patch-src_runtime_stack.c) = 6bb75bb7aa725a98d2b39b015e8e5692ed26be24
 SHA1 (patch-src_runtime_sys__darwin__386.s) = e352e039bba8435a48b88c76290b245731c299ed
 SHA1 (patch-src_runtime_sys__darwin__amd64.s) = 3eccddc8228657db1480393f8476ddd68ac942ff
 SHA1 (patch-src_runtime_sys__solaris__amd64.s) = 88f2e3fc43b0d6e4f17ef06d3f4f27cfed3103c6
