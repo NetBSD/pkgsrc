@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2018/08/22 09:43:44 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2019/04/13 14:29:36 wen Exp $
 
-DISTNAME=	Class-Inspector-1.32
+DISTNAME=	Class-Inspector-1.34
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
 
