@@ -1,0 +1,16 @@
+$NetBSD: patch-resources_powder.desktop,v 1.1 2019/04/13 12:08:04 nia Exp $
+
+Rename application to powder-toy.
+
+--- resources/powder.desktop.orig	2019-02-21 05:23:45.000000000 +0000
++++ resources/powder.desktop
+@@ -3,7 +3,7 @@ Version=1.0
+ Encoding=UTF-8
+ Name=Powder Toy
+ Comment=Physics sandbox game
+-Exec=powder
+-Icon=powder
++Exec=powder-toy
++Icon=powder-toy
+ Type=Application
+ Categories=Game;Simulation;
