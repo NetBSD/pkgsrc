@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2019/01/30 01:03:47 fox Exp $
+# $NetBSD: Makefile,v 1.4 2019/04/13 13:56:43 fox Exp $
 
-DISTNAME=	din-39.0.1
+DISTNAME=	din-41
 CATEGORIES=	audio
 MASTER_SITES=	https://archive.org/download/dinisnoise_source_code/
 
