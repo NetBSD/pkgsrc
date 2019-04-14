@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.324 2019/03/05 21:02:50 maya Exp $
+# $NetBSD: Makefile,v 1.325 2019/04/14 06:28:37 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -196,6 +196,7 @@ SUBDIR+=	pixel-sagas-startrek
 SUBDIR+=	profont
 SUBDIR+=	proggy-fonts
 SUBDIR+=	ps2pkm
+SUBDIR+=	public-sans
 SUBDIR+=	py-TTFQuery
 SUBDIR+=	py-fonttools
 SUBDIR+=	raleway-ttf
