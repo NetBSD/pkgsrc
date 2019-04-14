@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1701 2019/04/14 10:27:03 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1702 2019/04/14 10:38:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2704,3 +2704,14 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/ruby-actionmailer51 to 5.1.6.2 [taca 2019-04-14]
 	Updated devel/ruby-railties51 to 5.1.6.2 [taca 2019-04-14]
 	Updated www/ruby-rails51 to 5.1.6.2 [taca 2019-04-14]
+	Updated devel/ruby-activesupport52 to 5.2.3 [taca 2019-04-14]
+	Updated devel/ruby-activemodel52 to 5.2.3 [taca 2019-04-14]
+	Updated devel/ruby-activejob52 to 5.2.3 [taca 2019-04-14]
+	Updated www/ruby-actionview52 to 5.2.3 [taca 2019-04-14]
+	Updated www/ruby-actionpack52 to 5.2.3 [taca 2019-04-14]
+	Updated www/ruby-actioncable52 to 5.2.3 [taca 2019-04-14]
+	Updated databases/ruby-activerecord52 to 5.2.3 [taca 2019-04-14]
+	Updated devel/ruby-activestorage52 to 5.2.3 [taca 2019-04-14]
+	Updated mail/ruby-actionmailer52 to 5.2.3 [taca 2019-04-14]
+	Updated devel/ruby-railties52 to 5.2.3 [taca 2019-04-14]
+	Updated www/ruby-rails52 to 5.2.3 [taca 2019-04-14]
