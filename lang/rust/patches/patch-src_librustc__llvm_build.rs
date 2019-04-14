@@ -1,14 +1,13 @@
-$NetBSD: patch-src_librustc__llvm_build.rs,v 1.3 2019/03/07 20:19:11 jperkin Exp $
+$NetBSD: patch-src_librustc__llvm_build.rs,v 1.4 2019/04/14 12:42:03 he Exp $
 
 fix build on NetBSD HEAD-llvm. XXX there is probably a better way to do this.
 
---- src/librustc_llvm/build.rs.orig	2018-12-18 23:11:17.000000000 +0000
+--- src/librustc_llvm/build.rs.orig	2019-04-10 18:45:55.000000000 +0000
 +++ src/librustc_llvm/build.rs
-@@ -244,8 +244,14 @@ fn main() {
-     } else if target.contains("freebsd") {
+@@ -246,7 +246,13 @@ fn main() {
          "c++"
      } else if target.contains("netbsd") && llvm_static_stdcpp.is_some() {
--        // NetBSD uses a separate library when relocation is required
+         // NetBSD uses a separate library when relocation is required
 -        "stdc++_pic"
 +        // NetBSD uses a separate library when relocation is required
 +        if env::var_os("PKGSRC_HAVE_LIBCPP").is_some() {

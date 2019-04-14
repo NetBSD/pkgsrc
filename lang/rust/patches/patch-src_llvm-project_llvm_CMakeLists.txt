@@ -1,9 +1,9 @@
-$NetBSD: patch-src_llvm_CMakeLists.txt,v 1.1 2018/06/21 17:13:13 jperkin Exp $
+$NetBSD: patch-src_llvm-project_llvm_CMakeLists.txt,v 1.1 2019/04/14 12:42:03 he Exp $
 
 Don't implement sys/regset.h workaround, fix source instead.
 
---- src/llvm/CMakeLists.txt.orig	2018-03-10 02:51:13.000000000 +0000
-+++ src/llvm/CMakeLists.txt
+--- src/llvm-project/llvm/CMakeLists.txt.orig	2018-03-10 02:51:13.000000000 +0000
++++ src/llvm-project/llvm/CMakeLists.txt
 @@ -806,11 +806,6 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "(FreeBS
    link_directories("/usr/local/lib")
  endif(${CMAKE_SYSTEM_NAME} MATCHES "(FreeBSD|DragonFly)")
