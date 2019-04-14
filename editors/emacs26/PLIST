@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2018/06/20 11:04:19 mef Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/04/14 07:03:20 wiz Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
 bin/emacs-${PKGVERSION}
 bin/emacsclient
 bin/etags
+include/emacs-module.h
 info/ada-mode.info.gz
 info/auth.info.gz
 info/autotype.info.gz
@@ -77,7 +78,6 @@ man/man1/ebrowse.1
 man/man1/emacs.1
 man/man1/emacsclient.1
 man/man1/etags.1
-share/appdata/emacs.appdata.xml
 share/applications/emacs.desktop
 share/emacs/${PKGVERSION}/etc/AUTHORS
 share/emacs/${PKGVERSION}/etc/CALC-NEWS
@@ -3981,3 +3981,4 @@ share/icons/hicolor/48x48/apps/emacs.png
 share/icons/hicolor/scalable/apps/emacs.svg
 share/icons/hicolor/scalable/mimetypes/emacs-document.svg
 share/icons/hicolor/scalable/mimetypes/emacs-document23.svg
+share/metainfo/emacs.appdata.xml
