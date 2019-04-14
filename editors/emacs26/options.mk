@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2019/02/04 10:38:53 tron Exp $
+# $NetBSD: options.mk,v 1.5 2019/04/14 07:03:20 wiz Exp $
 
 ### Set options
 PKG_OPTIONS_VAR=			PKG_OPTIONS.emacs
@@ -157,14 +157,12 @@ CONFIGURE_ARGS+=	--with-x-toolkit=motif
 .elif !empty(PKG_OPTIONS:Mnextstep)
 .  if exists(/System/Library/Frameworks/Cocoa.framework)
 APPLICATIONS_DIR=	Applications
-NS_APPBINDIR=		nextstep/Emacs.app/Contents/MacOS
 PLIST_SRC+=		PLIST.cocoa
 CHECK_WRKREF_SKIP+=	Applications/Emacs.app/Contents/MacOS/Emacs
 .  else
 .include "../../x11/gnustep-gui/buildlink3.mk"
 MAKE_FILE=		Makefile
 APPLICATIONS_DIR=	share/GNUstep/Local/Applications
-NS_APPBINDIR=		nextstep/Emacs.app
 PLIST_SRC+=		PLIST.gnustep
 CHECK_WRKREF_SKIP+=	share/GNUstep/Local/Applications/Emacs.app/Emacs
 .  endif
