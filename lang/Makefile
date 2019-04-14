@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.512 2019/03/27 06:24:22 adam Exp $
+# $NetBSD: Makefile,v 1.513 2019/04/14 15:27:34 taca Exp $
 #
 
 COMMENT=	Programming languages
@@ -241,8 +241,6 @@ SUBDIR+=	ruby-gherkin
 SUBDIR+=	ruby-rkelly-remix
 SUBDIR+=	ruby22
 SUBDIR+=	ruby22-base
-SUBDIR+=	ruby23
-SUBDIR+=	ruby23-base
 SUBDIR+=	ruby24
 SUBDIR+=	ruby24-base
 SUBDIR+=	ruby25
