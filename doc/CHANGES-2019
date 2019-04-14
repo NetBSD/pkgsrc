@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1705 2019/04/14 15:37:41 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1706 2019/04/14 19:11:56 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2720,3 +2720,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed lang/ruby23 [taca 2019-04-14]
 	Removed x11/ruby-tk [taca 2019-04-14]
 	Removed lang/ruby23-base [taca 2019-04-14]
+	Updated net/hub to 2.11.2 [leot 2019-04-14]
