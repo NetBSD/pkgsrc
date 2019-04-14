@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: greylisting-spp-wrapper.sh,v 1.1 2018/12/14 06:49:31 schmonz Exp $
+# $NetBSD: greylisting-spp-wrapper.sh,v 1.2 2019/04/14 13:28:44 schmonz Exp $
 #
 # @PKGNAME@ wrapper for greylisting-spp.
 # Skips greylisting for configured recipient addresses and domains.
@@ -12,12 +12,12 @@ EXEMPTRCPTHOSTS=@PKG_SYSCONFDIR@/control/greylist/exemptrcpthosts
 
 is_exempt_recipient_address() {
 	[ -f "$EXEMPTRCPTS" ] \
-		&& @GREP@ -qFx -- "$1" "$EXEMPTRCPTS"
+		&& @GREP@ -qFxi -- "$1" "$EXEMPTRCPTS"
 }
 
 is_exempt_recipient_domain() {
 	[ -f "$EXEMPTRCPTHOSTS" ] \
-		&& @GREP@ -qFx -- "$1" "$EXEMPTRCPTHOSTS"
+		&& @GREP@ -qFxi -- "$1" "$EXEMPTRCPTHOSTS"
 }
 
 main() {
