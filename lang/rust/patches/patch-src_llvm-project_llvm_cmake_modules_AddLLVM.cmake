@@ -1,10 +1,10 @@
-$NetBSD: patch-src_llvm_cmake_modules_AddLLVM.cmake,v 1.3 2018/09/24 03:42:42 minskim Exp $
+$NetBSD: patch-src_llvm-project_llvm_cmake_modules_AddLLVM.cmake,v 1.1 2019/04/14 12:42:03 he Exp $
 
 "-z discard-unused" is only supported by Oracle Solaris ld.
 On Darwin, use correct install-name for shared libraries.
 
---- src/llvm/cmake/modules/AddLLVM.cmake.orig	2018-08-01 16:32:37.000000000 +0000
-+++ src/llvm/cmake/modules/AddLLVM.cmake
+--- src/llvm-project/llvm/cmake/modules/AddLLVM.cmake.orig	2018-08-01 16:32:37.000000000 +0000
++++ src/llvm-project/llvm/cmake/modules/AddLLVM.cmake
 @@ -219,8 +219,6 @@ function(add_link_opts target_name)
          set_property(TARGET ${target_name} APPEND_STRING PROPERTY
                       LINK_FLAGS " -Wl,-dead_strip")
