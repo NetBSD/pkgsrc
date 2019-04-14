@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.34 2015/11/04 00:35:12 agc Exp $
+$NetBSD: distinfo,v 1.35 2019/04/14 21:50:36 jnemeth Exp $
 
-SHA1 (mrtg-2.17.4.tar.gz) = 5ae0e659001c613b847237a6b223b26cb7a8ab0f
-RMD160 (mrtg-2.17.4.tar.gz) = cea76ad3685375770520ebbccd0ad4b6adafff1f
-SHA512 (mrtg-2.17.4.tar.gz) = b15dac707e387714ba1a181c487894fcacbb9c2c1a1710475ebe86a11e30d758a4b44c139b42638de7fdef6616cf3112afc4e5a8c5fbf53718829673698ee110
-Size (mrtg-2.17.4.tar.gz) = 1096879 bytes
+SHA1 (mrtg-2.17.7.tar.gz) = c8d6134dd22b9a62e5924faf42d7779bbd1d33ff
+RMD160 (mrtg-2.17.7.tar.gz) = b035d853822fbcf39e9ac20093f199f463b8a6e8
+SHA512 (mrtg-2.17.7.tar.gz) = b25ab38416213bc5128612724530f36f4a855bb66a65f8bbe4bdafef05d2688eed68f5c3df1e13193102507a4114e71ec226ad32dd6b4d3ae2e2291320d8e768
+Size (mrtg-2.17.7.tar.gz) = 1098650 bytes
 SHA1 (patch-aa) = 2874cd59371db10fbc4ff6c29e3a917a4b8eec55
 SHA1 (patch-ab) = bf367e6c43030a9cb64a88336b66932d7e05025c
 SHA1 (patch-ac) = 24ae08714f896ca0f1724454b8ad47c32412c018
-SHA1 (patch-lib__mrtg2__SNMP_Session.pm) = ab19dfdab6951a1b375bf2433f794293ed191bf4
+SHA1 (patch-lib__mrtg2__SNMP_Session.pm) = 85175f077f08fa9c14c35211735ebe56641c4b5d
