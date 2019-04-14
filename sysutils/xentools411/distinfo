@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2019/03/16 16:39:17 bouyer Exp $
+$NetBSD: distinfo,v 1.5 2019/04/14 17:37:33 bouyer Exp $
 
 SHA1 (xen411/ipxe-git-356f6c1b64d7a97746d1816cef8ca22bdd8d0b5d.tar.gz) = 272b8c904dc0127690eca2c5c20c67479e40da34
 RMD160 (xen411/ipxe-git-356f6c1b64d7a97746d1816cef8ca22bdd8d0b5d.tar.gz) = cfcb4a314c15da19b36132b27126f3bd9699d0e5
@@ -9,7 +9,7 @@ RMD160 (xen411/xen-4.11.1.tar.gz) = c0eaf57cfbd4f762e8367bcf88e99912d2089084
 SHA512 (xen411/xen-4.11.1.tar.gz) = c1655c5decdaed95a2b9a99652318cfc72f6cfdae957cfe60d635f7787e8850f33e8fafc4c4b8d61fb579c9b9d93028a6382903e71808a0418b931e76d72a649
 Size (xen411/xen-4.11.1.tar.gz) = 25152217 bytes
 SHA1 (patch-.._ipxe_src_core_settings.c) = 1eab2fbd8b22dde2b8aa830ae7701603486f74e4
-SHA1 (patch-.._ipxe_src_net_fcels.c) = 3b515307d8203b60815ad76bfd2a82289e05ebc5
+SHA1 (patch-.._ipxe_src_net_fcels.c) = eda41b25c3d5f5bef33caa9a6af28c40cb91e66b
 SHA1 (patch-Config.mk) = c41005a60de2f94a72b0206030eb021c137653d3
 SHA1 (patch-Makefile) = 2f3a5eafc5039b149c98dd5e59c39a3197fd9264
 SHA1 (patch-docs_man_xl-disk-configuration.pod.5) = 03ff4c22dde1e1b60ab8750c8971ea057e479151
