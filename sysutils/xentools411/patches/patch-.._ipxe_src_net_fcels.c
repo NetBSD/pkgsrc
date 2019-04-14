@@ -1,4 +1,4 @@
-$NetBSD: patch-.._ipxe_src_net_fcels.c,v 1.1 2018/07/24 13:40:11 bouyer Exp $
+$NetBSD: patch-.._ipxe_src_net_fcels.c,v 1.2 2019/04/14 17:37:33 bouyer Exp $
 
 --- ../ipxe/src/net/fcels.c.orig	2015-01-25 20:27:57.000000000 +0000
 +++ ../ipxe/src/net/fcels.c
@@ -110,7 +110,7 @@ $NetBSD: patch-.._ipxe_src_net_fcels.c,v 1.1 2018/07/24 13:40:11 bouyer Exp $
 -		char payload[ len - sizeof ( struct fc_echo_frame_header ) ];
 +		char payload[];
  	} *echo = data;
-+	size_t plen = suzeif(*echo) + len - sizeof ( struct fc_echo_frame_header );
++	size_t plen = sizeof(*echo) + len - sizeof ( struct fc_echo_frame_header );
  	int rc;
  
  	DBGC ( els, FCELS_FMT "\n", FCELS_ARGS ( els ) );
