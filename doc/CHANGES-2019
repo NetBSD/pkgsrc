@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1708 2019/04/15 07:04:22 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1709 2019/04/15 08:27:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2725,3 +2725,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/cmake to 3.14.2 [adam 2019-04-15]
 	Updated databases/py-psycopg2 to 2.8.2 [adam 2019-04-15]
 	Updated databases/py-peewee to 3.9.4 [adam 2019-04-15]
+	Updated devel/py-cython to 0.29.7 [adam 2019-04-15]
+	Updated devel/py-autopep8 to 1.4.4 [adam 2019-04-15]
