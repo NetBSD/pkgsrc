@@ -1034,7 +1034,7 @@ func (s *Suite) Test_Pkglint_checkdirPackage__filename_with_variable(c *check.C)
 	pkg := t.SetUpPackage("category/package",
 		".include \"../../mk/bsd.prefs.mk\"",
 		"",
-		"RUBY_VERSIONS_ACCEPTED=\t22 23 24 25", // As of 2018.
+		"RUBY_VERSIONS_ACCEPTED=\t22 24 25 26", // As of 2018.
 		".for rv in ${RUBY_VERSIONS_ACCEPTED}",
 		"RUBY_VER?=\t\t${rv}",
 		".endfor",
