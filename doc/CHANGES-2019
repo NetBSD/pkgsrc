@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1707 2019/04/14 21:53:28 jnemeth Exp $
+$NetBSD: CHANGES-2019,v 1.1708 2019/04/15 07:04:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2722,3 +2722,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed lang/ruby23-base [taca 2019-04-14]
 	Updated net/hub to 2.11.2 [leot 2019-04-14]
 	Updated net/mrtg to 2.17.7 [jnemeth 2019-04-14]
+	Updated devel/cmake to 3.14.2 [adam 2019-04-15]
+	Updated databases/py-psycopg2 to 2.8.2 [adam 2019-04-15]
+	Updated databases/py-peewee to 3.9.4 [adam 2019-04-15]
