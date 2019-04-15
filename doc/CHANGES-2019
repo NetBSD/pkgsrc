@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1711 2019/04/15 14:28:35 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1712 2019/04/15 16:23:45 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2727,3 +2727,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-cython to 0.29.7 [adam 2019-04-15]
 	Updated devel/py-autopep8 to 1.4.4 [adam 2019-04-15]
 	Updated net/mitmproxy to 4.0.4nb1 [leot 2019-04-15]
+	Updated net/knot to 2.8.1 [ryoon 2019-04-15]
