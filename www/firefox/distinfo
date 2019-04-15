@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.346 2019/04/11 13:42:32 ryoon Exp $
+$NetBSD: distinfo,v 1.347 2019/04/15 08:31:10 pho Exp $
 
 SHA1 (firefox-66.0.3.source.tar.xz) = 531b26c12a3c838bd5539e6f3497ae57206c7534
 RMD160 (firefox-66.0.3.source.tar.xz) = 868227674cdc2e92c4c0c183878a77907ed5e938
@@ -34,6 +34,7 @@ SHA1 (patch-third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs) = baca
 SHA1 (patch-third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_other_mod.rs) = 7af37abb3bf0674591192146476ea46ca180b5ab
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = e5700d95302ef9672b404ab19e13ef7ba3ede5cf
 SHA1 (patch-toolkit_library_moz.build) = 102e3713552c26f76e8b4e473846bb8fbc44b278
+SHA1 (patch-toolkit_modules_subprocess_subprocess__shared__unix.js) = 89b2b9d0cf2fe4882e9dd74dd692245e554ff03a
 SHA1 (patch-toolkit_moz.configure) = 40ee147cc1d2c62dd6c83b3f67ce9e61f758ea57
 SHA1 (patch-toolkit_mozapps_installer_packager.mk) = b2343fbad2556504dfd13601c02e6e2357c7d2bc
 SHA1 (patch-toolkit_xre_glxtest.cpp) = 437b2edf6b3dc6514f454d7c7bc272a31285f751
