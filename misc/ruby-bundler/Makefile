@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/02/06 15:06:34 taca Exp $
+# $NetBSD: Makefile,v 1.34 2019/04/15 06:11:32 wiz Exp $
 
 DISTNAME=	bundler-1.17.3
 CATEGORIES=	misc
@@ -11,7 +11,7 @@ LICENSE=	mit
 #
 # Currently, ruby26-base has the same version of bundler.
 #
-RUBY_VERSIONS_ACCEPTED=	23 24 25
+RUBY_VERSIONS_ACCEPTED=	24 25
 
 RUBYGEM_OPTIONS+=	--format-executable
 

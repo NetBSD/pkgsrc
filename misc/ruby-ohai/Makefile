@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/02/03 16:15:26 taca Exp $
+# $NetBSD: Makefile,v 1.26 2019/04/15 06:11:32 wiz Exp $
 
 DISTNAME=	ohai-14.8.10
 CATEGORIES=	misc
@@ -22,7 +22,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-chef-config<15:../../sysutils/ruby-chef-config
 
 USE_LANGUAGES=	# none
 
-RUBY_VERSIONS_ACCEPTED=	23 24 25 26
+RUBY_VERSIONS_ACCEPTED=	24 25 26
 
 RUBYGEM_OPTIONS+=	--format-executable
 
