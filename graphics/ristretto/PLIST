@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/01/18 11:51:23 youri Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/04/15 22:28:36 gutteridge Exp $
 bin/ristretto
 share/appdata/ristretto.appdata.xml
 share/applications/ristretto.desktop
@@ -8,6 +8,7 @@ share/icons/hicolor/48x48/apps/ristretto.png
 share/icons/hicolor/scalable/apps/ristretto.svg
 share/locale/ar/LC_MESSAGES/ristretto.mo
 share/locale/ast/LC_MESSAGES/ristretto.mo
+share/locale/be/LC_MESSAGES/ristretto.mo
 share/locale/bg/LC_MESSAGES/ristretto.mo
 share/locale/ca/LC_MESSAGES/ristretto.mo
 share/locale/cs/LC_MESSAGES/ristretto.mo

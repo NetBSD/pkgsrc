@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2019/01/18 11:51:23 youri Exp $
+$NetBSD: distinfo,v 1.7 2019/04/15 22:28:36 gutteridge Exp $
 
-SHA1 (ristretto-0.8.3.tar.bz2) = 5c44d1cda5c60275b5f8e629eb9edc5c29ca0459
-RMD160 (ristretto-0.8.3.tar.bz2) = f7223d134a78fd12c3c010a374e7d29819bfd745
-SHA512 (ristretto-0.8.3.tar.bz2) = c43b48dfdf9e8ed0ea3c5f2bbac1c837881aa6a467c78377b6f53dcce030b5a3b8134a7b8cbad1008ae758295953fde50a916c284e54e8c5490158e776554514
-Size (ristretto-0.8.3.tar.bz2) = 564745 bytes
+SHA1 (ristretto-0.8.4.tar.bz2) = dcaa10e69fc5690166071361846a6e3297bd2c29
+RMD160 (ristretto-0.8.4.tar.bz2) = df01ed7d722f4c1b47f2bec1b660a0519641c6d1
+SHA512 (ristretto-0.8.4.tar.bz2) = c5479cde66e4f0903b9b8d9b1b8f4c7cde35ebfa334e414c8202e783c332bd4bfec650f85d308c7151d31fe84b27a13bb4048290b0a82ce7b8ba4baf3e4088b8
+Size (ristretto-0.8.4.tar.bz2) = 581374 bytes
 SHA1 (patch-src_Makefile.in) = efe5b0923709f5b2087e9faec15f11fcd8106924
