@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1710 2019/04/15 10:21:19 leot Exp $
+$NetBSD: CHANGES-2019,v 1.1711 2019/04/15 14:28:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2718,7 +2718,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/qmail-run to 20190414 [schmonz 2019-04-14]
 	Updated meta-pkgs/bulk-medium to 20190414 [taca 2019-04-14]
 	Removed lang/ruby23 [taca 2019-04-14]
-	Removed x11/ruby-tk [taca 2019-04-14]
 	Removed lang/ruby23-base [taca 2019-04-14]
 	Updated net/hub to 2.11.2 [leot 2019-04-14]
 	Updated net/mrtg to 2.17.7 [jnemeth 2019-04-14]
