@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2019/01/29 15:07:24 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.16 2019/04/15 16:23:03 ryoon Exp $
 bin/kdig
 bin/khost
 bin/knsec3hash
@@ -13,8 +13,8 @@ include/libdnssec/key.h
 include/libdnssec/keyid.h
 include/libdnssec/keystore.h
 include/libdnssec/keytag.h
-include/libdnssec/list.h
 include/libdnssec/nsec.h
+include/libdnssec/pem.h
 include/libdnssec/random.h
 include/libdnssec/sign.h
 include/libdnssec/tsig.h
