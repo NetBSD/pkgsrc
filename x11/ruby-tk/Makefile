@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2019/04/15 14:27:07 taca Exp $
+# $NetBSD: Makefile,v 1.60 2019/04/15 14:35:12 wiz Exp $
 
 DISTNAME=		${RUBY_DISTNAME}
 PKGNAME=		${RUBY_PKGPREFIX}-${RUBY_EXTNAME}-${RUBY_VERSION}
@@ -11,7 +11,7 @@ HOMEPAGE=		${RUBY_HOMEPAGE}
 COMMENT=		Ruby interface to the Tk widget set
 
 # Ruby 2.4 and later do not bundle ruby-tk.
-RUBY_VERSIONS_ACCEPTED= 23 22
+RUBY_VERSIONS_ACCEPTED= 22
 
 USE_TOOLS+=		pax
 USE_RUBY_EXTCONF=	yes
