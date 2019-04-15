@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.46 2019/02/28 08:56:03 adam Exp $
+$NetBSD: distinfo,v 1.47 2019/04/15 08:18:38 adam Exp $
 
-SHA1 (Cython-0.29.6.tar.gz) = 94ec3db8f44c1de97b9e9105f48b4cbca815725d
-RMD160 (Cython-0.29.6.tar.gz) = ce75a5cddbf74c4c2ee08c7be30111d14c46b55d
-SHA512 (Cython-0.29.6.tar.gz) = bb8095b438a7d2567b8b831628fbb32c02299c866e41113da62fb5a5d4982dc0df947a9f723a82c52086806435d8f3518e78a803166149d476f81e042a12494e
-Size (Cython-0.29.6.tar.gz) = 2047021 bytes
+SHA1 (Cython-0.29.7.tar.gz) = eaa3dc383143cfe92c1c73d59b209fafb9776ac7
+RMD160 (Cython-0.29.7.tar.gz) = f9f9a9f0228d83e742500e2e479b1d6528220770
+SHA512 (Cython-0.29.7.tar.gz) = 1c2fd2185d65445318118d917ff6f8b4b958b0a036bc3ce1587dcb8fa94ccc750901cece27e4d0d39c53db68c3a620edf2dcf9424d7a6df58a0275097b90fa6e
+Size (Cython-0.29.7.tar.gz) = 2047944 bytes
 SHA1 (patch-ac) = d0e06dd9e4b5a34d0614ec17f51c129eb7724323
 SHA1 (patch-runtests.py) = d08d3d8e17d6b75a3067f295d3d3eb63ffe97b48
