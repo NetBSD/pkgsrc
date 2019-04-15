@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2018/08/09 11:51:41 leot Exp $
+# $NetBSD: Makefile,v 1.23 2019/04/15 10:19:04 leot Exp $
 
 DISTNAME=	mitmproxy-4.0.4
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mitmproxy/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -28,7 +29,7 @@ DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.13.2:../../devel/py-ruamel-yaml
 DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=1.5.4:../../devel/py-sortedcontainers
 DEPENDS+=	${PYPKGPREFIX}-tornado>=4.3.0:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-urwid>=2.0.1:../../devel/py-urwid
-DEPENDS+=	${PYPKGPREFIX}-wsproto>=0.11.0:../../www/py-wsproto
+DEPENDS+=	${PYPKGPREFIX}-wsproto>=0.13.0:../../www/py-wsproto
 
 SUBST_CLASSES+=			setuppyversions
 SUBST_STAGE.setuppyversions=	pre-configure
@@ -40,6 +41,9 @@ REPLACE_SH+=	mitmproxy/contrib/kaitaistruct/make.sh
 
 USE_LANGUAGES=			# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27 34 35
+
+post-install:
+	${FIND} ${DESTDIR} -name "*.orig" -type f -exec ${RM} {} \;
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
