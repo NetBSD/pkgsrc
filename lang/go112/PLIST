@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/03/16 08:27:56 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/04/16 18:30:27 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go112/AUTHORS
@@ -2561,6 +2561,7 @@ go112/src/cmd/go/testdata/script/list_test_imports.txt
 go112/src/cmd/go/testdata/script/mod_bad_domain.txt
 go112/src/cmd/go/testdata/script/mod_bad_filenames.txt
 go112/src/cmd/go/testdata/script/mod_build_tags.txt
+go112/src/cmd/go/testdata/script/mod_build_versioned.txt
 go112/src/cmd/go/testdata/script/mod_case.txt
 go112/src/cmd/go/testdata/script/mod_case_cgo.txt
 go112/src/cmd/go/testdata/script/mod_clean_cache.txt
@@ -8970,6 +8971,9 @@ go112/test/fixedbugs/issue30061.go
 go112/test/fixedbugs/issue30476.go
 go112/test/fixedbugs/issue30566a.go
 go112/test/fixedbugs/issue30566b.go
+go112/test/fixedbugs/issue30956.go
+go112/test/fixedbugs/issue30956.out
+go112/test/fixedbugs/issue30977.go
 go112/test/fixedbugs/issue3552.dir/one.go
 go112/test/fixedbugs/issue3552.dir/two.go
 go112/test/fixedbugs/issue3552.go
