@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1715 2019/04/16 07:50:36 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1716 2019/04/16 11:33:45 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2734,3 +2734,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-mako to 1.0.9 [adam 2019-04-16]
 	Updated multimedia/mkvtoolnix to 33.1.0 [adam 2019-04-16]
 	Updated devel/memcached to 1.5.13 [adam 2019-04-16]
+	Updated editors/OmegaT to 4.1.5.04nb1 [ryoon 2019-04-16]
