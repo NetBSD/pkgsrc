@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2017/08/29 11:30:05 wiz Exp $
+$NetBSD: distinfo,v 1.10 2019/04/16 11:49:23 ryoon Exp $
 
-SHA1 (gpa-0.9.10.tar.bz2) = c629348725c1bf5dafd57f8a70187dc89815ce60
-RMD160 (gpa-0.9.10.tar.bz2) = fba1404d936e6925e5dcb3cc37ea7006edc9a57b
-SHA512 (gpa-0.9.10.tar.bz2) = ff81a78e6b7c46307af6648a2e691a5e8185db229ccc5e259f2c3c05a3c86b337dde492069e7e9510c155fbc64d71cc4e2f109a00400bfb7560c558b753c42a9
-Size (gpa-0.9.10.tar.bz2) = 763239 bytes
+SHA1 (gpa-0.10.0.tar.bz2) = 61475989acd12de8b7daacd906200e8b4f519c5a
+RMD160 (gpa-0.10.0.tar.bz2) = 7a4544db423f75b056ebf305895f5a203b9e342c
+SHA512 (gpa-0.10.0.tar.bz2) = 87004fb0806e76012bc194f95afe9ef6044aec890b26e845f45c314e1bd8864f056ba5e32f9ef2e15b24b50840235e6e548a5e3006b255b4f1c20e0fd7710a3b
+Size (gpa-0.10.0.tar.bz2) = 782455 bytes
