@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2019/03/16 08:35:41 bsiegert Exp $
+# $NetBSD: Makefile,v 1.19 2019/04/16 18:41:11 bsiegert Exp $
 
 DISTNAME=		go-protobuf-1.3.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=golang/}
 GITHUB_PROJECT=		protobuf
