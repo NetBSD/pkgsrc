@@ -1,15 +1,22 @@
-$NetBSD: patch-Rakefile,v 1.3 2019/03/13 17:36:26 adam Exp $
+$NetBSD: patch-Rakefile,v 1.4 2019/04/16 07:21:49 adam Exp $
 
 Leave pkgsrc to handle security features.
 
---- Rakefile.orig	2019-03-12 21:12:17.000000000 +0000
+--- Rakefile.orig	2019-04-14 22:05:01.000000000 +0000
 +++ Rakefile
-@@ -151,8 +151,6 @@ def setup_globals
-   cxxflags                += " -Wno-inconsistent-missing-override -Wno-potentially-evaluated-expression" if is_clang?
-   cxxflags                += " -Wmisleading-indentation -Wduplicated-cond"                               if check_compiler_version("gcc", "6.0.0")
-   cxxflags                += " -Wshadow-compatible-local -Wduplicated-branches"                          if check_compiler_version("gcc", "7.0.0")
--  cxxflags                += " -fstack-protector"                                                        if is_gcc? && !check_compiler_version("gcc", "4.9.0")
--  cxxflags                += " -fstack-protector-strong"                                                 if check_compiler_version("gcc", "4.9.0") && check_compiler_version("clang", "3.5.0")
+@@ -130,7 +130,6 @@ def setup_globals
+   cflags_common           += " #{c(:WNO_INCONSISTENT_MISSING_OVERRIDE)} #{c(:WNO_POTENTIALLY_EVALUATED_EXPRESSION)}"
+   cflags_common           += " #{c(:OPTIMIZATION_CFLAGS)} -D_FILE_OFFSET_BITS=64"
+   cflags_common           += " -DMTX_LOCALE_DIR=\\\"#{c(:localedir)}\\\" -DMTX_PKG_DATA_DIR=\\\"#{c(:pkgdatadir)}\\\" -DMTX_DOC_DIR=\\\"#{c(:docdir)}\\\""
+-  cflags_common           += stack_protector
+   cflags_common           += " -fsanitize=undefined"                                     if c?(:UBSAN)
+   cflags_common           += " -fsanitize=address -fno-omit-frame-pointer"               if c?(:ADDRSAN)
+   cflags_common           += " -Ilib/libebml -Ilib/libmatroska"                          if c?(:EBML_MATROSKA_INTERNAL)
+@@ -158,7 +157,6 @@ def setup_globals
    cxxflags                += " #{c(:QT_CFLAGS)} #{c(:BOOST_CPPFLAGS)} #{c(:USER_CXXFLAGS)}"
  
    ldflags                  = ""
+-  ldflags                 += stack_protector
+   ldflags                 += " -fuse-ld=lld"                            if is_clang? && !c(:LLVM_LLD).empty?
+   ldflags                 += " -Llib/libebml/src -Llib/libmatroska/src" if c?(:EBML_MATROSKA_INTERNAL)
+   ldflags                 += " -Llib/fmt/src"                           if c?(:FMT_INTERNAL)
