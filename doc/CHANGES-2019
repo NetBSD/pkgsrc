@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1714 2019/04/16 07:19:02 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1715 2019/04/16 07:50:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2732,3 +2732,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-hypothesis to 4.17.0 [adam 2019-04-16]
 	Updated devel/py-test to 4.4.1 [adam 2019-04-16]
 	Updated devel/py-mako to 1.0.9 [adam 2019-04-16]
+	Updated multimedia/mkvtoolnix to 33.1.0 [adam 2019-04-16]
+	Updated devel/memcached to 1.5.13 [adam 2019-04-16]
