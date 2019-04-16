@@ -1,16 +1,15 @@
-$NetBSD: patch-Makefile.in,v 1.5 2017/11/14 14:13:52 fhajny Exp $
+$NetBSD: patch-Makefile.in,v 1.6 2019/04/16 07:50:19 adam Exp $
 
-Don't build programs that won't be installed
 List test prerequisite.
 
---- Makefile.in.orig	2017-11-04 21:53:37.000000000 +0000
+--- Makefile.in.orig	2019-04-16 04:51:15.000000000 +0000
 +++ Makefile.in
-@@ -1729,7 +1729,7 @@ memcached_dtrace.o: $(memcached_OBJECTS)
- memcached_debug_dtrace.o: $(memcached_debug_OBJECTS)
- 	$(DTRACE) $(DTRACEFLAGS) -G -o memcached_debug_dtrace.o -s ${srcdir}/memcached_dtrace.d $(memcached_debug_OBJECTS)
+@@ -1914,7 +1914,7 @@ memcached_debug_dtrace.o: $(memcached_de
+ @ENABLE_TLS_TRUE@	  echo "Set SSL_TEST=1 to enable TLS tests"; \
+ @ENABLE_TLS_TRUE@	fi
  
 -test:	memcached-debug sizes testapp
 +test:	memcached-debug sizes testapp timedrun
  	$(srcdir)/sizes
  	$(srcdir)/testapp
- 	@if test -n "${PARALLEL}"; then \
+ @ENABLE_TLS_TRUE@	@if test $(SSL_TEST)1 = 1; then \
