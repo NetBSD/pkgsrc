@@ -1,11 +1,11 @@
-$NetBSD: patch-extension_Makefile.in,v 1.4 2018/07/14 13:47:32 adam Exp $
+$NetBSD: patch-extension_Makefile.in,v 1.5 2019/04/16 11:43:29 ryoon Exp $
 
 Install into a separate directory, otherwise these shadow e.g. time(3).
 Install *.la file for extensions, reduce PLIST divergence.
 
---- extension/Makefile.in.orig	2018-02-25 17:06:54.000000000 +0000
+--- extension/Makefile.in.orig	2019-04-12 09:03:11.000000000 +0000
 +++ extension/Makefile.in
-@@ -314,7 +314,7 @@ am__can_run_installinfo = \
+@@ -323,7 +323,7 @@ am__can_run_installinfo = \
      n|no|NO) false;; \
      *) (install-info --version) >/dev/null 2>&1;; \
    esac
@@ -14,7 +14,7 @@ Install *.la file for extensions, reduce PLIST divergence.
  NROFF = nroff
  MANS = $(dist_man_MANS)
  RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\
-@@ -1236,7 +1236,6 @@ info-am:
+@@ -1269,7 +1269,6 @@ info-am:
  
  install-data-am: install-man install-pkgextensionLTLIBRARIES
  	@$(NORMAL_INSTALL)
@@ -22,12 +22,12 @@ Install *.la file for extensions, reduce PLIST divergence.
  install-dvi: install-dvi-recursive
  
  install-dvi-am:
-@@ -1300,7 +1299,7 @@ uninstall-man: uninstall-man3
- 	distclean-libtool distclean-tags distcleancheck distdir \
- 	distuninstallcheck dvi dvi-am html html-am info info-am \
- 	install install-am install-data install-data-am \
--	install-data-hook install-dvi install-dvi-am install-exec \
-+	install-dvi install-dvi-am install-exec \
- 	install-exec-am install-html install-html-am install-info \
- 	install-info-am install-man install-man3 install-pdf \
- 	install-pdf-am install-pkgextensionLTLIBRARIES install-ps \
+@@ -1348,7 +1347,7 @@ uninstall-man: uninstall-man3
+ 	distclean-libtool distclean-local distclean-tags \
+ 	distcleancheck distdir distuninstallcheck dvi dvi-am html \
+ 	html-am info info-am install install-am install-data \
+-	install-data-am install-data-hook install-dvi install-dvi-am \
++	install-data-am install-dvi install-dvi-am \
+ 	install-exec install-exec-am install-html install-html-am \
+ 	install-info install-info-am install-man install-man3 \
+ 	install-pdf install-pdf-am install-pkgextensionLTLIBRARIES \
