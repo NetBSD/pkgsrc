@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1713 2019/04/15 22:29:21 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.1714 2019/04/16 07:19:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2729,3 +2729,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/mitmproxy to 4.0.4nb1 [leot 2019-04-15]
 	Updated net/knot to 2.8.1 [ryoon 2019-04-15]
 	Updated graphics/ristretto to 0.8.4 [gutteridge 2019-04-15]
+	Updated devel/py-hypothesis to 4.17.0 [adam 2019-04-16]
+	Updated devel/py-test to 4.4.1 [adam 2019-04-16]
+	Updated devel/py-mako to 1.0.9 [adam 2019-04-16]
