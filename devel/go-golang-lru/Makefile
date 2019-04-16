@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2019/03/16 08:35:45 bsiegert Exp $
+# $NetBSD: Makefile,v 1.11 2019/04/16 18:41:15 bsiegert Exp $
 
 DISTNAME=	golang-lru-0.0.20160813
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	8
+PKGREVISION=	9
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 CATEGORIES=	devel
 GITHUB_TAG=	0a025b7e63adc15a622f29b0b2c4c3848243bbf6
