@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2019/03/21 14:18:07 adam Exp $
+# $NetBSD: Makefile,v 1.13 2019/04/16 07:18:33 adam Exp $
 
-DISTNAME=	Mako-1.0.8
+DISTNAME=	Mako-1.0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/Mako/}
