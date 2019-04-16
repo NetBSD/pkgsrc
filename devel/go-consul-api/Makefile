@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2019/03/16 08:35:44 bsiegert Exp $
+# $NetBSD: Makefile,v 1.11 2019/04/16 18:41:14 bsiegert Exp $
 
 DISTNAME=	consul-api-0.0.20150107
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	8
+PKGREVISION=	9
 MASTER_SITES=	${MASTER_SITE_GITHUB:=armon/}
 CATEGORIES=	devel
 GITHUB_TAG=	dcfedd50ed5334f96adee43fc88518a4f095e15c
