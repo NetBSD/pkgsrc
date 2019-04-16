@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2019/04/14 12:42:03 he Exp $
+# $NetBSD: Makefile,v 1.95 2019/04/16 06:53:26 he Exp $
 
 DISTNAME=	rustc-1.34.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -229,7 +229,7 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 pre-build-fix:
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.33.0
+RUST_STAGE0_VER=	1.34.0
 RUST_ARCH=		powerpc-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -240,7 +240,7 @@ SITES.${RUST_STD_STAGE0}=	ftp://golden-delicious.urc.uninett.no/pub/rust/
 pre-build-fix:
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.33.0
+RUST_STAGE0_VER=	1.34.0
 RUST_ARCH=		aarch64-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -251,7 +251,7 @@ SITES.${RUST_STD_STAGE0}=	ftp://golden-delicious.urc.uninett.no/pub/rust/
 pre-build-fix:
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.33.0
+RUST_STAGE0_VER=	1.34.0
 RUST_ARCH=		sparc64-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -263,7 +263,7 @@ pre-build-fix:
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv7hf) || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH=		armv7-unknown-netbsd-eabihf
-RUST_STAGE0_VER=	1.33.0
+RUST_STAGE0_VER=	1.34.0
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
