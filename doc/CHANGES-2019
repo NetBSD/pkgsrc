@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1719 2019/04/16 18:14:24 bsiegert Exp $
+$NetBSD: CHANGES-2019,v 1.1720 2019/04/16 18:18:53 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2738,3 +2738,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/gawk to 5.0.0 [ryoon 2019-04-16]
 	Updated security/gpa to 0.10.0 [ryoon 2019-04-16]
 	Updated lang/go111 to 1.11.9 [bsiegert 2019-04-16]
+	Updated net/youtube-dl to 20190417 [leot 2019-04-16]
