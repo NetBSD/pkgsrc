@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2019/03/16 08:35:40 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2019/04/16 18:41:10 bsiegert Exp $
 
 DISTNAME=	chroma-0.5.0
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alecthomas/}
 CATEGORIES=	textproc
 GITHUB_PROJECT=	chroma
