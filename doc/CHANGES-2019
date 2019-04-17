@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1726 2019/04/17 09:39:44 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1727 2019/04/17 09:42:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2745,3 +2745,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/jbig2dec to 0.16 [adam 2019-04-17]
 	Updated print/ghostscript-agpl to 9.27 [adam 2019-04-17]
 	Updated print/cups-base to 2.2.11 [wiz 2019-04-17]
+	Updated www/http-parser to 2.9.2 [wiz 2019-04-17]
