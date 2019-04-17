@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/01/08 14:48:22 adam Exp $
+$NetBSD: distinfo,v 1.8 2019/04/17 09:42:45 wiz Exp $
 
-SHA1 (http-parser-2.9.0.tar.gz) = 9d79f6888ac9973f766efa40fddf622b8f37f5e3
-RMD160 (http-parser-2.9.0.tar.gz) = a5cb630157be26a813f80407b8e95061fe9a022e
-SHA512 (http-parser-2.9.0.tar.gz) = 40acecbf71b9f0b4ae857c74c3ec0784d7f341a0cb83cf82b308387d0c5b56d38b282241aaf8ca93816970f2a9e67989f3d9d456459f3986c29fe51ab520155e
-Size (http-parser-2.9.0.tar.gz) = 51324 bytes
+SHA1 (http-parser-2.9.2.tar.gz) = 1fcfe61d28d67643827b21ddeed92dc187f63ef7
+RMD160 (http-parser-2.9.2.tar.gz) = 334b08005e4e2b99c14bb20d25e127347c348894
+SHA512 (http-parser-2.9.2.tar.gz) = fe21ba46c9297b55a6382497b689da2af88999a9a5716ffef0731057ce1bb053056e4f20147284c78338e48ed1a793a0270fe0edfe3f4b589926e3ede603d023
+Size (http-parser-2.9.2.tar.gz) = 51298 bytes
