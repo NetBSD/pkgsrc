@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/08/27 01:00:49 maya Exp $
+$NetBSD: distinfo,v 1.4 2019/04/17 18:04:20 tsutsui Exp $
 
-SHA1 (arandr-0.1.9.tar.gz) = 0115d8d270dce0f5ae9ab86f9e9e52899af82925
-RMD160 (arandr-0.1.9.tar.gz) = e6944a8d9e205fcefdd38598a105b1899beeca47
-SHA512 (arandr-0.1.9.tar.gz) = 0b2bd62665a9680cf29132ddf0a1ba8eda6bc403b98245727e4c4613ac3e2a694d9268426a14bab35b8e79c7c9191cc224627fca56349acf20546a93d749f006
-Size (arandr-0.1.9.tar.gz) = 90437 bytes
+SHA1 (arandr-0.1.10.tar.gz) = 0661a8d9b7e384a213b591bd2a307e704592aecb
+RMD160 (arandr-0.1.10.tar.gz) = e426beeeafdbc63afa8f2c90d1c86ab242fc2f3c
+SHA512 (arandr-0.1.10.tar.gz) = 12c2fe5b36f8d8e688d990e352c1cfa3e8512c0b647b78a8af93f9472704e4867fac4c56c207465fb7b420c9022dc545dea8ad8a29af3037758ab4587dcd38ba
+Size (arandr-0.1.10.tar.gz) = 100203 bytes
