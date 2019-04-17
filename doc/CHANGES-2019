@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1733 2019/04/17 12:17:51 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1734 2019/04/17 16:33:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2753,3 +2753,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/cups-filters to 1.22.5 [adam 2019-04-17]
 	Updated devel/py-xdis to 4.0.0 [adam 2019-04-17]
 	Updated lang/py-uncompyle6 to 3.3.0 [adam 2019-04-17]
+	Updated lang/ruby26-base to 2.6.3 [taca 2019-04-17]
+	Updated lang/ruby26 to 2.6.3 [taca 2019-04-17]
