@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1729 2019/04/17 10:01:16 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1730 2019/04/17 10:02:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2748,3 +2748,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/http-parser to 2.9.2 [wiz 2019-04-17]
 	Updated www/py-mechanize to 0.4.2 [wiz 2019-04-17]
 	Updated lang/vala to 0.44.3 [wiz 2019-04-17]
+	Updated shells/zsh-autosuggestions to 0.5.2 [wiz 2019-04-17]
