@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1735 2019/04/17 18:04:42 tsutsui Exp $
+$NetBSD: CHANGES-2019,v 1.1736 2019/04/17 23:47:37 roy Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2756,3 +2756,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/ruby26-base to 2.6.3 [taca 2019-04-17]
 	Updated lang/ruby26 to 2.6.3 [taca 2019-04-17]
 	Updated x11/arandr to 0.1.10 [tsutsui 2019-04-17]
+	Updated net/dhcpcd to 7.2.0 [roy 2019-04-17]
