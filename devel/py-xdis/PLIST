@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/03/10 13:52:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/04/17 12:16:05 adam Exp $
 bin/pydisasm-${PYVERSSUFFIX}.py
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -113,6 +113,9 @@ ${PYSITELIB}/xdis/opcodes/opcode_35pypy.pyo
 ${PYSITELIB}/xdis/opcodes/opcode_36.py
 ${PYSITELIB}/xdis/opcodes/opcode_36.pyc
 ${PYSITELIB}/xdis/opcodes/opcode_36.pyo
+${PYSITELIB}/xdis/opcodes/opcode_36pypy.py
+${PYSITELIB}/xdis/opcodes/opcode_36pypy.pyc
+${PYSITELIB}/xdis/opcodes/opcode_36pypy.pyo
 ${PYSITELIB}/xdis/opcodes/opcode_37.py
 ${PYSITELIB}/xdis/opcodes/opcode_37.pyc
 ${PYSITELIB}/xdis/opcodes/opcode_37.pyo
@@ -122,18 +125,6 @@ ${PYSITELIB}/xdis/opcodes/opcode_38.pyo
 ${PYSITELIB}/xdis/opcodes/opcode_3x.py
 ${PYSITELIB}/xdis/opcodes/opcode_3x.pyc
 ${PYSITELIB}/xdis/opcodes/opcode_3x.pyo
-${PYSITELIB}/xdis/opcodes/opcode_pypy26.py
-${PYSITELIB}/xdis/opcodes/opcode_pypy26.pyc
-${PYSITELIB}/xdis/opcodes/opcode_pypy26.pyo
-${PYSITELIB}/xdis/opcodes/opcode_pypy27.py
-${PYSITELIB}/xdis/opcodes/opcode_pypy27.pyc
-${PYSITELIB}/xdis/opcodes/opcode_pypy27.pyo
-${PYSITELIB}/xdis/opcodes/opcode_pypy32.py
-${PYSITELIB}/xdis/opcodes/opcode_pypy32.pyc
-${PYSITELIB}/xdis/opcodes/opcode_pypy32.pyo
-${PYSITELIB}/xdis/opcodes/opcode_pypy35.py
-${PYSITELIB}/xdis/opcodes/opcode_pypy35.pyc
-${PYSITELIB}/xdis/opcodes/opcode_pypy35.pyo
 ${PYSITELIB}/xdis/std.py
 ${PYSITELIB}/xdis/std.pyc
 ${PYSITELIB}/xdis/std.pyo
