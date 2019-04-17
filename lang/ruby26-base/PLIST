@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/02/03 13:41:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/04/17 16:33:10 taca Exp $
 bin/bundle${RUBY_SUFFIX}
 bin/bundler${RUBY_SUFFIX}
 bin/erb${RUBY_SUFFIX}
@@ -279,6 +279,7 @@ ${RUBY_LIB}/coverage.rb
 ${RUBY_LIB}/csv.rb
 ${RUBY_LIB}/csv/core_ext/array.rb
 ${RUBY_LIB}/csv/core_ext/string.rb
+${RUBY_LIB}/csv/delete_suffix.rb
 ${RUBY_LIB}/csv/fields_converter.rb
 ${RUBY_LIB}/csv/match_p.rb
 ${RUBY_LIB}/csv/parser.rb
