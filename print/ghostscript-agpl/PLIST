@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/01/15 10:49:01 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2019/04/17 08:28:44 adam Exp $
 bin/dvipdf
 bin/eps2eps
 bin/gs
@@ -69,6 +69,7 @@ man/man1/ps2pdf14.1
 man/man1/ps2pdfwr.1
 man/man1/ps2ps.1
 share/doc/ghostscript/${PKGVERSION}/API.htm
+share/doc/ghostscript/${PKGVERSION}/COPYING
 share/doc/ghostscript/${PKGVERSION}/C-style.htm
 share/doc/ghostscript/${PKGVERSION}/Commprod.htm
 share/doc/ghostscript/${PKGVERSION}/DLL.htm
@@ -326,11 +327,11 @@ ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Font/NimbusRoman-Reg
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Font/NimbusSans-Bold
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Font/NimbusSans-BoldItalic
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Font/NimbusSans-Italic
+${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Font/NimbusSans-Regular
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Font/NimbusSansNarrow-Bold
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Font/NimbusSansNarrow-BoldOblique
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Font/NimbusSansNarrow-Oblique
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Font/NimbusSansNarrow-Regular
-${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Font/NimbusSans-Regular
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Font/P052-Bold
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Font/P052-BoldItalic
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Font/P052-Italic
