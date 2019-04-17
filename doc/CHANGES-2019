@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1724 2019/04/17 09:34:09 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1725 2019/04/17 09:35:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2721,6 +2721,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed lang/ruby23-base [taca 2019-04-14]
 	Updated net/hub to 2.11.2 [leot 2019-04-14]
 	Updated net/mrtg to 2.17.7 [jnemeth 2019-04-14]
+	Updated lang/rust to 1.34.0 [he 2019-04-14]
 	Updated devel/cmake to 3.14.2 [adam 2019-04-15]
 	Updated databases/py-psycopg2 to 2.8.2 [adam 2019-04-15]
 	Updated databases/py-peewee to 3.9.4 [adam 2019-04-15]
@@ -2740,7 +2741,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/go111 to 1.11.9 [bsiegert 2019-04-16]
 	Updated net/youtube-dl to 20190417 [leot 2019-04-16]
 	Updated lang/go112 to 1.12.4 [bsiegert 2019-04-16]
-	Updated lang/rust to 1.34.0 [he 2019-04-16]
 	Updated graphics/png to 1.6.37 [wiz 2019-04-17]
 	Updated graphics/jbig2dec to 0.16 [adam 2019-04-17]
 	Updated print/ghostscript-agpl to 9.27 [adam 2019-04-17]
