@@ -1,4 +1,6 @@
-$NetBSD: patch-libgcc_crtstuff.c,v 1.1 2018/05/05 04:08:36 maya Exp $
+$NetBSD: patch-libgcc_crtstuff.c,v 1.2 2019/04/18 19:18:02 rillig Exp $
+
+https://gcc.gnu.org/bugzilla/show_bug.cgi?id=90147
 
 --- libgcc/crtstuff.c.orig	2017-01-01 12:07:43.000000000 +0000
 +++ libgcc/crtstuff.c
