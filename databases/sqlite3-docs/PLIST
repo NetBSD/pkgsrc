@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.84 2019/02/25 18:04:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.85 2019/04/18 10:10:03 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -170,6 +170,7 @@ share/doc/sqlite3/c3ref/status.html
 share/doc/sqlite3/c3ref/step.html
 share/doc/sqlite3/c3ref/stmt.html
 share/doc/sqlite3/c3ref/stmt_busy.html
+share/doc/sqlite3/c3ref/stmt_isexplain.html
 share/doc/sqlite3/c3ref/stmt_readonly.html
 share/doc/sqlite3/c3ref/stmt_scanstatus.html
 share/doc/sqlite3/c3ref/stmt_scanstatus_reset.html
@@ -654,6 +655,7 @@ share/doc/sqlite3/releaselog/3_26_0.html
 share/doc/sqlite3/releaselog/3_27_0.html
 share/doc/sqlite3/releaselog/3_27_1.html
 share/doc/sqlite3/releaselog/3_27_2.html
+share/doc/sqlite3/releaselog/3_28_0.html
 share/doc/sqlite3/releaselog/3_2_0.html
 share/doc/sqlite3/releaselog/3_2_1.html
 share/doc/sqlite3/releaselog/3_2_2.html
