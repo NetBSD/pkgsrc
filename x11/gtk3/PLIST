@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2018/10/23 07:42:23 leot Exp $
+@comment $NetBSD: PLIST,v 1.25 2019/04/18 09:59:34 adam Exp $
 bin/gtk-builder-tool
 bin/gtk-encode-symbolic-svg
 bin/gtk-launch
@@ -60,6 +60,7 @@ ${PLIST.quartz}include/gtk-3.0/gdk/quartz/gdkquartzdevicemanager-core.h
 ${PLIST.quartz}include/gtk-3.0/gdk/quartz/gdkquartzdisplay.h
 ${PLIST.quartz}include/gtk-3.0/gdk/quartz/gdkquartzdisplaymanager.h
 ${PLIST.quartz}include/gtk-3.0/gdk/quartz/gdkquartzdnd.h
+${PLIST.quartz}include/gtk-3.0/gdk/quartz/gdkquartzglcontext.h
 ${PLIST.quartz}include/gtk-3.0/gdk/quartz/gdkquartzkeys.h
 ${PLIST.quartz}include/gtk-3.0/gdk/quartz/gdkquartzmonitor.h
 ${PLIST.quartz}include/gtk-3.0/gdk/quartz/gdkquartzscreen.h
