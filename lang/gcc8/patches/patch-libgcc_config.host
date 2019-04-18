@@ -1,6 +1,6 @@
-$NetBSD: patch-libgcc_config.host,v 1.2 2018/11/10 11:45:27 mrg Exp $
+$NetBSD: patch-libgcc_config.host,v 1.3 2019/04/18 19:18:02 rillig Exp $
 
-Add libgcc x86 and arm64 netbsd config
+Add NetBSD support for aarch64, x86 and x86_64.
 
 --- libgcc/config.host.orig	2018-04-06 13:04:17.000000000 -0700
 +++ libgcc/config.host	2018-11-09 03:33:30.166898124 -0800

@@ -1,4 +1,6 @@
-$NetBSD: patch-libffi_testsuite_libffi.call_float2.c,v 1.1 2018/05/05 04:08:36 maya Exp $
+$NetBSD: patch-libffi_testsuite_libffi.call_float2.c,v 1.2 2019/04/18 19:18:02 rillig Exp $
+
+https://gcc.gnu.org/bugzilla/show_bug.cgi?id=90146
 
 --- libffi/testsuite/libffi.call/float2.c.orig	2013-06-01 17:08:18.000000000 +0000
 +++ libffi/testsuite/libffi.call/float2.c

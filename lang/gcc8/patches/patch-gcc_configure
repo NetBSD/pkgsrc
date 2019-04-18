@@ -1,4 +1,6 @@
-$NetBSD: patch-gcc_configure,v 1.1 2018/05/05 04:08:36 maya Exp $
+$NetBSD: patch-gcc_configure,v 1.2 2019/04/18 19:18:02 rillig Exp $
+
+https://gcc.gnu.org/bugzilla/show_bug.cgi?id=90143
 
 --- gcc/configure.orig	2015-09-30 23:06:11.000000000 +0000
 +++ gcc/configure

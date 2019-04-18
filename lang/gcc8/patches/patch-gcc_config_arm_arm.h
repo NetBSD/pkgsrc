@@ -1,11 +1,11 @@
-$NetBSD: patch-gcc_config_arm_arm.h,v 1.1 2018/05/05 04:08:36 maya Exp $
+$NetBSD: patch-gcc_config_arm_arm.h,v 1.2 2019/04/18 19:18:02 rillig Exp $
 
 driver-arm.o is only included for freebsd/arm and linux/arm, and
 it is responsible for the definition of host_detect_local_cpu.
 
 Without it, we get an undefined reference.
 
-GCC bugzilla #77800
+https://gcc.gnu.org/bugzilla/show_bug.cgi?id=77800
 
 --- gcc/config/arm/arm.h.orig	2018-03-22 17:24:41.000000000 +0000
 +++ gcc/config/arm/arm.h
