@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1737 2019/04/18 07:22:27 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1738 2019/04/18 07:48:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2759,3 +2759,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/dhcpcd to 7.2.0 [roy 2019-04-17]
 	Updated www/nghttp2 to 1.38.0 [adam 2019-04-18]
 	Updated www/nginx-devel to 1.15.12 [adam 2019-04-18]
+	Updated devel/physfs to 3.0.2 [adam 2019-04-18]
+	Updated devel/libuv to 1.28.0 [adam 2019-04-18]
