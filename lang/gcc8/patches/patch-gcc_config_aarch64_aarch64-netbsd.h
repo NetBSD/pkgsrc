@@ -1,6 +1,6 @@
-$NetBSD: patch-gcc_config_aarch64_aarch64-netbsd.h,v 1.1 2018/11/10 11:45:27 mrg Exp $
+$NetBSD: patch-gcc_config_aarch64_aarch64-netbsd.h,v 1.2 2019/04/18 19:18:02 rillig Exp $
 
-arm64 support.
+AArch64 support for NetBSD.
 
 --- /dev/null	2018-11-09 09:25:57.929086649 +0000
 +++ gcc/config/aarch64/aarch64-netbsd.h	2018-11-09 09:23:18.308262443 +0000
