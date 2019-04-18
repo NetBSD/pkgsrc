@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.17 2014/10/09 11:55:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2019/04/18 17:04:37 gdt Exp $
 bin/cd-drive
 bin/cd-info
 bin/cd-read
-bin/cdda-player
 bin/iso-info
 bin/iso-read
 bin/mmc-tool
