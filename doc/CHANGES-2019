@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1739 2019/04/18 08:41:13 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1740 2019/04/18 10:00:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2763,3 +2763,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/libuv to 1.28.0 [adam 2019-04-18]
 	Updated www/py-asgiref to 3.1.2 [adam 2019-04-18]
 	Updated www/py-urllib3 to 1.24.2 [adam 2019-04-18]
+	Updated x11/gtk3 to 3.24.8 [adam 2019-04-18]
+	Updated databases/go-ldap to 3.0.3 [adam 2019-04-18]
