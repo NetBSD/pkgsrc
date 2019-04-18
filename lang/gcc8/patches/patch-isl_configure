@@ -1,6 +1,8 @@
-$NetBSD: patch-isl_configure,v 1.1 2018/05/05 04:08:36 maya Exp $
+$NetBSD: patch-isl_configure,v 1.2 2019/04/18 19:18:02 rillig Exp $
 
 Make test portable
+
+https://gcc.gnu.org/bugzilla/show_bug.cgi?id=90144
 
 --- isl/configure.orig	2016-01-14 17:26:10.000000000 +0000
 +++ isl/configure

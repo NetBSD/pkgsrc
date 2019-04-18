@@ -1,6 +1,8 @@
-$NetBSD: patch-contrib_download__prerequisites,v 1.1 2018/05/05 04:08:36 maya Exp $
+$NetBSD: patch-contrib_download__prerequisites,v 1.2 2019/04/18 19:18:02 rillig Exp $
 
 Non-portable test
+
+https://gcc.gnu.org/bugzilla/show_bug.cgi?id=90142
 
 --- contrib/download_prerequisites.orig	2017-04-11 16:34:07.000000000 +0000
 +++ contrib/download_prerequisites
