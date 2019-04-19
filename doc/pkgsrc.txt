@@ -1513,7 +1513,7 @@ GCC_REQD:
     the system GCC doesn't satisfy this requirement, then pkgsrc will build and
     install one of the GCC packages to use instead.
 
-PYTHON_DEFAULT_VERSION:
+PYTHON_VERSION_DEFAULT:
 
     Specifies which version of python to use when several options are
     available.
