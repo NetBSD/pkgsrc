@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2019/04/19 17:56:52 adam Exp $
+
+Use shared libraries for linking the main executable.
+
+--- CMakeLists.txt.orig	2019-04-19 17:41:26.000000000 +0000
++++ CMakeLists.txt
+@@ -183,7 +183,7 @@ endif()
+ 
+ # Build the brotli executable
+ add_executable(brotli ${BROTLI_CLI_C})
+-target_link_libraries(brotli ${BROTLI_LIBRARIES_STATIC})
++target_link_libraries(brotli ${BROTLI_LIBRARIES})
+ 
+ # Installation
+ if(NOT BROTLI_BUNDLED_MODE)
