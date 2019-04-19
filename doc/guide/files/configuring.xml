@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.54 2019/03/03 21:36:11 leot Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.55 2019/04/19 13:43:27 leot Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -285,7 +285,7 @@ uid=1000(myusername) gid=100(users) groups=100(users),0(wheel)
       </varlistentry>
 
       <varlistentry>
-	<term><varname>PYTHON_DEFAULT_VERSION</varname>:</term>
+	<term><varname>PYTHON_VERSION_DEFAULT</varname>:</term>
 	<listitem>
 	  <para>Specifies which version of python to use when several
 	  options are available.</para>
