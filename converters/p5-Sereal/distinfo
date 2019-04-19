@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/02/25 16:15:47 wiz Exp $
+$NetBSD: distinfo,v 1.6 2019/04/19 14:56:32 wen Exp $
 
-SHA1 (Sereal-4.005.tar.gz) = c8fd237b002d2e27a27b6add3051c15efd554dac
-RMD160 (Sereal-4.005.tar.gz) = 420b6cf5c1e7f6e501312c31deb52de02c32f030
-SHA512 (Sereal-4.005.tar.gz) = 89dd27ca0642141f0a14aaea5e1c78cd02602584a1cbccb7cf808a6a8b4ad51d090049b5e4db55ddd9e32f91c40bca231a82b9d5c89a69a47e7b24a9b79a6ef8
-Size (Sereal-4.005.tar.gz) = 193565 bytes
+SHA1 (Sereal-4.007.tar.gz) = 06544d842496d2ad3df557d6b81be293ff7b4bd8
+RMD160 (Sereal-4.007.tar.gz) = ab341395b6a68b76557642eda898e9619fa11c2c
+SHA512 (Sereal-4.007.tar.gz) = 1e44c2b9affc282d1c966b4549667634a4f23becf416ed6eb37fb5bcbf7e1cdbe88697043454bd6398805801f6250aaecd8a5895b6761342278a40f87f24b69a
+Size (Sereal-4.007.tar.gz) = 195181 bytes
