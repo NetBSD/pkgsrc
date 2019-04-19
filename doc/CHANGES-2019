@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1743 2019/04/19 02:06:08 fox Exp $
+$NetBSD: CHANGES-2019,v 1.1744 2019/04/19 05:35:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2768,3 +2768,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/sqlite3 to 3.28.0 [adam 2019-04-18]
 	Updated misc/libcdio to 2.1.0 [gdt 2019-04-18]
 	Updated audio/fasttracker2 to 2.149 [fox 2019-04-19]
+	Updated mail/dovecot2 to 2.3.5.2 [adam 2019-04-19]
