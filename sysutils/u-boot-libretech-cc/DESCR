@@ -1,0 +1,10 @@
+U-Boot is a bootloader for embedded boards based on PowerPC, ARM, MIPS and
+several other processors, which can be installed in a boot ROM and used to
+initialize and test the hardware or to download and run application code.
+
+This package provides U-Boot for the Libre Computer AML-S905X-CC (Le Potato)
+single board computer.
+
+For installation instructions please refer to:
+
+http://git.denx.de/?p=u-boot.git;a=blob;f=board/amlogic/odroid-c2/README.nanopi-k2
