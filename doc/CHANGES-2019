@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1752 2019/04/19 14:46:28 wen Exp $
+$NetBSD: CHANGES-2019,v 1.1753 2019/04/19 14:47:37 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2781,3 +2781,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added www/cliqz version 1.26.3 [fox 2019-04-19]
 	Updated converters/p5-JSON-XS to 4.02 [wen 2019-04-19]
 	Updated converters/p5-Sereal-Decoder to 4.007 [wen 2019-04-19]
+	Updated converters/p5-Sereal-Encoder to 4.007 [wen 2019-04-19]
