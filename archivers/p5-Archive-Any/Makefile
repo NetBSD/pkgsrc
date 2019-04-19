@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2018/08/22 09:42:53 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/04/19 10:30:35 wen Exp $
 
-DISTNAME=	Archive-Any-0.0945
+DISTNAME=	Archive-Any-0.0946
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	archivers perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Archive/}
 
@@ -21,7 +20,6 @@ DEPENDS+=	p5-Module-Find>=0:../../devel/p5-Module-Find
 BUILD_DEPENDS+=	p5-Test-Warn>0:../../devel/p5-Test-Warn
 
 PERL5_PACKLIST=		auto/Archive/Any/.packlist
-PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
