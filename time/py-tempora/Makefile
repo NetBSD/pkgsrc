@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2018/11/15 10:07:38 adam Exp $
+# $NetBSD: Makefile,v 1.11 2019/04/19 10:01:13 adam Exp $
 
-DISTNAME=	tempora-1.14
+DISTNAME=	tempora-1.14.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tempora/}
