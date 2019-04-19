@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1750 2019/04/19 14:10:25 fox Exp $
+$NetBSD: CHANGES-2019,v 1.1751 2019/04/19 14:20:46 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2779,3 +2779,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated archivers/p5-Archive-Any to 0.0946 [wen 2019-04-19]
 	Added sysutils/u-boot-libretech-cc version 2018.11 [jmcneill 2019-04-19]
 	Added www/cliqz version 1.26.3 [fox 2019-04-19]
+	Updated converters/p5-JSON-XS to 4.02 [wen 2019-04-19]
