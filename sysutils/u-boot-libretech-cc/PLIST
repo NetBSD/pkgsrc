@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2019/04/19 10:39:53 jmcneill Exp $
+share/u-boot/libretech-cc/u-boot
+share/u-boot/libretech-cc/u-boot-dtb.bin
