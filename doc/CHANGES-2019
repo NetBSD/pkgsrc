@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1756 2019/04/19 18:31:14 wiedi Exp $
+$NetBSD: CHANGES-2019,v 1.1757 2019/04/19 23:41:33 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2785,3 +2785,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated converters/p5-Sereal to 4.007 [wen 2019-04-19]
 	Updated archivers/brotli to 1.0.7nb1 [adam 2019-04-19]
 	Updated editors/nano to 4.1 [wiedi 2019-04-19]
+	Updated devel/p5-Test-Needs to 0.002006 [wen 2019-04-19]
