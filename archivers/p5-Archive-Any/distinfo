@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/07/28 12:16:17 wen Exp $
+$NetBSD: distinfo,v 1.6 2019/04/19 10:30:35 wen Exp $
 
-SHA1 (Archive-Any-0.0945.tar.gz) = a0c29a4baf77048cea3dfb5c5395a79796965c0d
-RMD160 (Archive-Any-0.0945.tar.gz) = 20f8f1953ca3e2026b3a0d7817479919336715dc
-SHA512 (Archive-Any-0.0945.tar.gz) = a362a6b85eb2aa3fa90aa004b2216492b06982d7c52b1c8feb7a90c506b57a492834ddb2d2d5ccebd6a340c95d82058bce6b1e2fba79160e38ff10ded82ea86a
-Size (Archive-Any-0.0945.tar.gz) = 193669 bytes
+SHA1 (Archive-Any-0.0946.tar.gz) = 345968f972913538ea1e0b658424db32a356dbd3
+RMD160 (Archive-Any-0.0946.tar.gz) = db476e4120ff38fb48dd76a58eb8773594050449
+SHA512 (Archive-Any-0.0946.tar.gz) = 705649df672da278004e373d511691b733257b35fc4f5767b193c617776b26d1147687607f96accf678d1249aa9640bd3af52fc391e3a14ed8d99d937221b0eb
+Size (Archive-Any-0.0946.tar.gz) = 202588 bytes
