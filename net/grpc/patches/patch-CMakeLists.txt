@@ -1,10 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.4 2019/03/22 08:25:51 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.5 2019/04/19 07:15:36 adam Exp $
 
 Add version number to shared libraries.
 
---- CMakeLists.txt.orig	2019-03-08 20:07:26.000000000 +0000
+--- CMakeLists.txt.orig	2019-04-15 22:38:24.000000000 +0000
 +++ CMakeLists.txt
-@@ -196,7 +196,7 @@ function(protobuf_generate_grpc_cpp)
+@@ -203,7 +203,7 @@ function(protobuf_generate_grpc_cpp)
               "${_gRPC_PROTO_GENS_DIR}/${RELFIL_WE}_mock.grpc.pb.h"
               "${_gRPC_PROTO_GENS_DIR}/${RELFIL_WE}.pb.cc"
               "${_gRPC_PROTO_GENS_DIR}/${RELFIL_WE}.pb.h"
@@ -12,8 +12,8 @@ Add version number to shared libraries.
 +      COMMAND env LD_LIBRARY_PATH=${CMAKE_BINARY_DIR} ${_gRPC_PROTOBUF_PROTOC_EXECUTABLE}
        ARGS --grpc_out=generate_mock_code=true:${_gRPC_PROTO_GENS_DIR}
             --cpp_out=${_gRPC_PROTO_GENS_DIR}
-            --plugin=protoc-gen-grpc=$<TARGET_FILE:grpc_cpp_plugin>
-@@ -735,6 +735,7 @@ add_library(address_sorting
+            --plugin=protoc-gen-grpc=${_gRPC_CPP_PLUGIN}
+@@ -741,6 +741,7 @@ add_library(address_sorting
    third_party/address_sorting/address_sorting_posix.c
    third_party/address_sorting/address_sorting_windows.c
  )
@@ -21,7 +21,7 @@ Add version number to shared libraries.
  
  if(WIN32 AND MSVC)
    set_target_properties(address_sorting PROPERTIES COMPILE_PDB_NAME "address_sorting"
-@@ -868,6 +869,7 @@ add_library(gpr
+@@ -874,6 +875,7 @@ add_library(gpr
    src/core/lib/profiling/basic_timers.cc
    src/core/lib/profiling/stap_timers.cc
  )
@@ -29,7 +29,7 @@ Add version number to shared libraries.
  
  if(WIN32 AND MSVC)
    set_target_properties(gpr PROPERTIES COMPILE_PDB_NAME "gpr"
-@@ -1288,6 +1290,7 @@ add_library(grpc
+@@ -1295,6 +1297,7 @@ add_library(grpc
    src/core/ext/filters/workarounds/workaround_utils.cc
    src/core/plugin_registry/grpc_plugin_registry.cc
  )
@@ -37,7 +37,7 @@ Add version number to shared libraries.
  
  if(WIN32 AND MSVC)
    set_target_properties(grpc PROPERTIES COMPILE_PDB_NAME "grpc"
-@@ -1679,6 +1682,7 @@ add_library(grpc_cronet
+@@ -1687,6 +1690,7 @@ add_library(grpc_cronet
    src/core/tsi/transport_security_grpc.cc
    src/core/plugin_registry/grpc_cronet_plugin_registry.cc
  )
@@ -45,7 +45,7 @@ Add version number to shared libraries.
  
  if(WIN32 AND MSVC)
    set_target_properties(grpc_cronet PROPERTIES COMPILE_PDB_NAME "grpc_cronet"
-@@ -2674,6 +2678,7 @@ add_library(grpc_unsecure
+@@ -2679,6 +2683,7 @@ add_library(grpc_unsecure
    src/core/ext/filters/workarounds/workaround_utils.cc
    src/core/plugin_registry/grpc_unsecure_plugin_registry.cc
  )
@@ -53,7 +53,7 @@ Add version number to shared libraries.
  
  if(WIN32 AND MSVC)
    set_target_properties(grpc_unsecure PROPERTIES COMPILE_PDB_NAME "grpc_unsecure"
-@@ -2907,6 +2912,7 @@ add_library(grpc++
+@@ -2912,6 +2917,7 @@ add_library(grpc++
    third_party/nanopb/pb_encode.c
    src/cpp/codegen/codegen_init.cc
  )
@@ -61,7 +61,7 @@ Add version number to shared libraries.
  
  if(WIN32 AND MSVC)
    set_target_properties(grpc++ PROPERTIES COMPILE_PDB_NAME "grpc++"
-@@ -3497,6 +3503,7 @@ add_library(grpc++_cronet
+@@ -3505,6 +3511,7 @@ add_library(grpc++_cronet
    src/core/ext/transport/chttp2/server/chttp2_server.cc
    src/core/ext/filters/census/grpc_context.cc
  )
@@ -69,7 +69,7 @@ Add version number to shared libraries.
  
  if(WIN32 AND MSVC)
    set_target_properties(grpc++_cronet PROPERTIES COMPILE_PDB_NAME "grpc++_cronet"
-@@ -3781,6 +3788,7 @@ add_library(grpc++_error_details
+@@ -3792,6 +3799,7 @@ add_library(grpc++_error_details
    ${_gRPC_PROTO_GENS_DIR}/src/proto/grpc/status/status.grpc.pb.h
    src/cpp/util/error_details.cc
  )
@@ -77,7 +77,7 @@ Add version number to shared libraries.
  
  if(WIN32 AND MSVC)
    set_target_properties(grpc++_error_details PROPERTIES COMPILE_PDB_NAME "grpc++_error_details"
-@@ -3911,6 +3919,7 @@ add_library(grpc++_reflection
+@@ -3925,6 +3933,7 @@ add_library(grpc++_reflection
    ${_gRPC_PROTO_GENS_DIR}/src/proto/grpc/reflection/v1alpha/reflection.pb.h
    ${_gRPC_PROTO_GENS_DIR}/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.h
  )
@@ -85,7 +85,7 @@ Add version number to shared libraries.
  
  if(WIN32 AND MSVC)
    set_target_properties(grpc++_reflection PROPERTIES COMPILE_PDB_NAME "grpc++_reflection"
-@@ -4454,6 +4463,7 @@ add_library(grpc++_unsecure
+@@ -4473,6 +4482,7 @@ add_library(grpc++_unsecure
    third_party/nanopb/pb_encode.c
    src/cpp/codegen/codegen_init.cc
  )
@@ -93,7 +93,7 @@ Add version number to shared libraries.
  
  if(WIN32 AND MSVC)
    set_target_properties(grpc++_unsecure PROPERTIES COMPILE_PDB_NAME "grpc++_unsecure"
-@@ -4851,6 +4861,7 @@ add_library(grpc_plugin_support
+@@ -4874,6 +4884,7 @@ add_library(grpc_plugin_support
    src/compiler/python_generator.cc
    src/compiler/ruby_generator.cc
  )
@@ -101,7 +101,7 @@ Add version number to shared libraries.
  
  if(WIN32 AND MSVC)
    set_target_properties(grpc_plugin_support PROPERTIES COMPILE_PDB_NAME "grpc_plugin_support"
-@@ -4913,6 +4924,7 @@ add_library(grpcpp_channelz
+@@ -4936,6 +4947,7 @@ add_library(grpcpp_channelz
    ${_gRPC_PROTO_GENS_DIR}/src/proto/grpc/channelz/channelz.pb.h
    ${_gRPC_PROTO_GENS_DIR}/src/proto/grpc/channelz/channelz.grpc.pb.h
  )
@@ -109,7 +109,7 @@ Add version number to shared libraries.
  
  if(WIN32 AND MSVC)
    set_target_properties(grpcpp_channelz PROPERTIES COMPILE_PDB_NAME "grpcpp_channelz"
-@@ -5445,6 +5457,7 @@ if (gRPC_BUILD_CSHARP_EXT)
+@@ -5478,6 +5490,7 @@ if (gRPC_BUILD_CSHARP_EXT)
  add_library(grpc_csharp_ext SHARED
    src/csharp/ext/grpc_csharp_ext.c
  )
