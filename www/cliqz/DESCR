@@ -1,0 +1,8 @@
+Cliqz develops novel Internet browsers that incorporate features
+such as search and anti-tracking. Cliqz desktop browser is based
+on Mozilla Firefox.
+
+Cliqz pre-installs the Cliqz add-on, which causes search terms to
+be sent to Cliqz as the default search engine. In addition the
+HTTPS Everywhere addon is installed, and an addon to manage consent
+to data processing.
