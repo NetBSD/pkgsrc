@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1380 2019/04/19 14:05:56 fox Exp $
+# $NetBSD: Makefile,v 1.1381 2019/04/19 14:07:21 leot Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -70,8 +70,8 @@ SUBDIR+=	checkbot
 SUBDIR+=	cherokee
 SUBDIR+=	clearsilver
 SUBDIR+=	clearsilver-base
-SUBDIR+=	clisp-fastcgi
 SUBDIR+=	cliqz
+SUBDIR+=	clisp-fastcgi
 #SUBDIR+=	contao		# only contains Makefile fragments
 SUBDIR+=	contao35
 SUBDIR+=	cppcms
