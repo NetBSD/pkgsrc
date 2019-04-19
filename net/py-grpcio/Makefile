@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2019/03/28 17:35:14 leot Exp $
+# $NetBSD: Makefile,v 1.4 2019/04/19 07:31:47 adam Exp $
 
-DISTNAME=	grpcio-1.19.0
+DISTNAME=	grpcio-1.20.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	net
+CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/grpcio/}
 
 MAINTAINER=	kethzer.dr@gmail.com
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-protobuf>=3.5.0:../../devel/py-protobuf
 DEPENDS+=	${PYPKGPREFIX}-six>=1.5.2:../../lang/py-six
 
 .include "../../lang/python/pyversion.mk"
-.if "${PYPKGPREFIX}" == "py27"
+.if ${_PYTHON_VERSION} == 27
 DEPENDS+=       ${PYPKGPREFIX}-enum34>=1.0.4:../../devel/py-enum34
 DEPENDS+=       ${PYPKGPREFIX}-futures>=2.2.0:../../devel/py-futures
 .endif
