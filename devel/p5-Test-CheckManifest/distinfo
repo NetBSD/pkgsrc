@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2019/01/16 01:07:59 wen Exp $
+$NetBSD: distinfo,v 1.10 2019/04/19 23:47:01 wen Exp $
 
-SHA1 (Test-CheckManifest-1.38.tar.gz) = 7297d71dc7c056cc858c5a62cef65068e863bd8c
-RMD160 (Test-CheckManifest-1.38.tar.gz) = fb40631adbf08bcceeebfc83f06c0461785c61c6
-SHA512 (Test-CheckManifest-1.38.tar.gz) = f83aa2bd2b0b039c8af812ee8c48d442d75998914c6f75d51245bbc0a5cc549f911f721f8cfa184ee366a6c74fcc3e0389321ec1288cf5e61593886a1b4f3fe5
-Size (Test-CheckManifest-1.38.tar.gz) = 13900 bytes
+SHA1 (Test-CheckManifest-1.42.tar.gz) = 4edc49c6c664a56b595088dcc9f4bc76a7dfc44b
+RMD160 (Test-CheckManifest-1.42.tar.gz) = 1c7caf9fea3e273a77744b5d8409564309abf930
+SHA512 (Test-CheckManifest-1.42.tar.gz) = b1853e56aa47b4431ed95531cd7ad86a6ce0bcefbaad127193bef6e510953bb029e29fb74898ab31f6cadee351519868e0a109fc94e8afc2ebae8b8c5a39bda6
+Size (Test-CheckManifest-1.42.tar.gz) = 16154 bytes
