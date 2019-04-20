@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2019/04/04 11:55:22 maya Exp $
+# $NetBSD: Makefile,v 1.3 2019/04/20 10:04:07 nia Exp $
 
-PKGNAME=	twemoji-color-font-ttf-11.2.0
+PKGNAME=	twemoji-color-font-ttf-12.0.1
 DISTNAME=	TwitterColorEmoji-SVGinOT-Linux-${PKGVERSION_NOREV}
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=eosrei/}
