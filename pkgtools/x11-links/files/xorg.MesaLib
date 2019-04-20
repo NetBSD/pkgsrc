@@ -1,7 +1,8 @@
-# $NetBSD: xorg.MesaLib,v 1.3 2019/03/05 19:56:50 maya Exp $
+# $NetBSD: xorg.MesaLib,v 1.4 2019/04/20 15:06:14 leot Exp $
 #
 include/EGL/egl.h
 include/EGL/eglext.h
+include/EGL/eglextchromium.h
 include/EGL/eglmesaext.h
 include/EGL/eglplatform.h
 include/GL/GLwDrawA.h
