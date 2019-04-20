@@ -1,10 +1,6 @@
 package pkglint
 
-import (
-	"netbsd.org/pkglint/textproc"
-	"strings"
-	"unicode"
-)
+import "strings"
 
 // MkToken represents a contiguous string from a Makefile.
 // It is either a literal string or a variable use.
@@ -47,42 +43,8 @@ func (m MkVarUseModifier) IsSuffixSubst() bool {
 }
 
 func (m MkVarUseModifier) MatchSubst() (ok bool, regex bool, from string, to string, options string) {
-	l := textproc.NewLexer(m.Text)
-	regex = l.PeekByte() == 'C'
-	if l.SkipByte('S') || l.SkipByte('C') {
-		separator := l.PeekByte()
-		l.Skip(1)
-		if unicode.IsPunct(rune(separator)) || separator == '|' {
-			noSeparator := func(b byte) bool { return int(b) != separator && b != '\\' }
-			nextToken := func() string {
-				start := l.Mark()
-				for {
-					switch {
-					case l.NextBytesFunc(noSeparator) != "":
-						continue
-					case l.PeekByte() == '\\' && len(l.Rest()) >= 2:
-						// TODO: Compare with devel/bmake for the exact behavior
-						l.Skip(2)
-					default:
-						return l.Since(start)
-					}
-				}
-			}
-
-			from = nextToken()
-			if from != "" && l.SkipByte(byte(separator)) {
-				to = nextToken()
-				if l.SkipByte(byte(separator)) {
-					options = l.NextBytesFunc(func(b byte) bool {
-						return b == '1' || b == 'g' || b == 'W'
-					})
-					ok = l.EOF()
-					return
-				}
-			}
-		}
-	}
-	return
+	p := NewMkParser(nil, m.Text, false)
+	return p.varUseModifierSubst('}')
 }
 
 // Subst evaluates an S/from/to/ modifier.
