@@ -21,6 +21,7 @@ func (s *Suite) Test_CheckFileAlternatives__PLIST(c *check.C) {
 		"bin/echo",
 		"bin/vim",
 		"sbin/sendmail.exim${EXIMVER}")
+	t.FinishSetUp()
 
 	G.Check(".")
 
@@ -73,7 +74,7 @@ func (s *Suite) Test_CheckFileAlternatives__ALTERNATIVES_SRC(c *check.C) {
 	t.CreateFileLines("category/package/ALTERNATIVES",
 		"bin/pgm @PREFIX@/bin/gnu-program",
 		"bin/pgm @PREFIX@/bin/nb-program")
-	G.Pkgsrc.LoadInfrastructure()
+	t.FinishSetUp()
 
 	G.Check(t.File("category/package"))
 
