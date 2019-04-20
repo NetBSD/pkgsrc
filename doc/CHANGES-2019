@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1762 2019/04/20 03:51:04 wen Exp $
+$NetBSD: CHANGES-2019,v 1.1763 2019/04/20 04:18:35 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2791,3 +2791,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-PPIx-Regexp to 0.064 [wen 2019-04-19]
 	Updated devel/p5-Net-CIDR to 0.20 [wen 2019-04-20]
 	Updated www/p5-libwww to 6.38 [wen 2019-04-20]
+	Updated devel/p5-Config-Grammar to 1.13 [wen 2019-04-20]
