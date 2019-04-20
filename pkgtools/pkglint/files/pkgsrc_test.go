@@ -71,7 +71,7 @@ func (s *Suite) Test_Pkgsrc_checkToplevelUnusedLicenses(c *check.C) {
 	t.SetUpPackage("category/package",
 		"LICENSE=\t2-clause-bsd")
 
-	G.Main("pkglint", "-r", "-Cglobal", t.File("."))
+	t.Main("-r", "-Cglobal", t.File("."))
 
 	t.CheckOutputLines(
 		"WARN: ~/licenses/gnu-gpl-v2: This license seems to be unused.", // Added by Tester.SetUpPkgsrc
@@ -153,7 +153,7 @@ func (s *Suite) Test_Pkgsrc_loadTools__BUILD_DEFS(c *check.C) {
 	t.CreateFileLines("mk/bsd.pkg.mk",
 		MkRcsID,
 		"_BUILD_DEFS+=\tPKG_SYSCONFBASEDIR PKG_SYSCONFDIR")
-	G.Pkgsrc.LoadInfrastructure()
+	t.FinishSetUp()
 
 	G.Check(pkg)
 
@@ -173,7 +173,7 @@ func (s *Suite) Test_Pkgsrc_loadDocChanges__not_found(c *check.C) {
 	t.Remove("doc")
 
 	t.ExpectFatal(
-		G.Pkgsrc.loadDocChanges,
+		t.FinishSetUp,
 		"FATAL: ~/doc: Cannot be read for loading the package changes.")
 }
 
@@ -241,7 +241,7 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__wip_suppresses_warnings(c *c
 		"\tUpdated sysutils/checkperms to 1.10 [rillig 2018-01-05]",
 		"\tUpdated sysutils/checkperms to 1.11 [rillig 2018-01-01]")
 
-	G.Main("pkglint", t.File("wip/package"))
+	t.Main(t.File("wip/package"))
 
 	t.CheckOutputLines(
 		"Looks fine.")
@@ -259,7 +259,7 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__wrong_indentation(c *check.C
 		"        Updated sysutils/checkperms to 1.10 [rillig 2018-01-05]",
 		"    \tUpdated sysutils/checkperms to 1.11 [rillig 2018-01-01]")
 
-	G.Main("pkglint", t.File("category/package"))
+	t.Main(t.File("category/package"))
 
 	t.CheckOutputLines(
 		"WARN: ~/doc/CHANGES-2018:5: Package changes should be indented using a single tab, not \"        \".",
@@ -284,7 +284,7 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__infrastructure(c *check.C) {
 		"\t\tdistfile directly from GitHub [rillig 2018-01-01]",
 		"\tmk/bsd.pkg.mk: Another infrastructure change [rillig 2018-01-02]")
 
-	G.Main("pkglint", t.File("category/package"))
+	t.Main(t.File("category/package"))
 
 	// For pkglint's purpose, the infrastructure entries are simply ignored
 	// since they do not belong to a single package.
@@ -303,7 +303,7 @@ func (s *Suite) Test_Pkgsrc_parseSuggestedUpdates__wip(c *check.C) {
 		"Suggested package updates",
 		"",
 		"\to package-1.13 [cool new features]")
-	G.Pkgsrc.LoadInfrastructure()
+	t.FinishSetUp()
 
 	G.Check(pkg)
 
@@ -586,14 +586,14 @@ func (s *Suite) Test_Pkgsrc_VariableType(c *check.C) {
 	test("_PERL5_PACKLIST_AWK_STRIP_DESTDIR", "")
 	test("SOME_DIR", "Pathname (guessed)")
 	test("SOMEDIR", "Pathname (guessed)")
-	test("SEARCHPATHS", "List of Pathname (guessed)")
+	test("SEARCHPATHS", "Pathname (list, guessed)")
 	test("MYPACKAGE_USER", "UserGroupName (guessed)")
 	test("MYPACKAGE_GROUP", "UserGroupName (guessed)")
-	test("MY_CMD_ENV", "List of ShellWord (guessed)")
-	test("MY_CMD_ARGS", "List of ShellWord (guessed)")
-	test("MY_CMD_CFLAGS", "List of CFlag (guessed)")
-	test("MY_CMD_LDFLAGS", "List of LdFlag (guessed)")
-	test("PLIST.abcde", "Yes")
+	test("MY_CMD_ENV", "ShellWord (list, guessed)")
+	test("MY_CMD_ARGS", "ShellWord (list, guessed)")
+	test("MY_CMD_CFLAGS", "CFlag (list, guessed)")
+	test("MY_CMD_LDFLAGS", "LdFlag (list, guessed)")
+	test("PLIST.abcde", "Yes (package-settable)")
 }
 
 // Guessing the variable type works for both plain and parameterized variable names.
@@ -605,12 +605,12 @@ func (s *Suite) Test_Pkgsrc_VariableType__varparam(c *check.C) {
 	t1 := G.Pkgsrc.VariableType(nil, "FONT_DIRS")
 
 	c.Assert(t1, check.NotNil)
-	c.Check(t1.String(), equals, "List of PathMask (guessed)")
+	c.Check(t1.String(), equals, "PathMask (list, guessed)")
 
 	t2 := G.Pkgsrc.VariableType(nil, "FONT_DIRS.ttf")
 
 	c.Assert(t2, check.NotNil)
-	c.Check(t2.String(), equals, "List of PathMask (guessed)")
+	c.Check(t2.String(), equals, "PathMask (list, guessed)")
 }
 
 // Guessing the variable type also works for variables that are
@@ -630,16 +630,15 @@ func (s *Suite) Test_Pkgsrc_VariableType__from_mk(c *check.C) {
 		"PKGSRC_MAKE_ENV?=\t# none",
 		"CPPPATH?=\tcpp",
 		"OSNAME.Linux?=\tLinux")
-
 	pkg := t.SetUpPackage("category/package",
 		"PKGSRC_MAKE_ENV+=\tCPP=${CPPPATH:Q}",
 		"PKGSRC_UNKNOWN_ENV+=\tCPP=${ABCPATH:Q}",
 		"OSNAME.SunOS=\t\t${OSNAME.Other}")
 
-	G.Main("pkglint", "-Wall", pkg)
+	t.Main("-Wall", pkg)
 
 	if typ := G.Pkgsrc.VariableType(nil, "PKGSRC_MAKE_ENV"); c.Check(typ, check.NotNil) {
-		c.Check(typ.String(), equals, "List of ShellWord (guessed)")
+		c.Check(typ.String(), equals, "ShellWord (list, guessed)")
 	}
 
 	if typ := G.Pkgsrc.VariableType(nil, "CPPPATH"); c.Check(typ, check.NotNil) {
@@ -657,7 +656,8 @@ func (s *Suite) Test_Pkgsrc_VariableType__from_mk(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: ~/category/package/Makefile:21: PKGSRC_UNKNOWN_ENV is defined but not used.",
 		"WARN: ~/category/package/Makefile:21: ABCPATH is used but not defined.",
-		"0 errors and 2 warnings found.")
+		"0 errors and 2 warnings found.",
+		"(Run \"pkglint -e\" to show explanations.)")
 }
 
 func (s *Suite) Test_Pkgsrc_guessVariableType__SKIP(c *check.C) {
@@ -673,7 +673,7 @@ func (s *Suite) Test_Pkgsrc_guessVariableType__SKIP(c *check.C) {
 	mklines.Check()
 
 	vartype := G.Pkgsrc.VariableType(mklines, "MY_CHECK_SKIP")
-	t.Check(vartype.guessed, equals, true)
+	t.Check(vartype.Guessed(), equals, true)
 	t.Check(vartype.EffectivePermissions("filename.mk"), equals, aclpAllRuntime)
 
 	// The permissions for MY_CHECK_SKIP say aclpAllRuntime, which excludes
