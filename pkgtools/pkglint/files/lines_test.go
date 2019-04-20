@@ -42,6 +42,7 @@ func (s *Suite) Test_Lines_CheckRcsID__wip(c *check.C) {
 		"# $"+"Id$")
 	t.CreateFileLines("wip/package/file5.mk",
 		"# $"+"FreeBSD$")
+	t.FinishSetUp()
 
 	G.Check(t.File("wip/package"))
 

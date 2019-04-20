@@ -204,7 +204,7 @@ func (s *RedundantScope) onRedundant(redundant MkLine, because MkLine) {
 func (s *RedundantScope) onOverwrite(overwritten MkLine, by MkLine) {
 	overwritten.Warnf("Variable %s is overwritten in %s.",
 		overwritten.Varname(), overwritten.RefTo(by))
-	G.Explain(
+	overwritten.Explain(
 		"The variable definition in this line does not have an effect since",
 		"it is overwritten elsewhere.",
 		"This typically happens because of a typo (writing = instead of +=)",
