@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2018/12/23 22:52:21 leot Exp $
+$NetBSD: distinfo,v 1.7 2019/04/20 09:41:45 leot Exp $
 
-SHA1 (translate-shell-0.9.6.9.tar.gz) = 325904fc9d2f43b99d5ebf5af51e1ec9a8729ec9
-RMD160 (translate-shell-0.9.6.9.tar.gz) = 63519bb3bc1a8593975e3fcbec6f54e52985622d
-SHA512 (translate-shell-0.9.6.9.tar.gz) = a9ea147b910dc8e41dd481622562116421b899340a3f6d784b9e5da5636b30a34970ebbc38e2034ae336c494b5c761442f562540ea99f23be9a0fda263522270
-Size (translate-shell-0.9.6.9.tar.gz) = 74215 bytes
+SHA1 (translate-shell-0.9.6.10.tar.gz) = dc94c9824468adbd83d775d37d4808389f694097
+RMD160 (translate-shell-0.9.6.10.tar.gz) = 8b1b9d3ab24f2268f5d4fd5665a8a327cbbc5e18
+SHA512 (translate-shell-0.9.6.10.tar.gz) = b78f4f982bc65f530186a6728a1976eb96c9f6a70c7bd93e99357ed7016ee4ade0e0415aeca063e513de497cc4b082f7cc247fe7278292f7c3b7dda6af744743
+Size (translate-shell-0.9.6.10.tar.gz) = 76079 bytes
