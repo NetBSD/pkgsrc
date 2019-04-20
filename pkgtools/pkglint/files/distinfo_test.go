@@ -113,6 +113,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithms__wrong_patch_algorithm
 		"",
 		"MD5 (patch-aa) = 12345678901234567890123456789012",
 		"SHA1 (patch-aa) = 1234567890123456789012345678901234567890")
+	t.FinishSetUp()
 
 	G.Check(".")
 
@@ -176,7 +177,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkGlobalDistfileMismatch(c *check.C
 		"",
 		".include \"../mk/misc/category.mk\"")
 
-	G.Main("pkglint", "-r", "-Wall", "-Call", t.File("."))
+	t.Main("-r", "-Wall", "-Call", t.File("."))
 
 	t.CheckOutputLines(
 		"ERROR: ~/category/package1/distinfo:3: "+
@@ -240,6 +241,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithms__existing_patch_with_d
 		"SHA512 (patch-aa) = ...",
 		"Size (patch-aa) = ... bytes")
 	t.CreateFileDummyPatch("category/package/patches/patch-aa")
+	t.FinishSetUp()
 
 	G.Check(t.File("category/package"))
 
@@ -265,6 +267,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithms__missing_patch_with_wr
 		RcsID,
 		"",
 		"RMD160 (patch-aa) = ...")
+	t.FinishSetUp()
 
 	G.Check(t.File("category/package"))
 
@@ -288,6 +291,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkUncommittedPatch__bad(c *check.C)
 		RcsID,
 		"",
 		"SHA1 (patch-aa) = ebbf34b0641bcb508f17d5a27f2bf2a536d810ac")
+	t.FinishSetUp()
 
 	G.checkdirPackage(".")
 
@@ -309,6 +313,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkUncommittedPatch__good(c *check.C
 		RcsID,
 		"",
 		"SHA1 (patch-aa) = ebbf34b0641bcb508f17d5a27f2bf2a536d810ac")
+	t.FinishSetUp()
 
 	G.checkdirPackage(".")
 
@@ -330,6 +335,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkUnrecordedPatches(c *check.C) {
 		"RMD160 (distfile.tar.gz) = ...",
 		"SHA512 (distfile.tar.gz) = ...",
 		"Size (distfile.tar.gz) = 1024 bytes")
+	t.FinishSetUp()
 
 	G.checkdirPackage(".")
 
@@ -357,6 +363,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkPatchSha1__relative_path_in_disti
 		"SHA1 (patch-aa) = ...",
 		"SHA1 (patch-only-in-distinfo) = ...")
 	t.Chdir("category/package")
+	t.FinishSetUp()
 
 	G.checkdirPackage(".")
 
@@ -387,6 +394,7 @@ func (s *Suite) Test_CheckLinesDistinfo__distinfo_and_patches_in_separate_direct
 		"SHA1 (patch-aa) = ...",
 		"SHA1 (patch-only-in-distinfo) = ...")
 	t.Chdir("category/package")
+	t.FinishSetUp()
 
 	G.checkdirPackage(".")
 
@@ -465,6 +473,7 @@ func (s *Suite) Test_CheckLinesDistinfo__missing_php_patches(c *check.C) {
 		"",
 		".include \"../../lang/php/ext.mk\"",
 		".include \"../../mk/bsd.pkg.mk\"")
+	t.FinishSetUp()
 
 	G.Check(t.File("archivers/php-bz2"))
 
@@ -508,7 +517,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__add_missing_h
 		"CRC32 (package-1.0.txt) = asdf")
 	t.CreateFileLines("distfiles/package-1.0.txt",
 		"hello, world")
-	G.Pkgsrc.LoadInfrastructure()
+	t.FinishSetUp()
 
 	// This run is only used to verify that the RMD160 hash is correct, and if
 	// it should ever differ, the correct hash will appear in an error message.
@@ -584,7 +593,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__wrong_distfil
 		"RMD160 (package-1.0.txt) = 1234wrongHash1234")
 	t.CreateFileLines("distfiles/package-1.0.txt",
 		"hello, world")
-	G.Pkgsrc.LoadInfrastructure()
+	t.FinishSetUp()
 
 	G.Check(t.File("category/package"))
 
@@ -607,7 +616,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__no_usual_algo
 		"MD5 (package-1.0.txt) = 1234wrongHash1234")
 	t.CreateFileLines("distfiles/package-1.0.txt",
 		"hello, world")
-	G.Pkgsrc.LoadInfrastructure()
+	t.FinishSetUp()
 
 	G.Check(t.File("category/package"))
 
@@ -629,7 +638,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__top_algorithm
 		"Size (package-1.0.txt) = 13 bytes")
 	t.CreateFileLines("distfiles/package-1.0.txt",
 		"hello, world")
-	G.Pkgsrc.LoadInfrastructure()
+	t.FinishSetUp()
 
 	G.Check(t.File("category/package"))
 
@@ -652,7 +661,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__bottom_algori
 		"RMD160 (package-1.0.txt) = 1a88147a0344137404c63f3b695366eab869a98a")
 	t.CreateFileLines("distfiles/package-1.0.txt",
 		"hello, world")
-	G.Pkgsrc.LoadInfrastructure()
+	t.FinishSetUp()
 
 	G.Check(t.File("category/package"))
 
@@ -691,7 +700,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__algorithms_in
 
 	t.CreateFileLines("distfiles/package-1.0.txt",
 		"hello, world")
-	G.Pkgsrc.LoadInfrastructure()
+	t.FinishSetUp()
 
 	G.Check(t.File("category/package"))
 
@@ -716,7 +725,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__some_algorith
 
 	t.CreateFileLines("distfiles/package-1.0.txt",
 		"hello, world")
-	G.Pkgsrc.LoadInfrastructure()
+	t.FinishSetUp()
 
 	G.Check(t.File("category/package"))
 

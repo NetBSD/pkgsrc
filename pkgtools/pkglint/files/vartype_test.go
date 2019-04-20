@@ -28,7 +28,7 @@ func (s *Suite) Test_Vartype_AlternativeFiles(c *check.C) {
 	// test generates the files description for the "set" permission.
 	test := func(rules []string, alternatives string) {
 		aclEntries := (*VarTypeRegistry).parseACLEntries(nil, "", rules...)
-		vartype := Vartype{lkNone, BtYesNo, aclEntries, false}
+		vartype := Vartype{BtYesNo, NoVartypeOptions, aclEntries}
 
 		alternativeFiles := vartype.AlternativeFiles(aclpSet)
 
@@ -116,6 +116,15 @@ func (s *Suite) Test_Vartype_AlternativeFiles(c *check.C) {
 		"builtin.mk, but not buildlink3.mk, Makefile or *.mk")
 }
 
+func (s *Suite) Test_Vartype_String(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+
+	vartype := G.Pkgsrc.VariableType(nil, "PKG_DEBUG_LEVEL")
+	t.Check(vartype.String(), equals, "Integer (command-line-provided)")
+}
+
 func (s *Suite) Test_BasicType_HasEnum(c *check.C) {
 	vc := enum("start middle end")
 
@@ -151,13 +160,13 @@ func (s *Suite) Test_ACLPermissions_HumanString(c *check.C) {
 		equals, "set, given a default value, appended to, used at load time, or used")
 }
 
-func (s *Suite) Test_Vartype_IsConsideredList(c *check.C) {
+func (s *Suite) Test_Vartype_MayBeAppendedTo(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpVartypes()
 
-	c.Check(G.Pkgsrc.VariableType(nil, "COMMENT").IsConsideredList(), equals, false)
-	c.Check(G.Pkgsrc.VariableType(nil, "DEPENDS").IsConsideredList(), equals, true)
-	c.Check(G.Pkgsrc.VariableType(nil, "PKG_FAIL_REASON").IsConsideredList(), equals, true)
-	c.Check(G.Pkgsrc.VariableType(nil, "CONF_FILES").IsConsideredList(), equals, true)
+	c.Check(G.Pkgsrc.VariableType(nil, "COMMENT").MayBeAppendedTo(), equals, true)
+	c.Check(G.Pkgsrc.VariableType(nil, "DEPENDS").MayBeAppendedTo(), equals, true)
+	c.Check(G.Pkgsrc.VariableType(nil, "PKG_FAIL_REASON").MayBeAppendedTo(), equals, true)
+	c.Check(G.Pkgsrc.VariableType(nil, "CONF_FILES").MayBeAppendedTo(), equals, true)
 }

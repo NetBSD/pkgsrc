@@ -1022,7 +1022,7 @@ func (s *Suite) Test_RedundantScope__procedure_call_implemented_package(c *check
 		"CHECK_BUILTIN.gettext:= yes",
 		".include \"builtin.mk\"",
 		"CHECK_BUILTIN.gettext:= no")
-	G.Pkgsrc.LoadInfrastructure()
+	t.FinishSetUp()
 
 	// Checking x11/Xaos instead of devel/gettext-lib avoids warnings
 	// about the minimal buildlink3.mk file.
@@ -1049,7 +1049,7 @@ func (s *Suite) Test_RedundantScope__procedure_call_infrastructure(c *check.C) {
 		"CHECK_BUILTIN.gettext?= no",
 		".if !empty(CHECK_BUILTIN.gettext:M[nN][oO])",
 		".endif")
-	G.Pkgsrc.LoadInfrastructure()
+	t.FinishSetUp()
 
 	G.Check(t.File("x11/alacarte"))
 
@@ -1142,6 +1142,7 @@ func (s *Suite) Test_RedundantScope__included_OPSYS_variable(c *check.C) {
 	t.CreateFileLines("category/dependency/builtin.mk",
 		MkRcsID,
 		"CONFIGURE_ARGS.Darwin+= darwin")
+	t.FinishSetUp()
 
 	G.Check(t.File("category/package"))
 

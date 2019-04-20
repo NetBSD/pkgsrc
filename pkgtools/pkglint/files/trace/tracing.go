@@ -87,18 +87,18 @@ func isNil(a interface{}) bool {
 }
 
 func argsStr(args []interface{}) string {
-	rv := ""
+	var rv strings.Builder
 	for _, arg := range args {
-		if rv != "" {
-			rv += ", "
+		if rv.Len() > 0 {
+			rv.WriteString(", ")
 		}
 		if str, ok := arg.(fmt.Stringer); ok && !isNil(str) {
-			rv += str.String()
+			rv.WriteString(str.String())
 		} else {
-			rv += fmt.Sprintf("%#v", arg)
+			_, _ = fmt.Fprintf(&rv, "%#v", arg)
 		}
 	}
-	return rv
+	return rv.String()
 }
 
 func (t *Tracer) traceIndent() string {

@@ -255,6 +255,7 @@ func (s *Suite) Test_SubstContext__pre_configure_with_NO_CONFIGURE(c *check.C) {
 		"SUBST_SED.os=           -e s,@OPSYS@,Darwin,",
 		"",
 		"NO_CONFIGURE=           yes")
+	t.FinishSetUp()
 
 	G.Check(pkg)
 

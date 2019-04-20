@@ -18,7 +18,7 @@ func (ck LineChecker) CheckLength(maxLength int) {
 	for i := 0; i < len(prefix); i++ {
 		if isHspace(prefix[i]) {
 			ck.line.Warnf("Line too long (should be no more than %d characters).", maxLength)
-			G.Explain(
+			ck.line.Explain(
 				"Back in the old time, terminals with 80x25 characters were common.",
 				"And this is still the default size of many terminal emulators.",
 				"Moderately short lines also make reading easier.")

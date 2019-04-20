@@ -53,6 +53,8 @@ func (p *ShTokenizer) ShAtom(quoting ShQuoting) *ShAtom {
 		atom = p.shAtomSubshDquot()
 	case shqSubshSquot:
 		atom = p.shAtomSubshSquot()
+	case shqSubshBackt:
+		atom = p.shAtomSubshBackt()
 	case shqDquotBacktDquot:
 		atom = p.shAtomDquotBacktDquot()
 	case shqDquotBacktSquot:
@@ -61,12 +63,9 @@ func (p *ShTokenizer) ShAtom(quoting ShQuoting) *ShAtom {
 
 	if atom == nil {
 		lexer.Reset(mark)
-		switch {
-		case hasPrefix(lexer.Rest(), "${"):
-			p.parser.Line.Warnf("Unclosed Make variable starting at %q.", shorten(lexer.Rest(), 20))
-		case hasPrefix(lexer.Rest(), "$${"):
+		if hasPrefix(lexer.Rest(), "$${") {
 			p.parser.Line.Warnf("Unclosed shell variable starting at %q.", shorten(lexer.Rest(), 20))
-		default:
+		} else {
 			p.parser.Line.Warnf("Internal pkglint error in ShTokenizer.ShAtom at %q (quoting=%s).", lexer.Rest(), quoting)
 		}
 	}
@@ -158,12 +157,19 @@ func (p *ShTokenizer) shAtomSubsh() *ShAtom {
 	case lexer.SkipByte('\''):
 		return &ShAtom{shtText, lexer.Since(mark), shqSubshSquot, nil}
 	case lexer.SkipByte('`'):
-		// FIXME: return &ShAtom{shtText, lexer.Since(mark), shqBackt, nil}
+		return &ShAtom{shtText, lexer.Since(mark), shqSubshBackt, nil}
 	case lexer.SkipRegexp(G.res.Compile(`^#[^)]*`)):
 		return &ShAtom{shtComment, lexer.Since(mark), q, nil}
 	case lexer.SkipByte(')'):
-		// shtText instead of shtOperator because this atom belongs to a shtText token.
-		return &ShAtom{shtText, lexer.Since(mark), shqPlain, nil}
+		// The closing parenthesis can have multiple meanings:
+		// - end of a subshell, such as (echo "in a subshell")
+		// - end of a subshell variable expression, such as var=$$(echo "from a subshell")
+		// - end of a case pattern
+		// In the "subshell variable expression" case, the atom type
+		// could be shtText since it is part of a text node. On the
+		// other hand, pkglint doesn't tokenize shell programs correctly
+		// anyway. This needs to be fixed someday.
+		return &ShAtom{shtOperator, lexer.Since(mark), shqPlain, nil}
 	}
 	if op := p.shOperator(q); op != nil {
 		return op
@@ -235,6 +241,19 @@ func (p *ShTokenizer) shAtomSubshSquot() *ShAtom {
 		return &ShAtom{shtText, lexer.Since(mark), shqSubsh, nil}
 	}
 	return p.shAtomInternal(q, false, true)
+}
+
+func (p *ShTokenizer) shAtomSubshBackt() *ShAtom {
+	const q = shqSubshBackt
+	lexer := p.parser.lexer
+	mark := lexer.Mark()
+	switch {
+	case lexer.SkipByte('`'):
+		return &ShAtom{shtOperator, lexer.Since(mark), shqSubsh, nil}
+	case lexer.SkipHspace():
+		return &ShAtom{shtSpace, lexer.Since(mark), q, nil}
+	}
+	return p.shAtomInternal(q, false, false)
 }
 
 func (p *ShTokenizer) shAtomDquotBacktDquot() *ShAtom {
@@ -391,11 +410,13 @@ func (p *ShTokenizer) ShAtoms() []*ShAtom {
 func (p *ShTokenizer) ShToken() *ShToken {
 	var curr *ShAtom
 	q := shqPlain
+	prevQ := q
 
 	peek := func() *ShAtom {
 		if curr == nil {
 			curr = p.ShAtom(q)
 			if curr != nil {
+				prevQ = q
 				q = curr.Quoting
 			}
 		}
@@ -414,23 +435,29 @@ func (p *ShTokenizer) ShToken() *ShToken {
 		initialMark = lexer.Mark()
 	}
 
-	if peek() == nil {
+	if curr == nil {
 		return nil
 	}
-	if atom := peek(); !atom.Type.IsWord() {
+
+	if atom := peek(); !atom.Type.IsWord() && atom.Quoting != shqSubsh {
 		return NewShToken(atom.MkText, atom)
 	}
 
 	for {
 		mark := lexer.Mark()
 		atom := peek()
-		if atom != nil && (atom.Type.IsWord() || atom.Quoting != shqPlain) {
+		if atom != nil && (atom.Type.IsWord() || q != shqPlain || prevQ == shqSubsh) {
 			skip()
 			atoms = append(atoms, atom)
 			continue
 		}
 		lexer.Reset(mark)
 		break
+	}
+
+	if q != shqPlain {
+		lexer.Reset(initialMark)
+		return nil
 	}
 
 	G.Assertf(len(atoms) > 0, "ShTokenizer.ShToken")

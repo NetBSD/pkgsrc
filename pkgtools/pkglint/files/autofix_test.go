@@ -1167,8 +1167,8 @@ func (s *Suite) Test_Autofix__lonely_source(c *check.C) {
 		"",
 		".for id in ${PRE_XORGPROTO_LIST_MISSING}",
 		".endfor")
-	G.Pkgsrc.LoadInfrastructure()
 	t.Chdir(".")
+	t.FinishSetUp()
 
 	G.Check("x11/xorg-cf-files")
 	G.Check("x11/xorgproto")
@@ -1188,8 +1188,8 @@ func (s *Suite) Test_Autofix__lonely_source_2(c *check.C) {
 
 	t.SetUpPackage("print/tex-bibtex8",
 		"MAKE_FLAGS+=\tCFLAGS=${CFLAGS.${PKGSRC_COMPILER}}")
-	G.Pkgsrc.LoadInfrastructure()
 	t.Chdir(".")
+	t.FinishSetUp()
 
 	G.Check("print/tex-bibtex8")
 
