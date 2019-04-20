@@ -55,7 +55,7 @@ func (s *Suite) Test_LicenseChecker_checkName__LICENSE_FILE(c *check.C) {
 	t.CreateFileLines("category/package/my-license",
 		"An individual license file.")
 
-	G.Main("pkglint", t.File("category/package"))
+	t.Main(t.File("category/package"))
 
 	// There is no warning about the unusual file name in the package directory.
 	// If it were not mentioned in LICENSE_FILE, the file named my-license

@@ -48,7 +48,7 @@ func CheckFileAlternatives(filename string) {
 		m, wrapper, space, alternative := match3(line.Text, `^([^\t ]+)([ \t]+)([^\t ]+)`)
 		if !m {
 			line.Errorf("Invalid line %q.", line.Text)
-			G.Explain(
+			line.Explain(
 				sprintf("Run %q for more information.", makeHelp("alternatives")))
 			continue
 		}

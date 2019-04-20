@@ -83,6 +83,7 @@ func (s *Suite) Test_CheckdirCategory__wip(c *check.C) {
 		"\t${RUN}wip-specific-command",
 		"",
 		".include \"../mk/misc/category.mk\"")
+	t.FinishSetUp()
 
 	G.Check(t.File("wip"))
 
@@ -117,6 +118,7 @@ func (s *Suite) Test_CheckdirCategory__subdirs(c *check.C) {
 		"#SUBDIR+=\tcommented-without-reason",
 		"",
 		".include \"../mk/misc/category.mk\"")
+	t.FinishSetUp()
 
 	CheckdirCategory(t.File("category"))
 
@@ -147,6 +149,7 @@ func (s *Suite) Test_CheckdirCategory__only_in_Makefile(c *check.C) {
 		"SUBDIR+=\tonly-in-makefile",
 		"",
 		".include \"../mk/misc/category.mk\"")
+	t.FinishSetUp()
 
 	CheckdirCategory(t.File("category"))
 
@@ -174,6 +177,7 @@ func (s *Suite) Test_CheckdirCategory__only_in_file_system(c *check.C) {
 		"SUBDIR+=\tboth",
 		"",
 		".include \"../mk/misc/category.mk\"")
+	t.FinishSetUp()
 
 	CheckdirCategory(t.File("category"))
 
@@ -203,6 +207,7 @@ func (s *Suite) Test_CheckdirCategory__recursive(c *check.C) {
 		"",
 		".include \"../mk/misc/category.mk\"")
 	t.Chdir("category")
+	t.FinishSetUp()
 
 	CheckdirCategory(".")
 
@@ -238,6 +243,7 @@ func (s *Suite) Test_CheckdirCategory__subdirs_file_system_at_the_bottom(c *chec
 		"SUBDIR+=\tmk-and-fs",
 		"",
 		".include \"../mk/misc/category.mk\"")
+	t.FinishSetUp()
 
 	CheckdirCategory(t.File("category"))
 
@@ -263,6 +269,7 @@ func (s *Suite) Test_CheckdirCategory__indentation(c *check.C) {
 		"SUBDIR+=\tpackage2",
 		"",
 		".include \"../mk/misc/category.mk\"")
+	t.FinishSetUp()
 
 	CheckdirCategory(t.File("category"))
 
@@ -287,6 +294,7 @@ func (s *Suite) Test_CheckdirCategory__comment_at_the_top(c *check.C) {
 		"SUBDIR+=\tpackage",
 		"",
 		".include \"../mk/misc/category.mk\"")
+	t.FinishSetUp()
 
 	CheckdirCategory(t.File("category"))
 
@@ -318,6 +326,7 @@ func (s *Suite) Test_CheckdirCategory__unexpected_EOF_while_reading_SUBDIR(c *ch
 		"COMMENT=\tCategory comment",
 		"",
 		"SUBDIR+=\tpackage")
+	t.FinishSetUp()
 
 	CheckdirCategory(t.File("category"))
 
@@ -333,6 +342,7 @@ func (s *Suite) Test_CheckdirCategory__no_Makefile(c *check.C) {
 
 	t.SetUpPkgsrc()
 	t.CreateFileLines("category/other-file")
+	t.FinishSetUp()
 
 	G.Check(t.File("category"))
 

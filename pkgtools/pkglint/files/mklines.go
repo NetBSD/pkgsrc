@@ -28,7 +28,7 @@ type MkLinesImpl struct {
 func NewMkLines(lines Lines) MkLines {
 	mklines := make([]MkLine, lines.Len())
 	for i, line := range lines.Lines {
-		mklines[i] = NewMkLine(line)
+		mklines[i] = MkLineParser{}.Parse(line)
 	}
 
 	tools := NewTools()
@@ -459,7 +459,7 @@ func (mklines *MkLinesImpl) SaveAutofixChanges() {
 }
 
 func (mklines *MkLinesImpl) EOFLine() MkLine {
-	return NewMkLine(mklines.lines.EOFLine())
+	return MkLineParser{}.Parse(mklines.lines.EOFLine())
 }
 
 // VaralignBlock checks that all variable assignments from a paragraph
@@ -531,7 +531,8 @@ func (va *VaralignBlock) processVarassign(mkline MkLine) {
 	if mkline.IsMultiline() {
 		// Parsing the continuation marker as variable value is cheating but works well.
 		text := strings.TrimSuffix(mkline.raw[0].orignl, "\n")
-		m, a := MatchVarassign(text)
+		data := MkLineParser{}.split(nil, text)
+		m, a := MkLineParser{}.MatchVarassign(mkline.Line, text, data)
 		continuation = m && a.value == "\\"
 	}
 

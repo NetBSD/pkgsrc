@@ -13,9 +13,17 @@ func NewMkVarUse(varname string, modifiers ...string) *MkVarUse {
 }
 
 func (s *Suite) Test_MkVarUse_Mod(c *check.C) {
-	varuse := NewMkVarUse("varname", "Q")
+	t := s.Init(c)
 
-	c.Check(varuse.Mod(), equals, ":Q")
+	test := func(varUseText string, mod string) {
+		line := t.NewLine("filename.mk", 123, "")
+		varUse := NewMkParser(line, varUseText, true).VarUse()
+		t.CheckOutputEmpty()
+		c.Check(varUse.Mod(), equals, mod)
+	}
+
+	test("${varname:Q}", ":Q")
+	test("${PATH:ts::Q}", ":ts::Q")
 }
 
 // AddCommand adds a command directly to a list of commands,
@@ -90,6 +98,24 @@ func (s *Suite) Test_MkVarUseModifier_MatchSubst__backslash(c *check.C) {
 	c.Check(from, equals, "\\/")
 	c.Check(to, equals, "\\:")
 	c.Check(options, equals, "")
+}
+
+// Some pkgsrc users really explore the darkest corners of bmake by using
+// the backslash as the separator in the :S modifier. Sure, it works, it
+// just looks totally unexpected to the average pkgsrc reader.
+//
+// Using the backslash as separator means that it cannot be used for anything
+// else, not even for escaping other characters.
+func (s *Suite) Test_MkVarUseModifier_MatchSubst__backslash_as_separator(c *check.C) {
+	mod := MkVarUseModifier{"S\\.post1\\\\1"}
+
+	ok, regex, from, to, options := mod.MatchSubst()
+
+	c.Check(ok, equals, true)
+	c.Check(regex, equals, false)
+	c.Check(from, equals, ".post1")
+	c.Check(to, equals, "")
+	c.Check(options, equals, "1")
 }
 
 // As of 2019-03-24, pkglint doesn't know how to handle complicated

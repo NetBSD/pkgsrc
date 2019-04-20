@@ -52,11 +52,11 @@ func (s *Suite) Test_VarTypeRegistry_Init__enumFrom(c *check.C) {
 		c.Check(vartype, equals, values)
 	}
 
-	test("EMACS_VERSIONS_ACCEPTED", "List of enum: emacs29 emacs31 ")
-	test("PKG_JVM", "enum: jdk16 openjdk7 openjdk8 oracle-jdk8 sun-jdk6 sun-jdk7 ")
-	test("USE_LANGUAGES", "List of enum: ada c c++ c++03 c++0x c++11 c++14 c99 "+
-		"fortran fortran77 gnu++03 gnu++0x gnu++11 gnu++14 java obj-c++ objc ")
-	test("PKGSRC_COMPILER", "List of enum: ccache distcc f2c g95 gcc ido mipspro-ucode sunpro ")
+	test("EMACS_VERSIONS_ACCEPTED", "enum: emacs29 emacs31  (list, package-settable)")
+	test("PKG_JVM", "enum: jdk16 openjdk7 openjdk8 oracle-jdk8 sun-jdk6 sun-jdk7  (system-provided)")
+	test("USE_LANGUAGES", "enum: ada c c++ c++03 c++0x c++11 c++14 c99 "+
+		"fortran fortran77 gnu++03 gnu++0x gnu++11 gnu++14 java obj-c++ objc  (list, package-settable)")
+	test("PKGSRC_COMPILER", "enum: ccache distcc f2c g95 gcc ido mipspro-ucode sunpro  (list, user-settable)")
 }
 
 func (s *Suite) Test_VarTypeRegistry_Init__enumFromDirs(c *check.C) {
@@ -74,7 +74,25 @@ func (s *Suite) Test_VarTypeRegistry_Init__enumFromDirs(c *check.C) {
 		c.Check(vartype, equals, values)
 	}
 
-	test("PYPKGPREFIX", "enum: py28 py33 ")
+	test("PYPKGPREFIX", "enum: py28 py33  (system-provided)")
+}
+
+func (s *Suite) Test_VarTypeRegistry_Init__enumFromFiles(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("mk/platform/NetBSD.mk")
+	t.CreateFileLines("mk/platform/README")
+	t.CreateFileLines("mk/platform/SunOS.mk")
+	t.CreateFileLines("mk/platform/SunOS.mk~")
+
+	t.SetUpVartypes()
+
+	test := func(varname, values string) {
+		vartype := G.Pkgsrc.VariableType(nil, varname).String()
+		c.Check(vartype, equals, values)
+	}
+
+	test("OPSYS", "enum: NetBSD SunOS  (system-provided)")
 }
 
 func (s *Suite) Test_VarTypeRegistry_parseACLEntries__invalid_arguments(c *check.C) {
@@ -120,6 +138,7 @@ func (s *Suite) Test_VarTypeRegistry_Init__LP64PLATFORMS(c *check.C) {
 
 	pkg := t.SetUpPackage("category/package",
 		"BROKEN_ON_PLATFORM=\t${LP64PLATFORMS}")
+	t.FinishSetUp()
 
 	G.Check(pkg)
 

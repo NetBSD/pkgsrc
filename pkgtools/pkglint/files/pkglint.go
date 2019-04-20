@@ -521,8 +521,9 @@ func CheckLinesMessage(lines Lines) {
 	}
 
 	if lines.Len() < 3 {
-		lines.LastLine().Warnf("File too short.")
-		G.Explain(explanation()...)
+		line := lines.LastLine()
+		line.Warnf("File too short.")
+		line.Explain(explanation()...)
 		return
 	}
 

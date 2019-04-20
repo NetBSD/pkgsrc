@@ -72,6 +72,9 @@ func (w *MkShWalker) Path() string {
 	var path []string
 	for _, level := range w.Context {
 		typeName := reflect.TypeOf(level.Element).Elem().Name()
+		if typeName == "" && reflect.TypeOf(level.Element).Kind() == reflect.Slice {
+			typeName = "[]" + reflect.TypeOf(level.Element).Elem().Elem().Name()
+		}
 		abbreviated := strings.TrimPrefix(typeName, "MkSh")
 		if level.Index == -1 {
 			// TODO: This form should also be used if index == 0 and len == 1.
@@ -146,10 +149,10 @@ func (w *MkShWalker) walkCommand(index int, command *MkShCommand) {
 		w.walkSimpleCommand(-1, command.Simple)
 	case command.Compound != nil:
 		w.walkCompoundCommand(-1, command.Compound)
-		w.walkRedirects(-1, command.Redirects)
+		w.walkRedirects(command.Redirects)
 	case command.FuncDef != nil:
 		w.walkFunctionDefinition(-1, command.FuncDef)
-		w.walkRedirects(-1, command.Redirects)
+		w.walkRedirects(command.Redirects)
 	}
 
 	w.pop()
@@ -167,7 +170,7 @@ func (w *MkShWalker) walkSimpleCommand(index int, command *MkShSimpleCommand) {
 		w.walkWord(-1, command.Name)
 	}
 	w.walkWords(1, command.Args)
-	w.walkRedirects(-1, command.Redirections)
+	w.walkRedirects(command.Redirections)
 
 	w.pop()
 }
@@ -290,26 +293,25 @@ func (w *MkShWalker) walkWord(index int, word *ShToken) {
 	w.pop()
 }
 
-func (w *MkShWalker) walkRedirects(index int, redirects []*MkShRedirection) {
+func (w *MkShWalker) walkRedirects(redirects []*MkShRedirection) {
 	if len(redirects) == 0 {
 		return
 	}
 
-	w.push(index, redirects)
+	w.push(-1, redirects)
 
 	if callback := w.Callback.Redirects; callback != nil {
 		callback(redirects)
 	}
 
 	for i, redirect := range redirects {
-		// FIXME: The w.push/w.pop is missing here.
-		//  How does the path look like?
-		//  Are there ambiguities?
+		w.push(i, redirect)
 		if callback := w.Callback.Redirect; callback != nil {
 			callback(redirect)
 		}
 
 		w.walkWord(i, redirect.Target)
+		w.pop()
 	}
 
 	w.pop()

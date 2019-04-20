@@ -299,7 +299,7 @@ func (fix *Autofix) Apply() {
 			line.showSource(G.out)
 		}
 		if logDiagnostic && len(fix.explanation) > 0 {
-			G.Explain(fix.explanation...)
+			line.Explain(fix.explanation...)
 		}
 		if G.Logger.Opts.ShowSource {
 			if !(G.Logger.Opts.Explain && logDiagnostic && len(fix.explanation) > 0) {
@@ -330,7 +330,8 @@ func (fix *Autofix) Realign(mkline MkLine, newWidth int) {
 	{
 		// Parsing the continuation marker as variable value is cheating but works well.
 		text := strings.TrimSuffix(mkline.raw[0].orignl, "\n")
-		_, a := MatchVarassign(text)
+		data := MkLineParser{}.split(nil, text)
+		_, a := MkLineParser{}.MatchVarassign(mkline.Line, text, data)
 		if a.value != "\\" {
 			oldWidth = tabWidth(a.valueAlign)
 		}
@@ -448,11 +449,11 @@ func SaveAutofixChanges(lines Lines) (autofixed bool) {
 		G.fileCache.Evict(filename)
 		changedLines := changes[filename]
 		tmpName := filename + ".pkglint.tmp"
-		text := ""
+		var text strings.Builder
 		for _, changedLine := range changedLines {
-			text += changedLine
+			text.WriteString(changedLine)
 		}
-		err := ioutil.WriteFile(tmpName, []byte(text), 0666)
+		err := ioutil.WriteFile(tmpName, []byte(text.String()), 0666)
 		if err != nil {
 			G.Logf(Error, tmpName, "", "Cannot write: %s", "Cannot write: "+err.Error())
 			continue

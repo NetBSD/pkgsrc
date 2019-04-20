@@ -12,6 +12,8 @@ func NewLinesLexer(lines Lines) *LinesLexer {
 	return &LinesLexer{lines, 0}
 }
 
+// CurrentLine returns the line that the lexer is currently looking at.
+// If it is at the end of file, the line number of the line is EOF.
 func (llex *LinesLexer) CurrentLine() Line {
 	if llex.index < llex.lines.Len() {
 		return llex.lines.Lines[llex.index]

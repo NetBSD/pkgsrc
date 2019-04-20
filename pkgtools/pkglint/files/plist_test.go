@@ -631,7 +631,7 @@ func (s *Suite) Test_PlistChecker_checkPathShare__gnome_icon_theme(c *check.C) {
 		PlistRcsID,
 		"share/icons/gnome/16x16/devices/media-optical-cd-audio.png",
 		"share/icons/gnome/16x16/devices/media-optical-dvd.png")
-	G.Pkgsrc.LoadInfrastructure()
+	t.FinishSetUp()
 	t.Chdir(".")
 
 	// This variant is typically run interactively.

@@ -302,6 +302,15 @@ func emptyToNil(slice []string) []string {
 	return slice
 }
 
+func (s *Suite) Test_trimHspace(c *check.C) {
+	t := s.Init(c)
+
+	t.Check(trimHspace("a b"), equals, "a b")
+	t.Check(trimHspace(" a b "), equals, "a b")
+	t.Check(trimHspace("\ta b\t"), equals, "a b")
+	t.Check(trimHspace(" \t a b\t \t"), equals, "a b")
+}
+
 func (s *Suite) Test_isLocallyModified(c *check.C) {
 	t := s.Init(c)
 

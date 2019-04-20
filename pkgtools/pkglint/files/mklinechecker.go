@@ -84,7 +84,7 @@ func (ck MkLineChecker) checkInclude() {
 	switch {
 	case hasSuffix(includedFile, "/Makefile"):
 		mkline.Errorf("Other Makefiles must not be included directly.")
-		G.Explain(
+		mkline.Explain(
 			"To include portions of another Makefile, extract the common parts",
 			"and put them into a Makefile.common or a Makefile fragment called",
 			"module.mk or similar.",
@@ -222,7 +222,7 @@ func (ck MkLineChecker) checkDirectiveFor(forVars map[string]bool, indentation *
 		// The guessed flag could also be determined more correctly. As of November 2018,
 		// running pkglint over the whole pkgsrc tree did not produce any different result
 		// whether guessed was true or false.
-		forLoopType := Vartype{lkShell, btForLoop, []ACLEntry{{"*", aclpAllRead}}, false}
+		forLoopType := Vartype{btForLoop, List, []ACLEntry{{"*", aclpAllRead}}}
 		forLoopContext := VarUseContext{&forLoopType, vucTimeParse, VucQuotPlain, false}
 		mkline.ForEachUsed(func(varUse *MkVarUse, time vucTime) {
 			ck.CheckVaruse(varUse, &forLoopContext)
@@ -271,7 +271,7 @@ func (ck MkLineChecker) checkDependencyRule(allowedTargets map[string]bool) {
 
 		} else if !allowedTargets[target] {
 			mkline.Warnf("Undeclared target %q.", target)
-			G.Explain(
+			mkline.Explain(
 				"To define a custom target in a package, declare it like this:",
 				"",
 				"\t.PHONY: my-target",
@@ -353,6 +353,8 @@ func (ck MkLineChecker) explainPermissions(varname string, vartype *Vartype, int
 		return
 	}
 
+	// TODO: Starting with the second explanation, omit the common part. Instead, only list the permission rules.
+
 	var expl []string
 
 	if len(intro) > 0 {
@@ -385,7 +387,7 @@ func (ck MkLineChecker) explainPermissions(varname string, vartype *Vartype, int
 		"",
 		"If these rules seem to be incorrect, please ask on the tech-pkg@NetBSD.org mailing list.")
 
-	G.Explain(expl...)
+	ck.MkLine.Explain(expl...)
 }
 
 // CheckVaruse checks a single use of a variable in a specific context.
@@ -415,7 +417,7 @@ func (ck MkLineChecker) CheckVaruse(varuse *MkVarUse, vuc *VarUseContext) {
 func (ck MkLineChecker) checkVarUseVarname(varuse *MkVarUse) {
 	if varuse.varname == "@" {
 		ck.MkLine.Warnf("Please use %q instead of %q.", "${.TARGET}", "$@")
-		G.Explain(
+		ck.MkLine.Explain(
 			"It is more readable and prevents confusion with the shell variable",
 			"of the same name.")
 	}
@@ -453,7 +455,7 @@ func (ck MkLineChecker) checkVaruseUndefined(vartype *Vartype, varname string) {
 	case !G.Opts.WarnExtra:
 		return
 
-	case vartype != nil && !vartype.guessed:
+	case vartype != nil && !vartype.Guessed():
 		// Well-known variables are probably defined by the infrastructure.
 		return
 
@@ -492,9 +494,9 @@ func (ck MkLineChecker) checkVaruseModifiers(varuse *MkVarUse, vartype *Vartype)
 }
 
 func (ck MkLineChecker) checkVaruseModifiersSuffix(varuse *MkVarUse, vartype *Vartype) {
-	if varuse.modifiers[0].IsSuffixSubst() && vartype != nil && !vartype.IsConsideredList() {
+	if varuse.modifiers[0].IsSuffixSubst() && vartype != nil && !vartype.List() {
 		ck.MkLine.Warnf("The :from=to modifier should only be used with lists, not with %s.", varuse.varname)
-		G.Explain(
+		ck.MkLine.Explain(
 			"Instead of (for example):",
 			"\tMASTER_SITES=\t${HOMEPAGE:=repository/}",
 			"",
@@ -570,7 +572,7 @@ func (ck MkLineChecker) checkVarusePermissions(varname string, vartype *Vartype,
 	indirectly := !directly && vuc.vartype != nil &&
 		vuc.vartype.Union().Contains(aclpUseLoadtime)
 
-	if vartype.guessed {
+	if vartype.Guessed() {
 		return
 	}
 
@@ -710,7 +712,7 @@ func (ck MkLineChecker) warnVaruseToolLoadTime(varname string, tool *Tool) {
 	}
 
 	ck.MkLine.Warnf("The tool ${%s} cannot be used at load time.", varname)
-	G.Explain(
+	ck.MkLine.Explain(
 		"To use a tool at load time, it must be declared in the package",
 		"Makefile by adding it to USE_TOOLS.",
 		"After that, bsd.prefs.mk must be included.",
@@ -758,7 +760,7 @@ func (ck MkLineChecker) checkVarUseQuoting(varUse *MkVarUse, vartype *Vartype, v
 		modNoM := strings.TrimSuffix(modNoQ, ":M*")
 		correctMod := modNoM + ifelseStr(needMstar, ":M*:Q", ":Q")
 		if correctMod == mod+":Q" && vuc.IsWordPart && !vartype.IsShell() {
-			if vartype.IsConsideredList() {
+			if vartype.List() {
 				mkline.Warnf("The list variable %s should not be embedded in a word.", varname)
 				mkline.Explain(
 					"When a list variable has multiple elements, this expression expands",
@@ -876,7 +878,7 @@ func (ck MkLineChecker) checkVarassignDecreasingVersions() {
 		if i > 0 && ver >= intVersions[i-1] {
 			mkline.Warnf("The values for %s should be in decreasing order (%d before %d).",
 				mkline.Varname(), ver, intVersions[i-1])
-			G.Explain(
+			mkline.Explain(
 				"If they aren't, it may be possible that needless versions of",
 				"packages are installed.")
 		}
@@ -903,7 +905,7 @@ func (ck MkLineChecker) checkVarassignLeft() {
 
 	ck.checkTextVarUse(
 		ck.MkLine.Varname(),
-		&Vartype{lkNone, BtVariableName, []ACLEntry{{"*", aclpAll}}, false},
+		&Vartype{BtVariableName, NoVartypeOptions, []ACLEntry{{"*", aclpAll}}},
 		vucTimeParse)
 }
 
@@ -1023,10 +1025,15 @@ func (ck MkLineChecker) checkVarassignLeftNotUsed() {
 		return
 	}
 
-	// FIXME: Explain how to fix this warning.
-	//  For files like module.mk that are used by other packages,
-	//  documenting the variable already makes the warning disappear.
 	ck.MkLine.Warnf("%s is defined but not used.", varname)
+	ck.MkLine.Explain(
+		"This might be a simple typo.",
+		"",
+		"If a package provides a file containing several related variables",
+		"(such as module.mk, app.mk, extension.mk), that file may define",
+		"variables that look unused since they are only used by other packages.",
+		"These variables should be documented at the head of the file;",
+		"see mk/subst.mk for an example of such a documentation comment.")
 }
 
 // checkVarassignRightVaruse checks that in a variable assignment,
@@ -1121,7 +1128,7 @@ func (ck MkLineChecker) checkVarassignMisc() {
 
 	if mkline.VarassignComment() == "# defined" && !hasSuffix(varname, "_MK") && !hasSuffix(varname, "_COMMON") {
 		mkline.Notef("Please use \"# empty\", \"# none\" or \"# yes\" instead of \"# defined\".")
-		G.Explain(
+		mkline.Explain(
 			"The value #defined says something about the state of the variable,",
 			"but not what that _means_.",
 			"In some cases a variable that is defined",
@@ -1171,8 +1178,20 @@ func (ck MkLineChecker) checkVarassignLeftBsdPrefs() {
 		return
 	}
 
+	// Package-settable variables may use the ?= operator before including
+	// bsd.prefs.mk in situations like the following:
+	//
+	//  Makefile:  LICENSE=       package-license
+	//             .include "module.mk"
+	//  module.mk: LICENSE?=      default-license
+	//
+	vartype := G.Pkgsrc.VariableType(nil, mkline.Varname())
+	if vartype != nil && vartype.PackageSettable() {
+		return
+	}
+
 	mkline.Warnf("Please include \"../../mk/bsd.prefs.mk\" before using \"?=\".")
-	G.Explain(
+	mkline.Explain(
 		"The ?= operator is used to provide a default value to a variable.",
 		"In pkgsrc, many variables can be set by the pkgsrc user in the",
 		"mk.conf file.",
@@ -1212,8 +1231,8 @@ func (ck MkLineChecker) checkVartype(varname string, op MkOperator, value, comme
 			trace.Step1("Unchecked use of !=: %q", value)
 		}
 
-	case vartype.kindOfList == lkNone:
-		ck.CheckVartypeBasic(varname, vartype.basicType, op, value, comment, vartype.guessed)
+	case !vartype.List():
+		ck.CheckVartypeBasic(varname, vartype.basicType, op, value, comment, vartype.Guessed())
 
 	case value == "":
 		break
@@ -1221,7 +1240,7 @@ func (ck MkLineChecker) checkVartype(varname string, op MkOperator, value, comme
 	default:
 		words := mkline.ValueFields(value)
 		for _, word := range words {
-			ck.CheckVartypeBasic(varname, vartype.basicType, op, word, comment, vartype.guessed)
+			ck.CheckVartypeBasic(varname, vartype.basicType, op, word, comment, vartype.Guessed())
 		}
 	}
 }
@@ -1344,7 +1363,7 @@ func (ck MkLineChecker) checkDirectiveCondEmpty(varuse *MkVarUse) {
 	varname := varuse.varname
 	if matches(varname, `^\$.*:[MN]`) {
 		ck.MkLine.Warnf("The empty() function takes a variable name as parameter, not a variable expression.")
-		G.Explain(
+		ck.MkLine.Explain(
 			"Instead of empty(${VARNAME:Mpattern}), you should write either of the following:",
 			"",
 			"\tempty(VARNAME:Mpattern)",
@@ -1362,10 +1381,10 @@ func (ck MkLineChecker) checkDirectiveCondEmpty(varuse *MkVarUse) {
 			ck.checkVartype(varname, opUseMatch, pattern, "")
 
 			vartype := G.Pkgsrc.VariableType(ck.MkLines, varname)
-			if matches(pattern, `^[\w-/]+$`) && vartype != nil && !vartype.IsConsideredList() {
+			if matches(pattern, `^[\w-/]+$`) && vartype != nil && !vartype.List() {
 				ck.MkLine.Notef("%s should be compared using %s instead of matching against %q.",
 					varname, ifelseStr(positive, "==", "!="), ":"+modifier.Text)
-				G.Explain(
+				ck.MkLine.Explain(
 					"This variable has a single value, not a list of values.",
 					"Therefore it feels strange to apply list operators like :M and :N onto it.",
 					"A more direct approach is to use the == and != operators.",
@@ -1383,7 +1402,7 @@ func (ck MkLineChecker) checkCompareVarStr(varname, op, value string) {
 
 	if varname == "PKGSRC_COMPILER" {
 		ck.MkLine.Warnf("Use ${PKGSRC_COMPILER:%s%s} instead of the %s operator.", ifelseStr(op == "==", "M", "N"), value, op)
-		G.Explain(
+		ck.MkLine.Explain(
 			"The PKGSRC_COMPILER can be a list of chained compilers, e.g. \"ccache distcc clang\".",
 			"Therefore, comparing it using == or != leads to wrong results in these cases.")
 	}
@@ -1406,18 +1425,12 @@ func (ck MkLineChecker) CheckRelativePkgdir(pkgdir string) {
 	}
 
 	mkline := ck.MkLine
-	ck.CheckRelativePath(pkgdir, true)
+	ck.CheckRelativePath(pkgdir+"/Makefile", true)
 	pkgdir = mkline.ResolveVarsInRelativePath(pkgdir)
 
-	// XXX: Is the leading "./" realistic?
-	if m, otherpkgpath := match1(pkgdir, `^(?:\./)?\.\./\.\./([^/]+/[^/]+)$`); m {
-		if !fileExists(G.Pkgsrc.File(otherpkgpath + "/Makefile")) {
-			mkline.Errorf("There is no package in %q.", otherpkgpath)
-		}
-
-	} else if !containsVarRef(pkgdir) {
+	if !matches(pkgdir, `^\.\./\.\./([^./][^/]*/[^./][^/]*)$`) && !containsVarRef(pkgdir) {
 		mkline.Warnf("%q is not a valid relative package directory.", pkgdir)
-		G.Explain(
+		mkline.Explain(
 			"A relative pathname always starts with \"../../\", followed",
 			"by a category, a slash and a the directory name of the package.",
 			"For example, \"../../misc/screen\" is a valid relative pathname.")

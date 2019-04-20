@@ -15,8 +15,9 @@ func CheckLinesPlist(pkg *Package, lines Lines) {
 	lines.CheckRcsID(0, `@comment `, "@comment ")
 
 	if lines.Len() == 1 {
-		lines.Lines[0].Warnf("PLIST files shouldn't be empty.")
-		G.Explain(
+		line := lines.Lines[0]
+		line.Warnf("PLIST files shouldn't be empty.")
+		line.Explain(
 			"One reason for empty PLISTs is that this is a newly created package",
 			sprintf("and that the author didn't run %q after installing the files.", bmake("print-PLIST")),
 			"",
@@ -200,7 +201,7 @@ func (ck *PlistChecker) checkPath(pline *PlistLine) {
 	}
 	if hasSuffix(text, "/perllocal.pod") {
 		pline.Warnf("The perllocal.pod file should not be in the PLIST.")
-		G.Explain(
+		pline.Explain(
 			"This file is handled automatically by the INSTALL/DEINSTALL scripts",
 			"since its contents depends on more than one package.")
 	}
@@ -242,7 +243,7 @@ func (ck *PlistChecker) checkSorted(pline *PlistLine) {
 		if ck.lastFname != "" {
 			if ck.lastFname > text && !G.Logger.Opts.Autofix {
 				pline.Warnf("%q should be sorted before %q.", text, ck.lastFname)
-				G.Explain(
+				pline.Explain(
 					"The files in the PLIST should be sorted alphabetically.",
 					"This allows human readers to quickly see whether a file is included or not.")
 			}
@@ -271,7 +272,7 @@ func (ck *PlistChecker) checkDuplicate(pline *PlistLine) {
 func (ck *PlistChecker) checkPathBin(pline *PlistLine, dirname, basename string) {
 	if contains(dirname, "/") {
 		pline.Warnf("The bin/ directory should not have subdirectories.")
-		G.Explain(
+		pline.Explain(
 			"The programs in bin/ are collected there to be executable by the",
 			"user without having to type an absolute path.",
 			"This advantage does not apply to programs in subdirectories of bin/.",
@@ -389,7 +390,7 @@ func (ck *PlistChecker) checkPathShare(pline *PlistLine) {
 
 		if text == "share/icons/hicolor/icon-theme.cache" && pkg.Pkgpath != "graphics/hicolor-icon-theme" {
 			pline.Errorf("The file icon-theme.cache must not appear in any PLIST file.")
-			G.Explain(
+			pline.Explain(
 				"Remove this line and add the following line to the package Makefile.",
 				"",
 				".include \"../../graphics/hicolor-icon-theme/buildlink3.mk\"")
@@ -399,7 +400,7 @@ func (ck *PlistChecker) checkPathShare(pline *PlistLine) {
 			f := "../../graphics/gnome-icon-theme/buildlink3.mk"
 			if !pkg.included.Seen(f) {
 				pline.Errorf("The package Makefile must include %q.", f)
-				G.Explain(
+				pline.Explain(
 					"Packages that install GNOME icons must maintain the icon theme",
 					"cache.")
 			}
@@ -418,7 +419,7 @@ func (ck *PlistChecker) checkPathShare(pline *PlistLine) {
 
 	case hasPrefix(text, "share/info/"):
 		pline.Warnf("Info pages should be installed into info/, not share/info/.")
-		G.Explain(
+		pline.Explain(
 			"To fix this, add INFO_FILES=yes to the package Makefile.")
 
 	case hasPrefix(text, "share/man/"):
@@ -429,7 +430,7 @@ func (ck *PlistChecker) checkPathShare(pline *PlistLine) {
 func (pline *PlistLine) CheckTrailingWhitespace() {
 	if hasSuffix(pline.text, " ") || hasSuffix(pline.text, "\t") {
 		pline.Errorf("Pkgsrc does not support filenames ending in whitespace.")
-		G.Explain(
+		pline.Explain(
 			"Each character in the PLIST is relevant, even trailing whitespace.")
 	}
 }
@@ -458,7 +459,7 @@ func (pline *PlistLine) CheckDirective(cmd, arg string) {
 
 	case "dirrm":
 		pline.Warnf("@dirrm is obsolete. Please remove this line.")
-		G.Explain(
+		pline.Explain(
 			"Directories are removed automatically when they are empty.",
 			"When a package needs an empty directory, it can use the @pkgdir",
 			"command in the PLIST.")
@@ -482,7 +483,7 @@ func (pline *PlistLine) CheckDirective(cmd, arg string) {
 
 func (pline *PlistLine) warnImakeMannewsuffix() {
 	pline.Warnf("IMAKE_MANNEWSUFFIX is not meant to appear in PLISTs.")
-	G.Explain(
+	pline.Explain(
 		"This is the result of a print-PLIST call that has not been edited",
 		"manually by the package maintainer.",
 		"Please replace the IMAKE_MANNEWSUFFIX with:",
