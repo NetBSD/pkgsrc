@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2019/04/11 17:48:39 leot Exp $
+# $NetBSD: options.mk,v 1.17 2019/04/20 16:39:13 leot Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.webkit-gtk
@@ -43,9 +43,9 @@ CMAKE_ARGS+=	-DENABLE_JIT=OFF
 # OpenGL support: enable support for GLX, WebGL and accelerated compositing
 #
 .if !empty(PKG_OPTIONS:Mopengl)
-CMAKE_ARGS+=	-DENABLE_WEBGL=ON
+CMAKE_ARGS+=	-DENABLE_OPENGL=ON
 .else
-CMAKE_ARGS+=	-DENABLE_WEBGL=OFF
+CMAKE_ARGS+=	-DENABLE_OPENGL=OFF
 .endif
 
 #
