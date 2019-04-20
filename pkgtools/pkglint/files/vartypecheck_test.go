@@ -308,11 +308,10 @@ func (s *Suite) Test_VartypeCheck_DependencyWithPath(c *check.C) {
 	vt.Output(
 		"WARN: ~/category/package/filename.mk:1: Invalid dependency pattern with path \"Perl\".",
 		"WARN: ~/category/package/filename.mk:2: Dependency paths should have the form \"../../category/package\".",
-		"ERROR: ~/category/package/filename.mk:2: Relative path \"../perl5\" does not exist.",
+		"ERROR: ~/category/package/filename.mk:2: Relative path \"../perl5/Makefile\" does not exist.",
 		"WARN: ~/category/package/filename.mk:2: \"../perl5\" is not a valid relative package directory.",
 		"WARN: ~/category/package/filename.mk:2: Please use USE_TOOLS+=perl:run instead of this dependency.",
-		"ERROR: ~/category/package/filename.mk:3: Relative path \"../../lang/perl5\" does not exist.",
-		"ERROR: ~/category/package/filename.mk:3: There is no package in \"lang/perl5\".",
+		"ERROR: ~/category/package/filename.mk:3: Relative path \"../../lang/perl5/Makefile\" does not exist.",
 		"WARN: ~/category/package/filename.mk:3: Please use USE_TOOLS+=perl:run instead of this dependency.",
 		"WARN: ~/category/package/filename.mk:5: Please use USE_TOOLS+=msgfmt instead of this dependency.",
 		"WARN: ~/category/package/filename.mk:6: Please use USE_TOOLS+=gmake instead of this dependency.")
@@ -704,9 +703,11 @@ func (s *Suite) Test_VartypeCheck_LdFlag(c *check.C) {
 
 func (s *Suite) Test_VartypeCheck_License(c *check.C) {
 	t := s.Init(c)
-	t.SetUpPkgsrc() // Adds the gnu-gpl-v2 and 2-clause-bsd licenses
 
+	t.SetUpPkgsrc() // Adds the gnu-gpl-v2 and 2-clause-bsd licenses
 	t.SetUpPackage("category/package")
+	t.FinishSetUp()
+
 	G.Pkg = NewPackage(t.File("category/package"))
 
 	mklines := t.NewMkLines("perl5.mk",
@@ -914,7 +915,6 @@ func (s *Suite) Test_VartypeCheck_Pathname(c *check.C) {
 	vt.Values(
 		"anything")
 
-	// FIXME: Warn about the absolute pathname in line 4.
 	vt.Output(
 		"WARN: filename.mk:1: \"${PREFIX}/*\" is not a valid pathname.")
 }
@@ -1004,9 +1004,9 @@ func (s *Suite) Test_VartypeCheck_PkgPath(c *check.C) {
 		"../../invalid/relative")
 
 	vt.Output(
-		"ERROR: filename.mk:3: Relative path \"../../invalid\" does not exist.",
+		"ERROR: filename.mk:3: Relative path \"../../invalid/Makefile\" does not exist.",
 		"WARN: filename.mk:3: \"../../invalid\" is not a valid relative package directory.",
-		"ERROR: filename.mk:4: Relative path \"../../../../invalid/relative\" does not exist.",
+		"ERROR: filename.mk:4: Relative path \"../../../../invalid/relative/Makefile\" does not exist.",
 		"WARN: filename.mk:4: \"../../../../invalid/relative\" is not a valid relative package directory.")
 }
 
@@ -1112,6 +1112,8 @@ func (s *Suite) Test_VartypeCheck_SedCommands(c *check.C) {
 		"ERROR: filename.mk:9: The -e option to sed requires an argument.",
 		"WARN: filename.mk:10: Unknown sed command \"-i\".",
 		"NOTE: filename.mk:10: Please always use \"-e\" in sed commands, even if there is only one substitution.",
+		// TODO: duplicate warning
+		"WARN: filename.mk:11: Unclosed shell variable starting at \"$${unclosedShellVar\".",
 		"WARN: filename.mk:11: Unclosed shell variable starting at \"$${unclosedShellVar\".")
 }
 
@@ -1209,9 +1211,9 @@ func (s *Suite) Test_VartypeCheck_Tool(c *check.C) {
 	vt.Op(opUseMatch)
 	vt.Values(
 		"tool1",
-		"tool1:build",
-		"tool1:*",
-		"${t}:build")
+		"tool1\\:build",
+		"tool1\\:*",
+		"${t}\\:build")
 
 	vt.OutputEmpty()
 }
@@ -1485,7 +1487,9 @@ func (vt *VartypeCheckTester) Op(op MkOperator) {
 
 // Values feeds each of the values to the actual check.
 // Each value is interpreted as if it were written verbatim into a Makefile line.
-// That is, # starts a comment, and for the opUseMatch operator, all closing braces must be escaped.
+// That is, # starts a comment.
+//
+// For the opUseMatch operator, all colons and closing braces must be escaped.
 func (vt *VartypeCheckTester) Values(values ...string) {
 
 	toText := func(value string) string {
@@ -1522,7 +1526,7 @@ func (vt *VartypeCheckTester) Values(values ...string) {
 
 		// See MkLineChecker.checkVartype.
 		var lineValues []string
-		if vartype == nil || vartype.kindOfList == lkNone {
+		if vartype == nil || !vartype.List() {
 			lineValues = []string{effectiveValue}
 		} else {
 			lineValues = mkline.ValueFields(effectiveValue)

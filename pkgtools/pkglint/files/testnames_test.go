@@ -18,6 +18,7 @@ func (s *Suite) Test__test_names(c *check.C) {
 		"comparing_YesNo_variable_to_string",
 		"enumFrom",
 		"enumFromDirs",
+		"enumFromFiles",
 		"dquotBacktDquot",
 		"and_getSubdirs",
 		"SilentAutofixFormat")

@@ -244,15 +244,15 @@ func tabWidth(s string) int {
 }
 
 func detab(s string) string {
-	detabbed := ""
+	var detabbed strings.Builder
 	for _, r := range s {
 		if r == '\t' {
-			detabbed += "        "[:8-len(detabbed)%8]
+			detabbed.WriteString("        "[:8-detabbed.Len()%8])
 		} else {
-			detabbed += string(r)
+			detabbed.WriteString(string(r))
 		}
 	}
-	return detabbed
+	return detabbed.String()
 }
 
 func shorten(s string, maxChars int) string {

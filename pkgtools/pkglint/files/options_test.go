@@ -221,6 +221,7 @@ func (s *Suite) Test_CheckLinesOptionsMk__PLIST_VARS_based_on_PKG_SUPPORTED_OPTI
 		"PLIST.three=\tyes",
 		".endif")
 	t.Chdir("category/package")
+	t.FinishSetUp()
 
 	G.Check(".")
 
@@ -232,4 +233,34 @@ func (s *Suite) Test_CheckLinesOptionsMk__PLIST_VARS_based_on_PKG_SUPPORTED_OPTI
 		"WARN: options.mk:10: "+
 			"\"two\" is added to PLIST_VARS, but PLIST.two is not defined in this file.",
 		"WARN: options.mk:5: Option \"two\" should be handled below in an .if block.")
+}
+
+// Up to April 2019, pkglint logged a wrong note saying that OTHER_VARIABLE
+// should have the positive branch first. That note was only ever intended
+// for PKG_OPTIONS.
+func (s *Suite) Test_OptionsLinesChecker_handleLowerCondition__foreign_variable(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpOption("opt", "")
+	t.CreateFileLines("mk/bsd.options.mk")
+	t.SetUpPackage("category/package",
+		".include \"options.mk\"")
+	t.CreateFileLines("category/package/options.mk",
+		MkRcsID,
+		"",
+		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.package",
+		"PKG_SUPPORTED_OPTIONS=\topt",
+		"",
+		".include \"../../mk/bsd.options.mk\"",
+		"",
+		".if empty(OTHER_VARIABLE)",
+		".else",
+		".endif")
+	t.FinishSetUp()
+
+	G.Check(t.File("category/package"))
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/options.mk:8: OTHER_VARIABLE is used but not defined.",
+		"WARN: ~/category/package/options.mk:4: Option \"opt\" should be handled below in an .if block.")
 }

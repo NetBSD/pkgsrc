@@ -94,7 +94,7 @@ func (s *Suite) Test_Tools__USE_TOOLS_predefined_sed(c *check.C) {
 		"\t${SED} < input > output",
 		"\t${AWK} < input > output")
 
-	G.Main("pkglint", "-Wall", t.File("module.mk"))
+	t.Main("-Wall", t.File("module.mk"))
 
 	// Since this test doesn't load the usual tool definitions via
 	// G.Pkgsrc.loadTools, AWK is not known at all.
@@ -200,7 +200,7 @@ func (s *Suite) Test_Tools__package_Makefile(c *check.C) {
 		"USE_TOOLS+=     load")
 	t.CreateFileLines("mk/bsd.pkg.mk",
 		"USE_TOOLS+=     run")
-	G.Pkgsrc.LoadInfrastructure()
+	t.FinishSetUp()
 
 	tools := NewTools()
 	tools.Fallback(G.Pkgsrc.Tools)
@@ -250,7 +250,7 @@ func (s *Suite) Test_Tools__builtin_mk(c *check.C) {
 	t.CreateFileLines("mk/bsd.pkg.mk",
 		"USE_TOOLS+=     run")
 	t.CreateFileLines("mk/buildlink3/bsd.builtin.mk")
-	G.Pkgsrc.LoadInfrastructure()
+	t.FinishSetUp()
 
 	// Tools that are defined by pkgsrc as load-time tools
 	// may be used in any file at load time.
@@ -299,7 +299,7 @@ func (s *Suite) Test_Tools__implicit_definition_in_bsd_pkg_mk(c *check.C) {
 	// bsd.pkg.mk and not defined earlier in mk/tools/defaults.mk, but
 	// the pkglint code is even prepared for these rare cases.
 	// In other words, this test is only there for the code coverage.
-	G.Pkgsrc.LoadInfrastructure()
+	t.FinishSetUp()
 
 	c.Check(G.Pkgsrc.Tools.ByName("run").String(), equals, "run:::AtRunTime")
 }
@@ -318,7 +318,7 @@ func (s *Suite) Test_Tools__both_prefs_and_pkg_mk(c *check.C) {
 
 	// The echo tool is mentioned in both files. The file bsd.prefs.mk
 	// grants more use cases (load time + run time), therefore it wins.
-	G.Pkgsrc.LoadInfrastructure()
+	t.FinishSetUp()
 
 	c.Check(G.Pkgsrc.Tools.ByName("both").Validity, equals, AfterPrefsMk)
 }
@@ -336,7 +336,7 @@ func (s *Suite) Test_Tools__tools_having_the_same_variable_name(c *check.C) {
 	t.CreateFileLines("mk/bsd.prefs.mk",
 		"USE_TOOLS+=     awk sed")
 
-	G.Pkgsrc.LoadInfrastructure()
+	t.FinishSetUp()
 
 	c.Check(G.Pkgsrc.Tools.ByName("awk").Validity, equals, AfterPrefsMk)
 	c.Check(G.Pkgsrc.Tools.ByName("sed").Validity, equals, AfterPrefsMk)
@@ -397,7 +397,7 @@ func (s *Suite) Test_Tools__var(c *check.C) {
 		"_TOOLS_VARNAME.ln=      LN")
 	t.CreateFileLines("mk/bsd.pkg.mk",
 		"USE_TOOLS+=             ln")
-	G.Pkgsrc.LoadInfrastructure()
+	t.FinishSetUp()
 
 	mklines := t.NewMkLines("module.mk",
 		MkRcsID,
@@ -498,7 +498,7 @@ func (s *Suite) Test_Tools__cmake(c *check.C) {
 		".if defined(USE_CMAKE)",
 		"USE_TOOLS+=\tcmake cpack",
 		".endif")
-	G.Pkgsrc.LoadInfrastructure()
+	t.FinishSetUp()
 
 	G.Check(t.File("category/package"))
 
@@ -523,8 +523,7 @@ func (s *Suite) Test_Tools__gmake(c *check.C) {
 	t.CreateFileLines("mk/tools/replace.mk",
 		"TOOLS_CREATE+=\tgmake",
 		"TOOLS_PATH.gmake=\t/usr/bin/gnu-make")
-
-	G.Pkgsrc.LoadInfrastructure()
+	t.FinishSetUp()
 
 	G.Check(t.File("category/package"))
 

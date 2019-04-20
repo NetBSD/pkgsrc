@@ -288,10 +288,10 @@ func (s *Suite) Test_Logger_Explain__only(c *check.C) {
 
 	// Neither the warning nor the corresponding explanation are logged.
 	line.Warnf("Filtered warning.")
-	G.Explain("Explanation for the above warning.")
+	line.Explain("Explanation for the above warning.")
 
 	line.Notef("What an interesting line.")
-	G.Explain("This explanation is logged.")
+	line.Explain("This explanation is logged.")
 
 	t.CheckOutputLines(
 		"NOTE: Makefile:27: What an interesting line.",
@@ -417,7 +417,7 @@ func (s *Suite) Test_Logger_ShowSummary__explanations_with_only(c *check.C) {
 
 	// Neither the warning nor the corresponding explanation are logged.
 	line.Warnf("Filtered warning.")
-	G.Explain("Explanation for the above warning.")
+	line.Explain("Explanation for the above warning.")
 	G.ShowSummary()
 
 	// Since the above warning is filtered out by the --only option,
@@ -429,7 +429,7 @@ func (s *Suite) Test_Logger_ShowSummary__explanations_with_only(c *check.C) {
 		"Looks fine.")
 
 	line.Warnf("This warning is interesting.")
-	G.Explain("This explanation is available.")
+	line.Explain("This explanation is available.")
 	G.ShowSummary()
 
 	c.Check(G.explanationsAvailable, equals, true)
@@ -608,12 +608,12 @@ func (s *Suite) Test_Logger_Logf__duplicate_messages(c *check.C) {
 
 	// Is logged because it is the first appearance of this warning.
 	line.Warnf("The warning.")
-	G.Explain("Explanation 1")
+	line.Explain("Explanation 1")
 
 	// Is suppressed because the warning is the same as above and LogVerbose
 	// has been set to false for this test.
 	line.Warnf("The warning.")
-	G.Explain("Explanation 2")
+	line.Explain("Explanation 2")
 
 	t.CheckOutputLines(
 		"WARN: README.txt:123: The warning.",
@@ -630,9 +630,9 @@ func (s *Suite) Test_Logger_Logf__duplicate_explanations(c *check.C) {
 
 	// In rare cases, different diagnostics may have the same explanation.
 	line.Warnf("Warning 1.")
-	G.Explain("Explanation")
+	line.Explain("Explanation")
 	line.Warnf("Warning 2.")
-	G.Explain("Explanation") // Is suppressed.
+	line.Explain("Explanation") // Is suppressed.
 
 	t.CheckOutputLines(
 		"WARN: README.txt:123: Warning 1.",
@@ -745,7 +745,7 @@ func (s *Suite) Test_Logger_Diag__source_duplicates(c *check.C) {
 	t.SetUpPackage("category/package2",
 		"PATCHDIR=\t../../category/dependency/patches")
 
-	G.Main("pkglint", "--source", "-Wall", t.File("category/package1"), t.File("category/package2"))
+	t.Main("--source", "-Wall", t.File("category/package1"), t.File("category/package2"))
 
 	t.CheckOutputLines(
 		"ERROR: ~/category/package1/distinfo: "+

@@ -86,7 +86,7 @@ func (s *Suite) Test_MkParser_MkTokens(c *check.C) {
 func (s *Suite) Test_MkParser_VarUse(c *check.C) {
 	t := s.Init(c)
 
-	testRest := func(input string, expectedTokens []*MkToken, expectedRest string) {
+	testRest := func(input string, expectedTokens []*MkToken, expectedRest string, diagnostics ...string) {
 		line := t.NewLines("Test_MkParser_VarUse.mk", input).Lines[0]
 		p := NewMkParser(line, input, true)
 		actualTokens := p.MkTokens()
@@ -98,9 +98,11 @@ func (s *Suite) Test_MkParser_VarUse(c *check.C) {
 			}
 		}
 		c.Check(p.Rest(), equals, expectedRest)
+		t.CheckOutput(diagnostics)
 	}
-	test := func(input string, expectedToken *MkToken) {
-		testRest(input, []*MkToken{expectedToken}, "")
+	tokens := func(tokens ...*MkToken) []*MkToken { return tokens }
+	test := func(input string, expectedToken *MkToken, diagnostics ...string) {
+		testRest(input, []*MkToken{expectedToken}, "", diagnostics...)
 	}
 	varuse := func(varname string, modifiers ...string) *MkToken {
 		text := "${" + varname
@@ -113,6 +115,8 @@ func (s *Suite) Test_MkParser_VarUse(c *check.C) {
 	varuseText := func(text, varname string, modifiers ...string) *MkToken {
 		return &MkToken{Text: text, Varuse: NewMkVarUse(varname, modifiers...)}
 	}
+
+	t.Use(testRest, tokens, test, varuse, varuseText)
 
 	test("${VARIABLE}",
 		varuse("VARIABLE"))
@@ -304,44 +308,63 @@ func (s *Suite) Test_MkParser_VarUse(c *check.C) {
 	test("${VAR:Sahara}",
 		varuse("VAR", "Sahara"))
 
+	// The separator character can be left out, which means empty.
 	test("${VAR:ts}",
-		varuse("VAR", "ts")) // The separator character can be left out, which means empty.
+		varuse("VAR", "ts"))
 
+	// The separator character can be a long octal number.
 	test("${VAR:ts\\000012}",
-		varuse("VAR", "ts\\000012")) // The separator character can be a long octal number.
+		varuse("VAR", "ts\\000012"))
 
+	// Or even decimal.
 	test("${VAR:ts\\124}",
-		varuse("VAR", "ts\\124")) // Or even decimal.
+		varuse("VAR", "ts\\124"))
 
-	testRest("${VAR:ts---}", nil, "${VAR:ts---}") // The :ts modifier only takes single-character separators.
+	// The :ts modifier only takes single-character separators.
+	test("${VAR:ts---}",
+		varuse("VAR", "ts---"),
+		"WARN: Test_MkParser_VarUse.mk:1: Invalid separator \"---\" for :ts modifier of \"VAR\".")
 
 	test("$<",
 		varuseText("$<", "<")) // Same as ${.IMPSRC}
 
 	test("$(GNUSTEP_USER_ROOT)",
-		varuseText("$(GNUSTEP_USER_ROOT)", "GNUSTEP_USER_ROOT"))
-
-	t.CheckOutputLines(
+		varuseText("$(GNUSTEP_USER_ROOT)", "GNUSTEP_USER_ROOT"),
 		"WARN: Test_MkParser_VarUse.mk:1: Please use curly braces {} instead of round parentheses () for GNUSTEP_USER_ROOT.")
 
-	testRest("${VAR)", nil, "${VAR)") // Opening brace, closing parenthesis
-	testRest("$(VAR}", nil, "$(VAR}") // Opening parenthesis, closing brace
-	t.CheckOutputEmpty()              // Warnings are only printed for balanced expressions.
+	// Opening brace, closing parenthesis.
+	// Warnings are only printed for balanced expressions.
+	test("${VAR)",
+		varuseText("${VAR)", "VAR)"),
+		"WARN: Test_MkParser_VarUse.mk:1: Missing closing \"}\" for \"VAR)\".",
+		"WARN: Test_MkParser_VarUse.mk:1: Invalid part \")\" after variable name \"VAR\".")
+
+	// Opening parenthesis, closing brace
+	// Warnings are only printed for balanced expressions.
+	test("$(VAR}",
+		varuseText("$(VAR}", "VAR}"),
+		"WARN: Test_MkParser_VarUse.mk:1: Missing closing \")\" for \"VAR}\".",
+		"WARN: Test_MkParser_VarUse.mk:1: Invalid part \"}\" after variable name \"VAR\".")
 
 	test("${PLIST_SUBST_VARS:@var@${var}=${${var}:Q}@}",
 		varuse("PLIST_SUBST_VARS", "@var@${var}=${${var}:Q}@"))
 
 	test("${PLIST_SUBST_VARS:@var@${var}=${${var}:Q}}",
-		varuse("PLIST_SUBST_VARS", "@var@${var}=${${var}:Q}")) // Missing @ at the end
-
-	t.CheckOutputLines(
-		"WARN: Test_MkParser_VarUse.mk:1: Modifier ${PLIST_SUBST_VARS:@var@...@} is missing the final \"@\".")
+		varuseText("${PLIST_SUBST_VARS:@var@${var}=${${var}:Q}}",
+			"PLIST_SUBST_VARS", "@var@${var}=${${var}:Q}}"),
+		"WARN: Test_MkParser_VarUse.mk:1: Modifier ${PLIST_SUBST_VARS:@var@...@} is missing the final \"@\".",
+		"WARN: Test_MkParser_VarUse.mk:1: Missing closing \"}\" for \"PLIST_SUBST_VARS\".")
 
 	// Unfinished variable use
-	testRest("${", nil, "${")
+	test("${",
+		varuseText("${", ""),
+		"WARN: Test_MkParser_VarUse.mk:1: Missing closing \"}\" for \"\".")
 
 	// Unfinished nested variable use
-	testRest("${${", nil, "${${")
+	test("${${",
+		varuseText("${${", "${"),
+		"WARN: Test_MkParser_VarUse.mk:1: Missing closing \"}\" for \"\".",
+		"WARN: Test_MkParser_VarUse.mk:1: Missing closing \"}\" for \"${\".")
 }
 
 func (s *Suite) Test_MkParser_VarUse__ambiguous(c *check.C) {
@@ -349,8 +372,8 @@ func (s *Suite) Test_MkParser_VarUse__ambiguous(c *check.C) {
 
 	t.SetUpCommandLine("--explain")
 
-	mkline := t.NewMkLine("module.mk", 123, "\t$Varname $X")
-	p := NewMkParser(mkline.Line, mkline.ShellCommand(), true)
+	line := t.NewLine("module.mk", 123, "\t$Varname $X")
+	p := NewMkParser(line, line.Text[1:], true)
 
 	tokens := p.MkTokens()
 	c.Check(tokens, deepEquals, []*MkToken{
@@ -375,6 +398,8 @@ func (s *Suite) Test_MkParser_VarUse__ambiguous(c *check.C) {
 }
 
 func (s *Suite) Test_MkParser_MkCond(c *check.C) {
+	t := s.Init(c)
+
 	testRest := func(input string, expectedTree MkCond, expectedRest string) {
 		p := NewMkParser(nil, input, false)
 		actualTree := p.MkCond()
@@ -385,6 +410,8 @@ func (s *Suite) Test_MkParser_MkCond(c *check.C) {
 		testRest(input, expectedTree, "")
 	}
 	varuse := NewMkVarUse
+
+	t.Use(testRest, test, varuse)
 
 	test("${OPSYS:MNetBSD}",
 		&mkCond{Var: varuse("OPSYS", "MNetBSD")})
@@ -515,7 +542,15 @@ func (s *Suite) Test_MkParser_MkCond(c *check.C) {
 		nil,
 		"\"unfinished string literal")
 
-	// Not even the ${VAR} gets through here, although that can be expected. FIXME: Why?
+	// Parsing stops before the variable since the comparison between
+	// a variable and a string is one of the smallest building blocks.
+	// Letting the ${VAR} through and stopping at the == operator would
+	// be misleading.
+	//
+	// Another possibility would be to fix the unfinished string literal
+	// and continue parsing. As of April 2019, the error handling is not
+	// robust enough to support this approach; magically fixing parse
+	// errors might lead to wrong conclusions and warnings.
 	testRest("${VAR} == \"unfinished string literal",
 		nil,
 		"${VAR} == \"unfinished string literal")
@@ -551,14 +586,14 @@ func (s *Suite) Test_MkParser_VarUseModifiers(c *check.C) {
 	t := s.Init(c)
 
 	varUse := NewMkVarUse
-	test := func(text string, varUse *MkVarUse, rest string, diagnostics ...string) {
+	test := func(text string, varUse *MkVarUse, diagnostics ...string) {
 		mkline := t.NewMkLine("Makefile", 20, "\t"+text)
 		p := NewMkParser(mkline.Line, mkline.ShellCommand(), true)
 
 		actual := p.VarUse()
 
 		t.Check(actual, deepEquals, varUse)
-		t.Check(p.Rest(), equals, rest)
+		t.Check(p.Rest(), equals, "")
 		t.CheckOutput(diagnostics)
 	}
 
@@ -566,21 +601,27 @@ func (s *Suite) Test_MkParser_VarUseModifiers(c *check.C) {
 	// check whether the command is actually valid.
 	// At least not while parsing the modifier since at this point it might
 	// be still unknown which of the commands can be used and which cannot.
-	test("${VAR:!command!}", varUse("VAR", "!command!"), "")
+	test("${VAR:!command!}", varUse("VAR", "!command!"))
 
-	test("${VAR:!command}", varUse("VAR"), "",
+	test("${VAR:!command}", varUse("VAR"),
+		// FIXME: duplicate diagnostic
+		"WARN: Makefile:20: Invalid variable modifier \"!command\" for \"VAR\".",
 		"WARN: Makefile:20: Invalid variable modifier \"!command\" for \"VAR\".")
 
-	test("${VAR:command!}", varUse("VAR"), "",
+	test("${VAR:command!}", varUse("VAR"),
+		// FIXME: duplicate diagnostic
+		"WARN: Makefile:20: Invalid variable modifier \"command!\" for \"VAR\".",
 		"WARN: Makefile:20: Invalid variable modifier \"command!\" for \"VAR\".")
 
 	// The :L modifier makes the variable value "echo hello", and the :[1]
 	// modifier extracts the "echo".
-	test("${echo hello:L:[1]}", varUse("echo hello", "L", "[1]"), "")
+	test("${echo hello:L:[1]}", varUse("echo hello", "L", "[1]"))
 
 	// bmake ignores the :[3] modifier, and the :L modifier just returns the
 	// variable name, in this case BUILD_DIRS.
-	test("${BUILD_DIRS:[3]:L}", varUse("BUILD_DIRS", "[3]", "L"), "")
+	test("${BUILD_DIRS:[3]:L}", varUse("BUILD_DIRS", "[3]", "L"))
+
+	test("${PATH:ts::Q}", varUse("PATH", "ts:", "Q"))
 }
 
 func (s *Suite) Test_MkParser_varUseModifierSubst(c *check.C) {
@@ -588,8 +629,8 @@ func (s *Suite) Test_MkParser_varUseModifierSubst(c *check.C) {
 
 	varUse := NewMkVarUse
 	test := func(text string, varUse *MkVarUse, rest string, diagnostics ...string) {
-		mkline := t.NewMkLine("Makefile", 20, "\t"+text)
-		p := NewMkParser(mkline.Line, mkline.ShellCommand(), true)
+		line := t.NewLine("Makefile", 20, "\t"+text)
+		p := NewMkParser(line, text, true)
 
 		actual := p.VarUse()
 
@@ -598,8 +639,9 @@ func (s *Suite) Test_MkParser_varUseModifierSubst(c *check.C) {
 		t.CheckOutput(diagnostics)
 	}
 
-	test("${VAR:S", nil, "${VAR:S",
-		"WARN: Makefile:20: Invalid variable modifier \"S\" for \"VAR\".")
+	test("${VAR:S", varUse("VAR"), "",
+		"WARN: Makefile:20: Invalid variable modifier \"S\" for \"VAR\".",
+		"WARN: Makefile:20: Missing closing \"}\" for \"VAR\".")
 
 	test("${VAR:S}", varUse("VAR"), "",
 		"WARN: Makefile:20: Invalid variable modifier \"S\" for \"VAR\".")
@@ -621,6 +663,23 @@ func (s *Suite) Test_MkParser_varUseModifierSubst(c *check.C) {
 	test("${VAR:S,from,to,W}", varUse("VAR", "S,from,to,W"), "")
 
 	test("${VAR:S,from,to,1gW}", varUse("VAR", "S,from,to,1gW"), "")
+
+	// Inside the :S or :C modifiers, neither a colon nor the closing
+	// brace need to be escaped. Otherwise these patterns would become
+	// too difficult to read and write.
+	test("${VAR:C/[[:alnum:]]{2}/**/g}",
+		varUse("VAR", "C/[[:alnum:]]{2}/**/g"),
+		"")
+
+	// Some pkgsrc users really explore the darkest corners of bmake by using
+	// the backslash as the separator in the :S modifier. Sure, it works, it
+	// just looks totally unexpected to the average pkgsrc reader.
+	//
+	// Using the backslash as separator means that it cannot be used for anything
+	// else, not even for escaping other characters.
+	test("${VAR:S\\.post1\\\\1}",
+		varUse("VAR", "S\\.post1\\\\1"),
+		"")
 }
 
 func (s *Suite) Test_MkParser_varUseModifierAt(c *check.C) {
@@ -628,8 +687,8 @@ func (s *Suite) Test_MkParser_varUseModifierAt(c *check.C) {
 
 	varUse := NewMkVarUse
 	test := func(text string, varUse *MkVarUse, rest string, diagnostics ...string) {
-		mkline := t.NewMkLine("Makefile", 20, "\t"+text)
-		p := NewMkParser(mkline.Line, mkline.ShellCommand(), true)
+		line := t.NewLine("Makefile", 20, "\t"+text)
+		p := NewMkParser(line, text, true)
 
 		actual := p.VarUse()
 
@@ -638,13 +697,21 @@ func (s *Suite) Test_MkParser_varUseModifierAt(c *check.C) {
 		t.CheckOutput(diagnostics)
 	}
 
-	test("${VAR:@", nil, "${VAR:@",
-		"WARN: Makefile:20: Invalid variable modifier \"@\" for \"VAR\".")
+	test("${VAR:@",
+		varUse("VAR"),
+		"",
+		"WARN: Makefile:20: Invalid variable modifier \"@\" for \"VAR\".",
+		"WARN: Makefile:20: Missing closing \"}\" for \"VAR\".")
 
-	test("${VAR:@i@${i}}", varUse("VAR", "@i@${i}"), "",
-		"WARN: Makefile:20: Modifier ${VAR:@i@...@} is missing the final \"@\".")
+	test("${VAR:@i@${i}}", varUse("VAR", "@i@${i}}"), "",
+		"WARN: Makefile:20: Modifier ${VAR:@i@...@} is missing the final \"@\".",
+		"WARN: Makefile:20: Missing closing \"}\" for \"VAR\".")
 
 	test("${VAR:@i@${i}@}", varUse("VAR", "@i@${i}@"), "")
+
+	test("${PKG_GROUPS:@g@${g:Q}:${PKG_GID.${g}:Q}@:C/:*$//g}",
+		varUse("PKG_GROUPS", "@g@${g:Q}:${PKG_GID.${g}:Q}@", "C/:*$//g"),
+		"")
 }
 
 func (s *Suite) Test_MkParser_PkgbasePattern(c *check.C) {
