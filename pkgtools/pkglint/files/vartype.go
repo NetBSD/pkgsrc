@@ -1,28 +1,35 @@
 package pkglint
 
-import "path"
+import (
+	"path"
+	"strings"
+)
 
 // Vartype is a combination of a data type and a permission specification.
 // See vardefs.go for examples, and vartypecheck.go for the implementation.
 type Vartype struct {
-	kindOfList KindOfList
 	basicType  *BasicType
+	options    vartypeOptions
 	aclEntries []ACLEntry
-	guessed    bool
 }
 
-type KindOfList uint8
+type vartypeOptions uint8
 
 const (
-	// lkNone is a plain data type, no list at all.
-	lkNone KindOfList = iota
-
-	// lkShell is a compound type, consisting of several space-separated elements.
-	// Elements can have embedded spaces by enclosing them in quotes, like in the shell.
+	// List is a compound type, consisting of several space-separated elements.
+	// Elements can have embedded spaces by enclosing them in double or single
+	// quotes, like in the shell.
 	//
 	// These lists are used in the :M, :S modifiers, in .for loops,
 	// and as lists of arbitrary things.
-	lkShell
+	List vartypeOptions = 1 << iota
+
+	Guessed
+	PackageSettable
+	UserSettable
+	SystemProvided
+	CommandLineProvided
+	NoVartypeOptions = 0
 )
 
 type ACLEntry struct {
@@ -73,6 +80,13 @@ func (perms ACLPermissions) HumanString() string {
 		ifelseStr(perms.Contains(aclpUseLoadtime), "used at load time", ""),
 		ifelseStr(perms.Contains(aclpUse), "used", ""))
 }
+
+func (vt *Vartype) List() bool                { return vt.options&List != 0 }
+func (vt *Vartype) Guessed() bool             { return vt.options&Guessed != 0 }
+func (vt *Vartype) PackageSettable() bool     { return vt.options&PackageSettable != 0 }
+func (vt *Vartype) UserSettable() bool        { return vt.options&UserSettable != 0 }
+func (vt *Vartype) SystemProvided() bool      { return vt.options&SystemProvided != 0 }
+func (vt *Vartype) CommandLineProvided() bool { return vt.options&CommandLineProvided != 0 }
 
 func (vt *Vartype) EffectivePermissions(basename string) ACLPermissions {
 	for _, aclEntry := range vt.aclEntries {
@@ -153,26 +167,16 @@ func (vt *Vartype) AlternativeFiles(perms ACLPermissions) string {
 	return positive + ", but not " + negative
 }
 
-// IsConsideredList returns whether the type is considered a list.
-//
-// FIXME: Explain why this method is necessary. IsList is clear, and MayBeAppendedTo also,
-//  but this in-between state needs a decent explanation.
-//  Probably MkLineChecker.checkVartype needs to be revisited completely.
-func (vt *Vartype) IsConsideredList() bool {
-	if vt.kindOfList == lkShell {
+func (vt *Vartype) MayBeAppendedTo() bool {
+	if vt.List() {
 		return true
 	}
+
 	switch vt.basicType {
 	case BtAwkCommand, BtSedCommands, BtShellCommand, BtShellCommands, BtConfFiles:
 		return true
 	}
-	return false
-}
 
-func (vt *Vartype) MayBeAppendedTo() bool {
-	if vt.kindOfList != lkNone || vt.IsConsideredList() {
-		return true
-	}
 	switch vt.basicType {
 	case BtComment, BtLicense:
 		return true
@@ -181,9 +185,32 @@ func (vt *Vartype) MayBeAppendedTo() bool {
 }
 
 func (vt *Vartype) String() string {
-	listPrefix := [...]string{"", "List of "}[vt.kindOfList]
-	guessedSuffix := ifelseStr(vt.guessed, " (guessed)", "")
-	return listPrefix + vt.basicType.name + guessedSuffix
+	var opts []string
+	if vt.List() {
+		opts = append(opts, "list")
+	}
+	if vt.Guessed() {
+		opts = append(opts, "guessed")
+	}
+	if vt.PackageSettable() {
+		opts = append(opts, "package-settable")
+	}
+	if vt.UserSettable() {
+		opts = append(opts, "user-settable")
+	}
+	if vt.SystemProvided() {
+		opts = append(opts, "system-provided")
+	}
+	if vt.CommandLineProvided() {
+		opts = append(opts, "command-line-provided")
+	}
+
+	optsSuffix := ""
+	if len(opts) > 0 {
+		optsSuffix = " (" + strings.Join(opts, ", ") + ")"
+	}
+
+	return vt.basicType.name + optsSuffix
 }
 
 func (vt *Vartype) IsShell() bool {

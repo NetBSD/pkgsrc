@@ -62,57 +62,101 @@ type mkLineDependency struct {
 	sources string
 }
 
-// NewMkLine parses the text of a Makefile line to see what kind of line
+type MkLineParser struct{}
+
+// Parse parses the text of a Makefile line to see what kind of line
 // it is: variable assignment, include, comment, etc.
 //
 // See devel/bmake/parse.c:/^Parse_File/
-func NewMkLine(line Line) *MkLineImpl {
+func (p MkLineParser) Parse(line Line) *MkLineImpl {
 	text := line.Text
 
 	// XXX: This check should be moved somewhere else. NewMkLine should only be concerned with parsing.
 	if hasPrefix(text, " ") && line.Basename != "bsd.buildlink3.mk" {
 		line.Warnf("Makefile lines should not start with space characters.")
-		G.Explain(
+		line.Explain(
 			"If this line should be a shell command connected to a target, use a tab character for indentation.",
 			"Otherwise remove the leading whitespace.")
 	}
 
-	if m, a := MatchVarassign(text); m {
-		if a.spaceAfterVarname != "" {
-			varname := a.varname
-			op := a.op
-			switch {
-			case hasSuffix(varname, "+") && (op == opAssign || op == opAssignAppend):
-				break
-			case matches(varname, `^[a-z]`) && op == opAssignEval:
-				break
-			default:
-				// XXX: This check should be moved somewhere else. NewMkLine should only be concerned with parsing.
-				fix := line.Autofix()
-				fix.Notef("Unnecessary space after variable name %q.", varname)
-				fix.Replace(varname+a.spaceAfterVarname+op.String(), varname+op.String())
-				fix.Apply()
-			}
-		}
+	data := p.split(line, text)
 
-		// XXX: This check should be moved somewhere else. NewMkLine should only be concerned with parsing.
-		if a.comment != "" && a.value != "" && a.spaceAfterValue == "" {
-			line.Warnf("The # character starts a Makefile comment.")
-			G.Explain(
-				"In a variable assignment, an unescaped # starts a comment that",
-				"continues until the end of the line.",
-				"To escape the #, write \\#.")
-		}
-
-		return &MkLineImpl{line, a}
-	}
-
+	// Check for shell commands first because these cannot have comments
+	// at the end of the line.
 	if hasPrefix(text, "\t") {
-		shellcmd := text[1:]
-		return &MkLineImpl{line, mkLineShell{shellcmd}}
+		return p.parseShellcmd(line)
 	}
 
-	trimmedText := trimHspace(text)
+	if mkline := p.parseVarassign(line, data); mkline != nil {
+		return mkline
+	}
+	if mkline := p.parseCommentOrEmpty(line); mkline != nil {
+		return mkline
+	}
+	if mkline := p.parseDirective(line, data); mkline != nil {
+		return mkline
+	}
+	if mkline := p.parseInclude(line); mkline != nil {
+		return mkline
+	}
+	if mkline := p.parseSysinclude(line); mkline != nil {
+		return mkline
+	}
+	if mkline := p.parseDependency(line); mkline != nil {
+		return mkline
+	}
+	if mkline := p.parseMergeConflict(line); mkline != nil {
+		return mkline
+	}
+
+	// The %q is deliberate here since it shows possible strange characters.
+	line.Errorf("Unknown Makefile line format: %q.", text)
+	return &MkLineImpl{line, nil}
+}
+
+func (p MkLineParser) parseVarassign(line Line, data mkLineSplitResult) MkLine {
+	m, a := p.MatchVarassign(line, line.Text, data)
+	if !m {
+		return nil
+	}
+
+	if a.spaceAfterVarname != "" {
+		varname := a.varname
+		op := a.op
+		switch {
+		case hasSuffix(varname, "+") && (op == opAssign || op == opAssignAppend):
+			break
+		case matches(varname, `^[a-z]`) && op == opAssignEval:
+			break
+		default:
+			fix := line.Autofix()
+			fix.Notef("Unnecessary space after variable name %q.", varname)
+			fix.Replace(varname+a.spaceAfterVarname+op.String(), varname+op.String())
+			fix.Apply()
+		}
+	}
+
+	if a.comment != "" && a.value != "" && a.spaceAfterValue == "" {
+		line.Warnf("The # character starts a Makefile comment.")
+		line.Explain(
+			"In a variable assignment, an unescaped # starts a comment that",
+			"continues until the end of the line.",
+			"To escape the #, write \\#.",
+			"",
+			"If this # character intentionally starts a comment,",
+			"it should be preceded by a space in order to make it more visible.")
+	}
+
+	return &MkLineImpl{line, a}
+}
+
+func (p MkLineParser) parseShellcmd(line Line) MkLine {
+	return &MkLineImpl{line, mkLineShell{line.Text[1:]}}
+}
+
+func (p MkLineParser) parseCommentOrEmpty(line Line) MkLine {
+	trimmedText := trimHspace(line.Text)
+
 	if strings.HasPrefix(trimmedText, "#") {
 		return &MkLineImpl{line, mkLineComment{}}
 	}
@@ -121,40 +165,46 @@ func NewMkLine(line Line) *MkLineImpl {
 		return &MkLineImpl{line, mkLineEmpty{}}
 	}
 
-	if m, indent, directive, args, comment := matchMkDirective(text); m {
+	return nil
+}
 
-		// In .if and .endif lines the space surrounding the comment is irrelevant.
-		// Especially for checking that the .endif comment matches the .if condition,
-		// it must be trimmed.
-		trimmedComment := trimHspace(comment)
-
-		return &MkLineImpl{line, &mkLineDirectiveImpl{indent, directive, args, trimmedComment, nil, nil, nil}}
+func (p MkLineParser) parseInclude(line Line) MkLine {
+	m, indent, directive, includedFile := MatchMkInclude(line.Text)
+	if !m {
+		return nil
 	}
 
-	if m, indent, directive, includedFile := MatchMkInclude(text); m {
-		return &MkLineImpl{line, &mkLineIncludeImpl{directive == "include", false, indent, includedFile, nil}}
+	return &MkLineImpl{line, &mkLineIncludeImpl{directive == "include", false, indent, includedFile, nil}}
+}
+
+func (p MkLineParser) parseSysinclude(line Line) MkLine {
+	m, indent, directive, includedFile := match3(line.Text, `^\.([\t ]*)(s?include)[\t ]+<([^>]+)>[\t ]*(?:#.*)?$`)
+	if !m {
+		return nil
 	}
 
-	if m, indent, directive, includedFile := match3(text, `^\.([\t ]*)(s?include)[\t ]+<([^>]+)>[\t ]*(?:#.*)?$`); m {
-		return &MkLineImpl{line, &mkLineIncludeImpl{directive == "include", true, indent, includedFile, nil}}
-	}
+	return &MkLineImpl{line, &mkLineIncludeImpl{directive == "include", true, indent, includedFile, nil}}
+}
 
+func (p MkLineParser) parseDependency(line Line) MkLine {
 	// XXX: Replace this regular expression with proper parsing.
 	// There might be a ${VAR:M*.c} in these variables, which the below regular expression cannot handle.
-	if m, targets, whitespace, sources := match3(text, `^([^\t :]+(?:[\t ]*[^\t :]+)*)([\t ]*):[\t ]*([^#]*?)(?:[\t ]*#.*)?$`); m {
-		// XXX: This check should be moved somewhere else. NewMkLine should only be concerned with parsing.
-		if whitespace != "" {
-			line.Notef("Space before colon in dependency line.")
-		}
-		return &MkLineImpl{line, mkLineDependency{targets, sources}}
+	m, targets, whitespace, sources := match3(line.Text, `^([^\t :]+(?:[\t ]*[^\t :]+)*)([\t ]*):[\t ]*([^#]*?)(?:[\t ]*#.*)?$`)
+	if !m {
+		return nil
 	}
 
-	if matches(text, `^(<<<<<<<|=======|>>>>>>>)`) {
-		return &MkLineImpl{line, nil}
+	if whitespace != "" {
+		line.Notef("Space before colon in dependency line.")
+	}
+	return &MkLineImpl{line, mkLineDependency{targets, sources}}
+}
+
+func (p MkLineParser) parseMergeConflict(line Line) MkLine {
+	if !matches(line.Text, `^(<<<<<<<|=======|>>>>>>>)`) {
+		return nil
 	}
 
-	// The %q is deliberate here since it shows possible strange characters.
-	line.Errorf("Unknown Makefile line format: %q.", text)
 	return &MkLineImpl{line, nil}
 }
 
@@ -295,7 +345,7 @@ func (mkline *MkLineImpl) Args() string { return mkline.data.(mkLineDirective).a
 func (mkline *MkLineImpl) Cond() MkCond {
 	cond := mkline.data.(mkLineDirective).cond
 	if cond == nil {
-		cond = NewMkParser(nil, mkline.Args(), false).MkCond()
+		cond = NewMkParser(mkline.Line, mkline.Args(), true).MkCond()
 		mkline.data.(mkLineDirective).cond = cond
 	}
 	return cond
@@ -452,23 +502,24 @@ func (mkline *MkLineImpl) ValueFields(value string) []string {
 		atoms = atoms[1:]
 	}
 
-	word := ""
+	var word strings.Builder
 	var words []string
 	for _, atom := range atoms {
 		if atom.Type == shtSpace && atom.Quoting == shqPlain {
-			words = append(words, word)
-			word = ""
+			words = append(words, word.String())
+			word.Reset()
 		} else {
-			word += atom.MkText
+			word.WriteString(atom.MkText)
 		}
 	}
-	if word != "" && atoms[len(atoms)-1].Quoting == shqPlain {
-		words = append(words, word)
-		word = ""
+	if word.Len() > 0 && atoms[len(atoms)-1].Quoting == shqPlain {
+		words = append(words, word.String())
+		word.Reset()
 	}
 
 	// TODO: Handle parse errors
-	rest := word + p.parser.Rest()
+	word.WriteString(p.parser.Rest())
+	rest := word.String()
 	_ = rest
 
 	return words
@@ -485,7 +536,9 @@ func (mkline *MkLineImpl) ValueTokens() ([]*MkToken, string) {
 		return assign.valueMk, assign.valueMkRest
 	}
 
-	p := NewMkParser(mkline.Line, value, true)
+	// No error checking here since all this has already been done when the
+	// whole line was parsed in MkLineParser.Parse.
+	p := NewMkParser(nil, value, false)
 	assign.valueMk = p.MkTokens()
 	assign.valueMkRest = p.Rest()
 	return assign.valueMk, assign.valueMkRest
@@ -527,13 +580,13 @@ func (mkline *MkLineImpl) Fields() []string {
 }
 
 func (mkline *MkLineImpl) WithoutMakeVariables(value string) string {
-	valueNovar := ""
+	var valueNovar strings.Builder
 	for _, token := range NewMkParser(nil, value, false).MkTokens() {
 		if token.Varuse == nil {
-			valueNovar += token.Text
+			valueNovar.WriteString(token.Text)
 		}
 	}
-	return valueNovar
+	return valueNovar.String()
 }
 
 func (mkline *MkLineImpl) ResolveVarsInRelativePath(relativePath string) string {
@@ -612,7 +665,7 @@ func (mkline *MkLineImpl) ResolveVarsInRelativePath(relativePath string) string 
 }
 
 func (mkline *MkLineImpl) ExplainRelativeDirs() {
-	G.Explain(
+	mkline.Explain(
 		"Directories in the form \"../../category/package\" make it easier to",
 		"move a package around in pkgsrc, for example from pkgsrc-wip to the",
 		"main pkgsrc repository.")
@@ -633,7 +686,7 @@ var (
 	unescapeMkCommentSafeChars = textproc.NewByteSet("\\#[$").Inverse()
 )
 
-// unescapeMkComment takes a Makefile line, as written in a file, and splits
+// unescapeComment takes a Makefile line, as written in a file, and splits
 // it into the main part and the comment.
 //
 // The comment starts at the first #. Except if it is preceded by an odd number
@@ -644,7 +697,7 @@ var (
 //
 // The comment is returned including the leading "#", if any. If the line has
 // no comment, it is an empty string.
-func unescapeMkComment(text string) (main, comment string) {
+func (p MkLineParser) unescapeComment(text string) (main, comment string) {
 	var sb strings.Builder
 
 	lexer := textproc.NewLexer(text)
@@ -682,11 +735,19 @@ again:
 			return main, lexer.Rest()
 		}
 
-		G.Assertf(lexer.EOF(), "unescapeMkComment(%q): sb = %q, rest = %q", text, main, lexer.Rest())
+		G.Assertf(lexer.EOF(), "unescapeComment(%q): sb = %q, rest = %q", text, main, lexer.Rest())
 		return main, ""
 	}
 
 	goto again
+}
+
+type mkLineSplitResult struct {
+	main               string
+	tokens             []*MkToken
+	spaceBeforeComment string
+	hasComment         bool
+	comment            string
 }
 
 // splitMkLine parses a logical line from a Makefile (that is, after joining
@@ -696,12 +757,12 @@ again:
 // This applies to all line types except those starting with a tab, which
 // contain the shell commands to be associated with make targets. These cannot
 // have comments.
-func splitMkLine(text string) (main string, tokens []*MkToken, rest string, spaceBeforeComment string, hasComment bool, comment string) {
+func (p MkLineParser) split(line Line, text string) mkLineSplitResult {
 
-	main, comment = unescapeMkComment(text)
+	main, comment := p.unescapeComment(text)
 
-	p := NewMkParser(nil, main, false)
-	lexer := p.lexer
+	parser := NewMkParser(line, main, line != nil)
+	lexer := parser.lexer
 
 	rtrimHspace := func(s string) string {
 		end := len(s)
@@ -711,7 +772,7 @@ func splitMkLine(text string) (main string, tokens []*MkToken, rest string, spac
 		return s[:end]
 	}
 
-	parseToken := func() string {
+	parseOther := func() string {
 		var sb strings.Builder
 
 		for !lexer.EOF() {
@@ -731,56 +792,53 @@ func splitMkLine(text string) (main string, tokens []*MkToken, rest string, spac
 		return sb.String()
 	}
 
+	var tokens []*MkToken
 	for !lexer.EOF() {
 		mark := lexer.Mark()
 
-		if varUse := p.VarUse(); varUse != nil {
+		if varUse := parser.VarUse(); varUse != nil {
 			tokens = append(tokens, &MkToken{lexer.Since(mark), varUse})
 
-		} else if token := parseToken(); token != "" {
-			tokens = append(tokens, &MkToken{token, nil})
+		} else if other := parseOther(); other != "" {
+			tokens = append(tokens, &MkToken{other, nil})
 
 		} else {
-			break
+			G.Assertf(lexer.SkipByte('$'), "Parse error for %q.", text)
+			tokens = append(tokens, &MkToken{"$", nil})
 		}
 	}
 
-	if comment != "" {
-		hasComment = true
+	hasComment := comment != ""
+	if hasComment {
 		comment = comment[1:]
 	}
-	rest = lexer.Rest()
-	main = main[:len(main)-len(rest)]
 
-	if rest == "" {
-		mainWithSpaces := main
-		main = rtrimHspace(main)
-		spaceBeforeComment = mainWithSpaces[len(main):]
-	} else {
-		restWithoutSpace := strings.TrimRightFunc(rest, func(r rune) bool { return isHspace(byte(r)) })
-		if len(restWithoutSpace) < len(rest) {
-			spaceBeforeComment = rest[len(restWithoutSpace):]
-			rest = restWithoutSpace
+	G.Assertf(lexer.Rest() == "", "Parse error for %q.", text)
+
+	mainWithSpaces := main
+	main = rtrimHspace(main)
+	spaceBeforeComment := ifelseStr(true, mainWithSpaces[len(main):], "")
+	if spaceBeforeComment != "" && len(tokens) > 0 {
+		tokenText := &tokens[len(tokens)-1].Text
+		*tokenText = rtrimHspace(*tokenText)
+		if *tokenText == "" {
+			tokens = tokens[:len(tokens)-1]
 		}
 	}
 
-	return
+	return mkLineSplitResult{main, tokens, spaceBeforeComment, hasComment, comment}
 }
 
-func matchMkDirective(text string) (m bool, indent, directive, args, comment string) {
+func (p MkLineParser) parseDirective(line Line, data mkLineSplitResult) MkLine {
+	text := line.Text
 	if !hasPrefix(text, ".") {
-		return
+		return nil
 	}
 
-	main, _, rest, _, hasComment, trailingComment := splitMkLine(text)
-	if rest != "" {
-		return
-	}
+	lexer := textproc.NewLexer(data.main[1:])
 
-	lexer := textproc.NewLexer(main[1:])
-
-	indent = lexer.NextHspace()
-	directive = lexer.NextBytesSet(LowerDash)
+	indent := lexer.NextHspace()
+	directive := lexer.NextBytesSet(LowerDash)
 	switch directive {
 	case "if", "else", "elif", "endif",
 		"ifdef", "ifndef",
@@ -790,19 +848,19 @@ func matchMkDirective(text string) (m bool, indent, directive, args, comment str
 		break
 	default:
 		// Intentionally not supported are: ifmake ifnmake elifdef elifndef elifmake elifnmake.
-		return
+		return nil
 	}
 
 	lexer.SkipHspace()
 
-	args = lexer.Rest()
+	args := lexer.Rest()
 
-	if hasComment {
-		comment = trailingComment
-	}
+	// In .if and .endif lines the space surrounding the comment is irrelevant.
+	// Especially for checking that the .endif comment matches the .if condition,
+	// it must be trimmed.
+	trimmedComment := trimHspace(data.comment)
 
-	m = true
-	return
+	return &MkLineImpl{line, &mkLineDirectiveImpl{indent, directive, args, trimmedComment, nil, nil, nil}}
 }
 
 // VariableNeedsQuoting determines whether the given variable needs the :Q operator
@@ -825,8 +883,8 @@ func (mkline *MkLineImpl) VariableNeedsQuoting(mklines MkLines, varuse *MkVarUse
 	}
 
 	if !vartype.basicType.NeedsQ() {
-		if vartype.kindOfList == lkNone {
-			if vartype.guessed {
+		if !vartype.List() {
+			if vartype.Guessed() {
 				return unknown
 			}
 			return no
@@ -838,14 +896,14 @@ func (mkline *MkLineImpl) VariableNeedsQuoting(mklines MkLines, varuse *MkVarUse
 
 	// A shell word may appear as part of a shell word, for example COMPILER_RPATH_FLAG.
 	if vuc.IsWordPart && vuc.quoting == VucQuotPlain {
-		if vartype.kindOfList == lkNone && vartype.basicType == BtShellWord {
+		if !vartype.List() && vartype.basicType == BtShellWord {
 			return no
 		}
 	}
 
 	// Determine whether the context expects a list of shell words or not.
-	wantList := vucVartype.IsConsideredList()
-	haveList := vartype.IsConsideredList()
+	wantList := vucVartype.MayBeAppendedTo()
+	haveList := vartype.MayBeAppendedTo()
 	if trace.Tracing {
 		trace.Stepf("wantList=%v, haveList=%v", wantList, haveList)
 	}
@@ -1382,16 +1440,26 @@ var (
 	VarparamBytes = textproc.NewByteSet("A-Za-z_0-9#*+---.[")
 )
 
-func MatchVarassign(text string) (m bool, assignment mkLineAssign) {
-	commented := hasPrefix(text, "#")
+func (p MkLineParser) MatchVarassign(line Line, text string, asdfData mkLineSplitResult) (m bool, assignment mkLineAssign) {
+
+	// A commented variable assignment does not have leading whitespace.
+	// Otherwise line 1 of almost every Makefile fragment would need to
+	// be scanned for a variable assignment even though it only contains
+	// the $NetBSD CVS Id.
+	clex := textproc.NewLexer(text)
+	commented := clex.SkipByte('#')
+	if commented && clex.SkipHspace() || clex.EOF() {
+		return false, nil
+	}
+
 	withoutLeadingComment := text
 	if commented {
 		withoutLeadingComment = withoutLeadingComment[1:]
 	}
 
-	main, tokens, rest, spaceBeforeComment, hasComment, comment := splitMkLine(withoutLeadingComment)
+	data := p.split(nil, withoutLeadingComment)
 
-	lexer := NewMkTokensLexer(tokens)
+	lexer := NewMkTokensLexer(data.tokens)
 	mainStart := lexer.Mark()
 
 	for !commented && lexer.SkipByte(' ') {
@@ -1401,7 +1469,7 @@ func MatchVarassign(text string) (m bool, assignment mkLineAssign) {
 	// TODO: duplicated code in MkParser.Varname
 	for lexer.NextBytesSet(VarbaseBytes) != "" || lexer.NextVarUse() != nil {
 	}
-	if lexer.SkipByte('.') || hasPrefix(main, "SITES_") {
+	if lexer.SkipByte('.') || hasPrefix(data.main, "SITES_") {
 		for lexer.NextBytesSet(VarparamBytes) != "" || lexer.NextVarUse() != nil {
 		}
 	}
@@ -1431,11 +1499,13 @@ func MatchVarassign(text string) (m bool, assignment mkLineAssign) {
 
 	lexer.SkipHspace()
 
-	value := trimHspace(lexer.Rest() + rest)
+	value := trimHspace(lexer.Rest())
+	valueAlign := ifelseStr(commented, "#", "") + lexer.Since(mainStart)
+	spaceBeforeComment := data.spaceBeforeComment
 	if value == "" {
+		valueAlign += spaceBeforeComment
 		spaceBeforeComment = ""
 	}
-	valueAlign := ifelseStr(commented, "#", "") + lexer.Since(mainStart)
 
 	return true, &mkLineAssignImpl{
 		commented:         commented,
@@ -1450,7 +1520,7 @@ func MatchVarassign(text string) (m bool, assignment mkLineAssign) {
 		valueMkRest:       "",  // filled in lazily
 		fields:            nil, // filled in lazily
 		spaceAfterValue:   spaceBeforeComment,
-		comment:           ifelseStr(hasComment, "#", "") + comment,
+		comment:           ifelseStr(data.hasComment, "#", "") + data.comment,
 	}
 }
 
