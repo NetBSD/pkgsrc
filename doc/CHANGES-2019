@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1774 2019/04/20 15:06:28 leot Exp $
+$NetBSD: CHANGES-2019,v 1.1775 2019/04/20 17:43:54 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2803,3 +2803,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/p5-Net-DNS-SEC to 1.12 [wen 2019-04-20]
 	Updated devel/R-Rcpp to 1.0.1 [wen 2019-04-20]
 	Updated pkgtools/x11-links to 1.16 [leot 2019-04-20]
+	Updated pkgtools/pkglint to 5.7.5 [rillig 2019-04-20]
