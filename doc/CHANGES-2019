@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1768 2019/04/20 07:27:51 wen Exp $
+$NetBSD: CHANGES-2019,v 1.1769 2019/04/20 07:39:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2797,3 +2797,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-CPAN-Perl-Releases to 3.96 [wen 2019-04-20]
 	Updated devel/p5-CPAN to 2.26 [wen 2019-04-20]
 	Updated net/p5-Net-DNS to 1.20 [wen 2019-04-20]
+	Updated net/p5-RT-Client-REST to 0.56 [wen 2019-04-20]
