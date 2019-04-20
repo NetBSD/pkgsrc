@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/11 23:59:28 asau Exp $
+# $NetBSD: Makefile,v 1.4 2019/04/20 13:59:07 rillig Exp $
 #
 
 DISTNAME=	celt-0.11.3
@@ -19,7 +19,7 @@ PKGCONFIG_OVERRIDE+=	celt.pc.in
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/oss.buildlink3.mk"
 
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "Solaris"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "SunOS"
 ###
 ### XXX Remove this definition if DEVSUNAUDIO is placed in default mk.conf.
 ###
