@@ -1,4 +1,4 @@
-# $NetBSD: mpi.buildlink3.mk,v 1.3 2016/09/24 18:34:24 kamil Exp $
+# $NetBSD: mpi.buildlink3.mk,v 1.4 2019/04/20 16:32:42 rillig Exp $
 #
 # This Makefile fragment is meant to be included by packages
 # that use any MPI implementation instead of one particular one.
@@ -18,15 +18,15 @@ MPI_BUILDLINK3_MK=	# define it
 .include "../../mk/bsd.prefs.mk"
 
 # Try to find if we have anything installed already
-.if exists($(LOCALBASE)/bin/mpicc)
+.if exists(${LOCALBASE}/bin/mpicc)
 _MPI_PACKAGE!=	${PKG_INFO} -Q PKGPATH -F ${LOCALBASE}/bin/mpicc
 MPI_TYPE?=	${_MPI_PACKAGE:T}
 .else
 
 MPI_TYPE?=	mpich	# default to MPICH due to backward compatibility
-.if $(MPI_TYPE) == "mpich"
+.if ${MPI_TYPE} == "mpich"
 _MPI_PACKAGE=	parallel/mpi-ch
-.elif $(MPI_TYPE) == "openmpi"
+.elif ${MPI_TYPE} == "openmpi"
 _MPI_PACKAGE=	parallel/openmpi
 .else # invalid or unimplemented type
 PKG_FAIL_REASON+=	\
@@ -34,6 +34,6 @@ PKG_FAIL_REASON+=	\
 .endif
 .endif
 
-.include "../../$(_MPI_PACKAGE)/buildlink3.mk"
+.include "../../${_MPI_PACKAGE}/buildlink3.mk"
 
 .endif	# MPI_BUILDLINK3_MK
