@@ -1,4 +1,4 @@
-# $NetBSD: gnu-configure.mk,v 1.18 2019/04/03 19:10:26 rillig Exp $
+# $NetBSD: gnu-configure.mk,v 1.19 2019/04/20 16:32:42 rillig Exp $
 #
 # Package-settable variables:
 #
@@ -170,7 +170,7 @@ _SCRIPT.configure-scripts-osdep=					\
 				found = 0;				\
 			}						\
 		}							\
-		{ print $0 }' $$file >$$file.override;			\
+		{ print $$0 }' $$file >$$file.override;			\
 	${CHMOD} +x $$file.override;					\
 	${TOUCH} -r $$file $$file.override;				\
 	${MV} -f $$file.override $$file
