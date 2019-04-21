@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18949 2019/04/20 17:27:49 wiz Exp $
+$NetBSD: TODO,v 1.18950 2019/04/21 21:33:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -339,6 +339,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
+	o ImageMagick-7.0.8.41
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaLib-19.0.2
@@ -453,6 +454,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
 	o catdoc-tk-1.1
+	o cbindgen-0.8.3
 	o cc65-2.17
 	o cddbd-1.5.2
 	o cdrkit-1.1.10
@@ -515,6 +517,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dikt-2s1
 	o dinotrace-9.4d
 	o dnssec-tools-2.2
+	o docbook2mdoc-1.0.0
 	o doclifter-2.16
 	o dolphin-5.0
 	o dosbox-0.74.2
@@ -593,6 +596,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o festival-2.4
 	o fet-5.28.6
 	o fetchyahoo-2.14.0
+	o ffmpeg3-3.4.6
 	o filerunner-14.06.18.10
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
@@ -728,6 +732,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gromacs-5.1.2
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
+	o gstreamer1-1.16.0
 	o gthumb-3.4.0
 	o gtkglarea-2.1.0
 	o gtklevel9-5.1
@@ -886,6 +891,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libcaca-0.99.19
 	o libcarddav-14.0.4
 	o libconfuse-3.1
+	o libdrm-2.4.98
 	o libflash-0.4.13
 	o libfolks-0.10.1 [wip]
 	o libgdiplus-4.2
@@ -938,6 +944,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o lua-sql-mysql-2.3.5
 	o lv2-5.4
 	o lwm-1.2.4
+	o lz4-1.9.0
 	o lzma-9.18
 	o mDNSResponder-878.30.4
 	o mDNSResponder-nss-576.30.4
@@ -1039,6 +1046,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o openssl-1.0.2q
 	o openvas-libraries-8.0.8
 	o opera-26
+	o orc-0.4.29
 	o oroborus-2.0.18
 	o ortp-0.25.0
 	o oto-0.5
@@ -1056,7 +1064,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pcal-4.8
 	o pcc-1.1.0
 	o pcc-current-20160305
+	o pcre2-10.33
 	o pdmenu-1.2.87
+	o perl5-5.28.2
 	o pessulus-2.30.3
 	o pflogsumm-1.1.5
 	o pgadmin4-1.0
@@ -1121,6 +1131,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pwlib-1.11.1
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
+	o py-cairo-1.18.1
 	o py-cassa-1.11.0
 	o py-ephem3-3.7.6.0
 	o py-gnome-menus-3.8.0
@@ -1135,6 +1146,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-pendrell-0.3.7
 	o py-ptt-1.10.2
 	o py-pycountry-1.20
+	o py-pygit2-0.28.1
 	o py-simpletal-5.1
 	o py-spf-2.0.12t
 	o py-sybase-0.37
@@ -1232,6 +1244,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sound-juicer-3.16.1
 	o sparse-0.5.0
 	o spcaview-20060501
+	o spice-protocol-0.14.0
 	o spl-1.0pre6
 	o sqlrelay-1.4.0
 	o squeak-5.0
