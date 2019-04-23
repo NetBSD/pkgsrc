@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2019/01/22 00:07:35 nia Exp $
+@comment $NetBSD: PLIST,v 1.37 2019/04/23 18:47:16 nia Exp $
 bin/ct_run
 bin/dialyzer
 bin/epmd
@@ -497,6 +497,7 @@ lib/erlang/lib/diameter-${VERSION.diameter}/ebin/diameter_dbg.beam
 lib/erlang/lib/diameter-${VERSION.diameter}/ebin/diameter_dict_parser.beam
 lib/erlang/lib/diameter-${VERSION.diameter}/ebin/diameter_dict_scanner.beam
 lib/erlang/lib/diameter-${VERSION.diameter}/ebin/diameter_dict_util.beam
+lib/erlang/lib/diameter-${VERSION.diameter}/ebin/diameter_dist.beam
 lib/erlang/lib/diameter-${VERSION.diameter}/ebin/diameter_etcp.beam
 lib/erlang/lib/diameter-${VERSION.diameter}/ebin/diameter_etcp_sup.beam
 lib/erlang/lib/diameter-${VERSION.diameter}/ebin/diameter_exprecs.beam
@@ -560,6 +561,7 @@ lib/erlang/lib/diameter-${VERSION.diameter}/src/base/diameter_capx.erl
 lib/erlang/lib/diameter-${VERSION.diameter}/src/base/diameter_codec.erl
 lib/erlang/lib/diameter-${VERSION.diameter}/src/base/diameter_config.erl
 lib/erlang/lib/diameter-${VERSION.diameter}/src/base/diameter_config_sup.erl
+lib/erlang/lib/diameter-${VERSION.diameter}/src/base/diameter_dist.erl
 lib/erlang/lib/diameter-${VERSION.diameter}/src/base/diameter_gen.erl
 lib/erlang/lib/diameter-${VERSION.diameter}/src/base/diameter_internal.hrl
 lib/erlang/lib/diameter-${VERSION.diameter}/src/base/diameter_lib.erl
@@ -819,6 +821,7 @@ lib/erlang/lib/erl_interface-${VERSION.erl_interface}/src/misc/ei_decode_term.c
 lib/erlang/lib/erl_interface-${VERSION.erl_interface}/src/misc/ei_decode_term.h
 lib/erlang/lib/erl_interface-${VERSION.erl_interface}/src/misc/ei_format.c
 lib/erlang/lib/erl_interface-${VERSION.erl_interface}/src/misc/ei_format.h
+lib/erlang/lib/erl_interface-${VERSION.erl_interface}/src/misc/ei_init.c
 lib/erlang/lib/erl_interface-${VERSION.erl_interface}/src/misc/ei_internal.h
 lib/erlang/lib/erl_interface-${VERSION.erl_interface}/src/misc/ei_locking.c
 lib/erlang/lib/erl_interface-${VERSION.erl_interface}/src/misc/ei_locking.h
@@ -1420,6 +1423,8 @@ lib/erlang/lib/kernel-${VERSION.kernel}/ebin/logger_filters.beam
 lib/erlang/lib/kernel-${VERSION.kernel}/ebin/logger_formatter.beam
 lib/erlang/lib/kernel-${VERSION.kernel}/ebin/logger_h_common.beam
 lib/erlang/lib/kernel-${VERSION.kernel}/ebin/logger_handler_watcher.beam
+lib/erlang/lib/kernel-${VERSION.kernel}/ebin/logger_olp.beam
+lib/erlang/lib/kernel-${VERSION.kernel}/ebin/logger_proxy.beam
 lib/erlang/lib/kernel-${VERSION.kernel}/ebin/logger_server.beam
 lib/erlang/lib/kernel-${VERSION.kernel}/ebin/logger_simple_h.beam
 lib/erlang/lib/kernel-${VERSION.kernel}/ebin/logger_std_h.beam
@@ -1537,6 +1542,9 @@ lib/erlang/lib/kernel-${VERSION.kernel}/src/logger_h_common.erl
 lib/erlang/lib/kernel-${VERSION.kernel}/src/logger_h_common.hrl
 lib/erlang/lib/kernel-${VERSION.kernel}/src/logger_handler_watcher.erl
 lib/erlang/lib/kernel-${VERSION.kernel}/src/logger_internal.hrl
+lib/erlang/lib/kernel-${VERSION.kernel}/src/logger_olp.erl
+lib/erlang/lib/kernel-${VERSION.kernel}/src/logger_olp.hrl
+lib/erlang/lib/kernel-${VERSION.kernel}/src/logger_proxy.erl
 lib/erlang/lib/kernel-${VERSION.kernel}/src/logger_server.erl
 lib/erlang/lib/kernel-${VERSION.kernel}/src/logger_simple_h.erl
 lib/erlang/lib/kernel-${VERSION.kernel}/src/logger_std_h.erl
@@ -2014,8 +2022,10 @@ lib/erlang/lib/os_mon-${VERSION.os_mon}/include/OTP-OS-MON-MIB.hrl
 lib/erlang/lib/os_mon-${VERSION.os_mon}/mibs/OTP-OS-MON-MIB.funcs
 lib/erlang/lib/os_mon-${VERSION.os_mon}/mibs/OTP-OS-MON-MIB.mib
 lib/erlang/lib/os_mon-${VERSION.os_mon}/mibs/v1/OTP-OS-MON-MIB.mib.v1
+lib/erlang/lib/os_mon-${VERSION.os_mon}/priv/bin/cpu_sup
 lib/erlang/lib/os_mon-${VERSION.os_mon}/priv/bin/memsup
 lib/erlang/lib/os_mon-${VERSION.os_mon}/priv/mibs/OTP-OS-MON-MIB.bin
+lib/erlang/lib/os_mon-${VERSION.os_mon}/src/cpu_sup.c
 lib/erlang/lib/os_mon-${VERSION.os_mon}/src/cpu_sup.erl
 lib/erlang/lib/os_mon-${VERSION.os_mon}/src/disksup.erl
 lib/erlang/lib/os_mon-${VERSION.os_mon}/src/memsup.c
@@ -3007,6 +3017,7 @@ lib/erlang/lib/wx-${VERSION.wx}/ebin/wxDatePickerCtrl.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxDialog.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxDirDialog.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxDirPickerCtrl.beam
+lib/erlang/lib/wx-${VERSION.wx}/ebin/wxDisplay.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxDisplayChangedEvent.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxDropFilesEvent.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxEraseEvent.beam
@@ -3027,6 +3038,7 @@ lib/erlang/lib/wx-${VERSION.wx}/ebin/wxFontPickerCtrl.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxFontPickerEvent.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxFrame.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxGBSizerItem.beam
+lib/erlang/lib/wx-${VERSION.wx}/ebin/wxGCDC.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxGLCanvas.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxGauge.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxGenericDirCtrl.beam
@@ -3349,6 +3361,7 @@ lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxDatePickerCtrl.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxDialog.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxDirDialog.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxDirPickerCtrl.erl
+lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxDisplay.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxDisplayChangedEvent.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxDropFilesEvent.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxEraseEvent.erl
@@ -3369,6 +3382,7 @@ lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxFontPickerCtrl.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxFontPickerEvent.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxFrame.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxGBSizerItem.erl
+lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxGCDC.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxGLCanvas.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxGauge.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxGenericDirCtrl.erl
