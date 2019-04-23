@@ -744,7 +744,7 @@ func (p *MkParser) Dependency() *DependencyPattern {
 		return &dp
 	}
 
-	if pkgbaseParser := NewMkParser(nil, dp.Pkgbase, false); pkgbaseParser.VarUse() != nil && pkgbaseParser.EOF() {
+	if ToVarUse(dp.Pkgbase) != nil {
 		return &dp
 	}
 
@@ -756,6 +756,18 @@ func (p *MkParser) Dependency() *DependencyPattern {
 
 	lexer.Reset(mark)
 	return nil
+}
+
+// ToVarUse converts the given string into a MkVarUse, or returns nil
+// if there is a parse error or some trailing text.
+// Parse errors are silently ignored.
+func ToVarUse(str string) *MkVarUse {
+	p := NewMkParser(nil, str, false)
+	varUse := p.VarUse()
+	if varUse == nil || !p.EOF() {
+		return nil
+	}
+	return varUse
 }
 
 // MkCond is a condition in a Makefile, such as ${OPSYS} == NetBSD.
@@ -801,6 +813,7 @@ type MkCondCall struct {
 }
 
 type MkCondCallback struct {
+	Not           func(cond MkCond)
 	Defined       func(varname string)
 	Empty         func(empty *MkVarUse)
 	CompareVarNum func(varuse *MkVarUse, op string, num string)
@@ -830,6 +843,9 @@ func (w *MkCondWalker) Walk(cond MkCond, callback *MkCondCallback) {
 		}
 
 	case cond.Not != nil:
+		if callback.Not != nil {
+			callback.Not(cond.Not)
+		}
 		w.Walk(cond.Not, callback)
 
 	case cond.Defined != "":
