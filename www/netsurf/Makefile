@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.73 2018/12/13 19:52:25 adam Exp $
+# $NetBSD: Makefile,v 1.74 2019/04/23 23:30:49 leot Exp $
 
 DISTNAME=	netsurf-all-3.8
 PKGNAME=	${DISTNAME:S/-all//}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	http://download.netsurf-browser.org/netsurf/releases/source-full/
 
@@ -38,6 +38,7 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 CFLAGS.NetBSD+=		-D_NETBSD_SOURCE	# needed for strcasestr(3) and strndup(3)
 
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
