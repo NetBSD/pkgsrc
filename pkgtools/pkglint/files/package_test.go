@@ -945,7 +945,7 @@ func (s *Suite) Test_Package_checkfilePackageMakefile__META_PACKAGE_with_distinf
 
 	t.CheckOutputLines(
 		"WARN: ~/category/package/distinfo: " +
-			"This file should not exist if NO_CHECKSUM or META_PACKAGE is set.")
+			"This file should not exist since NO_CHECKSUM or META_PACKAGE is set.")
 }
 
 func (s *Suite) Test_Package_checkfilePackageMakefile__USE_IMAKE_and_USE_X11(c *check.C) {
@@ -1169,12 +1169,10 @@ func (s *Suite) Test_Package_readMakefile__relative(c *check.C) {
 
 	G.Check(pkg)
 
-	// FIXME: One of the below warnings is redundant.
 	t.CheckOutputLines(
-		"WARN: ~/category/package/Makefile:20: "+
-			"References to other packages should look "+
-			"like \"../../category/package\", not \"../package\".",
-		"WARN: ~/category/package/Makefile:20: Invalid relative path \"../package/extra.mk\".")
+		"WARN: ~/category/package/Makefile:20: " +
+			"References to other packages should look " +
+			"like \"../../category/package\", not \"../package\".")
 }
 
 // When a buildlink3.mk file is included, the corresponding builtin.mk
