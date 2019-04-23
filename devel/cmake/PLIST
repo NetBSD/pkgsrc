@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.54 2019/03/18 09:05:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.55 2019/04/23 09:29:08 adam Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -1401,6 +1401,7 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_VS_INTEL_Fortran_PROJECT_VERSION.rs
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_VS_MSBUILD_COMMAND.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_VS_NsightTegra_VERSION.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_VS_PLATFORM_NAME.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_VS_PLATFORM_NAME_DEFAULT.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_VS_PLATFORM_TOOLSET.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_VS_PLATFORM_TOOLSET_CUDA.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_VS_PLATFORM_TOOLSET_HOST_ARCHITECTURE.rst
