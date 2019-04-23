@@ -2,6 +2,7 @@ package pkglint
 
 import (
 	"io/ioutil"
+	"netbsd.org/pkglint/textproc"
 	"path"
 	"strings"
 )
@@ -74,6 +75,7 @@ func nextLogicalLine(filename string, rawLines []*RawLine, index int) (Line, int
 	firstlineno := rawLines[index].Lineno
 	var lineRawLines []*RawLine
 	interestingRawLines := rawLines[index:]
+	trim := ""
 
 	for i, rawLine := range interestingRawLines {
 		indent, rawText, outdent, cont := matchContinuationLine(rawLine.textnl)
@@ -81,12 +83,14 @@ func nextLogicalLine(filename string, rawLines []*RawLine, index int) (Line, int
 		if text.Len() == 0 {
 			text.WriteString(indent)
 		}
-		text.WriteString(rawText)
+		text.WriteString(strings.TrimPrefix(rawText, trim))
+
 		lineRawLines = append(lineRawLines, rawLine)
 
 		if cont != "" && i != len(interestingRawLines)-1 {
 			text.WriteString(" ")
 			index++
+			trim = textproc.NewLexer(rawText).NextString("#")
 		} else {
 			text.WriteString(outdent)
 			text.WriteString(cont)

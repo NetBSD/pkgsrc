@@ -194,6 +194,44 @@ func (s *Suite) Test_MkLineChecker_checkInclude__Makefile_exists(c *check.C) {
 		"ERROR: ~/category/package/Makefile:20: Cannot read \"../../other/existing/Makefile\".")
 }
 
+func (s *Suite) Test_MkLineChecker_checkInclude__hacks(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("category/package/hacks.mk",
+		MkRcsID,
+		".include \"../../category/package/nonexistent.mk\"",
+		".include \"../../category/package/builtin.mk\"")
+	t.CreateFileLines("category/package/builtin.mk",
+		MkRcsID)
+	t.FinishSetUp()
+
+	G.checkdirPackage(t.File("category/package"))
+
+	// The purpose of this "nonexistent" diagnostic is only to show that
+	// hacks.mk is indeed parsed and checked.
+	t.CheckOutputLines(
+		"ERROR: ~/category/package/hacks.mk:2: " +
+			"Relative path \"../../category/package/nonexistent.mk\" does not exist.")
+}
+
+func (s *Suite) Test_MkLineChecker__permissions_in_hacks_mk(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+
+	mklines := t.NewMkLines("hacks.mk",
+		MkRcsID,
+		"OPSYS=\t${PKGREVISION}")
+
+	mklines.Check()
+
+	// No matter how strange the definition or use of a variable sounds,
+	// in hacks.mk it is allowed. Special problems sometimes need solutions
+	// that violate all standards.
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_MkLineChecker_checkDirective(c *check.C) {
 	t := s.Init(c)
 
@@ -1367,31 +1405,166 @@ func (s *Suite) Test_MkLineChecker_checkDirectiveCondEmpty(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpVartypes()
-	mkline := t.NewMkLine("module.mk", 123, ".if ${PKGPATH} == \"category/package\"")
-	ck := MkLineChecker{nil, mkline}
+	t.Chdir(".")
 
-	ck.checkDirectiveCondEmpty(NewMkVarUse("PKGPATH", "Mpattern"))
+	test := func(before string, diagnosticsAndAfter ...string) {
+
+		mklines := t.SetUpFileMkLines("module.mk",
+			MkRcsID,
+			before,
+			".endif")
+		mkline := mklines.mklines[1]
+		ck := MkLineChecker{nil, mkline}
+
+		t.SetUpCommandLine("-Wall")
+		ck.checkDirectiveCond()
+
+		t.SetUpCommandLine("-Wall", "--autofix")
+		ck.checkDirectiveCond()
+
+		mklines.SaveAutofixChanges()
+		afterMklines := t.LoadMkInclude("module.mk")
+
+		if len(diagnosticsAndAfter) > 0 {
+			diagLen := len(diagnosticsAndAfter)
+			diagnostics := diagnosticsAndAfter[:diagLen-1]
+			after := diagnosticsAndAfter[diagLen-1]
+
+			t.CheckOutput(diagnostics)
+			t.Check(afterMklines.mklines[1].Text, equals, after)
+		} else {
+			t.CheckOutputEmpty()
+		}
+	}
+
+	test(
+		".if ${PKGPATH:Mpattern}",
+		"NOTE: module.mk:2: PKGPATH should be compared using == instead of matching against \":Mpattern\".",
+		"AUTOFIX: module.mk:2: Replacing \"${PKGPATH:Mpattern}\" with \"${PKGPATH} == pattern\".",
+		".if ${PKGPATH} == pattern")
 
 	// When the pattern contains placeholders, it cannot be converted to == or !=.
-	ck.checkDirectiveCondEmpty(NewMkVarUse("PKGPATH", "Mpa*n"))
+	test(
+		".if ${PKGPATH:Mpa*n}",
+		nil...)
 
-	ck.checkDirectiveCondEmpty(NewMkVarUse("PKGPATH", "tl", "Mpattern"))
+	// The :tl modifier prevents the autofix.
+	test(
+		".if ${PKGPATH:tl:Mpattern}",
+		"NOTE: module.mk:2: PKGPATH should be compared using == instead of matching against \":Mpattern\".",
+		".if ${PKGPATH:tl:Mpattern}")
 
-	ck.checkDirectiveCondEmpty(NewMkVarUse("PKGPATH", "Ncategory/package"))
+	test(
+		".if ${PKGPATH:Ncategory/package}",
+		"NOTE: module.mk:2: PKGPATH should be compared using != instead of matching against \":Ncategory/package\".",
+		"AUTOFIX: module.mk:2: Replacing \"${PKGPATH:Ncategory/package}\" with \"${PKGPATH} != category/package\".",
+		".if ${PKGPATH} != category/package")
 
-	// ${PKGPATH:None:Ntwo} is a short variant of ${PKGPATH} != "one" && ${PKGPATH} != "two",
-	// therefore no note is logged in this case.
-	ck.checkDirectiveCondEmpty(NewMkVarUse("PKGPATH", "None", "Ntwo"))
+	// ${PKGPATH:None:Ntwo} is a short variant of ${PKGPATH} != "one" &&
+	// ${PKGPATH} != "two". Applying the transformation would make the
+	// condition longer than before, therefore nothing is done here.
+	test(
+		".if ${PKGPATH:None:Ntwo}",
+		nil...)
 
 	// Note: this combination doesn't make sense since the patterns "one" and "two" don't overlap.
-	ck.checkDirectiveCondEmpty(NewMkVarUse("PKGPATH", "Mone", "Mtwo"))
+	test(".if ${PKGPATH:Mone:Mtwo}",
+		"NOTE: module.mk:2: PKGPATH should be compared using == instead of matching against \":Mone\".",
+		"NOTE: module.mk:2: PKGPATH should be compared using == instead of matching against \":Mtwo\".",
+		".if ${PKGPATH:Mone:Mtwo}")
 
-	t.CheckOutputLines(
-		"NOTE: module.mk:123: PKGPATH should be compared using == instead of matching against \":Mpattern\".",
-		"NOTE: module.mk:123: PKGPATH should be compared using == instead of matching against \":Mpattern\".",
-		"NOTE: module.mk:123: PKGPATH should be compared using != instead of matching against \":Ncategory/package\".",
-		"NOTE: module.mk:123: PKGPATH should be compared using == instead of matching against \":Mone\".",
-		"NOTE: module.mk:123: PKGPATH should be compared using == instead of matching against \":Mtwo\".")
+	test(".if !empty(PKGPATH:Mpattern)",
+		"NOTE: module.mk:2: PKGPATH should be compared using == instead of matching against \":Mpattern\".",
+		"AUTOFIX: module.mk:2: Replacing \"!empty(PKGPATH:Mpattern)\" with \"${PKGPATH} == pattern\".",
+		".if ${PKGPATH} == pattern")
+
+	test(".if empty(PKGPATH:Mpattern)",
+		"NOTE: module.mk:2: PKGPATH should be compared using != instead of matching against \":Mpattern\".",
+		"AUTOFIX: module.mk:2: Replacing \"empty(PKGPATH:Mpattern)\" with \"${PKGPATH} != pattern\".",
+		".if ${PKGPATH} != pattern")
+
+	test(".if !!empty(PKGPATH:Mpattern)",
+		// TODO: When taking all the ! into account, this is actually a
+		//  test for emptiness, therefore the diagnostics should suggest
+		//  the != operator instead of ==.
+		"NOTE: module.mk:2: PKGPATH should be compared using == instead of matching against \":Mpattern\".",
+		"AUTOFIX: module.mk:2: Replacing \"!empty(PKGPATH:Mpattern)\" with \"(${PKGPATH} == pattern)\".",
+		// TODO: This condition could be simplified even more.
+		//  Luckily the !! pattern doesn't occur in practice.
+		".if !(${PKGPATH} == pattern)")
+
+	// No note in this case since there is no implicit !empty around the varUse.
+	test(".if ${PKGPATH:Mpattern} != ${OTHER}",
+		nil...)
+
+	test(
+		".if ${PKGPATH:Mpattern}",
+		"NOTE: module.mk:2: PKGPATH should be compared using == instead of matching against \":Mpattern\".",
+		"AUTOFIX: module.mk:2: Replacing \"${PKGPATH:Mpattern}\" with \"${PKGPATH} == pattern\".",
+		".if ${PKGPATH} == pattern")
+
+	test(
+		".if !${PKGPATH:Mpattern}",
+		"NOTE: module.mk:2: PKGPATH should be compared using != instead of matching against \":Mpattern\".",
+		"AUTOFIX: module.mk:2: Replacing \"!${PKGPATH:Mpattern}\" with \"${PKGPATH} != pattern\".",
+		".if ${PKGPATH} != pattern")
+
+	// This pattern with spaces doesn't make sense at all in the :M
+	// modifier since it can never match.
+	test(
+		".if ${PKGPATH:Mpattern with spaces}",
+		nil...)
+	// TODO: ".if ${PKGPATH} == \"pattern with spaces\"")
+
+	test(
+		".if ${PKGPATH:M'pattern with spaces'}",
+		nil...)
+	// TODO: ".if ${PKGPATH} == 'pattern with spaces'")
+
+	test(
+		".if ${PKGPATH:M&&}",
+		nil...)
+	// TODO: ".if ${PKGPATH} == '&&'")
+
+	// If PKGPATH is "", the condition is false.
+	// If PKGPATH is "negative-pattern", the condition is false.
+	// In all other cases, the condition is true.
+	//
+	// Therefore this condition cannot simply be transformed into
+	// ${PKGPATH} != negative-pattern, since that would produce a
+	// different result in the case where PKGPATH is empty.
+	//
+	// For system-provided variables that are guaranteed to be non-empty,
+	// such as OPSYS or PKGPATH, this replacement is valid.
+	// These variables are only guaranteed to be defined after bsd.prefs.mk
+	// has been included, like everywhere else.
+	test(
+		".if ${PKGPATH:Nnegative-pattern}",
+		"NOTE: module.mk:2: PKGPATH should be compared using != instead of matching against \":Nnegative-pattern\".",
+		"AUTOFIX: module.mk:2: Replacing \"${PKGPATH:Nnegative-pattern}\" with \"${PKGPATH} != negative-pattern\".",
+		".if ${PKGPATH} != negative-pattern")
+
+	// Since UNKNOWN is not a well-known system-provided variable that is
+	// guaranteed to be non-empty (see the previous example), it is not
+	// transformed at all.
+	test(
+		".if ${UNKNOWN:Nnegative-pattern}",
+		nil...)
+
+	test(
+		".if ${PKGPATH:Mpath1} || ${PKGPATH:Mpath2}",
+		"NOTE: module.mk:2: PKGPATH should be compared using == instead of matching against \":Mpath1\".",
+		"NOTE: module.mk:2: PKGPATH should be compared using == instead of matching against \":Mpath2\".",
+		"AUTOFIX: module.mk:2: Replacing \"${PKGPATH:Mpath1}\" with \"(${PKGPATH} == path1)\".",
+		"AUTOFIX: module.mk:2: Replacing \"${PKGPATH:Mpath2}\" with \"(${PKGPATH} == path2)\".",
+		// TODO: remove the redundant parentheses
+		".if (${PKGPATH} == path1) || (${PKGPATH} == path2)")
+
+	test(
+		".if (((((${PKGPATH:Mpath})))))",
+		"NOTE: module.mk:2: PKGPATH should be compared using == instead of matching against \":Mpath\".",
+		"AUTOFIX: module.mk:2: Replacing \"${PKGPATH:Mpath}\" with \"${PKGPATH} == path\".",
+		".if (((((${PKGPATH} == path)))))")
 }
 
 func (s *Suite) Test_MkLineChecker_checkDirectiveCond__comparing_PKGSRC_COMPILER_with_eqeq(c *check.C) {
@@ -1731,8 +1904,7 @@ func (s *Suite) Test_MkLineChecker_CheckVaruse__LOCALBASE_in_infrastructure(c *c
 	// There is no warning about DEFAULT_PREFIX being "defined but not used"
 	// since Pkgsrc.loadUntypedVars calls Pkgsrc.vartypes.DefineType, which
 	// registers that variable globally.
-	t.CheckOutputLines(
-		"WARN: ~/mk/infra.mk:2: PREFIX should not be used indirectly at load time (via LOCALBASE).")
+	t.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_MkLineChecker_CheckVaruse__user_defined_variable_and_BUILD_DEFS(c *check.C) {
@@ -1973,7 +2145,10 @@ func (s *Suite) Test_MkLineChecker_CheckRelativePath(c *check.C) {
 		".include \"module.mk\"",
 		".include \"../../category/../category/package/module.mk\"", // Oops
 		".include \"../../mk/bsd.prefs.mk\"",
-		".include \"../package/module.mk\"")
+		".include \"../package/module.mk\"",
+		// TODO: warn about this as well, since ${.CURDIR} is essentially
+		//  equivalent to ".".
+		".include \"${.CURDIR}/../package/module.mk\"")
 	t.FinishSetUp()
 
 	mklines.Check()
@@ -1982,8 +2157,10 @@ func (s *Suite) Test_MkLineChecker_CheckRelativePath(c *check.C) {
 		"ERROR: ~/category/package/module.mk:2: A main pkgsrc package must not depend on a pkgsrc-wip package.",
 		"ERROR: ~/category/package/module.mk:3: A main pkgsrc package must not depend on a pkgsrc-wip package.",
 		"WARN: ~/category/package/module.mk:5: LATEST_PYTHON is used but not defined.",
-		// TODO: This warning is unspecific, there is also a pkglint warning "should be ../../category/package".
-		"WARN: ~/category/package/module.mk:11: Invalid relative path \"../package/module.mk\".")
+		"WARN: ~/category/package/module.mk:11: References to other packages should "+
+			"look like \"../../category/package\", not \"../package\".",
+		"WARN: ~/category/package/module.mk:12: References to other packages should "+
+			"look like \"../../category/package\", not \"../package\".")
 }
 
 func (s *Suite) Test_MkLineChecker_CheckRelativePath__absolute_path(c *check.C) {
@@ -2032,8 +2209,7 @@ func (s *Suite) Test_MkLineChecker_CheckRelativePath__wip_mk(c *check.C) {
 	G.Check(t.File("wip/package"))
 
 	t.CheckOutputLines(
-		"WARN: ~/wip/package/Makefile:20: "+
-			"References to the pkgsrc-wip infrastructure should look like \"../../wip/mk\", "+
-			"not \"../mk\".",
-		"WARN: ~/wip/package/Makefile:20: Invalid relative path \"../mk/git-package.mk\".")
+		"WARN: ~/wip/package/Makefile:20: " +
+			"References to the pkgsrc-wip infrastructure should look like \"../../wip/mk\", " +
+			"not \"../mk\".")
 }

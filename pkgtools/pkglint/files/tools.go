@@ -32,11 +32,19 @@ type Tool struct {
 	// (${ECHO}, ${TEST}).
 	MustUseVarForm bool
 	Validity       Validity
+	Aliases        []string
 }
 
 func (tool *Tool) String() string {
-	return sprintf("%s:%s:%s:%s",
-		tool.Name, tool.Varname, ifelseStr(tool.MustUseVarForm, "var", ""), tool.Validity)
+	aliases := ""
+	if len(tool.Aliases) > 0 {
+		aliases = ":" + strings.Join(tool.Aliases, ",")
+	}
+
+	varForm := ifelseStr(tool.MustUseVarForm, "var", "")
+
+	return sprintf("%s:%s:%s:%s%s",
+		tool.Name, tool.Varname, varForm, tool.Validity, aliases)
 }
 
 // UsableAtLoadTime means that the tool may be used by its variable
@@ -105,6 +113,11 @@ type Tools struct {
 	// Adding a tool to USE_TOOLS _after_ bsd.prefs.mk has been included, on the other
 	// hand, only makes the tool available at run time.
 	SeenPrefs bool
+
+	// For example, "sed" is an alias of "gsed".
+	//
+	// This means when gsed is added to USE_TOOLS, sed is implicitly added as well.
+	AliasOf map[string]string
 }
 
 func NewTools() *Tools {
@@ -112,7 +125,8 @@ func NewTools() *Tools {
 		make(map[string]*Tool),
 		make(map[string]*Tool),
 		nil,
-		false}
+		false,
+		make(map[string]string)}
 }
 
 // Define registers the tool by its name and the corresponding
@@ -131,11 +145,11 @@ func (tr *Tools) Define(name, varname string, mkline MkLine) *Tool {
 	}
 
 	validity := tr.validity(mkline.Basename, false)
-	return tr.def(name, varname, false, validity)
+	return tr.def(name, varname, false, validity, nil)
 }
 
-func (tr *Tools) def(name, varname string, mustUseVarForm bool, validity Validity) *Tool {
-	fresh := Tool{name, varname, mustUseVarForm, validity}
+func (tr *Tools) def(name, varname string, mustUseVarForm bool, validity Validity, aliases []string) *Tool {
+	fresh := Tool{name, varname, mustUseVarForm, validity, aliases}
 
 	tool := tr.byName[name]
 	if tool == nil {
@@ -155,6 +169,10 @@ func (tr *Tools) def(name, varname string, mustUseVarForm bool, validity Validit
 		if existing := tr.byVarname[varname]; existing == nil || len(existing.Name) > len(name) {
 			tr.byVarname[varname] = tool
 		}
+	}
+
+	for _, alias := range aliases {
+		tr.AliasOf[alias] = name
 	}
 
 	return tool
@@ -204,7 +222,7 @@ func (tr *Tools) Trace() {
 //
 // If addToUseTools is true, a USE_TOOLS line makes a tool immediately
 // usable. This should only be done if the current line is unconditional.
-func (tr *Tools) ParseToolLine(mkline MkLine, fromInfrastructure bool, addToUseTools bool) {
+func (tr *Tools) ParseToolLine(mklines MkLines, mkline MkLine, fromInfrastructure bool, addToUseTools bool) {
 	switch {
 
 	case mkline.IsVarassign():
@@ -213,8 +231,10 @@ func (tr *Tools) ParseToolLine(mkline MkLine, fromInfrastructure bool, addToUseT
 
 		switch mkline.Varcanon() {
 		case "TOOLS_CREATE":
-			if tr.IsValidToolName(value) {
-				tr.def(value, "", false, AtRunTime)
+			for _, name := range mkline.ValueFields(value) {
+				if tr.IsValidToolName(name) {
+					tr.def(name, "", false, AtRunTime, nil)
+				}
 			}
 
 		case "_TOOLS_VARNAME.*":
@@ -225,6 +245,24 @@ func (tr *Tools) ParseToolLine(mkline MkLine, fromInfrastructure bool, addToUseT
 		case "TOOLS_PATH.*", "_TOOLS_DEPMETHOD.*":
 			if !containsVarRef(varparam) {
 				tr.Define(varparam, "", mkline)
+			}
+
+		case "TOOLS_ALIASES.*":
+			tool := tr.def(varparam, "", false, Nowhere, nil)
+
+			for _, alias := range mkline.ValueFields(value) {
+				if tr.IsValidToolName(alias) {
+					tr.addAlias(tool, alias)
+				} else {
+					varUse := ToVarUse(alias)
+					if varUse != nil {
+						for _, subAlias := range mklines.ExpandLoopVar(varUse.varname) {
+							if tr.IsValidToolName(subAlias) {
+								tr.addAlias(tool, subAlias)
+							}
+						}
+					}
+				}
 			}
 
 		case "_TOOLS.*":
@@ -244,6 +282,11 @@ func (tr *Tools) ParseToolLine(mkline MkLine, fromInfrastructure bool, addToUseT
 			tr.SeenPrefs = true
 		}
 	}
+}
+
+func (tr *Tools) addAlias(tool *Tool, alias string) {
+	tool.Aliases = append(tool.Aliases, alias)
+	tr.AliasOf[alias] = tool.Name
 }
 
 // parseUseTools interprets a "USE_TOOLS+=" line from a Makefile fragment.
@@ -273,7 +316,7 @@ func (tr *Tools) parseUseTools(mkline MkLine, createIfAbsent bool, addToUseTools
 	for _, dep := range deps {
 		name := strings.Split(dep, ":")[0]
 		if createIfAbsent || tr.ByName(name) != nil {
-			tr.def(name, "", false, validity)
+			tr.def(name, "", false, validity, nil)
 		}
 	}
 }
@@ -296,9 +339,10 @@ func (tr *Tools) ByName(name string) *Tool {
 	if tool == nil && tr.fallback != nil {
 		fallback := tr.fallback.ByName(name)
 		if fallback != nil {
-			return tr.def(fallback.Name, fallback.Varname, fallback.MustUseVarForm, fallback.Validity)
+			tool = tr.def(fallback.Name, fallback.Varname, fallback.MustUseVarForm, fallback.Validity, fallback.Aliases)
 		}
 	}
+	tr.adjustValidity(tool)
 	return tool
 }
 
@@ -307,9 +351,10 @@ func (tr *Tools) ByVarname(varname string) *Tool {
 	if tool == nil && tr.fallback != nil {
 		fallback := tr.fallback.ByVarname(varname)
 		if fallback != nil {
-			return tr.def(fallback.Name, fallback.Varname, fallback.MustUseVarForm, fallback.Validity)
+			tool = tr.def(fallback.Name, fallback.Varname, fallback.MustUseVarForm, fallback.Validity, fallback.Aliases)
 		}
 	}
+	tr.adjustValidity(tool)
 	return tool
 }
 
@@ -330,6 +375,22 @@ func (tr *Tools) Fallback(other *Tools) {
 
 func (tr *Tools) IsValidToolName(name string) bool {
 	return name == "[" || name == "echo -n" || matches(name, `^[-0-9a-z.]+$`)
+}
+
+func (tr *Tools) adjustValidity(tool *Tool) {
+	if tool == nil {
+		return
+	}
+
+	aliasName := tr.AliasOf[tool.Name]
+	if aliasName == "" {
+		return
+	}
+
+	alias := tr.ByName(tr.AliasOf[tool.Name])
+	if alias.Validity > tool.Validity {
+		tool.Validity = alias.Validity
+	}
 }
 
 type Validity uint8

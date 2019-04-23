@@ -934,18 +934,16 @@ func (s *Suite) Test_Varalign__realign_commented_single_lines(c *check.C) {
 		"SHORT=\tvalue")
 	vt.Diagnostics(
 		"NOTE: ~/Makefile:1: This variable value should be aligned to column 17.",
-		"NOTE: ~/Makefile:3--4: This variable value should be aligned with tabs, not spaces, to column 17.",
 		"NOTE: ~/Makefile:5--6: This line should be aligned with \"\\t\\t\".",
 		"NOTE: ~/Makefile:7: This variable value should be aligned to column 17.")
 	vt.Autofixes(
 		"AUTOFIX: ~/Makefile:1: Replacing \"\\t\" with \"\\t\\t\".",
-		"AUTOFIX: ~/Makefile:3: Replacing \" \" with \"\\t\".",
 		"AUTOFIX: ~/Makefile:6: Replacing indentation \"\" with \"\\t\\t\".",
 		"AUTOFIX: ~/Makefile:7: Replacing \"\\t\" with \"\\t\\t\".")
 	vt.Fixed(
 		"SHORT=          value",
 		"#DISTFILES=     distfile-1.0.0.tar.gz",
-		"#CONTINUATION=  \\",
+		"#CONTINUATION= \\",
 		"#               continued",
 		"#CONFIGURE_ENV+= \\",
 		"#               TZ=UTC",

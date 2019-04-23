@@ -864,7 +864,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 		"Makefile, Makefile.*, *.mk: append")
 	acl("BUILDLINK_FNAME_TRANSFORM.*", BtSedCommands,
 		PackageSettable,
-		"Makefile, buildlink3.mk, builtin.mk, hacks.mk, options.mk: append")
+		"Makefile, buildlink3.mk, builtin.mk, options.mk: append")
 	acllist("BUILDLINK_TRANSFORM", BtWrapperTransform,
 		PackageSettable,
 		"*: append")
@@ -1397,10 +1397,11 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	// Since only the hacks.mk can define hacks, appending to it only makes
 	// sense there.
 	//
-	// TODO: Is it possible to include hacks.mk files from the dependencies?
+	// TODO: Is it possible that a package includes the hacks.mk file from
+	//  one of its dependencies?
 	acllist("PKG_HACKS", BtIdentifier,
 		PackageSettable,
-		"hacks.mk: append")
+		"*: none")
 	sys("PKG_INFO", BtShellCommand)
 	sys("PKG_JAVA_HOME", BtPathname)
 	sys("PKG_JVM", jvms)
@@ -1723,7 +1724,7 @@ func (reg *VarTypeRegistry) parseACLEntries(varname string, aclEntries ...string
 			switch glob {
 			case "*",
 				"Makefile", "Makefile.*",
-				"buildlink3.mk", "builtin.mk", "options.mk", "hacks.mk", "*.mk":
+				"buildlink3.mk", "builtin.mk", "options.mk", "*.mk":
 				break
 			default:
 				withoutSpecial := strings.TrimPrefix(glob, "special:")

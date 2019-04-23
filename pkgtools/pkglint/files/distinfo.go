@@ -195,31 +195,32 @@ func (ck *distinfoLinesChecker) checkAlgorithmsDistfile(info distinfoFileInfo) {
 
 	distdir := G.Pkgsrc.File("distfiles")
 
-	// It's a rare situation that the explanation is generated
-	// this far from the corresponding diagnostic.
-	// This explanation only makes sense when there are some
-	// hashes missing that can be automatically added by pkglint.
-	line.Explain(
-		"To add the missing lines to the distinfo file, run",
-		sprintf("\t%s", bmake("distinfo")),
-		"for each variant of the package until all distfiles are downloaded to",
-		"${PKGSRCDIR}/distfiles.",
-		"",
-		"The variants are typically selected by setting EMUL_PLATFORM",
-		"or similar variables in the command line.",
-		"",
-		"After that, run",
-		sprintf("%q", "cvs update -C distinfo"),
-		"to revert the distinfo file to the previous state, since the above",
-		"commands have removed some of the entries.",
-		"",
-		"After downloading all possible distfiles, run",
-		sprintf("%q,", "pkglint --autofix"),
-		"which will find the downloaded distfiles and add the missing",
-		"hashes to the distinfo file.")
-
 	distfile := cleanpath(distdir + "/" + info.filename())
 	if !fileExists(distfile) {
+
+		// It's a rare situation that the explanation is generated
+		// this far from the corresponding diagnostic.
+		// This explanation only makes sense when there are some
+		// hashes missing that can be automatically added by pkglint.
+		line.Explain(
+			"To add the missing lines to the distinfo file, run",
+			sprintf("\t%s", bmake("distinfo")),
+			"for each variant of the package until all distfiles are downloaded to",
+			"${PKGSRCDIR}/distfiles.",
+			"",
+			"The variants are typically selected by setting EMUL_PLATFORM",
+			"or similar variables in the command line.",
+			"",
+			"After that, run",
+			sprintf("%q", "cvs update -C distinfo"),
+			"to revert the distinfo file to the previous state, since the above",
+			"commands have removed some of the entries.",
+			"",
+			"After downloading all possible distfiles, run",
+			sprintf("%q,", "pkglint --autofix"),
+			"which will find the downloaded distfiles and add the missing",
+			"hashes to the distinfo file.")
+
 		return
 	}
 

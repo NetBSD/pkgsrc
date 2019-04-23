@@ -129,7 +129,7 @@ func (mklines *MkLinesImpl) checkAll() {
 		ck.Check()
 
 		varalign.Process(mkline)
-		mklines.Tools.ParseToolLine(mkline, false, false)
+		mklines.Tools.ParseToolLine(mklines, mkline, false, false)
 
 		switch {
 		case mkline.IsEmpty():
@@ -229,16 +229,44 @@ func (mklines *MkLinesImpl) ForEachEnd(action func(mkline MkLine) bool, atEnd fu
 	mklines.indentation = nil
 }
 
+// ExpandLoopVar searches the surrounding .for loops for the given
+// variable and returns a slice containing all its values, fully
+// expanded.
+//
+// It can only be used during a active ForEach call.
+func (mklines *MkLinesImpl) ExpandLoopVar(varname string) []string {
+
+	// From the inner loop to the outer loop, just in case
+	// that two loops should ever use the same variable.
+	for i := len(mklines.indentation.levels) - 1; i >= 0; i-- {
+		ind := mklines.indentation.levels[i]
+
+		mkline := ind.mkline
+		if mkline == nil || !mkline.IsDirective() || mkline.Directive() != "for" {
+			continue
+		}
+
+		// TODO: If needed, add support for multi-variable .for loops.
+		resolved := resolveVariableRefs(mklines, mkline.Args())
+		words := mkline.ValueFields(resolved)
+		if 1 < len(words) && words[0] == varname && words[1] == "in" {
+			return words[2:]
+		}
+	}
+
+	return nil
+}
+
 func (mklines *MkLinesImpl) collectDefinedVariables() {
 	if trace.Tracing {
 		defer trace.Call0()()
 	}
 
-	for _, mkline := range mklines.mklines {
-		mklines.Tools.ParseToolLine(mkline, false, true)
+	mklines.ForEach(func(mkline MkLine) {
+		mklines.Tools.ParseToolLine(mklines, mkline, false, true)
 
 		if !mkline.IsVarassign() {
-			continue
+			return
 		}
 
 		mklines.defineVar(G.Pkg, mkline, mkline.Varname())
@@ -291,7 +319,7 @@ func (mklines *MkLinesImpl) collectDefinedVariables() {
 				mklines.defineVar(G.Pkg, mkline, opsysVar)
 			}
 		}
-	}
+	})
 }
 
 // defineVar marks a variable as defined in both the current package and the current file.

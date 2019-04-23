@@ -501,10 +501,10 @@ func (s *Suite) Test_distinfoLinesChecker_checkPatchSha1(c *check.C) {
 		"ERROR: ~/category/package/distinfo:5: Patch patch-nonexistent does not exist.")
 }
 
-// When there is at least one correct hash for a distfile, running
-// pkglint --autofix adds the missing hashes, provided the distfile has been
-// downloaded to pkgsrc/distfiles, which is the standard distfiles location.
-func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__add_missing_hashes(c *check.C) {
+// When there is at least one correct hash for a distfile and the distfile
+// has already been downloaded to pkgsrc/distfiles, which is the standard
+// distfiles location, running pkglint --autofix adds the missing hashes.
+func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__add_missing_hashes_for_existing_distfile(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpCommandLine("-Wall", "--explain")
@@ -527,23 +527,6 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__add_missing_h
 		"ERROR: ~/category/package/distinfo:3: "+
 			"Expected SHA1, RMD160, SHA512, Size checksums for \"package-1.0.txt\", "+
 			"got RMD160, Size, CRC32.",
-		"",
-		"\tTo add the missing lines to the distinfo file, run",
-		"\t\t"+confMake+" distinfo",
-		"\tfor each variant of the package until all distfiles are downloaded",
-		"\tto ${PKGSRCDIR}/distfiles.",
-		"",
-		"\tThe variants are typically selected by setting EMUL_PLATFORM or",
-		"\tsimilar variables in the command line.",
-		"",
-		"\tAfter that, run \"cvs update -C distinfo\" to revert the distinfo file",
-		"\tto the previous state, since the above commands have removed some of",
-		"\tthe entries.",
-		"",
-		"\tAfter downloading all possible distfiles, run \"pkglint --autofix\",",
-		"\twhich will find the downloaded distfiles and add the missing hashes",
-		"\tto the distinfo file.",
-		"",
 		"ERROR: ~/category/package/distinfo:3: Missing SHA1 hash for package-1.0.txt.",
 		"ERROR: ~/category/package/distinfo:3: Missing SHA512 hash for package-1.0.txt.")
 
@@ -581,6 +564,57 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__add_missing_h
 		"ERROR: ~/category/package/distinfo:3: " +
 			"Expected SHA1, RMD160, SHA512, Size checksums for \"package-1.0.txt\", " +
 			"got SHA1, RMD160, SHA512, Size, CRC32.")
+}
+
+// When some of the hashes for a distfile are missing, pkglint can calculate
+// them. In order to do this, the distfile needs to be downloaded first. This
+// often requires manual work, otherwise it would have been done already.
+//
+// Since the distfile has not been downloaded in this test case, pkglint can
+// only explain how to download the distfile.
+func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__add_missing_hashes_for_nonexistent_distfile(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("-Wall", "--explain")
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("category/package/distinfo",
+		RcsID,
+		"",
+		"RMD160 (package-1.0.txt) = 1a88147a0344137404c63f3b695366eab869a98a",
+		"Size (package-1.0.txt) = 13 bytes",
+		"CRC32 (package-1.0.txt) = asdf")
+	t.FinishSetUp()
+
+	G.Check(t.File("category/package"))
+
+	t.CheckOutputLines(
+		"ERROR: ~/category/package/distinfo:3: "+
+			"Expected SHA1, RMD160, SHA512, Size checksums for \"package-1.0.txt\", "+
+			"got RMD160, Size, CRC32.",
+		"",
+		"\tTo add the missing lines to the distinfo file, run",
+		"\t\t"+confMake+" distinfo",
+		"\tfor each variant of the package until all distfiles are downloaded",
+		"\tto ${PKGSRCDIR}/distfiles.",
+		"",
+		"\tThe variants are typically selected by setting EMUL_PLATFORM or",
+		"\tsimilar variables in the command line.",
+		"",
+		"\tAfter that, run \"cvs update -C distinfo\" to revert the distinfo file",
+		"\tto the previous state, since the above commands have removed some of",
+		"\tthe entries.",
+		"",
+		"\tAfter downloading all possible distfiles, run \"pkglint --autofix\",",
+		"\twhich will find the downloaded distfiles and add the missing hashes",
+		"\tto the distinfo file.",
+		"")
+
+	t.SetUpCommandLine("-Wall", "--autofix", "--show-autofix", "--source")
+
+	G.Check(t.File("category/package"))
+
+	// Since the distfile does not exist, pkglint cannot fix anything.
+	t.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__wrong_distfile_hash(c *check.C) {
