@@ -1,4 +1,4 @@
-$NetBSD: patch-ta,v 1.6 2013/06/08 21:32:25 schmonz Exp $
+$NetBSD: patch-t_io_fs.t,v 1.1 2019/04/23 09:27:46 adam Exp $
 
 On NetBSD, filesystems may be mounted with the noatime option.
 

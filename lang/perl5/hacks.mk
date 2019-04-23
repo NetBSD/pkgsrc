@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.22 2018/11/21 09:37:57 maya Exp $
+# $NetBSD: hacks.mk,v 1.23 2019/04/23 09:27:46 adam Exp $
 
 .if !defined(PERL5_HACKS_MK)
 PERL5_HACKS_MK=	defined
@@ -40,7 +40,7 @@ BUILDLINK_TRANSFORM+=	opt:-O3:-O2
 	&& !empty(CC_VERSION:Mgcc-[45].*.*)
 # XXX: is there any good way to replace the default -O2 with multiple args?
 PKG_HACKS+=		alpha-optimisation
-#BUILDLINK_TRANSFORM+=  opt:-O[2-9]*:-O2 -fno-tree-ter
+#BUILDLINK_TRANSFORM+=	opt:-O[2-9]*:-O2 -fno-tree-ter
 CFLAGS+=-fno-tree-ter
 .endif
 
