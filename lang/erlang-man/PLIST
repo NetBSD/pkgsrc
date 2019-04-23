@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2019/01/23 11:51:23 nia Exp $
+@comment $NetBSD: PLIST,v 1.25 2019/04/23 18:47:17 nia Exp $
 lib/erlang/man/man1/cdv.1
 lib/erlang/man/man1/ct_run.1
 lib/erlang/man/man1/diameterc.1
@@ -345,6 +345,7 @@ lib/erlang/man/man3/wxDatePickerCtrl.3
 lib/erlang/man/man3/wxDialog.3
 lib/erlang/man/man3/wxDirDialog.3
 lib/erlang/man/man3/wxDirPickerCtrl.3
+lib/erlang/man/man3/wxDisplay.3
 lib/erlang/man/man3/wxDisplayChangedEvent.3
 lib/erlang/man/man3/wxDropFilesEvent.3
 lib/erlang/man/man3/wxEraseEvent.3
@@ -365,6 +366,7 @@ lib/erlang/man/man3/wxFontPickerCtrl.3
 lib/erlang/man/man3/wxFontPickerEvent.3
 lib/erlang/man/man3/wxFrame.3
 lib/erlang/man/man3/wxGBSizerItem.3
+lib/erlang/man/man3/wxGCDC.3
 lib/erlang/man/man3/wxGLCanvas.3
 lib/erlang/man/man3/wxGauge.3
 lib/erlang/man/man3/wxGenericDirCtrl.3
