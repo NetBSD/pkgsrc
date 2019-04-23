@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.19 2014/06/04 00:21:33 dsainty Exp $
+$NetBSD: patch-hints_linux.sh,v 1.1 2019/04/23 09:27:46 adam Exp $
 
 We intentionally wire down the 'libswanted' list in the package Makefile,
 so don't let the hints file add new libraries that may be found outside
