@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2019/03/18 16:17:49 gdt Exp $
+# $NetBSD: Makefile,v 1.58 2019/04/23 20:16:40 rhialto Exp $
 
-DISTNAME=		dvdauthor-0.7.1
+DISTNAME=		dvdauthor-0.7.2
 PKGREVISION=		18
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dvdauthor/}
@@ -23,7 +23,7 @@ SUBST_FILES.freetype=	configure
 SUBST_MESSAGE.freetype=	Dont use obsolete freetype-config
 SUBST_SED.freetype=	-e "s,freetype-config,pkg-config freetype2,"
 
-.include "../../graphics/ImageMagick/buildlink3.mk"
+.include "../../graphics/ImageMagick6/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
