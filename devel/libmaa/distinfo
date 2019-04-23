@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2019/02/15 19:34:14 cheusov Exp $
+$NetBSD: distinfo,v 1.12 2019/04/23 19:02:48 cheusov Exp $
 
-SHA1 (libmaa-1.4.3.tar.gz) = 184e354002615996c54ba258daaedc237f128297
-RMD160 (libmaa-1.4.3.tar.gz) = e1dad7ad12e560a56e71413422de6d69d6ac71bf
-SHA512 (libmaa-1.4.3.tar.gz) = 3c744f7f56b2bddc731ba6f5d0b942a1d9bfcb35101b409650e1dbccaeb88bf61b74eb595216f0ba1b181c6cdbf852cd73e99271a5659e75d97c3611de951161
-Size (libmaa-1.4.3.tar.gz) = 173000 bytes
+SHA1 (libmaa-1.4.4.tar.gz) = a2bf2389435c40b1f2fd5ab8e0e8498d82fa4346
+RMD160 (libmaa-1.4.4.tar.gz) = 4e119b3c4de909bd6b851865d8002513910f2c05
+SHA512 (libmaa-1.4.4.tar.gz) = 9768cc1a6125849af2ddcbc6c1c66696aac211e898737f514e969886c4800fdfa0235c404de5702706cdab5aee871fcbb92dbc36d401a9e5ab96d559a51fce11
+Size (libmaa-1.4.4.tar.gz) = 172643 bytes
