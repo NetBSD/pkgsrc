@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1779 2019/04/23 09:52:57 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1780 2019/04/23 11:51:43 fox Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2810,3 +2810,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/libdrm to 2.4.98 [wiz 2019-04-23]
 	Updated devel/py-setuptools to 41.0.1 [adam 2019-04-23]
 	Updated www/py-urllib3 to 1.25 [adam 2019-04-23]
+	Updated audio/fasttracker2 to 2.150 [fox 2019-04-23]
