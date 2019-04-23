@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.15 2015/11/03 23:54:23 agc Exp $
+$NetBSD: distinfo,v 1.16 2019/04/23 20:16:40 rhialto Exp $
 
-SHA1 (dvdauthor-0.7.1.tar.gz) = a9636d165bf546e3e2b25b7397c33dbfa2895e6a
-RMD160 (dvdauthor-0.7.1.tar.gz) = 71bdee2048a45ea15b7d0e62e75675f9132006ca
-SHA512 (dvdauthor-0.7.1.tar.gz) = 0875300df4711bf5758cb8a3ec03793689abd403cdebfc5736463d9b6df49a22e66e9e1f0c2abfcb7d25469c2e7f7e76789f7779cc0743ec972f8965b0f744a9
-Size (dvdauthor-0.7.1.tar.gz) = 421324 bytes
+SHA1 (dvdauthor-0.7.2.tar.gz) = 0e605642140576bfb3e963414d77630d1c073a51
+RMD160 (dvdauthor-0.7.2.tar.gz) = 8e97697cb81d4c3b454961221c8c1aab4ddc7f59
+SHA512 (dvdauthor-0.7.2.tar.gz) = 202b8bba38939d122dc864921a57e89906ca99ddabf44e3b07419cc42cc052567cd892b41f1171c9c195c9a770758e9319a942ea64d14ee8fa847588c7761125
+Size (dvdauthor-0.7.2.tar.gz) = 648305 bytes
 SHA1 (patch-configure) = 410993b755cdcd1989b12b6c31b99f64ee7472e0
-SHA1 (patch-src_dvdvml.c) = c55df13aa2c21601972480a67f29b90c336187b0
