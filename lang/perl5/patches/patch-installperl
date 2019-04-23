@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.21 2017/07/07 05:54:24 wiz Exp $
+$NetBSD: patch-installperl,v 1.1 2019/04/23 09:27:46 adam Exp $
 
 --- installperl.orig	2014-05-26 13:34:20.000000000 +0000
 +++ installperl
