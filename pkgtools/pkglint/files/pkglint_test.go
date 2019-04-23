@@ -561,10 +561,21 @@ func (s *Suite) Test_CheckLinesMessage__autofix(c *check.C) {
 func (s *Suite) Test_CheckLinesMessage__common(c *check.C) {
 	t := s.Init(c)
 
-	// FIXME: If there is a MESSAGE.common, it is combined with MESSAGE.
-	//  See meta-pkgs/ruby-redmine-plugins for an example.
+	hline := strings.Repeat("=", 75)
+	t.SetUpPackage("category/package",
+		"MESSAGE_SRC=\t../../category/package/MESSAGE.common",
+		"MESSAGE_SRC+=\t${.CURDIR}/MESSAGE")
+	t.CreateFileLines("category/package/MESSAGE.common",
+		hline,
+		RcsID,
+		"common line")
+	t.CreateFileLines("category/package/MESSAGE",
+		hline)
 
-	t.CheckOutputEmpty()
+	t.Main("category/package")
+
+	t.CheckOutputLines(
+		"Looks fine.")
 }
 
 // Demonstrates that an ALTERNATIVES file can be tested individually,
@@ -697,7 +708,7 @@ func (s *Suite) Test_Pkglint_Tool__lookup_by_varname_fallback(c *check.C) {
 	t := s.Init(c)
 
 	mklines := t.NewMkLines("Makefile", MkRcsID)
-	G.Pkgsrc.Tools.def("tool", "TOOL", false, Nowhere)
+	G.Pkgsrc.Tools.def("tool", "TOOL", false, Nowhere, nil)
 
 	loadTimeTool, loadTimeUsable := G.Tool(mklines, "${TOOL}", LoadTime)
 	runTimeTool, runTimeUsable := G.Tool(mklines, "${TOOL}", RunTime)
@@ -713,7 +724,7 @@ func (s *Suite) Test_Pkglint_Tool__lookup_by_varname_fallback_runtime(c *check.C
 	t := s.Init(c)
 
 	mklines := t.NewMkLines("Makefile", MkRcsID)
-	G.Pkgsrc.Tools.def("tool", "TOOL", false, AtRunTime)
+	G.Pkgsrc.Tools.def("tool", "TOOL", false, AtRunTime, nil)
 
 	loadTimeTool, loadTimeUsable := G.Tool(mklines, "${TOOL}", LoadTime)
 	runTimeTool, runTimeUsable := G.Tool(mklines, "${TOOL}", RunTime)
@@ -742,7 +753,7 @@ func (s *Suite) Test_Pkglint_ToolByVarname(c *check.C) {
 	t := s.Init(c)
 
 	mklines := t.NewMkLines("Makefile", MkRcsID)
-	G.Pkgsrc.Tools.def("tool", "TOOL", false, AtRunTime)
+	G.Pkgsrc.Tools.def("tool", "TOOL", false, AtRunTime, nil)
 
 	c.Check(G.ToolByVarname(mklines, "TOOL").String(), equals, "tool:TOOL::AtRunTime")
 }
@@ -955,7 +966,7 @@ func (s *Suite) Test_Pkglint_checkdirPackage(c *check.C) {
 
 	t.CheckOutputLines(
 		"WARN: Makefile: Neither PLIST nor PLIST.common exist, and PLIST_SRC is unset.",
-		"WARN: distinfo: File not found. Please run \""+confMake+" makesum\" or define NO_CHECKSUM=yes in the package Makefile.",
+		"WARN: distinfo: A package that downloads files should have a distinfo file.",
 		"ERROR: Makefile: Each package must define its LICENSE.",
 		"WARN: Makefile: Each package should define a COMMENT.")
 }
@@ -1006,13 +1017,9 @@ func (s *Suite) Test_Pkglint_checkdirPackage__patch_without_distinfo(c *check.C)
 
 	G.Check(pkg)
 
-	// FIXME: One of the below warnings is redundant.
 	t.CheckOutputLines(
-		"WARN: ~/category/package/distinfo: File not found. "+
-			"Please run \""+confMake+" makesum\" "+
-			"or define NO_CHECKSUM=yes in the package Makefile.",
-		"WARN: ~/category/package/distinfo: File not found. "+
-			"Please run \""+confMake+" makepatchsum\".")
+		"WARN: ~/category/package/distinfo: A package that downloads files should have a distinfo file.",
+		"WARN: ~/category/package/distinfo: A package with patches should have a distinfo file.")
 }
 
 func (s *Suite) Test_Pkglint_checkdirPackage__meta_package_without_license(c *check.C) {
@@ -1086,9 +1093,7 @@ func (s *Suite) Test_Pkglint_checkdirPackage__nonexistent_DISTINFO_FILE(c *check
 	G.Check(t.File("category/package"))
 
 	t.CheckOutputLines(
-		"WARN: ~/category/package/nonexistent: File not found. "+
-			"Please run \""+bmake("makesum")+"\" "+
-			"or define NO_CHECKSUM=yes in the package Makefile.",
+		"WARN: ~/category/package/nonexistent: A package that downloads files should have a distinfo file.",
 		"ERROR: ~/category/package/Makefile:20: Relative path \"nonexistent\" does not exist.")
 }
 

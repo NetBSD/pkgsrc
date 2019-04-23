@@ -187,7 +187,7 @@ func (t *Tester) SetUpOption(name, description string) {
 }
 
 func (t *Tester) SetUpTool(name, varname string, validity Validity) *Tool {
-	return G.Pkgsrc.Tools.def(name, varname, false, validity)
+	return G.Pkgsrc.Tools.def(name, varname, false, validity, nil)
 }
 
 // SetUpFileLines creates a temporary file and writes the given lines to it.
@@ -646,6 +646,9 @@ func (t *Tester) FinishSetUp() {
 }
 
 // Main runs the pkglint main program with the given command line arguments.
+//
+// Arguments that name existing files or directories in the temporary test
+// directory are transformed to their actual paths.
 func (t *Tester) Main(args ...string) int {
 	if t.seenFinish && !t.seenMain {
 		t.Errorf("Calling t.FinishSetup() before t.Main() is redundant " +
@@ -659,7 +662,17 @@ func (t *Tester) Main(args ...string) int {
 	G.warnings = 0
 	G.logged = Once{}
 
-	argv := append([]string{"pkglint"}, args...)
+	argv := []string{"pkglint"}
+	for _, arg := range args {
+		fileArg := t.File(arg)
+		_, err := os.Lstat(fileArg)
+		if err == nil {
+			argv = append(argv, fileArg)
+		} else {
+			argv = append(argv, arg)
+		}
+	}
+
 	return G.Main(argv...)
 }
 

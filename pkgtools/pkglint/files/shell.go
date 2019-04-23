@@ -51,8 +51,7 @@ func (ck *ShellLineChecker) CheckWord(token string, checkQuoting bool, time Tool
 
 	// Delegate check for shell words consisting of a single variable use
 	// to the MkLineChecker. Examples for these are ${VAR:Mpattern} or $@.
-	p := NewMkParser(nil, token, false)
-	if varuse := p.VarUse(); varuse != nil && p.EOF() {
+	if varuse := ToVarUse(token); varuse != nil {
 		if ck.checkVarUse {
 			MkLineChecker{ck.MkLines, ck.mkline}.CheckVaruse(varuse, shellWordVuc)
 		}
@@ -541,8 +540,7 @@ func (scc *SimpleCommandChecker) handleCommandVariable() bool {
 	}
 
 	shellword := scc.strcmd.Name
-	parser := NewMkParser(nil, shellword, false)
-	if varuse := parser.VarUse(); varuse != nil && parser.EOF() {
+	if varuse := ToVarUse(shellword); varuse != nil {
 		varname := varuse.varname
 
 		if vartype := G.Pkgsrc.VariableType(scc.MkLines, varname); vartype != nil && vartype.basicType.name == "ShellCommand" {

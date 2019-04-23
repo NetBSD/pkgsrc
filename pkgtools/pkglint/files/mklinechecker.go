@@ -114,10 +114,12 @@ func (ck MkLineChecker) checkInclude() {
 		mkline.Warnf("Please write \"USE_TOOLS+= intltool\" instead of this line.")
 
 	case hasSuffix(includedFile, "/builtin.mk"):
-		fix := mkline.Autofix()
-		fix.Errorf("%s must not be included directly. Include \"%s/buildlink3.mk\" instead.", includedFile, path.Dir(includedFile))
-		fix.Replace("builtin.mk", "buildlink3.mk")
-		fix.Apply()
+		if mkline.Basename != "hacks.mk" {
+			fix := mkline.Autofix()
+			fix.Errorf("%s must not be included directly. Include \"%s/buildlink3.mk\" instead.", includedFile, path.Dir(includedFile))
+			fix.Replace("builtin.mk", "buildlink3.mk")
+			fix.Apply()
+		}
 	}
 }
 
@@ -289,7 +291,13 @@ func (ck MkLineChecker) checkDependencyRule(allowedTargets map[string]bool) {
 //
 // See checkVarusePermissions.
 func (ck MkLineChecker) checkVarassignLeftPermissions() {
-	if !G.Opts.WarnPerm || G.Infrastructure {
+	if !G.Opts.WarnPerm {
+		return
+	}
+	if G.Infrastructure {
+		// As long as vardefs.go doesn't explicitly define permissions for
+		// infrastructure files, skip the check completely. This avoids
+		// many wrong warnings.
 		return
 	}
 	if trace.Tracing {
@@ -297,6 +305,10 @@ func (ck MkLineChecker) checkVarassignLeftPermissions() {
 	}
 
 	mkline := ck.MkLine
+	if ck.MkLine.Basename == "hacks.mk" {
+		return
+	}
+
 	varname := mkline.Varname()
 	op := mkline.Op()
 	vartype := G.Pkgsrc.VariableType(ck.MkLines, varname)
@@ -539,6 +551,12 @@ func (ck MkLineChecker) checkVarusePermissions(varname string, vartype *Vartype,
 	if !G.Opts.WarnPerm {
 		return
 	}
+	if G.Infrastructure {
+		// As long as vardefs.go doesn't explicitly define permissions for
+		// infrastructure files, skip the check completely. This avoids
+		// many wrong warnings.
+		return
+	}
 	if trace.Tracing {
 		defer trace.Call(varname, vuc)()
 	}
@@ -555,6 +573,10 @@ func (ck MkLineChecker) checkVarusePermissions(varname string, vartype *Vartype,
 	}
 
 	mkline := ck.MkLine
+	if mkline.Basename == "hacks.mk" {
+		return
+	}
+
 	effPerms := vartype.EffectivePermissions(mkline.Basename)
 	if effPerms.Contains(aclpUseLoadtime) {
 		// Skip any checks, assuming that if a variable may be used at
@@ -1313,53 +1335,52 @@ func (ck MkLineChecker) checkDirectiveCond() {
 		return
 	}
 
-	checkCompareVarStr := func(varuse *MkVarUse, op string, str string) {
-		varname := varuse.varname
-		varmods := varuse.modifiers
-		switch len(varmods) {
-		case 0:
-			ck.checkCompareVarStr(varname, op, str)
-
-		case 1:
-			if m, _, pattern := varmods[0].MatchMatch(); m {
-				ck.checkVartype(varname, opUseMatch, pattern, "")
-
-				// After applying the :M or :N modifier, every expression may end up empty,
-				// regardless of its data type. Therefore there's no point in type-checking that case.
-				if str != "" {
-					ck.checkVartype(varname, opUseCompare, str, "")
-				}
-			}
-
-		default:
-			// This case covers ${VAR:Mfilter:O:u} or similar uses in conditions.
-			// To check these properly, pkglint first needs to know the most common
-			// modifiers and how they interact.
-			// As of March 2019, the modifiers are not modeled.
-			// The following tracing statement makes it easy to discover these cases,
-			// in order to decide whether checking them is worthwhile.
-			if trace.Tracing {
-				trace.Stepf("checkCompareVarStr ${%s%s} %s %s",
-					varuse.varname, varuse.Mod(), op, str)
-			}
-		}
-	}
-
 	checkVarUse := func(varuse *MkVarUse) {
 		var vartype *Vartype // TODO: Insert a better type guess here.
 		vuc := VarUseContext{vartype, vucTimeParse, VucQuotPlain, false}
 		ck.CheckVaruse(varuse, &vuc)
 	}
 
+	// Skip subconditions that have already been handled as part of the !(...).
+	done := make(map[interface{}]bool)
+
+	checkNotEmpty := func(not MkCond) {
+		empty := not.Empty
+		if empty != nil {
+			ck.checkDirectiveCondEmpty(empty, true, true, not == cond.Not)
+			done[empty] = true
+		}
+
+		varUse := not.Var
+		if varUse != nil {
+			ck.checkDirectiveCondEmpty(varUse, false, false, not == cond.Not)
+			done[varUse] = true
+		}
+	}
+
+	checkEmpty := func(empty *MkVarUse) {
+		if !done[empty] {
+			ck.checkDirectiveCondEmpty(empty, true, false, empty == cond.Empty)
+		}
+	}
+
+	checkVar := func(varUse *MkVarUse) {
+		if !done[varUse] {
+			ck.checkDirectiveCondEmpty(varUse, false, true, varUse == cond.Var)
+		}
+	}
+
 	cond.Walk(&MkCondCallback{
-		Empty:         ck.checkDirectiveCondEmpty,
-		Var:           ck.checkDirectiveCondEmpty,
-		CompareVarStr: checkCompareVarStr,
+		Not:           checkNotEmpty,
+		Empty:         checkEmpty,
+		Var:           checkVar,
+		CompareVarStr: ck.checkDirectiveCondCompareVarStr,
 		VarUse:        checkVarUse})
 }
 
-// checkDirectiveCondEmpty checks a condition of the form empty(...) in an .if directive.
-func (ck MkLineChecker) checkDirectiveCondEmpty(varuse *MkVarUse) {
+// checkDirectiveCondEmpty checks a condition of the form empty(VAR),
+// empty(VAR:Mpattern) or ${VAR:Mpattern} in an .if directive.
+func (ck MkLineChecker) checkDirectiveCondEmpty(varuse *MkVarUse, fromEmpty bool, notEmpty bool, toplevel bool) {
 	varname := varuse.varname
 	if matches(varname, `^\$.*:[MN]`) {
 		ck.MkLine.Warnf("The empty() function takes a variable name as parameter, not a variable expression.")
@@ -1375,26 +1396,75 @@ func (ck MkLineChecker) checkDirectiveCondEmpty(varuse *MkVarUse) {
 			"\t${VARNAME:Mpattern}")
 	}
 
+	ck.simplifyCondition(varuse, fromEmpty, notEmpty, toplevel)
+}
+
+// simplifyCondition replaces an unnecessarily complex condition with
+// a simpler condition that's still equivalent.
+//
+// * fromEmpty is true for the form empty(VAR...), and false for ${VAR...}.
+//
+// * notEmpty is true for the form !empty(VAR...), and false for empty(VAR...).
+// It also applies to the ${VAR} form.
+//
+// * toplevel is true for ${VAR...} and false for ${VAR...} && ${VAR2...}.
+func (ck MkLineChecker) simplifyCondition(varuse *MkVarUse, fromEmpty bool, notEmpty bool, toplevel bool) {
+
+	// replace constructs the state before and after the autofix.
+	// The before state is constructed to ensure that only very simple
+	// patterns get replaced automatically.
+	//
+	// Before putting any cases involving special characters into
+	// production, there need to be more tests for the edge cases.
+	replace := func(varname string, m bool, pattern string) (string, string) {
+		op := ifelseStr(notEmpty == m, "==", "!=")
+
+		from := "" +
+			ifelseStr(notEmpty != fromEmpty, "", "!") +
+			ifelseStr(fromEmpty, "empty(", "${") +
+			varname +
+			ifelseStr(m, ":M", ":N") +
+			pattern +
+			ifelseStr(fromEmpty, ")", "}")
+
+		to := "${" + varname + "} " + op + " " + pattern
+
+		// TODO: Check in more cases whether the parentheses are really necessary.
+		//  In a !!${VAR} expression, parentheses are necessary.
+		needParen := !toplevel
+		if needParen {
+			to = "(" + to + ")"
+		}
+
+		return from, to
+	}
+
+	varname := varuse.varname
 	modifiers := varuse.modifiers
+
 	for _, modifier := range modifiers {
 		if m, positive, pattern := modifier.MatchMatch(); m && (positive || len(modifiers) == 1) {
 			ck.checkVartype(varname, opUseMatch, pattern, "")
 
 			vartype := G.Pkgsrc.VariableType(ck.MkLines, varname)
 			if matches(pattern, `^[\w-/]+$`) && vartype != nil && !vartype.List() {
-				ck.MkLine.Notef("%s should be compared using %s instead of matching against %q.",
-					varname, ifelseStr(positive, "==", "!="), ":"+modifier.Text)
-				ck.MkLine.Explain(
+
+				fix := ck.MkLine.Autofix()
+				fix.Notef("%s should be compared using %s instead of matching against %q.",
+					varname, ifelseStr(positive == notEmpty, "==", "!="), ":"+modifier.Text)
+				fix.Explain(
 					"This variable has a single value, not a list of values.",
 					"Therefore it feels strange to apply list operators like :M and :N onto it.",
 					"A more direct approach is to use the == and != operators.",
 					"",
 					"An entirely different case is when the pattern contains wildcards like ^, *, $.",
 					"In such a case, using the :M or :N modifiers is useful and preferred.")
+				fix.Replace(replace(varname, positive, pattern))
+				fix.Anyway()
+				fix.Apply()
 			}
 		}
 	}
-
 }
 
 func (ck MkLineChecker) checkCompareVarStr(varname, op, value string) {
@@ -1405,6 +1475,38 @@ func (ck MkLineChecker) checkCompareVarStr(varname, op, value string) {
 		ck.MkLine.Explain(
 			"The PKGSRC_COMPILER can be a list of chained compilers, e.g. \"ccache distcc clang\".",
 			"Therefore, comparing it using == or != leads to wrong results in these cases.")
+	}
+}
+
+func (ck MkLineChecker) checkDirectiveCondCompareVarStr(varuse *MkVarUse, op string, str string) {
+	varname := varuse.varname
+	varmods := varuse.modifiers
+	switch len(varmods) {
+	case 0:
+		ck.checkCompareVarStr(varname, op, str)
+
+	case 1:
+		if m, _, pattern := varmods[0].MatchMatch(); m {
+			ck.checkVartype(varname, opUseMatch, pattern, "")
+
+			// After applying the :M or :N modifier, every expression may end up empty,
+			// regardless of its data type. Therefore there's no point in type-checking that case.
+			if str != "" {
+				ck.checkVartype(varname, opUseCompare, str, "")
+			}
+		}
+
+	default:
+		// This case covers ${VAR:Mfilter:O:u} or similar uses in conditions.
+		// To check these properly, pkglint first needs to know the most common
+		// modifiers and how they interact.
+		// As of March 2019, the modifiers are not modeled.
+		// The following tracing statement makes it easy to discover these cases,
+		// in order to decide whether checking them is worthwhile.
+		if trace.Tracing {
+			trace.Stepf("checkCompareVarStr ${%s%s} %s %s",
+				varuse.varname, varuse.Mod(), op, str)
+		}
 	}
 }
 
@@ -1468,17 +1570,25 @@ func (ck MkLineChecker) CheckRelativePath(relativePath string, mustExist bool) {
 	}
 
 	switch {
-	case !hasPrefix(relativePath, "../"):
+	case !hasPrefix(resolvedPath, "../"):
 		break
-	case hasPrefix(relativePath, "../../mk/"):
+
+	case hasPrefix(resolvedPath, "../../mk/"):
 		// From a package to the infrastructure.
-	case matches(relativePath, `^\.\./\.\./[^/]+/[^/]`):
+
+	case matches(resolvedPath, `^\.\./\.\./[^./][^/]*/[^/]`):
 		// From a package to another package.
-	case hasPrefix(relativePath, "../mk/") && relpath(path.Dir(mkline.Filename), G.Pkgsrc.File(".")) == "..":
+
+	case hasPrefix(resolvedPath, "../mk/") && relpath(path.Dir(mkline.Filename), G.Pkgsrc.File(".")) == "..":
 		// For category Makefiles.
 		// TODO: Or from a pkgsrc wip package to wip/mk.
-	default:
-		mkline.Warnf("Invalid relative path %q.", relativePath)
-		// TODO: Explain this warning.
+
+	case matches(resolvedPath, `^\.\./[^./][^/]*/[^/]`):
+		if G.Wip && contains(resolvedPath, "/mk/") {
+			mkline.Warnf("References to the pkgsrc-wip infrastructure should look like \"../../wip/mk\", not \"../mk\".")
+		} else {
+			mkline.Warnf("References to other packages should look like \"../../category/package\", not \"../package\".")
+		}
+		mkline.ExplainRelativeDirs()
 	}
 }

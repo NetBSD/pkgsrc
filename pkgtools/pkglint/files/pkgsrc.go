@@ -300,13 +300,13 @@ func (src *Pkgsrc) loadTools() {
 		{"true", "TRUE", AfterPrefsMk}}
 
 	for _, toolDef := range toolDefs {
-		tools.def(toolDef.Name, toolDef.Varname, true, toolDef.Validity)
+		tools.def(toolDef.Name, toolDef.Varname, true, toolDef.Validity, nil)
 	}
 
 	for _, basename := range toolFiles {
 		mklines := src.LoadMk("mk/tools/"+basename, MustSucceed|NotEmpty)
 		mklines.ForEach(func(mkline MkLine) {
-			tools.ParseToolLine(mkline, true, !mklines.indentation.IsConditional())
+			tools.ParseToolLine(mklines, mkline, true, !mklines.indentation.IsConditional())
 		})
 	}
 
@@ -318,7 +318,7 @@ func (src *Pkgsrc) loadTools() {
 				varname := mkline.Varname()
 				switch varname {
 				case "USE_TOOLS":
-					tools.ParseToolLine(mkline, true, !mklines.indentation.IsConditional())
+					tools.ParseToolLine(mklines, mkline, true, !mklines.indentation.IsConditional())
 
 				case "_BUILD_DEFS":
 					// TODO: Compare with src.loadDefaultBuildDefs; is it redundant?
