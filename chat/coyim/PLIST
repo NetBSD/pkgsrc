@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2019/04/24 23:43:22 fox Exp $
+bin/coyim
+share/applications/coyim.desktop
+share/pixmaps/coyim.png
