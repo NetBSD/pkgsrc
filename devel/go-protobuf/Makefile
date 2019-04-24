@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/04/16 18:41:11 bsiegert Exp $
+# $NetBSD: Makefile,v 1.20 2019/04/24 22:59:17 maya Exp $
 
 DISTNAME=		go-protobuf-1.3.1
 PKGREVISION=		2
@@ -19,8 +19,6 @@ GO_BUILD_PATTERN+=	${GO_SRCPATH}/${godir}/...
 .endfor
 
 REPLACE_SH+=		regenerate.sh
-
-CHECK_RELRO_SKIP+=	bin/protoc-gen-go
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
