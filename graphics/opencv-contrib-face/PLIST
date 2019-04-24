@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.5 2018/03/02 16:26:21 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/04/24 19:34:45 adam Exp $
 include/opencv2/face.hpp
 include/opencv2/face/bif.hpp
 include/opencv2/face/face_alignment.hpp
 include/opencv2/face/facemark.hpp
 include/opencv2/face/facemarkAAM.hpp
 include/opencv2/face/facemarkLBF.hpp
+include/opencv2/face/facemark_train.hpp
 include/opencv2/face/facerec.hpp
+include/opencv2/face/mace.hpp
 include/opencv2/face/predict_collector.hpp
 include/opencv2/plot.hpp
 include/opencv2/tracking.hpp
@@ -17,11 +19,11 @@ include/opencv2/tracking/tldDataset.hpp
 include/opencv2/tracking/tracker.hpp
 include/opencv2/tracking/tracking.hpp
 lib/libopencv_face.so
-lib/libopencv_face.so.3.4
 lib/libopencv_face.so.${PKGVERSION}
+lib/libopencv_face.so.3.4
 lib/libopencv_plot.so
-lib/libopencv_plot.so.3.4
 lib/libopencv_plot.so.${PKGVERSION}
+lib/libopencv_plot.so.3.4
 lib/libopencv_tracking.so
-lib/libopencv_tracking.so.3.4
 lib/libopencv_tracking.so.${PKGVERSION}
+lib/libopencv_tracking.so.3.4
