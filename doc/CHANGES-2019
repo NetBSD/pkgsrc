@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1795 2019/04/24 15:09:17 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1796 2019/04/24 15:16:38 kre Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2831,3 +2831,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-test-mock to 1.10.4 [adam 2019-04-24]
 	Updated lang/py-uncompyle6 to 3.3.1 [adam 2019-04-24]
 	Updated multimedia/py-m3u8 to 0.3.8 [adam 2019-04-24]
+	Updated shells/bash to 5.0.7 [kre 2019-04024]
