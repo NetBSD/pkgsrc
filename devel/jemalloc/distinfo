@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.12 2019/03/22 16:30:02 rin Exp $
+$NetBSD: distinfo,v 1.13 2019/04/24 17:10:59 adam Exp $
 
-SHA1 (jemalloc-5.1.0.tar.bz2) = 92fdc0b38680aaee1fa7ccd89cbf1af61224ff46
-RMD160 (jemalloc-5.1.0.tar.bz2) = 52b1340ca8cafd7414aa5e3a7a028cb1feba0b80
-SHA512 (jemalloc-5.1.0.tar.bz2) = d9abebe54d303ca931b8c31c1033f23ff5fb060f2377ec8386f4d79c352e65c78ed34f680c352dac14f7d7115d10245782d553d988bc13df2eb34a2f0942ef6f
-Size (jemalloc-5.1.0.tar.bz2) = 515622 bytes
+SHA1 (jemalloc-5.2.0.tar.bz2) = 5a5255f7bca3e79a063f26f292cf93f17fe3b14f
+RMD160 (jemalloc-5.2.0.tar.bz2) = a805e8c2ad3e7a2f7960bc1407baeaca797bd77e
+SHA512 (jemalloc-5.2.0.tar.bz2) = e3be4d534770126caf10f2684aed9fe4ba1422dd47625fe50343cfb750f26eff869fcc7d1e30a96dd6c73f6614c4bbcd560fd24fc26b55ac731c43e60fd05234
+Size (jemalloc-5.2.0.tar.bz2) = 543892 bytes
 SHA1 (patch-Makefile.in) = 62e04375dec9aab678fed5bc32559deb942e799f
 SHA1 (patch-configure) = 5dec3fb5b2ece549e40743780db3057dd83cc17e
-SHA1 (patch-include_jemalloc_internal_jemalloc_internal_types.h) = 07f2d661d8141152fc7c80f24f9dab4be90cb4b3
+SHA1 (patch-include_jemalloc_internal_quantum.h) = e291b59958813fc1af28bea0a5a63d5715090a48
 SHA1 (patch-src_pages.c) = 57d5f743efc8d9a5c5e2619b0acde08b3404659c
