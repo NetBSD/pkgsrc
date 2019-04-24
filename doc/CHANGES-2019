@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1798 2019/04/24 16:06:18 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1799 2019/04/24 17:11:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2831,8 +2831,9 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-test-mock to 1.10.4 [adam 2019-04-24]
 	Updated lang/py-uncompyle6 to 3.3.1 [adam 2019-04-24]
 	Updated multimedia/py-m3u8 to 0.3.8 [adam 2019-04-24]
-	Updated shells/bash to 5.0.7 [kre 2019-04024]
+	Updated shells/bash to 5.0.7 [kre 2019-04-24]
 	Added textproc/py-pallets-sphinx-themes version 1.1.4 [adam 2019-04-24]
 	Added textproc/py-sphinx-issues version 1.2.0 [adam 2019-04-24]
 	Updated www/py-werkzeug to 0.15.2 [adam 2019-04-24]
 	Updated www/py-werkzeug-docs to 0.15.2 [adam 2019-04-24]
+	Updated devel/jemalloc to 5.2.0 [adam 2019-04-24]
