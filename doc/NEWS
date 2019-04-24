@@ -1,4 +1,4 @@
-# $NetBSD: NEWS,v 1.11 2014/06/21 16:01:17 alnsn Exp $
+# $NetBSD: NEWS,v 1.12 2019/04/24 13:19:31 maya Exp $
 
 PKGSRC NEWS
 ===========
@@ -6,6 +6,12 @@ PKGSRC NEWS
   This file contains information about important infrastructural changes in
   pkgsrc. The intended readers are the pkgsrc developers as well as anyone
   tracking pkgsrc-current.
+
+python 3.7 default [maya 2019-04-24]
+	As Python 2.x versions are nearing end of life, we have switched
+	the default to a newer version.
+	Python 2.7 packages are still available, and most python packages
+	are built for all available python versions.
 
 Lua multiversion support [alnsn 2014-05-03]
 	Lua packages lang/lua51 and lang/lua52 have been modified
