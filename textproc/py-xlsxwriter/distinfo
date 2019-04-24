@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.25 2019/04/07 16:00:09 adam Exp $
+$NetBSD: distinfo,v 1.26 2019/04/24 10:11:28 adam Exp $
 
-SHA1 (XlsxWriter-1.1.6.tar.gz) = 7579f6798472f2ab8a8582d5bfff4e10ccbfb0e9
-RMD160 (XlsxWriter-1.1.6.tar.gz) = 8ed21c1fc200a258b387674ec6baa0b948a641e6
-SHA512 (XlsxWriter-1.1.6.tar.gz) = 61e4ea71073447592de38959cceaba155b42990256e040df9a31017dd5a764d4d4e11e6146678b20c26bee02e9dcb2951eed8fd07f22c6a53e44293cb540aa0a
-Size (XlsxWriter-1.1.6.tar.gz) = 253364 bytes
+SHA1 (XlsxWriter-1.1.7.tar.gz) = 00727e0ebae1739f295c2fe561e5e531d05823cc
+RMD160 (XlsxWriter-1.1.7.tar.gz) = 261999968dbc515ab4953b74cc3d8c2f76160493
+SHA512 (XlsxWriter-1.1.7.tar.gz) = 8a91bedd85c20b5f3f1d8b6f8cd66fcb5762e2bbf92813a365ecd1414635ae6d4213a48159ec5241e716f9ba640996f73530d1f004876ae552fef03759719b68
+Size (XlsxWriter-1.1.7.tar.gz) = 253732 bytes
