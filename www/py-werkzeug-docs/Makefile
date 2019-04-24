@@ -1,10 +1,15 @@
-# $NetBSD: Makefile,v 1.9 2017/05/31 08:24:38 adam Exp $
+# $NetBSD: Makefile,v 1.10 2019/04/24 16:05:43 adam Exp $
 
 PKGNAME=	${PYPKGPREFIX}-werkzeug-docs-${DISTNAME:C/[^-]*-//}
 COMMENT=	Python WSGI Utility Library (HTML documentation)
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-pallets-sphinx-themes-[0-9]*:../../textproc/py-pallets-sphinx-themes
+BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-issues-[0-9]*:../../textproc/py-sphinx-issues
+
+USE_TOOLS+=	gmake
 NO_CONFIGURE=	yes
-BUILD_TARGET=	documentation
+BUILD_TARGET=	html
+BUILD_DIRS=	docs
 
 INSTALLATION_DIRS+=	${DOCDIR}/html
 
