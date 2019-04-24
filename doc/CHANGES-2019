@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1789 2019/04/24 08:19:21 leot Exp $
+$NetBSD: CHANGES-2019,v 1.1790 2019/04/24 09:28:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2820,3 +2820,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated multimedia/dvdauthor to 0.7.2nb18 [rhialto 2019-04-23]
 	Updated pkgtools/pkglint to 5.7.6 [rillig 2019-04-23]
 	Updated net/youtube-dl to 20190424 [leot 2019-04-24]
+	Updated devel/py-pip to 19.1 [adam 2019-04-24]
+	Updated devel/py-pbr to 5.1.3 [adam 2019-04-24]
