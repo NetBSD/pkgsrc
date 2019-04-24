@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.55 2018/12/12 16:26:58 adam Exp $
-${PLIST.ivshmem}bin/ivshmem-client
-${PLIST.ivshmem}bin/ivshmem-server
+@comment $NetBSD: PLIST,v 1.56 2019/04/24 13:59:32 ryoon Exp $
+bin/elf2dmp
 ${PLIST.alpha}bin/qemu-alpha
 ${PLIST.arm}bin/qemu-arm
 ${PLIST.armeb}bin/qemu-armeb
@@ -59,21 +58,18 @@ bin/qemu-system-xtensa
 bin/qemu-system-xtensaeb
 ${PLIST.unicore32}bin/qemu-unicore32
 ${PLIST.x86_64}bin/qemu-x86_64
-man/man1/qemu-img.1
-man/man1/qemu.1
-man/man7/qemu-block-drivers.7
-man/man7/qemu-cpu-models.7
-man/man7/qemu-ga-ref.7
-man/man7/qemu-qmp-ref.7
-man/man8/qemu-ga.8
-man/man8/qemu-nbd.8
+share/applications/qemu.desktop
 share/doc/qemu/Makefile.multinode-NetBSD
-share/doc/qemu/qemu-doc.html
-share/doc/qemu/qemu-doc.txt
-share/doc/qemu/qemu-ga-ref.html
-share/doc/qemu/qemu-ga-ref.txt
-share/doc/qemu/qemu-qmp-ref.html
-share/doc/qemu/qemu-qmp-ref.txt
+share/icons/hicolor/128x128/apps/qemu.png
+share/icons/hicolor/16x16/apps/qemu.png
+share/icons/hicolor/24x24/apps/qemu.png
+share/icons/hicolor/256x256/apps/qemu.png
+share/icons/hicolor/32x32/apps/qemu.bmp
+share/icons/hicolor/32x32/apps/qemu.png
+share/icons/hicolor/48x48/apps/qemu.png
+share/icons/hicolor/512x512/apps/qemu.png
+share/icons/hicolor/64x64/apps/qemu.png
+share/icons/hicolor/scalable/apps/qemu.svg
 ${PLIST.gtk}share/locale/bg/LC_MESSAGES/qemu.mo
 ${PLIST.gtk}share/locale/de_DE/LC_MESSAGES/qemu.mo
 ${PLIST.gtk}share/locale/fr_FR/LC_MESSAGES/qemu.mo
@@ -98,7 +94,6 @@ share/qemu/efi-vmxnet3.rom
 share/qemu/hppa-firmware.img
 share/qemu/keymaps/ar
 share/qemu/keymaps/bepo
-share/qemu/keymaps/common
 share/qemu/keymaps/cz
 share/qemu/keymaps/da
 share/qemu/keymaps/de
@@ -121,9 +116,7 @@ share/qemu/keymaps/ja
 share/qemu/keymaps/lt
 share/qemu/keymaps/lv
 share/qemu/keymaps/mk
-share/qemu/keymaps/modifiers
 share/qemu/keymaps/nl
-share/qemu/keymaps/nl-be
 share/qemu/keymaps/no
 share/qemu/keymaps/pl
 share/qemu/keymaps/pt
@@ -144,14 +137,13 @@ share/qemu/palcode-clipper
 share/qemu/petalogix-ml605.dtb
 share/qemu/petalogix-s3adsp1800.dtb
 share/qemu/ppc_rom.bin
+share/qemu/pvh.bin
 share/qemu/pxe-e1000.rom
 share/qemu/pxe-eepro100.rom
 share/qemu/pxe-ne2k_pci.rom
 share/qemu/pxe-pcnet.rom
 share/qemu/pxe-rtl8139.rom
 share/qemu/pxe-virtio.rom
-share/qemu/qemu-icon.bmp
-share/qemu/qemu_logo_no_text.svg
 share/qemu/qemu_vga.ndrv
 share/qemu/s390-ccw.img
 share/qemu/s390-netboot.img
