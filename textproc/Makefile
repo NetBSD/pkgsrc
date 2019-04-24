@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1030 2019/04/03 14:49:27 adam Exp $
+# $NetBSD: Makefile,v 1.1031 2019/04/24 15:52:31 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -819,6 +819,7 @@ SUBDIR+=	py-natsort
 SUBDIR+=	py-numpydoc
 SUBDIR+=	py-odfpy
 SUBDIR+=	py-openpyxl
+SUBDIR+=	py-pallets-sphinx-themes
 SUBDIR+=	py-pandocfilters
 SUBDIR+=	py-parse
 SUBDIR+=	py-parse_type
@@ -847,6 +848,7 @@ SUBDIR+=	py-smartypants
 SUBDIR+=	py-snowballstemmer
 SUBDIR+=	py-sphinx
 SUBDIR+=	py-sphinx-autodoc-typehints
+SUBDIR+=	py-sphinx-issues
 SUBDIR+=	py-sphinx-rtd-theme
 SUBDIR+=	py-sphinx-theme-cloud
 SUBDIR+=	py-sphinxcontrib-bibtex
