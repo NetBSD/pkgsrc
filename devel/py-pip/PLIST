@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2019/01/24 08:29:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2019/04/24 08:28:33 adam Exp $
 bin/pip${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -708,9 +708,6 @@ ${PYSITELIB}/pip/_vendor/progress/bar.pyo
 ${PYSITELIB}/pip/_vendor/progress/counter.py
 ${PYSITELIB}/pip/_vendor/progress/counter.pyc
 ${PYSITELIB}/pip/_vendor/progress/counter.pyo
-${PYSITELIB}/pip/_vendor/progress/helpers.py
-${PYSITELIB}/pip/_vendor/progress/helpers.pyc
-${PYSITELIB}/pip/_vendor/progress/helpers.pyo
 ${PYSITELIB}/pip/_vendor/progress/spinner.py
 ${PYSITELIB}/pip/_vendor/progress/spinner.pyc
 ${PYSITELIB}/pip/_vendor/progress/spinner.pyo
