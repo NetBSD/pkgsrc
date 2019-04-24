@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2019/02/21 08:32:21 adam Exp $
+# $NetBSD: Makefile,v 1.30 2019/04/24 08:28:33 adam Exp $
 
-DISTNAME=	pip-19.0.3
+DISTNAME=	pip-19.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pip/}
@@ -13,7 +13,6 @@ LICENSE=	mit
 USE_LANGUAGES=	# none
 
 REPLACE_PYTHON+=	src/pip/_vendor/appdirs.py
-REPLACE_PYTHON+=	src/pip/_vendor/certifi/core.py
 REPLACE_PYTHON+=	src/pip/_vendor/chardet/cli/chardetect.py
 REPLACE_PYTHON+=	src/pip/_vendor/requests/certs.py
 
