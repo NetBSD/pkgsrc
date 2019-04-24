@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1793 2019/04/24 13:27:02 he Exp $
+$NetBSD: CHANGES-2019,v 1.1794 2019/04/24 14:00:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2826,3 +2826,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/py-xlsxwriter to 1.1.7 [adam 2019-04-24]
 	Updated lang/newlisp to 10.7.1 [hauke 2019-04-24]
 	Updated graphics/libvideogfx to 1.0.3nb10 [he 2019-04-24]
+	Updated emulators/qemu to 4.0.0 [ryoon 2019-04-24]
