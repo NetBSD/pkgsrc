@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/07/07 14:25:31 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/04/24 13:09:45 hauke Exp $
 bin/newlisp
 bin/${PKGNAME}
 bin/newlisp-edit
@@ -51,7 +51,6 @@ share/${PKGNAME}/modules/cgi.lsp
 share/${PKGNAME}/modules/crypto.lsp
 share/${PKGNAME}/modules/ftp.lsp
 share/${PKGNAME}/modules/getopts.lsp
-share/${PKGNAME}/modules/gmp.lsp
 share/${PKGNAME}/modules/gsl.lsp
 share/${PKGNAME}/modules/infix.lsp
 share/${PKGNAME}/modules/mysql.lsp
