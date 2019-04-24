@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1794 2019/04/24 14:00:29 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.1795 2019/04/24 15:09:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2827,3 +2827,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/newlisp to 10.7.1 [hauke 2019-04-24]
 	Updated graphics/libvideogfx to 1.0.3nb10 [he 2019-04-24]
 	Updated emulators/qemu to 4.0.0 [ryoon 2019-04-24]
+	Updated security/py-certifi to 2019.3.9 [adam 2019-04-24]
+	Updated devel/py-test-mock to 1.10.4 [adam 2019-04-24]
+	Updated lang/py-uncompyle6 to 3.3.1 [adam 2019-04-24]
+	Updated multimedia/py-m3u8 to 0.3.8 [adam 2019-04-24]
