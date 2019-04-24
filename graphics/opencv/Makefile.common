@@ -1,0 +1,41 @@
+# $NetBSD: Makefile.common,v 1.1 2019/04/24 19:34:44 adam Exp $
+# used by graphics/opencv/Makefile
+# used by graphics/opencv-contrib-face/Makefile
+
+OPENCV_VERSION=	3.4.6
+
+CATEGORIES=	graphics devel
+MASTER_SITES=	${MASTER_SITE_GITHUB:=opencv/}
+
+HOMEPAGE=	https://opencv.org/
+LICENSE=	modified-bsd
+
+PATCHDIR=	${.CURDIR}/../../graphics/opencv/patches
+
+USE_CMAKE=		yes
+USE_LANGUAGES=		c c++11
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		gmake pkg-config
+
+CONFIGURE_DIRS+=	build
+CMAKE_ARG_PATH=		${WRKSRC}
+
+CMAKE_ARGS+=		-DBUILD_PROTOBUF=OFF
+CMAKE_ARGS+=		-DCV_ENABLE_INTRINSICS=OFF # XXX: problematic
+CMAKE_ARGS+=		-DOPENCV_GENERATE_SETUPVARS=OFF
+CMAKE_ARGS+=		-DPROTOBUF_UPDATE_FILES=ON
+CMAKE_ARGS+=		-DPYTHON_EXECUTABLE:FILEPATH=${PYTHONBIN}
+CMAKE_ARGS+=		-DWITH_EIGEN=OFF
+CMAKE_ARGS+=		-DZLIB_ROOT=${BUILDLINK_PREFIX.zlib}
+CMAKE_ARGS.SunOS+=	-DENABLE_PRECOMPILED_HEADERS=OFF
+CMAKE_ARGS.SunOS+=	-DOPENCV_PYTHON_SKIP_LINKER_EXCLUDE_LIBS=ON
+
+CONFIGURE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
+
+# jasper uses SIZE_MAX and friends in its headers.
+CXXFLAGS+=		-D__STDC_LIMIT_MACROS
+
+pre-configure:
+	${MKDIR} ${WRKSRC}/build
+
+.include "../../lang/python/pyversion.mk"
