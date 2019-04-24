@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1797 2019/04/24 15:53:04 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1798 2019/04/24 16:06:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2834,3 +2834,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated shells/bash to 5.0.7 [kre 2019-04024]
 	Added textproc/py-pallets-sphinx-themes version 1.1.4 [adam 2019-04-24]
 	Added textproc/py-sphinx-issues version 1.2.0 [adam 2019-04-24]
+	Updated www/py-werkzeug to 0.15.2 [adam 2019-04-24]
+	Updated www/py-werkzeug-docs to 0.15.2 [adam 2019-04-24]
