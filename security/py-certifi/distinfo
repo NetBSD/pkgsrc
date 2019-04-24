@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2019/01/15 23:02:17 adam Exp $
+$NetBSD: distinfo,v 1.15 2019/04/24 15:01:07 adam Exp $
 
-SHA1 (certifi-2018.11.29.tar.gz) = 673bf8bc29d7ee0a1a0d8af74d050e5769fec2a9
-RMD160 (certifi-2018.11.29.tar.gz) = a3c8cd9c0df086079aa84dd7f3126544eaece359
-SHA512 (certifi-2018.11.29.tar.gz) = 6a6bf1ff98caefcdbf78a8c83e11e155368bacdd806f0ae0c6afa8f513667df6598e594b3584de61acdca3d6049f4a776937f2aa8672b602bd6db7b737f6074e
-Size (certifi-2018.11.29.tar.gz) = 153772 bytes
+SHA1 (certifi-2019.3.9.tar.gz) = f3873edcfc60c52e97e6601b2576ccdac419281a
+RMD160 (certifi-2019.3.9.tar.gz) = 667a2e8d032455eb63e5a0f2cc7ef798bc5e925e
+SHA512 (certifi-2019.3.9.tar.gz) = d86559b0d384f8114245b169391c73d5e6df02ba411cf9706c9d4e5958eeef610b6550bcb5eb519856b8fa25f3f5eb1cea02c0df1f6df72e16da8201732b0dd9
+Size (certifi-2019.3.9.tar.gz) = 158179 bytes
