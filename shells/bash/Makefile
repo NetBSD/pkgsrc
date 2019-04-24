@@ -1,23 +1,16 @@
-# $NetBSD: Makefile,v 1.85 2019/01/08 16:24:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.86 2019/04/24 14:04:27 kre Exp $
 
 BASH_VERSION=		5.0
-#BASH_PATCHLEVEL=	
+BASH_PATCHLEVEL=	7
 
 DISTNAME=	bash-${BASH_VERSION}
-#PKGNAME=	bash-${BASH_VERSION:C/4\.4\..*/4.4/}.${BASH_PATCHLEVEL}
+PKGNAME=	bash-${BASH_VERSION:C/4\.4\..*/4.4/}.${BASH_PATCHLEVEL}
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GNU:=bash/}
 
-#PATCH_SITES=	${MASTER_SITES:=bash-4.4-patches/}
-#PATCHFILES+=	bash44-001 bash44-002 bash44-003 bash44-004 bash44-005
-#PATCHFILES+=	bash44-006 bash44-007 bash44-008 bash44-009 bash44-010
-#PATCHFILES+=	bash44-011 bash44-012 bash44-013 bash44-014 bash44-015
-#PATCHFILES+=	bash44-016 bash44-017 bash44-018 # bash44-019 bash44-020
-#PATCHFILES+=	bash44-021 bash44-022 bash44-023 bash44-024 bash44-025
-#PATCHFILES+=	bash44-026 bash44-027 bash44-028 bash44-029 bash44-030
-#PATCHFILES+=	bash44-031 bash44-032 bash44-033 bash44-034 bash44-035
-#PATCHFILES+=	bash44-036 bash44-037 bash44-038 bash44-039
-#PATCHFILES+=	bash44-019
+PATCH_SITES=	${MASTER_SITES:=bash-5.0-patches/}
+PATCHFILES+=	bash50-001 bash50-002 bash50-003 bash50-004 bash50-005
+PATCHFILES+=	bash50-006 bash50-007
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/bash/bash.html
