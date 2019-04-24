@@ -1,20 +1,11 @@
-# $NetBSD: Makefile,v 1.81 2018/11/14 22:21:43 kleink Exp $
+# $NetBSD: Makefile,v 1.82 2019/04/24 19:34:44 adam Exp $
 
-DISTNAME=	opencv-3.4.1
-PKGREVISION=	4
-CATEGORIES=	graphics devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=opencv/}
-EXTRACT_SUFX=	.zip
+.include "Makefile.common"
+
+DISTNAME=	opencv-${OPENCV_VERSION}
 
 MAINTAINER=	anthony.mallet@laas.fr
-HOMEPAGE=	https://opencv.org/
 COMMENT=	Library for computer vision problems
-LICENSE=	modified-bsd
-
-USE_CMAKE=		yes
-USE_LANGUAGES=		c c++11
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config
 
 INSTALLATION_DIRS+=	share/doc/opencv/papers
 INSTALLATION_DIRS+=	share/doc/opencv/ref/pics
@@ -31,23 +22,14 @@ CHECK_WRKREF_SKIP=	${PREFIX}/lib/libopencv_core.*
 
 .include "options.mk"
 
-CMAKE_ARGS+=		-DPYTHON_EXECUTABLE:FILEPATH=${PYTHONBIN}
-CMAKE_ARGS+=		-DZLIB_ROOT=${BUILDLINK_PREFIX.zlib}
-CMAKE_ARGS.SunOS+=	-DENABLE_PRECOMPILED_HEADERS=NO
-CMAKE_ARGS.SunOS+=	-DOPENCV_PYTHON_SKIP_LINKER_EXCLUDE_LIBS=YES
-CMAKE_ARGS+=		-DWITH_EIGEN=NO
+TEST_TARGET=		test
 
-CONFIGURE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
+post-install:
+	${RM} -r ${DESTDIR}${PREFIX}/share/licenses
 
-# jasper uses SIZE_MAX and friends in its headers.
-CXXFLAGS+=		-D__STDC_LIMIT_MACROS
+.include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_DIRS+=	build
-CMAKE_ARG_PATH=		${WRKSRC}
-
-pre-configure:
-	${MKDIR} -p ${WRKSRC}/build
-
+.include "../../devel/protobuf/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
@@ -56,6 +38,8 @@ pre-configure:
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../math/py-numpy/buildlink3.mk"
+.if ${OPSYS} != "Darwin"
+.include "../../x11/gtk3/buildlink3.mk"
+.endif
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
