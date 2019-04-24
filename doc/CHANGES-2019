@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1796 2019/04/24 15:16:38 kre Exp $
+$NetBSD: CHANGES-2019,v 1.1797 2019/04/24 15:53:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2832,3 +2832,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/py-uncompyle6 to 3.3.1 [adam 2019-04-24]
 	Updated multimedia/py-m3u8 to 0.3.8 [adam 2019-04-24]
 	Updated shells/bash to 5.0.7 [kre 2019-04024]
+	Added textproc/py-pallets-sphinx-themes version 1.1.4 [adam 2019-04-24]
+	Added textproc/py-sphinx-issues version 1.2.0 [adam 2019-04-24]
