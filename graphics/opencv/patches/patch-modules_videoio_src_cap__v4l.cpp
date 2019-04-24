@@ -1,10 +1,10 @@
-$NetBSD: patch-modules_videoio_src_cap__v4l.cpp,v 1.4 2018/03/02 16:24:21 fhajny Exp $
+$NetBSD: patch-modules_videoio_src_cap__v4l.cpp,v 1.5 2019/04/24 19:34:45 adam Exp $
 
 Conditionalize settings not available in NetBSD's v4l2 emulation.
 
---- modules/videoio/src/cap_v4l.cpp.orig	2018-02-23 08:38:33.000000000 +0000
+--- modules/videoio/src/cap_v4l.cpp.orig	2019-04-06 21:43:23.000000000 +0000
 +++ modules/videoio/src/cap_v4l.cpp
-@@ -216,6 +216,7 @@ make & enjoy!
+@@ -218,6 +218,7 @@ make & enjoy!
  #include <fcntl.h>
  #include <errno.h>
  #include <sys/ioctl.h>
@@ -12,9 +12,31 @@ Conditionalize settings not available in NetBSD's v4l2 emulation.
  #include <sys/types.h>
  #include <sys/mman.h>
  
-@@ -466,13 +467,17 @@ static int autosetup_capture_mode_v4l2(C
-             V4L2_PIX_FMT_YUYV,
-             V4L2_PIX_FMT_UYVY,
+@@ -239,17 +240,21 @@ make & enjoy!
+ #endif
+ 
+ // https://github.com/opencv/opencv/issues/13335
++#ifdef V4L2_CID_CAMERA_CLASS_BASE
+ #ifndef V4L2_CID_ISO_SENSITIVITY
+ #define V4L2_CID_ISO_SENSITIVITY (V4L2_CID_CAMERA_CLASS_BASE+23)
+ #endif
++#endif
+ 
+ // https://github.com/opencv/opencv/issues/13929
++#ifdef V4L2_CID_MPEG_BASE
+ #ifndef V4L2_CID_MPEG_VIDEO_H264_VUI_EXT_SAR_HEIGHT
+ #define V4L2_CID_MPEG_VIDEO_H264_VUI_EXT_SAR_HEIGHT (V4L2_CID_MPEG_BASE+364)
+ #endif
+ #ifndef V4L2_CID_MPEG_VIDEO_H264_VUI_EXT_SAR_WIDTH
+ #define V4L2_CID_MPEG_VIDEO_H264_VUI_EXT_SAR_WIDTH (V4L2_CID_MPEG_BASE+365)
+ #endif
++#endif
+ 
+ /* Defaults - If your board can do better, set it here.  Set for the most common type inputs. */
+ #define DEFAULT_V4L_WIDTH  640
+@@ -482,13 +487,17 @@ bool CvCaptureCAM_V4L::autosetup_capture
+             V4L2_PIX_FMT_NV12,
+             V4L2_PIX_FMT_NV21,
              V4L2_PIX_FMT_SBGGR8,
 +#ifdef V4L2_PIX_FMT_SGBRG8
              V4L2_PIX_FMT_SGBRG8,
@@ -25,128 +47,152 @@ Conditionalize settings not available in NetBSD's v4l2 emulation.
              V4L2_PIX_FMT_JPEG,
  #endif
 +#ifdef V4L2_PIX_FMT_Y16
-             V4L2_PIX_FMT_Y16
+             V4L2_PIX_FMT_Y16,
 +#endif
+             V4L2_PIX_FMT_GREY
      };
  
-     for (size_t i = 0; i < sizeof(try_order) / sizeof(__u32); i++) {
-@@ -521,12 +526,16 @@ static void v4l2_control_range(CvCapture
-     case V4L2_CID_GAIN:
-         cap->gain = range;
-         break;
-+#ifdef V4L2_CID_EXPOSURE_ABSOLUTE
-     case V4L2_CID_EXPOSURE_ABSOLUTE:
-         cap->exposure = range;
-         break;
+@@ -533,9 +542,13 @@ bool CvCaptureCAM_V4L::convertableToRgb(
+     case V4L2_PIX_FMT_UYVY:
+     case V4L2_PIX_FMT_SBGGR8:
+     case V4L2_PIX_FMT_SN9C10X:
++#ifdef V4L2_PIX_FMT_SGBRG8
+     case V4L2_PIX_FMT_SGBRG8:
 +#endif
-+#ifdef V4L2_CID_FOCUS_ABSOLUTE
-     case V4L2_CID_FOCUS_ABSOLUTE:
-         cap->focus = range;
-         break;
-+#endif
-     }
- }
- 
-@@ -548,7 +557,9 @@ static void v4l2_scan_controls(CvCapture
-         break;
-   }
- 
-+#ifdef V4L2_CID_FOCUS_ABSOLUTE
-   v4l2_control_range(capture, V4L2_CID_FOCUS_ABSOLUTE);
-+#endif
- }
- 
- static int v4l2_set_fps(CvCaptureCAM_V4L* capture) {
-@@ -564,8 +575,10 @@ static int v4l2_num_channels(__u32 palet
-     case V4L2_PIX_FMT_YVU420:
-     case V4L2_PIX_FMT_MJPEG:
-     case V4L2_PIX_FMT_JPEG:
+     case V4L2_PIX_FMT_RGB24:
 +#ifdef V4L2_PIX_FMT_Y16
      case V4L2_PIX_FMT_Y16:
-         return 1;
 +#endif
-     case V4L2_PIX_FMT_YUYV:
-     case V4L2_PIX_FMT_UYVY:
-         return 2;
-@@ -593,11 +606,13 @@ static void v4l2_create_frame(CvCaptureC
-         case V4L2_PIX_FMT_YVU420:
+     case V4L2_PIX_FMT_GREY:
+     case V4L2_PIX_FMT_BGR24:
+         return true;
+@@ -569,9 +582,11 @@ void CvCaptureCAM_V4L::v4l2_create_frame
+             channels = 1;
              size.height = size.height * 3 / 2; // "1.5" channels
              break;
 +#ifdef V4L2_PIX_FMT_Y16
          case V4L2_PIX_FMT_Y16:
-             if(!capture->convert_rgb){
-                 depth = IPL_DEPTH_16U;
-             }
-             break;
+             depth = IPL_DEPTH_16U;
+             /* fallthru */
 +#endif
-         }
-     }
- 
-@@ -1558,18 +1573,21 @@ static IplImage* icvRetrieveFrameCAM_V4L
-                 (unsigned char*)capture->frame.imageData);
-         break;
- 
+         case V4L2_PIX_FMT_GREY:
+             channels = 1;
+             break;
+@@ -1395,11 +1410,13 @@ void CvCaptureCAM_V4L::convertToRgb(cons
+                 (unsigned char*)buffers[MAX_V4L_BUFFERS].start,
+                 (unsigned char*)frame.imageData);
+         return;
 +#ifdef V4L2_PIX_FMT_SGBRG8
      case V4L2_PIX_FMT_SGBRG8:
-         sgbrg2rgb24(capture->form.fmt.pix.width,
-                 capture->form.fmt.pix.height,
-                 (unsigned char*)capture->buffers[(capture->bufferIndex+1) % capture->req.count].start,
-                 (unsigned char*)capture->frame.imageData);
-         break;
-+#endif
-     case V4L2_PIX_FMT_RGB24:
-         rgb24_to_rgb24(capture->form.fmt.pix.width,
-                 capture->form.fmt.pix.height,
-                 (unsigned char*)capture->buffers[(capture->bufferIndex+1) % capture->req.count].start,
-                 (unsigned char*)capture->frame.imageData);
-         break;
-+#ifdef V4L2_PIX_FMT_Y16
-     case V4L2_PIX_FMT_Y16:
-         if(capture->convert_rgb){
-             y16_to_rgb24(capture->form.fmt.pix.width,
-@@ -1582,6 +1600,7 @@ static IplImage* icvRetrieveFrameCAM_V4L
-                    capture->frame.imageSize);
-         }
-         break;
-+#endif
-     }
- 
-     if (capture->returnFrame)
-@@ -1602,14 +1621,22 @@ static inline __u32 capPropertyToV4L2(in
-         return V4L2_CID_HUE;
-     case CV_CAP_PROP_GAIN:
-         return V4L2_CID_GAIN;
-+#ifdef V4L2_CID_EXPOSURE_AUTO
-     case CV_CAP_PROP_AUTO_EXPOSURE:
-         return V4L2_CID_EXPOSURE_AUTO;
-+#endif
-+#ifdef V4L2_CID_EXPOSURE_ABSOLUTE
-     case CV_CAP_PROP_EXPOSURE:
-         return V4L2_CID_EXPOSURE_ABSOLUTE;
-+#endif
-+#ifdef V4L2_CID_FOCUS_AUTO
-     case CV_CAP_PROP_AUTOFOCUS:
-         return V4L2_CID_FOCUS_AUTO;
-+#endif
-+#ifdef V4L2_CID_FOCUS_ABSOLUTE
-     case CV_CAP_PROP_FOCUS:
-         return V4L2_CID_FOCUS_ABSOLUTE;
+         sgbrg2rgb24(imageSize.width, imageSize.height,
+                 (unsigned char*)currentBuffer.start,
+                 (unsigned char*)frame.imageData);
+         return;
 +#endif
      default:
-         return -1;
+         break;
      }
-@@ -1755,12 +1782,14 @@ static bool icvSetControl (CvCaptureCAM_
-         return false;
-     }
- 
-+#if defined(V4L2_CID_EXPOSURE_AUTO) && defined(V4L2_EXPOSURE_MANUAL) && defined(V4L2_CID_EXPOSURE_ABSOLUTE)
-     if(control.id == V4L2_CID_EXPOSURE_AUTO && control.value == V4L2_EXPOSURE_MANUAL) {
-         // update the control range for expose after disabling autoexposure
-         // as it is not read correctly at startup
-         // TODO check this again as it might be fixed with Linux 4.5
-         v4l2_control_range(capture, V4L2_CID_EXPOSURE_ABSOLUTE);
+@@ -1437,6 +1454,7 @@ void CvCaptureCAM_V4L::convertToRgb(cons
+     case V4L2_PIX_FMT_RGB24:
+         cv::cvtColor(cv::Mat(imageSize, CV_8UC3, currentBuffer.start), destination, COLOR_RGB2BGR);
+         return;
++#ifdef V4L2_PIX_FMT_Y16
+     case V4L2_PIX_FMT_Y16:
+     {
+         cv::Mat temp(imageSize, CV_8UC1, buffers[MAX_V4L_BUFFERS].start);
+@@ -1444,6 +1462,7 @@ void CvCaptureCAM_V4L::convertToRgb(cons
+         cv::cvtColor(temp, destination, COLOR_GRAY2BGR);
+         return;
      }
 +#endif
- 
-     /* all was OK */
-     return true;
+     case V4L2_PIX_FMT_GREY:
+         cv::cvtColor(cv::Mat(imageSize, CV_8UC1, currentBuffer.start), destination, COLOR_GRAY2BGR);
+         break;
+@@ -1556,8 +1575,10 @@ static inline int capPropertyToV4L2(int 
+         return -1;
+     case cv::CAP_PROP_FOURCC:
+         return -1;
++#ifdef V4L2_CID_MPEG_VIDEO_B_FRAMES
+     case cv::CAP_PROP_FRAME_COUNT:
+         return V4L2_CID_MPEG_VIDEO_B_FRAMES;
++#endif
+     case cv::CAP_PROP_FORMAT:
+         return -1;
+     case cv::CAP_PROP_MODE:
+@@ -1572,8 +1593,10 @@ static inline int capPropertyToV4L2(int 
+         return V4L2_CID_HUE;
+     case cv::CAP_PROP_GAIN:
+         return V4L2_CID_GAIN;
++#ifdef V4L2_CID_EXPOSURE_ABSOLUTE
+     case cv::CAP_PROP_EXPOSURE:
+         return V4L2_CID_EXPOSURE_ABSOLUTE;
++#endif
+     case cv::CAP_PROP_CONVERT_RGB:
+         return -1;
+     case cv::CAP_PROP_WHITE_BALANCE_BLUE_U:
+@@ -1584,8 +1607,10 @@ static inline int capPropertyToV4L2(int 
+         return -1;
+     case cv::CAP_PROP_SHARPNESS:
+         return V4L2_CID_SHARPNESS;
++#ifdef V4L2_CID_EXPOSURE_AUTO
+     case cv::CAP_PROP_AUTO_EXPOSURE:
+         return V4L2_CID_EXPOSURE_AUTO;
++#endif
+     case cv::CAP_PROP_GAMMA:
+         return V4L2_CID_GAMMA;
+     case cv::CAP_PROP_TEMPERATURE:
+@@ -1596,34 +1621,54 @@ static inline int capPropertyToV4L2(int 
+         return -1;
+     case cv::CAP_PROP_WHITE_BALANCE_RED_V:
+         return V4L2_CID_RED_BALANCE;
++#ifdef V4L2_CID_ZOOM_ABSOLUTE
+     case cv::CAP_PROP_ZOOM:
+         return V4L2_CID_ZOOM_ABSOLUTE;
++#endif
++#ifdef V4L2_CID_FOCUS_ABSOLUTE
+     case cv::CAP_PROP_FOCUS:
+         return V4L2_CID_FOCUS_ABSOLUTE;
++#endif
+     case cv::CAP_PROP_GUID:
+         return -1;
++#ifdef V4L2_CID_ISO_SENSITIVITY
+     case cv::CAP_PROP_ISO_SPEED:
+         return V4L2_CID_ISO_SENSITIVITY;
++#endif
+     case cv::CAP_PROP_BACKLIGHT:
+         return V4L2_CID_BACKLIGHT_COMPENSATION;
++#ifdef V4L2_CID_PAN_ABSOLUTE
+     case cv::CAP_PROP_PAN:
+         return V4L2_CID_PAN_ABSOLUTE;
++#endif
++#ifdef V4L2_CID_TILT_ABSOLUTE
+     case cv::CAP_PROP_TILT:
+         return V4L2_CID_TILT_ABSOLUTE;
++#endif
++#ifdef V4L2_CID_ROTATE
+     case cv::CAP_PROP_ROLL:
+         return V4L2_CID_ROTATE;
++#endif
++#ifdef V4L2_CID_IRIS_ABSOLUTE
+     case cv::CAP_PROP_IRIS:
+         return V4L2_CID_IRIS_ABSOLUTE;
++#endif
+     case cv::CAP_PROP_SETTINGS:
+         return -1;
+     case cv::CAP_PROP_BUFFERSIZE:
+         return -1;
++#ifdef V4L2_CID_FOCUS_AUTO
+     case cv::CAP_PROP_AUTOFOCUS:
+         return V4L2_CID_FOCUS_AUTO;
++#endif
++#ifdef V4L2_CID_MPEG_VIDEO_H264_VUI_EXT_SAR_HEIGHT
+     case cv::CAP_PROP_SAR_NUM:
+         return V4L2_CID_MPEG_VIDEO_H264_VUI_EXT_SAR_HEIGHT;
++#endif
++#ifdef V4L2_CID_MPEG_VIDEO_H264_VUI_EXT_SAR_WIDTH
+     case cv::CAP_PROP_SAR_DEN:
+         return V4L2_CID_MPEG_VIDEO_H264_VUI_EXT_SAR_WIDTH;
++#endif
+     case CAP_PROP_AUTO_WB:
+         return V4L2_CID_AUTO_WHITE_BALANCE;
+     case CAP_PROP_WB_TEMPERATURE:
