@@ -1,4 +1,4 @@
-# $NetBSD: check-relro-elf.awk,v 1.2 2017/07/05 15:24:22 khorben Exp $
+# $NetBSD: check-relro-elf.awk,v 1.3 2019/04/24 22:56:47 maya Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # Copyright (c) 2017 Pierre Pronchery <khorben@NetBSD.org>.
@@ -76,9 +76,16 @@ function checkrelro(ELF, got_relro, found) {
 		if ($1 == "GNU_RELRO") {
 			got_relro = 1
 		}
+		# PT_INTERP for executables
+		# DYNAMIC for libraries, executables
+		if (($1 == "INTERP") ||
+		    ($1 == "DYNAMIC")) {
+			dynamic = 1
+		}
+
 	}
 	close(cmd)
-	if (found == 1 && got_relro != 1) {
+	if (found == 1 && dynamic == 1 && got_relro != 1) {
 		print ELF ": missing RELRO"
 	}
 }
