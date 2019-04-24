@@ -1,6 +1,6 @@
-$NetBSD: patch-hw_core_uboot__image.h,v 1.1 2018/11/05 07:27:59 skrll Exp $
+$NetBSD: patch-hw_core_uboot__image.h,v 1.2 2019/04/24 13:59:32 ryoon Exp $
 
---- hw/core/uboot_image.h.orig	2018-08-14 19:10:34.000000000 +0000
+--- hw/core/uboot_image.h.orig	2019-04-23 18:14:45.000000000 +0000
 +++ hw/core/uboot_image.h
 @@ -75,6 +75,7 @@
  #define IH_CPU_NIOS2		15	/* Nios-II	*/
@@ -10,11 +10,3 @@ $NetBSD: patch-hw_core_uboot__image.h,v 1.1 2018/11/05 07:27:59 skrll Exp $
  
  /*
   * Image Types
-@@ -124,6 +125,7 @@
- #define IH_TYPE_SCRIPT		6	/* Script file			*/
- #define IH_TYPE_FILESYSTEM	7	/* Filesystem Image (any type)	*/
- #define IH_TYPE_FLATDT		8	/* Binary Flat Device Tree Blob	*/
-+#define IH_TYPE_KERNEL_NOLOAD  14	/* OS Kernel Image (noload)	*/
- 
- /*
-  * Compression Types
