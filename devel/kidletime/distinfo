@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/06/21 05:38:00 markd Exp $
+$NetBSD: distinfo,v 1.6 2019/04/25 20:50:23 markd Exp $
 
-SHA1 (kidletime-5.47.0.tar.xz) = e0fc1fccd09a8368ec8e1d60716f2d2cd35628e8
-RMD160 (kidletime-5.47.0.tar.xz) = 2a4987913517d3ad57c907799da976cae74eec82
-SHA512 (kidletime-5.47.0.tar.xz) = 3a6cef533e9dec38e3d546d4c542150eec94e748c84d8fedb433aa2168655542d213b6699923d70e64efdcc41ff8229c0fde38b04ec78ab94c80560b83a75ccb
-Size (kidletime-5.47.0.tar.xz) = 26596 bytes
+SHA1 (kidletime-5.57.0.tar.xz) = 1e7fd484e922003c69370eff11545cb221fc30ee
+RMD160 (kidletime-5.57.0.tar.xz) = 0812192f1465c2bcf4c882b705f38a143a21702c
+SHA512 (kidletime-5.57.0.tar.xz) = ecaf06c798fbac4867f9c226ad3f0c7c8aab597ab3cdee2c00916715bf30635978be2e3ce5e1de2da5229f62ddfe12f5df04d4fabbe2de84c2aa1b7290caeae0
+Size (kidletime-5.57.0.tar.xz) = 26832 bytes

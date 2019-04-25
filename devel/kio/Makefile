@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2019/04/03 00:32:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2019/04/25 20:50:23 markd Exp $
 
 DISTNAME=	kio-${KF5VER}
-PKGREVISION=	6
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -19,7 +18,7 @@ LDFLAGS.SunOS+=	-lsocket
 SUBST_CLASSES+=		xdg
 SUBST_STAGE.xdg=	pre-configure
 SUBST_MESSAGE.xdg=	Install via examples dir.
-SUBST_FILES.xdg=	src/core/CMakeLists.txt
+SUBST_FILES.xdg=	src/core/CMakeLists.txt CMakeLists.txt
 SUBST_FILES.xdg+=	src/urifilters/shorturi/CMakeLists.txt
 SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
 
@@ -28,10 +27,8 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/accept-languages.codes \
 		${PKG_SYSCONFDIR}/xdg/accept-languages.codes
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kshorturifilterrc \
 		${PKG_SYSCONFDIR}/xdg/kshorturifilterrc
-
-#MAKE_DIRS+=	${PKG_SYSCONFDIR}/dbus-1/system.d
-#CONF_FILES+=	${PREFIX}/share/examples/kio/org.kde.kio.file.conf \
-#		${PKG_SYSCONFDIR}/dbus-1/system.d/org.kde.kio.file.conf
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kio.categories \
+		${PKG_SYSCONFDIR}/xdg/kio.categories
 
 # generation of kcookieserver.moc fails when ${PREFIX}/include in the moc include path
 SUBST_CLASSES+=		fix-moc

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/04/11 11:50:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/04/25 20:50:23 markd Exp $
 bin/checkXML5
 bin/meinproc5
 include/KF5/KDocTools/docbookxslt.h
@@ -8,6 +8,8 @@ lib/cmake/KF5DocTools/KF5DocToolsConfigVersion.cmake
 lib/cmake/KF5DocTools/KF5DocToolsMacros.cmake
 lib/cmake/KF5DocTools/KF5DocToolsTargets-noconfig.cmake
 lib/cmake/KF5DocTools/KF5DocToolsTargets.cmake
+lib/cmake/KF5DocTools/KF5DocToolsToolsTargets-noconfig.cmake
+lib/cmake/KF5DocTools/KF5DocToolsToolsTargets.cmake
 lib/libKF5DocTools.so
 lib/libKF5DocTools.so.5
 lib/libKF5DocTools.so.${PKGVERSION}
@@ -319,6 +321,7 @@ share/kf5/kdoctools/customization/eo/lang.entities
 share/kf5/kdoctools/customization/eo/strings.entities
 share/kf5/kdoctools/customization/eo/user.entities
 share/kf5/kdoctools/customization/es/catalog.xml
+share/kf5/kdoctools/customization/es/entities/ccbysa4-notice.docbook
 share/kf5/kdoctools/customization/es/entities/fdl-notice.docbook
 share/kf5/kdoctools/customization/es/entities/gpl-notice.docbook
 share/kf5/kdoctools/customization/es/entities/help-menu.docbook
@@ -328,6 +331,7 @@ share/kf5/kdoctools/customization/es/entities/lgpl-notice.docbook
 share/kf5/kdoctools/customization/es/entities/report-bugs.docbook
 share/kf5/kdoctools/customization/es/entities/underArtisticLicense.docbook
 share/kf5/kdoctools/customization/es/entities/underBSDLicense.docbook
+share/kf5/kdoctools/customization/es/entities/underCCBYSA4.docbook
 share/kf5/kdoctools/customization/es/entities/underFDL.docbook
 share/kf5/kdoctools/customization/es/entities/underGPL.docbook
 share/kf5/kdoctools/customization/es/entities/underLGPL.docbook
@@ -461,6 +465,7 @@ share/kf5/kdoctools/customization/hu/lang.entities
 share/kf5/kdoctools/customization/hu/strings.entities
 share/kf5/kdoctools/customization/hu/user.entities
 share/kf5/kdoctools/customization/id/catalog.xml
+share/kf5/kdoctools/customization/id/entities/ccbysa4-notice.docbook
 share/kf5/kdoctools/customization/id/entities/fdl-notice.docbook
 share/kf5/kdoctools/customization/id/entities/gpl-notice.docbook
 share/kf5/kdoctools/customization/id/entities/help-menu.docbook
@@ -470,8 +475,10 @@ share/kf5/kdoctools/customization/id/entities/lgpl-notice.docbook
 share/kf5/kdoctools/customization/id/entities/report-bugs.docbook
 share/kf5/kdoctools/customization/id/entities/underArtisticLicense.docbook
 share/kf5/kdoctools/customization/id/entities/underBSDLicense.docbook
+share/kf5/kdoctools/customization/id/entities/underCCBYSA4.docbook
 share/kf5/kdoctools/customization/id/entities/underFDL.docbook
 share/kf5/kdoctools/customization/id/entities/underGPL.docbook
+share/kf5/kdoctools/customization/id/entities/underLGPL.docbook
 share/kf5/kdoctools/customization/id/entities/underX11License.docbook
 share/kf5/kdoctools/customization/id/entities/update-doc.docbook
 share/kf5/kdoctools/customization/id/lang.entities
@@ -952,6 +959,7 @@ share/kf5/kdoctools/customization/xsl/et.xml
 share/kf5/kdoctools/customization/xsl/fr.xml
 share/kf5/kdoctools/customization/xsl/gl.xml
 share/kf5/kdoctools/customization/xsl/hu.xml
+share/kf5/kdoctools/customization/xsl/id.xml
 share/kf5/kdoctools/customization/xsl/it.xml
 share/kf5/kdoctools/customization/xsl/lt.xml
 share/kf5/kdoctools/customization/xsl/nds.xml
@@ -1024,7 +1032,6 @@ share/kf5/kdoctools/customization/zh-TW/strings.entities
 share/kf5/kdoctools/customization/zh-TW/user.entities
 share/locale/af/LC_MESSAGES/kdoctools5.mo
 share/locale/ar/LC_MESSAGES/kdoctools5.mo
-share/locale/ast/LC_MESSAGES/kdoctools5.mo
 share/locale/be/LC_MESSAGES/kdoctools5.mo
 share/locale/bg/LC_MESSAGES/kdoctools5.mo
 share/locale/bn/LC_MESSAGES/kdoctools5.mo

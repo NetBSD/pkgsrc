@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2018/04/11 11:50:36 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/04/25 20:50:24 markd Exp $
 include/KF5/KPeople/KPeople/Global
 include/KF5/KPeople/KPeople/PersonData
+include/KF5/KPeople/KPeople/PersonPluginManager
 include/KF5/KPeople/KPeople/PersonsModel
 include/KF5/KPeople/KPeople/Widgets/AbstractFieldWidgetFactory
 include/KF5/KPeople/KPeople/Widgets/Actions
@@ -15,6 +16,7 @@ include/KF5/KPeople/KPeopleBackend/ContactMonitor
 include/KF5/KPeople/kpeople/global.h
 include/KF5/KPeople/kpeople/kpeople_export.h
 include/KF5/KPeople/kpeople/persondata.h
+include/KF5/KPeople/kpeople/personpluginmanager.h
 include/KF5/KPeople/kpeople/personsmodel.h
 include/KF5/KPeople/kpeople/widgets/abstractfieldwidgetfactory.h
 include/KF5/KPeople/kpeople/widgets/actions.h
@@ -45,12 +47,12 @@ qt5/mkspecs/modules/qt_KPeople.pri
 qt5/mkspecs/modules/qt_KPeopleWidgets.pri
 qt5/qml/org/kde/people/libKF5PeopleDeclarative.so
 qt5/qml/org/kde/people/qmldir
+share/examples/kde-xdg/kpeople.categories
 share/kf5/kpeople/dummy_avatar.png
 share/kservicetypes5/kpeople_data_source.desktop
 share/kservicetypes5/kpeople_plugin.desktop
 share/kservicetypes5/persondetailsplugin.desktop
 share/locale/ar/LC_MESSAGES/kpeople5.mo
-share/locale/ast/LC_MESSAGES/kpeople5.mo
 share/locale/bs/LC_MESSAGES/kpeople5.mo
 share/locale/ca/LC_MESSAGES/kpeople5.mo
 share/locale/ca@valencia/LC_MESSAGES/kpeople5.mo
