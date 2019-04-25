@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.50 2019/02/05 20:06:06 adam Exp $
+$NetBSD: distinfo,v 1.51 2019/04/25 08:53:43 adam Exp $
 
-SHA1 (mysql-5.6.43.tar.gz) = 14fefb6ccceab462f3c0291dabcbd55adc16569d
-RMD160 (mysql-5.6.43.tar.gz) = 9115b626f9ad19eaadb1f81feea97b12ec97d719
-SHA512 (mysql-5.6.43.tar.gz) = 8820aee9b34cfebc841d756b12713517c9dafed7bee7b09c8e82c8f359e2e12b25da47c4e49e0aa4afc26193b774e0fa0dfd422c2aa09c3112b6d6e4b62b9a68
-Size (mysql-5.6.43.tar.gz) = 32200219 bytes
+SHA1 (mysql-5.6.44.tar.gz) = 7bc331b735c480fc48427e7c8986a2bb82538d6c
+RMD160 (mysql-5.6.44.tar.gz) = 6a6c0a18503e5f6b758e76c76d612a4ada3a8296
+SHA512 (mysql-5.6.44.tar.gz) = 65ace1c803773ca6c8759d171c09bc93c7d61b8e3208ac9905f82e99087622c9dcca602d2da217741dc62fc6eabe9108ebc7f31facd26705072eae65fcc37077
+Size (mysql-5.6.44.tar.gz) = 32531507 bytes
 SHA1 (sphinx-2.2.11-release.tar.gz) = 34e83f43de0e69e258bf749ea00348c60a51632a
 RMD160 (sphinx-2.2.11-release.tar.gz) = 5804b4cce64bc03fa20bac26c7391cd661cecc77
 SHA512 (sphinx-2.2.11-release.tar.gz) = cf1a262a5b0fbf0bd2827ec6ec629edeaf709ce855a6e7b509b65342baaeb26c02717ca63f1578d32c83d21e2fd6d1e92dceb34660e6351b93cd96fd4e623689
@@ -16,7 +16,7 @@ SHA1 (patch-cmake_build__configurations_mysql__release.cmake) = f6ddee05e028df9d
 SHA1 (patch-cmake_dtrace.cmake) = d953fdf976f3a7e7f0c2c16a9a2d2615f2777396
 SHA1 (patch-cmake_libutils.cmake) = c3e5ab66d2bef43dc2308369e27550553e0f5356
 SHA1 (patch-cmake_os_SunOS.cmake) = 60ba9f81c28bbb78295b8a12fe6cd3b176c03f91
-SHA1 (patch-cmake_plugin.cmake) = 03e7a7debd61e870bd76d5c5b253a620662b3595
+SHA1 (patch-cmake_plugin.cmake) = 5e7bfccd02fa66993f6615b2d57fb032ac9e8b14
 SHA1 (patch-cmake_readline.cmake) = 6bec6ca87b45c739d0614493477a18bb7c56d981
 SHA1 (patch-cmake_ssl.cmake) = a5a25b00010c6586e5a3e099975ddabe369d4247
 SHA1 (patch-cmd-line-utils_libedit_chartype.h) = 6b1453df648001ed1fc81190106e15872a69a04c
