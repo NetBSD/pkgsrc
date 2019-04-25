@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/03/26 11:14:17 adam Exp $
+$NetBSD: distinfo,v 1.2 2019/04/25 19:43:15 adam Exp $
 
-SHA1 (qtconnectivity-everywhere-src-5.12.2.tar.xz) = 652255423f3273dd56f48319bd75b3ac6caf875f
-RMD160 (qtconnectivity-everywhere-src-5.12.2.tar.xz) = e94175984430b30dc0ab901dd31efea8b5cc60ce
-SHA512 (qtconnectivity-everywhere-src-5.12.2.tar.xz) = fc001570d2296df9c0535ed9b481e209ab7b8093b3ade04b4bed5bc61083cc8ccc0764dcadcfc8a7a3bba3538c8d44029d0d9ef0c6fc9aa647e2e4ff8b2d9050
-Size (qtconnectivity-everywhere-src-5.12.2.tar.xz) = 2750052 bytes
+SHA1 (qtconnectivity-everywhere-src-5.12.3.tar.xz) = 62a37e773c2d893693c5419c342c08c4240407fd
+RMD160 (qtconnectivity-everywhere-src-5.12.3.tar.xz) = 4c3806681c8b8245e7667e56a2e131484fa12204
+SHA512 (qtconnectivity-everywhere-src-5.12.3.tar.xz) = 4da406d88c3cf216d53c524d3896f50b19dae124baec904233dbb67163a30a955dee29148b5f5b71c35cb28638912423bb1cf4d38c62aeefa7353bd29e97a269
+Size (qtconnectivity-everywhere-src-5.12.3.tar.xz) = 2750144 bytes
