@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/26 08:51:13 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/04/25 20:56:31 markd Exp $
 include/KF5/KUnitConversion/KUnitConversion/Converter
 include/KF5/KUnitConversion/KUnitConversion/Unit
 include/KF5/KUnitConversion/KUnitConversion/UnitCategory
@@ -18,7 +18,6 @@ lib/libKF5UnitConversion.so.5
 lib/libKF5UnitConversion.so.${PKGVERSION}
 qt5/mkspecs/modules/qt_KUnitConversion.pri
 share/locale/ar/LC_MESSAGES/kunitconversion5.mo
-share/locale/ast/LC_MESSAGES/kunitconversion5.mo
 share/locale/bg/LC_MESSAGES/kunitconversion5.mo
 share/locale/bs/LC_MESSAGES/kunitconversion5.mo
 share/locale/ca/LC_MESSAGES/kunitconversion5.mo
@@ -40,6 +39,7 @@ share/locale/gl/LC_MESSAGES/kunitconversion5.mo
 share/locale/hr/LC_MESSAGES/kunitconversion5.mo
 share/locale/hu/LC_MESSAGES/kunitconversion5.mo
 share/locale/ia/LC_MESSAGES/kunitconversion5.mo
+share/locale/id/LC_MESSAGES/kunitconversion5.mo
 share/locale/is/LC_MESSAGES/kunitconversion5.mo
 share/locale/it/LC_MESSAGES/kunitconversion5.mo
 share/locale/ja/LC_MESSAGES/kunitconversion5.mo
