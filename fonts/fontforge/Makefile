@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.107 2019/02/26 12:03:07 jperkin Exp $
+# $NetBSD: Makefile,v 1.108 2019/04/25 07:32:54 maya Exp $
 
 DISTNAME=	fontforge-dist-20170731
 PKGNAME=	${DISTNAME:S/-dist-/-/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	fonts editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fontforge/}
 EXTRACT_SUFX=	.tar.xz

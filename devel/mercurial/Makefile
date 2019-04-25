@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.104 2016/09/09 03:12:03 dholland Exp $
+# $NetBSD: Makefile,v 1.105 2019/04/25 07:32:48 maya Exp $
 
+PKGREVISION= 1
 .include "../../devel/py-mercurial/Makefile.version"
 
 PKGNAME=	mercurial-${VERSION}
