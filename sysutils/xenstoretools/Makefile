@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2017/04/25 06:49:45 sborrill Exp $
+# $NetBSD: Makefile,v 1.12 2019/04/25 07:33:22 maya Exp $
 #
 
 # VERSION is set in xentool46/version.mk
+PKGREVISION=		1
 .include		"../../sysutils/xentools46/version.mk"
 
 DISTNAME=	xen-${VERSION}

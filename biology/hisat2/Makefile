@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/01/15 01:26:29 bacon Exp $
+# $NetBSD: Makefile,v 1.2 2019/04/25 07:32:37 maya Exp $
 
 DISTNAME=	hisat2-2.1.0.23
+PKGREVISION=	1
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=infphilo/}
 GITHUB_TAG=	20f333e2cfe7ff4d1362b248912893e2644683d7

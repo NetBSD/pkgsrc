@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2017/11/28 13:47:22 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2019/04/25 07:33:24 maya Exp $
 
 DISTNAME=	iso-codes-3.77
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	https://pkg-isocodes.alioth.debian.org/downloads/
 EXTRACT_SUFX=	.tar.xz

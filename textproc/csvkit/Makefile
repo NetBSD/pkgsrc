@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2017/08/01 17:43:45 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/04/25 07:33:23 maya Exp $
 
 DISTNAME=	0.9.0
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	csvkit-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wireservice/}

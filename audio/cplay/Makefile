@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2017/08/01 16:47:35 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/04/25 07:32:34 maya Exp $
 
 DISTNAME=		cplay-1.49
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		audio
 MASTER_SITES=		# ${HOMEPAGE}
 

@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2017/09/16 19:26:48 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2019/04/25 07:32:49 maya Exp $
 TRYTON_MODULE_NAME=	proteus
+PKGREVISION= 1
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	devel python
 

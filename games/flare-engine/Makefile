@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2017/09/16 19:26:57 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/04/25 07:32:54 maya Exp $
 #
 
 DISTNAME=	v0.19
 PKGNAME=	flare-engine-${DISTNAME:S/v//1}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	https://github.com/clintbellanger/flare-engine/archive/
 DIST_SUBDIR=	${PKGBASE}

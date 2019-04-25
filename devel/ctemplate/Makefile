@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2018/08/22 09:43:29 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/04/25 07:32:44 maya Exp $
 
 DISTNAME=	ctemplate-2.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OlafvdSpek/}
 GITHUB_TAG=	${DISTNAME}

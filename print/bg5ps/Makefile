@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2014/05/17 16:10:48 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/04/25 07:33:14 maya Exp $
 
 DISTNAME=	bg5ps-1.3.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	print converters
 MASTER_SITES=	# ftp://freebsd.sinica.edu.tw/pub/keith/
 

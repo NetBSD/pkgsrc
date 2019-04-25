@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2019/01/16 14:59:45 youri Exp $
+# $NetBSD: Makefile,v 1.14 2019/04/25 07:32:35 maya Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	libmatemixer-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	audio
 
 COMMENT=	MATE audio mixer

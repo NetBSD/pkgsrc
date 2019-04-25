@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2018/07/24 17:29:09 maya Exp $
+# $NetBSD: Makefile,v 1.21 2019/04/25 07:33:22 maya Exp $
 
 VERSION=	4.6.6
 DISTNAME=	xen-${VERSION}
 PKGNAME=	xenkernel46-${VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	https://downloads.xenproject.org/release/xen/${VERSION}/
 

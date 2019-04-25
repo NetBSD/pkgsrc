@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2016/09/17 13:51:19 mef Exp $
+# $NetBSD: Makefile,v 1.20 2019/04/25 07:32:49 maya Exp $
 
 DISTNAME=	ply-3.9
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	http://www.dabeaz.com/ply/
 

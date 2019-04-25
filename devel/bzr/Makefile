@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.71 2018/08/14 15:53:10 prlw1 Exp $
+# $NetBSD: Makefile,v 1.72 2019/04/25 07:32:43 maya Exp $
 
 DISTNAME=	bzr-2.6.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel scm
 MASTER_SITES=	https://launchpad.net/bzr/${PKGVERSION_NOREV:R}/${PKGVERSION_NOREV}/+download/
 

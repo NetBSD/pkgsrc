@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2019/03/03 19:06:31 youri Exp $
+# $NetBSD: Makefile,v 1.2 2019/04/25 07:32:48 maya Exp $
 
 
 VERSION=	2018.3.4
 DISTNAME=	PhpStorm-${VERSION}
 PKGNAME=	phpstorm-bin-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://download.jetbrains.com/webide/
 

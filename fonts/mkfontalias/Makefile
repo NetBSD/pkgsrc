@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2017/09/03 08:36:54 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/04/25 07:32:54 maya Exp $
 #
 
 DISTNAME=	mkfontalias.py
 PKGNAME=	mkfontalias-20000521
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	fonts
 MASTER_SITES=	http://home.c2i.net/dark/
 EXTRACT_SUFX=	# empty

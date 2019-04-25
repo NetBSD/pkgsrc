@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.72 2018/11/12 16:10:26 jaapb Exp $
+# $NetBSD: Makefile,v 1.73 2019/04/25 07:33:22 maya Exp $
 
 VERSION=	4.2.5
 VERSION_IPXE=	1.0.0
 
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools42-${VERSION}
-PKGREVISION=		30
+PKGREVISION=		31
 CATEGORIES=		sysutils
 MASTER_SITES=		https://downloads.xenproject.org/release/xen/${VERSION}/
 

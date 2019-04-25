@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2019/03/26 07:27:15 triaxx Exp $
+# $NetBSD: Makefile,v 1.3 2019/04/25 07:33:25 maya Exp $
 
 DISTNAME=	yelp-tools-3.32.0
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GNOME/}
 

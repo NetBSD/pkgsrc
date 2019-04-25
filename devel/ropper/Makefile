@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2018/02/19 01:01:46 kamil Exp $
+# $NetBSD: Makefile,v 1.5 2019/04/25 07:32:49 maya Exp $
 
 DISTNAME=	Ropper-1.11.6
 PKGNAME=	${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sashs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2018/11/21 11:22:10 nia Exp $
+# $NetBSD: Makefile,v 1.8 2019/04/25 07:32:39 maya Exp $
 
 DISTNAME=	tootstream-0.3.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=magicalraccoon/}
 
