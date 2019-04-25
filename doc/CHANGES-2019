@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1820 2019/04/25 13:50:28 nia Exp $
+$NetBSD: CHANGES-2019,v 1.1821 2019/04/25 14:57:35 tron Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2868,3 +2868,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated chat/gajim-plugin-omemo to 2.6.28 [nia 2019-04-25]
 	Updated emulators/libretro-bluemsx to 20190420 [nia 2019-04-25]
 	Updated emulators/libretro-gambatte to 20190412 [nia 2019-04-25]
+	Updated security/openssh to 7.9.1nb1 [tron 2019-04-25]
