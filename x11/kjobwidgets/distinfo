@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/06/21 07:30:25 markd Exp $
+$NetBSD: distinfo,v 1.6 2019/04/25 21:17:14 markd Exp $
 
-SHA1 (kjobwidgets-5.47.0.tar.xz) = 0ddc9bc9d7fe237270f56ed6d5d38e5aeb46e4bf
-RMD160 (kjobwidgets-5.47.0.tar.xz) = c7bf972f0b4074b8d53c01a45d9cf038487bab6c
-SHA512 (kjobwidgets-5.47.0.tar.xz) = 4739d6042bba8bae9c244dc478b3da985f6062069a0c18692e0a0af9233a0c23cbdc3eac9724a5a0b5c7cd5c960a548e03a18c23a56a53bdb18bc532c8e4187c
-Size (kjobwidgets-5.47.0.tar.xz) = 87592 bytes
+SHA1 (kjobwidgets-5.57.0.tar.xz) = 5927bcbb2398f55bebe9a71bb236394270871777
+RMD160 (kjobwidgets-5.57.0.tar.xz) = 34a5fbc6ac4340294382ae23269e9606ca689b65
+SHA512 (kjobwidgets-5.57.0.tar.xz) = a1bfaeaf280abcdfb1dbfc0d236c781c40b3cfc4513f9432059339bf182d8a7afebd5593e200cf1301fbd91dc6f8a6e3c14698940bd7489f9176090aaa7f3efa
+Size (kjobwidgets-5.57.0.tar.xz) = 87604 bytes

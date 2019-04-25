@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/06/21 07:56:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/04/25 21:17:15 markd Exp $
 bin/plasmapkg2
 include/KF5/Plasma/Applet
 include/KF5/Plasma/Containment
@@ -100,12 +100,14 @@ qt5/qml/QtQuick/Controls.2/Plasma/ItemDelegate.qml
 qt5/qml/QtQuick/Controls.2/Plasma/Label.qml
 qt5/qml/QtQuick/Controls.2/Plasma/Menu.qml
 qt5/qml/QtQuick/Controls.2/Plasma/MenuItem.qml
+qt5/qml/QtQuick/Controls.2/Plasma/PageIndicator.qml
 qt5/qml/QtQuick/Controls.2/Plasma/Popup.qml
 qt5/qml/QtQuick/Controls.2/Plasma/ProgressBar.qml
 qt5/qml/QtQuick/Controls.2/Plasma/RadioButton.qml
 qt5/qml/QtQuick/Controls.2/Plasma/RadioDelegate.qml
 qt5/qml/QtQuick/Controls.2/Plasma/RadioIndicator.qml
 qt5/qml/QtQuick/Controls.2/Plasma/RangeSlider.qml
+qt5/qml/QtQuick/Controls.2/Plasma/RoundButton.qml
 qt5/qml/QtQuick/Controls.2/Plasma/ScrollBar.qml
 qt5/qml/QtQuick/Controls.2/Plasma/ScrollView.qml
 qt5/qml/QtQuick/Controls.2/Plasma/Slider.qml
@@ -122,8 +124,11 @@ qt5/qml/QtQuick/Controls.2/Plasma/ToolButton.qml
 qt5/qml/QtQuick/Controls.2/Plasma/ToolTip.qml
 qt5/qml/QtQuick/Controls.2/Plasma/private/ButtonShadow.qml
 qt5/qml/QtQuick/Controls.2/Plasma/private/DefaultListItemBackground.qml
+qt5/qml/QtQuick/Controls.2/Plasma/private/MobileCursor.qml
+qt5/qml/QtQuick/Controls.2/Plasma/private/MobileTextActionsToolBar.qml
 qt5/qml/QtQuick/Controls.2/Plasma/private/RoundShadow.qml
 qt5/qml/QtQuick/Controls.2/Plasma/private/TextFieldFocus.qml
+qt5/qml/QtQuick/Controls.2/Plasma/private/qmldir
 qt5/qml/QtQuick/Controls.2/Plasma/qmldir
 qt5/qml/QtQuick/Controls/Styles/Plasma/ApplicationWindowStyle.qml
 qt5/qml/QtQuick/Controls/Styles/Plasma/BusyIndicatorStyle.qml
@@ -202,8 +207,11 @@ qt5/qml/org/kde/plasma/components.3/ToolBar.qml
 qt5/qml/org/kde/plasma/components.3/ToolButton.qml
 qt5/qml/org/kde/plasma/components.3/private/ButtonShadow.qml
 qt5/qml/org/kde/plasma/components.3/private/DefaultListItemBackground.qml
+qt5/qml/org/kde/plasma/components.3/private/MobileCursor.qml
+qt5/qml/org/kde/plasma/components.3/private/MobileTextActionsToolBar.qml
 qt5/qml/org/kde/plasma/components.3/private/RoundShadow.qml
 qt5/qml/org/kde/plasma/components.3/private/TextFieldFocus.qml
+qt5/qml/org/kde/plasma/components.3/private/qmldir
 qt5/qml/org/kde/plasma/components.3/qmldir
 qt5/qml/org/kde/plasma/components/BusyIndicator.qml
 qt5/qml/org/kde/plasma/components/Button.qml
@@ -292,7 +300,6 @@ share/kservicetypes5/plasma-service.desktop
 share/kservicetypes5/plasma-shell.desktop
 share/kservicetypes5/plasma-wallpaper.desktop
 share/locale/ar/LC_MESSAGES/libplasma5.mo
-share/locale/ast/LC_MESSAGES/libplasma5.mo
 share/locale/bs/LC_MESSAGES/libplasma5.mo
 share/locale/ca/LC_MESSAGES/libplasma5.mo
 share/locale/ca@valencia/LC_MESSAGES/libplasma5.mo
@@ -475,6 +482,7 @@ share/plasma/desktoptheme/default/icons/media.svgz
 share/plasma/desktoptheme/default/icons/nepomuk.svgz
 share/plasma/desktoptheme/default/icons/network.svgz
 share/plasma/desktoptheme/default/icons/notification.svgz
+share/plasma/desktoptheme/default/icons/osd.svgz
 share/plasma/desktoptheme/default/icons/phone.svgz
 share/plasma/desktoptheme/default/icons/plasmavault.svgz
 share/plasma/desktoptheme/default/icons/plasmavault_error.svgz

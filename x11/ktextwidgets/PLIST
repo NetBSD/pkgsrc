@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/26 09:49:49 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/04/25 21:17:15 markd Exp $
 include/KF5/KTextWidgets/KFind
 include/KF5/KTextWidgets/KFindDialog
 include/KF5/KTextWidgets/KPluralHandlingSpinBox
@@ -31,7 +31,6 @@ share/kservicetypes5/kregexpeditor.desktop
 share/locale/af/LC_MESSAGES/ktextwidgets5.mo
 share/locale/ar/LC_MESSAGES/ktextwidgets5.mo
 share/locale/as/LC_MESSAGES/ktextwidgets5.mo
-share/locale/ast/LC_MESSAGES/ktextwidgets5.mo
 share/locale/be/LC_MESSAGES/ktextwidgets5.mo
 share/locale/be@latin/LC_MESSAGES/ktextwidgets5.mo
 share/locale/bg/LC_MESSAGES/ktextwidgets5.mo

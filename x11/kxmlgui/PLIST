@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/26 09:49:49 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/04/25 21:17:15 markd Exp $
 include/KF5/KXmlGui/KAboutApplicationDialog
 include/KF5/KXmlGui/KActionCategory
 include/KF5/KXmlGui/KActionCollection
@@ -48,11 +48,11 @@ lib/libKF5XmlGui.so.5
 lib/libKF5XmlGui.so.${PKGVERSION}
 libexec/kf5/ksendbugmail
 qt5/mkspecs/modules/qt_KXmlGui.pri
+share/examples/kde-xdg/kxmlgui.categories
 share/examples/kxmlgui/ui_standards.rc
 share/locale/af/LC_MESSAGES/kxmlgui5.mo
 share/locale/ar/LC_MESSAGES/kxmlgui5.mo
 share/locale/as/LC_MESSAGES/kxmlgui5.mo
-share/locale/ast/LC_MESSAGES/kxmlgui5.mo
 share/locale/be/LC_MESSAGES/kxmlgui5.mo
 share/locale/be@latin/LC_MESSAGES/kxmlgui5.mo
 share/locale/bg/LC_MESSAGES/kxmlgui5.mo

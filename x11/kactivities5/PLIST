@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/08/21 21:29:45 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/04/25 21:17:13 markd Exp $
 bin/kactivities-cli
 include/KF5/KActivities/KActivities/ActivitiesModel
 include/KF5/KActivities/KActivities/Consumer
@@ -25,3 +25,4 @@ lib/pkgconfig/libKActivities.pc
 qt5/mkspecs/modules/qt_KActivities.pri
 qt5/qml/org/kde/activities/libkactivitiesextensionplugin.so
 qt5/qml/org/kde/activities/qmldir
+share/examples/kde-xdg/kactivities.categories
