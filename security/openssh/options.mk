@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.35 2017/07/24 16:33:22 he Exp $
-
-.include "../../mk/bsd.prefs.mk"
+# $NetBSD: options.mk,v 1.36 2019/04/25 14:55:04 tron Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openssh
-PKG_SUPPORTED_OPTIONS=	kerberos openssl pam
-PKG_SUGGESTED_OPTIONS=	openssl
+PKG_SUPPORTED_OPTIONS=	editline kerberos openssl pam
+PKG_SUGGESTED_OPTIONS=	editline openssl
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS+=	pam
@@ -43,4 +43,9 @@ MESSAGE_SUBST+=		EGDIR=${EGDIR}
 .  if ${OPSYS} == "Linux"
 PLIST.pam=	yes
 .  endif
+.endif
+
+.if !empty(PKG_OPTIONS:Meditline)
+.include "../../devel/editline/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-libedit=${BUILDLINK_PREFIX.editline}
 .endif
