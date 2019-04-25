@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2018/04/11 11:50:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.27 2019/04/25 20:53:51 markd Exp $
 share/icons/oxygen/base/128x128/actions/address-book-new.png
 share/icons/oxygen/base/128x128/actions/application-exit.png
 share/icons/oxygen/base/128x128/actions/application-menu.png
@@ -1713,6 +1713,7 @@ share/icons/oxygen/base/16x16/actions/view-time-schedule-insert.png
 share/icons/oxygen/base/16x16/actions/view-time-schedule.png
 share/icons/oxygen/base/16x16/actions/view-web-browser-dom-tree.png
 share/icons/oxygen/base/16x16/actions/viewimage.png
+share/icons/oxygen/base/16x16/actions/visibility.png
 share/icons/oxygen/base/16x16/actions/window-close.png
 share/icons/oxygen/base/16x16/actions/window-duplicate.png
 share/icons/oxygen/base/16x16/actions/window-new.png
@@ -3485,6 +3486,7 @@ share/icons/oxygen/base/22x22/actions/view-time-schedule-insert.png
 share/icons/oxygen/base/22x22/actions/view-time-schedule.png
 share/icons/oxygen/base/22x22/actions/view-web-browser-dom-tree.png
 share/icons/oxygen/base/22x22/actions/viewimage.png
+share/icons/oxygen/base/22x22/actions/visibility.png
 share/icons/oxygen/base/22x22/actions/window-close.png
 share/icons/oxygen/base/22x22/actions/window-duplicate.png
 share/icons/oxygen/base/22x22/actions/window-new.png
@@ -5611,6 +5613,7 @@ share/icons/oxygen/base/32x32/actions/view-time-schedule-edit.png
 share/icons/oxygen/base/32x32/actions/view-time-schedule-insert.png
 share/icons/oxygen/base/32x32/actions/view-time-schedule.png
 share/icons/oxygen/base/32x32/actions/view-web-browser-dom-tree.png
+share/icons/oxygen/base/32x32/actions/visibility.png
 share/icons/oxygen/base/32x32/actions/window-close.png
 share/icons/oxygen/base/32x32/actions/window-duplicate.png
 share/icons/oxygen/base/32x32/actions/window-new.png
@@ -7063,6 +7066,7 @@ share/icons/oxygen/base/48x48/actions/view-time-schedule-edit.png
 share/icons/oxygen/base/48x48/actions/view-time-schedule-insert.png
 share/icons/oxygen/base/48x48/actions/view-time-schedule.png
 share/icons/oxygen/base/48x48/actions/view-web-browser-dom-tree.png
+share/icons/oxygen/base/48x48/actions/visibility.png
 share/icons/oxygen/base/48x48/actions/window-close.png
 share/icons/oxygen/base/48x48/actions/window-duplicate.png
 share/icons/oxygen/base/48x48/actions/window-new.png
