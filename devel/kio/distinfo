@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.7 2018/06/21 05:42:07 markd Exp $
+$NetBSD: distinfo,v 1.8 2019/04/25 20:50:23 markd Exp $
 
-SHA1 (kio-5.47.0.tar.xz) = 7b0ddaadc6871a4263939264bf13175a9d896d27
-RMD160 (kio-5.47.0.tar.xz) = 99b8c5034193b517d0a7cd4b1b75381c1a9f5ea1
-SHA512 (kio-5.47.0.tar.xz) = 2f0003fb8f6d755cb101e82841f1b4d7f0b464759624794ad6289aff4cd1ddfcaa2d5605b00733e021955cf5b601058f06f09c7e154934735fbbbd785fdc4c8e
-Size (kio-5.47.0.tar.xz) = 3159580 bytes
+SHA1 (kio-5.57.0.tar.xz) = dc4eb6d00b76256a96a6a62a03b6162f74b4a684
+RMD160 (kio-5.57.0.tar.xz) = 4900f77c8744a1338b7e4a125791006222d7a871
+SHA512 (kio-5.57.0.tar.xz) = 88d07ae8f8de356999a4b4de5fc73d7c0b6e707145643629ade12be2c72a892b20003bddf93f64b8f1711d32be58d23799f9df8d6e7fc9e42b35f1b8c6a3c977
+Size (kio-5.57.0.tar.xz) = 3166500 bytes
 SHA1 (patch-src_core_config-kmountpoint.h.cmake) = 7da0ea584a8c10b7b5476dd91f56a284869f056c
-SHA1 (patch-src_ioslaves_file_file.cpp) = 2c6269f8a4b7a505612ff84cb247190b5f5096e6
-SHA1 (patch-src_ioslaves_file_file__unix.cpp) = 2f5350b513364099fde558745fdd608c629c07d1
+SHA1 (patch-src_ioslaves_file_file.cpp) = ecd5574c59b4f4db8a2e303e71894e0c527f4650
