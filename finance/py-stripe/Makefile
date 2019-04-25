@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2019/01/15 19:14:07 adam Exp $
+# $NetBSD: Makefile,v 1.16 2019/04/25 05:06:20 adam Exp $
 
-DISTNAME=	stripe-2.18.0
+DISTNAME=	stripe-2.27.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/stripe/}
