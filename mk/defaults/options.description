@@ -547,6 +547,7 @@ nghttp2-asio		Build the nghttp2 ASIO C++ library.
 nghttp2-tools		Build the supplied nghttp2 apps and tools.
 nginx			Enable support for Nginx web server.
 ninja-build		Enable build by ninja-build.
+nis			Enable Network Information Service / Yellow Pages / YP.
 nls			Use native language support.
 nntp			Enable Network News Transport Protocol (NNTP) support.
 nntpcache-pgp		Enable pgp signed nocem support.
