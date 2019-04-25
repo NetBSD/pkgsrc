@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2019/02/06 11:23:27 adam Exp $
+# $NetBSD: Makefile,v 1.8 2019/04/25 12:44:10 adam Exp $
 
-DISTNAME=	xopen-0.5.0
+DISTNAME=	xopen-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xopen/}
