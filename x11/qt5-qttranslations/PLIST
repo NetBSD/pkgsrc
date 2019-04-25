@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/03/26 11:14:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/04/25 19:43:17 adam Exp $
 qt5/translations/assistant_ar.qm
 qt5/translations/assistant_bg.qm
 qt5/translations/assistant_cs.qm
@@ -124,6 +124,7 @@ qt5/translations/qtbase_pl.qm
 qt5/translations/qtbase_ru.qm
 qt5/translations/qtbase_sk.qm
 qt5/translations/qtbase_uk.qm
+qt5/translations/qtbase_zh_TW.qm
 qt5/translations/qtconnectivity_bg.qm
 qt5/translations/qtconnectivity_da.qm
 qt5/translations/qtconnectivity_de.qm
@@ -179,14 +180,18 @@ qt5/translations/qtmultimedia_pl.qm
 qt5/translations/qtmultimedia_ru.qm
 qt5/translations/qtmultimedia_sk.qm
 qt5/translations/qtmultimedia_uk.qm
+qt5/translations/qtmultimedia_zh_TW.qm
 qt5/translations/qtquickcontrols2_ar.qm
 qt5/translations/qtquickcontrols2_bg.qm
+qt5/translations/qtquickcontrols2_ca.qm
 qt5/translations/qtquickcontrols2_da.qm
 qt5/translations/qtquickcontrols2_en.qm
 qt5/translations/qtquickcontrols2_hu.qm
 qt5/translations/qtquickcontrols2_ko.qm
 qt5/translations/qtquickcontrols2_uk.qm
+qt5/translations/qtquickcontrols2_zh_TW.qm
 qt5/translations/qtquickcontrols_bg.qm
+qt5/translations/qtquickcontrols_ca.qm
 qt5/translations/qtquickcontrols_da.qm
 qt5/translations/qtquickcontrols_de.qm
 qt5/translations/qtquickcontrols_en.qm
@@ -195,6 +200,7 @@ qt5/translations/qtquickcontrols_fr.qm
 qt5/translations/qtquickcontrols_ja.qm
 qt5/translations/qtquickcontrols_ru.qm
 qt5/translations/qtquickcontrols_uk.qm
+qt5/translations/qtquickcontrols_zh_TW.qm
 qt5/translations/qtscript_ar.qm
 qt5/translations/qtscript_bg.qm
 qt5/translations/qtscript_ca.qm
@@ -255,3 +261,4 @@ qt5/translations/qtxmlpatterns_pl.qm
 qt5/translations/qtxmlpatterns_ru.qm
 qt5/translations/qtxmlpatterns_sk.qm
 qt5/translations/qtxmlpatterns_uk.qm
+qt5/translations/qtxmlpatterns_zh_TW.qm

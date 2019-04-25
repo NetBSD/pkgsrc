@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2019/04/03 00:33:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.33 2019/04/25 19:43:17 adam Exp $
 
 DISTNAME=	qtserialport-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtserialport-${QTVERSION}
-PKGREVISION=	1
 COMMENT=	Qt5 module for Serial Port
 
 BUILD_TARGET=		sub-src

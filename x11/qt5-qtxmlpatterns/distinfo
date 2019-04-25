@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2019/03/26 11:14:19 adam Exp $
+$NetBSD: distinfo,v 1.11 2019/04/25 19:43:17 adam Exp $
 
-SHA1 (qtxmlpatterns-everywhere-src-5.12.2.tar.xz) = 7925373e664843b015fb427517a86219a1cb07d5
-RMD160 (qtxmlpatterns-everywhere-src-5.12.2.tar.xz) = 6b3be2344e3e9b30759910a56340fd896a0e0f4b
-SHA512 (qtxmlpatterns-everywhere-src-5.12.2.tar.xz) = 2d9b7f0e8496f67f1c1142ea406c710329bbe40cea7a19006ebae06ea746f83e40d3992068ad43370462378c08f094bb0bcb975104859503acc30ead35d30329
-Size (qtxmlpatterns-everywhere-src-5.12.2.tar.xz) = 1389320 bytes
+SHA1 (qtxmlpatterns-everywhere-src-5.12.3.tar.xz) = 3cb49ec9166a29011f4966191bef6a293deef987
+RMD160 (qtxmlpatterns-everywhere-src-5.12.3.tar.xz) = c9ba8e52290f39842c46e1b51e15454e8fa29726
+SHA512 (qtxmlpatterns-everywhere-src-5.12.3.tar.xz) = 4e421f0c78ca74f726f758bd95b33915297922f3b5a4fff84dde2600969f54f3914828fdb7903c7171e192f81966680b6c6bb4750de0be72728124470e7c798d
+Size (qtxmlpatterns-everywhere-src-5.12.3.tar.xz) = 1389612 bytes
 SHA1 (patch-src_imports_imports.pro) = 6bcac62bbfe46fc3e245b2cda5b9bbd172eac6cd

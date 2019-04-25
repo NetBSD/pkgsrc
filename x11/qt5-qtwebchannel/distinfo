@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2019/03/26 11:14:18 adam Exp $
+$NetBSD: distinfo,v 1.10 2019/04/25 19:43:17 adam Exp $
 
-SHA1 (qtwebchannel-everywhere-src-5.12.2.tar.xz) = c55577cd87d671e4e36cb5c8ea29d68b43025d4d
-RMD160 (qtwebchannel-everywhere-src-5.12.2.tar.xz) = a7adfc875205eecde7fa39b8c7fc201273e4ecb1
-SHA512 (qtwebchannel-everywhere-src-5.12.2.tar.xz) = 73f16385788730339bb5e059f89b6e339b84e6ac1826c4fa1fe8843028e4cb629d3c6e50365673325f736766d039c660e6ede3d3890638167225de6bbde1e659
-Size (qtwebchannel-everywhere-src-5.12.2.tar.xz) = 182736 bytes
+SHA1 (qtwebchannel-everywhere-src-5.12.3.tar.xz) = cb6dc24cf4148fa0edbdc1c8c4bfd6c9fec1b34c
+RMD160 (qtwebchannel-everywhere-src-5.12.3.tar.xz) = d29882fccaa185a22bd0ea6e78724193d1f7712d
+SHA512 (qtwebchannel-everywhere-src-5.12.3.tar.xz) = 2dda4351f5f3a5895a955d0ee77e55f758233672005a068d3e840a01d379727f99287fc6c8fb96516f23a5a8c4ebcb61098690fd3351e79be608e28657534006
+Size (qtwebchannel-everywhere-src-5.12.3.tar.xz) = 182808 bytes
