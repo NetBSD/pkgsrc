@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2018/10/03 12:48:44 nia Exp $
+# $NetBSD: Makefile,v 1.4 2019/04/25 13:46:11 nia Exp $
 
-DISTNAME=	libretro-bluemsx-20180811
+DISTNAME=	libretro-bluemsx-20190420
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	blueMSX-libretro
-GITHUB_TAG=	8ff0884d2b80d67b55ee46e3b5429ce5d5ee6538
+GITHUB_TAG=	fe31638aed9c12ed8218965506c3054f11fabf7c
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://docs.libretro.com/library/bluemsx/
