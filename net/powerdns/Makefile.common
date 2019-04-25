@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.26 2019/02/20 12:21:05 adam Exp $
+# $NetBSD: Makefile.common,v 1.27 2019/04/25 18:42:41 adam Exp $
 
-PDNS_VERSION=	4.1.6
+PDNS_VERSION=	4.1.8
 DISTNAME=	pdns-${PDNS_VERSION}
 CATEGORIES=	net
 MASTER_SITES=	http://downloads.powerdns.com/releases/
@@ -12,8 +12,8 @@ LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=		ragel-[0-9]*:../../devel/ragel
 
-USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
 USE_TOOLS+=		bison flex gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-headers}
