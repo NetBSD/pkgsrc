@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2019/01/02 15:32:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/04/25 13:19:48 adam Exp $
 bin/jupyter-bundlerextension-${PYVERSSUFFIX}
 bin/jupyter-nbextension-${PYVERSSUFFIX}
 bin/jupyter-notebook-${PYVERSSUFFIX}
@@ -43,6 +43,9 @@ ${PYSITELIB}/notebook/auth/security.pyo
 ${PYSITELIB}/notebook/auth/tests/__init__.py
 ${PYSITELIB}/notebook/auth/tests/__init__.pyc
 ${PYSITELIB}/notebook/auth/tests/__init__.pyo
+${PYSITELIB}/notebook/auth/tests/test_login.py
+${PYSITELIB}/notebook/auth/tests/test_login.pyc
+${PYSITELIB}/notebook/auth/tests/test_login.pyo
 ${PYSITELIB}/notebook/auth/tests/test_security.py
 ${PYSITELIB}/notebook/auth/tests/test_security.pyc
 ${PYSITELIB}/notebook/auth/tests/test_security.pyo
