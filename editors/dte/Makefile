@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2017/11/24 06:46:01 kamil Exp $
 
-DISTNAME=	dte-1.5
+DISTNAME=	dte-1.8.2
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=craigbarnes/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
