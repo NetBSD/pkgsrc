@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2018/10/25 21:46:03 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2019/04/25 07:33:05 maya Exp $
 
 DISTNAME=	libsvm-3.20
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	https://www.csie.ntu.edu.tw/~cjlin/libsvm/
 

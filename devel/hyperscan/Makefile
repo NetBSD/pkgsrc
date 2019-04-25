@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2018/07/25 00:26:30 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2019/04/25 07:32:46 maya Exp $
 
 DISTNAME=	hyperscan-5.0.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=01org/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

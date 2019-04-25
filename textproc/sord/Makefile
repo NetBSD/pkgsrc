@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2019/01/02 19:46:10 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4 2019/04/25 07:33:25 maya Exp $
 
 DISTNAME=	sord-0.16.2
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://download.drobilla.net/
 EXTRACT_SUFX=	.tar.bz2

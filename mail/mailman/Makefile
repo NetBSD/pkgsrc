@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.83 2019/03/25 01:52:02 jklos Exp $
+# $NetBSD: Makefile,v 1.84 2019/04/25 07:33:04 maya Exp $
 
 DISTNAME=	mailman-2.1.29
 PKGNAME=	mailman-2.1.29
+PKGREVISION=	1
 CATEGORIES=	mail www
 MASTER_SITES=	https://launchpad.net/mailman/2.1/2.1.29/+download/
 EXTRACT_SUFX=	.tgz

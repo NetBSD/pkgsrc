@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2018/11/14 22:21:43 kleink Exp $
+# $NetBSD: Makefile,v 1.19 2019/04/25 07:32:59 maya Exp $
 
 DISTNAME=	opencv-2.4.11
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opencvlibrary/}
 EXTRACT_SUFX=	.zip

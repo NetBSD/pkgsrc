@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2017/09/04 18:08:27 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/04/25 07:33:17 maya Exp $
 
 DISTNAME=	sshfp-1.1.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	security net
 #MASTER_SITES=	https://www.xelerance.com/software/sshfp/
 

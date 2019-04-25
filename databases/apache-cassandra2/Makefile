@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2018/06/09 11:37:49 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2019/04/25 07:32:40 maya Exp $
 #
 
 CASSANDRA_VER=	2.2.12
-PKGREVISION=	1
+PKGREVISION=	2
 
 MASTER_SITES=	${MASTER_SITE_APACHE:=cassandra/${CASSANDRA_VER:C/-.*//}/}
 
