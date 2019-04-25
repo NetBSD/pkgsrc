@@ -1,9 +1,9 @@
-$NetBSD: patch-rapid_plugin_x_CMakeLists.txt,v 1.4 2018/11/22 16:14:53 adam Exp $
+$NetBSD: patch-rapid_plugin_x_CMakeLists.txt,v 1.5 2019/04/25 10:13:04 adam Exp $
 
 Use system OpenSSL.
 Fix mysqlxtest binary linking.
 
---- rapid/plugin/x/CMakeLists.txt.orig	2018-10-04 05:48:22.000000000 +0000
+--- rapid/plugin/x/CMakeLists.txt.orig	2019-04-13 13:32:15.000000000 +0000
 +++ rapid/plugin/x/CMakeLists.txt
 @@ -92,13 +92,13 @@ ELSE()
      ${CMAKE_SOURCE_DIR}/include #temporary
@@ -15,7 +15,7 @@ Fix mysqlxtest binary linking.
    INCLUDE_DIRECTORIES(SYSTEM
      ${BOOST_INCLUDE_DIR}
      ${PROTOBUF_INCLUDE_DIRS}
-     ${LIBEVENT_INCLUDE_DIR}
+     ${LIBEVENT_INCLUDE_DIRS}
 +    ${SSL_INCLUDE_DIRS}
    )
  
