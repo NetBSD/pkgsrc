@@ -1,6 +1,7 @@
-$NetBSD: patch-libffi_configure,v 1.2 2019/04/18 19:18:02 rillig Exp $
+$NetBSD: patch-libffi_configure,v 1.3 2019/04/25 17:07:06 rillig Exp $
 
 https://gcc.gnu.org/bugzilla/show_bug.cgi?id=90146
+https://github.com/libffi/libffi/issues/485
 
 --- libffi/configure.orig	2013-06-01 17:03:49.000000000 +0000
 +++ libffi/configure
