@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1801 2019/04/24 23:47:28 fox Exp $
+$NetBSD: CHANGES-2019,v 1.1802 2019/04/25 05:14:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2840,3 +2840,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/opencv to 3.4.6 [adam 2019-04-24]
 	Updated graphics/opencv-contrib-face to 3.4.6 [adam 2019-04-24]
 	Added chat/coyim version 0.3.11 [fox 2019-04-24]
+	Updated www/py-urllib3 to 1.25.1 [adam 2019-04-25]
+	Updated finance/py-stripe to 2.27.0 [adam 2019-04-25]
+	Updated security/py-asn1-modules to 0.2.5 [adam 2019-04-25]
+	Updated www/py-pylint-django to 2.0.8 [adam 2019-04-25]
