@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2018/06/21 07:26:15 markd Exp $
+$NetBSD: distinfo,v 1.4 2019/04/25 21:17:14 markd Exp $
 
-SHA1 (kirigami2-5.47.0.tar.xz) = bae0a08ec9c524f8bb32b64f39fc758e81b8c29d
-RMD160 (kirigami2-5.47.0.tar.xz) = 8689d0bbfb63443da2ad2848a114810da3353ea7
-SHA512 (kirigami2-5.47.0.tar.xz) = 9c870ae2bfba2b7281eb054e834298c5f1be817156298b0908f526a0ce60773f8bf66b445b0b2d3631c05ed87be961cbf9abaa51a83d8bd9773d38f2bf374881
-Size (kirigami2-5.47.0.tar.xz) = 317692 bytes
+SHA1 (kirigami2-5.57.0.tar.xz) = 69b7c79d9bb7696bab3942b4ffde67947d0e5bcf
+RMD160 (kirigami2-5.57.0.tar.xz) = 0cc87d726c40513a4b43d8509e0e802e6f83df8f
+SHA512 (kirigami2-5.57.0.tar.xz) = 10631cd367a5f55c09f1fba1488ba43b1e2146138e8dfb1d15d36868dbfff3ae06c3d111290b0fa118db9248c166d2aa2c13a95ed07ed0424ee059cb0d1fafe3
+Size (kirigami2-5.57.0.tar.xz) = 137836 bytes
