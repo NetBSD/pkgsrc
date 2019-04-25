@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2018/06/21 06:44:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/04/25 21:05:22 markd Exp $
+include/KF5/KFileMetaData/KFileMetaData/EmbeddedImageData
 include/KF5/KFileMetaData/KFileMetaData/ExtractionResult
 include/KF5/KFileMetaData/KFileMetaData/Extractor
 include/KF5/KFileMetaData/KFileMetaData/ExtractorCollection
 include/KF5/KFileMetaData/KFileMetaData/ExtractorPlugin
+include/KF5/KFileMetaData/KFileMetaData/MimeUtils
 include/KF5/KFileMetaData/KFileMetaData/Properties
 include/KF5/KFileMetaData/KFileMetaData/PropertyInfo
 include/KF5/KFileMetaData/KFileMetaData/SimpleExtractionResult
@@ -13,11 +15,13 @@ include/KF5/KFileMetaData/KFileMetaData/WriteData
 include/KF5/KFileMetaData/KFileMetaData/Writer
 include/KF5/KFileMetaData/KFileMetaData/WriterCollection
 include/KF5/KFileMetaData/KFileMetaData/WriterPlugin
+include/KF5/KFileMetaData/kfilemetadata/embeddedimagedata.h
 include/KF5/KFileMetaData/kfilemetadata/extractionresult.h
 include/KF5/KFileMetaData/kfilemetadata/extractor.h
 include/KF5/KFileMetaData/kfilemetadata/extractorcollection.h
 include/KF5/KFileMetaData/kfilemetadata/extractorplugin.h
 include/KF5/KFileMetaData/kfilemetadata/kfilemetadata_export.h
+include/KF5/KFileMetaData/kfilemetadata/mimeutils.h
 include/KF5/KFileMetaData/kfilemetadata/properties.h
 include/KF5/KFileMetaData/kfilemetadata/propertyinfo.h
 include/KF5/KFileMetaData/kfilemetadata/simpleextractionresult.h
@@ -38,18 +42,18 @@ lib/libKF5FileMetaData.so.${PKGVERSION}
 qt5/mkspecs/modules/qt_KFileMetaData.pri
 qt5/plugins/kf5/kfilemetadata/kfilemetadata_epubextractor.so
 qt5/plugins/kf5/kfilemetadata/kfilemetadata_exiv2extractor.so
-qt5/plugins/kf5/kfilemetadata/kfilemetadata_ffmpegextractor.so
 qt5/plugins/kf5/kfilemetadata/kfilemetadata_odfextractor.so
 qt5/plugins/kf5/kfilemetadata/kfilemetadata_office2007extractor.so
 qt5/plugins/kf5/kfilemetadata/kfilemetadata_officeextractor.so
 qt5/plugins/kf5/kfilemetadata/kfilemetadata_plaintextextractor.so
 qt5/plugins/kf5/kfilemetadata/kfilemetadata_poextractor.so
 qt5/plugins/kf5/kfilemetadata/kfilemetadata_popplerextractor.so
+qt5/plugins/kf5/kfilemetadata/kfilemetadata_postscriptdscextractor.so
 qt5/plugins/kf5/kfilemetadata/kfilemetadata_taglibextractor.so
+qt5/plugins/kf5/kfilemetadata/kfilemetadata_xmlextractor.so
 qt5/plugins/kf5/kfilemetadata/writers/kfilemetadata_taglibwriter.so
 share/examples/kde-xdg/kfilemetadata.categories
 share/locale/ar/LC_MESSAGES/kfilemetadata5.mo
-share/locale/ast/LC_MESSAGES/kfilemetadata5.mo
 share/locale/bg/LC_MESSAGES/kfilemetadata5.mo
 share/locale/bs/LC_MESSAGES/kfilemetadata5.mo
 share/locale/ca/LC_MESSAGES/kfilemetadata5.mo

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2019/04/25 07:33:18 maya Exp $
+# $NetBSD: Makefile,v 1.48 2019/04/25 21:05:22 markd Exp $
 
 DISTNAME=	kfilemetadata-${KF5VER}
 PKGNAME=	${DISTNAME:S/-/5-/}
-PKGREVISION=	13
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -28,6 +27,7 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kfilemetadata.categories \
 .include "../../lang/python/tool.mk"
 .include "../../archivers/karchive/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
+.include "../../devel/kcoreaddons/buildlink3.mk"
 .include "../../devel/ki18n/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../multimedia/ffmpeg3/buildlink3.mk"
