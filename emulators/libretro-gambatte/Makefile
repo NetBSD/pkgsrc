@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2018/10/28 13:04:40 nia Exp $
+# $NetBSD: Makefile,v 1.7 2019/04/25 13:50:19 nia Exp $
 
-DISTNAME=	libretro-gambatte-20181022
+DISTNAME=	libretro-gambatte-20190412
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	gambatte-libretro
-GITHUB_TAG=	5ee8b1e9da0835be8e526e9e4ff73346eef20fd1
+GITHUB_TAG=	7d4beec1ff69098a602c12d38a76465510cb8ebc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://docs.libretro.com/library/gambatte/
