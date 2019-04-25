@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2018/07/03 05:03:07 adam Exp $
+# $NetBSD: Makefile,v 1.11 2019/04/25 07:32:42 maya Exp $
 
 DISTNAME=	skytools-3.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases
 MASTER_SITES=	http://pgfoundry.org/frs/download.php/3622/
 

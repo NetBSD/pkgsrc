@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2017/11/15 22:13:24 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/04/25 07:33:05 maya Exp $
 
 DISTNAME=	libshorttext-1.1
+PKGREVISION=	1
 CATEGORIES=	math textproc
 MASTER_SITES=	https://www.csie.ntu.edu.tw/~cjlin/libshorttext/
 

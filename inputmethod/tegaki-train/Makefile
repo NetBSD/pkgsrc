@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2018/07/03 05:03:22 adam Exp $
+# $NetBSD: Makefile,v 1.12 2019/04/25 07:33:01 maya Exp $
 
 DISTNAME=	tegaki-train-0.3.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://www.tegaki.org/releases/${PKGVERSION_NOREV}/
 

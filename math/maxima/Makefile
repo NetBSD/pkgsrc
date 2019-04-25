@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2018/08/22 09:45:36 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2019/04/25 07:33:05 maya Exp $
 
 DISTNAME=		maxima-5.41.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=maxima/}
 

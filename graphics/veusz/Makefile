@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2018/03/12 11:16:51 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2019/04/25 07:32:59 maya Exp $
 
 DISTNAME=		veusz-1.21
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		graphics
 MASTER_SITES=		http://download.gna.org/veusz/
 

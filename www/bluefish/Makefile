@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.137 2018/12/02 19:35:26 bsiegert Exp $
+# $NetBSD: Makefile,v 1.138 2019/04/25 07:33:26 maya Exp $
 
 DISTNAME=	bluefish-2.2.10
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bluefish/${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.bz2

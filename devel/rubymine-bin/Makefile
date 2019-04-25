@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2019/03/03 18:45:05 youri Exp $
+# $NetBSD: Makefile,v 1.2 2019/04/25 07:32:50 maya Exp $
 
 
 VERSION=	2018.3.5
 DISTNAME=	RubyMine-${VERSION}
 PKGNAME=	rubymine-bin-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://download.jetbrains.com/ruby/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2018/12/15 21:12:22 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2019/04/25 07:33:12 maya Exp $
 
 DISTNAME=		rabbitmq-server-3.7.7
 PKGNAME=		${DISTNAME:S/-server//}
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=rabbitmq/}
 EXTRACT_SUFX=		.tar.xz
