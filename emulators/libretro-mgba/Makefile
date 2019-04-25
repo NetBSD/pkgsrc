@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2019/01/27 17:04:16 nia Exp $
+# $NetBSD: Makefile,v 1.4 2019/04/25 12:44:23 nia Exp $
 
-DISTNAME=	libretro-mgba-0.7.0
+DISTNAME=	libretro-mgba-0.7.1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mgba-emu/}
 GITHUB_PROJECT=	mgba
