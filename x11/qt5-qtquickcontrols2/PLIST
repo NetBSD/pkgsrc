@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/12/18 09:57:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/04/25 19:43:16 adam Exp $
 lib/pkgconfig/Qt5QuickControls2.pc
 qt5/include/QtQuickControls2/${PKGVERSION}/QtQuickControls2/private/qquickanimatednode_p.h
 qt5/include/QtQuickControls2/${PKGVERSION}/QtQuickControls2/private/qquickattachedobject_p.h
@@ -136,6 +136,8 @@ qt5/include/QtQuickTemplates2/qtquicktemplates2-config.h
 qt5/include/QtQuickTemplates2/qtquicktemplates2version.h
 qt5/lib/cmake/Qt5QuickControls2/Qt5QuickControls2Config.cmake
 qt5/lib/cmake/Qt5QuickControls2/Qt5QuickControls2ConfigVersion.cmake
+qt5/lib/cmake/Qt5QuickTemplates2/Qt5QuickTemplates2Config.cmake
+qt5/lib/cmake/Qt5QuickTemplates2/Qt5QuickTemplates2ConfigVersion.cmake
 qt5/lib/libQt5QuickControls2.prl
 qt5/lib/libQt5QuickControls2.so
 qt5/lib/libQt5QuickControls2.so.${PKGVERSION}
@@ -147,8 +149,10 @@ qt5/lib/libQt5QuickTemplates2.so.${PKGVERSION}
 qt5/lib/libQt5QuickTemplates2.so.5
 qt5/lib/libQt5QuickTemplates2.so.5.12
 qt5/lib/pkgconfig/Qt5QuickControls2.pc
+qt5/lib/pkgconfig/Qt5QuickTemplates2.pc
 qt5/mkspecs/modules/qt_lib_quickcontrols2.pri
 qt5/mkspecs/modules/qt_lib_quickcontrols2_private.pri
+qt5/mkspecs/modules/qt_lib_quicktemplates2.pri
 qt5/mkspecs/modules/qt_lib_quicktemplates2_private.pri
 qt5/qml/Qt/labs/calendar/DayOfWeekRow.qml
 qt5/qml/Qt/labs/calendar/DayOfWeekRow.qmlc
