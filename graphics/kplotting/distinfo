@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/06/21 06:14:33 markd Exp $
+$NetBSD: distinfo,v 1.6 2019/04/25 20:53:51 markd Exp $
 
-SHA1 (kplotting-5.47.0.tar.xz) = e8923c26f042a05124cd7ec575f54639601b7026
-RMD160 (kplotting-5.47.0.tar.xz) = 4973422c385c0f182ac3af5eefd60ed08f9b8337
-SHA512 (kplotting-5.47.0.tar.xz) = cd44216fde8bf3463bf87a22809adf1901572d1d4aca970bfd26653039f54586b3456fe0d3c906f2b299c094d04832ab784d1ba66aa5430fb2da914689abe3b2
-Size (kplotting-5.47.0.tar.xz) = 29744 bytes
+SHA1 (kplotting-5.57.0.tar.xz) = 19632adb4e2a1df63dc0cb82e68f1b869c3547b6
+RMD160 (kplotting-5.57.0.tar.xz) = f0d446a1c56f7b479b9b33278603197d9936ba37
+SHA512 (kplotting-5.57.0.tar.xz) = 36f8398890d39f920eb1d3fa09452b19a1c605b77c0babe88b33639efbfc5b16432a8f1369f718344123af37ad8e102d7e48752af50a102559182bdad0931298
+Size (kplotting-5.57.0.tar.xz) = 29764 bytes
