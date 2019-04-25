@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2019/04/03 00:33:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2019/04/25 12:50:28 nia Exp $
 
-DISTNAME=	maim-5.5.2
-PKGREVISION=	2
+DISTNAME=	maim-5.5.3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=naelstrof/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
