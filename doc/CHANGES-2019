@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1803 2019/04/25 07:28:14 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1804 2019/04/25 09:04:09 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2846,3 +2846,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-pylint-django to 2.0.8 [adam 2019-04-25]
 	Updated textproc/py-validators to 0.12.5 [adam 2019-04-25]
 	Updated devel/py-lama to 7.7.1 [adam 2019-04-25]
+	Updated pkgtools/x11-links to 1.17 [maya 2019-04-25]
