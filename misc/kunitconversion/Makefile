@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2019/04/25 07:33:07 maya Exp $
+# $NetBSD: Makefile,v 1.19 2019/04/25 20:56:31 markd Exp $
 
 DISTNAME=	kunitconversion-${KF5VER}
-PKGREVISION=	5
 CATEGORIES=	misc
 
 HOMEPAGE=	https://community.kde.org/Frameworks
