@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18952 2019/04/23 09:52:00 wiz Exp $
+$NetBSD: TODO,v 1.18953 2019/04/25 14:55:03 tron Exp $
 
 Suggested new packages
 ======================
@@ -1041,7 +1041,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o opensc-0.19.0
 	o openslp-2.0.0
 	o opensmtpd-6.0.0
-	o openssh-7.9p1
 	o openssl-1.0.2q
 	o openvas-libraries-8.0.8
 	o opera-26
