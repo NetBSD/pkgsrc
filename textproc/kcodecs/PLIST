@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/02/01 10:09:38 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/04/25 21:08:10 markd Exp $
 include/KF5/KCodecs/KCharsets
 include/KF5/KCodecs/KCodecs
 include/KF5/KCodecs/KEmailAddress
@@ -21,7 +21,6 @@ share/examples/kde-xdg/kcodecs.categories
 share/locale/af/LC_MESSAGES/kcodecs5_qt.qm
 share/locale/ar/LC_MESSAGES/kcodecs5_qt.qm
 share/locale/as/LC_MESSAGES/kcodecs5_qt.qm
-share/locale/ast/LC_MESSAGES/kcodecs5_qt.qm
 share/locale/be/LC_MESSAGES/kcodecs5_qt.qm
 share/locale/be@latin/LC_MESSAGES/kcodecs5_qt.qm
 share/locale/bg/LC_MESSAGES/kcodecs5_qt.qm
