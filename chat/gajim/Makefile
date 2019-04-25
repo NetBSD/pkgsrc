@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.49 2019/04/25 07:32:38 maya Exp $
+# $NetBSD: Makefile,v 1.50 2019/04/25 13:35:01 nia Exp $
 
-DISTNAME=	gajim-1.1.2
-PKGREVISION=	1
+DISTNAME=	gajim-1.1.3
 CATEGORIES=	chat python
 MASTER_SITES=	https://www.gajim.org/downloads/1.1/
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gajim.org/
 COMMENT=	XMPP/Jabber chat client written in Python/GTK3
 LICENSE=	gnu-gpl-v3
