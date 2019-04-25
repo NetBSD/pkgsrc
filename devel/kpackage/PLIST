@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/04/11 11:50:36 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/04/25 20:50:24 markd Exp $
 bin/kpackagetool5
 include/KF5/KPackage/KPackage/Package
 include/KF5/KPackage/KPackage/PackageLoader
@@ -14,6 +14,8 @@ lib/cmake/KF5Package/KF5PackageConfigVersion.cmake
 lib/cmake/KF5Package/KF5PackageMacros.cmake
 lib/cmake/KF5Package/KF5PackageTargets-noconfig.cmake
 lib/cmake/KF5Package/KF5PackageTargets.cmake
+lib/cmake/KF5Package/KF5PackageToolsTargets-noconfig.cmake
+lib/cmake/KF5Package/KF5PackageToolsTargets.cmake
 lib/cmake/KF5Package/qrc.cmake
 lib/libKF5Package.so
 lib/libKF5Package.so.5
@@ -33,7 +35,6 @@ share/kservicetypes5/kpackage-generic.desktop
 share/kservicetypes5/kpackage-genericqml.desktop
 share/kservicetypes5/kpackage-packagestructure.desktop
 share/locale/ar/LC_MESSAGES/libkpackage5.mo
-share/locale/ast/LC_MESSAGES/libkpackage5.mo
 share/locale/bs/LC_MESSAGES/libkpackage5.mo
 share/locale/ca/LC_MESSAGES/libkpackage5.mo
 share/locale/ca@valencia/LC_MESSAGES/libkpackage5.mo
