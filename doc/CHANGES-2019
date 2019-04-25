@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1809 2019/04/25 12:50:37 nia Exp $
+$NetBSD: CHANGES-2019,v 1.1810 2019/04/25 12:57:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2854,3 +2854,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated emulators/qemu to 4.0.0nb2 [skrll 2019-04-25]
 	Updated emulators/libretro-mgba to 0.7.1 [nia 2019-04-25]
 	Updated x11/maim to 5.5.3 [nia 2019-04-25]
+	Updated math/py-roman to 3.2 [adam 2019-04-25]
+	Updated devel/py-xopen to 0.5.1 [adam 2019-04-25]
+	Updated devel/py-faker to 1.0.5 [adam 2019-04-25]
+	Updated devel/py-rope to 0.14.0 [adam 2019-04-25]
