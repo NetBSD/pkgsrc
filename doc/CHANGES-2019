@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1814 2019/04/25 13:21:41 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1815 2019/04/25 13:29:26 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2862,3 +2862,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated emulators/snes9x-gtk to 1.60 [nia 2019-04-25]
 	Updated emulators/libretro-snes9x to 1.60 [nia 2019-04-25]
 	Updated www/py-notebook to 5.7.8 [adam 2019-04-25]
+	Updated chat/py-nbxmpp to 0.6.10 [nia 2019-04-25]
