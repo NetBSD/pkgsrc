@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2019/01/16 17:55:30 youri Exp $
+# $NetBSD: Makefile,v 1.10 2019/04/25 07:32:58 maya Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
-PKGREVISION=	2
+PKGREVISION=	3
 DISTNAME=	mate-icon-theme-faenza-1.20.0
 CATEGORIES=	graphics
 

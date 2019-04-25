@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2018/03/14 17:11:26 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/04/25 07:33:18 maya Exp $
 
 DISTNAME=	dupeguru-src-4.0.3
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	https://download.hardcoded.net/
 

@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/09/25 12:16:37 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2019/04/25 07:33:10 maya Exp $
 
+PKGREVISION= 1
 .include "../../net/freeradius/Makefile.module"
 
 PKGNAME=		${DISTNAME:S/-server/-python/}

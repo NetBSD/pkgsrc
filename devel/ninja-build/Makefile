@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2019/02/17 11:58:50 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2019/04/25 07:32:48 maya Exp $
 
 DISTNAME=	ninja-1.9.0
 PKGNAME=	${DISTNAME:S/ninja/ninja-build/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ninja-build/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
