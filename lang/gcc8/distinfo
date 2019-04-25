@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2019/04/18 19:18:02 rillig Exp $
+$NetBSD: distinfo,v 1.8 2019/04/25 17:07:06 rillig Exp $
 
 SHA1 (gcc-8.2.0.tar.xz) = 19926bdb6c4b58891015929853d41aeff019d400
 RMD160 (gcc-8.2.0.tar.xz) = 4fba19867980d04bed1e62d46d4787c99f4fd13d
@@ -26,7 +26,7 @@ SHA1 (patch-gcc_ginclude_stddef.h) = 583b7931aad14058be75569b0138efad8ac74113
 SHA1 (patch-gcc_lto_lto.c) = 7bd85ac8ade76a28c394f6fbe5d495f91824f79f
 SHA1 (patch-gcc_targhooks.c) = b28d8a9696d07bbfb00b7d8c55193ba99447ff1d
 SHA1 (patch-isl_configure) = 5523c76d95b229b3cd25461b4c2b7af24bf2534e
-SHA1 (patch-libffi_configure) = bcf36cf98791382cc59b01d1b0c4b5a5a40d993a
+SHA1 (patch-libffi_configure) = 22006b20d7f655e2455a7ad613d676703b6c1ccc
 SHA1 (patch-libffi_testsuite_libffi.call_float2.c) = 27b84a11378fb648dfaad0c70abedd77a0a1c1a8
 SHA1 (patch-libgcc_config.host) = 2394da0ec31904ef60da51359ef22041eecfc330
 SHA1 (patch-libgcc_crtstuff.c) = a16d465039de00c195cf0694560140a9c38f3a25
