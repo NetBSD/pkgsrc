@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2019/02/05 20:06:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.34 2019/04/25 08:53:43 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -34,6 +34,7 @@ lib/mysql/plugin/qa_auth_server.so
 lib/mysql/plugin/semisync_master.so
 lib/mysql/plugin/semisync_slave.so
 lib/mysql/plugin/test_udf_services.so
+lib/mysql/plugin/udf_example.so
 lib/mysql/plugin/validate_password.so
 sbin/mysqld
 share/aclocal/mysql.m4
@@ -225,6 +226,7 @@ share/mysql/test/extra/binlog_tests/mysqlbinlog_start_stop_1.inc
 share/mysql/test/extra/binlog_tests/mysqlbinlog_start_stop_2.inc
 share/mysql/test/extra/rpl_tests/check_type.inc
 share/mysql/test/extra/rpl_tests/create_recursive_construct.inc
+share/mysql/test/extra/rpl_tests/create_recursive_construct_stmt_capable_engine.inc
 share/mysql/test/extra/rpl_tests/delayed_slave_wait_on_query.inc
 share/mysql/test/extra/rpl_tests/grep_pattern.inc
 share/mysql/test/extra/rpl_tests/rpl_EE_err.test
@@ -1322,6 +1324,7 @@ share/mysql/test/r/mysql_protocols.result
 share/mysql/test/r/mysql_upgrade.result
 share/mysql/test/r/mysql_upgrade_ssl.result
 share/mysql/test/r/mysqladmin.result
+share/mysql/test/r/mysqladmin_shutdown.result
 share/mysql/test/r/mysqlbinlog.result
 share/mysql/test/r/mysqlbinlog_debug.result
 share/mysql/test/r/mysqlbinlog_mixed_or_statment.result
@@ -2045,6 +2048,7 @@ share/mysql/test/suite/binlog/r/binlog_truncate_kill.result
 share/mysql/test/suite/binlog/r/binlog_truncate_myisam.result
 share/mysql/test/suite/binlog/r/binlog_trx_empty_assertions.result
 share/mysql/test/suite/binlog/r/binlog_unsafe.result
+share/mysql/test/suite/binlog/r/binlog_unsafe_stmt_capable_engine.result
 share/mysql/test/suite/binlog/r/binlog_use_gtid_skip.result
 share/mysql/test/suite/binlog/r/binlog_variables_log_bin.result
 share/mysql/test/suite/binlog/r/binlog_variables_log_bin_index.result
@@ -2184,6 +2188,8 @@ share/mysql/test/suite/binlog/t/binlog_truncate_kill.test
 share/mysql/test/suite/binlog/t/binlog_truncate_myisam.test
 share/mysql/test/suite/binlog/t/binlog_unsafe-master.opt
 share/mysql/test/suite/binlog/t/binlog_unsafe.test
+share/mysql/test/suite/binlog/t/binlog_unsafe_stmt_capable_engine-master.opt
+share/mysql/test/suite/binlog/t/binlog_unsafe_stmt_capable_engine.test
 share/mysql/test/suite/binlog/t/binlog_use_gtid_skip.test
 share/mysql/test/suite/binlog/t/binlog_variables_log_bin-master.opt
 share/mysql/test/suite/binlog/t/binlog_variables_log_bin.test
@@ -3544,6 +3550,7 @@ share/mysql/test/suite/innodb/r/foreign_key.result
 share/mysql/test/suite/innodb/r/ibuf_not_empty.result
 share/mysql/test/suite/innodb/r/import.result
 share/mysql/test/suite/innodb/r/import_update_stats.result
+share/mysql/test/suite/innodb/r/index_length.result
 share/mysql/test/suite/innodb/r/index_tree_operation.result
 share/mysql/test/suite/innodb/r/innodb-2byte-collation.result
 share/mysql/test/suite/innodb/r/innodb-ac-non-locking-select.result
@@ -3753,6 +3760,7 @@ share/mysql/test/suite/innodb/t/ibuf_not_empty-master.opt
 share/mysql/test/suite/innodb/t/ibuf_not_empty.test
 share/mysql/test/suite/innodb/t/import.test
 share/mysql/test/suite/innodb/t/import_update_stats.test
+share/mysql/test/suite/innodb/t/index_length.test
 share/mysql/test/suite/innodb/t/index_tree_operation.test
 share/mysql/test/suite/innodb/t/innodb-2byte-collation-master.opt
 share/mysql/test/suite/innodb/t/innodb-2byte-collation.test
@@ -9467,6 +9475,7 @@ share/mysql/test/t/mysql_protocols.test
 share/mysql/test/t/mysql_upgrade.test
 share/mysql/test/t/mysql_upgrade_ssl.test
 share/mysql/test/t/mysqladmin.test
+share/mysql/test/t/mysqladmin_shutdown.test
 share/mysql/test/t/mysqlbinlog-master.opt
 share/mysql/test/t/mysqlbinlog.test
 share/mysql/test/t/mysqlbinlog_debug.test
