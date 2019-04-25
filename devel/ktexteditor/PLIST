@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2018/04/01 03:48:57 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/04/25 20:50:24 markd Exp $
+include/KF5/KTextEditor/KTextEditor/AbstractAnnotationItemDelegate
 include/KF5/KTextEditor/KTextEditor/AnnotationInterface
 include/KF5/KTextEditor/KTextEditor/Application
 include/KF5/KTextEditor/KTextEditor/Attribute
@@ -12,6 +13,9 @@ include/KF5/KTextEditor/KTextEditor/Cursor
 include/KF5/KTextEditor/KTextEditor/Document
 include/KF5/KTextEditor/KTextEditor/DocumentCursor
 include/KF5/KTextEditor/KTextEditor/Editor
+include/KF5/KTextEditor/KTextEditor/InlineNote
+include/KF5/KTextEditor/KTextEditor/InlineNoteInterface
+include/KF5/KTextEditor/KTextEditor/InlineNoteProvider
 include/KF5/KTextEditor/KTextEditor/MainWindow
 include/KF5/KTextEditor/KTextEditor/MarkInterface
 include/KF5/KTextEditor/KTextEditor/Message
@@ -25,6 +29,7 @@ include/KF5/KTextEditor/KTextEditor/Range
 include/KF5/KTextEditor/KTextEditor/SessionConfigInterface
 include/KF5/KTextEditor/KTextEditor/TextHintInterface
 include/KF5/KTextEditor/KTextEditor/View
+include/KF5/KTextEditor/ktexteditor/abstractannotationitemdelegate.h
 include/KF5/KTextEditor/ktexteditor/annotationinterface.h
 include/KF5/KTextEditor/ktexteditor/application.h
 include/KF5/KTextEditor/ktexteditor/attribute.h
@@ -38,6 +43,9 @@ include/KF5/KTextEditor/ktexteditor/cursor.h
 include/KF5/KTextEditor/ktexteditor/document.h
 include/KF5/KTextEditor/ktexteditor/documentcursor.h
 include/KF5/KTextEditor/ktexteditor/editor.h
+include/KF5/KTextEditor/ktexteditor/inlinenote.h
+include/KF5/KTextEditor/ktexteditor/inlinenoteinterface.h
+include/KF5/KTextEditor/ktexteditor/inlinenoteprovider.h
 include/KF5/KTextEditor/ktexteditor/mainwindow.h
 include/KF5/KTextEditor/ktexteditor/markinterface.h
 include/KF5/KTextEditor/ktexteditor/message.h
@@ -64,6 +72,7 @@ libexec/kauth/kauth_ktexteditor_helper
 qt5/mkspecs/modules/qt_KTextEditor.pri
 qt5/plugins/kf5/parts/katepart.so
 share/dbus-1/system-services/org.kde.ktexteditor.katetextbuffer.service
+share/examples/kde-xdg/ktexteditor.categories
 share/examples/ktexteditor/org.kde.ktexteditor.katetextbuffer.conf
 share/katepart5/script/README.md
 share/kdevappwizard/templates/ktexteditor-plugin.tar.bz2
@@ -72,7 +81,6 @@ share/kservicetypes5/ktexteditor.desktop
 share/kservicetypes5/ktexteditorplugin.desktop
 share/locale/af/LC_MESSAGES/ktexteditor5.mo
 share/locale/ar/LC_MESSAGES/ktexteditor5.mo
-share/locale/ast/LC_MESSAGES/ktexteditor5.mo
 share/locale/be/LC_MESSAGES/ktexteditor5.mo
 share/locale/bg/LC_MESSAGES/ktexteditor5.mo
 share/locale/bn/LC_MESSAGES/ktexteditor5.mo
@@ -103,6 +111,7 @@ share/locale/hr/LC_MESSAGES/ktexteditor5.mo
 share/locale/hsb/LC_MESSAGES/ktexteditor5.mo
 share/locale/hu/LC_MESSAGES/ktexteditor5.mo
 share/locale/ia/LC_MESSAGES/ktexteditor5.mo
+share/locale/id/LC_MESSAGES/ktexteditor5.mo
 share/locale/is/LC_MESSAGES/ktexteditor5.mo
 share/locale/it/LC_MESSAGES/ktexteditor5.mo
 share/locale/ja/LC_MESSAGES/ktexteditor5.mo

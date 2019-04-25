@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2018/06/21 05:58:27 markd Exp $
+$NetBSD: distinfo,v 1.9 2019/04/25 20:50:24 markd Exp $
 
-SHA1 (kservice-5.47.0.tar.xz) = 8495366f5282bf3c0880a4e2ce61982be137c01d
-RMD160 (kservice-5.47.0.tar.xz) = cd6538485258e785b8b1bf0771e02a9852232d4b
-SHA512 (kservice-5.47.0.tar.xz) = 5572e523b2cdb1127de73ccee16b808290dad0a3c6139e969eeb9e2b92eb45db56ccb636495035aab42aabd3433965fefb0e78da2b5b1d17e7d454df01de227d
-Size (kservice-5.47.0.tar.xz) = 249528 bytes
+SHA1 (kservice-5.57.0.tar.xz) = 79949b9f396c96183abb3f87bc04c63aa2846396
+RMD160 (kservice-5.57.0.tar.xz) = 578ce2429fb99ab0c7d9d0602ca780107f5756e8
+SHA512 (kservice-5.57.0.tar.xz) = 8035500c9dc116d89f0c53968a23aa571fd52ad57666ff16c79b279748117409dcae1d28e8f0765e0e7094f0657e35ebd0d601c8fbc4bf2fae37bd7fcefa756e
+Size (kservice-5.57.0.tar.xz) = 251212 bytes
