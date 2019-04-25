@@ -1,19 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2018/06/21 08:15:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/04/25 21:09:21 markd Exp $
 include/KF5/KHolidays/KHolidays/AstroSeasons
 include/KF5/KHolidays/KHolidays/Holiday
 include/KF5/KHolidays/KHolidays/HolidayRegion
 include/KF5/KHolidays/KHolidays/LunarPhase
+include/KF5/KHolidays/KHolidays/SunRiseSet
 include/KF5/KHolidays/KHolidays/Zodiac
-include/KF5/KHolidays/kholidays/AstroSeasons
-include/KF5/KHolidays/kholidays/Holiday
-include/KF5/KHolidays/kholidays/HolidayRegion
-include/KF5/KHolidays/kholidays/LunarPhase
-include/KF5/KHolidays/kholidays/Zodiac
 include/KF5/KHolidays/kholidays/astroseasons.h
 include/KF5/KHolidays/kholidays/holiday.h
 include/KF5/KHolidays/kholidays/holidayregion.h
 include/KF5/KHolidays/kholidays/kholidays_export.h
 include/KF5/KHolidays/kholidays/lunarphase.h
+include/KF5/KHolidays/kholidays/sunriseset.h
 include/KF5/KHolidays/kholidays/zodiac.h
 include/KF5/kholidays_version.h
 lib/cmake/KF5Holidays/KF5HolidaysConfig.cmake
@@ -27,7 +24,6 @@ qt5/mkspecs/modules/qt_KHolidays.pri
 qt5/qml/org/kde/kholidays/libkholidaysdeclarativeplugin.so
 qt5/qml/org/kde/kholidays/qmldir
 share/locale/ar/LC_MESSAGES/libkholidays5_qt.qm
-share/locale/ast/LC_MESSAGES/libkholidays5_qt.qm
 share/locale/be/LC_MESSAGES/libkholidays5_qt.qm
 share/locale/bg/LC_MESSAGES/libkholidays5_qt.qm
 share/locale/br/LC_MESSAGES/libkholidays5_qt.qm
