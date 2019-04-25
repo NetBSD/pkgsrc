@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2019/04/03 13:17:27 maya Exp $
+# $NetBSD: Makefile,v 1.80 2019/04/25 15:59:54 roy Exp $
 
 .include "dist.mk"
 
@@ -80,7 +80,7 @@ IS_64BIT_PLATFORM?=	yes
 IS_64BIT_PLATFORM?=	no
 .endif
 
-PLIST_VARS+=	dl dll extra-so nis no-nis qt
+PLIST_VARS+=	dl dll extra-so nis qt
 
 # the dl module isn't built for 64 bit archs
 .if empty(IS_64BIT_PLATFORM:M[yY][eE][sS])
@@ -117,8 +117,6 @@ HAVE_YP_PROT_H=	yes
 .endfor
 .if (${HAVE_RPC_H:Uno} == yes && ${HAVE_YP_PROT_H:Uno} == yes)
 PLIST.nis=	yes
-.else
-PLIST.no-nis=	yes
 .endif
 
 # configure complains about buggy getaddrinfo()

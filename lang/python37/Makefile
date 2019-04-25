@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/04/03 13:17:28 maya Exp $
+# $NetBSD: Makefile,v 1.7 2019/04/25 15:59:54 roy Exp $
 
 .include "dist.mk"
 
@@ -77,7 +77,7 @@ PLIST.oss=	yes
 CFLAGS+=		-I${OSX_SDK_PATH:Q}/usr/include
 .endif
 
-PLIST_VARS+=	nis no-nis
+PLIST_VARS+=	nis
 .for incdir in ${_OPSYS_INCLUDE_DIRS}
 .  if (exists(${incdir}/rpc/rpc.h) || exists(${incdir}/tirpc/rpc/rpc.h))
 HAVE_RPC_H=	yes
@@ -88,8 +88,6 @@ HAVE_YP_PROT_H=	yes
 .endfor
 .if (${HAVE_RPC_H:Uno} == yes && ${HAVE_YP_PROT_H:Uno} == yes)
 PLIST.nis=	yes
-.else
-PLIST.no-nis=	yes
 .endif
 
 PLIST_SUBST+=	PY_VER_SUFFIX=${PY_VER_SUFFIX:Q}
