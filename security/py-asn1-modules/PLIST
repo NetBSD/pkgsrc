@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/01/28 09:14:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/04/25 05:08:50 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -68,9 +68,21 @@ ${PYSITELIB}/pyasn1_modules/rfc3414.pyo
 ${PYSITELIB}/pyasn1_modules/rfc3447.py
 ${PYSITELIB}/pyasn1_modules/rfc3447.pyc
 ${PYSITELIB}/pyasn1_modules/rfc3447.pyo
+${PYSITELIB}/pyasn1_modules/rfc3565.py
+${PYSITELIB}/pyasn1_modules/rfc3565.pyc
+${PYSITELIB}/pyasn1_modules/rfc3565.pyo
+${PYSITELIB}/pyasn1_modules/rfc3779.py
+${PYSITELIB}/pyasn1_modules/rfc3779.pyc
+${PYSITELIB}/pyasn1_modules/rfc3779.pyo
 ${PYSITELIB}/pyasn1_modules/rfc3852.py
 ${PYSITELIB}/pyasn1_modules/rfc3852.pyc
 ${PYSITELIB}/pyasn1_modules/rfc3852.pyo
+${PYSITELIB}/pyasn1_modules/rfc4055.py
+${PYSITELIB}/pyasn1_modules/rfc4055.pyc
+${PYSITELIB}/pyasn1_modules/rfc4055.pyo
+${PYSITELIB}/pyasn1_modules/rfc4108.py
+${PYSITELIB}/pyasn1_modules/rfc4108.pyc
+${PYSITELIB}/pyasn1_modules/rfc4108.pyo
 ${PYSITELIB}/pyasn1_modules/rfc4210.py
 ${PYSITELIB}/pyasn1_modules/rfc4210.pyc
 ${PYSITELIB}/pyasn1_modules/rfc4210.pyo
@@ -92,6 +104,9 @@ ${PYSITELIB}/pyasn1_modules/rfc5280.pyo
 ${PYSITELIB}/pyasn1_modules/rfc5652.py
 ${PYSITELIB}/pyasn1_modules/rfc5652.pyc
 ${PYSITELIB}/pyasn1_modules/rfc5652.pyo
+${PYSITELIB}/pyasn1_modules/rfc5958.py
+${PYSITELIB}/pyasn1_modules/rfc5958.pyc
+${PYSITELIB}/pyasn1_modules/rfc5958.pyo
 ${PYSITELIB}/pyasn1_modules/rfc6402.py
 ${PYSITELIB}/pyasn1_modules/rfc6402.pyc
 ${PYSITELIB}/pyasn1_modules/rfc6402.pyo
@@ -101,3 +116,9 @@ ${PYSITELIB}/pyasn1_modules/rfc8103.pyo
 ${PYSITELIB}/pyasn1_modules/rfc8226.py
 ${PYSITELIB}/pyasn1_modules/rfc8226.pyc
 ${PYSITELIB}/pyasn1_modules/rfc8226.pyo
+${PYSITELIB}/pyasn1_modules/rfc8410.py
+${PYSITELIB}/pyasn1_modules/rfc8410.pyc
+${PYSITELIB}/pyasn1_modules/rfc8410.pyo
+${PYSITELIB}/pyasn1_modules/rfc8418.py
+${PYSITELIB}/pyasn1_modules/rfc8418.pyc
+${PYSITELIB}/pyasn1_modules/rfc8418.pyo
