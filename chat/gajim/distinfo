@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.10 2019/01/30 17:55:24 nia Exp $
+$NetBSD: distinfo,v 1.11 2019/04/25 13:35:01 nia Exp $
 
-SHA1 (gajim-1.1.2.tar.gz) = bfb850c0998e3b686adb48dd6451e5bafc05181e
-RMD160 (gajim-1.1.2.tar.gz) = 0523cbc2feeeba1ae602d6d855ab4df54e021cab
-SHA512 (gajim-1.1.2.tar.gz) = dd0a5bfbff6e7bc079d2a6cd1da3990e7d4f43be557b94887e829f2178fb47cde58ce1c44a205442d3172fd85dfff00df82568b10ae70f6952081e480a65757e
-Size (gajim-1.1.2.tar.gz) = 9531233 bytes
+SHA1 (gajim-1.1.3.tar.gz) = 4dad188cb1cc9835ebecc86a3b13ac11f371b734
+RMD160 (gajim-1.1.3.tar.gz) = cadfcec81e918d9e21264236601c7c1c1b2bbbb4
+SHA512 (gajim-1.1.3.tar.gz) = fea5321c712140a06c417bd7c0878de3a95ea1982203fd67193a165e791848a090ea14df573e7f68a8bef0897bbe9e96e5dd63b4df7afa820f4a55e2406022c4
+Size (gajim-1.1.3.tar.gz) = 9544171 bytes
 SHA1 (patch-gajim_____init____.py) = 555df1ee88159aa0c9d5232fba46924983d7a17b
 SHA1 (patch-setup.py) = f8fd2bb45d0ced7c86972218e1a0194ad35127b8
