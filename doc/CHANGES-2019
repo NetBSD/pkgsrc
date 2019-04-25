@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1822 2019/04/25 15:29:20 leot Exp $
+$NetBSD: CHANGES-2019,v 1.1823 2019/04/25 15:56:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2870,3 +2870,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated emulators/libretro-gambatte to 20190412 [nia 2019-04-25]
 	Updated security/openssh to 7.9.1nb1 [tron 2019-04-25]
 	Updated emulators/qemu to 4.0.0nb3 [leot 2019-04-25]
+	Updated games/openttd to 1.9.1 [adam 2019-04-25]
+	Updated games/openttd-data to 0.5.5 [adam 2019-04-25]
