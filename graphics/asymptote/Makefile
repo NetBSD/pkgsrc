@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2019/01/08 10:58:09 markd Exp $
+# $NetBSD: Makefile,v 1.29 2019/04/25 07:32:57 maya Exp $
 
 DISTNAME=	asymptote-2.41
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=asymptote/}
 EXTRACT_SUFX=	.tgz

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2014/05/17 16:10:47 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2019/04/25 07:33:08 maya Exp $
 #
 
 DISTNAME=	mtail-1.1.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	misc
 MASTER_SITES=	http://matt.immute.net/src/mtail/
 EXTRACT_SUFX=	.tgz

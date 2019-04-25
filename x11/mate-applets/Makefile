@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2019/04/03 00:33:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2019/04/25 07:33:31 maya Exp $
 
 PYTHON_VERSIONS_ACCEPTED=	27
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	mate-applets-${VERSION}

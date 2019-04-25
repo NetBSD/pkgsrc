@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2018/08/19 20:16:40 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/04/25 07:33:06 maya Exp $
 
 DISTNAME=	${PYPKGPREFIX}-gnome-bindings-2.26.2
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 

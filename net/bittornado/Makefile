@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2018/07/03 05:03:26 adam Exp $
+# $NetBSD: Makefile,v 1.17 2019/04/25 07:33:09 maya Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=		5
+PKGREVISION=		6
 
 CONFLICTS=		bittorrent-[0-9]*
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2014/05/17 16:10:46 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/04/25 07:33:03 maya Exp $
 
 DISTNAME=	Nuitka-0.5.0.1
 PKGNAME=	${DISTNAME:C/N/n/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	http://nuitka.net/releases/
 
