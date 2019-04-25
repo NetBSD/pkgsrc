@@ -1,14 +1,19 @@
-@comment $NetBSD: PLIST,v 1.5 2018/05/26 22:15:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/04/25 20:36:40 markd Exp $
 share/ECM/cmake/ECMConfig.cmake
 share/ECM/cmake/ECMConfigVersion.cmake
 share/ECM/find-modules/ECMFindModuleHelpersStub.cmake
+share/ECM/find-modules/FindCanberra.cmake
 share/ECM/find-modules/FindEGL.cmake
+share/ECM/find-modules/FindFontconfig.cmake
 share/ECM/find-modules/FindGLIB2.cmake
 share/ECM/find-modules/FindGperf.cmake
+share/ECM/find-modules/FindIcoTool.cmake
 share/ECM/find-modules/FindInotify.cmake
 share/ECM/find-modules/FindKF5.cmake
+share/ECM/find-modules/FindLibExiv2.cmake
 share/ECM/find-modules/FindLibGit2.cmake
 share/ECM/find-modules/FindOpenEXR.cmake
+share/ECM/find-modules/FindPhoneNumber.cmake
 share/ECM/find-modules/FindPng2Ico.cmake
 share/ECM/find-modules/FindPoppler.cmake
 share/ECM/find-modules/FindPulseAudio.cmake
@@ -18,6 +23,7 @@ share/ECM/find-modules/FindQtWaylandScanner.cmake
 share/ECM/find-modules/FindSasl2.cmake
 share/ECM/find-modules/FindSeccomp.cmake
 share/ECM/find-modules/FindSharedMimeInfo.cmake
+share/ECM/find-modules/FindUDev.cmake
 share/ECM/find-modules/FindWayland.cmake
 share/ECM/find-modules/FindWaylandScanner.cmake
 share/ECM/find-modules/FindX11_XCB.cmake
