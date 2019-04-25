@@ -1,11 +1,7 @@
-$NetBSD: distinfo,v 1.9 2018/01/31 09:14:55 markd Exp $
+$NetBSD: distinfo,v 1.10 2019/04/25 23:35:28 markd Exp $
 
-SHA1 (qca-2.1.3.tar.xz) = b5426f9b0c0cdaec4a069091bb9fc476ef363289
-RMD160 (qca-2.1.3.tar.xz) = 3577bd164bdf41147cfa0e8b4c5db01bde7d20de
-SHA512 (qca-2.1.3.tar.xz) = 0aec277e0695da2e45298f0a9006213829fe4c449a79969e472947db54f45000ba6e22361b782465bdc03f269b7301d318c843f5a83db459a118e58a03f3116a
-Size (qca-2.1.3.tar.xz) = 686340 bytes
+SHA1 (qca-2.2.1.tar.xz) = 012f1259126f1ce40402f236c7531f3e1d1c89da
+RMD160 (qca-2.2.1.tar.xz) = dddc3cf240dc5424b9df13fc1bf41c8e04f3b814
+SHA512 (qca-2.2.1.tar.xz) = 3a0e8aa7cf3ea9a7244facaf1d521ebca2753af37636e7bf5f21c57ae880ac9682ae7d6d9fa5ce41b73568ff9538214956b89cd41228c2cb828d9068c2031a9c
+Size (qca-2.2.1.tar.xz) = 691676 bytes
 SHA1 (patch-CMakeLists.txt) = 4867c54f8bff523233a11201bdb021e6e81a10ed
-SHA1 (patch-plugins_qca-ossl_CMakeLists.txt) = a03e1c2e2d6c89b36060795f6f47c9b513dbf395
-SHA1 (patch-plugins_qca-ossl_libcrypto-compat.c) = 965e4db85e12df55057b3d030c568977b83fb708
-SHA1 (patch-plugins_qca-ossl_libcrypto-compat.h) = 957641557f6767e7c559d3cafba61060029d4e46
-SHA1 (patch-plugins_qca-ossl_qca-ossl.cpp) = bc1ed58f69b1a1c27f7e71b6d5c00a25a49cb37c
