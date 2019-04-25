@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/06/21 05:33:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/04/25 20:50:23 markd Exp $
 bin/kpackagelauncherqml
 include/KF5/KDeclarative/CalendarEvents/CalendarEventsPlugin
 include/KF5/KDeclarative/KDeclarative/ConfigPropertyMap
@@ -53,6 +53,7 @@ qt5/qml/org/kde/kcm/ScrollView.qml
 qt5/qml/org/kde/kcm/ScrollViewKCM.qml
 qt5/qml/org/kde/kcm/SimpleKCM.qml
 qt5/qml/org/kde/kcm/libkcmcontrolsplugin.so
+qt5/qml/org/kde/kcm/private/GridViewInternal.qml
 qt5/qml/org/kde/kcm/qmldir
 qt5/qml/org/kde/kconfig/libkconfigplugin.so
 qt5/qml/org/kde/kconfig/qmldir
@@ -72,7 +73,6 @@ qt5/qml/org/kde/private/kquickcontrols/qmldir
 share/locale/af/LC_MESSAGES/kdeclarative5.mo
 share/locale/ar/LC_MESSAGES/kdeclarative5.mo
 share/locale/as/LC_MESSAGES/kdeclarative5.mo
-share/locale/ast/LC_MESSAGES/kdeclarative5.mo
 share/locale/be/LC_MESSAGES/kdeclarative5.mo
 share/locale/be@latin/LC_MESSAGES/kdeclarative5.mo
 share/locale/bg/LC_MESSAGES/kdeclarative5.mo
