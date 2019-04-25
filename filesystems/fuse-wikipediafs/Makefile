@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2018/07/04 13:40:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.21 2019/04/25 07:32:53 maya Exp $
 
 DISTNAME=	wikipediafs-0.4
 PKGNAME=	fuse-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wikipediafs/}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.142 2018/09/02 14:14:12 bsiegert Exp $
+# $NetBSD: Makefile,v 1.143 2019/04/25 07:33:06 maya Exp $
 
 DISTNAME=	gnome-2.26.2
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
