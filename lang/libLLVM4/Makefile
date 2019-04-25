@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2019/01/26 20:14:02 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2019/04/25 07:33:02 maya Exp $
 
 DISTNAME=	llvm-4.0.1.src
 PKGNAME=	${DISTNAME:S/llvm/libLLVM4/:S/.src//}
+PKGREVISION=	1
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz

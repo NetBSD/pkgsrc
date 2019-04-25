@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2014/05/17 16:10:45 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/04/25 07:33:00 maya Exp $
 
 DISTNAME=	cwtext-0.96
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cwtext/}
 

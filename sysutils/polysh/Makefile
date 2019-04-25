@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2018/07/04 13:40:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2019/04/25 07:33:20 maya Exp $
 
 DISTNAME=	polysh-0.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://guichaz.free.fr/polysh/files/
 EXTRACT_SUFX=	.tar.bz2
