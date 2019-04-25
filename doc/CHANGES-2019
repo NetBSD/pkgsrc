@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1824 2019/04/25 16:37:57 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1825 2019/04/25 18:44:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2873,3 +2873,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated games/openttd to 1.9.1 [adam 2019-04-25]
 	Updated games/openttd-data to 0.5.5 [adam 2019-04-25]
 	Updated graphics/p5-Image-ExifTool to 11.30 [adam 2019-04-25]
+	Updated net/powerdns to 4.1.8 [adam 2019-04-25]
+	Updated net/powerdns-recursor to 4.1.12 [adam 2019-04-25]
