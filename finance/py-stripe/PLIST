@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/01/15 19:14:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/04/25 05:06:20 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -23,6 +23,9 @@ ${PYSITELIB}/stripe/api_resources/abstract/api_resource.pyo
 ${PYSITELIB}/stripe/api_resources/abstract/createable_api_resource.py
 ${PYSITELIB}/stripe/api_resources/abstract/createable_api_resource.pyc
 ${PYSITELIB}/stripe/api_resources/abstract/createable_api_resource.pyo
+${PYSITELIB}/stripe/api_resources/abstract/custom_method.py
+${PYSITELIB}/stripe/api_resources/abstract/custom_method.pyc
+${PYSITELIB}/stripe/api_resources/abstract/custom_method.pyo
 ${PYSITELIB}/stripe/api_resources/abstract/deletable_api_resource.py
 ${PYSITELIB}/stripe/api_resources/abstract/deletable_api_resource.pyc
 ${PYSITELIB}/stripe/api_resources/abstract/deletable_api_resource.pyo
@@ -80,15 +83,21 @@ ${PYSITELIB}/stripe/api_resources/card.pyo
 ${PYSITELIB}/stripe/api_resources/charge.py
 ${PYSITELIB}/stripe/api_resources/charge.pyc
 ${PYSITELIB}/stripe/api_resources/charge.pyo
-${PYSITELIB}/stripe/api_resources/checkout_session.py
-${PYSITELIB}/stripe/api_resources/checkout_session.pyc
-${PYSITELIB}/stripe/api_resources/checkout_session.pyo
+${PYSITELIB}/stripe/api_resources/checkout/__init__.py
+${PYSITELIB}/stripe/api_resources/checkout/__init__.pyc
+${PYSITELIB}/stripe/api_resources/checkout/__init__.pyo
+${PYSITELIB}/stripe/api_resources/checkout/session.py
+${PYSITELIB}/stripe/api_resources/checkout/session.pyc
+${PYSITELIB}/stripe/api_resources/checkout/session.pyo
 ${PYSITELIB}/stripe/api_resources/country_spec.py
 ${PYSITELIB}/stripe/api_resources/country_spec.pyc
 ${PYSITELIB}/stripe/api_resources/country_spec.pyo
 ${PYSITELIB}/stripe/api_resources/coupon.py
 ${PYSITELIB}/stripe/api_resources/coupon.pyc
 ${PYSITELIB}/stripe/api_resources/coupon.pyo
+${PYSITELIB}/stripe/api_resources/credit_note.py
+${PYSITELIB}/stripe/api_resources/credit_note.pyc
+${PYSITELIB}/stripe/api_resources/credit_note.pyo
 ${PYSITELIB}/stripe/api_resources/customer.py
 ${PYSITELIB}/stripe/api_resources/customer.pyc
 ${PYSITELIB}/stripe/api_resources/customer.pyo
@@ -158,6 +167,9 @@ ${PYSITELIB}/stripe/api_resources/order_return.pyo
 ${PYSITELIB}/stripe/api_resources/payment_intent.py
 ${PYSITELIB}/stripe/api_resources/payment_intent.pyc
 ${PYSITELIB}/stripe/api_resources/payment_intent.pyo
+${PYSITELIB}/stripe/api_resources/payment_method.py
+${PYSITELIB}/stripe/api_resources/payment_method.pyc
+${PYSITELIB}/stripe/api_resources/payment_method.pyo
 ${PYSITELIB}/stripe/api_resources/payout.py
 ${PYSITELIB}/stripe/api_resources/payout.pyc
 ${PYSITELIB}/stripe/api_resources/payout.pyo
@@ -224,6 +236,18 @@ ${PYSITELIB}/stripe/api_resources/subscription.pyo
 ${PYSITELIB}/stripe/api_resources/subscription_item.py
 ${PYSITELIB}/stripe/api_resources/subscription_item.pyc
 ${PYSITELIB}/stripe/api_resources/subscription_item.pyo
+${PYSITELIB}/stripe/api_resources/subscription_schedule.py
+${PYSITELIB}/stripe/api_resources/subscription_schedule.pyc
+${PYSITELIB}/stripe/api_resources/subscription_schedule.pyo
+${PYSITELIB}/stripe/api_resources/subscription_schedule_revision.py
+${PYSITELIB}/stripe/api_resources/subscription_schedule_revision.pyc
+${PYSITELIB}/stripe/api_resources/subscription_schedule_revision.pyo
+${PYSITELIB}/stripe/api_resources/tax_id.py
+${PYSITELIB}/stripe/api_resources/tax_id.pyc
+${PYSITELIB}/stripe/api_resources/tax_id.pyo
+${PYSITELIB}/stripe/api_resources/tax_rate.py
+${PYSITELIB}/stripe/api_resources/tax_rate.pyc
+${PYSITELIB}/stripe/api_resources/tax_rate.pyo
 ${PYSITELIB}/stripe/api_resources/terminal/__init__.py
 ${PYSITELIB}/stripe/api_resources/terminal/__init__.pyc
 ${PYSITELIB}/stripe/api_resources/terminal/__init__.pyo
