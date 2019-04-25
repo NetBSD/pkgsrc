@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/04/11 11:50:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/04/25 21:17:15 markd Exp $
 include/KF5/KWidgetsAddons/KAcceleratorManager
 include/KF5/KWidgetsAddons/KActionMenu
 include/KF5/KWidgetsAddons/KActionSelector
@@ -156,7 +156,6 @@ share/kf5/kcharselect/kcharselect-data
 share/locale/af/LC_MESSAGES/kwidgetsaddons5_qt.qm
 share/locale/ar/LC_MESSAGES/kwidgetsaddons5_qt.qm
 share/locale/as/LC_MESSAGES/kwidgetsaddons5_qt.qm
-share/locale/ast/LC_MESSAGES/kwidgetsaddons5_qt.qm
 share/locale/be/LC_MESSAGES/kwidgetsaddons5_qt.qm
 share/locale/be@latin/LC_MESSAGES/kwidgetsaddons5_qt.qm
 share/locale/bg/LC_MESSAGES/kwidgetsaddons5_qt.qm
