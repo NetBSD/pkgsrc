@@ -1,8 +1,8 @@
-$NetBSD: patch-unix_unix.cpp,v 1.2 2019/01/04 23:34:36 nia Exp $
+$NetBSD: patch-unix_unix.cpp,v 1.3 2019/04/25 13:06:58 nia Exp $
 
 Avoid colliding with libc functions.
 
---- unix/unix.cpp.orig	2018-12-16 17:04:59.000000000 +0000
+--- unix/unix.cpp.orig	2019-04-23 18:57:18.000000000 +0000
 +++ unix/unix.cpp
 @@ -156,7 +156,7 @@ bool S9xDisplayPollButton (uint32, bool 
  bool S9xDisplayPollAxis (uint32, int16 *);
@@ -22,12 +22,12 @@ Avoid colliding with libc functions.
  {
  	long	n = 0;
  
-@@ -1324,7 +1324,7 @@ bool8 S9xOpenSoundDevice (void)
+@@ -1356,7 +1356,7 @@ bool8 S9xOpenSoundDevice (void)
  		return (FALSE);
  	}
  
--	J = log2(unixSettings.SoundFragmentSize) | (3 << 16);
-+	J = log2_l(unixSettings.SoundFragmentSize) | (3 << 16);
+-	J = log2(unixSettings.SoundFragmentSize) | (4 << 16);
++	J = log2_l(unixSettings.SoundFragmentSize) | (4 << 16);
  	if (ioctl(so.sound_fd, SNDCTL_DSP_SETFRAGMENT, &J) == -1)
  		return (FALSE);
  
