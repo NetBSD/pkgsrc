@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/06/21 07:16:07 markd Exp $
+$NetBSD: distinfo,v 1.6 2019/04/25 21:17:14 markd Exp $
 
-SHA1 (kdelibs4support-5.47.0.tar.xz) = c16759de5ca57cd7910096c9c4dafb8c3aae07a9
-RMD160 (kdelibs4support-5.47.0.tar.xz) = a8d80db031ca7dc727966330f8076613fd094cca
-SHA512 (kdelibs4support-5.47.0.tar.xz) = 2376180ac7cf8c9ad8f3a7a96c54fe9c5bfe580d3ed0a9f9e53c24975447cc31b454b18f14c969373bf1ee06fc493d99796b14533bbfa81e14f58eb5f390f81b
-Size (kdelibs4support-5.47.0.tar.xz) = 3354180 bytes
+SHA1 (kdelibs4support-5.57.0.tar.xz) = 526c3347ab056ffbeeaf52f1d21c1f36184e1af6
+RMD160 (kdelibs4support-5.57.0.tar.xz) = a12bb904442e33a4198c478b048c3166c468041e
+SHA512 (kdelibs4support-5.57.0.tar.xz) = 5d989df6412a85ab4693d1148252222a9f9861388c15d6e340670a8016780848e2e3e58e6e3a505f585890296c9e91f2f762fe768561862e58ea253e32f27412
+Size (kdelibs4support-5.57.0.tar.xz) = 3505284 bytes
