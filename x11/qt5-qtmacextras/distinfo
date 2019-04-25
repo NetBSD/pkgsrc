@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2019/03/26 11:14:17 adam Exp $
+$NetBSD: distinfo,v 1.10 2019/04/25 19:43:16 adam Exp $
 
-SHA1 (qtmacextras-everywhere-src-5.12.2.tar.xz) = 45b92ae2dae424c15d0afb4bdb6de0ae1b68665d
-RMD160 (qtmacextras-everywhere-src-5.12.2.tar.xz) = 474e1bb490186de8093a80bb79dae15c90d31604
-SHA512 (qtmacextras-everywhere-src-5.12.2.tar.xz) = 225c54942d5fc6e5f9fc152f266f1567f14dc32201ae4533b954a523edf6bd2c9c10d019b99818c2c676c01b82a4cf1f33d78966438d5d45d79d97ce72f96cd8
-Size (qtmacextras-everywhere-src-5.12.2.tar.xz) = 68668 bytes
+SHA1 (qtmacextras-everywhere-src-5.12.3.tar.xz) = f27a7ac7706dcf1da4081a8d9444470a797a61ed
+RMD160 (qtmacextras-everywhere-src-5.12.3.tar.xz) = 7c871779c912ef25c23e3982345593987e112cbe
+SHA512 (qtmacextras-everywhere-src-5.12.3.tar.xz) = 56887c2a2d20c41a133af87aec8975e17c6335ffc51093f23a904e02a78f59a8117c7932827ca5dd33f538360e6fd9cfc9d0091c6f4c1e0b96528b5324c74033
+Size (qtmacextras-everywhere-src-5.12.3.tar.xz) = 68752 bytes
