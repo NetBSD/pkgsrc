@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/06/21 08:00:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/04/25 21:17:15 markd Exp $
 lib/cmake/KF5QQC2DeskopStyle/KF5QQC2DeskopStyleConfig.cmake
 lib/cmake/KF5QQC2DeskopStyle/KF5QQC2DeskopStyleConfigVersion.cmake
 qt5/plugins/kf5/kirigami/org.kde.desktop.so
@@ -26,7 +26,6 @@ qt5/qml/QtQuick/Controls.2/org.kde.desktop/Popup.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/ProgressBar.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/RadioButton.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/RadioDelegate.qml
-qt5/qml/QtQuick/Controls.2/org.kde.desktop/RadioIndicator.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/RangeSlider.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/RoundButton.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/ScrollBar.qml
@@ -45,5 +44,8 @@ qt5/qml/QtQuick/Controls.2/org.kde.desktop/ToolButton.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/ToolTip.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/private/DefaultListItemBackground.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/private/FocusRect.qml
+qt5/qml/QtQuick/Controls.2/org.kde.desktop/private/MobileCursor.qml
+qt5/qml/QtQuick/Controls.2/org.kde.desktop/private/MobileTextActionsToolBar.qml
+qt5/qml/QtQuick/Controls.2/org.kde.desktop/private/qmldir
 qt5/qml/org/kde/qqc2desktopstyle/private/libqqc2desktopstyleplugin.so
 qt5/qml/org/kde/qqc2desktopstyle/private/qmldir

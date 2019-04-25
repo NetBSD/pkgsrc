@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/06/21 07:19:05 markd Exp $
+$NetBSD: distinfo,v 1.6 2019/04/25 21:17:14 markd Exp $
 
-SHA1 (kglobalaccel-5.47.0.tar.xz) = fbe4d1ae4708cd1a17b56ee11c3a1e86b5f2bb0d
-RMD160 (kglobalaccel-5.47.0.tar.xz) = b7e49cccdc457b2e3b2eccc4cdfc72a92ee661f6
-SHA512 (kglobalaccel-5.47.0.tar.xz) = 7ba75bf529d1cb1782e5566eea629976bc5b8c5562e5435c489e9b782124e738fbe53d67d0f1938ca9dffb6660bf3eed0d83dd525e5e8f743644391d8d21b889
-Size (kglobalaccel-5.47.0.tar.xz) = 83788 bytes
+SHA1 (kglobalaccel-5.57.0.tar.xz) = c3d6e8281d6feacef3389be61bf9a53040904644
+RMD160 (kglobalaccel-5.57.0.tar.xz) = 237d5be1c52dff9681f58e87cc6e9f1d32736432
+SHA512 (kglobalaccel-5.57.0.tar.xz) = 26bdbfa6ec61831db7c4b539f4ca93bea397c607fa4d8f047a6166e8e69555443ef96a75331ab40a871ab3c450fa6996c2697888be38d191b0e6c43c0b54650c
+Size (kglobalaccel-5.57.0.tar.xz) = 84148 bytes
