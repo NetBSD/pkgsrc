@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1821 2019/04/25 14:57:35 tron Exp $
+$NetBSD: CHANGES-2019,v 1.1822 2019/04/25 15:29:20 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2869,3 +2869,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated emulators/libretro-bluemsx to 20190420 [nia 2019-04-25]
 	Updated emulators/libretro-gambatte to 20190412 [nia 2019-04-25]
 	Updated security/openssh to 7.9.1nb1 [tron 2019-04-25]
+	Updated emulators/qemu to 4.0.0nb3 [leot 2019-04-25]
