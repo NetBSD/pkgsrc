@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1829 2019/04/25 23:38:33 markd Exp $
+$NetBSD: CHANGES-2019,v 1.1830 2019/04/25 23:57:49 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2955,3 +2955,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/qca2-qt5 to 2.2.1 [markd 2019-04-25]
 	Updated security/qca2-qt5-gnupg to 2.2.1 [markd 2019-04-25]
 	Updated security/qca2-qt5-ossl to 2.2.1 [markd 2019-04-25]
+	Updated emulators/qemu to 4.0.0nb4 [kamil 2019-04-25]
