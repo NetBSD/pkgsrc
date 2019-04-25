@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.76 2019/04/03 00:32:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.77 2019/04/25 15:55:07 adam Exp $
 
-DISTNAME=	openttd-1.8.0-source
+DISTNAME=	openttd-1.9.1-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	3
 CATEGORIES=	games x11
-MASTER_SITES=	http://binaries.openttd.org/releases/${PKGVERSION_NOREV}/
+MASTER_SITES=	https://proxy.binaries.openttd.org/openttd-releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -29,9 +28,6 @@ CONFIGURE_ARGS+=	--man-dir=${PKGMANDIR}/man6
 CONFIGURE_ARGS+=	--menu-dir=share/applications
 CONFIGURE_ARGS+=	--personal-dir=.openttd
 CONFIGURE_ARGS+=	--shared-dir=${VARBASE}/games/openttd
-# Hack: built-in xz does not provide liblzma.pc, needed to configure
-PREFER_PKGSRC+=		xz
-
 CONFIGURE_ARGS+=	--with-iconv
 CONFIGURE_ARGS+=	--with-lzo2=${BUILDLINK_PREFIX.lzo}/lib
 
