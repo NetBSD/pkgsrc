@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.2 2018/07/04 13:40:36 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.3 2019/04/25 23:35:28 markd Exp $
 
-DISTNAME=	qca-2.1.3
+DISTNAME=	qca-2.2.1
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_KDE:=qca/2.1.3/src/}
+MASTER_SITES=	${MASTER_SITE_KDE:=qca/2.2.1/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
