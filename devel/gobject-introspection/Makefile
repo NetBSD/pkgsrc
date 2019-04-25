@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.57 2019/02/06 11:29:35 martin Exp $
+# $NetBSD: Makefile,v 1.58 2019/04/25 07:32:46 maya Exp $
 
 DISTNAME=	gobject-introspection-1.56.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gobject-introspection/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
-PKGREVISION=	1
+PKGREVISION=	2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wiki.gnome.org/Projects/GObjectIntrospection
