@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.3 2019/03/05 12:12:31 nia Exp $
+# $NetBSD: Makefile.common,v 1.4 2019/04/25 13:06:58 nia Exp $
 
 # used by emulators/libretro-snes9x/Makefile
 # used by emulators/snes9x/Makefile
 # used by emulators/snes9x-gtk/Makefile
 
-SNES9X_VERSION=		1.59.2
+SNES9X_VERSION=		1.60
 DISTNAME=		snes9x-${SNES9X_VERSION}
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_GITHUB:=snes9xgit/}
