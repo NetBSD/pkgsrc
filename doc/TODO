@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18953 2019/04/25 14:55:03 tron Exp $
+$NetBSD: TODO,v 1.18954 2019/04/25 21:36:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -435,6 +435,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o blur6ex-0.3.462
 	o bmkdep-20140112
 	o boolean-7.1
+	o boost-libs-1.70.0
 	o borgbackup-1.1.8
 	o bos-2.5
 	o boson-0.13
@@ -1041,6 +1042,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o opensc-0.19.0
 	o openslp-2.0.0
 	o opensmtpd-6.0.0
+	o openssh-8.0
 	o openssl-1.0.2q
 	o openvas-libraries-8.0.8
 	o opera-26
@@ -1267,7 +1269,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o subversion-base-1.11.1
 	o superlu-5.1.1
 	o supertux-0.5
-	o supertuxkart-0.9.2
+	o supertuxkart-1.0
 	o swapd-1.0.5
 	o swath-0.5.2
 	o swfdec-gnome-2.30.1
