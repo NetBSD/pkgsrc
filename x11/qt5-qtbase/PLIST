@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2019/03/26 11:14:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2019/04/25 19:43:15 adam Exp $
 lib/pkgconfig/Qt5Concurrent.pc
 lib/pkgconfig/Qt5Core.pc
 lib/pkgconfig/Qt5DBus.pc
@@ -3208,16 +3208,24 @@ qt5/mkspecs/winrt-arm-msvc2015/qmake.conf
 qt5/mkspecs/winrt-arm-msvc2015/qplatformdefs.h
 qt5/mkspecs/winrt-arm-msvc2017/qmake.conf
 qt5/mkspecs/winrt-arm-msvc2017/qplatformdefs.h
+qt5/mkspecs/winrt-arm-msvc2019/qmake.conf
+qt5/mkspecs/winrt-arm-msvc2019/qplatformdefs.h
 qt5/mkspecs/winrt-arm64-msvc2017/qmake.conf
 qt5/mkspecs/winrt-arm64-msvc2017/qplatformdefs.h
+qt5/mkspecs/winrt-arm64-msvc2019/qmake.conf
+qt5/mkspecs/winrt-arm64-msvc2019/qplatformdefs.h
 qt5/mkspecs/winrt-x64-msvc2015/qmake.conf
 qt5/mkspecs/winrt-x64-msvc2015/qplatformdefs.h
 qt5/mkspecs/winrt-x64-msvc2017/qmake.conf
 qt5/mkspecs/winrt-x64-msvc2017/qplatformdefs.h
+qt5/mkspecs/winrt-x64-msvc2019/qmake.conf
+qt5/mkspecs/winrt-x64-msvc2019/qplatformdefs.h
 qt5/mkspecs/winrt-x86-msvc2015/qmake.conf
 qt5/mkspecs/winrt-x86-msvc2015/qplatformdefs.h
 qt5/mkspecs/winrt-x86-msvc2017/qmake.conf
 qt5/mkspecs/winrt-x86-msvc2017/qplatformdefs.h
+qt5/mkspecs/winrt-x86-msvc2019/qmake.conf
+qt5/mkspecs/winrt-x86-msvc2019/qplatformdefs.h
 qt5/plugins/bearer/libqgenericbearer.so
 ${PLIST.egl}qt5/plugins/egldeviceintegrations/libqeglfs-emu-integration.so
 ${PLIST.egl}qt5/plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so
