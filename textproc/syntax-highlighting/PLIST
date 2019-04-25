@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2018/06/21 06:55:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/04/25 21:08:11 markd Exp $
 bin/kate-syntax-highlighter
 include/KF5/KSyntaxHighlighting/AbstractHighlighter
 include/KF5/KSyntaxHighlighting/Definition
+include/KF5/KSyntaxHighlighting/DefinitionDownloader
 include/KF5/KSyntaxHighlighting/FoldingRegion
 include/KF5/KSyntaxHighlighting/Format
 include/KF5/KSyntaxHighlighting/Repository
@@ -10,6 +11,7 @@ include/KF5/KSyntaxHighlighting/SyntaxHighlighter
 include/KF5/KSyntaxHighlighting/Theme
 include/KF5/KSyntaxHighlighting/abstracthighlighter.h
 include/KF5/KSyntaxHighlighting/definition.h
+include/KF5/KSyntaxHighlighting/definitiondownloader.h
 include/KF5/KSyntaxHighlighting/foldingregion.h
 include/KF5/KSyntaxHighlighting/format.h
 include/KF5/KSyntaxHighlighting/ksyntaxhighlighting_export.h
@@ -29,7 +31,6 @@ qt5/mkspecs/modules/qt_KSyntaxHighlighting.pri
 share/examples/kde-xdg/org_kde_ksyntaxhighlighting.categories
 share/locale/af/LC_MESSAGES/syntaxhighlighting5_qt.qm
 share/locale/ar/LC_MESSAGES/syntaxhighlighting5_qt.qm
-share/locale/ast/LC_MESSAGES/syntaxhighlighting5_qt.qm
 share/locale/be/LC_MESSAGES/syntaxhighlighting5_qt.qm
 share/locale/bg/LC_MESSAGES/syntaxhighlighting5_qt.qm
 share/locale/bn/LC_MESSAGES/syntaxhighlighting5_qt.qm
