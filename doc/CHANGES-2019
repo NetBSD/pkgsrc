@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1810 2019/04/25 12:57:43 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1811 2019/04/25 13:07:10 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2858,3 +2858,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-xopen to 0.5.1 [adam 2019-04-25]
 	Updated devel/py-faker to 1.0.5 [adam 2019-04-25]
 	Updated devel/py-rope to 0.14.0 [adam 2019-04-25]
+	Updated emulators/snes9x to 1.60 [nia 2019-04-25]
