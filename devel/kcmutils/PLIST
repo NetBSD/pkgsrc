@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/26 08:29:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/04/25 20:50:22 markd Exp $
 include/KF5/KCMUtils/KCModuleContainer
 include/KF5/KCMUtils/KCModuleInfo
 include/KF5/KCMUtils/KCModuleLoader
@@ -32,7 +32,6 @@ share/kservicetypes5/kcmoduleinit.desktop
 share/locale/af/LC_MESSAGES/kcmutils5.mo
 share/locale/ar/LC_MESSAGES/kcmutils5.mo
 share/locale/as/LC_MESSAGES/kcmutils5.mo
-share/locale/ast/LC_MESSAGES/kcmutils5.mo
 share/locale/be/LC_MESSAGES/kcmutils5.mo
 share/locale/be@latin/LC_MESSAGES/kcmutils5.mo
 share/locale/bg/LC_MESSAGES/kcmutils5.mo
