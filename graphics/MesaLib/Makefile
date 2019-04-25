@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.146 2019/01/26 20:33:39 tnn Exp $
+# $NetBSD: Makefile,v 1.147 2019/04/25 07:32:56 maya Exp $
 
 DISTNAME=	mesa-11.2.2
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	graphics x11
 MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz

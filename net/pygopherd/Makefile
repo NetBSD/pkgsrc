@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2018/07/04 13:40:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.33 2019/04/25 07:33:12 maya Exp $
 
 DISTNAME=	pygopherd_2.0.16
-PKGREVISION=	4
+PKGREVISION=	5
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	net
 MASTER_SITES=	http://gopher.quux.org:70/devel/gopher/Downloads/pygopherd/

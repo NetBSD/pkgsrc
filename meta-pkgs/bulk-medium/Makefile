@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2019/04/14 15:22:17 taca Exp $
+# $NetBSD: Makefile,v 1.53 2019/04/25 07:33:06 maya Exp $
 
 DISTNAME=	bulk-medium-20190414
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty

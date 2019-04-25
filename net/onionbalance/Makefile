@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/10/23 03:18:06 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2019/04/25 07:33:12 maya Exp $
 
+PKGREVISION= 1
 .include "../../net/py-onionbalance/Makefile.common"
 
 PKGNAME=	onionbalance-${VERSION}

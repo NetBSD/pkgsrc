@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2018/03/11 15:42:31 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2019/04/25 07:33:25 maya Exp $
 
 DISTNAME=	translate-toolkit-2.2.5
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=translate/}
 GITHUB_PROJECT=	translate

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2018/03/05 10:19:25 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/04/25 07:33:32 maya Exp $
 
 DISTNAME=	xcb-proto-1.13
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	https://xcb.freedesktop.org/dist/
 EXTRACT_SUFX=	.tar.bz2

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2017/09/04 14:45:43 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/04/25 07:32:54 maya Exp $
 
 DISTNAME=	moneyguru-src-2.11.0
 PKGNAME=	${DISTNAME:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	finance
 MASTER_SITES=	https://download.hardcoded.net/
 

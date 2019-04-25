@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2018/10/13 10:52:35 mlelstv Exp $
+# $NetBSD: Makefile,v 1.30 2019/04/25 07:33:16 maya Exp $
 
 DISTNAME=	pcsc-lite-1.8.24
+PKGREVISION=	1
 CATEGORIES=	security
 # Note that the MASTER_SITES URL is not stable with version changes,
 # and one can end up with an old version if DISTNAME is changed but

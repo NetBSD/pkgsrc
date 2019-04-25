@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.144 2019/03/27 19:53:29 markd Exp $
+# $NetBSD: Makefile,v 1.145 2019/04/25 07:32:57 maya Exp $
 
 DISTNAME=	blender-2.79b
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.blender.org/source/
 

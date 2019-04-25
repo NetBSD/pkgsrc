@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2015/03/31 15:49:15 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2019/04/25 07:33:05 maya Exp $
 
 DISTNAME=	0.12
 PKGNAME=	crfsuite-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	https://github.com/chokkan/crfsuite/archive/
 DIST_SUBDIR=	crfsuite
