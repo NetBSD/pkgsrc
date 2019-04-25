@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1812 2019/04/25 13:07:24 nia Exp $
+$NetBSD: CHANGES-2019,v 1.1813 2019/04/25 13:07:51 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2860,3 +2860,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-rope to 0.14.0 [adam 2019-04-25]
 	Updated emulators/snes9x to 1.60 [nia 2019-04-25]
 	Updated emulators/snes9x-gtk to 1.60 [nia 2019-04-25]
+	Updated emulators/libretro-snes9x to 1.60 [nia 2019-04-25]
