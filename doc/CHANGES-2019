@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1808 2019/04/25 12:44:33 nia Exp $
+$NetBSD: CHANGES-2019,v 1.1809 2019/04/25 12:50:37 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2853,3 +2853,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/mysql57-server to 5.7.26 [adam 2019-04-25]
 	Updated emulators/qemu to 4.0.0nb2 [skrll 2019-04-25]
 	Updated emulators/libretro-mgba to 0.7.1 [nia 2019-04-25]
+	Updated x11/maim to 5.5.3 [nia 2019-04-25]
