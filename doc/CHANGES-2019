@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1828 2019/04/25 21:26:24 markd Exp $
+$NetBSD: CHANGES-2019,v 1.1829 2019/04/25 23:38:33 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2949,3 +2949,9 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/kxmlgui to 5.57.0 [markd 2019-04-25]
 	Updated x11/plasma-framework to 5.57.0 [markd 2019-04-25]
 	Updated x11/qqc2-desktop-style to 5.57.0 [markd 2019-04-25]
+	Updated security/qca2 to 2.2.1 [markd 2019-04-25]
+	Updated security/qca2-gnupg to 2.2.1 [markd 2019-04-25]
+	Updated security/qca2-ossl to 2.2.1 [markd 2019-04-25]
+	Updated security/qca2-qt5 to 2.2.1 [markd 2019-04-25]
+	Updated security/qca2-qt5-gnupg to 2.2.1 [markd 2019-04-25]
+	Updated security/qca2-qt5-ossl to 2.2.1 [markd 2019-04-25]
