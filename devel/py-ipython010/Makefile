@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/04/26 13:13:52 maya Exp $
+# $NetBSD: Makefile,v 1.8 2019/04/26 14:12:36 maya Exp $
 
 DISTNAME=	ipython-0.10.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
 DEPENDS+=	${PYPKGPREFIX}-pexpect-[0-9]*:../../devel/py-pexpect
 
 PYTHON_SELF_CONFLICT=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 0.10.2 (1.0 is out)
+PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 0.10.2 (1.0 is out)
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	gunzip

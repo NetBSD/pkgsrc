@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/04/26 13:14:20 maya Exp $
+# $NetBSD: Makefile,v 1.13 2019/04/26 14:12:48 maya Exp $
 
 DISTNAME=	django-appmedia-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Handling django app media
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=		# empty
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 1.0.1
+PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 1.0.1
 
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 

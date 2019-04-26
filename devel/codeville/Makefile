@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/04/26 13:13:49 maya Exp $
+# $NetBSD: Makefile,v 1.34 2019/04/26 14:12:35 maya Exp $
 
 DISTNAME=	Codeville-0.8.0
 PKGNAME=	codeville-0.8.0
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 
 REPLACE_PYTHON=		*.py
 REPLACE_PYTHON+=	*/*.py
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 0.8.0
+PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 0.8.0
 
 BUILD_DEFS+=		VARBASE
 BUILD_DEFS_EFFECTS+=	CODEVILLE_DATADIR

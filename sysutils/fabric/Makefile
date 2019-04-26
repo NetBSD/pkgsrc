@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2019/04/26 13:14:14 maya Exp $
+# $NetBSD: Makefile,v 1.51 2019/04/26 14:12:45 maya Exp $
 
 VERSION=		1.12.0
 DISTNAME=		Fabric-${VERSION}
@@ -14,7 +14,7 @@ LICENSE=		2-clause-bsd
 
 DEPENDS+=		${PYPKGPREFIX}-paramiko>=1.10.0:../../security/py-paramiko
 
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # no support yet
+PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # no support yet
 
 USE_TOOLS+=		pax
 

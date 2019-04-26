@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/04/26 13:13:59 maya Exp $
+# $NetBSD: Makefile,v 1.33 2019/04/26 14:12:39 maya Exp $
 
 DISTNAME=		proj-swig-0.02
 PKGREVISION=		10
@@ -17,7 +17,7 @@ GNU_CONFIGURE=		yes
 
 # Defines PYSITELIB, apparently.
 PY_PATCHPLIST=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 0.02
+PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 0.02
 
 # Find guile20's includes
 CFLAGS+=		-I${BUILDLINK_PREFIX.guile20}/include/guile/2.0

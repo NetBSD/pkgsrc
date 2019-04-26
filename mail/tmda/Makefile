@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2019/04/26 13:14:04 maya Exp $
+# $NetBSD: Makefile,v 1.62 2019/04/26 14:12:41 maya Exp $
 
 DISTNAME=	tmda-1.1.12
 PKGREVISION=	6
@@ -13,7 +13,7 @@ COMMENT=	Python-based SPAM reduction system
 
 REPLACE_PYTHON=	${TMDA_PROGRAMS}
 PY_PATCHPLIST=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 1.1.12
+PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 1.1.12
 
 PKG_SYSCONFSUBDIR=	${PKGBASE}
 

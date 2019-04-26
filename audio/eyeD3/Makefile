@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/04/26 13:13:41 maya Exp $
+# $NetBSD: Makefile,v 1.11 2019/04/26 14:12:31 maya Exp $
 
 DISTNAME=	eyeD3-0.7.11
 PKGREVISION=	1
@@ -10,9 +10,9 @@ HOMEPAGE=	http://eyed3.nicfit.net/
 COMMENT=	Python tool for working with audio files (in particular, mp3)
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=		# none
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 0.7.11
-REPLACE_SH+=		bin/eyeD3
+USE_LANGUAGES=			# none
+PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 0.7.11
+REPLACE_SH+=			bin/eyeD3
 
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	post-configure

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2019/04/26 13:13:47 maya Exp $
+# $NetBSD: Makefile,v 1.48 2019/04/26 14:12:34 maya Exp $
 
 DISTNAME=	MySQL-python-1.2.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/MySQL-python/mysqldb/}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/farcepest/MySQLdb1/
 COMMENT=	MySQL interface for Python
 LICENSE=	gnu-gpl-v2
 
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 1.2.5
+PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 1.2.5
 
 USE_LANGUAGES=		c
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/04/26 13:14:08 maya Exp $
+# $NetBSD: Makefile,v 1.23 2019/04/26 14:12:43 maya Exp $
 
 DISTNAME=	adns-python-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 CONFLICTS=	${PYPKGPREFIX}-adns-python-[0-9]*
 
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 1.2.1
+PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 1.2.1
 
 BUILDLINK_API_DEPENDS.adns+=	adns>=1.2
 .include "../../net/adns/buildlink3.mk"
