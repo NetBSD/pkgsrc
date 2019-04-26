@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/04/26 13:14:21 maya Exp $
+# $NetBSD: Makefile,v 1.23 2019/04/26 14:12:48 maya Exp $
 
 DISTNAME=	gdata-2.0.18
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 2.0.18
+PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 2.0.18
 # https://code.google.com/p/gdata-python-client/issues/detail?id=229
 
 REPLACE_PYTHON=		src/atom/__init__.py

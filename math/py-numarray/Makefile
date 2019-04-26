@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/04/26 13:14:04 maya Exp $
+# $NetBSD: Makefile,v 1.26 2019/04/26 14:12:42 maya Exp $
 
 DISTNAME=	numarray-1.5.2
 PKGNAME=	${PYPKGPREFIX}-numarray-1.5.2
@@ -15,7 +15,7 @@ PLIST_VARS+=	blas
 PLIST.blas=	yes
 .endif
 
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 1.5.2; use py-numpy
+PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 1.5.2; use py-numpy
 
 do-test:
 	(cd ${WRKSRC}/Lib && ${PYTHONBIN} testall.py)
