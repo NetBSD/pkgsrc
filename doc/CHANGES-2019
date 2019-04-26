@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1830 2019/04/25 23:57:49 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.1831 2019/04/26 10:13:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2956,3 +2956,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/qca2-qt5-gnupg to 2.2.1 [markd 2019-04-25]
 	Updated security/qca2-qt5-ossl to 2.2.1 [markd 2019-04-25]
 	Updated emulators/qemu to 4.0.0nb4 [kamil 2019-04-25]
+	Updated devel/py-ordered-set to 3.1.1 [adam 2019-04-26]
+	Updated devel/py-ipython to 7.5.0 [adam 2019-04-26]
