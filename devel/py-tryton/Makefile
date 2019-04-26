@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2018/11/14 22:21:20 kleink Exp $
+# $NetBSD: Makefile,v 1.35 2019/04/26 13:13:54 maya Exp $
 TRYTON_MODULE_NAME=	tryton
 PKGREVISION= 6
 .include "../../devel/py-trytond/Makefile.common"
@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=		# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=   34 35 36 37
+PYTHON_VERSIONS_INCOMPATIBLE=    36 37
 
 .include "options.mk"
 

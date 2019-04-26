@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/01/02 21:35:57 tnn Exp $
+# $NetBSD: Makefile,v 1.21 2019/04/26 13:13:50 maya Exp $
 #
 
 DISTNAME=	nsis-${NSIS_VER}
@@ -15,7 +15,7 @@ COMMENT=	Scriptable system to build Windows installers
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pax
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37	# as of 3.04
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37	# as of 3.04
 
 NSIS_SRC=	${DISTNAME:=-src}
 NSIS_VER=	3.04

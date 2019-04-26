@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2019/04/25 07:33:26 maya Exp $
+# $NetBSD: Makefile,v 1.139 2019/04/26 13:14:19 maya Exp $
 
 DISTNAME=	bluefish-2.2.10
 PKGREVISION=	1
@@ -29,7 +29,7 @@ REPLACE_PYTHON+=	data/css_decompressor
 CHECK_INTERPRETER_SKIP+= share/bluefish/plugins/*/*.py
 CHECK_INTERPRETER_SKIP+= share/bluefish/plugins/*/*/*.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 2.2.4
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 2.2.4
 
 # XXX this doesn't work
 #XML_CATALOGS=	${PREFIX}/share/xml/bluefish/catalog.xml

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/07/03 05:03:31 adam Exp $
+# $NetBSD: Makefile,v 1.11 2019/04/26 13:14:12 maya Exp $
 
 DISTNAME=	backports.ssl_match_hostname-3.5.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	python-software-foundation
 
 DEPENDS+=	${PYPKGPREFIX}-backports-[0-9]*:../../devel/py-backports
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # included in 3.2+
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # included in 3.2+
 
 post-install:
 	rm ${DESTDIR}${PREFIX}/${PYSITELIB}/backports/__init__.*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/04/25 07:33:28 maya Exp $
+# $NetBSD: Makefile,v 1.18 2019/04/26 13:14:23 maya Exp $
 
 DISTNAME=	urlgrabber-3.1.0
 PKGREVISION=	4
@@ -10,7 +10,7 @@ HOMEPAGE=	http://urlgrabber.baseurl.org/
 COMMENT=	Python package that drastically simplifies the fetching of files
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 3.1.0
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 3.1.0
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
