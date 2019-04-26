@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1836 2019/04/26 15:08:35 gavan Exp $
+$NetBSD: CHANGES-2019,v 1.1837 2019/04/26 15:12:43 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2995,3 +2995,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/dhcpcd to 7.2.1 [roy 2019-04-26]
 	Updated net/cacti to 1.2.3 [gavan 2019-04-26]
 	Updated editors/dte to 1.8.2 [bsiegert 2019-04-26]
+	Updated devel/glibmm to 2.56.1 [bsiegert 2019-04-26]
