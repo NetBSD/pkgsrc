@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/04/25 07:32:52 maya Exp $
+# $NetBSD: Makefile,v 1.11 2019/04/26 12:44:43 roy Exp $
 
 DISTNAME=	fs-uae-launcher-2.8.3
 PKGREVISION=	1
@@ -24,7 +24,7 @@ DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-Quartz>=3:../../devel/py-pyobjc-framew
 INSTALL_TARGET=		install-data
 USE_TOOLS+=		gmake msgfmt
 
-PYTHON_VERSIONS_ACCEPTED=	37 36 35 34 # import urllib.parse
+PYTHON_VERSIONS_ACCEPTED=	37 36 # import urllib.parse
 PYSETUPINSTALLARGS=	--install-lib=${PREFIX:Q}/share/fs-uae-launcher
 PYSETUPINSTALLARGS+=	--install-scripts=${PREFIX:Q}/share/fs-uae-launcher
 
