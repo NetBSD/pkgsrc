@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2019/04/25 07:33:32 maya Exp $
+# $NetBSD: Makefile,v 1.58 2019/04/26 13:14:25 maya Exp $
 
 DISTNAME=	rox-session-0.28
 PKGREVISION=	36
@@ -18,7 +18,7 @@ DIST_SUBDIR=	rox
 NO_BUILD=	yes
 
 REPLACE_PYTHON=	AppRun tests/testutils.py
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-gtk2
 
 INSTALLATION_DIRS=	share/rox/ROX-Session
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/04/25 07:33:13 maya Exp $
+# $NetBSD: Makefile,v 1.19 2019/04/26 13:14:10 maya Exp $
 #
 .include "../../news/hellanzb/Makefile.version"
 
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=	par2>=0.4:../../archivers/par2
 DEPENDS+=	unrar>=3.5.4:../../archivers/unrar
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # as of 0.14
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # as of 0.14
 
 USE_LANGUAGES=	#none
 

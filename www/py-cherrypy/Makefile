@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/04/02 08:29:59 adam Exp $
+# $NetBSD: Makefile,v 1.38 2019/04/26 13:14:20 maya Exp $
 
 DISTNAME=	CherryPy-18.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -27,7 +27,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-sugar-[0-9]*:../../devel/py-test-sugar
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 34
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} cherryd cherryd-${PYVERSSUFFIX} || ${TRUE}
