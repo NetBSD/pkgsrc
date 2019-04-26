@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2016/06/02 14:18:23 hauke Exp $
+$NetBSD: MESSAGE,v 1.6 2019/04/26 14:52:16 gavan Exp $
 
 cacti is now installed.
 
@@ -13,16 +13,21 @@ To get cacti up and running asap, you have to complete these steps:
 	mysql> CREATE DATABASE cacti;
 	mysql> GRANT ALL PRIVILEGES ON cacti.* TO 'cactiuser'@'localhost'
 	    -> IDENTIFIED BY 'cactiuser';
+	mysql> GRANT SELECT ON mysql.time_zone_name TO 'cactiuser'@'localhost';
         mysql> FLUSH PRIVILEGES;
         mysql> USE cacti;
         mysql> SOURCE ${CACTIDIR}/cacti.sql;
+
+- If you haven't already imported your MySQL timezone data, you need to do this:
+	mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root -p mysql
 
 - Install & Configure an Apache webserver.
 
 - If you have not already done so, add these lines to enable php extensions
   required by cacti in ${PKG_SYSCONFBASE}/etc/php.ini
 
-	extension=mysql.so
+	extension=pdo.so
+	extension=pdo_mysql.so
 	extension=snmp.so
 	extension=sockets.so
 
@@ -37,7 +42,7 @@ To get cacti up and running asap, you have to complete these steps:
 
   and make sure ${PREFIX}/bin is in PATH.
 
-Please read the included README (${CACTIDIR}/docs/README) file,
+Please read the included documentation (${CACTIDIR}/docs/...),
 for more information about configuring and starting cacti.
 
 If you have updated from a version older than 0.8.8h, note that the
