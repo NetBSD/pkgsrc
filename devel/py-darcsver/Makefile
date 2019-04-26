@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/04/26 13:13:51 maya Exp $
+# $NetBSD: Makefile,v 1.12 2019/04/26 14:12:35 maya Exp $
 
 DISTNAME=	darcsver-1.7.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ DEPENDS+=		${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 1.7.4
+PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 1.7.4
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
