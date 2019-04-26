@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2019/04/17 08:28:44 adam Exp $
+# $NetBSD: Makefile,v 1.42 2019/04/26 15:19:18 gavan Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-agpl/}
@@ -80,6 +80,8 @@ CPPFLAGS.SunOS+=	-D__C99FEATURES__
 # Interim IRIX build fix, the real problem is that fontconfig.pc doesn't
 # require linking against libiconv when it should do so.
 BUILDLINK_TRANSFORM.IRIX+=	l:fontconfig:fontconfig:iconv
+
+BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.10.0
 
 .include "options.mk"
 
