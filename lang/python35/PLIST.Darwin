@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.Darwin,v 1.1 2015/12/05 17:12:13 adam Exp $
-lib/python${PY_VER_SUFFIX}/lib-dynload/_scproxy.so
