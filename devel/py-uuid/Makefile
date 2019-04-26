@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/04/26 13:13:54 maya Exp $
+# $NetBSD: Makefile,v 1.6 2019/04/26 14:12:37 maya Exp $
 
 DISTNAME=	uuid-1.30
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	generic-nonlicense
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 1.30
+PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 1.30
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

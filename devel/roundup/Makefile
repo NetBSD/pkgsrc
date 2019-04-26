@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2019/04/26 13:13:55 maya Exp $
+# $NetBSD: Makefile,v 1.55 2019/04/26 14:12:37 maya Exp $
 
 DISTNAME=	roundup-1.4.19
 PKGREVISION=	3
@@ -13,7 +13,7 @@ LICENSE=	mit AND zpl-2.0
 USE_LANGUAGES=	# empty
 USE_TOOLS+=	pax
 
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 1.4.19
+PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 1.4.19
 REPLACE_PYTHON+=	cgi-bin/roundup.cgi demo.py roundup/admin.py
 REPLACE_PYTHON+=	frontends/roundup.cgi
 REPLACE_PYTHON+=	roundup/backends/locking.py

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/04/26 13:13:47 maya Exp $
+# $NetBSD: Makefile,v 1.38 2019/04/26 14:12:34 maya Exp $
 
 DISTNAME=	sybase-0.36
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,7 +22,7 @@ SUBST_MESSAGE.sybase=	Fixing runtime_library_dirs.
 SUBST_FILES.sybase=	setup.py
 SUBST_SED.sybase=	-e "s|\\(runtime_library_dirs = \\)None|\\1['${SYBASE}/lib']|"
 
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 0.36
+PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 0.36
 
 .include "../../databases/freetds/buildlink3.mk"
 .include "../../lang/python/extension.mk"
