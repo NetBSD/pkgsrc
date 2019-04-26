@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/04/25 07:33:26 maya Exp $
+# $NetBSD: Makefile,v 1.24 2019/04/26 13:14:19 maya Exp $
 
 PKGVER=			0.8.4
 DISTNAME=		ccsm-${PKGVER}
@@ -19,7 +19,7 @@ USE_TOOLS+=		pkg-config gmake msgfmt intltool
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 REPLACE_PYTHON=		${WRKSRC}/setup.py ${WRKSRC}/ccm/*.py
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-gtk2
 
 MAKE_ENV+=	PYTHONBIN=${PYTHONBIN:Q}
 

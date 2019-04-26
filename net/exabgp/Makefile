@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/04/25 07:33:10 maya Exp $
+# $NetBSD: Makefile,v 1.27 2019/04/26 13:14:07 maya Exp $
 
 VERSION=	3.4.23
 DISTNAME=	${VERSION}
@@ -56,7 +56,7 @@ REPLACE_PYTHON+=	qa/conf/api-vpnv4.run
 REPLACE_PYTHON+=	qa/conf/manual-eor.run
 REPLACE_PYTHON+=	qa/conf/watchdog.run
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 3.2.19
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 3.2.19
 
 USE_LANGUAGES=  # none
 

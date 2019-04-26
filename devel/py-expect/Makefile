@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2018/07/03 05:03:10 adam Exp $
+# $NetBSD: Makefile,v 1.27 2019/04/26 13:13:51 maya Exp $
 
 DISTNAME=	ExpectPy-1.9b1
 PKGNAME=	${PYPKGPREFIX}-expect-1.9b1
@@ -20,7 +20,7 @@ CONFIGURE_ENV+=	PYTH_CONFIGDIR=${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/config
 INSTALL_TARGET=	installshared
 PY_PATCHPLIST=	yes
 PLIST_SUBST+=	PYLIB=${PYLIB:Q} PYPKGPREFIX=${PYPKGPREFIX:Q}
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 1.9b1
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 1.9b1
 
 EXAMPLESDIR=	${PREFIX}/share/examples/${PYPKGPREFIX}-expect
 EXAMPLESFILES=	ask.py glob.py ping.py telnet.py xping.py

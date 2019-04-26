@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2018/11/16 19:01:25 bsiegert Exp $
+# $NetBSD: options.mk,v 1.9 2019/04/26 13:13:56 maya Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pluma
 PKG_SUPPORTED_OPTIONS=	enchant
@@ -26,7 +26,7 @@ USE_TOOLS+=	bash:run
 REPLACE_PYTHON+=	plugins/externaltools/data/switch-c.tool.in
 REPLACE_BASH+=	plugins/externaltools/data/search-recursive.tool.in
 PLIST.python=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-gtk2, also via py-gtksourceview
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-gtk2, also via py-gtksourceview
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../x11/py-gtksourceview/buildlink3.mk"

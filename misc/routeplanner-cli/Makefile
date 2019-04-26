@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/04/25 07:33:08 maya Exp $
+# $NetBSD: Makefile,v 1.23 2019/04/26 13:14:06 maya Exp $
 #
 
 DISTNAME=		routeplanner_0.11
@@ -41,7 +41,7 @@ do-install:
 	done
 
 # optional speedup
-#PYTHON_VERSIONS_INCOMPATIBLE= 34 35 36 # py-kjbuckets
+#PYTHON_VERSIONS_INCOMPATIBLE=  36 # py-kjbuckets
 #.include "../../devel/py-kjbuckets/buildlink3.mk"
 #.include "../../devel/py-pqueue/buildlink3.mk"
 
