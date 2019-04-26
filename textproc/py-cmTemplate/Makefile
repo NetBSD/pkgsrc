@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/04/26 13:14:17 maya Exp $
+# $NetBSD: Makefile,v 1.13 2019/04/26 14:12:47 maya Exp $
 
 DISTNAME=	cmTemplate-0.3.2
 PKGNAME=	${PYPKGPREFIX}-cmTemplate-0.3.2
@@ -11,7 +11,7 @@ COMMENT=	Simple and fast Python template engine
 
 PY_PATCHPLIST=	# empty
 PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 0.3.2
+PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 0.3.2
 
 INSTALLATION_DIRS=	${PYSITELIB} share/doc/${PYPKGPREFIX}-cmTemplate
 

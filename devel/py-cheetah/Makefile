@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/04/26 13:13:51 maya Exp $
+# $NetBSD: Makefile,v 1.24 2019/04/26 14:12:35 maya Exp $
 
 DISTNAME=	Cheetah-2.4.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-markdown>=2.0.1:../../textproc/py-markdown
 
 USE_LANGUAGES=		c
 
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 2.4.4
+PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 2.4.4
 
 REPLACE_PYTHON+=	SetupTools.py
 REPLACE_PYTHON+=	bin/cheetah

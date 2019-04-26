@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/04/26 13:13:41 maya Exp $
+# $NetBSD: Makefile,v 1.16 2019/04/26 14:12:31 maya Exp $
 
 DISTNAME=	aubio-0.3.2
 PKGREVISION=	3
@@ -19,7 +19,7 @@ PKGCONFIG_OVERRIDE+=	aubio.pc.in
 # Python related variables:
 PY_PATCHPLIST=			yes
 REPLACE_PYTHON=	python/aubiocut python/aubiopitch
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 0.3.2
+PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 0.3.2
 
 CPPFLAGS.SunOS+=	-Du_int8_t=uint8_t -Du_int16_t=uint16_t -Du_int32_t=uint32_t -Du_int64_t=uint64_t
 

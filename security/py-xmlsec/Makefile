@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/04/26 13:14:13 maya Exp $
+# $NetBSD: Makefile,v 1.17 2019/04/26 14:12:45 maya Exp $
 
 DISTNAME=	pyxmlsec-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-libxml2-[0-9]*:../../textproc/py-libxml2
 USE_TOOLS+=	pkg-config
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 0.3.1
+PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 0.3.1
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

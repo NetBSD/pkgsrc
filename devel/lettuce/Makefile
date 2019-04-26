@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/04/26 13:13:50 maya Exp $
+# $NetBSD: Makefile,v 1.14 2019/04/26 14:12:35 maya Exp $
 
 DISTNAME=	lettuce-0.2.18
 PKGREVISION=	1
@@ -11,7 +11,7 @@ COMMENT=	Behaviour-driven development test tool
 LICENSE=	gnu-gpl-v3
 
 REPLACE_PYTHON=	lettuce/bin.py lettuce/plugins/autopdb.py
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 0.2.18
+PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 0.2.18
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
