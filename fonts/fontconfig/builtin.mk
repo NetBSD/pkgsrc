@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.11 2012/03/19 12:34:13 joerg Exp $
+# $NetBSD: builtin.mk,v 1.12 2019/04/26 15:05:14 gavan Exp $
 
 BUILTIN_PKG:=	fontconfig
 
@@ -42,20 +42,6 @@ MAKEVARS+=	BUILTIN_PKG.fontconfig
 ### Determine whether we should use the built-in implementation if it
 ### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
 ###
-#
-# These are dependencies of fontconfig.  If we need to use the pkgsrc
-# versions of any of these, then also use the pkgsrc version of
-# fontconfig.
-#
-.if defined(USE_BUILTIN.zlib) && !empty(USE_BUILTIN.zlib:M[nN][oO])
-USE_BUILTIN.fontconfig=	no
-.endif
-.if defined(USE_BUILTIN.freetype2) && !empty(USE_BUILTIN.freetype2:M[nN][oO])
-USE_BUILTIN.fontconfig=	no
-.endif
-.if defined(USE_BUILTIN.expat) && !empty(USE_BUILTIN.expat:M[nN][oO])
-USE_BUILTIN.fontconfig=	no
-.endif
 
 .if !defined(USE_BUILTIN.fontconfig)
 .  if ${PREFER.fontconfig} == "pkgsrc"
@@ -93,12 +79,6 @@ CHECK_BUILTIN.fontconfig?=	no
 .  if !empty(USE_BUILTIN.fontconfig:M[nN][oO])
 BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.1nb2
 BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.1.3
-.  endif
-
-.  if !empty(USE_BUILTIN.fontconfig:M[yY][eE][sS])
-USE_BUILTIN.expat=	yes
-USE_BUILTIN.freetype2=	yes
-USE_BUILTIN.zlib=	yes
 .  endif
 
 .endif	# CHECK_BUILTIN.fontconfig
