@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1833 2019/04/26 14:39:34 roy Exp $
+$NetBSD: CHANGES-2019,v 1.1834 2019/04/26 14:55:09 gavan Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2993,3 +2993,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-ordered-set to 3.1.1 [adam 2019-04-26]
 	Updated devel/py-ipython to 7.5.0 [adam 2019-04-26]
 	Updated net/dhcpcd to 7.2.1 [roy 2019-04-26]
+	Updated net/cacti to 1.2.3 [gavan 2019-04-26]
+	Updated net/cacti to 1.2.3 [gavan 2019-04-26]
