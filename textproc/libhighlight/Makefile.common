@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2019/04/04 14:14:28 schmonz Exp $
+# $NetBSD: Makefile.common,v 1.8 2019/04/26 12:44:43 roy Exp $
 # used by textproc/highlight/Makefile
 # used by textproc/libhighlight/Makefile
 # used by textproc/p5-highlight/Makefile
@@ -16,6 +16,7 @@ LICENSE=		gnu-gpl-v3
 
 USE_TOOLS+=		gmake pkg-config
 USE_LANGUAGES=		c c++11
+USE_LIBTOOL=		yes
 MAKE_FILE=		makefile
 
 PATCHDIR=		${.CURDIR}/../../textproc/libhighlight/patches
