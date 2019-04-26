@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/12/27 16:04:24 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2019/04/26 13:13:50 maya Exp $
 
 DISTNAME=	async-timeout-3.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 34
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 

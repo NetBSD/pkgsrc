@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2018/11/14 22:21:15 kleink Exp $
+# $NetBSD: Makefile,v 1.14 2019/04/26 13:13:50 maya Exp $
 
 USE_GTK_VERSION=		3
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-gtk2
 
 PKGREVISION= 8
 .include "../../devel/libappindicator/Makefile.common"

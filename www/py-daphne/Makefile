@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/02/13 15:55:41 adam Exp $
+# $NetBSD: Makefile,v 1.16 2019/04/26 13:14:20 maya Exp $
 
 DISTNAME=	daphne-2.2.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 34
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} daphne daphne-${PYVERSSUFFIX} || ${TRUE}
