@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/04/25 07:33:25 maya Exp $
+# $NetBSD: Makefile,v 1.20 2019/04/26 13:14:18 maya Exp $
 
 DISTNAME=	xmlada-${XMLADA_VERS}
 PKGREVISION=	5
@@ -41,7 +41,7 @@ MAKE_ENV+=	SPHINXBUILD=${PREFIX}/bin/sphinx-build${PYVERSSUFFIX}
 
 DESTSTATIC=	${DESTDIR}${PREFIX}/lib/xmlada/static
 DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 4.4.0.0
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 4.4.0.0
 
 post-install:
 	# There is no reason to install sphinx source files

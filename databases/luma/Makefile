@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2019/04/25 07:32:40 maya Exp $
+# $NetBSD: Makefile,v 1.46 2019/04/26 13:13:46 maya Exp $
 
 DISTNAME=	luma-3.0.7
 PKGREVISION=	1
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-ldap-[0-9]*:../../databases/py-ldap
 REPLACE_PYTHON=		luma/luma.py
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PYSITELIB}/luma/plugins/browser
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-ldap
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-ldap
 
 SUBST_CLASSES+=		luma
 SUBST_STAGE.luma=	pre-configure

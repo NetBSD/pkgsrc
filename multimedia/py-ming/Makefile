@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2018/11/13 10:23:47 markd Exp $
+# $NetBSD: Makefile,v 1.31 2019/04/26 13:14:06 maya Exp $
 
 .include "../../multimedia/ming/Makefile.common"
 
@@ -14,7 +14,7 @@ PY_PATCHPLIST=		yes
 PYSETUPSUBDIR=		py_ext
 EGG_NAME=		${DISTNAME:S/ming/mingc/:S/_/./g}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37
 
 pre-configure:
 	cd ${WRKSRC}/py_ext; \

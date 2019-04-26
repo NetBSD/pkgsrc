@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2018/11/29 11:22:00 prlw1 Exp $
+# $NetBSD: Makefile,v 1.121 2019/04/26 13:14:24 maya Exp $
 
 DISTNAME=	gnome-python-2.28.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gnome-python/gnome2/}
@@ -18,7 +18,7 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
 USE_TOOLS+=		pkg-config gmake
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-ORBit, py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-ORBit, py-gtk2
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-std=c9x
 

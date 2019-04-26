@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/01/08 09:10:11 adam Exp $
+# $NetBSD: Makefile,v 1.4 2019/04/26 13:13:54 maya Exp $
 
 DISTNAME=	pytest-asyncio-0.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-async_generator>=1.3:../../devel/py-async_generator
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 34
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

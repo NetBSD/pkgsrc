@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/04/25 07:32:37 maya Exp $
+# $NetBSD: Makefile,v 1.14 2019/04/26 13:13:44 maya Exp $
 
 DISTNAME=	glmark2-2017.07
 PKGREVISION=	1
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3 AND modified-bsd
 
 USE_LANGUAGES=	c c++11
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37
 
 USE_TOOLS+=	pkg-config
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/04/25 07:32:42 maya Exp $
+# $NetBSD: Makefile,v 1.12 2019/04/26 13:13:48 maya Exp $
 
 DISTNAME=	skytools-3.2
 PKGREVISION=	3
@@ -20,7 +20,7 @@ USE_TOOLS+=	awk gmake grep sed
 
 PY_PATCHPLIST=	yes
 PY_NO_EGG=	no
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 3.2
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 3.2
 
 REPLACE_PYTHON+=	scripts/*.py
 REPLACE_PYTHON+=	python/*.py
