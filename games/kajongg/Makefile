@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2019/04/26 13:13:58 maya Exp $
+# $NetBSD: Makefile,v 1.53 2019/04/26 14:12:39 maya Exp $
 
 DISTNAME=	kajongg-${_KDE_VERSION}
 PKGREVISION=	24
@@ -9,7 +9,7 @@ COMMENT=	Maj Jong game
 
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # as of 4.14.3, configure does not detect twisted due to using 2.x syntax
+PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # as of 4.14.3, configure does not detect twisted due to using 2.x syntax
 
 REPLACE_PYTHON+=	setup.py
 REPLACE_PYTHON+=	src/deferredutil.py

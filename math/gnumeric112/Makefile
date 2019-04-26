@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2019/04/26 13:14:04 maya Exp $
+# $NetBSD: Makefile,v 1.56 2019/04/26 14:12:41 maya Exp $
 
 DISTNAME=	gnumeric-1.12.44
 PKGREVISION=	2
@@ -29,7 +29,7 @@ TEST_TARGET=		check
 
 CONFIGURE_ARGS+=	--with-python
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 1.12.9
+PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 1.12.9
 
 #CONFIGURE_ARGS+=	--with-gnome
 

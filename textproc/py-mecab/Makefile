@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/04/26 13:14:17 maya Exp $
+# $NetBSD: Makefile,v 1.16 2019/04/26 14:12:47 maya Exp $
 
 .include "../../textproc/mecab/Makefile.common"
 
@@ -20,7 +20,7 @@ do-test:
 
 BUILDLINK_API_DEPENDS.mecab+=	mecab>=${MECAB_VERSION}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 0.996
+PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 0.996
 
 .include "../../textproc/mecab/buildlink3.mk"
 .include "../../lang/python/distutils.mk"

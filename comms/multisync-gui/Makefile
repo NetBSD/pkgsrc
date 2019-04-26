@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2019/04/26 13:13:45 maya Exp $
+# $NetBSD: Makefile,v 1.66 2019/04/26 14:12:33 maya Exp $
 
 DISTNAME=	multisync-gui-0.91.0
 PKGREVISION=	50
@@ -13,7 +13,7 @@ USE_TOOLS+=	pkg-config
 HAS_CONFIGURE=	yes
 
 REPLACE_PYTHON= waf
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 0.91.0
+PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 0.91.0
 
 LDFLAGS.DragonFly=	-lgthread-2.0
 LDFLAGS.SunOS+=		-lgthread-2.0
