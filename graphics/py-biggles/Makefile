@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/04/26 13:14:00 maya Exp $
+# $NetBSD: Makefile,v 1.26 2019/04/26 14:12:40 maya Exp $
 
 DISTNAME=	python2-biggles-1.6.6
 PKGNAME=	${PYPKGPREFIX}${DISTNAME:S/python2//}
@@ -9,7 +9,7 @@ MAINTAINER=	Kai.Puolamaki@iki.fi
 HOMEPAGE=	http://biggles.sourceforge.net/
 COMMENT=	Python module for creating 2D scientific plots
 
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not ported yet as of 1.6.6
+PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not ported yet as of 1.6.6
 
 .include "../../lang/python/distutils.mk"
 .include "../../math/py-numpy/buildlink3.mk"
