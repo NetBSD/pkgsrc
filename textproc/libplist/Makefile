@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/04/26 13:14:16 maya Exp $
+# $NetBSD: Makefile,v 1.21 2019/04/26 14:12:46 maya Exp $
 
 DISTNAME=	libplist-1.12
 PKGREVISION=	1
@@ -20,7 +20,7 @@ USE_LANGUAGES=	c c++
 PKGCONFIG_OVERRIDE+=	libplist++.pc.in
 PKGCONFIG_OVERRIDE+=	libplist.pc.in
 PY_PATCHPLIST=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 1.8
+PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 1.8
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../devel/py-cython/tool.mk"
