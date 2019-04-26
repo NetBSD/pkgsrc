@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2018/12/19 22:22:59 nia Exp $
+# $NetBSD: options.mk,v 1.16 2019/04/26 13:14:11 maya Exp $
 #
 # HPLIP dependencies are detailed in the following page:
 # http://hplipopensource.com/hplip-web/install/manual/distros/other.html
@@ -16,7 +16,7 @@ PKG_OPTIONS_LEGACY_OPTS+=	qt:qt4
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mqt4) || !empty(PKG_OPTIONS:Mqt5)
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-notify
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-notify
 CONFIGURE_ARGS+=	--enable-gui-build
 CONFIGURE_ARGS+=	--enable-policykit
 EGFILES+=		dbus-1/system.d/com.hp.hplip.conf

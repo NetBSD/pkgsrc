@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.147 2019/04/25 07:32:56 maya Exp $
+# $NetBSD: Makefile,v 1.148 2019/04/26 13:13:59 maya Exp $
 
 DISTNAME=	mesa-11.2.2
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -79,7 +79,7 @@ SUBST_SED.tr1+=		-e 's,include <tr1/,include <,g'
 .endif
 
 PYTHON_FOR_BUILD_ONLY=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # as of 11.2.2
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # as of 11.2.2
 BUILD_DEPENDS+=		${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
 CONFIGURE_ENV+=		ac_cv_prog_PYTHON2=${PYTHONBIN}
 .include "../../lang/python/tool.mk"

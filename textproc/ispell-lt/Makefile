@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/04/25 07:33:24 maya Exp $
+# $NetBSD: Makefile,v 1.9 2019/04/26 13:14:16 maya Exp $
 
 DISTNAME=	ispell-lt-1.3
 PKGREVISION=	1
@@ -14,7 +14,7 @@ DEPENDS+=	ispell-[0-9]*:../../textproc/ispell
 
 USE_TOOLS+=		gmake
 REPLACE_PYTHON+=	tools/*.py
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 1.3
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 1.3
 
 SUBST_CLASSES+=		install
 SUBST_FILES.install=	Makefile
