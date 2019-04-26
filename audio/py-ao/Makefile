@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/07/03 05:03:02 adam Exp $
+# $NetBSD: Makefile,v 1.20 2019/04/26 13:13:42 maya Exp $
 
 DISTNAME=		pyao-0.82
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+=	--prefix ${PREFIX}
 
 CONFLICTS=		${PYPKGPREFIX}-pyao-[0-9]*
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 0.82
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 0.82
 
 .include "../../audio/libao/buildlink3.mk"
 .include "../../lang/python/distutils.mk"

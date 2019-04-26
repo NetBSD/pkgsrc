@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/04/25 07:32:39 maya Exp $
+# $NetBSD: Makefile,v 1.9 2019/04/26 13:13:45 maya Exp $
 
 DISTNAME=	tootstream-0.3.6
 PKGREVISION=	2
@@ -16,7 +16,7 @@ USE_LANGUAGES=	# none
 # incompatible with python 2.
 # strange locale errors on earlier versions of python 3, related
 # to py-click.
-PYTHON_VERSIONS_INCOMPATIBLE+=	27 34 35 36
+PYTHON_VERSIONS_INCOMPATIBLE+=	27  36
 
 DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-colored-[0-9]*:../../textproc/py-colored

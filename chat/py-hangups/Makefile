@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/02/26 18:31:46 leot Exp $
+# $NetBSD: Makefile,v 1.7 2019/04/26 13:13:44 maya Exp $
 
 DISTNAME=	hangups-0.4.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,7 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-urwid>=1.3.1:../../devel/py-urwid
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 34
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

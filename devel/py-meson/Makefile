@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/03/13 12:51:13 prlw1 Exp $
+# $NetBSD: Makefile,v 1.20 2019/04/26 13:13:52 maya Exp $
 
 DISTNAME=	meson-0.50.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 34
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # c++ for tests
 USE_LANGUAGES=	c c++
