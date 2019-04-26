@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18954 2019/04/25 21:36:52 wiz Exp $
+$NetBSD: TODO,v 1.18955 2019/04/26 22:44:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1197,6 +1197,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ruby-redmine-4.0.1
 	o ruby-review-1.4.0 [wip]
 	o rump-20131213
+	o rust-1.34.1
 	o sabayon-2.30.1
 	o sablecc-3.7
 	o sarg-2.2.5
