@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.37 2019/03/23 17:20:31 gdt Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.38 2019/04/26 18:14:15 gdt Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -419,7 +419,7 @@ while [ -n "$REPLACE_TODO" ]; do
     for pkg in $TSORTED; do
         if is_member $pkg $REPLACE_TODO; then
 	    pkgdir=$(${PKG_INFO} -Q PKGPATH $pkg)
-	    [ -n "$pkgdir" ] || abort "Couldn't extract PKGPATH from installed package $pkg"
+	    [ -n "$pkgdir" ] || error "Couldn't extract PKGPATH from installed package $pkg"
             break;
         fi
     done
