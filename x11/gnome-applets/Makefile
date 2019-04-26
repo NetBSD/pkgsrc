@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.163 2019/04/25 07:33:29 maya Exp $
+# $NetBSD: Makefile,v 1.164 2019/04/26 13:14:23 maya Exp $
 
 DISTNAME=		gnome-applets-2.32.1.1
 PKGREVISION=		66
@@ -15,7 +15,7 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-ORBit via py-gnome2
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-ORBit via py-gnome2
 
 .include "options.mk"
 

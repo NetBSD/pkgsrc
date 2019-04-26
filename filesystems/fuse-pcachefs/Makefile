@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/04/25 07:32:53 maya Exp $
+# $NetBSD: Makefile,v 1.6 2019/04/26 13:13:56 maya Exp $
 #
 
 DISTNAME=	fuse-pcachefs-0.0.20160203
@@ -16,7 +16,7 @@ LICENSE=	apache-2.0
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 EGG_NAME=	pCacheFS-0.2
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-fuse-bindings
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-fuse-bindings
 
 .include "../../filesystems/py-fuse-bindings/buildlink3.mk"
 .include "../../lang/python/distutils.mk"

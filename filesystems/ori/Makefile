@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/01/02 20:36:07 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2019/04/26 13:13:57 maya Exp $
 
 DISTNAME=	ori-0.8.1
 PKGREVISION=	2
@@ -14,7 +14,7 @@ LICENSE=	isc
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37	# python2 SCons files
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37	# python2 SCons files
 
 SUBST_CLASSES+=		man
 SUBST_SED.man+=		-e "s,share/man,${PKGMANDIR},"

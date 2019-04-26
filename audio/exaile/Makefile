@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2019/04/25 07:32:35 maya Exp $
+# $NetBSD: Makefile,v 1.62 2019/04/26 13:13:41 maya Exp $
 
 DISTNAME=	exaile_0.2.14
 PKGNAME=	${DISTNAME:S/_/-/1}
@@ -20,7 +20,7 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config gmake intltool msgfmt
 
 REPLACE_PYTHON=	exaile.py
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-sqlite2, py-gtk2, py-gstreamer0.10
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 # py-sqlite2, py-gtk2, py-gstreamer0.10
 
 MAKE_ENV+=	PYTHONBIN=${PYTHONBIN}
 MAKE_FLAGS+=	PKGLOCALEDIR=${PKGLOCALEDIR}

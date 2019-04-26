@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/04/25 07:33:01 maya Exp $
+# $NetBSD: Makefile,v 1.13 2019/04/26 13:14:03 maya Exp $
 
 DISTNAME=	tegaki-train-0.3.1
 PKGREVISION=	2
@@ -14,7 +14,7 @@ DEPENDS+=	tegaki-pygtk>=0.2:../../inputmethod/tegaki-pygtk
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 0.3.1
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 0.3.1
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/04/17 15:19:51 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2019/04/26 13:13:51 maya Exp $
 
 DISTNAME=	bcolz-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,8 +11,6 @@ COMMENT=	Columnar and compressed data containers
 LICENSE=	modified-bsd
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.15.0:../../devel/py-setuptools_scm
-
-PYTHON_VERSIONS_INCOMPATIBLE=	34
 
 MAKE_ENV+=	BLOSC_DIR=${BUILDLINK_PREFIX.blosc}
 

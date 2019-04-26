@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/04/25 07:33:06 maya Exp $
+# $NetBSD: Makefile,v 1.38 2019/04/26 13:14:04 maya Exp $
 
 DISTNAME=	bulk-large-20190305
 PKGREVISION=	1
@@ -15,7 +15,7 @@ RESTRICTED=		Just for test build purpose
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-gtk2
 
 #
 # Note: the primary purpose of this package is to build the most

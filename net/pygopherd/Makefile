@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/04/25 07:33:12 maya Exp $
+# $NetBSD: Makefile,v 1.34 2019/04/26 13:14:10 maya Exp $
 
 DISTNAME=	pygopherd_2.0.16
 PKGREVISION=	5
@@ -33,7 +33,7 @@ RCD_SCRIPTS=	pygopherd
 FILES_SUBST+=	RUNTIMEDIR=${RUNTIMEDIR:Q}
 FILES_SUBST+=	PYTHONBIN=${PYTHONBIN:Q}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 2.0.16
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 2.0.16
 REPLACE_PYTHON=	bin/pygopherd
 REPLACE_PYTHON+=	pygopherd/GopherExceptionsTest.py
 REPLACE_PYTHON+=	pygopherd/fileextTest.py

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2019/04/25 07:33:06 maya Exp $
+# $NetBSD: Makefile,v 1.54 2019/04/26 13:14:04 maya Exp $
 
 DISTNAME=	bulk-medium-20190414
 PKGREVISION=	1
@@ -11,7 +11,7 @@ COMMENT=	Meta-package for a standard medium-sized limited bulk build
 
 META_PACKAGE=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-matplotlib-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-matplotlib-gtk2
 
 RESTRICTED=		Just for test build purpose
 NO_BIN_ON_CDROM=	${RESTRICTED}

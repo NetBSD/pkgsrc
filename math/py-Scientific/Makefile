@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2019/03/28 14:10:32 bacon Exp $
+# $NetBSD: Makefile,v 1.56 2019/04/26 13:14:04 maya Exp $
 
 DISTNAME=	ScientificPython-2.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Python//}
@@ -20,7 +20,7 @@ MAKE_ENV+=	NETCDF_PREFIX=${BUILDLINK_PREFIX.netcdf}
 PYPLAT_CMD=	${PYTHONBIN} -c "import sys; print sys.platform"
 PLIST_SUBST+=	PYPLAT=${PYPLAT_CMD:sh}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 2.8.1
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 2.8.1
 
 INSTALLATION_DIRS=	bin
 

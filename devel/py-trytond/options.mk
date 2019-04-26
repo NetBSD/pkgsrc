@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2018/07/03 05:03:13 adam Exp $
+# $NetBSD: options.mk,v 1.13 2019/04/26 13:13:54 maya Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-trytond
 PKG_SUPPORTED_OPTIONS=	cdecimal mysql pydot psycopg pytz simplejson sphinx
@@ -10,12 +10,12 @@ PKG_SUGGESTED_OPTIONS+=	psycopg pytz simplejson sphinx
 # XXX: python-Levenshtein (http://github.com/miohtama/python-Levenshtein) option
 
 .if !empty(PKG_OPTIONS:Mcdecimal)
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-cdecimal is obsolete for that version and thus not available
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-cdecimal is obsolete for that version and thus not available
 DEPENDS+=		${PYPKGPREFIX}-cdecimal-[0-9]*:../../math/py-cdecimal
 .endif
 
 .if !empty(PKG_OPTIONS:Mmysql)
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-mysqldb
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-mysqldb
 DEPENDS+=		${PYPKGPREFIX}-mysqldb-[0-9]*:../../databases/py-mysqldb
 .endif
 

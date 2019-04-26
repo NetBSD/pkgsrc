@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/07/03 05:03:12 adam Exp $
+# $NetBSD: Makefile,v 1.19 2019/04/26 13:13:52 maya Exp $
 
 DISTNAME=	gadfly-1.0.0
 PKGNAME=	${PYPKGPREFIX}-kjbuckets-2.2
@@ -15,7 +15,7 @@ EXTRACT_ELEMENTS+=	${DISTNAME}/doc/kjbuckets.txt
 WRKSRC=			${WRKDIR}/${DISTNAME}/kjbuckets
 
 PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX:Q}
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 1.0.0 resp. 2.2
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 1.0.0 resp. 2.2
 
 KJBDOCDIR=	${PREFIX}/share/doc/${PYPKGPREFIX}-kjbuckets
 

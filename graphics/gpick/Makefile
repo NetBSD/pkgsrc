@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/01/02 18:40:23 tnn Exp $
+# $NetBSD: Makefile,v 1.18 2019/04/26 13:14:00 maya Exp $
 
 DISTNAME=	gpick-gpick-0.2.5
 PKGNAME=	${DISTNAME:S/gpick-//}
@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=	c c++03
 USE_TOOLS+=	pkg-config
 
-PYTHON_VERSIONS_INCOMPATIBLE= 34 35 36 37	# as of 0.2.5
+PYTHON_VERSIONS_INCOMPATIBLE=  36 37	# as of 0.2.5
 
 SCONS_ARGS+=	DESTDIR=${DESTDIR}${PREFIX}
 SCONS_ARGS+=	PKGMANDIR=${PKGMANDIR}

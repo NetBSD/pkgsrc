@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/07/03 05:03:05 adam Exp $
+# $NetBSD: Makefile,v 1.6 2019/04/26 13:13:45 maya Exp $
 
 DISTNAME=	yenc-${DISTVERSION}
 DISTVERSION=	0.4.0
@@ -15,7 +15,7 @@ HOMEPAGE=	http://www.golug.it/yenc.html
 COMMENT=	Python module for yenc decoding module in C
 LICENSE=        gnu-lgpl-v2.1
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # as of 0.4.0
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # as of 0.4.0
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

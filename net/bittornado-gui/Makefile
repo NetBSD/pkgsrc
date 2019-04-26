@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2019/04/25 07:33:09 maya Exp $
+# $NetBSD: Makefile,v 1.37 2019/04/26 13:14:07 maya Exp $
 
 .include "../../net/bittornado/Makefile.common"
 
@@ -16,7 +16,7 @@ NO_BUILD=	yes
 
 REPLACE_PYTHON=	btcompletedirgui.py btdownloadgui.py
 REPLACE_PYTHON+=	btmaketorrentgui.py
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-wxWidgets
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-wxWidgets
 
 INSTALLATION_DIRS=	bin
 

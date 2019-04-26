@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/09/21 10:43:45 adam Exp $
+# $NetBSD: Makefile,v 1.5 2019/04/26 13:14:03 maya Exp $
 
 DISTNAME=	aiosmtpd-1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-atpublic-[0-9]*:../../devel/py-atpublic
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

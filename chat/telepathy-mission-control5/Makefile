@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/04/25 07:32:39 maya Exp $
+# $NetBSD: Makefile,v 1.22 2019/04/26 13:13:45 maya Exp $
 
 DISTNAME=	telepathy-mission-control-5.7.9
 PKGNAME=	telepathy-mission-control5-5.7.9
@@ -19,7 +19,7 @@ PKGCONFIG_OVERRIDE+=	mission-control-plugins.pc.in
 #PKGCONFIG_OVERRIDE+=	libmcclient.pc.in
 #PKGCONFIG_OVERRIDE+=	mission-control.pc.in
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 5.7.9
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 5.7.9
 
 #.include "../../lang/python/pyversion.mk"
 CONFIGURE_ENV+=		ac_cv_prog_PYTHON=${PYTHONBIN}
