@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2019/04/25 07:32:48 maya Exp $
+# $NetBSD: Makefile,v 1.3 2019/04/26 15:33:08 schmonz Exp $
 
 PKGNAME=		lld-7.0.1
 PKGREVISION=		1
-DISTNAME=		${PKGNAME}.src
+DISTNAME=		${PKGNAME_NOREV}.src
 CATEGORIES=		devel
 MASTER_SITES=		http://llvm.org/releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=		.tar.xz
