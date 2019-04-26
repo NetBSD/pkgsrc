@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2019/04/25 07:32:44 maya Exp $
+# $NetBSD: Makefile,v 1.42 2019/04/26 13:13:49 maya Exp $
 
 DISTNAME=	diffuse-0.4.8
 PKGREVISION=	1
@@ -12,7 +12,7 @@ COMMENT=	Graphical tool for merging and comparing text files
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.10:../../x11/py-gtk2
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-gtk2
 
 USE_TOOLS+=	msgfmt
 USE_LANGUAGES=	# none

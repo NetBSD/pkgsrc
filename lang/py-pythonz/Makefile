@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/07/03 05:03:22 adam Exp $
+# $NetBSD: Makefile,v 1.12 2019/04/26 13:14:03 maya Exp $
 
 DISTNAME=	pythonz-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	mit
 WRKSRC=		${WRKDIR}/pythonz-${DISTNAME}
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 1.2.1
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 1.2.1
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/pythonz \

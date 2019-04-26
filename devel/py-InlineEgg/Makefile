@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2018/07/03 05:03:10 adam Exp $
+# $NetBSD: Makefile,v 1.24 2019/04/26 13:13:50 maya Exp $
 
 DISTNAME=		InlineEgg-1.08
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ REPLACE_PYTHON=		examples/example1.py examples/example2.py \
 				xored_shell_client.py
 
 PYTHON_SELF_CONFLICT=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 1.08
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 1.08
 
 INSTALLATION_DIRS=	share/doc/InlineEgg share/examples/InlineEgg
 

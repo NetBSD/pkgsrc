@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.143 2019/04/25 07:33:06 maya Exp $
+# $NetBSD: Makefile,v 1.144 2019/04/26 13:14:05 maya Exp $
 
 DISTNAME=	gnome-2.26.2
 PKGREVISION=	7
@@ -11,7 +11,7 @@ COMMENT=	Meta-package for the GNOME desktop
 
 META_PACKAGE=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-ORBit via py-gnome2
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-ORBit via py-gnome2
 
 .include "../../lang/python/pyversion.mk"
 

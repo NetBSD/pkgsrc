@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2019/04/25 07:32:35 maya Exp $
+# $NetBSD: Makefile,v 1.32 2019/04/26 13:13:41 maya Exp $
 
 DISTNAME=	moss-0.1.13
 PKGREVISION=	7
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PYPKGPREFIX}-ogg>=1.3:../../audio/py-ogg
 DEPENDS+=	${PYPKGPREFIX}-vorbis>=1.3:../../audio/py-vorbis
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-ogg, py-vorbis
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-ogg, py-vorbis
 
 REPLACE_PYTHON=	${WRKSRC}/*.py
 

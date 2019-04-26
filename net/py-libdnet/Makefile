@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/07/03 05:03:28 adam Exp $
+# $NetBSD: Makefile,v 1.19 2019/04/26 13:14:09 maya Exp $
 
 DISTNAME=	libdnet-1.12
 PKGNAME=	${PYPKGPREFIX}-libdnet-1.12
@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 
 GNU_CONFIGURE=	yes
 PYSETUPSUBDIR=	python
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 1.12
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 1.12
 
 EGG_NAME=	${DISTNAME:S/^lib//}
 

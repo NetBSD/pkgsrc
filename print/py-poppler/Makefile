@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2019/03/27 11:23:18 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2019/04/26 13:14:11 maya Exp $
 
 DISTNAME=	pypoppler-0.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -15,7 +15,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 PY_PATCHPLIST=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-gtk2
 
 .include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../lang/python/extension.mk"

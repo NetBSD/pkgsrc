@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/04/04 12:25:38 adam Exp $
+# $NetBSD: Makefile,v 1.10 2019/04/26 13:14:21 maya Exp $
 
 DISTNAME=	sanic-19.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-ujson>=1.35:../../textproc/py-ujson
 DEPENDS+=	${PYPKGPREFIX}-uvloop>=0.5.3:../../devel/py-uvloop
 DEPENDS+=	${PYPKGPREFIX}-websockets>=6.0:../../www/py-websockets
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 34
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

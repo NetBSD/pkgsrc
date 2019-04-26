@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/07/03 05:03:13 adam Exp $
+# $NetBSD: Makefile,v 1.18 2019/04/26 13:13:54 maya Exp $
 
 VERSION=	1.0.0
 PKGREVISION=	1
@@ -15,7 +15,7 @@ LICENSE=	modified-bsd
 
 CFLAGS.SunOS+=	-Du_int8_t=uint8_t -Du_int16_t=uint16_t -Du_int32_t=uint32_t
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 0.4.2
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 0.4.2
 
 .include "../../mk/libusb.buildlink3.mk"
 .include "../../lang/python/distutils.mk"

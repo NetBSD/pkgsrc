@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/04/25 07:32:42 maya Exp $
+# $NetBSD: Makefile,v 1.30 2019/04/26 13:13:48 maya Exp $
 
 DISTNAME=	accerciser-1.12.1
 PKGREVISION=	4
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.8:../../x11/py-gtk2
 DEPENDS+=	${PYPKGPREFIX}-at-spi>=1.23.4:../../devel/py-at-spi
 DEPENDS+=	${PYPKGPREFIX}-ipython<0.11:../../devel/py-ipython010
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-ORBit via py-gnome2, py-ipython, py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-ORBit via py-gnome2, py-ipython, py-gtk2
 
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes

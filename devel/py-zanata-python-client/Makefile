@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/07/03 05:03:14 adam Exp $
+# $NetBSD: Makefile,v 1.12 2019/04/26 13:13:55 maya Exp $
 
 DISTNAME=	zanata-python-client-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-polib-[0-9]*:../../devel/py-polib
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 
 # Marked for 2.6 and 2.7 only
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37
 USE_LANGUAGES=	# none
 
 SUBST_CLASSES+=			version

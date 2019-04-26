@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/11/16 14:12:42 kleink Exp $
+# $NetBSD: Makefile,v 1.2 2019/04/26 13:14:11 maya Exp $
 
 DISTNAME=	WeasyPrint-0.42.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -24,7 +24,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-isort-[0-9]*:../../devel/py-test-isort
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37
+PYTHON_VERSIONS_INCOMPATIBLE=	 36 37
 
 USE_LANGUAGES=	# none
 

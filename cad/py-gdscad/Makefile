@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/07/03 05:03:04 adam Exp $
+# $NetBSD: Makefile,v 1.5 2019/04/26 13:13:44 maya Exp $
 
 DISTNAME=	gdsCAD-0.4.5
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Package for creating, reading, and manipulating GDSII layout files
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE= 34 35 36 37
+PYTHON_VERSIONS_INCOMPATIBLE=  36 37
 # PYSETUPBUILDTARGET= install
 
 .include "../../lang/python/egg.mk"

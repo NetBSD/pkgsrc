@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/12/13 11:13:57 adam Exp $
+# $NetBSD: Makefile,v 1.19 2019/04/26 13:14:22 maya Exp $
 
 DISTNAME=	yarl-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-multidict>=4.0:../../databases/py-multidict
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 34
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/egg.mk"
