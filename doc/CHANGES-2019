@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1846 2019/04/27 07:52:19 wen Exp $
+$NetBSD: CHANGES-2019,v 1.1847 2019/04/27 09:35:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3006,3 +3006,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-Storable to 3.15 [wen 2019-04-27]
 	Updated devel/p5-CPAN-Perl-Releases to 3.98 [wen 2019-04-27]
 	Updated devel/p5-Module-CoreList to 5.20190420 [wen 2019-04-27]
+	Updated databases/py-peewee to 3.9.5 [adam 2019-04-27]
+	Updated www/py-pylint-django to 2.0.9 [adam 2019-04-27]
