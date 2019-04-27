@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2018/11/27 16:22:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2019/04/27 09:35:29 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -94,6 +94,12 @@ ${PYSITELIB}/pylint_django/tests/input/func_noerror_foreign_key_attributes.pyo
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_foreign_key_ids.py
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_foreign_key_ids.pyc
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_foreign_key_ids.pyo
+${PYSITELIB}/pylint_django/tests/input/func_noerror_foreign_key_key_cls_unbound.py
+${PYSITELIB}/pylint_django/tests/input/func_noerror_foreign_key_key_cls_unbound.pyc
+${PYSITELIB}/pylint_django/tests/input/func_noerror_foreign_key_key_cls_unbound.pyo
+${PYSITELIB}/pylint_django/tests/input/func_noerror_foreign_key_package.py
+${PYSITELIB}/pylint_django/tests/input/func_noerror_foreign_key_package.pyc
+${PYSITELIB}/pylint_django/tests/input/func_noerror_foreign_key_package.pyo
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_foreign_key_sets.py
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_foreign_key_sets.pyc
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_foreign_key_sets.pyo
@@ -109,6 +115,9 @@ ${PYSITELIB}/pylint_django/tests/input/func_noerror_forms_py33.pyo
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_formview_ancestors.py
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_formview_ancestors.pyc
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_formview_ancestors.pyo
+${PYSITELIB}/pylint_django/tests/input/func_noerror_generic_foreign_key.py
+${PYSITELIB}/pylint_django/tests/input/func_noerror_generic_foreign_key.pyc
+${PYSITELIB}/pylint_django/tests/input/func_noerror_generic_foreign_key.pyo
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_ignore_meta_subclass.py
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_ignore_meta_subclass.pyc
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_ignore_meta_subclass.pyo
@@ -179,6 +188,12 @@ ${PYSITELIB}/pylint_django/tests/input/migrations/0002_new_column.txt
 ${PYSITELIB}/pylint_django/tests/input/migrations/__init__.py
 ${PYSITELIB}/pylint_django/tests/input/migrations/__init__.pyc
 ${PYSITELIB}/pylint_django/tests/input/migrations/__init__.pyo
+${PYSITELIB}/pylint_django/tests/input/models/__init__.py
+${PYSITELIB}/pylint_django/tests/input/models/__init__.pyc
+${PYSITELIB}/pylint_django/tests/input/models/__init__.pyo
+${PYSITELIB}/pylint_django/tests/input/models/author.py
+${PYSITELIB}/pylint_django/tests/input/models/author.pyc
+${PYSITELIB}/pylint_django/tests/input/models/author.pyo
 ${PYSITELIB}/pylint_django/tests/test_func.py
 ${PYSITELIB}/pylint_django/tests/test_func.pyc
 ${PYSITELIB}/pylint_django/tests/test_func.pyo
