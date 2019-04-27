@@ -528,6 +528,14 @@ func (s *Suite) Test_MkParser_MkCond(c *check.C) {
 	test("${\"${PKG_OPTIONS:Moption}\":?--enable-option:--disable-option}",
 		&mkCond{Var: varuse("\"${PKG_OPTIONS:Moption}\"", "?--enable-option:--disable-option")})
 
+	// Contrary to most other programming languages, the == operator binds
+	// more tightly that the ! operator.
+	//
+	// TODO: Since this operator precedence is surprising there should be a warning,
+	//  suggesting to replace "!${VAR} == value" with "${VAR} != value".
+	test("!${VAR} == value",
+		&mkCond{Not: &mkCond{CompareVarStr: &MkCondCompareVarStr{varuse("VAR"), "==", "value"}}})
+
 	// Errors
 
 	testRest("!empty(PKG_OPTIONS:Msndfile) || defined(PKG_OPTIONS:Msamplerate)",
