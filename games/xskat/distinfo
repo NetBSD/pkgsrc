@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 20:57:09 agc Exp $
+$NetBSD: distinfo,v 1.6 2019/04/27 11:25:11 wiz Exp $
 
 SHA1 (xskat-4.0.tar.gz) = b90859742b62369273d2683bd69006713e1e214d
 RMD160 (xskat-4.0.tar.gz) = 3a0da1171aff2f638c050114f13b4cfcdf198d4e
 SHA512 (xskat-4.0.tar.gz) = 508d83886063be01aef509fa8050110e599e0120025a94747717fcbae38e2196e8db041296b984fe37895c211519f511cf75dfa6b948c5789e6b37064f3d0c0d
 Size (xskat-4.0.tar.gz) = 179059 bytes
-SHA1 (xskat-cards.tar.gz) = fda81da8806640cfea7636647b3b2617e84bdc4a
-RMD160 (xskat-cards.tar.gz) = 807ecb990a796cd7bf9852fd4175daef2ea8bc75
-Size (xskat-cards.tar.gz) = 187122 bytes
 SHA1 (patch-aa) = 95c42daaa5d713d72514908dfe4af284a774c6c7
