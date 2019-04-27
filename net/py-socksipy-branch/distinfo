@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/01/24 20:46:42 bsiegert Exp $
+$NetBSD: distinfo,v 1.2 2019/04/27 11:33:03 wiz Exp $
 
 SHA1 (SocksiPy-branch-1.01.tar.gz) = e57a94a3c26735d460a99e378293b277e8e168d4
 RMD160 (SocksiPy-branch-1.01.tar.gz) = 012ccf67220dbca988114d971ff0219592b6eb00
+SHA512 (SocksiPy-branch-1.01.tar.gz) = 99031d806461a9e8f7b12357d70c65d6b571e2d145a20c0b50ee7991570f42d17120c9f59fc1959010296b8113c0d27538de10fafd5d610abba026ce043a81c1
 Size (SocksiPy-branch-1.01.tar.gz) = 8003 bytes

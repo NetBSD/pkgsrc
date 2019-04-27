@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.10 2018/03/18 09:14:19 wiz Exp $
+$NetBSD: distinfo,v 1.11 2019/04/27 11:33:03 wiz Exp $
 
 SHA1 (Apache-Gallery-1.0.2-withoutworldwriteables.tar.gz) = b68df2ac7bb784d1627e0b7e71460f8e4ae1a4e9
 RMD160 (Apache-Gallery-1.0.2-withoutworldwriteables.tar.gz) = 59e5c07ff536255e3defe0785908bb8621c2de09
+SHA512 (Apache-Gallery-1.0.2-withoutworldwriteables.tar.gz) = 429e81d9c244ad524dc296a137fc26f2a3689a208332225fa8c3231e17f26d46ba6d3c396bd4038c3e145223367241053106de574eb05c429c43b12c555e3e51
 Size (Apache-Gallery-1.0.2-withoutworldwriteables.tar.gz) = 89317 bytes
