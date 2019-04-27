@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2019/04/27 14:09:23 maya Exp $
+# $NetBSD: Makefile,v 1.28 2019/04/27 21:23:20 markd Exp $
 
 DISTNAME=	kwindowsystem-${KF5VER}
+PKGREVISION=	1
 CATEGORIES=	x11
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -19,8 +20,15 @@ SUBST_MESSAGE.fix-paths=	Cleaning up INTERFACE_INCLUDE_DIRECTORIES
 SUBST_FILES.fix-paths=		_KDE_build/CMakeFiles/Export/lib/cmake/KF5WindowSystem/KF5WindowSystemTargets.cmake
 SUBST_SED.fix-paths=		-e 's,${BUILDLINK_DIR},${X11BASE},g'
 
-CONF_FILES+=	${PREFIX}/share/examples/kde/kwindowsystem.categories \
-		${PKG_SYSCONFDIR}/kwindowsystem.categories
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	pre-configure
+SUBST_MESSAGE.xdg=	Install via examples dir.
+SUBST_FILES.xdg=	CMakeLists.txt
+SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
+
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kwindowsystem.categories \
+		${PKG_SYSCONFDIR}/xdg/kwindowsystem.categories
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
