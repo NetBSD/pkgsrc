@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.30 2018/11/03 08:06:46 adam Exp $
+$NetBSD: distinfo,v 1.31 2019/04/27 19:39:22 wiz Exp $
 
-SHA1 (ffmpeg-3.4.5.tar.xz) = fafa0422c8b9ae428d8e80ca59561773c3198dbe
-RMD160 (ffmpeg-3.4.5.tar.xz) = 2233f87d59ee167417abbbf6d5e38d655833088b
-SHA512 (ffmpeg-3.4.5.tar.xz) = d07f2d0cea5f75707746d31b1641e30680cd43e9da17dfc53b60619e31aee001750c68e1a70c9125e86e520037aa690bac4c7a6c698c376063766b011d818063
-Size (ffmpeg-3.4.5.tar.xz) = 8490416 bytes
+SHA1 (ffmpeg-3.4.6.tar.xz) = 7bba8fe29b64d28ac716131fae49f3f768ded2ae
+RMD160 (ffmpeg-3.4.6.tar.xz) = c62e4b9e534c782b2ccb8ef67c21ec361104c86a
+SHA512 (ffmpeg-3.4.6.tar.xz) = 1cff3d89b38bfa188d1ba8388db88c919c2b51133f4327a3cd13570a8a25584de2a99668379d145c7782e463e8e108dda6df82c75f38331c276470347d1d8146
+Size (ffmpeg-3.4.6.tar.xz) = 8491548 bytes
 SHA1 (patch-Makefile) = 0c35f53878b0420aeea49d8ccb249279e705eb40
 SHA1 (patch-configure) = a30c25267dec3642a010d7cb66fc98e8c5c0bdea
 SHA1 (patch-doc_Makefile) = 50ee7aaf74f8a5c439b11f141b5408322659543a
