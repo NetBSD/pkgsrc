@@ -92,6 +92,51 @@ func (s *Suite) Test_MkLineChecker_checkVarassignLeft__infrastructure(c *check.C
 		"WARN: ~/mk/infra.mk:2: _VARNAME is defined but not used.")
 }
 
+func (s *Suite) Test_MkLineChecker_checkVarassignLeftUserSettable(c *check.C) {
+	t := s.Init(c)
+
+	// TODO: Allow CreateFileLines before SetUpPackage, since it matches
+	//  the expected reading order of human readers.
+
+	t.SetUpPackage("category/package",
+		"ASSIGN_DIFF=\tpkg",          // assignment, differs from default value
+		"ASSIGN_DIFF2=\treally # ok", // ok because of the rationale in the comment
+		"ASSIGN_SAME=\tdefault",      // assignment, same value as default
+		"DEFAULT_DIFF?=\tpkg",        // default, differs from default value
+		"DEFAULT_SAME?=\tdefault",    // same value as default
+		"FETCH_USING=\tcurl",         // both user-settable and package-settable
+		"APPEND_DIRS+=\tdir3",        // appending requires a separate diagnostic
+		"COMMENTED_SAME?=\tdefault",  // commented default, same value as default
+		"COMMENTED_DIFF?=\tpkg")      // commented default, differs from default value
+	t.CreateFileLines("mk/defaults/mk.conf",
+		MkRcsID,
+		"ASSIGN_DIFF?=default",
+		"ASSIGN_DIFF2?=default",
+		"ASSIGN_SAME?=default",
+		"DEFAULT_DIFF?=\tdefault",
+		"DEFAULT_SAME?=\tdefault",
+		"FETCH_USING=\tauto",
+		"APPEND_DIRS=\tdefault",
+		"#COMMENTED_SAME?=\tdefault",
+		"#COMMENTED_DIFF?=\tdefault")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"WARN: Makefile:20: Package sets user-defined \"ASSIGN_DIFF\" to \"pkg\", "+
+			"which differs from the default value \"default\" from mk/defaults/mk.conf.",
+		"NOTE: Makefile:22: Redundant definition for ASSIGN_SAME from mk/defaults/mk.conf.",
+		"WARN: Makefile:23: Please include \"../../mk/bsd.prefs.mk\" before using \"?=\".",
+		"WARN: Makefile:23: Package sets user-defined \"DEFAULT_DIFF\" to \"pkg\", "+
+			"which differs from the default value \"default\" from mk/defaults/mk.conf.",
+		"NOTE: Makefile:24: Redundant definition for DEFAULT_SAME from mk/defaults/mk.conf.",
+		"WARN: Makefile:26: Packages should not append to user-settable APPEND_DIRS.",
+		"WARN: Makefile:28: Package sets user-defined \"COMMENTED_DIFF\" to \"pkg\", "+
+			"which differs from the default value \"default\" from mk/defaults/mk.conf.")
+}
+
 func (s *Suite) Test_MkLineChecker_Check__url2pkg(c *check.C) {
 	t := s.Init(c)
 
@@ -625,8 +670,8 @@ func (s *Suite) Test_MkLineChecker_checkVarassignLeftPermissions(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"WARN: options.mk:2: The variable PKG_DEVELOPER should not be given a default value by any package.",
 		"WARN: options.mk:2: Please include \"../../mk/bsd.prefs.mk\" before using \"?=\".",
+		"WARN: options.mk:2: The variable PKG_DEVELOPER should not be given a default value by any package.",
 		"WARN: options.mk:3: The variable BUILD_DEFS should not be given a default value (only appended to) in this file.",
 		"WARN: options.mk:4: USE_TOOLS should not be used at load time in this file; "+
 			"it would be ok in Makefile.common or builtin.mk, but not buildlink3.mk or *.",
@@ -660,7 +705,6 @@ func (s *Suite) Test_MkLineChecker_checkVarassignLeftPermissions__no_tracing(c *
 func (s *Suite) Test_MkLineChecker_checkVarassignLeftPermissions__license_default(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpVartypes()
 	t.SetUpPkgsrc()
 	mklines := t.NewMkLines("filename.mk",
 		MkRcsID,
@@ -1814,7 +1858,6 @@ func (s *Suite) Test_MkLineChecker_CheckVaruse__for(c *check.C) {
 func (s *Suite) Test_MkLineChecker_CheckVaruse__varcanon(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpVartypes()
 	t.SetUpPkgsrc()
 	t.CreateFileLines("mk/sys-vars.mk",
 		MkRcsID,
@@ -1845,7 +1888,6 @@ func (s *Suite) Test_MkLineChecker_CheckVaruse__defined_in_infrastructure(c *che
 	t := s.Init(c)
 
 	t.SetUpPkgsrc()
-	t.SetUpVartypes()
 	t.CreateFileLines("mk/deeply/nested/infra.mk",
 		MkRcsID,
 		"INFRA_VAR?=\tvalue")
@@ -1997,6 +2039,33 @@ func (s *Suite) Test_MkLineChecker_CheckVaruse__deprecated_PKG_DEBUG(c *check.C)
 		"WARN: module.mk:123: Use of _PKG_SILENT and _PKG_DEBUG is deprecated. Use ${RUN} instead.")
 }
 
+func (s *Suite) Test_MkLineChecker_checkVaruseUndefined(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPkgsrc()
+	t.CreateFileLines("mk/infra.mk",
+		MkRcsID,
+		"#",
+		"# User-settable variables:",
+		"#",
+		"# DOCUMENTED",
+		"",
+		"ASSIGNED=\tassigned",
+		"#COMMENTED=\tcommented")
+	t.FinishSetUp()
+
+	mklines := t.NewMkLines("filename.mk",
+		MkRcsID,
+		"",
+		"do-build:",
+		"\t: ${ASSIGNED} ${COMMENTED} ${DOCUMENTED} ${UNKNOWN}")
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"WARN: filename.mk:4: UNKNOWN is used but not defined.")
+}
+
 // PR 46570, item "15. net/uucp/Makefile has a make loop"
 func (s *Suite) Test_MkLineChecker_checkVaruseUndefined__indirect_variables(c *check.C) {
 	t := s.Init(c)
@@ -2017,6 +2086,32 @@ func (s *Suite) Test_MkLineChecker_checkVaruseUndefined__indirect_variables(c *c
 	// It does warn about simple variable names though, like ${var} in this example.
 	t.CheckOutputLines(
 		"WARN: net/uucp/Makefile:2: var is used but not defined.")
+}
+
+// Documented variables are declared as both defined and used since, as
+// of April 2019, pkglint doesn't yet interpret the "Package-settable
+// variables" comment.
+func (s *Suite) Test_MkLineChecker_checkVaruseUndefined__documented(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+
+	mklines := t.NewMkLines("interpreter.mk",
+		MkRcsID,
+		"#",
+		"# Package-settable variables:",
+		"#",
+		"# REPLACE_INTERP",
+		"#\tThe list of files whose interpreter will be corrected.",
+		"",
+		"REPLACE_INTERPRETER+=\tinterp",
+		"REPLACE.interp.old=\t.*/interp",
+		"REPLACE.interp.new=\t${PREFIX}/bin/interp",
+		"REPLACE_FILES.interp=\t${REPLACE_INTERP}")
+
+	mklines.Check()
+
+	t.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_MkLineChecker_checkVarassignMisc(c *check.C) {
@@ -2051,7 +2146,6 @@ func (s *Suite) Test_MkLineChecker_checkVarassignMisc__multiple_inclusion_guards
 	t := s.Init(c)
 
 	t.SetUpPkgsrc()
-	t.SetUpVartypes()
 	t.CreateFileLines("filename.mk",
 		MkRcsID,
 		".if !defined(FILENAME_MK)",
