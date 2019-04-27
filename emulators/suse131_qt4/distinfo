@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 20:31:09 agc Exp $
+$NetBSD: distinfo,v 1.7 2019/04/27 13:54:26 wiz Exp $
 
 SHA1 (suse131/libQtWebKit4-4.8.5+2.3.3-2.6.1.i586.rpm) = cdfd2fd2ccd6f44150dac76c55f58e8475c98032
 RMD160 (suse131/libQtWebKit4-4.8.5+2.3.3-2.6.1.i586.rpm) = 3ca45793da763180097b37d33dcfa1377c44cca2
@@ -26,6 +26,7 @@ SHA512 (suse131/libqt4-qt3support-4.8.5-5.17.1.x86_64.rpm) = 72b676a8e78971d0c5f
 Size (suse131/libqt4-qt3support-4.8.5-5.17.1.x86_64.rpm) = 1024798 bytes
 SHA1 (suse131/libqt4-x11-4.8.5-5.17.1.i586.rpm) = 94daff738912c96ed8878ce1a131cd49fb379206
 RMD160 (suse131/libqt4-x11-4.8.5-5.17.1.i586.rpm) = c21cf9efe998c325efe26c0fc7f74fc80814cd13
+SHA512 (suse131/libqt4-x11-4.8.5-5.17.1.i586.rpm) = d61c92d72f8743928b768e7b44a07eb3ca7957eab04f1e34cb6a2a2a270485f582ba5c356acfc2441b128efc528bb771fbb96fbf90b07060196285bd4957c8f0
 Size (suse131/libqt4-x11-4.8.5-5.17.1.i586.rpm) = 10712382 bytes
 SHA1 (suse131/libqt4-x11-4.8.5-5.17.1.x86_64.rpm) = 6466d57d6e614eb2bef14bd9c10107bc405bc3e6
 RMD160 (suse131/libqt4-x11-4.8.5-5.17.1.x86_64.rpm) = 96beb6d5143816e3a5f924605c81c13d13051ed9
