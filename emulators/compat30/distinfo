@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2019/04/27 13:25:41 wiz Exp $
+$NetBSD: distinfo,v 1.3 2019/04/27 13:46:28 wiz Exp $
 
 SHA1 (compat30-alpha-3.1.tar.bz2) = c457c201c57b80488115e6ddaecf41ea65ed5625
 RMD160 (compat30-alpha-3.1.tar.bz2) = 30ba87e06355cc4059ef4aab6feefdf95b185d8d
@@ -30,6 +30,7 @@ SHA512 (compat30-powerpc-3.1.tar.bz2) = ed62f899457053a2fb418b0258de0e1e130c9f39
 Size (compat30-powerpc-3.1.tar.bz2) = 1649707 bytes
 SHA1 (compat30-sh3eb-3.1.tar.bz2) = dfe18e8b8ff6ab3d9f5c9648d7c28da41ac06b88
 RMD160 (compat30-sh3eb-3.1.tar.bz2) = a8a85c1f108526a782b13125e357fc5e3fdfc1b7
+SHA512 (compat30-sh3eb-3.1.tar.bz2) = 203f636409285b294c3e0d7e22347125e3cf835663b4af821dd74aa983e50914ec8cb3bdd85200382157743a1a1f673514fbe7fffbed7fe8433bc5cf1268e088
 Size (compat30-sh3eb-3.1.tar.bz2) = 1689141 bytes
 SHA1 (compat30-sh3el-3.1.tar.bz2) = cb0fb247a3a8374acdc2f8d8ebe2b8705164708a
 RMD160 (compat30-sh3el-3.1.tar.bz2) = c1c466e7f9c29545c5527a4feb911a0a304b2a36
