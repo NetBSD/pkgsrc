@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.147 2019/04/25 23:54:46 kamil Exp $
+$NetBSD: distinfo,v 1.148 2019/04/27 18:00:46 kamil Exp $
 
 SHA1 (qemu-4.0.0.tar.xz) = 74cfb8f4724d9651fdd354560f2d291887b32cad
 RMD160 (qemu-4.0.0.tar.xz) = 58135f00c391823edce780d55a816f29dd73c34b
@@ -21,4 +21,4 @@ SHA1 (patch-target_hppa_insns.decode) = 111ad3d5db1c46fd42bb033ac09db377303d352e
 SHA1 (patch-target_hppa_mem__helper.c) = 080d99b2a6dc7f5ab1df04ef6c316e5dcd133753
 SHA1 (patch-target_hppa_translate.c) = 8bdeaba3f19204ffd5465d33a44380bbcbfd7a57
 SHA1 (patch-target_i386_kvm-stub.c) = 4cd2b7a8d8d8a317829f982b5acff7fdf2479d9f
-SHA1 (patch-ui_curses.c) = 1809e6a35cc920dc42dbdef8ee8844d0108a8db7
+SHA1 (patch-ui_curses.c) = a8bd6ad93d53d6cfba3b6853aff5702fe40ae944
