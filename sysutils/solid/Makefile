@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/04/25 21:05:22 markd Exp $
+# $NetBSD: Makefile,v 1.27 2019/04/27 14:09:23 maya Exp $
 
 DISTNAME=	solid-${KF5VER}
 CATEGORIES=	sysutils
@@ -10,6 +10,9 @@ LICENSE=	gnu-lgpl-v2.1
 .include "../../meta-pkgs/kde/kf5.mk"
 
 USE_TOOLS+=	flex bison
+
+CONF_FILES+=	${PREFIX}/share/examples/kde/solid.categories \
+		${PKG_SYSCONFDIR}/solid.categories
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"

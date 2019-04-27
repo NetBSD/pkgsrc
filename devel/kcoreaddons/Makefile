@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2019/04/25 20:50:23 markd Exp $
+# $NetBSD: Makefile,v 1.31 2019/04/27 14:09:23 maya Exp $
 
 DISTNAME=	kcoreaddons-${KF5VER}
 CATEGORIES=	devel
@@ -6,6 +6,9 @@ CATEGORIES=	devel
 HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Addons to QtCore
 LICENSE=	gnu-lgpl-v2 AND gnu-lgpl-v2.1 AND modified-bsd
+
+CONF_FILES+=	${PREFIX}/share/examples/kde/kcoreaddons.categories \
+		${PKG_SYSCONFDIR}/kcoreaddons.categories
 
 .include "../../meta-pkgs/kde/kf5.mk"
 
