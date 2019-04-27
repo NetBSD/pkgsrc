@@ -265,7 +265,7 @@ func (mklines *MkLinesImpl) collectDefinedVariables() {
 	mklines.ForEach(func(mkline MkLine) {
 		mklines.Tools.ParseToolLine(mklines, mkline, false, true)
 
-		if !mkline.IsVarassign() {
+		if !mkline.IsVarassign() && !mkline.IsCommentedVarassign() {
 			return
 		}
 

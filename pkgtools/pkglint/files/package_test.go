@@ -477,7 +477,6 @@ func (s *Suite) Test_Package_loadPackageMakefile__dump(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpCommandLine("--dumpmakefile")
-	t.SetUpVartypes()
 	t.SetUpPkgsrc()
 	t.CreateFileLines("category/Makefile")
 	t.CreateFileLines("category/package/PLIST",
@@ -682,7 +681,6 @@ func (s *Suite) Test_Package_loadPackageMakefile__PECL_VERSION(c *check.C) {
 func (s *Suite) Test_Package_checkIncludeConditionally__conditional_and_unconditional_include(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpVartypes()
 	t.SetUpOption("zlib", "")
 	t.SetUpPackage("category/package",
 		".include \"../../devel/zlib/buildlink3.mk\"",
@@ -718,7 +716,6 @@ func (s *Suite) Test_Package_checkIncludeConditionally__conditional_and_uncondit
 func (s *Suite) Test_Package__include_without_exists(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpVartypes()
 	t.SetUpPackage("category/package",
 		".include \"options.mk\"")
 	t.FinishSetUp()
@@ -733,7 +730,6 @@ func (s *Suite) Test_Package__include_without_exists(c *check.C) {
 func (s *Suite) Test_Package__include_after_exists(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpVartypes()
 	t.SetUpPackage("category/package",
 		".if exists(options.mk)",
 		".  include \"options.mk\"",
@@ -750,7 +746,6 @@ func (s *Suite) Test_Package__include_after_exists(c *check.C) {
 func (s *Suite) Test_Package_readMakefile__include_other_after_exists(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpVartypes()
 	t.SetUpPackage("category/package",
 		".if exists(options.mk)",
 		".  include \"another.mk\"",

@@ -159,9 +159,6 @@ func (s *Suite) Test_ShellLineChecker_CheckShellCommandLine(c *check.C) {
 		"WARN: filename.mk:1: Please switch to \"set -e\" mode "+
 			"before using a semicolon (after \"uname=`uname`\") to separate commands.")
 
-	t.SetUpTool("echo", "", AtRunTime)
-	t.SetUpVartypes()
-
 	test("echo ${PKGNAME:Q}", // VucQuotPlain
 		"NOTE: filename.mk:1: The :Q operator isn't necessary for ${PKGNAME} here.")
 
