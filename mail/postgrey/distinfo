@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2015/11/03 23:27:17 agc Exp $
+$NetBSD: distinfo,v 1.16 2019/04/27 11:33:03 wiz Exp $
 
 SHA1 (postgrey-1.36.tar.gz) = 78d57e88a1a16a7a863a4a51dff2d88268d8f63e
 RMD160 (postgrey-1.36.tar.gz) = db87cb17774bb40df3200307c682e0083df87158
@@ -6,4 +6,5 @@ SHA512 (postgrey-1.36.tar.gz) = 9b2502b873658c1ef8a86bff091d61b8dc8d66f7395bc0a8
 Size (postgrey-1.36.tar.gz) = 38797 bytes
 SHA1 (targrey-0.31-postgrey-1.34.patch) = 67f9a0dd22e79a9c1c2f428b5ea12f5a9e7271af
 RMD160 (targrey-0.31-postgrey-1.34.patch) = 19d4b54da630445c3c26a4dcfdc65643780cae45
+SHA512 (targrey-0.31-postgrey-1.34.patch) = af4433f08120ae6ab07179f1adb88ca8c86c142b68727657555cef04d84105912e8e67c969c860ea000930196c6046b7b2bef2647f04b202ceecaf163d8515d5
 Size (targrey-0.31-postgrey-1.34.patch) = 8555 bytes
