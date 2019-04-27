@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.1 2007/08/21 22:49:19 jlam Exp $
+$NetBSD: distinfo,v 1.2 2019/04/27 13:23:40 wiz Exp $
 
 SHA1 (compat20-extras-i386-2.1.tar.bz2) = 8012c02de7401c2f78b7bf9388125730a1e78a1d
 RMD160 (compat20-extras-i386-2.1.tar.bz2) = d6e606964b69f18889c783a89d092aa66d8f7422
+SHA512 (compat20-extras-i386-2.1.tar.bz2) = 4b349a153ab7d9d356942145debcb25208dbde1b382dbc53d816750e4c1561736d510eea941383f4d0f19223d72a024d0e8c8df1b7903998062e7590a171a751
 Size (compat20-extras-i386-2.1.tar.bz2) = 4606393 bytes
 SHA1 (compat20-extras-sparc-2.1.tar.bz2) = 74398b762c5905e8ecd90b3c7bc5c6cf802a1721
 RMD160 (compat20-extras-sparc-2.1.tar.bz2) = 0ec0c2d93cb3265321e556e9a0da825ab900347d
+SHA512 (compat20-extras-sparc-2.1.tar.bz2) = e428cc814df6b3fc7b6225385d2c7c5617ea572bd101e3b0e9df754e111f641e7ec0571ba9c90a124d973ed7644a3ce56ddf27cb6a2314a0c18ab963527fb870
 Size (compat20-extras-sparc-2.1.tar.bz2) = 4848626 bytes
