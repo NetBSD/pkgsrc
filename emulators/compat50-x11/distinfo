@@ -1,11 +1,14 @@
-$NetBSD: distinfo,v 1.1 2013/02/17 17:24:08 spz Exp $
+$NetBSD: distinfo,v 1.2 2019/04/27 13:36:37 wiz Exp $
 
 SHA1 (compat50-x11-i386-5.0.tar.bz2) = db50b2fb96f3b5ccbf4cc8cb2709ebe75c245220
 RMD160 (compat50-x11-i386-5.0.tar.bz2) = fe42d8d063becf62e4902be4707ee17c4de63046
-Size (compat50-x11-i386-5.0.tar.bz2) =  1942481 bytes
+SHA512 (compat50-x11-i386-5.0.tar.bz2) = 00431a534b85256e3865fd6ec65683e52791ec2587dfc5f1f3bb5e44f962844e38af6482266d45fe484a4e64b829465bd175c728244a7bc910f25c70b9eec3ec
+Size (compat50-x11-i386-5.0.tar.bz2) = 1942481 bytes
 SHA1 (compat50-x11-sparc64-5.0.tar.bz2) = 0f7cc668b3ec21966dd5b7d7735b2fc836198a05
 RMD160 (compat50-x11-sparc64-5.0.tar.bz2) = 2696321173cf40eace53d1ab965ceb5abda1346a
-Size (compat50-x11-sparc64-5.0.tar.bz2) =  1984347 bytes
+SHA512 (compat50-x11-sparc64-5.0.tar.bz2) = d6a8e1ab7fa1a9a19a4f0a4f6df44ba2dc634ce89c0afa8d52abbde4f4509151803501208f27c9fc6ae8bd8ee8886949a39db6396ab4374ff3dac7d29dff9411
+Size (compat50-x11-sparc64-5.0.tar.bz2) = 1984347 bytes
 SHA1 (compat50-x11-x86_64-5.0.tar.bz2) = 00ae3a6b0e9698f2d8453e93b39a06f49c81fa84
 RMD160 (compat50-x11-x86_64-5.0.tar.bz2) = b89ae6c23e8c17bbb3c665d65f10ff9c1d40b181
-Size (compat50-x11-x86_64-5.0.tar.bz2) =  2213331 bytes
+SHA512 (compat50-x11-x86_64-5.0.tar.bz2) = cf8bbdff02ab1d8b8892850cba53a7bcac215068a9ea1f96dc170d2e933b5e75ba072ab058a3dff19dbdb2c659db0a5c7f6972a0290e17a9e494f3501e440df9
+Size (compat50-x11-x86_64-5.0.tar.bz2) = 2213331 bytes
