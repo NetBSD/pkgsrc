@@ -471,7 +471,13 @@ func (ck MkLineChecker) checkVaruseUndefined(vartype *Vartype, varname string) {
 		// Well-known variables are probably defined by the infrastructure.
 		return
 
-	case ck.MkLines != nil && (ck.MkLines.vars.DefinedSimilar(varname) || ck.MkLines.forVars[varname]):
+	case ck.MkLines != nil && ck.MkLines.vars.DefinedSimilar(varname):
+		return
+
+	case ck.MkLines != nil && ck.MkLines.forVars[varname]:
+		return
+
+	case ck.MkLines != nil && ck.MkLines.vars.Mentioned(varname) != nil:
 		return
 
 	case G.Pkg != nil && G.Pkg.vars.DefinedSimilar(varname):
@@ -922,8 +928,10 @@ func (ck MkLineChecker) checkVarassignLeft() {
 
 	ck.checkVarassignLeftNotUsed()
 	ck.checkVarassignLeftDeprecated()
-	ck.checkVarassignLeftPermissions()
 	ck.checkVarassignLeftBsdPrefs()
+	if !ck.checkVarassignLeftUserSettable() {
+		ck.checkVarassignLeftPermissions()
+	}
 
 	ck.checkTextVarUse(
 		ck.MkLine.Varname(),
@@ -1224,6 +1232,57 @@ func (ck MkLineChecker) checkVarassignLeftBsdPrefs() {
 		"",
 		"The easiest way to include the mk.conf file is by including the",
 		"bsd.prefs.mk file, which will take care of everything.")
+}
+
+// checkVarassignLeftUserSettable checks whether a package defines a
+// variable that is marked as user-settable since it is defined in
+// mk/defaults/mk.conf.
+func (ck MkLineChecker) checkVarassignLeftUserSettable() bool {
+	mkline := ck.MkLine
+	varname := mkline.Varname()
+
+	defaultMkline := G.Pkgsrc.UserDefinedVars.Mentioned(varname)
+	if defaultMkline == nil {
+		return false
+	}
+	defaultValue := defaultMkline.Value()
+
+	// A few of the user-settable variables can also be set by packages.
+	// That's an unfortunate situation since there is no definite source
+	// of truth, but luckily only a few variables make use of it.
+	vartype := G.Pkgsrc.VariableType(nil, varname)
+	if vartype != nil && vartype.PackageSettable() {
+		return true
+	}
+
+	switch {
+	case mkline.VarassignComment() != "":
+		// Assume that the comment contains a rationale for disabling
+		// this particular check.
+
+	case mkline.Op() == opAssignAppend:
+		mkline.Warnf("Packages should not append to user-settable %s.", varname)
+
+	case defaultValue != mkline.Value():
+		mkline.Warnf(
+			"Package sets user-defined %q to %q, which differs "+
+				"from the default value %q from mk/defaults/mk.conf.",
+			varname, mkline.Value(), defaultValue)
+
+	case defaultMkline.IsCommentedVarassign():
+		// Since the variable assignment is commented out in
+		// mk/defaults/mk.conf, the package has to define it.
+
+	default:
+		mkline.Notef("Redundant definition for %s from mk/defaults/mk.conf.", varname)
+		if !ck.MkLines.Tools.SeenPrefs {
+			mkline.Explain(
+				"Instead of defining the variable redundantly, it suffices to include",
+				"../../mk/bsd.prefs.mk, which provides all user-settable variables.")
+		}
+	}
+
+	return true
 }
 
 func (ck MkLineChecker) checkVartype(varname string, op MkOperator, value, comment string) {

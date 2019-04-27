@@ -135,7 +135,7 @@ func (pkg *Package) checkPossibleDowngrade() {
 				"This is unusual, since packages are typically upgraded instead of",
 				"downgraded.")
 
-		case cmp > 0:
+		case cmp > 0 && !isLocallyModified(mkline.Filename):
 			mkline.Notef("Package version %q is greater than the latest %q from %s.",
 				pkgversion, change.Version, mkline.Line.RefToLocation(change.Location))
 			mkline.Explain(
