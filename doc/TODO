@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18956 2019/04/27 15:35:26 wiz Exp $
+$NetBSD: TODO,v 1.18957 2019/04/27 18:15:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1064,7 +1064,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pcc-current-20160305
 	o pcre2-10.33
 	o pdmenu-1.2.87
-	o perl5-5.28.2
 	o pessulus-2.30.3
 	o pflogsumm-1.1.5
 	o pgadmin4-1.0
