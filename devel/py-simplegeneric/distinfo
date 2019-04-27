@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/04/23 03:43:15 markd Exp $
+$NetBSD: distinfo,v 1.2 2019/04/27 11:33:02 wiz Exp $
 
 SHA1 (simplegeneric-0.8.1.zip) = 5acde1287e8368a44d2ef0b8f15e348bbfdc9f1c
 RMD160 (simplegeneric-0.8.1.zip) = a464ef9b3dc774be8d13c0578c15c17dfd392eb0
+SHA512 (simplegeneric-0.8.1.zip) = 74c25d4e04fe197058cb43fabe3702cc5901989dc0b0bcf7511369f4f3d90fd98e4225174db0680c8f39389914f82824bdbdaf4c302b53998fbabbf0dba393e4
 Size (simplegeneric-0.8.1.zip) = 12663 bytes
