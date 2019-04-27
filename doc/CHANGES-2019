@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1848 2019/04/27 15:29:16 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1849 2019/04/27 18:00:58 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3009,3 +3009,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/py-peewee to 3.9.5 [adam 2019-04-27]
 	Updated www/py-pylint-django to 2.0.9 [adam 2019-04-27]
 	Updated devel/glade3 to 3.22.1 [wiz 2019-04-27]
+	Updated emulators/qemu to 4.0.0nb5 [kamil 2019-04-27]
