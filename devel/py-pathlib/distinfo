@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/08/29 06:55:55 wiz Exp $
+$NetBSD: distinfo,v 1.2 2019/04/27 11:33:02 wiz Exp $
 
 SHA1 (pathlib-1.0.1.tar.gz) = e90b903d11929b1bf6130b02362bf60550424108
 RMD160 (pathlib-1.0.1.tar.gz) = 045915062c64c603ae4d6ac61d98c96e14bc4220
+SHA512 (pathlib-1.0.1.tar.gz) = d85e45dfcc85ce75a7e7b609163dc8c75c688f279c1833510185f280af5501e473376dc09bddc6a804d1fcc3177a939db85af37b7b8d5b183b9bc2b85b3b0f8b
 Size (pathlib-1.0.1.tar.gz) = 49298 bytes
