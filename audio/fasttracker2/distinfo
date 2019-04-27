@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.17 2019/04/23 11:50:56 fox Exp $
+$NetBSD: distinfo,v 1.18 2019/04/27 22:18:55 fox Exp $
 
-SHA1 (ft2clone-b150-code.zip) = b18ee81719691e0d77690d96c5478ea17c13bfbe
-RMD160 (ft2clone-b150-code.zip) = 44cb5ca9f2c3334731d2764055d3a314042233c0
-SHA512 (ft2clone-b150-code.zip) = e1587c3901b575945371fd930758d3c01b03800ee735e75f5a899da45abb783be4cb1990a5487586bdba19dde771bbe208306d426bfd67944f8053f76b91e61f
-Size (ft2clone-b150-code.zip) = 3425078 bytes
+SHA1 (ft2clone-b152-code.zip) = 5faaddc95f5b2597524367c54a1cdccbf065b295
+RMD160 (ft2clone-b152-code.zip) = 9188e3bf6c0bb2aa157b55c4b587ffbbdea5de97
+SHA512 (ft2clone-b152-code.zip) = da9633cb121afb3ce34aeb75c2857a5aa4cc9e72c6f910ca24de313d41aafa1872166fdfc5c8606443febc7d3282b1d74257f0cd602c6f1ca62fee064179590d
+Size (ft2clone-b152-code.zip) = 3425189 bytes
 SHA1 (patch-src_ft2__diskop.c) = 9d19b3d4b0a32f61ecbcdda1f9b44e2532a98d41
 SHA1 (patch-src_ft2__unicode.c) = 7e61ebb563bb5edb592182461173d066493791e7
