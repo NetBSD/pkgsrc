@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/09/12 09:11:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/04/27 18:22:39 wiz Exp $
 bin/orc-bugreport
 bin/orcc
 include/orc-0.4/orc-test/orcarray.h
@@ -40,6 +40,7 @@ include/orc-0.4/orc/orcx86insn.h
 lib/liborc-0.4.la
 lib/liborc-test-0.4.la
 lib/pkgconfig/orc-0.4.pc
+lib/pkgconfig/orc-test-0.4.pc
 share/aclocal/orc.m4
 share/gtk-doc/html/orc/ch01.html
 share/gtk-doc/html/orc/ch02.html
