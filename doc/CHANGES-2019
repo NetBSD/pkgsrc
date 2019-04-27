@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1850 2019/04/27 18:22:51 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1851 2019/04/27 18:33:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3011,3 +3011,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/glade3 to 3.22.1 [wiz 2019-04-27]
 	Updated emulators/qemu to 4.0.0nb5 [kamil 2019-04-27]
 	Updated devel/orc to 0.4.29 [wiz 2019-04-27]
+	Updated devel/pcre2 to 10.33 [wiz 2019-04-27]
