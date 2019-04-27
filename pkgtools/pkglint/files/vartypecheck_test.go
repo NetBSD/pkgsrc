@@ -1457,7 +1457,9 @@ func NewVartypeCheckTester(t *Tester, checker func(cv *VartypeCheck)) *VartypeCh
 
 	// This is necessary to know whether the variable name is a list type
 	// since in such a case each value is split into the list elements.
-	t.SetUpVartypes()
+	if G.Pkgsrc.VariableType(nil, "USE_CWRAPPERS") == nil {
+		t.SetUpVartypes()
+	}
 
 	return &VartypeCheckTester{
 		t,
