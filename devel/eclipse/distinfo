@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.7 2005/10/20 18:38:29 wiz Exp $
+$NetBSD: distinfo,v 1.8 2019/04/27 11:18:56 wiz Exp $
 
-SHA1 (eclipse-sourceBuild-srcIncluded-3.0.1.zip) = 2302ee6160be86466a6e7ef265fff0431bee72e3
-RMD160 (eclipse-sourceBuild-srcIncluded-3.0.1.zip) = fba01eb0f019a888e9d9deb57ad7b284f218e783
-Size (eclipse-sourceBuild-srcIncluded-3.0.1.zip) = 55618511 bytes
 SHA1 (eclipse-3.0.1.zip) = be2fb3e3db81150e20797fd5e54e26880809fa60
 RMD160 (eclipse-3.0.1.zip) = b554fe901461840cad33762b64f86b71f83c3580
+SHA512 (eclipse-3.0.1.zip) = ad7f46aa10bb1d738e9eb9df41fbb98a86a158b38ffaf3deeb6af3a68e65d4412b6ca8190d4a3b7180833a35b54bcef8702d3d52315a118d11fbe39065cb9c12
 Size (eclipse-3.0.1.zip) = 71851838 bytes
+SHA1 (eclipse-sourceBuild-srcIncluded-3.0.1.zip) = 2302ee6160be86466a6e7ef265fff0431bee72e3
+RMD160 (eclipse-sourceBuild-srcIncluded-3.0.1.zip) = fba01eb0f019a888e9d9deb57ad7b284f218e783
+SHA512 (eclipse-sourceBuild-srcIncluded-3.0.1.zip) = c6282120345ecad9568e0e02cb988625e0b456f94e5b431e0f52f0442e685a793c6c16593be223a56e0f523dafbbeab82c5cab92f46362f654bee33f0c0c4e5d
+Size (eclipse-sourceBuild-srcIncluded-3.0.1.zip) = 55618511 bytes
