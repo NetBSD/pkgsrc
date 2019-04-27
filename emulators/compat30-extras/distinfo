@@ -1,11 +1,14 @@
-$NetBSD: distinfo,v 1.1 2007/08/21 22:49:24 jlam Exp $
+$NetBSD: distinfo,v 1.2 2019/04/27 13:26:20 wiz Exp $
 
 SHA1 (compat30-extras-i386-3.1.tar.bz2) = 01be7266bd9c36f1dbe7e35eb43d79bf560ebf67
 RMD160 (compat30-extras-i386-3.1.tar.bz2) = ed2c13b4be2813d3fe6563af7bbe9d1ed39cb43d
+SHA512 (compat30-extras-i386-3.1.tar.bz2) = d51e88c12addf21da58d4480c9e054501a11f498862ea7c93a7b6d0e4dea64aba7c51d396c1f92cb2e0fa3e49f675130050c408d04ed63351a6e8a1de180f06e
 Size (compat30-extras-i386-3.1.tar.bz2) = 3887399 bytes
 SHA1 (compat30-extras-sparc-3.1.tar.bz2) = 0fbe3180b80d143831533451ebe94105027beb09
 RMD160 (compat30-extras-sparc-3.1.tar.bz2) = 3901aafcb85eefa971b560603e6f4943f4ffbb45
+SHA512 (compat30-extras-sparc-3.1.tar.bz2) = 97cb636a463fd4fb661fee20d3b2fc7d51fc660e69de5421e8b847301470fed9d09d9dcda32b1fa02d926ad7a15f40278e1b086b7115e500a1dc20030d9e4e40
 Size (compat30-extras-sparc-3.1.tar.bz2) = 4086068 bytes
 SHA1 (compat30-extras-vax-3.1.tar.bz2) = f9a0408ca450bd8ef3c7156110b10f35cc67c1df
 RMD160 (compat30-extras-vax-3.1.tar.bz2) = 572f89a9dcefa077404bd1c5a68b07011f2c6b1b
+SHA512 (compat30-extras-vax-3.1.tar.bz2) = ecbc0084b494a24c027c0ba5b69b7126626d56256f25cf669fb4bcd23068b9617bf576d7f25714e48dc6af62264c1f4396accc4af3d0bc514f3b00de3543c070
 Size (compat30-extras-vax-3.1.tar.bz2) = 3581281 bytes
