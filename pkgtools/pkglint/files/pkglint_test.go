@@ -626,8 +626,8 @@ func (s *Suite) Test_Pkglint__profiling_error(c *check.C) {
 	exitcode := t.Main("--profiling")
 
 	c.Check(exitcode, equals, 1)
-	c.Check(t.Output(), check.Matches,
-		`^FATAL: Cannot create profiling file: open pkglint\.pprof: .*\n$`)
+	t.CheckOutputMatches(
+		`FATAL: Cannot create profiling file: open pkglint\.pprof: .*`)
 }
 
 func (s *Suite) Test_Pkglint_checkReg__in_current_working_directory(c *check.C) {
@@ -974,7 +974,6 @@ func (s *Suite) Test_Pkglint_checkdirPackage(c *check.C) {
 func (s *Suite) Test_Pkglint_checkdirPackage__PKGDIR(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpVartypes()
 	t.SetUpPkgsrc()
 	t.CreateFileLines("category/Makefile")
 	t.CreateFileLines("other/package/Makefile",
@@ -1120,9 +1119,9 @@ func (s *Suite) Test_Pkglint_checkExecutable(c *check.C) {
 
 	G.checkExecutable(filename, 0555)
 
-	// FIXME: The error message "Cannot clear executable bits" is swallowed.
-	t.CheckOutputLines(
-		"AUTOFIX: ~/file.mk: Clearing executable bits")
+	t.CheckOutputMatches(
+		"AUTOFIX: ~/file.mk: Clearing executable bits",
+		`ERROR: ~/file.mk: Cannot clear executable bits: chmod ~/file.mk: .*`)
 }
 
 func (s *Suite) Test_Pkglint_checkExecutable__already_committed(c *check.C) {

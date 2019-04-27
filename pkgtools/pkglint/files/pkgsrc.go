@@ -348,12 +348,21 @@ func (src *Pkgsrc) loadUntypedVars() {
 
 	define := func(varcanon string, mkline MkLine) {
 		switch {
-		case
-			src.vartypes.DefinedCanon(varcanon),  // Already defined
-			src.Tools.ByVarname(varcanon) != nil, // Already known as a tool
-			hasPrefix(varcanon, "_"),             // Skip internal variables
-			contains(varcanon, "$"),              // Indirect or parameterized
-			hasSuffix(varcanon, "_MK"):           // Multiple-inclusion guard
+		case src.vartypes.DefinedCanon(varcanon):
+			// Already defined, can also be a tool.
+
+		case hasPrefix(varcanon, "_"):
+			// Variables starting with an underscore are reserved for the
+			// infrastructure and are not available for use by packages.
+
+		case contains(varcanon, "$"):
+			// Indirect, but not the usual parameterized form. Variables of
+			// this form should not be unintentionally visible from outside
+			// the infrastructure since they don't follow the pkgsrc naming
+			// conventions.
+
+		case hasSuffix(varcanon, "_MK"):
+			// Multiple-inclusion guards are internal to the infrastructure.
 
 		default:
 			if trace.Tracing {
@@ -598,7 +607,7 @@ func (src *Pkgsrc) loadUserDefinedVars() {
 	mklines := src.LoadMk("mk/defaults/mk.conf", MustSucceed|NotEmpty)
 
 	for _, mkline := range mklines.mklines {
-		if mkline.IsVarassign() { // TODO: What about mkline.IsCommentedVarassign?
+		if mkline.IsVarassign() || mkline.IsCommentedVarassign() {
 			src.UserDefinedVars.Define(mkline.Varname(), mkline)
 		}
 	}

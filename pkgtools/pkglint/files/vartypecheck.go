@@ -1153,7 +1153,7 @@ func (cv *VartypeCheck) URL() {
 }
 
 func (cv *VartypeCheck) UserGroupName() {
-	if cv.Value == cv.ValueNoVar && !matches(cv.Value, `^[0-9_a-z]+$`) {
+	if cv.Value == cv.ValueNoVar && !matches(cv.Value, `^[0-9_a-z][0-9_a-z-]*[0-9_a-z]$`) {
 		cv.Warnf("Invalid user or group name %q.", cv.Value)
 	}
 }
