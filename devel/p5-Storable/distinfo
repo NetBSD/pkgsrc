@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2018/05/02 12:09:05 wiz Exp $
+$NetBSD: distinfo,v 1.24 2019/04/27 07:36:41 wen Exp $
 
-SHA1 (Storable-3.11.tar.gz) = 776b7ff05ee38e3c3ecf17a30dd99cf1a95d275d
-RMD160 (Storable-3.11.tar.gz) = 04e7bacfadd00d2c55743ffb14bc129e81619b29
-SHA512 (Storable-3.11.tar.gz) = da27b56dd422d4ae0bad225c0b0dcc91beff546d0cc537643da5530e8d50f421e88b960a2ac9f09867448e28a10743790d935aa0c1b6c8456d059430e1f7ffe9
-Size (Storable-3.11.tar.gz) = 201627 bytes
+SHA1 (Storable-3.15.tar.gz) = dfd5ef17f9cdca7c246a90cbde7948e4c0168670
+RMD160 (Storable-3.15.tar.gz) = eb227a9966603bd64078630673779284f5061d96
+SHA512 (Storable-3.15.tar.gz) = cd84d50a75b2d639b3075a671615ca1e879fe7b3322bf987843b5c08a8644807b58a671bee340f9694645d789b5a0f7ae93176cb06c94d795fe629697ca077ba
+Size (Storable-3.15.tar.gz) = 200589 bytes
