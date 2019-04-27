@@ -1,27 +1,27 @@
-# $NetBSD: Makefile,v 1.53 2018/11/29 11:21:49 prlw1 Exp $
-#
+# $NetBSD: Makefile,v 1.54 2019/04/27 15:28:54 wiz Exp $
 
-DISTNAME=		glade3-3.4.5
-PKGREVISION=		42
+DISTNAME=		glade-3.22.1
 CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/glade3/3.4/}
-EXTRACT_SUFX=		.tar.bz2
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/glade/3.22/}
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://glade.gnome.org/
-COMMENT=		User interface builder for the GTK2+ toolkit
+COMMENT=		User interface builder for the GTK3+ toolkit
+LICENSE=		gnu-gpl-v2
 
-USE_PKGLOCALEDIR=	yes
+TOOL_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
+TOOL_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
+BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+
+GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config intltool gmake msgfmt
-GNU_CONFIGURE=		yes
 
-PKGCONFIG_OVERRIDE+=	data/gladeui-1.0.pc.in
+PKGCONFIG_OVERRIDE+=	data/gladeui-2.0.pc.in
 
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../devel/libbonoboui/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
