@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/07/30 13:21:31 leot Exp $
+$NetBSD: distinfo,v 1.2 2019/04/27 11:33:03 wiz Exp $
 
 SHA1 (fortune-it-1.99.tar.gz) = ff19e081dfd61aef0c4165ec188349d1d45026fc
 RMD160 (fortune-it-1.99.tar.gz) = 2a800345910e40a8c65087a2d06f71451f80839e
+SHA512 (fortune-it-1.99.tar.gz) = b4b119f5def51a31ee25c5df3e47a0b9aa45341ecb1f7048233aa1d5c1d4fc8127b9eaa29c028a9df5ad71d9868d4006e7d3a1bef776b34d337a5bca47bd5d53
 Size (fortune-it-1.99.tar.gz) = 739886 bytes
