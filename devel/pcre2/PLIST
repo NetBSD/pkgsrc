@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/08/17 19:53:54 nros Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/04/27 18:33:12 wiz Exp $
 bin/pcre2-config
 bin/pcre2grep
 bin/pcre2test
@@ -74,6 +74,7 @@ man/man3/pcre2_set_offset_limit.3
 man/man3/pcre2_set_parens_nest_limit.3
 man/man3/pcre2_set_recursion_limit.3
 man/man3/pcre2_set_recursion_memory_management.3
+man/man3/pcre2_set_substitute_callout.3
 man/man3/pcre2_substitute.3
 man/man3/pcre2_substring_copy_byname.3
 man/man3/pcre2_substring_copy_bynumber.3
@@ -172,6 +173,7 @@ share/doc/pcre2/html/pcre2_set_offset_limit.html
 share/doc/pcre2/html/pcre2_set_parens_nest_limit.html
 share/doc/pcre2/html/pcre2_set_recursion_limit.html
 share/doc/pcre2/html/pcre2_set_recursion_memory_management.html
+share/doc/pcre2/html/pcre2_set_substitute_callout.html
 share/doc/pcre2/html/pcre2_substitute.html
 share/doc/pcre2/html/pcre2_substring_copy_byname.html
 share/doc/pcre2/html/pcre2_substring_copy_bynumber.html
