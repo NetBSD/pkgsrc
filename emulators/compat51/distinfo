@@ -1,32 +1,42 @@
-$NetBSD: distinfo,v 1.1 2013/02/17 17:24:08 spz Exp $
+$NetBSD: distinfo,v 1.2 2019/04/27 13:48:22 wiz Exp $
 
 SHA1 (compat51-alpha-5.1.tar.bz2) = 3d7acad298948589daf1e08a58230c9090b39dbe
 RMD160 (compat51-alpha-5.1.tar.bz2) = e7c3e6461fcd129ce8ccd05ba2c0df437c7b69c8
+SHA512 (compat51-alpha-5.1.tar.bz2) = 8578dbc5456b7a49a805f4728feeaced9a6812e20fb4d1c2f715f5634f37c10cbcbf83c9261d1fb3221bff93118c8d9b0f3d0bcb39e474b41d0212965e8d4ac9
 Size (compat51-alpha-5.1.tar.bz2) = 5354665 bytes
 SHA1 (compat51-arm-5.1.tar.bz2) = a80f89fd6ad07c860f8428580f7df91e088eaf47
 RMD160 (compat51-arm-5.1.tar.bz2) = fd74494af5b06bca97a21c6c0c29055ca2605cc6
+SHA512 (compat51-arm-5.1.tar.bz2) = 111b0ae55f6ae00326e452c47e0a93ccd5bc57e8205a0aebe4cc53d0a791ab04977308932a15e18712b000cee361334ffa039c0216188812069272e5beecc8de
 Size (compat51-arm-5.1.tar.bz2) = 4705716 bytes
 SHA1 (compat51-i386-5.1.tar.bz2) = 4e64e345cdddd30b74672203f5c6e0038ef12631
 RMD160 (compat51-i386-5.1.tar.bz2) = 9401051c91cdc6c1ef2e6e399b909cb67a60604e
+SHA512 (compat51-i386-5.1.tar.bz2) = 157893b77ac8bcfe1ef2800ec7c2f125f645f0e327b301499223b7c053401d3242d7293364ee36a02e261048988d1fbde11e9168f630290adca732789a53d5d8
 Size (compat51-i386-5.1.tar.bz2) = 4410289 bytes
 SHA1 (compat51-m68k-5.1.tar.bz2) = b33fdd66d27d6fc010754f3bedbe515c82646e29
 RMD160 (compat51-m68k-5.1.tar.bz2) = 296bba88357e0a1631bfba7f38987edbb5b20e1c
+SHA512 (compat51-m68k-5.1.tar.bz2) = 49d3bf024b45def1f2de76d834b8cf76f3e7a7c15be6edcd19fe44458dee30a35a3773b70b27a2ac16fab65538bc55558717501f626f16046cface9e50eab3fb
 Size (compat51-m68k-5.1.tar.bz2) = 4605386 bytes
 SHA1 (compat51-mipseb-5.1.tar.bz2) = 3f211519ddfa46f10ea4a952ea71f9be9fdbd6f3
 RMD160 (compat51-mipseb-5.1.tar.bz2) = 50f3a08dce9f8a28a50af56acc3b15ab7326f2eb
+SHA512 (compat51-mipseb-5.1.tar.bz2) = df4f285cfcc72ca8008cb5889f7adde4411982692f88bbf976ed21de2a5afcfc7c543356606a601fd19aac0e36487f616ecd3682d3c0b8286ded8ba62667d5b5
 Size (compat51-mipseb-5.1.tar.bz2) = 4607614 bytes
 SHA1 (compat51-mipsel-5.1.tar.bz2) = 2100b3a350bb2ebc8d520c32d717f97d2d1c880a
 RMD160 (compat51-mipsel-5.1.tar.bz2) = b384d2baede1a1a3108d2df7ed6cdef1037b2454
+SHA512 (compat51-mipsel-5.1.tar.bz2) = 40efa577c9564daf23322de8670c5cbb1f94943668d4e740b6bf25baaa7c38e9c39475e1eb20df1667a60deae90ba75840e8f9acd92f18e4fe987e0f0c045954
 Size (compat51-mipsel-5.1.tar.bz2) = 4669500 bytes
 SHA1 (compat51-powerpc-5.1.tar.bz2) = cbea41ac7ad96bf5381980b210de75327a810164
 RMD160 (compat51-powerpc-5.1.tar.bz2) = a25d64453d4017033023153c4b72239fb97823c4
+SHA512 (compat51-powerpc-5.1.tar.bz2) = 966944aabefe1cc5014fcf129ef0679523ea0dc5560e74ea6b293251465f5337a7eb18241fdb10c432439664115feff930167b45ebde4e7ddcf3f8fe1a6d5d55
 Size (compat51-powerpc-5.1.tar.bz2) = 4885741 bytes
 SHA1 (compat51-sparc-5.1.tar.bz2) = 12eb6cb4bab5a7cee59e13390c24b43efc4bac2b
 RMD160 (compat51-sparc-5.1.tar.bz2) = 648869d1369c9682943562ca94685a46b42cb15c
+SHA512 (compat51-sparc-5.1.tar.bz2) = 03e4346791912c28affe4f78220882c84a1fe5ce070a0add1c55af9c887cce45dd81ae02f813037b1babdb9a443f03869919e4d3f782c0e8ae191d41e6004b59
 Size (compat51-sparc-5.1.tar.bz2) = 4672973 bytes
 SHA1 (compat51-sparc64-5.1.tar.bz2) = baec6c7c29ab4b8e24f4e2b2592f82afaa867514
 RMD160 (compat51-sparc64-5.1.tar.bz2) = 356591a40f86393c25026b4bf5ad60e9f1d3acf5
+SHA512 (compat51-sparc64-5.1.tar.bz2) = fd4b2ab724f3959ed23a890624489442032c4c67106172bb76ac01d6b626e4df2312560d68e185567c27316b7d1611e7584dcbb49fddbaad8dbec8d002c5ce55
 Size (compat51-sparc64-5.1.tar.bz2) = 9460979 bytes
 SHA1 (compat51-x86_64-5.1.tar.bz2) = be294a479eec9ac6359a8443237b9d9ccf7f3b2b
 RMD160 (compat51-x86_64-5.1.tar.bz2) = c99535e6800588f53035e070b202dbab89dac544
+SHA512 (compat51-x86_64-5.1.tar.bz2) = 959561209766dacf51191ba35c2551e84478218a0170a9043b7fd557f759ca494c2a9aa626cef82cf8a12c86d6c3359dbb84728937f69ed4d62b9721f503abb7
 Size (compat51-x86_64-5.1.tar.bz2) = 9468408 bytes
