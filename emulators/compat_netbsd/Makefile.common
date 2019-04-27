@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2017/06/01 13:30:25 jlam Exp $
+# $NetBSD: Makefile.common,v 1.14 2019/04/27 13:45:19 wiz Exp $
 #
 # Common infrastructure for NetBSD compat* packages.
 #
@@ -33,14 +33,14 @@
 # used by emulators/compat51-x11/Makefile
 # used by emulators/compat51/Makefile
 # used by emulators/compat60/Makefile
+# used by emulators/compat61/Makefile
+# used by emulators/compat61-x11/Makefile
 
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_LOCAL:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-
-PKG_DESTDIR_SUPPORT=	destdir
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
