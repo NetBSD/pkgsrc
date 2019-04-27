@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2017/11/28 14:07:42 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/04/27 18:22:39 wiz Exp $
 
-DISTNAME=	orc-0.4.28
+DISTNAME=	orc-0.4.29
 CATEGORIES=	devel
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/orc/
 EXTRACT_SUFX=	.tar.xz
@@ -14,6 +14,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	orc.pc.in
+PKGCONFIG_OVERRIDE+=	orc-test.pc.in
 
 # XXX: Kludge to avoid uncoditionally pick up some gtkdoc-* tools if gtk-doc
 # XXX: package is installed and then fails in the installation phase.
