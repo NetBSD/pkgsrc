@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.1 2007/12/31 20:06:41 jlam Exp $
+$NetBSD: distinfo,v 1.2 2019/04/27 13:30:55 wiz Exp $
 
 SHA1 (20071230/compat40-extras-i386-4.0.tar.bz2) = 03c8aae8d7d437365a0077c341dbf887c7283277
 RMD160 (20071230/compat40-extras-i386-4.0.tar.bz2) = fdf7a452de100d6aaa897f1c7baefbb6e16623b4
+SHA512 (20071230/compat40-extras-i386-4.0.tar.bz2) = dc123cb8a6fa9ff57c70ab4897e5f0d0d2d6bf6da4823a3f0ea6bc042464d7d94a6c8da5a0ca1f938637bc7175effa992913040f2a35eda14b2a47a55ca4e190
 Size (20071230/compat40-extras-i386-4.0.tar.bz2) = 5622349 bytes
 SHA1 (20071230/compat40-extras-sparc-4.0.tar.bz2) = 54e405dd211003e18fd69babac28ddb0bc2a239f
 RMD160 (20071230/compat40-extras-sparc-4.0.tar.bz2) = fe23addd36370c81e68515774a44e2d240238fdc
+SHA512 (20071230/compat40-extras-sparc-4.0.tar.bz2) = 1e389d05db0364b107a464326aaa7bba6748376abdef1f0a3f6a54314c72930c13ae4d1a1809c8b16b10202a8ad7f905b40d64ef1e45125889de8c2420722a80
 Size (20071230/compat40-extras-sparc-4.0.tar.bz2) = 5928204 bytes
