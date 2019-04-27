@@ -462,6 +462,61 @@ func (s *Suite) Test_Scope__no_tracing(c *check.C) {
 	t.Check(scope.DefinedSimilar("OTHER"), equals, false)
 }
 
+func (s *Suite) Test_Scope__commented_varassign(c *check.C) {
+	t := s.Init(c)
+
+	mkline := t.NewMkLine("mk/defaults/mk.conf", 3, "#VAR=default")
+	scope := NewScope()
+	scope.Define("VAR", mkline)
+
+	t.Check(scope.Defined("VAR"), equals, false)
+	t.Check(scope.FirstDefinition("VAR"), check.IsNil)
+	t.Check(scope.LastDefinition("VAR"), check.IsNil)
+
+	t.Check(scope.Mentioned("VAR"), equals, mkline)
+	t.Check(scope.Commented("VAR"), equals, mkline)
+
+	value, found := scope.LastValueFound("VAR")
+	t.Check(value, equals, "")
+	t.Check(found, equals, false)
+}
+
+func (s *Suite) Test_Scope_Commented(c *check.C) {
+	t := s.Init(c)
+
+	assigned := t.NewMkLine("filename.mk", 3, "VAR=\tvalue")
+	commented := t.NewMkLine("filename.mk", 4, "#COMMENTED=\tvalue")
+	documented := t.NewMkLine("filename.mk", 5, "# DOCUMENTED is a variable.")
+
+	scope := NewScope()
+	scope.Define("VAR", assigned)
+	scope.Define("COMMENTED", commented)
+	scope.Define("DOCUMENTED", documented)
+
+	t.Check(scope.Commented("VAR"), check.IsNil)
+	t.Check(scope.Commented("COMMENTED"), equals, commented)
+	t.Check(scope.Commented("DOCUMENTED"), check.IsNil)
+	t.Check(scope.Commented("UNKNOWN"), check.IsNil)
+}
+
+func (s *Suite) Test_Scope_Mentioned(c *check.C) {
+	t := s.Init(c)
+
+	assigned := t.NewMkLine("filename.mk", 3, "VAR=\tvalue")
+	commented := t.NewMkLine("filename.mk", 4, "#COMMENTED=\tvalue")
+	documented := t.NewMkLine("filename.mk", 5, "# DOCUMENTED is a variable.")
+
+	scope := NewScope()
+	scope.Define("VAR", assigned)
+	scope.Define("COMMENTED", commented)
+	scope.Define("DOCUMENTED", documented)
+
+	t.Check(scope.Mentioned("VAR"), equals, assigned)
+	t.Check(scope.Mentioned("COMMENTED"), equals, commented)
+	t.Check(scope.Mentioned("DOCUMENTED"), equals, documented)
+	t.Check(scope.Mentioned("UNKNOWN"), check.IsNil)
+}
+
 func (s *Suite) Test_naturalLess(c *check.C) {
 	c.Check(naturalLess("", "a"), equals, true)
 	c.Check(naturalLess("a", ""), equals, false)
