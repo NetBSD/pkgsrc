@@ -9,6 +9,7 @@ import (
 	"os"
 	"path"
 	"path/filepath"
+	"regexp"
 	"strings"
 	"testing"
 
@@ -339,7 +340,6 @@ func (t *Tester) SetUpPackage(pkgpath string, makefileLines ...string) string {
 	}
 
 	t.SetUpPkgsrc()
-	t.SetUpVartypes()
 	t.SetUpCategory(category)
 
 	t.CreateFileLines(pkgpath+"/DESCR",
@@ -723,7 +723,8 @@ func (t *Tester) ExpectFatalMatches(action func(), expected regex.Pattern) {
 		if r == nil {
 			panic("Expected a pkglint fatal error but didn't get one.")
 		} else if _, ok := r.(pkglintFatal); ok {
-			t.Check(t.Output(), check.Matches, string(expected))
+			pattern := `^(?:` + string(expected) + `)$`
+			t.Check(t.Output(), check.Matches, pattern)
 		} else {
 			panic(r)
 		}
@@ -780,7 +781,10 @@ func (t *Tester) NewLine(filename string, lineno int, text string) Line {
 func (t *Tester) NewMkLine(filename string, lineno int, text string) MkLine {
 	basename := path.Base(filename)
 	G.Assertf(
-		hasSuffix(basename, ".mk") || basename == "Makefile" || hasPrefix(basename, "Makefile."),
+		hasSuffix(basename, ".mk") ||
+			basename == "Makefile" ||
+			hasPrefix(basename, "Makefile.") ||
+			basename == "mk.conf",
 		"filename %q must be realistic, otherwise the variable permissions are wrong", filename)
 
 	return MkLineParser{}.Parse(t.NewLine(filename, lineno, text))
@@ -867,6 +871,47 @@ func (t *Tester) CheckOutputEmpty() {
 func (t *Tester) CheckOutputLines(expectedLines ...string) {
 	G.Assertf(len(expectedLines) > 0, "To check empty lines, use CheckLinesEmpty instead.")
 	t.CheckOutput(expectedLines)
+}
+
+// CheckOutputMatches checks that the output up to now matches the given lines.
+// Each line may either be an exact string or a regular expression.
+// By convention, regular expressions are written in backticks.
+//
+// After the comparison, the output buffers are cleared so that later
+// calls only check against the newly added output.
+//
+// See CheckOutputEmpty.
+func (t *Tester) CheckOutputMatches(expectedLines ...regex.Pattern) {
+	output := t.Output()
+	actualLines := strings.Split(output, "\n")
+	actualLines = actualLines[:len(actualLines)-1]
+
+	ok := func(actualLine string, expectedLine regex.Pattern) bool {
+		if actualLine == string(expectedLine) {
+			return true
+		}
+
+		pattern := `^(?:` + string(expectedLine) + `)$`
+		re, err := regexp.Compile(pattern)
+		if err != nil {
+			return false
+		}
+
+		return re.MatchString(actualLine)
+	}
+
+	// If a line matches the corresponding pattern, make them equal in the
+	// comparison output, in order to concentrate on the lines that don't match.
+	var patterns []string
+	for i, expectedLine := range expectedLines {
+		if i < len(actualLines) && ok(actualLines[i], expectedLine) {
+			patterns = append(patterns, actualLines[i])
+		} else {
+			patterns = append(patterns, string(expectedLine))
+		}
+	}
+
+	t.Check(emptyToNil(actualLines), deepEquals, emptyToNil(patterns))
 }
 
 // CheckOutput checks that the output up to now equals the given lines.

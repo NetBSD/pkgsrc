@@ -1098,9 +1098,9 @@ func (s *Suite) Test_SaveAutofixChanges__file_removed(c *check.C) {
 
 	SaveAutofixChanges(lines)
 
-	c.Check(t.Output(), check.Matches, ""+
-		"AUTOFIX: ~/subdir/file.txt:1: Replacing \"line\" with \"Line\".\n"+
-		"ERROR: ~/subdir/file.txt.pkglint.tmp: Cannot write: .*\n")
+	t.CheckOutputMatches(
+		"AUTOFIX: ~/subdir/file.txt:1: Replacing \"line\" with \"Line\".",
+		`ERROR: ~/subdir/file.txt.pkglint.tmp: Cannot write: .*`)
 }
 
 func (s *Suite) Test_SaveAutofixChanges__file_busy_Windows(c *check.C) {
@@ -1126,9 +1126,9 @@ func (s *Suite) Test_SaveAutofixChanges__file_busy_Windows(c *check.C) {
 
 	SaveAutofixChanges(lines)
 
-	c.Check(t.Output(), check.Matches, ""+
-		"AUTOFIX: ~/subdir/file.txt:1: Replacing \"line\" with \"Line\".\n"+
-		"ERROR: ~/subdir/file.txt.pkglint.tmp: Cannot overwrite with autofixed content: .*\n")
+	t.CheckOutputMatches(
+		"AUTOFIX: ~/subdir/file.txt:1: Replacing \"line\" with \"Line\".",
+		`ERROR: ~/subdir/file.txt.pkglint.tmp: Cannot overwrite with autofixed content: .*`)
 }
 
 // This test covers the highly unlikely situation in which a file is loaded
@@ -1153,9 +1153,9 @@ func (s *Suite) Test_SaveAutofixChanges__cannot_overwrite(c *check.C) {
 
 	SaveAutofixChanges(lines)
 
-	c.Check(t.Output(), check.Matches, ""+
-		"AUTOFIX: ~/file.txt:1: Replacing \"line\" with \"Line\".\n"+
-		"ERROR: ~/file.txt.pkglint.tmp: Cannot overwrite with autofixed content: .*\n")
+	t.CheckOutputMatches(
+		"AUTOFIX: ~/file.txt:1: Replacing \"line\" with \"Line\".",
+		`ERROR: ~/file.txt.pkglint.tmp: Cannot overwrite with autofixed content: .*`)
 }
 
 // Up to 2018-11-25, pkglint in some cases logged only the source without

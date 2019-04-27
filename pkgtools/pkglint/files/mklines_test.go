@@ -325,6 +325,8 @@ func (s *Suite) Test_MkLines_collectDefinedVariables(c *check.C) {
 		"SUBST_VARS.subst=       SUV",
 		"SUV=                    value for substitution",
 		"",
+		"#BUILD_DEFS+=           VARBASE",
+		"",
 		"pre-configure:",
 		"\t${RUN} autoreconf; autoheader-2.13",
 		"\t${ECHO} ${OSV:Q}")

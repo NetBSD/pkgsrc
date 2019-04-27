@@ -1551,7 +1551,6 @@ func (s *Suite) Test_Indentation_TrackAfter__lonely_else(c *check.C) {
 func (s *Suite) Test_Indentation_Varnames__repetition(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpVartypes()
 	t.SetUpPackage("category/other")
 	t.CreateFileDummyBuildlink3("category/other/buildlink3.mk")
 	t.SetUpPackage("category/package",

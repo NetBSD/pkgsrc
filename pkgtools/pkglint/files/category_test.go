@@ -69,7 +69,6 @@ func (s *Suite) Test_CheckdirCategory__wip(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPkgsrc()
-	t.SetUpVartypes()
 	t.CreateFileLines("mk/misc/category.mk")
 	t.CreateFileLines("wip/package/Makefile")
 	t.CreateFileLines("wip/Makefile",
@@ -95,7 +94,6 @@ func (s *Suite) Test_CheckdirCategory__subdirs(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPkgsrc()
-	t.SetUpVartypes()
 	t.CreateFileLines("mk/misc/category.mk")
 	t.CreateFileLines("category/in-wrong-order/Makefile")
 	t.CreateFileLines("category/duplicate/Makefile")
@@ -136,7 +134,6 @@ func (s *Suite) Test_CheckdirCategory__only_in_Makefile(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPkgsrc()
-	t.SetUpVartypes()
 	t.CreateFileLines("mk/misc/category.mk")
 	t.CreateFileLines("category/both/Makefile")
 	t.CreateFileLines("category/Makefile",
@@ -164,7 +161,6 @@ func (s *Suite) Test_CheckdirCategory__only_in_file_system(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPkgsrc()
-	t.SetUpVartypes()
 	t.CreateFileLines("mk/misc/category.mk")
 	t.CreateFileLines("category/above-only-in-fs/Makefile")
 	t.CreateFileLines("category/both/Makefile")
@@ -193,7 +189,6 @@ func (s *Suite) Test_CheckdirCategory__recursive(c *check.C) {
 
 	t.SetUpCommandLine("-r")
 	t.SetUpPkgsrc()
-	t.SetUpVartypes()
 	t.CreateFileLines("mk/misc/category.mk")
 	t.CreateFileLines("category/commented/Makefile")
 	t.CreateFileLines("category/package/Makefile")
@@ -231,7 +226,6 @@ func (s *Suite) Test_CheckdirCategory__subdirs_file_system_at_the_bottom(c *chec
 
 	t.SetUpCommandLine("-Wall", "--show-autofix")
 	t.SetUpPkgsrc()
-	t.SetUpVartypes()
 	t.CreateFileLines("mk/misc/category.mk")
 	t.CreateFileLines("category/mk-and-fs/Makefile")
 	t.CreateFileLines("category/zzz-fs-only/Makefile")
@@ -256,7 +250,6 @@ func (s *Suite) Test_CheckdirCategory__indentation(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPkgsrc()
-	t.SetUpVartypes()
 	t.CreateFileLines("mk/misc/category.mk")
 	t.CreateFileLines("category/package1/Makefile")
 	t.CreateFileLines("category/package2/Makefile")
@@ -281,7 +274,6 @@ func (s *Suite) Test_CheckdirCategory__comment_at_the_top(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPkgsrc()
-	t.SetUpVartypes()
 	t.CreateFileLines("mk/misc/category.mk")
 	t.CreateFileLines("category/package/Makefile")
 	t.CreateFileLines("category/Makefile",
@@ -317,7 +309,6 @@ func (s *Suite) Test_CheckdirCategory__unexpected_EOF_while_reading_SUBDIR(c *ch
 	t := s.Init(c)
 
 	t.SetUpPkgsrc()
-	t.SetUpVartypes()
 	t.CreateFileLines("mk/misc/category.mk")
 	t.CreateFileLines("category/package/Makefile")
 	t.CreateFileLines("category/Makefile",

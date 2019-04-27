@@ -548,7 +548,7 @@ func (mkline *MkLineImpl) ValueTokens() ([]*MkToken, string) {
 // For variable assignments, it returns the right-hand side, properly split into words.
 // For .for loops, it returns all arguments (including variable names), properly split into words.
 func (mkline *MkLineImpl) Fields() []string {
-	if mkline.IsVarassign() {
+	if mkline.IsVarassign() || mkline.IsCommentedVarassign() {
 		value := mkline.Value()
 		if value == "" {
 			return nil
