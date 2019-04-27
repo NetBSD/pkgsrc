@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/09/07 20:58:19 wiz Exp $
+$NetBSD: distinfo,v 1.2 2019/04/27 11:33:03 wiz Exp $
 
 SHA1 (ofl06trial.tgz) = 9df4495c3b5a2a76cf0554e5cef1c11092385554
 RMD160 (ofl06trial.tgz) = 0e4a1dd6ed8c7f01196296f49ec9c4e4c1c6e1af
+SHA512 (ofl06trial.tgz) = 8f8fbd613ee357071a3bbff62ce67b4da99b219ec49b1eba6877f4ce7272a7883dd42844d39be978c54115050d5ca263ef8c13ce234e0ffd12917c5729f3ca33
 Size (ofl06trial.tgz) = 25074314 bytes
