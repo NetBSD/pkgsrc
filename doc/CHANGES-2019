@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1843 2019/04/27 07:33:39 wen Exp $
+$NetBSD: CHANGES-2019,v 1.1844 2019/04/27 07:37:55 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3003,3 +3003,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated inputmethod/fcitx to 4.2.9.6nb4 [ryoon 2019-04-27]
 	Updated inputmethod/fcitx-qt5 to 1.2.3nb4 [ryoon 2019-04-27]
 	Updated devel/p5-Devel-PPPort to 3.46 [wen 2019-04-27]
+	Updated devel/p5-Storable to 3.15 [wen 2019-04-27]
