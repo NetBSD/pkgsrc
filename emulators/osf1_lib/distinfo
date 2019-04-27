@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/05/25 12:11:28 wiz Exp $
+$NetBSD: distinfo,v 1.4 2019/04/27 13:52:02 wiz Exp $
 
 SHA1 (netscape-4.7-3.alpha.rpm) = b337f3d714333cb911ddcbc0d4a1672429c52a8b
 RMD160 (netscape-4.7-3.alpha.rpm) = 356daa132b52b557b96d525abe4541ae433cd73a
+SHA512 (netscape-4.7-3.alpha.rpm) = 2bbf82eed4236a641f3520e38d5da42a9f6842796327609aa20e17459d31294a16fbd2f1b96bf21176633bfc82af36549b30712e83d65fdf3181e9918ca44c9d
 Size (netscape-4.7-3.alpha.rpm) = 16589970 bytes
