@@ -1,15 +1,9 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 20:56:47 agc Exp $
+$NetBSD: distinfo,v 1.6 2019/04/27 11:21:26 wiz Exp $
 
 SHA1 (crossfire-client-1.11.0.tar.gz) = 934618207de854841c3e4673f896e9784ee70073
 RMD160 (crossfire-client-1.11.0.tar.gz) = 9fffcd301c0f32a583b5f6e5a9db77c7900d1cd7
 SHA512 (crossfire-client-1.11.0.tar.gz) = 2a61a057077fea8472a5af7fa60be8832181b7825ba1e9a5b468a25ac76fb21f0fd8d16b3a82583481d810fd95846e1f7122be3b489a16c9e08582a817a1aaba
 Size (crossfire-client-1.11.0.tar.gz) = 759887 bytes
-SHA1 (crossfire-client-images-1.11.0.tar.gz) = 78f25f3dadcdfb85121a9d9fd0dab534980b02a7
-RMD160 (crossfire-client-images-1.11.0.tar.gz) = d7aa59d49c76bc1d16a3a33c36fd0d038cea9824
-Size (crossfire-client-images-1.11.0.tar.gz) = 2731254 bytes
-SHA1 (crossfire-client-sounds-1.11.0.tar.gz) = a6e2d6b7b00ef610ffc8b3462cf51655415791b6
-RMD160 (crossfire-client-sounds-1.11.0.tar.gz) = 85250759a46927ea45976e86acb26c6b61c7686c
-Size (crossfire-client-sounds-1.11.0.tar.gz) = 322847 bytes
 SHA1 (patch-common-metaserver.c) = 28707f7782fb97f2bf67f130b0beaba85dc3eec4
 SHA1 (patch-gtk-v2-src-metaserver.c) = ba8f9b1bd5ac876769c0911f166f1d2df38f55eb
 SHA1 (patch-gtk-v2_src_png.c) = 07fd35221a197124203daa066e687fe282190f3d
