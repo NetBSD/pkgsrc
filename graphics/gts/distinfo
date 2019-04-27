@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/05/22 08:49:48 adam Exp $
+$NetBSD: distinfo,v 1.2 2019/04/27 11:33:03 wiz Exp $
 
 SHA1 (gts-0.7.6.tar.gz) = 000720bebecf0b153eb28260bd30fbd979dcc040
 RMD160 (gts-0.7.6.tar.gz) = 2bfd4121412c16d63ee0aca65ccbc2601d6a7d51
+SHA512 (gts-0.7.6.tar.gz) = 645123b72dba3d04dad3c5d936d7e55947826be0fb25e84595368919b720deccddceb7c3b30865a5a40f2458254c2af793b7c014e6719cf07e7f8e6ff30890f8
 Size (gts-0.7.6.tar.gz) = 948847 bytes
