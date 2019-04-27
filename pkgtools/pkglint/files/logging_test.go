@@ -676,6 +676,17 @@ func (s *Suite) Test_Logger_Logf__traditional_format(c *check.C) {
 		"NOTE: Neither filename nor line number.")
 }
 
+func (s *Suite) Test_Logger_Errorf__gcc_format(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("--gcc-output-format")
+
+	G.Errorf("filename", "Cannot be opened for %s.", "reading")
+
+	t.CheckOutputLines(
+		"filename: error: Cannot be opened for reading.")
+}
+
 // Ensures that pkglint never destroys the terminal emulator by sending unintended escape sequences.
 func (s *Suite) Test_Logger_Logf__strange_characters(c *check.C) {
 	t := s.Init(c)
