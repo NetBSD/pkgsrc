@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2019/01/18 12:33:51 youri Exp $
+# $NetBSD: Makefile,v 1.19 2019/04/28 07:48:29 gutteridge Exp $
 #
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	xfce4-notifyd-0.4.3
+DISTNAME=	xfce4-notifyd-0.4.4
 CATEGORIES=	x11
 MASTER_SITES=	http://archive.xfce.org/src/apps/xfce4-notifyd/0.4/
 
