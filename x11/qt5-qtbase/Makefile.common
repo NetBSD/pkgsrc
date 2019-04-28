@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2019/03/26 11:14:16 adam Exp $
+# $NetBSD: Makefile.common,v 1.31 2019/04/28 12:46:31 maya Exp $
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
 # used by x11/qt5-psql/Makefile
@@ -30,7 +30,7 @@
 .include "options.mk"
 
 .include "../../mk/dlopen.buildlink3.mk"
-BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 
 USE_LANGUAGES=		c c++11
 USE_TOOLS+=		gmake perl:build pkg-config
