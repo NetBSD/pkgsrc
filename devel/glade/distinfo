@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.11 2015/11/03 03:27:28 agc Exp $
+$NetBSD: distinfo,v 1.12 2019/04/28 07:06:06 wiz Exp $
 
-SHA1 (glade-2.12.2.tar.bz2) = a43d89b147296244ba4b2efc67e8772d5155afff
-RMD160 (glade-2.12.2.tar.bz2) = 6035749c249492279794d508d3558a8aac17b6f0
-SHA512 (glade-2.12.2.tar.bz2) = c59e2163fe7ad8be7ba1ae97c09026b879cd99c10509e27e1ed6beae1de7d0dd1dd710e75815c348e82cff6b02b604476a8494f2cbabbc1742fd0e4d2e26bcf6
-Size (glade-2.12.2.tar.bz2) = 1785723 bytes
-SHA1 (patch-aa) = 30e4ff30959ae82470773988daa560c5cc7ff63c
-SHA1 (patch-ab) = 15ed171d8f5983d81b4f384f70f0476370ad7d05
-SHA1 (patch-ac) = fca8b8d08587ef0a0b89f17ca3a7cdf4fab21a76
-SHA1 (patch-ad) = e752280656b4a8dd6f7d59419d274d0a610fa384
+SHA1 (glade-3.22.1.tar.xz) = 395728b7f0b4c3a0acadd7e12c39db6296761b22
+RMD160 (glade-3.22.1.tar.xz) = a9bd7695fbd85d528df5df90914956bf3f7f380e
+SHA512 (glade-3.22.1.tar.xz) = e1bdc49b89bc5010c0abf6357dbae05c921182655b2ee5a4b161af6adfd596cfbcd495c9851ba956abbf3d6156616a6c0e94640cd72cee11551ca388674ac908
+Size (glade-3.22.1.tar.xz) = 3592952 bytes
+SHA1 (patch-configure) = 2ecc6e4a846041a4e115e77ef03e798806962978
