@@ -1,0 +1,38 @@
+<!-- $NetBSD: help-devel.xml,v 1.1 2019/04/28 13:41:18 rillig Exp $ -->
+
+<chapter id="help-devel">
+<title>Getting help</title>
+
+<para>
+	To get help when developing pkgsrc, the definitive source is this
+	document, the pkgsrc guide. If you don't find anything here,
+	there are alternatives:
+</para>
+
+<itemizedlist>
+<listitem><para>
+	The built-in pkgsrc help, which is available after bootstrapping
+	pkgsrc. Run <command>bmake help topic=&#x2026;</command> to get
+	help for any topic, such as a variable name like
+	<varname>BUILD_DEFS</varname>, a make target like
+	<command>do-build</command>, a missing C or C++ function like
+	<command>strcasecmp</command> or any other topic.</para>
+</listitem>
+
+<listitem><para>
+	The tech-pkg mailing list, to which
+	<ulink url="https://www.NetBSD.org/mailinglists/#tech-pkg">you
+	can subscribe</ulink> and then <ulink
+		url="mailto:tech-pkg@NetBSD.org">ask your
+	questions</ulink>.</para>
+</listitem>
+
+<listitem><para>The #pkgsrc IRC channel, which is accessible
+	<ulink url="https://webchat.freenode.net/">via a web browser</ulink>
+	or by using a specialized chat program such as
+	<ulink url="http://xchat.org/">XChat</ulink>.
+	Pick any user name and join the channel #pkgsrc.</para>
+</listitem>
+</itemizedlist>
+
+</chapter>
