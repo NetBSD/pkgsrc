@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/11/01 10:55:57 markd Exp $
+# $NetBSD: Makefile,v 1.22 2019/04/28 11:31:13 rillig Exp $
 
 DISTNAME=	texlive-20180414-source
 PKGNAME=	dvipsk-5.998
@@ -17,12 +17,14 @@ DEPENDS+=	tex-dvips>=2013:../../print/tex-dvips
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 			${DISTNAME}/texk/dvipsk
 
-GNU_CONFIGURE=	yes
 INFO_FILES=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-CONFIGURE_DIRS=	texk/dvipsk
 
+GNU_CONFIGURE=		yes
+# texk/dvipsk/squeeze/configure doesn't know --with-system-kpathsea
+GNU_CONFIGURE_STRICT=	no
+CONFIGURE_DIRS=		texk/dvipsk
 CONFIGURE_ARGS+=	--with-system-kpathsea
 
 PKG_SYSCONFSUBDIR=	texmf
