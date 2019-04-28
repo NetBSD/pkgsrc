@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2015/04/11 18:27:32 bsiegert Exp $
+# $NetBSD: Makefile,v 1.58 2019/04/28 18:33:57 rillig Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
@@ -11,6 +11,7 @@ CONFIGURE_ARGS+=	--disable-csharp
 CONFIGURE_ARGS+=	--disable-c++
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
+GNU_CONFIGURE_STRICT=	no # because of gettext-tools/examples
 
 CFLAGS+=		${CFLAGS.${ICONV_TYPE}-iconv}
 CFLAGS.gnu-iconv+=	-DHAVE_GNU_ICONV
