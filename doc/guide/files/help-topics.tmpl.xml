@@ -1,0 +1,15 @@
+<!-- $NetBSD: help-topics.tmpl.xml,v 1.1 2019/04/28 15:22:24 rillig Exp $ -->
+
+<appendix id="help-topics">
+<title>Help topics</title>
+
+<para>
+	The following list contains all help topics that are available
+	when running <command>bmake help topic=:index</command>.
+</para>
+
+<itemizedlist>
+	<listitem><para>@topic@</para></listitem>
+</itemizedlist>
+
+</appendix>
