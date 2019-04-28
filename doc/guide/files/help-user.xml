@@ -1,0 +1,29 @@
+<!-- $NetBSD: help-user.xml,v 1.1 2019/04/28 13:41:18 rillig Exp $ -->
+
+<chapter id="help-user">
+<title>Getting help</title>
+
+<para>
+	To get help when using pkgsrc, the definitive source is this
+	document, the pkgsrc guide. If you don't find anything here,
+	there are alternatives:
+</para>
+
+<itemizedlist>
+<listitem><para>
+	The pkgsrc-users mailing list, to which
+	<ulink url="https://www.NetBSD.org/mailinglists/#pkgsrc-users">you
+	can subscribe</ulink> and then <ulink
+	url="mailto:pkgsrc-users@NetBSD.org">ask your
+	questions</ulink>.</para>
+</listitem>
+
+<listitem><para>The #pkgsrc IRC channel, which is accessible
+	<ulink url="https://webchat.freenode.net/">via a web browser</ulink>
+	or by using a specialized chat program such as
+	<ulink url="http://xchat.org/">XChat</ulink>.
+	Pick any user name and join the channel #pkgsrc.</para>
+</listitem>
+</itemizedlist>
+
+</chapter>
