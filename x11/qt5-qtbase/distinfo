@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.48 2019/04/25 19:43:15 adam Exp $
+$NetBSD: distinfo,v 1.49 2019/04/28 12:46:31 maya Exp $
 
 SHA1 (qtbase-everywhere-src-5.12.3.tar.xz) = dbe6ed4779998f757473a727b7ff3300c7d31155
 RMD160 (qtbase-everywhere-src-5.12.3.tar.xz) = aebc6473c64d287fe7ea861c449b094b823225c3
@@ -16,6 +16,7 @@ SHA1 (patch-src_corelib_global_qconfig-bootstrapped.h) = c52c811a44d965cf9d42074
 SHA1 (patch-src_corelib_io_io.pri) = b2c1057e20c3150162695947bab958a2644df7dc
 SHA1 (patch-src_corelib_io_qstandardpaths_unix.cpp) = de4b6c6be89524763e40698bcf5e8f413abdb938
 SHA1 (patch-src_corelib_io_qstorageinfo_unix.cpp) = 9919194e9f6b47f1f311b8f8223a6a7519152073
+SHA1 (patch-src_corelib_thread_qmutex__p.h) = 093089b8a37baa3071257c99bbde5f6295bd2eec
 SHA1 (patch-src_corelib_thread_qwaitcondition__unix.cpp) = 9dffdbfc81bc7d3259020cd32b4039b7be6ee2bd
 SHA1 (patch-src_network_kernel_qnetworkinterface__unix.cpp) = 2c5569eb2ba19999eb62e4fdb54f347c88f6e6a5
 SHA1 (patch-src_openglextensions_openglextensions.pro) = 575d31c3a48f36d82dc1f342078e636f4c25e33f
