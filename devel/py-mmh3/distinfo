@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/04/28 18:47:13 adam Exp $
+
+SHA1 (mmh3-2.5.1.tar.gz) = abe5fd3f06322fa814961fa9466ee089fa561a8a
+RMD160 (mmh3-2.5.1.tar.gz) = 9e5929ae21705cdaea4e19ca1965a5e8dd613dd7
+SHA512 (mmh3-2.5.1.tar.gz) = 1cc2bdaceda00e90355fcca990517aec77e60c2117e716cf7311a5b4aa1a78635cee16ad4d551d73ea72a18fe9c40fb24b7ff042171eae252cc4fb5660592d37
+Size (mmh3-2.5.1.tar.gz) = 9797 bytes
