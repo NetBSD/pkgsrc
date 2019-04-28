@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1857 2019/04/28 07:00:05 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1858 2019/04/28 07:11:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3018,3 +3018,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/fasttracker2 to 2.152 [fox 2019-04-27]
 	Updated textproc/php-yaml to 2.0.4 [roy 2019-04-27]
 	Updated meta-pkgs/bulk-medium to 20190428 [wiz 2019-04-28]
+	Moved devel/glade3 to devel/glade [wiz 2019-04-28]
