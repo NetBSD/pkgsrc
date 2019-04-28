@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.32 2019/03/03 16:47:58 rillig Exp $
+# $NetBSD: help.awk,v 1.33 2019/04/28 12:10:24 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -172,7 +172,7 @@ NF >= 1 && !/^[\t.]/ && !/^#*$/ && !/^#\t\t/ {
 		# Words in mixed case are not taken as keywords. If you
 		# want them anyway, list them in a "Keywords:" line.
 
-	} else if (w !~ /^[_A-Za-z][-0-9A-Z_a-z]*[0-9A-Za-z](:|\?=|=)?$/) {
+	} else if (w !~ /^[A-Za-z][-0-9A-Z_a-z]*[0-9A-Za-z](:|\?=|=)?$/) {
 		# Keywords must consist only of letters, digits, hyphens
 		# and underscores; except for some trailing type specifier.
 
