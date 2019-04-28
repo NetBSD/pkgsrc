@@ -1,19 +1,24 @@
-@comment $NetBSD: PLIST,v 1.2 2017/09/29 11:06:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/04/28 19:07:08 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/deepdiff/__init__.py
 ${PYSITELIB}/deepdiff/__init__.pyc
 ${PYSITELIB}/deepdiff/__init__.pyo
-${PYSITELIB}/deepdiff/contenthash.py
-${PYSITELIB}/deepdiff/contenthash.pyc
-${PYSITELIB}/deepdiff/contenthash.pyo
+${PYSITELIB}/deepdiff/base.py
+${PYSITELIB}/deepdiff/base.pyc
+${PYSITELIB}/deepdiff/base.pyo
+${PYSITELIB}/deepdiff/deephash.py
+${PYSITELIB}/deepdiff/deephash.pyc
+${PYSITELIB}/deepdiff/deephash.pyo
+${PYSITELIB}/deepdiff/deephash_doc.rst
 ${PYSITELIB}/deepdiff/diff.py
 ${PYSITELIB}/deepdiff/diff.pyc
 ${PYSITELIB}/deepdiff/diff.pyo
+${PYSITELIB}/deepdiff/diff_doc.rst
 ${PYSITELIB}/deepdiff/helper.py
 ${PYSITELIB}/deepdiff/helper.pyc
 ${PYSITELIB}/deepdiff/helper.pyo
@@ -23,3 +28,4 @@ ${PYSITELIB}/deepdiff/model.pyo
 ${PYSITELIB}/deepdiff/search.py
 ${PYSITELIB}/deepdiff/search.pyc
 ${PYSITELIB}/deepdiff/search.pyo
+${PYSITELIB}/deepdiff/search_doc.rst
