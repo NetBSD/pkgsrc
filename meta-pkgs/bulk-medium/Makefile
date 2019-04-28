@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2019/04/26 13:14:04 maya Exp $
+# $NetBSD: Makefile,v 1.55 2019/04/28 06:59:52 wiz Exp $
 
-DISTNAME=	bulk-medium-20190414
-PKGREVISION=	1
+DISTNAME=	bulk-medium-20190428
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -89,7 +88,7 @@ BUILD_DEPENDS+=	sun-jdk6-[0-9]*:../../lang/sun-jdk6
 BUILD_DEPENDS+=	sun-jre6-[0-9]*:../../lang/sun-jre6
 BUILD_DEPENDS+=	openjdk7-[0-9]*:../../lang/openjdk7
 BUILD_DEPENDS+=	openjdk8-[0-9]*:../../lang/openjdk8
-BUILD_DEPENDS+=	python35-[0-9]*:../../lang/python35
+BUILD_DEPENDS+=	python37-[0-9]*:../../lang/python37
 BUILD_DEPENDS+=	tcl-[0-9]*:../../lang/tcl
 BUILD_DEPENDS+=	fetchmail-[0-9]*:../../mail/fetchmail
 BUILD_DEPENDS+=	imap-uw-[0-9]*:../../mail/imap-uw
