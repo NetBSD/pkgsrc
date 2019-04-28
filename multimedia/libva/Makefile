@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/11/23 08:05:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2019/04/28 11:55:45 rillig Exp $
 
 DISTNAME=	libva-2.3.0
 CATEGORIES=	multimedia
@@ -46,7 +46,6 @@ pre-configure:
 
 # To avoid a PLIST mismatch with base Xorg
 CONFIGURE_ARGS+=	--disable-glx
-CONFIGURE_ARGS+=	--disable-egl
 
 .include "../../x11/libXfixes/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
