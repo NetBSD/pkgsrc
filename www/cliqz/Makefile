@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/04/28 13:35:56 fox Exp $
+# $NetBSD: Makefile,v 1.4 2019/04/28 16:30:05 fox Exp $
 
 DISTNAME=	cliqz-1.26.4
 CATEGORIES=	www
@@ -38,6 +38,8 @@ LICENSE=	mpl-2.0 AND gnu-gpl-v2
 USE_TOOLS+=	pkg-config perl gmake autoconf213 unzip zip bash pax
 USE_LANGUAGES+=	c99 gnu++14
 
+# Build script does not support python 3.x yet.
+# https://firefox-source-docs.mozilla.org/build/buildsystem/python.html
 PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 TOOL_DEPENDS+=			cbindgen-[0-9]*:../../devel/cbindgen
