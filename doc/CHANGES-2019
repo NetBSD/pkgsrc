@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1859 2019/04/28 07:49:00 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.1860 2019/04/28 10:34:40 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3020,3 +3020,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated meta-pkgs/bulk-medium to 20190428 [wiz 2019-04-28]
 	Moved devel/glade3 to devel/glade [wiz 2019-04-28]
 	Updated x11/xfce4-notifyd to 0.4.4 [gutteridge 2019-04-28]
+	Updated pkgtools/pkglint to 5.7.7 [rillig 2019-04-28]
