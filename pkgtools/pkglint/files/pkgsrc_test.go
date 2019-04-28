@@ -199,6 +199,12 @@ func (s *Suite) Test_Pkgsrc_loadTools__BUILD_DEFS(c *check.C) {
 	t.CreateFileLines("mk/bsd.pkg.mk",
 		MkRcsID,
 		"_BUILD_DEFS+=\tPKG_SYSCONFBASEDIR PKG_SYSCONFDIR")
+	t.CreateFileLines("mk/defaults/mk.conf",
+		MkRcsID,
+		"",
+		"VARBASE=\t\t/var/pkg",
+		"PKG_SYSCONFBASEDIR=\t/usr/pkg/etc",
+		"PKG_SYSCONFDIR=\t/usr/pkg/etc")
 	t.FinishSetUp()
 
 	G.Check(pkg)
@@ -206,8 +212,9 @@ func (s *Suite) Test_Pkgsrc_loadTools__BUILD_DEFS(c *check.C) {
 	c.Check(G.Pkgsrc.IsBuildDef("PKG_SYSCONFDIR"), equals, true)
 	c.Check(G.Pkgsrc.IsBuildDef("VARBASE"), equals, false)
 
-	// FIXME: There should be a warning for VARBASE, but G.Pkgsrc.UserDefinedVars
-	//  does not contain anything at mklinechecker.go:/UserDefinedVars/.
+	t.CheckOutputLines(
+		"WARN: ~/category/package/Makefile:21: " +
+			"The user-defined variable VARBASE is used but not added to BUILD_DEFS.")
 }
 
 func (s *Suite) Test_Pkgsrc_loadDocChanges__not_found(c *check.C) {
