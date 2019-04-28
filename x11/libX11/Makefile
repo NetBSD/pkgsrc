@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2018/10/10 20:01:56 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2019/04/28 10:53:03 rillig Exp $
 
 DISTNAME=		libX11-1.6.7
 CATEGORIES=		x11 devel
@@ -14,8 +14,6 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config
 
-CONFIGURE_ARGS+=	--enable-man-pages=3
-CONFIGURE_ARGS+=	--with-xcb
 CONFIGURE_ARGS+=	--disable-specs
 PKGCONFIG_OVERRIDE+=	x11.pc.in
 
