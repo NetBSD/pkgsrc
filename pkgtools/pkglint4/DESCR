@@ -5,3 +5,7 @@ application-specific restrictions on certain variables.
 Before importing a new package or making changes to an existing package,
 pkglint should be run in the package's directory to check for common
 errors.
+
+This is the old version of pkglint.  It remains because the current
+version is written in go and thus does not run on all pkgsrc
+platforms.
