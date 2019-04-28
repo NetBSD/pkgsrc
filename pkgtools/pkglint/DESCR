@@ -5,3 +5,6 @@ notes and, upon request, explains them.
 Before importing a new package or making changes to an existing package,
 pkglint should be run in the package's directory to check for common
 errors.
+
+This is the current version of pkglint.  Because it is written in go,
+it does not run on all pkgsrc platforms; see also pkglint4.
