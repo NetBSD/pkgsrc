@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2019/03/27 11:23:18 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2019/04/28 13:26:35 rillig Exp $
 
 DISTNAME=	texlive-20180414-source
 PKGNAME=	web2c-2018
@@ -17,7 +17,9 @@ DEPENDS+=	ptexenc>=1.3.4:../../print/ptexenc
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 			${DISTNAME}/texk/web2c
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # texk/web2c/web2c doesn't know the options
+
 INFO_FILES=	yes
 USE_LANGUAGES=	c c++11
 USE_LIBTOOL=	yes
