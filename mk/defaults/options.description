@@ -227,6 +227,7 @@ fuse			Enable Filesystem in Userspace support.
 gamin			Enable Gamin file and directory monitoring system support.
 gcc-ada			Build the gcc Ada frontend and libraries.
 gcc-c++			Build the gcc C++ frontend and libraries.
+gcc-d			Build the gcc D frontend and libraries.
 gcc-fortran		Build the gcc Fortran frontend and libraries.
 gcc-go			Build the gcc Go frontend and libraries.
 gcc-graphite		Build the gcc Graphite framework for high-level memory optimisation.
