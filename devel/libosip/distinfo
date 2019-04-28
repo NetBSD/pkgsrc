@@ -1,7 +1,11 @@
-$NetBSD: distinfo,v 1.15 2015/11/03 03:27:43 agc Exp $
+$NetBSD: distinfo,v 1.15.30.1 2019/04/28 16:14:29 bsiegert Exp $
 
 SHA1 (libosip2-4.1.0.tar.gz) = 61459c9052ca2f5e77a6936c9b369e2b0602c080
 RMD160 (libosip2-4.1.0.tar.gz) = 3f86bf7872cd382f331b49f5e03a6ddddd338afa
 SHA512 (libosip2-4.1.0.tar.gz) = 8a04e047052aa6b970bb107aa8c0f94ed7c984defe69c3f2788f0b7677325812925a9386c1059499aa0940bb524ac1f724b5489f08e5b2210d190bad68271ee7
 Size (libosip2-4.1.0.tar.gz) = 636382 bytes
-SHA1 (patch-aa) = ba19e1ad149d2e7f0b0b44c38b48b1f5031dc587
+SHA1 (patch-src_osip2_port__sema.c) = 690cc6204025566f605cfc58a1652b95afc8e65f
+SHA1 (patch-src_osipparser2_osip__body.c) = fcbbb11e6a1b87f46faa1742d75a1951342b4095
+SHA1 (patch-src_osipparser2_osip__message__parse.c) = 2f9fea6f6ebea18b1bccb685a731ddf2295728dd
+SHA1 (patch-src_osipparser2_osip__message__to__str.c) = 12d559f25566c2143c9a679befb4b28bd03c3a63
+SHA1 (patch-src_osipparser2_osip__port.c) = 3723661ad715531bebb4ba6af7dd2e056f205e93
