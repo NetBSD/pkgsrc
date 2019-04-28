@@ -1,4 +1,4 @@
-<!-- $NetBSD: makefile.xml,v 1.29 2018/05/19 10:30:22 rillig Exp $ -->
+<!-- $NetBSD: makefile.xml,v 1.30 2019/04/28 11:16:07 rillig Exp $ -->
 
 <chapter id="makefile"> <?dbhtml filename="makefile.html"?>
   <title>Programming in <filename>Makefile</filename>s</title>
@@ -10,13 +10,13 @@
   understandable.</para>
 
   <para>The basic ingredients for <filename>Makefile</filename>
-  programming are variables (which are actually macros) and shell
+  programming are variables and shell
   commands. Among these shell commands may even be more complex ones
   like &man.awk.1; programs. To make sure that every shell command runs
   as intended it is necessary to quote all variables correctly when they
   are used.</para>
 
-  <para>This chapter describes some patterns, that appear quite often in
+  <para>This chapter describes some patterns that appear quite often in
   <filename>Makefile</filename>s, including the pitfalls that come along
   with them.</para>
 
@@ -51,7 +51,7 @@ correct:
     <para>You might remember that &man.make.1; sometimes removes
     <literal>${.TARGET}</literal> in case of error, but this only
     happens when it is interrupted, for example by pressing
-    <literal>^C</literal>. This does <emphasis>not</emphasis> happen
+    <literal>Ctrl+C</literal>. This does <emphasis>not</emphasis> happen
     when one of the commands fails (like &man.false.1; above).</para>
     
     </listitem>
@@ -62,59 +62,31 @@ correct:
     <title><filename>Makefile</filename> variables</title>
 
     <para><filename>Makefile</filename> variables contain strings that
-    can be processed using the five operators ``='', ``+='', ``?='',
-    ``:='', and ``!='', which are described in the &man.make.1; man
+    can be processed using the five operators <code>=</code>,
+    <code>+=</code>, <code>?=</code>, <code>:=</code> and
+    <code>!=</code>, which are described in the &man.make.1; man
     page.</para>
 
     <para>When a variable's value is parsed from a
-    <filename>Makefile</filename>, the hash character ``#'' and the
-    backslash character ``\'' are handled specially. If a backslash is
-    followed by a newline, any whitespace immediately in front of the
-    backslash, the backslash, the newline, and any whitespace
-    immediately behind the newline are replaced with a single space. A
-    backslash character and an immediately following hash character are
-    replaced with a single hash character. Otherwise, the backslash is
-    passed as is. In a variable assignment, any hash character that is
-    not preceded by a backslash starts a comment that continues up to the
-    end of the logical line.</para>
+    <filename>Makefile</filename>, the hash character <code>#</code> and
+    the backslash character <code>\</code> are handled specially. If a
+    backslash is the last character in a line, that backslash is removed
+    from the line and the line continues with the next line of the file.</para>
+
+    <para>The <code>#</code> character starts a comment that reaches
+    until the end of the line. To get an actual <code>#</code> character,
+    such as in a URL, write <code>\#</code> instead.</para>
 
     <para>The evaluation of variables either happens immediately or lazy.
-    It happens immediately when the variable occurs
-    on the right-hand side of the ``:='' or the ``!='' operator, in a
+    It happens immediately when the variable occurs on the right-hand
+    side of the <code>:=</code> or the <code>!=</code> operator, in a
     <varname>.if</varname> condition or a <varname>.for</varname> loop.
     In the other cases, it is evaluated lazily.</para>
 
     <para>Some of the modifiers split the string into words and then
-    operate on the words, others operate on the string as a whole. When
-    a string is split into words, it is split like in &man.sh.1;.</para>
-
-    <para>There are several types of variables that should be handled
-    differently. Strings and two types of lists.</para>
-
-    <itemizedlist>
-
-      <listitem><para><emphasis>Strings</emphasis> can contain arbitrary
-      characters. Nevertheless, you should restrict yourself to only
-      using printable characters. Examples are
-      <varname>PREFIX</varname> and
-      <varname>COMMENT</varname>.</para></listitem>
-
-      <listitem><para><emphasis>Internal lists</emphasis> are lists that
-      are never exported to any shell command. Their elements are
-      separated by whitespace. Therefore, the elements themselves cannot
-      have embedded whitespace. Any other characters are allowed.
-      Internal lists can be used in <command>.for</command> loops.
-      Examples are <varname>DEPENDS</varname> and
-      <varname>BUILD_DEPENDS</varname>.</para></listitem>
-
-      <listitem><para><emphasis>External lists</emphasis> are lists that
-      may be exported to a shell command. Their elements can contain any
-      characters, including whitespace. That's why they cannot be used
-      in <command>.for</command> loops. Examples are
-      <varname>DISTFILES</varname> and
-      <varname>MASTER_SITES</varname>.</para></listitem>
-
-    </itemizedlist>
+    operate on the words, others operate on the string as a whole. When a
+    string is split into words, double quotes and single quotes are
+    interpreted as delimiters, just like in &man.sh.1;.</para>
 
     <sect2 id="makefile.variables.names">
       <title>Naming conventions</title>
@@ -123,15 +95,14 @@ correct:
 
 	<listitem><para>All variable names starting with an underscore
 	are reserved for use by the pkgsrc infrastructure. They shall
-	not be used by package
-	<filename>Makefile</filename>s.</para></listitem>
+	not be used by packages.</para></listitem>
 
 	<listitem><para>In <command>.for</command> loops you should use
 	lowercase variable names for the iteration
 	variables.</para></listitem>
 
-	<listitem><para>All list variables should have a ``plural''
-	name, e.g. <varname>PKG_OPTIONS</varname> or
+	<listitem><para>All list variables should have a plural name,
+	such as <varname>PKG_OPTIONS</varname> or
 	<varname>DISTFILES</varname>.</para></listitem>
 
       </itemizedlist>
@@ -279,9 +250,8 @@ install-examples:
 .endfor
 </programlisting>
 
-<para>This variant only works when <varname>EGFILES</varname> does not
-contain filenames with spaces, since the <code>.for</code> loop splits on
-simple whitespace.</para>
+<para>If one of the filenames contains special characters, it should be
+enclosed in single or double quotes.</para>
 
 <para>To have a shell command test whether a make variable is empty, use
 the following code: <code>${TEST} -z ${POSSIBLY_EMPTY:Q}""</code>.</para>
