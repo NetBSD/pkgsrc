@@ -1,30 +1,27 @@
-# $NetBSD: Makefile,v 1.92 2018/11/14 22:21:15 kleink Exp $
+# $NetBSD: Makefile,v 1.93 2019/04/28 07:06:06 wiz Exp $
 
-DISTNAME=	glade-2.12.2
-PKGREVISION=	30
-CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glade/2.12/}
-EXTRACT_SUFX=	.tar.bz2
+DISTNAME=		glade-3.22.1
+CATEGORIES=		devel
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/glade/3.22/}
+EXTRACT_SUFX=		.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://glade.gnome.org/
-COMMENT=	User interface builder for the GTK2+ toolkit
-LICENSE=	gnu-gpl-v2
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		https://glade.gnome.org/
+COMMENT=		User interface builder for the GTK3+ toolkit
+LICENSE=		gnu-gpl-v2
 
-CONFLICTS+=		glade2-[0-9]* glade2-gnome-[0-9]*
-CONFLICTS+=		glade-gnome-[0-9]*
+TOOL_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
+TOOL_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
+BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
-GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
-USE_LIBTOOL=		YES
-USE_PKGLOCALEDIR=	YES
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config intltool gmake msgfmt
 
-CONFIGURE_ARGS+=	--disable-gnome
-CONFIGURE_ARGS+=	--disable-gnome-db
+PKGCONFIG_OVERRIDE+=	data/gladeui-2.0.pc.in
 
-.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../mk/omf-scrollkeeper.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
