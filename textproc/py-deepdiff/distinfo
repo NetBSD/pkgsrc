@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/09/29 11:06:32 adam Exp $
+$NetBSD: distinfo,v 1.3 2019/04/28 19:07:08 adam Exp $
 
-SHA1 (deepdiff-3.3.0.tar.gz) = 9537493c755f75a2ab40393b87c420ed8a7bc36d
-RMD160 (deepdiff-3.3.0.tar.gz) = ea6423a2b3a6ce933e6ab7a62940003c6d1c0e4b
-SHA512 (deepdiff-3.3.0.tar.gz) = 53ce669512615dd8e00299130aa42e818c4937fa4e72fce9c6dffaad44fe9b85ab0498d9e9ac231b06f54b62776aa5e0866e8cd2d69f4deecc3a7658f867317f
-Size (deepdiff-3.3.0.tar.gz) = 27055 bytes
+SHA1 (deepdiff-4.0.6.tar.gz) = f3f7418b9689b2b2fdb573937b14104734dda2cb
+RMD160 (deepdiff-4.0.6.tar.gz) = 9bde26a9f11e44f54ef11f62175c143a0a21db33
+SHA512 (deepdiff-4.0.6.tar.gz) = 4dc4f1464d7c0b2818f4c8ebc05f5e8732f2c5e300faf45378bbe6f7a22cf3825c203c48653d062747424f588716848600cec7739e71d1e49aa999c2d342216b
+Size (deepdiff-4.0.6.tar.gz) = 48771 bytes
