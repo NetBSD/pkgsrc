@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2019/03/24 21:34:23 nia Exp $
+# $NetBSD: Makefile,v 1.1.2.1 2019/04/28 16:41:30 bsiegert Exp $
 
-DISTNAME=	gitea-1.7.4
+DISTNAME=	gitea-1.8.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=go-gitea/}
 CATEGORIES=	www
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,8 +13,10 @@ LICENSE=	mit
 GO_DIST_BASE=		${DISTNAME}
 GO_SRCPATH=		code.gitea.io/gitea
 
+.include "options.mk"
+
 .if !empty(GO_TAGS)
-GO_BUILD_PATTERN+=	-tags ${GO_TAGS}
+GO_BUILD_PATTERN+=	-tags "${GO_TAGS}"
 .endif
 
 GO_BUILD_PATTERN+=	${GO_SRCPATH}
@@ -85,8 +87,6 @@ do-install:
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/app.ini.sample ${DESTDIR}${EGDIR}
-
-.include "options.mk"
 
 .include "../../www/go-gohtml/buildlink3.mk"
 .include "../../lang/go/go-package.mk"
