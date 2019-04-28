@@ -1,4 +1,4 @@
-<!-- $NetBSD: help-user.xml,v 1.1 2019/04/28 13:41:18 rillig Exp $ -->
+<!-- $NetBSD: help-user.xml,v 1.2 2019/04/28 15:22:24 rillig Exp $ -->
 
 <chapter id="help-user">
 <title>Getting help</title>
@@ -10,6 +10,19 @@
 </para>
 
 <itemizedlist>
+
+<listitem><para>
+	The built-in pkgsrc help, which is available after bootstrapping
+	pkgsrc. Run <command>bmake help topic=&#x2026;</command> to get
+	help for any topic, such as a variable name like
+	<varname>BUILD_DEFS</varname>, a make target like
+	<command>do-build</command>, a missing C or C++ function like
+	<command>strcasecmp</command> or any other topic.</para>
+
+	<para>The available help topics are listed in <xref
+	linkend="help-topics" />.</para>
+</listitem>
+
 <listitem><para>
 	The pkgsrc-users mailing list, to which
 	<ulink url="https://www.NetBSD.org/mailinglists/#pkgsrc-users">you
@@ -24,6 +37,7 @@
 	<ulink url="http://xchat.org/">XChat</ulink>.
 	Pick any user name and join the channel #pkgsrc.</para>
 </listitem>
+
 </itemizedlist>
 
 </chapter>
