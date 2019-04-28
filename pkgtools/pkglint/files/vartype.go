@@ -29,6 +29,11 @@ const (
 	UserSettable
 	SystemProvided
 	CommandLineProvided
+
+	// NeedsRationale marks variables that should always contain a comment
+	// describing why they are set. Typical examples are NOT_FOR_* variables.
+	NeedsRationale
+
 	NoVartypeOptions = 0
 )
 
@@ -87,6 +92,7 @@ func (vt *Vartype) PackageSettable() bool     { return vt.options&PackageSettabl
 func (vt *Vartype) UserSettable() bool        { return vt.options&UserSettable != 0 }
 func (vt *Vartype) SystemProvided() bool      { return vt.options&SystemProvided != 0 }
 func (vt *Vartype) CommandLineProvided() bool { return vt.options&CommandLineProvided != 0 }
+func (vt *Vartype) NeedsRationale() bool      { return vt.options&NeedsRationale != 0 }
 
 func (vt *Vartype) EffectivePermissions(basename string) ACLPermissions {
 	for _, aclEntry := range vt.aclEntries {

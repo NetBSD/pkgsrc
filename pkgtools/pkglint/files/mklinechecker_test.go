@@ -736,6 +736,38 @@ func (s *Suite) Test_MkLineChecker_checkVarassignLeftPermissions__infrastructure
 	t.CheckOutputEmpty()
 }
 
+func (s *Suite) Test_MkLineChecker_checkVarassignLeftRationale(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+	mklines := t.NewMkLines("filename.mk",
+		MkRcsID,
+		"ONLY_FOR_PLATFORM=\t*-*-*", // The CVS Id above is not a rationale.
+		"NOT_FOR_PLATFORM=\t*-*-*",  // Neither does this line have a rationale.
+		"",
+		"ONLY_FOR_PLATFORM+=\t*-*-* # rationale",
+		"",
+		"# rationale in the line above",
+		"ONLY_FOR_PLATFORM+=\t*-*-*",
+		"",
+		"#VAR=\tvalue",               // This comment is not a rationale.
+		"ONLY_FOR_PLATFORM+=\t*-*-*", // Needs a rationale.
+		"",
+		"# rationale",
+		"BROKEN_ON_PLATFORM+=\t*-*-*",
+		"BROKEN_ON_PLATFORM+=\t*-*-*", // The rationale applies to this line, too.
+		"",
+		"PKGNAME=\tpackage-1.0", // Does not need a rationale.
+		"UNKNOWN=\t${UNKNOWN}")  // Unknown type, does not need a rationale.
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"WARN: filename.mk:2: Setting variable ONLY_FOR_PLATFORM should have a rationale.",
+		"WARN: filename.mk:3: Setting variable NOT_FOR_PLATFORM should have a rationale.",
+		"WARN: filename.mk:11: Setting variable ONLY_FOR_PLATFORM should have a rationale.")
+}
+
 func (s *Suite) Test_MkLineChecker_checkVarassignOpShell(c *check.C) {
 	t := s.Init(c)
 
@@ -1225,11 +1257,11 @@ func (s *Suite) Test_MkLineChecker_checkVarassignDecreasingVersions(c *check.C) 
 	t.SetUpVartypes()
 	mklines := t.NewMkLines("Makefile",
 		MkRcsID,
-		"PYTHON_VERSIONS_ACCEPTED=\t36 __future__",
-		"PYTHON_VERSIONS_ACCEPTED=\t36 -13",
-		"PYTHON_VERSIONS_ACCEPTED=\t36 ${PKGVERSION_NOREV}",
-		"PYTHON_VERSIONS_ACCEPTED=\t36 37",
-		"PYTHON_VERSIONS_ACCEPTED=\t37 36 27 25")
+		"PYTHON_VERSIONS_ACCEPTED=\t36 __future__ # rationale",
+		"PYTHON_VERSIONS_ACCEPTED=\t36 -13 # rationale",
+		"PYTHON_VERSIONS_ACCEPTED=\t36 ${PKGVERSION_NOREV} # rationale",
+		"PYTHON_VERSIONS_ACCEPTED=\t36 37 # rationale",
+		"PYTHON_VERSIONS_ACCEPTED=\t37 36 27 25 # rationale")
 
 	// TODO: All but the last of the above assignments should be flagged as
 	//  redundant by RedundantScope; as of March 2019, that check is only

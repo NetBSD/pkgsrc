@@ -236,9 +236,8 @@ func (l *Logger) Logf(level *LogLevel, filename, lineno, format, msg string) {
 
 // Errorf logs a technical error on the error output.
 //
-// location must be either an empty string or a slash-separated filename,
-// such as the one in Location.Filename. It may be followed by the usual
-// ":123" for line numbers.
+// location must be a slash-separated filename, such as the one in
+// Location.Filename. It may be followed by the usual ":123" for line numbers.
 //
 // For diagnostics, use Logf instead.
 func (l *Logger) Errorf(location string, format string, args ...interface{}) {
