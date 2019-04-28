@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1865 2019/04/28 19:38:53 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1866 2019/04/28 20:31:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3029,3 +3029,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/grpc to 1.20.1 [adam 2019-04-28]
 	Updated net/py-grpcio to 1.20.1 [adam 2019-04-28]
 	Updated net/py-grpcio-tools to 1.20.1 [adam 2019-04-28]
+	Updated ham/uhd to 3.14.0.0 [adam 2019-04-28]
