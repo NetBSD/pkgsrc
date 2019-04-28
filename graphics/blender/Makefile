@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.145 2019/04/25 07:32:57 maya Exp $
+# $NetBSD: Makefile,v 1.146 2019/04/28 11:56:00 markd Exp $
 
 DISTNAME=	blender-2.79b
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.blender.org/source/
 
@@ -15,13 +15,14 @@ USE_CMAKE=		yes
 USE_LANGUAGES=		c c++11
 CMAKE_OPTS+=		-DWITH_OPENAL:BOOL=OFF
 CMAKE_OPTS+=		-DWITH_MEM_JEMALLOC:BOOL=OFF
+CMAKE_OPTS+=		-DWITH_SYSTEM_OPENJPEG:BOOL=ON
 CMAKE_OPTS+=		-DPYVERSSUFFIX:STRING=${PYVERSSUFFIX}
 CMAKE_OPTS+=		-DPYTHON_VERSION:STRING=${PYVERSSUFFIX}
 CMAKE_OPTS+=		-DPYTHON_ROOT_DIR:STRING=${PREFIX}
 CMAKE_OPTS+=		-DPYTHON_INCLUDE_DIR:STRING=${PREFIX}/${PYINC}
 CMAKE_OPTS+=		-DPYTHON_INCLUDE_CONFIG_DIR:STRING=${PREFIX}/${PYINC}
 CMAKE_OPTS+=		-DPYTHON_EXECUTABLE:FILEPATH=${PYTHONBIN}
-CMAKE_OPTS+=		-DPYTHON_LIBRARY:FILEPATH=${PREFIX}/lib/libpython${PYVERSSUFFIX}${M}.so
+CMAKE_OPTS+=		-DWITH_PYTHON_INSTALL:BOOL=OFF
 CMAKE_OPTS+=		-DCMAKE_INSTALL_PREFIX:PATH=${PREFIX}/share/blender
 CMAKE_OPTS+=		-DCMAKE_MODULE_PATH:PATH=${_CMAKE_DIR}
 CMAKE_OPTS+=		-DCMAKE_SKIP_RPATH:BOOL=TRUE
@@ -46,9 +47,6 @@ REPLACE_PYTHON=		release/bin/blender-thumbnailer.py
 
 .include "options.mk"
 
-# Needs M=m when python has been built with the pymalloc option
-M=
-
 INSTALLATION_DIRS=	bin share/blender
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
@@ -62,8 +60,6 @@ PLIST_SUBST+=	NETBSDVER=netbsd7
 .else
 PLIST_SUBST+=	NETBSDVER=netbsd6
 .endif
-
-PLIST_VARS+=	py34 py35 py36 py37
 
 OBJDIR=		../build
 CONFIGURE_DIRS=	${OBJDIR}
@@ -102,15 +98,5 @@ post-install:
 .include "../../security/openssl/buildlink3.mk"
 
 .include "../../lang/python/application.mk"
-
-.if ${PYVERSSUFFIX} == "3.4"
-PLIST.py34=	yes
-.elif ${PYVERSSUFFIX} == "3.5"
-PLIST.py35=	yes
-.elif ${PYVERSSUFFIX} == "3.6"
-PLIST.py36=	yes
-.elif ${PYVERSSUFFIX} == "3.7"
-PLIST.py37=	yes
-.endif
 
 .include "../../mk/bsd.pkg.mk"
