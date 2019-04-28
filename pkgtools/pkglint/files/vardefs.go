@@ -124,6 +124,14 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 			"Makefile, Makefile.*, *.mk: default, set, use")
 	}
 
+	// Like pkg, but always needs a rationale.
+	pkgrat := func(varname string, basicType *BasicType) {
+		acl(varname, basicType,
+			PackageSettable|NeedsRationale,
+			"buildlink3.mk, builtin.mk: none",
+			"Makefile, Makefile.*, *.mk: default, set, use")
+	}
+
 	// pkgload is the same as pkg, except that the variable may be accessed at load time.
 	pkgload := func(varname string, basicType *BasicType) {
 		acl(varname, basicType,
@@ -141,6 +149,14 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	pkglist := func(varname string, basicType *BasicType) {
 		acllist(varname, basicType,
 			List|PackageSettable,
+			"buildlink3.mk, builtin.mk: none",
+			"Makefile, Makefile.*, *.mk: default, set, append, use")
+	}
+
+	// Like pkglist, but always needs a rationale.
+	pkglistrat := func(varname string, basicType *BasicType) {
+		acllist(varname, basicType,
+			List|PackageSettable|NeedsRationale,
 			"buildlink3.mk, builtin.mk: none",
 			"Makefile, Makefile.*, *.mk: default, set, append, use")
 	}
@@ -168,6 +184,14 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 			"Makefile, Makefile.*, *.mk: default, set, append, use")
 	}
 
+	// Like pkgappend, but always needs a rationale.
+	pkgappendrat := func(varname string, basicType *BasicType) {
+		acl(varname, basicType,
+			PackageSettable|NeedsRationale,
+			"buildlink3.mk, builtin.mk: none",
+			"Makefile, Makefile.*, *.mk: default, set, append, use")
+	}
+
 	// Some package-defined variables may be modified in buildlink3.mk files.
 	// These variables are typically related to compiling and linking files
 	// from C and related languages.
@@ -181,6 +205,13 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	pkglistbl3 := func(varname string, basicType *BasicType) {
 		acl(varname, basicType,
 			List|PackageSettable,
+			"Makefile, Makefile.*, *.mk: default, set, append, use")
+	}
+
+	// Like pkglistbl3, but always needs a rationale.
+	pkglistbl3rat := func(varname string, basicType *BasicType) {
+		acl(varname, basicType,
+			List|PackageSettable|NeedsRationale,
 			"Makefile, Makefile.*, *.mk: default, set, append, use")
 	}
 
@@ -776,10 +807,10 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	pkglist("BOOTSTRAP_DEPENDS", BtDependencyWithPath)
 	pkg("BOOTSTRAP_PKG", BtYesNo)
 	// BROKEN should better be a list of messages instead of a simple string.
-	pkgappend("BROKEN", BtMessage)
+	pkgappendrat("BROKEN", BtMessage)
 	pkg("BROKEN_GETTEXT_DETECTION", BtYesNo)
-	pkglist("BROKEN_EXCEPT_ON_PLATFORM", BtMachinePlatformPattern)
-	pkglist("BROKEN_ON_PLATFORM", BtMachinePlatformPattern)
+	pkglistrat("BROKEN_EXCEPT_ON_PLATFORM", BtMachinePlatformPattern)
+	pkglistrat("BROKEN_ON_PLATFORM", BtMachinePlatformPattern)
 	syslist("BSD_MAKE_ENV", BtShellWord)
 	// TODO: Align the permissions of the various BUILDLINK_*.* variables with each other.
 	acllist("BUILDLINK_ABI_DEPENDS.*", BtDependency,
@@ -1026,7 +1057,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	pkglist("EMACS_VERSIONS_ACCEPTED", emacsVersions)
 	sys("EMACS_VERSION_MAJOR", BtInteger)
 	sys("EMACS_VERSION_MINOR", BtInteger)
-	pkglist("EMACS_VERSION_REQD", emacsVersions)
+	pkglistrat("EMACS_VERSION_REQD", emacsVersions)
 	sys("EMULDIR", BtPathname)
 	sys("EMULSUBDIR", BtPathname)
 	sys("OPSYS_EMULDIR", BtPathname)
@@ -1070,17 +1101,17 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	pkglist("FILES_SUBST", BtShellWord)
 	syslist("FILES_SUBST_SED", BtShellWord)
 	pkglist("FIX_RPATH", BtVariableName)
-	pkglist("FLEX_REQD", BtVersion)
+	pkglistrat("FLEX_REQD", BtVersion)
 	pkglist("FONTS_DIRS.*", BtPathname)
 	syslist("GAMEDATA_PERMS", BtPerms)
 	syslist("GAMEDIR_PERMS", BtPerms)
-	pkglistbl3("GCC_REQD", BtGccReqd)
+	pkglistbl3rat("GCC_REQD", BtGccReqd)
 	pkgappend("GENERATE_PLIST", BtShellCommands)
 	pkg("GITHUB_PROJECT", BtIdentifier)
 	pkg("GITHUB_TAG", BtIdentifier)
 	pkg("GITHUB_RELEASE", BtFileName)
 	pkg("GITHUB_TYPE", enum("tag release"))
-	pkg("GMAKE_REQD", BtVersion)
+	pkgrat("GMAKE_REQD", BtVersion)
 	// Some packages need to set GNU_ARCH.i386 to either i486 or i586.
 	pkg("GNU_ARCH.*", BtIdentifier)
 	// GNU_CONFIGURE needs to be tested in some buildlink3.mk files,
@@ -1104,7 +1135,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 		PackageSettable,
 		"*: set, use-loadtime")
 	sys("IMAKE", BtShellCommand)
-	pkglistbl3("INCOMPAT_CURSES", BtMachinePlatformPattern)
+	pkglistbl3rat("INCOMPAT_CURSES", BtMachinePlatformPattern)
 	sys("INFO_DIR", BtPathname) // relative to PREFIX
 	pkg("INFO_FILES", BtYes)
 	sys("INSTALL", BtShellCommand)
@@ -1163,7 +1194,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	pkglist("LIBS.*", BtLdFlag)
 	sys("LIBTOOL", BtShellCommand)
 	pkglist("LIBTOOL_OVERRIDE", BtPathmask)
-	pkglist("LIBTOOL_REQD", BtVersion)
+	pkglistrat("LIBTOOL_REQD", BtVersion)
 	pkgappend("LICENCE", BtLicense)
 	pkgappend("LICENSE", BtLicense)
 	pkg("LICENSE_FILE", BtPathname)
@@ -1244,12 +1275,12 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	sys("NATIVE_CC", BtShellCommand) // See mk/platform/tools.NetBSD.mk (and some others).
 	sys("NM", BtShellCommand)
 	sys("NONBINMODE", BtFileMode)
-	pkglist("NOT_FOR_COMPILER", compilers)
-	pkglist("NOT_FOR_BULK_PLATFORM", BtMachinePlatformPattern)
-	pkglist("NOT_FOR_PLATFORM", BtMachinePlatformPattern)
-	pkg("NOT_FOR_UNPRIVILEGED", BtYesNo)
-	pkglist("NOT_PAX_ASLR_SAFE", BtPathmask)
-	pkglist("NOT_PAX_MPROTECT_SAFE", BtPathmask)
+	pkglistrat("NOT_FOR_COMPILER", compilers)
+	pkglistrat("NOT_FOR_BULK_PLATFORM", BtMachinePlatformPattern)
+	pkglistrat("NOT_FOR_PLATFORM", BtMachinePlatformPattern)
+	pkgrat("NOT_FOR_UNPRIVILEGED", BtYesNo)
+	pkglistrat("NOT_PAX_ASLR_SAFE", BtPathmask)
+	pkglistrat("NOT_PAX_MPROTECT_SAFE", BtPathmask)
 	pkg("NO_BIN_ON_CDROM", BtRestricted)
 	pkg("NO_BIN_ON_FTP", BtRestricted)
 	pkgload("NO_BUILD", BtYes)
@@ -1262,9 +1293,9 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	pkg("NO_SRC_ON_CDROM", BtRestricted)
 	pkg("NO_SRC_ON_FTP", BtRestricted)
 	sysload("OBJECT_FMT", enum("COFF ECOFF ELF SOM XCOFF Mach-O PE a.out"))
-	pkglist("ONLY_FOR_COMPILER", compilers)
-	pkglist("ONLY_FOR_PLATFORM", BtMachinePlatformPattern)
-	pkg("ONLY_FOR_UNPRIVILEGED", BtYesNo)
+	pkglistrat("ONLY_FOR_COMPILER", compilers)
+	pkglistrat("ONLY_FOR_PLATFORM", BtMachinePlatformPattern)
+	pkgrat("ONLY_FOR_UNPRIVILEGED", BtYesNo)
 	sysload("OPSYS", enumFromFiles("mk/platform", `(.*)\.mk$`, "$1",
 		"Cygwin DragonFly FreeBSD Linux NetBSD SunOS"))
 	pkglistbl3("OPSYSVARS", BtVariableName)
@@ -1290,7 +1321,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	sys("PAXCTL", BtShellCommand) // See mk/pax.mk.
 	pkglist("PERL5_PACKLIST", BtPerl5Packlist)
 	pkg("PERL5_PACKLIST_DIR", BtPathname)
-	pkglist("PERL5_REQD", BtVersion)
+	pkglistrat("PERL5_REQD", BtVersion)
 	sysbl3("PERL5_INSTALLARCHLIB", BtPathname) // See lang/perl5/vars.mk
 	sysbl3("PERL5_INSTALLSCRIPT", BtPathname)
 	sysbl3("PERL5_INSTALLVENDORBIN", BtPathname)
@@ -1310,7 +1341,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	pkg("PERL5_USE_PACKLIST", BtYesNo)
 	sys("PGSQL_PREFIX", BtPathname)
 	acllist("PGSQL_VERSIONS_ACCEPTED", pgsqlVersions,
-		PackageSettable,
+		PackageSettable|NeedsRationale,
 		// The "set" is necessary for databases/postgresql-postgis2.
 		"Makefile, Makefile.*, *.mk: default, set, append, use")
 	usr("PGSQL_VERSION_DEFAULT", BtVersion)
@@ -1359,7 +1390,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	sys("PKGWILDCARD", BtFileMask)
 	sysload("PKG_ADMIN", BtShellCommand)
 	sys("PKG_APACHE", enum("apache24"))
-	pkglist("PKG_APACHE_ACCEPTED", enum("apache24"))
+	pkglistrat("PKG_APACHE_ACCEPTED", enum("apache24"))
 	usr("PKG_APACHE_DEFAULT", enum("apache24"))
 	sysloadlist("PKG_BUILD_OPTIONS.*", BtOption)
 	usr("PKG_CONFIG", BtYes)
@@ -1391,7 +1422,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	sys("PKG_INFO", BtShellCommand)
 	sys("PKG_JAVA_HOME", BtPathname)
 	sys("PKG_JVM", jvms)
-	pkglist("PKG_JVMS_ACCEPTED", jvms)
+	pkglistrat("PKG_JVMS_ACCEPTED", jvms)
 	pkg("PKG_LIBTOOL", BtPathname)
 
 	// begin PKG_OPTIONS section
@@ -1469,8 +1500,8 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 		"*: use, use-loadtime")
 	// See lang/python/pyversion.mk
 	pkg("PYTHON_FOR_BUILD_ONLY", enum("yes no test tool YES"))
-	pkglist("PYTHON_VERSIONS_ACCEPTED", BtVersion)
-	pkglist("PYTHON_VERSIONS_INCOMPATIBLE", BtVersion)
+	pkglistrat("PYTHON_VERSIONS_ACCEPTED", BtVersion)
+	pkglistrat("PYTHON_VERSIONS_INCOMPATIBLE", BtVersion)
 	usr("PYTHON_VERSION_DEFAULT", BtVersion)
 	usr("PYTHON_VERSION_REQD", BtVersion)
 	pkglist("PYTHON_VERSIONED_DEPENDENCIES", BtPythonDependency)
@@ -1568,7 +1599,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	pkglist("TEST_DIRS", BtWrksrcSubdirectory)
 	pkglist("TEST_ENV", BtShellWord)
 	pkglist("TEST_TARGET", BtIdentifier)
-	pkglist("TEXINFO_REQD", BtVersion)
+	pkglistrat("TEXINFO_REQD", BtVersion)
 	pkglistbl3("TOOL_DEPENDS", BtDependencyWithPath)
 	syslist("TOOLS_ALIASES", BtFileName)
 	syslist("TOOLS_BROKEN", BtTool)
