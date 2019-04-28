@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/04/28 16:30:05 fox Exp $
+# $NetBSD: Makefile,v 1.5 2019/04/28 22:00:54 fox Exp $
 
 DISTNAME=	cliqz-1.26.4
 CATEGORIES=	www
@@ -66,6 +66,7 @@ REPLACE_BASH+=	magic_build_and_package.sh
 CFLAGS+=	-D_GLIBCXX_INCLUDE_NEXT_C_HEADERS
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/cliqz ${COMPILER_RPATH_FLAG}${PREFIX}/lib
 
+# Needed by the Javascript JIT used in cliqz
 NOT_PAX_MPROTECT_SAFE+=	lib/cliqz/cliqz
 NOT_PAX_MPROTECT_SAFE+=	lib/cliqz/cliqz-bin
 NOT_PAX_MPROTECT_SAFE+=	lib/cliqz/plugin-container
