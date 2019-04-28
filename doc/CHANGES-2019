@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1860 2019/04/28 10:34:40 rillig Exp $
+$NetBSD: CHANGES-2019,v 1.1861 2019/04/28 12:46:56 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3021,3 +3021,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Moved devel/glade3 to devel/glade [wiz 2019-04-28]
 	Updated x11/xfce4-notifyd to 0.4.4 [gutteridge 2019-04-28]
 	Updated pkgtools/pkglint to 5.7.7 [rillig 2019-04-28]
+	Updated x11/qt5-qtbase to 5.12.3nb1 [maya 2019-04-28]
