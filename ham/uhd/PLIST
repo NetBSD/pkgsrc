@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/03/22 17:58:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2019/04/28 20:31:28 adam Exp $
 bin/uhd_cal_rx_iq_balance
 bin/uhd_cal_tx_dc_offset
 bin/uhd_cal_tx_iq_balance
@@ -34,6 +34,7 @@ include/uhd/transport/usb_device_handle.hpp
 include/uhd/transport/usb_zero_copy.hpp
 include/uhd/transport/vrt_if_packet.hpp
 include/uhd/transport/zero_copy.hpp
+include/uhd/transport/zero_copy_flow_ctrl.hpp
 include/uhd/types/byte_vector.hpp
 include/uhd/types/clock_config.hpp
 include/uhd/types/device_addr.hpp
@@ -110,7 +111,7 @@ include/uhd/version.hpp
 lib/cmake/uhd/UHDConfig.cmake
 lib/cmake/uhd/UHDConfigVersion.cmake
 lib/libuhd.so
-lib/libuhd.so.3.13.1
+lib/libuhd.so.3.14.0
 lib/pkgconfig/uhd.pc
 lib/uhd/examples/benchmark_rate
 lib/uhd/examples/gpio
@@ -180,6 +181,7 @@ lib/uhd/tests/narrow_cast_test
 lib/uhd/tests/nocscript_expr_test
 lib/uhd/tests/nocscript_ftable_test
 lib/uhd/tests/nocscript_parser_test
+lib/uhd/tests/packet_handler_benchmark
 lib/uhd/tests/paths_test
 lib/uhd/tests/property_test
 lib/uhd/tests/ranges_c_test
@@ -248,7 +250,11 @@ share/uhd/rfnoc/blocks/radio_e3xx.xml
 share/uhd/rfnoc/blocks/radio_eiscat.xml
 share/uhd/rfnoc/blocks/radio_magnesium.xml
 share/uhd/rfnoc/blocks/radio_neon.xml
+share/uhd/rfnoc/blocks/radio_rhodium.xml
 share/uhd/rfnoc/blocks/radio_x300.xml
+share/uhd/rfnoc/blocks/replay.xml
+share/uhd/rfnoc/blocks/replay_x2.xml
+share/uhd/rfnoc/blocks/replay_x4.xml
 share/uhd/rfnoc/blocks/schmidlcox.xml
 share/uhd/rfnoc/blocks/serialdemod.xml
 share/uhd/rfnoc/blocks/siggen.xml
