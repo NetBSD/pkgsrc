@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/04/25 07:32:40 maya Exp $
+# $NetBSD: Makefile,v 1.7 2019/04/28 07:13:33 wiz Exp $
 
 DISTNAME=	libkkc-0.3.5
 PKGREVISION=	1
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/ueno/libkkc/
 COMMENT=	Japanese Kana Kanji conversion library
 LICENSE=	gnu-gpl-v3
 
+PYTHON_VERSIONS_ACCEPTED=	27 # py-marisa
 BUILD_DEPENDS+=	${PYPKGPREFIX}-marisa-[0-9]*:../../textproc/py-marisa
 
 GNU_CONFIGURE=		yes
