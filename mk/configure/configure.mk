@@ -1,4 +1,4 @@
-# $NetBSD: configure.mk,v 1.27 2019/04/28 11:25:32 rillig Exp $
+# $NetBSD: configure.mk,v 1.28 2019/04/28 13:18:18 rillig Exp $
 #
 # = Package-settable variables =
 #
@@ -206,6 +206,9 @@ _CONFIGURE_SCRIPT_ENV+=	${CONFIGURE_ENV}
 .PHONY: do-configure-script
 do-configure-script:
 .for _dir_ in ${CONFIGURE_DIRS}
+.  if ${CONFIGURE_DIRS:[#]} != 1
+	${RUN} ${STEP_MSG} "Running "${CONFIGURE_SCRIPT:Q}" in "${_dir_:Q}
+.  endif
 	${RUN}${_ULIMIT_CMD}						\
 	cd ${WRKSRC} && cd ${_dir_} &&					\
 	${PKGSRC_SETENV} ${_CONFIGURE_SCRIPT_ENV}			\
