@@ -1,4 +1,4 @@
-<!-- $NetBSD: help-devel.xml,v 1.1 2019/04/28 13:41:18 rillig Exp $ -->
+<!-- $NetBSD: help-devel.xml,v 1.2 2019/04/28 15:22:24 rillig Exp $ -->
 
 <chapter id="help-devel">
 <title>Getting help</title>
@@ -17,6 +17,9 @@
 	<varname>BUILD_DEFS</varname>, a make target like
 	<command>do-build</command>, a missing C or C++ function like
 	<command>strcasecmp</command> or any other topic.</para>
+
+	<para>The available help topics are listed in <xref
+	linkend="help-topics" />.</para>
 </listitem>
 
 <listitem><para>
