@@ -1,25 +1,25 @@
-$NetBSD: distinfo,v 1.1 2019/04/19 14:02:03 fox Exp $
+$NetBSD: distinfo,v 1.2 2019/04/28 13:35:56 fox Exp $
 
-SHA1 (cliqz-1.26.3/adult-domains.bin) = 9dd0756b67aa17357ef61f3bea8303dad63540a1
-RMD160 (cliqz-1.26.3/adult-domains.bin) = 78f46f31b27b4172a6aa6125619f92f751172a75
-SHA512 (cliqz-1.26.3/adult-domains.bin) = d0229800e0e1bf6d60e5510d2995a8ba800ab933adc0de44791c2b4a9ca39de7ad6cfe9b9563bdac67ecbc96c48d1277866da94d6ea635e1435a9e95a63dff08
-Size (cliqz-1.26.3/adult-domains.bin) = 528392 bytes
-SHA1 (cliqz-1.26.3/cliqz-1.26.3.tar.gz) = bd8a9fc5e0a25e379c831ed62ee2877613222f75
-RMD160 (cliqz-1.26.3/cliqz-1.26.3.tar.gz) = 72799bf5bce2bfa26437183a92f97dd4066fdbca
-SHA512 (cliqz-1.26.3/cliqz-1.26.3.tar.gz) = 85268cfb78b55e388bf912bbe57dd2f88d1e612bc9b35f8ddf32fcd29bd23ea835abf1674b7f9e63cfd0abc21a580bb13891031e8c60314f22f8f8ecbd164357
-Size (cliqz-1.26.3/cliqz-1.26.3.tar.gz) = 424868507 bytes
-SHA1 (cliqz-1.26.3/cliqz@cliqz.com.xpi) = 46595914cf4d1aa8f352d543282fa193ea0259c9
-RMD160 (cliqz-1.26.3/cliqz@cliqz.com.xpi) = 9b9cea7dec4196eafa6b7ae84c5d53c696632cb1
-SHA512 (cliqz-1.26.3/cliqz@cliqz.com.xpi) = 687f18545861f68313f5cafc2d13eb611f71e875f41c493c648f95279055bc00cd4219ff6789e334561f517ebb72731994b2ce36dc55d1f05cfe16325757c01e
-Size (cliqz-1.26.3/cliqz@cliqz.com.xpi) = 5945491 bytes
-SHA1 (cliqz-1.26.3/gdprtool@cliqz.com.xpi) = 1de84f05f921f67f40135db9f8de86a22bfc4fca
-RMD160 (cliqz-1.26.3/gdprtool@cliqz.com.xpi) = 1e8142ec919b07492357b60f8630602b3273f71f
-SHA512 (cliqz-1.26.3/gdprtool@cliqz.com.xpi) = dfebd9ba96a7edf71c4b29f189548f17f5ec1f05cb747f38c44c0e5369836e1ce35445698f6b64555d15c1708fdd62069716b4969b36f91be7bd9d3d98a44857
-Size (cliqz-1.26.3/gdprtool@cliqz.com.xpi) = 222207 bytes
-SHA1 (cliqz-1.26.3/https-everywhere@cliqz.com.xpi) = ffe130eddf382de8cab73bd589d102dcc0c06ff2
-RMD160 (cliqz-1.26.3/https-everywhere@cliqz.com.xpi) = d88065397c7a44ca94274403039ddd17390380e4
-SHA512 (cliqz-1.26.3/https-everywhere@cliqz.com.xpi) = 7b66200d441d53bd888c4e378e2ff7757cc75cd94278cfc4da2e6e28ba9b4cb22c3bcf6325c1289f504e151e0f95f2446688e822998d559f8c918bb8a3c1b38c
-Size (cliqz-1.26.3/https-everywhere@cliqz.com.xpi) = 2056899 bytes
+SHA1 (cliqz-1.26.4/adult-domains.bin) = 9dd0756b67aa17357ef61f3bea8303dad63540a1
+RMD160 (cliqz-1.26.4/adult-domains.bin) = 78f46f31b27b4172a6aa6125619f92f751172a75
+SHA512 (cliqz-1.26.4/adult-domains.bin) = d0229800e0e1bf6d60e5510d2995a8ba800ab933adc0de44791c2b4a9ca39de7ad6cfe9b9563bdac67ecbc96c48d1277866da94d6ea635e1435a9e95a63dff08
+Size (cliqz-1.26.4/adult-domains.bin) = 528392 bytes
+SHA1 (cliqz-1.26.4/cliqz-1.26.4.tar.gz) = 724ee3d7a159297c3ec2ad6e439463589ec80693
+RMD160 (cliqz-1.26.4/cliqz-1.26.4.tar.gz) = dd2438e98ecf97ebb08be295d4a0d56b64553165
+SHA512 (cliqz-1.26.4/cliqz-1.26.4.tar.gz) = 576d8e3b4503c18f163388e717dc6ba906539485a08b7c718c61bbe95b58de458d9552a95ef1b77e59d535a7f631a3a17f75a9506439d2f5ce8866bf181ef2f2
+Size (cliqz-1.26.4/cliqz-1.26.4.tar.gz) = 424862041 bytes
+SHA1 (cliqz-1.26.4/cliqz@cliqz.com.xpi) = 46595914cf4d1aa8f352d543282fa193ea0259c9
+RMD160 (cliqz-1.26.4/cliqz@cliqz.com.xpi) = 9b9cea7dec4196eafa6b7ae84c5d53c696632cb1
+SHA512 (cliqz-1.26.4/cliqz@cliqz.com.xpi) = 687f18545861f68313f5cafc2d13eb611f71e875f41c493c648f95279055bc00cd4219ff6789e334561f517ebb72731994b2ce36dc55d1f05cfe16325757c01e
+Size (cliqz-1.26.4/cliqz@cliqz.com.xpi) = 5945491 bytes
+SHA1 (cliqz-1.26.4/gdprtool@cliqz.com.xpi) = 9e318bd3ef8703ee1828617d90f068202aafcb00
+RMD160 (cliqz-1.26.4/gdprtool@cliqz.com.xpi) = 95954ab8a12c2018c8b8b429992d5b92b365eec1
+SHA512 (cliqz-1.26.4/gdprtool@cliqz.com.xpi) = b5aeffb5fa16d12adc05db267be37cb366c93a54bc6f0a32bac4eb2421d9f370e73109e23273032a65ca58a8ed44afe58e19f616f80e42245b06a75f5a887986
+Size (cliqz-1.26.4/gdprtool@cliqz.com.xpi) = 222806 bytes
+SHA1 (cliqz-1.26.4/https-everywhere@cliqz.com.xpi) = 591d44a9e45551c3978a649814df4f65e267cf0a
+RMD160 (cliqz-1.26.4/https-everywhere@cliqz.com.xpi) = 6ad1943bc8b075e2e02469344b44cda64369ba59
+SHA512 (cliqz-1.26.4/https-everywhere@cliqz.com.xpi) = c9449821ce55c647969d6c877dacc21f50096f574403092e39fee2eb2df6f0ae69575bc5bd20ae7473b28cb67635c7dc3645eedc0a758ee9e1e5072b4d5caaf5
+Size (cliqz-1.26.4/https-everywhere@cliqz.com.xpi) = 1765469 bytes
 SHA1 (patch-cliqz__env.sh) = 6f7aba36875e86960a8fd674fdff2f576d9b479d
 SHA1 (patch-magic__build__and__package.sh) = f70d552dde0f7c1d023921cf900ef91c7639256c
 SHA1 (patch-mozilla-release_browser_app_profile_firefox.js) = 920346c7e982d8313151fa11b516e78a18a9e5dd
