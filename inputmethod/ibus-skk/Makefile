@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2018/11/14 22:21:50 kleink Exp $
+# $NetBSD: Makefile,v 1.42 2019/04/28 11:48:32 mef Exp $
 #
 
 DISTNAME=	ibus-skk-1.4.3
@@ -29,5 +29,6 @@ SUBST_SED.prefix=	-e 's|/usr/share|${PREFIX}/share|g'
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../inputmethod/libskk/buildlink3.mk"
 .include "../../inputmethod/ibus/buildlink3.mk"
+.include "../../x11/libxkbcommon/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
