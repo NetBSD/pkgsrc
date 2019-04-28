@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.7 2014/07/12 16:48:26 schwarz Exp $
+$NetBSD: patch-src_osip2_port__sema.c,v 1.1.2.2 2019/04/28 16:14:29 bsiegert Exp $
 
---- src/osip2/port_sema.c.orig	2013-12-18 19:36:46.000000000 +0100
-+++ src/osip2/port_sema.c	2014-07-12 18:20:40.000000000 +0200
-@@ -305,7 +305,6 @@
+Fix the calls to semctl to make this package build on NetBSD 1.6
+
+--- src/osip2/port_sema.c.orig	2013-12-18 18:36:46.000000000 +0000
++++ src/osip2/port_sema.c
+@@ -305,7 +305,6 @@ osip_sem_trywait (struct osip_sem *_sem)
  struct osip_sem *
  osip_sem_init (unsigned int value)
  {
@@ -10,7 +12,7 @@ $NetBSD: patch-aa,v 1.7 2014/07/12 16:48:26 schwarz Exp $
    int i;
    osip_sem_t *sem = (osip_sem_t *) osip_malloc (sizeof (osip_sem_t));
  
-@@ -318,8 +317,7 @@
+@@ -318,8 +317,7 @@ osip_sem_init (unsigned int value)
      osip_free (sem);
      return NULL;
    }
@@ -20,7 +22,7 @@ $NetBSD: patch-aa,v 1.7 2014/07/12 16:48:26 schwarz Exp $
    if (i != 0) {
      perror ("semctl error");
      osip_free (sem);
-@@ -331,13 +329,11 @@
+@@ -331,13 +329,11 @@ osip_sem_init (unsigned int value)
  int
  osip_sem_destroy (struct osip_sem *_sem)
  {
