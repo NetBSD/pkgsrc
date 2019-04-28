@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2019/04/25 15:55:07 adam Exp $
+# $NetBSD: Makefile,v 1.78 2019/04/28 19:13:00 nia Exp $
 
 DISTNAME=	openttd-1.9.1-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -46,6 +46,7 @@ CONFIGURE_ARGS+=	--without-osx-sysroot
 
 .include "../../archivers/lzo/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
+.include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
