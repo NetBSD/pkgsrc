@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/04/25 07:33:07 maya Exp $
+# $NetBSD: Makefile,v 1.5 2019/04/28 07:14:07 wiz Exp $
 
 DISTNAME=	libkkc-data-0.2.7
 PKGREVISION=	1
@@ -11,6 +11,7 @@ HOMEPAGE=	https://github.com/ueno/libkkc
 COMMENT=	Language model data for libkkc
 LICENSE=	gnu-gpl-v3
 
+PYTHON_VERSIONS_ACCEPTED=	27 # py-marisa
 BUILD_DEPENDS+=	${PYPKGPREFIX}-marisa-[0-9]*:../../textproc/py-marisa
 
 GNU_CONFIGURE=	yes
