@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.46 2019/01/15 09:04:17 adam Exp $
+# $NetBSD: Makefile,v 1.47 2019/04/29 17:13:15 adam Exp $
 
-DISTNAME=	ccache-3.6
+DISTNAME=	ccache-3.7
 CATEGORIES=	devel
-MASTER_SITES=	http://samba.org/ftp/ccache/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ccache/}
 # do not use xz distfile here, xz needs gettext-lib which leads to circular
 # dependencies on some platforms.
 EXTRACT_SUFX=	.tar.bz2
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ccache.samba.org/
+HOMEPAGE=	https://ccache.dev/
 COMMENT=	Cache for C/C++ compilers
 LICENSE=	gnu-gpl-v3 AND modified-bsd AND public-domain AND zlib
 
