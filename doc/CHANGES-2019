@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1869 2019/04/29 07:52:18 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1870 2019/04/29 08:49:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3036,3 +3036,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-django-cors-headers to 2.5.3 [adam 2019-04-29]
 	Updated www/py-django-admin-rangefilter to 0.3.15 [adam 2019-04-29]
 	Updated www/py-django-admin-sortable2 to 0.7.1 [adam 2019-04-29]
+	Updated www/py-soupsieve to 1.9.1 [adam 2019-04-29]
+	Updated www/py-httplib2 to 0.12.3 [adam 2019-04-29]
