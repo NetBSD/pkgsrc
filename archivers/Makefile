@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.160 2019/03/12 18:02:08 jaapb Exp $
+# $NetBSD: Makefile,v 1.161 2019/04/29 15:52:37 bacon Exp $
 #
 
 COMMENT=	Archivers
@@ -44,6 +44,7 @@ SUBDIR+=	lbrate
 SUBDIR+=	lcab
 SUBDIR+=	lha
 SUBDIR+=	lhasa
+SUBDIR+=	libaec
 SUBDIR+=	libarchive
 SUBDIR+=	libcomprex
 SUBDIR+=	liblzo
