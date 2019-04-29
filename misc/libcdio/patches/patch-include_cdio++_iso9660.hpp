@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.7 2010/07/30 07:10:50 dholland Exp $
+$NetBSD: patch-include_cdio++_iso9660.hpp,v 1.1 2019/04/29 17:22:04 adam Exp $
 
 Work around namespace pollution on OpenSolaris (PR 43638, Aleksey Cheusov)
 
