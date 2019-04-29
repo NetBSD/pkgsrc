@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/02/19 12:31:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/04/29 10:35:04 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -13,6 +13,9 @@ ${PYSITELIB}/parso/_compatibility.pyo
 ${PYSITELIB}/parso/cache.py
 ${PYSITELIB}/parso/cache.pyc
 ${PYSITELIB}/parso/cache.pyo
+${PYSITELIB}/parso/file_io.py
+${PYSITELIB}/parso/file_io.pyc
+${PYSITELIB}/parso/file_io.pyo
 ${PYSITELIB}/parso/grammar.py
 ${PYSITELIB}/parso/grammar.pyc
 ${PYSITELIB}/parso/grammar.pyo
