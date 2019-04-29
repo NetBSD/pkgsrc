@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.34 2018/01/02 05:37:22 maya Exp $
+# $NetBSD: Makefile,v 1.35 2019/04/29 22:24:31 gdt Exp $
 
 DISTNAME=		cfs-1.4.1
 PKGREVISION=		6
 CATEGORIES=		security
-MASTER_SITES=		http://www.crypto.com/software/
+MASTER_SITES=		https://www.mattblaze.org/software/cfs-1.4.1.tar.gz
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.crypto.com/software/
+MAINTAINER=		gdt@NetBSD.org
+HOMEPAGE=		https://www.mattblaze.org/software/
 COMMENT=		Encrypting file system, using NFS as its interface
 
 BUILD_TARGET=		cfs
