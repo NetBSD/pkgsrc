@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/04/29 15:51:23 bacon Exp $
+
+SHA1 (libaec-1.0.4.tar.gz) = 17a3972aee6d5d4c46c724f3a8a57f8e0161a806
+RMD160 (libaec-1.0.4.tar.gz) = e41987d68a1bd5325c9016bb161b51a2b845f81a
+SHA512 (libaec-1.0.4.tar.gz) = 3873b51986f8a05202c44ea3eb0f2f9125869a29367473dc3f6de4d67a0ecc4245787eaf979760254001ae289ffe588cf065c73153a0ef9eb8ed20641bcbf0ad
+Size (libaec-1.0.4.tar.gz) = 3120061 bytes
