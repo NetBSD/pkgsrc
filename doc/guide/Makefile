@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2019/04/28 15:22:24 rillig Exp $
+# $NetBSD: Makefile,v 1.54 2019/04/29 16:18:41 rillig Exp $
 
 DISTNAME=		pkgsrc-guide-${PKGVERSION}
 CATEGORIES=		# empty
@@ -16,7 +16,6 @@ PKGVERSION!=		date '+%Y%m%d'
 DIST_SUBDIR=		${PKGBASE}
 USE_LANGUAGES=		# empty
 MAKE_ENV+=		SED=${SED:Q}
-USE_TOOLS+=		perl
 
 PLIST_VARS=		ascii html pdf
 
@@ -64,10 +63,10 @@ pre-extract:
 	${MKDIR} ${WRKSRC}
 	${LN} -s ${FILESDIR}/* ${WRKSRC}
 
-post-extract: generate-help-topics
+pre-configure: generate-help-topics
 generate-help-topics: .PHONY
 	${RUN} ${MAKE} help topic=:index > ${WRKSRC}/help-topics.data
-	${RUN} cd ${WRKSRC} && perl generate-help-topics.pl 
+	${RUN} cd ${WRKSRC} && python help-topics.gen.py
 
 do-build:
 .for _output_ in ${OUTPUTS}
@@ -157,4 +156,6 @@ htdocs-share:
 		-s ',^,htdocs/,'					\
 		global.css share
 
+PYTHON_FOR_BUILD_ONLY=	tool
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
