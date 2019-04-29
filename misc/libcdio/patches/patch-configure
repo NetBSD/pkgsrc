@@ -1,0 +1,14 @@
+$NetBSD: patch-configure,v 1.1 2019/04/29 17:22:04 adam Exp $
+
+cdda-player works fine on NetBSD.
+
+--- configure.orig	2019-04-29 15:14:42.000000000 +0000
++++ configure
+@@ -18229,7 +18229,6 @@ $as_echo "#define HAVE_NETBSD_CDROM 1" >
+ 
+  	# LIBS="$LIBS -lcam"
+   	cd_drivers="${cd_drivers}, NetBSD "
+-	enable_cdda_player="no"
+ 	;;
+      os2*)
+ 
