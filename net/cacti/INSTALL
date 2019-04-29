@@ -1,9 +1,12 @@
-# $NetBSD: INSTALL,v 1.2 2019/04/26 14:52:16 gavan Exp $
+# $NetBSD: INSTALL,v 1.3 2019/04/29 16:09:05 hauke Exp $
 
 case ${STAGE} in
 POST-INSTALL)
 	${TOUCH} @CACTI_LOGDIR@/cacti.log
-	${CHOWN} cacti:www @CACTI_LOGDIR@/cacti.log
+	${CHOWN} ${CACTI_USER}:${APACHE_GROUP} @CACTI_LOGDIR@/cacti.log
 	${CHMOD} 660 @CACTI_LOGDIR@/cacti.log
+	${TOUCH} @CACTI_LOGDIR@/cacti_stderr.log
+	${CHOWN} ${CACTI_USER}:${APACHE_GROUP} @CACTI_LOGDIR@/cacti_stderr.log
+	${CHMOD} 660 @CACTI_LOGDIR@/cacti_stderr.log
 	;;
 esac
