@@ -1,22 +1,28 @@
-# $NetBSD: Makefile,v 1.39 2019/04/26 14:52:16 gavan Exp $
+# $NetBSD: Makefile,v 1.40 2019/04/29 16:09:05 hauke Exp $
 
 DISTNAME=	cacti-1.2.3
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://www.cacti.net/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.cacti.net/
-COMMENT=	Frontend to rrdtool for monitoring systems and services
+COMMENT=	Web frontend to rrdtool for monitoring systems and services
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		# none
 USE_TOOLS+=		pax
 NO_BUILD=		yes
 
+#DEPENDS+=		${PHP_PKG_PREFIX}-gd-[0-9]*:../../graphics/php-gd
+DEPENDS+=		${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
+DEPENDS+=		${PHP_PKG_PREFIX}-zlib-[0-9]*:../../archivers/php-zlib
+DEPENDS+=		${PHP_PKG_PREFIX}-mbstring-[0-9]*:../../converters/php-mbstring
 DEPENDS+=		${PHP_PKG_PREFIX}-pdo_mysql-[0-9]*:../../databases/php-pdo_mysql
 DEPENDS+=		${PHP_PKG_PREFIX}-snmp-[0-9]*:../../net/php-snmp
 DEPENDS+=		${PHP_PKG_PREFIX}-sockets-[0-9]*:../../net/php-sockets
 DEPENDS+=		${PHP_PKG_PREFIX}-gmp-[0-9]*:../../devel/php-gmp
+DEPENDS+=		${PHP_PKG_PREFIX}-posix-[0-9]*:../../devel/php-posix
 DEPENDS+=		${PHP_PKG_PREFIX}-ldap-[0-9]*:../../databases/php-ldap
 DEPENDS+=		${PHP_PKG_PREFIX}-gettext-[0-9]*:../../devel/php-gettext
 DEPENDS+=		${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-[0-9]*:../../www/ap-php
@@ -62,10 +68,12 @@ FILES_SUBST+=		CACTI_LOGDIR=${CACTI_LOGDIR}
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	${WRKDIR}/httpd-cacti.conf install/functions.php
-SUBST_FILES.paths+=	include/global.php include/global_settings.php
-SUBST_FILES.paths+=	lib/installer.php
+SUBST_FILES.paths=	${WRKDIR}/httpd-cacti.conf
 SUBST_FILES.paths+=	${WRKDIR}/cacti-poller
+SUBST_FILES.paths+=	poller_maintenance.php utilities.php
+SUBST_FILES.paths+=	cli/install_cacti.php install/functions.php
+SUBST_FILES.paths+=	include/global.php include/global_settings.php
+SUBST_FILES.paths+=	lib/clog_webapi.php lib/installer.php lib/functions.php
 SUBST_VARS.paths=	CACTIDIR PREFIX CACTI_USER CACTI_LOGDIR CACTI_RRADIR
 SUBST_VARS.paths+=	PKG_PHP_MAJOR_VERS SH
 
@@ -111,6 +119,7 @@ post-extract:
 	${CP} ${FILESDIR}/freebsd_memory.pl ${WRKSRC}/scripts/
 	${CP} ${FILESDIR}/netbsd_memory.pl ${WRKSRC}/scripts/
 	${CP} ${FILESDIR}/solaris_memory.pl ${WRKSRC}/scripts/
+	${CHMOD} 644 ${WRKSRC}/rra/.htaccess
 	cd ${WRKSRC}/scripts;					\
 	if [ -f ${LOWER_OPSYS}_memory.pl ]; then		\
 	  ${LN} -fs ${LOWER_OPSYS}_memory.pl local_memory.pl;	\
