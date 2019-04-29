@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/12/13 11:22:46 adam Exp $
+# $NetBSD: Makefile,v 1.6 2019/04/29 10:39:00 adam Exp $
 
-DISTNAME=	xandikos-0.0.11
+DISTNAME=	xandikos-0.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xandikos/}

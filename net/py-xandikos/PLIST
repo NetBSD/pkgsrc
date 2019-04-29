@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/12/13 11:22:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/04/29 10:39:00 adam Exp $
 bin/xandikos-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -23,6 +23,9 @@ ${PYSITELIB}/xandikos/caldav.pyo
 ${PYSITELIB}/xandikos/carddav.py
 ${PYSITELIB}/xandikos/carddav.pyc
 ${PYSITELIB}/xandikos/carddav.pyo
+${PYSITELIB}/xandikos/collation.py
+${PYSITELIB}/xandikos/collation.pyc
+${PYSITELIB}/xandikos/collation.pyo
 ${PYSITELIB}/xandikos/davcommon.py
 ${PYSITELIB}/xandikos/davcommon.pyc
 ${PYSITELIB}/xandikos/davcommon.pyo
@@ -50,6 +53,9 @@ ${PYSITELIB}/xandikos/store/config.pyo
 ${PYSITELIB}/xandikos/store/git.py
 ${PYSITELIB}/xandikos/store/git.pyc
 ${PYSITELIB}/xandikos/store/git.pyo
+${PYSITELIB}/xandikos/store/index.py
+${PYSITELIB}/xandikos/store/index.pyc
+${PYSITELIB}/xandikos/store/index.pyo
 ${PYSITELIB}/xandikos/store/vdir.py
 ${PYSITELIB}/xandikos/store/vdir.pyc
 ${PYSITELIB}/xandikos/store/vdir.pyo
@@ -68,9 +74,9 @@ ${PYSITELIB}/xandikos/tests/test_api.pyo
 ${PYSITELIB}/xandikos/tests/test_caldav.py
 ${PYSITELIB}/xandikos/tests/test_caldav.pyc
 ${PYSITELIB}/xandikos/tests/test_caldav.pyo
-${PYSITELIB}/xandikos/tests/test_collectionconfig.py
-${PYSITELIB}/xandikos/tests/test_collectionconfig.pyc
-${PYSITELIB}/xandikos/tests/test_collectionconfig.pyo
+${PYSITELIB}/xandikos/tests/test_config.py
+${PYSITELIB}/xandikos/tests/test_config.pyc
+${PYSITELIB}/xandikos/tests/test_config.pyo
 ${PYSITELIB}/xandikos/tests/test_icalendar.py
 ${PYSITELIB}/xandikos/tests/test_icalendar.pyc
 ${PYSITELIB}/xandikos/tests/test_icalendar.pyo
