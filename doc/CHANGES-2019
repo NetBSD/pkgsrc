@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1874 2019/04/29 12:05:14 wiedi Exp $
+$NetBSD: CHANGES-2019,v 1.1875 2019/04/29 15:53:15 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3045,3 +3045,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/py-xandikos to 0.1.0 [adam 2019-04-29]
 	Updated emulators/libretro-beetle-psx to 20190203 [nia 2019-04-29]
 	Updated editors/nano to 4.2 [wiedi 2019-04-29]
+	Added archivers/libaec version 1.0.4 [bacon 2019-04-29]
