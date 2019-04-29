@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.30 2019/04/18 17:04:37 gdt Exp $
+$NetBSD: distinfo,v 1.31 2019/04/29 17:22:04 adam Exp $
 
 SHA1 (libcdio-2.1.0.tar.bz2) = ec22e5168bc0dcfc179ec7b1164af1e5b672ca89
 RMD160 (libcdio-2.1.0.tar.bz2) = 6b0e4917cd2dd5cac0b7afdb70789bf0ad2aed79
 SHA512 (libcdio-2.1.0.tar.bz2) = c290821da55fd9ae366670a58857aa6efcebc9f25b7caea063cf12f9cbda84fe770c5f59f972227fda50517ca58c5f39c0137daa0f93179e3daa45303d8b610f
 Size (libcdio-2.1.0.tar.bz2) = 1759040 bytes
-SHA1 (patch-aa) = 8e70ee2840c19da3efc0c47dfa9f7ea400a1ec2e
-SHA1 (patch-ab) = 73bd86ecfa0c728eab231bce36317ab7f616fa4c
+SHA1 (patch-configure) = ef72517e444df4834608d152f5e9ce625297d64e
+SHA1 (patch-include_cdio++_iso9660.hpp) = 73bd86ecfa0c728eab231bce36317ab7f616fa4c
+SHA1 (patch-lib_driver_logging.c) = ec74ea317c82737954eb0d66e64810487ed1f222
