@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2019/04/29 15:51:23 bacon Exp $
+bin/aec
+include/libaec.h
+include/szlib.h
+lib/libaec.la
+lib/libsz.la
+man/man1/aec.1
