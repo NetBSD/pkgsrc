@@ -1,9 +1,31 @@
-$NetBSD: patch-include_global__settings.php,v 1.2 2019/04/26 14:52:16 gavan Exp $
+$NetBSD: patch-include_global__settings.php,v 1.3 2019/04/29 16:09:05 hauke Exp $
 
-make log directory configurable by package variable
+make log and rrd directories configurable by package variable
 
 --- include/global_settings.php.orig	2019-03-30 23:40:22.000000000 +0000
 +++ include/global_settings.php
+@@ -160,10 +160,10 @@ $settings = array(
+ 			),
+ 		'path_cactilog' => array(
+ 			'friendly_name' => __('Cacti Log Path'),
+-			'description' => __('The path to your Cacti log file (if blank, defaults to &lt;path_cacti&gt;/log/cacti.log)'),
++			'description' => __('The path to your Cacti log file (if blank, defaults to @CACTI_LOGDIR@/cacti.log)'),
+ 			'method' => 'filepath',
+ 			'file_type' => 'ascii',
+-			'default' => $config['base_path'] . '/log/cacti.log',
++			'default' => '@CACTI_LOGDIR@' . '/cacti.log',
+ 			'max_length' => '255',
+ 			'install_check' => 'writable'
+ 			),
+@@ -172,7 +172,7 @@ $settings = array(
+ 			'description' => __('If you are having issues with Cacti\'s Data Collectors, set this file path and the Data Collectors standard error will be redirected to this file'),
+ 			'method' => 'filepath',
+ 			'file_type' => 'ascii',
+-			'default' => $config['base_path'] . '/log/cacti_stderr.log',
++			'default' => '@CACTI_LOGDIR@' . '/cacti_stderr.log',
+ 			'max_length' => '255',
+ 			'install_check' => 'writable',
+ 			'install_optional' => true
 @@ -243,7 +243,7 @@ $settings = array(
  			'friendly_name' => __('Archive directory'),
  			'description' => __('This is the directory where RRDfiles are <strong>moved</strong> for archiving'),
