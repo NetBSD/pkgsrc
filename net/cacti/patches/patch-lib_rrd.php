@@ -1,4 +1,6 @@
-$NetBSD: patch-lib_rrd.php,v 1.3 2019/04/26 14:52:16 gavan Exp $
+$NetBSD: patch-lib_rrd.php,v 1.4 2019/04/29 16:09:05 hauke Exp $
+
+Make rrd directory configurable by package variable
 
 --- lib/rrd.php.orig	2019-03-30 23:40:23.000000000 +0000
 +++ lib/rrd.php
