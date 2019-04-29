@@ -1,14 +1,12 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.6 2019/04/26 14:52:16 gavan Exp $
+$NetBSD: MESSAGE,v 1.7 2019/04/29 16:09:05 hauke Exp $
 
-cacti is now installed.
-
-To get cacti up and running asap, you have to complete these steps:
+To get cacti up and running, you have to complete these steps:
 
 - Install & Configure MySQL database server.
 
-- Add a cacti database and cactiuser user to MySQL and create the cacti
-  database layout (${CACTIDIR}/cacti.sql) to MySQL:
+  Add a 'cacti' database and 'cactiuser' user to MySQL and create the
+  cacti database layout (${CACTIDIR}/cacti.sql) to MySQL:
 
 	mysql> CREATE DATABASE cacti;
 	mysql> GRANT ALL PRIVILEGES ON cacti.* TO 'cactiuser'@'localhost'
@@ -18,22 +16,38 @@ To get cacti up and running asap, you have to complete these steps:
         mysql> USE cacti;
         mysql> SOURCE ${CACTIDIR}/cacti.sql;
 
-- If you haven't already imported your MySQL timezone data, you need to do this:
+  If you haven't already imported your MySQL timezone data, you need to run
 	mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root -p mysql
+
+ The Cacti Setup Assistant will ask you to set or adjust database
+ parameters in my.cnf.
 
 - Install & Configure an Apache webserver.
 
-- If you have not already done so, add these lines to enable php extensions
-  required by cacti in ${PKG_SYSCONFBASE}/etc/php.ini
+  Append this to Apache webserver's "httpd.conf", and restart the server.
 
+        Include etc/httpd/httpd-cacti.conf
+
+- For older PHP installations that do not support
+  ${PKG_SYSCONFBASE}/php.d/, you will need to manually add these lines
+  to enable php extensions required by cacti in
+  ${PKG_SYSCONFBASE}/php.ini
+
+	extension=gmp.so
+	extension=ldap.so
+	extension=gettext.so
 	extension=pdo.so
 	extension=pdo_mysql.so
 	extension=snmp.so
 	extension=sockets.so
+	extension=zlib.so
+	extension=mbstring.so
+	extension=posix.so
 
-- Append this to Apache webserver's "httpd.conf" and restart the server.
-
-	Include etc/httpd/httpd-cacti.conf
+  You will want to adjust the following parameters in php.ini
+	memory_limit = 400M (minimum)
+	max_execution_time = 60 (seconds, minimum)
+	date.timezone
 
 - Add the following lines to ${CACTI_USER}'s crontab
 
@@ -42,12 +56,19 @@ To get cacti up and running asap, you have to complete these steps:
 
   and make sure ${PREFIX}/bin is in PATH.
 
-Please read the included documentation (${CACTIDIR}/docs/...),
+Please read the documentation under ${CACTIDIR}/docs/
 for more information about configuring and starting cacti.
 
 If you have updated from a version older than 0.8.8h, note that the
 rrd and log directories are now under ${VARBASE}. Old logs and
 database files need to be moved manually, and you have to update the
 log path in "Console:Settings:Paths:Logging".
+
+Note: During the web setup of v1.2.3, you may get stuck on the page
+"Critical Binary Locations" because of a missing "Cacti Log Path" entry.
+
+Even after entering the proper ${VARBASE}/log/cacti/cacti.log,
+installation may not continue. In this case, using a different browser
+may help, see <https://github.com/Cacti/cacti/issues/2621>.
 
 ===========================================================================
