@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.806 2019/04/19 10:39:53 jmcneill Exp $
+# $NetBSD: Makefile,v 1.807 2019/04/29 07:48:49 mrg Exp $
 #
 
 COMMENT=	System utilities
@@ -628,6 +628,7 @@ SUBDIR+=	u-boot-chip-pro
 SUBDIR+=	u-boot-cubieboard2
 SUBDIR+=	u-boot-cubieboard4
 SUBDIR+=	u-boot-cubietruck
+SUBDIR+=	u-boot-cubietruck-plus
 SUBDIR+=	u-boot-de0-nanosoc
 SUBDIR+=	u-boot-hummingbird-a31
 SUBDIR+=	u-boot-jetson-tk1
