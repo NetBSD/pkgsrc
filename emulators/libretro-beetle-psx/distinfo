@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2018/09/07 00:45:23 nia Exp $
+$NetBSD: distinfo,v 1.3 2019/04/29 12:00:16 nia Exp $
 
-SHA1 (libretro-beetle-psx-20180808-7bb007de15b2f40a880b788ebf47a400c90827d9.tar.gz) = 523ae4dbafabbc94d0ca16c9ce624c4f6d4301dc
-RMD160 (libretro-beetle-psx-20180808-7bb007de15b2f40a880b788ebf47a400c90827d9.tar.gz) = 44109917cabbab8aa2c37a56578bf0b2e3467037
-SHA512 (libretro-beetle-psx-20180808-7bb007de15b2f40a880b788ebf47a400c90827d9.tar.gz) = 735c1f2847a86b48804c51262eaa9908e2f3dd671d88d5dcf4683f5bfdad6574c15319dc5ec1cc826b098016a1a1a5bb65f8dfd390982fda789568d2c733f2b1
-Size (libretro-beetle-psx-20180808-7bb007de15b2f40a880b788ebf47a400c90827d9.tar.gz) = 2087496 bytes
+SHA1 (libretro-beetle-psx-20190203-53591985319edc34d83a0858ad9a935b934dcf5c.tar.gz) = dbfcce19347798172fdbed99b8c79abcc6e0f499
+RMD160 (libretro-beetle-psx-20190203-53591985319edc34d83a0858ad9a935b934dcf5c.tar.gz) = 2bb40fb3b1db91dd8cae3ad962a49f45722a9fce
+SHA512 (libretro-beetle-psx-20190203-53591985319edc34d83a0858ad9a935b934dcf5c.tar.gz) = c25253986a2b33cc3f5627f6d64071093103b8f0e553cd8c555d0da8f54bcf081434fb61323431937c9c777e12eee20410ad0ae0f7e5c86e77a38fd50bb22ca6
+Size (libretro-beetle-psx-20190203-53591985319edc34d83a0858ad9a935b934dcf5c.tar.gz) = 2324548 bytes
 SHA1 (patch-libretro-common_rthreads_rthreads.c) = 1ba4a13ca0ae3e7fe0b4cb7259d3ee7d6629781b

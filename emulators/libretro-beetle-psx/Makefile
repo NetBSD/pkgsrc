@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2018/12/18 16:12:13 nia Exp $
+# $NetBSD: Makefile,v 1.8 2019/04/29 12:00:16 nia Exp $
 
 .include "Makefile.common"
-
-PKGREVISION=	2
 
 MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://docs.libretro.com/library/beetle_psx/
