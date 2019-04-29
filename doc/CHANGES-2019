@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1867 2019/04/29 00:18:20 gdt Exp $
+$NetBSD: CHANGES-2019,v 1.1868 2019/04/29 07:50:01 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3031,3 +3031,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/py-grpcio-tools to 1.20.1 [adam 2019-04-28]
 	Updated ham/uhd to 3.14.0.0 [adam 2019-04-28]
 	Updated devel/uthash to 2.1.0 [gdt 2019-04-29]
+	Added sysutils/u-boot-cubietruck-plus version 2018.11 [skrll 2019-04-29]
