@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.84 2019/04/24 08:19:06 leot Exp $
+@comment $NetBSD: PLIST,v 1.85 2019/04/30 09:22:34 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -356,6 +356,9 @@ ${PYSITELIB}/youtube_dl/extractor/chirbit.pyo
 ${PYSITELIB}/youtube_dl/extractor/cinchcast.py
 ${PYSITELIB}/youtube_dl/extractor/cinchcast.pyc
 ${PYSITELIB}/youtube_dl/extractor/cinchcast.pyo
+${PYSITELIB}/youtube_dl/extractor/cinemax.py
+${PYSITELIB}/youtube_dl/extractor/cinemax.pyc
+${PYSITELIB}/youtube_dl/extractor/cinemax.pyo
 ${PYSITELIB}/youtube_dl/extractor/ciscolive.py
 ${PYSITELIB}/youtube_dl/extractor/ciscolive.pyc
 ${PYSITELIB}/youtube_dl/extractor/ciscolive.pyo
@@ -521,9 +524,6 @@ ${PYSITELIB}/youtube_dl/extractor/douyutv.pyo
 ${PYSITELIB}/youtube_dl/extractor/dplay.py
 ${PYSITELIB}/youtube_dl/extractor/dplay.pyc
 ${PYSITELIB}/youtube_dl/extractor/dplay.pyo
-${PYSITELIB}/youtube_dl/extractor/dramafever.py
-${PYSITELIB}/youtube_dl/extractor/dramafever.pyc
-${PYSITELIB}/youtube_dl/extractor/dramafever.pyo
 ${PYSITELIB}/youtube_dl/extractor/drbonanza.py
 ${PYSITELIB}/youtube_dl/extractor/drbonanza.pyc
 ${PYSITELIB}/youtube_dl/extractor/drbonanza.pyo
@@ -1829,6 +1829,9 @@ ${PYSITELIB}/youtube_dl/extractor/stv.pyo
 ${PYSITELIB}/youtube_dl/extractor/sunporno.py
 ${PYSITELIB}/youtube_dl/extractor/sunporno.pyc
 ${PYSITELIB}/youtube_dl/extractor/sunporno.pyo
+${PYSITELIB}/youtube_dl/extractor/sverigesradio.py
+${PYSITELIB}/youtube_dl/extractor/sverigesradio.pyc
+${PYSITELIB}/youtube_dl/extractor/sverigesradio.pyo
 ${PYSITELIB}/youtube_dl/extractor/svt.py
 ${PYSITELIB}/youtube_dl/extractor/svt.pyc
 ${PYSITELIB}/youtube_dl/extractor/svt.pyo
@@ -2315,9 +2318,6 @@ ${PYSITELIB}/youtube_dl/extractor/wistia.pyo
 ${PYSITELIB}/youtube_dl/extractor/worldstarhiphop.py
 ${PYSITELIB}/youtube_dl/extractor/worldstarhiphop.pyc
 ${PYSITELIB}/youtube_dl/extractor/worldstarhiphop.pyo
-${PYSITELIB}/youtube_dl/extractor/wrzuta.py
-${PYSITELIB}/youtube_dl/extractor/wrzuta.pyc
-${PYSITELIB}/youtube_dl/extractor/wrzuta.pyo
 ${PYSITELIB}/youtube_dl/extractor/wsj.py
 ${PYSITELIB}/youtube_dl/extractor/wsj.pyc
 ${PYSITELIB}/youtube_dl/extractor/wsj.pyo
