@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2018/09/09 13:16:01 taca Exp $
+$NetBSD: MESSAGE,v 1.2 2019/04/30 02:46:16 taca Exp $
 
 Please consider running BIND under the pseudo user account "${BIND_USER}"
 in a chroot environment for security reasons.
@@ -7,7 +7,13 @@ in a chroot environment for security reasons.
 To achieve this, set the variable "named_chrootdir" in /etc/rc.conf to
 the directory with the chroot environment e.g. "${BIND_DIR}".
 
-Note: named(8) requires writable permission to current directory when
-start up or the directory specified by "directory" in options statement.
+Note: named(8) requires writable directories under "/etc/namedb" which
+specified by "directory" in "options" statement:
+
+	cache
+	keys
+	nta
+
+Make sure to these directories exists with writable by "${BIND_USER}" user.
 
 ===========================================================================
