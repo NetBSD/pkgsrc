@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 23:49:42 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/04/30 11:36:10 adam Exp $
 
-SHA1 (libcdio-paranoia-10.2+0.93+1.tar.bz2) = 9c40cf6a706e881a52dc417686669d500ddd3115
-RMD160 (libcdio-paranoia-10.2+0.93+1.tar.bz2) = 2a476ffd83c80d5217a98ec3856e42f33b4dab1d
-SHA512 (libcdio-paranoia-10.2+0.93+1.tar.bz2) = b21b71243b1afe9ac9c31ea7f1acb3f61e9069bb640f0052e39f3774886d0be2fa3844abe92cccc519a9e3e14d3df76a3326f5a5e9ecb5e96462edfee01b55e8
-Size (libcdio-paranoia-10.2+0.93+1.tar.bz2) = 557271 bytes
+SHA1 (libcdio-paranoia-10.2+2.0.0.tar.bz2) = 6e289aa9a6bbccf3aa55e2cde9c5bfc0ac8ff058
+RMD160 (libcdio-paranoia-10.2+2.0.0.tar.bz2) = f3aec64eee8c758fb99161854889fe6bc2851a9e
+SHA512 (libcdio-paranoia-10.2+2.0.0.tar.bz2) = 0398617f9af63632d74c5a93c4efae1bc69d339fb7ab2e36dbfa6d19c0940f3bf27ea3ed482698d2842838d2034df3e40304774f1648db8c274d441130ef40a2
+Size (libcdio-paranoia-10.2+2.0.0.tar.bz2) = 588472 bytes
