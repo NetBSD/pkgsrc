@@ -1,6 +1,8 @@
-$NetBSD: patch-configure,v 1.1 2019/04/29 17:22:04 adam Exp $
+$NetBSD: patch-configure,v 1.2 2019/04/30 14:31:14 gdt Exp $
 
 cdda-player works fine on NetBSD.
+
+https://savannah.gnu.org/bugs/?56240
 
 --- configure.orig	2019-04-29 15:14:42.000000000 +0000
 +++ configure
