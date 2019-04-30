@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.87 2019/04/25 07:32:57 maya Exp $
+# $NetBSD: Makefile,v 1.88 2019/04/30 09:19:25 adam Exp $
 
-DISTNAME=	hugin-2018.0.0
-PKGREVISION=	13
+DISTNAME=	hugin-2019.0.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hugin/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,7 +12,6 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
-DEPENDS+=	enblend-enfuse>=4.0:../../graphics/enblend-enfuse
 DEPENDS+=	p5-Image-ExifTool>=8.15:../../graphics/p5-Image-ExifTool
 
 USE_CMAKE=		yes
@@ -51,6 +49,7 @@ SUBST_SED.apple=	-e 's,(APPLE),(ELPPA),g'
 .include "../../graphics/glut/buildlink3.mk"
 .endif
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/lensfun/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libpano13/buildlink3.mk"
