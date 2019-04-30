@@ -1,0 +1,16 @@
+$NetBSD: patch-config.h.in,v 1.1 2019/04/30 03:34:34 taca Exp $
+
+* Add support for blacklistd.
+
+--- config.h.in.orig	2019-04-06 20:09:59.000000000 +0000
++++ config.h.in
+@@ -45,6 +45,9 @@
+ /* Define to 1 if you have the `arc4random_uniform' function. */
+ #undef HAVE_ARC4RANDOM_UNIFORM
+ 
++/* Define to 1 if blacklist is supported. */
++#undef HAVE_BLACKLIST
++
+ /* Define to 1 if the compiler supports __builtin_clz. */
+ #undef HAVE_BUILTIN_CLZ
+ 
