@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1879 2019/04/30 02:52:05 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1880 2019/04/30 03:29:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3050,3 +3050,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated emulators/haxm to 1.20190416.0fbaf5e7c21a5749ada0c7eec67ea00e1497f829 [kamil 2019-04-30]
 	Updated net/bind912 to 9.12.4pl1 [taca 2019-04-30]
 	Updated net/bind911 to 9.11.6pl1 [taca 2019-04-30]
+	Updated lang/pear to 1.10.9 [taca 2019-04-30]
