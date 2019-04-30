@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2018/12/16 02:46:38 taca Exp $
+# $NetBSD: Makefile,v 1.4 2019/04/30 04:05:45 taca Exp $
 #
 
 MODNAME=	mcrypt
-PECL_VERSION=	1.0.1
+PECL_VERSION=	1.0.2
 PKGNAME=	${PHP_PKG_PREFIX}-pecl-${MODNAME}-${PECL_VERSION}
 CATEGORIES=	security
 
