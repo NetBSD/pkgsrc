@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.1 2015/07/10 07:42:39 wiz Exp $
-
-This is a minimal port to NetBSD. Many functions are not implemented
-or may not work correctly.
-
-===========================================================================
