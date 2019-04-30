@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1881 2019/04/30 03:35:38 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1882 2019/04/30 03:39:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3052,3 +3052,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/bind911 to 9.11.6pl1 [taca 2019-04-30]
 	Updated lang/pear to 1.10.9 [taca 2019-04-30]
 	Added net/bind914 version 9.14.1 [taca 2019-04-30]
+	Updated mail/fml4 to 4.0.3.20040215nb14 [taca 2019-04-30]
