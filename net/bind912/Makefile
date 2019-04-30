@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/02/22 01:24:24 taca Exp $
+# $NetBSD: Makefile,v 1.10 2019/04/30 02:46:16 taca Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -15,7 +15,7 @@ CONFLICTS+=	host-[0-9]*
 MAKE_JOBS_SAFE=	no
 USE_CWRAPPERS=	no
 
-BIND_VERSION=	9.12.3-P4
+BIND_VERSION=	9.12.4-P1
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -23,14 +23,13 @@ BUILD_DEFS+=	BIND_DIR VARBASE
 
 .include "options.mk"
 
-USE_TOOLS+=		pax perl pkg-config
+USE_TOOLS+=		pax perl
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--with-libtool
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ARGS+=	--disable-openssl-version-check
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
 CONFIGURE_ARGS+=	--with-python=no
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-m68k) || \
