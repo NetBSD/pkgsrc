@@ -1,0 +1,15 @@
+$NetBSD: patch-config.threads.in,v 1.1 2019/04/30 03:34:34 taca Exp $
+
+* Add DragonFly support.
+
+--- config.threads.in.orig	2019-04-06 20:09:59.000000000 +0000
++++ config.threads.in
+@@ -48,6 +48,8 @@ case $host in
+ 	use_threads=false ;;
+ *-freebsd*)
+ 	use_threads=true ;;
++*-dragonfly*)
++	use_threads=false ;;
+ *-linux*)
+ 	use_threads=true ;;
+ *-darwin[[123456789]].*)
