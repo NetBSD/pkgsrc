@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1878 2019/04/30 02:46:41 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1879 2019/04/30 02:52:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3049,3 +3049,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ccache to 3.7 [adam 2019-04-29]
 	Updated emulators/haxm to 1.20190416.0fbaf5e7c21a5749ada0c7eec67ea00e1497f829 [kamil 2019-04-30]
 	Updated net/bind912 to 9.12.4pl1 [taca 2019-04-30]
+	Updated net/bind911 to 9.11.6pl1 [taca 2019-04-30]
