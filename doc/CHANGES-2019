@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1897 2019/04/30 09:34:45 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1898 2019/04/30 11:39:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3083,3 +3083,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/youtube-dl to 20190430 [leot 2019-04-30]
 	Updated sysutils/py-psutil to 5.6.2 [adam 2019-04-30]
 	Updated devel/py-requests-mock to 1.6.0 [adam 2019-04-30]
+	Updated misc/libcdio-paranoia to 2.0.0 [adam 2019-04-30]
+	Updated devel/memcached to 1.5.14 [adam 2019-04-30]
