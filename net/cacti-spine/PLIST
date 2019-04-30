@@ -1,12 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2015/06/11 08:45:48 nils Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/04/30 09:22:10 hauke Exp $
 bin/spine
-share/doc/cacti-spine/AUTHORS
-share/doc/cacti-spine/COPYING
-share/doc/cacti-spine/ChangeLog
+man/man1/spine.1
+share/doc/cacti-spine/CHANGELOG
 share/doc/cacti-spine/INSTALL
 share/doc/cacti-spine/LICENSE
-share/doc/cacti-spine/LICENSE.LGPL
-share/doc/cacti-spine/NEWS
-share/doc/cacti-spine/README
-share/doc/cacti-spine/README.wri
+share/doc/cacti-spine/README.md
 share/doc/cacti-spine/examples/spine.conf.dist
