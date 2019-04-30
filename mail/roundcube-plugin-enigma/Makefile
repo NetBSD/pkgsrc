@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2019/04/25 07:33:04 maya Exp $
+# $NetBSD: Makefile,v 1.5 2019/04/30 03:58:45 taca Exp $
 
 PLUGIN=		enigma
 
 MAINTAINER=	taca@NetBSD.org
 COMMENT=	Enigma Plugin for Roundcube
-PKGREVISION=	1
 LICENSE=	gnu-gpl-v3
 
 # JavaScript dependencies from bin/install-jsdeps.sh
