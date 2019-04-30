@@ -1,8 +1,8 @@
-$NetBSD: patch-lib_Makefile,v 1.9 2018/09/14 09:48:56 fhajny Exp $
+$NetBSD: patch-lib_Makefile,v 1.10 2019/04/30 09:17:38 adam Exp $
 
 Make portable. Unlock install target. Use pkgsrc install scripts.
 
---- lib/Makefile.orig	2018-09-11 19:52:06.000000000 +0000
+--- lib/Makefile.orig	2019-04-23 17:18:40.000000000 +0000
 +++ lib/Makefile
 @@ -33,9 +33,9 @@
  # ################################################################
@@ -17,29 +17,25 @@ Make portable. Unlock install target. Use pkgsrc install scripts.
  LIBVER_SCRIPT:= $(LIBVER_MAJOR_SCRIPT).$(LIBVER_MINOR_SCRIPT).$(LIBVER_PATCH_SCRIPT)
  LIBVER_MAJOR := $(shell echo $(LIBVER_MAJOR_SCRIPT))
  LIBVER_MINOR := $(shell echo $(LIBVER_MINOR_SCRIPT))
-@@ -124,7 +124,6 @@ clean:
- #-----------------------------------------------------------------------------
- # make install is validated only for Linux, OSX, BSD, Hurd and Solaris targets
- #-----------------------------------------------------------------------------
--ifneq (,$(filter $(shell uname),Linux Darwin GNU/kFreeBSD GNU OpenBSD FreeBSD NetBSD DragonFly SunOS Haiku MidnightBSD))
+@@ -45,6 +45,7 @@ LIBVER  := $(shell echo $(LIBVER_SCRIPT)
+ BUILD_SHARED:=yes
+ BUILD_STATIC:=yes
  
- .PHONY: listL120
- listL120:  # extract lines >= 120 characters in *.{c,h}, by Takayuki Matsuoka (note : $$, for Makefile compatibility)
-@@ -143,12 +142,7 @@ libdir      ?= $(LIBDIR)
++OS ?= $(shell uname)
+ CPPFLAGS+= -DXXH_NAMESPACE=LZ4_
+ CFLAGS  ?= -O3
+ DEBUGFLAGS:= -Wall -Wextra -Wcast-qual -Wcast-align -Wshadow \
+@@ -156,28 +157,23 @@ libdir      ?= $(LIBDIR)
  INCLUDEDIR  ?= $(prefix)/include
  includedir  ?= $(INCLUDEDIR)
  
--ifneq (,$(filter $(OS),OpenBSD FreeBSD NetBSD DragonFly))
+-  ifneq (,$(filter $(TARGET_OS),OpenBSD FreeBSD NetBSD DragonFly MidnightBSD))
 -PKGCONFIGDIR ?= $(prefix)/libdata/pkgconfig
--else
+-  else
 -PKGCONFIGDIR ?= $(libdir)/pkgconfig
--endif
+-  endif
 -pkgconfigdir ?= $(PKGCONFIGDIR)
 +pkgconfigdir ?= $(prefix)/lib/pkgconfig
- 
- ifneq (,$(filter $(OS),SunOS))
- INSTALL ?= ginstall
-@@ -161,29 +155,29 @@ INSTALL_DATA    ?= $(INSTALL) -m 644
  
  liblz4.pc: liblz4.pc.in Makefile
  	@echo creating pkgconfig
@@ -54,23 +50,29 @@ Make portable. Unlock install target. Use pkgsrc install scripts.
            $< >$@
  
  install: lib liblz4.pc
--	$(Q)$(INSTALL) -d -m 755 $(DESTDIR)$(pkgconfigdir)/ $(DESTDIR)$(includedir)/ $(DESTDIR)$(libdir)/
+-	$(Q)$(INSTALL_DIR) $(DESTDIR)$(pkgconfigdir)/ $(DESTDIR)$(includedir)/ $(DESTDIR)$(libdir)/ $(DESTDIR)$(bindir)/
 -	$(Q)$(INSTALL_DATA) liblz4.pc $(DESTDIR)$(pkgconfigdir)/
-+	$(Q)$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(pkgconfigdir)/ $(DESTDIR)$(includedir)/ $(DESTDIR)$(libdir)/
++	$(Q)$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(pkgconfigdir)/ $(DESTDIR)$(includedir)/ $(DESTDIR)$(libdir)/ $(DESTDIR)$(bindir)/
 +	$(Q)$(BSD_INSTALL_DATA) liblz4.pc $(DESTDIR)$(pkgconfigdir)/
  	@echo Installing libraries
- ifeq ($(BUILD_STATIC),yes)
+   ifeq ($(BUILD_STATIC),yes)
 -	$(Q)$(INSTALL_DATA) liblz4.a $(DESTDIR)$(libdir)/liblz4.a
 -	$(Q)$(INSTALL_DATA) lz4frame_static.h $(DESTDIR)$(includedir)/lz4frame_static.h
 +	$(Q)$(BSD_INSTALL_LIB) liblz4.a $(DESTDIR)$(libdir)/liblz4.a
 +	$(Q)$(BSD_INSTALL_DATA) lz4frame_static.h $(DESTDIR)$(includedir)/lz4frame_static.h
- endif
- ifeq ($(BUILD_SHARED),yes)
+   endif
+   ifeq ($(BUILD_SHARED),yes)
+ # Traditionnally, one installs the DLLs in the bin directory as programs
+@@ -187,15 +183,15 @@ install: lib liblz4.pc
+ 	$(Q)$(INSTALL_PROGRAM) dll/$(LIBLZ4).dll $(DESTDIR)$(bindir)
+ 	$(Q)$(INSTALL_PROGRAM) dll/$(LIBLZ4_EXP) $(DESTDIR)$(libdir)
+     else
 -	$(Q)$(INSTALL_PROGRAM) liblz4.$(SHARED_EXT_VER) $(DESTDIR)$(libdir)
 +	$(Q)$(BSD_INSTALL_LIB) liblz4.$(SHARED_EXT_VER) $(DESTDIR)$(libdir)
- 	$(Q)ln -sf liblz4.$(SHARED_EXT_VER) $(DESTDIR)$(libdir)/liblz4.$(SHARED_EXT_MAJOR)
- 	$(Q)ln -sf liblz4.$(SHARED_EXT_VER) $(DESTDIR)$(libdir)/liblz4.$(SHARED_EXT)
- endif
+ 	$(Q)$(LN_SF) liblz4.$(SHARED_EXT_VER) $(DESTDIR)$(libdir)/liblz4.$(SHARED_EXT_MAJOR)
+ 	$(Q)$(LN_SF) liblz4.$(SHARED_EXT_VER) $(DESTDIR)$(libdir)/liblz4.$(SHARED_EXT)
+     endif
+   endif
  	@echo Installing headers in $(includedir)
 -	$(Q)$(INSTALL_DATA) lz4.h $(DESTDIR)$(includedir)/lz4.h
 -	$(Q)$(INSTALL_DATA) lz4hc.h $(DESTDIR)$(includedir)/lz4hc.h
@@ -81,8 +83,3 @@ Make portable. Unlock install target. Use pkgsrc install scripts.
  	@echo lz4 libraries installed
  
  uninstall:
-@@ -198,4 +192,3 @@ uninstall:
- 	$(Q)$(RM) $(DESTDIR)$(includedir)/lz4frame_static.h
- 	@echo lz4 libraries successfully uninstalled
- 
--endif
