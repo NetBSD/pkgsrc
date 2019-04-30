@@ -1,0 +1,265 @@
+$NetBSD: patch-configure,v 1.1 2019/04/30 03:34:34 taca Exp $
+
+* Add DragonFly support.
+* Use proper link options for NetBSD.
+* Link proper postgresql library.
+* Add support for blacklistd.
+
+--- configure.orig	2019-04-06 20:09:59.000000000 +0000
++++ configure
+@@ -725,6 +725,9 @@ purify_path
+ MKDEPPROG
+ MKDEPCFLAGS
+ MKDEPCC
++BLACKLIST
++BLACKLISTLINKOBJS
++BLACKLISTLINKSRCS
+ ZLIB
+ JSONSTATS
+ XMLSTATS
+@@ -879,6 +882,7 @@ with_pic
+ enable_fast_install
+ with_aix_soname
+ with_gnu_ld
++with_blacklist
+ with_sysroot
+ enable_libtool_lock
+ enable_libbind
+@@ -1672,6 +1676,7 @@ Optional Packages:
+   --with-dlz-stub=ARG     Build with stub DLZ driver [yes|no]. (Required to
+                           use stub driver with DLZ)
+   --with-make-clean       run "make clean" at end of configure [yes|no]
++  --with-blacklist	  Build with blacklist
+ 
+ Some influential environment variables:
+   CC          C compiler command
+@@ -3818,7 +3823,7 @@ fi
+ 
+ # On IRIX 5.3, sys/types and inttypes.h are conflicting.
+ for ac_header in sys/types.h sys/stat.h stdlib.h string.h memory.h strings.h \
+-		  inttypes.h stdint.h unistd.h
++		  inttypes.h stdint.h unistd.h blacklist.h
+ do :
+   as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ ac_fn_c_check_header_compile "$LINENO" "$ac_header" "$as_ac_Header" "$ac_includes_default
+@@ -16679,27 +16684,10 @@ case "$use_libjson" in
+ 		libjson_libs=""
+ 		;;
+ 	auto|yes)
+-		for d in /usr /usr/local /opt/local
+-		do
+-			if test -f "${d}/include/json/json.h"
+-			then
+-				if test ${d} != /usr
+-				then
+-					libjson_cflags="-I ${d}/include"
+-					LIBS="$LIBS -L${d}/lib"
+-				fi
+-				have_libjson="yes"
+-			elif test -f "${d}/include/json-c/json.h"
+-			then
+-				if test ${d} != /usr
+-				then
+-					libjson_cflags="-I ${d}/include"
+-					LIBS="$LIBS -L${d}/lib"
+-				fi
+-				have_libjson="yes"
+-				have_libjson_c="yes"
+-			fi
+-		done
++		libjson_cflags="`pkg-config --cflags json-c`"
++		LIBS="`pkg-config --libs json-c`"
++		have_libjson="yes"
++		have_libjson_c="yes"
+ 		;;
+ 	*)
+ 		if test -f "${use_libjson}/include/json/json.h"
+@@ -16805,6 +16793,139 @@ $as_echo "#define HAVE_JSON_C 1" >>confd
+ 	JSONSTATS=1
+ fi
+ 
++#
++# was --with-blacklist specified?
++#
++BLACKLISTLINKOBJS=
++BLACKLISTLINKSRCS=
++
++{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for blacklist library" >&5
++$as_echo_n "checking for blacklist library... " >&6; }
++
++# Check whether --with-blacklist was given.
++if test "${with_blacklist+set}" = set; then :
++  withval=$with_blacklist; with_blacklist="$withval"
++else
++  with_blacklist="auto"
++fi
++
++
++have_blacklist=""
++case "$with_blacklist" in
++	no)
++		blacklist_libs=""
++		;;
++	auto|yes)
++		for d in /usr /usr/local /opt/local
++		do
++			if test -f "${d}/include/blacklist.h"
++			then
++				if test ${d} != /usr
++				then
++					blacklist_cflags="-I ${d}/include"
++					LIBS="$LIBS -L${d}/lib"
++				fi
++				have_blacklist="yes"
++			fi
++		done
++		;;
++	*)
++		if test -f "${with_blacklist}/include/blacklist.h"
++		then
++			blacklist_cflags="-I${with_blacklist}/include"
++			LIBS="$LIBS -L${with_blacklist}/lib"
++			have_blacklist="yes"
++		else
++			as_fn_error $? "$with_blacklist/include/blacklist.h not found." "$LINENO" 5
++		fi
++		;;
++esac
++
++if test "X${have_blacklist}" != "X"
++then
++	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
++$as_echo "yes" >&6; }
++	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for library containing blacklist" >&5
++$as_echo_n "checking for library containing blacklist... " >&6; }
++if ${ac_cv_search_blacklist+:} false; then :
++  $as_echo_n "(cached) " >&6
++else
++  ac_func_search_save_LIBS=$LIBS
++cat confdefs.h - <<_ACEOF >conftest.$ac_ext
++/* end confdefs.h.  */
++
++/* Override any GCC internal prototype to avoid an error.
++   Use char because int might match the return type of a GCC
++   builtin and then its argument prototype would still apply.  */
++#ifdef __cplusplus
++extern "C"
++#endif
++char blacklist_open(void);
++int
++main ()
++{
++return blacklist_open();
++  ;
++  return 0;
++}
++_ACEOF
++for ac_lib in '' blacklist; do
++  if test -z "$ac_lib"; then
++    ac_res="none required"
++  else
++    ac_res=-l$ac_lib
++    LIBS="-l$ac_lib  $ac_func_search_save_LIBS"
++  fi
++  if ac_fn_c_try_link "$LINENO"; then :
++  ac_cv_search_blacklist=$ac_res
++fi
++rm -f core conftest.err conftest.$ac_objext \
++    conftest$ac_exeext
++  if ${ac_cv_search_blacklist+:} false; then :
++  break
++fi
++done
++if ${ac_cv_search_blacklist+:} false; then :
++
++else
++  ac_cv_search_blacklist=no
++fi
++rm conftest.$ac_ext
++LIBS=$ac_func_search_save_LIBS
++fi
++{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_search_blacklist" >&5
++$as_echo "$ac_cv_search_blacklist" >&6; }
++ac_res=$ac_cv_search_blacklist
++if test "$ac_res" != no; then :
++  test "$ac_res" = "none required" || LIBS="$ac_res $LIBS"
++
++else
++  as_fn_error $? "found blacklist include but not library." "$LINENO" 5
++			have_blacklist=""
++fi
++
++elif test "X$with_blacklist" = Xyes
++then
++	as_fn_error $? "include/blacklist.h not found." "$LINENO" 5
++else
++	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
++$as_echo "no" >&6; }
++fi
++
++BLACKLIST=
++if test "X${have_blacklist}" != "X"
++then
++	CFLAGS="$CFLAGS $blacklist_cflags"
++
++$as_echo "#define HAVE_BLACKLIST 1" >>confdefs.h
++
++	BLACKLIST=1
++fi
++if  test "X${blacklist_libs}" != "X"
++then
++	BLACKLISTLINKSRCS='${BLACKLISTLINKSRCS}'
++	BLACKLISTLINKOBJS='${BLACKLISTLINKOBJS}'
++fi
+ 
+ #
+ # was --with-zlib specified?
+@@ -20234,7 +20355,7 @@ else
+ 
+ fi
+ 	        ;; #(
+-  *-freebsd*|*-openbsd*|*-netbsd*) :
++  *-dragonfly*|*-freebsd*|*-openbsd*|*-netbsd*) :
+ 
+ 		 LDFLAGS="${LDFLAGS} -Wl,-E"
+ 		 SO_CFLAGS="-fpic"
+@@ -20266,9 +20387,9 @@ fi
+ 	        ;; #(
+   *-solaris*) :
+ 
+-		 SO_CFLAGS="-KPIC"
+-		 SO_LDFLAGS="-G -z text"
+-		 SO_LD="ld"
++		 SO_CFLAGS="-fPIC"
++		 SO_LDFLAGS="-Xcompiler -shared -Wl,-z -Wl,text"
++		 SO_LD="${CC}"
+ 	        ;; #(
+   *) :
+ 
+@@ -20691,8 +20812,8 @@ $as_echo "no" >&6; }
+ 	fi
+ 	if test -n "-L$use_dlz_postgres_lib -lpq"
+ 	then
+-		DLZ_DRIVER_LIBS="$DLZ_DRIVER_LIBS -L$use_dlz_postgres_lib -lpq"
+-		DLZ_DRIVER_POSTGRES_LIBS="-L$use_dlz_postgres_lib -lpq"
++		DLZ_DRIVER_LIBS="$DLZ_DRIVER_LIBS -L${PREFIX}/lib -lpq"
++		DLZ_DRIVER_POSTGRES_LIBS="-L${PREFIX}/lib -lpq"
+ 	fi
+ 
+ 
+@@ -23892,6 +24013,7 @@ report() {
+ 	test "X$PYTHON" = "X" || echo "    Python tools (--with-python)"
+ 	test "X$XMLSTATS" = "X" || echo "    XML statistics (--with-libxml2)"
+ 	test "X$JSONSTATS" = "X" || echo "    JSON statistics (--with-libjson)"
++	test "X$BLACKLIST" = "X" || echo "    blacklist support (--with-blacklist)"
+ 	test "X$ZLIB" = "X" || echo "    HTTP zlib compression (--with-zlib)"
+ 	test "X$NZD_TOOLS" = "X" || echo "    LMDB database to store configuration for 'addzone' zones (--with-lmdb)"
+ 	test "no" = "$with_libidn2" || echo "    IDN support (--with-libidn2)"
+@@ -23970,6 +24092,7 @@ report() {
+     test "X$PYTHON" = "X" && echo "    Python tools (--with-python)"
+     test "X$XMLSTATS" = "X" && echo "    XML statistics (--with-libxml2)"
+     test "X$JSONSTATS" = "X" && echo "    JSON statistics (--with-libjson)"
++    test "X$BLACKLIST" = "X" && echo "    blacklist support (--with-blacklist)"
+     test "X$ZLIB" = "X" && echo "    HTTP zlib compression (--with-zlib)"
+     test "X$NZD_TOOLS" = "X" && echo "    LMDB database to store configuration for 'addzone' zones (--with-lmdb)"
+     test "no" = "$with_libidn2" && echo "    IDN support (--with-libidn2)"
