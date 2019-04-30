@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2019/04/01 12:15:56 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.35 2019/04/30 21:04:20 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -250,6 +250,7 @@ share/mame/hash/gba.xml
 share/mame/hash/gba_ereader.xml
 share/mame/hash/gbcolor.xml
 share/mame/hash/genius.xml
+share/mame/hash/ggm.xml
 share/mame/hash/gimix.xml
 share/mame/hash/gjmovie.xml
 share/mame/hash/gl2000.xml
@@ -557,6 +558,7 @@ share/mame/hash/tutor.xml
 share/mame/hash/tvc_cart.xml
 share/mame/hash/tvc_cass.xml
 share/mame/hash/tvc_flop.xml
+share/mame/hash/tvgogo.xml
 share/mame/hash/unichamp.xml
 share/mame/hash/ut88.xml
 share/mame/hash/uzebox.xml
