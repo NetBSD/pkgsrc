@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2018/11/14 22:21:35 kleink Exp $
+# $NetBSD: Makefile,v 1.43 2019/04/30 15:36:15 rillig Exp $
 
 DISTNAME=	cairomm-1.12.2
 PKGREVISION=	3
@@ -32,8 +32,6 @@ PKGCONFIG_OVERRIDE+=	data/cairomm-win32-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	data/cairomm-win32-font-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	data/cairomm-xlib-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	data/cairomm-xlib-xrender-1.0.pc.in
-
-CONFIGURE_ARGS+=	--disable-docs
 
 PLIST_VARS+=	x11 quartz
 
