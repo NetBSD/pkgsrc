@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2019/03/27 06:33:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2019/04/30 07:55:33 adam Exp $
 bin/fonttools-${PYVERSSUFFIX}
 bin/pyftmerge-${PYVERSSUFFIX}
 bin/pyftsubset-${PYVERSSUFFIX}
@@ -168,6 +168,9 @@ ${PYSITELIB}/fontTools/otlLib/__init__.pyo
 ${PYSITELIB}/fontTools/otlLib/builder.py
 ${PYSITELIB}/fontTools/otlLib/builder.pyc
 ${PYSITELIB}/fontTools/otlLib/builder.pyo
+${PYSITELIB}/fontTools/otlLib/maxContextCalc.py
+${PYSITELIB}/fontTools/otlLib/maxContextCalc.pyc
+${PYSITELIB}/fontTools/otlLib/maxContextCalc.pyo
 ${PYSITELIB}/fontTools/pens/__init__.py
 ${PYSITELIB}/fontTools/pens/__init__.pyc
 ${PYSITELIB}/fontTools/pens/__init__.pyo
