@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1901 2019/04/30 15:22:44 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1902 2019/04/30 21:04:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3088,3 +3088,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated ham/trustedQSL to 2.4.2 [mef 2019-04-30]
 	Updated mail/dovecot2 to 2.3.6 [taca 2019-04-30]
 	Updated mail/dovecot2-pigeonhole to 0.5.6 [taca 2019-04-30]
+	Updated emulators/mame to 0.209 [wiz 2019-04-30]
