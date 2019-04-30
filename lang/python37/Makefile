@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/04/25 15:59:54 roy Exp $
+# $NetBSD: Makefile,v 1.8 2019/04/30 04:49:38 rillig Exp $
 
 .include "dist.mk"
 
@@ -25,7 +25,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-system-ffi
-CONFIGURE_ARGS+=	--with-threads
 CONFIGURE_ARGS+=	--without-ensurepip
 CONFIGURE_ENV+=		OPT=${CFLAGS:M*:Q}
 CONFIGURE_ENV+=		ac_cv_path_mkdir=${TOOLS_PATH.mkdir}
