@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2019/04/25 10:13:04 adam Exp $
+# $NetBSD: Makefile.common,v 1.17 2019/04/30 13:18:46 abs Exp $
 #
 # used by databases/mysql57-client/Makefile
 # used by databases/mysql57-server/Makefile
@@ -17,6 +17,7 @@ PATCHDIR?=	${.CURDIR}/../../databases/mysql57-client/patches
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bash bison gmake perl:run
+USE_GCC_RUNTIME=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
