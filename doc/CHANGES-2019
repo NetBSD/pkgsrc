@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1876 2019/04/29 17:13:51 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1877 2019/04/30 02:32:29 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3047,3 +3047,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated editors/nano to 4.2 [wiedi 2019-04-29]
 	Added archivers/libaec version 1.0.4 [bacon 2019-04-29]
 	Updated devel/ccache to 3.7 [adam 2019-04-29]
+	Updated emulators/haxm to 1.20190416.0fbaf5e7c21a5749ada0c7eec67ea00e1497f829 [kamil 2019-04-30]
