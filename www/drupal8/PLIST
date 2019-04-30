@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2019/03/21 11:42:00 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.18 2019/04/30 04:11:22 taca Exp $
 share/drupal/.csslintrc
 share/drupal/.editorconfig
 share/drupal/.eslintignore
@@ -459,6 +459,7 @@ share/drupal/core/assets/vendor/jquery.ui/ui/widgets/sortable-min.js
 share/drupal/core/assets/vendor/jquery.ui/ui/widgets/spinner-min.js
 share/drupal/core/assets/vendor/jquery.ui/ui/widgets/tabs-min.js
 share/drupal/core/assets/vendor/jquery.ui/ui/widgets/tooltip-min.js
+share/drupal/core/assets/vendor/jquery/jquery-extend-3.4.0.js
 share/drupal/core/assets/vendor/jquery/jquery.js
 share/drupal/core/assets/vendor/jquery/jquery.min.js
 share/drupal/core/assets/vendor/jquery/jquery.min.map
