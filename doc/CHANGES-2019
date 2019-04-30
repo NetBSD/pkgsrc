@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1903 2019/04/30 21:32:20 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1904 2019/04/30 21:54:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3090,3 +3090,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/dovecot2-pigeonhole to 0.5.6 [taca 2019-04-30]
 	Updated emulators/mame to 0.209 [wiz 2019-04-30]
 	Updated audio/musicpd to 0.21.8 [wiz 2019-04-30]
+	Updated emulators/mednafen to 1.22.2 [wiz 2019-04-30]
