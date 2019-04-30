@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.64 2019/03/05 16:51:03 hauke Exp $
+@comment $NetBSD: PLIST,v 1.65 2019/04/30 15:21:05 taca Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -729,6 +729,8 @@ share/doc/dovecot/documentation.txt
 share/doc/dovecot/dovecot-openssl.cnf
 share/doc/dovecot/mkcert.sh
 share/doc/dovecot/securecoding.txt
+share/doc/dovecot/solr-config-7.7.0.xml
+share/doc/dovecot/solr-schema-7.7.0.xml
 share/doc/dovecot/solr-schema.xml
 share/doc/dovecot/thread-refs.txt
 share/doc/dovecot/wiki/ACL.txt
