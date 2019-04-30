@@ -1,8 +1,8 @@
-$NetBSD: patch-CMakeLists.txt,v 1.4 2017/07/03 20:48:03 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.5 2019/04/30 09:19:25 adam Exp $
 
 Do not make an application bundle on OS X.
 
---- CMakeLists.txt.orig	2017-05-15 15:05:31.000000000 +0000
+--- CMakeLists.txt.orig	2019-03-23 07:16:59.000000000 +0000
 +++ CMakeLists.txt
 @@ -2,10 +2,6 @@
  # require at least cmake 3.1
@@ -15,20 +15,20 @@ Do not make an application bundle on OS X.
  
  if(COMMAND cmake_policy)
    cmake_policy(SET CMP0003 NEW)
-@@ -570,16 +566,6 @@ IF (APPLE)
+@@ -595,16 +591,6 @@ IF (APPLE)
    ENDIF (NOT MAC_SELF_CONTAINED_BUNDLE)
  ENDIF (APPLE)
  
--IF (${HUGIN_SHARED} AND UNIX AND NOT APPLE)
+-IF (HUGIN_SHARED AND UNIX AND NOT APPLE)
 -  SET(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/${LIBDIR}/hugin")
 -  SET(HUGIN_LIBS_PRIVATE_DIR "1" CACHE INTERNAL "Store internal
 -    libraries in private subdirectory" )
--ELSE (${HUGIN_SHARED} AND UNIX AND NOT APPLE)
+-ELSE ()
 -  # On OS X files are moved around after make install, do not try to use
 -  # rpath or CMAKE_INSTALL_NAME_DIR
 -  SET(HUGIN_LIBS_PRIVATE_DIR "0" CACHE INTERNAL "Store internal
 -    libraries in private subdirectory" )
--ENDIF (${HUGIN_SHARED} AND UNIX AND NOT APPLE)
+-ENDIF()
  
  IF (UNIX)
-   IF (${HUGIN_SHARED})
+   IF (HUGIN_SHARED)
