@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1883 2019/04/30 03:43:17 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1884 2019/04/30 03:47:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3061,3 +3061,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/postfix-pcre to 3.3.3 [taca 2019-04-30]
 	Updated mail/postfix-pgsql to 3.3.3 [taca 2019-04-30]
 	Updated mail/postfix-sqlite to 3.3.3 [taca 2019-04-30]
+	Updated meta-pkgs/bulk-medium to 20190430 [taca 2019-04-30]
