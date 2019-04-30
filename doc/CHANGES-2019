@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1898 2019/04/30 11:39:37 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1899 2019/04/30 13:22:20 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3085,3 +3085,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-requests-mock to 1.6.0 [adam 2019-04-30]
 	Updated misc/libcdio-paranoia to 2.0.0 [adam 2019-04-30]
 	Updated devel/memcached to 1.5.14 [adam 2019-04-30]
+	Updated ham/trustedQSL to 2.4.2 [mef 2019-04-30]
