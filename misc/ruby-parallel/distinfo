@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2018/02/18 05:43:58 tsutsui Exp $
+$NetBSD: distinfo,v 1.13 2019/04/30 08:48:28 tsutsui Exp $
 
-SHA1 (parallel-1.12.1.gem) = 618f8bf306830503c7b4998dba83e82aba5b00cd
-RMD160 (parallel-1.12.1.gem) = 3d727198c718a08e69108e5d27f01bc486ba69d4
-SHA512 (parallel-1.12.1.gem) = 8043086b73330251ff80bcf07c9fb608f70bd22c28a476789ef066e056650750b31568694537341fd7c12822d5a59c1bc7078d2b995a70efe833f81f6dc629bd
-Size (parallel-1.12.1.gem) = 9728 bytes
+SHA1 (parallel-1.17.0.gem) = 176fd38b6f811f011e4f23f3db201dbf34027e98
+RMD160 (parallel-1.17.0.gem) = 2db379b21171e1d49b1c92cf9235687a6df4ff07
+SHA512 (parallel-1.17.0.gem) = 06636abcbd0505748014da9d66ce2fe9670187e57379bf2d1080a375fb970f62b21cc32ddde6c1668755af725ec04fa0934d3155451b61e4716c3ba64cccb57d
+Size (parallel-1.17.0.gem) = 9216 bytes
