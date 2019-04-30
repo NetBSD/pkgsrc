@@ -1,15 +1,15 @@
-$NetBSD: patch-src_tqslconvert_cpp,v 1.2 2014/06/13 11:38:03 mef Exp $
+$NetBSD: patch-src_tqslconvert_cpp,v 1.3 2019/04/30 13:22:09 mef Exp $
 
 Convert db.h name to pkgsrc current name
 
---- src/tqslconvert.cpp.orig	2014-01-12 23:39:24.000000000 +0900
-+++ src/tqslconvert.cpp	2014-01-14 00:46:23.000000000 +0900
-@@ -22,7 +22,7 @@
- #include <string>
- #include <ctype.h>
- #include <set>
+--- src/tqslconvert.cpp.orig	2018-11-24 07:35:22.000000000 +0900
++++ src/tqslconvert.cpp	2019-01-23 22:46:06.746888523 +0900
+@@ -27,7 +27,7 @@
+ #include <lmdb.h>
+ #define db_strerror mdb_strerror
+ #else
 -#include <db.h>
 +#include <db5/db.h>
+ #endif
  
  #include <locale.h>
- //#include <iostream>
