@@ -1,10 +1,10 @@
-$NetBSD: patch-lib_lwres_getnameinfo.c,v 1.1 2018/09/09 13:11:38 taca Exp $
+$NetBSD: patch-lib_lwres_getnameinfo.c,v 1.2 2019/04/30 02:51:38 taca Exp $
 
 * Add fix for KAME based implementation.
 
---- lib/lwres/getnameinfo.c.orig	2018-07-03 06:56:55.000000000 +0000
+--- lib/lwres/getnameinfo.c.orig	2019-02-27 23:28:15.000000000 +0000
 +++ lib/lwres/getnameinfo.c
-@@ -115,6 +115,10 @@
+@@ -116,6 +116,10 @@
  #include <lwres/netdb.h>
  #include "print_p.h"
  
@@ -13,9 +13,9 @@ $NetBSD: patch-lib_lwres_getnameinfo.c,v 1.1 2018/09/09 13:11:38 taca Exp $
 +#endif
 +
  #include "assert_p.h"
+ #include "unreachable_p.h"
  
- #define SUCCESS 0
-@@ -266,13 +270,9 @@ lwres_getnameinfo(const struct sockaddr 
+@@ -268,13 +272,9 @@ lwres_getnameinfo(const struct sockaddr 
  		    ((const struct sockaddr_in6 *)sa)->sin6_scope_id) {
  			char *p = numaddr + strlen(numaddr);
  			const char *stringscope = NULL;
