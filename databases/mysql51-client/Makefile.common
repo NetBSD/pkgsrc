@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.37 2018/02/01 23:14:55 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.38 2019/04/30 14:09:52 abs Exp $
 #
 # used by databases/mysql51-client/Makefile
 # used by databases/mysql51-server/Makefile
@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+USE_GCC_RUNTIME=	yes
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
