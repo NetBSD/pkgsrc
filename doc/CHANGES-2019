@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1890 2019/04/30 04:11:52 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1891 2019/04/30 07:59:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3071,3 +3071,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/php-pecl-mcrypt to 1.0.2 [taca 2019-04-30]
 	Updated www/drupal7 to 7.66 [taca 2019-04-30]
 	Updated www/drupal8 to 8.6.15 [taca 2019-04-30]
+	Updated devel/py-fakefs to 3.5.8 [adam 2019-04-30]
+	Updated fonts/py-fonttools to 3.41.0 [adam 2019-04-30]
+	Updated www/py-djangorestframework to 3.9.3 [adam 2019-04-30]
+	Updated www/py-urllib3 to 1.25.2 [adam 2019-04-30]
