@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1900 2019/04/30 15:21:31 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1901 2019/04/30 15:22:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3087,3 +3087,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/memcached to 1.5.14 [adam 2019-04-30]
 	Updated ham/trustedQSL to 2.4.2 [mef 2019-04-30]
 	Updated mail/dovecot2 to 2.3.6 [taca 2019-04-30]
+	Updated mail/dovecot2-pigeonhole to 0.5.6 [taca 2019-04-30]
