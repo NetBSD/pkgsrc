@@ -60,6 +60,7 @@ bind-dig-sigchase	Enable dig(1) option +sigchase for DNSSEC signature chasing.
 bind-json-statistics-server	Enable building in the statistics server with JSON in bind95 and later.
 bind-xml-statistics-server	Enable building in the statistics server with XML output in bind95 and later.
 bittorrent		Enable bittorrent support.
+blacklist		Enable blacklist support.
 blender-exppython	Enable the Experimental Python support.
 bluray			Enable libbluray support.
 boehm-gc		Use Boehm's garbage collector for memory allocation.
@@ -135,9 +136,11 @@ djbware-errno-hack	Patch to #include <errno.h> for correctness.
 djvu			Enable DjVuLibRe support.
 dkim-milter-arlib	ar(3) support for dkim-milter.
 dkim-stats		dkim-stats(8) support for dkim-milter.
+dlz-filesystem		Dynamically Loadable Zones filesystem support.
 dnsrbl			Enable DNS Real-time Blackhole List support.
 dnssd			Enable DNS Service Discovery Protocol support.
 dnssec			Enable DNSSEC validation.
+dnstap			Enable DNSTAP packet logging support.
 doc			Include the documentation.
 doxygen			Include doxygen based document.
 drac			Enable DRAC support.
