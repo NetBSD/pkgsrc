@@ -1,0 +1,24 @@
+BIND, the Berkeley Internet Name Daemon.  This package contains the BIND
+9.14 release.
+
+  * A new "plugin" mechanism has been added to allow query functionality
+    to be extended using dynamically loadable libraries. The "filter-aaaa"
+    feature has been removed from named and is now implemented as a
+    plugin.
+  * QNAME minimization, as described in RFC 7816, is now supported.
+  * Socket and task code has been refactored to improve performance on
+    most modern machines.
+  * "Root key sentinel" support, enabling validating resolvers to indicate
+    via a special query which trust anchors are configured for the root
+    zone.
+  * Secondary zones can now be configured as "mirror" zones; their
+    contents are transferred in as with traditional slave zones, but are
+    subject to DNSSEC validation and are not treated as authoritative data
+    when answering. This makes it easier to configure a local copy of the
+    root zone as described in RFC 7706.
+  * The "validate-except" option allows configuration of domains below
+    which DNSSEC validation should not be performed.
+  * The default value of "dnssec-validation" is now "auto".
+  * IDNA2008 is now supported when linking with libidn2.
+  * "named -V" now outputs the default paths for files used by named and
+    other tools.
