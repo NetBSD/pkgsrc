@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1891 2019/04/30 07:59:19 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1892 2019/04/30 08:26:19 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3075,3 +3075,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated fonts/py-fonttools to 3.41.0 [adam 2019-04-30]
 	Updated www/py-djangorestframework to 3.9.3 [adam 2019-04-30]
 	Updated www/py-urllib3 to 1.25.2 [adam 2019-04-30]
+	Updated net/mikutter to 3.8.7 [tsutsui 2019-04-30]
