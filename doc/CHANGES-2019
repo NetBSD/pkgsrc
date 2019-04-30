@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1895 2019/04/30 09:22:45 hauke Exp $
+$NetBSD: CHANGES-2019,v 1.1896 2019/04/30 09:26:48 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3080,3 +3080,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated archivers/lz4 to 1.9.1 [adam 2019-04-30]
 	Updated graphics/hugin to 2019.0.0 [adam 2019-04-30]
 	Updated net/cacti-spine to 1.2.2 [hauke 2019-04-30]
+	Updated net/youtube-dl to 20190430 [leot 2019-04-30]
