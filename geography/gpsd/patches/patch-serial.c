@@ -1,11 +1,11 @@
-$NetBSD: patch-serial.c,v 1.1 2013/12/10 12:22:52 jperkin Exp $
+$NetBSD: patch-serial.c,v 1.2 2019/05/01 20:22:02 gdt Exp $
 
 Need cfmakeraw on SunOS.
 
---- serial.c.orig	2011-03-15 03:34:32.000000000 +0000
+--- serial.c.orig	2018-09-22 23:24:39.000000000 +0000
 +++ serial.c
-@@ -125,7 +125,7 @@ void gpsd_tty_init(struct gps_device_t *
-     session->reawake = (timestamp_t)0;
+@@ -173,7 +173,7 @@ void gpsd_tty_init(struct gps_device_t *
+     session->reawake = (time_t)0;
  }
  
 -#if defined(__CYGWIN__)
