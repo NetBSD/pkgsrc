@@ -1,49 +1,34 @@
-$NetBSD: BUILDLINK3_DG,v 1.8 2014/12/30 15:13:19 wiz Exp $
+$NetBSD: BUILDLINK3_DG,v 1.9 2019/05/01 10:55:13 rillig Exp $
 
  0 Developer's guide to buildlink3
  =================================
 
 This is a tutorial for pkgsrc developers to understand and to use the
-buildlink3 framework in pkgsrc.
+buildlink3 framework in pkgsrc.  The buildlink3 framework establishes the
+principle: only allow the software build process to see what we choose to
+allow it to see.
 
 
- 1 Changes between buildlink2 and buildlink3
- ===========================================
+ 1 libtool
+ ==============================
 
-The buildlink3 framework is a evolutionary descendant of the
-buildlink2 framework that does a better job of adhering to the
-fundamental buildlink principle: only allow the software build
-process to see what we choose to allow it to see.
-
-
- 1.1 Better behavior with libtool
- ================================
-
-One of the biggest problems in buildlink2 is handling packages that
-install libtool archive files for libraries that are also present in
-the base system.  buildlink3 is significantly better at this as it
-more tightly controls where libtool can find libtool archives.  One
-side effect of this is that we no longer need to create fake libtool
-archives to work around cases where the pkgsrc libraries were being
-used instead of the system libraries if they shared the same name.
+The buildlink3 framework handles packages that install libtool archive
+files for libraries that are also present in the base system.  It more
+tightly controls where libtool can find libtool archives.  This reduces
+the number of conflicts between libtool libraries provided by the base
+system and those from pkgsrc.
 
 
- 1.2 New buildlink3.mk file structure
- ====================================
+ 2 buildlink3.mk file structure
+ ==============================
 
-buildlink3.mk files have two major differences over buildlink2.mk
-files.  The first, most noticeable difference is that buildlink3.mk
-generally don't contain a BUILDLINK_FILES definition.  This is
-because buildlink3 automatically determines which files to symlink
-into ${BUILDLINK_DIR} by examining the PLIST of the installed package.
-The second difference is that buildlink3.mk files keep track of how
-"deep" we are in including buildlink3.mk files, and only creates
-dependencies on packages encountered at depth 1.  This means that
-packages that want to add a dependency must directly include the
-buildlink3.mk file for that dependency.
+The buildlink3.mk files keep track of how "deep" we are in including
+buildlink3.mk files, and only create dependencies on packages encountered
+at depth 1.  This means that packages that want to add a dependency must
+directly include the buildlink3.mk file for that dependency.
 
 
- 2 Troubleshooting
+ 3 Troubleshooting
  =================
 
 Q1: Where can I see the actual command executed by the wrapper
