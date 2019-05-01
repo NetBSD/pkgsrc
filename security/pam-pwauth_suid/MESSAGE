@@ -1,6 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2008/07/17 18:00:58 drochner Exp $
+$NetBSD: MESSAGE,v 1.3 2019/05/01 02:37:56 gutteridge Exp $
 
+In order to make unlocking work, you need to add an appropriate file
+to your pam configuration directory (usually /etc/pam.d).
 A sample pam.d file for xscreensaver can be found in
 ${PREFIX}/share/examples/pam-pwauth_suid
 ===========================================================================
