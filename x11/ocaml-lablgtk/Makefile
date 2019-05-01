@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.50 2019/04/03 00:33:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.51 2019/05/01 06:41:41 wiz Exp $
 
-DISTNAME=	lablgtk-2.18.7
+DISTNAME=	lablgtk-2.18.8
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	x11
-MASTER_SITES=	https://forge.ocamlcore.org/frs/download.php/1773/
+MASTER_SITES=	https://github.com/garrigue/lablgtk/releases/download/lablgtk2188/
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	http://lablgtk.forge.ocamlcore.org/
