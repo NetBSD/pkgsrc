@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.100 2019/03/18 16:17:47 gdt Exp $
+# $NetBSD: Makefile,v 1.101 2019/05/01 12:40:19 bacon Exp $
 
 DISTNAME=	dx-4.4.4
-PKGREVISION=	49
+PKGREVISION=	50
 CATEGORIES=	graphics
 MASTER_SITES=	http://opendx.npaci.edu/source/
 
@@ -24,7 +24,7 @@ LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 MAKE_ENV+=		ARCH=""
 CONFIGURE_ENV+=		ARCH=""
 
-.include "../../archivers/szip/buildlink3.mk"
+.include "../../archivers/libaec/buildlink3.mk"
 .include "../../devel/hdf/buildlink3.mk"
 .include "../../devel/netcdf/buildlink3.mk"
 # XXX ImageMagick detection in "configure" is broken
