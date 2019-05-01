@@ -1,20 +1,10 @@
-$NetBSD: patch-config.h.in,v 1.6 2019/01/18 20:13:37 tnn Exp $
+$NetBSD: patch-config.h.in,v 1.7 2019/05/01 17:59:56 maya Exp $
 
-* Added Interix and define new path to if_tun.h.
+* define new path to if_tun.h.
 * Revive tcp_wrappers support.
 
 --- config.h.in.orig	2018-10-19 01:06:33.000000000 +0000
 +++ config.h.in
-@@ -741,6 +741,9 @@
- /* define if you have int64_t data type */
- #undef HAVE_INT64_T
- 
-+/* Define if you are on Interix */
-+#undef HAVE_INTERIX
-+
- /* Define to 1 if the system has the type `intmax_t'. */
- #undef HAVE_INTMAX_T
- 
 @@ -910,6 +913,9 @@
  /* Define to 1 if you have the <net/route.h> header file. */
  #undef HAVE_NET_ROUTE_H
