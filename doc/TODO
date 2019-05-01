@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18980 2019/05/01 18:00:12 maya Exp $
+$NetBSD: TODO,v 1.18981 2019/05/01 20:22:14 gdt Exp $
 
 Suggested new packages
 ======================
@@ -717,7 +717,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gourmet-0.13.3
 	o gperiodic-3.0.2
 	o gps-6.1.1
-	o gpsd-3.16
 	o gpsdrive-2.11
 	o gramofile-1.6P
 	o gramps-4.1.0
