@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2019/01/02 14:27:36 adam Exp $
+# $NetBSD: Makefile,v 1.22 2019/05/01 08:24:57 wiz Exp $
 
-DISTNAME=	zstd-1.3.8
+DISTNAME=	zstd-1.4.0
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=facebook/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
