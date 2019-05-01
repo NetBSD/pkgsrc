@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.262 2019/04/10 08:24:03 adam Exp $
+# $NetBSD: bootstrap,v 1.263 2019/05/01 18:29:20 rillig Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -344,15 +344,44 @@ get_optarg()
 	expr "x$1" : "x[^=]*=\\(.*\\)"
 }
 
-checkarg_sane_absolute_path() {
+checkarg_sane_absolute_path()
+{
 	case "$1" in
 	"")	;; # the default value will be used.
 	*[!-A-Za-z0-9_./]*)
 		die "ERROR: Invalid characters in path $1 (from $2)." ;;
 	*/)	die "ERROR: The argument to $2 must not end in /." ;;
-	/*)	;;
+	*//* | */. | */./* | */.. | */../*)
+		die "ERROR: The path $1 (from $2) must be canonical." ;;
+	/*)	checkarg_no_symlink_path "$1" "$2" ;;
 	*)	die "ERROR: The argument to $2 must be an absolute path." ;;
 	esac
+}
+
+checkarg_no_symlink_path()
+{
+	_dir=$1
+	while [ ! -d "$_dir" ]; do
+		_dir=${_dir%/*}
+	done
+
+	_realdir=`cd "$_dir" && exec pwd`
+	[ "$_realdir" = "$_dir" ] && return
+
+	die "ERROR: The path $1 (from $2) must not contain symlinks.
+
+	Given path   : $1
+	Resolved path: $_realdir${1##${_dir}}
+
+	Several packages assume that the given path of $2 stays the same when
+	symlinks are resolved. When that assumption fails, they will:
+
+	* not find some include files or libraries during the build phase
+	  since the files from dependencies are not installed in
+	  \${WRKDIR}/.buildlink.
+
+	* install their files into the wrong path inside \${WRKDIR}/.destdir,
+	  which will fail the PLIST check during the install phase."
 }
 
 checkarg_sane_relative_path() {
@@ -469,13 +498,13 @@ while [ $# -gt 0 ]; do
 	shift
 done
 
-checkarg_sane_absolute_path "$wrkdir" "--workdir"
 checkarg_sane_absolute_path "$prefix" "--prefix"
 checkarg_sane_absolute_path "$pkgdbdir" "--pkgdbdir"
 checkarg_sane_absolute_path "$sysconfdir" "--sysconfdir"
 checkarg_sane_absolute_path "$varbase" "--varbase"
 checkarg_sane_relative_path "$pkginfodir" "--pkginfodir"
 checkarg_sane_relative_path "$pkgmandir" "--pkgmandir"
+checkarg_sane_absolute_path "$wrkdir" "--workdir"
 
 # set defaults for system locations if not already set by the user
 wrkobjdir=${wrkdir}/pkgsrc
