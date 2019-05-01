@@ -1,9 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2019/04/26 14:12:39 maya Exp $
+# $NetBSD: Makefile,v 1.42 2019/05/01 20:22:02 gdt Exp $
 
-# gpsd 3.11 has been released.  It has only not been updated because
-# newer versions use scons.
-DISTNAME=	gpsd-2.96
-PKGREVISION=	7
+DISTNAME=	gpsd-3.18.1
 CATEGORIES=	geography
 MASTER_SITES=	http://download-mirror.savannah.gnu.org/releases/gpsd/
 
@@ -13,31 +10,70 @@ COMMENT=	GPS information daemon
 
 LICENSE=	modified-bsd
 
-# XXX: In theory this is not necessary.
-BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
-
-GNU_CONFIGURE=	YES
-CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 PY_PATCHPLIST=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 2.96
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	pkg-config gmake
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c99 c++
 
-# gpsd looks for ncurses but not curses. (Not yet filed upstream.)
-FAKE_NCURSES=	yes
+# \todo Separate upstream's build into configure and build.
+NO_CONFIGURE=	yes
 
-# gpsd uses syncok
+# Note that gpsd is documented to use ncurses, not curses.
+FAKE_NCURSES=	yes
+# gpsd uses syncok.  Insist on an implementation that provides it.
 USE_CURSES=	syncok
+
+# Documentation depends
+BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+
+# \todo Decide if buildlink3 is more appropriate.
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
 CFLAGS.SunOS=	-DLOG_PERROR=0
 
-INSTALLATION_DIRS=	sbin
+# Configure phase arguments:
+SCONS_ARGS+=	leapfetch=no		# Do not use the net at build time.
+SCONS_ARGS+=	target_python=${PYTHONBIN}	# Use our python, not "python".
 
-TEST_TARGET=	check
+SUBST_CLASSES+=		pyenv
+SUBST_MESSAGE.pyenv=	Fixing path in Python scripts
+SUBST_STAGE.pyenv=	pre-build	# We don't configure :-(
+SUBST_FILES.pyenv+=	gegps
+SUBST_FILES.pyenv+=	gpscat
+SUBST_FILES.pyenv+=	gpsfake
+SUBST_FILES.pyenv+=	gpsprof
+SUBST_FILES.pyenv+=	ubxtool
+SUBST_FILES.pyenv+=	xgps
+SUBST_FILES.pyenv+=	xgpsspeed
+SUBST_FILES.pyenv+=	zerk
+SUBST_SED.pyenv=	-e 's,/usr/bin/env python.*$$,${PYTHONBIN},'
 
+# \todo: Determine if CC/CXX are needed (e.g, when using other than gcc).
+#	CC=${CC:Q} CXX=${CXX:Q}
+do-build:
+	cd ${WRKSRC} && \
+	${SETENV} ${MAKE_ENV} ${SCONSBIN} \
+	prefix=${PREFIX} mandir=${PREFIX}/${PKGMANDIR} \
+	${SCONS_ARGS} \
+	-j${MAKE_JOBS:U1}
+
+do-install:
+	cd ${WRKSRC} && \
+	${SETENV} ${INSTALL_ENV} ${SCONSBIN} install
+
+do-test:
+	cd ${WRKSRC} && \
+	${SETENV} ${INSTALL_ENV} ${SCONSBIN} check
+
+# \todo Change to TOOLS or BUILD_DEPENDS after scons support is improved.
+.include "../../devel/scons/buildlink3.mk"
+
+.include "../../devel/libusb1/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../lang/python/extension.mk"
-.include "../../mk/curses.buildlink3.mk"
+# \todo Resolve mk/curses not invoking ncurses builtin processing.
+#.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

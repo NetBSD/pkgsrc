@@ -1,11 +1,11 @@
-$NetBSD: patch-gpspipe.c,v 1.1 2013/12/10 12:22:52 jperkin Exp $
+$NetBSD: patch-gpspipe.c,v 1.2 2019/05/01 20:22:02 gdt Exp $
 
 cfmakeraw compatability for SunOS.
 
---- gpspipe.c.orig	2011-01-13 13:36:18.000000000 +0000
+--- gpspipe.c.orig	2018-09-22 23:24:39.000000000 +0000
 +++ gpspipe.c
-@@ -77,7 +77,15 @@ static void open_serial(char *device)
-     /*@i@*/ bzero(&newtio, sizeof(newtio));
+@@ -97,7 +97,15 @@ static void open_serial(char *device)
+     memset(&newtio, 0, sizeof(newtio));
  
      /* make it raw */
 +#if defined(__sun)
@@ -18,5 +18,5 @@ cfmakeraw compatability for SunOS.
      (void)cfmakeraw(&newtio);
 +#endif
      /* set speed */
-     /*@i@*/ (void)cfsetospeed(&newtio, BAUDRATE);
+     (void)cfsetospeed(&newtio, BAUDRATE);
  
