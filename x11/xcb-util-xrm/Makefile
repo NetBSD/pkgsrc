@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/08/15 12:13:15 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2019/05/01 08:32:26 wiz Exp $
 
-DISTNAME=	xcb-util-xrm-1.2
+DISTNAME=	xcb-util-xrm-1.3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Airblader/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
