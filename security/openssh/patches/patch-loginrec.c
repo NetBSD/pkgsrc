@@ -1,20 +1,12 @@
-$NetBSD: patch-loginrec.c,v 1.5 2016/01/18 12:53:26 jperkin Exp $
+$NetBSD: patch-loginrec.c,v 1.6 2019/05/01 17:59:56 maya Exp $
 
-Interix support and related fixes. Fix build on FreeBSD.
+Interix support and related fixes.
+Fix build on FreeBSD.
+
+XXX remove interix once we figure out which one's which
 
 --- loginrec.c.orig	2015-08-21 04:49:03.000000000 +0000
 +++ loginrec.c
-@@ -432,8 +432,8 @@ login_set_addr(struct logininfo *li, con
- int
- login_write(struct logininfo *li)
- {
--#ifndef HAVE_CYGWIN
--	if (geteuid() != 0) {
-+#if !defined(HAVE_CYGWIN) && !defined(HAVE_INTERIX)
-+        if (geteuid() != ROOTUID) {
- 		logit("Attempt to write login records by non-root user (aborting)");
- 		return (1);
- 	}
 @@ -441,7 +441,7 @@ login_write(struct logininfo *li)
  
  	/* set the timestamp */
