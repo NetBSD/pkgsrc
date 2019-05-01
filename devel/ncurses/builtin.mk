@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.40 2017/01/05 22:18:03 joerg Exp $
+# $NetBSD: builtin.mk,v 1.41 2019/05/01 20:15:59 gdt Exp $
 
 BUILTIN_PKG:=	ncurses
 
@@ -14,6 +14,8 @@ BUILTIN_FIND_HEADERS.H_CURSES=	ncurses.h curses.h
 BUILTIN_FIND_GREP.H_CURSES=	mvwchgat
 BUILTIN_FIND_HEADERS.H_CURSES1=	ncurses.h curses.h
 BUILTIN_FIND_GREP.H_CURSES1=	wsyncup
+BUILTIN_FIND_FILES_VAR=		NCURSES_PC
+BUILTIN_FIND_FILES.NCURSES_PC=	/usr/lib/pkgconfig/ncurses.pc
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -154,6 +156,8 @@ BUILDLINK_LIBNAME.ncurses=	${BUILTIN_LIBNAME.ncurses}
 BUILDLINK_TRANSFORM+=		l:ncurses:${BUILTIN_LIBNAME.ncurses}
 BUILDLINK_TARGETS+=		buildlink-curses-ncurses-h
 BUILDLINK_TARGETS+=		buildlink-ncurses-extra-includes
+# NetBSD 8 at least does not have ncurses.pc
+BUILDLINK_TARGETS+=		ncurses-fake-pc
 .  else
 BUILDLINK_TRANSFORM+=		l:form:gnuform
 BUILDLINK_TRANSFORM+=		l:panel:gnupanel
@@ -194,6 +198,25 @@ buildlink-curses-ncurses-h:
 			${LN} -s "$$src" "$$dest";			\
 		fi;							\
 	done
+.  endif
+
+.  if !target(ncurses-fake-pc)
+.PHONY: ncurses-fake-pc
+ncurses-fake-pc:
+	${RUN}						\
+	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig;	\
+	src=${NCURSES_PC}				\
+	dst=${BUILDLINK_DIR}/lib/pkgconfig/ncurses.pc;	\
+	if ${TEST} -f $${src}; then \
+		${LN} -sf $${src} $${dst}; \
+	else \
+		{	${ECHO} "Name: ncurses";			\
+			${ECHO} "Description: ncurses library";		\
+			${ECHO} "Version: ${BUILTIN_VERSION.ncurses}";	\
+			${ECHO} "Libs: -L/usr/lib -lncurses";		\
+			${ECHO} "Cflags: -I/usr/include";		\
+		} >$${dst} ;\
+	fi
 .  endif
 
 .endif	# CHECK_BUILTIN.ncurses
