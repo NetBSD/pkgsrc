@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2017/08/16 20:21:07 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2019/05/01 12:36:09 bacon Exp $
 
 DISTNAME=	HDF4.2r4
 PKGNAME=	hdf-4.2r4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.hdfgroup.org/HDF/HDF_Current/src/
 EXTRACT_USING=	bsdtar
@@ -32,7 +32,7 @@ do-test:
 	@cd ${WRKSRC}/mfhdf/ncdump && ${SETENV} ${MAKE_ENV} ${MAKE} check
 	@cd ${WRKSRC}/mfhdf/nctest && ${SETENV} ${MAKE_ENV} ${MAKE} check
 
-.include "../../archivers/szip/buildlink3.mk"
+.include "../../archivers/libaec/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 
