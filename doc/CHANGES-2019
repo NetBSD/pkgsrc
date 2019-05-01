@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1915 2019/05/01 12:19:34 cheusov Exp $
+$NetBSD: CHANGES-2019,v 1.1916 2019/05/01 12:21:18 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3102,3 +3102,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/xcb-util-xrm to 1.3 [wiz 2019-05-01]
 	Updated devel/cbindgen to 0.8.4 [wiz 2019-05-01]
 	Updated devel/mk-configure to 0.32.0 [cheusov 2019-05-01]
+	Updated sysutils/nbase to 7.0.0.4 [cheusov 2019-05-01]
