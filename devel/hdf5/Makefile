@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2018/05/16 02:37:06 wen Exp $
+# $NetBSD: Makefile,v 1.51 2019/05/01 22:39:29 bacon Exp $
 
+PKGREVISION=	1
 COMMENT=	Hierarchical Data Format (new generation)
 
 INSTALLATION_DIRS=	bin lib include
