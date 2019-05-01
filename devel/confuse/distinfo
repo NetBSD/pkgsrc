@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2018/08/15 13:55:00 ryoon Exp $
+$NetBSD: distinfo,v 1.9 2019/05/01 07:15:18 wiz Exp $
 
-SHA1 (confuse-3.2.1.tar.gz) = a0091aa9945d847fd6f05ef9eafd444713228b78
-RMD160 (confuse-3.2.1.tar.gz) = 7f4e73fce9c162a26a2fde65493e182a7a95e1ca
-SHA512 (confuse-3.2.1.tar.gz) = 272b41b337a160bbafd873002a5f67af625844090a7af829f13b5cf9d66ce531c97b172ae1f76a9bb6a621eb107172275f86e2d7913701dc922270e719458285
-Size (confuse-3.2.1.tar.gz) = 756948 bytes
+SHA1 (confuse-3.2.2.tar.gz) = fa7d106da08fd107905e9ea2c072e8d21b914e94
+RMD160 (confuse-3.2.2.tar.gz) = 998b11e8fe60e817a3d0bd5d962d89f96dc65b2e
+SHA512 (confuse-3.2.2.tar.gz) = 2415aae20135331e577e727c152eaad129d591155e6fcdd64720f81ad74f4c29a13d6e401deaa90f313dc070e44df2b6d1e7146f21aef41dc206f86bd47e95ed
+Size (confuse-3.2.2.tar.gz) = 752915 bytes
