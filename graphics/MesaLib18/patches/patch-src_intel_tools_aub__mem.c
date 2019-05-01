@@ -1,4 +1,4 @@
-$NetBSD: patch-src_intel_tools_aub__mem.c,v 1.1 2019/01/10 22:30:11 tnn Exp $
+$NetBSD: patch-src_intel_tools_aub__mem.c,v 1.2 2019/05/01 19:31:46 maya Exp $
 
 * Partially implement memfd_create() via mkostemp()
 
@@ -8,7 +8,7 @@ $NetBSD: patch-src_intel_tools_aub__mem.c,v 1.1 2019/01/10 22:30:11 tnn Exp $
  static inline int
  memfd_create(const char *name, unsigned int flags)
  {
-+#if defined(__linux__)
++#if defined(SYS_memfd_create)
     return syscall(SYS_memfd_create, name, flags);
 +#elif defined(__FreeBSD__)
 +   return shm_open(SHM_ANON, flags | O_RDWR | O_CREAT, 0600);

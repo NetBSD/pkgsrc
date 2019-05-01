@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2019/02/22 15:40:35 tnn Exp $
+$NetBSD: distinfo,v 1.17 2019/05/01 19:31:45 maya Exp $
 
 SHA1 (mesa-18.3.4.tar.xz) = a9a6ea0f5b99df362dc35770ade10c1738e2629c
 RMD160 (mesa-18.3.4.tar.xz) = 659565933a679d04dda58c7314e5d7c172e46d12
@@ -35,12 +35,12 @@ SHA1 (patch-src_glx_glxcurrent.c) = 8b8e949eded13491c5865601253c6e7d4b06e228
 SHA1 (patch-src_glx_glxext.c) = 15c2c5e0c6b5095ce849fb86ad148aa05d7d907a
 SHA1 (patch-src_intel_Makefile.tools.am) = 5253d5972b48ae3bc8d648bb9f479dcf6cbd3fab
 SHA1 (patch-src_intel_compiler_brw__fs__bank__conflicts.cpp) = 6276d2c6846bb4dd08699921bec4e20202a17478
-SHA1 (patch-src_intel_tools_aub__mem.c) = 8709def06ea0ac225af9ae38374c33944e560076
+SHA1 (patch-src_intel_tools_aub__mem.c) = 6a21ecb4cfbdf216474b3be16bda441bb1390350
 SHA1 (patch-src_intel_tools_aubinator__error__decode.c) = d8f636e3c3e76763a505a1dce23de0b198ad62fa
-SHA1 (patch-src_intel_vulkan_anv__allocator.c) = 5dd27eea9811d739558c5b488c57a3d7ae539d87
+SHA1 (patch-src_intel_vulkan_anv__allocator.c) = da5a11c95d17d6476e7141572264a215807b8cd7
 SHA1 (patch-src_intel_vulkan_anv__device.c) = 5d581dcd9695c869855f200c575cf98b7165c1ba
 SHA1 (patch-src_intel_vulkan_anv__gem.c) = b8eb487fa704151e7c3c3b1d23973b2b0aa5922e
-SHA1 (patch-src_intel_vulkan_anv__gem__stubs.c) = 7f0a25e96624815ef0912024b52bbb512d4fa42f
+SHA1 (patch-src_intel_vulkan_anv__gem__stubs.c) = ad5a4bd9fe521cf73faf2f0cf0f493a0b40f4c20
 SHA1 (patch-src_intel_vulkan_anv__queue.c) = 2dbf7dfd0c77f74f510032bf8d12109f58c50a30
 SHA1 (patch-src_mapi_entry__x86-64__tls.h) = 11b7ef1da435fa17fc7025a46a123d447d6a7d07
 SHA1 (patch-src_mapi_entry__x86__tls.h) = 11c0f5302d305a77f3a1780d44a2c61f48a66273
