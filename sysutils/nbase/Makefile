@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/05/01 12:21:04 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2019/05/01 13:36:28 cheusov Exp $
 #
 
 DISTNAME=	nbase-7.0.0.4
@@ -11,10 +11,11 @@ COMMENT=	NetBSD userlevel portable to other UNIX-like systems
 LICENSE=	modified-bsd
 
 GITHUB_PROJECT=	nbase
-BUILD_DEPENDS+=	mk-configure>=0.31.0:../../devel/mk-configure
+BUILD_DEPENDS+=	mk-configure>=0.31.0:../../devel/mk-configure \
+		byacc-[0-9]*:../../devel/byacc
 
 USE_LANGUAGES=		c
-USE_TOOLS+=		yacc lex
+USE_TOOLS+=		lex # native yacc on OpenBSD is not good
 
 TEST_TARGET=		test
 
