@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1918 2019/05/01 12:39:11 bacon Exp $
+$NetBSD: CHANGES-2019,v 1.1919 2019/05/01 12:40:42 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3105,3 +3105,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/nbase to 7.0.0.4 [cheusov 2019-05-01]
 	Updated devel/hdf to 4.2r4nb3 [bacon 2019-05-01]
 	Updated biology/kallisto to 0.45.0nb1 [bacon 2019-05-01]
+	Updated graphics/dx to 4.4.4nb50 [bacon 2019-05-01]
