@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2019/03/19 23:44:12 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/05/01 07:23:53 wiz Exp $
 
-DISTNAME=	pygit2-0.28.0
+DISTNAME=	pygit2-0.28.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygit2/}
@@ -17,6 +17,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	c
 
+# needs 'make install'
 # 20 failed in 0.28.0
 do-test:
 	cd ${WRKSRC}/test && pytest-${PYVERSSUFFIX}
