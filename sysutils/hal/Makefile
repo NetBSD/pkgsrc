@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2018/08/22 09:46:34 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2019/05/01 19:51:45 maya Exp $
 
 DISTNAME=		hal-0.5.14
 PKGREVISION=		21
@@ -58,7 +58,10 @@ HAL_GROUP=		operator
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../devel/libblkid/buildlink3.mk"
 .include "../../devel/libvolume_id/buildlink3.mk"
-.include "../../sysutils/pciutils/buildlink3.mk"
+# XXX we install libpci headers to an unexpected location
+# as far as this package is concerned, so it fails
+# to detect libpci!
+#.include "../../sysutils/pciutils/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-backend=linux
 MAKE_DIRS+=		/etc/udev
 MAKE_DIRS+=		/etc/udev/rules.d
