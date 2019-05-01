@@ -1,4 +1,4 @@
-$NetBSD: patch-src_intel_vulkan_anv__allocator.c,v 1.1 2018/10/07 23:49:31 ryoon Exp $
+$NetBSD: patch-src_intel_vulkan_anv__allocator.c,v 1.2 2019/05/01 19:31:46 maya Exp $
 
 * Partially implement memfd_create() via mkostemp()
 * Ignore MAP_POPULATE if unsupported
@@ -34,7 +34,7 @@ https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=225415
  static inline int
  memfd_create(const char *name, unsigned int flags)
  {
-+#if defined(__linux__)
++#if defined(SYS_memfd_create)
     return syscall(SYS_memfd_create, name, flags);
 +#elif defined(__FreeBSD__)
 +   return shm_open(SHM_ANON, flags | O_RDWR | O_CREAT, 0600);
