@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1906 2019/05/01 02:56:51 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.1907 2019/05/01 05:40:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3093,3 +3093,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated emulators/mednafen to 1.22.2 [wiz 2019-04-30]
 	Updated audio/fasttracker2 to 2.153 [fox 2019-05-01]
 	Updated x11/xscreensaver to 5.40nb1 [gutteridge 2019-05-01]
+	Updated lang/openjdk-bin to 12.0.1 [ryoon 2019-05-01]
