@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2017/03/23 17:06:50 joerg Exp $
-
-SHA1 (acrobat7-fonts/korfont.tar.gz) = 30623b4c6607e773299363b641a49bdabe7025d5
-RMD160 (acrobat7-fonts/korfont.tar.gz) = bf5608841fdd82e968c04426cd7261918e098010
-SHA512 (acrobat7-fonts/korfont.tar.gz) = 1e8f24d290322a7292c38fc53c38b8edd4e64d8e0cf2d03a32ce0b959e4ff78e5c04096410b5ba8bf7a03085d32f36b0f90eb15317cab031dae1f17d7782c751
-Size (acrobat7-fonts/korfont.tar.gz) = 5323926 bytes
