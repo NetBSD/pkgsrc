@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2018/05/09 08:41:19 wen Exp $
+# $NetBSD: Makefile.common,v 1.19 2019/05/02 15:31:16 jperkin Exp $
 #
 # used by sysutils/coreutils/Makefile
 # used by misc/gnuls/Makefile
@@ -54,6 +54,11 @@ CONFIGURE_ENV.SunOS+=	gl_cv_warn_c__errwarn=no
 
 # Explicitly disable inotify support whilst it is Linux-specific.
 CONFIGURE_ENV.SunOS+=	ac_cv_func_inotify_init=no
+
+# Identify Solaris vs illumos where appropriate
+.if ${OPSYS} == "SunOS" && ${OS_VARIANT} != "Solaris"
+CONFIGURE_ENV+=		gl_cv_host_operating_system=illumos
+.endif
 
 .if !empty(MACHINE_PLATFORM:MDarwin-[9].*-*)
 CONFIGURE_ENV+=		ac_cv_header_sys_acl_h=no jm_cv_func_svid_putenv=yes
