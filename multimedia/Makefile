@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.268 2018/12/06 19:53:30 leot Exp $
+# $NetBSD: Makefile,v 1.269 2019/05/02 07:58:03 wiz Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -212,7 +212,6 @@ SUBDIR+=	vlc2
 SUBDIR+=	win32-codecs
 SUBDIR+=	x264-devel
 SUBDIR+=	x265
-SUBDIR+=	xanim
 SUBDIR+=	xawtv
 SUBDIR+=	xfce4-mpc-plugin
 SUBDIR+=	xfce4-thunar-media-tags
