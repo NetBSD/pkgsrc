@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2017/01/19 18:52:09 agc Exp $
+# $NetBSD: Makefile,v 1.12 2019/05/02 15:49:16 ryoon Exp $
 #
 
-IPAEXVER=	00201
+IPAEXVER=	00401
 DISTNAME=	IPAexfont${IPAEXVER}
 PKGNAME=	${DISTNAME:S/IPAexfont/ipaexfont-/}
-PKGREVISION=	1
 CATEGORIES=	fonts japanese
-MASTER_SITES=	${MASTER_SITE_OSDN:=ipafonts/57330/}
-MASTER_SITES+=	http://dl.ipafont.ipa.go.jp/IPAexfont/
+MASTER_SITES+=	https://oscdl.ipa.go.jp/IPAexfont/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -20,25 +18,17 @@ NO_BUILD=	YES
 
 DOCSDIR=	${PREFIX}/share/doc/${PKGBASE}
 
-INSTALLATION_DIRS=	share/fonts/X11/TTF \
-			${DOCSDIR}
+INSTALLATION_DIRS=	${DOCSDIR}
 
-FONTDIR=	${PREFIX}/share/fonts/X11/TTF
-FONTS_DIRS.ttf=	${FONTDIR}
-
-INSTALL_FONTS=	ipaexg.ttf \
-		ipaexm.ttf
 INSTALL_DOCS=	IPA_Font_License_Agreement_v1.0.txt \
 		Readme_IPAexfont${IPAEXVER}.txt
 
 USE_LANGUAGES=	# none
 
 do-install:
-.for fontfile in ${INSTALL_FONTS}
-	${INSTALL_DATA} ${WRKSRC}/${fontfile} ${DESTDIR}${FONTDIR}
-.endfor
 .for docfile in ${INSTALL_DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${docfile} ${DESTDIR}${DOCSDIR}
 .endfor
 
+.include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"
