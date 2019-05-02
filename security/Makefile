@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.701 2019/04/08 16:14:51 adam Exp $
+# $NetBSD: Makefile,v 1.702 2019/05/02 08:53:00 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -586,7 +586,6 @@ SUBDIR+=	tct
 SUBDIR+=	tkpasman
 SUBDIR+=	tor-browser
 SUBDIR+=	tripwire
-SUBDIR+=	uvscan
 SUBDIR+=	validns
 SUBDIR+=	vault
 SUBDIR+=	volatility
