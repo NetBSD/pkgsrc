@@ -1,10 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2019/04/09 00:21:03 gdt Exp $
+# $NetBSD: Makefile,v 1.21 2019/05/02 19:01:17 gdt Exp $
 #
 
-# Update to 1.5.4 is 99% done, but stalled due to incompatibility with
-# modern qt.  Please check with $MAINTAINER before changing.
-DISTNAME=	gpsbabel-1.5.2
-PKGREVISION=	3
+DISTNAME=	gpsbabel-1.6.0
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 # Download from official site apparently only via interactive form,
@@ -14,19 +11,33 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.gpsbabel.org/
+#HOMEPAGE=	https://github.com/gpsbabel/gpsbabel
 COMMENT=	Utility to convert and fetch GPS related data
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
+USE_TOOLS=	gmake
 
 TEST_TARGET=	check
 
+# \todo Upstream recommends trying qmake.
+GNU_CONFIGURE=	yes
+
+CONFIGURE_ENV+=	QMAKE=${QTDIR}/bin/qmake
+CONFIGURE_ENV+=	LUPDATE=${QTDIR}/bin/lupdate
+CONFIGURE_ENV+=	LRELEASE=${QTDIR}/bin/lrelease
+
+# \todo This seems like a bug; explain why.
 LIBS.Darwin+=	-lexpat
 
-GNU_CONFIGURE=	yes
+# \todo Figure out stdarg warnings for code that looks correct.
+# util.cc: In function 'int xasprintf(char**, const char*, ...)':
+# util.cc:233:22: warning: second parameter of 'va_start' not last named argument [-Wvarargs]
+#    va_start(args, fmt);
+#                       ^
 
 .include "../../mk/libusb.buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
-.include "../../x11/qt4-libs/buildlink3.mk"
-.include "../../x11/qt4-tools/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

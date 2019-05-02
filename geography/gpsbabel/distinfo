@@ -1,12 +1,10 @@
-$NetBSD: distinfo,v 1.11 2016/12/21 13:37:24 joerg Exp $
+$NetBSD: distinfo,v 1.12 2019/05/02 19:01:17 gdt Exp $
 
-SHA1 (gpsbabel-1.5.2.tar.gz) = 4962a7e98bbfcbfd59baa970e9b33d1300053004
-RMD160 (gpsbabel-1.5.2.tar.gz) = 86a54f6e6647ed8eaa340641e9240565acf5ca99
-SHA512 (gpsbabel-1.5.2.tar.gz) = 6c19856b893f4f15019e4c66a2f7e7cc490c1dd404c0830704ca50f42f3242d5c76557fb8e41b80e43f0a747899ebe3845331dca769f089fbddb6e6cf55ffe50
-Size (gpsbabel-1.5.2.tar.gz) = 8392465 bytes
-SHA1 (patch-ad) = 9f7d481ddc1d2935fb05df687db25127fe3b37f0
-SHA1 (patch-af) = 5f066824b49f959ea8b06cdeccf21a4ce789fd1d
-SHA1 (patch-bushnell.cc) = 258c41eebe7a606c9143d6982d953da6719493d1
-SHA1 (patch-configure) = 1050c5c0117c41ea4aa276d774c34b47a89b56e2
-SHA1 (patch-configure.in) = f046a83e7ddf0a0f26d5623709ad799284875b49
-SHA1 (patch-testo) = 9c71a74aae088eb110c837114a7b691c3a8d9ff6
+SHA1 (gpsbabel-1.6.0.tar.gz) = 06232445b481f7617850576e31b0611e07329645
+RMD160 (gpsbabel-1.6.0.tar.gz) = ffa872cd4e5520c4bfa828f318647ae8b2bcdde6
+SHA512 (gpsbabel-1.6.0.tar.gz) = 369bf34aab957a88aeeb657fceb897cbe5e00e6c915760f9b278d9581d98c57084ff6ad65281a18dd7a24bec463335d5e0969c62aeddfbd05d0c5ab05fef6999
+Size (gpsbabel-1.6.0.tar.gz) = 14101201 bytes
+SHA1 (patch-ad) = a2712225fc3cb70bfdf6ce90e4197cf2ce7e27e0
+SHA1 (patch-af) = 8bb5d9392ae682fd098578ef7a25ad84683f68c6
+SHA1 (patch-configure) = 76c4b79c26712492e2f4b060fe70d5661415f42f
+SHA1 (patch-configure.ac) = 1269690568490dbb91cf25ad87dd3fb53b3ee3c1
