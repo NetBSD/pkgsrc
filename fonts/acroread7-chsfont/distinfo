@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2017/03/23 17:06:50 joerg Exp $
-
-SHA1 (acrobat7-fonts/chsfont.tar.gz) = 883f5d0c143adf0bff775ffb3e0254732790a90c
-RMD160 (acrobat7-fonts/chsfont.tar.gz) = 330db54dc78cfd1e88416095d22bfc9be6bab8c3
-SHA512 (acrobat7-fonts/chsfont.tar.gz) = 84819bebc51c252468cd3cd9b4f344215c2f7a74cc3ed8b91bc64a2c079801798932279d0a3776885ccde4f17b878597007492d4fb0f6f8680e17e7c58ee1009
-Size (acrobat7-fonts/chsfont.tar.gz) = 13504625 bytes
