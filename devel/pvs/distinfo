@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2019/04/27 11:34:07 wiz Exp $
+$NetBSD: distinfo,v 1.10 2019/05/02 08:16:06 wiz Exp $
 
 SHA1 (pvs-3.2-libraries.tgz) = 72fce592786a9d686e44aecd3c5355118aa15e02
 RMD160 (pvs-3.2-libraries.tgz) = 2087d70ebce0b4538f046ae0125b5c9db58f4d77
@@ -10,6 +10,7 @@ SHA512 (pvs-3.2-linux.tgz) = 3e2d8033c82bba6c0efb6f84905d50f54f0c6e62625785eab13
 Size (pvs-3.2-linux.tgz) = 12350949 bytes
 SHA1 (pvs-3.2-solaris.tgz) = d5d9c99d39aa5adbaa846a21c5856592342a26c2
 RMD160 (pvs-3.2-solaris.tgz) = abeee88a90d5592ba58c1e13d5860e5c53a65d2c
+SHA512 (pvs-3.2-solaris.tgz) = abb86fe06baff3b2c5904560736bb58dddde9ed93873b03d821f1882f5120875d76afed7918acc4eec2fded5812f17836a15570c91982f30b4802cd8cc1bf486
 Size (pvs-3.2-solaris.tgz) = 13074938 bytes
 SHA1 (pvs-3.2-system.tgz) = be9a57267ddc3ad241b1e26c55f2a60cff16d787
 RMD160 (pvs-3.2-system.tgz) = e69c8e0448e5973832912cf7f9a7cdf35612d705
