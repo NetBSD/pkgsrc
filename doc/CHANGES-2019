@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1941 2019/05/02 13:46:45 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1942 2019/05/02 15:31:25 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3135,3 +3135,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/bind912 to 9.12.4pl1nb1 [taca 2019-05-02]
 	Updated lang/php72 to 7.2.18 [taca 2019-05-02]
 	Updated lang/php73 to 7.3.5 [taca 2019-05-02]
+	Updated sysutils/coreutils to 8.29nb2 [jperkin 2019-05-02]
