@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2018/09/17 10:15:39 adam Exp $
+# $NetBSD: Makefile,v 1.28 2019/05/02 09:27:09 adam Exp $
 
 DISTNAME=	tornado-5.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,18 +18,16 @@ REPLACE_PYTHON+=	tornado/platform/*.py
 REPLACE_PYTHON+=	tornado/test/*.py
 
 do-test:
-	${RUN}cd ${WRKSRC}; ${PYTHONBIN} -m tornado.test.runtests
+	cd ${WRKSRC} && ${PYTHONBIN} -m tornado.test.runtests
 
 .include "../../lang/python/pyversion.mk"
 
 PLIST_VARS+=	requires
-.if "${PYPKGPREFIX}" == "py27"
+.if ${_PYTHON_VERSION} == 27
+DEPENDS+=	${PYPKGPREFIX}-backports_abc>=0.4:../../devel/py-backports_abc
 DEPENDS+=	${PYPKGPREFIX}-backports.ssl_match_hostname-[0-9]*:../../security/py-backports.ssl_match_hostname
 DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-singledispatch>0:../../devel/py-singledispatch
-.endif
-.if "${PYPKGPREFIX}" == "py27" || "${PYPKGPREFIX}" == "py34"
-DEPENDS+=	${PYPKGPREFIX}-backports_abc>=0.4:../../devel/py-backports_abc
 PLIST.requires=	yes
 .endif
 
