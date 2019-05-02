@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/11/29 18:41:38 adam Exp $
+# $NetBSD: Makefile,v 1.5 2019/05/02 09:16:47 adam Exp $
 
 DISTNAME=	pathlib2-2.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} == 27 || ${_PYTHON_VERSION} == 34
+.if ${_PYTHON_VERSION} == 27
 DEPENDS+=	${PYPKGPREFIX}-scandir-[0-9]*:../../devel/py-scandir
 .endif
 
