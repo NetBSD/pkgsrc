@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2019/04/30 03:34:34 taca Exp $
+$NetBSD: distinfo,v 1.2 2019/05/02 13:29:53 taca Exp $
 
 SHA1 (bind-9.14.1.tar.gz) = 29e43a99c059c5458822833b2267f237361feca6
 RMD160 (bind-9.14.1.tar.gz) = 12e8bec5d7eb29d588596a204220edfe12bbc743
@@ -8,7 +8,7 @@ SHA1 (patch-bin_named_Makefile.in) = 12e071c61e0f326d0fd7613c6b8884ad0da35214
 SHA1 (patch-bin_named_main.c) = 51c8ab464a009575b6513c7ed4b79f89446eb7d0
 SHA1 (patch-bin_named_pfilter.c) = b54f872c883c8fbc2d9c04df65c185dc057cc36b
 SHA1 (patch-bin_named_pfilter.h) = c14617cb266a4b5d33ba6e5db98562e806792833
-SHA1 (patch-bin_named_server.c) = 8f981649ba318de1acc4e4eaf76d9ff647de38ef
+SHA1 (patch-bin_named_server.c) = 558088a1e1128e7a69394d66bfff03a5b3b62ee8
 SHA1 (patch-bin_nsupdate_nsupdate.c) = f71213385ec7c78243c1f93a6940caa111cb5072
 SHA1 (patch-bin_pkcs11_pkcs11-keygen.c) = d953bf48aadcdf7e95975d335167cc50f54ef91e
 SHA1 (patch-bin_tests_system_metadata_tests.sh) = d01a492d0b7738760bdbff714248e279a78fef28
