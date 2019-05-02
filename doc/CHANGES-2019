@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1932 2019/05/02 08:53:00 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1933 2019/05/02 09:29:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3123,3 +3123,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed print/acroread9 [wiz 2019-05-02]
 	Removed sysutils/memconf [wiz 2019-05-02]
 	Removed security/uvscan [wiz 2019-05-02]
+	Removed lang/py34-html-docs [adam 2019-05-02]
+	Removed lang/py35-html-docs [adam 2019-05-02]
