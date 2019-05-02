@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2017/03/23 17:06:50 joerg Exp $
-
-SHA1 (acrobat7-fonts/chtfont.tar.gz) = 653826d6c2ba9606990d7ab0eef4a927fbfeb7d9
-RMD160 (acrobat7-fonts/chtfont.tar.gz) = 84c974270dcffa7d1c83d7fe753bcefa420e51e5
-SHA512 (acrobat7-fonts/chtfont.tar.gz) = ced47daea826fe07c071641c7e682df5f60260f04ab52bf43b7ec162ac7eda3b5541c3125b5e316ea1bace76bd201ede15ece13bcccfdfaec6cb674c96d7ae7e
-Size (acrobat7-fonts/chtfont.tar.gz) = 9098909 bytes
