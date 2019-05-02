@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2017/08/13 15:05:33 manu Exp $
+$NetBSD: distinfo,v 1.9 2019/05/02 08:55:26 wiz Exp $
 
 SHA1 (crudesaml-1.9.tar.gz) = bd62e4081e676a0a5a8bce77bb3e1428d964ca44
 RMD160 (crudesaml-1.9.tar.gz) = 1dd827eda9a35f37850b4e6990a86d6ddec5a2ff
+SHA512 (crudesaml-1.9.tar.gz) = 1b78aa56e0079b106e20e7d74780088cae6e2ea7bf3cd732bdf467bf5caf576b4c6a35d794a3891b42751be62640ee24079756817cdf212ebedb0d4576a3a9fe
 Size (crudesaml-1.9.tar.gz) = 311917 bytes
