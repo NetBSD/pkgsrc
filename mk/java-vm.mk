@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.115 2019/03/26 21:05:15 ryoon Exp $
+# $NetBSD: java-vm.mk,v 1.116 2019/05/02 08:36:10 wiz Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -10,7 +10,7 @@
 #	The JVM that should be used if nothing particular is specified.
 #
 #	Possible values: kaffe openjdk7 openjdk8
-#		sun-jdk6 sun-jdk7 oracle-jdk8
+#		sun-jdk7 oracle-jdk8
 #		openjdk-bin
 #	Default value: (platform-dependent)
 #
@@ -75,7 +75,7 @@ PKG_JVMS_ACCEPTED?=	${_PKG_JVMS}
 _PKG_JVMS.9=		openjdk-bin
 _PKG_JVMS.8=		${_PKG_JVMS.9} openjdk8 oracle-jdk8
 _PKG_JVMS.7=		${_PKG_JVMS.8} openjdk7 sun-jdk7
-_PKG_JVMS.6=		${_PKG_JVMS.7} sun-jdk6 jdk16
+_PKG_JVMS.6=		${_PKG_JVMS.7} jdk16
 _PKG_JVMS.1.5=		${_PKG_JVMS.6} jdk15
 _PKG_JVMS.1.4=		${_PKG_JVMS.1.5}
 _PKG_JVMS.yes=		${_PKG_JVMS.1.4} kaffe
@@ -104,14 +104,10 @@ _PKG_JVM_DEFAULT?=	openjdk8
 	!empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || \
 	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-earmv[67]hf)
 _PKG_JVM_DEFAULT?=	openjdk8
-.  elif !empty(MACHINE_PLATFORM:MNetBSD-[1234].*-i386)
-_PKG_JVM_DEFAULT?=	sun-jdk6
 .  elif !empty(MACHINE_PLATFORM:MLinux-*-i[3456]86) || \
         !empty(MACHINE_PLATFORM:MLinux-*-x86_64) || \
         !empty(MACHINE_PLATFORM:MDarwin-1[2-9]*-x86_64)
 _PKG_JVM_DEFAULT?=	oracle-jdk8
-.  elif !empty(MACHINE_PLATFORM:MDarwin-*-*)
-_PKG_JVM_DEFAULT?=	sun-jdk6
 .  elif !empty(MACHINE_PLATFORM:MSunOS-5.11-i386)
 _PKG_JVM_DEFAULT?=	openjdk7
 .  elif !empty(MACHINE_PLATFORM:MSunOS-5.11-x86_64)
@@ -129,20 +125,6 @@ _PKG_JVM_DEFAULT?=	kaffe
 _ONLY_FOR_PLATFORMS.kaffe= \
 	*-*-alpha *-*-arm *-*-arm32 *-*-i386 *-*-m68k \
 	*-*-mipsel* *-*-sparc *-*-powerpc
-# exclude *-*-x86_64 from kaffe list as it apparently doesn't work
-_ONLY_FOR_PLATFORMS.sun-jdk6= \
-	Darwin-9.*-i386 Darwin-9.*-x86_64 \
-	Darwin-10.*-i386 Darwin-10.*-x86_64 \
-	Darwin-11.*-i386 Darwin-11.*-x86_64 \
-	FreeBSD-6.*-i386 \
-	Linux-*-i[3-6]86 \
-	Linux-*-x86_64 \
-	NetBSD-*-i386 NetBSD-*-x86_64 \
-	SunOS-5.10-i386 \
-	SunOS-5.10-sparc \
-	SunOS-5.10-x86_64 \
-	SunOS-5.11-i386 \
-	SunOS-5.11-x86_64
 _ONLY_FOR_PLATFORMS.openjdk7= \
 	DragonFly-*-* \
 	Linux-*-i[3-6]86 \
@@ -204,7 +186,6 @@ _PKG_JVMS_ACCEPTED+=	${PKG_JVMS_ACCEPTED:M${_jvm_}}
 _JAVA_PKGBASE.kaffe=		kaffe
 _JAVA_PKGBASE.openjdk7=		openjdk7
 _JAVA_PKGBASE.openjdk8=		openjdk8
-_JAVA_PKGBASE.sun-jdk6=		sun-jre6
 _JAVA_PKGBASE.sun-jdk7=		sun-jre7
 _JAVA_PKGBASE.oracle-jdk8=	oracle-jre8
 _JAVA_PKGBASE.openjdk-bin=	openjdk-bin
@@ -213,7 +194,6 @@ _JAVA_PKGBASE.openjdk-bin=	openjdk-bin
 _JAVA_NAME.kaffe=		kaffe
 _JAVA_NAME.openjdk7=		openjdk7
 _JAVA_NAME.openjdk8=		openjdk8
-_JAVA_NAME.sun-jdk6=		sun6
 _JAVA_NAME.sun-jdk7=		sun7
 _JAVA_NAME.oracle-jdk8=		oracle8
 _JAVA_NAME.openjdk-bin=		openjdk-bin
@@ -267,8 +247,6 @@ _PKG_JVM=		"none"
 BUILDLINK_API_DEPENDS.kaffe?=		kaffe>=1.1.4
 BUILDLINK_API_DEPENDS.openjdk7?=	openjdk7-[0-9]*
 BUILDLINK_API_DEPENDS.openjdk8?=	openjdk8-[0-9]*
-BUILDLINK_API_DEPENDS.sun-jdk6?=	sun-jdk6-[0-9]*
-BUILDLINK_API_DEPENDS.sun-jre6?=	sun-jre6-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jdk7?=	sun-jdk7-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jre7?=	sun-jre7-[0-9]*
 BUILDLINK_API_DEPENDS.oracle-jdk8?=	oracle-jdk8-[0-9]*
@@ -278,7 +256,6 @@ BUILDLINK_API_DEPENDS.openjdk-bin?=	openjdk-bin-[0-9]*
 _JRE.kaffe=		kaffe
 _JRE.openjdk7=		openjdk7
 _JRE.openjdk8=		openjdk8
-_JRE.sun-jdk6=		sun-jre6
 _JRE.sun-jdk7=		sun-jre7
 _JRE.oracle-jdk8=	oracle-jre8
 _JRE.openjdk-bin=	openjdk-bin
@@ -297,11 +274,6 @@ _JAVA_HOME=		${LOCALBASE}/java/openjdk7
 _JDK_PKGSRCDIR=		../../lang/openjdk8
 _JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
 _JAVA_HOME=		${LOCALBASE}/java/openjdk8
-.elif ${_PKG_JVM} == "sun-jdk6"
-_JDK_PKGSRCDIR=		../../lang/sun-jdk6
-_JRE_PKGSRCDIR=		../../lang/sun-jre6
-_JAVA_HOME=		${LOCALBASE}/java/sun-6
-UNLIMIT_RESOURCES+=	datasize
 .elif ${_PKG_JVM} == "sun-jdk7"
 _JDK_PKGSRCDIR=		../../lang/sun-jdk7
 _JRE_PKGSRCDIR=		../../lang/sun-jre7

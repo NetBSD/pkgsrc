@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/04/27 11:18:56 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2019/05/02 08:36:10 wiz Exp $
 
 DISTNAME=	${PKGNAME_NOREV}
 PKGNAME=	eclipse-${VERSION}
@@ -15,7 +15,7 @@ LICENSE=	eclipse-license
 DEPENDS+=	apache-ant>=1.4.1:../../devel/apache-ant
 USE_TOOLS+=	unzip zip
 
-PKG_JVMS_ACCEPTED= sun-jdk6 sun-jdk15 sun-jdk14
+PKG_JVMS_ACCEPTED= sun-jdk7
 
 MAKE_ENV+=	JAVA_HOME=${PKG_JAVA_HOME:Q}
 MAKE_ENV+=	ANT_HOME=${PREFIX:Q}
