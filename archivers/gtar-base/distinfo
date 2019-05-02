@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.43 2019/02/24 15:18:45 wiz Exp $
+$NetBSD: distinfo,v 1.44 2019/05/02 20:27:42 wiedi Exp $
 
 SHA1 (tar-1.32.tar.bz2) = d0b0259689062d7700480f74c547f62f18e7412d
 RMD160 (tar-1.32.tar.bz2) = b83c063c4eea4f36bf70c6be67a1c7fc74e5e82f
@@ -6,5 +6,6 @@ SHA512 (tar-1.32.tar.bz2) = 3139e87112123269ee0600243b3ea081687cc93667bef5832bfe
 Size (tar-1.32.tar.bz2) = 2947264 bytes
 SHA1 (patch-Makefile.in) = 78cc142b9370317c52215c106ea1e7217e71f9b5
 SHA1 (patch-gnu_readlinkat.c) = ce9869bfcd75005bb4ddac4e3223df01a26a2b29
+SHA1 (patch-gnu_sys-limits.h) = b644d4f7915cac5757cb197966ec5f37553f3237
 SHA1 (patch-lib_xattr-at.c) = c69631c118558c0c056feb5b55188b2b4c92cc19
 SHA1 (patch-src_system.c) = cd9f7358fa93ed0ba4a1b3fffdae5d7f84ef4791
