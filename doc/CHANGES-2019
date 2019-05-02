@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1923 2019/05/02 07:46:36 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1924 2019/05/02 07:58:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3110,3 +3110,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated geography/gpsd to 3.18.1 [gdt 2019-05-01]
 	Updated devel/hdf5 to 1.10.4nb1 [bacon 2019-05-01]
 	Removed chat/tkicb [wiz 2019-05-02]
+	Removed multimedia/xanim [wiz 2019-05-02]
