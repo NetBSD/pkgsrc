@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.325 2019/04/14 06:28:37 wiz Exp $
+# $NetBSD: Makefile,v 1.326 2019/05/02 22:11:32 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -18,16 +18,6 @@ SUBDIR+=	SDL2_ttf
 SUBDIR+=	TextFonts-ttf
 SUBDIR+=	Xft2
 SUBDIR+=	Xg
-SUBDIR+=	acroread7-chsfont
-SUBDIR+=	acroread7-chtfont
-SUBDIR+=	acroread7-font-share
-SUBDIR+=	acroread7-jpnfont
-SUBDIR+=	acroread7-korfont
-SUBDIR+=	acroread9-chsfont
-SUBDIR+=	acroread9-chtfont
-SUBDIR+=	acroread9-font-share
-SUBDIR+=	acroread9-jpnfont
-SUBDIR+=	acroread9-korfont
 SUBDIR+=	adobe-cidfonts
 SUBDIR+=	adobe-cmaps
 SUBDIR+=	ae-mono-ttf
