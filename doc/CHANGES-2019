@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1934 2019/05/02 09:41:25 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1935 2019/05/02 10:11:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3128,3 +3128,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-autobahn to 19.3.3 [adam 2019-05-02]
 	Updated devel/py-nose2 to 0.9.1 [adam 2019-05-02]
 	Updated security/py-trustme to 0.5.1 [adam 2019-05-02]
+	Updated archivers/py-zstandard to 0.11.0nb1 [wiz 2019-05-02]
