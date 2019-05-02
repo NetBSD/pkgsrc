@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2019/04/26 10:13:15 adam Exp $
+# $NetBSD: Makefile,v 1.36 2019/05/02 09:16:47 adam Exp $
 
 DISTNAME=	ipython-7.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,11 +25,6 @@ DEPENDS+=	${PYPKGPREFIX}-traitlets>=4.2:../../devel/py-traitlets
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} == 34
-DEPENDS+=	${PYPKGPREFIX}-typing-[0-9]*:../../devel/py-typing
-.endif
 
 post-install:
 	cd ${DESTDIR}${PREFIX} && \
