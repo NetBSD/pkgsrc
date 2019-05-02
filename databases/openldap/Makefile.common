@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.42 2018/12/20 17:54:09 adam Exp $
+# $NetBSD: Makefile.common,v 1.43 2019/05/02 10:59:13 jperkin Exp $
 #
 # used by databases/openldap-client/Makefile
 # used by databases/openldap-cloak/Makefile
@@ -98,6 +98,11 @@ PTH_FDSETSIZE_cmd=							\
 		${ECHO} 0;						\
 	fi
 CPPFLAGS+=	-DOPENLDAP_FD_SETSIZE=${PTH_FDSETSIZE_cmd:sh:Q}
+.endif
+
+# OpenLDAP hardcodes this to 4096, disregarding the OS default.
+.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64)
+CPPFLAGS+=	-DOPENLDAP_FD_SETSIZE=65536
 .endif
 
 MAKE_FLAGS+=		moduledir=${OPENLDAP_MODULEDIR}
