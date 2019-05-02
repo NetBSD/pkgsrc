@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1925 2019/05/02 08:24:08 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1926 2019/05/02 08:36:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3112,3 +3112,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed chat/tkicb [wiz 2019-05-02]
 	Removed multimedia/xanim [wiz 2019-05-02]
 	Removed lang/jini [wiz 2019-05-02]
+	Removed lang/sun-jdk6 [wiz 2019-05-02]
+	Removed lang/sun-jre6 [wiz 2019-05-02]

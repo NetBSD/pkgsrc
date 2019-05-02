@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2018/02/11 15:50:12 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2019/05/02 08:36:10 wiz Exp $
 
 DISTNAME=		PanoTools
 PKGNAME=		${DISTNAME}-2.6b1
@@ -16,7 +16,7 @@ EMUL_MODULES.linux=	base jpeg png tiff
 WRKSRC=			${WRKDIR}/PTLinux
 BUILD_DIRS=		# empty
 USE_JAVA=		run
-PKG_JVMS_ACCEPTED=	sun-jdk6
+PKG_JVMS_ACCEPTED=	sun-jdk7
 
 PLIST_SUBST+=		JAVA_HOME="${PKG_JAVA_HOME:C/^${PREFIX}\///}"
 
