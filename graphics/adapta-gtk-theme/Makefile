@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/11/28 11:00:45 nia Exp $
+# $NetBSD: Makefile,v 1.3 2019/05/02 20:29:45 nia Exp $
 
 DISTNAME=	adapta-gtk-theme-3.95.0.11
 CATEGORIES=	graphics
@@ -20,9 +20,9 @@ CONFIGURE_ARGS+=	--disable-cinnamon
 CONFIGURE_ARGS+=	--disable-flashback
 
 DEPENDS+=	gtk2-engines-murrine-[0-9]*:../../x11/gtk2-engines-murrine
-BUILD_DEPENDS+=	inkscape-[0-9]*:../../graphics/inkscape
-BUILD_DEPENDS+=	parallel-[0-9]*:../../parallel/parallel
-BUILD_DEPENDS+=	sassc-[0-9]*:../../www/sassc
+TOOL_DEPENDS+=	inkscape-[0-9]*:../../graphics/inkscape
+TOOL_DEPENDS+=	parallel-[0-9]*:../../parallel/parallel
+TOOL_DEPENDS+=	sassc-[0-9]*:../../www/sassc
 
 REPLACE_BASH+=	extra/tweetdeck/recolor-cdk.sh
 REPLACE_BASH+=	gtk/asset/assets-gtk2-scripts/clone-assets-gtk2.sh
