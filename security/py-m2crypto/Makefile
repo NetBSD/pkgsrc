@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2019/03/04 18:41:48 adam Exp $
+# $NetBSD: Makefile,v 1.51 2019/05/02 09:16:47 adam Exp $
 
 DISTNAME=	M2Crypto-0.32.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -14,7 +14,7 @@ LICENSE=	m2crypto-license
 
 PLIST_VARS+=	typing
 
-.if ${_PYTHON_VERSION} == 27 || ${_PYTHON_VERSION} == 34
+.if ${_PYTHON_VERSION} == 27
 DEPENDS+=	${PYPKGPREFIX}-typing-[0-9]*:../../devel/py-typing
 PLIST.typing=	yes
 .endif
