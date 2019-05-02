@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1938 2019/05/02 13:30:19 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1939 2019/05/02 13:31:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3132,3 +3132,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/openldap-client to 2.4.47nb1 [jperkin 2019-05-02]
 	Updated print/qpdf to 8.4.1 [ryoon 2019-05-02]
 	Updated net/bind914 to 9.14.1nb1 [taca 2019-05-02]
+	Updated net/bind912 to 9.12.4pl1nb1 [taca 2019-05-02]
