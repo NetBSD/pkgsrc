@@ -455,7 +455,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 
 	jvms := enumFrom(
 		"mk/java-vm.mk",
-		"openjdk8 oracle-jdk8 openjdk7 sun-jdk7 sun-jdk6 jdk16 jdk15 kaffe",
+		"openjdk8 oracle-jdk8 openjdk7 sun-jdk7 jdk16 jdk15 kaffe",
 		"_PKG_JVMS.*")
 
 	// Last synced with mk/defaults/mk.conf revision 1.300 (fe3d998769f).
