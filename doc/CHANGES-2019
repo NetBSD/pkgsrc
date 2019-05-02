@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1942 2019/05/02 15:31:25 jperkin Exp $
+$NetBSD: CHANGES-2019,v 1.1943 2019/05/02 15:50:00 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3136,3 +3136,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/php72 to 7.2.18 [taca 2019-05-02]
 	Updated lang/php73 to 7.3.5 [taca 2019-05-02]
 	Updated sysutils/coreutils to 8.29nb2 [jperkin 2019-05-02]
+	Updated fonts/ipaexfont to 00401 [ryoon 2019-05-02]
