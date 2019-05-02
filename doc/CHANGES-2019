@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1946 2019/05/02 22:11:33 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1947 2019/05/02 22:12:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3149,3 +3149,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed fonts/acroread9-font-share [wiz 2019-05-02]
 	Removed fonts/acroread9-jpnfont [wiz 2019-05-02]
 	Removed fonts/acroread9-korfont [wiz 2019-05-02]
+	Removed mail/amavis-perl [wiz 2019-05-02]
