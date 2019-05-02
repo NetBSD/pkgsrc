@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.216 2019/04/24 23:43:55 fox Exp $
+# $NetBSD: Makefile,v 1.217 2019/05/02 07:46:36 wiz Exp $
 #
 
 COMMENT=	Communication programs
@@ -141,7 +141,6 @@ SUBDIR+=	telepathy-qt
 SUBDIR+=	tik
 SUBDIR+=	tirc
 SUBDIR+=	tkabber
-SUBDIR+=	tkicb
 SUBDIR+=	tkirc
 SUBDIR+=	tkirc2
 SUBDIR+=	tootstream
