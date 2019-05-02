@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1933 2019/05/02 09:29:55 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1934 2019/05/02 09:41:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3125,3 +3125,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed security/uvscan [wiz 2019-05-02]
 	Removed lang/py34-html-docs [adam 2019-05-02]
 	Removed lang/py35-html-docs [adam 2019-05-02]
+	Updated www/py-autobahn to 19.3.3 [adam 2019-05-02]
+	Updated devel/py-nose2 to 0.9.1 [adam 2019-05-02]
+	Updated security/py-trustme to 0.5.1 [adam 2019-05-02]
