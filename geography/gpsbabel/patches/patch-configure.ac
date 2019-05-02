@@ -1,0 +1,29 @@
+$NetBSD: patch-configure.ac,v 1.1 2019/05/02 19:01:17 gdt Exp $
+
+In pkgsrc, we don't provide Qt as a framework.
+
+It's not clear how/if this should be addressed upstream.
+
+--- configure.ac.orig	2019-04-14 02:32:25.000000000 +0000
++++ configure.ac
+@@ -232,19 +232,7 @@ AS_CASE(["$target"], [*-*-cygwin* | *-*-
+ 	USB_LIBS="-framework  IOKit -framework CoreFoundation"
+ 	AC_DEFINE(HAVE_LIBUSB, 1)
+ 
+-	# On Mac, use frameworks for includes and library files.
+-	# Macports uses a non-standard build of Qt with an added
+-	# QT_INSTALL_FRAMEWORKS flag, so look for thier custom
+-	# version first.  That will fail on 'normal' Qt so fall
+-	# back to QT_INSTALL_LIBS.
+-	QT_FW_OR_LIBS=$($QMAKE -query QT_INSTALL_FRAMEWORKS)
+-	AS_IF([test "$QT_FW_OR_LIBS" = "**Unknown**"], [
+-		QT_FW_OR_LIBS=$($QMAKE -query QT_INSTALL_LIBS)
+-	])
+-	QT_LIBS="-Wl,-rpath, $QT_FW_OR_LIBS -F$QT_FW_OR_LIBS -framework QtCore"
+-	QT_INC="$QT_FW_OR_LIBS"
+-	QT_INC_OPT="-F"
+-	QT_SYSINC_OPT="-iframework"
++	# In pkgsrc, we use the installed qt, not the framework.
+ ], [*-*-freebsd*], [
+ 	GBSER=gbser_posix.o
+ 	AC_MSG_CHECKING(for libusb)

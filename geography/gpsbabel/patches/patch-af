@@ -1,61 +1,62 @@
-$NetBSD: patch-af,v 1.5 2015/06/06 12:57:58 gdt Exp $
+$NetBSD: patch-af,v 1.6 2019/05/02 19:01:17 gdt Exp $
 
 From Giles Lean, who places it in the public domain.  Workarounds for
 problems with buggy USB serial adapators.  Not applied by upstream
 2009-02-21 because it's too dangerous to work around problems without
 understanding them.
 
---- jeeps/gpsread.cc.orig	2014-02-13 00:12:48.000000000 +0000
+--- jeeps/gpsread.cc.orig	2019-04-14 02:32:25.000000000 +0000
 +++ jeeps/gpsread.cc
-@@ -98,6 +98,36 @@ int32 GPS_Serial_Packet_Read(gpsdevh* fd
+@@ -95,6 +95,37 @@ int32 GPS_Serial_Packet_Read(gpsdevh* fd
        GPS_Diag("%02x ", u);
  
        if (!len) {
-+                /*
-+                 * Missed DLE characters have been observed with Geko
-+                 * 201 and Legend GPSRs with Prolific USB-serial
-+                 * cables.  The following kludge seems to help.
-+                 *
-+                 * It has been tested so far with the following
-+                 * combinations of software and hardware:
-+                 *
-+                 * OS X 10.4.x and 10.5.x:
-+                 *
-+                 * - a Geko 201 (firmware version 2.70) and a third
-+                 *   party cable using a Prolific USB-serial converter
-+                 * - a Legend using a serial cable with a non-integral
-+                 *   Prolific USB-serial converter.
-+                 *
-+                 * NetBSD-4.0/i386 with the Geko and cable as above.
-+                 *
-+                 * REVISIT GFL Should this be a switch in a .ini file?
-+                 *
-+                 * + it's a kludge, so leaving it always on is ugly
-+                 * - if it's harmless to properly working hardware,
-+                 *   then it's a better user experience to leave it on
-+                 */
-+                if (u == 0x06 || u == 0x15)
-+                {
-+                    ++len;
-+		    (void) fprintf(stderr,"GPS_Packet_Read: inserted DLE due to 0x%02x.\n", u);
-+                    goto dle_missed;
-+                }
 +
++	/*
++	 * Missed DLE characters have been observed with Geko
++	 * 201 and Legend GPSRs with Prolific USB-serial
++	 * cables.  The following kludge seems to help.
++	 *
++	 * It has been tested so far with the following
++	 * combinations of software and hardware:
++	 *
++	 * OS X 10.4.x and 10.5.x:
++	 *
++	 * - a Geko 201 (firmware version 2.70) and a third
++	 *   party cable using a Prolific USB-serial converter
++	 * - a Legend using a serial cable with a non-integral
++	 *   Prolific USB-serial converter.
++	 *
++	 * NetBSD-4.0/i386 with the Geko and cable as above.
++	 *
++	 * REVISIT GFL Should this be a switch in a .ini file?
++	 *
++	 * + it's a kludge, so leaving it always on is ugly
++	 * - if it's harmless to properly working hardware,
++	 *   then it's a better user experience to leave it on
++	 */
++	if (u == 0x06 || u == 0x15)
++	  {
++	    ++len;
++	    (void) fprintf(stderr,"GPS_Packet_Read: inserted DLE due to 0x%02x.\n", u);
++	    goto dle_missed;
++	  }
++	
          if (u != DLE) {
-           (void) fprintf(stderr,"GPS_Packet_Read: No DLE.  Data received, but probably not a garmin packet.\n");
+           (void) fprintf(stderr, "GPS_Packet_Read: No DLE.  Data received, but probably not a garmin packet.\n");
            (void) fflush(stderr);
-@@ -107,6 +137,7 @@ int32 GPS_Serial_Packet_Read(gpsdevh* fd
+@@ -104,6 +135,7 @@ int32 GPS_Serial_Packet_Read(gpsdevh* fd
          continue;
        }
  
-+dle_missed:
-       if (len==1) {
++    dle_missed:
+       if (len == 1) {
          (*packet).type = u;
          ++len;
-@@ -130,6 +161,20 @@ int32 GPS_Serial_Packet_Read(gpsdevh* fd
+@@ -127,6 +159,20 @@ int32 GPS_Serial_Packet_Read(gpsdevh* fd
        if (u == ETX)
          if (isDLE) {
-           if (p-(*packet).data-2 != (*packet).n) {
+           if (p - (*packet).data - 2 != (*packet).n) {
 +	    /*
 +	     * When used with a buggy Prolific USB-serial converter the
 +	     * calling sequence GPS_A000() -> GPS_Get_Ack() sometimes
