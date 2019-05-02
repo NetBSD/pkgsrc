@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/01/25 13:33:15 adam Exp $
+$NetBSD: distinfo,v 1.3 2019/05/02 09:41:04 adam Exp $
 
-SHA1 (trustme-0.5.0.tar.gz) = 81053fcc7e73f8f34ce075b224761d0c980b86fa
-RMD160 (trustme-0.5.0.tar.gz) = 1704c62a88eb0d3657b6993920427c40dbe8030a
-SHA512 (trustme-0.5.0.tar.gz) = 7ce5041b8d3687fa462fe93e55b2f83549ab805cec4a2a94c9178a02af557cf8900fe6c05bae0bf100eb36181952fb2bc31cb1d4d6ad6ed2fd2b0706d569518f
-Size (trustme-0.5.0.tar.gz) = 21232 bytes
+SHA1 (trustme-0.5.1.tar.gz) = 6266f6d1f00d1f27c9700f03e30e458a97016a85
+RMD160 (trustme-0.5.1.tar.gz) = dacc89b937e0b1185569ea3f96e4c3a871e98f3f
+SHA512 (trustme-0.5.1.tar.gz) = 7784e94ce01698884baa91800517669cd61e0d0402b1b357f1917e7defc11bc22798b150d01d50ec25ad0c54f5907363d2f78c21b93520af55b6b537a96b202c
+Size (trustme-0.5.1.tar.gz) = 21369 bytes
