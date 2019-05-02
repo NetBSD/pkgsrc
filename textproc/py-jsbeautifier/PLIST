@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/03/02 14:41:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/05/02 08:35:09 adam Exp $
 bin/js-beautify-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -69,9 +69,6 @@ ${PYSITELIB}/jsbeautifier/tests/generated/__init__.pyo
 ${PYSITELIB}/jsbeautifier/tests/generated/tests.py
 ${PYSITELIB}/jsbeautifier/tests/generated/tests.pyc
 ${PYSITELIB}/jsbeautifier/tests/generated/tests.pyo
-${PYSITELIB}/jsbeautifier/tests/test-packer.py
-${PYSITELIB}/jsbeautifier/tests/test-packer.pyc
-${PYSITELIB}/jsbeautifier/tests/test-packer.pyo
 ${PYSITELIB}/jsbeautifier/tests/testindentation.py
 ${PYSITELIB}/jsbeautifier/tests/testindentation.pyc
 ${PYSITELIB}/jsbeautifier/tests/testindentation.pyo
