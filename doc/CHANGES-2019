@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1928 2019/05/02 08:38:18 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1929 2019/05/02 08:40:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3116,3 +3116,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed lang/sun-jre6 [wiz 2019-05-02]
 	Removed print/acroread8 [wiz 2019-05-02]
 	Removed print/acroread7 [wiz 2019-05-02]
+	Updated devel/py-isort to 4.3.18 [adam 2019-05-02]
+	Updated devel/py-xdis to 4.0.1 [adam 2019-05-02]
+	Updated textproc/py-jsbeautifier to 1.10.0 [adam 2019-05-02]
+	Updated www/py-hyperframe to 5.2.0 [adam 2019-05-02]
