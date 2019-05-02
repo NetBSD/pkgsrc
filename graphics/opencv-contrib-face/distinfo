@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2019/04/24 19:34:45 adam Exp $
+$NetBSD: distinfo,v 1.11 2019/05/02 08:58:01 wiz Exp $
 
 SHA1 (opencv-3.4.6.tar.gz) = c445fe9f0a07a95837d2f39c0637da71158129c5
 RMD160 (opencv-3.4.6.tar.gz) = 9fba797c535a7c4366cbf8018ee61ccd396b6c51
@@ -15,6 +15,7 @@ SHA1 (patch-cmake_OpenCVDetectCXXCompiler.cmake) = 221b0551d0f29d7e79afe3da8a33b
 SHA1 (patch-modules_core_include_opencv2_core_types_c.h) = 75444e65677be99af8167f9060419d7970a7adaa
 SHA1 (patch-modules_core_src_downhill__simplex.cpp) = 1ad7c2fa126d15050b87785e8eec20dbe796b471
 SHA1 (patch-modules_core_src_system.cpp) = 3b7ac545585a430d28c7077f360357079f127580
+SHA1 (patch-modules_dnn_test__precomp.hpp) = 9bf15d32394f36b92e5fc5d57fd576b3860233ae
 SHA1 (patch-modules_flann_include_opencv2_flann_defines.h) = ab848e67c4e03219670598ac2d21071a617a5c33
 SHA1 (patch-modules_highgui_src_window__cocoa.mm) = 03a35cdbb32f40f7a234c406ddf0e4991873ae37
 SHA1 (patch-modules_ts_src_ts.cpp) = b9a3992014b02dbd89d46375a2476385e91dc24c
