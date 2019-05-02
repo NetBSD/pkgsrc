@@ -1,32 +1,42 @@
-$NetBSD: distinfo,v 1.10 2015/06/14 19:46:51 marino Exp $
+$NetBSD: distinfo,v 1.11 2019/05/02 08:26:26 wiz Exp $
 
 SHA1 (ada-bootstrap.i386.dragonfly.36A.tar.bz2) = 7e0725889ae752e6a9fdbac5b1d2ef0e3f62822e
 RMD160 (ada-bootstrap.i386.dragonfly.36A.tar.bz2) = f62c00515588804ce69368507822f30380d7e48d
+SHA512 (ada-bootstrap.i386.dragonfly.36A.tar.bz2) = d430cc122476a02e8a6ef987e1d7c92c1628881968cb32f08a6a9c6e3272abef667d242dd4c996f69c802a565b5d2fecfbad233e241fcd5f22d45968170821e8
 Size (ada-bootstrap.i386.dragonfly.36A.tar.bz2) = 39357314 bytes
 SHA1 (ada-bootstrap.i386.freebsd.100B.tar.bz2) = b7ff322bbcfa403d37d917d6e88e306de0857251
 RMD160 (ada-bootstrap.i386.freebsd.100B.tar.bz2) = 7a85e0f073dafe9b0d37b493dbb4268bd2f39601
+SHA512 (ada-bootstrap.i386.freebsd.100B.tar.bz2) = ab4a32457f5febf2c854b7107abb8159754f5a5e8413598fb2ecf1ed0a755129c26aab0e0c2e09695d02cef5490b53a3b18c9fa37cec0b07476940c27fc76ae8
 Size (ada-bootstrap.i386.freebsd.100B.tar.bz2) = 41229192 bytes
 SHA1 (ada-bootstrap.i386.freebsd.84.tar.bz2) = 54c3d59fd2ca75bb91255296bc0f9d6028ac2cd2
 RMD160 (ada-bootstrap.i386.freebsd.84.tar.bz2) = 8ceb3957708eb9ccc8ce2ff1ea26949683ee2fa7
+SHA512 (ada-bootstrap.i386.freebsd.84.tar.bz2) = de193d7f501538204b4c3159e3df33c2c3e9c9ffbe6ccd67d2aec2c77243e91b217ea7c05b202fe513d43c751ca7fcb002f47e3156d05436302e2038b4c4e5ae
 Size (ada-bootstrap.i386.freebsd.84.tar.bz2) = 39727003 bytes
 SHA1 (ada-bootstrap.i386.netbsd.614.tar.bz2) = 2c29209b086dcf3076428f232fadf306b9a227c6
 RMD160 (ada-bootstrap.i386.netbsd.614.tar.bz2) = f0ecb9b0d69c2d097c6405e0db581f606b372017
+SHA512 (ada-bootstrap.i386.netbsd.614.tar.bz2) = 39d0b2503e9e3a0c9aa25c2daa83be4109e9bda41076c2ea5eb4abf89137c6c2ad6b6726a6d634c8f89f4695810ba902920444df29c5cba31942f84a69aeee75
 Size (ada-bootstrap.i386.netbsd.614.tar.bz2) = 37900035 bytes
 SHA1 (ada-bootstrap.x86_64.dragonfly.36A.tar.bz2) = 85ceea8d0bd0d1b8c1f91ea6d7ffb2ffe4a4c7da
 RMD160 (ada-bootstrap.x86_64.dragonfly.36A.tar.bz2) = 7ca8ccff5a4400a7e4fc9ad1d11c64f3c92d54f4
+SHA512 (ada-bootstrap.x86_64.dragonfly.36A.tar.bz2) = fe0dcf24d3926af399494921061fd71b8346fe160cc340e8ab36cca7973383f15d94b12213aa927a7dd69147bc8d4abb62d393d53642bde6bd5ef079011b6cd6
 Size (ada-bootstrap.x86_64.dragonfly.36A.tar.bz2) = 40747242 bytes
 SHA1 (ada-bootstrap.x86_64.freebsd.100B.tar.bz2) = edfe60c5f42bbeb145d7070ed868135ebc60c2de
 RMD160 (ada-bootstrap.x86_64.freebsd.100B.tar.bz2) = 0d50885402208caafbc133ffc3b8684e89a50cae
+SHA512 (ada-bootstrap.x86_64.freebsd.100B.tar.bz2) = 07e7503f575c6ba30c5d4db1f9781f522c0b48effb62c90fe3af991ebbada8064d035871e0e99206c86eb4c10fdfffb6faf89bc203370797d9c1818657004f1a
 Size (ada-bootstrap.x86_64.freebsd.100B.tar.bz2) = 42163803 bytes
 SHA1 (ada-bootstrap.x86_64.freebsd.84.tar.bz2) = b5c76ce07df6e944742eda5f860352c8e179b988
 RMD160 (ada-bootstrap.x86_64.freebsd.84.tar.bz2) = 334c2375ee35bdf931a3a476e794e494ff252515
+SHA512 (ada-bootstrap.x86_64.freebsd.84.tar.bz2) = f7edc4b4d9adcf071cb74221119ae5989f39af176c988f9c446b7b302247f7263215724f5826cf27854f0b87a23f2756ce703e6e1519997faa48a157c0c1425e
 Size (ada-bootstrap.x86_64.freebsd.84.tar.bz2) = 40227668 bytes
 SHA1 (ada-bootstrap.x86_64.netbsd.614.tar.bz2) = 683f58e6e394a508a52ec1dc5f3d9ca2869d5252
 RMD160 (ada-bootstrap.x86_64.netbsd.614.tar.bz2) = 4574857089e82fb80725161cc8b625ce75f6810e
+SHA512 (ada-bootstrap.x86_64.netbsd.614.tar.bz2) = 6287668001dd6d45a1dfe2a6f548fe933ce2bff4fec43516dc76aad8aeb27859ee6660068edfbc9dc671f025e1635629212b1adc1308d5cc775dd19e1f1764b2
 Size (ada-bootstrap.x86_64.netbsd.614.tar.bz2) = 39348972 bytes
 SHA1 (ada-bootstrap.x86_64.solaris.511.tar.bz2) = abb16c1582e2a6ffe37df4afd96d04c44f2eea7b
 RMD160 (ada-bootstrap.x86_64.solaris.511.tar.bz2) = 41677e2fd0cb02c89f200fb97b112ad3be7f19cd
+SHA512 (ada-bootstrap.x86_64.solaris.511.tar.bz2) = 59db01497b11bd4913cfedcbe3931caa361564c1f5eadddd200dc1e0516a44d107494ab898f93bc1050998f73623bf30a74f0933b84d9a03a3c9d51f3f2de8d9
 Size (ada-bootstrap.x86_64.solaris.511.tar.bz2) = 60110383 bytes
 SHA1 (gcc-4.9.2.tar.bz2) = 79dbcb09f44232822460d80b033c962c0237c6d8
 RMD160 (gcc-4.9.2.tar.bz2) = bc6454e7c67c6f5fd2c98cdd1364ebb1739e1347
+SHA512 (gcc-4.9.2.tar.bz2) = e96cba06d572dbe7f382a2b00fd9297dcf9f9219d46a9ad0bd904dc36d5e7db3335e422640b79a27fed6fde91b0731732b94a0e2fbcd47344d6779f8ba1f4f9c
 Size (gcc-4.9.2.tar.bz2) = 89939747 bytes
