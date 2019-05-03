@@ -1,15 +1,77 @@
-$NetBSD: patch-Makefile.in,v 1.2 2018/12/18 14:16:18 hauke Exp $
+$NetBSD: patch-Makefile.in,v 1.3 2019/05/03 11:04:34 hauke Exp $
 
 Patch pkgsrc variables
 
---- Makefile.in.orig	2010-12-13 03:43:49.000000000 +0000
+Add openssl 1.0.x compatibility shims
+
+--- Makefile.in.orig	2019-05-02 14:26:24.379182232 +0000
 +++ Makefile.in
-@@ -269,6 +269,8 @@ rash : FRC
- 	    -e 's@_RADMIND_MAIL_DOMAIN@${RADMIND_MAIL_DOMAIN}@g' \
- 	    -e 's@_RADMIND_COMMANDFILE@${COMMANDFILE}@g' \
- 	    -e 's@_RADMIND_VERSION@$(shell cat VERSION)@g' \
-+	    -e 's@_PKG_SYSCONFDIR@${PKG_SYSCONFDIR}@g' \
-+	    -e 's@_LOCALBASE@${LOCALBASE}@g' \
- 	    -e 's@_RADMIND_ECHO_PATH@${ECHO}@g' \
- 	    ${srcdir}/ra.sh > tmp/ra.sh; 
+@@ -56,42 +56,48 @@ TARGETS=        radmind ${BINTARGETS}
  
+ RADMIND_OBJ=    version.o daemon.o command.o argcargv.o code.o \
+                 cksum.o base64.o mkdirs.o applefile.o connect.o \
+-		list.o wildcard.o logname.o pathcmp.o tls.o
++		list.o wildcard.o logname.o pathcmp.o tls.o \
++		openssl_compat.o
+ 
+ FSDIFF_OBJ=     version.o fsdiff.o argcargv.o transcript.o llist.o code.o \
+                 hardlink.o cksum.o base64.o pathcmp.o radstat.o applefile.o \
+-		list.o wildcard.o
++		list.o wildcard.o openssl_compat.o
+ 
+ KTCHECK_OBJ=    version.o ktcheck.o argcargv.o retr.o base64.o code.o \
+                 cksum.o list.o llist.o connect.o applefile.o tls.o pathcmp.o \
+-		progress.o mkdirs.o report.o rmdirs.o mkprefix.o
++		progress.o mkdirs.o report.o rmdirs.o mkprefix.o \
++		openssl_compat.o
+ 
+ LAPPLY_OBJ=     version.o lapply.o argcargv.o code.o base64.o retr.o \
+                 radstat.o update.o cksum.o connect.o pathcmp.o progress.o \
+-                applefile.o report.o tls.o mkprefix.o
++                applefile.o report.o tls.o mkprefix.o openssl_compat.o
+ 
+ LCREATE_OBJ=    version.o lcreate.o argcargv.o code.o connect.o progress.o \
+-                stor.o applefile.o base64.o cksum.o radstat.o tls.o
++                stor.o applefile.o base64.o cksum.o radstat.o tls.o \
++		openssl_compat.o
+ 
+ LCKSUM_OBJ=     version.o lcksum.o argcargv.o cksum.o base64.o code.o \
+-                progress.o pathcmp.o applefile.o connect.o root.o
++                progress.o pathcmp.o applefile.o connect.o root.o \
++		openssl_compat.o
+ 
+ LMERGE_OBJ=     version.o lmerge.o argcargv.o code.o pathcmp.o mkdirs.o \
+ 		root.o
+ 
+ LFDIFF_OBJ=     version.o lfdiff.o argcargv.o connect.o retr.o cksum.o \
+                 progress.o base64.o applefile.o code.o tls.o pathcmp.o \
+-		transcript.o list.o radstat.o hardlink.o mkprefix.o wildcard.o
++		transcript.o list.o radstat.o hardlink.o mkprefix.o \
++		wildcard.o openssl_compat.o
+ 
+ REPO_OBJ=	version.o repo.o report.o argcargv.o connect.o code.o tls.o
+ 
+ T2PKG_OBJ=	version.o t2pkg.o argcargv.o transcript.o connect.o code.o \
+ 		hardlink.o cksum.o base64.o pathcmp.o radstat.o applefile.o \
+-		list.o rmdirs.o mkdirs.o wildcard.o progress.o
++		list.o rmdirs.o mkdirs.o wildcard.o progress.o \
++		openssl_compat.o
+ 
+ TWHICH_OBJ=     version.o twhich.o argcargv.o transcript.o llist.o code.o \
+                 hardlink.o cksum.o base64.o pathcmp.o radstat.o applefile.o \
+-		list.o wildcard.o
++		list.o wildcard.o openssl_compat.o
+ 
+ LSORT_OBJ=     version.o lsort.o pathcmp.o code.o argcargv.o
+ 
+@@ -102,6 +108,10 @@ version.o : version.c
+ 		-DVERSION=\"`cat ${srcdir}/VERSION`\" \
+ 		-c ${srcdir}/version.c
+ 
++openssl_compat.o : openssl_compat.c
++	${CC} ${CFLAGS} \
++	-c ${srcdir}/openssl_compat.c
++
+ transcript.o : transcript.c
+ 	${CC} ${CFLAGS} \
+ 		-D_RADMIND_PATH=\"${RADMINDDIR}\" \
