@@ -1,4 +1,4 @@
-$NetBSD: README.MacOSX,v 1.35 2017/09/23 05:53:52 maya Exp $
+$NetBSD: README.MacOSX,v 1.36 2019/05/03 11:52:31 gdt Exp $
 
 This file describes the use of current versions of pkgsrc with
 multiple versions of Darwin and macOS, omitting information about
@@ -35,6 +35,18 @@ location, and one has to use an SDK that puts headers someplace else.
 pkgsrc supports this, but there has been some confusion where a 10.9
 system produced binaries for 10.10, which only mostly works.  The
 confusion is believed to be resolved.
+
+*** SDK version issues
+
+The SDK supported versions and default versions do are not always the
+same as the current system version.  The following may be useful in
+understanding one's situation:
+
+  /usr/bin/xcrun --show-sdk-version
+  sw_vers -productVersion
+
+pkgsrc attempts to query the system version, and then ask the sdk to
+use that version.  See mk/platform/Darwin.mk for the code.
 
 ** gcc vs clang
 
@@ -80,7 +92,7 @@ Generally, users will not need to deal with the default ABI change,
 except that packages are mostly only portable across machines with the
 same bootstrapping parameters.
 
-If one unpacks a new binary bootstrap kit over an existing
+[If one unpacks a new binary bootstrap kit over an existing
 installation, one can end up with a mix. The standard advice is not to
 do this, and to rrebuild/reinstall all packages from scratch or a
 compatible binary package set.  But, one could also mark packages with
@@ -123,8 +135,8 @@ App Store.
 
 *** Command-line Tools
 
-XCode 9 (the current version) does not include an SDK for 10.12.  If
-one installs "Commmand Line Tools", then pkgsrc can use the compiler.
+If one installs "Commmand Line Tools", then pkgsrc can use the
+compiler.
 
 Since Xcode 7 (installed from the Apple Store) the development
 environment can upgrade itself without interaction from the user, but
@@ -168,13 +180,20 @@ old systems.
 pkgsrc PRs about 10.5 or older that do not contain fixes may be closed
 without fixing.
 
-macOS 10.12 - 10.13 are considered new and there may be issues.
+macOS 10.14 is either new or current.
 
-OS X 10.11 is  considered new and there may be issues.
+macOS 10.13 is current; significant amounts of hardware are cannot
+be upgraded beyond this version.
 
-OS X 10.10 is considered current.
+macOS 10.12 is current; Joyent has an active bulk build.
 
-OS X 10.9 (Darwin 13.4.0) is considered current.
+OS X 10.11 is semi-current; significant amounts of hardware are cannot
+be upgraded beyond this version.
+
+OS X 10.10 is old.
+
+OS X 10.9 (Darwin 13.4.0) is old.  (From this point on, this list is
+more of a history lesson than useful for running pkgsrc.)
 
 OS X 10.8 is old, and there are no no known reasons to it instead of a
 newer version.
@@ -183,11 +202,9 @@ OS X 10.7 is the last version that works on a few Intel Macs, e.g. the
 Mac Pro 1.1 and 2.1 and some Mac Minis.
 
 OS X 10.6 is the last version that works on Intel Macs lacking amd64
-support, e.g. Mac Minis and Macbooks with Core Duo.  (There is an
-active bulk build for 10.6.)
+support, e.g. Mac Minis and Macbooks with Core Duo.
 
-OS X 10.5 is the last version that works on PowerPC Macs.  As of 2015
-reports of using 10.5 are very rare.
+OS X 10.5 is the last version that works on PowerPC Macs.
 
 OS X 10.4 (Darwin 8.11.0) is the last version that works on PowerPC G3
 and slower G4 Macs.
@@ -211,18 +228,8 @@ Sevan Janiyan <Sevan@NetBSD.org> provides a bulk build for the -current branch
   See
   https://mail-index.netbsd.org/pkgsrc-bulk/2015/11/07/msg012171.html
 
-** 10.6, --abi=32 i386, gcc
+** 10.12, --abi=64 x86-64, clang
 
-Joyent provide a bulk build for quarterly branches (--abi=32, OS X
-10.6, and therefore gcc 4.2.1, XQuartz, X11_TYPE=native):
+Joyent provide a bulk build for 10.12/x86_64, and therefore clang, at:
   http://pkgsrc.joyent.com/install-on-osx/
-which should run on any version from 10.6 and up.
 
-Note that sed on 10.9 is broken, but a bootstrap on 10.6 will not
-avoid it, so while one can install this bootstrap on 10.9 and run
-binary packages, building packages will not in general work.
-
-** 10.9, --abi=64 x86-64, clang
-
-Joyent provide a bulk build for 10.9/x86_64, and therefore clang, at
-the same URL as above.
