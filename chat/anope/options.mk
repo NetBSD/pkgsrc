@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2019/02/05 19:10:50 nia Exp $
+# $NetBSD: options.mk,v 1.3 2019/05/03 11:05:10 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.anope
 PKG_SUPPORTED_OPTIONS=		gnutls openssl mysql ldap pcre sqlite3
-PKG_SUGGESTED_OPTIONS=		openssl
+PKG_SUGGESTED_OPTIONS=		gnutls
 PLIST_VARS+=			gnutls openssl mysql ldap pcre sqlite3
 
 .include "../../mk/bsd.options.mk"
