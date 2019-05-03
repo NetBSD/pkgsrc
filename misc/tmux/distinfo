@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.39 2018/11/29 10:51:34 leot Exp $
+$NetBSD: distinfo,v 1.40 2019/05/03 10:49:35 triaxx Exp $
 
-SHA1 (tmux-2.8.tar.gz) = 6a469769a242c95dc8aec443b436d4f8f279f517
-RMD160 (tmux-2.8.tar.gz) = 13f097f02b2d3f489fb00af5b3f702cb2eae523f
-SHA512 (tmux-2.8.tar.gz) = e382aec122a10624953432b3c869b21d69390bc2e7d459440a46950802e39503eafb398178f8085191261925e4f0872bb99b19e0403e7beb56d3ceecc4c86b09
-Size (tmux-2.8.tar.gz) = 491195 bytes
-SHA1 (patch-Makefile.in) = dc8a351b06bf2f9f96b3dc4d944a174ef3c8d9db
-SHA1 (patch-osdep-netbsd.c) = 9b4859afed8524cb1966fb473cf49bb576e02885
-SHA1 (patch-tty-term.c) = 20bf235e61e6650bec3e7e94ea79859898039eba
+SHA1 (tmux-2.9a.tar.gz) = 33cba73e64c62f46bd244d4472c59371fb747f56
+RMD160 (tmux-2.9a.tar.gz) = e5460971073abb865adcea2a6711e82d84c53838
+SHA512 (tmux-2.9a.tar.gz) = aca6882688727c10c5647443fdd18bbd6c0f80b7a3bf9667903d1b89d523e604cd715f176f33f2e5673258f00e626a6dc273f80fe97ae4f91621814d89985713
+Size (tmux-2.9a.tar.gz) = 510915 bytes
