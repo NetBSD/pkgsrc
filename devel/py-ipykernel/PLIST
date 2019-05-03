@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/11/29 18:24:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/05/03 10:54:38 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -133,8 +133,8 @@ ${PYSITELIB}/ipykernel/tests/__init__.py
 ${PYSITELIB}/ipykernel/tests/__init__.pyc
 ${PYSITELIB}/ipykernel/tests/__init__.pyo
 ${PYSITELIB}/ipykernel/tests/_asyncio.py
-${PLIST.async}${PYSITELIB}/ipykernel/tests/_asyncio.pyc
-${PLIST.async}${PYSITELIB}/ipykernel/tests/_asyncio.pyo
+${PYSITELIB}/ipykernel/tests/_asyncio.pyc
+${PYSITELIB}/ipykernel/tests/_asyncio.pyo
 ${PYSITELIB}/ipykernel/tests/test_async.py
 ${PYSITELIB}/ipykernel/tests/test_async.pyc
 ${PYSITELIB}/ipykernel/tests/test_async.pyo

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/03/13 19:17:25 adam Exp $
+# $NetBSD: Makefile,v 1.9 2019/05/03 10:54:38 adam Exp $
 
 DISTNAME=	zeep-3.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -30,10 +30,8 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 # TEST_DEPENDS not packaged: pytest-tornado, aioresponses
 
 .include "../../lang/python/pyversion.mk"
-PLIST_VARS+=	aio
-.if ${_PYTHON_VERSION} != 27 && ${_PYTHON_VERSION} != 34
+.if ${_PYTHON_VERSION} != 27
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=1.0:../../www/py-aiohttp
-PLIST.aio=	yes
 .endif
 
 USE_LANGUAGES=	# none
