@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1951 2019/05/03 08:46:58 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1952 2019/05/03 10:50:08 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3154,3 +3154,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/dnscrypt-proxy2 to 2.0.23 [nia 2019-05-03]
 	Updated lang/php71 to 7.1.29 [taca 2019-05-03]
 	Updated net/tor to 0.4.0.5 [wiz 2019-05-03]
+	Updated misc/tmux to 2.9a [triaxx 2019-05-03]
