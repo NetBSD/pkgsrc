@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1949 2019/05/03 07:45:45 nia Exp $
+$NetBSD: CHANGES-2019,v 1.1950 2019/05/03 08:31:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3152,3 +3152,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed mail/amavis-perl [wiz 2019-05-02]
 	Removed www/opera-acroread7 [wiz 2019-05-02]
 	Updated net/dnscrypt-proxy2 to 2.0.23 [nia 2019-05-03]
+	Updated lang/php71 to 7.1.29 [taca 2019-05-03]
