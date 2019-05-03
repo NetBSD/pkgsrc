@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/11/29 18:24:36 adam Exp $
+# $NetBSD: Makefile,v 1.10 2019/05/03 10:54:38 adam Exp $
 
 DISTNAME=	ipykernel-5.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,12 +21,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/pyversion.mk"
-PLIST_VARS+=    async
-.if ${_PYTHON_VERSION} != 34
-PLIST.async=    yes
-.endif
 
 do-test:
 	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
