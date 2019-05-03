@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/03/13 18:02:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/05/03 10:54:38 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -16,11 +16,11 @@ ${PYSITELIB}/zeep/asyncio/__init__.py
 ${PYSITELIB}/zeep/asyncio/__init__.pyc
 ${PYSITELIB}/zeep/asyncio/__init__.pyo
 ${PYSITELIB}/zeep/asyncio/bindings.py
-${PLIST.aio}${PYSITELIB}/zeep/asyncio/bindings.pyc
-${PLIST.aio}${PYSITELIB}/zeep/asyncio/bindings.pyo
+${PLIST.py3x}${PYSITELIB}/zeep/asyncio/bindings.pyc
+${PLIST.py3x}${PYSITELIB}/zeep/asyncio/bindings.pyo
 ${PYSITELIB}/zeep/asyncio/transport.py
-${PLIST.aio}${PYSITELIB}/zeep/asyncio/transport.pyc
-${PLIST.aio}${PYSITELIB}/zeep/asyncio/transport.pyo
+${PLIST.py3x}${PYSITELIB}/zeep/asyncio/transport.pyc
+${PLIST.py3x}${PYSITELIB}/zeep/asyncio/transport.pyo
 ${PYSITELIB}/zeep/cache.py
 ${PYSITELIB}/zeep/cache.pyc
 ${PYSITELIB}/zeep/cache.pyo
