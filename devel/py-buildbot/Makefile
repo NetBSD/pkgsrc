@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/11/15 14:14:14 adam Exp $
+# $NetBSD: Makefile,v 1.21 2019/05/03 10:54:38 adam Exp $
 
 DISTNAME=	buildbot-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -31,7 +31,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-txgithub-[0-9]*:../../devel/py-txgithub
 TEST_DEPENDS+=	${PYPKGPREFIX}-txrequests-[0-9]*:../../devel/py-txrequests
 
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} == 27 || ${_PYTHON_VERSION} == 34
+.if ${_PYTHON_VERSION} == 27
 TEST_DEPENDS+=	${PYPKGPREFIX}-scandir-[0-9]*:../../devel/py-scandir
 .endif
 
