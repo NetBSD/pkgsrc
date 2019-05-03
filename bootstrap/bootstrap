@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.263 2019/05/01 18:29:20 rillig Exp $
+# $NetBSD: bootstrap,v 1.264 2019/05/03 13:26:34 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -581,8 +581,8 @@ CYGWIN_*)
 Darwin)
 	root_group=wheel
 	need_bsd_install=no
-	need_awk=no
-	need_sed=no
+	need_awk=yes
+	need_sed=yes
 	set_opsys=no
 	machine_arch=`get_machine_arch_darwin`
 	CC=${CC:-"cc -isystem /usr/include"}; export CC
@@ -601,9 +601,9 @@ Darwin)
 		;;
 	esac
 	case "$macosx_version" in
-	10.[8-9]|10.1[0123])
-		need_awk=yes
-		need_sed=yes
+	10.[0-7])
+		need_awk=no
+		need_sed=no
 		;;
 	esac
 	unset osrev macosx_version
