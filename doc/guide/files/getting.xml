@@ -1,4 +1,4 @@
-<!-- $NetBSD: getting.xml,v 1.36 2019/04/03 14:41:24 sevan Exp $ -->
+<!-- $NetBSD: getting.xml,v 1.37 2019/05/03 10:35:37 sevan Exp $ -->
 
 <chapter id="getting">
 <title>Where to get pkgsrc and how to keep it up-to-date</title>
@@ -129,7 +129,7 @@ export CVS_RSH
 
 <programlisting>
 # recommended CVS configuration file from the pkgsrc guide
-cvs -q -z2
+cvs -q
 checkout -P
 update -dP
 diff -upN
