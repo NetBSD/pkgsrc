@@ -31,7 +31,7 @@
       </h3>
 </div></div>
 <div><p class="copyright">Copyright © 1994-2019 The NetBSD Foundation, Inc</p></div>
-<div><p class="pubdate">$NetBSD: pkgsrc.xml,v 1.34 2019/04/28 13:41:18 rillig Exp $</p></div>
+<div><p class="pubdate">$NetBSD: pkgsrc.xml,v 1.35 2019/04/28 15:22:24 rillig Exp $</p></div>
 <div><div class="abstract">
 <p class="title"><b>Abstract</b></p>
 <p>pkgsrc is a centralized package management system for
@@ -1035,7 +1035,7 @@ export CVS_RSH
 	You can find an explanation of this file in the CVS documentation.</p>
 <pre class="programlisting">
 # recommended CVS configuration file from the pkgsrc guide
-cvs -q -z2
+cvs -q
 checkout -P
 update -dP
 diff -upN
@@ -8883,7 +8883,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm79126896"></a><dl>
+<a name="idm75421008"></a><dl>
 <dt>24.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -8928,7 +8928,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm79126512"></a><p><b>24.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm75420624"></a><p><b>24.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -8944,7 +8944,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm79122544"></a><p><b>24.2.</b></p>
+<a name="devfaq.make"></a><a name="idm75424848"></a><p><b>24.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -8962,7 +8962,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm79118064"></a><p><b>24.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm75428688"></a><p><b>24.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -8980,7 +8980,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm79113968"></a><p><b>24.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm75432784"></a><p><b>24.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -8993,7 +8993,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm79111664"></a><p><b>24.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm75430608"></a><p><b>24.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9009,7 +9009,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm79108592"></a><p><b>24.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm75435728"></a><p><b>24.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="code">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9033,7 +9033,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm79101680"></a><p><b>24.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm75445328"></a><p><b>24.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9058,7 +9058,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm79097968"></a><p><b>24.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm75449808"></a><p><b>24.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9106,7 +9106,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm79083248"></a><p><b>24.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm75451600"></a><p><b>24.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
@@ -10362,1359 +10362,2578 @@ source packages</h2></div></div></div>
 	when running <span class="command"><strong>bmake help topic=:index</strong></span>.
 </p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>#!</p></li>
-<li class="listitem"><p>-lintl</p></li>
-<li class="listitem"><p>64bit</p></li>
-<li class="listitem"><p>ABI</p></li>
-<li class="listitem"><p>ACCEPTABLE_LICENSES</p></li>
-<li class="listitem"><p>ACROREAD_FONTPATH</p></li>
-<li class="listitem"><p>ADDITIONAL</p></li>
-<li class="listitem"><p>AFAIK</p></li>
-<li class="listitem"><p>AIX</p></li>
-<li class="listitem"><p>ALLOW_VULNERABLE_PACKAGES</p></li>
-<li class="listitem"><p>ALL_ENV</p></li>
-<li class="listitem"><p>ALSA_PC</p></li>
-<li class="listitem"><p>ALTERNATIVES_SRC</p></li>
-<li class="listitem"><p>AMANDA_TMP</p></li>
-<li class="listitem"><p>AMANDA_USER</p></li>
-<li class="listitem"><p>AMANDA_VAR</p></li>
-<li class="listitem"><p>APACHE_GROUP</p></li>
-<li class="listitem"><p>APACHE_MODULE_NAME</p></li>
-<li class="listitem"><p>APACHE_MODULE_SRC</p></li>
-<li class="listitem"><p>APACHE_MODULE_SRCDIR</p></li>
-<li class="listitem"><p>APACHE_PKG_PREFIX</p></li>
-<li class="listitem"><p>APACHE_SUEXEC_CONFIGURE_ARGS</p></li>
-<li class="listitem"><p>APACHE_SUEXEC_DOCROOT</p></li>
-<li class="listitem"><p>APACHE_USER</p></li>
-<li class="listitem"><p>APPEND_ABI</p></li>
-<li class="listitem"><p>APPEND_ELF</p></li>
-<li class="listitem"><p>ARLA_CACHE</p></li>
-<li class="listitem"><p>AUDIT_PACKAGES_FLAGS</p></li>
-<li class="listitem"><p>AUTOCONF_REQD</p></li>
-<li class="listitem"><p>AUTOMAKE_OVERRIDE</p></li>
-<li class="listitem"><p>AUTOMAKE_REQD</p></li>
-<li class="listitem"><p>AUTO_MKDIRS</p></li>
-<li class="listitem"><p>BDB185_DEFAULT</p></li>
-<li class="listitem"><p>BDBBASE</p></li>
-<li class="listitem"><p>BDB_ACCEPTED</p></li>
-<li class="listitem"><p>BDB_DEFAULT</p></li>
-<li class="listitem"><p>BDB_LIBS</p></li>
-<li class="listitem"><p>BDB_TYPE</p></li>
-<li class="listitem"><p>BIND_DIR</p></li>
-<li class="listitem"><p>BIND_GROUP</p></li>
-<li class="listitem"><p>BIND_USER</p></li>
-<li class="listitem"><p>BINPKG_SITES</p></li>
-<li class="listitem"><p>BIN_INSTALL_FLAGS</p></li>
-<li class="listitem"><p>BISON_PKGDATADIR</p></li>
-<li class="listitem"><p>BOOTSTRAP_DEPENDS</p></li>
-<li class="listitem"><p>BOOTSTRAP_SETUPTOOLS</p></li>
-<li class="listitem"><p>BROKEN</p></li>
-<li class="listitem"><p>BROKEN_EXCEPT_ON_PLATFORM</p></li>
-<li class="listitem"><p>BROKEN_ON_PLATFORM</p></li>
-<li class="listitem"><p>BSDSRCDIR</p></li>
-<li class="listitem"><p>BSDXSRCDIR</p></li>
-<li class="listitem"><p>BSD_MAKE_ENV</p></li>
-<li class="listitem"><p>BUILDLINK_AUTO_DIRS</p></li>
-<li class="listitem"><p>BUILDLINK_AUTO_VARS</p></li>
-<li class="listitem"><p>BUILDLINK_CFLAGS</p></li>
-<li class="listitem"><p>BUILDLINK_CONTENTS_FILTER</p></li>
-<li class="listitem"><p>BUILDLINK_CPPFLAGS</p></li>
-<li class="listitem"><p>BUILDLINK_DEPMETHOD</p></li>
-<li class="listitem"><p>BUILDLINK_FILES</p></li>
-<li class="listitem"><p>BUILDLINK_FILES_CMD</p></li>
-<li class="listitem"><p>BUILDLINK_FNAME_TRANSFORM</p></li>
-<li class="listitem"><p>BUILDLINK_LDFLAGS</p></li>
-<li class="listitem"><p>BUILDLINK_LIBS</p></li>
-<li class="listitem"><p>BUILDLINK_OPSYS_SUPPORT_PTHREAD</p></li>
-<li class="listitem"><p>BUILDLINK_PKGNAME</p></li>
-<li class="listitem"><p>BUILDLINK_PREFIX</p></li>
-<li class="listitem"><p>BUILDLINK_RPATHDIRS</p></li>
-<li class="listitem"><p>BUILDLINK_TREE</p></li>
-<li class="listitem"><p>BUILD_DEFS</p></li>
-<li class="listitem"><p>BUILD_DEFS_EFFECTS</p></li>
-<li class="listitem"><p>BUILD_DIRS</p></li>
-<li class="listitem"><p>BUILD_ENV_SHELL</p></li>
-<li class="listitem"><p>BUILD_MAKE_CMD</p></li>
-<li class="listitem"><p>BUILD_MAKE_FLAGS</p></li>
-<li class="listitem"><p>BUILD_TARGET</p></li>
-<li class="listitem"><p>BUILTIN_FIND_FILES</p></li>
-<li class="listitem"><p>BUILTIN_FIND_FILES_VAR</p></li>
-<li class="listitem"><p>BUILTIN_FIND_GREP</p></li>
-<li class="listitem"><p>BUILTIN_FIND_HEADERS</p></li>
-<li class="listitem"><p>BUILTIN_FIND_HEADERS_VAR</p></li>
-<li class="listitem"><p>BUILTIN_PKG</p></li>
-<li class="listitem"><p>BUILTIN_TEST_CURSES_DEFINES</p></li>
-<li class="listitem"><p>BUILTIN_TEST_CURSES_FUNCS</p></li>
-<li class="listitem"><p>BUILTIN_VERSION_SCRIPT</p></li>
-<li class="listitem"><p>BUILTIN_X11_TYPE</p></li>
-<li class="listitem"><p>BUILTIN_X11_VERSION</p></li>
-<li class="listitem"><p>CACTI_GROUP</p></li>
-<li class="listitem"><p>CACTI_USER</p></li>
-<li class="listitem"><p>CANNA_GROUP</p></li>
-<li class="listitem"><p>CANNA_USER</p></li>
-<li class="listitem"><p>CAT</p></li>
-<li class="listitem"><p>CCACHE_BASE</p></li>
-<li class="listitem"><p>CCACHE_DIR</p></li>
-<li class="listitem"><p>CCACHE_LOGFILE</p></li>
-<li class="listitem"><p>CC_VERSION</p></li>
-<li class="listitem"><p>CC_VERSION_STRING</p></li>
-<li class="listitem"><p>CDRECORD_CONF</p></li>
-<li class="listitem"><p>CDROM_PKG_URL_DIR</p></li>
-<li class="listitem"><p>CDROM_PKG_URL_HOST</p></li>
-<li class="listitem"><p>CHECKOUT_DATE</p></li>
-<li class="listitem"><p>CHECK_FAKEHOME</p></li>
-<li class="listitem"><p>CHECK_FILES</p></li>
-<li class="listitem"><p>CHECK_FILES_SKIP</p></li>
-<li class="listitem"><p>CHECK_FILES_STRICT</p></li>
-<li class="listitem"><p>CHECK_HEADERS</p></li>
-<li class="listitem"><p>CHECK_HEADERS_SKIP</p></li>
-<li class="listitem"><p>CHECK_INTERPRETER</p></li>
-<li class="listitem"><p>CHECK_INTERPRETER_SKIP</p></li>
-<li class="listitem"><p>CHECK_PERMS</p></li>
-<li class="listitem"><p>CHECK_PERMS_AUTOFIX</p></li>
-<li class="listitem"><p>CHECK_PERMS_SKIP</p></li>
-<li class="listitem"><p>CHECK_PORTABILITY</p></li>
-<li class="listitem"><p>CHECK_PORTABILITY_SKIP</p></li>
-<li class="listitem"><p>CHECK_RELRO</p></li>
-<li class="listitem"><p>CHECK_RELRO_SKIP</p></li>
-<li class="listitem"><p>CHECK_RELRO_SUPPORTED</p></li>
-<li class="listitem"><p>CHECK_SHLIBS</p></li>
-<li class="listitem"><p>CHECK_SHLIBS_BLACKLIST</p></li>
-<li class="listitem"><p>CHECK_SHLIBS_SKIP</p></li>
-<li class="listitem"><p>CHECK_SHLIBS_SUPPORTED</p></li>
-<li class="listitem"><p>CHECK_SSP</p></li>
-<li class="listitem"><p>CHECK_SSP_SKIP</p></li>
-<li class="listitem"><p>CHECK_SSP_SUPPORTED</p></li>
-<li class="listitem"><p>CHECK_STRIPPED</p></li>
-<li class="listitem"><p>CHECK_STRIPPED_SKIP</p></li>
-<li class="listitem"><p>CHECK_WRKREF</p></li>
-<li class="listitem"><p>CHECK_WRKREF_EXTRA_DIRS</p></li>
-<li class="listitem"><p>CHECK_WRKREF_SKIP</p></li>
-<li class="listitem"><p>CLAMAV_DBDIR</p></li>
-<li class="listitem"><p>CLAMAV_GROUP</p></li>
-<li class="listitem"><p>CLAMAV_USER</p></li>
-<li class="listitem"><p>CLANGBASE</p></li>
-<li class="listitem"><p>CLEANDEPENDS</p></li>
-<li class="listitem"><p>CMAKE_DEPENDENCIES_REWRITE</p></li>
-<li class="listitem"><p>CMAKE_INSTALL_PREFIX</p></li>
-<li class="listitem"><p>CMAKE_MODULE_PATH_OVERRIDE</p></li>
-<li class="listitem"><p>CMAKE_PKGSRC_BUILD_FLAGS</p></li>
-<li class="listitem"><p>CMAKE_PREFIX_PATH</p></li>
-<li class="listitem"><p>CMAKE_USE_GNU_INSTALL_DIRS</p></li>
-<li class="listitem"><p>COMMON_LISP_DOCFILES</p></li>
-<li class="listitem"><p>COMMON_LISP_EXAMPLES</p></li>
-<li class="listitem"><p>COMMON_LISP_EXTRAFILES</p></li>
-<li class="listitem"><p>COMMON_LISP_PACKAGES</p></li>
-<li class="listitem"><p>COMMON_LISP_SYSTEM</p></li>
-<li class="listitem"><p>COMPILER_RPATH_FLAG</p></li>
-<li class="listitem"><p>COMPILER_USE_SYMLINKS</p></li>
-<li class="listitem"><p>CONFIGURE_ARGS</p></li>
-<li class="listitem"><p>CONFIGURE_DIRS</p></li>
-<li class="listitem"><p>CONFIGURE_ENV</p></li>
-<li class="listitem"><p>CONFIGURE_HAS_INFODIR</p></li>
-<li class="listitem"><p>CONFIGURE_HAS_MANDIR</p></li>
-<li class="listitem"><p>CONFIGURE_SCRIPT</p></li>
-<li class="listitem"><p>CONFIG_SHELL</p></li>
-<li class="listitem"><p>CONFIG_SHELL_FLAGS</p></li>
-<li class="listitem"><p>CONF_FILES</p></li>
-<li class="listitem"><p>CONF_FILES_MODE</p></li>
-<li class="listitem"><p>CONF_FILES_PERMS</p></li>
-<li class="listitem"><p>CONSERVER_DEFAULTHOST</p></li>
-<li class="listitem"><p>CONSERVER_DEFAULTPORT</p></li>
-<li class="listitem"><p>CP</p></li>
-<li class="listitem"><p>CPP</p></li>
-<li class="listitem"><p>CPP_PRECOMP_FLAGS</p></li>
-<li class="listitem"><p>CREATE_WRKDIR_SYMLINK</p></li>
-<li class="listitem"><p>CROSSBASE</p></li>
-<li class="listitem"><p>CTFCONVERT</p></li>
-<li class="listitem"><p>CTF_FILES_SKIP</p></li>
-<li class="listitem"><p>CTF_SUPPORTED</p></li>
-<li class="listitem"><p>CTYPE</p></li>
-<li class="listitem"><p>CUPS_GROUP</p></li>
-<li class="listitem"><p>CUPS_SYSTEM_GROUPS</p></li>
-<li class="listitem"><p>CUPS_USER</p></li>
-<li class="listitem"><p>CURSES_DEFAULT</p></li>
-<li class="listitem"><p>CURSES_TYPE</p></li>
-<li class="listitem"><p>CVS_EXTRACTDIR</p></li>
-<li class="listitem"><p>CVS_MODULE</p></li>
-<li class="listitem"><p>CVS_PROJECT</p></li>
-<li class="listitem"><p>CVS_REPOSITORIES</p></li>
-<li class="listitem"><p>CVS_ROOT</p></li>
-<li class="listitem"><p>CVS_ROOT_GNU</p></li>
-<li class="listitem"><p>CVS_ROOT_NONGNU</p></li>
-<li class="listitem"><p>CVS_ROOT_SOURCEFORGE</p></li>
-<li class="listitem"><p>CVS_TAG</p></li>
-<li class="listitem"><p>CXX</p></li>
-<li class="listitem"><p>CYRUS_GROUP</p></li>
-<li class="listitem"><p>CYRUS_IDLE</p></li>
-<li class="listitem"><p>CYRUS_USER</p></li>
-<li class="listitem"><p>DAEMONTOOLS_GROUP</p></li>
-<li class="listitem"><p>DAEMONTOOLS_LOG_USER</p></li>
-<li class="listitem"><p>DBUS_GROUP</p></li>
-<li class="listitem"><p>DBUS_USER</p></li>
-<li class="listitem"><p>DEFANG_GROUP</p></li>
-<li class="listitem"><p>DEFANG_USER</p></li>
-<li class="listitem"><p>DEFAULT_ACCEPTABLE_LICENSES</p></li>
-<li class="listitem"><p>DEFAULT_DISTFILES</p></li>
-<li class="listitem"><p>DEFAULT_IRC_SERVER</p></li>
-<li class="listitem"><p>DEFAULT_SERIAL_DEVICE</p></li>
-<li class="listitem"><p>DEF_UMASK</p></li>
-<li class="listitem"><p>DEINSTALLDEPENDS</p></li>
-<li class="listitem"><p>DEINSTALL_SRC</p></li>
-<li class="listitem"><p>DEINSTALL_TEMPLATES</p></li>
-<li class="listitem"><p>DELAYED_ERROR_MSG</p></li>
-<li class="listitem"><p>DELAYED_WARNING_MSG</p></li>
-<li class="listitem"><p>DEPENDS_TARGET</p></li>
-<li class="listitem"><p>DEPENDS_TYPE</p></li>
-<li class="listitem"><p>DESTDIR</p></li>
-<li class="listitem"><p>DESTDIR_VARNAME</p></li>
-<li class="listitem"><p>DIALER_GROUP</p></li>
-<li class="listitem"><p>DIGEST_REQD</p></li>
-<li class="listitem"><p>DISTDIR</p></li>
-<li class="listitem"><p>DISTFILES</p></li>
-<li class="listitem"><p>DISTINFO_FILE</p></li>
-<li class="listitem"><p>DISTNAME</p></li>
-<li class="listitem"><p>DIST_PATH</p></li>
-<li class="listitem"><p>DIST_SUBDIR</p></li>
-<li class="listitem"><p>DJBDNS_AXFR_USER</p></li>
-<li class="listitem"><p>DJBDNS_CACHE_USER</p></li>
-<li class="listitem"><p>DJBDNS_DJBDNS_GROUP</p></li>
-<li class="listitem"><p>DJBDNS_LOG_USER</p></li>
-<li class="listitem"><p>DJBDNS_RBL_USER</p></li>
-<li class="listitem"><p>DJBDNS_TINY_USER</p></li>
-<li class="listitem"><p>DLOPEN_REQUIRE_PTHREADS</p></li>
-<li class="listitem"><p>DL_AUTO_VARS</p></li>
-<li class="listitem"><p>DL_CFLAGS</p></li>
-<li class="listitem"><p>DL_LDFLAGS</p></li>
-<li class="listitem"><p>DL_LIBS</p></li>
-<li class="listitem"><p>DNS</p></li>
-<li class="listitem"><p>DOWNLOADED_DISTFILE</p></li>
-<li class="listitem"><p>DT_LAYOUT</p></li>
-<li class="listitem"><p>DYNAMIC_SITES_CMD</p></li>
-<li class="listitem"><p>DYNAMIC_SITES_SCRIPT</p></li>
-<li class="listitem"><p>ECHO</p></li>
-<li class="listitem"><p>ECHO_N</p></li>
-<li class="listitem"><p>ELK_GUI</p></li>
-<li class="listitem"><p>EMACS_TYPE</p></li>
-<li class="listitem"><p>EMULDIR</p></li>
-<li class="listitem"><p>EMULSUBDIR</p></li>
-<li class="listitem"><p>EMULSUBDIRSLASH</p></li>
-<li class="listitem"><p>EMUL_ARCH</p></li>
-<li class="listitem"><p>EMUL_DISTRO</p></li>
-<li class="listitem"><p>EMUL_EXEC_FMT</p></li>
-<li class="listitem"><p>EMUL_IS_NATIVE</p></li>
-<li class="listitem"><p>EMUL_MODULES</p></li>
-<li class="listitem"><p>EMUL_OPSYS</p></li>
-<li class="listitem"><p>EMUL_PKG_FMT</p></li>
-<li class="listitem"><p>EMUL_PLATFORM</p></li>
-<li class="listitem"><p>EMUL_PLATFORMS</p></li>
-<li class="listitem"><p>EMUL_PREFER</p></li>
-<li class="listitem"><p>EMUL_REQD</p></li>
-<li class="listitem"><p>EMUL_TYPE</p></li>
-<li class="listitem"><p>ERROR_MSG</p></li>
-<li class="listitem"><p>EXIM_GROUP</p></li>
-<li class="listitem"><p>EXIM_USER</p></li>
-<li class="listitem"><p>EXPORT_SYMBOLS_LDFLAGS</p></li>
-<li class="listitem"><p>EXTRACTOR</p></li>
-<li class="listitem"><p>EXTRACT_CMD</p></li>
-<li class="listitem"><p>EXTRACT_CMD_DEFAULT</p></li>
-<li class="listitem"><p>EXTRACT_DIR</p></li>
-<li class="listitem"><p>EXTRACT_ELEMENTS</p></li>
-<li class="listitem"><p>EXTRACT_ENV</p></li>
-<li class="listitem"><p>EXTRACT_ONLY</p></li>
-<li class="listitem"><p>EXTRACT_OPTS</p></li>
-<li class="listitem"><p>EXTRACT_SUFX</p></li>
-<li class="listitem"><p>EXTRACT_USING</p></li>
-<li class="listitem"><p>FAILOVER_FETCH</p></li>
-<li class="listitem"><p>FAIL_MSG</p></li>
-<li class="listitem"><p>FAKE_NCURSES</p></li>
-<li class="listitem"><p>FAM</p></li>
-<li class="listitem"><p>FAM_ACCEPTED</p></li>
-<li class="listitem"><p>FAM_DEFAULT</p></li>
-<li class="listitem"><p>FAM_SERVER</p></li>
-<li class="listitem"><p>FCPATH</p></li>
-<li class="listitem"><p>FEATURE_CPPFLAGS</p></li>
-<li class="listitem"><p>FEATURE_LDFLAGS</p></li>
-<li class="listitem"><p>FEATURE_LIBS</p></li>
-<li class="listitem"><p>FETCH_AFTER_ARGS</p></li>
-<li class="listitem"><p>FETCH_BEFORE_ARGS</p></li>
-<li class="listitem"><p>FETCH_CMD</p></li>
-<li class="listitem"><p>FETCH_OUTPUT_ARGS</p></li>
-<li class="listitem"><p>FETCH_PROXY</p></li>
-<li class="listitem"><p>FETCH_RESUME_ARGS</p></li>
-<li class="listitem"><p>FETCH_USING</p></li>
-<li class="listitem"><p>FILES_SUBST</p></li>
-<li class="listitem"><p>FILES_SUBST_SED</p></li>
-<li class="listitem"><p>FIX_SYSTEM_HEADERS</p></li>
-<li class="listitem"><p>FLUXBOX_USE_GNOME</p></li>
-<li class="listitem"><p>FLUXBOX_USE_KDE</p></li>
-<li class="listitem"><p>FLUXBOX_USE_XFT</p></li>
-<li class="listitem"><p>FLUXBOX_USE_XINERAMA</p></li>
-<li class="listitem"><p>FONTDIR</p></li>
-<li class="listitem"><p>FONTS_DIRS</p></li>
-<li class="listitem"><p>FONTS_VERBOSE</p></li>
-<li class="listitem"><p>FOO_HACKS_MK</p></li>
-<li class="listitem"><p>FOSSIL_EXTRACTDIR</p></li>
-<li class="listitem"><p>FOSSIL_REPO</p></li>
-<li class="listitem"><p>FOSSIL_REPOSITORIES</p></li>
-<li class="listitem"><p>FOSSIL_VERSION</p></li>
-<li class="listitem"><p>FOX_USE_XUNICODE</p></li>
-<li class="listitem"><p>FREEWNN_GROUP</p></li>
-<li class="listitem"><p>FREEWNN_USER</p></li>
-<li class="listitem"><p>FTP_PKG_URL_DIR</p></li>
-<li class="listitem"><p>FTP_PKG_URL_HOST</p></li>
-<li class="listitem"><p>GAMEDATAMODE</p></li>
-<li class="listitem"><p>GAMEDATA_PERMS</p></li>
-<li class="listitem"><p>GAMEDIRMODE</p></li>
-<li class="listitem"><p>GAMEDIR_PERMS</p></li>
-<li class="listitem"><p>GAMEGRP</p></li>
-<li class="listitem"><p>GAMEMODE</p></li>
-<li class="listitem"><p>GAMEOWN</p></li>
-<li class="listitem"><p>GAMES_GROUP</p></li>
-<li class="listitem"><p>GAMES_USER</p></li>
-<li class="listitem"><p>GCC</p></li>
-<li class="listitem"><p>GCCBASE</p></li>
-<li class="listitem"><p>GCC_REQD</p></li>
-<li class="listitem"><p>GCC_VERSION_SUFFIX</p></li>
-<li class="listitem"><p>GEM_BUILD</p></li>
-<li class="listitem"><p>GEM_CLEANBUILD</p></li>
-<li class="listitem"><p>GEM_CLEANBUILD_EXTENSIONS</p></li>
-<li class="listitem"><p>GEM_DOCDIR</p></li>
-<li class="listitem"><p>GEM_EXTSDIR</p></li>
-<li class="listitem"><p>GEM_HOME</p></li>
-<li class="listitem"><p>GEM_LIBDIR</p></li>
-<li class="listitem"><p>GEM_NAME</p></li>
-<li class="listitem"><p>GEM_PATH</p></li>
-<li class="listitem"><p>GEM_SPECFILE</p></li>
-<li class="listitem"><p>GENERATE_PLIST</p></li>
-<li class="listitem"><p>GHOSTSCRIPT_REQD</p></li>
-<li class="listitem"><p>GITHUB_PROJECT</p></li>
-<li class="listitem"><p>GITHUB_RELEASE</p></li>
-<li class="listitem"><p>GITHUB_TAG</p></li>
-<li class="listitem"><p>GITHUB_TYPE</p></li>
-<li class="listitem"><p>GIT_BRANCH</p></li>
-<li class="listitem"><p>GIT_ENV</p></li>
-<li class="listitem"><p>GIT_EXTRACTDIR</p></li>
-<li class="listitem"><p>GIT_REPO</p></li>
-<li class="listitem"><p>GIT_REPOSITORIES</p></li>
-<li class="listitem"><p>GIT_REVISION</p></li>
-<li class="listitem"><p>GIT_TAG</p></li>
-<li class="listitem"><p>GNU</p></li>
-<li class="listitem"><p>GNU_CONFIGURE</p></li>
-<li class="listitem"><p>GNU_CONFIGURE_INFODIR</p></li>
-<li class="listitem"><p>GNU_CONFIGURE_MANDIR</p></li>
-<li class="listitem"><p>GNU_CONFIGURE_STRICT</p></li>
-<li class="listitem"><p>GO_BUILD_PATTERN</p></li>
-<li class="listitem"><p>GO_DIST_BASE</p></li>
-<li class="listitem"><p>GO_SRCPATH</p></li>
-<li class="listitem"><p>GROUP_SPECIFIC_PKGS</p></li>
-<li class="listitem"><p>GRUB_NETWORK_CARDS</p></li>
-<li class="listitem"><p>GRUB_PRESET_COMMAND</p></li>
-<li class="listitem"><p>GRUB_SCAN_ARGS</p></li>
-<li class="listitem"><p>GZIP</p></li>
-<li class="listitem"><p>HASKELL_COMPILER</p></li>
-<li class="listitem"><p>HASKELL_ENABLE_HADDOCK_DOCUMENTATION</p></li>
-<li class="listitem"><p>HASKELL_ENABLE_LIBRARY_PROFILING</p></li>
-<li class="listitem"><p>HASKELL_ENABLE_SHARED_LIBRARY</p></li>
-<li class="listitem"><p>HAS_CONFIGURE</p></li>
-<li class="listitem"><p>HEADER_TEMPLATES</p></li>
-<li class="listitem"><p>HG_REPO</p></li>
-<li class="listitem"><p>HG_REPOSITORIES</p></li>
-<li class="listitem"><p>HG_TAG</p></li>
-<li class="listitem"><p>HOST_PKGTOOLS_ARGS</p></li>
-<li class="listitem"><p>HOST_SPECIFIC_PKGS</p></li>
-<li class="listitem"><p>HOWL_GROUP</p></li>
-<li class="listitem"><p>HOWL_USER</p></li>
-<li class="listitem"><p>ICCBASE</p></li>
-<li class="listitem"><p>ICECAST_CHROOTDIR</p></li>
-<li class="listitem"><p>ICON_THEMES</p></li>
-<li class="listitem"><p>IDOBASE</p></li>
-<li class="listitem"><p>IGNORE_CCACHE</p></li>
-<li class="listitem"><p>IGNORE_INFO_DIRS</p></li>
-<li class="listitem"><p>IGNORE_INTERACTIVE_FETCH</p></li>
-<li class="listitem"><p>IMAKE</p></li>
-<li class="listitem"><p>IMAKEOPTS</p></li>
-<li class="listitem"><p>IMAKE_MAKE</p></li>
-<li class="listitem"><p>IMAKE_MANINSTALL</p></li>
-<li class="listitem"><p>IMAP_UW_CCLIENT_MBOX_FMT</p></li>
-<li class="listitem"><p>IMDICTDIR</p></li>
-<li class="listitem"><p>INCOMPAT_CURSES</p></li>
-<li class="listitem"><p>INFO_DIR</p></li>
-<li class="listitem"><p>INFO_FILES</p></li>
-<li class="listitem"><p>INFO_FILES_VERBOSE</p></li>
-<li class="listitem"><p>INFO_MSG</p></li>
-<li class="listitem"><p>INIT_SYSTEM</p></li>
-<li class="listitem"><p>INN_DATA_DIR</p></li>
-<li class="listitem"><p>INN_GROUP</p></li>
-<li class="listitem"><p>INN_USER</p></li>
-<li class="listitem"><p>INSTALLATION_DIRS</p></li>
-<li class="listitem"><p>INSTALLATION_DIRS_FROM_PLIST</p></li>
-<li class="listitem"><p>INSTALL_ENV</p></li>
-<li class="listitem"><p>INSTALL_SH_OVERRIDE</p></li>
-<li class="listitem"><p>INSTALL_SRC</p></li>
-<li class="listitem"><p>INSTALL_TEMPLATES</p></li>
-<li class="listitem"><p>INSTALL_UNSTRIPPED</p></li>
-<li class="listitem"><p>IRCD_HYBRID_IRC_GROUP</p></li>
-<li class="listitem"><p>IRCD_HYBRID_IRC_USER</p></li>
-<li class="listitem"><p>IRCD_HYBRID_MAXCONN</p></li>
-<li class="listitem"><p>IRCD_HYBRID_NICLEN</p></li>
-<li class="listitem"><p>IRCD_HYBRID_SYSLOG_EVENTS</p></li>
-<li class="listitem"><p>IRCD_HYBRID_SYSLOG_FACILITY</p></li>
-<li class="listitem"><p>IRCD_HYBRID_TOPICLEN</p></li>
-<li class="listitem"><p>IRIX</p></li>
-<li class="listitem"><p>IRRD_USE_PGP</p></li>
-<li class="listitem"><p>JABBERD_GROUP</p></li>
-<li class="listitem"><p>JABBERD_LOGDIR</p></li>
-<li class="listitem"><p>JABBERD_PIDDIR</p></li>
-<li class="listitem"><p>JABBERD_SPOOLDIR</p></li>
-<li class="listitem"><p>JABBERD_USER</p></li>
-<li class="listitem"><p>JAKARTA_HOME</p></li>
-<li class="listitem"><p>JAVA_APP_PATH</p></li>
-<li class="listitem"><p>JAVA_APP_TARGETS</p></li>
-<li class="listitem"><p>JAVA_BINPREFIX</p></li>
-<li class="listitem"><p>JAVA_CLASSPATH</p></li>
-<li class="listitem"><p>JAVA_HOME</p></li>
-<li class="listitem"><p>JAVA_LD_LIBRARY_PATH</p></li>
-<li class="listitem"><p>JAVA_NAME</p></li>
-<li class="listitem"><p>JAVA_UNLIMIT</p></li>
-<li class="listitem"><p>JAVA_WRAPPERS</p></li>
-<li class="listitem"><p>JPEG_ACCEPTED</p></li>
-<li class="listitem"><p>JPEG_DEFAULT</p></li>
-<li class="listitem"><p>KERBEROS</p></li>
-<li class="listitem"><p>KERMIT_SUID_UUCP</p></li>
-<li class="listitem"><p>KJS_USE_PCRE</p></li>
-<li class="listitem"><p>KNEWS_DOMAIN_FILE</p></li>
-<li class="listitem"><p>KNEWS_DOMAIN_NAME</p></li>
-<li class="listitem"><p>KRB5_ACCEPTED</p></li>
-<li class="listitem"><p>KRB5_DEFAULT</p></li>
-<li class="listitem"><p>LANGUAGES</p></li>
-<li class="listitem"><p>LATEX2HTML_ICONPATH</p></li>
-<li class="listitem"><p>LDCONFIG_ADD_CMD</p></li>
-<li class="listitem"><p>LDCONFIG_REMOVE_CMD</p></li>
-<li class="listitem"><p>LEAFNODE_DATA_DIR</p></li>
-<li class="listitem"><p>LEAFNODE_GROUP</p></li>
-<li class="listitem"><p>LEAFNODE_USER</p></li>
-<li class="listitem"><p>LIBDVDCSS_HOMEPAGE</p></li>
-<li class="listitem"><p>LIBDVDCSS_MASTER_SITES</p></li>
-<li class="listitem"><p>LIBTOOL</p></li>
-<li class="listitem"><p>LIBTOOLIZE_PLIST</p></li>
-<li class="listitem"><p>LIBTOOL_M4_OVERRIDE</p></li>
-<li class="listitem"><p>LIBUSB_TYPE</p></li>
-<li class="listitem"><p>LICENSE</p></li>
-<li class="listitem"><p>LINKER_RPATH_FLAG</p></li>
-<li class="listitem"><p>LINK_RPATH_FLAG</p></li>
-<li class="listitem"><p>LINUX_BASE_NODEPS</p></li>
-<li class="listitem"><p>LINUX_BASE_PREFERRED</p></li>
-<li class="listitem"><p>LINUX_BASE_REQUIRED</p></li>
-<li class="listitem"><p>LINUX_LOCALES</p></li>
-<li class="listitem"><p>LOCALBASE</p></li>
-<li class="listitem"><p>LOCALBASE_LOCKTYPE</p></li>
-<li class="listitem"><p>LOCALPATCHES</p></li>
-<li class="listitem"><p>LOVE_DATA</p></li>
-<li class="listitem"><p>LOVE_GAME</p></li>
-<li class="listitem"><p>LOVE_VERSION</p></li>
-<li class="listitem"><p>LP64PLATFORMS</p></li>
-<li class="listitem"><p>MACHINE_PLATFORM</p></li>
-<li class="listitem"><p>MAILAGENT_DOMAIN</p></li>
-<li class="listitem"><p>MAILAGENT_EMAIL</p></li>
-<li class="listitem"><p>MAILAGENT_FQDN</p></li>
-<li class="listitem"><p>MAILAGENT_ORGANIZATION</p></li>
-<li class="listitem"><p>MAJORDOMO_HOMEDIR</p></li>
-<li class="listitem"><p>MAJOR_OS_VERSION</p></li>
-<li class="listitem"><p>MAKEINFO_ARGS</p></li>
-<li class="listitem"><p>MAKE_DIRS</p></li>
-<li class="listitem"><p>MAKE_DIRS_PERMS</p></li>
-<li class="listitem"><p>MAKE_ENV</p></li>
-<li class="listitem"><p>MAKE_FILE</p></li>
-<li class="listitem"><p>MAKE_FLAGS</p></li>
-<li class="listitem"><p>MAKE_JOBS</p></li>
-<li class="listitem"><p>MAKE_JOBS_SAFE</p></li>
-<li class="listitem"><p>MAKE_PROGRAM</p></li>
-<li class="listitem"><p>MANINSTALL</p></li>
-<li class="listitem"><p>MANZ</p></li>
-<li class="listitem"><p>MASTER_SITES</p></li>
-<li class="listitem"><p>MASTER_SITE_BACKUP</p></li>
-<li class="listitem"><p>MASTER_SITE_CYGWIN</p></li>
-<li class="listitem"><p>MASTER_SITE_GNOME</p></li>
-<li class="listitem"><p>MASTER_SITE_GNU</p></li>
-<li class="listitem"><p>MASTER_SITE_LOCAL</p></li>
-<li class="listitem"><p>MASTER_SITE_MOZILLA</p></li>
-<li class="listitem"><p>MASTER_SITE_OPENOFFICE</p></li>
-<li class="listitem"><p>MASTER_SITE_OVERRIDE</p></li>
-<li class="listitem"><p>MASTER_SITE_PERL_CPAN</p></li>
-<li class="listitem"><p>MASTER_SITE_SUNSITE</p></li>
-<li class="listitem"><p>MASTER_SITE_SUSE</p></li>
-<li class="listitem"><p>MASTER_SITE_TEX_CTAN</p></li>
-<li class="listitem"><p>MASTER_SITE_XCONTRIB</p></li>
-<li class="listitem"><p>MASTER_SITE_XEMACS</p></li>
-<li class="listitem"><p>MASTER_SORT</p></li>
-<li class="listitem"><p>MASTER_SORT_RANDOM</p></li>
-<li class="listitem"><p>MASTER_SORT_REGEX</p></li>
-<li class="listitem"><p>MECAB_CHARSET</p></li>
-<li class="listitem"><p>MEDIATOMB_GROUP</p></li>
-<li class="listitem"><p>MEDIATOMB_USER</p></li>
-<li class="listitem"><p>MIPSPROBASE</p></li>
-<li class="listitem"><p>MIREDO_GROUP</p></li>
-<li class="listitem"><p>MIREDO_USER</p></li>
-<li class="listitem"><p>MISSING_FEATURES</p></li>
-<li class="listitem"><p>MKDIR</p></li>
-<li class="listitem"><p>MLDONKEY_GROUP</p></li>
-<li class="listitem"><p>MLDONKEY_HOME</p></li>
-<li class="listitem"><p>MLDONKEY_USER</p></li>
-<li class="listitem"><p>MONOTONE_GROUP</p></li>
-<li class="listitem"><p>MONOTONE_USER</p></li>
-<li class="listitem"><p>MOTIFBASE</p></li>
-<li class="listitem"><p>MOTIF_TYPE</p></li>
-<li class="listitem"><p>MOTIF_TYPE_DEFAULT</p></li>
-<li class="listitem"><p>MPI_TYPE</p></li>
-<li class="listitem"><p>MSGFMT_STRIP_MSGCTXT</p></li>
-<li class="listitem"><p>MSGFMT_STRIP_MSGID_PLURAL</p></li>
-<li class="listitem"><p>MTOOLS_ENABLE_FLOPPYD</p></li>
-<li class="listitem"><p>MUST</p></li>
-<li class="listitem"><p>MV</p></li>
-<li class="listitem"><p>MYSQL_CHARSET</p></li>
-<li class="listitem"><p>MYSQL_DATADIR</p></li>
-<li class="listitem"><p>MYSQL_EXTRA_CHARSET</p></li>
-<li class="listitem"><p>MYSQL_GROUP</p></li>
-<li class="listitem"><p>MYSQL_PKGSRCDIR</p></li>
-<li class="listitem"><p>MYSQL_USER</p></li>
-<li class="listitem"><p>MYSQL_VERSIONS_ACCEPTED</p></li>
-<li class="listitem"><p>MYSQL_VERSION_DEFAULT</p></li>
-<li class="listitem"><p>NAGIOSCMD_GROUP</p></li>
-<li class="listitem"><p>NAGIOSDIR</p></li>
-<li class="listitem"><p>NAGIOS_GROUP</p></li>
-<li class="listitem"><p>NAGIOS_USER</p></li>
-<li class="listitem"><p>NATIVE_APPEND_ABI</p></li>
-<li class="listitem"><p>NATIVE_APPEND_ELF</p></li>
-<li class="listitem"><p>NATIVE_EXEC_FMT</p></li>
-<li class="listitem"><p>NATIVE_MACHINE_PLATFORM</p></li>
-<li class="listitem"><p>NATIVE_OBJECT_FMT</p></li>
-<li class="listitem"><p>NBPAX_PROGRAM_PREFIX</p></li>
-<li class="listitem"><p>NETBSD_LOGIN_NAME</p></li>
-<li class="listitem"><p>NMH_EDITOR</p></li>
-<li class="listitem"><p>NMH_MTA</p></li>
-<li class="listitem"><p>NMH_PAGER</p></li>
-<li class="listitem"><p>NOLOGIN</p></li>
-<li class="listitem"><p>NONZERO_FILESIZE_P</p></li>
-<li class="listitem"><p>NOTE</p></li>
-<li class="listitem"><p>NOT_FOR_PLATFORM</p></li>
-<li class="listitem"><p>NOT_PAX_ASLR_SAFE</p></li>
-<li class="listitem"><p>NOT_PAX_MPROTECT_SAFE</p></li>
-<li class="listitem"><p>NO_BUILD</p></li>
-<li class="listitem"><p>NO_CHECKSUM</p></li>
-<li class="listitem"><p>NO_CONFIGURE</p></li>
-<li class="listitem"><p>NO_SKIP</p></li>
-<li class="listitem"><p>NS_PREFERRED</p></li>
-<li class="listitem"><p>NULLMAILER_GROUP</p></li>
-<li class="listitem"><p>NULLMAILER_USER</p></li>
-<li class="listitem"><p>OASIS</p></li>
-<li class="listitem"><p>OASIS_BUILD_ARGS</p></li>
-<li class="listitem"><p>OBJHOSTNAME</p></li>
-<li class="listitem"><p>OBJMACHINE</p></li>
-<li class="listitem"><p>OCAML_FINDLIB_DIRS</p></li>
-<li class="listitem"><p>OCAML_FINDLIB_REGISTER</p></li>
-<li class="listitem"><p>OCAML_FINDLIB_REGISTER_VERBOSE</p></li>
-<li class="listitem"><p>OCAML_SITELIBDIR</p></li>
-<li class="listitem"><p>OCAML_TOPKG_DOCDIR</p></li>
-<li class="listitem"><p>OCAML_USE_DUNE</p></li>
-<li class="listitem"><p>OCAML_USE_FINDLIB</p></li>
-<li class="listitem"><p>OCAML_USE_JBUILDER</p></li>
-<li class="listitem"><p>OCAML_USE_OASIS</p></li>
-<li class="listitem"><p>OCAML_USE_OASIS_DYNRUN</p></li>
-<li class="listitem"><p>OCAML_USE_OPAM</p></li>
-<li class="listitem"><p>OCAML_USE_OPT_COMPILER</p></li>
-<li class="listitem"><p>OCAML_USE_TOPKG</p></li>
-<li class="listitem"><p>OMF</p></li>
-<li class="listitem"><p>ONLY_FOR_COMPILER</p></li>
-<li class="listitem"><p>ONLY_FOR_PLATFORM</p></li>
-<li class="listitem"><p>OPENSSH_CHROOT</p></li>
-<li class="listitem"><p>OPENSSH_GROUP</p></li>
-<li class="listitem"><p>OPENSSH_USER</p></li>
-<li class="listitem"><p>OPSYS</p></li>
-<li class="listitem"><p>OPSYS_EMULDIR</p></li>
-<li class="listitem"><p>OSS_TYPE</p></li>
-<li class="listitem"><p>OSX</p></li>
-<li class="listitem"><p>OSX_TOLERATE_SDK_SKEW</p></li>
-<li class="listitem"><p>OS_HAVE_ALSA</p></li>
-<li class="listitem"><p>OS_HAVE_RCD</p></li>
-<li class="listitem"><p>OS_VARIANT</p></li>
-<li class="listitem"><p>OS_VERSION</p></li>
-<li class="listitem"><p>OTF_FONTS_DIR</p></li>
-<li class="listitem"><p>OVERRIDE_DIRDEPTH</p></li>
-<li class="listitem"><p>OVERRIDE_GEMSPEC</p></li>
-<li class="listitem"><p>OVERRIDE_GNU_CONFIG_SCRIPTS</p></li>
-<li class="listitem"><p>OVERRIDE_ROCKSPEC</p></li>
-<li class="listitem"><p>OWN_DIRS</p></li>
-<li class="listitem"><p>OWN_DIRS_PERMS</p></li>
-<li class="listitem"><p>P4GROUP</p></li>
-<li class="listitem"><p>P4PORT</p></li>
-<li class="listitem"><p>P4ROOT</p></li>
-<li class="listitem"><p>P4USER</p></li>
-<li class="listitem"><p>PACKAGES</p></li>
-<li class="listitem"><p>PALMOS_DEFAULT_SDK</p></li>
-<li class="listitem"><p>PAMBASE</p></li>
-<li class="listitem"><p>PAM_DEFAULT</p></li>
-<li class="listitem"><p>PAPERSIZE</p></li>
-<li class="listitem"><p>PASSIVE_FETCH</p></li>
-<li class="listitem"><p>PATCHDIR</p></li>
-<li class="listitem"><p>PATCHFILES</p></li>
-<li class="listitem"><p>PATCH_ARGS</p></li>
-<li class="listitem"><p>PATCH_DEBUG</p></li>
-<li class="listitem"><p>PATCH_DIST_ARGS</p></li>
-<li class="listitem"><p>PATCH_DIST_CAT</p></li>
-<li class="listitem"><p>PATCH_DIST_STRIP</p></li>
-<li class="listitem"><p>PATCH_FUZZ_FACTOR</p></li>
-<li class="listitem"><p>PATCH_STRIP</p></li>
-<li class="listitem"><p>PATH</p></li>
-<li class="listitem"><p>PCCBASE</p></li>
-<li class="listitem"><p>PEAR</p></li>
-<li class="listitem"><p>PEAR_CHANNEL</p></li>
-<li class="listitem"><p>PEAR_CHANNEL_ALIAS</p></li>
-<li class="listitem"><p>PEAR_CHANNEL_VERSION</p></li>
-<li class="listitem"><p>PEAR_CMD</p></li>
-<li class="listitem"><p>PEAR_LIB</p></li>
-<li class="listitem"><p>PEAR_PACKAGE_XML</p></li>
-<li class="listitem"><p>PERL5</p></li>
-<li class="listitem"><p>PERL5_CONFIGURE</p></li>
-<li class="listitem"><p>PERL5_CONFIGURE_DIRS</p></li>
-<li class="listitem"><p>PERL5_LDFLAGS</p></li>
-<li class="listitem"><p>PERL5_LICENSE</p></li>
-<li class="listitem"><p>PERL5_MODULE_TYPE</p></li>
-<li class="listitem"><p>PERL5_PACKLIST</p></li>
-<li class="listitem"><p>PERL5_PACKLIST_DIR</p></li>
-<li class="listitem"><p>PERL5_PERLBASE</p></li>
-<li class="listitem"><p>PERL5_SITEBASE</p></li>
-<li class="listitem"><p>PERL5_USE_PACKLIST</p></li>
-<li class="listitem"><p>PERL5_VENDORBASE</p></li>
-<li class="listitem"><p>PFCTL</p></li>
-<li class="listitem"><p>PFVAR_H</p></li>
-<li class="listitem"><p>PF_VERSION</p></li>
-<li class="listitem"><p>PGGROUP</p></li>
-<li class="listitem"><p>PGHOME</p></li>
-<li class="listitem"><p>PGPKGSRCDIR</p></li>
-<li class="listitem"><p>PGSQL_TYPE</p></li>
-<li class="listitem"><p>PGSQL_VERSIONS_ACCEPTED</p></li>
-<li class="listitem"><p>PGSQL_VERSION_DEFAULT</p></li>
-<li class="listitem"><p>PGUSER</p></li>
-<li class="listitem"><p>PG_LIB_EXT</p></li>
-<li class="listitem"><p>PHP</p></li>
-<li class="listitem"><p>PHPCOMMON_MK</p></li>
-<li class="listitem"><p>PHPPKGSRCDIR</p></li>
-<li class="listitem"><p>PHP_BASE_VERS</p></li>
-<li class="listitem"><p>PHP_CHECK_INSTALLED</p></li>
-<li class="listitem"><p>PHP_EXTENSION_DIR</p></li>
-<li class="listitem"><p>PHP_INITIAL_TEENY</p></li>
-<li class="listitem"><p>PHP_PKG_PREFIX</p></li>
-<li class="listitem"><p>PHP_VERSION</p></li>
-<li class="listitem"><p>PHP_VERSIONS_ACCEPTED</p></li>
-<li class="listitem"><p>PHP_VERSIONS_INCOMPATIBLE</p></li>
-<li class="listitem"><p>PHP_VERSION_DEFAULT</p></li>
-<li class="listitem"><p>PHP_VERSION_REQD</p></li>
-<li class="listitem"><p>PILRC_USE_GTK</p></li>
-<li class="listitem"><p>PKGCONFIG_BASE</p></li>
-<li class="listitem"><p>PKGCONFIG_FILE</p></li>
-<li class="listitem"><p>PKGCONFIG_OVERRIDE</p></li>
-<li class="listitem"><p>PKGCONFIG_OVERRIDE_STAGE</p></li>
-<li class="listitem"><p>PKGDIR</p></li>
-<li class="listitem"><p>PKGGNUDIR</p></li>
-<li class="listitem"><p>PKGINFODIR</p></li>
-<li class="listitem"><p>PKGLOCALEDIR</p></li>
-<li class="listitem"><p>PKGMANDIR</p></li>
-<li class="listitem"><p>PKGNAME</p></li>
-<li class="listitem"><p>PKGNAME_REQD</p></li>
-<li class="listitem"><p>PKGPATH</p></li>
-<li class="listitem"><p>PKGREVISION</p></li>
-<li class="listitem"><p>PKGSRC_CHANGES</p></li>
-<li class="listitem"><p>PKGSRC_COMPILER</p></li>
-<li class="listitem"><p>PKGSRC_KEEP_BIN_PKGS</p></li>
-<li class="listitem"><p>PKGSRC_LOCKTYPE</p></li>
-<li class="listitem"><p>PKGSRC_MAKE_ENV</p></li>
-<li class="listitem"><p>PKGSRC_MESSAGE_RECIPIENTS</p></li>
-<li class="listitem"><p>PKGSRC_MKPIE</p></li>
-<li class="listitem"><p>PKGSRC_MKREPRO</p></li>
-<li class="listitem"><p>PKGSRC_RUN_TEST</p></li>
-<li class="listitem"><p>PKGSRC_SETENV</p></li>
-<li class="listitem"><p>PKGSRC_SLEEPSECS</p></li>
-<li class="listitem"><p>PKGSRC_TODO</p></li>
-<li class="listitem"><p>PKGSRC_USE_CTF</p></li>
-<li class="listitem"><p>PKGSRC_USE_FORTIFY</p></li>
-<li class="listitem"><p>PKGSRC_USE_RELRO</p></li>
-<li class="listitem"><p>PKGSRC_USE_SSP</p></li>
-<li class="listitem"><p>PKGSRC_USE_STACK_CHECK</p></li>
-<li class="listitem"><p>PKGTASKS_DATAFILE</p></li>
-<li class="listitem"><p>PKGTOOLS_ARGS</p></li>
-<li class="listitem"><p>PKGTOOLS_ENV</p></li>
-<li class="listitem"><p>PKG_ALTERNATIVES</p></li>
-<li class="listitem"><p>PKG_APACHE</p></li>
-<li class="listitem"><p>PKG_APACHE_ACCEPTED</p></li>
-<li class="listitem"><p>PKG_APACHE_DEFAULT</p></li>
-<li class="listitem"><p>PKG_BEST_EXISTS</p></li>
-<li class="listitem"><p>PKG_BUILD_OPTIONS</p></li>
-<li class="listitem"><p>PKG_COMPRESSION</p></li>
-<li class="listitem"><p>PKG_CONFIG</p></li>
-<li class="listitem"><p>PKG_CONFIG_PERMS</p></li>
-<li class="listitem"><p>PKG_CREATE_USERGROUP</p></li>
-<li class="listitem"><p>PKG_DB_TMPDIR</p></li>
-<li class="listitem"><p>PKG_DEBUG_LEVEL</p></li>
-<li class="listitem"><p>PKG_DEFAULT_OPTIONS</p></li>
-<li class="listitem"><p>PKG_DESTDIR_SUPPORT</p></li>
-<li class="listitem"><p>PKG_DEVELOPER</p></li>
-<li class="listitem"><p>PKG_DISABLED_OPTIONS</p></li>
-<li class="listitem"><p>PKG_FATAL_ERRORS</p></li>
-<li class="listitem"><p>PKG_FC</p></li>
-<li class="listitem"><p>PKG_FILELIST_CMD</p></li>
-<li class="listitem"><p>PKG_GECOS</p></li>
-<li class="listitem"><p>PKG_GID</p></li>
-<li class="listitem"><p>PKG_GROUPS</p></li>
-<li class="listitem"><p>PKG_GROUPS_VARS</p></li>
-<li class="listitem"><p>PKG_HOME</p></li>
-<li class="listitem"><p>PKG_INIT_SCRIPTS</p></li>
-<li class="listitem"><p>PKG_JAVA_HOME</p></li>
-<li class="listitem"><p>PKG_JVM</p></li>
-<li class="listitem"><p>PKG_JVMS_ACCEPTED</p></li>
-<li class="listitem"><p>PKG_JVM_DEFAULT</p></li>
-<li class="listitem"><p>PKG_LEGACY_OPTIONS</p></li>
-<li class="listitem"><p>PKG_LIBTOOL</p></li>
-<li class="listitem"><p>PKG_OPTIONS</p></li>
-<li class="listitem"><p>PKG_OPTIONS_DEPRECATED_WARNINGS</p></li>
-<li class="listitem"><p>PKG_OPTIONS_LEGACY_OPTS</p></li>
-<li class="listitem"><p>PKG_OPTIONS_LEGACY_VARS</p></li>
-<li class="listitem"><p>PKG_OPTIONS_NONEMPTY_SETS</p></li>
-<li class="listitem"><p>PKG_OPTIONS_OPTIONAL_GROUPS</p></li>
-<li class="listitem"><p>PKG_OPTIONS_REQUIRED_GROUPS</p></li>
-<li class="listitem"><p>PKG_OPTIONS_VAR</p></li>
-<li class="listitem"><p>PKG_PHP</p></li>
-<li class="listitem"><p>PKG_PHP_MAJOR_VERS</p></li>
-<li class="listitem"><p>PKG_PHP_VERSION</p></li>
-<li class="listitem"><p>PKG_RCD_SCRIPTS</p></li>
-<li class="listitem"><p>PKG_REFCOUNT_DBDIR</p></li>
-<li class="listitem"><p>PKG_REGISTER_SHELLS</p></li>
-<li class="listitem"><p>PKG_RESUME_TRANSFERS</p></li>
-<li class="listitem"><p>PKG_SHELL</p></li>
-<li class="listitem"><p>PKG_SUGGESTED_OPTIONS</p></li>
-<li class="listitem"><p>PKG_SUPPORTED_OPTIONS</p></li>
-<li class="listitem"><p>PKG_SYSCONFBASE</p></li>
-<li class="listitem"><p>PKG_SYSCONFBASEDIR</p></li>
-<li class="listitem"><p>PKG_SYSCONFDIR</p></li>
-<li class="listitem"><p>PKG_SYSCONFDIR_PERMS</p></li>
-<li class="listitem"><p>PKG_SYSCONFSUBDIR</p></li>
-<li class="listitem"><p>PKG_SYSCONFVAR</p></li>
-<li class="listitem"><p>PKG_TOOLS_BIN</p></li>
-<li class="listitem"><p>PKG_UID</p></li>
-<li class="listitem"><p>PKG_UPDATE_FONTS_DB</p></li>
-<li class="listitem"><p>PKG_USERS</p></li>
-<li class="listitem"><p>PKG_USERS_VARS</p></li>
-<li class="listitem"><p>PKG_VERBOSE</p></li>
-<li class="listitem"><p>PLIST</p></li>
-<li class="listitem"><p>PLIST_AWK</p></li>
-<li class="listitem"><p>PLIST_AWK_ENV</p></li>
-<li class="listitem"><p>PLIST_SRC</p></li>
-<li class="listitem"><p>PLIST_SUBST</p></li>
-<li class="listitem"><p>PLIST_TYPE</p></li>
-<li class="listitem"><p>PLIST_VARS</p></li>
-<li class="listitem"><p>POPTOP_USE_MPPE</p></li>
-<li class="listitem"><p>POST_FETCH_HOOK</p></li>
-<li class="listitem"><p>PREFER</p></li>
-<li class="listitem"><p>PREFER_NATIVE</p></li>
-<li class="listitem"><p>PREFER_NATIVE_PTHREADS</p></li>
-<li class="listitem"><p>PREFER_PKGSRC</p></li>
-<li class="listitem"><p>PREFIX</p></li>
-<li class="listitem"><p>PREPEND_PATH</p></li>
-<li class="listitem"><p>PRE_ROOT_CMD</p></li>
-<li class="listitem"><p>PRIVILEGED_STAGES</p></li>
-<li class="listitem"><p>PS</p></li>
-<li class="listitem"><p>PTHREAD_AUTO_VARS</p></li>
-<li class="listitem"><p>PTHREAD_CFLAGS</p></li>
-<li class="listitem"><p>PTHREAD_LDFLAGS</p></li>
-<li class="listitem"><p>PTHREAD_LIBS</p></li>
-<li class="listitem"><p>PTHREAD_OPTS</p></li>
-<li class="listitem"><p>PTHREAD_TYPE</p></li>
-<li class="listitem"><p>PVM_SSH</p></li>
-<li class="listitem"><p>PYPKGPREFIX</p></li>
-<li class="listitem"><p>PYTHON_FOR_BUILD_ONLY</p></li>
-<li class="listitem"><p>PYTHON_SELF_CONFLICT</p></li>
-<li class="listitem"><p>PYTHON_VERSIONED_DEPENDENCIES</p></li>
-<li class="listitem"><p>PYTHON_VERSIONS_ACCEPTED</p></li>
-<li class="listitem"><p>PYTHON_VERSIONS_INCOMPATIBLE</p></li>
-<li class="listitem"><p>PYTHON_VERSION_DEFAULT</p></li>
-<li class="listitem"><p>PYTHON_VERSION_REQD</p></li>
-<li class="listitem"><p>PYVERSSUFFIX</p></li>
-<li class="listitem"><p>PY_NO_EGG</p></li>
-<li class="listitem"><p>QMAILDIR</p></li>
-<li class="listitem"><p>QMAIL_ALIAS_USER</p></li>
-<li class="listitem"><p>QMAIL_DAEMON_USER</p></li>
-<li class="listitem"><p>QMAIL_LOG_USER</p></li>
-<li class="listitem"><p>QMAIL_NOFILES_GROUP</p></li>
-<li class="listitem"><p>QMAIL_PASSWD_USER</p></li>
-<li class="listitem"><p>QMAIL_QMAIL_GROUP</p></li>
-<li class="listitem"><p>QMAIL_QUEUE_DIR</p></li>
-<li class="listitem"><p>QMAIL_QUEUE_EXTRA</p></li>
-<li class="listitem"><p>QMAIL_QUEUE_USER</p></li>
-<li class="listitem"><p>QMAIL_REMOTE_USER</p></li>
-<li class="listitem"><p>QMAIL_ROOT_USER</p></li>
-<li class="listitem"><p>QMAIL_SEND_USER</p></li>
-<li class="listitem"><p>QPOPPER_FAC</p></li>
-<li class="listitem"><p>QPOPPER_SPOOL_DIR</p></li>
-<li class="listitem"><p>QPOPPER_USER</p></li>
-<li class="listitem"><p>RAKE_NAME</p></li>
-<li class="listitem"><p>RASMOL_DEPTH</p></li>
-<li class="listitem"><p>RCD_DIR</p></li>
-<li class="listitem"><p>RCD_ORDER</p></li>
-<li class="listitem"><p>RCD_SCRIPTS</p></li>
-<li class="listitem"><p>RCD_SCRIPTS_DIR</p></li>
-<li class="listitem"><p>RCD_SCRIPTS_EXAMPLEDIR</p></li>
-<li class="listitem"><p>RCD_SCRIPTS_MODE</p></li>
-<li class="listitem"><p>RCD_SCRIPTS_SHELL</p></li>
-<li class="listitem"><p>RCD_SCRIPT_SRC</p></li>
-<li class="listitem"><p>RCD_SUBR</p></li>
-<li class="listitem"><p>RDOC</p></li>
-<li class="listitem"><p>READLINE_DEFAULT</p></li>
-<li class="listitem"><p>READLINE_TYPE</p></li>
-<li class="listitem"><p>REAL_ROOT_GROUP</p></li>
-<li class="listitem"><p>REAL_ROOT_USER</p></li>
-<li class="listitem"><p>RECURSIVE_MAKE</p></li>
-<li class="listitem"><p>RELAY_CTRL_DIR</p></li>
-<li class="listitem"><p>REPLACE_AWK</p></li>
-<li class="listitem"><p>REPLACE_BASH</p></li>
-<li class="listitem"><p>REPLACE_CSH</p></li>
-<li class="listitem"><p>REPLACE_KSH</p></li>
-<li class="listitem"><p>REPLACE_PERL</p></li>
-<li class="listitem"><p>REPLACE_PERL6</p></li>
-<li class="listitem"><p>REPLACE_PYTHON</p></li>
-<li class="listitem"><p>REPLACE_RUBY</p></li>
-<li class="listitem"><p>REPLACE_RUBY_DIRS</p></li>
-<li class="listitem"><p>REPLACE_RUBY_PAT</p></li>
-<li class="listitem"><p>REPLACE_SH</p></li>
-<li class="listitem"><p>REPLACE_TEXLUA</p></li>
-<li class="listitem"><p>REQD_DIRS</p></li>
-<li class="listitem"><p>REQD_DIRS_PERMS</p></li>
-<li class="listitem"><p>REQD_FILES</p></li>
-<li class="listitem"><p>REQD_FILES_MODE</p></li>
-<li class="listitem"><p>REQD_FILES_PERMS</p></li>
-<li class="listitem"><p>RESOLV_AUTO_VARS</p></li>
-<li class="listitem"><p>RESOLV_LDFLAGS</p></li>
-<li class="listitem"><p>RESOLV_LIBS</p></li>
-<li class="listitem"><p>RM</p></li>
-<li class="listitem"><p>ROCKSPEC_NAME</p></li>
-<li class="listitem"><p>ROCKSPEC_SPECFILE</p></li>
-<li class="listitem"><p>ROOT_CMD</p></li>
-<li class="listitem"><p>ROOT_GROUP</p></li>
-<li class="listitem"><p>ROOT_USER</p></li>
-<li class="listitem"><p>RPCGEN</p></li>
-<li class="listitem"><p>RPM</p></li>
-<li class="listitem"><p>RPM2PKG_PLIST</p></li>
-<li class="listitem"><p>RPM2PKG_PREFIX</p></li>
-<li class="listitem"><p>RPM2PKG_STAGE</p></li>
-<li class="listitem"><p>RPM2PKG_STRIP</p></li>
-<li class="listitem"><p>RPM2PKG_SUBPREFIX</p></li>
-<li class="listitem"><p>RPMFILES</p></li>
-<li class="listitem"><p>RPMIGNOREPATH</p></li>
-<li class="listitem"><p>RPM_DB_PREFIX</p></li>
-<li class="listitem"><p>RSSH_CVS_PATH</p></li>
-<li class="listitem"><p>RSSH_RDIST_PATH</p></li>
-<li class="listitem"><p>RSSH_RSYNC_PATH</p></li>
-<li class="listitem"><p>RSSH_SCP_PATH</p></li>
-<li class="listitem"><p>RSSH_SFTP_SERVER_PATH</p></li>
-<li class="listitem"><p>RUBY</p></li>
-<li class="listitem"><p>RUBYGEM</p></li>
-<li class="listitem"><p>RUBYGEM_NAME</p></li>
-<li class="listitem"><p>RUBYGEM_OPTIONS</p></li>
-<li class="listitem"><p>RUBY_ABI_VERSION</p></li>
-<li class="listitem"><p>RUBY_ARCH</p></li>
-<li class="listitem"><p>RUBY_ARCHINC</p></li>
-<li class="listitem"><p>RUBY_ARCHLIB</p></li>
-<li class="listitem"><p>RUBY_BASE</p></li>
-<li class="listitem"><p>RUBY_BASERIDIR</p></li>
-<li class="listitem"><p>RUBY_BUILD_RDOC</p></li>
-<li class="listitem"><p>RUBY_BUILD_RI</p></li>
-<li class="listitem"><p>RUBY_DLEXT</p></li>
-<li class="listitem"><p>RUBY_DOC</p></li>
-<li class="listitem"><p>RUBY_DYNAMIC_DIRS</p></li>
-<li class="listitem"><p>RUBY_EG</p></li>
-<li class="listitem"><p>RUBY_ENCODING_ARG</p></li>
-<li class="listitem"><p>RUBY_EXTCONF</p></li>
-<li class="listitem"><p>RUBY_EXTCONF_CHECK</p></li>
-<li class="listitem"><p>RUBY_EXTCONF_DEBUG</p></li>
-<li class="listitem"><p>RUBY_EXTCONF_MAKEFILE</p></li>
-<li class="listitem"><p>RUBY_GEM_BASE</p></li>
-<li class="listitem"><p>RUBY_INC</p></li>
-<li class="listitem"><p>RUBY_LIB</p></li>
-<li class="listitem"><p>RUBY_LIB_BASE</p></li>
-<li class="listitem"><p>RUBY_NAME</p></li>
-<li class="listitem"><p>RUBY_NOVERSION</p></li>
-<li class="listitem"><p>RUBY_PKGPREFIX</p></li>
-<li class="listitem"><p>RUBY_RAILS</p></li>
-<li class="listitem"><p>RUBY_RAILS42_VERSION</p></li>
-<li class="listitem"><p>RUBY_RAILS51_VERSION</p></li>
-<li class="listitem"><p>RUBY_RAILS52_VERSION</p></li>
-<li class="listitem"><p>RUBY_RAILS_ACCEPTED</p></li>
-<li class="listitem"><p>RUBY_RAILS_DEFAULT</p></li>
-<li class="listitem"><p>RUBY_RAILS_REQD</p></li>
-<li class="listitem"><p>RUBY_RAILS_STRICT_DEP</p></li>
-<li class="listitem"><p>RUBY_RIDIR</p></li>
-<li class="listitem"><p>RUBY_SETUP</p></li>
-<li class="listitem"><p>RUBY_SHLIB</p></li>
-<li class="listitem"><p>RUBY_SHLIBALIAS</p></li>
-<li class="listitem"><p>RUBY_SHLIBVER</p></li>
-<li class="listitem"><p>RUBY_SIMPLE_INSTALL</p></li>
-<li class="listitem"><p>RUBY_SITEARCHLIB</p></li>
-<li class="listitem"><p>RUBY_SITELIB</p></li>
-<li class="listitem"><p>RUBY_SITELIB_BASE</p></li>
-<li class="listitem"><p>RUBY_SITERIDIR</p></li>
-<li class="listitem"><p>RUBY_SLEXT</p></li>
-<li class="listitem"><p>RUBY_SRCDIR</p></li>
-<li class="listitem"><p>RUBY_STATICLIB</p></li>
-<li class="listitem"><p>RUBY_SUFFIX</p></li>
-<li class="listitem"><p>RUBY_SYSRIDIR</p></li>
-<li class="listitem"><p>RUBY_USE_PTHREAD</p></li>
-<li class="listitem"><p>RUBY_VENDORARCHLIB</p></li>
-<li class="listitem"><p>RUBY_VENDORLIB</p></li>
-<li class="listitem"><p>RUBY_VENDORLIB_BASE</p></li>
-<li class="listitem"><p>RUBY_VER</p></li>
-<li class="listitem"><p>RUBY_VERSION</p></li>
-<li class="listitem"><p>RUBY_VERSIONS_ACCEPTED</p></li>
-<li class="listitem"><p>RUBY_VERSION_DEFAULT</p></li>
-<li class="listitem"><p>RUBY_VERSION_REQD</p></li>
-<li class="listitem"><p>RUBY_VER_DIR</p></li>
-<li class="listitem"><p>RUN</p></li>
-<li class="listitem"><p>RUN_LDCONFIG</p></li>
-<li class="listitem"><p>SAWFISH_THEMES</p></li>
-<li class="listitem"><p>SCO</p></li>
-<li class="listitem"><p>SCREWS_GROUP</p></li>
-<li class="listitem"><p>SCREWS_USER</p></li>
-<li class="listitem"><p>SCRIPTS_ENV</p></li>
-<li class="listitem"><p>SCROLLKEEPER_DATADIR</p></li>
-<li class="listitem"><p>SCROLLKEEPER_REBUILDDB</p></li>
-<li class="listitem"><p>SCROLLKEEPER_UPDATEDB</p></li>
-<li class="listitem"><p>SDIST_PAWD</p></li>
-<li class="listitem"><p>SERIAL_DEVICES</p></li>
-<li class="listitem"><p>SETGIDGAME</p></li>
-<li class="listitem"><p>SETGID_GAMES_PERMS</p></li>
-<li class="listitem"><p>SETUID_ROOT_PERMS</p></li>
-<li class="listitem"><p>SH</p></li>
-<li class="listitem"><p>SHLIB</p></li>
-<li class="listitem"><p>SHORTNAME</p></li>
-<li class="listitem"><p>SIGN_PACKAGES</p></li>
-<li class="listitem"><p>SILC_CLIENT_WITH_PERL</p></li>
-<li class="listitem"><p>SITE_SPECIFIC_PKGS</p></li>
-<li class="listitem"><p>SKIP_DEPENDS</p></li>
-<li class="listitem"><p>SKIP_PORTABILITY_CHECK</p></li>
-<li class="listitem"><p>SMF_INSTANCES</p></li>
-<li class="listitem"><p>SMF_MANIFEST</p></li>
-<li class="listitem"><p>SMF_METHODS</p></li>
-<li class="listitem"><p>SMF_METHOD_SHELL</p></li>
-<li class="listitem"><p>SMF_METHOD_SRC</p></li>
-<li class="listitem"><p>SMF_NAME</p></li>
-<li class="listitem"><p>SMF_PREFIX</p></li>
-<li class="listitem"><p>SMF_SRCDIR</p></li>
-<li class="listitem"><p>SNIPROXY_GROUP</p></li>
-<li class="listitem"><p>SNIPROXY_USER</p></li>
-<li class="listitem"><p>SOURCE_BUFFSIZE</p></li>
-<li class="listitem"><p>SPECIAL_PERMS</p></li>
-<li class="listitem"><p>SPECIFIC_PKGS</p></li>
-<li class="listitem"><p>SSH_SUID</p></li>
-<li class="listitem"><p>SSYNC_PAWD</p></li>
-<li class="listitem"><p>STEP_MSG</p></li>
-<li class="listitem"><p>STRIP</p></li>
-<li class="listitem"><p>STRIP_DBG</p></li>
-<li class="listitem"><p>STRIP_DEBUG</p></li>
-<li class="listitem"><p>STRIP_DEBUG_SUPPORTED</p></li>
-<li class="listitem"><p>STRIP_FILES_SKIP</p></li>
-<li class="listitem"><p>SU</p></li>
-<li class="listitem"><p>SUBDIR</p></li>
-<li class="listitem"><p>SUBST_CLASSES</p></li>
-<li class="listitem"><p>SUBST_FILES</p></li>
-<li class="listitem"><p>SUBST_FILTER_CMD</p></li>
-<li class="listitem"><p>SUBST_MESSAGE</p></li>
-<li class="listitem"><p>SUBST_SED</p></li>
-<li class="listitem"><p>SUBST_SHOW_DIFF</p></li>
-<li class="listitem"><p>SUBST_SKIP_TEXT_CHECK</p></li>
-<li class="listitem"><p>SUBST_STAGE</p></li>
-<li class="listitem"><p>SUBST_VARS</p></li>
-<li class="listitem"><p>SUNWSPROBASE</p></li>
-<li class="listitem"><p>SUSE_PREFER</p></li>
-<li class="listitem"><p>SU_CMD</p></li>
-<li class="listitem"><p>SVN_EXTRACTDIR</p></li>
-<li class="listitem"><p>SVN_REPO</p></li>
-<li class="listitem"><p>SVN_REPOSITORIES</p></li>
-<li class="listitem"><p>SVN_REVISION</p></li>
-<li class="listitem"><p>TERMCAP_TYPE</p></li>
-<li class="listitem"><p>TERMINFO_DEFAULT</p></li>
-<li class="listitem"><p>TERMINFO_TYPE</p></li>
-<li class="listitem"><p>TEST</p></li>
-<li class="listitem"><p>TEST_DIRS</p></li>
-<li class="listitem"><p>TEST_ENV</p></li>
-<li class="listitem"><p>TEST_MAKE_CMD</p></li>
-<li class="listitem"><p>TEST_MAKE_FLAGS</p></li>
-<li class="listitem"><p>TEST_TARGET</p></li>
-<li class="listitem"><p>TEXLIVE_IGNORE_PATTERNS</p></li>
-<li class="listitem"><p>TEXLIVE_REV</p></li>
-<li class="listitem"><p>TEXMFSITE</p></li>
-<li class="listitem"><p>TEX_FORMATS</p></li>
-<li class="listitem"><p>TEX_HYPHEN_DAT</p></li>
-<li class="listitem"><p>TEX_HYPHEN_DEF</p></li>
-<li class="listitem"><p>TEX_TEXMF_DIRS</p></li>
-<li class="listitem"><p>THTTPD_LOG_FACILITY</p></li>
-<li class="listitem"><p>TO</p></li>
-<li class="listitem"><p>TOOLS_ALIASES</p></li>
-<li class="listitem"><p>TOOLS_ARGS</p></li>
-<li class="listitem"><p>TOOLS_BROKEN</p></li>
-<li class="listitem"><p>TOOLS_CMD</p></li>
-<li class="listitem"><p>TOOLS_CREATE</p></li>
-<li class="listitem"><p>TOOLS_DIR</p></li>
-<li class="listitem"><p>TOOLS_FAIL</p></li>
-<li class="listitem"><p>TOOLS_GNU_MISSING</p></li>
-<li class="listitem"><p>TOOLS_LDCONFIG</p></li>
-<li class="listitem"><p>TOOLS_NOOP</p></li>
-<li class="listitem"><p>TOOLS_PATH</p></li>
-<li class="listitem"><p>TOOLS_SCRIPT</p></li>
-<li class="listitem"><p>TTF_FONTDIR</p></li>
-<li class="listitem"><p>TTF_FONTS_DIR</p></li>
-<li class="listitem"><p>TYPE</p></li>
-<li class="listitem"><p>UAC_REQD_EXECS</p></li>
-<li class="listitem"><p>UCSPI_SSL_GROUP</p></li>
-<li class="listitem"><p>UCSPI_SSL_USER</p></li>
-<li class="listitem"><p>UNLIMIT_RESOURCES</p></li>
-<li class="listitem"><p>UNPRIVILEGED</p></li>
-<li class="listitem"><p>UNPRIVILEGED_GROUP</p></li>
-<li class="listitem"><p>UNPRIVILEGED_GROUPS</p></li>
-<li class="listitem"><p>UNPRIVILEGED_USER</p></li>
-<li class="listitem"><p>UNWRAP_FILES</p></li>
-<li class="listitem"><p>UNWRAP_PATTERNS</p></li>
-<li class="listitem"><p>UPDATE_GEMSPEC</p></li>
-<li class="listitem"><p>UPDATE_TARGET</p></li>
-<li class="listitem"><p>URI</p></li>
-<li class="listitem"><p>USA</p></li>
-<li class="listitem"><p>USERGROUP_PHASE</p></li>
-<li class="listitem"><p>USERPPP_GROUP</p></li>
-<li class="listitem"><p>USER_SPECIFIC_PKGS</p></li>
-<li class="listitem"><p>USE_ABI_DEPENDS</p></li>
-<li class="listitem"><p>USE_APR</p></li>
-<li class="listitem"><p>USE_BSD_MAKEFILE</p></li>
-<li class="listitem"><p>USE_BUILTIN</p></li>
-<li class="listitem"><p>USE_CROSS_COMPILE</p></li>
-<li class="listitem"><p>USE_CURSES</p></li>
-<li class="listitem"><p>USE_CWRAPPERS</p></li>
-<li class="listitem"><p>USE_DB185</p></li>
-<li class="listitem"><p>USE_FEATURES</p></li>
-<li class="listitem"><p>USE_GAMESGROUP</p></li>
-<li class="listitem"><p>USE_GCC_RUNTIME</p></li>
-<li class="listitem"><p>USE_IMAKE</p></li>
-<li class="listitem"><p>USE_JAVA</p></li>
-<li class="listitem"><p>USE_JAVA2</p></li>
-<li class="listitem"><p>USE_LANGUAGES</p></li>
-<li class="listitem"><p>USE_LIBTOOL</p></li>
-<li class="listitem"><p>USE_NATIVE_GCC</p></li>
-<li class="listitem"><p>USE_NETBSD_REPO</p></li>
-<li class="listitem"><p>USE_PKGSRC_GCC</p></li>
-<li class="listitem"><p>USE_PKGSRC_GCC_RUNTIME</p></li>
-<li class="listitem"><p>USE_PKGTASKS</p></li>
-<li class="listitem"><p>USE_RUBY_EXTCONF</p></li>
-<li class="listitem"><p>USE_RUBY_INSTALL</p></li>
-<li class="listitem"><p>USE_RUBY_SETUP</p></li>
-<li class="listitem"><p>USE_RUBY_SETUP_PKG</p></li>
-<li class="listitem"><p>USE_TOOLS</p></li>
-<li class="listitem"><p>UUCP_GROUP</p></li>
-<li class="listitem"><p>UUCP_USER</p></li>
-<li class="listitem"><p>VARBASE</p></li>
-<li class="listitem"><p>VARNAME</p></li>
-<li class="listitem"><p>VIM_EXTRA_OPTS</p></li>
-<li class="listitem"><p>WARNING_MSG</p></li>
-<li class="listitem"><p>WCALC_CGIDIR</p></li>
-<li class="listitem"><p>WCALC_CGIPATH</p></li>
-<li class="listitem"><p>WCALC_HTMLDIR</p></li>
-<li class="listitem"><p>WCALC_HTMLPATH</p></li>
-<li class="listitem"><p>WDM_MANAGERS</p></li>
-<li class="listitem"><p>WRAPPER_REORDER_CMDS</p></li>
-<li class="listitem"><p>WRKDIR</p></li>
-<li class="listitem"><p>WRKDIR_BASENAME</p></li>
-<li class="listitem"><p>WRKDIR_LOCKTYPE</p></li>
-<li class="listitem"><p>WRKLOG</p></li>
-<li class="listitem"><p>WRKOBJDIR</p></li>
-<li class="listitem"><p>WRKSRC</p></li>
-<li class="listitem"><p>WXGTK_ACCEPTED</p></li>
-<li class="listitem"><p>WXGTK_DEFAULT</p></li>
-<li class="listitem"><p>X10_PORT</p></li>
-<li class="listitem"><p>X11</p></li>
-<li class="listitem"><p>X11BASE</p></li>
-<li class="listitem"><p>X11_PKGSRCDIR</p></li>
-<li class="listitem"><p>X11_TYPE</p></li>
-<li class="listitem"><p>X509_CERTIFICATE</p></li>
-<li class="listitem"><p>X509_KEY</p></li>
-<li class="listitem"><p>XAW_TYPE</p></li>
-<li class="listitem"><p>XLOCK_DEFAULT_MODE</p></li>
-<li class="listitem"><p>XMKMF_FLAGS</p></li>
-<li class="listitem"><p>XXX</p></li>
-<li class="listitem"><p>XXXX</p></li>
-<li class="listitem"><p>YES</p></li>
-<li class="listitem"><p>ZERO_FILESIZE_P</p></li>
-<li class="listitem"><p>ZSH_STATIC</p></li>
-<li class="listitem"><p>__stdc__</p></li>
-<li class="listitem"><p>_vargroups</p></li>
-<li class="listitem"><p>add</p></li>
-<li class="listitem"><p>all</p></li>
-<li class="listitem"><p>alternatives</p></li>
-<li class="listitem"><p>aslr</p></li>
-<li class="listitem"><p>asprintf</p></li>
-<li class="listitem"><p>autoconf</p></li>
-<li class="listitem"><p>automake</p></li>
-<li class="listitem"><p>autoreconf</p></li>
-<li class="listitem"><p>awk</p></li>
-<li class="listitem"><p>bash</p></li>
-<li class="listitem"><p>big-endian</p></li>
-<li class="listitem"><p>bin-install</p></li>
-<li class="listitem"><p>binpkg-list</p></li>
-<li class="listitem"><p>bootstrap-depends</p></li>
-<li class="listitem"><p>broken</p></li>
-<li class="listitem"><p>broken_on_platform</p></li>
-<li class="listitem"><p>build</p></li>
-<li class="listitem"><p>build-env</p></li>
-<li class="listitem"><p>buildlink-directories</p></li>
-<li class="listitem"><p>buildlink-oss-soundcard-h</p></li>
-<li class="listitem"><p>c</p></li>
-<li class="listitem"><p>c++</p></li>
-<li class="listitem"><p>ccache</p></li>
-<li class="listitem"><p>cce</p></li>
-<li class="listitem"><p>cdefs</p></li>
-<li class="listitem"><p>changes</p></li>
-<li class="listitem"><p>changes-entry</p></li>
-<li class="listitem"><p>changes-entry-noupdate</p></li>
-<li class="listitem"><p>check</p></li>
-<li class="listitem"><p>check-clean</p></li>
-<li class="listitem"><p>check-files</p></li>
-<li class="listitem"><p>check-files-clean</p></li>
-<li class="listitem"><p>check-vulnerable</p></li>
-<li class="listitem"><p>checksum</p></li>
-<li class="listitem"><p>checksum-phase</p></li>
-<li class="listitem"><p>clean</p></li>
-<li class="listitem"><p>clean-depends</p></li>
-<li class="listitem"><p>cleandir</p></li>
-<li class="listitem"><p>commit</p></li>
-<li class="listitem"><p>commit-changes-entry</p></li>
-<li class="listitem"><p>compact</p></li>
-<li class="listitem"><p>compiler</p></li>
-<li class="listitem"><p>conf</p></li>
-<li class="listitem"><p>config.guess</p></li>
-<li class="listitem"><p>config.sub</p></li>
-<li class="listitem"><p>configuration</p></li>
-<li class="listitem"><p>configure</p></li>
-<li class="listitem"><p>configure-help</p></li>
-<li class="listitem"><p>configure_args</p></li>
-<li class="listitem"><p>cputime</p></li>
-<li class="listitem"><p>create-usergroup</p></li>
-<li class="listitem"><p>csh</p></li>
-<li class="listitem"><p>ctf</p></li>
-<li class="listitem"><p>cvs</p></li>
-<li class="listitem"><p>debug</p></li>
-<li class="listitem"><p>declaration</p></li>
-<li class="listitem"><p>declare</p></li>
-<li class="listitem"><p>defined</p></li>
-<li class="listitem"><p>depend</p></li>
-<li class="listitem"><p>dependencies</p></li>
-<li class="listitem"><p>depends</p></li>
-<li class="listitem"><p>depends-checksum</p></li>
-<li class="listitem"><p>depends-fetch</p></li>
-<li class="listitem"><p>describe</p></li>
-<li class="listitem"><p>destdir</p></li>
-<li class="listitem"><p>distclean</p></li>
-<li class="listitem"><p>distinfo</p></li>
-<li class="listitem"><p>dl</p></li>
-<li class="listitem"><p>dlopen</p></li>
-<li class="listitem"><p>do-build</p></li>
-<li class="listitem"><p>do-buildlink</p></li>
-<li class="listitem"><p>do-clean</p></li>
-<li class="listitem"><p>do-configure-post-hook</p></li>
-<li class="listitem"><p>do-extract</p></li>
-<li class="listitem"><p>do-fetch</p></li>
-<li class="listitem"><p>do-install</p></li>
-<li class="listitem"><p>emul</p></li>
-<li class="listitem"><p>emulation</p></li>
-<li class="listitem"><p>emulator</p></li>
-<li class="listitem"><p>endian</p></li>
-<li class="listitem"><p>enomem</p></li>
-<li class="listitem"><p>err</p></li>
-<li class="listitem"><p>errx</p></li>
-<li class="listitem"><p>etc</p></li>
-<li class="listitem"><p>feature</p></li>
-<li class="listitem"><p>features</p></li>
-<li class="listitem"><p>fetch</p></li>
-<li class="listitem"><p>fetch-list</p></li>
-<li class="listitem"><p>follows</p></li>
-<li class="listitem"><p>forbids</p></li>
-<li class="listitem"><p>form</p></li>
-<li class="listitem"><p>format</p></li>
-<li class="listitem"><p>fortify</p></li>
-<li class="listitem"><p>fortify_source</p></li>
-<li class="listitem"><p>fossil</p></li>
-<li class="listitem"><p>friend</p></li>
-<li class="listitem"><p>from</p></li>
-<li class="listitem"><p>fts</p></li>
-<li class="listitem"><p>fts_close</p></li>
-<li class="listitem"><p>fts_open</p></li>
-<li class="listitem"><p>fts_read</p></li>
-<li class="listitem"><p>fts_set</p></li>
-<li class="listitem"><p>full</p></li>
-<li class="listitem"><p>gcc</p></li>
-<li class="listitem"><p>getopt_long</p></li>
-<li class="listitem"><p>getprogname</p></li>
-<li class="listitem"><p>gettext</p></li>
-<li class="listitem"><p>git</p></li>
-<li class="listitem"><p>github</p></li>
-<li class="listitem"><p>glob</p></li>
-<li class="listitem"><p>gnu</p></li>
-<li class="listitem"><p>go</p></li>
-<li class="listitem"><p>golang</p></li>
-<li class="listitem"><p>guess-license</p></li>
-<li class="listitem"><p>hashbang</p></li>
-<li class="listitem"><p>heimdal</p></li>
-<li class="listitem"><p>help</p></li>
-<li class="listitem"><p>hg</p></li>
-<li class="listitem"><p>imake</p></li>
-<li class="listitem"><p>increment</p></li>
-<li class="listitem"><p>interp</p></li>
-<li class="listitem"><p>interpreter</p></li>
-<li class="listitem"><p>intl</p></li>
-<li class="listitem"><p>iso</p></li>
-<li class="listitem"><p>kerberos</p></li>
-<li class="listitem"><p>krb</p></li>
-<li class="listitem"><p>krb5</p></li>
-<li class="listitem"><p>ksh</p></li>
-<li class="listitem"><p>latex</p></li>
-<li class="listitem"><p>libnbcompat</p></li>
-<li class="listitem"><p>libs</p></li>
-<li class="listitem"><p>libtool</p></li>
-<li class="listitem"><p>licence</p></li>
-<li class="listitem"><p>license</p></li>
-<li class="listitem"><p>lintl</p></li>
-<li class="listitem"><p>little-endian</p></li>
-<li class="listitem"><p>lock</p></li>
-<li class="listitem"><p>locking</p></li>
-<li class="listitem"><p>lvalue</p></li>
-<li class="listitem"><p>make</p></li>
-<li class="listitem"><p>makesum</p></li>
-<li class="listitem"><p>memory</p></li>
-<li class="listitem"><p>mercurial</p></li>
-<li class="listitem"><p>meta</p></li>
-<li class="listitem"><p>meta-package</p></li>
-<li class="listitem"><p>meta_package</p></li>
-<li class="listitem"><p>mit-krb5</p></li>
-<li class="listitem"><p>mk.conf</p></li>
-<li class="listitem"><p>mount</p></li>
-<li class="listitem"><p>mprotect</p></li>
-<li class="listitem"><p>mremap</p></li>
-<li class="listitem"><p>nb</p></li>
-<li class="listitem"><p>nbcompat</p></li>
-<li class="listitem"><p>no</p></li>
-<li class="listitem"><p>obstack</p></li>
-<li class="listitem"><p>obstack_ptr_grow</p></li>
-<li class="listitem"><p>occurs</p></li>
-<li class="listitem"><p>only</p></li>
-<li class="listitem"><p>options</p></li>
-<li class="listitem"><p>options.mk</p></li>
-<li class="listitem"><p>order</p></li>
-<li class="listitem"><p>override</p></li>
-<li class="listitem"><p>override-intltool</p></li>
-<li class="listitem"><p>override-message-intltool</p></li>
-<li class="listitem"><p>package</p></li>
-<li class="listitem"><p>parallel</p></li>
-<li class="listitem"><p>partial</p></li>
-<li class="listitem"><p>path</p></li>
-<li class="listitem"><p>pax</p></li>
-<li class="listitem"><p>paxctl</p></li>
-<li class="listitem"><p>pbulk-index</p></li>
-<li class="listitem"><p>pc</p></li>
-<li class="listitem"><p>perl</p></li>
-<li class="listitem"><p>perl5</p></li>
-<li class="listitem"><p>perms</p></li>
-<li class="listitem"><p>php</p></li>
-<li class="listitem"><p>pkg-build-options</p></li>
-<li class="listitem"><p>pkg-config</p></li>
-<li class="listitem"><p>pkg_build_options</p></li>
-<li class="listitem"><p>platform</p></li>
-<li class="listitem"><p>plist</p></li>
-<li class="listitem"><p>post-extract</p></li>
-<li class="listitem"><p>post-fetch</p></li>
-<li class="listitem"><p>post-wrapper</p></li>
-<li class="listitem"><p>pre-configure</p></li>
-<li class="listitem"><p>pre-extract</p></li>
-<li class="listitem"><p>pre-fetch</p></li>
-<li class="listitem"><p>print-plist</p></li>
-<li class="listitem"><p>print-summary-data</p></li>
-<li class="listitem"><p>privileged-install-hook</p></li>
-<li class="listitem"><p>pypi</p></li>
-<li class="listitem"><p>python</p></li>
-<li class="listitem"><p>readme-all</p></li>
-<li class="listitem"><p>regcomp</p></li>
-<li class="listitem"><p>relro</p></li>
-<li class="listitem"><p>rename</p></li>
-<li class="listitem"><p>reorder</p></li>
-<li class="listitem"><p>replace</p></li>
-<li class="listitem"><p>replace_interpreter</p></li>
-<li class="listitem"><p>reproducible</p></li>
-<li class="listitem"><p>resolv</p></li>
-<li class="listitem"><p>root</p></li>
-<li class="listitem"><p>ruby</p></li>
-<li class="listitem"><p>setenv</p></li>
-<li class="listitem"><p>setgid</p></li>
-<li class="listitem"><p>setprogname</p></li>
-<li class="listitem"><p>setuid</p></li>
-<li class="listitem"><p>sh</p></li>
-<li class="listitem"><p>show</p></li>
-<li class="listitem"><p>show-all</p></li>
-<li class="listitem"><p>show-build-defs</p></li>
-<li class="listitem"><p>show-depends</p></li>
-<li class="listitem"><p>show-deps</p></li>
-<li class="listitem"><p>show-distfiles</p></li>
-<li class="listitem"><p>show-downlevel</p></li>
-<li class="listitem"><p>show-subdir-var</p></li>
-<li class="listitem"><p>show-tools</p></li>
-<li class="listitem"><p>show-var</p></li>
-<li class="listitem"><p>show-vars</p></li>
-<li class="listitem"><p>snprintf</p></li>
-<li class="listitem"><p>ssp</p></li>
-<li class="listitem"><p>st_mode</p></li>
-<li class="listitem"><p>stage-install</p></li>
-<li class="listitem"><p>strip</p></li>
-<li class="listitem"><p>strong</p></li>
-<li class="listitem"><p>subst</p></li>
-<li class="listitem"><p>subversion</p></li>
-<li class="listitem"><p>sun</p></li>
-<li class="listitem"><p>sunpro</p></li>
-<li class="listitem"><p>sunwspro</p></li>
-<li class="listitem"><p>svn</p></li>
-<li class="listitem"><p>test</p></li>
-<li class="listitem"><p>tex</p></li>
-<li class="listitem"><p>texlive</p></li>
-<li class="listitem"><p>tmp</p></li>
-<li class="listitem"><p>tool</p></li>
-<li class="listitem"><p>tools</p></li>
-<li class="listitem"><p>tools-libtool-m4-override</p></li>
-<li class="listitem"><p>type</p></li>
-<li class="listitem"><p>ulimit</p></li>
-<li class="listitem"><p>undefined</p></li>
-<li class="listitem"><p>undo-replace</p></li>
-<li class="listitem"><p>unlimit</p></li>
-<li class="listitem"><p>unprivileged</p></li>
-<li class="listitem"><p>unprivileged-install-hook</p></li>
-<li class="listitem"><p>unstripped</p></li>
-<li class="listitem"><p>update</p></li>
-<li class="listitem"><p>upload</p></li>
-<li class="listitem"><p>upload-distfiles</p></li>
-<li class="listitem"><p>usage</p></li>
-<li class="listitem"><p>use_tools</p></li>
-<li class="listitem"><p>user</p></li>
-<li class="listitem"><p>utimes</p></li>
-<li class="listitem"><p>vasprintf</p></li>
-<li class="listitem"><p>verbose</p></li>
-<li class="listitem"><p>vsnprintf</p></li>
-<li class="listitem"><p>warn</p></li>
-<li class="listitem"><p>warning</p></li>
-<li class="listitem"><p>warnings</p></li>
-<li class="listitem"><p>warnx</p></li>
-<li class="listitem"><p>weak</p></li>
-<li class="listitem"><p>work</p></li>
-<li class="listitem"><p>wrapper</p></li>
-<li class="listitem"><p>yes</p></li>
+<li class="listitem"><p>#!
+</p></li>
+<li class="listitem"><p>-lintl
+</p></li>
+<li class="listitem"><p>64bit
+</p></li>
+<li class="listitem"><p>ABI
+</p></li>
+<li class="listitem"><p>ACCEPTABLE_LICENSES
+</p></li>
+<li class="listitem"><p>ACROREAD_FONTPATH
+</p></li>
+<li class="listitem"><p>ADDITIONAL
+</p></li>
+<li class="listitem"><p>AFAIK
+</p></li>
+<li class="listitem"><p>AIX
+</p></li>
+<li class="listitem"><p>ALLOW_VULNERABLE_PACKAGES
+</p></li>
+<li class="listitem"><p>ALL_ENV
+</p></li>
+<li class="listitem"><p>ALTERNATIVES_SRC
+</p></li>
+<li class="listitem"><p>AMANDA_TMP
+</p></li>
+<li class="listitem"><p>AMANDA_USER
+</p></li>
+<li class="listitem"><p>AMANDA_VAR
+</p></li>
+<li class="listitem"><p>APACHE_GROUP
+</p></li>
+<li class="listitem"><p>APACHE_MODULE_NAME
+</p></li>
+<li class="listitem"><p>APACHE_MODULE_SRC
+</p></li>
+<li class="listitem"><p>APACHE_MODULE_SRCDIR
+</p></li>
+<li class="listitem"><p>APACHE_PKG_PREFIX
+</p></li>
+<li class="listitem"><p>APACHE_SUEXEC_CONFIGURE_ARGS
+</p></li>
+<li class="listitem"><p>APACHE_SUEXEC_DOCROOT
+</p></li>
+<li class="listitem"><p>APACHE_USER
+</p></li>
+<li class="listitem"><p>APPEND_ABI
+</p></li>
+<li class="listitem"><p>APPEND_ELF
+</p></li>
+<li class="listitem"><p>ARLA_CACHE
+</p></li>
+<li class="listitem"><p>AUDIT_PACKAGES_FLAGS
+</p></li>
+<li class="listitem"><p>AUTOCONF_REQD
+</p></li>
+<li class="listitem"><p>AUTOMAKE_OVERRIDE
+</p></li>
+<li class="listitem"><p>AUTOMAKE_REQD
+</p></li>
+<li class="listitem"><p>AUTO_MKDIRS
+</p></li>
+<li class="listitem"><p>BDB185_DEFAULT
+</p></li>
+<li class="listitem"><p>BDBBASE
+</p></li>
+<li class="listitem"><p>BDB_ACCEPTED
+</p></li>
+<li class="listitem"><p>BDB_DEFAULT
+</p></li>
+<li class="listitem"><p>BDB_LIBS
+</p></li>
+<li class="listitem"><p>BDB_TYPE
+</p></li>
+<li class="listitem"><p>BIND_DIR
+</p></li>
+<li class="listitem"><p>BIND_GROUP
+</p></li>
+<li class="listitem"><p>BIND_USER
+</p></li>
+<li class="listitem"><p>BINPKG_SITES
+</p></li>
+<li class="listitem"><p>BIN_INSTALL_FLAGS
+</p></li>
+<li class="listitem"><p>BISON_PKGDATADIR
+</p></li>
+<li class="listitem"><p>BOOTSTRAP_DEPENDS
+</p></li>
+<li class="listitem"><p>BOOTSTRAP_SETUPTOOLS
+</p></li>
+<li class="listitem"><p>BROKEN
+</p></li>
+<li class="listitem"><p>BROKEN_EXCEPT_ON_PLATFORM
+</p></li>
+<li class="listitem"><p>BROKEN_ON_PLATFORM
+</p></li>
+<li class="listitem"><p>BSDSRCDIR
+</p></li>
+<li class="listitem"><p>BSDXSRCDIR
+</p></li>
+<li class="listitem"><p>BSD_MAKE_ENV
+</p></li>
+<li class="listitem"><p>BUILDLINK_AUTO_DIRS
+</p></li>
+<li class="listitem"><p>BUILDLINK_AUTO_VARS
+</p></li>
+<li class="listitem"><p>BUILDLINK_CFLAGS
+</p></li>
+<li class="listitem"><p>BUILDLINK_CONTENTS_FILTER
+</p></li>
+<li class="listitem"><p>BUILDLINK_CPPFLAGS
+</p></li>
+<li class="listitem"><p>BUILDLINK_DEPMETHOD
+</p></li>
+<li class="listitem"><p>BUILDLINK_FILES
+</p></li>
+<li class="listitem"><p>BUILDLINK_FILES_CMD
+</p></li>
+<li class="listitem"><p>BUILDLINK_FNAME_TRANSFORM
+</p></li>
+<li class="listitem"><p>BUILDLINK_LDFLAGS
+</p></li>
+<li class="listitem"><p>BUILDLINK_LIBS
+</p></li>
+<li class="listitem"><p>BUILDLINK_OPSYS_SUPPORT_PTHREAD
+</p></li>
+<li class="listitem"><p>BUILDLINK_PKGNAME
+</p></li>
+<li class="listitem"><p>BUILDLINK_PREFIX
+</p></li>
+<li class="listitem"><p>BUILDLINK_RPATHDIRS
+</p></li>
+<li class="listitem"><p>BUILDLINK_TREE
+</p></li>
+<li class="listitem"><p>BUILD_DEFS
+</p></li>
+<li class="listitem"><p>BUILD_DEFS_EFFECTS
+</p></li>
+<li class="listitem"><p>BUILD_DIRS
+</p></li>
+<li class="listitem"><p>BUILD_ENV_SHELL
+</p></li>
+<li class="listitem"><p>BUILD_MAKE_CMD
+</p></li>
+<li class="listitem"><p>BUILD_MAKE_FLAGS
+</p></li>
+<li class="listitem"><p>BUILD_TARGET
+</p></li>
+<li class="listitem"><p>BUILTIN_FIND_FILES
+</p></li>
+<li class="listitem"><p>BUILTIN_FIND_FILES_VAR
+</p></li>
+<li class="listitem"><p>BUILTIN_FIND_GREP
+</p></li>
+<li class="listitem"><p>BUILTIN_FIND_HEADERS
+</p></li>
+<li class="listitem"><p>BUILTIN_FIND_HEADERS_VAR
+</p></li>
+<li class="listitem"><p>BUILTIN_PKG
+</p></li>
+<li class="listitem"><p>BUILTIN_TEST_CURSES_DEFINES
+</p></li>
+<li class="listitem"><p>BUILTIN_TEST_CURSES_FUNCS
+</p></li>
+<li class="listitem"><p>BUILTIN_VERSION_SCRIPT
+</p></li>
+<li class="listitem"><p>BUILTIN_X11_TYPE
+</p></li>
+<li class="listitem"><p>BUILTIN_X11_VERSION
+</p></li>
+<li class="listitem"><p>CACTI_GROUP
+</p></li>
+<li class="listitem"><p>CACTI_USER
+</p></li>
+<li class="listitem"><p>CANNA_GROUP
+</p></li>
+<li class="listitem"><p>CANNA_USER
+</p></li>
+<li class="listitem"><p>CAT
+</p></li>
+<li class="listitem"><p>CCACHE_BASE
+</p></li>
+<li class="listitem"><p>CCACHE_DIR
+</p></li>
+<li class="listitem"><p>CCACHE_LOGFILE
+</p></li>
+<li class="listitem"><p>CC_VERSION
+</p></li>
+<li class="listitem"><p>CC_VERSION_STRING
+</p></li>
+<li class="listitem"><p>CDRECORD_CONF
+</p></li>
+<li class="listitem"><p>CDROM_PKG_URL_DIR
+</p></li>
+<li class="listitem"><p>CDROM_PKG_URL_HOST
+</p></li>
+<li class="listitem"><p>CHECK_FAKEHOME
+</p></li>
+<li class="listitem"><p>CHECK_FILES
+</p></li>
+<li class="listitem"><p>CHECK_FILES_SKIP
+</p></li>
+<li class="listitem"><p>CHECK_FILES_STRICT
+</p></li>
+<li class="listitem"><p>CHECK_HEADERS
+</p></li>
+<li class="listitem"><p>CHECK_HEADERS_SKIP
+</p></li>
+<li class="listitem"><p>CHECK_INTERPRETER
+</p></li>
+<li class="listitem"><p>CHECK_INTERPRETER_SKIP
+</p></li>
+<li class="listitem"><p>CHECK_PERMS
+</p></li>
+<li class="listitem"><p>CHECK_PERMS_AUTOFIX
+</p></li>
+<li class="listitem"><p>CHECK_PERMS_SKIP
+</p></li>
+<li class="listitem"><p>CHECK_PORTABILITY
+</p></li>
+<li class="listitem"><p>CHECK_PORTABILITY_SKIP
+</p></li>
+<li class="listitem"><p>CHECK_RELRO
+</p></li>
+<li class="listitem"><p>CHECK_RELRO_SKIP
+</p></li>
+<li class="listitem"><p>CHECK_RELRO_SUPPORTED
+</p></li>
+<li class="listitem"><p>CHECK_SHLIBS
+</p></li>
+<li class="listitem"><p>CHECK_SHLIBS_BLACKLIST
+</p></li>
+<li class="listitem"><p>CHECK_SHLIBS_SKIP
+</p></li>
+<li class="listitem"><p>CHECK_SHLIBS_SUPPORTED
+</p></li>
+<li class="listitem"><p>CHECK_SSP
+</p></li>
+<li class="listitem"><p>CHECK_SSP_SKIP
+</p></li>
+<li class="listitem"><p>CHECK_SSP_SUPPORTED
+</p></li>
+<li class="listitem"><p>CHECK_STRIPPED
+</p></li>
+<li class="listitem"><p>CHECK_STRIPPED_SKIP
+</p></li>
+<li class="listitem"><p>CHECK_WRKREF
+</p></li>
+<li class="listitem"><p>CHECK_WRKREF_EXTRA_DIRS
+</p></li>
+<li class="listitem"><p>CHECK_WRKREF_SKIP
+</p></li>
+<li class="listitem"><p>CLAMAV_DBDIR
+</p></li>
+<li class="listitem"><p>CLAMAV_GROUP
+</p></li>
+<li class="listitem"><p>CLAMAV_USER
+</p></li>
+<li class="listitem"><p>CLANGBASE
+</p></li>
+<li class="listitem"><p>CLEANDEPENDS
+</p></li>
+<li class="listitem"><p>CMAKE_DEPENDENCIES_REWRITE
+</p></li>
+<li class="listitem"><p>CMAKE_INSTALL_PREFIX
+</p></li>
+<li class="listitem"><p>CMAKE_MODULE_PATH_OVERRIDE
+</p></li>
+<li class="listitem"><p>CMAKE_PKGSRC_BUILD_FLAGS
+</p></li>
+<li class="listitem"><p>CMAKE_PREFIX_PATH
+</p></li>
+<li class="listitem"><p>CMAKE_USE_GNU_INSTALL_DIRS
+</p></li>
+<li class="listitem"><p>COMPILER_RPATH_FLAG
+</p></li>
+<li class="listitem"><p>COMPILER_USE_SYMLINKS
+</p></li>
+<li class="listitem"><p>CONFIGURE_ARGS
+</p></li>
+<li class="listitem"><p>CONFIGURE_DIRS
+</p></li>
+<li class="listitem"><p>CONFIGURE_ENV
+</p></li>
+<li class="listitem"><p>CONFIGURE_HAS_INFODIR
+</p></li>
+<li class="listitem"><p>CONFIGURE_HAS_MANDIR
+</p></li>
+<li class="listitem"><p>CONFIGURE_SCRIPT
+</p></li>
+<li class="listitem"><p>CONFIG_SHELL
+</p></li>
+<li class="listitem"><p>CONFIG_SHELL_FLAGS
+</p></li>
+<li class="listitem"><p>CONF_FILES
+</p></li>
+<li class="listitem"><p>CONF_FILES_MODE
+</p></li>
+<li class="listitem"><p>CONF_FILES_PERMS
+</p></li>
+<li class="listitem"><p>CONSERVER_DEFAULTHOST
+</p></li>
+<li class="listitem"><p>CONSERVER_DEFAULTPORT
+</p></li>
+<li class="listitem"><p>CP
+</p></li>
+<li class="listitem"><p>CPP
+</p></li>
+<li class="listitem"><p>CPP_PRECOMP_FLAGS
+</p></li>
+<li class="listitem"><p>CREATE_WRKDIR_SYMLINK
+</p></li>
+<li class="listitem"><p>CROSSBASE
+</p></li>
+<li class="listitem"><p>CTFCONVERT
+</p></li>
+<li class="listitem"><p>CTF_FILES_SKIP
+</p></li>
+<li class="listitem"><p>CTF_SUPPORTED
+</p></li>
+<li class="listitem"><p>CTYPE
+</p></li>
+<li class="listitem"><p>CUPS_GROUP
+</p></li>
+<li class="listitem"><p>CUPS_SYSTEM_GROUPS
+</p></li>
+<li class="listitem"><p>CUPS_USER
+</p></li>
+<li class="listitem"><p>CURSES_DEFAULT
+</p></li>
+<li class="listitem"><p>CURSES_TYPE
+</p></li>
+<li class="listitem"><p>CXX
+</p></li>
+<li class="listitem"><p>CYRUS_GROUP
+</p></li>
+<li class="listitem"><p>CYRUS_IDLE
+</p></li>
+<li class="listitem"><p>CYRUS_USER
+</p></li>
+<li class="listitem"><p>DAEMONTOOLS_GROUP
+</p></li>
+<li class="listitem"><p>DAEMONTOOLS_LOG_USER
+</p></li>
+<li class="listitem"><p>DBUS_GROUP
+</p></li>
+<li class="listitem"><p>DBUS_USER
+</p></li>
+<li class="listitem"><p>DEFANG_GROUP
+</p></li>
+<li class="listitem"><p>DEFANG_USER
+</p></li>
+<li class="listitem"><p>DEFAULT_ACCEPTABLE_LICENSES
+</p></li>
+<li class="listitem"><p>DEFAULT_DISTFILES
+</p></li>
+<li class="listitem"><p>DEFAULT_IRC_SERVER
+</p></li>
+<li class="listitem"><p>DEFAULT_SERIAL_DEVICE
+</p></li>
+<li class="listitem"><p>DEF_UMASK
+</p></li>
+<li class="listitem"><p>DEINSTALLDEPENDS
+</p></li>
+<li class="listitem"><p>DEINSTALL_SRC
+</p></li>
+<li class="listitem"><p>DEINSTALL_TEMPLATES
+</p></li>
+<li class="listitem"><p>DELAYED_ERROR_MSG
+</p></li>
+<li class="listitem"><p>DELAYED_WARNING_MSG
+</p></li>
+<li class="listitem"><p>DEPENDS_TARGET
+</p></li>
+<li class="listitem"><p>DEPENDS_TYPE
+</p></li>
+<li class="listitem"><p>DESTDIR
+</p></li>
+<li class="listitem"><p>DESTDIR_VARNAME
+</p></li>
+<li class="listitem"><p>DIALER_GROUP
+</p></li>
+<li class="listitem"><p>DIGEST_REQD
+</p></li>
+<li class="listitem"><p>DISTDIR
+</p></li>
+<li class="listitem"><p>DISTFILES
+</p></li>
+<li class="listitem"><p>DISTINFO_FILE
+</p></li>
+<li class="listitem"><p>DISTNAME
+</p></li>
+<li class="listitem"><p>DIST_PATH
+</p></li>
+<li class="listitem"><p>DIST_SUBDIR
+</p></li>
+<li class="listitem"><p>DJBDNS_AXFR_USER
+</p></li>
+<li class="listitem"><p>DJBDNS_CACHE_USER
+</p></li>
+<li class="listitem"><p>DJBDNS_DJBDNS_GROUP
+</p></li>
+<li class="listitem"><p>DJBDNS_LOG_USER
+</p></li>
+<li class="listitem"><p>DJBDNS_RBL_USER
+</p></li>
+<li class="listitem"><p>DJBDNS_TINY_USER
+</p></li>
+<li class="listitem"><p>DLOPEN_REQUIRE_PTHREADS
+</p></li>
+<li class="listitem"><p>DL_AUTO_VARS
+</p></li>
+<li class="listitem"><p>DL_CFLAGS
+</p></li>
+<li class="listitem"><p>DL_LDFLAGS
+</p></li>
+<li class="listitem"><p>DL_LIBS
+</p></li>
+<li class="listitem"><p>DNS
+</p></li>
+<li class="listitem"><p>DOWNLOADED_DISTFILE
+</p></li>
+<li class="listitem"><p>DT_LAYOUT
+</p></li>
+<li class="listitem"><p>DYNAMIC_SITES_CMD
+</p></li>
+<li class="listitem"><p>DYNAMIC_SITES_SCRIPT
+</p></li>
+<li class="listitem"><p>ECHO
+</p></li>
+<li class="listitem"><p>ECHO_N
+</p></li>
+<li class="listitem"><p>ELK_GUI
+</p></li>
+<li class="listitem"><p>EMACS_TYPE
+</p></li>
+<li class="listitem"><p>EMULDIR
+</p></li>
+<li class="listitem"><p>EMULSUBDIR
+</p></li>
+<li class="listitem"><p>EMULSUBDIRSLASH
+</p></li>
+<li class="listitem"><p>EMUL_ARCH
+</p></li>
+<li class="listitem"><p>EMUL_DISTRO
+</p></li>
+<li class="listitem"><p>EMUL_EXEC_FMT
+</p></li>
+<li class="listitem"><p>EMUL_IS_NATIVE
+</p></li>
+<li class="listitem"><p>EMUL_MODULES
+</p></li>
+<li class="listitem"><p>EMUL_OPSYS
+</p></li>
+<li class="listitem"><p>EMUL_PKG_FMT
+</p></li>
+<li class="listitem"><p>EMUL_PLATFORM
+</p></li>
+<li class="listitem"><p>EMUL_PLATFORMS
+</p></li>
+<li class="listitem"><p>EMUL_PREFER
+</p></li>
+<li class="listitem"><p>EMUL_REQD
+</p></li>
+<li class="listitem"><p>EMUL_TYPE
+</p></li>
+<li class="listitem"><p>ERROR_MSG
+</p></li>
+<li class="listitem"><p>EXIM_GROUP
+</p></li>
+<li class="listitem"><p>EXIM_USER
+</p></li>
+<li class="listitem"><p>EXPORT_SYMBOLS_LDFLAGS
+</p></li>
+<li class="listitem"><p>EXTRACTOR
+</p></li>
+<li class="listitem"><p>EXTRACT_CMD
+</p></li>
+<li class="listitem"><p>EXTRACT_CMD_DEFAULT
+</p></li>
+<li class="listitem"><p>EXTRACT_DIR
+</p></li>
+<li class="listitem"><p>EXTRACT_ELEMENTS
+</p></li>
+<li class="listitem"><p>EXTRACT_ENV
+</p></li>
+<li class="listitem"><p>EXTRACT_ONLY
+</p></li>
+<li class="listitem"><p>EXTRACT_OPTS
+</p></li>
+<li class="listitem"><p>EXTRACT_SUFX
+</p></li>
+<li class="listitem"><p>EXTRACT_USING
+</p></li>
+<li class="listitem"><p>FAILOVER_FETCH
+</p></li>
+<li class="listitem"><p>FAIL_MSG
+</p></li>
+<li class="listitem"><p>FAKE_NCURSES
+</p></li>
+<li class="listitem"><p>FAM
+</p></li>
+<li class="listitem"><p>FAM_ACCEPTED
+</p></li>
+<li class="listitem"><p>FAM_DEFAULT
+</p></li>
+<li class="listitem"><p>FAM_SERVER
+</p></li>
+<li class="listitem"><p>FCPATH
+</p></li>
+<li class="listitem"><p>FEATURE_CPPFLAGS
+</p></li>
+<li class="listitem"><p>FEATURE_LDFLAGS
+</p></li>
+<li class="listitem"><p>FEATURE_LIBS
+</p></li>
+<li class="listitem"><p>FETCH_AFTER_ARGS
+</p></li>
+<li class="listitem"><p>FETCH_BEFORE_ARGS
+</p></li>
+<li class="listitem"><p>FETCH_CMD
+</p></li>
+<li class="listitem"><p>FETCH_OUTPUT_ARGS
+</p></li>
+<li class="listitem"><p>FETCH_PROXY
+</p></li>
+<li class="listitem"><p>FETCH_RESUME_ARGS
+</p></li>
+<li class="listitem"><p>FETCH_USING
+</p></li>
+<li class="listitem"><p>FILES_SUBST
+</p></li>
+<li class="listitem"><p>FILES_SUBST_SED
+</p></li>
+<li class="listitem"><p>FIX_SYSTEM_HEADERS
+</p></li>
+<li class="listitem"><p>FLUXBOX_USE_GNOME
+</p></li>
+<li class="listitem"><p>FLUXBOX_USE_KDE
+</p></li>
+<li class="listitem"><p>FLUXBOX_USE_XFT
+</p></li>
+<li class="listitem"><p>FLUXBOX_USE_XINERAMA
+</p></li>
+<li class="listitem"><p>FONTS_DIRS
+</p></li>
+<li class="listitem"><p>FONTS_VERBOSE
+</p></li>
+<li class="listitem"><p>FOO_HACKS_MK
+</p></li>
+<li class="listitem"><p>FOX_USE_XUNICODE
+</p></li>
+<li class="listitem"><p>FREEWNN_GROUP
+</p></li>
+<li class="listitem"><p>FREEWNN_USER
+</p></li>
+<li class="listitem"><p>FTP_PKG_URL_DIR
+</p></li>
+<li class="listitem"><p>FTP_PKG_URL_HOST
+</p></li>
+<li class="listitem"><p>GAMEDATAMODE
+</p></li>
+<li class="listitem"><p>GAMEDATA_PERMS
+</p></li>
+<li class="listitem"><p>GAMEDIRMODE
+</p></li>
+<li class="listitem"><p>GAMEDIR_PERMS
+</p></li>
+<li class="listitem"><p>GAMEGRP
+</p></li>
+<li class="listitem"><p>GAMEMODE
+</p></li>
+<li class="listitem"><p>GAMEOWN
+</p></li>
+<li class="listitem"><p>GAMES_GROUP
+</p></li>
+<li class="listitem"><p>GAMES_USER
+</p></li>
+<li class="listitem"><p>GCC
+</p></li>
+<li class="listitem"><p>GCCBASE
+</p></li>
+<li class="listitem"><p>GCC_REQD
+</p></li>
+<li class="listitem"><p>GCC_VERSION_SUFFIX
+</p></li>
+<li class="listitem"><p>GEM_BUILD
+</p></li>
+<li class="listitem"><p>GEM_CLEANBUILD
+</p></li>
+<li class="listitem"><p>GEM_CLEANBUILD_EXTENSIONS
+</p></li>
+<li class="listitem"><p>GEM_DOCDIR
+</p></li>
+<li class="listitem"><p>GEM_EXTSDIR
+</p></li>
+<li class="listitem"><p>GEM_HOME
+</p></li>
+<li class="listitem"><p>GEM_LIBDIR
+</p></li>
+<li class="listitem"><p>GEM_NAME
+</p></li>
+<li class="listitem"><p>GEM_PATH
+</p></li>
+<li class="listitem"><p>GEM_SPECFILE
+</p></li>
+<li class="listitem"><p>GENERATE_PLIST
+</p></li>
+<li class="listitem"><p>GHOSTSCRIPT_REQD
+</p></li>
+<li class="listitem"><p>GITHUB_PROJECT
+</p></li>
+<li class="listitem"><p>GITHUB_RELEASE
+</p></li>
+<li class="listitem"><p>GITHUB_TAG
+</p></li>
+<li class="listitem"><p>GITHUB_TYPE
+</p></li>
+<li class="listitem"><p>GNU
+</p></li>
+<li class="listitem"><p>GNU_CONFIGURE
+</p></li>
+<li class="listitem"><p>GNU_CONFIGURE_INFODIR
+</p></li>
+<li class="listitem"><p>GNU_CONFIGURE_MANDIR
+</p></li>
+<li class="listitem"><p>GNU_CONFIGURE_STRICT
+</p></li>
+<li class="listitem"><p>GO_BUILD_PATTERN
+</p></li>
+<li class="listitem"><p>GO_DIST_BASE
+</p></li>
+<li class="listitem"><p>GO_SRCPATH
+</p></li>
+<li class="listitem"><p>GROUP_SPECIFIC_PKGS
+</p></li>
+<li class="listitem"><p>GRUB_NETWORK_CARDS
+</p></li>
+<li class="listitem"><p>GRUB_PRESET_COMMAND
+</p></li>
+<li class="listitem"><p>GRUB_SCAN_ARGS
+</p></li>
+<li class="listitem"><p>GZIP
+</p></li>
+<li class="listitem"><p>HASKELL_COMPILER
+</p></li>
+<li class="listitem"><p>HASKELL_ENABLE_HADDOCK_DOCUMENTATION
+</p></li>
+<li class="listitem"><p>HASKELL_ENABLE_LIBRARY_PROFILING
+</p></li>
+<li class="listitem"><p>HASKELL_ENABLE_SHARED_LIBRARY
+</p></li>
+<li class="listitem"><p>HAS_CONFIGURE
+</p></li>
+<li class="listitem"><p>HEADER_TEMPLATES
+</p></li>
+<li class="listitem"><p>HOST_PKGTOOLS_ARGS
+</p></li>
+<li class="listitem"><p>HOST_SPECIFIC_PKGS
+</p></li>
+<li class="listitem"><p>HOWL_GROUP
+</p></li>
+<li class="listitem"><p>HOWL_USER
+</p></li>
+<li class="listitem"><p>ICCBASE
+</p></li>
+<li class="listitem"><p>ICECAST_CHROOTDIR
+</p></li>
+<li class="listitem"><p>ICON_THEMES
+</p></li>
+<li class="listitem"><p>IDOBASE
+</p></li>
+<li class="listitem"><p>IGNORE_CCACHE
+</p></li>
+<li class="listitem"><p>IGNORE_INFO_DIRS
+</p></li>
+<li class="listitem"><p>IGNORE_INTERACTIVE_FETCH
+</p></li>
+<li class="listitem"><p>IMAKE
+</p></li>
+<li class="listitem"><p>IMAKEOPTS
+</p></li>
+<li class="listitem"><p>IMAKE_MAKE
+</p></li>
+<li class="listitem"><p>IMAKE_MANINSTALL
+</p></li>
+<li class="listitem"><p>IMAP_UW_CCLIENT_MBOX_FMT
+</p></li>
+<li class="listitem"><p>IMDICTDIR
+</p></li>
+<li class="listitem"><p>INCOMPAT_CURSES
+</p></li>
+<li class="listitem"><p>INFO_DIR
+</p></li>
+<li class="listitem"><p>INFO_FILES
+</p></li>
+<li class="listitem"><p>INFO_FILES_VERBOSE
+</p></li>
+<li class="listitem"><p>INFO_MSG
+</p></li>
+<li class="listitem"><p>INIT_SYSTEM
+</p></li>
+<li class="listitem"><p>INN_DATA_DIR
+</p></li>
+<li class="listitem"><p>INN_GROUP
+</p></li>
+<li class="listitem"><p>INN_USER
+</p></li>
+<li class="listitem"><p>INSTALLATION_DIRS
+</p></li>
+<li class="listitem"><p>INSTALLATION_DIRS_FROM_PLIST
+</p></li>
+<li class="listitem"><p>INSTALL_ENV
+</p></li>
+<li class="listitem"><p>INSTALL_SH_OVERRIDE
+</p></li>
+<li class="listitem"><p>INSTALL_SRC
+</p></li>
+<li class="listitem"><p>INSTALL_TEMPLATES
+</p></li>
+<li class="listitem"><p>INSTALL_UNSTRIPPED
+</p></li>
+<li class="listitem"><p>IRCD_HYBRID_IRC_GROUP
+</p></li>
+<li class="listitem"><p>IRCD_HYBRID_IRC_USER
+</p></li>
+<li class="listitem"><p>IRCD_HYBRID_MAXCONN
+</p></li>
+<li class="listitem"><p>IRCD_HYBRID_NICLEN
+</p></li>
+<li class="listitem"><p>IRCD_HYBRID_SYSLOG_EVENTS
+</p></li>
+<li class="listitem"><p>IRCD_HYBRID_SYSLOG_FACILITY
+</p></li>
+<li class="listitem"><p>IRCD_HYBRID_TOPICLEN
+</p></li>
+<li class="listitem"><p>IRIX
+</p></li>
+<li class="listitem"><p>IRRD_USE_PGP
+</p></li>
+<li class="listitem"><p>JABBERD_GROUP
+</p></li>
+<li class="listitem"><p>JABBERD_LOGDIR
+</p></li>
+<li class="listitem"><p>JABBERD_PIDDIR
+</p></li>
+<li class="listitem"><p>JABBERD_SPOOLDIR
+</p></li>
+<li class="listitem"><p>JABBERD_USER
+</p></li>
+<li class="listitem"><p>JAKARTA_HOME
+</p></li>
+<li class="listitem"><p>JAVA_BINPREFIX
+</p></li>
+<li class="listitem"><p>JAVA_CLASSPATH
+</p></li>
+<li class="listitem"><p>JAVA_HOME
+</p></li>
+<li class="listitem"><p>JAVA_LD_LIBRARY_PATH
+</p></li>
+<li class="listitem"><p>JAVA_NAME
+</p></li>
+<li class="listitem"><p>JAVA_UNLIMIT
+</p></li>
+<li class="listitem"><p>JAVA_WRAPPERS
+</p></li>
+<li class="listitem"><p>JPEG_ACCEPTED
+</p></li>
+<li class="listitem"><p>JPEG_DEFAULT
+</p></li>
+<li class="listitem"><p>KERBEROS
+</p></li>
+<li class="listitem"><p>KERMIT_SUID_UUCP
+</p></li>
+<li class="listitem"><p>KJS_USE_PCRE
+</p></li>
+<li class="listitem"><p>KNEWS_DOMAIN_FILE
+</p></li>
+<li class="listitem"><p>KNEWS_DOMAIN_NAME
+</p></li>
+<li class="listitem"><p>KRB5_ACCEPTED
+</p></li>
+<li class="listitem"><p>KRB5_DEFAULT
+</p></li>
+<li class="listitem"><p>LANGUAGES
+</p></li>
+<li class="listitem"><p>LATEX2HTML_ICONPATH
+</p></li>
+<li class="listitem"><p>LDCONFIG_ADD_CMD
+</p></li>
+<li class="listitem"><p>LDCONFIG_REMOVE_CMD
+</p></li>
+<li class="listitem"><p>LEAFNODE_DATA_DIR
+</p></li>
+<li class="listitem"><p>LEAFNODE_GROUP
+</p></li>
+<li class="listitem"><p>LEAFNODE_USER
+</p></li>
+<li class="listitem"><p>LIBDVDCSS_HOMEPAGE
+</p></li>
+<li class="listitem"><p>LIBDVDCSS_MASTER_SITES
+</p></li>
+<li class="listitem"><p>LIBTOOL
+</p></li>
+<li class="listitem"><p>LIBTOOLIZE_PLIST
+</p></li>
+<li class="listitem"><p>LIBTOOL_M4_OVERRIDE
+</p></li>
+<li class="listitem"><p>LIBUSB_TYPE
+</p></li>
+<li class="listitem"><p>LICENSE
+</p></li>
+<li class="listitem"><p>LINKER_RPATH_FLAG
+</p></li>
+<li class="listitem"><p>LINK_RPATH_FLAG
+</p></li>
+<li class="listitem"><p>LINUX_LOCALES
+</p></li>
+<li class="listitem"><p>LOCALBASE
+</p></li>
+<li class="listitem"><p>LOCALBASE_LOCKTYPE
+</p></li>
+<li class="listitem"><p>LOCALPATCHES
+</p></li>
+<li class="listitem"><p>LOVE_DATA
+</p></li>
+<li class="listitem"><p>LOVE_GAME
+</p></li>
+<li class="listitem"><p>LOVE_VERSION
+</p></li>
+<li class="listitem"><p>LP64PLATFORMS
+</p></li>
+<li class="listitem"><p>MACHINE_PLATFORM
+</p></li>
+<li class="listitem"><p>MAILAGENT_DOMAIN
+</p></li>
+<li class="listitem"><p>MAILAGENT_EMAIL
+</p></li>
+<li class="listitem"><p>MAILAGENT_FQDN
+</p></li>
+<li class="listitem"><p>MAILAGENT_ORGANIZATION
+</p></li>
+<li class="listitem"><p>MAJORDOMO_HOMEDIR
+</p></li>
+<li class="listitem"><p>MAKEINFO_ARGS
+</p></li>
+<li class="listitem"><p>MAKE_DIRS
+</p></li>
+<li class="listitem"><p>MAKE_DIRS_PERMS
+</p></li>
+<li class="listitem"><p>MAKE_ENV
+</p></li>
+<li class="listitem"><p>MAKE_FILE
+</p></li>
+<li class="listitem"><p>MAKE_FLAGS
+</p></li>
+<li class="listitem"><p>MAKE_JOBS
+</p></li>
+<li class="listitem"><p>MAKE_JOBS_SAFE
+</p></li>
+<li class="listitem"><p>MAKE_PROGRAM
+</p></li>
+<li class="listitem"><p>MANINSTALL
+</p></li>
+<li class="listitem"><p>MANZ
+</p></li>
+<li class="listitem"><p>MASTER_SITES
+</p></li>
+<li class="listitem"><p>MASTER_SITE_BACKUP
+</p></li>
+<li class="listitem"><p>MASTER_SITE_CYGWIN
+</p></li>
+<li class="listitem"><p>MASTER_SITE_GNOME
+</p></li>
+<li class="listitem"><p>MASTER_SITE_GNU
+</p></li>
+<li class="listitem"><p>MASTER_SITE_LOCAL
+</p></li>
+<li class="listitem"><p>MASTER_SITE_MOZILLA
+</p></li>
+<li class="listitem"><p>MASTER_SITE_OPENOFFICE
+</p></li>
+<li class="listitem"><p>MASTER_SITE_OVERRIDE
+</p></li>
+<li class="listitem"><p>MASTER_SITE_PERL_CPAN
+</p></li>
+<li class="listitem"><p>MASTER_SITE_SUNSITE
+</p></li>
+<li class="listitem"><p>MASTER_SITE_SUSE
+</p></li>
+<li class="listitem"><p>MASTER_SITE_TEX_CTAN
+</p></li>
+<li class="listitem"><p>MASTER_SITE_XCONTRIB
+</p></li>
+<li class="listitem"><p>MASTER_SITE_XEMACS
+</p></li>
+<li class="listitem"><p>MASTER_SORT
+</p></li>
+<li class="listitem"><p>MASTER_SORT_RANDOM
+</p></li>
+<li class="listitem"><p>MASTER_SORT_REGEX
+</p></li>
+<li class="listitem"><p>MECAB_CHARSET
+</p></li>
+<li class="listitem"><p>MEDIATOMB_GROUP
+</p></li>
+<li class="listitem"><p>MEDIATOMB_USER
+</p></li>
+<li class="listitem"><p>MIPSPROBASE
+</p></li>
+<li class="listitem"><p>MIREDO_GROUP
+</p></li>
+<li class="listitem"><p>MIREDO_USER
+</p></li>
+<li class="listitem"><p>MISSING_FEATURES
+</p></li>
+<li class="listitem"><p>MKDIR
+</p></li>
+<li class="listitem"><p>MLDONKEY_GROUP
+</p></li>
+<li class="listitem"><p>MLDONKEY_HOME
+</p></li>
+<li class="listitem"><p>MLDONKEY_USER
+</p></li>
+<li class="listitem"><p>MONOTONE_GROUP
+</p></li>
+<li class="listitem"><p>MONOTONE_USER
+</p></li>
+<li class="listitem"><p>MOTIFBASE
+</p></li>
+<li class="listitem"><p>MOTIF_TYPE
+</p></li>
+<li class="listitem"><p>MOTIF_TYPE_DEFAULT
+</p></li>
+<li class="listitem"><p>MPI_TYPE
+</p></li>
+<li class="listitem"><p>MSGFMT_STRIP_MSGCTXT
+</p></li>
+<li class="listitem"><p>MSGFMT_STRIP_MSGID_PLURAL
+</p></li>
+<li class="listitem"><p>MTOOLS_ENABLE_FLOPPYD
+</p></li>
+<li class="listitem"><p>MUST
+</p></li>
+<li class="listitem"><p>MV
+</p></li>
+<li class="listitem"><p>MYSQL_CHARSET
+</p></li>
+<li class="listitem"><p>MYSQL_DATADIR
+</p></li>
+<li class="listitem"><p>MYSQL_EXTRA_CHARSET
+</p></li>
+<li class="listitem"><p>MYSQL_GROUP
+</p></li>
+<li class="listitem"><p>MYSQL_PKGSRCDIR
+</p></li>
+<li class="listitem"><p>MYSQL_USER
+</p></li>
+<li class="listitem"><p>MYSQL_VERSIONS_ACCEPTED
+</p></li>
+<li class="listitem"><p>MYSQL_VERSION_DEFAULT
+</p></li>
+<li class="listitem"><p>NAGIOSCMD_GROUP
+</p></li>
+<li class="listitem"><p>NAGIOSDIR
+</p></li>
+<li class="listitem"><p>NAGIOS_GROUP
+</p></li>
+<li class="listitem"><p>NAGIOS_USER
+</p></li>
+<li class="listitem"><p>NATIVE_APPEND_ABI
+</p></li>
+<li class="listitem"><p>NATIVE_APPEND_ELF
+</p></li>
+<li class="listitem"><p>NATIVE_EXEC_FMT
+</p></li>
+<li class="listitem"><p>NATIVE_MACHINE_PLATFORM
+</p></li>
+<li class="listitem"><p>NATIVE_OBJECT_FMT
+</p></li>
+<li class="listitem"><p>NBPAX_PROGRAM_PREFIX
+</p></li>
+<li class="listitem"><p>NETBSD_LOGIN_NAME
+</p></li>
+<li class="listitem"><p>NMH_EDITOR
+</p></li>
+<li class="listitem"><p>NMH_MTA
+</p></li>
+<li class="listitem"><p>NMH_PAGER
+</p></li>
+<li class="listitem"><p>NOLOGIN
+</p></li>
+<li class="listitem"><p>NONZERO_FILESIZE_P
+</p></li>
+<li class="listitem"><p>NOTE
+</p></li>
+<li class="listitem"><p>NOT_FOR_PLATFORM
+</p></li>
+<li class="listitem"><p>NOT_PAX_ASLR_SAFE
+</p></li>
+<li class="listitem"><p>NOT_PAX_MPROTECT_SAFE
+</p></li>
+<li class="listitem"><p>NO_BUILD
+</p></li>
+<li class="listitem"><p>NO_CHECKSUM
+</p></li>
+<li class="listitem"><p>NO_CONFIGURE
+</p></li>
+<li class="listitem"><p>NO_SKIP
+</p></li>
+<li class="listitem"><p>NS_PREFERRED
+</p></li>
+<li class="listitem"><p>NULLMAILER_GROUP
+</p></li>
+<li class="listitem"><p>NULLMAILER_USER
+</p></li>
+<li class="listitem"><p>OASIS
+</p></li>
+<li class="listitem"><p>OASIS_BUILD_ARGS
+</p></li>
+<li class="listitem"><p>OBJHOSTNAME
+</p></li>
+<li class="listitem"><p>OBJMACHINE
+</p></li>
+<li class="listitem"><p>OCAML_FINDLIB_DIRS
+</p></li>
+<li class="listitem"><p>OCAML_FINDLIB_REGISTER
+</p></li>
+<li class="listitem"><p>OCAML_FINDLIB_REGISTER_VERBOSE
+</p></li>
+<li class="listitem"><p>OCAML_SITELIBDIR
+</p></li>
+<li class="listitem"><p>OCAML_TOPKG_DOCDIR
+</p></li>
+<li class="listitem"><p>OCAML_USE_DUNE
+</p></li>
+<li class="listitem"><p>OCAML_USE_FINDLIB
+</p></li>
+<li class="listitem"><p>OCAML_USE_JBUILDER
+</p></li>
+<li class="listitem"><p>OCAML_USE_OASIS
+</p></li>
+<li class="listitem"><p>OCAML_USE_OASIS_DYNRUN
+</p></li>
+<li class="listitem"><p>OCAML_USE_OPAM
+</p></li>
+<li class="listitem"><p>OCAML_USE_OPT_COMPILER
+</p></li>
+<li class="listitem"><p>OCAML_USE_TOPKG
+</p></li>
+<li class="listitem"><p>OMF
+</p></li>
+<li class="listitem"><p>ONLY_FOR_COMPILER
+</p></li>
+<li class="listitem"><p>ONLY_FOR_PLATFORM
+</p></li>
+<li class="listitem"><p>OPENSSH_CHROOT
+</p></li>
+<li class="listitem"><p>OPENSSH_GROUP
+</p></li>
+<li class="listitem"><p>OPENSSH_USER
+</p></li>
+<li class="listitem"><p>OPSYS
+</p></li>
+<li class="listitem"><p>OPSYS_EMULDIR
+</p></li>
+<li class="listitem"><p>OSS_TYPE
+</p></li>
+<li class="listitem"><p>OSX
+</p></li>
+<li class="listitem"><p>OSX_TOLERATE_SDK_SKEW
+</p></li>
+<li class="listitem"><p>OS_VARIANT
+</p></li>
+<li class="listitem"><p>OS_VERSION
+</p></li>
+<li class="listitem"><p>OTF_FONTS_DIR
+</p></li>
+<li class="listitem"><p>OVERRIDE_DIRDEPTH
+</p></li>
+<li class="listitem"><p>OVERRIDE_GEMSPEC
+</p></li>
+<li class="listitem"><p>OVERRIDE_GNU_CONFIG_SCRIPTS
+</p></li>
+<li class="listitem"><p>OWN_DIRS
+</p></li>
+<li class="listitem"><p>OWN_DIRS_PERMS
+</p></li>
+<li class="listitem"><p>P4GROUP
+</p></li>
+<li class="listitem"><p>P4PORT
+</p></li>
+<li class="listitem"><p>P4ROOT
+</p></li>
+<li class="listitem"><p>P4USER
+</p></li>
+<li class="listitem"><p>PACKAGES
+</p></li>
+<li class="listitem"><p>PALMOS_DEFAULT_SDK
+</p></li>
+<li class="listitem"><p>PAMBASE
+</p></li>
+<li class="listitem"><p>PAM_DEFAULT
+</p></li>
+<li class="listitem"><p>PAPERSIZE
+</p></li>
+<li class="listitem"><p>PASSIVE_FETCH
+</p></li>
+<li class="listitem"><p>PATCHDIR
+</p></li>
+<li class="listitem"><p>PATCHFILES
+</p></li>
+<li class="listitem"><p>PATCH_ARGS
+</p></li>
+<li class="listitem"><p>PATCH_DEBUG
+</p></li>
+<li class="listitem"><p>PATCH_DIST_ARGS
+</p></li>
+<li class="listitem"><p>PATCH_DIST_CAT
+</p></li>
+<li class="listitem"><p>PATCH_DIST_STRIP
+</p></li>
+<li class="listitem"><p>PATCH_FUZZ_FACTOR
+</p></li>
+<li class="listitem"><p>PATCH_STRIP
+</p></li>
+<li class="listitem"><p>PATH
+</p></li>
+<li class="listitem"><p>PCCBASE
+</p></li>
+<li class="listitem"><p>PEAR_CMD
+</p></li>
+<li class="listitem"><p>PEAR_LIB
+</p></li>
+<li class="listitem"><p>PEAR_PACKAGE_XML
+</p></li>
+<li class="listitem"><p>PERL5
+</p></li>
+<li class="listitem"><p>PERL5_CONFIGURE
+</p></li>
+<li class="listitem"><p>PERL5_CONFIGURE_DIRS
+</p></li>
+<li class="listitem"><p>PERL5_LDFLAGS
+</p></li>
+<li class="listitem"><p>PERL5_LICENSE
+</p></li>
+<li class="listitem"><p>PERL5_MODULE_TYPE
+</p></li>
+<li class="listitem"><p>PERL5_PACKLIST
+</p></li>
+<li class="listitem"><p>PERL5_PACKLIST_DIR
+</p></li>
+<li class="listitem"><p>PERL5_PERLBASE
+</p></li>
+<li class="listitem"><p>PERL5_SITEBASE
+</p></li>
+<li class="listitem"><p>PERL5_USE_PACKLIST
+</p></li>
+<li class="listitem"><p>PERL5_VENDORBASE
+</p></li>
+<li class="listitem"><p>PFCTL
+</p></li>
+<li class="listitem"><p>PFVAR_H
+</p></li>
+<li class="listitem"><p>PF_VERSION
+</p></li>
+<li class="listitem"><p>PGGROUP
+</p></li>
+<li class="listitem"><p>PGHOME
+</p></li>
+<li class="listitem"><p>PGPKGSRCDIR
+</p></li>
+<li class="listitem"><p>PGSQL_TYPE
+</p></li>
+<li class="listitem"><p>PGSQL_VERSIONS_ACCEPTED
+</p></li>
+<li class="listitem"><p>PGSQL_VERSION_DEFAULT
+</p></li>
+<li class="listitem"><p>PGUSER
+</p></li>
+<li class="listitem"><p>PG_LIB_EXT
+</p></li>
+<li class="listitem"><p>PHP
+</p></li>
+<li class="listitem"><p>PHPCOMMON_MK
+</p></li>
+<li class="listitem"><p>PHPPKGSRCDIR
+</p></li>
+<li class="listitem"><p>PHP_BASE_VERS
+</p></li>
+<li class="listitem"><p>PHP_CHECK_INSTALLED
+</p></li>
+<li class="listitem"><p>PHP_EXTENSION_DIR
+</p></li>
+<li class="listitem"><p>PHP_INITIAL_TEENY
+</p></li>
+<li class="listitem"><p>PHP_PKG_PREFIX
+</p></li>
+<li class="listitem"><p>PHP_VERSION
+</p></li>
+<li class="listitem"><p>PHP_VERSIONS_ACCEPTED
+</p></li>
+<li class="listitem"><p>PHP_VERSIONS_INCOMPATIBLE
+</p></li>
+<li class="listitem"><p>PHP_VERSION_DEFAULT
+</p></li>
+<li class="listitem"><p>PHP_VERSION_REQD
+</p></li>
+<li class="listitem"><p>PILRC_USE_GTK
+</p></li>
+<li class="listitem"><p>PKGCONFIG_BASE
+</p></li>
+<li class="listitem"><p>PKGCONFIG_FILE
+</p></li>
+<li class="listitem"><p>PKGCONFIG_OVERRIDE
+</p></li>
+<li class="listitem"><p>PKGCONFIG_OVERRIDE_STAGE
+</p></li>
+<li class="listitem"><p>PKGDIR
+</p></li>
+<li class="listitem"><p>PKGGNUDIR
+</p></li>
+<li class="listitem"><p>PKGINFODIR
+</p></li>
+<li class="listitem"><p>PKGLOCALEDIR
+</p></li>
+<li class="listitem"><p>PKGMANDIR
+</p></li>
+<li class="listitem"><p>PKGNAME
+</p></li>
+<li class="listitem"><p>PKGNAME_REQD
+</p></li>
+<li class="listitem"><p>PKGPATH
+</p></li>
+<li class="listitem"><p>PKGREVISION
+</p></li>
+<li class="listitem"><p>PKGSRC_CHANGES
+</p></li>
+<li class="listitem"><p>PKGSRC_COMPILER
+</p></li>
+<li class="listitem"><p>PKGSRC_KEEP_BIN_PKGS
+</p></li>
+<li class="listitem"><p>PKGSRC_LOCKTYPE
+</p></li>
+<li class="listitem"><p>PKGSRC_MAKE_ENV
+</p></li>
+<li class="listitem"><p>PKGSRC_MESSAGE_RECIPIENTS
+</p></li>
+<li class="listitem"><p>PKGSRC_MKPIE
+</p></li>
+<li class="listitem"><p>PKGSRC_MKREPRO
+</p></li>
+<li class="listitem"><p>PKGSRC_RUN_TEST
+</p></li>
+<li class="listitem"><p>PKGSRC_SETENV
+</p></li>
+<li class="listitem"><p>PKGSRC_SLEEPSECS
+</p></li>
+<li class="listitem"><p>PKGSRC_TODO
+</p></li>
+<li class="listitem"><p>PKGSRC_USE_CTF
+</p></li>
+<li class="listitem"><p>PKGSRC_USE_FORTIFY
+</p></li>
+<li class="listitem"><p>PKGSRC_USE_RELRO
+</p></li>
+<li class="listitem"><p>PKGSRC_USE_SSP
+</p></li>
+<li class="listitem"><p>PKGSRC_USE_STACK_CHECK
+</p></li>
+<li class="listitem"><p>PKGTASKS_DATAFILE
+</p></li>
+<li class="listitem"><p>PKGTOOLS_ARGS
+</p></li>
+<li class="listitem"><p>PKGTOOLS_ENV
+</p></li>
+<li class="listitem"><p>PKG_ALTERNATIVES
+</p></li>
+<li class="listitem"><p>PKG_APACHE
+</p></li>
+<li class="listitem"><p>PKG_APACHE_ACCEPTED
+</p></li>
+<li class="listitem"><p>PKG_APACHE_DEFAULT
+</p></li>
+<li class="listitem"><p>PKG_BEST_EXISTS
+</p></li>
+<li class="listitem"><p>PKG_BUILD_OPTIONS
+</p></li>
+<li class="listitem"><p>PKG_COMPRESSION
+</p></li>
+<li class="listitem"><p>PKG_CONFIG
+</p></li>
+<li class="listitem"><p>PKG_CONFIG_PERMS
+</p></li>
+<li class="listitem"><p>PKG_CREATE_USERGROUP
+</p></li>
+<li class="listitem"><p>PKG_DB_TMPDIR
+</p></li>
+<li class="listitem"><p>PKG_DEBUG_LEVEL
+</p></li>
+<li class="listitem"><p>PKG_DEFAULT_OPTIONS
+</p></li>
+<li class="listitem"><p>PKG_DESTDIR_SUPPORT
+</p></li>
+<li class="listitem"><p>PKG_DEVELOPER
+</p></li>
+<li class="listitem"><p>PKG_DISABLED_OPTIONS
+</p></li>
+<li class="listitem"><p>PKG_FATAL_ERRORS
+</p></li>
+<li class="listitem"><p>PKG_FC
+</p></li>
+<li class="listitem"><p>PKG_FILELIST_CMD
+</p></li>
+<li class="listitem"><p>PKG_GECOS
+</p></li>
+<li class="listitem"><p>PKG_GID
+</p></li>
+<li class="listitem"><p>PKG_GROUPS
+</p></li>
+<li class="listitem"><p>PKG_GROUPS_VARS
+</p></li>
+<li class="listitem"><p>PKG_HOME
+</p></li>
+<li class="listitem"><p>PKG_INIT_SCRIPTS
+</p></li>
+<li class="listitem"><p>PKG_JAVA_HOME
+</p></li>
+<li class="listitem"><p>PKG_JVM
+</p></li>
+<li class="listitem"><p>PKG_JVMS_ACCEPTED
+</p></li>
+<li class="listitem"><p>PKG_JVM_DEFAULT
+</p></li>
+<li class="listitem"><p>PKG_LEGACY_OPTIONS
+</p></li>
+<li class="listitem"><p>PKG_LIBTOOL
+</p></li>
+<li class="listitem"><p>PKG_OPTIONS
+</p></li>
+<li class="listitem"><p>PKG_OPTIONS_DEPRECATED_WARNINGS
+</p></li>
+<li class="listitem"><p>PKG_OPTIONS_LEGACY_OPTS
+</p></li>
+<li class="listitem"><p>PKG_OPTIONS_LEGACY_VARS
+</p></li>
+<li class="listitem"><p>PKG_OPTIONS_NONEMPTY_SETS
+</p></li>
+<li class="listitem"><p>PKG_OPTIONS_OPTIONAL_GROUPS
+</p></li>
+<li class="listitem"><p>PKG_OPTIONS_REQUIRED_GROUPS
+</p></li>
+<li class="listitem"><p>PKG_OPTIONS_VAR
+</p></li>
+<li class="listitem"><p>PKG_PHP
+</p></li>
+<li class="listitem"><p>PKG_PHP_MAJOR_VERS
+</p></li>
+<li class="listitem"><p>PKG_PHP_VERSION
+</p></li>
+<li class="listitem"><p>PKG_RCD_SCRIPTS
+</p></li>
+<li class="listitem"><p>PKG_REFCOUNT_DBDIR
+</p></li>
+<li class="listitem"><p>PKG_REGISTER_SHELLS
+</p></li>
+<li class="listitem"><p>PKG_RESUME_TRANSFERS
+</p></li>
+<li class="listitem"><p>PKG_SHELL
+</p></li>
+<li class="listitem"><p>PKG_SUGGESTED_OPTIONS
+</p></li>
+<li class="listitem"><p>PKG_SUPPORTED_OPTIONS
+</p></li>
+<li class="listitem"><p>PKG_SYSCONFBASE
+</p></li>
+<li class="listitem"><p>PKG_SYSCONFBASEDIR
+</p></li>
+<li class="listitem"><p>PKG_SYSCONFDIR
+</p></li>
+<li class="listitem"><p>PKG_SYSCONFDIR_PERMS
+</p></li>
+<li class="listitem"><p>PKG_SYSCONFSUBDIR
+</p></li>
+<li class="listitem"><p>PKG_SYSCONFVAR
+</p></li>
+<li class="listitem"><p>PKG_TOOLS_BIN
+</p></li>
+<li class="listitem"><p>PKG_UID
+</p></li>
+<li class="listitem"><p>PKG_UPDATE_FONTS_DB
+</p></li>
+<li class="listitem"><p>PKG_USERS
+</p></li>
+<li class="listitem"><p>PKG_USERS_VARS
+</p></li>
+<li class="listitem"><p>PKG_VERBOSE
+</p></li>
+<li class="listitem"><p>PLIST
+</p></li>
+<li class="listitem"><p>PLIST_AWK
+</p></li>
+<li class="listitem"><p>PLIST_AWK_ENV
+</p></li>
+<li class="listitem"><p>PLIST_SRC
+</p></li>
+<li class="listitem"><p>PLIST_SUBST
+</p></li>
+<li class="listitem"><p>PLIST_TYPE
+</p></li>
+<li class="listitem"><p>PLIST_VARS
+</p></li>
+<li class="listitem"><p>POPTOP_USE_MPPE
+</p></li>
+<li class="listitem"><p>POST_FETCH_HOOK
+</p></li>
+<li class="listitem"><p>PREFER
+</p></li>
+<li class="listitem"><p>PREFER_NATIVE
+</p></li>
+<li class="listitem"><p>PREFER_NATIVE_PTHREADS
+</p></li>
+<li class="listitem"><p>PREFER_PKGSRC
+</p></li>
+<li class="listitem"><p>PREFIX
+</p></li>
+<li class="listitem"><p>PREPEND_PATH
+</p></li>
+<li class="listitem"><p>PRE_ROOT_CMD
+</p></li>
+<li class="listitem"><p>PRIVILEGED_STAGES
+</p></li>
+<li class="listitem"><p>PS
+</p></li>
+<li class="listitem"><p>PTHREAD_AUTO_VARS
+</p></li>
+<li class="listitem"><p>PTHREAD_CFLAGS
+</p></li>
+<li class="listitem"><p>PTHREAD_LDFLAGS
+</p></li>
+<li class="listitem"><p>PTHREAD_LIBS
+</p></li>
+<li class="listitem"><p>PTHREAD_OPTS
+</p></li>
+<li class="listitem"><p>PTHREAD_TYPE
+</p></li>
+<li class="listitem"><p>PVM_SSH
+</p></li>
+<li class="listitem"><p>PYPKGPREFIX
+</p></li>
+<li class="listitem"><p>PYTHON_FOR_BUILD_ONLY
+</p></li>
+<li class="listitem"><p>PYTHON_SELF_CONFLICT
+</p></li>
+<li class="listitem"><p>PYTHON_VERSIONED_DEPENDENCIES
+</p></li>
+<li class="listitem"><p>PYTHON_VERSIONS_ACCEPTED
+</p></li>
+<li class="listitem"><p>PYTHON_VERSIONS_INCOMPATIBLE
+</p></li>
+<li class="listitem"><p>PYTHON_VERSION_DEFAULT
+</p></li>
+<li class="listitem"><p>PYTHON_VERSION_REQD
+</p></li>
+<li class="listitem"><p>PYVERSSUFFIX
+</p></li>
+<li class="listitem"><p>PY_NO_EGG
+</p></li>
+<li class="listitem"><p>QMAILDIR
+</p></li>
+<li class="listitem"><p>QMAIL_ALIAS_USER
+</p></li>
+<li class="listitem"><p>QMAIL_DAEMON_USER
+</p></li>
+<li class="listitem"><p>QMAIL_LOG_USER
+</p></li>
+<li class="listitem"><p>QMAIL_NOFILES_GROUP
+</p></li>
+<li class="listitem"><p>QMAIL_PASSWD_USER
+</p></li>
+<li class="listitem"><p>QMAIL_QMAIL_GROUP
+</p></li>
+<li class="listitem"><p>QMAIL_QUEUE_DIR
+</p></li>
+<li class="listitem"><p>QMAIL_QUEUE_EXTRA
+</p></li>
+<li class="listitem"><p>QMAIL_QUEUE_USER
+</p></li>
+<li class="listitem"><p>QMAIL_REMOTE_USER
+</p></li>
+<li class="listitem"><p>QMAIL_ROOT_USER
+</p></li>
+<li class="listitem"><p>QMAIL_SEND_USER
+</p></li>
+<li class="listitem"><p>QPOPPER_FAC
+</p></li>
+<li class="listitem"><p>QPOPPER_SPOOL_DIR
+</p></li>
+<li class="listitem"><p>QPOPPER_USER
+</p></li>
+<li class="listitem"><p>RAKE_NAME
+</p></li>
+<li class="listitem"><p>RASMOL_DEPTH
+</p></li>
+<li class="listitem"><p>RCD_SCRIPTS
+</p></li>
+<li class="listitem"><p>RCD_SCRIPTS_DIR
+</p></li>
+<li class="listitem"><p>RCD_SCRIPTS_EXAMPLEDIR
+</p></li>
+<li class="listitem"><p>RCD_SCRIPTS_MODE
+</p></li>
+<li class="listitem"><p>RCD_SCRIPTS_SHELL
+</p></li>
+<li class="listitem"><p>RCD_SCRIPT_SRC
+</p></li>
+<li class="listitem"><p>RDOC
+</p></li>
+<li class="listitem"><p>READLINE_DEFAULT
+</p></li>
+<li class="listitem"><p>READLINE_TYPE
+</p></li>
+<li class="listitem"><p>REAL_ROOT_GROUP
+</p></li>
+<li class="listitem"><p>REAL_ROOT_USER
+</p></li>
+<li class="listitem"><p>RECURSIVE_MAKE
+</p></li>
+<li class="listitem"><p>RELAY_CTRL_DIR
+</p></li>
+<li class="listitem"><p>REPLACE_AWK
+</p></li>
+<li class="listitem"><p>REPLACE_BASH
+</p></li>
+<li class="listitem"><p>REPLACE_CSH
+</p></li>
+<li class="listitem"><p>REPLACE_KSH
+</p></li>
+<li class="listitem"><p>REPLACE_PERL
+</p></li>
+<li class="listitem"><p>REPLACE_PERL6
+</p></li>
+<li class="listitem"><p>REPLACE_PYTHON
+</p></li>
+<li class="listitem"><p>REPLACE_RUBY
+</p></li>
+<li class="listitem"><p>REPLACE_RUBY_DIRS
+</p></li>
+<li class="listitem"><p>REPLACE_RUBY_PAT
+</p></li>
+<li class="listitem"><p>REPLACE_SH
+</p></li>
+<li class="listitem"><p>REPLACE_TEXLUA
+</p></li>
+<li class="listitem"><p>REQD_DIRS
+</p></li>
+<li class="listitem"><p>REQD_DIRS_PERMS
+</p></li>
+<li class="listitem"><p>REQD_FILES
+</p></li>
+<li class="listitem"><p>REQD_FILES_MODE
+</p></li>
+<li class="listitem"><p>REQD_FILES_PERMS
+</p></li>
+<li class="listitem"><p>RESOLV_AUTO_VARS
+</p></li>
+<li class="listitem"><p>RESOLV_LDFLAGS
+</p></li>
+<li class="listitem"><p>RESOLV_LIBS
+</p></li>
+<li class="listitem"><p>RM
+</p></li>
+<li class="listitem"><p>ROOT_CMD
+</p></li>
+<li class="listitem"><p>ROOT_GROUP
+</p></li>
+<li class="listitem"><p>ROOT_USER
+</p></li>
+<li class="listitem"><p>RPCGEN
+</p></li>
+<li class="listitem"><p>RPM
+</p></li>
+<li class="listitem"><p>RPM2PKG_PLIST
+</p></li>
+<li class="listitem"><p>RPM2PKG_PREFIX
+</p></li>
+<li class="listitem"><p>RPM2PKG_STAGE
+</p></li>
+<li class="listitem"><p>RPM2PKG_STRIP
+</p></li>
+<li class="listitem"><p>RPM2PKG_SUBPREFIX
+</p></li>
+<li class="listitem"><p>RPMFILES
+</p></li>
+<li class="listitem"><p>RPMIGNOREPATH
+</p></li>
+<li class="listitem"><p>RPM_DB_PREFIX
+</p></li>
+<li class="listitem"><p>RSSH_CVS_PATH
+</p></li>
+<li class="listitem"><p>RSSH_RDIST_PATH
+</p></li>
+<li class="listitem"><p>RSSH_RSYNC_PATH
+</p></li>
+<li class="listitem"><p>RSSH_SCP_PATH
+</p></li>
+<li class="listitem"><p>RSSH_SFTP_SERVER_PATH
+</p></li>
+<li class="listitem"><p>RUBY
+</p></li>
+<li class="listitem"><p>RUBYGEM
+</p></li>
+<li class="listitem"><p>RUBYGEM_NAME
+</p></li>
+<li class="listitem"><p>RUBYGEM_OPTIONS
+</p></li>
+<li class="listitem"><p>RUBY_ABI_VERSION
+</p></li>
+<li class="listitem"><p>RUBY_ARCH
+</p></li>
+<li class="listitem"><p>RUBY_ARCHINC
+</p></li>
+<li class="listitem"><p>RUBY_ARCHLIB
+</p></li>
+<li class="listitem"><p>RUBY_BASE
+</p></li>
+<li class="listitem"><p>RUBY_BASERIDIR
+</p></li>
+<li class="listitem"><p>RUBY_BUILD_RDOC
+</p></li>
+<li class="listitem"><p>RUBY_BUILD_RI
+</p></li>
+<li class="listitem"><p>RUBY_DLEXT
+</p></li>
+<li class="listitem"><p>RUBY_DOC
+</p></li>
+<li class="listitem"><p>RUBY_DYNAMIC_DIRS
+</p></li>
+<li class="listitem"><p>RUBY_EG
+</p></li>
+<li class="listitem"><p>RUBY_ENCODING_ARG
+</p></li>
+<li class="listitem"><p>RUBY_EXTCONF
+</p></li>
+<li class="listitem"><p>RUBY_EXTCONF_CHECK
+</p></li>
+<li class="listitem"><p>RUBY_EXTCONF_DEBUG
+</p></li>
+<li class="listitem"><p>RUBY_EXTCONF_MAKEFILE
+</p></li>
+<li class="listitem"><p>RUBY_GEM_BASE
+</p></li>
+<li class="listitem"><p>RUBY_INC
+</p></li>
+<li class="listitem"><p>RUBY_LIB
+</p></li>
+<li class="listitem"><p>RUBY_LIB_BASE
+</p></li>
+<li class="listitem"><p>RUBY_NAME
+</p></li>
+<li class="listitem"><p>RUBY_NOVERSION
+</p></li>
+<li class="listitem"><p>RUBY_PKGPREFIX
+</p></li>
+<li class="listitem"><p>RUBY_RAILS
+</p></li>
+<li class="listitem"><p>RUBY_RAILS42_VERSION
+</p></li>
+<li class="listitem"><p>RUBY_RAILS51_VERSION
+</p></li>
+<li class="listitem"><p>RUBY_RAILS52_VERSION
+</p></li>
+<li class="listitem"><p>RUBY_RAILS_ACCEPTED
+</p></li>
+<li class="listitem"><p>RUBY_RAILS_DEFAULT
+</p></li>
+<li class="listitem"><p>RUBY_RAILS_REQD
+</p></li>
+<li class="listitem"><p>RUBY_RAILS_STRICT_DEP
+</p></li>
+<li class="listitem"><p>RUBY_RIDIR
+</p></li>
+<li class="listitem"><p>RUBY_SETUP
+</p></li>
+<li class="listitem"><p>RUBY_SHLIB
+</p></li>
+<li class="listitem"><p>RUBY_SHLIBALIAS
+</p></li>
+<li class="listitem"><p>RUBY_SHLIBVER
+</p></li>
+<li class="listitem"><p>RUBY_SIMPLE_INSTALL
+</p></li>
+<li class="listitem"><p>RUBY_SITEARCHLIB
+</p></li>
+<li class="listitem"><p>RUBY_SITELIB
+</p></li>
+<li class="listitem"><p>RUBY_SITELIB_BASE
+</p></li>
+<li class="listitem"><p>RUBY_SITERIDIR
+</p></li>
+<li class="listitem"><p>RUBY_SLEXT
+</p></li>
+<li class="listitem"><p>RUBY_SRCDIR
+</p></li>
+<li class="listitem"><p>RUBY_STATICLIB
+</p></li>
+<li class="listitem"><p>RUBY_SUFFIX
+</p></li>
+<li class="listitem"><p>RUBY_SYSRIDIR
+</p></li>
+<li class="listitem"><p>RUBY_USE_PTHREAD
+</p></li>
+<li class="listitem"><p>RUBY_VENDORARCHLIB
+</p></li>
+<li class="listitem"><p>RUBY_VENDORLIB
+</p></li>
+<li class="listitem"><p>RUBY_VENDORLIB_BASE
+</p></li>
+<li class="listitem"><p>RUBY_VER
+</p></li>
+<li class="listitem"><p>RUBY_VERSION
+</p></li>
+<li class="listitem"><p>RUBY_VERSIONS_ACCEPTED
+</p></li>
+<li class="listitem"><p>RUBY_VERSION_DEFAULT
+</p></li>
+<li class="listitem"><p>RUBY_VERSION_REQD
+</p></li>
+<li class="listitem"><p>RUBY_VER_DIR
+</p></li>
+<li class="listitem"><p>RUN
+</p></li>
+<li class="listitem"><p>RUN_LDCONFIG
+</p></li>
+<li class="listitem"><p>SAWFISH_THEMES
+</p></li>
+<li class="listitem"><p>SCO
+</p></li>
+<li class="listitem"><p>SCREWS_GROUP
+</p></li>
+<li class="listitem"><p>SCREWS_USER
+</p></li>
+<li class="listitem"><p>SCRIPTS_ENV
+</p></li>
+<li class="listitem"><p>SCROLLKEEPER_DATADIR
+</p></li>
+<li class="listitem"><p>SCROLLKEEPER_REBUILDDB
+</p></li>
+<li class="listitem"><p>SCROLLKEEPER_UPDATEDB
+</p></li>
+<li class="listitem"><p>SDIST_PAWD
+</p></li>
+<li class="listitem"><p>SERIAL_DEVICES
+</p></li>
+<li class="listitem"><p>SETGIDGAME
+</p></li>
+<li class="listitem"><p>SETGID_GAMES_PERMS
+</p></li>
+<li class="listitem"><p>SETUID_ROOT_PERMS
+</p></li>
+<li class="listitem"><p>SH
+</p></li>
+<li class="listitem"><p>SHLIB
+</p></li>
+<li class="listitem"><p>SIGN_PACKAGES
+</p></li>
+<li class="listitem"><p>SILC_CLIENT_WITH_PERL
+</p></li>
+<li class="listitem"><p>SITE_SPECIFIC_PKGS
+</p></li>
+<li class="listitem"><p>SKIP_DEPENDS
+</p></li>
+<li class="listitem"><p>SKIP_PORTABILITY_CHECK
+</p></li>
+<li class="listitem"><p>SMF_INSTANCES
+</p></li>
+<li class="listitem"><p>SMF_MANIFEST
+</p></li>
+<li class="listitem"><p>SMF_METHODS
+</p></li>
+<li class="listitem"><p>SMF_METHOD_SHELL
+</p></li>
+<li class="listitem"><p>SMF_METHOD_SRC
+</p></li>
+<li class="listitem"><p>SMF_NAME
+</p></li>
+<li class="listitem"><p>SMF_PREFIX
+</p></li>
+<li class="listitem"><p>SMF_SRCDIR
+</p></li>
+<li class="listitem"><p>SNIPROXY_GROUP
+</p></li>
+<li class="listitem"><p>SNIPROXY_USER
+</p></li>
+<li class="listitem"><p>SOURCE_BUFFSIZE
+</p></li>
+<li class="listitem"><p>SPECIAL_PERMS
+</p></li>
+<li class="listitem"><p>SPECIFIC_PKGS
+</p></li>
+<li class="listitem"><p>SSH_SUID
+</p></li>
+<li class="listitem"><p>SSYNC_PAWD
+</p></li>
+<li class="listitem"><p>STEP_MSG
+</p></li>
+<li class="listitem"><p>STRIP
+</p></li>
+<li class="listitem"><p>STRIP_DBG
+</p></li>
+<li class="listitem"><p>STRIP_DEBUG
+</p></li>
+<li class="listitem"><p>STRIP_DEBUG_SUPPORTED
+</p></li>
+<li class="listitem"><p>STRIP_FILES_SKIP
+</p></li>
+<li class="listitem"><p>SU
+</p></li>
+<li class="listitem"><p>SUBDIR
+</p></li>
+<li class="listitem"><p>SUBST_CLASSES
+</p></li>
+<li class="listitem"><p>SUBST_FILES
+</p></li>
+<li class="listitem"><p>SUBST_FILTER_CMD
+</p></li>
+<li class="listitem"><p>SUBST_MESSAGE
+</p></li>
+<li class="listitem"><p>SUBST_SED
+</p></li>
+<li class="listitem"><p>SUBST_SHOW_DIFF
+</p></li>
+<li class="listitem"><p>SUBST_SKIP_TEXT_CHECK
+</p></li>
+<li class="listitem"><p>SUBST_STAGE
+</p></li>
+<li class="listitem"><p>SUBST_VARS
+</p></li>
+<li class="listitem"><p>SUNWSPROBASE
+</p></li>
+<li class="listitem"><p>SUSE_PREFER
+</p></li>
+<li class="listitem"><p>SU_CMD
+</p></li>
+<li class="listitem"><p>TERMCAP_TYPE
+</p></li>
+<li class="listitem"><p>TERMINFO_DEFAULT
+</p></li>
+<li class="listitem"><p>TERMINFO_TYPE
+</p></li>
+<li class="listitem"><p>TEST
+</p></li>
+<li class="listitem"><p>TEST_DIRS
+</p></li>
+<li class="listitem"><p>TEST_ENV
+</p></li>
+<li class="listitem"><p>TEST_MAKE_CMD
+</p></li>
+<li class="listitem"><p>TEST_MAKE_FLAGS
+</p></li>
+<li class="listitem"><p>TEST_TARGET
+</p></li>
+<li class="listitem"><p>TEXLIVE_IGNORE_PATTERNS
+</p></li>
+<li class="listitem"><p>TEXLIVE_REV
+</p></li>
+<li class="listitem"><p>TEXMFSITE
+</p></li>
+<li class="listitem"><p>TEX_FORMATS
+</p></li>
+<li class="listitem"><p>TEX_HYPHEN_DAT
+</p></li>
+<li class="listitem"><p>TEX_HYPHEN_DEF
+</p></li>
+<li class="listitem"><p>TEX_TEXMF_DIRS
+</p></li>
+<li class="listitem"><p>THTTPD_LOG_FACILITY
+</p></li>
+<li class="listitem"><p>TO
+</p></li>
+<li class="listitem"><p>TOOLS_ALIASES
+</p></li>
+<li class="listitem"><p>TOOLS_ARGS
+</p></li>
+<li class="listitem"><p>TOOLS_BROKEN
+</p></li>
+<li class="listitem"><p>TOOLS_CMD
+</p></li>
+<li class="listitem"><p>TOOLS_CREATE
+</p></li>
+<li class="listitem"><p>TOOLS_DIR
+</p></li>
+<li class="listitem"><p>TOOLS_FAIL
+</p></li>
+<li class="listitem"><p>TOOLS_GNU_MISSING
+</p></li>
+<li class="listitem"><p>TOOLS_LDCONFIG
+</p></li>
+<li class="listitem"><p>TOOLS_NOOP
+</p></li>
+<li class="listitem"><p>TOOLS_PATH
+</p></li>
+<li class="listitem"><p>TOOLS_SCRIPT
+</p></li>
+<li class="listitem"><p>TTF_FONTS_DIR
+</p></li>
+<li class="listitem"><p>TYPE
+</p></li>
+<li class="listitem"><p>UAC_REQD_EXECS
+</p></li>
+<li class="listitem"><p>UCSPI_SSL_GROUP
+</p></li>
+<li class="listitem"><p>UCSPI_SSL_USER
+</p></li>
+<li class="listitem"><p>UNLIMIT_RESOURCES
+</p></li>
+<li class="listitem"><p>UNPRIVILEGED
+</p></li>
+<li class="listitem"><p>UNPRIVILEGED_GROUP
+</p></li>
+<li class="listitem"><p>UNPRIVILEGED_GROUPS
+</p></li>
+<li class="listitem"><p>UNPRIVILEGED_USER
+</p></li>
+<li class="listitem"><p>UNWRAP_FILES
+</p></li>
+<li class="listitem"><p>UNWRAP_PATTERNS
+</p></li>
+<li class="listitem"><p>UPDATE_GEMSPEC
+</p></li>
+<li class="listitem"><p>UPDATE_TARGET
+</p></li>
+<li class="listitem"><p>URI
+</p></li>
+<li class="listitem"><p>USA
+</p></li>
+<li class="listitem"><p>USERGROUP_PHASE
+</p></li>
+<li class="listitem"><p>USERPPP_GROUP
+</p></li>
+<li class="listitem"><p>USER_SPECIFIC_PKGS
+</p></li>
+<li class="listitem"><p>USE_ABI_DEPENDS
+</p></li>
+<li class="listitem"><p>USE_APR
+</p></li>
+<li class="listitem"><p>USE_BSD_MAKEFILE
+</p></li>
+<li class="listitem"><p>USE_BUILTIN
+</p></li>
+<li class="listitem"><p>USE_CROSS_COMPILE
+</p></li>
+<li class="listitem"><p>USE_CURSES
+</p></li>
+<li class="listitem"><p>USE_CWRAPPERS
+</p></li>
+<li class="listitem"><p>USE_DB185
+</p></li>
+<li class="listitem"><p>USE_FEATURES
+</p></li>
+<li class="listitem"><p>USE_GAMESGROUP
+</p></li>
+<li class="listitem"><p>USE_GCC_RUNTIME
+</p></li>
+<li class="listitem"><p>USE_IMAKE
+</p></li>
+<li class="listitem"><p>USE_JAVA
+</p></li>
+<li class="listitem"><p>USE_JAVA2
+</p></li>
+<li class="listitem"><p>USE_LANGUAGES
+</p></li>
+<li class="listitem"><p>USE_LIBTOOL
+</p></li>
+<li class="listitem"><p>USE_NATIVE_GCC
+</p></li>
+<li class="listitem"><p>USE_NETBSD_REPO
+</p></li>
+<li class="listitem"><p>USE_PKGSRC_GCC
+</p></li>
+<li class="listitem"><p>USE_PKGSRC_GCC_RUNTIME
+</p></li>
+<li class="listitem"><p>USE_PKGTASKS
+</p></li>
+<li class="listitem"><p>USE_RUBY_EXTCONF
+</p></li>
+<li class="listitem"><p>USE_RUBY_INSTALL
+</p></li>
+<li class="listitem"><p>USE_RUBY_SETUP
+</p></li>
+<li class="listitem"><p>USE_RUBY_SETUP_PKG
+</p></li>
+<li class="listitem"><p>USE_TOOLS
+</p></li>
+<li class="listitem"><p>UUCP_GROUP
+</p></li>
+<li class="listitem"><p>UUCP_USER
+</p></li>
+<li class="listitem"><p>VARBASE
+</p></li>
+<li class="listitem"><p>VARNAME
+</p></li>
+<li class="listitem"><p>VIM_EXTRA_OPTS
+</p></li>
+<li class="listitem"><p>WARNING_MSG
+</p></li>
+<li class="listitem"><p>WCALC_CGIDIR
+</p></li>
+<li class="listitem"><p>WCALC_CGIPATH
+</p></li>
+<li class="listitem"><p>WCALC_HTMLDIR
+</p></li>
+<li class="listitem"><p>WCALC_HTMLPATH
+</p></li>
+<li class="listitem"><p>WDM_MANAGERS
+</p></li>
+<li class="listitem"><p>WRAPPER_REORDER_CMDS
+</p></li>
+<li class="listitem"><p>WRKDIR
+</p></li>
+<li class="listitem"><p>WRKDIR_BASENAME
+</p></li>
+<li class="listitem"><p>WRKDIR_LOCKTYPE
+</p></li>
+<li class="listitem"><p>WRKLOG
+</p></li>
+<li class="listitem"><p>WRKOBJDIR
+</p></li>
+<li class="listitem"><p>WRKSRC
+</p></li>
+<li class="listitem"><p>WXGTK_ACCEPTED
+</p></li>
+<li class="listitem"><p>WXGTK_DEFAULT
+</p></li>
+<li class="listitem"><p>X10_PORT
+</p></li>
+<li class="listitem"><p>X11
+</p></li>
+<li class="listitem"><p>X11BASE
+</p></li>
+<li class="listitem"><p>X11_PKGSRCDIR
+</p></li>
+<li class="listitem"><p>X11_TYPE
+</p></li>
+<li class="listitem"><p>X509_CERTIFICATE
+</p></li>
+<li class="listitem"><p>X509_KEY
+</p></li>
+<li class="listitem"><p>XAW_TYPE
+</p></li>
+<li class="listitem"><p>XLOCK_DEFAULT_MODE
+</p></li>
+<li class="listitem"><p>XMKMF_FLAGS
+</p></li>
+<li class="listitem"><p>XXX
+</p></li>
+<li class="listitem"><p>YES
+</p></li>
+<li class="listitem"><p>ZERO_FILESIZE_P
+</p></li>
+<li class="listitem"><p>ZSH_STATIC
+</p></li>
+<li class="listitem"><p>__stdc__
+</p></li>
+<li class="listitem"><p>_vargroups
+</p></li>
+<li class="listitem"><p>add
+</p></li>
+<li class="listitem"><p>all
+</p></li>
+<li class="listitem"><p>alternatives
+</p></li>
+<li class="listitem"><p>aslr
+</p></li>
+<li class="listitem"><p>asprintf
+</p></li>
+<li class="listitem"><p>autoconf
+</p></li>
+<li class="listitem"><p>automake
+</p></li>
+<li class="listitem"><p>autoreconf
+</p></li>
+<li class="listitem"><p>awk
+</p></li>
+<li class="listitem"><p>bash
+</p></li>
+<li class="listitem"><p>big-endian
+</p></li>
+<li class="listitem"><p>bin-install
+</p></li>
+<li class="listitem"><p>binpkg-list
+</p></li>
+<li class="listitem"><p>bootstrap-depends
+</p></li>
+<li class="listitem"><p>broken
+</p></li>
+<li class="listitem"><p>broken_on_platform
+</p></li>
+<li class="listitem"><p>build
+</p></li>
+<li class="listitem"><p>build-env
+</p></li>
+<li class="listitem"><p>buildlink-directories
+</p></li>
+<li class="listitem"><p>buildlink-oss-soundcard-h
+</p></li>
+<li class="listitem"><p>c
+</p></li>
+<li class="listitem"><p>c++
+</p></li>
+<li class="listitem"><p>ccache
+</p></li>
+<li class="listitem"><p>cce
+</p></li>
+<li class="listitem"><p>cdefs
+</p></li>
+<li class="listitem"><p>changes
+</p></li>
+<li class="listitem"><p>changes-entry
+</p></li>
+<li class="listitem"><p>changes-entry-noupdate
+</p></li>
+<li class="listitem"><p>check
+</p></li>
+<li class="listitem"><p>check-clean
+</p></li>
+<li class="listitem"><p>check-files
+</p></li>
+<li class="listitem"><p>check-files-clean
+</p></li>
+<li class="listitem"><p>check-vulnerable
+</p></li>
+<li class="listitem"><p>checksum
+</p></li>
+<li class="listitem"><p>checksum-phase
+</p></li>
+<li class="listitem"><p>clean
+</p></li>
+<li class="listitem"><p>clean-depends
+</p></li>
+<li class="listitem"><p>cleandir
+</p></li>
+<li class="listitem"><p>commit
+</p></li>
+<li class="listitem"><p>commit-changes-entry
+</p></li>
+<li class="listitem"><p>compact
+</p></li>
+<li class="listitem"><p>compiler
+</p></li>
+<li class="listitem"><p>conf
+</p></li>
+<li class="listitem"><p>config.guess
+</p></li>
+<li class="listitem"><p>config.sub
+</p></li>
+<li class="listitem"><p>configuration
+</p></li>
+<li class="listitem"><p>configure-help
+</p></li>
+<li class="listitem"><p>cputime
+</p></li>
+<li class="listitem"><p>create-usergroup
+</p></li>
+<li class="listitem"><p>csh
+</p></li>
+<li class="listitem"><p>ctf
+</p></li>
+<li class="listitem"><p>debug
+</p></li>
+<li class="listitem"><p>declaration
+</p></li>
+<li class="listitem"><p>declare
+</p></li>
+<li class="listitem"><p>defined
+</p></li>
+<li class="listitem"><p>depend
+</p></li>
+<li class="listitem"><p>dependencies
+</p></li>
+<li class="listitem"><p>depends
+</p></li>
+<li class="listitem"><p>depends-checksum
+</p></li>
+<li class="listitem"><p>depends-fetch
+</p></li>
+<li class="listitem"><p>describe
+</p></li>
+<li class="listitem"><p>destdir
+</p></li>
+<li class="listitem"><p>distclean
+</p></li>
+<li class="listitem"><p>distinfo
+</p></li>
+<li class="listitem"><p>dl
+</p></li>
+<li class="listitem"><p>dlopen
+</p></li>
+<li class="listitem"><p>do-build
+</p></li>
+<li class="listitem"><p>do-buildlink
+</p></li>
+<li class="listitem"><p>do-clean
+</p></li>
+<li class="listitem"><p>do-configure-post-hook
+</p></li>
+<li class="listitem"><p>do-extract
+</p></li>
+<li class="listitem"><p>do-fetch
+</p></li>
+<li class="listitem"><p>emul
+</p></li>
+<li class="listitem"><p>emulation
+</p></li>
+<li class="listitem"><p>emulator
+</p></li>
+<li class="listitem"><p>endian
+</p></li>
+<li class="listitem"><p>enomem
+</p></li>
+<li class="listitem"><p>err
+</p></li>
+<li class="listitem"><p>errx
+</p></li>
+<li class="listitem"><p>etc
+</p></li>
+<li class="listitem"><p>feature
+</p></li>
+<li class="listitem"><p>features
+</p></li>
+<li class="listitem"><p>fetch
+</p></li>
+<li class="listitem"><p>fetch-list
+</p></li>
+<li class="listitem"><p>follows
+</p></li>
+<li class="listitem"><p>forbids
+</p></li>
+<li class="listitem"><p>form
+</p></li>
+<li class="listitem"><p>format
+</p></li>
+<li class="listitem"><p>fortify
+</p></li>
+<li class="listitem"><p>fortify_source
+</p></li>
+<li class="listitem"><p>friend
+</p></li>
+<li class="listitem"><p>from
+</p></li>
+<li class="listitem"><p>fts
+</p></li>
+<li class="listitem"><p>fts_close
+</p></li>
+<li class="listitem"><p>fts_open
+</p></li>
+<li class="listitem"><p>fts_read
+</p></li>
+<li class="listitem"><p>fts_set
+</p></li>
+<li class="listitem"><p>full
+</p></li>
+<li class="listitem"><p>gcc
+</p></li>
+<li class="listitem"><p>getopt_long
+</p></li>
+<li class="listitem"><p>getprogname
+</p></li>
+<li class="listitem"><p>gettext
+</p></li>
+<li class="listitem"><p>github
+</p></li>
+<li class="listitem"><p>glob
+</p></li>
+<li class="listitem"><p>go
+</p></li>
+<li class="listitem"><p>golang
+</p></li>
+<li class="listitem"><p>guess-license
+</p></li>
+<li class="listitem"><p>hashbang
+</p></li>
+<li class="listitem"><p>heimdal
+</p></li>
+<li class="listitem"><p>help
+</p></li>
+<li class="listitem"><p>imake
+</p></li>
+<li class="listitem"><p>increment
+</p></li>
+<li class="listitem"><p>interp
+</p></li>
+<li class="listitem"><p>interpreter
+</p></li>
+<li class="listitem"><p>intl
+</p></li>
+<li class="listitem"><p>iso
+</p></li>
+<li class="listitem"><p>kerberos
+</p></li>
+<li class="listitem"><p>krb
+</p></li>
+<li class="listitem"><p>krb5
+</p></li>
+<li class="listitem"><p>ksh
+</p></li>
+<li class="listitem"><p>latex
+</p></li>
+<li class="listitem"><p>libnbcompat
+</p></li>
+<li class="listitem"><p>libs
+</p></li>
+<li class="listitem"><p>libtool
+</p></li>
+<li class="listitem"><p>licence
+</p></li>
+<li class="listitem"><p>license
+</p></li>
+<li class="listitem"><p>lintl
+</p></li>
+<li class="listitem"><p>little-endian
+</p></li>
+<li class="listitem"><p>lock
+</p></li>
+<li class="listitem"><p>locking
+</p></li>
+<li class="listitem"><p>lvalue
+</p></li>
+<li class="listitem"><p>make
+</p></li>
+<li class="listitem"><p>makesum
+</p></li>
+<li class="listitem"><p>memory
+</p></li>
+<li class="listitem"><p>meta
+</p></li>
+<li class="listitem"><p>meta-package
+</p></li>
+<li class="listitem"><p>meta_package
+</p></li>
+<li class="listitem"><p>mit-krb5
+</p></li>
+<li class="listitem"><p>mk.conf
+</p></li>
+<li class="listitem"><p>mount
+</p></li>
+<li class="listitem"><p>mprotect
+</p></li>
+<li class="listitem"><p>mremap
+</p></li>
+<li class="listitem"><p>nb
+</p></li>
+<li class="listitem"><p>nbcompat
+</p></li>
+<li class="listitem"><p>no
+</p></li>
+<li class="listitem"><p>obstack
+</p></li>
+<li class="listitem"><p>obstack_ptr_grow
+</p></li>
+<li class="listitem"><p>occurs
+</p></li>
+<li class="listitem"><p>only
+</p></li>
+<li class="listitem"><p>options
+</p></li>
+<li class="listitem"><p>options.mk
+</p></li>
+<li class="listitem"><p>order
+</p></li>
+<li class="listitem"><p>override
+</p></li>
+<li class="listitem"><p>override-intltool
+</p></li>
+<li class="listitem"><p>override-message-intltool
+</p></li>
+<li class="listitem"><p>package
+</p></li>
+<li class="listitem"><p>parallel
+</p></li>
+<li class="listitem"><p>partial
+</p></li>
+<li class="listitem"><p>path
+</p></li>
+<li class="listitem"><p>pax
+</p></li>
+<li class="listitem"><p>paxctl
+</p></li>
+<li class="listitem"><p>pbulk-index
+</p></li>
+<li class="listitem"><p>pc
+</p></li>
+<li class="listitem"><p>perl
+</p></li>
+<li class="listitem"><p>perl5
+</p></li>
+<li class="listitem"><p>perms
+</p></li>
+<li class="listitem"><p>php
+</p></li>
+<li class="listitem"><p>pkg-build-options
+</p></li>
+<li class="listitem"><p>pkg-config
+</p></li>
+<li class="listitem"><p>pkg_build_options
+</p></li>
+<li class="listitem"><p>platform
+</p></li>
+<li class="listitem"><p>plist
+</p></li>
+<li class="listitem"><p>post-extract
+</p></li>
+<li class="listitem"><p>post-fetch
+</p></li>
+<li class="listitem"><p>post-wrapper
+</p></li>
+<li class="listitem"><p>pre-configure
+</p></li>
+<li class="listitem"><p>pre-extract
+</p></li>
+<li class="listitem"><p>pre-fetch
+</p></li>
+<li class="listitem"><p>print-plist
+</p></li>
+<li class="listitem"><p>print-summary-data
+</p></li>
+<li class="listitem"><p>privileged-install-hook
+</p></li>
+<li class="listitem"><p>pypi
+</p></li>
+<li class="listitem"><p>python
+</p></li>
+<li class="listitem"><p>readme-all
+</p></li>
+<li class="listitem"><p>regcomp
+</p></li>
+<li class="listitem"><p>relro
+</p></li>
+<li class="listitem"><p>rename
+</p></li>
+<li class="listitem"><p>reorder
+</p></li>
+<li class="listitem"><p>replace
+</p></li>
+<li class="listitem"><p>replace_interpreter
+</p></li>
+<li class="listitem"><p>reproducible
+</p></li>
+<li class="listitem"><p>resolv
+</p></li>
+<li class="listitem"><p>root
+</p></li>
+<li class="listitem"><p>ruby
+</p></li>
+<li class="listitem"><p>setenv
+</p></li>
+<li class="listitem"><p>setgid
+</p></li>
+<li class="listitem"><p>setprogname
+</p></li>
+<li class="listitem"><p>setuid
+</p></li>
+<li class="listitem"><p>sh
+</p></li>
+<li class="listitem"><p>show
+</p></li>
+<li class="listitem"><p>show-all
+</p></li>
+<li class="listitem"><p>show-build-defs
+</p></li>
+<li class="listitem"><p>show-depends
+</p></li>
+<li class="listitem"><p>show-deps
+</p></li>
+<li class="listitem"><p>show-distfiles
+</p></li>
+<li class="listitem"><p>show-downlevel
+</p></li>
+<li class="listitem"><p>show-subdir-var
+</p></li>
+<li class="listitem"><p>show-tools
+</p></li>
+<li class="listitem"><p>show-var
+</p></li>
+<li class="listitem"><p>show-vars
+</p></li>
+<li class="listitem"><p>snprintf
+</p></li>
+<li class="listitem"><p>ssp
+</p></li>
+<li class="listitem"><p>st_mode
+</p></li>
+<li class="listitem"><p>stage-install
+</p></li>
+<li class="listitem"><p>strip
+</p></li>
+<li class="listitem"><p>strong
+</p></li>
+<li class="listitem"><p>subst
+</p></li>
+<li class="listitem"><p>sun
+</p></li>
+<li class="listitem"><p>sunpro
+</p></li>
+<li class="listitem"><p>sunwspro
+</p></li>
+<li class="listitem"><p>test
+</p></li>
+<li class="listitem"><p>tex
+</p></li>
+<li class="listitem"><p>texlive
+</p></li>
+<li class="listitem"><p>tmp
+</p></li>
+<li class="listitem"><p>tool
+</p></li>
+<li class="listitem"><p>tools
+</p></li>
+<li class="listitem"><p>tools-libtool-m4-override
+</p></li>
+<li class="listitem"><p>type
+</p></li>
+<li class="listitem"><p>ulimit
+</p></li>
+<li class="listitem"><p>undefined
+</p></li>
+<li class="listitem"><p>undo-replace
+</p></li>
+<li class="listitem"><p>unlimit
+</p></li>
+<li class="listitem"><p>unprivileged
+</p></li>
+<li class="listitem"><p>unprivileged-install-hook
+</p></li>
+<li class="listitem"><p>unstripped
+</p></li>
+<li class="listitem"><p>update
+</p></li>
+<li class="listitem"><p>upload
+</p></li>
+<li class="listitem"><p>upload-distfiles
+</p></li>
+<li class="listitem"><p>usage
+</p></li>
+<li class="listitem"><p>use_tools
+</p></li>
+<li class="listitem"><p>user
+</p></li>
+<li class="listitem"><p>utimes
+</p></li>
+<li class="listitem"><p>vasprintf
+</p></li>
+<li class="listitem"><p>verbose
+</p></li>
+<li class="listitem"><p>vsnprintf
+</p></li>
+<li class="listitem"><p>warn
+</p></li>
+<li class="listitem"><p>warning
+</p></li>
+<li class="listitem"><p>warnings
+</p></li>
+<li class="listitem"><p>warnx
+</p></li>
+<li class="listitem"><p>weak
+</p></li>
+<li class="listitem"><p>work
+</p></li>
+<li class="listitem"><p>wrapper
+</p></li>
+<li class="listitem"><p>yes
+</p></li>
 </ul></div>
 </div>
 <div class="appendix">

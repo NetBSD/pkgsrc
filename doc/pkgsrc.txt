@@ -14,7 +14,7 @@ The pkgsrc Developers
 
 Copyright   1994-2019 The NetBSD Foundation, Inc
 
-$NetBSD: pkgsrc.xml,v 1.34 2019/04/28 13:41:18 rillig Exp $
+$NetBSD: pkgsrc.xml,v 1.35 2019/04/28 15:22:24 rillig Exp $
 
 Abstract
 
@@ -901,7 +901,7 @@ headache and some bug reports, so we strongly recommend it. You can find an
 explanation of this file in the CVS documentation.
 
 # recommended CVS configuration file from the pkgsrc guide
-cvs -q -z2
+cvs -q
 checkout -P
 update -dP
 diff -upN
@@ -8510,8 +8510,6 @@ bmake help topic=:index.
 
   * ALL_ENV
 
-  * ALSA_PC
-
   * ALTERNATIVES_SRC
 
   * AMANDA_TMP
@@ -8686,8 +8684,6 @@ bmake help topic=:index.
 
   * CDROM_PKG_URL_HOST
 
-  * CHECKOUT_DATE
-
   * CHECK_FAKEHOME
 
   * CHECK_FILES
@@ -8766,16 +8762,6 @@ bmake help topic=:index.
 
   * CMAKE_USE_GNU_INSTALL_DIRS
 
-  * COMMON_LISP_DOCFILES
-
-  * COMMON_LISP_EXAMPLES
-
-  * COMMON_LISP_EXTRAFILES
-
-  * COMMON_LISP_PACKAGES
-
-  * COMMON_LISP_SYSTEM
-
   * COMPILER_RPATH_FLAG
 
   * COMPILER_USE_SYMLINKS
@@ -8833,24 +8819,6 @@ bmake help topic=:index.
   * CURSES_DEFAULT
 
   * CURSES_TYPE
-
-  * CVS_EXTRACTDIR
-
-  * CVS_MODULE
-
-  * CVS_PROJECT
-
-  * CVS_REPOSITORIES
-
-  * CVS_ROOT
-
-  * CVS_ROOT_GNU
-
-  * CVS_ROOT_NONGNU
-
-  * CVS_ROOT_SOURCEFORGE
-
-  * CVS_TAG
 
   * CXX
 
@@ -9064,21 +9032,11 @@ bmake help topic=:index.
 
   * FLUXBOX_USE_XINERAMA
 
-  * FONTDIR
-
   * FONTS_DIRS
 
   * FONTS_VERBOSE
 
   * FOO_HACKS_MK
-
-  * FOSSIL_EXTRACTDIR
-
-  * FOSSIL_REPO
-
-  * FOSSIL_REPOSITORIES
-
-  * FOSSIL_VERSION
 
   * FOX_USE_XUNICODE
 
@@ -9148,20 +9106,6 @@ bmake help topic=:index.
 
   * GITHUB_TYPE
 
-  * GIT_BRANCH
-
-  * GIT_ENV
-
-  * GIT_EXTRACTDIR
-
-  * GIT_REPO
-
-  * GIT_REPOSITORIES
-
-  * GIT_REVISION
-
-  * GIT_TAG
-
   * GNU
 
   * GNU_CONFIGURE
@@ -9199,12 +9143,6 @@ bmake help topic=:index.
   * HAS_CONFIGURE
 
   * HEADER_TEMPLATES
-
-  * HG_REPO
-
-  * HG_REPOSITORIES
-
-  * HG_TAG
 
   * HOST_PKGTOOLS_ARGS
 
@@ -9302,10 +9240,6 @@ bmake help topic=:index.
 
   * JAKARTA_HOME
 
-  * JAVA_APP_PATH
-
-  * JAVA_APP_TARGETS
-
   * JAVA_BINPREFIX
 
   * JAVA_CLASSPATH
@@ -9370,12 +9304,6 @@ bmake help topic=:index.
 
   * LINK_RPATH_FLAG
 
-  * LINUX_BASE_NODEPS
-
-  * LINUX_BASE_PREFERRED
-
-  * LINUX_BASE_REQUIRED
-
   * LINUX_LOCALES
 
   * LOCALBASE
@@ -9403,8 +9331,6 @@ bmake help topic=:index.
   * MAILAGENT_ORGANIZATION
 
   * MAJORDOMO_HOMEDIR
-
-  * MAJOR_OS_VERSION
 
   * MAKEINFO_ARGS
 
@@ -9634,10 +9560,6 @@ bmake help topic=:index.
 
   * OSX_TOLERATE_SDK_SKEW
 
-  * OS_HAVE_ALSA
-
-  * OS_HAVE_RCD
-
   * OS_VARIANT
 
   * OS_VERSION
@@ -9649,8 +9571,6 @@ bmake help topic=:index.
   * OVERRIDE_GEMSPEC
 
   * OVERRIDE_GNU_CONFIG_SCRIPTS
-
-  * OVERRIDE_ROCKSPEC
 
   * OWN_DIRS
 
@@ -9697,14 +9617,6 @@ bmake help topic=:index.
   * PATH
 
   * PCCBASE
-
-  * PEAR
-
-  * PEAR_CHANNEL
-
-  * PEAR_CHANNEL_ALIAS
-
-  * PEAR_CHANNEL_VERSION
 
   * PEAR_CMD
 
@@ -10080,10 +9992,6 @@ bmake help topic=:index.
 
   * RASMOL_DEPTH
 
-  * RCD_DIR
-
-  * RCD_ORDER
-
   * RCD_SCRIPTS
 
   * RCD_SCRIPTS_DIR
@@ -10095,8 +10003,6 @@ bmake help topic=:index.
   * RCD_SCRIPTS_SHELL
 
   * RCD_SCRIPT_SRC
-
-  * RCD_SUBR
 
   * RDOC
 
@@ -10153,10 +10059,6 @@ bmake help topic=:index.
   * RESOLV_LIBS
 
   * RM
-
-  * ROCKSPEC_NAME
-
-  * ROCKSPEC_SPECFILE
 
   * ROOT_CMD
 
@@ -10350,8 +10252,6 @@ bmake help topic=:index.
 
   * SHLIB
 
-  * SHORTNAME
-
   * SIGN_PACKAGES
 
   * SILC_CLIENT_WITH_PERL
@@ -10432,14 +10332,6 @@ bmake help topic=:index.
 
   * SU_CMD
 
-  * SVN_EXTRACTDIR
-
-  * SVN_REPO
-
-  * SVN_REPOSITORIES
-
-  * SVN_REVISION
-
   * TERMCAP_TYPE
 
   * TERMINFO_DEFAULT
@@ -10499,8 +10391,6 @@ bmake help topic=:index.
   * TOOLS_PATH
 
   * TOOLS_SCRIPT
-
-  * TTF_FONTDIR
 
   * TTF_FONTS_DIR
 
@@ -10654,8 +10544,6 @@ bmake help topic=:index.
 
   * XXX
 
-  * XXXX
-
   * YES
 
   * ZERO_FILESIZE_P
@@ -10758,11 +10646,7 @@ bmake help topic=:index.
 
   * configuration
 
-  * configure
-
   * configure-help
-
-  * configure_args
 
   * cputime
 
@@ -10771,8 +10655,6 @@ bmake help topic=:index.
   * csh
 
   * ctf
-
-  * cvs
 
   * debug
 
@@ -10816,8 +10698,6 @@ bmake help topic=:index.
 
   * do-fetch
 
-  * do-install
-
   * emul
 
   * emulation
@@ -10854,8 +10734,6 @@ bmake help topic=:index.
 
   * fortify_source
 
-  * fossil
-
   * friend
 
   * from
@@ -10880,13 +10758,9 @@ bmake help topic=:index.
 
   * gettext
 
-  * git
-
   * github
 
   * glob
-
-  * gnu
 
   * go
 
@@ -10899,8 +10773,6 @@ bmake help topic=:index.
   * heimdal
 
   * help
-
-  * hg
 
   * imake
 
@@ -10949,8 +10821,6 @@ bmake help topic=:index.
   * makesum
 
   * memory
-
-  * mercurial
 
   * meta
 
@@ -11118,15 +10988,11 @@ bmake help topic=:index.
 
   * subst
 
-  * subversion
-
   * sun
 
   * sunpro
 
   * sunwspro
-
-  * svn
 
   * test
 
