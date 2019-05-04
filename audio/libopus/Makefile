@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2017/07/04 08:55:08 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/05/04 06:17:32 ryoon Exp $
 
-DISTNAME=	opus-1.2.1
+DISTNAME=	opus-1.3.1
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	audio
 MASTER_SITES=	https://archive.mozilla.org/pub/opus/
