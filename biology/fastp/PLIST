@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2019/05/04 16:15:25 bacon Exp $
+bin/fastp
