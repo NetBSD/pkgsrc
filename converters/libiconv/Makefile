@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2017/03/30 12:40:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.67 2019/05/04 15:32:32 rillig Exp $
 
 DISTNAME=	libiconv-1.14
 PKGREVISION=	3
@@ -12,8 +12,9 @@ LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2
 
 USE_LANGUAGES+=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=	pax
+USE_TOOLS+=		pax
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no	# has multiple configure scripts
 
 CONFLICTS=	man-pages-[0-9]*
 
