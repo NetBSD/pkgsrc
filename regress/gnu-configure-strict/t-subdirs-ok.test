@@ -1,0 +1,20 @@
+# $NetBSD: t-subdirs-ok.test,v 1.1 2019/05/04 15:16:51 rillig Exp $
+
+===> Configuring for package-1.0
+...
+=== configuring in subdir1
+...
+configure: WARNING: unrecognized options: --only-subdir2
+...
+=== configuring in subdir2
+...
+configure: WARNING: unrecognized options: --only-subdir1
+...
+
+No output expected since each of the unrecognized options is used in the
+other subdirectory.
+
+# begin expected output
+good: all 2 options are used somewhere
+please set GNU_CONFIGURE_STRICT=no in the package
+# end expected output

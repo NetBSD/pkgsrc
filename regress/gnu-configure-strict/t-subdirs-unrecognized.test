@@ -1,0 +1,21 @@
+# $NetBSD: t-subdirs-unrecognized.test,v 1.1 2019/05/04 15:16:51 rillig Exp $
+
+===> Configuring for package-1.0
+...
+configure: WARNING: unrecognized options: --enable-feature
+...
+=== configuring in subdir1
+...
+configure: WARNING: unrecognized options: --enable-feature
+...
+=== configuring in subdir2
+...
+configure: WARNING: unrecognized options: --enable-feature
+...
+
+Since the option is unrecognized in both the main directory and in all
+subdirectories, it can be removed without side effect.
+
+# begin expected output
+option --enable-feature is unknown in all 3 configure scripts
+# end expected output
