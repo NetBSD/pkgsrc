@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2014/01/05 19:56:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/05/04 06:17:32 ryoon Exp $
 include/opus/opus.h
 include/opus/opus_defines.h
 include/opus/opus_multistream.h
+include/opus/opus_projection.h
 include/opus/opus_types.h
 lib/libopus.la
 lib/pkgconfig/opus.pc
