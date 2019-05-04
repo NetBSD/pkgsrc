@@ -1,4 +1,4 @@
-$NetBSD: patch-tessdata_Makefile.am,v 1.2 2018/11/03 09:13:07 adam Exp $
+$NetBSD: patch-tessdata_Makefile.am,v 1.3 2019/05/04 16:05:33 leot Exp $
 
 Revert a trunk commit that broke install-lang for tesseract<4.
 
@@ -20,7 +20,7 @@ Revert a trunk commit that broke install-lang for tesseract<4.
 +		for l in ./*.traineddata; do \
 +			filename=`basename $$l`; \
 +			lang_code=$${filename%.*}; \
-+			if test "$$lang_code" == "*"; then \
++			if test "$$lang_code" = "*"; then \
 +				echo "No lang present."; \
 +				break; \
 +			fi; \
