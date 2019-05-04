@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2019/04/25 07:33:24 maya Exp $
+# $NetBSD: Makefile,v 1.125 2019/05/04 20:30:34 wiedi Exp $
 
 DISTNAME=	icu4c-64_2-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
@@ -21,6 +21,8 @@ UNLIMIT_RESOURCES+=	datasize
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-static
 CONFIGURE_ENV+=		U_MAKE=${TOOLS_GMAKE}
+
+CHECK_SSP_SKIP=		lib/libicudata.so*
 
 .include "../../mk/pthread.buildlink3.mk"
 
