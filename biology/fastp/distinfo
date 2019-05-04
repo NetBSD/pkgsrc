@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2019/05/04 16:15:25 bacon Exp $
+
+SHA1 (fastp-0.20.0.tar.gz) = 657888d18b40aa18aa6d68e31a5e930ae8cf1606
+RMD160 (fastp-0.20.0.tar.gz) = 0ad6a0eb389e31855f1fa95a089aaa653164f88e
+SHA512 (fastp-0.20.0.tar.gz) = 33349b761283a42fb9eaf045ab7f839d5ec335fb394e277519b87f8c95cf682027ab183b174a1b82d908a3e4d1d65ac63a88c30efea04d93a08f559c1a7a732c
+Size (fastp-0.20.0.tar.gz) = 139422 bytes
+SHA1 (patch-Makefile) = 52fa55ead7d384b8c758e7a2d14680a53f61e623
