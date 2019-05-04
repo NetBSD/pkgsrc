@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2019/02/02 00:22:14 markd Exp $
+# $NetBSD: Makefile,v 1.16 2019/05/04 23:00:47 markd Exp $
 
 DISTNAME=	collection-publishers
 PKGNAME=	texlive-${DISTNAME}-2018pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	49889
+TEXLIVE_REV=	50133
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -75,7 +75,9 @@ DEPENDS+=	tex-elsarticle-[0-9]*:../../print/tex-elsarticle
 # depend fcavtex
 # depend fcltxdoc
 # depend fei
+# depend ftc-notebook
 # depend gaceta
+# depend gammas
 # depend gatech-thesis
 # depend gradstudentresume
 # depend grant
@@ -143,12 +145,12 @@ DEPENDS+=	tex-elsarticle-[0-9]*:../../print/tex-elsarticle
 # depend procIAGssymp
 # depend proposal
 # depend ptptex
-# depend psu-thesis
 # depend resphilosophica
 # depend resumecls
 DEPENDS+=	tex-revtex-[0-9]*:../../print/tex-revtex
 DEPENDS+=	tex-revtex4-[0-9]*:../../print/tex-revtex4
 # depend rutitlepage
+# depend ryersonsgsthesis
 # depend ryethesis
 # depend sageep
 # depend sapthesis
