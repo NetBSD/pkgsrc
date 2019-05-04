@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2019/02/02 00:12:51 markd Exp $
+# $NetBSD: Makefile,v 1.15 2019/05/04 22:44:42 markd Exp $
 
 DISTNAME=	collection-fontsextra
 PKGNAME=	texlive-${DISTNAME}-2018pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	49835
+TEXLIVE_REV=	49909
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -91,6 +91,7 @@ DEPENDS+=	tex-courier-scaled-[0-9]*:../../fonts/tex-courier-scaled
 # depend crimson
 # depend crimsonpro
 DEPENDS+=	tex-cryst-[0-9]*:../../fonts/tex-cryst
+# depend cuprum
 DEPENDS+=	tex-cyklop-[0-9]*:../../fonts/tex-cyklop
 DEPENDS+=	tex-dancers-[0-9]*:../../fonts/tex-dancers
 DEPENDS+=	tex-dantelogo-[0-9]*:../../fonts/tex-dantelogo
@@ -279,9 +280,9 @@ DEPENDS+=	tex-typicons-[0-9]*:../../fonts/tex-typicons
 DEPENDS+=	tex-umtypewriter-[0-9]*:../../fonts/tex-umtypewriter
 DEPENDS+=	tex-universa-[0-9]*:../../fonts/tex-universa
 DEPENDS+=	tex-universalis-[0-9]*:../../fonts/tex-universalis
+# depend uppunctlm
 DEPENDS+=	tex-urwchancal-[0-9]*:../../fonts/tex-urwchancal
 DEPENDS+=	tex-venturisadf-[0-9]*:../../fonts/tex-venturisadf
-# depend uppunctlm
 DEPENDS+=	tex-wsuipa-[0-9]*:../../fonts/tex-wsuipa
 DEPENDS+=	tex-xcharter-[0-9]*:../../fonts/tex-xcharter
 DEPENDS+=	tex-xits-[0-9]*:../../fonts/tex-xits
