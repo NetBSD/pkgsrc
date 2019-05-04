@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/04/25 07:32:44 maya Exp $
+# $NetBSD: Makefile,v 1.15 2019/05/04 15:29:50 rillig Exp $
 
 DISTNAME=	ctemplate-2.3
 PKGREVISION=	4
@@ -21,6 +21,12 @@ PKGCONFIG_OVERRIDE+=	libctemplate_nothreads.pc
 PKGCONFIG_OVERRIDE_STAGE=post-build
 REPLACE_PERL=		src/template-converter
 REPLACE_PYTHON=		src/htmlparser/generate_fsm.py
+
+# In Python 3.x, print is a function, not a statement:
+#	print '\n'.join(...)
+# SyntaxError: invalid syntax
+# https://github.com/OlafvdSpek/ctemplate/issues/137
+PYTHON_VERSIONS_ACCEPTED=	27
 
 .include "../../lang/python/application.mk"
 .include "../../mk/pthread.buildlink3.mk"
