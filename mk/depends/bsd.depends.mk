@@ -1,4 +1,4 @@
-# $NetBSD: bsd.depends.mk,v 1.28 2018/01/13 12:48:56 joerg Exp $
+# $NetBSD: bsd.depends.mk,v 1.29 2019/05/04 11:45:14 leot Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to dependencies.
@@ -6,6 +6,30 @@
 # The following are the "public" targets provided by this module:
 #
 #    depends, bootstrap-depends, install-depends, show-depends
+#
+# The following variables may be set in a package Makefile:
+#
+# DEPENDS
+#	List of dependencies of the form "pattern:dir" needed by the
+#	package at run-time.
+#
+# BUILD_DEPENDS
+#	List of build dependencies of the form "pattern:dir" needed by the
+#	package at build-time.  When cross-compiling, build dependencies
+#	are `target' packages, i.e. architecture for which the package is
+#	built.
+#
+# TEST_DEPENDS
+#	List of test dependencies of the form "pattern:dir" needed by the
+#	package at test-time.  When cross-compiling, test dependencies
+#	are `native' packages, i.e. architecture where the package is
+#	built.
+#
+# TOOL_DEPENDS
+#	List of tool dependencies of the form "pattern:dir" needed by the
+#	package at build-time.  When cross-compiling, tool dependencies
+#	are `native' packages, i.e. architecture where the package is
+#	built.
 #
 # The following variables may be set by the pkgsrc user:
 #
