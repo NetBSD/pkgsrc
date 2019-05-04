@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/05/03 17:14:27 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/05/04 10:50:04 nia Exp $
 bin/inspircd
 bin/inspircd-genssl
 lib/inspircd/modules/core_channel.so
@@ -218,4 +218,3 @@ share/examples/inspircd/sql/sqloper.pgsql.sql
 share/examples/inspircd/sql/sqloper.sqlite3.sql
 @pkgdir inspircd/logs
 @pkgdir inspircd/data
-@pkgdir etc/inspircd/services
