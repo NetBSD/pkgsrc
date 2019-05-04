@@ -1,4 +1,4 @@
-$NetBSD: README.MacOSX,v 1.36 2019/05/03 11:52:31 gdt Exp $
+$NetBSD: README.MacOSX,v 1.37 2019/05/04 19:27:49 gutteridge Exp $
 
 This file describes the use of current versions of pkgsrc with
 multiple versions of Darwin and macOS, omitting information about
@@ -92,7 +92,7 @@ Generally, users will not need to deal with the default ABI change,
 except that packages are mostly only portable across machines with the
 same bootstrapping parameters.
 
-[If one unpacks a new binary bootstrap kit over an existing
+If one unpacks a new binary bootstrap kit over an existing
 installation, one can end up with a mix. The standard advice is not to
 do this, and to rrebuild/reinstall all packages from scratch or a
 compatible binary package set.  But, one could also mark packages with
