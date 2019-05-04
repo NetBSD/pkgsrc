@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.41 2019/02/02 02:52:09 markd Exp $
+# $NetBSD: Makefile,v 1.42 2019/05/04 23:11:00 markd Exp $
 
 DISTNAME=	collection-latexextra
 PKGNAME=	texlive-${DISTNAME}-2018pre5
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	49867
+TEXLIVE_REV=	50117
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -201,6 +201,7 @@ DEPENDS+=	tex-collectbox-[0-9]*:../../print/tex-collectbox
 # depend combine
 # depend comma
 # depend commado
+# depend commedit
 DEPENDS+=	tex-comment-[0-9]*:../../print/tex-comment
 # depend competences
 # depend concepts
@@ -346,6 +347,8 @@ DEPENDS+=	tex-easy-todo-[0-9]*:../../print/tex-easy-todo
 # depend eemeir
 # depend efbox
 # depend egplot
+# depend elegantbook
+# depend elegantnote
 # depend elegantpaper
 # depend elements
 # depend ellipsis
@@ -502,12 +505,14 @@ DEPENDS+=	tex-g-brief-[0-9]*:../../print/tex-g-brief
 # depend gitinfo
 # depend gitinfo2
 # depend gitlog
+# depend gitver
 # depend globalvals
 # depend gloss
 DEPENDS+=	tex-glossaries-[0-9]*:../../print/tex-glossaries
 # depend glossaries-danish
 # depend glossaries-dutch
 # depend glossaries-english
+# depend glossaries-estonian
 # depend glossaries-extra
 # depend glossaries-finnish
 # depend glossaries-french
@@ -1042,8 +1047,8 @@ DEPENDS+=	tex-srcltx-[0-9]*:../../print/tex-srcltx
 DEPENDS+=	tex-stackengine-[0-9]*:../../print/tex-stackengine
 DEPENDS+=	tex-standalone-[0-9]*:../../print/tex-standalone
 DEPENDS+=	tex-stdclsdv-[0-9]*:../../print/tex-stdclsdv
-# depend stdpage
 # depend stealcaps
+# depend stdpage
 # depend stex
 # depend storebox
 # depend storecmd
