@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2019/01/27 09:59:14 markd Exp $
+# $NetBSD: Makefile,v 1.8 2019/05/04 22:57:56 markd Exp $
 
 DISTNAME=	collection-plaingeneric
 PKGNAME=	texlive-${DISTNAME}-2018pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	49271
+TEXLIVE_REV=	50044
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -45,7 +45,6 @@ DEPENDS+=	tex-fontname>=2013:../../fonts/tex-fontname
 DEPENDS+=	tex-genmisc>=2013:../../print/tex-genmisc
 DEPENDS+=	tex-getoptk-[0-9]*:../../print/tex-getoptk
 DEPENDS+=	tex-gfnotation-[0-9]*:../../print/tex-gfnotation
-# depend gfnotation
 # depend gobble
 DEPENDS+=	tex-graphics-pln-[0-9]*:../../graphics/tex-graphics-pln
 # depend gtl
@@ -79,6 +78,7 @@ DEPENDS+=	tex-placeins-plain-[0-9]*:../../print/tex-placeins-plain
 DEPENDS+=	tex-plipsum-[0-9]*:../../print/tex-plipsum
 DEPENDS+=	tex-plnfss-[0-9]*:../../print/tex-plnfss
 DEPENDS+=	tex-plstmary-[0-9]*:../../print/tex-plstmary
+# depend poormanlog
 DEPENDS+=	tex-present-[0-9]*:../../print/tex-present
 # depend randomlist
 DEPENDS+=	tex-resumemac-[0-9]*:../../print/tex-resumemac
