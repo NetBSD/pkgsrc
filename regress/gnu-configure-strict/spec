@@ -1,0 +1,47 @@
+# $NetBSD: spec,v 1.1 2019/05/04 15:16:51 rillig Exp $
+#
+# Checks that analyzing unknown CONFIGURE_ARGS produces the expected results,
+# for both packages containing only a single configure scripts and those
+# containing multiple configure scripts.
+
+set -eu
+
+tmpdir=${TMPDIR:-/tmp}/pkgsrc-gnu-configure
+rm -rf "$tmpdir"
+mkdir -p "$tmpdir"
+
+require_file() {
+	if diff -u "$3" "$1" > /dev/null; then
+		:
+	else
+		regress_fail "Expected files to be equal."
+		diff -u "$3" "$1" || true
+	fi
+}
+
+do_test_case() {
+	testname=${1%.test}
+
+	awk '/^# end/ { relevant = 0 } relevant { print } /^# begin/ { relevant = 1 }' \
+		< "$1" > "$tmpdir/$testname.expected"
+
+	awk -f $PKGSRCDIR/mk/configure/gnu-configure-unknown.awk \
+		"$1" > "$tmpdir/$testname.actual"
+
+	require_file "$tmpdir/$testname.actual" --equals "$tmpdir/$testname.expected"
+}
+
+do_test() {
+	do_test_case "t-simple-unrecognized.test"
+	do_test_case "t-gettext-tools.test"
+	do_test_case "t-subdirs-ok.test"
+	do_test_case "t-subdirs-unrecognized.test"
+	do_test_case "t-subdirs-only-in-main.test"
+	export PKG_VERBOSE=yes
+	do_test_case "t-verbose.test"
+	unset PKG_VERBOSE
+}
+
+check_result() {
+	exit_status 0
+}
