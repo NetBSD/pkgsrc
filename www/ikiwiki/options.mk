@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2014/12/04 17:28:43 schmonz Exp $
+# $NetBSD: options.mk,v 1.19 2019/05/04 09:32:29 leot Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ikiwiki
 PKG_SUPPORTED_OPTIONS=		cgi imagemagick l10n python w3m
@@ -78,9 +78,9 @@ PLIST.w3m=		yes
 INSTALLATION_DIRS+=	share/doc/${PKGBASE}/w3mmode
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/html/w3mmode.html \
-		${PREFIX}/share/doc/${PKGBASE}
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/w3mmode/ikiwiki.setup \
-		${PREFIX}/share/doc/${PKGBASE}/w3mmode/ikiwiki.setup
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/w3mmode/ikiwiki.setup
 .else
 SUBST_CLASSES+=		w3m
 SUBST_STAGE.w3m=	pre-configure
