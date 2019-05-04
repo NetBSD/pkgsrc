@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1961 2019/05/04 19:24:18 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.1962 2019/05/04 21:38:59 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3165,3 +3165,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added biology/fastp version 0.20.0 [bacon 2019-05-04]
 	Updated time/xfce4-datetime-plugin to 0.7.1 [gutteridge 2019-05-04]
 	Updated x11/xfce4-places-plugin to 1.8.0 [gutteridge 2019-05-04]
+	Updated net/gallery-dl to 1.8.3 [leot 2019-05-04]
