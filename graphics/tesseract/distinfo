@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2018/11/29 09:15:22 adam Exp $
+$NetBSD: distinfo,v 1.21 2019/05/04 16:05:33 leot Exp $
 
 SHA1 (tessdata-4.0.0.tar.gz) = 94557a6ecdf8ff8bec131598759e7d3b0bca1911
 RMD160 (tessdata-4.0.0.tar.gz) = 2e826e866b56ff8b9cb2c6613f04d8c4a4ff98d7
@@ -9,4 +9,4 @@ RMD160 (tesseract-4.0.0.tar.gz) = 0e95d343639ab98c6d3fbc528053b627b6e12282
 SHA512 (tesseract-4.0.0.tar.gz) = 69e57d4ba1fc43d212fd0fff69a2b5d48a3b37cfee7054fdc083cbb7e04d92317609a32e457229661d70ce8d9b16c9d25e81bfc3861db660dd2c8f292202d447
 Size (tesseract-4.0.0.tar.gz) = 1961372 bytes
 SHA1 (patch-doc_Makefile.am) = fd9cc782e766428de5709b77d7a2476be55ec7d8
-SHA1 (patch-tessdata_Makefile.am) = 496926e629d3803165306c22a9c03ff71f5b774f
+SHA1 (patch-tessdata_Makefile.am) = 1fdbed9dafc1527eb52f354c8b78ba82f854b350
