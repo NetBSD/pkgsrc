@@ -1,4 +1,4 @@
-# $NetBSD: gnu-configure.mk,v 1.19 2019/04/20 16:32:42 rillig Exp $
+# $NetBSD: gnu-configure.mk,v 1.20 2019/05/04 08:43:06 rillig Exp $
 #
 # Package-settable variables:
 #
@@ -13,8 +13,17 @@
 #	Whether unknown --enable/--disable/--with/--without options make
 #	the package fail immediately.
 #
+#	When this check fails, inspect the configure script using "bmake
+#	configure-help" and adjust the CONFIGURE_ARGS accordingly.
+#	Inspect whether the configure script runs embedded configure
+#	scripts from subdirectories. In that case, some of the
+#	sub-configure scripts may need the options and some may not know
+#	them at all.
+#
 #	Possible: yes no
 #	Default: no
+#
+# Keywords: configure configure_args gnu
 
 _VARGROUPS+=			gnu-configure
 _USER_VARS.gnu-configure=	# none
