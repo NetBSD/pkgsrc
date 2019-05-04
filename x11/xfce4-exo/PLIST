@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2018/06/23 20:37:26 youri Exp $
+@comment $NetBSD: PLIST,v 1.13 2019/05/04 02:01:35 gutteridge Exp $
 bin/exo-csource
 bin/exo-desktop-item-edit
 bin/exo-open
@@ -51,8 +51,8 @@ lib/libexo-1.la
 lib/libexo-2.la
 lib/pkgconfig/exo-1.pc
 lib/pkgconfig/exo-2.pc
-lib/xfce4/exo-1/exo-compose-mail-1
-lib/xfce4/exo-1/exo-helper-1
+lib/xfce4/exo-2/exo-helper-2
+lib/xfce4/exo/exo-compose-mail
 man/man1/exo-csource.1
 man/man1/exo-open.1
 share/applications/exo-file-manager.desktop
@@ -172,7 +172,7 @@ share/locale/vi/LC_MESSAGES/exo-1.mo
 share/locale/zh_CN/LC_MESSAGES/exo-1.mo
 share/locale/zh_HK/LC_MESSAGES/exo-1.mo
 share/locale/zh_TW/LC_MESSAGES/exo-1.mo
-share/pixmaps/exo-1/exo-thumbnail-frame.png
+share/pixmaps/exo/exo-thumbnail-frame.png
 share/xfce4/helpers/Thunar.desktop
 share/xfce4/helpers/aterm.desktop
 share/xfce4/helpers/balsa.desktop
