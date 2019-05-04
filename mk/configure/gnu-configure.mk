@@ -1,4 +1,4 @@
-# $NetBSD: gnu-configure.mk,v 1.20 2019/05/04 08:43:06 rillig Exp $
+# $NetBSD: gnu-configure.mk,v 1.21 2019/05/04 15:16:50 rillig Exp $
 #
 # Package-settable variables:
 #
@@ -13,15 +13,19 @@
 #	Whether unknown --enable/--disable/--with/--without options make
 #	the package fail immediately.
 #
-#	When this check fails, inspect the configure script using "bmake
-#	configure-help" and adjust the CONFIGURE_ARGS accordingly.
-#	Inspect whether the configure script runs embedded configure
-#	scripts from subdirectories. In that case, some of the
-#	sub-configure scripts may need the options and some may not know
-#	them at all.
+#	Command line options that are unknown for all configure scripts
+#	of a package are effectively ignored and should be replaced with
+#	their current equivalent (in case they have been renamed), or
+#	otherwise be removed.
 #
-#	Possible: yes no
+#	This check may incorrectly report unknown options for packages
+#	that have multiple configure scripts, when one of these scripts
+#	recognizes the option and some other doesn't. To check this, run
+#	"bmake show-unknown-configure-options" after the package failed.
+#
+#	Possible: yes no warn
 #	Default: no
+#	See also: configure-help show-unknown-configure-options
 #
 # Keywords: configure configure_args gnu
 
@@ -200,5 +204,27 @@ configure-scripts-osdep:
 	done
 .endif
 
-GNU_CONFIGURE_STRICT?=	no
-CONFIGURE_ARGS+=	${"${GNU_CONFIGURE_STRICT:M[yY][eE][sS]}":?--enable-option-checking=fatal:}
+GNU_CONFIGURE_STRICT?=	warn
+.if ${GNU_CONFIGURE_STRICT:M[yY][eE][sS]}
+CONFIGURE_ARGS+=	--enable-option-checking=fatal
+.elif ${GNU_CONFIGURE_STRICT} == warn
+CONFIGURE_ARGS+=	--enable-option-checking=yes
+.endif
+
+# Inspects the configure scripts of a package to see whether there are
+# multiple configure scripts, and one of them reports an option as
+# unrecognized while some other still needs it.
+#
+# This target is expected to be called manually, after a package failed
+# to configure because of the GNU_CONFIGURE_STRICT check.
+#
+# See also: GNU_CONFIGURE_STRICT configure-help
+#
+# Keywords: GNU_CONFIGURE_STRICT configure-help
+show-unknown-configure-options: .PHONY
+	${RUN} ${MAKE} patch
+	${RUN} ${RM} -f ${_COOKIE.configure}
+	@${STEP_MSG} "Running configure scripts silently"
+	${RUN} ${MAKE} configure GNU_CONFIGURE_STRICT=warn 2>&1		\
+	| ${AWK} -f ${PKGSRCDIR}/mk/configure/gnu-configure-unknown.awk
+	${RUN} ${RM} -f ${_COOKIE.configure}

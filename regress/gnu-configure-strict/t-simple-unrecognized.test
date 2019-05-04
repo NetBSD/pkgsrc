@@ -1,0 +1,12 @@
+# $NetBSD: t-simple-unrecognized.test,v 1.1 2019/05/04 15:16:51 rillig Exp $
+
+In most configure scripts there are no calls to other configure scripts.
+In that case the only "subdir" is the main configure script itself.
+
+===> Configuring for screen-4.6.2nb1
+...
+configure: WARNING: unrecognized options: --enable-feature
+
+# begin
+option --enable-feature is unknown in all 1 configure scripts
+# end

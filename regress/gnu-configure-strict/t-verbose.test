@@ -1,0 +1,41 @@
+# $NetBSD: t-verbose.test,v 1.1 2019/05/04 15:16:51 rillig Exp $
+
+This is the output of running "bmake configure GNU_CONFIGURE_STRICT=warn"
+in devel/gettext-tools. That package has several subdirectories, and some
+of them even run multiple configure scripts.
+
+===> Configuring for gettext-tools-0.19.8.1nb1
+...
+=== configuring in gettext-runtime
+...
+configure: WARNING: unrecognized options: --with-included-libcroco, --without-git, --with-xz, --without-emacs, --disable-openmp
+...
+=== configuring in libasprintf
+...
+configure: WARNING: unrecognized options: --disable-csharp, --disable-java, --with-included-libcroco, --without-git, --with-xz, --without-included-gettext, --without-emacs, --disable-openmp
+...
+configure: WARNING: unrecognized options: --disable-csharp, --disable-java, --with-included-libcroco, --without-git, --with-xz, --without-included-gettext, --without-emacs, --disable-openmp
+configure: WARNING: unrecognized options: --with-included-libcroco, --without-git, --with-xz, --without-emacs, --disable-openmp
+...
+=== configuring in gettext-tools
+...
+=== configuring in examples
+...
+configure: WARNING: unrecognized options: --disable-csharp, --disable-java, --with-included-libcroco, --without-git, --with-xz, --without-included-gettext, --without-emacs, --disable-openmp
+...
+configure: WARNING: unrecognized options: --disable-csharp, --disable-java, --with-included-libcroco, --without-git, --with-xz, --without-included-gettext, --without-emacs, --disable-openmp
+
+Each of the subdirectories flags several options as unrecognized, but in
+summary, each of the given options is used in at least one subdirectory,
+which in this case is gettext-tools.
+
+# begin expected output
+good: option --with-included-libcroco is known in 2 of 5 configure scripts
+good: option --without-git is known in 2 of 5 configure scripts
+good: option --with-xz is known in 2 of 5 configure scripts
+good: option --without-emacs is known in 2 of 5 configure scripts
+good: option --disable-openmp is known in 2 of 5 configure scripts
+good: option --disable-csharp is known in 3 of 5 configure scripts
+good: option --disable-java is known in 3 of 5 configure scripts
+good: option --without-included-gettext is known in 3 of 5 configure scripts
+# end expected output
