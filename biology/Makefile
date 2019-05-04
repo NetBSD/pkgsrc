@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2019/01/15 01:27:42 bacon Exp $
+# $NetBSD: Makefile,v 1.53 2019/05/04 16:16:10 bacon Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -16,6 +16,7 @@ SUBDIR+=	chemtool
 SUBDIR+=	clustalw
 SUBDIR+=	coalesce
 SUBDIR+=	fastDNAml
+SUBDIR+=	fastp
 SUBDIR+=	fluctuate
 SUBDIR+=	gabedit
 SUBDIR+=	genesplicer
