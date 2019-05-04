@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1959 2019/05/04 16:16:46 bacon Exp $
+$NetBSD: CHANGES-2019,v 1.1960 2019/05/04 18:57:09 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3163,3 +3163,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-test-cov to 2.7.1 [adam 2019-05-04]
 	Updated net/dhcpcd to 7.2.2 [roy 2019-05-04]
 	Added biology/fastp version 0.20.0 [bacon 2019-05-04]
+	Updated time/xfce4-datetime-plugin to 0.7.1 [gutteridge 2019-05-04]
