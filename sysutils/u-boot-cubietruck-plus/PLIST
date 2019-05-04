@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2019/04/29 07:48:50 mrg Exp $
-share/u-boot/cubietruck_plus/u-boot-sunxi-with-spl.bin
+@comment $NetBSD: PLIST,v 1.2 2019/05/04 05:31:01 mrg Exp $
+share/u-boot/cubietruck-plus/u-boot-sunxi-with-spl.bin
