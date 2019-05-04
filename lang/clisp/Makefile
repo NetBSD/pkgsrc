@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2017/09/10 20:03:49 wiz Exp $
+# $NetBSD: Makefile,v 1.111 2019/05/04 19:38:08 rillig Exp $
 
 DISTNAME=		clisp-2.49
 PKGREVISION=		24
@@ -22,7 +22,8 @@ MAKE_JOBS_SAFE=		no
 # Installs a copy of its own depcomp, avoid libtool dependency here.
 OVERRIDE_DIRDEPTH.depcomp=	0
 
-GNU_CONFIGURE=		yes
+GNU_CONFIGURE=		yes	# not really, but very close
+GNU_CONFIGURE_STRICT=	no	# doesn't know --enable-option-checking
 CONFIGURE_DIRS=		.
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
