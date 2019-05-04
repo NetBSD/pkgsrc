@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2018/02/11 17:06:31 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2019/05/04 08:42:24 rillig Exp $
 
 DISTNAME=	dbus-glib-0.110
 CATEGORIES=	sysutils
@@ -19,13 +19,11 @@ PKGCONFIG_OVERRIDE=	dbus-glib-1.pc.in
 
 CONFIGURE_ARGS+=	--disable-ansi
 CONFIGURE_ARGS+=	--disable-asserts
-CONFIGURE_ARGS+=	--disable-doxygen-docs
 CONFIGURE_ARGS+=	--disable-gcov
+CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--disable-tests
-CONFIGURE_ARGS+=	--disable-verbose-mode
-CONFIGURE_ARGS+=	--disable-xml-docs
+CONFIGURE_ARGS+=	--enable-silent-rules
 CONFIGURE_ARGS+=	--enable-checks
-CONFIGURE_ARGS+=	--with-xml=expat
 
 .include "options.mk"
 
