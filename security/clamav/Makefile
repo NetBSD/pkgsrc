@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2018/12/13 19:52:19 adam Exp $
+# $NetBSD: Makefile,v 1.48 2019/05/04 16:12:00 rillig Exp $
 
 PKGREVISION= 3
 .include "Makefile.common"
@@ -11,7 +11,6 @@ USE_TOOLS+=		gsed
 GNU_CONFIGURE=		yes
 SET_LIBDIR=		yes
 FAKE_NCURSES=		yes
-CONFIGURE_ARGS+=	--disable-clamav
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-dbdir=${CLAMAV_DBDIR}
 CONFIGURE_ARGS+=	--with-group=${CLAMAV_GROUP}
