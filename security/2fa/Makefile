@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.11 2019/04/16 18:41:11 bsiegert Exp $
+# $NetBSD: Makefile,v 1.12 2019/05/04 06:11:53 ryoon Exp $
 
-DISTNAME=	2fa
-PKGNAME=	2fa-20171122
-PKGREVISION=	9
+DISTNAME=	2fa-1.1.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rsc/}
-GITHUB_TAG=	c9558c536f6538d59f1b012915b44e44e3563823
+GITHUB_TAG=	v1.1.0
+GITHUB_PROJECT=	2fa
 
 MAINTAINER=	bsiegert@NetBSD.org
 HOMEPAGE=	${MASTER_SITE_GITHUB:=rsc/2fa/}
 COMMENT=	Command-line client for two-factor authentication
 LICENSE=	modified-bsd
 
-GO_DIST_BASE=	2fa-${GITHUB_TAG}
+GO_DIST_BASE=	${DISTNAME}
 GO_SRCPATH=	rsc.io/2fa
 
 CHECK_RELRO_SKIP+=	bin/2fa
