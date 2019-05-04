@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2019/01/26 08:18:45 markd Exp $
+# $NetBSD: Makefile,v 1.12 2019/05/04 22:50:01 markd Exp $
 
 DISTNAME=	collection-langjapanese
 PKGNAME=	texlive-${DISTNAME}-2018pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	48752
+TEXLIVE_REV=	49995
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -16,6 +16,7 @@ DEPENDS+=	texlive-collection-langcjk-[0-9]*:../../meta-pkgs/texlive-collection-l
 # depend babel-japanese
 # depend bxbase
 # depend bxcjkjatype
+# depend bxjaholiday
 # depend bxjalipsum
 # depend bxjaprnind
 # depend bxjscls
@@ -50,6 +51,7 @@ DEPENDS+=	tex-ptex-fonts-[0-9]*:../../fonts/tex-ptex-fonts
 # depend pxchfon
 # depend pxcjkcat
 # depend pxjahyper
+# depend pxjodel
 # depend pxrubrica
 # depend pxufont
 # depend uplatex
