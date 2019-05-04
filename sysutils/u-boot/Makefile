@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2019/04/19 10:39:53 jmcneill Exp $
+# $NetBSD: Makefile,v 1.10 2019/05/04 05:31:01 mrg Exp $
 #
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
 DISTNAME=	u-boot-${UBOOT_VERSION}
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs sysutils u-boot
 MASTER_SITES=	# empty
 
@@ -22,6 +23,7 @@ DEPENDS+=	u-boot-chip-[0-9]*:../../sysutils/u-boot-chip
 DEPENDS+=	u-boot-cubieboard2-[0-9]*:../../sysutils/u-boot-cubieboard2
 DEPENDS+=	u-boot-cubieboard4-[0-9]*:../../sysutils/u-boot-cubieboard4
 DEPENDS+=	u-boot-cubietruck-[0-9]*:../../sysutils/u-boot-cubietruck
+DEPENDS+=	u-boot-cubietruck-plus-[0-9]*:../../sysutils/u-boot-cubietruck-plus
 DEPENDS+=	u-boot-de0-nanosoc-[0-9]*:../../sysutils/u-boot-de0-nanosoc
 DEPENDS+=	u-boot-hummingbird-a31-[0-9]*:../../sysutils/u-boot-hummingbird-a31
 DEPENDS+=	u-boot-jetson-tk1-[0-9]*:../../sysutils/u-boot-jetson-tk1
