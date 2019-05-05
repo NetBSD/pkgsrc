@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q1,v 1.1.2.3 2019/04/10 11:46:30 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q1,v 1.1.2.4 2019/05/05 14:25:35 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q1 branch:
 
@@ -43,4 +43,16 @@ lang/php73: security fix
 
 Pullup ticket #5940 - requested by taca
 www/contao35: security fix
+
+Pullup ticket #5945 - requested by sborrill
+net/samba: bump revision
+
+Pullup ticket #5946 - requested by khorben
+devel/libosip: security fix
+
+Pullup ticket #5947 - requested by nia
+www/gitea: security fix
+
+Pullup ticket #5948 - requested by leot
+net/youtube-dl: update to current version
 
