@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2019/04/29 16:18:41 rillig Exp $
+# $NetBSD: Makefile,v 1.55 2019/05/05 18:36:05 rillig Exp $
 
 DISTNAME=		pkgsrc-guide-${PKGVERSION}
 CATEGORIES=		# empty
@@ -66,7 +66,7 @@ pre-extract:
 pre-configure: generate-help-topics
 generate-help-topics: .PHONY
 	${RUN} ${MAKE} help topic=:index > ${WRKSRC}/help-topics.data
-	${RUN} cd ${WRKSRC} && python help-topics.gen.py
+	${RUN} cd ${WRKSRC} && env PKGSRCDIR=${PKGSRCDIR} python fill-placeholders.py *.xml
 
 do-build:
 .for _output_ in ${OUTPUTS}
