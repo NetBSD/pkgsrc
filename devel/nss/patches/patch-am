@@ -1,12 +1,21 @@
-$NetBSD: patch-am,v 1.5 2016/09/30 11:59:12 ryoon Exp $
+$NetBSD: patch-am,v 1.6 2019/05/05 22:47:28 ryoon Exp $
 
-SHA1_Update conflicts with openssl which may be dynamically loaded
-at runtime via libcups or libgssapi so causing a crash due to using
+SHA1_Update and MD5_Update conflict with openssl which may be dynamically
+loaded at runtime via libcups or libgssapi so causing a crash due to using
 the wrong binding.  So rename here to avoid conflict.
 
---- nss/lib/freebl/blapi.h.orig	2016-09-26 06:00:51.000000000 +0000
+--- nss/lib/freebl/blapi.h.orig	2019-03-16 00:25:08.000000000 +0000
 +++ nss/lib/freebl/blapi.h
-@@ -1212,6 +1212,8 @@ extern void SHA1_DestroyContext(SHA1Cont
+@@ -1046,6 +1046,8 @@ extern void MD5_DestroyContext(MD5Contex
+ */
+ extern void MD5_Begin(MD5Context *cx);
+ 
++#define MD5_Update NSS_MD5_Update
++
+ /*
+ ** Update the MD5 hash function with more data.
+ **  "cx" the context
+@@ -1211,6 +1213,8 @@ extern void SHA1_DestroyContext(SHA1Cont
  */
  extern void SHA1_Begin(SHA1Context *cx);
  
