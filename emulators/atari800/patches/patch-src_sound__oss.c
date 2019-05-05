@@ -1,10 +1,10 @@
-$NetBSD: patch-sound__oss.c,v 1.2 2018/08/05 21:27:04 adam Exp $
+$NetBSD: patch-src_sound__oss.c,v 1.1 2019/05/05 10:12:59 adam Exp $
 
 Do not hard-code sound device.
 
---- sound_oss.c.orig	2018-04-21 17:02:14.000000000 +0000
-+++ sound_oss.c
-@@ -36,11 +36,7 @@
+--- src/sound_oss.c.orig	2018-04-21 17:02:14.000000000 +0000
++++ src/sound_oss.c
+@@ -38,11 +38,7 @@
  
  #define DEBUG 0
  
