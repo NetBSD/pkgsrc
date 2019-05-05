@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/01/27 10:59:05 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2019/05/05 20:27:12 wiedi Exp $
 
 DISTNAME=	RETRO${RETRO_REL}-${RETRO_SNAPSHOT}
 PKGNAME=	forth-retro-${RETRO_REL}.0.${RETRO_SNAPSHOT}
@@ -14,6 +14,8 @@ RETRO_REL=	12
 RETRO_SNAPSHOT=	2018.1
 
 USE_TOOLS+=	pax
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 REPLACE_INTERPRETER+=	rre
 REPLACE.rre.old=	.*rre
