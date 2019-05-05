@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1965 2019/05/05 09:05:01 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1966 2019/05/05 10:13:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3170,3 +3170,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated time/py-jdcal to 1.4.1 [adam 2019-05-05]
 	Updated games/rocksndiamonds to 4.1.2.0 [adam 2019-05-05]
 	Updated multimedia/dvdauthor to 0.7.2nb19 [wiz 2019-05-05]
+	Updated emulators/atari800 to 4.1.0 [adam 2019-05-05]
