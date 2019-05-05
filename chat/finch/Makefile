@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.68 2018/08/22 09:43:00 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2019/05/05 22:49:45 ryoon Exp $
 
 PKGNAME=	finch-${PIDGIN_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 
 COMMENT=	Multi-protocol Instant Messaging client console frontend
 
