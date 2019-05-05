@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/09/29 14:01:58 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2019/05/05 21:44:58 wiedi Exp $
 #
 
 DISTNAME=	predict-2.2.3
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 
 FAKE_NCURSES=	yes
 USE_LANGUAGES=	c
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 do-configure:
 	printf "const char predictpath[] = \"${PREFIX}/share/predict/\";\n" > "${WRKSRC}/predict.h"
