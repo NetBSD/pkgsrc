@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1967 2019/05/05 15:17:53 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.1968 2019/05/05 15:18:07 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3172,3 +3172,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated multimedia/dvdauthor to 0.7.2nb19 [wiz 2019-05-05]
 	Updated emulators/atari800 to 4.1.0 [adam 2019-05-05]
 	Updated net/ucspi-tcp6 to 1.10.5 [schmonz 2019-05-05]
+	Updated net/ucspi-ssl to 0.999.10.9 [schmonz 2019-05-05]
