@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2016/04/13 17:56:24 wiz Exp $
+$NetBSD: distinfo,v 1.9 2019/05/05 04:55:10 adam Exp $
 
-SHA1 (mock-2.0.0.tar.gz) = 397ed52eb2d8d4b326bc3fa6b38adda5f0b090d3
-RMD160 (mock-2.0.0.tar.gz) = 10f4cb9343d99620e298cc0ffea143ee321e4ec2
-SHA512 (mock-2.0.0.tar.gz) = a08007651b749d2843b94f5045d74c122958888290aea21930455538a854e6b04c07115e21d82edde996154bf597d7a8784a2f4213cbabc49a98dec22dd92238
-Size (mock-2.0.0.tar.gz) = 73684 bytes
+SHA1 (mock-3.0.4.tar.gz) = 045d5133bc083a7c47d5f650255a61cc0403a504
+RMD160 (mock-3.0.4.tar.gz) = 79403af362d4116b054c1499c1b01624abd5c722
+SHA512 (mock-3.0.4.tar.gz) = 533ad6ed113cb6cfb6027d19e0516109938e8c2a18f88c03ded54e274caef7d141b9a31ee5b122cb662a2d5a847c7b8cf9f1c2cb7bbf71935f2b2ceb5ccfcea1
+Size (mock-3.0.4.tar.gz) = 28331 bytes
