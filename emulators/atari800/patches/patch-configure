@@ -1,39 +1,28 @@
-$NetBSD: patch-configure,v 1.1 2017/12/14 22:12:19 adam Exp $
+$NetBSD: patch-configure,v 1.2 2019/05/05 10:12:59 adam Exp $
 
 Compatibility fixes.
 
---- configure.orig	2014-04-12 14:00:06.000000000 +0000
+--- configure.orig	2019-04-14 08:27:50.000000000 +0000
 +++ configure
-@@ -7577,11 +7577,8 @@ $as_echo "#define SUPPORTS_PLATFORM_TIME
+@@ -9050,10 +9050,7 @@ $as_echo "#define SUPPORTS_PLATFORM_TIME
              LIBS="$LIBS $SDL_LIBS"
              CPPFLAGS="$CPPFLAGS $SDL_CFLAGS"
              if [ "$a8_host" = "win" ]; then
 -                CPPFLAGS=${CPPFLAGS/-Dmain=SDL_main/}
 -                LIBS=${LIBS/-lSDLmain/}
-                 OBJS="$OBJS SDL_win32_main.o"
                  CPPFLAGS="$CPPFLAGS -DNO_STDIO_REDIRECT"
 -                LIBS=${LIBS/-mwindows/}
              fi
              a8_use_sdl=yes
  
-@@ -8512,11 +8509,8 @@ $as_echo "#define SUPPORTS_PLATFORM_TIME
+@@ -10114,10 +10111,7 @@ $as_echo "#define SUPPORTS_PLATFORM_TIME
              LIBS="$LIBS $SDL_LIBS"
              CPPFLAGS="$CPPFLAGS $SDL_CFLAGS"
              if [ "$a8_host" = "win" ]; then
 -                CPPFLAGS=${CPPFLAGS/-Dmain=SDL_main/}
 -                LIBS=${LIBS/-lSDLmain/}
-                 OBJS="$OBJS SDL_win32_main.o"
                  CPPFLAGS="$CPPFLAGS -DNO_STDIO_REDIRECT"
 -                LIBS=${LIBS/-mwindows/}
              fi
              a8_use_sdl=yes
  
-@@ -8870,7 +8864,7 @@ $as_echo "#define IDE 1" >>confdefs.h
- 
-     fi
- 
--if [ "$WANT_IDE" == "yes" ]; then
-+if [ "$WANT_IDE" = "yes" ]; then
-     # Check whether --enable-largefile was given.
- if test "${enable_largefile+set}" = set; then :
-   enableval=$enable_largefile;
