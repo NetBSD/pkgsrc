@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1962 2019/05/04 21:38:59 leot Exp $
+$NetBSD: CHANGES-2019,v 1.1963 2019/05/05 05:00:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3166,3 +3166,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated time/xfce4-datetime-plugin to 0.7.1 [gutteridge 2019-05-04]
 	Updated x11/xfce4-places-plugin to 1.8.0 [gutteridge 2019-05-04]
 	Updated net/gallery-dl to 1.8.3 [leot 2019-05-04]
+	Updated devel/py-mock to 3.0.4 [adam 2019-05-05]
+	Updated time/py-jdcal to 1.4.1 [adam 2019-05-05]
