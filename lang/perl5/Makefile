@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.253 2019/05/03 08:35:07 taca Exp $
+# $NetBSD: Makefile,v 1.254 2019/05/05 07:58:38 adam Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -294,7 +294,7 @@ post-extract:
 		${WRKSRC}/cpan/DB_File/hints/minix.pl
 
 pre-configure:
-	find ${WRKSRC} -name "*.orig" -type f -exec rm -f {} \;
+	${FIND} ${WRKSRC} -name "*.orig" -type f -exec rm -f {} \;
 
 post-build:
 	${SED}	-e "s,@PERL5@,"${PERL5:Q}",g"				\
