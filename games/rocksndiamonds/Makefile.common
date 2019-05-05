@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2018/07/13 17:27:32 adam Exp $
+# $NetBSD: Makefile.common,v 1.17 2019/05/05 07:59:38 adam Exp $
 # used by games/mirrormagic/Makefile
 # used by games/rocksndiamonds/Makefile
 
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.artsoft.org/RELEASES/unix/${PKGBASE}/
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.artsoft.org/${PKGBASE}/
 LICENSE=	gnu-gpl-v2
-
-PATCHDIR=	${.CURDIR}/../../games/rocksndiamonds/patches
 
 USE_GAMESGROUP=		yes
 USE_TOOLS+=		gmake
