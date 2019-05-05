@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.164 2019/04/03 00:32:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.165 2019/05/05 22:47:27 ryoon Exp $
 
 DISTNAME=		nss-${NSS_RELEASE:S/.0$//}
 NSS_RELEASE=		3.43.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${NSS_DIST_DIR_VERSION:S/_0$//}_RTM/src/}
 
@@ -11,10 +11,10 @@ HOMEPAGE=		http://www.mozilla.org/projects/security/pki/nss/
 COMMENT=		Libraries to support development of security-enabled applications
 LICENSE=		mpl-2.0
 
-CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}nss/tests/libpkix/libpkix.sh
-CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}nss/tests/multinit/multinit.sh
-CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}js/src/configure
-CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}configure
+CHECK_PORTABILITY_SKIP+=	nss/tests/libpkix/libpkix.sh
+CHECK_PORTABILITY_SKIP+=	nss/tests/multinit/multinit.sh
+CHECK_PORTABILITY_SKIP+=	js/src/configure
+CHECK_PORTABILITY_SKIP+=	configure
 
 CTF_SUPPORTED=		no # https://smartos.org/bugview/OS-6510
 
@@ -65,7 +65,7 @@ SUBST_CLASSES+=		64bit
 SUBST_STAGE.64bit=	pre-configure
 SUBST_FILES.64bit=	nss/lib/freebl/*
 SUBST_SED.64bit=	-e 's,NSS_USE_64,_LP64,g'
-SUBST_MESSAGE.conf=	Use a generic 64bit check
+SUBST_MESSAGE.64bit=	Use a generic 64bit check
 
 # Just to be safe, do this as well as the _LP64 replacement
 # NSS has a lot more logic for USE_64
