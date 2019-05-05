@@ -1,4 +1,6 @@
-$NetBSD: patch-nss_cmd_platlibs.mk,v 1.1 2015/05/05 21:42:19 ryoon Exp $
+$NetBSD: patch-nss_cmd_platlibs.mk,v 1.2 2019/05/05 22:47:28 ryoon Exp $
+
+* Use sqlite3 via pkg-config to improve portability
 
 --- nss/cmd/platlibs.mk.orig	2015-04-30 20:00:23.000000000 +0000
 +++ nss/cmd/platlibs.mk
