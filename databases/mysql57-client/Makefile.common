@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2019/04/30 13:18:46 abs Exp $
+# $NetBSD: Makefile.common,v 1.18 2019/05/05 12:12:14 wiedi Exp $
 #
 # used by databases/mysql57-client/Makefile
 # used by databases/mysql57-server/Makefile
@@ -64,6 +64,7 @@ CMAKE_ARGS+=		-DMYSQL_DATADIR=${MYSQL_DATADIR}
 CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
 
 CMAKE_ARGS+=		-DWITH_BOOST="system"
+CMAKE_ARGS+=		-DWITH_LIBEVENT="system"
 CMAKE_ARGS+=		-DWITH_LZ4="system"
 CMAKE_ARGS+=		-DWITH_SSL="system"
 CMAKE_ARGS+=		-DWITH_ZLIB="system"
