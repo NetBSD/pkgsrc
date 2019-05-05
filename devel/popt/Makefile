@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2014/10/09 14:06:30 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2019/05/05 23:16:06 rjs Exp $
 #
 
 DISTNAME=	popt-1.16
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://rpm5.org/files/popt/
 
