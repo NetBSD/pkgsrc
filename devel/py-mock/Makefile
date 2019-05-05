@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2018/08/20 10:56:57 adam Exp $
+# $NetBSD: Makefile,v 1.16 2019/05/05 04:55:10 adam Exp $
 
-DISTNAME=	mock-2.0.0
+DISTNAME=	mock-3.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mock/}
 
@@ -11,16 +10,14 @@ HOMEPAGE=	https://github.com/testing-cabal/mock
 COMMENT=	Python testing framework
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-pbr>=0.11:../../devel/py-pbr
 DEPENDS+=	${PYPKGPREFIX}-six>=1.7:../../lang/py-six
-BUILD_DEPENDS+=	${PYPKGPREFIX}-unittest2-[0-9]*:../../devel/py-unittest2
 
-.include "../../lang/python/egg.mk"
-
-.if ${_PYTHON_VERSION} < 33
+.include "../../lang/python/pyversion.mk"
+.if ${_PYTHON_VERSION} == 27
 DEPENDS+=	${PYPKGPREFIX}-funcsigs>=1:../../devel/py-funcsigs
 .endif
 
 USE_LANGUAGES=	# none
 
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
