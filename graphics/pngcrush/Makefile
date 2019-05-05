@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2018/08/02 15:02:12 adam Exp $
+# $NetBSD: Makefile,v 1.90 2019/05/05 20:11:25 wiedi Exp $
 
 DISTNAME=	pngcrush-1.8.13-nolib
 PKGNAME=	${DISTNAME:S/-nolib//}
@@ -13,6 +13,8 @@ LICENSE=	zlib
 
 NO_CONFIGURE=		yes
 INSTALLATION_DIRS=	bin
+
+CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
 
 do-build:
 	cd ${WRKSRC} && ${CC} -DPNG_USE_LOCAL_ARRAYS \
