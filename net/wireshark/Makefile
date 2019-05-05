@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.207 2019/04/25 07:33:13 maya Exp $
+# $NetBSD: Makefile,v 1.208 2019/05/05 16:44:05 rhialto Exp $
 
 DISTNAME=	wireshark-2.6.7
 PKGREVISION=	2
@@ -18,6 +18,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl pkg-config yacc lex
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-static=no
+CONFIGURE_ARGS+=	--disable-guides
 CONFIGURE_ARGS+=	--with-pcap=${BUILDLINK_PREFIX.libpcap}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 CONFIGURE_ENV+=		ac_cv_path_YACCDUMMY=${TOOLS_PATH.yacc}
