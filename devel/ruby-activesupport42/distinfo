@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2018/11/29 13:49:00 taca Exp $
+$NetBSD: distinfo,v 1.3.4.1 2019/05/05 15:49:20 bsiegert Exp $
 
-SHA1 (activesupport-4.2.11.gem) = 22e1dfff94eabf4d35700ec9becac9e89c825d7d
-RMD160 (activesupport-4.2.11.gem) = 26134d8a539cb80e97ca650a5e1831b7861d7612
-SHA512 (activesupport-4.2.11.gem) = 5307237869c48b8cf9973aca2291200ece0b8ba0f19f7559a15069cbe5784b43c6144eaacd27b40c3c82e0d75601a0c7b69c7ec0f8fc694fcab86047317a6805
-Size (activesupport-4.2.11.gem) = 333824 bytes
+SHA1 (activesupport-4.2.11.1.gem) = ddf7e7bac461c8428c0009b3b685fb03e705e879
+RMD160 (activesupport-4.2.11.1.gem) = 059b0303607beac788727652be048dc35b7d4495
+SHA512 (activesupport-4.2.11.1.gem) = e97d2e3b7cf0f2083ba45c5dc78530e06f405fc7f83c601255364a2e14576aa053a7f1d2d961d8a90956eb2356a4bb53f34e25ad11b3eb5b05d21d9d935d3abc
+Size (activesupport-4.2.11.1.gem) = 333824 bytes
