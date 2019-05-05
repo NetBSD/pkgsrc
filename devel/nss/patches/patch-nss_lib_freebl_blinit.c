@@ -1,4 +1,6 @@
-$NetBSD: patch-nss_lib_freebl_blinit.c,v 1.2 2018/04/12 14:32:51 bouyer Exp $
+$NetBSD: patch-nss_lib_freebl_blinit.c,v 1.3 2019/05/05 22:47:28 ryoon Exp $
+
+* Fix for arm/aarch64
 
 --- nss/lib/freebl/blinit.c.orig	2018-04-09 15:38:16.000000000 +0000
 +++ nss/lib/freebl/blinit.c	2018-04-12 14:29:56.040326263 +0000
