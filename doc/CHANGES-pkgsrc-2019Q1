@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q1,v 1.1.2.4 2019/05/05 14:25:35 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q1,v 1.1.2.5 2019/05/05 18:18:48 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q1 branch:
 
@@ -55,4 +55,22 @@ www/gitea: security fix
 
 Pullup ticket #5948 - requested by leot
 net/youtube-dl: update to current version
+
+Pullup ticket #5943 - requested by leot
+www/webkit-gtk: build fix
+
+Pullup ticket #5950 - requested by wiz
+www/py-flask-user: build fix
+
+Pullup ticket #5951 - requested by taca
+www/php-glpi: security fix
+
+Pullup ticket #5952 - requested by taca
+www/ruby-rails42: security fix
+
+Pullup ticket #5953 - requested by taca
+www/ruby-rails51: security fix
+
+Pullup ticket #5954 - requested by taca
+www/ruby-rails52: security fix
 
