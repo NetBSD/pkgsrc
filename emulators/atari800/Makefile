@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.54 2018/08/05 21:27:04 adam Exp $
+# $NetBSD: Makefile,v 1.55 2019/05/05 10:12:59 adam Exp $
 
-DISTNAME=	atari800-4.0.0
+DISTNAME=	atari800-4.1.0-src
+PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=atari800/}
+EXTRACT_SUFX=	.tgz
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} xf25.zip
 
 MAINTAINER=	adam@NetBSD.org
@@ -16,7 +18,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 
-WRKSRC=			${WRKDIR}/${DISTNAME}/src
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_TOOLS+=		gmake unzip
 CONFIGURE_ARGS+=	--disable-sdltest
 CONFIGURE_ARGS+=	--with-sound=sdl
@@ -27,6 +29,12 @@ INSTALLATION_DIRS+=	${PREFIX}/share/atari800
 
 # override HOME to avoid picking up a bad ${HOME}/.atari800 during the build
 MAKE_FLAGS+=	HOME=${WRKSRC}
+
+SUBST_CLASSES+=		cfg-path
+SUBST_STAGE.cfg-path=	pre-configure
+SUBST_MESSAGE.cfg-path=	Setting config path.
+SUBST_FILES.cfg-path=	src/cfg.c
+SUBST_SED.cfg-path=	-e 's,"/etc,"${PREFIX}/share/atari800,g'
 
 post-extract:
 	cd ${WRKDIR} && unzip -Lqo ${DISTDIR}/xf25.zip
