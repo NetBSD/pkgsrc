@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/05/04 10:50:04 nia Exp $
+# $NetBSD: Makefile,v 1.4 2019/05/05 10:44:50 nia Exp $
 
 DISTNAME=	inspircd-3.0.0
 PKGREVISION=	2
@@ -106,9 +106,8 @@ post-configure:
 	    --disable-extras=${INSPIRCD_EXTRAS_OFF:C/\.cpp[ ]* m_/.cpp,m_/gW}
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/etc/inspircd/examples/* \
-	    ${DESTDIR}${PREFIX}/share/examples/inspircd
-	${RM} -rf ${DESTDIR}${PREFIX}/etc/inspircd/examples
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/examples/* ${DESTDIR}${EGDIR}
+	${RM} -rf ${DESTDIR}${PKG_SYSCONFDIR}/examples
 	${RM} -f ${DESTDIR}${PREFIX}/.gdbargs
 	${CHMOD} ${BINMODE} ${DESTDIR}${PREFIX}/bin/inspircd
 	${CHMOD} ${BINMODE} ${DESTDIR}${PREFIX}/bin/inspircd-genssl
