@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.78 2017/05/26 17:59:37 leot Exp $ -->
+<!-- $NetBSD: build.xml,v 1.79 2019/05/05 18:36:05 rillig Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -249,41 +249,7 @@ MASTER_SITES=   -http://www.example.com/archive/v1.0.0.tar.gz
       packages.  The names of the variables should speak for
       themselves.</para>
 
-      <!-- sort mk/fetch/sites.mk | sed -n 's/\(^MA[A-Z_]*\).*/    ${\1}/p' -->
-
-<programlisting>
-${MASTER_SITE_APACHE}
-${MASTER_SITE_BACKUP}
-${MASTER_SITE_CYGWIN}
-${MASTER_SITE_DEBIAN}
-${MASTER_SITE_FREEBSD}
-${MASTER_SITE_FREEBSD_LOCAL}
-${MASTER_SITE_GENTOO}
-${MASTER_SITE_GNOME}
-${MASTER_SITE_GNU}
-${MASTER_SITE_GNUSTEP}
-${MASTER_SITE_HASKELL_HACKAGE}
-${MASTER_SITE_IFARCHIVE}
-${MASTER_SITE_KDE}
-${MASTER_SITE_MOZILLA}
-${MASTER_SITE_MOZILLA_ALL}
-${MASTER_SITE_MOZILLA_ESR}
-${MASTER_SITE_MYSQL}
-${MASTER_SITE_NETLIB}
-${MASTER_SITE_OPENOFFICE}
-${MASTER_SITE_OSDN}
-${MASTER_SITE_PERL_CPAN}
-${MASTER_SITE_PGSQL}
-${MASTER_SITE_RUBYGEMS}
-${MASTER_SITE_R_CRAN}
-${MASTER_SITE_SOURCEFORGE}
-${MASTER_SITE_SUNSITE}
-${MASTER_SITE_SUSE}
-${MASTER_SITE_TEX_CTAN}
-${MASTER_SITE_XCONTRIB}
-${MASTER_SITE_XEMACS}
-${MASTER_SITE_XORG}
-</programlisting>
+@master_sites@
 
       <para>Some explanations for the less self-explaining ones:
       <varname>MASTER_SITE_BACKUP</varname> contains backup sites
