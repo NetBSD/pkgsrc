@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2015/07/14 08:48:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/05/05 04:55:10 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/mock/__init__.py
@@ -12,33 +10,3 @@ ${PYSITELIB}/mock/__init__.pyo
 ${PYSITELIB}/mock/mock.py
 ${PYSITELIB}/mock/mock.pyc
 ${PYSITELIB}/mock/mock.pyo
-${PYSITELIB}/mock/tests/__init__.py
-${PYSITELIB}/mock/tests/__init__.pyc
-${PYSITELIB}/mock/tests/__init__.pyo
-${PYSITELIB}/mock/tests/__main__.py
-${PYSITELIB}/mock/tests/__main__.pyc
-${PYSITELIB}/mock/tests/__main__.pyo
-${PYSITELIB}/mock/tests/support.py
-${PYSITELIB}/mock/tests/support.pyc
-${PYSITELIB}/mock/tests/support.pyo
-${PYSITELIB}/mock/tests/testcallable.py
-${PYSITELIB}/mock/tests/testcallable.pyc
-${PYSITELIB}/mock/tests/testcallable.pyo
-${PYSITELIB}/mock/tests/testhelpers.py
-${PYSITELIB}/mock/tests/testhelpers.pyc
-${PYSITELIB}/mock/tests/testhelpers.pyo
-${PYSITELIB}/mock/tests/testmagicmethods.py
-${PYSITELIB}/mock/tests/testmagicmethods.pyc
-${PYSITELIB}/mock/tests/testmagicmethods.pyo
-${PYSITELIB}/mock/tests/testmock.py
-${PYSITELIB}/mock/tests/testmock.pyc
-${PYSITELIB}/mock/tests/testmock.pyo
-${PYSITELIB}/mock/tests/testpatch.py
-${PYSITELIB}/mock/tests/testpatch.pyc
-${PYSITELIB}/mock/tests/testpatch.pyo
-${PYSITELIB}/mock/tests/testsentinel.py
-${PYSITELIB}/mock/tests/testsentinel.pyc
-${PYSITELIB}/mock/tests/testsentinel.pyo
-${PYSITELIB}/mock/tests/testwith.py
-${PYSITELIB}/mock/tests/testwith.pyc
-${PYSITELIB}/mock/tests/testwith.pyo
