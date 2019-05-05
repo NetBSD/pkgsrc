@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/03 14:44:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.1.2.1 2019/05/05 18:18:17 bsiegert Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -111,6 +111,7 @@ ${GEM_LIBDIR}/lib/active_support/core_ext/object/to_query.rb
 ${GEM_LIBDIR}/lib/active_support/core_ext/object/try.rb
 ${GEM_LIBDIR}/lib/active_support/core_ext/object/with_options.rb
 ${GEM_LIBDIR}/lib/active_support/core_ext/range.rb
+${GEM_LIBDIR}/lib/active_support/core_ext/range/compare_range.rb
 ${GEM_LIBDIR}/lib/active_support/core_ext/range/conversions.rb
 ${GEM_LIBDIR}/lib/active_support/core_ext/range/each.rb
 ${GEM_LIBDIR}/lib/active_support/core_ext/range/include_range.rb

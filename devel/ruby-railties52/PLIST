@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/03 15:01:38 taca Exp $
+@comment $NetBSD: PLIST,v 1.1.2.1 2019/05/05 18:18:17 bsiegert Exp $
 bin/rails52${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
@@ -37,6 +37,7 @@ ${GEM_LIBDIR}/lib/rails/commands/credentials/USAGE
 ${GEM_LIBDIR}/lib/rails/commands/credentials/credentials_command.rb
 ${GEM_LIBDIR}/lib/rails/commands/dbconsole/dbconsole_command.rb
 ${GEM_LIBDIR}/lib/rails/commands/destroy/destroy_command.rb
+${GEM_LIBDIR}/lib/rails/commands/encrypted/USAGE
 ${GEM_LIBDIR}/lib/rails/commands/encrypted/encrypted_command.rb
 ${GEM_LIBDIR}/lib/rails/commands/generate/generate_command.rb
 ${GEM_LIBDIR}/lib/rails/commands/help/USAGE

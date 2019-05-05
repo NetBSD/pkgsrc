@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/03 14:45:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.1.2.1 2019/05/05 18:18:16 bsiegert Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -41,6 +41,7 @@ ${GEM_LIBDIR}/lib/active_model/type/helpers/accepts_multiparameter_time.rb
 ${GEM_LIBDIR}/lib/active_model/type/helpers/mutable.rb
 ${GEM_LIBDIR}/lib/active_model/type/helpers/numeric.rb
 ${GEM_LIBDIR}/lib/active_model/type/helpers/time_value.rb
+${GEM_LIBDIR}/lib/active_model/type/helpers/timezone.rb
 ${GEM_LIBDIR}/lib/active_model/type/immutable_string.rb
 ${GEM_LIBDIR}/lib/active_model/type/integer.rb
 ${GEM_LIBDIR}/lib/active_model/type/registry.rb
