@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.75 2019/04/03 00:33:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.76 2019/05/05 22:49:51 ryoon Exp $
 #
 
 DISTNAME=		nautilus-sendto-2.32.0
-PKGREVISION=		57
+PKGREVISION=		58
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/nautilus-sendto/2.32/}
 EXTRACT_SUFX=		.tar.bz2

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2019/04/03 00:33:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.41 2019/05/05 22:49:51 ryoon Exp $
 
 DISTNAME=	tor-browser-60.5.1esr-8.5-1-build2
 PKGNAME=	tor-browser-8.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 # DISTFILE manually packaged from git checkout
 
