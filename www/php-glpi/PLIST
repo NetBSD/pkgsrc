@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2019/03/15 16:32:13 hauke Exp $
+@comment $NetBSD: PLIST,v 1.4.2.1 2019/05/05 15:24:36 bsiegert Exp $
 share/examples/glpi/crontab.sample
 share/examples/glpi/httpd-glpi.conf
 share/examples/glpi/local_define.php
-share/glpi/.github/ISSUE_TEMPLATE/bug_report.md
-share/glpi/.github/ISSUE_TEMPLATE/feature_request.md
 share/glpi/.htaccess
 share/glpi/CHANGELOG.md
 share/glpi/CONTRIBUTING.md
@@ -1257,6 +1255,7 @@ share/glpi/install/update_930_931.php
 share/glpi/install/update_931_932.php
 share/glpi/install/update_93_94.php
 share/glpi/install/update_940_941.php
+share/glpi/install/update_941_942.php
 share/glpi/install/update_content.php
 share/glpi/install/update_to_031.php
 share/glpi/install/update_xx_xy.tpl.php
