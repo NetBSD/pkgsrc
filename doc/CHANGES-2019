@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1978 2019/05/06 05:17:39 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1979 2019/05/06 05:18:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3183,3 +3183,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/ruby-sequel to 5.20.0 [taca 2019-05-06]
 	Updated databases/ruby-sqlite3 to 1.4.1 [taca 2019-05-06]
 	Updated devel/hoe to 3.17.2 [taca 2019-05-06]
+	Updated devel/ruby2ruby to 2.4.2 [taca 2019-05-06]
