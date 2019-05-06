@@ -520,6 +520,59 @@ func (s *Suite) Test_CheckLinesBuildlink3Mk__PKGBASE_with_unknown_variable(c *ch
 			"(also in other variables in this file).")
 }
 
+func (s *Suite) Test_Buildlink3Checker_checkUniquePkgbase(c *check.C) {
+	t := s.Init(c)
+
+	G.InterPackage.Enable()
+
+	test := func(pkgbase, pkgpath string, diagnostics ...string) {
+		mkline := t.NewMkLine(t.File(pkgpath+"/buildlink3.mk"), 123, "")
+
+		(*Buildlink3Checker).checkUniquePkgbase(nil, pkgbase, mkline)
+
+		t.CheckOutput(diagnostics)
+	}
+
+	// From now on, the pkgbase "php" may only be used for "php\d+".
+	test("php", "lang/php56",
+		nil...)
+
+	// No warning since "php" is a valid buildlink3 basename for "php56".
+	test("php", "lang/php72",
+		nil...)
+
+	// But this is a clear typo.
+	test("php", "security/pgp",
+		"ERROR: ~/security/pgp/buildlink3.mk:123: "+
+			"Duplicate package identifier \"php\" already appeared "+
+			"in ../../lang/php56/buildlink3.mk:123.")
+
+	// This combination is not allowed because the names "php" and "php-pcre"
+	// differ too much. The only allowed inexact match is that the pkgname
+	// has one more number than the pkgbase, no matter at which position.
+	test("php", "textproc/php-pcre",
+		"ERROR: ~/textproc/php-pcre/buildlink3.mk:123: "+
+			"Duplicate package identifier \"php\" already appeared "+
+			"in ../../lang/php56/buildlink3.mk:123.")
+
+	test("ruby-module", "net/ruby24-module",
+		nil...)
+
+	test("ruby-module", "net/ruby26-module",
+		nil...)
+
+	test("ruby-module", "net/ruby26-module12",
+		"ERROR: ~/net/ruby26-module12/buildlink3.mk:123: "+
+			"Duplicate package identifier \"ruby-module\" already appeared "+
+			"in ../../net/ruby24-module/buildlink3.mk:123.")
+
+	test("package", "devel/package",
+		nil...)
+
+	test("package", "wip/package",
+		nil...)
+}
+
 func (s *Suite) Test_Buildlink3Checker_checkMainPart__if_else_endif(c *check.C) {
 	t := s.Init(c)
 
