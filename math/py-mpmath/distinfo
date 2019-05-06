@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2018/01/11 08:07:44 adam Exp $
+$NetBSD: distinfo,v 1.9 2019/05/06 08:48:06 adam Exp $
 
-SHA1 (mpmath-1.0.0.tar.gz) = 1df3f1f930b9b7e752c56857f1ac22a62f25b854
-RMD160 (mpmath-1.0.0.tar.gz) = 89440e75bf0b33b125314bf60d92c5d4279c123b
-SHA512 (mpmath-1.0.0.tar.gz) = e26336ef35719d9a5a7387b9104be4251726bc9753ad4763f1d6041491e9904d9fc97831875cddbfd0b6b0eb641d579fcc3f556bfae7dd8acd1c5c6b10e8cd61
-Size (mpmath-1.0.0.tar.gz) = 511353 bytes
+SHA1 (mpmath-1.1.0.tar.gz) = 3f479408ea65b08bc23eeebe5dac2f2293dfec9d
+RMD160 (mpmath-1.1.0.tar.gz) = 7b0ea9200d2b5f9d6a139e8d5b67ecd07e967952
+SHA512 (mpmath-1.1.0.tar.gz) = 58c69a801f65d73cc0eeb0d2c79277ed638568c656e7213d06ab4709c218aac908b2752377139010bed0e91bbfff01d129c60835ff0a928ba1185aded6de7c0a
+Size (mpmath-1.1.0.tar.gz) = 512600 bytes
