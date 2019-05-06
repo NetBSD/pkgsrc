@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2019/03/05 19:30:01 adam Exp $
+# $NetBSD: Makefile,v 1.45 2019/05/06 15:11:05 adam Exp $
 
-DISTNAME=	scons-3.0.4
+DISTNAME=	scons-3.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scons/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
