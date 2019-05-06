@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1995 2019/05/06 08:48:38 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1996 2019/05/06 09:02:26 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3201,3 +3201,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/mit-krb5 to 1.16.2nb1 [wiz 2019-05-06]
 	Updated textproc/py-xlsxwriter to 1.1.8 [adam 2019-05-06]
 	Updated math/py-mpmath to 1.1.0 [adam 2019-05-06]
+	Updated textproc/libxls to 1.5.1 [sjmulder 2019-05-06]
+	Updated textproc/libxlsxwriter to 0.8.6 [sjmulder 2019-05-06]
+	Updated math/sc-im to 0.7.0nb2 [sjmulder 2019-05-06]
