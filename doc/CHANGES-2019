@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1976 2019/05/06 05:12:56 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1977 2019/05/06 05:16:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3181,3 +3181,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/ruby-activeldap to 5.2.4 [taca 2019-05-06]
 	Updated databases/ruby-moneta to 1.1.1 [taca 2019-05-06]
 	Updated databases/ruby-sequel to 5.20.0 [taca 2019-05-06]
+	Updated databases/ruby-sqlite3 to 1.4.1 [taca 2019-05-06]
