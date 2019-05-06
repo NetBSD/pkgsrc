@@ -903,6 +903,7 @@ func (s *Suite) Test_MkLines_Check__VERSION_as_word_part_in_MASTER_SITES(c *chec
 	t := s.Init(c)
 
 	t.SetUpVartypes()
+	t.SetUpMasterSite("MASTER_SITE_SOURCEFORGE", "https://download.sf.net/")
 	mklines := t.NewMkLines("geography/viking/Makefile",
 		MkRcsID,
 		"MASTER_SITES=\t${MASTER_SITE_SOURCEFORGE:=viking/}${VERSION}/")
