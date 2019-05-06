@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2019/02/25 14:16:04 taca Exp $
+$NetBSD: distinfo,v 1.21 2019/05/06 05:16:04 taca Exp $
 
-SHA1 (sqlite3-1.4.0.gem) = 3b854c16d95c106785376ec6a73e65586a50397e
-RMD160 (sqlite3-1.4.0.gem) = b4edb116bd10f99894a0cd83dd7fce8ce09d0f8a
-SHA512 (sqlite3-1.4.0.gem) = 7db9ca4bc12becd41224be77694453e8ba428303b69e58663f7888746558112e147c5f9076aa8baf3c23ac3e895cac079cb645d281e5eb06f98e0d8e8268562a
-Size (sqlite3-1.4.0.gem) = 70144 bytes
+SHA1 (sqlite3-1.4.1.gem) = 912a25bbcd050b3dd25ace9255f256dd9db3e749
+RMD160 (sqlite3-1.4.1.gem) = ae77f7864542a3facbedd1ff64e2e6f9d91a7b64
+SHA512 (sqlite3-1.4.1.gem) = 33f87af2e962459cad07f2f07c9d6dffb59551c4e5371e47446f10f5314a05da495598ef5f90f896f876f9a59bd2e90b5bb3fdfb6efb95966ff51bb578f81a80
+Size (sqlite3-1.4.1.gem) = 70144 bytes
