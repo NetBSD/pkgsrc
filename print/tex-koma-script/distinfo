@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2019/01/29 09:58:32 markd Exp $
+$NetBSD: distinfo,v 1.18 2019/05/06 21:23:30 markd Exp $
 
-SHA1 (tex-koma-script-49587/koma-script.tar.xz) = ccacb95f98111c8b0bffd871ffe3c99d86667ef4
-RMD160 (tex-koma-script-49587/koma-script.tar.xz) = 31fbe386b5b155257ff99e4be7fff4345a7299fe
-SHA512 (tex-koma-script-49587/koma-script.tar.xz) = fff21ffd873eab42635e5bef9fa32add6fab7a5cbf3d34f6d7403be7939a3acd931d95e17785e7e20d53e82b4ed5818f231e7957237e1343fe643dbc374e90a4
-Size (tex-koma-script-49587/koma-script.tar.xz) = 13751692 bytes
+SHA1 (tex-koma-script-49929/koma-script.tar.xz) = d723c56a2215a1a79527a24ddf0c31b2c35b690f
+RMD160 (tex-koma-script-49929/koma-script.tar.xz) = 0e3c7e1657a79fc68cbd39f689f7bd65cce25732
+SHA512 (tex-koma-script-49929/koma-script.tar.xz) = d12003954f079dccf1e3aa3bd1968cda2c03eb9eb4ac84115583120463ec2732389cab414b7d8214983f0f484c483852fd665dc254b924ac15b190f4bdf207e7
+Size (tex-koma-script-49929/koma-script.tar.xz) = 13756660 bytes
