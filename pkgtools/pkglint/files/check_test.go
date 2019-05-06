@@ -177,6 +177,13 @@ func (t *Tester) SetUpVartypes() {
 }
 
 func (t *Tester) SetUpMasterSite(varname string, urls ...string) {
+	if !G.Pkgsrc.vartypes.DefinedExact(varname) {
+		G.Pkgsrc.vartypes.DefineParse(varname, BtFetchURL,
+			List|SystemProvided,
+			"buildlink3.mk: none",
+			"*: use")
+	}
+
 	for _, url := range urls {
 		G.Pkgsrc.registerMasterSite(varname, url)
 	}
@@ -271,6 +278,8 @@ func (t *Tester) SetUpPkgsrc() {
 
 	// The various MASTER_SITE_* variables for use in the
 	// MASTER_SITES are defined in this file.
+	//
+	// To define a MASTER_SITE for a pkglint test, call t.SetUpMasterSite.
 	//
 	// See Pkgsrc.loadMasterSites.
 	t.CreateFileLines("mk/fetch/sites.mk",
@@ -497,6 +506,14 @@ func (t *Tester) File(relativeFileName string) string {
 	return path.Clean(t.tmpdir + "/" + relativeFileName)
 }
 
+// Copy copies a file inside the temporary directory.
+func (t *Tester) Copy(relativeSrc, relativeDst string) {
+	data, err := ioutil.ReadFile(t.File(relativeSrc))
+	G.AssertNil(err, "Copy.Read")
+	err = ioutil.WriteFile(t.File(relativeDst), data, 0777)
+	G.AssertNil(err, "Copy.Write")
+}
+
 // Chdir changes the current working directory to the given subdirectory
 // of the temporary directory, creating it if necessary.
 //
@@ -552,7 +569,7 @@ func (t *Tester) Remove(relativeFileName string) {
 //              "VAR= env")))
 //
 //  mklines := get("including.mk")
-//  module := get("module.mk")
+//  module := get("subdir/module.mk")
 //
 // The filenames passed to the include function are all relative to the
 // same location, but that location is irrelevant in practice. The generated
