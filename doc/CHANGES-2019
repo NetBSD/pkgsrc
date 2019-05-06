@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1981 2019/05/06 05:20:49 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1982 2019/05/06 05:22:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3186,3 +3186,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ruby2ruby to 2.4.2 [taca 2019-05-06]
 	Updated devel/ruby-backports to 3.14.0 [taca 2019-05-06]
 	Updated devel/ruby-byebug to 11.0.1 [taca 2019-05-06]
+	Updated devel/ruby-concurrent-ruby to 1.1.5 [taca 2019-05-06]
