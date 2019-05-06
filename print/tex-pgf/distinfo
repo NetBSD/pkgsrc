@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2019/01/29 19:54:29 markd Exp $
+$NetBSD: distinfo,v 1.10 2019/05/06 21:11:18 markd Exp $
 
-SHA1 (tex-pgf-49607/pgf.tar.xz) = fab2f0add53da5bc92628f105507e3df771745d9
-RMD160 (tex-pgf-49607/pgf.tar.xz) = c30b00724a97b6c1aa3bb55b82d06b763dc1ced1
-SHA512 (tex-pgf-49607/pgf.tar.xz) = 9463144eb6bf1a1ebab1885b45a8f0dbb0e35a506ca6d124e2ff2dbc4849e3e28b43fd466072547b8e7f0c4a8902d3735280f19e2a14f5cf489ad6f62082c68f
-Size (tex-pgf-49607/pgf.tar.xz) = 694856 bytes
+SHA1 (tex-pgf-49907/pgf.tar.xz) = 9f06691eab079df6928827e674a757d7aabea9c9
+RMD160 (tex-pgf-49907/pgf.tar.xz) = b10868771175654bf95681e9479a9164994719b4
+SHA512 (tex-pgf-49907/pgf.tar.xz) = 0ea78ace970c779e17c1f27c68bceb604c8356ad77ac3df57cd3dca47e2db729811994bf314b6b0229f239bd7da8e3c8da237f1fca280a33c5a3bf92b23ab0ce
+Size (tex-pgf-49907/pgf.tar.xz) = 694960 bytes
