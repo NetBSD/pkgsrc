@@ -1,0 +1,11 @@
+picotrace enables syscall trace logging for the specified processes.
+
+The tracer uses the ptrace(2) system call to perform the tracing process.
+
+The picotrace program has been designd to ship bare functionality only,
+without pretty printing of data structures and interpreting passed arguments
+to syscalls.
+
+picotrace is designed to be a framework for other more advanced tracers and
+illustration of the canonical usage of the ptrace system call. New features are
+not expected unless they present a new feature in the NetBSD kernel.
