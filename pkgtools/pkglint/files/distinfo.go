@@ -323,8 +323,8 @@ func (ck *distinfoLinesChecker) checkUnrecordedPatches() {
 
 // Inter-package check for differing distfile checksums.
 func (ck *distinfoLinesChecker) checkGlobalDistfileMismatch(info distinfoHash) {
-	hashes := G.Hashes
-	if hashes == nil {
+
+	if !G.InterPackage.Enabled() {
 		return
 	}
 
@@ -348,23 +348,20 @@ func (ck *distinfoLinesChecker) checkGlobalDistfileMismatch(info distinfoHash) {
 		return
 	}
 
-	key := alg + ":" + filename
-	otherHash := hashes[key]
-
 	// See https://github.com/golang/go/issues/29802
 	hashBytes := make([]byte, hex.DecodedLen(len(hash)))
 	_, err := hex.Decode(hashBytes, []byte(hash))
 	if err != nil {
 		line.Errorf("The %s hash for %s contains a non-hex character.", alg, filename)
+		return
 	}
 
+	otherHash := G.InterPackage.Hash(alg, filename, hashBytes, &line.Location)
 	if otherHash != nil {
 		if !bytes.Equal(otherHash.hash, hashBytes) {
 			line.Errorf("The %s hash for %s is %s, which conflicts with %s in %s.",
 				alg, filename, hash, hex.EncodeToString(otherHash.hash), line.RefToLocation(otherHash.location))
 		}
-	} else {
-		hashes[key] = &Hash{hashBytes, line.Location}
 	}
 }
 

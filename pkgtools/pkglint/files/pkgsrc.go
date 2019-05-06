@@ -13,6 +13,10 @@ import (
 // Pkgsrc describes a pkgsrc installation.
 // In each pkglint run, only a single pkgsrc installation is ever loaded.
 // It just doesn't make sense to check multiple pkgsrc installations at once.
+//
+// This type only contains data that is loaded once and then stays constant.
+// Everything else (distfile hashes, package names) is recorded in the Pkglint
+// type instead.
 type Pkgsrc struct {
 	// The top directory (PKGSRCDIR), either absolute or relative to
 	// the current working directory.
@@ -249,15 +253,14 @@ func (src *Pkgsrc) ListVersions(category string, re regex.Pattern, repl string, 
 }
 
 func (src *Pkgsrc) checkToplevelUnusedLicenses() {
-	usedLicenses := G.UsedLicenses
-	if usedLicenses == nil {
+	if !G.InterPackage.Enabled() {
 		return
 	}
 
 	licensesDir := src.File("licenses")
 	for _, licenseFile := range src.ReadDir("licenses") {
 		licenseName := licenseFile.Name()
-		if !usedLicenses[licenseName] {
+		if !G.InterPackage.LicenseUsed(licenseName) {
 			licensePath := licensesDir + "/" + licenseName
 			if fileExists(licensePath) {
 				NewLineWhole(licensePath).Warnf("This license seems to be unused.")
@@ -387,6 +390,7 @@ func (src *Pkgsrc) loadUntypedVars() {
 	}
 
 	handleFile := func(pathName string, info os.FileInfo, err error) error {
+		G.AssertNil(err, "handleFile %q", pathName)
 		baseName := info.Name()
 		if hasSuffix(baseName, ".mk") || baseName == "mk.conf" {
 			handleMkFile(filepath.ToSlash(pathName))
