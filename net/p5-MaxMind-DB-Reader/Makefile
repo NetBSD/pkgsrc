@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/03/21 10:29:23 he Exp $
+# $NetBSD: Makefile,v 1.2 2019/05/06 15:19:25 mef Exp $
 
 DISTNAME=	MaxMind-DB-Reader-1.000013
 PKGNAME=	p5-${DISTNAME}
@@ -32,6 +32,9 @@ TEST_DEPENDS+=	p5-Test-Fatal>=0:../../devel/p5-Test-Fatal
 TEST_DEPENDS+=	p5-Test-Number-Delta>=0:../../math/p5-Test-Number-Delta
 TEST_DEPENDS+=	p5-Test-Requires>=0:../../devel/p5-Test-Requires
 TEST_DEPENDS+=	p5-MaxMind-DB-Common>=0:../../net/p5-MaxMind-DB-Common
+
+REPLACE_PERL=	bin/mmdb-dump-metadata
+REPLACE_PERL+=	bin/mmdb-dump-search-tree
 
 PERL5_PACKLIST=	auto/MaxMind/DB/Reader/.packlist
 
