@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1994 2019/05/06 08:20:43 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1995 2019/05/06 08:48:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3199,3 +3199,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ruby-sexp-processor to 4.12.0 [taca 2019-05-06]
 	Updated devel/ruby-test-unit to 3.3.2 [taca 2019-05-06]
 	Updated security/mit-krb5 to 1.16.2nb1 [wiz 2019-05-06]
+	Updated textproc/py-xlsxwriter to 1.1.8 [adam 2019-05-06]
+	Updated math/py-mpmath to 1.1.0 [adam 2019-05-06]
