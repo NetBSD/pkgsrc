@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 13:47:40 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/05/06 21:19:54 markd Exp $
 
 DISTNAME=	metauml
-PKGNAME=	tex-${DISTNAME}-0.2.5
-TEXLIVE_REV=	19692
+PKGNAME=	tex-${DISTNAME}-0.2.6
+TEXLIVE_REV=	49923
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/metauml
