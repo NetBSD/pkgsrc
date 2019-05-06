@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/01/20 13:45:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/05/06 05:22:53 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/curses.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
@@ -18,6 +18,7 @@ ${GEM_LIBDIR}/ext/curses/depend
 ${GEM_LIBDIR}/ext/curses/extconf.rb
 ${GEM_LIBDIR}/lib/curses.rb
 ${GEM_LIBDIR}/lib/curses.${RUBY_DLEXT}
+${GEM_LIBDIR}/sample/form.rb
 ${GEM_LIBDIR}/sample/hello.rb
 ${GEM_LIBDIR}/sample/menu.rb
 ${GEM_LIBDIR}/sample/mouse.rb
