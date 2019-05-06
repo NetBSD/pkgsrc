@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2018/10/01 20:55:36 triaxx Exp $
+# $NetBSD: Makefile.common,v 1.15 2019/05/06 09:38:48 adam Exp $
 # used by www/nginx/Makefile
 # used by www/nginx-devel/Makefile
 
@@ -78,7 +78,7 @@ BUILD_TARGET=		build
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	auto/lib/pcre/conf
-SUBST_SED.prefix=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.prefix=	PREFIX
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
