@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1987 2019/05/06 05:28:33 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1988 2019/05/06 05:29:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3192,3 +3192,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ruby-highline to 2.0.2 [taca 2019-05-06]
 	Updated devel/ruby-msgpack to 1.2.10 [taca 2019-05-06]
 	Updated devel/ruby-ole to 1.2.12.2 [taca 2019-05-06]
+	Updated devel/ruby-parser to 3.13.1 [taca 2019-05-06]
