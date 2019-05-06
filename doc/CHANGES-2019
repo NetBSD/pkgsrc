@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1984 2019/05/06 05:24:23 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1985 2019/05/06 05:25:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3189,3 +3189,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ruby-concurrent-ruby to 1.1.5 [taca 2019-05-06]
 	Updated devel/ruby-curses to 1.3.1 [taca 2019-05-06]
 	Updated devel/ruby-getopt to 1.5.0 [taca 2019-05-06]
+	Updated devel/ruby-highline to 2.0.2 [taca 2019-05-06]
