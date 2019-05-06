@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/01/11 08:07:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/05/06 08:48:06 adam Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/mpmath/__init__.py
 ${PYSITELIB}/mpmath/__init__.pyc
@@ -33,9 +33,6 @@ ${PYSITELIB}/mpmath/calculus/polynomials.pyo
 ${PYSITELIB}/mpmath/calculus/quadrature.py
 ${PYSITELIB}/mpmath/calculus/quadrature.pyc
 ${PYSITELIB}/mpmath/calculus/quadrature.pyo
-${PYSITELIB}/mpmath/conftest.py
-${PYSITELIB}/mpmath/conftest.pyc
-${PYSITELIB}/mpmath/conftest.pyo
 ${PYSITELIB}/mpmath/ctx_base.py
 ${PYSITELIB}/mpmath/ctx_base.pyc
 ${PYSITELIB}/mpmath/ctx_base.pyo
@@ -153,9 +150,6 @@ ${PYSITELIB}/mpmath/rational.pyo
 ${PYSITELIB}/mpmath/tests/__init__.py
 ${PYSITELIB}/mpmath/tests/__init__.pyc
 ${PYSITELIB}/mpmath/tests/__init__.pyo
-${PYSITELIB}/mpmath/tests/extratest_bessel.py
-${PYSITELIB}/mpmath/tests/extratest_bessel.pyc
-${PYSITELIB}/mpmath/tests/extratest_bessel.pyo
 ${PYSITELIB}/mpmath/tests/extratest_gamma.py
 ${PYSITELIB}/mpmath/tests/extratest_gamma.pyc
 ${PYSITELIB}/mpmath/tests/extratest_gamma.pyo
