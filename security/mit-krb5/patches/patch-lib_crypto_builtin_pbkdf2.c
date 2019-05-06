@@ -1,6 +1,7 @@
-$NetBSD: patch-lib_crypto_builtin_pbkdf2.c,v 1.1 2019/05/06 08:20:32 wiz Exp $
+$NetBSD: patch-lib_crypto_builtin_pbkdf2.c,v 1.2 2019/05/06 14:06:05 wiz Exp $
 
 Fix conflict with hmac() symbol in libc.
+https://github.com/krb5/krb5/pull/926
 
 --- lib/crypto/builtin/pbkdf2.c.orig	2018-11-01 23:51:07.000000000 +0000
 +++ lib/crypto/builtin/pbkdf2.c

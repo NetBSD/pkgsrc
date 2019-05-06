@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.67 2019/05/06 08:20:32 wiz Exp $
+$NetBSD: distinfo,v 1.68 2019/05/06 14:06:05 wiz Exp $
 
 SHA1 (krb5-1.16.2.tar.gz) = 6d6ef205194be386fb5f4e6bef32cb9fc79e853b
 RMD160 (krb5-1.16.2.tar.gz) = 76188113d13eb9667d6057fe23d653a3d09d4817
@@ -18,7 +18,7 @@ SHA1 (patch-include_osconf.hin) = d31a8164f417bc31a787c8e16d1bd24f27b7140d
 SHA1 (patch-kadmin_cli_ss_wrapper.c) = e32e6180f8d508cb2eb18489ce2fef0a1ad0f51d
 SHA1 (patch-lib_apputils_Makefile.in) = 085004041a2bb8c4bb3074c2e71e71f22f4f06d7
 SHA1 (patch-lib_apputils_udppktinfo.c) = 47ac861181faebfe5f95c28be329ce917ece872c
-SHA1 (patch-lib_crypto_builtin_pbkdf2.c) = d36cd73761bd139ab1d134d6d57b570ca98851a4
+SHA1 (patch-lib_crypto_builtin_pbkdf2.c) = 5d67d5435cc4e14e9ba2e548101b272918616f1c
 SHA1 (patch-lib_gssapi_Makefile.in) = 806b089d3b12ea9a17c6caab59cbdeb6ec17bbc3
 SHA1 (patch-lib_gssapi_krb5_import__name.c) = 7445639b82eadf9b1feb1448c1654fa6ddc937aa
 SHA1 (patch-lib_kdb_Makefile.in) = 0c45e34ea8b5d0270c386d430b0d37469e8440ea
