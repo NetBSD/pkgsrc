@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1999 2019/05/06 10:26:39 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2000 2019/05/06 15:11:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3209,3 +3209,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/nginx to 1.16.0 [adam 2019-05-06]
 	Updated www/py-daphne to 2.3.0 [adam 2019-05-06]
 	Updated www/py-channels to 2.2.0 [adam 2019-05-06]
+	Updated devel/ccache to 3.7.1 [adam 2019-05-06]
+	Updated devel/scons to 3.0.5 [adam 2019-05-06]
