@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.208 2019/05/05 16:44:05 rhialto Exp $
+# $NetBSD: Makefile,v 1.209 2019/05/06 09:36:47 adam Exp $
 
-DISTNAME=	wireshark-2.6.7
-PKGREVISION=	2
+DISTNAME=	wireshark-3.0.1
 CATEGORIES=	net
 MASTER_SITES=	https://www.wireshark.org/download/src/
 EXTRACT_SUFX=	.tar.xz
@@ -11,31 +10,27 @@ HOMEPAGE=	https://www.wireshark.org/
 COMMENT=	Network protocol analyzer
 LICENSE=	gnu-gpl-v2
 
-CONFLICTS+=		ethereal-[0-9]*
+CONFLICTS+=	ethereal-[0-9]*
+
+USE_CMAKE=		yes
+CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
+CMAKE_ARGS+=		-DENABLE_APPLICATION_BUNDLE=OFF
+CMAKE_ARG_PATH=		..
+CONFIGURE_DIRS=		build
 
 USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl pkg-config yacc lex
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-static=no
-CONFIGURE_ARGS+=	--disable-guides
-CONFIGURE_ARGS+=	--with-pcap=${BUILDLINK_PREFIX.libpcap}
-CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
-CONFIGURE_ENV+=		ac_cv_path_YACCDUMMY=${TOOLS_PATH.yacc}
-CONFIGURE_ENV+=		ac_cv_path_LEXDUMMY=${TOOLS_PATH.lex}
 PKGCONFIG_OVERRIDE+=	wireshark.pc.in
-SHLIBTOOL_OVERRIDE=	# empty
 
 CHECK_PORTABILITY_SKIP+=	packaging/macosx/*/*
 
 PTHREAD_OPTS+=		require
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # Python 2.7 is not supported
 PYTHON_FOR_BUILD_ONLY=		yes
 REPLACE_PYTHON+=		help/faq.py
 REPLACE_PYTHON+=		tools/asn2deb
 REPLACE_PYTHON+=		tools/asn2wrs.py
-REPLACE_PYTHON+=		tools/dfilter-test.py
-REPLACE_PYTHON+=		tools/ftsanity.py
 REPLACE_PYTHON+=		tools/html2text.py
 REPLACE_PYTHON+=		tools/idl2deb
 REPLACE_PYTHON+=		tools/indexcap.py
@@ -44,6 +39,9 @@ REPLACE_PYTHON+=		tools/ncp2222.py
 REPLACE_PYTHON+=		tools/netscreen2dump.py
 REPLACE_PYTHON+=		tools/pkt-from-core.py
 REPLACE_PYTHON+=		tools/rdps.py
+
+pre-configure:
+	${MKDIR} ${WRKSRC}/build
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -71,6 +69,7 @@ BUILDLINK_TRANSFORM+=	rm:-DGDK_PIXBUF_DISABLE_DEPRECATED
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../geography/libmaxminddb/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../net/libcares/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
