@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 13:47:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/05/06 21:19:54 markd Exp $
 share/texmf-dist/metapost/metauml/metauml.mp
 share/texmf-dist/metapost/metauml/metauml_activity.mp
 share/texmf-dist/metapost/metauml/metauml_base.mp
 share/texmf-dist/metapost/metauml/metauml_behavioral_common.mp
 share/texmf-dist/metapost/metauml/metauml_class.mp
 share/texmf-dist/metapost/metauml/metauml_class_assoc.mp
-share/texmf-dist/metapost/metauml/metauml_class_clipart.mp
 share/texmf-dist/metapost/metauml/metauml_class_relations.mp
 share/texmf-dist/metapost/metauml/metauml_component.mp
 share/texmf-dist/metapost/metauml/metauml_component_relations.mp
