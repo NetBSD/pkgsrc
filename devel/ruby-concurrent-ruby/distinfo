@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/12/17 14:48:06 taca Exp $
+$NetBSD: distinfo,v 1.3 2019/05/06 05:21:46 taca Exp $
 
-SHA1 (concurrent-ruby-1.1.4.gem) = acbf13f86986eaf4a0c61230d031ddf40672daea
-RMD160 (concurrent-ruby-1.1.4.gem) = 36f038dd6b869e4ea4fece2a0c810c922742dad1
-SHA512 (concurrent-ruby-1.1.4.gem) = 6e06f1bba58cf25006837399a3764c9f091e9df6f3172bb4da08ec40039fcb3e8044c4a72d2cfb58d7957388b14edaa97bb19f590abe159f1b4d3308abaa1a4f
-Size (concurrent-ruby-1.1.4.gem) = 353792 bytes
+SHA1 (concurrent-ruby-1.1.5.gem) = 456a042a1c559f0c9a3a0d0d598421a8354acdae
+RMD160 (concurrent-ruby-1.1.5.gem) = cad231e8f18439f6ffedde45a00f2987d2290f29
+SHA512 (concurrent-ruby-1.1.5.gem) = 357fa6bbf65ff4143adba9de6713d28eacb03170b3b4218f53d80433de13ba50b1c3741a62ec355a3aa01388bcbd059e1bca3dd82c88cf56b8b3110c24b37613
+Size (concurrent-ruby-1.1.5.gem) = 356352 bytes
