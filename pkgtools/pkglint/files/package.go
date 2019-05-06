@@ -218,11 +218,11 @@ func (pkg *Package) load() ([]string, MkLines, MkLines) {
 	return files, mklines, allLines
 }
 
-func (pkg *Package) check(files []string, mklines, allLines MkLines) {
+func (pkg *Package) check(filenames []string, mklines, allLines MkLines) {
 	haveDistinfo := false
 	havePatches := false
 
-	for _, filename := range files {
+	for _, filename := range filenames {
 		if containsVarRef(filename) {
 			if trace.Tracing {
 				trace.Stepf("Skipping file %q because the name contains an unresolved variable.", filename)
@@ -1011,6 +1011,28 @@ func (pkg *Package) CheckVarorder(mklines MkLines) {
 		"",
 		"See doc/Makefile-example for an example Makefile.",
 		seeGuide("Package components, Makefile", "components.Makefile"))
+}
+
+func (pkg *Package) checkFileMakefileExt(filename string) {
+	base := path.Base(filename)
+	if !hasPrefix(base, "Makefile.") || base == "Makefile.common" {
+		return
+	}
+	ext := strings.TrimPrefix(base, "Makefile.")
+
+	line := NewLineWhole(filename)
+	line.Notef("Consider renaming %q to %q.", base, ext+".mk")
+	line.Explain(
+		"The main definition of a pkgsrc package should be in the Makefile.",
+		"Common definitions for a few very closely related packages can be",
+		"placed in a Makefile.common, these may cover various topics.",
+		"",
+		"All other definitions should be grouped by topics and implemented",
+		"in separate files named *.mk after their topics. Typical examples",
+		"are extension.mk, module.mk, version.mk.",
+		"",
+		"These topic files should be documented properly so that their",
+		sprintf("content can be queried using %q.", makeHelp("help")))
 }
 
 // checkLocallyModified checks files that are about to be committed.

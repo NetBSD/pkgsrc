@@ -91,6 +91,22 @@ func trimHspace(str string) string {
 	return str[start:end]
 }
 
+func trimCommon(a, b string) (string, string) {
+	// trim common prefix
+	for len(a) > 0 && len(b) > 0 && a[0] == b[0] {
+		a = a[1:]
+		b = b[1:]
+	}
+
+	// trim common suffix
+	for len(a) > 0 && len(b) > 0 && a[len(a)-1] == b[len(b)-1] {
+		a = a[:len(a)-1]
+		b = b[:len(b)-1]
+	}
+
+	return a, b
+}
+
 func isHspace(ch byte) bool {
 	return ch == ' ' || ch == '\t'
 }
