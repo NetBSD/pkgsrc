@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1998 2019/05/06 09:39:40 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1999 2019/05/06 10:26:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3207,3 +3207,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/firefox60 to 60.6.2 [ryoon 2019-05-06]
 	Updated net/wireshark to 3.0.1 [adam 2019-05-06]
 	Updated www/nginx to 1.16.0 [adam 2019-05-06]
+	Updated www/py-daphne to 2.3.0 [adam 2019-05-06]
+	Updated www/py-channels to 2.2.0 [adam 2019-05-06]
