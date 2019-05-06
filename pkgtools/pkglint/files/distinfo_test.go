@@ -204,8 +204,8 @@ func (s *Suite) Test_distinfoLinesChecker_checkGlobalDistfileMismatch(c *check.C
 		"(Run \"pkglint -e\" to show explanations.)")
 
 	// Ensure that hex.DecodeString does not waste memory here.
-	t.Check(len(G.Hashes["SHA512:distfile-1.0.tar.gz"].hash), equals, 8)
-	t.Check(cap(G.Hashes["SHA512:distfile-1.0.tar.gz"].hash), equals, 8)
+	t.Check(len(G.InterPackage.hashes["SHA512:distfile-1.0.tar.gz"].hash), equals, 8)
+	t.Check(cap(G.InterPackage.hashes["SHA512:distfile-1.0.tar.gz"].hash), equals, 8)
 }
 
 func (s *Suite) Test_distinfoLinesChecker_checkAlgorithms__missing_patch_with_distfile_checksums(c *check.C) {

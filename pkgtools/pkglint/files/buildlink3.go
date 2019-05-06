@@ -2,6 +2,7 @@ package pkglint
 
 import (
 	"netbsd.org/pkglint/pkgver"
+	"path"
 	"strings"
 )
 
@@ -84,10 +85,34 @@ func (ck *Buildlink3Checker) checkFirstParagraph(mlex *MkLinesLexer) bool {
 	if containsVarRef(pkgbase) {
 		ck.checkVaruseInPkgbase(pkgbase, pkgbaseLine)
 	}
+
+	ck.checkUniquePkgbase(pkgbase, pkgbaseLine)
+
 	mlex.SkipEmptyOrNote()
 	ck.pkgbase = pkgbase
 	ck.pkgbaseLine = pkgbaseLine
 	return true
+}
+
+func (ck *Buildlink3Checker) checkUniquePkgbase(pkgbase string, mkline MkLine) {
+	prev := G.InterPackage.Bl3(pkgbase, &mkline.Location)
+	if prev == nil {
+		return
+	}
+
+	base, name := trimCommon(pkgbase, path.Base(path.Dir(mkline.Filename)))
+	if base == "" && matches(name, `^(\d*|-cvs|-fossil|-git|-hg|-svn|-devel|-snapshot)$`) {
+		return
+	}
+
+	mkline.Errorf("Duplicate package identifier %q already appeared in %s.",
+		pkgbase, mkline.RefToLocation(*prev))
+	mkline.Explain(
+		"Each buildlink3.mk file must have a unique identifier.",
+		"These identifiers are used for multiple-inclusion guards,",
+		"and using the same identifier for different packages",
+		"(often by copy-and-paste) may change the dependencies",
+		"of a package in subtle and unexpected ways.")
 }
 
 // checkSecondParagraph checks the multiple inclusion protection and
