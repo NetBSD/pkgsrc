@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2019/05/05 12:12:14 wiedi Exp $
+# $NetBSD: Makefile.common,v 1.19 2019/05/06 15:47:39 wiedi Exp $
 #
 # used by databases/mysql57-client/Makefile
 # used by databases/mysql57-server/Makefile
@@ -18,6 +18,7 @@ USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bash bison gmake perl:run
 USE_GCC_RUNTIME=	yes
+USE_BUILTIN.libevent=	no
 
 .include "../../mk/bsd.prefs.mk"
 
