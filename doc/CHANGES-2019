@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2002 2019/05/06 20:27:32 rillig Exp $
+$NetBSD: CHANGES-2019,v 1.2003 2019/05/06 21:30:03 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3213,3 +3213,13 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/scons to 3.0.5 [adam 2019-05-06]
 	Updated graphics/ruby-RMagick to 3.1.0 [taca 2019-05-06]
 	Updated pkgtools/pkglint to 5.7.9 [rillig 2019-05-06]
+	Updated print/tex-fancyhdr to 3.10 [markd 2019-05-06]
+	Updated print/tex-fancyhdr-doc to 3.10 [markd 2019-05-06]
+	Updated print/tex-pgf to 3.1.1 [markd 2019-05-06]
+	Updated print/tex-pgf-doc to 3.1.1 [markd 2019-05-06]
+	Updated print/tex-updmap-map to 2018.49917 [markd 2019-05-06]
+	Updated graphics/tex-metauml to 0.2.6 [markd 2019-05-06]
+	Updated graphics/tex-metauml-doc to 0.2.6 [markd 2019-05-06]
+	Updated print/tex-koma-script to 3.26b [markd 2019-05-06]
+	Updated print/tex-xstring to 1.83 [markd 2019-05-06]
+	Updated print/tex-xstring-doc to 1.83 [markd 2019-05-06]
