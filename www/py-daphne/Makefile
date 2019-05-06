@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2019/04/26 13:14:20 maya Exp $
+# $NetBSD: Makefile,v 1.17 2019/05/06 10:24:25 adam Exp $
 
-DISTNAME=	daphne-2.2.5
+DISTNAME=	daphne-2.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/daphne/}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/django/daphne
 COMMENT=	HTTP, HTTP2 and WebSocket protocol server for ASGI
 LICENSE=	modified-bsd
 
+DEPENDS+=	${PYPKGPREFIX}-asgiref>=3.0:../../www/py-asgiref
 DEPENDS+=	${PYPKGPREFIX}-autobahn>=0.18:../../www/py-autobahn
 DEPENDS+=	${PYPKGPREFIX}-twisted>=18.7:../../net/py-twisted
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
