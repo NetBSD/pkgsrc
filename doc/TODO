@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18983 2019/05/05 09:08:24 wiz Exp $
+$NetBSD: TODO,v 1.18984 2019/05/06 05:11:24 taca Exp $
 
 Suggested new packages
 ======================
@@ -473,7 +473,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o chromium-bsu-0.9.16.1
 	o cim-5.1
 	o cjk-lyx-1.4.4
-	o clamav-0.100.2
+	o clamav-0.100.3
+	o clamav-0.101.2
 	o classpath-0.99
 	o classpath-gui-0.99
 	o clawsker-0.7.13
@@ -1107,7 +1108,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o polsms-2.1.0
 	o poppass-4.0.14
 	o poppler-0.76.1
-	o postfix-3.4.0
+	o postfix-3.4.5
 	o postal-0.72
 	o pound-2.8a
 	o povray-3.7.0.0
