@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2019/05/06 23:18:10 kamil Exp $
+bin/picotrace
+man/man1/picotrace.1
