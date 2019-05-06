@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/01/29 19:54:29 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/05/06 21:11:18 markd Exp $
 share/texmf-dist/doc/generic/pgf/AUTHORS
 share/texmf-dist/doc/generic/pgf/ChangeLog
 share/texmf-dist/doc/generic/pgf/FILES
@@ -178,11 +178,9 @@ share/texmf-dist/doc/generic/pgf/version-for-dvipdfmx/en/pgfmanual-test.tex
 share/texmf-dist/doc/generic/pgf/version-for-dvipdfmx/en/pgfmanual.tex
 share/texmf-dist/doc/generic/pgf/version-for-dvipdfmx/pgfmanual-dvipdfmx.cfg
 share/texmf-dist/doc/generic/pgf/version-for-dvips/en/Makefile
-share/texmf-dist/doc/generic/pgf/version-for-dvips/en/pgfmanual-test.tex
 share/texmf-dist/doc/generic/pgf/version-for-dvips/en/pgfmanual.tex
 share/texmf-dist/doc/generic/pgf/version-for-dvips/pgfmanual-dvips.cfg
 share/texmf-dist/doc/generic/pgf/version-for-dvisvgm/en/Makefile
-share/texmf-dist/doc/generic/pgf/version-for-dvisvgm/en/color.cfg
 share/texmf-dist/doc/generic/pgf/version-for-dvisvgm/en/pgfmanual-test.html
 share/texmf-dist/doc/generic/pgf/version-for-dvisvgm/en/pgfmanual-test.tex
 share/texmf-dist/doc/generic/pgf/version-for-dvisvgm/en/pgfmanual.html
