@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2019/02/25 14:44:50 taca Exp $
+$NetBSD: distinfo,v 1.7 2019/05/06 05:20:26 taca Exp $
 
-SHA1 (byebug-11.0.0.gem) = 58409418aad4ab4b9e2750e175c3dffcd846344c
-RMD160 (byebug-11.0.0.gem) = a0dd542f31d939fd5502a2d64206b61e51bcec7e
-SHA512 (byebug-11.0.0.gem) = 25c6807fb4626985d0baec18953ec45ab6f64ce1092119090c144da6cfa4193b8fc58505b97ff0202f8089c2627a192c909189972f6257245ea6bac007914a4a
-Size (byebug-11.0.0.gem) = 83456 bytes
+SHA1 (byebug-11.0.1.gem) = 43e25a2b5cfd83de3c66e3098a2ecc278c99fd1c
+RMD160 (byebug-11.0.1.gem) = f1edcaf73a604856039e9574f710d985d7eb40ea
+SHA512 (byebug-11.0.1.gem) = e17d2cbc99b1aa2055e44dbd247cafef4976afc13753d828b07dcc217a59ce585610aa09d3e01e3c9a2a9e16d046d7a771608c20cf9367ee5c54ce374fb1042a
+Size (byebug-11.0.1.gem) = 83968 bytes
