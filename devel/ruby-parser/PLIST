@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2018/03/14 14:08:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2019/05/06 05:29:20 taca Exp $
 bin/ruby_parse${RUBY_SUFFIX}
 bin/ruby_parse_extract_error${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -10,13 +10,10 @@ ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/ruby_parse
 ${GEM_LIBDIR}/bin/ruby_parse_extract_error
 ${GEM_LIBDIR}/compare/normalize.rb
+${GEM_LIBDIR}/debugging.md
 ${GEM_LIBDIR}/lib/.document
 ${GEM_LIBDIR}/lib/rp_extensions.rb
 ${GEM_LIBDIR}/lib/rp_stringscanner.rb
-${GEM_LIBDIR}/lib/ruby18_parser.rb
-${GEM_LIBDIR}/lib/ruby18_parser.y
-${GEM_LIBDIR}/lib/ruby19_parser.rb
-${GEM_LIBDIR}/lib/ruby19_parser.y
 ${GEM_LIBDIR}/lib/ruby20_parser.rb
 ${GEM_LIBDIR}/lib/ruby20_parser.y
 ${GEM_LIBDIR}/lib/ruby21_parser.rb
@@ -29,6 +26,8 @@ ${GEM_LIBDIR}/lib/ruby24_parser.rb
 ${GEM_LIBDIR}/lib/ruby24_parser.y
 ${GEM_LIBDIR}/lib/ruby25_parser.rb
 ${GEM_LIBDIR}/lib/ruby25_parser.y
+${GEM_LIBDIR}/lib/ruby26_parser.rb
+${GEM_LIBDIR}/lib/ruby26_parser.y
 ${GEM_LIBDIR}/lib/ruby_lexer.rb
 ${GEM_LIBDIR}/lib/ruby_lexer.rex
 ${GEM_LIBDIR}/lib/ruby_lexer.rex.rb
@@ -38,4 +37,6 @@ ${GEM_LIBDIR}/lib/ruby_parser_extras.rb
 ${GEM_LIBDIR}/test/test_ruby_lexer.rb
 ${GEM_LIBDIR}/test/test_ruby_parser.rb
 ${GEM_LIBDIR}/test/test_ruby_parser_extras.rb
+${GEM_LIBDIR}/tools/munge.rb
+${GEM_LIBDIR}/tools/ripper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
