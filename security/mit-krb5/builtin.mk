@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.14 2018/06/15 20:46:01 tez Exp $
+# $NetBSD: builtin.mk,v 1.15 2019/05/06 08:20:32 wiz Exp $
 
 BUILTIN_PKG:=	mit-krb5
 
@@ -98,6 +98,7 @@ BUILDLINK_CPPFLAGS.mit-krb5+=	-I/usr/include/gssapi
 BUILDLINK_LDFLAGS.mit-krb5+=	-lgss
 BUILDLINK_TARGETS+=		fake-krb5-config
 
+.PHONY: fake-krb5-config
 fake-krb5-config:
 	${RUN}								\
 	src=../../security/mit-krb5/files/krb5-config-wrapper.sh;	\
