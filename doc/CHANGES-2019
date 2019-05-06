@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2003 2019/05/06 21:30:03 markd Exp $
+$NetBSD: CHANGES-2019,v 1.2004 2019/05/06 23:19:42 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3223,3 +3223,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/tex-koma-script to 3.26b [markd 2019-05-06]
 	Updated print/tex-xstring to 1.83 [markd 2019-05-06]
 	Updated print/tex-xstring-doc to 1.83 [markd 2019-05-06]
+	Added devel/picotrace version 20190507 [kamil 2019-05-06]
