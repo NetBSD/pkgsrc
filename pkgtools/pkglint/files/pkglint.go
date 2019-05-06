@@ -45,8 +45,7 @@ type Pkglint struct {
 	// There is no other use for it.
 	cwd string
 
-	Hashes       map[string]*Hash // Maps "alg:filename" => hash (inter-package check).
-	UsedLicenses map[string]bool  // Maps "license name" => true (inter-package check).
+	InterPackage InterPackage
 }
 
 func NewPkglint() Pkglint {
@@ -58,6 +57,58 @@ func NewPkglint() Pkglint {
 		fileCache: NewFileCache(200),
 		cwd:       filepath.ToSlash(cwd),
 		interner:  NewStringInterner()}
+}
+
+type InterPackage struct {
+	hashes       map[string]*Hash    // Maps "alg:filename" => hash (inter-package check).
+	usedLicenses map[string]struct{} // Maps "license name" => true (inter-package check).
+	bl3Names     map[string]Location // Maps buildlink3 identifiers to their first occurrence.
+}
+
+func (ip *InterPackage) Enable() {
+	*ip = InterPackage{
+		make(map[string]*Hash),
+		make(map[string]struct{}),
+		make(map[string]Location)}
+}
+
+func (ip *InterPackage) Enabled() bool { return ip.hashes != nil }
+
+func (ip *InterPackage) Hash(alg, filename string, hashBytes []byte, loc *Location) *Hash {
+	key := alg + ":" + filename
+	if otherHash := ip.hashes[key]; otherHash != nil {
+		return otherHash
+	}
+
+	ip.hashes[key] = &Hash{hashBytes, *loc}
+	return nil
+}
+
+func (ip *InterPackage) UseLicense(name string) {
+	if ip.usedLicenses != nil {
+		ip.usedLicenses[intern(name)] = struct{}{}
+	}
+}
+
+func (ip *InterPackage) LicenseUsed(name string) bool {
+	_, used := ip.usedLicenses[name]
+	return used
+}
+
+// Bl3 remembers that the given buildlink3 name is used at the given location.
+// Since these names must be unique, there should be no other location where
+// the same name is used.
+func (ip *InterPackage) Bl3(name string, loc *Location) *Location {
+	if ip.bl3Names == nil {
+		return nil
+	}
+
+	if prev, found := ip.bl3Names[name]; found {
+		return &prev
+	}
+
+	ip.bl3Names[name] = *loc
+	return nil
 }
 
 type CmdOpts struct {
@@ -573,6 +624,10 @@ func CheckFileMk(filename string) {
 	mklines := LoadMk(filename, NotEmpty|LogErrors)
 	if mklines == nil {
 		return
+	}
+
+	if G.Pkg != nil {
+		G.Pkg.checkFileMakefileExt(filename)
 	}
 
 	mklines.Check()

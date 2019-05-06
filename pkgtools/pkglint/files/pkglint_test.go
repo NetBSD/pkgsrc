@@ -1187,3 +1187,24 @@ func (s *Suite) Test_Main(c *check.C) {
 		"Looks fine.")
 	// outProfiling is not checked because it contains timing information.
 }
+
+func (s *Suite) Test_InterPackage_Bl3__same_identifier(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package1",
+		"PKGNAME=\t${DISTNAME:@v@${v}@}") // Make the package name non-obvious.
+	t.SetUpPackage("category/package2",
+		"PKGNAME=\t${DISTNAME:@v@${v}@}") // Make the package name non-obvious.
+	t.CreateFileDummyBuildlink3("category/package1/buildlink3.mk")
+	t.Copy("category/package1/buildlink3.mk", "category/package2/buildlink3.mk")
+	t.Chdir(".")
+	t.FinishSetUp()
+
+	G.InterPackage.Enable()
+	G.Check("category/package1")
+	G.Check("category/package2")
+
+	t.CheckOutputLines(
+		"ERROR: category/package2/buildlink3.mk:3: Duplicate package identifier " +
+			"\"package1\" already appeared in ../../category/package1/buildlink3.mk:3.")
+}

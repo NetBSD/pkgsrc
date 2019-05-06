@@ -189,10 +189,30 @@ func (ck *ShellLineChecker) checkVaruseToken(atoms *[]*ShAtom, quoting ShQuoting
 		// This is ok as long as these variables don't have embedded [$\\"'`].
 
 	case quoting == shqDquot && varuse.IsQ():
-		ck.mkline.Warnf("The :Q modifier should not be used inside double quotes.")
-		ck.mkline.Explain(
+		ck.Warnf("The :Q modifier should not be used inside double quotes.")
+		ck.Explain(
+			"The :Q modifier is intended for embedding a string into a shell program.",
+			"It escapes all characters that have a special meaning in shell programs.",
+			"It only works correctly when it appears outside of \"double\" or 'single'",
+			"quotes or `backticks`.",
+			"",
+			"When it is used inside double quotes or backticks, the resulting string may",
+			"contain more backslashes than intended.",
+			"",
+			"When it is used inside single quotes and the string contains a single quote",
+			"itself, it produces syntax errors in the shell.",
+			"",
 			"To fix this warning, either remove the :Q or the double quotes.",
-			"In most cases, it is more appropriate to remove the double quotes.")
+			"In most cases, it is more appropriate to remove the double quotes.",
+			"",
+			"A special case is for empty strings.",
+			"If the empty string should be preserved as an empty string,",
+			"the correct form is ${VAR:Q}'' with either leading or trailing single or double quotes.",
+			"If the empty string should just be skipped,",
+			"a simple ${VAR:Q} without any surrounding quotes is correct.")
+
+		// TODO: What about single quotes?
+		// TODO: What about backticks?
 	}
 
 	if ck.checkVarUse {
@@ -623,17 +643,42 @@ func (scc *SimpleCommandChecker) checkRegexReplace() {
 		defer trace.Call0()()
 	}
 
-	cmdname := scc.strcmd.Name
-	isSubst := false
-	for _, arg := range scc.strcmd.Args {
-		if G.Testing && isSubst && !matches(arg, `"^[\"\'].*[\"\']$`) {
-			scc.Warnf("Substitution commands like %q should always be quoted.", arg)
-			scc.Explain(
-				"Usually these substitution commands contain characters like '*' or",
-				"other shell metacharacters that might lead to lookup of matching",
-				"filenames and then expand to more than one word.")
+	if !G.Testing {
+		return
+	}
+
+	checkArg := func(arg string) {
+		if matches(arg, `"^[\"\'].*[\"\']$`) {
+			return
 		}
-		isSubst = cmdname == "${PAX}" && arg == "-s" || cmdname == "${SED}" && arg == "-e"
+
+		// Substitution commands that consist only of safe characters cannot
+		// have any side effects, therefore they don't need to be quoted.
+		if matches(arg, `^([\w,.]|\\[.])+$`) {
+			return
+		}
+
+		scc.Warnf("Substitution commands like %q should always be quoted.", arg)
+		scc.Explain(
+			"Usually these substitution commands contain characters like '*' or",
+			"other shell metacharacters that might lead to lookup of matching",
+			"filenames and then expand to more than one word.")
+	}
+
+	checkArgAfter := func(opt string) {
+		args := scc.strcmd.Args
+		for i, arg := range args {
+			if i > 0 && args[i-1] == opt {
+				checkArg(arg)
+			}
+		}
+	}
+
+	switch scc.strcmd.Name {
+	case "${PAX}", "pax":
+		checkArgAfter("-s")
+	case "${SED}", "sed":
+		checkArgAfter("-e")
 	}
 }
 

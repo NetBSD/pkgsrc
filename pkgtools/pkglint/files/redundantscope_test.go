@@ -730,9 +730,117 @@ func (s *Suite) Test_RedundantScope__variable_referencing_another_is_modified(c 
 		"NOTE: filename.mk:4: Definition of VAR is redundant because of line 2.")
 }
 
+func (s *Suite) Test_RedundantScope__incomplete_then_default(c *check.C) {
+	t := s.Init(c)
+
+	include, get := t.SetUpHierarchy()
+
+	include("including.mk",
+		".if ${OPSYS} == NetBSD",
+		"VAR=\tNetBSD",
+		".elif ${OPSYS} == FreeBSD",
+		"VAR=\tFreeBSD",
+		".endif",
+		"",
+		"VAR?=\tdefault")
+
+	mklines := get("including.mk")
+
+	NewRedundantScope().Check(mklines)
+
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_RedundantScope__complete_then_default(c *check.C) {
+	t := s.Init(c)
+
+	include, get := t.SetUpHierarchy()
+
+	include("including.mk",
+		".if ${OPSYS} == NetBSD",
+		"VAR=\tNetBSD",
+		".else",
+		"VAR=\tFreeBSD",
+		".endif",
+		"",
+		"VAR?=\tdefault")
+
+	mklines := get("including.mk")
+
+	NewRedundantScope().Check(mklines)
+
+	// TODO: Pkglint could know that the ?= is redundant because VAR is
+	//  definitely assigned.
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_RedundantScope__conditional_then_override(c *check.C) {
+	t := s.Init(c)
+
+	include, get := t.SetUpHierarchy()
+
+	include("including.mk",
+		".if ${OPSYS} == NetBSD",
+		"VAR=\tNetBSD",
+		".else",
+		"VAR=\tFreeBSD",
+		".endif",
+		"",
+		"VAR=\tdefault")
+
+	mklines := get("including.mk")
+
+	NewRedundantScope().Check(mklines)
+
+	// TODO: Pkglint could know that no matter which branch is taken,
+	//  the variable will be overwritten in the last line.
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_RedundantScope__set_then_conditional(c *check.C) {
+	t := s.Init(c)
+
+	include, get := t.SetUpHierarchy()
+
+	include("including.mk",
+		"VAR=\tdefault",
+		"",
+		".if ${OPSYS} == NetBSD",
+		"VAR=\tNetBSD",
+		".else",
+		"VAR=\tFreeBSD",
+		".endif")
+
+	mklines := get("including.mk")
+
+	NewRedundantScope().Check(mklines)
+
+	// TODO: Pkglint could know that no matter which branch is taken,
+	//  one of the branches will overwrite the assignment from line 1.
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_RedundantScope__branch_with_set_then_set(c *check.C) {
+	t := s.Init(c)
+
+	include, get := t.SetUpHierarchy()
+
+	include("including.mk",
+		".if ${OPSYS} == NetBSD",
+		"VAR=\tfirst",
+		"VAR=\tsecond",
+		".endif")
+
+	mklines := get("including.mk")
+
+	NewRedundantScope().Check(mklines)
+
+	// TODO: Pkglint could know that the second assignment overwrites the
+	//  first assignment since they are in the same basic block.
+	t.CheckOutputEmpty()
+}
+
 // FIXME: Continue the systematic redundancy tests.
-//
-// Tests where the variables are defined conditionally using .if, .else, .endif.
 //
 // Tests where the variables are defined in a .for loop that might not be
 // evaluated at all.

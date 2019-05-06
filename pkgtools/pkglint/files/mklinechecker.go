@@ -403,6 +403,9 @@ func (ck MkLineChecker) explainPermissions(varname string, vartype *Vartype, int
 }
 
 func (ck MkLineChecker) checkVarassignLeftRationale() {
+	if !G.Opts.WarnExtra {
+		return
+	}
 
 	isRationale := func(mkline MkLine) bool {
 		if mkline.IsVarassign() || mkline.IsCommentedVarassign() {

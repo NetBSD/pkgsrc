@@ -1445,3 +1445,32 @@ func (s *Suite) Test_Package_readMakefile__include_infrastructure(c *check.C) {
 		"~/category/package/Makefile:22: ",
 		"~/category/package/Makefile:23: .include \"../../mk/bsd.pkg.mk\"")
 }
+
+// As of April 2019, there are only a few files in the whole pkgsrc tree
+// that are called Makefile.*, except Makefile.common, which occurs more
+// often.
+//
+// Using the file extension for variants of that Makefile is confusing,
+// therefore they should be renamed to *.mk.
+func (s *Suite) Test_Package__Makefile_files(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("category/package/Makefile.common",
+		MkRcsID)
+	t.CreateFileLines("category/package/Makefile.orig",
+		MkRcsID)
+	t.CreateFileLines("category/package/Makefile.php",
+		MkRcsID)
+	t.CreateFileLines("category/package/ext.mk",
+		MkRcsID)
+	t.FinishSetUp()
+
+	G.Check(t.File("category/package"))
+
+	// No warning for the Makefile.orig since the package is not
+	// being imported at the moment; see Pkglint.checkReg.
+	t.CheckOutputLines(
+		"NOTE: ~/category/package/Makefile.php: " +
+			"Consider renaming \"Makefile.php\" to \"php.mk\".")
+}

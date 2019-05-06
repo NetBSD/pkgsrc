@@ -409,7 +409,8 @@ func (s *Suite) Test_ShellLineChecker_CheckShellCommandLine__dollar_without_vari
 
 	ck.CheckShellCommandLine("pax -rwpp -s /.*~$$//g . ${DESTDIR}${PREFIX}")
 
-	t.CheckOutputEmpty()
+	t.CheckOutputLines(
+		"WARN: filename.mk:1: Substitution commands like \"/.*~$$//g\" should always be quoted.")
 }
 
 func (s *Suite) Test_ShellLineChecker_CheckWord(c *check.C) {
@@ -1188,30 +1189,39 @@ func (s *Suite) Test_ShellProgramChecker_checkConditionalCd(c *check.C) {
 func (s *Suite) Test_SimpleCommandChecker_checkRegexReplace(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpTool("pax", "PAX", AtRunTime)
-	t.SetUpTool("sed", "SED", AtRunTime)
-	mklines := t.NewMkLines("Makefile",
-		MkRcsID,
-		"pre-configure:",
-		"\t${PAX} -s s,.*,, src dst",
-		"\tpax -s s,.*,, src dst",
-		"\t${SED} -e s,.*,, src dst",
-		"\tsed -e s,.*,, src dst",
-		"\tpax -s s,\\.orig,, src dst",
-		"\tsed -e s,a,b,g src dst")
+	test := func(cmd string, diagnostics ...string) {
+		t.SetUpTool("pax", "PAX", AtRunTime)
+		t.SetUpTool("sed", "SED", AtRunTime)
+		mklines := t.NewMkLines("Makefile",
+			MkRcsID,
+			"pre-configure:",
+			"\t"+cmd)
 
-	mklines.Check()
+		mklines.Check()
 
-	// FIXME: warn for "pax -s".
-	// FIXME: warn for "sed -e".
-	// TODO: don't warn for "pax .orig".
-	// TODO: don't warn for "s,a,b,g".
+		t.CheckOutput(diagnostics)
+	}
+
+	test("${PAX} -s s,.*,, src dst",
+		"WARN: Makefile:3: Substitution commands like \"s,.*,,\" should always be quoted.")
+
+	test("pax -s s,.*,, src dst",
+		"WARN: Makefile:3: Substitution commands like \"s,.*,,\" should always be quoted.")
+
+	test("${SED} -e s,.*,, src dst",
+		"WARN: Makefile:3: Substitution commands like \"s,.*,,\" should always be quoted.")
+
+	test("sed -e s,.*,, src dst",
+		"WARN: Makefile:3: Substitution commands like \"s,.*,,\" should always be quoted.")
+
+	test("pax -s s,\\.orig,, src dst",
+		nil...)
+
+	test("sed -e s,a,b,g src dst",
+		nil...)
+
 	// TODO: Merge the code with BtSedCommands.
 	// TODO: Finally, remove the G.Testing from the main code.
-	t.CheckOutputLines(
-		"WARN: Makefile:3: Substitution commands like \"s,.*,,\" should always be quoted.",
-		"WARN: Makefile:5: Substitution commands like \"s,.*,,\" should always be quoted.")
-
 }
 
 func (s *Suite) Test_ShellProgramChecker_checkSetE__simple_commands(c *check.C) {
