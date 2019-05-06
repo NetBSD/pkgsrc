@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2849 2019/04/28 18:47:13 adam Exp $
+# $NetBSD: Makefile,v 1.2850 2019/05/06 23:19:21 kamil Exp $
 #
 
 COMMENT=	Development utilities
@@ -1936,6 +1936,7 @@ SUBDIR+=	phpstorm-bin
 SUBDIR+=	physfs
 SUBDIR+=	picasm
 SUBDIR+=	picopb
+SUBDIR+=	picotrace
 SUBDIR+=	picp
 SUBDIR+=	picprg
 SUBDIR+=	pilrc
