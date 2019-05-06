@@ -2,7 +2,7 @@ picotrace enables syscall trace logging for the specified processes.
 
 The tracer uses the ptrace(2) system call to perform the tracing process.
 
-The picotrace program has been designd to ship bare functionality only,
+The picotrace program has been designed to ship bare functionality only,
 without pretty printing of data structures and interpreting passed arguments
 to syscalls.
 
