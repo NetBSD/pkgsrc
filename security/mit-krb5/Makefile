@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.99 2018/12/21 15:45:13 adam Exp $
+# $NetBSD: Makefile,v 1.100 2019/05/06 08:20:32 wiz Exp $
 
 DISTNAME=	krb5-1.16.2
 PKGNAME=	mit-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5/${PKGVERSION_NOREV:R}/
 
@@ -40,7 +41,7 @@ CONFIGURE_ARGS+=	--localstatedir=${MIT_KRB5_STATEDIR}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-dns-for-realm
-CONFIGURE_ARGS+=	--enable-kdc-replay-cache
+CONFIGURE_ARGS+=	--disable-kdc-lookaside-cache
 CONFIGURE_ARGS+=	--disable-thread-support
 CONFIGURE_ARGS+=	--without-tcl
 CONFIGURE_ARGS+=	--enable-pkgsrc-libtool
