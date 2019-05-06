@@ -1,9 +1,13 @@
-$NetBSD: patch-src_Makefile,v 1.1 2019/01/30 12:55:13 leot Exp $
+$NetBSD: patch-src_Makefile,v 1.2 2019/05/06 08:58:16 sjmulder Exp $
 
-Fix hardcoded prefix for macOS build.
+ - Fix hardcoded prefix for macOS build.
 
-Upstream PR:
-https://github.com/jmcnamara/libxlsxwriter/pull/210
+   PR: https://github.com/jmcnamara/libxlsxwriter/pull/210
+
+ - Use LDFLAGS when linking to make sure correct (builtin or not) zlib
+   is used.
+
+   PR: https://github.com/jmcnamara/libxlsxwriter/pull/224
 
 --- src/Makefile
 +++ src/Makefile
@@ -16,3 +20,21 @@ https://github.com/jmcnamara/libxlsxwriter/pull/210
  endif
  
  # Check for MinGW/MinGW64/Cygwin environments.
+@@ -130,7 +130,7 @@ ARCH = -m32
+ endif
+ 
+ $(LIBXLSXWRITER_SO) : $(SOBJS)
+-	$(Q)$(CC) $(SOFLAGS) $(ARCH) -o $@ $(MINIZIP_SO) $(TMPFILEPLUS_SO) $^ $(LIBS)
++	$(Q)$(CC) $(LDFLAGS) $(SOFLAGS) $(ARCH) -o $@ $(MINIZIP_SO) $(TMPFILEPLUS_SO) $^ $(LIBS)
+ 
+ # The test library.
+ $(LIBXLSXWRITER_TO) : $(TOBJS)
+@@ -144,7 +144,7 @@ test_compile : $(OBJS)
+ 	$(Q)$(CC) -I$(INC_DIR) $(CFLAGS) $(CXXFLAGS) -c $<
+ 
+ %.so : %.c $(HDRS)
+-	$(Q)$(CC) $(FPIC) -I$(INC_DIR) $(CFLAGS) $(CXXFLAGS) -c $< -o $@
++	$(Q)$(CC) $(FPIC) -I$(INC_DIR) $(LDFLAGS) $(CFLAGS) $(CXXFLAGS) -c $< -o $@
+ 
+ %.to : %.c $(HDRS)
+ 	$(Q)$(CC) -g -O3 -DTESTING -I$(INC_DIR) $(CFLAGS) $(CXXFLAGS) -c $< -o $@
