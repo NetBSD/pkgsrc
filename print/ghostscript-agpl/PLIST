@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2019/04/17 08:28:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2019/05/06 14:53:44 taca Exp $
 bin/dvipdf
 bin/eps2eps
 bin/gs
@@ -69,8 +69,8 @@ man/man1/ps2pdf14.1
 man/man1/ps2pdfwr.1
 man/man1/ps2ps.1
 share/doc/ghostscript/${PKGVERSION}/API.htm
-share/doc/ghostscript/${PKGVERSION}/COPYING
 share/doc/ghostscript/${PKGVERSION}/C-style.htm
+share/doc/ghostscript/${PKGVERSION}/COPYING
 share/doc/ghostscript/${PKGVERSION}/Commprod.htm
 share/doc/ghostscript/${PKGVERSION}/DLL.htm
 share/doc/ghostscript/${PKGVERSION}/Deprecated.htm
@@ -367,8 +367,6 @@ ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/gs_cmap.ps
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/gs_cspace.ps
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/gs_dbt_e.ps
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/gs_diskn.ps
-${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/gs_dpnxt.ps
-${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/gs_dps.ps
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/gs_dps1.ps
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/gs_dps2.ps
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/gs_dscp.ps
@@ -381,7 +379,6 @@ ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/gs_icc.ps
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/gs_il1_e.ps
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/gs_img.ps
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/gs_init.ps
-${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/gs_l2img.ps
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/gs_lev2.ps
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/gs_ll3.ps
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/gs_mex_e.ps
@@ -413,14 +410,18 @@ ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/SubstCID/CNS1-WMode
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/SubstCID/GB1-WMode
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/SubstCID/Japan1-WMode
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/SubstCID/Korea1-WMode
+${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/iccprofiles/a98.icc
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/iccprofiles/default_cmyk.icc
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/iccprofiles/default_gray.icc
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/iccprofiles/default_rgb.icc
+${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/iccprofiles/esrgb.icc
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/iccprofiles/gray_to_k.icc
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/iccprofiles/lab.icc
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/iccprofiles/ps_cmyk.icc
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/iccprofiles/ps_gray.icc
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/iccprofiles/ps_rgb.icc
+${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/iccprofiles/rommrgb.icc
+${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/iccprofiles/scrgb.icc
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/iccprofiles/sgray.icc
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/iccprofiles/srgb.icc
 share/ghostscript/${PKGVERSION}/lib/PDFA_def.ps
