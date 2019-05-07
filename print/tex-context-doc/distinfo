@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2018/05/06 02:16:29 markd Exp $
+$NetBSD: distinfo,v 1.11 2019/05/07 12:07:18 markd Exp $
 
-SHA1 (tex-context-47285/context.doc.tar.xz) = eafd77aaec27dcf1919c1992f0fcfb02659dc5ff
-RMD160 (tex-context-47285/context.doc.tar.xz) = 3e81067babdbca0a5239e98a650430e3acf1f840
-SHA512 (tex-context-47285/context.doc.tar.xz) = 1b73f54ec780dcc8ec80182df1a19d4047406a30c65deaea864daa4bd0307b1a0ba2b496fcbe1fd455b7b79c761e9543ec4b9a1d1898354a6570a700ebc5a043
-Size (tex-context-47285/context.doc.tar.xz) = 71398220 bytes
+SHA1 (tex-context-50112/context.doc.tar.xz) = 93145151117ab166fb761d472a759d5a0504ec3b
+RMD160 (tex-context-50112/context.doc.tar.xz) = 5665e64cfb06c8ea738d0721fc0750599830862c
+SHA512 (tex-context-50112/context.doc.tar.xz) = 59656734c9b818c10a871a92f9280560763bd78506727082b9b7432718c61757e1735cf85641f50531c4a51eaffe465c70b9746024bdd19ac24eccdd2c08b3dd
+Size (tex-context-50112/context.doc.tar.xz) = 71514064 bytes
