@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2019/04/08 15:48:31 adam Exp $
+# $NetBSD: Makefile,v 1.13 2019/05/07 08:50:36 adam Exp $
 
-DISTNAME=	certbot-0.33.1
+DISTNAME=	certbot-0.34.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/certbot/}
@@ -42,7 +42,7 @@ SUBST_STAGE.path=	pre-build
 SUBST_MESSAGE.path=	Fixing default paths
 SUBST_FILES.path+=	certbot/cert_manager.py
 SUBST_FILES.path+=	certbot/cli.py
-SUBST_FILES.path+=	certbot/compat.py
+SUBST_FILES.path+=	certbot/compat/misc.py
 SUBST_FILES.path+=	certbot/tests/cli_test.py
 SUBST_SED.path+=	-e 's,/etc/letsencrypt,${PKG_SYSCONFDIR},g'
 SUBST_SED.path+=	-e 's,/var/lib/letsencrypt,${VARBASE}/letsencrypt,g'
