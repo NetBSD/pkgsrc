@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:02:38 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/05/07 11:26:43 markd Exp $
 
-SHA1 (tex-present-25953/present.tar.xz) = b5dde1cd0e3f5c91afb538c69540ac8a394c787a
-RMD160 (tex-present-25953/present.tar.xz) = 2be29007aab9c8baf303fefe0812d735b0c111ca
-SHA512 (tex-present-25953/present.tar.xz) = d102b56b0473c6bdc64a32d15873243fd9942b3dc4ee4dfd27c1979593fff0b727862a486feb9940f96529a6977758ef8111b90175eb0e5b6f90b1f562921d8f
-Size (tex-present-25953/present.tar.xz) = 4348 bytes
+SHA1 (tex-present-50048/present.tar.xz) = e981dc1709bc6eca0805146c9d88758539a43684
+RMD160 (tex-present-50048/present.tar.xz) = 5202d9b0fb40da1da36bddfdd4e93a5024e74fbb
+SHA512 (tex-present-50048/present.tar.xz) = 4e24953d9c2f063f83604dc8a7e4bb00d83127ff6d2a53498cddf97e545c6e9e4665fcf995950e40ec7ec93e4eba403c5d3db06772d0dac86bc698c88b7d3efb
+Size (tex-present-50048/present.tar.xz) = 4364 bytes
