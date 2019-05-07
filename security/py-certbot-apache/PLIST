@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/04/08 15:48:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/05/07 08:50:36 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -47,6 +47,9 @@ ${PYSITELIB}/certbot_apache/override_darwin.pyo
 ${PYSITELIB}/certbot_apache/override_debian.py
 ${PYSITELIB}/certbot_apache/override_debian.pyc
 ${PYSITELIB}/certbot_apache/override_debian.pyo
+${PYSITELIB}/certbot_apache/override_fedora.py
+${PYSITELIB}/certbot_apache/override_fedora.pyc
+${PYSITELIB}/certbot_apache/override_fedora.pyo
 ${PYSITELIB}/certbot_apache/override_gentoo.py
 ${PYSITELIB}/certbot_apache/override_gentoo.pyc
 ${PYSITELIB}/certbot_apache/override_gentoo.pyo
@@ -86,6 +89,9 @@ ${PYSITELIB}/certbot_apache/tests/display_ops_test.pyo
 ${PYSITELIB}/certbot_apache/tests/entrypoint_test.py
 ${PYSITELIB}/certbot_apache/tests/entrypoint_test.pyc
 ${PYSITELIB}/certbot_apache/tests/entrypoint_test.pyo
+${PYSITELIB}/certbot_apache/tests/fedora_test.py
+${PYSITELIB}/certbot_apache/tests/fedora_test.pyc
+${PYSITELIB}/certbot_apache/tests/fedora_test.pyo
 ${PYSITELIB}/certbot_apache/tests/gentoo_test.py
 ${PYSITELIB}/certbot_apache/tests/gentoo_test.pyc
 ${PYSITELIB}/certbot_apache/tests/gentoo_test.pyo
