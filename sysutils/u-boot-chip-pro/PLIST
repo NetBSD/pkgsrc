@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2017/11/06 22:13:36 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/05/07 14:06:23 thorpej Exp $
+share/u-boot/chip-pro/installboot.plist
 share/u-boot/chip-pro/u-boot-sunxi-with-spl.bin
