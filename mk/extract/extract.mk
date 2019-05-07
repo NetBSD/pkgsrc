@@ -1,4 +1,4 @@
-# $NetBSD: extract.mk,v 1.37 2014/03/02 09:45:42 obache Exp $
+# $NetBSD: extract.mk,v 1.38 2019/05/07 19:36:44 rillig Exp $
 #
 # The following variables may be set by the package Makefile and
 # specify how extraction happens:
@@ -71,7 +71,7 @@ _EXTRACT_TARGETS+=	release-extract-lock
 
 .PHONY: extract
 .if !target(extract)
-.  if exists(${_COOKIE.extract})
+.  if exists(${_COOKIE.extract}) && !${_CLEANING}
 extract:
 	@${DO_NADA}
 .  elif defined(_PKGSRC_BARRIER)
@@ -85,7 +85,7 @@ extract: barrier
 acquire-extract-lock: acquire-lock
 release-extract-lock: release-lock
 
-.if exists(${_COOKIE.extract})
+.if exists(${_COOKIE.extract}) && !${_CLEANING}
 ${_COOKIE.extract}:
 	@${DO_NADA}
 .else

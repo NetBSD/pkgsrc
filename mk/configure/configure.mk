@@ -1,4 +1,4 @@
-# $NetBSD: configure.mk,v 1.28 2019/04/28 13:18:18 rillig Exp $
+# $NetBSD: configure.mk,v 1.29 2019/05/07 19:36:44 rillig Exp $
 #
 # = Package-settable variables =
 #
@@ -99,7 +99,7 @@ _CONFIGURE_TARGETS+=	release-configure-lock
 
 .PHONY: configure
 .if !target(configure)
-.  if exists(${_COOKIE.configure})
+.  if exists(${_COOKIE.configure}) && !${_CLEANING}
 configure:
 	@${DO_NADA}
 .  elif defined(_PKGSRC_BARRIER)
@@ -113,7 +113,7 @@ configure: barrier
 acquire-configure-lock: acquire-lock
 release-configure-lock: release-lock
 
-.if exists(${_COOKIE.configure})
+.if exists(${_COOKIE.configure}) && !${_CLEANING}
 ${_COOKIE.configure}:
 	@${DO_NADA}
 .else

@@ -1,4 +1,4 @@
-# $NetBSD: test.mk,v 1.20 2018/11/30 18:38:19 rillig Exp $
+# $NetBSD: test.mk,v 1.21 2019/05/07 19:36:43 rillig Exp $
 #
 # After the "build" phase, many packages provide some sort of self-test
 # that can be run on the not-yet installed package. To enable these
@@ -67,7 +67,7 @@ _TEST_TARGETS+=	release-test-lock
 
 .PHONY: test
 .if !target(test)
-.  if exists(${_COOKIE.test})
+.  if exists(${_COOKIE.test}) && !${_CLEANING}
 test:
 	@${DO_NADA}
 .  elif defined(_PKGSRC_BARRIER)
@@ -81,7 +81,7 @@ test: barrier
 acquire-test-lock: acquire-lock
 release-test-lock: release-lock
 
-.if exists(${_COOKIE.test})
+.if exists(${_COOKIE.test}) && !${_CLEANING}
 ${_COOKIE.test}:
 	@${DO_NADA}
 .else

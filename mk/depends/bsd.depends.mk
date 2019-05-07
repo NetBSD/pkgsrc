@@ -1,4 +1,4 @@
-# $NetBSD: bsd.depends.mk,v 1.29 2019/05/04 11:45:14 leot Exp $
+# $NetBSD: bsd.depends.mk,v 1.30 2019/05/07 19:36:44 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to dependencies.
@@ -72,7 +72,7 @@ DEPENDS_TARGET=		reinstall
 .if ${SKIP_DEPENDS:M[Nn][Oo]} != ""
 .  include "depends.mk"
 .elif !target(depends)
-.  if exists(${_COOKIE.depends})
+.  if exists(${_COOKIE.depends}) && !${_CLEANING}
 depends:
 	@${DO_NADA}
 .  else
