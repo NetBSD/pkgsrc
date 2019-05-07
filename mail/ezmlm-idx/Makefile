@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2019/04/03 00:32:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.50 2019/05/07 14:24:03 schmonz Exp $
 #
 
 DISTNAME=		ezmlm-idx-${IDXVERSION}
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		mail
 IDXVERSION=		7.2.2
 MASTER_SITES=		http://untroubled.org/ezmlm/archive/${IDXVERSION}/
@@ -54,6 +54,15 @@ INSTALLATION_DIRS+=	share/doc/${PKGBASE} share/examples/${PKGBASE}
 
 post-extract:
 	${GREP} -v '^#' < cf-files.mk | ${CUT} -f2 | ${SED} -e 's|^|share/examples/ezmlm-idx/|g' > ${WRKDIR}/PLIST.idxcf
+
+.include "../../mk/bsd.prefs.mk"
+
+post-build:
+.	if ${OPSYS} == Darwin
+	cd ${WRKSRC} && for lib in *.so; do \
+	  install_name_tool -id ${PREFIX}/lib/$${lib} $${lib}; \
+	done
+.	endif
 
 do-test:
 	cd ${WRKSRC} && ./ezmlm-test
