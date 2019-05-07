@@ -1,4 +1,4 @@
-# $NetBSD: bsd.install.mk,v 1.16 2016/04/10 15:58:02 joerg Exp $
+# $NetBSD: bsd.install.mk,v 1.17 2019/05/07 19:36:44 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to installing packages.
@@ -38,7 +38,7 @@ install: package-install
 .if !defined(NO_INSTALL)
 .  include "install.mk"
 .else
-.  if exists(${_COOKIE.install})
+.  if exists(${_COOKIE.install}) && !${_CLEANING}
 stage-install:
 	@${DO_NADA}
 .  elif defined(_PKGSRC_BARRIER)
