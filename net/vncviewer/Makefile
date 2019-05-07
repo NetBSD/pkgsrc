@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2018/12/09 21:05:34 adam Exp $
+# $NetBSD: Makefile,v 1.35 2019/05/07 11:51:43 leot Exp $
 
 DISTNAME=		vnc-4_1_3-unixsrc
 PKGNAME=		vncviewer-4.1.3
@@ -8,6 +8,7 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.realvnc.com/
 COMMENT=		Viewer for remote X and Win32 VNC servers
+LICENSE=		gnu-gpl-v2
 
 CONFLICTS=		tightvnc-[0-9]* tightvncviewer-[0-9]*
 
