@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.25 2019/03/17 03:59:11 dholland Exp $
+# $NetBSD: build.mk,v 1.26 2019/05/07 19:36:43 rillig Exp $
 #
 # This file defines what happens in the build phase, excluding the
 # self-test, which is defined in test.mk.
@@ -77,7 +77,7 @@ _BUILD_TARGETS+=	pkginstall
 
 .PHONY: build
 .if !target(build)
-.  if exists(${_COOKIE.build})
+.  if exists(${_COOKIE.build}) && !${_CLEANING}
 build:
 	@${DO_NADA}
 .  elif defined(_PKGSRC_BARRIER)
@@ -91,7 +91,7 @@ build: barrier
 acquire-build-lock: acquire-lock
 release-build-lock: release-lock
 
-.if exists(${_COOKIE.build})
+.if exists(${_COOKIE.build}) && !${_CLEANING}
 ${_COOKIE.build}:
 	@${DO_NADA}
 .else
