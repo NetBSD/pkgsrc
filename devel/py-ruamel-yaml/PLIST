@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/10/14 16:26:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/05/07 09:29:38 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -10,6 +10,9 @@ ${PYSITELIB}/_ruamel_yaml.so
 ${PYSITELIB}/ruamel/yaml/__init__.py
 ${PYSITELIB}/ruamel/yaml/__init__.pyc
 ${PYSITELIB}/ruamel/yaml/__init__.pyo
+${PYSITELIB}/ruamel/yaml/anchor.py
+${PYSITELIB}/ruamel/yaml/anchor.pyc
+${PYSITELIB}/ruamel/yaml/anchor.pyo
 ${PYSITELIB}/ruamel/yaml/comments.py
 ${PYSITELIB}/ruamel/yaml/comments.pyc
 ${PYSITELIB}/ruamel/yaml/comments.pyo
@@ -28,18 +31,6 @@ ${PYSITELIB}/ruamel/yaml/constructor.pyo
 ${PYSITELIB}/ruamel/yaml/cyaml.py
 ${PYSITELIB}/ruamel/yaml/cyaml.pyc
 ${PYSITELIB}/ruamel/yaml/cyaml.pyo
-${PYSITELIB}/ruamel/yaml/data/__init__.py
-${PYSITELIB}/ruamel/yaml/data/__init__.pyc
-${PYSITELIB}/ruamel/yaml/data/__init__.pyo
-${PYSITELIB}/ruamel/yaml/data/__main__.py
-${PYSITELIB}/ruamel/yaml/data/__main__.pyc
-${PYSITELIB}/ruamel/yaml/data/__main__.pyo
-${PYSITELIB}/ruamel/yaml/data/data.py
-${PYSITELIB}/ruamel/yaml/data/data.pyc
-${PYSITELIB}/ruamel/yaml/data/data.pyo
-${PYSITELIB}/ruamel/yaml/data/setup.py
-${PYSITELIB}/ruamel/yaml/data/setup.pyc
-${PYSITELIB}/ruamel/yaml/data/setup.pyo
 ${PYSITELIB}/ruamel/yaml/dumper.py
 ${PYSITELIB}/ruamel/yaml/dumper.pyc
 ${PYSITELIB}/ruamel/yaml/dumper.pyo
@@ -73,6 +64,9 @@ ${PYSITELIB}/ruamel/yaml/representer.pyo
 ${PYSITELIB}/ruamel/yaml/resolver.py
 ${PYSITELIB}/ruamel/yaml/resolver.pyc
 ${PYSITELIB}/ruamel/yaml/resolver.pyo
+${PYSITELIB}/ruamel/yaml/scalarbool.py
+${PYSITELIB}/ruamel/yaml/scalarbool.pyc
+${PYSITELIB}/ruamel/yaml/scalarbool.pyo
 ${PYSITELIB}/ruamel/yaml/scalarfloat.py
 ${PYSITELIB}/ruamel/yaml/scalarfloat.pyc
 ${PYSITELIB}/ruamel/yaml/scalarfloat.pyo
