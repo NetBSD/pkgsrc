@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.58 2019/03/22 16:17:50 rillig Exp $
+# $NetBSD: bsd.tools.mk,v 1.59 2019/05/07 19:36:44 rillig Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -62,7 +62,7 @@ _TOOLS_TARGETS+=	release-tools-lock
 
 .PHONY: tools
 .if !target(tools)
-.  if exists(${_COOKIE.tools})
+.  if exists(${_COOKIE.tools}) && !${_CLEANING}
 tools:
 	@${DO_NADA}
 .  elif defined(_PKGSRC_BARRIER)
@@ -76,7 +76,7 @@ tools: barrier
 acquire-tools-lock: acquire-lock
 release-tools-lock: release-lock
 
-.if exists(${_COOKIE.tools})
+.if exists(${_COOKIE.tools}) && !${_CLEANING}
 ${_COOKIE.tools}:
 	@${DO_NADA}
 .else

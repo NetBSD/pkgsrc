@@ -1,4 +1,4 @@
-# $NetBSD: patch.mk,v 1.18 2009/03/17 21:43:54 rillig Exp $
+# $NetBSD: patch.mk,v 1.19 2019/05/07 19:36:44 rillig Exp $
 #
 # The following variables may be set in a package Makefile and control
 # how pkgsrc patches are applied.
@@ -66,7 +66,7 @@ _PATCH_TARGETS+=	release-patch-lock
 
 .PHONY: patch
 .if !target(patch)
-.  if exists(${_COOKIE.patch})
+.  if exists(${_COOKIE.patch}) && !${_CLEANING}
 patch:
 	@${DO_NADA}
 .  elif defined(_PKGSRC_BARRIER)
@@ -80,7 +80,7 @@ patch: barrier
 acquire-patch-lock: acquire-lock
 release-patch-lock: release-lock
 
-.if exists(${_COOKIE.patch})
+.if exists(${_COOKIE.patch}) && !${_CLEANING}
 ${_COOKIE.patch}:
 	@${DO_NADA}
 .else

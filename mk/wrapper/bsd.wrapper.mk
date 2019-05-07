@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.100 2018/08/22 20:48:37 maya Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.101 2019/05/07 19:36:44 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -54,7 +54,7 @@ PREPEND_PATH+=		${WRAPPER_BINDIR}
 ###
 ### BEGIN: after the barrier
 ###
-.if exists(${_COOKIE.barrier})
+.if exists(${_COOKIE.barrier}) && !${_CLEANING}
 
 _WRAPPER_DEBUG?=	no
 CONFIGURE_ENV+=		WRAPPER_DEBUG=${_WRAPPER_DEBUG:Q}
@@ -708,7 +708,7 @@ _COOKIE.wrapper=	${WRKDIR}/.wrapper_done
 
 .PHONY: wrapper
 .if !target(wrapper)
-.  if exists(${_COOKIE.wrapper})
+.  if exists(${_COOKIE.wrapper}) && !${_CLEANING}
 wrapper:
 	@${DO_NADA}
 .  elif defined(_PKGSRC_BARRIER)
@@ -722,7 +722,7 @@ wrapper: barrier
 acquire-wrapper-lock: acquire-lock
 release-wrapper-lock: release-lock
 
-.if exists(${_COOKIE.wrapper})
+.if exists(${_COOKIE.wrapper}) && !${_CLEANING}
 ${_COOKIE.wrapper}:
 	@${DO_NADA}
 .else

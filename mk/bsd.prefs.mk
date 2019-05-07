@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.403 2019/01/06 12:51:45 bsiegert Exp $
+# $NetBSD: bsd.prefs.mk,v 1.404 2019/05/07 19:36:43 rillig Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -60,6 +60,11 @@ MAKEFLAGS+=	_MAKE=${_MAKE:Q}
 .  endif
 .endif
 MAKE:=	${_MAKE}
+
+# Whether bmake has been called with one of the "clean" targets followed by
+# another non-cleaning target like "depends" or "build". This is to make
+# the call "bmake clean depends" equivalent to "bmake clean && bmake depends".
+_CLEANING:=	${"${.TARGETS:C,( [[:alnum:]-]*clean[[:alnum:]-]*)+$,,W:M*clean*}":?yes:}
 
 .if exists(/usr/bin/uname)
 UNAME=/usr/bin/uname

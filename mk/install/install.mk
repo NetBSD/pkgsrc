@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.75 2018/11/12 14:22:58 jperkin Exp $
+# $NetBSD: install.mk,v 1.76 2019/05/07 19:36:44 rillig Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -77,7 +77,7 @@ _INSTALL_TARGETS+=	release-install-lock
 
 .PHONY: stage-install
 .if !target(stage-install)
-.  if exists(${_COOKIE.install})
+.  if exists(${_COOKIE.install}) && !${_CLEANING}
 stage-install:
 	@${DO_NADA}
 .  elif defined(_PKGSRC_BARRIER)
@@ -91,7 +91,7 @@ stage-install: barrier
 acquire-install-lock: acquire-lock
 release-install-lock: release-lock
 
-.if exists(${_COOKIE.install})
+.if exists(${_COOKIE.install}) && !${_CLEANING}
 ${_COOKIE.install}:
 	@${DO_NADA}
 .else
