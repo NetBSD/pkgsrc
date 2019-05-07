@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/02/15 09:42:19 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/05/07 22:36:39 leot Exp $
 
 DISTNAME=	xcursor-themes-1.0.6
 CATEGORIES=	x11 graphics
@@ -14,6 +14,8 @@ BUILD_DEPENDS+=	xcursorgen>=1.0.5:../../x11/xcursorgen
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c
 GNU_CONFIGURE=	yes
+
+CONFIGURE_ARGS+=	--with-cursordir=${PREFIX}/share/icons
 
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
