@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2017/10/23 01:14:12 markd Exp $
+$NetBSD: distinfo,v 1.10 2019/05/07 12:35:09 markd Exp $
 
-SHA1 (tex-texinfo-45305/texinfo.tar.xz) = ee1dd366b9f92a900ab2211b8af5aa1ac1034bca
-RMD160 (tex-texinfo-45305/texinfo.tar.xz) = d173492ff3c4ee9d082eed2e26f51cad93c2ffed
-SHA512 (tex-texinfo-45305/texinfo.tar.xz) = 066b5ae563e44c49de4a9387c7e20dede229fbf75194bf3996b2820d98121d54427281250d49aa530718eae1168fe4f59168cdda97b016c269ad85e838c7ed40
-Size (tex-texinfo-45305/texinfo.tar.xz) = 99252 bytes
+SHA1 (tex-texinfo-50139/texinfo.tar.xz) = 5ff7adbed6701f02f4c04da9aadaef98cd8f31a5
+RMD160 (tex-texinfo-50139/texinfo.tar.xz) = 7e1cfc355f79ab6435dc1cc239aee14634703632
+SHA512 (tex-texinfo-50139/texinfo.tar.xz) = 7c3d517df29ea472e8ce627bec761568538a356f2c1e3b558604bb6f4e38aa53e0090ef4dd4cfe3442f1e54901d77d09515156922c99f678d617198822bd23d3
+Size (tex-texinfo-50139/texinfo.tar.xz) = 99036 bytes
