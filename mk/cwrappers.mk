@@ -1,4 +1,4 @@
-# $NetBSD: cwrappers.mk,v 1.30 2017/11/08 03:52:50 khorben Exp $
+# $NetBSD: cwrappers.mk,v 1.31 2019/05/07 19:36:43 rillig Exp $
 #
 # This Makefile fragment implements integration of pkgtools/cwrappers.
 
@@ -101,7 +101,7 @@ _COOKIE.wrapper=	${WRKDIR}/.wrapper_done
 
 .PHONY: wrapper
 .if !target(wrapper)
-.  if exists(${_COOKIE.wrapper})
+.  if exists(${_COOKIE.wrapper}) && !${_CLEANING}
 wrapper:
 	@${DO_NADA}
 .  elif defined(_PKGSRC_BARRIER)
@@ -115,7 +115,7 @@ wrapper: barrier
 acquire-wrapper-lock: acquire-lock
 release-wrapper-lock: release-lock
 
-.if exists(${_COOKIE.wrapper})
+.if exists(${_COOKIE.wrapper}) && !${_CLEANING}
 ${_COOKIE.wrapper}:
 	@${DO_NADA}
 .else
