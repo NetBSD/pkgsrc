@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/05/13 11:29:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/05/07 12:21:20 markd Exp $
 man/man1/luatex.1
 man/man1/texlua.1
 man/man1/texluac.1
@@ -7,6 +7,7 @@ share/texmf-dist/doc/luatex/base/luatex-callbacks.tex
 share/texmf-dist/doc/luatex/base/luatex-contents.tex
 share/texmf-dist/doc/luatex/base/luatex-enhancements.tex
 share/texmf-dist/doc/luatex/base/luatex-export-titlepage.tex
+share/texmf-dist/doc/luatex/base/luatex-firstpage.tex
 share/texmf-dist/doc/luatex/base/luatex-fontloader.tex
 share/texmf-dist/doc/luatex/base/luatex-fonts.tex
 share/texmf-dist/doc/luatex/base/luatex-graphics.tex
@@ -17,6 +18,9 @@ share/texmf-dist/doc/luatex/base/luatex-lua.tex
 share/texmf-dist/doc/luatex/base/luatex-math.tex
 share/texmf-dist/doc/luatex/base/luatex-modifications.tex
 share/texmf-dist/doc/luatex/base/luatex-nodes.tex
+share/texmf-dist/doc/luatex/base/luatex-preamble.tex
+share/texmf-dist/doc/luatex/base/luatex-registers.tex
+share/texmf-dist/doc/luatex/base/luatex-statistics.tex
 share/texmf-dist/doc/luatex/base/luatex-style.tex
 share/texmf-dist/doc/luatex/base/luatex-tex.tex
 share/texmf-dist/doc/luatex/base/luatex-titlepage.tex
