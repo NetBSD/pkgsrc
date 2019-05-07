@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2019/02/04 05:45:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2019/05/07 11:34:55 markd Exp $
 share/texmf-dist/scripts/tex4ht/htcopy.pl
 share/texmf-dist/scripts/tex4ht/htmove.pl
 share/texmf-dist/tex/generic/tex4ht/2up.4ht
@@ -85,6 +85,7 @@ share/texmf-dist/tex/generic/tex4ht/cp852.4ht
 share/texmf-dist/tex/generic/tex4ht/cp862.4ht
 share/texmf-dist/tex/generic/tex4ht/cp865.4ht
 share/texmf-dist/tex/generic/tex4ht/croatian.4ht
+share/texmf-dist/tex/generic/tex4ht/csquotes.4ht
 share/texmf-dist/tex/generic/tex4ht/curve.4ht
 share/texmf-dist/tex/generic/tex4ht/czech.4ht
 share/texmf-dist/tex/generic/tex4ht/danish.4ht
