@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2006 2019/05/07 08:07:17 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2007 2019/05/07 08:47:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3228,3 +3228,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-configparser to 3.7.4 [adam 2019-05-07]
 	Updated net/py-lexicon to 3.2.4 [adam 2019-05-07]
 	Updated www/py-flask-caching to 1.7.1 [adam 2019-05-07]
+	Updated net/py-botocore to 1.12.143 [adam 2019-05-07]
+	Updated net/py-boto3 to 1.9.143 [adam 2019-05-07]
+	Updated net/py-awscli to 1.16.153 [adam 2019-05-07]
