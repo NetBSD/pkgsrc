@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2019/04/08 15:48:30 adam Exp $
+# $NetBSD: Makefile,v 1.17 2019/05/07 08:50:36 adam Exp $
 
-DISTNAME=	acme-0.33.1
+DISTNAME=	acme-0.34.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/acme/}
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-requests>2.10:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=0.3.0:../../devel/py-requests-toolbelt
 DEPENDS+=	${PYPKGPREFIX}-rfc3339-[0-9]*:../../time/py-rfc3339
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-six>1.9.0:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
