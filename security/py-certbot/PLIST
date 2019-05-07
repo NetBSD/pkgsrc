@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2019/04/08 15:48:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2019/05/07 08:50:36 adam Exp $
 bin/certbot-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -33,6 +33,9 @@ ${PYSITELIB}/certbot/compat/__init__.pyo
 ${PYSITELIB}/certbot/compat/misc.py
 ${PYSITELIB}/certbot/compat/misc.pyc
 ${PYSITELIB}/certbot/compat/misc.pyo
+${PYSITELIB}/certbot/compat/os.py
+${PYSITELIB}/certbot/compat/os.pyc
+${PYSITELIB}/certbot/compat/os.pyo
 ${PYSITELIB}/certbot/configuration.py
 ${PYSITELIB}/certbot/configuration.pyc
 ${PYSITELIB}/certbot/configuration.pyo
@@ -205,9 +208,12 @@ ${PYSITELIB}/certbot/tests/cli_test.pyo
 ${PYSITELIB}/certbot/tests/client_test.py
 ${PYSITELIB}/certbot/tests/client_test.pyc
 ${PYSITELIB}/certbot/tests/client_test.pyo
-${PYSITELIB}/certbot/tests/compat_test.py
-${PYSITELIB}/certbot/tests/compat_test.pyc
-${PYSITELIB}/certbot/tests/compat_test.pyo
+${PYSITELIB}/certbot/tests/compat/__init__.py
+${PYSITELIB}/certbot/tests/compat/__init__.pyc
+${PYSITELIB}/certbot/tests/compat/__init__.pyo
+${PYSITELIB}/certbot/tests/compat/compat_test.py
+${PYSITELIB}/certbot/tests/compat/compat_test.pyc
+${PYSITELIB}/certbot/tests/compat/compat_test.pyo
 ${PYSITELIB}/certbot/tests/configuration_test.py
 ${PYSITELIB}/certbot/tests/configuration_test.pyc
 ${PYSITELIB}/certbot/tests/configuration_test.pyo
