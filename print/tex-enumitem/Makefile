@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2019/01/30 08:32:29 markd Exp $
+# $NetBSD: Makefile,v 1.8 2019/05/07 10:41:24 markd Exp $
 
 DISTNAME=	enumitem
-PKGNAME=	tex-${DISTNAME}-3.7
-TEXLIVE_REV=	49702
+PKGNAME=	tex-${DISTNAME}-3.8
+TEXLIVE_REV=	49937
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/enumitem
