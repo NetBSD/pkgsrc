@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2019/04/08 15:48:31 adam Exp $
+# $NetBSD: Makefile,v 1.4 2019/05/07 08:50:36 adam Exp $
 
-DISTNAME=	certbot-apache-0.33.1
+DISTNAME=	certbot-apache-0.34.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/certbot-apache/}
@@ -10,9 +10,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/certbot/certbot
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-acme>=0.25.0:../../security/py-acme
+DEPENDS+=	${PYPKGPREFIX}-acme>=0.29.0:../../security/py-acme
 DEPENDS+=	${PYPKGPREFIX}-augeas-[0-9]*:../../sysutils/py-augeas
-DEPENDS+=	${PYPKGPREFIX}-certbot>=0.26.0:../../security/py-certbot
+DEPENDS+=	${PYPKGPREFIX}-certbot>=0.34.0:../../security/py-certbot
 DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 DEPENDS+=	${PYPKGPREFIX}-pyparsing>=1.5.5:../../devel/py-pyparsing
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
