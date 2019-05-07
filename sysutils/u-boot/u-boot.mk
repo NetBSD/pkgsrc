@@ -1,4 +1,4 @@
-# $NetBSD: u-boot.mk,v 1.14 2019/04/12 07:08:15 skrll Exp $
+# $NetBSD: u-boot.mk,v 1.15 2019/05/07 14:05:36 thorpej Exp $
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
@@ -55,5 +55,9 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${bin} \
 	    ${DESTDIR}${PREFIX}/share/u-boot/${UBOOT_TARGET}
 .endfor
+.if defined(UBOOT_INSTALLBOOT_PLIST)
+	${INSTALL_DATA} ${.CURDIR}/${UBOOT_INSTALLBOOT_PLIST} \
+	    ${DESTDIR}${PREFIX}/share/u-boot/${UBOOT_TARGET}/installboot.plist
+.endif
 
 .include "../../lang/python/tool.mk"
