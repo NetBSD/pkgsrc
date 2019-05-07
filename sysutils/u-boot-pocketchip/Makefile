@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2019/04/26 08:32:30 skrll Exp $
+# $NetBSD: Makefile,v 1.8 2019/05/07 14:06:25 thorpej Exp $
 
 UBOOT_TARGET=		pocketchip
 UBOOT_CONFIG=		CHIP_defconfig
 UBOOT_BIN=		u-boot-sunxi-with-spl.bin
 
-PKGREVISION=		3
+UBOOT_INSTALLBOOT_PLIST=installboot.plist
+
+PKGREVISION=		4
 
 UBOOT_OPTIONS+=		CONFIG_I2C1_ENABLE=y
 UBOOT_OPTIONS+=		CONFIG_AXP_GPIO=y
