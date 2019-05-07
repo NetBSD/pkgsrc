@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2019/04/26 13:14:20 maya Exp $
+# $NetBSD: Makefile,v 1.25 2019/05/07 14:26:06 hauke Exp $
 
 PYBLOXSOMVERS=	1.5.3
 DISTNAME=	pyblosxom-${PYBLOXSOMVERS}
 PKGNAME=	${PYPKGPREFIX}-blosxom-${PYBLOXSOMVERS}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://pyblosxom.github.com/download/
 
@@ -23,11 +23,11 @@ DOCFILES=       AUTHORS INSTALL LICENSE README.rst UPGRADE WHATSNEW
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 
-INSTALLATION_DIRS=	${DOC_SUBDIR}
+INSTALLATION_DIRS=		${DOC_SUBDIR}
 
-REPLACE_PYTHON=		Pyblosxom/data/pyblosxom.cgi
+REPLACE_PYTHON=			Pyblosxom/data/pyblosxom.cgi
 
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37
+PYTHON_VERSIONS_ACCEPTED=	 27
 
 pre-configure:
 	cd ${WRKSRC} && ${FIND} Pyblosxom -type f -name '*.orig' \
