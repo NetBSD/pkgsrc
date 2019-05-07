@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2019/04/08 15:48:31 adam Exp $
+# $NetBSD: Makefile,v 1.5 2019/05/07 08:50:36 adam Exp $
 
-DISTNAME=	certbot-dns-ovh-0.33.1
+DISTNAME=	certbot-dns-ovh-0.34.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/certbot-dns-ovh/}
@@ -11,8 +11,8 @@ COMMENT=	OVH DNS Authenticator plugin for Certbot
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-acme>=0.31.0:../../security/py-acme
-DEPENDS+=	${PYPKGPREFIX}-certbot>=0.31.0:../../security/py-certbot
-DEPENDS+=	${PYPKGPREFIX}-lexicon-[0-9]*:../../net/py-lexicon
+DEPENDS+=	${PYPKGPREFIX}-certbot>=0.34.0:../../security/py-certbot
+DEPENDS+=	${PYPKGPREFIX}-lexicon>=2.7.14:../../net/py-lexicon
 DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
