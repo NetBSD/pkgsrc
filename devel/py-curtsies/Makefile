@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/02/26 08:38:53 adam Exp $
+# $NetBSD: Makefile,v 1.3 2019/05/07 09:42:33 adam Exp $
 
 DISTNAME=	curtsies-0.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,8 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-blessings-[0-9]*:../../devel/py-blessings
 DEPENDS+=	${PYPKGPREFIX}-wcwidth-[0-9]*:../../devel/py-wcwidth
 
 .include "../../lang/python/pyversion.mk"
-
-.if "${PYPKGPREFIX}" == "py27"
+.if ${_PYTHON_VERSION} == 27
 DEPENDS+=	${PYPKGPREFIX}-typing-[0-9]*:../../devel/py-typing
 .endif
 
