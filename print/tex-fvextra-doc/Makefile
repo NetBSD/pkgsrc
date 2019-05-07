@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2018/01/18 10:29:25 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/05/07 10:28:55 markd Exp $
 
 DISTNAME=	fvextra.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.3.1
-TEXLIVE_REV=	44787
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.4
+TEXLIVE_REV=	49947
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/fvextra
