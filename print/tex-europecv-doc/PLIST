@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2019/01/26 10:27:17 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/05/07 10:35:48 markd Exp $
 share/texmf-dist/doc/latex/europecv/CHANGELOG.rst
+share/texmf-dist/doc/latex/europecv/CONTRIBUTING.md
 share/texmf-dist/doc/latex/europecv/LICENSE
 share/texmf-dist/doc/latex/europecv/README.md
 share/texmf-dist/doc/latex/europecv/europecv.pdf
