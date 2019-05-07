@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.264 2019/05/03 13:26:34 jperkin Exp $
+# $NetBSD: bootstrap,v 1.265 2019/05/07 19:54:46 rillig Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -363,6 +363,7 @@ checkarg_no_symlink_path()
 	_dir=$1
 	while [ ! -d "$_dir" ]; do
 		_dir=${_dir%/*}
+		[ "$_dir" ] || _dir="/"
 	done
 
 	_realdir=`cd "$_dir" && exec pwd`
