@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.26 2016/07/14 14:43:55 leot Exp $
+# $NetBSD: package.mk,v 1.27 2019/05/07 19:36:44 rillig Exp $
 #
 # This file provides the code for the "package" phase.
 #
@@ -18,7 +18,7 @@ _PACKAGE_TARGETS+=	release-package-lock
 
 .PHONY: package
 .if !target(package)
-.  if exists(${_COOKIE.package})
+.  if exists(${_COOKIE.package}) && !${_CLEANING}
 package:
 	@${DO_NADA}
 .  elif defined(_PKGSRC_BARRIER)
@@ -32,7 +32,7 @@ package: barrier
 acquire-package-lock: acquire-lock
 release-package-lock: release-lock
 
-.if exists(${_COOKIE.package})
+.if exists(${_COOKIE.package}) && !${_CLEANING}
 ${_COOKIE.package}:
 	@${DO_NADA}
 .else
