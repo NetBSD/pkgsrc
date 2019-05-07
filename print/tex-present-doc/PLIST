@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 14:09:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/05/07 11:26:44 markd Exp $
+share/texmf-dist/doc/plain/present/HowToTalkTeX.lp
 share/texmf-dist/doc/plain/present/HowToTalkTeX.pdf
 share/texmf-dist/doc/plain/present/HowToTalkTeX.tex
 share/texmf-dist/doc/plain/present/Pfeil1.pdf
