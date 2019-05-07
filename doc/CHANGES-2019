@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2007 2019/05/07 08:47:13 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2008 2019/05/07 08:52:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3231,3 +3231,13 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/py-botocore to 1.12.143 [adam 2019-05-07]
 	Updated net/py-boto3 to 1.9.143 [adam 2019-05-07]
 	Updated net/py-awscli to 1.16.153 [adam 2019-05-07]
+	Updated security/py-acme to 0.34.1 [adam 2019-05-07]
+	Updated security/py-certbot to 0.34.1 [adam 2019-05-07]
+	Updated security/py-certbot-apache to 0.34.1 [adam 2019-05-07]
+	Updated security/py-certbot-dns-luadns to 0.34.1 [adam 2019-05-07]
+	Updated security/py-certbot-dns-nsone to 0.34.1 [adam 2019-05-07]
+	Updated security/py-certbot-dns-ovh to 0.34.1 [adam 2019-05-07]
+	Updated security/py-certbot-dns-rfc2136 to 0.34.1 [adam 2019-05-07]
+	Updated security/py-certbot-dns-route53 to 0.34.1 [adam 2019-05-07]
+	Updated security/py-certbot-dns-sakuracloud to 0.34.1 [adam 2019-05-07]
+	Updated security/py-certbot-nginx to 0.34.1 [adam 2019-05-07]
