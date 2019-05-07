@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2011 2019/05/07 12:36:26 markd Exp $
+$NetBSD: CHANGES-2019,v 1.2012 2019/05/07 14:06:54 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3284,3 +3284,28 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/tex-lualibs to 2.64 [markd 2019-05-07]
 	Updated devel/tex-lualibs-doc to 2.64 [markd 2019-05-07]
 	Updated print/tex-texinfo to 5.1.50139 [markd 2019-05-07]
+	Updated sysutils/u-boot to 2018.11nb2 [thorpej 2019-05-07]
+	Updated sysutils/u-boot-a10-olinuxino-lime to 2018.11nb4 [thorpej 2019-05-07]
+	Updated sysutils/u-boot-bananapi-m3 to 2018.11nb4 [thorpej 2019-05-07]
+	Updated sysutils/u-boot-bananapi to 2018.11nb4 [thorpej 2019-05-07]
+	Updated sysutils/u-boot-chip-pro to 2018.11nb4 [thorpej 2019-05-07]
+	Updated sysutils/u-boot-chip to 2018.11nb4 [thorpej 2019-05-07]
+	Updated sysutils/u-boot-cubieboard2 to 2018.11nb4 [thorpej 2019-05-07]
+	Updated sysutils/u-boot-cubieboard4 to 2018.11nb4 [thorpej 2019-05-07]
+	Updated sysutils/u-boot-cubietruck-plus to 2018.11nb2 [thorpej 2019-05-07]
+	Updated sysutils/u-boot-cubietruck to 2018.11nb4 [thorpej 2019-05-07]
+	Updated sysutils/u-boot-hummingbird-a31 to 2018.11nb4 [thorpej 2019-05-07]
+	Updated sysutils/u-boot-nanopi-m1 to 2018.11nb4 [thorpej 2019-05-07]
+	Updated sysutils/u-boot-nanopi-neo-plus2 to 2018.11nb5 [thorpej 2019-05-07]
+	Updated sysutils/u-boot-nanopi-neo to 2018.11nb4 [thorpej 2019-05-07]
+	Updated sysutils/u-boot-nanopi-neo2 to 2018.11nb5 [thorpej 2019-05-07]
+	Updated sysutils/u-boot-orangepi-2 to 2018.11nb4 [thorpej 2019-05-07]
+	Updated sysutils/u-boot-orangepi-one to 2018.11nb4 [thorpej 2019-05-07]
+	Updated sysutils/u-boot-orangepi-plus2e to 2018.11nb4 [thorpej 2019-05-07]
+	Updated sysutils/u-boot-orangepi-zero-plus to 2018.11nb5 [thorpej 2019-05-07]
+	Updated sysutils/u-boot-orangepi-zero to 2018.11nb4 [thorpej 2019-05-07]
+	Updated sysutils/u-boot-pine-h64 to 2018.11nb4 [thorpej 2019-05-07]
+	Updated sysutils/u-boot-pine64 to 2018.11nb5 [thorpej 2019-05-07]
+	Updated sysutils/u-boot-pinebook to 2018.11nb3 [thorpej 2019-05-07]
+	Updated sysutils/u-boot-pocketchip to 2018.11nb4 [thorpej 2019-05-07]
+	Updated sysutils/u-boot-sopine-baseboard to 2018.11nb5 [thorpej 2019-05-07]
