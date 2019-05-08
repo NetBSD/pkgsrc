@@ -675,6 +675,7 @@ sieve			Enable sieve support.
 sigver			Enable signature verification for debugging purposes.
 simd			Enable MMX/3DNOW/SSE/Altivec support.
 sit			Enable source identity token support.
+sixel			Enable Sixel graphics support.
 sj3			Use SJ3 for Kana-to-Kanji conversion.
 skey			Enable S/Key support.
 skk			Use SKK for Kana-to-Kanji conversion.
