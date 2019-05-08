@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2031 2019/05/08 02:09:00 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.2032 2019/05/08 02:10:47 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3328,3 +3328,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated archivers/engrampa to 1.22.1 [gutteridge 2019-05-08]
 	Updated graphics/eom to 1.22.1 [gutteridge 2019-05-08]
 	Updated sysutils/mate-sensors-applet to 1.22.1 [gutteridge 2019-05-08]
+	Updated sysutils/mate-power-manager to 1.22.1 [gutteridge 2019-05-08]
