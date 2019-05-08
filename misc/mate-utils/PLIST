@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/04/10 01:07:10 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/05/08 02:20:49 gutteridge Exp $
 bin/mate-dictionary
 bin/mate-disk-usage-analyzer
 bin/mate-panel-screenshot
@@ -1149,6 +1149,15 @@ share/help/fi/mate-search-tool/legal.xml
 share/help/fi/mate-system-log/figures/syslog_window.png
 share/help/fi/mate-system-log/index.docbook
 share/help/fi/mate-system-log/legal.xml
+share/help/fil/mate-disk-usage-analyzer/figures/baobab_fullscan.png
+share/help/fil/mate-disk-usage-analyzer/figures/baobab_prefs.png
+share/help/fil/mate-disk-usage-analyzer/figures/baobab_remote.png
+share/help/fil/mate-disk-usage-analyzer/figures/baobab_ringschart1.png
+share/help/fil/mate-disk-usage-analyzer/figures/baobab_ringschart2.png
+share/help/fil/mate-disk-usage-analyzer/figures/baobab_treemaps.png
+share/help/fil/mate-disk-usage-analyzer/figures/baobab_window.png
+share/help/fil/mate-disk-usage-analyzer/index.docbook
+share/help/fil/mate-disk-usage-analyzer/legal.xml
 share/help/fr/mate-dictionary/figures/mate-dictionary-add-source.png
 share/help/fr/mate-dictionary/figures/mate-dictionary-applet-window.png
 share/help/fr/mate-dictionary/figures/mate-dictionary-applet.png
@@ -3076,11 +3085,15 @@ share/help/zu/mate-search-tool/legal.xml
 share/help/zu/mate-system-log/figures/syslog_window.png
 share/help/zu/mate-system-log/index.docbook
 share/help/zu/mate-system-log/legal.xml
+share/icons/hicolor/128x128/apps/mate-disk-usage-analyzer.png
+share/icons/hicolor/16x16/apps/mate-disk-usage-analyzer.png
 share/icons/hicolor/16x16/apps/mate-system-log.png
+share/icons/hicolor/22x22/apps/mate-disk-usage-analyzer.png
 share/icons/hicolor/22x22/apps/mate-system-log.png
-share/icons/hicolor/24x24/apps/mate-disk-usage-analyzer.png
 share/icons/hicolor/256x256/apps/mate-system-log.png
+share/icons/hicolor/32x32/apps/mate-disk-usage-analyzer.png
 share/icons/hicolor/32x32/apps/mate-system-log.png
+share/icons/hicolor/48x48/apps/mate-disk-usage-analyzer.png
 share/icons/hicolor/48x48/apps/mate-system-log.png
 share/icons/hicolor/scalable/apps/mate-disk-usage-analyzer.svg
 share/icons/hicolor/scalable/apps/mate-system-log-symbolic.svg
@@ -3214,7 +3227,6 @@ share/mate-dictionary/mate-dictionary-source.ui
 share/mate-dictionary/mate-dictionary-ui.xml
 share/mate-disk-usage-analyzer/baobab-dialog-scan-props.ui
 share/mate-disk-usage-analyzer/baobab-main-window.ui
-share/mate-disk-usage-analyzer/pixmaps/shot.png
 share/mate-panel/applets/org.mate.DictionaryApplet.mate-panel-applet
 share/mate-screenshot/mate-screenshot.ui
 share/mate-utils/logview-filter.ui
