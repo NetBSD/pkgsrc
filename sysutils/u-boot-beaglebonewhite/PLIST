@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/08/26 18:35:33 sevan Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/05/08 05:14:20 thorpej Exp $
 share/u-boot/beaglebonewhite/MLO
+share/u-boot/beaglebonewhite/installboot.plist
 share/u-boot/beaglebonewhite/u-boot.img
