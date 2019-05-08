@@ -1,4 +1,4 @@
-$NetBSD: patch-cksum.c,v 1.1 2019/05/03 11:04:34 hauke Exp $
+$NetBSD: patch-cksum.c,v 1.2 2019/05/08 08:34:48 hauke Exp $
 
 Move to openssl 1.1 api
 
@@ -96,7 +96,7 @@ Move to openssl 1.1 api
 -    EVP_DigestFinal( &mdctx, md_value, &md_len );
 +    EVP_DigestFinal( mdctx, md_value, &md_len );
      base64_e( ( char*)&md_value, md_len, cksum_b64 );
-+    EVP_MD_CTX_free();
++    EVP_MD_CTX_free( mdctx );
  
      return( size );
  }
