@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/03/06 07:51:05 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/05/08 01:40:01 gutteridge Exp $
 bin/mate-terminal
 bin/mate-terminal.wrapper
 man/man1/mate-terminal.1
@@ -555,13 +555,4 @@ share/locale/zh_CN/LC_MESSAGES/mate-terminal.mo
 share/locale/zh_HK/LC_MESSAGES/mate-terminal.mo
 share/locale/zh_TW/LC_MESSAGES/mate-terminal.mo
 share/locale/zu/LC_MESSAGES/mate-terminal.mo
-share/mate-terminal/encodings-dialog.ui
-share/mate-terminal/find-dialog.ui
-share/mate-terminal/keybinding-editor.ui
-share/mate-terminal/profile-manager.ui
-share/mate-terminal/profile-new-dialog.ui
-share/mate-terminal/profile-preferences.ui
-share/mate-terminal/skey-challenge.ui
-share/mate-terminal/terminal.about
-share/mate-terminal/terminal.xml
 share/metainfo/mate-terminal.appdata.xml
