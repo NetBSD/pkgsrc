@@ -1,4 +1,4 @@
-# $NetBSD: u-boot.mk,v 1.15 2019/05/07 14:05:36 thorpej Exp $
+# $NetBSD: u-boot.mk,v 1.16 2019/05/08 05:02:35 thorpej Exp $
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
@@ -56,7 +56,7 @@ do-install:
 	    ${DESTDIR}${PREFIX}/share/u-boot/${UBOOT_TARGET}
 .endfor
 .if defined(UBOOT_INSTALLBOOT_PLIST)
-	${INSTALL_DATA} ${.CURDIR}/${UBOOT_INSTALLBOOT_PLIST} \
+	${INSTALL_DATA} ${.CURDIR}/files/${UBOOT_INSTALLBOOT_PLIST} \
 	    ${DESTDIR}${PREFIX}/share/u-boot/${UBOOT_TARGET}/installboot.plist
 .endif
 
