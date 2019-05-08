@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2019/04/25 13:22:12 thorpej Exp $
+# $NetBSD: Makefile,v 1.4 2019/05/08 05:06:48 thorpej Exp $
 
 UBOOT_TARGET=		bananapi-r2
 UBOOT_CONFIG=		mt7623n_bpir2_defconfig
 UBOOT_BIN=		bpi-r2-sdmmc.img u-boot.bin
 
-PKGREVISION=		2
+UBOOT_INSTALLBOOT_PLIST=installboot.plist
+
+PKGREVISION=		3
 
 UBOOT_VERSION=		2019.04-rc4
 
