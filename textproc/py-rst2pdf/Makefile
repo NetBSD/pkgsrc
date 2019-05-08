@@ -1,9 +1,15 @@
-# $NetBSD: Makefile,v 1.3 2019/04/03 15:23:24 adam Exp $
+# $NetBSD: Makefile,v 1.4 2019/05/08 10:20:16 adam Exp $
 
 DISTNAME=	rst2pdf-0.94
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python textproc
-MASTER_SITES=	${MASTER_SITE_PYPI:=r/rst2pdf/}
+# PyPI distfile does not include images, styles, and templates
+#MASTER_SITES=	${MASTER_SITE_PYPI:=r/rst2pdf/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=rst2pdf/}
+GITHUB_PROJECT=	rst2pdf
+# TODO: remove on next update
+DIST_SUBDIR=	rst2pdf
 
 MAINTAINER=	darcy@NetBSD.org
 HOMEPAGE=	https://rst2pdf.org/
@@ -18,18 +24,19 @@ DEPENDS+=	${PYPKGPREFIX}-reportlab-[0-9]*:../../print/py-reportlab
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-smartypants-[0-9]*:../../textproc/py-smartypants
+TEST_DEPENDS+=	${PYPKGPREFIX}-PDF2-[0-9]*:../../print/py-PDF2
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
+# setup.cfg contains only 'tag_build = .dev', which we don't want.
+pre-configure:
+	${RM} ${WRKSRC}/setup.cfg
+
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} rst2pdf rst2pdf-${PYVERSSUFFIX} || ${TRUE}
-
-# tests not included
-do-test:
-	${DO_NADA}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
