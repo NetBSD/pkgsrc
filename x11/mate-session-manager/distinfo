@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/03/07 01:26:46 gutteridge Exp $
+$NetBSD: distinfo,v 1.8 2019/05/08 01:29:50 gutteridge Exp $
 
-SHA1 (mate-session-manager-1.22.0.tar.xz) = f23b6cd78b5aa81052e10dde3e9504089a34278f
-RMD160 (mate-session-manager-1.22.0.tar.xz) = 1fbd9219b1da23f0117c80d1e483b64274ec5c00
-SHA512 (mate-session-manager-1.22.0.tar.xz) = 7e5e21e37c7ac55ca7d71302edef9aabeccf39233aec9edfe93a2fdcd4150d039e8121adecebb3d0a4a707eccef0c7afa1b54c5b52b57853242964c7506eeb9a
-Size (mate-session-manager-1.22.0.tar.xz) = 603016 bytes
-SHA1 (patch-mate-session_gsm-systemd.c) = 9399fff5f15d883c60d4f9fef433f7d435883db2
+SHA1 (mate-session-manager-1.22.1.tar.xz) = 187300b99c2685a0bf422c84b3a7e912a821e84a
+RMD160 (mate-session-manager-1.22.1.tar.xz) = 177b1c6978d1f42e79b0c9d3fc91a9f2282b82a5
+SHA512 (mate-session-manager-1.22.1.tar.xz) = 1c47134813d24abef7b2f5df098120a2cd138f822ea3d687a1a2566224bbde21482bf40ac47ba08a39ed0899ff35eeac3c3690c83c006774c47f22189688990b
+Size (mate-session-manager-1.22.1.tar.xz) = 580992 bytes

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2019/04/25 07:33:31 maya Exp $
+# $NetBSD: Makefile,v 1.15 2019/05/08 01:29:50 gutteridge Exp $
 
-PKGREVISION= 1
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	mate-session-manager-${VERSION}
+DISTNAME=	mate-session-manager-${VERSION:R}.1
 CATEGORIES=	x11
 
 COMMENT=	MATE session manager
