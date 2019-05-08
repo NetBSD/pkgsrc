@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2019/03/06 07:48:27 gutteridge Exp $
+# $NetBSD: Makefile,v 1.15 2019/05/08 01:46:54 gutteridge Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	mate-system-monitor-${VERSION}
+DISTNAME=	mate-system-monitor-${VERSION:R}.1
 CATEGORIES=	sysutils
 
 COMMENT=	MATE system monitor
