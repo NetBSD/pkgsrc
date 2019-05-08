@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2035 2019/05/08 02:20:34 wen Exp $
+$NetBSD: CHANGES-2019,v 1.2036 2019/05/08 02:21:24 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3332,3 +3332,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/mediawiki to 1..32.1 [wen 2019-05-08]
 	Updated misc/mate-calc to 1.22.1 [gutteridge 2019-05-08]
 	Updated devel/p5-Devel-PPPort to 3.51 [wen 2019-05-08]
+	Updated misc/mate-utils to 1.22.1 [gutteridge 2019-05-08]
