@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2019/05/08 12:40:05 nia Exp $
+# $NetBSD: options.mk,v 1.10 2019/05/08 12:51:54 nia Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -53,7 +53,7 @@ CONFIGURE_ARGS+=	--enable-sixel
 CONFIGURE_ARGS+=	--disable-sixel
 .endif
 
-.if !empty(PKG_OPTIONS:Mmbedlts)
+.if !empty(PKG_OPTIONS:Mmbedtls)
 CONFIGURE_ARGS+=	--enable-ssl
 .include "../../security/mbedtls/buildlink3.mk"
 .else
