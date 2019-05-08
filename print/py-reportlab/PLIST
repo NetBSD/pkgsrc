@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2018/07/25 13:36:40 joerg Exp $
+@comment $NetBSD: PLIST,v 1.20 2019/05/08 10:21:44 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -471,6 +471,9 @@ ${PYSITELIB}/reportlab/platypus/flowables.pyo
 ${PYSITELIB}/reportlab/platypus/frames.py
 ${PYSITELIB}/reportlab/platypus/frames.pyc
 ${PYSITELIB}/reportlab/platypus/frames.pyo
+${PYSITELIB}/reportlab/platypus/multicol.py
+${PYSITELIB}/reportlab/platypus/multicol.pyc
+${PYSITELIB}/reportlab/platypus/multicol.pyo
 ${PYSITELIB}/reportlab/platypus/para.py
 ${PYSITELIB}/reportlab/platypus/para.pyc
 ${PYSITELIB}/reportlab/platypus/para.pyo
