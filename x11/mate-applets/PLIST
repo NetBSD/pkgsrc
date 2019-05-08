@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2019/03/06 06:48:22 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/05/08 01:36:06 gutteridge Exp $
 ${PLIST.cpufreq}bin/mate-cpufreq-selector
 libexec/mate-applets/accessx-status-applet
 ${PLIST.batt}libexec/mate-applets/battstat-applet
@@ -3896,9 +3896,23 @@ share/help/fi/mateweather/figures/stock_weather-storm.png
 share/help/fi/mateweather/figures/stock_weather-sunny.png
 share/help/fi/mateweather/index.docbook
 share/help/fi/mateweather/legal.xml
+${PLIST.cpufreq}share/help/fil/mate-cpufreq-applet/figures/cpufreq-100.png
+${PLIST.cpufreq}share/help/fil/mate-cpufreq-applet/figures/cpufreq-25.png
+${PLIST.cpufreq}share/help/fil/mate-cpufreq-applet/figures/cpufreq-50.png
+${PLIST.cpufreq}share/help/fil/mate-cpufreq-applet/figures/cpufreq-75.png
+${PLIST.cpufreq}share/help/fil/mate-cpufreq-applet/figures/cpufreq-applet-preferences-smp.png
+${PLIST.cpufreq}share/help/fil/mate-cpufreq-applet/figures/cpufreq-applet-preferences.png
+${PLIST.cpufreq}share/help/fil/mate-cpufreq-applet/figures/cpufreq-applet-selector-both.png
+${PLIST.cpufreq}share/help/fil/mate-cpufreq-applet/figures/cpufreq-applet-selector.png
+${PLIST.cpufreq}share/help/fil/mate-cpufreq-applet/figures/cpufreq-applet.png
+${PLIST.cpufreq}share/help/fil/mate-cpufreq-applet/index.docbook
+${PLIST.cpufreq}share/help/fil/mate-cpufreq-applet/legal.xml
 share/help/fil/mate-geyes/figures/geyes_applet.png
 share/help/fil/mate-geyes/index.docbook
 share/help/fil/mate-geyes/legal.xml
+share/help/fil/mate-trashapplet/figures/trash-applet.png
+share/help/fil/mate-trashapplet/index.docbook
+share/help/fil/mate-trashapplet/legal.xml
 share/help/fr/mate-accessx-status/figures/accessx-status-applet.png
 share/help/fr/mate-accessx-status/figures/accessx-status-disabled.png
 share/help/fr/mate-accessx-status/figures/accessx_bounce-keys.png
