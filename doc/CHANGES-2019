@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2032 2019/05/08 02:10:47 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.2033 2019/05/08 02:13:40 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3329,3 +3329,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/eom to 1.22.1 [gutteridge 2019-05-08]
 	Updated sysutils/mate-sensors-applet to 1.22.1 [gutteridge 2019-05-08]
 	Updated sysutils/mate-power-manager to 1.22.1 [gutteridge 2019-05-08]
+	Updated www/mediawiki to 1..32.1 [wen 2019-05-08]
