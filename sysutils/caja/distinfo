@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2019/03/06 06:02:25 gutteridge Exp $
+$NetBSD: distinfo,v 1.8 2019/05/08 02:01:45 gutteridge Exp $
 
-SHA1 (caja-1.22.0.tar.xz) = a21a8de047de82eaff263e66fb0b7641b66fff9e
-RMD160 (caja-1.22.0.tar.xz) = 73ff452d5a76aeb51d7dc81cd798647ccc0ad41f
-SHA512 (caja-1.22.0.tar.xz) = ca97a1e81cc7b061bb331d7a4574c76831dbff50bdc9ba0a162675def7278cf5dadb37aacb0e1e37a0ac2cf60df73f98353aaa36fa0e69a0097017eed5d325b6
-Size (caja-1.22.0.tar.xz) = 3562792 bytes
+SHA1 (caja-1.22.1.tar.xz) = b47e055c2f2675c55fac9e36a3bf3fa84a35d050
+RMD160 (caja-1.22.1.tar.xz) = 8aaf67fcca91bf75b930fd7d8be6c303a64ee112
+SHA512 (caja-1.22.1.tar.xz) = dea2e9cac7802df5335a716a1a7df149b637014525202600f4bf3eab293eff29bf2df66df22203aa036898149cb26ba1d05491234dc75203480925cce0333a17
+Size (caja-1.22.1.tar.xz) = 3462248 bytes
 SHA1 (patch-configure) = 67e6c932c2d5013b54ef6de7e7252eb339685b6c
 SHA1 (patch-eel_eel-background.c) = 9d0ed0d9f3c9004f6d9024837538cc26cdb410da
 SHA1 (patch-libcaja-private_caja-global-preferences.c) = 122d62430cf57e274f1e561783ca0f69d0de7d56
