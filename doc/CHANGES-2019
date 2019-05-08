@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2026 2019/05/08 02:00:04 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.2027 2019/05/08 02:02:07 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3323,3 +3323,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated editors/pluma to 1.22.1 [gutteridge 2019-05-08]
 	Updated x11/mozo to 1.22.1 [gutteridge 2019-05-08]
 	Updated print/atril to 1.22.1 [gutteridge 2019-05-08]
+	Updated sysutils/caja to 1.22.1 [gutteridge 2019-05-08]
