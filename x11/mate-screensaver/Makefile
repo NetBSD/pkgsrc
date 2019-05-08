@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2019/04/25 07:33:31 maya Exp $
+# $NetBSD: Makefile,v 1.19 2019/05/08 01:42:53 gutteridge Exp $
 
-PKGREVISION= 1
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	mate-screensaver-${VERSION}
+DISTNAME=	mate-screensaver-${VERSION:R}.1
 CATEGORIES=	x11
 
 COMMENT=	Screen saver and locker for the MATE desktop
