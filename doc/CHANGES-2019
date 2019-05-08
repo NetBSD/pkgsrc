@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2017 2019/05/08 01:26:00 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.2018 2019/05/08 01:30:12 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3314,3 +3314,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/mate-panel to 1.22.1 [gutteridge 2019-05-08]
 	Updated wm/marco to 1.22.1 [gutteridge 2019-05-08]
 	Updated wm/mate-netbook to 1.22.1 [gutteridge 2019-05-08]
+	Updated x11/mate-session-manager to 1.22.1 [gutteridge 2019-05-08]
