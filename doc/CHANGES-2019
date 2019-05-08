@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2024 2019/05/08 01:55:25 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.2025 2019/05/08 01:57:40 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3321,3 +3321,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/mate-screensaver to 1.22.1 [gutteridge 2019-05-08]
 	Updated sysutils/mate-system-monitor to 1.22.1 [gutteridge 2019-05-08]
 	Updated editors/pluma to 1.22.1 [gutteridge 2019-05-08]
+	Updated x11/mozo to 1.22.1 [gutteridge 2019-05-08]
