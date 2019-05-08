@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.18 2019/04/25 07:33:07 maya Exp $
+# $NetBSD: Makefile,v 1.19 2019/05/08 02:20:49 gutteridge Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	mate-utils-${VERSION}
-PKGREVISION=	2
+DISTNAME=	mate-utils-${VERSION:R}.1
 CATEGORIES=	misc
 
 COMMENT=	Utilities for MATE Desktop
 
 USE_LANGUAGES=	c c++
 
+TOOL_DEPENDS+=	inkscape-[0-9]*:../../graphics/inkscape
 TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 
