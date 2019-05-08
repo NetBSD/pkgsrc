@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/02/06 11:18:43 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/05/08 12:40:05 nia Exp $
 share/libretro/info/00_example_libretro.info
 share/libretro/info/2048_libretro.info
 share/libretro/info/3dengine_libretro.info
@@ -83,6 +83,7 @@ share/libretro/info/mednafen_gba_libretro.info
 share/libretro/info/mednafen_lynx_libretro.info
 share/libretro/info/mednafen_ngp_libretro.info
 share/libretro/info/mednafen_pce_fast_libretro.info
+share/libretro/info/mednafen_pce_libretro.info
 share/libretro/info/mednafen_pcfx_libretro.info
 share/libretro/info/mednafen_psx_hw_libretro.info
 share/libretro/info/mednafen_psx_libretro.info
@@ -93,7 +94,7 @@ share/libretro/info/mednafen_vb_libretro.info
 share/libretro/info/mednafen_wswan_libretro.info
 share/libretro/info/melonds_libretro.info
 share/libretro/info/mesen_libretro.info
-share/libretro/info/mess2014_libretro.info
+share/libretro/info/mess2015_libretro.info
 share/libretro/info/meteor_libretro.info
 share/libretro/info/mgba_libretro.info
 share/libretro/info/mpv_libretro.info
@@ -129,6 +130,7 @@ share/libretro/info/px68k_libretro.info
 share/libretro/info/quicknes_libretro.info
 share/libretro/info/redream_libretro.info
 share/libretro/info/reicast_libretro.info
+share/libretro/info/reicast_wince_libretro.info
 share/libretro/info/reminiscence_libretro.info
 share/libretro/info/remotejoy_libretro.info
 share/libretro/info/rustation_libretro.info
@@ -140,6 +142,7 @@ share/libretro/info/snes9x2005_libretro.info
 share/libretro/info/snes9x2005_plus_libretro.info
 share/libretro/info/snes9x2010_libretro.info
 share/libretro/info/snes9x_libretro.info
+share/libretro/info/stella2014_libretro.info
 share/libretro/info/stella_libretro.info
 share/libretro/info/stonesoup_libretro.info
 share/libretro/info/tempgba_libretro.info
@@ -162,7 +165,7 @@ share/libretro/info/theodore_libretro.info
 share/libretro/info/thepowdertoy_libretro.info
 share/libretro/info/tyrquake_libretro.info
 share/libretro/info/uae4arm_libretro.info
-share/libretro/info/ume2014_libretro.info
+share/libretro/info/ume2015_libretro.info
 share/libretro/info/uzem_libretro.info
 share/libretro/info/vba_next_libretro.info
 share/libretro/info/vbam_libretro.info
@@ -175,4 +178,5 @@ share/libretro/info/vice_xvic_libretro.info
 share/libretro/info/virtualjaguar_libretro.info
 share/libretro/info/x64sdl_libretro.info
 share/libretro/info/xrick_libretro.info
+share/libretro/info/yabasanshiro_libretro.info
 share/libretro/info/yabause_libretro.info

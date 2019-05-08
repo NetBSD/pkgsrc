@@ -1,10 +1,10 @@
-$NetBSD: patch-frontend_drivers_platform__unix.c,v 1.2 2019/02/06 11:18:44 nia Exp $
+$NetBSD: patch-frontend_drivers_platform__unix.c,v 1.3 2019/05/08 12:40:05 nia Exp $
 
 Pick up paths from pkgsrc.
 
---- frontend/drivers/platform_unix.c.orig	2019-02-04 14:54:53.000000000 +0000
+--- frontend/drivers/platform_unix.c.orig	2019-05-08 06:06:23.000000000 +0000
 +++ frontend/drivers/platform_unix.c
-@@ -1852,32 +1852,15 @@ static void frontend_unix_get_env(int *a
+@@ -1868,32 +1868,15 @@ static void frontend_unix_get_env(int *a
     else
        snprintf(base_path, sizeof(base_path), "retroarch");
  
@@ -43,7 +43,7 @@ Pick up paths from pkgsrc.
  
     fill_pathname_join(g_defaults.dirs[DEFAULT_DIR_MENU_CONFIG], base_path,
           "config", sizeof(g_defaults.dirs[DEFAULT_DIR_MENU_CONFIG]));
-@@ -1890,10 +1873,10 @@ static void frontend_unix_get_env(int *a
+@@ -1906,10 +1889,10 @@ static void frontend_unix_get_env(int *a
           "records_config", sizeof(g_defaults.dirs[DEFAULT_DIR_RECORD_CONFIG]));
     fill_pathname_join(g_defaults.dirs[DEFAULT_DIR_RECORD_OUTPUT], base_path,
           "records", sizeof(g_defaults.dirs[DEFAULT_DIR_RECORD_OUTPUT]));

@@ -1,21 +1,23 @@
-# $NetBSD: options.mk,v 1.8 2019/02/06 11:18:44 nia Exp $
+# $NetBSD: options.mk,v 1.9 2019/05/08 12:40:05 nia Exp $
+
+.include "../../mk/bsd.fast.prefs.mk"
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.retroarch
 
-PKG_SUPPORTED_OPTIONS+=		sdl2 ffmpeg freetype qt5 x11 caca
+PKG_SUPPORTED_OPTIONS+=		libdrm sdl2 sixel qt5 x11 caca
+PKG_SUPPORTED_OPTIONS+=		ffmpeg freetype mbedtls
 PKG_SUPPORTED_OPTIONS+=		alsa jack openal pulseaudio
-PKG_SUGGESTED_OPTIONS+=		sdl2 freetype x11
 
 .if ${OPSYS} == "Linux"
 PKG_SUPPORTED_OPTIONS+=		udev
 .endif
 
-PKG_SUGGESTED_OPTIONS.Linux+=	alsa pulseaudio udev
+PKG_SUGGESTED_OPTIONS+=		sdl2 freetype x11
+PKG_SUGGESTED_OPTIONS.Linux+=	alsa libdrm pulseaudio mbedtls udev
+PKG_SUGGESTED_OPTIONS.NetBSD+=	mbedtls
 
 PKG_OPTIONS_OPTIONAL_GROUPS+=	gl
 PKG_OPTIONS_GROUP.gl+=		opengl
-
-.include "../../mk/bsd.fast.prefs.mk"
 
 .if !empty(MACHINE_ARCH:M*arm*)
 CONFIGURE_ARGS+=		--enable-floathard
@@ -37,6 +39,25 @@ CONFIGURE_ARGS+=	--enable-neon
 .  else
 CONFIGURE_ARGS+=	--disable-neon
 .  endif
+.endif
+
+.if !empty(PKG_OPTIONS:Mlibdrm)
+CONFIGURE_ARGS+=	--enable-plain_drm
+.include "../../x11/libdrm/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Msixel)
+CONFIGURE_ARGS+=	--enable-sixel
+.include "../../graphics/libsixel/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-sixel
+.endif
+
+.if !empty(PKG_OPTIONS:Mmbedlts)
+CONFIGURE_ARGS+=	--enable-ssl
+.include "../../security/mbedtls/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-ssl
 .endif
 
 .if !empty(PKG_OPTIONS:Mx11)

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2019/04/03 00:32:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2019/05/08 12:40:05 nia Exp $
 
 PKGNAME=	retroarch-${RETROARCH_VERSION}
-PKGREVISION=	1
 DISTNAME=	RetroArch-${RETROARCH_VERSION}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/RetroArch/releases/download/v${RETROARCH_VERSION}/}
@@ -56,7 +55,6 @@ CONFIGURE_ARGS+=	--disable-thread_storage
 .include "../../audio/flac/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/miniupnpc/buildlink3.mk"
-.include "../../security/mbedtls/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/02/06 11:18:43 nia Exp $
+$NetBSD: distinfo,v 1.5 2019/05/08 12:40:05 nia Exp $
 
-SHA1 (libretro-core-info-1.7.6.tar.gz) = 7df6ce5c16c995d37a3edf08429413e736c4411f
-RMD160 (libretro-core-info-1.7.6.tar.gz) = 96d07e50478e39258430306f6979d81f2febc8f2
-SHA512 (libretro-core-info-1.7.6.tar.gz) = 609777c4b1c37004e7005d79495c16430778a285ac5568acbed8a1bbddc26e02c7522da192d69d88e8b921a35e25882f703ea1d2551af20e11bb9a2d0a77f821
-Size (libretro-core-info-1.7.6.tar.gz) = 25314 bytes
+SHA1 (libretro-core-info-1.7.7.tar.gz) = 6e674cd5a4187b8befbad73249e540805a8ea709
+RMD160 (libretro-core-info-1.7.7.tar.gz) = 676efa6e6203bd0e737561a4f5b34c7ab1373e14
+SHA512 (libretro-core-info-1.7.7.tar.gz) = 14c4689592a8a3d1b59fdba4eb4a3fdfe8bcf7eb683bcdb04545d3c53b95f1fce97264188d7c55eb56b034b5be77819de313e7cca8d7d7b402f829fbf3626f0f
+Size (libretro-core-info-1.7.7.tar.gz) = 25689 bytes
