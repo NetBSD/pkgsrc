@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2037 2019/05/08 02:26:11 wen Exp $
+$NetBSD: CHANGES-2019,v 1.2038 2019/05/08 05:31:16 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3334,3 +3334,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-Devel-PPPort to 3.51 [wen 2019-05-08]
 	Updated misc/mate-utils to 1.22.1 [gutteridge 2019-05-08]
 	Updated 4.43 www/p5-CGI to 4.43 [wen 2019-05-08]
+	Updated sysutils/u-boot-bananapi-r2 to 2019.04-rc4nb3 [thorpej 2019-05-07]
+	Updated sysutils/u-boot-beagleboard to 2018.11nb4 [thorpej 2019-05-07]
+	Updated sysutils/u-boot-beagleboneblack to 2018.11nb4 [thorpej 2019-05-07]
+	Updated sysutils/u-boot-beaglebonewhite to 2018.11nb4 [thorpej 2019-05-07]
