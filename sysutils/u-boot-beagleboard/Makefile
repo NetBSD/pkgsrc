@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2019/04/26 08:32:28 skrll Exp $
+# $NetBSD: Makefile,v 1.5 2019/05/08 05:14:19 thorpej Exp $
 
 UBOOT_TARGET=		beagleboard
 UBOOT_CONFIG=		omap3_beagle_defconfig
 UBOOT_BIN=		u-boot.img
 UBOOT_BIN+= 		MLO
 
-PKGREVISION=		3
+UBOOT_INSTALLBOOT_PLIST=installboot.plist
+
+PKGREVISION=		4
 
 .include "../../sysutils/u-boot/u-boot-arm.mk"
