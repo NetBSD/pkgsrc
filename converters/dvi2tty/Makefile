@@ -1,27 +1,18 @@
-# $NetBSD: Makefile,v 1.19 2018/05/13 12:01:26 markd Exp $
-#
+# $NetBSD: Makefile,v 1.20 2019/05/09 09:47:34 adam Exp $
 
-DISTNAME=	texlive-20180414-source
+.include "../../print/texlive/Makefile.common"
+
 PKGNAME=	dvi2tty-6.0.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	converters
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2018/
-EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Program for previewing DVI files
 LICENSE=	gnu-gpl-v2
 
-EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
-			${DISTNAME}/texk/dvi2tty
+EXTRACT_ELEMENTS+=	${DISTNAME}/texk/dvi2tty
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/dvi2tty
-
-CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.guess
-CONFIG_SUB_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.sub
 
 CONFIGURE_ARGS+=	--with-system-kpathsea
 CONFIGURE_ARGS+=	--with-system-ptexenc
