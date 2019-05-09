@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/04/25 07:32:46 maya Exp $
+# $NetBSD: Makefile,v 1.3 2019/05/09 15:12:02 mef Exp $
 #
 # TODO Import intellij-fsnotifier with inotify support from FreeBSD.
 
@@ -57,7 +57,7 @@ do-install:
 	${ECHO} "idea.filewatcher.disabled=true" >> bin/idea.properties && \
 	${SED} -e "s|@@IDEA_HOME@@|${PREFIX}/${PKGNAME}|g" \
 	${FILESDIR}/idea-ultimate.desktop > ${DESTDIR}${PREFIX}/share/applications/idea-ultimate.desktop && \
-	pax -rw -pm * ${DESTDIR}${PREFIX}/${PKGNAME}
+	pax -rw -pm * ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}
 
 .include "../../lang/python/application.mk"
 .include "../../mk/java-vm.mk"
