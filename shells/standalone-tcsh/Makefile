@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2017/08/23 17:52:47 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2019/05/09 11:32:36 leot Exp $
 #
 
 # FIXME: This is because of PREFIX=/ below.
@@ -6,7 +6,7 @@ CHECK_FILES_SUPPORTED=	no
 NOT_FOR_UNPRIVILEGED=	yes
 
 PKGNAME=		standalone-${DISTNAME}
-PKGREVISION=		2	# ALWAYS needs to be set; 0 if none.
+PKGREVISION=		0	# ALWAYS needs to be set; 0 if none.
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 PATCHDIR=		${.CURDIR}/../../shells/tcsh/patches
