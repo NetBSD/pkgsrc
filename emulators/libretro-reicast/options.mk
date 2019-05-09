@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2018/10/14 03:35:44 nia Exp $
+# $NetBSD: options.mk,v 1.3 2019/05/09 23:24:17 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libretro-reicast
 PKG_OPTIONS_REQUIRED_GROUPS=	graphics
@@ -19,8 +19,21 @@ PKG_SUGGESTED_OPTIONS+=		opengl
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mopengl)
-MAKE_FLAGS+=	HAVE_GL3=1
 .include "../../graphics/MesaLib/buildlink3.mk"
+# Try to detect which GL versions are supported.
+# OIT requires OpenGL 4.3
+.  if !empty(BUILTIN_VERSION.Mesa)
+MESA_MAJOR_VER=	${BUILTIN_VERSION.Mesa:C/\..*//gW}
+.    if ${MESA_MAJOR_VER} >= 12
+MAKE_FLAGS+=	HAVE_OIT=1
+.    elif ${MESA_MAJOR_VER} >= 8
+MAKE_FLAGS+=	HAVE_GL3=1
+.    elif ${MESA_MAJOR_VER} >= 7
+MAKE_FLAGS+=	HAVE_GL2=1
+.    endif
+.  else
+MAKE_FLAGS+=	HAVE_GL3=1
+.  endif
 .elif !empty(PKG_OPTIONS:Mrpi)
 MAKE_FLAGS+=	GLES=1
 MAKE_FLAGS+=	GL_LIB="-lbrcmGLESv2"
