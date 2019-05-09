@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2019/02/11 10:07:37 nia Exp $
+# $NetBSD: Makefile,v 1.76 2019/05/09 13:22:58 jperkin Exp $
 
 DISTNAME=		cmus-2.8.0
 CATEGORIES=		audio
@@ -19,7 +19,7 @@ REPLACE_SH+=		cmus-status-display
 CONFIGURE_ARGS+=	prefix=${PREFIX}
 CONFIGURE_ARGS+=	CONFIG_ALSA=n
 CONFIGURE_ARGS+=	mandir=${PREFIX}/${PKGMANDIR}
-PLIST_VARS+=		sunaudio oss
+PLIST_VARS+=		coreaudio sunaudio oss
 
 .include "../../mk/oss.buildlink3.mk"
 .if ${OSS_TYPE} != "none"
@@ -35,6 +35,10 @@ CONFIGURE_ARGS+=	CONFIG_SUN=y
 PLIST.sunaudio=		yes
 .else
 CONFIGURE_ARGS+=	CONFIG_SUN=n
+.endif
+
+.if ${OPSYS} == "Darwin"
+PLIST.coreaudio=	yes
 .endif
 
 NOT_PAX_MPROTECT_SAFE+=	bin/cmus
