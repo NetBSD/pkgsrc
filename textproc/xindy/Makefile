@@ -1,39 +1,33 @@
-# $NetBSD: Makefile,v 1.3 2019/04/10 11:49:43 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/05/09 09:47:37 adam Exp $
 
-DISTNAME=	texlive-20180414-source
+.include "../../print/texlive/Makefile.common"
+
 PKGNAME=	xindy-2.5.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2018/
-EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
 COMMENT=	xindy runtime required by the tex-xindy package
 LICENSE=	gnu-gpl-v2
 
-EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
-			${DISTNAME}/utils/xindy
+EXTRACT_ELEMENTS+=	${DISTNAME}/utils/xindy
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	perl gmake
+USE_TOOLS+=	gmake perl
 WRKSRC=		${WRKDIR}/${DISTNAME}/utils/xindy
 INSTALL_DIRS=	xindy-src/src xindy-src/tex2xindy
 
-CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.guess
-CONFIG_SUB_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.sub
-
-CONFIGURE_ARGS+=	--with-clisp-runtime=default
 CONFIGURE_ARGS+=	--disable-xindy-docs
 CONFIGURE_ARGS+=	--disable-xindy-rules
+CONFIGURE_ARGS+=	--with-clisp-runtime=default
 
 INSTALLATION_DIRS+=	bin
 
 post-install:
-	cd ${WRKSRC}; ${PKGSRC_SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
-                ${MAKE_PROGRAM} install-exec-hook
-	rm -rf ${DESTDIR}${PREFIX}/${PKGMANDIR}
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
+		${MAKE_PROGRAM} install-exec-hook
+	# man page conflicts with tex-xindy-doc
+	${RM} -f -r ${DESTDIR}${PREFIX}/${PKGMANDIR}
 
 .include "../../devel/libffcall/buildlink3.mk"
 .include "../../devel/libsigsegv/buildlink3.mk"

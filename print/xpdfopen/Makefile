@@ -1,22 +1,18 @@
-# $NetBSD: Makefile,v 1.10 2018/05/13 13:09:26 markd Exp $
+# $NetBSD: Makefile,v 1.11 2019/05/09 09:47:36 adam Exp $
 
-DISTNAME=	texlive-20180414-source
+.include "../../print/texlive/Makefile.common"
+
 PKGNAME=	xpdfopen-0.86
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	print
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2018/
-EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
 COMMENT=	Commands to control Acrobat Reader, xpdf, and evince
 
 DEPENDS+=	web2c-[0-9]*:../../print/web2c
 
-EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
-			${DISTNAME}/utils/xpdfopen
+EXTRACT_ELEMENTS+=	${DISTNAME}/utils/xpdfopen
 
-GNU_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}/utils/xpdfopen
 
 .include "../../x11/libX11/buildlink3.mk"

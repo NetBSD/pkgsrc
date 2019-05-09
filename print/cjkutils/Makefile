@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2018/05/13 12:22:46 markd Exp $
+# $NetBSD: Makefile,v 1.11 2019/05/09 09:47:35 adam Exp $
 
-DISTNAME=	texlive-20180414-source
+.include "../../print/texlive/Makefile.common"
+
 PKGNAME=	cjkutils-4.8.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	print
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2018/
-EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	rxg@NetBSD.org,hubertf@NetBSD.org
 HOMEPAGE=	https://cjk.ffii.org/
@@ -13,19 +12,12 @@ COMMENT=	Utilities for CJK LaTeX
 
 DEPENDS+=	tex-cjkutils>=4.8.3:../../print/tex-cjkutils
 
-EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
-			${DISTNAME}/texk/cjkutils
+EXTRACT_ELEMENTS+=	${DISTNAME}/texk/cjkutils
 
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/cjkutils
 
-CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.guess
-CONFIG_SUB_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.sub
-
 CONFIGURE_ARGS+=	--with-system-kpathsea
-
-INSTALL_TARGET=	install-exec-am install-man
+INSTALL_TARGET=		install-exec-am install-man
 
 BUILDLINK_API_DEPENDS.kpathsea+= kpathsea>=6.2.1
 .include "../../print/kpathsea/buildlink3.mk"

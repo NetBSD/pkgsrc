@@ -1,32 +1,24 @@
-# $NetBSD: Makefile,v 1.30 2018/05/13 12:36:28 markd Exp $
+# $NetBSD: Makefile,v 1.31 2019/05/09 09:47:35 adam Exp $
 
-DISTNAME=	texlive-20180414-source
-PKGNAME=	kpathsea-6.3.0
+.include "../../print/texlive/Makefile.common"
+
+PKGNAME=	kpathsea-6.3.1
 CATEGORIES=	print
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2018/
-EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/kpathsea
 COMMENT=	Path searching library for TeX-related files
 LICENSE=	gnu-lgpl-v2.1
 
-EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
-			${DISTNAME}/texk/kpathsea
+EXTRACT_ELEMENTS+=	${DISTNAME}/texk/kpathsea
 
-GNU_CONFIGURE=	yes
-INFO_FILES=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/kpathsea
 
-CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.guess
-CONFIG_SUB_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.sub
+USE_TOOLS+=		gmake
 PKGCONFIG_OVERRIDE=	kpathsea.pc.in
+INFO_FILES=		yes
 
 MAKE_FLAGS+=	LIBTOOL=${LIBTOOL:Q}
 
-#
 # A double-slash (//) in the kpathsea paths has a special
 # interpretation, it will cause kpathsea to consider all
 # subdirectories recursively at that point in the path.  Normally

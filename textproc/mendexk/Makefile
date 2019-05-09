@@ -1,29 +1,19 @@
-# $NetBSD: Makefile,v 1.11 2018/05/13 12:20:33 markd Exp $
+# $NetBSD: Makefile,v 1.12 2019/05/09 09:47:37 adam Exp $
 
-DISTNAME=	texlive-20180414-source
-PKGNAME=	mendexk-2.6f
-PKGREVISION=	8
+.include "../../print/texlive/Makefile.common"
+
+PKGNAME=	mendexk-3.1
 CATEGORIES=	textproc
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2018/
-EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
 COMMENT=	Replacement for makeindex with many enhancements
 LICENSE=	modified-bsd
 
 CONFLICTS+=	ja-ptex-bin-[0-9]*
 
-EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
-			${DISTNAME}/texk/mendexk
+EXTRACT_ELEMENTS+=	${DISTNAME}/texk/mendexk
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/mendexk
-
-CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.guess
-CONFIG_SUB_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.sub
 
 CONFIGURE_ARGS+=	--with-system-kpathsea
 CONFIGURE_ARGS+=	--with-system-ptexenc

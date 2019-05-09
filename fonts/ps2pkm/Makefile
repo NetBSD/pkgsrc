@@ -1,27 +1,19 @@
-# $NetBSD: Makefile,v 1.13 2018/05/13 12:11:46 markd Exp $
+# $NetBSD: Makefile,v 1.14 2019/05/09 09:47:34 adam Exp $
 
-DISTNAME=	texlive-20180414-source
+.include "../../print/texlive/Makefile.common"
+
 PKGNAME=	ps2pkm-1.8
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2018/
-EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
 COMMENT=	Tool to convert PostSCript fonts into TeX PK fonts
 
 DEPENDS+=	kpathsea>=6.0.1:../../print/kpathsea
 
-EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
-			${DISTNAME}/texk/ps2pk
+EXTRACT_ELEMENTS+=	${DISTNAME}/texk/ps2pk
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/ps2pk
-CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.guess
-CONFIG_SUB_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.sub
 
 CONFIGURE_ARGS+=	--with-system-kpathsea
 
