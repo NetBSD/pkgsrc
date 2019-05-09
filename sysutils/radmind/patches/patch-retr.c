@@ -1,10 +1,10 @@
-$NetBSD: patch-retr.c,v 1.3 2019/05/03 11:04:34 hauke Exp $
+$NetBSD: patch-retr.c,v 1.4 2019/05/09 09:37:36 hauke Exp $
 
 Remove stale extern declaration
 
 Move to openssl 1.1 api
 
---- retr.c.orig	2019-05-02 14:26:24.815072747 +0000
+--- retr.c.orig	2010-12-13 03:42:49.000000000 +0000
 +++ retr.c
 @@ -31,6 +31,7 @@
  
@@ -14,7 +14,15 @@ Move to openssl 1.1 api
  #include "applefile.h"
  #include "connect.h"
  #include "cksum.h"
-@@ -73,7 +74,7 @@ retr( SNET *sn, char *pathdesc, char *pa
+@@ -47,7 +48,6 @@ extern int		verbose;
+ extern int		showprogress;
+ extern int		dodots;
+ extern int		cksum;
+-extern int		errno;
+ extern int		create_prefix;
+ extern SSL_CTX  	*ctx;
+ 
+@@ -74,7 +74,7 @@ retr( SNET *sn, char *pathdesc, char *pa
      char		buf[ 8192 ]; 
      ssize_t		rr;
      extern EVP_MD	*md;
@@ -23,7 +31,7 @@ Move to openssl 1.1 api
      unsigned char	md_value[ EVP_MAX_MD_SIZE ];
      char		cksum_b64[ SZ_BASE64_E( EVP_MAX_MD_SIZE ) ];
  
-@@ -83,7 +84,7 @@ retr( SNET *sn, char *pathdesc, char *pa
+@@ -84,7 +84,7 @@ retr( SNET *sn, char *pathdesc, char *pa
  	    fprintf( stderr, "%s\n", pathdesc );
  	    return( 1 );
  	}
@@ -32,7 +40,7 @@ Move to openssl 1.1 api
      }
  
      if ( verbose ) printf( ">>> RETR %s\n", pathdesc );
-@@ -164,7 +165,7 @@ retr( SNET *sn, char *pathdesc, char *pa
+@@ -165,7 +165,7 @@ retr( SNET *sn, char *pathdesc, char *pa
  	    goto error2;
  	}
  	if ( cksum ) {
@@ -41,7 +49,7 @@ Move to openssl 1.1 api
  	}
  	if ( dodots ) { putc( '.', stdout ); fflush( stdout ); }
  	size -= rr;
-@@ -196,8 +197,9 @@ retr( SNET *sn, char *pathdesc, char *pa
+@@ -197,8 +197,9 @@ retr( SNET *sn, char *pathdesc, char *pa
  
      /* cksum file */
      if ( cksum ) {
@@ -52,7 +60,7 @@ Move to openssl 1.1 api
  	if ( strcmp( trancksum, cksum_b64 ) != 0 ) {
  	    fprintf( stderr, "line %d: checksum in transcript does not match "
  		"checksum from server\n", linenum );
-@@ -245,7 +247,7 @@ retr_applefile( SNET *sn, char *pathdesc
+@@ -246,7 +247,7 @@ retr_applefile( SNET *sn, char *pathdesc
      struct as_entry		ae_ents[ 3 ]; 
      struct timeval		tv;
      extern EVP_MD       	*md;
@@ -61,7 +69,7 @@ Move to openssl 1.1 api
      unsigned char       	md_value[ EVP_MAX_MD_SIZE ];
      char		       	cksum_b64[ SZ_BASE64_E( EVP_MAX_MD_SIZE ) ];
  
-@@ -255,7 +257,7 @@ retr_applefile( SNET *sn, char *pathdesc
+@@ -256,7 +257,7 @@ retr_applefile( SNET *sn, char *pathdesc
  	    fprintf( stderr, "%s\n", pathdesc );
              return( 1 );
          }
@@ -70,7 +78,7 @@ Move to openssl 1.1 api
      }
  
      if ( verbose ) printf( ">>> RETR %s\n", pathdesc );
-@@ -315,7 +317,7 @@ retr_applefile( SNET *sn, char *pathdesc
+@@ -316,7 +317,7 @@ retr_applefile( SNET *sn, char *pathdesc
  	return( -1 );
      }
      if ( cksum ) {
@@ -79,7 +87,7 @@ Move to openssl 1.1 api
      }
  
      /* name temp file */
-@@ -372,7 +374,7 @@ retr_applefile( SNET *sn, char *pathdesc
+@@ -373,7 +374,7 @@ retr_applefile( SNET *sn, char *pathdesc
      /* Should we check for valid ae_ents here? YES! */
  
      if ( cksum ) {
@@ -88,7 +96,7 @@ Move to openssl 1.1 api
      }
      if ( dodots ) { putc( '.', stdout ); fflush( stdout ); }
  
-@@ -397,7 +399,7 @@ retr_applefile( SNET *sn, char *pathdesc
+@@ -398,7 +399,7 @@ retr_applefile( SNET *sn, char *pathdesc
  	goto error2;
      }
      if ( cksum ) {
@@ -97,7 +105,7 @@ Move to openssl 1.1 api
      }
      if ( dodots ) { putc( '.', stdout ); fflush( stdout ); }
      size -= rc;
-@@ -447,7 +449,7 @@ retr_applefile( SNET *sn, char *pathdesc
+@@ -448,7 +449,7 @@ retr_applefile( SNET *sn, char *pathdesc
  		goto error3;
  	    }
  	    if ( cksum ) {
@@ -106,7 +114,7 @@ Move to openssl 1.1 api
  	    }
  	    if ( dodots ) { putc( '.', stdout ); fflush( stdout ); }
  	    if ( showprogress ) {
-@@ -481,7 +483,7 @@ retr_applefile( SNET *sn, char *pathdesc
+@@ -482,7 +483,7 @@ retr_applefile( SNET *sn, char *pathdesc
  	}
  
  	if ( cksum ) {
@@ -115,7 +123,7 @@ Move to openssl 1.1 api
  	}
  	if ( dodots ) { putc( '.', stdout ); fflush( stdout); }
  	if ( showprogress ) {
-@@ -522,8 +524,9 @@ retr_applefile( SNET *sn, char *pathdesc
+@@ -523,8 +524,9 @@ retr_applefile( SNET *sn, char *pathdesc
      if ( verbose ) printf( "<<< .\n" );
  
      if ( cksum ) {
