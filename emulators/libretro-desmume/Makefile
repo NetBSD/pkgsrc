@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/01/03 21:51:52 nia Exp $
+# $NetBSD: Makefile,v 1.7 2019/05/09 14:17:02 nia Exp $
 
 DISTNAME=	libretro-desmume-20181207
 CATEGORIES=	emulators
@@ -20,6 +20,10 @@ USE_LANGUAGES=	c c++
 .include "../../mk/bsd.prefs.mk"
 
 CXXFLAGS+=	-D__STDC_FORMAT_MACROS
+
+# fix build with libpcap-1.8.1
+# see issues/58
+CXXFLAGS+=	-DHAVE_REMOTE
 
 .if !empty(MACHINE_ARCH:M*arm*)
 CXXFLAGS+=	-marm
