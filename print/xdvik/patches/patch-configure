@@ -1,39 +1,16 @@
-$NetBSD: patch-configure,v 1.2 2018/05/05 23:17:33 dholland Exp $
+$NetBSD: patch-configure,v 1.3 2019/05/09 09:47:36 adam Exp $
 
-- check more aggressively for XInput 2.1 to fix native X netbsd-6 build
-- freetype2 upstream removed freetype-config; use pkg-config instead
+Check more aggressively for XInput 2.1 to fix native X netbsd-6 build.
 
---- configure.orig	2015-03-12 14:42:02.000000000 +0000
+--- configure.orig	2019-03-25 17:26:59.000000000 +0000
 +++ configure
-@@ -1519,7 +1519,7 @@ Optional Packages:
-                           zlib headers installed in DIR
-   --with-zlib-libdir=DIR  zlib library installed in DIR
-   --with-system-freetype2 use installed freetype2 headers and library
--                          (requires freetype-config)
-+                          (requires pkg-config)
-   --with-default-gs-lib-path=PATH
-                           set default path for finding font aliases to PATH
-   --with-default-dvips-path=CMD
-@@ -15845,6 +15845,9 @@ LDFLAGS="$X_LIBS $LDFLAGS"
+@@ -15847,6 +15847,9 @@ LDFLAGS="$X_LIBS $LDFLAGS"
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  #include <X11/extensions/XInput2.h>
 +#ifndef XIScrollClass
-+ bollocks
++ failhere
 +#endif
  int
  main ()
  {
-@@ -18955,9 +18958,9 @@ esac
- else
-   FT2_CONFIG="$ac_cv_prog_FT2_CONFIG"
- fi
--if $FT2_CONFIG --ftversion >/dev/null 2>&1; then
--  FREETYPE2_INCLUDES=`$FT2_CONFIG --cflags`
--  FREETYPE2_LIBS=`$FT2_CONFIG --libs`
-+if $PKG_CONFIG --version >/dev/null 2>&1; then
-+  FREETYPE2_INCLUDES=`$PKG_CONFIG --cflags freetype2`
-+  FREETYPE2_LIBS=`$PKG_CONFIG --libs freetype2`
- elif test "x$need_freetype2:$with_system_freetype2" = xyes:yes; then
-   as_fn_error $? "did not find freetype-config required for system freetype2 library" "$LINENO" 5
- fi

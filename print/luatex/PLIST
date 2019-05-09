@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2015/12/12 19:11:47 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/05/09 09:47:35 adam Exp $
 bin/luatex
 bin/texlua
 bin/texluac
-lib/libtexlua52.la
+lib/libtexlua53.la
