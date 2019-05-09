@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/08/12 12:52:52 nia Exp $
+$NetBSD: distinfo,v 1.2 2019/05/09 16:27:55 nia Exp $
 
-SHA1 (libretro-beetle-wswan-20180620-b4dc85b0ada2b27af3d4420439b0e4528363ef67.tar.gz) = 5e066b7cfa08f4b4d8d4ce8af2b944817186cf14
-RMD160 (libretro-beetle-wswan-20180620-b4dc85b0ada2b27af3d4420439b0e4528363ef67.tar.gz) = e5c19e86ab057631a1998b240d79e34bacbe040e
-SHA512 (libretro-beetle-wswan-20180620-b4dc85b0ada2b27af3d4420439b0e4528363ef67.tar.gz) = 31265d258e35568ed910bc24fee2ba9d780a1dc671bad0c4267830abd51dc5f3a335bb8fbad56a3e870316f7d4cfcdab8dbb90374178ee48b3363028a6e8d444
-Size (libretro-beetle-wswan-20180620-b4dc85b0ada2b27af3d4420439b0e4528363ef67.tar.gz) = 144227 bytes
+SHA1 (libretro-beetle-wswan-20190402-b231cff853da4bf221189df8aaed8bc275459db2.tar.gz) = a0c75331355683107f4bb5b61857f8f4ff9fc807
+RMD160 (libretro-beetle-wswan-20190402-b231cff853da4bf221189df8aaed8bc275459db2.tar.gz) = bff384c07c6cc7ae8c2f077b9cf3071e3faeda42
+SHA512 (libretro-beetle-wswan-20190402-b231cff853da4bf221189df8aaed8bc275459db2.tar.gz) = b7ca8f513a948fdaf640dc2db823645480bfe8c5c418dbd60064821db4ddb6a83bc79df7f62eceaef313e7cbb208a6646ac3cc61e1c3c0e6b9154201b33bf681
+Size (libretro-beetle-wswan-20190402-b231cff853da4bf221189df8aaed8bc275459db2.tar.gz) = 145189 bytes
