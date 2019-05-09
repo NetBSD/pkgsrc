@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.19 2018/04/17 05:20:34 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/05/09 09:28:22 adam Exp $
 
 .include "../../print/poppler/Makefile.common"
 
-PKGNAME=		poppler-cpp-${POPPLER_VERS}
+PKGNAME=	poppler-cpp-${POPPLER_VERS}
 
-COMMENT=		PDF rendering library (cpp wrapper)
-MAINTAINER=		reed@reedmedia.net
+COMMENT=	PDF rendering library (cpp wrapper)
 
-CONFLICTS+=		poppler<0.4.5nb1
+CONFLICTS+=	poppler<0.4.5nb1
 
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/poppler-cpp.pc.cmake
 
@@ -43,8 +42,8 @@ CHECK_BUILTIN.iconv:=	yes
 CHECK_BUILTIN.iconv:=	no
 
 .if !empty(USE_BUILTIN.iconv:M[nN][oO])
-CMAKE_ARGS+=		-DICONV_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.iconv}/include
-CMAKE_ARGS+=		-DICONV_LIBRARIES:PATH=${BUILDLINK_PREFIX.iconv}/lib
+CMAKE_ARGS+=	-DICONV_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.iconv}/include
+CMAKE_ARGS+=	-DICONV_LIBRARIES:PATH=${BUILDLINK_PREFIX.iconv}/lib
 .endif
 
 post-install:
