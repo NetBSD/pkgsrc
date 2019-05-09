@@ -1,52 +1,57 @@
-# $NetBSD: Makefile,v 1.88 2019/04/03 00:33:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.89 2019/05/09 09:47:36 adam Exp $
 
-DISTNAME=	texlive-20180414-source
-PKGNAME=	xetex-0.99999
-PKGREVISION=	12
+.include "../../print/texlive/Makefile.common"
+
+PKGNAME=	xetex-0.999991
 CATEGORIES=	print
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2018/
-EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tug.org/xetex/
 COMMENT=	TeX system with Unicode and modern font technologies
+LICENSE=	mit
 
 CONFLICTS+=	web2c<=7.5.7
 DEPENDS+=	dvipdfmx>=20140525:../../print/dvipdfmx
 
-EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
-			${DISTNAME}/libs/graphite2 \
-			${DISTNAME}/libs/harfbuzz \
-			${DISTNAME}/libs/xpdf \
-			${DISTNAME}/texk/web2c
+EXTRACT_ELEMENTS+=	${DISTNAME}/libs/graphite2
+EXTRACT_ELEMENTS+=	${DISTNAME}/libs/harfbuzz
+EXTRACT_ELEMENTS+=	${DISTNAME}/libs/xpdf
+EXTRACT_ELEMENTS+=	${DISTNAME}/texk/web2c
 
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c99 c++11
-USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake lex perl pkg-config yacc
-CONFIGURE_ARGS+=	--disable-aleph --disable-etex --disable-pdftex \
-			--disable-luatex --disable-mf --disable-mf-nowin \
-			--with-x=no \
-			--disable-luajittex --disable-luatex53 \
-			--disable-mflua --disable-mfluajit \
-			--disable-mp --disable-pmp --disable-upmp \
-			--disable-ptex --disable-eptex --disable-uptex --disable-euptex \
-			--disable-web-progs \
-			--enable-web2c --enable-xetex
-CONFIGURE_ARGS+=	--with-system-poppler
-CONFIGURE_ARGS+= \
-	--with-fontconfig-includes=${BUILDLINK_PREFIX.fontconfig}/include \
-	--with-fontconfig-libdir=${BUILDLINK_PREFIX.fontconfig}/lib
+USE_LANGUAGES=		c99 c++11
+USE_TOOLS+=		gmake lex perl yacc
+GNU_CONFIGURE_STRICT=	no # libs
+CONFIGURE_ARGS+=	--disable-aleph
+CONFIGURE_ARGS+=	--disable-eptex
+CONFIGURE_ARGS+=	--disable-euptex
+CONFIGURE_ARGS+=	--disable-etex
+CONFIGURE_ARGS+=	--disable-luajittex
+CONFIGURE_ARGS+=	--disable-luatex
+CONFIGURE_ARGS+=	--disable-luatex53
+CONFIGURE_ARGS+=	--disable-mf
+CONFIGURE_ARGS+=	--disable-mf-nowin
+CONFIGURE_ARGS+=	--disable-mflua
+CONFIGURE_ARGS+=	--disable-mfluajit
+CONFIGURE_ARGS+=	--disable-mp
+CONFIGURE_ARGS+=	--disable-pdftex
+CONFIGURE_ARGS+=	--disable-pmp
+CONFIGURE_ARGS+=	--disable-ptex
+CONFIGURE_ARGS+=	--disable-uptex
+CONFIGURE_ARGS+=	--disable-upmp
+CONFIGURE_ARGS+=	--disable-web-progs
+CONFIGURE_ARGS+=	--enable-web2c
+CONFIGURE_ARGS+=	--enable-xetex
+CONFIGURE_ARGS+=	--with-fontconfig-includes=${BUILDLINK_PREFIX.fontconfig}/include
+CONFIGURE_ARGS+=	--with-fontconfig-libdir=${BUILDLINK_PREFIX.fontconfig}/lib
 CONFIGURE_ARGS+=	--with-system-kpathsea
-CONFIGURE_ARGS+=	--with-system-zlib \
-	--with-zlib-includes=${BUILDLINK_PREFIX.zlib}/include \
-	--with-zlib-libdir=${BUILDLINK_PREFIX.zlib}/lib
+CONFIGURE_ARGS+=	--with-system-poppler
+CONFIGURE_ARGS+=	--with-system-zlib
+CONFIGURE_ARGS+=	--with-zlib-includes=${BUILDLINK_PREFIX.zlib}/include
+CONFIGURE_ARGS+=	--with-zlib-libdir=${BUILDLINK_PREFIX.zlib}/lib
 CONFIGURE_ARGS+=	--with-system-libpng
 CONFIGURE_ARGS+=	--with-system-freetype2
 CONFIGURE_ARGS+=	--with-system-teckit
 CONFIGURE_ARGS+=	--with-system-icu
-CONFIGURE_ENV+=		FT2_CONFIG=pkg-config \
-			PKG_CONFIG=${TOOLS_CMD.pkg-config}
+CONFIGURE_ARGS+=	--without-x
 
 CONFIGURE_DIRS=		libs/graphite2
 CONFIGURE_DIRS+=	libs/harfbuzz
@@ -57,11 +62,14 @@ SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Setting paths to commands.
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	texk/web2c/xetexdir/XeTeX_ext.c
-SUBST_SED.paths=	-e 's,@XDVIPDFMX@,${LOCALBASE}/bin/xdvipdfmx,g'
+SUBST_SED.paths=	-e 's,@XDVIPDFMX@,${PREFIX}/bin/xdvipdfmx,g'
 
 INSTALLATION_DIRS+=	bin
 
 CFLAGS.SunOS+=		-D_XOPEN_SOURCE_EXTENDED=0
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/texk/web2c/xetex ${DESTDIR}${PREFIX}/bin
 
 .include "../../converters/TECkit/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
@@ -73,8 +81,4 @@ BUILDLINK_API_DEPENDS.kpathsea+= kpathsea>=6.2.1
 .include "../../print/poppler/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/texk/web2c/xetex ${DESTDIR}${PREFIX}/bin
-
 .include "../../mk/bsd.pkg.mk"

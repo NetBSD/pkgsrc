@@ -1,0 +1,41 @@
+# $NetBSD: Makefile.common,v 1.1 2019/05/09 09:47:34 adam Exp $
+# used by converters/dvi2tty/Makefile
+# used by fonts/afm2pl/Makefile
+# used by fonts/gsftopkk/Makefile
+# used by fonts/lcdftypetools/Makefile
+# used by fonts/ps2pkm/Makefile
+# used by fonts/ttf2pk/Makefile
+# used by fonts/ttfdump/Makefile
+# used by print/cjkutils/Makefile
+# used by print/dvidvi/Makefile
+# used by print/dviljk/Makefile
+# used by print/dvipdfmx/Makefile
+# used by print/dvipsk/Makefile
+# used by print/kpathsea/Makefile
+# used by print/lacheck/Makefile
+# used by print/luatex/Makefile
+# used by print/ptexenc/Makefile
+# used by print/seetexk/Makefile
+# used by print/tex4ht/Makefile
+# used by print/vlna/Makefile
+# used by print/xdvik/Makefile
+# used by print/xetex/Makefile
+# used by print/xpdfopen/Makefile
+# used by textproc/makeindexk/Makefile
+# used by textproc/mendexk/Makefile
+# used by textproc/xindy/Makefile
+
+DISTNAME=	texlive-20190410-source
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2019/
+EXTRACT_SUFX=	.tar.xz
+
+MAINTAINER?=	minskim@NetBSD.org
+
+EXTRACT_ELEMENTS=	${DISTNAME}/build-aux
+
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
+GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT?=	yes
+CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.guess
+CONFIG_SUB_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.sub
