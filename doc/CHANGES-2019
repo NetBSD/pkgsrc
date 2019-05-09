@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2049 2019/05/09 09:28:59 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2050 2019/05/09 09:50:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3348,3 +3348,28 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ocaml-migrate-parsetree to 1.3.0 [jaapb 2019-05-09]
 	Updated lang/rust to 1.34.1 [he 2019-05-09]
 	Updated print/poppler to 0.76.1 [adam 2019-05-09]
+	Updated converters/dvi2tty to 6.0.0nb3 [adam 2019-05-09]
+	Updated fonts/afm2pl to 0.7.1nb5 [adam 2019-05-09]
+	Updated fonts/gsftopkk to 1.19.2nb10 [adam 2019-05-09]
+	Updated fonts/lcdftypetools to 2.108 [adam 2019-05-09]
+	Updated fonts/ps2pkm to 1.8nb3 [adam 2019-05-09]
+	Updated fonts/ttf2pk to 2.0nb5 [adam 2019-05-09]
+	Updated fonts/ttfdump to 0.5.5nb6 [adam 2019-05-09]
+	Updated print/cjkutils to 4.8.4nb4 [adam 2019-05-09]
+	Updated print/dvidvi to 1.1nb3 [adam 2019-05-09]
+	Updated print/dviljk to 2.6.5nb10 [adam 2019-05-09]
+	Updated print/dvipdfmx to 20190225 [adam 2019-05-09]
+	Updated print/dvipsk to 5.999 [adam 2019-05-09]
+	Updated print/kpathsea to 6.3.1 [adam 2019-05-09]
+	Updated print/lacheck to 1.28nb4 [adam 2019-05-09]
+	Updated print/luatex to 1.10.0 [adam 2019-05-09]
+	Updated print/ptexenc to 1.3.7 [adam 2019-05-09]
+	Updated print/seetexk to 1.1nb5 [adam 2019-05-09]
+	Updated print/tex4ht to 20180225 [adam 2019-05-09]
+	Updated print/vlna to 1.5nb5 [adam 2019-05-09]
+	Updated print/xdvik to 22.87.03nb3 [adam 2019-05-09]
+	Updated print/xetex to 0.999991 [adam 2019-05-09]
+	Updated print/xpdfopen to 0.86nb5 [adam 2019-05-09]
+	Updated textproc/makeindexk to 2.15nb11 [adam 2019-05-09]
+	Updated textproc/mendexk to 3.1 [adam 2019-05-09]
+	Updated textproc/xindy to 2.5.1nb2 [adam 2019-05-09]
