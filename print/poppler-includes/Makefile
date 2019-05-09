@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.24 2018/04/17 05:20:34 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2019/05/09 09:28:22 adam Exp $
 
 .include "../../print/poppler/Makefile.common"
 
-PKGNAME=		poppler-includes-${POPPLER_VERS}
+PKGNAME=	poppler-includes-${POPPLER_VERS}
 
-COMMENT=		Poppler Xpdf includes (unsupported)
-MAINTAINER=		pkgsrc-users@NetBSD.org
+COMMENT=	Poppler Xpdf includes (unsupported)
 
-CONFLICTS+=		poppler-0.5.1 poppler-0.5.1nb1 poppler-0.5.1nb2
+CONFLICTS+=	poppler-0.5.1{,nb*}
 
-NO_BUILD=		yes
+NO_BUILD=	yes
 
 CMAKE_ARGS+=	-DENABLE_XPDF_HEADERS=ON
 
@@ -20,19 +19,17 @@ INCDIR=${DESTDIR}${PREFIX}/include
 do-install:
 	${INSTALL_DATA_DIR} ${INCDIR}
 	${INSTALL_DATA_DIR} ${INCDIR}/poppler
-	sed -n -f ${FILESDIR}/extract.sed ${WRKSRC}/CMakeLists.txt       \
-	  | grep ^poppler/ | { while read f;                             \
-	do                                                               \
-	    ${INSTALL_DATA} ${WRKSRC}/"$$f" ${INCDIR}/poppler;           \
+	sed -n -f ${FILESDIR}/extract.sed ${WRKSRC}/CMakeLists.txt	\
+	  | grep ^poppler/ | { while read f; do				\
+	    ${INSTALL_DATA} ${WRKSRC}/"$$f" ${INCDIR}/poppler;		\
 	done };
 	${INSTALL_DATA} ${WRKSRC}/poppler/poppler-config.h ${INCDIR}/poppler
-	for d in goo fofi splash; do                                     \
-	    ${INSTALL_DATA_DIR} ${INCDIR}/poppler/"$$d";                 \
-	    sed -n -f ${FILESDIR}/extract.sed ${WRKSRC}/CMakeLists.txt   \
-	      | grep "^$$d/" | { while read f;                           \
-	    do                                                           \
-		${INSTALL_DATA} ${WRKSRC}/"$$f" ${INCDIR}/poppler/"$$d"; \
-	    done };                                                      \
+	for d in goo fofi splash; do					\
+	    ${INSTALL_DATA_DIR} ${INCDIR}/poppler/"$$d";		\
+	    sed -n -f ${FILESDIR}/extract.sed ${WRKSRC}/CMakeLists.txt	\
+	      | grep "^$$d/" | { while read f; do			\
+		${INSTALL_DATA} ${WRKSRC}/"$$f" ${INCDIR}/poppler/"$$d";\
+	    done };							\
 	done
 	# do these actually belong here?
 	${INSTALL_DATA} ${WRKSRC}/poppler/SignatureInfo.h ${INCDIR}/poppler
