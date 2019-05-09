@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2019/03/05 16:33:41 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2019/05/09 08:41:34 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml-migrate-parsetree
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ocaml-migrate-parsetree
 OCAML_MIGRATE_PARSETREE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-migrate-parsetree+=	ocaml-migrate-parsetree>=1.0.1
-BUILDLINK_ABI_DEPENDS.ocaml-migrate-parsetree+=	ocaml-migrate-parsetree>=1.2.0
+BUILDLINK_ABI_DEPENDS.ocaml-migrate-parsetree+=	ocaml-migrate-parsetree>=1.3.0
 BUILDLINK_PKGSRCDIR.ocaml-migrate-parsetree?=	../../devel/ocaml-migrate-parsetree
 .endif	# OCAML_MIGRATE_PARSETREE_BUILDLINK3_MK
 
