@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2054 2019/05/09 16:28:04 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2055 2019/05/09 23:24:38 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3382,3 +3382,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-faker to 1.0.6 [adam 2019-05-09]
 	Updated emulators/libretro-desmume to 20190426 [nia 2019-05-09]
 	Updated emulators/libretro-beetle-wswan to 20190402 [nia 2019-05-09]
+	Updated emulators/libretro-reicast to 20190508 [nia 2019-05-09]
