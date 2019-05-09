@@ -1,4 +1,4 @@
-# $NetBSD: texmf.mk,v 1.9 2018/07/19 12:57:38 leot Exp $
+# $NetBSD: texmf.mk,v 1.10 2019/05/09 09:47:35 adam Exp $
 #
 # This Makefile fragment is intended to be included by packages that
 # install TeX packages.  It rebuilds the ls-R databases at
@@ -27,18 +27,18 @@ TEX_TEXMF_MK=		# defined
 DEPENDS+=		kpathsea>=3.5.7:../../print/kpathsea
 
 TEX_TEXMF_DIRS?=	${PREFIX}/share/texmf-dist
-FILES_SUBST+=		MKTEXLSR=${LOCALBASE}/bin/mktexlsr
+FILES_SUBST+=		MKTEXLSR=${PREFIX}/bin/mktexlsr
 FILES_SUBST+=		TEXMF_DIRS=${TEX_TEXMF_DIRS:Q}
 .if !empty(TEX_TEXMF_DIRS)
 INSTALL_TEMPLATES+=	../../print/kpathsea/files/texmf-install.tmpl
 DEINSTALL_TEMPLATES+=	../../print/kpathsea/files/texmf-deinstall.tmpl
 .endif
 
-.  if !empty(TEX_CONFIG_NAMES)
+.if !empty(TEX_CONFIG_NAMES)
 FILES_SUBST+=		CONFIG_NAMES=${TEX_CONFIG_NAMES:Q}
 INSTALL_TEMPLATES+=	../../print/kpathsea/files/config-install.tmpl
 DEINSTALL_TEMPLATES+=	../../print/kpathsea/files/config-deinstall.tmpl
-.  endif
+.endif
 
 .if !empty(TEX_FORMATS)
 .  include "../../print/tex-tetex/format.mk"
