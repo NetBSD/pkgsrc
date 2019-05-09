@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2051 2019/05/09 11:35:01 leot Exp $
+$NetBSD: CHANGES-2019,v 1.2052 2019/05/09 12:03:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3376,3 +3376,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated shells/standalone-tcsh to 6.21.00 [leot 2019-05-09]
 	Updated shells/static-tcsh to 6.21.00 [leot 2019-05-09]
 	Updated shells/tcsh to 6.21.00 [leot 2019-05-09]
+	Updated devel/py-hypothesis to 4.23.4 [adam 2019-05-09]
+	Updated devel/py-pluggy to 0.11.0 [adam 2019-05-09]
+	Updated devel/py-test to 4.4.2 [adam 2019-05-09]
+	Updated devel/py-faker to 1.0.6 [adam 2019-05-09]
