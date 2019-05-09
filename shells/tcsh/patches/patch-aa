@@ -1,6 +1,7 @@
-$NetBSD: patch-aa,v 1.15 2016/11/24 15:45:06 christos Exp $
+$NetBSD: patch-aa,v 1.16 2019/05/09 11:32:36 leot Exp $
 
-Use LDFLAGS and BSD_INSTALL_*.
+- Adjust mandir
+- Use BSD_INSTALL_*
 
 --- Makefile.in.orig	2015-08-24 16:09:04.000000000 -0400
 +++ Makefile.in	2016-11-24 10:43:07.000000000 -0500
@@ -13,15 +14,6 @@ Use LDFLAGS and BSD_INSTALL_*.
  MANSECT=1
  DESTBIN=${DESTDIR}${bindir}
  DESTMAN=${DESTDIR}${mandir}/man${MANSECT}
-@@ -449,7 +449,7 @@
- 
- gethost:  gethost.c sh.err.h tc.const.h sh.h
- 	rm -f gethost
--	${CC_FOR_GETHOST} -o gethost ${CPPFLAGS} $(srcdir)/gethost.c
-+	${CC_FOR_GETHOST} -o gethost ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} $(srcdir)/gethost.c
- 
- tc.defs.c:	gethost host.defs
- 	@rm -f $@.tmp
 @@ -597,19 +597,13 @@
  	-strip ${DESTBIN}/tcsh$(EXEEXT)
  
