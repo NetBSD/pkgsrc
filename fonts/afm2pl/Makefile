@@ -1,27 +1,19 @@
-# $NetBSD: Makefile,v 1.5 2018/05/13 12:03:52 markd Exp $
+# $NetBSD: Makefile,v 1.6 2019/05/09 09:47:34 adam Exp $
 
-DISTNAME=	texlive-20180414-source
+.include "../../print/texlive/Makefile.common"
+
 PKGNAME=	afm2pl-0.7.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	fonts
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2018/
-EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
 COMMENT=	Convert an Adobe font metric file to a TeX font property list
 LICENSE=	gnu-gpl-v2
 
-EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
-			${DISTNAME}/texk/afm2pl
+EXTRACT_ELEMENTS+=	${DISTNAME}/texk/afm2pl
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/afm2pl
-
-CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.guess
-CONFIG_SUB_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.sub
 
 CONFIGURE_ARGS+=	--with-system-kpathsea
 
