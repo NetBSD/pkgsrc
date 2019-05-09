@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2018/10/02 21:09:29 nia Exp $
+# $NetBSD: Makefile,v 1.3 2019/05/09 16:27:55 nia Exp $
 
-DISTNAME=	libretro-beetle-wswan-20180620
+DISTNAME=	libretro-beetle-wswan-20190402
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	beetle-wswan-libretro
-GITHUB_TAG=	b4dc85b0ada2b27af3d4420439b0e4528363ef67
+GITHUB_TAG=	b231cff853da4bf221189df8aaed8bc275459db2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://docs.libretro.com/library/beetle_cygne/
