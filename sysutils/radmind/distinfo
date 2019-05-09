@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.24 2019/05/08 08:34:48 hauke Exp $
+$NetBSD: distinfo,v 1.25 2019/05/09 09:37:36 hauke Exp $
 
 SHA1 (radmind-1.14.1.tar.gz) = 26f37f1c002384a9c609e688d6cee2fa15b6d0d2
 RMD160 (radmind-1.14.1.tar.gz) = 6b925083ef9dce2de21ebb0ffef287b1ffe9173d
@@ -18,7 +18,7 @@ SHA1 (patch-libsnet_snet.c) = 29484ae6775a1fe9d02980a84503762b55a093e9
 SHA1 (patch-openssl__compat.c) = 0076abec076f29764d86ec1fc3b0bf7092c7dd18
 SHA1 (patch-openssl__compat.h) = d73ce65dde6e48e378feded637b7b6a4d8e36047
 SHA1 (patch-ra.sh) = 05ba697814bf4833a9c38f881e43639067afba29
-SHA1 (patch-retr.c) = 7c76538c3159fa0e10e5a44c358f3091ad16d594
+SHA1 (patch-retr.c) = aa667fd76300c8526b1c75137880da83220a2699
 SHA1 (patch-stor.c) = f0a5a94222513a02d6cae3f2141e592866765fcb
 SHA1 (patch-t2pkg.c) = 8c8379ad8e33fc07c83d04c944fb1e425775739c
 SHA1 (patch-transcript.c) = 2fab20d210317b0e0ba52102359588670ba5f941
