@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/04/25 07:32:48 maya Exp $
+# $NetBSD: Makefile,v 1.3 2019/05/09 15:13:15 mef Exp $
 
 
 VERSION=	2018.3.4
@@ -51,7 +51,7 @@ do-install:
 	${SED} -e "s|@@IDEA_HOME@@|${PREFIX}/${PKGNAME}|g" \
 	${FILESDIR}/phpstorm.desktop > \
 	${DESTDIR}${PREFIX}/share/applications/phpstorm.desktop && \
-	pax -rw -pm * ${DESTDIR}${PREFIX}/${PKGNAME}
+	pax -rw -pm * ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}
 
 .include "../../lang/python/application.mk"
 .include "../../mk/java-vm.mk"
