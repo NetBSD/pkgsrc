@@ -1,6 +1,7 @@
-$NetBSD: patch-configure,v 1.1 2013/04/02 20:37:55 bsiegert Exp $
+$NetBSD: patch-configure,v 1.2 2019/05/09 11:46:21 leot Exp $
 
 Add support for MirBSD systems.
+
 --- configure.orig	Tue Mar  5 20:51:17 2013
 +++ configure
 @@ -2801,6 +2801,11 @@ case "${host}" in
