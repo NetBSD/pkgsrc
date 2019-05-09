@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/04/25 07:32:52 maya Exp $
+# $NetBSD: Makefile,v 1.6 2019/05/09 14:49:58 nia Exp $
 
 DISTNAME=	libretro-dolphin-20180827
 PKGREVISION=	2
@@ -32,6 +32,14 @@ CMAKE_ARGS+=	-DENABLE_SDL=OFF
 CMAKE_ARGS+=	-DENABLE_EVDEV=OFF
 CMAKE_ARGS+=	-DLIBRETRO=ON
 
+.include "../../mk/bsd.prefs.mk"
+
+ONLY_FOR_PLATFORM=	${LITTLEENDIANPLATFORMS}
+
+.if ${MACHINE_ARCH} != "x86_64" && ${MACHINE_ARCH} != "aarch64"
+CMAKE_ARGS+=	-DENABLE_GENERIC=1
+.endif
+
 LDFLAGS.NetBSD+=	-lrt
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
@@ -39,8 +47,6 @@ INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/dolphin_libretro.so \
 	    ${DESTDIR}${PREFIX}/lib/libretro/dolphin_libretro.so
-
-.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "Darwin"
 .include "../../archivers/lzo/buildlink3.mk"
