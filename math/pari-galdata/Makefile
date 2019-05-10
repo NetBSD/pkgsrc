@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2012/12/12 12:45:18 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/05/10 22:55:23 mef Exp $
 
 DISTNAME=		galdata
 PKGNAME=		pari-galdata-2.2
 CATEGORIES=		math
-MASTER_SITES=		ftp://pari.math.u-bordeaux.fr/pub/pari/packages/
+MASTER_SITES=		https://pari.math.u-bordeaux.fr/pub/pari/packages/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
