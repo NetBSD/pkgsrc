@@ -1,22 +1,22 @@
-$NetBSD: patch-pdftexdir_pdftosrc-newpoppler.cc,v 1.4 2019/02/17 11:44:38 tnn Exp $
+$NetBSD: patch-pdftexdir_pdftosrc-newpoppler.cc,v 1.5 2019/05/10 19:19:09 ryoon Exp $
 
 --- pdftexdir/pdftosrc-newpoppler.cc.orig	2017-10-17 21:52:13.000000000 +0000
 +++ pdftexdir/pdftosrc-newpoppler.cc
-@@ -68,7 +68,7 @@ int main(int argc, char *argv[])
-     Stream *s;
-     Object srcStream, srcName, catalogDict;
-     FILE *outfile;
--    char *outname;
-+    const char *outname;
-     int objnum = 0, objgen = 0;
-     bool extract_xref_table = false;
-     int c;
+@@ -20,7 +20,7 @@ with this program.  If not, see <http://
+ /*
+ This is based on the patch texlive-poppler-0.59.patch <2017-09-19> at
+ https://git.archlinux.org/svntogit/packages.git/plain/texlive-bin/trunk
+-by Arch Linux. The poppler should be 0.59.0 or newer versions.
++by Arch Linux. The poppler should be 0.76.0 or newer versions.
+ POPPLER_VERSION should be defined.
+ */
+ 
 @@ -109,7 +109,7 @@ int main(int argc, char *argv[])
              fprintf(stderr, "No SourceName found\n");
              exit(1);
          }
 -        outname = srcName.getString()->getCString();
-+        outname = srcName.getString()->c_str();
++        outname = (char *)srcName.getString()->c_str();
          // We cannot free srcName, as objname shares its string.
          // srcName.free();
      } else if (objnum > 0) {
@@ -47,15 +47,15 @@ $NetBSD: patch-pdftexdir_pdftosrc-newpoppler.cc,v 1.4 2019/02/17 11:44:38 tnn Ex
  
                  objStr = xref->fetch(e->offset, 0);
                  assert(objStr.isStream());
-@@ -173,9 +173,9 @@ int main(int argc, char *argv[])
+@@ -173,9 +173,8 @@ int main(int argc, char *argv[])
  
                  // parse the header: object numbers and offsets
                  objStr.streamReset();
 -                str = new EmbedStream(objStr.getStream(), Object(objNull), gTrue, first);
-+                str = new EmbedStream(objStr.getStream(), Object(objNull), true, first);
-                 lexer = new Lexer(xref, str);
+-                lexer = new Lexer(xref, str);
 -                parser = new Parser(xref, lexer, gFalse);
-+                parser = new Parser(xref, lexer, false);
++                str = new EmbedStream(objStr.getStream(), Object(objNull), true, first);
++                parser = new Parser(xref, str, false);
                  for (n = 0; n < nObjects; ++n) {
                      obj1 = parser->getObj();
                      obj2 = parser->getObj();
