@@ -1,15 +1,20 @@
-# $NetBSD: xorg.libdrm,v 1.13 2019/03/05 19:56:50 maya Exp $
+# $NetBSD: xorg.libdrm,v 1.14 2019/05/10 16:25:14 leot Exp $
 #
 include/X11/xf86drm.h
 include/X11/xf86mm.h
+include/libdrm/amdgpu.h
+include/libdrm/amdgpu_drm.h
 include/libdrm/drm.h
 include/libdrm/drm_fourcc.h
 include/libdrm/drm_mode.h
 include/libdrm/drm_sarea.h
 include/libdrm/i915_drm.h
+include/libdrm/intel_aub.h
 include/libdrm/intel_bufmgr.h
+include/libdrm/intel_debug.h
 include/libdrm/mach64_drm.h
 include/libdrm/mga_drm.h
+include/libdrm/nouveau.h
 include/libdrm/nouveau/nvif/cl0080.h
 include/libdrm/nouveau/nvif/cl9097.h
 include/libdrm/nouveau/nvif/class.h
@@ -18,7 +23,9 @@ include/libdrm/nouveau/nvif/if0003.h
 include/libdrm/nouveau/nvif/ioctl.h
 include/libdrm/nouveau/nvif/unpack.h
 include/libdrm/nouveau_drm.h
+include/libdrm/qxl_drm.h
 include/libdrm/r128_drm.h
+include/libdrm/r600_pci_ids.h
 include/libdrm/radeon_bo.h
 include/libdrm/radeon_bo_gem.h
 include/libdrm/radeon_bo_int.h
@@ -30,6 +37,7 @@ include/libdrm/radeon_surface.h
 include/libdrm/savage_drm.h
 include/libdrm/sis_drm.h
 include/libdrm/via_drm.h
+include/libdrm/virtgpu_drm.h
 include/libkms/libkms.h
 include/xf86drm.h
 include/xf86drmMode.h
