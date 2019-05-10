@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2019/04/26 13:13:48 maya Exp $
+# $NetBSD: Makefile,v 1.29 2019/05/10 15:49:39 mef Exp $
 
 DISTNAME=	ExmanIDE-0.9.4
 PKGREVISION=	8
@@ -14,7 +14,6 @@ DEPENDS+=	${PYPKGPREFIX}-wxWidgets>=2.6:../../x11/py-wxWidgets
 USE_TOOLS+=	pax
 
 WRKSRC=		${WRKDIR}/${PKGBASE}
-NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-wxWidgets
