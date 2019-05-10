@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2018/08/22 09:47:24 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2019/05/10 12:25:04 hauke Exp $
 
 DISTNAME=	davical-${DAVICAL_VERSION}
 PKGNAME=	${PHP_PKG_PREFIX}-davical-${DAVICAL_VERSION}
-PKGREVISION=	1
+#PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	-https://gitlab.com/davical-project/davical/repository/archive.tar.gz?ref=${GITLAB_TAG}
 
@@ -11,9 +11,9 @@ HOMEPAGE=	https://www.davical.org/
 COMMENT=	Simple CalDAV server using a PostgreSQL backend
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3
 
-DAVICAL_VERSION=1.1.7
+DAVICAL_VERSION=1.1.8
 GITLAB_TAG=	r${DAVICAL_VERSION}
-GITLAB_REV=	05397d635c3f218b850775223aa5dd705da9f91c
+GITLAB_REV=	4af9595f4d0530268ac1289ba4ab2adb4890802e
 
 DAVICALDIR=	${PREFIX}/share/davical
 EGDIR=		${PREFIX}/share/examples/davical
@@ -77,19 +77,19 @@ REPLACE_FILES.php+=	scripts/tz-update.php
 
 SUBST_CLASSES+=		conf-path
 SUBST_STAGE.conf-path=	pre-configure
+SUBST_VARS.conf-path+=	PKG_SYSCONFDIR
 SUBST_FILES.conf-path=	inc/always.php.in dba/update-davical-database
 SUBST_FILES.conf-path+=	inc/davical_configuration_missing.php
-SUBST_SED.conf-path+=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
 SUBST_MESSAGE.conf-path=Fixing configuration path.
 
 # See ../../devel/php-libawl/Makefile.common for the LIBAWLDIR value
 SUBST_CLASSES+=		inc-path
 SUBST_STAGE.inc-path=	pre-configure
+SUBST_VARS.inc-path+=	PKG_SYSCONFDIR
 SUBST_FILES.inc-path=	davical.conf inc/always.php.in
 SUBST_FILES.inc-path+=	scripts/po/rebuild-translations.sh
 SUBST_FILES.inc-path+=	dba/create-database.sh
 SUBST_SED.inc-path+=	-e "s|@LIBAWLPATH@|${PREFIX}/${LIBAWLDIR}|g"
-SUBST_SED.inc-path+=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
 SUBST_MESSAGE.inc-path=	Fixing AWL include path.
 
 SUBST_CLASSES+=		examples
@@ -100,8 +100,8 @@ SUBST_MESSAGE.examples=	Fixing config examples path.
 
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	pre-configure
+SUBST_VARS.files+=	DAVICALDIR
 SUBST_FILES.files=	davical.conf
-SUBST_SED.files+=	-e "s|@DAVICALDIR@|${DAVICALDIR}|g"
 SUBST_MESSAGE.files=	Fixing DAViCal configuration file for Apache.
 
 pre-patch:
