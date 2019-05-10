@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2019/05/10 16:19:22 bacon Exp $
+
+SHA1 (vsearch-2.13.3.tar.gz) = 064bfbef4271c254848f18b03bed7c41a15ae2ab
+RMD160 (vsearch-2.13.3.tar.gz) = d8f00a88449fb827878b7e301f9127799ce3d43c
+SHA512 (vsearch-2.13.3.tar.gz) = a3c539d60ed6db8bdb964a1aee18e79a6b8ed397dc01d47aad873019a8f123ed8892b08536dfd5f785f8d327fee75d42b4a744f354f5c6e3bb03d0bf10f054e5
+Size (vsearch-2.13.3.tar.gz) = 233846 bytes
+SHA1 (patch-configure.ac) = 536a8565514cf9b43f4f8892d1cba0444f752c5e
+SHA1 (patch-src_Makefile.am) = bcdd1bbe9f04197084825e2c3560ba27a750f124
+SHA1 (patch-src_city.cc) = 3a5bcbca0a0c733a32a9d152189de10df3cb515f
+SHA1 (patch-src_vsearch.h) = 26b8dc6ce0448e7463ee1c3ff73747ad07286543
