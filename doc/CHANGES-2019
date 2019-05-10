@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2056 2019/05/10 09:19:53 leot Exp $
+$NetBSD: CHANGES-2019,v 1.2057 2019/05/10 09:40:15 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3384,3 +3384,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated emulators/libretro-beetle-wswan to 20190402 [nia 2019-05-09]
 	Updated emulators/libretro-reicast to 20190508 [nia 2019-05-09]
 	Updated www/tscrape to 0.2 [leot 2019-05-10]
+	Updated chat/inspircd3 to 3.0.1 [nia 2019-05-10]
