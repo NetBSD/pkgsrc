@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2018/11/14 22:21:23 kleink Exp $
+# $NetBSD: Makefile,v 1.75 2019/05/10 13:14:18 wiz Exp $
 
 DISTNAME=	gtranslator-2.91.6
 PKGREVISION=	11
@@ -7,8 +7,8 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtranslator/2.91/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gtranslator.sourceforge.net/
-COMMENT=	Gettext po file editor for the GNOME2 desktop environment
+HOMEPAGE=	https://wiki.gnome.org/Apps/Gtranslator
+COMMENT=	Gettext po file editor for the GNOME desktop environment
 
 BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
