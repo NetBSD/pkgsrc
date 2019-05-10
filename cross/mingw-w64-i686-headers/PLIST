@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/06/07 19:26:59 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/05/10 19:30:03 ryoon Exp $
 cross/i686-w64-mingw32/mingw/include/GL/gl.h
 cross/i686-w64-mingw32/mingw/include/GL/glaux.h
 cross/i686-w64-mingw32/mingw/include/GL/glcorearb.h
@@ -184,6 +184,7 @@ cross/i686-w64-mingw32/mingw/include/confpriv.h
 cross/i686-w64-mingw32/mingw/include/conio.h
 cross/i686-w64-mingw32/mingw/include/control.h
 cross/i686-w64-mingw32/mingw/include/cor.h
+cross/i686-w64-mingw32/mingw/include/corecrt_startup.h
 cross/i686-w64-mingw32/mingw/include/corerror.h
 cross/i686-w64-mingw32/mingw/include/corhdr.h
 cross/i686-w64-mingw32/mingw/include/correg.h
@@ -217,11 +218,19 @@ cross/i686-w64-mingw32/mingw/include/d3d10_1.idl
 cross/i686-w64-mingw32/mingw/include/d3d10_1shader.h
 cross/i686-w64-mingw32/mingw/include/d3d10effect.h
 cross/i686-w64-mingw32/mingw/include/d3d10misc.h
+cross/i686-w64-mingw32/mingw/include/d3d10sdklayers.h
+cross/i686-w64-mingw32/mingw/include/d3d10sdklayers.idl
 cross/i686-w64-mingw32/mingw/include/d3d10shader.h
 cross/i686-w64-mingw32/mingw/include/d3d11.h
 cross/i686-w64-mingw32/mingw/include/d3d11.idl
 cross/i686-w64-mingw32/mingw/include/d3d11_1.h
 cross/i686-w64-mingw32/mingw/include/d3d11_1.idl
+cross/i686-w64-mingw32/mingw/include/d3d11_2.h
+cross/i686-w64-mingw32/mingw/include/d3d11_2.idl
+cross/i686-w64-mingw32/mingw/include/d3d11_3.h
+cross/i686-w64-mingw32/mingw/include/d3d11_3.idl
+cross/i686-w64-mingw32/mingw/include/d3d11_4.h
+cross/i686-w64-mingw32/mingw/include/d3d11_4.idl
 cross/i686-w64-mingw32/mingw/include/d3d11sdklayers.h
 cross/i686-w64-mingw32/mingw/include/d3d11sdklayers.idl
 cross/i686-w64-mingw32/mingw/include/d3d11shader.h
@@ -413,6 +422,7 @@ cross/i686-w64-mingw32/mingw/include/dplobby.h
 cross/i686-w64-mingw32/mingw/include/dplobby8.h
 cross/i686-w64-mingw32/mingw/include/dpnathlp.h
 cross/i686-w64-mingw32/mingw/include/driverspecs.h
+cross/i686-w64-mingw32/mingw/include/drmexternals.h
 cross/i686-w64-mingw32/mingw/include/dsadmin.h
 cross/i686-w64-mingw32/mingw/include/dsclient.h
 cross/i686-w64-mingw32/mingw/include/dsconf.h
@@ -434,6 +444,7 @@ cross/i686-w64-mingw32/mingw/include/dwmapi.h
 cross/i686-w64-mingw32/mingw/include/dwrite.h
 cross/i686-w64-mingw32/mingw/include/dwrite_1.h
 cross/i686-w64-mingw32/mingw/include/dwrite_2.h
+cross/i686-w64-mingw32/mingw/include/dwrite_3.h
 cross/i686-w64-mingw32/mingw/include/dxdiag.h
 cross/i686-w64-mingw32/mingw/include/dxerr8.h
 cross/i686-w64-mingw32/mingw/include/dxerr9.h
@@ -442,8 +453,20 @@ cross/i686-w64-mingw32/mingw/include/dxgi.h
 cross/i686-w64-mingw32/mingw/include/dxgi.idl
 cross/i686-w64-mingw32/mingw/include/dxgi1_2.h
 cross/i686-w64-mingw32/mingw/include/dxgi1_2.idl
+cross/i686-w64-mingw32/mingw/include/dxgi1_3.h
+cross/i686-w64-mingw32/mingw/include/dxgi1_3.idl
+cross/i686-w64-mingw32/mingw/include/dxgi1_4.h
+cross/i686-w64-mingw32/mingw/include/dxgi1_4.idl
+cross/i686-w64-mingw32/mingw/include/dxgi1_5.h
+cross/i686-w64-mingw32/mingw/include/dxgi1_5.idl
+cross/i686-w64-mingw32/mingw/include/dxgi1_6.h
+cross/i686-w64-mingw32/mingw/include/dxgi1_6.idl
+cross/i686-w64-mingw32/mingw/include/dxgicommon.h
+cross/i686-w64-mingw32/mingw/include/dxgicommon.idl
 cross/i686-w64-mingw32/mingw/include/dxgiformat.h
+cross/i686-w64-mingw32/mingw/include/dxgiformat.idl
 cross/i686-w64-mingw32/mingw/include/dxgitype.h
+cross/i686-w64-mingw32/mingw/include/dxgitype.idl
 cross/i686-w64-mingw32/mingw/include/dxtmpl.h
 cross/i686-w64-mingw32/mingw/include/dxva.h
 cross/i686-w64-mingw32/mingw/include/dxva2api.h
@@ -869,6 +892,7 @@ cross/i686-w64-mingw32/mingw/include/ndrtypes.h
 cross/i686-w64-mingw32/mingw/include/netcon.h
 cross/i686-w64-mingw32/mingw/include/neterr.h
 cross/i686-w64-mingw32/mingw/include/netevent.h
+cross/i686-w64-mingw32/mingw/include/netfw.h
 cross/i686-w64-mingw32/mingw/include/netioapi.h
 cross/i686-w64-mingw32/mingw/include/netlistmgr.h
 cross/i686-w64-mingw32/mingw/include/netmon.h
@@ -1258,6 +1282,7 @@ cross/i686-w64-mingw32/mingw/include/typeinfo.h
 cross/i686-w64-mingw32/mingw/include/uastrfnc.h
 cross/i686-w64-mingw32/mingw/include/uchar.h
 cross/i686-w64-mingw32/mingw/include/udpmib.h
+cross/i686-w64-mingw32/mingw/include/uianimation.h
 cross/i686-w64-mingw32/mingw/include/uiautomation.h
 cross/i686-w64-mingw32/mingw/include/uiautomationclient.h
 cross/i686-w64-mingw32/mingw/include/uiautomationcore.h
@@ -1407,6 +1432,7 @@ cross/i686-w64-mingw32/mingw/include/wlanihvtypes.h
 cross/i686-w64-mingw32/mingw/include/wlantypes.h
 cross/i686-w64-mingw32/mingw/include/wmcodecdsp.h
 cross/i686-w64-mingw32/mingw/include/wmcontainer.h
+cross/i686-w64-mingw32/mingw/include/wmdrmsdk.h
 cross/i686-w64-mingw32/mingw/include/wmiatlprov.h
 cross/i686-w64-mingw32/mingw/include/wmistr.h
 cross/i686-w64-mingw32/mingw/include/wmiutils.h
