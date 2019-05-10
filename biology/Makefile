@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2019/05/04 16:16:10 bacon Exp $
+# $NetBSD: Makefile,v 1.54 2019/05/10 16:20:22 bacon Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -51,6 +51,7 @@ SUBDIR+=	sewer
 SUBDIR+=	stacks
 SUBDIR+=	stride
 SUBDIR+=	trimmomatic
+SUBDIR+=	vsearch
 SUBDIR+=	xylem
 
 .include "../mk/misc/category.mk"
