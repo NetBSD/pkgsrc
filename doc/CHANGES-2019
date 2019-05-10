@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2057 2019/05/10 09:40:15 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2058 2019/05/10 12:25:29 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3385,3 +3385,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated emulators/libretro-reicast to 20190508 [nia 2019-05-09]
 	Updated www/tscrape to 0.2 [leot 2019-05-10]
 	Updated chat/inspircd3 to 3.0.1 [nia 2019-05-10]
+	Updated www/davical to 1.1.8 [hauke 2019-05-10]
