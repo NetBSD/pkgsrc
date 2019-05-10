@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2019/05/05 10:44:50 nia Exp $
+# $NetBSD: Makefile,v 1.5 2019/05/10 09:40:01 nia Exp $
 
-DISTNAME=	inspircd-3.0.0
-PKGREVISION=	2
+DISTNAME=	inspircd-3.0.1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=inspircd/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,9 +12,10 @@ LICENSE=	gnu-gpl-v2
 
 EXTRACT_USING=	bsdtar
 USE_TOOLS+=	gmake perl pkg-config
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++03
 HAS_CONFIGURE=	yes
 MAKE_FILE=	GNUmakefile
+MAKE_ENV+=	INSTALL=${INSTALL:Q}
 
 BUILD_DEFS+=	PKG_SYSCONFDIR
 
@@ -27,6 +27,7 @@ CONFIGURE_ARGS+=	--module-dir=${PREFIX}/lib/inspircd/modules
 CONFIGURE_ARGS+=	--config-dir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--data-dir=${PREFIX}/inspircd/data
 CONFIGURE_ARGS+=	--log-dir=${PREFIX}/inspircd/logs
+CONFIGURE_ARGS+=	--script-dir=${PREFIX}/inspircd/scripts
 CONFIG_SHELL=		${PERL5}
 
 REPLACE_PERL+=		tools/genssl
@@ -93,11 +94,6 @@ INSPIRCD_EXTRAS_OFF+=	m_regex_tre.cpp
 
 CONFIGURE_ARGS+=	--distribution-label=pkgsrc
 
-# https://github.com/inspircd/inspircd/commit/044fa999680888267e07dc7b69028b18efbac818
-# this has no side-effects other than allowing the build to proceed with
-# distribution-label set
-CONFIGURE_ARGS+=	--development
-
 .include "options.mk"
 
 post-configure:
@@ -108,10 +104,6 @@ post-configure:
 post-install:
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/examples/* ${DESTDIR}${EGDIR}
 	${RM} -rf ${DESTDIR}${PKG_SYSCONFDIR}/examples
-	${RM} -f ${DESTDIR}${PREFIX}/.gdbargs
-	${CHMOD} ${BINMODE} ${DESTDIR}${PREFIX}/bin/inspircd
-	${CHMOD} ${BINMODE} ${DESTDIR}${PREFIX}/bin/inspircd-genssl
-	${CHMOD} ${BINMODE} ${DESTDIR}${PREFIX}/lib/inspircd/modules/*.so
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
