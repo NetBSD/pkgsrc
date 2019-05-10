@@ -1,4 +1,4 @@
-/* $NetBSD: extract.c,v 1.4 2018/05/07 04:27:43 msaitoh Exp $ */
+/* $NetBSD: extract.c,v 1.5 2019/05/10 18:26:46 maxv Exp $ */
 
 #include <sys/stat.h>
 #include <stdlib.h>
@@ -14,8 +14,11 @@
 FILE *in;
 int lc;
 
+/*
+ * Read .dat data, and convert to binary format.
+ */
 static int
-getbin(void *buf, int len)
+get_bin(void *buf, int len)
 {
 	char lbuf[100], *l;
 	uint32_t b[4];
@@ -26,7 +29,7 @@ getbin(void *buf, int len)
 		if (l[0] == '/')
 			continue;
 		n = sscanf(l, "0x%x, 0x%x, 0x%x, 0x%x,",
-			   &b[0], &b[1], &b[2], &b[3]);
+		    &b[0], &b[1], &b[2], &b[3]);
 		if (n != 4)
 			errx(3, "can't digest line %d", lc);
 
@@ -39,7 +42,7 @@ getbin(void *buf, int len)
 		buf = (char *)buf + 16;
 	}
 
-	return (-1);
+	return -1;
 }
 
 static int
@@ -77,14 +80,15 @@ again:
 
 static void
 writeout(struct intel1_ucode_header *uh, int len,
-	 struct intel1_ucode_ext_table *eh)
+    struct intel1_ucode_ext_table *eh)
 {
 	char name[18], alias[11];
 	int fd, used, i, j;
 	struct intel1_ucode_proc_signature *eps;
 	int rv;
 
-	sprintf(name, "%08x.%08x", uh->uh_signature, uh->uh_rev);
+	/* Write the microcode to a file. */
+	snprintf(name, sizeof(name), "%08x.%08x", uh->uh_signature, uh->uh_rev);
 	fd = open(name, O_WRONLY|O_CREAT|O_TRUNC|O_EXCL, 0644);
 	if (fd < 0)
 		err(2, "open %s", name);
@@ -97,7 +101,7 @@ writeout(struct intel1_ucode_header *uh, int len,
 	for (i = 0; i < 8; i++) {
 		if (!(uh->uh_proc_flags & (1 << i)))
 			continue;
-		sprintf(alias, "%08x-%d", uh->uh_signature, i);
+		snprintf(alias, sizeof(alias), "%08x-%d", uh->uh_signature, i);
 		used += link_unless_newer_exists(name, alias, uh->uh_rev);
 	}
 	if (eh) {
@@ -107,10 +111,10 @@ writeout(struct intel1_ucode_header *uh, int len,
 			for (i = 0; i < 8; i++) {
 				if (!(eps->ups_proc_flags & (1 << i)))
 					continue;
-				sprintf(alias, "%08x-%d",
-					eps->ups_signature, i);
+				snprintf(alias, sizeof(alias), "%08x-%d",
+				    eps->ups_signature, i);
 				used += link_unless_newer_exists(name, alias,
-								 uh->uh_rev);
+				    uh->uh_rev);
 			}
 		}
 	}
@@ -119,54 +123,58 @@ writeout(struct intel1_ucode_header *uh, int len,
 	printf("%s: %d links\n", name, used);
 }
 
-void
-update_size(struct intel1_ucode_header *uh,
-    uint32_t *datasize, uint32_t *totalsize)
+static void
+get_sizes(struct intel1_ucode_header *uh, uint32_t *datasize,
+    uint32_t *totalsize)
 {
-		if (uh->uh_data_size)
-			*datasize = uh->uh_data_size;
-		else
-			*datasize = 2000;
-		if (uh->uh_total_size)
-			*totalsize = uh->uh_total_size;
-		else
-			*totalsize = *datasize + 48;
+	if (uh->uh_data_size)
+		*datasize = uh->uh_data_size;
+	else
+		*datasize = 2000;
+	if (uh->uh_total_size)
+		*totalsize = uh->uh_total_size;
+	else
+		*totalsize = *datasize + 48;
 }
 
-/* Extract .dat (or .inc) file. Usually for microcode.dat. */
-int
+/*
+ * Extract .dat (or .inc) file. Usually for "microcode.dat".
+ */
+static int
 extract_dat(const char *fname)
 {
+	struct intel1_ucode_ext_table *eh;
 	struct intel1_ucode_header uh;
 	uint32_t datasize, totalsize;
 	void *theupdate;
-	struct intel1_ucode_ext_table *eh;
 
 	in = fopen(fname, "r");
 	if (!in)
 		err(2, "could not open \"%s\"", fname);
 
 	for (;;) {
-		if (getbin(&uh, sizeof(uh)) < 0)
+		/* Get the ucode header. */
+		if (get_bin(&uh, sizeof(uh)) < 0)
 			break;
 		if (uh.uh_header_ver != 1)
 			errx(3, "wrong file format, last line %d", lc);
 
-		update_size(&uh, &datasize, &totalsize);
-
+		/* Compute the total size, and fetch everything. */
+		get_sizes(&uh, &datasize, &totalsize);
 		theupdate = malloc(totalsize);
 		memcpy(theupdate, &uh, 48);
-		if (getbin((char *)theupdate + 48, totalsize - 48) < 0)
+		if (get_bin((char *)theupdate + 48, totalsize - 48) < 0)
 			errx(3, "data format");
 
+		/* Maybe an extended header. */
 		if (totalsize != datasize + 48)
 			eh = (void *)((char *)theupdate + 48 + datasize);
 		else
 			eh = NULL;
 
+		/* Write out the ucode. */
 		writeout(theupdate, totalsize, eh);
 		free(theupdate);
-
 	}
 
 	fclose(in);
@@ -174,8 +182,10 @@ extract_dat(const char *fname)
 	return 0;
 }
 
-/* Extract binary files (UV-WX-YZ style filename) */
-int
+/*
+ * Extract binary files (UV-WX-YZ style filename).
+ */
+static int
 extract_bin(int argc, char **argv)
 {
 	struct intel1_ucode_header *uh;
@@ -187,7 +197,7 @@ extract_bin(int argc, char **argv)
 	int i, rv;
 
 	argv++; /* Skip argc[0] (command name). */
-	
+
 	for (i = 1; i < argc; i++, argv++) {
 		rv = stat(*argv, &sb);
 		if (rv != 0)
@@ -209,6 +219,7 @@ extract_bin(int argc, char **argv)
 			    "failed to read \"%s\" (size = %zu)",
 			    *argv, sb.st_size);
 		left = sb.st_size;
+
 next:
 		uh = (struct intel1_ucode_header *)theupdate;
 
@@ -230,7 +241,7 @@ next:
 			errx(EXIT_FAILURE,
 			    "wrong file format, last line %d", lc);
 
-		update_size(uh, &datasize, &totalsize);
+		get_sizes(uh, &datasize, &totalsize);
 
 		if (totalsize != datasize + 48)
 			eh = (void *)((char *)theupdate + 48 + datasize);
