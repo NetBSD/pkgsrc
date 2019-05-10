@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.79 2019/04/25 09:03:06 maya Exp $
+# $NetBSD: buildlink3.mk,v 1.80 2019/05/10 16:25:14 leot Exp $
 #
 # Don't include this file manually!  It will be included as necessary
 # by bsd.buildlink3.mk.
@@ -12,7 +12,7 @@ BUILDLINK_TREE+=	x11-links
 .if !defined(X11_LINKS_BUILDLINK3_MK)
 X11_LINKS_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.x11-links+=	x11-links>=1.17
+BUILDLINK_API_DEPENDS.x11-links+=	x11-links>=1.18
 BUILDLINK_PKGSRCDIR.x11-links?=		../../pkgtools/x11-links
 BUILDLINK_DEPMETHOD.x11-links?=		build
 
