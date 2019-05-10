@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2018/06/22 10:08:48 hauke Exp $
+@comment $NetBSD: PLIST,v 1.11 2019/05/10 12:25:04 hauke Exp $
 share/davical/dba/appuser_permissions.txt
 share/davical/dba/base-data.sql
 share/davical/dba/better_perms.sql
@@ -36,6 +36,7 @@ share/davical/dba/patches/1.2.8.sql
 share/davical/dba/patches/1.2.9.sql
 share/davical/dba/patches/1.3.1.sql
 share/davical/dba/patches/1.3.2.sql
+share/davical/dba/patches/1.3.3.sql
 share/davical/dba/rrule_functions-8.1.sql
 share/davical/dba/rrule_functions.sql
 share/davical/dba/rrule_tests.sql
@@ -120,6 +121,7 @@ share/davical/inc/external-fetch.php
 share/davical/inc/freebusy-functions.php
 share/davical/inc/iSchedule-POST.php
 share/davical/inc/iSchedule.php
+share/davical/inc/instance_range.php
 share/davical/inc/interactive-page.php
 share/davical/inc/log_caldav_action.php
 share/davical/inc/other_translated_strings.php
