@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2060 2019/05/10 16:20:59 bacon Exp $
+$NetBSD: CHANGES-2019,v 1.2061 2019/05/10 16:25:40 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3388,3 +3388,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/davical to 1.1.8 [hauke 2019-05-10]
 	Updated devel/php-libawl to 0.60 [hauke 2019-05-10]
 	Added biology/vsearch version 2.13.3 [bacon 2019-05-10]
+	Updated pkgtools/x11-links to 1.18 [leot 2019-05-10]
