@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/04/25 07:33:20 maya Exp $
+# $NetBSD: Makefile,v 1.5 2019/05/10 22:28:47 mef Exp $
 #
 
 DISTNAME=	openstack_init-1.0
@@ -14,6 +14,7 @@ LICENSE=	original-bsd
 WRKSRC=		${WRKDIR}
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
+REPLACE_PYTHON=	openstack_init.py xen_network.py
 
 do-extract:
 	cd ${FILESDIR} && cp *.py *.sh ${WRKSRC}/
