@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2019/02/22 21:23:29 leot Exp $
+# $NetBSD: Makefile,v 1.2 2019/05/10 09:19:37 leot Exp $
 
-DISTNAME=	tscrape-0.1
+DISTNAME=	tscrape-0.2
 CATEGORIES=	www
 MASTER_SITES=	http://codemadness.org/releases/tscrape/
 
