@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/06/07 19:32:13 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/05/10 19:30:03 ryoon Exp $
 cross/i686-w64-mingw32/mingw/include/agtctl_i.c
 cross/i686-w64-mingw32/mingw/include/agtsvr_i.c
 cross/i686-w64-mingw32/mingw/include/cdoex_i.c
@@ -139,6 +139,7 @@ cross/i686-w64-mingw32/mingw/lib/libdinput8.a
 cross/i686-w64-mingw32/mingw/lib/libdlcapi.a
 cross/i686-w64-mingw32/mingw/lib/libdmoguids.a
 cross/i686-w64-mingw32/mingw/lib/libdnsapi.a
+cross/i686-w64-mingw32/mingw/lib/libdpapi.a
 cross/i686-w64-mingw32/mingw/lib/libdplayx.a
 cross/i686-w64-mingw32/mingw/lib/libdpnaddr.a
 cross/i686-w64-mingw32/mingw/lib/libdpnet.a
@@ -156,7 +157,6 @@ cross/i686-w64-mingw32/mingw/lib/libdxerr9.a
 cross/i686-w64-mingw32/mingw/lib/libdxgi.a
 cross/i686-w64-mingw32/mingw/lib/libdxguid.a
 cross/i686-w64-mingw32/mingw/lib/libdxva2.a
-cross/i686-w64-mingw32/mingw/lib/libeapp3hst.a
 cross/i686-w64-mingw32/mingw/lib/libeappcfg.a
 cross/i686-w64-mingw32/mingw/lib/libeappgnui.a
 cross/i686-w64-mingw32/mingw/lib/libeapphost.a
@@ -207,6 +207,7 @@ cross/i686-w64-mingw32/mingw/lib/libmfcuia32.a
 cross/i686-w64-mingw32/mingw/lib/libmfplat.a
 cross/i686-w64-mingw32/mingw/lib/libmfuuid.a
 cross/i686-w64-mingw32/mingw/lib/libmgmtapi.a
+cross/i686-w64-mingw32/mingw/lib/libmincore.a
 cross/i686-w64-mingw32/mingw/lib/libmingw32.a
 cross/i686-w64-mingw32/mingw/lib/libmingwex.a
 cross/i686-w64-mingw32/mingw/lib/libmingwthrd.a
@@ -225,14 +226,17 @@ cross/i686-w64-mingw32/mingw/lib/libmshtmled.a
 cross/i686-w64-mingw32/mingw/lib/libmsi.a
 cross/i686-w64-mingw32/mingw/lib/libmsimg32.a
 cross/i686-w64-mingw32/mingw/lib/libmstask.a
+cross/i686-w64-mingw32/mingw/lib/libmsvcp120_app.a
 cross/i686-w64-mingw32/mingw/lib/libmsvcp60.a
 cross/i686-w64-mingw32/mingw/lib/libmsvcr100.a
 cross/i686-w64-mingw32/mingw/lib/libmsvcr110.a
 cross/i686-w64-mingw32/mingw/lib/libmsvcr120.a
+cross/i686-w64-mingw32/mingw/lib/libmsvcr120_app.a
 cross/i686-w64-mingw32/mingw/lib/libmsvcr120d.a
 cross/i686-w64-mingw32/mingw/lib/libmsvcr80.a
 cross/i686-w64-mingw32/mingw/lib/libmsvcr90.a
 cross/i686-w64-mingw32/mingw/lib/libmsvcr90d.a
+cross/i686-w64-mingw32/mingw/lib/libmsvcrt-os.a
 cross/i686-w64-mingw32/mingw/lib/libmsvcrt.a
 cross/i686-w64-mingw32/mingw/lib/libmsvfw32.a
 cross/i686-w64-mingw32/mingw/lib/libmswsock.a
@@ -289,11 +293,13 @@ cross/i686-w64-mingw32/mingw/lib/librtutils.a
 cross/i686-w64-mingw32/mingw/lib/libruntimeobject.a
 cross/i686-w64-mingw32/mingw/lib/libsamcli.a
 cross/i686-w64-mingw32/mingw/lib/libsapi.a
+cross/i686-w64-mingw32/mingw/lib/libschannel.a
 cross/i686-w64-mingw32/mingw/lib/libschedcli.a
 cross/i686-w64-mingw32/mingw/lib/libscrnsave.a
 cross/i686-w64-mingw32/mingw/lib/libscrnsavw.a
 cross/i686-w64-mingw32/mingw/lib/libscsiport.a
 cross/i686-w64-mingw32/mingw/lib/libsecur32.a
+cross/i686-w64-mingw32/mingw/lib/libsecurity.a
 cross/i686-w64-mingw32/mingw/lib/libsensorsapi.a
 cross/i686-w64-mingw32/mingw/lib/libsetupapi.a
 cross/i686-w64-mingw32/mingw/lib/libshell32.a
@@ -309,12 +315,16 @@ cross/i686-w64-mingw32/mingw/lib/libsspicli.a
 cross/i686-w64-mingw32/mingw/lib/libstrmiids.a
 cross/i686-w64-mingw32/mingw/lib/libsvrapi.a
 cross/i686-w64-mingw32/mingw/lib/libsxs.a
+cross/i686-w64-mingw32/mingw/lib/libsynchronization.a
 cross/i686-w64-mingw32/mingw/lib/libt2embed.a
 cross/i686-w64-mingw32/mingw/lib/libtapi32.a
+cross/i686-w64-mingw32/mingw/lib/libtaskschd.a
 cross/i686-w64-mingw32/mingw/lib/libtbs.a
 cross/i686-w64-mingw32/mingw/lib/libtdh.a
 cross/i686-w64-mingw32/mingw/lib/libtdi.a
 cross/i686-w64-mingw32/mingw/lib/libtxfw32.a
+cross/i686-w64-mingw32/mingw/lib/libucrt.a
+cross/i686-w64-mingw32/mingw/lib/libucrtbase.a
 cross/i686-w64-mingw32/mingw/lib/liburl.a
 cross/i686-w64-mingw32/mingw/lib/liburlmon.a
 cross/i686-w64-mingw32/mingw/lib/libusbcamd.a
@@ -326,6 +336,7 @@ cross/i686-w64-mingw32/mingw/lib/libuserenv.a
 cross/i686-w64-mingw32/mingw/lib/libusp10.a
 cross/i686-w64-mingw32/mingw/lib/libuuid.a
 cross/i686-w64-mingw32/mingw/lib/libuxtheme.a
+cross/i686-w64-mingw32/mingw/lib/libvcruntime140_app.a
 cross/i686-w64-mingw32/mingw/lib/libvdmdbg.a
 cross/i686-w64-mingw32/mingw/lib/libversion.a
 cross/i686-w64-mingw32/mingw/lib/libvfw32.a
@@ -333,7 +344,6 @@ cross/i686-w64-mingw32/mingw/lib/libvideoprt.a
 cross/i686-w64-mingw32/mingw/lib/libvirtdisk.a
 cross/i686-w64-mingw32/mingw/lib/libvss_ps.a
 cross/i686-w64-mingw32/mingw/lib/libvssapi.a
-cross/i686-w64-mingw32/mingw/lib/libvsstrace.a
 cross/i686-w64-mingw32/mingw/lib/libwbemuuid.a
 cross/i686-w64-mingw32/mingw/lib/libwdsclient.a
 cross/i686-w64-mingw32/mingw/lib/libwdsclientapi.a
@@ -350,6 +360,7 @@ cross/i686-w64-mingw32/mingw/lib/libwevtfwd.a
 cross/i686-w64-mingw32/mingw/lib/libwiadss.a
 cross/i686-w64-mingw32/mingw/lib/libwin32k.a
 cross/i686-w64-mingw32/mingw/lib/libwin32spl.a
+cross/i686-w64-mingw32/mingw/lib/libwindowsapp.a
 cross/i686-w64-mingw32/mingw/lib/libwindowscodecs.a
 cross/i686-w64-mingw32/mingw/lib/libwinhttp.a
 cross/i686-w64-mingw32/mingw/lib/libwininet.a
