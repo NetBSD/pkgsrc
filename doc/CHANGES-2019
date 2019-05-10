@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2061 2019/05/10 16:25:40 leot Exp $
+$NetBSD: CHANGES-2019,v 1.2062 2019/05/10 19:33:40 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3389,3 +3389,14 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/php-libawl to 0.60 [hauke 2019-05-10]
 	Added biology/vsearch version 2.13.3 [bacon 2019-05-10]
 	Updated pkgtools/x11-links to 1.18 [leot 2019-05-10]
+	Updated cross/mingw-w64-i686-binutils to 2.32 [ryoon 2019-05-10]
+	Updated cross/mingw-w64-i686-headers to 6.0.0 [ryoon 2019-05-10]
+	Updated cross/mingw-w64-i686-gcc-bootstrap to 9.1.0 [ryoon 2019-05-10]
+	Updated cross/mingw-w64-i686-crt to 6.0.0 [ryoon 2019-05-10]
+	Updated cross/mingw-w64-i686-gcc to 9.1.0 [ryoon 2019-05-10]
+	Updated cross/mingw-w64-x86_64-binutils to 2.32 [ryoon 2019-05-10]
+	Updated cross/mingw-w64-x86_64-headers to 6.0.0 [ryoon 2019-05-10]
+	Updated cross/mingw-w64-x86_64-gcc-bootstrap to 9.1.0 [ryoon 2019-05-10]
+	Updated cross/mingw-w64-x86_64-crt to 6.0.0 [ryoon 2019-05-10]
+	Updated cross/mingw-w64-x86_64-gcc to 9.1.0 [ryoon 2019-05-10]
+	Updated cross/mingw-w64 to 6.0.0 [ryoon 2019-05-10]
