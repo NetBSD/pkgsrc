@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/02/22 08:59:49 adam Exp $
+# $NetBSD: Makefile,v 1.13 2019/05/10 14:58:37 mef Exp $
 
 DISTNAME=	apache-libcloud-2.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,8 +18,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-requests-mock-[0-9]*:../../devel/py-requests-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 pre-install:
-	${RM} ${WRKSRC}/libcloud/compute/drivers/azure.py.orig
-	${RM} ${WRKSRC}/build/lib/libcloud/compute/drivers/azure.py.orig
+	${RM} -f ${WRKSRC}/libcloud/compute/drivers/azure.py.orig
+	${RM} -f ${WRKSRC}/build/lib/libcloud/compute/drivers/azure.py.orig
+	${RM} -f ${WRKSRC}/build/lib/libcloud/compute/drivers/azure.py.rej
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
