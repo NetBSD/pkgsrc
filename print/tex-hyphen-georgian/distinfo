@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/01/26 22:29:07 markd Exp $
+$NetBSD: distinfo,v 1.5 2019/05/11 06:57:25 markd Exp $
 
-SHA1 (tex-hyphen-georgian-49078/hyphen-georgian.tar.xz) = f0649a5f2aba5e8ba9fa8df69c55216912de1c64
-RMD160 (tex-hyphen-georgian-49078/hyphen-georgian.tar.xz) = 3bd34fa0f83dff65300ff3f543607f8ee1ae8977
-SHA512 (tex-hyphen-georgian-49078/hyphen-georgian.tar.xz) = 10c75a093cd71c8521b6af89d7171a2081b505e9d581f10bc85592104e833d46e9221b6c9b361a0a92ecb2110db74cd70bc8eafdb879929bdd8275ba55eb0971
-Size (tex-hyphen-georgian-49078/hyphen-georgian.tar.xz) = 11152 bytes
+SHA1 (tex-hyphen-georgian-50792/hyphen-georgian.tar.xz) = f761caa6f50081492c39a60c1e8806eb42dbe480
+RMD160 (tex-hyphen-georgian-50792/hyphen-georgian.tar.xz) = 7aed4b66bbcceb39bf8e4c381e61763e6fb31106
+SHA512 (tex-hyphen-georgian-50792/hyphen-georgian.tar.xz) = 57ff8765c82213fa1de079c349f19562ede193a50d69d6fe4430a118e7e0aa00415ae591d486f0dc110f2e9de00db2e4f2b22b9cf826942c24d3b9a6e7b1abfc
+Size (tex-hyphen-georgian-50792/hyphen-georgian.tar.xz) = 11196 bytes

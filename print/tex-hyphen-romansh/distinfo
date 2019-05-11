@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/01/26 21:04:09 markd Exp $
+$NetBSD: distinfo,v 1.5 2019/05/11 06:57:27 markd Exp $
 
-SHA1 (tex-hyphen-romansh-49078/hyphen-romansh.tar.xz) = 9ae4cbd19c26f0a88de65bfc7f2770bf75e4d2a4
-RMD160 (tex-hyphen-romansh-49078/hyphen-romansh.tar.xz) = a28797669540f6d96b15e2003cef8adba5ec81b7
-SHA512 (tex-hyphen-romansh-49078/hyphen-romansh.tar.xz) = ed2a1f86ca94fc7419e9c87e3d920c4e512593c3fd37ce4df57e9f48cc1fdead0be1308566b94ed66252777da2324c66a4b533ab7a7ab34698d0d701dd881a83
-Size (tex-hyphen-romansh-49078/hyphen-romansh.tar.xz) = 3584 bytes
+SHA1 (tex-hyphen-romansh-50792/hyphen-romansh.tar.xz) = 6da76845790dd40253e28a44c83b250222931647
+RMD160 (tex-hyphen-romansh-50792/hyphen-romansh.tar.xz) = efe2127fddfdf8ce7e68742e78794b0d50789118
+SHA512 (tex-hyphen-romansh-50792/hyphen-romansh.tar.xz) = 3269d8ad53acdf30405c277d02c4724d6ffc1e7cc04d09e2df8c82056b6f8604de3633008a5b6aa803358bdd4765d550b34b56b571ee3fc088f0bd4f28947c2a
+Size (tex-hyphen-romansh-50792/hyphen-romansh.tar.xz) = 3652 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2019/01/26 22:58:41 markd Exp $
+$NetBSD: distinfo,v 1.7 2019/05/11 06:57:24 markd Exp $
 
-SHA1 (tex-hyphen-dutch-49078/hyphen-dutch.tar.xz) = 1bb7f4aa3e64d4de43dbc7f827a5607b744f51d5
-RMD160 (tex-hyphen-dutch-49078/hyphen-dutch.tar.xz) = 107600cf85c2170ff519d2852cd16388c65d62a5
-SHA512 (tex-hyphen-dutch-49078/hyphen-dutch.tar.xz) = 7c9ecc54c946ce687b4b70276a28c4abc6dfe6dbe86112ebc6f498520198058ca593657fbf771f0412b6ed071adddde99a8b6c29a3fb3d2980334c1479baffc3
-Size (tex-hyphen-dutch-49078/hyphen-dutch.tar.xz) = 38020 bytes
+SHA1 (tex-hyphen-dutch-50792/hyphen-dutch.tar.xz) = 3954da3b79d4967699699b9fbbbb0f8ff456c470
+RMD160 (tex-hyphen-dutch-50792/hyphen-dutch.tar.xz) = e14b6b255a0ebf84f7b7b472075984856a117d86
+SHA512 (tex-hyphen-dutch-50792/hyphen-dutch.tar.xz) = 59208104882c6090d38ec7b3e6e4d43a11190cc3deb1e17709d6a64990f4e70ebb17eacc045dbceebb85dde6bccd19a1f6952cfb3fb0b4975f13ab630df1defd
+Size (tex-hyphen-dutch-50792/hyphen-dutch.tar.xz) = 38176 bytes
