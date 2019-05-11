@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2019/05/11 10:01:28 leot Exp $
+# $NetBSD: Makefile,v 1.8 2019/05/11 10:04:30 leot Exp $
 
-DISTNAME=	python-hglib-2.4
+DISTNAME=	python-hglib-2.6.1
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-hglib/}
