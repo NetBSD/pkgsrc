@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2075 2019/05/11 07:14:30 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.2076 2019/05/11 08:13:26 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3470,3 +3470,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/tex-hyphen-welsh to 2019 [markd 2019-05-11]
 	Updated www/drupal8 to 8.6.16 [taca 2019-05-11]
 	Updated lang/nim to 0.19.4 [ryoon 2019-05-11]
+	Updated misc/libreoffice6-bin to 6.2.3 [tsutsui 2019-05-11]
