@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/10/16 08:59:02 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/05/11 23:06:15 markd Exp $
 
 DISTNAME=	cellspace
-PKGNAME=	tex-${DISTNAME}-1.7
-TEXLIVE_REV=	45034
+PKGNAME=	tex-${DISTNAME}-1.8.1
+TEXLIVE_REV=	50374
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/cellspace
