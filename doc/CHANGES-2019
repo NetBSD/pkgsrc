@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2078 2019/05/11 10:05:07 leot Exp $
+$NetBSD: CHANGES-2019,v 1.2079 2019/05/11 13:24:00 fox Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3472,3 +3472,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/nim to 0.19.4 [ryoon 2019-05-11]
 	Updated misc/libreoffice6-bin to 6.2.3 [tsutsui 2019-05-11]
 	Updated devel/py-hglib to 2.6.1 [leot 2019-05-11]
+	Updated audio/din to 42 [fox 2019-05-11]
