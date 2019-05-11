@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2018/08/22 09:45:53 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2019/05/11 22:53:36 kim Exp $
 
 DISTNAME=		irrd2.3.9
 PKGNAME=		irrd-2.3.9
@@ -7,7 +7,7 @@ CATEGORIES=		net
 MASTER_SITES=		http://www.irrd.net/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		kim@tac.nyc.ny.us
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.irrd.net/
 COMMENT=		Internet Routing Registry Daemon
 LICENSE=		original-bsd
