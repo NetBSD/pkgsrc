@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2019/01/28 10:22:46 markd Exp $
+$NetBSD: distinfo,v 1.7 2019/05/11 22:22:54 markd Exp $
 
-SHA1 (tex-tcolorbox-49347/tcolorbox.tar.xz) = 130b2ee4d236a9053b129496db0584192b1f0604
-RMD160 (tex-tcolorbox-49347/tcolorbox.tar.xz) = 802196e4b367ec3fd888d23826aba58060511c8d
-SHA512 (tex-tcolorbox-49347/tcolorbox.tar.xz) = 893addebf4a542444fae2b046e398fb98a81e0b8a51d29d6e1015008c29d93478245e0e418cb5c67d521735d6216849852e2b72714ae99e8f6faa685acb9cd05
-Size (tex-tcolorbox-49347/tcolorbox.tar.xz) = 228396 bytes
+SHA1 (tex-tcolorbox-50206/tcolorbox.tar.xz) = 0e74231f3bad3bb36c00d045f875cb7069c8879b
+RMD160 (tex-tcolorbox-50206/tcolorbox.tar.xz) = 0f23c3bc236cc5cd67ab780a903b53a82fa6f932
+SHA512 (tex-tcolorbox-50206/tcolorbox.tar.xz) = cb3ac4195d28c2a6b52c0cd31a09e215ecf76b5150295987945a38a405a8187c025a6376e9167d689e1cfe2af6a5c483ae85800b01d7612f6922bd169d090f6d
+Size (tex-tcolorbox-50206/tcolorbox.tar.xz) = 228600 bytes
