@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2019/01/26 22:44:54 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/05/11 06:57:24 markd Exp $
 
 DISTNAME=	hyphen-ethiopic
-PKGNAME=	tex-${DISTNAME}-2018
-TEXLIVE_REV=	49078
+PKGNAME=	tex-${DISTNAME}-2019
+TEXLIVE_REV=	50792
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Hyphenation patterns for Ethiopic scripts
