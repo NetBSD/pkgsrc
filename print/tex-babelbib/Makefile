@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2016/01/30 03:26:08 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/05/11 23:03:02 markd Exp $
 
 DISTNAME=	babelbib
-PKGNAME=	tex-${DISTNAME}-1.31
-TEXLIVE_REV=	25245
+PKGNAME=	tex-${DISTNAME}-1.32
+TEXLIVE_REV=	50354
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/babelbib
 COMMENT=	Multilingual bibliographies
 LICENSE=	lppl-1.0
 
