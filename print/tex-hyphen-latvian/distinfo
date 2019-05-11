@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/01/26 21:33:13 markd Exp $
+$NetBSD: distinfo,v 1.5 2019/05/11 06:57:26 markd Exp $
 
-SHA1 (tex-hyphen-latvian-49078/hyphen-latvian.tar.xz) = 28154b32d799f50d6100583142d8f4893768f938
-RMD160 (tex-hyphen-latvian-49078/hyphen-latvian.tar.xz) = 7e23d0541e9ebca8f7afc1aeb094fddc2e41cc70
-SHA512 (tex-hyphen-latvian-49078/hyphen-latvian.tar.xz) = eeb3388a92f180e667588846dc50b703480b6c17c9ddf2d69672ead81262863adf6714eab50cf8e7d581efbc21ad562a53301b71aa19a06623658b513d02fd40
-Size (tex-hyphen-latvian-49078/hyphen-latvian.tar.xz) = 52492 bytes
+SHA1 (tex-hyphen-latvian-50792/hyphen-latvian.tar.xz) = 1559cf59c173cc380727702326c67df6266fe14a
+RMD160 (tex-hyphen-latvian-50792/hyphen-latvian.tar.xz) = f22971b0b30f74d8c023807134203e3d2bddb280
+SHA512 (tex-hyphen-latvian-50792/hyphen-latvian.tar.xz) = 85e56ad5048cb177e3cb44f8b2d02fabad2fd3f6f29b07fd1c4950eb42671f635860bdd71ab96fb2bd6bcfb492da3df344a384cb1f339fb5b6367e7eb34a9a4e
+Size (tex-hyphen-latvian-50792/hyphen-latvian.tar.xz) = 52568 bytes

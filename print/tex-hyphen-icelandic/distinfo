@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2019/01/26 22:08:54 markd Exp $
+$NetBSD: distinfo,v 1.7 2019/05/11 06:57:25 markd Exp $
 
-SHA1 (tex-hyphen-icelandic-49078/hyphen-icelandic.tar.xz) = b3e52a7fd752f2135e5c318df4a8e50982d99e43
-RMD160 (tex-hyphen-icelandic-49078/hyphen-icelandic.tar.xz) = a5209f8a5399dd91edbd2c39a211c7f613cb1d8b
-SHA512 (tex-hyphen-icelandic-49078/hyphen-icelandic.tar.xz) = e6a3067e4f9411c4402fa7e1ba550530430f3c653249c5126731acbee5c3ac73846b9da3474c0683c5f497689c23df9c344ddadd27d49a03c88c56fc2ab9fb96
-Size (tex-hyphen-icelandic-49078/hyphen-icelandic.tar.xz) = 19432 bytes
+SHA1 (tex-hyphen-icelandic-50792/hyphen-icelandic.tar.xz) = a011992fafe11137e40a4b4ba7e72e516abda35f
+RMD160 (tex-hyphen-icelandic-50792/hyphen-icelandic.tar.xz) = 5e25f0ada4f01a5607300b839e2d39db107678bf
+SHA512 (tex-hyphen-icelandic-50792/hyphen-icelandic.tar.xz) = 016d62ef1b0d64b80fe60639ef6581a91623c6fc70dc885a433034e2899a8a6ba45964f505a4ba157c3ed9e0cfa7cd234f0683137063c68a52329d879409c639
+Size (tex-hyphen-icelandic-50792/hyphen-icelandic.tar.xz) = 19544 bytes
