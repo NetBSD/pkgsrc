@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2019/04/25 07:33:00 maya Exp $
+# $NetBSD: Makefile,v 1.29 2019/05/11 06:35:31 mef Exp $
 
 DISTNAME=	ibus-array-0.1.0
 PKGREVISION=	12
@@ -20,6 +20,16 @@ USE_TOOLS+=	gmake pkg-config automake autoconf autopoint msgfmt msgmerge
 
 WRKSRC=		${WRKDIR}
 
+.include "../../lang/python/application.mk"
+
+PLIST_SUBST+=	PYPKGPREFIX_NO=${PYPKGPREFIX:S/py//}
+
+.if !empty(PYPKGPREFIX:Mpy27)
+PLIST_SRC=  ${PKGDIR}/PLIST ${PKGDIR}/PLIST.py27
+.else
+PLIST_SRC=  ${PKGDIR}/PLIST ${PKGDIR}/PLIST.py3
+.endif
+
 pre-configure:
 	${RUN}cd ${WRKSRC};${PKGSRC_SETENV} ${CONFIGURE_ENV} ./autogen.sh
 
@@ -31,5 +41,5 @@ SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../inputmethod/ibus/buildlink3.mk"
-.include "../../lang/python/application.mk"
+
 .include "../../mk/bsd.pkg.mk"
