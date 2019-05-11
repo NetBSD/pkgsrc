@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2019/01/26 21:33:13 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/05/11 06:57:26 markd Exp $
 
 DISTNAME=	hyphen-latvian
-PKGNAME=	tex-${DISTNAME}-2018
-TEXLIVE_REV=	49078
+PKGNAME=	tex-${DISTNAME}-2019
+TEXLIVE_REV=	50792
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Latvian hyphenation patterns

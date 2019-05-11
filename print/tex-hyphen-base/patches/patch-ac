@@ -1,22 +1,22 @@
-$NetBSD: patch-ac,v 1.11 2017/06/21 07:24:07 markd Exp $
+$NetBSD: patch-ac,v 1.12 2019/05/11 06:57:23 markd Exp $
 
---- tex/generic/config/language.dat.lua.orig	2017-05-19 00:21:43.000000000 +0000
+--- tex/generic/config/language.dat.lua.orig	2019-04-06 21:31:57.000000000 +0000
 +++ tex/generic/config/language.dat.lua
-@@ -33,708 +33,4 @@ return {
+@@ -33,707 +33,4 @@ return {
          -- dumylang and zerohyph are dumped in the format,
          -- since they contain either very few or no patterns at all
  -- END of language.us.lua (missing '}' appended after all entries)
 --- from dehyph-exptl:
--	['german-x-2017-03-31'] = {
--		loader = 'dehypht-x-2017-03-31.tex',
+-	['german-x-2019-04-04'] = {
+-		loader = 'dehypht-x-2019-04-04.tex',
 -		lefthyphenmin = 2,
 -		righthyphenmin = 2,
 -		synonyms = { 'german-x-latest' },
 -		patterns = 'hyph-de-1901.pat.txt',
 -		hyphenation = 'hyph-de-1901.hyp.txt',
 -	},
--	['ngerman-x-2017-03-31'] = {
--		loader = 'dehyphn-x-2017-03-31.tex',
+-	['ngerman-x-2019-04-04'] = {
+-		loader = 'dehyphn-x-2019-04-04.tex',
 -		lefthyphenmin = 2,
 -		righthyphenmin = 2,
 -		synonyms = { 'ngerman-x-latest' },
@@ -100,15 +100,6 @@ $NetBSD: patch-ac,v 1.11 2017/06/21 07:24:07 markd Exp $
 -		synonyms = {  },
 -		patterns = 'hyph-ca.pat.txt',
 -		hyphenation = 'hyph-ca.hyp.txt',
--	},
---- from hyphen-chinese:
--	['pinyin'] = {
--		loader = 'loadhyph-zh-latn-pinyin.tex',
--		lefthyphenmin = 1,
--		righthyphenmin = 1,
--		synonyms = {  },
--		patterns = 'hyph-zh-latn-pinyin.pat.txt',
--		hyphenation = '',
 -	},
 --- from hyphen-churchslavonic:
 -	['churchslavonic'] = {
@@ -392,6 +383,14 @@ $NetBSD: patch-ac,v 1.11 2017/06/21 07:24:07 markd Exp $
 -		righthyphenmin = 1,
 -		synonyms = {  },
 -		patterns = 'hyph-pa.pat.txt',
+-		hyphenation = '',
+-	},
+-	['pali'] = {
+-		loader = 'loadhyph-pi.tex',
+-		lefthyphenmin = 1,
+-		righthyphenmin = 2,
+-		synonyms = {  },
+-		patterns = 'hyph-pi.pat.txt',
 -		hyphenation = '',
 -	},
 -	['tamil'] = {

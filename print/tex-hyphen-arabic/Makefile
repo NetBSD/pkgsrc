@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2017/09/06 16:49:35 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2019/05/11 06:57:23 markd Exp $
 
 DISTNAME=	hyphen-arabic
-PKGNAME=	tex-${DISTNAME}-2016
-TEXLIVE_REV=	40340
+PKGNAME=	tex-${DISTNAME}-2019
+TEXLIVE_REV=	50805
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Hyphenation patterns for Arabic

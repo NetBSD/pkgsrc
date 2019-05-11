@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2019/01/26 20:13:33 markd Exp $
+$NetBSD: distinfo,v 1.7 2019/05/11 06:57:28 markd Exp $
 
-SHA1 (tex-hyphen-ukrainian-49078/hyphen-ukrainian.tar.xz) = fa22b4cd2a745677c96be3ab458d12e264fc9b22
-RMD160 (tex-hyphen-ukrainian-49078/hyphen-ukrainian.tar.xz) = 588b35b8ffb1faa93dae1a81af6b394f83001560
-SHA512 (tex-hyphen-ukrainian-49078/hyphen-ukrainian.tar.xz) = 4327d060f725d74c8c4dc56fa97376f4e4e3c2b375b1a05cfefb14fee74321d2d2d45dba31edb2a98e5eaf56cd88b9a7599524f7c8857602c3df59f4100fb205
-Size (tex-hyphen-ukrainian-49078/hyphen-ukrainian.tar.xz) = 18912 bytes
+SHA1 (tex-hyphen-ukrainian-50792/hyphen-ukrainian.tar.xz) = 0b8dd01bfc49b6dd7859c60aefa20e6858237024
+RMD160 (tex-hyphen-ukrainian-50792/hyphen-ukrainian.tar.xz) = c1cce17bdc5f20fc0158851cad57fb64b9711a2f
+SHA512 (tex-hyphen-ukrainian-50792/hyphen-ukrainian.tar.xz) = 8bb013d0d182c7d88416c20251ba4c72f48dbde3751e03269bb81e97db4bdcd60dc3261b0e05d413b853d0c458e12d7fc1797d0c6c0ed95a803d72b4e6876c94
+Size (tex-hyphen-ukrainian-50792/hyphen-ukrainian.tar.xz) = 18972 bytes

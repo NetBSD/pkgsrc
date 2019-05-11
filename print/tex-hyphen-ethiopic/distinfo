@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/01/26 22:44:54 markd Exp $
+$NetBSD: distinfo,v 1.5 2019/05/11 06:57:24 markd Exp $
 
-SHA1 (tex-hyphen-ethiopic-49078/hyphen-ethiopic.tar.xz) = 3a2ffb0f4d450e7c02dea0e5f99a59762b42d38e
-RMD160 (tex-hyphen-ethiopic-49078/hyphen-ethiopic.tar.xz) = 03c5ae9e7ce9d3825880bf6c0555b81ce23fed04
-SHA512 (tex-hyphen-ethiopic-49078/hyphen-ethiopic.tar.xz) = ef83fa73766cc8a705600fe3c43846ddc41bc27c4fc1ec997d0ea569020dfd887f2d0f4bb968513e1ca9ec5068c151c5c3607dca94df3025fdf65ef3217a1725
-Size (tex-hyphen-ethiopic-49078/hyphen-ethiopic.tar.xz) = 4968 bytes
+SHA1 (tex-hyphen-ethiopic-50792/hyphen-ethiopic.tar.xz) = e3b115a6d2a34f3b8c348959d17bf7f7366cfbb2
+RMD160 (tex-hyphen-ethiopic-50792/hyphen-ethiopic.tar.xz) = 331c76c2c5acde7966d9236fa4bbde127172a390
+SHA512 (tex-hyphen-ethiopic-50792/hyphen-ethiopic.tar.xz) = 0c279ef4ad3eb29675d24dd84172712e6ae676bd4432a46e0af8ec56a092d9b2febb8302f30494b93127f1769cc05cf85a18df7090622b5d2455ed0118e78c71
+Size (tex-hyphen-ethiopic-50792/hyphen-ethiopic.tar.xz) = 5056 bytes

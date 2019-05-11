@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.13 2017/06/21 07:24:07 markd Exp $
+$NetBSD: patch-aa,v 1.14 2019/05/11 06:57:23 markd Exp $
 
---- tex/generic/config/language.dat.orig	2017-05-19 00:21:35.000000000 +0000
+--- tex/generic/config/language.dat.orig	2019-04-06 21:31:48.000000000 +0000
 +++ tex/generic/config/language.dat
-@@ -57,159 +57,3 @@ english		hyphen.tex  % do not change!
+@@ -57,158 +57,3 @@ english		hyphen.tex  % do not change!
  % 
  dumylang	dumyhyph.tex    %for testing a new language.
  nohyphenation	zerohyph.tex    %a language with no patterns at all.
 -% from dehyph-exptl:
--german-x-2017-03-31 dehypht-x-2017-03-31.tex
+-german-x-2019-04-04 dehypht-x-2019-04-04.tex
 -=german-x-latest
--ngerman-x-2017-03-31 dehyphn-x-2017-03-31.tex
+-ngerman-x-2019-04-04 dehyphn-x-2019-04-04.tex
 -=ngerman-x-latest
 -% from hyphen-afrikaans:
 -afrikaans loadhyph-af.tex
@@ -28,8 +28,6 @@ $NetBSD: patch-aa,v 1.13 2017/06/21 07:24:07 markd Exp $
 -bulgarian loadhyph-bg.tex
 -% from hyphen-catalan:
 -catalan loadhyph-ca.tex
--% from hyphen-chinese:
--pinyin loadhyph-zh-latn-pinyin.tex
 -% from hyphen-churchslavonic:
 -churchslavonic loadhyph-cu.tex
 -% from hyphen-coptic:
@@ -92,6 +90,7 @@ $NetBSD: patch-aa,v 1.13 2017/06/21 07:24:07 markd Exp $
 -marathi loadhyph-mr.tex
 -oriya loadhyph-or.tex
 -panjabi loadhyph-pa.tex
+-pali loadhyph-pi.tex
 -tamil loadhyph-ta.tex
 -telugu loadhyph-te.tex
 -% from hyphen-indonesian:

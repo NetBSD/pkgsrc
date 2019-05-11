@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2019/01/26 22:29:07 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/05/11 06:57:25 markd Exp $
 
 DISTNAME=	hyphen-georgian
-PKGNAME=	tex-${DISTNAME}-2018
-TEXLIVE_REV=	49078
+PKGNAME=	tex-${DISTNAME}-2019
+TEXLIVE_REV=	50792
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Georgian hyphenation patterns

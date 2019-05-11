@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/06/16 04:06:04 markd Exp $
+$NetBSD: distinfo,v 1.6 2019/05/11 06:57:23 markd Exp $
 
-SHA1 (tex-hyphen-arabic-40340/hyphen-arabic.tar.xz) = c074b716673036d44bbae12443cfa70aa1e6cb9f
-RMD160 (tex-hyphen-arabic-40340/hyphen-arabic.tar.xz) = b7269493cd527981800304f4ef6f6624bb702a74
-SHA512 (tex-hyphen-arabic-40340/hyphen-arabic.tar.xz) = 1f49b12a14a32b2c0b85cc41d9164e4d0770fbb8ac247468a932311f8c369e99103e0a8aadacf212ae52b9c0f25e80686c7c98a6a4b3460db4938528ea16b3b7
-Size (tex-hyphen-arabic-40340/hyphen-arabic.tar.xz) = 368 bytes
+SHA1 (tex-hyphen-arabic-50805/hyphen-arabic.tar.xz) = c321be437f0e3a7f4693170586bb20007af9c8ee
+RMD160 (tex-hyphen-arabic-50805/hyphen-arabic.tar.xz) = b9967468a6a7f7722b06048afbce9003a046bf19
+SHA512 (tex-hyphen-arabic-50805/hyphen-arabic.tar.xz) = 1b43cfa50f074441f757b841b00656ab383ccabf5f2fafd8260e4088de13aabe8e2c3e7099e3d84ef0dff49fd312f17fe11e44892f95b6d7e149e2d4cd023171
+Size (tex-hyphen-arabic-50805/hyphen-arabic.tar.xz) = 712 bytes

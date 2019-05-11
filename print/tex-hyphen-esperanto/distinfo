@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2019/01/26 22:51:16 markd Exp $
+$NetBSD: distinfo,v 1.7 2019/05/11 06:57:24 markd Exp $
 
-SHA1 (tex-hyphen-esperanto-49078/hyphen-esperanto.tar.xz) = 0dc404cef42c322def80b1de2457d173ce8f9a23
-RMD160 (tex-hyphen-esperanto-49078/hyphen-esperanto.tar.xz) = 43de8c776bb59c6c240e3890ad1c5c98855ebf85
-SHA512 (tex-hyphen-esperanto-49078/hyphen-esperanto.tar.xz) = 6267f2623968803f9a9f541e693b60fb69fbff54a40b3703eb3c1b8e62de239a152dd54e7fcece2138667366ef200ed909051234497d746c1f667353a0b2d305
-Size (tex-hyphen-esperanto-49078/hyphen-esperanto.tar.xz) = 10784 bytes
+SHA1 (tex-hyphen-esperanto-50792/hyphen-esperanto.tar.xz) = b71d7b72c0987a5e0a4e7886dc5292a9e0060866
+RMD160 (tex-hyphen-esperanto-50792/hyphen-esperanto.tar.xz) = e6263995daf995b97fae35f9e00bda9aaf7cb711
+SHA512 (tex-hyphen-esperanto-50792/hyphen-esperanto.tar.xz) = c003be9d7fd5c15e0491306b86ed9ca2b621bee8d8b9e3170289b5ff38f9d2e4d82e98cea39bf6fd00d743749914d9e747e2b67a3f33218b76b0c5b0c05bec4c
+Size (tex-hyphen-esperanto-50792/hyphen-esperanto.tar.xz) = 10824 bytes

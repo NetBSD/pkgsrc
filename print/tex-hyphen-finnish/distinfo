@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2019/01/26 22:41:37 markd Exp $
+$NetBSD: distinfo,v 1.7 2019/05/11 06:57:25 markd Exp $
 
-SHA1 (tex-hyphen-finnish-49078/hyphen-finnish.tar.xz) = 073cefb9d742a12c0f9f4a571134e9b034055fc1
-RMD160 (tex-hyphen-finnish-49078/hyphen-finnish.tar.xz) = 551ba2b8c459af04bd4a752ad62617869acda257
-SHA512 (tex-hyphen-finnish-49078/hyphen-finnish.tar.xz) = 659cd78eb1f8a4ed488d555312f5a04b6e24401a2447907b99a267fbd6b6c7995c5ebe5e1601bb6a48656304c62968cde84d9c747352bed067092aee170bb8cc
-Size (tex-hyphen-finnish-49078/hyphen-finnish.tar.xz) = 3748 bytes
+SHA1 (tex-hyphen-finnish-50792/hyphen-finnish.tar.xz) = 530d5c4b0d6bd62a911b59e10b0c549ee985a24d
+RMD160 (tex-hyphen-finnish-50792/hyphen-finnish.tar.xz) = 5bc6d89103296b44ea9da75cb39687085b49a77f
+SHA512 (tex-hyphen-finnish-50792/hyphen-finnish.tar.xz) = 1998bf50c236f4d2e3d7aaa73af147e24b8fd4103642a28c79fca5b10bf86b0ff050efc599ddcefb9671612032c27f1e9b70885c4954ad66b75115c4243bea90
+Size (tex-hyphen-finnish-50792/hyphen-finnish.tar.xz) = 3816 bytes
