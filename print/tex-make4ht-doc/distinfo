@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/02/01 22:35:04 markd Exp $
+$NetBSD: distinfo,v 1.5 2019/05/11 23:23:48 markd Exp $
 
-SHA1 (tex-make4ht-49840/make4ht.doc.tar.xz) = 091efb4a7391fe2b0a0280711bc3b9eaf8788e19
-RMD160 (tex-make4ht-49840/make4ht.doc.tar.xz) = ee7f2303777067d5705d9563074543a42f460d36
-SHA512 (tex-make4ht-49840/make4ht.doc.tar.xz) = 33bc85db63c069455861212c8e004cffdfafb99850c09daba82a1606864ffff8df2e80f9b7429b60db0005af10a02fae2746338d8d3b0cdc87418c4559eda1df
-Size (tex-make4ht-49840/make4ht.doc.tar.xz) = 126624 bytes
+SHA1 (tex-make4ht-50511/make4ht.doc.tar.xz) = 54c1b15a4f90e3de52d2c281d5b0f68326d752c4
+RMD160 (tex-make4ht-50511/make4ht.doc.tar.xz) = 200b4981f71387991b09bc7f3e84e4e868a2e55a
+SHA512 (tex-make4ht-50511/make4ht.doc.tar.xz) = 15ef078e220d054f40e149f8f0012ed90d65c9b6b4103dec0684d5c4852c3c9571154075307d05995359706bc7808bba1fb92edd547e1184e4b6af3eefc28ed2
+Size (tex-make4ht-50511/make4ht.doc.tar.xz) = 128140 bytes
