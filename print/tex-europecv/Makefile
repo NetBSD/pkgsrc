@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2019/05/07 10:35:48 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/05/11 23:20:15 markd Exp $
 
 DISTNAME=	europecv
-PKGNAME=	tex-${DISTNAME}-2018.49938
-TEXLIVE_REV=	49938
+PKGNAME=	tex-${DISTNAME}-2019
+TEXLIVE_REV=	50470
 
 MAINTAINER=	jaapb@kerguelen.org
 HOMEPAGE=	http://ctan.org/pkg/europecv
