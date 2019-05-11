@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/01/24 10:58:54 markd Exp $
+$NetBSD: distinfo,v 1.5 2019/05/11 22:46:37 markd Exp $
 
-SHA1 (tex-unicode-data-48003/unicode-data.doc.tar.xz) = 6be78db3074ce9e06a0dee6adfcde886e484e97c
-RMD160 (tex-unicode-data-48003/unicode-data.doc.tar.xz) = 58a41e6038f27fecb8f874d22618d90b82ba82a3
-SHA512 (tex-unicode-data-48003/unicode-data.doc.tar.xz) = 5336adefb7d0909d4131331cfa1370ee44155a762d6ebd58c05c7d0b5116903eb65f5a6db1dbb3a90dac916f680c9abd5e0143aad761a465ebc5251f18d904a6
-Size (tex-unicode-data-48003/unicode-data.doc.tar.xz) = 3456 bytes
+SHA1 (tex-unicode-data-50303/unicode-data.doc.tar.xz) = 0fb46a068bf4b998d6777aa4a68c3f68883d1497
+RMD160 (tex-unicode-data-50303/unicode-data.doc.tar.xz) = 2e642553a4cb4a867f3fd335918411ae5a033849
+SHA512 (tex-unicode-data-50303/unicode-data.doc.tar.xz) = bd97e4d43d4e891db320f4b5e48292828b3e5a23f2fa6c0af58233fbbf4b4a1d6de77ba19266955cc36b5a01e3dbd8f145d26a77bee93dcd6d5049811d8b68ca
+Size (tex-unicode-data-50303/unicode-data.doc.tar.xz) = 3460 bytes
