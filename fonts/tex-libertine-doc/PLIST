@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/05/11 22:02:25 markd Exp $
 share/texmf-dist/doc/fonts/libertine/Bugs.txt
 share/texmf-dist/doc/fonts/libertine/ChangeLog.txt
 share/texmf-dist/doc/fonts/libertine/GPL.txt
@@ -6,8 +6,12 @@ share/texmf-dist/doc/fonts/libertine/LICENCE.txt
 share/texmf-dist/doc/fonts/libertine/README
 share/texmf-dist/doc/fonts/libertine/ToDo.txt
 share/texmf-dist/doc/fonts/libertine/g2ntotex.c
+share/texmf-dist/doc/fonts/libertine/libertine.aux
+share/texmf-dist/doc/fonts/libertine/libertine.log
+share/texmf-dist/doc/fonts/libertine/libertine.out
 share/texmf-dist/doc/fonts/libertine/libertine.pdf
 share/texmf-dist/doc/fonts/libertine/libertine.tex
+share/texmf-dist/doc/fonts/libertine/libertine.toc
 share/texmf-dist/doc/fonts/libertine/rename_enc
 share/texmf-dist/doc/fonts/libertine/samples.pdf
 share/texmf-dist/doc/fonts/libertine/samples.tex
