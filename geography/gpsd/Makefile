@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2019/05/01 20:22:02 gdt Exp $
+# $NetBSD: Makefile,v 1.43 2019/05/11 14:03:24 gdt Exp $
 
 DISTNAME=	gpsd-3.18.1
+PKGREVISION=	1
 CATEGORIES=	geography
 MASTER_SITES=	http://download-mirror.savannah.gnu.org/releases/gpsd/
 
@@ -29,6 +30,7 @@ BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 # \todo Decide if buildlink3 is more appropriate.
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
+DEPENDS+=	${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
 
 CFLAGS.SunOS=	-DLOG_PERROR=0
 
