@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/01/26 22:15:19 markd Exp $
+$NetBSD: distinfo,v 1.8 2019/05/11 06:57:25 markd Exp $
 
-SHA1 (tex-hyphen-hungarian-49078/hyphen-hungarian.tar.xz) = 5cbf8719e7650cfa6656b09ed3f4db91d04d162b
-RMD160 (tex-hyphen-hungarian-49078/hyphen-hungarian.tar.xz) = 69055df9a53ad0c6f924fa7f3d178b42d3dc3275
-SHA512 (tex-hyphen-hungarian-49078/hyphen-hungarian.tar.xz) = d9fd4f747b96807132d5d65a01a0478f03464c33243157d95468839afd35f45ce47342b476cfac77720fc7ab3933ea97ae3dcbbcb6fa6584505e215819b39913
-Size (tex-hyphen-hungarian-49078/hyphen-hungarian.tar.xz) = 285288 bytes
+SHA1 (tex-hyphen-hungarian-50792/hyphen-hungarian.tar.xz) = 04034cadcb52646e17d0828c18e68eaa1b253355
+RMD160 (tex-hyphen-hungarian-50792/hyphen-hungarian.tar.xz) = f2642baa9228e2e0eecda121f21acd0e752d3f14
+SHA512 (tex-hyphen-hungarian-50792/hyphen-hungarian.tar.xz) = 17310344981db62289e4a8afa4947254d0bc85551076751826de9b4e140557e81bc76cf66b57f89972aa8c949488ada24f58129ede7cd51b5d2a1311c28a7bb8
+Size (tex-hyphen-hungarian-50792/hyphen-hungarian.tar.xz) = 285328 bytes
