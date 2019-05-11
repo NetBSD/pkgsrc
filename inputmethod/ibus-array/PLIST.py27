@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.py27,v 1.1 2019/05/11 06:36:03 mef Exp $
+share/ibus-array/setup/config.pyc
+share/ibus-array/setup/config.pyo
+share/ibus-array/setup/main.pyc
+share/ibus-array/setup/main.pyo
