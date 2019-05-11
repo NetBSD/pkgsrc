@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/05/12 03:30:00 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/05/11 22:02:24 markd Exp $
 share/texmf-dist/fonts/enc/dvips/libertine/blnm_25tcsq.enc
 share/texmf-dist/fonts/enc/dvips/libertine/blnm_2or2lf.enc
 share/texmf-dist/fonts/enc/dvips/libertine/blnm_3gqkkc.enc
@@ -54,12 +54,15 @@ share/texmf-dist/fonts/enc/dvips/libertine/lbtn_2jy62z.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_2lhpup.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_2mruj6.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_2or2lf.enc
+share/texmf-dist/fonts/enc/dvips/libertine/lbtn_2vtnkl.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_2xw2fz.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_2yk3ov.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_3acize.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_3c7nkx.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_3dk467.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_3gqkkc.enc
+share/texmf-dist/fonts/enc/dvips/libertine/lbtn_3i7fl4.enc
+share/texmf-dist/fonts/enc/dvips/libertine/lbtn_3ocgcu.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_3r2fe2.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_3zs4uy.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_44kw74.enc
@@ -92,11 +95,13 @@ share/texmf-dist/fonts/enc/dvips/libertine/lbtn_7f4ce4.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_7fko2h.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_7gfcac.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc
+share/texmf-dist/fonts/enc/dvips/libertine/lbtn_7gvbi7.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_7ukmos.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_7wxhd7.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_7yry24.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_7zzaqc.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_a6mubu.enc
+share/texmf-dist/fonts/enc/dvips/libertine/lbtn_a7ysm3.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_ac44fr.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_afusau.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_aiatc4.enc
@@ -109,6 +114,7 @@ share/texmf-dist/fonts/enc/dvips/libertine/lbtn_bgokdj.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_bgqvqi.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_bkwvsw.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_bvtjwh.enc
+share/texmf-dist/fonts/enc/dvips/libertine/lbtn_bxcpwt.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_c3m4uk.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_c4mbat.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_c5qhbu.enc
@@ -130,6 +136,7 @@ share/texmf-dist/fonts/enc/dvips/libertine/lbtn_dm3bvq.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_dobmnc.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_doxsfd.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_drc7cb.enc
+share/texmf-dist/fonts/enc/dvips/libertine/lbtn_dukpkt.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_dvvysc.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_dylq3g.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_e2nnp6.enc
@@ -157,6 +164,7 @@ share/texmf-dist/fonts/enc/dvips/libertine/lbtn_fygcup.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_g3iycs.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_g3y3rv.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_gannye.enc
+share/texmf-dist/fonts/enc/dvips/libertine/lbtn_ggtxir.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_gj2vz5.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_glqt35.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_gppru4.enc
@@ -173,6 +181,7 @@ share/texmf-dist/fonts/enc/dvips/libertine/lbtn_hx6qbg.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_hxgvkt.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_i5uqjc.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_igd6cx.enc
+share/texmf-dist/fonts/enc/dvips/libertine/lbtn_ijo4o4.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_ilz2ox.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_imzna7.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_indkeb.enc
@@ -188,6 +197,7 @@ share/texmf-dist/fonts/enc/dvips/libertine/lbtn_jk65vs.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_jkqd5u.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_jm7hzd.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_jnah33.enc
+share/texmf-dist/fonts/enc/dvips/libertine/lbtn_jr2l53.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_jtbvjr.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_jtta5h.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_jubyw6.enc
@@ -197,6 +207,7 @@ share/texmf-dist/fonts/enc/dvips/libertine/lbtn_k2din5.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_ka7zfp.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_ki75ao.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_kijugd.enc
+share/texmf-dist/fonts/enc/dvips/libertine/lbtn_kmbcyi.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_kozgsn.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_kqi56g.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_ks2ukx.enc
@@ -234,6 +245,7 @@ share/texmf-dist/fonts/enc/dvips/libertine/lbtn_omcwp2.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_ooant5.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_ouu7z6.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_ov2e4f.enc
+share/texmf-dist/fonts/enc/dvips/libertine/lbtn_owmg2c.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_pagsao.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_pc62jw.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_pfnu67.enc
@@ -242,7 +254,6 @@ share/texmf-dist/fonts/enc/dvips/libertine/lbtn_pjxd67.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_pkft74.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_pq6qgt.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_prxh5x.enc
-share/texmf-dist/fonts/enc/dvips/libertine/lbtn_ptewpz.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_puhpfk.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_pwsgbx.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_q2zrjv.enc
@@ -251,6 +262,7 @@ share/texmf-dist/fonts/enc/dvips/libertine/lbtn_qac756.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_qacof3.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_qgimbz.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_qlw4xk.enc
+share/texmf-dist/fonts/enc/dvips/libertine/lbtn_qnd5b5.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_qwz7uv.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_r4tgzq.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_rat5le.enc
@@ -262,12 +274,14 @@ share/texmf-dist/fonts/enc/dvips/libertine/lbtn_sdmuhw.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_sfn3yq.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_sjkbhb.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_soyanm.enc
+share/texmf-dist/fonts/enc/dvips/libertine/lbtn_sruc5m.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_suv2ur.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_t62t6h.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_tk3eej.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_tltjc6.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_tlukpt.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_tnngrt.enc
+share/texmf-dist/fonts/enc/dvips/libertine/lbtn_trvg3w.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_txfk5t.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_u442ab.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_u4pufl.enc
@@ -278,6 +292,7 @@ share/texmf-dist/fonts/enc/dvips/libertine/lbtn_uqwtgw.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_urpt4g.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_usa6cb.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_utckyy.enc
+share/texmf-dist/fonts/enc/dvips/libertine/lbtn_uwivlq.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_v2xmgd.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_v3uc42.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_vezqth.enc
@@ -305,6 +320,7 @@ share/texmf-dist/fonts/enc/dvips/libertine/lbtn_x4urtl.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_xapzkq.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_xc6c72.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_xeech7.enc
+share/texmf-dist/fonts/enc/dvips/libertine/lbtn_xie3od.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_xnyvcl.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_xogrpz.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_xpavo4.enc
@@ -329,7 +345,6 @@ share/texmf-dist/fonts/enc/dvips/libertine/lbtn_zq22hj.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_zxvhqu.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_zycpkp.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_zyymej.enc
-share/texmf-dist/fonts/map/dvips/libertine/LinuxBiolinumT.map
 share/texmf-dist/fonts/map/dvips/libertine/libertine.map
 share/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_K.otf
 share/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R.otf
@@ -1642,7 +1657,6 @@ share/texmf-dist/fonts/type1/public/libertine/LinBiolinumTBO.pfb
 share/texmf-dist/fonts/type1/public/libertine/LinBiolinumTI.pfb
 share/texmf-dist/fonts/type1/public/libertine/LinLibertineDisplayT.pfb
 share/texmf-dist/fonts/type1/public/libertine/LinLibertineIT.pfb
-share/texmf-dist/fonts/type1/public/libertine/LinLibertineITLCDFJ.pfb
 share/texmf-dist/fonts/type1/public/libertine/LinLibertineMT.pfb
 share/texmf-dist/fonts/type1/public/libertine/LinLibertineMTB.pfb
 share/texmf-dist/fonts/type1/public/libertine/LinLibertineMTBO.pfb
