@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2019/01/22 11:46:50 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/05/11 22:35:14 markd Exp $
 
 DISTNAME=	listofitems.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.6
-TEXLIVE_REV=	49044
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.61
+TEXLIVE_REV=	50216
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/listofitems
