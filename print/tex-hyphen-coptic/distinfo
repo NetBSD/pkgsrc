@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/01/26 23:09:34 markd Exp $
+$NetBSD: distinfo,v 1.8 2019/05/11 06:57:24 markd Exp $
 
-SHA1 (tex-hyphen-coptic-49078/hyphen-coptic.tar.xz) = a1141ac31fc9bd69a0c53ae7f56a2b6a21c9355f
-RMD160 (tex-hyphen-coptic-49078/hyphen-coptic.tar.xz) = a99de2d21fbc3dba7c98b281dd0e6f64f9c803c7
-SHA512 (tex-hyphen-coptic-49078/hyphen-coptic.tar.xz) = 0fb6d2060615f7fc78bc210aad82d837d917811fd83cd902fe1b23e1b9d07626d3f8535182c47bff579d582336d25060120176737db8abe758a7e2171c4f006b
-Size (tex-hyphen-coptic-49078/hyphen-coptic.tar.xz) = 5640 bytes
+SHA1 (tex-hyphen-coptic-50792/hyphen-coptic.tar.xz) = ae65d4e68552238d955ed2b380a6da122c6b7b3e
+RMD160 (tex-hyphen-coptic-50792/hyphen-coptic.tar.xz) = 58c5dff77ab4efbd67fc678e13c797b6fa156254
+SHA512 (tex-hyphen-coptic-50792/hyphen-coptic.tar.xz) = 5d5e3659f0f83348426b8d8b4a8daa348584341df7d364581d738c7b0f847e7f041be2f8449cd2f486adf40db84de5b3093c97c5f7dcfbefa5ffc0b14fc13afb
+Size (tex-hyphen-coptic-50792/hyphen-coptic.tar.xz) = 6316 bytes
