@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/10/01 12:50:42 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/05/11 07:13:42 ryoon Exp $
 bin/nim
 nim/bin/nim
 nim/compiler.nimble
@@ -145,6 +145,7 @@ nim/config/nimdoc.cfg
 nim/config/nimdoc.tex.cfg
 nim/doc/advopt.txt
 nim/doc/basicopt.txt
+nim/doc/html/overview.html
 nim/lib/arch/x86/amd64.S
 nim/lib/arch/x86/i386.S
 nim/lib/core/allocators.nim
@@ -253,6 +254,7 @@ nim/lib/pure/cstrutils.nim
 nim/lib/pure/db_common.nim
 nim/lib/pure/distros.nim
 nim/lib/pure/dynlib.nim
+nim/lib/pure/editdistance.nim
 nim/lib/pure/encodings.nim
 nim/lib/pure/endians.nim
 nim/lib/pure/events.nim
