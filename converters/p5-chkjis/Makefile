@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.23 2018/08/22 09:43:09 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2019/05/11 01:26:06 mef Exp $
 
 DISTNAME=	chkjis
 PKGNAME=	p5-chkjis-${VERSION}
 PKGREVISION=	12
 CATEGORIES=	japanese converters perl5
 MASTER_SITES=	http://www2d.biglobe.ne.jp/~msyk/software/perl5/
-EXTRACT_SUFX=	.pl
+EXTRACT_SUFX=	.txt
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://www2d.biglobe.ne.jp/~msyk/software/chkjis.html
@@ -24,8 +24,8 @@ PERL5_CONFIGURE=	no
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PERL5_INSTALLVENDORLIB}
-	${INSTALL_SCRIPT} ${WRKSRC}/chkjis.pl \
-		${DESTDIR}${PERL5_INSTALLVENDORLIB}
+	${INSTALL_SCRIPT} ${WRKSRC}/chkjis.txt \
+		${DESTDIR}${PERL5_INSTALLVENDORLIB}/chkjis.pl
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
