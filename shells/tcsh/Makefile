@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2019/05/09 12:07:45 leot Exp $
+# $NetBSD: Makefile,v 1.90 2019/05/11 13:48:58 kim Exp $
 #
 # used by shells/standalone-tcsh/Makefile
 # used by shells/static-tcsh/Makefile
@@ -9,7 +9,7 @@ CATEGORIES=	shells
 MASTER_SITES=	ftp://ftp.astron.com/pub/tcsh/
 MASTER_SITES+=	ftp://ftp.funet.fi/pub/mirrors/ftp.astron.com/pub/tcsh/
 
-MAINTAINER?=	kimmo@suominen.com	# use ?= to allow for overrides.
+MAINTAINER?=	pkgsrc-users@NetBSD.org	# use ?= to allow for overrides.
 #HOMEPAGE=	http://www.tcsh.org/
 COMMENT=	Extended C-shell with many useful features
 LICENSE=	original-bsd
