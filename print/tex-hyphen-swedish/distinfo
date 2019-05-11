@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2019/01/26 20:33:41 markd Exp $
+$NetBSD: distinfo,v 1.7 2019/05/11 06:57:28 markd Exp $
 
-SHA1 (tex-hyphen-swedish-49078/hyphen-swedish.tar.xz) = cbd74f54ae7be55436437d357fabef9277c6e1bd
-RMD160 (tex-hyphen-swedish-49078/hyphen-swedish.tar.xz) = 8488a466280d0f4af51c732d76f5bf123bc247f9
-SHA512 (tex-hyphen-swedish-49078/hyphen-swedish.tar.xz) = 277c4ed950d8bd9ceedf7adaf058acd11808873b9022cdf91e7b495236d30c9a50ae9814f2648ae88f6980b43d33eec16669536271ec3931da22d257d9e2b4a6
-Size (tex-hyphen-swedish-49078/hyphen-swedish.tar.xz) = 18312 bytes
+SHA1 (tex-hyphen-swedish-50792/hyphen-swedish.tar.xz) = 54248ed1183ed62654841ada636265f570ae486c
+RMD160 (tex-hyphen-swedish-50792/hyphen-swedish.tar.xz) = 49eafc9acb3c263fb528ed62bf23f34ebafdd0fb
+SHA512 (tex-hyphen-swedish-50792/hyphen-swedish.tar.xz) = 838e107ac683047d1c59c00e4e41d2a927ce20c09ecbddd9e522b29c266f41e5a755d724d9f58c42365c8b676829c70a50b213f25b0dad85a35a0812388ee352
+Size (tex-hyphen-swedish-50792/hyphen-swedish.tar.xz) = 18388 bytes

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2019/01/26 23:24:05 markd Exp $
+# $NetBSD: Makefile,v 1.9 2019/05/11 06:57:23 markd Exp $
 
 DISTNAME=	hyphen-basque
-PKGNAME=	tex-${DISTNAME}-2018
-TEXLIVE_REV=	49078
+PKGNAME=	tex-${DISTNAME}-2019
+TEXLIVE_REV=	50792
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Hyphenation for Basque
