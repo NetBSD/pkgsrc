@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:45:16 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/05/12 03:40:54 markd Exp $
 
-SHA1 (tex-quattrocento-31763/quattrocento.doc.tar.xz) = a05f7a6f12e80d196929461f570c4bd23f1b3aa4
-RMD160 (tex-quattrocento-31763/quattrocento.doc.tar.xz) = 0b72f9fdc44ff70143d5cbece96344584604274c
-SHA512 (tex-quattrocento-31763/quattrocento.doc.tar.xz) = bc3598ab8b51c4a18f9a9aeea0f2acd6377a2b35fe335f5a55ef1ddcb33239e69df58673e5fe98a7f781e2b007eadd0acf48687e8bccc3370984902e12cdab20
-Size (tex-quattrocento-31763/quattrocento.doc.tar.xz) = 276832 bytes
+SHA1 (tex-quattrocento-50729/quattrocento.doc.tar.xz) = e7ff747dc2e1fc5336fa157db272076bf1951673
+RMD160 (tex-quattrocento-50729/quattrocento.doc.tar.xz) = 69b200b2c98c5179f401462156a3590e2a055171
+SHA512 (tex-quattrocento-50729/quattrocento.doc.tar.xz) = f0ddfb64399cdd40870dd5ac51a4a7d6b39abcf78449be4f7ea37ca595bfbc0dd5c0a95fd741c8f8e4e92931fce8d761be47a3f765e963fcd4d6075fe4341c05
+Size (tex-quattrocento-50729/quattrocento.doc.tar.xz) = 104388 bytes
