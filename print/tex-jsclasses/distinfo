@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/01/28 11:05:21 markd Exp $
+$NetBSD: distinfo,v 1.8 2019/05/12 03:57:46 markd Exp $
 
-SHA1 (tex-jsclasses-49387/jsclasses.tar.xz) = 71af2f07102b858a480e1792c8ec30ab83558845
-RMD160 (tex-jsclasses-49387/jsclasses.tar.xz) = 9190b6c8b80428cd73599d6a9c6cf3b29542d594
-SHA512 (tex-jsclasses-49387/jsclasses.tar.xz) = 27b46a4965b4a85310dc606c9a48cdd8a92af786dc6658fe9126bb7963527ed055c7a4774db19522a13b4a3d9c7dbbe92fd4005dfc92af83fc34b22fff09bcbe
-Size (tex-jsclasses-49387/jsclasses.tar.xz) = 21624 bytes
+SHA1 (tex-jsclasses-50813/jsclasses.tar.xz) = aac576300b3c7e76eb3201825abc8590bc74c316
+RMD160 (tex-jsclasses-50813/jsclasses.tar.xz) = 79e08cf336a95a3f2ea66a78498bda3c83af653c
+SHA512 (tex-jsclasses-50813/jsclasses.tar.xz) = 0c56244db93076c9d28bfd579e182040760f9629d9ea3ca1da11c57a16f0738b3e19101fffaa41e2510306fb8d69eed9fc0c777b6291df143e682056bca923ca
+Size (tex-jsclasses-50813/jsclasses.tar.xz) = 21784 bytes
