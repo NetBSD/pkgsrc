@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2019/01/26 02:02:25 markd Exp $
+# $NetBSD: Makefile,v 1.8 2019/05/12 11:52:42 markd Exp $
 
 DISTNAME=	fira
-PKGNAME=	tex-${DISTNAME}-4.2.48488
-TEXLIVE_REV=	48488
+PKGNAME=	tex-${DISTNAME}-4.3
+TEXLIVE_REV=	50944
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/fira
