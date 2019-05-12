@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.20 2018/10/04 19:02:33 leot Exp $
+$NetBSD: patch-ac,v 1.21 2019/05/12 12:27:02 ryoon Exp $
 
 - libtool support 
 - Install target cleanup
@@ -10,24 +10,24 @@ $NetBSD: patch-ac,v 1.20 2018/10/04 19:02:33 leot Exp $
   install it as `mupdf'.
 - Install all EXTRA_APPS (muraster, mujstest, mjsgen)
 
---- Makefile.orig	2018-09-25 12:39:17.000000000 +0000
+--- Makefile.orig	2019-05-06 11:53:09.000000000 +0000
 +++ Makefile
-@@ -51,68 +51,68 @@ ifneq ($(verbose),yes)
+@@ -51,65 +51,65 @@ ifneq ($(verbose),yes)
  endif
  
  MKTGTDIR = mkdir -p $(dir $@)
 -CC_CMD = $(QUIET_CC) $(MKTGTDIR) ; $(CC) $(CFLAGS) -MMD -MP -o $@ -c $<
 -CXX_CMD = $(QUIET_CXX) $(MKTGTDIR) ; $(CXX) $(CFLAGS) -MMD -MP -o $@ -c $<
 -AR_CMD = $(QUIET_AR) $(MKTGTDIR) ; $(AR) cr $@ $^
-+CC_CMD = $(QUIET_CC) $(MKTGTDIR) ; ${LIBTOOL} --mode=compile $(CC) $(CFLAGS) -MMD -MP -o $@ -c $<
-+CXX_CMD = $(QUIET_CXX) $(MKTGTDIR) ; ${LIBTOOL} --mode=compile $(CXX) $(CFLAGS) -MMD -MP -o $@ -c $<
-+AR_CMD = $(QUIET_AR) $(MKTGTDIR) ; ${LIBTOOL} --mode=link $(CC) $(LDFLAGS) -o $@ -version-info 0:0:0 -rpath ${PREFIX}/lib $^
++CC_CMD = $(QUIET_CC) $(MKTGTDIR) ; $(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -MMD -MP -o $@ -c $<
++CXX_CMD = $(QUIET_CXX) $(MKTGTDIR) ; $(LIBTOOL) --mode=compile $(CXX) $(CFLAGS) -MMD -MP -o $@ -c $<
++AR_CMD = $(QUIET_AR) $(MKTGTDIR) ; $(LIBTOOL) --mode=link $(CC) -o $@ -version-info 0:0:0 -rpath $(PREFIX)/lib $^
  ifdef RANLIB
    RANLIB_CMD = $(QUIET_RANLIB) $(RANLIB) $@
  endif
 -LINK_CMD = $(QUIET_LINK) $(MKTGTDIR) ; $(CC) $(LDFLAGS) -o $@ $^ $(LIBS)
-+LINK_CMD = $(QUIET_LINK) $(MKTGTDIR) ; ${LIBTOOL} --mode=link $(CC) $(LDFLAGS) -o $@ $^ $(LIBS)
- TAGS_CMD = $(QUIET_TAGS) ctags $^
++LINK_CMD = $(QUIET_LINK) $(MKTGTDIR) ; $(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ $^ $(LIBS)
+ TAGS_CMD = $(QUIET_TAGS) ctags -R
  WINDRES_CMD = $(QUIET_WINDRES) $(MKTGTDIR) ; $(WINDRES) $< $@
  OBJCOPY_CMD = $(QUIET_OBJCOPY) $(MKTGTDIR) ; $(LD) -r -b binary -o $@ $<
  
@@ -61,10 +61,6 @@ $NetBSD: patch-ac,v 1.20 2018/10/04 19:02:33 leot Exp $
 -$(OUT)/platform/x11/%.o : platform/x11/%.c
 +$(OUT)/platform/x11/%.lo : platform/x11/%.c
  	$(CC_CMD) -Wall $(X11_CFLAGS)
- 
--$(OUT)/platform/x11/curl/%.o : platform/x11/%.c
-+$(OUT)/platform/x11/curl/%.lo : platform/x11/%.c
- 	$(CC_CMD) -Wall $(X11_CFLAGS) $(CURL_CFLAGS) -DHAVE_CURL
  
 -$(OUT)/platform/gl/%.o : platform/gl/%.c
 +$(OUT)/platform/gl/%.lo : platform/gl/%.c
@@ -101,7 +97,7 @@ $NetBSD: patch-ac,v 1.20 2018/10/04 19:02:33 leot Exp $
  
  MUPDF_SRC := $(sort $(wildcard source/fitz/*.c))
  MUPDF_SRC += $(sort $(wildcard source/pdf/*.c))
-@@ -122,14 +122,14 @@ MUPDF_SRC += $(sort $(wildcard source/ht
+@@ -119,14 +119,14 @@ MUPDF_SRC += $(sort $(wildcard source/ht
  MUPDF_SRC += $(sort $(wildcard source/cbz/*.c))
  MUPDF_SRC += $(sort $(wildcard source/gprf/*.c))
  
@@ -119,7 +115,7 @@ $NetBSD: patch-ac,v 1.20 2018/10/04 19:02:33 leot Exp $
  
  # --- Generated embedded font files ---
  
-@@ -156,7 +156,7 @@ ifeq ($(HAVE_OBJCOPY),yes)
+@@ -153,7 +153,7 @@ ifeq ($(HAVE_OBJCOPY),yes)
    $(OUT)/%.ttf.o : %.ttf ; $(OBJCOPY_CMD)
    $(OUT)/%.ttc.o : %.ttc ; $(OBJCOPY_CMD)
  else
@@ -128,7 +124,7 @@ $NetBSD: patch-ac,v 1.20 2018/10/04 19:02:33 leot Exp $
  endif
  
  generate: $(FONT_GEN)
-@@ -190,17 +190,17 @@ generate: source/pdf/js/util.js.h
+@@ -187,17 +187,17 @@ generate: source/pdf/js/util.js.h
  
  # --- Library ---
  
@@ -151,7 +147,7 @@ $NetBSD: patch-ac,v 1.20 2018/10/04 19:02:33 leot Exp $
  
  # --- Main tools and viewers ---
  
-@@ -211,7 +211,7 @@ MUTOOL_SRC += source/tools/murun.c
+@@ -208,13 +208,13 @@ MUTOOL_SRC += source/tools/murun.c
  MUTOOL_SRC += source/tools/mutrace.c
  MUTOOL_SRC += source/tools/cmapdump.c
  MUTOOL_SRC += $(sort $(wildcard source/tools/pdf*.c))
@@ -160,17 +156,23 @@ $NetBSD: patch-ac,v 1.20 2018/10/04 19:02:33 leot Exp $
  MUTOOL_EXE := $(OUT)/mutool
  $(MUTOOL_EXE) : $(MUTOOL_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(PKCS7_LIB) $(THREAD_LIB)
  	$(LINK_CMD) $(THIRD_LIBS) $(THREADING_LIBS) $(LIBCRYPTO_LIBS)
-@@ -219,28 +219,27 @@ INSTALL_APPS += $(MUTOOL_EXE)
+ TOOL_APPS += $(MUTOOL_EXE)
+ 
+-MURASTER_OBJ := $(OUT)/source/tools/muraster.o
++MURASTER_OBJ := $(OUT)/source/tools/muraster.lo
+ MURASTER_EXE := $(OUT)/muraster
+ $(MURASTER_EXE) : $(MURASTER_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(THREAD_LIB)
+ 	$(LINK_CMD) $(THIRD_LIBS) $(THREADING_LIBS)
+@@ -222,7 +222,7 @@ TOOL_APPS += $(MURASTER_EXE)
  
  ifeq ($(HAVE_GLUT),yes)
    MUVIEW_GLUT_SRC += $(sort $(wildcard platform/gl/*.c))
 -  MUVIEW_GLUT_OBJ := $(MUVIEW_GLUT_SRC:%.c=$(OUT)/%.o)
--  MUVIEW_GLUT_EXE := $(OUT)/mupdf-gl
 +  MUVIEW_GLUT_OBJ := $(MUVIEW_GLUT_SRC:%.c=$(OUT)/%.lo)
-+  MUVIEW_GLUT_EXE := $(OUT)/platform/gl/mupdf-gl
+   MUVIEW_GLUT_EXE := $(OUT)/mupdf-gl
    $(MUVIEW_GLUT_EXE) : $(MUVIEW_GLUT_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(PKCS7_LIB) $(GLUT_LIB)
  	$(LINK_CMD) $(THIRD_LIBS) $(LIBCRYPTO_LIBS) $(WIN32_LDFLAGS) $(GLUT_LIBS)
-   INSTALL_APPS += $(MUVIEW_GLUT_EXE)
+@@ -230,10 +230,10 @@ ifeq ($(HAVE_GLUT),yes)
  endif
  
  ifeq ($(HAVE_X11),yes)
@@ -178,14 +180,14 @@ $NetBSD: patch-ac,v 1.20 2018/10/04 19:02:33 leot Exp $
 -  MUVIEW_X11_OBJ += $(OUT)/platform/x11/pdfapp.o
 -  MUVIEW_X11_OBJ += $(OUT)/platform/x11/x11_main.o
 -  MUVIEW_X11_OBJ += $(OUT)/platform/x11/x11_image.o
-+  MUVIEW_X11_EXE := $(OUT)/platform/x11/mupdf
++  MUVIEW_X11_EXE := $(OUT)/mupdf
 +  MUVIEW_X11_OBJ += $(OUT)/platform/x11/pdfapp.lo
 +  MUVIEW_X11_OBJ += $(OUT)/platform/x11/x11_main.lo
 +  MUVIEW_X11_OBJ += $(OUT)/platform/x11/x11_image.lo
    $(MUVIEW_X11_EXE) : $(MUVIEW_X11_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(PKCS7_LIB)
  	$(LINK_CMD) $(THIRD_LIBS) $(X11_LIBS) $(LIBCRYPTO_LIBS)
--  INSTALL_APPS += $(MUVIEW_X11_EXE)
- endif
+   VIEW_APPS += $(MUVIEW_X11_EXE)
+@@ -241,9 +241,9 @@ endif
  
  ifeq ($(HAVE_WIN32),yes)
    MUVIEW_WIN32_EXE := $(OUT)/mupdf-w32
@@ -197,56 +199,9 @@ $NetBSD: patch-ac,v 1.20 2018/10/04 19:02:33 leot Exp $
 +  MUVIEW_WIN32_OBJ += $(OUT)/platform/x11/win_res.lo
    $(MUVIEW_WIN32_EXE) : $(MUVIEW_WIN32_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(PKCS7_LIB)
  	$(LINK_CMD) $(THIRD_LIBS) $(WIN32_LDFLAGS) $(WIN32_LIBS) $(LIBCRYPTO_LIBS)
-   INSTALL_APPS += $(MUVIEW_WIN32_EXE)
-@@ -248,19 +247,19 @@ endif
+   VIEW_APPS += $(MUVIEW_WIN32_EXE)
+@@ -251,18 +251,18 @@ endif
  
- # --- Extra tools and viewers ---
- 
--MURASTER_OBJ := $(OUT)/source/tools/muraster.o
-+MURASTER_OBJ := $(OUT)/source/tools/muraster.lo
- MURASTER_EXE := $(OUT)/muraster
- $(MURASTER_EXE) : $(MURASTER_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(THREAD_LIB)
- 	$(LINK_CMD) $(THIRD_LIBS) $(THREADING_LIBS)
- EXTRA_APPS += $(MURASTER_EXE)
- 
--MJSGEN_OBJ := $(OUT)/source/tools/mjsgen.o
-+MJSGEN_OBJ := $(OUT)/source/tools/mjsgen.lo
- MJSGEN_EXE := $(OUT)/mjsgen
- $(MJSGEN_EXE) : $(MJSGEN_OBJ) $(MUPDF_LIB) $(THIRD_LIB)
- 	$(LINK_CMD) $(THIRD_LIBS)
- EXTRA_APPS += $(MJSGEN_EXE)
- 
--MUJSTEST_OBJ := $(addprefix $(OUT)/platform/x11/, jstest_main.o pdfapp.o)
-+MUJSTEST_OBJ := $(addprefix $(OUT)/platform/x11/, jstest_main.lo pdfapp.lo)
- MUJSTEST_EXE := $(OUT)/mujstest
- $(MUJSTEST_EXE) : $(MUJSTEST_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(PKCS7_LIB)
- 	$(LINK_CMD) $(THIRD_LIBS) $(LIBCRYPTO_LIBS)
-@@ -268,33 +267,38 @@ EXTRA_APPS += $(MUJSTEST_EXE)
- 
- ifeq ($(HAVE_X11),yes)
- ifeq ($(HAVE_CURL),yes)
--  MUVIEW_X11_CURL_EXE := $(OUT)/mupdf-x11-curl
--  MUVIEW_X11_CURL_OBJ += $(OUT)/platform/x11/curl/pdfapp.o
--  MUVIEW_X11_CURL_OBJ += $(OUT)/platform/x11/curl/x11_main.o
--  MUVIEW_X11_CURL_OBJ += $(OUT)/platform/x11/curl/x11_image.o
--  MUVIEW_X11_CURL_OBJ += $(OUT)/platform/x11/curl/curl_stream.o
-+  MUVIEW_X11_CURL_EXE := $(OUT)/platform/x11/curl/mupdf
-+  MUVIEW_X11_CURL_OBJ += $(OUT)/platform/x11/curl/pdfapp.lo
-+  MUVIEW_X11_CURL_OBJ += $(OUT)/platform/x11/curl/x11_main.lo
-+  MUVIEW_X11_CURL_OBJ += $(OUT)/platform/x11/curl/x11_image.lo
-+  MUVIEW_X11_CURL_OBJ += $(OUT)/platform/x11/curl/curl_stream.lo
-   $(MUVIEW_X11_CURL_EXE) : $(MUVIEW_X11_CURL_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(PKCS7_LIB) $(CURL_LIB)
- 	$(LINK_CMD) $(THIRD_LIBS) $(X11_LIBS) $(CURL_LIBS) $(LIBCRYPTO_LIBS)
--  EXTRA_APPS += $(MUVIEW_X11_CURL_EXE)
- endif
- endif
- 
-+ifeq "$(HAVE_CURL)" "yes"
-+INSTALL_APPS += $(MUVIEW_X11_CURL_EXE)
-+else ifeq "$(HAVE_X11)" "yes"
-+INSTALL_APPS += $(MUVIEW_X11_EXE)
-+endif
-+
  # --- Generated dependencies ---
  
 --include $(MUPDF_OBJ:%.o=%.d)
@@ -254,7 +209,6 @@ $NetBSD: patch-ac,v 1.20 2018/10/04 19:02:33 leot Exp $
 --include $(THREAD_OBJ:%.o=%.d)
 --include $(THIRD_OBJ:%.o=%.d)
 --include $(GLUT_OBJ:%.o=%.d)
---include $(CURL_OBJ:%.o=%.d)
 -
 --include $(MUTOOL_OBJ:%.o=%.d)
 --include $(MUVIEW_GLUT_OBJ:%.o=%.d)
@@ -265,7 +219,6 @@ $NetBSD: patch-ac,v 1.20 2018/10/04 19:02:33 leot Exp $
 +-include $(THREAD_OBJ:%.lo=%.d)
 +-include $(THIRD_OBJ:%.lo=%.d)
 +-include $(GLUT_OBJ:%.lo=%.d)
-+-include $(CURL_OBJ:%.lo=%.d)
 +
 +-include $(MUTOOL_OBJ:%.lo=%.d)
 +-include $(MUVIEW_GLUT_OBJ:%.lo=%.d)
@@ -273,13 +226,11 @@ $NetBSD: patch-ac,v 1.20 2018/10/04 19:02:33 leot Exp $
 +-include $(MUVIEW_WIN32_OBJ:%.lo=%.d)
  
 --include $(MURASTER_OBJ:%.o=%.d)
---include $(MUVIEW_X11_CURL_OBJ:%.o=%.d)
 +-include $(MURASTER_OBJ:%.lo=%.d)
-+-include $(MUVIEW_X11_CURL_OBJ:%.lo=%.d)
  
  # --- Examples ---
  
-@@ -305,10 +309,10 @@ $(OUT)/multi-threaded: docs/examples/mul
+@@ -273,10 +273,10 @@ $(OUT)/multi-threaded: docs/examples/mul
  
  # --- Update version string header ---
  
@@ -294,34 +245,34 @@ $NetBSD: patch-ac,v 1.20 2018/10/04 19:02:33 leot Exp $
  
  # --- Format man pages ---
  
-@@ -336,28 +340,30 @@ apps: $(INSTALL_APPS)
- extra-apps: $(EXTRA_APPS)
- extra: extra-libs extra-apps
+@@ -304,27 +304,30 @@ tools: $(TOOL_APPS)
+ apps: $(TOOL_APPS) $(VIEW_APPS)
  
--install: libs apps
+ install: libs apps
 -	install -d $(DESTDIR)$(incdir)/mupdf
 -	install -d $(DESTDIR)$(incdir)/mupdf/fitz
 -	install -d $(DESTDIR)$(incdir)/mupdf/pdf
--	install include/mupdf/*.h $(DESTDIR)$(incdir)/mupdf
--	install include/mupdf/fitz/*.h $(DESTDIR)$(incdir)/mupdf/fitz
--	install include/mupdf/pdf/*.h $(DESTDIR)$(incdir)/mupdf/pdf
+-	install -m 644 include/mupdf/*.h $(DESTDIR)$(incdir)/mupdf
+-	install -m 644 include/mupdf/fitz/*.h $(DESTDIR)$(incdir)/mupdf/fitz
+-	install -m 644 include/mupdf/pdf/*.h $(DESTDIR)$(incdir)/mupdf/pdf
 -
 -	install -d $(DESTDIR)$(libdir)
--	install $(INSTALL_LIBS) $(DESTDIR)$(libdir)
+-	install -m 644 $(INSTALL_LIBS) $(DESTDIR)$(libdir)
 -
 -	install -d $(DESTDIR)$(bindir)
--	install $(INSTALL_APPS) $(DESTDIR)$(bindir)
+-	install -m 755 $(TOOL_APPS) $(VIEW_APPS) $(DESTDIR)$(bindir)
 -
 -	install -d $(DESTDIR)$(mandir)/man1
--	install docs/man/*.1 $(DESTDIR)$(mandir)/man1
+-	install -m 644 docs/man/*.1 $(DESTDIR)$(mandir)/man1
 -
 -	install -d $(DESTDIR)$(docdir)
 -	install -d $(DESTDIR)$(docdir)/examples
--	install README COPYING CHANGES $(DESTDIR)$(docdir)
--	install docs/*.html docs/*.css docs/*.png $(DESTDIR)$(docdir)
--	install docs/examples/* $(DESTDIR)$(docdir)/examples
-+install: libs apps extra-apps
-+	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(incdir) $(DESTDIR)$(incdir)/mupdf $(DESTDIR)$(incdir)/mupdf/fitz $(DESTDIR)$(incdir)/mupdf/pdf
+-	install -m 644 README COPYING CHANGES $(DESTDIR)$(docdir)
+-	install -m 644 docs/*.html docs/*.css docs/*.png $(DESTDIR)$(docdir)
+-	install -m 644 docs/examples/* $(DESTDIR)$(docdir)/examples
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(incdir)/mupdf
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(incdir)/mupdf/fitz
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(incdir)/mupdf/pdf
 +	${BSD_INSTALL_DATA} include/mupdf/*.h $(DESTDIR)$(incdir)/mupdf
 +	${BSD_INSTALL_DATA} include/mupdf/fitz/*.h $(DESTDIR)$(incdir)/mupdf/fitz
 +	${BSD_INSTALL_DATA} include/mupdf/pdf/*.h $(DESTDIR)$(incdir)/mupdf/pdf
@@ -332,14 +283,13 @@ $NetBSD: patch-ac,v 1.20 2018/10/04 19:02:33 leot Exp $
 +	done
 +
 +	${BSD_INSTALL_PROGRAM_DIR} $(DESTDIR)$(bindir)
-+	for f in $(INSTALL_APPS) $(EXTRA_APPS); do \
-+		${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} $$f $(DESTDIR)$(bindir); \
++	for f in $(TOOL_APPS) $(VIEW_APPS); do \
++		${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} $$f $(DESTDIR)$(bindir); \
 +	done
 +
 +	${BSD_INSTALL_MAN_DIR} $(DESTDIR)$(mandir)/man1
 +	${BSD_INSTALL_MAN} docs/man/*.1 $(DESTDIR)$(mandir)/man1
 +
-+	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(docdir)
 +	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(docdir)/examples
 +	${BSD_INSTALL_DATA} README COPYING CHANGES $(DESTDIR)$(docdir)
 +	${BSD_INSTALL_DATA} docs/*.html docs/*.css docs/*.png $(DESTDIR)$(docdir)
