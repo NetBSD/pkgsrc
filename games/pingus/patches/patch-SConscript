@@ -1,0 +1,44 @@
+$NetBSD: patch-SConscript,v 1.1 2019/05/12 06:17:30 triaxx Exp $
+
+* Python 3.x support.
+* Boost does not maintain Signals anymore (Signals2 does not require linkage).
+
+--- SConscript.orig	2011-12-24 21:46:47.000000000 +0000
++++ SConscript
+@@ -77,7 +77,6 @@ class Project:
+         self.configure_linuxevdev()
+         self.configure_wiimote()
+         self.configure_xinput()
+-        self.configure_boost()
+         self.configure_png()
+         self.configure_sdl()
+         self.configure_iconv()
+@@ -126,12 +125,12 @@ class Project:
+     def configure_end(self):
+         self.env = self.conf.Finish()
+ 
+-        print "Reports:"
+-        print self.reports
++        print("Reports:")
++        print(self.reports)
+ 
+         if not self.fatal_error == "":
+-            print "Fatal Errors:"
+-            print self.fatal_error
++            print("Fatal Errors:")
++            print(self.fatal_error)
+             Exit(1)
+ 
+     def configure_gxx(self): 
+@@ -186,11 +185,6 @@ class Project:
+             self.conf.env.Append(optional_sources = ['src/engine/input/xinput/xinput_driver.cpp',
+                                                      'src/engine/input/xinput/xinput_device.cpp'])
+             
+-    def configure_boost(self):
+-        if not self.conf.CheckLibWithHeader('boost_signals', 'boost/signals.hpp', 'c++'):
+-            if not self.conf.CheckLibWithHeader('boost_signals-mt', 'boost/signals.hpp', 'c++'):
+-                self.fatal_error += "  * library 'boost_signals' not found\n"
+-
+     def configure_png(self):
+         if self.conf.CheckMyProgram('pkg-config'):
+             self.conf.env.ParseConfig("pkg-config  --cflags --libs libpng | sed 's/-I/-isystem/g'")

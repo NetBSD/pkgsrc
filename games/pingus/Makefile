@@ -1,27 +1,29 @@
-# $NetBSD: Makefile,v 1.31 2019/01/02 19:16:20 tnn Exp $
+# $NetBSD: Makefile,v 1.32 2019/05/12 06:17:30 triaxx Exp $
 
-DISTNAME=	pingus-0.7.3
-PKGREVISION=	22
+DISTNAME=	pingus-0.7.6
 CATEGORIES=	games
-MASTER_SITES=	https://pingus.seul.org/files/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=Pingus/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	triaxx@NetBSD.org
 HOMEPAGE=	https://pingus.seul.org/
 COMMENT=	Lemmings(TM) Clone
+LICENSE=	gnu-gpl-v3
 
-USE_LANGUAGES=		c c++11
+BUILD_TARGET=	build/pingus
+MAKE_ENV+=	FIND=${TOOLS_CMD.find:Q} MKDIR=${TOOLS_CMD.mkdir:Q}
+MAKE_ENV+=	RM=${TOOLS_CMD.rm:Q} SCONSBIN=${SCONSBIN:Q}
+NO_CONFIGURE=	yes
+USE_LANGUAGES=	c c++11
+USE_TOOLS=	pkg-config
 
-do-configure:
-	cd ${WRKSRC} && \
-	${PKGSRC_SETENV} ${MAKE_ENV} ${SCONSBIN} configure CXX=${CXX:Q} CPPPATH=${PREFIX}/include LIBPATH=${PREFIX}/lib
+DATADIR=	${PREFIX}/share/pingus
 
-do-build:
-	cd ${WRKSRC} && \
-	${PKGSRC_SETENV} ${MAKE_ENV} ${SCONSBIN} -j${MAKE_JOBS:U1}
-
-do-install:
-	cd ${WRKSRC} && ./install.sh ${DESTDIR}${PREFIX}
+SUBST_CLASSES+=		data
+SUBST_MESSAGE.data=	Set default --datadir for pingus executable to ${DATADIR}
+SUBST_STAGE.data=	pre-build
+SUBST_FILES.data=	src/pingus/pingus_main.cpp
+SUBST_VARS.data=	DATADIR
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
