@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.5 2019/02/01 23:31:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/05/12 03:26:38 markd Exp $
 bin/texdoc
-share/texmf-dist/scripts/texdoc/alias.tlu
-share/texmf-dist/scripts/texdoc/config.tlu
-share/texmf-dist/scripts/texdoc/constants.tlu
-share/texmf-dist/scripts/texdoc/functions.tlu
-share/texmf-dist/scripts/texdoc/main.tlu
-share/texmf-dist/scripts/texdoc/score.tlu
-share/texmf-dist/scripts/texdoc/search.tlu
+share/texmf-dist/scripts/texdoc/texdoclib-alias.tlu
+share/texmf-dist/scripts/texdoc/texdoclib-cli.tlu
+share/texmf-dist/scripts/texdoc/texdoclib-config.tlu
+share/texmf-dist/scripts/texdoc/texdoclib-const.tlu
+share/texmf-dist/scripts/texdoc/texdoclib-score.tlu
+share/texmf-dist/scripts/texdoc/texdoclib-search.tlu
+share/texmf-dist/scripts/texdoc/texdoclib-util.tlu
+share/texmf-dist/scripts/texdoc/texdoclib-view.tlu
 share/texmf-dist/scripts/texdoc/texdoclib.tlu
-share/texmf-dist/scripts/texdoc/view.tlu
 share/texmf-dist/texdoc/texdoc.cnf
