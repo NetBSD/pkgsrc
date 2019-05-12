@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2019/02/01 23:31:07 markd Exp $
+# $NetBSD: Makefile,v 1.7 2019/05/12 03:26:38 markd Exp $
 
 DISTNAME=	texdoc.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2018.47946
-TEXLIVE_REV=	47946
+PKGNAME=	tex-${DISTNAME:S/./-/}-2019
+TEXLIVE_REV=	50627
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/texdoc
