@@ -1,16 +1,24 @@
-$NetBSD: distinfo,v 1.9 2019/01/02 19:16:20 tnn Exp $
+$NetBSD: distinfo,v 1.10 2019/05/12 06:17:30 triaxx Exp $
 
-SHA1 (pingus-0.7.3.tar.bz2) = ca7fe5cea65fb3392d1e81056a879831925502f2
-RMD160 (pingus-0.7.3.tar.bz2) = 664d259a98a172d10480be9aa4ec87a424ecd6f1
-SHA512 (pingus-0.7.3.tar.bz2) = 9992fce8343e44da1b411eeb4468cb44cd42750f222836f51997e10e696bf742e3dbffca4ee063c1795f1350bd2ea81d20afa943dda123c024851e1b8bbd9c29
-Size (pingus-0.7.3.tar.bz2) = 11127278 bytes
-SHA1 (patch-aa) = 0c2c7e599ae3782d45813221f1c31fa5c66514dc
-SHA1 (patch-ab) = 2f897472e0c006e6fa325c17eda34b05d0ba6a01
-SHA1 (patch-ac) = f0c357e4b5d5b71eacac243c15792b3a78a146ec
-SHA1 (patch-src_font.cpp) = 2bf0b3c31e18aae94269c09c92fa632cbf1c8070
-SHA1 (patch-src_lisp_getters.hpp) = e8671571418a172b71dde2ef7ab092ffd03563f7
-SHA1 (patch-src_pingus__main.cpp) = a93a83341a221210684bac93e23816d73a64ec84
-SHA1 (patch-src_pingus__menu.cpp) = 0482ebf068cde7820a6cb78d22a5e603ba71c03f
-SHA1 (patch-src_system.cpp) = 20d4522096aa537f60a03e43027b745ecf10b6f3
-SHA1 (patch-src_tinygettext_po__file__reader.cpp) = ab2fe607e943f72ad4cdfa0d0117886119d8593d
-SHA1 (patch-src_tinygettext_po__file__reader.hpp) = a378319caa8a4e2269893c698c2732a4aea1b7a2
+SHA1 (pingus-0.7.6.tar.gz) = c888c277995bed84052b62d0eacbd77d0346a276
+RMD160 (pingus-0.7.6.tar.gz) = e58ced4252caea3ca642a82a47468ed49eaa7851
+SHA512 (pingus-0.7.6.tar.gz) = ea0e7fd2cc1f6c23e62e222dffa1eb4764313ccecd716083c516fa4720c19562c9940da1dae4cbc527b85de9c0094f482e4f907212226b39ad044222b477769b
+Size (pingus-0.7.6.tar.gz) = 13410576 bytes
+SHA1 (patch-Makefile) = 6fb2ea04cc97381530b3e61e06c74b478f62a6e7
+SHA1 (patch-SConscript) = 39aa7f18a05cb45eed4393e6462fe9ec656d8297
+SHA1 (patch-src_editor_button.hpp) = a640979ed318233401147880d59f30f90aa0ed49
+SHA1 (patch-src_editor_checkbox.hpp) = 51d605b2cb5e51acce37b9626c68c236c1b5cc9c
+SHA1 (patch-src_editor_combobox.hpp) = 41511fb02e6378ea9c4ec76af4d77738b28f29dc
+SHA1 (patch-src_editor_file__list.hpp) = 0fddead2d8245e16c7353b9ab8a8a1ffd216b34d
+SHA1 (patch-src_editor_inputbox.hpp) = 9e885a17a993a1b9246931e0e84861f3f91362d1
+SHA1 (patch-src_editor_message__box.hpp) = b5b4f1118a77a3bbc693a26d216869d69b81b59b
+SHA1 (patch-src_editor_object__selector.cpp) = abdbfc65f923d10275adfd9d2923edf180d32cb2
+SHA1 (patch-src_editor_viewport.hpp) = 4a9a79f3c5d114746ef32a03ffddcc51b2de0251
+SHA1 (patch-src_lisp_getters.hpp) = 8f6de8678dae022ae888bd162d6566238030a4b2
+SHA1 (patch-src_pingus_components_check__box.hpp) = 59d3ee73fa16c1d0e57a2bf0d236dd4c500117dd
+SHA1 (patch-src_pingus_components_choice__box.hpp) = 4d2faefe2db205c8cbc695c6b45df4ee549261e8
+SHA1 (patch-src_pingus_components_slider__box.hpp) = 0c247a42dcf17a214fb2347177e95e0a5393807d
+SHA1 (patch-src_pingus_config__manager.hpp) = 3aa3c4947accec1360ee71d03aec8582c68c226a
+SHA1 (patch-src_pingus_pingus__main.cpp) = d7e5b778c3bab1f5c36d0a1fd97e9a477c499d27
+SHA1 (patch-src_pingus_screens_option__menu.hpp) = bf7da1b212fde00b9dd3d2f972ec587f629771da
+SHA1 (patch-src_pingus_screens_pingus__menu.cpp) = 18c2f3762fd5d7adf6a6a9b4561cc6af1289ff15
