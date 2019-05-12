@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2082 2019/05/11 23:36:22 markd Exp $
+$NetBSD: CHANGES-2019,v 1.2083 2019/05/12 04:19:43 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3513,3 +3513,32 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/tex-mcf2graph-doc to 4.40 [markd 2019-05-11]
 	Updated print/tex-tex4ebook to 0.2c [markd 2019-05-11]
 	Updated print/tex-tex4ebook-doc to 0.2c [markd 2019-05-11]
+	Updated print/tex-context to 2019 [markd 2019-05-12]
+	Updated print/tex-context-doc to 2019 [markd 2019-05-12]
+	Updated print/tex-texdoctk to 0.6.0.50602 [markd 2019-05-12]
+	Updated print/tex-texdoctk-doc to 0.6.0.50602 [markd 2019-05-12]
+	Updated print/tex-texdoc to 2019 [markd 2019-05-12]
+	Updated print/tex-texdoc-doc to 2019 [markd 2019-05-12]
+	Updated fonts/tex-adobemapping to 2019 [markd 2019-05-12]
+	Updated print/tex-babel-french to 3.5e [markd 2019-05-12]
+	Updated print/tex-ptex-base to 2019 [markd 2019-05-12]
+	Updated print/tex-ptex-base-doc to 2019 [markd 2019-05-12]
+	Updated fonts/tex-quattrocento to 2019 [markd 2019-05-12]
+	Updated fonts/tex-quattrocento-doc to 2019 [markd 2019-05-12]
+	Updated print/tex-dehyph-exptl to 0.6 [markd 2019-05-12]
+	Updated print/tex-dehyph-exptl-doc to 0.6 [markd 2019-05-12]
+	Updated print/tex-elsarticle to 3.2 [markd 2019-05-12]
+	Updated print/tex-elsarticle-doc to 3.2 [markd 2019-05-12]
+	Updated print/tex-hausarbeit-jura to 2.0 [markd 2019-05-12]
+	Updated print/tex-hausarbeit-jura-doc to 2.0 [markd 2019-05-12]
+	Updated fonts/tex-japanese-otf to 1.7b8 [markd 2019-05-12]
+	Updated fonts/tex-japanese-otf-doc to 1.7b8 [markd 2019-05-12]
+	Updated print/tex-jsclasses to 2019 [markd 2019-05-12]
+	Updated print/tex-polyglossia to 1.44 [markd 2019-05-12]
+	Updated print/tex-polyglossia-doc to 1.43 [markd 2019-05-12]
+	Updated fonts/tex-sansmathfonts to 2019 [markd 2019-05-12]
+	Updated fonts/tex-sansmathfonts-doc to 2019 [markd 2019-05-12]
+	Updated print/tex-yfonts to 1.4 [markd 2019-05-12]
+	Updated print/tex-yfonts-doc to 1.4 [markd 2019-05-12]
+	Updated print/tex-platex to 2019 [markd 2019-05-12]
+	Updated print/tex-platex-doc to 2019 [markd 2019-05-12]
