@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/05/12 01:25:23 markd Exp $
+$NetBSD: distinfo,v 1.5 2019/05/12 04:02:15 markd Exp $
 
-SHA1 (tex-polyglossia-47392/polyglossia.tar.xz) = ca158acdbdc1dae235bd7e7bc9037074c80ebcf0
-RMD160 (tex-polyglossia-47392/polyglossia.tar.xz) = b48c9f62d88c1cd9395a3a877cba25fd3a9f8e6d
-SHA512 (tex-polyglossia-47392/polyglossia.tar.xz) = 3f1dd6edb94323727be205c8ca8f664729ea828407df893906659d9a63135ec851f207bbf81acf3e0040002b9240b5902dc16e1bf81f5e5b5d0e4f7d079bd30c
-Size (tex-polyglossia-47392/polyglossia.tar.xz) = 77744 bytes
+SHA1 (tex-polyglossia-50787/polyglossia.tar.xz) = 7e02bd0c00834920093bc51046b1db3a28b52588
+RMD160 (tex-polyglossia-50787/polyglossia.tar.xz) = c67c574f6196ee1fe36c9e9c6a2736db1c410800
+SHA512 (tex-polyglossia-50787/polyglossia.tar.xz) = 2ccb7747c5c0becc77181c75bad4c035dd3a3a2f5a5d8cce03874c99b82d2594e2a80bd6d7799f3882b988705eb61ecbae4e8eccd9c415ccf4af6ff0e2e581a4
+Size (tex-polyglossia-50787/polyglossia.tar.xz) = 78264 bytes
