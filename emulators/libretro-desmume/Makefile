@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2019/05/09 14:39:09 nia Exp $
+# $NetBSD: Makefile,v 1.9 2019/05/12 09:49:39 nia Exp $
 
 DISTNAME=	libretro-desmume-20190426
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	desmume
@@ -20,10 +21,6 @@ USE_LANGUAGES=	c c++
 .include "../../mk/bsd.prefs.mk"
 
 CXXFLAGS+=	-D__STDC_FORMAT_MACROS
-
-# fix build with libpcap-1.8.1
-# see issues/58
-CXXFLAGS+=	-DHAVE_REMOTE
 
 .if !empty(MACHINE_ARCH:M*arm*)
 CXXFLAGS+=	-marm
