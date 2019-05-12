@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2019/01/29 05:38:36 markd Exp $
+# $NetBSD: Makefile,v 1.11 2019/05/12 03:30:28 markd Exp $
 
 DISTNAME=	adobemapping
-PKGNAME=	tex-${DISTNAME}-2018.49423
+PKGNAME=	tex-${DISTNAME}-2019
 CATEGORIES=	fonts
-TEXLIVE_REV=	49423
+TEXLIVE_REV=	50714
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/adobemapping
