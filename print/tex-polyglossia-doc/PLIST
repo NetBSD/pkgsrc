@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/05/12 01:25:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/05/12 04:02:15 markd Exp $
 share/texmf-dist/doc/latex/polyglossia/README
 share/texmf-dist/doc/latex/polyglossia/example-arabic.pdf
 share/texmf-dist/doc/latex/polyglossia/example-arabic.tex
