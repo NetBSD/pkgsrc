@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2018/05/06 12:07:38 markd Exp $
+$NetBSD: distinfo,v 1.8 2019/05/12 03:55:02 markd Exp $
 
-SHA1 (tex-japanese-otf-46598/japanese-otf.tar.xz) = 6b6965ab46401ab5f4b89526653b4177c94d388f
-RMD160 (tex-japanese-otf-46598/japanese-otf.tar.xz) = 6855144d83bbe72d511a2df8974408f03f7a56b8
-SHA512 (tex-japanese-otf-46598/japanese-otf.tar.xz) = ffa12f631de025553c73599afa0bdd0d8375e2d49dc3d854ac77135e8eb80e2414c36139180d81cdf33c855f42e1d500b878835275c5beba6934f1d8d08a83d5
-Size (tex-japanese-otf-46598/japanese-otf.tar.xz) = 393204 bytes
+SHA1 (tex-japanese-otf-50769/japanese-otf.tar.xz) = 1b0875be428099374dcf63eee82b9962ed3fb1b9
+RMD160 (tex-japanese-otf-50769/japanese-otf.tar.xz) = 61ac19fc0585a203d518d105efbd87b8913115dc
+SHA512 (tex-japanese-otf-50769/japanese-otf.tar.xz) = e62e32e37fd460dd16a5bf62423564a83c6fc16a9b485dafee5f00fd4c3342e3b94c78731e25a9fca3aebf9cdf91a4bd1ae6edb8213699adc4c8e7d139e14ecf
+Size (tex-japanese-otf-50769/japanese-otf.tar.xz) = 397504 bytes
