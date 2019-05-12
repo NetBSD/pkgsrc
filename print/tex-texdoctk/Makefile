@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2019/02/01 23:35:50 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/05/12 03:23:32 markd Exp $
 
 DISTNAME=	texdoctk
-PKGNAME=	tex-${DISTNAME}-0.6.0
-TEXLIVE_REV=	47978
+PKGNAME=	tex-${DISTNAME}-0.6.0.50602
+TEXLIVE_REV=	50602
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/texdoctk
