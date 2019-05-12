@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q1,v 1.1.2.5 2019/05/05 18:18:48 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q1,v 1.1.2.6 2019/05/12 20:49:35 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q1 branch:
 
@@ -73,4 +73,22 @@ www/ruby-rails51: security fix
 
 Pullup ticket #5954 - requested by taca
 www/ruby-rails52: security fix
+
+Pullup ticket #5955 - requested by taca
+graphics/png: security update
+
+Pullup ticket #5956 - requested by taca
+mail/dovecot2: security update
+
+Pullup ticket #5963 - requested by taca
+mail/dovecot2-pigeonhole: dependency update
+
+Pullup ticket #5957 - requested by taca
+net/bind912: security update
+
+Pullup ticket #5958 - requested by taca
+net/bind911: security update
+
+Pullup ticket #5960 - requested by taca
+mail/fml4: security update
 
