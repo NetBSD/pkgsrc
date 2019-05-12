@@ -1,0 +1,75 @@
+$NetBSD: patch-Makefile,v 1.1 2019/05/12 06:17:30 triaxx Exp $
+
+* Remove variables already defined by pkgsrc.
+* Adapt hardcoded variables to be compliant with pkgsrc.
+* Use pkgsrc compliant commands.
+
+--- Makefile.orig	2011-12-24 21:46:47.000000000 +0000
++++ Makefile
+@@ -14,37 +14,34 @@
+ ##  You should have received a copy of the GNU General Public License
+ ##  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ 
+-DESTDIR = 
+-PREFIX  = /usr/local
+ DATADIR = $(PREFIX)/share/pingus
+-MANDIR  = $(PREFIX)/share/man
++MANDIR  = $(PREFIX)/$(PKGMANDIR)
+ BINDIR  = $(PREFIX)/bin
+ 
+ build/pingus:
+-	mkdir -p build
+-	scons src
+-	scons
+-	ln -fs build/pingus
++	${MKDIR} build
++	${SCONSBIN} src
++	${SCONSBIN}
+ 
+ clean:
+-	rm -rf .sconf_temp/
+-	rm -f .sconsign.dblite
+-	rm -rf build/
+-	rm -f pingus
+-	scons -c
++	${RM} -rf .sconf_temp/
++	${RM} -f .sconsign.dblite
++	${RM} -rf build/
++	${RM} -f pingus
++	${SCONSBIN} -c
+ 
+ install: install-exec install-data install-man
+ 
+ install-exec: build/pingus
+-	install -d "$(DESTDIR)$(BINDIR)"
+-
+-	install -D build/pingus "$(DESTDIR)$(BINDIR)/pingus.bin"
+-	echo -e "#!/bin/sh\nexec \"$(BINDIR)/pingus.bin\" --datadir \"$(DATADIR)\"" > "$(DESTDIR)$(BINDIR)/pingus"
+-	chmod 755 "$(DESTDIR)$(BINDIR)/pingus"
++	${BSD_INSTALL_PROGRAM_DIR} ${DESTDIR}$(BINDIR)
++	${BSD_INSTALL_PROGRAM} build/pingus ${DESTDIR}$(BINDIR)/pingus
+ 
+ install-data:
+ 	cd data/ && \
+-	find . \
++  ${FIND} . \
++        -type d \
++				-exec ${BSD_INSTALL_DATA_DIR} ${DESTDIR}$(DATADIR)/{} \; && \
++	${FIND} . \
+         -type f -a  \( \
+         -name "*.png" -o \
+         -name "*.jpg" -o \
+@@ -63,10 +60,11 @@ install-data:
+         -name "*.pingus" -o \
+         -name "*.levelset" -o \
+         -name "*.sprite" \
+-        \) -exec install -D {} $(DESTDIR)$(DATADIR)/{} \;
++        \) -exec ${BSD_INSTALL_DATA} {} ${DESTDIR}$(DATADIR)/{} \;
+ 
+ install-man:
+-	install -D doc/man/pingus.6 "$(DESTDIR)$(MANDIR)/man1/pingus.6"
++	${BSD_INSTALL_MAN_DIR} ${DESTDIR}$(MANDIR)/man6
++	${BSD_INSTALL_MAN} doc/man/pingus.6 ${DESTDIR}$(MANDIR)/man6/pingus.6
+ 
+ .PHONY : clean install install-exec install-data install-man
+ 
