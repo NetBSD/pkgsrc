@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2017/06/21 06:13:16 markd Exp $
-share/texmf-dist/doc/fonts/fira/Fira_4_2_Version_Log.pdf
+@comment $NetBSD: PLIST,v 1.5 2019/05/12 11:52:42 markd Exp $
+share/texmf-dist/doc/fonts/fira/Fira_4_3_Change_Log.pdf
 share/texmf-dist/doc/fonts/fira/LICENSE
 share/texmf-dist/doc/fonts/fira/README
-share/texmf-dist/doc/fonts/fira/TechnicalReportFiraSans4203.pdf
+share/texmf-dist/doc/fonts/fira/TechnicalReportFiraSans.pdf
+share/texmf-dist/doc/fonts/fira/TechnicalReportFiraSansItalic.pdf
 share/texmf-dist/doc/fonts/fira/fira-samples.pdf
 share/texmf-dist/doc/fonts/fira/fira-samples.tex
