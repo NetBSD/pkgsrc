@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/06/21 07:24:07 markd Exp $
+$NetBSD: distinfo,v 1.5 2019/05/12 03:52:00 markd Exp $
 
-SHA1 (tex-hausarbeit-jura-42054/hausarbeit-jura.doc.tar.xz) = 242a499d49754ae54d539fdc482eae7e50db365b
-RMD160 (tex-hausarbeit-jura-42054/hausarbeit-jura.doc.tar.xz) = ea1642d4154afdeb365042ab0a69b2e71871a8ba
-SHA512 (tex-hausarbeit-jura-42054/hausarbeit-jura.doc.tar.xz) = 6cde5d764bad94fcff002bc3db7b878e7c53e01ed202dd7be2e36e710daaa709f0bfee2696932ff29dca95b0ab37892f0f0d12613e5249561c84ef94b48de2bc
-Size (tex-hausarbeit-jura-42054/hausarbeit-jura.doc.tar.xz) = 336268 bytes
+SHA1 (tex-hausarbeit-jura-50762/hausarbeit-jura.doc.tar.xz) = 6f9974b1fe77e16bfe2c1c8f6bdb7b02b94a7565
+RMD160 (tex-hausarbeit-jura-50762/hausarbeit-jura.doc.tar.xz) = d42990a9a525cfc394eb7ab72ce9ed5b1cf0abfc
+SHA512 (tex-hausarbeit-jura-50762/hausarbeit-jura.doc.tar.xz) = cd98eab62d47ae03a5238702ec5a246496880e55dd8a1a9913b3639197d0fe65d607317d9cc9cbd578bca6bc64babc80d257c2f8d84b7327fdbd77537ca1f660
+Size (tex-hausarbeit-jura-50762/hausarbeit-jura.doc.tar.xz) = 339004 bytes
