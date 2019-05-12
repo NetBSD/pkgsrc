@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2087 2019/05/12 10:46:50 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.2088 2019/05/12 11:59:03 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3546,3 +3546,19 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated cross/arm-none-eabi-binutils to 2.32 [ryoon 2019-05-12]
 	Updated cross/arm-none-eabi-gcc to 8.3.0 [ryoon 2019-05-12]
 	Updated mail/notmuch to 0.28.4 [ryoon 2019-05-12]
+	Updated print/tex-lettrine to 2.22 [markd 2019-05-12]
+	Updated print/tex-lettrine-doc to 2.22 [markd 2019-05-12]
+	Updated print/tex-xcjk2uni to 0.8 [markd 2019-05-12]
+	Updated print/tex-xcjk2uni-doc to 0.8 [markd 2019-05-12]
+	Updated devel/tex-doclicense to 1.9.0 [markd 2019-05-12]
+	Updated devel/tex-doclicense-doc to 1.9.0 [markd 2019-05-12]
+	Updated print/tex-tex4ht to 2019 [markd 2019-05-12]
+	Updated print/tex-tex4ht-doc to 2019 [markd 2019-05-12]
+	Updated print/tex-csplain to 2019 [markd 2019-05-12]
+	Updated textproc/tex-lwarp to 0.71 [markd 2019-05-12]
+	Updated textproc/tex-lwarp-doc to 0.71 [markd 2019-05-12]
+	Updated fonts/tex-cabin to 2019 [markd 2019-05-12]
+	Updated fonts/tex-cabin-doc to 2019 [markd 2019-05-12]
+	Updated fonts/tex-fira to 4.3 [markd 2019-05-12]
+	Updated fonts/tex-fira-doc to 4.3 [markd 2019-05-12]
+	Updated print/tex-texinfo to 5.1.50923 [markd 2019-05-12]
