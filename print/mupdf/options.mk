@@ -1,20 +1,11 @@
-# $NetBSD: options.mk,v 1.6 2017/12/18 15:06:33 leot Exp $
+# $NetBSD: options.mk,v 1.7 2019/05/12 12:27:02 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mupdf
-PKG_SUPPORTED_OPTIONS=	curl opengl
+PKG_SUPPORTED_OPTIONS=	opengl
 
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=		opengl
-
-#
-# curl support
-#
-.if !empty(PKG_OPTIONS:Mcurl)
-.include "../../www/curl/buildlink3.mk"
-.else
-MAKE_ENV+=	HAVE_CURL=no
-.endif
 
 #
 # glut support
