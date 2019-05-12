@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2089 2019/05/12 12:27:46 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.2090 2019/05/12 17:55:47 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3563,3 +3563,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated fonts/tex-fira-doc to 4.3 [markd 2019-05-12]
 	Updated print/tex-texinfo to 5.1.50923 [markd 2019-05-12]
 	Updated print/mupdf to 1.15.0 [ryoon 2019-05-12]
+	Updated geography/gama to 2.05 [gdt 2019-05-12]
