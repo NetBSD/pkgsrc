@@ -1,12 +1,9 @@
-@comment $NetBSD: PLIST,v 1.17 2018/10/04 19:02:33 leot Exp $
-bin/mjsgen
-bin/mujstest
+@comment $NetBSD: PLIST,v 1.18 2019/05/12 12:27:02 ryoon Exp $
 bin/mupdf
 ${PLIST.opengl}bin/mupdf-gl
 bin/muraster
 bin/mutool
 include/mupdf/fitz.h
-include/mupdf/fitz/annotation.h
 include/mupdf/fitz/archive.h
 include/mupdf/fitz/band-writer.h
 include/mupdf/fitz/bidi.h
@@ -32,15 +29,7 @@ include/mupdf/fitz/hash.h
 include/mupdf/fitz/image.h
 include/mupdf/fitz/link.h
 include/mupdf/fitz/outline.h
-include/mupdf/fitz/output-pcl.h
-include/mupdf/fitz/output-pclm.h
-include/mupdf/fitz/output-png.h
-include/mupdf/fitz/output-pnm.h
-include/mupdf/fitz/output-ps.h
-include/mupdf/fitz/output-psd.h
-include/mupdf/fitz/output-pwg.h
 include/mupdf/fitz/output-svg.h
-include/mupdf/fitz/output-tga.h
 include/mupdf/fitz/output.h
 include/mupdf/fitz/path.h
 include/mupdf/fitz/pixmap.h
@@ -58,10 +47,10 @@ include/mupdf/fitz/transition.h
 include/mupdf/fitz/tree.h
 include/mupdf/fitz/util.h
 include/mupdf/fitz/version.h
+include/mupdf/fitz/write-pixmap.h
 include/mupdf/fitz/writer.h
 include/mupdf/fitz/xml.h
 include/mupdf/memento.h
-include/mupdf/pdf-tools.h
 include/mupdf/pdf.h
 include/mupdf/pdf/annot.h
 include/mupdf/pdf/clean.h
@@ -69,8 +58,8 @@ include/mupdf/pdf/cmap.h
 include/mupdf/pdf/crypt.h
 include/mupdf/pdf/document.h
 include/mupdf/pdf/event.h
-include/mupdf/pdf/field.h
 include/mupdf/pdf/font.h
+include/mupdf/pdf/form.h
 include/mupdf/pdf/interpret.h
 include/mupdf/pdf/javascript.h
 include/mupdf/pdf/name-table.h
@@ -79,7 +68,6 @@ include/mupdf/pdf/output-pdf.h
 include/mupdf/pdf/page.h
 include/mupdf/pdf/parse.h
 include/mupdf/pdf/resource.h
-include/mupdf/pdf/widget.h
 include/mupdf/pdf/xref.h
 include/mupdf/ucdn.h
 lib/libmupdf-pkcs7.la
@@ -93,10 +81,10 @@ share/doc/mupdf/CHANGES
 share/doc/mupdf/COPYING
 share/doc/mupdf/README
 share/doc/mupdf/android-sdk.html
+share/doc/mupdf/api-changes.html
 share/doc/mupdf/artifex-logo.png
 share/doc/mupdf/building.html
 share/doc/mupdf/coding-overview.html
-share/doc/mupdf/coding-progressive.html
 share/doc/mupdf/coding-style.html
 share/doc/mupdf/examples/bbox-device.js
 share/doc/mupdf/examples/create-thumbnail.js
@@ -108,7 +96,9 @@ share/doc/mupdf/examples/jpx-to-pdf.js
 share/doc/mupdf/examples/multi-threaded.c
 share/doc/mupdf/examples/pdf-create-lowlevel.js
 share/doc/mupdf/examples/pdf-create.js
+share/doc/mupdf/examples/pdf-dejpx.js
 share/doc/mupdf/examples/pdf-merge.js
+share/doc/mupdf/examples/pdf-portfolio.js
 share/doc/mupdf/examples/trace-device.js
 share/doc/mupdf/index.html
 share/doc/mupdf/manual-mupdf-gl.html
@@ -118,7 +108,6 @@ share/doc/mupdf/manual-mutool-create.html
 share/doc/mupdf/manual-mutool-draw.html
 share/doc/mupdf/manual-mutool-extract.html
 share/doc/mupdf/manual-mutool-merge.html
-share/doc/mupdf/manual-mutool-portfolio.html
 share/doc/mupdf/manual-mutool-run.html
 share/doc/mupdf/manual-mutool-show.html
 share/doc/mupdf/manual-mutool-trace.html
