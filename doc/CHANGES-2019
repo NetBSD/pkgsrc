@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2095 2019/05/13 10:49:10 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2096 2019/05/13 10:55:02 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3570,3 +3570,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/fasttracker2 to 2.154 [fox 2019-05-13]
 	Updated finance/bitcoin to 0.17.1 [khorben 2019-05-13]
 	Updated www/gitea to 1.8.1 [nia 2019-05-13]
+	Added devel/ocaml-mmap version 1.1.0 [jaapb 2019-05-13]
