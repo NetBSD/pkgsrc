@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2019/05/04 20:30:34 wiedi Exp $
+# $NetBSD: Makefile,v 1.126 2019/05/13 14:55:05 martin Exp $
 
 DISTNAME=	icu4c-64_2-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
@@ -100,6 +100,10 @@ PKGCONFIG_OVERRIDE+=	config/icu-lx.pc
 PKGCONFIG_OVERRIDE+=	config/icu-uc.pc
 PKGCONFIG_OVERRIDE+=	config/icu.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-build
+
+# work around ICU-20533 (build failure on big endian machines)
+post-configure:
+	${MKDIR} ${WRKSRC}/data/out
 
 # expect builtin gcc atomic functions for gcc>=4.1
 # (source/common/putilimp.h)
