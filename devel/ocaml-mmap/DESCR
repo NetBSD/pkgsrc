@@ -1,0 +1,2 @@
+This package provides functions for mapping files in memory,
+as a compatibility layer for pre-4.06 version of OCaml.
