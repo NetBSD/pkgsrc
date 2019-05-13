@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2019/05/12 12:27:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.68 2019/05/13 11:03:58 leot Exp $
 
 DISTNAME=	mupdf-1.15.0-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -34,7 +34,6 @@ CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
 # default Javascript interpreter for mupdf).
 post-extract:
 	${RM} -fr \
-	    ${WRKSRC}/thirdparty/curl \
 	    ${WRKSRC}/thirdparty/freeglut \
 	    ${WRKSRC}/thirdparty/freetype \
 	    ${WRKSRC}/thirdparty/harfbuzz \
@@ -58,7 +57,7 @@ BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.7
 .include "../../graphics/jbig2dec/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-# XXX: lcms2-2.9 does not usable for mupdf
+# XXX: mupdf needs lcms2-art fork
 #BUILDLINK_API_DEPENDS.lcms2+= lcms2>=2.9
 #.include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
