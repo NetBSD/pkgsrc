@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/09/08 22:23:04 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/05/13 21:09:30 markd Exp $
 
 DISTNAME=	csvsimple
-PKGNAME=	tex-${DISTNAME}-1.20
-TEXLIVE_REV=	41597
+PKGNAME=	tex-${DISTNAME}-1.21
+TEXLIVE_REV=	51010
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/csvsimple
