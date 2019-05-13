@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2103 2019/05/13 11:59:13 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.2104 2019/05/13 12:01:25 fox Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3578,3 +3578,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/js_of_ocaml to 3.4.0 [jaapb 2019-05-13]
 	Updated www/eliom to 6.7.0 [jaapb 2019-05-13]
 	Updated www/ocsigen-toolkit to 2.1.0 [jaapb 2019-05-13]
+	Updated www/cliqz to 1.26.5 [fox 2019-05-13]
