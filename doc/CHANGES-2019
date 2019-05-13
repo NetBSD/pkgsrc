@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2110 2019/05/13 17:18:52 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.2111 2019/05/13 17:31:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3600,3 +3600,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-django-mptt to 0.10.0 [adam 2019-05-13]
 	Updated graphics/inkscape to 0.92.4 [adam 2019-05-13]
 	Updated www/ocsigen-i18n to 3.4.0 [jaapb 2019-05-13]
+	Updated devel/intellij-ce-bin to 2019.1.2 [ryoon 2019-05-13]
+	Updated devel/pycharm-bin to 2019.1.2 [ryoon 2019-05-13]
