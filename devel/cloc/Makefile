@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/08/22 09:43:28 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/05/13 13:58:53 mef Exp $
 
 DISTNAME=	cloc-1.76
 PKGREVISION=	1
@@ -17,6 +17,7 @@ USE_TOOLS+=	perl:run gmake
 
 DEPENDS+=	p5-Algorithm-Diff-[0-9]*:../../devel/p5-Algorithm-Diff
 DEPENDS+=	p5-Regexp-Common-[0-9]*:../../textproc/p5-Regexp-Common
+DEPENDS+=	p5-Parallel-ForkManager-[0-9]*:../../devel/p5-Parallel-ForkManager
 
 REPLACE_PERL+=	Unix/cloc
 
