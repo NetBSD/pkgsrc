@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2019/01/29 14:23:07 jaapb Exp $
+# $NetBSD: Makefile,v 1.7 2019/05/13 12:17:11 jaapb Exp $
 
 GITHUB_PROJECT=	ocsigen-start
-DISTNAME=	${GITHUB_PROJECT}-1.5.0
+DISTNAME=	${GITHUB_PROJECT}-1.7.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
@@ -23,7 +23,7 @@ MAKE_ENV+=	NATIVE=yes
 MAKE_ENV+=	NATIVE=no
 .endif
 
-DEPENDS+=	eliom>=6.3:../../www/eliom
+DEPENDS+=	eliom>=6.4:../../www/eliom
 
 SUBST_CLASSES+=	fix-settings
 SUBST_STAGE.fix-settings=	pre-configure
