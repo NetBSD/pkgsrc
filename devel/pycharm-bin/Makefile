@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2019/04/25 07:32:49 maya Exp $
+# $NetBSD: Makefile,v 1.4 2019/05/13 17:30:12 ryoon Exp $
 
 
-VERSION=	2018.3.5
+VERSION=	2019.1.2
 DISTNAME=	pycharm-community-${VERSION}
 PKGNAME=	pycharm-bin-${VERSION}
-PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://download.jetbrains.com/python/
 
@@ -42,15 +41,9 @@ do-install:
 	${RM} -r bin/fsnotifier bin/fsnotifier-arm bin/pycharm.sh.orig\
 	bin/fsnotifier64 bin/libdbm64.so			\
 	lib/pty4j-native/linux/x86/libpty.so			\
-	lib/pty4j-native/linux/x86_64/libpty.so jre64		\
-	helpers/pydev/_pydevd_bundle/pydevd_cython_darwin_26_64.so \
-	helpers/pydev/_pydevd_bundle/pydevd_cython_darwin_27_64.so \
-	helpers/pydev/_pydevd_bundle/pydevd_cython_darwin_34_64.so \
-	helpers/pydev/_pydevd_bundle/pydevd_cython_darwin_35_64.cpython-35m-darwin.so \
-	helpers/pydev/_pydevd_bundle/pydevd_cython_darwin_36_64.cpython-36m-darwin.so \
-	helpers/pydev/_pydevd_bundle/pydevd_cython_darwin_37_64.cpython-37m-darwin.so \
-	helpers/pydev/_pydevd_frame_eval/pydevd_frame_evaluator_darwin_36_64.cpython-36m-darwin.so \
-	helpers/pydev/_pydevd_frame_eval/pydevd_frame_evaluator_darwin_37_64.cpython-37m-darwin.so \
+	lib/pty4j-native/linux/x86_64/libpty.so			\
+	jre64							\
+	lib/pty4j-native/linux/ppc64le/libpty.so		\
 	helpers/pydev/pydevd_attach_to_process/attach_linux_amd64.so \
 	helpers/pydev/pydevd_attach_to_process/attach_linux_x86.so && \
 	${ECHO} "idea.filewatcher.disabled=true" >> bin/idea.properties && \
