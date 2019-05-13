@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.21 2019/05/12 12:27:02 ryoon Exp $
+$NetBSD: patch-ac,v 1.22 2019/05/13 11:03:58 leot Exp $
 
 - libtool support 
 - Install target cleanup
@@ -6,9 +6,6 @@ $NetBSD: patch-ac,v 1.21 2019/05/12 12:27:02 ryoon Exp $
 - Do not force `-O0' flag when building
 - Get rid of unused VERSION variable and `version:' target (otherwise `git' can
   be invoked during the building phase)
-- Install only one `mupdf' binary, prefer the featureful one and always
-  install it as `mupdf'.
-- Install all EXTRA_APPS (muraster, mujstest, mjsgen)
 
 --- Makefile.orig	2019-05-06 11:53:09.000000000 +0000
 +++ Makefile

@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.19 2019/05/12 12:27:02 ryoon Exp $
+$NetBSD: patch-ab,v 1.20 2019/05/13 11:03:58 leot Exp $
 
 - Handle the various operating systems in the same way avoiding hardcoding
 - Avoid to use objcopy by setting HAVE_OBJCOPY to no (if `yes', and with
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.19 2019/05/12 12:27:02 ryoon Exp $
   set SYS_GLUT_{CFLAGS,LIBS} accordingly.
 - Avoid internal version of lcms2 and try to pick it up via pkg-config and
   set SYS_LCMS2_{CFLAGS,LIBS} accordingly.
-  If no lcms2 is available just pass `-DNO_ICC' to disable it via
+  If no lcms2 is available just pass `-DFZ_ENABLE_ICC=0' to disable it via
   CFLAGS.
 
 --- Makerules.orig	2019-05-06 11:53:09.000000000 +0000
@@ -94,14 +94,15 @@ $NetBSD: patch-ab,v 1.19 2019/05/12 12:27:02 ryoon Exp $
 -  endif
 +endif
  
-+ifeq ($(shell pkg-config --exists glut && echo yes),yes)
-   HAVE_GLUT := yes
+-  HAVE_GLUT := yes
 -  ifeq ($(HAVE_GLUT),yes)
 -	SYS_GLUT_CFLAGS :=
 -	SYS_GLUT_LIBS := -lglut -lGL
 -  endif
-+  SYS_GLUT_CFLAGS :=
-+  SYS_GLUT_LIBS := -lglut -lGL
++ifeq ($(shell pkg-config --exists glut && echo yes),yes)
++  HAVE_GLUT ?= yes
++  SYS_GLUT_CFLAGS := $(shell pkg-config --cflags glut)
++  SYS_GLUT_LIBS := $(shell pkg-config --libs glut)
 +endif
  
    HAVE_X11 := $(shell pkg-config --exists x11 xext && echo yes)
