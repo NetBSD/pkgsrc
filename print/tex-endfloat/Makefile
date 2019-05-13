@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2018/05/06 02:37:15 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/05/13 21:13:26 markd Exp $
 
 DISTNAME=	endfloat
-PKGNAME=	tex-${DISTNAME}-2.6
-TEXLIVE_REV=	47108
+PKGNAME=	tex-${DISTNAME}-2.7
+TEXLIVE_REV=	51003
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/endfloat
