@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/02/17 08:26:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/05/13 20:38:11 adam Exp $
 bin/clusterdb
 bin/createdb
 bin/createuser
@@ -875,6 +875,8 @@ share/locale/es/LC_MESSAGES/pg_resetwal-11.mo
 share/locale/es/LC_MESSAGES/pg_rewind-11.mo
 share/locale/es/LC_MESSAGES/pg_test_fsync-11.mo
 share/locale/es/LC_MESSAGES/pg_test_timing-11.mo
+share/locale/es/LC_MESSAGES/pg_upgrade-11.mo
+share/locale/es/LC_MESSAGES/pg_verify_checksums-11.mo
 share/locale/es/LC_MESSAGES/pg_waldump-11.mo
 share/locale/es/LC_MESSAGES/pgscripts-11.mo
 share/locale/es/LC_MESSAGES/psql-11.mo
@@ -1055,11 +1057,18 @@ share/locale/zh_CN/LC_MESSAGES/ecpg-11.mo
 share/locale/zh_CN/LC_MESSAGES/ecpglib6-11.mo
 share/locale/zh_CN/LC_MESSAGES/initdb-11.mo
 share/locale/zh_CN/LC_MESSAGES/libpq5-11.mo
+share/locale/zh_CN/LC_MESSAGES/pg_archivecleanup-11.mo
+share/locale/zh_CN/LC_MESSAGES/pg_basebackup-11.mo
 share/locale/zh_CN/LC_MESSAGES/pg_config-11.mo
 share/locale/zh_CN/LC_MESSAGES/pg_controldata-11.mo
 share/locale/zh_CN/LC_MESSAGES/pg_ctl-11.mo
 share/locale/zh_CN/LC_MESSAGES/pg_dump-11.mo
+share/locale/zh_CN/LC_MESSAGES/pg_resetwal-11.mo
 share/locale/zh_CN/LC_MESSAGES/pg_rewind-11.mo
+share/locale/zh_CN/LC_MESSAGES/pg_test_fsync-11.mo
+share/locale/zh_CN/LC_MESSAGES/pg_test_timing-11.mo
+share/locale/zh_CN/LC_MESSAGES/pg_upgrade-11.mo
+share/locale/zh_CN/LC_MESSAGES/pg_verify_checksums-11.mo
 share/locale/zh_CN/LC_MESSAGES/pgscripts-11.mo
 share/locale/zh_CN/LC_MESSAGES/psql-11.mo
 share/locale/zh_TW/LC_MESSAGES/ecpg-11.mo
