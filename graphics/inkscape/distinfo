@@ -1,27 +1,20 @@
-$NetBSD: distinfo,v 1.68 2019/02/25 18:57:03 maya Exp $
+$NetBSD: distinfo,v 1.69 2019/05/13 16:17:51 adam Exp $
 
-SHA1 (inkscape-0.92.3.tar.bz2) = e1886317f8e6d4fb340f6a783fe410aaff9f28a7
-RMD160 (inkscape-0.92.3.tar.bz2) = 95648c6b491e09920662e03a51f2278a0ff10392
-SHA512 (inkscape-0.92.3.tar.bz2) = af3c0f672a108e583f3c92cde1451b3f1f5319c1669891005c230e73b3485aa8951af6d7b21c7ccd9e4acbca8eaa5a3bb61ae1d828e81885bc7b61a8ae933687
-Size (inkscape-0.92.3.tar.bz2) = 31606442 bytes
-SHA1 (patch-CMakeScripts_DefineDependsandFlags.cmake) = e8182366802adb05073efdc03a73202fd9b8d18b
+SHA1 (inkscape-0.92.4.tar.bz2) = 5dfabeab9f6925bf098b5eeba2fe2c82e36927cc
+RMD160 (inkscape-0.92.4.tar.bz2) = 18a998ed050030a6c89621f47e2e11b69d9f151b
+SHA512 (inkscape-0.92.4.tar.bz2) = b9034605a79cd8aea808edf42e284819951ae1ea67778f0922f4c10224e94aca6c844acbc2294625773f0a7047d4e32ccdada876238a792a2c17db172c88e120
+Size (inkscape-0.92.4.tar.bz2) = 31929728 bytes
 SHA1 (patch-CMakeScripts_Pod2man.cmake) = 6176956791ae3e8eb007345e5ec19100812bdeb8
 SHA1 (patch-ag) = 6b6000f3940ec6db9404a206f9757928c1d5740b
 SHA1 (patch-aj) = 31d6cc8bb179629023bd04bcac0fd935b2c9636d
 SHA1 (patch-ap) = 412509a03d26e925548e3371529a1273db958611
 SHA1 (patch-aq) = fb7de44d33fdc5895ce84ca8d44ff6a6c328c402
-SHA1 (patch-po_CMakeLists.txt) = aa03a91f656c239b8bfaeae8acd753b16be58aca
 SHA1 (patch-src_CMakeLists.txt) = ccd5eeca81891f83c5eaf8cb80d33f001beaf55c
 SHA1 (patch-src_extension_internal_emf-inout.cpp) = 4fe6c24007b54d55d11502876e759f62a290922e
 SHA1 (patch-src_extension_internal_emf-print.cpp) = 5da493a452afa4b11bbb204c430fc3e63332c927
 SHA1 (patch-src_extension_internal_metafile-print.cpp) = 798a2f15986cd81d13bf576b1641a810d4d40573
-SHA1 (patch-src_extension_internal_pdfinput_pdf-input.cpp) = 8bee946274725c12a3c743e8dec3e235c1402fcc
-SHA1 (patch-src_extension_internal_pdfinput_pdf-input.h) = d437b4994d66099ac2c1eaf6bac5d29bd83f9a76
-SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.cpp) = 6ce050246963f762dd97992bfb96f3af5989ccae
-SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.h) = 93d0758b279b179c574a1a42483b02e80f680198
-SHA1 (patch-src_extension_internal_pdfinput_poppler-transition-api.h) = 2a1fc9ceee5d9bcb6138950661c61d6bd70fdd3d
-SHA1 (patch-src_extension_internal_pdfinput_svg-builder.cpp) = dd3f5b8678fbfaf9829fa5d33c8ff8882d337196
-SHA1 (patch-src_extension_internal_pdfinput_svg-builder.h) = ac05f9bed662705dcdfca8b791a348fb5350873c
+SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.cpp) = 3bdeda1bccad64f10c20c62a2b99dbcb779f081f
+SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.h) = f0ba86dca2fa52eec64aee8d0d92739422ae86ca
 SHA1 (patch-src_extension_internal_wmf-inout.cpp) = b49b504d1cf9388d2ad7e1c91c339e7c3d5ffdf5
 SHA1 (patch-src_extension_internal_wmf-print.cpp) = b658d7a0697aaed55671507fe88ce93619ef1070
 SHA1 (patch-src_gradient-drag.cpp) = d6fc1f587a9ad404715fa6e70fe07823a3c68b0c
