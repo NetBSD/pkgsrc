@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2018/06/05 16:02:40 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2019/05/13 17:18:43 jaapb Exp $
 
-SHA1 (ocsigen-i18n-3.1.0.tar.gz) = 367aa892c3ecf91ad23f89915554e93c3c573225
-RMD160 (ocsigen-i18n-3.1.0.tar.gz) = c4973cc7ea39a51f1f2fc57acbe9f37c8523b694
-SHA512 (ocsigen-i18n-3.1.0.tar.gz) = a103c8da39ffadbe90ef183ee9ad3b68f3b5feb8dd5cf9d94f37880dcfedd495bbe799e218e739eb830e8dc7c8636edbd8c00ce9c0843ecf8047f9eb00b9f18f
-Size (ocsigen-i18n-3.1.0.tar.gz) = 6066 bytes
+SHA1 (ocsigen-i18n-3.4.0.tar.gz) = 52b259fb61b87ca975ac72550e62b6dba0e7e8d1
+RMD160 (ocsigen-i18n-3.4.0.tar.gz) = fdef1a2de97b3b3db26d3c76ad841aeb812ccb17
+SHA512 (ocsigen-i18n-3.4.0.tar.gz) = 04294b1c957a4dc4676f8e27d4b129b50c7a6f9ac3b1b1752792f55d981d24cebbed2da832e3d63c44cc139c698c8be3a50b69cca27c4f897bf8a2db39470ccb
+Size (ocsigen-i18n-3.4.0.tar.gz) = 6526 bytes
 SHA1 (patch-Makefile) = a3b5ac9c4572c37339813f017a079f39d3c47954
