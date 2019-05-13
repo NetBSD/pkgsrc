@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/05/12 06:17:30 triaxx Exp $
+# $NetBSD: Makefile,v 1.33 2019/05/13 04:50:46 triaxx Exp $
 
 DISTNAME=	pingus-0.7.6
 CATEGORIES=	games
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 BUILD_TARGET=	build/pingus
 MAKE_ENV+=	FIND=${TOOLS_CMD.find:Q} MKDIR=${TOOLS_CMD.mkdir:Q}
 MAKE_ENV+=	RM=${TOOLS_CMD.rm:Q} SCONSBIN=${SCONSBIN:Q}
-NO_CONFIGURE=	yes
+#NO_CONFIGURE=	yes
 USE_LANGUAGES=	c c++11
 USE_TOOLS=	pkg-config
 
@@ -21,7 +21,7 @@ DATADIR=	${PREFIX}/share/pingus
 
 SUBST_CLASSES+=		data
 SUBST_MESSAGE.data=	Set default --datadir for pingus executable to ${DATADIR}
-SUBST_STAGE.data=	pre-build
+SUBST_STAGE.data=	pre-configure
 SUBST_FILES.data=	src/pingus/pingus_main.cpp
 SUBST_VARS.data=	DATADIR
 
