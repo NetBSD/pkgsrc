@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.17 2019/05/08 01:12:54 gutteridge Exp $
+# $NetBSD: Makefile,v 1.18 2019/05/13 02:07:42 gutteridge Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
+PKGREVISION=	1
 DISTNAME=	mate-desktop-${VERSION:R}.1
 CATEGORIES=	x11
 
 COMMENT=	MATE desktop library
 
 TOOL_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
+TOOL_DEPENDS+=		librsvg-[0-9]*:../../graphics/librsvg # for rsvg-convert
 TOOL_DEPENDS+=		libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 
 PKGCONFIG_OVERRIDE+=	libmate-desktop/mate-desktop-2.0.pc.in
