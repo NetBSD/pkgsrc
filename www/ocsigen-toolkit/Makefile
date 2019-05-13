@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2019/01/29 13:34:57 jaapb Exp $
+# $NetBSD: Makefile,v 1.5 2019/05/13 11:59:04 jaapb Exp $
 
 GITHUB_PROJECT=	ocsigen-toolkit
-DISTNAME=	${GITHUB_PROJECT}-2.0.0
+DISTNAME=	${GITHUB_PROJECT}-2.1.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
@@ -23,7 +23,7 @@ MAKE_ENV+=	NATIVE=yes
 MAKE_ENV+=	NATIVE=no
 .endif
 
-DEPENDS+=	eliom>=6.3:../../www/eliom
+DEPENDS+=	eliom>=6.7:../../www/eliom
 
 post-install:
 	${RUN} cd ${WRKSRC} && opaline -install-cmd "${INSTALL_DATA}" \
