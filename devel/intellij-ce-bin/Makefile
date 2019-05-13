@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2019/04/25 07:32:46 maya Exp $
+# $NetBSD: Makefile,v 1.4 2019/05/13 17:30:12 ryoon Exp $
 #
 # TODO Import intellij-fsnotifier with inotify support from FreeBSD.
 
-VERSION=	2018.3.5
-DISTNAME=	ideaIC-${VERSION:S/.0.0//}-no-jdk
+VERSION=	2019.1.2
+DISTNAME=	ideaIC-${VERSION:S/.0.0//}-no-jbr
 PKGNAME=	intellij-ce-bin-${VERSION}
-PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://download.jetbrains.com/idea/
 
@@ -16,7 +15,7 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	intellij-fsnotifier-[0-9]*:../../sysutils/intellij-fsnotifier
 
-WRKSRC=		${WRKDIR}/idea-IC-183.5912.21
+WRKSRC=		${WRKDIR}/idea-IC-191.7141.44
 USE_JAVA=	yes
 USE_JAVA2=	8
 
@@ -50,6 +49,7 @@ do-install:
 	bin/fsnotifier64 bin/libdbm64.so			\
 	lib/pty4j-native/linux/x86/libpty.so			\
 	lib/pty4j-native/linux/x86_64/libpty.so			\
+	lib/pty4j-native/linux/ppc64le/libpty.so		\
 	plugins/android/lib/libwebp/linux/libwebp_jni.so	\
 	plugins/android/lib/libwebp/linux/libwebp_jni64.so &&	\
 	${ECHO} "idea.filewatcher.disabled=true" >> bin/idea.properties && \
