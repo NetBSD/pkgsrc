@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2105 2019/05/13 12:03:20 markd Exp $
+$NetBSD: CHANGES-2019,v 1.2106 2019/05/13 12:12:43 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3593,3 +3593,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated fonts/tex-Asana-Math-doc to 000.958 [markd 2019-05-13]
 	Updated graphics/tex-animate to 20190409 [markd 2019-05-13]
 	Updated graphics/tex-animate-doc to 20190409 [markd 2019-05-13]
+	Updated databases/pgocaml to 3.2 [jaapb 2019-05-13]
