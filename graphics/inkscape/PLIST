@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2019/01/06 08:41:01 markd Exp $
+@comment $NetBSD: PLIST,v 1.27 2019/05/13 16:17:51 adam Exp $
 bin/inkscape
 bin/inkview
 lib/inkscape/lib2geom_LIB.a
@@ -745,6 +745,7 @@ share/inkscape/tutorials/tutorial-advanced.ru.svg
 share/inkscape/tutorials/tutorial-advanced.sk.svg
 share/inkscape/tutorials/tutorial-advanced.sl.svg
 share/inkscape/tutorials/tutorial-advanced.svg
+share/inkscape/tutorials/tutorial-advanced.uk.svg
 share/inkscape/tutorials/tutorial-advanced.vi.svg
 share/inkscape/tutorials/tutorial-advanced.zh_CN.svg
 share/inkscape/tutorials/tutorial-advanced.zh_TW.svg
@@ -775,6 +776,7 @@ share/inkscape/tutorials/tutorial-basic.sk.svg
 share/inkscape/tutorials/tutorial-basic.sl.svg
 share/inkscape/tutorials/tutorial-basic.svg
 share/inkscape/tutorials/tutorial-basic.tr.svg
+share/inkscape/tutorials/tutorial-basic.uk.svg
 share/inkscape/tutorials/tutorial-basic.vi.svg
 share/inkscape/tutorials/tutorial-basic.zh_CN.svg
 share/inkscape/tutorials/tutorial-basic.zh_TW.svg
@@ -799,6 +801,7 @@ share/inkscape/tutorials/tutorial-calligraphy.ru.svg
 share/inkscape/tutorials/tutorial-calligraphy.sk.svg
 share/inkscape/tutorials/tutorial-calligraphy.sl.svg
 share/inkscape/tutorials/tutorial-calligraphy.svg
+share/inkscape/tutorials/tutorial-calligraphy.uk.svg
 share/inkscape/tutorials/tutorial-calligraphy.vi.svg
 share/inkscape/tutorials/tutorial-calligraphy.zh_TW.svg
 share/inkscape/tutorials/tutorial-elements.be.svg
@@ -822,6 +825,7 @@ share/inkscape/tutorials/tutorial-elements.ru.svg
 share/inkscape/tutorials/tutorial-elements.sk.svg
 share/inkscape/tutorials/tutorial-elements.sl.svg
 share/inkscape/tutorials/tutorial-elements.svg
+share/inkscape/tutorials/tutorial-elements.uk.svg
 share/inkscape/tutorials/tutorial-elements.zh_TW.svg
 share/inkscape/tutorials/tutorial-interpolate.be.svg
 share/inkscape/tutorials/tutorial-interpolate.de.svg
@@ -838,6 +842,7 @@ share/inkscape/tutorials/tutorial-interpolate.ru.svg
 share/inkscape/tutorials/tutorial-interpolate.sk.svg
 share/inkscape/tutorials/tutorial-interpolate.sl.svg
 share/inkscape/tutorials/tutorial-interpolate.svg
+share/inkscape/tutorials/tutorial-interpolate.uk.svg
 share/inkscape/tutorials/tutorial-interpolate.vi.svg
 share/inkscape/tutorials/tutorial-interpolate.zh_TW.svg
 share/inkscape/tutorials/tutorial-shapes.be.svg
@@ -862,6 +867,7 @@ share/inkscape/tutorials/tutorial-shapes.ru.svg
 share/inkscape/tutorials/tutorial-shapes.sk.svg
 share/inkscape/tutorials/tutorial-shapes.sl.svg
 share/inkscape/tutorials/tutorial-shapes.svg
+share/inkscape/tutorials/tutorial-shapes.uk.svg
 share/inkscape/tutorials/tutorial-shapes.vi.svg
 share/inkscape/tutorials/tutorial-shapes.zh_CN.svg
 share/inkscape/tutorials/tutorial-shapes.zh_TW.svg
@@ -886,16 +892,19 @@ share/inkscape/tutorials/tutorial-tips.ru.svg
 share/inkscape/tutorials/tutorial-tips.sk.svg
 share/inkscape/tutorials/tutorial-tips.sl.svg
 share/inkscape/tutorials/tutorial-tips.svg
+share/inkscape/tutorials/tutorial-tips.uk.svg
 share/inkscape/tutorials/tutorial-tips.vi.svg
 share/inkscape/tutorials/tutorial-tips.zh_TW.svg
 share/inkscape/tutorials/tutorial-tracing-pixelart.de.svg
 share/inkscape/tutorials/tutorial-tracing-pixelart.el.svg
 share/inkscape/tutorials/tutorial-tracing-pixelart.fr.svg
+share/inkscape/tutorials/tutorial-tracing-pixelart.hu.svg
 share/inkscape/tutorials/tutorial-tracing-pixelart.nl.svg
 share/inkscape/tutorials/tutorial-tracing-pixelart.pt.svg
 share/inkscape/tutorials/tutorial-tracing-pixelart.ru.svg
 share/inkscape/tutorials/tutorial-tracing-pixelart.sk.svg
 share/inkscape/tutorials/tutorial-tracing-pixelart.svg
+share/inkscape/tutorials/tutorial-tracing-pixelart.uk.svg
 share/inkscape/tutorials/tutorial-tracing-pixelart.zh_TW.svg
 share/inkscape/tutorials/tutorial-tracing.be.svg
 share/inkscape/tutorials/tutorial-tracing.ca.svg
@@ -917,6 +926,7 @@ share/inkscape/tutorials/tutorial-tracing.ru.svg
 share/inkscape/tutorials/tutorial-tracing.sk.svg
 share/inkscape/tutorials/tutorial-tracing.sl.svg
 share/inkscape/tutorials/tutorial-tracing.svg
+share/inkscape/tutorials/tutorial-tracing.uk.svg
 share/inkscape/tutorials/tutorial-tracing.vi.svg
 share/inkscape/tutorials/tutorial-tracing.zh_TW.svg
 share/inkscape/tutorials/tux.png
@@ -1015,3 +1025,4 @@ share/locale/ur/LC_MESSAGES/inkscape.mo
 share/locale/vi/LC_MESSAGES/inkscape.mo
 share/locale/zh_CN/LC_MESSAGES/inkscape.mo
 share/locale/zh_TW/LC_MESSAGES/inkscape.mo
+share/metainfo/inkscape.appdata.xml
