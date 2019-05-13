@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2019/01/29 13:34:57 jaapb Exp $
+$NetBSD: distinfo,v 1.3 2019/05/13 11:59:04 jaapb Exp $
 
-SHA1 (ocsigen-toolkit-2.0.0.tar.gz) = 3b066e757e285732f7ab94b834b45a1691fd1a96
-RMD160 (ocsigen-toolkit-2.0.0.tar.gz) = 238b6abe54faa76c09a0b76674729414718bd0de
-SHA512 (ocsigen-toolkit-2.0.0.tar.gz) = 2b501b1ead3ef36ef5ebf304de3d6f38cf833685793ba2c6dea2ce0ccecf28f586eb4426b84e3579debb77f7fbc6ab87e76bf270b95c88cd108ce7a55bdbc1a5
-Size (ocsigen-toolkit-2.0.0.tar.gz) = 73308 bytes
+SHA1 (ocsigen-toolkit-2.1.0.tar.gz) = ec94b6695410ad44f2c8253f94d2f598d40bc91e
+RMD160 (ocsigen-toolkit-2.1.0.tar.gz) = eb453e46e47d3df2ec04b091ba605ac99f2d2c2a
+SHA512 (ocsigen-toolkit-2.1.0.tar.gz) = 1d47d04b8eba6bcd07f8c7425b0afda759e3777aba49fb319e51f5591ef1ad22da4f0dd901a47c96783511959fec7d314b2902145eb9adb419bb645ba40e3bbe
+Size (ocsigen-toolkit-2.1.0.tar.gz) = 73862 bytes
 SHA1 (patch-Makefile) = 239086c7d6fe88665e1512e050457d673c44130f
