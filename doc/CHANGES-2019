@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2113 2019/05/13 21:19:43 markd Exp $
+$NetBSD: CHANGES-2019,v 1.2114 2019/05/13 23:20:26 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3613,3 +3613,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/tex-endfloat-doc to 2.7 [markd 2019-05-13]
 	Updated print/tex-pgf to 3.1.2 [markd 2019-05-13]
 	Updated print/tex-pgf-doc to 3.1.2 [markd 2019-05-13]
+	Updated news/sfeed to 0.9.11 [leot 2019-05-13]
