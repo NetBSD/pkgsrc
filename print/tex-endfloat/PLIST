@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/10 22:03:19 minskim Exp $
-share/texmf-dist/tex/latex/endfloat/efxmpl.cfg
+@comment $NetBSD: PLIST,v 1.2 2019/05/13 21:13:26 markd Exp $
 share/texmf-dist/tex/latex/endfloat/endfloat.sty
