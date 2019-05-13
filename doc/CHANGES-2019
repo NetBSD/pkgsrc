@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2093 2019/05/13 03:25:54 fox Exp $
+$NetBSD: CHANGES-2019,v 1.2094 2019/05/13 08:34:01 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3568,3 +3568,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/mozilla-rootcerts-openssl to 2.2 [maya 2019-05-12]
 	Updated x11/mate-desktop to 1.22.1nb1 [gutteridge 2019-05-13]
 	Updated audio/fasttracker2 to 2.154 [fox 2019-05-13]
+	Updated finance/bitcoin to 0.17.1 [khorben 2019-05-13]
