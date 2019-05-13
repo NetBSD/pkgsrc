@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/01/23 09:47:07 markd Exp $
+$NetBSD: distinfo,v 1.6 2019/05/13 11:36:41 markd Exp $
 
-SHA1 (tex-roboto-47586/roboto.doc.tar.xz) = eb3e138d72c6698f0cf2dc237ec493725d1445c2
-RMD160 (tex-roboto-47586/roboto.doc.tar.xz) = d830f3c8a82c270f68cd57b7e251257423a3507c
-SHA512 (tex-roboto-47586/roboto.doc.tar.xz) = 796c93c2c4adb904b292c939f173c821eec44a199cd8f55462c26c8a7aca02712c11a079a64750b89c03d9ae6db55dd99176f372658d2f98bf32d9ed7d4b0de1
-Size (tex-roboto-47586/roboto.doc.tar.xz) = 345116 bytes
+SHA1 (tex-roboto-50969/roboto.doc.tar.xz) = 15434ac5ed5a7e0664a2d74461ef20108beb23c4
+RMD160 (tex-roboto-50969/roboto.doc.tar.xz) = 5ff2f1b4af8e28d77581deb299e12dc829b2c1ee
+SHA512 (tex-roboto-50969/roboto.doc.tar.xz) = ad420bfe6a819d1cc1beb4dcd18a4daf768d24b8b423fd2e6bb4ac17c4bedff96f82a37e00cb32fd1126f37cd41fb54ee0b03bc935977ec7dfb1b476b33b5b6e
+Size (tex-roboto-50969/roboto.doc.tar.xz) = 404724 bytes
