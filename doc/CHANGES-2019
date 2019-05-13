@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2104 2019/05/13 12:01:25 fox Exp $
+$NetBSD: CHANGES-2019,v 1.2105 2019/05/13 12:03:20 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3579,3 +3579,17 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/eliom to 6.7.0 [jaapb 2019-05-13]
 	Updated www/ocsigen-toolkit to 2.1.0 [jaapb 2019-05-13]
 	Updated www/cliqz to 1.26.5 [fox 2019-05-13]
+	Updated print/tex-media9 to 0.97 [markd 2019-05-13]
+	Updated print/tex-media9-doc to 0.97 [markd 2019-05-13]
+	Updated fonts/tex-roboto to 2019 [markd 2019-05-13]
+	Updated fonts/tex-roboto-doc to 2019 [markd 2019-05-13]
+	Updated print/tex-babel to 3.31 [markd 2019-05-13]
+	Updated print/tex-babel-doc to 3.31 [markd 2019-05-13]
+	Updated fonts/tex-fontools to 2019 [markd 2019-05-13]
+	Updated fonts/tex-fontools-doc to 2019 [markd 2019-05-13]
+	Updated print/tex-textpos to 1.9.1 [markd 2019-05-13]
+	Updated print/tex-textpos-doc to 1.9.1 [markd 2019-05-13]
+	Updated fonts/tex-Asana-Math to 000.958 [markd 2019-05-13]
+	Updated fonts/tex-Asana-Math-doc to 000.958 [markd 2019-05-13]
+	Updated graphics/tex-animate to 20190409 [markd 2019-05-13]
+	Updated graphics/tex-animate-doc to 20190409 [markd 2019-05-13]
