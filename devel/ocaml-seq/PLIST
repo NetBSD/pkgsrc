@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2019/05/13 11:30:24 jaapb Exp $
+${OCAML_SITELIB}/seq/META
+${PLIST.ocaml-opt}${OCAML_SITELIB}/seq/seq.a
+${OCAML_SITELIB}/seq/seq.cma
+${OCAML_SITELIB}/seq/seq.cmi
+${OCAML_SITELIB}/seq/seq.cmo
+${PLIST.ocaml-opt}${OCAML_SITELIB}/seq/seq.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/seq/seq.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/seq/seq.cmxs
+${OCAML_SITELIB}/seq/seq.ml
+${OCAML_SITELIB}/seq/seq.ml.depends
+${OCAML_SITELIB}/seq/seq.mli
+${OCAML_SITELIB}/seq/seq.mli.depends
+${PLIST.ocaml-opt}${OCAML_SITELIB}/seq/seq.o
