@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2098 2019/05/13 11:38:58 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.2099 2019/05/13 11:41:13 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3573,3 +3573,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/ocaml-mmap version 1.1.0 [jaapb 2019-05-13]
 	Added devel/ocaml-seq version 0.1 [jaapb 2019-05-13]
 	Updated devel/ocaml-lwt to 4.2.1 [jaapb 2019-05-13]
+	Updated devel/ocaml-lwt_react to 1.1.2 [jaapb 2019-05-13]
