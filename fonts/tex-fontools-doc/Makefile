@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2019/01/25 19:53:11 markd Exp $
+# $NetBSD: Makefile,v 1.8 2019/05/13 11:48:11 markd Exp $
 
 DISTNAME=	fontools.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2018.48387
-TEXLIVE_REV=	48387
+PKGNAME=	tex-${DISTNAME:S/./-/}-2019
+TEXLIVE_REV=	50982
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/fontools
