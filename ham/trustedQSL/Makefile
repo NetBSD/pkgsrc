@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2019/04/30 13:22:09 mef Exp $
+# $NetBSD: Makefile,v 1.37 2019/05/13 00:21:34 gdt Exp $
 
 DISTNAME=		tqsl-2.4.2
+PKGREVISION=		1
 CATEGORIES=		ham
 MASTER_SITES=		https://sourceforge.net/projects/trustedqsl/files/TrustedQSL/v${PKGVERSION_NOREV}/
 
@@ -13,7 +14,9 @@ LICENSE=		arrl-license
 # NOT_FOR_PLATFORM+=   NetBSD-5.*
 
 USE_TOOLS+=		perl gmake cmake
-USE_LANGUAGES+=		c c++
+# \todo tqsl is not documented to require c++11, but uses c++11 constructs
+# \todo tqsl does not add --std=c++11
+USE_LANGUAGES+=		c c++11
 USE_LIBTOOL=		yes
 USE_CMAKE=		yes
 
