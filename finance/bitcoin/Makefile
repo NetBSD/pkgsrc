@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2019/04/03 00:32:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2019/05/13 08:32:56 khorben Exp $
 
-DISTNAME=	bitcoin-0.16.3
-PKGREVISION=	2
+DISTNAME=	bitcoin-0.17.1
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bitcoin/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -27,6 +26,12 @@ CFLAGS+=	-fPIC
 CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-libs}
 
 CONFIGURE_ARGS+=	--enable-hardening
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OS_VARIANT} == "SmartOS"
+CONFIGURE_ARGS+=	--disable-tests
+.endif
 
 # pkgsrc's db4 package installs as db4_, but bitcoin looks for db_.
 BUILDLINK_TRANSFORM+=	l:db_cxx:db4_cxx
@@ -61,7 +66,7 @@ INSTALL_DIRS=	${BUILD_DIRS} src/secp256k1 src/univalue
 
 # Install the Debian example config file.
 post-install:
-	${INSTALL_DATA} -m 644 ${WRKSRC}/contrib/debian/examples/bitcoin.conf ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} -m 644 ${WRKSRC}/share/examples/bitcoin.conf ${DESTDIR}${EGDIR}
 
 .include "options.mk"
 
