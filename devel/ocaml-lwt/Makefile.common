@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.6 2018/11/27 17:15:49 jaapb Exp $
+# $NetBSD: Makefile.common,v 1.7 2019/05/13 11:38:45 jaapb Exp $
 
 # used by devel/ocaml-lwt_glib/Makefile
 # used by devel/ocaml-lwt_ppx/Makefile
 # used by devel/ocaml-lwt_react/Makefile
 
-LWT_VERSION=	4.1.0
+LWT_VERSION=	4.2.1
 DISTNAME=	lwt-${LWT_VERSION}
 
 LICENSE=	mit
