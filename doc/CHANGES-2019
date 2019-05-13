@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2102 2019/05/13 11:55:52 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.2103 2019/05/13 11:59:13 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3577,3 +3577,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ocaml-lwt_ppx to 1.2.2 [jaapb 2019-05-13]
 	Updated devel/js_of_ocaml to 3.4.0 [jaapb 2019-05-13]
 	Updated www/eliom to 6.7.0 [jaapb 2019-05-13]
+	Updated www/ocsigen-toolkit to 2.1.0 [jaapb 2019-05-13]
