@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2019/05/13 10:54:47 jaapb Exp $
+${OCAML_SITELIB}/mmap/META
+${OCAML_SITELIB}/mmap/dune-package
+${PLIST.ocaml-opt}${OCAML_SITELIB}/mmap/mmap.a
+${OCAML_SITELIB}/mmap/mmap.cma
+${OCAML_SITELIB}/mmap/mmap.cmi
+${OCAML_SITELIB}/mmap/mmap.cmt
+${OCAML_SITELIB}/mmap/mmap.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/mmap/mmap.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/mmap/mmap.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/mmap/mmap.cmxs
+${OCAML_SITELIB}/mmap/mmap.ml
+${OCAML_SITELIB}/mmap/mmap.mli
+${OCAML_SITELIB}/mmap/opam
+share/doc/mmap/CHANGES.md
+share/doc/mmap/LICENSE
+share/doc/mmap/README.md
