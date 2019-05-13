@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/05/05 17:46:36 leot Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/05/13 23:20:10 leot Exp $
 bin/sfeed
 bin/sfeed_atom
 bin/sfeed_frames
@@ -8,7 +8,6 @@ bin/sfeed_mbox
 bin/sfeed_opml_export
 bin/sfeed_opml_import
 bin/sfeed_plain
-bin/sfeed_tail
 bin/sfeed_twtxt
 bin/sfeed_update
 bin/sfeed_web
@@ -22,7 +21,6 @@ man/man1/sfeed_mbox.1
 man/man1/sfeed_opml_export.1
 man/man1/sfeed_opml_import.1
 man/man1/sfeed_plain.1
-man/man1/sfeed_tail.1
 man/man1/sfeed_twtxt.1
 man/man1/sfeed_update.1
 man/man1/sfeed_web.1
