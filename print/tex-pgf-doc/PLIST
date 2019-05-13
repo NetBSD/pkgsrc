@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/05/06 21:11:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/05/13 21:18:12 markd Exp $
 share/texmf-dist/doc/generic/pgf/AUTHORS
 share/texmf-dist/doc/generic/pgf/ChangeLog
 share/texmf-dist/doc/generic/pgf/FILES
@@ -97,6 +97,7 @@ share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-library-math.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-library-matrices.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-library-mindmaps.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-library-patterns.tex
+share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-library-perspective.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-library-petri.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-library-plot-handlers.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-library-plot-marks.tex
