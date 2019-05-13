@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.187 2019/05/09 13:57:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.188 2019/05/13 16:17:51 adam Exp $
 
-DISTNAME=	inkscape-0.92.3
-PKGREVISION=	6
+DISTNAME=	inkscape-0.92.4
 CATEGORIES=	graphics
 MASTER_SITES=	https://media.inkscape.org/dl/resources/file/
 EXTRACT_SUFX=	.tar.bz2
@@ -56,7 +55,9 @@ SUBST_SED.pycmd=	-e "s,COMMAND python,COMMAND ${PYTHONBIN},g"
 SUBST_CLASSES+=		bool
 SUBST_STAGE.bool=	pre-configure
 SUBST_FILES.bool+=	src/extension/internal/pdfinput/pdf-parser.*
-SUBST_SED.bool=		-e 's|gTrue|true|g' -e 's|gFalse|false|g' -e 's|GBool|bool|g'
+SUBST_SED.bool=		-e 's|gTrue|true|g'
+SUBST_SED.bool+=	-e 's|gFalse|false|g'
+SUBST_SED.bool+=	-e 's|GBool|bool|g'
 
 REPLACE_PYTHON+=	cxxtest/cxxtestgen.py
 REPLACE_PYTHON+=	share/extensions/*.py
@@ -69,18 +70,11 @@ CHECK_INTERPRETER_SKIP+=share/inkscape/extensions/simplepath.rb
 CHECK_PORTABILITY_SKIP+=packaging/macosx/Resources/bin/inkscape
 CHECK_PORTABILITY_SKIP+=packaging/macosx/ScriptExec/launcher-quartz-no-macintegration.sh
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.inkscape
-PKG_SUPPORTED_OPTIONS=	gnome
-PKG_SUGGESTED_OPTIONS=
+.include "options.mk"
 
-.include "../../mk/bsd.options.mk"
-
-# gnome-vfs support for the inkscape file open window.
-.if !empty(PKG_OPTIONS:Mgnome)
-CMAKE_ARGS+=		-DWITH_GNOME_VFS=ON
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
-.else
-CMAKE_ARGS+=		-DWITH_GNOME_VFS=OFF
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Darwin"
+CMAKE_ARGS+=	-DIntl_INCLUDE_DIR=${BUILDLINK_PREFIX.gettext}/include
 .endif
 
 BUILDLINK_API_DEPENDS.poppler-includes+= poppler-includes>=0.12.2
