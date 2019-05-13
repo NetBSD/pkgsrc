@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2112 2019/05/13 20:39:04 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2113 2019/05/13 21:19:43 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3607,3 +3607,9 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/postgresql96 to 9.6.13 [adam 2019-05-13]
 	Updated databases/postgresql10 to 10.8 [adam 2019-05-13]
 	Updated databases/postgresql11 to 11.3 [adam 2019-05-13]
+	Updated textproc/tex-csvsimple to 1.21 [markd 2019-05-13]
+	Updated textproc/tex-csvsimple-doc to 1.21 [markd 2019-05-13]
+	Updated print/tex-endfloat to 2.7 [markd 2019-05-13]
+	Updated print/tex-endfloat-doc to 2.7 [markd 2019-05-13]
+	Updated print/tex-pgf to 3.1.2 [markd 2019-05-13]
+	Updated print/tex-pgf-doc to 3.1.2 [markd 2019-05-13]
