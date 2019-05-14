@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/01/27 04:46:41 markd Exp $
+$NetBSD: distinfo,v 1.8 2019/05/14 10:33:25 markd Exp $
 
-SHA1 (tex-toptesi-49211/toptesi.tar.xz) = 9fcc7f76be86468582ff8c4261f6b4d202d169de
-RMD160 (tex-toptesi-49211/toptesi.tar.xz) = 9f48a88ccf8c8552f93219ab454299785d8395e8
-SHA512 (tex-toptesi-49211/toptesi.tar.xz) = 2d1d11714cdf7e23374f0c4778da8135f3b0c67bc8f9e7bf7dc93db55feb2241813aa99f09091f5e043747ce4d3d7dd7cbc286610cb5d0e1f920a39f97fce0e8
-Size (tex-toptesi-49211/toptesi.tar.xz) = 19488 bytes
+SHA1 (tex-toptesi-51022/toptesi.tar.xz) = 389d1168fa2e3031a4d7a8be9122966eff30ce49
+RMD160 (tex-toptesi-51022/toptesi.tar.xz) = 07469ab5a9fe5d7a3ec9d8631029e763a91d6baf
+SHA512 (tex-toptesi-51022/toptesi.tar.xz) = dded3f6d9b21dce2d8543a1671c9a585b14db2b4033706b3f6376f988866db907a14ecd29b75c99f70cc68673810c30dda6bbbbc2f765f96734e439e73e2976e
+Size (tex-toptesi-51022/toptesi.tar.xz) = 19596 bytes
