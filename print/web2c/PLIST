@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.13 2016/06/16 04:06:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2019/05/14 13:23:10 adam Exp $
 bin/aleph
 bin/bibtex
 bin/ctangle
 bin/ctie
+bin/ctwill
+bin/ctwill-refsort
+bin/ctwill-twinx
 bin/cweave
 bin/dvicopy
 bin/dvitomp
@@ -45,6 +48,9 @@ bin/pooltype
 bin/ppltotf
 bin/ptex
 bin/ptftopl
+bin/r-mpost
+bin/r-pmpost
+bin/r-upmpost
 bin/synctex
 bin/tangle
 bin/tex
@@ -67,6 +73,7 @@ bin/wovf2ovp
 bin/wovp2ovf
 include/synctex/synctex_parser.h
 include/synctex/synctex_parser_utils.h
+include/synctex/synctex_version.h
 info/web2c.info
 lib/libsynctex.la
 lib/pkgconfig/synctex.pc
@@ -74,11 +81,16 @@ man/man1/aleph.1
 man/man1/bibtex.1
 man/man1/ctangle.1
 man/man1/ctie.1
+man/man1/ctwill-refsort.1
+man/man1/ctwill-twinx.1
+man/man1/ctwill.1
 man/man1/cweave.1
 man/man1/cweb.1
 man/man1/dvicopy.1
 man/man1/dvitomp.1
 man/man1/dvitype.1
+man/man1/eptex.1
+man/man1/euptex.1
 man/man1/gftodvi.1
 man/man1/gftopk.1
 man/man1/gftype.1
@@ -107,12 +119,18 @@ man/man1/pktogf.1
 man/man1/pktype.1
 man/man1/pltotf.1
 man/man1/pooltype.1
+man/man1/ppltotf.1
+man/man1/ptex.1
+man/man1/ptftopl.1
 man/man1/synctex.1
 man/man1/tangle.1
 man/man1/tex.1
 man/man1/tftopl.1
 man/man1/tie.1
 man/man1/ttf2afm.1
+man/man1/uppltotf.1
+man/man1/uptex.1
+man/man1/uptftopl.1
 man/man1/vftovp.1
 man/man1/vptovf.1
 man/man1/weave.1

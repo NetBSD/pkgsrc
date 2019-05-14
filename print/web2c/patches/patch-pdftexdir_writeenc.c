@@ -1,4 +1,6 @@
-$NetBSD: patch-pdftexdir_writeenc.c,v 1.1 2018/12/04 13:01:44 ryoon Exp $
+$NetBSD: patch-pdftexdir_writeenc.c,v 1.2 2019/05/14 13:23:10 adam Exp $
+
+Fix building.
 
 --- pdftexdir/writeenc.c.orig	2016-11-25 18:24:37.000000000 +0000
 +++ pdftexdir/writeenc.c
