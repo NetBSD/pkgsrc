@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/05/11 07:19:43 mef Exp $
+# $NetBSD: Makefile,v 1.20 2019/05/14 14:47:14 mef Exp $
 #
 
 DISTNAME=	ibus-hangul-1.5.0
@@ -19,12 +19,6 @@ USE_TOOLS+=		pkg-config gmake msgfmt intltool
 .include "../../lang/python/application.mk"
 
 PLIST_SUBST+=   PYPKGPREFIX_NO=${PYPKGPREFIX:S/py//}
-
-.if !empty(PYPKGPREFIX:Mpy27)
-PLIST_SRC=  ${PKGDIR}/PLIST ${PKGDIR}/PLIST.py27
-.else
-PLIST_SRC=  ${PKGDIR}/PLIST ${PKGDIR}/PLIST.py3
-.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
