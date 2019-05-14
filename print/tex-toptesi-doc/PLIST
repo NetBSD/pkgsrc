@@ -1,24 +1,19 @@
-@comment $NetBSD: PLIST,v 1.6 2019/01/27 04:46:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/05/14 10:33:25 markd Exp $
 share/texmf-dist/doc/latex/toptesi/FrontespiziAssemblati.pdf
 share/texmf-dist/doc/latex/toptesi/FrontespiziAssemblati1.pdf
 share/texmf-dist/doc/latex/toptesi/FrontespiziAssemblati2.pdf
 share/texmf-dist/doc/latex/toptesi/Frontespizio-sss.pdf
 share/texmf-dist/doc/latex/toptesi/FrontespizioLandscape.pdf
 share/texmf-dist/doc/latex/toptesi/FrontespizioScudo.pdf
-share/texmf-dist/doc/latex/toptesi/Logodue.pdf
-share/texmf-dist/doc/latex/toptesi/Logoquattro.pdf
-share/texmf-dist/doc/latex/toptesi/Logotre.pdf
-share/texmf-dist/doc/latex/toptesi/Logouno.pdf
-share/texmf-dist/doc/latex/toptesi/README
 share/texmf-dist/doc/latex/toptesi/README.TEXLIVE
+share/texmf-dist/doc/latex/toptesi/README.txt
 share/texmf-dist/doc/latex/toptesi/TITDocScCropped.pdf
 share/texmf-dist/doc/latex/toptesi/Toptesi-con-topfront.pdf
 share/texmf-dist/doc/latex/toptesi/Toptesi-con-topfront.tex
 share/texmf-dist/doc/latex/toptesi/Toptesi-example-topfront.pdf
 share/texmf-dist/doc/latex/toptesi/Toptesi-example-topfront.tex
-share/texmf-dist/doc/latex/toptesi/VeraPDFinitial.pdf
+share/texmf-dist/doc/latex/toptesi/VeraPDFiniziale.jpg
 share/texmf-dist/doc/latex/toptesi/lppl.tex
-share/texmf-dist/doc/latex/toptesi/manifest.txt
 share/texmf-dist/doc/latex/toptesi/topfront-example.pdf
 share/texmf-dist/doc/latex/toptesi/topfront-example.tex
 share/texmf-dist/doc/latex/toptesi/toptesi-example-con-frontespizio.pdf
@@ -42,5 +37,5 @@ share/texmf-dist/doc/latex/toptesi/toptesi-it.pdf
 share/texmf-dist/doc/latex/toptesi/toptesi-it.tex
 share/texmf-dist/doc/latex/toptesi/toptesi-scudo-example.zip
 share/texmf-dist/doc/latex/toptesi/toptesi.pdf
-share/texmf-dist/doc/latex/toptesi/veraPDFconformance.pdf
-share/texmf-dist/doc/latex/toptesi/veraPDFnoconformance.pdf
+share/texmf-dist/doc/latex/toptesi/veraPDFconformance.jpg
+share/texmf-dist/doc/latex/toptesi/veraPDFnoconformance.jpg
