@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2019/05/14 14:39:34 mef Exp $
+# $NetBSD: Makefile,v 1.31 2019/05/14 15:11:36 mef Exp $
 
 DISTNAME=	ibus-array-0.1.0
 PKGREVISION=	12
@@ -21,7 +21,6 @@ USE_TOOLS+=	gmake pkg-config automake autoconf autopoint msgfmt msgmerge
 WRKSRC=		${WRKDIR}
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/pyversion.mk"
 
 PLIST_SUBST+=	PYPKGPREFIX_NO=${PYPKGPREFIX:S/py//}
 
