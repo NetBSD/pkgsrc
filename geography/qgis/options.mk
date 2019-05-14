@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2019/04/26 14:12:39 maya Exp $
+# $NetBSD: options.mk,v 1.13 2019/05/14 01:39:30 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qgis
 PKG_SUPPORTED_OPTIONS=	python
@@ -19,7 +19,7 @@ CMAKE_ARGS+=		-DWITH_BINDINGS:BOOL=TRUE
 CMAKE_ARGS+=		-DSIP_BINARY_PATH:PATH=${BUILDLINK_PREFIX.py-sip}/bin
 CMAKE_ARGS+=		-DWITH_INTERNAL_MARKUPSAFE=FALSE
 PLIST_SRC+=             ${PKGDIR}/PLIST.python
-#PYTHON_VERSIONS_INCOMPATIBLE=	36 # ?not yet ported as of ?
+PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # Documentation implies 27 is supported, 3x not.
 .include "../../lang/python/application.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../x11/py-qt4/buildlink3.mk"
