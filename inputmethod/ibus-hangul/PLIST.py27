@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST.py27,v 1.1 2019/05/11 07:19:43 mef Exp $
-share/ibus-hangul/setup/config.pyc
-share/ibus-hangul/setup/config.pyo
-share/ibus-hangul/setup/keycapturedialog.pyc
-share/ibus-hangul/setup/keycapturedialog.pyo
-share/ibus-hangul/setup/main.pyc
-share/ibus-hangul/setup/main.pyo
