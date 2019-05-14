@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2126 2019/05/14 16:02:00 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.2127 2019/05/14 17:26:56 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3647,3 +3647,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated multimedia/adobe-flash-player to 32.0.0.192 [tsutsui 2019-05-14]
 	Updated lang/rust to 1.34.2 [he 2019-05-14]
 	Updated x11/ocaml-graphics to 2.0.0 [jaapb 2019-05-14]
+	Updated sysutils/intel-microcode-netbsd to 20190514 [msaitoh 2019-05-14]
