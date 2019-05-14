@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.18 2018/05/08 19:06:15 jaapb Exp $
+$NetBSD: distinfo,v 1.19 2019/05/14 15:55:44 jaapb Exp $
 
 SHA1 (findlib-1.8.0.tar.gz) = 91fa957208a10c53420c30eb55d0a0c324070026
 RMD160 (findlib-1.8.0.tar.gz) = ad543ea9c62bfe4ca20389a7764ba0b03a0b3a3a
 SHA512 (findlib-1.8.0.tar.gz) = a6dbfd172bff20ebf05db8a0a952a9f0dc67f9420b89771dbfc6193a7a2e5fe448c9d3bdcc113591175906644299529ef937652cfb2c17f67ec2c4dbb1d71e48
 Size (findlib-1.8.0.tar.gz) = 260719 bytes
 SHA1 (patch-Makefile) = 72afa3c32f78183f745a63d2817fcf05154d27d3
-SHA1 (patch-configure) = 400ad416a22519e6c882df8ef2d5df8645d0d60d
+SHA1 (patch-configure) = ca920a5fa1596070d6e1ab26c69cbffa5678906a
 SHA1 (patch-src_findlib_Makefile) = cf58beba4a7fe9076171fc7892c24df7691a4af0
