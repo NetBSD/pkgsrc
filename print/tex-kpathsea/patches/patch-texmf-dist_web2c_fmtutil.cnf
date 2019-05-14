@@ -1,8 +1,8 @@
-$NetBSD: patch-texmf-dist_web2c_fmtutil.cnf,v 1.3 2016/06/16 04:06:11 markd Exp $
+$NetBSD: patch-texmf-dist_web2c_fmtutil.cnf,v 1.4 2019/05/14 12:37:40 markd Exp $
 
---- texmf-dist/web2c/fmtutil.cnf.orig	2016-05-15 01:17:09.000000000 +0000
+--- texmf-dist/web2c/fmtutil.cnf.orig	2019-03-23 01:25:33.000000000 +0000
 +++ texmf-dist/web2c/fmtutil.cnf
-@@ -35,102 +35,3 @@
+@@ -35,103 +35,3 @@
  # 
  # 4) usual comments start with "# ", whereas disabled configurations
  #    start with "#! " in this file.
@@ -30,6 +30,7 @@ $NetBSD: patch-texmf-dist_web2c_fmtutil.cnf,v 1.3 2016/06/16 04:06:11 markd Exp 
 -# from csplain:
 -csplain pdftex - -etex -enc csplain-utf8.ini
 -pdfcsplain pdftex - -etex -enc csplain-utf8.ini
+-luacsplain luatex - -etex csplain.ini
 -pdfcsplain xetex - -etex csplain.ini
 -pdfcsplain luatex - -etex csplain.ini
 -#
