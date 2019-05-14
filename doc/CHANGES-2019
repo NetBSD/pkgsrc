@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2123 2019/05/14 13:24:04 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2124 2019/05/14 15:16:15 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3644,3 +3644,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/tex-kpathsea-doc to 2019 [markd 2019-05-14]
 	Updated textproc/uncrustify to 0.69.0 [ryoon 2019-05-14]
 	Updated print/web2c to 2019 [adam 2019-05-14]
+	Updated multimedia/adobe-flash-player to 32.0.0.192 [tsutsui 2019-05-14]
