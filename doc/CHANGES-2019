@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2120 2019/05/14 12:27:41 leot Exp $
+$NetBSD: CHANGES-2019,v 1.2121 2019/05/14 12:39:10 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3620,3 +3620,25 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-test to 4.5.0 [adam 2019-05-14]
 	Updated sysutils/intellij-fsnotifier to 0.0.20190228nb1 [ryoon 2019-05-14]
 	Updated net/youtube-dl to 20190511 [leot 2019-05-14]
+	Updated print/tex-nomencl to 5.2 [markd 2019-05-14]
+	Updated print/tex-nomencl-doc to 5.2 [markd 2019-05-14]
+	Updated graphics/tex-texdraw to 2.3 [markd 2019-05-14]
+	Updated graphics/tex-texdraw-doc to 2.3 [markd 2019-05-14]
+	Updated fonts/tex-ptex-fontmaps to 20190506.0 [markd 2019-05-14]
+	Updated fonts/tex-ptex-fontmaps-doc to 20190506.0 [markd 2019-05-14]
+	Updated print/tex-toptesi to 6.3.04 [markd 2019-05-14]
+	Updated print/tex-toptesi-doc to 6.3.04 [markd 2019-05-14]
+	Updated fonts/tex-ebgaramond to 2019 [markd 2019-05-14]
+	Updated fonts/tex-ebgaramond-doc to 2019 [markd 2019-05-14]
+	Updated devel/tex-l3kernel to 2019 [markd 2019-05-14]
+	Updated devel/tex-l3kernel-doc to 2019 [markd 2019-05-14]
+	Updated devel/tex-l3packages to 2019 [markd 2019-05-14]
+	Updated devel/tex-l3packages-doc to 2019 [markd 2019-05-14]
+	Updated devel/tex-l3experimental to 2019 [markd 2019-05-14]
+	Updated print/tex-luatex to 1.10.0 [markd 2019-05-14]
+	Updated print/tex-luatex-doc to 1.10.0 [markd 2019-05-14]
+	Updated print/tex-tetex to 3.0.50602 [markd 2019-05-14]
+	Updated print/tex-tetex-doc to 3.0.50602 [markd 2019-05-14]
+	Updated print/tex-texlive.infra to 2019 [markd 2019-05-14]
+	Updated print/tex-kpathsea to 2019 [markd 2019-05-14]
+	Updated print/tex-kpathsea-doc to 2019 [markd 2019-05-14]
