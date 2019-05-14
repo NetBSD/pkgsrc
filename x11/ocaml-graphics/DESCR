@@ -1,1 +1,2 @@
-This package provides the graphics library that comes with the ocaml compiler.
+This package provides the graphics library that used to be distributed
+with the ocaml compiler.
