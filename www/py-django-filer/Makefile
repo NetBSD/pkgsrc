@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/11/20 17:56:12 adam Exp $
+# $NetBSD: Makefile,v 1.4 2019/05/14 06:21:42 wiz Exp $
 
 DISTNAME=	django-filer-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,6 +18,8 @@ DEPENDS+=	${PYPKGPREFIX}-django-mptt>=0.6:../../www/py-django-mptt
 DEPENDS+=	${PYPKGPREFIX}-django-polymorphic>=0.7:../../www/py-django-polymorphic
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-django-mptt
 
 post-extract:
 	${RM} ${WRKSRC}/filer/static/.DS_Store
