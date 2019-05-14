@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.122 2019/01/07 18:52:23 jaapb Exp $
+# $NetBSD: Makefile,v 1.123 2019/05/14 15:34:16 jaapb Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=		1
+PKGREVISION=		2
 
 CONFIGURE_ENV+=		disable_x11=yes
 
@@ -35,7 +35,7 @@ PLIST.ocaml-stub=	yes
 # Optional components built only on certain platforms.
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
     !empty(MACHINE_ARCH:M*arm*) || (${MACHINE_ARCH} == "aarch64") || \
-    (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "x86_64")
+    (${MACHINE_ARCH} == "x86_64")
 BUILD_TARGET+=	opt opt.opt
 PLIST.ocaml-opt=	yes
 .  if empty(MACHINE_PLATFORM:MDarwin-*-powerpc) && \
