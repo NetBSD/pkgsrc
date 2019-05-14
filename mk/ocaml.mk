@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.23 2019/03/05 16:14:35 jaapb Exp $
+# $NetBSD: ocaml.mk,v 1.24 2019/05/14 15:35:19 jaapb Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 #
@@ -110,10 +110,10 @@ DUNE_BUILD_PACKAGES?=	# empty
 # Default value of OASIS_BUILD_ARGS
 OASIS_BUILD_ARGS?=	# empty
 
-# Default value of OCAML_ENABLE_BINARY_COMPILER
-.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "x86_64") || \
-    (${MACHINE_ARCH} == "powerpc") || (${MACHINE_ARCH} == "sparc") || \
-    (${MACHINE_ARCH} == "arm")
+# Default value of OCAML_USE_OPT_COMPILER
+.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
+    !empty(MACHINE_ARCH:M*arm*) || (${MACHINE_ARCH} == "aarch64") || \
+    (${MACHINE_ARCH} == "x86_64")
 OCAML_USE_OPT_COMPILER?=	yes
 .else
 OCAML_USE_OPT_COMPILER?=	no
