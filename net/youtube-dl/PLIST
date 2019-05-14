@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.85 2019/04/30 09:22:34 leot Exp $
+@comment $NetBSD: PLIST,v 1.86 2019/05/14 12:26:32 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -1721,15 +1721,15 @@ ${PYSITELIB}/youtube_dl/extractor/sina.pyo
 ${PYSITELIB}/youtube_dl/extractor/sixplay.py
 ${PYSITELIB}/youtube_dl/extractor/sixplay.pyc
 ${PYSITELIB}/youtube_dl/extractor/sixplay.pyo
+${PYSITELIB}/youtube_dl/extractor/sky.py
+${PYSITELIB}/youtube_dl/extractor/sky.pyc
+${PYSITELIB}/youtube_dl/extractor/sky.pyo
 ${PYSITELIB}/youtube_dl/extractor/skylinewebcams.py
 ${PYSITELIB}/youtube_dl/extractor/skylinewebcams.pyc
 ${PYSITELIB}/youtube_dl/extractor/skylinewebcams.pyo
 ${PYSITELIB}/youtube_dl/extractor/skynewsarabia.py
 ${PYSITELIB}/youtube_dl/extractor/skynewsarabia.pyc
 ${PYSITELIB}/youtube_dl/extractor/skynewsarabia.pyo
-${PYSITELIB}/youtube_dl/extractor/skysports.py
-${PYSITELIB}/youtube_dl/extractor/skysports.pyc
-${PYSITELIB}/youtube_dl/extractor/skysports.pyo
 ${PYSITELIB}/youtube_dl/extractor/slideshare.py
 ${PYSITELIB}/youtube_dl/extractor/slideshare.pyc
 ${PYSITELIB}/youtube_dl/extractor/slideshare.pyo
