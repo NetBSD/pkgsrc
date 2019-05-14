@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2019/03/05 11:24:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2019/05/14 12:04:24 ryoon Exp $
 
 DISTNAME=		fsnotifier-0.0.20190228
 PKGNAME=		intellij-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=idea4bsd/}
 GITHUB_PROJECT=		fsnotifier
@@ -12,8 +13,8 @@ HOMEPAGE=		https://github.com/idea4bsd/fsnotifier
 COMMENT=		File system monitoring utility for IntelliJ IDEA IDE
 LICENSE=		apache-2.0
 
-INTELLIJCEDIR=		intellij-ce-bin-2018.3.5
-PYCHARMCEDIR=		pycharm-bin-2018.3.5
+INTELLIJCEDIR=		intellij-ce-bin-2019.1.2
+PYCHARMCEDIR=		pycharm-bin-2019.1.2
 INSTALLATION_DIRS=	${INTELLIJCEDIR}/bin ${PYCHARMCEDIR}/bin
 
 PLIST_SUBST+=		INTELLIJCEDIR=${INTELLIJCEDIR}
