@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q1,v 1.1.2.6 2019/05/12 20:49:35 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q1,v 1.1.2.7 2019/05/14 05:26:19 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q1 branch:
 
@@ -91,4 +91,16 @@ net/bind911: security update
 
 Pullup ticket #5960 - requested by taca
 mail/fml4: security update
+
+Pullup ticket #5961 - requested by taca
+www/drupal7: security update
+
+Pullup ticket #5962 - requested by taca
+www/drupal8: security update
+
+Pullup ticket #5964 - requested by taca
+lang/php72: security update
+
+Pullup ticket #5965 - requested by taca
+lang/php73: security update
 
