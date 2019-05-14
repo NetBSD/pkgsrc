@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2121 2019/05/14 12:39:10 markd Exp $
+$NetBSD: CHANGES-2019,v 1.2122 2019/05/14 12:54:52 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3642,3 +3642,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/tex-texlive.infra to 2019 [markd 2019-05-14]
 	Updated print/tex-kpathsea to 2019 [markd 2019-05-14]
 	Updated print/tex-kpathsea-doc to 2019 [markd 2019-05-14]
+	Updated textproc/uncrustify to 0.69.0 [ryoon 2019-05-14]
