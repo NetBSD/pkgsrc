@@ -1,4 +1,4 @@
-$NetBSD: patch-texmf-dist_web2c_texmfcnf.lua,v 1.3 2018/05/13 11:29:24 markd Exp $
+$NetBSD: patch-texmf-dist_web2c_texmfcnf.lua,v 1.4 2019/05/14 12:25:36 markd Exp $
 
 Set paths to texmf trees for pkgsrc.
 
@@ -14,7 +14,7 @@ Set paths to texmf trees for pkgsrc.
  
 -            TEXMFSYSVAR     = "selfautoparent:texmf-var",
 +            TEXMFSYSVAR     = "@VARBASE@/lib/texmf",
-             TEXMFVAR        = "home:.texlive2018/texmf-var",
+             TEXMFVAR        = "home:.texlive2019/texmf-var",
  
              -- We have only one cache path but there can be more. The first writable one
 @@ -62,10 +64,10 @@ return {

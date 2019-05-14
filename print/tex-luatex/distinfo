@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.19 2019/05/07 23:40:59 ryoon Exp $
+$NetBSD: distinfo,v 1.20 2019/05/14 12:25:36 markd Exp $
 
-SHA1 (tex-luatex-50112/luatex.tar.xz) = 7ebaa351afb46dfe20a5765010377ca205518ec1
-RMD160 (tex-luatex-50112/luatex.tar.xz) = 2f5337877fc69fdac083fbfc185d124f4fb128f7
-SHA512 (tex-luatex-50112/luatex.tar.xz) = 7020e62de81e6cb12ed68999942d256c20ec3ad78bd7a9826f29804aff08a9dd7a097f5c4a470e1722ff79479dd253d98f2ff5bba1af4449bd3095e2bbca88cb
-Size (tex-luatex-50112/luatex.tar.xz) = 12932 bytes
-SHA1 (patch-texmf-dist_web2c_texmfcnf.lua) = 3aaa03e1fcf887d2013d5fc53755fc05bc303a5b
+SHA1 (tex-luatex-50602/luatex.tar.xz) = 1bc55ee7634756e8aaf2e369b83d5dc13935a39a
+RMD160 (tex-luatex-50602/luatex.tar.xz) = 8fb9800fbdef7326349b8e82e71f66771fcb50ac
+SHA512 (tex-luatex-50602/luatex.tar.xz) = 4706ab295a8cc72b6fbafa92132bbef82be4241f2b6b04a20230f763ae52e1a3be112b951d0537ef1c0fd64acb81be6726e71151b45332e90d70b05f3f8c2ccd
+Size (tex-luatex-50602/luatex.tar.xz) = 12932 bytes
+SHA1 (patch-texmf-dist_web2c_texmfcnf.lua) = c0b2d2d4fa801abd69af721b35f526e4f22bedfb
