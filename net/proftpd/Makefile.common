@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2017/10/04 15:46:46 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.7 2019/05/14 11:39:38 kim Exp $
 
 # used by net/proftpd/Makefile
 # used by net/proftpd/Makefile.module
@@ -14,7 +14,7 @@ PATCH_DIST_STRIP=	-p1
 # For CVE-2017-7418
 PATCHFILES=		ecff21e0d0e84f35c299ef91d7fda088e516d4ed.patch
 
-MAINTAINER=	kim@tac.nyc.ny.us
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.proftpd.org/
 LICENSE=	gnu-gpl-v2
 
