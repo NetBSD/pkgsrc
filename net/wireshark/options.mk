@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.23 2019/05/06 09:36:47 adam Exp $
+# $NetBSD: options.mk,v 1.24 2019/05/14 11:40:36 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wireshark
-PKG_SUPPORTED_OPTIONS=	http2 lua qt5
+PKG_SUPPORTED_OPTIONS=	http2 lua qt5 spandsp
 PKG_SUGGESTED_OPTIONS=	qt5 lua
 
 .include "../../mk/bsd.options.mk"
@@ -59,4 +59,11 @@ install-icons:
 .  endif
 .else
 CMAKE_ARGS+=		-DBUILD_wireshark=OFF
+.endif
+
+.if !empty(PKG_OPTIONS:Mspandsp)
+.include "../../comms/spandsp/buildlink3.mk"
+CMAKE_ARGS+=		-DENABLE_SPANDSP=ON
+.else
+CMAKE_ARGS+=		-DENABLE_SPANDSP=OFF
 .endif
