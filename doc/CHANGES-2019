@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2119 2019/05/14 12:04:49 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.2120 2019/05/14 12:27:41 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3619,3 +3619,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-isort to 4.3.19 [adam 2019-05-14]
 	Updated devel/py-test to 4.5.0 [adam 2019-05-14]
 	Updated sysutils/intellij-fsnotifier to 0.0.20190228nb1 [ryoon 2019-05-14]
+	Updated net/youtube-dl to 20190511 [leot 2019-05-14]
