@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/05/01 07:23:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/05/14 03:12:36 maya Exp $
 ${PYSITELIB}/_pygit2.so
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -42,7 +42,8 @@ ${PYSITELIB}/pygit2/submodule.pyc
 ${PYSITELIB}/pygit2/utils.pyo
 ${PYSITELIB}/pygit2/utils.pyc
 ${PYSITELIB}/pygit2/_build.py
-${PYSITELIB}/pygit2/_libgit2.abi3.so
+${PLIST.py3x}${PYSITELIB}/pygit2/_libgit2.abi3.so
+${PLIST.py2x}${PYSITELIB}/pygit2/_libgit2.so
 ${PYSITELIB}/pygit2/_run.py
 ${PYSITELIB}/pygit2/blame.py
 ${PYSITELIB}/pygit2/config.py
