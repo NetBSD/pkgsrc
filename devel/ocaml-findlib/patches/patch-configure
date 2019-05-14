@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.5 2018/05/08 19:06:15 jaapb Exp $
+$NetBSD: patch-configure,v 1.6 2019/05/14 15:55:44 jaapb Exp $
 
 Do not install META files for libraries that were split off
 --- configure.orig	2018-04-16 08:13:23.000000000 +0000
@@ -57,3 +57,23 @@ Do not install META files for libraries that were split off
  
  # bytes?
  
+@@ -570,13 +570,13 @@ fi
+ 
+ # graphics?
+ 
+-if [ -f "${ocaml_core_stdlib}/graphics.cmi" ]; then
+-    echo "graphics: found"
+-    lgraphics="graphics"
+-else
+-    echo "graphics: not found"
++#if [ -f "${ocaml_core_stdlib}/graphics.cmi" ]; then
++#    echo "graphics: found"
++#    lgraphics="graphics"
++#else
++#    echo "graphics: not found"
+     lgraphics=""
+-fi
++#fi
+ 
+ 
+ # Generate the META files now.
