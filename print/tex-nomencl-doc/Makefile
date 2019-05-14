@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2019/05/07 10:59:19 markd Exp $
+# $NetBSD: Makefile,v 1.8 2019/05/14 09:54:13 markd Exp $
 
 DISTNAME=	nomencl.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-5.1
-TEXLIVE_REV=	49987
+PKGNAME=	tex-${DISTNAME:S/./-/}-5.2
+TEXLIVE_REV=	51025
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/nomencl
