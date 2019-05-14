@@ -1,14 +1,14 @@
-$NetBSD: patch-Makefile.in,v 1.1 2018/05/15 06:11:45 minskim Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2019/05/14 13:23:10 adam Exp $
 
 Remove a race condition. $(nodist_libmplibbackends_a_SOURCES) should't
 be compiled before mplib.h is created.
 
---- Makefile.in.orig	2018-03-20 22:58:40.000000000 +0000
+--- Makefile.in.orig	2019-02-20 21:54:28.000000000 +0000
 +++ Makefile.in
-@@ -17349,7 +17349,7 @@ svgout-tangle: ctangle$(EXEEXT) mplibdir
- $(nodist_libmplibcore_a_SOURCES): $(svgout_c_h) $(pngout_c_h)
+@@ -18394,7 +18394,7 @@ $(nodist_libmplibcore_a_SOURCES): $(mpma
  
- $(libmplibcore_a_OBJECTS): $(nodist_libmplibcore_a_SOURCES) $(KPATHSEA_DEPEND)  $(MPFR_DEPEND)
+ $(libmplibcore_a_OBJECTS): $(nodist_libmplibcore_a_SOURCES) $(KPATHSEA_DEPEND)  
+ $(libmplibextramath_a_OBJECTS): $(nodist_libmplibextramath_a_SOURCES) $(KPATHSEA_DEPEND)  $(MPFR_DEPEND)
 -$(libmplibbackends_a_OBJECTS): $(nodist_libmplibbackends_a_SOURCES) $(KPATHSEA_DEPEND) $(CAIRO_DEPEND) $(MPFR_DEPEND)
 +$(libmplibbackends_a_OBJECTS): $(nodist_libmplibbackends_a_SOURCES) mplib.h $(KPATHSEA_DEPEND) $(CAIRO_DEPEND) $(MPFR_DEPEND)
  $(etex_OBJECTS): $(etex_prereq)

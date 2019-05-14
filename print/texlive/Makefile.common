@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2019/05/09 09:47:34 adam Exp $
+# $NetBSD: Makefile.common,v 1.2 2019/05/14 13:23:10 adam Exp $
 # used by converters/dvi2tty/Makefile
 # used by fonts/afm2pl/Makefile
 # used by fonts/gsftopkk/Makefile
@@ -18,6 +18,7 @@
 # used by print/seetexk/Makefile
 # used by print/tex4ht/Makefile
 # used by print/vlna/Makefile
+# used by print/web2c/Makefile
 # used by print/xdvik/Makefile
 # used by print/xetex/Makefile
 # used by print/xpdfopen/Makefile
