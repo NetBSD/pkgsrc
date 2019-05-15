@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2852 2019/05/13 11:31:01 jaapb Exp $
+# $NetBSD: Makefile,v 1.2853 2019/05/15 08:39:05 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -2754,6 +2754,8 @@ SUBDIR+=	tex-pgfopts
 SUBDIR+=	tex-pgfopts-doc
 SUBDIR+=	tex-pst-uml
 SUBDIR+=	tex-pst-uml-doc
+SUBDIR+=	tex-tlshell
+SUBDIR+=	tex-tlshell-doc
 SUBDIR+=	tex-xifthen
 SUBDIR+=	tex-xifthen-doc
 SUBDIR+=	threadweaver
