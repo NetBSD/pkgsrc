@@ -1,0 +1,3 @@
+The footnote package by Mark Wooding dates back to 1997 and has
+not been made hyperref compatible. The aim of the present
+package is to do that.
