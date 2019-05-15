@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2131 2019/05/15 10:14:25 markd Exp $
+$NetBSD: CHANGES-2019,v 1.2132 2019/05/15 10:58:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3673,3 +3673,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated meta-pkgs/texlive-collection-music to 2019pre1 [markd 2019-05-15]
 	Updated meta-pkgs/texlive-collection-pictures to 2019pre1 [markd 2019-05-15]
 	Updated meta-pkgs/texlive-collection-publishers to 2019pre1 [markd 2019-05-15]
+	Updated devel/py-crayons to 0.2.0 [adam 2019-05-15]
+	Updated devel/py-wheel to 0.33.4 [adam 2019-05-15]
