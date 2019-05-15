@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2019/02/02 00:47:27 markd Exp $
+# $NetBSD: Makefile,v 1.12 2019/05/15 09:59:48 markd Exp $
 
 DISTNAME=	collection-metapost
-PKGNAME=	texlive-${DISTNAME}-2018.48753
+PKGNAME=	texlive-${DISTNAME}-2019
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	48753
+TEXLIVE_REV=	50293
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -26,6 +26,7 @@ DEPENDS+=	tex-exteps-[0-9]*:../../graphics/tex-exteps
 DEPENDS+=	tex-featpost-[0-9]*:../../graphics/tex-featpost
 DEPENDS+=	tex-feynmf-[0-9]*:../../graphics/tex-feynmf
 DEPENDS+=	tex-feynmp-auto-[0-9]*:../../graphics/tex-feynmp-auto
+DEPENDS+=	tex-fiziko-[0-9]*:../../graphics/tex-fiziko
 DEPENDS+=	tex-garrigues-[0-9]*:../../graphics/tex-garrigues
 DEPENDS+=	tex-gmp-[0-9]*:../../graphics/tex-gmp
 DEPENDS+=	tex-hatching-[0-9]*:../../graphics/tex-hatching
