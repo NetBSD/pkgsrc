@@ -1,4 +1,4 @@
-# $NetBSD: autoconf.mk,v 1.20 2018/08/22 20:48:37 maya Exp $
+# $NetBSD: autoconf.mk,v 1.21 2019/05/15 10:49:28 leot Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -95,6 +95,8 @@ AUTOCONF_REQD?=		2.50
 
 .    if !empty(USE_TOOLS:Mautoconf\:run)
 _TOOLS_DEPMETHOD.autoconf=	DEPENDS
+.    elif !empty(USE_TOOLS:Mautoconf\:test)
+_TOOLS_DEPMETHOD.autoconf=	TEST_DEPENDS
 .    else
 _TOOLS_DEPMETHOD.autoconf=	TOOL_DEPENDS
 .    endif
@@ -134,6 +136,8 @@ AUTOCONF_REQD?=		2.13
 
 .    if !empty(USE_TOOLS:Mautoconf213\:run)
 _TOOLS_DEPMETHOD.autoconf213=	DEPENDS
+.    elif !empty(USE_TOOLS:Mautoconf213\:test)
+_TOOLS_DEPMETHOD.autoconf=	TEST_DEPENDS
 .    else
 _TOOLS_DEPMETHOD.autoconf213=	TOOL_DEPENDS
 .    endif
