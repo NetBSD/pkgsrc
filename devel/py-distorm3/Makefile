@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2018/11/15 10:20:51 adam Exp $
+# $NetBSD: Makefile,v 1.10 2019/05/15 11:44:18 adam Exp $
 
-DISTNAME=	distorm3-3.3.8
+DISTNAME=	distorm3-3.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/distorm3/}
@@ -10,5 +10,5 @@ HOMEPAGE=	https://github.com/gdabah/distorm
 COMMENT=	Powerful Disassembler Library For x86/AMD64
 LICENSE=	gnu-gpl-v3
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
