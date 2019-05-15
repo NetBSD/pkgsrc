@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2136 2019/05/15 14:23:30 leot Exp $
+$NetBSD: CHANGES-2019,v 1.2137 2019/05/15 15:37:45 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3680,3 +3680,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated misc/py-tqdm to 4.32.1 [adam 2019-05-15]
 	Updated devel/cbindgen to 0.8.7 [ryoon 2019-05-15]
 	Updated inputmethod/ibus-array to 0.1.0nb13 [leot 2019-05-15]
+	Updated multimedia/xine-ui to 0.99.10 [nia 2019-05-15]
