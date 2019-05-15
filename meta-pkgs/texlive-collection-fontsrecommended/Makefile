@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2018/05/13 11:56:18 markd Exp $
+# $NetBSD: Makefile,v 1.6 2019/05/15 11:35:23 markd Exp $
 
 DISTNAME=	collection-fontsrecommended
-PKGNAME=	texlive-${DISTNAME}-2018
+PKGNAME=	texlive-${DISTNAME}-2019
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	35830
