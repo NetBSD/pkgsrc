@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.10 2019/05/02 10:10:56 wiz Exp $
+$NetBSD: distinfo,v 1.11 2019/05/15 09:09:49 adam Exp $
 
-SHA1 (zstandard-0.11.0.tar.gz) = 05951ab7a967d8cff7e5dccd964e370496943388
-RMD160 (zstandard-0.11.0.tar.gz) = 2e3017be22389dd7bed9a5c9d78795e2eac914f5
-SHA512 (zstandard-0.11.0.tar.gz) = 96e6faa3c31fce59379e037e4e7789b91d1608703ad8540fc8fe3d249ec65670377f2c3233ff21d7ff90a1478ac1fbbd2e169fe2d798a6889a200d71540f75a7
-Size (zstandard-0.11.0.tar.gz) = 641440 bytes
+SHA1 (zstandard-0.11.1.tar.gz) = 8e292694c584566754370c04444f8636abe71406
+RMD160 (zstandard-0.11.1.tar.gz) = 52dda103a4e290f5719cab8e363876f446dd2b4a
+SHA512 (zstandard-0.11.1.tar.gz) = 78cdc5e839ed97cdeb67a4790dddde0b45fe70cef85d96a48688a0daebbf15dfcd74891222a63b1ae6d011b5a74cb5024e877eb1a9c55818fff7122a7139051d
+Size (zstandard-0.11.1.tar.gz) = 641453 bytes
 SHA1 (patch-c-ext_compressionparams.c) = f9b2674e9e0816ef8ba23cf3cb77294a6b2008f7
 SHA1 (patch-zstandard_cffi.py) = f6d0f070160d9e977701d4d1fb26878d75e19898
 SHA1 (patch-zstd.c) = ee9e8d349759fcc0dd43bcd68fefdf3390feca6c
