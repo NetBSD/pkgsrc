@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2019/05/14 15:11:36 mef Exp $
+# $NetBSD: Makefile,v 1.32 2019/05/15 14:23:15 leot Exp $
 
 DISTNAME=	ibus-array-0.1.0
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	http://ibus-array.googlecode.com/svn/tarballs/
 EXTRACT_SUFX=	.tgz
@@ -20,9 +20,7 @@ USE_TOOLS+=	gmake pkg-config automake autoconf autopoint msgfmt msgmerge
 
 WRKSRC=		${WRKDIR}
 
-.include "../../lang/python/application.mk"
-
-PLIST_SUBST+=	PYPKGPREFIX_NO=${PYPKGPREFIX:S/py//}
+PY_PATCHPLIST=	yes
 
 pre-configure:
 	${RUN}cd ${WRKSRC};${PKGSRC_SETENV} ${CONFIGURE_ENV} ./autogen.sh
@@ -34,6 +32,7 @@ SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../lang/python/application.mk"
+.include "../../lang/python/extension.mk"
 .include "../../inputmethod/ibus/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
