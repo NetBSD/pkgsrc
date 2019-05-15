@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2130 2019/05/15 09:13:22 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2131 2019/05/15 10:14:25 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3654,3 +3654,22 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated archivers/py-zstandard to 0.11.1 [adam 2019-05-15]
 	Updated devel/py-faker to 1.0.7 [adam 2019-05-15]
 	Updated devel/py-isort to 4.3.20 [adam 2019-05-15]
+	Added devel/tex-tlshell version 2019 [markd 2019-05-15]
+	Added devel/tex-tlshell-doc version 2019 [markd 2019-05-15]
+	Added graphics/tex-fiziko version 0.1.3 [markd 2019-05-15]
+	Added graphics/tex-fiziko-doc version 0.1.3 [markd 2019-05-15]
+	Added print/tex-footnotehyper version 1.1 [markd 2019-05-15]
+	Added print/tex-footnotehyper-doc version 1.1 [markd 2019-05-15]
+	Updated meta-pkgs/texlive-collection-basic to 2019 [markd 2019-05-15]
+	Updated meta-pkgs/texlive-collection-bibtexextra to 2019pre1 [markd 2019-05-15]
+	Updated meta-pkgs/texlive-collection-binextra to 2019pre1 [markd 2019-05-15]
+	Updated meta-pkgs/texlive-collection-langchinese to 2019pre1 [markd 2019-05-15]
+	Updated meta-pkgs/texlive-collection-langenglish to 2019 [markd 2019-05-15]
+	Updated meta-pkgs/texlive-collection-langfrench to 2019pre1 [markd 2019-05-15]
+	Updated meta-pkgs/texlive-collection-latexextra to 2019pre1 [markd 2019-05-15]
+	Updated meta-pkgs/texlive-collection-latexrecommended to 2019 [markd 2019-05-15]
+	Updated meta-pkgs/texlive-collection-luatex to 2019pre1 [markd 2019-05-15]
+	Updated meta-pkgs/texlive-collection-metapost to 2019 [markd 2019-05-15]
+	Updated meta-pkgs/texlive-collection-music to 2019pre1 [markd 2019-05-15]
+	Updated meta-pkgs/texlive-collection-pictures to 2019pre1 [markd 2019-05-15]
+	Updated meta-pkgs/texlive-collection-publishers to 2019pre1 [markd 2019-05-15]
