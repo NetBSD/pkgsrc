@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2019/05/15 08:39:05 markd Exp $
+bin/tlshell
