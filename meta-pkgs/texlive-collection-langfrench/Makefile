@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2019/01/30 10:15:45 markd Exp $
+# $NetBSD: Makefile,v 1.10 2019/05/15 09:22:47 markd Exp $
 
 DISTNAME=	collection-langfrench
-PKGNAME=	texlive-${DISTNAME}-2018pre1
+PKGNAME=	texlive-${DISTNAME}-2019pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	49728
+TEXLIVE_REV=	50933
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -13,6 +13,7 @@ COMMENT=	French TeX packages
 DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-basic
 
 DEPENDS+=	tex-aeguill-[0-9]*:../../print/tex-aeguill
+# apprendre-a-programmer-en-tex is documentation only
 # apprends-latex is documentation only
 DEPENDS+=	tex-babel-basque-[0-9]*:../../print/tex-babel-basque
 DEPENDS+=	tex-babel-french-[0-9]*:../../print/tex-babel-french
