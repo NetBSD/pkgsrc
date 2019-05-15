@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/11/20 18:44:03 adam Exp $
+# $NetBSD: Makefile,v 1.6 2019/05/15 11:40:26 adam Exp $
 
 DISTNAME=	djangocms-googlemap-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +14,8 @@ DEPENDS+=	${PYPKGPREFIX}-django-cms>=3.4.5:../../www/py-django-cms
 DEPENDS+=	${PYPKGPREFIX}-django-filer-[0-9]*:../../www/py-django-filer
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-django-mptt
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
