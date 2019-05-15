@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2019/05/01 09:24:39 wiz Exp $
+$NetBSD: distinfo,v 1.6 2019/05/15 12:24:01 ryoon Exp $
 
 SHA1 (ansi_term-0.11.0.crate) = 0c6f984f171ee890100780e038def5db2a8b7ab8
 RMD160 (ansi_term-0.11.0.crate) = 0bc10d826fc7a658ac1026dac333cc54f26f7c5b
@@ -16,10 +16,10 @@ SHA1 (bitflags-1.0.4.crate) = fbc1ce9fa176ed7a7e15cfc6d1f6c2389f536361
 RMD160 (bitflags-1.0.4.crate) = fd720dba692f079a1c6662e43677533bb68654de
 SHA512 (bitflags-1.0.4.crate) = 81850d2be62eabb8486024ab263da67e6eb8ebfa732cac3a5d46a9186c564b2065cba15fa3da468bbd26eaf2b67038680e5de19d5dd99d78f60dae8a1776c8de
 Size (bitflags-1.0.4.crate) = 15282 bytes
-SHA1 (cbindgen-0.8.4.tar.gz) = f994e2b8abde65e0adb4cc80ba9a8362f44c27db
-RMD160 (cbindgen-0.8.4.tar.gz) = cb9799cc3d5d99d43b4363b66dc039d3e0e33076
-SHA512 (cbindgen-0.8.4.tar.gz) = 87534aa8ebf2d48be1f8ec4054f87f04e7f3edf64365c93bbe2fd4e522ebf89d05d690f6f99a63f3d28994d6cf23cc8e872ca833ea9300a2865364f0e71cc343
-Size (cbindgen-0.8.4.tar.gz) = 111138 bytes
+SHA1 (cbindgen-0.8.7.tar.gz) = ac25c1d12ed86cda21f83bc2359868b1d48c80cd
+RMD160 (cbindgen-0.8.7.tar.gz) = 0ea1cf4c8df02278d5b7fb0d5fa91b4b5c7090a2
+SHA512 (cbindgen-0.8.7.tar.gz) = 56072e11ee01e4dda7d5dbec4351f40f8cd4bab7b40179ccf300e3b80cc5665f50ac5947b2abaf9c43fdbb1afc272dcd311ba74e4aacda4efefef4c987e7e996
+Size (cbindgen-0.8.7.tar.gz) = 115462 bytes
 SHA1 (cfg-if-0.1.6.crate) = e3b635b8ff3a8615385ce05d343b8ee105399f74
 RMD160 (cfg-if-0.1.6.crate) = f190c1846549b3ad88559ae471cf2828c0bf44d1
 SHA512 (cfg-if-0.1.6.crate) = e393816f659bb5b1e64ebc72a4b6e3e673afd00cba302c3c92c6f2e98db341a29197f6cf413107e569175a86aad85e74a93e2cd3a9fa9fa2d1b70b01c3fcf378
