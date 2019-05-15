@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2019/05/04 22:30:43 markd Exp $
+# $NetBSD: Makefile,v 1.18 2019/05/15 09:10:47 markd Exp $
 
 DISTNAME=	collection-bibtexextra
-PKGNAME=	texlive-${DISTNAME}-2018pre2
+PKGNAME=	texlive-${DISTNAME}-2019pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	49911
+TEXLIVE_REV=	50619
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -111,6 +111,7 @@ DEPENDS+=	tex-footbib-[0-9]*:../../print/tex-footbib
 DEPENDS+=	tex-harvard-[0-9]*:../../print/tex-harvard
 # depend harvmac
 # depend historische-zeitschrift
+# depend icite
 # depend ietfbibs
 # depend ijqc
 # depend inlinebib
@@ -145,6 +146,7 @@ DEPENDS+=	tex-urlbst-[0-9]*:../../print/tex-urlbst
 # depend vak
 # depend windycity
 # depend xcite
+# depend zootaxa-bst
 
 META_PACKAGE=	yes
 
