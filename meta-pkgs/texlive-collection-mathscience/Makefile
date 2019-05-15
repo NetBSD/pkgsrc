@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2019/01/30 09:54:20 markd Exp $
+# $NetBSD: Makefile,v 1.9 2019/05/15 09:52:22 markd Exp $
 
 DISTNAME=	collection-mathscience
-PKGNAME=	texlive-${DISTNAME}-2018pre2
+PKGNAME=	texlive-${DISTNAME}-2019pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	49722
+TEXLIVE_REV=	51039
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -36,6 +36,8 @@ DEPENDS+=	tex-amstex-[0-9]*:../../print/tex-amstex
 # depend bosisio
 # depend bpchem
 # depend bropd
+DEPENDS+=	tex-bussproofs-[0-9]*:../../print/tex-bussproofs
+# depend bussproofs-extra
 # depend bytefield
 # depend calculation
 # depend cascade
@@ -123,6 +125,7 @@ DEPENDS+=	tex-mathpartir-[0-9]*:../../math/tex-mathpartir
 DEPENDS+=	tex-mhchem-[0-9]*:../../print/tex-mhchem
 # depend mhequ
 # depend miller
+# depend mismath
 # depend multiobjective
 # depend mychemistry
 # depend natded
@@ -140,6 +143,7 @@ DEPENDS+=	tex-oubraces-[0-9]*:../../print/tex-oubraces
 # depend polexpr
 # depend prftree
 # depend proba
+# depend proof-at-the-end
 # depend prooftrees
 # depend pseudocode
 # depend pythonhighlight
