@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2019/02/20 07:57:32 adam Exp $
+# $NetBSD: Makefile,v 1.15 2019/05/15 10:58:34 adam Exp $
 
-DISTNAME=	wheel-0.33.1
+DISTNAME=	wheel-0.33.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wheel/}
