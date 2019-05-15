@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.42 2019/05/04 23:11:00 markd Exp $
+# $NetBSD: Makefile,v 1.43 2019/05/15 09:33:48 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2018pre5
+PKGNAME=	texlive-${DISTNAME}-2019pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	50117
+TEXLIVE_REV=	50984
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -71,6 +71,7 @@ DEPENDS+=	tex-background-[0-9]*:../../print/tex-background
 # depend basicarith
 # depend bchart
 # depend beamer2thesis
+# depend beamer-rl
 # depend beameraudience
 # depend beamercolorthemeowl
 # depend beamerdarkthemes
@@ -117,7 +118,6 @@ DEPENDS+=	tex-boxedminipage-[0-9]*:../../print/tex-boxedminipage
 DEPENDS+=	tex-braket-[0-9]*:../../print/tex-braket
 # depend breakurl
 # depend bullcntr
-DEPENDS+=	tex-bussproofs-[0-9]*:../../print/tex-bussproofs
 # depend bxcalc
 # depend bxdpx-beamer
 # depend bxdvidriver
@@ -152,6 +152,7 @@ DEPENDS+=	tex-ccaption-[0-9]*:../../print/tex-ccaption
 # depend cellprops
 DEPENDS+=	tex-cellspace-[0-9]*:../../print/tex-cellspace
 # depend censor
+# depend centeredline
 DEPENDS+=	tex-changebar-[0-9]*:../../print/tex-changebar
 # depend changelayout
 # depend changelog
@@ -422,6 +423,7 @@ DEPENDS+=	tex-excludeonly-[0-9]*:../../print/tex-excludeonly
 # depend fancyslides
 # depend fancytabs
 # depend fancytooltips
+# depend fbox
 # depend fcolumn
 # depend fetchcls
 # depend ffslides
@@ -467,7 +469,6 @@ DEPENDS+=	tex-fontaxes-[0-9]*:../../print/tex-fontaxes
 DEPENDS+=	tex-footmisc-[0-9]*:../../print/tex-footmisc
 # depend footmisx
 # depend footnotebackref
-# depend footnotehyper
 # depend footnoterange
 DEPENDS+=	tex-footnpag-[0-9]*:../../print/tex-footnpag
 # depend forarray
@@ -609,6 +610,7 @@ DEPENDS+=	tex-incgraph-[0-9]*:../../graphics/tex-incgraph
 # depend kerntest
 DEPENDS+=	tex-keycommand-[0-9]*:../../print/tex-keycommand
 # depend keyfloat
+# depend keyindex
 # depend keyreader
 # depend keystroke
 # depend keyval2e
@@ -708,7 +710,6 @@ DEPENDS+=	tex-mathalfa-[0-9]*:../../fonts/tex-mathalfa
 # depend mathfam256
 # depend mathfont
 # depend maybemath
-# depend mbenotes
 # depend mcaption
 # depend mceinleger
 # depend mcexam
@@ -970,6 +971,7 @@ DEPENDS+=	tex-rotfloat-[0-9]*:../../print/tex-rotfloat
 # depend roundbox
 # depend rterface
 # depend rtkinenc
+# depend rulerbox
 # depend rulercompass
 # depend rvwrite
 # depend sanitize-umlaut
@@ -1203,6 +1205,7 @@ DEPENDS+=	tex-wallpaper-[0-9]*:../../print/tex-wallpaper
 # depend warning
 # depend warpcol
 DEPENDS+=	tex-was-[0-9]*:../../print/tex-was
+# depend webquiz
 # depend widetable
 # depend widows-and-orphans
 # depend williams
@@ -1220,6 +1223,7 @@ DEPENDS+=	tex-xargs-[0-9]*:../../print/tex-xargs
 # depend xcolor-solarized
 DEPENDS+=	tex-xcomment-[0-9]*:../../print/tex-xcomment
 # depend xcookybooky
+# depend xcpdftips
 # depend xdoc
 # depend xellipsis
 # depend xfakebold
