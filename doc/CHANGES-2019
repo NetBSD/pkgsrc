@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2138 2019/05/15 18:04:22 jperkin Exp $
+$NetBSD: CHANGES-2019,v 1.2139 2019/05/15 23:59:24 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3682,3 +3682,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated inputmethod/ibus-array to 0.1.0nb13 [leot 2019-05-15]
 	Updated multimedia/xine-ui to 0.99.10 [nia 2019-05-15]
 	Added databases/influxdb version 1.7.6 [jperkin 2019-05-15]
+	Updated devel/geany to 1.35 [gutteridge 2019-05-15]
