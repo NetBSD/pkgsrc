@@ -1,15 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2019/05/14 14:39:34 mef Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/05/15 14:23:15 leot Exp $
 libexec/ibus-engine-array
 libexec/ibus-setup-array
 share/ibus-array/icons/ibus-array.png
-${PLIST.py2x}share/ibus-array/setup/main.pyc
-${PLIST.py2x}share/ibus-array/setup/main.pyo
-${PLIST.py2x}share/ibus-array/setup/config.pyc
-${PLIST.py2x}share/ibus-array/setup/config.pyo
 share/ibus-array/setup/config.py
+share/ibus-array/setup/config.pyc
+share/ibus-array/setup/config.pyo
 share/ibus-array/setup/main.py
+share/ibus-array/setup/main.pyc
+share/ibus-array/setup/main.pyo
 share/ibus-array/tables/array.db
 share/ibus/component/array.xml
 share/locale/zh_TW/LC_MESSAGES/ibus-array.mo
-${PLIST.py3x}share/ibus-array/setup/__pycache__/config.cpython-${PYPKGPREFIX_NO}.opt-1.pyc
-${PLIST.py3x}share/ibus-array/setup/__pycache__/config.cpython-${PYPKGPREFIX_NO}.pyc
