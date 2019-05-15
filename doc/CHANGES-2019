@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2134 2019/05/15 12:04:54 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2135 2019/05/15 12:24:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3678,3 +3678,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-distorm3 to 3.4.1 [adam 2019-05-15]
 	Updated net/py-IP to 1.00 [adam 2019-05-15]
 	Updated misc/py-tqdm to 4.32.1 [adam 2019-05-15]
+	Updated devel/cbindgen to 0.8.7 [ryoon 2019-05-15]
