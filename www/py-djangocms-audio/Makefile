@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/12/16 14:04:55 adam Exp $
+# $NetBSD: Makefile,v 1.2 2019/05/15 11:40:26 adam Exp $
 
 DISTNAME=	djangocms-audio-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-django-filer>=1.2.4:../../www/py-django-filer
 DEPENDS+=	${PYPKGPREFIX}-djangocms-attributes-field>=0.4.0:../../www/py-djangocms-attributes-field
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-django-mptt
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
