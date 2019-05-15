@@ -1,4 +1,4 @@
-# $NetBSD: automake.mk,v 1.30 2018/12/01 04:58:55 wiz Exp $
+# $NetBSD: automake.mk,v 1.31 2019/05/15 10:49:28 leot Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -115,6 +115,8 @@ AUTOCONF_REQD?=		2.58
 
 .    if !empty(USE_TOOLS:Mautomake\:run)
 _TOOLS_DEPMETHOD.automake=	DEPENDS
+.    elif !empty(USE_TOOLS:Mautomake\:test)
+_TOOLS_DEPMETHOD.automake=	TEST_DEPENDS
 .    else
 _TOOLS_DEPMETHOD.automake=	TOOL_DEPENDS
 .    endif
@@ -140,6 +142,8 @@ AUTOCONF_REQD?=		2.13
 
 .    if !empty(USE_TOOLS:Mautomake14\:run)
 _TOOLS_DEPMETHOD.automake14=	DEPENDS
+.    elif !empty(USE_TOOLS:Mautomake14\:test)
+_TOOLS_DEPMETHOD.automake=	TEST_DEPENDS
 .    else
 _TOOLS_DEPMETHOD.automake14=	TOOL_DEPENDS
 .    endif
