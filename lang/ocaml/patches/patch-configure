@@ -1,10 +1,10 @@
-$NetBSD: patch-configure,v 1.35 2019/01/07 18:52:23 jaapb Exp $
+$NetBSD: patch-configure,v 1.36 2019/05/15 09:39:21 jaapb Exp $
 
 All kinds of OS-specific changes to configure
 Honor LDFLAGS.
 --- configure.orig	2018-10-04 14:23:12.000000000 +0000
-+++ configure
-@@ -797,7 +797,7 @@ sharedcccompopts=''
++++ configure	2019-04-03 12:40:28.584971437 +0000
+@@ -797,7 +797,7 @@
  mksharedlib='shared-libs-not-available'
  rpath=''
  mksharedlibrpath=''
@@ -13,7 +13,7 @@ Honor LDFLAGS.
  
  if $with_sharedlibs; then
    case "$target" in
-@@ -826,10 +826,13 @@ if $with_sharedlibs; then
+@@ -826,10 +826,13 @@
        esac;;
      *-*-solaris2*)
        case "$cc" in
@@ -30,7 +30,7 @@ Honor LDFLAGS.
              rpath="-R"
              mksharedlibrpath="-R"
            else
-@@ -856,7 +859,7 @@ if $with_sharedlibs; then
+@@ -856,7 +859,7 @@
        rpath="-Wl,-rpath,"
        mksharedlibrpath="-rpath "
        shared_libraries_supported=true;;
@@ -39,7 +39,7 @@ Honor LDFLAGS.
        mksharedlib="$cc -shared -flat_namespace -undefined suppress \
                     -read_only_relocs suppress"
        common_cflags="$dl_defs $common_cflags"
-@@ -905,11 +908,7 @@ if $with_sharedlibs; then
+@@ -905,11 +908,7 @@
      i[3456]86-*-linux*)           natdynlink=true;;
      i[3456]86-*-gnu*)             natdynlink=true;;
      x86_64-*-linux*)              natdynlink=true;;
@@ -52,7 +52,7 @@ Honor LDFLAGS.
      x86_64-*-darwin*)             natdynlink=true;;
      s390x*-*-linux*)              natdynlink=true;;
      powerpc*-*-linux*)            natdynlink=true;;
-@@ -922,12 +921,16 @@ if $with_sharedlibs; then
+@@ -922,12 +921,17 @@
      x86_64-*-openbsd*)            natdynlink=true;;
      i[3456]86-*-netbsd*)          natdynlink=true;;
      x86_64-*-netbsd*)             natdynlink=true;;
@@ -63,13 +63,14 @@ Honor LDFLAGS.
      i[3456]86-*-haiku*)           natdynlink=true;;
      arm*-*-linux*)                natdynlink=true;;
      arm*-*-freebsd*)              natdynlink=true;;
++    arm*-*-netbsd*)              natdynlink=true;;
      earm*-*-netbsd*)              natdynlink=true;;
      aarch64-*-linux*)             natdynlink=true;;
 +    aarch64-*-netbsd*)             natdynlink=true;;
    esac
  fi
  
-@@ -965,6 +968,7 @@ case "$target" in
+@@ -965,6 +969,7 @@
    i[3456]86-*-haiku*)           arch=i386; system=beos;;
    i[3456]86-*-beos*)            arch=i386; system=beos;;
    i[3456]86-*-cygwin*)          arch=i386; system=cygwin;;
@@ -77,7 +78,7 @@ Honor LDFLAGS.
    i[3456]86-*-darwin*)          if $arch64; then
                                    arch=amd64; system=macosx
                                  else
-@@ -987,6 +991,8 @@ case "$target" in
+@@ -987,6 +992,8 @@
    armv6t2*-*-linux-gnueabi)     arch=arm; model=armv6t2; system=linux_eabi;;
    armv6*-*-linux-gnueabi)       arch=arm; model=armv6; system=linux_eabi;;
    armv6*-*-freebsd*)            arch=arm; model=armv6; system=freebsd;;
@@ -86,7 +87,7 @@ Honor LDFLAGS.
    earmv6*-*-netbsd*)            arch=arm; model=armv6; system=netbsd;;
    earmv7*-*-netbsd*)            arch=arm; model=armv7; system=netbsd;;
    armv5te*-*-linux-gnueabi)     arch=arm; model=armv5te; system=linux_eabi;;
-@@ -1003,7 +1009,9 @@ case "$target" in
+@@ -1003,7 +1010,9 @@
    x86_64-*-darwin*)             arch=amd64; system=macosx;;
    x86_64-*-mingw*)              arch=amd64; system=mingw;;
    aarch64-*-linux*)             arch=arm64; system=linux;;
@@ -96,7 +97,7 @@ Honor LDFLAGS.
  esac
  
  # Some platforms exist both in 32-bit and 64-bit variants, not distinguished
-@@ -1027,7 +1035,6 @@ nativeccprofopts=''
+@@ -1027,7 +1036,6 @@
  case "$arch,$cc,$system,$model" in
    *,*,rhapsody,*)      if $arch64; then partialld="ld -r -arch ppc64"; fi;;
    amd64,gcc*,macosx,*) partialld="ld -r -arch x86_64";;
@@ -104,7 +105,7 @@ Honor LDFLAGS.
    power,gcc*,elf,ppc)   partialld="ld -r -m elf32ppclinux";;
    power,gcc*,elf,ppc64)   partialld="ld -r -m elf64ppc";;
    power,gcc*,elf,ppc64le)   partialld="ld -r -m elf64lppc";;
-@@ -1045,8 +1052,8 @@ case "$arch,$system" in
+@@ -1045,8 +1053,8 @@
                      fi;;
    amd64,solaris)  as="${TOOLPREF}as --64"
                    aspp="${TOOLPREF}gcc -m64 -c";;
@@ -115,7 +116,7 @@ Honor LDFLAGS.
    power,elf)      if $arch64; then
                      as="${TOOLPREF}as -a64 -mppc64"
                      aspp="${TOOLPREF}gcc -m64 -c"
-@@ -1094,6 +1101,8 @@ case "$arch,$system" in
+@@ -1094,6 +1102,8 @@
    power,elf) profiling='true';;
    power,bsd*) profiling='true';;
    power,netbsd) profiling='true';;
@@ -124,7 +125,7 @@ Honor LDFLAGS.
    *) profiling='false';;
  esac
  
-@@ -1672,6 +1681,8 @@ fi
+@@ -1672,6 +1682,8 @@
  x11_include="not found"
  x11_link="not found"
  
@@ -133,7 +134,7 @@ Honor LDFLAGS.
  if test -z "$x11_include_dir" -a -z "$x11_lib_dir"; then
    if pkg-config --exists x11 2>/dev/null; then
      x11_include=`pkg-config --cflags x11`
-@@ -1718,6 +1729,7 @@ if test "$x11_include" = "not found"; th
+@@ -1718,6 +1730,7 @@
      /usr/XFree86/include/X11  \
                                \
      /usr/include              \
@@ -141,7 +142,7 @@ Honor LDFLAGS.
      /usr/local/include        \
      /usr/unsupported/include  \
      /usr/athena/include       \
-@@ -1775,6 +1787,7 @@ if test "$x11_include" = "not found"; th
+@@ -1775,6 +1788,7 @@
                            \
      /usr/lib64            \
      /usr/lib              \
@@ -149,7 +150,7 @@ Honor LDFLAGS.
      /usr/local/lib        \
      /usr/unsupported/lib  \
      /usr/athena/lib       \
-@@ -1798,18 +1811,16 @@ if test "$x11_include" = "not found"; th
+@@ -1798,18 +1812,16 @@
        if test $dir = /usr/lib; then
          x11_link="-lX11"
        else
@@ -172,7 +173,7 @@ Honor LDFLAGS.
  if test "$x11_include" != "not found"; then
    if test "$x11_include" = "-I/usr/include"; then
      x11_include=""
-@@ -2060,7 +2071,7 @@ config CFLAGS "$common_cflags $internal_
+@@ -2060,7 +2072,7 @@
  config CPPFLAGS "$common_cppflags $internal_cppflags"
  config OCAMLC_CFLAGS "$common_cflags $sharedcccompopts"
  config OCAMLC_CPPFLAGS "$common_cppflags"
