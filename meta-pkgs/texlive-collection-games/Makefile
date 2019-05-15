@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2019/01/26 02:30:33 markd Exp $
+# $NetBSD: Makefile,v 1.6 2019/05/15 11:42:53 markd Exp $
 
 DISTNAME=	collection-games
-PKGNAME=	texlive-${DISTNAME}-2018pre1
+PKGNAME=	texlive-${DISTNAME}-2019pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	48514
