@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/09/29 21:12:20 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2019/05/15 10:56:23 adam Exp $
 
-DISTNAME=	crayons-0.1.2
+DISTNAME=	crayons-0.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/crayons/}
@@ -10,9 +10,9 @@ HOMEPAGE=	https://github.com/kennethreitz/crayons
 COMMENT=	Colored string formatting for the terminal
 LICENSE=	mit
 
-USE_LANGUAGES=	# none
-
 DEPENDS+=	${PYPKGPREFIX}-colorama-[0-9]*:../../comms/py-colorama
+
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
