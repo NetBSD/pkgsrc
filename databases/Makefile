@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.578 2019/04/08 16:15:41 adam Exp $
+# $NetBSD: Makefile,v 1.579 2019/05/15 18:04:07 jperkin Exp $
 
 COMMENT=	Databases
 
@@ -49,6 +49,7 @@ SUBDIR+=	guile-pg
 SUBDIR+=	hiredis
 SUBDIR+=	hsqldb18
 SUBDIR+=	idzebra
+SUBDIR+=	influxdb
 SUBDIR+=	innotop
 SUBDIR+=	iodbc
 SUBDIR+=	ipa_sdb
