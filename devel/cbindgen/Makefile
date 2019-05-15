@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2019/05/01 09:24:39 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/05/15 12:24:01 ryoon Exp $
 
-DISTNAME=	cbindgen-0.8.4
+DISTNAME=	cbindgen-0.8.7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=eqrion/}
 GITHUB_PROJECT=	cbindgen
