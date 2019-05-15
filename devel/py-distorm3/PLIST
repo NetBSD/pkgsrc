@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2018/11/15 10:20:51 adam Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.3 2019/05/15 11:44:18 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/distorm3/__init__.py
 ${PYSITELIB}/distorm3/__init__.pyc
 ${PYSITELIB}/distorm3/__init__.pyo
 ${PYSITELIB}/distorm3/libdistorm3.so
-${PYSITELIB}/distorm3/sample.py
-${PYSITELIB}/distorm3/sample.pyc
-${PYSITELIB}/distorm3/sample.pyo
