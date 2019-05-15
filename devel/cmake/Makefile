@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.160 2019/02/27 13:18:01 maya Exp $
+# $NetBSD: Makefile,v 1.161 2019/05/15 09:06:10 adam Exp $
 
 .include "Makefile.version"
 
@@ -22,6 +22,7 @@ BUILD_TARGET=		default_target
 CONFIGURE_HAS_MANDIR=	no
 CONFIGURE_ARGS+=	--mandir=/${PKGMANDIR}
 CONFIGURE_ARGS+=	--docdir=/share/doc/cmake-${CMAKE_API}
+CONFIGURE_ARGS+=	--parallel=${MAKE_JOBS:U1}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--system-libs
 # jsoncpp requires cmake to build, so use the one provided with cmake
@@ -29,12 +30,6 @@ CONFIGURE_ARGS+=	--no-system-jsoncpp
 
 LDFLAGS.Darwin+=	-framework CoreServices # for LSOpenCFURLRef()
 LDFLAGS.SunOS+=		-lsocket -lnsl
-
-.include "../../mk/bsd.prefs.mk"
-
-.if !empty(MAKE_JOBS)
-CONFIGURE_ARGS+=	--parallel=${MAKE_JOBS}
-.endif
 
 PLIST_SUBST+=		CMAKE_API=${CMAKE_API}
 
