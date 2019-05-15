@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE service_bundle SYSTEM "/usr/share/lib/xml/dtd/service_bundle.dtd.1">
+<service_bundle type='manifest' name='@SMF_NAME@:default'>
+  <service name='@SMF_PREFIX@/@SMF_NAME@' type='service' version='1'>
+    <create_default_instance enabled='false' />
+    <single_instance />
+    <dependency name='network' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/milestone/network:default' />
+    </dependency>
+    <dependency name='fs-local' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/system/filesystem/local:default' />
+    </dependency>
+    <method_context working_directory="@DATADIR@">
+      <method_credential user='@INFLUXDB_USER@' group='@INFLUXDB_GROUP@' />
+    </method_context>
+    <exec_method type='method' name='start'
+      exec='@PREFIX@/bin/influxd -config @PKG_SYSCONFDIR@/config.toml -pidfile @DATADIR@/influxdb.pid 2>> @LOGDIR@/influxdb.log &amp;'
+      timeout_seconds="60" />
+    <exec_method type='method' name='stop' exec=':kill' timeout_seconds="60" />
+    <template>
+      <common_name>
+        <loctext xml:lang='C'>InfluxDB Time Series database</loctext>
+      </common_name>
+      <documentation>
+        <manpage title='influx' section='1' manpath='@PREFIX@/@PKGMANDIR@'/>
+        <manpage title='influx_inspect' section='1' manpath='@PREFIX@/@PKGMANDIR@'/>
+        <manpage title='influx_stress' section='1' manpath='@PREFIX@/@PKGMANDIR@'/>
+        <manpage title='influx_tsm' section='1' manpath='@PREFIX@/@PKGMANDIR@'/>
+        <manpage title='influxd-backup' section='1' manpath='@PREFIX@/@PKGMANDIR@'/>
+        <manpage title='influxd-config' section='1' manpath='@PREFIX@/@PKGMANDIR@'/>
+        <manpage title='influxd-restore' section='1' manpath='@PREFIX@/@PKGMANDIR@'/>
+        <manpage title='influxd-run' section='1' manpath='@PREFIX@/@PKGMANDIR@'/>
+        <manpage title='influxd-version' section='1' manpath='@PREFIX@/@PKGMANDIR@'/>
+        <manpage title='influxd' section='1' manpath='@PREFIX@/@PKGMANDIR@'/>        
+        <doc_link name='homepage' uri='https://docs.influxdata.com/influxdb/' />
+      </documentation>
+    </template>
+  </service>
+</service_bundle>
