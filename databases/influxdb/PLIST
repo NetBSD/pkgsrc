@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2019/05/15 18:03:33 jperkin Exp $
+bin/influx
+bin/influx_inspect
+bin/influx_stress
+bin/influx_tsm
+bin/influxd
+bin/stress_test_server
+bin/test_client
+man/man1/influx.1
+man/man1/influx_inspect.1
+man/man1/influx_stress.1
+man/man1/influx_tsm.1
+man/man1/influxd-backup.1
+man/man1/influxd-config.1
+man/man1/influxd-restore.1
+man/man1/influxd-run.1
+man/man1/influxd-version.1
+man/man1/influxd.1
+share/doc/influxdb/CHANGELOG.md
+share/doc/influxdb/DEPENDENCIES.md
+share/doc/influxdb/LICENSE
+share/doc/influxdb/QUERIES.md
+share/doc/influxdb/README.md
+share/examples/influxdb/config.sample.toml
+@pkgdir man1
+@pkgdir etc/influxdb
