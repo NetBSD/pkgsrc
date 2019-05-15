@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2128 2019/05/14 18:26:48 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.2129 2019/05/15 09:07:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3649,3 +3649,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/ocaml-graphics to 2.0.0 [jaapb 2019-05-14]
 	Updated sysutils/intel-microcode-netbsd to 20190514 [msaitoh 2019-05-14]
 	Updated net/vpnc-script to 20190424 [schmonz 2019-05-14]
+	Updated devel/cmake to 3.14.4 [adam 2019-05-15]
+	Updated net/samba4 to 4.10.3 [adam 2019-05-15]
