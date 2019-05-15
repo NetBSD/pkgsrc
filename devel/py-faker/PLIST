@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2019/04/25 12:51:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2019/05/15 09:11:53 adam Exp $
 bin/faker-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -200,6 +200,9 @@ ${PYSITELIB}/faker/providers/automotive/hu_HU/__init__.pyo
 ${PYSITELIB}/faker/providers/automotive/id_ID/__init__.py
 ${PYSITELIB}/faker/providers/automotive/id_ID/__init__.pyc
 ${PYSITELIB}/faker/providers/automotive/id_ID/__init__.pyo
+${PYSITELIB}/faker/providers/automotive/pl_PL/__init__.py
+${PYSITELIB}/faker/providers/automotive/pl_PL/__init__.pyc
+${PYSITELIB}/faker/providers/automotive/pl_PL/__init__.pyo
 ${PYSITELIB}/faker/providers/automotive/pt_BR/__init__.py
 ${PYSITELIB}/faker/providers/automotive/pt_BR/__init__.pyc
 ${PYSITELIB}/faker/providers/automotive/pt_BR/__init__.pyo
@@ -683,6 +686,9 @@ ${PYSITELIB}/faker/providers/person/en_TH/__init__.pyo
 ${PYSITELIB}/faker/providers/person/en_US/__init__.py
 ${PYSITELIB}/faker/providers/person/en_US/__init__.pyc
 ${PYSITELIB}/faker/providers/person/en_US/__init__.pyo
+${PYSITELIB}/faker/providers/person/es_CA/__init__.py
+${PYSITELIB}/faker/providers/person/es_CA/__init__.pyc
+${PYSITELIB}/faker/providers/person/es_CA/__init__.pyo
 ${PYSITELIB}/faker/providers/person/es_ES/__init__.py
 ${PYSITELIB}/faker/providers/person/es_ES/__init__.pyc
 ${PYSITELIB}/faker/providers/person/es_ES/__init__.pyo
@@ -983,6 +989,9 @@ ${PYSITELIB}/faker/providers/ssn/en_IE/__init__.pyo
 ${PYSITELIB}/faker/providers/ssn/en_US/__init__.py
 ${PYSITELIB}/faker/providers/ssn/en_US/__init__.pyc
 ${PYSITELIB}/faker/providers/ssn/en_US/__init__.pyo
+${PYSITELIB}/faker/providers/ssn/es_CA/__init__.py
+${PYSITELIB}/faker/providers/ssn/es_CA/__init__.pyc
+${PYSITELIB}/faker/providers/ssn/es_CA/__init__.pyo
 ${PYSITELIB}/faker/providers/ssn/es_ES/__init__.py
 ${PYSITELIB}/faker/providers/ssn/es_ES/__init__.pyc
 ${PYSITELIB}/faker/providers/ssn/es_ES/__init__.pyo
