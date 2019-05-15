@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/12/13 21:32:31 adam Exp $
+# $NetBSD: Makefile,v 1.8 2019/05/15 11:40:26 adam Exp $
 
 DISTNAME=	djangocms-picture-2.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-djangocms-attributes-field>=0.4.0:../../www/py-djangocm
 DEPENDS+=	${PYPKGPREFIX}-django-easy-thumbnails-[0-9]*:../../www/py-django-easy-thumbnails
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-django-mptt
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
