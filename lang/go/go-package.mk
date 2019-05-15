@@ -1,4 +1,4 @@
-# $NetBSD: go-package.mk,v 1.21 2018/11/30 18:38:19 rillig Exp $
+# $NetBSD: go-package.mk,v 1.22 2019/05/15 18:00:03 jperkin Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 #
@@ -91,6 +91,11 @@ do-test:
 do-install:
 	${RUN} cd ${WRKDIR}; [ ! -d bin ] || ${PAX} -rw bin ${DESTDIR}${PREFIX}
 	${RUN} cd ${WRKDIR}; [ ! -d pkg ] || ${PAX} -rw src pkg ${DESTDIR}${PREFIX}/gopkg
+.endif
+
+# Include go-dep.mk last as it hooks into post-extract
+.if defined(GO_DEPS)
+.  include "../../lang/go/go-dep.mk"
 .endif
 
 _VARGROUPS+=		go
