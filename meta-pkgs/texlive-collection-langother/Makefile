@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2018/05/13 11:56:21 markd Exp $
+# $NetBSD: Makefile,v 1.10 2019/05/15 09:25:25 markd Exp $
 
 DISTNAME=	collection-langother
-PKGNAME=	texlive-${DISTNAME}-2018pre1
+PKGNAME=	texlive-${DISTNAME}-2019pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	46722
+TEXLIVE_REV=	51013
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -52,6 +52,7 @@ DEPENDS+=	tex-hyphen-turkmen-[0-9]*:../../print/tex-hyphen-turkmen
 # lshort-vietnamese is documentation only
 # ntheorem-vn is documentation only
 # depend padauk
+# depend quran-ur
 # depend sanskrit
 # depend sanskrit-t1
 # depend thaienum
