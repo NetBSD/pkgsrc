@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2018/08/01 14:30:29 maya Exp $
+$NetBSD: distinfo,v 1.5 2019/05/16 23:22:14 gutteridge Exp $
 
-SHA1 (otter-browser-0.9.99.1.tar.gz) = 216820fdced158170877ad1c743dad14e9871a29
-RMD160 (otter-browser-0.9.99.1.tar.gz) = 2a7664b8f895bb54cd0f162f8e29af87d24ef125
-SHA512 (otter-browser-0.9.99.1.tar.gz) = 333759ee0f846ce503d7a96ba7ce69fb7bfc4c08e8872b80f6230966d5d8f4c3d85b98b8e636500cc4e100f5c2d400ac7f622fbeb15ec1100614fe53fe73f88d
-Size (otter-browser-0.9.99.1.tar.gz) = 4815838 bytes
+SHA1 (otter-browser-1.0.01.tar.gz) = 10f0bd2bc2626df442d91837496a6625b8786df5
+RMD160 (otter-browser-1.0.01.tar.gz) = 99a057bf836d1f9e98d82750bd22ad6becab2727
+SHA512 (otter-browser-1.0.01.tar.gz) = 594bbdcbbc3b5fea903cc0beb749cf76be402cb1c2766706750bdbd6aad84f3d9f48687e1b12945f30e40b3876b9fbf511f41915fd276473b259d7311e33f19d
+Size (otter-browser-1.0.01.tar.gz) = 4866820 bytes
+SHA1 (patch-cmake_FindHunspell.cmake) = 74556f29213a1d75f1c81ea0005779503bd17439
