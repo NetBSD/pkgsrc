@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2139 2019/05/15 23:59:24 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.2140 2019/05/16 06:58:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3683,3 +3683,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated multimedia/xine-ui to 0.99.10 [nia 2019-05-15]
 	Added databases/influxdb version 1.7.6 [jperkin 2019-05-15]
 	Updated devel/geany to 1.35 [gutteridge 2019-05-15]
+	Updated devel/libuv to 1.29.0 [adam 2019-05-16]
+	Updated devel/waf to 2.0.16 [adam 2019-05-16]
