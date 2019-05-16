@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2019/05/16 22:37:16 alnsn Exp $
+share/u-boot/zynq-zybo-z7/boot.bin
+share/u-boot/zynq-zybo-z7/u-boot
+share/u-boot/zynq-zybo-z7/u-boot.img
