@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18992 2019/05/15 12:24:43 ryoon Exp $
+$NetBSD: TODO,v 1.18993 2019/05/16 19:37:05 rillig Exp $
 
 Suggested new packages
 ======================
@@ -1441,14 +1441,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o zkt-1.1.3
 	o zoneminder-1.29.0
 	o zopeedit-0.8
-
-Infrastructure problems which need addressing
-=============================================
-
-	o Correct and consistent handling of file names containing
-	  white-space and other special characters.
-
-	o Bootstrap building of gcc2/gcc3.
 
 Licenses of packages
 ====================
