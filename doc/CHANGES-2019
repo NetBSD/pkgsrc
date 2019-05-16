@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2143 2019/05/16 22:41:44 alnsn Exp $
+$NetBSD: CHANGES-2019,v 1.2144 2019/05/16 23:23:07 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3688,3 +3688,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/nss to 3.44 [ryoon 2019-05-16]
 	Updated lang/nim to 0.19.6 [ryoon 2019-05-16]
 	Added sysutils/u-boot-zynq-zybo-z7 version 2018.11 [alnsn 2019-05-16]
+	Updated www/otter-browser to 1.0.01 [gutteridge 2019-05-16]
