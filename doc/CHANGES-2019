@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2142 2019/05/16 14:12:14 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.2143 2019/05/16 22:41:44 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3687,3 +3687,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/waf to 2.0.16 [adam 2019-05-16]
 	Updated devel/nss to 3.44 [ryoon 2019-05-16]
 	Updated lang/nim to 0.19.6 [ryoon 2019-05-16]
+	Added sysutils/u-boot-zynq-zybo-z7 version 2018.11 [alnsn 2019-05-16]
