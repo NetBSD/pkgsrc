@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.29 2019/05/14 17:22:01 msaitoh Exp $
+# $NetBSD: Makefile,v 1.30 2019/05/16 04:04:30 msaitoh Exp $
 
-DISTNAME=	microcode-20190514
-PKGNAME=	intel-microcode-netbsd-20190514
+VERSION=	20190514
+DISTNAME=	microcode-${VERSION}
+PKGNAME=	intel-microcode-netbsd-${VERSION}
 CATEGORIES=	sysutils
-MASTER_SITES=	https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/
-EXTRACT_SUFX=	.tar.gz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=intel/}
+GITHUB_PROJECT=	Intel-Linux-Processor-Microcode-Data-Files
+GITHUB_TAG=	${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://downloadcenter.intel.com/download/28727/Linux-Processor-Microcode-Data-File
