@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2018/08/19 20:16:39 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2019/05/16 16:17:52 pgoyette Exp $
 
 DISTNAME=	libusb-0.1.12
 PKGREVISION=	5
@@ -78,5 +78,7 @@ do-install:
 	    ${DESTDIR}${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/libusb.pc ${DESTDIR}${PREFIX}/lib/pkgconfig
 .endif
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../mk/bsd.pkg.mk"
