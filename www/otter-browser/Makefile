@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2019/04/03 00:33:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2019/05/16 23:22:14 gutteridge Exp $
 
-DISTNAME=	otter-browser-0.9.99.1
-PKGREVISION=	5
+DISTNAME=	otter-browser-1.0.01
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OtterBrowser/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,6 +14,12 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 NOT_PAX_MPROTECT_SAFE+=	bin/otter-browser
+
+SUBST_CLASSES+=			fix-paths
+SUBST_STAGE.fix-paths=		pre-configure
+SUBST_MESSAGE.fix-paths=	Fixing (some) absolute paths to hunspell dictionaries.
+SUBST_FILES.fix-paths=		3rdparty/sonnet/src/plugins/hunspell/hunspellclient.cpp
+SUBST_SED.fix-paths=		-e 's,"/usr/local,"${PREFIX},g'
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
