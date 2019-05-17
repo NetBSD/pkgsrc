@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2019/05/07 08:50:36 adam Exp $
+# $NetBSD: Makefile,v 1.18 2019/05/17 06:46:30 adam Exp $
 
-DISTNAME=	acme-0.34.1
+DISTNAME=	acme-0.34.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/acme/}
