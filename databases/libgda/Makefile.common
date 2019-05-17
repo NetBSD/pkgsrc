@@ -1,12 +1,10 @@
-# $NetBSD: Makefile.common,v 1.57 2014/10/05 16:41:05 wiz Exp $
+# $NetBSD: Makefile.common,v 1.58 2019/05/17 08:20:34 wiz Exp $
 #
 # used by databases/libgda/Makefile
-# used by databases/libgda-mysql
-# used by databases/libgda-postgres
-# used by databases/libgda-postgres/Makefile
 # used by databases/libgda-mysql/Makefile
+# used by databases/libgda-postgres/Makefile
 
-DISTNAME=		libgda-5.2.2
+DISTNAME=		libgda-5.2.9
 CATEGORIES=		databases gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgda/5.2/}
 EXTRACT_SUFX=		.tar.xz
@@ -14,6 +12,7 @@ EXTRACT_SUFX=		.tar.xz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome-db.org/
 COMMENT=		GNU database access library
+LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
 
 DISTINFO_FILE=		${.CURDIR}/../../databases/libgda/distinfo
 PATCHDIR=		${.CURDIR}/../../databases/libgda/patches
@@ -34,14 +33,6 @@ CONFIGURE_ARGS+=	--without-mysql
 CONFIGURE_ARGS+=	--without-postgres
 .endif
 
-SUBST_CLASSES+=		malloc_h
-SUBST_STAGE.malloc_h=	pre-configure
-SUBST_MESSAGE.malloc_h=	Don't use malloc.h, use stdlib.h.
-SUBST_FILES.malloc_h=	providers/sqlite/sqlite-src/fts1.c
-SUBST_FILES.malloc_h+=	providers/sqlite/sqlite-src/fts1_porter.c
-SUBST_FILES.malloc_h+=	providers/sqlite/sqlite-src/fts1_tokenizer1.c
-SUBST_SED.malloc_h+=	-e 's|<malloc.h>|<stdlib.h>|'
-
 .if defined(LIBGDA_PROVIDER) && !empty(LIBGDA_PROVIDER)
 PKGNAME=		${DISTNAME:S/libgda-/libgda-${LIBGDA_PROVIDER}-/}
 COMMENT+=		- ${LIBGDA_PROVIDER} provider
@@ -50,8 +41,8 @@ BUILD_DIRS=		providers/reuseable/${LIBGDA_PROVIDER} providers/${LIBGDA_PROVIDER}
 
 .include "../../databases/libgda/buildlink3.mk"
 .else
-.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .endif
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"

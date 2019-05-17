@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2014/01/21 13:08:19 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.25 2019/05/17 08:20:34 wiz Exp $
 bin/gda-list-config
 bin/gda-list-config-5.0
 bin/gda-list-server-op
@@ -124,7 +124,6 @@ share/gtk-doc/html/libgda-5.0/GdaConnectionEvent.html
 share/gtk-doc/html/libgda-5.0/GdaDataAccessWrapper.html
 share/gtk-doc/html/libgda-5.0/GdaDataModel.html
 share/gtk-doc/html/libgda-5.0/GdaDataModelArray.html
-share/gtk-doc/html/libgda-5.0/GdaDataModelBdb.html
 share/gtk-doc/html/libgda-5.0/GdaDataModelDir.html
 share/gtk-doc/html/libgda-5.0/GdaDataModelImport.html
 share/gtk-doc/html/libgda-5.0/GdaDataModelIter.html
@@ -281,8 +280,8 @@ share/gtk-doc/html/libgda-5.0/gda-sql-manual-icommands.html
 share/gtk-doc/html/libgda-5.0/gda-sql-manual-open.html
 share/gtk-doc/html/libgda-5.0/gda-sql-manual-run.html
 share/gtk-doc/html/libgda-5.0/gda-sql.html
-share/gtk-doc/html/libgda-5.0/gen:sql_identifiers.html
 share/gtk-doc/html/libgda-5.0/gen_blobs.html
+share/gtk-doc/html/libgda-5.0/gen_sql_identifiers.html
 share/gtk-doc/html/libgda-5.0/getting_started.html
 share/gtk-doc/html/libgda-5.0/home.png
 share/gtk-doc/html/libgda-5.0/howto-exec-non-select.html
@@ -311,7 +310,6 @@ share/gtk-doc/html/libgda-5.0/index-5-0.html
 share/gtk-doc/html/libgda-5.0/index-5-2-0.html
 share/gtk-doc/html/libgda-5.0/index-deprecated.html
 share/gtk-doc/html/libgda-5.0/index.html
-share/gtk-doc/html/libgda-5.0/index.sgml
 share/gtk-doc/html/libgda-5.0/index_main.html
 share/gtk-doc/html/libgda-5.0/information_schema.html
 share/gtk-doc/html/libgda-5.0/information_schema.png
@@ -320,12 +318,14 @@ share/gtk-doc/html/libgda-5.0/installation-configuring.html
 share/gtk-doc/html/libgda-5.0/installation-installing.html
 share/gtk-doc/html/libgda-5.0/installation.html
 share/gtk-doc/html/libgda-5.0/introduction.html
+share/gtk-doc/html/libgda-5.0/left-insensitive.png
 share/gtk-doc/html/libgda-5.0/left.png
 share/gtk-doc/html/libgda-5.0/libgda-5.0-Attributes-manager.html
 share/gtk-doc/html/libgda-5.0/libgda-5.0-Configuration.html
 share/gtk-doc/html/libgda-5.0/libgda-5.0-Default-Data-handlers.html
 share/gtk-doc/html/libgda-5.0/libgda-5.0-Gda-Value.html
 share/gtk-doc/html/libgda-5.0/libgda-5.0-GdaDataComparator.html
+share/gtk-doc/html/libgda-5.0/libgda-5.0-GdaDataModelBdb.html
 share/gtk-doc/html/libgda-5.0/libgda-5.0-GdaDataPivot.html
 share/gtk-doc/html/libgda-5.0/libgda-5.0-GdaMutex.html
 share/gtk-doc/html/libgda-5.0/libgda-5.0-GdaRepetitiveStatement.html
@@ -402,6 +402,7 @@ share/gtk-doc/html/libgda-5.0/provider_notes_sqlcipher.html
 share/gtk-doc/html/libgda-5.0/provider_notes_sqlite.html
 share/gtk-doc/html/libgda-5.0/psupport.html
 share/gtk-doc/html/libgda-5.0/pt09.html
+share/gtk-doc/html/libgda-5.0/right-insensitive.png
 share/gtk-doc/html/libgda-5.0/right.png
 share/gtk-doc/html/libgda-5.0/stmt-compound.png
 share/gtk-doc/html/libgda-5.0/stmt-insert1.png
@@ -415,6 +416,7 @@ share/gtk-doc/html/libgda-5.0/transactions.html
 share/gtk-doc/html/libgda-5.0/tree-overview.png
 share/gtk-doc/html/libgda-5.0/tree-overview2.png
 share/gtk-doc/html/libgda-5.0/trees.html
+share/gtk-doc/html/libgda-5.0/up-insensitive.png
 share/gtk-doc/html/libgda-5.0/up.png
 share/gtk-doc/html/libgda-5.0/vi-basic-form.png
 share/gtk-doc/html/libgda-5.0/vi-cloud.png
@@ -474,6 +476,7 @@ share/libgda-5.0/web/mouseapp_2.js
 share/libgda-5.0/web/mouseirb_2.js
 share/locale/ar/LC_MESSAGES/libgda-5.0.mo
 share/locale/az/LC_MESSAGES/libgda-5.0.mo
+share/locale/bs/LC_MESSAGES/libgda-5.0.mo
 share/locale/ca/LC_MESSAGES/libgda-5.0.mo
 share/locale/ca@valencia/LC_MESSAGES/libgda-5.0.mo
 share/locale/cs/LC_MESSAGES/libgda-5.0.mo
@@ -507,7 +510,6 @@ share/locale/ne/LC_MESSAGES/libgda-5.0.mo
 share/locale/nl/LC_MESSAGES/libgda-5.0.mo
 share/locale/oc/LC_MESSAGES/libgda-5.0.mo
 share/locale/pa/LC_MESSAGES/libgda-5.0.mo
-share/locale/pl/LC_MESSAGES/libgda-5.0.mo
 share/locale/pt/LC_MESSAGES/libgda-5.0.mo
 share/locale/pt_BR/LC_MESSAGES/libgda-5.0.mo
 share/locale/ru/LC_MESSAGES/libgda-5.0.mo
@@ -516,7 +518,6 @@ share/locale/sk/LC_MESSAGES/libgda-5.0.mo
 share/locale/sl/LC_MESSAGES/libgda-5.0.mo
 share/locale/sq/LC_MESSAGES/libgda-5.0.mo
 share/locale/sr/LC_MESSAGES/libgda-5.0.mo
-share/locale/sr@Latn/LC_MESSAGES/libgda-5.0.mo
 share/locale/sr@latin/LC_MESSAGES/libgda-5.0.mo
 share/locale/sv/LC_MESSAGES/libgda-5.0.mo
 share/locale/tg/LC_MESSAGES/libgda-5.0.mo
