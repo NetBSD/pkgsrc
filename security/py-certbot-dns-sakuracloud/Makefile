@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2019/05/07 08:50:36 adam Exp $
+# $NetBSD: Makefile,v 1.6 2019/05/17 06:46:31 adam Exp $
 
-DISTNAME=	certbot-dns-sakuracloud-0.34.1
+DISTNAME=	certbot-dns-sakuracloud-0.34.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/certbot-dns-sakuracloud/}
