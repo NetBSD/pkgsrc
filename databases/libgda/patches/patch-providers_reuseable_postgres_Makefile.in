@@ -1,4 +1,6 @@
-$NetBSD: patch-providers_reuseable_postgres_Makefile.in,v 1.1 2013/10/06 19:55:38 joerg Exp $
+$NetBSD: patch-providers_reuseable_postgres_Makefile.in,v 1.2 2019/05/17 08:20:34 wiz Exp $
+
+For building postgres plugin as a separate package.
 
 --- providers/reuseable/postgres/Makefile.in.orig	2013-10-02 11:59:18.000000000 +0000
 +++ providers/reuseable/postgres/Makefile.in
