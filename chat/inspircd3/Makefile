@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2019/05/11 21:15:26 nia Exp $
+# $NetBSD: Makefile,v 1.7 2019/05/17 09:59:18 nia Exp $
 
-DISTNAME=	inspircd-3.0.1
-PKGREVISION=	1
+DISTNAME=	inspircd-3.1.0
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=inspircd/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 EXTRACT_USING=	bsdtar
 USE_TOOLS+=	gmake perl pkg-config
-USE_LANGUAGES=	c gnu++03
+USE_LANGUAGES=	c99 c++03
 HAS_CONFIGURE=	yes
 MAKE_FILE=	GNUmakefile
 MAKE_ENV+=	INSTALL=${INSTALL:Q}
@@ -29,6 +28,9 @@ CONFIGURE_ARGS+=	--config-dir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--data-dir=${PREFIX}/inspircd/data
 CONFIGURE_ARGS+=	--log-dir=${PREFIX}/inspircd/logs
 CONFIGURE_ARGS+=	--script-dir=${PREFIX}/inspircd/scripts
+CONFIGURE_ARGS+=	--disable-auto-extras
+CONFIGURE_ARGS+=	--distribution-label=pkgsrc
+
 CONFIG_SHELL=		${PERL5}
 
 REPLACE_PERL+=		tools/genssl
@@ -90,17 +92,18 @@ INSTALLATION_DIRS+=	${EGDIR}
 INSTALLATION_DIRS+=	${EGDIR}/sql
 INSTALLATION_DIRS+=	${EGDIR}/services
 
-INSPIRCD_EXTRAS_OFF+=	m_regex_re2.cpp
-INSPIRCD_EXTRAS_OFF+=	m_regex_tre.cpp
-
-CONFIGURE_ARGS+=	--distribution-label=pkgsrc
+INSPIRCD_EXTRAS+=	m_regex_posix.cpp
 
 .include "options.mk"
 
+.if !empty(PKG_OPTIONS:Mopenssl) || !empty(PKG_OPTIONS:Mgnutls) || \
+    !empty(PKG_OPTIONS:Mmbedtls)
+INSPIRCD_EXTRAS+=	m_sslrehashsignal.cpp
+.endif
+
 post-configure:
 	cd ${WRKSRC} && ${CONFIGURE_ENV} ${PERL5} ./configure \
-	    --enable-extras=${INSPIRCD_EXTRAS_ON:C/\.cpp[ ]* m_/.cpp,m_/gW} \
-	    --disable-extras=${INSPIRCD_EXTRAS_OFF:C/\.cpp[ ]* m_/.cpp,m_/gW}
+	    --enable-extras=${INSPIRCD_EXTRAS:S/.cpp m_/.cpp,m_/gW}
 
 post-install:
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/examples/* ${DESTDIR}${EGDIR}
