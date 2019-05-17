@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2144 2019/05/16 23:23:07 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.2145 2019/05/17 06:47:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3689,3 +3689,13 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/nim to 0.19.6 [ryoon 2019-05-16]
 	Added sysutils/u-boot-zynq-zybo-z7 version 2018.11 [alnsn 2019-05-16]
 	Updated www/otter-browser to 1.0.01 [gutteridge 2019-05-16]
+	Updated security/py-acme to 0.34.2 [adam 2019-05-17]
+	Updated security/py-certbot to 0.34.2 [adam 2019-05-17]
+	Updated security/py-certbot-apache to 0.34.2 [adam 2019-05-17]
+	Updated security/py-certbot-dns-luadns to 0.34.2 [adam 2019-05-17]
+	Updated security/py-certbot-dns-nsone to 0.34.2 [adam 2019-05-17]
+	Updated security/py-certbot-dns-ovh to 0.34.2 [adam 2019-05-17]
+	Updated security/py-certbot-dns-rfc2136 to 0.34.2 [adam 2019-05-17]
+	Updated security/py-certbot-dns-route53 to 0.34.2 [adam 2019-05-17]
+	Updated security/py-certbot-dns-sakuracloud to 0.34.2 [adam 2019-05-17]
+	Updated security/py-certbot-nginx to 0.34.2 [adam 2019-05-17]
