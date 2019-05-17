@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2149 2019/05/17 10:12:37 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2150 2019/05/17 16:11:28 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3704,3 +3704,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-tox to 3.11.1 [adam 2019-05-17]
 	Updated chat/inspircd3 to 3.1.0 [nia 2019-05-17]
 	Updated net/chrony to 3.5 [nia 2019-05-17]
+	Updated www/webkit-gtk to 2.24.2 [leot 2019-05-17]
