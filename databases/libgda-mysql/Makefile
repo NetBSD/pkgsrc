@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2016/03/05 11:28:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2019/05/17 08:20:34 wiz Exp $
 
 LIBGDA_PROVIDER=	mysql
-PKGREVISION=		2
 
 .include "../../databases/libgda/Makefile.common"
 
