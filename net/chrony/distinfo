@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.12 2018/10/01 15:53:58 nia Exp $
+$NetBSD: distinfo,v 1.13 2019/05/17 10:12:27 nia Exp $
 
-SHA1 (chrony-3.4.tar.gz) = fa41e595e7041a9deda76a69e970a023091474f6
-RMD160 (chrony-3.4.tar.gz) = 6accfb0b4ff50675f1f2a12d2d3560077b82aeab
-SHA512 (chrony-3.4.tar.gz) = 4fbb0311c8d363a87edd6f5d1be3d8554da169f260ba23c1ad9e8c567808258c6fd7513ba630d6fa27453ecfd81f0ece0e26d5ee2f98ca47fbc9887181a36918
-Size (chrony-3.4.tar.gz) = 453056 bytes
+SHA1 (chrony-3.5.tar.gz) = 79e9aeace143550300387a99f17bff04b45673f7
+RMD160 (chrony-3.5.tar.gz) = 1989fac77dc98557e63a22e46e61cf85fced4a33
+SHA512 (chrony-3.5.tar.gz) = c4f6376a44d71b6ac2b6d86e3d6fb4348642faeef7f3f3a4d6431627b5645efcc868b005cc398c8292bc3b63a1161fbd1a042c6ac2a0595843f908fe32eed90c
+Size (chrony-3.5.tar.gz) = 458226 bytes
 SHA1 (patch-Makefile.in) = 42ebfcdbce472a173890571625efc4fef583d5b6
 SHA1 (patch-doc_Makefile.in) = 8e9902690ff431fd47429d53346faf2ac8f1b923
 SHA1 (patch-examples_chrony.conf.example3) = 9566820e1db21435580f134cefc0bcb94d619dda
