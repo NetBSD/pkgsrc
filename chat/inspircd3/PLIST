@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/05/04 10:50:04 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/05/17 09:59:18 nia Exp $
 bin/inspircd
 bin/inspircd-genssl
 lib/inspircd/modules/core_channel.so
@@ -101,11 +101,13 @@ lib/inspircd/modules/m_ircv3_chghost.so
 lib/inspircd/modules/m_ircv3_ctctags.so
 lib/inspircd/modules/m_ircv3_echomessage.so
 lib/inspircd/modules/m_ircv3_invitenotify.so
+lib/inspircd/modules/m_ircv3_msgid.so
 lib/inspircd/modules/m_ircv3_servertime.so
 lib/inspircd/modules/m_ircv3_sts.so
 lib/inspircd/modules/m_joinflood.so
 lib/inspircd/modules/m_kicknorejoin.so
 lib/inspircd/modules/m_knock.so
+${PLIST.ldap}lib/inspircd/modules/m_ldap.so
 lib/inspircd/modules/m_ldapauth.so
 lib/inspircd/modules/m_ldapoper.so
 lib/inspircd/modules/m_lockserv.so
