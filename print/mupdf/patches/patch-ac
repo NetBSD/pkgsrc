@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.22 2019/05/13 11:03:58 leot Exp $
+$NetBSD: patch-ac,v 1.23 2019/05/17 05:45:10 wiz Exp $
 
 - libtool support 
 - Install target cleanup
@@ -18,7 +18,7 @@ $NetBSD: patch-ac,v 1.22 2019/05/13 11:03:58 leot Exp $
 -AR_CMD = $(QUIET_AR) $(MKTGTDIR) ; $(AR) cr $@ $^
 +CC_CMD = $(QUIET_CC) $(MKTGTDIR) ; $(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -MMD -MP -o $@ -c $<
 +CXX_CMD = $(QUIET_CXX) $(MKTGTDIR) ; $(LIBTOOL) --mode=compile $(CXX) $(CFLAGS) -MMD -MP -o $@ -c $<
-+AR_CMD = $(QUIET_AR) $(MKTGTDIR) ; $(LIBTOOL) --mode=link $(CC) -o $@ -version-info 0:0:0 -rpath $(PREFIX)/lib $^
++AR_CMD = $(QUIET_AR) $(MKTGTDIR) ; $(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ -version-info 0:0:0 -rpath $(PREFIX)/lib $^
  ifdef RANLIB
    RANLIB_CMD = $(QUIET_RANLIB) $(RANLIB) $@
  endif
