@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2146 2019/05/17 08:21:22 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2147 2019/05/17 08:39:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3700,3 +3700,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/py-certbot-dns-sakuracloud to 0.34.2 [adam 2019-05-17]
 	Updated security/py-certbot-nginx to 0.34.2 [adam 2019-05-17]
 	Updated databases/libgda to 5.2.9 [wiz 2019-05-17]
+	Updated devel/py-requests to 2.22.0 [adam 2019-05-17]
+	Updated devel/py-tox to 3.11.1 [adam 2019-05-17]
