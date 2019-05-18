@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2018/10/03 09:33:41 nia Exp $
+# $NetBSD: Makefile.common,v 1.4 2019/05/18 09:42:03 nia Exp $
 #
 # used by emulators/libretro-bsnes-mercury/Makefile
 # used by emulators/libretro-bsnes-mercury-accuracy/Makefile
@@ -34,6 +34,13 @@ PATCHDIR=	${.CURDIR}/../../emulators/libretro-bsnes-mercury/patches
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/out/bsnes_mercury_${BSNES_PROFILE}_libretro.so \
 	    ${DESTDIR}${PREFIX}/lib/libretro/bsnes_mercury_${BSNES_PROFILE}_libretro.so
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+# Needed in libco/aarch64.c
+.if ${MACHINE_ARCH} == "aarch64" || ${MACHINE_ARCH} == "aarch64eb"
+CFLAGS+=	-DHAVE_POSIX_MEMALIGN=1
+.endif
 
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
