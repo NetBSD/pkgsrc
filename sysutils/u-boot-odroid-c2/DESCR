@@ -3,8 +3,3 @@ several other processors, which can be installed in a boot ROM and used to
 initialize and test the hardware or to download and run application code.
 
 This package provides U-Boot for the Odroid C2 board.
-
-See http://git.denx.de/?p=u-boot.git;a=blob;f=board/amlogic/odroid-c2/README
-for instructions how to install it.
-
-
