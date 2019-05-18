@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2018/08/16 13:25:27 nia Exp $
+# $NetBSD: options.mk,v 1.9 2019/05/18 10:34:33 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libretro-mupen64plus
 PKG_OPTIONS_REQUIRED_GROUPS=	graphics
@@ -18,9 +18,13 @@ PKG_SUGGESTED_OPTIONS+=		opengl
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mopengl)
-.include "../../graphics/MesaLib/buildlink3.mk"
-.elif !empty(PKG_OPTIONS:Mrpi)
+.if !empty(PKG_OPTIONS:Mrpi)
 MAKE_ENV+=	platform=rpi
 .include "../../misc/raspberrypi-userland/buildlink3.mk"
+.else
+MAKE_ENV+=	platform=unix
+.endif
+
+.if !empty(PKG_OPTIONS:Mopengl)
+.include "../../graphics/MesaLib/buildlink3.mk"
 .endif
