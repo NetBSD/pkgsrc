@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2018/10/20 13:17:00 wen Exp $
+# $NetBSD: Makefile,v 1.10 2019/05/18 04:09:49 wen Exp $
 
-DISTNAME=	Test-Time-0.07
+DISTNAME=	Test-Time-0.08
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
