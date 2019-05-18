@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2156 2019/05/18 04:17:56 wen Exp $
+$NetBSD: CHANGES-2019,v 1.2157 2019/05/18 04:21:55 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3711,3 +3711,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated time/p5-Test-Time to 0.08 [wen 2019-05-18]
 	Updated time/p5-Time-Duration-Parse to 0.15 [wen 2019-05-18]
 	Updated time/p5-Time-Duration to 1.21 [wen 2019-05-18]
+	Updated www/p5-libwww to 6.39 [wen 2019-05-18]
