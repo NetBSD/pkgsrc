@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/01/22 17:17:55 martin Exp $
-share/u-boot/odroid-c2/u-boot
-share/u-boot/odroid-c2/u-boot-dtb.bin
+@comment $NetBSD: PLIST,v 1.2 2019/05/18 17:55:06 thorpej Exp $
+share/u-boot/odroid-c2/bl1.bin.hardkernel
+share/u-boot/odroid-c2/installboot.plist
+share/u-boot/odroid-c2/u-boot.gxbb
