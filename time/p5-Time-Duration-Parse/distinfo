@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2018/07/07 11:42:11 wen Exp $
+$NetBSD: distinfo,v 1.7 2019/05/18 04:12:38 wen Exp $
 
-SHA1 (Time-Duration-Parse-0.14.tar.gz) = 33be618734170df36ed7b623a2116e1d47b1630c
-RMD160 (Time-Duration-Parse-0.14.tar.gz) = 1ec43135e160968ca845b8382eda2a15a7d1a61e
-SHA512 (Time-Duration-Parse-0.14.tar.gz) = 49dcb7d3979df7e84141ebf9262b2283dfe535502b71633d95424376146d81bbf5d6932035dde878a5b1bef265d84a029412ff0187927569cf48ad193ea2f8e3
-Size (Time-Duration-Parse-0.14.tar.gz) = 11641 bytes
+SHA1 (Time-Duration-Parse-0.15.tar.gz) = 3227f993f5ad826758102fb2a8876bb8564ba648
+RMD160 (Time-Duration-Parse-0.15.tar.gz) = 8a16b01730c23c890a2305b2805fb792ec5d0dda
+SHA512 (Time-Duration-Parse-0.15.tar.gz) = 1cd4b303cedc58d8513165297369b3705c2fe07db9b626c922829a8a86586bbdf631cd06052924dfaa030a5179e121bbb9c0d8b7159d54e137cb9e70f3086e20
+Size (Time-Duration-Parse-0.15.tar.gz) = 11735 bytes
