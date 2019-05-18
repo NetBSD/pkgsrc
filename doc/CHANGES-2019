@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2161 2019/05/18 10:34:58 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2162 2019/05/18 16:12:36 mlelstv Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3724,3 +3724,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed meta-pkgs/mono-gnome-bindings [wiz 2019-05-18]
 	Removed meta-pkgs/py-gnome-bindings [wiz 2019-05-18]
 	Updated emulators/libretro-mupen64plus to 20190426 [nia 2019-05-18]
+	Updated sysutils/ipmitool to 1.8.18nb2 [mlelstv 2019-05-18]
