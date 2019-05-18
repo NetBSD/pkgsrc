@@ -1,14 +1,14 @@
-$NetBSD: patch-src_ircd.c,v 1.1 2019/02/08 13:09:35 fox Exp $
+$NetBSD: patch-src_ircd.c,v 1.2 2019/05/18 20:34:56 fox Exp $
 
 Properly check for possible fgets(3) errors (otherwise possible
 unrelated errors are logged).
 
---- src/ircd.c.orig	2018-04-04 22:33:37.000000000 +0000
+--- src/ircd.c.orig	2019-04-24 17:50:27.000000000 +0000
 +++ src/ircd.c
-@@ -265,8 +265,11 @@ check_pidfile(const char *filename)
+@@ -236,8 +236,11 @@ check_pidfile(const char *filename)
    if ((fb = fopen(filename, "r")))
    {
-     if (!fgets(buf, 20, fb))
+     if (fgets(buf, 20, fb) == NULL)
 -      ilog(LOG_TYPE_IRCD, "Error reading from pid file %s: %s",
 -           filename, strerror(errno));
 +    {
