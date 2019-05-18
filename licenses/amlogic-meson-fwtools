@@ -1,0 +1,17 @@
+The amlogic-meson-fwtools are distributed only in binary form by board
+vendors who use Amlogic Meson SoCs.  These are not for redistribution;
+the package merely facilitates downloading them for your own use on your
+own Meson-based boards.
+
+Hardkernel supplies the tools:
+
+    https://github.com/hardkernel/u-boot/tree/odroidc2-v2015.01
+
+	bin/aml_encrypt_gxb
+	bin/aml_fip_create
+
+BayLibre supplies the tools:
+
+    https://github.com/BayLibre/u-boot/tree/libretech-cc
+
+	bin/aml_encrypt_gxl
