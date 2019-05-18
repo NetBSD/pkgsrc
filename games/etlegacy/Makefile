@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/04/11 20:56:34 nia Exp $
+# $NetBSD: Makefile,v 1.2 2019/05/18 17:29:47 nia Exp $
 
 PKGNAME=	etlegacy-2.76
+PKGREVISION=	1
 CATEGORIES=	games
 
 DIST_SUBDIR=	etlegacy-${PKGVERSION_NOREV}
@@ -16,13 +17,16 @@ SITES.etlegacy.tar.gz= \
 SITES.etlegacy-libs.tar.gz= \
     -https://github.com/etlegacy/etlegacy-libs/archive/${LIBS_TAG}.tar.gz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://www.etlegacy.com/
 COMMENT=	Open source Wolfenstein: Enemy Territory client and server
 LICENSE=	gnu-gpl-v3
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+
+CMAKE_ARGS+=	-DRENDERER_DYNAMIC=OFF # doesn't work with builtin MesaLib
+CMAKE_ARGS+=	-DFEATURE_RENDERER2=OFF # experimental, buggy
 
 CMAKE_ARGS+=	-DBUNDLED_CURL=OFF
 CMAKE_ARGS+=	-DBUNDLED_FREETYPE=OFF
