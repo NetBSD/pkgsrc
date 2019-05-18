@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2167 2019/05/18 20:37:01 fox Exp $
+$NetBSD: CHANGES-2019,v 1.2168 2019/05/18 23:33:32 fox Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3730,3 +3730,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/u-boot to 2018.11nb3 [thorpej 2019-05-18]
 	Updated www/php-nextcloud to 16.0.1 [ryoon 2019-05-18]
 	Updated chat/ircd-hybrid to 8.2.25 [fox 2019-05-18]
+	Updated audio/fasttracker2 to 2.155 [fox 2019-05-18]
