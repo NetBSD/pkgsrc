@@ -1,6 +1,8 @@
-$NetBSD: patch-frontend_drivers_platform__unix.c,v 1.3 2019/05/08 12:40:05 nia Exp $
+$NetBSD: patch-frontend_drivers_platform__unix.c,v 1.4 2019/05/18 12:27:47 nia Exp $
 
 Pick up paths from pkgsrc.
+
+Avoid dereferencing a null pointer returned from getenv (see pull/8805).
 
 --- frontend/drivers/platform_unix.c.orig	2019-05-08 06:06:23.000000000 +0000
 +++ frontend/drivers/platform_unix.c
@@ -58,3 +60,14 @@ Pick up paths from pkgsrc.
     fill_pathname_join(g_defaults.dirs[DEFAULT_DIR_SHADER], base_path,
           "shaders", sizeof(g_defaults.dirs[DEFAULT_DIR_SHADER]));
     fill_pathname_join(g_defaults.dirs[DEFAULT_DIR_CHEATS], base_path,
+@@ -2523,7 +2506,9 @@ enum retro_language frontend_unix_get_us
+       }
+    }
+ #else
+-   lang = rarch_get_language_from_iso(getenv("LANG"));
++   char *envvar = getenv("LANG");
++   if (envvar)
++      lang = rarch_get_language_from_iso(getenv("LANG"));
+ #endif
+ #endif
+    return lang;
