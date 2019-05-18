@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20.4.1 2019/05/18 15:30:05 mlelstv Exp $
+# $NetBSD: Makefile,v 1.20.4.2 2019/05/18 16:03:57 mlelstv Exp $
 #
 
 DISTNAME=		ipmitool-1.8.18
-PKGREVISION=		2
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ipmitool/}
 
@@ -13,7 +13,7 @@ COMMENT=		Command-line utility for managing IPMI devices
 GNU_CONFIGURE=		yes
 INSTALLATION_DIRS+=	share/examples/ipmitool share/doc/ipmitool
 
-CONFIGURE_ARGS.NetBSD+=		--disable-intf-imb
+CONFIGURE_ARGS.NetBSD+=		--disable-intf-open --disable-intf-imb
 CONFIGURE_ARGS.DragonFly+=	--disable-intf-open --disable-intf-imb
 CONFIGURE_ARGS.SunOS+=		--enable-solaris-opt
 
