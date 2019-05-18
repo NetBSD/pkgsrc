@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2019/05/18 12:27:47 nia Exp $
+# $NetBSD: Makefile,v 1.23 2019/05/18 14:58:53 nia Exp $
 
 PKGNAME=	retroarch-${RETROARCH_VERSION}
 DISTNAME=	RetroArch-${RETROARCH_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/RetroArch/releases/download/v${RETROARCH_VERSION}/}
 EXTRACT_SUFX=	.tar.xz
