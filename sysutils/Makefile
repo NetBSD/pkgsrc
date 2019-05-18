@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.809 2019/05/16 22:38:30 alnsn Exp $
+# $NetBSD: Makefile,v 1.810 2019/05/18 17:39:48 thorpej Exp $
 #
 
 COMMENT=	System utilities
@@ -18,6 +18,7 @@ SUBDIR+=	amanda-client
 SUBDIR+=	amanda-common
 SUBDIR+=	amanda-plot
 SUBDIR+=	amanda-server
+SUBDIR+=	amlogic-meson-fwtools
 SUBDIR+=	amtterm
 SUBDIR+=	ansible
 SUBDIR+=	ansible2
