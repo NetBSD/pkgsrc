@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2165 2019/05/18 18:01:56 thorpej Exp $
+$NetBSD: CHANGES-2019,v 1.2166 2019/05/18 18:04:06 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3728,3 +3728,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added sysutils/amlogic-meson-fwtools version 0.0nb1 [thorpej 2019-05-18]
 	Updated sysutils/u-boot-odroid-c2 to 2018.11nb3 [thorpej 2019-05-18]
 	Updated sysutils/u-boot to 2018.11nb3 [thorpej 2019-05-18]
+	Updated www/php-nextcloud to 16.0.1 [ryoon 2019-05-18]
