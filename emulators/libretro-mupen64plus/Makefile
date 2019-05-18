@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/05/18 10:34:33 nia Exp $
+# $NetBSD: Makefile,v 1.19 2019/05/18 10:36:50 nia Exp $
 
 DISTNAME=	libretro-mupen64plus-20190426
 CATEGORIES=	emulators
@@ -56,7 +56,5 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/mupen64plus_libretro.so \
 	    ${DESTDIR}${PREFIX}/lib/libretro/mupen64plus_libretro.so
 
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
