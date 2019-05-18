@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2019/04/26 13:14:04 maya Exp $
+# $NetBSD: Makefile,v 1.39 2019/05/18 08:37:10 wiz Exp $
 
-DISTNAME=	bulk-large-20190305
-PKGREVISION=	1
+DISTNAME=	bulk-large-20190318
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -39,8 +38,6 @@ BUILD_DEPENDS+=	GConf-[0-9]*:../../devel/GConf
 BUILD_DEPENDS+=	gmp-[0-9]*:../../devel/gmp
 BUILD_DEPENDS+=	heirloom-libcommon-[0-9]*:../../devel/heirloom-libcommon
 BUILD_DEPENDS+=	libgetopt-[0-9]*:../../devel/libgetopt
-BUILD_DEPENDS+=	libgnome-[0-9]*:../../devel/libgnome
-BUILD_DEPENDS+=	libgnomeui-[0-9]*:../../devel/libgnomeui
 BUILD_DEPENDS+=	ocaml-[0-9]*:../../lang/ocaml
 BUILD_DEPENDS+=	gst-plugins0.10-base-[0-9]*:../../multimedia/gst-plugins0.10-base
 BUILD_DEPENDS+=	gstreamer0.10-[0-9]*:../../multimedia/gstreamer0.10
@@ -48,7 +45,6 @@ BUILD_DEPENDS+=	libsoup-[0-9]*:../../net/libsoup
 BUILD_DEPENDS+=	dbus-[0-9]*:../../sysutils/dbus
 BUILD_DEPENDS+=	dbus-glib-[0-9]*:../../sysutils/dbus-glib
 BUILD_DEPENDS+=	aspell-[0-9]*:../../textproc/aspell
-BUILD_DEPENDS+=	gnome-doc-utils-[0-9]*:../../textproc/gnome-doc-utils
 BUILD_DEPENDS+=	kdelibs4-[0-9]*:../../x11/kdelibs4
 BUILD_DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
 BUILD_DEPENDS+=	qt4-libs-[0-9]*:../../x11/qt4-libs
@@ -123,9 +119,6 @@ BUILD_DEPENDS+=	texlive-collection-latex-doc-[0-9]*:../../meta-pkgs/texlive-coll
 # 5. Desktops
 #
 BUILD_DEPENDS+=	deforaos-desktop-[0-9]*:../../meta-pkgs/deforaos-desktop
-BUILD_DEPENDS+=	desktop-gnome-[0-9]*:../../meta-pkgs/desktop-gnome
-BUILD_DEPENDS+=	gnome-[0-9]*:../../meta-pkgs/gnome
-BUILD_DEPENDS+=	gnome-platform-[0-9]*:../../meta-pkgs/gnome-platform
 BUILD_DEPENDS+=	gnustep-[0-9]*:../../meta-pkgs/gnustep
 BUILD_DEPENDS+=	kde4-[0-9]*:../../meta-pkgs/kde4
 BUILD_DEPENDS+=	matchbox-[0-9]*:../../meta-pkgs/matchbox
