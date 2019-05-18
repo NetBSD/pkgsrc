@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2163 2019/05/18 17:40:15 thorpej Exp $
+$NetBSD: CHANGES-2019,v 1.2164 2019/05/18 17:55:32 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3726,3 +3726,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated emulators/libretro-mupen64plus to 20190426 [nia 2019-05-18]
 	Updated sysutils/ipmitool to 1.8.18nb2 [mlelstv 2019-05-18]
 	Added sysutils/amlogic-meson-fwtools version 0.0nb1 [thorpej 2019-05-18]
+	Updated sysutils/u-boot-odroid-c2 to 2018.11nb3 [thorpej 2019-05-18]
