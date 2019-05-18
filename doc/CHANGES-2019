@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2160 2019/05/18 08:37:10 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2161 2019/05/18 10:34:58 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3723,3 +3723,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed meta-pkgs/desktop-gnome [wiz 2019-05-18]
 	Removed meta-pkgs/mono-gnome-bindings [wiz 2019-05-18]
 	Removed meta-pkgs/py-gnome-bindings [wiz 2019-05-18]
+	Updated emulators/libretro-mupen64plus to 20190426 [nia 2019-05-18]
