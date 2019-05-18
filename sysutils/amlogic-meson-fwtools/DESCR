@@ -1,0 +1,5 @@
+amlogic-meson-fwtools is a collection of tools for packaging trusted boot
+firmware for Amlogic Meson SoCs.
+
+This package includes tools distributed only in binary form by Amlogic
+board vendors.
