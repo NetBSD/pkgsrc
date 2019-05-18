@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2019/05/02 08:36:10 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2019/05/18 08:37:10 wiz Exp $
 
-DISTNAME=	bulk-medium-20190502
+DISTNAME=	bulk-medium-20190518
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -187,7 +187,6 @@ BUILD_DEPENDS+=	poppler-includes-[0-9]*:../../print/poppler-includes
 BUILD_DEPENDS+=	cyrus-sasl-[0-9]*:../../security/cyrus-sasl
 BUILD_DEPENDS+=	openssl-[0-9]*:../../security/openssl
 BUILD_DEPENDS+=	tcp_wrappers-[0-9]*:../../security/tcp_wrappers
-BUILD_DEPENDS+=	gnome-vfs-[0-9]*:../../sysutils/gnome-vfs
 BUILD_DEPENDS+=	libnotify-[0-9]*:../../sysutils/libnotify
 BUILD_DEPENDS+=	gtk2+-[0-9]*:../../x11/gtk2
 BUILD_DEPENDS+=	motif-[0-9]*:../../x11/motif
