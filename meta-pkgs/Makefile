@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2019/01/14 13:09:05 taca Exp $
+# $NetBSD: Makefile,v 1.102 2019/05/18 08:37:10 wiz Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -7,17 +7,11 @@ SUBDIR+=	boost
 SUBDIR+=	bulk-large
 SUBDIR+=	bulk-medium
 SUBDIR+=	bulk-small
-SUBDIR+=	c++-gnome-bindings
 SUBDIR+=	compiz-fusion
 SUBDIR+=	courier
 SUBDIR+=	deforaos-desktop
-SUBDIR+=	desktop-gnome
 SUBDIR+=	fxtv-capture
 SUBDIR+=	gimp-docs
-SUBDIR+=	gnome
-SUBDIR+=	gnome-devtools
-SUBDIR+=	gnome-mobile
-SUBDIR+=	gnome-platform
 SUBDIR+=	gnuradio
 SUBDIR+=	gnustep
 SUBDIR+=	gstreamer0.10-plugins
@@ -36,12 +30,10 @@ SUBDIR+=	modular-xorg-fonts
 SUBDIR+=	modular-xorg-libs
 SUBDIR+=	modular-xorg-protos
 SUBDIR+=	modular-xorg-utils
-SUBDIR+=	mono-gnome-bindings
 SUBDIR+=	nagios
 SUBDIR+=	netbsd-doc
 SUBDIR+=	netbsd-doc-print
 SUBDIR+=	netbsd-www
-SUBDIR+=	p5-gnome-bindings
 SUBDIR+=	php56-extensions
 SUBDIR+=	php71-extensions
 SUBDIR+=	php72-extensions
@@ -49,7 +41,6 @@ SUBDIR+=	php73-extensions
 SUBDIR+=	pkg_developer
 SUBDIR+=	pkgsrc-guide-tools
 SUBDIR+=	pulseaudio-tools
-SUBDIR+=	py-gnome-bindings
 SUBDIR+=	py-tryton-platform
 SUBDIR+=	qmail-server
 SUBDIR+=	ruby-gnome2
