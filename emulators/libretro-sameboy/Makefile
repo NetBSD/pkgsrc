@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/11/18 11:54:10 nia Exp $
+# $NetBSD: Makefile,v 1.4 2019/05/18 09:57:12 nia Exp $
 
 DISTNAME=	libretro-sameboy-0.11.2
 CATEGORIES=	emulators
@@ -15,7 +15,7 @@ EXTRACT_USING=	bsdtar
 BUILD_DIRS=	libretro
 USE_TOOLS+=	gmake
 
-BUILD_DEPENDS+=	rgbds-[0-9]*:../../devel/rgbds
+TOOL_DEPENDS+=	rgbds-[0-9]*:../../devel/rgbds
 
 MAKE_FLAGS+=	GIT_VERSION="${PKGVERSION}-pkgsrc"
 
