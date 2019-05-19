@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2169 2019/05/19 03:42:02 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.2170 2019/05/19 07:04:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3732,3 +3732,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated chat/ircd-hybrid to 8.2.25 [fox 2019-05-18]
 	Updated audio/fasttracker2 to 2.155 [fox 2019-05-18]
 	Updated cross/cc65 to 2.17 [ryoon 2019-05-19]
+	Updated textproc/gspell to 1.8.1 [wiz 2019-05-19]
