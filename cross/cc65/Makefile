@@ -1,25 +1,23 @@
-# $NetBSD: Makefile,v 1.13 2018/08/22 09:43:10 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/05/19 03:41:30 ryoon Exp $
 #
 
-DISTNAME=	cc65-sources-2.13.3
+DISTNAME=	cc65-2.17
 PKGNAME=	${DISTNAME:S/-sources//}
-PKGREVISION=	5
 CATEGORIES=	cross lang
-MASTER_SITES=	ftp://ftp.musoftware.de/pub/uz/cc65/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=cc65/}
+GITHUB_PROJECT=	cc65
+GITHUB_TAG=	V${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.cc65.org/
+HOMEPAGE=	https://cc65.github.io/
 COMMENT=	C cross compiler for 6502 target systems
+LICENSE=	zlib
 
-MAKE_JOBS_SAFE=		no
-
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-MAKE_FILE=	make/gcc.mak
+WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_TOOLS+=	gmake perl
-REPLACE_PERL=	src/ca65html/ca65html
+REPLACE_PERL=	util/ca65html
 
-INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
+INSTALL_MAKE_FLAGS+=	PREFIX=${PREFIX}
 
 SUBST_CLASSES+=		perl
 SUBST_MESSAGE.perl=	Fixing the path of perl.
