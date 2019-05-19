@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 00:47:43 agc Exp $
+$NetBSD: distinfo,v 1.4 2019/05/19 03:41:30 ryoon Exp $
 
-SHA1 (cc65-sources-2.13.3.tar.bz2) = 925c6edfcef7057e24ecb0704fa07210faec07bc
-RMD160 (cc65-sources-2.13.3.tar.bz2) = ad728cb61113af4592460bce7d42ca57f6a2fb1a
-SHA512 (cc65-sources-2.13.3.tar.bz2) = 135004bdd50abc749409f4a3efbc5c93a09e940d787b6a2034df4de8459e78fa5f813e2e0673cdf9f8bf50c6df8b1313b36ff395d6e82560d0e669da03130776
-Size (cc65-sources-2.13.3.tar.bz2) = 1103245 bytes
-SHA1 (patch-aa) = b78b62ea09c2c61221cae93d2d71588eca51b149
+SHA1 (cc65-2.17.tar.gz) = dc45b6ad5a4cf49c5b64701cfbb74fc79bb88f0f
+RMD160 (cc65-2.17.tar.gz) = cdb685dc2e1cd1cdf87b4f0f27f407196ead616c
+SHA512 (cc65-2.17.tar.gz) = b0208db2919e789322c609044c7eb6eae74905f3ec2d25688adc6c1ebe774cd437b0bc73c28032f123ed22ea544550cdd72ae1bc28e3aa7eea8cad3780f56828
+Size (cc65-2.17.tar.gz) = 2079081 bytes
