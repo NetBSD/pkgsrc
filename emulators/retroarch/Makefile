@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2019/05/18 14:58:53 nia Exp $
+# $NetBSD: Makefile,v 1.24 2019/05/19 23:13:03 nia Exp $
 
 PKGNAME=	retroarch-${RETROARCH_VERSION}
 DISTNAME=	RetroArch-${RETROARCH_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/RetroArch/releases/download/v${RETROARCH_VERSION}/}
 EXTRACT_SUFX=	.tar.xz
@@ -43,12 +43,14 @@ LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "../../mk/bsd.fast.prefs.mk"
 
+.if ${OPSYS} == "NetBSD"
 # On exit (load a game first):
 # assertion "pthread__tsd_destructors[key] != NULL" failed:
 # file "/usr/src/lib/libpthread/pthread_tsd.c", line 287, function "pthread_key_delete"
 # [1]   Abort trap (core dumped) retroarch
-.if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--disable-thread_storage
+# doesn't work yet
+CONFIGURE_ARGS+=	--disable-kms
 .endif
 
 .include "version.mk"
