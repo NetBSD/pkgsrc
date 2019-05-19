@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2017/12/12 09:53:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/05/19 08:07:54 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/flask_sqlalchemy/__init__.py
@@ -14,3 +13,6 @@ ${PYSITELIB}/flask_sqlalchemy/_compat.pyo
 ${PYSITELIB}/flask_sqlalchemy/model.py
 ${PYSITELIB}/flask_sqlalchemy/model.pyc
 ${PYSITELIB}/flask_sqlalchemy/model.pyo
+${PYSITELIB}/flask_sqlalchemy/utils.py
+${PYSITELIB}/flask_sqlalchemy/utils.pyc
+${PYSITELIB}/flask_sqlalchemy/utils.pyo
