@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2018/11/16 14:56:27 kleink Exp $
+$NetBSD: distinfo,v 1.8 2019/05/19 08:05:47 adam Exp $
 
-SHA1 (Flask-FlatPages-0.7.0.tar.gz) = b4e93812c3e988c74702bbe0b2691ce8a46eb3db
-RMD160 (Flask-FlatPages-0.7.0.tar.gz) = 5a6c18f0e1f6451a6a7d9872411cb1b5dbe89d1b
-SHA512 (Flask-FlatPages-0.7.0.tar.gz) = df2344767f66cde55a0ec0efeeb3bf40339a444683545a09035609b3e0d5d753a418b16b16d04326b494664aac3e78aae294d8eebfe71bf3b0e0df7a7715d589
-Size (Flask-FlatPages-0.7.0.tar.gz) = 23288 bytes
+SHA1 (Flask-FlatPages-0.7.1.tar.gz) = be345ef2c6edb1e5c1858ac878784a8e9a495bd3
+RMD160 (Flask-FlatPages-0.7.1.tar.gz) = 906a1fd6de24b8faad2039bc162a92ddbc2126ac
+SHA512 (Flask-FlatPages-0.7.1.tar.gz) = 8205de10a5048c53865b7dab0da0e3e4dae7f37da469cd8ac4f0fa7510ec78a6617a1cefa1b196bcb1fc919df6a178f20814c84e9660b8f76fb42e3fd624a363
+Size (Flask-FlatPages-0.7.1.tar.gz) = 23404 bytes
