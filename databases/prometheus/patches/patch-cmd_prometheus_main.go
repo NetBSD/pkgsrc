@@ -1,8 +1,8 @@
-$NetBSD: patch-cmd_prometheus_main.go,v 1.1 2019/03/17 12:55:13 tm Exp $
+$NetBSD: patch-cmd_prometheus_main.go,v 1.2 2019/05/20 09:23:00 adam Exp $
 
 Add prefix for SYSCONFDIR and VARBASE to store configuration file and metrics data at the correct location.
 
---- cmd/prometheus/main.go.orig	2019-03-12 04:09:20.000000000 +0000
+--- cmd/prometheus/main.go.orig	2019-04-24 15:30:33.000000000 +0000
 +++ cmd/prometheus/main.go
 @@ -133,7 +133,7 @@ func main() {
  	a.HelpFlag.Short('h')
@@ -13,7 +13,7 @@ Add prefix for SYSCONFDIR and VARBASE to store configuration file and metrics da
  
  	a.Flag("web.listen-address", "Address to listen on for UI, API, and telemetry.").
  		Default("0.0.0.0:9090").StringVar(&cfg.web.ListenAddress)
-@@ -163,16 +163,16 @@ func main() {
+@@ -163,10 +163,10 @@ func main() {
  		Default("false").BoolVar(&cfg.web.EnableAdminAPI)
  
  	a.Flag("web.console.templates", "Path to the console template directory, available at /consoles.").
@@ -26,6 +26,8 @@ Add prefix for SYSCONFDIR and VARBASE to store configuration file and metrics da
  
  	a.Flag("web.page-title", "Document title of Prometheus instance.").
  		Default("Prometheus Time Series Collection and Processing Server").StringVar(&cfg.web.PageTitle)
+@@ -175,7 +175,7 @@ func main() {
+ 		Default(".*").StringVar(&cfg.corsRegexString)
  
  	a.Flag("storage.tsdb.path", "Base path for metrics storage.").
 -		Default("data/").StringVar(&cfg.localStoragePath)
