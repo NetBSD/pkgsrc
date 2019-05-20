@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2018/12/09 03:04:34 sevan Exp $
+# $NetBSD: Makefile,v 1.20 2019/05/20 11:51:53 wiz Exp $
 
-DISTNAME=	libfilezilla-0.15.1
+DISTNAME=	libfilezilla-0.16.0
 CATEGORIES=	devel
-#MASTER_SITES=	https://dl2.cdn.filezilla-project.org/libfilezilla/
+# some kind of direct-download disabling
+#MASTER_SITES=	https://dl3.cdn.filezilla-project.org/libfilezilla/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
