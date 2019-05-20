@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2180 2019/05/20 11:45:52 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2181 2019/05/20 11:52:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3752,3 +3752,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/ncdc to 1.22 [wiz 2019-05-20]
 	Updated security/kpcli to 3.2 [nia 2019-05-20]
 	Updated sysutils/dbus to 1.12.14 [wiz 2019-05-20]
+	Updated net/libfilezilla to 0.16.0 [wiz 2019-05-20]
