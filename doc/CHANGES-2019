@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2192 2019/05/20 16:04:22 taca Exp $
+$NetBSD: CHANGES-2019,v 1.2193 2019/05/20 16:31:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3763,3 +3763,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/mserv to 0.35nb20 [martin 2019-05-20]
 	Updated devel/apache-ant to 1.10.6 [ryoon 2019-05-20]
 	Updated net/bind911 to 9.11.7 [taca 2019-05-20]
+	Updated net/bind914 to 9.14.2 [taca 2019-05-20]
