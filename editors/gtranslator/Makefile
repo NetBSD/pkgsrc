@@ -1,25 +1,21 @@
-# $NetBSD: Makefile,v 1.75 2019/05/10 13:14:18 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2019/05/20 11:24:29 wiz Exp $
 
-DISTNAME=	gtranslator-2.91.6
-PKGREVISION=	11
+DISTNAME=	gtranslator-3.32.1
 CATEGORIES=	editors
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtranslator/2.91/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtranslator/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wiki.gnome.org/Apps/Gtranslator
 COMMENT=	Gettext po file editor for the GNOME desktop environment
+LICENSE=	gnu-gpl-v3
 
-BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
+TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
+TOOL_DEPENDS+=	gettext-tools-[0-9]*:../../devel/gettext-tools
 
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
-USE_PKGLOCALEDIR=	yes
-GNU_CONFIGURE=		yes
-MANCOMPRESSED=		yes
+USE_TOOLS+=		gmake intltool pkg-config
 
-CONFIGURE_ARGS+=	--enable-debug=no
-CONFIGURE_ARGS+=	--enable-schemas-compile
-CONFIGURE_ARGS+=	--disable-scrollkeeper
+REPLACE_PYTHON+=	build-aux/meson/meson_post_install.py
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/libgda/buildlink3.mk"
@@ -28,14 +24,16 @@ CONFIGURE_ARGS+=	--disable-scrollkeeper
 .include "../../devel/libpeas/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../x11/gtksourceview3/buildlink3.mk"
+.include "../../textproc/gspell/buildlink3.mk"
+.include "../../x11/gtksourceview4/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 
-#.include "../../mk/omf-scrollkeeper.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../devel/py-meson/build.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
