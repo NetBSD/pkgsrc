@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2175 2019/05/20 09:25:24 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2176 2019/05/20 11:17:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3745,3 +3745,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/py-uncompyle6 to 3.3.3 [adam 2019-05-20]
 	Updated databases/prometheus to 2.9.2 [adam 2019-05-20]
 	Updated archivers/unrar to 5.7.5 [adam 2019-05-20]
+	Updated devel/yarn to 1.16.0 [adam 2019-05-20]
+	Updated devel/py-ipykernel to 5.1.1 [adam 2019-05-20]
+	Updated net/py-ncclient to 0.6.4 [adam 2019-05-20]
