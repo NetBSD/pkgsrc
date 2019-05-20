@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/05/11 03:50:12 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/05/20 13:32:18 ryoon Exp $
 bin/generate
 bin/hugo
 gopkg/pkg/${GO_PLATFORM}/github.com/gohugoio/hugo/bufferpool.a
@@ -542,6 +542,7 @@ gopkg/src/github.com/gohugoio/hugo/docs/content/en/news/0.55.1-relnotes/index.md
 gopkg/src/github.com/gohugoio/hugo/docs/content/en/news/0.55.2-relnotes/index.md
 gopkg/src/github.com/gohugoio/hugo/docs/content/en/news/0.55.3-relnotes/index.md
 gopkg/src/github.com/gohugoio/hugo/docs/content/en/news/0.55.4-relnotes/index.md
+gopkg/src/github.com/gohugoio/hugo/docs/content/en/news/0.55.5-relnotes/index.md
 gopkg/src/github.com/gohugoio/hugo/docs/content/en/news/${PKGVERSION}-relnotes/index.md
 gopkg/src/github.com/gohugoio/hugo/docs/content/en/news/0.7-relnotes/index.md
 gopkg/src/github.com/gohugoio/hugo/docs/content/en/news/0.8-relnotes/index.md
