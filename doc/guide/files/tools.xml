@@ -1,11 +1,11 @@
-<!-- $NetBSD: tools.xml,v 1.7 2016/06/11 20:19:36 rillig Exp $ -->
+<!-- $NetBSD: tools.xml,v 1.8 2019/05/20 18:14:24 leot Exp $ -->
 
 <chapter id="tools">
 <title>Tools needed for building or running</title>
 
 <para>The <varname>USE_TOOLS</varname> definition is used both internally
 by pkgsrc and also for individual packages to define what commands
-are needed for building a package (like <varname>BUILD_DEPENDS</varname>)
+are needed for building a package (like <varname>TOOL_DEPENDS</varname>)
 or for later run-time of an installed packaged (such as
 <varname>DEPENDS</varname>).
 If the native system provides an adequate tool, then in many cases, a pkgsrc
