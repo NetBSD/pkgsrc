@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2172 2019/05/19 08:08:24 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2173 2019/05/20 01:37:02 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3740,3 +3740,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-flask to 1.0.3 [adam 2019-05-19]
 	Updated www/py-flask-flatpages to 0.7.1 [adam 2019-05-19]
 	Updated www/py-flask-sqlalchemy to 2.4.0 [adam 2019-05-19]
+	Updated net/unifi to 5.10.23 [gdt 2019-05-20]
