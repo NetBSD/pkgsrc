@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/11/08 18:36:14 bjs Exp $
+$NetBSD: patch-include_uriparser_UriBase.h,v 1.1 2019/05/20 07:44:59 adam Exp $
 
 --- include/uriparser/UriBase.h.orig	2007-09-18 23:10:11.000000000 -0400
 +++ include/uriparser/UriBase.h

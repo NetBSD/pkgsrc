@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2019/01/06 13:47:19 bsiegert Exp $
+$NetBSD: distinfo,v 1.11 2019/05/20 07:44:59 adam Exp $
 
-SHA1 (uriparser-0.9.1.tar.bz2) = 35b0f326bad6749c6a08da854e8ad0638d2fd198
-RMD160 (uriparser-0.9.1.tar.bz2) = 894281bcd38afd582e8f277f08346f9dc3d24ec6
-SHA512 (uriparser-0.9.1.tar.bz2) = c6a4f3b737d4c53ba14148a5be363d93947c8c32755b369726ccdd6e01e8a2293d2c94d448700fc97bb56092696b67965646ae07c9ef31be253e2279d0bc3821
-Size (uriparser-0.9.1.tar.bz2) = 372722 bytes
-SHA1 (patch-aa) = 71f3582a2988c6c35a1a2b1995d50f47f22939bd
+SHA1 (uriparser-0.9.3.tar.xz) = b9b424a3e16d32fadfc603de3f5f4a9d5dbe7c76
+RMD160 (uriparser-0.9.3.tar.xz) = a8b4b08a42c1dca7404a2bc592f928437aa44157
+SHA512 (uriparser-0.9.3.tar.xz) = fd821c5b441c5bbf9477ec9e3abfb4b3bf3789e1d874905ac8ba23b4a301a586a5fa03328dc62bc2b261d3b99b5c7c44f84b8faf57377bc2275ce0b78b58887b
+Size (uriparser-0.9.3.tar.xz) = 166328 bytes
+SHA1 (patch-include_uriparser_UriBase.h) = 71f3582a2988c6c35a1a2b1995d50f47f22939bd
