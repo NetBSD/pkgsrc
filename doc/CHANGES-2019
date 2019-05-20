@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2178 2019/05/20 11:30:37 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2179 2019/05/20 11:41:19 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3750,3 +3750,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/py-ncclient to 0.6.4 [adam 2019-05-20]
 	Updated editors/gtranslator to 3.32.1 [wiz 2019-05-20]
 	Updated net/ncdc to 1.22 [wiz 2019-05-20]
+	Updated security/kpcli to 3.2 [nia 2019-05-20]
