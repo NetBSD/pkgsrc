@@ -1,10 +1,10 @@
-$NetBSD: patch-bin_pkcs11_pkcs11-keygen.c,v 1.1 2019/04/30 02:51:38 taca Exp $
+$NetBSD: patch-bin_pkcs11_pkcs11-keygen.c,v 1.2 2019/05/20 16:03:55 taca Exp $
 
 * Honor HAVE_PKCS11_ECDSA.
 
---- bin/pkcs11/pkcs11-keygen.c.orig	2019-02-27 23:28:15.000000000 +0000
+--- bin/pkcs11/pkcs11-keygen.c.orig	2019-05-10 05:03:58.000000000 +0000
 +++ bin/pkcs11/pkcs11-keygen.c
-@@ -421,13 +421,23 @@ main(int argc, char *argv[]) {
+@@ -428,13 +428,23 @@ main(int argc, char *argv[]) {
  		id_offset = ECC_ID;
  
  		if (bits == 256) {
@@ -26,5 +26,5 @@ $NetBSD: patch-bin_pkcs11_pkcs11-keygen.c,v 1.1 2019/04/30 02:51:38 taca Exp $
 +			usage();
 +#endif
  		}
- 
+ #endif
  		break;
