@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.147 2019/01/02 18:48:21 tnn Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.148 2019/05/20 18:14:24 leot Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -291,7 +291,8 @@ ACCEPTABLE_LICENSES+=xv-license
     <para>Your package may depend on some other package being present
     - and there are various ways of expressing this dependency.
     pkgsrc supports the <varname>BUILD_DEPENDS</varname> and
-    <varname>DEPENDS</varname> definitions, the
+    <varname>DEPENDS</varname> and
+    <varname>TOOL_DEPENDS</varname> definitions, the
     <varname>USE_TOOLS</varname> definition, as well as dependencies
     via <filename>buildlink3.mk</filename>, which is the preferred way
     to handle dependencies, and which uses the variables named above.
@@ -301,15 +302,24 @@ ACCEPTABLE_LICENSES+=xv-license
     follows: The <varname>DEPENDS</varname> definition registers
     that pre-requisite in the binary package so it will be pulled in
     when the binary package is later installed, whilst the
-    <varname>BUILD_DEPENDS</varname> definition does not, marking a
-    dependency that is only needed for building the package.</para>
+    <varname>BUILD_DEPENDS</varname> and <varname>TOOL_DEPENDS</varname>
+    definitions does not, marking a dependency that is only needed for
+    building the package.</para>
 
     <para>This means that if you only need a package present whilst
     you are building, it should be noted as a
-    <varname>BUILD_DEPENDS</varname>.</para>
+    <varname>TOOL_DEPENDS</varname> or
+    <varname>BUILD_DEPENDS</varname>.  When cross-compiling,
+    <varname>TOOL_DEPENDS</varname> are <emphasis>native</emphasis>
+    packages, i.e. packages for the architecture where the package
+    is built;
+    <varname>BUILD_DEPENDS</varname> are <emphasis>target</emphasis>
+    packages, i.e. packages for the architecture for which the package
+    is built.</para>
 
-    <para>The format for a <varname>BUILD_DEPENDS</varname> and a
-    <varname>DEPENDS</varname> definition is:</para>
+    <para>The format for <varname>BUILD_DEPENDS</varname>,
+    <varname>DEPENDS</varname> and <varname>TOOL_DEPENDS</varname>
+    definition is:</para>
 
 <programlisting>
 &lt;pre-req-package-name&gt;:../../&lt;category&gt;/&lt;pre-req-package&gt;
@@ -346,11 +356,22 @@ ACCEPTABLE_LICENSES+=xv-license
 
       <listitem>
 	<para>If your package needs binaries from another package to build,
-	use the <varname>BUILD_DEPENDS</varname> definition:</para>
+	use the <varname>TOOL_DEPENDS</varname> definition:</para>
 
 <programlisting>
-BUILD_DEPENDS+= itstool-[0-9]*:../../textproc/itstool
+TOOL_DEPENDS+= itstool-[0-9]*:../../textproc/itstool
 </programlisting>
+      </listitem>
+
+      <listitem>
+	<para>If your package needs static libraries to link against, header
+	files to include, etc. from another package to build,
+	use the <varname>BUILD_DEPENDS</varname> definition.</para>
+
+<!--
+<programlisting>
+BUILD_DEPENDS+= TODO: find a good example
+</programlisting> -->
       </listitem>
 
       <listitem>

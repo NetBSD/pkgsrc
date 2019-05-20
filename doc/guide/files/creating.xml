@@ -1,4 +1,4 @@
-<!-- $NetBSD: creating.xml,v 1.27 2018/06/04 23:55:00 minskim Exp $ -->
+<!-- $NetBSD: creating.xml,v 1.28 2019/05/20 18:14:24 leot Exp $ -->
 
 <chapter id="creating">
 <title>Creating a new pkgsrc package from scratch</title>
@@ -43,13 +43,22 @@ created first. The <filename>buildlink3.mk</filename> file makes sure that the p
 version of the dependency and where it can be found in pkgsrc. This line
 should be placed in the third paragraph. If the dependency is only
 needed for building the package, but not when using it, use
-<varname>BUILD_DEPENDS</varname> instead of <varname>DEPENDS</varname>.
+<varname>TOOL_DEPENDS</varname> or <varname>BUILD_DEPENDS</varname>
+instead of <varname>DEPENDS</varname>.
+The difference between <varname>TOOL_DEPENDS</varname> and
+<varname>BUILD_DEPENDS</varname> occurs when cross-compiling:
+<varname>TOOL_DEPENDS</varname> are <emphasis>native</emphasis>
+packages, i.e. packages for the architecture where the package
+is built;
+<varname>BUILD_DEPENDS</varname> are <emphasis>target</emphasis>
+packages, i.e. packages for the architecture for which the package
+is built.
 Your package may then look like this:</para>
 
 <programlisting>
 [...]
 
-BUILD_DEPENDS+= libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=  libxslt-[0-9]*:../../textproc/libxslt
 DEPENDS+=       screen-[0-9]*:../../misc/screen
 DEPENDS+=       screen>=4.0:../../misc/screen
 
