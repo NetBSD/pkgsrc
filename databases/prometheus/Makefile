@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/05/20 09:23:00 adam Exp $
+# $NetBSD: Makefile,v 1.3 2019/05/20 10:08:01 adam Exp $
 
 DISTNAME=	prometheus-2.9.2
 MASTER_SITES=	${MASTER_SITE_GITHUB:=prometheus/}
@@ -6,7 +6,7 @@ CATEGORIES=	databases
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/prometheus/prometheus
+HOMEPAGE=	https://prometheus.io/
 COMMENT=	The Prometheus monitoring system and time series database
 LICENSE=	apache-2.0
 
@@ -39,8 +39,8 @@ CONF_FILES+=	${EXAMPLE_DIR}/${f} ${PKG_SYSCONFDIR}/${f}
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/documentation/examples/prometheus.yml ${DESTDIR}${PREFIX}/${EXAMPLE_DIR}
-	${RUN} cd ${WRKDIR} && ${PAX} -rw bin ${DESTDIR}${PREFIX}
-	${RUN} cd ${WRKSRC} && \
+	cd ${WRKDIR} && ${PAX} -rw bin ${DESTDIR}${PREFIX}
+	cd ${WRKSRC} && \
 		${PAX} -rw consoles ${DESTDIR}${PREFIX}/${EXAMPLE_DIR} && \
 		${PAX} -rw console_libraries ${DESTDIR}${PREFIX}/${EXAMPLE_DIR}
 
