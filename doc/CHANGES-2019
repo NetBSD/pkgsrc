@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2193 2019/05/20 16:31:31 taca Exp $
+$NetBSD: CHANGES-2019,v 1.2194 2019/05/20 16:58:29 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3764,3 +3764,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/apache-ant to 1.10.6 [ryoon 2019-05-20]
 	Updated net/bind911 to 9.11.7 [taca 2019-05-20]
 	Updated net/bind914 to 9.14.2 [taca 2019-05-20]
+	Updated net/youtube-dl to 20190520 [leot 2019-05-20]
