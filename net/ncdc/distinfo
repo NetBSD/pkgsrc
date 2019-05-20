@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/03/31 20:43:38 wiz Exp $
+$NetBSD: distinfo,v 1.4 2019/05/20 11:30:24 wiz Exp $
 
-SHA1 (ncdc-1.21.tar.gz) = a416776fdfefd2da3bb1619feddbc53a5ee9249d
-RMD160 (ncdc-1.21.tar.gz) = 8a8a889bb3e2e062b0e0b179b5f29f9940ce07df
-SHA512 (ncdc-1.21.tar.gz) = de182e190e3fb26451aad403975ec232b14ce908633cb2d9713582e2af8555fb55e2ea7de160b5b7faa05558f25dac0700dabbf5b7d1acd1aaa26d1bfe033c0c
-Size (ncdc-1.21.tar.gz) = 370452 bytes
+SHA1 (ncdc-1.22.tar.gz) = 7414bff62811eeb00471d4b5abbd41206fde27e6
+RMD160 (ncdc-1.22.tar.gz) = 1ec5de5ae972431ec7924953465cc5312e1cb727
+SHA512 (ncdc-1.22.tar.gz) = 894f33a40664fa2087bea54040821e41de4d3f2875a5fdc6ea5aa26c4f5d55f48cf16be2ab40cf9e3ac8b557931a23972c34112016aec8023d3c3441c419e3bc
+Size (ncdc-1.22.tar.gz) = 371485 bytes
