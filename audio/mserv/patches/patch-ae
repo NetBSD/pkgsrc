@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.9 2009/09/26 21:16:58 martin Exp $
+$NetBSD: patch-ae,v 1.10 2019/05/20 14:47:13 martin Exp $
 
 --- mserv/mp3info.c.orig	2003-07-29 02:17:48.000000000 +0200
-+++ mserv/mp3info.c	2009-09-26 22:11:43.000000000 +0200
++++ mserv/mp3info.c	2019-05-20 16:41:02.827154805 +0200
 @@ -26,7 +26,17 @@
  #define h_id(val)             ((val>>19)&1)
  #define h_thing(val)          ((val>>20)&0xfff)
@@ -47,12 +47,13 @@ $NetBSD: patch-ae,v 1.9 2009/09/26 21:16:58 martin Exp $
    if (frame->frameid[0] == 'T' && memcmp(frame->frameid + 1, "XXX", 3)) {
 -    frame->data[frame->datalen] = 0;
 -    if (frame->data[0] == 0) /* Only handle non unicode */
+-      strcpy(frame->data, frame->data + 1);
+-    else
+-      frame->data[0] = 0;
 +    if (frame->data[0] == 0) {
 +      /* ISO8859-1 */
 +      frame->data[frame->datalen] = 0;
-       strcpy(frame->data, frame->data + 1);
--    else
--      frame->data[0] = 0;
++      memmove(frame->data, frame->data + 1, frame->datalen);
 +    } else if (frame->data[0] == 1 && frame->datalen >= 5) {
 +      /* unicode, convert as long as it is 8 bit only */
 +      int d = 0, i = 1, off0 = 0, off1 = 1;
