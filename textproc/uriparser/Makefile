@@ -1,33 +1,25 @@
-# $NetBSD: Makefile,v 1.12 2019/01/06 13:47:19 bsiegert Exp $
+# $NetBSD: Makefile,v 1.13 2019/05/20 07:44:59 adam Exp $
 
-DISTNAME=	uriparser-0.9.1
+DISTNAME=	uriparser-0.9.3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=uriparser/}
 GITHUB_RELEASE=	${DISTNAME}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://uriparser.github.io/
 COMMENT=	URI parsing library
 LICENSE=	modified-bsd
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+= --disable-doc
-USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake
-USE_FEATURES=	snprintf
-PKGCONFIG_OVERRIDE+= liburiparser.pc.in
-TEST_TARGET=	check
+USE_CMAKE=		yes
+USE_FEATURES=		snprintf
+USE_LANGUAGES=		c c++
+PKGCONFIG_OVERRIDE+=	liburiparser.pc.in
+TEST_TARGET=		test
 
-LDFLAGS.SunOS+=	-lsocket -lnsl
+CMAKE_ARGS+=		-DURIPARSER_BUILD_DOCS=OFF
 
-.include "../../mk/bsd.fast.prefs.mk"
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
-# needs "libcpptest" for test
-#.if !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
-#USE_LANGUAGES=	c c++
-#.else
-CONFIGURE_ARGS+= --disable-test
-#.endif
-
+.include "../../devel/googletest/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
