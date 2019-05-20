@@ -1,8 +1,8 @@
-$NetBSD: patch-lib_isc_stats.c,v 1.1 2019/04/30 03:34:34 taca Exp $
+$NetBSD: patch-lib_isc_stats.c,v 1.2 2019/05/20 16:31:08 taca Exp $
 
 * Platform fixes from NetBSD base system.
 
---- lib/isc/stats.c.orig	2019-04-06 20:09:59.000000000 +0000
+--- lib/isc/stats.c.orig	2019-05-10 04:51:34.000000000 +0000
 +++ lib/isc/stats.c
 @@ -30,7 +30,11 @@
  #define ISC_STATS_MAGIC			ISC_MAGIC('S', 't', 'a', 't')
@@ -15,4 +15,4 @@ $NetBSD: patch-lib_isc_stats.c,v 1.1 2019/04/30 03:34:34 taca Exp $
 +#endif
  
  struct isc_stats {
- 	/*% Unlocked */
+ 	unsigned int		magic;
