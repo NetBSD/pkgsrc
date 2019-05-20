@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2018/08/22 09:48:02 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/05/20 12:01:33 nia Exp $
 
-DISTNAME=	Clipboard-0.13
+DISTNAME=	Clipboard-0.20
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	8
 CATEGORIES=	x11 perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/K/KI/KING/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SH/SHLOMIF/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Clipboard/
