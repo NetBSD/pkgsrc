@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/03/13 18:02:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/05/20 11:16:34 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -88,6 +88,12 @@ ${PYSITELIB}/ncclient/operations/subscribe.pyo
 ${PYSITELIB}/ncclient/operations/third_party/__init__.py
 ${PYSITELIB}/ncclient/operations/third_party/__init__.pyc
 ${PYSITELIB}/ncclient/operations/third_party/__init__.pyo
+${PYSITELIB}/ncclient/operations/third_party/alu/__init__.py
+${PYSITELIB}/ncclient/operations/third_party/alu/__init__.pyc
+${PYSITELIB}/ncclient/operations/third_party/alu/__init__.pyo
+${PYSITELIB}/ncclient/operations/third_party/alu/rpc.py
+${PYSITELIB}/ncclient/operations/third_party/alu/rpc.pyc
+${PYSITELIB}/ncclient/operations/third_party/alu/rpc.pyo
 ${PYSITELIB}/ncclient/operations/third_party/h3c/__init__.py
 ${PYSITELIB}/ncclient/operations/third_party/h3c/__init__.pyc
 ${PYSITELIB}/ncclient/operations/third_party/h3c/__init__.pyo
