@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2019/05/18 14:58:53 nia Exp $
+$NetBSD: distinfo,v 1.15 2019/05/20 12:42:40 nia Exp $
 
 SHA1 (RetroArch-1.7.7.tar.xz) = 32288d3cc23319280c80968e9f0446e00f24db19
 RMD160 (RetroArch-1.7.7.tar.xz) = e019c8a6486706e076878adc0510178e5c8d5d81
@@ -9,4 +9,5 @@ SHA1 (patch-audio_drivers_audioio.c) = 50820a7f3fbf7685098efdb794dd4efa485df806
 SHA1 (patch-configuration.c) = 58873db839f8f0ed2e011d4c4c75b00e6293c239
 SHA1 (patch-frontend_drivers_platform__unix.c) = e81ba53af2bdd4cecc4007cc9556f06446bf3b3f
 SHA1 (patch-input_include_xfree86__keycodes.h) = cd3b59122e9075a96fccb01bce2110dfa9cc160e
+SHA1 (patch-libretro-common_features_features__cpu.c) = da4a66b16ef7ca194443a65e4efb8887e6d9bc3e
 SHA1 (patch-qb_config.libs.sh) = 0ec6ab7d49cdcd59c5938276517df1ee0212868e
