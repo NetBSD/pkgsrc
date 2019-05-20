@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2184 2019/05/20 12:16:32 fox Exp $
+$NetBSD: CHANGES-2019,v 1.2185 2019/05/20 12:32:46 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3742,3 +3742,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-flask-sqlalchemy to 2.4.0 [adam 2019-05-19]
 	Updated audio/fasttracker2 to 2.156 [fox 2019-05-20]
 	Updated devel/lua-rocks to 2.4.4 [fox 2019-05-20]
+	Updated pkgtools/pkgin to 0.11.8 [jperkin 2019-05-20]
