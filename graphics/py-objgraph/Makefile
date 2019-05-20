@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/08/19 09:40:37 adam Exp $
+# $NetBSD: Makefile,v 1.2 2019/05/20 12:10:37 adam Exp $
 
-DISTNAME=	objgraph-3.4.0
+DISTNAME=	objgraph-3.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/objgraph/}
