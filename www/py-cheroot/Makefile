@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2019/01/02 12:40:54 adam Exp $
+# $NetBSD: Makefile,v 1.23 2019/05/21 08:36:32 adam Exp $
 
-DISTNAME=	cheroot-6.5.4
+DISTNAME=	cheroot-6.5.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/Cheroot/}
@@ -32,7 +32,8 @@ DEPENDS+=	${PYPKGPREFIX}-backports.functools_lru_cache-[0-9]*:../../devel/py-bac
 USE_LANGUAGES=	# none
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} cheroot cheroot-${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} cheroot cheroot-${PYVERSSUFFIX} || ${TRUE}
 
 do-test:
 	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
