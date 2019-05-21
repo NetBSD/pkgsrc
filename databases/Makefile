@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.579 2019/05/15 18:04:07 jperkin Exp $
+# $NetBSD: Makefile,v 1.580 2019/05/21 05:52:18 adam Exp $
 
 COMMENT=	Databases
 
@@ -59,7 +59,6 @@ SUBDIR+=	java-tokyocabinet
 SUBDIR+=	jdbc-mysql31
 SUBDIR+=	jdbc-mysql5
 SUBDIR+=	jdbc-mysql51
-SUBDIR+=	jdbc-postgresql93
 SUBDIR+=	jdbc-postgresql94
 SUBDIR+=	kyotocabinet
 SUBDIR+=	lbdb
@@ -303,14 +302,6 @@ SUBDIR+=	postgresql11-plperl
 SUBDIR+=	postgresql11-plpython
 SUBDIR+=	postgresql11-pltcl
 SUBDIR+=	postgresql11-server
-SUBDIR+=	postgresql93
-SUBDIR+=	postgresql93-client
-SUBDIR+=	postgresql93-contrib
-SUBDIR+=	postgresql93-docs
-SUBDIR+=	postgresql93-plperl
-SUBDIR+=	postgresql93-plpython
-SUBDIR+=	postgresql93-pltcl
-SUBDIR+=	postgresql93-server
 SUBDIR+=	postgresql94
 SUBDIR+=	postgresql94-client
 SUBDIR+=	postgresql94-contrib
