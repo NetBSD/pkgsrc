@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.3 2018/10/17 14:44:39 hauke Exp $
+# $NetBSD: Makefile,v 1.4 2019/05/21 10:55:52 hauke Exp $
 
-DISTNAME=	tsm-8.1.6.0
+DISTNAME=	tsm-${PKGVER}
+PKGVER=		8.1.7.0
 PKGNAME=	${DISTNAME:C/-/8-/}
-PKGREVISION=	1
+#PKGREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	ftp://ftp.software.ibm.com/storage/tivoli-storage-management/maintenance/client/v8r1/Linux/LinuxX86/BA/v816/
-DISTFILES=	8.1.6.0-TIV-TSMBAC-LinuxX86.tar
+MASTER_SITES=	ftp://ftp.software.ibm.com/storage/tivoli-storage-management/maintenance/client/v8r1/Linux/LinuxX86/BA/v817/
+DISTFILES=	${PKGVER}-TIV-TSMBAC-LinuxX86.tar
 
 MAINTAINER=	hauke@NetBSD.org
 HOMEPAGE=	https://www.ibm.com/us-en/marketplace/data-protection-and-recovery
-COMMENT=	IBM Spectrum Protect (aka Tivoli Storage Manager) Client
+COMMENT=	IBM Spectrum Protect (aka Tivoli Storage Manager) Backup Client
 
 CONFLICTS+=	tsm-[0-9]*
 
@@ -31,7 +32,7 @@ NO_SRC_ON_FTP=  	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-NOT_FOR_PLATFORM=	Linux-*-* NetBSD-[0-1]*-*
+NOT_FOR_PLATFORM=	Linux-*-* NetBSD-[0-1].*-*
 
 EMUL_PLATFORMS=		linux-x86_64
 EMUL_MODULES.linux=	base
@@ -46,8 +47,8 @@ USE_TOOLS+=		rpm2pkg grep sed
 
 RPMFILES=		${WRKDIR}/TIVsm-BA.x86_64.rpm \
 			${WRKDIR}/TIVsm-API64.x86_64.rpm \
-			${WRKDIR}/gskcrypt64-8.0.50.86.linux.x86_64.rpm \
-			${WRKDIR}/gskssl64-8.0.50.86.linux.x86_64.rpm
+			${WRKDIR}/gskcrypt64-8.0.55.2.linux.x86_64.rpm \
+			${WRKDIR}/gskssl64-8.0.55.2.linux.x86_64.rpm
 
 EMUL_PKG_FMT=		rpm
 RPM2PKG_PREFIX=		${DESTDIR}${PREFIX}
