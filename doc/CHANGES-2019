@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2197 2019/05/21 08:36:57 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2198 2019/05/21 09:56:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3771,3 +3771,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/py-markdown to 3.1.1 [adam 2019-05-21]
 	Updated www/grafana to 6.1.6 [adam 2019-05-21]
 	Updated www/py-cheroot to 6.5.5 [adam 2019-05-21]
+	Updated benchmarks/google-benchmark to 1.5 [adam 2019-05-21]
