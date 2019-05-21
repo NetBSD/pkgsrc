@@ -1,42 +1,34 @@
-# $NetBSD: Makefile,v 1.10 2018/09/22 20:52:17 bsiegert Exp $
+# $NetBSD: Makefile,v 1.11 2019/05/21 08:32:04 adam Exp $
 
-GITHUB_PROJECT=	grafana
-DISTNAME=	grafana-4.6.2
+DISTNAME=	grafana-6.1.6
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grafana/}
-EXTRACT_SUFX=	.tar.gz # don't delete this, needed for variable expansion
 
 MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	https://grafana.com/
 COMMENT=	Metrics dashboard and graph editor
 LICENSE=	apache-2.0
 
-GR_DISTNAME=			${DISTNAME}${EXTRACT_SUFX}
-DISTFILES=			${GR_DISTNAME}
-EXTRACT_ONLY=			${GR_DISTNAME}
-EXTRACT_DIR.${GR_DISTNAME}=	${WRKDIR}/src/github.com/grafana
-WRKSRC=				${WRKDIR}/src/github.com/grafana/grafana
+DISTFILES=	${DEFAULT_DISTFILES}
 
 # We don't have suitable infrastructure in pkgsrc for generating frontend
 # assets, so we'll extract prebuilt frontend assets.
-FE_DISTNAME=			${DISTNAME}.linux-x64${EXTRACT_SUFX}
-SITES.${FE_DISTNAME}=		https://s3-us-west-2.amazonaws.com/grafana-releases/release/
+FE_DISTNAME=			${DISTNAME}.linux-amd64.tar.gz
 DISTFILES+=			${FE_DISTNAME}
-EXTRACT_ONLY+=			${FE_DISTNAME}
-EXTRACT_DIR.${FE_DISTNAME}=	${WRKDIR}/frontend_assets
+SITES.${FE_DISTNAME}=		https://dl.grafana.com/oss/release/
+EXTRACT_DIR.${FE_DISTNAME}=	${WRKDIR}/linux
 
-.include "../../lang/go/version.mk"
+GO_DIST_BASE=		${DISTNAME}
+GO_SRCPATH=		github.com/grafana/grafana
 
-BUILD_DEPENDS+=			${GO_PACKAGE_DEP}
+#BUILD_DEPENDS+=	yarn>=1.15.0:../../devel/yarn
 
 CHECK_PORTABILITY_SKIP=		packaging/rpm/control/postinst
 
 CHECK_RELRO_SKIP+=		bin/grafana-cli
 CHECK_RELRO_SKIP+=		bin/grafana-server
 
-PKGSRC_MAKE_ENV+=		GOPATH=${WRKDIR}
 USE_TOOLS+=			pax
 
 PUBLICDIR=	${PREFIX}/share/grafana/public
@@ -58,6 +50,8 @@ FILES_SUBST+=		GRAFANA_USER=${GRAFANA_USER:Q}
 FILES_SUBST+=		GRAFANA_GROUP=${GRAFANA_GROUP:Q}
 FILES_SUBST+=		DATADIR=${DATADIR:Q}
 
+.include "../../mk/bsd.prefs.mk"
+
 GRAFANA_USER?=		grafana
 GRAFANA_GROUP?=		grafana
 OWN_DIRS_PERMS+=	${DATADIR} ${GRAFANA_USER} ${GRAFANA_GROUP} 0700
@@ -69,33 +63,23 @@ PKG_GROUPS=		${GRAFANA_GROUP}
 PKG_USERS=		${GRAFANA_USER}:${GRAFANA_GROUP}
 RCD_SCRIPTS=		grafana
 
-INSTALLATION_DIRS+=	bin share/examples/grafana share/grafana/conf	\
-			  share/grafana/public
+INSTALLATION_DIRS+=	bin share/examples/grafana share/grafana/conf \
+			share/grafana/public
 
-CONF_FILES+=	${PREFIX}/share/grafana/conf/sample.ini		\
-		  ${PKG_SYSCONFDIR}/grafana.conf
+CONF_FILES+=	${PREFIX}/share/grafana/conf/sample.ini \
+		${PKG_SYSCONFDIR}/grafana.conf
 
-post-extract:
-	${MV} ${WRKDIR}/src/github.com/grafana/${DISTNAME}	\
-	  ${WRKDIR}/src/github.com/grafana/grafana
-
-do-build:
-.for b in grafana-server grafana-cli
-	cd ${WRKSRC} && ${SETENV} ${PKGSRC_MAKE_ENV}		\
-	  ${GO} build -ldflags "-w -X main.version=${PKGVERSION_NOREV} -X main.commit=${GITHUB_TAG} -X main.buildstamp=pkgsrc"	\
-	  -o ./bin/${b} ./pkg/cmd/${b}
-.endfor
+#post-build:
+#	cd ${WRKSRC} && yarn install --pure-lockfile && yarn build
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/grafana-server		\
-	  ${DESTDIR}${PREFIX}/bin/grafana-server
-	${INSTALL_PROGRAM} ${WRKSRC}//bin/grafana-cli		\
-	  ${DESTDIR}${PREFIX}/bin/grafana-cli
-	cd ${WRKDIR}/frontend_assets/${DISTNAME}/public &&	\
-	  ${PAX} -rw . ${DESTDIR}${PUBLICDIR}
-	${INSTALL_DATA} ${WRKSRC}/conf/defaults.ini		\
-	  ${DESTDIR}${PREFIX}/share/grafana/conf/defaults.ini
-	${INSTALL_DATA} ${WRKSRC}/conf/sample.ini		\
-	  ${DESTDIR}${PREFIX}/share/grafana/conf/sample.ini
+	cd ${WRKDIR} && ${PAX} -rw bin ${DESTDIR}${PREFIX}
+	cd ${WRKDIR}/linux/${DISTNAME}/public && \
+		${PAX} -rw . ${DESTDIR}${PUBLICDIR}
+	${INSTALL_DATA} ${WRKSRC}/conf/defaults.ini \
+		${DESTDIR}${PREFIX}/share/grafana/conf/defaults.ini
+	${INSTALL_DATA} ${WRKSRC}/conf/sample.ini \
+		${DESTDIR}${PREFIX}/share/grafana/conf/sample.ini
 
+.include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
