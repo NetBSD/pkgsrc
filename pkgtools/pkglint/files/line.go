@@ -176,22 +176,22 @@ func (line *LineImpl) Fatalf(format string, args ...interface{}) {
 	if trace.Tracing {
 		trace.Stepf("Fatalf: %q, %v", format, args)
 	}
-	G.Diag(line, Fatal, format, args...)
+	G.Logger.Diag(line, Fatal, format, args...)
 }
 
 func (line *LineImpl) Errorf(format string, args ...interface{}) {
-	G.Diag(line, Error, format, args...)
+	G.Logger.Diag(line, Error, format, args...)
 }
 
 func (line *LineImpl) Warnf(format string, args ...interface{}) {
-	G.Diag(line, Warn, format, args...)
+	G.Logger.Diag(line, Warn, format, args...)
 }
 
 func (line *LineImpl) Notef(format string, args ...interface{}) {
-	G.Diag(line, Note, format, args...)
+	G.Logger.Diag(line, Note, format, args...)
 }
 
-func (line *LineImpl) Explain(explanation ...string) { G.Explain(explanation...) }
+func (line *LineImpl) Explain(explanation ...string) { G.Logger.Explain(explanation...) }
 
 func (line *LineImpl) String() string {
 	return sprintf("%s:%s: %s", line.Filename, line.Linenos(), line.Text)
