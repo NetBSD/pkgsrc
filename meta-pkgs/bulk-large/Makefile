@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2019/05/18 08:37:10 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2019/05/21 11:56:43 jperkin Exp $
 
 DISTNAME=	bulk-large-20190318
 CATEGORIES=	meta-pkgs
@@ -62,7 +62,7 @@ BUILD_DEPENDS+=	mysql-client>=5.5<5.6:../../databases/mysql55-client
 BUILD_DEPENDS+=	mysql-server>=5.5<5.6:../../databases/mysql55-server
 BUILD_DEPENDS+=	mysql-client>=5.6:../../databases/mysql56-client
 BUILD_DEPENDS+=	mysql-server>=5.6:../../databases/mysql56-server
-BUILD_DEPENDS+=	postgresql93-[0-9]*:../../databases/postgresql93
+BUILD_DEPENDS+=	postgresql94-[0-9]*:../../databases/postgresql94
 BUILD_DEPENDS+=	valgrind-[0-9]*:../../devel/valgrind
 BUILD_DEPENDS+=	abiword-[0-9]*:../../editors/abiword
 BUILD_DEPENDS+=	emacs25>=25<26:../../editors/emacs25
