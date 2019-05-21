@@ -285,9 +285,9 @@ func (pkg *Package) loadPackageMakefile() (MkLines, MkLines) {
 	//  a single string. Maybe it makes sense to print the file inclusion hierarchy
 	//  to quickly see files that cannot be included because of unresolved variables.
 	if G.Opts.DumpMakefile {
-		G.out.WriteLine("Whole Makefile (with all included files) follows:")
+		G.Logger.out.WriteLine("Whole Makefile (with all included files) follows:")
 		for _, line := range allLines.lines.Lines {
-			G.out.WriteLine(line.String())
+			G.Logger.out.WriteLine(line.String())
 		}
 	}
 
