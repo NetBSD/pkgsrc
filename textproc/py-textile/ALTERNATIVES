@@ -1,1 +1,1 @@
-bin/textile @PREFIX@/bin/textile@PYVERSSUFFIX@
+bin/pytextile @PREFIX@/bin/pytextile-@PYVERSSUFFIX@
