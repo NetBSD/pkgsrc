@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2017/09/16 08:39:59 ryoon Exp $
+$NetBSD: distinfo,v 1.11 2019/05/21 17:44:46 wiz Exp $
 
-SHA1 (poedit-2.0.3.tar.gz) = fdd155ea8654813d5a931fc923b1e0edb9d482ec
-RMD160 (poedit-2.0.3.tar.gz) = bb17292544232b2d468fbe97d0de5bf299773499
-SHA512 (poedit-2.0.3.tar.gz) = 513f3b312dfbe3fdeb6970d5fcae9004fd6655fa097364e9aa38f95f939ccb72fedea13fbcdcd1f522470fc7504fb1c452e03b207890af251e75e4a417e45830
-Size (poedit-2.0.3.tar.gz) = 2526838 bytes
-SHA1 (patch-aa) = 4c7d373091e6508a0791e4c01864f79a770e1bde
+SHA1 (poedit-2.2.3.tar.gz) = 4675bb29b7b1f7e2eada68355273ee0d36bb19a6
+RMD160 (poedit-2.2.3.tar.gz) = 682c7ef9bde1c75e3cb5088a79066ce29febc73c
+SHA512 (poedit-2.2.3.tar.gz) = 566f397add593d0b05b995cbd1cff1b063b6eb49b02058511f13c27ed5887685816f8dd9280e1a6be2dd594049c6eecd73efc5cf7835475d3cb5a94fe38f280f
+Size (poedit-2.2.3.tar.gz) = 2834106 bytes
+SHA1 (patch-aa) = ec8d4d55bbfdd890c126e2f742fd83e3612170f2
+SHA1 (patch-src_welcomescreen.cpp) = bd8ef11e4b6bae515a3bbb241bacef1f779a410d
