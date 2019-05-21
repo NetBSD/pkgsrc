@@ -109,7 +109,7 @@ func (s *Suite) Test_Pkglint_Main__panic(c *check.C) {
 
 	pkg := t.SetUpPackage("category/package")
 
-	G.out = nil // Force an error that cannot happen in practice.
+	G.Logger.out = nil // Force an error that cannot happen in practice.
 
 	c.Check(
 		func() { t.Main(pkg) },
@@ -280,8 +280,8 @@ func (s *Suite) Test_Pkglint__realistic(c *check.C) {
 
 	cmdline := os.Getenv("PKGLINT_TESTCMDLINE")
 	if cmdline != "" {
-		G.out = NewSeparatorWriter(os.Stdout)
-		G.err = NewSeparatorWriter(os.Stderr)
+		G.Logger.out = NewSeparatorWriter(os.Stdout)
+		G.Logger.err = NewSeparatorWriter(os.Stderr)
 		trace.Out = os.Stdout
 		t.Main(strings.Fields(cmdline)...)
 	}

@@ -76,7 +76,7 @@ func (s *Suite) Test_Logger_Logf__profiling(c *check.C) {
 	G.Logger.histo = histogram.New()
 	line.Warnf("Warning.")
 
-	G.Logger.histo.PrintStats(G.out.out, "loghisto", -1)
+	G.Logger.histo.PrintStats(G.Logger.out.out, "loghisto", -1)
 
 	t.CheckOutputLines(
 		"WARN: filename:123: Warning.",
@@ -101,7 +101,7 @@ func (s *Suite) Test_Logger_Logf__profiling_autofix(c *check.C) {
 
 	// The AUTOFIX line is not counted in the histogram although
 	// it uses the same code path as the other messages.
-	G.Logger.histo.PrintStats(G.out.out, "loghisto", -1)
+	G.Logger.histo.PrintStats(G.Logger.out.out, "loghisto", -1)
 
 	t.CheckOutputLines(
 		"NOTE: filename:123: Autofix note.",
@@ -409,6 +409,35 @@ func (s *Suite) Test_Logger_Explain__empty_lines(c *check.C) {
 		"")
 }
 
+// In an explanation, it can happen that the pkgsrc directory is mentioned.
+// While pkgsrc does not support either PKGSRCDIR or PREFIX or really any
+// other directory name to contain spaces, during pkglint development this
+// may happen because the pkgsrc root is in the temporary directory.
+//
+// In this situation, the ~ placeholder must still be properly substituted.
+func (s *Suite) Test_Logger_Explain__line_wrapped_temporary_directory(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("--explain")
+	filename := t.File("filename.mk")
+	mkline := t.NewMkLine(filename, 123, "")
+
+	mkline.Notef("Just a note to get the below explanation.")
+	G.Logger.Explain(
+		sprintf("%[1]s %[1]s %[1]s %[1]s %[1]s %[1]q", filename))
+
+	t.CheckOutputLinesIgnoreSpace(
+		"NOTE: ~/filename.mk:123: Just a note to get the below explanation.",
+		"",
+		"\t~/filename.mk",
+		"\t~/filename.mk",
+		"\t~/filename.mk",
+		"\t~/filename.mk",
+		"\t~/filename.mk",
+		"\t\"~/filename.mk\"",
+		"")
+}
+
 func (s *Suite) Test_Logger_ShowSummary__explanations_with_only(c *check.C) {
 	t := s.Init(c)
 
@@ -418,21 +447,21 @@ func (s *Suite) Test_Logger_ShowSummary__explanations_with_only(c *check.C) {
 	// Neither the warning nor the corresponding explanation are logged.
 	line.Warnf("Filtered warning.")
 	line.Explain("Explanation for the above warning.")
-	G.ShowSummary()
+	G.Logger.ShowSummary()
 
 	// Since the above warning is filtered out by the --only option,
 	// adding --explain to the options would not show any explanation.
 	// Therefore, "Run \"pkglint -e\"" is not advertised in this case,
 	// but see below.
-	c.Check(G.explanationsAvailable, equals, false)
+	c.Check(G.Logger.explanationsAvailable, equals, false)
 	t.CheckOutputLines(
 		"Looks fine.")
 
 	line.Warnf("This warning is interesting.")
 	line.Explain("This explanation is available.")
-	G.ShowSummary()
+	G.Logger.ShowSummary()
 
-	c.Check(G.explanationsAvailable, equals, true)
+	c.Check(G.Logger.explanationsAvailable, equals, true)
 	t.CheckOutputLines(
 		"WARN: Makefile:27: This warning is interesting.",
 		"0 errors and 1 warning found.",
@@ -647,10 +676,11 @@ func (s *Suite) Test_Logger_Logf__gcc_format(c *check.C) {
 
 	t.SetUpCommandLine("--gcc-output-format")
 
-	G.Logf(Note, "filename", "123", "Both filename and line number.", "Both filename and line number.")
-	G.Logf(Note, "", "123", "No filename, only line number.", "No filename, only line number.")
-	G.Logf(Note, "filename", "", "Filename without line number.", "Filename without line number.")
-	G.Logf(Note, "", "", "Neither filename nor line number.", "Neither filename nor line number.")
+	logger := &G.Logger
+	logger.Logf(Note, "filename", "123", "Both filename and line number.", "Both filename and line number.")
+	logger.Logf(Note, "", "123", "No filename, only line number.", "No filename, only line number.")
+	logger.Logf(Note, "filename", "", "Filename without line number.", "Filename without line number.")
+	logger.Logf(Note, "", "", "Neither filename nor line number.", "Neither filename nor line number.")
 
 	t.CheckOutputLines(
 		"filename:123: note: Both filename and line number.",
@@ -664,10 +694,11 @@ func (s *Suite) Test_Logger_Logf__traditional_format(c *check.C) {
 
 	t.SetUpCommandLine("--gcc-output-format=no")
 
-	G.Logf(Note, "filename", "123", "Both filename and line number.", "Both filename and line number.")
-	G.Logf(Note, "", "123", "No filename, only line number.", "No filename, only line number.")
-	G.Logf(Note, "filename", "", "Filename without line number.", "Filename without line number.")
-	G.Logf(Note, "", "", "Neither filename nor line number.", "Neither filename nor line number.")
+	logger := &G.Logger
+	logger.Logf(Note, "filename", "123", "Both filename and line number.", "Both filename and line number.")
+	logger.Logf(Note, "", "123", "No filename, only line number.", "No filename, only line number.")
+	logger.Logf(Note, "filename", "", "Filename without line number.", "Filename without line number.")
+	logger.Logf(Note, "", "", "Neither filename nor line number.", "Neither filename nor line number.")
 
 	t.CheckOutputLines(
 		"NOTE: filename:123: Both filename and line number.",
@@ -681,7 +712,7 @@ func (s *Suite) Test_Logger_Errorf__gcc_format(c *check.C) {
 
 	t.SetUpCommandLine("--gcc-output-format")
 
-	G.Errorf("filename", "Cannot be opened for %s.", "reading")
+	G.Logger.Errorf("filename", "Cannot be opened for %s.", "reading")
 
 	t.CheckOutputLines(
 		"filename: error: Cannot be opened for reading.")
@@ -693,8 +724,8 @@ func (s *Suite) Test_Logger_Logf__strange_characters(c *check.C) {
 
 	t.SetUpCommandLine("--gcc-output-format", "--source", "--explain")
 
-	G.Logf(Note, "filename", "123", "Format.", "Unicode \U0001F645 and ANSI \x1B are never logged.")
-	G.Explain(
+	G.Logger.Logf(Note, "filename", "123", "Format.", "Unicode \U0001F645 and ANSI \x1B are never logged.")
+	G.Logger.Explain(
 		"Even a \u0007 in the explanation is silent.")
 
 	t.CheckOutputLines(
@@ -780,17 +811,17 @@ func (s *Suite) Test_Logger_shallBeLogged(c *check.C) {
 
 	t.SetUpCommandLine( /* none */ )
 
-	c.Check(G.shallBeLogged("Options should not contain whitespace."), equals, true)
+	c.Check(G.Logger.shallBeLogged("Options should not contain whitespace."), equals, true)
 
 	t.SetUpCommandLine("--only", "whitespace")
 
-	c.Check(G.shallBeLogged("Options should not contain whitespace."), equals, true)
-	c.Check(G.shallBeLogged("Options should not contain space."), equals, false)
+	c.Check(G.Logger.shallBeLogged("Options should not contain whitespace."), equals, true)
+	c.Check(G.Logger.shallBeLogged("Options should not contain space."), equals, false)
 
 	t.SetUpCommandLine( /* none again */ )
 
-	c.Check(G.shallBeLogged("Options should not contain whitespace."), equals, true)
-	c.Check(G.shallBeLogged("Options should not contain space."), equals, true)
+	c.Check(G.Logger.shallBeLogged("Options should not contain whitespace."), equals, true)
+	c.Check(G.Logger.shallBeLogged("Options should not contain space."), equals, true)
 }
 
 // Even if verbose logging is disabled, the "Replacing" diagnostics
@@ -816,7 +847,7 @@ func (s *Suite) Test_Logger_Logf__panic(c *check.C) {
 	t := s.Init(c)
 
 	t.ExpectPanic(
-		func() { G.Logf(Error, "filename", "13", "No period", "No period") },
+		func() { G.Logger.Logf(Error, "filename", "13", "No period", "No period") },
 		"Pkglint internal error: Diagnostic format \"No period\" must end in a period.")
 }
 

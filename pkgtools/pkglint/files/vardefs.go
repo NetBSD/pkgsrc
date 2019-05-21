@@ -1281,7 +1281,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	pkg("OVERRIDE_DIRDEPTH*", BtInteger)
 	pkg("OVERRIDE_GNU_CONFIG_SCRIPTS", BtYes)
 	pkg("OWNER", BtMailAddress)
-	pkglist("OWN_DIRS", BtPathname)
+	pkglist("OWN_DIRS", BtPathmask)
 	pkglist("OWN_DIRS_PERMS", BtPerms)
 	sys("PAMBASE", BtPathname)
 	usr("PAM_DEFAULT", enum("linux-pam openpam solaris-pam"))
