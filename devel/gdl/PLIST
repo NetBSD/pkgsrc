@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/01/10 14:06:49 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/05/21 18:52:31 wiz Exp $
 include/libgdl-3.0/gdl/gdl-dock-bar.h
 include/libgdl-3.0/gdl/gdl-dock-item-grip.h
 include/libgdl-3.0/gdl/gdl-dock-item.h
@@ -33,11 +33,13 @@ share/gtk-doc/html/gdl-3.0/deprecated.html
 share/gtk-doc/html/gdl-3.0/gdl-3.0.devhelp2
 share/gtk-doc/html/gdl-3.0/home.png
 share/gtk-doc/html/gdl-3.0/index.html
-share/gtk-doc/html/gdl-3.0/index.sgml
+share/gtk-doc/html/gdl-3.0/left-insensitive.png
 share/gtk-doc/html/gdl-3.0/left.png
 share/gtk-doc/html/gdl-3.0/private.html
+share/gtk-doc/html/gdl-3.0/right-insensitive.png
 share/gtk-doc/html/gdl-3.0/right.png
 share/gtk-doc/html/gdl-3.0/style.css
+share/gtk-doc/html/gdl-3.0/up-insensitive.png
 share/gtk-doc/html/gdl-3.0/up.png
 share/gtk-doc/html/gdl-3.0/widget.html
 share/locale/am/LC_MESSAGES/gdl-3.mo
@@ -48,6 +50,7 @@ share/locale/az/LC_MESSAGES/gdl-3.mo
 share/locale/be/LC_MESSAGES/gdl-3.mo
 share/locale/bg/LC_MESSAGES/gdl-3.mo
 share/locale/bn/LC_MESSAGES/gdl-3.mo
+share/locale/bs/LC_MESSAGES/gdl-3.mo
 share/locale/ca/LC_MESSAGES/gdl-3.mo
 share/locale/ca@valencia/LC_MESSAGES/gdl-3.mo
 share/locale/cs/LC_MESSAGES/gdl-3.mo
@@ -64,6 +67,7 @@ share/locale/et/LC_MESSAGES/gdl-3.mo
 share/locale/eu/LC_MESSAGES/gdl-3.mo
 share/locale/fi/LC_MESSAGES/gdl-3.mo
 share/locale/fr/LC_MESSAGES/gdl-3.mo
+share/locale/fur/LC_MESSAGES/gdl-3.mo
 share/locale/ga/LC_MESSAGES/gdl-3.mo
 share/locale/gl/LC_MESSAGES/gdl-3.mo
 share/locale/gu/LC_MESSAGES/gdl-3.mo
