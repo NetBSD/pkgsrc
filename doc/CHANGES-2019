@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2212 2019/05/21 18:22:16 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2213 2019/05/21 18:52:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3787,3 +3787,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated pkgtools/pkglint to 5.7.10 [rillig 2019-05-21]
 	Updated textproc/py-html5-parser to 0.4.6 [wiz 2019-05-21]
 	Updated textproc/oniguruma to 6.9.2 [wiz 2019-05-21]
+	Updated devel/gdl to 3.28.0 [wiz 2019-05-21]
