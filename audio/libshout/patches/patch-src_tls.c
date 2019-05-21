@@ -1,18 +1,18 @@
-$NetBSD: patch-src_tls.c,v 1.1 2018/03/05 09:16:28 kamil Exp $
+$NetBSD: patch-src_tls.c,v 1.2 2019/05/21 15:49:27 wiz Exp $
 
-Support OpenSSL 1.1
+Fix build with OpenSSL-1.1.
 
---- src/tls.c.orig	2015-06-18 04:27:45.000000000 +0000
+--- src/tls.c.orig	2019-04-29 10:00:11.000000000 +0000
 +++ src/tls.c
-@@ -65,7 +65,11 @@ static inline int tls_setup(shout_tls_t 
+@@ -90,7 +90,11 @@ static inline int tls_setup(shout_tls_t 
  
- 	SSL_library_init();
- 	SSL_load_error_strings();
+     SSL_library_init();
+     SSL_load_error_strings();
 +#if OPENSSL_VERSION_NUMBER >= 0x10100000
-+	OpenSSL_add_all_algorithms();
++    OpenSSL_add_all_algorithms();
 +#else
- 	SSLeay_add_all_algorithms();
+     SSLeay_add_all_algorithms();
 +#endif
-  	SSLeay_add_ssl_algorithms();
+     SSLeay_add_ssl_algorithms();
  
- 	meth = TLSv1_client_method();
+     meth = TLSv1_client_method();
