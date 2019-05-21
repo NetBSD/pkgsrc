@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2199 2019/05/21 10:56:02 hauke Exp $
+$NetBSD: CHANGES-2019,v 1.2200 2019/05/21 11:26:44 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3773,3 +3773,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-cheroot to 6.5.5 [adam 2019-05-21]
 	Updated benchmarks/google-benchmark to 1.5 [adam 2019-05-21]
 	Updated sysutils/tsm8 to 8.1.7.0 [hauke 2019-05-21]
+	Updated devel/ocaml-ppx_tools_versioned to 5.2.2 [jaapb 2019-05-21]
