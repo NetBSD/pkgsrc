@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2215 2019/05/21 20:55:20 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2216 2019/05/21 22:00:08 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3790,3 +3790,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/gdl to 3.28.0 [wiz 2019-05-21]
 	Updated security/caff to 2.10 [wiz 2019-05-21]
 	Updated devel/py-mercurial to 5.0 [wiz 2019-05-21]
+	Updated textproc/libhighlight to 3.51 [schmonz 2019-05-21]
+	Updated textproc/highlight to 3.51 [schmonz 2019-05-21]
+	Updated textproc/p5-highlight to 3.51 [schmonz 2019-05-21]
