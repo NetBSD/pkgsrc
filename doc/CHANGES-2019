@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2194 2019/05/20 16:58:29 leot Exp $
+$NetBSD: CHANGES-2019,v 1.2195 2019/05/21 05:59:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3765,3 +3765,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/bind911 to 9.11.7 [taca 2019-05-20]
 	Updated net/bind914 to 9.14.2 [taca 2019-05-20]
 	Updated net/youtube-dl to 20190520 [leot 2019-05-20]
+	Removed databases/postgresql93 [adam 2019-05-21]
+	Removed databases/jdbc-postgresql93 [adam 2019-05-21]
