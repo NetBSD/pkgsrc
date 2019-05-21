@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 03:27:27 agc Exp $
+$NetBSD: distinfo,v 1.9 2019/05/21 18:52:31 wiz Exp $
 
-SHA1 (gdl-3.10.0.tar.xz) = 7342f127c64e298cd33d90e661d34ecab842e92f
-RMD160 (gdl-3.10.0.tar.xz) = 3e08cbe532d54de26d5d2b9091db51e5878cc92d
-SHA512 (gdl-3.10.0.tar.xz) = 0df36abc91d1bb9fb2cdfc2eea0c755fbe406693b6e848350b0297fb96fac3f1932c6804b2c240140ba88529b69c229a6fc3446f67bd7686f32b8918916d4943
-Size (gdl-3.10.0.tar.xz) = 526704 bytes
-SHA1 (patch-gdl_gdl-dock-bar.c) = e6fbdb23731529ad6871a2230325da9c5cd273b9
+SHA1 (gdl-3.28.0.tar.xz) = db94f1953e083efd4c235310dfab93a05ad9d557
+RMD160 (gdl-3.28.0.tar.xz) = 80b379e41f6923efe3998886b51adacffaba95f4
+SHA512 (gdl-3.28.0.tar.xz) = d6a697b8cd098abfcb560d8b6c8a326b05f6f22211a3bc92ea458d643170abc514acd4105e372fb61777d2a5dd09709d7e3d6d3ad75215fffdf2809b3df3c471
+Size (gdl-3.28.0.tar.xz) = 541252 bytes
