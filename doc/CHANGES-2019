@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2200 2019/05/21 11:26:44 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.2201 2019/05/21 12:56:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3774,3 +3774,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated benchmarks/google-benchmark to 1.5 [adam 2019-05-21]
 	Updated sysutils/tsm8 to 8.1.7.0 [hauke 2019-05-21]
 	Updated devel/ocaml-ppx_tools_versioned to 5.2.2 [jaapb 2019-05-21]
+	Updated textproc/py-textile to 3.0.3 [adam 2019-05-21]
+	Updated devel/py-filelock to 3.0.12 [adam 2019-05-21]
