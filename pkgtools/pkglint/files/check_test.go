@@ -62,8 +62,8 @@ func (s *Suite) SetUpTest(c *check.C) {
 
 	G = NewPkglint()
 	G.Testing = true
-	G.out = NewSeparatorWriter(&t.stdout)
-	G.err = NewSeparatorWriter(&t.stderr)
+	G.Logger.out = NewSeparatorWriter(&t.stdout)
+	G.Logger.err = NewSeparatorWriter(&t.stderr)
 	trace.Out = &t.stdout
 
 	// XXX: Maybe the tests can run a bit faster when they don't
@@ -114,7 +114,7 @@ func (s *Suite) TearDownTest(c *check.C) {
 	t.tmpdir = ""
 	t.DisableTracing()
 
-	G = Pkglint{} // unusable because of missing Logger.out and Logger.err
+	G = unusablePkglint()
 }
 
 var _ = check.Suite(new(Suite))
@@ -675,9 +675,9 @@ func (t *Tester) Main(args ...string) int {
 	t.seenMain = true
 
 	// Reset the logger, for tests where t.Main is called multiple times.
-	G.errors = 0
-	G.warnings = 0
-	G.logged = Once{}
+	G.Logger.errors = 0
+	G.Logger.warnings = 0
+	G.Logger.logged = Once{}
 
 	argv := []string{"pkglint"}
 	for _, arg := range args {
@@ -857,20 +857,16 @@ func (t *Tester) Output() string {
 
 	t.stdout.Reset()
 	t.stderr.Reset()
-	G.Logger.logged = Once{}
-	if G.Logger.out != nil { // Necessary because Main resets the G variable.
-		G.Logger.out.state = 0 // Prevent an empty line at the beginning of the next output.
-		G.Logger.err.state = 0
+	if G.Usable() {
+		G.Logger.logged = Once{}
+		if G.Logger.out != nil { // Necessary because Main resets the G variable.
+			G.Logger.out.state = 0 // Prevent an empty line at the beginning of the next output.
+			G.Logger.err.state = 0
+		}
 	}
 
 	G.Assertf(t.tmpdir != "", "Tester must be initialized before checking the output.")
-	output := stdout + stderr
-	// TODO: The explanations are wrapped. Because of this it can happen
-	//  that t.tmpdir is spread among multiple lines if that directory
-	//  name contains spaces, which is common on Windows. A temporary
-	//  workaround is to set TMP=/path/without/spaces.
-	output = strings.Replace(output, t.tmpdir, "~", -1)
-	return output
+	return strings.Replace(stdout+stderr, t.tmpdir, "~", -1)
 }
 
 // CheckOutputEmpty ensures that the output up to now is empty.
@@ -881,13 +877,88 @@ func (t *Tester) CheckOutputEmpty() {
 }
 
 // CheckOutputLines checks that the output up to now equals the given lines.
+//
 // After the comparison, the output buffers are cleared so that later
 // calls only check against the newly added output.
 //
-// See CheckOutputEmpty.
+// See CheckOutputEmpty, CheckOutputLinesIgnoreSpace.
 func (t *Tester) CheckOutputLines(expectedLines ...string) {
 	G.Assertf(len(expectedLines) > 0, "To check empty lines, use CheckLinesEmpty instead.")
 	t.CheckOutput(expectedLines)
+}
+
+// CheckOutputLinesIgnoreSpace checks that the output up to now equals the given lines.
+// During comparison, each run of whitespace (space, tab, newline) is normalized so that
+// different line breaks are ignored. This is useful for testing line-wrapped explanations.
+//
+// After the comparison, the output buffers are cleared so that later
+// calls only check against the newly added output.
+//
+// See CheckOutputEmpty, CheckOutputLines.
+func (t *Tester) CheckOutputLinesIgnoreSpace(expectedLines ...string) {
+	G.Assertf(len(expectedLines) > 0, "To check empty lines, use CheckLinesEmpty instead.")
+	G.Assertf(t.tmpdir != "", "Tester must be initialized before checking the output.")
+
+	rawOutput := t.stdout.String() + t.stderr.String()
+	_ = t.Output() // Just to consume the output
+
+	actual, expected := t.compareOutputIgnoreSpace(rawOutput, expectedLines, t.tmpdir)
+	t.Check(actual, deepEquals, expected)
+}
+
+func (t *Tester) compareOutputIgnoreSpace(rawOutput string, expectedLines []string, tmpdir string) ([]string, []string) {
+	whitespace := regexp.MustCompile(`\s+`)
+
+	// Replace all occurrences of tmpdir in the raw output with a tilde,
+	// also covering cases where tmpdir is wrapped into multiple lines.
+	output := func() string {
+		var tmpdirPattern strings.Builder
+		for i, part := range whitespace.Split(tmpdir, -1) {
+			if i > 0 {
+				tmpdirPattern.WriteString("\\s+")
+			}
+			tmpdirPattern.WriteString(regexp.QuoteMeta(part))
+		}
+
+		return regexp.MustCompile(tmpdirPattern.String()).ReplaceAllString(rawOutput, "~")
+	}()
+
+	normSpace := func(s string) string {
+		return whitespace.ReplaceAllString(s, " ")
+	}
+	if normSpace(output) == normSpace(strings.Join(expectedLines, "\n")) {
+		return nil, nil
+	}
+
+	actualLines := strings.Split(output, "\n")
+	actualLines = actualLines[:len(actualLines)-1]
+
+	return emptyToNil(actualLines), emptyToNil(expectedLines)
+}
+
+func (s *Suite) Test_Tester_compareOutputIgnoreSpace(c *check.C) {
+	t := s.Init(c)
+
+	lines := func(lines ...string) []string { return lines }
+	test := func(rawOutput string, expectedLines []string, tmpdir string, eq bool) {
+		actual, expected := t.compareOutputIgnoreSpace(rawOutput, expectedLines, tmpdir)
+		t.Check(actual == nil && expected == nil, equals, eq)
+	}
+
+	test("", lines(), "/tmp", true)
+
+	// The expectedLines are missing a space at the end.
+	test(" \t\noutput\n\t ", lines("\toutput"), "/tmp", false)
+
+	test(" \t\noutput\n\t ", lines("\toutput\n"), "/tmp", true)
+
+	test("/tmp/\n\t \nspace", lines("~"), "/tmp/\t\t\t   \n\n\nspace", true)
+
+	// The rawOutput contains more spaces than the tmpdir.
+	test("/tmp/\n\t \nspace", lines("~"), "/tmp/space", false)
+
+	// The tmpdir contains more spaces than the rawOutput.
+	test("/tmp/space", lines("~"), "/tmp/ \t\nspace", false)
 }
 
 // CheckOutputMatches checks that the output up to now matches the given lines.
@@ -955,7 +1026,7 @@ func (t *Tester) CheckOutput(expectedLines []string) {
 // This is useful when stepping through the code, especially
 // in combination with SetUpCommandLine("--debug").
 func (t *Tester) EnableTracing() {
-	G.out = NewSeparatorWriter(io.MultiWriter(os.Stdout, &t.stdout))
+	G.Logger.out = NewSeparatorWriter(io.MultiWriter(os.Stdout, &t.stdout))
 	trace.Out = os.Stdout
 	trace.Tracing = true
 }
@@ -963,7 +1034,7 @@ func (t *Tester) EnableTracing() {
 // EnableTracingToLog enables the tracing and writes the tracing output
 // to the test log that can be examined with Tester.Output.
 func (t *Tester) EnableTracingToLog() {
-	G.out = NewSeparatorWriter(&t.stdout)
+	G.Logger.out = NewSeparatorWriter(&t.stdout)
 	trace.Out = &t.stdout
 	trace.Tracing = true
 }
@@ -975,7 +1046,7 @@ func (t *Tester) EnableTracingToLog() {
 // It is used to check all calls to trace.Result, since the compiler
 // cannot check them.
 func (t *Tester) EnableSilentTracing() {
-	G.out = NewSeparatorWriter(&t.stdout)
+	G.Logger.out = NewSeparatorWriter(&t.stdout)
 	trace.Out = ioutil.Discard
 	trace.Tracing = true
 }
@@ -984,7 +1055,9 @@ func (t *Tester) EnableSilentTracing() {
 // The diagnostics go to the in-memory buffer again,
 // ready to be checked with CheckOutputLines.
 func (t *Tester) DisableTracing() {
-	G.out = NewSeparatorWriter(&t.stdout)
+	if G.Usable() {
+		G.Logger.out = NewSeparatorWriter(&t.stdout)
+	}
 	trace.Tracing = false
 	trace.Out = nil
 }

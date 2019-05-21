@@ -452,17 +452,27 @@ func (s *Suite) Test_VartypeCheck_Enum__use_match(c *check.C) {
 
 func (s *Suite) Test_VartypeCheck_FetchURL(c *check.C) {
 	t := s.Init(c)
+
+	t.SetUpPackage("category/own-master-site",
+		"MASTER_SITE_OWN=\thttps://example.org/")
+	t.FinishSetUp()
+
 	vt := NewVartypeCheckTester(t, (*VartypeCheck).FetchURL)
 
 	t.SetUpMasterSite("MASTER_SITE_GNU", "http://ftp.gnu.org/pub/gnu/")
 	t.SetUpMasterSite("MASTER_SITE_GITHUB", "https://github.com/")
+
+	G.Pkg = NewPackage(t.File("category/own-master-site"))
+	G.Pkg.load()
 
 	vt.Varname("MASTER_SITES")
 	vt.Values(
 		"https://github.com/example/project/",
 		"http://ftp.gnu.org/pub/gnu/bison", // Missing a slash at the end
 		"${MASTER_SITE_GNU:=bison}",
-		"${MASTER_SITE_INVALID:=subdir/}")
+		"${MASTER_SITE_INVALID:=subdir/}",
+		"${MASTER_SITE_OWN}",
+		"${MASTER_SITE_OWN:=subdir/}")
 
 	vt.Output(
 		"WARN: filename.mk:1: Please use ${MASTER_SITE_GITHUB:=example/} "+
@@ -486,6 +496,14 @@ func (s *Suite) Test_VartypeCheck_FetchURL(c *check.C) {
 
 	vt.Output(
 		"WARN: filename.mk:23: \"http://example.org/download?filename=<distfile>;version=<version>\" is not a valid URL.")
+
+	vt.Values(
+		"${MASTER_SITE_GITHUB:S,^,-,:=project/archive/${DISTFILE}}")
+
+	// No warning since there is more than a single := modifier.
+	// In this case, because of the hyphen that is added at the beginning,
+	// the URL is not required to end with a slash anymore.
+	vt.OutputEmpty()
 }
 
 func (s *Suite) Test_VartypeCheck_Filename(c *check.C) {
@@ -497,8 +515,8 @@ func (s *Suite) Test_VartypeCheck_Filename(c *check.C) {
 		"OS/2-manual.txt")
 
 	vt.Output(
-		"WARN: filename.mk:1: \"Filename with spaces.docx\" is not a valid filename.",
-		"WARN: filename.mk:2: A filename should not contain a slash.")
+		"WARN: filename.mk:1: The filename \"Filename with spaces.docx\" contains the invalid characters \"  \".",
+		"WARN: filename.mk:2: The filename \"OS/2-manual.txt\" contains the invalid character \"/\".")
 
 	vt.Op(opUseMatch)
 	vt.Values(
@@ -506,7 +524,9 @@ func (s *Suite) Test_VartypeCheck_Filename(c *check.C) {
 
 	// There's no guarantee that a filename only contains [A-Za-z0-9.].
 	// Therefore there are no useful checks in this situation.
-	vt.OutputEmpty()
+	vt.Output(
+		"WARN: filename.mk:11: The filename pattern \"Filename with spaces.docx\" " +
+			"contains the invalid characters \"  \".")
 }
 
 func (s *Suite) Test_VartypeCheck_FileMask(c *check.C) {
@@ -518,16 +538,21 @@ func (s *Suite) Test_VartypeCheck_FileMask(c *check.C) {
 		"OS/2-manual.txt")
 
 	vt.Output(
-		"WARN: filename.mk:1: \"FileMask with spaces.docx\" is not a valid filename mask.",
-		"WARN: filename.mk:2: A filename mask should not contain a slash.")
+		"WARN: filename.mk:1: The filename pattern \"FileMask with spaces.docx\" "+
+			"contains the invalid characters \"  \".",
+		"WARN: filename.mk:2: The filename pattern \"OS/2-manual.txt\" "+
+			"contains the invalid character \"/\".")
 
 	vt.Op(opUseMatch)
 	vt.Values(
 		"FileMask with spaces.docx")
 
 	// There's no guarantee that a filename only contains [A-Za-z0-9.].
-	// Therefore there are no useful checks in this situation.
-	vt.OutputEmpty()
+	// Therefore it might be necessary to allow all characters here.
+	// TODO: Investigate whether this restriction is useful in practice.
+	vt.Output(
+		"WARN: filename.mk:11: The filename pattern \"FileMask with spaces.docx\" " +
+			"contains the invalid characters \"  \".")
 }
 
 func (s *Suite) Test_VartypeCheck_FileMode(c *check.C) {
@@ -894,7 +919,7 @@ func (s *Suite) Test_VartypeCheck_PathMask(c *check.C) {
 		"src/*/*")
 
 	vt.Output(
-		"WARN: filename.mk:2: \"src/*&*\" is not a valid pathname mask.")
+		"WARN: filename.mk:2: The pathname pattern \"src/*&*\" contains the invalid character \"&\".")
 
 	vt.Op(opUseMatch)
 	vt.Values("any")
@@ -916,7 +941,7 @@ func (s *Suite) Test_VartypeCheck_Pathname(c *check.C) {
 		"anything")
 
 	vt.Output(
-		"WARN: filename.mk:1: \"${PREFIX}/*\" is not a valid pathname.")
+		"WARN: filename.mk:1: The pathname \"${PREFIX}/*\" contains the invalid character \"*\".")
 }
 
 func (s *Suite) Test_VartypeCheck_Perl5Packlist(c *check.C) {
@@ -1230,8 +1255,13 @@ func (s *Suite) Test_VartypeCheck_URL(c *check.C) {
 		"https://www.netbsd.org/",
 		"https://www.example.org",
 		"ftp://example.org/pub/",
-		"gopher://example.org/",
+		"gopher://example.org/")
 
+	vt.Output(
+		"WARN: filename.mk:4: Please write NetBSD.org instead of www.netbsd.org.",
+		"NOTE: filename.mk:5: For consistency, please add a trailing slash to \"https://www.example.org\".")
+
+	vt.Values(
 		"",
 		"ftp://example.org/<",
 		"gopher://example.org/<",
@@ -1243,17 +1273,15 @@ func (s *Suite) Test_VartypeCheck_URL(c *check.C) {
 		"string with spaces")
 
 	vt.Output(
-		"WARN: filename.mk:4: Please write NetBSD.org instead of www.netbsd.org.",
-		"NOTE: filename.mk:5: For consistency, please add a trailing slash to \"https://www.example.org\".",
-		"WARN: filename.mk:8: \"\" is not a valid URL.",
-		"WARN: filename.mk:9: \"ftp://example.org/<\" is not a valid URL.",
-		"WARN: filename.mk:10: \"gopher://example.org/<\" is not a valid URL.",
-		"WARN: filename.mk:11: \"http://example.org/<\" is not a valid URL.",
-		"WARN: filename.mk:12: \"https://example.org/<\" is not a valid URL.",
-		"WARN: filename.mk:13: \"https://www.example.org/path with spaces\" is not a valid URL.",
-		"WARN: filename.mk:14: \"httpxs://www.example.org\" is not a valid URL. Only ftp, gopher, http, and https URLs are allowed here.",
-		"WARN: filename.mk:15: \"mailto:someone@example.org\" is not a valid URL.",
-		"WARN: filename.mk:16: \"string with spaces\" is not a valid URL.")
+		"WARN: filename.mk:11: \"\" is not a valid URL.",
+		"WARN: filename.mk:12: \"ftp://example.org/<\" is not a valid URL.",
+		"WARN: filename.mk:13: \"gopher://example.org/<\" is not a valid URL.",
+		"WARN: filename.mk:14: \"http://example.org/<\" is not a valid URL.",
+		"WARN: filename.mk:15: \"https://example.org/<\" is not a valid URL.",
+		"WARN: filename.mk:16: \"https://www.example.org/path with spaces\" is not a valid URL.",
+		"WARN: filename.mk:17: \"httpxs://www.example.org\" is not a valid URL. Only ftp, gopher, http, and https URLs are allowed here.",
+		"WARN: filename.mk:18: \"mailto:someone@example.org\" is not a valid URL.",
+		"WARN: filename.mk:19: \"string with spaces\" is not a valid URL.")
 
 	// Yes, even in 2019, some pkgsrc-wip packages really use a gopher HOMEPAGE.
 	vt.Values(
