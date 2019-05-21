@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.43 2019/04/18 07:22:08 adam Exp $
+$NetBSD: distinfo,v 1.44 2019/05/21 05:09:13 adam Exp $
 
 SHA1 (array-var-nginx-module-0.05.tar.gz) = c69fac77814947009ab783a471783b3c95a63a26
 RMD160 (array-var-nginx-module-0.05.tar.gz) = 89bd4efc04864e3e90781588a337338951ec8733
@@ -20,10 +20,14 @@ SHA1 (headers-more-nginx-module-0.33.tar.gz) = 7d6af910dae98f0dbc67bf77e82eab8b7
 RMD160 (headers-more-nginx-module-0.33.tar.gz) = fb27195a722e81f533016e693b5a6616fd6b4f72
 SHA512 (headers-more-nginx-module-0.33.tar.gz) = 13165b1b8d4be281b8bd2404fa48d456013d560bace094c81da08a35dc6a4f025a809a3ae3a42be6bbf67abbcbe41e0730aba06f905220f3baeb01e1192a7d37
 Size (headers-more-nginx-module-0.33.tar.gz) = 28130 bytes
-SHA1 (lua-nginx-module-0.10.13.tar.gz) = 88f16ee8f1d168d1f6c1f2a1b48d31a5f4429114
-RMD160 (lua-nginx-module-0.10.13.tar.gz) = ec6278fb7936abfdead2df5e20a90092a1024098
-SHA512 (lua-nginx-module-0.10.13.tar.gz) = 8c316b9d12dc35779fcddc6bb90942c096f19fd8c2e090b8397e1e1ca6f0ebd7a4edddc03fddb31310147ba4e9db9fc4b3749cfd2323046d88045b3b3333f07d
-Size (lua-nginx-module-0.10.13.tar.gz) = 624102 bytes
+SHA1 (lua-nginx-module-0.10.15.tar.gz) = 82cef7d56601d2ae53a0912798af3546ca0a404c
+RMD160 (lua-nginx-module-0.10.15.tar.gz) = d755aa36c0604d37bf90a42da8221df26783545e
+SHA512 (lua-nginx-module-0.10.15.tar.gz) = 7555d3d256f169a4473f9be80e70e5bf53df5289167c9f70ecc943720bc783f92f54adcb69f15cd5fe2174436875f92f0b17d8198e3a86e27c4f0cf1e0536308
+Size (lua-nginx-module-0.10.15.tar.gz) = 655067 bytes
+SHA1 (naxsi-0.56.tar.gz) = 42ce137bd3e52a612793bcea43f3ffbb8376910a
+RMD160 (naxsi-0.56.tar.gz) = a5c97194ef3db415a4bab07c44f9e9f2860b9e1a
+SHA512 (naxsi-0.56.tar.gz) = 4660751849bce303af6010b7257532404710106a94817e78d4bc4b566f8019620f24f30207f1d4366b88132a5124e34b164dc67ed80b6710f4bad66115564cbd
+Size (naxsi-0.56.tar.gz) = 192120 bytes
 SHA1 (nginx-1.15.12.tar.gz) = e81fbb177ce9ed07c69684fa9d64cb4d5d6a61c7
 RMD160 (nginx-1.15.12.tar.gz) = bcc1807a45a48b5565775930ad5ac90f48bd4c23
 SHA512 (nginx-1.15.12.tar.gz) = 58961194c4fb94136b657c75c0d2ee3fe6515552a17d66e80d6cd53d342731229c0cbb897700631517275943fc2731179780a3c4b61b93b32a2cf6490ebf0f50
