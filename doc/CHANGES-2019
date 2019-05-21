@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2209 2019/05/21 17:57:50 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2210 2019/05/21 18:00:20 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3784,3 +3784,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated editors/poedit to 2.2.3 [wiz 2019-05-21]
 	Updated converters/utf8proc to 2.4.0 [wiz 2019-05-21]
 	Updated fonts/unifont to 12.1.01 [wiz 2019-05-21]
+	Updated pkgtools/pkglint to 5.7.10 [rillig 2019-05-21]
