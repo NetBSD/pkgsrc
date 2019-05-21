@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/10/17 13:54:39 hauke Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/05/21 10:55:52 hauke Exp $
 bin/dsmc
 emul/linux/etc/init.d/dsmcad
 emul/linux/etc/ld.so.conf.d/tsm_ld.so.conf
@@ -149,7 +149,7 @@ emul/linux/opt/tivoli/tsm/client/api/bin64/sample/makesmp64.linux86
 emul/linux/opt/tivoli/tsm/client/api/bin64/sample/release.h
 emul/linux/opt/tivoli/tsm/client/api/bin64/sample/tsmapifp.h
 emul/linux/opt/tivoli/tsm/client/api/bin64/sample/tsmapitd.h
-emul/linux/opt/tivoli/tsm/client/api/swidtag/ibm.com_IBM_Spectrum_Protect_API-8.1.6.swidtag
+emul/linux/opt/tivoli/tsm/client/api/swidtag/ibm.com_IBM_Spectrum_Protect_API-8.1.7.swidtag
 emul/linux/opt/tivoli/tsm/client/ba/README.htm
 emul/linux/opt/tivoli/tsm/client/ba/bin/CS_CZ/dscjres.txt
 emul/linux/opt/tivoli/tsm/client/ba/bin/CS_CZ/dsmc.hlp
@@ -334,7 +334,9 @@ emul/linux/opt/tivoli/tsm/client/ba/bin/vmtsmvss/register_app.vbs
 ${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/xercesImpl_2_2_1.jar
 ${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/xmlParserAPIs_2_2_1.jar
 emul/linux/opt/tivoli/tsm/client/ba/client_message.chg
-emul/linux/opt/tivoli/tsm/client/ba/swidtag/ibm.com_IBM_Spectrum_Protect_Client_and_VSS_Requestor-8.1.6.swidtag
+emul/linux/opt/tivoli/tsm/client/ba/swidtag/ibm.com_IBM_Spectrum_Protect_Client_and_VSS_Requestor-8.1.7.swidtag
+emul/linux/opt/tivoli/tsm/client/ba/swidtag/ibm.com_IBM_Spectrum_Protect_Client_and_VSS_Requestor-8.1.7.swidtag.configured
+emul/linux/opt/tivoli/tsm/client/ba/swidtag/ibm.com_IBM_Spectrum_Protect_Client_and_VSS_Requestor-8.1.7.swidtag.unconfigured
 emul/linux/opt/tivoli/tsm/license/api/ssam/LA_cs.txt
 emul/linux/opt/tivoli/tsm/license/api/ssam/LA_de.txt
 emul/linux/opt/tivoli/tsm/license/api/ssam/LA_el.txt
