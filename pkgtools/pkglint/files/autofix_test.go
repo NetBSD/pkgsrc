@@ -360,7 +360,7 @@ func (s *Suite) Test_Autofix_Explain__without_explain_option(c *check.C) {
 
 	t.CheckOutputLines(
 		"WARN: Makefile:74: Please write row instead of line.")
-	c.Check(G.explanationsAvailable, equals, true)
+	c.Check(G.Logger.explanationsAvailable, equals, true)
 }
 
 func (s *Suite) Test_Autofix_Explain__default(c *check.C) {
@@ -380,7 +380,7 @@ func (s *Suite) Test_Autofix_Explain__default(c *check.C) {
 		"",
 		"\tExplanation",
 		"")
-	c.Check(G.explanationsAvailable, equals, true)
+	c.Check(G.Logger.explanationsAvailable, equals, true)
 }
 
 func (s *Suite) Test_Autofix_Explain__show_autofix(c *check.C) {
@@ -401,7 +401,7 @@ func (s *Suite) Test_Autofix_Explain__show_autofix(c *check.C) {
 		"",
 		"\tExplanation",
 		"")
-	c.Check(G.explanationsAvailable, equals, true)
+	c.Check(G.Logger.explanationsAvailable, equals, true)
 }
 
 func (s *Suite) Test_Autofix_Explain__autofix(c *check.C) {
@@ -418,7 +418,7 @@ func (s *Suite) Test_Autofix_Explain__autofix(c *check.C) {
 
 	t.CheckOutputLines(
 		"AUTOFIX: Makefile:74: Replacing \"line\" with \"row\".")
-	c.Check(G.explanationsAvailable, equals, false) // Not necessary.
+	c.Check(G.Logger.explanationsAvailable, equals, false) // Not necessary.
 }
 
 func (s *Suite) Test_Autofix_Explain__SilentAutofixFormat(c *check.C) {

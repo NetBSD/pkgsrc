@@ -33,7 +33,7 @@ type Pkglint struct {
 	cvsEntriesDir   string   // Cached to avoid I/O
 	cvsEntriesLines Lines
 
-	Logger
+	Logger Logger
 
 	loaded    *histogram.Histogram
 	res       regex.Registry
@@ -58,6 +58,11 @@ func NewPkglint() Pkglint {
 		cwd:       filepath.ToSlash(cwd),
 		interner:  NewStringInterner()}
 }
+
+// unusablePkglint returns a pkglint object that crashes as early as possible.
+// This is to ensure that tests are properly initialized and shut down.
+func unusablePkglint() Pkglint        { return Pkglint{} }
+func (pkglint *Pkglint) Usable() bool { return pkglint != nil }
 
 type InterPackage struct {
 	hashes       map[string]*Hash    // Maps "alg:filename" => hash (inter-package check).
@@ -155,13 +160,13 @@ var (
 )
 
 func Main() int {
-	G.out = NewSeparatorWriter(os.Stdout)
-	G.err = NewSeparatorWriter(os.Stderr)
+	G.Logger.out = NewSeparatorWriter(os.Stdout)
+	G.Logger.err = NewSeparatorWriter(os.Stderr)
 	trace.Out = os.Stdout
 	exitCode := G.Main(os.Args...)
 	if G.Opts.Profiling {
-		G = Pkglint{} // Free all memory.
-		runtime.GC()  // For detecting possible memory leaks; see qa-pkglint.
+		G = unusablePkglint() // Free all memory.
+		runtime.GC()          // For detecting possible memory leaks; see qa-pkglint.
 	}
 	return exitCode
 }
@@ -216,14 +221,14 @@ func (pkglint *Pkglint) Main(argv ...string) (exitCode int) {
 		defer pprof.StopCPUProfile()
 
 		pkglint.res.Profiling()
-		pkglint.histo = histogram.New()
+		pkglint.Logger.histo = histogram.New()
 		pkglint.loaded = histogram.New()
 		defer func() {
-			pkglint.out.Write("")
-			pkglint.histo.PrintStats(pkglint.out.out, "loghisto", -1)
-			pkglint.res.PrintStats(pkglint.out.out)
-			pkglint.loaded.PrintStats(pkglint.out.out, "loaded", 10)
-			pkglint.out.WriteLine(sprintf("fileCache: %d hits, %d misses", pkglint.fileCache.hits, pkglint.fileCache.misses))
+			pkglint.Logger.out.Write("")
+			pkglint.Logger.histo.PrintStats(pkglint.Logger.out.out, "loghisto", -1)
+			pkglint.res.PrintStats(pkglint.Logger.out.out)
+			pkglint.loaded.PrintStats(pkglint.Logger.out.out, "loaded", 10)
+			pkglint.Logger.out.WriteLine(sprintf("fileCache: %d hits, %d misses", pkglint.fileCache.hits, pkglint.fileCache.misses))
 		}()
 	}
 
@@ -266,8 +271,8 @@ func (pkglint *Pkglint) Main(argv ...string) (exitCode int) {
 
 	pkglint.Pkgsrc.checkToplevelUnusedLicenses()
 
-	pkglint.ShowSummary()
-	if pkglint.errors != 0 {
+	pkglint.Logger.ShowSummary()
+	if pkglint.Logger.errors != 0 {
 		return 1
 	}
 	return 0
@@ -307,7 +312,7 @@ func (pkglint *Pkglint) ParseCommandLine(args []string) int {
 
 	remainingArgs, err := opts.Parse(args)
 	if err != nil {
-		errOut := pkglint.err.out
+		errOut := pkglint.Logger.err.out
 		_, _ = fmt.Fprintln(errOut, err)
 		_, _ = fmt.Fprintln(errOut, "")
 		opts.Help(errOut, "pkglint [options] dir...")
@@ -316,12 +321,12 @@ func (pkglint *Pkglint) ParseCommandLine(args []string) int {
 	gopts.args = remainingArgs
 
 	if gopts.ShowHelp {
-		opts.Help(pkglint.out.out, "pkglint [options] dir...")
+		opts.Help(pkglint.Logger.out.out, "pkglint [options] dir...")
 		return 0
 	}
 
 	if pkglint.Opts.ShowVersion {
-		_, _ = fmt.Fprintf(pkglint.out.out, "%s\n", confVersion)
+		_, _ = fmt.Fprintf(pkglint.Logger.out.out, "%s\n", confVersion)
 		return 0
 	}
 

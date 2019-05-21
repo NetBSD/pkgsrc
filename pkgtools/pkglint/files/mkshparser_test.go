@@ -61,7 +61,7 @@ func (s *ShSuite) SetUpTest(c *check.C) {
 }
 
 func (s *ShSuite) TearDownTest(c *check.C) {
-	G = Pkglint{} // Make it unusable
+	G = unusablePkglint()
 }
 
 func (s *ShSuite) Test_ShellParser__program(c *check.C) {

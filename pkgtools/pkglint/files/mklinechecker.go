@@ -609,8 +609,9 @@ func (ck MkLineChecker) checkVaruseModifiersRange(varuse *MkVarUse) {
 	}
 }
 
-// checkVarusePermissions checks the permissions for the right-hand side
-// of a variable assignment line.
+// checkVarusePermissions checks the permissions when a variable is used,
+// be it in a variable assignment, in a shell command, a conditional, or
+// somewhere else.
 //
 // See checkVarassignLeftPermissions.
 func (ck MkLineChecker) checkVarusePermissions(varname string, vartype *Vartype, vuc *VarUseContext) {
@@ -712,6 +713,11 @@ func (ck MkLineChecker) checkVarusePermissions(varname string, vartype *Vartype,
 	// Anyway, there must be a warning now since the requested use is not
 	// allowed. The only remaining question is about how detailed the
 	// warning will be.
+	ck.warnVarusePermissions(varname, vartype, directly, indirectly)
+}
+
+func (ck MkLineChecker) warnVarusePermissions(varname string, vartype *Vartype, directly, indirectly bool) {
+	mkline := ck.MkLine
 
 	anyPerms := vartype.Union()
 	if !anyPerms.Contains(aclpUse) && !anyPerms.Contains(aclpUseLoadtime) {
