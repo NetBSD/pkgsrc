@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.82 2019/04/03 00:32:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.83 2019/05/21 17:44:46 wiz Exp $
 
-DISTNAME=	poedit-2.0.3
-PKGREVISION=	17
+DISTNAME=	poedit-2.2.3
 CATEGORIES=	editors
 MASTER_SITES=	https://github.com/vslavik/poedit/releases/download/v${PKGVERSION_NOREV}-oss/
 
@@ -27,5 +26,6 @@ BUILDLINK_TRANSFORM+=	rm:-Wextra
 .include "../../textproc/lucene++/buildlink3.mk"
 .include "../../x11/wxGTK30/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
