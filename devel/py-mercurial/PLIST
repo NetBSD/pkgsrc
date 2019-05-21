@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2019/02/14 09:53:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2019/05/21 20:55:02 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgdemandimport/__init__.py
 ${PYSITELIB}/hgdemandimport/__init__.pyc
@@ -1229,6 +1229,9 @@ ${PYSITELIB}/mercurial/utils/__init__.pyo
 ${PYSITELIB}/mercurial/utils/cborutil.py
 ${PYSITELIB}/mercurial/utils/cborutil.pyc
 ${PYSITELIB}/mercurial/utils/cborutil.pyo
+${PYSITELIB}/mercurial/utils/compression.py
+${PYSITELIB}/mercurial/utils/compression.pyc
+${PYSITELIB}/mercurial/utils/compression.pyo
 ${PYSITELIB}/mercurial/utils/dateutil.py
 ${PYSITELIB}/mercurial/utils/dateutil.pyc
 ${PYSITELIB}/mercurial/utils/dateutil.pyo
@@ -1238,6 +1241,9 @@ ${PYSITELIB}/mercurial/utils/interfaceutil.pyo
 ${PYSITELIB}/mercurial/utils/procutil.py
 ${PYSITELIB}/mercurial/utils/procutil.pyc
 ${PYSITELIB}/mercurial/utils/procutil.pyo
+${PYSITELIB}/mercurial/utils/repoviewutil.py
+${PYSITELIB}/mercurial/utils/repoviewutil.pyc
+${PYSITELIB}/mercurial/utils/repoviewutil.pyo
 ${PYSITELIB}/mercurial/utils/storageutil.py
 ${PYSITELIB}/mercurial/utils/storageutil.pyc
 ${PYSITELIB}/mercurial/utils/storageutil.pyo
