@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.8 2019/03/20 16:25:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/05/21 08:26:21 adam Exp $
 bin/markdown_py${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/markdown/__init__.py
 ${PYSITELIB}/markdown/__init__.pyc
@@ -11,6 +12,9 @@ ${PYSITELIB}/markdown/__init__.pyo
 ${PYSITELIB}/markdown/__main__.py
 ${PYSITELIB}/markdown/__main__.pyc
 ${PYSITELIB}/markdown/__main__.pyo
+${PYSITELIB}/markdown/__meta__.py
+${PYSITELIB}/markdown/__meta__.pyc
+${PYSITELIB}/markdown/__meta__.pyo
 ${PYSITELIB}/markdown/blockparser.py
 ${PYSITELIB}/markdown/blockparser.pyc
 ${PYSITELIB}/markdown/blockparser.pyo
@@ -77,6 +81,9 @@ ${PYSITELIB}/markdown/extensions/wikilinks.pyo
 ${PYSITELIB}/markdown/inlinepatterns.py
 ${PYSITELIB}/markdown/inlinepatterns.pyc
 ${PYSITELIB}/markdown/inlinepatterns.pyo
+${PYSITELIB}/markdown/pep562.py
+${PYSITELIB}/markdown/pep562.pyc
+${PYSITELIB}/markdown/pep562.pyo
 ${PYSITELIB}/markdown/postprocessors.py
 ${PYSITELIB}/markdown/postprocessors.pyc
 ${PYSITELIB}/markdown/postprocessors.pyo
