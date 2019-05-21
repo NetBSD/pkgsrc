@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/12/03 00:11:39 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2019/05/21 05:52:31 adam Exp $
 
 DISTNAME=	pgroonga-1.2.3
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	postgresql-license
 
 DEPENDS+=	postgresql${PGSQL_VERSION}-server>=0:../../databases/postgresql${PGSQL_VERSION}-server
 
-PGSQL_VERSIONS_ACCEPTED=	96 95 94 93
+PGSQL_VERSIONS_ACCEPTED=	96 95 94
 
 USE_GCC_RUNTIME=	yes
 USE_LANGUAGES=		c c++ c99
