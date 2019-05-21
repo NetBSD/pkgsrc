@@ -301,7 +301,7 @@ func (s *Suite) Test_MkLines_CheckForUsedComment(c *check.C) {
 	// TODO: What if there is an introductory comment first? That should stay at the top of the file.
 	// TODO: What if the "used by" comments appear in the second paragraph, preceded by only comments and empty lines?
 
-	c.Check(G.autofixAvailable, equals, true)
+	c.Check(G.Logger.autofixAvailable, equals, true)
 }
 
 func (s *Suite) Test_MkLines_collectDefinedVariables(c *check.C) {

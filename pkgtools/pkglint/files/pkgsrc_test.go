@@ -738,5 +738,6 @@ func (s *Suite) Test_Pkgsrc_guessVariableType__SKIP(c *check.C) {
 	// There is no warning for the += operator in line 3 since the variable type
 	// (although guessed) is a list of things, and lists may be appended to.
 	t.CheckOutputLines(
-		"WARN: filename.mk:2: \"\\\"bad*pathname\\\"\" is not a valid pathname mask.")
+		"WARN: filename.mk:2: The pathname pattern \"\\\"bad*pathname\\\"\" " +
+			"contains the invalid characters \"\\\"\\\"\".")
 }

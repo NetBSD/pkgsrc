@@ -279,9 +279,9 @@ func (fix *Autofix) Apply() {
 	if logDiagnostic {
 		msg := sprintf(fix.diagFormat, fix.diagArgs...)
 		if !logFix && G.Logger.FirstTime(line.Filename, line.Linenos(), msg) {
-			line.showSource(G.out)
+			line.showSource(G.Logger.out)
 		}
-		G.Logf(fix.level, line.Filename, line.Linenos(), fix.diagFormat, msg)
+		G.Logger.Logf(fix.level, line.Filename, line.Linenos(), fix.diagFormat, msg)
 	}
 
 	if logFix {
@@ -290,20 +290,20 @@ func (fix *Autofix) Apply() {
 			if action.lineno != 0 {
 				lineno = strconv.Itoa(action.lineno)
 			}
-			G.Logf(AutofixLogLevel, line.Filename, lineno, AutofixFormat, action.description)
+			G.Logger.Logf(AutofixLogLevel, line.Filename, lineno, AutofixFormat, action.description)
 		}
 	}
 
 	if logDiagnostic || logFix {
 		if logFix {
-			line.showSource(G.out)
+			line.showSource(G.Logger.out)
 		}
 		if logDiagnostic && len(fix.explanation) > 0 {
 			line.Explain(fix.explanation...)
 		}
 		if G.Logger.Opts.ShowSource {
 			if !(G.Logger.Opts.Explain && logDiagnostic && len(fix.explanation) > 0) {
-				G.out.Separate()
+				G.Logger.out.Separate()
 			}
 		}
 	}
@@ -394,7 +394,7 @@ func (fix *Autofix) skip() bool {
 		fix.diagFormat != "",
 		"Autofix: The diagnostic must be given before the action.")
 	// This check is necessary for the --only command line option.
-	return !G.shallBeLogged(fix.diagFormat)
+	return !G.Logger.shallBeLogged(fix.diagFormat)
 }
 
 func (fix *Autofix) assertRealLine() {
@@ -414,7 +414,7 @@ func SaveAutofixChanges(lines Lines) (autofixed bool) {
 	if !G.Logger.Opts.Autofix {
 		for _, line := range lines.Lines {
 			if line.autofix != nil && line.autofix.modified {
-				G.autofixAvailable = true
+				G.Logger.autofixAvailable = true
 				if G.Logger.Opts.ShowAutofix {
 					// Only in this case can the loaded lines be modified.
 					G.fileCache.Evict(line.Filename)
