@@ -1,8 +1,8 @@
-$NetBSD: patch-src_gui-qt_mainwindow.cpp,v 1.2 2019/02/12 19:46:12 schmonz Exp $
+$NetBSD: patch-src_gui-qt_mainwindow.cpp,v 1.3 2019/05/21 21:56:57 schmonz Exp $
 
 Use X11 on Darwin, like everywhere else.
 
---- src/gui-qt/mainwindow.cpp.orig	2019-02-06 20:21:57.000000000 +0000
+--- src/gui-qt/mainwindow.cpp.orig	2019-05-17 19:04:13.000000000 +0000
 +++ src/gui-qt/mainwindow.cpp
 @@ -36,6 +36,8 @@ along with Highlight.  If not, see <http
  #include "io_report.h"
@@ -10,6 +10,6 @@ Use X11 on Darwin, like everywhere else.
  
 +#undef Q_OS_OSX
 +
- //#include <QDebug>
- 
- MainWindow::MainWindow(QWidget *parent)
+ #ifdef Q_OS_WIN
+ #include <windows.h>
+ #endif

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/04/04 14:14:28 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/05/21 21:56:57 schmonz Exp $
 lib/libhighlight.la
 share/doc/highlight/AUTHORS
 share/doc/highlight/COPYING
@@ -76,6 +76,7 @@ share/highlight/langDefs/arc.lang
 share/highlight/langDefs/arm.lang
 share/highlight/langDefs/as400cl.lang
 share/highlight/langDefs/ascend.lang
+share/highlight/langDefs/asciidoc.lang
 share/highlight/langDefs/asp.lang
 share/highlight/langDefs/aspect.lang
 share/highlight/langDefs/assembler.lang
@@ -129,6 +130,7 @@ share/highlight/langDefs/email.lang
 share/highlight/langDefs/erb.lang
 share/highlight/langDefs/erlang.lang
 share/highlight/langDefs/euphoria.lang
+share/highlight/langDefs/exapunks.lang
 share/highlight/langDefs/excel.lang
 share/highlight/langDefs/express.lang
 share/highlight/langDefs/fame.lang

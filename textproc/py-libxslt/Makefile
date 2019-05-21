@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2019/03/19 17:25:40 prlw1 Exp $
+# $NetBSD: Makefile,v 1.55 2019/05/21 21:56:57 schmonz Exp $
 
 .include "../../textproc/libxslt/Makefile.common"
 
@@ -29,6 +29,8 @@ SUBST_SED.setup=	-e "s,@LIBICONVDIR@,${BUILDLINK_PREFIX.iconv},g"
 SUBST_SED.setup+=	-e "s,@LIBXML2DIR@,${BUILDLINK_PREFIX.libxml2},g"
 SUBST_SED.setup+=	-e "s,@LIBXSLTDIR@,${BUILDLINK_PREFIX.libxslt},g"
 SUBST_SED.setup+=	-e "s,@PYSHLIBDIR@,${PYSITEDIR},g"
+
+# BUILDLINK_TRANSFORM.Darwin+=	opt:-bundle:-dynamiclib
 
 post-extract: setuppy
 .PHONY: setuppy
