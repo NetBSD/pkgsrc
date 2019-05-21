@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2206 2019/05/21 16:00:07 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2207 2019/05/21 17:45:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3781,3 +3781,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/gst-plugins1-libnice to 0.1.16 [wiz 2019-05-21]
 	Updated audio/libshout to 2.4.2 [wiz 2019-05-21]
 	Updated textproc/po4a to 0.55 [wiz 2019-05-21]
+	Updated editors/poedit to 2.2.3 [wiz 2019-05-21]
