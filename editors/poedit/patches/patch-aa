@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2017/09/16 08:39:59 ryoon Exp $
+$NetBSD: patch-aa,v 1.6 2019/05/21 17:44:46 wiz Exp $
+
+Fix unportable test(1) operator.
+https://github.com/vslavik/poedit/pull/575
 
 --- configure.orig	2017-07-23 17:10:09.000000000 +0000
 +++ configure
