@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.5 2019/03/31 20:41:29 leot Exp $
+$NetBSD: patch-configure,v 1.6 2019/05/22 08:57:58 leot Exp $
 
 - Builtin krb5-config in platforms such as solaris do not support
   the gssapi option, and need an explicit -lgss
@@ -158,12 +158,3 @@ $NetBSD: patch-configure,v 1.5 2019/03/31 20:41:29 leot Exp $
          ;;
       esac
    fi
-@@ -22252,7 +22255,7 @@ fi
- 
- { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether to enable Amiga native SSL/TLS (AmiSSL)" >&5
- $as_echo_n "checking whether to enable Amiga native SSL/TLS (AmiSSL)... " >&6; }
--if test "$HAVE_PROTO_BSDSOCKET_H" == "1"; then
-+if test "$HAVE_PROTO_BSDSOCKET_H" = "1"; then
-   if test -z "$ssl_backends" -o "x$OPT_AMISSL" != xno; then
-     ssl_msg=
-     if test "x$OPT_AMISSL" != "xno"; then
