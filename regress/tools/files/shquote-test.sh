@@ -52,3 +52,12 @@ test_shquote '-e asdf' becomes "'-e asdf'"
 test_shquote '-n' becomes '-n'
 test_shquote '\\\\\\\\' becomes \''\\\\\\\\'\'
 test_shquote \"\$\'\;\<\\\` becomes \'\"\$\'\\\'\'\;\<\\\`\'
+
+# Move the single quote to the right of the equals sign, if possible.
+test_shquote '-DMACRO="value"' becomes "-DMACRO='\"value\"'"
+test_shquote '--prefix="/usr/local"' becomes "--prefix='\"/usr/local\"'"
+test_shquote '-assignment=first=second=""' becomes "-assignment='first=second=\"\"'"
+test_shquote '-assignment=first=second' becomes '-assignment=first=second'
+
+# If the left-hand side needs to be quoted as well, quote the whole string.
+test_shquote '"left"="right"' becomes "'\"left\"=\"right\"'"
