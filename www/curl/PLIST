@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.74 2019/03/31 20:41:29 leot Exp $
+@comment $NetBSD: PLIST,v 1.75 2019/05/22 08:57:58 leot Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -199,6 +199,7 @@ man/man3/CURLOPT_LOW_SPEED_TIME.3
 man/man3/CURLOPT_MAIL_AUTH.3
 man/man3/CURLOPT_MAIL_FROM.3
 man/man3/CURLOPT_MAIL_RCPT.3
+man/man3/CURLOPT_MAXAGE_CONN.3
 man/man3/CURLOPT_MAXCONNECTS.3
 man/man3/CURLOPT_MAXFILESIZE.3
 man/man3/CURLOPT_MAXFILESIZE_LARGE.3
