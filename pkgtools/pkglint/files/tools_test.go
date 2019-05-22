@@ -606,3 +606,21 @@ func (s *Suite) Test_Tools__gmake(c *check.C) {
 
 	t.CheckOutputEmpty()
 }
+
+func (s *Suite) Test_Tools__autoconf213(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"USE_TOOLS=\tautoconf213",
+		"",
+		"do-test:",
+		"\tautoconf")
+	t.CreateFileLines("mk/tools/defaults.mk",
+		"_TOOLS_DEPMETHOD.autoconf213=\tDEPENDS")
+	t.FinishSetUp()
+
+	G.Check(t.File("category/package"))
+
+	// No warning, since autoconf213 defines autoconf implicitly.
+	t.CheckOutputEmpty()
+}

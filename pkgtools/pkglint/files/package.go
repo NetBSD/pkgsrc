@@ -293,8 +293,8 @@ func (pkg *Package) loadPackageMakefile() (MkLines, MkLines) {
 
 	// See mk/tools/cmake.mk
 	if pkg.vars.Defined("USE_CMAKE") {
-		mainLines.Tools.def("cmake", "", false, AtRunTime, nil)
-		mainLines.Tools.def("cpack", "", false, AtRunTime, nil)
+		allLines.Tools.def("cmake", "", false, AtRunTime, nil)
+		allLines.Tools.def("cpack", "", false, AtRunTime, nil)
 	}
 
 	allLines.collectUsedVariables()
@@ -600,6 +600,8 @@ func (pkg *Package) checkfilePackageMakefile(filename string, mklines MkLines, a
 	}
 
 	pkg.checkUpdate()
+	allLines.collectDefinedVariables() // To get the tool definitions
+	mklines.Tools = allLines.Tools     // TODO: also copy the other collected data
 	mklines.Check()
 	pkg.CheckVarorder(mklines)
 	SaveAutofixChanges(mklines.lines)
