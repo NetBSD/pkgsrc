@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2217 2019/05/22 08:46:06 jmcneill Exp $
+$NetBSD: CHANGES-2019,v 1.2218 2019/05/22 08:58:12 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3794,3 +3794,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/highlight to 3.51 [schmonz 2019-05-21]
 	Updated textproc/p5-highlight to 3.51 [schmonz 2019-05-21]
 	Added sysutils/bsdec2-image-upload version 1.2.2 [jmcneill 2019-05-22]
+	Updated www/curl to 7.65.0 [leot 2019-05-22]
