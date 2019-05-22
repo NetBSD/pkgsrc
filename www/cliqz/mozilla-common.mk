@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.1 2019/04/19 14:02:03 fox Exp $
+# $NetBSD: mozilla-common.mk,v 1.2 2019/05/22 10:53:12 fox Exp $
 #
 # Common Makefile fragment for mozilla packages based on gecko 2.0.
 # derived from www/firefox
@@ -64,7 +64,9 @@ MOZ_CONFIGURE_ARGS+=	"ac_add_options --with-system-libevent=${BUILDLINK_PREFIX.l
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-default-toolkit=cairo-gtk3"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-system-pixman"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-webrender=build"
-MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-rust-simd"
+# Disable Rust SIMD option to fix build with lang/rust-1.33.0
+# This should be enabled later again.
+#MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-rust-simd"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-system-ffi"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-chrome-format=flat"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-gconf"
