@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2019/05/22 08:45:10 jmcneill Exp $
+bin/bsdec2-image-upload
