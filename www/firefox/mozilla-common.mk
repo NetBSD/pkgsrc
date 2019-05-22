@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.131 2019/05/02 01:16:28 gutteridge Exp $
+# $NetBSD: mozilla-common.mk,v 1.132 2019/05/22 22:17:57 gutteridge Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -213,7 +213,7 @@ PLIST_SUBST+=	DLL_SUFFIX=".so"
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.19
+BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.21
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 BUILDLINK_API_DEPENDS.nss+=	nss>=3.40.1
