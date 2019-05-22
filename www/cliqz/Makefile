@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2019/05/13 11:59:06 fox Exp $
+# $NetBSD: Makefile,v 1.8 2019/05/22 10:53:12 fox Exp $
 
 DISTNAME=	cliqz-1.26.5
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cliqz-oss/}
 GITHUB_PROJECT=	browser-f
@@ -45,7 +46,9 @@ PYTHON_FOR_BUILD_ONLY=		tool
 TOOL_DEPENDS+=			cbindgen-[0-9]*:../../devel/cbindgen
 TOOL_DEPENDS+=			nodejs-[0-9]*:../../lang/nodejs
 
-WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${PKGVERSION_NOREV}
+BUILD_DEPENDS+=			yasm>=1.1:../../devel/yasm
+
+WRKSRC=			${WRKDIR}/${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 
 CLIQZ_ICON=		cliqz.png
 CLIQZ_ICON_SRC=		${WRKSRC}/mozilla-release/browser/branding/cliqz/default48.png
@@ -120,7 +123,7 @@ BUILDLINK_DEPMETHOD.clang=     build
 BUILDLINK_API_DEPENDS.clang+=  clang>=6.0.1nb1
 .include "../../lang/clang/buildlink3.mk"
 BUILDLINK_DEPMETHOD.rust=      build
-BUILDLINK_API_DEPENDS.rust+=   rust>=1.24.0
+BUILDLINK_API_DEPENDS.rust+=   rust>=1.31.0
 .include "../../lang/rust/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
