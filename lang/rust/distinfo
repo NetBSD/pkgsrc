@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.75 2019/05/21 18:00:46 jperkin Exp $
+$NetBSD: distinfo,v 1.76 2019/05/22 09:43:14 jperkin Exp $
 
 SHA1 (rust-1.33.0-i686-apple-darwin.tar.gz) = 3747f4e11ef6d3229bfd41dbdd9990897f9dea83
 RMD160 (rust-1.33.0-i686-apple-darwin.tar.gz) = 32d72b91d159a98470bbfaff4e1087f8b15eb3b9
@@ -117,6 +117,7 @@ SHA1 (patch-src_llvm-project_llvm_CMakeLists.txt) = d49503d19c30a64d571eb7fa79e7
 SHA1 (patch-src_llvm-project_llvm_cmake_modules_AddLLVM.cmake) = 19daf5f8a26bfaebca942b5cbe8521fb060fe8d9
 SHA1 (patch-src_llvm-project_llvm_include_llvm-c_DataTypes.h) = 7588a46aaa277ef04b33ac6d904b9d1d81579f2a
 SHA1 (patch-src_llvm-project_llvm_include_llvm_Analysis_ConstantFolding.h) = 977de4b2a9d37f7e7c782f2407c15591e032b6c6
+SHA1 (patch-src_llvm-project_llvm_utils_FileCheck_FileCheck.cpp) = 498395d1ae5b791b9e4710a856fdebe2fb87011e
 SHA1 (patch-src_tools_cargo_src_cargo_core_profiles.rs) = 3aac5d54a6fe96b9559552e67e497488142d4e80
 SHA1 (patch-src_tools_cargo_tests_testsuite_build.rs) = b50d65cfd2fea4793bcbec2515f5fc0203052ac0
 SHA1 (patch-src_tools_rls_rls_src_cmd.rs) = fade3e60fecac5c4e4d4ee5bee82659b4eb385b7
