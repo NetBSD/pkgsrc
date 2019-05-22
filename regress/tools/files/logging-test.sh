@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: logging-test.sh,v 1.6 2019/03/24 11:29:19 rillig Exp $
+# $NetBSD: logging-test.sh,v 1.7 2019/05/22 20:47:05 rillig Exp $
 
 # Up to March 2019, the command logging for the wrapped tools didn't properly
 # quote the command line arguments. This meant the logging did not reflect
@@ -152,7 +152,7 @@ test_case "TOOLS_SCRIPT with actual arguments containing quotes"
 		-DB=\"a\ b\"
 
 	assert_log <<'EOF'
-[*] WRKDIR/.tools/bin/for-loop '-DSD="a b"' '-DSS='\''a b'\''' '-DDD="a b"' '-DB="a b"'
-<.> set args '-DSD="a b"' '-DSS='\''a b'\''' '-DDD="a b"' '-DB="a b"'; shift; printf '%s' "$0";  for arg in "$@"; do  printf ' <%s>' "$arg";  done;  printf '\n'
+[*] WRKDIR/.tools/bin/for-loop -DSD='"a b"' -DSS=''\''a b'\''' -DDD='"a b"' -DB='"a b"'
+<.> set args -DSD='"a b"' -DSS=''\''a b'\''' -DDD='"a b"' -DB='"a b"'; shift; printf '%s' "$0";  for arg in "$@"; do  printf ' <%s>' "$arg";  done;  printf '\n'
 EOF
 }
