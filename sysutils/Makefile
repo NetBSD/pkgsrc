@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.810 2019/05/18 17:39:48 thorpej Exp $
+# $NetBSD: Makefile,v 1.811 2019/05/22 08:45:46 jmcneill Exp $
 #
 
 COMMENT=	System utilities
@@ -54,6 +54,7 @@ SUBDIR+=	boxbackup-client
 SUBDIR+=	boxbackup-server
 SUBDIR+=	brasero
 SUBDIR+=	brasero-nautilus
+SUBDIR+=	bsdec2-image-upload
 SUBDIR+=	bsdinstall
 SUBDIR+=	bsign
 SUBDIR+=	btpin-qt
