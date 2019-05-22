@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/05/22 08:45:10 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2019/05/22 08:58:39 jmcneill Exp $
 
 GITHUB_PROJECT=	bsdec2-image-upload
 DISTNAME=	1.2.2
@@ -14,7 +14,15 @@ LICENSE=	2-clause-bsd
 
 WRKSRC=		${WRKDIR}/bsdec2-image-upload-1.2.2
 
+MAKE_ENV+=	NOMAN=1
 CFLAGS+=	-DCERTFILE=\"${PREFIX}/share/mozilla-rootcerts/cacert.pem\"
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mgcc)
+CFLAGS+=	-Wno-error=pointer-sign \
+		-Wno-error=maybe-uninitialized \
+		-Wno-error=discarded-qualifiers
+.endif
 
 INSTALLATION_DIRS+=	bin
 
