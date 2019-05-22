@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2019/01/25 09:03:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2019/05/22 20:56:09 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -224,6 +224,9 @@ ${PYSITELIB}/braintree/ideal_payment_gateway.pyo
 ${PYSITELIB}/braintree/ids_search.py
 ${PYSITELIB}/braintree/ids_search.pyc
 ${PYSITELIB}/braintree/ids_search.pyo
+${PYSITELIB}/braintree/local_payment.py
+${PYSITELIB}/braintree/local_payment.pyc
+${PYSITELIB}/braintree/local_payment.pyo
 ${PYSITELIB}/braintree/local_payment_completed.py
 ${PYSITELIB}/braintree/local_payment_completed.pyc
 ${PYSITELIB}/braintree/local_payment_completed.pyo
