@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/03/13 12:51:13 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/05/22 09:52:52 prlw1 Exp $
 bin/meson
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -44,6 +44,9 @@ ${PYSITELIB}/mesonbuild/backend/vs2015backend.pyo
 ${PYSITELIB}/mesonbuild/backend/vs2017backend.py
 ${PYSITELIB}/mesonbuild/backend/vs2017backend.pyc
 ${PYSITELIB}/mesonbuild/backend/vs2017backend.pyo
+${PYSITELIB}/mesonbuild/backend/vs2019backend.py
+${PYSITELIB}/mesonbuild/backend/vs2019backend.pyc
+${PYSITELIB}/mesonbuild/backend/vs2019backend.pyo
 ${PYSITELIB}/mesonbuild/backend/xcodebackend.py
 ${PYSITELIB}/mesonbuild/backend/xcodebackend.pyc
 ${PYSITELIB}/mesonbuild/backend/xcodebackend.pyo
