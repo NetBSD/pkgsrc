@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/02/25 15:32:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/05/22 14:24:43 wiz Exp $
 bin/tor-browser
 lib/tor-browser/application.ini
 lib/tor-browser/browser/blocklist.xml
@@ -270,6 +270,11 @@ lib/tor-browser/browser/chrome/browser/content/browser/search/search.xml
 lib/tor-browser/browser/chrome/browser/content/browser/search/searchReset.js
 lib/tor-browser/browser/chrome/browser/content/browser/search/searchReset.xhtml
 lib/tor-browser/browser/chrome/browser/content/browser/search/searchbarBindings.css
+lib/tor-browser/browser/chrome/browser/content/browser/securitylevel/securityLevel.js
+lib/tor-browser/browser/chrome/browser/content/browser/securitylevel/securityLevelButton.css
+lib/tor-browser/browser/chrome/browser/content/browser/securitylevel/securityLevelButton.svg
+lib/tor-browser/browser/chrome/browser/content/browser/securitylevel/securityLevelPanel.css
+lib/tor-browser/browser/chrome/browser/content/browser/securitylevel/securityLevelPreferences.css
 lib/tor-browser/browser/chrome/browser/content/browser/setDesktopBackground.js
 lib/tor-browser/browser/chrome/browser/content/browser/setDesktopBackground.xul
 lib/tor-browser/browser/chrome/browser/content/browser/static-robot.png
@@ -2111,7 +2116,6 @@ lib/tor-browser/browser/chrome/en-US/locale/browser/searchplugins/amazon-ca.xml
 lib/tor-browser/browser/chrome/en-US/locale/browser/searchplugins/ddg-onion.xml
 lib/tor-browser/browser/chrome/en-US/locale/browser/searchplugins/ddg.xml
 lib/tor-browser/browser/chrome/en-US/locale/browser/searchplugins/disconnect.xml
-lib/tor-browser/browser/chrome/en-US/locale/browser/searchplugins/google-2018.xml
 lib/tor-browser/browser/chrome/en-US/locale/browser/searchplugins/google.xml
 lib/tor-browser/browser/chrome/en-US/locale/browser/searchplugins/images/amazon.ico
 lib/tor-browser/browser/chrome/en-US/locale/browser/searchplugins/images/ebay.ico
@@ -2559,7 +2563,9 @@ lib/tor-browser/browser/features/onboarding@mozilla.org/chrome/content/img/figur
 lib/tor-browser/browser/features/onboarding@mozilla.org/chrome/content/img/figure_tor-network.png
 lib/tor-browser/browser/features/onboarding@mozilla.org/chrome/content/img/figure_tor-onion-services.png
 lib/tor-browser/browser/features/onboarding@mozilla.org/chrome/content/img/figure_tor-privacy.png
+lib/tor-browser/browser/features/onboarding@mozilla.org/chrome/content/img/figure_tor-security-level.png
 lib/tor-browser/browser/features/onboarding@mozilla.org/chrome/content/img/figure_tor-security.png
+lib/tor-browser/browser/features/onboarding@mozilla.org/chrome/content/img/figure_tor-toolbar-layout.png
 lib/tor-browser/browser/features/onboarding@mozilla.org/chrome/content/img/figure_tor-welcome.png
 lib/tor-browser/browser/features/onboarding@mozilla.org/chrome/content/img/icons_no-icon.png
 lib/tor-browser/browser/features/onboarding@mozilla.org/chrome/content/img/icons_tour-complete.png
@@ -3942,4 +3948,3 @@ lib/tor-browser/tor-browser
 lib/tor-browser/tor-browser-bin
 share/applications/tor-browser.desktop
 share/pixmaps/tor-browser.png
-@pkgdir bin

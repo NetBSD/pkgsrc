@@ -1,4 +1,4 @@
-$NetBSD: patch-js_src_util_NativeStack.cpp,v 1.2 2019/03/15 11:51:26 wiz Exp $
+$NetBSD: patch-js_src_util_NativeStack.cpp,v 1.3 2019/05/22 14:24:43 wiz Exp $
 
 Support SunOS.
 
