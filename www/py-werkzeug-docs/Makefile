@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2019/04/24 16:05:43 adam Exp $
+# $NetBSD: Makefile,v 1.11 2019/05/23 12:00:48 adam Exp $
 
 PKGNAME=	${PYPKGPREFIX}-werkzeug-docs-${DISTNAME:C/[^-]*-//}
 COMMENT=	Python WSGI Utility Library (HTML documentation)
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-pallets-sphinx-themes-[0-9]*:../../textproc/py-pallets-sphinx-themes
+BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.2.3nb1:../../textproc/py-sphinx
 BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-issues-[0-9]*:../../textproc/py-sphinx-issues
 
 USE_TOOLS+=	gmake
@@ -20,14 +21,13 @@ PLIST_SRC+=	${WRKDIR}/PLIST
 .include "../../www/py-werkzeug/Makefile.common"
 
 do-install:
-	cd ${WRKSRC}/docs/_build/html \
-	    && pax -rwppm . ${DESTDIR}${PREFIX}/${DOCDIR}/html
+	cd ${WRKSRC}/docs/_build/html && \
+		${PAX} -rwppm . ${DESTDIR}${PREFIX}/${DOCDIR}/html
 	${RM} -f ${DESTDIR}${PREFIX}/${DOCDIR}/html/.buildinfo
-	cd ${DESTDIR}${PREFIX} \
-	    && ${FIND} ${DOCDIR}/html -type f -print > ${WRKDIR}/PLIST
+	cd ${DESTDIR}${PREFIX} && \
+		${FIND} ${DOCDIR}/html -type f -print > ${WRKDIR}/PLIST
 
 PYTHON_FOR_BUILD_ONLY=	yes
-BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.2.3nb1:../../textproc/py-sphinx
 
 MAKE_FLAGS+=	SPHINXBUILD=${PREFIX}/bin/sphinx-build${PYVERSSUFFIX}
 
