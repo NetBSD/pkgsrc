@@ -1,0 +1,37 @@
+$NetBSD: patch-conserver.cf_conserver.cf.man.in,v 1.1 2019/05/23 15:14:51 he Exp $
+
+Document what escape sequence converts to "telnet break" when using telnet.
+
+--- conserver.cf/conserver.cf.man.in.orig	2019-03-27 05:30:44.000000000 +0000
++++ conserver.cf/conserver.cf.man.in
+@@ -303,7 +303,30 @@ is ``and''ed with 0x1f)
+ .PD
+ .RE
+ .RE
+++.sp
+++For consoles accessed using the telnet protocol, the \f3\ez\fP
+++sequence will be translated to the telnet protocol's ``send break''
+++protocol sequence.
+++.sp
+++Conserver provides the following predefined default break strings:
+++.RS
+++.sp
+++.PD 0
+++.TP
+++\f30\fP
+++\ez
+++.TP
+++\f31\fP
+++\er~^b
+++.TP
+++\f32\fP
+++#.
+++.TP
+++\f33\fP
+++\er\ed~\ed^b    (with 600ms delay)
+ .RE
++.RE
++.sp
+ .TP
+ \f3config\fP \f2hostname\fP|\f2ipaddr\fP
+ .br
