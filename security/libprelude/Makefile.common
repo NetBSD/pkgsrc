@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2018/07/04 13:40:34 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.14 2019/05/23 19:23:15 rillig Exp $
 #
 # used by security/libprelude/Makefile
 # used by security/libprelude-lua/Makefile
@@ -52,7 +52,7 @@ MAKE_DIRS_PERMS+=	${PKG_SYSCONFDIR}/profile ${REAL_ROOT_USER} ${REAL_ROOT_GROUP}
 SUBST_CLASSES+=		make
 SUBST_STAGE.make=	pre-configure
 SUBST_FILES.make=	Makefile.in
-SUBST_SED.make=		-e 's,@EGDIR@,${EGDIR},g'
+SUBST_VARS.make=	EGDIR
 
 INSTALLATION_DIRS=	share/examples/libprelude
 

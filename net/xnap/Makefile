@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/23 17:19:21 asau Exp $
+# $NetBSD: Makefile,v 1.16 2019/05/23 19:23:11 rillig Exp $
 #
 
 DISTNAME=	xnap-2.0
@@ -22,7 +22,7 @@ SUBST_STAGE.path=	pre-configure
 SUBST_MESSAGE.path=	fixing java path
 SUBST_FILES.path=	xnap.sh
 SUBST_SED.path=		-e 's,@JAVA_HOME@,${PKG_JAVA_HOME}/,g'
-SUBST_SED.path+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.path=	PREFIX
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/xnap.sh ${DESTDIR}${PREFIX}/bin/xnap

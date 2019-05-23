@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/10/15 00:48:47 maya Exp $
+# $NetBSD: Makefile,v 1.4 2019/05/23 19:23:23 rillig Exp $
 
 DISTNAME=	slim-1.3.6
 PKGREVISION=	2
@@ -23,9 +23,9 @@ DEPENDS+=	bash-[0-9]*:../../shells/bash
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	CMakeLists.txt slim.conf
-SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},'
-SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},'
-SUBST_SED.paths+=	-e 's,@X11BASE@,${X11BASE},'
+SUBST_VARS.paths=	PREFIX
+SUBST_VARS.paths+=	PKG_SYSCONFDIR
+SUBST_VARS.paths+=	X11BASE
 
 CONF_FILES+=	share/examples/slim/slim.conf \
 		${PKG_SYSCONFDIR}/slim.conf

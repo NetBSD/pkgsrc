@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/07/04 13:40:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2019/05/23 19:23:01 rillig Exp $
 
 DISTNAME=	0verkill-0.16
 PKGREVISION=	1
@@ -25,7 +25,7 @@ SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
 SUBST_MESSAGE.prefix=	Fix game configuration path prefix
 SUBST_FILES.prefix=	cfg.h
-SUBST_SED.prefix=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_VARS.prefix=	PREFIX
 
 CFLAGS.SunOS+=		-Du_int32_t=uint32_t
 

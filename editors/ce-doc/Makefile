@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/10/09 14:06:32 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2019/05/23 19:23:00 rillig Exp $
 #
 
 .include "../../editors/ce/Makefile.common"
@@ -17,7 +17,7 @@ INSTALLATION_DIRS=	bin share/doc/ce
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	teach-ce.in
-SUBST_SED.paths=	-e 's|@LN@|${LN}|g'
+SUBST_VARS.paths=	LN
 SUBST_SED.paths+=	-e '1s,/bin/bash,'${SH:Q}','
 
 .include "../../mk/bsd.pkg.mk"

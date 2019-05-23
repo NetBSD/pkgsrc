@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/10/29 05:07:18 asau Exp $
+# $NetBSD: Makefile,v 1.29 2019/05/23 19:23:24 rillig Exp $
 
 DISTNAME=	pns_source
 PKGNAME=	xpns-1.0
@@ -18,7 +18,7 @@ BUILD_TARGET=	pns
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	xpns
-SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},'
+SUBST_VARS.paths=	PREFIX
 
 INSTALLATION_DIRS=	bin lib/xpns share/doc/xpns
 

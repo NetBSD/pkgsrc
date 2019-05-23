@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2017/08/01 14:58:56 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2019/05/23 19:22:58 rillig Exp $
 
 DISTNAME=		glib-1.2.10
 PKGREVISION=		11
@@ -48,7 +48,7 @@ SUBST_MESSAGE.shlib1=	Fixing shared library versions (part 1)
 SUBST_STAGE.shlib1=	pre-configure
 SUBST_FILES.shlib1=	glib-config.in docs/glib-config.1.in glib.pc.in \
 			gmodule.pc.in gthread.pc.in
-SUBST_SED.shlib1=	-e "s|@GLIB_VERSION@|${GLIB_VERSION}|g"
+SUBST_VARS.shlib1=	GLIB_VERSION
 SUBST_SED.shlib1+=	-e "s|@VERSION@|${GLIB_VERSION}|g"
 
 SUBST_CLASSES+=		shlib2

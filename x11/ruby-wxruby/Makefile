@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2018/11/14 22:22:50 kleink Exp $
+# $NetBSD: Makefile,v 1.31 2019/05/23 19:23:23 rillig Exp $
 #
 
 DISTNAME=	wxruby-2.0.1
@@ -27,7 +27,7 @@ INSTALLATION_DIRS+=	${RUBY_DOC}/wxruby ${RUBY_EG}/wxruby \
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
 SUBST_FILES.path=	rake/rakenetbsd.rb
-SUBST_SED.path=		-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_VARS.path=	PREFIX
 SUBST_MESSAGE.path=	Fixing include path.
 
 pre-configure:

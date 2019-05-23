@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/08/22 09:46:16 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/05/23 19:23:14 rillig Exp $
 #
 
 DISTNAME=	Bastille-3.0.9
@@ -34,9 +34,9 @@ SUBST_SED.b+=		-e 's,\$$RPM_BUILD_ROOT/var/,${DESTDIR}${VARBASE}/,g'
 SUBST_CLASSES+=		b2
 SUBST_STAGE.b2=		pre-configure
 SUBST_FILES.b2=		bin/bastille Bastille/API.pm
-SUBST_SED.b2=		-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
-SUBST_SED.b2+=		-e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.b2+=		-e 's,@VARBASE@,${VARBASE},g'
+SUBST_VARS.b2=		PKG_SYSCONFDIR
+SUBST_VARS.b2+=		PREFIX
+SUBST_VARS.b2+=		VARBASE
 
 SUBST_CLASSES+=		b3
 SUBST_STAGE.b3=		pre-configure

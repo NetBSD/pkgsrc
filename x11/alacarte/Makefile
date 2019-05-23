@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2019/04/26 14:12:49 maya Exp $
+# $NetBSD: Makefile,v 1.80 2019/05/23 19:23:22 rillig Exp $
 
 DISTNAME=	alacarte-0.13.1
 PKGREVISION=	43
@@ -20,8 +20,8 @@ PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-ORBit via py-gnome2, py-gtk2
 SUBST_CLASSES+=	paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	Alacarte/util.py
-SUBST_SED.paths=	-e "s;@PREFIX@;${PREFIX};g"
-SUBST_SED.paths+=	-e "s;@PKG_SYSCONFBASE@;${PKG_SYSCONFBASE};g"
+SUBST_VARS.paths=	PREFIX
+SUBST_VARS.paths+=	PKG_SYSCONFBASE
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

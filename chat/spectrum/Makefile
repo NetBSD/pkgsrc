@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2019/05/05 22:49:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.81 2019/05/23 19:22:56 rillig Exp $
 
 DISTNAME=		spectrum-1.4.8
 PKGREVISION=		53
@@ -68,7 +68,7 @@ SUBST_CLASSES+=		manpath
 SUBST_STAGE.manpath=	pre-configure
 SUBST_FILES.manpath=	CMakeLists.txt
 SUBST_MESSAGE.manpath=	Correcting man page directory
-SUBST_SED.manpath+=	-e 's,@PKGMANDIR@,${PKGMANDIR},g'
+SUBST_VARS.manpath=	PKGMANDIR
 
 SUBST_CLASSES+=		users
 SUBST_STAGE.users=	pre-configure

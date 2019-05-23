@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2018/07/04 13:40:15 jperkin Exp $
+# $NetBSD: Makefile,v 1.71 2019/05/23 19:22:59 rillig Exp $
 
 DISTNAME=	pwlib-v1_8_3-src
 PKGNAME=	pwlib-1.8.3
@@ -32,12 +32,12 @@ MAKE_ENV+=		PWLIBDIR=${WRKSRC:Q} CC=${CC:Q} CPLUS=${CXX:Q}
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	make/unix.mak make/lib.mak make/common.mak make/pwlib.mak
-SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.paths+=	-e 's,@LIBTOOL@,${LIBTOOL},g'
+SUBST_VARS.paths=	PREFIX
+SUBST_VARS.paths+=	LIBTOOL
 SUBST_SED.paths+=	-e 's,@BSD_INSTALL_LIB@,${INSTALL_LIB},g'
 SUBST_SED.paths+=	-e 's,@BSD_INSTALL_PROGRAM@,${INSTALL_PROGRAM},g'
 SUBST_SED.paths+=	-e 's,@PTHREAD_FLAGS@,${PTHREAD_LDFLAGS} ${PTHREAD_LIBS},g'
-SUBST_SED.paths+=	-e 's,@LIBOSSAUDIO@,${LIBOSSAUDIO},g'
+SUBST_VARS.paths+=	LIBOSSAUDIO
 SUBST_STAGE.paths=	pre-configure
 
 post-extract:

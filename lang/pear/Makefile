@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2019/04/30 03:29:07 taca Exp $
+# $NetBSD: Makefile,v 1.48 2019/05/23 19:23:03 rillig Exp $
 #
 
 DISTNAME=	PEAR-1.10.9
@@ -55,8 +55,8 @@ DISTFILES+=		${XMLUTIL_SRCS}
 SUBST_CLASSES+=		config
 SUBST_STAGE.config=	pre-configure
 SUBST_FILES.config=	install/go-pear.php
-SUBST_SED.config=	-e "s|@WRKSRC@|${WRKSRC}|g"
-SUBST_SED.config+=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_VARS.config=	WRKSRC
+SUBST_VARS.config+=	PREFIX
 SUBST_MESSAGE.config=	Fixing configuration files.
 
 REPLACE_SH+=		script/pear.sh
