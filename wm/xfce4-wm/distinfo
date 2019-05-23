@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.26 2019/01/09 01:33:35 gutteridge Exp $
+$NetBSD: distinfo,v 1.27 2019/05/23 02:13:24 gutteridge Exp $
 
-SHA1 (xfwm4-4.13.1.tar.bz2) = 74e367d8b1e37872c3a7c5d0b5a1e0b1195a6228
-RMD160 (xfwm4-4.13.1.tar.bz2) = ca6a598107a1a0bb8ab2e9837a43c25955295754
-SHA512 (xfwm4-4.13.1.tar.bz2) = 2ac5acdefff3a89b8525719b345dfeb2dc71104b4da341afe99d7c57c049753c4cdb81a512d1f344e5fb463c7143673e83316b63888777bdcf254c4a07ca8320
-Size (xfwm4-4.13.1.tar.bz2) = 1224120 bytes
+SHA1 (xfwm4-4.13.2.tar.bz2) = dcc5718e44f818fdb9393eab51d53bc035795ed7
+RMD160 (xfwm4-4.13.2.tar.bz2) = 3957e287b7e78477114028aff681302cb1144915
+SHA512 (xfwm4-4.13.2.tar.bz2) = 85440a377cd7034e986b317e35c25ac6d4723bd4c1ce1e6951d8545a44f3c47340952fd0211f55cf19411539be6d86f4c34fca7b2219b0873654a6d311c95055
+Size (xfwm4-4.13.2.tar.bz2) = 1139976 bytes
 SHA1 (patch-defaults_defaults) = 116409b6ee52344984bf6547c9f6cf06d6d66b92
-SHA1 (patch-src_startup__notification.c) = 1f9abc22d52145b6fef71a9a00ad0eea76b15c6e
