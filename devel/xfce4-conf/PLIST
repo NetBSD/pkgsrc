@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2019/01/18 14:15:36 youri Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/05/23 01:50:17 gutteridge Exp $
 bin/xfconf-query
 include/xfce4/xfconf-0/xfconf/xfconf-binding.h
 include/xfce4/xfconf-0/xfconf/xfconf-channel.h
 include/xfce4/xfconf-0/xfconf/xfconf-errors.h
 include/xfce4/xfconf-0/xfconf/xfconf-types.h
 include/xfce4/xfconf-0/xfconf/xfconf.h
-lib/gio/modules/libxfconfgsettingsbackend.la
 lib/libxfconf-0.la
 lib/pkgconfig/libxfconf-0.pc
 lib/xfce4/xfconf/xfconfd
