@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19022 2019/05/23 10:21:59 ryoon Exp $
+$NetBSD: TODO,v 1.19023 2019/05/23 10:28:47 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1389,7 +1389,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xorp-1.8.5
 	o xosview-1.19
 	o xpaint-2.9.9
-	o xpdf-4.0
+	o xpdf-4.01.01
 	o xpmroot-2.7.0
 	o xrmap-base-2.33.1
 	o xrmap-factbook_html-2008
