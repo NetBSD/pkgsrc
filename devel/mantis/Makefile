@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2017/05/21 07:16:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.51 2019/05/23 19:22:58 rillig Exp $
 
 DISTNAME=	mantisbt-2.4.1
 PKGNAME=	${DISTNAME:S/mantisbt/mantis/}
@@ -35,7 +35,7 @@ MANTIS_EG=		config_inc.php mantis.conf mantis_offline.php.sample
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-install
 SUBST_FILES.conf=	mantis.conf
-SUBST_SED.conf=		-e "s|@MANTIS_HOME@|${MANTIS_HOME}|g"
+SUBST_VARS.conf=	MANTIS_HOME
 SUBST_MESSAGE.conf=	Fixing configuration files.
 
 REPLACE_BASH+=		scripts/travis_before_script.sh

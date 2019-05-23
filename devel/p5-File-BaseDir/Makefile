@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2018/08/22 09:43:59 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2019/05/23 19:22:59 rillig Exp $
 
 DISTNAME=		File-BaseDir-0.08
 PKGNAME=		p5-${DISTNAME}
@@ -21,7 +21,7 @@ SHAREDIR_SPLIT=		${SHAREDIR:S/\// /g}
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-configure
 SUBST_FILES.paths=	lib/File/BaseDir.pm t/01_vars.t t/03_OO.t
-SUBST_SED.paths=	-e 's|@SHAREDIR_SPLIT@|${SHAREDIR_SPLIT}|g'
+SUBST_VARS.paths=	SHAREDIR_SPLIT
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/File/BaseDir/.packlist

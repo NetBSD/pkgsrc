@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/04/26 14:12:49 maya Exp $
+# $NetBSD: Makefile,v 1.33 2019/05/23 19:23:21 rillig Exp $
 
 DISTNAME=	viewvc-1.1.26
 PKGREVISION=	1
@@ -37,10 +37,10 @@ SUBST_STAGE.conf=	pre-configure
 SUBST_MESSAGE.conf=	Fixing configuration files.
 SUBST_FILES.conf=	conf/viewvc.conf.dist
 SUBST_FILES.conf+=	conf/cvsgraph.conf.dist
-SUBST_SED.conf=		-e "s|@VIEWVCDIR@|${VIEWVCDIR}|g"
-SUBST_SED.conf+=	-e "s|@PREFIX@|${PREFIX}|g"
-SUBST_SED.conf+=	-e "s|@PHP_OPT@|${PHP_OPT}|g"
-SUBST_SED.conf+=	-e "s|@CVSGRAPH_OPT@|${CVSGRAPH_OPT}|g"
+SUBST_VARS.conf=	VIEWVCDIR
+SUBST_VARS.conf+=	PREFIX
+SUBST_VARS.conf+=	PHP_OPT
+SUBST_VARS.conf+=	CVSGRAPH_OPT
 
 .if defined(RCS_PKG) && ${RCS_PKG} == "YES"
 SUBST_SED.conf+=	-e "s|@RCS_PREFIX@|${PREFIX}|g"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2019/04/26 13:14:13 maya Exp $
+# $NetBSD: Makefile,v 1.50 2019/05/23 19:23:16 rillig Exp $
 
 DISTNAME=		prewikka-${VERSION}
 PKGNAME=		${PYPKGPREFIX}-prewikka-${VERSION}
@@ -44,9 +44,9 @@ PKG_USERS_VARS+=	PREWIKKA_USER
 SUBST_CLASSES+=		code
 SUBST_STAGE.code=	pre-configure
 SUBST_FILES.code=	runPrewikka.c
-SUBST_SED.code=		-e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.code+=	-e 's,@PREWIKKA_USER@,${PREWIKKA_USER},g'
-SUBST_SED.code+=	-e 's,@PYTHONBIN@,${PYTHONBIN},g'
+SUBST_VARS.code=	PREFIX
+SUBST_VARS.code+=	PREWIKKA_USER
+SUBST_VARS.code+=	PYTHONBIN
 
 FILES_SUBST+=	PREWIKKA_USER=${PREWIKKA_USER:Q}
 

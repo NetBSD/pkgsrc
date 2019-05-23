@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/04/25 07:32:52 maya Exp $
+# $NetBSD: Makefile,v 1.10 2019/05/23 19:23:00 rillig Exp $
 
 DISTNAME=	dynagen-0.11.0
 PKGREVISION=	5
@@ -21,7 +21,7 @@ SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	dynagen
 SUBST_SED.paths=	-e "s|@SYSCONFDIR@|${PKG_SYSCONFDIR}|"
-SUBST_SED.paths+=	-e "s|@PREFIX@|${PREFIX}|"
+SUBST_VARS.paths=	PREFIX
 
 CONF_FILES+=		share/examples/dynagen/dynagen.ini ${PKG_SYSCONFDIR}/dynagen.ini
 

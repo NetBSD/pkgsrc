@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2018/02/21 12:26:45 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2019/05/23 19:23:20 rillig Exp $
 
 DISTNAME=	horde-3.3.13
 PKGREVISION=	4
@@ -90,7 +90,7 @@ SUBST_CLASSES+=		files
 SUBST_STAGE.files=	post-build
 SUBST_FILES.files=	horde.conf.dist config/conf.xml config/conf.xml.dist \
 			scripts/set_perms.sh
-SUBST_SED.files=	-e "s|@HORDEDIR@|${HORDEDIR}|g"
+SUBST_VARS.files=	HORDEDIR
 SUBST_SED.files+=	-e "s|/usr/lib/sendmail|${SENDMAIL}|g"
 SUBST_SED.files+=	-e "s|/bin/sh|${SH}|g"
 SUBST_MESSAGE.files=	Fixing configuration files.

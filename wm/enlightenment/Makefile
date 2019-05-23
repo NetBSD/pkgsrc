@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2018/08/22 09:47:21 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2019/05/23 19:23:19 rillig Exp $
 
 DISTNAME=	e16-0.16.8.8
 PKGNAME=	${DISTNAME:S/e16/enlightenment/}
@@ -32,9 +32,9 @@ REPLACE_PERL+=		scripts/e_gen_menu
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	scripts/e_gen_menu
-SUBST_SED.paths=	-e 's,@LOCALBASE@,${LOCALBASE},g'
-SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.paths+=	-e 's,@X11BASE@,${X11BASE},g'
+SUBST_VARS.paths=	LOCALBASE
+SUBST_VARS.paths+=	PREFIX
+SUBST_VARS.paths+=	X11BASE
 
 PLIST_VARS+=	libhack
 

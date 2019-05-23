@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.156 2018/12/13 08:22:42 tm Exp $
+# $NetBSD: Makefile,v 1.157 2019/05/23 19:22:57 rillig Exp $
 
 DISTNAME=	phpMyAdmin-4.8.4-all-languages
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/-all-languages//:tl}
@@ -75,8 +75,8 @@ NO_BUILD=		yes
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths+=	${WRKDIR}/phpmyadmin.conf
 SUBST_FILES.paths+=	${WRKSRC}/libraries/vendor_config.php
-SUBST_SED.paths+=	-e "s|@PMDIR@|${PMDIR}|g"
-SUBST_SED.paths+=	-e "s|@PMVARDIR@|${PMVARDIR}|g"
+SUBST_VARS.paths=	PMDIR
+SUBST_VARS.paths+=	PMVARDIR
 SUBST_SED.paths+=	-e "s|@PMCONFDIR@|${PMCONFDIR}/|g"
 SUBST_STAGE.paths=	post-configure
 

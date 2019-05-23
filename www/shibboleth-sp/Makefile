@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2019/01/24 16:46:21 perseant Exp $
+# $NetBSD: Makefile,v 1.31 2019/05/23 19:23:21 rillig Exp $
 #
 
 DISTNAME=	shibboleth-sp-2.5.5
@@ -35,8 +35,8 @@ SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKSRC}/configs/Makefile.in
 SUBST_FILES.paths+=	${WRKSRC}/configs/keygen.sh
 SUBST_STAGE.paths=	pre-configure
-SUBST_SED.paths=	-e 's,@EGDIR@,${EGDIR},'
-SUBST_SED.paths+=	-e 's,@SHIB_CONFDIR@,${SHIB_CONFDIR},'
+SUBST_VARS.paths=	EGDIR
+SUBST_VARS.paths+=	SHIB_CONFDIR
 
 REPLACE_BASH=	configs/metagen.sh
 

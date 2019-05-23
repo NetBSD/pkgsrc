@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2019/04/26 13:13:43 maya Exp $
+# $NetBSD: Makefile,v 1.67 2019/05/23 19:22:55 rillig Exp $
 
 DISTNAME=		solfege-3.14.1
 PKGREVISION=		32
@@ -32,10 +32,10 @@ PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-gtk2
 SUBST_CLASSES+=		sound
 SUBST_STAGE.sound=	do-configure
 SUBST_FILES.sound=	default.config
-SUBST_SED.sound=	-e 's|@WAVPLAYER@|${WAVPLAYER}|g'
-SUBST_SED.sound+=	-e 's|@MIDIPLAYER@|${MIDIPLAYER}|g'
-SUBST_SED.sound+=	-e 's|@MP3PLAYER@|${MP3PLAYER}|g'
-SUBST_SED.sound+=	-e 's|@OGGPLAYER@|${OGGPLAYER}|g'
+SUBST_VARS.sound=	WAVPLAYER
+SUBST_VARS.sound+=	MIDIPLAYER
+SUBST_VARS.sound+=	MP3PLAYER
+SUBST_VARS.sound+=	OGGPLAYER
 SUBST_MESSAGE.sound=	Setting default audio player.
 
 EGDIR=			${PREFIX}/share/examples/solfege

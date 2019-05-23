@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/08/22 09:43:04 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/05/23 19:22:57 rillig Exp $
 #
 
 DISTNAME=	op_panel-0.29
@@ -50,10 +50,10 @@ CONF_FILES+=		${EGDIR}/op_panel.conf ${PKG_SYSCONFDIR}/op_panel.conf
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKDIR}/${FOP}.conf.dist
-SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.paths+=	-e 's,@SMDIR@,${SMDIR},g'
-SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
-SUBST_SED.paths+=	-e 's,@PERL5@,${PERL5},g'
+SUBST_VARS.paths=	PREFIX
+SUBST_VARS.paths+=	SMDIR
+SUBST_VARS.paths+=	PKG_SYSCONFDIR
+SUBST_VARS.paths+=	PERL5
 SUBST_STAGE.paths=	pre-configure
 
 INSTALLATION_DIRS+=	share/examples/${FOP}

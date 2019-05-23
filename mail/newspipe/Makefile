@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/04/25 07:33:04 maya Exp $
+# $NetBSD: Makefile,v 1.15 2019/05/23 19:23:06 rillig Exp $
 #
 
 DISTNAME=		newspipe.1.1.9
@@ -24,9 +24,9 @@ REPLACE_PYTHON=	*.py
 SUBST_CLASSES+=		bin
 SUBST_STAGE.bin=	do-configure
 SUBST_FILES.bin=	newspipe.py newspipe
-SUBST_SED.bin=		-e 's|@LOCALBASE@|${LOCALBASE}|g'
-SUBST_SED.bin+=		-e 's|@PREFIX@|${PREFIX}|g'
-SUBST_SED.bin+=		-e 's|@PYTHONBIN@|${PYTHONBIN}|g'
+SUBST_VARS.bin=		LOCALBASE
+SUBST_VARS.bin+=	PREFIX
+SUBST_VARS.bin+=	PYTHONBIN
 
 INSTALLATION_DIRS=	bin share/newspipe share/doc/newspipe
 INSTALLATION_DIRS+=	share/examples/newspipe

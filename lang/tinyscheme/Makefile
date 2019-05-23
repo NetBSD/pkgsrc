@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2014/04/29 19:18:16 agc Exp $
+# $NetBSD: Makefile,v 1.19 2019/05/23 19:23:04 rillig Exp $
 
 DISTNAME=	tinyscheme-1.40
 CATEGORIES=	lang
@@ -24,7 +24,7 @@ SUBST_CLASSES+=		initpath
 SUBST_STAGE.initpath=	pre-configure
 SUBST_MESSAGE.initpath=	Fix location of init.scm file
 SUBST_FILES.initpath=	scheme.c
-SUBST_SED.initpath=	-e 's|@PREFIX@|${PREFIX}|'
+SUBST_VARS.initpath=	PREFIX
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

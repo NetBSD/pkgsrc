@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/06 11:54:50 asau Exp $
+# $NetBSD: Makefile,v 1.6 2019/05/23 19:23:01 rillig Exp $
 #
 
 DISTNAME=		polyglot_14
@@ -24,7 +24,7 @@ post-extract:
 SUBST_CLASSES+=		ini
 SUBST_STAGE.ini=	post-configure
 SUBST_FILES.ini=	fruit.ini
-SUBST_SED.ini=		-e 's,@LOCALBASE@,${LOCALBASE},g'
+SUBST_VARS.ini=		LOCALBASE
 
 SRCS=		adapter.cpp attack.cpp board.cpp book.cpp book_make.cpp \
 		book_merge.cpp colour.cpp engine.cpp epd.cpp fen.cpp	\

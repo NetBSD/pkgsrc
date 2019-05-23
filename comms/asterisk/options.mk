@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2018/07/04 13:40:11 jperkin Exp $
+# $NetBSD: options.mk,v 1.10 2019/05/23 19:22:56 rillig Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.asterisk
 PKG_SUPPORTED_OPTIONS=		zaptel x11 unixodbc ilbc webvmail ldap spandsp
@@ -80,8 +80,8 @@ DEPENDS+=		p5-DBI-[0-9]*:../../databases/p5-DBI
 SUBST_CLASSES+=		webvmail
 SUBST_STAGE.webvmail=	pre-configure
 SUBST_FILES.webvmail=	contrib/scripts/vmail.cgi
-SUBST_SED.webvmail+=	-e 's|@ASTETCDIR@|${ASTETCDIR}|'
-SUBST_SED.webvmail+=	-e "s|@ASTSPOOLDIR@|${ASTSPOOLDIR}|"
+SUBST_VARS.webvmail=	ASTETCDIR
+SUBST_VARS.webvmail+=	ASTSPOOLDIR
 INSTALLATION_DIRS+=	${PREFIX}/libexec/cgi-bin ${PREFIX}/share/httpd/htdocs
 SPECIAL_PERMS+=		${PREFIX}/libexec/cgi-bin/vmail ${ASTERISK_USER} ${ASTERISK_GROUP} 04555
 INSTALL_TARGET+=	webvmail

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/02/20 02:55:15 dholland Exp $
+# $NetBSD: Makefile,v 1.17 2019/05/23 19:23:13 rillig Exp $
 #
 
 PKGNAME=	verifypc-1.7
@@ -15,8 +15,8 @@ SUBST_CLASSES+=		vars
 SUBST_STAGE.vars=	do-configure
 SUBST_MESSAGE.vars=	Configuring sources.
 SUBST_FILES.vars=	*
-SUBST_SED.vars=		-e s\|@MAKE@\|${MAKE:Q}\|g
-SUBST_SED.vars+=	-e s\|@SH@\|${SH:Q}\|g
+SUBST_VARS.vars=	MAKE
+SUBST_VARS.vars+=	SH
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 bin
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2019/04/03 14:28:57 adam Exp $
+# $NetBSD: Makefile,v 1.93 2019/05/23 19:23:14 rillig Exp $
 
 DISTNAME=	gpgme-1.13.0
 CATEGORIES=	security
@@ -20,7 +20,7 @@ INFO_FILES=		yes
 SUBST_CLASSES+=		pthread
 SUBST_FILES.pthread=	src/gpgme-config.in
 SUBST_SED.pthread+=	-e 's,@PTHREAD_LIBS@,${PTHREAD_LDFLAGS} ${PTHREAD_LIBS},g'
-SUBST_SED.pthread+=	-e 's,@PTHREAD_CFLAGS@,${PTHREAD_CFLAGS},g'
+SUBST_VARS.pthread=	PTHREAD_CFLAGS
 SUBST_STAGE.pthread=	pre-configure
 
 CPPFLAGS.Darwin=	-D_POSIX_C_SOURCE=200809L

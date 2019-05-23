@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/11/20 21:26:39 schmonz Exp $
+# $NetBSD: Makefile,v 1.20 2019/05/23 19:22:58 rillig Exp $
 
 DISTNAME=	gradle-4.10.2-bin
 PKGNAME=	${DISTNAME:S/-bin//}
@@ -27,7 +27,7 @@ SUBST_CLASSES+=		launcher
 SUBST_FILES.launcher=	gradle-launcher
 SUBST_STAGE.launcher=	post-configure
 SUBST_SED.launcher=	-e 's,@APP_HOME@,${PREFIX}/lib/java/gradle,g'
-SUBST_SED.launcher+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.launcher=	PREFIX
 SUBST_SED.launcher+=	-e 's,@APP_LAUNCHER@,lib/gradle-launcher-${PKGVERSION_NOREV}\.jar,g'
 SUBST_SED.launcher+=	-e 's,@JAVA_HOME@,${PKG_JAVA_HOME},g'
 

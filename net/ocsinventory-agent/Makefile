@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/08/22 09:45:56 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2019/05/23 19:23:10 rillig Exp $
 #
 VERS=			1.1.2.1
 PKGREVISION=		10
@@ -44,7 +44,7 @@ SUBST_CLASSES+=			sysconfdir path varbase apachevers
 SUBST_STAGE.sysconfdir=		pre-configure
 SUBST_FILES.sysconfdir=		lib/Ocsinventory/Agent/Config.pm
 SUBST_FILES.sysconfdir+=	postinst.pl
-SUBST_SED.sysconfdir=		-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
+SUBST_VARS.sysconfdir=		PKG_SYSCONFDIR
 SUBST_MESSAGE.sysconfdir=	Fixing hardcoded install directory path.
 
 SUBST_STAGE.path=	pre-configure

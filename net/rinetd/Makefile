@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/07/04 13:40:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.19 2019/05/23 19:23:10 rillig Exp $
 #
 
 DISTNAME=		rinetd
@@ -22,8 +22,8 @@ RCD_SCRIPTS=		rinetd
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	rinetd.8
-SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
+SUBST_VARS.paths=	PREFIX
+SUBST_VARS.paths+=	PKG_SYSCONFDIR
 SUBST_STAGE.paths=	pre-configure
 
 LDFLAGS.SunOS+=		-lsocket -lnsl

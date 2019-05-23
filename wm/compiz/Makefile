@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2019/05/05 22:49:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.117 2019/05/23 19:23:18 rillig Exp $
 #
 
 PKGVER=		0.8.8
@@ -58,7 +58,7 @@ PKGCONFIG_OVERRIDE+=	libdecoration/libdecoration.pc.in
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	metadata/decoration.xml.in
-SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.paths=	PREFIX
 SUBST_STAGE.paths=	pre-configure
 
 .include "options.mk"

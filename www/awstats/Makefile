@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2018/08/22 09:47:23 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2019/05/23 19:23:20 rillig Exp $
 
 DISTNAME=	awstats-7.6
 PKGREVISION=	1
@@ -42,9 +42,9 @@ SUBST_FILES.conf=	tools/awstats_configure.pl \
 			tools/awstats_updateall.pl \
 			wwwroot/cgi-bin/awstats.model.conf \
 			wwwroot/cgi-bin/awstats.pl
-SUBST_SED.conf=		-e "s|@PREFIX@|${PREFIX}|g"
-SUBST_SED.conf+=	-e "s|@VARBASE@|${VARBASE}|g"
-SUBST_SED.conf+=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
+SUBST_VARS.conf=	PREFIX
+SUBST_VARS.conf+=	VARBASE
+SUBST_VARS.conf+=	PKG_SYSCONFDIR
 SUBST_SED.conf+=	-e "s|\"/etc/awstats|\"${PKG_SYSCONFDIR}|g"
 SUBST_SED.conf+=	-e "s|\"/usr/local/awstats/wwwroot|\"${PREFIX}/awstats|g"
 SUBST_SED.conf+=	-e "s|/var/log/httpd/mylog.log|${VARBASE}/log/httpd/access_log|g"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/04/06 21:07:34 rodent Exp $
+# $NetBSD: Makefile,v 1.18 2019/05/23 19:23:11 rillig Exp $
 #
 
 DISTNAME=	tsocks-1.8beta5
@@ -26,8 +26,8 @@ SUBST_CLASSES+=		tsocks
 SUBST_STAGE.tsocks=	post-configure
 SUBST_MESSAGE.tsocks=	Generating tsocks wrapper script.
 SUBST_FILES.tsocks=	tsocks
-SUBST_SED.tsocks=	-e "s|@SH@|${SH}|g"
-SUBST_SED.tsocks+=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_VARS.tsocks=	SH
+SUBST_VARS.tsocks+=	PREFIX
 
 INSTALLATION_DIRS+=	${EGDIR}
 

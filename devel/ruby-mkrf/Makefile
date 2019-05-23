@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/09/04 18:00:53 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2019/05/23 19:22:59 rillig Exp $
 
 DISTNAME=	mkrf-0.2.3
 PKGREVISION=	1
@@ -14,7 +14,7 @@ USE_RAKE=	RUN
 SUBST_CLASSES+=		rake
 SUBST_STAGE.rake=	pre-configure
 SUBST_FILES.rake=	lib/mkrf/rakehelper.rb
-SUBST_SED.rake=		-e "s|@RAKE@|${RAKE}|"
+SUBST_VARS.rake=	RAKE
 SUBST_MESSAGE.rake=	Fixate rake's path.
 
 .include "../../lang/ruby/gem.mk"

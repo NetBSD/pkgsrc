@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2018/11/22 02:25:11 markd Exp $
+# $NetBSD: Makefile.common,v 1.2 2019/05/23 19:23:23 rillig Exp $
 #
 # used by x11/py-sip/Makefile
 # used by x11/py-sip-qt5/Makefile
@@ -57,5 +57,5 @@ BUILDLINK_TRANSFORM+=	rm:-O2
 SUBST_CLASSES+=		pyversfx
 SUBST_STAGE.pyversfx=	pre-configure
 SUBST_FILES.pyversfx=	sipgen/sipgen.sbf
-SUBST_SED.pyversfx=	-e "s|@PYVERSSUFFIX@|${PYVERSSUFFIX}|g"
+SUBST_VARS.pyversfx=	PYVERSSUFFIX
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2017/08/16 20:21:10 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2019/05/23 19:23:06 rillig Exp $
 
 DISTNAME=	ingo-h3-${INGOVER}
 PKGNAME=	ingo-${INGOVER}
@@ -37,7 +37,7 @@ USE_PKGINSTALL=		yes
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	post-build
 SUBST_FILES.files=	ingo.conf.dist
-SUBST_SED.files=	-e "s|@INGODIR@|${INGODIR}|g"
+SUBST_VARS.files=	INGODIR
 SUBST_MESSAGE.files=	Fixing configuration files.
 
 REPLACE_INTERPRETER+=	php

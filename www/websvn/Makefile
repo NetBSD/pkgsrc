@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/03/16 07:21:26 obache Exp $
+# $NetBSD: Makefile,v 1.24 2019/05/23 19:23:22 rillig Exp $
 #
 
 DISTNAME=	websvn-2.2.1
@@ -31,8 +31,8 @@ SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	do-configure
 SUBST_MESSAGE.conf=	Fixing paths to configuration files.
 SUBST_FILES.conf=	include/setup.php
-SUBST_SED.conf=		-e "s|@EGDIR@|${EGDIR}|g"
-SUBST_SED.conf+=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
+SUBST_VARS.conf=	EGDIR
+SUBST_VARS.conf+=	PKG_SYSCONFDIR
 
 INSTALLATION_DIRS=	${HTTPD_ROOT}/websvn share/examples/websvn
 

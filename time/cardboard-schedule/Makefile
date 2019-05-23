@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2017/08/01 17:40:17 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2019/05/23 19:23:18 rillig Exp $
 #
 
 DISTNAME=	cs113ins
@@ -49,8 +49,8 @@ INSTALLATION_DIRS=	bin lib/cardboard-schedule
 SUBST_CLASSES+=		cs
 SUBST_STAGE.cs=		do-configure
 SUBST_FILES.cs=		csched.sh
-SUBST_SED.cs+=		-e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.cs+=		-e 's,@LOCALBASE@,${LOCALBASE},g'
+SUBST_VARS.cs=		PREFIX
+SUBST_VARS.cs+=		LOCALBASE
 SUBST_SED.cs+=		-e 's,@JAVA_HOME@,${PKG_JAVA_HOME},g'
 
 post-extract:

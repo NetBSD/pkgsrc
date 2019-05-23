@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2018/11/14 22:21:37 kleink Exp $
+# $NetBSD: Makefile,v 1.37 2019/05/23 19:23:01 rillig Exp $
 #
 
 DISTNAME=	frameworks-0.3.7
@@ -20,7 +20,7 @@ SUBST_CLASSES=		xdg
 SUBST_STAGE.xdg=	pre-configure
 SUBST_MESSAGE.xdg=	Fixing paths in xdg menu entries.
 SUBST_FILES.xdg=	frameworks.desktop
-SUBST_SED.xdg=		-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.xdg=	PREFIX
 
 INSTALLATION_DIRS=	share/applications share/icons/hicolor/48x48/apps
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/04/25 07:32:48 maya Exp $
+# $NetBSD: Makefile,v 1.14 2019/05/23 19:22:58 rillig Exp $
 #
 
 DISTNAME=		ncc-2.8
@@ -19,7 +19,7 @@ SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
 SUBST_MESSAGE.prefix=	Fixing hardcoded paths
 SUBST_FILES.prefix=	config.h
-SUBST_SED.prefix=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.prefix=	PREFIX
 
 REPLACE_PYTHON+=	scripts/nccstrip2.py
 

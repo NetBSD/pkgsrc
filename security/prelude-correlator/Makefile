@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/04/26 14:12:45 maya Exp $
+# $NetBSD: Makefile,v 1.22 2019/05/23 19:23:15 rillig Exp $
 
 DISTNAME=	prelude-correlator-0.9.0-beta8
 PKGNAME=	prelude-correlator-${DISTNAME:S/-beta/beta/:C/.*-//}
@@ -38,9 +38,9 @@ SUBST_CLASSES+=		code
 SUBST_STAGE.code=	pre-configure
 SUBST_FILES.code=	run-prelude-correlator.c
 SUBST_FILES.code+=	${WRKSRC}/*.py
-SUBST_SED.code=		-e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.code+=	-e 's,@PRELUDE_USER@,${PRELUDE_USER},g'
-SUBST_SED.code+=	-e 's,@PRELUDE_HOME@,${PRELUDE_HOME},g'
+SUBST_VARS.code=	PREFIX
+SUBST_VARS.code+=	PRELUDE_USER
+SUBST_VARS.code+=	PRELUDE_HOME
 
 CONF_FILES+=		${EGDIR}/prelude-correlator.conf ${PKG_SYSCONFDIR}/prelude-correlator/prelude-correlator.conf
 CONF_FILES+=		${EGDIR}/dshield.dat ${PRELUDE_HOME}/dshield.dat

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/10/26 09:15:06 sborrill Exp $
+# $NetBSD: Makefile,v 1.13 2019/05/23 19:23:17 rillig Exp $
 #
 
 # Values from XenServer 7.0 = 7, 0, 0, 125243
@@ -37,16 +37,16 @@ RCD_SCRIPTS=		xenguest
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-install
 SUBST_FILES.paths=	${SRCFILES}
-SUBST_SED.paths=	-e "s,@VARBASE@,${VARBASE},g"
-SUBST_SED.paths+=	-e "s,@PREFIX@,${PREFIX},g"
+SUBST_VARS.paths=	VARBASE
+SUBST_VARS.paths+=	PREFIX
 
 SUBST_CLASSES+=		version
 SUBST_STAGE.version=	pre-install
 SUBST_FILES.version=	xe-update-guest-attrs
-SUBST_SED.version=	-e "s,@XENMAJOR@,${XENMAJOR},g"
-SUBST_SED.version+=	-e "s,@XENMINOR@,${XENMINOR},g"
-SUBST_SED.version+=	-e "s,@XENTEENY@,${XENTEENY},g"
-SUBST_SED.version+=	-e "s,@XENBUILD@,${XENBUILD},g"
+SUBST_VARS.version=	XENMAJOR
+SUBST_VARS.version+=	XENMINOR
+SUBST_VARS.version+=	XENTEENY
+SUBST_VARS.version+=	XENBUILD
 
 INSTALLATION_DIRS=	sbin
 

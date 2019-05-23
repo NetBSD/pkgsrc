@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2018/08/22 09:45:35 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2019/05/23 19:23:09 rillig Exp $
 
 DISTNAME=	turba-h3-${TURBAVER}
 PKGNAME=	turba-${TURBAVER}
@@ -38,7 +38,7 @@ BUILD_DEFS=		APACHE_USER
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	post-build
 SUBST_FILES.files=	turba.conf.dist
-SUBST_SED.files=	-e "s|@TURBADIR@|${TURBADIR}|g"
+SUBST_VARS.files=	TURBADIR
 SUBST_MESSAGE.files=	Fixing configuration files.
 
 REPLACE_INTERPRETER+=	php

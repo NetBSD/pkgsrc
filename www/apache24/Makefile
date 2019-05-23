@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2019/04/05 13:48:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.79 2019/05/23 19:23:19 rillig Exp $
 #
 # When updating this package, make sure that no strings like
 # "PR 12345" are in the commit message. Upstream likes
@@ -119,10 +119,10 @@ SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Fixing paths.
 SUBST_FILES.paths=	config.layout Makefile.in support/apxs.in
-SUBST_SED.paths=	-e "s|@PREFIX@|${PREFIX}|g"
-SUBST_SED.paths+=	-e "s|@VARBASE@|${VARBASE}|g"
+SUBST_VARS.paths=	PREFIX
+SUBST_VARS.paths+=	VARBASE
 SUBST_SED.paths+=	-e "s|@SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
-SUBST_SED.paths+=	-e "s|@PAX@|${PAX}|g"
+SUBST_VARS.paths+=	PAX
 SUBST_SED.paths+=	-e "s|@LOCALBASE@|${PREFIX}|g"
 
 SUBST_CLASSES+=		apr-lt

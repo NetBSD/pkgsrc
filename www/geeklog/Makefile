@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2015/12/13 14:55:35 taca Exp $
+# $NetBSD: Makefile,v 1.46 2019/05/23 19:23:20 rillig Exp $
 #
 
 DISTNAME=	geeklog-${VER}
@@ -73,11 +73,11 @@ SUBST_CLASSES+=		paths
 SUBST_FILES.paths+=	${WRKDIR}/README
 SUBST_FILES.paths+=	${WRKSRC}/emailgeeklogstories
 SUBST_FILES.paths+=	${WRKDIR}/geeklog.conf
-SUBST_SED.paths+=	-e 's,@GEEKLOG_BASE@,${GEEKLOG_BASE:Q},g'
-SUBST_SED.paths+=	-e 's,@GEEKLOG_PUB@,${GEEKLOG_PUB:Q},g'
-SUBST_SED.paths+=	-e 's,@GEEKLOG_SITESUBDIR@,${GEEKLOG_SITESUBDIR:Q},g'
-SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR:Q},g'
-SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX:Q},g'
+SUBST_VARS.paths=	GEEKLOG_BASE
+SUBST_VARS.paths+=	GEEKLOG_PUB
+SUBST_VARS.paths+=	GEEKLOG_SITESUBDIR
+SUBST_VARS.paths+=	PKG_SYSCONFDIR
+SUBST_VARS.paths+=	PREFIX
 .if empty(GEEKLOG_SITEBASE)
 SUBST_SED.conf+=	-e '/^Alias/s,^,\#,'
 .endif

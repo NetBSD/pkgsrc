@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.193 2019/04/03 00:32:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.194 2019/05/23 19:23:05 rillig Exp $
 
 DOVECOT_VERSION=	1.2
 DOVECOT_SUBVERSION=	.17
@@ -52,7 +52,7 @@ INSTALLATION_DIRS+=	libexec/dovecot sbin share/doc/dovecot		\
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	dovecot-example.conf
-SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.paths=	PREFIX
 SUBST_STAGE.paths=	pre-configure
 
 BUILD_DEFS+=		VARBASE

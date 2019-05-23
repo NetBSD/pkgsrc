@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/04/26 13:14:14 maya Exp $
+# $NetBSD: Makefile,v 1.24 2019/05/23 19:23:16 rillig Exp $
 
 DISTNAME=	ansible-1.9.4
 PKGREVISION=	2
@@ -37,9 +37,9 @@ SUBST_FILES.prefix+=    lib/ansible/modules/extras/packaging/os/pkgin.py
 SUBST_FILES.prefix+=    plugins/README.md plugins/inventory/cobbler.py
 SUBST_FILES.prefix+=    plugins/inventory/collins.py
 SUBST_MESSAGE.prefix=   Fixing PREFIX path.
-SUBST_SED.prefix=       -e "s,@PREFIX@,${PREFIX},"
-SUBST_SED.prefix+=      -e "s,@PKG_SYSCONFBASE@,${PKG_SYSCONFBASE},"
-SUBST_SED.prefix+=      -e "s,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},"
+SUBST_VARS.prefix=	PREFIX
+SUBST_VARS.prefix+=	PKG_SYSCONFBASE
+SUBST_VARS.prefix+=	PKG_SYSCONFDIR
 
 SUBST_CLASSES+=         pythonbin
 SUBST_STAGE.pythonbin=  pre-configure

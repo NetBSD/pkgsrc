@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2017/08/16 20:45:44 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2019/05/23 19:23:14 rillig Exp $
 #
 
 DISTNAME=	amap-5.2
@@ -24,13 +24,13 @@ CONF_FILES+=	${EGDIR}/appdefs.trig ${PKG_SYSCONFDIR}/appdefs.trig
 SUBST_CLASSES+=		conf
 SUBST_FILES.conf=	configure
 SUBST_STAGE.conf=	pre-configure
-SUBST_SED.conf=		-e 's|@PREFIX@|${PREFIX}|g'
+SUBST_VARS.conf=	PREFIX
 SUBST_SED.conf+=	-e 's|@MANDIR@|${PREFIX}/man|g'
-SUBST_SED.conf+=	-e 's|@COMPILER_RPATH_FLAG@|${COMPILER_RPATH_FLAG}|g'
+SUBST_VARS.conf+=	COMPILER_RPATH_FLAG
 SUBST_SED.conf+=	-e 's|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g'
-SUBST_SED.conf+=	-e "s|@UNAME@|${UNAME}|g"
-SUBST_SED.conf+=	-e "s|@GREP@|${GREP}|g"
-SUBST_SED.conf+=	-e "s|@SED@|${SED}|g"
+SUBST_VARS.conf+=	UNAME
+SUBST_VARS.conf+=	GREP
+SUBST_VARS.conf+=	SED
 SUBST_MESSAGE.conf=	Fixing configure script.
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${EGDIR}

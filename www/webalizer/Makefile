@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2018/04/21 13:38:07 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2019/05/23 19:23:21 rillig Exp $
 
 DISTNAME=	webalizer-2.21-02-src
 PKGNAME=	webalizer-2.21.2
@@ -28,7 +28,7 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples ${DOC_SUBDIR}
 SUBST_CLASSES+=		webalizer
 SUBST_STAGE.webalizer=	post-build
 SUBST_FILES.webalizer=	sample.conf webalizer.1
-SUBST_SED.webalizer=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
+SUBST_VARS.webalizer=	PKG_SYSCONFDIR
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.webalizer
 PKG_SUPPORTED_OPTIONS=	bzip2 geoip

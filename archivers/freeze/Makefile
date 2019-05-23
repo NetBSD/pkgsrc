@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2018/07/04 13:40:07 jperkin Exp $
+# $NetBSD: Makefile,v 1.28 2019/05/23 19:22:54 rillig Exp $
 
 DISTNAME=	freeze-2.5
 PKGREVISION=	3
@@ -21,6 +21,6 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 SUBST_CLASSES+=		freeze
 SUBST_STAGE.freeze=	pre-configure
 SUBST_FILES.freeze=	*.1
-SUBST_SED.freeze=	-e 's|@PREFIX@|${PREFIX}|g'
+SUBST_VARS.freeze=	PREFIX
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2017/08/16 20:21:10 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2019/05/23 19:23:06 rillig Exp $
 
 DISTNAME=	imp-h3-${IMPVER}
 PKGNAME=	imp-${IMPVER}
@@ -74,7 +74,7 @@ CONF_FILES_PERMS+=	${IMPDIR}/config/trailer.txt.dist \
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	post-build
 SUBST_FILES.files=	imp.conf.dist
-SUBST_SED.files=	-e "s|@IMPDIR@|${IMPDIR}|g"
+SUBST_VARS.files=	IMPDIR
 SUBST_MESSAGE.files=	Fixing configuration files.
 
 REPLACE_INTERPRETER+=	php

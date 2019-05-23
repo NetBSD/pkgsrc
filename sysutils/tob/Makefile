@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/09/06 10:40:33 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/05/23 19:23:17 rillig Exp $
 
 DISTNAME=	tob-0.25
 PKGREVISION=	2
@@ -24,8 +24,8 @@ SUBST_CLASSES+=		confdir
 SUBST_STAGE.confdir=	do-build
 SUBST_MESSAGE.confdir=	Adjusting configuration directory
 SUBST_FILES.confdir=	tob tob.rc
-SUBST_SED.confdir=	-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g'
-SUBST_SED.confdir+=	-e 's|@VARBASE@|${VARBASE}|g'
+SUBST_VARS.confdir=	PKG_SYSCONFDIR
+SUBST_VARS.confdir+=	VARBASE
 
 BUILD_DEFS+=		VARBASE
 

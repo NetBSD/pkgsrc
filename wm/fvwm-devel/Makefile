@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2018/08/22 09:47:21 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2019/05/23 19:23:19 rillig Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
 PKGREVISION=	13
@@ -51,7 +51,7 @@ SUBST_CLASSES+=		mail
 SUBST_STAGE.mail=	pre-configure
 SUBST_MESSAGE.mail=	Fixing mail address
 SUBST_FILES.mail+=	bin/fvwm-bug.in
-SUBST_SED.mail=		-e "s|@MAINTAINER@|${MAINTAINER}|"
+SUBST_VARS.mail=	MAINTAINER
 
 post-install:
 	cd ${WRKSRC}/sample.fvwmrc && ${INSTALL_DATA} \

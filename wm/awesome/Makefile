@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2018/11/14 22:22:32 kleink Exp $
+# $NetBSD: Makefile,v 1.66 2019/05/23 19:23:18 rillig Exp $
 
 DISTNAME=	awesome-4.2
 PKGREVISION=	5
@@ -44,7 +44,7 @@ SUBST_MESSAGE.lua=	Fixing lua prefix
 SUBST_STAGE.lua=	pre-configure
 SUBST_FILES.lua=	CMakeLists.txt awesomeConfig.cmake build-utils/lgi-check.sh \
 			tests/examples/CMakeLists.txt
-SUBST_SED.lua=		-e "s,@LUA_INTERPRETER@,${LUA_INTERPRETER},"
+SUBST_VARS.lua=		LUA_INTERPRETER
 
 SUBST_CLASSES+=		ldoc
 SUBST_MESSAGE.ldoc=	Fixing ldoc executable

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/07/09 13:11:58 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2019/05/23 19:23:20 rillig Exp $
 #
 
 DISTNAME=	mserv-php-090
@@ -23,7 +23,7 @@ DOCDIR=		${PREFIX}/share/doc/mserv-php
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKDIR}/config.php
-SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.paths=	PREFIX
 SUBST_STAGE.paths=	post-build
 
 INSTALLATION_DIRS+=	share/mserv-php share/mserv-php/image share/doc/mserv-php

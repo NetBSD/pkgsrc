@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2018/07/27 14:12:41 plunky Exp $
+# $NetBSD: Makefile,v 1.73 2019/05/23 19:22:55 rillig Exp $
 #
 
 DISTNAME=		qcad-3.21.2.3
@@ -27,7 +27,7 @@ SUBST_MESSAGE.paths=	Attending to hard-coded paths.
 SUBST_FILES.paths+=	shared.pri src/core/RS.cpp src/core/RSettings.cpp
 SUBST_FILES.paths+=	scripts/Help/ShowReadme/ShowReadme.js
 SUBST_FILES.paths+=	scripts/Widgets/LibraryBrowser/LibraryBrowser.js
-SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.paths=	PREFIX
 
 AUTO_MKDIRS=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2019/04/25 07:32:51 maya Exp $
+# $NetBSD: Makefile,v 1.125 2019/05/23 19:23:00 rillig Exp $
 #
 # changelog at http://www.texmacs.org/tmweb/about/changes.en.html
 
@@ -37,7 +37,7 @@ REPLACE_PYTHON+=	plugins/mathematica/bin/realpath.py
 SUBST_CLASSES+=		init
 SUBST_STAGE.init=	pre-configure
 SUBST_FILES.init=	plugins/python/progs/init-python.scm
-SUBST_SED.init=		-e 's,@PYTHONBIN@,${PYTHONBIN},g'
+SUBST_VARS.init=	PYTHONBIN
 
 REPLACE_SH+=		plugins/asymptote/bin/tm_asy
 REPLACE_SH+=		plugins/dratex/bin/tm_dratex

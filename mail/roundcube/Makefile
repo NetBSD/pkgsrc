@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2018/05/16 08:14:40 triaxx Exp $
+# $NetBSD: Makefile,v 1.90 2019/05/23 19:23:08 rillig Exp $
 
 DISTNAME=	roundcubemail-${RC_VERS}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/mail-/-/}
@@ -72,11 +72,11 @@ SUBST_FILES.files+=	config/config.inc.php.sample
 SUBST_FILES.files+=	program/include/iniset.php
 SUBST_FILES.files+=	program/lib/Roundcube/rcube_mime.php
 SUBST_VARS.files=	RCDIR VARBASE PKG_EXAMPLES PKG_SYSCONFBASE PKG_SYSCONFDIR
-SUBST_SED.files=	-e "s|@RCDIR@|${RCDIR}|g"
-SUBST_SED.files+=	-e "s|@VARBASE@|${VARBASE}|g"
+SUBST_VARS.files+=	RCDIR
+SUBST_VARS.files+=	VARBASE
 SUBST_SED.files+=	-e "s|@PKG_EXAMPLES@|${PREFIX}/share/examples/roundcube|g"
-SUBST_SED.files+=	-e "s|@PKG_SYSCONFBASE@|${PKG_SYSCONFBASE}|g"
-SUBST_SED.files+=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
+SUBST_VARS.files+=	PKG_SYSCONFBASE
+SUBST_VARS.files+=	PKG_SYSCONFDIR
 
 REPLACE_INTERPRETER+=	php
 REPLACE.php.old=	/usr/bin/env php

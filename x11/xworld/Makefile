@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2013/10/24 10:10:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.23 2019/05/23 19:23:24 rillig Exp $
 #
 
 DISTNAME=		xworld-2.0
@@ -22,7 +22,7 @@ SUBST_MESSAGE.x11=	Fixing x11 options.
 SUBST_STAGE.x11=	pre-configure
 SUBST_FILES.x11=	defaults/NetBSD/set.csh
 SUBST_FILES.x11+=	defaults/Solaris/set.csh
-SUBST_SED.x11=		-e 's,@X11BASE@,${X11BASE},g'
+SUBST_VARS.x11=		X11BASE
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

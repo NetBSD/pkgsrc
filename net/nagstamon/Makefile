@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2019/04/26 14:12:43 maya Exp $
+# $NetBSD: Makefile,v 1.55 2019/05/23 19:23:10 rillig Exp $
 
 VERSION=	1.0.1
 DISTNAME=	Nagstamon-${VERSION}
@@ -29,7 +29,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-libxslt, py-ORBit via py-gnome2, py-gtk
 
 SUBST_CLASSES+=		mandir
 SUBST_STAGE.mandir=	pre-configure
-SUBST_SED.mandir=	-e s,@PKGMANDIR@,${PKGMANDIR},g
+SUBST_VARS.mandir=	PKGMANDIR
 SUBST_FILES.mandir=	setup.py
 
 # Upstream renamed script from nagstamon to nagstamon.py

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/08/22 09:46:40 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/05/23 19:23:17 rillig Exp $
 
 DISTNAME=	smbldap-tools-${VERS}
 PKGREVISION=	7
@@ -43,10 +43,10 @@ SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-install
 SUBST_FILES.path=	configure.pl doc/slapd.conf doc/smb.conf
 SUBST_FILES.path+=	smbldap_tools.pm smbldap.conf
-SUBST_SED.path=		-e "s,@PREFIX@,${PREFIX},g"
-SUBST_SED.path+=	-e "s,@OPENLDAP_VARDIR@,${OPENLDAP_VARDIR},g"
-SUBST_SED.path+=	-e "s,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g"
-SUBST_SED.path+=	-e "s,@SAMBA_PIDDIR@,${SAMBA_PIDDIR},g"
+SUBST_VARS.path=	PREFIX
+SUBST_VARS.path+=	OPENLDAP_VARDIR
+SUBST_VARS.path+=	PKG_SYSCONFDIR
+SUBST_VARS.path+=	SAMBA_PIDDIR
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-install

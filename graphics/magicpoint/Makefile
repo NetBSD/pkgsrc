@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2018/08/22 09:45:14 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2019/05/23 19:23:02 rillig Exp $
 
 DISTNAME=		magicpoint-1.13a
 PKGREVISION=		30
@@ -54,9 +54,9 @@ MGP_PRE_STAGE=		ctlwords.h grammar.c scanner.c tokdefs.h \
 
 SUBST_CLASSES+=		conf
 SUBST_FILES.conf+=	sample/default.mgp
-SUBST_SED.conf+=	-e 's|@MGP_TFONT@|${MGP_TFONT}|g'
-SUBST_SED.conf+=	-e 's|@MGP_VFONT@|${MGP_VFONT}|g'
-SUBST_SED.conf+=	-e 's|@MGP_XFONT@|${MGP_XFONT}|g'
+SUBST_VARS.conf=	MGP_TFONT
+SUBST_VARS.conf+=	MGP_VFONT
+SUBST_VARS.conf+=	MGP_XFONT
 SUBST_STAGE.conf=	post-configure
 
 post-configure:

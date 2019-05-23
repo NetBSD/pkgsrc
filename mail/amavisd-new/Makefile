@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2018/12/09 21:05:33 adam Exp $
+# $NetBSD: Makefile,v 1.25 2019/05/23 19:23:04 rillig Exp $
 
 DISTNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
 PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL:S/-//}
@@ -84,12 +84,12 @@ SUBST_CLASSES+=		amavisd
 SUBST_STAGE.amavisd=	pre-build
 SUBST_FILES.amavisd=	amavisd amavisd.conf
 SUBST_SED.amavisd=	-e "s|/etc/amavisd.conf|${PKG_SYSCONFDIR}/amavisd.conf|"
-SUBST_SED.amavisd+=	-e "s|@AMAVIS_DIR@|${AMAVIS_DIR}|g"
-SUBST_SED.amavisd+=	-e "s|@AMAVIS_USER@|${AMAVIS_USER}|g"
-SUBST_SED.amavisd+=	-e "s|@AMAVIS_GROUP@|${AMAVIS_GROUP}|g"
-SUBST_SED.amavisd+=	-e "s|@AMAVIS_QUARANTINE@|${AMAVIS_QUARANTINE}|g"
-SUBST_SED.amavisd+=	-e "s|@LOCALBASE@|${LOCALBASE}|g"
-SUBST_SED.amavisd+=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_VARS.amavisd=	AMAVIS_DIR
+SUBST_VARS.amavisd+=	AMAVIS_USER
+SUBST_VARS.amavisd+=	AMAVIS_GROUP
+SUBST_VARS.amavisd+=	AMAVIS_QUARANTINE
+SUBST_VARS.amavisd+=	LOCALBASE
+SUBST_VARS.amavisd+=	PREFIX
 
 INSTALLATION_DIRS+=	sbin ${DOCDIR} ${EGDIR}
 
