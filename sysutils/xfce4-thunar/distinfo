@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.17 2019/02/17 15:58:54 youri Exp $
+$NetBSD: distinfo,v 1.18 2019/05/23 03:00:58 gutteridge Exp $
 
-SHA1 (Thunar-1.8.4.tar.bz2) = e0d5a11842b881ca05d0170704c0fbd5c80c6d14
-RMD160 (Thunar-1.8.4.tar.bz2) = 575c8f4c6c0f3f4f6f23cdc01b2688c0d737312b
-SHA512 (Thunar-1.8.4.tar.bz2) = 886c0789aa19c2ab2ef34892c4afd09c857585b4796140ea3c84ccb9e1e1ca2935cf7e3a760a6ca8d8c68a5866663412500b4779878c7f48c9365c3ac7bf0eec
-Size (Thunar-1.8.4.tar.bz2) = 2349249 bytes
+SHA1 (Thunar-1.8.6.tar.bz2) = 9202c3970dcc1abd366cd0443ea16a13f27204af
+RMD160 (Thunar-1.8.6.tar.bz2) = 689d51cb5d3484dc0626126fcacd682e2921edc3
+SHA512 (Thunar-1.8.6.tar.bz2) = 086dc139627d8f11341b2db91358ef1831d2b8494d34abac49355dbaf850a21c30f979294f9adf2bc8548e5f817a4e165803a3db74cd989cd3867a4e228d74db
+Size (Thunar-1.8.6.tar.bz2) = 2317253 bytes
 SHA1 (patch-ThunarBulkRename.in) = 5a1604e9e75064d6080f4e9571f62ea8fca10e11
 SHA1 (patch-ac) = ea36f7085ad7ebfc113ab6b7bb049e3da31f4e36
 SHA1 (patch-org.xfce.FileManager.service.in) = 6c47d3e55d13deaad6024ed9f5ec1ebe2c42a192
