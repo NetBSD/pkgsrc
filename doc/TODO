@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19021 2019/05/23 10:18:06 ryoon Exp $
+$NetBSD: TODO,v 1.19022 2019/05/23 10:21:59 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1358,7 +1358,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wmx-8
 	o wmx-gnome-8
 	o worker-3.12.0
-	o wxGTK-3.1.0
+	o wxGTK-3.1.2
 	o wxRemind-101
 	o x2vnc-1.31
 	o xa65-2.3.7
