@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/08/22 09:45:00 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2019/05/23 19:22:59 rillig Exp $
 
 
 DISTNAME=	sloccount-2.26
@@ -59,7 +59,7 @@ SUBST_FILES.generic=	ada_count awk_count csh_count exp_count lisp_count \
 SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Fixing path to internal binaries.
 SUBST_STAGE.prefix=	pre-configure
-SUBST_SED.prefix=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.prefix=	PREFIX
 SUBST_FILES.prefix=	compute_all compute_sloc_lang lex_count sloccount
 
 post-install:

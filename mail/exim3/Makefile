@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2018/08/22 09:45:25 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2019/05/23 19:23:05 rillig Exp $
 
 DISTNAME=	exim-3.36
 PKGREVISION=	19
@@ -73,12 +73,12 @@ MAKE_ENV+=		LOOKUP_LIBS=${LOOKUP_LIBS:Q}
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	Local/Makefile.pkgsrc ${WRKDIR}/mailer.conf
 SUBST_FILES.paths+=	${WRKDIR}/exim_newaliases
-SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
-SUBST_SED.paths+=	-e 's,@GZIP_CMD@,${GZIP_CMD},g'
-SUBST_SED.paths+=	-e 's,@GZCAT@,${GZCAT},g'
-SUBST_SED.paths+=	-e 's,@PERL5@,${PERL5},g'
-SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
+SUBST_VARS.paths=	PREFIX
+SUBST_VARS.paths+=	PKG_SYSCONFDIR
+SUBST_VARS.paths+=	GZIP_CMD
+SUBST_VARS.paths+=	GZCAT
+SUBST_VARS.paths+=	PERL5
+SUBST_VARS.paths+=	SH
 SUBST_STAGE.paths=	pre-configure
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/examples/exim

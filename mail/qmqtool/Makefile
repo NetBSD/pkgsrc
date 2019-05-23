@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/08/22 09:45:34 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/05/23 19:23:07 rillig Exp $
 #
 
 DISTNAME=		qmqtool-1.15
@@ -25,15 +25,15 @@ BUILD_TARGET=		qmqtool
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	src/qmqtool
-SUBST_SED.paths+=	-e 's,@PS@,${PS},g'
-SUBST_SED.paths+=	-e 's,@GREP@,${GREP},g'
-SUBST_SED.paths+=	-e 's,@RCD_SCRIPTS_DIR@,${RCD_SCRIPTS_DIR},g'
+SUBST_VARS.paths=	PS
+SUBST_VARS.paths+=	GREP
+SUBST_VARS.paths+=	RCD_SCRIPTS_DIR
 
 SUBST_CLASSES+=		users
 SUBST_STAGE.users=	pre-configure
 SUBST_FILES.users=	src/qmqtool
-SUBST_SED.users=	-e 's,@QMAIL_SEND_USER@,${QMAIL_SEND_USER:Q},g'
-SUBST_SED.users+=	-e 's,@QMAIL_QUEUE_USER@,${QMAIL_QUEUE_USER:Q},g'
+SUBST_VARS.users=	QMAIL_SEND_USER
+SUBST_VARS.users+=	QMAIL_QUEUE_USER
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 INSTALLATION_DIRS+=	share/doc/qmqtool share/examples/qmqtool

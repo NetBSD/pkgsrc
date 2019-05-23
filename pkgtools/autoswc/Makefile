@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/11/25 12:52:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.23 2019/05/23 19:23:12 rillig Exp $
 
 PKGNAME=		autoswc-1.6
 CATEGORIES=		pkgtools sysutils
@@ -29,13 +29,13 @@ SUBST_FILES.build+=	config.site
 SUBST_SED.build=	-e 's|@ACLOCAL@|${LOCALBASE}/bin/aclocal|g'
 SUBST_SED.build+=	-e 's|@AUTOCONF@|${LOCALBASE}/bin/autoconf|g'
 SUBST_SED.build+=	-e 's|@AUTOMAKE@|${LOCALBASE}/bin/automake|g'
-SUBST_SED.build+=	-e 's|@CACHEDIR@|${CACHEDIR}|g'
+SUBST_VARS.build=	CACHEDIR
 SUBST_SED.build+=	-e 's|@LIBTOOLIZE@|${LOCALBASE}/bin/libtoolize|g'
-SUBST_SED.build+=	-e 's|@MACHINE_GNU_PLATFORM@|${MACHINE_GNU_PLATFORM}|g'
-SUBST_SED.build+=	-e 's|@MAKE@|${MAKE}|g'
-SUBST_SED.build+=	-e 's|@MKCONF@|${MKCONF}|g'
-SUBST_SED.build+=	-e 's|@PREFIX@|${PREFIX}|g'
-SUBST_SED.build+=	-e 's|@SH@|${SH}|g'
+SUBST_VARS.build+=	MACHINE_GNU_PLATFORM
+SUBST_VARS.build+=	MAKE
+SUBST_VARS.build+=	MKCONF
+SUBST_VARS.build+=	PREFIX
+SUBST_VARS.build+=	SH
 SUBST_SED.build+=	-e 's|@SYSCONFDIR@|${PKG_SYSCONFDIR}|g'
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/autoswc

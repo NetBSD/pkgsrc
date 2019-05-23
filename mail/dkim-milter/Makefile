@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2017/08/01 14:59:01 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2019/05/23 19:23:05 rillig Exp $
 
 DISTNAME=	dkim-milter-2.8.3
 PKGREVISION=	5
@@ -40,8 +40,8 @@ SUBST_SED.libs+=	-e 's|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g'
 SUBST_SED.libs+=	-e 's|@LMBASE@|${BUILDLINK_PREFIX.libmilter}|g'
 SUBST_SED.libs+=	-e 's|@PTHREAD@|${BUILDLINK_PREFIX.pthread}|g'
 SUBST_SED.libs+=	-e 's|@PTHREAD_LDFLAGS@|${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}|g'
-SUBST_SED.libs+=	-e 's|@PREFIX@|${PREFIX}|g'
-SUBST_SED.libs+=	-e 's|@PKGMANDIR@|${PKGMANDIR}|g'
+SUBST_VARS.libs=	PREFIX
+SUBST_VARS.libs+=	PKGMANDIR
 SUBST_SED.libs+=	-e 's|/etc/mail|${PKG_SYSCONFDIR}|g'
 SUBST_SED.libs+=	-e 's|.I /etc/dkim-filter.conf|.I ${PKG_SYSCONFDIR}/dkim-filter.conf|g'
 SUBST_MESSAGE.libs=	Fixing Makefile references and man pages.

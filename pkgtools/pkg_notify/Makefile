@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2018/09/27 23:00:48 tnn Exp $
+# $NetBSD: Makefile,v 1.29 2019/05/23 19:23:12 rillig Exp $
 
 PKGNAME=	pkg_notify-0.4.6
 PKGREVISION=	1
@@ -26,11 +26,11 @@ SUBST_CLASSES+=			pkg_notify
 SUBST_STAGE.pkg_notify=		pre-install
 SUBST_FILES.pkg_notify=		pkg_notify
 SUBST_FILES.pkg_notify+=	pkg_notify.1
-SUBST_SED.pkg_notify=		-e 's|@PKGSRCDIR@|${PKGSRCDIR}|'
-SUBST_SED.pkg_notify+=		-e 's|@PREFIX@|${PREFIX}|g'
-SUBST_SED.pkg_notify+=		-e 's|@MAKE@|${MAKE:Q}|g'
+SUBST_VARS.pkg_notify=		PKGSRCDIR
+SUBST_VARS.pkg_notify+=		PREFIX
+SUBST_VARS.pkg_notify+=		MAKE
 SUBST_SED.pkg_notify+=		-e 's|@PERL@|${PERL5:Q}|g'
-SUBST_SED.pkg_notify+=		-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g'
+SUBST_VARS.pkg_notify+=		PKG_SYSCONFDIR
 
 INSTALLATION_DIRS=	bin ${EGDIR} ${PKGMANDIR}/man1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/07/04 13:40:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2019/05/23 19:23:00 rillig Exp $
 #
 
 DISTNAME=	tclticker-1.1
@@ -20,7 +20,7 @@ SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths and command names.
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	tclticker mailquote
-SUBST_SED.paths=	-e 's|@PREFIX@|${PREFIX}|g'
+SUBST_VARS.paths=	PREFIX
 
 INSTALLATION_DIRS=	bin
 

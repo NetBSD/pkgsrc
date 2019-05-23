@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2017/09/01 03:58:45 schmonz Exp $
+# $NetBSD: Makefile,v 1.26 2019/05/23 19:23:05 rillig Exp $
 #
 
 DISTNAME=		fastforward-0.51
@@ -24,7 +24,7 @@ SUBST_FILES.djbware+=	cdb_seek.c
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure
 SUBST_FILES.paths=	hier.c
-SUBST_SED.paths=	-e 's,@PKGMANDIR@,${PKGMANDIR},g'
+SUBST_VARS.paths=	PKGMANDIR
 
 .include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"
