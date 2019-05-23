@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.121 2019/05/05 22:49:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.122 2019/05/23 10:55:07 jaapb Exp $
 #
 
-DISTNAME=	coq-8.9.0
-PKGREVISION=	3
+DISTNAME=	coq-8.9.1
 CATEGORIES=	lang math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coq/}
 GITHUB_TAG=	V${PKGVERSION_NOREV:S/_/+/}
