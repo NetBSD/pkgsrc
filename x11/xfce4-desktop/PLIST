@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2019/03/09 19:33:45 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.29 2019/05/23 03:04:16 gutteridge Exp $
 bin/xfdesktop
 bin/xfdesktop-settings
 man/man1/xfdesktop.1
@@ -36,6 +36,7 @@ share/locale/he/LC_MESSAGES/xfdesktop.mo
 share/locale/hr/LC_MESSAGES/xfdesktop.mo
 share/locale/hu/LC_MESSAGES/xfdesktop.mo
 share/locale/id/LC_MESSAGES/xfdesktop.mo
+share/locale/ie/LC_MESSAGES/xfdesktop.mo
 share/locale/is/LC_MESSAGES/xfdesktop.mo
 share/locale/it/LC_MESSAGES/xfdesktop.mo
 share/locale/ja/LC_MESSAGES/xfdesktop.mo
