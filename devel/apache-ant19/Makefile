@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/07/24 16:24:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.2 2019/05/23 19:22:57 rillig Exp $
 
 DISTNAME=	apache-ant-1.9.13-bin
 PKGNAME=	${DISTNAME:S/-bin//}
@@ -27,7 +27,7 @@ SUBST_CLASSES+=		ant
 SUBST_FILES.ant=	bin/ant
 SUBST_STAGE.ant=	pre-configure
 SUBST_SED.ant=		-e 's,@JAVA_HOME@,${PKG_JAVA_HOME},g'
-SUBST_SED.ant+=		-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.ant=		PREFIX
 
 INSTALLATION_DIRS=	bin lib/java/ant share/doc/java/ant
 

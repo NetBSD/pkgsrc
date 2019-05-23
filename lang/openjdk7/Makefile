@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2019/03/20 11:55:11 wiz Exp $
+# $NetBSD: Makefile,v 1.134 2019/05/23 19:23:03 rillig Exp $
 
 JDK_MICRO=	141
 DISTNAME=	openjdk-1.7.${JDK_MICRO}-20170813
@@ -194,8 +194,8 @@ SUBST_STAGE.fontpaths=		pre-build
 SUBST_MESSAGE.fontpaths=	fixing font paths
 SUBST_FILES.fontpaths=		jdk/src/solaris/classes/sun/awt/fontconfigs/bsd.fontconfig.properties
 SUBST_FILES.fontpaths+=		jdk/src/solaris/native/sun/awt/fontpath.c
-SUBST_SED.fontpaths=		-e 's|@PREFIX@|${PREFIX}|g'
-SUBST_SED.fontpaths+=		-e 's|@BUILDLINK_PREFIX.fontconfig@|${BUILDLINK_PREFIX.fontconfig}|g'
+SUBST_VARS.fontpaths=		PREFIX
+SUBST_VARS.fontpaths+=		BUILDLINK_PREFIX.fontconfig
 
 PLIST_VARS+=	i386
 .if ${MACHINE_ARCH} == "i386"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/08/22 09:46:11 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/05/23 19:23:13 rillig Exp $
 
 PKGNAME=	pkglint4-4.164
 PKGREVISION=	1
@@ -34,11 +34,11 @@ SUBST_FILES.pkglint+=	build.pl pkglint.pl pkglint.t plist-clash.pl
 .if defined(BATCH)
 SUBST_SED.pkglint+=	-e s\|@PKGSRCDIR@\|/usr/pkgsrc\|g
 .else
-SUBST_SED.pkglint+=	-e s\|@PKGSRCDIR@\|${PKGSRCDIR}\|g
+SUBST_VARS.pkglint=	PKGSRCDIR
 .endif
-SUBST_SED.pkglint+=	-e s\|@PREFIX@\|${PREFIX}\|g
+SUBST_VARS.pkglint=	PREFIX
 SUBST_SED.pkglint+=	-e s\|@DISTVER@\|${PKGNAME:S/pkglint-//}\|g
-SUBST_SED.pkglint+=	-e s\|@MAKE@\|${MAKE:Q}\|g
+SUBST_VARS.pkglint+=	MAKE
 SUBST_SED.pkglint+=	-e s\|@PERL@\|${PERL5:Q}\|g
 SUBST_SED.pkglint+=	-e s\|@DATADIR@\|${FILESDIR}\|g
 

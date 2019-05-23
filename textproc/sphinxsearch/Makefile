@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/12/15 21:12:24 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/05/23 19:23:18 rillig Exp $
 #
 
 DISTNAME=	sphinx-2.2.11-release
@@ -51,7 +51,7 @@ SUBST_SED.paths+=	-e 's,@CONFDIR@/log/searchd.log,${SPHINX_LOG}/searchd.log,g'
 SUBST_SED.paths+=	-e 's,@CONFDIR@,${SPHINX_DIR},g'
 SUBST_SED.paths+=	-e 's,@localstatedir@,${SPHINX_DIR},g'
 SUBST_SED.paths+=	-e 's,@egdir@,${EGDIR},g'
-SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
+SUBST_VARS.paths=	PKG_SYSCONFDIR
 
 MAKE_JOBS_SAFE=		no
 

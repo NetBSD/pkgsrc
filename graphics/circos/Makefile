@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/08/22 09:45:11 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2019/05/23 19:23:01 rillig Exp $
 #
 
 DISTNAME=	circos-0.49
@@ -37,7 +37,7 @@ SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure
 SUBST_FILES.paths=	*/*/*/circos*.conf bin/circos
 SUBST_SED.paths+=	-e 's|<<include etc/\(.*\)>>|<<include ${PKG_SYSCONFDIR}/\1>>|g'
-SUBST_SED.paths+=	-e 's|@PREFIX@|${PREFIX}|g'
+SUBST_VARS.paths=	PREFIX
 
 REPLACE_PERL+=	data/3/make_random_highlights data/6/hist.random.make
 REPLACE_PERL+=	svg/textrotation.svg

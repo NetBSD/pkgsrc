@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2015/12/29 04:54:39 dholland Exp $
+# $NetBSD: Makefile,v 1.26 2019/05/23 19:23:23 rillig Exp $
 
 DISTNAME=	xcolorsel-1.1a-src
 PKGNAME=	xcolorsel-1.1a
@@ -12,11 +12,11 @@ COMMENT=	Browse and select named X colors from rgb.txt
 WRKSRC=		${WRKDIR}/xcolorsel
 USE_IMAKE=	yes
 
-SUBST_CLASSES+=		xcolorsel
+SUBST_CLASSES+=			xcolorsel
 SUBST_STAGE.xcolorsel=		pre-configure
 SUBST_MESSAGE.xcolorsel=	Fixing hard-coded paths.
 SUBST_FILES.xcolorsel=		RgbText.c
-SUBST_SED.xcolorsel+=		-e "s,@X11BASE@,${X11BASE},g"
+SUBST_VARS.xcolorsel=		X11BASE
 
 #this requires Xaw3d
 XAW_TYPE=	3d

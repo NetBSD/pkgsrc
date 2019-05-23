@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2019/04/03 00:33:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.44 2019/05/23 19:23:23 rillig Exp $
 
 DISTNAME=	PyQt5_gpl-5.11.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt5_gpl/qt5/}
@@ -39,7 +39,7 @@ SUBST_FILES.x11lib+=	configure.py
 SUBST_FILES.x11lib+=	designer/designer.pro-in
 SUBST_FILES.x11lib+=	qmlscene/qmlscene.pro-in
 SUBST_SED.x11lib+=	-e 's,@X11LIB@,${X11BASE}/lib,'
-SUBST_SED.x11lib+=	-e 's,@PREFIX@,${PREFIX},'
+SUBST_VARS.x11lib=	PREFIX
 
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \

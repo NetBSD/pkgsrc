@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/03/07 11:57:32 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/05/23 19:23:19 rillig Exp $
 
 DISTNAME=	musca-0.9.24
 PKGREVISION=	2
@@ -19,7 +19,7 @@ SUBST_CLASSES+=		makefile
 SUBST_STAGE.makefile=	pre-build
 SUBST_MESSAGE.makefile=	Fixing Makefile
 SUBST_FILES.makefile=	Makefile
-SUBST_SED.makefile+=	-e 's,@X11BASE@,${X11BASE},g'
+SUBST_VARS.makefile=	X11BASE
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/apis ${DESTDIR}${PREFIX}/bin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/03/18 20:19:31 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2019/05/23 19:23:09 rillig Exp $
 
 DISTNAME=		djbdnscurve6-34
 CATEGORIES=		net
@@ -27,7 +27,7 @@ SUBST_MESSAGE.etc=	Fixing prefix.
 SUBST_CLASSES+=		sysconfdir
 SUBST_STAGE.sysconfdir=	do-configure
 SUBST_FILES.sysconfdir=	src/dnscache-conf.c
-SUBST_SED.sysconfdir=	-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g'
+SUBST_VARS.sysconfdir=	PKG_SYSCONFDIR
 SUBST_MESSAGE.sysconfdir=Fixing sysconfdir.
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}

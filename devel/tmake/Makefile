@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/08/22 09:45:00 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/05/23 19:23:00 rillig Exp $
 #
 
 DISTNAME=	tmake-1.13
@@ -20,14 +20,14 @@ INSTALLATION_DIRS=	bin
 SUBST_CLASSES+=		tmake
 SUBST_STAGE.tmake=	do-build
 SUBST_FILES.tmake=	bin/tmake
-SUBST_SED.tmake+=	-e 's;@TMAKEPATH@;'${TMAKEPATH:Q}';g'
+SUBST_VARS.tmake=	TMAKEPATH
 
 SUBST_CLASSES+=		tmakeconf
 SUBST_STAGE.tmakeconf=	do-build
 SUBST_FILES.tmakeconf=	lib/netbsd-g++/tmake.conf
-SUBST_SED.tmakeconf=	-e 's;@LOCALBASE@;${LOCALBASE};g'
-SUBST_SED.tmakeconf+=	-e 's;@X11BASE@;${X11BASE};g'
-SUBST_SED.tmakeconf+=	-e 's;@GLBASE@;${GLBASE};g'
+SUBST_VARS.tmakeconf=	LOCALBASE
+SUBST_VARS.tmakeconf+=	X11BASE
+SUBST_VARS.tmakeconf+=	GLBASE
 
 REPLACE_PERL+=		bin/tmake bin/progen
 

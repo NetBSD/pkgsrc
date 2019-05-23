@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2018/08/22 09:48:00 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2019/05/23 19:23:22 rillig Exp $
 
 DISTNAME=	wwwoffle-2.9j
 PKGREVISION=	3
@@ -32,7 +32,7 @@ SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
 SUBST_FILES.fix-paths=		cache/search/namazu/scripts/wwwoffle-namazu
 SUBST_FILES.fix-paths+=		cache/search/hyperestraier/scripts/wwwoffle-estseek
-SUBST_SED.fix-paths=		-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.fix-paths=		PREFIX
 
 .include "options.mk"
 

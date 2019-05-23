@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/01/21 12:03:41 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/05/23 19:23:12 rillig Exp $
 
 FLNEWS_VERSION=	0.16
 
@@ -32,7 +32,7 @@ SUBST_STAGE.edit-config=	pre-configure
 SUBST_MESSAGE.edit-config=	Preparing CONFIG file ...
 SUBST_FILES.edit-config=	CONFIG
 SUBST_SED.edit-config=		-e 's,@VERSION@,${FLNEWS_VERSION},g'
-SUBST_SED.edit-config+=		-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.edit-config=		PREFIX
 SUBST_SED.edit-config+=		-e 's,@MAINT@,${FLNEWS_MAINTAINER},g'
 SUBST_SED.edit-config+=		-e 's,@IP6@,${FLNEWS_OPT_DISABLE_IP6},g'
 SUBST_SED.edit-config+=		-e 's,@NLS@,${FLNEWS_OPT_DISABLE_NLS},g'

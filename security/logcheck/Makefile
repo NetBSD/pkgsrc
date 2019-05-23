@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/08/16 20:21:14 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/05/23 19:23:15 rillig Exp $
 
 DISTNAME=	logcheck-1.1.1
 PKGREVISION=	1
@@ -24,8 +24,8 @@ SUBST_STAGE.prefix=	pre-configure
 SUBST_MESSAGE.prefix=	Fixing hard-coded paths.
 SUBST_FILES.prefix=	Makefile systems/freebsd/logcheck.sh
 SUBST_SED.prefix=	-e "s+/usr/local+${PREFIX}+g"
-SUBST_SED.prefix+=	-e "s+@PKG_SYSCONFDIR@+${PKG_SYSCONFDIR}+g"
-SUBST_SED.prefix+=	-e "s+@TEMPDIR@+${TEMPDIR}+g"
+SUBST_VARS.prefix=	PKG_SYSCONFDIR
+SUBST_VARS.prefix+=	TEMPDIR
 
 INSTALLATION_DIRS+=	bin ${EGDIR}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/04/30 03:38:59 taca Exp $
+# $NetBSD: Makefile,v 1.20 2019/05/23 19:23:05 rillig Exp $
 #
 
 DISTNAME=	fml-4.0-stable-20040215
@@ -35,8 +35,8 @@ REPLACE_PERL=	databases/examples/ldap-toymodel/dump.pl \
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths+=	sbin/makefml
-SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX:Q},g'
-SUBST_SED.paths+=	-e 's,@FML_DATADIR@,${FML_DATADIR:Q},g'
+SUBST_VARS.paths=	PREFIX
+SUBST_VARS.paths+=	FML_DATADIR
 SUBST_STAGE.paths=	pre-configure
 
 MAKE_ENV+=		_PATH_PERL=${PERL5} HOSTNAME="fml.example.net"

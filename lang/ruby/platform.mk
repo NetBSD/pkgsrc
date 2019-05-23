@@ -1,4 +1,4 @@
-# $NetBSD: platform.mk,v 1.4 2017/08/29 14:47:35 jmcneill Exp $
+# $NetBSD: platform.mk,v 1.5 2019/05/23 19:23:03 rillig Exp $
 #
 
 #
@@ -23,7 +23,7 @@ REQD_DIRS+=	${GEM_HOME}/doc
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-install
 SUBST_FILES.conf=	lib/rubygems/config_file.rb
-SUBST_SED.conf=		-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
+SUBST_VARS.conf=	PKG_SYSCONFDIR
 SUBST_MESSAGE.conf=	Fixing configuration files.
 
 #

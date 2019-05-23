@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2018/08/22 09:45:20 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2019/05/23 19:23:02 rillig Exp $
 
 DISTNAME=	ghc-6.8.3
 PKGREVISION=	8
@@ -37,7 +37,7 @@ SUBST_FILES.prefix+=	../ghc-6.4.2/libraries/readline/package.conf.in
 SUBST_FILES.prefix+=	libraries/readline/configure
 SUBST_FILES.prefix+=	libraries/readline/readline.cabal
 SUBST_FILES.prefix+=	rts/package.conf.in
-SUBST_SED.prefix=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.prefix=	PREFIX
 
 pre-configure:
 	cd ${WRKDIR}/ghc-6.4.2 && \

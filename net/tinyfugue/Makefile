@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2017/01/19 18:52:21 agc Exp $
+# $NetBSD: Makefile,v 1.34 2019/05/23 19:23:11 rillig Exp $
 
 DISTNAME=	tf-40s1
 PKGNAME=	tf-4.0s1
@@ -26,7 +26,7 @@ SUBST_CLASSES+=			fix-paths
 SUBST_MESSAGE.fix-paths=	late-addition DESTDIR
 SUBST_STAGE.fix-paths=		pre-configure
 SUBST_FILES.fix-paths=		unix/Config
-SUBST_SED.fix-paths=		-e 's,@DESTDIR@,'${DESTDIR}',g'
+SUBST_VARS.fix-paths=		DESTDIR
 
 LDFLAGS.SunOS+=	-lz
 

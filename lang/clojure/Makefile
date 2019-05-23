@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/01/01 18:16:36 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2019/05/23 19:23:02 rillig Exp $
 
 DISTNAME=	clojure-1.5.1
 CATEGORIES=	lang
@@ -30,7 +30,7 @@ SUBST_STAGE.java=	pre-install
 SUBST_MESSAGE.java=	Set Java
 SUBST_FILES.java=	clj.sh
 SUBST_SED.java=		-e 's,@JAVA_HOME@,${PKG_JAVA_HOME},g'
-SUBST_SED.java+=	-e 's,@SH@,${SH},'
+SUBST_VARS.java=	SH
 
 pre-patch:
 	${INSTALL_DATA} ${FILESDIR}/clj.sh ${WRKSRC}

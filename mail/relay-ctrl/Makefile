@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/04/27 20:41:26 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2019/05/23 19:23:08 rillig Exp $
 #
 
 DISTNAME=		relay-ctrl-3.2
@@ -24,11 +24,11 @@ ADDON_SCRIPTS=		dovecot-settcpremoteip ifrelayclient
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${ADDON_SCRIPTS}
-SUBST_SED.paths=	-e 's,@ECHO@,${ECHO},g'
-SUBST_SED.paths+=	-e 's,@GREP@,${GREP},g'
-SUBST_SED.paths+=	-e 's,@SED@,${SED},g'
-SUBST_SED.paths+=	-e 's,@SETENV@,${SETENV},g'
-SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
+SUBST_VARS.paths=	ECHO
+SUBST_VARS.paths+=	GREP
+SUBST_VARS.paths+=	SED
+SUBST_VARS.paths+=	SETENV
+SUBST_VARS.paths+=	SH
 SUBST_STAGE.paths=	do-configure
 
 CFLAGS.SunOS+=		-DSOL_TCP=SOL_SOCKET

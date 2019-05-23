@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2019/03/16 17:55:04 jklos Exp $
+# $NetBSD: Makefile,v 1.86 2019/05/23 19:23:22 rillig Exp $
 
 DISTNAME=		wordpress-${VERSION}
 VERSION=		5.1.1
@@ -47,7 +47,7 @@ SUBST_CLASSES+=		conf
 SUBST_MESSAGE.conf=	Fixing pathnames in configuration file.
 SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	../wordpress.conf
-SUBST_SED.conf=		-e "s,@WPHOME@,${WPHOME},g"
+SUBST_VARS.conf=	WPHOME
 .if !empty(PKG_OPTIONS:Map-php) && ${PKG_APACHE} == "apache24"
 SUBST_SED.conf+=	-e "/Order allow,deny/d"
 SUBST_SED.conf+=	-e "s,Allow from all,Require all granted,g"

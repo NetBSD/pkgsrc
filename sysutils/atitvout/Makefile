@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/07/10 10:45:40 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2019/05/23 19:23:16 rillig Exp $
 
 DISTNAME=	atitvout-0.4
 PKGREVISION=	1
@@ -33,7 +33,7 @@ REPLACE_FILES.bash=	test.sh
 SUBST_CLASSES+=	sh
 SUBST_STAGE.sh=	pre-configure
 SUBST_FILES.sh=	test.sh
-SUBST_SED.sh=	-e "s,@PREFIX@,${PREFIX},"
+SUBST_VARS.sh=	PREFIX
 
 INSTALLATION_DIRS=	sbin share/doc/atitvout
 

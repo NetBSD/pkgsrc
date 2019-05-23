@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2018/08/22 09:46:08 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2019/05/23 19:23:11 rillig Exp $
 
 DISTNAME=		vnc-3.3.3r2
 PKGNAME=		vnc-3.3.3.2
@@ -50,7 +50,7 @@ patch-sockets:
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	vncserver
-SUBST_SED.paths+=	-e 's,@X11BASE@,${X11BASE},g'
+SUBST_VARS.paths=	X11BASE
 SUBST_STAGE.paths=	pre-configure
 
 INSTALLATION_DIRS=	bin share/doc/vnc

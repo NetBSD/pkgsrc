@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/07/23 22:30:03 schmonz Exp $
+# $NetBSD: Makefile,v 1.16 2019/05/23 19:23:16 rillig Exp $
 
 DISTNAME=		tlslite-0.4.9
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -24,8 +24,8 @@ REPLACE_PYTHON=		setup.py tests/httpsclient.py tests/tlstest.py
 SUBST_CLASSES+=		pyclash
 SUBST_STAGE.pyclash=	do-configure
 SUBST_FILES.pyclash=	setup.py tests/tlstest.py tests/httpsserver.sh
-SUBST_SED.pyclash=	-e 's|@PYTHONBIN@|${PYTHONBIN}|g'
-SUBST_SED.pyclash+=	-e 's|@PYVERSSUFFIX@|${PYVERSSUFFIX}|g'
+SUBST_VARS.pyclash=	PYTHONBIN
+SUBST_VARS.pyclash+=	PYVERSSUFFIX
 
 .include "../../lang/python/distutils.mk"
 .include "../../lang/python/application.mk"

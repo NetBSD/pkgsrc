@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2018/08/22 09:45:54 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2019/05/23 19:23:10 rillig Exp $
 #
 
 DISTNAME=		nagios-4.3.2
@@ -82,7 +82,7 @@ SPECIAL_PERMS+=	share/nagios/jsonquery.html ${NAGIOS_USER} ${NAGIOSCMD_GROUP} 06
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	post-build
 SUBST_FILES.files=	nagios.conf.dist
-SUBST_SED.files=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_VARS.files=	PREFIX
 SUBST_MESSAGE.files=	Fixing configuration files.
 
 pre-build:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2016/01/19 03:48:06 dbj Exp $
+# $NetBSD: Makefile.common,v 1.18 2019/05/23 19:23:23 rillig Exp $
 #
 # used by x11/wxGTK28/Makefile
 # used by x11/wxGTK28-contrib/Makefile
@@ -50,7 +50,7 @@ SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
 SUBST_FILES.fix-paths=		configure
 SUBST_SED.fix-paths=		-e 's,/usr/pkg/include,${PREFIX}/include,g'
-SUBST_SED.fix-paths+=		-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.fix-paths=	PREFIX
 SUBST_SED.fix-paths+=		-e 's,/usr/X11/,${X11BASE}/,g'
 
 pre-configure:

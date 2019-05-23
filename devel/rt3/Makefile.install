@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.install,v 1.22 2018/07/04 13:40:15 jperkin Exp $
+# $NetBSD: Makefile.install,v 1.23 2019/05/23 19:22:59 rillig Exp $
 
 .include "dirs.mk"
 
@@ -18,7 +18,7 @@ OWN_DIRS_PERMS+=	${RT_VAR_DIR}/session_data	${APACHE_USER}	${APACHE_GROUP}	0770
 
 SUBST_CLASSES+=		prefix
 SUBST_FILES.prefix=	config.layout
-SUBST_SED.prefix=	-e s,@PREFIX@,${PREFIX},
+SUBST_VARS.prefix=	PREFIX
 SUBST_SED.prefix+=	-e s,@PKGSYSCONFDIR@,${PKG_SYSCONFDIR},
 SUBST_SED.prefix+=	-e s,@RTLIBDIR@,${RT_LIB_DIR},
 SUBST_SED.prefix+=	-e s,@RTSHAREDIR@,${RT_SHARE_DIR},

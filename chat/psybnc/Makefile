@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/07/04 13:40:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2019/05/23 19:22:56 rillig Exp $
 #
 
 DISTNAME=	psyBNC-2.4BETA2
@@ -27,7 +27,7 @@ CONF_FILES=	share/examples/psybnc/psybnc.conf \
 
 SUBST_CLASSES+=		prefix
 SUBST_FILES.prefix=	tools/autoconf.c
-SUBST_SED.prefix=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_VARS.prefix=	PREFIX
 SUBST_STAGE.prefix=	pre-configure
 
 SUBST_CLASSES+=         openssl

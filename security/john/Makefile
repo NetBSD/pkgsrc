@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2017/08/24 17:22:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.26 2019/05/23 19:23:14 rillig Exp $
 #
 
 DISTNAME=	john-1.8.0
@@ -73,7 +73,7 @@ INSTALLATION_DIRS=	bin share/john
 SUBST_CLASSES+=		john
 SUBST_STAGE.john=	pre-build
 SUBST_FILES.john=	src/params.h
-SUBST_SED.john=		-e "s+@PREFIX@+${PREFIX}+g"
+SUBST_VARS.john=	PREFIX
 
 do-install:
 	# programs and scripts

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2018/07/18 00:06:17 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2019/05/23 19:23:01 rillig Exp $
 
 DISTNAME=	xevilsrc2.02r2
 PKGNAME=	xevil-2.02
@@ -32,7 +32,7 @@ do-install:
 SUBST_CLASSES+=		uname
 SUBST_STAGE.uname=	pre-configure
 SUBST_FILES.uname=	cmn/utils.cpp
-SUBST_SED.uname=	-e 's,@UNAME@,${UNAME},g'
+SUBST_VARS.uname=	UNAME
 
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"

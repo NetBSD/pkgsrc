@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/08/22 09:45:53 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/05/23 19:23:10 rillig Exp $
 #
 
 DISTNAME=	icinga-1.9.4
@@ -76,7 +76,7 @@ OWN_DIRS_PERMS+=${ICINGADIR}/checkresults ${ICINGA_USER} ${ICINGACMD_GROUP} 0775
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	post-build
 SUBST_FILES.files=	icinga.conf.dist
-SUBST_SED.files=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_VARS.files=	PREFIX
 SUBST_MESSAGE.files=	Fixing configuration files.
 
 pre-build:

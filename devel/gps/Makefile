@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2019/04/25 07:32:46 maya Exp $
+# $NetBSD: Makefile,v 1.59 2019/05/23 19:22:58 rillig Exp $
 
 DISTNAME=	gps-${GPS_VERSION}
 PKGREVISION=	22
@@ -35,7 +35,7 @@ CONFIGURE_ARGS+=	--disable-shared --with-gmp=${PREFIX}
 SUBST_CLASSES+= 	coll python
 SUBST_STAGE.coll=	pre-configure
 SUBST_FILES.coll=	gnatlib/src/gnatcoll_readline.gpr.in
-SUBST_SED.coll=		-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_VARS.coll=	PREFIX
 SUBST_SED.coll+=	-e "s|-rpath|${LINKER_RPATH_FLAG}|g"
 SUBST_STAGE.python=	pre-configure
 SUBST_FILES.python=	share/plug-ins/gps_utils/console_process.py

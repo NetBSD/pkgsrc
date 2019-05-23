@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/05/03 11:05:10 nia Exp $
+# $NetBSD: Makefile,v 1.26 2019/05/23 19:22:55 rillig Exp $
 
 DISTNAME=	anope-2.0.6-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -48,9 +48,9 @@ SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-configure
 SUBST_MESSAGE.conf=	Set variables in configuration file.
 SUBST_FILES.conf+=	data/example.conf
-SUBST_SED.conf+=	-e "s,@PREFIX@,${PREFIX},g"
-SUBST_SED.conf+=	-e "s,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g"
-SUBST_SED.conf+=	-e "s,@PKGLOCALEDIR@,${PKGLOCALEDIR},g"
+SUBST_VARS.conf=	PREFIX
+SUBST_VARS.conf+=	PKG_SYSCONFDIR
+SUBST_VARS.conf+=	PKGLOCALEDIR
 
 RCD_SCRIPTS=	anope
 

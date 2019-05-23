@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2019/02/21 01:37:14 tsutsui Exp $
+# $NetBSD: Makefile,v 1.94 2019/05/23 19:23:02 rillig Exp $
 
 DISTNAME=	xv-3.10a
 PKGREVISION=	25
@@ -38,7 +38,7 @@ BUILD_TARGET=	depend all
 
 SUBST_CLASSES+=		gspath
 SUBST_FILES.gspath=	config.h
-SUBST_SED.gspath=	-e 's|@PREFIX@|${PREFIX}|g'
+SUBST_VARS.gspath=	PREFIX
 SUBST_STAGE.gspath=	post-configure
 SUBST_MESSAGE.gspath=	Fixing path to ghostscript interpreter.
 

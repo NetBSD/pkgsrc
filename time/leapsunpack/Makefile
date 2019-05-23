@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/08/16 20:45:46 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/05/23 19:23:18 rillig Exp $
 #
 
 DISTNAME=		leapsunpack-0.05
@@ -18,7 +18,7 @@ LDFLAGS.SunOS+=		-lsocket -lnsl
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	do-configure
 SUBST_FILES.files=	leapsinstall.sh
-SUBST_SED.files=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
+SUBST_VARS.files=	PKG_SYSCONFDIR
 SUBST_MESSAGE.files=	Fixing configuration files.
 
 INSTALLATION_DIRS=	bin share/doc/${PKGBASE}

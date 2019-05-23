@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2018/08/22 09:42:58 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2019/05/23 19:22:55 rillig Exp $
 
 DISTNAME=		hbench-OS-1.1
 PKGNAME=		hbench-1.1
@@ -43,8 +43,8 @@ SUBST_MESSAGE.hb=	Replacing bin with libexec.
 SUBST_FILES.hb=		do-install
 SUBST_FILES.hb+=	scripts/*
 SUBST_FILES.hb+=	Results/Makefile
-SUBST_SED.hb=		-e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.hb+=		-e 's,/bin/hbench,/libexec/hbench,g'
+SUBST_VARS.hb=		PREFIX
+SUBST_SED.hb=		-e 's,/bin/hbench,/libexec/hbench,g'
 
 INSTALLATION_DIRS=	bin
 

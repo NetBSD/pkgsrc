@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2019/04/03 00:33:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.43 2019/05/23 19:23:16 rillig Exp $
 #
 
 DISTNAME=	softhsm-1.3.7
@@ -25,7 +25,7 @@ EGDIR=			${PREFIX}/share/examples/softhsm
 SUBST_CLASSES+=         paths
 SUBST_FILES.paths=      ${WRKSRC}/Makefile.in
 SUBST_STAGE.paths=      pre-configure
-SUBST_SED.paths=        -e 's,@EGDIR@,${EGDIR},'
+SUBST_VARS.paths=	EGDIR
 
 CXXFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 

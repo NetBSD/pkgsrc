@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/07/04 13:40:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2019/05/23 19:23:07 rillig Exp $
 #
 
 DISTNAME=	pfqueue-0.5.6
@@ -34,7 +34,7 @@ SUBST_CLASSES+=		conf
 SUBST_MESSAGE.conf=	Fixing path to config file
 SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	pfqconfig.c pfqueue.conf.5
-SUBST_SED.conf=		-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g'
+SUBST_VARS.conf=	PKG_SYSCONFDIR
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/pfqueue.conf ${DESTDIR}${PREFIX}/share/examples/pfqueue

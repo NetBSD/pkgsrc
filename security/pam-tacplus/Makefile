@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/07/04 13:40:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2019/05/23 19:23:15 rillig Exp $
 #
 
 DISTNAME=	pam_tacplus-1.3.6
@@ -19,7 +19,7 @@ GNU_CONFIGURE=yes
 SUBST_CLASSES+=		egdir
 SUBST_STAGE.egdir=	pre-configure
 SUBST_FILES.egdir=	Makefile.in
-SUBST_SED.egdir=	-e "s,@EGDIR@,${EGDIR},"
+SUBST_VARS.egdir=	EGDIR
 
 .include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

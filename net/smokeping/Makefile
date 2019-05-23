@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2018/08/22 09:46:07 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2019/05/23 19:23:11 rillig Exp $
 
 DISTNAME=	smokeping-2.6.7
 PKGREVISION=	7
@@ -52,11 +52,11 @@ SUBST_STAGE.files=	pre-configure
 SUBST_FILES.files=	etc/config.dist.in bin/smokeping \
 			bin/smokeping_cgi bin/tSmoke \
 			htdocs/Makefile.in smokeping.conf
-SUBST_SED.files=	-e "s|@PREFIX@|${PREFIX}|g"
-SUBST_SED.files+=	-e "s|@VARBASE@|${VARBASE}|g"
-SUBST_SED.files+=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
-SUBST_SED.files+=	-e "s|@INTERP@|${INTERP}|g"
-SUBST_SED.files+=	-e "s|@SPDIR@|${SPDIR}|g"
+SUBST_VARS.files=	PREFIX
+SUBST_VARS.files+=	VARBASE
+SUBST_VARS.files+=	PKG_SYSCONFDIR
+SUBST_VARS.files+=	INTERP
+SUBST_VARS.files+=	SPDIR
 SUBST_MESSAGE.files=	Fixing configuration files.
 
 SUBST_CLASSES+=		libs

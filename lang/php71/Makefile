@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/01/12 14:56:47 taca Exp $
+# $NetBSD: Makefile,v 1.19 2019/05/23 19:23:03 rillig Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -36,8 +36,8 @@ SUBST_STAGE.path=	pre-configure
 SUBST_FILES.path=	ext/phar/phar/phar.php
 SUBST_FILES.path+=	php.ini-development php.ini-production run-tests.php
 SUBST_FILES.path+=	sapi/cgi/Makefile.frag
-SUBST_SED.path=		-e 's,@CGIDIR@,${CGIDIR},g'
-SUBST_SED.path+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.path=	CGIDIR
+SUBST_VARS.path+=	PREFIX
 
 INSTALLATION_DIRS+=	${CGIDIR} ${PHP_EXTENSION_DIR} ${EGDIR} share/php
 
