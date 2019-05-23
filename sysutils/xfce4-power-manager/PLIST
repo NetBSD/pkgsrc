@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2018/05/18 17:07:29 youri Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/05/23 02:37:25 gutteridge Exp $
 bin/xfce4-power-manager
 bin/xfce4-power-manager-settings
 man/man1/xfce4-power-manager-settings.1
 man/man1/xfce4-power-manager.1
 sbin/xfce4-pm-helper
 sbin/xfpm-power-backlight-helper
-share/appdata/xfce4-power-manager.appdata.xml
 share/applications/xfce4-power-manager-settings.desktop
 share/examples/xfce4/autostart/xfce4-power-manager.desktop
 share/icons/hicolor/32x32/status/ac-adapter.png
@@ -96,6 +95,7 @@ share/icons/hicolor/scalable/status/video-display.svg
 share/icons/hicolor/scalable/status/xfce4-power-manager-settings.svg
 share/locale/ar/LC_MESSAGES/xfce4-power-manager.mo
 share/locale/ast/LC_MESSAGES/xfce4-power-manager.mo
+share/locale/be/LC_MESSAGES/xfce4-power-manager.mo
 share/locale/bg/LC_MESSAGES/xfce4-power-manager.mo
 share/locale/ca/LC_MESSAGES/xfce4-power-manager.mo
 share/locale/cs/LC_MESSAGES/xfce4-power-manager.mo
@@ -135,6 +135,7 @@ share/locale/ru/LC_MESSAGES/xfce4-power-manager.mo
 share/locale/si/LC_MESSAGES/xfce4-power-manager.mo
 share/locale/sk/LC_MESSAGES/xfce4-power-manager.mo
 share/locale/sl/LC_MESSAGES/xfce4-power-manager.mo
+share/locale/sq/LC_MESSAGES/xfce4-power-manager.mo
 share/locale/sr/LC_MESSAGES/xfce4-power-manager.mo
 share/locale/sv/LC_MESSAGES/xfce4-power-manager.mo
 share/locale/te/LC_MESSAGES/xfce4-power-manager.mo
@@ -148,4 +149,5 @@ share/locale/vi/LC_MESSAGES/xfce4-power-manager.mo
 share/locale/zh_CN/LC_MESSAGES/xfce4-power-manager.mo
 share/locale/zh_HK/LC_MESSAGES/xfce4-power-manager.mo
 share/locale/zh_TW/LC_MESSAGES/xfce4-power-manager.mo
+share/metainfo/xfce4-power-manager.appdata.xml
 share/polkit-1/actions/org.xfce.power.policy
