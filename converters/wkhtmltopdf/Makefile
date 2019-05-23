@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/04/25 07:32:40 maya Exp $
+# $NetBSD: Makefile,v 1.6 2019/05/23 19:22:57 rillig Exp $
 
 DISTNAME=       wkhtmltox-0.12.4
 PKGNAME=	wkhtmltopdf-0.12.4
@@ -24,7 +24,7 @@ SUBST_CLASSES+=		x11
 SUBST_MESSAGE.x11=	Fixing x11 options.
 SUBST_STAGE.x11=	pre-configure
 SUBST_FILES.x11+=	qt/mkspecs/netbsd-g++/qmake.conf
-SUBST_SED.x11=		-e 's,@X11BASE@,${X11BASE},g'
+SUBST_VARS.x11=		X11BASE
 
 
 do-configure:

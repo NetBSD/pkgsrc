@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/02/26 17:42:54 sborrill Exp $
+# $NetBSD: Makefile,v 1.6 2019/05/23 19:23:15 rillig Exp $
 #
 
 DISTNAME=	lynis-2.6.2
@@ -17,13 +17,13 @@ SUBST_CLASSES+=		libdir
 SUBST_STAGE.libdir=	pre-install
 SUBST_MESSAGE.libdir=	Fixing lib path
 SUBST_FILES.libdir=	lynis
-SUBST_SED.libdir=	-e "s,@PREFIX@,${PREFIX},"
+SUBST_VARS.libdir=	PREFIX
 
 SUBST_CLASSES+=		vardir
 SUBST_STAGE.vardir=	pre-install
 SUBST_MESSAGE.vardir=	Fixing var path
 SUBST_FILES.vardir=	lynis
-SUBST_SED.vardir=	-e "s,@VARBASE@,${VARBASE},"
+SUBST_VARS.vardir=	VARBASE
 
 SUBST_CLASSES+=		confdir
 SUBST_STAGE.confdir=	pre-install

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2018/07/04 13:40:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.60 2019/05/23 19:22:56 rillig Exp $
 
 DISTNAME=	bitchx-1.2.1
 PKGREVISION=	1
@@ -22,7 +22,7 @@ CFLAGS.Darwin+=	-DBIND_8_COMPAT
 SUBST_CLASSES+=		manpage
 SUBST_STAGE.manpage=	pre-configure
 SUBST_FILES.manpage+=	doc/BitchX.1
-SUBST_SED.manpage+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.manpage=	PREFIX
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

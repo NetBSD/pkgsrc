@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2018/07/04 13:40:16 jperkin Exp $
+# $NetBSD: Makefile,v 1.27 2019/05/23 19:23:00 rillig Exp $
 #
 
 DISTNAME=	lpe-1.2.6
@@ -28,7 +28,7 @@ CFLAGS=			-DPREFIX="\"${PREFIX}\""
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	man/lpe.1.cs man/lpe.1.de man/lpe.1.en man/lpe.1.es
-SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},'
+SUBST_VARS.paths=	PREFIX
 
 .include "../../devel/libslang/buildlink3.mk"
 

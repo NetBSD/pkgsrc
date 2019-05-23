@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2018/08/22 09:43:28 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2019/05/23 19:22:57 rillig Exp $
 
 DISTNAME=	bugzilla-3.6.8
 PKGREVISION=	1
@@ -49,11 +49,11 @@ SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-install
 SUBST_MESSAGE.conf=	Fixing configuration files.
 SUBST_FILES.conf=	bugzilla.conf localconfig Bugzilla/BugMail.pm
-SUBST_SED.conf=		-e "s|@BZ_WEB_GROUP@|${BZ_WEB_GROUP}|g"
-SUBST_SED.conf+=	-e "s|@PREFIX@|${PREFIX}|g"
-SUBST_SED.conf+=	-e "s|@BZDIR@|${BZDIR}|g"
-SUBST_SED.conf+=	-e "s|@CVS@|${CVS}|g"
-SUBST_SED.conf+=	-e "s|@DBDRIVER@|${DBDRIVER}|g"
+SUBST_VARS.conf=	BZ_WEB_GROUP
+SUBST_VARS.conf+=	PREFIX
+SUBST_VARS.conf+=	BZDIR
+SUBST_VARS.conf+=	CVS
+SUBST_VARS.conf+=	DBDRIVER
 SUBST_SED.conf+=	-e "s|/usr/lib/sendmail|${SENDMAIL}|g"
 
 INSTALLATION_DIRS+=	${DOCDIR} ${DOCDIR}/en ${EGDIR} ${BZDIR} ${BZDIR}/Bugzilla

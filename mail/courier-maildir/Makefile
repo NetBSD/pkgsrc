@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2018/08/22 09:45:24 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2019/05/23 19:23:04 rillig Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/-maildir-/}
@@ -57,12 +57,12 @@ CONF_FILES_PERMS+=	${EGDIR}/sharedindexupdate			\
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKDIR}/sharedindexupdate.sh
-SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
-SUBST_SED.paths+=	-e 's,@MKDIR@,${MKDIR},g'
-SUBST_SED.paths+=	-e 's,@RM@,${RM},g'
-SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
-SUBST_SED.paths+=	-e 's,@TEST@,${TEST},g'
+SUBST_VARS.paths=	PREFIX
+SUBST_VARS.paths+=	PKG_SYSCONFDIR
+SUBST_VARS.paths+=	MKDIR
+SUBST_VARS.paths+=	RM
+SUBST_VARS.paths+=	SH
+SUBST_VARS.paths+=	TEST
 SUBST_STAGE.paths=	pre-configure
 
 post-extract:
