@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2228 2019/05/22 21:13:04 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2229 2019/05/23 01:50:57 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3809,3 +3809,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated finance/py-braintree to 3.54.0 [adam 2019-05-22]
 	Updated devel/py-dash to 4.7.5 [adam 2019-05-22]
 	Updated devel/py-astor to 0.8.0 [adam 2019-05-22]
+	Updated devel/xfce4-conf to 4.13.7 [gutteridge 2019-05-23]
