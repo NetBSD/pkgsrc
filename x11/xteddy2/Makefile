@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2014/09/08 21:24:45 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2019/05/23 19:23:24 rillig Exp $
 
 DISTNAME=	xteddy-2.0.1
 PKGREVISION=	23
@@ -20,7 +20,7 @@ REPLACE_KSH+=	xtoys
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	configure xteddy_test xtoys
-SUBST_SED.prefix=	-e 's|@PREFIX@|${PREFIX}|g'
+SUBST_VARS.prefix=	PREFIX
 
 .include "../../graphics/imlib/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"

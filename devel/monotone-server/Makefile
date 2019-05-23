@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2013/07/12 10:44:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.61 2019/05/23 19:22:58 rillig Exp $
 #
 
 DISTNAME=	monotone-1.0
@@ -59,12 +59,12 @@ SUBST_CLASSES+=	vars
 SUBST_STAGE.vars=	do-configure
 SUBST_MESSAGE.vars=	Configuring sources.
 SUBST_FILES.vars=	${WRKDIR}/monotone-server.7
-SUBST_SED.vars+=	-e 's|@MONOTONE_HOME@|${MONOTONE_HOME}|g'
-SUBST_SED.vars+=	-e 's|@MONOTONE_LOGFILE@|${MONOTONE_LOGFILE}|g'
-SUBST_SED.vars+=	-e 's|@MONOTONE_USER@|${MONOTONE_USER}|g'
-SUBST_SED.vars+=	-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g'
-SUBST_SED.vars+=	-e 's|@PREFIX@|${PREFIX}|g'
-SUBST_SED.vars+=	-e 's|@RCD_SCRIPTS_DIR@|${RCD_SCRIPTS_DIR}|g'
+SUBST_VARS.vars=	MONOTONE_HOME
+SUBST_VARS.vars+=	MONOTONE_LOGFILE
+SUBST_VARS.vars+=	MONOTONE_USER
+SUBST_VARS.vars+=	PKG_SYSCONFDIR
+SUBST_VARS.vars+=	PREFIX
+SUBST_VARS.vars+=	RCD_SCRIPTS_DIR
 
 FILES_SUBST+=		DIGEST=${PREFIX:Q}/bin/digest
 FILES_SUBST+=		MONOTONE=${PREFIX:Q}/bin/mtn

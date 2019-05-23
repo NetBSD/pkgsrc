@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/04/06 12:04:02 rodent Exp $
+# $NetBSD: Makefile,v 1.14 2019/05/23 19:23:18 rillig Exp $
 #
 
 DISTNAME=	nroff-clone
@@ -19,7 +19,7 @@ SUBST_CLASSES+=		awflib
 SUBST_MESSAGE.awflib=	Fixing awf library path and awk pathname.
 SUBST_FILES.awflib=	Makefile awf awf.1
 SUBST_SED.awflib+=	-e 's|/usr/lib/awf|${PREFIX}/share/awf|'
-SUBST_SED.awflib+=	-e 's|@AWK@|${AWK}|g'
+SUBST_VARS.awflib=	AWK
 SUBST_STAGE.awflib=	pre-configure
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1

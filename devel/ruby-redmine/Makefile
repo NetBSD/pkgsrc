@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2019/04/03 00:32:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.39 2019/05/23 19:22:59 rillig Exp $
 
 DISTNAME=	redmine-3.3.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -136,9 +136,9 @@ SUBST_SED.rake=		-e "s|/usr/bin/env rake|${PREFIX}/${RM_DIR}/gems/bin/rake|g"
 SUBST_CLASSES+=		shell
 SUBST_FILES.shell=	${DESTDIR}${PREFIX}/bin/redmine_*${RUBY_SUFFIX}.sh
 SUBST_MESSAGE.shell=	Fixing paths in helper shell scripts.
-SUBST_SED.shell=	-e "s|@PREFIX@|${PREFIX}|g;s|@GEM@|${GEM}|g"
-SUBST_SED.shell+=	-e "s|@RUBY@|${RUBY}|g"
-SUBST_SED.shell+=	-e "s|@RUBY_PKGPREFIX@|${RUBY_PKGPREFIX}|g"
+SUBST_VARS.shell=	PREFIX
+SUBST_VARS.shell+=	RUBY
+SUBST_VARS.shell+=	RUBY_PKGPREFIX
 SUBST_STAGE.shell=	post-install
 
 REPLACE_BASH+=	nokogiri-1.6.7.2/build_all nokogiri-1.6.7.2/test_all

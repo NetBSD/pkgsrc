@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/10/08 12:19:27 asau Exp $
+# $NetBSD: Makefile,v 1.29 2019/05/23 19:23:07 rillig Exp $
 #
 
 DISTNAME=		qpopper${VERSION}
@@ -17,7 +17,7 @@ COMMENT=		Qualcomm's password change server mainly for Eudora
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	man/poppassd.8 password/poppassd.c
-SUBST_SED.prefix=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_VARS.prefix=	PREFIX
 
 .include "../../mail/qpopper/Makefile.common"
 
