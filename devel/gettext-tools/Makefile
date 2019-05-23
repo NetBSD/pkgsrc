@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2017/05/15 14:14:04 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2019/05/23 17:39:53 rillig Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
@@ -24,6 +24,7 @@ CONFIGURE_ENV+=		GCJ= ac_cv_prog_GCJ= ac_cv_prog_JAR=
 CONFIGURE_ENV+=		HAVE_GCJ_IN_PATH=
 CONFIGURE_ENV+=		HAVE_JAVAC_IN_PATH=
 CONFIGURE_ENV+=		HAVE_JIKES_IN_PATH=
+GNU_CONFIGURE_STRICT=	no # because of gettext-runtime
 LDFLAGS.AIX+=		-Wl,-brtl
 
 SHLIBTOOL_OVERRIDE=	# empty
