@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2230 2019/05/23 01:59:42 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.2231 2019/05/23 02:03:35 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3811,3 +3811,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-astor to 0.8.0 [adam 2019-05-22]
 	Updated devel/xfce4-conf to 4.13.7 [gutteridge 2019-05-23]
 	Updated x11/libxfce4util to 4.13.3 [gutteridge 2019-05-23]
+	Updated x11/libxfce4ui to 4.13.5 [gutteridge 2019-05-23]
