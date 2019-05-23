@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2018/11/09 17:17:28 nia Exp $
+# $NetBSD: Makefile,v 1.11 2019/05/23 23:42:27 yyamano Exp $
 
 DISTNAME=		elixir-1.7.4
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GITHUB:=elixir-lang/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -16,7 +17,7 @@ USE_TOOLS+=		gmake
 
 REPLACE_INTERPRETER+=	elixir
 REPLACE.elixir.old=	.*elixir
-REPLACE.elixir.new=	${PREFIX}/bin/elixir
+REPLACE.elixir.new=	${TOOLS_PLATFORM.env} ${PREFIX}/bin/elixir
 REPLACE_FILES.elixir=	bin/mix
 
 BUILD_TARGET=		compile
