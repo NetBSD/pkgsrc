@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/01/17 06:30:26 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/05/23 02:23:39 gutteridge Exp $
 bin/xfce4-accessibility-settings
 bin/xfce4-appearance-settings
 bin/xfce4-display-settings
@@ -48,6 +48,7 @@ share/locale/he/LC_MESSAGES/xfce4-settings.mo
 share/locale/hr/LC_MESSAGES/xfce4-settings.mo
 share/locale/hu/LC_MESSAGES/xfce4-settings.mo
 share/locale/id/LC_MESSAGES/xfce4-settings.mo
+share/locale/ie/LC_MESSAGES/xfce4-settings.mo
 share/locale/is/LC_MESSAGES/xfce4-settings.mo
 share/locale/it/LC_MESSAGES/xfce4-settings.mo
 share/locale/ja/LC_MESSAGES/xfce4-settings.mo
