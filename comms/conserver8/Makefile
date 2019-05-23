@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.25 2018/07/04 13:40:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.26 2019/05/23 15:14:51 he Exp $
 #
 
-PKGVER=		8.2.1
-PKGREVISION=	4
+PKGVER=		8.2.4
 DISTNAME=	conserver-${PKGVER}
 PKGNAME=	conserver8-${PKGVER}
 CATEGORIES=	comms
-MASTER_SITES=	http://www.conserver.com/
+GITHUB_PROJECT=	conserver
+GITHUB_TYPE=	release
+GITHUB_RELEASE=	v${PKGVER}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=conserver/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.conserver.com/
 COMMENT=	Application that allows multiple users to watch serial consoles
-#LICENSE=	# modified-bsd and more (see LICENSE file)
+LICENSE=	modified-bsd # and more (see LICENSE and LICENSES file)
 
 CONFLICTS=	conserver-[0-9]*
 
@@ -46,7 +48,7 @@ SUBST_FILES.conf=	conserver.cf/conserver.cf
 SUBST_SED.conf=		-e "s,/var/consoles,${VARBASE}/consoles,"
 
 post-install:
-	set -e; for File in INSTALL README PROTOCOL; do			\
+	set -e; for File in INSTALL README.md PROTOCOL; do		\
 	    ${INSTALL_DATA} ${WRKSRC}/$${File} ${DESTDIR}${DOCDIR}/$${File};\
 	done
 	set -e; for F in ${WRKSRC}/conserver.cf/samples/* ; do \
