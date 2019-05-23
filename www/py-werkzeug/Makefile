@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/04/18 07:37:33 adam Exp $
+# $NetBSD: Makefile,v 1.15 2019/05/23 12:00:48 adam Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 
@@ -30,7 +30,7 @@ post-install:
 	${CHMOD} ${SHAREMODE} \
 	    ${DESTDIR}${PREFIX}/${PYSITELIB}/werkzeug/debug/shared/${i}
 .endfor
-	cd ${WRKSRC}/examples && pax -rwppm . ${DESTDIR}${PREFIX}/${EGDIR}
+	cd ${WRKSRC}/examples && ${PAX} -rwppm . ${DESTDIR}${PREFIX}/${EGDIR}
 .for i in manage-coolmagic.py manage-couchy.py manage-cupoftee.py \
     manage-i18nurls.py manage-plnt.py manage-shorty.py manage-simplewiki.py \
     manage-webpylike.py
