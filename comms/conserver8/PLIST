@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/06/15 23:02:10 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/05/23 15:14:51 he Exp $
 bin/console
 lib/conserver/convert
 man/man1/console.1
@@ -8,7 +8,7 @@ man/man8/conserver.8
 sbin/conserver
 share/doc/conserver/INSTALL
 share/doc/conserver/PROTOCOL
-share/doc/conserver/README
+share/doc/conserver/README.md
 share/examples/conserver/README
 share/examples/conserver/average-distributed.cf
 share/examples/conserver/average.cf
