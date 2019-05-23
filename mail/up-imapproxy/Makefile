@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/07/04 13:40:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2019/05/23 19:23:09 rillig Exp $
 
 DISTNAME=	up-imapproxy-1.2.5
 PKGREVISION=	7
@@ -15,7 +15,7 @@ RCD_SCRIPTS=	upimapproxy
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	include/imapproxy.h
-SUBST_SED.paths=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
+SUBST_VARS.paths=	PKG_SYSCONFDIR
 SUBST_MESSAGE.paths=	Fixing hard coded paths.
 
 CONF_FILES=	${PREFIX}/share/examples/up-imapproxy/imapproxy.conf \

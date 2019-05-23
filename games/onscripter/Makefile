@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2018/03/12 11:16:35 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2019/05/23 19:23:01 rillig Exp $
 #
 
 DISTNAME=		onscripter-20161102
@@ -26,11 +26,11 @@ USE_TOOLS+=	pkg-config
 SUBST_CLASSES+=		fix
 SUBST_STAGE.fix=	pre-configure
 SUBST_FILES.fix=	${MAKE_FILE}
-SUBST_SED.fix=		-e 's!@RM@!${RM}!g'
-SUBST_SED.fix+=		-e 's!@CXX@!${CXX:Q}!g'
-SUBST_SED.fix+=		-e 's!@LD@!${LD:Q}!g'
-SUBST_SED.fix+=		-e 's!@CXXFLAGS@!${CXXFLAGS:Q}!g'
-SUBST_SED.fix+=		-e 's!@PDA_DEFS@!${PDA_DEFS:Q}!g'
+SUBST_VARS.fix=		RM
+SUBST_VARS.fix+=	CXX
+SUBST_VARS.fix+=	LD
+SUBST_VARS.fix+=	CXXFLAGS
+SUBST_VARS.fix+=	PDA_DEFS
 
 do-install:
 .for f in nsaconv nsadec onscripter sarconv sardec

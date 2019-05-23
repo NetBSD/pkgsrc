@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/08/22 09:46:11 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/05/23 19:23:13 rillig Exp $
 
 PKGNAME=	pkg_p5up2date-0.06
 PKGREVISION=	4
@@ -28,7 +28,7 @@ SUBST_CLASSES+=			pkgsrcdir
 SUBST_STAGE.pkgsrcdir=		pre-configure
 SUBST_MESSAGE.pkgsrcdir=	Recording default path of pkgsrc base directory.
 SUBST_FILES.pkgsrcdir=		pkg_p5up2date.pl
-SUBST_SED.pkgsrcdir=		-e 's,@PKGSRCDIR@,${PKGSRCDIR},g'
+SUBST_VARS.pkgsrcdir=		PKGSRCDIR
 
 # REPLACE_PERL+=		pkg_p5up2date.pl
 

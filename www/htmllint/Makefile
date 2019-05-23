@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2018/08/22 09:47:25 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2019/05/23 19:23:20 rillig Exp $
 #
 
 DISTNAME=	htmllint
@@ -32,7 +32,7 @@ SUBST_CLASSES+=		hl
 SUBST_STAGE.hl=		pre-configure
 SUBST_MESSAGE.hl=	Setting PREFIX.
 SUBST_FILES.hl=		faq.html htmllintenv htmllint htmllint.caller
-SUBST_SED.hl=		-e 's!@PREFIX@!${PREFIX}!g'
+SUBST_VARS.hl=		PREFIX
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/htmllint.caller ${DESTDIR}${PREFIX}/bin/htmllint
