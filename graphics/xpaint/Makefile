@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2015/10/14 20:17:27 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2019/05/23 19:23:02 rillig Exp $
 
 DISTNAME=	xpaint-2.7.8.1
 PKGREVISION=	11
@@ -17,8 +17,8 @@ MAKE_JOBS_SAFE=		NO
 SUBST_CLASSES+=		foo
 SUBST_STAGE.foo=	pre-configure
 SUBST_FILES.foo=	Local.config configure
-SUBST_SED.foo=		-e "s|@LOCALBASE@|${LOCALBASE}|g"
-SUBST_SED.foo+=		-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_VARS.foo=		LOCALBASE
+SUBST_VARS.foo+=	PREFIX
 SUBST_SED.foo+=		-e "s|@XAWDIR@|${BUILDLINK_PREFIX.libXaw3d}|g"
 SUBST_SED.foo+=		-e "s|@XPMDIR@|${BUILDLINK_PREFIX.libXpm}|g"
 

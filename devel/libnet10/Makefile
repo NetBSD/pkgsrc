@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/08/16 20:45:35 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2019/05/23 19:22:58 rillig Exp $
 #
 
 DISTNAME=	libnet-1.0.2a
@@ -25,7 +25,7 @@ SUBST_CLASSES+=		vars
 SUBST_STAGE.vars=	pre-configure
 SUBST_FILES.vars=	Makefile.in libnet-config.in
 SUBST_SED.vars=		-e 's,@MAN_PREFIX@,${PREFIX}/${PKGMANDIR}/man3,g'
-SUBST_SED.vars+=	-e 's!@COMPILER_RPATH_FLAG@!${COMPILER_RPATH_FLAG}!g'
+SUBST_VARS.vars=	COMPILER_RPATH_FLAG
 
 INSTALLATION_DIRS=	bin lib share/examples ${PKGMANDIR}/man3
 

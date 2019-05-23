@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2018/07/29 08:41:18 schmonz Exp $
+# $NetBSD: Makefile,v 1.38 2019/05/23 19:23:08 rillig Exp $
 #
 
 DISTNAME=		spamdyke-5.0.1
@@ -21,8 +21,8 @@ MAKE_FLAGS+=		LDFLAGS=${LDFLAGS:Q}
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	spamdyke.h
-SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX:Q},g'
-SUBST_SED.paths+=	-e 's,@QMAILDIR@,${QMAILDIR:Q},g'
+SUBST_VARS.paths=	PREFIX
+SUBST_VARS.paths+=	QMAILDIR
 SUBST_STAGE.paths=	do-configure
 
 BUILD_DEFS+=		QMAILDIR

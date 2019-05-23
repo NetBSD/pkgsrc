@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/10/09 14:06:49 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/05/23 19:23:12 rillig Exp $
 #
 
 PKGNAME=	pkg_alternatives-1.6
@@ -28,14 +28,14 @@ SUBST_STAGE.vars=	do-configure
 SUBST_MESSAGE.vars=	Configuring sources.
 SUBST_FILES.vars=	pkg_alternatives.8 pkg_alternatives.sh
 SUBST_SED.vars=		-e 's|@CONFDIR@|${PKG_SYSCONFDIR}|g'
-SUBST_SED.vars+=	-e 's|@DATADIR@|${DATADIR}|g'
-SUBST_SED.vars+=	-e 's|@DBDIR@|${DBDIR}|g'
-SUBST_SED.vars+=	-e 's|@PKGMANDIR@|${PKGMANDIR}|g'
-SUBST_SED.vars+=	-e 's|@PKG_DBDIR@|${PKG_DBDIR}|g'
-SUBST_SED.vars+=	-e 's|@PREFIX@|${PREFIX}|g'
+SUBST_VARS.vars=	DATADIR
+SUBST_VARS.vars+=	DBDIR
+SUBST_VARS.vars+=	PKGMANDIR
+SUBST_VARS.vars+=	PKG_DBDIR
+SUBST_VARS.vars+=	PREFIX
 SUBST_SED.vars+=	-e 's|@ROOT_USER@|${REAL_ROOT_USER}|g'
-SUBST_SED.vars+=	-e 's|@ID@|${ID}|g'
-SUBST_SED.vars+=	-e 's|@SH@|${SH}|g'
+SUBST_VARS.vars+=	ID
+SUBST_VARS.vars+=	SH
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 

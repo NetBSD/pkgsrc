@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/04/26 13:13:56 maya Exp $
+# $NetBSD: Makefile,v 1.19 2019/05/23 19:23:00 rillig Exp $
 
 DISTNAME=	gmailfs-0.7.2
 PKGREVISION=	4
@@ -20,8 +20,8 @@ CONF_FILES=		${PREFIX}/share/examples/gmailfs/gmailfs.conf \
 SUBST_CLASSES+=		config
 SUBST_STAGE.config=	pre-configure
 SUBST_FILES.config=	gmailfs.py mount.gmailfs
-SUBST_SED.config=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
-SUBST_SED.config+=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_VARS.config=	PKG_SYSCONFDIR
+SUBST_VARS.config+=	PREFIX
 SUBST_SED.config+=	-e "s|@PYSITELIB@|${PREFIX}/${PYSITELIB}|g"
 SUBST_MESSAGE.config=   Fixing paths.
 

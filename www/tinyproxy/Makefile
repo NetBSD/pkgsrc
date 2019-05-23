@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2018/10/12 13:57:46 adam Exp $
+# $NetBSD: Makefile,v 1.40 2019/05/23 19:23:21 rillig Exp $
 
 DISTNAME=	tinyproxy-1.10.0
 CATEGORIES=	www
@@ -39,10 +39,10 @@ CONF_FILES=	${EGDIR}/tinyproxy.conf.default ${PKG_SYSCONFDIR}/tinyproxy.conf
 SUBST_CLASSES+=		docs
 SUBST_STAGE.docs=	pre-configure
 SUBST_FILES.docs=	docs/man5/tinyproxy.conf.txt.in docs/man8/tinyproxy.txt.in etc/tinyproxy.conf.in
-SUBST_SED.docs+=	-e 's,@TINYPROXY_USER@,${TINYPROXY_USER},g'
-SUBST_SED.docs+=	-e 's,@TINYPROXY_GROUP@,${TINYPROXY_GROUP},g'
-SUBST_SED.docs+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
-SUBST_SED.docs+=	-e 's,@VARBASE@,${VARBASE},g'
+SUBST_VARS.docs=	TINYPROXY_USER
+SUBST_VARS.docs+=	TINYPROXY_GROUP
+SUBST_VARS.docs+=	PKG_SYSCONFDIR
+SUBST_VARS.docs+=	VARBASE
 
 INSTALLATION_DIRS=	${EGDIR} share/doc/tinyproxy
 

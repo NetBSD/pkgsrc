@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2019/01/26 18:23:05 abs Exp $
+# $NetBSD: Makefile,v 1.134 2019/05/23 19:23:08 rillig Exp $
 
 DISTNAME=	Mail-SpamAssassin-3.4.2
 PKGNAME=	spamassassin-3.4.2
@@ -132,8 +132,8 @@ SUBST_MESSAGE.sa2=	Setting correct paths for pkgsrc (part 1)
 SUBST_STAGE.sa2=	pre-configure
 SUBST_FILES.sa2=	README spamd/spamd.raw
 SUBST_SED.sa2=		-e s!@@PREFIX@@!${PREFIX}!g
-SUBST_SED.sa2+=		-e s!@PKG_SYSCONFDIR@!${PKG_SYSCONFDIR}!g
-SUBST_SED.sa2+=		-e s!@VARBASE@!${VARBASE}!g
+SUBST_VARS.sa2=		PKG_SYSCONFDIR
+SUBST_VARS.sa2+=	VARBASE
 
 SUBST_CLASSES+=		sa3
 SUBST_MESSAGE.sa3=	Setting correct paths for pkgsrc (part 2)

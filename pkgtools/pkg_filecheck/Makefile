@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2018/08/22 09:46:11 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2019/05/23 19:23:12 rillig Exp $
 #
 
 PKGNAME=	pkg_filecheck-0.4
@@ -27,10 +27,10 @@ INSTALLATION_DIRS= \
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	builddb.pl builddb.1 pkg_filecheck.conf
 SUBST_FILES.paths+=	pkg_filecheck.conf.5 pkg_filecheck.c pkg_filecheck.1
-SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.paths+=	-e 's,@PERL5@,${PERL5},g'
-SUBST_SED.paths+=	-e 's,@PKG_DBDIR@,${PKG_DBDIR},g'
-SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
+SUBST_VARS.paths=	PREFIX
+SUBST_VARS.paths+=	PERL5
+SUBST_VARS.paths+=	PKG_DBDIR
+SUBST_VARS.paths+=	PKG_SYSCONFDIR
 SUBST_STAGE.paths=	pre-configure
 
 post-extract:

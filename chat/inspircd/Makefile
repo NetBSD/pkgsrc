@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2019/04/03 00:32:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.64 2019/05/23 19:22:56 rillig Exp $
 
 DISTNAME=	inspircd-2.0.27
 PKGREVISION=	2
@@ -60,8 +60,8 @@ SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-configure
 SUBST_MESSAGE.conf=	Set variables in configuration file.
 SUBST_FILES.conf+=	conf/inspircd.conf
-SUBST_SED.conf+=	-e "s,@PREFIX@,${PREFIX},g"
-SUBST_SED.conf+=	-e "s,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g"
+SUBST_VARS.conf=	PREFIX
+SUBST_VARS.conf+=	PKG_SYSCONFDIR
 
 INSTALLATION_DIRS+=	${EGDIR}
 
