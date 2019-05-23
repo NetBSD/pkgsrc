@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2016/03/26 23:52:37 joerg Exp $
+# $NetBSD: Makefile,v 1.70 2019/05/23 19:23:07 rillig Exp $
 #
 
 DISTNAME=		qpopper${VERSION}
@@ -44,12 +44,12 @@ PKG_USERS=		${QPOPPER_USER}:${QPOPPER_GROUP}
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	man/popper.8
-SUBST_SED.prefix=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_VARS.prefix=	PREFIX
 
 SUBST_CLASSES+=		sysconf
 SUBST_STAGE.sysconf=	pre-configure
 SUBST_FILES.sysconf=	man/popauth.8
-SUBST_SED.sysconf=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
+SUBST_VARS.sysconf=	PKG_SYSCONFDIR
 
 SUBST_CLASSES+=		varbase
 SUBST_STAGE.varbase=	pre-configure

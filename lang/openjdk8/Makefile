@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2019/03/20 11:10:25 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2019/05/23 19:23:03 rillig Exp $
 
 DISTNAME=	openjdk-1.8.202-20190219
 PKGNAME=	openjdk8-1.8.202
@@ -159,8 +159,8 @@ SUBST_STAGE.fontpaths=		pre-build
 SUBST_MESSAGE.fontpaths=	fixing font paths
 SUBST_FILES.fontpaths=		jdk/src/solaris/classes/sun/awt/fontconfigs/bsd.fontconfig.properties
 SUBST_FILES.fontpaths+=		jdk/src/solaris/native/sun/awt/fontpath.c
-SUBST_SED.fontpaths=		-e 's|@PREFIX@|${PREFIX}|g'
-SUBST_SED.fontpaths+=		-e 's|@BUILDLINK_PREFIX.fontconfig@|${BUILDLINK_PREFIX.fontconfig}|g'
+SUBST_VARS.fontpaths=		PREFIX
+SUBST_VARS.fontpaths+=		BUILDLINK_PREFIX.fontconfig
 
 SUBST_CLASSES+=			zlibpath
 SUBST_STAGE.zlibpath=		pre-build

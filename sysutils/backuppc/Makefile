@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/08/22 09:46:31 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2019/05/23 19:23:17 rillig Exp $
 
 DISTNAME=	BackupPC-3.3.1
 PKGNAME=	${DISTNAME:tl}
@@ -77,13 +77,13 @@ SUBST_FILES.fix-paths+=		${WRKSRC}/build/${PREFIX}/share/BackupPC/lib/BackupPC/L
 SUBST_FILES.fix-paths+=		${WRKSRC}/backuppc.conf
 SUBST_FILES.fix-paths+=		${WRKSRC}/cgiwrapper.c
 SUBST_SED.fix-paths=		-e 's,${PREFIX}/share/examples/BackupPC,${PKG_SYSCONFDIR},g'
-SUBST_SED.fix-paths+=		-e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.fix-paths+=		-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
-SUBST_SED.fix-paths+=		-e 's,@APACHE_USER@,${APACHE_USER},g'
-SUBST_SED.fix-paths+=		-e 's,@APACHE_GROUP@,${APACHE_GROUP},g'
-SUBST_SED.fix-paths+=		-e 's,@BACKUPPC_USER@,${BACKUPPC_USER},g'
-SUBST_SED.fix-paths+=		-e 's,@BACKUPPC_GROUP@,${BACKUPPC_GROUP},g'
-SUBST_SED.fix-paths+=		-e 's,@PERL5@,${PERL5},g'
+SUBST_VARS.fix-paths=		PREFIX
+SUBST_VARS.fix-paths+=		PKG_SYSCONFDIR
+SUBST_VARS.fix-paths+=		APACHE_USER
+SUBST_VARS.fix-paths+=		APACHE_GROUP
+SUBST_VARS.fix-paths+=		BACKUPPC_USER
+SUBST_VARS.fix-paths+=		BACKUPPC_GROUP
+SUBST_VARS.fix-paths+=		PERL5
 
 FILES_SUBST+=			BACKUPPC_USER=${BACKUPPC_USER:Q} BACKUPPC_GROUP=${BACKUPPC_GROUP:Q}
 

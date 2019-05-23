@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2019/03/11 07:52:06 wen Exp $
+# $NetBSD: Makefile,v 1.73 2019/05/23 19:23:20 rillig Exp $
 
 DISTNAME=	moodle-3.6.3
 CATEGORIES=	www
@@ -58,8 +58,8 @@ SUBST_CLASSES+=		conf
 SUBST_MESSAGE.conf=	Fixing pathnames in configuration file.
 SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	../moodle.conf
-SUBST_SED.conf=		-e "s,@MOODLEDIR@,${MOODLEDIR},g"
-SUBST_SED.conf+=	-e "s,@MOODLEDATADIR@,${MOODLEDATADIR},g"
+SUBST_VARS.conf=	MOODLEDIR
+SUBST_VARS.conf+=	MOODLEDATADIR
 .if ${PKG_APACHE} == "apache24"
 SUBST_SED.conf+=	-e "/Order allow,deny/d"
 SUBST_SED.conf+=	-e "s,Allow from all,Require all granted,g"

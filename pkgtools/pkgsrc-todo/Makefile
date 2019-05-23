@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/08/22 09:46:11 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/05/23 19:23:13 rillig Exp $
 
 PKGNAME=	pkgsrc-todo-1.3
 PKGREVISION=	3
@@ -27,10 +27,10 @@ SUBST_FILES.todo+=	list_todo.sh
 SUBST_FILES.todo+=	obsolete_todo.pl
 SUBST_FILES.todo+=	obsolete_todo.1
 SUBST_SED.todo+=	-e s\|pkgsrc/\|${PKGSRCDIR}/\|g
-SUBST_SED.todo+=	-e s\|@PKGSRCDIR@\|${PKGSRCDIR}\|g
+SUBST_VARS.todo=	PKGSRCDIR
 SUBST_SED.todo+=	-e s\|@PERL@\|${PERL5:Q}\|g
-SUBST_SED.todo+=	-e s\|@SED@\|${SED:Q}\|g
-SUBST_SED.todo+=	-e s\|@PKG_INFO@\|${PKG_INFO:Q}\|g
+SUBST_VARS.todo+=	SED
+SUBST_VARS.todo+=	PKG_INFO
 
 do-extract:
 	cd ${FILESDIR} && ${CP} add_todo.1 add_todo.pl list_todo.sh \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2017/07/31 20:34:17 schmonz Exp $
+# $NetBSD: Makefile,v 1.23 2019/05/23 19:23:14 rillig Exp $
 #
 
 DISTNAME=		cvm-0.97
@@ -30,7 +30,7 @@ SUBST_MESSAGE.paths=	Fixing paths.
 SUBST_CLASSES+=		shlibs
 SUBST_STAGE.shlibs=	do-configure
 SUBST_FILES.shlibs=	INSTHIER
-SUBST_SED.shlibs=	-e 's|@CVM_LIB_EXT@|${CVM_LIB_EXT}|g'
+SUBST_VARS.shlibs=	CVM_LIB_EXT
 SUBST_MESSAGE.shlibs=	Fixing shlibs.
 
 RCD_SCRIPTS=		cvm
