@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.29 2019/03/09 19:33:45 gutteridge Exp $
+$NetBSD: distinfo,v 1.30 2019/05/23 03:04:16 gutteridge Exp $
 
-SHA1 (xfdesktop-4.13.3.tar.bz2) = cbcb0f76a7a558239b610acf7749003f64967444
-RMD160 (xfdesktop-4.13.3.tar.bz2) = 6709790ca0b43163a67812a915d317855b173e95
-SHA512 (xfdesktop-4.13.3.tar.bz2) = 5d828ad653b46ab1edc8300335321bab48e0ad2be1ae02944eff553375a6059513aeb363c73aaec1a6958dd3f1c873920287ad911cfe7b8096b447f1b8165ce3
-Size (xfdesktop-4.13.3.tar.bz2) = 1487433 bytes
+SHA1 (xfdesktop-4.13.4.tar.bz2) = 89bdad11e7bae5f01c199ba2d75f4f680dc8703d
+RMD160 (xfdesktop-4.13.4.tar.bz2) = 33c99c06a992800d08e9cc8ba5f68f1a3a0d8f80
+SHA512 (xfdesktop-4.13.4.tar.bz2) = 3943fc2af3ca3996a38900fea4a03004e1d3f8728a8517c988bd59744607ed8e4ba3f135d6075833af206df3c35464633f47e374c26fcbb8a20f0f1ecfdb7da6
+Size (xfdesktop-4.13.4.tar.bz2) = 1485482 bytes
 SHA1 (patch-backgrounds_Makefile.in) = 9310c57da7265b65b0ac1073d7481006162ccd95
 SHA1 (patch-common_xfdesktop-common.h) = b7ef1fcb25012864706eea2e233955cfb9ba1bf7
