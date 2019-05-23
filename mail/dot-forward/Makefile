@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2017/09/01 04:02:11 schmonz Exp $
+# $NetBSD: Makefile,v 1.27 2019/05/23 19:23:05 rillig Exp $
 #
 
 DISTNAME=		dot-forward-0.71
@@ -22,7 +22,7 @@ INSTALLATION_DIRS=	${PKGMANDIR}
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure
 SUBST_FILES.paths=	hier.c
-SUBST_SED.paths=	-e 's,@PKGMANDIR@,${PKGMANDIR},g'
+SUBST_VARS.paths=	PKGMANDIR
 
 .include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"

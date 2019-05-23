@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/03/21 10:45:18 taca Exp $
+# $NetBSD: Makefile,v 1.19 2019/05/23 19:23:09 rillig Exp $
 #
 
 DISTNAME=		hf6to4-1.3
@@ -29,8 +29,8 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/examples/hf6to4 share/doc/hf6to4
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	hf6to4
-SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
-SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
+SUBST_VARS.paths=	PKG_SYSCONFDIR
+SUBST_VARS.paths+=	SH
 SUBST_STAGE.paths=	pre-install
 
 post-extract:

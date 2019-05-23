@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/12/10 07:54:49 leot Exp $
+# $NetBSD: Makefile,v 1.19 2019/05/23 19:23:13 rillig Exp $
 
 .include "../../print/cups/Makefile.common"
 
@@ -113,7 +113,7 @@ OWN_DIRS_PERMS+=	${CUPS_CACHE}/rss ${REAL_ROOT_USER} ${CUPS_GROUP} 0775
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKDIR}/cups.pam
-SUBST_SED.paths+=	-e 's,@LOCALBASE@,${LOCALBASE},g'
+SUBST_VARS.paths=	LOCALBASE
 SUBST_STAGE.paths=	pre-configure
 
 SUBST_CLASSES+=		rpathfix

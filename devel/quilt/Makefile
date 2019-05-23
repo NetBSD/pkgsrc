@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/08/22 09:44:59 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/05/23 19:22:59 rillig Exp $
 #
 
 DISTNAME=	quilt-0.64
@@ -54,7 +54,7 @@ REPLACE_FILES.conf-bash=*.in */*.in */*/*.in
 SUBST_CLASSES+=		bash
 SUBST_MESSAGE.bash=	Fixing non-shellbang references to bash.
 SUBST_STAGE.bash=	pre-configure
-SUBST_SED.bash=		-e 's,@BASH@,${BASH},g'
+SUBST_VARS.bash=	BASH
 SUBST_FILES.bash=	quilt/scripts/inspect.in
 
 SUBST_CLASSES+=		etc

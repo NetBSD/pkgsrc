@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2018/08/14 13:04:24 adam Exp $
+# $NetBSD: Makefile,v 1.41 2019/05/23 19:22:57 rillig Exp $
 
 DISTNAME=	unixODBC-2.3.7
 PKGNAME=	${DISTNAME:S/ODBC/odbc/}
@@ -54,8 +54,8 @@ OWN_DIRS=		${PKG_SYSCONFDIR}/ODBCDataSources
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	${WRKDIR}/odbc.ini
-SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.paths+=	-e 's,@UNIXODBC_DRIVERS_DIR@,${UNIXODBC_DRIVERS_DIR},g'
+SUBST_VARS.paths=	PREFIX
+SUBST_VARS.paths+=	UNIXODBC_DRIVERS_DIR
 
 SUBST_CLASSES+=		mutex
 SUBST_STAGE.mutex=	pre-configure

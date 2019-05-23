@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/10/08 13:45:43 asau Exp $
+# $NetBSD: Makefile,v 1.30 2019/05/23 19:23:13 rillig Exp $
 #
 
 DISTNAME=	papersize-1.0.8
@@ -18,18 +18,18 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	getpapersize setpapersize
-SUBST_SED.paths=	-e 's,@SH@,${SH},'
-SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},'
-SUBST_SED.paths+=	-e 's,@X11BASE@,${X11BASE},'
-SUBST_SED.paths+=	-e 's,@ECHO@,${ECHO},'
-SUBST_SED.paths+=	-e 's,@AWK@,${AWK},'
-SUBST_SED.paths+=	-e 's,@LOCALBASE@,${LOCALBASE},'
-SUBST_SED.paths+=	-e 's,@SED@,${SED},'
-SUBST_SED.paths+=	-e 's,@GREP@,${GREP},'
-SUBST_SED.paths+=	-e 's,@MV@,${MV},'
-SUBST_SED.paths+=	-e 's,@TR@,${TR},'
-SUBST_SED.paths+=	-e 's,@RM@,${RM},'
-SUBST_SED.paths+=	-e 's,@CHMOD@,${CHMOD},'
+SUBST_VARS.paths=	SH
+SUBST_VARS.paths+=	PKG_SYSCONFDIR
+SUBST_VARS.paths+=	X11BASE
+SUBST_VARS.paths+=	ECHO
+SUBST_VARS.paths+=	AWK
+SUBST_VARS.paths+=	LOCALBASE
+SUBST_VARS.paths+=	SED
+SUBST_VARS.paths+=	GREP
+SUBST_VARS.paths+=	MV
+SUBST_VARS.paths+=	TR
+SUBST_VARS.paths+=	RM
+SUBST_VARS.paths+=	CHMOD
 
 do-extract:
 	cd ${FILESDIR} && cp setpapersize getpapersize ${WRKSRC}/.

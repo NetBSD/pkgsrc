@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2018/07/04 13:40:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.31 2019/05/23 19:23:06 rillig Exp $
 
 DISTNAME=	mush-7.2.5
 PKGNAME=	mush-7.2.6.b4.pl1
@@ -38,7 +38,7 @@ PLAT_MAKEFILE.*=		makefile.${LOWER_OPSYS}
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	config.h-dist ${PLAT_MAKEFILE}
-SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.paths=	PREFIX
 SUBST_SED.paths+=	-e 's,@MANDIR@,${PREFIX}/${PKGMANDIR},g'
 SUBST_STAGE.paths=	pre-configure
 

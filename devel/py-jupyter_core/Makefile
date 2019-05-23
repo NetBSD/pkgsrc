@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/02/06 01:40:48 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2019/05/23 19:22:59 rillig Exp $
 
 DISTNAME=	jupyter_core-4.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,7 +20,7 @@ SUBST_CLASSES+=			fix-prefix
 SUBST_STAGE.fix-prefix=		pre-configure
 SUBST_MESSAGE.fix-prefix=	Fixing prefix.
 SUBST_FILES.fix-prefix=		jupyter_core/paths.py
-SUBST_SED.fix-prefix=		-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.fix-prefix=		PREFIX
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

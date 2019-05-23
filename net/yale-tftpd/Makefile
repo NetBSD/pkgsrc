@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/09/12 11:15:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.24 2019/05/23 19:23:11 rillig Exp $
 
 DISTNAME=	yale-tftpd-3.0
 PKGREVISION=	6
@@ -26,7 +26,7 @@ SUBST_STAGE.ytftpdman=		post-configure
 SUBST_MESSAGE.ytftpdman=	Fixing pathnames references
 SUBST_FILES.ytftpdman=		tftpd.8
 SUBST_SED.ytftpdman=		-e 's|@ETCDIR@|${PKG_SYSCONFDIR}|g'
-SUBST_SED.ytftpdman+=		-e 's|@PREFIX@|${PREFIX}|g'
+SUBST_VARS.ytftpdman=		PREFIX
 
 INSTALLATION_DIRS=	libexec ${PKGMANDIR}/cat8 ${PKGMANDIR}/man8
 

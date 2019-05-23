@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2018/08/22 09:45:24 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2019/05/23 19:23:04 rillig Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/-mta-/}
@@ -81,7 +81,7 @@ SUBST_STAGE.perms=	pre-configure
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKDIR}/mailer.conf
-SUBST_SED.paths+=	-e "s,@PREFIX@,${PREFIX},g"
+SUBST_VARS.paths=	PREFIX
 SUBST_STAGE.paths=	pre-configure
 
 REPLACE_PERL+=	courier/webadmin/*.pl courier/webadmin/*.pl.in webadmin/*.pl

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/08/16 20:21:10 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/05/23 19:23:06 rillig Exp $
 
 DISTNAME=	mimp-h3-${MIMPVER}
 PKGNAME=	mimp-${MIMPVER}
@@ -53,7 +53,7 @@ CONF_FILES_PERMS+=	${MIMPDIR}/config/prefs.php.dist \
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	post-build
 SUBST_FILES.files=	mimp.conf.dist
-SUBST_SED.files=	-e "s|@MIMPDIR@|${MIMPDIR}|g"
+SUBST_VARS.files=	MIMPDIR
 SUBST_MESSAGE.files=	Fixing configuration files.
 
 REPLACE_INTERPRETER+=	php

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/08/22 09:45:31 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/05/23 19:23:07 rillig Exp $
 #
 
 DISTNAME=		Ezmlm-0.08.2
@@ -19,8 +19,8 @@ MAKE_ENV+=		BSD_BATCH_INSTALL=1	# skip interactive config stage
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure
 SUBST_FILES.paths=	Ezmlm.pm
-SUBST_SED.paths=	-e 's|@LOCALBASE@|${LOCALBASE}|g'
-SUBST_SED.paths+=	-e 's|@QMAILDIR@|${QMAILDIR}|g'
+SUBST_VARS.paths=	LOCALBASE
+SUBST_VARS.paths+=	QMAILDIR
 SUBST_MESSAGE.paths=	Configuring paths.
 
 PERL5_PACKLIST=		auto/Mail/Ezmlm/.packlist

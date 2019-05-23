@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/07/04 13:40:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2019/05/23 19:23:01 rillig Exp $
 #
 
 DISTNAME=	et-linux-2.56-2.x86
@@ -26,8 +26,8 @@ INSTALLATION_DIRS=	bin
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKDIR}/et ${WRKDIR}/etded
-SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
+SUBST_VARS.paths=	PREFIX
+SUBST_VARS.paths+=	SH
 SUBST_STAGE.paths=	pre-configure
 
 pre-extract:

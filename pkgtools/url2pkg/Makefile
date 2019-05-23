@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2018/08/22 09:46:12 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2019/05/23 19:23:13 rillig Exp $
 
 PKGNAME=	url2pkg-2.29
 PKGREVISION=	1
@@ -25,13 +25,13 @@ SUBST_CLASSES+=		up
 SUBST_STAGE.up=		do-configure
 SUBST_MESSAGE.up=	Replacing variable placeholders
 SUBST_FILES.up=		url2pkg.pl MakeMaker.pm
-SUBST_SED.up=		-e 's,@MAKE@,'${MAKE:Q}',g'
+SUBST_VARS.up=		MAKE
 SUBST_SED.up+=		-e 's,@PERL@,${PERL5},g'
 SUBST_SED.up+=		-e 's,@PERLLIBDIR@,${PREFIX}/lib/url2pkg,g'
 .if defined(BATCH)
 SUBST_SED.up+=		-e 's,@PKGSRCDIR@,/usr/pkgsrc,g'
 .else
-SUBST_SED.up+=		-e 's,@PKGSRCDIR@,${PKGSRCDIR},g'
+SUBST_VARS.up+=		PKGSRCDIR
 .endif
 
 do-install:

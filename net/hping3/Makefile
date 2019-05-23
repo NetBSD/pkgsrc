@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/06/14 12:17:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2019/05/23 19:23:09 rillig Exp $
 #
 
 DISTNAME=		hping3-alpha-2
@@ -15,7 +15,7 @@ LICENSE=		gnu-gpl-v2 AND original-bsd
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=      pre-configure
 SUBST_FILES.paths=	Makefile.in configure
-SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.paths=	PREFIX
 
 USE_TOOLS=		gmake
 USE_PKGLOCALEDIR=	yes

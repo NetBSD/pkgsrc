@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/07/04 13:40:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2019/05/23 19:23:21 rillig Exp $
 #
 
 DISTNAME=		siege-3.1.3
@@ -27,7 +27,7 @@ CONF_FILES+=		${EGDIR}/siegerc ${PKG_SYSCONFDIR}/siegerc
 SUBST_CLASSES+=		siege
 SUBST_STAGE.siege=	pre-configure
 SUBST_FILES.siege=	doc/Makefile.am doc/Makefile.in
-SUBST_SED.siege+=	-e "s|@EGDIR@|${EGDIR}|g"
+SUBST_VARS.siege=	EGDIR
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/log/

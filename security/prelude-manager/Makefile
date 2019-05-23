@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2018/07/04 13:40:35 jperkin Exp $
+# $NetBSD: Makefile,v 1.48 2019/05/23 19:23:16 rillig Exp $
 #
 
 DISTNAME=		prelude-manager-0.9.15
@@ -50,8 +50,8 @@ FILES_SUBST+=		PRELUDE_GROUP=${PRELUDE_USER:Q}
 SUBST_CLASSES+=		code
 SUBST_STAGE.code=	pre-configure
 SUBST_FILES.code=	run-prelude-manager.c
-SUBST_SED.code=		-e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.code+=	-e 's,@PRELUDE_USER@,${PRELUDE_USER},g'
+SUBST_VARS.code=	PREFIX
+SUBST_VARS.code+=	PRELUDE_USER
 
 EGDIR=			share/examples/prelude-manager/
 CONF_FILES+=		${EGDIR}/prelude-manager.conf ${PKG_SYSCONFDIR}/prelude-manager/prelude-manager.conf

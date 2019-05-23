@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2019/05/11 22:47:05 kim Exp $
+# $NetBSD: Makefile,v 1.110 2019/05/23 19:23:09 rillig Exp $
 
 DISTNAME=	screen-4.6.2
 PKGREVISION=	1
@@ -37,7 +37,7 @@ INFO_FILES=		YES
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	etc/etcscreenrc doc/screen.1
-SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
+SUBST_VARS.paths=	PKG_SYSCONFDIR
 SUBST_SED.paths+=	-e 's,@EXAMPLES@,${PREFIX}/share/examples/screen,g'
 SUBST_STAGE.paths=	pre-configure
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2019/04/03 00:32:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.98 2019/05/23 19:23:05 rillig Exp $
 
 DISTNAME=	dspam-3.10.2
 PKGREVISION=	25
@@ -117,9 +117,9 @@ SUBST_STAGE.conf=	pre-install
 SUBST_FILES.conf=	src/dspam.conf.in
 SUBST_SED.conf=		-e "s|@dspam_home@|${DSPAM_HOME}|g"
 SUBST_SED.conf+=	-e "s|@delivery_agent@|${DSPAM_DELIVERY_AGENT_BIN}|g"
-SUBST_SED.conf+=	-e "s|@PREFIX@|${PREFIX}|g"
-SUBST_SED.conf+=	-e "s|@VARBASE@|${VARBASE}|g"
-SUBST_SED.conf+=	-e "s|@DSPAM_PIDDIR@|${DSPAM_PIDDIR}|g"
+SUBST_VARS.conf=	PREFIX
+SUBST_VARS.conf+=	VARBASE
+SUBST_VARS.conf+=	DSPAM_PIDDIR
 SUBST_MESSAGE.conf=	Fixing configuration file.
 
 post-extract:

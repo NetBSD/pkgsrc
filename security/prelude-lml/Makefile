@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2018/07/04 13:40:35 jperkin Exp $
+# $NetBSD: Makefile,v 1.43 2019/05/23 19:23:16 rillig Exp $
 #
 
 DISTNAME=		prelude-lml-0.9.15
@@ -51,13 +51,13 @@ FILES_SUBST+=	PRELUDE_GROUP=${PRELUDE_GROUP:Q}
 SUBST_CLASSES+=		code
 SUBST_STAGE.code=	pre-configure
 SUBST_FILES.code=	run-prelude-lml.c
-SUBST_SED.code=		-e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.code+=	-e 's,@PRELUDE_USER@,${PRELUDE_USER},g'
+SUBST_VARS.code=	PREFIX
+SUBST_VARS.code+=	PRELUDE_USER
 
 SUBST_CLASSES+=		make
 SUBST_STAGE.make=	pre-configure
 SUBST_FILES.make=	Makefile.in
-SUBST_SED.make=		-e 's,@EGDIR@,${EGDIR},g'
+SUBST_VARS.make=	EGDIR
 
 PKG_SYSCONFSUBDIR=	prelude-lml
 CONF_FILES_PERMS+=	${EGDIR}/plugins.rules ${PKG_SYSCONFDIR}/plugins.rules \

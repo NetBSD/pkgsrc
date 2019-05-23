@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2019/04/26 13:14:23 maya Exp $
+# $NetBSD: Makefile,v 1.50 2019/05/23 19:23:22 rillig Exp $
 
 DISTNAME=	avant-window-navigator-0.4.0
 PKGREVISION=	34
@@ -29,7 +29,7 @@ SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-configure
 SUBST_MESSAGE.python=	Fixing python path
 SUBST_FILES.python=	applet-activation/main.c
-SUBST_SED.python=	-e "s,@PYTHONBIN@,${PYTHONBIN},"
+SUBST_VARS.python=	PYTHONBIN
 
 SUBST_CLASSES+=		pathfix
 SUBST_STAGE.pathfix=	pre-configure

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2018/08/22 09:45:55 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2019/05/23 19:23:10 rillig Exp $
 
 DISTNAME=		netdisco-${PKGVERSION}_with_mibs
 PKGNAME=		netdisco-${PKGVERSION}
@@ -87,7 +87,7 @@ SUBST_MESSAGE.path=		Fixing hardcoded path.
 
 SUBST_STAGE.varbase=		pre-configure
 SUBST_FILES.varbase=		netdisco.conf
-SUBST_SED.varbase=		-e "s|@VARBASE@|${VARBASE}|g"
+SUBST_VARS.varbase=		VARBASE
 SUBST_MESSAGE.varbase=		Fixing data directory.
 
 NETDISCOUSER?=			netdisco

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2019/01/25 19:26:55 markd Exp $
+# $NetBSD: Makefile,v 1.40 2019/05/23 19:23:14 rillig Exp $
 
 DISTNAME=	musixtex
 PKGNAME=	tex-${DISTNAME}-1.29
@@ -19,7 +19,7 @@ SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Setting paths to commands.
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	bin/musixtex
-SUBST_SED.paths=	-e 's,@LOCALBASE@,${LOCALBASE},g'
+SUBST_VARS.paths=	LOCALBASE
 
 REPLACE_TEXLUA=		bin/musixflx bin/musixtex
 

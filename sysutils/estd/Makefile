@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/04/09 11:08:13 sevan Exp $
+# $NetBSD: Makefile,v 1.34 2019/05/23 19:23:17 rillig Exp $
 
 DISTNAME=	estd-r11
 PKGNAME=	estd-0.11
@@ -30,7 +30,7 @@ SUBST_CLASSES+=		rcd
 SUBST_STAGE.rcd=	do-configure
 SUBST_MESSAGE.rcd=	Fixing startup script.
 SUBST_FILES.rcd=	estd.sh
-SUBST_SED.rcd=		-e 's|@PREFIX@|${PREFIX}|'
-SUBST_SED.rcd+=		-e 's|@ECHO@|${ECHO}|'
+SUBST_VARS.rcd=		PREFIX
+SUBST_VARS.rcd+=	ECHO
 
 .include "../../mk/bsd.pkg.mk"
