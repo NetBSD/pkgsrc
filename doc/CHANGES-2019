@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2246 2019/05/24 10:59:26 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.2247 2019/05/24 13:18:23 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3828,3 +3828,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated comms/conserver8 to 8.2.4 [he 2019-05-23]
 	Updated mail/courier-unicode to 2.1 [hauke 2019-05-24]
 	Updated emulators/haxm to 7.5.1 [kamil 2019-05-24]
+	Updated mail/maildrop to 3.0.0 [hauke 2019-05-24]
