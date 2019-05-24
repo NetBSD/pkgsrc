@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2247 2019/05/24 13:18:23 hauke Exp $
+$NetBSD: CHANGES-2019,v 1.2248 2019/05/24 15:49:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3829,3 +3829,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/courier-unicode to 2.1 [hauke 2019-05-24]
 	Updated emulators/haxm to 7.5.1 [kamil 2019-05-24]
 	Updated mail/maildrop to 3.0.0 [hauke 2019-05-24]
+	Updated math/fftwf to 3.3.8 [adam 2019-05-24]
