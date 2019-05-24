@@ -1,11 +1,14 @@
-@comment $NetBSD: PLIST,v 1.57 2019/04/25 15:29:02 leot Exp $
+@comment $NetBSD: PLIST,v 1.58 2019/05/24 00:28:52 kamil Exp $
 bin/elf2dmp
+${PLIST.aarch64}bin/qemu-aarch64
+${PLIST.aarch64_be}bin/qemu-aarch64_be
 ${PLIST.alpha}bin/qemu-alpha
 ${PLIST.arm}bin/qemu-arm
 ${PLIST.armeb}bin/qemu-armeb
 ${PLIST.cris}bin/qemu-cris
 bin/qemu-edid
 bin/qemu-ga
+${PLIST.hppa}bin/qemu-hppa
 ${PLIST.i386}bin/qemu-i386
 bin/qemu-img
 bin/qemu-io
@@ -13,12 +16,21 @@ ${PLIST.m68k}bin/qemu-m68k
 ${PLIST.microblaze}bin/qemu-microblaze
 ${PLIST.microblazeel}bin/qemu-microblazeel
 ${PLIST.mips}bin/qemu-mips
+${PLIST.mips64}bin/qemu-mips64
+${PLIST.mips64el}bin/qemu-mips64el
 ${PLIST.mipsel}bin/qemu-mipsel
+${PLIST.mipsn32}bin/qemu-mipsn32
+${PLIST.mipsn32el}bin/qemu-mipsn32el
 ${PLIST.nbd}bin/qemu-nbd
+${PLIST.nios2}bin/qemu-nios2
 ${PLIST.or1k}bin/qemu-or1k
 ${PLIST.ppc}bin/qemu-ppc
 ${PLIST.ppc64}bin/qemu-ppc64
 ${PLIST.ppc64abi32}bin/qemu-ppc64abi32
+${PLIST.ppc64le}bin/qemu-ppc64le
+${PLIST.pr-helper}bin/qemu-pr-helper
+${PLIST.riscv32}bin/qemu-riscv32
+${PLIST.riscv64}bin/qemu-riscv64
 ${PLIST.s390x}bin/qemu-s390x
 ${PLIST.sh4}bin/qemu-sh4
 ${PLIST.sh4eb}bin/qemu-sh4eb
@@ -56,8 +68,12 @@ bin/qemu-system-unicore32
 bin/qemu-system-x86_64
 bin/qemu-system-xtensa
 bin/qemu-system-xtensaeb
+${PLIST.tilegx}bin/qemu-tilegx
 ${PLIST.unicore32}bin/qemu-unicore32
 ${PLIST.x86_64}bin/qemu-x86_64
+${PLIST.xtensa}bin/qemu-xtensa
+${PLIST.xtensaeb}bin/qemu-xtensaeb
+${PLIST.bridge-helper}libexec/qemu-bridge-helper
 man/man1/qemu-img.1
 man/man1/qemu.1
 man/man7/qemu-block-drivers.7
