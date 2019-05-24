@@ -1,0 +1,25 @@
+$NetBSD: patch-libs_maildrop_configure,v 1.1 2019/05/24 13:17:58 hauke Exp $
+
+Since this is a standalone install, do not check for surrounding
+Courier source tree.
+
+--- libs/maildrop/configure.orig	2018-09-13 23:21:35.000000000 +0000
++++ libs/maildrop/configure
+@@ -18252,7 +18252,7 @@ fi
+ test "x$prefix" = xNONE && prefix=$ac_default_prefix
+ test "x$exec_prefix" = xNONE && exec_prefix='${prefix}'
+ 
+-if test -d $srcdir/../../courier
++if true || test -d $srcdir/../../courier
+ then
+ #
+ # This version of maildrop is integrated into Courier mail server
+@@ -18272,7 +18272,7 @@ else
+ #
+ # When maildrop is configured as part of courier, MTA is fixed to use Courier.
+ #
+-	if test -d $srcdir/../../courier
++	if true || test -d $srcdir/../../courier
+ 	then
+ 		eval "prefix=$prefix"
+ 		eval "exec_prefix=$exec_prefix"
