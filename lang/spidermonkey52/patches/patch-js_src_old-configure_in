@@ -1,4 +1,4 @@
-$NetBSD: patch-js_src_old-configure_in,v 1.3 2018/05/19 13:00:56 youri Exp $
+$NetBSD: patch-js_src_old-configure_in,v 1.4 2019/05/24 18:15:38 leot Exp $
 
 2nd chunk:
 From 7e6d628456af3e99ebcb9a01a27e1461585082a4 Mon Sep 17 00:00:00 2001
@@ -31,7 +31,7 @@ Index: js/src/old-configure.in
 +        # Don't allow undefined symbols in libraries
 +        DSO_LDOPTS="$DSO_LDOPTS -Wl,-z,defs"
 +    fi
-+    LDFLAGS="$LDFLAGS -Wl,-z,wxneeded"
++    LDFLAGS="$LDFLAGS"
 +    MKSHLIB='$(CXX) $(CXXFLAGS) $(DSO_PIC_CFLAGS) $(DSO_LDOPTS) -o $@'
 +    MKCSHLIB='$(CC) $(CFLAGS) $(DSO_PIC_CFLAGS) $(DSO_LDOPTS) -o $@'
      ;;
