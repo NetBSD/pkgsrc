@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2019/04/16 18:41:09 bsiegert Exp $
+# $NetBSD: Makefile,v 1.89 2019/05/24 19:25:55 nia Exp $
 
 # Upstream used to frequently break protocol compatibility.  While
 # users of pkgsrc syncthing on multiple systems can update
@@ -14,11 +14,11 @@
 # Note that the android versioning is disconnected from syncthing versioning;
 # see https://github.com/syncthing/syncthing-android/issues/652 for
 # a fuller explanation.
-DISTNAME=	syncthing-1.0.1
-PKGREVISION=	3
+DISTNAME=	syncthing-source-v1.1.3
+PKGNAME=	${DISTNAME:S,source-v,,}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 # Minor version updates may be committed without asking.  Major
 # updates not following the above policy will be reverted.
@@ -27,14 +27,11 @@ HOMEPAGE=	https://syncthing.net/
 MAINTAINER=	gdt@NetBSD.org
 LICENSE=	mpl-2.0
 
-# System pax fails on NetBSD 6.  Just use bsdtar until this is understood.
-EXTRACT_USING=		bsdtar
-
 # The 'zillode' dependency calls the compiler on certain archs.
 USE_LANGUAGES=		c
 NO_CONFIGURE=		yes
 GO_SRCPATH=		github.com/syncthing/syncthing
-GO_DIST_BASE=		${PKGNAME_NOREV}
+GO_DIST_BASE=		syncthing
 INSTALLATION_DIRS=	bin
 
 CHECK_RELRO_SKIP+=	bin/syncthing
@@ -52,6 +49,28 @@ SUBST_STAGE.go=		pre-build
 SUBST_MESSAGE.go=	Fixing go executable reference
 SUBST_FILES.go=		lib/auto/doc.go cmd/strelaypoolsrv/auto/doc.go
 SUBST_SED.go+=		-e 's|go run|"${GO}" run|'
+
+.include "../../mk/bsd.prefs.mk"
+
+PKG_SYSCONFSUBDIR=	syncthing
+
+SYNCTHING_USER?=	syncthing
+SYNCTHING_GROUP?=	syncthing
+
+PKG_GROUPS_VARS+=	SYNCTHING_GROUP
+PKG_USERS_VARS+=	SYNCTHING_USER
+
+OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR} ${SYNCTHING_USER} ${SYNCTHING_GROUP} 0755
+OWN_DIRS_PERMS+=	${VARBASE}/db/syncthing ${SYNCTHING_USER} ${SYNCTHING_GROUP} 0755
+
+PKG_GROUPS=			${SYNCTHING_GROUP}
+PKG_USERS=			${SYNCTHING_USER}:${SYNCTHING_GROUP}
+PKG_HOME.${SYNCTHING_USER}=	${VARBASE}/db/syncthing
+
+FILES_SUBST+=		SYNCTHING_USER=${SYNCTHING_USER}
+FILES_SUBST+=		SYNCTHING_GROUP=${SYNCTHING_GROUP}
+
+RCD_SCRIPTS+=		syncthing
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GO} run build.go build syncthing
