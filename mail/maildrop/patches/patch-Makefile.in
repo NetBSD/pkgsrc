@@ -1,0 +1,79 @@
+$NetBSD: patch-Makefile.in,v 1.1 2019/05/24 13:17:57 hauke Exp $
+
+Do not install maildir related tools & doc - they presumably get
+installed by some other courier-* package if you want them.
+
+Install system binaries in {libexecdir} where applicable.
+
+--- Makefile.in.orig	2018-09-13 23:21:07.000000000 +0000
++++ Makefile.in
+@@ -429,17 +429,17 @@ EXTRA_DIST = README.html INSTALL.html UP
+ 	maildroptips.txt COPYING.GPL manpage.css $(HTMLWWW)
+ 
+ scriptdir = $(pkgdatadir)/scripts
+-DELIVERQUOTAHTMLSOURCE = maildirquota.html deliverquota.html
+-DELIVERQUOTAHTML = $(DELIVERQUOTAHTMLSOURCE)
+-DELIVERQUOTAMAN = maildirquota.7 deliverquota.8
+-MAILDROPHTML = lockmail.html maildiracl.html maildirkw.html \
+-	maildirmake.html maildropex.html maildir.html \
++DELIVERQUOTAHTMLSOURCE = 
++DELIVERQUOTAHTML = 
++DELIVERQUOTAMAN = 
++MAILDROPHTML = lockmail.html \
++	maildropex.html \
+ 	maildropfilter.html maildropgdbm.html maildrop.html \
+ 	mailbot.html makemime.html reformail.html reformime.html \
+ 	$(am__append_1)
+-MAILDROPMAN = lockmail.1 maildirmake.1 maildrop.1 mailbot.1 \
+-	maildropex.7 maildir.5 maildropfilter.7 maildropgdbm.7 \
+-	makemime.1 reformail.1 reformime.1 $(am__append_2)
++MAILDROPMAN = lockmail.1 maildrop.1 mailbot.1 \
++	maildropex.7 maildropfilter.7 maildropgdbm.7 \
++	makemime.1 reformail.1 reformime.1
+ EXTRA_LTLIBRARIES = librfc822.la librfc2045.la
+ @DEVEL_TRUE@DEVEL_MAN = rfc822.3 rfc2045.3
+ sysincludedir = $(includedir)
+@@ -1282,12 +1282,8 @@ uninstall-man: uninstall-man1 uninstall-
+ #  Create a soft link from bindir/deliverquota to libdir/bin/deliverquota
+ 
+ install-deliverquota:
+-	$(mkinstalldirs) $(DESTDIR)$(bindir)
+-	$(INSTALL_PROGRAM) libs/maildir/deliverquota $(DESTDIR)$(bindir)/deliverquota
+-	cd $(DESTDIR)$(bindir); rm -f maildrop.deliverquota
+ 
+ uninstall-deliverquota:
+-	rm -f $(DESTDIR)$(bindir)/deliverquota
+ 
+ install-data-local: install-man install-deliverquota install-maildrop
+ 
+@@ -1315,23 +1311,24 @@ install-maildrop:
+ 		$(INSTALL_PROGRAM) libs/maildrop/$$f $(DESTDIR)$(bindir)/$$f ; \
+ 	done
+ 	$(INSTALL_PROGRAM) libs/liblock/lockmail $(DESTDIR)$(bindir)/lockmail
+-	$(INSTALL_PROGRAM) libs/maildir/maildirmake $(DESTDIR)$(bindir)/maildirmake
+ 	$(INSTALL_PROGRAM) libs/rfc2045/reformime $(DESTDIR)$(bindir)/reformime
+ 	$(INSTALL_PROGRAM) libs/rfc2045/makemime $(DESTDIR)$(bindir)/makemime
+ 	test "@USE_DB@@USE_GDBM@" = "00" && exit 0; \
+-		$(INSTALL_PROGRAM) libs/makedat/makedatprog $(DESTDIR)$(bindir)/makedatprog
++		$(INSTALL_PROGRAM) libs/makedat/makedatprog $(DESTDIR)$(libexecdir)/makedatprog
++		$(LN_S) $(libexecdir)/makedatprog $(DESTDIR)$(bindir)/makedatprog
+ 	test "@USE_DB@@USE_GDBM@" = "00" && exit 0; \
+-		$(INSTALL_SCRIPT)  libs/makedat/makedat     $(DESTDIR)$(bindir)/makedat
++		$(INSTALL_SCRIPT)  libs/makedat/makedat     $(DESTDIR)$(libexecdir)/makedat
++		$(LN_S) $(libexecdir)/makedat $(DESTDIR)$(bindir)/makedat
+ 	. libs/maildrop/uidgid ; test -z "$$gid" && exit 0; test -w /etc || exit 0; cd $(DESTDIR)$(bindir) && chgrp $$gid maildrop lockmail
+ 	. libs/maildrop/uidgid ; test -z "$$uid" && exit 0; test -w /etc || exit 0; cd $(DESTDIR)$(bindir) && chown $$uid maildrop lockmail && chmod 755 maildrop lockmail
+ 
+ uninstall-maildrop:
+-	for f in maildrop mailbot maildirmake reformail lockmail makemime reformime; do \
++	for f in maildrop mailbot reformail lockmail makemime reformime; do \
+ 		rm -f $(DESTDIR)$(bindir)/$$f ; \
+ 	done
+ 	test "@USE_DB@@USE_GDBM@" = "00" && exit 0; \
+-		rm -f $(DESTDIR)$(bindir)/makedat ; \
+-		rm -f $(DESTDIR)$(bindir)/makedatprog
++		rm -f $(DESTDIR)$(libexecdir)/makedat ; \
++		rm -f $(DESTDIR)$(libexecdir)/makedatprog
+ 
+ all-recursive: all-make-check
+ 

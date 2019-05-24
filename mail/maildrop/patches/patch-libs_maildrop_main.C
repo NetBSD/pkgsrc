@@ -1,8 +1,10 @@
-$NetBSD: patch-ac,v 1.4 2010/06/15 23:14:47 pettai Exp $
+$NetBSD: patch-libs_maildrop_main.C,v 1.1 2019/05/24 13:17:58 hauke Exp $
 
---- maildrop/main.C.orig	2006-10-01 20:03:37.000000000 -0400
-+++ maildrop/main.C
-@@ -575,7 +575,7 @@ uid_t	my_u=getuid();
+Make this maildrop install usable by both Courier and other MTAs.
+
+--- libs/maildrop/main.C.orig	2018-09-13 23:22:17.000000000 +0000
++++ libs/maildrop/main.C
+@@ -754,7 +754,7 @@ uid_t	my_u=getuid();
  	if (!found)
  	{
  #if HAVE_COURIER
@@ -11,7 +13,7 @@ $NetBSD: patch-ac,v 1.4 2010/06/15 23:14:47 pettai Exp $
  #endif
  		{
  			my_pw=getpwuid(my_u);
-@@ -635,6 +635,14 @@ Buffer	value;
+@@ -814,6 +814,14 @@ Buffer	value;
  	{
  	const char *p;
  
@@ -26,7 +28,7 @@ $NetBSD: patch-ac,v 1.4 2010/06/15 23:14:47 pettai Exp $
  		if ((p=getenv("HOME")) && *p)
  			maildrop.init_home=p;
  
-@@ -659,6 +667,8 @@ Buffer	value;
+@@ -838,6 +846,8 @@ Buffer	value;
  
  		if ((p=getenv("MAILDIRQUOTA")) && *p)
  			maildrop.init_quota=p;
