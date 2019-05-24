@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST.Linux,v 1.4 2015/12/10 02:51:05 joerg Exp $
-bin/qemu-aarch64
-bin/qemu-mips64
-bin/qemu-mips64el
-bin/qemu-mipsn32
-bin/qemu-mipsn32el
-bin/qemu-ppc64le
-libexec/qemu-bridge-helper
