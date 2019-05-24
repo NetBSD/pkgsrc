@@ -1,17 +1,14 @@
-# $NetBSD: Makefile,v 1.12 2019/04/30 02:32:17 kamil Exp $
+# $NetBSD: Makefile,v 1.13 2019/05/24 10:59:14 kamil Exp $
 
-GITHUB_PROJECT=	haxm
-GITHUB_TAG=	0fbaf5e7c21a5749ada0c7eec67ea00e1497f829
-DISTNAME=	haxm-1.20190416.${GITHUB_TAG}
+DISTNAME=	haxm-7.5.1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=intel/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	kamil@NetBSD.org
 HOMEPAGE=	https://github.com/intel/haxm/
 COMMENT=	Intel Hardware Accelerated Execution Manager
 LICENSE=	modified-bsd
-
-WRKSRC=		${WRKDIR}/haxm-${GITHUB_TAG}
 
 ONLY_FOR_PLATFORM=	NetBSD-*-x86_64
 OSVERSION_SPECIFIC=	YES
