@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.208 2019/05/24 00:28:52 kamil Exp $
+# $NetBSD: Makefile,v 1.209 2019/05/24 09:08:38 wiz Exp $
 
 DISTNAME=	qemu-4.0.0
 PKGREVISION=	5
@@ -110,28 +110,28 @@ UE_ARCHS+=		x86_64 xtensa xtensaeb
 
 .if ${OPSYS} == "NetBSD"
 USER_EMUL=		i386 x86_64 sparc sparc64
-PLIST.nbd=		YES
+PLIST.nbd=		yes
 .elif !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly"
 USER_EMUL=		i386 x86_64 sparc sparc64
-PLIST.nbd=		YES
+PLIST.nbd=		yes
 .elif ${OPSYS} == "Darwin"
 USER_EMUL=
 CONFIGURE_ARGS+=	--disable-bsd-user
-PLIST.nbd=		YES
+PLIST.nbd=		yes
 .elif ${OPSYS} == "Linux"
 USER_EMUL=		${UE_ARCHS}
-PLIST.bridge-helper	YES
-PLIST.nbd=		YES
-PLIST.ivshmem=		YES
-PLIST.pr-helper		YES
+PLIST.bridge-helper=	yes
+PLIST.nbd=		yes
+PLIST.ivshmem=		yes
+PLIST.pr-helper=	yes
 .elif !empty(MACHINE_PLATFORM:MSunOS-5.11-*)
-PLIST.nbd=		YES
+PLIST.nbd=		yes
 CONFIGURE_ARGS+=	--disable-coroutine-pool
 .endif
 
 PLIST_VARS+=		${UE_ARCHS} bridge-helper ivshmem nbd pr-helper
 .for pvar in ${USER_EMUL}
-PLIST.${pvar}=		YES
+PLIST.${pvar}=		yes
 .endfor
 
 TEST_TARGET=		check
