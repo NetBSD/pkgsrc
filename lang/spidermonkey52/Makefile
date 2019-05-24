@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2019/04/25 07:33:03 maya Exp $
+# $NetBSD: Makefile,v 1.16 2019/05/24 18:15:38 leot Exp $
 
 DISTNAME=	mozjs-52.7.4
-PKGREVISION=	8
+PKGREVISION=	9
 PKGNAME=	${DISTNAME:S/mozjs/spidermonkey52/}
 CATEGORIES=	lang
 MASTER_SITES=	https://queue.taskcluster.net/v1/task/YqG2fjJJSTGzGX090FjDYg/runs/0/artifacts/public/build/
@@ -24,6 +24,8 @@ CONFIGURE_ARGS+=	--with-system-nspr
 CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--with-pthreads
 CONFIGURE_ARGS+=	--disable-jemalloc
+CONFIGURE_ARGS+=	--disable-debug-symbols
+CONFIGURE_ARGS+=	--enable-strip
 
 CONFIGURE_DIRS=		js/src
 
