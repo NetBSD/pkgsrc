@@ -1,7 +1,8 @@
-$NetBSD: patch-Makefile.in,v 1.1 2019/05/24 13:17:57 hauke Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2019/05/24 14:17:17 hauke Exp $
 
 Do not install maildir related tools & doc - they presumably get
-installed by some other courier-* package if you want them.
+installed by some other courier-* package if you want them. (The
+FreeBSD mail/maildrop port just 'maildrop-' prefixes those binaries?)
 
 Install system binaries in {libexecdir} where applicable.
 
