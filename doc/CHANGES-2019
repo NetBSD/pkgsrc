@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2245 2019/05/24 08:39:05 hauke Exp $
+$NetBSD: CHANGES-2019,v 1.2246 2019/05/24 10:59:26 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3827,3 +3827,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-werkzeug-docs to 0.15.4 [adam 2019-05-23]
 	Updated comms/conserver8 to 8.2.4 [he 2019-05-23]
 	Updated mail/courier-unicode to 2.1 [hauke 2019-05-24]
+	Updated emulators/haxm to 7.5.1 [kamil 2019-05-24]
