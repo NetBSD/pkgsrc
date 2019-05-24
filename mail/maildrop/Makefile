@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2018/08/22 09:45:26 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2019/05/24 13:17:57 hauke Exp $
 
-DISTNAME=	maildrop-2.5.5
-PKGREVISION=	7
+DISTNAME=	maildrop-3.0.0
+#PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,16 +12,14 @@ HOMEPAGE=	http://www.courier-mta.org/maildrop/
 
 DEPENDS+=	courier-maildir>=${COURIER_VERSION}:../../mail/courier-maildir
 
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake perl pkg-config
 USE_TOOLS+=		cat:run		# used by makedat(1)
 USE_LANGUAGES=		c c++
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.maildrop
-PKG_SUPPORTED_OPTIONS=	authlib
-PKG_SUGGESTED_OPTIONS=	authlib
-
-.include "../../mk/bsd.options.mk"
+.include "options.mk"
 .include "../../mail/courier-mta/Makefile.common"
+
+DOCFILES=	README README.postfix README.dovecotauth maildroptips.txt
 
 # These are the users that may invoke maildrop with the "-d user"
 # argument (mailbox delivery mode).
@@ -39,16 +37,6 @@ CONFIGURE_ARGS+=	--enable-trusted-users=${MAILDROP_TRUSTED_USERS:Q}
 CONFIGURE_ARGS+=	--enable-trusted-groups=${COURIER_GROUP}
 CONFIGURE_ARGS+=	--enable-syslog=1
 
-###
-### Support using courier-authlib to look up mail account information.
-###
-.if !empty(PKG_OPTIONS:Mauthlib)
-CONFIGURE_ARGS+=	--enable-authlib
-.  include "../../security/courier-authlib/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-authlib
-.endif
-
 INSTALL_AM_MAKEFLAGS+=	htmldir=${DOCDIR:Q}
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} AM_MAKEFLAGS=${INSTALL_AM_MAKEFLAGS:Q}
 
@@ -65,10 +53,12 @@ SPECIAL_PERMS+=	bin/maildrop ${REAL_ROOT_USER} ${COURIER_GROUP} 4555
 INSTALLATION_DIRS=	libexec/courier ${DOCDIR}/maildrop share/courier
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/README.postfix ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/maildrop/maildroptips.html ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/maildrop/README.html ${DESTDIR}${DOCDIR}/maildrop
-	${INSTALL_DATA} ${WRKSRC}/maildrop/makedat.html ${DESTDIR}${DOCDIR}
-	${INSTALL_MAN} ${WRKSRC}/maildrop/makedat.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+.for aaa in ${DOCFILES}
+	${INSTALL_DATA} ${WRKSRC}/${aaa} ${DESTDIR}${DOCDIR}/maildrop
+.endfor
+	${INSTALL_MAN} ${WRKSRC}/libs/maildrop/makedat.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+#	${INSTALL_DATA} ${WRKSRC}/libs/maildrop/makedat.html ${DESTDIR}${DOCDIR}
 
+.include "../../mail/courier-unicode/buildlink3.mk"
+.include "../../devel/libidn/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
