@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2010/11/05 14:15:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/05/24 13:17:57 hauke Exp $
 bin/lockmail
 bin/mailbot
 bin/maildrop
@@ -19,15 +19,16 @@ man/man1/reformime.1
 man/man7/maildropex.7
 man/man7/maildropfilter.7
 man/man7/maildropgdbm.7
-share/doc/courier/README.postfix
 share/doc/courier/lockmail.html
 share/doc/courier/mailbot.html
 share/doc/courier/maildrop.html
-share/doc/courier/maildrop/README.html
+share/doc/courier/maildrop/README
+share/doc/courier/maildrop/README.dovecotauth
+share/doc/courier/maildrop/README.postfix
+share/doc/courier/maildrop/maildroptips.txt
 share/doc/courier/maildropex.html
 share/doc/courier/maildropfilter.html
 share/doc/courier/maildropgdbm.html
-share/doc/courier/maildroptips.html
 share/doc/courier/makedat.html
 share/doc/courier/makemime.html
 share/doc/courier/manpage.css
@@ -35,3 +36,7 @@ share/doc/courier/reformail.html
 share/doc/courier/reformime.html
 share/doc/courier/rfc2045.html
 share/doc/courier/rfc822.html
+@pkgdir share/courier
+@pkgdir man/man8
+@pkgdir man/man5
+@pkgdir man/man3
