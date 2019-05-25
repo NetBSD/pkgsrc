@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.209 2019/05/24 09:08:38 wiz Exp $
+# $NetBSD: Makefile,v 1.210 2019/05/25 12:36:59 kamil Exp $
 
 DISTNAME=	qemu-4.0.0
 PKGREVISION=	5
@@ -105,7 +105,6 @@ UE_ARCHS+=		or1k ppc ppc64 ppc64le ppc64abi32
 UE_ARCHS+=		riscv32 riscv64
 UE_ARCHS+=		s390x sh4 sh4eb sparc sparc32plus sparc64
 UE_ARCHS+=		tilegx
-UE_ARCHS+=		unicore32
 UE_ARCHS+=		x86_64 xtensa xtensaeb
 
 .if ${OPSYS} == "NetBSD"
