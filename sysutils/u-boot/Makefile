@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/05/18 18:01:34 thorpej Exp $
+# $NetBSD: Makefile,v 1.13 2019/05/25 01:41:10 thorpej Exp $
 #
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
@@ -34,6 +34,7 @@ DEPENDS+=	u-boot-hummingbird-a31-[0-9]*:../../sysutils/u-boot-hummingbird-a31
 DEPENDS+=	u-boot-jetson-tk1-[0-9]*:../../sysutils/u-boot-jetson-tk1
 DEPENDS+=	u-boot-jetson-tx1-[0-9]*:../../sysutils/u-boot-jetson-tx1
 DEPENDS+=	u-boot-jetson-tx2-[0-9]*:../../sysutils/u-boot-jetson-tx2
+DEPENDS+=	u-boot-lamobo-r1-[0-9]*:../../sysutils/u-boot-lamobo-r1
 .if !empty(PKG_OPTIONS:Mamlogic-meson)
 DEPENDS+=	u-boot-libretech-cc-[0-9]*:../../sysutils/u-boot-libretech-cc
 .endif
