@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19025 2019/05/25 07:46:30 wiz Exp $
+$NetBSD: TODO,v 1.19026 2019/05/25 08:34:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -341,7 +341,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o Gorm-1.2.22
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
-	o MesaLib-19.0.4
+	o MesaLib-19.0.5
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o PAM-0.99.7.1
@@ -489,7 +489,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cpmtools-2.20
 	o crack-attack-1.1.15
 	o crafty-25.0.1
-	o creduce-2.10.0
+	o creduce-2.10.0 [needs llvm 8.0]
 	o crimsonfields-0.5.3
 	o cross-h8300-hms-binutils-2.17
 	o crossfire-1.71.0
@@ -1186,7 +1186,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ruby-redmine-4.0.1
 	o ruby-review-1.4.0 [wip]
 	o rump-20131213
-	o rust-1.34.1
+	o rust-1.35.0
 	o sabayon-2.30.1
 	o sablecc-3.7
 	o sarg-2.2.5
