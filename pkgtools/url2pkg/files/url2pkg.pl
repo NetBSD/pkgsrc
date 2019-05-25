@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.38 2018/08/22 20:48:38 maya Exp $
+# $NetBSD: url2pkg.pl,v 1.39 2019/05/25 03:58:50 maya Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -206,6 +206,21 @@ sub magic_perlmod() {
 	push(@includes, "../../lang/perl5/module.mk");
 	$pkgname = "p5-\${DISTNAME}";
 }
+
+sub magic_cargo() {
+	open(CONF, "<", "${abs_wrksrc}/Cargo.lock") or return;
+
+	while (defined(my $line = <CONF>)) {
+		# "checksum cargo-package-name cargo-package-version
+		if ($line =~ m/("checksum)\s(\S+)\s(\S+)/) {
+			push(@build_vars, ["CARGO_CRATE_DEPENDS", "$2-$3"]);
+		}
+	}
+	close(CONF);
+
+	push(@includes, "../../lang/rust/cargo.mk");
+}
+
 
 sub magic_pkg_config() {
 	my @pkg_config_files = grep { /\.pc\.in$/ && ! /-uninstalled\.pc\.in$/ } @wrksrc_files;
@@ -449,6 +464,7 @@ sub adjust_package_from_extracted_distfiles()
 	magic_gconf2_schemas();
 	magic_libtool();
 	magic_perlmod();
+	magic_cargo();
 	magic_pkg_config();
 	magic_po();
 	magic_use_languages();
