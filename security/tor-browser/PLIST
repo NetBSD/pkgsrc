@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/05/22 14:24:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/05/25 10:50:42 wiz Exp $
 bin/tor-browser
 lib/tor-browser/application.ini
 lib/tor-browser/browser/blocklist.xml
@@ -3911,7 +3911,6 @@ lib/tor-browser/modules/third_party/jsesc/jsesc.js
 lib/tor-browser/modules/vtt.jsm
 lib/tor-browser/modules/workers/PromiseWorker.js
 lib/tor-browser/modules/workers/require.js
-lib/tor-browser/pingsender
 lib/tor-browser/platform.ini
 lib/tor-browser/plugin-container
 lib/tor-browser/removed-files
