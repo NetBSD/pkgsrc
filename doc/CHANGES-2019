@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2258 2019/05/25 23:31:27 wen Exp $
+$NetBSD: CHANGES-2019,v 1.2259 2019/05/25 23:37:21 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3839,3 +3839,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/mikutter to 3.8.8 [tsutsui 2019-05-25]
 	Updated www/moodle to 3.7 [wen 2019-05-25]
 	Updated mail/p5-Mail-Box-IMAP4 to 3.004 [wen 2019-05-25]
+	Updated mail/p5-Mail-Box-POP3 to 3.005 [wen 2019-05-25]
