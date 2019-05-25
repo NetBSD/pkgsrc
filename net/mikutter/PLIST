@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2018/10/06 23:25:35 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.45 2019/05/25 12:14:04 tsutsui Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -808,7 +808,7 @@ share/mikutter/core/plugin/web/web.rb
 share/mikutter/core/plugin/world/.mikutter.yml
 share/mikutter/core/plugin/world/error.rb
 share/mikutter/core/plugin/world/keep.rb
-share/mikutter/core/plugin/world/model/zombie.rb
+share/mikutter/core/plugin/world/model/lost_world.rb
 share/mikutter/core/plugin/world/service.rb
 share/mikutter/core/plugin/world/world.rb
 share/mikutter/core/serialthread.rb
