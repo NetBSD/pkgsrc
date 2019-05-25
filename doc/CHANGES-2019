@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2254 2019/05/25 09:40:04 leot Exp $
+$NetBSD: CHANGES-2019,v 1.2255 2019/05/25 10:51:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3835,3 +3835,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added sysutils/u-boot-lamobo-r1 version 2018.11 [thorpej 2019-05-25]
 	Updated pkgtools/url2pkg to 2.30 [maya 2019-05-25]
 	Updated net/filezilla to 3.42.1 [wiz 2019-05-25]
+	Updated security/tor-browser to 8.5.60.7.0 [wiz 2019-05-25]
