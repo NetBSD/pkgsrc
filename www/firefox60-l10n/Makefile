@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/05/11 04:03:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2019/05/25 20:17:05 szptvlfn Exp $
 #
 
 FIREFOX_VER=	60.6.3esr
@@ -9,7 +9,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/linux-i686/xpi/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mozilla.com/en-US/firefox/
+HOMEPAGE=	https://www.mozilla.com/en-US/firefox/
 COMMENT=	Language packs for www/firefox60 (version ${PKGVERSION_NOREV:C/\..*//})
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
