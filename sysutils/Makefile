@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.812 2019/05/22 11:54:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.813 2019/05/25 01:41:11 thorpej Exp $
 #
 
 COMMENT=	System utilities
@@ -636,6 +636,7 @@ SUBDIR+=	u-boot-hummingbird-a31
 SUBDIR+=	u-boot-jetson-tk1
 SUBDIR+=	u-boot-jetson-tx1
 SUBDIR+=	u-boot-jetson-tx2
+SUBDIR+=	u-boot-lamobo-r1
 SUBDIR+=	u-boot-libretech-cc
 SUBDIR+=	u-boot-nanopi-m1
 SUBDIR+=	u-boot-nanopi-neo
