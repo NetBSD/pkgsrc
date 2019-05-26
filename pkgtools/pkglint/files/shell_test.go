@@ -1214,6 +1214,14 @@ func (s *Suite) Test_SimpleCommandChecker_checkRegexReplace(c *check.C) {
 	test("sed -e s,.*,, src dst",
 		"WARN: Makefile:3: Substitution commands like \"s,.*,,\" should always be quoted.")
 
+	// The * is properly enclosed in quotes.
+	test("sed -e 's,.*,,' -e \"s,-*,,\"",
+		nil...)
+
+	// The * is properly escaped.
+	test("sed -e s,.\\*,,",
+		nil...)
+
 	test("pax -s s,\\.orig,, src dst",
 		nil...)
 
@@ -1221,7 +1229,13 @@ func (s *Suite) Test_SimpleCommandChecker_checkRegexReplace(c *check.C) {
 		nil...)
 
 	// TODO: Merge the code with BtSedCommands.
+
 	// TODO: Finally, remove the G.Testing from the main code.
+	//  Then, remove this test case.
+	G.Testing = false
+	test("sed -e s,.*,match,",
+		nil...)
+	G.Testing = true
 }
 
 func (s *Suite) Test_ShellProgramChecker_checkSetE__simple_commands(c *check.C) {

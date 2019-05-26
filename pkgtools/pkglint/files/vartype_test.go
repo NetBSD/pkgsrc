@@ -11,7 +11,7 @@ func (s *Suite) Test_Vartype_EffectivePermissions(c *check.C) {
 
 	if typ := G.Pkgsrc.vartypes.Canon("PREFIX"); c.Check(typ, check.NotNil) {
 		c.Check(typ.basicType.name, equals, "Pathname")
-		c.Check(typ.aclEntries, check.DeepEquals, []ACLEntry{{"*", aclpUse}})
+		c.Check(typ.aclEntries, deepEquals, []ACLEntry{NewACLEntry("*", aclpUse)})
 		c.Check(typ.EffectivePermissions("Makefile"), equals, aclpUse)
 		c.Check(typ.EffectivePermissions("buildlink3.mk"), equals, aclpUse)
 	}
@@ -28,7 +28,7 @@ func (s *Suite) Test_Vartype_AlternativeFiles(c *check.C) {
 	// test generates the files description for the "set" permission.
 	test := func(rules []string, alternatives string) {
 		aclEntries := (*VarTypeRegistry).parseACLEntries(nil, "", rules...)
-		vartype := Vartype{BtYesNo, NoVartypeOptions, aclEntries}
+		vartype := NewVartype(BtYesNo, NoVartypeOptions, aclEntries...)
 
 		alternativeFiles := vartype.AlternativeFiles(aclpSet)
 
