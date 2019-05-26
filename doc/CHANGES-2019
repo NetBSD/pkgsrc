@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2267 2019/05/26 14:31:12 wen Exp $
+$NetBSD: CHANGES-2019,v 1.2268 2019/05/26 18:11:07 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3846,3 +3846,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/mutt to 1.12.0 [tron 2019-05-26]
 	Updated pkgtools/pkglint to 5.7.12 [rillig 2019-05-26]
 	Updated devel/p5-MooseX-App to 1.41 [wen 2019-05-26]
+	Updated net/wget to 1.20.3nb1 [leot 2019-05-26]
