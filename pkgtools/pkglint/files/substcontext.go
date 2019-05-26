@@ -1,9 +1,6 @@
 package pkglint
 
-import (
-	"netbsd.org/pkglint/textproc"
-	"strings"
-)
+import "netbsd.org/pkglint/textproc"
 
 // SubstContext records the state of a block of variable assignments
 // that make up a SUBST class (see `mk/subst.mk`).
@@ -45,6 +42,17 @@ func (st *SubstContextStats) Or(other SubstContextStats) {
 	st.seenSed = st.seenSed || other.seenSed
 	st.seenVars = st.seenVars || other.seenVars
 	st.seenTransform = st.seenTransform || other.seenTransform
+}
+
+func (ctx *SubstContext) Process(mkline MkLine) {
+	switch {
+	case mkline.IsEmpty():
+		ctx.Finish(mkline)
+	case mkline.IsVarassign():
+		ctx.Varassign(mkline)
+	case mkline.IsDirective():
+		ctx.Directive(mkline)
+	}
 }
 
 func (ctx *SubstContext) Varassign(mkline MkLine) {
@@ -203,10 +211,7 @@ func (ctx *SubstContext) Directive(mkline MkLine) {
 }
 
 func (ctx *SubstContext) IsComplete() bool {
-	return ctx.id != "" &&
-		ctx.stage != "" &&
-		ctx.curr.seenFiles &&
-		ctx.curr.seenTransform
+	return ctx.stage != "" && ctx.curr.seenFiles && ctx.curr.seenTransform
 }
 
 func (ctx *SubstContext) Finish(mkline MkLine) {
@@ -295,11 +300,7 @@ func (ctx *SubstContext) suggestSubstVars(mkline MkLine) {
 			"Replacing @VAR@ with ${VAR} is such a typical pattern that pkgsrc has built-in support for it,",
 			"requiring only the variable name instead of the full sed command.")
 		if mkline.VarassignComment() == "" && len(tokens) == 2 && tokens[0] == "-e" {
-			// TODO: Extract the alignment computation somewhere else, so that it is generally available.
-			alignBefore := tabWidth(mkline.ValueAlign())
-			alignAfter := tabWidth(varop + "\t")
-			tabs := strings.Repeat("\t", imax((alignAfter-alignBefore)/8, 0))
-			fix.Replace(mkline.Text, varop+"\t"+tabs+varname)
+			fix.Replace(mkline.Text, alignWith(varop, mkline.ValueAlign())+varname)
 		}
 		fix.Anyway()
 		fix.Apply()

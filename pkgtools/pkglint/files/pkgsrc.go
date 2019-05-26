@@ -347,7 +347,7 @@ func (src *Pkgsrc) loadTools() {
 func (src *Pkgsrc) loadUntypedVars() {
 
 	// Setting guessed to false prevents the vartype.guessed case in MkLineChecker.CheckVaruse.
-	unknownType := Vartype{BtUnknown, NoVartypeOptions, []ACLEntry{{"*", aclpAll}}}
+	unknownType := NewVartype(BtUnknown, NoVartypeOptions, NewACLEntry("*", aclpAll))
 
 	define := func(varcanon string, mkline MkLine) {
 		switch {
@@ -371,7 +371,7 @@ func (src *Pkgsrc) loadUntypedVars() {
 			if trace.Tracing {
 				trace.Stepf("Untyped variable %q in %s", varcanon, mkline)
 			}
-			src.vartypes.DefineType(varcanon, &unknownType)
+			src.vartypes.DefineType(varcanon, unknownType)
 		}
 	}
 
@@ -922,75 +922,84 @@ func (src *Pkgsrc) VariableType(mklines MkLines, varname string) (vartype *Varty
 		if tool.Validity == AfterPrefsMk && mklines.Tools.SeenPrefs {
 			perms |= aclpUseLoadtime
 		}
-		return &Vartype{BtShellCommand, NoVartypeOptions, []ACLEntry{{"*", perms}}}
+		return NewVartype(BtShellCommand, NoVartypeOptions, NewACLEntry("*", perms))
 	}
 
 	if m, toolVarname := match1(varname, `^TOOLS_(.*)`); m {
 		if tool := G.ToolByVarname(mklines, toolVarname); tool != nil {
-			return &Vartype{BtPathname, NoVartypeOptions, []ACLEntry{{"*", aclpUse}}}
+			return NewVartype(BtPathname, NoVartypeOptions, NewACLEntry("*", aclpUse))
 		}
 	}
 
 	return src.guessVariableType(varname)
 }
 
+// guessVariableType guesses the data type of the variable based on naming conventions.
 func (src *Pkgsrc) guessVariableType(varname string) (vartype *Vartype) {
-	allowAll := []ACLEntry{{"*", aclpAll}}
-	allowRuntime := []ACLEntry{{"*", aclpAllRuntime}}
-
-	// Guess the data type of the variable based on naming conventions.
-	varbase := varnameBase(varname)
-	var gtype *Vartype
-	switch {
-	case hasSuffix(varbase, "DIRS"):
-		gtype = &Vartype{BtPathmask, List | Guessed, allowRuntime}
-	case hasSuffix(varbase, "DIR") && !hasSuffix(varbase, "DESTDIR"), hasSuffix(varname, "_HOME"):
-		// TODO: hasSuffix(varbase, "BASE")
-		gtype = &Vartype{BtPathname, Guessed, allowRuntime}
-	case hasSuffix(varbase, "FILES"):
-		gtype = &Vartype{BtPathmask, List | Guessed, allowRuntime}
-	case hasSuffix(varbase, "FILE"):
-		gtype = &Vartype{BtPathname, Guessed, allowRuntime}
-	case hasSuffix(varbase, "PATH"):
-		gtype = &Vartype{BtPathlist, Guessed, allowRuntime}
-	case hasSuffix(varbase, "PATHS"):
-		gtype = &Vartype{BtPathname, List | Guessed, allowRuntime}
-	case hasSuffix(varbase, "_USER"):
-		gtype = &Vartype{BtUserGroupName, Guessed, allowAll}
-	case hasSuffix(varbase, "_GROUP"):
-		gtype = &Vartype{BtUserGroupName, Guessed, allowAll}
-	case hasSuffix(varbase, "_ENV"):
-		gtype = &Vartype{BtShellWord, List | Guessed, allowRuntime}
-	case hasSuffix(varbase, "_CMD"):
-		gtype = &Vartype{BtShellCommand, Guessed, allowRuntime}
-	case hasSuffix(varbase, "_ARGS"):
-		gtype = &Vartype{BtShellWord, List | Guessed, allowRuntime}
-	case hasSuffix(varbase, "_CFLAGS"), hasSuffix(varname, "_CPPFLAGS"), hasSuffix(varname, "_CXXFLAGS"):
-		gtype = &Vartype{BtCFlag, List | Guessed, allowRuntime}
-	case hasSuffix(varname, "_LDFLAGS"):
-		gtype = &Vartype{BtLdFlag, List | Guessed, allowRuntime}
-	case hasSuffix(varbase, "_MK"):
-		// TODO: Add BtGuard for inclusion guards, since these variables may only be checked using defined().
-		gtype = &Vartype{BtUnknown, Guessed, allowAll}
-	case hasSuffix(varbase, "_SKIP"):
-		gtype = &Vartype{BtPathmask, List | Guessed, allowRuntime}
+	plainType := func(basicType *BasicType, permissions ACLPermissions) *Vartype {
+		gtype := NewVartype(basicType, Guessed, NewACLEntry("*", permissions))
+		trace.Step2("The guessed type of %q is %q.", varname, gtype.String())
+		return gtype
+	}
+	listType := func(basicType *BasicType, permissions ACLPermissions) *Vartype {
+		gtype := NewVartype(basicType, List|Guessed, NewACLEntry("*", permissions))
+		trace.Step2("The guessed type of %q is %q.", varname, gtype.String())
+		return gtype
 	}
 
-	if gtype == nil {
-		vartype = src.vartypes.Canon(varname)
-		if vartype != nil {
-			return vartype
-		}
+	varbase := varnameBase(varname)
+	switch {
+	case hasSuffix(varbase, "DIRS"):
+		return listType(BtPathmask, aclpAllRuntime)
+	case hasSuffix(varbase, "DIR") && !hasSuffix(varbase, "DESTDIR"), hasSuffix(varname, "_HOME"):
+		// TODO: hasSuffix(varbase, "BASE")
+		return plainType(BtPathname, aclpAllRuntime)
+	case hasSuffix(varbase, "FILES"):
+		return listType(BtPathmask, aclpAllRuntime)
+	case hasSuffix(varbase, "FILE"):
+		return plainType(BtPathname, aclpAllRuntime)
+	case hasSuffix(varbase, "PATH"):
+		return plainType(BtPathlist, aclpAllRuntime)
+	case hasSuffix(varbase, "PATHS"):
+		return listType(BtPathname, aclpAllRuntime)
+	case hasSuffix(varbase, "_USER"):
+		return plainType(BtUserGroupName, aclpAll)
+	case hasSuffix(varbase, "_GROUP"):
+		return plainType(BtUserGroupName, aclpAll)
+	case hasSuffix(varbase, "_ENV"):
+		return listType(BtShellWord, aclpAllRuntime)
+	case hasSuffix(varbase, "_CMD"):
+		return plainType(BtShellCommand, aclpAllRuntime)
+	case hasSuffix(varbase, "_ARGS"):
+		return listType(BtShellWord, aclpAllRuntime)
+	case hasSuffix(varbase, "_CFLAGS"), hasSuffix(varname, "_CPPFLAGS"), hasSuffix(varname, "_CXXFLAGS"):
+		return listType(BtCFlag, aclpAllRuntime)
+	case hasSuffix(varname, "_LDFLAGS"):
+		return listType(BtLdFlag, aclpAllRuntime)
+	case hasSuffix(varbase, "_MK"):
+		// TODO: Add BtGuard for inclusion guards, since these variables may only be checked using defined().
+		return plainType(BtUnknown, aclpAll)
+	case hasSuffix(varbase, "_SKIP"):
+		return listType(BtPathmask, aclpAllRuntime)
+	}
+
+	// Variables whose name doesn't match the above patterns may be
+	// looked up from the pkgsrc infrastructure.
+	//
+	// As of May 2019, pkglint only distinguishes plain variables and
+	// list variables, but not "unknown". Therefore the above patterns
+	// must take precedence over this rule, because otherwise, list
+	// variables from the infrastructure would be guessed to be plain
+	// variables.
+	vartype = src.vartypes.Canon(varname)
+	if vartype != nil {
+		return vartype
 	}
 
 	if trace.Tracing {
-		if gtype != nil {
-			trace.Step2("The guessed type of %q is %q.", varname, gtype.String())
-		} else {
-			trace.Step1("No type definition found for %q.", varname)
-		}
+		trace.Step1("No type definition found for %q.", varname)
 	}
-	return gtype
+	return nil
 }
 
 // Change describes a modification to a single package, from the doc/CHANGES-* files.
