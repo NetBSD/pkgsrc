@@ -212,6 +212,29 @@ func (s *Suite) Test_Var_Value__initial_conditional_write(c *check.C) {
 	t.Check(v.Value(), equals, "overwritten conditionally")
 }
 
+func (s *Suite) Test_Var_Write__conditional_without_variables(c *check.C) {
+	t := s.Init(c)
+
+	mklines := t.NewMkLines("filename.mk",
+		MkRcsID,
+		".if exists(/usr/bin)",
+		"VAR=\tvalue",
+		".endif")
+
+	scope := NewRedundantScope()
+	mklines.ForEach(func(mkline MkLine) {
+		if mkline.IsVarassign() {
+			t.Check(scope.get("VAR").vari.Conditional(), equals, false)
+		}
+
+		scope.checkLine(mklines, mkline)
+
+		if mkline.IsVarassign() {
+			t.Check(scope.get("VAR").vari.Conditional(), equals, true)
+		}
+	})
+}
+
 func (s *Suite) Test_Var_Value__conditional_write_after_unconditional(c *check.C) {
 	t := s.Init(c)
 

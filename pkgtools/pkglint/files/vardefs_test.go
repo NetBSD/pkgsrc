@@ -143,7 +143,6 @@ func (s *Suite) Test_VarTypeRegistry_Init__LP64PLATFORMS(c *check.C) {
 	G.Check(pkg)
 
 	// No warning about a missing :Q operator.
-	// All PLATFORM variables must be either lkNone or lkSpace.
 	t.CheckOutputEmpty()
 }
 
@@ -160,4 +159,20 @@ func (s *Suite) Test_VarTypeRegistry_Init__no_tracing(c *check.C) {
 	t.SetUpVartypes() // Just for code coverage.
 
 	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_VarTypeRegistry_Init__MASTER_SITES(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("mk/fetch/sites.mk",
+		MkRcsID,
+		"",
+		"MASTER_SITE_GITHUB=\thttps://github.com/",
+		"",
+		"OTHER=\tvalue") // For branch coverage of hasPrefix.*MASTER_SITE_
+
+	t.SetUpVartypes()
+
+	vartype := G.Pkgsrc.VariableType(nil, "MASTER_SITE_GITHUB")
+	t.Check(vartype.String(), equals, "FetchURL (list, system-provided)")
 }
