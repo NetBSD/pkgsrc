@@ -60,13 +60,13 @@ func (reg *VarTypeRegistry) Define(varname string, basicType *BasicType, options
 	m, varbase, varparam := match2(varname, `^([A-Z_.][A-Z0-9_]*|@)(|\*|\.\*)$`)
 	G.Assertf(m, "invalid variable name")
 
-	vartype := Vartype{basicType, options, aclEntries}
+	vartype := NewVartype(basicType, options, aclEntries...)
 
 	if varparam == "" || varparam == "*" {
-		reg.types[varbase] = &vartype
+		reg.types[varbase] = vartype
 	}
 	if varparam == "*" || varparam == ".*" {
-		reg.types[varbase+".*"] = &vartype
+		reg.types[varbase+".*"] = vartype
 	}
 }
 
@@ -1729,7 +1729,7 @@ func (reg *VarTypeRegistry) parseACLEntries(varname string, aclEntries ...string
 				G.AssertNil(err, "Invalid ACL pattern %q for %q", glob, varname)
 				G.Assertf(!matched, "Unreachable ACL pattern %q for %q.", glob, varname)
 			}
-			result = append(result, ACLEntry{glob, permissions})
+			result = append(result, NewACLEntry(glob, permissions))
 		}
 	}
 
