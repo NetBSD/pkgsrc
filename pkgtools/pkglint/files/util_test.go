@@ -122,6 +122,7 @@ func (s *Suite) Test_relpath(c *check.C) {
 	}
 
 	test("some/dir", "some/directory", "../../some/directory")
+	test("some/directory", "some/dir", "../../some/dir")
 
 	test("category/package/.", ".", "../..")
 
@@ -130,6 +131,9 @@ func (s *Suite) Test_relpath(c *check.C) {
 		"./.",
 		"x11/frameworkintegration/../../meta-pkgs/kde/kf5.mk",
 		"meta-pkgs/kde/kf5.mk")
+
+	test(".hidden/dir", ".", "../..")
+	test("dir/.hidden", ".", "../..")
 
 	// This happens when "pkglint -r x11" is run.
 	G.Pkgsrc.topdir = "x11/.."
@@ -238,6 +242,25 @@ func (s *Suite) Test_detab(c *check.C) {
 	c.Check(detab("12345678\t"), equals, "12345678        ")
 }
 
+func (s *Suite) Test_alignWith(c *check.C) {
+	t := s.Init(c)
+
+	test := func(str, other, expected string) {
+		t.Check(alignWith(str, other), equals, expected)
+	}
+
+	// At least one tab is _always_ added.
+	test("", "", "\t")
+
+	test("VAR=", "1234567", "VAR=\t")
+	test("VAR=", "12345678", "VAR=\t")
+	test("VAR=", "123456789", "VAR=\t\t")
+
+	// At least one tab is added in any case,
+	// even if the other string is shorter.
+	test("1234567890=", "V=", "1234567890=\t")
+}
+
 const reMkIncludeBenchmark = `^\.([\t ]*)(s?include)[\t ]+\"([^\"]+)\"[\t ]*(?:#.*)?$`
 const reMkIncludeBenchmarkPositive = `^\.([\t ]*)(s?include)[\t ]+\"(.+)\"[\t ]*(?:#.*)?$`
 
@@ -309,6 +332,37 @@ func (s *Suite) Test_trimHspace(c *check.C) {
 	t.Check(trimHspace(" a b "), equals, "a b")
 	t.Check(trimHspace("\ta b\t"), equals, "a b")
 	t.Check(trimHspace(" \t a b\t \t"), equals, "a b")
+}
+
+func (s *Suite) Test_trimCommon(c *check.C) {
+	t := s.Init(c)
+
+	test := func(a, b, trimmedA, trimmedB string) {
+		ta, tb := trimCommon(a, b)
+		t.Check(ta, equals, trimmedA)
+		t.Check(tb, equals, trimmedB)
+	}
+
+	test("", "",
+		"", "")
+
+	test("equal", "equal",
+		"", "")
+
+	test("prefixA", "prefixB",
+		"A", "B")
+
+	test("ASuffix", "BSuffix",
+		"A", "B")
+
+	test("PreMiddlePost", "PreCenterPost",
+		"Middle", "Center")
+
+	test("", "b",
+		"", "b")
+
+	test("a", "",
+		"a", "")
 }
 
 func (s *Suite) Test_isLocallyModified(c *check.C) {
@@ -626,6 +680,28 @@ func (s *Suite) Test_FileCache(c *check.C) {
 		"TRACE:   FileCache.Evict \"file2.mk\" with count 2.",
 		"TRACE:   FileCache.Evict \"file1.mk\" with count 2.",
 		"TRACE:   FileCache.Halve \"Makefile\" with count 4.")
+}
+
+func (s *Suite) Test_FileCache_removeOldEntries__branch_coverage(c *check.C) {
+	t := s.Init(c)
+
+	t.EnableTracingToLog()
+	G.Testing = false
+
+	lines := t.NewLines("filename.mk",
+		MkRcsID)
+	cache := NewFileCache(3)
+	cache.Put("filename1.mk", 0, lines)
+	cache.Put("filename2.mk", 0, lines)
+	cache.Get("filename2.mk", 0)
+	cache.Get("filename2.mk", 0)
+	cache.Put("filename3.mk", 0, lines)
+	cache.Put("filename4.mk", 0, lines)
+
+	t.CheckOutputLines(
+		"TRACE:   FileCache.Evict \"filename3.mk\" with count 1.",
+		"TRACE:   FileCache.Evict \"filename1.mk\" with count 1.",
+		"TRACE:   FileCache.Halve \"filename2.mk\" with count 3.")
 }
 
 func (s *Suite) Test_makeHelp(c *check.C) {
