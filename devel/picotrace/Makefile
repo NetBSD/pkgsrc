@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2019/05/07 09:33:13 leot Exp $
+# $NetBSD: Makefile,v 1.3 2019/05/26 05:14:26 kamil Exp $
 
-DISTNAME=	picotrace-20190507
+DISTNAME=	picotrace-20190526
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=krytarowski/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
