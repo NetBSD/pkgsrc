@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/08/04 21:56:47 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/05/26 19:50:12 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -16,6 +16,9 @@ ${PYSITELIB}/grpc/_channel.pyo
 ${PYSITELIB}/grpc/_common.py
 ${PYSITELIB}/grpc/_common.pyc
 ${PYSITELIB}/grpc/_common.pyo
+${PYSITELIB}/grpc/_compression.py
+${PYSITELIB}/grpc/_compression.pyc
+${PYSITELIB}/grpc/_compression.pyo
 ${PYSITELIB}/grpc/_cython/__init__.py
 ${PYSITELIB}/grpc/_cython/__init__.pyc
 ${PYSITELIB}/grpc/_cython/__init__.pyo
