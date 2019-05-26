@@ -13,6 +13,15 @@ type Vartype struct {
 	aclEntries []ACLEntry
 }
 
+func NewVartype(basicType *BasicType, options vartypeOptions, aclEntries ...ACLEntry) *Vartype {
+	for _, aclEntry := range aclEntries {
+		_, err := path.Match(aclEntry.glob, "")
+		G.AssertNil(err, "path.Match")
+	}
+
+	return &Vartype{basicType, options, aclEntries}
+}
+
 type vartypeOptions uint8
 
 const (
@@ -40,6 +49,10 @@ const (
 type ACLEntry struct {
 	glob        string // Examples: "Makefile", "*.mk"
 	permissions ACLPermissions
+}
+
+func NewACLEntry(glob string, permissions ACLPermissions) ACLEntry {
+	return ACLEntry{glob, permissions}
 }
 
 type ACLPermissions uint8
@@ -119,8 +132,8 @@ func (vt *Vartype) Union() ACLPermissions {
 //
 // If the permission is allowed nowhere, an empty string is returned.
 func (vt *Vartype) AlternativeFiles(perms ACLPermissions) string {
-	pos := make([]string, 0, len(vt.aclEntries))
-	neg := make([]string, 0, len(vt.aclEntries))
+	var pos []string
+	var neg []string
 
 	merge := func(slice []string) []string {
 		di := 0
@@ -128,7 +141,8 @@ func (vt *Vartype) AlternativeFiles(perms ACLPermissions) string {
 			redundant := false
 			for _, late := range slice[si+1:] {
 				matched, err := path.Match(late, early)
-				if err == nil && matched {
+				G.AssertNil(err, "path.Match")
+				if matched {
 					redundant = true
 					break
 				}

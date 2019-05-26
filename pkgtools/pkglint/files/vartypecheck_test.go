@@ -534,13 +534,18 @@ func (s *Suite) Test_VartypeCheck_FileMask(c *check.C) {
 
 	vt.Varname("FNAME")
 	vt.Values(
+		"filename.txt",
+		"*.txt",
+		"[12345].txt",
+		"[0-9].txt",
+		"???.txt",
 		"FileMask with spaces.docx",
 		"OS/2-manual.txt")
 
 	vt.Output(
-		"WARN: filename.mk:1: The filename pattern \"FileMask with spaces.docx\" "+
+		"WARN: filename.mk:6: The filename pattern \"FileMask with spaces.docx\" "+
 			"contains the invalid characters \"  \".",
-		"WARN: filename.mk:2: The filename pattern \"OS/2-manual.txt\" "+
+		"WARN: filename.mk:7: The filename pattern \"OS/2-manual.txt\" "+
 			"contains the invalid character \"/\".")
 
 	vt.Op(opUseMatch)

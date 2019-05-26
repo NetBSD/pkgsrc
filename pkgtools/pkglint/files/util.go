@@ -265,10 +265,19 @@ func detab(s string) string {
 		if r == '\t' {
 			detabbed.WriteString("        "[:8-detabbed.Len()%8])
 		} else {
-			detabbed.WriteString(string(r))
+			detabbed.WriteRune(r)
 		}
 	}
 	return detabbed.String()
+}
+
+// alignWith extends str with as many tabs as needed to reach
+// the same screen width as the other string.
+func alignWith(str, other string) string {
+	alignBefore := (tabWidth(other) + 7) & -8
+	alignAfter := tabWidth(str) & -8
+	tabsNeeded := imax((alignBefore-alignAfter)/8, 1)
+	return str + strings.Repeat("\t", tabsNeeded)
 }
 
 func shorten(s string, maxChars int) string {
@@ -368,7 +377,7 @@ func relpath(from, to string) (result string) {
 	}
 
 	// Take a shortcut for the common case from "dir" to "dir/subdir/...".
-	if hasPrefix(cto, cfrom) && len(cto) > len(cfrom)+1 && cto[len(cfrom)] == '/' {
+	if hasPrefix(cto, cfrom) && hasPrefix(cto[len(cfrom):], "/") {
 		return cleanpath(cto[len(cfrom)+1:])
 	}
 
@@ -683,13 +692,13 @@ func (s *Scope) Commented(varname string) MkLine {
 	}
 
 	for _, mkline := range mklines {
-		if mkline != nil && mkline.IsVarassign() {
+		if mkline.IsVarassign() {
 			return nil
 		}
 	}
 
 	for _, mkline := range mklines {
-		if mkline != nil && mkline.IsCommentedVarassign() {
+		if mkline.IsCommentedVarassign() {
 			return mkline
 		}
 	}
@@ -878,7 +887,9 @@ func (c *FileCache) Put(filename string, options LoadOptions, lines Lines) {
 }
 
 func (c *FileCache) removeOldEntries() {
-	sort.Slice(c.table, func(i, j int) bool { return c.table[j].count < c.table[i].count })
+	sort.Slice(c.table, func(i, j int) bool {
+		return c.table[j].count < c.table[i].count
+	})
 
 	if G.Testing {
 		for _, e := range c.table {

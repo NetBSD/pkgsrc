@@ -100,6 +100,15 @@ func (fix *Autofix) ReplaceAfter(prefix, from string, to string) {
 		if replaced != rawLine.textnl {
 			if G.Logger.IsAutofix() {
 				rawLine.textnl = replaced
+
+				// Fix the parsed text as well.
+				// This is only approximate and won't work in some edge cases
+				// that involve escaped comments or replacements across line breaks.
+				//
+				// TODO: Do this properly by parsing the whole line again,
+				//  and ideally everything that depends on the parsed line.
+				//  This probably requires a generic notification mechanism.
+				fix.line.Text = strings.Replace(fix.line.Text, prefix+from, prefix+to, 1)
 			}
 			fix.Describef(rawLine.Lineno, "Replacing %q with %q.", from, to)
 			return
@@ -141,6 +150,25 @@ func (fix *Autofix) ReplaceRegex(from regex.Pattern, toText string, howOften int
 			}
 		}
 	}
+
+	// Fix the parsed text as well.
+	// This is only approximate and won't work in some edge cases
+	// that involve escaped comments or replacements across line breaks.
+	//
+	// TODO: Do this properly by parsing the whole line again,
+	//  and ideally everything that depends on the parsed line.
+	//  This probably requires a generic notification mechanism.
+	done = 0
+	fix.line.Text = replaceAllFunc(
+		fix.line.Text,
+		from,
+		func(fromText string) string {
+			if howOften >= 0 && done >= howOften {
+				return fromText
+			}
+			done++
+			return toText
+		})
 }
 
 // Custom runs a custom fix action, unless the fix is skipped anyway
