@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/11/21 21:46:50 leot Exp $
+# $NetBSD: Makefile,v 1.22 2019/05/26 11:47:57 abs Exp $
 
 DISTNAME=	mosh-1.3.2
 CATEGORIES=	net
@@ -12,6 +12,7 @@ LICENSE=	gnu-gpl-v3
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	perl:run pkg-config
 USE_LANGUAGES+=	c c++11
+USE_GCC_RUNTIME=yes
 
 REPLACE_PERL+=	scripts/mosh.pl
 REPLACE_PERL+=	src/tests/genbase64.pl
