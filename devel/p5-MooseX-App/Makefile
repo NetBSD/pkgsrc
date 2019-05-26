@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2018/08/22 09:44:21 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/05/26 14:27:58 wen Exp $
 
-DISTNAME=	MooseX-App-1.39
+DISTNAME=	MooseX-App-1.41
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 
@@ -11,13 +10,12 @@ HOMEPAGE=	http://search.cpan.org/~maros/MooseX-App/lib/MooseX/App.pm
 COMMENT=	Write user-friendly command line apps with even less suffering
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-Test-Most-[0-9]*:../../devel/p5-Test-Most
 DEPENDS+=	p5-Config-Any-[0-9]*:../../devel/p5-Config-Any
 DEPENDS+=	p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
 DEPENDS+=	p5-MooseX-Types-Path-Class-[0-9]*:../../devel/p5-MooseX-Types-Path-Class
-DEPENDS+=	p5-Path-Class-[0-9]*:../../devel/p5-Path-Class
 DEPENDS+=	p5-Pod-Elemental-[0-9]*:../../textproc/p5-Pod-Elemental
 # for make test
+BUILD_DEPENDS+=	p5-Test-Most-[0-9]*:../../devel/p5-Test-Most
 BUILD_DEPENDS+=	p5-FindBin-libs-[0-9]*:../../devel/p5-FindBin-libs
 BUILD_DEPENDS+=	p5-IO-Interactive-[0-9]*:../../devel/p5-IO-Interactive
 BUILD_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
