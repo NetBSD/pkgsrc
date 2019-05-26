@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2264 2019/05/26 08:43:28 tron Exp $
+$NetBSD: CHANGES-2019,v 1.2265 2019/05/26 10:25:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3749,7 +3749,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-ipykernel to 5.1.1 [adam 2019-05-20]
 	Updated net/py-ncclient to 0.6.4 [adam 2019-05-20]
 	Updated editors/gtranslator to 3.32.1 [wiz 2019-05-20]
-	Updated net/ncdc to 1.22 [wiz 2019-05-20]
 	Updated security/kpcli to 3.2 [nia 2019-05-20]
 	Updated sysutils/dbus to 1.12.14 [wiz 2019-05-20]
 	Updated net/libfilezilla to 0.16.0 [wiz 2019-05-20]
