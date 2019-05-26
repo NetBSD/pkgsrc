@@ -130,15 +130,13 @@ func (mklines *MkLinesImpl) checkAll() {
 
 		varalign.Process(mkline)
 		mklines.Tools.ParseToolLine(mklines, mkline, false, false)
+		substContext.Process(mkline)
 
 		switch {
-		case mkline.IsEmpty():
-			substContext.Finish(mkline)
 
 		case mkline.IsVarassign():
 			mklines.target = ""
 			mkline.Tokenize(mkline.Value(), true) // Just for the side-effect of the warnings.
-			substContext.Varassign(mkline)
 
 			mklines.checkVarassignPlist(mkline)
 
@@ -150,7 +148,6 @@ func (mklines *MkLinesImpl) checkAll() {
 
 		case mkline.IsDirective():
 			ck.checkDirective(mklines.forVars, mklines.indentation)
-			substContext.Directive(mkline)
 
 		case mkline.IsDependency():
 			ck.checkDependencyRule(allowedTargets)
