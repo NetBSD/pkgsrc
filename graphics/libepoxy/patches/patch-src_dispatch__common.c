@@ -1,8 +1,8 @@
-$NetBSD: patch-src_dispatch__common.c,v 1.5 2017/02/17 15:17:09 wiz Exp $
+$NetBSD: patch-src_dispatch__common.c,v 1.6 2019/05/27 17:04:04 nia Exp $
 
 Deal with hardcoded libGL locations and versions.
 
---- src/dispatch_common.c.orig	2017-02-06 16:00:20.000000000 +0000
+--- src/dispatch_common.c.orig	2017-06-06 09:55:43.000000000 +0000
 +++ src/dispatch_common.c
 @@ -174,11 +174,13 @@
  #include "dispatch_common.h"
@@ -19,3 +19,12 @@ Deal with hardcoded libGL locations and versions.
  #endif
  
  #ifdef ANDROID
+@@ -190,7 +192,7 @@
+ #define GLES1_LIB "libGLES_CM.dll"
+ #define GLES2_LIB "libGLESv2.dll"
+ #else
+-#define EGL_LIB "libEGL.so.1"
++#define EGL_LIB "libEGL.so"
+ #define GLES1_LIB "libGLESv1_CM.so.1"
+ #define GLES2_LIB "libGLESv2.so.2"
+ #endif
