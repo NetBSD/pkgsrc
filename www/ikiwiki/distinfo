@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.132 2019/02/28 22:00:48 schmonz Exp $
+$NetBSD: distinfo,v 1.133 2019/05/27 03:53:31 schmonz Exp $
 
 SHA1 (ikiwiki_3.20190228.orig.tar.xz) = 46f5b0a1498c1e098fe248eae1f2e3f56b25dc2f
 RMD160 (ikiwiki_3.20190228.orig.tar.xz) = f47968a69528aea864ad412c8508a8c5063edb9d
 SHA512 (ikiwiki_3.20190228.orig.tar.xz) = 125147d83dae6166b45541ed9176398ba4bd22ef3389d3efb3f442e558e326e0b004583d29aa32ed4bfca489c9d55b4232f074aab5fa649e51d9edd103685172
 Size (ikiwiki_3.20190228.orig.tar.xz) = 2672244 bytes
+SHA1 (patch-IkiWiki_Plugin_highlight.pm) = 14a2d8e1d3eb671863cdef4a936ebbb7b09ce3b9
 SHA1 (patch-ikiwiki-mass-rebuild) = b8d5785d77736508de9cfc0f059cc36e0e607bce
