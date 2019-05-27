@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2019/05/24 18:13:36 nia Exp $
+# $NetBSD: Makefile,v 1.36 2019/05/27 17:21:01 nia Exp $
 
 DISTNAME=	SDL2-2.0.9
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	http://www.libsdl.org/release/
 
@@ -18,6 +18,8 @@ PKGCONFIG_OVERRIDE+=	sdl2.pc.in
 
 CONFIGURE_ENV+=	SDL_RLD_FLAGS="${COMPILER_RPATH_FLAG}${PREFIX}/lib \
 		${COMPILER_RPATH_FLAG}${X11BASE}/lib"
+
+CONFIGURE_ARGS+=	--disable-x11-shared
 
 CHECK_PORTABILITY_SKIP+=build-scripts/androidbuildlibs.sh
 CHECK_PORTABILITY_SKIP+=build-scripts/iosbuild.sh
