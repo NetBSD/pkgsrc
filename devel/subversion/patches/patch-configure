@@ -1,0 +1,78 @@
+$NetBSD: patch-configure,v 1.4 2019/05/27 16:10:08 ryoon Exp $
+
+* Fix build with devel/apr-1.7.0
+
+--- configure.orig	2019-04-11 13:21:28.000000000 +0000
++++ configure
+@@ -24344,7 +24344,7 @@ else
+                       MaTcHtHiS APR_INT64_T_FMT EnDeNd
+ _ACEOF
+ if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
+-  $EGREP "MaTcHtHiS +\"lld\" +EnDeNd" >/dev/null 2>&1; then :
++  $EGREP "MaTcHtHiS +\"ll(\" *\")?d\" +EnDeNd" >/dev/null 2>&1; then :
+   svn_cv_pycfmt_apr_int64_t="L"
+ fi
+ rm -f conftest*
+@@ -24358,7 +24358,7 @@ r
+                       MaTcHtHiS APR_INT64_T_FMT EnDeNd
+ _ACEOF
+ if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
+-  $EGREP "MaTcHtHiS +\"ld\" +EnDeNd" >/dev/null 2>&1; then :
++  $EGREP "MaTcHtHiS +\"l(\" *\")?d\" +EnDeNd" >/dev/null 2>&1; then :
+   svn_cv_pycfmt_apr_int64_t="l"
+ fi
+ rm -f conftest*
+@@ -24859,7 +24859,7 @@ else
+                       MaTcHtHiS APR_INT64_T_FMT EnDeNd
+ _ACEOF
+ if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
+-  $EGREP "MaTcHtHiS +\"lld\" +EnDeNd" >/dev/null 2>&1; then :
++  $EGREP "MaTcHtHiS +\"ll(\" *\")?d\" +EnDeNd" >/dev/null 2>&1; then :
+   svn_cv_pycfmt_apr_int64_t="L"
+ fi
+ rm -f conftest*
+@@ -24873,7 +24873,7 @@ r
+                       MaTcHtHiS APR_INT64_T_FMT EnDeNd
+ _ACEOF
+ if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
+-  $EGREP "MaTcHtHiS +\"ld\" +EnDeNd" >/dev/null 2>&1; then :
++  $EGREP "MaTcHtHiS +\"l(\" *\")?d\" +EnDeNd" >/dev/null 2>&1; then :
+   svn_cv_pycfmt_apr_int64_t="l"
+ fi
+ rm -f conftest*
+@@ -25374,7 +25374,7 @@ else
+                       MaTcHtHiS APR_INT64_T_FMT EnDeNd
+ _ACEOF
+ if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
+-  $EGREP "MaTcHtHiS +\"lld\" +EnDeNd" >/dev/null 2>&1; then :
++  $EGREP "MaTcHtHiS +\"ll(\" *\")?d\" +EnDeNd" >/dev/null 2>&1; then :
+   svn_cv_pycfmt_apr_int64_t="L"
+ fi
+ rm -f conftest*
+@@ -25388,7 +25388,7 @@ r
+                       MaTcHtHiS APR_INT64_T_FMT EnDeNd
+ _ACEOF
+ if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
+-  $EGREP "MaTcHtHiS +\"ld\" +EnDeNd" >/dev/null 2>&1; then :
++  $EGREP "MaTcHtHiS +\"l(\" *\")?d\" +EnDeNd" >/dev/null 2>&1; then :
+   svn_cv_pycfmt_apr_int64_t="l"
+ fi
+ rm -f conftest*
+@@ -25892,7 +25892,7 @@ else
+                       MaTcHtHiS APR_INT64_T_FMT EnDeNd
+ _ACEOF
+ if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
+-  $EGREP "MaTcHtHiS +\"lld\" +EnDeNd" >/dev/null 2>&1; then :
++  $EGREP "MaTcHtHiS +\"ll(\" *\")?d\" +EnDeNd" >/dev/null 2>&1; then :
+   svn_cv_pycfmt_apr_int64_t="L"
+ fi
+ rm -f conftest*
+@@ -25906,7 +25906,7 @@ r
+                       MaTcHtHiS APR_INT64_T_FMT EnDeNd
+ _ACEOF
+ if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
+-  $EGREP "MaTcHtHiS +\"ld\" +EnDeNd" >/dev/null 2>&1; then :
++  $EGREP "MaTcHtHiS +\"l(\" *\")?d\" +EnDeNd" >/dev/null 2>&1; then :
+   svn_cv_pycfmt_apr_int64_t="l"
+ fi
+ rm -f conftest*
