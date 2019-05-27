@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.11 2019/05/27 15:37:56 maya Exp $
+$NetBSD: distinfo,v 1.12 2019/05/27 16:07:30 maya Exp $
 
 SHA1 (pingus-0.7.6.tar.gz) = c888c277995bed84052b62d0eacbd77d0346a276
 RMD160 (pingus-0.7.6.tar.gz) = e58ced4252caea3ca642a82a47468ed49eaa7851
 SHA512 (pingus-0.7.6.tar.gz) = ea0e7fd2cc1f6c23e62e222dffa1eb4764313ccecd716083c516fa4720c19562c9940da1dae4cbc527b85de9c0094f482e4f907212226b39ad044222b477769b
 Size (pingus-0.7.6.tar.gz) = 13410576 bytes
 SHA1 (patch-Makefile) = 6fb2ea04cc97381530b3e61e06c74b478f62a6e7
-SHA1 (patch-SConscript) = 39aa7f18a05cb45eed4393e6462fe9ec656d8297
+SHA1 (patch-SConscript) = 0f53571c6b0d6249abc22bbe428476aca31ed26c
 SHA1 (patch-src_editor_button.hpp) = a640979ed318233401147880d59f30f90aa0ed49
 SHA1 (patch-src_editor_checkbox.hpp) = 51d605b2cb5e51acce37b9626c68c236c1b5cc9c
 SHA1 (patch-src_editor_combobox.hpp) = 41511fb02e6378ea9c4ec76af4d77738b28f29dc
@@ -19,7 +19,7 @@ SHA1 (patch-src_pingus_components_check__box.hpp) = 59d3ee73fa16c1d0e57a2bf0d236
 SHA1 (patch-src_pingus_components_choice__box.hpp) = 4d2faefe2db205c8cbc695c6b45df4ee549261e8
 SHA1 (patch-src_pingus_components_slider__box.hpp) = 0c247a42dcf17a214fb2347177e95e0a5393807d
 SHA1 (patch-src_pingus_config__manager.hpp) = 3aa3c4947accec1360ee71d03aec8582c68c226a
-SHA1 (patch-src_pingus_pingus__main.cpp) = d7e5b778c3bab1f5c36d0a1fd97e9a477c499d27
+SHA1 (patch-src_pingus_pingus__main.cpp) = c3e4e20c2ffe8000761a79f72711ab7c5e88c583
 SHA1 (patch-src_pingus_screens_demo__session.hpp) = 4f601d78e7962d93ee5610e60e9f1d9e7df1c303
 SHA1 (patch-src_pingus_screens_option__menu.hpp) = bf7da1b212fde00b9dd3d2f972ec587f629771da
 SHA1 (patch-src_pingus_screens_pingus__menu.cpp) = 18c2f3762fd5d7adf6a6a9b4561cc6af1289ff15

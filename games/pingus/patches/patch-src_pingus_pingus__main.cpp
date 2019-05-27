@@ -1,4 +1,4 @@
-$NetBSD: patch-src_pingus_pingus__main.cpp,v 1.1 2019/05/12 06:17:30 triaxx Exp $
+$NetBSD: patch-src_pingus_pingus__main.cpp,v 1.2 2019/05/27 16:07:30 maya Exp $
 
 * Set DATADIR according to pkgsrc (program is not launched from source dir).
 * Insert space to appease C++11.
@@ -24,7 +24,7 @@ $NetBSD: patch-src_pingus_pingus__main.cpp,v 1.1 2019/05/12 06:17:30 triaxx Exp 
 -    g_path_manager.set_path("data"); // assume game is run from source dir
 -#endif
 +  {
-+    g_path_manager.set_path("/mnt/ccd0/pkg/share/pingus"); // assume game is run from source dir
++    g_path_manager.set_path("@DATADIR@"); // assume game is run from source dir
    }
  
    // Language is automatically picked from env variable
