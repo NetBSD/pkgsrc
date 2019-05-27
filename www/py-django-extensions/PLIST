@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/01/31 08:16:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/05/27 16:43:54 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -329,9 +329,12 @@ ${PYSITELIB}/django_extensions/static/django_extensions/img/indicator.gif
 ${PYSITELIB}/django_extensions/static/django_extensions/js/jquery.ajaxQueue.js
 ${PYSITELIB}/django_extensions/static/django_extensions/js/jquery.autocomplete.js
 ${PYSITELIB}/django_extensions/static/django_extensions/js/jquery.bgiframe.js
-${PYSITELIB}/django_extensions/templates/django_extensions/graph_models/digraph.dot
-${PYSITELIB}/django_extensions/templates/django_extensions/graph_models/label.dot
-${PYSITELIB}/django_extensions/templates/django_extensions/graph_models/relation.dot
+${PYSITELIB}/django_extensions/templates/django_extensions/graph_models/django2018/digraph.dot
+${PYSITELIB}/django_extensions/templates/django_extensions/graph_models/django2018/label.dot
+${PYSITELIB}/django_extensions/templates/django_extensions/graph_models/django2018/relation.dot
+${PYSITELIB}/django_extensions/templates/django_extensions/graph_models/original/digraph.dot
+${PYSITELIB}/django_extensions/templates/django_extensions/graph_models/original/label.dot
+${PYSITELIB}/django_extensions/templates/django_extensions/graph_models/original/relation.dot
 ${PYSITELIB}/django_extensions/templates/django_extensions/widgets/foreignkey_searchinput.html
 ${PYSITELIB}/django_extensions/templatetags/__init__.py
 ${PYSITELIB}/django_extensions/templatetags/__init__.pyc
@@ -363,9 +366,6 @@ ${PYSITELIB}/django_extensions/utils/deprecation.pyo
 ${PYSITELIB}/django_extensions/utils/dia2django.py
 ${PYSITELIB}/django_extensions/utils/dia2django.pyc
 ${PYSITELIB}/django_extensions/utils/dia2django.pyo
-${PYSITELIB}/django_extensions/utils/text.py
-${PYSITELIB}/django_extensions/utils/text.pyc
-${PYSITELIB}/django_extensions/utils/text.pyo
 ${PYSITELIB}/django_extensions/validators.py
 ${PYSITELIB}/django_extensions/validators.pyc
 ${PYSITELIB}/django_extensions/validators.pyo
