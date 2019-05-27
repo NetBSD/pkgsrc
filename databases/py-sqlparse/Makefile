@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2018/08/20 22:36:20 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.16 2019/05/27 15:25:14 adam Exp $
 
-DISTNAME=	sqlparse-0.2.4
+DISTNAME=	sqlparse-0.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sqlparse/}
@@ -10,11 +10,15 @@ HOMEPAGE=	https://github.com/andialbrecht/sqlparse
 COMMENT=	Non-validating SQL parser
 LICENSE=	modified-bsd
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+
 USE_LANGUAGES=	# none
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+PYSETUPTESTTARGET=	pytest
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} sqlformat sqlformat-${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} sqlformat sqlformat-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
