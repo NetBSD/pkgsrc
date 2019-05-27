@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2273 2019/05/27 12:48:31 fox Exp $
+$NetBSD: CHANGES-2019,v 1.2274 2019/05/27 13:01:53 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3855,3 +3855,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/py-grpcio-tools to 1.21.1 [adam 2019-05-27]
 	Updated www/py-urllib3 to 1.25.3 [adam 2019-05-27]
 	Updated audio/fasttracker2 to 2.157 [fox 2019-05-27]
+	Updated www/firefox60 to 60.7.0 [ryoon 2019-05-27]
