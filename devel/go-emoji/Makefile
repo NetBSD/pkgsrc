@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2019/04/16 18:41:15 bsiegert Exp $
+# $NetBSD: Makefile,v 1.13 2019/05/27 15:18:21 bsiegert Exp $
 
 DISTNAME=	emoji-1.4
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	9
+PKGREVISION=	10
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kyokomi/}
 CATEGORIES=	devel
 GITHUB_TAG=	v${PKGVERSION_NOREV}
