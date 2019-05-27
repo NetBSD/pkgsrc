@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.2 2019/03/24 13:04:05 tnn Exp $
+$NetBSD: distinfo,v 1.3 2019/05/27 17:31:14 tnn Exp $
 
-SHA1 (crosstool-ng-esp32-2018r1.tar.gz) = e99a7af1aa098efc9ac7f4fe17b99b1045209df5
-RMD160 (crosstool-ng-esp32-2018r1.tar.gz) = d7006ca0be915b688c4046c1fecbd9df8662a464
-SHA512 (crosstool-ng-esp32-2018r1.tar.gz) = b515a308abd7ac57e864c2e18da82762d0f314560d9ba1fb45d0dae437b64a8631da2721c4834b6515810a54086ea21a5c16128ea21e320295467d32004859d4
-Size (crosstool-ng-esp32-2018r1.tar.gz) = 2493917 bytes
-SHA1 (espressif-gcc-8.2.0-bae67e9ef3c3dea93a7cd169a475e05c8013f00b.tar.gz) = dfc94e1677769b86ec4e26f4610d44d0c7b56f24
-RMD160 (espressif-gcc-8.2.0-bae67e9ef3c3dea93a7cd169a475e05c8013f00b.tar.gz) = 4422a4e5c630a3d1a9ac5a273c95d18c45bc2a0b
-SHA512 (espressif-gcc-8.2.0-bae67e9ef3c3dea93a7cd169a475e05c8013f00b.tar.gz) = 631a475b9352a9bb7f66d6021035effcc735e72fd65c12aef033bdb5011adba89e87a6bca37c0b0616856d239df4169ac2efbc3d5f89a1063d2889b4d29ad9de
-Size (espressif-gcc-8.2.0-bae67e9ef3c3dea93a7cd169a475e05c8013f00b.tar.gz) = 102469670 bytes
-SHA1 (newlib-esp32-2018r1_newlib-2_2_0.tar.gz) = e9cd902804183d753dc5825699cb0b77b5860497
-RMD160 (newlib-esp32-2018r1_newlib-2_2_0.tar.gz) = f7b39dbf15c6a9bf9ca8a7fb0d1e8704eede3a13
-SHA512 (newlib-esp32-2018r1_newlib-2_2_0.tar.gz) = d7daddb655589f1c90a82aa7ce7c7422615ebb45187b56b2e8de0c810fec95240baa7dc50446c31af0ba466da816fbf0ccbd4f1d98a2cdfeb28b90b8458bfe6c
-Size (newlib-esp32-2018r1_newlib-2_2_0.tar.gz) = 16387285 bytes
+SHA1 (crosstool-ng-esp32-2019r1.tar.gz) = cec4ee10240408bfa9401e11898e3d614d478f61
+RMD160 (crosstool-ng-esp32-2019r1.tar.gz) = 390218c0db65cce4e13096aff7453c6c8a7a6b62
+SHA512 (crosstool-ng-esp32-2019r1.tar.gz) = ff4dc1a31db96449ca6334296315d0edc1afdd4eef23fd0a3f8c327648f023dc732d9f25da4713d918eae764c31c6a5bea1245578185b267072f6b2b7d93c155
+Size (crosstool-ng-esp32-2019r1.tar.gz) = 2494124 bytes
+SHA1 (espressif-gcc-8.2.0-35d9a8eb86910a6acac7579f22f8e88a92dbb251.tar.gz) = f30416540bdfb114dab6ce0638577a552cb5b8f9
+RMD160 (espressif-gcc-8.2.0-35d9a8eb86910a6acac7579f22f8e88a92dbb251.tar.gz) = 11c2a777ac68b792d221e985b5087ce6c5e137f3
+SHA512 (espressif-gcc-8.2.0-35d9a8eb86910a6acac7579f22f8e88a92dbb251.tar.gz) = 65c30b988f22718da2a59a8161406080f35e6850111d2fdb6607e085975c2daff277b853bd24ff9856405abc24726d8e2f5caca397afd0c92f0798d03e428c29
+Size (espressif-gcc-8.2.0-35d9a8eb86910a6acac7579f22f8e88a92dbb251.tar.gz) = 102473573 bytes
+SHA1 (newlib-esp32-2019r1_newlib-3_0_0.tar.gz) = 7460ca85079e4f3745087fefccd9d4d8746f1edd
+RMD160 (newlib-esp32-2019r1_newlib-3_0_0.tar.gz) = 3d6eda65bc4c21feab6985ffbfc1a96d70b9e874
+SHA512 (newlib-esp32-2019r1_newlib-3_0_0.tar.gz) = d08ed86765d939f3d5cd42d69b9ba0c1b87e75a8e258baf2ee5fd75dbd2f298da36a7c704dd3944570fc5359292a3795f9de0aa7208baf20c013b37c3f925ff4
+Size (newlib-esp32-2019r1_newlib-3_0_0.tar.gz) = 21247297 bytes
 SHA1 (patch-configure) = e8ce6b8126845e03bbaa28569074fada93466d85
 SHA1 (patch-contrib_download__prerequisites) = be9b02068b3d4d783e92bee66d480bb2bfe35a84
 SHA1 (patch-gcc_system.h) = 72a75ff773b9b5f3d2f16f4ec7d29e032aba5f53
