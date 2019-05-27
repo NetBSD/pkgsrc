@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/10/02 18:19:56 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4 2019/05/27 14:33:10 bsiegert Exp $
 
 .include "../../lang/go/version.mk"
 
@@ -107,7 +107,7 @@ do-build:
 #	cd ${WRKSRC}/src && env GOROOT_BOOTSTRAP=${GOROOT_BOOTSTRAP:Q} GOROOT_FINAL=${GOROOT_FINAL:Q} GO_LDFLAGS="-buildmode=pie" ${GOOPT} ${BASH} ./make.bash
 
 do-install:
-	cd ${WRKSRC} && rm -rf .hgignore .hgtags pkg/obj
+	cd ${WRKSRC} && rm -rf .hgignore .hgtags pkg/obj pkg/bootstrap
 	cd ${WRKSRC} && pax -rw . ${DESTDIR}${PREFIX}/go${GOVERSSUFFIX}
 	find ${DESTDIR}${PREFIX}/go${GOVERSSUFFIX} -name \*.orig -exec rm {} \;
 .for cmd in go gofmt
