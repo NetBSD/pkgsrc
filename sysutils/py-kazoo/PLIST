@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/09/12 14:55:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/05/27 15:20:45 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -170,6 +170,9 @@ ${PYSITELIB}/kazoo/tests/test_security.pyo
 ${PYSITELIB}/kazoo/tests/test_threading_handler.py
 ${PYSITELIB}/kazoo/tests/test_threading_handler.pyc
 ${PYSITELIB}/kazoo/tests/test_threading_handler.pyo
+${PYSITELIB}/kazoo/tests/test_utils.py
+${PYSITELIB}/kazoo/tests/test_utils.pyc
+${PYSITELIB}/kazoo/tests/test_utils.pyo
 ${PYSITELIB}/kazoo/tests/test_watchers.py
 ${PYSITELIB}/kazoo/tests/test_watchers.pyc
 ${PYSITELIB}/kazoo/tests/test_watchers.pyo
