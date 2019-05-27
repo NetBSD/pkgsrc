@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2288 2019/05/27 15:53:30 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2289 2019/05/27 16:12:08 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3876,3 +3876,9 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/py-sqlparse to 0.3.0 [adam 2019-05-27]
 	Updated devel/py-xopen to 0.6.0 [adam 2019-05-27]
 	Updated devel/py-fasteners to 0.15 [adam 2019-05-27]
+	Updated devel/subversion-base to 1.12.0 [ryoon 2019-05-27]
+	Updated devel/java-subversion to 1.12.0 [ryoon 2019-05-27]
+	Updated devel/py-subversion to 1.12.0 [ryoon 2019-05-27]
+	Updated devel/ruby-subversion to 1.12.0 [ryoon 2019-05-27]
+	Updated www/ap2-subversion to 1.12.0 [ryoon 2019-05-27]
+	Updated devel/subversion to 1.12.0 [ryoon 2019-05-27]
