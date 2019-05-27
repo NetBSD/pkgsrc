@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/12/06 22:01:51 triaxx Exp $
+$NetBSD: distinfo,v 1.2 2019/05/27 15:53:09 adam Exp $
 
-SHA1 (fasteners-0.14.1.tar.gz) = 077b197429d592bd39f411a7ad24a1a6499c300e
-RMD160 (fasteners-0.14.1.tar.gz) = 35249664f75db20c602c18ce8a88c43ccf08a960
-SHA512 (fasteners-0.14.1.tar.gz) = a58c5f1658b1bc664c825f2237fa91b72b9f31590e7eb79c7ae7a86c507ebe84574ac7d8e837a7bec11ad32f04204ef6f5906219b00a6adb0732daee1eb6faa1
-Size (fasteners-0.14.1.tar.gz) = 17749 bytes
+SHA1 (fasteners-0.15.tar.gz) = 473f63a76c1219c73366d612f2b042cba4368de3
+RMD160 (fasteners-0.15.tar.gz) = 00d4c904dee9e9ee5e8181933511525d786230aa
+SHA512 (fasteners-0.15.tar.gz) = 756f2ee8aa82ec6fd548d6e4320123b7c0bede834d4e58ff9031e004a8d9d0c23f7df4026ec4195799baa459720ca02d69a981a4aae54713e190a71152f2df9b
+Size (fasteners-0.15.tar.gz) = 17898 bytes
