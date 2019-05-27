@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2019/04/16 18:41:12 bsiegert Exp $
+# $NetBSD: Makefile,v 1.11 2019/05/27 15:18:23 bsiegert Exp $
 
 DISTNAME=	go-isatty-0.0.3
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mattn/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
