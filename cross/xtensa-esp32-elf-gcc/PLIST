@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/24 11:58:04 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/05/27 17:31:14 tnn Exp $
 xtensa-esp32-elf/bin/xtensa-esp32-elf-c++
 xtensa-esp32-elf/bin/xtensa-esp32-elf-cpp
 xtensa-esp32-elf/bin/xtensa-esp32-elf-g++
@@ -481,6 +481,7 @@ xtensa-esp32-elf/share/gcc-${PKGVERSION}/python/libstdcxx/v6/__init__.py
 xtensa-esp32-elf/share/gcc-${PKGVERSION}/python/libstdcxx/v6/printers.py
 xtensa-esp32-elf/share/gcc-${PKGVERSION}/python/libstdcxx/v6/xmethods.py
 xtensa-esp32-elf/xtensa-esp32-elf/include/_ansi.h
+xtensa-esp32-elf/xtensa-esp32-elf/include/_newlib_version.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/_syslist.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/alloca.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/ar.h
@@ -1258,8 +1259,11 @@ xtensa-esp32-elf/xtensa-esp32-elf/include/c++/${PKGVERSION}/xtensa-esp32-elf/esp
 xtensa-esp32-elf/xtensa-esp32-elf/include/c++/${PKGVERSION}/xtensa-esp32-elf/ext/opt_random.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/complex.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/config.h
+xtensa-esp32-elf/xtensa-esp32-elf/include/cpio.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/ctype.h
+xtensa-esp32-elf/xtensa-esp32-elf/include/devctl.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/dirent.h
+xtensa-esp32-elf/xtensa-esp32-elf/include/elf.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/envlock.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/envz.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/errno.h
@@ -1277,7 +1281,10 @@ xtensa-esp32-elf/xtensa-esp32-elf/include/langinfo.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/libgen.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/limits.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/locale.h
+xtensa-esp32-elf/xtensa-esp32-elf/include/machine/_arc4random.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/machine/_default_types.h
+xtensa-esp32-elf/xtensa-esp32-elf/include/machine/_endian.h
+xtensa-esp32-elf/xtensa-esp32-elf/include/machine/_time.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/machine/_types.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/machine/ansi.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/machine/endian.h
@@ -1293,6 +1300,7 @@ xtensa-esp32-elf/xtensa-esp32-elf/include/machine/time.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/machine/types.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/malloc.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/math.h
+xtensa-esp32-elf/xtensa-esp32-elf/include/memory.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/newlib.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/paths.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/pthread.h
@@ -1305,6 +1313,13 @@ xtensa-esp32-elf/xtensa-esp32-elf/include/search.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/setjmp.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/signal.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/spawn.h
+xtensa-esp32-elf/xtensa-esp32-elf/include/ssp/ssp.h
+xtensa-esp32-elf/xtensa-esp32-elf/include/ssp/stdio.h
+xtensa-esp32-elf/xtensa-esp32-elf/include/ssp/stdlib.h
+xtensa-esp32-elf/xtensa-esp32-elf/include/ssp/string.h
+xtensa-esp32-elf/xtensa-esp32-elf/include/ssp/strings.h
+xtensa-esp32-elf/xtensa-esp32-elf/include/ssp/unistd.h
+xtensa-esp32-elf/xtensa-esp32-elf/include/ssp/wchar.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/stdatomic.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/stdint.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/stdio.h
@@ -1314,6 +1329,11 @@ xtensa-esp32-elf/xtensa-esp32-elf/include/string.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/strings.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/sys/_default_fcntl.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/sys/_intsup.h
+xtensa-esp32-elf/xtensa-esp32-elf/include/sys/_pthreadtypes.h
+xtensa-esp32-elf/xtensa-esp32-elf/include/sys/_sigset.h
+xtensa-esp32-elf/xtensa-esp32-elf/include/sys/_stdint.h
+xtensa-esp32-elf/xtensa-esp32-elf/include/sys/_timespec.h
+xtensa-esp32-elf/xtensa-esp32-elf/include/sys/_timeval.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/sys/_types.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/sys/cdefs.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/sys/config.h
@@ -1331,6 +1351,7 @@ xtensa-esp32-elf/xtensa-esp32-elf/include/sys/queue.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/sys/reent.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/sys/resource.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/sys/sched.h
+xtensa-esp32-elf/xtensa-esp32-elf/include/sys/select.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/sys/signal.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/sys/stat.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/sys/stdio.h
@@ -1339,6 +1360,8 @@ xtensa-esp32-elf/xtensa-esp32-elf/include/sys/syslimits.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/sys/time.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/sys/timeb.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/sys/times.h
+xtensa-esp32-elf/xtensa-esp32-elf/include/sys/timespec.h
+xtensa-esp32-elf/xtensa-esp32-elf/include/sys/tree.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/sys/types.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/sys/unistd.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/sys/utime.h
@@ -1346,6 +1369,7 @@ xtensa-esp32-elf/xtensa-esp32-elf/include/sys/wait.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/tar.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/termios.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/tgmath.h
+xtensa-esp32-elf/xtensa-esp32-elf/include/threads.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/time.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/unctrl.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/unistd.h
@@ -1354,11 +1378,15 @@ xtensa-esp32-elf/xtensa-esp32-elf/include/utmp.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/wchar.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/wctype.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/wordexp.h
+xtensa-esp32-elf/xtensa-esp32-elf/include/xlocale.h
 xtensa-esp32-elf/xtensa-esp32-elf/include/xtensa/config/core-isa.h
 xtensa-esp32-elf/xtensa-esp32-elf/lib/crt0.o
+xtensa-esp32-elf/xtensa-esp32-elf/lib/default.specs
 xtensa-esp32-elf/xtensa-esp32-elf/lib/esp32-psram/crt0.o
+xtensa-esp32-elf/xtensa-esp32-elf/lib/esp32-psram/default.specs
 xtensa-esp32-elf/xtensa-esp32-elf/lib/esp32-psram/libc.a
 xtensa-esp32-elf/xtensa-esp32-elf/lib/esp32-psram/libg.a
+xtensa-esp32-elf/xtensa-esp32-elf/lib/esp32-psram/libgloss.a
 xtensa-esp32-elf/xtensa-esp32-elf/lib/esp32-psram/libm.a
 xtensa-esp32-elf/xtensa-esp32-elf/lib/esp32-psram/libnosys.a
 xtensa-esp32-elf/xtensa-esp32-elf/lib/esp32-psram/libstdc++.a-gdb.py
@@ -1367,6 +1395,7 @@ xtensa-esp32-elf/xtensa-esp32-elf/lib/esp32-psram/libsupc++.la
 xtensa-esp32-elf/xtensa-esp32-elf/lib/esp32-psram/nosys.specs
 xtensa-esp32-elf/xtensa-esp32-elf/lib/libc.a
 xtensa-esp32-elf/xtensa-esp32-elf/lib/libg.a
+xtensa-esp32-elf/xtensa-esp32-elf/lib/libgloss.a
 xtensa-esp32-elf/xtensa-esp32-elf/lib/libm.a
 xtensa-esp32-elf/xtensa-esp32-elf/lib/libnosys.a
 xtensa-esp32-elf/xtensa-esp32-elf/lib/libstdc++.a-gdb.py
