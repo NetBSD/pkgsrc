@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2018/01/10 09:36:54 adam Exp $
+$NetBSD: distinfo,v 1.5 2019/05/27 01:17:21 maya Exp $
 
 SHA1 (phc-winner-argon2-20171227.tar.gz) = c398df55c8fffe70c9a952dd3f696115437234d8
 RMD160 (phc-winner-argon2-20171227.tar.gz) = e4cf2482f11724f580da0051a8c982f9237d3451
 SHA512 (phc-winner-argon2-20171227.tar.gz) = 9c9e1a3905e61ac6913d1e073c104477e419ddd0506adc4487e88e98d19165ed8901fe8bb11246ed0cc71b3523c190da9692d5926642f86be09c3e67510afe4d
 Size (phc-winner-argon2-20171227.tar.gz) = 1503745 bytes
-SHA1 (patch-Makefile) = d075b01a8452d7d7beac22b72521662ad8527b10
+SHA1 (patch-Makefile) = d3efbe77767a174cbc27d6e9b255e774afbebb2b
