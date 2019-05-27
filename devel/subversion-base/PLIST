@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2018/01/01 22:29:26 rillig Exp $
+@comment $NetBSD: PLIST,v 1.27 2019/05/27 16:10:08 ryoon Exp $
 bin/svn
 bin/svnadmin
 bin/svnbench
@@ -37,6 +37,7 @@ include/subversion-1/svn_md5.h
 include/subversion-1/svn_mergeinfo.h
 include/subversion-1/svn_nls.h
 include/subversion-1/svn_opt.h
+include/subversion-1/svn_opt_impl.h
 include/subversion-1/svn_path.h
 include/subversion-1/svn_pools.h
 include/subversion-1/svn_props.h
@@ -49,6 +50,7 @@ include/subversion-1/svn_string.h
 include/subversion-1/svn_subst.h
 include/subversion-1/svn_time.h
 include/subversion-1/svn_types.h
+include/subversion-1/svn_types_impl.h
 include/subversion-1/svn_user.h
 include/subversion-1/svn_utf.h
 include/subversion-1/svn_version.h
