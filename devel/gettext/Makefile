@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2017/06/26 21:22:49 joerg Exp $
+# $NetBSD: Makefile,v 1.85 2019/05/27 13:21:41 ryoon Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
@@ -20,7 +20,7 @@ CONFIGURE_ENV+=		HAVE_JAVAC_IN_PATH=
 CONFIGURE_ENV+=		HAVE_JIKES_IN_PATH=
 CONFIGURE_ENV+=		ac_cv_libexpat=no
 
-INSTALLATION_DIRS+=	lib/gettext ${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	lib
 TEST_TARGET=		check
 
 BROKEN_GETTEXT_DETECTION=	yes
@@ -37,8 +37,6 @@ do-install:
 	cd ${WRKSRC}/gettext-tools && ${MAKE} install-gettextsrcSCRIPTS DESTDIR=${DESTDIR}
 	cd ${WRKSRC}/gettext-tools/projects && ${MAKE} install DESTDIR=${DESTDIR}
 	cd ${WRKSRC}/gettext-runtime && ${MAKE} install-gettextsrcDATA DESTDIR=${DESTDIR}
-	cd ${WRKSRC}/gettext-tools/intl && ${MAKE} install-exec install-data DESTDIR=${DESTDIR}
-	cd ${WRKSRC}/gettext-tools/po && ${MAKE} installdirs-data DESTDIR=${DESTDIR}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gettext-asprintf/buildlink3.mk"
