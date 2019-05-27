@@ -1,4 +1,4 @@
-$NetBSD: patch-SConscript,v 1.1 2019/05/12 06:17:30 triaxx Exp $
+$NetBSD: patch-SConscript,v 1.2 2019/05/27 16:07:30 maya Exp $
 
 * Python 3.x support.
 * Boost does not maintain Signals anymore (Signals2 does not require linkage).
@@ -30,7 +30,19 @@ $NetBSD: patch-SConscript,v 1.1 2019/05/12 06:17:30 triaxx Exp $
              Exit(1)
  
      def configure_gxx(self): 
-@@ -186,11 +185,6 @@ class Project:
+@@ -151,7 +150,10 @@ class Project:
+             if sys.platform == "darwin":
+                 self.conf.env.Append(LINKFLAGS = [ '-framework', 'OpenGL' ])
+             else:
+-                self.conf.env.Append(LIBS = ['GL'])
++                if self.conf.CheckMyProgram('pkg-config'):
++                    self.conf.env.ParseConfig("pkg-config  --cflags --libs gl")
++                else:
++                    self.conf.env.Append(LIBS = ['GL'])
+ 
+     def configure_linuxevdev(self):
+         if not self.env['with_linuxevdev']:
+@@ -186,11 +188,6 @@ class Project:
              self.conf.env.Append(optional_sources = ['src/engine/input/xinput/xinput_driver.cpp',
                                                       'src/engine/input/xinput/xinput_device.cpp'])
              
