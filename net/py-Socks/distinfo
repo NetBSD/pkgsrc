@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/12/21 13:49:13 adam Exp $
+$NetBSD: distinfo,v 1.4 2019/05/27 16:48:14 adam Exp $
 
-SHA1 (PySocks-1.6.8.tar.gz) = f4292b91c78bc388616674cefbfeb01e9a1c903d
-RMD160 (PySocks-1.6.8.tar.gz) = fbcfed4b6bfc4d905ee4ec9a0b1643530bcc1c0d
-SHA512 (PySocks-1.6.8.tar.gz) = 9b544cf11464142a5f347cd5688b48422249363a425ccf3887117152f2f1969713674c4bba714242432ae85f3d62e03edeb9cb7b73ebd225ed3b47b3da6896d5
-Size (PySocks-1.6.8.tar.gz) = 283450 bytes
+SHA1 (PySocks-1.7.0.tar.gz) = b698cb0736bdb6625122a54f6a4d130300741620
+RMD160 (PySocks-1.7.0.tar.gz) = dfa59e16d6caa412af64612d7d8dd596c2136f75
+SHA512 (PySocks-1.7.0.tar.gz) = cc08ecbf65b59b6c4d4a24e01490dba19d93f2deb2860a49c4fc5679a9ceaba1860f05faaf8e299cf195e184a844f11989595e5046b07e2b30f9f3c682950e52
+Size (PySocks-1.7.0.tar.gz) = 284351 bytes
