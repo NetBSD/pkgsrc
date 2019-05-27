@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2284 2019/05/27 14:42:35 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2285 2019/05/27 14:50:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3870,3 +3870,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/go111 to 1.11.10 [bsiegert 2019-05-27]
 	Updated devel/libgit2 to 0.28.2 [wiz 2019-05-27]
 	Updated devel/py-subprocess32 to 3.5.4 [wiz 2019-05-27]
+	Updated mail/thunderbird-enigmail to 2.0.11 [wiz 2019-05-27]
