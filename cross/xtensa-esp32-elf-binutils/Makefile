@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.1 2019/03/24 11:39:02 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2019/05/27 17:31:14 tnn Exp $
 
 DISTNAME=	binutils-2.32
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:C/.*binutils(-gdb)?/xtensa-esp32-elf-binutils/}
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
 EXTRACT_SUFX=	.tar.xz
 # Espressif overlays
 DISTFILES=	${DEFAULT_DISTFILES}
-DISTFILES+=	crosstool-ng-esp32-2018r1.tar.gz
-SITES.crosstool-ng-esp32-2018r1.tar.gz=	-https://github.com/espressif/crosstool-NG/archive/0a6745d4ed60aaa41a812ecf777ef062e2c76354.tar.gz
+DISTFILES+=	crosstool-ng-esp32-2019r1.tar.gz
+SITES.crosstool-ng-esp32-2019r1.tar.gz=	-https://github.com/espressif/crosstool-NG/archive/ce035ad3351127e4fdb3ff96790caba42b9f1aa3.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/espressif/binutils-gdb
