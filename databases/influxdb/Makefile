@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2019/05/15 18:03:33 jperkin Exp $
+# $NetBSD: Makefile,v 1.2 2019/05/27 15:18:18 bsiegert Exp $
 
 DISTNAME=	influxdb-1.7.6
 MASTER_SITES=	${MASTER_SITE_GITHUB:=influxdata/}
+PKGREVISION=	1
 CATEGORIES=	databases
 GITHUB_PROJECT=	influxdb
 GITHUB_TAG=	v${PKGVERSION_NOREV}
