@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2019/05/24 18:13:36 nia Exp $
+# $NetBSD: options.mk,v 1.12 2019/05/27 17:21:01 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.SDL2
 PKG_OPTIONS_REQUIRED_GROUPS=	gl
@@ -80,7 +80,6 @@ CONFIGURE_ARGS+=	--disable-pulseaudio
 .include "../../x11/libXrandr/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-video-x11
-CONFIGURE_ARGS+=	--disable-x11-shared
 .endif
 
 .if !empty(PKG_OPTIONS:Mrpi)
