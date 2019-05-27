@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.68 2019/03/24 12:27:22 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.69 2019/05/27 13:06:18 ryoon Exp $
 bin/thunderbird
 lib/thunderbird/application.ini
 lib/thunderbird/blocklist.xml
@@ -3729,7 +3729,10 @@ lib/thunderbird/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/install.rdf
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/bootstrap.js
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/install.rdf
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/ar/messages.json
+lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/ast/messages.json
+lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/bg/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/br/messages.json
+lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/bs/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/ca/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/cs/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/cy/messages.json
@@ -3742,6 +3745,7 @@ lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_loc
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/es_MX/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/et/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/eu/messages.json
+lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/fa/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/fi/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/fr/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/fy_NL/messages.json
