@@ -1,17 +1,17 @@
-$NetBSD: patch-ag,v 1.9 2013/01/31 21:45:04 adam Exp $
+$NetBSD: patch-ag,v 1.10 2019/05/27 13:21:41 ryoon Exp $
 
---- gettext-tools/gnulib-lib/Makefile.in.orig	2012-12-25 05:33:32.000000000 +0000
+--- gettext-tools/gnulib-lib/Makefile.in.orig	2019-05-12 15:09:15.000000000 +0000
 +++ gettext-tools/gnulib-lib/Makefile.in
-@@ -2935,7 +2935,7 @@ check: $(BUILT_SOURCES)
+@@ -3255,7 +3255,7 @@ check: $(BUILT_SOURCES)
  	$(MAKE) $(AM_MAKEFLAGS) check-am
- all-am: Makefile $(LTLIBRARIES) $(DATA) all-local
+ all-am: Makefile $(LTLIBRARIES) $(DATA)
  installdirs:
 -	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(gettextsrcdir)" "$(DESTDIR)$(pkgdatadir)"; do \
 +	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(gettextsrcdir)"; do \
  	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
  	done
  install: $(BUILT_SOURCES)
-@@ -3007,7 +3007,7 @@ info: info-am
+@@ -3326,13 +3326,13 @@ info: info-am
  
  info-am:
  
@@ -20,7 +20,14 @@ $NetBSD: patch-ag,v 1.9 2013/01/31 21:45:04 adam Exp $
  
  install-dvi: install-dvi-am
  
-@@ -3300,13 +3300,6 @@ getopt.h: getopt.in.h $(top_builddir)/co
+ install-dvi-am:
+ 
+-install-exec-am: install-exec-local install-libLTLIBRARIES
++install-exec-am: install-libLTLIBRARIES
+ 
+ install-html: install-html-am
+ 
+@@ -3608,14 +3608,6 @@ getopt-cdefs.h: getopt-cdefs.in.h $(top_
  	} > $@-t && \
  	mv -f $@-t $@
  
@@ -31,6 +38,7 @@ $NetBSD: patch-ag,v 1.9 2013/01/31 21:45:04 adam Exp $
 -	  aix*) ;; \
 -	  *) rm -f $(DESTDIR)$(libdir)/libgettextlib.a ;; \
 -	esac
- # This is a Makefile rule that generates multiple files at once; see the
- # automake documentation, node "Multiple Outputs", for details.
- html-ostream.h : $(top_srcdir)/../build-aux/moopp html-ostream.oo.h html-ostream.oo.c ostream.oo.h
+-
+ # We need the following in order to create <iconv.h> when the system
+ # doesn't have one that works with the given compiler.
+ @GL_GENERATE_ICONV_H_TRUE@iconv.h: iconv.in.h $(top_builddir)/config.status $(CXXDEFS_H) $(ARG_NONNULL_H) $(WARN_ON_USE_H)
