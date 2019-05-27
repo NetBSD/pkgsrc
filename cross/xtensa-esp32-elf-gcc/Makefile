@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/03/24 11:58:04 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2019/05/27 17:31:14 tnn Exp $
 
 # We could use the upstream GCC distfile, but Espressif has important vendor
 # patches in their branch and it seems not worth the maintenance overhead to
@@ -9,19 +9,20 @@
 #EXTRACT_SUFX=		.tar.xz
 
 DISTNAME=		espressif-gcc-8.2.0
+PKGREVISION=		1
 PKGNAME=		${DISTNAME:C/.*gcc/xtensa-esp32-elf-gcc/}
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GITHUB:=espressif/}
 GITHUB_PROJECT=		gcc
-GITHUB_TAG=		bae67e9ef3c3dea93a7cd169a475e05c8013f00b
+GITHUB_TAG=		35d9a8eb86910a6acac7579f22f8e88a92dbb251
 # Espressif overlays
 DISTFILES=		${DEFAULT_DISTFILES}
-DISTFILES+=		crosstool-ng-esp32-2018r1.tar.gz
-SITES.crosstool-ng-esp32-2018r1.tar.gz=	-https://github.com/espressif/crosstool-NG/archive/0a6745d4ed60aaa41a812ecf777ef062e2c76354.tar.gz
+DISTFILES+=		crosstool-ng-esp32-2019r1.tar.gz
+SITES.crosstool-ng-esp32-2019r1.tar.gz=	-https://github.com/espressif/crosstool-NG/archive/ce035ad3351127e4fdb3ff96790caba42b9f1aa3.tar.gz
 # Custom ESP32 newlib
 DISTFILES+=		newlib-${NEWLIBVER}.tar.gz
-NEWLIBVER=		esp32-2018r1_newlib-2_2_0
-SITES.newlib-${NEWLIBVER}.tar.gz=	-https://github.com/espressif/newlib-esp32/archive/fdbb7b81e963283abb4915e2da873fc248ecd47a.tar.gz
+NEWLIBVER=		esp32-2019r1_newlib-3_0_0
+SITES.newlib-${NEWLIBVER}.tar.gz=	-https://github.com/espressif/newlib-esp32/archive/46a44cc1111687d8297e35f9766493abd291e5cc.tar.gz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/espressif/gcc
