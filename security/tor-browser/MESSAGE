@@ -1,10 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: MESSAGE,v 1.2 2019/05/27 12:55:38 wiz Exp $
 
-This package provides basic Tor Browser.
-Be sure to run Tor daemon before your Tor Browser runs.
+This package provides the Tor Browser.
+Be sure to start the Tor daemon before you start Tor Browser.
 
-And you should install following extensions to ensude secure Tor connection.
+You should install the following extensions to ensure secure Tor connections:
 
 HTTPS Everywhere
 https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/
@@ -12,11 +12,8 @@ https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/
 NoScript Security Suite
 https://addons.mozilla.org/en-US/firefox/addon/noscript/
 
-TorButton
-https://dist.torproject.org/torbutton/
-
-net/tor provides localhost:9050 socks proxy. However Tor Browser and
-TorButton presumes localhost:9150 socks proxy. Be sure to change
-port number in TorButton preferences window.
+net/tor provides a socks proxy at localhost:9050. However, Tor Browser
+assumes a sock proxy at localhost:9150. Be sure to change the port
+number in the Tor Browser preferences.
 
 ===========================================================================
