@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2019/04/25 07:32:58 maya Exp $
+# $NetBSD: Makefile,v 1.25 2019/05/27 17:04:04 nia Exp $
 
 DISTNAME=	libepoxy-1.4.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=anholt/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
