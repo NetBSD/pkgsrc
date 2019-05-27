@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2277 2019/05/27 13:07:22 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.2278 2019/05/27 13:22:50 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3859,3 +3859,8 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/firefox60-l10n to 60.7.0 [ryoon 2019-05-27]
 	Updated mail/thunderbird to 60.7.0 [ryoon 2019-05-27]
 	Updated mail/thunderbird-l10n to 60.7.0 [ryoon 2019-05-27]
+	Updated devel/gettext-lib to 0.20.1 [ryoon 2019-05-27]
+	Updated devel/gettext-m4 to 0.20.1 [ryoon 2019-05-27]
+	Updated devel/gettext-asprintf to 0.20.1 [ryoon 2019-05-27]
+	Updated devel/gettext-tools to 0.20.1 [ryoon 2019-05-27]
+	Updated devel/gettext to 0.20.1 [ryoon 2019-05-27]
