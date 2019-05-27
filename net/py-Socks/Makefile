@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/06/16 14:19:42 bsiegert Exp $
+# $NetBSD: Makefile,v 1.5 2019/05/27 16:48:14 adam Exp $
 
-DISTNAME=	PySocks-1.6.8
+DISTNAME=	PySocks-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PySocks/}
