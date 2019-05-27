@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2019/04/28 19:13:00 nia Exp $
+# $NetBSD: Makefile,v 1.79 2019/05/27 11:19:22 tnn Exp $
 
 DISTNAME=	openttd-1.9.1-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--man-dir=${PKGMANDIR}/man6
 CONFIGURE_ARGS+=	--menu-dir=share/applications
 CONFIGURE_ARGS+=	--personal-dir=.openttd
 CONFIGURE_ARGS+=	--shared-dir=${VARBASE}/games/openttd
-CONFIGURE_ARGS+=	--with-iconv
+CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--with-lzo2=${BUILDLINK_PREFIX.lzo}/lib
 
 .include "../../mk/bsd.prefs.mk"
