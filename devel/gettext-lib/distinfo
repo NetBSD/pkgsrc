@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.33 2016/06/11 18:26:16 wiz Exp $
+$NetBSD: distinfo,v 1.34 2019/05/27 13:21:41 ryoon Exp $
 
-SHA1 (gettext-0.19.8.1.tar.gz) = b5d24ba2958c91fc5cc0058165837c99a0f58784
-RMD160 (gettext-0.19.8.1.tar.gz) = 29a5f29d186fe2aece5c450fd1a743b819c02c5b
-SHA512 (gettext-0.19.8.1.tar.gz) = 073042fa2dc48804c58e76f036130a669e19612c25427b0ab14d0b366b549a63751bf3af03bfd0745d7c4f72497a4b2aab26a3cc6de83189ce111679073878e1
-Size (gettext-0.19.8.1.tar.gz) = 19704011 bytes
+SHA1 (gettext-0.20.1.tar.gz) = 2aa01db95b064d7f5d1a46de34a2cc6a57eadf36
+RMD160 (gettext-0.20.1.tar.gz) = 6915ebc852a910c6ab64bffa88f580b64543c239
+SHA512 (gettext-0.20.1.tar.gz) = af6d74986da285df0bdd59524bdf01bb12db448e5ea659dda3b60b660c4a9063c80e8c74cc8751334e065e98348ee0db0079e43c67d485a15e86ae236115fe06
+Size (gettext-0.20.1.tar.gz) = 23267473 bytes
 SHA1 (patch-aa) = aed0e4e34c45fd442ee15254f494fe02c9dd55f7
-SHA1 (patch-ab) = bb975a36b3fe9e4411703caaf455e7eef530a0a7
-SHA1 (patch-gettext-runtime_configure) = ca1955ca85a106b10e89e5575350372d879f7bfb
+SHA1 (patch-ab) = 85ac0357dd3f977550fd0d51fce87e9ddbe42d07
