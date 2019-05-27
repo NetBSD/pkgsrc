@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.139 2019/05/22 13:32:51 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.140 2019/05/27 05:57:40 gutteridge Exp $
 bin/firefox
 lib/firefox/actors/AudioPlaybackChild.jsm
 lib/firefox/actors/AutoplayChild.jsm
@@ -2734,11 +2734,16 @@ lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/immuta
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/jsol.js
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/jszip.js
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/lodash.js
+${PLIST.debug}lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dev.js
+${PLIST.debug}lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-dev.js
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-factories.js
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-server.js
+${PLIST.debug}lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-server-dev.js
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-test-utils.js
+${PLIST.debug}lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-test-utils-dev.js
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom.js
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-prop-types.js
+${PLIST.debug}lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-prop-types-dev.js
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-redux.js
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-router-dom.js
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-test-renderer-shallow.js
@@ -3819,6 +3824,7 @@ lib/firefox/browser/chrome/webide/skin/wifi-auth.css
 lib/firefox/browser/components/EnterprisePolicies.js
 lib/firefox/browser/components/EnterprisePoliciesContent.js
 lib/firefox/browser/components/components.manifest
+${PLIST.debug}lib/firefox/browser/components/startupRecorder.js
 lib/firefox/browser/defaults/permissions
 lib/firefox/browser/defaults/preferences/debugger.js
 lib/firefox/browser/defaults/preferences/devtools-client.js
@@ -4360,6 +4366,9 @@ lib/firefox/chrome/en-US/locale/en-US/pippki/pippki.properties
 lib/firefox/chrome/en-US/locale/en-US/places/places.properties
 lib/firefox/chrome/en-US/locale/en-US/pluginproblem/pluginproblem.dtd
 lib/firefox/chrome/en-US/locale/en-US/services/sync.properties
+${PLIST.debug}lib/firefox/chrome/layoutdebug/content/layoutdebug/layoutdebug.js
+${PLIST.debug}lib/firefox/chrome/layoutdebug/content/layoutdebug/layoutdebug.xul
+${PLIST.debug}lib/firefox/chrome/layoutdebug/locale/en-US/layoutdebug/layoutdebug.dtd
 lib/firefox/chrome/marionette/content/accessibility.js
 lib/firefox/chrome/marionette/content/action.js
 lib/firefox/chrome/marionette/content/addon.js
