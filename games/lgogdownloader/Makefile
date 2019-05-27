@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/05/27 14:04:08 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2019/05/27 15:11:07 wiz Exp $
 
 DISTNAME=	lgogdownloader-3.5
 CATEGORIES=	games
@@ -7,7 +7,7 @@ MASTER_SITES=	http://sites.google.com/site/gogdownloader/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Sude-/lgogdownloader
 COMMENT=	Download games from GOG
-#LICENSE=	dwtfywtpl
+LICENSE=	public-domain # actually, dwtfywtpl
 
 BUILD_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
 
