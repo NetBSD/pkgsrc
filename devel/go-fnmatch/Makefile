@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2019/04/16 18:41:16 bsiegert Exp $
+# $NetBSD: Makefile,v 1.8 2019/05/27 15:18:25 bsiegert Exp $
 
 DISTNAME=	fnmatch-0.0.20160404
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 MASTER_SITES=	${MASTER_SITE_GITHUB:=danwakefield/}
 CATEGORIES=	devel
 GITHUB_TAG=	cbb64ac3d964b81592e64f957ad53df015803288
