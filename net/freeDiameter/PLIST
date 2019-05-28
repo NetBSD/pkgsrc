@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2013/09/14 13:55:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/05/28 13:05:20 wiz Exp $
 bin/freeDiameterd
-bin/freeDiameterd-${PKGVERSION}
+bin/freeDiameterd-1.2.1
 ${PLIST.ext}bin/freediameter-sip-ppr
 ${PLIST.ext}bin/freediameter-sip-rtr
 include/freeDiameter/extension.h
@@ -15,6 +15,7 @@ ${PLIST.ext}lib/freeDiameter/app_radgw.fdx
 ${PLIST.ext}lib/freeDiameter/app_redirect.fdx
 ${PLIST.ext}lib/freeDiameter/app_sip.fdx
 ${PLIST.ext}lib/freeDiameter/auth.rgwx
+lib/freeDiameter/dbg_loglevel.fdx
 lib/freeDiameter/dbg_monitor.fdx
 lib/freeDiameter/dbg_msg_dumps.fdx
 lib/freeDiameter/dbg_msg_timings.fdx
@@ -35,15 +36,18 @@ ${PLIST.ext}lib/freeDiameter/eap_identity.emp
 ${PLIST.ext}lib/freeDiameter/echodrop.rgwx
 lib/freeDiameter/rt_busypeers.fdx
 lib/freeDiameter/rt_default.fdx
+lib/freeDiameter/rt_deny_by_size.fdx
 ${PLIST.ext}lib/freeDiameter/rt_ereg.fdx
 lib/freeDiameter/rt_ignore_dh.fdx
 lib/freeDiameter/rt_load_balance.fdx
+lib/freeDiameter/rt_randomize.fdx
 lib/freeDiameter/rt_redirect.fdx
+lib/freeDiameter/rt_rewrite.fdx
 lib/libfdcore.so
-lib/libfdcore.so.${PKGVERSION}
+lib/libfdcore.so.1.2.1
 lib/libfdcore.so.6
 lib/libfdproto.so
-lib/libfdproto.so.${PKGVERSION}
+lib/libfdproto.so.1.2.1
 lib/libfdproto.so.6
 share/examples/freeDiameter/acl_wl.conf.sample
 share/examples/freeDiameter/app_acct.conf.sample
@@ -54,13 +58,17 @@ share/examples/freeDiameter/app_sip.conf.sample
 share/examples/freeDiameter/app_sip.sql
 share/examples/freeDiameter/app_sip_SL.sql
 share/examples/freeDiameter/dbg_interactive.py.sample
+share/examples/freeDiameter/dbg_loglevel.conf.sample
+share/examples/freeDiameter/dict_json.json.sample
 share/examples/freeDiameter/dict_legacy_xml.conf.sample
 share/examples/freeDiameter/eap_tls_plugin.diameap.conf.sample
 share/examples/freeDiameter/echodrop.rgwx.conf.sample
 share/examples/freeDiameter/freediameter.conf.sample
 share/examples/freeDiameter/rt_busypeers.conf.sample
 share/examples/freeDiameter/rt_default.conf.sample
+share/examples/freeDiameter/rt_deny_by_size.conf.sample
 share/examples/freeDiameter/rt_ereg.conf.sample
+share/examples/freeDiameter/rt_rewrite.conf.sample
 share/examples/freeDiameter/single_host/freeDiameter-1.conf
 share/examples/freeDiameter/single_host/freeDiameter-2.conf
 share/examples/freeDiameter/single_host/make_certs.sh
