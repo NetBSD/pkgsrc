@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2015/01/14 21:01:19 adam Exp $
+$NetBSD: MESSAGE.rcd,v 1.1 2019/05/28 13:40:40 jperkin Exp $
 
 To enable this package, put the following into your /etc/rc.conf:
 
