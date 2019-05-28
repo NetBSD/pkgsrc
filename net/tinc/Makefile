@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2018/09/30 15:55:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.29 2019/05/28 13:35:54 jperkin Exp $
 
 DISTNAME=	tinc-1.0.32
 PKGREVISION=	1
@@ -46,13 +46,7 @@ CONF_FILES_PERMS+=	${EGDIR}/tinc-up ${PKG_SYSCONFDIR}/default/tinc-up \
 CONF_FILES_PERMS+=	${EGDIR}/tinc-down ${PKG_SYSCONFDIR}/default/tinc-down \
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 755
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${INIT_SYSTEM} == "smf"
 SMF_METHODS=		tinc
-MESSAGE_SRC+=		MESSAGE.smf
-MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
-.endif
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/tinc.conf ${DESTDIR}${EGDIR}
