@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/04/22 21:40:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/05/28 07:47:14 adam Exp $
 include/matroska/FileKax.h
 include/matroska/KaxAttached.h
 include/matroska/KaxAttachments.h
@@ -28,10 +28,10 @@ include/matroska/KaxTypes.h
 include/matroska/KaxVersion.h
 include/matroska/c/libmatroska.h
 include/matroska/c/libmatroska_t.h
-lib/cmake/matroska/MatroskaConfig.cmake
-lib/cmake/matroska/MatroskaConfigVersion.cmake
-lib/cmake/matroska/MatroskaTargets-noconfig.cmake
-lib/cmake/matroska/MatroskaTargets.cmake
+lib/cmake/Matroska/MatroskaConfig.cmake
+lib/cmake/Matroska/MatroskaConfigVersion.cmake
+lib/cmake/Matroska/MatroskaTargets-noconfig.cmake
+lib/cmake/Matroska/MatroskaTargets.cmake
 lib/libmatroska.so
 lib/libmatroska.so.6
 lib/libmatroska.so.6.0.0
