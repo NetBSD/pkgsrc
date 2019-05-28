@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.15 2017/08/23 17:52:30 jlam Exp $
+# $NetBSD: metadata.mk,v 1.16 2019/05/28 13:32:06 jperkin Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -224,6 +224,12 @@ MESSAGE_SRC_DFLT+=	${PKGDIR}/MESSAGE.${OPSYS}-${MACHINE_ARCH:C/i[3-6]86/i386/g}
 .  endif
 .endif
 MESSAGE_SRC?=	${MESSAGE_SRC_DFLT}
+
+.if ${INIT_SYSTEM} == "rc.d" && exists(${PKGDIR}/MESSAGE.rcd)
+MESSAGE_SRC+=	${PKGDIR}/MESSAGE.rcd
+.elif ${INIT_SYSTEM} == "smf" && exists(${PKGDIR}/MESSAGE.smf)
+MESSAGE_SRC+=	${PKGDIR}/MESSAGE.smf
+.endif
 
 .if !empty(MESSAGE_SRC)
 _MESSAGE_FILE=		${PKG_DB_TMPDIR}/+DISPLAY
