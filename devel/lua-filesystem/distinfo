@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 03:27:47 agc Exp $
+$NetBSD: distinfo,v 1.6 2019/05/28 20:43:04 maya Exp $
 
-SHA1 (luafilesystem-1.6.3.tar.gz) = 72bc1415e7eefb339742538505675c59bd69e6bb
-RMD160 (luafilesystem-1.6.3.tar.gz) = cb949e36d9d09061be5eed9c67332cb3178250b5
-SHA512 (luafilesystem-1.6.3.tar.gz) = abfa1b3ac22ed80189560a1a025a7ea21a954defe14e5b539e08f266d180962a691262efc7eb2ddacc2d4aae14d6e356b1a276165b5bed46a13e4d6c61ab99f1
-Size (luafilesystem-1.6.3.tar.gz) = 30379 bytes
-SHA1 (patch-aa) = c287a1203f4a85e616ef3d31276aabfb0a1ed83d
+SHA1 (luafilesystem-1.7.0.tar.gz) = 910de0959ff72703b284c26783979b663c4dc0d2
+RMD160 (luafilesystem-1.7.0.tar.gz) = 6770d25f1d0928c347560425d7c5758788038fd9
+SHA512 (luafilesystem-1.7.0.tar.gz) = a1d4d077776e57cd878dbcd21656da141ea3686c587b5420a2b039aeaf086b7e7d05d531ee1cc2bbd7d06660d1315b09593e52143f6711f033ce8eecdc550511
+Size (luafilesystem-1.7.0.tar.gz) = 30877 bytes
+SHA1 (patch-Makefile) = 1fd838ba0f5a716ed1f8f7b7ed4fda816e702806
+SHA1 (patch-config) = 5d459797960118aa387f1f5cfb8bc6d7923965c8
