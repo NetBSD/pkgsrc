@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/05/28 14:10:04 wiz Exp $
+
+SHA1 (nltk-3.4.1.tar.gz) = fbb5cabe8cf9a17111307a2e66d69534f0dc6de9
+RMD160 (nltk-3.4.1.tar.gz) = 18e7920a9f66395c71228eb7da73f236ea83cb34
+SHA512 (nltk-3.4.1.tar.gz) = 738718cb21bae385528cc171d5949ffe85f3c35ae64949838064e889db640a46ce03ca5c2689f74236c44869fd81dcbf23d908f869c0d38968beb34e49949eb4
+Size (nltk-3.4.1.tar.gz) = 2814434 bytes
