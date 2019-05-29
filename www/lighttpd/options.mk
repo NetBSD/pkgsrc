@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.20 2019/01/29 12:31:46 wiz Exp $
+# $NetBSD: options.mk,v 1.21 2019/05/29 10:01:28 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lighttpd
 PKG_SUPPORTED_OPTIONS=	bzip2 fam gdbm inet6 ldap lua mysql ssl memcached geoip gssapi webdav
@@ -97,8 +97,8 @@ PLIST.ssl=		yes
 ### GeoIP support
 ###
 .if !empty(PKG_OPTIONS:Mgeoip)
-.  include "../../net/GeoIP/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-geoip
+.  include "../../geography/libmaxminddb/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-maxminddb
 PLIST.geoip=		yes
 .endif
 
