@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2018/06/24 11:43:49 adam Exp $
+$NetBSD: distinfo,v 1.13 2019/05/29 21:02:29 adam Exp $
 
-SHA1 (Babel-2.6.0.tar.gz) = 6aed99e4fb8a2a75de7815599f610cdcbb81e3c2
-RMD160 (Babel-2.6.0.tar.gz) = 8641980902522636ddc58983ff9ccfe1d421cb4c
-SHA512 (Babel-2.6.0.tar.gz) = a87f26c25f1e48a64d1e7ee112bc0c325a6268e0e716a81cb6814a53f0add8f3d579babd2ba064f160298ebe3ac9711aa5d28f112582ee287767b6ed8427b6e0
-Size (Babel-2.6.0.tar.gz) = 7960433 bytes
+SHA1 (Babel-2.7.0.tar.gz) = 5605f75353368d32500afb30e60fc8f0edbca506
+RMD160 (Babel-2.7.0.tar.gz) = 7f88ff1c2714287eb3dbda2c0ba6b104e522e767
+SHA512 (Babel-2.7.0.tar.gz) = 96314c7b26f6915a825e0344fa06e4f1d9a71b97a52b16f2f696c2e81c69318974547620135912b11edb95668a717ec49f1be68eef5a4753092d8e4cdc39a1e5
+Size (Babel-2.7.0.tar.gz) = 8244870 bytes
