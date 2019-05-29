@@ -1,0 +1,4 @@
+pypiserver is a minimal PyPI compatible server for pip or easy_install. It is
+based on bottle and serves packages from regular directories. Wheels, bdists,
+eggs and accompanying PGP-signatures can be uploaded either with pip,
+setuptools, twine, pypi-uploader, or simply copied with scp.
