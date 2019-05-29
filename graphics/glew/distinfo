@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.24 2016/07/11 16:18:29 jperkin Exp $
+$NetBSD: distinfo,v 1.25 2019/05/29 17:36:43 adam Exp $
 
-SHA1 (glew-1.13.0.tgz) = d5b1c499f429aa91c466193b4e8ea94a84019e37
-RMD160 (glew-1.13.0.tgz) = 4ed99bea403cbe72d05cfca25694b31209922f9f
-SHA512 (glew-1.13.0.tgz) = 8fc8d7c0d2cd9235ea51db9972f492701827bff40642fdb3cc54c10b0737dba8e6d8d0dcd8c5aa5bfaaae39c6198ba3d4292cd1662fbe1977eb9a5d187ba635f
-Size (glew-1.13.0.tgz) = 616070 bytes
-SHA1 (patch-ac) = a5827450e1ed54fff078da5d2d333a7c14a83660
-SHA1 (patch-config_Makefile.freebsd) = c0db8a34e983db81bbb7dc044155a063022d87d0
+SHA1 (glew-2.1.0.tgz) = 18eca05460d0b61709fc115e632b6fe320718b44
+RMD160 (glew-2.1.0.tgz) = 5eb23369a518f1f88970f8205bd060cd6d56eb8d
+SHA512 (glew-2.1.0.tgz) = 9a9b4d81482ccaac4b476c34ed537585ae754a82ebb51c3efa16d953c25cc3931be46ed2e49e79c730cd8afc6a1b78c97d52cd714044a339c3bc29734cd4d2ab
+Size (glew-2.1.0.tgz) = 764073 bytes
+SHA1 (patch-Makefile) = 2700c7dc81a6c4eea837ae649db6d5b1298b364e
+SHA1 (patch-config_Makefile.freebsd) = dcfdf2a6bde59529412bff2529d976df6c9bf6a4
 SHA1 (patch-config_Makefile.linux) = 49ae0366211065225c944cd0088af6e591f12aa9
-SHA1 (patch-config_Makefile.netbsd) = 2f0d014f4134f3bc1f69130f9c96e902ac788426
-SHA1 (patch-config_Makefile.openbsd) = bcedbcf96351be20be2e66f3472736a5e87c7fb1
+SHA1 (patch-config_Makefile.netbsd) = b7df2081f77ec7df0a6e7727c3ddcb68129e7e9c
+SHA1 (patch-config_Makefile.openbsd) = 838a0205c7f93eee35d2655926685d6bbc0a559e
