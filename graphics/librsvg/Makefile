@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.103 2019/02/22 20:50:54 tnn Exp $
+# $NetBSD: Makefile,v 1.104 2019/05/29 12:38:23 wiz Exp $
 
-DISTNAME=	librsvg-2.40.20
-PKGREVISION=	4
+DISTNAME=	librsvg-2.44.14
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,37 +10,165 @@ HOMEPAGE=	https://wiki.gnome.org/LibRsvg
 COMMENT=	SVG library for GNOME
 LICENSE=	gnu-lgpl-v2
 
-CONFLICTS+=	librsvg2-gtk-[0-9]* librsvg2-[0-9]*
+MAKE_JOBS_SAFE=	NO
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config gmake
+USE_TOOLS+=		pkg-config gmake aclocal autoconf automake
 USE_LANGUAGES+=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-tools
-CONFIGURE_ARGS+=	--enable-Bsymbolic=auto
+#CONFIGURE_ARGS+=	--enable-Bsymbolic=auto
+CONFIGURE_ARGS+=	--disable-Bsymbolic
 
 PKGCONFIG_OVERRIDE=	librsvg.pc.in
 
 TEST_TARGET=		check
 
-CONFIGURE_ARGS.Darwin+=	--disable-Bsymbolic
+pre-configure:
+	cd ${WRKSRC}; autoreconf -fiv
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.librsvg
-PKG_SUPPORTED_OPTIONS=	introspection
-PKG_SUGGESTED_OPTIONS=	introspection
-.include "../../mk/bsd.options.mk"
+CARGO_CRATE_DEPENDS+=	aho-corasick-0.6.8
+CARGO_CRATE_DEPENDS+=	alga-0.7.2
+CARGO_CRATE_DEPENDS+=	ansi_term-0.11.0
+CARGO_CRATE_DEPENDS+=	approx-0.3.0
+CARGO_CRATE_DEPENDS+=	arrayvec-0.4.7
+CARGO_CRATE_DEPENDS+=	atty-0.2.11
+CARGO_CRATE_DEPENDS+=	backtrace-0.3.9
+CARGO_CRATE_DEPENDS+=	backtrace-sys-0.1.24
+CARGO_CRATE_DEPENDS+=	bitflags-0.9.1
+CARGO_CRATE_DEPENDS+=	bitflags-1.0.4
+CARGO_CRATE_DEPENDS+=	byteorder-1.2.6
+CARGO_CRATE_DEPENDS+=	c_vec-1.3.2
+CARGO_CRATE_DEPENDS+=	cairo-rs-0.4.1
+CARGO_CRATE_DEPENDS+=	cairo-sys-rs-0.6.0
+CARGO_CRATE_DEPENDS+=	cast-0.2.2
+CARGO_CRATE_DEPENDS+=	cc-1.0.25
+CARGO_CRATE_DEPENDS+=	cfg-if-0.1.5
+CARGO_CRATE_DEPENDS+=	chrono-0.4.6
+CARGO_CRATE_DEPENDS+=	clap-2.32.0
+CARGO_CRATE_DEPENDS+=	cloudabi-0.0.3
+CARGO_CRATE_DEPENDS+=	criterion-0.2.5
+CARGO_CRATE_DEPENDS+=	criterion-plot-0.2.5
+CARGO_CRATE_DEPENDS+=	criterion-stats-0.2.5
+CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.2.0
+CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.3.1
+CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.2.2
+CARGO_CRATE_DEPENDS+=	cssparser-0.24.0
+CARGO_CRATE_DEPENDS+=	cssparser-macros-0.3.4
+CARGO_CRATE_DEPENDS+=	csv-1.0.2
+CARGO_CRATE_DEPENDS+=	csv-core-0.1.4
+CARGO_CRATE_DEPENDS+=	downcast-rs-1.0.3
+CARGO_CRATE_DEPENDS+=	dtoa-0.4.3
+CARGO_CRATE_DEPENDS+=	dtoa-short-0.3.2
+CARGO_CRATE_DEPENDS+=	either-1.5.0
+CARGO_CRATE_DEPENDS+=	failure-0.1.2
+CARGO_CRATE_DEPENDS+=	failure_derive-0.1.2
+CARGO_CRATE_DEPENDS+=	float-cmp-0.4.0
+CARGO_CRATE_DEPENDS+=	fuchsia-zircon-0.3.3
+CARGO_CRATE_DEPENDS+=	fuchsia-zircon-sys-0.3.3
+CARGO_CRATE_DEPENDS+=	gdk-pixbuf-0.4.0
+CARGO_CRATE_DEPENDS+=	gdk-pixbuf-sys-0.6.0
+CARGO_CRATE_DEPENDS+=	generic-array-0.11.1
+CARGO_CRATE_DEPENDS+=	gio-0.4.1
+CARGO_CRATE_DEPENDS+=	gio-sys-0.6.0
+CARGO_CRATE_DEPENDS+=	glib-0.5.0
+CARGO_CRATE_DEPENDS+=	glib-sys-0.6.0
+CARGO_CRATE_DEPENDS+=	gobject-sys-0.6.0
+CARGO_CRATE_DEPENDS+=	handlebars-0.32.4
+CARGO_CRATE_DEPENDS+=	itertools-0.7.8
+CARGO_CRATE_DEPENDS+=	itertools-num-0.1.2
+CARGO_CRATE_DEPENDS+=	itoa-0.4.3
+CARGO_CRATE_DEPENDS+=	kernel32-sys-0.2.2
+CARGO_CRATE_DEPENDS+=	language-tags-0.2.2
+CARGO_CRATE_DEPENDS+=	lazy_static-0.2.11
+CARGO_CRATE_DEPENDS+=	lazy_static-1.1.0
+CARGO_CRATE_DEPENDS+=	libc-0.2.43
+CARGO_CRATE_DEPENDS+=	libm-0.1.2
+CARGO_CRATE_DEPENDS+=	locale_config-0.2.2
+CARGO_CRATE_DEPENDS+=	log-0.4.5
+CARGO_CRATE_DEPENDS+=	matches-0.1.8
+CARGO_CRATE_DEPENDS+=	matrixmultiply-0.1.14
+CARGO_CRATE_DEPENDS+=	memchr-2.1.0
+CARGO_CRATE_DEPENDS+=	memoffset-0.2.1
+CARGO_CRATE_DEPENDS+=	nalgebra-0.16.4
+CARGO_CRATE_DEPENDS+=	nodrop-0.1.12
+CARGO_CRATE_DEPENDS+=	num-complex-0.2.0
+CARGO_CRATE_DEPENDS+=	num-integer-0.1.39
+CARGO_CRATE_DEPENDS+=	num-traits-0.2.6
+CARGO_CRATE_DEPENDS+=	num_cpus-1.8.0
+CARGO_CRATE_DEPENDS+=	owning_ref-0.3.3
+CARGO_CRATE_DEPENDS+=	pango-0.4.0
+CARGO_CRATE_DEPENDS+=	pango-sys-0.6.0
+CARGO_CRATE_DEPENDS+=	pangocairo-0.5.0
+CARGO_CRATE_DEPENDS+=	pangocairo-sys-0.7.0
+CARGO_CRATE_DEPENDS+=	pest-1.0.6
+CARGO_CRATE_DEPENDS+=	pest_derive-1.0.8
+CARGO_CRATE_DEPENDS+=	phf-0.7.23
+CARGO_CRATE_DEPENDS+=	phf_codegen-0.7.23
+CARGO_CRATE_DEPENDS+=	phf_generator-0.7.23
+CARGO_CRATE_DEPENDS+=	phf_shared-0.7.23
+CARGO_CRATE_DEPENDS+=	pkg-config-0.3.14
+CARGO_CRATE_DEPENDS+=	proc-macro2-0.4.19
+CARGO_CRATE_DEPENDS+=	procedural-masquerade-0.1.6
+CARGO_CRATE_DEPENDS+=	quick-error-1.2.2
+CARGO_CRATE_DEPENDS+=	quote-0.3.15
+CARGO_CRATE_DEPENDS+=	quote-0.6.8
+CARGO_CRATE_DEPENDS+=	rand-0.4.3
+CARGO_CRATE_DEPENDS+=	rand-0.5.5
+CARGO_CRATE_DEPENDS+=	rand_core-0.2.2
+CARGO_CRATE_DEPENDS+=	rand_core-0.3.0
+CARGO_CRATE_DEPENDS+=	rawpointer-0.1.0
+CARGO_CRATE_DEPENDS+=	rayon-1.0.2
+CARGO_CRATE_DEPENDS+=	rayon-core-1.4.1
+CARGO_CRATE_DEPENDS+=	redox_syscall-0.1.40
+CARGO_CRATE_DEPENDS+=	redox_termios-0.1.1
+CARGO_CRATE_DEPENDS+=	regex-0.2.11
+CARGO_CRATE_DEPENDS+=	regex-1.0.5
+CARGO_CRATE_DEPENDS+=	regex-syntax-0.5.6
+CARGO_CRATE_DEPENDS+=	regex-syntax-0.6.2
+CARGO_CRATE_DEPENDS+=	rustc-demangle-0.1.9
+CARGO_CRATE_DEPENDS+=	ryu-0.2.6
+CARGO_CRATE_DEPENDS+=	same-file-1.0.3
+CARGO_CRATE_DEPENDS+=	scopeguard-0.3.3
+CARGO_CRATE_DEPENDS+=	serde-1.0.79
+CARGO_CRATE_DEPENDS+=	serde_derive-1.0.79
+CARGO_CRATE_DEPENDS+=	serde_json-1.0.31
+CARGO_CRATE_DEPENDS+=	simplelog-0.5.2
+CARGO_CRATE_DEPENDS+=	siphasher-0.2.3
+CARGO_CRATE_DEPENDS+=	smallvec-0.6.5
+CARGO_CRATE_DEPENDS+=	stable_deref_trait-1.1.1
+CARGO_CRATE_DEPENDS+=	strsim-0.7.0
+CARGO_CRATE_DEPENDS+=	syn-0.11.11
+CARGO_CRATE_DEPENDS+=	syn-0.14.9
+CARGO_CRATE_DEPENDS+=	syn-0.15.7
+CARGO_CRATE_DEPENDS+=	synom-0.11.3
+CARGO_CRATE_DEPENDS+=	synstructure-0.9.0
+CARGO_CRATE_DEPENDS+=	term-0.5.1
+CARGO_CRATE_DEPENDS+=	termion-1.5.1
+CARGO_CRATE_DEPENDS+=	textwrap-0.10.0
+CARGO_CRATE_DEPENDS+=	thread-scoped-1.0.2
+CARGO_CRATE_DEPENDS+=	thread_local-0.3.6
+CARGO_CRATE_DEPENDS+=	time-0.1.40
+CARGO_CRATE_DEPENDS+=	typenum-1.10.0
+CARGO_CRATE_DEPENDS+=	ucd-util-0.1.1
+CARGO_CRATE_DEPENDS+=	unicode-width-0.1.5
+CARGO_CRATE_DEPENDS+=	unicode-xid-0.0.4
+CARGO_CRATE_DEPENDS+=	unicode-xid-0.1.0
+CARGO_CRATE_DEPENDS+=	unreachable-1.0.0
+CARGO_CRATE_DEPENDS+=	utf8-ranges-1.0.1
+CARGO_CRATE_DEPENDS+=	vec_map-0.8.1
+CARGO_CRATE_DEPENDS+=	version_check-0.1.5
+CARGO_CRATE_DEPENDS+=	void-1.0.2
+CARGO_CRATE_DEPENDS+=	walkdir-2.2.5
+CARGO_CRATE_DEPENDS+=	winapi-0.2.8
+CARGO_CRATE_DEPENDS+=	winapi-0.3.6
+CARGO_CRATE_DEPENDS+=	winapi-build-0.1.1
+CARGO_CRATE_DEPENDS+=	winapi-i686-pc-windows-gnu-0.4.0
+CARGO_CRATE_DEPENDS+=	winapi-util-0.1.1
+CARGO_CRATE_DEPENDS+=	winapi-x86_64-pc-windows-gnu-0.4.0
 
-PLIST_VARS+=	introspection
-
-.if !empty(PKG_OPTIONS:Mintrospection)
-PLIST.introspection=	yes
-CONFIGURE_ARGS+=	--enable-introspection
 BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-introspection
-.endif
-
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.24.0
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pango+=	pango>=1.38
@@ -58,4 +185,6 @@ BUILDLINK_API_DEPENDS.libcroco+=	libcroco>=0.6.1
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.9
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
+.include "../../lang/rust/buildlink3.mk"
+.include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
