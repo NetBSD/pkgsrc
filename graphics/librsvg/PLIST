@@ -1,26 +1,21 @@
-@comment $NetBSD: PLIST,v 1.18 2018/01/01 22:29:37 rillig Exp $
+@comment $NetBSD: PLIST,v 1.19 2019/05/29 12:38:23 wiz Exp $
 bin/rsvg-convert
-include/librsvg-2.0/librsvg/librsvg-enum-types.h
 include/librsvg-2.0/librsvg/librsvg-features.h
 include/librsvg-2.0/librsvg/rsvg-cairo.h
 include/librsvg-2.0/librsvg/rsvg.h
 lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-svg.la
-${PLIST.introspection}lib/girepository-1.0/Rsvg-2.0.typelib
+lib/girepository-1.0/Rsvg-2.0.typelib
 lib/librsvg-2.la
 lib/pkgconfig/librsvg-2.0.pc
 man/man1/rsvg-convert.1
-${PLIST.introspection}share/gir-1.0/Rsvg-2.0.gir
-share/gtk-doc/html/rsvg-2.0/RsvgHandle.html
+share/doc/librsvg/COMPILING.md
+share/doc/librsvg/CONTRIBUTING.md
+share/doc/librsvg/README.md
+share/doc/librsvg/code-of-conduct.md
+share/gir-1.0/Rsvg-2.0.gir
 share/gtk-doc/html/rsvg-2.0/annotation-glossary.html
-share/gtk-doc/html/rsvg-2.0/api-index-2-14.html
-share/gtk-doc/html/rsvg-2.0/api-index-2-22.html
-share/gtk-doc/html/rsvg-2.0/api-index-2-32.html
-share/gtk-doc/html/rsvg-2.0/api-index-2-36.html
-share/gtk-doc/html/rsvg-2.0/api-index-2-4.html
-share/gtk-doc/html/rsvg-2.0/api-index-2-8.html
-share/gtk-doc/html/rsvg-2.0/api-index-2-9.html
-share/gtk-doc/html/rsvg-2.0/api-index-deprecated.html
 share/gtk-doc/html/rsvg-2.0/api-index-full.html
+share/gtk-doc/html/rsvg-2.0/ch01.html
 share/gtk-doc/html/rsvg-2.0/home.png
 share/gtk-doc/html/rsvg-2.0/index.html
 share/gtk-doc/html/rsvg-2.0/left-insensitive.png
@@ -30,6 +25,7 @@ share/gtk-doc/html/rsvg-2.0/object-tree.html
 share/gtk-doc/html/rsvg-2.0/right-insensitive.png
 share/gtk-doc/html/rsvg-2.0/right.png
 share/gtk-doc/html/rsvg-2.0/rsvg-2.0.devhelp2
+share/gtk-doc/html/rsvg-2.0/rsvg-RsvgHandle.html
 share/gtk-doc/html/rsvg-2.0/rsvg-Using-RSVG-with-GIO.html
 share/gtk-doc/html/rsvg-2.0/rsvg-Using-RSVG-with-GdkPixbuf.html
 share/gtk-doc/html/rsvg-2.0/rsvg-Using-RSVG-with-cairo.html
