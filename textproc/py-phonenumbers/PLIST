@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2019/01/11 14:34:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/05/29 21:05:10 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -990,15 +990,6 @@ ${PYSITELIB}/phonenumbers/geodata/data23.pyo
 ${PYSITELIB}/phonenumbers/geodata/data24.py
 ${PYSITELIB}/phonenumbers/geodata/data24.pyc
 ${PYSITELIB}/phonenumbers/geodata/data24.pyo
-${PYSITELIB}/phonenumbers/geodata/data25.py
-${PYSITELIB}/phonenumbers/geodata/data25.pyc
-${PYSITELIB}/phonenumbers/geodata/data25.pyo
-${PYSITELIB}/phonenumbers/geodata/data26.py
-${PYSITELIB}/phonenumbers/geodata/data26.pyc
-${PYSITELIB}/phonenumbers/geodata/data26.pyo
-${PYSITELIB}/phonenumbers/geodata/data27.py
-${PYSITELIB}/phonenumbers/geodata/data27.pyc
-${PYSITELIB}/phonenumbers/geodata/data27.pyo
 ${PYSITELIB}/phonenumbers/geodata/data3.py
 ${PYSITELIB}/phonenumbers/geodata/data3.pyc
 ${PYSITELIB}/phonenumbers/geodata/data3.pyo
