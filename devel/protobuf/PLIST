@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2019/03/21 21:26:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2019/05/29 14:48:12 adam Exp $
 bin/protoc
 include/google/protobuf/any.h
 include/google/protobuf/any.pb.h
@@ -87,6 +87,7 @@ include/google/protobuf/stubs/fastmem.h
 include/google/protobuf/stubs/hash.h
 include/google/protobuf/stubs/logging.h
 include/google/protobuf/stubs/macros.h
+include/google/protobuf/stubs/map_util.h
 include/google/protobuf/stubs/mutex.h
 include/google/protobuf/stubs/once.h
 include/google/protobuf/stubs/platform_macros.h
@@ -112,7 +113,6 @@ include/google/protobuf/util/type_resolver.h
 include/google/protobuf/util/type_resolver_util.h
 include/google/protobuf/wire_format.h
 include/google/protobuf/wire_format_lite.h
-include/google/protobuf/wire_format_lite_inl.h
 include/google/protobuf/wrappers.pb.h
 include/google/protobuf/wrappers.proto
 lib/libprotobuf-lite.la
