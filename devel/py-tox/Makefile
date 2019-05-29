@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2019/05/17 08:39:14 adam Exp $
+# $NetBSD: Makefile,v 1.18 2019/05/29 19:56:50 adam Exp $
 
-DISTNAME=	tox-3.11.1
+DISTNAME=	tox-3.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tox/}
@@ -31,8 +31,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.22.2:../../devel/py-test-xdist
 USE_LANGUAGES=	# none
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} tox tox-${PYVERSSUFFIX} && \
-		${MV} tox-quickstart tox-quickstart-${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} tox tox-${PYVERSSUFFIX} && \
+	${MV} tox-quickstart tox-quickstart-${PYVERSSUFFIX} || ${TRUE}
 
 do-test:
 	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
