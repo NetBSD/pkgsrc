@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19039 2019/05/29 14:58:15 sevan Exp $
+$NetBSD: TODO,v 1.19040 2019/05/29 20:53:53 adam Exp $
 
 Suggested new packages
 ======================
@@ -729,7 +729,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gromacs-5.1.2
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
-	o gstreamer1-1.16.0
 	o gthumb-3.4.0
 	o gtkglarea-2.1.0
 	o gtklevel9-5.1
