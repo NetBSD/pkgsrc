@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.13 2018/05/23 20:43:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2019/05/29 20:51:47 adam Exp $
 include/gstreamer-1.0/gst/audio/audio-bad-prelude.h
 include/gstreamer-1.0/gst/audio/gstnonstreamaudiodecoder.h
+include/gstreamer-1.0/gst/audio/gstplanaraudioadapter.h
 include/gstreamer-1.0/gst/basecamerabinsrc/basecamerabinsrc-prelude.h
 include/gstreamer-1.0/gst/basecamerabinsrc/gstbasecamerasrc.h
 include/gstreamer-1.0/gst/basecamerabinsrc/gstcamerabin-enum.h
@@ -41,13 +42,13 @@ include/gstreamer-1.0/gst/player/gstplayer-visualization.h
 include/gstreamer-1.0/gst/player/gstplayer.h
 include/gstreamer-1.0/gst/player/player-prelude.h
 include/gstreamer-1.0/gst/player/player.h
+include/gstreamer-1.0/gst/sctp/sctp-prelude.h
+include/gstreamer-1.0/gst/sctp/sctpreceivemeta.h
+include/gstreamer-1.0/gst/sctp/sctpsendmeta.h
 include/gstreamer-1.0/gst/uridownloader/gstfragment.h
 include/gstreamer-1.0/gst/uridownloader/gsturidownloader.h
 include/gstreamer-1.0/gst/uridownloader/gsturidownloader_debug.h
 include/gstreamer-1.0/gst/uridownloader/uridownloader-prelude.h
-include/gstreamer-1.0/gst/video/gstvideoaggregator.h
-include/gstreamer-1.0/gst/video/gstvideoaggregatorpad.h
-include/gstreamer-1.0/gst/video/video-bad-prelude.h
 include/gstreamer-1.0/gst/webrtc/dtlstransport.h
 include/gstreamer-1.0/gst/webrtc/icetransport.h
 include/gstreamer-1.0/gst/webrtc/rtcsessiondescription.h
@@ -72,8 +73,8 @@ lib/gstreamer-1.0/libgstbayer.la
 lib/gstreamer-1.0/libgstbz2.la
 lib/gstreamer-1.0/libgstcamerabin.la
 lib/gstreamer-1.0/libgstcoloreffects.la
-lib/gstreamer-1.0/libgstcompositor.la
 lib/gstreamer-1.0/libgstdebugutilsbad.la
+lib/gstreamer-1.0/libgstdecklink.la
 lib/gstreamer-1.0/libgstdtls.la
 lib/gstreamer-1.0/libgstdvbsuboverlay.la
 lib/gstreamer-1.0/libgstdvdspu.la
@@ -112,7 +113,6 @@ lib/gstreamer-1.0/libgstsegmentclip.la
 lib/gstreamer-1.0/libgstsiren.la
 lib/gstreamer-1.0/libgstsmooth.la
 lib/gstreamer-1.0/libgstspeed.la
-lib/gstreamer-1.0/libgststereo.la
 lib/gstreamer-1.0/libgstsubenc.la
 lib/gstreamer-1.0/libgsttimecode.la
 lib/gstreamer-1.0/libgstvideofiltersbad.la
@@ -124,7 +124,6 @@ lib/gstreamer-1.0/libgsty4mdec.la
 lib/gstreamer-1.0/libgstyadif.la
 lib/libgstadaptivedemux-1.0.la
 lib/libgstbadaudio-1.0.la
-lib/libgstbadvideo-1.0.la
 lib/libgstbasecamerabinsrc-1.0.la
 lib/libgstcodecparsers-1.0.la
 lib/libgstinsertbin-1.0.la
@@ -132,22 +131,21 @@ lib/libgstisoff-1.0.la
 lib/libgstmpegts-1.0.la
 lib/libgstphotography-1.0.la
 lib/libgstplayer-1.0.la
+lib/libgstsctp-1.0.la
 lib/libgsturidownloader-1.0.la
 lib/libgstwebrtc-1.0.la
 lib/pkgconfig/gstreamer-bad-audio-1.0.pc
-lib/pkgconfig/gstreamer-bad-video-1.0.pc
 lib/pkgconfig/gstreamer-codecparsers-1.0.pc
 lib/pkgconfig/gstreamer-insertbin-1.0.pc
 lib/pkgconfig/gstreamer-mpegts-1.0.pc
 lib/pkgconfig/gstreamer-player-1.0.pc
 lib/pkgconfig/gstreamer-plugins-bad-1.0.pc
+lib/pkgconfig/gstreamer-sctp-1.0.pc
 lib/pkgconfig/gstreamer-webrtc-1.0.pc
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/GstPlayer.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/GstPlayerMediaInfo.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/GstPlayerVideoOverlayVideoRenderer.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/GstPlayerVisualization.html
-share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/GstVideoAggregator.html
-share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/GstVideoAggregatorPad.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/GstWebRTCDTLSTransport.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/GstWebRTCICETransport.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/GstWebRTCRTPReceiver.html
@@ -157,7 +155,7 @@ share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/GstWebRTCSessionDescription.
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/annotation-glossary.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/api-index-deprecated.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/api-index-full.html
-share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/ch07.html
+share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/ch06.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/codecparsers.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/compiling.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-1.0.devhelp2
@@ -192,7 +190,6 @@ share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/style.css
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/tools.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/up-insensitive.png
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/up.png
-share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/video.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/webrtc.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/camerabin.png
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/ch01.html
@@ -236,7 +233,6 @@ share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-c
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-coloreffects.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-combdetect.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-compare.html
-share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-compositor.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-curlfilesink.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-curlftpsink.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-curlhttpsink.html
@@ -295,11 +291,6 @@ share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-f
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-gaussianblur.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-gdpdepay.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-gdppay.html
-share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-glmixerbin.html
-share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-glmosaic.html
-share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-glstereomix.html
-share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-glvideomixer.html
-share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-glvideomixerelement.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-gmedec.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-grabcut.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-gsmdec.html
@@ -390,7 +381,6 @@ share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-p
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-chromaprint.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-coloreffects.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-colormanagement.html
-share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-compositor.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-curl.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-dashdemux.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-dc1394.html
@@ -451,7 +441,6 @@ share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-p
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-openal.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-opencv.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-openexr.html
-share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-openglmixers.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-openh264.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-openjpeg.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-opusparse.html
@@ -476,13 +465,11 @@ share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-p
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-spandsp.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-speed.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-srtp.html
-share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-stereo.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-subenc.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-teletext.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-timecode.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-ttmlsubs.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-uvch264.html
-share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-vcdsrc.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-vdpau.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-videofiltersbad.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-videoframe_audiolevel.html
@@ -547,11 +534,11 @@ share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-s
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-srtenc.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-srtpdec.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-srtpenc.html
-share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-stereo.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-stretch.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-synaescope.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-teletextdec.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-templatematch.html
+share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-testsrcbin.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-tiger.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-timecodestamper.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-tonegeneratesrc.html
@@ -566,7 +553,6 @@ share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-u
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-uvch264mjpgdemux.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-uvch264src.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-vc1parse.html
-share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-vcdsrc.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-vdpaumpegdec.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-videoanalyse.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-videodiff.html
@@ -609,6 +595,7 @@ share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/up-insensitive.png
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/up.png
 share/gstreamer-1.0/presets/GstFreeverb.prs
 share/locale/af/LC_MESSAGES/gst-plugins-bad-1.0.mo
+share/locale/ast/LC_MESSAGES/gst-plugins-bad-1.0.mo
 share/locale/az/LC_MESSAGES/gst-plugins-bad-1.0.mo
 share/locale/bg/LC_MESSAGES/gst-plugins-bad-1.0.mo
 share/locale/ca/LC_MESSAGES/gst-plugins-bad-1.0.mo

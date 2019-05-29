@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2017/02/03 17:10:49 maya Exp $
+# $NetBSD: options.mk,v 1.8 2019/05/29 20:51:47 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gstreamer
 PKG_SUPPORTED_OPTIONS=	gstreamer-gstcheck introspection gstreamer-ptp-suid
@@ -7,20 +7,22 @@ PKG_SUGGESTED_OPTIONS=	introspection
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=	gstcheck introspection
+
 .if !empty(PKG_OPTIONS:Mgstreamer-gstcheck)
 .include "../../devel/check/buildlink3.mk"
-PLIST.gstcheck=	yes
+PLIST.gstcheck=		yes
 # don't worry if the "GstABI" check fails -- GstPlugin contains
 # off_t and time_t which are system dependent
-TEST_TARGET=	check-torture
+TEST_TARGET=		check-torture
 .else
-CONFIGURE_ARGS+=--disable-check
+CONFIGURE_ARGS+=	--disable-check
 .endif
+
 .if !empty(PKG_OPTIONS:Mintrospection)
 .include "../../devel/gobject-introspection/buildlink3.mk"
-PLIST.introspection=yes
+PLIST.introspection=	yes
 .else
-CONFIGURE_ARGS+=--disable-introspection
+CONFIGURE_ARGS+=	--disable-introspection
 .endif
 
 .if !empty(PKG_OPTIONS:Mgstreamer-ptp-suid)

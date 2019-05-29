@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/04/17 22:10:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/05/29 20:51:48 adam Exp $
 lib/gstreamer-1.0/libgstasf.la
 lib/gstreamer-1.0/libgstdvdlpcmdec.la
 lib/gstreamer-1.0/libgstdvdsub.la
@@ -43,6 +43,7 @@ share/doc/gst-plugins-0.10/gst-plugins-ugly-plugins-1.0/style.css
 share/doc/gst-plugins-0.10/gst-plugins-ugly-plugins-1.0/up-insensitive.png
 share/doc/gst-plugins-0.10/gst-plugins-ugly-plugins-1.0/up.png
 share/locale/af/LC_MESSAGES/gst-plugins-ugly-1.0.mo
+share/locale/ast/LC_MESSAGES/gst-plugins-ugly-1.0.mo
 share/locale/az/LC_MESSAGES/gst-plugins-ugly-1.0.mo
 share/locale/bg/LC_MESSAGES/gst-plugins-ugly-1.0.mo
 share/locale/ca/LC_MESSAGES/gst-plugins-ugly-1.0.mo
@@ -79,6 +80,7 @@ share/locale/sl/LC_MESSAGES/gst-plugins-ugly-1.0.mo
 share/locale/sq/LC_MESSAGES/gst-plugins-ugly-1.0.mo
 share/locale/sr/LC_MESSAGES/gst-plugins-ugly-1.0.mo
 share/locale/sv/LC_MESSAGES/gst-plugins-ugly-1.0.mo
+share/locale/ta/LC_MESSAGES/gst-plugins-ugly-1.0.mo
 share/locale/tr/LC_MESSAGES/gst-plugins-ugly-1.0.mo
 share/locale/uk/LC_MESSAGES/gst-plugins-ugly-1.0.mo
 share/locale/vi/LC_MESSAGES/gst-plugins-ugly-1.0.mo

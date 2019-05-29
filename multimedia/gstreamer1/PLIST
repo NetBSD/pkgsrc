@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2018/04/17 22:10:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2019/05/29 20:51:47 adam Exp $
 bin/gst-inspect-1.0
 bin/gst-launch-1.0
 bin/gst-stats-1.0
@@ -12,6 +12,7 @@ include/gstreamer-1.0/gst/base/gstbasesink.h
 include/gstreamer-1.0/gst/base/gstbasesrc.h
 include/gstreamer-1.0/gst/base/gstbasetransform.h
 include/gstreamer-1.0/gst/base/gstbitreader.h
+include/gstreamer-1.0/gst/base/gstbitwriter.h
 include/gstreamer-1.0/gst/base/gstbytereader.h
 include/gstreamer-1.0/gst/base/gstbytewriter.h
 include/gstreamer-1.0/gst/base/gstcollectpads.h
@@ -282,6 +283,7 @@ share/gtk-doc/html/gstreamer-libs-1.0/gstreamer-control.html
 share/gtk-doc/html/gstreamer-libs-1.0/gstreamer-hierarchy.html
 share/gtk-doc/html/gstreamer-libs-1.0/gstreamer-libs-1.0.devhelp2
 share/gtk-doc/html/gstreamer-libs-1.0/gstreamer-libs-GstBitReader.html
+share/gtk-doc/html/gstreamer-libs-1.0/gstreamer-libs-GstBitWriter.html
 share/gtk-doc/html/gstreamer-libs-1.0/gstreamer-libs-GstBufferStraw.html
 share/gtk-doc/html/gstreamer-libs-1.0/gstreamer-libs-GstByteReader.html
 share/gtk-doc/html/gstreamer-libs-1.0/gstreamer-libs-GstByteWriter.html
