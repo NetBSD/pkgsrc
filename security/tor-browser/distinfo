@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2019/05/25 10:50:42 wiz Exp $
+$NetBSD: distinfo,v 1.10 2019/05/29 12:33:29 wiz Exp $
 
 SHA1 (src-firefox-tor-browser-60.7.0esr-8.5-1-build1.tar.xz) = 2521274bb159d2ed3a955094d19330cdb13b3041
 RMD160 (src-firefox-tor-browser-60.7.0esr-8.5-1-build1.tar.xz) = 41e5674c7eca8ea14cc57be16ffeed97a2753c1b
@@ -25,7 +25,7 @@ SHA1 (patch-js_src_wasm_WasmSignalHandlers.cpp) = 19a396b57b42f4b7b0861f08e4ae2b
 SHA1 (patch-media_libcubeb_gtest_moz.build) = 921a001726cda9e9782df5e59ae02b19d76ef47e
 SHA1 (patch-media_libcubeb_src_cubeb.c) = 1b1b8d57eb710cad13518ded79a0ddee2681881b
 SHA1 (patch-media_libcubeb_src_cubeb__alsa.c) = 3ee36f58bb525767c7d2b9e814ba4ccaa4868717
-SHA1 (patch-media_libcubeb_src_cubeb__oss.c) = ccd7ad6f09977dab358632107cfd9078b4649f99
+SHA1 (patch-media_libcubeb_src_cubeb__oss.c) = 103f751d5a7bc14a81a6ed43e1afc722bc092f7e
 SHA1 (patch-media_libcubeb_src_moz.build) = f243068c8908dcb16434221edef8c65db3bb0c83
 SHA1 (patch-media_libcubeb_update.sh) = 3a322de06bbe9aafba9da349954ef022bd094992
 SHA1 (patch-media_libpng_pngpriv.h) = c8084332560017cd7c9b519b61d125fa28af0dbc
