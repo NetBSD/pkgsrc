@@ -1,0 +1,25 @@
+$NetBSD: patch-libs_gst_helpers_Makefile.in,v 1.1 2019/05/29 20:58:44 adam Exp $
+
+Do not install gdb data.
+
+--- libs/gst/helpers/Makefile.in.orig	2019-04-18 23:09:14.000000000 +0000
++++ libs/gst/helpers/Makefile.in
+@@ -928,7 +928,7 @@ info: info-am
+ 
+ info-am:
+ 
+-install-data-am: install-dist_gdbDATA install-helpersPROGRAMS
++install-data-am: install-helpersPROGRAMS
+ 	@$(NORMAL_INSTALL)
+ 	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
+ install-dvi: install-dvi-am
+@@ -1007,9 +1007,6 @@ install-data-hook:
+ @HAVE_PTP_HELPER_SETUID_TRUE@@HAVE_PTP_TRUE@	- chmod u+s $(DESTDIR)$(helpersdir)/gst-ptp-helper
+ @HAVE_PTP_HELPER_CAPABILITIES_TRUE@@HAVE_PTP_TRUE@	- $(SETCAP) cap_net_bind_service,cap_net_admin+ep $(DESTDIR)$(helpersdir)/gst-ptp-helper
+ 
+-install-data-hook:
+-	$(INSTALL) -d $(DESTDIR)$(datadir)/gdb/auto-load$(libdir)
+-	$(INSTALL) $(builddir)/libgstreamer-gdb.py $(DESTDIR)$(datadir)/gdb/auto-load$(libdir)/libgstreamer-@GST_API_VERSION@.so.0.$(GST_CURRENT).$(GST_REVISION)-gdb.py
+ 
+ uninstall-hook:
+ 	rm -f "$(DESTDIR)$(datadir)/gdb/auto-load$(libdir)/libgstreamer-@GST_API_VERSION@.so.0.$(GST_CURRENT).$(GST_REVISION)-gdb.py"
