@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2309 2019/05/29 20:53:53 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2310 2019/05/29 21:05:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3913,3 +3913,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-cython to 0.29.9 [adam 2019-05-29]
 	Updated www/py-flask-caching to 1.7.2 [adam 2019-05-29]
 	Updated multimedia/gstreamer1 to 1.16.0 [adam 2019-05-29]
+	Updated devel/py-babel to 2.7.0 [adam 2019-05-29]
+	Updated textproc/py-phonenumbers to 8.10.12 [adam 2019-05-29]
