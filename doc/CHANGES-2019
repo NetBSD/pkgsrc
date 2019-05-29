@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2298 2019/05/29 10:19:25 sjmulder Exp $
+$NetBSD: CHANGES-2019,v 1.2299 2019/05/29 12:29:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3893,3 +3893,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added sysutils/u-boot-bananapro version 2018.11 [thorpej 2019-05-29]
 	Updated www/lighttpd to 1.4.54 [nia 2019-05-29]
 	Updated sysutils/nnn to 2.5 [sjmulder 2019-05-29]
+	Updated graphics/libotf to 0.9.16nb1 [ryoon 2019-05-29]
