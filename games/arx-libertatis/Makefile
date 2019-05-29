@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2018/01/14 17:33:57 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2019/05/29 19:52:49 adam Exp $
 
 DISTNAME=	arx-libertatis-1.1.2
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=project/arx/arx-libertatis-1.1.2/}
 EXTRACT_SUFX=	.tar.xz
