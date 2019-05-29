@@ -1,0 +1,28 @@
+$NetBSD: patch-Makefile.am,v 1.1 2019/05/29 12:38:23 wiz Exp $
+
+Rename rust-produced shared library.
+When it ends on "_pic.a", libtool accepts that its code is good
+enough to be included in the shared library.
+
+--- Makefile.am.orig	2019-02-16 00:13:18.000000000 +0000
++++ Makefile.am
+@@ -136,7 +136,8 @@ cargo_verbose_ = $(cargo_verbose_$(AM_DE
+ cargo_verbose_0 =
+ cargo_verbose_1 = --verbose
+ 
+-RUST_LIB=@abs_top_builddir@/target/@RUST_TARGET_SUBDIR@/librsvg_internals.a
++RUST_LIB_NONPIC=@abs_top_builddir@/target/@RUST_TARGET_SUBDIR@/librsvg_internals.a
++RUST_LIB=@abs_top_builddir@/target/@RUST_TARGET_SUBDIR@/librsvg_internals_pic.a
+ CARGO_TARGET_DIR=@abs_top_builddir@/target
+ 
+ check-local:
+@@ -165,7 +166,8 @@ $(RUST_LIB): $(RUST_SRC)
+ 	PKG_CONFIG_ALLOW_CROSS=1						\
+ 	PKG_CONFIG='$(PKG_CONFIG)'						\
+ 	CARGO_TARGET_DIR=$(CARGO_TARGET_DIR)					\
+-	$(CARGO) --locked build $(CARGO_VERBOSE) $(CARGO_TARGET_ARGS) $(CARGO_RELEASE_ARGS)
++	$(CARGO) --locked build $(CARGO_VERBOSE) $(CARGO_TARGET_ARGS) $(CARGO_RELEASE_ARGS) && \
++	cp $(RUST_LIB_NONPIC) $(RUST_LIB)
+ 
+ librsvg_@RSVG_API_MAJOR_VERSION@_la_CPPFLAGS = \
+ 	-I$(top_srcdir) 			\
