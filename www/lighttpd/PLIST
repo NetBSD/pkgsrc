@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2018/08/14 06:24:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2019/05/29 10:01:28 nia Exp $
 lib/lighttpd/mod_access.la
 lib/lighttpd/mod_accesslog.la
 lib/lighttpd/mod_alias.la
@@ -18,9 +18,9 @@ lib/lighttpd/mod_expire.la
 lib/lighttpd/mod_extforward.la
 lib/lighttpd/mod_fastcgi.la
 lib/lighttpd/mod_flv_streaming.la
-${PLIST.geoip}lib/lighttpd/mod_geoip.la
 lib/lighttpd/mod_indexfile.la
 ${PLIST.lua}lib/lighttpd/mod_magnet.la
+${PLIST.geoip}lib/lighttpd/mod_maxminddb.la
 ${PLIST.mysql}lib/lighttpd/mod_mysql_vhost.la
 ${PLIST.ssl}lib/lighttpd/mod_openssl.la
 lib/lighttpd/mod_proxy.la
@@ -44,6 +44,8 @@ lib/lighttpd/mod_usertrack.la
 lib/lighttpd/mod_vhostdb.la
 ${PLIST.ldap}lib/lighttpd/mod_vhostdb_ldap.la
 ${PLIST.ldap}lib/lighttpd/mod_vhostdb_ldap.so
+${PLIST.mysql}lib/lighttpd/mod_vhostdb_mysql.la
+${PLIST.mysql}lib/lighttpd/mod_vhostdb_mysql.la
 lib/lighttpd/mod_webdav.la
 lib/lighttpd/mod_wstunnel.la
 man/man8/lighttpd-angel.8
