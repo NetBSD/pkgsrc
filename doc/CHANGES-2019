@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2304 2019/05/29 14:49:19 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2305 2019/05/29 17:50:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3900,3 +3900,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/librsvg to 2.44.14 [wiz 2019-05-29]
 	Updated devel/protobuf to 3.8.0 [adam 2019-05-29]
 	Updated devel/py-protobuf to 3.8.0 [adam 2019-05-29]
+	Updated graphics/glew to 2.1.0 [adam 2019-05-29]
+	Updated databases/rrdtool to 1.7.2 [adam 2019-05-29]
+	Updated databases/py-rrdtool to 1.7.2 [adam 2019-05-29]
+	Updated databases/ruby-rrdtool to 1.7.2 [adam 2019-05-29]
