@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2019/04/09 07:51:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/05/29 19:56:50 adam Exp $
 bin/tox-${PYVERSSUFFIX}
 bin/tox-quickstart-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -58,9 +58,24 @@ ${PYSITELIB}/tox/helper/get_version.pyo
 ${PYSITELIB}/tox/hookspecs.py
 ${PYSITELIB}/tox/hookspecs.pyc
 ${PYSITELIB}/tox/hookspecs.pyo
-${PYSITELIB}/tox/interpreters.py
-${PYSITELIB}/tox/interpreters.pyc
-${PYSITELIB}/tox/interpreters.pyo
+${PYSITELIB}/tox/interpreters/__init__.py
+${PYSITELIB}/tox/interpreters/__init__.pyc
+${PYSITELIB}/tox/interpreters/__init__.pyo
+${PYSITELIB}/tox/interpreters/py_spec.py
+${PYSITELIB}/tox/interpreters/py_spec.pyc
+${PYSITELIB}/tox/interpreters/py_spec.pyo
+${PYSITELIB}/tox/interpreters/unix.py
+${PYSITELIB}/tox/interpreters/unix.pyc
+${PYSITELIB}/tox/interpreters/unix.pyo
+${PYSITELIB}/tox/interpreters/via_path.py
+${PYSITELIB}/tox/interpreters/via_path.pyc
+${PYSITELIB}/tox/interpreters/via_path.pyo
+${PYSITELIB}/tox/interpreters/windows/__init__.py
+${PYSITELIB}/tox/interpreters/windows/__init__.pyc
+${PYSITELIB}/tox/interpreters/windows/__init__.pyo
+${PYSITELIB}/tox/interpreters/windows/pep514.py
+${PYSITELIB}/tox/interpreters/windows/pep514.pyc
+${PYSITELIB}/tox/interpreters/windows/pep514.pyo
 ${PYSITELIB}/tox/logs/__init__.py
 ${PYSITELIB}/tox/logs/__init__.pyc
 ${PYSITELIB}/tox/logs/__init__.pyo
