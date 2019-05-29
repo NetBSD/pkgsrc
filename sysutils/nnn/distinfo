@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/03/19 22:42:39 leot Exp $
+$NetBSD: distinfo,v 1.5 2019/05/29 10:18:50 sjmulder Exp $
 
-SHA1 (nnn-2.4.tar.gz) = 3134355c9f283fef98a175c1909f6bdec8c37cff
-RMD160 (nnn-2.4.tar.gz) = 14946e35fdae44e610ff6cfb4c15a39a40d738a0
-SHA512 (nnn-2.4.tar.gz) = b285b14bb73e81a8480b19be7adf0b6efebc632cae82cddf9f040e644dd07dfef4e5c27df2e318aaa21eb1ac4d9e20b6d89f66b8e9b481160bc49f1302806722
-Size (nnn-2.4.tar.gz) = 62510 bytes
+SHA1 (nnn-2.5.tar.gz) = f6ebfe389c7c2a1a2410eb01a20eb9b9ab66d9fd
+RMD160 (nnn-2.5.tar.gz) = fe817ba2d50cde019e1f5675541ddf2d28dccccd
+SHA512 (nnn-2.5.tar.gz) = eb50b5368811a9b93caa385a94b2e6a63705bd0ba1db4dc9a3a628a42d11547d53095736e4afa6f73037064b2ef883fe9a60cb048279ba0dd9889503de7e5167
+Size (nnn-2.5.tar.gz) = 71811 bytes
