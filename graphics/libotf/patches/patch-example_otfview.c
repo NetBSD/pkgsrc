@@ -1,4 +1,4 @@
-$NetBSD: patch-example_otfview.c,v 1.1 2019/05/29 12:29:00 ryoon Exp $
+$NetBSD: patch-example_otfview.c,v 1.2 2019/05/29 12:54:10 ryoon Exp $
 
 * Fix a runtime crash on NetBSD.
 
@@ -8,7 +8,7 @@ $NetBSD: patch-example_otfview.c,v 1.1 2019/05/29 12:29:00 ryoon Exp $
  #include <sys/stat.h>
  #include <unistd.h>
  #include <libgen.h>
-+#include <sys/param.h>
++#include <limits.h>
  
  #include "config.h"
  #ifdef HAVE_ALLOCA_H
@@ -19,7 +19,7 @@ $NetBSD: patch-example_otfview.c,v 1.1 2019/05/29 12:29:00 ryoon Exp $
 -  char *fname = basename (filename);
 +  char *tmpfname = basename (filename);
 +  size_t len = strlen(tmpfname);
-+  char fname[MAXPATHLEN];
++  char fname[NAME_MAX];
 +  snprintf(fname, len + 1, "%s", tmpfname);
    char *name = alloca (strlen (fname) + 3 + strlen (pname) + 1);
  
