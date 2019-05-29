@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2019/05/07 08:07:01 adam Exp $
+# $NetBSD: Makefile,v 1.5 2019/05/29 20:40:56 adam Exp $
 
-DISTNAME=	Flask-Caching-1.7.1
+DISTNAME=	Flask-Caching-1.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Caching/}
