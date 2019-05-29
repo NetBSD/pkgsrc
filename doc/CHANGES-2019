@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2302 2019/05/29 12:35:10 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2303 2019/05/29 12:38:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3897,3 +3897,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/firefox60 to 60.7.0nb1 [wiz 2019-05-29]
 	Updated security/tor-browser to 8.5.60.7.0nb1 [wiz 2019-05-29]
 	Added graphics/librsvg-c version 2.40.20nb4 [wiz 2019-05-29]
+	Updated graphics/librsvg to 2.44.14 [wiz 2019-05-29]
