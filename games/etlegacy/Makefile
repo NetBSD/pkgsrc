@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2019/05/18 17:29:47 nia Exp $
+# $NetBSD: Makefile,v 1.3 2019/05/29 19:52:49 adam Exp $
 
 PKGNAME=	etlegacy-2.76
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 
 DIST_SUBDIR=	etlegacy-${PKGVERSION_NOREV}
