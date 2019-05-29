@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2019/03/21 21:29:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2019/05/29 14:49:01 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -67,6 +67,9 @@ ${PYSITELIB}/google/protobuf/internal/encoder.pyo
 ${PYSITELIB}/google/protobuf/internal/enum_type_wrapper.py
 ${PYSITELIB}/google/protobuf/internal/enum_type_wrapper.pyc
 ${PYSITELIB}/google/protobuf/internal/enum_type_wrapper.pyo
+${PYSITELIB}/google/protobuf/internal/extension_dict.py
+${PYSITELIB}/google/protobuf/internal/extension_dict.pyc
+${PYSITELIB}/google/protobuf/internal/extension_dict.pyo
 ${PYSITELIB}/google/protobuf/internal/message_listener.py
 ${PYSITELIB}/google/protobuf/internal/message_listener.pyc
 ${PYSITELIB}/google/protobuf/internal/message_listener.pyo
