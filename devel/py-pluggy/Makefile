@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2019/05/09 11:58:21 adam Exp $
+# $NetBSD: Makefile,v 1.12 2019/05/29 19:54:47 adam Exp $
 
-DISTNAME=	pluggy-0.11.0
+DISTNAME=	pluggy-0.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pluggy/}
@@ -11,6 +11,7 @@ COMMENT=	Plugin and hook calling mechanisms for python
 LICENSE=	mit
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=0.12:../../devel/py-importlib-metadata
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
