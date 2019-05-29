@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2019/05/29 10:01:28 nia Exp $
+@comment $NetBSD: PLIST,v 1.20 2019/05/29 11:02:22 nia Exp $
 lib/lighttpd/mod_access.la
 lib/lighttpd/mod_accesslog.la
 lib/lighttpd/mod_alias.la
@@ -44,7 +44,6 @@ lib/lighttpd/mod_usertrack.la
 lib/lighttpd/mod_vhostdb.la
 ${PLIST.ldap}lib/lighttpd/mod_vhostdb_ldap.la
 ${PLIST.ldap}lib/lighttpd/mod_vhostdb_ldap.so
-${PLIST.mysql}lib/lighttpd/mod_vhostdb_mysql.la
 ${PLIST.mysql}lib/lighttpd/mod_vhostdb_mysql.la
 lib/lighttpd/mod_webdav.la
 lib/lighttpd/mod_wstunnel.la
