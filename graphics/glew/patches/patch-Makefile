@@ -1,12 +1,12 @@
-$NetBSD: patch-ac,v 1.14 2016/07/07 14:59:37 jperkin Exp $
+$NetBSD: patch-Makefile,v 1.1 2019/05/29 17:36:43 adam Exp $
 
 On Darwin, do not put GLU as required lib in glew.pc.
 Use LDFLAGS for linking.
 
---- Makefile.orig	2015-08-10 11:47:22.000000000 +0000
+--- Makefile.orig	2017-07-31 11:25:39.000000000 +0000
 +++ Makefile
-@@ -47,8 +47,10 @@ LIBDIR    ?= $(GLEW_DEST)/lib
- INCDIR    ?= $(GLEW_DEST)/include/GL
+@@ -48,8 +48,10 @@ INCDIR    ?= $(GLEW_DEST)/include/GL
+ PKGDIR    ?= $(GLEW_DEST)/lib/pkgconfig
  
  ifneq ($(GLEW_NO_GLU), -DGLEW_NO_GLU)
 +ifneq ($(SYSTEM), darwin)
@@ -14,9 +14,9 @@ Use LDFLAGS for linking.
  endif
 +endif
  
- DIST_NAME     ?= glew-$(GLEW_VERSION)
+ DIST_NAME    ?= glew-$(GLEW_VERSION)
  DIST_SRC_ZIP ?= $(shell pwd)/$(DIST_NAME).zip
-@@ -115,7 +117,7 @@ ifneq ($(STRIP),)
+@@ -119,7 +121,7 @@ ifneq ($(STRIP),)
  endif
  
  lib/$(LIB.SHARED): $(LIB.SOBJS)
@@ -25,16 +25,7 @@ Use LDFLAGS for linking.
  ifneq ($(LN),)
  	$(LN) $(LIB.SHARED) lib/$(LIB.SONAME)
  	$(LN) $(LIB.SHARED) lib/$(LIB.DEVLNK)
-@@ -163,7 +165,7 @@ ifneq ($(STRIP),)
- endif
- 
- lib/$(LIB.SHARED.MX): $(LIB.SOBJS.MX)
--	$(LD) $(LDFLAGS.SO.MX) -o $@ $^ $(LIB.LDFLAGS) $(LIB.LIBS)
-+	$(CC) $(LDFLAGS) $(LDFLAGS.SO.MX) -o $@ $^ $(LIB.LDFLAGS) $(LIB.LIBS)
- ifneq ($(LN),)
- 	$(LN) $(LIB.SHARED.MX) lib/$(LIB.SONAME.MX)
- 	$(LN) $(LIB.SHARED.MX) lib/$(LIB.DEVLNK.MX)
-@@ -222,13 +224,13 @@ bin:
+@@ -178,13 +180,13 @@ bin:
  	mkdir bin
  
  bin/$(GLEWINFO.BIN): $(GLEWINFO.BIN.OBJ) lib/$(LIB.SHARED)
