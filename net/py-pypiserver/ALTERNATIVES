@@ -1,0 +1,1 @@
+bin/pypi-server @PREFIX@/bin/pypi-server-@PYVERSSUFFIX@
