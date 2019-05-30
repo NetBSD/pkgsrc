@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/03/05 17:16:32 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/05/30 10:26:03 jaapb Exp $
 ${OCAML_SITELIB}/lwt_log/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt_log/core/lwt_log_core.a
 ${OCAML_SITELIB}/lwt_log/core/lwt_log_core.cma
