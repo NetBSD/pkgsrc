@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.5 2019/03/05 17:16:32 jaapb Exp $
+# $NetBSD: Makefile,v 1.6 2019/05/30 10:26:03 jaapb Exp $
 
 DISTNAME=	lwt_log-1.1.0
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel security
-MASTER_SITES=	${MASTER_SITE_GITHUB:=aantron/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 GITHUB_PROJECT=	lwt_log
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	https://github.com/aantron/lwt_log/
+HOMEPAGE=	https://github.com/ocsigen/lwt_log/
 COMMENT=	Lwt-friendly logging library
 LICENSE=	gnu-lgpl-v2.1
 
