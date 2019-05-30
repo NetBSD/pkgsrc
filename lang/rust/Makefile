@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2019/05/14 15:48:15 he Exp $
+# $NetBSD: Makefile,v 1.99 2019/05/30 14:36:15 jperkin Exp $
 
 DISTNAME=	rustc-1.34.2-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -42,8 +42,10 @@ CONFIGURE_ARGS+=	--disable-llvm-static-stdcpp
 CONFIGURE_ARGS+=	--disable-ninja
 # XXX: to be enabled in the future
 #CONFIGURE_ARGS+=	--jemalloc-root=${BUILDLINK_PREFIX.jemalloc}/lib
-#CONFIGURE_ARGS+=	--enable-llvm-link-shared
-#CONFIGURE_ARGS+=	--llvm-root=${BUILDLINK_PREFIX.llvm}
+
+# The bundled LLVM current has issues building on SunOS.
+CONFIGURE_ARGS+=	--enable-llvm-link-shared
+CONFIGURE_ARGS+=	--llvm-root=${BUILDLINK_PREFIX.llvm}
 
 # Use "dist" build target for cross compile of bootstrap
 #BUILD_TARGET=		dist
@@ -130,6 +132,13 @@ CHECK_PORTABILITY_SKIP+=	src/vendor/openssl-src/openssl/.travis-create-release.s
 GCC_REQD+=	4.8
 
 .include "../../mk/bsd.prefs.mk"
+
+# The bundled LLVM current has issues building on SunOS.
+.if ${OPSYS} == "SunOS"
+.include "../../lang/llvm/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-llvm-link-shared
+CONFIGURE_ARGS+=	--llvm-root=${BUILDLINK_PREFIX.llvm}
+.endif
 
 #
 # Under NetBSD, do not use DT_RUNPATH
@@ -467,7 +476,6 @@ stage0-bootstrap: install
 .include "../../devel/cmake/buildlink3.mk"
 #.include "../../devel/jemalloc/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-#.include "../../lang/llvm/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
