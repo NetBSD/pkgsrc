@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2018/12/06 20:30:31 adam Exp $
+# $NetBSD: Makefile,v 1.16 2019/05/30 05:10:55 adam Exp $
 
-DISTNAME=	markdown2-2.3.7
+DISTNAME=	markdown2-2.3.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/markdown2/}
@@ -16,7 +16,7 @@ REPLACE_PYTHON=	lib/markdown2.py
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} markdown2 markdown2-${PYVERSSUFFIX} || ${TRUE}
+	${MV} markdown2 markdown2-${PYVERSSUFFIX} || ${TRUE}
 
 do-test:
 	cd ${WRKSRC}/test && ${PYTHONBIN} test.py
