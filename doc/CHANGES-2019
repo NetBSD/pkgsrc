@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2315 2019/05/30 09:29:33 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.2316 2019/05/30 09:35:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3922,3 +3922,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-freezegun to 0.3.12 [adam 2019-05-30]
 	Updated devel/ocaml-base to 0.12.2 [jaapb 2019-05-30]
 	Updated devel/ocaml-ppxlib to 0.8.0 [jaapb 2019-05-30]
+	Updated www/py-autobahn to 19.5.1 [adam 2019-05-30]
+	Updated www/py-hyperlink to 19.0.0 [adam 2019-05-30]
