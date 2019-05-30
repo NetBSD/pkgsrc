@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/03/05 12:31:17 adam Exp $
+$NetBSD: distinfo,v 1.5 2019/05/30 09:34:38 adam Exp $
 
-SHA1 (hyperlink-18.0.0.tar.gz) = f51f4495795e51ae9468a13dd79ff26b3f457f40
-RMD160 (hyperlink-18.0.0.tar.gz) = 3a6a0286143a584a5989bcf74e07dfd26a150639
-SHA512 (hyperlink-18.0.0.tar.gz) = 21b5f88f7aaa3f2b0b60566fdb0fefdf6d42866060606dac181c8e3d357c76a5c23fa5dc982812af2b7d49dc1f9d623bd5bea89bf2cf31916c855bc4ae85589d
-Size (hyperlink-18.0.0.tar.gz) = 97625 bytes
+SHA1 (hyperlink-19.0.0.tar.gz) = 7a1541bdf91f678f4581babd5556c9a8cbb7d46e
+RMD160 (hyperlink-19.0.0.tar.gz) = b996d17692e60718e03e984df3c3fd072d930c0c
+SHA512 (hyperlink-19.0.0.tar.gz) = 5d5723bc0bd0c381edd3a9ef7bab3ba9ad4252027d5a4afa61e6cfff3e5b8457994b6dd36ecc356e638d41f797fe3367a3010249e0e77bee6e9e94336c1e7c2e
+Size (hyperlink-19.0.0.tar.gz) = 99099 bytes
