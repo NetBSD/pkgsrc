@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2313 2019/05/30 05:13:42 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2314 2019/05/30 09:22:45 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3920,3 +3920,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/soundtouch to 2.1.2 [adam 2019-05-29]
 	Updated textproc/py-markdown2 to 2.3.8 [adam 2019-05-30]
 	Updated devel/py-freezegun to 0.3.12 [adam 2019-05-30]
+	Updated devel/ocaml-base to 0.12.2 [jaapb 2019-05-30]
