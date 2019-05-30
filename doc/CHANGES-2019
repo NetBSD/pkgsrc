@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2316 2019/05/30 09:35:24 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2317 2019/05/30 20:05:51 he Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3924,3 +3924,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ocaml-ppxlib to 0.8.0 [jaapb 2019-05-30]
 	Updated www/py-autobahn to 19.5.1 [adam 2019-05-30]
 	Updated www/py-hyperlink to 19.0.0 [adam 2019-05-30]
+	Updated security/opendnssec to 1.4.13nb9 [he 2019-05-30]
