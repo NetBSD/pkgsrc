@@ -1,22 +1,18 @@
-$NetBSD: patch-deps_uv_src_unix_netbsd.c,v 1.9 2018/05/03 21:19:16 fhajny Exp $
+$NetBSD: patch-deps_uv_src_unix_netbsd.c,v 1.10 2019/05/31 20:52:00 adam Exp $
 
 Bring back support for NetBSD<8.
 
---- deps/uv/src/unix/netbsd.c.orig	2018-04-24 14:41:22.000000000 +0000
+--- deps/uv/src/unix/netbsd.c.orig	2019-05-28 21:32:17.000000000 +0000
 +++ deps/uv/src/unix/netbsd.c
-@@ -40,6 +40,11 @@
- #include <unistd.h>
- #include <time.h>
+@@ -32,6 +32,7 @@
+ #include <stdlib.h>
+ #include <fcntl.h>
  
-+/* For __NetBSD_Version__ */
-+#ifdef __NetBSD__
-+# include <sys/param.h>
-+#endif
-+
- static uv_mutex_t process_title_mutex;
- static uv_once_t process_title_mutex_once = UV_ONCE_INIT;
- static char *process_title;
-@@ -87,7 +92,11 @@ int uv_exepath(char* buffer, size_t* siz
++#include <sys/param.h>
+ #include <sys/resource.h>
+ #include <sys/types.h>
+ #include <sys/sysctl.h>
+@@ -78,7 +79,11 @@ int uv_exepath(char* buffer, size_t* siz
    mib[0] = CTL_KERN;
    mib[1] = KERN_PROC_ARGS;
    mib[2] = -1;
