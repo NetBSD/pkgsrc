@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2326 2019/05/31 14:42:58 jperkin Exp $
+$NetBSD: CHANGES-2019,v 1.2327 2019/05/31 17:09:43 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3939,3 +3939,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/prometheus to 2.10.0 [adam 2019-05-31]
 	Updated lang/rust to 1.35.0 [jperkin 2019-05-31]
 	Added databases/postgres_exporter version 0.4.7 [jperkin 2019-05-31]
+	Added mail/mhpgp version 20070530 [leot 2019-05-31]
