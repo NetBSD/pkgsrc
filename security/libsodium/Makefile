@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2019/01/07 08:36:03 adam Exp $
+# $NetBSD: Makefile,v 1.15 2019/05/31 20:49:02 adam Exp $
 
-DISTNAME=	libsodium-1.0.17
+DISTNAME=	libsodium-1.0.18
 CATEGORIES=	security
 MASTER_SITES=	https://download.libsodium.org/libsodium/releases/
 
