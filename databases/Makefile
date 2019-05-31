@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.580 2019/05/21 05:52:18 adam Exp $
+# $NetBSD: Makefile,v 1.581 2019/05/31 14:42:45 jperkin Exp $
 
 COMMENT=	Databases
 
@@ -282,6 +282,7 @@ SUBDIR+=	poco-data
 SUBDIR+=	poco-data-mysql
 SUBDIR+=	poco-data-odbc
 SUBDIR+=	poco-data-sqlite
+SUBDIR+=	postgres_exporter
 SUBDIR+=	postgresql-pgroonga
 SUBDIR+=	postgresql-pljava
 SUBDIR+=	postgresql-postgis2
