@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2019/05/19 23:13:03 nia Exp $
+# $NetBSD: options.mk,v 1.12 2019/05/31 18:11:51 maya Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -12,14 +12,9 @@ PKG_SUPPORTED_OPTIONS+=		alsa jack openal pulseaudio
 PKG_SUPPORTED_OPTIONS+=		udev
 .endif
 
-PKG_SUGGESTED_OPTIONS+=		sdl2 freetype
+PKG_SUGGESTED_OPTIONS+=		sdl2 freetype x11
 PKG_SUGGESTED_OPTIONS.Linux+=	alsa libdrm pulseaudio mbedtls udev
 PKG_SUGGESTED_OPTIONS.NetBSD+=	mbedtls
-
-.if ${OPSYS} != "NetBSD" || ${X11_TYPE} == "modular"
-# XXX figure out why the builtin x server crashes on exit
-PKG_SUGGESTED_OPTIONS+=		x11
-.endif
 
 PKG_OPTIONS_OPTIONAL_GROUPS+=	gl
 PKG_OPTIONS_GROUP.gl+=		opengl
