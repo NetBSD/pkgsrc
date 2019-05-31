@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/07/05 11:39:10 adam Exp $
+# $NetBSD: Makefile,v 1.5 2019/05/31 12:37:04 adam Exp $
 
-DISTNAME=	pycountry-18.5.26
+DISTNAME=	pycountry-18.12.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	geography python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycountry/}
