@@ -1,0 +1,63 @@
+$NetBSD: patch-mhsign,v 1.1 2019/05/31 17:09:01 leot Exp $
+
+Use gpg2.
+
+--- mhsign.orig	2007-05-30 15:12:22.000000000 +0000
++++ mhsign
+@@ -117,7 +117,7 @@ trap "rm -rf $TEMP" 0 1 2 15
+ 
+ 	### lookupkeyring address -- lookup one address in keyring
+ 	lookupkeyring(){
+-		key=`gpg --list-keys "$1" 2>/dev/null`
++		key=`gpg2 --list-keys "$1" 2>/dev/null`
+ 		if [ $? = 0 ] ; then
+ 			echo "$key" | sed -n -e "/^pub/s=^[^/]*/\([^ 	]*\).*=0x\1=p" |
+ 				head -1
+@@ -212,11 +212,11 @@ trap "rm -rf $TEMP" 0 1 2 15
+ 	detachsign(){
+ 		case "$mimefixbody" in
+ 		 y)
+-			gpg -u "$userid" --armor $pgp2opts --textmode \
++			gpg2 -u "$userid" --armor $pgp2opts --textmode \
+ 			 --detach-sign < $TEMP/body > $TEMP/body.asc
+ 			;;
+ 		 *)
+-			gpg -u "$userid" --armor $pgp2opts --no-textmode \
++			gpg2 -u "$userid" --armor $pgp2opts --no-textmode \
+ 			 --detach-sign < $TEMP/body > $TEMP/body.asc
+ 			;;
+ 		esac
+@@ -224,7 +224,7 @@ trap "rm -rf $TEMP" 0 1 2 15
+ 
+ 	### sign --- inline signature for $TEMP/body, output in $TEMP/body.asc
+ 	sign(){
+-		gpg -u "$userid" --armor $pgp2opts --textmode --clearsign \
++		gpg2 -u "$userid" --armor $pgp2opts --textmode --clearsign \
+ 			< $TEMP/body > $TEMP/body.asc
+ 	}
+ 
+@@ -238,19 +238,19 @@ trap "rm -rf $TEMP" 0 1 2 15
+ 
+ 		if [ "$keytype" = R ] ; then 	## pgp2 compatible
+ 		 status=1
+-		 gpg --no-options --no-secmem-warning --pgp2 -b \
++		 gpg2 --no-options --no-secmem-warning --pgp2 -b \
+ 			-u "$userid" $TEMP/body
+-		 gpg --store -z 0 --output $TEMP/body.lit $TEMP/body
++		 gpg2 --store -z 0 --output $TEMP/body.lit $TEMP/body
+ 		 cat $TEMP/body.sig $TEMP/body.lit |
+-		  gpg --no-options --no-literal --store \
++		  gpg2 --no-options --no-literal --store \
+ 		   --no-secmem-warning --compress-algo 1 \
+ 		   --output $TEMP/body.z
+-		 gpg --no-encrypt-to --pgp2 --cipher-algo idea --no-literal \
++		 gpg2 --no-encrypt-to --pgp2 --cipher-algo idea --no-literal \
+ 		  --always-trust --encrypt -r "$userid" $R \
+ 		  -o $TEMP/body.asc --armor $TEMP/body.z
+ 		 status=$?
+ 		else
+-		 gpg --no-encrypt-to --pgp6 -u "$userid" --armor --textmode \
++		 gpg2 --no-encrypt-to --pgp6 -u "$userid" --armor --textmode \
+ 		  --always-trust --output $TEMP/body.asc -r "$userid" $R \
+ 		  --sign --encrypt $TEMP/body
+ 		 status=$?
