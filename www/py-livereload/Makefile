@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/12/02 16:37:17 adam Exp $
+# $NetBSD: Makefile,v 1.6 2019/05/31 17:34:34 adam Exp $
 
-DISTNAME=	livereload-2.6.0
+DISTNAME=	livereload-2.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/livereload/}
@@ -17,7 +17,7 @@ USE_LANGUAGES=	# none
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} livereload livereload-${PYVERSSUFFIX} || ${TRUE}
+	${MV} livereload livereload-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
