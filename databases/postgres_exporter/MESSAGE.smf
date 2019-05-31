@@ -1,0 +1,13 @@
+===========================================================================
+$NetBSD: MESSAGE.smf,v 1.1 2019/05/31 14:42:04 jperkin Exp $
+
+To configure postgres_exporter adjust the environment variables in:
+
+	${PKG_SYSCONFDIR}/env.conf
+
+Additional queries can be configured in:
+
+	${PKG_SYSCONFDIR}/queries.yaml
+
+Ensure these files retain appropriately secure permissions.
+===========================================================================
