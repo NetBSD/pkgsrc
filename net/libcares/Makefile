@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2018/11/28 08:53:18 adam Exp $
+# $NetBSD: Makefile,v 1.26 2019/05/31 08:09:41 adam Exp $
 
 DISTNAME=	c-ares-1.15.0
 PKGNAME=	${DISTNAME:S/c-/libc/1}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://c-ares.haxx.se/download/
 
@@ -10,13 +11,7 @@ HOMEPAGE=	https://c-ares.haxx.se/
 COMMENT=	Asynchronous resolver library, c-ares
 LICENSE=	mit
 
-USE_LIBTOOL=		yes
-USE_TOOLS+=		automake autoreconf
-GNU_CONFIGURE=		yes
-PKGCONFIG_OVERRIDE+=	libcares.pc.in
-
-pre-configure:
-	${RM} -f ${WRKSRC}/m4/xc-val-flgs.m4
-	cd ${WRKSRC} && autoreconf -fiv
+USE_CMAKE=	yes
+CMAKE_ARGS+=	-DCARES_STATIC=ON
 
 .include "../../mk/bsd.pkg.mk"
