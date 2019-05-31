@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2019/02/28 09:06:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2019/05/31 17:28:48 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -74,6 +74,9 @@ ${PYSITELIB}/cryptography/hazmat/backends/openssl/hmac.pyo
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/ocsp.py
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/ocsp.pyc
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/ocsp.pyo
+${PYSITELIB}/cryptography/hazmat/backends/openssl/poly1305.py
+${PYSITELIB}/cryptography/hazmat/backends/openssl/poly1305.pyc
+${PYSITELIB}/cryptography/hazmat/backends/openssl/poly1305.pyo
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/rsa.py
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/rsa.pyc
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/rsa.pyo
@@ -194,12 +197,12 @@ ${PYSITELIB}/cryptography/hazmat/primitives/kdf/x963kdf.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/keywrap.py
 ${PYSITELIB}/cryptography/hazmat/primitives/keywrap.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/keywrap.pyo
-${PYSITELIB}/cryptography/hazmat/primitives/mac.py
-${PYSITELIB}/cryptography/hazmat/primitives/mac.pyc
-${PYSITELIB}/cryptography/hazmat/primitives/mac.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/padding.py
 ${PYSITELIB}/cryptography/hazmat/primitives/padding.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/padding.pyo
+${PYSITELIB}/cryptography/hazmat/primitives/poly1305.py
+${PYSITELIB}/cryptography/hazmat/primitives/poly1305.pyc
+${PYSITELIB}/cryptography/hazmat/primitives/poly1305.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/serialization/__init__.py
 ${PYSITELIB}/cryptography/hazmat/primitives/serialization/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/serialization/__init__.pyo
