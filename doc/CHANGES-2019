@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2329 2019/05/31 17:37:42 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2330 2019/05/31 18:12:27 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3945,3 +3945,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/py-cryptography_vectors to 2.7 [adam 2019-05-31]
 	Updated www/py-livereload to 2.6.1 [adam 2019-05-31]
 	Updated www/py-h11 to 0.9.0 [adam 2019-05-31]
+	Updated emulators/retroarch to 1.7.7nb6 [maya 2019-05-31]
