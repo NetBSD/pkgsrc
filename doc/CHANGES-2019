@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2319 2019/05/31 09:24:14 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.2320 2019/05/31 09:24:32 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3928,3 +3928,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/libcares to 1.15.0nb1 [adam 2019-05-31]
 	Updated net/grpc to 1.21.2 [adam 2019-05-31]
 	Updated lang/gcc8 to 8.3.0 [kamil 2019-05-31]
+	Updated lang/gcc8-libs to 8.3.0nb1 [kamil 2019-05-31]
