@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2019/03/21 10:23:45 adam Exp $
+$NetBSD: distinfo,v 1.11 2019/05/31 12:43:54 adam Exp $
 
-SHA1 (cfscrape-1.9.7.tar.gz) = a3400af5bc82fa074a158c34ad23940df5bfde0b
-RMD160 (cfscrape-1.9.7.tar.gz) = 74f5008f1393494a610e303a7eaa0f415d8216c7
-SHA512 (cfscrape-1.9.7.tar.gz) = eb6d817ed732f7f268aba9cec3c78331d590ebf11c831b9901231b03f170a72e2e9383f550bc1157ee859a78cd77d528bae07931dc99438cceb3128715082c24
-Size (cfscrape-1.9.7.tar.gz) = 8596 bytes
+SHA1 (cfscrape-2.0.5.tar.gz) = 162f6abb2b4a975859af9ddd617e84d29e5f5b1d
+RMD160 (cfscrape-2.0.5.tar.gz) = 55c06277b48b10c07966fb48e1b13f3082c01d35
+SHA512 (cfscrape-2.0.5.tar.gz) = 3119fe3f69811e85a6f1b8ecffa10f331c611d15f8910d70147edebd77cd71311a5743520066885316c0145d27ec4700e2ce2cca730caa04e946b2e23bbc268e
+Size (cfscrape-2.0.5.tar.gz) = 12310 bytes
