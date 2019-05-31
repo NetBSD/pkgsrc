@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1250 2019/05/29 20:13:09 adam Exp $
+# $NetBSD: Makefile,v 1.1251 2019/05/31 17:19:36 leot Exp $
 #
 
 COMMENT=	Networking tools
@@ -756,6 +756,7 @@ SUBDIR+=	rootprobe
 SUBDIR+=	rp-l2tp
 SUBDIR+=	rp-pppoe
 SUBDIR+=	rsync
+SUBDIR+=	rt4-cli
 SUBDIR+=	rtmpdump
 SUBDIR+=	rtorrent
 SUBDIR+=	ruby-addressable
