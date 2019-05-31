@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2320 2019/05/31 09:24:32 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.2321 2019/05/31 10:06:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3929,3 +3929,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/grpc to 1.21.2 [adam 2019-05-31]
 	Updated lang/gcc8 to 8.3.0 [kamil 2019-05-31]
 	Updated lang/gcc8-libs to 8.3.0nb1 [kamil 2019-05-31]
+	Updated graphics/libimagequant to 2.12.3 [adam 2019-05-31]
+	Updated graphics/pngquant to 2.12.3 [adam 2019-05-31]
