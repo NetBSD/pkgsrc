@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2019/04/04 09:35:59 adam Exp $
+# $NetBSD: Makefile,v 1.4 2019/05/31 20:54:11 adam Exp $
 
-DISTNAME=	oath-1.4.2
+DISTNAME=	oath-1.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python security www
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/oath/}

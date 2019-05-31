@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/04/04 09:35:59 adam Exp $
+$NetBSD: distinfo,v 1.3 2019/05/31 20:54:11 adam Exp $
 
-SHA1 (oath-1.4.2.tar.gz) = 3e5bf17290af52d6f6a1bd84dafabd80ff4147ef
-RMD160 (oath-1.4.2.tar.gz) = f618f53f2614a467881f51ab450015d861f5977c
-SHA512 (oath-1.4.2.tar.gz) = ac1ae56f1a37d03e29c06267bb2abd3e9edf4e045765e3fa7c5f90bb26962a4d645e14a6aee3170676474de363999be9851335e5408efbb2390e7139b1e46517
-Size (oath-1.4.2.tar.gz) = 109856 bytes
+SHA1 (oath-1.4.3.tar.gz) = ae2adeec6caa96745be9dd5bdc1f5aec11de14d7
+RMD160 (oath-1.4.3.tar.gz) = d729c74090cc49502265957025c3ba8a84ed1ae9
+SHA512 (oath-1.4.3.tar.gz) = 7bb2288e494138da0ae098ea13945357afb3b76791c2cf34de73a701e3ae7553ec09a4f3ce9e2dd06708b6b4dad42a9725e91febab49bbb1a0ac138097f51935
+Size (oath-1.4.3.tar.gz) = 109858 bytes
