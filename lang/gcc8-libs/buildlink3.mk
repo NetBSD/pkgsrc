@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2018/09/15 03:08:16 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2019/05/31 09:23:57 kamil Exp $
 
 BUILDLINK_TREE+=	gcc8-libs
 
@@ -6,9 +6,9 @@ BUILDLINK_TREE+=	gcc8-libs
 GCC8_LIBS_BUILDLINK3_MK:=
 
 .if !empty(USE_PKGSRC_GCC_RUNTIME:M[Yy][Ee][Ss])
-BUILDLINK_API_DEPENDS.gcc8-libs+=	gcc8-libs>=8.2.0
+BUILDLINK_API_DEPENDS.gcc8-libs+=	gcc8-libs>=8.3.0
 .else
-BUILDLINK_API_DEPENDS.gcc8-libs+=	{gcc8,gcc8-libs}>=8.2.0
+BUILDLINK_API_DEPENDS.gcc8-libs+=	{gcc8,gcc8-libs}>=8.3.0
 .endif
 BUILDLINK_PKGSRCDIR.gcc8-libs=		../../lang/gcc8-libs
 BUILDLINK_DEPMETHOD.gcc8-libs?=		full
