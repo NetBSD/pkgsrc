@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2019/02/28 09:06:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2019/05/31 17:28:48 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -554,6 +554,7 @@ ${PYSITELIB}/cryptography_vectors/pkcs12/cert-none-key-none.p12
 ${PYSITELIB}/cryptography_vectors/pkcs12/cert-rc2-key-3des.p12
 ${PYSITELIB}/cryptography_vectors/pkcs12/no-cert-key-aes256cbc.p12
 ${PYSITELIB}/cryptography_vectors/pkcs12/no-password.p12
+${PYSITELIB}/cryptography_vectors/poly1305/rfc7539.txt
 ${PYSITELIB}/cryptography_vectors/twofactor/rfc-4226.txt
 ${PYSITELIB}/cryptography_vectors/twofactor/rfc-6238.txt
 ${PYSITELIB}/cryptography_vectors/x509/PKITS_data/ReadMe.txt
@@ -2174,12 +2175,14 @@ ${PYSITELIB}/cryptography_vectors/x509/custom/nc_permitted_2.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/nc_permitted_excluded.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/nc_permitted_excluded_2.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/nc_single_ip_netmask.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/negative_serial.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/ocsp_nocheck.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/pc_inhibit.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/pc_inhibit_require.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/pc_require.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/policy_constraints_explicit.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/post2000utctime.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/rsa_pss.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/san_dirname.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/san_email_dns_ip_dirname_uri.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/san_empty_hostname.pem
