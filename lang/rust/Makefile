@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2019/05/30 14:36:15 jperkin Exp $
+# $NetBSD: Makefile,v 1.100 2019/05/31 07:21:53 jperkin Exp $
 
 DISTNAME=	rustc-1.34.2-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -42,10 +42,6 @@ CONFIGURE_ARGS+=	--disable-llvm-static-stdcpp
 CONFIGURE_ARGS+=	--disable-ninja
 # XXX: to be enabled in the future
 #CONFIGURE_ARGS+=	--jemalloc-root=${BUILDLINK_PREFIX.jemalloc}/lib
-
-# The bundled LLVM current has issues building on SunOS.
-CONFIGURE_ARGS+=	--enable-llvm-link-shared
-CONFIGURE_ARGS+=	--llvm-root=${BUILDLINK_PREFIX.llvm}
 
 # Use "dist" build target for cross compile of bootstrap
 #BUILD_TARGET=		dist
