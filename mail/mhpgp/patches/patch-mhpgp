@@ -1,0 +1,31 @@
+$NetBSD: patch-mhpgp,v 1.1 2019/05/31 17:09:01 leot Exp $
+
+Use gpg2.
+
+--- mhpgp.orig	2007-05-30 15:12:22.000000000 +0000
++++ mhpgp
+@@ -86,7 +86,7 @@ case "$mt" in
+  "")	echo "I can't find a PGP message there" >&2
+ 	exit 1 ;;
+  ms)	;;	## postpone this one
+- ps)	gpg --verify $FILE
++ ps)	gpg2 --verify $FILE
+ 	exit ;;
+  me|pe)	### we can cheat, and combine these
+ 	sed -n -e ':a
+@@ -99,7 +99,7 @@ case "$mt" in
+ 		b x
+ 		:y
+ 		n
+-		b y' $FILE | gpg --output $TEMP/msg --decrypt
++		b y' $FILE | gpg2 --output $TEMP/msg --decrypt
+ 	X=`tail -1c $TEMP/msg`
+ 	if [ "$X" != "" ] ; then echo >> $TEMP/msg ; fi # make sure trailing \n
+ 	if [ "$outfile" = "" ] ; then
+@@ -158,5 +158,5 @@ sed -e '/^--'"$xbdry"'[ 	]*$/,$d' \
+ sed -e '1,/^--'"$xbdry"'[ 	]*$/d' $TEMP/body |
+ 	sed -n -e '/BEGIN PGP /,/END PGP /p' > $TEMP/msg.asc
+ 
+-gpg --verify $TEMP/msg.asc
++gpg2 --verify $TEMP/msg.asc
+ 
