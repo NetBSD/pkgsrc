@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2328 2019/05/31 17:20:02 leot Exp $
+$NetBSD: CHANGES-2019,v 1.2329 2019/05/31 17:37:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3941,3 +3941,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Added databases/postgres_exporter version 0.4.7 [jperkin 2019-05-31]
 	Added mail/mhpgp version 20070530 [leot 2019-05-31]
 	Added net/rt4-cli version 4.4.4 [leot 2019-05-31]
+	Updated security/py-cryptography to 2.7 [adam 2019-05-31]
+	Updated security/py-cryptography_vectors to 2.7 [adam 2019-05-31]
+	Updated www/py-livereload to 2.6.1 [adam 2019-05-31]
+	Updated www/py-h11 to 0.9.0 [adam 2019-05-31]
