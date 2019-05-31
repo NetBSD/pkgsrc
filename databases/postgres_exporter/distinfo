@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/05/31 14:42:04 jperkin Exp $
+
+SHA1 (postgres_exporter-0.4.7.tar.gz) = 1fc973ef659b653e4dcfe27e1cb1dd6a38403709
+RMD160 (postgres_exporter-0.4.7.tar.gz) = a0d5acf380fb04b054c3c8090714eceab3a44b84
+SHA512 (postgres_exporter-0.4.7.tar.gz) = 81afce765830a5c16597f0ac9a95d21466edb20e40cff8e26079663db75f0051a6e0eb4ff828eb825b51a6fc52b3b534e0f6ffbb2ecf2c94e2ec8656de4a2ff6
+Size (postgres_exporter-0.4.7.tar.gz) = 3699251 bytes
