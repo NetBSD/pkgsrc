@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/05/31 17:19:25 leot Exp $
+
+SHA1 (rt-4.4.4.tar.gz) = e2c9ed8716a180638b4ce34a05d67bcc6c4c0935
+RMD160 (rt-4.4.4.tar.gz) = 10eb3df55a30d3cba154b36d40b5970fd2cebe50
+SHA512 (rt-4.4.4.tar.gz) = 95335cfa9e7107300670a5e8631ffb6f402895dae051201d051ac01885b0cb185f838a666acaec773e0f670e1b9d16b7cede72f37ce9832fd83a9da8514e6972
+Size (rt-4.4.4.tar.gz) = 9977845 bytes
