@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2322 2019/05/31 10:39:29 maya Exp $
+$NetBSD: CHANGES-2019,v 1.2323 2019/05/31 12:44:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3932,3 +3932,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/libimagequant to 2.12.3 [adam 2019-05-31]
 	Updated graphics/pngquant to 2.12.3 [adam 2019-05-31]
 	Updated www/firefox to 67.0nb2 [maya 2019-05-31]
+	Updated geography/py-country to 18.12.8 [adam 2019-05-31]
+	Updated www/py-django2 to 2.1.8 [adam 2019-05-31]
+	Updated security/py-cryptodome to 3.8.2 [adam 2019-05-31]
+	Updated www/py-cfscrape to 2.0.5 [adam 2019-05-31]
