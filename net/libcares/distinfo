@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.17 2018/11/28 08:53:18 adam Exp $
+$NetBSD: distinfo,v 1.18 2019/05/31 08:09:41 adam Exp $
 
 SHA1 (c-ares-1.15.0.tar.gz) = 74a50c02b7f051c4fb66c0f60f187350f196d908
 RMD160 (c-ares-1.15.0.tar.gz) = a819b9eec9864cca80bf9a2e0669d1ef4190bb91
 SHA512 (c-ares-1.15.0.tar.gz) = a1de6c5e7e1a6a13c926aae690e83d5caa51e7313d63da1cf2af6bc757c41d585aad5466bc3ba7b7f7793cb1748fa589f40972b196728851c8b059cfc8c3be50
 Size (c-ares-1.15.0.tar.gz) = 1347687 bytes
-SHA1 (patch-Makefile.am) = aef2a0e1975aadab33e647752fd44e30fbfb568a
-SHA1 (patch-configure.ac) = 0327491be4565b5121811d42288bd1d79b7c1241
-SHA1 (patch-m4_cares-compilers.m4) = 3a5cf27d33ebb7803eab873c6adfc6a70fa4a782
-SHA1 (patch-m4_xc-cc-check.m4) = b979d60f1ecb5008b145ade55281c6e2a59be613
+SHA1 (patch-CMakeLists.txt) = 14becd3317e36320ec01ee2d01c775674c178ad6
