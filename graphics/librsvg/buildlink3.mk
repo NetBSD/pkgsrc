@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.47 2019/05/29 12:38:23 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.48 2019/06/01 13:55:31 wiz Exp $
 
 BUILDLINK_TREE+=	librsvg
 
@@ -10,21 +10,9 @@ BUILDLINK_ABI_DEPENDS.librsvg+=		librsvg>=2.40.20nb4
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-# platforms where pkgsrc supports lang/rust
-.if (${MACHINE_ARCH} == "aarch64" \
-  || ${MACHINE_ARCH} == "armv7" \
-  || ${MACHINE_ARCH} == "i386" \
-  || ${MACHINE_ARCH} == "powerpc" \
-  || ${MACHINE_ARCH} == "sparc64" \
-  || ${MACHINE_ARCH} == "x86_64") \
-  && \
- (${OPSYS} == "Darwin" \
- || ${OPSYS} == "FreeBSD" \
- || ${OPSYS} == "Linux" \
- || ${OPSYS} == "NetBSD" \
- || ${OPSYS} == "SunOS")
-LIBRSVG_USE_RUST?=	yes
-.endif
+# default to rust version on platforms where pkgsrc supports lang/rust
+.include "../../lang/rust/platform.mk"
+LIBRSVG_USE_RUST?=	${PLATFORM_SUPPORTS_RUST}
 
 .if ${LIBRSVG_USE_RUST} == "yes"
 BUILDLINK_PKGSRCDIR.librsvg?=		../../graphics/librsvg
