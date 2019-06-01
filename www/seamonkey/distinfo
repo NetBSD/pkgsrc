@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.155 2018/10/23 22:55:13 maya Exp $
+$NetBSD: distinfo,v 1.156 2019/06/01 20:41:45 nia Exp $
 
 SHA1 (seamonkey-2.49.4.source.tar.xz) = e9fa6d1c57e9141a299f6ec093683fb105ea6657
 RMD160 (seamonkey-2.49.4.source.tar.xz) = 072caadf376b7726356d6121abff87cc1fb62144
@@ -65,7 +65,7 @@ SHA1 (patch-mozilla_js_xpconnect_src_XPCConvert.cpp) = d866b89d5d741125430c0e3ac
 SHA1 (patch-mozilla_js_xpconnect_src_xpcprivate.h) = 6a836224fa46f2b30d337a7893c668ab0cf807cd
 SHA1 (patch-mozilla_media_libcubeb_src_cubeb.c) = b760a10ef1fdff5360b2644913df34d60f2ffbf6
 SHA1 (patch-mozilla_media_libcubeb_src_cubeb__alsa.c) = 06d21721261b85412085b3336aa8c3712c0d5551
-SHA1 (patch-mozilla_media_libcubeb_src_cubeb__oss.c) = 05d5e3a93a9cde21c2aece2ac4c83e70488a25d5
+SHA1 (patch-mozilla_media_libcubeb_src_cubeb__oss.c) = 4b4e698c410fd9a8496296aa85f2f8a423ddf95f
 SHA1 (patch-mozilla_media_libcubeb_src_moz.build) = 20cd45532c053be8b57177c4161537047e365be3
 SHA1 (patch-mozilla_media_libcubeb_tests_moz.build) = af24f693c6cf0cd7c6dfb2d7ca4ad17d6a77cc97
 SHA1 (patch-mozilla_media_libcubeb_update.sh) = 2ff28e8691e97787ba881b836065b6e4eecd72af
@@ -88,7 +88,7 @@ SHA1 (patch-mozilla_modules_libjar_nsZipArchive.cpp) = a399e0bd0e83c47938bbee077
 SHA1 (patch-mozilla_mozglue_build_arm.cpp) = 592ae5ce1a404227cc2ab6a06418cc813c5743c9
 SHA1 (patch-mozilla_mozglue_build_arm.h) = 94e2b1a1a9ebf20bfa8a542066aa0dad475db320
 SHA1 (patch-mozilla_netwerk_dns_moz.build) = d87c07ebfa01d32ca826932af733b37ce586e9f7
-SHA1 (patch-mozilla_old-configure.in) = f6283698884f616c1c4a38450a43b2465b16efab
+SHA1 (patch-mozilla_old-configure.in) = 100f03e97fb362defbf4d26b82b64508855debbe
 SHA1 (patch-mozilla_toolkit_components_osfile_modules_osfile__unix__back.jsm) = db4084f6a7dba2fc5d35cd256c6f149fabbf7bc7
 SHA1 (patch-mozilla_toolkit_components_osfile_modules_osfile__unix__front.jsm) = 1e8d0883d3cc12541020c7df0b1d67f60e7391f5
 SHA1 (patch-mozilla_toolkit_components_protobuf_src_google_protobuf_stubs_atomicops.h) = 0b5cad33bc9a90f4ae2d6346065707b642aba3a9

@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_media_libcubeb_src_cubeb__oss.c,v 1.5 2017/08/18 23:55:07 ryoon Exp $
+$NetBSD: patch-mozilla_media_libcubeb_src_cubeb__oss.c,v 1.6 2019/06/01 20:41:45 nia Exp $
 
---- mozilla/media/libcubeb/src/cubeb_oss.c.orig	2017-08-18 14:25:23.144584317 +0000
+--- mozilla/media/libcubeb/src/cubeb_oss.c.orig	2019-06-01 19:18:55.359909154 +0000
 +++ mozilla/media/libcubeb/src/cubeb_oss.c
 @@ -0,0 +1,442 @@
 +/*
@@ -235,7 +235,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__oss.c,v 1.5 2017/08/18 23:55:07
 +  return NULL;
 +}
 +
-+static void oss_try_set_latency(cubeb_stream* stream, unsigned int latency)
++static void oss_try_set_latency(cubeb_stream* stream, unsigned int latency_frames)
 +{
 +  unsigned int latency_bytes, n_frag;
 +  int frag;
@@ -243,7 +243,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__oss.c,v 1.5 2017/08/18 23:55:07
 +  unsigned int frag_size=1024;
 +  unsigned int frag_log=10; /* 2^frag_log = frag_size */
 +  latency_bytes =
-+    latency*stream->params.rate*stream->params.channels*sizeof(uint16_t)/1000;
++    latency_frames*stream->params.channels*sizeof(uint16_t);
 +  n_frag = latency_bytes>>frag_log;
 +  frag = (n_frag<<16) | frag_log;
 +  /* Even if this fails we wish to continue, not checking for errors */
@@ -256,7 +256,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__oss.c,v 1.5 2017/08/18 23:55:07
 +                           cubeb_stream_params * input_stream_params,
 +                           cubeb_devid output_device,
 +                           cubeb_stream_params * output_stream_params,
-+                           unsigned int latency,
++                           unsigned int latency_frames,
 +                           cubeb_data_callback data_callback,
 +                           cubeb_state_callback state_callback, void * user_ptr)
 +{
@@ -287,7 +287,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__oss.c,v 1.5 2017/08/18 23:55:07
 +  stream->volume = 1.0;
 +  stream->panning = 0.0;
 +
-+  oss_try_set_latency(stream, latency); 
++  oss_try_set_latency(stream, latency_frames); 
 +
 +  stream->floating = 0;
 +  SET(SNDCTL_DSP_CHANNELS, stream->params.channels);
