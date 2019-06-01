@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.39 2017/11/10 22:45:27 ryoon Exp $
+# $NetBSD: options.mk,v 1.40 2019/06/01 20:41:45 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.seamonkey
 
@@ -20,9 +20,9 @@ PKG_SUGGESTED_OPTIONS+=	webrtc
 .endif
 
 .if ${OPSYS} == "Linux"
-PKG_SUGGESTED_OPTIONS+=	alsa dbus
-.else
 PKG_SUGGESTED_OPTIONS+=	dbus pulseaudio
+.else
+PKG_SUGGESTED_OPTIONS+=	dbus
 .endif
 
 .include "../../mk/bsd.options.mk"
