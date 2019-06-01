@@ -1,4 +1,4 @@
-$NetBSD: patch-mozilla_media_libcubeb_src_cubeb__oss.c,v 1.6 2019/06/01 20:41:45 nia Exp $
+$NetBSD: patch-mozilla_media_libcubeb_src_cubeb__oss.c,v 1.7 2019/06/01 23:54:51 nia Exp $
 
 --- mozilla/media/libcubeb/src/cubeb_oss.c.orig	2019-06-01 19:18:55.359909154 +0000
 +++ mozilla/media/libcubeb/src/cubeb_oss.c
@@ -94,10 +94,10 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__oss.c,v 1.6 2019/06/01 20:41:45
 +}
 +
 +static int oss_get_min_latency(cubeb * context, cubeb_stream_params params,
-+                               uint32_t * latency_ms)
++                               uint32_t * latency_frames)
 +{
 +  /* 40ms is a big enough number to work ok */
-+  *latency_ms = 40;
++  *latency_frames = 40 * params.rate / 1000;
 +  return CUBEB_OK;
 +}
 +
