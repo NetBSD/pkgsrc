@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.10 2016/03/24 10:53:16 youri Exp $
+$NetBSD: distinfo,v 1.11 2019/06/01 06:35:33 simonb Exp $
 
-SHA1 (sc-7.16_1.0.1.tar.gz) = 969f57067e1fe4f1548919d2bb0523c129e4af1b
-RMD160 (sc-7.16_1.0.1.tar.gz) = 5a6322fe30df7b9da20deb8373170403d07e740e
-SHA512 (sc-7.16_1.0.1.tar.gz) = e780543b3a46abc91c2dcd8e30a07f3dc46937bf71fc28f5aef87a2072d8b601f5931363874ccba70a8aa0a81afd748434a1822868e38917217ee56e79b74c0c
-Size (sc-7.16_1.0.1.tar.gz) = 214534 bytes
-SHA1 (patch-Makefile) = fd3dc25eeb413ff6cc4b5a1edbbbaf332e571814
+SHA1 (sc-7.16_1.1.2.tar.gz) = e094fd045d7838dd125dc6634986d1be88eeb006
+RMD160 (sc-7.16_1.1.2.tar.gz) = 9ca1217fdabce53f7da7f7150757e35ab7f9bb27
+SHA512 (sc-7.16_1.1.2.tar.gz) = f685db7ee62d7ed4a644d41059f08c4e4d16639ca5065554d50f2affaae4c845c6b782d514c3945fb1121d060e8d1be8bdff7833ada4123d4b21a904945cea06
+Size (sc-7.16_1.1.2.tar.gz) = 222457 bytes
