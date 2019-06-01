@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2019/05/29 12:33:29 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2019/06/01 20:24:03 wiz Exp $
 
 DISTNAME=	src-firefox-tor-browser-60.7.0esr-8.5-1-build1
 PKGNAME=	tor-browser-8.5.60.7.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	https://dist.torproject.org/torbrowser/8.5/
 EXTRACT_SUFX=	.tar.xz
