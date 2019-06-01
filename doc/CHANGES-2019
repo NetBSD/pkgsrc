@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2332 2019/05/31 20:57:28 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2333 2019/06/01 01:12:09 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3950,3 +3950,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/nodejs to 10.16.0 [adam 2019-05-31]
 	Updated security/py-oath to 1.4.3 [adam 2019-05-31]
 	Updated www/py-wsproto to 0.14.1 [adam 2019-05-31]
+	Updated sysutils/py-psutil to 5.6.2nb1 [kamil 2019-06-01]
