@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.61 2019/03/19 16:11:28 ryoon Exp $
+$NetBSD: patch-aa,v 1.62 2019/06/01 19:11:28 maya Exp $
 
 * Add OSS audio support
 * Disable libav-fft on SunOS (relocation errors)
@@ -60,7 +60,7 @@ $NetBSD: patch-aa,v 1.61 2019/03/19 16:11:28 ryoon Exp $
 +
 +    dnl Assume NetBSD implementation over SunAudio
 +    AC_CHECK_LIB(ossaudio, _oss_ioctl,
-+        [AC_DEFINE_UNQUOTED(CUBEB_OSS_DEFAULT_OUTPUT, "/dev/sound")
++        [AC_DEFINE_UNQUOTED(CUBEB_OSS_DEFAULT_OUTPUT, "/dev/audio")
 +         MOZ_OSS_LIBS="$MOZ_OSS_LIBS -lossaudio"])
 +fi
 +CFLAGS=$_SAVE_CFLAGS
