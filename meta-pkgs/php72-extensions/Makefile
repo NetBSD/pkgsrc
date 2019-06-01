@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/12/09 16:20:03 taca Exp $
+# $NetBSD: Makefile,v 1.3 2019/06/01 15:35:05 taca Exp $
 
 DISTNAME=	${PHP_PKG_PREFIX}-extensions-${PHP_VERSION}
-PKGREVISION=	1
 CATEGORIES=	meta-pkgs www
 MASTER_SITES=	# empty
 DISTFILES=	# empty
