@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.189 2019/05/05 22:49:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.190 2019/06/01 20:41:45 nia Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
-PKGREVISION=	7
+PKGREVISION=	8
 SM_VER=		2.49.4
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/}

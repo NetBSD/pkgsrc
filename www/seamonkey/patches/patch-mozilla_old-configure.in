@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_old-configure.in,v 1.3 2017/11/10 22:45:27 ryoon Exp $
+$NetBSD: patch-mozilla_old-configure.in,v 1.4 2019/06/01 20:41:45 nia Exp $
 
---- mozilla/old-configure.in.orig	2017-10-16 07:19:40.000000000 +0000
+--- mozilla/old-configure.in.orig	2018-07-12 02:18:02.000000000 +0000
 +++ mozilla/old-configure.in
 @@ -2159,11 +2159,7 @@ if test "$MOZ_SYSTEM_JPEG" = 1; then
                       #include <jpeglib.h> ],
@@ -200,7 +200,7 @@ $NetBSD: patch-mozilla_old-configure.in,v 1.3 2017/11/10 22:45:27 ryoon Exp $
 +
 +    dnl Assume NetBSD implementation over SunAudio
 +    AC_CHECK_LIB(ossaudio, _oss_ioctl,
-+        [AC_DEFINE_UNQUOTED(CUBEB_OSS_DEFAULT_OUTPUT, "/dev/sound")
++        [AC_DEFINE_UNQUOTED(CUBEB_OSS_DEFAULT_OUTPUT, "/dev/audio")
 +         MOZ_OSS_LIBS="$MOZ_OSS_LIBS -lossaudio"])
 +fi
 +CFLAGS=$_SAVE_CFLAGS
