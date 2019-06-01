@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2017/04/27 01:55:57 ryoon Exp $
+$NetBSD: patch-aa,v 1.2 2019/06/01 19:11:28 maya Exp $
 
 * MOZ_ENABLE_PROFILER_SPS is not for users, Disable it
 * Disable libjpeg-turbo check
@@ -205,7 +205,7 @@ $NetBSD: patch-aa,v 1.1 2017/04/27 01:55:57 ryoon Exp $
 +
 +    dnl Assume NetBSD implementation over SunAudio
 +    AC_CHECK_LIB(ossaudio, _oss_ioctl,
-+        [AC_DEFINE_UNQUOTED(CUBEB_OSS_DEFAULT_OUTPUT, "/dev/sound")
++        [AC_DEFINE_UNQUOTED(CUBEB_OSS_DEFAULT_OUTPUT, "/dev/audio")
 +         MOZ_OSS_LIBS="$MOZ_OSS_LIBS -lossaudio"])
 +fi
 +CFLAGS=$_SAVE_CFLAGS
