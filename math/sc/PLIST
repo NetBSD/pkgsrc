@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2016/03/24 10:53:16 youri Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/06/01 06:35:33 simonb Exp $
 bin/psc
 bin/sc
 bin/scqref
+bin/xsc
 man/man1/psc.1
 man/man1/sc.1
+man/man1/scqref.1
+man/man1/xsc.1
 share/sc/tutorial.sc

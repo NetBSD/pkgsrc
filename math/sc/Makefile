@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2016/03/24 10:53:16 youri Exp $
+# $NetBSD: Makefile,v 1.20 2019/06/01 06:35:33 simonb Exp $
 
-DISTNAME=		sc-7.16_1.0.1
+DISTNAME=		sc-7.16_1.1.2
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_GITHUB:=n-t-roff/}
 
