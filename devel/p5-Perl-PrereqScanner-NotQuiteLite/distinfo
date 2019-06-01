@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/02/09 08:18:44 wen Exp $
+$NetBSD: distinfo,v 1.2 2019/06/01 07:42:58 wen Exp $
 
-SHA1 (Perl-PrereqScanner-NotQuiteLite-0.9904.tar.gz) = e1740bf601039405617f21100ddb76fb194be8dc
-RMD160 (Perl-PrereqScanner-NotQuiteLite-0.9904.tar.gz) = 876a43c3d26bb8ca8c0dadcb13523855c2bead93
-SHA512 (Perl-PrereqScanner-NotQuiteLite-0.9904.tar.gz) = b678d3019539eb29f57c424da24a289188ecaf94f4b141078c6830f91bd8bcbcd7956546b1d5f3613ebae11ee834dd67008b606224e8328ef52c5a9d13e43a33
-Size (Perl-PrereqScanner-NotQuiteLite-0.9904.tar.gz) = 120806 bytes
+SHA1 (Perl-PrereqScanner-NotQuiteLite-0.9905.tar.gz) = 3ac5c7fcbbb34cbe17b7d694ab8e45cb1bb43439
+RMD160 (Perl-PrereqScanner-NotQuiteLite-0.9905.tar.gz) = d7fec6c80e5368aa1b6cfb40cccd5736cbf6e4c6
+SHA512 (Perl-PrereqScanner-NotQuiteLite-0.9905.tar.gz) = 80fc2242e56863b144380d8bac4748e7b4cd2bbc7eebb0fe7aa3bfac1a78969cb1ca3c8b3d82af771768b73a23512a71ee63d79b3c16843e136dd28ea1cbfdaa
+Size (Perl-PrereqScanner-NotQuiteLite-0.9905.tar.gz) = 126327 bytes
