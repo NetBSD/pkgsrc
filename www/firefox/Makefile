@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.378 2019/05/31 10:38:59 maya Exp $
+# $NetBSD: Makefile,v 1.379 2019/06/01 12:52:10 mef Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		67.0
@@ -38,6 +38,8 @@ LDFLAGS.SunOS+=		-lm
 NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/firefox
 NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/firefox-bin
 NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/plugin-container
+
+BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 
 # Avoid ld "invalid section index" errors.
 BUILDLINK_TRANSFORM.SunOS+=	rm:-fdata-sections
