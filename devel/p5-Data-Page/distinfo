@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:28:07 agc Exp $
+$NetBSD: distinfo,v 1.5 2019/06/02 02:32:38 wen Exp $
 
-SHA1 (Data-Page-2.02.tar.gz) = b2dd33ba174dc6a00324e436c6dc0ed50c7b2217
-RMD160 (Data-Page-2.02.tar.gz) = 42095dfc9a9043fedcf025ee0ebe485823468605
-SHA512 (Data-Page-2.02.tar.gz) = 22b5b8b80672bfd20a1552ee9d41e5150262eb37be6d903d67465be472d1802668ac898b9172b76fe2747f25ff9ad2025257b215f763f2ba5793abb46eb2343f
-Size (Data-Page-2.02.tar.gz) = 8189 bytes
+SHA1 (Data-Page-2.03.tar.gz) = 150ff94ee99c4c99398bc57cf73057de6fded56e
+RMD160 (Data-Page-2.03.tar.gz) = 360d4d8ba71d26eb555a62eed392b97ed64c31d6
+SHA512 (Data-Page-2.03.tar.gz) = 5c0c411e8b03163b2b88b7ab6432def0ddcce48987e98868897e89d0220665537f23d9a56b6d544a5c6fb67f615a2db582764ebcaa612cb2a8906ba660fc3c59
+Size (Data-Page-2.03.tar.gz) = 28899 bytes
