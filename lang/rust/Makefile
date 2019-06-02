@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2019/05/31 14:11:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.102 2019/06/02 08:43:05 adam Exp $
 
 DISTNAME=	rustc-1.35.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -130,7 +130,7 @@ GCC_REQD+=	4.8
 .include "../../mk/bsd.prefs.mk"
 
 # The bundled LLVM current has issues building on SunOS.
-.if ${OPSYS} == "SunOS"
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
 .include "../../lang/llvm/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-llvm-link-shared
 CONFIGURE_ARGS+=	--llvm-root=${BUILDLINK_PREFIX.llvm}
@@ -437,7 +437,7 @@ stage0-bootstrap: install
 	done
 	for lib in libcrypto.so.1.0.0 libcurl.so.4 libhttp_parser.so.2 \
 		   libiconv.so.2 libidn2.so.0 libintl.so.8 liblber-2.4.so.2 \
-		   libldap-2.4.so.2 libnghttp2.so.14 libsasl2.so.3 libLLVM-7.so \
+		   libldap-2.4.so.2 libnghttp2.so.14 libsasl2.so.3 libLLVM-8.so \
 		   libssh2.so.1 libssl.so.1.0.0 libunistring.so.2 libz.so.1; do \
 		${CP} ${PREFIX}/lib/$${lib} ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/; \
 	done
