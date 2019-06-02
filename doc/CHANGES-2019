@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2350 2019/06/02 02:35:53 wen Exp $
+$NetBSD: CHANGES-2019,v 1.2351 2019/06/02 02:43:08 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3970,3 +3970,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/tor-browser to 8.5.60.7.0nb2 [wiz 2019-06-01]
 	Updated devel/cmake to 3.14.5 [adam 2019-06-01]
 	Updated devel/p5-Data-Page to 2.03 [wen 2019-06-02]
+	Updated devel/p5-Devel-PatchPerl to 1.60 [wen 2019-06-02]
