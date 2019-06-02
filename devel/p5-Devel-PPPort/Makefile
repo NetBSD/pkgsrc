@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2019/05/08 02:19:16 wen Exp $
+# $NetBSD: Makefile,v 1.32 2019/06/02 03:04:49 wen Exp $
 
-DISTNAME=	Devel-PPPort-3.51
+DISTNAME=	Devel-PPPort-3.52
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/E/ET/ETHER/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/A/AT/ATOOMIC/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Devel-PPPort/
