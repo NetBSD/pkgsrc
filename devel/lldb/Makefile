@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2019/04/25 07:32:48 maya Exp $
+# $NetBSD: Makefile,v 1.21 2019/06/02 08:35:55 adam Exp $
 
-DISTNAME=	lldb-7.0.1.src
+DISTNAME=	lldb-8.0.0.src
 PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	1
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
