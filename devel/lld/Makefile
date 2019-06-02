@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.3 2019/04/26 15:33:08 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2019/06/02 08:37:39 adam Exp $
 
-PKGNAME=		lld-7.0.1
-PKGREVISION=		1
-DISTNAME=		${PKGNAME_NOREV}.src
-CATEGORIES=		devel
-MASTER_SITES=		http://llvm.org/releases/${PKGVERSION_NOREV}/
-EXTRACT_SUFX=		.tar.xz
-DISTFILES=		${DEFAULT_DISTFILES}
+DISTNAME=	lld-8.0.0.src
+PKGNAME=	${DISTNAME:S/.src//}
+CATEGORIES=	devel
+MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
+EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=		mgorny@NetBSD.org
-HOMEPAGE=		http://lld.llvm.org/
-COMMENT=		The LLVM Linker
-LICENSE=		modified-bsd
+MAINTAINER=	mgorny@NetBSD.org
+HOMEPAGE=	http://lld.llvm.org/
+COMMENT=	The LLVM Linker
+LICENSE=	modified-bsd
 
 USE_LANGUAGES=		c c++11
 USE_CMAKE=		yes
