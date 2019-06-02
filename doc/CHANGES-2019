@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2356 2019/06/02 03:31:39 wen Exp $
+$NetBSD: CHANGES-2019,v 1.2357 2019/06/02 08:31:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3978,3 +3978,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated misc/libreoffice to 6.2.4.2 [ryoon 2019-06-02]
 	Updated devel/p5-B-Hooks-Parser to 0.21 [wen 2019-06-02]
 	Updated devel/p5-bareword-filehandles to 0.007 [wen 2019-06-02]
+	Updated devel/py-hypothesis to 4.24.0 [adam 2019-06-02]
+	Updated devel/py-test to 4.6.0 [adam 2019-06-02]
