@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.2 2019/01/12 15:26:42 tsutsui Exp $
+$NetBSD: patch-configure,v 1.3 2019/06/02 09:48:11 tsutsui Exp $
 
 o Handle properly sh3, evbarm, and arm64 ports on NetBSD.
 o Fix CPU family detection on NetBSD with /proc mounted with "-o linux"
@@ -9,6 +9,8 @@ o Add necessary libs for aalib support even if the aa option is turned on with
   --enable-aa.
 o Add support for dvb capture on NetBSD.
 o Explicitly enable PIE to avoid text relocations on NetBSD/i386 8.x
+o use /dev/audio instead of /dev/sound for OSS audio device for NetBSD
+  (see PR/54229) and OpenBSD (no /dev/sound since 6.1)
 
 --- configure.orig	2016-02-13 21:05:42.000000000 +0000
 +++ configure
@@ -181,3 +183,12 @@ o Explicitly enable PIE to avoid text relocations on NetBSD/i386 8.x
  
  if darwin; then
  
+@@ -5786,7 +5817,7 @@ if test "$_ossaudio" = yes ; then
+   if test "$_real_ossaudio" = yes; then
+       def_ossaudio_devdsp='#define PATH_DEV_DSP "/dev/dsp"'
+   elif netbsd || openbsd ; then
+-      def_ossaudio_devdsp='#define PATH_DEV_DSP "/dev/sound"'
++      def_ossaudio_devdsp='#define PATH_DEV_DSP "/dev/audio"'
+       extra_ldflags="$extra_ldflags -lossaudio"
+   else
+       def_ossaudio_devdsp='#define PATH_DEV_DSP "/dev/dsp"'
