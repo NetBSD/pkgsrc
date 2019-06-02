@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2357 2019/06/02 08:31:46 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2358 2019/06/02 08:46:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3980,3 +3980,15 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-bareword-filehandles to 0.007 [wen 2019-06-02]
 	Updated devel/py-hypothesis to 4.24.0 [adam 2019-06-02]
 	Updated devel/py-test to 4.6.0 [adam 2019-06-02]
+	Updated lang/llvm to 8.0.0 [adam 2019-06-02]
+	Updated lang/clang to 8.0.0 [adam 2019-06-02]
+	Updated lang/clang-static-analyzer to 8.0.0 [adam 2019-06-02]
+	Updated lang/clang-tools-extra to 8.0.0 [adam 2019-06-02]
+	Updated lang/compiler-rt to 8.0.0 [adam 2019-06-02]
+	Updated lang/libcxx to 8.0.0 [adam 2019-06-02]
+	Updated lang/libcxxabi to 8.0.0 [adam 2019-06-02]
+	Updated lang/libunwind to 8.0.0 [adam 2019-06-02]
+	Updated devel/lld to 8.0.0 [adam 2019-06-02]
+	Updated devel/lldb to 8.0.0 [adam 2019-06-02]
+	Updated devel/polly to 8.0.0 [adam 2019-06-02]
+	Updated devel/include-what-you-use to 0.12 [adam 2019-06-02]
