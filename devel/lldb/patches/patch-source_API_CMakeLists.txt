@@ -1,14 +1,14 @@
-$NetBSD: patch-source_API_CMakeLists.txt,v 1.1 2018/12/23 00:14:08 adam Exp $
+$NetBSD: patch-source_API_CMakeLists.txt,v 1.2 2019/06/02 08:35:55 adam Exp $
 
 Fix finding libxml2's includes.
 
---- source/API/CMakeLists.txt.orig	2018-12-22 21:06:11.000000000 +0000
+--- source/API/CMakeLists.txt.orig	2019-01-04 12:47:02.000000000 +0000
 +++ source/API/CMakeLists.txt
-@@ -4,6 +4,10 @@ endif()
+@@ -9,6 +9,10 @@ if(NOT LLDB_DISABLE_PYTHON)
+   set(lldb_python_wrapper ${lldb_scripts_dir}/LLDBWrapPython.cpp)
+ endif()
  
- get_property(LLDB_ALL_PLUGINS GLOBAL PROPERTY LLDB_PLUGINS)
- 
-+if (LIBXML2_FOUND)
++if(LIBXML2_FOUND)
 +  include_directories(SYSTEM ${LIBXML2_INCLUDE_DIR})
 +endif()
 +

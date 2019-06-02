@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST.Darwin,v 1.4 2018/12/23 00:11:40 adam Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.5 2019/06/02 08:35:55 adam Exp $
 bin/darwin-debug
+bin/debugserver
 lib/liblldbHostMacOSXObjCXX.a
 lib/liblldbPluginDynamicLoaderDarwinKernel.a
 lib/liblldbPluginPlatformMacOSXObjCXX.a
