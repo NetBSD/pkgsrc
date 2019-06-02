@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.217 2018/11/20 08:34:43 maya Exp $
+# $NetBSD: Makefile,v 1.218 2019/06/02 03:11:30 ryoon Exp $
 
 DISTNAME=	pango-1.42.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel fonts
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pango/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -33,6 +33,7 @@ CHECK_FILES_SKIP+=	${PREFIX}/libdata/pango/pango.modules
 CHECK_PORTABILITY_SKIP+= docs/check.docs
 
 .include "options.mk"
+.include "../../lang/rust/platform.mk"
 
 BUILDLINK_API_DEPENDS.fribidi+=	fribidi>=0.19.7
 .include "../../converters/fribidi/buildlink3.mk"
@@ -45,6 +46,9 @@ BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.11.91
 .include "../../fonts/fontconfig/buildlink3.mk"
 BUILDLINK_API_DEPENDS.harfbuzz+= harfbuzz>=0.9.9
 .include "../../fonts/harfbuzz/buildlink3.mk"
+.if !empty(PLATFORM_SUPPORTS_RUST:M[Yy][Ee][Ss])
+.include "../../graphics/graphite2/buildlink3.mk"
+.endif
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.12.10
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/cairo-gobject/buildlink3.mk"
