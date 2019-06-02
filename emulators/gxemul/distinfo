@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.57 2019/04/11 12:50:30 christos Exp $
+$NetBSD: distinfo,v 1.58 2019/06/02 09:19:58 gson Exp $
 
 SHA1 (gxemul-0.6.1.tar.gz) = 150e495e91a968a49ffc7fe2390c3edff100508d
 RMD160 (gxemul-0.6.1.tar.gz) = 0434bff07970d8828531d222cc8b95c64c2d62f1
 SHA512 (gxemul-0.6.1.tar.gz) = 03dbbaa9ba5e36b4644a984f06bffa5ff9e763f395c472c0fbdfc8bca975a5fb184a676d3a6c5e1a3483c3c62a2778af9c36d2bf4ab8dcaf21b3dfac8abcd301
 Size (gxemul-0.6.1.tar.gz) = 5617712 bytes
-SHA1 (patch-ad) = 7f02cce83c58bbd5399b157a9da9c6c4260122f0
+SHA1 (patch-ad) = d4964bc672b690ee2a5c7148b9b9852d7f87776a
 SHA1 (patch-src_components_cpu_CPUDyntransComponent.cc) = dd7a9a83d8abce053e5e61a6aa6ae057c6c51a6a
 SHA1 (patch-src_components_cpu_M88K__CPUComponent.cc) = 4b456721aa0639b91d2dab82fb28f61a951ec8f4
 SHA1 (patch-src_components_cpu_MIPS__CPUComponent.cc) = 9bcb304937ccfa491e37da6f57729854294c420d
