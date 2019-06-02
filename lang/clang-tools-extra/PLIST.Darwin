@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2019/06/02 08:41:18 adam Exp $
+bin/clangd-xpc-test-client
+lib/libClangdXPCLib.so
+lib/libclangdXpcJsonConversions.a
+lib/libclangdXpcTransport.a
