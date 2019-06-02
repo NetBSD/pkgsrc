@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.405 2019/03/21 10:17:26 he Exp $
+# $NetBSD: Makefile,v 1.406 2019/06/02 14:20:58 mef Exp $
 
 COMMENT=	Mathematics
 
@@ -119,6 +119,7 @@ SUBDIR+=	dfftpack
 SUBDIR+=	dieharder
 SUBDIR+=	djbfft
 SUBDIR+=	djbsort
+SUBDIR+=	double-conversion
 SUBDIR+=	eigen2
 SUBDIR+=	eigen3
 SUBDIR+=	eispack
