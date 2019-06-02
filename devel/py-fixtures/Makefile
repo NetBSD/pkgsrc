@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/02/22 14:02:49 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/06/02 03:22:02 mef Exp $
 
 DISTNAME=	fixtures-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,6 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.0.0:../../lang/py-six
 # needs py-testtools for testing, but that depends on this
 #BUILD_DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
 BUILD_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+BUILD_DEPENDS+=	${PYPKGPREFIX}-pbr-[0-9]*:../../devel/py-pbr
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
