@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.38 2019/04/25 07:33:02 maya Exp $
+# $NetBSD: Makefile,v 1.39 2019/06/02 08:35:55 adam Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
+# devel/lld
 # devel/lldb
 # devel/polly
 # lang/clang
 # lang/clang-static-analyzer
+# lang/clang-tools-extra
 # lang/compiler-rt
 # lang/libcxx
 # lang/libcxxabi
@@ -19,9 +21,8 @@
 # Always update all */buildlink3.mk to require the latest stable release
 # version in BUILDLINK_API_DEPENDS, as there is no backwards compatibility
 
-DISTNAME=	llvm-7.0.1.src
+DISTNAME=	llvm-8.0.0.src
 PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	2
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -44,6 +45,7 @@ CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
 CMAKE_ARGS+=	-DCMAKE_CXX_LINK_FLAGS=${LDFLAGS:Q}
 CMAKE_ARGS+=	-DLLVM_BUILD_LLVM_DYLIB=ON
+CMAKE_ARGS+=	-DLLVM_INCLUDE_BENCHMARKS=OFF
 CMAKE_ARGS+=	-DLLVM_INSTALL_UTILS=ON
 CMAKE_ARGS+=	-DLLVM_LINK_LLVM_DYLIB=ON
 
