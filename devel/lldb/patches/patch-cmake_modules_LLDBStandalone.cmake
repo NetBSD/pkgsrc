@@ -1,10 +1,10 @@
-$NetBSD: patch-cmake_modules_LLDBStandalone.cmake,v 1.2 2016/11/14 20:15:33 ryoon Exp $
+$NetBSD: patch-cmake_modules_LLDBStandalone.cmake,v 1.3 2019/06/02 08:35:55 adam Exp $
 
---- cmake/modules/LLDBStandalone.cmake.orig	2016-07-15 22:46:15.000000000 +0000
+--- cmake/modules/LLDBStandalone.cmake.orig	2019-01-29 14:23:34.000000000 +0000
 +++ cmake/modules/LLDBStandalone.cmake
-@@ -86,7 +86,6 @@ if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURR
- 
+@@ -85,7 +85,6 @@ if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURR
    include(AddLLVM)
+   include(TableGen)
    include(HandleLLVMOptions)
 -  include(CheckAtomic)
  

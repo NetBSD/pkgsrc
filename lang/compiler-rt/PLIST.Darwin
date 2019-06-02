@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST.Darwin,v 1.2 2019/01/31 06:55:37 adam Exp $
-lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.10.4.a
+@comment $NetBSD: PLIST.Darwin,v 1.3 2019/06/02 08:35:56 adam Exp $
 lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.asan_osx_dynamic.dylib
 lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.cc_kext.a
 lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.fuzzer_no_main_osx.a
@@ -7,7 +6,6 @@ lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.fuzzer_osx.a
 lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.lsan_osx_dynamic.dylib
 lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.osx.a
 lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.profile_osx.a
-lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.safestack_osx.a
 lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.stats_client_osx.a
 lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.stats_osx_dynamic.dylib
 lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.tsan_osx_dynamic.dylib
