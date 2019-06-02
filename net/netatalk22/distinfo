@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2017/07/12 13:56:00 hauke Exp $
+$NetBSD: distinfo,v 1.7 2019/06/02 20:03:32 rjs Exp $
 
 SHA1 (netatalk-2.2.6.tar.bz2) = 98a2d33f2e240e49caec32b83bca579723ce87f7
 RMD160 (netatalk-2.2.6.tar.bz2) = c7b051cf89d30c9bf1d491d9e04ceee2f39b897d
@@ -7,5 +7,8 @@ Size (netatalk-2.2.6.tar.bz2) = 1301887 bytes
 SHA1 (patch-config_Makefile.in) = 6b9f545e5ddb178e9a310cec4de300c02557e685
 SHA1 (patch-configure) = 9919625c3cd54e34ab45c6606094e12215630d33
 SHA1 (patch-distrib_initscripts_Makefile.in) = 706890f9e0aacab4d523cc1900048b7fab96f5d4
+SHA1 (patch-etc_uams_uams__dhx__pam.c) = 9c75c8562271204c6be974af189e48a9a1b35e11
+SHA1 (patch-etc_uams_uams__dhx__passwd.c) = eb950f16b8d9c00ff45e40769f01850138e76176
+SHA1 (patch-etc_uams_uams__randnum.c) = ff9f698156e0954000e95ac0fbd9b9604d15b8d1
 SHA1 (patch-include_atalk_ldapconfig.h) = 05aa673fce4c670af252b298b1a9e820b1fc7adb
 SHA1 (patch-libatalk_bstring_bstrlib.c) = f43818328237b908166f956de464f532d578d2c4
