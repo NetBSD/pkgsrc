@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2019/05/29 12:38:23 wiz Exp $
+# $NetBSD: Makefile,v 1.105 2019/06/02 04:48:13 wiz Exp $
 
 DISTNAME=	librsvg-2.44.14
 CATEGORIES=	graphics gnome
@@ -178,6 +178,7 @@ BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.2.0
 .include "../../graphics/cairo/buildlink3.mk"
 BUILDLINK_DEPMETHOD.cairo-gobject+=	build
 .include "../../graphics/cairo-gobject/buildlink3.mk"
+BUILDLINK_ABI_DEPENDS.freetype2+=	freetype2>=2.8.0
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/loaders.mk"
 BUILDLINK_API_DEPENDS.libcroco+=	libcroco>=0.6.1
