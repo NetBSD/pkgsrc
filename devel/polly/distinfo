@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.12 2018/12/23 00:11:40 adam Exp $
+$NetBSD: distinfo,v 1.13 2019/06/02 08:35:55 adam Exp $
 
-SHA1 (polly-7.0.1.src.tar.xz) = 7c750261090168a4a219ab823cfbe76f0938850f
-RMD160 (polly-7.0.1.src.tar.xz) = f1968870c6069bdc22b660eac4a1de4ca580cddd
-SHA512 (polly-7.0.1.src.tar.xz) = 3cfdbf6109f25319a7389ab2530b5cd5b884c02ca9d28d390be2ceed9d0ed155d66812662b123b36bbec0627ce90e8e38956bc3b2be915e7c05ee5355deadd73
-Size (polly-7.0.1.src.tar.xz) = 8755168 bytes
+SHA1 (polly-8.0.0.src.tar.xz) = ca34b2be7c362844db089f0114af11333c2ebfcb
+RMD160 (polly-8.0.0.src.tar.xz) = ed2a61a4cf5431792b0b02d31cc973bdb0fcb676
+SHA512 (polly-8.0.0.src.tar.xz) = f16bc2303467fdd2ec84f7953c18d9123b95ec7882d9e9a419179421ef52f17ad93a58edff58d20251bac09dbf2bf22a996bf18e3d8bf21d5b603ff9f4d80508
+Size (polly-8.0.0.src.tar.xz) = 8706068 bytes
 SHA1 (patch-CMakeLists.txt) = 8138e11f858f23e0069c8fa0c07eff2b7aaf8c43
 SHA1 (patch-lib_External_isl_configure) = 97c83ab1d2f83e60ab39b41cf055c18074167e66
