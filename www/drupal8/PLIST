@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17.2.1 2019/05/14 05:12:28 spz Exp $
+@comment $NetBSD: PLIST,v 1.17.2.2 2019/06/02 10:29:38 spz Exp $
 share/drupal/.csslintrc
 share/drupal/.editorconfig
 share/drupal/.eslintignore
@@ -13483,6 +13483,13 @@ share/drupal/vendor/asm89/stack-cors/composer.json
 share/drupal/vendor/asm89/stack-cors/src/Asm89/Stack/Cors.php
 share/drupal/vendor/asm89/stack-cors/src/Asm89/Stack/CorsService.php
 share/drupal/vendor/autoload.php
+share/drupal/vendor/brumann/polyfill-unserialize/.gitignore
+share/drupal/vendor/brumann/polyfill-unserialize/.travis.yml
+share/drupal/vendor/brumann/polyfill-unserialize/LICENSE
+share/drupal/vendor/brumann/polyfill-unserialize/README.md
+share/drupal/vendor/brumann/polyfill-unserialize/composer.json
+share/drupal/vendor/brumann/polyfill-unserialize/phpunit.xml.dist
+share/drupal/vendor/brumann/polyfill-unserialize/src/Unserialize.php
 share/drupal/vendor/composer/ClassLoader.php
 share/drupal/vendor/composer/LICENSE
 share/drupal/vendor/composer/autoload_classmap.php
@@ -15522,11 +15529,24 @@ share/drupal/vendor/typo3/phar-stream-wrapper/README.md
 share/drupal/vendor/typo3/phar-stream-wrapper/composer.json
 share/drupal/vendor/typo3/phar-stream-wrapper/src/Assertable.php
 share/drupal/vendor/typo3/phar-stream-wrapper/src/Behavior.php
+share/drupal/vendor/typo3/phar-stream-wrapper/src/Collectable.php
 share/drupal/vendor/typo3/phar-stream-wrapper/src/Exception.php
 share/drupal/vendor/typo3/phar-stream-wrapper/src/Helper.php
+share/drupal/vendor/typo3/phar-stream-wrapper/src/Interceptor/ConjunctionInterceptor.php
 share/drupal/vendor/typo3/phar-stream-wrapper/src/Interceptor/PharExtensionInterceptor.php
+share/drupal/vendor/typo3/phar-stream-wrapper/src/Interceptor/PharMetaDataInterceptor.php
 share/drupal/vendor/typo3/phar-stream-wrapper/src/Manager.php
+share/drupal/vendor/typo3/phar-stream-wrapper/src/Phar/Container.php
+share/drupal/vendor/typo3/phar-stream-wrapper/src/Phar/DeserializationException.php
+share/drupal/vendor/typo3/phar-stream-wrapper/src/Phar/Manifest.php
+share/drupal/vendor/typo3/phar-stream-wrapper/src/Phar/Reader.php
+share/drupal/vendor/typo3/phar-stream-wrapper/src/Phar/ReaderException.php
+share/drupal/vendor/typo3/phar-stream-wrapper/src/Phar/Stub.php
 share/drupal/vendor/typo3/phar-stream-wrapper/src/PharStreamWrapper.php
+share/drupal/vendor/typo3/phar-stream-wrapper/src/Resolvable.php
+share/drupal/vendor/typo3/phar-stream-wrapper/src/Resolver/PharInvocation.php
+share/drupal/vendor/typo3/phar-stream-wrapper/src/Resolver/PharInvocationCollection.php
+share/drupal/vendor/typo3/phar-stream-wrapper/src/Resolver/PharInvocationResolver.php
 share/drupal/vendor/web.config
 share/drupal/vendor/wikimedia/composer-merge-plugin/LICENSE
 share/drupal/vendor/wikimedia/composer-merge-plugin/README.md
