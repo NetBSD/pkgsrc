@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2362 2019/06/02 13:53:56 fox Exp $
+$NetBSD: CHANGES-2019,v 1.2363 2019/06/02 14:20:58 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3998,3 +3998,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/creduce to 2.10.0 [adam 2019-06-02]
 	Updated security/gnupg2 to 2.2.16 [adam 2019-06-02]
 	Updated audio/fasttracker2 to 2.158 [fox 2019-06-02]
+	Added math/double-conversion 3.1.5 [mef 2019-06-02]
