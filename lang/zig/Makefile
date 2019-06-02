@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2019/02/27 10:46:16 maya Exp $
+# $NetBSD: Makefile,v 1.3 2019/06/02 15:02:27 adam Exp $
 
-DISTNAME=	zig-0.3.0+c59ce046
-PKGNAME=	zig-0.3.0.20190227
+DISTNAME=	zig-0.4.0
 CATEGORIES=	lang
-MASTER_SITES=	https://ziglang.org/builds/
+MASTER_SITES=	https://ziglang.org/download/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,6 +12,7 @@ LICENSE=	mit
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 
 CHECK_PORTABILITY_SKIP+=	ci/azure/macos_script
 BUILDLINK_TRANSFORM+=		rm:-Werror
