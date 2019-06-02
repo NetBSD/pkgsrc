@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2019/05/14 07:42:01 adam Exp $
+# $NetBSD: Makefile,v 1.80 2019/06/02 08:31:27 adam Exp $
 
-DISTNAME=	pytest-4.5.0
+DISTNAME=	pytest-4.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest/}
@@ -35,8 +35,8 @@ USE_TOOLS+=	bash:build
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} py.test py.test-${PYVERSSUFFIX} && \
-		${MV} pytest pytest-${PYVERSSUFFIX} || ${TRUE}
+	${MV} py.test py.test-${PYVERSSUFFIX} && \
+	${MV} pytest pytest-${PYVERSSUFFIX} || ${TRUE}
 
 do-test:
 	cd ${WRKSRC}/testing && pytest-${PYVERSSUFFIX}
