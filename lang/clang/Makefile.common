@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.31 2019/03/27 06:24:22 adam Exp $
+# $NetBSD: Makefile.common,v 1.32 2019/06/02 08:39:28 adam Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-static-analyzer/Makefile
 # used by lang/clang-tools-extra/Makefile
 
-DISTNAME=	cfe-7.0.1.src
+DISTNAME=	cfe-8.0.0.src
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
