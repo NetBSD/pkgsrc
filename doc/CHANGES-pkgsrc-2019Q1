@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q1,v 1.1.2.7 2019/05/14 05:26:19 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q1,v 1.1.2.8 2019/06/02 18:15:59 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q1 branch:
 
@@ -103,4 +103,22 @@ lang/php72: security update
 
 Pullup ticket #5965 - requested by taca
 lang/php73: security update
+
+Pullup ticket #5966 - requested by gutteridge
+misc/mate-utils: build fix
+
+Pullup ticket #5967 - requested by taca
+lang/php71: security update
+
+Pullup ticket #5968 - requested by taca
+www/drupal7: security update
+
+Pullup ticket #5969 - requested by taca
+www/drupal8: security update
+
+Pullup ticket #5970 - requested by maya
+sysutils/intel-microcode-netbsd: security-update
+
+Pullup ticket #5971 - requested by leot
+net/wget: security fix
 
