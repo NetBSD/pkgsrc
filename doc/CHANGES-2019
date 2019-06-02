@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2360 2019/06/02 09:21:25 gson Exp $
+$NetBSD: CHANGES-2019,v 1.2361 2019/06/02 09:30:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3995,3 +3995,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-llvmlite to 0.29.0 [adam 2019-06-02]
 	Updated math/py-numba to 0.44.0 [adam 2019-06-02]
 	Updated emulators/gxemul to 0.6.1nb3 [gson 2019-06-02]
+	Updated devel/creduce to 2.10.0 [adam 2019-06-02]
+	Updated security/gnupg2 to 2.2.16 [adam 2019-06-02]
