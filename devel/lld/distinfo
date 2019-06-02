@@ -1,18 +1,14 @@
-$NetBSD: distinfo,v 1.1 2019/02/01 16:30:00 mgorny Exp $
+$NetBSD: distinfo,v 1.2 2019/06/02 08:37:39 adam Exp $
 
-SHA1 (lld-7.0.1.src.tar.xz) = 3b69e107f27d466488838d5fa65bdfd77b885007
-RMD160 (lld-7.0.1.src.tar.xz) = 44e0e851b957fef86352ebe6c2a37096f8595dcb
-SHA512 (lld-7.0.1.src.tar.xz) = e5d3ed280d8ac6014cd6bbe080b11e2c4ebbae81dc14b637e779ec027d818dbae91c6f0de9e94bcecd6bdaa37f12c35141b5d81f0a15251d27932aa9bebd4047
-Size (lld-7.0.1.src.tar.xz) = 912812 bytes
-SHA1 (llvm-7.0.1.src.tar.xz) = f97632fcc3186eb0d396492ef8acfc807648580f
-RMD160 (llvm-7.0.1.src.tar.xz) = dae96c6f85afb60e73564dc40d02171d01ffdb8f
-SHA512 (llvm-7.0.1.src.tar.xz) = ac43a3cb71a53deb55e3693653847cf20bf6f5d9056f224e6956c96d63bc59ebee9404f088eec9cabe65337b4607a905ef931354b373cf64e0004c6905a6b5df
-Size (llvm-7.0.1.src.tar.xz) = 28311056 bytes
+SHA1 (lld-8.0.0.src.tar.xz) = b9062249ef61316e3450fc26e7238432673036bb
+RMD160 (lld-8.0.0.src.tar.xz) = bf3932f1b8d6e610bc1692cbbefec047a1a9a19b
+SHA512 (lld-8.0.0.src.tar.xz) = 43b671546f26a2293c27496584fcae43a99caabfffdbc7f72e06689e489005215b9a8607a4dc66a5469b3139d362486a46d1fbbdc2c657195fd3d3f1a72d2fa0
+Size (lld-8.0.0.src.tar.xz) = 999864 bytes
 SHA1 (patch-CMakeLists.txt) = df8e32f5f23bf2f2615a891177f61dc65359e955
-SHA1 (patch-ELF_Config.h) = 767eebd5787ae5351e3275f7d6666cd905f34f05
-SHA1 (patch-ELF_Driver.cpp) = d3ba099bf4a72a90cb126a6da4af9bdc7b97ba70
+SHA1 (patch-ELF_Config.h) = de2578f6c447aade843c59f78189da4f1d79b29a
+SHA1 (patch-ELF_Driver.cpp) = abb0cf1fb577cc6df04f5ca7d7edab17d27e3217
 SHA1 (patch-ELF_Driver.h) = e100fb0c86cc7d20b0f64919e73888a81a4836df
 SHA1 (patch-ELF_Options.td) = c8107a2c599b2444e52bdefe5f2dc539d277a092
 SHA1 (patch-ELF_Writer.cpp) = ab4ca25f832f20a5b4c80fe0f5f28822c09fb4ee
-SHA1 (patch-docs_ld.lld.1) = d61a228b5eb760a0ac4f691b9001d5505ebfe6ed
+SHA1 (patch-docs_ld.lld.1) = a6865d0099216094422aede3d65f43ee6fee22fe
 SHA1 (patch-test_ELF_gnustack.s) = b3827436dcfc67d51b8d293b11538808537ddeec
