@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2019/04/02 08:58:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.35 2019/06/02 03:11:30 ryoon Exp $
 bin/hb-ot-shape-closure
 bin/hb-shape
 bin/hb-subset
@@ -13,6 +13,7 @@ include/harfbuzz/hb-face.h
 include/harfbuzz/hb-font.h
 include/harfbuzz/hb-ft.h
 include/harfbuzz/hb-glib.h
+${PLIST.graphite2}include/harfbuzz/hb-graphite2.h
 ${PLIST.icu}include/harfbuzz/hb-icu.h
 include/harfbuzz/hb-map.h
 include/harfbuzz/hb-ot-color.h
