@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.103 2019/03/24 21:05:20 rhialto Exp $
+$NetBSD: distinfo,v 1.104 2019/06/02 09:48:10 tsutsui Exp $
 
 SHA1 (mplayer/Abyss-1.7.tar.bz2) = 46d122cb60496eecbc96f26a0cfe0bda883fd725
 RMD160 (mplayer/Abyss-1.7.tar.bz2) = ca1e1c77177dc23300d011c1e00711c6bb81756a
@@ -303,7 +303,7 @@ Size (mplayer/xmmplayer-1.5.tar.bz2) = 74184 bytes
 SHA1 (patch-Makefile) = be30a8e90383d6af5902380587b5075fd9c73b83
 SHA1 (patch-ae) = 286f5ac075ea4123a1a6276f97e02a4dda9b3e67
 SHA1 (patch-an) = 330c427e30b686165fda15a85b730a3f53e0d217
-SHA1 (patch-configure) = d3e2366e30d1919472e18ec7eded71e3d2b4b498
+SHA1 (patch-configure) = 1bba1d39be27c31f2345c8303f252404538c192f
 SHA1 (patch-gui_interface.c) = 04c347b6cb0a54132e6b089142c8ed282f583a1c
 SHA1 (patch-libao2_ao_sun.c) = ce7042b394b9b8c051597c734b70290c8bf0a8d5
 SHA1 (patch-libmpcodecs_vf__screenshot.c) = a99f81ae7fb3da72e623b0169124e4aa2e20ce37
