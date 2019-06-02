@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2019/05/28 13:05:20 wiz Exp $
+$NetBSD: distinfo,v 1.10 2019/06/02 18:45:06 wiz Exp $
 
-SHA1 (freeDiameter/1.3.0.tar.gz) = 216e88e5fc4d919b62e3be1ed116cafbfa18e5fc
-RMD160 (freeDiameter/1.3.0.tar.gz) = c66405783dda09e2900f89959c7edb81d3391393
-SHA512 (freeDiameter/1.3.0.tar.gz) = 69745810069e77106d36207a3785da86e92923a2cfeef186446a29cc86474738d9145bfc8c64e611567f50fa687291e71e659dc234e25e0ebbc80f59d3048a8c
-Size (freeDiameter/1.3.0.tar.gz) = 930680 bytes
+SHA1 (freeDiameter/1.3.2.tar.gz) = 809344c5a39906b67d36d868e0471058039c4095
+RMD160 (freeDiameter/1.3.2.tar.gz) = 4292222731e9d64b2109623a63d4f798dbe5d7e4
+SHA512 (freeDiameter/1.3.2.tar.gz) = ab89c5ca4163edb6c0711691d468a2c7bd912eec245ea4e70f9985cf7e47b9ab57647166e54efe35e42174f9c71c74dcff33e4be98e164c0bf35ab3ab011c16f
+Size (freeDiameter/1.3.2.tar.gz) = 933237 bytes
