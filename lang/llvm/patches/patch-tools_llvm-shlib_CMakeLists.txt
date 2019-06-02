@@ -1,33 +1,34 @@
-$NetBSD: patch-tools_llvm-shlib_CMakeLists.txt,v 1.4 2018/12/09 20:04:38 adam Exp $
+$NetBSD: patch-tools_llvm-shlib_CMakeLists.txt,v 1.5 2019/06/02 08:35:55 adam Exp $
 
 Use the Linux style linking everywhere except Darwin and SunOS.
 
---- tools/llvm-shlib/CMakeLists.txt.orig	2018-08-03 10:15:36.000000000 +0000
+--- tools/llvm-shlib/CMakeLists.txt.orig	2018-10-18 20:07:44.000000000 +0000
 +++ tools/llvm-shlib/CMakeLists.txt
-@@ -37,12 +37,11 @@ endif()
- add_llvm_library(LLVM SHARED DISABLE_LLVM_LINK_LLVM_DYLIB SONAME ${SOURCES})
+@@ -42,13 +42,11 @@ if(LLVM_BUILD_LLVM_DYLIB)
+   add_llvm_library(LLVM SHARED DISABLE_LLVM_LINK_LLVM_DYLIB SONAME ${SOURCES})
  
- list(REMOVE_DUPLICATES LIB_NAMES)
--if(("${CMAKE_SYSTEM_NAME}" STREQUAL "Linux") OR (MINGW) OR (HAIKU)
--   OR ("${CMAKE_SYSTEM_NAME}" STREQUAL "FreeBSD")
--   OR ("${CMAKE_SYSTEM_NAME}" STREQUAL "OpenBSD")
--   OR ("${CMAKE_SYSTEM_NAME}" STREQUAL "Fuchsia")
--   OR ("${CMAKE_SYSTEM_NAME}" STREQUAL "DragonFly")
--   OR ("${CMAKE_SYSTEM_NAME}" STREQUAL "SunOS")) # FIXME: It should be "GNU ld for elf"
-+if("${CMAKE_SYSTEM_NAME}" STREQUAL "Darwin")
-+  set(LIB_NAMES -Wl,-all_load ${LIB_NAMES})
-+elseif("${CMAKE_SYSTEM_NAME}" STREQUAL "SunOS")
-+  set(LIB_NAMES -Wl,-Bsymbolic -Wl,-z -Wl,allextract ${LIB_NAMES} -Wl,-z -Wl,defaultextract)
-+else()
-   configure_file(
-   ${CMAKE_CURRENT_SOURCE_DIR}/simple_version_script.map.in
-   ${LLVM_LIBRARY_DIR}/tools/llvm-shlib/simple_version_script.map)
-@@ -53,8 +52,6 @@ if(("${CMAKE_SYSTEM_NAME}" STREQUAL "Lin
-     # Solaris ld does not accept global: *; so there is no way to version *all* global symbols
-     set(LIB_NAMES -Wl,--version-script,${LLVM_LIBRARY_DIR}/tools/llvm-shlib/simple_version_script.map ${LIB_NAMES})
+   list(REMOVE_DUPLICATES LIB_NAMES)
+-  if(("${CMAKE_SYSTEM_NAME}" STREQUAL "Linux") OR (MINGW) OR (HAIKU)
+-     OR ("${CMAKE_SYSTEM_NAME}" STREQUAL "FreeBSD")
+-     OR ("${CMAKE_SYSTEM_NAME}" STREQUAL "GNU")
+-     OR ("${CMAKE_SYSTEM_NAME}" STREQUAL "OpenBSD")
+-     OR ("${CMAKE_SYSTEM_NAME}" STREQUAL "Fuchsia")
+-     OR ("${CMAKE_SYSTEM_NAME}" STREQUAL "DragonFly")
+-     OR ("${CMAKE_SYSTEM_NAME}" STREQUAL "SunOS")) # FIXME: It should be "GNU ld for elf"
++  if("${CMAKE_SYSTEM_NAME}" STREQUAL "SunOS")
++    set(LIB_NAMES -Wl,-Bsymbolic -Wl,-z -Wl,allextract ${LIB_NAMES} -Wl,-z -Wl,defaultextract)
++  elseif("${CMAKE_SYSTEM_NAME}" STREQUAL "Darwin")
++    set(LIB_NAMES -Wl,-all_load ${LIB_NAMES})
++  else()
+     configure_file(
+     ${CMAKE_CURRENT_SOURCE_DIR}/simple_version_script.map.in
+     ${LLVM_LIBRARY_DIR}/tools/llvm-shlib/simple_version_script.map)
+@@ -59,8 +57,6 @@ if(LLVM_BUILD_LLVM_DYLIB)
+       # Solaris ld does not accept global: *; so there is no way to version *all* global symbols
+       set(LIB_NAMES -Wl,--version-script,${LLVM_LIBRARY_DIR}/tools/llvm-shlib/simple_version_script.map ${LIB_NAMES})
+     endif()
+-  elseif("${CMAKE_SYSTEM_NAME}" STREQUAL "Darwin")
+-    set(LIB_NAMES -Wl,-all_load ${LIB_NAMES})
    endif()
--elseif("${CMAKE_SYSTEM_NAME}" STREQUAL "Darwin")
--  set(LIB_NAMES -Wl,-all_load ${LIB_NAMES})
- endif()
  
- target_link_libraries(LLVM PRIVATE ${LIB_NAMES})
+   target_link_libraries(LLVM PRIVATE ${LIB_NAMES})

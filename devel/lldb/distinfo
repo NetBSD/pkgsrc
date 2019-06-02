@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.14 2018/12/23 00:11:40 adam Exp $
+$NetBSD: distinfo,v 1.15 2019/06/02 08:35:55 adam Exp $
 
-SHA1 (lldb-7.0.1.src.tar.xz) = 6286b90b2762404baee55a69a2a7e9ed0fce58a2
-RMD160 (lldb-7.0.1.src.tar.xz) = cc74fa4a201d6541cc918caee9abd683c18189b5
-SHA512 (lldb-7.0.1.src.tar.xz) = 7e98c3148ac34b42404e5aaaff91728d19e9062110a333f0bc7a62ec324fbb6d033ea44b56e144dc1e94febb2107cfb33c71bb3602c2168a6270dd807a2cc5ff
-Size (lldb-7.0.1.src.tar.xz) = 19384628 bytes
-SHA1 (patch-cmake_modules_LLDBStandalone.cmake) = 8f7d06a4b3a1e996af9af4affd650291c4f01fe5
+SHA1 (lldb-8.0.0.src.tar.xz) = ca188f74b4896cd243ed1c3797d27c3371185146
+RMD160 (lldb-8.0.0.src.tar.xz) = 8f48d590075479cd131874855a951450ac5a4c72
+SHA512 (lldb-8.0.0.src.tar.xz) = 5192d6d6d1759db28569de929ba8db2a80283000f1bf8453d9cf172ac85574c8eacc13f9fe64ecabea0533bfc49c0f58ea8fb29b1f4d88c065d905d553f2e60c
+Size (lldb-8.0.0.src.tar.xz) = 19602332 bytes
+SHA1 (patch-cmake_modules_LLDBStandalone.cmake) = 7d079e2fc74f7419a833c79ec39c51c18792443f
 SHA1 (patch-scripts_Python_modules_readline_readline.cpp) = 4a030226c47cf7d54ebc727e92e278c163e48bf5
-SHA1 (patch-source_API_CMakeLists.txt) = 5e78d7cc8a669cb4c5ece2479894bb18ca3cf282
+SHA1 (patch-source_API_CMakeLists.txt) = 47213a9f674c8afc03a0baecb26ef7bb0cb68925
 SHA1 (patch-source_Host_CMakeLists.txt) = 5c7ae7b896aa110fe7ab21ed3616350e0958bc2a
