@@ -1,10 +1,21 @@
-$NetBSD: patch-ad,v 1.3 2019/01/04 13:35:16 ryoon Exp $
+$NetBSD: patch-ad,v 1.4 2019/06/02 09:19:58 gson Exp $
+
+short-term hack to fix hpcmips emulation from Anders Gavare
 
 patch to fix big-endian mips support from matt@netbsd.org
 
 diff -rup src/cpus/cpu_mips_coproc.cc src/cpus/cpu_mips_coproc.cc
 --- src/cpus/cpu_mips_coproc.cc.orig	2018-12-07 06:29:22.000000000 +0000
 +++ src/cpus/cpu_mips_coproc.cc
+@@ -1927,7 +1927,7 @@ void coproc_tlbwri(struct cpu *cpu, int 
+ 		 *             be too expensive to add e.g. 16MB pages like
+ 		 *             this.
+ 		 */
+-		if (psize == 0x1000) {
++		if (psize == 0x1000 && cpu->cd.mips.cpu_type.rev != MIPS_R4100) {
+ 			memblock = memory_paddr_to_hostaddr(cpu->mem, paddr0, 0);
+ 			if (memblock != NULL && cp->reg[COP0_ENTRYLO0] & ENTRYLO_V)
+ 				cpu->update_translation_table(cpu, vaddr0, memblock,
 @@ -2029,6 +2029,13 @@ void coproc_function(struct cpu *cpu, st
  
  	if (cpnr < 2 && (((function & 0x03e007f8) == (COPz_MTCz << 21))
