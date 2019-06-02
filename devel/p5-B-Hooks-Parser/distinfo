@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2017/04/09 03:26:19 mef Exp $
+$NetBSD: distinfo,v 1.10 2019/06/02 03:22:48 wen Exp $
 
-SHA1 (B-Hooks-Parser-0.19.tar.gz) = 1b3dc1f7243eceedc2076d201d5ba07466bee5de
-RMD160 (B-Hooks-Parser-0.19.tar.gz) = 8726a3a0ceb1db641db63cf5a86fe93d784f48e6
-SHA512 (B-Hooks-Parser-0.19.tar.gz) = 87708e718bddcdf3a80fa4f75a7fb9f642519b8dc1bdb5eafaf825b10efb23f74e8645af86094696efd50c1194a818360ee1a77ce226a0b1f89ea4db90be636b
-Size (B-Hooks-Parser-0.19.tar.gz) = 87015 bytes
+SHA1 (B-Hooks-Parser-0.21.tar.gz) = 76649357824f67c9af27c8e660ddeafcecafc60a
+RMD160 (B-Hooks-Parser-0.21.tar.gz) = 2095c4ef81ffffd7457c9fe27276ff8f9457fb0d
+SHA512 (B-Hooks-Parser-0.21.tar.gz) = 7645b9f43ab147fc51dfc4f7e8b89b66a4225b214914f0cc12f9b8887e2717d373453c227e2c0cc0508424d01ea96dd3eb8160d746bfa484857bf9be8ec0c72e
+Size (B-Hooks-Parser-0.21.tar.gz) = 89001 bytes
 SHA1 (patch-aa) = 5de150e40cd2db27b5c85c2d9a81e531d7183388
