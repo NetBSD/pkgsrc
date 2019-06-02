@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19041 2019/05/31 14:11:36 jperkin Exp $
+$NetBSD: TODO,v 1.19042 2019/06/02 08:26:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -339,6 +339,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
+	o ImageMagick-7.0.8.48
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaLib-19.0.5
@@ -449,7 +450,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cal3d-0.11.0
 	o calc-2.11.10.1
 	o calcoo-2.1.0
-	o calibre-3.42.0
+	o calibre-3.44.0
 	o calligra-3.0.1 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
@@ -976,6 +977,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o minivmac-3.2.3
 	o mit-krb5-1.17
 	o mit-scheme-bin-9.2
+	o modular-xorg-server-1.20.5
 	o modular-xorg-xquartz-1.18.0
 	o molden-4.8 [after which PR 40252 can be closed]
 	o molden-5.5
@@ -1124,6 +1126,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-ephem3-3.7.6.0
 	o py-gnome-menus-3.8.0
 	o py-gobject3-3.30.4
+	o py-google-api-python-client-1.7.9
 	o py-hgview-1.9.0
 	o py-hsm-1.1.1
 	o py-input-pad-1.4.2
@@ -1135,6 +1138,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-pendrell-0.3.7
 	o py-ptt-1.10.2
 	o py-pycountry-1.20
+	o py-pygit2-0.28.2
 	o py-simpletal-5.1
 	o py-spf-2.0.12t
 	o py-sybase-0.37
@@ -1314,6 +1318,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ufoai-2.3.1
 	o uhttpmock-0.5.0
 	o unicap-0.9.8
+	o unifont-12.1.02
 	o units-2.12
 	o urlgrabber-3.10.1
 	o userppp-030706
@@ -1371,6 +1376,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xhippo-3.5
 	o xine-1.2.3
 	o xjman-0.7
+	o xkeyboard-config-2.27
 	o xli-2006.11.10
 	o xlockmore-5.55
 	o xmake-2.0.5
