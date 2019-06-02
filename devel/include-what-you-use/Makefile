@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2019/04/25 07:32:46 maya Exp $
+# $NetBSD: Makefile,v 1.17 2019/06/02 08:45:24 adam Exp $
 
-DISTNAME=	include-what-you-use-0.11
-PKGREVISION=	1
+DISTNAME=	include-what-you-use-0.12
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=include-what-you-use/}
+GITHUB_TAG=	clang_8.0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://include-what-you-use.org/
