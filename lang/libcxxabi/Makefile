@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/12/23 00:11:40 adam Exp $
+# $NetBSD: Makefile,v 1.4 2019/06/02 08:41:58 adam Exp $
 
-DISTNAME=	libcxxabi-7.0.1.src
+DISTNAME=	libcxxabi-8.0.0.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
