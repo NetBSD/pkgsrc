@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21.2.1 2019/05/14 04:55:57 spz Exp $
+@comment $NetBSD: PLIST,v 1.21.2.2 2019/06/02 10:23:06 spz Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/COPYRIGHT.txt
 share/doc/drupal/INSTALL.mysql.txt
@@ -90,6 +90,13 @@ share/drupal/misc/arrow-desc.png
 share/drupal/misc/authorize.js
 share/drupal/misc/autocomplete.js
 share/drupal/misc/batch.js
+share/drupal/misc/brumann/polyfill-unserialize/.gitignore
+share/drupal/misc/brumann/polyfill-unserialize/.travis.yml
+share/drupal/misc/brumann/polyfill-unserialize/LICENSE
+share/drupal/misc/brumann/polyfill-unserialize/README.md
+share/drupal/misc/brumann/polyfill-unserialize/composer.json
+share/drupal/misc/brumann/polyfill-unserialize/phpunit.xml.dist
+share/drupal/misc/brumann/polyfill-unserialize/src/Unserialize.php
 share/drupal/misc/collapse.js
 share/drupal/misc/configure.png
 share/drupal/misc/draggable.png
@@ -153,16 +160,30 @@ share/drupal/misc/timezone.js
 share/drupal/misc/tree-bottom.png
 share/drupal/misc/tree.png
 share/drupal/misc/typo3/drupal-security/PharExtensionInterceptor.php
+share/drupal/misc/typo3/phar-stream-wrapper/.gitignore
 share/drupal/misc/typo3/phar-stream-wrapper/LICENSE
 share/drupal/misc/typo3/phar-stream-wrapper/README.md
 share/drupal/misc/typo3/phar-stream-wrapper/composer.json
 share/drupal/misc/typo3/phar-stream-wrapper/src/Assertable.php
 share/drupal/misc/typo3/phar-stream-wrapper/src/Behavior.php
+share/drupal/misc/typo3/phar-stream-wrapper/src/Collectable.php
 share/drupal/misc/typo3/phar-stream-wrapper/src/Exception.php
 share/drupal/misc/typo3/phar-stream-wrapper/src/Helper.php
+share/drupal/misc/typo3/phar-stream-wrapper/src/Interceptor/ConjunctionInterceptor.php
 share/drupal/misc/typo3/phar-stream-wrapper/src/Interceptor/PharExtensionInterceptor.php
+share/drupal/misc/typo3/phar-stream-wrapper/src/Interceptor/PharMetaDataInterceptor.php
 share/drupal/misc/typo3/phar-stream-wrapper/src/Manager.php
+share/drupal/misc/typo3/phar-stream-wrapper/src/Phar/Container.php
+share/drupal/misc/typo3/phar-stream-wrapper/src/Phar/DeserializationException.php
+share/drupal/misc/typo3/phar-stream-wrapper/src/Phar/Manifest.php
+share/drupal/misc/typo3/phar-stream-wrapper/src/Phar/Reader.php
+share/drupal/misc/typo3/phar-stream-wrapper/src/Phar/ReaderException.php
+share/drupal/misc/typo3/phar-stream-wrapper/src/Phar/Stub.php
 share/drupal/misc/typo3/phar-stream-wrapper/src/PharStreamWrapper.php
+share/drupal/misc/typo3/phar-stream-wrapper/src/Resolvable.php
+share/drupal/misc/typo3/phar-stream-wrapper/src/Resolver/PharInvocation.php
+share/drupal/misc/typo3/phar-stream-wrapper/src/Resolver/PharInvocationCollection.php
+share/drupal/misc/typo3/phar-stream-wrapper/src/Resolver/PharInvocationResolver.php
 share/drupal/misc/ui/images/ui-bg_flat_0_aaaaaa_40x100.png
 share/drupal/misc/ui/images/ui-bg_flat_75_ffffff_40x100.png
 share/drupal/misc/ui/images/ui-bg_glass_55_fbf9ee_1x400.png
