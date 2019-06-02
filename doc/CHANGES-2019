@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2352 2019/06/02 03:10:40 wen Exp $
+$NetBSD: CHANGES-2019,v 1.2353 2019/06/02 03:13:01 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -3972,3 +3972,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-Data-Page to 2.03 [wen 2019-06-02]
 	Updated devel/p5-Devel-PatchPerl to 1.60 [wen 2019-06-02]
 	Updated devel/p5-Devel-PPPort to 3.52 [wen 2019-06-02]
+	Updated devel/py-pbr to 5.2.1 [mef 2019-06-02]
