@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2370 2019/06/03 10:47:38 prlw1 Exp $
+$NetBSD: CHANGES-2019,v 1.2371 2019/06/03 12:21:56 fox Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4006,3 +4006,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/glib2 to 2.60.2 [prlw1 2019-06-03]
 	Removed sysutils/gio-fam [prlw1 2019-06-03]
 	Updated devel/gobject-introspection to 1.60.1 [prlw1 2019-06-03]
+	Updated chat/ircd-hybrid to 8.2.26 [fox 2019-06-03]
