@@ -1,7 +1,9 @@
-$NetBSD: patch-gio_inotify_inotify-kernel.c,v 1.2 2019/06/03 21:24:04 maya Exp $
+$NetBSD: patch-gio_inotify_inotify-kernel.c,v 1.3 2019/06/03 23:09:29 maya Exp $
 
 Use _XOPEN_NAME_MAX in lieu of NAME_MAX for SunOS.
+
 Include <sys/filio.h> for FIONREAD on SunOS.
+https://gitlab.gnome.org/GNOME/glib/merge_requests/889
 
 --- gio/inotify/inotify-kernel.c.orig	2016-02-23 22:25:36.000000000 +0000
 +++ gio/inotify/inotify-kernel.c
