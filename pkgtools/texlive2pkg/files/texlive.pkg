@@ -1,7 +1,7 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: texlive.pkg,v 1.5 2019/02/02 01:55:52 markd Exp $
+# $NetBSD: texlive.pkg,v 1.6 2019/06/03 10:36:25 markd Exp $
 
-$version = "2018";
+$version = "2019";
 $pkgname = $shortdesc = $revision = $license = $longdesc = $depend = $homepage = "";
 $plist = $other = $maps = "";
 
@@ -35,6 +35,7 @@ $version =~ s:/::g;
 $version =~ s: :_:g; # 5th edition
 $version =~ s:-::g;  # 2013-05-12
 $license = "apache-2.0" if ($license eq "apache2");
+$license = "cc-by-v4.0" if ($license eq "cc-by-4");
 $license = "gnu-fdl-v1.3" if ($license eq "fdl");
 $license = "gnu-lgpl-v2" if ($license eq "lgpl");
 $license = "gnu-gpl-v2" if ($license eq "gpl");
@@ -49,6 +50,9 @@ $license = "ofl-v1.1 AND lppl-1.3c" if ($license eq "ofllppl1.3");
 $license = "ofl-v1.1 AND lppl-1.3c" if ($license eq "ofllppl");
 $license = "gnu-gpl-v2 AND ofl-v1.1 AND lppl-1.3c" if ($license eq "gplofllppl");
 $license = "gnu-gpl-v2 AND lppl-1.3c" if ($license eq "lpplgpl");
+$license = "apache-2.0 AND lppl-1.3c" if ($license eq "apache2lppl");
+$license = "mit AND lppl-1.3c" if ($license eq "mitlppl");
+$license = "gnu-gpl-v2 AND cc-by-sa-v4.0" if ($license eq "gpl3+cc-by-sa-4");
 $license = "modified-bsd" if ($license eq "bsd");
 $license = "modified-bsd" if ($license eq "bsd3");
 $license = "2-clause-bsd" if ($license eq "bsd2");
