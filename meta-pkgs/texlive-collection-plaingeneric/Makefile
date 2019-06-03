@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2019/05/15 11:42:54 markd Exp $
+# $NetBSD: Makefile,v 1.10 2019/06/03 10:54:40 markd Exp $
 
 DISTNAME=	collection-plaingeneric
-PKGNAME=	texlive-${DISTNAME}-2019pre1
+PKGNAME=	texlive-${DISTNAME}-2019pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	50044
@@ -50,7 +50,7 @@ DEPENDS+=	tex-graphics-pln-[0-9]*:../../graphics/tex-graphics-pln
 # depend gtl
 # depend hlist
 DEPENDS+=	tex-hyplain-[0-9]*:../../print/tex-hyplain
-# depend ifetex
+DEPENDS+=	tex-ifetex-[0-9]*:../../print/tex-ifetex
 DEPENDS+=	tex-iftex-[0-9]*:../../print/tex-iftex
 # depend insbox
 DEPENDS+=	tex-js-misc-[0-9]*:../../print/tex-js-misc
