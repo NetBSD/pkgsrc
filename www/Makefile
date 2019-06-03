@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1383 2019/06/03 11:09:58 markd Exp $
+# $NetBSD: Makefile,v 1.1384 2019/06/03 11:35:04 markd Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -370,6 +370,7 @@ SUBDIR+=	p5-HTML-Table
 SUBDIR+=	p5-HTML-TableExtract
 SUBDIR+=	p5-HTML-Tagset
 SUBDIR+=	p5-HTML-Template
+SUBDIR+=	p5-HTML-Template-Compiled
 SUBDIR+=	p5-HTML-Template-Expr
 SUBDIR+=	p5-HTML-Template-Pro
 SUBDIR+=	p5-HTML-Tiny
