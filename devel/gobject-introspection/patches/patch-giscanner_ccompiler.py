@@ -1,12 +1,12 @@
-$NetBSD: patch-giscanner_ccompiler.py,v 1.1 2018/02/06 15:44:01 jperkin Exp $
+$NetBSD: patch-giscanner_ccompiler.py,v 1.2 2019/06/03 10:47:20 prlw1 Exp $
 
 Do not set LD_LIBRARY_PATH when calling the compiler.
 
---- giscanner/ccompiler.py.orig	2017-05-18 05:42:52.000000000 +0000
+--- giscanner/ccompiler.py.orig	2019-03-02 17:10:05.000000000 +0000
 +++ giscanner/ccompiler.py
-@@ -161,13 +161,6 @@ class CCompiler(object):
- 
-             runtime_paths.append(library_path)
+@@ -227,13 +227,6 @@ class CCompiler(object):
+                 else:
+                     args.append('-l' + library)
  
 -        for envvar in runtime_path_envvar:
 -            if envvar in os.environ:
