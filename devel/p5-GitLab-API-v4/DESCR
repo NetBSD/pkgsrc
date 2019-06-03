@@ -1,0 +1,6 @@
+This module provides a one-to-one interface with the GitLab API v4. Much
+is not documented here as it would just be duplicating GitLab's own API
+Documentation.
+
+Note that this distribution also includes the gitlab-api-v4 command-line
+interface (CLI).
