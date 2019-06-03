@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.239 2019/06/03 21:24:04 maya Exp $
+$NetBSD: distinfo,v 1.240 2019/06/03 23:09:29 maya Exp $
 
 SHA1 (glib-2.60.2.tar.xz) = 8aa8586f0b1fd13c2717adf7ac3e6427bee651b6
 RMD160 (glib-2.60.2.tar.xz) = 8d18a8e4b43071afc35762eff3618a88a7112f57
@@ -10,8 +10,8 @@ SHA1 (patch-gio_giomodule.c) = 08181ad8d46dde1a028faa246a4852e474610eaa
 SHA1 (patch-gio_glocalfileinfo.c) = 8e0b7e9543ce3c702c468f56e7ecf418d70b049f
 SHA1 (patch-gio_gresource-tool.c) = ad0e59f48f5f98ea66be568dbe2e5a5d1ac602fc
 SHA1 (patch-gio_gunixcredentialsmessage.c) = c13119ddd6262db7c03e53857e987f0c495d3312
-SHA1 (patch-gio_gunixmounts.c) = bce5aaa9778b7044aebe588d12068202682c5feb
-SHA1 (patch-gio_inotify_inotify-kernel.c) = ee931a707c7685a91e52eba1300405dfdb647b0c
+SHA1 (patch-gio_gunixmounts.c) = 5c9d4d86161ef1723da0e7d54af65debcb1ed137
+SHA1 (patch-gio_inotify_inotify-kernel.c) = a48c70f0dfd5e485f27b9719e2d0670f67a159c5
 SHA1 (patch-gio_meson.build) = 5983ff37da260558d0f367feed75d4c0ed1bd6fd
 SHA1 (patch-glib_gmain.c) = 2ab4b59e438d9f764bee62e0c1fa8bbd231b6e8d
 SHA1 (patch-glib_meson.build) = 477cbc2324a81bb2a406487daef71cfc2140719c
@@ -22,4 +22,4 @@ SHA1 (patch-gmodule_gmodule-win32.c) = 477a861f8590a62c3dbc0aa4ad728cc86ebb34dd
 SHA1 (patch-gmodule_gmodule.c) = 55c5f9d16e3517f3fdc04d40922f50d9c66b0b9a
 SHA1 (patch-gobject_glib-mkenums.in) = c177cf9b1ea81542665240678f47f68351a3760d
 SHA1 (patch-gobject_meson.build) = 5e7c8508dbc228d01960e563bdba40cbf10db489
-SHA1 (patch-meson.build) = 7c7de85d2dc91ac835d80d76c23330c3e0ab3555
+SHA1 (patch-meson.build) = b2e1139f4606870b117fd6ff35d7832b35ea1126
