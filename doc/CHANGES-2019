@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2368 2019/06/03 09:55:32 prlw1 Exp $
+$NetBSD: CHANGES-2019,v 1.2369 2019/06/03 09:58:39 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4004,3 +4004,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-cython to 0.29.10 [adam 2019-06-03]
 	Updated devel/py-test to 4.6.1 [adam 2019-06-03]
 	Updated devel/glib2 to 2.60.2 [prlw1 2019-06-03]
+	Removed sysutils/gio-fam [prlw1 2019-06-03]
