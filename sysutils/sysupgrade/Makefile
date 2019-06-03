@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2017/05/29 23:07:49 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2019/06/03 20:35:55 triaxx Exp $
 
 DISTNAME=	sysupgrade-1.5
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	sysutils
-MASTER_SITES=	https://github.com/jmmv/sysupgrade/releases/download/sysupgrade-1.5/
-
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jmmv/}
 MAINTAINER=	jmmv@NetBSD.org
 COMMENT=	Automate upgrades of NetBSD
 LICENSE=	modified-bsd
