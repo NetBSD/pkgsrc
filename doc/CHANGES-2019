@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2372 2019/06/03 12:29:50 markd Exp $
+$NetBSD: CHANGES-2019,v 1.2373 2019/06/03 12:40:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4013,3 +4013,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Added www/p5-HTTP-Tiny-Multipart version 0.08 [markd 2019-06-03]
 	Added devel/p5-GitLab-API-v4 version 0.14 [markd 2019-06-03]
 	Added www/p5-HTML-Template-Compiled version 1.003 [markd 2019-06-03]
+	Updated www/py-django to 1.11.21 [adam 2019-06-03]
+	Updated www/py-django2 to 2.2.2 [adam 2019-06-03]
