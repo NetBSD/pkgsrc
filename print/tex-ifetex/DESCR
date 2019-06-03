@@ -1,0 +1,7 @@
+The package provides the switch \ifetex which indicates whether
+e-TeX is available or not. The package can be loaded as LaTeX
+package using \usepackage{ifetex} or in plain TeX using \input
+ifetex. In either case it aborts silently if the \ifetex macro
+is already defined. The package's test is whether \eTeXversion
+is defined as a primitive; if it is, the package assumes e-TeX
+features are available.
