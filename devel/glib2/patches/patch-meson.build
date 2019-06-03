@@ -1,9 +1,12 @@
-$NetBSD: patch-meson.build,v 1.2 2019/06/03 21:24:04 maya Exp $
+$NetBSD: patch-meson.build,v 1.3 2019/06/03 23:09:29 maya Exp $
 
 - Don't insist that python binary is called "python3".
   (Requires meson >= 0.50.0)
 - Don't install bash completion scripts.
+
 - Tolerate getxattr not existing (smartOS)
+https://gitlab.gnome.org/GNOME/glib/merge_requests/888
+
 - Define a newer POSIX, as we build this package with -std=gnu99
 - auto-detect GNU iconv, even if no arguments are passed.
   (by checking if iconv.h might in fact be a gnu one)
