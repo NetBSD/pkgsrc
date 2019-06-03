@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.814 2019/05/29 03:24:02 thorpej Exp $
+# $NetBSD: Makefile,v 1.815 2019/06/03 09:53:51 prlw1 Exp $
 #
 
 COMMENT=	System utilities
@@ -194,7 +194,6 @@ SUBDIR+=	gdmap
 SUBDIR+=	genpasswd
 SUBDIR+=	gentoo
 SUBDIR+=	gfm
-SUBDIR+=	gio-fam
 SUBDIR+=	gkrellm
 SUBDIR+=	gkrellm-est
 SUBDIR+=	gkrellm-server

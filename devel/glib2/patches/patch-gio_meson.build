@@ -1,0 +1,11 @@
+$NetBSD: patch-gio_meson.build,v 1.1 2019/06/03 09:53:50 prlw1 Exp $
+
+Don't build tests, as have strong dependency on libdl.
+
+--- gio/meson.build.orig	2019-05-03 13:43:28.000000000 +0000
++++ gio/meson.build
+@@ -994,4 +994,3 @@ if enable_systemtap
+ endif
+ 
+ subdir('fam')
+-subdir('tests')

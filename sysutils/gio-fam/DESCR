@@ -1,2 +1,0 @@
-This package provides a backend for GIO to provide notifications on file and
-directory alterations using FAM (or Gamin) as the monitoring system.

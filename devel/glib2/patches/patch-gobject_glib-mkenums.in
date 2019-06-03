@@ -1,17 +1,9 @@
-$NetBSD: patch-gobject_glib-mkenums.in,v 1.4 2018/04/01 20:26:25 joerg Exp $
+$NetBSD: patch-gobject_glib-mkenums.in,v 1.5 2019/06/03 09:53:50 prlw1 Exp $
 
-- Revert 4395a897 Use env to run the Python-based tools
-  https://bugzilla.gnome.org/show_bug.cgi?id=788527
 - Do not print failing characters that might not be ASCII
 
 --- gobject/glib-mkenums.in.orig	2018-01-08 20:00:49.000000000 +0000
 +++ gobject/glib-mkenums.in
-@@ -1,4 +1,4 @@
--#!/usr/bin/env @PYTHON@
-+#!@PYTHON@
- 
- # If the code below looks horrible and unpythonic, do not panic.
- #
 @@ -88,9 +88,8 @@ else:
  # https://bugzilla.gnome.org/show_bug.cgi?id=785113#c20
  def replace_and_warn(err):

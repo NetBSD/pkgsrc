@@ -1,9 +1,9 @@
-$NetBSD: patch-glib_gmain.c,v 1.1 2015/01/25 06:54:28 pho Exp $
+$NetBSD: patch-glib_gmain.c,v 1.2 2019/06/03 09:53:50 prlw1 Exp $
 
 Imported patch from the upstream Bugzilla:
 
   Bug 728123 - glib2 @2.40.0 issues a "Got weird mach timebase info" error (Macports, PPC)
-  https://bugzilla.gnome.org/show_bug.cgi?id=728123
+  https://gitlab.gnome.org/GNOME/glib/issues/858
 
 Tested on powerpc-apple-darwin9.
 
