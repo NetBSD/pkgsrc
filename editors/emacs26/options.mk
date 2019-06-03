@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2019/04/14 07:03:20 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2019/06/03 01:21:49 chuck Exp $
 
 ### Set options
 PKG_OPTIONS_VAR=			PKG_OPTIONS.emacs
@@ -61,6 +61,13 @@ CONFIGURE_ARGS+=	--without-gnutls
 ### x11 is selected (as SUGGESTED above)
 ###
 .if !empty(PKG_OPTIONS:Mx11)
+###
+### on OSX the configure script will select the "nextstep" window system
+### unless you explicitly tell it not to.  this should not impact other
+### platforms.
+###
+CONFIGURE_ARGS+=	--without-ns
+
 ###
 ### Support SVG
 ###
