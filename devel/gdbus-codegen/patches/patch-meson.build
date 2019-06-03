@@ -1,0 +1,26 @@
+$NetBSD: patch-meson.build,v 1.1 2019/06/03 09:53:50 prlw1 Exp $
+
+Turn into a meson.build file which meson will accept, and
+subsitute some variables.
+
+--- meson.build.orig	2019-04-15 10:54:04.000000000 +0000
++++ meson.build
+@@ -1,3 +1,5 @@
++project('gdbus_codegen')
++
+ gdbus_codegen_files = [
+   '__init__.py',
+   'codegen.py',
+@@ -9,9 +11,9 @@ gdbus_codegen_files = [
+ ]
+ 
+ gdbus_codegen_conf = configuration_data()
+-gdbus_codegen_conf.set('VERSION', glib_version)
+-gdbus_codegen_conf.set('PYTHON', python_name)
+-gdbus_codegen_conf.set('DATADIR', glib_datadir)
++gdbus_codegen_conf.set('VERSION', '@VERSION@')
++gdbus_codegen_conf.set('PYTHON', '@PYTHON@')
++gdbus_codegen_conf.set('DATADIR', '@DATADIR@')
+ 
+ # Install gdbus-codegen executable
+ gdbus_codegen = configure_file(input : 'gdbus-codegen.in',

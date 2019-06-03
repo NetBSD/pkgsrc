@@ -1,8 +1,10 @@
-$NetBSD: patch-gio_gresource-tool.c,v 1.1 2012/07/12 14:43:26 jperkin Exp $
+$NetBSD: patch-gio_gresource-tool.c,v 1.2 2019/06/03 09:53:50 prlw1 Exp $
 
---- gio/gresource-tool.c.orig	Thu Jul 12 09:13:01 2012
-+++ gio/gresource-tool.c	Thu Jul 12 09:13:06 2012
-@@ -31,6 +31,11 @@
+Solaris fix
+
+--- gio/gresource-tool.c.orig	2019-05-03 13:43:28.000000000 +0000
++++ gio/gresource-tool.c
+@@ -29,6 +29,11 @@
  #include <locale.h>
  
  #ifdef HAVE_LIBELF
@@ -13,4 +15,4 @@ $NetBSD: patch-gio_gresource-tool.c,v 1.1 2012/07/12 14:43:26 jperkin Exp $
 +#  endif
  #include <libelf.h>
  #include <gelf.h>
- #include <sys/mman.h>
+ #endif
