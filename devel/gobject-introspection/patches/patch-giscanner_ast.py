@@ -1,30 +1,27 @@
-$NetBSD: patch-aa,v 1.4 2016/04/07 20:28:19 prlw1 Exp $
+$NetBSD: patch-giscanner_ast.py,v 1.1 2019/06/03 10:47:20 prlw1 Exp $
 
---- giscanner/ast.py.orig	2015-11-19 11:20:18.000000000 +0000
+- add double underscore versions
+- 32/64-bit time_t fix
+
+--- giscanner/ast.py.orig	2019-01-06 10:32:10.000000000 +0000
 +++ giscanner/ast.py
-@@ -300,13 +300,21 @@ type_names['void'] = TYPE_NONE
- type_names['signed long long'] = TYPE_LONG_LONG
- # C99 stdint exact width types
- type_names['int8_t'] = TYPE_INT8
-+type_names['__int8_t'] = TYPE_INT8
- type_names['uint8_t'] = TYPE_UINT8
-+type_names['__uint8_t'] = TYPE_UINT8
- type_names['int16_t'] = TYPE_INT16
-+type_names['__int16_t'] = TYPE_INT16
- type_names['uint16_t'] = TYPE_UINT16
-+type_names['__uint16_t'] = TYPE_UINT16
- type_names['int32_t'] = TYPE_INT32
-+type_names['__int32_t'] = TYPE_INT32
- type_names['uint32_t'] = TYPE_UINT32
-+type_names['__uint32_t'] = TYPE_UINT32
+@@ -307,6 +307,15 @@ type_names['uint32_t'] = TYPE_UINT32
  type_names['int64_t'] = TYPE_INT64
-+type_names['__int64_t'] = TYPE_INT64
  type_names['uint64_t'] = TYPE_UINT64
-+type_names['__uint64_t'] = TYPE_UINT64
- # C99 stdbool
- type_names['bool'] = TYPE_BOOLEAN
  
-@@ -345,7 +353,7 @@ type_names['FILE*'] = TYPE_ANY
++type_names['__int8_t'] = TYPE_INT8
++type_names['__uint8_t'] = TYPE_UINT8
++type_names['__int16_t'] = TYPE_INT16
++type_names['__uint16_t'] = TYPE_UINT16
++type_names['__int32_t'] = TYPE_INT32
++type_names['__uint32_t'] = TYPE_UINT32
++type_names['__int64_t'] = TYPE_INT64
++type_names['__uint64_t'] = TYPE_UINT64
++
+ # A few additional GLib type aliases
+ type_names['guchar'] = TYPE_UINT8
+ type_names['gchararray'] = TYPE_STRING
+@@ -344,7 +353,7 @@ type_names['FILE*'] = TYPE_ANY
  # integers it's easy enough to expand them.
  type_names['size_t'] = type_names['gsize']
  type_names['ssize_t'] = type_names['gssize']
