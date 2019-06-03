@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.6 2019/04/25 07:32:45 maya Exp $
+# $NetBSD: Makefile,v 1.7 2019/06/03 09:53:50 prlw1 Exp $
 
-PKGREVISION= 1
 .include "../../devel/glib2/Makefile.common"
 
 PKGNAME:=	${PKGNAME:S/glib2/glib2-tools/}
 CATEGORIES=	devel gnome
 
 COMMENT=	GLib2/gobject python-dependent tools
+
+DISTINFO_FILE=	${.CURDIR}/../../devel/glib2/distinfo
+PATCHDIR=	${.CURDIR}/../../devel/glib2/patches
 
 NO_BUILD=		yes
 
@@ -17,6 +19,7 @@ do-configure:
 .for f in ${PYSCRIPTS}
 	cd ${WRKSRC}/gobject \
 	&& ${SED} \
+		-e "s,/usr/bin/env ,," \
 		-e "s,@PYTHON@,${PYTHONBIN}," \
 		-e "s,@VERSION@,${PKGVERSION}," \
 		${f}.in > ${f}
