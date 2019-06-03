@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2019/05/29 20:27:32 adam Exp $
+# $NetBSD: Makefile,v 1.57 2019/06/03 08:41:06 adam Exp $
 
-DISTNAME=	Cython-0.29.9
+DISTNAME=	Cython-0.29.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/Cython/}
@@ -22,9 +22,9 @@ do-test:
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} cython cython-${PYVERSSUFFIX} && \
-		${MV} cythonize cythonize-${PYVERSSUFFIX} && \
-		${MV} cygdb cygdb-${PYVERSSUFFIX} || ${TRUE}
+	${MV} cython cython-${PYVERSSUFFIX} && \
+	${MV} cythonize cythonize-${PYVERSSUFFIX} && \
+	${MV} cygdb cygdb-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
