@@ -1,7 +1,7 @@
-$NetBSD: patch-CMakeLists.txt,v 1.9 2019/03/25 11:34:05 bouyer Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.10 2019/06/03 15:20:59 bouyer Exp $
 
---- CMakeLists.txt.orig	2019-03-13 05:01:43.000000000 +0100
-+++ CMakeLists.txt	2019-03-13 12:59:52.443556322 +0100
+--- CMakeLists.txt.orig	2019-03-23 02:25:59.000000000 +0100
++++ CMakeLists.txt	2019-06-03 15:10:23.518458870 +0200
 @@ -157,7 +157,19 @@
  # Based on code from nohal
  IF (NOT WIN32)
@@ -31,7 +31,15 @@ $NetBSD: patch-CMakeLists.txt,v 1.9 2019/03/25 11:34:05 bouyer Exp $
        ELSE (CMAKE_SIZEOF_VOID_P MATCHES "8")
          SET (ARCH "i386")
          SET (LIB_INSTALL_DIR "lib")
-@@ -1033,7 +1044,6 @@
+@@ -413,6 +424,7 @@
+   SET(wxWidgets_USE_LIBS net xml html adv aui core base webview)
+ ENDIF()
+ 
++
+ OPTION (USE_GL "Enable OpenGL support" ON)
+ 
+ # Prefer libGL.so to libOpenGL.so, see CMP0072
+@@ -1033,7 +1045,6 @@
  
  
  IF(NOT WIN32 AND NOT APPLE AND NOT QT_ANDROID)
@@ -39,7 +47,24 @@ $NetBSD: patch-CMakeLists.txt,v 1.9 2019/03/25 11:34:05 bouyer Exp $
  
  
    IF(NOT OCPN_FORCE_GTK3)
-@@ -2336,6 +2346,7 @@
+@@ -1053,14 +1064,14 @@
+     set(wxWidgets_CONFIG_OPTIONS ${wxWidgets_CONFIG_OPTIONS} --toolkit=gtk3)
+     MESSAGE(STATUS "Building against GTK3...")
+   ENDIF(GTK2_FOUND)
+-  FIND_PACKAGE(wxWidgets)
++  FIND_PACKAGE(wxWidgets COMPONENTS ${wxWidgets_USE_LIBS})
+   if (wxWidgets_FOUND)
+     message(STATUS "Found wxWidgets webview add-on")
+     add_definitions(-DOCPN_USE_WEBVIEW)
+   else ()
+     list(REMOVE_ITEM wxWidgets_USE_LIBS webview)
+     message(STATUS "Could not find wxWidgets webview add-on")
+-    FIND_PACKAGE(wxWidgets REQUIRED)
++    FIND_PACKAGE(wxWidgets REQUIRED ${wxWidgets_USE_LIBS})
+   endif ()
+   MESSAGE (STATUS "Found wxWidgets..." )
+   MESSAGE (STATUS " wxWidgets Include: ${wxWidgets_INCLUDE_DIRS}")
+@@ -2336,6 +2347,7 @@
  #   So, add them manually.  These declarations may be redundant in some architectures, but do no harm.
  IF(CMAKE_SYSTEM_NAME MATCHES ".*Linux")
    TARGET_LINK_LIBRARIES( ${PACKAGE_NAME} dl )
