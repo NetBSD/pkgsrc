@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.247 2019/06/03 21:24:04 maya Exp $
+# $NetBSD: Makefile,v 1.248 2019/06/03 23:09:29 maya Exp $
 
 .include "Makefile.common"
 
 CATEGORIES=	devel gnome
 COMMENT=	Some useful routines for C programming (glib2)
+PKGREVISION=	1
 
 DISTINFO_FILE=	${.CURDIR}/../../devel/glib2/distinfo
 PATCHDIR=	${.CURDIR}/../../devel/glib2/patches
