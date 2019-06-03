@@ -1,0 +1,7 @@
+HTML::Template::Compiled is a template system which can be used for HTML::Template
+templates with almost the same API. It offers more flexible template delimiters,
+additional tags and features, and by compiling the template into perl code it can
+run significantly faster in persistent environments such as FastCGI or mod_perl.
+
+The goal is to offer more features for flexibility but keep the basic syntax
+as easy as it is.
