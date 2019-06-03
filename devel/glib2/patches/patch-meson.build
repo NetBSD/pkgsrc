@@ -1,12 +1,58 @@
-$NetBSD: patch-meson.build,v 1.1 2019/06/03 09:53:50 prlw1 Exp $
+$NetBSD: patch-meson.build,v 1.2 2019/06/03 21:24:04 maya Exp $
 
 - Don't insist that python binary is called "python3".
   (Requires meson >= 0.50.0)
 - Don't install bash completion scripts.
+- Tolerate getxattr not existing (smartOS)
+- Define a newer POSIX, as we build this package with -std=gnu99
+- auto-detect GNU iconv, even if no arguments are passed.
+  (by checking if iconv.h might in fact be a gnu one)
 
 --- meson.build.orig	2019-05-03 13:43:28.000000000 +0000
 +++ meson.build
-@@ -1886,9 +1886,11 @@ elif meson.get_cross_property('have_strl
+@@ -1696,14 +1696,14 @@ else
+   found_iconv = false
+   if iconv_opt == 'libc'
+     if cc.has_function('iconv_open')
+-      libiconv = []
+-      found_iconv = true
+-    endif
+-  elif iconv_opt == 'gnu'
+-    if cc.has_header_symbol('iconv.h', 'libiconv_open')
+-      glib_conf.set('USE_LIBICONV_GNU', true)
+-      libiconv = [cc.find_library('iconv')]
+-      found_iconv = true
++      if cc.has_header_symbol('iconv.h', 'libiconv_open')
++        glib_conf.set('USE_LIBICONV_GNU', true)
++	libiconv = [cc.find_library('iconv')]
++	found_iconv = true
++      else
++        libiconv = []
++        found_iconv = true
++      endif
+     endif
+   elif iconv_opt == 'native'
+     if cc.has_header_symbol('iconv.h', 'iconv_open')
+@@ -1836,16 +1836,15 @@ if host_system != 'windows' and get_opti
+   if cc.has_function('getxattr') and cc.has_header('sys/xattr.h')
+     glib_conf.set('HAVE_SYS_XATTR_H', 1)
+     glib_conf_prefix = glib_conf_prefix + '#define @0@ 1\n'.format('HAVE_SYS_XATTR_H')
++    glib_conf.set('HAVE_XATTR', 1)
+   #failure. try libattr
+   elif cc.has_header_symbol('attr/xattr.h', 'getxattr')
+     glib_conf.set('HAVE_ATTR_XATTR_H', 1)
+     glib_conf_prefix = glib_conf_prefix + '#define @0@ 1\n'.format('HAVE_ATTR_XATTR_H')
+     xattr_dep = [cc.find_library('xattr')]
+-  else
+-    error('No getxattr implementation found in C library or libxattr')
++    glib_conf.set('HAVE_XATTR', 1)
+   endif
+ 
+-  glib_conf.set('HAVE_XATTR', 1)
+   if cc.compiles(glib_conf_prefix + '''
+                  #include <stdio.h>
+                  #ifdef HAVE_SYS_TYPES_H
+@@ -1886,9 +1885,11 @@ elif meson.get_cross_property('have_strl
    glib_conf.set('HAVE_STRLCPY', 1)
  endif
  
@@ -21,7 +67,7 @@ $NetBSD: patch-meson.build,v 1.1 2019/06/03 09:53:50 prlw1 Exp $
  
  python_version = python.language_version()
  python_version_req = '>=3.4'
-@@ -1897,7 +1899,7 @@ if not python_version.version_compare(py
+@@ -1897,7 +1898,7 @@ if not python_version.version_compare(py
  endif
  
  # Determine which user environment-dependent files that we want to install
@@ -30,3 +76,12 @@ $NetBSD: patch-meson.build,v 1.1 2019/06/03 09:53:50 prlw1 Exp $
  have_sh = find_program('sh', required : false).found() # For glib-gettextize
  
  # Some installed tests require a custom environment
+@@ -1906,7 +1907,7 @@ env_program = find_program('env', requir
+ # FIXME: How to detect Solaris? https://github.com/mesonbuild/meson/issues/1578
+ if host_system == 'sunos'
+   glib_conf.set('_XOPEN_SOURCE_EXTENDED', 1)
+-  glib_conf.set('_XOPEN_SOURCE', 2)
++  glib_conf.set('_POSIX_C_SOURCE',200809)
+   glib_conf.set('__EXTENSIONS__',1)
+ endif
+ 
