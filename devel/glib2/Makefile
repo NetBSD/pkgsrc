@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.246 2019/06/03 09:53:50 prlw1 Exp $
+# $NetBSD: Makefile,v 1.247 2019/06/03 21:24:04 maya Exp $
 
 .include "Makefile.common"
 
@@ -13,6 +13,8 @@ PATCHDIR=	${.CURDIR}/../../devel/glib2/patches
 MESON_ARGS+=	-Dinstalled_tests=false
 # Avoid linux dependency on libmount-dev
 MESON_ARGS+=	-Dlibmount=false
+
+LDFLAGS.SunOS+=	-lintl -lnsl
 
 REPLACE_PYTHON+=	gio/gio-querymodules-wrapper.py
 REPLACE_PYTHON+=	gio/tests/gengiotypefuncs.py
