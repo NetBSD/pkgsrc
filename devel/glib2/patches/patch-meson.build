@@ -1,0 +1,32 @@
+$NetBSD: patch-meson.build,v 1.1 2019/06/03 09:53:50 prlw1 Exp $
+
+- Don't insist that python binary is called "python3".
+  (Requires meson >= 0.50.0)
+- Don't install bash completion scripts.
+
+--- meson.build.orig	2019-05-03 13:43:28.000000000 +0000
++++ meson.build
+@@ -1886,9 +1886,11 @@ elif meson.get_cross_property('have_strl
+   glib_conf.set('HAVE_STRLCPY', 1)
+ endif
+ 
+-python = import('python').find_installation('python3')
+-# used for '#!/usr/bin/env <name>'
+-python_name = 'python3'
++python = import('python').find_installation('python3', required: false)
++if not python.found()
++  python = import('python').find_installation()
++endif
++python_name = python.path()
+ 
+ python_version = python.language_version()
+ python_version_req = '>=3.4'
+@@ -1897,7 +1899,7 @@ if not python_version.version_compare(py
+ endif
+ 
+ # Determine which user environment-dependent files that we want to install
+-have_bash = find_program('bash', required : false).found() # For completion scripts
++have_bash = false # For completion scripts
+ have_sh = find_program('sh', required : false).found() # For glib-gettextize
+ 
+ # Some installed tests require a custom environment
