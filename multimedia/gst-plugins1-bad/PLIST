@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2019/05/29 20:51:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2019/06/04 19:31:45 prlw1 Exp $
 include/gstreamer-1.0/gst/audio/audio-bad-prelude.h
 include/gstreamer-1.0/gst/audio/gstnonstreamaudiodecoder.h
 include/gstreamer-1.0/gst/audio/gstplanaraudioadapter.h
@@ -74,7 +74,6 @@ lib/gstreamer-1.0/libgstbz2.la
 lib/gstreamer-1.0/libgstcamerabin.la
 lib/gstreamer-1.0/libgstcoloreffects.la
 lib/gstreamer-1.0/libgstdebugutilsbad.la
-lib/gstreamer-1.0/libgstdecklink.la
 lib/gstreamer-1.0/libgstdtls.la
 lib/gstreamer-1.0/libgstdvbsuboverlay.la
 lib/gstreamer-1.0/libgstdvdspu.la
