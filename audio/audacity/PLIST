@@ -1,18 +1,19 @@
-@comment $NetBSD: PLIST,v 1.14 2019/02/10 17:14:42 nia Exp $
+@comment $NetBSD: PLIST,v 1.15 2019/06/04 23:09:51 nia Exp $
 bin/audacity
 lib/libFileDialog.so.0
 man/man1/audacity.1
 share/appdata/audacity.appdata.xml
 share/applications/audacity.desktop
 share/audacity/EQDefaultCurves.xml
+share/audacity/include/audacity/ComponentInterface.h
 share/audacity/include/audacity/ConfigInterface.h
 share/audacity/include/audacity/EffectAutomationParameters.h
 share/audacity/include/audacity/EffectInterface.h
-share/audacity/include/audacity/IdentInterface.h
 share/audacity/include/audacity/ImporterInterface.h
 share/audacity/include/audacity/ModuleInterface.h
 share/audacity/include/audacity/PluginInterface.h
 share/audacity/include/audacity/Types.h
+share/audacity/nyquist/aud-do-support.lsp
 share/audacity/nyquist/dspprims.lsp
 share/audacity/nyquist/envelopes.lsp
 share/audacity/nyquist/equalizer.lsp
@@ -72,9 +73,11 @@ share/audacity/plug-ins/highpass.ny
 share/audacity/plug-ins/limiter.ny
 share/audacity/plug-ins/lowpass.ny
 share/audacity/plug-ins/notch.ny
+share/audacity/plug-ins/nyquist-plug-in-installer.ny
 share/audacity/plug-ins/pluck.ny
 share/audacity/plug-ins/rhythmtrack.ny
 share/audacity/plug-ins/rissetdrum.ny
+share/audacity/plug-ins/rms.ny
 share/audacity/plug-ins/sample-data-export.ny
 share/audacity/plug-ins/sample-data-import.ny
 share/audacity/plug-ins/tremolo.ny
