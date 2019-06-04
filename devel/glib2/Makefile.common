@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.67 2019/06/03 09:53:50 prlw1 Exp $
+# $NetBSD: Makefile.common,v 1.68 2019/06/04 15:08:47 jperkin Exp $
 #
 # used by devel/glib2/Makefile
 # used by devel/gdbus-codegen/Makefile
@@ -14,6 +14,6 @@ HOMEPAGE=	https://developer.gnome.org/glib/
 LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=	c c++ c99
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	msgfmt pkg-config
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
