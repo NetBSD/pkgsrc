@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2018/04/17 10:59:19 markd Exp $
+# $NetBSD: Makefile,v 1.37 2019/06/04 13:05:28 maya Exp $
 
 DISTNAME=	desktop-file-utils-0.23
 PKGREVISION=	1
@@ -18,6 +18,8 @@ USE_PKGLOCALEDIR=	YES
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	EMACS=no
+
+LDFLAGS.SunOS+=		-lintl
 
 FILES_SUBST+=		APPLICATIONS_PATH="${PREFIX}/share/applications"
 FILES_SUBST+=		UPDATE_DESKTOPDB="${PREFIX}/bin/update-desktop-database"
