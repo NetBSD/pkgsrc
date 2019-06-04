@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.118 2019/02/10 17:14:42 nia Exp $
+# $NetBSD: Makefile,v 1.119 2019/06/04 23:09:51 nia Exp $
 
-DISTNAME=		audacity-2.2.2
+DISTNAME=		audacity-2.3.2
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_GITHUB:=audacity/}
 GITHUB_PROJECT=		Audacity
@@ -27,23 +27,40 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-nyquist=yes
 CONFIGURE_ARGS+=	--with-expat=system
 CONFIGURE_ARGS+=	--with-ffmpeg=system
-CONFIGURE_ARGS+=	--with-id3tag=system
+CONFIGURE_ARGS+=	--with-lame=system
 CONFIGURE_ARGS+=	--with-libflac=system
-CONFIGURE_ARGS+=	--with-libmad=system
+CONFIGURE_ARGS+=	--with-libid3tag=system
 CONFIGURE_ARGS+=	--with-libsamplerate=system
 CONFIGURE_ARGS+=	--with-libsndfile=system
+CONFIGURE_ARGS+=	--with-libtwolame=system
+CONFIGURE_ARGS+=	--with-libvamp=local
+CONFIGURE_ARGS+=	--with-libvorbis=system
 CONFIGURE_ARGS+=	--with-lv2=system
 CONFIGURE_ARGS+=	--with-midi=local
+# configure: error: Your version of portaudio does not include
+# required Pa_GetStreamHostApiType function
 CONFIGURE_ARGS+=	--with-portaudio=local
+CONFIGURE_ARGS+=	--with-sbsms=local
 CONFIGURE_ARGS+=	--with-soundtouch=system
-CONFIGURE_ARGS+=	--with-twolame=system
-CONFIGURE_ARGS+=	--with-vorbis=system
 CONFIGURE_ARGS+=	--with-libsoxr=system
-.if ${OPSYS} != "Linux"
+CONFIGURE_ARGS+=	--with-widgetextra=local
+
+# for internal portaudio...
+
+.if ${OPSYS} == "Linux"
+CONFIGURE_ARGS+=	--with-alsa
+.else
 CONFIGURE_ARGS+=	--without-alsa
 CONFIGURE_ENV+=		ac_cv_header_pa_linux_alsa_h=no
 .endif
-CONFIGURE_ARGS+=	--without-xaudio
+
+.include "../../mk/oss.buildlink3.mk"
+
+.if !empty(OSS_TYPE) && ${OSS_TYPE} != "none"
+CONFIGURE_ARGS+=	--with-oss
+.else
+CONFIGURE_ARGS+=	--without-oss
+.endif
 
 CONFIG_GUESS_OVERRIDE=		\
 	config.guess */config.guess */*/config.guess */*/*/config.guess
@@ -74,16 +91,14 @@ post-install:
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../multimedia/libogg/buildlink3.mk"
+.include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../audio/lilv/buildlink3.mk"
 .include "../../audio/lv2/buildlink3.mk"
-.include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../audio/soundtouch/buildlink3.mk"
 BUILDLINK_API_DEPENDS.twolame+=	twolame>=0.3.9
 .include "../../audio/twolame/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libid3tag/buildlink3.mk"
-.include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/libsoxr/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
@@ -93,9 +108,9 @@ BUILDLINK_API_DEPENDS.twolame+=	twolame>=0.3.9
 BUILDLINK_API_DEPENDS.flac+=	flac>=1.3.0
 .include "../../audio/flac/buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
+.include "../../multimedia/libogg/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../x11/wxGTK30/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
-.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

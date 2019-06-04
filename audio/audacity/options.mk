@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2019/02/10 17:14:42 nia Exp $
+# $NetBSD: options.mk,v 1.4 2019/06/04 23:09:51 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.audacity
-PKG_SUPPORTED_OPTIONS=		debug jack ladspa nls
+PKG_SUPPORTED_OPTIONS=		debug jack ladspa mad nls
 PKG_SUGGESTED_OPTIONS+=		ladspa nls
 PLIST_VARS+=			nls
 
@@ -13,8 +13,21 @@ CONFIGURE_ARGS+=		--enable-debug=yes
 CONFIGURE_ARGS+=		--enable-debug=no
 .endif
 
+# for internal portaudio...
 .if !empty(PKG_OPTIONS:Mjack)
+CONFIGURE_ARGS+=		--with-jack
 .include "../../audio/jack/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=		--without-jack
+.endif
+
+# libmad is disabled by default because it's been unmaintained
+# since 2004 and is a pile of CVEs.
+.if !empty(PKG_OPTIONS:Mmad)
+CONFIGURE_ARGS+=		--with-libmad
+.include "../../audio/libmad/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=		--with-libmad=no
 .endif
 
 .if !empty(PKG_OPTIONS:Mladspa)
