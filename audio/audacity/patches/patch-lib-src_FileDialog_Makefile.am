@@ -1,8 +1,8 @@
-$NetBSD: patch-lib-src_FileDialog_Makefile.am,v 1.2 2016/06/05 01:02:38 ryoon Exp $
+$NetBSD: patch-lib-src_FileDialog_Makefile.am,v 1.3 2019/06/04 23:09:51 nia Exp $
 
 don't build a shared library of this.
 
---- lib-src/FileDialog/Makefile.am.orig	2016-01-13 14:31:17.000000000 +0000
+--- lib-src/FileDialog/Makefile.am.orig	2019-05-04 10:38:57.000000000 +0000
 +++ lib-src/FileDialog/Makefile.am
 @@ -1,6 +1,6 @@
  ACLOCAL_AMFLAGS = -I m4
@@ -10,5 +10,5 @@ don't build a shared library of this.
 -lib_LTLIBRARIES = libFileDialog.la
 +noinst_LTLIBRARIES = libFileDialog.la
  
+ libFileDialog_la_LIBTOOLFLAGS = --tag=CXX
  libFileDialog_la_CPPFLAGS = $(WX_CXXFLAGS) -Wno-deprecated-declarations
- libFileDialog_la_LIBADD = $(WX_LIBS)
