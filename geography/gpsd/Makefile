@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.43 2019/05/11 14:03:24 gdt Exp $
+# $NetBSD: Makefile,v 1.44 2019/06/04 10:43:21 gdt Exp $
 
 DISTNAME=	gpsd-3.18.1
 PKGREVISION=	1
 CATEGORIES=	geography
 MASTER_SITES=	http://download-mirror.savannah.gnu.org/releases/gpsd/
+# will probably switch to https://gitlab.com/gpsd/gpsd/releases
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	https://savannah.nongnu.org/projects/gpsd
+HOMEPAGE=	https://gpsd.io/
+#HOMEPAGE_OLD	=https://savannah.nongnu.org/projects/gpsd
 COMMENT=	GPS information daemon
 
 LICENSE=	modified-bsd
