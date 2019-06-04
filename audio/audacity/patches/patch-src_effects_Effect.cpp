@@ -1,10 +1,10 @@
-$NetBSD: patch-src_effects_Effect.cpp,v 1.2 2019/02/10 17:14:42 nia Exp $
+$NetBSD: patch-src_effects_Effect.cpp,v 1.3 2019/06/04 23:09:51 nia Exp $
 
 SunOS needs alloca.h for alloca().
 
---- src/effects/Effect.cpp.orig	2018-02-14 07:11:20.000000000 +0000
+--- src/effects/Effect.cpp.orig	2019-05-04 10:38:57.000000000 +0000
 +++ src/effects/Effect.cpp
-@@ -61,6 +61,10 @@ greater use in future.
+@@ -78,6 +78,10 @@ greater use in future.
  #include <Cocoa/Cocoa.h>
  #endif
  
@@ -12,6 +12,6 @@ SunOS needs alloca.h for alloca().
 +#include <alloca.h>
 +#endif
 +
- #include "../Experimental.h"
  #include "../commands/ScreenshotCommand.h"
  
+ #include <unordered_map>
