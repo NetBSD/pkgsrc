@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q1,v 1.1.2.8 2019/06/02 18:15:59 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q1,v 1.1.2.9 2019/06/04 09:11:04 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q1 branch:
 
@@ -121,4 +121,8 @@ sysutils/intel-microcode-netbsd: security-update
 
 Pullup ticket #5971 - requested by leot
 net/wget: security fix
+
+Pullup ticket #5976 - requested by adam
+www/py-django: security fix
+www/py-django2: security fix
 
