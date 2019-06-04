@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.78 2019/04/25 07:32:37 maya Exp $
+# $NetBSD: Makefile,v 1.79 2019/06/04 19:00:09 nia Exp $
 
-DISTNAME=		bitlbee-3.5.1
-PKGREVISION=		2
+DISTNAME=		bitlbee-3.6
 CATEGORIES=		chat
 MASTER_SITES=		http://get.bitlbee.org/src/
 
