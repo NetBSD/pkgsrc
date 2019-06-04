@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.259 2019/05/01 17:59:56 maya Exp $
+# $NetBSD: Makefile,v 1.260 2019/06/04 09:08:06 he Exp $
 
 DISTNAME=		openssh-8.0p1
 PKGNAME=		${DISTNAME:S/p1/.1/}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_OPENBSD:=OpenSSH/portable/}
 
