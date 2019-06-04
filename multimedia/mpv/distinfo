@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.52 2019/06/01 01:15:53 tsutsui Exp $
+$NetBSD: distinfo,v 1.53 2019/06/04 13:55:43 nia Exp $
 
 SHA1 (mpv-0.29.1.tar.gz) = 83f2bc0eb5a8bec9a9d5efc7de0e19a442238ac5
 RMD160 (mpv-0.29.1.tar.gz) = 72a4fda3a72ac4fd37ed04435833fa2cf378a012
@@ -6,6 +6,7 @@ SHA512 (mpv-0.29.1.tar.gz) = ec57c9ceaaf2915ee237dd5a1c5ea5d22725d8611e28a9b998e
 Size (mpv-0.29.1.tar.gz) = 3059503 bytes
 SHA1 (patch-audio_out_ao__alsa.c) = c4661d0d22550d6e4eb2b7a42dd04dbcc58123b0
 SHA1 (patch-audio_out_ao__oss.c) = 824c214d0d4464b94e46a922ede4045ae537a534
+SHA1 (patch-options_options.c) = 125282ede99098224fc9c16952b44c12b8b3e06b
 SHA1 (patch-player_main.c) = e794199990059cc95050032194bca70557c381d7
 SHA1 (patch-video_out_drm__common.c) = facb8d99fe31119618866c9af512a60e54b4ea6c
 SHA1 (patch-wscript) = a908365c0c63745e1d22010c26804789997d4377
