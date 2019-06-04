@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2018/09/20 10:40:14 jperkin Exp $
+@comment $NetBSD: PLIST.Linux,v 1.1.6.1 2019/06/04 16:17:37 spz Exp $
 lib/libnss_winbind.so.2
 lib/libnss_wins.so
 lib/libnss_wins.so.2
 lib/samba/vfs/btrfs.so
 lib/samba/vfs/fileid.so
+man/man8/vfs_btrfs.8
+man/man8/vfs_fileid.8
