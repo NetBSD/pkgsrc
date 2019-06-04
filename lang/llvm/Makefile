@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2019/06/02 08:35:55 adam Exp $
+# $NetBSD: Makefile,v 1.40 2019/06/04 10:22:17 jperkin Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -75,10 +75,11 @@ TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 
 # It may be that the Solaris linker is more strict here and they can be removed on
 # all platforms.  Change this to a patch if verified.
-SUBST_CLASSES.SunOS+=	lto
-SUBST_STAGE.lto=	pre-configure
-SUBST_FILES.lto=	tools/lto/lto.exports
-SUBST_SED.lto=		-e '/^LLVM/d'
+SUBST_CLASSES.SunOS+=	linkmap
+SUBST_STAGE.linkmap=	pre-configure
+SUBST_FILES.linkmap=	tools/lto/lto.exports
+SUBST_FILES.linkmap+=	tools/opt-remarks/OptRemarks.exports
+SUBST_SED.linkmap=	-e '/^LLVM/d'
 
 .include "../../mk/bsd.prefs.mk"
 
