@@ -1,14 +1,13 @@
-$NetBSD: distinfo,v 1.37 2019/02/10 17:14:42 nia Exp $
+$NetBSD: distinfo,v 1.38 2019/06/04 23:09:51 nia Exp $
 
-SHA1 (audacity-2.2.2.tar.gz) = 84b0f29c7e07bcc0ef7d946d16f4d094a1612778
-RMD160 (audacity-2.2.2.tar.gz) = 6ceee54811742b071af6823d8e69bea1da039fec
-SHA512 (audacity-2.2.2.tar.gz) = 311a5f3413e7faf40dc5639b2b9f8b0d03d1a410c50d894ca7abf3fe5733a29b710ccf7e3215d97dd9142e93c0ab5e13955dfd13146b03f927f74465459a6457
-Size (audacity-2.2.2.tar.gz) = 25947462 bytes
+SHA1 (audacity-2.3.2.tar.gz) = b91b88aa68521a03fa5cc7dacaf5eb39f92e3b6f
+RMD160 (audacity-2.3.2.tar.gz) = 8bf05565f6a4afd464670b2e6fb5ed261a886ef2
+SHA512 (audacity-2.3.2.tar.gz) = a59d6e9e974d5f78f5ca561e3bea31fc1b3e88f9ea60b2df7ce8bcec264d886f3fdc8f20030e11a86daff8ffeb735850b5e5f73c45fbef0bfcc58692423e7cd0
+Size (audacity-2.3.2.tar.gz) = 61972597 bytes
 SHA1 (patch-Makefile.in) = 2aca8c2ae0af7863f8f090a707c08fba693c7c86
 SHA1 (patch-aa) = 67c0ec5ff99004d9035de13f0263add46ed8c994
-SHA1 (patch-am) = 1f380ec8022c5849c0297ba181c9ff6223516476
-SHA1 (patch-lib-src_FileDialog_Makefile.am) = a1bf7353f970f24dde1f069427d16b0473e2fa71
-SHA1 (patch-lib-src_FileDialog_Makefile.in) = 60ee705c6096cbb32278fca8ab73d634126aaca4
+SHA1 (patch-lib-src_FileDialog_Makefile.am) = efa6ca612f3984a4cf8150e3c624e347d144af87
+SHA1 (patch-lib-src_FileDialog_Makefile.in) = 44ca2539d68ab3951ae44377ed56f574785c1b08
 SHA1 (patch-lib-src_lib-widget-extra_Makefile.am) = 03d080c141259fbf02a9c5a70ce06625fcebf75e
 SHA1 (patch-lib-src_libnyquist_nyquist_nyqsrc_sndread.c) = dbc0b5b88043c7b2895742e78e6a5990f65012ef
 SHA1 (patch-lib-src_libnyquist_nyquist_sys_unix_switches.h) = d313f137f11d3e0fafa383ddeccbc89021e9ddee
@@ -16,8 +15,7 @@ SHA1 (patch-lib-src_libnyquist_nyquist_xlisp_xlisp.h) = 2d4558f059d86633a1fcdda2
 SHA1 (patch-lib-src_portaudio-v19_Makefile.in) = 9e86fbd93d322322b8416ef6b43ba5c98141c986
 SHA1 (patch-lib-src_portmixer_src-extra_Makefile.am) = 9a0d5be37753683a2cade42673edb3d08e01ab4d
 SHA1 (patch-lib-src_sbsms_src-extra_Makefile.am) = 2beca18a286de1b26f4f96976fb58e1665d0531c
-SHA1 (patch-mac_scripts_create__info__header.sh) = 3fa02a88a2dffbabf58adcb5be2e5798d28ae643
 SHA1 (patch-src_AudioIO.cpp) = 1b44c68c4233b24a5fa4e17515eb237fee0e283a
-SHA1 (patch-src_effects_Effect.cpp) = 46c0ce811ef331367058081f6e5f95daa96e990d
-SHA1 (patch-src_effects_EffectManager.cpp) = d0d8609fffb8de4108e75f78ef66ca2c3261b19e
+SHA1 (patch-src_effects_Effect.cpp) = 78d9a8f1bdb70284d2ad57243d10f56c993759c6
+SHA1 (patch-src_effects_EffectManager.cpp) = 8ce8679cf4530b1fbb0b1d63896be98c41b27bb6
 SHA1 (patch-src_effects_NoiseRemoval.cpp) = 6d72545cde66ac90d4eb3821a3a3f384ccbf46f2
