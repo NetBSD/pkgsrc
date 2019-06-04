@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2019/06/04 17:22:22 nia Exp $
+${PLIST.glibc}lib/preloadable_libintl.so
