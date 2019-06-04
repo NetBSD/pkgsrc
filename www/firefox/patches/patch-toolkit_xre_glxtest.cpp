@@ -1,7 +1,8 @@
-$NetBSD: patch-toolkit_xre_glxtest.cpp,v 1.3 2019/03/19 16:11:28 ryoon Exp $
+$NetBSD: patch-toolkit_xre_glxtest.cpp,v 1.4 2019/06/04 00:23:11 maya Exp $
 
 Fix libGL filename on NetBSD,
 see https://bugzilla.mozilla.org/show_bug.cgi?id=1180498
+https://hg.mozilla.org/integration/mozilla-inbound/rev/8bcc51aaa91e
 
 --- toolkit/xre/glxtest.cpp.orig	2019-03-07 16:53:43.000000000 +0000
 +++ toolkit/xre/glxtest.cpp
