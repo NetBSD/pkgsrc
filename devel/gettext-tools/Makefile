@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/05/27 13:21:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.38 2019/06/04 17:22:22 nia Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
@@ -36,6 +36,14 @@ BUILDLINK_TRANSFORM.Cygwin+=	rm:-Wl,--disable-auto-import
 
 #bug 20453 in bug-gzip list, passed onto gnulib
 CONFIGURE_ENV.AIX+=	ac_cv_header_wctype_h=no
+
+PLIST_VARS+=	glibc
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Linux"
+PLIST.glibc=	yes
+.endif
 
 post-install:
 	cd ${WRKSRC}/gettext-tools/its && ${MAKE} install DESTDIR=${DESTDIR}
