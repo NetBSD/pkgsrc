@@ -5,3 +5,6 @@ memory. On modern hardware, that means that documents in the 50-100 megabyte
 range can be manipulated in memory, and that documents in the 0-1 megabyte range
 load in zero time (0.0 seconds). This allows you to drastically simplify many
 kinds of XML applications.
+
+Deprecated since Python 3.3 as xml.etree.ElementTree will automatically
+use a fast implementation whenever available.
