@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2012/06/11 13:41:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2019/06/04 13:39:38 nia Exp $
 man/man1/mplayer.1
 share/mplayer/DOCS/HTML/cs/aalib.html
 share/mplayer/DOCS/HTML/cs/advaudio.html
@@ -880,6 +880,7 @@ share/mplayer/DOCS/tech/realcodecs/audio-codecs.txt
 share/mplayer/DOCS/tech/realcodecs/streaming.txt
 share/mplayer/DOCS/tech/realcodecs/video-codecs.txt
 share/mplayer/DOCS/tech/release-howto.txt
+share/mplayer/DOCS/tech/release-svn.txt
 share/mplayer/DOCS/tech/release.sh
 share/mplayer/DOCS/tech/slave.txt
 share/mplayer/DOCS/tech/snow.txt
