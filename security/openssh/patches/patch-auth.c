@@ -1,4 +1,4 @@
-$NetBSD: patch-auth.c,v 1.5 2019/05/01 17:59:56 maya Exp $
+$NetBSD: patch-auth.c,v 1.6 2019/06/04 09:08:06 he Exp $
 
 * Use login_getpwclass() instead of login_getclass() so that the root
   vs. default login class distinction is made correctly, from FrrrBSD's
@@ -11,7 +11,7 @@ $NetBSD: patch-auth.c,v 1.5 2019/05/01 17:59:56 maya Exp $
  		return (NULL);
  #ifdef HAVE_LOGIN_CAP
 -	if ((lc = login_getclass(pw->pw_class)) == NULL) {
-+	if ((lc = login_getpwclass(pw->pw_class)) == NULL) {
++	if ((lc = login_getpwclass(pw)) == NULL) {
  		debug("unable to get login class: %s", user);
  		return (NULL);
  	}
