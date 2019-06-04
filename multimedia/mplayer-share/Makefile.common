@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.61 2018/05/27 15:27:13 tsutsui Exp $
+# $NetBSD: Makefile.common,v 1.62 2019/06/04 13:39:38 nia Exp $
 # used by multimedia/gmplayer/Makefile
 # used by multimedia/mencoder/Makefile
 # used by multimedia/mplayer/Makefile
 
-MPLAYER_VERSION=	1.3.0
+MPLAYER_VERSION=	1.4
 
 DISTNAME=		MPlayer-${MPLAYER_VERSION}
 
@@ -16,6 +16,7 @@ DIST_SUBDIR=		mplayer
 
 MAINTAINER?=		pkgsrc-users@NetBSD.org
 HOMEPAGE?=		http://www.mplayerhq.hu/
+LICENSE?=		gnu-gpl-v2
 
 #
 # NOTE: gmplayer has its own distinfo file. if you are also updating
@@ -27,11 +28,6 @@ HOMEPAGE?=		http://www.mplayerhq.hu/
 
 PATCHDIR=		${.CURDIR}/../../multimedia/mplayer-share/patches
 DISTINFO_FILE=		${.CURDIR}/../../multimedia/mplayer-share/distinfo
-
-RESTRICTED=		Prohibited by USAs DMCA and patent law
-NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
-NO_SRC_ON_FTP=		${RESTRICTED}
 
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		YES
@@ -67,5 +63,7 @@ CONFIGURE_ARGS+=	--enable-big-endian
 # autodetect code enables these options on NetBSD/arm but it should not
 CONFIGURE_ARGS+=	--disable-armv5te --disable-armv6 --disable-armv6t2
 .endif
+
+CHECK_PORTABILITY_SKIP+=	ffmpeg/configure
 
 .include "../../multimedia/mplayer-share/options.mk"
