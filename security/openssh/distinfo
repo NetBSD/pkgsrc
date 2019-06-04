@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.107 2019/05/01 17:59:56 maya Exp $
+$NetBSD: distinfo,v 1.108 2019/06/04 09:08:06 he Exp $
 
 SHA1 (openssh-8.0p1.tar.gz) = 756dbb99193f9541c9206a667eaa27b0fa184a4f
 RMD160 (openssh-8.0p1.tar.gz) = 9c0d0d97a5f9f97329bf334725dfbad53576d612
 SHA512 (openssh-8.0p1.tar.gz) = e280fa2d56f550efd37c5d2477670326261aa8b94d991f9eb17aad90e0c6c9c939efa90fe87d33260d0f709485cb05c379f0fd1bd44fc0d5190298b6398c9982
 Size (openssh-8.0p1.tar.gz) = 1597697 bytes
 SHA1 (patch-Makefile.in) = 13502b825c13c98b2ba3b84ff4bae9aa664b76b1
-SHA1 (patch-auth.c) = 194e3293fdc18b93014041d379d57df172716e1c
+SHA1 (patch-auth.c) = 060a93f5264751769f2fdf98fefd154bd80c0c5f
 SHA1 (patch-clientloop.c) = 4e88fbd14db33f003eb93c30c682a017e102196e
 SHA1 (patch-config.h.in) = 7d1050743da7264763254b57938775c546c3baa5
 SHA1 (patch-configure.ac) = 321ef5ed83abe7e07d38026e096a10700b010ac8
