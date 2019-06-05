@@ -1,0 +1,3 @@
+This package generates a coloured contour around a given text
+in order to enable printing text over a background without the
+need of a coloured box around the text.
