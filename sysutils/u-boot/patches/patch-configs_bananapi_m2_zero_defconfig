@@ -1,0 +1,20 @@
+$NetBSD: patch-configs_bananapi_m2_zero_defconfig,v 1.1 2019/06/05 05:43:16 thorpej Exp $
+
+Add bananapi_m2_zero_defconfig.
+
+--- /dev/null	2019-06-01 20:20:12.000000000 +0000
++++ configs/bananapi_m2_zero_defconfig
+@@ -0,0 +1,13 @@
++CONFIG_ARM=y
++CONFIG_ARCH_SUNXI=y
++CONFIG_SPL=y
++CONFIG_MACH_SUN8I_H3=y
++CONFIG_DRAM_CLK=408
++CONFIG_DRAM_ZQ=3881979
++CONFIG_DRAM_ODT_EN=y
++CONFIG_MMC0_CD_PIN=""
++# CONFIG_SYS_MALLOC_CLEAR_ON_INIT is not set
++# CONFIG_CMD_FLASH is not set
++# CONFIG_SPL_DOS_PARTITION is not set
++# CONFIG_SPL_EFI_PARTITION is not set
++CONFIG_DEFAULT_DEVICE_TREE="sun8i-h2-plus-bananapi-m2-zero"
