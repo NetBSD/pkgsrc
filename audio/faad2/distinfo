@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.25 2017/12/01 11:17:51 adam Exp $
+$NetBSD: distinfo,v 1.26 2019/06/05 06:07:27 nia Exp $
 
-SHA1 (faad2-2.8.6.tar.gz) = 13b0a356c3801424d535e9441718b9edb2f64a15
-RMD160 (faad2-2.8.6.tar.gz) = 499f14790b3ea4527b2ee024658d2514a21c3b3b
-SHA512 (faad2-2.8.6.tar.gz) = 9b6d7e0277ae6c93a8a799f75e7fa9b9cde6419d61533a4c5ab4335382d0cb01aa0aa2fe0fe727bb94d66fafcfeb1b6871141ab5d8dff49600775ffde5b239b8
-Size (faad2-2.8.6.tar.gz) = 1025654 bytes
+SHA1 (faad2-2.8.8.tar.gz) = 0d49c516d4a83c39053a9bd214fddba72cbc34ad
+RMD160 (faad2-2.8.8.tar.gz) = b69349ee69c869ba070f28c58418749d53898985
+SHA512 (faad2-2.8.8.tar.gz) = 3275d292b2a9fe984842962f4d81202894bddd17033f7cd6df95466554cc968dfcbf2890ae8b1df37da0cd25d645cca0a687f07e39b9fc37dd004fd5956a82af
+Size (faad2-2.8.8.tar.gz) = 1069044 bytes
 SHA1 (patch-common_mp4ff_Makefile.am) = a662e6fd841420110c02f85923d022919135be82
 SHA1 (patch-configure.ac) = ed9d4e9d611d27d4add86884996a8e7fc001bc90
-SHA1 (patch-frontend_Makefile.am) = 02f841382e494a49993160d9b64efc74b61fba84
+SHA1 (patch-frontend_Makefile.am) = ab3369e67fb5f2842076fb698819936473440de9
 SHA1 (patch-frontend_getopt.c) = 3eaf3e8318887eca49e354696cad1bd2c5bf5504
-SHA1 (patch-frontend_mp4read.c) = 4e8ccdb7c1ebf21243a0edc3ad172a1101c4a133
+SHA1 (patch-frontend_mp4read.c) = 235d69a310bb2cb52cf62479e9254c1d3eb9cef9
 SHA1 (patch-libfaad_Makefile.am) = 4d3b92f54d998bd577641f49e88d0c8bc38f963c
 SHA1 (patch-libfaad_common.h) = 60eccd8aebeb085760d6866f83ff5a613197918f
 SHA1 (patch-plugins_xmms_src_Makefile.am) = 4ba1dfefe1e351830ee990c711af6ac46db42c14
