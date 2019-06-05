@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2388 2019/06/05 13:06:33 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.2389 2019/06/05 13:10:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4032,3 +4032,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/flashrom to 1.0.1 [nia 2019-06-05]
 	Updated www/firefox to 67.0.1 [ryoon 2019-06-05]
 	Updated www/firefox-l10n to 67.0.1 [ryoon 2019-06-05]
+	Updated graphics/rawtherapee to 5.6 [ryoon 2019-06-05]
