@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2381 2019/06/05 00:35:40 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.2382 2019/06/05 05:14:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4023,3 +4023,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated chat/bitlbee to 3.6 [nia 2019-06-04]
 	Updated audio/audacity to 2.3.2 [nia 2019-06-04]
 	Updated devel/p5-App-cpanoutdated to 0.24nb5 [gutteridge 2019-06-05]
+	Updated devel/py-test to 4.6.2 [adam 2019-06-05]
+	Updated www/py-test-django to 3.5.0 [adam 2019-06-05]
