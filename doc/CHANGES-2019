@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2380 2019/06/04 23:10:03 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2381 2019/06/05 00:35:40 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4022,3 +4022,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/syncthing to 1.1.4 [triaxx 2019-06-04]
 	Updated chat/bitlbee to 3.6 [nia 2019-06-04]
 	Updated audio/audacity to 2.3.2 [nia 2019-06-04]
+	Updated devel/p5-App-cpanoutdated to 0.24nb5 [gutteridge 2019-06-05]
