@@ -1,21 +1,20 @@
-# $NetBSD: Makefile,v 1.33 2018/12/13 19:51:47 adam Exp $
+# $NetBSD: Makefile,v 1.34 2019/06/05 06:57:04 nia Exp $
 
-DISTNAME=	exempi-2.3.0
-PKGREVISION=	8
+DISTNAME=	exempi-2.5.0
 CATEGORIES=	devel graphics
-MASTER_SITES=	http://libopenraw.freedesktop.org/download/
+MASTER_SITES=	https://libopenraw.pages.freedesktop.org/download/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://libopenraw.freedesktop.org/wiki/Exempi
+HOMEPAGE=	https://libopenraw.pages.freedesktop.org/exempi/
 COMMENT=	XMP (Extensible Metadata Platform) library
 LICENSE=	modified-bsd
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	ac_cv_tls=none
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++03
+USE_TOOLS+=	gmake pkg-config
+USE_LANGUAGES=	c c++11
 
 CONFIGURE_ARGS+=	LIBS=${BUILDLINK_LDADD.iconv:Q}
 
@@ -28,5 +27,7 @@ PKGCONFIG_OVERRIDE+=	exempi/exempi-2.0.pc.in
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
+BUILDLINK_TRANSFORM+= opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
