@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2018/07/04 13:40:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2019/06/05 07:20:16 nia Exp $
 
 PKGNAME=	adacurses-${ACVERSION}
 CATEGORIES=	devel
-MASTER_SITES=	ftp://invisible-island.net/AdaCurses/
+MASTER_SITES=	ftp://ftp.invisible-island.net/AdaCurses/
 DISTFILES=	AdaCurses-${ACVERSION}.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://invisible-island.net/ncurses/ncurses-Ada95.html
+HOMEPAGE=	https://invisible-island.net/ncurses/ncurses-Ada95.html
 COMMENT=	Ada95 bindings for ncurses
 LICENSE=	mit
 
