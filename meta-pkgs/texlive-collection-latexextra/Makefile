@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2019/05/15 09:33:48 markd Exp $
+# $NetBSD: Makefile,v 1.44 2019/06/05 21:21:58 wiz Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2019pre1
+PKGNAME=	texlive-${DISTNAME}-2019pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	50984
@@ -209,7 +209,7 @@ DEPENDS+=	tex-comment-[0-9]*:../../print/tex-comment
 DEPENDS+=	tex-concprog-[0-9]*:../../print/tex-concprog
 # depend constants
 DEPENDS+=	tex-continue-[0-9]*:../../print/tex-continue
-# depend contour
+DEPENDS+=	tex-contour-[0-9]*:../../graphics/tex-contour
 # depend contracard
 # depend conv-xkv
 DEPENDS+=	tex-cooking-[0-9]*:../../print/tex-cooking
