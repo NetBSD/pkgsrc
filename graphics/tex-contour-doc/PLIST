@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2019/06/05 21:20:44 wiz Exp $
+share/texmf-dist/doc/latex/contour/ChangeLog
+share/texmf-dist/doc/latex/contour/Makefile
+share/texmf-dist/doc/latex/contour/README
+share/texmf-dist/doc/latex/contour/contour.pdf
+share/texmf-dist/doc/latex/contour/contourtest.tex
