@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2019/04/26 08:32:27 skrll Exp $
+$NetBSD: distinfo,v 1.23 2019/06/05 05:43:15 thorpej Exp $
 
 SHA1 (u-boot-2018.11.tar.bz2) = e58e86c633ad3e2613196e0c0b0a7760ae5966d6
 RMD160 (u-boot-2018.11.tar.bz2) = f63c67750951d0e2883935a5d4cc3252f51a5453
@@ -6,6 +6,11 @@ SHA512 (u-boot-2018.11.tar.bz2) = 1ea0bbb5f5e6d4c60b3a6bd345d1fa6e9da025daf36f47
 Size (u-boot-2018.11.tar.bz2) = 13045125 bytes
 SHA1 (patch-Makefile) = 45f505041a586b75953c34c1ab6fffaa56b43601
 SHA1 (patch-arch_arm_cpu_armv8_Kconfig) = 63cbbf2e3cebd46793fc03cc8e62297f6dc01aa9
+SHA1 (patch-arch_arm_dts_Makefile) = 184fdb8b04b25c0c827823779874306ce1bc746d
+SHA1 (patch-arch_arm_dts_sun8i-h2-plus-bananapi-m2-zero.dts) = aaa530a5f520eea0cb5dcece0b730e23db59eb40
+SHA1 (patch-arch_arm_dts_sun8i-h2-plus-bananapi-p2-zero.dts) = 8c78d0e0877aa9784fa209af2e16e80cb1110364
+SHA1 (patch-configs_bananapi_m2_zero_defconfig) = 5e4baef63f0e51cb8c94a1dc0c0e50ecb016807d
+SHA1 (patch-configs_bananapi_p2_zero_defconfig) = 6468b3246cbf35d10320c8a974fc06b794ae68dc
 SHA1 (patch-configs_jetson-tk1_defconfig) = e25d89b9440f9bb4486ac22fc47083ed24abdd95
 SHA1 (patch-configs_p2371-2180_defconfig) = 2a3f1ad4f9963af403c2c9f2f01b892bbe55188c
 SHA1 (patch-drivers_video_sunxi_sunxi__display.c) = 8e6a6a781cce25af5cba289fc2ca76e30b62aff6
