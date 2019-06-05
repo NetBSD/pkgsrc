@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.815 2019/06/03 09:53:51 prlw1 Exp $
+# $NetBSD: Makefile,v 1.816 2019/06/05 05:43:15 thorpej Exp $
 #
 
 COMMENT=	System utilities
@@ -619,7 +619,9 @@ SUBDIR+=	tsm8
 #SUBDIR+=	u-boot			# only contains Makefile fragments
 SUBDIR+=	u-boot-a10-olinuxino-lime
 SUBDIR+=	u-boot-bananapi
+SUBDIR+=	u-boot-bananapi-m2-zero
 SUBDIR+=	u-boot-bananapi-m3
+SUBDIR+=	u-boot-bananapi-p2-zero
 SUBDIR+=	u-boot-bananapi-r2
 SUBDIR+=	u-boot-bananapro
 SUBDIR+=	u-boot-beagleboard
