@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2396 2019/06/05 21:20:25 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2397 2019/06/05 21:20:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4040,3 +4040,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/crypto++ to 8.2.0 [adam 2019-06-05]
 	Updated sysutils/node_exporter to 0.18.1 [adam 2019-06-05]
 	Added graphics/tex-contour version 2.14 [wiz 2019-06-05]
+	Added graphics/tex-contour-doc version 2.14 [wiz 2019-06-05]
