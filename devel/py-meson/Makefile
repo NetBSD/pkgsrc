@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/05/22 09:52:52 prlw1 Exp $
+# $NetBSD: Makefile,v 1.22 2019/06/05 20:45:52 adam Exp $
 
 DISTNAME=	meson-0.50.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,8 +14,7 @@ DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-# c++ for tests
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++ # c++ for tests
 
 SUBST_CLASSES+=		man
 SUBST_SED.man+=		-e "s,share/man,${PKGMANDIR},"
@@ -23,21 +22,20 @@ SUBST_FILES.man+=	setup.py
 SUBST_STAGE.man=	pre-configure
 SUBST_MESSAGE.man=	Fixing man page installation path.
 
-REPLACE_PYTHON+=	*.py
-REPLACE_PYTHON+=	*/*.py
-REPLACE_PYTHON+=	*/*/*.py
-REPLACE_PYTHON+=	*/*/*/*.py
-REPLACE_PYTHON+=	*/*/*/*.in
-REPLACE_PYTHON+=	*/*/*/*/*.py
-REPLACE_PYTHON+=	*/*/*/*/*/*.py
-
-post-extract:
-	# see https://github.com/mesonbuild/meson/issues/695
-	# patching does not work, perhaps due to spaces in path?
-	${CP} ${FILESDIR}/meson.build ${WRKSRC}/test\ cases/frameworks/6\ gettext/src/meson.build
+REPLACE_PYTHON+=	ghwt.py
+REPLACE_PYTHON+=	meson.py
+REPLACE_PYTHON+=	mesonbuild/rewriter.py
+REPLACE_PYTHON+=	run_*.py
+REPLACE_PYTHON+=	test\ cases/*/*/*.py
+REPLACE_PYTHON+=	test\ cases/*/*/*/*.py
+REPLACE_PYTHON+=	test\ cases/*/*/*/*/*.py
+REPLACE_PYTHON+=	test\ cases/common/14\ configure\ file/test.py.in
+REPLACE_PYTHON+=	test\ cases/common/188\ find\ override/subdir/gencodegen.py.in
+REPLACE_PYTHON+=	test\ cases/common/55\ run\ target/configure.in
+REPLACE_PYTHON+=	test\ cases/windows/8\ find\ program/test-script
+REPLACE_PYTHON+=	tools/*.py
 
 do-test:
-	${LN} -s ${PYTHONBIN} ${BUILDLINK_DIR}/bin/python3
 	cd ${WRKSRC} && ${PYTHONBIN} run_tests.py
 
 .include "../../lang/python/application.mk"
