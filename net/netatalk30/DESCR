@@ -1,8 +1,0 @@
-Netatalk 3 is a freely-available implementation of the Apple
-Filesharing Protocol Suite (AFP) over TCP/IP.
-
-Using Netatalk's AFP 3.1 compliant file-server leads to significantly
-higher transmissions speeds compared with Macs accessing a server via
-SMB or NFS, while providing clients with the best user experience (full
-support for Macintosh metadata, flawlessly supporting mixed
-environments of classic MacOS and MacOS X clients).
