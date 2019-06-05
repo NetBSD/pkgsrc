@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/03/07 11:57:43 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/06/05 02:31:59 maya Exp $
 
 DISTNAME=	xf86-video-modesetting-0.9.0
 PKGREVISION=	1
@@ -15,6 +15,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
+# Newer version is builtin in xorg-server
 USE_OLD_MODULAR_XORG_SERVER=		yes
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
