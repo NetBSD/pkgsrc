@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.818 2019/05/30 03:22:40 jnemeth Exp $
+# $NetBSD: Makefile,v 1.819 2019/06/05 21:21:12 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -562,6 +562,8 @@ SUBDIR+=	tex-circuitikz
 SUBDIR+=	tex-circuitikz-doc
 SUBDIR+=	tex-cmarrows
 SUBDIR+=	tex-cmarrows-doc
+SUBDIR+=	tex-contour
+SUBDIR+=	tex-contour-doc
 SUBDIR+=	tex-drv
 SUBDIR+=	tex-drv-doc
 SUBDIR+=	tex-dviincl
