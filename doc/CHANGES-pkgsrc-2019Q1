@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q1,v 1.1.2.9 2019/06/04 09:11:04 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q1,v 1.1.2.10 2019/06/05 05:32:01 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q1 branch:
 
@@ -125,4 +125,18 @@ net/wget: security fix
 Pullup ticket #5976 - requested by adam
 www/py-django: security fix
 www/py-django2: security fix
+
+Pullup ticket #5972 - requested by taca
+net/samba4: security update
+
+Pullup ticket #5973 - requested by taca
+lang/php71: security update
+meta-pkgs/php71-extensions: security update
+
+Pullup ticket #5974 - requested by taca
+lang/php72: security update
+meta-pkgs/php72-extensions: security update
+
+Pullup ticket #5975 - requested by taca
+lang/php73: security update
 
