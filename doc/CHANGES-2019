@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2390 2019/06/05 13:25:25 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2391 2019/06/05 15:20:59 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4034,3 +4034,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/firefox-l10n to 67.0.1 [ryoon 2019-06-05]
 	Updated graphics/rawtherapee to 5.6 [ryoon 2019-06-05]
 	Updated databases/leveldb to 1.22 [adam 2019-06-05]
+	Removed net/netatalk30 [hauke 2019-06-05]
