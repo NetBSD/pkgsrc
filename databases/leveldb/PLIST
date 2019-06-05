@@ -1,12 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2017/03/14 13:12:28 wiz Exp $
-bin/leveldb_bench
-bin/leveldbutil
+@comment $NetBSD: PLIST,v 1.2 2019/06/05 13:22:04 adam Exp $
 include/leveldb/c.h
 include/leveldb/cache.h
 include/leveldb/comparator.h
 include/leveldb/db.h
 include/leveldb/dumpfile.h
 include/leveldb/env.h
+include/leveldb/export.h
 include/leveldb/filter_policy.h
 include/leveldb/iterator.h
 include/leveldb/options.h
@@ -15,14 +14,8 @@ include/leveldb/status.h
 include/leveldb/table.h
 include/leveldb/table_builder.h
 include/leveldb/write_batch.h
+lib/cmake/leveldb/leveldbConfig.cmake
+lib/cmake/leveldb/leveldbConfigVersion.cmake
+lib/cmake/leveldb/leveldbTargets-noconfig.cmake
+lib/cmake/leveldb/leveldbTargets.cmake
 lib/libleveldb.a
-lib/libleveldb.${SS}
-lib/libleveldb.${SS.M}
-lib/libleveldb.${SS.M.N}
-share/doc/leveldb/bench/db_bench_sqlite3.cc
-share/doc/leveldb/bench/db_bench_tree_db.cc
-share/doc/leveldb/benchmark.html
-share/doc/leveldb/impl.md
-share/doc/leveldb/index.md
-share/doc/leveldb/log_format.md
-share/doc/leveldb/table_format.md
