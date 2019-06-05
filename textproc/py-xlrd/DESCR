@@ -1,2 +1,2 @@
 Extract data from new and old Excel spreadsheets on any platform. Pure Python
-(2.1 or later). Strong support for Excel dates. Unicode-aware.
+(2.7 or later). Strong support for Excel dates. Unicode-aware.
