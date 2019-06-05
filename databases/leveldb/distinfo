@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/04/27 17:04:56 joerg Exp $
+$NetBSD: distinfo,v 1.3 2019/06/05 13:22:04 adam Exp $
 
-SHA1 (leveldb-1.20.tar.gz) = df11440c30deed5987263730180225db98de9f57
-RMD160 (leveldb-1.20.tar.gz) = 9cc7db3d8c80e11659bafe02e3efe7a03f98369d
-SHA512 (leveldb-1.20.tar.gz) = c59258f2f58ce2d5680e9ab3da4ab0923d91cd4648dcf63cdaa26cdde92bf45e094544539ad11d8e09a4a4813435286143ed0e86c21c6c31a0596903ed4744d2
-Size (leveldb-1.20.tar.gz) = 223141 bytes
-SHA1 (patch-aa) = 66a727ab380538bf01f4d472cdad0eeccddff544
-SHA1 (patch-build__detect__platform) = 6e1b8d93b3c5ae6d521222fa0c53375fb528a08a
+SHA1 (leveldb-1.22.tar.gz) = 8d310af5cfb53dc836bfb412ff4b3c8aea578627
+RMD160 (leveldb-1.22.tar.gz) = 8ecf3f0bbac39388964623094cefe33137be6ce9
+SHA512 (leveldb-1.22.tar.gz) = f9bbf5f466e7f707b94e19261762319ea9f65d41911690e84f59098551e2e69beccf756a414d705ade74ee96fd979bdb8b94c171c6f2cc83873cbd4a9380dbab
+Size (leveldb-1.22.tar.gz) = 239365 bytes
