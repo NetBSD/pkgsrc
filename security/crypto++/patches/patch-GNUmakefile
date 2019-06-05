@@ -1,37 +1,59 @@
-$NetBSD: patch-GNUmakefile,v 1.1 2017/05/18 21:20:23 adam Exp $
+$NetBSD: patch-GNUmakefile,v 1.2 2019/06/05 19:06:07 adam Exp $
 
 Avoid -march=native compiler flag.
 On Darwin, use absolute path to avoid conflict with devel/libtool.
+Fix dylib name.
 
---- GNUmakefile.orig	2016-10-10 23:49:54.000000000 +0000
+--- GNUmakefile.orig	2019-04-28 23:36:50.000000000 +0000
 +++ GNUmakefile
-@@ -125,12 +125,6 @@ ifeq ($(IS_X86)$(IS_X32)$(IS_CYGWIN)$(IS
-  endif
+@@ -140,7 +140,7 @@ endif
+ ifneq ($(IS_DARWIN),0)
+   CXX ?= c++
+   # CXXFLAGS += -stdlib=libc++
+-  AR = libtool
++  AR = /usr/bin/libtool
+   ARFLAGS = -static -o
  endif
  
--# Guard use of -march=native
--ifeq ($(GCC42_OR_LATER)$(IS_NETBSD),10)
--   CXXFLAGS += -march=native
--else ifneq ($(CLANG_COMPILER)$(INTEL_COMPILER),00)
--   CXXFLAGS += -march=native
--else
-   # GCC 3.3 and "unknown option -march="
-   # Ubuntu GCC 4.1 compiler crash with -march=native
-   # NetBSD GCC 4.8 compiler and "bad value (native) for -march= switch"
-@@ -140,7 +134,6 @@ else
-   else ifeq ($(SUN_COMPILER)$(IS_X86),01)
-     CXXFLAGS += -m32
-   endif # X86/X32/X64
--endif
+@@ -846,32 +846,6 @@ ifeq ($(findstring no-asm,$(MAKECMDGOALS
+   endif # CXXFLAGS
+ endif # No ASM
  
- # Aligned access required for -O3 and above due to vectorization
- UNALIGNED_ACCESS := $(shell $(EGREP) -c "^[[:space:]]*//[[:space:]]*\#[[:space:]]*define[[:space:]]*CRYPTOPP_NO_UNALIGNED_DATA_ACCESS" config.h)
-@@ -271,7 +264,7 @@ endif # OpenMP
- endif # IS_LINUX
+-# Native build testing. Issue 'make native'.
+-ifeq ($(findstring native,$(MAKECMDGOALS)),native)
+-  NATIVE_OPT =
+-
+-  # Try GCC and compatibles first
+-  TPROG = TestPrograms/test_cxx.cxx
+-  TOPT = -march=native
+-  HAVE_OPT = $(shell $(CXX) $(TCXXFLAGS) $(ZOPT) $(TOPT) $(TPROG) -o $(TOUT) 2>&1 | tr ' ' '\n' | wc -l)
+-  ifeq ($(strip $(HAVE_OPT)),0)
+-    NATIVE_OPT = -march=native
+-  endif # NATIVE_OPT
+-
+-  # Try SunCC next
+-  ifeq ($(NATIVE_OPT),)
+-    TOPT = -native
+-    HAVE_OPT = $(shell $(CXX) $(TCXXFLAGS) $(ZOPT) $(TOPT) $(TPROG) -o $(TOUT) 2>&1 | tr ' ' '\n' | wc -l)
+-    ifeq ($(strip $(HAVE_OPT)),0)
+-      NATIVE_OPT = -native
+-    endif # NATIVE_OPT
+-  endif
+-
+-  ifneq ($(NATIVE_OPT),)
+-    CXXFLAGS += $(NATIVE_OPT)
+-  endif
+-
+-endif # Native
  
- ifneq ($(IS_DARWIN),0)
--AR = libtool
-+AR = /usr/bin/libtool
- ARFLAGS = -static -o
- CXX ?= c++
- ifeq ($(IS_GCC_29),1)
+ # Undefined Behavior Sanitizer (UBsan) testing. Issue 'make ubsan'.
+ ifeq ($(findstring ubsan,$(MAKECMDGOALS)),ubsan)
+@@ -1248,7 +1222,7 @@ ifneq ($(wildcard libcryptopp.dylib),)
+ 	@-$(MKDIR) $(DESTDIR)$(LIBDIR)
+ 	$(CP) libcryptopp.dylib $(DESTDIR)$(LIBDIR)
+ 	$(CHMOD) 0755 $(DESTDIR)$(LIBDIR)/libcryptopp.dylib
+-	-install_name_tool -id $(DESTDIR)$(LIBDIR)/libcryptopp.dylib $(DESTDIR)$(LIBDIR)/libcryptopp.dylib
++	-install_name_tool -id $(LIBDIR)/libcryptopp.dylib $(DESTDIR)$(LIBDIR)/libcryptopp.dylib
+ endif
+ ifneq ($(wildcard libcryptopp.so$(SOLIB_VERSION_SUFFIX)),)
+ 	@-$(MKDIR) $(DESTDIR)$(LIBDIR)

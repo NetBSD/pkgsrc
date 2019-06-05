@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.12 2017/05/18 21:20:23 adam Exp $
+$NetBSD: distinfo,v 1.13 2019/06/05 19:06:07 adam Exp $
 
-SHA1 (cryptopp565.zip) = a74f207a315b6a133af9640a45bde9d6e378af4d
-RMD160 (cryptopp565.zip) = 4c13bb99dd205d54598527386e88b0dd436fc524
-SHA512 (cryptopp565.zip) = f13718d02ca69b0129aaf9e767c9d2e0333aa7538355f9c63d9eaf1ff369062084a18dc01489439ebf37797b3ea81b01beb072057d47ec962bfb824ddc72abc7
-Size (cryptopp565.zip) = 4220843 bytes
-SHA1 (patch-GNUmakefile) = a83b221092685721c30ba00d152e11a73cf20f1e
+SHA1 (cryptopp820.zip) = b042d2f0c93410abdec7c12bcd92787d019f8da1
+RMD160 (cryptopp820.zip) = cdb5f1b9152cfccc35c5cca3027437e60cf63dea
+SHA512 (cryptopp820.zip) = 753513a4ec8dd0fff2f551853ce6bd265d82219c28b033565b565b5e567fbee17adb419f4cde58a97e62b7d6533f4099aa4996cd0ba4775c6a2e7ae63a879da5
+Size (cryptopp820.zip) = 8859815 bytes
+SHA1 (patch-GNUmakefile) = 9a3a0d09a458730c6c9a5d9300c96417261173bc
