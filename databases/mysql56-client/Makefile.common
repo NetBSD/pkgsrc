@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.50 2019/04/30 14:09:52 abs Exp $
+# $NetBSD: Makefile.common,v 1.51 2019/06/05 09:35:18 jperkin Exp $
 #
 # used by databases/mysql56-client/Makefile
 # used by databases/mysql56-server/Makefile
@@ -92,6 +92,7 @@ CMAKE_ARGS.SunOS+=	-DFORCE_UNSUPPORTED_COMPILER=YES
 # and does not properly detect this, breaking the build later on.  Also
 # explicitly disable epoll support as it is Linux-specific.
 CMAKE_ARGS.SunOS+=	-DHAVE_SYS_EPOLL_H=NO
+CMAKE_ARGS.SunOS+=	-DEVENT__HAVE_EPOLL=NO
 CFLAGS.SunOS+=		-DHAVE_CURSES_H
 CXXFLAGS.SunOS+=	-DHAVE_CURSES_H
 
