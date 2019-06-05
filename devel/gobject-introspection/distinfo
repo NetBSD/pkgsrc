@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2019/06/03 10:47:20 prlw1 Exp $
+$NetBSD: distinfo,v 1.32 2019/06/05 09:12:32 prlw1 Exp $
 
 SHA1 (gobject-introspection-1.60.1.tar.xz) = c4c55fbc207fd777371c960274be29f7c9fe3551
 RMD160 (gobject-introspection-1.60.1.tar.xz) = 71ca6db1b174272525ee991ab723957003f66891
@@ -6,6 +6,8 @@ SHA512 (gobject-introspection-1.60.1.tar.xz) = 01adbeffee08ff6487f11a303fd7a59a9
 Size (gobject-introspection-1.60.1.tar.xz) = 1284460 bytes
 SHA1 (patch-giscanner_ast.py) = 06b3d8903d126028d2d5144c6d6a508209c834b9
 SHA1 (patch-giscanner_ccompiler.py) = 03faf472ad9384670e7f15a647e069606d44daba
+SHA1 (patch-giscanner_gdumpparser.py) = 83d6c72d070b2e32d90131148b566a1a2fb9aa77
+SHA1 (patch-giscanner_girparser.py) = 1156b7146568667dcb56ae7fecfc0f1be91b78ec
 SHA1 (patch-meson.build) = eb67bfe1a9dd46986b9b6e0d296c385e2924a0e8
 SHA1 (patch-tests_scanner_Regress-1.0-expected.gir) = f6f044a24045d38d78b9c511813be8442ce45b16
 SHA1 (patch-tools_compiler.c) = 799d5a086338e08378b8b249e6808e8b1a8101dc
