@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2019/06/03 12:29:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.61 2019/06/05 09:12:32 prlw1 Exp $
 
 DISTNAME=	gobject-introspection-1.60.1
+PKGREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gobject-introspection/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,6 +12,7 @@ COMMENT=	GObject Introspection
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
+DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 USE_TOOLS+=	pkg-config flex bison
 
