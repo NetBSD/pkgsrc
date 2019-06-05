@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2395 2019/06/05 19:19:59 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2396 2019/06/05 21:20:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4039,3 +4039,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/p5-App-Sqitch to 1.0.0 [schmonz 2019-06-05]
 	Updated security/crypto++ to 8.2.0 [adam 2019-06-05]
 	Updated sysutils/node_exporter to 0.18.1 [adam 2019-06-05]
+	Added graphics/tex-contour version 2.14 [wiz 2019-06-05]
