@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2392 2019/06/05 18:11:07 leot Exp $
+$NetBSD: CHANGES-2019,v 1.2393 2019/06/05 18:31:12 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4036,3 +4036,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/leveldb to 1.22 [adam 2019-06-05]
 	Removed net/netatalk30 [hauke 2019-06-05]
 	Updated www/curl to 7.65.1 [leot 2019-06-05]
+	Updated databases/p5-App-Sqitch to 1.0.0 [schmonz 2019-06-05]
