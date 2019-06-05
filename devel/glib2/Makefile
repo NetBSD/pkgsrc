@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.248 2019/06/03 23:09:29 maya Exp $
+# $NetBSD: Makefile,v 1.249 2019/06/05 11:58:17 leot Exp $
 
 .include "Makefile.common"
 
 CATEGORIES=	devel gnome
 COMMENT=	Some useful routines for C programming (glib2)
-PKGREVISION=	1
+PKGREVISION=	2
 
 DISTINFO_FILE=	${.CURDIR}/../../devel/glib2/distinfo
 PATCHDIR=	${.CURDIR}/../../devel/glib2/patches
@@ -24,6 +24,11 @@ REPLACE_PYTHON+=	glib/update-gtranslit.py
 REPLACE_PYTHON+=	gobject/tests/mkenums.py
 REPLACE_PYTHON+=	tests/gen-casefold-txt.py
 REPLACE_PYTHON+=	tests/gen-casemap-txt.py
+
+FILES_SUBST+=		GIO_MODULES_DIR=${PREFIX}/lib/gio/modules
+FILES_SUBST+=		GIO_QUERYMODULES=${PREFIX}/bin/gio-querymodules
+FILES_SUBST+=		GLIB_COMPILE_SCHEMAS=${PREFIX}/bin/glib-compile-schemas
+FILES_SUBST+=		GLIB_SCHEMAS_DIR=${PREFIX}/share/glib-2.0/schemas
 
 BUILD_DEFS+=		VARBASE
 SUBST_CLASSES+=		dbusdb
