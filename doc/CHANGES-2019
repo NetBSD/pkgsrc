@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2385 2019/06/05 06:57:16 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2386 2019/06/05 07:53:09 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4029,3 +4029,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added sysutils/u-boot-bananapi-p2-zero version 2018.11 [thorpej 2019-06-05]
 	Updated audio/faad2 to 2.8.8 [nia 2019-06-05]
 	Updated devel/exempi to 2.5.0 [nia 2019-06-05]
+	Updated sysutils/flashrom to 1.0.1 [nia 2019-06-05]
