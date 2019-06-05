@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2019/01/05 13:08:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2019/06/05 13:10:27 ryoon Exp $
 
-DISTNAME=	RawTherapee-5.5
-PKGNAME=	${DISTNAME:tl}
+DISTNAME=	rawtherapee-5.6
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_GITHUB:=Beep6581/}
-GITHUB_PROJECT=	RawTherapee
-GITHUB_TAG=	${PKGVERSION_NOREV}
+MASTER_SITES=	http://rawtherapee.com/shared/source/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://rawtherapee.com/
@@ -27,6 +25,7 @@ pre-configure:
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/lensfun/buildlink3.mk"
 .include "../../graphics/libiptcdata/buildlink3.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../math/fftwf/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
