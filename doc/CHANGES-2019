@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2386 2019/06/05 07:53:09 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2387 2019/06/05 13:05:08 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4030,3 +4030,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/faad2 to 2.8.8 [nia 2019-06-05]
 	Updated devel/exempi to 2.5.0 [nia 2019-06-05]
 	Updated sysutils/flashrom to 1.0.1 [nia 2019-06-05]
+	Updated www/firefox to 67.0.1 [ryoon 2019-06-05]
