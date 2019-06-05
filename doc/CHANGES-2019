@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2382 2019/06/05 05:14:21 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2383 2019/06/05 05:47:49 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4025,3 +4025,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-App-cpanoutdated to 0.24nb5 [gutteridge 2019-06-05]
 	Updated devel/py-test to 4.6.2 [adam 2019-06-05]
 	Updated www/py-test-django to 3.5.0 [adam 2019-06-05]
+	Added sysutils/u-boot-bananapi-m2-zero version 2018.11 [thorpej 2019-06-05]
+	Added sysutils/u-boot-bananapi-p2-zero version 2018.11 [thorpej 2019-06-05]
