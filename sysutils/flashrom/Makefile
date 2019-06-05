@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.9 2016/02/26 10:24:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2019/06/05 07:52:58 nia Exp $
 #
 
-DISTNAME=	flashrom-0.9.7
-PKGNAME=	${DISTNAME:S/-r/pre/}
+DISTNAME=	flashrom-v1.0.1
+PKGNAME=	${DISTNAME:S/-v/-/}
 CATEGORIES=	sysutils
-MASTER_SITES=	http://download.flashrom.org/releases/
+MASTER_SITES=	https://download.flashrom.org/releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jakllsch@NetBSD.org
-HOMEPAGE=	http://www.flashrom.org/
+HOMEPAGE=	https://www.flashrom.org/
 COMMENT=	Universal (coreboot/LinuxBIOS) flash utility
 LICENSE=        gnu-gpl-v2
 
@@ -42,6 +42,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/flashrom ${DESTDIR}${PREFIX}/sbin/flashrom
 	${INSTALL_MAN} ${WRKSRC}/flashrom.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/flashrom.8
 
-.include "../../devel/libftdi/buildlink3.mk"
+.include "../../devel/libftdi1/buildlink3.mk"
 .include "../../sysutils/pciutils/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
