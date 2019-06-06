@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2399 2019/06/06 08:39:04 tpaul Exp $
+$NetBSD: CHANGES-2019,v 1.2400 2019/06/06 11:05:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4043,3 +4043,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Added graphics/tex-contour-doc version 2.14 [wiz 2019-06-05]
 	Updated meta-pkgs/texlive-collection-latexextra to 2019pre2 [wiz 2019-06-05]
 	Added sysutils/cdirip version 0.6.4 [tpaul 2019-06-06]
+	Updated devel/gdbus-codegen to 2.60.3 [adam 2019-06-06]
+	Updated devel/glib2 to 2.60.3 [adam 2019-06-06]
+	Updated devel/glib2-tools to 2.60.3 [adam 2019-06-06]
