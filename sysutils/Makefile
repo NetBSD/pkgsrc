@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.816 2019/06/05 05:43:15 thorpej Exp $
+# $NetBSD: Makefile,v 1.817 2019/06/06 08:38:26 tpaul Exp $
 #
 
 COMMENT=	System utilities
@@ -69,6 +69,7 @@ SUBDIR+=	capistrano
 SUBDIR+=	ccd2iso
 SUBDIR+=	ccze
 SUBDIR+=	cdbkup
+SUBDIR+=	cdirip
 SUBDIR+=	cdrdao
 SUBDIR+=	cdrkit
 SUBDIR+=	cdrtools
