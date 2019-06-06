@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2403 2019/06/06 16:34:32 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2404 2019/06/06 21:25:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4051,3 +4051,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/grafana to 6.2.2 [adam 2019-06-06]
 	Updated x11/gtkmm3 to 3.24.1 [adam 2019-06-06]
 	Updated www/nginx-devel to 1.17.0 [adam 2019-06-06]
+	Updated print/py-latexcodec to 1.0.7 [adam 2019-06-06]
+	Updated net/py-lexicon to 3.2.6 [adam 2019-06-06]
+	Updated security/py-trustme to 0.5.2 [adam 2019-06-06]
