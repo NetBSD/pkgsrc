@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.102 2019/06/03 09:53:50 prlw1 Exp $
-bin/gapplication
+@comment $NetBSD: PLIST,v 1.103 2019/06/06 11:05:12 adam Exp $
+${PLIST.nococoa}bin/gapplication
 bin/gdbus
 bin/gio
-bin/gio-launch-desktop
+${PLIST.nococoa}bin/gio-launch-desktop
 bin/gio-querymodules
 bin/glib-compile-resources
 bin/glib-compile-schemas
@@ -10,7 +10,7 @@ bin/glib-gettextize
 bin/gobject-query
 bin/gresource
 bin/gsettings
-include/gio-unix-2.0/gio/gdesktopappinfo.h
+${PLIST.nococoa}include/gio-unix-2.0/gio/gdesktopappinfo.h
 include/gio-unix-2.0/gio/gfiledescriptorbased.h
 include/gio-unix-2.0/gio/gunixconnection.h
 include/gio-unix-2.0/gio/gunixcredentialsmessage.h
@@ -280,19 +280,19 @@ ${PLIST.fam}lib/gio/modules/libgiofam.so
 lib/glib-2.0/include/glibconfig.h
 lib/libgio-2.0.so
 lib/libgio-2.0.so.0
-lib/libgio-2.0.so.0.6000.2
+lib/libgio-2.0.so.0.6000.3
 lib/libglib-2.0.so
 lib/libglib-2.0.so.0
-lib/libglib-2.0.so.0.6000.2
+lib/libglib-2.0.so.0.6000.3
 lib/libgmodule-2.0.so
 lib/libgmodule-2.0.so.0
-lib/libgmodule-2.0.so.0.6000.2
+lib/libgmodule-2.0.so.0.6000.3
 lib/libgobject-2.0.so
 lib/libgobject-2.0.so.0
-lib/libgobject-2.0.so.0.6000.2
+lib/libgobject-2.0.so.0.6000.3
 lib/libgthread-2.0.so
 lib/libgthread-2.0.so.0
-lib/libgthread-2.0.so.0.6000.2
+lib/libgthread-2.0.so.0.6000.3
 lib/pkgconfig/gio-2.0.pc
 lib/pkgconfig/gio-unix-2.0.pc
 lib/pkgconfig/glib-2.0.pc
@@ -304,8 +304,8 @@ lib/pkgconfig/gthread-2.0.pc
 share/aclocal/glib-2.0.m4
 share/aclocal/glib-gettext.m4
 share/aclocal/gsettings.m4
-share/gdb/auto-load${LOCALBASE}/lib/libglib-2.0.so.0.6000.2-gdb.py
-share/gdb/auto-load${LOCALBASE}/lib/libgobject-2.0.so.0.6000.2-gdb.py
+share/gdb/auto-load${LOCALBASE}/lib/libglib-2.0.so.0.6000.3-gdb.py
+share/gdb/auto-load${LOCALBASE}/lib/libgobject-2.0.so.0.6000.3-gdb.py
 share/gettext/its/gschema.its
 share/gettext/its/gschema.loc
 share/glib-2.0/gdb/glib_gdb.py
