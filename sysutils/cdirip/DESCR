@@ -1,0 +1,11 @@
+This is a small program capable of extracting all the tracks contained in a
+CDI (DiscJuggler) image. Both 2.0 and 3.0 CDI image versions are supported.
+This will allow users which cannot use this software (either by software
+incompatibilities or having an unsupported OS such as Linux or Mac OS) to burn
+the contents of such images, which have a propietary format not supported by
+any other recording software.
+
+So this program will allow you to record the contents of a DiscJuggler image
+with another CD-recording application. Any program that understands standard
+WAV audio files and ISO or BIN images will do the job, such as CDR-Win,
+cdrecord, WinOnCD or Fireburner.
