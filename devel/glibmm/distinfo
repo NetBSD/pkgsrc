@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.55 2019/04/26 15:12:20 bsiegert Exp $
+$NetBSD: distinfo,v 1.56 2019/06/06 11:42:53 adam Exp $
 
-SHA1 (glibmm-2.56.1.tar.xz) = 992c7510e489a98475fcf40e50415d6ba48402de
-RMD160 (glibmm-2.56.1.tar.xz) = d0424eea980619901ded384b1b9f70f66e481ad0
-SHA512 (glibmm-2.56.1.tar.xz) = fd5ad19c5dcba484573520e1d00b5bbb600ee805ab8cd9c0d985880cc1bcbe67ad31fa9f2b5789b5892eddd6be345e3f308593e5ef021e1cfda132e4235fb735
-Size (glibmm-2.56.1.tar.xz) = 6841240 bytes
+SHA1 (glibmm-2.60.0.tar.xz) = 7c179619b66f2c5a15553ebccce8c0df3b774672
+RMD160 (glibmm-2.60.0.tar.xz) = 5333ebf974e5af5a2e8bd16742078dd63c5ad5e9
+SHA512 (glibmm-2.60.0.tar.xz) = ea0477d5cb6e59019e87f929630ff32ac38dd5e4fb53fe84ef64b5b41c1090c8e10a0a67b26c786ab4d9ebf64b993fa0044333b4aa8554c331a0a6d02039c5ad
+Size (glibmm-2.60.0.tar.xz) = 6874840 bytes
 SHA1 (patch-glib_glibmm_date.h) = 50ae17f3ee1fd4d6d519cb2c5446749ec08d0761
 SHA1 (patch-glib_glibmm_ustring.cc) = 626bedb16baa7664eade41afd585f0db339f99af
