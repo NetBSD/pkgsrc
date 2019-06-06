@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2400 2019/06/06 11:05:52 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2401 2019/06/06 11:44:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4046,3 +4046,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/gdbus-codegen to 2.60.3 [adam 2019-06-06]
 	Updated devel/glib2 to 2.60.3 [adam 2019-06-06]
 	Updated devel/glib2-tools to 2.60.3 [adam 2019-06-06]
+	Updated devel/glibmm to 2.60.0 [adam 2019-06-06]
+	Updated devel/atkmm to 2.24.3 [adam 2019-06-06]
