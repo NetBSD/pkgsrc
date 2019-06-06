@@ -1,239 +1,45 @@
-# $NetBSD: Makefile,v 1.27 2019/04/26 13:13:59 maya Exp $
+# $NetBSD: Makefile,v 1.28 2019/06/06 21:53:44 adam Exp $
 
-DISTNAME=	PySolFC-2.0
+DISTNAME=	PySolFC-2.6.4
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	4
 CATEGORIES=	games python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pysolfc/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pysolfc.sourceforge.net/
+HOMEPAGE=	https://pysolfc.sourceforge.io/
 COMMENT=	Over 1000 solitaire games
 LICENSE=	gnu-gpl-v3
 
-PYDISTUTILSPKG=			yes
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-imaging
+CARDSETS_NAME=	PySolFC-Cardsets-2.0
+DISTFILES=	${DEFAULT_DISTFILES}
+DISTFILES+=	${CARDSETS_NAME}.tar.bz2
 
-REPLACE_PYTHON+= \
-	data/themes/clearlooks/create_imgs.py \
-	pysollib/__init__.py \
-	pysollib/acard.py \
-	pysollib/actions.py \
-	pysollib/app.py \
-	pysollib/customgame.py \
-	pysollib/game.py \
-	pysollib/gamedb.py \
-	pysollib/games/__init__.py \
-	pysollib/games/acesup.py \
-	pysollib/games/algerian.py \
-	pysollib/games/auldlangsyne.py \
-	pysollib/games/bakersdozen.py \
-	pysollib/games/bakersgame.py \
-	pysollib/games/beleagueredcastle.py \
-	pysollib/games/bisley.py \
-	pysollib/games/braid.py \
-	pysollib/games/bristol.py \
-	pysollib/games/buffalobill.py \
-	pysollib/games/calculation.py \
-	pysollib/games/camelot.py \
-	pysollib/games/canfield.py \
-	pysollib/games/capricieuse.py \
-	pysollib/games/curdsandwhey.py \
-	pysollib/games/dieboesesieben.py \
-	pysollib/games/diplomat.py \
-	pysollib/games/doublets.py \
-	pysollib/games/eiffeltower.py \
-	pysollib/games/fan.py \
-	pysollib/games/fortythieves.py \
-	pysollib/games/freecell.py \
-	pysollib/games/glenwood.py \
-	pysollib/games/golf.py                             \
-	pysollib/games/grandduchess.py \
-	pysollib/games/grandfathersclock.py \
-	pysollib/games/gypsy.py \
-	pysollib/games/harp.py \
-	pysollib/games/headsandtails.py \
-	pysollib/games/katzenschwanz.py \
-	pysollib/games/klondike.py \
-	pysollib/games/labyrinth.py \
-	pysollib/games/larasgame.py \
-	pysollib/games/mahjongg/__init__.py \
-	pysollib/games/mahjongg/mahjongg.py \
-	pysollib/games/mahjongg/mahjongg1.py \
-	pysollib/games/mahjongg/mahjongg2.py \
-	pysollib/games/mahjongg/mahjongg3.py \
-	pysollib/games/mahjongg/shisensho.py \
-	pysollib/games/matriarchy.py \
-	pysollib/games/montana.py \
-	pysollib/games/montecarlo.py \
-	pysollib/games/napoleon.py \
-	pysollib/games/needle.py \
-	pysollib/games/numerica.py \
-	pysollib/games/osmosis.py \
-	pysollib/games/parallels.py \
-	pysollib/games/pasdedeux.py \
-	pysollib/games/picturegallery.py \
-	pysollib/games/pileon.py \
-	pysollib/games/pushpin.py \
-	pysollib/games/pyramid.py \
-	pysollib/games/royalcotillion.py \
-	pysollib/games/royaleast.py \
-	pysollib/games/sanibel.py \
-	pysollib/games/siebenbisas.py \
-	pysollib/games/simplex.py \
-	pysollib/games/special/__init__.py \
-	pysollib/games/special/hanoi.py \
-	pysollib/games/special/memory.py \
-	pysollib/games/special/pegged.py \
-	pysollib/games/special/poker.py \
-	pysollib/games/special/tarock.py \
-	pysollib/games/spider.py \
-	pysollib/games/sthelena.py \
-	pysollib/games/sultan.py \
-	pysollib/games/takeaway.py \
-	pysollib/games/terrace.py \
-	pysollib/games/threepeaks.py \
-	pysollib/games/tournament.py \
-	pysollib/games/ultra/__init__.py \
-	pysollib/games/ultra/dashavatara.py \
-	pysollib/games/ultra/hanafuda.py \
-	pysollib/games/ultra/hanafuda1.py \
-	pysollib/games/ultra/hanafuda_common.py \
-	pysollib/games/ultra/hexadeck.py \
-	pysollib/games/ultra/larasgame.py \
-	pysollib/games/ultra/matrix.py \
-	pysollib/games/ultra/mughal.py \
-	pysollib/games/ultra/tarock.py \
-	pysollib/games/unionsquare.py \
-	pysollib/games/wavemotion.py \
-	pysollib/games/windmill.py \
-	pysollib/games/yukon.py \
-	pysollib/games/zodiac.py \
-	pysollib/help.py \
-	pysollib/hint.py \
-	pysollib/images.py \
-	pysollib/init.py \
-	pysollib/layout.py \
-	pysollib/macosx/__init__.py \
-	pysollib/macosx/appSupport.py \
-	pysollib/main.py \
-	pysollib/mfxutil.py \
-	pysollib/move.py \
-	pysollib/options.py \
-	pysollib/pysolaudio.py \
-	pysollib/pysolgtk/__init__.py \
-	pysollib/pysolgtk/card.py \
-	pysollib/pysolgtk/colorsdialog.py \
-	pysollib/pysolgtk/edittextdialog.py \
-	pysollib/pysolgtk/findcarddialog.py \
-	pysollib/pysolgtk/fontsdialog.py \
-	pysollib/pysolgtk/gameinfodialog.py \
-	pysollib/pysolgtk/menubar.py \
-	pysollib/pysolgtk/playeroptionsdialog.py \
-	pysollib/pysolgtk/progressbar.py \
-	pysollib/pysolgtk/pysoltree.py \
-	pysollib/pysolgtk/selectcardset.py \
-	pysollib/pysolgtk/selectgame.py \
-	pysollib/pysolgtk/selecttile.py \
-	pysollib/pysolgtk/solverdialog.py \
-	pysollib/pysolgtk/soundoptionsdialog.py \
-	pysollib/pysolgtk/statusbar.py \
-	pysollib/pysolgtk/timeoutsdialog.py \
-	pysollib/pysolgtk/tkcanvas.py \
-	pysollib/pysolgtk/tkconst.py \
-	pysollib/pysolgtk/tkhtml.py \
-	pysollib/pysolgtk/tkstats.py \
-	pysollib/pysolgtk/tkutil.py \
-	pysollib/pysolgtk/tkwidget.py \
-	pysollib/pysolgtk/tkwrap.py \
-	pysollib/pysolgtk/toolbar.py \
-	pysollib/pysolrandom.py \
-	pysollib/pysoltk.py \
-	pysollib/resource.py \
-	pysollib/settings.py \
-	pysollib/stack.py \
-	pysollib/stats.py \
-	pysollib/tile/__init__.py \
-	pysollib/tile/card.py \
-	pysollib/tile/colorsdialog.py \
-	pysollib/tile/edittextdialog.py \
-	pysollib/tile/findcarddialog.py \
-	pysollib/tile/fontsdialog.py \
-	pysollib/tile/gameinfodialog.py \
-	pysollib/tile/menubar.py \
-	pysollib/tile/playeroptionsdialog.py \
-	pysollib/tile/progressbar.py \
-	pysollib/tile/selectcardset.py \
-	pysollib/tile/selectgame.py \
-	pysollib/tile/selecttile.py \
-	pysollib/tile/selecttree.py \
-	pysollib/tile/solverdialog.py \
-	pysollib/tile/soundoptionsdialog.py \
-	pysollib/tile/statusbar.py \
-	pysollib/tile/timeoutsdialog.py \
-	pysollib/tile/tkcanvas.py \
-	pysollib/tile/tkconst.py \
-	pysollib/tile/tkhtml.py \
-	pysollib/tile/tkstats.py \
-	pysollib/tile/tktree.py \
-	pysollib/tile/tkutil.py \
-	pysollib/tile/tkwidget.py \
-	pysollib/tile/tkwrap.py \
-	pysollib/tile/toolbar.py \
-	pysollib/tile/wizarddialog.py \
-	pysollib/tk/__init__.py \
-	pysollib/tk/card.py \
-	pysollib/tk/colorsdialog.py \
-	pysollib/tk/edittextdialog.py \
-	pysollib/tk/findcarddialog.py \
-	pysollib/tk/fontsdialog.py \
-	pysollib/tk/gameinfodialog.py \
-	pysollib/tk/menubar.py \
-	pysollib/tk/playeroptionsdialog.py \
-	pysollib/tk/progressbar.py \
-	pysollib/tk/selectcardset.py \
-	pysollib/tk/selectgame.py \
-	pysollib/tk/selecttile.py \
-	pysollib/tk/selecttree.py \
-	pysollib/tk/solverdialog.py \
-	pysollib/tk/soundoptionsdialog.py \
-	pysollib/tk/statusbar.py \
-	pysollib/tk/tabpage.py \
-	pysollib/tk/timeoutsdialog.py \
-	pysollib/tk/tkcanvas.py \
-	pysollib/tk/tkconst.py \
-	pysollib/tk/tkhtml.py \
-	pysollib/tk/tkstats.py \
-	pysollib/tk/tktree.py \
-	pysollib/tk/tkutil.py \
-	pysollib/tk/tkwidget.py \
-	pysollib/tk/tkwrap.py \
-	pysollib/tk/toolbar.py \
-	pysollib/tk/wizarddialog.py \
-	pysollib/util.py \
-	pysollib/winsystems/__init__.py \
-	pysollib/winsystems/aqua.py \
-	pysollib/winsystems/common.py \
-	pysollib/winsystems/win32.py \
-	pysollib/winsystems/x11.py \
-	pysollib/wizardpresets.py \
-	pysollib/wizardutil.py
+DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
+DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
+DEPENDS+=	${PYPKGPREFIX}-game-[0-9]*:../../devel/py-game
 
-SUBST_CLASSES+=			fix-paths
-SUBST_STAGE.fix-paths=		pre-configure
-SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
-SUBST_FILES.fix-paths=		pysollib/settings.py
-SUBST_SED.fix-paths=		-e s,@DATADIR@,${PREFIX}/share/PySolFC/,
+USE_TOOLS+=	pax
+
+SUBST_CLASSES+=		datadir
+SUBST_STAGE.datadir=	pre-configure
+SUBST_MESSAGE.datadir=	Use custom data dir.
+SUBST_FILES.datadir=	pysollib/settings.py
+SUBST_SED.datadir=	-e 's,@DATADIR@,${PREFIX}/share/PySolFC,'
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man6
 
+PLIST_SRC=	PLIST ${WRKDIR}/PLIST.CS
+
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/docs/pysol.6 \
-	  ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/pysol.py.6
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/pysol.py.6
+	${INSTALL_MAN} ${WRKSRC}/docs/pysolfc.6 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/pysolfc.6
+	cd ${WRKDIR}/${CARDSETS_NAME} && \
+	${PAX} -rw . ${DESTDIR}${PREFIX}/share/PySolFC/ && \
+	${FIND} . -type f -print | ${SED} -e 's,^\.,share/PySolFC,' > ${WRKDIR}/PLIST.CS
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
-.include "../../graphics/py-imagingtk/buildlink3.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
