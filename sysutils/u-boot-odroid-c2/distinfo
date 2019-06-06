@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2019/05/18 17:55:06 thorpej Exp $
+$NetBSD: distinfo,v 1.2 2019/06/06 05:39:45 wiz Exp $
 
 SHA1 (odroidc2-v2015.01-aml_encrypt_gxb) = 95c9565c64088ad56a10bac79b173c41a574e48e
 RMD160 (odroidc2-v2015.01-aml_encrypt_gxb) = 5cb9ffcb6e8486de42796a448c2e42ed86c5c1bc
@@ -34,6 +34,11 @@ SHA512 (u-boot-2018.11.tar.bz2) = 1ea0bbb5f5e6d4c60b3a6bd345d1fa6e9da025daf36f47
 Size (u-boot-2018.11.tar.bz2) = 13045125 bytes
 SHA1 (patch-Makefile) = 45f505041a586b75953c34c1ab6fffaa56b43601
 SHA1 (patch-arch_arm_cpu_armv8_Kconfig) = 63cbbf2e3cebd46793fc03cc8e62297f6dc01aa9
+SHA1 (patch-arch_arm_dts_Makefile) = 184fdb8b04b25c0c827823779874306ce1bc746d
+SHA1 (patch-arch_arm_dts_sun8i-h2-plus-bananapi-m2-zero.dts) = aaa530a5f520eea0cb5dcece0b730e23db59eb40
+SHA1 (patch-arch_arm_dts_sun8i-h2-plus-bananapi-p2-zero.dts) = 8c78d0e0877aa9784fa209af2e16e80cb1110364
+SHA1 (patch-configs_bananapi_m2_zero_defconfig) = 5e4baef63f0e51cb8c94a1dc0c0e50ecb016807d
+SHA1 (patch-configs_bananapi_p2_zero_defconfig) = 6468b3246cbf35d10320c8a974fc06b794ae68dc
 SHA1 (patch-configs_jetson-tk1_defconfig) = e25d89b9440f9bb4486ac22fc47083ed24abdd95
 SHA1 (patch-configs_p2371-2180_defconfig) = 2a3f1ad4f9963af403c2c9f2f01b892bbe55188c
 SHA1 (patch-drivers_video_sunxi_sunxi__display.c) = 8e6a6a781cce25af5cba289fc2ca76e30b62aff6
