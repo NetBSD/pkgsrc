@@ -1,6 +1,7 @@
-$NetBSD: patch-sysupgrade.sh,v 1.2 2019/06/03 20:35:55 triaxx Exp $
+$NetBSD: patch-sysupgrade.sh,v 1.3 2019/06/06 16:30:13 triaxx Exp $
 
-Don't reject https
+* Don't reject https in sysupgrade_fetch()
+* Add ARCHIVE_EXTENSION variable (Fix PR pkg/53697)
 
 --- sysupgrade.sh.orig	2013-07-28 21:27:57.000000000 +0000
 +++ sysupgrade.sh
