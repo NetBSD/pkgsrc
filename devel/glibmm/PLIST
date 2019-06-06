@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2018/04/17 08:35:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.41 2019/06/06 11:42:53 adam Exp $
 include/giomm-2.4/giomm.h
 include/giomm-2.4/giomm/action.h
 include/giomm-2.4/giomm/actiongroup.h
@@ -286,6 +286,7 @@ include/glibmm-2.4/glibmm/enums.h
 include/glibmm-2.4/glibmm/error.h
 include/glibmm-2.4/glibmm/exception.h
 include/glibmm-2.4/glibmm/exceptionhandler.h
+include/glibmm-2.4/glibmm/extraclassinit.h
 include/glibmm-2.4/glibmm/fileutils.h
 include/glibmm-2.4/glibmm/helperlist.h
 include/glibmm-2.4/glibmm/i18n-lib.h
@@ -434,6 +435,8 @@ share/doc/glibmm-2.4/images/gtkmm_logo.gif
 share/doc/glibmm-2.4/images/top.gif
 share/doc/glibmm-2.4/reference/glibmm-2.4.tag
 share/doc/glibmm-2.4/reference/html/annotated.html
+share/doc/glibmm-2.4/reference/html/arrowdown.png
+share/doc/glibmm-2.4/reference/html/arrowright.png
 share/doc/glibmm-2.4/reference/html/bc_s.png
 share/doc/glibmm-2.4/reference/html/bdwn.png
 share/doc/glibmm-2.4/reference/html/classGio_1_1Action-members.html
@@ -895,6 +898,9 @@ share/doc/glibmm-2.4/reference/html/classGlib_1_1Error__inherit__graph.png
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Exception-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Exception.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Exception__inherit__graph.png
+share/doc/glibmm-2.4/reference/html/classGlib_1_1ExtraClassInit-members.html
+share/doc/glibmm-2.4/reference/html/classGlib_1_1ExtraClassInit.html
+share/doc/glibmm-2.4/reference/html/classGlib_1_1ExtraClassInit__inherit__graph.png
 share/doc/glibmm-2.4/reference/html/classGlib_1_1FileError-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1FileError.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1FileError__inherit__graph.png
@@ -1126,6 +1132,9 @@ share/doc/glibmm-2.4/reference/html/classGlib_1_1ValueBase__Object__inherit__gra
 share/doc/glibmm-2.4/reference/html/classGlib_1_1ValueBase__String-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1ValueBase__String.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1ValueBase__String__inherit__graph.png
+share/doc/glibmm-2.4/reference/html/classGlib_1_1ValueBase__Variant-members.html
+share/doc/glibmm-2.4/reference/html/classGlib_1_1ValueBase__Variant.html
+share/doc/glibmm-2.4/reference/html/classGlib_1_1ValueBase__Variant__inherit__graph.png
 share/doc/glibmm-2.4/reference/html/classGlib_1_1ValueBase__inherit__graph.png
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Value_3_01Glib_1_1RefPtr_3_01T_01_4_01_4-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Value_3_01Glib_1_1RefPtr_3_01T_01_4_01_4.html
@@ -1169,6 +1178,12 @@ share/doc/glibmm-2.4/reference/html/classGlib_1_1Value_3_01signed_01char_01_4__i
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Value_3_01std_1_1string_01_4-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Value_3_01std_1_1string_01_4.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Value_3_01std_1_1string_01_4__inherit__graph.png
+share/doc/glibmm-2.4/reference/html/classGlib_1_1Value_3_01std_1_1vector_3_01Glib_1_1ustring_01_4_01_4-members.html
+share/doc/glibmm-2.4/reference/html/classGlib_1_1Value_3_01std_1_1vector_3_01Glib_1_1ustring_01_4_01_4.html
+share/doc/glibmm-2.4/reference/html/classGlib_1_1Value_3_01std_1_1vector_3_01Glib_1_1ustring_01_4_01_4__inherit__graph.png
+share/doc/glibmm-2.4/reference/html/classGlib_1_1Value_3_01std_1_1vector_3_01std_1_1string_01_4_01_4-members.html
+share/doc/glibmm-2.4/reference/html/classGlib_1_1Value_3_01std_1_1vector_3_01std_1_1string_01_4_01_4.html
+share/doc/glibmm-2.4/reference/html/classGlib_1_1Value_3_01std_1_1vector_3_01std_1_1string_01_4_01_4__inherit__graph.png
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Value_3_01unsigned_01char_01_4-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Value_3_01unsigned_01char_01_4.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Value_3_01unsigned_01char_01_4__inherit__graph.png
@@ -1196,6 +1211,9 @@ share/doc/glibmm-2.4/reference/html/classGlib_1_1Value__Flags__inherit__graph.pn
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Value__Pointer-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Value__Pointer.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Value__Pointer__inherit__graph.png
+share/doc/glibmm-2.4/reference/html/classGlib_1_1Value__RefPtrBoxed-members.html
+share/doc/glibmm-2.4/reference/html/classGlib_1_1Value__RefPtrBoxed.html
+share/doc/glibmm-2.4/reference/html/classGlib_1_1Value__RefPtrBoxed__inherit__graph.png
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Value__inherit__graph.png
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Variant-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Variant.html
@@ -1541,8 +1559,6 @@ share/doc/glibmm-2.4/reference/html/inherit_graph_98.png
 share/doc/glibmm-2.4/reference/html/inherit_graph_99.png
 share/doc/glibmm-2.4/reference/html/inherits.html
 share/doc/glibmm-2.4/reference/html/jquery.js
-share/doc/glibmm-2.4/reference/html/menu.js
-share/doc/glibmm-2.4/reference/html/menudata.js
 share/doc/glibmm-2.4/reference/html/modules.html
 share/doc/glibmm-2.4/reference/html/namespaceGio.html
 share/doc/glibmm-2.4/reference/html/namespaceGio_1_1DBus.html
@@ -1648,6 +1664,7 @@ share/doc/glibmm-2.4/reference/html/since_2_52.html
 share/doc/glibmm-2.4/reference/html/since_2_54.html
 share/doc/glibmm-2.4/reference/html/since_2_56.html
 share/doc/glibmm-2.4/reference/html/since_2_6.html
+share/doc/glibmm-2.4/reference/html/since_2_60.html
 share/doc/glibmm-2.4/reference/html/since_2_8.html
 share/doc/glibmm-2.4/reference/html/splitbar.png
 share/doc/glibmm-2.4/reference/html/structGlib_1_1Container__Helpers_1_1TypeTraits-members.html
