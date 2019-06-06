@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/06/20 17:00:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/06/06 21:46:11 adam Exp $
 ${PYINC}/pygame/_camera.h
 ${PYINC}/pygame/_pygame.h
 ${PYINC}/pygame/_surface.h
@@ -9,6 +9,7 @@ ${PYINC}/pygame/font.h
 ${PYINC}/pygame/freetype.h
 ${PYINC}/pygame/mask.h
 ${PYINC}/pygame/mixer.h
+${PYINC}/pygame/palette.h
 ${PYINC}/pygame/pgarrinter.h
 ${PYINC}/pygame/pgbufferproxy.h
 ${PYINC}/pygame/pgcompat.h
@@ -19,8 +20,8 @@ ${PYINC}/pygame/surface.h
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/pygame/LGPL
 ${PYSITELIB}/pygame/__init__.py
 ${PYSITELIB}/pygame/__init__.pyc
 ${PYSITELIB}/pygame/__init__.pyo
@@ -71,6 +72,9 @@ ${PYSITELIB}/pygame/docs/pygame_small.gif
 ${PYSITELIB}/pygame/docs/pygame_tiny.gif
 ${PYSITELIB}/pygame/docs/ref/docscomments.json
 ${PYSITELIB}/pygame/draw.so
+${PYSITELIB}/pygame/draw_py.py
+${PYSITELIB}/pygame/draw_py.pyc
+${PYSITELIB}/pygame/draw_py.pyo
 ${PYSITELIB}/pygame/event.so
 ${PYSITELIB}/pygame/examples/__init__.py
 ${PYSITELIB}/pygame/examples/__init__.pyc
@@ -84,6 +88,9 @@ ${PYSITELIB}/pygame/examples/aliens.pyo
 ${PYSITELIB}/pygame/examples/arraydemo.py
 ${PYSITELIB}/pygame/examples/arraydemo.pyc
 ${PYSITELIB}/pygame/examples/arraydemo.pyo
+${PYSITELIB}/pygame/examples/audiocapture.py
+${PYSITELIB}/pygame/examples/audiocapture.pyc
+${PYSITELIB}/pygame/examples/audiocapture.pyo
 ${PYSITELIB}/pygame/examples/blend_fill.py
 ${PYSITELIB}/pygame/examples/blend_fill.pyc
 ${PYSITELIB}/pygame/examples/blend_fill.pyo
@@ -133,6 +140,9 @@ ${PYSITELIB}/pygame/examples/data/shot.gif
 ${PYSITELIB}/pygame/examples/data/static.png
 ${PYSITELIB}/pygame/examples/data/whiff.wav
 ${PYSITELIB}/pygame/examples/data/yuv_1.pgm
+${PYSITELIB}/pygame/examples/dropevent.py
+${PYSITELIB}/pygame/examples/dropevent.pyc
+${PYSITELIB}/pygame/examples/dropevent.pyo
 ${PYSITELIB}/pygame/examples/eventlist.py
 ${PYSITELIB}/pygame/examples/eventlist.pyc
 ${PYSITELIB}/pygame/examples/eventlist.pyo
@@ -209,9 +219,15 @@ ${PYSITELIB}/pygame/examples/stars.pyo
 ${PYSITELIB}/pygame/examples/testsprite.py
 ${PYSITELIB}/pygame/examples/testsprite.pyc
 ${PYSITELIB}/pygame/examples/testsprite.pyo
+${PYSITELIB}/pygame/examples/textinput.py
+${PYSITELIB}/pygame/examples/textinput.pyc
+${PYSITELIB}/pygame/examples/textinput.pyo
 ${PYSITELIB}/pygame/examples/vgrade.py
 ${PYSITELIB}/pygame/examples/vgrade.pyc
 ${PYSITELIB}/pygame/examples/vgrade.pyo
+${PYSITELIB}/pygame/examples/video.py
+${PYSITELIB}/pygame/examples/video.pyc
+${PYSITELIB}/pygame/examples/video.pyo
 ${PYSITELIB}/pygame/fastevent.so
 ${PYSITELIB}/pygame/font.so
 ${PYSITELIB}/pygame/freesansbold.ttf
@@ -222,18 +238,8 @@ ${PYSITELIB}/pygame/ftfont.py
 ${PYSITELIB}/pygame/ftfont.pyc
 ${PYSITELIB}/pygame/ftfont.pyo
 ${PYSITELIB}/pygame/gfxdraw.so
-${PYSITELIB}/pygame/gp2x/__init__.py
-${PYSITELIB}/pygame/gp2x/__init__.pyc
-${PYSITELIB}/pygame/gp2x/__init__.pyo
-${PYSITELIB}/pygame/gp2x/constants.py
-${PYSITELIB}/pygame/gp2x/constants.pyc
-${PYSITELIB}/pygame/gp2x/constants.pyo
-${PYSITELIB}/pygame/gp2x/locals.py
-${PYSITELIB}/pygame/gp2x/locals.pyc
-${PYSITELIB}/pygame/gp2x/locals.pyo
 ${PYSITELIB}/pygame/image.so
 ${PYSITELIB}/pygame/imageext.so
-${PYSITELIB}/pygame/install.html
 ${PYSITELIB}/pygame/joystick.so
 ${PYSITELIB}/pygame/key.so
 ${PYSITELIB}/pygame/locals.py
@@ -262,10 +268,9 @@ ${PYSITELIB}/pygame/pygame_icon.bmp
 ${PYSITELIB}/pygame/pygame_icon.icns
 ${PYSITELIB}/pygame/pygame_icon.svg
 ${PYSITELIB}/pygame/pygame_icon.tiff
-${PYSITELIB}/pygame/readme.html
 ${PYSITELIB}/pygame/rect.so
 ${PYSITELIB}/pygame/rwobject.so
-${PYSITELIB}/pygame/scrap.so
+${PLIST.unix}${PYSITELIB}/pygame/scrap.so
 ${PLIST.darwin}${PYSITELIB}/pygame/sdlmain_osx.so
 ${PYSITELIB}/pygame/sndarray.py
 ${PYSITELIB}/pygame/sndarray.pyc
@@ -311,6 +316,9 @@ ${PYSITELIB}/pygame/tests/color_test.pyo
 ${PYSITELIB}/pygame/tests/compat_test.py
 ${PYSITELIB}/pygame/tests/compat_test.pyc
 ${PYSITELIB}/pygame/tests/compat_test.pyo
+${PYSITELIB}/pygame/tests/constants_test.py
+${PYSITELIB}/pygame/tests/constants_test.pyc
+${PYSITELIB}/pygame/tests/constants_test.pyo
 ${PYSITELIB}/pygame/tests/cursors_test.py
 ${PYSITELIB}/pygame/tests/cursors_test.pyc
 ${PYSITELIB}/pygame/tests/cursors_test.pyo
@@ -323,6 +331,9 @@ ${PYSITELIB}/pygame/tests/draw_test.pyo
 ${PYSITELIB}/pygame/tests/event_test.py
 ${PYSITELIB}/pygame/tests/event_test.pyc
 ${PYSITELIB}/pygame/tests/event_test.pyo
+${PYSITELIB}/pygame/tests/fastevent_tags.py
+${PYSITELIB}/pygame/tests/fastevent_tags.pyc
+${PYSITELIB}/pygame/tests/fastevent_tags.pyo
 ${PYSITELIB}/pygame/tests/fastevent_test.py
 ${PYSITELIB}/pygame/tests/fastevent_test.pyc
 ${PYSITELIB}/pygame/tests/fastevent_test.pyo
@@ -405,6 +416,9 @@ ${PYSITELIB}/pygame/tests/mixer_test.pyo
 ${PYSITELIB}/pygame/tests/mouse_test.py
 ${PYSITELIB}/pygame/tests/mouse_test.pyc
 ${PYSITELIB}/pygame/tests/mouse_test.pyo
+${PYSITELIB}/pygame/tests/overlay_tags.py
+${PYSITELIB}/pygame/tests/overlay_tags.pyc
+${PYSITELIB}/pygame/tests/overlay_tags.pyo
 ${PYSITELIB}/pygame/tests/overlay_test.py
 ${PYSITELIB}/pygame/tests/overlay_test.pyc
 ${PYSITELIB}/pygame/tests/overlay_test.pyo
@@ -615,9 +629,18 @@ ${PYSITELIB}/pygame/tests/threads_test.pyo
 ${PYSITELIB}/pygame/tests/time_test.py
 ${PYSITELIB}/pygame/tests/time_test.pyc
 ${PYSITELIB}/pygame/tests/time_test.pyo
+${PYSITELIB}/pygame/tests/touch_tags.py
+${PYSITELIB}/pygame/tests/touch_tags.pyc
+${PYSITELIB}/pygame/tests/touch_tags.pyo
+${PYSITELIB}/pygame/tests/touch_test.py
+${PYSITELIB}/pygame/tests/touch_test.pyc
+${PYSITELIB}/pygame/tests/touch_test.pyo
 ${PYSITELIB}/pygame/tests/transform_test.py
 ${PYSITELIB}/pygame/tests/transform_test.pyc
 ${PYSITELIB}/pygame/tests/transform_test.pyo
+${PYSITELIB}/pygame/tests/version_test.py
+${PYSITELIB}/pygame/tests/version_test.pyc
+${PYSITELIB}/pygame/tests/version_test.pyo
 ${PYSITELIB}/pygame/threads/Py25Queue.py
 ${PYSITELIB}/pygame/threads/Py25Queue.pyc
 ${PYSITELIB}/pygame/threads/Py25Queue.pyo

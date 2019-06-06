@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2018/05/10 21:53:32 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2019/06/06 21:46:11 adam Exp $
 
-DISTNAME=	pygame-1.9.3
-PKGREVISION=	1
+DISTNAME=	pygame-1.9.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-CATEGORIES=	games
+CATEGORIES=	games python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pygame/}
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -23,21 +22,29 @@ REPLACE_PYTHON+=	setup.py
 SUBST_CLASSES+=		fixpath
 SUBST_STAGE.fixpath=	pre-configure
 SUBST_MESSAGE.fixpath=	Fixing paths.
-SUBST_FILES.fixpath=	config_darwin.py config_unix.py
+SUBST_FILES.fixpath=	buildconfig/config_darwin.py
+SUBST_FILES.fixpath+=	buildconfig/config_unix.py
 SUBST_SED.fixpath=	-e 's,/usr/local,${PREFIX},g'
 
 .include "../../mk/bsd.prefs.mk"
-PLIST_VARS+=		darwin
-.if ${OPSYS} != "Darwin"
-.  include "../../x11/libX11/buildlink3.mk"
-.else
+PLIST_VARS+=		darwin unix
+.if ${OPSYS} == "Darwin"
 PLIST.darwin=		yes
+.else
+.  include "../../x11/libX11/buildlink3.mk"
+PLIST.unix=		yes
 .endif
+
+# Disable video4linux
+pre-configure:
+	${RM} ${WRKSRC}/buildconfig/Setup_Unix.in
+	${TOUCH} ${WRKSRC}/buildconfig/Setup_Unix.in
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/SDL_ttf/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.9 2018/05/10 21:52:51 wiz Exp $
+$NetBSD: distinfo,v 1.10 2019/06/06 21:46:11 adam Exp $
 
-SHA1 (pygame-1.9.3.tar.gz) = b3ef126f0baea3bd0986fddebba82b6b13f6f282
-RMD160 (pygame-1.9.3.tar.gz) = ac95b8c2afa5076746227a6d1ae9c200d14d5757
-SHA512 (pygame-1.9.3.tar.gz) = 8920c598a97b4ff8602391517f070b67263bacb6330e13ea5d7d5432ee592a7c984fe986837b90a032da3d4e717f9df0cc99f0fb39f1cbde1b4f6a4c132feffe
-Size (pygame-1.9.3.tar.gz) = 2974541 bytes
-SHA1 (patch-Setup.in) = 71659c0150ec53b063cd47531b8b0a93ea671ceb
-SHA1 (patch-Setup__Unix.in) = 03fb45137f018761e6b9f19de056c0fdff5d153d
-SHA1 (patch-config__darwin.py) = c39c00b3252195dcf4476574e9b8439acf66c0ab
-SHA1 (patch-config__unix.py) = 0572bf12ce06ffd7d9a762a7718d1330715af9ec
+SHA1 (pygame-1.9.6.tar.gz) = d055cf1e37d8c340579e2d745e8ca4c9397767da
+RMD160 (pygame-1.9.6.tar.gz) = abe4dc7b5e350617048474a3d168d9d1d09eae2b
+SHA512 (pygame-1.9.6.tar.gz) = d923c554203a7c35e37921658cb4c5bf50215ab0ff4d2b869a1ee6b2e2ca31d66ec4bbde4287f5a777838ffe932cd15b993cb0224b86e43d684de61c35acbcd0
+Size (pygame-1.9.6.tar.gz) = 3223131 bytes
+SHA1 (patch-buildconfig_Setup.SDL1.in) = 2f4b60f933952b67092fabfe4c84d7525b9d0338
+SHA1 (patch-buildconfig_Setup.SDL2.in) = 9b33e714df4319622aac66ced2b3ce36f879dc8c
+SHA1 (patch-buildconfig_config__darwin.py) = c1e8ac90619fce59e250a33175a546cd235c0fe1
+SHA1 (patch-buildconfig_config__unix.py) = 31185536cbc25550df3441607ec278c533a28f1f
