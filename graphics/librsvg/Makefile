@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.106 2019/06/02 14:06:39 wiz Exp $
+# $NetBSD: Makefile,v 1.107 2019/06/06 08:53:00 tnn Exp $
 
 DISTNAME=	librsvg-2.44.14
+PKGREVISION=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -186,6 +187,7 @@ BUILDLINK_API_DEPENDS.libcroco+=	libcroco>=0.6.1
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.9
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
+BUILDLINK_DEPMETHOD.rust?=	build
 .include "../../lang/rust/buildlink3.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
