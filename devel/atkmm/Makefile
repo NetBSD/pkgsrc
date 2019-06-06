@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2018/08/22 09:43:27 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2019/06/06 11:43:58 adam Exp $
 
-DISTNAME=	atkmm-2.24.2
-PKGREVISION=	5
+DISTNAME=	atkmm-2.24.3
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/atkmm/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
