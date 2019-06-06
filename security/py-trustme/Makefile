@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2019/05/02 09:41:04 adam Exp $
+# $NetBSD: Makefile,v 1.4 2019/06/06 21:24:22 adam Exp $
 
-DISTNAME=	trustme-0.5.1
+DISTNAME=	trustme-0.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/trustme/}
