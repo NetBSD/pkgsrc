@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2019/05/27 15:18:33 bsiegert Exp $
+# $NetBSD: Makefile,v 1.13 2019/06/06 16:09:19 adam Exp $
 
-DISTNAME=	grafana-6.1.6
-GITHUB_TAG=	v${PKGVERSION_NOREV}
-PKGREVISION=	1
+DISTNAME=	grafana-6.2.2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grafana/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	https://grafana.com/
@@ -64,8 +63,9 @@ PKG_GROUPS=		${GRAFANA_GROUP}
 PKG_USERS=		${GRAFANA_USER}:${GRAFANA_GROUP}
 RCD_SCRIPTS=		grafana
 
-INSTALLATION_DIRS+=	bin share/examples/grafana share/grafana/conf \
-			share/grafana/public
+INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	share/examples/grafana
+INSTALLATION_DIRS+=	share/grafana/public
 
 CONF_FILES+=	${PREFIX}/share/grafana/conf/sample.ini \
 		${PKG_SYSCONFDIR}/grafana.conf
@@ -77,10 +77,8 @@ do-install:
 	cd ${WRKDIR} && ${PAX} -rw bin ${DESTDIR}${PREFIX}
 	cd ${WRKDIR}/linux/${DISTNAME}/public && \
 		${PAX} -rw . ${DESTDIR}${PUBLICDIR}
-	${INSTALL_DATA} ${WRKSRC}/conf/defaults.ini \
-		${DESTDIR}${PREFIX}/share/grafana/conf/defaults.ini
-	${INSTALL_DATA} ${WRKSRC}/conf/sample.ini \
-		${DESTDIR}${PREFIX}/share/grafana/conf/sample.ini
+	cd ${WRKSRC} && ${PAX} -rw conf \
+		${DESTDIR}${PREFIX}/share/grafana/
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
