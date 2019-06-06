@@ -1,4 +1,4 @@
-$NetBSD: patch-gio_gunixmounts.c,v 1.4 2019/06/03 23:09:29 maya Exp $
+$NetBSD: patch-gio_gunixmounts.c,v 1.5 2019/06/06 11:05:12 adam Exp $
 
 SunOS has sys/mntent.h but no mnt_opts.
 XXX who else uses the sys/mntent.h case?
@@ -15,4 +15,3 @@ https://gitlab.gnome.org/GNOME/glib/merge_requests/890
                                               is_read_only);
  
        return_list = g_list_prepend (return_list, mount_entry);
-
