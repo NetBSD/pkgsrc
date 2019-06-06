@@ -1,16 +1,15 @@
-$NetBSD: distinfo,v 1.242 2019/06/05 08:57:15 jperkin Exp $
+$NetBSD: distinfo,v 1.243 2019/06/06 11:05:12 adam Exp $
 
-SHA1 (glib-2.60.2.tar.xz) = 8aa8586f0b1fd13c2717adf7ac3e6427bee651b6
-RMD160 (glib-2.60.2.tar.xz) = 8d18a8e4b43071afc35762eff3618a88a7112f57
-SHA512 (glib-2.60.2.tar.xz) = 38479c8e48fda5adaa5f7ac8e1f09c184be48adf38ab614eb69f8e11301a1b0235767abf556e09fd4d5df345822db5b3dc85d1c53d05fdba1c1b40f75b61777b
-Size (glib-2.60.2.tar.xz) = 4587388 bytes
+SHA1 (glib-2.60.3.tar.xz) = 244be77d07a268d700f5bc41b2aec1d7d659934f
+RMD160 (glib-2.60.3.tar.xz) = d0768846033bacdcd0aaac6e3ec634666729e225
+SHA512 (glib-2.60.3.tar.xz) = e316846770ecbd92ca5359c3d71535a5d4628edbda43477584921c84f3b2d6a34ecfb789069404565059d157e2aa3936e1e9fe64b4b7c59fb5c66c1a6f9a2f07
+Size (glib-2.60.3.tar.xz) = 4587636 bytes
 SHA1 (patch-gio_gcredentialsprivate.h) = dab92e07f8357a7dc1a569e37f65f9b199aee281
 SHA1 (patch-gio_gdbus-2.0_codegen_meson.build) = 21c806f1a9884000b6a1683bc2fd1276b3c3544f
-SHA1 (patch-gio_giomodule.c) = 7f9fa22bebce1c29cdb1dfe7e7b11d92a3f463dd
-SHA1 (patch-gio_glocalfileinfo.c) = 8e0b7e9543ce3c702c468f56e7ecf418d70b049f
+SHA1 (patch-gio_giomodule.c) = 0715e77fa97f90631c77e9a2cfd54b74698522e2
 SHA1 (patch-gio_gresource-tool.c) = ad0e59f48f5f98ea66be568dbe2e5a5d1ac602fc
 SHA1 (patch-gio_gunixcredentialsmessage.c) = c13119ddd6262db7c03e53857e987f0c495d3312
-SHA1 (patch-gio_gunixmounts.c) = 5c9d4d86161ef1723da0e7d54af65debcb1ed137
+SHA1 (patch-gio_gunixmounts.c) = 13af07fffe898457edd0d8db4296a60fccba913d
 SHA1 (patch-gio_inotify_inotify-kernel.c) = 24deec33a1ad5e3c1a4f2d1397440d26b0f23b84
 SHA1 (patch-gio_meson.build) = 745b0b2047537a16f0f4f5dd5eeaebf29844e8e1
 SHA1 (patch-glib_gmain.c) = 2ab4b59e438d9f764bee62e0c1fa8bbd231b6e8d
