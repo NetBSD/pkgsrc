@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.289 2019/04/03 18:37:24 rillig Exp $
+# $NetBSD: replace.mk,v 1.290 2019/06/06 11:54:33 jperkin Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -982,6 +982,7 @@ MAKEFLAGS+=		TOOLS_IGNORE.ggrep=
 TOOLS_DEPENDS.ggrep?=	grep>=2.5.1:../../textproc/grep
 .    for _t_ in ${_TOOLS.grep}
 TOOLS_CREATE+=		g${_t_}
+TOOLS_PATH.${_t_}=	${LOCALBASE}/bin/g${_t_}
 TOOLS_PATH.g${_t_}=	${LOCALBASE}/bin/g${_t_}
 TOOLS_ALIASES.g${_t_}=	${_t_}
 .    endfor
