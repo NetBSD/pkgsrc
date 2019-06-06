@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2019/05/07 08:00:03 adam Exp $
+# $NetBSD: Makefile,v 1.35 2019/06/06 21:16:37 adam Exp $
 
-DISTNAME=	dns-lexicon-3.2.4
+DISTNAME=	dns-lexicon-3.2.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/dns-//}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dns-lexicon/}
@@ -23,7 +23,7 @@ MESSAGE_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} lexicon lexicon-${PYVERSSUFFIX} || ${TRUE}
+	${MV} lexicon lexicon-${PYVERSSUFFIX} || ${TRUE}
 
 # Do not test providers
 do-test:
