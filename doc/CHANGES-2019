@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2404 2019/06/06 21:25:11 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2405 2019/06/06 21:55:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4054,3 +4054,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/py-latexcodec to 1.0.7 [adam 2019-06-06]
 	Updated net/py-lexicon to 3.2.6 [adam 2019-06-06]
 	Updated security/py-trustme to 0.5.2 [adam 2019-06-06]
+	Updated devel/py-game to 1.9.6 [adam 2019-06-06]
+	Updated games/pysolfc to 2.6.4 [adam 2019-06-06]
