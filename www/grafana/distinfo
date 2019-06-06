@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.3 2019/05/21 08:32:04 adam Exp $
+$NetBSD: distinfo,v 1.4 2019/06/06 16:09:19 adam Exp $
 
-SHA1 (grafana-6.1.6.linux-amd64.tar.gz) = 9e94160405d46f9107f431b6eb76b8299ef80511
-RMD160 (grafana-6.1.6.linux-amd64.tar.gz) = 6491699efe0b8619844a80162d16d6de37aeb3eb
-SHA512 (grafana-6.1.6.linux-amd64.tar.gz) = b8851df5a00b752777c168446326603c5e00ed66e7217551c75a976961c9de1f5a5bf0d262068866ecd0dae685a09ac8829db2bb5201c32e1ecaed6bafc149e4
-Size (grafana-6.1.6.linux-amd64.tar.gz) = 56569580 bytes
-SHA1 (grafana-6.1.6.tar.gz) = 8617d8f37d343b6199e7aecc0dd2d8d5a77cc5f2
-RMD160 (grafana-6.1.6.tar.gz) = 365387cbd2297c600227aeda447b0e0872e9b640
-SHA512 (grafana-6.1.6.tar.gz) = 692eb13a7981e10cf3bea98a2054a1bb193b9bcdfae3630fcdb9f5f07bf1908e4e3898606f86a252edfd3bd36d41ae6dff1f467d602bd3f369ac9f98584911fb
-Size (grafana-6.1.6.tar.gz) = 12566846 bytes
+SHA1 (grafana-6.2.2.linux-amd64.tar.gz) = 172644a99ccb979c3480ea0bf0cf8c28d2817aa4
+RMD160 (grafana-6.2.2.linux-amd64.tar.gz) = 1bc7b2c84023e243d35bd261011ca8320c9bb71a
+SHA512 (grafana-6.2.2.linux-amd64.tar.gz) = 24a1f685a76b8bdf4876f498daf43ae316a8e6fc89dcc9d3aed67cfd360baff1cb48c1118753afcb845ddebbbebfa195d369036786e09b8ca00d78cb1f60e6f2
+Size (grafana-6.2.2.linux-amd64.tar.gz) = 58512782 bytes
+SHA1 (grafana-6.2.2.tar.gz) = 5714b94192991450fe8b370851c1f9dc1427eb3b
+RMD160 (grafana-6.2.2.tar.gz) = 01cadd843c72ed1c674cb63b79c2ce83e6643e72
+SHA512 (grafana-6.2.2.tar.gz) = fffa2a04c5249e6159297280313b7d6cbec2f86fc59e48200405905848dda524bb522cf34a1cf2f55855104e93c72e69284875f0dbea447cc8f551948c03e8af
+Size (grafana-6.2.2.tar.gz) = 13301416 bytes
