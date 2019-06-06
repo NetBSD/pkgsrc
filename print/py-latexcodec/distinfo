@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/07/26 12:22:10 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2019/06/06 21:11:52 adam Exp $
 
-SHA1 (latexcodec-1.0.5.tar.gz) = 6f4e6ec0cdc494e79f85d5710badd88c5ce28000
-RMD160 (latexcodec-1.0.5.tar.gz) = 81c9520c8292479e38c066dfd516a016916a74e7
-SHA512 (latexcodec-1.0.5.tar.gz) = b51cb9b806cc4f13ed92120a5636a7b55f84909c2ea76f0ab34e8b902c91355da7a7ad4fde38a6e8f68e3732c066306cb6c39866ebb5aced70c26e3137735625
-Size (latexcodec-1.0.5.tar.gz) = 26177 bytes
+SHA1 (latexcodec-1.0.7.tar.gz) = 5a9392d29753ef867517e599e4ce23d1aff03d84
+RMD160 (latexcodec-1.0.7.tar.gz) = aa0b198ab44f1988760b2920f713455e699ed430
+SHA512 (latexcodec-1.0.7.tar.gz) = 1308acf343cab43471566b12c70299225dad323e1ea8563b42b95cafaa1aaa9d4437c9b1031c15a788436e8ffdfa924653a455c8e5d8042ed44c5e854d9a3cba
+Size (latexcodec-1.0.7.tar.gz) = 27127 bytes
