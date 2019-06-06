@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/06/06 08:33:49 tpaul Exp $
+
+SHA1 (cdirip-0.6.4.tar.gz) = 708295ba56347cd2d831a9af7830201554b2d7ec
+RMD160 (cdirip-0.6.4.tar.gz) = cf0c3f3359de2e679006228e8c35bc8bd54fd8ce
+SHA512 (cdirip-0.6.4.tar.gz) = 1ee313350fef61b96284a7a6990faae5c353bf415bbb9ea8a62e71e993e5f762f2e97724298bff2490204b471f0cefd84934c575821502f8e09c2ee1e9356fa1
+Size (cdirip-0.6.4.tar.gz) = 30003 bytes
