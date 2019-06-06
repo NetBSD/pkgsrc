@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2019/06/03 20:35:55 triaxx Exp $
+$NetBSD: distinfo,v 1.5 2019/06/06 16:30:13 triaxx Exp $
 
 SHA1 (sysupgrade-1.5.tar.gz) = 3141ee4728d6d3b680ed04f552369031bb3b3b09
 RMD160 (sysupgrade-1.5.tar.gz) = 5b1d7c6d45643f2f03bff1df16739a6751d0ceda
 SHA512 (sysupgrade-1.5.tar.gz) = 47f37ce6802b8ba74d6edd19a2c80d46394c992b58d3077e6d1316e4f5505afbe53a68d28b28779a10a78d7be05f2f5b9d2a55b5b2f845bcc59a78950a8306f8
 Size (sysupgrade-1.5.tar.gz) = 75833 bytes
-SHA1 (patch-default.conf) = 9c5163b5342c7306973df5a61dd13622265f5142
+SHA1 (patch-default.conf) = ff367ebbdc56e1009a57a8bd254c424033257726
 SHA1 (patch-sysupgrade.conf.5.in) = dfe5d90d0360212ea052f2e25a26820ad277480b
-SHA1 (patch-sysupgrade.sh) = 52a3cf92d7fa4d5ea795de8f74b44f8b86328c86
+SHA1 (patch-sysupgrade.sh) = e84a8ea01fca16734206a864b0a51f38c27489a8
