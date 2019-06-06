@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.2 2012/09/01 19:44:33 spz Exp $
+$NetBSD: patch-pysollib_settings.py,v 1.1 2019/06/06 21:53:44 adam Exp $
 
-pkgsrc'ification
+Use custom data dir.
 
 --- pysollib/settings.py.orig	2008-11-15 13:04:30.000000000 -0800
 +++ pysollib/settings.py	2008-11-15 13:05:05.000000000 -0800
-@@ -57,10 +57,7 @@ DATA_DIRS = []
+@@ -61,10 +61,7 @@ DATA_DIRS = []
  # you can add your extra directories here
  if os.name == 'posix':
      DATA_DIRS = [
