@@ -1,13 +1,9 @@
-# $NetBSD: Makefile,v 1.249 2019/06/05 11:58:17 leot Exp $
+# $NetBSD: Makefile,v 1.250 2019/06/06 11:05:12 adam Exp $
 
 .include "Makefile.common"
 
 CATEGORIES=	devel gnome
 COMMENT=	Some useful routines for C programming (glib2)
-PKGREVISION=	2
-
-DISTINFO_FILE=	${.CURDIR}/../../devel/glib2/distinfo
-PATCHDIR=	${.CURDIR}/../../devel/glib2/patches
 
 .include "options.mk"
 
@@ -36,7 +32,6 @@ SUBST_MESSAGE.dbusdb=	Adjust dbus machine uuid path to dbus package
 SUBST_STAGE.dbusdb=	pre-configure
 SUBST_FILES.dbusdb=	gio/gdbusconnection.c
 SUBST_FILES.dbusdb+=	gio/gdbusprivate.c
-SUBST_FILES.dbusdb+=	po/glib20.pot
 SUBST_FILES.dbusdb+=	po/*.po
 SUBST_SED.dbusdb=	-e 's,/var/lib/dbus,${VARBASE}/db/dbus,g'
 
@@ -49,9 +44,14 @@ SUBST_SED.xdg+=		-e 's,/etc/xdg,${PKG_SYSCONFDIR}/xdg,'
 SUBST_SED.xdg+=		-e 's,/usr/share/locale,${PREFIX}/${PKGLOCALEDIR}/locale,'
 
 # to run gdbus-codegen to generate gdbus-daemon-generated.{h,c}
-TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-PYTHON_FOR_BUILD_ONLY= yes
-.include "../../lang/python/application.mk"
+TOOL_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+PYTHON_FOR_BUILD_ONLY=	yes
+
+.include "../../mk/bsd.prefs.mk"
+PLIST_VARS+=	nococoa
+.if ${OPSYS} != "Darwin"
+PLIST.nococoa=	yes
+.endif
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -59,4 +59,5 @@ PYTHON_FOR_BUILD_ONLY= yes
 .include "../../devel/py-meson/build.mk"
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
