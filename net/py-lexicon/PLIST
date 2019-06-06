@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2019/05/07 08:00:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2019/06/06 21:16:37 adam Exp $
 bin/lexicon-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -93,6 +93,9 @@ ${PYSITELIB}/lexicon/providers/godaddy.pyo
 ${PYSITELIB}/lexicon/providers/googleclouddns.py
 ${PYSITELIB}/lexicon/providers/googleclouddns.pyc
 ${PYSITELIB}/lexicon/providers/googleclouddns.pyo
+${PYSITELIB}/lexicon/providers/gratisdns.py
+${PYSITELIB}/lexicon/providers/gratisdns.pyc
+${PYSITELIB}/lexicon/providers/gratisdns.pyo
 ${PYSITELIB}/lexicon/providers/henet.py
 ${PYSITELIB}/lexicon/providers/henet.pyc
 ${PYSITELIB}/lexicon/providers/henet.pyo
@@ -264,6 +267,9 @@ ${PYSITELIB}/lexicon/tests/providers/test_godaddy.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_googleclouddns.py
 ${PYSITELIB}/lexicon/tests/providers/test_googleclouddns.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_googleclouddns.pyo
+${PYSITELIB}/lexicon/tests/providers/test_gratisdns.py
+${PYSITELIB}/lexicon/tests/providers/test_gratisdns.pyc
+${PYSITELIB}/lexicon/tests/providers/test_gratisdns.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_henet.py
 ${PYSITELIB}/lexicon/tests/providers/test_henet.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_henet.pyo
