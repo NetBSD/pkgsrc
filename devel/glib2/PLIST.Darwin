@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2019/06/06 11:06:51 adam Exp $
+include/glib-2.0/gio/gosxappinfo.h
