@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2017/11/24 15:24:12 wiz Exp $
+$NetBSD: distinfo,v 1.10 2019/06/06 16:11:15 adam Exp $
 
-SHA1 (gtkmm-3.22.2.tar.xz) = fd91eb23b9283ac54d267c54a91742ec2c1a6d6c
-RMD160 (gtkmm-3.22.2.tar.xz) = 622faf204c59a66e4672f1316eb43795ce108622
-SHA512 (gtkmm-3.22.2.tar.xz) = 6e96b543e459481145ee0f56f31a7ad2466bd8ccdd2abf3205998aecede73d235149ca6e5ba6e8d20a4fd5345e310870d81ac2a716d4f78d1460ed685badbdc2
-Size (gtkmm-3.22.2.tar.xz) = 12341028 bytes
+SHA1 (gtkmm-3.24.1.tar.xz) = d1e822765a64b844fba438672b5288283195f62a
+RMD160 (gtkmm-3.24.1.tar.xz) = 6cf8aa648dc2eba3d34fe1b4561ef1cf80fb9a9d
+SHA512 (gtkmm-3.24.1.tar.xz) = be7144edb0d5d68f761c9e92c197c3b84de045072443222694c1595faebf3390623a390dbec9f7232a70231aca138b1cb4343ab273333b2a6a418af7ec1586ed
+Size (gtkmm-3.24.1.tar.xz) = 12482756 bytes
