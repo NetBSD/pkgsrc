@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2016/04/12 21:31:08 adam Exp $
+$NetBSD: distinfo,v 1.7 2019/06/06 11:43:58 adam Exp $
 
-SHA1 (atkmm-2.24.2.tar.xz) = e18e2145622d1ae9b32d0425aec1b4b74aeb1336
-RMD160 (atkmm-2.24.2.tar.xz) = 1659add6db907c53827334848ec4679dca9d6da7
-SHA512 (atkmm-2.24.2.tar.xz) = 427714cdf3b10e3f9bc36df09c4b05608d295f5895fb1e079b9bd84afdf7bf1cfdec6794ced7f1e35bd430b76f87792df4ee63c515071a2ea6e3e51e672cdbe2
-Size (atkmm-2.24.2.tar.xz) = 849784 bytes
+SHA1 (atkmm-2.24.3.tar.xz) = 3dc20f509befb10050acd6d2ea069671b2c5d488
+RMD160 (atkmm-2.24.3.tar.xz) = 63fee2d5f086d08922d57c43fcc4d24a95469c0f
+SHA512 (atkmm-2.24.3.tar.xz) = dc08efcd965b4ac385f73847d065d7cbf5f8e05b8644f49a6d794805a7bd6a9a03ff159c308b9062fe66d8acfc8e8e237654622c6a7cd22fde5a518388290cb6
+Size (atkmm-2.24.3.tar.xz) = 891868 bytes
