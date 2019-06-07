@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.22 2016/06/11 00:37:24 wiedi Exp $
+# $NetBSD: options.mk,v 1.23 2019/06/07 12:20:32 tm Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.exim
 PKG_SUPPORTED_OPTIONS=	exim-appendfile-maildir exim-appendfile-mailstore
@@ -156,7 +156,7 @@ LOOKUP_LIBS+=${COMPILER_RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.cyrus-sasl} 
 .endif
 
 .if !empty(PKG_OPTIONS:Mspf)
-LOCAL_MAKEFILE_OPTIONS+=EXPERIMENTAL_SPF=yes
+LOCAL_MAKEFILE_OPTIONS+=SUPPORT_SPF=yes
 LOOKUP_LIBS+=		-lspf2
 .  include "../../mail/libspf2/buildlink3.mk"
 .endif
