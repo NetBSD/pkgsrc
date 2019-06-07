@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2416 2019/06/07 23:47:11 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2417 2019/06/07 23:57:45 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4069,3 +4069,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated misc/py-anita to 1.48 [gson 2019-06-07]
 	Updated sysutils/py-psutil to 5.6.2nb2 [leot 2019-06-07]
 	Updated net/dnscrypt-proxy2 to 2.0.25 [nia 2019-06-07]
+	Updated devel/p5-Date-Manip to 6.77 [wen 2019-06-07]
