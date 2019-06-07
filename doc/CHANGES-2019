@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2406 2019/06/07 00:03:00 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.2407 2019/06/07 01:22:33 fox Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4057,3 +4057,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-game to 1.9.6 [adam 2019-06-06]
 	Updated games/pysolfc to 2.6.4 [adam 2019-06-06]
 	Updated textproc/link-grammar to 5.6.1 [gutteridge 2019-06-07]
+	Updated www/cliqz to 1.27.0 [fox 2019-06-07]
