@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2019/04/05 13:48:38 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.30 2019/06/07 11:26:20 tm Exp $
 bin/ab
 bin/apxs
 bin/dbmmanage
@@ -95,6 +95,7 @@ lib/httpd/mod_authz_host.so
 lib/httpd/mod_authz_owner.so
 lib/httpd/mod_authz_user.so
 lib/httpd/mod_autoindex.so
+${PLIST.brotli}lib/httpd/mod_brotli.so
 lib/httpd/mod_buffer.so
 lib/httpd/mod_cache.so
 lib/httpd/mod_cache_disk.so
