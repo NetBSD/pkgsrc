@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2410 2019/06/07 10:47:33 wen Exp $
+$NetBSD: CHANGES-2019,v 1.2411 2019/06/07 13:38:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4063,3 +4063,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-typed-ast to 1.4.0 [adam 2019-06-07]
 	Updated databases/phpmyadmin to 4.9.0.1 [tm 2019-06-07]
 	Updated www/p5-HTTP-Daemon to 6.04 [wen 2019-06-07]
+	Updated textproc/xapian to 1.4.11nb1 [ryoon 2019-06-07]
