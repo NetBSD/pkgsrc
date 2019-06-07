@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2019/06/07 13:42:50 ryoon Exp $
+
+* Select GnuPG binary
+
+--- configure.orig	2019-06-07 09:46:30.000000000 +0000
++++ configure
+@@ -533,7 +533,7 @@ EOF
+         printf 'No.\nCould not make tempdir for testing session-key support.\n'
+         errors=$((errors + 1))
+     elif ${CC} ${CFLAGS} ${gmime_cflags} _check_session_keys.c ${gmime_ldflags} -o _check_session_keys \
+-           && GNUPGHOME=${TEMP_GPG} gpg --batch --quiet --import < test/gnupg-secret-key.asc \
++           && GNUPGHOME=${TEMP_GPG} @GPG@ --batch --quiet --import < test/gnupg-secret-key.asc \
+            && SESSION_KEY=$(GNUPGHOME=${TEMP_GPG} ./_check_session_keys) \
+            && [ $SESSION_KEY = 9:0BACD64099D1468AB07C796F0C0AC4851948A658A15B34E803865E9FC635F2F5 ]
+     then
