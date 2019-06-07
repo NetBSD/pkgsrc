@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/10/07 23:21:26 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/06/07 00:02:45 gutteridge Exp $
 bin/link-parser
 include/link-grammar/dict-api.h
 include/link-grammar/dict-structures.h
@@ -132,6 +132,10 @@ share/link-grammar/en/words/words.v.10.1
 share/link-grammar/en/words/words.v.10.2
 share/link-grammar/en/words/words.v.10.3
 share/link-grammar/en/words/words.v.10.4
+share/link-grammar/en/words/words.v.11.1
+share/link-grammar/en/words/words.v.11.2
+share/link-grammar/en/words/words.v.11.3
+share/link-grammar/en/words/words.v.11.4
 share/link-grammar/en/words/words.v.2.1
 share/link-grammar/en/words/words.v.2.2
 share/link-grammar/en/words/words.v.2.3
