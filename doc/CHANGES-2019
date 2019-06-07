@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2413 2019/06/07 15:18:29 gdt Exp $
+$NetBSD: CHANGES-2019,v 1.2414 2019/06/07 18:56:01 gson Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4066,3 +4066,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/xapian to 1.4.11nb1 [ryoon 2019-06-07]
 	Updated mail/notmuch to 0.29 [ryoon 2019-06-07]
 	Updated net/unifi to 5.10.24 [gdt 2019-06-07]
+	Updated misc/py-anita to 1.48 [gson 2019-06-07]
