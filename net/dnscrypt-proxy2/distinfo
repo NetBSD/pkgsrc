@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2019/05/03 07:45:31 nia Exp $
+$NetBSD: distinfo,v 1.11 2019/06/07 23:47:00 nia Exp $
 
-SHA1 (dnscrypt-proxy-2.0.23.tar.gz) = 4cd4d28fdd5ef7adfb95a0e8a1489ead3fa5b7b0
-RMD160 (dnscrypt-proxy-2.0.23.tar.gz) = c7c93ff67f454a4c95a51297c354f94ad8ca6199
-SHA512 (dnscrypt-proxy-2.0.23.tar.gz) = d4eeaf20a397c8aed08a7a91a720637bb49395488eb1f7ab4a52ca8832d3e0b98fb320b86ca30ad19e1e3504e226379e5d325891a68624532493fc4796959462
-Size (dnscrypt-proxy-2.0.23.tar.gz) = 2552615 bytes
+SHA1 (dnscrypt-proxy-2.0.25.tar.gz) = e144b133db9950308a722ffdde4fc78450d1bbc6
+RMD160 (dnscrypt-proxy-2.0.25.tar.gz) = b19f9ec162509a0a36b4bccc69feb61b450ce343
+SHA512 (dnscrypt-proxy-2.0.25.tar.gz) = 74a47b013e15cbdcf8691bf3618cce40149f9832f6fc4c2cbfb6af2a72b4ecb52b068a150999771a77fcf4fdb49c64dabd127c5101ae29fb86723bc30c946133
+Size (dnscrypt-proxy-2.0.25.tar.gz) = 2596674 bytes
 SHA1 (patch-vendor_github.com_aead_poly1305_poly1305__amd64.s) = f847a17b692c94cdfa934309da84ec588fad513a
