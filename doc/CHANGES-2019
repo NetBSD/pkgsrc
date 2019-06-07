@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2409 2019/06/07 10:12:29 tm Exp $
+$NetBSD: CHANGES-2019,v 1.2410 2019/06/07 10:47:33 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4062,3 +4062,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/py-jsparser to 2.7.1 [adam 2019-06-07]
 	Updated devel/py-typed-ast to 1.4.0 [adam 2019-06-07]
 	Updated databases/phpmyadmin to 4.9.0.1 [tm 2019-06-07]
+	Updated www/p5-HTTP-Daemon to 6.04 [wen 2019-06-07]
