@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2018/10/07 23:21:26 ryoon Exp $
+$NetBSD: distinfo,v 1.7 2019/06/07 00:02:45 gutteridge Exp $
 
-SHA1 (link-grammar-5.5.1.tar.gz) = 4931553a334ffce2d322b74bfe4f7c7e98b86b82
-RMD160 (link-grammar-5.5.1.tar.gz) = 33152b913dcf672297cf5271780e835f45c718b6
-SHA512 (link-grammar-5.5.1.tar.gz) = 503e964af9d9f050ecd9b91a4b287c0e5993d69bbc2c5efae420cafce2061b20ee6f055e2f8eaa394b6bf7615fc2b51ab31f2ff6305c1cd7356dac8f7d296a0f
-Size (link-grammar-5.5.1.tar.gz) = 3760337 bytes
+SHA1 (link-grammar-5.6.1.tar.gz) = cd022e172ecf8b0236b0fc2714885a9f76ae0b9d
+RMD160 (link-grammar-5.6.1.tar.gz) = 87592a1ed60b92d11be6803e249d610ad922b138
+SHA512 (link-grammar-5.6.1.tar.gz) = 48a078341b9602f695f3013d959dfbd8aa827df86e736b429221d5aa6e806ef6cad36a46abb690e0c29009bca4ecc1b0b4f3efb36d2d72e5dec5581a0e749089
+Size (link-grammar-5.6.1.tar.gz) = 3805577 bytes
 SHA1 (patch-aa) = 3be918c26b639442b56efab2e9416974f31969c5
 SHA1 (patch-configure) = d11a08e5a2c2d79bd71ca75958c3547376104c4e
