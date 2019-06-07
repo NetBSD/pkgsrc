@@ -1,17 +1,15 @@
-$NetBSD: patch-mozilla-release_browser_config_cliqz.mozconfig,v 1.1 2019/04/19 14:02:03 fox Exp $
+$NetBSD: patch-mozilla-release_browser_config_cliqz.mozconfig,v 1.2 2019/06/07 01:19:07 fox Exp $
 
 Remove the crash reporter option, this is now handled from within
 mozilla-common.mk
 
---- mozilla-release/browser/config/cliqz.mozconfig.orig	2018-11-16 08:40:07.000000000 +0000
+--- mozilla-release/browser/config/cliqz.mozconfig.orig	2019-05-29 12:52:42.000000000 +0000
 +++ mozilla-release/browser/config/cliqz.mozconfig
-@@ -8,9 +8,8 @@ ac_add_options --enable-signmar
+@@ -6,7 +6,6 @@ ac_add_options --enable-signmar
  ac_add_options --with-branding=browser/branding/cliqz
  ac_add_options --enable-official-branding
  ac_add_options --with-app-name=cliqz  # name for binaries
 -ac_add_options --enable-crashreporter
  ac_add_options --enable-js-shell
- 
- export MOZ_APP_PROFILE=CLIQZ
- export MOZ_AUTOMATION_UPLOAD=1
- 
+ ac_add_options --enable-update-channel=${MOZ_UPDATE_CHANNEL}
+ ac_add_options --enable-release
