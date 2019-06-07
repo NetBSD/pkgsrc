@@ -65,6 +65,7 @@ blender-exppython	Enable the Experimental Python support.
 bluray			Enable libbluray support.
 boehm-gc		Use Boehm's garbage collector for memory allocation.
 bozohttpd-do-htpasswd	Enable .htpasswd file processing in bozohttpd.
+brotli			Provides the BROTLI_COMPRESS output filter.
 bugzilla-charts		Enable generation of charts.
 bugzilla-imagemagick	Compress .BMPs to save space.
 bugzilla-patchviewer	Enable patchviewer support.
