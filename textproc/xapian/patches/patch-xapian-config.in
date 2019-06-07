@@ -1,0 +1,15 @@
+$NetBSD: patch-xapian-config.in,v 1.1 2019/06/07 13:37:39 ryoon Exp $
+
+* Include rpath to --libs output
+
+--- xapian-config.in.orig	2019-03-02 01:45:31.000000000 +0000
++++ xapian-config.in
+@@ -105,7 +105,7 @@ set_F_to_extra_ldflags() {
+ # -L option required (if any).
+ set_L_to_library_path() {
+     L=
+-    [ /usr/lib != "@libdir@" ] && L="-L@libdir@ "
++    [ /usr/lib != "@libdir@" ] && L="-L@libdir@ @COMPILER_RPATH_FLAG@@libdir@ "
+ }
+ 
+ set_I() {
