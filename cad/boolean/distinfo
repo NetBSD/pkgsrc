@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.19 2015/11/03 00:21:16 agc Exp $
+$NetBSD: distinfo,v 1.20 2019/06/08 11:04:27 rillig Exp $
 
 SHA1 (boolean_6_99.tgz) = 03e8dc7c9aa2886b0d5663669248c507524c5b22
 RMD160 (boolean_6_99.tgz) = 7977bb140169fa15a7dde9709ba1867e763b7b9c
 SHA512 (boolean_6_99.tgz) = bbcb6a50782e8c3a919defaf5977b119bfa7ba7e8e51203109c1f01050d64912e65828db51d18f62b7b515f607fd80870e507ce271aa577206c1cb8f953ce293
 Size (boolean_6_99.tgz) = 4270460 bytes
 SHA1 (patch-aa) = 0ca93dd87f8c314d718b63a14a94cbea7739b5a3
-SHA1 (patch-ab) = de9890d92db5a2957b1372e9562eb1d416f7f4b1
+SHA1 (patch-ab) = c96c4b0b6b77fa5f0c89c70b4cca0b4414df8d0f
 SHA1 (patch-apps_edit_src_drivers_gdsdrin.cpp) = 8845e71816bae65cb38c86217483ac868f5a0ce1
-SHA1 (patch-apps_edit_src_drivers_printer.cpp) = fcbe44d1f059bb9ee2cf8301a7f02ec0686b318a
-SHA1 (patch-apps_edit_src_gdssourc_text.cpp) = da50d4d3156e807177cdc7d71c8de586dbd04f6d
+SHA1 (patch-apps_edit_src_drivers_printer.cpp) = e0bd3047d9dfd2501c5c1ada4f46dbdc4db2e56b
+SHA1 (patch-apps_edit_src_gdssourc_text.cpp) = 02069e2b41509af261630f5c7d90f16fbd4024da
 SHA1 (patch-apps_edit_src_intrface_strucdlg_cpp) = 44637ca6b71f722c55f0986ee31ee29f35fe8858

@@ -1,4 +1,5 @@
-$NetBSD: patch-eeschema_sch_component.cpp,v 1.4 2016/09/21 13:16:07 bouyer Exp $
+$NetBSD: patch-eeschema_sch_component.cpp,v 1.5 2019/06/08 11:04:28 rillig Exp $
+
 64bit time_t fix
 Reported upstream as bug id 1280901
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/04/09 00:41:53 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2019/06/08 11:04:30 rillig Exp $
 #
 
 META_PACKAGE=		# empty
@@ -33,7 +33,7 @@ DEPENDS+=	gtk2-wcalc-${VER}*:../../cad/gtk2-wcalc
 # will not currently build correctly if you are using a
 # non-native matlab (i.e. linux or solaris matlab on NetBSD)
 ONLY_FOR_PLATFORM=	Linux-*-i386 SunOS-*-sparc*
-DEPENDS+=	mex-wcalc-${VER}*:../../cad/mex-wcalc
+DEPENDS+=		mex-wcalc-${VER}*:../../cad/mex-wcalc
 .endif
 
 .include "../../mk/bsd.pkg.mk"

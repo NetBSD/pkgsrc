@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2018/03/12 11:16:08 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2019/06/08 11:04:29 rillig Exp $
 #
 
 DISTNAME=	magic-7.5.188
@@ -15,13 +15,13 @@ LICENSE=	magic-license
 MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=	gmake printf csh
-MAKE_ENV+=	MAGIC_HOME=${PREFIX:Q}
+MAKE_ENV+=	MAGIC_HOME=${PREFIX}
 MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
 GNU_CONFIGURE=	yes
-CONFIGURE_DIRS= scripts
-BUILD_DIRS=	${WRKSRC}
+CONFIGURE_DIRS=	scripts
+BUILD_DIRS=	.
 
-MAKE_ENV+=	X11_LDFLAGS=${X11_LDFLAGS:Q}
+MAKE_ENV+=	X11_LDFLAGS=${X11_LDFLAGS:M*:Q}
 
 REPLACE_CSH+=	scripts/makedbh scripts/printmans
 

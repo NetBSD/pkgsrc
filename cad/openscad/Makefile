@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2019/05/29 19:52:48 adam Exp $
+# $NetBSD: Makefile,v 1.56 2019/06/08 11:04:29 rillig Exp $
 #
 
 DISTNAME=	openscad-2015.03-3.src
@@ -20,7 +20,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME:R}
 
 MAKE_JOBS_SAFE=	no
 
-CHECK_PORTABILITY_SKIP+=tests/compare-bitmaps.sh
+CHECK_PORTABILITY_SKIP+=	tests/compare-bitmaps.sh
 
 REPLACE_PYTHON=	libraries/MCAD/get_submodules.py
 .include "../../lang/python/application.mk"

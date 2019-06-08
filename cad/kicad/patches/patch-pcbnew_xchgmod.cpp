@@ -1,4 +1,5 @@
-$NetBSD: patch-pcbnew_xchgmod.cpp,v 1.3 2016/09/08 09:32:28 bouyer Exp $
+$NetBSD: patch-pcbnew_xchgmod.cpp,v 1.4 2019/06/08 11:04:28 rillig Exp $
+
 64bit time_t fix
 Reported upstream as bug id 1280901
 
