@@ -1,9 +1,8 @@
-# $NetBSD: mozilla-common.mk,v 1.132 2019/05/22 22:17:57 gutteridge Exp $
+# $NetBSD: mozilla-common.mk,v 1.133 2019/06/08 09:31:33 szptvlfn Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
 # used by www/firefox/Makefile
-# used by www/seamonkey/Makefile
 
 .include "../../mk/bsd.prefs.mk"
 
