@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2013/11/18 06:41:27 mef Exp $
+# $NetBSD: options.mk,v 1.2 2019/06/08 10:53:29 rillig Exp $
 ### Set options
-PKG_OPTIONS_VAR=        PKG_OPTIONS.nios2-gcc
-PKG_SUPPORTED_OPTIONS=  doc
+PKG_OPTIONS_VAR=	PKG_OPTIONS.nios2-gcc
+PKG_SUPPORTED_OPTIONS=	doc
 PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"

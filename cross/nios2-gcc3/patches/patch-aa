@@ -1,4 +1,5 @@
-$NetBSD: patch-aa,v 1.1 2013/11/16 07:41:00 mef Exp $
+$NetBSD: patch-aa,v 1.2 2019/06/08 10:53:29 rillig Exp $
+
 #
 # craft FPBIT_FUNCS and DPBIT_FUNCS lists to avoid routine collision
 # against NetBSD softfloat implementation. Following twelve are to

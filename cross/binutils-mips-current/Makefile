@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/12/09 21:05:32 adam Exp $
+# $NetBSD: Makefile,v 1.8 2019/06/08 10:53:27 rillig Exp $
 #
 # GNU binutils snapshot, configured to target MIPS (NetBSD/playstation2)
 
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--target=${PLATFORM}
 
 MAKE_ARGS+=		CFLAGS="${CFLAGS}"
 
-PLIST_SUBST+=		LOCALBASE=${LOCALBASE:Q}
+PLIST_SUBST+=		LOCALBASE=${PREFIX}
 
 BINDIR=			${PREFIX}/bin
 
