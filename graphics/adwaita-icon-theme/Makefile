@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/12/02 10:09:41 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/06/08 19:56:23 leot Exp $
 
 DISTNAME=		adwaita-icon-theme-3.30.1
 CATEGORIES=		graphics gnome
@@ -10,7 +10,6 @@ HOMEPAGE=		https://www.gnome.org/
 COMMENT=		Standard GNOME icons
 LICENSE=		cc-by-sa-v3.0 OR gnu-lgpl-v3
 
-TOOL_DEPENDS+=		librsvg>=2.22.3:../../graphics/librsvg
 # for gtk-encode-symbolic-svg
 TOOL_DEPENDS+=		gtk3+>=3:../../x11/gtk3
 
@@ -37,4 +36,5 @@ post-install:
 
 BUILDLINK_DEPMETHOD.gettext-lib=        build
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/librsvg/tool.mk"
 .include "../../mk/bsd.pkg.mk"
