@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/09/12 14:05:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2019/06/08 10:53:27 rillig Exp $
 
-DISTNAME=	 	cflib-CVS-20130415
+DISTNAME=		cflib-CVS-20130415
 PKGNAME=		cross-freemint-${DISTNAME:S/CVS-//}
 CATEGORIES=		cross
 MASTER_SITES=		http://vincent.riviere.free.fr/soft/m68k-atari-mint/archives/

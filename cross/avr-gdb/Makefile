@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2017/09/04 15:57:01 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2019/06/08 10:53:26 rillig Exp $
 
 DISTNAME=	gdb-7.12.1
 PKGNAME=	${DISTNAME:S/^/avr-/}
@@ -23,7 +23,7 @@ CONFIGURE_ENV+=		gdb_cv_var_elf=yes
 MAKE_ENV+=		gdb_cv_var_elf=yes
 
 # Native gdb has following lines also activated
-#CONFIGURE_ENV+=		gdb_cv_struct_lwp=yes
+#CONFIGURE_ENV+=	gdb_cv_struct_lwp=yes
 #MAKE_ENV+=		gdb_cv_struct_lwp=yes
 
 INSTALLATION_DIRS=	bin

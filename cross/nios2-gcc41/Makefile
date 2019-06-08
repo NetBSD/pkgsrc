@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/08/22 09:43:11 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2019/06/08 10:53:29 rillig Exp $
 
 DISTNAME=		nios2_gnu_gcc4_13.0
 PKG_VERSION=		4.1.2
@@ -19,12 +19,12 @@ GNU_CONFIGURE=		yes
 INFO_FILES=		no
 EXTRACT_ELEMENTS=	gcc-4.1
 WRKSRC=			${WRKDIR}/${EXTRACT_ELEMENTS}
-PATH:=                  ${PREFIX}/cross/bin:${PATH}
+PATH:=			${PREFIX}/cross/bin:${PATH}
 GNU_CONFIGURE_PREFIX=	${PREFIX}/cross
 USE_TOOLS+=		gmake makeinfo perl bison tar
 # following line to avoid getting
 #    make: exec(nios2--netbsdelf-ar) failed (No such file or directory)
-USE_GNU_CONFIGURE_HOST= NO
+USE_GNU_CONFIGURE_HOST=	NO
 
 NIOS2_TARGET?=		nios2-elf
 

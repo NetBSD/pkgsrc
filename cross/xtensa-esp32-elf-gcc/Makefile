@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/05/27 17:31:14 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2019/06/08 10:53:29 rillig Exp $
 
 # We could use the upstream GCC distfile, but Espressif has important vendor
 # patches in their branch and it seems not worth the maintenance overhead to
@@ -18,11 +18,13 @@ GITHUB_TAG=		35d9a8eb86910a6acac7579f22f8e88a92dbb251
 # Espressif overlays
 DISTFILES=		${DEFAULT_DISTFILES}
 DISTFILES+=		crosstool-ng-esp32-2019r1.tar.gz
-SITES.crosstool-ng-esp32-2019r1.tar.gz=	-https://github.com/espressif/crosstool-NG/archive/ce035ad3351127e4fdb3ff96790caba42b9f1aa3.tar.gz
+SITES.crosstool-ng-esp32-2019r1.tar.gz=	\
+	-https://github.com/espressif/crosstool-NG/archive/ce035ad3351127e4fdb3ff96790caba42b9f1aa3.tar.gz
 # Custom ESP32 newlib
 DISTFILES+=		newlib-${NEWLIBVER}.tar.gz
 NEWLIBVER=		esp32-2019r1_newlib-3_0_0
-SITES.newlib-${NEWLIBVER}.tar.gz=	-https://github.com/espressif/newlib-esp32/archive/46a44cc1111687d8297e35f9766493abd291e5cc.tar.gz
+SITES.newlib-${NEWLIBVER}.tar.gz= \
+	-https://github.com/espressif/newlib-esp32/archive/46a44cc1111687d8297e35f9766493abd291e5cc.tar.gz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/espressif/gcc
@@ -39,7 +41,7 @@ USE_TOOLS+=		bash gmake makeinfo perl
 # for http://gcc.gnu.org/bugzilla/show_bug.cgi?id=33549
 # use makeinfo from pkgsrc/devel/gtexinfo.
 TOOL_DEPENDS+=		gtexinfo>=5.1:../../devel/gtexinfo
-_TOOLS_USE_PKGSRC.makeinfo=yes
+_TOOLS_USE_PKGSRC.makeinfo= yes
 
 OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2018/12/09 21:05:32 adam Exp $
+# $NetBSD: Makefile,v 1.15 2019/06/08 10:53:28 rillig Exp $
 
-GCC_DIST_VERSION=4.9.2
-GCC_PKGNAME=	gcc-mips-${GCC_DIST_VERSION}
+GCC_DIST_VERSION=	4.9.2
+GCC_PKGNAME=		gcc-mips-${GCC_DIST_VERSION}
 
 DISTNAME=	gcc-${GCC_DIST_VERSION}
 PKGNAME=	${GCC_PKGNAME}
@@ -64,7 +64,7 @@ CONFIGURE_ARGS+=	--with-${prg}=${PREFIX}/bin/${TARGET}-${prg}
 
 CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	--disable-libquadmath
-CONFIGURE_ARGS+=	--disable-libquadmath-support 
+CONFIGURE_ARGS+=	--disable-libquadmath-support
 CONFIGURE_ARGS+=	--disable-libssp
 CONFIGURE_ARGS+=	--disable-libgomp
 CONFIGURE_ARGS+=	--disable-libstdc++-v3
@@ -73,10 +73,11 @@ CONFIGURE_ARGS+=	--disable-libgcc
 CONFIGURE_ARGS+=	--enable-languages=${LANGS:Q}
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-long-long
-CONFIGURE_ARGS+=	--with-local-prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--with-local-prefix=${PREFIX}
 CONFIGURE_ARGS+=	--enable-threads=posix
-CONFIGURE_ARGS+=	--with-boot-ldflags=${BOOT_LDFLAGS:Q}
-MAKE_ENV.NetBSD+=	ac_cv_func_clock_gettime=yes
+CONFIGURE_ARGS+=	--with-boot-ldflags=${BOOT_LDFLAGS:M*:Q}
+
+MAKE_ENV.NetBSD+=		ac_cv_func_clock_gettime=yes
 CONFIGURE_ARGS.DragonFly+=	--disable-bootstrap
 
 TARGET=			mipsel--netbsd

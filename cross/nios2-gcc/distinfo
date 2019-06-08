@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 00:47:45 agc Exp $
+$NetBSD: distinfo,v 1.6 2019/06/08 10:53:29 rillig Exp $
 
 SHA1 (sourceryg++-2013.05-43-nios2-linux-gnu.src.tar.bz2) = 94a0dadc4c1370dadfacf4bc6cac591e3e47959b
 RMD160 (sourceryg++-2013.05-43-nios2-linux-gnu.src.tar.bz2) = de056d240a73236d6d8be4851813d8b15d16808f
 SHA512 (sourceryg++-2013.05-43-nios2-linux-gnu.src.tar.bz2) = 1577ed24d5dfe7436a3f96ef8b906459578777f73a0a07aacc97a87708999a72a0eb0b2ce54306de55e43ce9f1e2dc171f06e7256f59b272af399fb1d29b943b
 Size (sourceryg++-2013.05-43-nios2-linux-gnu.src.tar.bz2) = 251136787 bytes
-SHA1 (patch-aa) = a5c69ac3c3768c90d70665a308a155c584b68e60
+SHA1 (patch-aa) = 849a0ea918f0a1aee5d1c6cd5b6eba4bbb8beb7f
 SHA1 (patch-gcc_doc_invoke.texi) = 649bc208f3c516263888d5431dc9cba890f53498
 SHA1 (patch-libiberty_Makefile.in) = 3ccf5055f59b6420a698c0230a65ec37f78ea8e1
