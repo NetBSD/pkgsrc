@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2019/06/08 12:25:05 mrg Exp $
+
+Example command to install U-Boot to an empty SD card:
+
+# dd if=${LOCALBASE}/share/u-boot/rock64/rksd_loader.img seek=64 of=/dev/rld0d
+
+See also http://opensource.rock-chips.com/wiki_Boot_option
+
+===========================================================================
