@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.48 2019/06/01 13:55:31 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.49 2019/06/08 19:51:38 leot Exp $
 
 BUILDLINK_TREE+=	librsvg
 
@@ -10,16 +10,16 @@ BUILDLINK_ABI_DEPENDS.librsvg+=		librsvg>=2.40.20nb4
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-# default to rust version on platforms where pkgsrc supports lang/rust
-.include "../../lang/rust/platform.mk"
-LIBRSVG_USE_RUST?=	${PLATFORM_SUPPORTS_RUST}
+.include "../../graphics/librsvg/available.mk"
 
-.if ${LIBRSVG_USE_RUST} == "yes"
+.if ${LIBRSVG_TYPE} == "rust"
 BUILDLINK_PKGSRCDIR.librsvg?=		../../graphics/librsvg
 BUILDLINK_API_DEPENDS.librsvg+=		librsvg>=2.41
-.else
+.elif ${LIBRSVG_TYPE} == "c"
 BUILDLINK_PKGSRCDIR.librsvg?=		../../graphics/librsvg-c
 BUILDLINK_API_DEPENDS.librsvg+=		librsvg<2.41
+.else
+PKG_FAIL_REASON+=       "[graphics/librsvg/buildlink3.mk] Invalid value ${LIBRSVG_TYPE} for LIBRSVG_TYPE."
 .endif
 
 .include "../../devel/pango/buildlink3.mk"
