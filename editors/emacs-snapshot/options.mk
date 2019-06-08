@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2015/10/14 20:17:24 wiz Exp $
+# $NetBSD: options.mk,v 1.12 2019/06/08 10:14:08 rillig Exp $
 #
 
 ### Set options
@@ -6,15 +6,15 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs
 PKG_SUPPORTED_OPTIONS=	dbus gconf gnutls imagemagick svg xaw3d xft2 xml
 # xaw3d is only valid with tookit = xaw
 
-PKG_OPTIONS_OPTIONAL_GROUPS+= window-system
-PKG_OPTIONS_GROUP.window-system= x11 nextstep
+PKG_OPTIONS_OPTIONAL_GROUPS+=		window-system
+PKG_OPTIONS_GROUP.window-system=	x11 nextstep
 # tempted to have 'nox11' :-)
 
-PKG_OPTIONS_OPTIONAL_GROUPS+= toolkit
+PKG_OPTIONS_OPTIONAL_GROUPS+=	toolkit
 #  --with-x-toolkit=KIT    use an X toolkit (KIT one of: yes or gtk, gtk2,
 #                          gtk3, lucid or athena, motif, no)
 # gtk in next line implies gtk2, xaw = athena = lucid
-PKG_OPTIONS_GROUP.toolkit= gtk motif xaw lucid
+PKG_OPTIONS_GROUP.toolkit=	gtk motif xaw lucid
 # gtk is default in the logic below (even not included in SUGGESTED_=
 # gconf, gtk and xft2 will be ingnored for nextstep even shown as selected.
 
@@ -26,40 +26,40 @@ PKG_SUGGESTED_OPTIONS=	dbus gconf gnutls imagemagick svg xaw3d xft2 xml x11
 ###
 ### Support D-BUS
 ###
-.  if !empty(PKG_OPTIONS:Mdbus)
+.if !empty(PKG_OPTIONS:Mdbus)
 .include "../../sysutils/dbus/buildlink3.mk"
-.  else
+.else
 CONFIGURE_ARGS+=	--without-dbus
-.  endif
+.endif
 
 ###
 ### Support XML2
 ###
-.  if !empty(PKG_OPTIONS:Mxml)
+.if !empty(PKG_OPTIONS:Mxml)
 USE_TOOLS+=             pkg-config
 BUILDLINK_API_DEPENDS.libxml2+= libxml2>=2.6.17
 .include "../../textproc/libxml2/buildlink3.mk"
-.  else
+.else
 CONFIGURE_ARGS+=        --without-xml2
-.  endif
+.endif
 
 ###
 ### Support gnutls
 ###
-.  if !empty(PKG_OPTIONS:Mgnutls)
+.if !empty(PKG_OPTIONS:Mgnutls)
 .include "../../security/gnutls/buildlink3.mk"
-.  else
+.else
 CONFIGURE_ARGS+=	--without-gnutls
-.  endif
+.endif
 
 ###
 ### Support ImageMagick
 ###
-.  if !empty(PKG_OPTIONS:Mimagemagick)
+.if !empty(PKG_OPTIONS:Mimagemagick)
 .include "../../graphics/ImageMagick/buildlink3.mk"
-.  else
+.else
 CONFIGURE_ARGS+=	--without-imagemagick
-.  endif
+.endif
 
 ###
 ### Check non nextstep (implies x11) options  ---------------------

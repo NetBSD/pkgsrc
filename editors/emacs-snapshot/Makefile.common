@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.69 2016/12/31 14:16:14 wiz Exp $
+# $NetBSD: Makefile.common,v 1.70 2019/06/08 10:14:08 rillig Exp $
 #
 # used by editors/emacs-snapshot/Makefile
 
@@ -22,13 +22,13 @@ CONFLICTS+=	emacs-nox11-[0-9]*
 SETGIDGAME=	yes
 MAKE_JOBS_SAFE=	no
 
-GNU_CONFIGURE=		yes
-INFO_FILES=		yes
+GNU_CONFIGURE=	yes
+INFO_FILES=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/:S/.orig//}
 
-CONFIGURE_ARGS+=	--srcdir=${WRKSRC:Q}
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
-CONFIGURE_ARGS+=	--with-gameuser=${GAMEOWN:Q}
+CONFIGURE_ARGS+=	--srcdir=${WRKSRC}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--with-gameuser=${GAMEOWN}
 
 BUILD_TARGET=		bootstrap
 BUILD_DEFS+=		VARBASE
