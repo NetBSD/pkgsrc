@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/06/05 01:13:27 gutteridge Exp $
+# $NetBSD: Makefile,v 1.21 2019/06/08 19:57:28 leot Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
@@ -22,12 +22,7 @@ SUBST_STAGE.prefix=	pre-install
 SUBST_SED.prefix=	-e 's,$${prefix},${PREFIX},'
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-# librsvg is required as a tool dependency, to provide rsvg-convert.
-# Since it's now a "split" package, where a choice depends on the
-# environment, or on a user-defined option, the dependency must be
-# expressed this way, pending further structural changes.
-BUILDLINK_DEPMETHOD.librsvg?=	build
-.include "../../graphics/librsvg/buildlink3.mk"
+.include "../../graphics/librsvg/tool.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../devel/dconf/buildlink3.mk"
