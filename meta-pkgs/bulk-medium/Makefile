@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2019/05/18 08:37:10 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2019/06/08 20:04:23 leot Exp $
 
 DISTNAME=	bulk-medium-20190518
 CATEGORIES=	meta-pkgs
@@ -174,7 +174,12 @@ BUILD_DEPENDS+=	glew-[0-9]*:../../graphics/glew
 BUILD_DEPENDS+=	jasper-[0-9]*:../../graphics/jasper
 BUILD_DEPENDS+=	lcms-[0-9]*:../../graphics/lcms
 BUILD_DEPENDS+=	lcms2-[0-9]*:../../graphics/lcms2
+.include "../../graphics/librsvg/available.mk"
+.if ${LIBRSVG_TYPE} == "rust"
 BUILD_DEPENDS+=	librsvg-[0-9]*:../../graphics/librsvg
+.else
+BUILD_DEPENDS+=	librsvg-[0-9]*:../../graphics/librsvg-c
+.endif
 BUILD_DEPENDS+=	blas-[0-9]*:../../math/blas
 BUILD_DEPENDS+=	lapack-[0-9]*:../../math/lapack
 BUILD_DEPENDS+=	boost-[0-9]*:../../meta-pkgs/boost
