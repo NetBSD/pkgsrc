@@ -1,4 +1,4 @@
-# $NetBSD: u-boot.mk,v 1.17 2019/06/05 06:18:02 mrg Exp $
+# $NetBSD: u-boot.mk,v 1.18 2019/06/08 10:01:22 mrg Exp $
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
@@ -24,10 +24,12 @@ PYTHON_FOR_BUILD_ONLY=	yes
 PYTHON_VERSIONS_ACCEPTED=	27
 
 REPLACE_INTERPRETER+=	python2
-REPLACE.python2.old=	.*/usr/bin/\(env.\|\)*python2*
+REPLACE.python2.old=	python2
 REPLACE.python2.new=	${PYTHONBIN}
 REPLACE_FILES.python2=	scripts/fill_scrapyard.py \
+			tools/binman/binman \
 			tools/binman/binman.py \
+			tools/dtoc/dtoc \
 			tools/dtoc/dtoc.py \
 			tools/genboardscfg.py \
 			tools/moveconfig.py
