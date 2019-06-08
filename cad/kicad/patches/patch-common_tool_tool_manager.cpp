@@ -1,4 +1,5 @@
-$NetBSD: patch-common_tool_tool_manager.cpp,v 1.1 2016/09/08 09:32:28 bouyer Exp $
+$NetBSD: patch-common_tool_tool_manager.cpp,v 1.2 2019/06/08 11:04:28 rillig Exp $
+
 Fix for newer boost, from upstream developement branch
 
 --- common/tool/tool_manager.cpp.orig	2016-09-03 22:47:46.000000000 +0200
