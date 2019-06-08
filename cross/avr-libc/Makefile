@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2018/08/22 09:43:10 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2019/06/08 10:53:26 rillig Exp $
 
 DISTNAME=		avr-libc-2.0.0
 PKGREVISION=		1
@@ -13,9 +13,9 @@ LICENSE=		modified-bsd
 
 USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		yes
-USE_GNU_CONFIGURE_HOST= no
+USE_GNU_CONFIGURE_HOST=	no
 
-CONFIGURE_ARGS+=	--build=${MACHINE_GNU_PLATFORM:Q}
+CONFIGURE_ARGS+=	--build=${MACHINE_GNU_PLATFORM}
 CONFIGURE_ARGS+=	--host=avr
 CONFIGURE_ARGS+=	--disable-versioned-doc
 CONFIGURE_ARGS+=	CC=${PREFIX}/bin/avr-gcc
