@@ -1,6 +1,8 @@
-$NetBSD: patch-plugin-configure.m4,v 1.2 2018/11/24 19:14:09 nia Exp $
+$NetBSD: patch-plugin-configure.m4,v 1.3 2019/06/08 10:40:53 rillig Exp $
+
 * adapt wordperfect plugins to dependecies available in pkgsrc 
   from abiword svn date 2014-12-27
+
 --- plugin-configure.m4.orig	2016-10-21 00:42:58.000000000 +0000
 +++ plugin-configure.m4
 @@ -72,7 +72,7 @@ AC_SUBST([GRAMMAR_CFLAGS])

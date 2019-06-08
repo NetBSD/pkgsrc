@@ -1,7 +1,7 @@
-# $NetBSD: version.mk,v 1.2 2013/02/16 23:58:36 dholland Exp $
+# $NetBSD: version.mk,v 1.3 2019/06/08 10:40:54 rillig Exp $
 
-_EMACS_FLAVOR=	emacs
-_EMACS_REQD=	emacs20>=20.7<21
+_EMACS_FLAVOR=		emacs
+_EMACS_REQD=		emacs20>=20.7<21
 _EMACS_PKGDEP.base=
 _EMACS_PKGDEP.leim=	leim>=20.${EMACS_VERSION_MINOR}<21:../../editors/leim20
 

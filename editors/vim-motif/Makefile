@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2017/02/19 19:13:35 snj Exp $
+# $NetBSD: Makefile,v 1.37 2019/06/08 10:40:59 rillig Exp $
 
 PKGNAME=		vim-motif-${VIM_VERSION}.${VIM_PATCHLEVEL}
 
@@ -13,16 +13,16 @@ CONFLICTS+=		vim-xaw-[0-9]* vim-kde-[0-9]*
 CONFIGURE_ARGS+=	--enable-gui=motif
 CONFIGURE_ARGS+=	--with-tlib=${BUILDLINK_LIBNAME.termcap}
 
-CONFIGURE_ENV+=		MOTIFBASE=${MOTIFBASE:Q}
-MAKE_ENV+=		MOTIFBASE=${MOTIFBASE:Q}
+CONFIGURE_ENV+=		MOTIFBASE=${MOTIFBASE}
+MAKE_ENV+=		MOTIFBASE=${MOTIFBASE}
 
 BUILD_TARGET=		vim
 INSTALL_TARGET=		installvimbin
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
-CHECK_INTERPRETER_SKIP+=${PKGMANDIR}/man1/gvim.1 ${PKGMANDIR}/man1/gview.1
-CHECK_INTERPRETER_SKIP+=${PKGMANDIR}/man1/rgvim.1 ${PKGMANDIR}/man1/rgview.1
+CHECK_INTERPRETER_SKIP+=	${PKGMANDIR}/man1/gvim.1 ${PKGMANDIR}/man1/gview.1
+CHECK_INTERPRETER_SKIP+=	${PKGMANDIR}/man1/rgvim.1 ${PKGMANDIR}/man1/rgview.1
 
 post-install:
 .for f in gvim.1 gview.1 rgvim.1 rgview.1
