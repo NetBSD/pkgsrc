@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2017/01/07 19:00:55 maya Exp $
+$NetBSD: distinfo,v 1.16 2019/06/08 10:40:57 rillig Exp $
 
 SHA1 (nvi-1.79.tar.gz) = 65b49768783372609278ecedd63caa8c1547aa2a
 RMD160 (nvi-1.79.tar.gz) = 1c39d480e0d30a87fc061c3219354b50011a8621
@@ -9,7 +9,7 @@ RMD160 (nvi-m17n-1.79-20040608.diff.gz) = 7791ce2bf6aa13245480de049e69f227002daf
 SHA512 (nvi-m17n-1.79-20040608.diff.gz) = 495ff4ecd698dcdcd9654a50519ed7f4b7bdb4dac01408b33a9deb08d1c0aaae65aaa729db9aa91ace20ec76a57f17941124c7bf2719ce8dc0543fb6d7a7c75c
 Size (nvi-m17n-1.79-20040608.diff.gz) = 159701 bytes
 SHA1 (patch-aa) = f9de0fd75adfd08ec55acd4bcbbce22d292d8535
-SHA1 (patch-ab) = 4526fa11abf619c5b2cfc23c97b2a4700462b601
+SHA1 (patch-ab) = 5cd869aeb27f48b14bf78cec907832c34e7ad24f
 SHA1 (patch-ac) = 617ddb4ba49ce3d556d2148ff4154430ad2868a0
 SHA1 (patch-ad) = eff439277414d1e5318b2bdc54f273da5aabfc20
 SHA1 (patch-ae) = 094bb54c79a587cbbf10756821ac52dcb53f6dc4
