@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE.NetBSD,v 1.1 2019/06/08 22:59:38 nia Exp $
+
+Mendafen expects a very low audio latency.  Unless you lower the audio
+latency or blk_ms to <5ms with sysctl(8), it will print the following
+warning:
+
+"Warning: Period time is too large(it should be <= ~5.333ms).
+Video will appear very jerky."
+
+Slightly higher latency levels may be acceptable depending on the
+emulation target and personal preferences.
+
+===========================================================================
