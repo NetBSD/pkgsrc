@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2019/04/25 07:32:51 maya Exp $
+# $NetBSD: Makefile,v 1.48 2019/06/08 10:40:55 rillig Exp $
 
 DISTNAME=	gedit-3.22.1
 PKGREVISION=	8
@@ -16,10 +16,10 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 GNU_CONFIGURE=		yes
 
-PKGCONFIG_OVERRIDE+=	data/gedit.pc.in
-PY_PATCHPLIST=		yes
+PKGCONFIG_OVERRIDE+=		data/gedit.pc.in
+PY_PATCHPLIST=			yes
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-REPLACE_PYTHON+=	plugins/externaltools/data/send-to-fpaste.tool.in
+REPLACE_PYTHON+=		plugins/externaltools/data/send-to-fpaste.tool.in
 
 CONFIGURE_ARGS+=	--disable-updater
 CONFIGURE_ARGS+=	--disable-deprecations

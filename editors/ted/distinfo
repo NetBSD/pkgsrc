@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2015/11/03 03:32:21 agc Exp $
+$NetBSD: distinfo,v 1.17 2019/06/08 10:40:58 rillig Exp $
 
 SHA1 (ted-2.21.src.tar.gz) = 303b15de1fe97e473c4b89a88b6e127ee81e07e9
 RMD160 (ted-2.21.src.tar.gz) = 68935d62d216708c7053910f1261353176cf5c72
@@ -8,8 +8,8 @@ SHA1 (patch-aa) = d8673fb67176c17beb90a87adebb9ab94a1e15ba
 SHA1 (patch-ab) = 16fa3f2a88a6b252148735f02541833b7ac56b8a
 SHA1 (patch-ac) = 3ad1300b213e925d50e0490587398e7574452aa8
 SHA1 (patch-ad) = a0761bd537cbef20bf80a74eb59c2352a97e4d99
-SHA1 (patch-ae) = 9cea02ede59d7f6a88a0c8ec1f93e5d814e6b994
-SHA1 (patch-af) = 369a2d0324538860c50653a140d660d50c2383b9
+SHA1 (patch-ae) = c374c5845eba111128e7fe79371c715d3b26a03b
+SHA1 (patch-af) = 0679838112be0e9b2ebead7e27625f6e61345383
 SHA1 (patch-ag) = 3db30b3b2e04b03e4d69704ba00d6182f0c5fd9f
 SHA1 (patch-appFrame_appFontConfig.c) = b73d920231cd426b7db5a5d8cf6dfa87f3469a2c
 SHA1 (patch-appUtil_csvsheet.c) = 70c3accb39099b8926f5681b24f3e4be048fd255
