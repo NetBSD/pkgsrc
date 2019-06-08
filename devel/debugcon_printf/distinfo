@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/06/08 23:52:09 kamil Exp $
+
+SHA1 (debugcon_printf-20190609-20190609.tar.gz) = 4e62812e532679f432f5b6b1b89837d4f6770f7b
+RMD160 (debugcon_printf-20190609-20190609.tar.gz) = 98364ede0073d77e6d58d0edd230bc54764e588d
+SHA512 (debugcon_printf-20190609-20190609.tar.gz) = 35943a4e46f45e4a6fa8d39a8ce1f4095d3eaecbd6c6943624c20aad1e4e75c9d50ec69dba5caf27db7185da0fb9876e2bdfef08651eef4f92473af1e30a41f0
+Size (debugcon_printf-20190609-20190609.tar.gz) = 5706 bytes
