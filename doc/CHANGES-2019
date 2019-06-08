@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2424 2019/06/08 22:46:53 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2425 2019/06/08 22:49:50 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4077,3 +4077,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-Inline-C to 0.81 [wen 2019-06-08]
 	Updated www/cliqz to 1.27.1 [fox 2019-06-08]
 	Added emulators/mgba version 0.7.2 [nia 2019-06-08]
+	Updated emulators/libretro-mgba to 0.7.2 [nia 2019-06-08]
