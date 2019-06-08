@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2015/11/03 03:32:22 agc Exp $
+$NetBSD: distinfo,v 1.11 2019/06/08 10:40:59 rillig Exp $
 
 SHA1 (tomboy-1.2.1.tar.gz) = 98e01ad670a3aa2c264319a5e36daa0ea4036891
 RMD160 (tomboy-1.2.1.tar.gz) = fa2e16b6e3e175e98756005853de8b6cc0ffcf25
@@ -6,4 +6,4 @@ SHA512 (tomboy-1.2.1.tar.gz) = 8266ecfd942f89b2c4b38f3232f9faa088740e16eb683c8e8
 Size (tomboy-1.2.1.tar.gz) = 7695607 bytes
 SHA1 (patch-Tomboy_tomboy-panel.in) = b8ba00735d939da3029a6aa1046d74ccf4fc20d2
 SHA1 (patch-Tomboy_tomboy.in) = f9b7caa4725133ca78111b9efaa16d7b1276c5b6
-SHA1 (patch-configure) = 47bb6f8bacdc1f08fff96001b1c097389db9f572
+SHA1 (patch-configure) = 61dbb0862983f0035644a9463df399b9f0c086d1

@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.11 2015/11/03 03:32:18 agc Exp $
+$NetBSD: distinfo,v 1.12 2019/06/08 10:40:55 rillig Exp $
 
 SHA1 (manedit-0.8.1.tar.bz2) = 0b1705383840598ae7ced22ce5eb7f111008885b
 RMD160 (manedit-0.8.1.tar.bz2) = 17d378fad7a0dbe8d7b4c09b334dfc0768b0932e
 SHA512 (manedit-0.8.1.tar.bz2) = 87d1aa10caf5308c903d41fb47a99366075ce6639520a50186dcb48db7128faab01883912763900fba1d5920f14ae85c0943a3e6c1b58097e030a82801da2a1c
 Size (manedit-0.8.1.tar.bz2) = 514226 bytes
-SHA1 (patch-aa) = b6b2443fca5fcab3367c49a011945b36a771ac74
+SHA1 (patch-aa) = 25caa42d1956c1b98c9c7f83ff49a56364f74455
 SHA1 (patch-ab) = a49685e0c136d4a9bcf10d512cc7dc318154c6c7
 SHA1 (patch-ac) = e210778d1e6f26611a8aaac769498ed05f6c1465
 SHA1 (patch-ad) = 1948c0940930a9c4e703c7087763f330e5c443c1

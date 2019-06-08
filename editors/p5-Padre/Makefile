@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2018/11/14 22:21:24 kleink Exp $
+# $NetBSD: Makefile,v 1.55 2019/06/08 10:40:57 rillig Exp $
 
 DISTNAME=	Padre-1.00
 PKGNAME=	p5-${DISTNAME}
@@ -20,12 +20,12 @@ REPLACE_PERL+=	share/examples/wx/*.pl
 REPLACE_PERL+=	share/examples/absolute_beginner/*.pl
 
 #BUILD_DEPENDS+=	p5-Capture-Tiny>=0.06:../../devel/p5-Capture-Tiny
-BUILD_DEPENDS+=	p5-Locale-Msgfmt>=0.15:../../devel/p5-Locale-Msgfmt
-BUILD_DEPENDS+=	p5-Test-Exception>=0.27:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	p5-Test-MockObject>=1.09:../../devel/p5-Test-MockObject
+BUILD_DEPENDS+=		p5-Locale-Msgfmt>=0.15:../../devel/p5-Locale-Msgfmt
+BUILD_DEPENDS+=		p5-Test-Exception>=0.27:../../devel/p5-Test-Exception
+BUILD_DEPENDS+=		p5-Test-MockObject>=1.09:../../devel/p5-Test-MockObject
 #BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
-BUILD_DEPENDS+=	p5-Test-NoWarnings>=0.084:../../devel/p5-Test-NoWarnings
-BUILD_DEPENDS+= p5-Test-Script>=1.07:../../devel/p5-Test-Script
+BUILD_DEPENDS+=		p5-Test-NoWarnings>=0.084:../../devel/p5-Test-NoWarnings
+BUILD_DEPENDS+=		p5-Test-Script>=1.07:../../devel/p5-Test-Script
 
 #DEPENDS+=	p5-ack>=1.86:../../textproc/p5-ack
 DEPENDS+=	p5-Algorithm-Diff>=1.1900:../../devel/p5-Algorithm-Diff
@@ -48,8 +48,8 @@ DEPENDS+=	p5-Devel-Refactor>=0.05:../../devel/p5-Devel-Refactor
 # by pbulk-resolve, but not at build time, since Perl is already installed
 # then. This forces unnecessary rebuilds.
 # DEPENDS+=	{perl>=5.12.0,p5-ExtUtils-MakeMaker>=6.56}:../../devel/p5-ExtUtils-MakeMaker
-#DEPENDS+=       {perl>=5.10.1,p5-ExtUtils-Manifest>=1.56}:../../devel/p5-ExtUtils-Manifest
-DEPENDS+=       p5-File-Copy-Recursive>=0.37:../../sysutils/p5-File-Copy-Recursive
+#DEPENDS+=	{perl>=5.10.1,p5-ExtUtils-Manifest>=1.56}:../../devel/p5-ExtUtils-Manifest
+DEPENDS+=	p5-File-Copy-Recursive>=0.37:../../sysutils/p5-File-Copy-Recursive
 DEPENDS+=	p5-File-Find-Rule-[0-9]*:../../devel/p5-File-Find-Rule
 DEPENDS+=	p5-File-HomeDir>=0.91:../../devel/p5-File-HomeDir
 # File::Path 2.07 is in Perl 5.8.9, but Perl 5.10.0 contains "only" 2.04

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/08/22 09:45:02 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/06/08 10:40:57 rillig Exp $
 #
 
 DISTNAME=	Padre-Plugin-Ecliptic-0.23
@@ -16,10 +16,10 @@ DEPENDS+=	p5-Class-XSAccessor>=1.05:../../devel/p5-Class-XSAccessor
 DEPENDS+=	p5-File-Which>=0.05:../../devel/p5-File-Which
 DEPENDS+=	p5-Padre>=0.43:../../editors/p5-Padre
 
-BUILD_DEPENDS+=	p5-Locale-Msgfmt>=0.14:../../devel/p5-Locale-Msgfmt
-BUILD_DEPENDS+=	p5-Test-Exception>=0.27:../../devel/p5-Test-Exception
+BUILD_DEPENDS+=		p5-Locale-Msgfmt>=0.14:../../devel/p5-Locale-Msgfmt
+BUILD_DEPENDS+=		p5-Test-Exception>=0.27:../../devel/p5-Test-Exception
 #BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.86}:../../devel/p5-Test-Simple
-BUILD_DEPENDS+=	p5-Test-NoWarnings>=0.084:../../devel/p5-Test-NoWarnings
+BUILD_DEPENDS+=		p5-Test-NoWarnings>=0.084:../../devel/p5-Test-NoWarnings
 
 PERL5_PACKLIST=		auto/Padre/Plugin/Ecliptic/.packlist
 PERL5_MODULE_TYPE=	Module::Build

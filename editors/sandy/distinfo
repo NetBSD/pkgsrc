@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2017/07/06 11:31:16 wiedi Exp $
+$NetBSD: distinfo,v 1.9 2019/06/08 10:40:57 rillig Exp $
 
 SHA1 (sandy-0.4.tar.gz) = da5e8820e73ae3e849df469d32887c5227a15d74
 RMD160 (sandy-0.4.tar.gz) = e230a230edf02f499ee5bbe57e3ac70cfcf228c0
 SHA512 (sandy-0.4.tar.gz) = 3773c81aadeb4b55e3c77a9eecf447e2791ea43f9461d37a02a3e2eb84d9343f4951e3bb6d60f04059f12b4d9223aaaf1eed532fdad8f64726cc252af77dc7bb
 Size (sandy-0.4.tar.gz) = 19243 bytes
-SHA1 (patch-sandy.c) = 5fdeb40a4be64043c8f3b20a9aa956a06a24cf4a
+SHA1 (patch-sandy.c) = b44cc32bd85f8a05c3cc1c88629eb4d4a15d5430
