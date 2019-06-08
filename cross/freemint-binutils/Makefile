@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/10/26 10:09:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2019/06/08 10:53:27 rillig Exp $
 
 DISTNAME=	binutils-2.24
 PKGNAME=	cross-freemint-${DISTNAME}
@@ -11,8 +11,8 @@ HOMEPAGE=	http://vincent.riviere.free.fr/soft/m68k-atari-mint/
 COMMENT=	Cross binutils for FreeMiNT
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
-PATCH_SITES=	http://vincent.riviere.free.fr/soft/m68k-atari-mint/archives/
-PATCHFILES=	binutils-2.24-mint-20131217.patch.bz2
+PATCH_SITES=		http://vincent.riviere.free.fr/soft/m68k-atari-mint/archives/
+PATCHFILES=		binutils-2.24-mint-20131217.patch.bz2
 PATCH_DIST_STRIP=	-p1
 
 FREEMINT_PREFIX=	${PREFIX}/cross-freemint
