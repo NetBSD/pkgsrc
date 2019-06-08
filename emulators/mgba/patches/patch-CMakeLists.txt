@@ -1,0 +1,17 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2019/06/08 22:46:03 nia Exp $
+
+Fix locale detection.
+
+--- CMakeLists.txt.orig	2019-02-25 01:33:16.000000000 +0000
++++ CMakeLists.txt
+@@ -391,7 +391,9 @@ if(HAVE_LOCALTIME_R)
+ 	list(APPEND FUNCTION_DEFINES HAVE_LOCALTIME_R)
+ endif()
+ 
+-if(HAVE_NEWLOCALE AND HAVE_FREELOCALE AND HAVE_USELOCALE OR APPLE)
++check_include_files("locale.h" HAVE_LOCALE)
++
++if(HAVE_LOCALE OR APPLE)
+ 	list(APPEND FUNCTION_DEFINES HAVE_LOCALE)
+ 	if (HAVE_SNPRINTF_L)
+ 		list(APPEND FUNCTION_DEFINES HAVE_SNPRINTF_L)
