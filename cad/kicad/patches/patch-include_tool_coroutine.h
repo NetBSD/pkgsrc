@@ -1,4 +1,5 @@
-$NetBSD: patch-include_tool_coroutine.h,v 1.1 2016/09/08 09:32:28 bouyer Exp $
+$NetBSD: patch-include_tool_coroutine.h,v 1.2 2019/06/08 11:04:28 rillig Exp $
+
 Fix for newer boost, from upstream developement branch
 
 --- include/tool/coroutine.h.orig	2016-09-07 19:04:03.000000000 +0200

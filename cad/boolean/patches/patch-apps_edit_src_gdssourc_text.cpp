@@ -1,4 +1,4 @@
-$NetBSD: patch-apps_edit_src_gdssourc_text.cpp,v 1.1 2012/10/20 22:03:01 joerg Exp $
+$NetBSD: patch-apps_edit_src_gdssourc_text.cpp,v 1.2 2019/06/08 11:04:27 rillig Exp $
 
 --- apps/edit/src/gdssourc/text.cpp.orig	2012-10-20 11:58:47.000000000 +0000
 +++ apps/edit/src/gdssourc/text.cpp

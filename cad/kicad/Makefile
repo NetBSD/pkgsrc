@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2019/05/29 19:52:48 adam Exp $
+# $NetBSD: Makefile,v 1.32 2019/06/08 11:04:28 rillig Exp $
 #
 
 V=		4.0.7
@@ -20,7 +20,7 @@ USE_CMAKE=		yes
 CMAKE_ARGS+=		-DKICAD_REPO_NAME=stable -DKICAD_BUILD_VERSION=${V}
 CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release -DKICAD_SKIP_BOOST=ON
 
-CMAKE_MODULE_PATH_OVERRIDE = \
+CMAKE_MODULE_PATH_OVERRIDE= \
 			bitmaps_png/CMakeLists.txt \
 			new/CMakeLists.txt \
 			tools/CMakeLists.txt
@@ -42,7 +42,7 @@ SUBST_SED.macosx=	-e 's/[[:<:]]MACOSX_BUNDLE[[:>:]]//'
 # PR 48980: no fabsl on netbsd-5
 .if !empty(MACHINE_PLATFORM:MNetBSD-5.*)
 SUBST_CLASSES+=		netbsd5
-SUBST_STAGE.netbsd5=	pre-patch
+SUBST_STAGE.netbsd5=	post-extract
 SUBST_MESSAGE.netbsd5=	Substituting fabs() for fabsl() for NetBSD-5
 SUBST_FILES.netbsd5=	pcbnew/legacy_plugin.cpp        \
 			tools/test-nm-biu-to-ascii-mm-round-tripping.cpp

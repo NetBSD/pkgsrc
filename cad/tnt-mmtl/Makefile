@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2018/03/12 11:16:09 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2019/06/08 11:04:30 rillig Exp $
 #
 
 DISTNAME=	tnt-1.2.2
@@ -28,7 +28,7 @@ USE_LANGUAGES=	c c++ fortran77
 # in turn ends up feeding a .F file to gcc -E that fails due to
 # fortran not being a configured language.  This is what happens on
 # a stock NetBSD-5.1 install.
-CONFIGURE_ENV+=	CPP=${CPP}
+CONFIGURE_ENV+=	CPP=${CPP:Q}
 
 post-patch:
 	${MV} ${WRKSRC}/tnt ${WRKSRC}/tnt-mmtl

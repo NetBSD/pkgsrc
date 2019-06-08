@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2018/11/14 22:21:07 kleink Exp $
+# $NetBSD: Makefile,v 1.71 2019/06/08 11:04:28 rillig Exp $
 #
 
 DISTNAME=	gerbv-2.6.2
@@ -15,7 +15,7 @@ GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 USE_TOOLS+=	gmake pkg-config
 
-PLIST_SUBST+=	PKGNAME_NOREV=${PKGNAME_NOREV:Q}
+PLIST_SUBST+=	PKGNAME_NOREV=${PKGNAME_NOREV}
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
