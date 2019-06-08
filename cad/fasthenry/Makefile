@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/10/08 13:25:12 asau Exp $
+# $NetBSD: Makefile,v 1.30 2019/06/08 11:04:28 rillig Exp $
 #
 
 DISTNAME=	fasthenry-3.0-12Nov96
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	default
 
 .include "../../mk/bsd.prefs.mk"
 
-LIBS+=		${COMPILER_RPATH_FLAG}${LOCALBASE}/lib
+LIBS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib
 .if (${MACHINE_ARCH} == "alpha")
 #
 # optimized libffm (free fast math library)
