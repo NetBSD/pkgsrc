@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2019/04/26 14:12:38 maya Exp $
+# $NetBSD: Makefile,v 1.37 2019/06/08 10:40:56 rillig Exp $
 
 DISTNAME=	medit-1.2.0
 PKGREVISION=	10
@@ -18,10 +18,10 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config msgfmt intltool
 
-PYTHON_FOR_BUILD_ONLY=	yes
+PYTHON_FOR_BUILD_ONLY=		yes
 PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 1.2.0
-CONFIGURE_ARGS+=	--with-python=no
-CONFIGURE_ENV+=	MOO_PYTHON=${PYTHONBIN}
+CONFIGURE_ARGS+=		--with-python=no
+CONFIGURE_ENV+=			MOO_PYTHON=${PYTHONBIN}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"

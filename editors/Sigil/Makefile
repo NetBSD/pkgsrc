@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2019/04/25 07:32:51 maya Exp $
+# $NetBSD: Makefile,v 1.121 2019/06/08 10:40:52 rillig Exp $
 
 DISTNAME=	Sigil-0.9.13
 PKGREVISION=	2
@@ -22,7 +22,7 @@ Qt5_DIR=	${BUILDLINK_PREFIX.qt5-qtbase}/qt5
 ALL_ENV+=	Qt5_DIR=${Qt5_DIR}
 
 BUILDLINK_TRANSFORM+=	opt:-O2:-O0
-#MAKE_ENV+=	CXX_FLAGS="-g"
+#MAKE_ENV+=		CXX_FLAGS="-g"
 
 USE_LANGUAGES=	c c++0x
 USE_CMAKE=	yes
@@ -38,9 +38,9 @@ BUILDLINK_TRANSFORM+=	l:zlib:z
 #LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-REPLACE_PYTHON+=	src/Resource_Files/*/*/*/*.py
-REPLACE_PYTHON+=	src/Resource_Files/*/*/*.py
-REPLACE_PYTHON+=	src/Resource_Files/*/*.py
+REPLACE_PYTHON+=		src/Resource_Files/*/*/*/*.py
+REPLACE_PYTHON+=		src/Resource_Files/*/*/*.py
+REPLACE_PYTHON+=		src/Resource_Files/*/*.py
 
 .include "../../textproc/xerces-c/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2019/04/11 16:02:37 hauke Exp $
+# $NetBSD: Makefile.common,v 1.13 2019/06/08 10:41:00 rillig Exp $
 #
 # used by editors/xemacs-current/Makefile
 # used by editors/xemacs-current-nox11/Makefile
@@ -27,8 +27,8 @@ GENERATE_PLIST+=	${ECHO} bin/${EMACS_DISTNAME}-`${WRKSRC}/src/xemacs -sd`.dmp ;
 # Having the build path in the dumped emacs is not a problem.
 CHECK_WRKREF_SKIP+=	bin/xemacs*
 
-PRINT_PLIST_AWK+=       { gsub(/${EMACS_DISTNAME}/, "$${DISTNAME}"); }
-PRINT_PLIST_AWK+=       { gsub(/${MACHINE_GNU_PLATFORM}/, "$${MACHINE_GNU_PLATFORM}"); }
+PRINT_PLIST_AWK+=	{ gsub(/${EMACS_DISTNAME}/, "$${DISTNAME}"); }
+PRINT_PLIST_AWK+=	{ gsub(/${MACHINE_GNU_PLATFORM}/, "$${MACHINE_GNU_PLATFORM}"); }
 
 PLIST_SUBST+=		DISTNAME=${EMACS_DISTNAME}
 FILES_SUBST+=		DISTNAME=${EMACS_DISTNAME}

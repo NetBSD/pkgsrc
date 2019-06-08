@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2018/02/01 14:25:30 hauke Exp $
+# $NetBSD: Makefile.common,v 1.29 2019/06/08 10:41:00 rillig Exp $
 #
 # used by editors/xemacs-nox11/Makefile
 # used by editors/xemacs/Makefile
@@ -23,9 +23,9 @@ USE_TOOLS+=	makeinfo
 HAS_CONFIGURE=		yes
 
 DIST_SUBDIR=		xemacs
-PLIST_SUBST+=		DISTNAME=${DISTNAME:Q}
-FILES_SUBST+=		DISTNAME=${DISTNAME:Q}
-MESSAGE_SUBST+=		DISTNAME=${DISTNAME:Q}
+PLIST_SUBST+=		DISTNAME=${DISTNAME}
+FILES_SUBST+=		DISTNAME=${DISTNAME}
+MESSAGE_SUBST+=		DISTNAME=${DISTNAME}
 INFO_FILES=		yes
 
 .if defined(MANZ)

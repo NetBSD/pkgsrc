@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2019/04/14 07:03:20 wiz Exp $
+# $NetBSD: Makefile.common,v 1.3 2019/06/08 10:40:54 rillig Exp $
 #
 # used by editors/emacs26/Makefile
 # used by editors/emacs26-nox11/Makefile
@@ -50,7 +50,7 @@ SPECIAL_PERMS+=		libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/update-g
 CHECK_WRKREF_SKIP+=	bin/emacs
 CHECK_WRKREF_SKIP+=	bin/emacs-${EMACS_VERSION}
 
-PRINT_PLIST_AWK+= 	{ gsub(/${MACHINE_GNU_PLATFORM}/, "$${MACHINE_GNU_PLATFORM}"); }
+PRINT_PLIST_AWK+=	{ gsub(/${MACHINE_GNU_PLATFORM}/, "$${MACHINE_GNU_PLATFORM}"); }
 
 .if (${OPSYS} == "NetBSD") && \
     !exists(/usr/lib/libgcc_s.so) && !exists(/usr/lib/libgcc.a)

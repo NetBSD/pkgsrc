@@ -1,6 +1,8 @@
-$NetBSD: patch-plugins_wordperfect_xp_Makefile.am,v 1.1 2015/09/13 21:32:13 nros Exp $
+$NetBSD: patch-plugins_wordperfect_xp_Makefile.am,v 1.2 2019/06/08 10:40:53 rillig Exp $
+
 * adapt wordperfect plugins to dependecies available in pkgsrc 
   from abiword svn date 2014-12-27
+
 --- plugins/wordperfect/xp/Makefile.am.orig	2008-05-08 13:12:53.000000000 +0000
 +++ plugins/wordperfect/xp/Makefile.am
 @@ -6,8 +6,6 @@ AM_CPPFLAGS = \

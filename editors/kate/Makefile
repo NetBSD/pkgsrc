@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2019/04/25 07:32:51 maya Exp $
+# $NetBSD: Makefile,v 1.46 2019/06/08 10:40:55 rillig Exp $
 
 DISTNAME=	kate-${_KDE_VERSION}
 PKGREVISION=	16
@@ -9,7 +9,7 @@ PY_PATCHPLIST=	YES
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
-CHECK_PORTABILITY_SKIP+= examples/syntax/highlight.sh
+CHECK_PORTABILITY_SKIP+=	examples/syntax/highlight.sh
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 

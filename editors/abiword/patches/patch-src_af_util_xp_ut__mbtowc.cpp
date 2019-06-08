@@ -1,6 +1,8 @@
-$NetBSD: patch-src_af_util_xp_ut__mbtowc.cpp,v 1.1 2015/09/13 21:32:13 nros Exp $
+$NetBSD: patch-src_af_util_xp_ut__mbtowc.cpp,v 1.2 2019/06/08 10:40:53 rillig Exp $
+
 * remove bom if it comes with the conversion
   makes the rulers look correct on startup
+
 --- src/af/util/xp/ut_mbtowc.cpp.orig	2013-04-07 13:53:03.000000000 +0000
 +++ src/af/util/xp/ut_mbtowc.cpp
 @@ -192,7 +192,24 @@ int UT_UCS4_mbtowc::mbtowc (UT_UCS4Char 
