@@ -1,7 +1,7 @@
-# $NetBSD: version.mk,v 1.1 2008/10/11 09:31:56 uebayasi Exp $
+# $NetBSD: version.mk,v 1.2 2019/06/08 10:41:00 rillig Exp $
 
-_EMACS_FLAVOR=	xemacs
-_EMACS_REQD=	xemacs>=21.5<21.6
+_EMACS_FLAVOR=		xemacs
+_EMACS_REQD=		xemacs>=21.5<21.6
 _EMACS_PKGDEP.base=	xemacs-packages>=1.15:../../editors/xemacs-packages
 _EMACS_PKGDEP.leim=
 
