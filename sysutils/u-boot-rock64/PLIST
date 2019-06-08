@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2019/06/08 12:25:05 mrg Exp $
+share/u-boot/rock64/idbloader.img
+share/u-boot/rock64/rksd_loader.img
+share/u-boot/rock64/u-boot.itb
