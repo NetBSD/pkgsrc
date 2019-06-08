@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2418 2019/06/08 03:11:15 wen Exp $
+$NetBSD: CHANGES-2019,v 1.2419 2019/06/08 03:17:58 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4071,3 +4071,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/dnscrypt-proxy2 to 2.0.25 [nia 2019-06-07]
 	Updated devel/p5-Date-Manip to 6.77 [wen 2019-06-07]
 	Updated devel/p5-Devel-PatchPerl to 1.62 [wen 2019-06-08]
+	Updated devel/p5-Devel-Size to 0.83 [wen 2019-06-08]
