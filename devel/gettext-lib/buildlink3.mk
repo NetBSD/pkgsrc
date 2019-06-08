@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.37 2014/01/04 11:14:37 richard Exp $
+# $NetBSD: buildlink3.mk,v 1.38 2019/06/08 09:34:29 jperkin Exp $
 
 BUILDLINK_TREE+=	gettext
 
@@ -19,11 +19,12 @@ BUILDLINK_LDADD.gettext+=	${BUILDLINK_LDADD.iconv}
 # "-lintl" to the linker command line.
 #
 # If BROKEN_GETTEXT_DETECTION is "yes", then automatically add "-lintl"
-# to LIBS to workaround this brokenness.
+# to LIBS to workaround this brokenness.  This is also the default on SunOS
+# due to stricter linker requirements for implicit libraries.
 #
 BROKEN_GETTEXT_DETECTION?=	no
-.if !empty(BROKEN_GETTEXT_DETECTION:M[yY][eE][sS])
-BUILDLINK_LIBS.gettext+=	${BUILDLINK_LDADD.gettext}
+.if !empty(BROKEN_GETTEXT_DETECTION:M[yY][eE][sS]) || ${OPSYS} == "SunOS"
+BUILDLINK_LDFLAGS.gettext+=	${BUILDLINK_LDADD.gettext}
 CONFIGURE_ENV+=			INTLLIBS="${BUILDLINK_LDADD.gettext}"
 .endif
 
