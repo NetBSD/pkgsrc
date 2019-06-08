@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2017/09/21 14:37:39 bsiegert Exp $
+# $NetBSD: Makefile,v 1.44 2019/06/08 10:40:57 rillig Exp $
 
 DISTNAME=		sam
 PKGNAME=		sam-4.3
@@ -22,16 +22,16 @@ MANCOMPRESSED=		yes
 INSTALLATION_DIRS=	bin include lib/X11/app-defaults \
 	${PKGMANDIR}/man1 ${PKGMANDIR}/man3 ${PKGMANDIR}/man4 ${PKGMANDIR}/man6
 
-INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX:Q}		\
+INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}		\
 			MAN=${PKGMANDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
 
-.if ${X11BASE} != "/usr/openwin"
+.  if ${X11BASE} != "/usr/openwin"
 OTHER_X_LIBS=	-lSM -lICE
-.endif
+.  endif
 
 do-build:
 	for d in libXg libframe sam samterm; do				\

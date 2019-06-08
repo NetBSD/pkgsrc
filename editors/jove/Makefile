@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/03 11:43:35 asau Exp $
+# $NetBSD: Makefile,v 1.18 2019/06/08 10:40:55 rillig Exp $
 #
 
 DISTNAME=	jove4.16.0.70
@@ -13,8 +13,8 @@ COMMENT=	Small emacs-style editor, but lacks the LISP engine
 NO_CONFIGURE=	yes
 USE_TOOLS+=	nroff
 
-MAKE_ENV+=	ROOT_GROUP=${ROOT_GROUP:Q}
-MAKE_ENV+=	ROOT_USER=${ROOT_USER:Q}
+MAKE_ENV+=	ROOT_GROUP=${ROOT_GROUP}
+MAKE_ENV+=	ROOT_USER=${ROOT_USER}
 MAKE_FLAGS+=	NROFF=${NROFF:Q}
 
 INSTALL_MAKE_FLAGS+=	JOVEHOME=${DESTDIR}${PREFIX}
