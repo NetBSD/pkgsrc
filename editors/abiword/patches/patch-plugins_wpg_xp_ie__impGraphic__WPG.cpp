@@ -1,6 +1,8 @@
-$NetBSD: patch-plugins_wpg_xp_ie__impGraphic__WPG.cpp,v 1.1 2015/09/13 21:32:13 nros Exp $
+$NetBSD: patch-plugins_wpg_xp_ie__impGraphic__WPG.cpp,v 1.2 2019/06/08 10:40:53 rillig Exp $
+
 * adapt wordperfect plugins to dependecies available in pkgsrc 
   from abiword svn date 2014-12-27
+
 --- plugins/wpg/xp/ie_impGraphic_WPG.cpp.orig	2013-04-07 13:53:03.000000000 +0000
 +++ plugins/wpg/xp/ie_impGraphic_WPG.cpp
 @@ -31,37 +31,43 @@

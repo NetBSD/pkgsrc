@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2018/01/10 22:09:02 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2019/06/08 10:40:58 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.texmaker
 PKG_OPTIONS_REQUIRED_GROUPS= qt
-PKG_OPTIONS_GROUP.qt = qt5
+PKG_OPTIONS_GROUP.qt= qt5
 PKG_SUGGESTED_OPTIONS=	qt5
 .include "../../mk/bsd.options.mk"
 

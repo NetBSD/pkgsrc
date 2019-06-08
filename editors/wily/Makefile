@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/07/21 20:50:57 nros Exp $
+# $NetBSD: Makefile,v 1.22 2019/06/08 10:40:59 rillig Exp $
 #
 
 DISTNAME=	wily-0.13.42
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.cse.yorku.ca/~oz/wily/
 COMMENT=	Unix/X11 clone of the Plan9 acme editor/environment
 LICENSE=	artistic
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_HAS_MANDIR=	no
 
 DEPENDS+=	libXgFonts>=1.0nb1:../../fonts/Xg

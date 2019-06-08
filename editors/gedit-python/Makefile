@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2019/04/26 13:13:55 maya Exp $
+# $NetBSD: Makefile,v 1.45 2019/06/08 10:40:54 rillig Exp $
 
 DISTNAME=		gedit-2.30.4
 PKGNAME=		gedit-python-2.30.4
@@ -25,7 +25,7 @@ BUILD_DIRS=	plugin-loaders/python
 BUILD_DIRS+=	plugins/pythonconsole plugins/quickopen plugins/snippets
 INSTALL_DIRS=	${BUILD_DIRS}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-gtk2
 
 .include "../../lang/python/application.mk"
 .include "../../devel/py-gobject/buildlink3.mk"

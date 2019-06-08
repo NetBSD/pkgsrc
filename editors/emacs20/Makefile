@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2017/07/23 05:22:38 dholland Exp $
+# $NetBSD: Makefile,v 1.60 2019/06/08 10:40:54 rillig Exp $
 
 DISTNAME=	emacs-20.7
 PKGNAME=	${DISTNAME:S/emacs/emacs20/}
@@ -34,9 +34,9 @@ BROKEN_ON_PLATFORM=	Darwin-*-* DragonFly-*-*
 
 CONFLICTS=	mule-[0-9]*
 
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake
-GNU_ARCH.mipsbe= mips
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		gmake
+GNU_ARCH.mipsbe=	mips
 
 # build PATH in the dumped emacs is not a problem
 CHECK_WRKREF_SKIP+=	bin/emacs
@@ -60,7 +60,7 @@ fake-libgcc:
 
 # NetBSD < 5.99.24 uses termcap; afterwards terminfo. Emacs needs to be told.
 .if (${OPSYS} == "NetBSD") && !exists(/usr/include/term.h)
-CPPFLAGS+=-D__NETBSD_USE_TERMCAP__
+CPPFLAGS+=	-D__NETBSD_USE_TERMCAP__
 .endif
 
 .if (${OPSYS} == "DragonFly") && exists(/usr/lib/crtn.o)
@@ -86,7 +86,7 @@ ALL_ENV+=	MAKEFILECPP=${MAKEFILECPP:Q}
 
 INFO_FILES=	yes
 
-INSTALL_PROGRAM=${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
+INSTALL_PROGRAM=	${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
 
 post-extract:
 	${CP} ${FILESDIR}/amd64.h ${WRKSRC}/src/m

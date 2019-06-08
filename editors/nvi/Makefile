@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.51 2017/09/03 08:36:54 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2019/06/08 10:40:57 rillig Exp $
 
 DISTNAME=	nvi-1.81.6
 PKGREVISION=	11
 CATEGORIES=	editors
-MASTER_SITES=	${HOMEPAGE:Q}
+MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

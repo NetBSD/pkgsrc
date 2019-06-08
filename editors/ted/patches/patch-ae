@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.2 2002/05/20 17:46:32 cjep Exp $
+$NetBSD: patch-ae,v 1.3 2019/06/08 10:40:58 rillig Exp $
+
+
 --- appFrame/appFrameConfig.h.in.orig	Sun Mar  3 23:24:16 2002
 +++ appFrame/appFrameConfig.h.in	Mon Apr 22 10:32:15 2002
 @@ -29,12 +29,6 @@

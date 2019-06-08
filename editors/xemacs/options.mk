@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2018/12/19 13:29:34 hauke Exp $
+# $NetBSD: options.mk,v 1.17 2019/06/08 10:41:00 rillig Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.xemacs
 PKG_SUPPORTED_OPTIONS+=		ldap canna debug
@@ -68,9 +68,9 @@ PLIST.canna=		yes
 CONFIGURE_ARGS+=	--without-canna
 .endif
 
-PLIST_VARS+=            debug
+PLIST_VARS+=		debug
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--debug
-CFLAGS+=                -g3
-INSTALL_UNSTRIPPED=     yes
+CFLAGS+=		-g3
+INSTALL_UNSTRIPPED=	yes
 .endif

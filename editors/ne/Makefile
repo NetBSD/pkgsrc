@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/06/06 14:53:04 prlw1 Exp $
+# $NetBSD: Makefile,v 1.21 2019/06/08 10:40:56 rillig Exp $
 
 DISTNAME=	ne-3.15
 CATEGORIES=	editors
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--enable-termcap
-MAKE_ENV+=		SHELL=${SH}
+MAKE_ENV+=		SHELL=${SH:Q}
 
 BUILD_TARGET=	build
 

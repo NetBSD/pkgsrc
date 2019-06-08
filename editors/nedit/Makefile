@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.59 2018/04/21 13:38:05 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2019/06/08 10:40:56 rillig Exp $
 
 DISTNAME=	nedit-${VERS}-src
 PKGNAME=	nedit-${VERS}
 PKGREVISION=	9
 CATEGORIES=	editors
-# @pkglint: MASTER_SITE_NEDIT is defined below
 MASTER_SITES=	${MASTER_SITE_NEDIT:=v${VERS:S/./_/g}/}
 MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=nedit/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,12 +16,13 @@ COMMENT=	Motif based standard GUI style text editor
 LICENSE=	gnu-gpl-v2
 
 VERS=		5.5
-MASTER_SITE_NEDIT=	http://www.nedit.org/ftp/			\
-			http://nl.nedit.org/ftp/			\
-			ftp://nl.nedit.org/pub/NEdit/			\
-			ftp://ftp.fu-berlin.de/unix/editors/nedit/	\
-			ftp://cri.univ-tlse1.fr/pub/unix/nedit/NEdit/	\
-			ftp://ftp.chg.ru/pub/unix/editors/nedit/
+MASTER_SITE_NEDIT= \
+		http://www.nedit.org/ftp/			\
+		http://nl.nedit.org/ftp/			\
+		ftp://nl.nedit.org/pub/NEdit/			\
+		ftp://ftp.fu-berlin.de/unix/editors/nedit/	\
+		ftp://cri.univ-tlse1.fr/pub/unix/nedit/NEdit/	\
+		ftp://ftp.chg.ru/pub/unix/editors/nedit/
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 BUILD_TARGET=		netbsd

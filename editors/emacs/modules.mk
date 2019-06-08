@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.25 2018/11/30 18:38:19 rillig Exp $
+# $NetBSD: modules.mk,v 1.26 2019/06/08 10:40:54 rillig Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -274,8 +274,8 @@ _EMACS_TYPE=	${EMACS_TYPE}
 
 EMACS_VERSIONS_ACCEPTED?=	${_EMACS_VERSIONS_ALL}
 .if empty(EMACS_VERSIONS_ACCEPTED:M${_EMACS_TYPE})
-PKG_FAIL_REASON+=	"Accepted versions are: ${EMACS_VERSIONS_ACCEPTED}"
-PKG_FAIL_REASON+=	"No valid Emacs version installed found"
+PKG_FAIL_REASON+=		"Accepted versions are: ${EMACS_VERSIONS_ACCEPTED}"
+PKG_FAIL_REASON+=		"No valid Emacs version installed found"
 .endif
 
 _EMACS_PKGDIR=	${_EMACS_PKGDIR_MAP:M${_EMACS_TYPE}@*:C|${_EMACS_TYPE}@||}
@@ -291,9 +291,9 @@ CONFLICTS+=	${_EMACS_CONFLICTS.${_EMACS_FLAVOR}}
 
 EMACS_MODULES?=
 .for _mod_ in ${EMACS_MODULES}
-.if !empty(_EMACS_PKGDEP.${_mod_})
+.  if !empty(_EMACS_PKGDEP.${_mod_})
 DEPENDS+=	${_EMACS_PKGDEP.${_mod_}}
-.endif
+.  endif
 .endfor
 
 #
@@ -349,7 +349,7 @@ PRINT_PLIST_AWK+=	{ gsub(/${EMACS_LISPPREFIX:S|${PREFIX}/||:S|/|\\/|g}/, \
 .if defined(EMACS_BUILDLINK)
 _EMACS_DIR=	${BUILDLINK_DIR}/share/emacs
 #  development version usually claims three digit, say, 27.0.50 etc
-.  if !empty(EMACS_TYPE:Memacs27)
+.  if ${EMACS_TYPE} == emacs27
 ALL_ENV+=	EMACSLOADPATH=${_EMACS_DIR}/${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}.${_EMACS_VERSION_MICRO}/lisp:${_EMACS_DIR}/site-lisp
 .  else
 ALL_ENV+=	EMACSLOADPATH=${_EMACS_DIR}/${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}/lisp:${_EMACS_DIR}/site-lisp

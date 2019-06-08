@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.6 2005/12/01 18:46:53 wiz Exp $
+$NetBSD: patch-ab,v 1.7 2019/06/08 10:40:57 rillig Exp $
+
+
 --- build/configure.orig	2005-12-01 19:37:32.000000000 +0100
 +++ build/configure
 @@ -1805,10 +1805,8 @@ if test "$vi_cv_canna" = "yes"; then

@@ -1,6 +1,8 @@
-$NetBSD: patch-plugins_wordperfect_xp_ie__imp__WordPerfect.h,v 1.1 2015/09/13 21:32:13 nros Exp $
+$NetBSD: patch-plugins_wordperfect_xp_ie__imp__WordPerfect.h,v 1.2 2019/06/08 10:40:53 rillig Exp $
+
 * adapt wordperfect plugins to dependecies available in pkgsrc 
   from abiword svn date 2014-12-27
+
 --- plugins/wordperfect/xp/ie_imp_WordPerfect.h.orig	2013-04-07 13:53:03.000000000 +0000
 +++ plugins/wordperfect/xp/ie_imp_WordPerfect.h
 @@ -30,7 +30,7 @@

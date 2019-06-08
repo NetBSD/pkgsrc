@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2018/12/13 19:51:50 adam Exp $
+# $NetBSD: Makefile,v 1.102 2019/06/08 10:40:55 rillig Exp $
 
 DISTNAME=		kile-2.1.3
 PKGREVISION=		28
@@ -10,7 +10,7 @@ MAINTAINER=		markd@NetBSD.org
 HOMEPAGE=		http://kile.sourceforge.net/
 COMMENT=		LaTeX source editor - TeX shell - Gnuplot front end
 
-BUILD_DEPENDS+= automoc4>=0.9.87:../../devel/automoc4
+BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 
 USE_TOOLS+=		perl msgfmt
 USE_LANGUAGES=		c c++

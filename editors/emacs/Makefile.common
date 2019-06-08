@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2018/07/17 17:14:58 tron Exp $
+# $NetBSD: Makefile.common,v 1.44 2019/06/08 10:40:54 rillig Exp $
 #
 # used by editors/emacs/Makefile
 # used by editors/emacs-nox11/Makefile
@@ -24,9 +24,9 @@ META_PACKAGE=	yes
 # that can be shared.
 #
 
-MY_EMACS_TYPE?=${EMACS_TYPE}
-EMACS_BASE_TYPE=${MY_EMACS_TYPE:S/nox//}
-EMACS_MAJOR=${EMACS_BASE_TYPE:S/emacs//}
+MY_EMACS_TYPE?=		${EMACS_TYPE}
+EMACS_BASE_TYPE=	${MY_EMACS_TYPE:S/nox//}
+EMACS_MAJOR=		${EMACS_BASE_TYPE:S/emacs//}
 
 # Sigh.
 .if ${MY_EMACS_TYPE} == "emacs20nox"
@@ -106,7 +106,7 @@ MY_EMACS_VERSION:=	${MY_EMACS_VERSION}.${_EMACS_VERSION_MICRO}
 .if ${MY_EMACS_VERSION} != ${VER}
 PKGREVISION=	${MYPKGREVISION}
 .else
-PKGREVISION!=expr 1 + ${REV} + ${MYPKGREVISION}
+PKGREVISION!=	expr 1 + ${REV} + ${MYPKGREVISION}
 .endif
 
 # This doesn't work; fortunately it appears to be unnecessary.

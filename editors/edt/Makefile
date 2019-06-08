@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 11:43:32 asau Exp $
+# $NetBSD: Makefile,v 1.3 2019/06/08 10:40:53 rillig Exp $
 
 DISTNAME=	edt_1.9
 PKGNAME=	${DISTNAME:C:_:-:}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://edt-text-editor.sourceforge.net/
 COMMENT=	Text editor which emulates the VAX VMS EDT editor
 LICENSE=	gnu-lgpl-v2.1
 
-MAKE_FILE=	makefile
+MAKE_FILE=		makefile
 INSTALLATION_DIRS=	bin share/doc/edt share/examples/edt
 
 do-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2018/03/12 11:16:25 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2019/06/08 10:40:59 rillig Exp $
 #
 
 DISTNAME=	vigor-0.016
@@ -16,16 +16,16 @@ CONFLICTS+=	nvi-[0-9]*
 
 LDFLAGS+=	${BDB_LIBS}
 
-GNU_CONFIGURE=	yes
-CONFIGURE_DIRS=	build
-CONFIGURE_ENV+=	TCLCONFIG_SH=${TCLCONFIG_SH:Q}
-CONFIGURE_ENV+=	vi_cv_path_shell=${TOOLS_SH:Q}
-CONFIGURE_ARGS+=--with-x
+GNU_CONFIGURE=		yes
+CONFIGURE_DIRS=		build
+CONFIGURE_ENV+=		TCLCONFIG_SH=${TCLCONFIG_SH:Q}
+CONFIGURE_ENV+=		vi_cv_path_shell=${TOOLS_SH}
+CONFIGURE_ARGS+=	--with-x
 #		--enable-perlinterp \
 #		--disable-curses \
 #		--disable-re
-USE_TOOLS+=	sh
-BUILD_DIRS=	${CONFIGURE_DIRS}
+USE_TOOLS+=		sh
+BUILD_DIRS=		${CONFIGURE_DIRS}
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
@@ -33,7 +33,7 @@ CHECK_BUILTIN.db1:=	yes
 .include "../../mk/db1.builtin.mk"
 CHECK_BUILTIN.db1:=	no
 
-.if empty(IS_BUILTIN.db1:Myes)
+.if ${IS_BUILTIN.db1} != yes
 CONFIGURE_ARGS+=	--disable-db
 .else
 SUBST_CLASSES+=		db185
@@ -50,12 +50,12 @@ CPPFLAGS+=	-DUSE_INTERP_RESULT
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "DragonFly"
-.if exists(/usr/include/sys/queue.h)
+.  if exists(/usr/include/sys/queue.h)
 # this file obscures the system header
 # (Desired for DragonFly which does not have CIRCLEQ macros)
 post-patch:
 	${RM} -f ${WRKSRC}/include/sys/queue.h
-.endif
+.  endif
 .endif
 
 .include "../../lang/tcl/buildlink3.mk"

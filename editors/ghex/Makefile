@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2018/11/29 11:21:50 prlw1 Exp $
+# $NetBSD: Makefile,v 1.51 2019/06/08 10:40:55 rillig Exp $
 #
 
 DISTNAME=	ghex-2.24.0
@@ -16,7 +16,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config intltool msgfmt gmake
 
 PKGCONFIG_OVERRIDE+=	gtkhex.pc.in
-GCONF_SCHEMAS=	ghex2.schemas
+GCONF_SCHEMAS=		ghex2.schemas
 
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

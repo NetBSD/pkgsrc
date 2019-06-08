@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.185 2019/04/03 00:32:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.186 2019/06/08 10:40:52 rillig Exp $
 
 .include 	"Makefile.common"
 DISTNAME=	abiword-${ABIVERSION}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.abiword.com/
 COMMENT=	Open Source cross-platform word processor
 LICENSE=	gnu-gpl-v2
 
-CONFLICTS=      abiword-personal-[0-9]* abiword2-[0-9]*
+CONFLICTS=	abiword-personal-[0-9]* abiword2-[0-9]*
 
 DEPENDS+=	adwaita-icon-theme>0:../../graphics/adwaita-icon-theme
 
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--enable-spell         # (Gtk+ only) include spell checking sup
 CONFIGURE_ARGS+=	--enable-plugins=""
 # evolution data server can't be found even if buildlinked
 # disable to make sure it's not found somewhere else
-CONFIGURE_ARGS+=        --with-evolution-data-server=no
+CONFIGURE_ARGS+=	--with-evolution-data-server=no
 
 PKGCONFIG_OVERRIDE+=	libabiword.pc.in
 
