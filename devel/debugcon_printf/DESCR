@@ -1,0 +1,2 @@
+NetBSD specific loadable kernel module that implements a standalone
+printing mechanism to Bochs/Qemu-style debug console (port 0xe9).

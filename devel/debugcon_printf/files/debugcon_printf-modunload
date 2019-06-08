@@ -1,0 +1,3 @@
+#!/bin/sh
+
+modunload debugcon_printf

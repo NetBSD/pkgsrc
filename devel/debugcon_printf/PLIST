@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2019/06/08 23:52:09 kamil Exp $
+sbin/debugcon_printf-modload
+sbin/debugcon_printf-modunload
+stand/${MACHINE}/${OS_VERSION}/modules/debugcon_printf/debugcon_printf.kmod
