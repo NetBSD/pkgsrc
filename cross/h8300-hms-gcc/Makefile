@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2019/03/22 13:16:33 tnn Exp $
+# $NetBSD: Makefile,v 1.31 2019/06/08 10:53:28 rillig Exp $
 
 DISTNAME=		gcc-core-3.1
 PKGNAME=		cross-h8300-hms-gcc-3.1
@@ -10,9 +10,9 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			newlib-1.10.0.tar.gz
 
 SITES.newlib-1.10.0.tar.gz=	https://www.sourceware.org/pub/newlib/
-PATCH_SITES=		${MASTER_SITE_SOURCEFORGE:=h8300-hms/}
-PATCHFILES=		h8300-hms-gcc-3.1-1.patch
-PATCH_DIST_ARGS=	-d ${SRCDIR} -E -p1
+PATCH_SITES=			${MASTER_SITE_SOURCEFORGE:=h8300-hms/}
+PATCHFILES=			h8300-hms-gcc-3.1-1.patch
+PATCH_DIST_ARGS=		-d ${SRCDIR} -E -p1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		#empty
@@ -20,7 +20,7 @@ COMMENT=		GCC compiler for h8300-hms
 
 DEPENDS+=	cross-h8300-hms-binutils-[0-9]*:../../cross/h8300-hms-binutils
 
-H8300_PREFIX=		${LOCALBASE}/libexec/cross-h8300-hms
+H8300_PREFIX=		${PREFIX}/libexec/cross-h8300-hms
 
 WRKSRC=			${WRKDIR}/objdir
 USE_TOOLS+=		gmake
