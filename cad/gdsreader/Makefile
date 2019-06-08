@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/10/21 22:38:44 mef Exp $
+# $NetBSD: Makefile,v 1.9 2019/06/08 11:04:28 rillig Exp $
 #
 
 DISTNAME=	GDSreader.0.3.2
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 EXAMPLESDIR=	${PREFIX}/share/examples/${PKGBASE}
 
-AUTO_MKDIRS=	yes
+AUTO_MKDIRS=		yes
 INSTALLATION_DIRS=	bin ${EXAMPLESDIR}
 
 do-install:

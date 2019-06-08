@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2018/07/07 12:04:00 mef Exp $
+# $NetBSD: Makefile,v 1.11 2019/06/08 11:04:29 rillig Exp $
 
 VERSION=	1.3.1
 DISTNAME=	gdspy-${VERSION}
-PKGNAME=        ${PYPKGPREFIX}-gds-${VERSION}
+PKGNAME=	${PYPKGPREFIX}-gds-${VERSION}
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=heitzmann/}
 GITHUB_PROJECT=	gdspy
