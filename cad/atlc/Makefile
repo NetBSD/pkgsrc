@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/08 13:25:11 asau Exp $
+# $NetBSD: Makefile,v 1.15 2019/06/08 11:04:27 rillig Exp $
 #
 
 DISTNAME=	atlc-4.6.0
@@ -16,7 +16,7 @@ GNU_CONFIGURE=	YES
 # note:  the check target builds some of the
 # example files which get installed.
 BUILD_TARGET=	all check
-TEST_DIRS=	${WRKSRC}
+TEST_DIRS=	.
 TEST_TARGET=	check
 
 INSTALLATION_DIRS=	share/examples/atlc

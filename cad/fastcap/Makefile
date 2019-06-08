@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2012/10/08 13:25:12 asau Exp $
+# $NetBSD: Makefile,v 1.38 2019/06/08 11:04:28 rillig Exp $
 #
 
 DISTNAME=	fastcap-2.0-18Sep92
@@ -26,8 +26,8 @@ WRKSRC=			${WRKDIR}
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./config
 CONFIGURE_ARGS+=	4
-MAKE_ENV+=		BIBTEX=${LOCALBASE}/bin/bibtex \
-			LATEX=${LOCALBASE}/bin/latex
+MAKE_ENV+=		BIBTEX=${PREFIX}/bin/bibtex \
+			LATEX=${PREFIX}/bin/latex
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 GCC_REQD+=		2.95.3
@@ -41,7 +41,7 @@ post-patch:
 post-build:
 	cd ${WRKSRC}/doc && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} manual
 .for file in mtt tcad ug
-	cd ${WRKSRC}/doc && ${LOCALBASE}/bin/dvips -R0 -o ${file}.ps ${file}.dvi
+	cd ${WRKSRC}/doc && ${PREFIX}/bin/dvips -R0 -o ${file}.ps ${file}.dvi
 .endfor
 
 do-install:

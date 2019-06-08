@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2018/11/14 22:21:08 kleink Exp $
+# $NetBSD: Makefile,v 1.49 2019/06/08 11:04:30 rillig Exp $
 
 DISTNAME=	xcircuit-3.9.72
 PKGREVISION=	3
@@ -20,16 +20,16 @@ EGDIR=		share/examples/xcircuit
 .include "../../lang/tcl/Makefile.version"
 .include "../../x11/tk/Makefile.version"
 
-CONFIGURE_ARGS+=--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
-CONFIGURE_ARGS+=--with-tk=${BUILDLINK_PREFIX.tk}/lib
-CONFIGURE_ARGS+=--with-tclincls=${BUILDLINK_PREFIX.tcl}/include
-CONFIGURE_ARGS+=--with-tcllibs=${BUILDLINK_PREFIX.tcl}/lib
-CONFIGURE_ARGS+=--with-tkincls=${BUILDLINK_PREFIX.tk}/include
-CONFIGURE_ARGS+=--with-tklibs=${BUILDLINK_PREFIX.tk}/lib
-#CFLAGS+=	-DBUILTINS_DIR=${PREFIX}/lib/${DISTNAME:C/\.[^\.]*$//}
+CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
+CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}/lib
+CONFIGURE_ARGS+=	--with-tclincls=${BUILDLINK_PREFIX.tcl}/include
+CONFIGURE_ARGS+=	--with-tcllibs=${BUILDLINK_PREFIX.tcl}/lib
+CONFIGURE_ARGS+=	--with-tkincls=${BUILDLINK_PREFIX.tk}/include
+CONFIGURE_ARGS+=	--with-tklibs=${BUILDLINK_PREFIX.tk}/lib
+#CFLAGS+=		-DBUILTINS_DIR=${PREFIX}/lib/${DISTNAME:C/\.[^\.]*$//}
 
-BUILD_TARGET=	tcl
-INSTALL_TARGET= install-tcl
+BUILD_TARGET=		tcl
+INSTALL_TARGET=		install-tcl
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${EGDIR}
 
 post-extract:

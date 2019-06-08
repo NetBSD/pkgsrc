@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2018/06/24 13:02:00 mef Exp $
+$NetBSD: distinfo,v 1.10 2019/06/08 11:04:28 rillig Exp $
 
 SHA1 (kicad-4.0.7.tar.xz) = 6e4276edd0761f47008038c5ba8435653b2aee59
 RMD160 (kicad-4.0.7.tar.xz) = 7bd4c81b1bf7ffc4c6d85e37dc5ec710783089d9
@@ -12,24 +12,24 @@ SHA1 (patch-CMakeModules_config.h.cmake) = 3988783a0058ed1b5489bc54d903cab2a724f
 SHA1 (patch-bitmaps_png_CMakeLists.txt) = 1202783b39af4ddf83b9def91eb72b058f2da5bb
 SHA1 (patch-common_CMakeLists.txt) = 18446b8aa7abbfa8c8598dda0fa7d98216a6f123
 SHA1 (patch-common_richio.cpp) = 1e47e1ab5c2f0a2cee5b7bd20b47fc62930feda4
-SHA1 (patch-common_tool_tool_manager.cpp) = 242a0755b7aff280e5eb2b423a546f1dc4fdea2c
+SHA1 (patch-common_tool_tool_manager.cpp) = 9f7f06e178a8c3960a8dc3196dc2e8c51a002a1e
 SHA1 (patch-cvpcb_CMakeLists.txt) = 2eaa753054851efab680f402fbf808d78d84205a
 SHA1 (patch-eeschema_CMakeLists.txt) = a6dec7f84f5854ccedc2cae5e8c290ea3d41bfa3
-SHA1 (patch-eeschema_sch_component.cpp) = 7b3363a917e408327061f313e7cce8f77f0977e8
-SHA1 (patch-eeschema_sch_sheet.cpp) = 83dd03910b1a7f78f46d3fc591bf5ec2670f2ce4
+SHA1 (patch-eeschema_sch_component.cpp) = 25a47fe8c2ddc44ac6c5e4bd34c8de35d36b799c
+SHA1 (patch-eeschema_sch_sheet.cpp) = d86de4797b80819218c8022c852a5cdf2ac8b93b
 SHA1 (patch-gerbview_CMakeLists.txt) = 817f7fa3f27e77e42d37e0df4fab1525cfb35053
 SHA1 (patch-include-kicad_string.h) = 16f2db87cab7716171360220a6c41d9a8ee5b8d1
 SHA1 (patch-include_common.h) = 10395bb76634e43a7b4c7cf7f27c44c794793589
 SHA1 (patch-include_hashtables.h) = 4b26adef481406b61c1c9cf660f69847aa76142d
 SHA1 (patch-include_kiway.h) = b8438a192222a4d70266ac612552fd0c76d2867c
-SHA1 (patch-include_tool_coroutine.h) = 635534de04d268a5718ec21e4f86c7dd20f1ffe1
-SHA1 (patch-include_tool_tool_base.h) = e679ef52ebf39f5a3234c71f57381569836b2df3
-SHA1 (patch-include_tool_tool_interactive.h) = 4ef06e99001ee6db6828d2285ca2b77a0604564d
+SHA1 (patch-include_tool_coroutine.h) = 79821c124e5eef7432d4629d5d3682171ca972a9
+SHA1 (patch-include_tool_tool_base.h) = 78698a0d513a13b63459626f92b5d06e21ab05de
+SHA1 (patch-include_tool_tool_interactive.h) = 2cddceb5a2cfb681bc8f46bc39ef526b5d6db976
 SHA1 (patch-pagelayout_editor_CMakeLists.txt) = 3e3d7bc448a3c9908ee4ed889b8e8c7bf3ac1b4a
 SHA1 (patch-pcb_calculator_CMakeLists.txt) = 97c34f8f2926b904275f36129a60fb7c523f506d
 SHA1 (patch-pcbnew_CMakeLists.txt) = 5898d0c2541ecdae4101906c5dc52250480260e6
-SHA1 (patch-pcbnew_class_edge_mod.cpp) = 3b868e0fd20bc091749f92cdb2124725df944104
-SHA1 (patch-pcbnew_class_track.cpp) = 6b11cba5b7c7f4b8b72a5a97263d95f2032a0854
-SHA1 (patch-pcbnew_kicad_plugin.cpp) = 6d5a1643bb234d8a6c0ddd3d7651c6360e59974d
-SHA1 (patch-pcbnew_legacy_plugin.cpp) = 594ed6627be91662991c19624d45e0d3e944f3bf
-SHA1 (patch-pcbnew_xchgmod.cpp) = d2f6750cd49ff25d73984d0eeb1141c5bf86c357
+SHA1 (patch-pcbnew_class_edge_mod.cpp) = d8b98f0770e1285a59186ea23af448cc19216c60
+SHA1 (patch-pcbnew_class_track.cpp) = 8ca03bb6292a125c5be42a51c442e9c6dc8c05df
+SHA1 (patch-pcbnew_kicad_plugin.cpp) = cda16d23db89bb3db5f65a775d9555b22859dcb5
+SHA1 (patch-pcbnew_legacy_plugin.cpp) = d8dba73ee4c6eac54e7e2c7d30c3918451188f75
+SHA1 (patch-pcbnew_xchgmod.cpp) = e62c67e656cf7d9b08f9945ed2eaf59089258e6a

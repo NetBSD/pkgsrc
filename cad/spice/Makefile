@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2013/05/22 07:44:03 sbd Exp $
+# $NetBSD: Makefile,v 1.48 2019/06/08 11:04:30 rillig Exp $
 
 DISTNAME=	sp3f4.kit
 PKGNAME=	spice-3f5.1
@@ -25,7 +25,7 @@ WRKSRC=			${WRKDIR}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man3 ${PKGMANDIR}/man5
 
-MAKE_ENV+=	WRKSRC=${WRKSRC:Q}
+MAKE_ENV+=	WRKSRC=${WRKSRC}
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Linux"
@@ -48,7 +48,7 @@ do-configure:
 do-build:
 	cd ${WRKSRC} && env ${MAKE_ENV} util/build NetBSD default
 
-INSTALLATION_DIRS+=share/examples/spice3
+INSTALLATION_DIRS+=	share/examples/spice3
 
 do-install:
 	cd ${WRKSRC} && env ${MAKE_ENV} ${INSTALL_ENV} util/build NetBSD install
