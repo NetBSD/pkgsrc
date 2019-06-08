@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.133 2019/06/08 09:31:33 szptvlfn Exp $
+# $NetBSD: mozilla-common.mk,v 1.134 2019/06/08 11:46:02 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -31,6 +31,7 @@ TOOL_DEPENDS+=		nodejs-[0-9]*:../../lang/nodejs
 .endif
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+BUILD_DEPENDS+=		nasm>=1.1:../../devel/nasm
 BUILD_DEPENDS+=		yasm>=1.1:../../devel/yasm
 .endif
 
