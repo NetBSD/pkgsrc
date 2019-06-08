@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2018/08/22 09:45:02 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2019/06/08 10:40:57 rillig Exp $
 
 DISTNAME=	nvi-1.79
 PKGNAME=	nvi-m17n-1.79.20040608
@@ -20,29 +20,29 @@ GNU_CONFIGURE=	YES
 PATCH_DIST_ARGS+=	-d ${WRKSRC} --forward --quiet -E -f
 PATCH_FUZZ_FACTOR=	-F1
 
-CONFIGURE_ENV+=	OPTFLAG='-D_PATH_SYSEXRC=\"${PREFIX}/etc/vi.exrc\"'
-CONFIGURE_ARGS+=--enable-multibyte --program-prefix=n
+CONFIGURE_ENV+=		OPTFLAG='-D_PATH_SYSEXRC=\"${PREFIX}/etc/vi.exrc\"'
+CONFIGURE_ARGS+=	--enable-multibyte --program-prefix=n
 
-CONFIGURE_ENV+=	vi_cv_path_shell=${TOOLS_SH:Q}
-CONFIGURE_ENV+=	vi_cv_path_perl=${TOOLS_PATH.perl:Q}
+CONFIGURE_ENV+=	vi_cv_path_shell=${TOOLS_SH}
+CONFIGURE_ENV+=	vi_cv_path_perl=${TOOLS_PATH.perl}
 USE_TOOLS+=	sh perl:run
 
-CPPFLAGS+=	-DGTAGS
+CPPFLAGS+=		-DGTAGS
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 INSTALL_MAKE_FLAGS+=	mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
 .include "options.mk"
 
-AUTODETECT.big5=cn
-AUTODETECT.euc-cn=cn
-AUTODETECT.euc-jp=jp
-AUTODETECT.euc-kr=kr
-AUTODETECT.euc-tw=tw
-AUTODETECT.hz=cn
-AUTODETECT.iso-2022-cn=cn
-AUTODETECT.iso-2022-jp=jp
-AUTODETECT.iso-2022-kr=kr
-AUTODETECT.sjis=jp
+AUTODETECT.big5=	cn
+AUTODETECT.euc-cn=	cn
+AUTODETECT.euc-jp=	jp
+AUTODETECT.euc-kr=	kr
+AUTODETECT.euc-tw=	tw
+AUTODETECT.hz=		cn
+AUTODETECT.iso-2022-cn=	cn
+AUTODETECT.iso-2022-jp=	jp
+AUTODETECT.iso-2022-kr=	kr
+AUTODETECT.sjis=	jp
 
 ENCODINGS+=	iso-2022-cn iso-2022-jp iso-2022-kr
 ENCODINGS+=	euc-jp euc-cn euc-kr sjis big5 euc-tw hz

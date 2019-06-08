@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2019/05/09 13:57:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.39 2019/06/08 10:40:58 rillig Exp $
 
 DISTNAME=	texstudio-2.12.14
 PKGREVISION=	5
@@ -19,7 +19,7 @@ INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
-_CRASH_HANDLER=NO_CRASH_HANDLER=yes
+_CRASH_HANDLER=	NO_CRASH_HANDLER=yes
 .else
 _CRASH_HANDLER=
 .endif

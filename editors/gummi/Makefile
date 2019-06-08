@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2019/05/09 13:57:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.64 2019/06/08 10:40:55 rillig Exp $
 
 DISTNAME=		gummi-0.6.6
 PKGREVISION=		26
@@ -12,11 +12,11 @@ HOMEPAGE=		https://github.com/alexandervdm/gummi
 COMMENT=		LaTeX editor, written in C/GTK+
 LICENSE=		mit
 
-USE_TOOLS+= 		pkg-config intltool msgfmt gmake automake autoreconf
+USE_TOOLS+=		pkg-config intltool msgfmt gmake automake autoreconf
 BUILD_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
 
 # we need some latex, but not all
-#DEPENDS+= texlive-collection-all-[0-9]*:../../meta-pkgs/texlive-collection-all
+#DEPENDS+=	texlive-collection-all-[0-9]*:../../meta-pkgs/texlive-collection-all
 
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	yes
@@ -24,7 +24,7 @@ USE_PKGLOCALEDIR=	yes
 AUTO_MKDIRS=		yes
 
 pre-configure:
-	cd ${WRKSRC:Q} && ${TOOLS_PATH.autoreconf} -vi
+	cd ${WRKSRC} && ${TOOLS_PATH.autoreconf} -vi
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

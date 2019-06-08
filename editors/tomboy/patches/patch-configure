@@ -1,8 +1,10 @@
-$NetBSD: patch-configure,v 1.1 2014/04/15 05:37:27 richard Exp $
+$NetBSD: patch-configure,v 1.2 2019/06/08 10:40:59 rillig Exp $
+
 As determined elsewhere (pkg/48075) pdksh (and perhaps older ast-ksh and bash)
 have problems with double-parens expressions that are not arithmetic 
 expressions of a particular form.  Adding a space between the two parens 
 seems to get over the problem.
+
 --- configure.orig	2010-04-26 17:30:00.000000000 +0000
 +++ configure
 @@ -15518,7 +15518,7 @@ if test "${enable_gnome+set}" = set; the
