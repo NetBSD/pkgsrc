@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/10/16 22:37:14 roy Exp $
+# $NetBSD: Makefile,v 1.24 2019/06/08 10:40:56 rillig Exp $
 #
 
 DISTNAME=	mined-2000.15
@@ -14,7 +14,7 @@ MAKE_FILE=	makefile
 USE_TOOLS+=	gmake
 
 post-install:
-		${CHMOD} -x ${DESTDIR}${PREFIX}/share/mined/conf_user/xinitrc.mined
+	${CHMOD} -x ${DESTDIR}${PREFIX}/share/mined/conf_user/xinitrc.mined
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)

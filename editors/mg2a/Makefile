@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/05/09 14:46:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2019/06/08 10:40:56 rillig Exp $
 
 DISTNAME=	mg2a
 PKGNAME=	mg2a-1.11
@@ -13,7 +13,7 @@ COMMENT=	Small, fast, public domain EMACS style editor
 BUILD_TARGET=		mg
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
-CONFLICTS+=  	mg-[0-9]*
+CONFLICTS+=	mg-[0-9]*
 
 pre-configure:
 	set -e; cd ${WRKSRC}; \

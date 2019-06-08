@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2017/08/16 20:45:36 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2019/06/08 10:40:55 rillig Exp $
 #
 
 DISTNAME=	jde-2.3.2
@@ -23,14 +23,14 @@ USE_TOOLS+=	pax
 WRKSRC=		${WRKDIR}/${DISTNAME}/lisp
 
 # XEmacs has its own JDE package
-EMACS_VERSIONS_ACCEPTED=emacs21		# XXX Won't compile with emacs20...
+EMACS_VERSIONS_ACCEPTED=	emacs21		# XXX Won't compile with emacs20...
 
 .include "../../editors/emacs/modules.mk"
 
 PKG_DEFAULT_JVM=	sun-jdk14
 
 PKGSRC_MAKE_ENV+=	EMACS=${EMACS}
-MAKE_ENV+=		EMACS_LISPPREFIX=${EMACS_LISPPREFIX:Q}
+MAKE_ENV+=		EMACS_LISPPREFIX=${EMACS_LISPPREFIX}
 
 NO_CONFIGURE=	yes
 
