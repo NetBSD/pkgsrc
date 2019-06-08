@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2016/06/19 16:23:59 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2019/06/08 10:53:27 rillig Exp $
 
 DISTNAME=	bfd-crunchide-1.2
 PKGREVISION=	1
@@ -14,12 +14,12 @@ BUILDLINK_DEPMETHOD.cross-binutils=	build
 WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	yes
 
-CPPFLAGS+=	-I${PREFIX}/cross/include
-MAKE_ENV+=	LIBS=${BFD_LIBS:Q}
-MAKE_ENV+=	${BSD_MAKE_ENV}
-USE_BSD_MAKEFILE=yes
-MAKE_FLAGS+=	PREFIX=${PREFIX}/cross
-MAKE_FLAGS+=	BINDIR=${PREFIX}/cross/bin
+CPPFLAGS+=		-I${PREFIX}/cross/include
+MAKE_ENV+=		LIBS=${BFD_LIBS:Q}
+MAKE_ENV+=		${BSD_MAKE_ENV}
+USE_BSD_MAKEFILE=	yes
+MAKE_FLAGS+=		PREFIX=${PREFIX}/cross
+MAKE_FLAGS+=		BINDIR=${PREFIX}/cross/bin
 
 BFD_LIBS=	${PREFIX}/cross/lib/libbfd.a ${PREFIX}/cross/lib/libiberty.a ${PREFIX}/cross/lib/libintl.a
 

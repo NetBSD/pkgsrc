@@ -1,8 +1,9 @@
-$NetBSD: patch-ah,v 1.4 2017/01/30 12:07:36 mef Exp $
+$NetBSD: patch-ah,v 1.5 2019/06/08 10:53:26 rillig Exp $
 
 Avoid installing po (nls) files
 
  # Automake 1.10+ disables lex and yacc output file regeneration if
+
 --- binutils/Makefile.in.orig	2016-08-03 17:16:40.000000000 +0900
 +++ binutils/Makefile.in	2017-01-29 12:01:49.000000000 +0900
 @@ -464,7 +464,7 @@ zlibdir = @zlibdir@

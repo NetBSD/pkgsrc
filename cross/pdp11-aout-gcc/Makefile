@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/08/22 09:43:11 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/06/08 10:53:29 rillig Exp $
 
 DISTNAME=		gcc-8.2.0
 PKGNAME=		cross-pdp11-aout-${DISTNAME}
@@ -14,7 +14,7 @@ COMMENT=		GCC for PDP-11 aout
 # for http://gcc.gnu.org/bugzilla/show_bug.cgi?id=33549
 # use makeinfo from pkgsrc/devel/gtexinfo.
 TOOL_DEPENDS+=		gtexinfo>=5.1:../../devel/gtexinfo
-_TOOLS_USE_PKGSRC.makeinfo=yes
+_TOOLS_USE_PKGSRC.makeinfo= yes
 
 DEPENDS+=	cross-pdp11-aout-binutils-[0-9]*:../../cross/pdp11-aout-binutils
 

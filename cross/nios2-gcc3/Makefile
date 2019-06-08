@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/08/22 09:43:10 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2019/06/08 10:53:29 rillig Exp $
 
 PKG_VERSION=		3.4.6
 # PKGNAME will have option name only when explictly selected
@@ -38,7 +38,7 @@ CONFIGURE_ARGS=		# reset
 CONFIGURE_ARGS+=	--target=${NIOS2_TARGET:Q}
 # following line to avoid getting
 #    make: exec(nios2--netbsdelf-ar) failed (No such file or directory)
-USE_GNU_CONFIGURE_HOST= NO
+USE_GNU_CONFIGURE_HOST=	NO
 .endif
 CONFIGURE_ARGS+=	--enable-languages=c
 CONFIGURE_ARGS+=	--disable-multilib

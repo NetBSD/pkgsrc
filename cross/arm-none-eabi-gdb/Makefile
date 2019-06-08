@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/02/02 06:30:34 dbj Exp $
+# $NetBSD: Makefile,v 1.3 2019/06/08 10:53:26 rillig Exp $
 
 DISTNAME=	gdb-7.10
 PKGNAME=	cross-arm-none-eabi-${DISTNAME}
@@ -27,7 +27,7 @@ INFO_FILES=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=	charsetalias
+PLIST_VARS+=		charsetalias
 # this theoretically should match check for
 # install-exec-localcharset in ${WRKSRC}/gdb/gnulib/import/Makefile.am
 .if ${OPSYS} != Darwin
