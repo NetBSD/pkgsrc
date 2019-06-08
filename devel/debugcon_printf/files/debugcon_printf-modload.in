@@ -1,0 +1,3 @@
+#!/bin/sh
+
+modload @PREFIX@/stand/@MACHINE@/@OS_VERSION@/modules/debugcon_printf/debugcon_printf.kmod
