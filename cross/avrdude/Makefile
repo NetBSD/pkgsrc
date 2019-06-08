@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2019/01/26 02:44:34 gdt Exp $
+# $NetBSD: Makefile,v 1.46 2019/06/08 10:53:27 rillig Exp $
 
 DISTNAME=		avrdude-6.3
 PKGREVISION=		2
@@ -22,7 +22,7 @@ USE_TOOLS+=		autoconf automake autoreconf lex makeinfo texi2html yacc
 # Upstream does not documentat that GNU make is required, but BSD make
 # leads to inexplicable errors about libavrdude.
 # \todo Resolve and/or discuss with upstream.
-USE_TOOLS+=		gmake 
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 INFO_FILES=		yes
 EGDIR=			${PREFIX}/share/examples/avrdude
@@ -31,7 +31,7 @@ CONF_FILES_PERMS=	${EGDIR}/avrdude.conf ${PKG_SYSCONFDIR}/avrdude.conf \
 
 CONFIGURE_ARGS+=	--enable-doc
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ENV+=		DEFAULT_SER_PORT=${DEFAULT_SERIAL_DEVICE:Q}
+CONFIGURE_ENV+=		DEFAULT_SER_PORT=${DEFAULT_SERIAL_DEVICE}
 PLIST_SUBST+=		DISTNAME=${DISTNAME}
 
 # The autotools used by this pkg are older than what's in pkgsrc

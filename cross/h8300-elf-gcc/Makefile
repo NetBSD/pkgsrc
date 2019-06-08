@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/03/22 13:16:33 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2019/06/08 10:53:28 rillig Exp $
 
 DISTNAME=		gcc-6.2.0
 PKGNAME=		cross-h8300-elf-${DISTNAME}
@@ -22,7 +22,7 @@ DEPENDS+=	cross-h8300-elf-binutils-[0-9]*:../../cross/h8300-elf-binutils
 # To avoid an internal compiler error of a library for h8300h
 #  on NetBSD/amd64 7.99.39 (GCC 5.4)
 .if ${OPSYS} == "NetBSD"
-GCC_REQD+=		6.2
+GCC_REQD+=		6
 .endif
 
 USE_LANGUAGES=		c c++03
