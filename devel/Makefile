@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2855 2019/06/03 11:20:59 markd Exp $
+# $NetBSD: Makefile,v 1.2856 2019/06/08 23:55:49 kamil Exp $
 #
 
 COMMENT=	Development utilities
@@ -209,6 +209,7 @@ SUBDIR+=	darts
 SUBDIR+=	dconf
 SUBDIR+=	dconf-editor
 SUBDIR+=	ddd
+SUBDIR+=	debugcon_printf
 SUBDIR+=	deforaos-asm
 SUBDIR+=	deforaos-coder
 SUBDIR+=	deforaos-configure
