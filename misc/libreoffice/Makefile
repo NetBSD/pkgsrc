@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.195 2019/06/02 03:11:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.196 2019/06/08 19:53:26 leot Exp $
 
 VERREL=		6.2.4
 VERRC=		2
@@ -109,8 +109,8 @@ SITES.${md}=		https://dev-www.libreoffice.org/src/
 MORE_DISTFILES2+=		49a64f3bcf20a7909ba2751349231d6652ded9cd2840e961b5164d09de3ffa63-opens___.ttf
 SITES.49a64f3bcf20a7909ba2751349231d6652ded9cd2840e961b5164d09de3ffa63-opens___.ttf=	https://dev-www.libreoffice.org/extern/
 
-.include "../../lang/rust/platform.mk"
-.if !empty(PLATFORM_SUPPORTS_RUST:M[Nn][Oo]) || make(distinfo) || make(mdi)
+.include "../../graphics/librsvg/available.mk"
+.if ${LIBRSVG_TYPE} == "c" || make(distinfo) || make(mdi)
 MORE_DISTFILES2+=		harfbuzz-2.4.0.tar.bz2
 SITES.harfbuzz-2.4.0.tar.bz2=	https://www.freedesktop.org/software/harfbuzz/release/
 .endif
@@ -205,7 +205,7 @@ CONFIGURE_ARGS+=	--with-system-cppunit
 # internal sane should be used because only header files are used.
 CONFIGURE_ARGS+=	--without-system-sane
 # Use internal harfbuzz because fonts/harfbuzz has no graphite2 support.
-.if !empty(PLATFORM_SUPPORTS_RUST:M[Yy][Ee][Ss])
+.if ${LIBRSVG_TYPE} == "rust"
 CONFIGURE_ARGS+=	--with-system-harfbuzz
 CONFIGURE_ARGS+=	--with-system-graphite
 .else
@@ -327,7 +327,7 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 # hardbuzz with graphite2 support is required.
-.if !empty(PLATFORM_SUPPORTS_RUST:M[Yy][Ee][Ss])
+.if ${LIBRSVG_TYPE} == "rust"
 #BUILDLINK_API_DEPENDS.harfbuzz+=	harfbuzz>=1.4.2
 .include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/graphite2/buildlink3.mk"
