@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/08 13:25:14 asau Exp $
+# $NetBSD: Makefile,v 1.7 2019/06/08 11:04:29 rillig Exp $
 #
 
 .include "../../cad/wcalc/Makefile.common"
@@ -23,7 +23,7 @@ USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE=	libwcalc/wcalc.pc.in
 
-BUILD_DIRS=		${WRKSRC} ${WRKSRC}/po
+BUILD_DIRS=		. po
 
 pre-build:
 	${MV} ${WRKSRC}/libwcalc/wcalc-config ${WRKSRC}/libwcalc/wcalc-config.bak

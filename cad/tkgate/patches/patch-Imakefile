@@ -1,5 +1,7 @@
-$NetBSD: patch-Imakefile,v 1.1 2015/01/17 14:48:56 bsiegert Exp $
+$NetBSD: patch-Imakefile,v 1.2 2019/06/08 11:04:30 rillig Exp $
+
 Add DESTDIR support
+
 --- Imakefile.orig	2004-06-09 19:16:06.000000000 +0200
 +++ Imakefile	2014-12-13 18:35:32.000000000 +0100
 @@ -99,4 +99,4 @@
