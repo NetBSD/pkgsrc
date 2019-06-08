@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2018/08/22 09:42:52 wiz Exp $
+# $NetBSD: Makefile,v 1.105 2019/06/08 19:56:24 leot Exp $
 
 DISTNAME=		gnome-icon-theme-3.12.0
 PKGREVISION=		3
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.gnome.org/
 COMMENT=		Theme consisting of a set of icons for GNOME
 LICENSE=		cc-by-sa-v3.0 AND gnu-lgpl-v3
-
-TOOL_DEPENDS+=		librsvg>=2.22.3:../../graphics/librsvg
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
@@ -40,4 +38,5 @@ post-install:
 BUILDLINK_DEPMETHOD.gettext-lib=	build
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/icon-naming-utils/buildlink3.mk"
+.include "../../graphics/librsvg/tool.mk"
 .include "../../mk/bsd.pkg.mk"
