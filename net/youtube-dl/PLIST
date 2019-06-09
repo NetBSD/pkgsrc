@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.86 2019/05/14 12:26:32 leot Exp $
+@comment $NetBSD: PLIST,v 1.87 2019/06/09 21:26:45 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -431,9 +431,6 @@ ${PYSITELIB}/youtube_dl/extractor/cracked.pyo
 ${PYSITELIB}/youtube_dl/extractor/crackle.py
 ${PYSITELIB}/youtube_dl/extractor/crackle.pyc
 ${PYSITELIB}/youtube_dl/extractor/crackle.pyo
-${PYSITELIB}/youtube_dl/extractor/criterion.py
-${PYSITELIB}/youtube_dl/extractor/criterion.pyc
-${PYSITELIB}/youtube_dl/extractor/criterion.pyo
 ${PYSITELIB}/youtube_dl/extractor/crooksandliars.py
 ${PYSITELIB}/youtube_dl/extractor/crooksandliars.pyc
 ${PYSITELIB}/youtube_dl/extractor/crooksandliars.pyo
@@ -1322,9 +1319,6 @@ ${PYSITELIB}/youtube_dl/extractor/nosvideo.pyo
 ${PYSITELIB}/youtube_dl/extractor/nova.py
 ${PYSITELIB}/youtube_dl/extractor/nova.pyc
 ${PYSITELIB}/youtube_dl/extractor/nova.pyo
-${PYSITELIB}/youtube_dl/extractor/novamov.py
-${PYSITELIB}/youtube_dl/extractor/novamov.pyc
-${PYSITELIB}/youtube_dl/extractor/novamov.pyo
 ${PYSITELIB}/youtube_dl/extractor/nowness.py
 ${PYSITELIB}/youtube_dl/extractor/nowness.pyc
 ${PYSITELIB}/youtube_dl/extractor/nowness.pyo
@@ -1496,9 +1490,6 @@ ${PYSITELIB}/youtube_dl/extractor/porn91.pyo
 ${PYSITELIB}/youtube_dl/extractor/porncom.py
 ${PYSITELIB}/youtube_dl/extractor/porncom.pyc
 ${PYSITELIB}/youtube_dl/extractor/porncom.pyo
-${PYSITELIB}/youtube_dl/extractor/pornflip.py
-${PYSITELIB}/youtube_dl/extractor/pornflip.pyc
-${PYSITELIB}/youtube_dl/extractor/pornflip.pyo
 ${PYSITELIB}/youtube_dl/extractor/pornhd.py
 ${PYSITELIB}/youtube_dl/extractor/pornhd.pyc
 ${PYSITELIB}/youtube_dl/extractor/pornhd.pyo
