@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2019/06/09 15:46:09 wiz Exp $
+$NetBSD: distinfo,v 1.2 2019/06/09 15:52:50 wiz Exp $
 
 SHA1 (cantata-2.3.3.tar.bz2) = 19a235897c556f7fcc39be51842491ccb163d135
 RMD160 (cantata-2.3.3.tar.bz2) = f42da1ae832f27e32b622f47f69e9ba27ca5dde4
 SHA512 (cantata-2.3.3.tar.bz2) = 8314930c9e16a5811f607f131ce7134daa0c6de81c5f87d45967c076895540b388b89b3f2cbd82950f6defb1087e61923c1719670f19b4ed3c074f05fe8577c6
 Size (cantata-2.3.3.tar.bz2) = 2445139 bytes
-SHA1 (patch-3rdparty_solid-lite_CMakeLists.txt) = 537eefc6c7b75412a1af39fb7b4db88160ba806d
+SHA1 (patch-3rdparty_solid-lite_CMakeLists.txt) = 73feadd49ea8c50f63d7c18e8a14e0796fac618c
