@@ -1,6 +1,7 @@
-$NetBSD: patch-3rdparty_solid-lite_CMakeLists.txt,v 1.1 2019/06/09 15:46:09 wiz Exp $
+$NetBSD: patch-3rdparty_solid-lite_CMakeLists.txt,v 1.2 2019/06/09 15:52:50 wiz Exp $
 
 Limit udev to Linux.
+https://github.com/CDrummond/cantata/issues/1503
 
 --- 3rdparty/solid-lite/CMakeLists.txt.orig	2018-03-07 19:04:41.000000000 +0000
 +++ 3rdparty/solid-lite/CMakeLists.txt	2019-06-09 12:52:54.960229954 +0000
@@ -9,7 +10,7 @@ Limit udev to Linux.
  )
  
 -   if (NOT WIN32 AND NOT APPLE AND WITH_SOLID_UDISKS2)
-+   if (LINUX AND WITH_SOLID_UDISKS2)
++   if (${CMAKE_SYSTEM_NAME} STREQUAL "Linux" AND WITH_SOLID_UDISKS2)
       find_package( UDev REQUIRED)
       macro_log_feature( UDEV_FOUND "UDev" "UDev support for Solid" "http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html" FALSE "" "Allows Solid to use UDev to provide information about devices on Linux" )
     endif()
