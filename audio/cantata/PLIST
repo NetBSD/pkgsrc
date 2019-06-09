@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2019/06/09 15:46:09 wiz Exp $
+bin/cantata
+lib/cantata/cantata-replaygain
+lib/cantata/cantata-tags
+share/applications/cantata.desktop
+share/cantata/icons/podcasts.png
+share/cantata/icons/soundcloud.png
+share/cantata/icons/stream.png
+share/cantata/scripts/cantata-dynamic
+share/cantata/scripts/cantata-remote
+share/icons/hicolor/128x128/apps/cantata.png
+share/icons/hicolor/16x16/apps/cantata.png
+share/icons/hicolor/22x22/apps/cantata.png
+share/icons/hicolor/24x24/apps/cantata.png
+share/icons/hicolor/256x256/apps/cantata.png
+share/icons/hicolor/32x32/apps/cantata.png
+share/icons/hicolor/48x48/apps/cantata.png
+share/icons/hicolor/512x512/apps/cantata.png
+share/icons/hicolor/64x64/apps/cantata.png
+share/icons/hicolor/scalable/apps/cantata.svg
+share/icons/hicolor/symbolic/apps/cantata-symbolic.svg
