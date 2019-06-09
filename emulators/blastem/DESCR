@@ -1,0 +1,19 @@
+BlastEm is an open source, higly accurate emulator for the
+Genesis/Megadrive that runs on modest hardware.
+
+Features:
+
+* Save states
+* Integrated debugger
+* GDB remote debugging
+* Joystick/gamepad support
+* Mega/Sega Mouse emulation
+* XBAND and Saturn keyboard emulation
+* Support for homebrew using the SSF2 mapper with Mega Everdrive
+  compatible heuristics
+* Save RAM and EEPROM support
+* Cartridge lock-on for both Sonic & Knuckles and XBAND
+* Turbo and slow modes
+* configurable low pass filter
+* Single pass GLSL shaders
+* Sega Master System emulation
