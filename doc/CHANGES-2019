@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2434 2019/06/09 15:47:14 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2435 2019/06/09 16:20:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4087,3 +4087,10 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/py-rt to 1.0.11nb1 [leot 2019-06-09]
 	Added emulators/blastem version 0.6.2 [nia 2019-06-09]
 	Added audio/cantata version 2.3.3 [wiz 2019-06-09]
+	Updated devel/git-base to 2.22.0 [ryoon 2019-06-09]
+	Updated devel/git-docs to 2.22.0 [ryoon 2019-06-09]
+	Updated devel/git-gitk to 2.22.0 [ryoon 2019-06-09]
+	Updated devel/git-contrib to 2.22.0 [ryoon 2019-06-09]
+	Updated devel/git-cvs to 2.22.0 [ryoon 2019-06-09]
+	Updated devel/git-svn to 2.22.0 [ryoon 2019-06-09]
+	Updated www/gitweb to 2.22.0 [ryoon 2019-06-09]
