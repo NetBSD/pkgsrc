@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/02/26 17:31:26 minskim Exp $
+$NetBSD: distinfo,v 1.2 2019/06/09 03:40:17 wen Exp $
 
-SHA1 (R/assertthat_0.2.0.tar.gz) = 53ac38c4449cad0c499ed07f5c332214371ce4a3
-RMD160 (R/assertthat_0.2.0.tar.gz) = 1edf9e7415b501b4987b312aa53069709dfef413
-SHA512 (R/assertthat_0.2.0.tar.gz) = 5b5e85f463d5c7390204f20fff2b6a1b0b384577dc02f1e3dabdb2cee8173e392711abe3d0bdbfe36ccd381870e1baeca194120d80ec807d688d3b1eed1dfc38
-Size (R/assertthat_0.2.0.tar.gz) = 11612 bytes
+SHA1 (R/assertthat_0.2.1.tar.gz) = 5176658ec27b0a6ebb984a785e47180bb0a31e98
+RMD160 (R/assertthat_0.2.1.tar.gz) = 1f405695d747b62c59cb2c8e1043897cc9d79e9e
+SHA512 (R/assertthat_0.2.1.tar.gz) = e8dbcb9b7c638f7133dea70443debbf739d35df1eb5ef19d5ae2ad7e9669f06184af43477ee061e15d253b3fa32ec203dbe28a4585c2027d4e567c2eb2195337
+Size (R/assertthat_0.2.1.tar.gz) = 12742 bytes
