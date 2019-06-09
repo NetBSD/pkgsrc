@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=BlastEm
+GenericName=Mega Drive Emulator
+Comment=Emulator for the Genesis / Mega Drive
+Icon=blastem
+Exec=blastem
+Terminal=false
+Categories=Game;Emulator;
