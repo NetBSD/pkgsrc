@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/07/28 14:40:42 brook Exp $
+# $NetBSD: Makefile,v 1.3 2019/06/09 03:40:17 wen Exp $
 
 CATEGORIES=	devel
 
@@ -8,7 +8,7 @@ COMMENT=	Easy pre and post assertions
 LICENSE=	gnu-gpl-v3
 
 R_PKGNAME=	assertthat
-R_PKGVER=	0.2.0
+R_PKGVER=	0.2.1
 
 USE_LANGUAGES=	# none
 
