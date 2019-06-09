@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2019/06/09 13:58:08 nia Exp $
+
+Do not use -Werror or override CFLAGS.
+
+--- Makefile.orig	2019-03-28 06:34:53.000000000 +0000
++++ Makefile
+@@ -36,7 +36,7 @@ NET:=net.o
+ EXE:=
+ 
+ HAS_PROC:=$(shell if [ -d /proc ]; then /bin/echo -e -DHAS_PROC; fi)
+-CFLAGS:=-std=gnu99 -Wreturn-type -Werror=return-type -Werror=implicit-function-declaration -Wno-unused-value $(HAS_PROC) -DHAVE_UNISTD_H
++CFLAGS+=-std=gnu99 -Wreturn-type -Wno-unused-value $(HAS_PROC) -DHAVE_UNISTD_H
+ 
+ ifeq ($(OS),Darwin)
+ LIBS=sdl2 glew

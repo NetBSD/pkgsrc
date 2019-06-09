@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2019/06/09 13:58:08 nia Exp $
+
+SHA1 (blastem/8aeac7bd9fa7.tar.gz) = 1953ebfd0eaf5e5630ff5488779eb8e6bb8fe9bf
+RMD160 (blastem/8aeac7bd9fa7.tar.gz) = f9d20a2f4211d03eb2278dcdcd36a8afb1e939e0
+SHA512 (blastem/8aeac7bd9fa7.tar.gz) = dec0d0c49cec9f896884b93c6ec568eb88d8ae51ddcf93445a70e9ad6543ef92c34fcdf14e66b56de1805dc5876d1ff17e51ab79d8d894da51312a42ac1c36d3
+Size (blastem/8aeac7bd9fa7.tar.gz) = 1113490 bytes
+SHA1 (patch-Makefile) = 1635e72bb90227b5fbfc32fe43bd5552ca48fb64
