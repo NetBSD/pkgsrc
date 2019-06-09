@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.80 2018/12/13 19:22:57 adam Exp $
+# $NetBSD: Makefile.common,v 1.81 2019/06/09 22:15:18 nia Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -27,7 +27,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=boost/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.boost.org/
+HOMEPAGE=	https://www.boost.org/
 COMMENT=	Free, peer-reviewed portable C++ source libraries ${BOOST_COMMENT}
 LICENSE=	boost-license
 
