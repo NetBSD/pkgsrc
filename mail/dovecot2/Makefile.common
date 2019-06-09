@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2019/04/30 15:21:05 taca Exp $
+# $NetBSD: Makefile.common,v 1.29 2019/06/09 22:10:45 nia Exp $
 #
 # when updating to a new release, update ABI depends in
 # the buildlink3.mk file as well, since the plugins' version
@@ -16,7 +16,7 @@ CATEGORIES=	mail
 MASTER_SITES=	https://www.dovecot.org/releases/${PKGVERSION_NOREV:R}/
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://www.dovecot.org/
+HOMEPAGE=	https://www.dovecot.org/
 COMMENT=	Secure IMAP and POP3 server
 LICENSE=	mit AND gnu-lgpl-v2.1 AND modified-bsd
 
