@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2019/02/26 11:36:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2019/06/09 16:15:32 ryoon Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -93,7 +93,7 @@ libexec/git-core/git-init
 libexec/git-core/git-init-db
 libexec/git-core/git-instaweb
 libexec/git-core/git-interpret-trailers
-libexec/git-core/git-legacy-rebase
+libexec/git-core/git-legacy-stash
 libexec/git-core/git-log
 libexec/git-core/git-ls-files
 libexec/git-core/git-ls-remote
@@ -134,7 +134,6 @@ libexec/git-core/git-read-tree
 libexec/git-core/git-rebase
 libexec/git-core/git-rebase--am
 libexec/git-core/git-rebase--common
-libexec/git-core/git-rebase--interactive
 libexec/git-core/git-rebase--preserve-merges
 libexec/git-core/git-receive-pack
 libexec/git-core/git-reflog
@@ -157,7 +156,6 @@ libexec/git-core/git-revert
 libexec/git-core/git-rm
 libexec/git-core/git-send-email
 libexec/git-core/git-send-pack
-libexec/git-core/git-serve
 libexec/git-core/git-sh-i18n
 libexec/git-core/git-sh-i18n--envsubst
 libexec/git-core/git-sh-setup
@@ -210,6 +208,7 @@ libexec/git-core/mergetools/kompare
 libexec/git-core/mergetools/meld
 libexec/git-core/mergetools/opendiff
 libexec/git-core/mergetools/p4merge
+libexec/git-core/mergetools/smerge
 libexec/git-core/mergetools/tkdiff
 libexec/git-core/mergetools/tortoisemerge
 libexec/git-core/mergetools/vimdiff
@@ -246,4 +245,3 @@ share/locale/ru/LC_MESSAGES/git.mo
 share/locale/sv/LC_MESSAGES/git.mo
 share/locale/vi/LC_MESSAGES/git.mo
 share/locale/zh_CN/LC_MESSAGES/git.mo
-@pkgdir share/examples/git/templates/branches

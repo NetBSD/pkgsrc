@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2018/12/09 20:29:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2019/06/09 16:15:33 ryoon Exp $
 man/man1/git-add.1
 man/man1/git-am.1
 man/man1/git-annotate.1
@@ -104,7 +104,6 @@ man/man1/git-receive-pack.1
 man/man1/git-reflog.1
 man/man1/git-remote-ext.1
 man/man1/git-remote-fd.1
-man/man1/git-remote-testgit.1
 man/man1/git-remote.1
 man/man1/git-repack.1
 man/man1/git-replace.1
@@ -151,7 +150,6 @@ man/man1/git-worktree.1
 man/man1/git-write-tree.1
 man/man1/git.1
 man/man1/gitk.1
-man/man1/gitremote-helpers.1
 man/man1/gitweb.1
 man/man3/Git.3pm
 man/man5/gitattributes.5
@@ -168,6 +166,7 @@ man/man7/gitdiffcore.7
 man/man7/giteveryday.7
 man/man7/gitglossary.7
 man/man7/gitnamespaces.7
+man/man7/gitremote-helpers.7
 man/man7/gitrevisions.7
 man/man7/gitsubmodules.7
 man/man7/gittutorial-2.7
