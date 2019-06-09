@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19050 2019/06/06 11:44:52 adam Exp $
+$NetBSD: TODO,v 1.19051 2019/06/09 08:46:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -998,7 +998,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nap-1.5.3
 	o nas-auscope-1.9.4
 	o nautilus-actions-2.30.3
-	o ncdc-1.22 [don't upgrade before https://code.blicky.net/yorhel/ncdc/issues/96 is fixed]
 	o ncview-2.1.6
 	o nessus-4.4.1
 	o netbt-hcidump-5.37

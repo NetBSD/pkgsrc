@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2428 2019/06/09 04:21:27 wen Exp $
+$NetBSD: CHANGES-2019,v 1.2429 2019/06/09 08:46:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4081,3 +4081,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/debugcon_printf version 20190609 [kamil 2019-06-08]
 	Updated devel/R-assertthat to 0.2.1 [wen 2019-06-09]
 	Updated devel/R-cli to 1.1.0 [wen 2019-06-09]
+	Updated net/ncdc to 1.22.1 [wiz 2019-06-09]
