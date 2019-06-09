@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/01/27 14:24:59 wen Exp $
+$NetBSD: distinfo,v 1.3 2019/06/09 04:20:09 wen Exp $
 
-SHA1 (R/cli_1.0.1.tar.gz) = 337250c0486e894ec68a00954a69218914a6c33f
-RMD160 (R/cli_1.0.1.tar.gz) = 8c9d9387b7201eb438f191873c190a5315d966ec
-SHA512 (R/cli_1.0.1.tar.gz) = 21f823a2e4500f2b4e4d8cb76fe57516bb5c85182b2cc1c2b9eae79fd0e20a9b3df315fe9dd41f920848eda4835fbbad0b416e08478c0b092a4462c753204ad9
-Size (R/cli_1.0.1.tar.gz) = 2186755 bytes
+SHA1 (R/cli_1.1.0.tar.gz) = 2321ab2c7e0d106f53c69f34728fafb1a2e22ac7
+RMD160 (R/cli_1.1.0.tar.gz) = b1196b9a24e9cab8acf47bd60b1ed6223ca3eab2
+SHA512 (R/cli_1.1.0.tar.gz) = cde3562bc2d52957b2c73d2579f50a989015abf92cd945869a116d5f631ac96c29977e126901394a96521918e40ab67e91fbfecb6127a5fb17f6f831b8656e31
+Size (R/cli_1.1.0.tar.gz) = 40232 bytes
