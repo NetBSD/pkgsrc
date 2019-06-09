@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2432 2019/06/09 13:57:41 leot Exp $
+$NetBSD: CHANGES-2019,v 1.2433 2019/06/09 14:04:26 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4085,3 +4085,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/R-fansi version 0.4.0 [wen 2019-06-09]
 	Updated math/R to 3.6.0 [wen 2019-06-09]
 	Updated net/py-rt to 1.0.11nb1 [leot 2019-06-09]
+	Added emulators/blastem version 0.6.2 [nia 2019-06-09]
