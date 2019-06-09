@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2018/04/17 01:57:17 christos Exp $
+# $NetBSD: Makefile.common,v 1.28 2019/06/09 22:12:16 nia Exp $
 #
 # used by security/cyrus-sasl/Makefile
 # used by security/cy2-anonymous/Makefile
@@ -28,7 +28,7 @@ MASTER_SITES=	ftp://ftp.cyrusimap.org/cyrus-sasl/
 #PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.cyrussasl.org/
+HOMEPAGE=	https://www.cyrusimap.org/sasl/
 LICENSE=	original-bsd # CMU version
 
 DISTINFO_FILE=		${.CURDIR}/../cyrus-sasl/distinfo
