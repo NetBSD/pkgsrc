@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2019/06/08 19:53:26 leot Exp $
+# $NetBSD: Makefile,v 1.115 2019/06/09 04:55:48 ryoon Exp $
 
 DISTNAME=	harfbuzz-2.4.0
 PKGREVISION=	3
@@ -69,7 +69,7 @@ PLIST.coretext=		yes
 #.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .if ${LIBRSVG_TYPE} == "rust"
-# graphite2 support breaks graphics/librsvg
+# graphite2 support breaks graphics/librsvg-c
 .include "../../graphics/graphite2/buildlink3.mk"
 .endif
 .include "../../mk/bsd.pkg.mk"
