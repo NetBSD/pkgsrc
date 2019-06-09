@@ -1,9 +1,9 @@
-$NetBSD: patch-configure.ac,v 1.3 2018/05/31 10:23:02 wen Exp $
+$NetBSD: patch-configure.ac,v 1.4 2019/06/09 13:39:12 wen Exp $
 
 Do not include system paths in R_LD_LIBRARY_PATH.
 NetBSD, FreeBSD, DragonFly, Darwin and Solaris fixes
 
---- configure.ac.orig	2018-04-23 13:57:20.000000000 +0000
+--- configure.ac.orig	2019-06-08 08:57:35.738653089 +0000
 +++ configure.ac
 @@ -33,6 +33,7 @@ m4_define([R_VERSION],
  AC_INIT([R],[R_VERSION],[https://bugs.r-project.org],[R],[https://www.r-project.org])
@@ -22,7 +22,7 @@ NetBSD, FreeBSD, DragonFly, Darwin and Solaris fixes
    LIBR1=-lR
  else
    LIBR0=
-@@ -713,7 +714,7 @@ case "${host_os}" in
+@@ -709,7 +710,7 @@ case "${host_os}" in
      ## Not so bad in later versions of Darwin, 
      ## where DYLD_FALLBACK_LIBRARY_PATH is used (see below).
      ;;
@@ -31,7 +31,7 @@ NetBSD, FreeBSD, DragonFly, Darwin and Solaris fixes
      for arg in ${LDFLAGS}; do
        case "${arg}" in
          -L*)
-@@ -1367,7 +1368,7 @@ rm -f libconftest${DYLIB_EXT} conftest.c
+@@ -1276,7 +1277,7 @@ rm -f libconftest${DYLIB_EXT} conftest.c
      fpicflags="${darwin_pic}"
      shlib_cxxldflags="${shlib_ldflags}"
      ;;
@@ -40,7 +40,7 @@ NetBSD, FreeBSD, DragonFly, Darwin and Solaris fixes
      ## maybe this needs to depend on the compiler:
      ## -export-dynamic used to work, but does not with clang.
      ## Seems FreeBSD has used the GNU linker since at least 3.0 (Oct 1998)
-@@ -1456,6 +1457,12 @@ rm -f libconftest${DYLIB_EXT} conftest.c
+@@ -1365,6 +1366,12 @@ dnl     ;;
      ;;
    netbsd*)
      ## See the comments about FreeBSD
@@ -53,7 +53,7 @@ NetBSD, FreeBSD, DragonFly, Darwin and Solaris fixes
      if ${CPP} - -dM < /dev/null | grep __ELF__ >/dev/null ; then
        main_ldflags="-Wl,--export-dynamic"
        shlib_ldflags="-shared"
-@@ -1493,22 +1500,22 @@ rm -f libconftest${DYLIB_EXT} conftest.c
+@@ -1401,22 +1408,22 @@ dnl     ;;
    solaris*)
  ## SPARC has only an 8k global object table, 1024 entries on 64-bit,
  ## so need PIC not pic.  They are the same on other Solaris platforms.
@@ -80,7 +80,7 @@ NetBSD, FreeBSD, DragonFly, Darwin and Solaris fixes
        cpicflags="-KPIC"
        if test "`basename ${CXX}`" = "CC" ; then
          ## Forte version 7 needs -lCstd: Forte 6 does not.	
-@@ -1587,7 +1594,7 @@ fi
+@@ -1495,7 +1502,7 @@ fi
  : ${CXXPICFLAGS="${cxxpicflags}"}
  if test -n "${CXX}" -a -z "${CXXPICFLAGS}"; then
    case "${host_os}" in
@@ -89,21 +89,19 @@ NetBSD, FreeBSD, DragonFly, Darwin and Solaris fixes
        ;;
      *)
        warn_cxxpicflags="I could not determine CXXPICFLAGS."
-@@ -1645,10 +1652,10 @@ case "${host_os}" in
-     DYLIB_EXT=".dylib"
-     dylib_ldflags="${darwin_dylib_ldflags}"
+@@ -1555,8 +1562,10 @@ dnl     ;;
      MAJR_VERSION=`echo "${PACKAGE_VERSION}" | sed  -e "s/[[\.]][[1-9]]$/.0/"` 
--    LIBR_LDFLAGS="-install_name libR.dylib -compatibility_version ${MAJR_VERSION}  -current_version ${PACKAGE_VERSION}  -headerpad_max_install_names"
--    RLAPACK_LDFLAGS="-install_name libRlapack.dylib -compatibility_version ${MAJR_VERSION} -current_version ${PACKAGE_VERSION}  -headerpad_max_install_names"
+     LIBR_LDFLAGS="-install_name libR.dylib -compatibility_version ${MAJR_VERSION}  -current_version ${PACKAGE_VERSION}  -headerpad_max_install_names"
+     RLAPACK_LDFLAGS="-install_name libRlapack.dylib -compatibility_version ${MAJR_VERSION} -current_version ${PACKAGE_VERSION}  -headerpad_max_install_names"
 +    LIBR_LDFLAGS="-install_name ${PREFIX}/lib/R/lib/libR.dylib -compatibility_version ${MAJR_VERSION}  -current_version ${PACKAGE_VERSION}  -headerpad_max_install_names"
 +    RLAPACK_LDFLAGS="-install_name ${PREFIX}/lib/R/lib/libRlapack.dylib -compatibility_version ${MAJR_VERSION} -current_version ${PACKAGE_VERSION}  -headerpad_max_install_names"
      ## don't use version in libRblas so we can replace it with any BLAS implementation
 -    RBLAS_LDFLAGS="-install_name libRblas.dylib -headerpad_max_install_names"
 +    RBLAS_LDFLAGS="-install_name ${PREFIX}/lib/R/lib/libRblas.dylib -headerpad_max_install_names"
      ;;
-   hpux*)
-     ## Needs to avoid embedding a relative path ../../../bin.
-@@ -2615,7 +2622,7 @@ case "${host_os}" in
+ dnl   hpux*)
+ dnl     ## Needs to avoid embedding a relative path ../../../bin.
+@@ -2482,7 +2491,7 @@ case "${host_os}" in
      r_ld_library_defaults="/usr/lib64:/lib64:/usr/lib:/lib"
      ;;
    solaris*)
