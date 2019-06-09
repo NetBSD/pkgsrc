@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/04/25 07:33:06 maya Exp $
+# $NetBSD: Makefile,v 1.24 2019/06/09 22:15:18 nia Exp $
 
 BOOST_PACKAGE=	meta-pkg
 BOOST_COMMENT=	(meta package)
@@ -15,7 +15,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.boost.org/
+HOMEPAGE=	https://www.boost.org/
 COMMENT=	Free, peer-reviewed portable C++ source libraries
 
 DEPENDS+=	boost-build-${BOOST_DEPENDS_VERSION}:../../devel/boost-build
