@@ -1,0 +1,21 @@
+A graphical (Qt5) client for MPD, supporting the following features:
+
+ * Multiple MPD collections.
+ * Highly customisable layout.
+ * Songs (optionally) grouped by album in play queue.
+ * Context view to show artist, album, and song information of
+   current track.
+ * Simple tag editor.
+ * File organizer - use tags to organize files and folders.
+ * Ability to calculate ReplyGain tags.
+ * Dynamic playlists.
+ * Smart Playlists.
+ * Online services; Jamendo, Magnatune, SoundCloud, and Podcasts.
+ * Radio stream support - with the ability to search for streams
+   via TuneIn, ShoutCast, or Dirble.
+ * USB-Mass-Storage and MTP device support.
+ * Audio CD ripping and playback.
+ * Playback of non-MPD songs - via simple in-built HTTP server.
+ * MPRISv2 DBUS interface.
+ * Scrobbling.
+ * Ratings support.
