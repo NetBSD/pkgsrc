@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2019/06/09 13:58:08 nia Exp $
+bin/blastem
+bin/blastem-dis
+bin/blastem-stateview
+bin/blastem-vgmplay
+bin/blastem-zdis
+share/applications/blastem.desktop
+share/blastem/default.cfg
+share/blastem/gamecontrollerdb.txt
+share/blastem/images/360.png
+share/blastem/images/ps4.png
+share/blastem/images/ps4_6b.png
+share/blastem/rom.db
+share/blastem/shaders/crt.f.glsl
+share/blastem/shaders/crt.v.glsl
+share/blastem/shaders/default.f.glsl
+share/blastem/shaders/default.v.glsl
+share/doc/blastem/CHANGELOG
+share/doc/blastem/COPYING
+share/doc/blastem/README
+share/icons/hicolor/144x144/apps/blastem.png
+share/icons/hicolor/48x48/apps/blastem.png
+share/icons/hicolor/72x72/apps/blastem.png
+share/icons/hicolor/96x96/apps/blastem.png
