@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2018/12/21 02:55:06 wen Exp $
+@comment $NetBSD: PLIST,v 1.32 2019/06/09 13:39:12 wen Exp $
 bin/R
 bin/Rscript
 info/R-FAQ.info.gz
@@ -29,7 +29,6 @@ lib/R/bin/build
 lib/R/bin/check
 lib/R/bin/config
 lib/R/bin/exec/R
-lib/R/bin/f77_f2c
 lib/R/bin/javareconf
 lib/R/bin/libtool
 lib/R/bin/mkinstalldirs
@@ -909,6 +908,7 @@ lib/R/library/rpart/doc/usercode.Rnw
 lib/R/library/rpart/doc/usercode.pdf
 lib/R/library/rpart/help/AnIndex
 lib/R/library/rpart/help/aliases.rds
+lib/R/library/rpart/help/figures/rpart.png
 lib/R/library/rpart/help/paths.rds
 lib/R/library/rpart/help/rpart.rdb
 lib/R/library/rpart/help/rpart.rdx
@@ -1081,6 +1081,9 @@ lib/R/library/survival/doc/multi.pdf
 lib/R/library/survival/doc/population.R
 lib/R/library/survival/doc/population.Rnw
 lib/R/library/survival/doc/population.pdf
+lib/R/library/survival/doc/survival.R
+lib/R/library/survival/doc/survival.Rnw
+lib/R/library/survival/doc/survival.pdf
 lib/R/library/survival/doc/splines.R
 lib/R/library/survival/doc/splines.Rnw
 lib/R/library/survival/doc/splines.pdf
@@ -1098,6 +1101,7 @@ lib/R/library/survival/doc/validate.Rnw
 lib/R/library/survival/doc/validate.pdf
 lib/R/library/survival/help/AnIndex
 lib/R/library/survival/help/aliases.rds
+lib/R/library/survival/help/figures/logo.png
 lib/R/library/survival/help/paths.rds
 lib/R/library/survival/help/survival.rdb
 lib/R/library/survival/help/survival.rdx
