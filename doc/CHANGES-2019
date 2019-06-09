@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2430 2019/06/09 09:45:58 wen Exp $
+$NetBSD: CHANGES-2019,v 1.2431 2019/06/09 13:40:00 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4083,3 +4083,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/R-cli to 1.1.0 [wen 2019-06-09]
 	Updated net/ncdc to 1.22.1 [wiz 2019-06-09]
 	Added devel/R-fansi version 0.4.0 [wen 2019-06-09]
+	Updated math/R to 3.6.0 [wen 2019-06-09]
