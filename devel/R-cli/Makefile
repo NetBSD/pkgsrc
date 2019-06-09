@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/01/27 14:24:59 wen Exp $
+# $NetBSD: Makefile,v 1.4 2019/06/09 04:20:09 wen Exp $
 
 CATEGORIES=	devel
 
@@ -8,10 +8,10 @@ COMMENT=	Helpers for developing command line interfaces
 LICENSE=	mit
 
 R_PKGNAME=	cli
-R_PKGVER=	1.0.1
+R_PKGVER=	1.1.0
 
 DEPENDS+=	R-assertthat-[0-9]*:../../devel/R-assertthat
-DEPENDS+=	R-crayon-[0-9]*:../../devel/R-crayon
+DEPENDS+=	R-crayon>=1.3.4:../../devel/R-crayon
 
 USE_LANGUAGES=	# none
 
