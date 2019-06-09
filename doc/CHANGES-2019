@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2426 2019/06/08 23:52:42 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.2427 2019/06/09 03:44:58 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4079,3 +4079,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added emulators/mgba version 0.7.2 [nia 2019-06-08]
 	Updated emulators/libretro-mgba to 0.7.2 [nia 2019-06-08]
 	Added devel/debugcon_printf version 20190609 [kamil 2019-06-08]
+	Updated devel/R-assertthat to 0.2.1 [wen 2019-06-09]
