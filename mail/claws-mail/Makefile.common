@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2018/12/01 17:31:06 bsiegert Exp $
+# $NetBSD: Makefile.common,v 1.19 2019/06/09 22:09:18 nia Exp $
 
 # used by mail/claws-mail/plugins.mk
 
@@ -9,7 +9,7 @@ CATEGORIES=	mail news x11
 MASTER_SITES=	http://claws-mail.org/releases/
 EXTRACT_SUFX=	.tar.xz
 
-HOMEPAGE=	http://claws-mail.org/
+HOMEPAGE=	https://claws-mail.org/
 LICENSE=	gnu-gpl-v3
 
 DISTINFO_FILE=	${.CURDIR}/../../mail/claws-mail/distinfo
