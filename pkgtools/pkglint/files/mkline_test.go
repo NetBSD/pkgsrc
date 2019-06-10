@@ -260,6 +260,35 @@ func (s *Suite) Test_MkLine_ValueAlign__commented(c *check.C) {
 	c.Check(valueAlign, equals, "#SUBST_SED.${param}=\t")
 }
 
+func (s *Suite) Test_MkLine_FirstLineContainsValue(c *check.C) {
+	t := s.Init(c)
+
+	mklines := t.NewMkLines("filename.mk",
+		MkRcsID,
+		"VAR=\tvalue",
+		"VAR= value \\",
+		"\tstarts in first line",
+		"VAR= \\",
+		"\tvalue starts in second line",
+		"#VAR= value \\",
+		"\tstarts in first line",
+		"#VAR= \\",
+		"\tvalue starts in second line")
+
+	t.ExpectPanic(
+		func() { mklines.mklines[0].FirstLineContainsValue() },
+		"Pkglint internal error: Line must be a variable assignment.")
+
+	t.ExpectPanic(
+		func() { mklines.mklines[1].FirstLineContainsValue() },
+		"Pkglint internal error: Line must be multiline.")
+
+	t.Check(mklines.mklines[2].FirstLineContainsValue(), equals, true)
+	t.Check(mklines.mklines[3].FirstLineContainsValue(), equals, false)
+	t.Check(mklines.mklines[4].FirstLineContainsValue(), equals, true)
+	t.Check(mklines.mklines[5].FirstLineContainsValue(), equals, false)
+}
+
 // Demonstrates how a simple condition is structured internally.
 // For most of the checks, using cond.Walk is the simplest way to go.
 func (s *Suite) Test_MkLine_Cond(c *check.C) {
@@ -370,7 +399,7 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__unknown_rhs(c *check.C) {
 	mkline := t.NewMkLine("filename.mk", 1, "PKGNAME:= ${UNKNOWN}")
 	t.SetUpVartypes()
 
-	vuc := VarUseContext{G.Pkgsrc.VariableType(nil, "PKGNAME"), vucTimeParse, VucQuotUnknown, false}
+	vuc := VarUseContext{G.Pkgsrc.VariableType(nil, "PKGNAME"), vucTimeLoad, VucQuotUnknown, false}
 	nq := mkline.VariableNeedsQuoting(nil, &MkVarUse{"UNKNOWN", nil}, nil, &vuc)
 
 	c.Check(nq, equals, unknown)
@@ -381,14 +410,17 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__append_URL_to_list_of_URLs(c *
 
 	t.SetUpVartypes()
 	t.SetUpMasterSite("MASTER_SITE_SOURCEFORGE", "http://downloads.sourceforge.net/sourceforge/")
-	mkline := t.NewMkLine("Makefile", 95, "MASTER_SITES=\t${HOMEPAGE}")
+	mklines := t.NewMkLines("Makefile",
+		MkRcsID,
+		"MASTER_SITES=\t${HOMEPAGE}")
+	mkline := mklines.mklines[1]
 
 	vuc := VarUseContext{G.Pkgsrc.vartypes.Canon("MASTER_SITES"), vucTimeRun, VucQuotPlain, false}
 	nq := mkline.VariableNeedsQuoting(nil, &MkVarUse{"HOMEPAGE", nil}, G.Pkgsrc.vartypes.Canon("HOMEPAGE"), &vuc)
 
 	c.Check(nq, equals, no)
 
-	MkLineChecker{nil, mkline}.checkVarassign()
+	MkLineChecker{mklines, mkline}.checkVarassign()
 
 	t.CheckOutputEmpty() // Up to version 5.3.6, pkglint warned about a missing :Q here, which was wrong.
 }
@@ -398,9 +430,11 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__append_list_to_list(c *check.C
 
 	t.SetUpVartypes()
 	t.SetUpMasterSite("MASTER_SITE_SOURCEFORGE", "http://downloads.sourceforge.net/sourceforge/")
-	mkline := t.NewMkLine("Makefile", 96, "MASTER_SITES=\t${MASTER_SITE_SOURCEFORGE:=squirrel-sql/}")
+	mklines := t.NewMkLines("Makefile",
+		MkRcsID,
+		"MASTER_SITES=\t${MASTER_SITE_SOURCEFORGE:=squirrel-sql/}")
 
-	MkLineChecker{nil, mkline}.checkVarassign()
+	MkLineChecker{mklines, mklines.mklines[1]}.checkVarassign()
 
 	// Assigning lists to lists is ok.
 	t.CheckOutputEmpty()
@@ -410,26 +444,28 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__eval_shell(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpVartypes()
-	mkline := t.NewMkLine("builtin.mk", 3,
+	mklines := t.NewMkLines("builtin.mk",
+		MkRcsID,
 		"USE_BUILTIN.Xfixes!=\t${PKG_ADMIN} pmatch 'pkg-[0-9]*' ${BUILTIN_PKG.Xfixes:Q}")
 
-	MkLineChecker{nil, mkline}.checkVarassign()
+	MkLineChecker{mklines, mklines.mklines[1]}.checkVarassign()
 
 	t.CheckOutputLines(
-		"NOTE: builtin.mk:3: The :Q operator isn't necessary for ${BUILTIN_PKG.Xfixes} here.")
+		"NOTE: builtin.mk:2: The :Q operator isn't necessary for ${BUILTIN_PKG.Xfixes} here.")
 }
 
 func (s *Suite) Test_MkLine_VariableNeedsQuoting__command_in_single_quotes(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpVartypes()
-	mkline := t.NewMkLine("Makefile", 3,
+	mklines := t.NewMkLines("Makefile",
+		MkRcsID,
 		"SUBST_SED.hpath=\t-e 's|^\\(INSTALL[\t:]*=\\).*|\\1${INSTALL}|'")
 
-	MkLineChecker{nil, mkline}.checkVarassign()
+	MkLineChecker{mklines, mklines.mklines[1]}.checkVarassign()
 
 	t.CheckOutputLines(
-		"WARN: Makefile:3: Please use ${INSTALL:Q} instead of ${INSTALL} " +
+		"WARN: Makefile:2: Please use ${INSTALL:Q} instead of ${INSTALL} " +
 			"and make sure the variable appears outside of any quoting characters.")
 }
 
@@ -614,6 +650,21 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__command_in_message(c *check.C)
 	t.SetUpVartypes()
 	mklines := t.NewMkLines("benchmarks/iozone/Makefile",
 		"SUBST_MESSAGE.crlf=\tStripping EOL CR in ${REPLACE_PERL}")
+
+	MkLineChecker{mklines, mklines.mklines[0]}.Check()
+
+	// Don't suggest ${REPLACE_PERL:Q}.
+	t.CheckOutputEmpty()
+}
+
+// Since a comment may be appended to, it is not necessary to mention
+// BtComment in the SUBST_MESSAGE case in VariableNeedsQuoting.
+func (s *Suite) Test_MkLine_VariableNeedsQuoting__command_in_package_comment(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+	mklines := t.NewMkLines("benchmarks/iozone/Makefile",
+		"COMMENT=\tUtility for replacing ${REPLACE_PERL}")
 
 	MkLineChecker{mklines, mklines.mklines[0]}.Check()
 
@@ -1289,6 +1340,24 @@ func (s *Suite) Test_MkLine_ResolveVarsInRelativePath__directory_depth(c *check.
 			"The variable BUILDLINK_PKGSRCDIR.totem should not be given a default value in this file; "+
 			"it would be ok in buildlink3.mk.",
 		"ERROR: ~/multimedia/totem/bla.mk:2: Relative path \"../../multimedia/totem/Makefile\" does not exist.")
+}
+
+// Just for code coverage
+func (s *Suite) Test_MkLine_ResolveVarsInRelativePath__without_tracing(c *check.C) {
+	t := s.Init(c)
+
+	t.DisableTracing()
+	t.SetUpVartypes()
+	mklines := t.SetUpFileMkLines("buildlink3.mk",
+		MkRcsID,
+		"BUILDLINK_PKGSRCDIR.totem?=\t../../${PKGPATH.multimedia/totem}")
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		// FIXME: It's ok to have variable parameters including a slash.
+		"WARN: ~/buildlink3.mk:2: Invalid part \"/totem\" after variable name \"PKGPATH.multimedia\".",
+		"WARN: ~/buildlink3.mk:2: PKGPATH.multimedia/totem is used but not defined.")
 }
 
 func (s *Suite) Test_MkLineParser_MatchVarassign(c *check.C) {
@@ -2088,6 +2157,13 @@ func (s *Suite) Test_MkLineParser_split(c *check.C) {
 				text("//:M"),
 				varuse("pattern"),
 				text(")")),
+		})
+
+	test("   # comment after spaces",
+		mkLineSplitResult{
+			spaceBeforeComment: "   ",
+			hasComment:         true,
+			comment:            " comment after spaces",
 		})
 }
 

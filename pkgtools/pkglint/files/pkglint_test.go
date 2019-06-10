@@ -1,7 +1,6 @@
 package pkglint
 
 import (
-	"errors"
 	"gopkg.in/check.v1"
 	"io/ioutil"
 	"os"
@@ -271,8 +270,6 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 //
 // See https://github.com/rillig/gobco for the tool to measure the branch coverage.
 func (s *Suite) Test_Pkglint__realistic(c *check.C) {
-	t := s.Init(c)
-
 	if cwd := os.Getenv("PKGLINT_TESTDIR"); cwd != "" {
 		err := os.Chdir(cwd)
 		c.Assert(err, check.IsNil)
@@ -283,7 +280,7 @@ func (s *Suite) Test_Pkglint__realistic(c *check.C) {
 		G.Logger.out = NewSeparatorWriter(os.Stdout)
 		G.Logger.err = NewSeparatorWriter(os.Stderr)
 		trace.Out = os.Stdout
-		t.Main(strings.Fields(cmdline)...)
+		G.Main(append([]string{"pkglint"}, strings.Fields(cmdline)...)...)
 	}
 }
 
@@ -593,6 +590,40 @@ func (s *Suite) Test_Pkglint_checkReg__alternatives(c *check.C) {
 		"ERROR: ~/category/package/ALTERNATIVES:1: Alternative implementation \"bin/gnu-tar\" must be an absolute path.",
 		"1 error and 0 warnings found.",
 		"(Run \"pkglint -e\" to show explanations.)")
+}
+
+// Just for branch coverage.
+func (s *Suite) Test_Pkglint_checkReg__file_not_found(c *check.C) {
+	t := s.Init(c)
+
+	t.Chdir(".")
+
+	G.checkReg("buildlink3.mk", "buildlink3.mk", 2)
+	G.checkReg("DESCR", "DESCR", 2)
+	G.checkReg("distinfo", "distinfo", 2)
+	G.checkReg("MESSAGE", "MESSAGE", 2)
+	G.checkReg("patches/patch-aa", "patch-aa", 2)
+	G.checkReg("PLIST", "PLIST", 2)
+
+	t.CheckOutputLines(
+		"ERROR: buildlink3.mk: Cannot be read.",
+		"ERROR: DESCR: Cannot be read.",
+		"ERROR: distinfo: Cannot be read.",
+		"ERROR: MESSAGE: Cannot be read.",
+		"ERROR: patches/patch-aa: Cannot be read.",
+		"ERROR: PLIST: Cannot be read.")
+}
+
+// Just for branch coverage.
+func (s *Suite) Test_Pkglint_checkReg__no_tracing(c *check.C) {
+	t := s.Init(c)
+
+	t.Chdir(".")
+	t.DisableTracing()
+
+	G.checkReg("patches/manual-aa", "manual-aa", 2)
+
+	t.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_Pkglint__profiling(c *check.C) {
@@ -1062,6 +1093,11 @@ func (s *Suite) Test_Pkglint_checkdirPackage__filename_with_variable(c *check.C)
 	G.Check(pkg)
 
 	t.CheckOutputEmpty()
+
+	// Just for code coverage.
+	t.DisableTracing()
+	G.Check(pkg)
+	t.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_Pkglint_checkdirPackage__ALTERNATIVES(c *check.C) {
@@ -1105,6 +1141,18 @@ func (s *Suite) Test_CheckFileMk__enoent(c *check.C) {
 		"ERROR: ~/filename.mk: Cannot be read.")
 }
 
+// Just for code coverage.
+func (s *Suite) Test_CheckFileOther__no_tracing(c *check.C) {
+	t := s.Init(c)
+
+	t.DisableTracing()
+
+	CheckFileOther(t.File("filename.mk"))
+
+	t.CheckOutputLines(
+		"ERROR: ~/filename.mk: Cannot be read.")
+}
+
 func (s *Suite) Test_Pkglint_checkExecutable(c *check.C) {
 	t := s.Init(c)
 
@@ -1135,16 +1183,6 @@ func (s *Suite) Test_Pkglint_checkExecutable__already_committed(c *check.C) {
 
 	// See the "Too late" comment in Pkglint.checkExecutable.
 	t.CheckOutputEmpty()
-}
-
-func (s *Suite) Test_Pkglint_AssertNil(c *check.C) {
-	t := s.Init(c)
-
-	G.AssertNil(nil, "this is not an error")
-
-	t.ExpectPanic(
-		func() { G.AssertNil(errors.New("unexpected error"), "Oops") },
-		"Pkglint internal error: Oops: unexpected error")
 }
 
 func (s *Suite) Test_Main(c *check.C) {

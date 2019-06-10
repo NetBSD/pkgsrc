@@ -226,17 +226,17 @@ func (ck *distinfoLinesChecker) checkAlgorithmsDistfile(info distinfoFileInfo) {
 
 	computeHash := func(hasher hash.Hash) string {
 		f, err := os.Open(distfile)
-		G.AssertNil(err, "Opening distfile")
+		assertNil(err, "Opening distfile")
 
 		// Don't load the distfile into memory since some of them
 		// are hundreds of MB in size.
 		_, err = io.Copy(hasher, f)
-		G.AssertNil(err, "Computing hash of distfile")
+		assertNil(err, "Computing hash of distfile")
 
 		hexHash := hex.EncodeToString(hasher.Sum(nil))
 
 		err = f.Close()
-		G.AssertNil(err, "Closing distfile")
+		assertNil(err, "Closing distfile")
 
 		return hexHash
 	}
@@ -251,7 +251,7 @@ func (ck *distinfoLinesChecker) checkAlgorithmsDistfile(info distinfoFileInfo) {
 			return computeHash(sha512.New())
 		default:
 			fileInfo, err := os.Lstat(distfile)
-			G.AssertNil(err, "Inaccessible distfile info")
+			assertNil(err, "Inaccessible distfile info")
 			return sprintf("%d bytes", fileInfo.Size())
 		}
 	}
@@ -436,7 +436,7 @@ func computePatchSha1Hex(patchFilename string) (string, error) {
 	skipText := []byte("$" + "NetBSD")
 	for _, patchLine := range bytes.SplitAfter(patchBytes, []byte("\n")) {
 		if !bytes.Contains(patchLine, skipText) {
-			hasher.Write(patchLine)
+			_, _ = hasher.Write(patchLine)
 		}
 	}
 	return sprintf("%x", hasher.Sum(nil)), nil

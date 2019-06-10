@@ -142,6 +142,7 @@ func (tr *Tools) Define(name, varname string, mkline MkLine) *Tool {
 
 	if !tr.IsValidToolName(name) {
 		mkline.Errorf("Invalid tool name %q.", name)
+		return nil
 	}
 
 	validity := tr.validity(mkline.Basename, false)
@@ -149,6 +150,8 @@ func (tr *Tools) Define(name, varname string, mkline MkLine) *Tool {
 }
 
 func (tr *Tools) def(name, varname string, mustUseVarForm bool, validity Validity, aliases []string) *Tool {
+	assertf(tr.IsValidToolName(name), "Invalid tool name %q", name)
+
 	fresh := Tool{name, varname, mustUseVarForm, validity, aliases}
 
 	tool := tr.byName[name]
@@ -248,6 +251,10 @@ func (tr *Tools) ParseToolLine(mklines MkLines, mkline MkLine, fromInfrastructur
 			}
 
 		case "TOOLS_ALIASES.*":
+			if containsVarRef(varparam) {
+				break
+			}
+
 			tool := tr.def(varparam, "", false, Nowhere, nil)
 
 			for _, alias := range mkline.ValueFields(value) {
@@ -342,7 +349,7 @@ func (tr *Tools) validity(basename string, useTools bool) Validity {
 		return AfterPrefsMk
 	case basename == "Makefile" && !tr.SeenPrefs:
 		return AfterPrefsMk
-	case useTools, basename == "bsd.pkg.mk":
+	case useTools:
 		return AtRunTime
 	default:
 		return Nowhere
@@ -384,7 +391,7 @@ func (tr *Tools) Usable(tool *Tool, time ToolTime) bool {
 }
 
 func (tr *Tools) Fallback(other *Tools) {
-	G.Assertf(tr.fallback == nil, "Tools.Fallback must only be called once.")
+	assertf(tr.fallback == nil, "Tools.Fallback must only be called once.")
 	tr.fallback = other
 }
 
