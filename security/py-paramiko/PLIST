@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2018/09/21 11:04:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2019/06/10 08:42:57 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -55,6 +55,9 @@ ${PYSITELIB}/paramiko/file.pyo
 ${PYSITELIB}/paramiko/hostkeys.py
 ${PYSITELIB}/paramiko/hostkeys.pyc
 ${PYSITELIB}/paramiko/hostkeys.pyo
+${PYSITELIB}/paramiko/kex_curve25519.py
+${PYSITELIB}/paramiko/kex_curve25519.pyc
+${PYSITELIB}/paramiko/kex_curve25519.pyo
 ${PYSITELIB}/paramiko/kex_ecdh_nist.py
 ${PYSITELIB}/paramiko/kex_ecdh_nist.pyc
 ${PYSITELIB}/paramiko/kex_ecdh_nist.pyo
@@ -67,6 +70,9 @@ ${PYSITELIB}/paramiko/kex_group1.pyo
 ${PYSITELIB}/paramiko/kex_group14.py
 ${PYSITELIB}/paramiko/kex_group14.pyc
 ${PYSITELIB}/paramiko/kex_group14.pyo
+${PYSITELIB}/paramiko/kex_group16.py
+${PYSITELIB}/paramiko/kex_group16.pyc
+${PYSITELIB}/paramiko/kex_group16.pyo
 ${PYSITELIB}/paramiko/kex_gss.py
 ${PYSITELIB}/paramiko/kex_gss.pyc
 ${PYSITELIB}/paramiko/kex_gss.pyo
