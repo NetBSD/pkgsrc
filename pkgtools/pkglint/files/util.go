@@ -91,6 +91,14 @@ func trimHspace(str string) string {
 	return str[start:end]
 }
 
+func rtrimHspace(str string) string {
+	end := len(str)
+	for end > 0 && isHspace(str[end-1]) {
+		end--
+	}
+	return str[:end]
+}
+
 func trimCommon(a, b string) (string, string) {
 	// trim common prefix
 	for len(a) > 0 && len(b) > 0 && a[0] == b[0] {
@@ -109,6 +117,10 @@ func trimCommon(a, b string) (string, string) {
 
 func isHspace(ch byte) bool {
 	return ch == ' ' || ch == '\t'
+}
+
+func isHspaceRune(r rune) bool {
+	return r == ' ' || r == '\t'
 }
 
 func ifelseStr(cond bool, a, b string) string {
@@ -134,9 +146,27 @@ func imax(a, b int) int {
 	return b
 }
 
+// assertNil ensures that the given error is nil.
+//
+// Contrary to other diagnostics, the format should not end in a period
+// since it is followed by the error.
+//
+// Other than Assertf, this method does not require any comparison operator in the calling code.
+// This makes it possible to get 100% branch coverage for cases that "really can never fail".
 func assertNil(err error, format string, args ...interface{}) {
 	if err != nil {
 		panic("Pkglint internal error: " + sprintf(format, args...) + ": " + err.Error())
+	}
+}
+
+// assertf checks that the condition is true. Otherwise it terminates the
+// process with a fatal error message, prefixed with "Pkglint internal error".
+//
+// This method must only be used for programming errors.
+// For runtime errors, use dummyLine.Fatalf.
+func assertf(cond bool, format string, args ...interface{}) {
+	if !cond {
+		panic("Pkglint internal error: " + sprintf(format, args...))
 	}
 }
 
@@ -399,10 +429,10 @@ func relpath(from, to string) (result string) {
 	absTo := abspath(cto)
 
 	toTop, err := filepath.Rel(absFrom, absTopdir)
-	G.AssertNil(err, "relpath from %q to topdir %q", absFrom, absTopdir)
+	assertNil(err, "relpath from %q to topdir %q", absFrom, absTopdir)
 
 	fromTop, err := filepath.Rel(absTopdir, absTo)
-	G.AssertNil(err, "relpath from topdir %q to %q", absTopdir, absTo)
+	assertNil(err, "relpath from topdir %q to %q", absTopdir, absTo)
 
 	result = cleanpath(filepath.ToSlash(toTop) + "/" + filepath.ToSlash(fromTop))
 
@@ -468,23 +498,46 @@ func hasAlnumPrefix(s string) bool { return s != "" && textproc.AlnumU.Contains(
 // and only returns true on each first call.
 type Once struct {
 	seen map[uint64]struct{}
+
+	// Only used during testing, to trace the actual arguments,
+	// since hashing is a one-way function.
+	Trace bool
 }
 
 func (o *Once) FirstTime(what string) bool {
-	return o.check(crc64.Checksum([]byte(what), crc64.MakeTable(crc64.ECMA)))
+	firstTime := o.check(o.keyString(what))
+	if firstTime && o.Trace {
+		G.Logger.out.WriteLine(sprintf("FirstTime: %s", what))
+	}
+	return firstTime
 }
 
 func (o *Once) FirstTimeSlice(whats ...string) bool {
-	crc := crc64.New(crc64.MakeTable(crc64.ECMA))
-	for _, what := range whats {
-		_, _ = crc.Write([]byte(what))
+	firstTime := o.check(o.keyStrings(whats))
+	if firstTime && o.Trace {
+		G.Logger.out.WriteLine(sprintf("FirstTime: %s", strings.Join(whats, ", ")))
 	}
-	return o.check(crc.Sum64())
+	return firstTime
 }
 
 func (o *Once) Seen(what string) bool {
-	_, seen := o.seen[crc64.Checksum([]byte(what), crc64.MakeTable(crc64.ECMA))]
+	_, seen := o.seen[o.keyString(what)]
 	return seen
+}
+
+func (*Once) keyString(what string) uint64 {
+	return crc64.Checksum([]byte(what), crc64.MakeTable(crc64.ECMA))
+}
+
+func (*Once) keyStrings(whats []string) uint64 {
+	crc := crc64.New(crc64.MakeTable(crc64.ECMA))
+	for i, what := range whats {
+		if i != 0 {
+			_, _ = crc.Write([]byte{0})
+		}
+		_, _ = crc.Write([]byte(what))
+	}
+	return crc.Sum64()
 }
 
 func (o *Once) check(key uint64) bool {
@@ -576,7 +629,7 @@ func (s *Scope) Use(varname string, line MkLine, time vucTime) {
 				trace.Step2("Using %q in %s", name, line.String())
 			}
 		}
-		if time == vucTimeParse {
+		if time == vucTimeLoad {
 			s.usedAtLoadTime[name] = true
 		}
 	}
@@ -940,13 +993,18 @@ func (c *FileCache) Get(filename string, options LoadOptions) Lines {
 func (c *FileCache) Evict(filename string) {
 	key := c.key(filename)
 	entry, found := c.mapping[key]
-	if found {
-		delete(c.mapping, key)
+	if !found {
+		return
+	}
 
-		sort.Slice(c.table, func(i, j int) bool {
-			return c.table[j] == entry && c.table[i] != entry
-		})
-		c.table = c.table[0 : len(c.table)-1]
+	delete(c.mapping, key)
+
+	for i, e := range c.table {
+		if e == entry {
+			c.table[i] = c.table[len(c.table)-1]
+			c.table = c.table[:len(c.table)-1]
+			return
+		}
 	}
 }
 
@@ -1134,7 +1192,7 @@ func (si *StringInterner) Intern(str string) string {
 	return key
 }
 
-// StringSets stores unique strings in insertion order.
+// StringSet stores unique strings in insertion order.
 type StringSet struct {
 	Elements []string
 	seen     map[string]struct{}

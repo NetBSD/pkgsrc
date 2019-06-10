@@ -519,6 +519,29 @@ func (s *Suite) Test_CheckLinesPatch__invalid_line_in_hunk(c *check.C) {
 		"ERROR: ~/patch-aa:10: Invalid line in unified patch hunk: <<<<<<<<")
 }
 
+// Just for code coverage.
+func (s *Suite) Test_PatchChecker_checklineContext__no_tracing(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.NewLines("patch-WithComment",
+		RcsID,
+		"",
+		"Documentation",
+		"",
+		"--- file.orig",
+		"+++ file",
+		"@@ -5,3 +5,3 @@",
+		" context before",
+		"-old line",
+		"+new line",
+		" context after")
+	t.DisableTracing()
+
+	CheckLinesPatch(lines)
+
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_PatchChecker_checklineAdded__shell(c *check.C) {
 	t := s.Init(c)
 
