@@ -1,80 +1,74 @@
-$NetBSD: patch-Makefile.in,v 1.2 2018/04/23 14:42:03 schmonz Exp $
+$NetBSD: patch-Makefile.in,v 1.3 2019/06/10 13:32:56 schmonz Exp $
 
 Libtoolize for portability across pkgsrc platforms.
 
---- Makefile.in.orig	2018-03-02 22:52:05.000000000 +0000
+--- Makefile.in.orig	2019-04-15 15:28:20.000000000 +0000
 +++ Makefile.in
-@@ -1,3 +1,8 @@
+@@ -1,3 +1,4 @@
 +LIBTOOL=libtool --tag=CC
-+
-+.c.o:
-+	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c -o $@ $<
-+
- CC=@CC@ -I.
- LFLAGS=-L.
+ CC=@CC@
  CFLAGS=@CFLAGS@
-@@ -29,8 +34,10 @@ MAN3PAGES=mkd-callbacks.3 mkd-functions.
+ LDFLAGS=@LDFLAGS@
+@@ -7,8 +8,8 @@ INSTALL_PROGRAM=@INSTALL_PROGRAM@
+ INSTALL_DIR=@INSTALL_DIR@
+ INSTALL_DATA=@INSTALL_DATA@
+ 
+-BUILD=$(CC) -I. $(CFLAGS)
+-LINK=$(CC) -L. $(LDFLAGS)
++BUILD=$(LIBTOOL) --mode=compile $(CC) -I. $(CFLAGS)
++LINK=$(LIBTOOL) --mode=link $(CC) -L. $(LDFLAGS)
+ 
+ .c.o:
+ 	$(BUILD) -c -o $@ $<
+@@ -39,8 +40,10 @@ MAN3PAGES=mkd-callbacks.3 mkd-functions.
  all: $(PGMS) $(SAMPLE_PGMS) $(TESTFRAMEWORK)
  
  install: $(PGMS) $(DESTDIR)$(BINDIR) $(DESTDIR)$(LIBDIR) $(DESTDIR)$(INCDIR) $(DESTDIR)$(PKGDIR)
--	@INSTALL_PROGRAM@ $(PGMS) $(DESTDIR)$(BINDIR)
+-	$(INSTALL_PROGRAM) $(PGMS) $(DESTDIR)$(BINDIR)
 -	./librarian.sh install libmarkdown VERSION $(DESTDIR)$(LIBDIR)
 +	for x in $(PGMS); do \
 +	    $(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) $$x $(DESTDIR)$(BINDIR)/$$x; \
 +	done
 +	$(LIBTOOL) --mode=install $(BSD_INSTALL_LIB) $(MKDLIB).la $(DESTDIR)$(LIBDIR)/$(MKDLIB).la
- 	@INSTALL_DATA@ mkdio.h $(DESTDIR)$(INCDIR)
- 	@MK_PKGCONFIG@@INSTALL_DATA@ $(MKDLIB).pc $(DESTDIR)$(PKGDIR)
+ 	$(INSTALL_DATA) mkdio.h $(DESTDIR)$(INCDIR)
+ 	@MK_PKGCONFIG@$(INSTALL_DATA) $(MKDLIB).pc $(DESTDIR)$(PKGDIR)
  
-@@ -39,7 +46,7 @@ install.everything: install install.samp
+@@ -49,7 +52,7 @@ install.everything: install install.samp
  install.samples: $(SAMPLE_PGMS) install $(DESTDIR)$(BINDIR)
- 	@INSTALL_DIR@ $(DESTDIR)$(MANDIR)/man1
+ 	$(INSTALL_DIR) $(DESTDIR)$(MANDIR)/man1
  	for x in $(SAMPLE_PGMS); do \
--	    @INSTALL_PROGRAM@ $$x $(DESTDIR)$(BINDIR)/$(SAMPLE_PFX)$$x; \
+-	    $(INSTALL_PROGRAM) $$x $(DESTDIR)$(BINDIR)/$(SAMPLE_PFX)$$x; \
 +	    $(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) $$x $(DESTDIR)$(BINDIR)/$(SAMPLE_PFX)$$x; \
- 	    @INSTALL_DATA@ $$x.1 $(DESTDIR)$(MANDIR)/man1/$(SAMPLE_PFX)$$x.1; \
+ 	    $(INSTALL_DATA) $$x.1 $(DESTDIR)$(MANDIR)/man1/$(SAMPLE_PFX)$$x.1; \
  	done
  
-@@ -75,7 +82,7 @@ $(DESTDIR)$(LIBDIR):
- @MK_PKGCONFIG@	@INSTALL_DIR@ $(DESTDIR)$(PKGDIR)
- 
- version.o: version.c VERSION branch
--	$(CC) $(CFLAGS) -DBRANCH=`./branch` -DVERSION=\"`cat VERSION`\" -c version.c
-+	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -DBRANCH=`./branch` -DVERSION=\"`cat VERSION`\" -c version.c
- 
- VERSION:
- 	@true
-@@ -87,20 +94,19 @@ blocktags: mktags
+@@ -100,19 +103,19 @@ mktags: mktags.o
  
  # example programs
  @THEME@theme:  theme.o $(COMMON) $(MKDLIB) mkdio.h
--@THEME@	$(CC) $(CFLAGS) $(LFLAGS) -o theme theme.o $(COMMON) -lmarkdown @LIBS@
-+@THEME@	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LFLAGS) -o theme theme.o $(COMMON) $(MKDLIB).la @LIBS@
+-@THEME@	$(LINK) -o theme theme.o $(COMMON) -lmarkdown @LIBS@
++@THEME@	$(LINK) -o theme theme.o $(COMMON) $(MKDLIB).la @LIBS@
  
--
--mkd2html:  mkd2html.o $(MKDLIB) mkdio.h gethopt.h $(COMMON)
--	$(CC) $(CFLAGS) $(LFLAGS) -o mkd2html mkd2html.o $(COMMON) -lmarkdown @LIBS@
-+mkd2html:  mkd2html.o $(COMMON) $(MKDLIB)
-+	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LFLAGS) -o mkd2html mkd2html.o $(COMMON) $(MKDLIB).la @LIBS@
+ 
+ mkd2html:  mkd2html.o $(MKDLIB) mkdio.h gethopt.h $(COMMON)
+-	$(LINK) -o mkd2html mkd2html.o $(COMMON) -lmarkdown @LIBS@
++	$(LINK) -o mkd2html mkd2html.o $(COMMON) $(MKDLIB).la @LIBS@
  
  markdown: main.o $(COMMON) $(MKDLIB)
--	$(CC) $(CFLAGS) $(LFLAGS) -o markdown main.o $(COMMON) -lmarkdown @LIBS@
-+	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LFLAGS) -o markdown main.o $(COMMON) $(MKDLIB).la @LIBS@
+-	$(LINK) -o markdown main.o $(COMMON) -lmarkdown @LIBS@
++	$(LINK) -o markdown main.o $(COMMON) $(MKDLIB).la @LIBS@
  	
--makepage:  makepage.c $(COMMON) $(MKDLIB) mkdio.h
--	$(CC) $(CFLAGS) $(LFLAGS) -o makepage makepage.c $(COMMON) -lmarkdown @LIBS@
-+makepage:  makepage.o $(COMMON) $(MKDLIB)
-+	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LFLAGS) -o makepage makepage.o $(COMMON) $(MKDLIB).la @LIBS@
+ makepage.o: makepage.c mkdio.h
+ 	$(BUILD) -c makepage.c
+ makepage:  makepage.o $(COMMON) $(MKDLIB)
+-	$(LINK) -o makepage makepage.o $(COMMON) -lmarkdown @LIBS@
++	$(LINK) -o makepage makepage.o $(COMMON) $(MKDLIB).la @LIBS@
  
  pgm_options.o: pgm_options.c mkdio.h config.h
--	$(CC) $(CFLAGS) -I. -c pgm_options.c
-+	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -I. -c pgm_options.c
- 
- notspecial.o: notspecial.c
- 	$(CC) $(CFLAGS) -I. -c notspecial.c
-@@ -111,8 +117,12 @@ gethopt.o: gethopt.c
+ 	$(BUILD) -c pgm_options.c
+@@ -126,8 +129,12 @@ gethopt.o: gethopt.c
  main.o: main.c mkdio.h config.h
- 	$(CC) $(CFLAGS) -I. -c main.c
+ 	$(BUILD) -c main.c
  
 -$(MKDLIB): $(OBJS)
 -	./librarian.sh make $(MKDLIB) VERSION $(OBJS)
@@ -83,7 +77,16 @@ Libtoolize for portability across pkgsrc platforms.
 +
 +$(MKDLIB): $(MKDLIB).la
 +$(MKDLIB).la: $(OBJS) libtool-version-info
-+	$(LIBTOOL) --mode=link @CC@ $(LDFLAGS) -o $(MKDLIB).la $(OBJS:S/.o/.lo/g) -version-info `cat libtool-version-info` -rpath $(LIBDIR)
++	$(LINK) -o $(MKDLIB).la $(OBJS:S/.o/.lo/g) -version-info `cat libtool-version-info` -rpath $(LIBDIR)
  
  verify: echo tools/checkbits.sh
  	@./echo -n "headers ... "; tools/checkbits.sh && echo "GOOD"
+@@ -139,7 +146,7 @@ test:	$(PGMS) $(TESTFRAMEWORK) verify
+ 
+ pandoc_headers.o: tools/pandoc_headers.c config.h
+ 	$(BUILD) -c -o pandoc_headers.o tools/pandoc_headers.c
+-pandoc_headers: pandoc_headers.o
++pandoc_headers: pandoc_headers.o $(COMMON) $(MKDLIB)
+ 	$(LINK) -o pandoc_headers pandoc_headers.o $(COMMON) -lmarkdown 
+ 
+ branch.o: tools/branch.c config.h
