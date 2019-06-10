@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2017/01/27 12:04:08 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.13 2019/06/10 11:29:06 nia Exp $
 bin/feh
 man/man1/feh.1
 share/applications/feh.desktop
@@ -15,11 +15,6 @@ share/feh/fonts/menu.style
 share/feh/fonts/yudit.ttf
 share/feh/images/feh.png
 share/feh/images/feh.svg
-share/feh/images/menubg_aluminium.png
-share/feh/images/menubg_aqua.png
-share/feh/images/menubg_black.png
-share/feh/images/menubg_brushed.png
 share/feh/images/menubg_default.png
-share/feh/images/menubg_sky.png
 share/icons/hicolor/48x48/apps/feh.png
 share/icons/hicolor/scalable/apps/feh.svg
