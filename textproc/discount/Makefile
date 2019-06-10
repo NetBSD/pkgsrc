@@ -1,15 +1,19 @@
-# $NetBSD: Makefile,v 1.8 2018/08/27 20:46:18 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2019/06/10 13:32:56 schmonz Exp $
 #
 
-DISTNAME=	discount-2.2.4
+GITHUB_PROJECT=	discount
+DISTNAME=	v2.2.6
+PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S/^v//}
 CATEGORIES=	textproc
-MASTER_SITES=	${HOMEPAGE}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=Orc/}
+DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	zecrazytux@zecrazytux.net
 HOMEPAGE=	http://www.pell.portland.or.us/~orc/Code/discount/
 COMMENT=	Markdown C implementation
 LICENSE=	modified-bsd
+
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 HAS_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	./configure.sh
@@ -20,7 +24,10 @@ CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--shared
 CONFIGURE_ARGS+=	--enable-all-features
 
+USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
+
+PKGCONFIG_OVERRIDE+=	libmarkdown.pc.in
 
 INSTALL_TARGET=		install.everything
 TEST_TARGET=		test
