@@ -1,45 +1,23 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2013/06/17 15:16:47 ryoon Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2019/06/10 19:08:42 nia Exp $
 
-* Install plain (un-gzipped) man page.
-* 
+Install plain (un-gzipped) man page.
 
---- CMakeLists.txt.orig	2013-06-11 20:57:16.000000000 +0000
+--- CMakeLists.txt.orig	2018-11-03 01:43:42.000000000 +0000
 +++ CMakeLists.txt
-@@ -417,9 +417,7 @@ INCLUDE_DIRECTORIES(${CMAKE_BINARY_DIR} 
- LINK_DIRECTORIES(${CMAKE_INSTALL_PREFIX}/lib ${ASOUND_LIBRARY_DIR} ${JACK_LIBRARY_DIRS} ${SAMPLERATE_LIBRARY_DIRS} ${SNDFILE_LIBRARY_DIRS})
- LINK_LIBRARIES(${CMAKE_THREAD_LIBS_INIT} ${QT_LIBRARIES} ${ASOUND_LIBRARY} ${SDL_LIBRARY} ${PORTAUDIO_LIBRARIES} ${PULSEAUDIO_LIBRARIES} ${JACK_LIBRARIES} ${OGGVORBIS_LIBRARIES} ${SAMPLERATE_LIBRARIES} ${SNDFILE_LIBRARIES} ${EXTRA_LIBRARIES})
+@@ -563,16 +563,6 @@ ADD_SUBDIRECTORY(doc)
+ # post-install tasks
+ ADD_SUBDIRECTORY(cmake/postinstall)
  
--ADD_CUSTOM_COMMAND(OUTPUT ${CMAKE_BINARY_DIR}/lmms.1.gz COMMAND gzip -c ${CMAKE_SOURCE_DIR}/lmms.1 > ${CMAKE_BINARY_DIR}/lmms.1.gz DEPENDS ${CMAKE_SOURCE_DIR}/lmms.1 COMMENT "Generating lmms.1.gz")
+-ADD_CUSTOM_COMMAND(OUTPUT "${CMAKE_BINARY_DIR}/lmms.1.gz"
+-				COMMAND gzip -c ${CMAKE_SOURCE_DIR}/doc/lmms.1 > ${CMAKE_BINARY_DIR}/lmms.1.gz
+-				DEPENDS "${CMAKE_SOURCE_DIR}/doc/lmms.1"
+-				COMMENT "Generating lmms.1.gz"
+-				VERBATIM)
 -
--ADD_EXECUTABLE(lmms ${lmms_SOURCES} ${lmms_INCLUDES} ${LIBSAMPLERATE_SOURCES} ${LMMS_ER_H} ${lmms_UI_out} lmmsconfig.h lmmsversion.h ${WINRC} ${CMAKE_BINARY_DIR}/lmms.1.gz)
-+ADD_EXECUTABLE(lmms ${lmms_SOURCES} ${lmms_INCLUDES} ${LIBSAMPLERATE_SOURCES} ${LMMS_ER_H} ${lmms_UI_out} lmmsconfig.h lmmsversion.h ${WINRC} ${CMAKE_BINARY_DIR}/lmms.1)
+-
+-ADD_CUSTOM_TARGET(manpage ALL
+-				DEPENDS "${CMAKE_BINARY_DIR}/lmms.1.gz")
+-
+ # install headers
  
- IF(LMMS_BUILD_WIN32)
- 
-@@ -453,7 +451,7 @@ ELSE(LMMS_BUILD_WIN32)
- 	ENDIF(NOT LMMS_BUILD_APPLE)
- 
- 	INSTALL(TARGETS lmms RUNTIME DESTINATION bin)
--	INSTALL(FILES ${CMAKE_BINARY_DIR}/lmms.1.gz DESTINATION ${CMAKE_INSTALL_PREFIX}/share/man/man1/ PERMISSIONS OWNER_READ GROUP_READ WORLD_READ)
-+	INSTALL(FILES ${CMAKE_BINARY_DIR}/lmms.1 DESTINATION ${CMAKE_INSTALL_PREFIX}/man/man1/ PERMISSIONS OWNER_READ GROUP_READ WORLD_READ)
- 
- ENDIF(LMMS_BUILD_WIN32)
- 
-@@ -507,7 +505,7 @@ ENDIF(LMMS_BUILD_WIN32)
- #
- ADD_CUSTOM_TARGET(distclean
- 			COMMAND make clean
--			COMMAND rm -rf `find -name cmake_install.cmake` `find -name Makefile` `find -type d -name CMakeFiles` CMakeCache.txt lmmsconfig.h lmms.1.gz)
-+			COMMAND rm -rf `find -name cmake_install.cmake` `find -name Makefile` `find -type d -name CMakeFiles` CMakeCache.txt lmmsconfig.h lmms.1)
- 
- #
- # add tarball-target
-@@ -557,7 +555,7 @@ ADD_CUSTOM_TARGET(win32-pkg
- )
- 
- 
--SET_DIRECTORY_PROPERTIES(PROPERTIES ADDITIONAL_MAKE_CLEAN_FILES "${LMMS_ER_H} ${lmms_MOC_out} ${lmms_UI_out} lmmsconfig.h lmms.1.gz")
-+SET_DIRECTORY_PROPERTIES(PROPERTIES ADDITIONAL_MAKE_CLEAN_FILES "${LMMS_ER_H} ${lmms_MOC_out} ${lmms_UI_out} lmmsconfig.h lmms.1")
- 
- 
- #
+ IF(LMMS_BUILD_LINUX)
