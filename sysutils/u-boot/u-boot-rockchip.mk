@@ -1,4 +1,4 @@
-#	$NetBSD: u-boot-rockchip.mk,v 1.1 2019/06/08 12:25:05 mrg Exp $
+#	$NetBSD: u-boot-rockchip.mk,v 1.2 2019/06/10 01:50:34 mrg Exp $
 
 #
 # Common makefile fragment for rockchip based u-boot targets.
@@ -8,11 +8,11 @@
 #	U_BOOT_IMAGE_TYPE	("rk3399", "rk3328")
 #
 
-PKGREVISION=	2
+PKGREVISION=	3
 UBOOT_VERSION=	${GITHUB_TAG:C/-.*$//}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ayufan-rock64/}
 GITHUB_PROJECT=	linux-u-boot
-GITHUB_TAG=	2017.09-rockchip-ayufan-1056-ge2de533f6c
+GITHUB_TAG=	2017.09-rockchip-ayufan-1060-g56bd958253
 DISTNAME=	${GITHUB_TAG}
 PATCHDIR=	${.CURDIR}/../../sysutils/u-boot-rockpro64/patches
 DISTFILES=	${DEFAULT_DISTFILES}
