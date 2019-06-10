@@ -1,10 +1,10 @@
-$NetBSD: patch-generate.c,v 1.2 2018/07/27 15:50:45 schmonz Exp $
+$NetBSD: patch-generate.c,v 1.3 2019/06/10 13:32:56 schmonz Exp $
 
 Fix self-tests on NetBSD.
 
---- generate.c.orig	2018-03-02 22:52:05.000000000 +0000
+--- generate.c.orig	2019-04-15 15:28:20.000000000 +0000
 +++ generate.c
-@@ -747,7 +747,7 @@ linkylinky(int image, MMIOT *f)
+@@ -757,7 +757,7 @@ linkylinky(int image, MMIOT *f)
  	else {
  	    int goodlink, implicit_mark = mmiottell(f);
  
@@ -13,7 +13,7 @@ Fix self-tests on NetBSD.
  		pull(f);
  	    
  	    if ( peek(f,1) == '[' ) {
-@@ -1151,7 +1151,7 @@ islike(MMIOT *f, char *s)
+@@ -1161,7 +1161,7 @@ islike(MMIOT *f, char *s)
      }
  
      for (i=1; i < len; i++)
@@ -22,7 +22,7 @@ Fix self-tests on NetBSD.
  	    return 0;
      return 1;
  }
-@@ -1269,7 +1269,7 @@ tickhandler(MMIOT *f, int tickchar, int 
+@@ -1281,7 +1281,7 @@ tickhandler(MMIOT *f, int tickchar, int 
      int endticks, size;
      int tick = nrticks(0, tickchar, f);
  
@@ -31,12 +31,12 @@ Fix self-tests on NetBSD.
  	return 0;
  
      if ( (tick >= minticks) && (size = matchticks(f,tickchar,tick,&endticks)) ) {
-@@ -1297,7 +1297,7 @@ text(MMIOT *f)
+@@ -1309,7 +1309,7 @@ text(MMIOT *f)
      int smartyflags = 0;
  
      while (1) {
--        if ( (f->flags & MKD_AUTOLINK) && isalpha(peek(f,1)) && !tag_text(f) )
-+        if ( (f->flags & MKD_AUTOLINK) && isalpha((unsigned char)peek(f,1)) && !tag_text(f) )
+-        if ( is_flag_set(f->flags, MKD_AUTOLINK) && isalpha(peek(f,1)) && !tag_text(f) )
++        if ( is_flag_set(f->flags, MKD_AUTOLINK) && isalpha((unsigned char)peek(f,1)) && !tag_text(f) )
  	    maybe_autolink(f);
  
          c = pull(f);
