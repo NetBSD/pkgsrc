@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2447 2019/06/10 13:44:46 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2448 2019/06/10 14:48:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4113,3 +4113,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/dunst to 1.4.0 [nia 2019-06-10]
 	Updated textproc/discount to 2.2.6 [schmonz 2019-06-10]
 	Updated security/dropbear to 2019.78 [nia 2019-06-10]
+	Updated multimedia/libbluray to 1.1.2 [adam 2019-06-10]
+	Updated devel/py-flexmock to 0.10.4 [adam 2019-06-10]
