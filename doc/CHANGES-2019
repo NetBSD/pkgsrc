@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2436 2019/06/09 21:26:58 leot Exp $
+$NetBSD: CHANGES-2019,v 1.2437 2019/06/10 02:49:36 jym Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4095,3 +4095,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/git-svn to 2.22.0 [ryoon 2019-06-09]
 	Updated www/gitweb to 2.22.0 [ryoon 2019-06-09]
 	Updated net/youtube-dl to 20190608 [leot 2019-06-09]
+	Updated benchmarks/phoronix-test-suite to 8.8.1 [jym 2019-06-10]
