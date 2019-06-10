@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE.NetBSD,v 1.1 2019/06/10 12:41:23 nia Exp $
+
+Lowering the system audio latency (or blk_ms) with sysctl(8) may be
+required to achieve full performance and framerates.
+
+===========================================================================
