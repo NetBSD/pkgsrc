@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2019/01/07 18:02:45 kleink Exp $
+# $NetBSD: Makefile,v 1.2 2019/06/10 08:55:42 adam Exp $
 
-DISTNAME=	Flask-Cors-3.0.7
+DISTNAME=	Flask-Cors-3.0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-CORS/}
