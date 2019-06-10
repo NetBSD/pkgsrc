@@ -46,6 +46,21 @@ func (s *Suite) Test_Package_checkLinesBuildlink3Inclusion__package_but_not_file
 		"TRACE: - (*Package).checkLinesBuildlink3Inclusion()")
 }
 
+// Just for code coverage.
+func (s *Suite) Test_Package_checkLinesBuildlink3Inclusion__no_tracing(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"PKGNAME=\tpackage-1.0")
+	t.CreateFileDummyBuildlink3("category/package/buildlink3.mk")
+	t.FinishSetUp()
+
+	t.DisableTracing()
+	G.Check(t.File("category/package"))
+
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_Package_pkgnameFromDistname(c *check.C) {
 	t := s.Init(c)
 
@@ -98,31 +113,60 @@ func (s *Suite) Test_Package_pkgnameFromDistname(c *check.C) {
 	test("${DISTFILE:C,\\..*,,}", "aspell-af-0.50-0", "")
 }
 
-func (s *Suite) Test_Package_CheckVarorder(c *check.C) {
+func (s *Suite) Test_Package_CheckVarorder__only_required_variables(c *check.C) {
 	t := s.Init(c)
 
 	pkg := NewPackage(t.File("x11/9term"))
+	mklines := t.NewMkLines("Makefile",
+		MkRcsID,
+		"",
+		"DISTNAME=9term",
+		"CATEGORIES=x11",
+		"",
+		".include \"../../mk/bsd.pkg.mk\"")
 
-	pkg.CheckVarorder(t.NewMkLines("Makefile",
+	pkg.CheckVarorder(mklines)
+
+	t.CheckOutputLines(
+		"WARN: Makefile:3: The canonical order of the variables is " +
+			"DISTNAME, CATEGORIES, empty line, COMMENT, LICENSE.")
+}
+
+func (s *Suite) Test_Package_CheckVarorder__with_optional_variables(c *check.C) {
+	t := s.Init(c)
+
+	pkg := NewPackage(t.File("x11/9term"))
+	mklines := t.NewMkLines("Makefile",
 		MkRcsID,
 		"",
 		"GITHUB_PROJECT=project",
 		"DISTNAME=9term",
-		"CATEGORIES=x11"))
+		"CATEGORIES=x11")
+
+	pkg.CheckVarorder(mklines)
 
 	// TODO: Make this warning more specific to the actual situation.
 	t.CheckOutputLines(
 		"WARN: Makefile:3: The canonical order of the variables is " +
 			"GITHUB_PROJECT, DISTNAME, CATEGORIES, GITHUB_PROJECT, empty line, " +
 			"COMMENT, LICENSE.")
+}
 
-	pkg.CheckVarorder(t.NewMkLines("Makefile",
+// Just for code coverage.
+func (s *Suite) Test_Package_CheckVarorder__no_tracing(c *check.C) {
+	t := s.Init(c)
+
+	pkg := NewPackage(t.File("x11/9term"))
+	mklines := t.NewMkLines("Makefile",
 		MkRcsID,
 		"",
 		"DISTNAME=9term",
 		"CATEGORIES=x11",
 		"",
-		".include \"../../mk/bsd.pkg.mk\""))
+		".include \"../../mk/bsd.pkg.mk\"")
+	t.DisableTracing()
+
+	pkg.CheckVarorder(mklines)
 
 	t.CheckOutputLines(
 		"WARN: Makefile:3: The canonical order of the variables is " +
@@ -176,8 +220,7 @@ func (s *Suite) Test_Package_CheckVarorder__skip_if_there_are_directives(c *chec
 	t := s.Init(c)
 
 	pkg := NewPackage(t.File("category/package"))
-
-	pkg.CheckVarorder(t.NewMkLines("Makefile",
+	mklines := t.NewMkLines("Makefile",
 		MkRcsID,
 		"",
 		"DISTNAME=\tdistname-1.0",
@@ -186,10 +229,17 @@ func (s *Suite) Test_Package_CheckVarorder__skip_if_there_are_directives(c *chec
 		".if ${DISTNAME:Mdistname-*}",
 		"MAINTAINER=\tpkgsrc-users@NetBSD.org",
 		".endif",
-		"LICENSE=\tgnu-gpl-v2"))
+		"LICENSE=\tgnu-gpl-v2")
+
+	pkg.CheckVarorder(mklines)
 
 	// No warning about the missing COMMENT since the .if directive
 	// causes the whole check to be skipped.
+	t.CheckOutputEmpty()
+
+	// Just for code coverage.
+	t.DisableTracing()
+	pkg.CheckVarorder(mklines)
 	t.CheckOutputEmpty()
 }
 
@@ -1233,6 +1283,35 @@ func (s *Suite) Test_Package_readMakefile__included(c *check.C) {
 	t.Check(seen.seen, check.HasLen, 5)
 }
 
+// Just for code coverage.
+func (s *Suite) Test_Package_findIncludedFile__no_tracing(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		".include \"../../${UNKNOWN_PKGPATH}/buildlink3.mk\"",
+		".include \"../../lang/language/buildlink3.mk\"")
+	t.CreateFileLines("lang/language/buildlink3.mk",
+		MkRcsID)
+	t.FinishSetUp()
+	pkg := NewPackage(t.File("category/package"))
+	t.DisableTracing()
+
+	pkg.loadPackageMakefile()
+
+	expected := []string{
+		"../../lang/language/buildlink3.mk",
+		"../../lang/language/builtin.mk",
+		"suppress-varorder.mk"}
+
+	seen := pkg.included
+	for _, filename := range expected {
+		if !seen.Seen(filename) {
+			c.Errorf("File %q is not seen.", filename)
+		}
+	}
+	t.Check(seen.seen, check.HasLen, 3)
+}
+
 func (s *Suite) Test_Package_checkLocallyModified(c *check.C) {
 	t := s.Init(c)
 
@@ -1294,6 +1373,26 @@ func (s *Suite) Test_Package_checkLocallyModified(c *check.C) {
 	G.Check(pkg)
 
 	t.CheckOutputEmpty()
+}
+
+// Just for code coverage.
+func (s *Suite) Test_Package_checkLocallyModified__no_tracing(c *check.C) {
+	t := s.Init(c)
+
+	G.Username = "example-user"
+	t.CreateFileLines("category/package/CVS/Entries",
+		"/Makefile//modified//")
+
+	pkg := t.SetUpPackage("category/package",
+		"MAINTAINER=\tmaintainer@example.org")
+	t.FinishSetUp()
+	t.DisableTracing()
+
+	G.Check(pkg)
+
+	t.CheckOutputLines(
+		"NOTE: ~/category/package/Makefile: Please only commit changes " +
+			"that maintainer@example.org would approve.")
 }
 
 func (s *Suite) Test_Package_checkLocallyModified__directory(c *check.C) {

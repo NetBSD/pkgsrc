@@ -69,13 +69,15 @@ func (m MkVarUseModifier) Subst(str string) (string, bool) {
 		from = from[:len(from)-1]
 	}
 
+	if regex && matches(from, `^[\w-]+$`) && matches(to, `^[^&$\\]*$`) {
+		// The "from" pattern is so simple that it doesn't matter whether
+		// the modifier is :S or :C, therefore treat it like the simpler :S.
+		regex = false
+	}
+
 	if regex {
-		if matches(from, `^[\w-]+$`) && matches(to, `^[^&$\\]*$`) {
-			regex = false
-		} else {
-			// TODO: Maybe implement regular expression substitutions later.
-			return "", false
-		}
+		// TODO: Maybe implement regular expression substitutions later.
+		return "", false
 	}
 
 	result := mkopSubst(str, leftAnchor, from, rightAnchor, to, options)

@@ -61,8 +61,9 @@ func NewPkglint() Pkglint {
 
 // unusablePkglint returns a pkglint object that crashes as early as possible.
 // This is to ensure that tests are properly initialized and shut down.
-func unusablePkglint() Pkglint        { return Pkglint{} }
-func (pkglint *Pkglint) Usable() bool { return pkglint != nil }
+func unusablePkglint() Pkglint { return Pkglint{} }
+
+func (pkglint *Pkglint) usable() bool { return pkglint != nil }
 
 type InterPackage struct {
 	hashes       map[string]*Hash    // Maps "alg:filename" => hash (inter-package check).
@@ -202,12 +203,12 @@ func (pkglint *Pkglint) Main(argv ...string) (exitCode int) {
 			runtime.GC()
 
 			fd, err := os.Create("pkglint.heapdump")
-			G.AssertNil(err, "heapDump.create")
+			assertNil(err, "heapDump.create")
 
 			debug.WriteHeapDump(fd.Fd())
 
 			err = fd.Close()
-			G.AssertNil(err, "heapDump.close")
+			assertNil(err, "heapDump.close")
 		}()
 
 		f, err := os.Create("pkglint.pprof")
@@ -217,7 +218,7 @@ func (pkglint *Pkglint) Main(argv ...string) (exitCode int) {
 		defer f.Close()
 
 		err = pprof.StartCPUProfile(f)
-		G.AssertNil(err, "Cannot start profiling")
+		assertNil(err, "Cannot start profiling")
 		defer pprof.StopCPUProfile()
 
 		pkglint.res.Profiling()
@@ -258,10 +259,9 @@ func (pkglint *Pkglint) Main(argv ...string) (exitCode int) {
 	pkglint.Pkgsrc.LoadInfrastructure()
 
 	currentUser, err := user.Current()
-	if err == nil {
-		// On Windows, this is `Computername\Username`.
-		pkglint.Username = replaceAll(currentUser.Username, `^.*\\`, "")
-	}
+	assertNil(err, "user.Current")
+	// On Windows, this is `Computername\Username`.
+	pkglint.Username = replaceAll(currentUser.Username, `^.*\\`, "")
 
 	for len(pkglint.Todo) > 0 {
 		item := pkglint.Todo[0]
@@ -444,28 +444,6 @@ func (pkglint *Pkglint) checkdirPackage(dir string) {
 
 	files, mklines, allLines := pkg.load()
 	pkg.check(files, mklines, allLines)
-}
-
-// Assertf checks that the condition is true. Otherwise it terminates the
-// process with a fatal error message, prefixed with "Pkglint internal error".
-//
-// This method must only be used for programming errors.
-// For runtime errors, use dummyLine.Fatalf.
-func (pkglint *Pkglint) Assertf(cond bool, format string, args ...interface{}) {
-	if !cond {
-		panic("Pkglint internal error: " + sprintf(format, args...))
-	}
-}
-
-// AssertNil ensures that the given error is nil.
-//
-// Contrary to other diagnostics, the format should not end in a period
-// since it is followed by the error.
-//
-// Other than Assertf, this method does not require any comparison operator in the calling code.
-// This makes it possible to get 100% branch coverage for cases that "really can never fail".
-func (pkglint *Pkglint) AssertNil(err error, format string, args ...interface{}) {
-	assertNil(err, format, args...)
 }
 
 // Returns the pkgsrc top-level directory, relative to the given directory.

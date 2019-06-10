@@ -366,6 +366,22 @@ func (s *Suite) Test_MkLines_collectDefinedVariables__BUILTIN_FIND_FILES_VAR(c *
 		"WARN: ~/category/package/builtin.mk:8: H_UNDEF is used but not defined.")
 }
 
+func (s *Suite) Test_MkLines_collectDefinedVariables__no_tracing(c *check.C) {
+	t := s.Init(c)
+
+	mklines := t.SetUpFileMkLines("filename.mk",
+		MkRcsID,
+		"",
+		"BUILD_DEFS+=\tVAR1",
+		"PLIST_VARS+=\tvar2",
+		"SUBST_VARS.id+=\tVAR3")
+	t.DisableTracing()
+
+	mklines.collectDefinedVariables()
+
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_MkLines_collectUsedVariables__simple(c *check.C) {
 	t := s.Init(c)
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2019/03/10 19:01:50 rillig Exp $
+@comment $NetBSD: PLIST,v 1.12 2019/06/10 19:51:57 rillig Exp $
 bin/pkglint
 gopkg/pkg/${GO_PLATFORM}/netbsd.org/pkglint.a
 gopkg/pkg/${GO_PLATFORM}/netbsd.org/pkglint/getopt.a
@@ -71,6 +71,8 @@ gopkg/src/netbsd.org/pkglint/options.go
 gopkg/src/netbsd.org/pkglint/options_test.go
 gopkg/src/netbsd.org/pkglint/package.go
 gopkg/src/netbsd.org/pkglint/package_test.go
+gopkg/src/netbsd.org/pkglint/paragraph.go
+gopkg/src/netbsd.org/pkglint/paragraph_test.go
 gopkg/src/netbsd.org/pkglint/patches.go
 gopkg/src/netbsd.org/pkglint/patches_test.go
 gopkg/src/netbsd.org/pkglint/pkglint.0

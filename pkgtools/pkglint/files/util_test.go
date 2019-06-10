@@ -1,11 +1,22 @@
 package pkglint
 
 import (
+	"errors"
 	"gopkg.in/check.v1"
 	"os"
 	"testing"
 	"time"
 )
+
+func (s *Suite) Test_assertNil(c *check.C) {
+	t := s.Init(c)
+
+	assertNil(nil, "this is not an error")
+
+	t.ExpectPanic(
+		func() { assertNil(errors.New("unexpected error"), "Oops") },
+		"Pkglint internal error: Oops: unexpected error")
+}
 
 func (s *Suite) Test_YesNoUnknown_String(c *check.C) {
 	c.Check(yes.String(), equals, "yes")
@@ -704,6 +715,62 @@ func (s *Suite) Test_FileCache_removeOldEntries__branch_coverage(c *check.C) {
 		"TRACE:   FileCache.Halve \"filename2.mk\" with count 3.")
 }
 
+func (s *Suite) Test_FileCache_removeOldEntries__no_tracing(c *check.C) {
+	t := s.Init(c)
+
+	t.DisableTracing()
+
+	lines := t.NewLines("filename.mk",
+		MkRcsID)
+	cache := NewFileCache(3)
+	cache.Put("filename1.mk", 0, lines)
+	cache.Put("filename2.mk", 0, lines)
+	cache.Get("filename2.mk", 0)
+	cache.Get("filename2.mk", 0)
+	cache.Put("filename3.mk", 0, lines)
+	cache.Put("filename4.mk", 0, lines)
+
+	t.CheckOutputEmpty()
+}
+
+// Covers the newLen > 0 condition.
+func (s *Suite) Test_FileCache_removeOldEntries__zero_capacity(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.NewLines("filename.mk",
+		MkRcsID)
+	cache := NewFileCache(1)
+	cache.Put("filename1.mk", 0, lines)
+
+	// This call removes all existing entries from the cache,
+	// as the cache's capacity is only 1.
+	cache.Put("filename2.mk", 0, lines)
+}
+
+func (s *Suite) Test_FileCache_Evict__sort(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.NewLines("filename.mk",
+		MkRcsID)
+	cache := NewFileCache(10)
+	cache.Put("filename0.mk", 0, lines)
+	cache.Put("filename1.mk", 0, lines)
+	cache.Put("filename2.mk", 0, lines)
+	cache.Put("filename3.mk", 0, lines)
+	cache.Put("filename4.mk", 0, lines)
+	cache.Put("filename5.mk", 0, lines)
+	cache.Put("filename6.mk", 0, lines)
+	cache.Put("filename7.mk", 0, lines)
+	cache.Put("filename8.mk", 0, lines)
+	cache.Put("filename9.mk", 0, lines)
+
+	cache.Evict("filename5.mk")
+
+	t.Check(cache.table, check.HasLen, 9)
+	t.Check(cache.Get("filename5.mk", 0), check.IsNil)
+	t.Check(cache.Get("filename6.mk", 0), check.NotNil)
+}
+
 func (s *Suite) Test_makeHelp(c *check.C) {
 	c.Check(makeHelp("subst"), equals, confMake+" help topic=subst")
 }
@@ -724,6 +791,23 @@ func (s *Suite) Test_Once(c *check.C) {
 	c.Check(once.FirstTimeSlice("str"), equals, false)
 	c.Check(once.FirstTimeSlice("str", "str2"), equals, true)
 	c.Check(once.FirstTimeSlice("str", "str2"), equals, false)
+}
+
+func (s *Suite) Test_Once__trace(c *check.C) {
+	t := s.Init(c)
+
+	var once Once
+	once.Trace = true
+
+	c.Check(once.FirstTime("str"), equals, true)
+	c.Check(once.FirstTime("str"), equals, false)
+	c.Check(once.FirstTimeSlice("str"), equals, false)
+	c.Check(once.FirstTimeSlice("str", "str2"), equals, true)
+	c.Check(once.FirstTimeSlice("str", "str2"), equals, false)
+
+	t.CheckOutputLines(
+		"FirstTime: str",
+		"FirstTime: str, str2")
 }
 
 func (s *Suite) Test_wrap(c *check.C) {

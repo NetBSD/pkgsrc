@@ -235,6 +235,17 @@ func (s *Suite) Test_Var_Write__conditional_without_variables(c *check.C) {
 	})
 }
 
+func (s *Suite) Test_Var_Write__assertion(c *check.C) {
+	t := s.Init(c)
+
+	v := NewVar("VAR")
+	t.ExpectPanic(
+		func() {
+			v.Write(t.NewMkLine("filename.mk", 1, "OTHER=value"), false, nil...)
+		},
+		"Pkglint internal error: wrong variable name")
+}
+
 func (s *Suite) Test_Var_Value__conditional_write_after_unconditional(c *check.C) {
 	t := s.Init(c)
 

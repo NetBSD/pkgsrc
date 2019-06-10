@@ -29,7 +29,7 @@ func (p *MkParser) Rest() string {
 // which means the # is a normal character and does not introduce a Makefile comment.
 // For VarUse, this distinction is irrelevant.
 func NewMkParser(line Line, text string, emitWarnings bool) *MkParser {
-	G.Assertf((line != nil) == emitWarnings, "line must be given iff emitWarnings is set")
+	assertf((line != nil) == emitWarnings, "line must be given iff emitWarnings is set")
 	return &MkParser{line, textproc.NewLexer(text), emitWarnings}
 }
 

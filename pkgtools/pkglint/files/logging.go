@@ -190,14 +190,14 @@ func (l *Logger) Logf(level *LogLevel, filename, lineno, format, msg string) {
 
 	if G.Testing && format != AutofixFormat {
 		if textproc.Alpha.Contains(format[0]) {
-			G.Assertf(
+			assertf(
 				textproc.Upper.Contains(format[0]),
 				"Diagnostic %q must start with an uppercase letter.",
 				format)
 		}
 
 		if !hasSuffix(format, ": %s") && !hasSuffix(format, ". %s") {
-			G.Assertf(hasSuffix(format, "."), "Diagnostic format %q must end in a period.", format)
+			assertf(hasSuffix(format, "."), "Diagnostic format %q must end in a period.", format)
 		}
 	}
 

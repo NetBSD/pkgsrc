@@ -12,7 +12,7 @@ func (s *Suite) Test_VarTypeRegistry_Init(c *check.C) {
 	c.Check(src.vartypes.Canon("USE_BUILTIN.*").basicType.name, equals, "YesNoIndirectly")
 }
 
-func (s *Suite) Test_VarTypeRegistry_Init__enumFrom(c *check.C) {
+func (s *Suite) Test_VarTypeRegistry_enumFrom(c *check.C) {
 	t := s.Init(c)
 
 	t.CreateFileLines("editors/emacs/modules.mk",
@@ -59,7 +59,25 @@ func (s *Suite) Test_VarTypeRegistry_Init__enumFrom(c *check.C) {
 	test("PKGSRC_COMPILER", "enum: ccache distcc f2c g95 gcc ido mipspro-ucode sunpro  (list, user-settable)")
 }
 
-func (s *Suite) Test_VarTypeRegistry_Init__enumFromDirs(c *check.C) {
+func (s *Suite) Test_VarTypeRegistry_enumFrom__no_tracing(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("mk/existing.mk",
+		MkRcsID,
+		"VAR=\tfirst second")
+	reg := NewVarTypeRegistry()
+	t.DisableTracing()
+
+	existingType := reg.enumFrom(&G.Pkgsrc, "mk/existing.mk", "defval", "VAR")
+	noAssignmentsType := reg.enumFrom(&G.Pkgsrc, "mk/existing.mk", "defval", "OTHER_VAR")
+	nonexistentType := reg.enumFrom(&G.Pkgsrc, "mk/nonexistent.mk", "defval", "VAR")
+
+	t.Check(existingType.AllowedEnums(), equals, "first second")
+	t.Check(noAssignmentsType.AllowedEnums(), equals, "defval")
+	t.Check(nonexistentType.AllowedEnums(), equals, "defval")
+}
+
+func (s *Suite) Test_VarTypeRegistry_enumFromDirs(c *check.C) {
 	t := s.Init(c)
 
 	// To make the test useful, these directories must differ from the
@@ -77,7 +95,7 @@ func (s *Suite) Test_VarTypeRegistry_Init__enumFromDirs(c *check.C) {
 	test("PYPKGPREFIX", "enum: py28 py33  (system-provided)")
 }
 
-func (s *Suite) Test_VarTypeRegistry_Init__enumFromFiles(c *check.C) {
+func (s *Suite) Test_VarTypeRegistry_enumFromFiles(c *check.C) {
 	t := s.Init(c)
 
 	t.CreateFileLines("mk/platform/NetBSD.mk")

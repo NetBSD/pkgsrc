@@ -460,7 +460,7 @@ func (p *ShTokenizer) ShToken() *ShToken {
 		return nil
 	}
 
-	G.Assertf(len(atoms) > 0, "ShTokenizer.ShToken")
+	assertf(len(atoms) > 0, "ShTokenizer.ShToken")
 	return NewShToken(lexer.Since(initialMark), atoms...)
 }
 

@@ -1020,7 +1020,7 @@ func (ck *ShellLineChecker) checkInstallCommand(shellcmd string) {
 		defer trace.Call0()()
 	}
 
-	if ck.MkLines == nil || !matches(ck.MkLines.target, `^(?:pre|do|post)-install$`) {
+	if !matches(ck.MkLines.target, `^(?:pre|do|post)-install$`) {
 		return
 	}
 

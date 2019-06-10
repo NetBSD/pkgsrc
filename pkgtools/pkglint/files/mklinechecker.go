@@ -225,7 +225,7 @@ func (ck MkLineChecker) checkDirectiveFor(forVars map[string]bool, indentation *
 		// running pkglint over the whole pkgsrc tree did not produce any different result
 		// whether guessed was true or false.
 		forLoopType := NewVartype(btForLoop, List, NewACLEntry("*", aclpAllRead))
-		forLoopContext := VarUseContext{forLoopType, vucTimeParse, VucQuotPlain, false}
+		forLoopContext := VarUseContext{forLoopType, vucTimeLoad, VucQuotPlain, false}
 		mkline.ForEachUsed(func(varUse *MkVarUse, time vucTime) {
 			ck.CheckVaruse(varUse, &forLoopContext)
 		})
@@ -233,7 +233,7 @@ func (ck MkLineChecker) checkDirectiveFor(forVars map[string]bool, indentation *
 }
 
 func (ck MkLineChecker) checkDirectiveIndentation(expectedDepth int) {
-	if ck.MkLines == nil || !G.Opts.WarnSpace {
+	if !G.Opts.WarnSpace {
 		return
 	}
 	mkline := ck.MkLine
@@ -408,10 +408,9 @@ func (ck MkLineChecker) checkVarassignLeftRationale() {
 	}
 
 	isRationale := func(mkline MkLine) bool {
-		if mkline.IsVarassign() || mkline.IsCommentedVarassign() {
-			return mkline.VarassignComment() != ""
-		}
-		return mkline.IsComment() && !hasPrefix(mkline.Text, "# $")
+		return mkline.IsComment() &&
+			!hasPrefix(mkline.Text, "# $") &&
+			!mkline.IsCommentedVarassign()
 	}
 
 	needsRationale := func(mkline MkLine) bool {
@@ -531,13 +530,13 @@ func (ck MkLineChecker) checkVaruseUndefined(vartype *Vartype, varname string) {
 		// Well-known variables are probably defined by the infrastructure.
 		return
 
-	case ck.MkLines != nil && ck.MkLines.vars.DefinedSimilar(varname):
+	case ck.MkLines.vars.DefinedSimilar(varname):
 		return
 
-	case ck.MkLines != nil && ck.MkLines.forVars[varname]:
+	case ck.MkLines.forVars[varname]:
 		return
 
-	case ck.MkLines != nil && ck.MkLines.vars.Mentioned(varname) != nil:
+	case ck.MkLines.vars.Mentioned(varname) != nil:
 		return
 
 	case G.Pkg != nil && G.Pkg.vars.DefinedSimilar(varname):
@@ -549,7 +548,7 @@ func (ck MkLineChecker) checkVaruseUndefined(vartype *Vartype, varname string) {
 	case G.Pkgsrc.vartypes.DefinedCanon(varname):
 		return
 
-	case ck.MkLines == nil || !ck.MkLines.FirstTimeSlice("used but not defined: ", varname):
+	case !ck.MkLines.FirstTimeSlice("used but not defined: ", varname):
 		return
 	}
 
@@ -624,6 +623,7 @@ func (ck MkLineChecker) checkVarusePermissions(varname string, vartype *Vartype,
 		// many wrong warnings.
 		return
 	}
+
 	if trace.Tracing {
 		defer trace.Call(varname, vuc)()
 	}
@@ -639,57 +639,7 @@ func (ck MkLineChecker) checkVarusePermissions(varname string, vartype *Vartype,
 		return
 	}
 
-	mkline := ck.MkLine
-	if mkline.Basename == "hacks.mk" {
-		return
-	}
-
-	effPerms := vartype.EffectivePermissions(mkline.Basename)
-	if effPerms.Contains(aclpUseLoadtime) {
-		// Skip any checks, assuming that if a variable may be used at
-		// load time, it may also be used at run time.
-		return
-	}
-
-	// At this point the variable must not be used at load time.
-	// Now determine whether it is directly used at load time because
-	// the context already says so or, a little trickier, if it might
-	// be used at load time somewhere in the future because it is
-	// assigned to another variable, and that variable is allowed
-	// to be used at load time.
-	directly := vuc.time == vucTimeParse
-	indirectly := !directly && vuc.vartype != nil &&
-		vuc.vartype.Union().Contains(aclpUseLoadtime)
-
 	if vartype.Guessed() {
-		return
-	}
-
-	if directly || indirectly {
-		// At this point the variable is used at load time although that
-		// is not allowed.
-
-		// Whether a tool variable may be used at load time depends on
-		// whether bsd.prefs.mk has been included. That file examines the
-		// tools that have been added to USE_TOOLS up to this point and
-		// makes their variables available for use at load time.
-		if tool := G.ToolByVarname(ck.MkLines, varname); tool != nil {
-			if !tool.UsableAtLoadTime(ck.MkLines.Tools.SeenPrefs) {
-				ck.warnVaruseToolLoadTime(varname, tool)
-			}
-			return
-		}
-
-		// Continue to get a detailed warning showing alternative
-		// permissions and/or alternative files.
-
-	} else if effPerms.Contains(aclpUse) {
-		// At this point the variable is used at run time. Since that is
-		// allowed by the permissions, there is nothing more to check for.
-		return
-	}
-
-	if ck.MkLines != nil && !ck.MkLines.FirstTimeSlice("checkVarusePermissions", varname) {
 		return
 	}
 
@@ -702,21 +652,62 @@ func (ck MkLineChecker) checkVarusePermissions(varname string, vartype *Vartype,
 		return
 	}
 
-	// At this point the variable is used either at load time or at run
-	// time, and that particular use is not allowed in this file.
-	//
-	// If the variable is used at run time, it may or may not be used at
-	// load time in this file. Having a variable that may be used at load
-	// time but not at run time is not a practically important case.
-	// Therefore it is not handled specially here.
-	//
-	// Anyway, there must be a warning now since the requested use is not
-	// allowed. The only remaining question is about how detailed the
-	// warning will be.
-	ck.warnVarusePermissions(varname, vartype, directly, indirectly)
+	basename := ck.MkLine.Basename
+	if basename == "hacks.mk" {
+		return
+	}
+
+	effPerms := vartype.EffectivePermissions(basename)
+	if effPerms.Contains(aclpUseLoadtime) {
+		// Since the variable may be used at load time, it probably
+		// may be used at run time as well. If it weren't, that would
+		// be a rather strange permissions set.
+		return
+	}
+
+	// At this point the variable must not be used at load time.
+	// Now determine whether it is directly used at load time because
+	// the context already says so or, a little trickier, if it might
+	// be used at load time somewhere in the future because it is
+	// assigned to another variable, and that variable is allowed
+	// to be used at load time.
+	directly := vuc.time == vucTimeLoad
+	indirectly := !directly && vuc.vartype != nil &&
+		vuc.vartype.Union().Contains(aclpUseLoadtime)
+
+	if !directly && !indirectly && effPerms.Contains(aclpUse) {
+		// At this point the variable is either used at run time, or the
+		// time is not known.
+		return
+	}
+
+	if directly || indirectly {
+		// At this point the variable is used at load time although that
+		// is not allowed by the permissions. The variable could be a tool
+		// variable, and these tool variables have special rules.
+		tool := G.ToolByVarname(ck.MkLines, varname)
+		if tool != nil {
+
+			// Whether a tool variable may be used at load time depends on
+			// whether bsd.prefs.mk has been included before. That file
+			// examines the tools that have been added to USE_TOOLS up to
+			// this point and makes their variables available for use at
+			// load time.
+			if !tool.UsableAtLoadTime(ck.MkLines.Tools.SeenPrefs) {
+				ck.warnVaruseToolLoadTime(varname, tool)
+			}
+			return
+		}
+	}
+
+	if ck.MkLines.FirstTimeSlice("checkVarusePermissions", varname) {
+		ck.warnVarusePermissions(varname, vartype, directly, indirectly)
+	}
 }
 
-func (ck MkLineChecker) warnVarusePermissions(varname string, vartype *Vartype, directly, indirectly bool) {
+func (ck MkLineChecker) warnVarusePermissions(
+	varname string, vartype *Vartype, directly, indirectly bool) {
+
 	mkline := ck.MkLine
 
 	anyPerms := vartype.Union()
@@ -762,6 +753,10 @@ func (ck MkLineChecker) warnVarusePermissions(varname string, vartype *Vartype, 
 		mkline.Warnf("%s should not be used at load time in any file.", varname)
 		ck.explainPermissions(varname, vartype, loadTimeExplanation()...)
 
+	case alternativeFiles == "":
+		mkline.Warnf("%s should not be used in any file.", varname)
+		ck.explainPermissions(varname, vartype, loadTimeExplanation()...)
+
 	case directly:
 		mkline.Warnf(
 			"%s should not be used at load time in this file; "+
@@ -775,7 +770,6 @@ func (ck MkLineChecker) warnVarusePermissions(varname string, vartype *Vartype, 
 			varname, alternativeFiles)
 		ck.explainPermissions(varname, vartype)
 	}
-
 }
 
 // warnVaruseToolLoadTime logs a warning that the tool ${varname}
@@ -1003,7 +997,7 @@ func (ck MkLineChecker) checkVarassignLeft() {
 	ck.checkTextVarUse(
 		ck.MkLine.Varname(),
 		NewVartype(BtVariableName, NoVartypeOptions, NewACLEntry("*", aclpAll)),
-		vucTimeParse)
+		vucTimeLoad)
 }
 
 func (ck MkLineChecker) checkVarassignOp() {
@@ -1100,7 +1094,7 @@ func (ck MkLineChecker) checkVarassignLeftNotUsed() {
 		return
 	}
 
-	if ck.MkLines != nil && ck.MkLines.vars.UsedSimilar(varname) {
+	if ck.MkLines.vars.UsedSimilar(varname) {
 		return
 	}
 
@@ -1118,7 +1112,7 @@ func (ck MkLineChecker) checkVarassignLeftNotUsed() {
 		return
 	}
 
-	if ck.MkLines == nil || !ck.MkLines.FirstTimeSlice("defined but not used: ", varname) {
+	if !ck.MkLines.FirstTimeSlice("defined but not used: ", varname) {
 		return
 	}
 
@@ -1146,7 +1140,7 @@ func (ck MkLineChecker) checkVarassignRightVaruse() {
 
 	time := vucTimeRun
 	if op == opAssignEval || op == opAssignShell {
-		time = vucTimeParse
+		time = vucTimeLoad
 	}
 
 	vartype := G.Pkgsrc.VariableType(ck.MkLines, mkline.Varname())
@@ -1317,8 +1311,8 @@ func (ck MkLineChecker) checkVarassignLeftUserSettable() bool {
 	// A few of the user-settable variables can also be set by packages.
 	// That's an unfortunate situation since there is no definite source
 	// of truth, but luckily only a few variables make use of it.
-	vartype := G.Pkgsrc.VariableType(nil, varname)
-	if vartype != nil && vartype.PackageSettable() {
+	vartype := G.Pkgsrc.VariableType(ck.MkLines, varname)
+	if vartype.PackageSettable() {
 		return true
 	}
 
@@ -1463,7 +1457,7 @@ func (ck MkLineChecker) checkDirectiveCond() {
 
 	checkVarUse := func(varuse *MkVarUse) {
 		var vartype *Vartype // TODO: Insert a better type guess here.
-		vuc := VarUseContext{vartype, vucTimeParse, VucQuotPlain, false}
+		vuc := VarUseContext{vartype, vucTimeLoad, VucQuotPlain, false}
 		ck.CheckVaruse(varuse, &vuc)
 	}
 
@@ -1689,7 +1683,7 @@ func (ck MkLineChecker) CheckRelativePath(relativePath string, mustExist bool) {
 
 	abs := path.Dir(mkline.Filename) + "/" + resolvedPath
 	if _, err := os.Stat(abs); err != nil {
-		if mustExist && !(ck.MkLines != nil && ck.MkLines.indentation.IsCheckedFile(resolvedPath)) {
+		if mustExist && !ck.MkLines.indentation.IsCheckedFile(resolvedPath) {
 			mkline.Errorf("Relative path %q does not exist.", resolvedPath)
 		}
 		return

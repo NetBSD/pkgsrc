@@ -16,7 +16,7 @@ type Vartype struct {
 func NewVartype(basicType *BasicType, options vartypeOptions, aclEntries ...ACLEntry) *Vartype {
 	for _, aclEntry := range aclEntries {
 		_, err := path.Match(aclEntry.glob, "")
-		G.AssertNil(err, "path.Match")
+		assertNil(err, "path.Match")
 	}
 
 	return &Vartype{basicType, options, aclEntries}
@@ -141,7 +141,7 @@ func (vt *Vartype) AlternativeFiles(perms ACLPermissions) string {
 			redundant := false
 			for _, late := range slice[si+1:] {
 				matched, err := path.Match(late, early)
-				G.AssertNil(err, "path.Match")
+				assertNil(err, "path.Match")
 				if matched {
 					redundant = true
 					break
@@ -195,9 +195,6 @@ func (vt *Vartype) MayBeAppendedTo() bool {
 	switch vt.basicType {
 	case BtAwkCommand, BtSedCommands, BtShellCommand, BtShellCommands, BtConfFiles:
 		return true
-	}
-
-	switch vt.basicType {
 	case BtComment, BtLicense:
 		return true
 	}
@@ -284,10 +281,6 @@ func (bt *BasicType) NeedsQ() bool {
 		return false
 	}
 	return !bt.IsEnum()
-}
-
-func (vt *Vartype) IsPlainString() bool {
-	return vt.basicType == BtComment || vt.basicType == BtMessage
 }
 
 type BasicType struct {
