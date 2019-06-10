@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.93 2019/02/24 15:47:20 nia Exp $
+# $NetBSD: Makefile,v 1.94 2019/06/10 15:24:45 nia Exp $
 
-DISTNAME=	weechat-2.4
+DISTNAME=	weechat-2.5
 CATEGORIES=	chat
 MASTER_SITES=	https://www.weechat.org/files/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,12 +19,12 @@ USE_LIBTOOL=		yes
 USE_CMAKE=		yes
 FAKE_NCURSES=		yes
 
-CMAKE_ARGS+=		-DENABLE_ASPELL:BOOL=OFF
 CMAKE_ARGS+=		-DENABLE_GUILE:BOOL=OFF
 CMAKE_ARGS+=		-DENABLE_TCL:BOOL=OFF
 CMAKE_ARGS+=		-DENABLE_MAN:BOOL=OFF # Requires ascii-doctor
-CMAKE_ARGS+=		-DENABLE_V8:BOOL=OFF
+CMAKE_ARGS+=		-DENABLE_JAVASCRIPT:BOOL=OFF
 CMAKE_ARGS+=		-DENABLE_PHP:BOOL=OFF
+CMAKE_ARGS+=		-DENABLE_SPELL:BOOL=OFF
 CMAKE_ARGS+=		-DMANDIR:STRING=${PKGMANDIR}
 CMAKE_ARGS+=		-DLOCALEDIR:STRING=${PKGLOCALEDIR}/locale
 CMAKE_ARGS+=		-DENABLE_CHARSET:BOOL=ON
@@ -39,6 +39,7 @@ LDFLAGS.SunOS+=		-lresolv
 .include "../../devel/gettext-lib/buildlink3.mk"
 #.include "../../devel/readline/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
