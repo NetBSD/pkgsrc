@@ -1,15 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2019/05/08 10:20:16 adam Exp $
+# $NetBSD: Makefile,v 1.5 2019/06/10 15:39:44 adam Exp $
 
-DISTNAME=	rst2pdf-0.94
-PKGREVISION=	1
+DISTNAME=	rst2pdf-0.94.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python textproc
 # PyPI distfile does not include images, styles, and templates
 #MASTER_SITES=	${MASTER_SITE_PYPI:=r/rst2pdf/}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rst2pdf/}
 GITHUB_PROJECT=	rst2pdf
-# TODO: remove on next update
-DIST_SUBDIR=	rst2pdf
 
 MAINTAINER=	darcy@NetBSD.org
 HOMEPAGE=	https://rst2pdf.org/
