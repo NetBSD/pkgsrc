@@ -1,14 +1,19 @@
-# $NetBSD: Makefile,v 1.16 2018/12/15 21:12:21 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/06/10 10:15:46 adam Exp $
 
-DISTNAME=	argcomplete-1.9.4
+DISTNAME=	argcomplete-1.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	sysutils
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/argcomplete/}
 
 MAINTAINER=	fhajny@NetBSD.org
-HOMEPAGE=	https://github.com/kislyuk/argcomplete/
+HOMEPAGE=	https://github.com/kislyuk/argcomplete
 COMMENT=	Bash tab completion for argparse
 LICENSE=	apache-2.0
+
+TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
+TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
+TEST_DEPENDS+=	${PYPKGPREFIX}-pexpect-[0-9]*:../../devel/py-pexpect
+TEST_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 
