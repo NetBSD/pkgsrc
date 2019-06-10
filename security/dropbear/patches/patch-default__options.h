@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.9 2017/05/16 21:54:21 snj Exp $
+$NetBSD: patch-default__options.h,v 1.1 2019/06/10 13:44:35 nia Exp $
 
 comment out the path to the dropbear ssh client
 - this is passed through CFLAGS
 
---- options.h.orig	2016-07-21 08:17:09.000000000 -0700
-+++ options.h	2017-03-18 00:25:05.000000000 -0700
-@@ -305,7 +305,7 @@ Homedir is prepended unless path begins 
+--- default_options.h.orig	2019-03-27 14:15:23.000000000 +0000
++++ default_options.h
+@@ -259,7 +259,7 @@ Homedir is prepended unless path begins 
  
  /* This is used by the scp binary when used as a client binary. If you're
   * not using the Dropbear client, you'll need to change it */
