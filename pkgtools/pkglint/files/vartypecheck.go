@@ -526,7 +526,7 @@ func (cv *VartypeCheck) FetchURL() {
 		}
 
 		if G.Pkgsrc.MasterSiteVarToURL[name] == "" {
-			if !(G.Pkg != nil && G.Pkg.vars.Defined(name)) {
+			if G.Pkg == nil || !G.Pkg.vars.Defined(name) {
 				cv.Errorf("The site %s does not exist.", name)
 			}
 		}
@@ -791,7 +791,7 @@ func (cv *VartypeCheck) Option() {
 	}
 
 	if m, optname := match1(value, `^-?([a-z][-0-9a-z+]*)$`); m {
-		if cv.MkLines != nil && !cv.MkLines.FirstTimeSlice("option:", optname) {
+		if !cv.MkLines.FirstTimeSlice("option:", optname) {
 			return
 		}
 

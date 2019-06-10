@@ -755,7 +755,7 @@ func (b *MkShBuilder) Subshell(list *MkShList) *MkShCommand {
 func (b *MkShBuilder) Token(mktext string) *ShToken {
 	tokenizer := NewShTokenizer(dummyLine, mktext, false)
 	token := tokenizer.ShToken()
-	G.Assertf(tokenizer.parser.EOF(), "Invalid token: %q", tokenizer.parser.Rest())
+	assertf(tokenizer.parser.EOF(), "Invalid token: %q", tokenizer.parser.Rest())
 	return token
 }
 
