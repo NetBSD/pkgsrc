@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2440 2019/06/10 08:58:58 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2441 2019/06/10 10:16:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4105,3 +4105,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/py-paramiko to 2.5.0 [adam 2019-06-10]
 	Updated www/py-flask-cors to 3.0.8 [adam 2019-06-10]
 	Updated www/py-flask-debugtoolbar to 0.10.1 [adam 2019-06-10]
+	Updated security/py-asyncssh to 1.17.0 [adam 2019-06-10]
+	Updated devel/py-argcomplete to 1.10.0 [adam 2019-06-10]
