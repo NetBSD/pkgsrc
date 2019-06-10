@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2446 2019/06/10 13:33:02 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.2447 2019/06/10 13:44:46 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4112,3 +4112,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated emulators/dosbox to 0.74.2 [nia 2019-06-10]
 	Updated x11/dunst to 1.4.0 [nia 2019-06-10]
 	Updated textproc/discount to 2.2.6 [schmonz 2019-06-10]
+	Updated security/dropbear to 2019.78 [nia 2019-06-10]
