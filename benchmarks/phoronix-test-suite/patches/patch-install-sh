@@ -1,18 +1,19 @@
-$NetBSD: patch-install-sh,v 1.3 2013/04/01 06:13:13 sbd Exp $
+$NetBSD: patch-install-sh,v 1.4 2019/06/10 02:48:23 jym Exp $
 
-* Handle pkgsrc hierarchy, especially paths to man pages.
-* Do not execute xdg-* during installation, let the shared-mime-info
-  and desktop-file-utils update their databases.
-* Change "cp -r <dir>/" to "cp -R <dir>".
-  -r is highly discouraged on BSD systems and they behave differently
-  (e.g. DragonFly copied only the contents of pts-core while NetBSD
-  and other platforms copied pts-core and its contents were one level
-  lower than DragonFly)
+* Handle pkgsrc hierarchy especially paths to man pages;
+* pkgsrc will handle the MIME and desktopdb updates. No need to ask user
+  to do it manually afterwards;
+* Change "cp -r" to "cp -R". OpenGroup deprecated -r, and -R is the only
+  reliable portable option;
+* Remove the systemd directory creation and make the PLIST handle
+  the presence/absence of systemd ecosystem.
 
---- install-sh.orig	2011-05-17 18:00:59.000000000 +0000
+$NetBSD: patch-install-sh,v 1.4 2019/06/10 02:48:23 jym Exp $
+
+--- install-sh.orig	2019-05-30 15:01:30.000000000 +0000
 +++ install-sh
-@@ -50,28 +50,27 @@ rm -rf $DESTDIR$INSTALL_PREFIX/share/doc
- mkdir -p $DESTDIR$INSTALL_PREFIX/bin/
+@@ -53,10 +53,9 @@ mkdir -p $DESTDIR$INSTALL_PREFIX/bin/
+ mkdir -p $DESTDIR$INSTALL_PREFIX/share/appdata/
  mkdir -p $DESTDIR$INSTALL_PREFIX/share/applications/
  mkdir -p $DESTDIR$INSTALL_PREFIX/share/icons/hicolor/48x48/apps/
 -mkdir -p $DESTDIR$INSTALL_PREFIX/share/man/man1/
@@ -20,9 +21,10 @@ $NetBSD: patch-install-sh,v 1.3 2013/04/01 06:13:13 sbd Exp $
  mkdir -p $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/
  mkdir -p $DESTDIR$INSTALL_PREFIX/share/doc/phoronix-test-suite/
 -mkdir -p $DESTDIR$INSTALL_PREFIX/../etc/bash_completion.d/
+ #mkdir -p $DESTDIR$INSTALL_PREFIX/../usr/lib/systemd/system/
+ #mkdir -p $DESTDIR$INSTALL_PREFIX/../etc/init/
  
- cp CHANGE-LOG $DESTDIR$INSTALL_PREFIX/share/doc/phoronix-test-suite/
- cp COPYING $DESTDIR$INSTALL_PREFIX/share/doc/phoronix-test-suite/
+@@ -65,26 +64,25 @@ cp COPYING $DESTDIR$INSTALL_PREFIX/share
  cp AUTHORS $DESTDIR$INSTALL_PREFIX/share/doc/phoronix-test-suite/
  
  cd documentation/
@@ -36,24 +38,29 @@ $NetBSD: patch-install-sh,v 1.3 2013/04/01 06:13:13 sbd Exp $
 +cp documentation/man-pages/*.1 $DESTDIR$INSTALL_PREFIX/$PKGMANDIR/man1/
 +cp pts-core/static/bash_completion $DESTDIR$INSTALL_PREFIX/share/bash-completion.d
  cp pts-core/static/images/phoronix-test-suite.png $DESTDIR$INSTALL_PREFIX/share/icons/hicolor/48x48/apps/phoronix-test-suite.png
- cp pts-core/static/images/openbenchmarking.png $DESTDIR$INSTALL_PREFIX/share/icons/hicolor/64x64/apps/openbenchmarking.png
  cp pts-core/static/phoronix-test-suite.desktop $DESTDIR$INSTALL_PREFIX/share/applications/
+ cp pts-core/static/phoronix-test-suite-launcher.desktop $DESTDIR$INSTALL_PREFIX/share/applications/
+ cp pts-core/static/phoronix-test-suite.appdata.xml $DESTDIR$INSTALL_PREFIX/share/appdata/
  
- rm -f $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/pts/etc/scripts/package-build-*
--cp -r pts-core/ $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/
+-mkdir -p $DESTDIR$INSTALL_PREFIX/../usr/lib/systemd/system/
+-cp deploy/*-systemd/*.service $DESTDIR$INSTALL_PREFIX/../usr/lib/systemd/system/
++cp deploy/*-systemd/*.service $DESTDIR$INSTALL_PREFIX/lib/systemd/system/
+ 
+ # mkdir -p $DESTDIR$INSTALL_PREFIX/../etc/init/
+ # cp pts-core/static/upstart/*.conf $DESTDIR$INSTALL_PREFIX/../etc/init/
+ 
+ rm -rf $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/pts-core
+-cp -r pts-core $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/
+-cp -r deploy $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/
 +cp -R pts-core $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/
++cp -R deploy $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/
  rm -f $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/pts-core/static/phoronix-test-suite.desktop
+ rm -f $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/pts-core/static/phoronix-test-suite-launcher.desktop
+ rm -f $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/pts-core/openbenchmarking.org/openbenchmarking-mime.xml
+@@ -121,6 +119,5 @@ Phoronix Test Suite Files: $INSTALL_PREF
+ if [ "X$DESTDIR" != "X" ]
+ then
+ 	echo "Installed to chroot: $DESTDIR"
+-	echo "Please update your desktop and mime-database manually"
+ fi
  
- sed 's:PTS_DIR=`pwd`:PTS_DIR='"$INSTALL_PREFIX"'\/share\/phoronix-test-suite:g' phoronix-test-suite > $DESTDIR$INSTALL_PREFIX/bin/phoronix-test-suite
-@@ -79,11 +78,6 @@ chmod +x $DESTDIR$INSTALL_PREFIX/bin/pho
- 
- # sed 's:\$url = PTS_PATH . \"documentation\/index.html\";:\$url = \"'"$INSTALL_PREFIX"'\/share\/doc\/packages\/phoronix-test-suite\/index.html\";:g' pts-core/commands/gui_gtk.php > $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/pts-core/commands/gui_gtk.php
- 
--# XDG MIME OpenBenchmarking support
--xdg-mime install pts-core/openbenchmarking.org/openbenchmarking-mime.xml
--xdg-mime default phoronix-test-suite.desktop application/x-openbenchmarking
--xdg-icon-resource install --context mimetypes --size 64 pts-core/static/images/openbenchmarking.png application-x-openbenchmarking
--
- echo -e "\nPhoronix Test Suite Installation Completed\n
- Executable File: $INSTALL_PREFIX/bin/phoronix-test-suite
- Documentation: $INSTALL_PREFIX/share/doc/phoronix-test-suite/
