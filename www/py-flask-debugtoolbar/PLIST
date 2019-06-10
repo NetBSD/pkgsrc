@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/04/02 22:44:35 rodent Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/06/10 08:58:40 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -29,6 +29,9 @@ ${PYSITELIB}/flask_debugtoolbar/panels/profiler.pyo
 ${PYSITELIB}/flask_debugtoolbar/panels/request_vars.py
 ${PYSITELIB}/flask_debugtoolbar/panels/request_vars.pyc
 ${PYSITELIB}/flask_debugtoolbar/panels/request_vars.pyo
+${PYSITELIB}/flask_debugtoolbar/panels/route_list.py
+${PYSITELIB}/flask_debugtoolbar/panels/route_list.pyc
+${PYSITELIB}/flask_debugtoolbar/panels/route_list.pyo
 ${PYSITELIB}/flask_debugtoolbar/panels/sqlalchemy.py
 ${PYSITELIB}/flask_debugtoolbar/panels/sqlalchemy.pyc
 ${PYSITELIB}/flask_debugtoolbar/panels/sqlalchemy.pyo
@@ -193,11 +196,14 @@ ${PYSITELIB}/flask_debugtoolbar/templates/panels/headers.html
 ${PYSITELIB}/flask_debugtoolbar/templates/panels/logger.html
 ${PYSITELIB}/flask_debugtoolbar/templates/panels/profiler.html
 ${PYSITELIB}/flask_debugtoolbar/templates/panels/request_vars.html
+${PYSITELIB}/flask_debugtoolbar/templates/panels/route_list.html
 ${PYSITELIB}/flask_debugtoolbar/templates/panels/sqlalchemy.html
+${PYSITELIB}/flask_debugtoolbar/templates/panels/sqlalchemy_error.html
 ${PYSITELIB}/flask_debugtoolbar/templates/panels/sqlalchemy_select.html
 ${PYSITELIB}/flask_debugtoolbar/templates/panels/template.html
 ${PYSITELIB}/flask_debugtoolbar/templates/panels/template_editor.html
 ${PYSITELIB}/flask_debugtoolbar/templates/panels/timer.html
+${PYSITELIB}/flask_debugtoolbar/templates/panels/versions.html
 ${PYSITELIB}/flask_debugtoolbar/templates/redirect.html
 ${PYSITELIB}/flask_debugtoolbar/toolbar.py
 ${PYSITELIB}/flask_debugtoolbar/toolbar.pyc
