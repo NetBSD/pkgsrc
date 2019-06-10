@@ -1,17 +1,9 @@
-$NetBSD: distinfo,v 1.9 2016/10/02 05:33:18 mef Exp $
+$NetBSD: distinfo,v 1.10 2019/06/10 19:08:42 nia Exp $
 
-SHA1 (lmms-0.4.15.tar.gz) = 01b81aac1b6996346060f703865ce60fc6501ffd
-RMD160 (lmms-0.4.15.tar.gz) = 75d4a3c0c4e5c7c4f521131c5aac072a3e67df21
-SHA512 (lmms-0.4.15.tar.gz) = 2dc4d49d4b5c9360474fe1feb1e0ff5e15cf884868aadeef22b9bdaa7e52c9016e742fd78693e683d6b08b407208538b9028a660456623e3f3db6c3bd01295c7
-Size (lmms-0.4.15.tar.gz) = 15828961 bytes
-SHA1 (patch-CMakeLists.txt) = e48c68a6d96df7dbdb760c5d8414d262262ffd8a
-SHA1 (patch-plugins_ladspa__effect_calf_CMakeLists.txt) = eba4dd6e1ec39baab736b2fa8ce280edd3e39c44
-SHA1 (patch-plugins_ladspa__effect_calf_src_calf_buffer.h) = b9d6f50680775cecbe0f485cf8f9c8d6172568a3
-SHA1 (patch-plugins_ladspa__effect_calf_src_calf_fixed__point.h) = a77ecd2ab667aa3dbd436878b568ed499da7114b
-SHA1 (patch-plugins_zynaddsubfx_fltk_FL_Fl__Widget.H) = 000762568741d957bf342b23c4eeb6353fc574db
-SHA1 (patch-plugins_zynaddsubfx_fltk_configh.cmake.in) = 332db7257adba4a2b884bf68065f067f02734409
-SHA1 (patch-plugins_zynaddsubfx_fltk_src_numericsort.c) = 3461f6e532d4d47c27f0d36daf1deb61922b4fc0
-SHA1 (patch-plugins_zynaddsubfx_fltk_src_scandir.c) = 2ca4b691b1be385ca34f04c634e04126dc2efbd9
-SHA1 (patch-plugins_zynaddsubfx_src_Effects_Alienwah.cpp) = 89babf5b6a06899dfbaa8201383d9a20b78fabe8
-SHA1 (patch-src_core_audio_AudioAlsa.cpp) = 7fe90c5be3f4a45a67b9ca87bcd26cd074ad2976
-SHA1 (patch-src_core_audio_AudioOss.cpp) = 13d1f848a8ba94afa91d8ebee6326d246cf1a690
+SHA1 (lmms_1.2.0.tar.xz) = b8c040559306d93678ed650eafd7a08fefa22e43
+RMD160 (lmms_1.2.0.tar.xz) = 8ad589d70fb0fc836bf67e4f6f18f21de099ea3f
+SHA512 (lmms_1.2.0.tar.xz) = 7d3476fbcbda49d75efee4161f6478656e38a517b6a3b24740ea354e223fba51210f45ff74b46fd1ac73fc6e65409226088b12e29558c91eb818da58734ab6cf
+Size (lmms_1.2.0.tar.xz) = 14541000 bytes
+SHA1 (patch-CMakeLists.txt) = e30599b486c83b734fd8f9afa4cf2bd488eab338
+SHA1 (patch-src_CMakeLists.txt) = 92acfc9bc236c1b211bbe9686de818641c01b257
+SHA1 (patch-src_core_audio_AudioOss.cpp) = 6bc591b929f26cbfb5f160c3d9b49316bf165e58

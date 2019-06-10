@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.51 2018/08/22 09:42:55 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2019/06/10 19:08:42 nia Exp $
 #
 
-VERSION=		0.4.15
-DISTNAME=		lmms-${VERSION}
-PKGREVISION=		18
+VERSION=		1.2.0
+PKGNAME=		lmms-${VERSION}
+DISTNAME=		lmms_${VERSION}
+EXTRACT_SUFX=		.tar.xz
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_GITHUB:=LMMS/}
-GITHUB_TAG=		v${VERSION}
+GITHUB_RELEASE=		v${VERSION}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://lmms.sourceforge.net/
-COMMENT=		Linux MultiMedia Studio
+HOMEPAGE=		https://lmms.io/
+COMMENT=		Cross-platform music production software
 LICENSE=		gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
@@ -19,7 +20,16 @@ USE_LANGUAGES=		c c++03
 USE_TOOLS+=		gmake perl pkg-config
 USE_CMAKE=		yes
 
-BUILDLINK_TRANSFORM+=	rm:-floop-optimize2 rm:-fgcse-las rm:-ldl
+WRKSRC=		${WRKDIR}/lmms-${VERSION}
+
+CMAKE_ARGS+=	-DWANT_QT5=ON
+CMAKE_ARGS+=	-DWANT_GIG=OFF # requires libgig
+CMAKE_ARGS+=	-DWANT_STK=OFF # requires libstk
+CMAKE_ARGS+=	-DWANT_CARLA=OFF # requires carla
+CMAKE_ARGS+=	-DWANT_SOUNDIO=OFF # requires libsoundio
+CMAKE_ARGS+=	-DWANT_VST_NOWINE=ON
+
+BUILDLINK_TRANSFORM+=	rm:-floop-optimize2 rm:-fgcse-las
 
 # for libzynaddsubfx.so in plugins/zynaddsubfx/.
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/lmms
@@ -28,25 +38,19 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/lmms
 # been fixed in SDL 1.2.11.
 BUILDLINK_ABI_DEPENDS.SDL+=	SDL>=1.2.11
 
-.include "../../audio/SDL_mixer/buildlink3.mk"
-.include "../../audio/SDL_sound/buildlink3.mk"
-.include "../../audio/alsa-lib/buildlink3.mk"
-.include "../../audio/flac/buildlink3.mk"
+.include "options.mk"
 .include "../../audio/fluidsynth/buildlink3.mk"
-.include "../../audio/jack/buildlink3.mk"
+.include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
-.include "../../audio/portaudio/buildlink3.mk"
-.include "../../audio/pulseaudio/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../math/fftwf/buildlink3.mk"
-.include "../../x11/libXfixes/buildlink3.mk"
-.include "../../x11/qt4-libs/buildlink3.mk"
-.include "../../x11/qt4-tools/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
+.include "../../multimedia/libogg/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtx11extras/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 .include "../../mk/bsd.pkg.mk"
