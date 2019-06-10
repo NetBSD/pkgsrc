@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2438 2019/06/10 07:46:15 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2439 2019/06/10 08:43:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4100,3 +4100,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/py-lxml to 4.3.4 [adam 2019-06-10]
 	Updated textproc/py-yaml to 5.1.1 [adam 2019-06-10]
 	Updated archivers/py-lz4 to 2.1.10 [adam 2019-06-10]
+	Updated www/py-httplib2 to 0.13.0 [adam 2019-06-10]
+	Updated net/py-prometheus_client to 0.7.0 [adam 2019-06-10]
+	Updated security/py-paramiko to 2.5.0 [adam 2019-06-10]
