@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/01/07 18:02:45 kleink Exp $
+$NetBSD: distinfo,v 1.2 2019/06/10 08:55:42 adam Exp $
 
-SHA1 (Flask-Cors-3.0.7.tar.gz) = 4e3b951c6ee56e19396ff8a3ff4534d821434b86
-RMD160 (Flask-Cors-3.0.7.tar.gz) = 1785b2628d8468cfb565764045b98b9b5c0fe22d
-SHA512 (Flask-Cors-3.0.7.tar.gz) = 6bf8e45234e361641f4c920ed6cf240a833cd195daaf29dfc307e9b2007514bdd14ab1a96cc87afc5ff166484adcc4c6bf3ca7cb0c18f14a12f30c84f5efe6f6
-Size (Flask-Cors-3.0.7.tar.gz) = 28297 bytes
+SHA1 (Flask-Cors-3.0.8.tar.gz) = 63e254d5a2052328ae3d904f475b8fab9c1c5275
+RMD160 (Flask-Cors-3.0.8.tar.gz) = e24f2eec11dac9a51715c72c02aa276858ac2e43
+SHA512 (Flask-Cors-3.0.8.tar.gz) = 1cbc6848af4d74e73e84b4ab3df7f41c48b558917599ab4eaa8b9edc36e4685118761ad045bb3a8a5879a634c1b36d4e33b81e36fbe54d5b2a45f297b2c332b7
+Size (Flask-Cors-3.0.8.tar.gz) = 27651 bytes
