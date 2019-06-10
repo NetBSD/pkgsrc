@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.45 2018/07/04 13:40:17 jperkin Exp $
+# $NetBSD: Makefile,v 1.46 2019/06/10 12:41:23 nia Exp $
 
-DISTNAME=	dosbox-0.74
-PKGREVISION=	10
+DISTNAME=	dosbox-0.74-2
+PKGNAME=	dosbox-0.74.2
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dosbox/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://dosbox.sourceforge.net/
+HOMEPAGE=	https://www.dosbox.com/
 COMMENT=	Multi-platform DOS emulator using SDL
 LICENSE=	gnu-gpl-v2
 
@@ -26,11 +26,13 @@ SUBST_STAGE.fixme=	pre-configure
 SUBST_FILES.fixme=	docs/dosbox.1
 SUBST_SED.fixme=	-e s,/usr/share/,${PREFIX}/share/,g
 
+# dynamic recompiler enabled by default
 NOT_PAX_MPROTECT_SAFE+=	bin/dosbox
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/dosbox
 
+.include "options.mk"
 .include "../../audio/SDL_sound/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
