@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.26 2015/06/22 22:29:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.27 2019/06/10 16:55:02 nia Exp $
 #
 
-DISTNAME=		pv-1.6.0
+DISTNAME=		pv-1.6.6
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.ivarch.com/programs/sources/
+MASTER_SITES=		https://www.ivarch.com/programs/sources/
 MASTER_SITES+=		${MASTER_SITE_SOURCEFORGE:=pipeviewer/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.ivarch.com/programs/pv.shtml
+HOMEPAGE=		https://www.ivarch.com/programs/pv.shtml
 COMMENT=		Monitor the progress of data through a pipeline
 LICENSE=		artistic-2.0
 
