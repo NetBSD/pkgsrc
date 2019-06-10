@@ -233,14 +233,14 @@ func (ctx *SubstContext) Finish(mkline MkLine) {
 	*ctx = *NewSubstContext()
 }
 
-func (ctx *SubstContext) dupString(mkline MkLine, pstr *string, varname, value string) {
+func (*SubstContext) dupString(mkline MkLine, pstr *string, varname, value string) {
 	if *pstr != "" {
 		mkline.Warnf("Duplicate definition of %q.", varname)
 	}
 	*pstr = value
 }
 
-func (ctx *SubstContext) dupBool(mkline MkLine, flag *bool, varname string, op MkOperator, value string) {
+func (*SubstContext) dupBool(mkline MkLine, flag *bool, varname string, op MkOperator, value string) {
 	if *flag && op != opAssignAppend {
 		mkline.Warnf("All but the first %q lines should use the \"+=\" operator.", varname)
 	}
@@ -251,40 +251,8 @@ func (ctx *SubstContext) suggestSubstVars(mkline MkLine) {
 
 	tokens, _ := splitIntoShellTokens(mkline.Line, mkline.Value())
 	for _, token := range tokens {
-
-		parser := NewMkParser(nil, mkline.UnquoteShell(token), false)
-		lexer := parser.lexer
-		if !lexer.SkipByte('s') {
-			continue
-		}
-
-		separator := lexer.NextByteSet(textproc.XPrint) // Really any character works
-		if separator == -1 {
-			continue
-		}
-
-		if !lexer.SkipByte('@') {
-			continue
-		}
-
-		varname := parser.Varname()
-		if !lexer.SkipByte('@') || !lexer.SkipByte(byte(separator)) {
-			continue
-		}
-
-		varuse := parser.VarUse()
-		if varuse == nil || varuse.varname != varname {
-			continue
-		}
-
-		switch varuse.Mod() {
-		case "", ":Q":
-			break
-		default:
-			continue
-		}
-
-		if !lexer.SkipByte(byte(separator)) {
+		varname := ctx.extractVarname(mkline.UnquoteShell(token))
+		if varname == "" {
 			continue
 		}
 
@@ -307,4 +275,46 @@ func (ctx *SubstContext) suggestSubstVars(mkline MkLine) {
 
 		ctx.curr.seenVars = true
 	}
+}
+
+// extractVarname extracts the variable name from a sed command of the form
+// s,@VARNAME@,${VARNAME}, and some related variants thereof.
+func (*SubstContext) extractVarname(token string) string {
+	parser := NewMkParser(nil, token, false)
+	lexer := parser.lexer
+	if !lexer.SkipByte('s') {
+		return ""
+	}
+
+	separator := lexer.NextByteSet(textproc.XPrint) // Really any character works
+	if separator == -1 {
+		return ""
+	}
+
+	if !lexer.SkipByte('@') {
+		return ""
+	}
+
+	varname := parser.Varname()
+	if !lexer.SkipByte('@') || !lexer.SkipByte(byte(separator)) {
+		return ""
+	}
+
+	varuse := parser.VarUse()
+	if varuse == nil || varuse.varname != varname {
+		return ""
+	}
+
+	switch varuse.Mod() {
+	case "", ":Q":
+		break
+	default:
+		return ""
+	}
+
+	if !lexer.SkipByte(byte(separator)) {
+		return ""
+	}
+
+	return varname
 }
