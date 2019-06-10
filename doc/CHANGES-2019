@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2450 2019/06/10 15:40:46 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2451 2019/06/10 16:03:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4118,3 +4118,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated chat/weechat to 2.5 [nia 2019-06-10]
 	Updated print/py-reportlab to 3.5.23 [adam 2019-06-10]
 	Updated textproc/py-rst2pdf to 0.94.1 [adam 2019-06-10]
+	Updated databases/ruby-sequel to 5.21.0 [taca 2019-06-10]
