@@ -553,7 +553,8 @@ func (s *Suite) Test_SubstContext_suggestSubstVars(c *check.C) {
 		"SUBST_SED.test+=\t-e s,@SH@,'\"'${SH:Q}'\"',g",  // Cannot be replaced since the double quotes are added.
 		"SUBST_SED.test+=\t-e s",                         // Just to get 100% code coverage.
 		"SUBST_SED.test+=\t-e s,@SH@,${SH:Q}",            // Just to get 100% code coverage.
-		"SUBST_SED.test+=\t-e s,@SH@,${SH:Q}, # comment", // This is not fixed automatically.
+		"SUBST_SED.test+=\t-e s,@SH@,${SH:Q}, # comment", // Just a note; not fixed because of the comment.
+		"SUBST_SED.test+=\t-n s,@SH@,${SH:Q},",           // Just a note; not fixed because of the -n.
 		"# end")
 
 	mklines.Check()
@@ -579,6 +580,10 @@ func (s *Suite) Test_SubstContext_suggestSubstVars(c *check.C) {
 		"NOTE: subst.mk:13: The substitution command \"s,'@SH@','${SH}',\" "+
 			"can be replaced with \"SUBST_VARS.test+= SH\".",
 		"NOTE: subst.mk:18: The substitution command \"s,@SH@,${SH:Q},\" "+
+			"can be replaced with \"SUBST_VARS.test+= SH\".",
+		"NOTE: subst.mk:19: Please always use \"-e\" in sed commands, "+
+			"even if there is only one substitution.",
+		"NOTE: subst.mk:19: The substitution command \"s,@SH@,${SH:Q},\" "+
 			"can be replaced with \"SUBST_VARS.test+= SH\".")
 
 	t.SetUpCommandLine("--show-autofix")
@@ -689,7 +694,7 @@ func (s *Suite) Test_SubstContext_suggestSubstVars__autofix_realign_paragraph(c 
 			"with \"SUBST_VARS.pfx+=\\tPREFIX\".")
 
 	t.CheckFileLinesDetab("subst.mk",
-		"# $NetBSD: substcontext_test.go,v 1.25 2019/05/26 14:05:57 rillig Exp $",
+		"# $NetBSD: substcontext_test.go,v 1.26 2019/06/10 19:51:57 rillig Exp $",
 		"",
 		"SUBST_CLASSES+=         pfx",
 		"SUBST_STAGE.pfx=        pre-configure",
@@ -728,7 +733,7 @@ func (s *Suite) Test_SubstContext_suggestSubstVars__autofix_plus_sed(c *check.C)
 			"with \"SUBST_VARS.pfx=\\t\\tPREFIX\".")
 
 	t.CheckFileLinesDetab("subst.mk",
-		"# $NetBSD: substcontext_test.go,v 1.25 2019/05/26 14:05:57 rillig Exp $",
+		"# $NetBSD: substcontext_test.go,v 1.26 2019/06/10 19:51:57 rillig Exp $",
 		"",
 		"SUBST_CLASSES+=         pfx",
 		"SUBST_STAGE.pfx=        pre-configure",
@@ -762,7 +767,7 @@ func (s *Suite) Test_SubstContext_suggestSubstVars__autofix_plus_vars(c *check.C
 			"with \"SUBST_VARS.id=\\tPREFIX\".")
 
 	t.CheckFileLinesDetab("subst.mk",
-		"# $NetBSD: substcontext_test.go,v 1.25 2019/05/26 14:05:57 rillig Exp $",
+		"# $NetBSD: substcontext_test.go,v 1.26 2019/06/10 19:51:57 rillig Exp $",
 		"",
 		"SUBST_CLASSES+= id",
 		"SUBST_STAGE.id= pre-configure",
@@ -796,13 +801,60 @@ func (s *Suite) Test_SubstContext_suggestSubstVars__autofix_indentation(c *check
 			"with \"SUBST_VARS.fix-paths=\\t\\tPREFIX\".")
 
 	t.CheckFileLinesDetab("subst.mk",
-		"# $NetBSD: substcontext_test.go,v 1.25 2019/05/26 14:05:57 rillig Exp $",
+		"# $NetBSD: substcontext_test.go,v 1.26 2019/06/10 19:51:57 rillig Exp $",
 		"",
 		"SUBST_CLASSES+=                 fix-paths",
 		"SUBST_STAGE.fix-paths=          pre-configure",
 		"SUBST_MESSAGE.fix-paths=        Message",
 		"SUBST_FILES.fix-paths=          filename",
 		"SUBST_VARS.fix-paths=           PREFIX")
+}
+
+func (s *Suite) Test_SubstContext_extractVarname(c *check.C) {
+	t := s.Init(c)
+
+	test := func(input, expected string) {
+		t.Check((*SubstContext).extractVarname(nil, input), equals, expected)
+	}
+
+	// A simple variable name.
+	test("s,@VAR@,${VAR},", "VAR")
+
+	// A parameterized variable name.
+	test("s,@VAR.param@,${VAR.param},", "VAR.param")
+
+	// Only substitution commands can be replaced with SUBST_VARS.
+	test("/pattern/d", "")
+
+	// An incomplete substitution command.
+	test("s", "")
+
+	// Wrong placeholder character, only @ works.
+	test("s,!VAR!,${VAR},", "")
+
+	// The placeholder must have exactly 1 @ on each side.
+	test("s,@@VAR@@,${VAR},", "")
+
+	// Malformed because the comma is the separator.
+	test("s,@VAR,VAR@,${VAR},", "")
+
+	// The replacement pattern is not a simple variable name enclosed in @.
+	test("s,@VAR!VAR@,${VAR},", "")
+
+	// The replacement may only contain the :Q modifier.
+	test("s,@VAR@,${VAR:Mpattern},", "")
+
+	// The :Q modifier is allowed in the replacement.
+	test("s,@VAR@,${VAR:Q},", "VAR")
+
+	// The replacement may contain the :Q modifier only once.
+	test("s,@VAR@,${VAR:Q:Q},", "")
+
+	// The replacement must be a plain variable expression, without prefix.
+	test("s,@VAR@,prefix${VAR},", "")
+
+	// The replacement must be a plain variable expression, without suffix.
+	test("s,@VAR@,${VAR}suffix,", "")
 }
 
 // As of May 2019, pkglint does not check the order of the variables in
@@ -835,7 +887,7 @@ func simulateSubstLines(t *Tester, texts ...string) {
 	for _, lineText := range texts {
 		var curr int
 		_, err := fmt.Sscanf(lineText[0:4], "%d: ", &curr)
-		G.AssertNil(err, "")
+		assertNil(err, "")
 
 		if lineno != 0 {
 			t.Check(curr, equals, lineno)

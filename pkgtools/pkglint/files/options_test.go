@@ -264,3 +264,63 @@ func (s *Suite) Test_OptionsLinesChecker_handleLowerCondition__foreign_variable(
 		"WARN: ~/category/package/options.mk:8: OTHER_VARIABLE is used but not defined.",
 		"WARN: ~/category/package/options.mk:4: Option \"opt\" should be handled below in an .if block.")
 }
+
+func (s *Suite) Test_CheckLinesOptionsMk__autofix(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpOption("opt", "")
+	t.CreateFileLines("mk/bsd.options.mk")
+	t.SetUpPackage("category/package",
+		".include \"options.mk\"")
+	t.CreateFileLines("category/package/options.mk",
+		MkRcsID,
+		"",
+		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.package",
+		"PKG_SUPPORTED_OPTIONS=\t# none",
+		"",
+		".include \"../../mk/bsd.options.mk\"",
+		"",
+		".if 0",
+		".if 0",
+		".endif",
+		".endif")
+	t.FinishSetUp()
+	t.Chdir("category/package")
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"NOTE: options.mk:9: This directive should be indented by 2 spaces.",
+		"NOTE: options.mk:10: This directive should be indented by 2 spaces.")
+
+	t.SetUpCommandLine("-Wall", "--show-autofix")
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"NOTE: options.mk:9: This directive should be indented by 2 spaces.",
+		"AUTOFIX: options.mk:9: Replacing \".\" with \".  \".",
+		"NOTE: options.mk:10: This directive should be indented by 2 spaces.",
+		"AUTOFIX: options.mk:10: Replacing \".\" with \".  \".")
+
+	t.SetUpCommandLine("-Wall", "--autofix")
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"AUTOFIX: options.mk:9: Replacing \".\" with \".  \".",
+		"AUTOFIX: options.mk:10: Replacing \".\" with \".  \".")
+
+	t.CheckFileLinesDetab("options.mk",
+		MkRcsID,
+		"",
+		"PKG_OPTIONS_VAR=        PKG_OPTIONS.package",
+		"PKG_SUPPORTED_OPTIONS=  # none",
+		"",
+		".include \"../../mk/bsd.options.mk\"",
+		"",
+		".if 0",
+		".  if 0",
+		".  endif",
+		".endif")
+}

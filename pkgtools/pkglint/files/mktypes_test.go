@@ -139,3 +139,15 @@ func (s *Suite) Test_MkVarUseModifier_Subst__invalid_argument(c *check.C) {
 	c.Check(ok, equals, false)
 	c.Check(empty, equals, "")
 }
+
+func (s *Suite) Test_MkVarUseModifier_Subst__no_tracing(c *check.C) {
+	t := s.Init(c)
+
+	mod := MkVarUseModifier{"S,from,to,"}
+	t.DisableTracing()
+
+	result, ok := mod.Subst("from a to b")
+
+	c.Check(ok, equals, true)
+	c.Check(result, equals, "to a to b")
+}

@@ -255,6 +255,9 @@ func (mklines *MkLinesImpl) ExpandLoopVar(varname string) []string {
 }
 
 func (mklines *MkLinesImpl) collectDefinedVariables() {
+	// FIXME: This method has a wrong name. It collects not only the defined
+	//  variables but also the used ones.
+
 	if trace.Tracing {
 		defer trace.Call0()()
 	}

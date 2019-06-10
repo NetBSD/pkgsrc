@@ -41,11 +41,15 @@ type ShAtom struct {
 	Type    ShAtomType
 	MkText  string
 	Quoting ShQuoting // The quoting state at the end of the token
-	data    interface{}
+
+	//  * usually nil
+	//  * for shtVaruse a *MkVarUse
+	//  * for shtShVarUse a string
+	data interface{}
 }
 
 func (atom *ShAtom) String() string {
-	if atom.Type == shtText && atom.Quoting == shqPlain && atom.data == nil {
+	if atom.Type == shtText && atom.Quoting == shqPlain {
 		return sprintf("%q", atom.MkText)
 	}
 	if atom.Type == shtVaruse {

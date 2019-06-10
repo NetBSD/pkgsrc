@@ -81,7 +81,7 @@ func (t *Tracer) Call(args ...interface{}) func() {
 // http://stackoverflow.com/questions/13476349/check-for-nil-and-nil-interface-in-go
 func isNil(a interface{}) bool {
 	defer func() {
-		recover()
+		_ = recover()
 	}()
 	return a == nil || reflect.ValueOf(a).IsNil()
 }

@@ -34,7 +34,7 @@ func (s *Suite) Test_Tool_UsableAtRunTime(c *check.C) {
 // which confused an earlier version of pkglint into
 // thinking that the below definition was about a tool
 // called "NetBSD".
-func (s *Suite) Test_Tools_ParseToolLine(c *check.C) {
+func (s *Suite) Test_Tools_ParseToolLine__opsys(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpTool("tool1", "", Nowhere)
@@ -50,15 +50,53 @@ func (s *Suite) Test_Tools_ParseToolLine(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
+func (s *Suite) Test_Tools_ParseToolLine__invalid_tool_name(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+	mklines := t.NewMkLines("Makefile",
+		MkRcsID,
+		"",
+		".for t in abc ${UNDEFINED}",
+		"TOOLS_CREATE+=\t\t${t}",
+		"_TOOLS_VARNAME.${t}=\tVARNAME",
+		"TOOLS_PATH.${t}=\t/bin/${t}",
+		"TOOLS_ALIASES.${t}=\t${t} ${u} ${t}-arm64",
+		"TOOLS_ALIASES.tool=\t${t} ${u} ${t}-arm64",
+		"_TOOLS.${t}=\t${t}",
+		".endfor")
+
+	mklines.collectDefinedVariables()
+	t.Check(mklines.Tools.byName, check.HasLen, 1)
+	t.Check(mklines.Tools.ByName("tool").String(), equals, "tool:::Nowhere:abc")
+
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Tools_parseUseTools(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPkgsrc()
+	t.CreateFileLines("mk/triple-tool.mk",
+		MkRcsID,
+		"",
+		"USE_TOOLS+=\tunknown unknown unknown")
+	t.FinishSetUp()
+
+	t.Check(G.Pkgsrc.Tools.ByName("unknown"), check.IsNil)
+
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_Tools_Define__invalid_tool_name(c *check.C) {
 	t := s.Init(c)
 
 	mkline := t.NewMkLine("dummy.mk", 123, "DUMMY=\tvalue")
 	reg := NewTools()
 
-	reg.Define("tool_name", "", mkline)
-	reg.Define("tool:dependency", "", mkline)
-	reg.Define("tool:build", "", mkline)
+	t.Check(reg.Define("tool_name", "", mkline), check.IsNil)
+	t.Check(reg.Define("tool:dependency", "", mkline), check.IsNil)
+	t.Check(reg.Define("tool:build", "", mkline), check.IsNil)
 
 	// As of October 2018, the underscore is not used in any tool name.
 	// If there should ever be such a case, just use a different character for testing.
@@ -66,6 +104,8 @@ func (s *Suite) Test_Tools_Define__invalid_tool_name(c *check.C) {
 		"ERROR: dummy.mk:123: Invalid tool name \"tool_name\".",
 		"ERROR: dummy.mk:123: Invalid tool name \"tool:dependency\".",
 		"ERROR: dummy.mk:123: Invalid tool name \"tool:build\".")
+
+	t.Check(reg.byName, check.HasLen, 0)
 }
 
 func (s *Suite) Test_Tools_Trace__coverage(c *check.C) {
@@ -504,6 +544,19 @@ func (s *Suite) Test_Tools_Fallback__tools_having_the_same_variable_name_unreali
 	c.Check(local2.ByVarname("SED").String(), equals, "sed:SED::AfterPrefsMk")
 }
 
+func (s *Suite) Test_Tools_Fallback__called_twice(c *check.C) {
+	t := s.Init(c)
+
+	tools := NewTools()
+	fallback := NewTools()
+
+	tools.Fallback(fallback)
+
+	t.ExpectPanic(
+		func() { tools.Fallback(fallback) },
+		"Pkglint internal error: Tools.Fallback must only be called once.")
+}
+
 func (s *Suite) Test_Tools__aliases(c *check.C) {
 	t := s.Init(c)
 
@@ -622,5 +675,21 @@ func (s *Suite) Test_Tools__autoconf213(c *check.C) {
 	G.Check(t.File("category/package"))
 
 	// No warning, since autoconf213 defines autoconf implicitly.
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Tools_IsValidToolName(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+	t.SetUpTool("[", "", AtRunTime)
+	t.SetUpTool("echo -n", "ECHO_N", AtRunTime)
+	mklines := t.NewMkLines("filename.mk",
+		MkRcsID,
+		"",
+		"USE_TOOLS+=\t[")
+
+	mklines.Check()
+
 	t.CheckOutputEmpty()
 }

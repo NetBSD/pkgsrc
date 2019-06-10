@@ -189,7 +189,7 @@ func (t *Tester) SetUpMasterSite(varname string, urls ...string) {
 	}
 }
 
-// SetUpOption pretends that the package option is defined in mk/defaults/options.description.
+// SetUpOption pretends that the given package option is defined in mk/defaults/options.description.
 func (t *Tester) SetUpOption(name, description string) {
 	G.Pkgsrc.PkgOptions[name] = description
 }
@@ -321,7 +321,7 @@ func (t *Tester) SetUpPkgsrc() {
 // SetUpCategory makes the given category valid by creating a dummy Makefile.
 // After that, it can be mentioned in the CATEGORIES variable of a package.
 func (t *Tester) SetUpCategory(name string) {
-	G.Assertf(!contains(name, "/"), "Category must not contain a slash.")
+	assertf(!contains(name, "/"), "Category must not contain a slash.")
 
 	if _, err := os.Stat(t.File(name + "/Makefile")); os.IsNotExist(err) {
 		t.CreateFileLines(name+"/Makefile",
@@ -509,9 +509,9 @@ func (t *Tester) File(relativeFileName string) string {
 // Copy copies a file inside the temporary directory.
 func (t *Tester) Copy(relativeSrc, relativeDst string) {
 	data, err := ioutil.ReadFile(t.File(relativeSrc))
-	G.AssertNil(err, "Copy.Read")
+	assertNil(err, "Copy.Read")
 	err = ioutil.WriteFile(t.File(relativeDst), data, 0777)
-	G.AssertNil(err, "Copy.Write")
+	assertNil(err, "Copy.Write")
 }
 
 // Chdir changes the current working directory to the given subdirectory
@@ -605,13 +605,13 @@ func (t *Tester) SetUpHierarchy() (
 		}
 
 		mklines := NewMkLines(NewLines(filename, lines))
-		G.Assertf(files[filename] == nil, "MkLines with name %q already exists.", filename)
+		assertf(files[filename] == nil, "MkLines with name %q already exists.", filename)
 		files[filename] = mklines
 		return mklines
 	}
 
 	get = func(filename string) MkLines {
-		G.Assertf(files[filename] != nil, "MkLines with name %q doesn't exist.", filename)
+		assertf(files[filename] != nil, "MkLines with name %q doesn't exist.", filename)
 		return files[filename]
 	}
 
@@ -797,7 +797,7 @@ func (t *Tester) NewLine(filename string, lineno int, text string) Line {
 // NewMkLine creates an in-memory line in the Makefile format with the given text.
 func (t *Tester) NewMkLine(filename string, lineno int, text string) MkLine {
 	basename := path.Base(filename)
-	G.Assertf(
+	assertf(
 		hasSuffix(basename, ".mk") ||
 			basename == "Makefile" ||
 			hasPrefix(basename, "Makefile.") ||
@@ -807,8 +807,9 @@ func (t *Tester) NewMkLine(filename string, lineno int, text string) MkLine {
 	return MkLineParser{}.Parse(t.NewLine(filename, lineno, text))
 }
 
-func (t *Tester) NewShellLineChecker(mklines MkLines, filename string, lineno int, text string) *ShellLineChecker {
-	return NewShellLineChecker(mklines, t.NewMkLine(filename, lineno, text))
+func (t *Tester) NewShellLineChecker(text string) *ShellLineChecker {
+	mklines := t.NewMkLines("filename.mk", text)
+	return NewShellLineChecker(mklines, mklines.mklines[0])
 }
 
 // NewLines returns a list of simple lines that belong together.
@@ -837,7 +838,7 @@ func (t *Tester) NewLinesAt(filename string, firstLine int, texts ...string) Lin
 // see SetUpFileMkLines for loading Makefile fragments with line continuations.
 func (t *Tester) NewMkLines(filename string, lines ...string) MkLines {
 	basename := path.Base(filename)
-	G.Assertf(
+	assertf(
 		hasSuffix(basename, ".mk") || basename == "Makefile" || hasPrefix(basename, "Makefile."),
 		"filename %q must be realistic, otherwise the variable permissions are wrong", filename)
 
@@ -857,7 +858,7 @@ func (t *Tester) Output() string {
 
 	t.stdout.Reset()
 	t.stderr.Reset()
-	if G.Usable() {
+	if G.usable() {
 		G.Logger.logged = Once{}
 		if G.Logger.out != nil { // Necessary because Main resets the G variable.
 			G.Logger.out.state = 0 // Prevent an empty line at the beginning of the next output.
@@ -865,7 +866,7 @@ func (t *Tester) Output() string {
 		}
 	}
 
-	G.Assertf(t.tmpdir != "", "Tester must be initialized before checking the output.")
+	assertf(t.tmpdir != "", "Tester must be initialized before checking the output.")
 	return strings.Replace(stdout+stderr, t.tmpdir, "~", -1)
 }
 
@@ -883,7 +884,7 @@ func (t *Tester) CheckOutputEmpty() {
 //
 // See CheckOutputEmpty, CheckOutputLinesIgnoreSpace.
 func (t *Tester) CheckOutputLines(expectedLines ...string) {
-	G.Assertf(len(expectedLines) > 0, "To check empty lines, use CheckLinesEmpty instead.")
+	assertf(len(expectedLines) > 0, "To check empty lines, use CheckOutputEmpty instead.")
 	t.CheckOutput(expectedLines)
 }
 
@@ -896,8 +897,8 @@ func (t *Tester) CheckOutputLines(expectedLines ...string) {
 //
 // See CheckOutputEmpty, CheckOutputLines.
 func (t *Tester) CheckOutputLinesIgnoreSpace(expectedLines ...string) {
-	G.Assertf(len(expectedLines) > 0, "To check empty lines, use CheckLinesEmpty instead.")
-	G.Assertf(t.tmpdir != "", "Tester must be initialized before checking the output.")
+	assertf(len(expectedLines) > 0, "To check empty lines, use CheckOutputEmpty instead.")
+	assertf(t.tmpdir != "", "Tester must be initialized before checking the output.")
 
 	rawOutput := t.stdout.String() + t.stderr.String()
 	_ = t.Output() // Just to consume the output
@@ -1055,7 +1056,7 @@ func (t *Tester) EnableSilentTracing() {
 // The diagnostics go to the in-memory buffer again,
 // ready to be checked with CheckOutputLines.
 func (t *Tester) DisableTracing() {
-	if G.Usable() {
+	if G.usable() {
 		G.Logger.out = NewSeparatorWriter(&t.stdout)
 	}
 	trace.Tracing = false

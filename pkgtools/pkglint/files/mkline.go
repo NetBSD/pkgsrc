@@ -320,6 +320,24 @@ func (mkline *MkLineImpl) Value() string { return mkline.data.(mkLineAssign).val
 // The leading "#" is included so that pkglint can distinguish between no comment at all and an empty comment.
 func (mkline *MkLineImpl) VarassignComment() string { return mkline.data.(mkLineAssign).comment }
 
+// FirstLineContainsValue returns whether the variable assignment of a
+// multiline contains a textual value in the first line.
+//
+//  VALUE_IN_FIRST_LINE= value \
+//          starts in first line
+//  NO_VALUE_IN_FIRST_LINE= \
+//          value starts in second line
+func (mkline *MkLineImpl) FirstLineContainsValue() bool {
+	assertf(mkline.IsVarassign() || mkline.IsCommentedVarassign(), "Line must be a variable assignment.")
+	assertf(mkline.IsMultiline(), "Line must be multiline.")
+
+	// Parsing the continuation marker as variable value is cheating but works well.
+	text := strings.TrimSuffix(mkline.raw[0].orignl, "\n")
+	data := MkLineParser{}.split(nil, text)
+	_, a := MkLineParser{}.MatchVarassign(mkline.Line, text, data)
+	return a.value != "\\"
+}
+
 func (mkline *MkLineImpl) ShellCommand() string { return mkline.data.(mkLineShell).command }
 
 func (mkline *MkLineImpl) Indent() string {
@@ -432,7 +450,7 @@ func (mkline *MkLineImpl) Tokenize(text string, warn bool) []*MkToken {
 //
 // When several separators are adjacent, this results in empty words in the output.
 func (mkline *MkLineImpl) ValueSplit(value string, separator string) []string {
-	G.Assertf(separator != "", "Separator must not be empty; use ValueFields to split on whitespace")
+	assertf(separator != "", "Separator must not be empty; use ValueFields to split on whitespace")
 
 	tokens := mkline.Tokenize(value, false)
 	var split []string
@@ -579,7 +597,7 @@ func (mkline *MkLineImpl) Fields() []string {
 
 }
 
-func (mkline *MkLineImpl) WithoutMakeVariables(value string) string {
+func (*MkLineImpl) WithoutMakeVariables(value string) string {
 	var valueNovar strings.Builder
 	for _, token := range NewMkParser(nil, value, false).MkTokens() {
 		if token.Varuse == nil {
@@ -609,7 +627,7 @@ func (mkline *MkLineImpl) ResolveVarsInRelativePath(relativePath string) string 
 			// Relative pkgsrc paths usually only contain two or three levels.
 			// A possible reason for reaching this assertion is a pkglint unit test
 			// that uses t.NewMkLines instead of the correct t.SetUpFileMkLines.
-			G.Assertf(!contains(pkgsrcdir, "../../../../.."),
+			assertf(!contains(pkgsrcdir, "../../../../.."),
 				"Relative path %q for %q is too deep below the pkgsrc root %q.",
 				pkgsrcdir, basedir, G.Pkgsrc.File("."))
 		}
@@ -735,7 +753,7 @@ again:
 			return main, lexer.Rest()
 		}
 
-		G.Assertf(lexer.EOF(), "unescapeComment(%q): sb = %q, rest = %q", text, main, lexer.Rest())
+		assertf(lexer.EOF(), "unescapeComment(%q): sb = %q, rest = %q", text, main, lexer.Rest())
 		return main, ""
 	}
 
@@ -759,18 +777,10 @@ type mkLineSplitResult struct {
 // have comments.
 func (p MkLineParser) split(line Line, text string) mkLineSplitResult {
 
-	main, comment := p.unescapeComment(text)
+	mainWithSpaces, comment := p.unescapeComment(text)
 
-	parser := NewMkParser(line, main, line != nil)
+	parser := NewMkParser(line, mainWithSpaces, line != nil)
 	lexer := parser.lexer
-
-	rtrimHspace := func(s string) string {
-		end := len(s)
-		for end > 0 && isHspace(s[end-1]) {
-			end--
-		}
-		return s[:end]
-	}
 
 	parseOther := func() string {
 		var sb strings.Builder
@@ -803,7 +813,7 @@ func (p MkLineParser) split(line Line, text string) mkLineSplitResult {
 			tokens = append(tokens, &MkToken{other, nil})
 
 		} else {
-			G.Assertf(lexer.SkipByte('$'), "Parse error for %q.", text)
+			assertf(lexer.SkipByte('$'), "Parse error for %q.", text)
 			tokens = append(tokens, &MkToken{"$", nil})
 		}
 	}
@@ -813,20 +823,21 @@ func (p MkLineParser) split(line Line, text string) mkLineSplitResult {
 		comment = comment[1:]
 	}
 
-	G.Assertf(lexer.Rest() == "", "Parse error for %q.", text)
-
-	mainWithSpaces := main
-	main = rtrimHspace(main)
-	spaceBeforeComment := ifelseStr(true, mainWithSpaces[len(main):], "")
-	if spaceBeforeComment != "" && len(tokens) > 0 {
+	mainTrimmed := rtrimHspace(mainWithSpaces)
+	spaceBeforeComment := mainWithSpaces[len(mainTrimmed):]
+	if spaceBeforeComment != "" {
 		tokenText := &tokens[len(tokens)-1].Text
 		*tokenText = rtrimHspace(*tokenText)
 		if *tokenText == "" {
-			tokens = tokens[:len(tokens)-1]
+			if len(tokens) == 1 {
+				tokens = nil
+			} else {
+				tokens = tokens[:len(tokens)-1]
+			}
 		}
 	}
 
-	return mkLineSplitResult{main, tokens, spaceBeforeComment, hasComment, comment}
+	return mkLineSplitResult{mainTrimmed, tokens, spaceBeforeComment, hasComment, comment}
 }
 
 func (p MkLineParser) parseDirective(line Line, data mkLineSplitResult) MkLine {
@@ -940,7 +951,7 @@ func (mkline *MkLineImpl) VariableNeedsQuoting(mklines MkLines, varuse *MkVarUse
 	}
 
 	// SUBST_MESSAGE.perl= Replacing in ${REPLACE_PERL}
-	if vucVartype.IsPlainString() {
+	if vucVartype.basicType == BtMessage {
 		return no
 	}
 
@@ -1005,31 +1016,31 @@ func (mkline *MkLineImpl) ForEachUsed(action func(varUse *MkVarUse, time vucTime
 	switch {
 
 	case mkline.IsVarassign():
-		searchIn(mkline.Varname(), vucTimeParse)
+		searchIn(mkline.Varname(), vucTimeLoad)
 		searchIn(mkline.Value(), mkline.Op().Time())
 
 	case mkline.IsDirective() && mkline.Directive() == "for":
-		searchIn(mkline.Args(), vucTimeParse)
+		searchIn(mkline.Args(), vucTimeLoad)
 
 	case mkline.IsDirective() && mkline.Cond() != nil:
 		mkline.Cond().Walk(&MkCondCallback{
 			VarUse: func(varuse *MkVarUse) {
-				searchInVarUse(varuse, vucTimeParse)
+				searchInVarUse(varuse, vucTimeLoad)
 			}})
 
 	case mkline.IsShellCommand():
 		searchIn(mkline.ShellCommand(), vucTimeRun)
 
 	case mkline.IsDependency():
-		searchIn(mkline.Targets(), vucTimeParse)
-		searchIn(mkline.Sources(), vucTimeParse)
+		searchIn(mkline.Targets(), vucTimeLoad)
+		searchIn(mkline.Sources(), vucTimeLoad)
 
 	case mkline.IsInclude():
-		searchIn(mkline.IncludedFile(), vucTimeParse)
+		searchIn(mkline.IncludedFile(), vucTimeLoad)
 	}
 }
 
-func (mkline *MkLineImpl) UnquoteShell(str string) string {
+func (*MkLineImpl) UnquoteShell(str string) string {
 	var sb strings.Builder
 	n := len(str)
 
@@ -1106,7 +1117,7 @@ func (op MkOperator) String() string {
 // evaluated.
 func (op MkOperator) Time() vucTime {
 	if op == opAssignShell || op == opAssignEval {
-		return vucTimeParse
+		return vucTimeLoad
 	}
 	return vucTimeRun
 }
@@ -1144,7 +1155,7 @@ const (
 	// right-hand side, as well as the directives .if, .elif and .for.
 	// During loading, not all variables are available yet.
 	// Variable values are still subject to change, especially lists.
-	vucTimeParse
+	vucTimeLoad
 
 	// All files have been read, all variables can be referenced.
 	// Variable values don't change anymore.
@@ -1307,7 +1318,7 @@ func (ind *Indentation) Varnames() []string {
 	var varnames []string
 	for _, level := range ind.levels {
 		for _, levelVarname := range level.conditionalVars {
-			G.Assertf(
+			assertf(
 				!hasSuffix(levelVarname, "_MK"),
 				"multiple-inclusion guard must be filtered out earlier.")
 			varnames = append(varnames, levelVarname)
