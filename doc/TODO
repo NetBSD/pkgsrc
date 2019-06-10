@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19053 2019/06/09 16:20:55 ryoon Exp $
+$NetBSD: TODO,v 1.19054 2019/06/10 08:43:20 adam Exp $
 
 Suggested new packages
 ======================
@@ -1126,7 +1126,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-hgview-1.9.0
 	o py-hsm-1.1.1
 	o py-html5-parser-0.4.7
-	o py-httplib2-0.13.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
 	o py-matplotlib-3.0.3
