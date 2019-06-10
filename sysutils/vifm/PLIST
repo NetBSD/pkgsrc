@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/02/01 14:17:21 mef Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/06/10 17:33:29 nia Exp $
 bin/vifm
 bin/vifm-convert-dircolors
 bin/vifm-pause
@@ -8,6 +8,7 @@ man/man1/vifm-pause.1
 man/man1/vifm-screen-split.1
 man/man1/vifm.1
 share/applications/vifm.desktop
+share/bash-completion/completions/vifm
 share/doc/vifm/AUTHORS
 share/doc/vifm/BUGS
 share/doc/vifm/COPYING
@@ -26,6 +27,7 @@ share/vifm/colors/istib-solarized-dark.vifm
 share/vifm/colors/juef-zenburn.vifm
 share/vifm/colors/reicheltd-light.vifm
 share/vifm/vifm-help.txt
+share/vifm/vifm-media
 share/vifm/vifmrc
 share/vifm/vifmrc-osx
 share/vifm/vim-doc/doc/tags
@@ -42,3 +44,4 @@ share/vifm/vim/ftplugin/vifm-rename.vim
 share/vifm/vim/ftplugin/vifm.vim
 share/vifm/vim/plugin/vifm.vim
 share/vifm/vim/syntax/vifm.vim
+share/zsh/site-functions/_vifm
