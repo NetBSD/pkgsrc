@@ -75,7 +75,7 @@ func (fix *Autofix) Explain(explanation ...string) {
 	// Since a silent fix doesn't have a diagnostic, its explanation would
 	// not provide any clue as to what diagnostic it belongs. That would
 	// be confusing, therefore this case is not allowed.
-	G.Assertf(
+	assertf(
 		fix.diagFormat != SilentAutofixFormat,
 		"Autofix: Silent fixes cannot have an explanation.")
 
@@ -276,7 +276,7 @@ func (fix *Autofix) Apply() {
 
 	// To fix this assertion, call one of Autofix.Errorf, Autofix.Warnf
 	// or Autofix.Notef before calling Apply.
-	G.Assertf(
+	assertf(
 		fix.level != nil,
 		"Each autofix must have a log level and a diagnostic.")
 
@@ -345,8 +345,8 @@ func (fix *Autofix) Realign(mkline MkLine, newWidth int) {
 	// This complicated code should not be in the Autofix type.
 
 	fix.assertRealLine()
-	G.Assertf(mkline.IsMultiline(), "Line must be a multiline.")
-	G.Assertf(mkline.IsVarassign() || mkline.IsCommentedVarassign(), "Line must be a variable assignment.")
+	assertf(mkline.IsMultiline(), "Line must be a multiline.")
+	assertf(mkline.IsVarassign() || mkline.IsCommentedVarassign(), "Line must be a variable assignment.")
 
 	if fix.skip() {
 		return
@@ -404,13 +404,13 @@ func (fix *Autofix) Realign(mkline MkLine, newWidth int) {
 
 func (fix *Autofix) setDiag(level *LogLevel, format string, args []interface{}) {
 	if G.Testing && format != SilentAutofixFormat {
-		G.Assertf(
+		assertf(
 			hasSuffix(format, "."),
 			"Autofix: format %q must end with a period.",
 			format)
 	}
-	G.Assertf(fix.level == nil, "Autofix can only have a single diagnostic.")
-	G.Assertf(fix.diagFormat == "", "Autofix can only have a single diagnostic.")
+	assertf(fix.level == nil, "Autofix can only have a single diagnostic.")
+	assertf(fix.diagFormat == "", "Autofix can only have a single diagnostic.")
 
 	fix.level = level
 	fix.diagFormat = format
@@ -418,7 +418,7 @@ func (fix *Autofix) setDiag(level *LogLevel, format string, args []interface{}) 
 }
 
 func (fix *Autofix) skip() bool {
-	G.Assertf(
+	assertf(
 		fix.diagFormat != "",
 		"Autofix: The diagnostic must be given before the action.")
 	// This check is necessary for the --only command line option.
@@ -426,7 +426,7 @@ func (fix *Autofix) skip() bool {
 }
 
 func (fix *Autofix) assertRealLine() {
-	G.Assertf(fix.line.firstLine >= 1, "Cannot autofix this line since it is not a real line.")
+	assertf(fix.line.firstLine >= 1, "Cannot autofix this line since it is not a real line.")
 }
 
 // SaveAutofixChanges writes the given lines back into their files,

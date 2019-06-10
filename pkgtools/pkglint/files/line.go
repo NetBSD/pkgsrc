@@ -83,7 +83,7 @@ type LineImpl struct {
 }
 
 func NewLine(filename string, lineno int, text string, rawLine *RawLine) Line {
-	G.Assertf(rawLine != nil, "use NewLineMulti for creating a Line with no RawLine attached to it")
+	assertf(rawLine != nil, "use NewLineMulti for creating a Line with no RawLine attached to it")
 	return NewLineMulti(filename, lineno, lineno, text, []*RawLine{rawLine})
 }
 
