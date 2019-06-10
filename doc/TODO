@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19054 2019/06/10 08:43:20 adam Exp $
+$NetBSD: TODO,v 1.19055 2019/06/10 12:41:35 nia Exp $
 
 Suggested new packages
 ======================
@@ -521,7 +521,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o docbook2mdoc-1.0.0 [wip]
 	o doclifter-2.16
 	o dolphin-5.0
-	o dosbox-0.74.2
 	o drivel-3.0.5
 	o dvdstyler-3.0.4
 	o eagle-8.1.0
