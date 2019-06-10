@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.35 2018/07/04 13:40:33 jperkin Exp $
+# $NetBSD: Makefile,v 1.36 2019/06/10 13:44:35 nia Exp $
 
-DISTNAME=	dropbear-2017.75
+DISTNAME=	dropbear-2019.78
 CATEGORIES=	security
-MASTER_SITES=	http://matt.ucc.asn.au/dropbear/releases/
+MASTER_SITES=	https://matt.ucc.asn.au/dropbear/releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	snj@NetBSD.org
-HOMEPAGE=	http://matt.ucc.asn.au/dropbear/dropbear.html
+HOMEPAGE=	https://matt.ucc.asn.au/dropbear/dropbear.html
 COMMENT=	Small SSH2 server and client, aimed at embedded market
 LICENSE=	modified-bsd
 
