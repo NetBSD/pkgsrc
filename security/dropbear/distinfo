@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.25 2017/11/09 19:00:25 snj Exp $
+$NetBSD: distinfo,v 1.26 2019/06/10 13:44:35 nia Exp $
 
-SHA1 (dropbear-2017.75.tar.bz2) = c30c64dda9db228592e3a97313078ca71d9d283f
-RMD160 (dropbear-2017.75.tar.bz2) = 4ad8fafe8a5dd30066bec27af66a8e98bd6db7ed
-SHA512 (dropbear-2017.75.tar.bz2) = 9c2f2a5e718339f83abc0ad7719bda12bfc75e5bcb87a7c0eec0afefc743e5c0a1575d290d5fde152ff2100b0f0e6fd5ef4431f7bbcb5ca9a332d93c20f5a8f4
-Size (dropbear-2017.75.tar.bz2) = 1623392 bytes
-SHA1 (patch-aa) = d23b69458c54933a4cafa6146ca2167c80453523
-SHA1 (patch-ab) = 8595e4c65d8aa78c8d34af70619ced02f807e77b
+SHA1 (dropbear-2019.78.tar.bz2) = 820ec2b8c869edbcf5ad1138777fc0f54349505c
+RMD160 (dropbear-2019.78.tar.bz2) = a6b00e7aa6482b8ca2aa68443306b58be816d80e
+SHA512 (dropbear-2019.78.tar.bz2) = f667ba8dae17ea89c118642b566f2c134c71bfd0b8bacea5cf7ec87d75ac79bd7cd1864a8788367a89d30ee35427d389ef6416375adff6e83caae30ff3e0549f
+Size (dropbear-2019.78.tar.bz2) = 2708659 bytes
+SHA1 (patch-aa) = 2f1ff3a9e3bccab9852d05ee7c0a68484be3f0c3
 SHA1 (patch-configure) = 95c82b951d16a5cca92a3d4d7ef67b7eb5f47540
+SHA1 (patch-default__options.h) = ef38d09e20b9d74abdd118901a4fc30459eb0dcb
