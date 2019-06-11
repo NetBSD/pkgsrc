@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/09/04 18:08:18 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/06/11 11:59:15 wiz Exp $
 
-DISTNAME=	speexdsp-1.2rc3
+DISTNAME=	speexdsp-1.2.0
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.us.xiph.org/releases/speex/
 
