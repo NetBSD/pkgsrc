@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2465 2019/06/11 10:06:22 mrg Exp $
+$NetBSD: CHANGES-2019,v 1.2466 2019/06/11 10:22:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4133,3 +4133,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ocaml-core_kernel to 0.12.2 [jaapb 2019-06-11]
 	Updated devel/glib2 to 2.60.4 [prlw1 2019-06-11]
 	Updated www/bozohttpd to 20190228 [mrg 2019-06-11]
+	Updated audio/musicpd to 0.21.10 [wiz 2019-06-11]
