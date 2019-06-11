@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2019/05/21 15:59:56 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2019/06/11 11:41:39 wiz Exp $
 
-DISTNAME=	po4a-0.55
+DISTNAME=	po4a-0.56
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mquinson/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
