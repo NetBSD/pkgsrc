@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.68 2019/02/07 11:29:31 markd Exp $
+# $NetBSD: Makefile.common,v 1.69 2019/06/11 15:56:32 nia Exp $
 #
 # used by sysutils/bacula-clientonly/Makefile
 # used by sysutils/bacula-tray-monitor/Makefile
@@ -15,7 +15,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bacula/}
 #DIST_SUBDIR=	${DISTNAME}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.bacula.org/
+HOMEPAGE=		https://www.bacula.org/
 COMMENT?=		The Network Backup Solution
 LICENSE=		gnu-agpl-v3
 
