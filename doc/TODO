@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19063 2019/06/11 12:14:07 wiz Exp $
+$NetBSD: TODO,v 1.19064 2019/06/11 12:18:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1130,7 +1130,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-pendrell-0.3.7
 	o py-ptt-1.10.2
 	o py-pycountry-1.20
-	o py-pygit2-0.28.2
 	o py-simpletal-5.1
 	o py-spf-2.0.12t
 	o py-sybase-0.37
