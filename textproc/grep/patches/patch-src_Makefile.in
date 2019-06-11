@@ -1,4 +1,4 @@
-$NetBSD: patch-src_Makefile.in,v 1.1 2017/03/30 08:52:54 bouyer Exp $
+$NetBSD: patch-src_Makefile.in,v 1.2 2019/06/11 10:17:28 jperkin Exp $
 
 Make the paths in gegrep & gfgrep absolute so if they are used without
 ${PREFIX}/${PKGGNUDIR}bin being in the path, they still work.
@@ -10,7 +10,7 @@ ${PREFIX}/${PKGGNUDIR}bin being in the path, they still work.
  	sed -e 's|[@]SHELL@|$(SHELL)|g'					\
  	    -e "$$edit_substring"					\
 -	    -e "s|[@]grep@|$$grep|g"					\
-+	    -e "s|[@]grep@|$(PREFIX)/$(PKGGNUDIR)bin/$$grep|g"		\
++	    -e "s|[@]grep@|$(PREFIX)/$(PKGGNUDIR)bin/grep|g"		\
  	    -e "s|[@]option@|$$option|g" <$(srcdir)/egrep.sh >$@-t
  	$(AM_V_at)chmod +x $@-t
  	$(AM_V_at)mv $@-t $@
