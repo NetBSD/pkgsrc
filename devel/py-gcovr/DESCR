@@ -1,0 +1,4 @@
+Gcovr provides a utility for managing the use of the GNU gcov utility
+and generating summarized code coverage results. This command is
+inspired by the Python coverage.py package, which provides a similar
+utility for Python.
