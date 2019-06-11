@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2019/06/11 12:45:46 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2019/06/11 13:12:16 leot Exp $
 
 DISTNAME=	glib-networking-2.60.1
 CATEGORIES=	net gnome
@@ -12,10 +12,8 @@ LICENSE=	gnu-lgpl-v2
 
 DEPENDS=	mozilla-rootcerts>=1.0.20150804nb1:../../security/mozilla-rootcerts
 
-MESON_ARGS+=	-Dca_certificates_path=${PREFIX}/share/mozilla-rootcerts/cacert.pem
 USE_TOOLS+=	pkg-config gmake gettext
 
-REPLACE_PYTHON+=	find-ca-certificates
 REPLACE_PYTHON+=	meson_post_install.py
 
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.56.0
