@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2457 2019/06/11 08:13:16 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2458 2019/06/11 08:18:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4125,3 +4125,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated pkgtools/pkglint to 5.7.13 [rillig 2019-06-10]
 	Updated www/trac to 1.2.3 [maya 2019-06-11]
 	Updated x11/sessreg to 1.1.2 [wiz 2019-06-11]
+	Updated x11/xcalc to 1.1.0 [wiz 2019-06-11]
