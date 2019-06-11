@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2461 2019/06/11 08:58:43 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2462 2019/06/11 09:04:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4129,3 +4129,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ocaml-ppx_bin_prot to 0.12.1 [jaapb 2019-06-11]
 	Updated audio/libshout to 2.4.3 [wiz 2019-06-11]
 	Updated devel/waf to 2.0.17 [wiz 2019-06-11]
+	Updated fonts/unifont to 12.1.02 [wiz 2019-06-11]
