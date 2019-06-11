@@ -1,0 +1,20 @@
+# $Netbsd: $
+# used by security/py-acme/Makefile
+# used by security/py-certbot-apache/Makefile
+# used by security/py-certbot-dns-luadns/Makefile
+# used by security/py-certbot-dns-nsone/Makefile
+# used by security/py-certbot-dns-ovh/Makefile
+# used by security/py-certbot-dns-rfc2136/Makefile
+# used by security/py-certbot-dns-route53/Makefile
+# used by security/py-certbot-dns-sakuracloud/Makefile
+# used by security/py-certbot-nginx/Makefile
+
+CERTBOT_VERSION=	0.35.0
+PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+
+CATEGORIES?=	security python
+
+HOMEPAGE=	https://github.com/certbot/certbot
+LICENSE=	apache-2.0
+
+USE_LANGUAGES=	# none
