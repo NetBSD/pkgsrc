@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2480 2019/06/11 20:04:34 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2481 2019/06/11 21:05:41 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4157,3 +4157,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/go-golang-lru to 0.5.1 [wiz 2019-06-11]
 	Updated misc/py-anita to 1.49 [gson 2019-06-11]
 	Updated sysutils/dbus to 1.12.16 [wiz 2019-06-11]
+	Updated security/py-certbot-dns-linode to 0.35.0 [triaxx 2019-06-11]
