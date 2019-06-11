@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.18 2019/05/17 06:46:30 adam Exp $
+# $NetBSD: Makefile,v 1.19 2019/06/11 14:22:01 triaxx Exp $
 
-DISTNAME=	acme-0.34.2
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	security python
+DISTNAME=	acme-${CERTBOT_VERSION}
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/acme/}
 
 MAINTAINER=	fhajny@NetBSD.org
-HOMEPAGE=	https://github.com/certbot/certbot
 COMMENT=	ACME protocol implementation in Python
-LICENSE=	apache-2.0
+
+.include "../../security/py-certbot/Makefile.common"
 
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.15:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=1.2.3:../../security/py-cryptography
@@ -22,8 +20,6 @@ DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
-
-USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
