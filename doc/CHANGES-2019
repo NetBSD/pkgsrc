@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2473 2019/06/11 12:18:44 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2474 2019/06/11 12:24:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4141,3 +4141,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/speexdsp to 1.2.0 [wiz 2019-06-11]
 	Updated textproc/py-html5-parser to 0.4.7 [wiz 2019-06-11]
 	Updated devel/py-pygit2 to 0.28.2 [wiz 2019-06-11]
+	Updated www/py-google-api-python-client to 1.7.9 [wiz 2019-06-11]
