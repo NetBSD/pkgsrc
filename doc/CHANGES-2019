@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2459 2019/06/11 08:46:51 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.2460 2019/06/11 08:49:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4127,3 +4127,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/sessreg to 1.1.2 [wiz 2019-06-11]
 	Updated x11/xcalc to 1.1.0 [wiz 2019-06-11]
 	Updated devel/ocaml-ppx_bin_prot to 0.12.1 [jaapb 2019-06-11]
+	Updated audio/libshout to 2.4.3 [wiz 2019-06-11]
