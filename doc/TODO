@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19060 2019/06/11 10:22:00 wiz Exp $
+$NetBSD: TODO,v 1.19061 2019/06/11 11:41:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1084,7 +1084,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o plan-1.10.1
 	o plasma-5.11
 	o ploticus-examples-230
-	o po4a-0.56
 	o poco-1.7.5
 	o podcastdl-0.3.3
 	o pokerth-1.0.1
