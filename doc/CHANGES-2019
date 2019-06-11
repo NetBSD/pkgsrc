@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2482 2019/06/11 21:07:41 triaxx Exp $
+$NetBSD: CHANGES-2019,v 1.2483 2019/06/11 21:09:25 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4159,3 +4159,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/dbus to 1.12.16 [wiz 2019-06-11]
 	Updated security/py-certbot-dns-linode to 0.35.0 [triaxx 2019-06-11]
 	Updated security/py-certbot-dns-google to 0.35.0 [triaxx 2019-06-11]
+	Updated security/py-certbot-dns-gehirn to 0.35.0 [triaxx 2019-06-11]
