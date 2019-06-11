@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2019/05/21 17:57:39 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/06/11 09:04:00 wiz Exp $
 
-DISTNAME=	unifont-12.1.01
+DISTNAME=	unifont-12.1.02
 CATEGORIES=	fonts
 MASTER_SITES=	http://unifoundry.com/pub/unifont/${DISTNAME}/
 
