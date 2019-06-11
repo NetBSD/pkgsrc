@@ -1,4 +1,9 @@
-$NetBSD: patch-playlist__file.c,v 1.2 2016/02/16 08:46:01 leot Exp $
+$NetBSD: patch-playlist__file.c,v 1.3 2019/06/11 11:54:56 nia Exp $
+
+flock is a BSD extension.
+
+XXX maybe this can be removed:
+https://github.com/illumos/illumos-gate/commit/7a5aac98bc37534537d4896efd4efd30627d221e
 
 --- playlist_file.c.orig	2014-08-30 02:31:51.000000000 +0000
 +++ playlist_file.c

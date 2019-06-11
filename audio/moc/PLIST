@@ -1,10 +1,15 @@
-@comment $NetBSD: PLIST,v 1.5 2016/02/16 08:46:01 leot Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/06/11 11:54:56 nia Exp $
 bin/mocp
+${PLIST.faad}lib/moc/decoder_plugins/libaac_decoder.la
+${PLIST.ffmpeg}lib/moc/decoder_plugins/libffmpeg_decoder.la
 ${PLIST.flac}lib/moc/decoder_plugins/libflac_decoder.la
-lib/moc/decoder_plugins/libmp3_decoder.la
+${PLIST.modplug}lib/moc/decoder_plugins/libmodplug_decoder.la
+${PLIST.mad}lib/moc/decoder_plugins/libmp3_decoder.la
+${PLIST.sidplay}lib/moc/decoder_plugins/libsidplay2_decoder.la
 ${PLIST.sndfile}lib/moc/decoder_plugins/libsndfile_decoder.la
 ${PLIST.speex}lib/moc/decoder_plugins/libspeex_decoder.la
 ${PLIST.vorbis}lib/moc/decoder_plugins/libvorbis_decoder.la
+${PLIST.wavpack}lib/moc/decoder_plugins/libwavpack_decoder.la
 man/man1/mocp.1
 share/doc/moc/README
 share/doc/moc/README_equalizer
