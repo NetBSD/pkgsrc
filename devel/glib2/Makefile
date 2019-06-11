@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.250 2019/06/06 11:05:12 adam Exp $
+# $NetBSD: Makefile,v 1.251 2019/06/11 09:15:54 prlw1 Exp $
 
 .include "Makefile.common"
 
@@ -25,6 +25,8 @@ FILES_SUBST+=		GIO_MODULES_DIR=${PREFIX}/lib/gio/modules
 FILES_SUBST+=		GIO_QUERYMODULES=${PREFIX}/bin/gio-querymodules
 FILES_SUBST+=		GLIB_COMPILE_SCHEMAS=${PREFIX}/bin/glib-compile-schemas
 FILES_SUBST+=		GLIB_SCHEMAS_DIR=${PREFIX}/share/glib-2.0/schemas
+
+OWN_DIRS=		${GIO_MODULES_DIR}
 
 BUILD_DEFS+=		VARBASE
 SUBST_CLASSES+=		dbusdb
