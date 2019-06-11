@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2019/05/17 06:46:30 adam Exp $
+# $NetBSD: Makefile,v 1.6 2019/06/11 14:22:02 triaxx Exp $
 
-DISTNAME=	certbot-apache-0.34.2
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	security python
+DISTNAME=	certbot-apache-${CERTBOT_VERSION}
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/certbot-apache/}
 
-COMMENT=	Apache plugin for Certbot
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/certbot/certbot
-LICENSE=	apache-2.0
+COMMENT=	Apache plugin for Certbot
+
+.include "../../security/py-certbot/Makefile.common"
 
 DEPENDS+=	${PYPKGPREFIX}-acme>=0.29.0:../../security/py-acme
 DEPENDS+=	${PYPKGPREFIX}-augeas-[0-9]*:../../sysutils/py-augeas
@@ -18,8 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-pyparsing>=1.5.5:../../devel/py-pyparsing
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-ZopeComponent-[0-9]*:../../devel/py-ZopeComponent
 DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
-
-USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
