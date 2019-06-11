@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2469 2019/06/11 11:41:53 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2470 2019/06/11 11:55:10 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4137,3 +4137,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-GitLab-API-v4 to 0.19 [markd 2019-06-11]
 	Added devel/py-gcovr version 4.1 [markd 2019-06-11]
 	Updated textproc/po4a to 0.56 [wiz 2019-06-11]
+	Updated audio/moc to 2.5.2 [nia 2019-06-11]
