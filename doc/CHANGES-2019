@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2475 2019/06/11 12:46:00 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2476 2019/06/11 13:23:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4143,3 +4143,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-pygit2 to 0.28.2 [wiz 2019-06-11]
 	Updated www/py-google-api-python-client to 1.7.9 [wiz 2019-06-11]
 	Updated net/glib-networking to 2.60.1 [wiz 2019-06-11]
+	Updated graphics/ImageMagick to 7.0.8.49 [wiz 2019-06-11]
