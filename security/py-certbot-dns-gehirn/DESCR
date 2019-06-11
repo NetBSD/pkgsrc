@@ -1,0 +1,3 @@
+The dns_gehirn plugin automates the process of completing a dns-01 challenge
+(DNS01) by creating, and subsequently removing, TXT records using the Gehirn
+Infrastracture Service DNS API.
