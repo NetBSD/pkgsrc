@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2019/06/11 21:06:59 triaxx Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/certbot_dns_google/__init__.py
+${PYSITELIB}/certbot_dns_google/__init__.pyo
+${PYSITELIB}/certbot_dns_google/__init__.pyc
+${PYSITELIB}/certbot_dns_google/dns_google.pyo
+${PYSITELIB}/certbot_dns_google/dns_google.pyc
+${PYSITELIB}/certbot_dns_google/dns_google_test.pyo
+${PYSITELIB}/certbot_dns_google/dns_google_test.pyc
+${PYSITELIB}/certbot_dns_google/dns_google.py
+${PYSITELIB}/certbot_dns_google/dns_google_test.py
+${PYSITELIB}/certbot_dns_google/testdata/discovery.json
