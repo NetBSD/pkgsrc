@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.99 2019/05/27 14:29:44 wiz Exp $
+$NetBSD: distinfo,v 1.100 2019/06/11 10:21:43 wiz Exp $
 
-SHA1 (mpd-0.21.9.tar.xz) = 9677247350e13ba519ea62281c4ecbfea78cf562
-RMD160 (mpd-0.21.9.tar.xz) = 21d21c0cd34a23f24cd52a5573a837caccc7fc03
-SHA512 (mpd-0.21.9.tar.xz) = e4c5561df881874a16716b32bc1381b6e3bd3690eac07cf3923d1e273937b9594cf387d1e1aa3b02c7f0d19bd30c4575f43863e11d9a69b6a647205009593a9e
-Size (mpd-0.21.9.tar.xz) = 671092 bytes
+SHA1 (mpd-0.21.10.tar.xz) = f4c086264c5889b34844ae5bdbfbd037c6de7dac
+RMD160 (mpd-0.21.10.tar.xz) = 610cc56e2f6d74f9fb66505ebbb1ba5cff7ff23d
+SHA512 (mpd-0.21.10.tar.xz) = 42272ab5f767c5a6b907f5dd922ca35abc759dfbb4769a235261fdf0433a0f70494f503255403d41dfd34902bd6aff21f48291b24fd5bc260a5fdef53800c991
+Size (mpd-0.21.10.tar.xz) = 670952 bytes
 SHA1 (patch-src_net_IPv6Address.hxx) = c9e9a5676451e6834fcef359266d37fc15f079e6
