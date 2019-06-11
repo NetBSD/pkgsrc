@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2019/06/01 01:17:12 kamil Exp $
+# $NetBSD: Makefile,v 1.20 2019/06/11 23:50:13 kamil Exp $
 
 DISTNAME=	terminator-0.98
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	x11
 MASTER_SITES=	https://launchpad.net/terminator/trunk/${PKGVERSION_NOREV}/+download/
 
@@ -27,6 +27,8 @@ SUBST_CLASSES+=		manpath
 SUBST_STAGE.manpath=	pre-configure
 SUBST_FILES.manpath=	setup.py
 SUBST_VARS.manpath=	PKGMANDIR
+
+DEPENDS+=	${PYPKGPREFIX}-psutil>=5.6.3:../../sysutils/py-psutil
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
