@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.13 2017/02/16 13:31:44 maya Exp $
+$NetBSD: distinfo,v 1.14 2019/06/11 11:54:56 nia Exp $
 
-SHA1 (moc-2.5.0.tar.bz2) = a02c10075541995771dbdccb7f2d0ecd19d70b81
-RMD160 (moc-2.5.0.tar.bz2) = 0c5d927b7c8ef54338ff6970f9e5d4f71dcb6168
-SHA512 (moc-2.5.0.tar.bz2) = ca6cfd4d1d13030bd561df8ab671399a17dfb675c360ecc95a2491c6a85764d0f72259ac33665405b197f370f4fd7ef59d9a485706f8a882bff30d0fafcf252c
-Size (moc-2.5.0.tar.bz2) = 594532 bytes
-SHA1 (patch-ab) = 37a3cc45df7b528613ce5c714c95895988f1570c
-SHA1 (patch-ad) = 4d4d73f819717698b37ca937477989b010adb5c8
-SHA1 (patch-decoder__plugins_vorbis_vorbis.m4) = 50f2967146be40a6d6b881cdffe5f25c4c226175
-SHA1 (patch-playlist__file.c) = cc2d5280992d713c846bfe16e8869238df6dca5d
+SHA1 (moc-2.5.2.tar.bz2) = 9d27a929b63099416263471c16367997c0ae6dba
+RMD160 (moc-2.5.2.tar.bz2) = 3b965b4f173f1d217b4dfb071376d989bdc8d2ff
+SHA512 (moc-2.5.2.tar.bz2) = 992d06809fb52e58dcee63704bde05795b99edbac46edd8381f314c564490013b18e1853926f419c2c3c7f1bb68ff35e97048de03ace3232b800cf4b3b7dbe0f
+Size (moc-2.5.2.tar.bz2) = 602728 bytes
+SHA1 (patch-alsa.c) = 7d603757dae2c1a749ab3d0ebd7bdeee18e6dc5e
+SHA1 (patch-playlist__file.c) = 0cda1917aca55341981dff94bcbb177af1be3de2
