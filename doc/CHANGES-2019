@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2458 2019/06/11 08:18:28 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2459 2019/06/11 08:46:51 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4126,3 +4126,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/trac to 1.2.3 [maya 2019-06-11]
 	Updated x11/sessreg to 1.1.2 [wiz 2019-06-11]
 	Updated x11/xcalc to 1.1.0 [wiz 2019-06-11]
+	Updated devel/ocaml-ppx_bin_prot to 0.12.1 [jaapb 2019-06-11]
