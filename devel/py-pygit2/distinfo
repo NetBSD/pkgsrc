@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2019/05/01 07:23:53 wiz Exp $
+$NetBSD: distinfo,v 1.7 2019/06/11 12:18:31 wiz Exp $
 
-SHA1 (pygit2-0.28.1.tar.gz) = 0c8332612e1ee0e4ba615f78717628addb8c4791
-RMD160 (pygit2-0.28.1.tar.gz) = 3edca1634543f5684696389f5edeee930a57f7e4
-SHA512 (pygit2-0.28.1.tar.gz) = 46bb9d6150b7413311f26ea1aeae15cdcd22a2d5c4cafa17bd8a1c02dbf0c9a630cf89583e77a07be5c74334ac28a672de31290ba986476ded25e8a19abf7f3b
-Size (pygit2-0.28.1.tar.gz) = 496243 bytes
+SHA1 (pygit2-0.28.2.tar.gz) = 25e68e389bdc600631a72d98391377cc37cabf45
+RMD160 (pygit2-0.28.2.tar.gz) = 15bc91cf67aa94c34fc76cbdf0da1914147a5f5a
+SHA512 (pygit2-0.28.2.tar.gz) = 3f742cdcc9d603c9cc9ef2e0a545da8bcfb555a0bdeea1c73c53a284b43d40ad6b28c87a029578ad7b1c8f2bf56ecd2859dac8dd836474bfc66223ff4af9e8f0
+Size (pygit2-0.28.2.tar.gz) = 496469 bytes
