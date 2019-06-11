@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2477 2019/06/11 14:31:13 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2478 2019/06/11 14:34:08 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4144,4 +4144,14 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-google-api-python-client to 1.7.9 [wiz 2019-06-11]
 	Updated net/glib-networking to 2.60.1 [wiz 2019-06-11]
 	Updated graphics/ImageMagick to 7.0.8.49 [wiz 2019-06-11]
+	Updated security/py-acme to 0.35.0 [triaxx 2019-06-11]
+	Updated security/py-certbot to 0.35.0 [triaxx 2019-06-11]
+	Updated security/py-certbot-apache to 0.35.0 [triaxx 2019-06-11]
+	Updated security/py-certbot-dns-luadns to 0.35.0 [triaxx 2019-06-11]
+	Updated security/py-certbot-dns-nsone to 0.35.0 [triaxx 2019-06-11]
+	Updated security/py-certbot-dns-ovh to 0.35.0 [triaxx 2019-06-11]
+	Updated security/py-certbot-dns-rfc2136 to 0.35.0 [triaxx 2019-06-11]
+	Updated security/py-certbot-dns-route53 to 0.35.0 [triaxx 2019-06-11]
+	Updated security/py-certbot-dns-sakuracloud to 0.35.0 [triaxx 2019-06-11]
+	Updated security/py-certbot-nginx to 0.35.0 [triaxx 2019-06-11]
 	Updated devel/go-golang-lru to 0.5.1 [wiz 2019-06-11]
