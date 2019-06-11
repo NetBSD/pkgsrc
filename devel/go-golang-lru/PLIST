@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:27:21 gavan Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/06/11 14:31:02 wiz Exp $
 gopkg/pkg/${GO_PLATFORM}/github.com/hashicorp/golang-lru.a
 gopkg/pkg/${GO_PLATFORM}/github.com/hashicorp/golang-lru/simplelru.a
 gopkg/src/github.com/hashicorp/golang-lru/2q.go
@@ -7,8 +7,10 @@ gopkg/src/github.com/hashicorp/golang-lru/LICENSE
 gopkg/src/github.com/hashicorp/golang-lru/README.md
 gopkg/src/github.com/hashicorp/golang-lru/arc.go
 gopkg/src/github.com/hashicorp/golang-lru/arc_test.go
+gopkg/src/github.com/hashicorp/golang-lru/doc.go
+gopkg/src/github.com/hashicorp/golang-lru/go.mod
 gopkg/src/github.com/hashicorp/golang-lru/lru.go
 gopkg/src/github.com/hashicorp/golang-lru/lru_test.go
 gopkg/src/github.com/hashicorp/golang-lru/simplelru/lru.go
+gopkg/src/github.com/hashicorp/golang-lru/simplelru/lru_interface.go
 gopkg/src/github.com/hashicorp/golang-lru/simplelru/lru_test.go
-@pkgdir bin
