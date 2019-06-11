@@ -1,20 +1,21 @@
-# $NetBSD: Makefile,v 1.12 2019/05/27 15:18:22 bsiegert Exp $
+# $NetBSD: Makefile,v 1.13 2019/06/11 14:31:02 wiz Exp $
 
-DISTNAME=	golang-lru-0.0.20160813
+DISTNAME=	golang-lru-0.5.1
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	10
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 CATEGORIES=	devel
-GITHUB_TAG=	0a025b7e63adc15a622f29b0b2c4c3848243bbf6
 GITHUB_PROJECT= ${PKGBASE:S/^go-//}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/hashicorp/golang-lru
 COMMENT=	Golang LRU cache
 LICENSE=	mpl-2.0
 
-GO_DIST_BASE=	${GITHUB_PROJECT}-${GITHUB_TAG}
+GO_DIST_BASE=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 GO_SRCPATH=	github.com/hashicorp/golang-lru
+
+EXTRACT_USING=	bsdtar
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
