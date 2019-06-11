@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2019/06/11 21:10:31 triaxx Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/certbot_dns_dnsmadeeasy/__init__.py
+${PYSITELIB}/certbot_dns_dnsmadeeasy/__init__.pyo
+${PYSITELIB}/certbot_dns_dnsmadeeasy/__init__.pyc
+${PYSITELIB}/certbot_dns_dnsmadeeasy/dns_dnsmadeeasy.pyo
+${PYSITELIB}/certbot_dns_dnsmadeeasy/dns_dnsmadeeasy.pyc
+${PYSITELIB}/certbot_dns_dnsmadeeasy/dns_dnsmadeeasy_test.pyo
+${PYSITELIB}/certbot_dns_dnsmadeeasy/dns_dnsmadeeasy_test.pyc
+${PYSITELIB}/certbot_dns_dnsmadeeasy/dns_dnsmadeeasy.py
+${PYSITELIB}/certbot_dns_dnsmadeeasy/dns_dnsmadeeasy_test.py
