@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2484 2019/06/11 21:11:06 triaxx Exp $
+$NetBSD: CHANGES-2019,v 1.2485 2019/06/11 21:13:39 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4161,3 +4161,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/py-certbot-dns-google to 0.35.0 [triaxx 2019-06-11]
 	Updated security/py-certbot-dns-gehirn to 0.35.0 [triaxx 2019-06-11]
 	Updated security/py-certbot-dns-dnsmadeeasy to 0.35.0 [triaxx 2019-06-11]
+	Updated security/py-certbot-dns-dnsimple to 0.35.0 [triaxx 2019-06-11]
