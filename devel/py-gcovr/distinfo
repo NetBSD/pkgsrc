@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/06/11 11:34:39 markd Exp $
+
+SHA1 (gcovr-4.1.tar.gz) = c0a73ae2dad20002ea4c5ec34a928dffca3e79ca
+RMD160 (gcovr-4.1.tar.gz) = c4ff6037083e25a744645dadcf3b66ea48fb5b51
+SHA512 (gcovr-4.1.tar.gz) = 0d8b6a72e2f92d6bde233d7f445cfffe35cb9e175cc117aff87fcf681df992c417d092ce35d336d8544cd2e5d93317bdf6aa2390ce8202d752eaaf706faced54
+Size (gcovr-4.1.tar.gz) = 30020 bytes
