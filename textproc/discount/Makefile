@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2019/06/10 13:32:56 schmonz Exp $
+# $NetBSD: Makefile,v 1.10 2019/06/11 10:03:07 leot Exp $
 #
 
-GITHUB_PROJECT=	discount
-DISTNAME=	v2.2.6
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S/^v//}
+DISTNAME=	discount-2.2.6
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Orc/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	zecrazytux@zecrazytux.net
 HOMEPAGE=	http://www.pell.portland.or.us/~orc/Code/discount/
