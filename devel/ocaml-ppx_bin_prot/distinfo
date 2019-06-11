@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/03/13 11:15:45 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2019/06/11 08:44:31 jaapb Exp $
 
-SHA1 (ppx_bin_prot-0.12.0.tar.gz) = e67916f353a4f54b6ffe750efe966bb1ff3701e6
-RMD160 (ppx_bin_prot-0.12.0.tar.gz) = 3d6d0618125e653976dabe8d86d930e68a09f3e6
-SHA512 (ppx_bin_prot-0.12.0.tar.gz) = 6f54d5bfc8d546a9c86a201b28362240a1b04c32eba8c2a2c64f3de3a208caf28c048218dab51c85acec5da3f97aa38a7249e717403253974d5af1ce77728b05
-Size (ppx_bin_prot-0.12.0.tar.gz) = 36260 bytes
+SHA1 (ppx_bin_prot-0.12.1.tar.gz) = 4de73cf2d42fac1d2c557907d487a63dbe50071d
+RMD160 (ppx_bin_prot-0.12.1.tar.gz) = 9822017692741d16b2307b328c7397766cc7412b
+SHA512 (ppx_bin_prot-0.12.1.tar.gz) = 7fac24a6d4731a98d0eba07ff29b41eba0e2f0132d4fe1617f7dff221111a32f5bd051c6dc4e71476bd8f9e79e8d6792a412c5ce6f4251f9fd852aebf29941fc
+Size (ppx_bin_prot-0.12.1.tar.gz) = 36311 bytes
