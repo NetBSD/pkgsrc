@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2467 2019/06/11 11:14:47 markd Exp $
+$NetBSD: CHANGES-2019,v 1.2468 2019/06/11 11:36:13 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4135,3 +4135,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/bozohttpd to 20190228 [mrg 2019-06-11]
 	Updated audio/musicpd to 0.21.10 [wiz 2019-06-11]
 	Updated devel/p5-GitLab-API-v4 to 0.19 [markd 2019-06-11]
+	Added devel/py-gcovr version 4.1 [markd 2019-06-11]
