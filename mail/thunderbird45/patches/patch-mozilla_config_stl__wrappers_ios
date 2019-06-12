@@ -1,8 +1,0 @@
-$NetBSD: patch-mozilla_config_stl__wrappers_ios,v 1.1 2017/04/27 13:38:18 ryoon Exp $
-
---- mozilla/config/stl_wrappers/ios.orig	2016-04-17 13:47:46.239830507 +0000
-+++ mozilla/config/stl_wrappers/ios
-@@ -0,0 +1,3 @@
-+#pragma GCC visibility push(default)
-+#include_next <ios>
-+#pragma GCC visibility pop
