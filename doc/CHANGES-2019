@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2499 2019/06/12 20:53:05 sjmulder Exp $
+$NetBSD: CHANGES-2019,v 1.2500 2019/06/12 22:04:55 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4196,3 +4196,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-xopen to 0.7.0 [adam 2019-06-12]
 	Updated devel/py-requests-futures to 1.0.0 [adam 2019-06-12]
 	Updated sysutils/nnn to 2.5nb1 [sjmulder 2019-06-12]
+	Updated net/glib-networking to 2.60.3 [leot 2019-06-12]
