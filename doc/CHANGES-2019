@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2486 2019/06/11 22:55:16 leot Exp $
+$NetBSD: CHANGES-2019,v 1.2487 2019/06/12 00:55:14 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4163,3 +4163,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/py-certbot-dns-dnsmadeeasy to 0.35.0 [triaxx 2019-06-11]
 	Updated security/py-certbot-dns-dnsimple to 0.35.0 [triaxx 2019-06-11]
 	Updated sysutils/py-psutil to 5.6.3 [leot 2019-06-11]
+	Updated x11/py-terminator to 0.98nb9 [kamil 2019-06-12]
