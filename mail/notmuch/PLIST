@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2019/04/05 09:59:01 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.18 2019/06/12 13:26:27 ryoon Exp $
 bin/notmuch
 ${PLIST.emacs}bin/notmuch-emacs-mua
 include/notmuch.h
@@ -8,7 +8,7 @@ ${PLIST.doc}info/notmuch-config.info
 ${PLIST.doc}info/notmuch-count.info
 ${PLIST.doc}info/notmuch-dump.info
 ${PLIST.doc}info/notmuch-emacs-mua.info
-${PLIST.doc}info/notmuch-emacs.info
+${PLIST.emacs}${PLIST.doc}info/notmuch-emacs.info
 ${PLIST.doc}info/notmuch-hooks.info
 ${PLIST.doc}info/notmuch-insert.info
 ${PLIST.doc}info/notmuch-new.info
