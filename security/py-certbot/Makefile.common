@@ -1,6 +1,12 @@
-# $Netbsd: $
+# $NetBSD: Makefile.common,v 1.33 2019/06/12 10:27:37 adam Exp $
 # used by security/py-acme/Makefile
+# used by security/py-certbot/Makefile
 # used by security/py-certbot-apache/Makefile
+# used by security/py-certbot-dns-dnsimple/Makefile
+# used by security/py-certbot-dns-dnsmadeeasy/Makefile
+# used by security/py-certbot-dns-gehirn/Makefile
+# used by security/py-certbot-dns-google/Makefile
+# used by security/py-certbot-dns-linode/Makefile
 # used by security/py-certbot-dns-luadns/Makefile
 # used by security/py-certbot-dns-nsone/Makefile
 # used by security/py-certbot-dns-ovh/Makefile
@@ -9,7 +15,7 @@
 # used by security/py-certbot-dns-sakuracloud/Makefile
 # used by security/py-certbot-nginx/Makefile
 
-CERTBOT_VERSION=	0.35.0
+CERTBOT_VERSION=	0.35.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 
 CATEGORIES?=	security python
