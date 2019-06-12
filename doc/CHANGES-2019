@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2494 2019/06/12 15:25:01 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2495 2019/06/12 18:26:41 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4189,3 +4189,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed www/firefox36-l10n successor www/firefox60-l10n [wiz 2019-06-12]
 	Removed www/firefox45 successor www/firefox60 [wiz 2019-06-12]
 	Removed www/firefox45-l10n successor www/firefox60-l10n [wiz 2019-06-12]
+	Removed mail/thunderbird45 successor mail/thunderbird ryoon 2019-06-12]
+	Removed mail/thunderbird45-l10n successor mail/thunderbird-l10n [ryoon 2019-06-12]
