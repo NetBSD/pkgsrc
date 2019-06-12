@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2018/06/04 05:31:02 dbj Exp $
+# $NetBSD: hacks.mk,v 1.2 2019/06/12 22:04:40 leot Exp $
 
 # devel/glib2 expects modules to end in .so on darwin
 # net/glib-networking uses py-meson to build
@@ -7,8 +7,10 @@
 
 .if ${OPSYS} == "Darwin"
 post-install:
-	for l in libgiognomeproxy libgiognutls libgiolibproxy; do \
-		${MV} "${DESTDIR}${PREFIX}/lib/gio/modules/$${l}.dylib" \
-			"${DESTDIR}${PREFIX}/lib/gio/modules/$${l}.so"; \
+	for l in libgiognomeproxy libgiognutls libgiolibproxy libgioopenssl; do \
+		if ${TEST} -f "${DESTDIR}${PREFIX}/lib/gio/modules/$${l}.dylib"; then \
+			${MV} "${DESTDIR}${PREFIX}/lib/gio/modules/$${l}.dylib" \
+				"${DESTDIR}${PREFIX}/lib/gio/modules/$${l}.so"; \
+		fi; \
 	done
 .endif
