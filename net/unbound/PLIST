@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2018/03/15 10:22:49 he Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/06/12 09:21:42 pettai Exp $
 include/unbound.h
+include/unbound-event.h
 lib/libunbound.la
 lib/pkgconfig/libunbound.pc
 man/man1/unbound-host.1
