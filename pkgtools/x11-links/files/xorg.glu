@@ -1,4 +1,4 @@
-# $NetBSD: xorg.glu,v 1.8 2015/11/17 11:18:38 sevan Exp $
+# $NetBSD: xorg.glu,v 1.9 2019/06/12 01:04:40 gutteridge Exp $
 #
 include/GL/glu.h
 include/GL/glu_mangle.h
@@ -11,6 +11,8 @@ lib/libGLU.so.1.3
 lib/libGLU.so.2
 lib/libGLU.so.2.0
 lib/libGLU.so.2.1
+lib/libGLU.so.3
+lib/libGLU.so.3.0
 lib/libGLU.so.7.0
 lib/libGLU.so.9.0
 lib/libGLU.dylib
