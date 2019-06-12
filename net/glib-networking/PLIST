@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.14 2018/05/27 12:28:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2019/06/12 22:04:40 leot Exp $
 lib/gio/modules/libgiognomeproxy.so
-lib/gio/modules/libgiognutls.so
+${PLIST.gnutls}lib/gio/modules/libgiognutls.so
 lib/gio/modules/libgiolibproxy.so
+${PLIST.openssl}lib/gio/modules/libgioopenssl.so
 lib/systemd/user/glib-pacrunner.service
 libexec/glib-pacrunner
 share/dbus-1/services/org.gtk.GLib.PACRunner.service
