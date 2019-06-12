@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2488 2019/06/12 01:04:53 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.2489 2019/06/12 10:04:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4165,3 +4165,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/py-psutil to 5.6.3 [leot 2019-06-11]
 	Updated x11/py-terminator to 0.98nb9 [kamil 2019-06-12]
 	Updated pkgtools/x11-links to 1.19 [gutteridge 2019-06-12]
+	Updated devel/py-hypothesis to 4.24.3 [adam 2019-06-12]
+	Updated devel/py-test to 4.6.3 [adam 2019-06-12]
