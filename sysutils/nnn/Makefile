@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/06/12 20:52:37 sjmulder Exp $
+# $NetBSD: Makefile,v 1.8 2019/06/12 21:11:44 sjmulder Exp $
 
 DISTNAME=	nnn-2.5
 PKGREVISION=	1
@@ -20,8 +20,7 @@ MAKE_ENV+=	CFLAGS_OPTIMIZATION=
 MAKE_ENV+=	CFLAGS_CURSES=${BUILDLINK_CFLAGS.ncursesw:Q}
 MAKE_ENV+=	LDLIBS_CURSES=${BUILDLINK_LDADD.ncursesw:Q}
 
-# Requries mousemask(), getmouse(), set_escdelay() functions not in NetBSD
-# curses
+# Requires mousemask(), getmouse() functions not in NetBSD curses
 .include "../../devel/ncursesw/buildlink3.mk"
 
 # After ncursesw so readline doesn't add the non-wide ncurses which
