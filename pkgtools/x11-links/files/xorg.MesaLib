@@ -1,4 +1,4 @@
-# $NetBSD: xorg.MesaLib,v 1.5 2019/04/25 09:03:06 maya Exp $
+# $NetBSD: xorg.MesaLib,v 1.6 2019/06/12 01:04:40 gutteridge Exp $
 #
 include/EGL/egl.h
 include/EGL/eglext.h
@@ -46,6 +46,8 @@ lib/libGL.so.15.0
 lib/libGL.so.16.0
 lib/libGL.so.2
 lib/libGL.so.2.0
+lib/libGL.so.3
+lib/libGL.so.3.0
 lib/libGL.so.9.0
 lib/libGL.so.9.1
 lib/libGLw.1.0.dylib
