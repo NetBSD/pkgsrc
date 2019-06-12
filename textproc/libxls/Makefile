@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/05/06 09:17:13 sjmulder Exp $
+# $NetBSD: Makefile,v 1.4 2019/06/12 21:09:59 sjmulder Exp $
 
 DISTNAME=	libxls-1.5.1
 CATEGORIES=	textproc
@@ -11,9 +11,12 @@ COMMENT=	Extract cell data from legacy Microsoft Excel files
 LICENSE=	2-clause-bsd
 
 GNU_CONFIGURE=	yes
-# cplusplus/* is used for tests, but built always
+# C++11 support needed only for a test, see:
+# https://github.com/libxls/libxls/pull/61
 USE_LANGUAGES=	c c++11
 USE_LIBTOOL=	yes
+# workaround for failed builds until above PR is merged
+GCC_REQD+=	4.8
 
 TEST_TARGET=	check
 
