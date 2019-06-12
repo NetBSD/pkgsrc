@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2490 2019/06/12 10:05:48 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2491 2019/06/12 10:29:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4168,3 +4168,18 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/unbound to 1.9.1nb1 [pettai 2019-06-12]
 	Updated devel/py-hypothesis to 4.24.3 [adam 2019-06-12]
 	Updated devel/py-test to 4.6.3 [adam 2019-06-12]
+	Updated security/py-acme to 0.35.1 [adam 2019-06-12]
+	Updated security/py-certbot to 0.35.1 [adam 2019-06-12]
+	Updated security/py-certbot-apache to 0.35.1 [adam 2019-06-12]
+	Updated security/py-certbot-dns-dnsimple to 0.35.1 [adam 2019-06-12]
+	Updated security/py-certbot-dns-dnsmadeeasy to 0.35.1 [adam 2019-06-12]
+	Updated security/py-certbot-dns-gehirn to 0.35.1 [adam 2019-06-12]
+	Updated security/py-certbot-dns-google to 0.35.1 [adam 2019-06-12]
+	Updated security/py-certbot-dns-linode to 0.35.1 [adam 2019-06-12]
+	Updated security/py-certbot-dns-luadns to 0.35.1 [adam 2019-06-12]
+	Updated security/py-certbot-dns-nsone to 0.35.1 [adam 2019-06-12]
+	Updated security/py-certbot-dns-ovh to 0.35.1 [adam 2019-06-12]
+	Updated security/py-certbot-dns-rfc2136 to 0.35.1 [adam 2019-06-12]
+	Updated security/py-certbot-dns-route53 to 0.35.1 [adam 2019-06-12]
+	Updated security/py-certbot-dns-sakuracloud to 0.35.1 [adam 2019-06-12]
+	Updated security/py-certbot-nginx to 0.35.1 [adam 2019-06-12]
