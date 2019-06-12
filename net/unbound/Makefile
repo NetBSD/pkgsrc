@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2019/03/12 12:13:08 he Exp $
+# $NetBSD: Makefile,v 1.66 2019/06/12 09:21:42 pettai Exp $
 
 DISTNAME=	unbound-1.9.1
 CATEGORIES=	net
@@ -16,6 +16,7 @@ USE_LIBTOOL=		yes
 CONFIGURE_ARGS+=	--enable-allsymbols
 CONFIGURE_ARGS+=	--with-libexpat=${BUILDLINK_PREFIX.expat}
 CONFIGURE_ARGS+=	--with-libevent=${BUILDLINK_PREFIX.libevent}
+CONFIGURE_ARGS+=	--enable-event-api
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-pidfile=${VARBASE}/run/unbound/unbound.pid
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
