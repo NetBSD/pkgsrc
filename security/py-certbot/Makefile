@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/06/11 14:22:01 triaxx Exp $
+# $NetBSD: Makefile,v 1.16 2019/06/12 10:27:37 adam Exp $
 
 DISTNAME=	certbot-${CERTBOT_VERSION}
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/certbot/}
@@ -8,7 +8,7 @@ COMMENT=	Client for the Let's Encrypt CA
 
 .include "../../security/py-certbot/Makefile.common"
 
-EGG_NAME=	${DISTNAME}
+#EGG_NAME=	${DISTNAME}
 
 DEPENDS+=	${PYPKGPREFIX}-acme>=0.29.0:../../security/py-acme
 DEPENDS+=	${PYPKGPREFIX}-configargparse>=0.9.3:../../devel/py-configargparse
