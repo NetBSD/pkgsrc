@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2019/05/25 07:46:09 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2019/06/12 00:50:05 gutteridge Exp $
 
 VERSION=	3.42.1
 DISTNAME=	FileZilla_${VERSION}_src
@@ -25,6 +25,11 @@ CONFIGURE_ENV+=		ac_cv_path_xdgopen=firefox
 GCC_REQD+=		4.9
 
 .include "options.mk"
+
+# As of 3.41, 64-bit atomic ops are required
+.if ${MACHINE_ARCH} == "i386"
+CXXFLAGS+=	-march=i586
+.endif
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
