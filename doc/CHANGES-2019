@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2498 2019/06/12 20:41:05 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2499 2019/06/12 20:53:05 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4195,3 +4195,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/firefox-l10n to 67.0.2 [ryoon 2019-06-12]
 	Updated devel/py-xopen to 0.7.0 [adam 2019-06-12]
 	Updated devel/py-requests-futures to 1.0.0 [adam 2019-06-12]
+	Updated sysutils/nnn to 2.5nb1 [sjmulder 2019-06-12]
