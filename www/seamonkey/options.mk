@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.40 2019/06/01 20:41:45 nia Exp $
+# $NetBSD: options.mk,v 1.41 2019/06/13 10:53:11 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.seamonkey
 
@@ -9,7 +9,7 @@ PKG_SUPPORTED_OPTIONS+=	webrtc pulseaudio
 
 PLIST_VARS+=	debug gnome jemalloc
 
-PKG_SUGGESTED_OPTIONS=	gtk2
+PKG_SUGGESTED_OPTIONS=	gtk3
 
 PKG_SUGGESTED_OPTIONS.Linux+=	mozilla-jemalloc
 PKG_SUGGESTED_OPTIONS.SunOS+=	mozilla-jemalloc
