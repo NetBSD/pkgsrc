@@ -1,17 +1,20 @@
-# $NetBSD: Makefile,v 1.45 2019/01/24 10:33:52 morr Exp $
+# $NetBSD: Makefile,v 1.46 2019/06/13 09:07:08 adam Exp $
 
-DISTNAME=	haproxy-1.8.17
+DISTNAME=	haproxy-1.8.20
 CATEGORIES=	net www
 MASTER_SITES=	http://www.haproxy.org/download/${PKGVERSION_NOREV:R}/src/
 
 MAINTAINER=	morr@NetBSD.org
-HOMEPAGE=	http://haproxy.org/
+HOMEPAGE=	http://www.haproxy.org/
 COMMENT=	Reliable, high performance TCP/HTTP load balancer
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c
 USE_TOOLS+=		gmake
 BUILD_MAKE_FLAGS+=	ADDLIB=${COMPILER_RPATH_FLAG}${PREFIX}/lib
+BUILD_MAKE_FLAGS+=	CC=${CC:Q}
+BUILD_MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
+BUILD_MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 BUILD_MAKE_FLAGS+=	TARGET=${TARGET}
 BUILD_MAKE_FLAGS+=	USE_REGPARM=1
 BUILD_MAKE_FLAGS+=	USE_ZLIB=1
@@ -20,22 +23,22 @@ INSTALL_MAKE_FLAGS+=	DOCDIR=${PREFIX}/share/doc/${PKGBASE}
 INSTALL_MAKE_FLAGS+=	PREFIX=${PREFIX}
 INSTALL_MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
 INSTALL_MAKE_FLAGS+=	TARGET=${TARGET}
+# skip install-doc
+INSTALL_TARGET=		install-bin install-man
 
 .include "options.mk"
 
 RCD_SCRIPTS=		haproxy
-EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
-INSTALLATION_DIRS+=	${EGDIR}
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+INSTALLATION_DIRS+=	${DOCDIR} ${EGDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD"
-TARGET=	netbsd
-.elif ${OPSYS} == "FreeBSD"
-TARGET=	freebsd
-.elif ${OPSYS} == "OpenBSD"
-TARGET=	openbsd
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
+TARGET=	${OPSYS:tl}
+.elif ${OPSYS} == "Darwin"
+TARGET=	osx
 .elif ${OPSYS} == "SunOS"
 TARGET=	solaris
 .elif ${OPSYS} == "Linux"
