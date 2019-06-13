@@ -1,0 +1,18 @@
+$NetBSD: patch-src_platform_qt_CMakeLists.txt,v 1.1 2019/06/13 19:12:44 nia Exp $
+
+Install .desktop file without needing desktop-file-install.
+
+--- src/platform/qt/CMakeLists.txt.orig	2019-05-25 22:51:44.000000000 +0000
++++ src/platform/qt/CMakeLists.txt
+@@ -298,10 +298,7 @@ install(TARGETS ${BINARY_NAME}-qt
+ 	RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR} COMPONENT ${BINARY_NAME}-qt
+ 	BUNDLE DESTINATION Applications COMPONENT ${BINARY_NAME}-qt)
+ if(UNIX AND NOT APPLE)
+-	find_program(DESKTOP_FILE_INSTALL desktop-file-install)
+-	if(DESKTOP_FILE_INSTALL)
+-		install(CODE "execute_process(COMMAND ${DESKTOP_FILE_INSTALL} \"${CMAKE_SOURCE_DIR}/res/mgba-qt.desktop\" --dir \"\$ENV{DESTDIR}\${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_DATADIR}/applications/\")" COMPONENT ${BINARY_NAME}-qt)
+-	endif()
++	install(FILES ${CMAKE_SOURCE_DIR}/res/mgba-qt.desktop DESTINATION ${CMAKE_INSTALL_DATADIR}/applications COMPONENT ${BINARY_NAME}-qt)
+ endif()
+ if(UNIX)
+ 	install(FILES ${CMAKE_SOURCE_DIR}/doc/mgba-qt.6 DESTINATION ${MANDIR}/man6 COMPONENT ${BINARY_NAME}-qt)
