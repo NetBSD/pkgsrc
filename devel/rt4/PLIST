@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2018/01/01 22:29:25 rillig Exp $
+@comment $NetBSD: PLIST,v 1.12 2019/06/13 03:19:13 ryoon Exp $
 share/examples/rt4/RT_Config.pm
 share/examples/rt4/RT_SiteConfig.pm
 share/rt4/bin/rt
@@ -30,6 +30,7 @@ share/rt4/data/docs/extending/clickable_links.pod
 share/rt4/data/docs/extending/external_custom_fields.pod
 share/rt4/data/docs/extending/using_forms_widgets.pod
 share/rt4/data/docs/extensions.pod
+share/rt4/data/docs/format-strings.pod
 share/rt4/data/docs/full_text_indexing.pod
 share/rt4/data/docs/glossary.pod
 share/rt4/data/docs/hacking.pod
@@ -317,6 +318,7 @@ share/rt4/data/html/Elements/RT__SavedSearch/ColumnMap
 share/rt4/data/html/Elements/RT__Scrip/ColumnMap
 share/rt4/data/html/Elements/RT__Template/ColumnMap
 share/rt4/data/html/Elements/RT__Ticket/ColumnMap
+share/rt4/data/html/Elements/RT__Transaction/ColumnMap
 share/rt4/data/html/Elements/RT__User/ColumnMap
 share/rt4/data/html/Elements/Refresh
 share/rt4/data/html/Elements/RefreshHomepage
@@ -654,6 +656,7 @@ share/rt4/data/po/pl.po
 share/rt4/data/po/pt.po
 share/rt4/data/po/pt_BR.po
 share/rt4/data/po/pt_PT.po
+share/rt4/data/po/ro.po
 share/rt4/data/po/rt.pot
 share/rt4/data/po/ru.po
 share/rt4/data/po/sk.po
@@ -1039,6 +1042,7 @@ share/rt4/data/static/images/jquery_ui/ui-icons_2e83ff_256x240.png
 share/rt4/data/static/images/jquery_ui/ui-icons_454545_256x240.png
 share/rt4/data/static/images/jquery_ui/ui-icons_888888_256x240.png
 share/rt4/data/static/images/jquery_ui/ui-icons_cd0a0a_256x240.png
+share/rt4/data/static/images/request-tracker-logo.png
 share/rt4/data/static/images/star.gif
 share/rt4/data/static/images/tablesorter/asc.gif
 share/rt4/data/static/images/tablesorter/bg.gif
@@ -1052,7 +1056,7 @@ share/rt4/data/static/js/farbtastic.js
 share/rt4/data/static/js/forms.js
 share/rt4/data/static/js/history-folding.js
 share/rt4/data/static/js/i18n.js
-share/rt4/data/static/js/jquery-1.9.1.min.js
+share/rt4/data/static/js/jquery-1.12.4p1.min.js
 share/rt4/data/static/js/jquery-ui-1.10.0.custom.min.js
 share/rt4/data/static/js/jquery-ui-patch-datepicker.js
 share/rt4/data/static/js/jquery-ui-timepicker-addon.js
@@ -1090,6 +1094,7 @@ share/rt4/etc/upgrade/3.3.0/acl.Oracle
 share/rt4/etc/upgrade/3.3.0/acl.Pg
 share/rt4/etc/upgrade/3.3.0/acl.SQLite
 share/rt4/etc/upgrade/3.3.0/acl.mysql
+share/rt4/etc/upgrade/3.3.0/indexes
 share/rt4/etc/upgrade/3.3.0/schema.Oracle
 share/rt4/etc/upgrade/3.3.0/schema.Pg
 share/rt4/etc/upgrade/3.3.0/schema.mysql
@@ -1109,8 +1114,7 @@ share/rt4/etc/upgrade/3.7.19/content
 share/rt4/etc/upgrade/3.7.3/schema.Oracle
 share/rt4/etc/upgrade/3.7.3/schema.Pg
 share/rt4/etc/upgrade/3.7.3/schema.mysql
-share/rt4/etc/upgrade/3.7.81/schema.Oracle
-share/rt4/etc/upgrade/3.7.81/schema.mysql
+share/rt4/etc/upgrade/3.7.81/indexes
 share/rt4/etc/upgrade/3.7.82/content
 share/rt4/etc/upgrade/3.7.85/content
 share/rt4/etc/upgrade/3.7.86/content
@@ -1120,7 +1124,7 @@ share/rt4/etc/upgrade/3.8.0/content
 share/rt4/etc/upgrade/3.8.1/content
 share/rt4/etc/upgrade/3.8.2/content
 share/rt4/etc/upgrade/3.8.3/content
-share/rt4/etc/upgrade/3.8.3/schema.Pg
+share/rt4/etc/upgrade/3.8.3/indexes
 share/rt4/etc/upgrade/3.8.4/content
 share/rt4/etc/upgrade/3.8.6/content
 share/rt4/etc/upgrade/3.8.8/content
@@ -1330,6 +1334,7 @@ share/rt4/lib/RT/GroupMembers.pm
 share/rt4/lib/RT/Groups.pm
 share/rt4/lib/RT/Handle.pm
 share/rt4/lib/RT/I18N.pm
+share/rt4/lib/RT/I18N/Extract.pm
 share/rt4/lib/RT/I18N/cs.pm
 share/rt4/lib/RT/I18N/de.pm
 share/rt4/lib/RT/I18N/fr.pm
@@ -1428,7 +1433,6 @@ share/rt4/lib/RT/Shredder/Plugin/SQLDump.pm
 share/rt4/lib/RT/Shredder/Plugin/Summary.pm
 share/rt4/lib/RT/Shredder/Plugin/Tickets.pm
 share/rt4/lib/RT/Shredder/Plugin/Users.pm
-share/rt4/lib/RT/Shredder/Record.pm
 share/rt4/lib/RT/Squish.pm
 share/rt4/lib/RT/Squish/CSS.pm
 share/rt4/lib/RT/Squish/JS.pm
