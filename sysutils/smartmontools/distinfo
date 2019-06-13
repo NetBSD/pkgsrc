@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.34 2019/02/15 20:38:29 triaxx Exp $
+$NetBSD: distinfo,v 1.35 2019/06/13 07:58:31 alnsn Exp $
 
 SHA1 (smartmontools-7.0.tar.gz) = 00e6a7bb26b283695ab0deaf521be6723ba44f0a
 RMD160 (smartmontools-7.0.tar.gz) = db20533115aa05a52836dbef0006c664083fbe90
@@ -8,3 +8,4 @@ SHA1 (patch-aa) = bd08aff267f0e9e9307ebc57858e61e35144bf16
 SHA1 (patch-ag) = 01b0b35d89d6d6a11b13b3c05a141c46a0c1590b
 SHA1 (patch-nvmecmds.cpp) = 0fec043f00b4a7fde2974e1a4670ce42343f2d52
 SHA1 (patch-os__freebsd.cpp) = 96db45ca207e3a2f0d454f7b5c8b1b0d4e8a3e9c
+SHA1 (patch-os__netbsd.cpp) = abbaec99e900ca6e58b63417e4ff201d8fa071c0
