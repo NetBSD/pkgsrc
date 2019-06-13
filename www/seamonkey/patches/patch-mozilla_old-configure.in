@@ -1,4 +1,4 @@
-$NetBSD: patch-mozilla_old-configure.in,v 1.4 2019/06/01 20:41:45 nia Exp $
+$NetBSD: patch-mozilla_old-configure.in,v 1.5 2019/06/13 10:53:11 nia Exp $
 
 --- mozilla/old-configure.in.orig	2018-07-12 02:18:02.000000000 +0000
 +++ mozilla/old-configure.in
@@ -146,17 +146,20 @@ $NetBSD: patch-mozilla_old-configure.in,v 1.4 2019/06/01 20:41:45 nia Exp $
  dnl system libvpx Support
  dnl ========================================================
  MOZ_ARG_WITH_BOOL(system-libvpx,
-@@ -3208,6 +3312,67 @@ AC_DEFINE(MOZ_WEBM_ENCODER)
+@@ -3208,6 +3312,71 @@ AC_DEFINE(MOZ_WEBM_ENCODER)
  AC_SUBST(MOZ_WEBM_ENCODER)
  
  dnl ==================================
-+dnl = Check OSS availability
++dnl = Check OSS/sunaudio availability
 +dnl ==================================
 +
-+dnl If using Linux, Solaris or BSDs, ensure that OSS is available
++dnl If using Linux, Solaris or BSDs, ensure that OSS or sunaudio is available
 +case "$OS_TARGET" in
-+Linux|SunOS|DragonFly|FreeBSD|NetBSD|GNU/kFreeBSD)
++Linux|DragonFly|FreeBSD|GNU/kFreeBSD)
 +    MOZ_OSS=1
++    ;;
++SunOS|NetBSD)
++    MOZ_SUNAUDIO=1
 +    ;;
 +esac
 +
@@ -209,12 +212,13 @@ $NetBSD: patch-mozilla_old-configure.in,v 1.4 2019/06/01 20:41:45 nia Exp $
 +AC_SUBST(MOZ_OSS)
 +AC_SUBST_LIST(MOZ_OSS_CFLAGS)
 +AC_SUBST_LIST(MOZ_OSS_LIBS)
++AC_SUBST(MOZ_SUNAUDIO)
 +
 +dnl ==================================
  dnl = Check alsa availability on Linux
  dnl ==================================
  
-@@ -5023,6 +5188,27 @@ if test "$USE_FC_FREETYPE"; then
+@@ -5023,6 +5192,27 @@ if test "$USE_FC_FREETYPE"; then
  fi
  
  dnl ========================================================
