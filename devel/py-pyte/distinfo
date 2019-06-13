@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/06/13 09:33:37 gson Exp $
+
+SHA1 (pyte-0.8.0.tar.gz) = 16b3037b62095402c18b47d69a3d6bbc15b992f0
+RMD160 (pyte-0.8.0.tar.gz) = 70ba987e0527e4e05001a3d19de16a6c0606391d
+SHA512 (pyte-0.8.0.tar.gz) = b1c23206f32c49ab509ac9bd4e042b043478cae35594c52c8389f5a5ba15cd0895315c42be5a0f2992b3aaa918ae282e43e88e72798a0b600307860f6df06465
+Size (pyte-0.8.0.tar.gz) = 50415 bytes
