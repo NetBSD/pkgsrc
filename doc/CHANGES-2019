@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2500 2019/06/12 22:04:55 leot Exp $
+$NetBSD: CHANGES-2019,v 1.2501 2019/06/13 03:14:47 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4197,3 +4197,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-requests-futures to 1.0.0 [adam 2019-06-12]
 	Updated sysutils/nnn to 2.5nb1 [sjmulder 2019-06-12]
 	Updated net/glib-networking to 2.60.3 [leot 2019-06-12]
+	Removed devel/xulrunner45 [ryoon 2019-06-13]
+	Removed www/icedtea-web [ryoon 2019-06-13]
