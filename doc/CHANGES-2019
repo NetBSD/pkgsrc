@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2505 2019/06/13 09:07:55 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2506 2019/06/13 09:29:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4204,3 +4204,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-xdis to 4.0.2 [adam 2019-06-13]
 	Updated lang/py-uncompyle6 to 3.3.4 [adam 2019-06-13]
 	Updated net/haproxy to 1.8.20 [adam 2019-06-13]
+	Updated www/nghttp2 to 1.39.1 [adam 2019-06-13]
