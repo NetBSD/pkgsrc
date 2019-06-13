@@ -1,10 +1,11 @@
-$NetBSD: patch-media_libcubeb_src_moz.build,v 1.17 2018/11/04 04:46:57 ryoon Exp $
+$NetBSD: patch-media_libcubeb_src_moz.build,v 1.18 2019/06/13 22:05:24 nia Exp $
 
 * Add OSS audio support
+* Add Sun audio support
 
---- media/libcubeb/src/moz.build.orig	2018-10-18 20:06:09.000000000 +0000
+--- media/libcubeb/src/moz.build.orig	2019-05-29 15:39:06.000000000 +0000
 +++ media/libcubeb/src/moz.build
-@@ -23,6 +23,12 @@ if CONFIG['MOZ_ALSA']:
+@@ -23,6 +23,18 @@ if CONFIG['MOZ_ALSA']:
      ]
      DEFINES['USE_ALSA'] = True
  
@@ -14,10 +15,16 @@ $NetBSD: patch-media_libcubeb_src_moz.build,v 1.17 2018/11/04 04:46:57 ryoon Exp
 +    ]
 +    DEFINES['USE_OSS'] = True
 +
++if CONFIG['MOZ_SUNAUDIO']:
++    SOURCES += [
++        'cubeb_sun.c',
++    ]
++    DEFINES['USE_SUN'] = True
++
  if CONFIG['MOZ_PULSEAUDIO'] or CONFIG['MOZ_JACK']:
      SOURCES += [
          'cubeb_resampler.cpp',
-@@ -89,6 +95,7 @@ FINAL_LIBRARY = 'gkmedias'
+@@ -89,6 +101,7 @@ FINAL_LIBRARY = 'gkmedias'
  
  CFLAGS += CONFIG['MOZ_ALSA_CFLAGS']
  CFLAGS += CONFIG['MOZ_JACK_CFLAGS']

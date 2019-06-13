@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.357 2019/06/12 18:33:27 ryoon Exp $
+$NetBSD: distinfo,v 1.358 2019/06/13 22:05:24 nia Exp $
 
 SHA1 (firefox-67.0.2.source.tar.xz) = 3d59fe567f9f2d1c0767ef2ea595b738a7e53c89
 RMD160 (firefox-67.0.2.source.tar.xz) = b5182bb4493aaf54fb64f7da6710c3d0092d8c85
 SHA512 (firefox-67.0.2.source.tar.xz) = 14da0aa23571c83dfd4cf1b33027434425c99c4b8838d335cfbd93ef60ad936cd7e7f60ad84be688f434371c9b49142e1020df63ac3e65f78b6595f5a8c19590
 Size (firefox-67.0.2.source.tar.xz) = 283090748 bytes
-SHA1 (patch-aa) = c3e9fdbf6d66d527affc13f4045d28fe05707f7b
+SHA1 (patch-aa) = 1f292aae7d37bd480ba834324b737bfebee52503
 SHA1 (patch-browser_app_profile_firefox.js) = 2ea08bf7030853fe9aff3c43c69266c07f0b0b14
 SHA1 (patch-build_moz.configure_old.configure) = 91bab1cbbe02332ec076b49b6e598730202fbc99
 SHA1 (patch-dom_base_nsAttrName.h) = ac7ba441a3b27df2855cf2673eea36b1cb44ad49
@@ -24,11 +24,11 @@ SHA1 (patch-js_src_threading_posix_Thread.cpp) = 47e612a676e614fd6dd43b8a3140218
 SHA1 (patch-js_src_util_NativeStack.cpp) = 2c6f844d38343f40ebbc8fd665279256e4ae6d35
 SHA1 (patch-js_xpconnect_src_XPCMaps.cpp) = edca32214a2643eb6c89eac75f6e4200616e2c87
 SHA1 (patch-media_libcubeb_gtest_moz.build) = ea6dcc7ceeb76ce1fb9d508cf43080a2eef3a9e4
-SHA1 (patch-media_libcubeb_src_cubeb.c) = 4fe5512c89fa9e0dd64573d2784e5e0f7fd4d866
+SHA1 (patch-media_libcubeb_src_cubeb.c) = e3446562ed16ec9643df42ee0b9c46ee91f22913
 SHA1 (patch-media_libcubeb_src_cubeb__alsa.c) = f359a66a22f11142d05746e15894d998d3e3bf5a
 SHA1 (patch-media_libcubeb_src_cubeb__oss.c) = 103f751d5a7bc14a81a6ed43e1afc722bc092f7e
-SHA1 (patch-media_libcubeb_src_moz.build) = 10f8355e3b3c6d35cca99f3717246e8658860737
-SHA1 (patch-media_libcubeb_update.sh) = cddb5849fa2972e961e4891bc8a79a650df06d8d
+SHA1 (patch-media_libcubeb_src_moz.build) = dcca90cb5132442877712cd7b1f4e832c93d2655
+SHA1 (patch-media_libcubeb_update.sh) = 4508319d8534a0cc983e4767c2142169af9e5033
 SHA1 (patch-media_libpng_pngpriv.h) = c8084332560017cd7c9b519b61d125fa28af0dbc
 SHA1 (patch-python_mozbuild_mozbuild_action_check__binary.py) = 8103ca9f95fe98a4461c97abcd4cafd5ae5294f0
 SHA1 (patch-servo_components_style_build__gecko.rs) = dacdcb69de1c8409bda20b11afbfa49624005c72
