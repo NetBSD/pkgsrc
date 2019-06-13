@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/05/02 08:32:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/06/13 07:52:45 adam Exp $
 bin/pydisasm-${PYVERSSUFFIX}.py
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -41,6 +41,9 @@ ${PYSITELIB}/xdis/opcodes/__init__.pyo
 ${PYSITELIB}/xdis/opcodes/base.py
 ${PYSITELIB}/xdis/opcodes/base.pyc
 ${PYSITELIB}/xdis/opcodes/base.pyo
+${PYSITELIB}/xdis/opcodes/check-stackeffect.py
+${PYSITELIB}/xdis/opcodes/check-stackeffect.pyc
+${PYSITELIB}/xdis/opcodes/check-stackeffect.pyo
 ${PYSITELIB}/xdis/opcodes/opcode_13.py
 ${PYSITELIB}/xdis/opcodes/opcode_13.pyc
 ${PYSITELIB}/xdis/opcodes/opcode_13.pyo
