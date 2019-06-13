@@ -1,11 +1,10 @@
-$NetBSD: patch-Makefile,v 1.5 2018/07/25 13:51:18 jperkin Exp $
+$NetBSD: patch-Makefile,v 1.6 2019/06/13 09:07:08 adam Exp $
 
 Do not hardcode _XOPEN_SOURCE.
-Skip installing unnecessary documentation.
 
---- Makefile.orig	2018-06-27 14:27:32.000000000 +0000
+--- Makefile.orig	2019-04-25 21:59:27.000000000 +0000
 +++ Makefile
-@@ -310,7 +310,7 @@ ifeq ($(TARGET),solaris)
+@@ -316,7 +316,7 @@ ifeq ($(TARGET),solaris)
    # This is for Solaris 8
    # We also enable getaddrinfo() which works since solaris 8.
    USE_POLL       = implicit
@@ -14,13 +13,3 @@ Skip installing unnecessary documentation.
    TARGET_LDFLAGS = -lnsl -lsocket
    USE_TPROXY     = implicit
    USE_LIBCRYPT    = implicit
-@@ -933,9 +933,6 @@ DOCUMENTATION = $(filter-out $(EXCLUDE_D
- 
- install-doc:
- 	install -d "$(DESTDIR)$(DOCDIR)"
--	for x in $(DOCUMENTATION); do \
--		install -m 644 doc/$$x.txt "$(DESTDIR)$(DOCDIR)" ; \
--	done
- 
- install-bin:
- 	@for i in haproxy $(EXTRA); do \
