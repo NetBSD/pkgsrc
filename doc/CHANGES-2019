@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2507 2019/06/13 09:36:53 gson Exp $
+$NetBSD: CHANGES-2019,v 1.2508 2019/06/13 09:45:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4206,3 +4206,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/haproxy to 1.8.20 [adam 2019-06-13]
 	Updated www/nghttp2 to 1.39.1 [adam 2019-06-13]
 	Added devel/py-pyte version 0.8.0 [gson 2019-06-13]
+	Updated textproc/json-glib to 1.4.4 [wiz 2019-06-13]
