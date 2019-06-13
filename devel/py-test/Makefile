@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.83 2019/06/12 10:03:49 adam Exp $
+# $NetBSD: Makefile,v 1.84 2019/06/13 07:44:54 wiz Exp $
 
 DISTNAME=	pytest-4.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest/}
 
@@ -18,6 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-pluggy>=0.11:../../devel/py-pluggy
 DEPENDS+=	${PYPKGPREFIX}-py>=1.5.0:../../devel/py-py
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-wcwidth-[0-9]*:../../devel/py-wcwidth
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=3.56:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
