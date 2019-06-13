@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.817 2019/06/06 08:38:26 tpaul Exp $
+# $NetBSD: Makefile,v 1.818 2019/06/13 03:29:28 jnemeth Exp $
 #
 
 COMMENT=	System utilities
@@ -656,6 +656,7 @@ SUBDIR+=	u-boot-pine-h64
 SUBDIR+=	u-boot-pine64
 SUBDIR+=	u-boot-pinebook
 SUBDIR+=	u-boot-pocketchip
+SUBDIR+=	u-boot-rock64
 SUBDIR+=	u-boot-rockpro64
 SUBDIR+=	u-boot-sopine-baseboard
 SUBDIR+=	u-boot-zynq-zybo-z7
