@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.13 2016/01/30 23:54:20 ryoon Exp $
+$NetBSD: distinfo,v 1.14 2019/06/13 03:19:13 ryoon Exp $
 
-SHA1 (rt-4.2.12.tar.gz) = ddbf70752c2b96354caf7687534addf075859d4d
-RMD160 (rt-4.2.12.tar.gz) = 6726a687ba8042b35aa78337609c3d710d98264c
-SHA512 (rt-4.2.12.tar.gz) = e816c5481bdb158209bd78bc82af4abc0243af500abe55ae3aac666259e983282d82577de6207899745b4781fb0a50d3094901a248e7ac958dd852343b6f2676
-Size (rt-4.2.12.tar.gz) = 7537620 bytes
-SHA1 (patch-Makefile.in) = d46b5cd6e9de77409ac8d6b6c172bc9dd3ed96be
+SHA1 (rt-4.2.16.tar.gz) = 63a247de25eebb053d102fb8ffaa004edaea2fb7
+RMD160 (rt-4.2.16.tar.gz) = b7e1f7fcf388dbc14d0f37d324e0283622bf0ca6
+SHA512 (rt-4.2.16.tar.gz) = fa4e40270d285c9b0154f2d2ac9b17756bd717989591bc995a7c7175e142f4bce3768672dd9b1ca54cf5c3da39d9b29d3e7ae10098547b5b563035494da24f17
+Size (rt-4.2.16.tar.gz) = 7787267 bytes
+SHA1 (patch-Makefile.in) = 9009623bc764c351dcb79d365a4b0728b18f4205
 SHA1 (patch-config.layout) = 1e237d38d4e3a2ad6c240feb3e58f1345c7ff476

@@ -1,19 +1,19 @@
-$NetBSD: patch-Makefile.in,v 1.1 2014/06/17 11:10:40 markd Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2019/06/13 03:19:13 ryoon Exp $
 
 NetBSD find doesn't know about "-not" so use "!"
 
---- Makefile.in.orig	2014-06-13 03:14:21.000000000 +0000
+--- Makefile.in.orig	2019-01-31 14:39:47.000000000 +0000
 +++ Makefile.in
 @@ -302,7 +302,7 @@ fixperms:
+ 
+ 	# Make upgrade scripts executable if they are in the source.
  	#
- 	# Note that we use the deprecated (by GNU/POSIX find) -perm +0NNN syntax
- 	# instead of -perm /0NNN since BSD find doesn't support the latter.
--	( cd etc/upgrade && find . -type f -not -name '*.in' -perm +0111 -print ) | while read file ; do \
-+	( cd etc/upgrade && find . -type f '!' -name '*.in' -perm +0111 -print ) | while read file ; do \
+-	( cd etc/upgrade && find . -type f -not -name '*.in' -perm @FINDPERM@0111 -print ) | while read file ; do \
++	( cd etc/upgrade && find . -type f '!' -name '*.in' -perm @FINDPERM@0111 -print ) | while read file ; do \
  		chmod a+x "$(DESTDIR)$(RT_ETC_PATH)/upgrade/$$file" ; \
  	done
  
-@@ -453,7 +453,7 @@ etc-install:
+@@ -459,7 +459,7 @@ etc-install:
  @COMMENT_INPLACE_LAYOUT@	-( cd etc/upgrade && find . -type d -print ) | while read dir ; do \
  @COMMENT_INPLACE_LAYOUT@	    $(INSTALL) -m 0755 -d "$(DESTDIR)$(RT_ETC_PATH)/upgrade/$$dir" ; \
  @COMMENT_INPLACE_LAYOUT@	done
