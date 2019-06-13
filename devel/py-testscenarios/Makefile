@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/02/22 14:21:40 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/06/13 22:20:39 wiz Exp $
 
 DISTNAME=	testscenarios-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,15 +11,11 @@ COMMENT=	Pyunit extension for dependency injection
 LICENSE=	apache-2.0 OR modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-pbr-[0-9]*:../../devel/py-pbr
-# as of 0.5.0, many failures
-# https://github.com/testing-cabal/testscenarios/issues/2
-# TEST_DEPENDS
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 # circular dependency
-#BUILD_DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
+# https://github.com/testing-cabal/testscenarios/issues/4
+#DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
 
-do-test:
-	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
+TEST_TARGET=	check
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
