@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2859 2019/06/13 03:10:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.2860 2019/06/13 09:35:33 gson Exp $
 #
 
 COMMENT=	Development utilities
@@ -2316,6 +2316,7 @@ SUBDIR+=	py-pyparsing
 SUBDIR+=	py-pyrsistent
 SUBDIR+=	py-pysha3
 SUBDIR+=	py-pysvn
+SUBDIR+=	py-pyte
 SUBDIR+=	py-pytemplate
 SUBDIR+=	py-python-dotenv
 SUBDIR+=	py-python-slugify
