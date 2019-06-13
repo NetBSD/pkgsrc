@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2018/08/22 09:44:59 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2019/06/13 03:19:13 ryoon Exp $
 
-DISTNAME=	rt-4.2.12
+DISTNAME=	rt-4.2.16
 PKGNAME=	${DISTNAME:S/rt/rt4/}
-PKGREVISION=	2
+#PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://download.bestpractical.com/pub/rt/release/
 
@@ -57,6 +57,7 @@ DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 #DEPENDS+=	{perl>=5.20.0,p5-Locale-Maketext>=1.06}:../../misc/p5-Locale-Maketext
 DEPENDS+=	p5-Locale-Maketext-Fuzzy-[0-9]*:../../misc/p5-Locale-Maketext-Fuzzy
 DEPENDS+=	p5-Locale-Maketext-Lexicon>=0.32:../../misc/p5-Locale-Maketext-Lexicon
+DEPENDS+=	p5-Locale-PO-[0-9]*:../../devel/p5-Locale-PO
 DEPENDS+=	p5-Log-Dispatch>=2.30:../../devel/p5-Log-Dispatch
 # Mail::Header is a part of p5-MailTools.
 DEPENDS+=	p5-MailTools>=1.57:../../mail/p5-MailTools
