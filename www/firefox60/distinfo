@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.15 2019/06/01 19:11:28 maya Exp $
+$NetBSD: distinfo,v 1.16 2019/06/13 14:16:37 nia Exp $
 
 SHA1 (firefox-60.7.0esr.source.tar.xz) = 733187de6b20f8902fa207f08ec85f952a2c2e40
 RMD160 (firefox-60.7.0esr.source.tar.xz) = 21176def2d22c83042d36844c5d148d324199ac6
 SHA512 (firefox-60.7.0esr.source.tar.xz) = c2152857f5f1c816a12fcf5c450268025ee47ee9299ae3355650d86c7c97191b731123a4964154222ca5ba1edc44fee0d1d5f803ae9515841283ecaff6dc9a55
 Size (firefox-60.7.0esr.source.tar.xz) = 268497160 bytes
-SHA1 (patch-aa) = 17ea1093941cabc3dac1c653ba9edd92ec9877da
+SHA1 (patch-aa) = 5e07d1a01762b7face950ca41c71447106341f0d
 SHA1 (patch-browser_app_profile_firefox.js) = 9a43095d94f83f315b9a3ce4a7b0a4301e9c40e6
 SHA1 (patch-build_moz.configure_old.configure) = 1df6867eaf73a350fbe8fcd5bd34e1fcab09d707
 SHA1 (patch-build_moz.configure_rust.configure) = 2818454ba4df3cbd85174edc4828206b3bf0a82b
@@ -23,11 +23,11 @@ SHA1 (patch-js_src_threading_posix_Thread.cpp) = 47e612a676e614fd6dd43b8a3140218
 SHA1 (patch-js_src_util_NativeStack.cpp) = 3af7d3c90ce9299f0a95b938ca903488e7809d0a
 SHA1 (patch-js_src_wasm_WasmSignalHandlers.cpp) = 5442266a05721a9f4a3c9d12429bd1d59ecd936a
 SHA1 (patch-media_libcubeb_gtest_moz.build) = 921a001726cda9e9782df5e59ae02b19d76ef47e
-SHA1 (patch-media_libcubeb_src_cubeb.c) = 1b1b8d57eb710cad13518ded79a0ddee2681881b
+SHA1 (patch-media_libcubeb_src_cubeb.c) = 90c1b484ce9db2dade2c92b36f4978fbdc5dbea7
 SHA1 (patch-media_libcubeb_src_cubeb__alsa.c) = 3ee36f58bb525767c7d2b9e814ba4ccaa4868717
 SHA1 (patch-media_libcubeb_src_cubeb__oss.c) = 103f751d5a7bc14a81a6ed43e1afc722bc092f7e
-SHA1 (patch-media_libcubeb_src_moz.build) = f243068c8908dcb16434221edef8c65db3bb0c83
-SHA1 (patch-media_libcubeb_update.sh) = 3a322de06bbe9aafba9da349954ef022bd094992
+SHA1 (patch-media_libcubeb_src_moz.build) = 1a3c0e484da83acabf30f7fad6b43fe94411d8b8
+SHA1 (patch-media_libcubeb_update.sh) = d10633a378b68f91eb39d6572d857edd9b07dc9b
 SHA1 (patch-media_libpng_pngpriv.h) = c8084332560017cd7c9b519b61d125fa28af0dbc
 SHA1 (patch-media_webrtc_trunk_webrtc_modules_audio__device_linux_audio__device__alsa__linux.cc) = 91e8ce496c1f4dbbd0a463d83cb033afd1de3f49
 SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info__linux.cc) = 0141dd1372c13ea1fce6e2f5ffb65e0cb0f3a13e
