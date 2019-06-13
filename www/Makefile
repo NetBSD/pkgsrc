@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1385 2019/06/12 15:25:01 wiz Exp $
+# $NetBSD: Makefile,v 1.1386 2019/06/13 03:12:11 ryoon Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -145,7 +145,6 @@ SUBDIR+=	htmllint
 SUBDIR+=	http-parser
 SUBDIR+=	http_load
 SUBDIR+=	hugo
-SUBDIR+=	icedtea-web
 SUBDIR+=	ies4linux
 SUBDIR+=	ijb
 SUBDIR+=	ikiwiki
