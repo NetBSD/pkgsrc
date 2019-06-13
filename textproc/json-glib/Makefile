@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2017/10/15 23:19:13 prlw1 Exp $
+# $NetBSD: Makefile,v 1.28 2019/06/13 09:45:17 wiz Exp $
 
-DISTNAME=	json-glib-1.2.8
+DISTNAME=	json-glib-1.4.4
 CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/json-glib/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -10,15 +10,16 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/JsonGlib
 COMMENT=	JSON parser for GLib-based libraries and applications
 LICENSE=	gnu-lgpl-v2.1
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake msgfmt msgmerge pkg-config xgettext
 
 CONFIGURE_ARGS+=	--disable-man
 
-PKGCONFIG_OVERRIDE+=	json-glib.pc.in
+# workaround for build failure
+# https://gitlab.gnome.org/GNOME/json-glib/issues/35
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/json-glib
 
-TEST_TARGET=		check
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ninja -C output test
 
 .include "options.mk"
 
@@ -31,4 +32,5 @@ PRINT_PLIST_AWK+= \
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.38.0
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/py-meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
