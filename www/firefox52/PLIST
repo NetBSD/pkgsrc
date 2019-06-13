@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/11/24 01:53:57 mrg Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/06/13 19:02:37 rjs Exp $
 bin/firefox52
 lib/firefox52/application.ini
 lib/firefox52/browser/blocklist.xml
@@ -3391,6 +3391,7 @@ lib/firefox52/components/NetworkGeolocationProvider.js
 lib/firefox52/components/NotificationStorage.js
 lib/firefox52/components/PageIconProtocolHandler.js
 lib/firefox52/components/PageThumbsProtocol.js
+${PLIST.webrtc}lib/firefox52/components/PeerConnection.js
 lib/firefox52/components/PermissionSettings.js
 lib/firefox52/components/PlacesCategoriesStarter.js
 lib/firefox52/components/PresentationControlService.js
