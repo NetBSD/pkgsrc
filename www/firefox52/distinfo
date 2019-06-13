@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2019/06/01 19:11:28 maya Exp $
+$NetBSD: distinfo,v 1.20 2019/06/13 19:02:37 rjs Exp $
 
 SHA1 (firefox-52.9.0esr.source.tar.xz) = df3d47518b380fe934e32a288515c25435fd82a7
 RMD160 (firefox-52.9.0esr.source.tar.xz) = 8940269f0a515c0066b6ab2eea1da8963d27617b
@@ -77,6 +77,7 @@ SHA1 (patch-media_libvorbis_moz.build) = cad67e49169ddab075fbfae2e6f0f950c1eccaf
 SHA1 (patch-media_libyuv_source_mjpeg__decoder.cc) = d3b301dcec965b8f3efdd202db07fd75b503bc20
 SHA1 (patch-media_openmax__dl_dl_api_armCOMM__s.h) = 40b3fa8aaec77d3bfec810f0bc4e76eae449d7c7
 SHA1 (patch-media_webrtc_signaling_test_common.build) = 75729fb2983b272e433ff07853902f4b8d363ba6
+SHA1 (patch-media_webrtc_trunk_webrtc_modules_audio__device_audio__device.gypi) = b77deffe9a084f51d3166cf96dfae2c53f8bfd30
 SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info__linux.cc) = 22f4d0bb290f02bf6158facc1e47354dc8a0b211
 SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_video__capture__linux.cc) = 07158ae777fc4743f17cedc106cc9c85fb327d55
 SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_video__capture.gypi) = 9fb89480e47fce4df99a82fe90259bf444bd2e11
@@ -87,6 +88,9 @@ SHA1 (patch-modules_libjar_nsZipArchive.cpp) = 133b1658839d9b0f932a601670862c1f4
 SHA1 (patch-mozglue_build_arm.cpp) = f41ace63b3f1d2a8ccaffc98c3c64d1e22af5249
 SHA1 (patch-mozglue_build_arm.h) = 5e272f4e19b9681d43a63c45d78b0e44a392c7dc
 SHA1 (patch-netwerk_dns_moz.build) = d4ad35ee7152ca206156403954cbd247d1252ab0
+SHA1 (patch-netwerk_sctp_src_netinet6_sctp6__usrreq.c) = 8608c2745a28a35c9e47288a6c01cae0cd7793c7
+SHA1 (patch-netwerk_srtp_src_crypto_hash_hmac.c) = d381ac61f78616213565357d4e95c5bdc1c7c444
+SHA1 (patch-netwerk_srtp_src_crypto_kernel_crypto__kernel.c) = b7a6d9a6ed7fd41b50b2330665e1bf30cafdb367
 SHA1 (patch-rc) = 9628b038f036f3fc0e37bdf84fa0abf99dbc8d2a
 SHA1 (patch-toolkit_components_osfile_modules_osfile__unix__back.jsm) = 27e90fdfd5587f670958d832cd56107740b226ee
 SHA1 (patch-toolkit_components_osfile_modules_osfile__unix__front.jsm) = 4e5dc7cf11ea3d48cca86b5d21158d676ebd8957
