@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.8 2015/11/04 02:46:55 agc Exp $
-
-SHA1 (icedtea-web-1.5.2.tar.gz) = 45eb9ef057cc5239cd85d7fdfc6394de86ee7e6b
-RMD160 (icedtea-web-1.5.2.tar.gz) = fdead511719f4a0103e60229c1285cd7562d06e2
-SHA512 (icedtea-web-1.5.2.tar.gz) = 464354f94bb87ebbb295f5795d4bd6b427a1d64422b82f2bca4ad5dac0b74dd36d39c26f61b000c1aa062253f81d0821e8354eb88cc14ca4a4d0845ad26ff10e
-Size (icedtea-web-1.5.2.tar.gz) = 1583105 bytes
-SHA1 (patch-Makefile.am) = f77f3cfe401f184d3214197df87a36c0179101f3
-SHA1 (patch-launcher_launchers.in) = ddf840102af4fcf53d379ca3fa068f7ed847e15d
