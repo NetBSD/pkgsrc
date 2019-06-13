@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.157 2019/06/01 23:54:51 nia Exp $
+$NetBSD: distinfo,v 1.158 2019/06/13 10:53:11 nia Exp $
 
 SHA1 (seamonkey-2.49.4.source.tar.xz) = e9fa6d1c57e9141a299f6ec093683fb105ea6657
 RMD160 (seamonkey-2.49.4.source.tar.xz) = 072caadf376b7726356d6121abff87cc1fb62144
@@ -63,12 +63,12 @@ SHA1 (patch-mozilla_js_src_moz.build) = d19c3ae55a7802338eda9b952d6bebec3d3a2cbe
 SHA1 (patch-mozilla_js_src_old-configure.in) = 5aed3a3e211aaa8e49fe97f406f94c6975648e9d
 SHA1 (patch-mozilla_js_xpconnect_src_XPCConvert.cpp) = d866b89d5d741125430c0e3ac900c7ead401a495
 SHA1 (patch-mozilla_js_xpconnect_src_xpcprivate.h) = 6a836224fa46f2b30d337a7893c668ab0cf807cd
-SHA1 (patch-mozilla_media_libcubeb_src_cubeb.c) = b760a10ef1fdff5360b2644913df34d60f2ffbf6
+SHA1 (patch-mozilla_media_libcubeb_src_cubeb.c) = f936368fc7c54c4a808737068fd2f15cf2450fd0
 SHA1 (patch-mozilla_media_libcubeb_src_cubeb__alsa.c) = 06d21721261b85412085b3336aa8c3712c0d5551
 SHA1 (patch-mozilla_media_libcubeb_src_cubeb__oss.c) = 2c4a7cf4253ad098245edd91c2fa5207fe9b9c53
-SHA1 (patch-mozilla_media_libcubeb_src_moz.build) = 20cd45532c053be8b57177c4161537047e365be3
+SHA1 (patch-mozilla_media_libcubeb_src_moz.build) = 71d1e95ecb888905fe50b9900ed929253b0dd231
 SHA1 (patch-mozilla_media_libcubeb_tests_moz.build) = af24f693c6cf0cd7c6dfb2d7ca4ad17d6a77cc97
-SHA1 (patch-mozilla_media_libcubeb_update.sh) = 2ff28e8691e97787ba881b836065b6e4eecd72af
+SHA1 (patch-mozilla_media_libcubeb_update.sh) = 4bb209f62be383733104ddb58b978e9892629881
 SHA1 (patch-mozilla_media_libsoundtouch_src_cpu__detect__x86.cpp) = 1029bc985d6eadf3f030492a8aa51d008fa27740
 SHA1 (patch-mozilla_media_libsoundtouch_src_soundtouch__perms.h) = f04b476a0652aa125c89954bb962528a25b9e962
 SHA1 (patch-mozilla_media_libtheora_lib_arm_armcpu.c) = 544bbb808bbecb24b519a96358c956dcacdfd5be
@@ -88,7 +88,7 @@ SHA1 (patch-mozilla_modules_libjar_nsZipArchive.cpp) = a399e0bd0e83c47938bbee077
 SHA1 (patch-mozilla_mozglue_build_arm.cpp) = 592ae5ce1a404227cc2ab6a06418cc813c5743c9
 SHA1 (patch-mozilla_mozglue_build_arm.h) = 94e2b1a1a9ebf20bfa8a542066aa0dad475db320
 SHA1 (patch-mozilla_netwerk_dns_moz.build) = d87c07ebfa01d32ca826932af733b37ce586e9f7
-SHA1 (patch-mozilla_old-configure.in) = 100f03e97fb362defbf4d26b82b64508855debbe
+SHA1 (patch-mozilla_old-configure.in) = e98e393a90c8283259d7c6fe2a2fff03f2747e4d
 SHA1 (patch-mozilla_toolkit_components_osfile_modules_osfile__unix__back.jsm) = db4084f6a7dba2fc5d35cd256c6f149fabbf7bc7
 SHA1 (patch-mozilla_toolkit_components_osfile_modules_osfile__unix__front.jsm) = 1e8d0883d3cc12541020c7df0b1d67f60e7391f5
 SHA1 (patch-mozilla_toolkit_components_protobuf_src_google_protobuf_stubs_atomicops.h) = 0b5cad33bc9a90f4ae2d6346065707b642aba3a9
