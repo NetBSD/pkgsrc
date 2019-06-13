@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2503 2019/06/13 07:45:06 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2504 2019/06/13 07:55:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4201,3 +4201,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed www/icedtea-web [ryoon 2019-06-13]
 	Updated devel/rt4 to 4.2.16 [ryoon 2019-06-13]
 	Updated devel/py-test to 4.6.3nb1 [wiz 2019-06-13]
+	Updated devel/py-xdis to 4.0.2 [adam 2019-06-13]
+	Updated lang/py-uncompyle6 to 3.3.4 [adam 2019-06-13]
