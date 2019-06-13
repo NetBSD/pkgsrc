@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2018/07/23 04:56:12 maya Exp $
+# $NetBSD: options.mk,v 1.3 2019/06/13 19:02:37 rjs Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
@@ -121,6 +121,7 @@ PLIST.nobranding=	yes
 
 PLIST_VARS+=		webrtc
 .if !empty(PKG_OPTIONS:Mwebrtc)
+PLIST.webrtc=		yes
 .include "../../graphics/libv4l/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-webrtc
 .else
