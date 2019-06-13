@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.425 2019/04/13 12:08:04 nia Exp $
+# $NetBSD: Makefile,v 1.426 2019/06/13 13:04:02 nia Exp $
 #
 
 COMMENT=	Games
@@ -242,6 +242,7 @@ SUBDIR+=	love09
 SUBDIR+=	lpairs
 SUBDIR+=	lskat
 SUBDIR+=	ltris
+SUBDIR+=	lugaru
 SUBDIR+=	maelstrom-sdl
 SUBDIR+=	maelstrom-x11
 SUBDIR+=	majesty-demo
