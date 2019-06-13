@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.103 2019/06/02 22:12:39 he Exp $
+# $NetBSD: Makefile,v 1.104 2019/06/13 19:06:30 tnn Exp $
 
 DISTNAME=	rustc-1.35.0-src
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
 CATEGORIES=	lang
 MASTER_SITES=	http://static.rust-lang.org/dist/
@@ -308,7 +309,7 @@ post-extract:
 # patch(1) in NetBSD does not handle .cargo-checksum.json like long width file.
 	${CP} ${WRKSRC}/vendor/rand/.cargo-checksum.json \
 	      ${WRKSRC}/vendor/rand/.cargo-checksum.json.orig
-	${SED} -e 's/1e732c2e3b4bd1561f11e0979bf9d20669a96eae7afe0deff9dfbb980ee47bf1/55abd8100db14a076dedbf84ce0f2db08158e1bd33ff1d4978bd3c4ad978f281/' ${WRKSRC}/vendor/rand/.cargo-checksum.json.orig > ${WRKSRC}/vendor/rand/.cargo-checksum.json
+	${SED} -e 's/1e732c2e3b4bd1561f11e0979bf9d20669a96eae7afe0deff9dfbb980ee47bf1/bc03f2345d7cfa7000f9da817120b6afa073359789c21a9a790ebd8676c50cca/' ${WRKSRC}/vendor/rand/.cargo-checksum.json.orig > ${WRKSRC}/vendor/rand/.cargo-checksum.json
 	${CP} ${WRKSRC}/vendor/libc/.cargo-checksum.json \
 		${WRKSRC}/vendor/libc/.cargo-checksum.json.orig
 	${SED} -e 's/c6a740dac9af99321f48d5c9e86c6a4f5dcc611c413263881764f7121c1f7e9d/01ca1e6a21f01efd9d4b2768c1f9bcfab829e95a23d88cd35bf4e0172c672f3a/' ${WRKSRC}/vendor/libc/.cargo-checksum.json.orig > ${WRKSRC}/vendor/libc/.cargo-checksum.json
