@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2509 2019/06/13 13:04:15 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2510 2019/06/13 13:06:51 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4208,3 +4208,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/py-pyte version 0.8.0 [gson 2019-06-13]
 	Updated textproc/json-glib to 1.4.4 [wiz 2019-06-13]
 	Added games/lugaru version 1.2 [nia 2019-06-13]
+	Updated pkgtools/pkgin to 0.12.0 [jperkin 2019-06-13]
