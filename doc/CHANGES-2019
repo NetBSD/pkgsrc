@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2520 2019/06/14 15:17:45 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2521 2019/06/14 16:05:25 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4227,3 +4227,11 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/blosc to 1.16.3 [adam 2019-06-14]
 	Updated math/py-tables to 3.5.2 [adam 2019-06-14]
 	Updated textproc/py-numpydoc to 0.9.1 [adam 2019-06-14]
+	Updated cad/kicad to 5.1.2 [bouyer 2019-06-14]
+	Updated cad/kicad-doc to 5.1.2 [bouyer 2019-06-14]
+	Updated cad/kicad-footprints to 5.1.2 [bouyer 2019-06-14]
+	Updated cad/kicad-i18n to 5.1.2 [bouyer 2019-06-14]
+	Removed cad/kicad-lib [bouyer 2019-06-14]
+	Added cad/kicad-packages3d version 5.1.2 [bouyer 2019-06-14]
+	Added cad/kicad-symbols version 5.1.2 [bouyer 2019-06-14]
+	Added cad/kicad-templates version 5.1.2 [bouyer 2019-06-14]
