@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/08/29 11:04:42 adam Exp $
+# $NetBSD: Makefile,v 1.6 2019/06/14 15:17:17 adam Exp $
 
-DISTNAME=	numpydoc-0.8.0
+DISTNAME=	numpydoc-0.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpydoc/}
@@ -11,7 +11,7 @@ COMMENT=	Sphinx extension to support docstrings in Numpy format
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.3:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.2.3:../../textproc/py-sphinx
+DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.6.5:../../textproc/py-sphinx
 
 USE_LANGUAGES=	# none
 
