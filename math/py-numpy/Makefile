@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2019/04/24 10:09:59 adam Exp $
+# $NetBSD: Makefile,v 1.61 2019/06/14 14:33:07 adam Exp $
 
-DISTNAME=	numpy-1.16.3
+DISTNAME=	numpy-1.16.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpy/}
@@ -22,9 +22,9 @@ REPLACE_PYTHON+=	*.py */*.py */*/*.py */*/*/*.py */*/*/*/*.py
 # XXX Avoid picking up other compilers when installed
 .include "../../mk/compiler.mk"
 
-.if defined(PKGSRC_FORTRAN) && !empty(PKGSRC_FORTRAN:Mg95)
+.if defined(PKGSRC_FORTRAN) && ${PKGSRC_FORTRAN} == "g95"
 PYSETUPBUILDARGS+=	--fcompiler=g95
-.elif defined(PKGSRC_FORTRAN) && !empty(PKGSRC_FORTRAN:Mgfortran)
+.elif defined(PKGSRC_FORTRAN) && ${PKGSRC_FORTRAN} == "gfortran"
 PYSETUPBUILDARGS+=	--fcompiler=gnu95
 .elif !empty(PKGSRC_COMPILER:Mgcc)
 PYSETUPBUILDARGS+=	--fcompiler=gnu
@@ -45,6 +45,7 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${RM} f2py || ${TRUE}
 
 do-test:
+	cd ${WRKDIR} && \
 	${RUN} PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} ${PYTHONBIN} -c "import numpy; numpy.test()"
 
 .include "../../devel/py-cython/buildlink3.mk"
