@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2019/06/01 19:33:12 leot Exp $
+@comment $NetBSD: PLIST,v 1.29 2019/06/14 19:36:46 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -60,6 +60,9 @@ ${PYSITELIB}/gallery_dl/extractor/500px.pyo
 ${PYSITELIB}/gallery_dl/extractor/8chan.py
 ${PYSITELIB}/gallery_dl/extractor/8chan.pyc
 ${PYSITELIB}/gallery_dl/extractor/8chan.pyo
+${PYSITELIB}/gallery_dl/extractor/8muses.py
+${PYSITELIB}/gallery_dl/extractor/8muses.pyc
+${PYSITELIB}/gallery_dl/extractor/8muses.pyo
 ${PYSITELIB}/gallery_dl/extractor/__init__.py
 ${PYSITELIB}/gallery_dl/extractor/__init__.pyc
 ${PYSITELIB}/gallery_dl/extractor/__init__.pyo
@@ -261,6 +264,9 @@ ${PYSITELIB}/gallery_dl/extractor/pixnet.pyo
 ${PYSITELIB}/gallery_dl/extractor/plurk.py
 ${PYSITELIB}/gallery_dl/extractor/plurk.pyc
 ${PYSITELIB}/gallery_dl/extractor/plurk.pyo
+${PYSITELIB}/gallery_dl/extractor/pornhub.py
+${PYSITELIB}/gallery_dl/extractor/pornhub.pyc
+${PYSITELIB}/gallery_dl/extractor/pornhub.pyo
 ${PYSITELIB}/gallery_dl/extractor/pururin.py
 ${PYSITELIB}/gallery_dl/extractor/pururin.pyc
 ${PYSITELIB}/gallery_dl/extractor/pururin.pyo
@@ -303,6 +309,9 @@ ${PYSITELIB}/gallery_dl/extractor/shopify.pyo
 ${PYSITELIB}/gallery_dl/extractor/simplyhentai.py
 ${PYSITELIB}/gallery_dl/extractor/simplyhentai.pyc
 ${PYSITELIB}/gallery_dl/extractor/simplyhentai.pyo
+${PYSITELIB}/gallery_dl/extractor/slickpic.py
+${PYSITELIB}/gallery_dl/extractor/slickpic.pyc
+${PYSITELIB}/gallery_dl/extractor/slickpic.pyo
 ${PYSITELIB}/gallery_dl/extractor/slideshare.py
 ${PYSITELIB}/gallery_dl/extractor/slideshare.pyc
 ${PYSITELIB}/gallery_dl/extractor/slideshare.pyo
@@ -333,6 +342,9 @@ ${PYSITELIB}/gallery_dl/extractor/weibo.pyo
 ${PYSITELIB}/gallery_dl/extractor/wikiart.py
 ${PYSITELIB}/gallery_dl/extractor/wikiart.pyc
 ${PYSITELIB}/gallery_dl/extractor/wikiart.pyo
+${PYSITELIB}/gallery_dl/extractor/xhamster.py
+${PYSITELIB}/gallery_dl/extractor/xhamster.pyc
+${PYSITELIB}/gallery_dl/extractor/xhamster.pyo
 ${PYSITELIB}/gallery_dl/extractor/xvideos.py
 ${PYSITELIB}/gallery_dl/extractor/xvideos.pyc
 ${PYSITELIB}/gallery_dl/extractor/xvideos.pyo
