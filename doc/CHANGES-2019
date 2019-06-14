@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2514 2019/06/14 04:55:10 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2515 2019/06/14 05:49:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4214,3 +4214,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated wm/blackbox70 to 0.74nb1 [gutteridge 2019-06-14]
 	Updated databases/py-psycopg2 to 2.8.3 [adam 2019-06-14]
 	Updated devel/py-mako to 1.0.12 [adam 2019-06-14]
+	Updated net/py-botocore to 1.12.168 [adam 2019-06-14]
+	Updated net/py-s3transfer to 0.2.1 [adam 2019-06-14]
+	Updated net/py-boto3 to 1.9.168 [adam 2019-06-14]
+	Updated net/py-awscli to 1.16.178 [adam 2019-06-14]
