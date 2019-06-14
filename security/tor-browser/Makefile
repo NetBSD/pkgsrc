@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2019/06/01 20:24:03 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2019/06/14 17:22:21 nia Exp $
 
 DISTNAME=	src-firefox-tor-browser-60.7.0esr-8.5-1-build1
 PKGNAME=	tor-browser-8.5.60.7.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	https://dist.torproject.org/torbrowser/8.5/
 EXTRACT_SUFX=	.tar.xz
@@ -74,6 +74,7 @@ MOZILLA_NAME=	TorBrowser
 
 post-extract:
 	mv ${WRKSRC}/gfx/ycbcr/yuv_row_arm.s ${WRKSRC}/gfx/ycbcr/yuv_row_arm.S
+	${CP} ${FILESDIR}/cubeb_sun.c ${WRKSRC}/media/libcubeb/src/cubeb_sun.c
 
 pre-configure:
 	cd ${WRKSRC} && mkdir ${OBJDIR}
