@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.196 2019/06/09 13:39:12 wen Exp $
+# $NetBSD: Makefile,v 1.197 2019/06/14 10:37:04 jperkin Exp $
 
 DISTNAME=	R-3.6.0
 CATEGORIES=	math
@@ -16,8 +16,8 @@ INSTALL_TARGET=		install install-info
 TEST_TARGET=		check
 USE_LANGUAGES=		c c++ fortran
 USE_LIBTOOL=		yes
-USE_TOOLS+=		aclocal autoconf autoreconf automake
-USE_TOOLS+=		gmake gzip:run makeinfo perl:run sed unzip:run
+USE_TOOLS+=		aclocal autoconf autoreconf automake gmake gzip:run
+USE_TOOLS+=		makeinfo perl:run pkg-config sed unzip:run
 TEXINFO_REQD=		5.1
 INFO_FILES=		yes
 
