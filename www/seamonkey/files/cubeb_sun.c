@@ -98,6 +98,7 @@ struct cubeb_stream {
   char input_name[32];
   char output_name[32];
   uint64_t frames_written;
+  uint64_t blocks_written;
 };
 
 int
@@ -664,10 +665,22 @@ sun_stream_start(cubeb_stream * s)
 static int
 sun_stream_get_position(cubeb_stream * s, uint64_t * position)
 {
+#ifdef AUDIO_GETOOFFS
+  struct audio_offset offset;
+
+  if (ioctl(s->play_fd, AUDIO_GETOOFFS, &offset) == -1) {
+    return CUBEB_ERROR;
+  }
+  s->blocks_written += offset.deltablks;
+  *position = BYTES_TO_FRAMES(s->blocks_written * s->p_info.blocksize,
+                              s->p_info.play.channels);
+  return CUBEB_OK;
+#else
   pthread_mutex_lock(&s->mutex);
   *position = s->frames_written;
   pthread_mutex_unlock(&s->mutex);
   return CUBEB_OK;
+#endif
 }
 
 static int
