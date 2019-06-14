@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2018/12/16 09:39:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.98 2019/06/14 16:01:20 bouyer Exp $
 #
 
 COMMENT=	CAD tools
@@ -36,7 +36,9 @@ SUBDIR+=	kicad
 SUBDIR+=	kicad-doc
 SUBDIR+=	kicad-footprints
 SUBDIR+=	kicad-i18n
-SUBDIR+=	kicad-lib
+SUBDIR+=	kicad-packages3d
+SUBDIR+=	kicad-symbols
+SUBDIR+=	kicad-templates
 SUBDIR+=	klayout
 SUBDIR+=	librecad
 SUBDIR+=	libwcalc
