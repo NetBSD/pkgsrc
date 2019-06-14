@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.20 2019/06/13 19:02:37 rjs Exp $
+$NetBSD: distinfo,v 1.21 2019/06/14 08:11:34 nia Exp $
 
 SHA1 (firefox-52.9.0esr.source.tar.xz) = df3d47518b380fe934e32a288515c25435fd82a7
 RMD160 (firefox-52.9.0esr.source.tar.xz) = 8940269f0a515c0066b6ab2eea1da8963d27617b
 SHA512 (firefox-52.9.0esr.source.tar.xz) = bfca42668ca78a12a9fb56368f4aae5334b1f7a71966fbba4c32b9c5e6597aac79a6e340ac3966779d2d5563eb47c054ab33cc40bfb7306172138ccbd3adb2b9
 Size (firefox-52.9.0esr.source.tar.xz) = 214087304 bytes
-SHA1 (patch-aa) = eb9368360208ba294d3d17e0c69815531aed1abf
+SHA1 (patch-aa) = 0ca132012a7005a506cdecc0167d4c7782aee244
 SHA1 (patch-ao) = 8b7125ef3b193fca4d03386142887b2f8d5015c5
 SHA1 (patch-as) = b596132c7b6902c4f7ddb901e28e1437b99bb428
 SHA1 (patch-build_gyp.mozbuild) = 481270e6703e556fb87a3440cb3cfb3d4fcc4c86
@@ -62,12 +62,12 @@ SHA1 (patch-js_src_moz.build) = ce9110506086d15a011d0985b58dd4e7d1b6ec5f
 SHA1 (patch-js_src_vm_StructuredClone.cpp) = 7e992825e996c43419318893b704a2aa380b0d2a
 SHA1 (patch-js_xpconnect_src_XPCConvert.cpp) = 915777e9bb5366be41866cdb6ea0ad2b1c006dde
 SHA1 (patch-js_xpconnect_src_xpcprivate.h) = e09e37819961bae40a9f276ae1ee510d2956c23e
-SHA1 (patch-media_libcubeb_src_cubeb.c) = 3be0bf511cbd3b1c691fadb081acaf38838c36f4
+SHA1 (patch-media_libcubeb_src_cubeb.c) = 24075714155e5c95fddf95ae8865a71db6006c15
 SHA1 (patch-media_libcubeb_src_cubeb__alsa.c) = c59eaf40973193885f32819b465b401c1ba45fce
 SHA1 (patch-media_libcubeb_src_cubeb__oss.c) = e15cc2d0c220738ccfd57f79eec242095c8ea536
-SHA1 (patch-media_libcubeb_src_moz.build) = 2b6d7e3bb265220decf9629b1d4b980cadb363fb
+SHA1 (patch-media_libcubeb_src_moz.build) = b81696b0160e151b7f52621eb7ec69c704d93507
 SHA1 (patch-media_libcubeb_tests_moz.build) = 63d8b749a6ebbe8fd662ce1e2bde6aa9cb0b807d
-SHA1 (patch-media_libcubeb_update.sh) = 333e1e2898f1703a298ba2a3f731ffc63f09a184
+SHA1 (patch-media_libcubeb_update.sh) = d8f35f994f48119e20a79484e10a15ba13989936
 SHA1 (patch-media_libsoundtouch_src_cpu__detect__x86.cpp) = db61737afa7773e8cbd82976de3a02c917174696
 SHA1 (patch-media_libsoundtouch_src_soundtouch__perms.h) = 2d08a3b4176c155c57b458cb78043318b68d8fe2
 SHA1 (patch-media_libtheora_lib_arm_armcpu.c) = 4b215277f9c81154377d401166023c1bf78a3718
