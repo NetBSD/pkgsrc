@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2017/09/26 17:38:22 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/06/14 15:12:40 adam Exp $
 include/blosc-export.h
 include/blosc.h
-lib/libblosc.so.${PKGVERSION}
-lib/libblosc.so.1
 lib/libblosc.a
 lib/libblosc.so
+lib/libblosc.so.${PKGVERSION}
+lib/libblosc.so.1
 lib/pkgconfig/blosc.pc
