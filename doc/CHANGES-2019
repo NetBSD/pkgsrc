@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2517 2019/06/14 07:34:27 sjmulder Exp $
+$NetBSD: CHANGES-2019,v 1.2518 2019/06/14 08:02:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4219,3 +4219,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/py-boto3 to 1.9.168 [adam 2019-06-14]
 	Updated net/py-awscli to 1.16.178 [adam 2019-06-14]
 	Updated sysutils/nnn to 2.5nb2 [sjmulder 2019-06-14]
+	Updated devel/py-test-fixture-config to 1.7.0 [adam 2019-06-14]
+	Updated www/py-autobahn to 19.6.2 [adam 2019-06-14]
