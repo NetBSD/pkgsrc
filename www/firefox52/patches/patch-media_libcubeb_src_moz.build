@@ -1,11 +1,12 @@
-$NetBSD: patch-media_libcubeb_src_moz.build,v 1.1 2017/04/27 01:55:57 ryoon Exp $
+$NetBSD: patch-media_libcubeb_src_moz.build,v 1.2 2019/06/14 08:11:35 nia Exp $
 
 * Add OSS audio support
+* Add Sun audio support
 * Support system library
 
---- media/libcubeb/src/moz.build.orig	2016-10-31 20:15:39.000000000 +0000
+--- media/libcubeb/src/moz.build.orig	2017-04-11 02:13:12.000000000 +0000
 +++ media/libcubeb/src/moz.build
-@@ -24,6 +24,12 @@ if CONFIG['MOZ_PULSEAUDIO'] or CONFIG['M
+@@ -24,6 +24,18 @@ if CONFIG['MOZ_PULSEAUDIO'] or CONFIG['M
          'cubeb_resampler.cpp',
      ]
  
@@ -15,10 +16,16 @@ $NetBSD: patch-media_libcubeb_src_moz.build,v 1.1 2017/04/27 01:55:57 ryoon Exp 
 +    ]
 +    DEFINES['USE_OSS'] = True
 +
++if CONFIG['MOZ_SUN']:
++    SOURCES += [
++        'cubeb_sun.c',
++    ]
++    DEFINES['USE_SUN'] = True
++
  if CONFIG['MOZ_PULSEAUDIO']:
      SOURCES += [
          'cubeb_pulse.c',
-@@ -81,6 +87,7 @@ if CONFIG['OS_TARGET'] == 'Android':
+@@ -81,6 +93,7 @@ if CONFIG['OS_TARGET'] == 'Android':
  
  FINAL_LIBRARY = 'gkmedias'
  
