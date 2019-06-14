@@ -1,19 +1,21 @@
-# $NetBSD: Makefile,v 1.4 2018/03/01 13:59:11 mef Exp $
+# $NetBSD: Makefile,v 1.5 2019/06/14 15:59:32 bouyer Exp $
 #
 
-V=		4.0.7
+V=		5.1.2
 DISTNAME=	kicad-doc-${V}
 CATEGORIES=	cad
-MASTER_SITES=	http://downloads.kicad-pcb.org/docs/
+MASTER_SITES=	https://kicad-downloads.s3.cern.ch/docs/
 
-MAINTAINER=	bouyer@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://kicad-pcb.org/
 COMMENT=	Documentation for the PCB CAD software
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v3
 
 DOCDIR=		${DESTDIR}${PREFIX}/share/doc/kicad
 
 do-build:
+	${FIND} ${WRKSRC} -name PaxHeader -print |  ${XARGS} ${RM} -rf
+
 do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${CP} -R ${WRKSRC}/share/doc/kicad/help ${DOCDIR}/
