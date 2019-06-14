@@ -1,30 +1,19 @@
-# $NetBSD: Makefile,v 1.3 2018/03/01 13:59:11 mef Exp $
+# $NetBSD: Makefile,v 1.4 2019/06/14 15:59:32 bouyer Exp $
 #
 
-V=		4.0.7
+V=		5.1.2
 DISTNAME=	kicad-footprints-${V}
 CATEGORIES=	cad
-MASTER_SITES=	http://downloads.kicad-pcb.org/libraries/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=KiCad/}
+GITHUB_TAG=	${PKGVERSION_NOREV}
+EXTRACT_USING=	bsdtar
 
-MAINTAINER=	bouyer@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://kicad-pcb.org/
 COMMENT=	components footprints for the PCB CAD software
-LICENSE=	gnu-gpl-v2
+LICENSE=	cc-by-sa-v4.0
 
-MODDIR=		${DESTDIR}${PREFIX}/share/kicad/modules
-
-do-build:
-do-install:
-	${INSTALL_DATA_DIR} ${MODDIR}
-	cd ${WRKSRC}; \
-	find . -name PaxHeader -print | xargs rm -rf; \
-	for d in *; do \
-		${INSTALL_DATA_DIR} ${MODDIR}/$$d; \
-	done;
-	cd ${WRKSRC}; \
-	for f in */*; do \
-		${INSTALL_DATA} $$f ${MODDIR}/$$f; \
-	done;
+USE_CMAKE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.pkg.mk"

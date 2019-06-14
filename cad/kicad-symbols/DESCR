@@ -13,4 +13,4 @@ Kicad is a set of four softwares and a project manager:
     * Cvpcb: footprint selector for components used in the circuit design.
     * Kicad: project manager.
 
-This package contains the libraries schematics for Kicad
+This package contains the schematic symbol libraries for Kicad

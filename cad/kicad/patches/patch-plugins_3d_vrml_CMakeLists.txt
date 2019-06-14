@@ -1,0 +1,16 @@
+$NetBSD: patch-plugins_3d_vrml_CMakeLists.txt,v 1.1 2019/06/14 15:59:32 bouyer Exp $
+
+Force proper LDFLAGS for MODULE, as cmake doens't set rpath for theses
+
+--- plugins/3d/vrml/CMakeLists.txt.orig	2019-05-29 17:03:14.351417166 +0200
++++ plugins/3d/vrml/CMakeLists.txt	2019-05-29 17:03:37.760641586 +0200
+@@ -74,6 +74,9 @@
+     )
+ endif()
+ 
++set_property(TARGET s3d_plugin_vrml APPEND_STRING
++       PROPERTY LINK_FLAGS " $ENV{LDFLAGS}")
++
+ install( TARGETS
+     s3d_plugin_vrml
+     DESTINATION ${KICAD_USER_PLUGIN}/3d
