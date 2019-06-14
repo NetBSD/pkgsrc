@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2019/03/20 16:08:06 adam Exp $
+# $NetBSD: Makefile,v 1.3 2019/06/14 15:13:35 adam Exp $
 
-DISTNAME=	tables-3.5.1
+DISTNAME=	tables-3.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tables/}
@@ -24,10 +24,10 @@ USE_LANGUAGES=	c c++
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} pt2to3 pt2to3-${PYVERSSUFFIX} && \
-		${MV} ptdump ptdump-${PYVERSSUFFIX} && \
-		${MV} ptrepack ptrepack-${PYVERSSUFFIX} && \
-		${MV} pttree pttree-${PYVERSSUFFIX} || ${TRUE}
+	${MV} pt2to3 pt2to3-${PYVERSSUFFIX} && \
+	${MV} ptdump ptdump-${PYVERSSUFFIX} && \
+	${MV} ptrepack ptrepack-${PYVERSSUFFIX} && \
+	${MV} pttree pttree-${PYVERSSUFFIX} || ${TRUE}
 
 do-test:
 	cd ${WRKSRC}/tables/tests && ${PYTHONBIN} test_all.py
