@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2019/04/25 07:33:32 maya Exp $
+# $NetBSD: Makefile,v 1.62 2019/06/14 23:10:54 gutteridge Exp $
 
 DISTNAME=	qtwebkit-${QTWKVERSION}
 PKGNAME=	qt5-qtwebkit-${QTWKVERSION:S/-/./}
@@ -85,6 +85,11 @@ BUILDLINK_TRANSFORM+=	rpath:${WRKSRC}/lib:${QTDIR}/lib
 
 .if ${OPSYS} == "NetBSD" && ${MACHINE_CPU:U} == "arm"
 LDFLAGS+=	-Wl,-no-keep-memory -Wl-reduce-memory
+.endif
+
+# 64-bit atomic ops are required
+.if ${MACHINE_ARCH} == "i386"
+CXXFLAGS+=	-march=i586
 .endif
 
 post-install:
