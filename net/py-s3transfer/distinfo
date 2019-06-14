@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/02/12 10:54:52 adam Exp $
+$NetBSD: distinfo,v 1.6 2019/06/14 05:45:54 adam Exp $
 
-SHA1 (s3transfer-0.2.0.tar.gz) = 85edcfc709adb0f8bb0afc6e68e9e99e5999c974
-RMD160 (s3transfer-0.2.0.tar.gz) = c6e6cad50a21ee69b353be007b28df09177b0c27
-SHA512 (s3transfer-0.2.0.tar.gz) = 2e37a13da67cdabb49deeb177fd9f8d6393128e757e6c9bd93c99eb95a3edbd14736025e284f3173e8247d23239abae3700d894ba0d138f970ceaff748aa6e9e
-Size (s3transfer-0.2.0.tar.gz) = 118361 bytes
+SHA1 (s3transfer-0.2.1.tar.gz) = 6cea61f90926422401fc0c0d89626f4cacf3ce55
+RMD160 (s3transfer-0.2.1.tar.gz) = 90eab4c99187349086b2d33808d9716fa0f25614
+SHA512 (s3transfer-0.2.1.tar.gz) = 1494436fa74ba6eee26e96fb0d448062acddf4c4179e56baaa47d62785218d9e91c5fb50b6641e488d0c84cbaab53bd552b4277bb873cd170904074e6509b0e9
+Size (s3transfer-0.2.1.tar.gz) = 119635 bytes
