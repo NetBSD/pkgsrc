@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2515 2019/06/14 05:49:38 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2516 2019/06/14 07:22:55 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4218,3 +4218,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/py-s3transfer to 0.2.1 [adam 2019-06-14]
 	Updated net/py-boto3 to 1.9.168 [adam 2019-06-14]
 	Updated net/py-awscli to 1.16.178 [adam 2019-06-14]
+	Updated sysutils/nnn to 2.5nb2 [sjmulder 2019-06-14]
+	Updated sysutils/nnn to 2.5nb2 [sjmulder 2019-06-14]
