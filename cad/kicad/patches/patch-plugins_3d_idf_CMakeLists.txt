@@ -1,0 +1,16 @@
+$NetBSD: patch-plugins_3d_idf_CMakeLists.txt,v 1.1 2019/06/14 15:59:32 bouyer Exp $
+
+Force proper LDFLAGS for MODULE, as cmake doens't set rpath for theses
+
+--- plugins/3d/idf/CMakeLists.txt.orig	2019-05-29 17:01:08.898401494 +0200
++++ plugins/3d/idf/CMakeLists.txt	2019-05-29 17:02:00.543946926 +0200
+@@ -36,6 +36,9 @@
+     )
+ endif()
+ 
++set_property(TARGET s3d_plugin_idf APPEND_STRING
++       PROPERTY LINK_FLAGS " $ENV{LDFLAGS}")
++
+ install( TARGETS
+     s3d_plugin_idf
+     DESTINATION ${KICAD_USER_PLUGIN}/3d

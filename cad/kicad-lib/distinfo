@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2018/03/01 13:59:11 mef Exp $
-
-SHA1 (kicad-library-4.0.7.tar.gz) = c70c1cbe02b928f4b4be52daae522a64a9207612
-RMD160 (kicad-library-4.0.7.tar.gz) = 5182bb650f5154edc299cb498df71b283363a8f3
-SHA512 (kicad-library-4.0.7.tar.gz) = c5365e18e806102aace785895259deca708a61e0ce37262f5ee2482a8a1f86bc9ce1d37e0fb63cb0661bd5c71064ac36ca2260c9c02ed9790744eedd0a5b5360
-Size (kicad-library-4.0.7.tar.gz) = 475804416 bytes
