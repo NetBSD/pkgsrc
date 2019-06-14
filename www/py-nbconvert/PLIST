@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/03/22 11:20:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/06/14 14:49:12 adam Exp $
 bin/jupyter-nbconvert-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
@@ -77,6 +77,7 @@ ${PYSITELIB}/nbconvert/exporters/tests/files/notebook2.ipynb
 ${PYSITELIB}/nbconvert/exporters/tests/files/pngmetadata.ipynb
 ${PYSITELIB}/nbconvert/exporters/tests/files/prompt_numbers.ipynb
 ${PYSITELIB}/nbconvert/exporters/tests/files/rawtest.ipynb
+${PYSITELIB}/nbconvert/exporters/tests/files/svg.ipynb
 ${PYSITELIB}/nbconvert/exporters/tests/test_asciidoc.py
 ${PYSITELIB}/nbconvert/exporters/tests/test_asciidoc.pyc
 ${PYSITELIB}/nbconvert/exporters/tests/test_asciidoc.pyo
@@ -203,6 +204,9 @@ ${PYSITELIB}/nbconvert/preprocessors/__init__.pyo
 ${PYSITELIB}/nbconvert/preprocessors/base.py
 ${PYSITELIB}/nbconvert/preprocessors/base.pyc
 ${PYSITELIB}/nbconvert/preprocessors/base.pyo
+${PYSITELIB}/nbconvert/preprocessors/clearmetadata.py
+${PYSITELIB}/nbconvert/preprocessors/clearmetadata.pyc
+${PYSITELIB}/nbconvert/preprocessors/clearmetadata.pyo
 ${PYSITELIB}/nbconvert/preprocessors/clearoutput.py
 ${PYSITELIB}/nbconvert/preprocessors/clearoutput.pyc
 ${PYSITELIB}/nbconvert/preprocessors/clearoutput.pyo
@@ -256,6 +260,7 @@ ${PYSITELIB}/nbconvert/preprocessors/tests/files/HelloWorld.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/Inline Image.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/Interrupt-IPY6.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/Interrupt.ipynb
+${PYSITELIB}/nbconvert/preprocessors/tests/files/JupyterWidgets.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/SVG.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/Skip Exceptions with Cell Tags-IPY6.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/Skip Exceptions with Cell Tags.ipynb
@@ -265,6 +270,9 @@ ${PYSITELIB}/nbconvert/preprocessors/tests/files/Unicode.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/UnicodePy3.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/python.png
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/update-display-id.ipynb
+${PYSITELIB}/nbconvert/preprocessors/tests/test_clearmetadata.py
+${PYSITELIB}/nbconvert/preprocessors/tests/test_clearmetadata.pyc
+${PYSITELIB}/nbconvert/preprocessors/tests/test_clearmetadata.pyo
 ${PYSITELIB}/nbconvert/preprocessors/tests/test_clearoutput.py
 ${PYSITELIB}/nbconvert/preprocessors/tests/test_clearoutput.pyc
 ${PYSITELIB}/nbconvert/preprocessors/tests/test_clearoutput.pyo
@@ -317,6 +325,7 @@ ${PYSITELIB}/nbconvert/templates/latex/skeleton/null.tplx
 ${PYSITELIB}/nbconvert/templates/latex/style_bw_ipython.tplx
 ${PYSITELIB}/nbconvert/templates/latex/style_bw_python.tplx
 ${PYSITELIB}/nbconvert/templates/latex/style_ipython.tplx
+${PYSITELIB}/nbconvert/templates/latex/style_jupyter.tplx
 ${PYSITELIB}/nbconvert/templates/latex/style_python.tplx
 ${PYSITELIB}/nbconvert/templates/markdown.tpl
 ${PYSITELIB}/nbconvert/templates/python.tpl

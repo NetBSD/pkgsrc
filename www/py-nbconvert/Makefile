@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2019/03/22 11:20:41 adam Exp $
+# $NetBSD: Makefile,v 1.5 2019/06/14 14:49:12 adam Exp $
 
-DISTNAME=	nbconvert-5.4.1
+DISTNAME=	nbconvert-5.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nbconvert/}
@@ -32,7 +32,7 @@ USE_LANGUAGES=	# none
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} jupyter-nbconvert jupyter-nbconvert-${PYVERSSUFFIX} || ${TRUE}
+	${MV} jupyter-nbconvert jupyter-nbconvert-${PYVERSSUFFIX} || ${TRUE}
 
 do-test:
 	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
