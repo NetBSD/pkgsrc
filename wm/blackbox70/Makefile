@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2019/01/19 21:21:04 gutteridge Exp $
+# $NetBSD: Makefile,v 1.20 2019/06/14 02:09:03 gutteridge Exp $
 
 VERSION=	0.74
+PKGREVISION=	1
 DISTNAME=	blackbox-${VERSION}
 PKGNAME=	blackbox70-${VERSION}
 CATEGORIES=	wm x11

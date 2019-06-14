@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.13 2019/01/19 21:21:04 gutteridge Exp $
+$NetBSD: distinfo,v 1.14 2019/06/14 02:09:03 gutteridge Exp $
 
 SHA1 (blackbox-0.74.tar.gz) = b252f052c590f092ae0e9c381c6c7e823fd83654
 RMD160 (blackbox-0.74.tar.gz) = 5c124739cbf1098341378c3bae1b7a461ec22dd4
 SHA512 (blackbox-0.74.tar.gz) = 7d67fe2fe6c0c2e9cd18d494fbba885ab7ca8c7aadcfe5ceada97c1280633b575f3f47a36dc5393c61ae0baf50eef61e56683899913fa58859148148e5041389
 Size (blackbox-0.74.tar.gz) = 395732 bytes
+SHA1 (patch-autogen.sh) = bdf1efbddf09d0e457390aaf9f2e621204175540
 SHA1 (patch-doc_fr__FR_Makefile.am) = 77fdac4d552af2ef0e8d43c5f6f8aeb0f8e20862
 SHA1 (patch-doc_ja__JP_Makefile.am) = e5dcdf4da59f805547cbf0cc9eb5d28468685e2b
 SHA1 (patch-doc_nl__NL_Makefile.am) = 951a4babc59a7a237cf662c7c3a2d2b865d9495b
