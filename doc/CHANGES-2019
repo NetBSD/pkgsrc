@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2519 2019/06/14 15:00:17 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2520 2019/06/14 15:17:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4224,3 +4224,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated math/py-numpy to 1.16.4 [adam 2019-06-14]
 	Updated www/py-nbconvert to 5.5.0 [adam 2019-06-14]
 	Updated math/py-scipy to 1.3.0 [adam 2019-06-14]
+	Updated devel/blosc to 1.16.3 [adam 2019-06-14]
+	Updated math/py-tables to 3.5.2 [adam 2019-06-14]
+	Updated textproc/py-numpydoc to 0.9.1 [adam 2019-06-14]
