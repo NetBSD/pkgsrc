@@ -1,12 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2019/06/01 20:24:03 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2019/06/14 17:22:21 nia Exp $
 
 * Disable libjpeg-turbo check
 * Add system libraries option
 * Add OSS audio support
+* Add Sun audio support
 
---- old-configure.in.orig	2018-05-03 16:58:31.000000000 +0000
+--- old-configure.in.orig	2019-05-15 06:47:08.000000000 +0000
 +++ old-configure.in
-@@ -1804,11 +1804,7 @@ if test "$MOZ_SYSTEM_JPEG" = 1; then
+@@ -1785,11 +1785,7 @@ if test "$MOZ_SYSTEM_JPEG" = 1; then
                       #include <jpeglib.h> ],
                     [ #if JPEG_LIB_VERSION < $MOZJPEG
                       #error "Insufficient JPEG library version ($MOZJPEG required)."
@@ -19,7 +20,7 @@ $NetBSD: patch-aa,v 1.4 2019/06/01 20:24:03 wiz Exp $
                     MOZ_SYSTEM_JPEG=1,
                     AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
  fi
-@@ -2596,6 +2592,67 @@ AC_DEFINE(MOZ_WEBM_ENCODER)
+@@ -2577,6 +2573,71 @@ AC_DEFINE(MOZ_WEBM_ENCODER)
  AC_SUBST(MOZ_WEBM_ENCODER)
  
  dnl ==================================
@@ -28,8 +29,11 @@ $NetBSD: patch-aa,v 1.4 2019/06/01 20:24:03 wiz Exp $
 +
 +dnl If using Linux, Solaris or BSDs, ensure that OSS is available
 +case "$OS_TARGET" in
-+Linux|SunOS|DragonFly|FreeBSD|NetBSD|GNU/kFreeBSD)
++Linux|DragonFly|FreeBSD|GNU/kFreeBSD)
 +    MOZ_OSS=1
++    ;;
++NetBSD|SunOS)
++    MOZ_SUN=1
 +    ;;
 +esac
 +
@@ -79,6 +83,7 @@ $NetBSD: patch-aa,v 1.4 2019/06/01 20:24:03 wiz Exp $
 +CFLAGS=$_SAVE_CFLAGS
 +LIBS=$_SAVE_LIBS
 +
++AC_SUBST(MOZ_SUN)
 +AC_SUBST(MOZ_OSS)
 +AC_SUBST_LIST(MOZ_OSS_CFLAGS)
 +AC_SUBST_LIST(MOZ_OSS_LIBS)
