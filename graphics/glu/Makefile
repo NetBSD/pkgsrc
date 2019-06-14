@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2018/10/17 10:04:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.65 2019/06/14 10:22:46 jperkin Exp $
 
 DISTNAME=	glu-9.0.0
 PKGREVISION=	2
@@ -18,6 +18,7 @@ USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	glu.pc.in
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
