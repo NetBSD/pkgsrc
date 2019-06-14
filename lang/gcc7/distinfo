@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2019/01/05 00:39:13 adam Exp $
+$NetBSD: distinfo,v 1.15 2019/06/14 09:42:35 adam Exp $
 
 SHA1 (gcc-7.4.0.tar.xz) = bf09553cfa08ae6e29dfbbd541e5c69c3cbc6c66
 RMD160 (gcc-7.4.0.tar.xz) = 77d3cdafe7df748fa484a300e9513acb3ee2c2e1
@@ -21,6 +21,7 @@ SHA1 (patch-gcc_config_alpha_linux.h) = fce1256bce232143ff6c1c1b8b9c855737adb23f
 SHA1 (patch-gcc_config_arm_arm.h) = 92c8bff1063e153fec4454e6dea5334a42b0dad6
 SHA1 (patch-gcc_config_arm_netbsd-eabi.h) = 9c1d2148e306024e8de3bdc9802fb63b976e0e7a
 SHA1 (patch-gcc_config_arm_netbsd-elf.h) = 80a07645fab197969b4a6f518fdc81bda7376375
+SHA1 (patch-gcc_config_darwin-driver.c) = 5479026e691fb28585b5a41e5a571be9bc2a2bcb
 SHA1 (patch-gcc_config_netbsd-elf.h) = 5a9b5ef26c03bec3cd58e2f446224aa6e94a30d5
 SHA1 (patch-gcc_config_netbsd-protos.h) = 6d28864b4ccc8c1a63fe28e43601b84b63a00633
 SHA1 (patch-gcc_config_netbsd.h) = 662226f4491f94b641f78b1273a9047434d75aed
@@ -46,6 +47,7 @@ SHA1 (patch-libgcc_crtstuff.c) = e3a3b02a26229992851f195b5701cb1b86c29efe
 SHA1 (patch-libgfortran_configure) = 869a60fd08edecf18a42732dcbf226bad1309394
 SHA1 (patch-libgo_Makefile.in) = 612987541f745c7be6835ce7fb7119884db294c3
 SHA1 (patch-libsanitizer_configure.tgt) = 0aff54104734b2cb21090e33f9304738946ea5a0
+SHA1 (patch-libsanitizer_sanitizer__common_sanitizer__platform.h) = fe4b35bb17d5d310780b11eb6491c291bde6fb08
 SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__base.h) = 014d442c885b9c51d1a4af05205279c274a9559d
 SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__configure__char.cc) = 06bba6da02344f76c26eed765a7cb022c035994e
 SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__inline.h) = 626fc1f9c035ac5cef30a92d525af4e778835ebf
