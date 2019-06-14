@@ -46,7 +46,7 @@
 #endif
 
 #ifndef SUN_BUFFER_FRAMES
-#define SUN_BUFFER_FRAMES (256)
+#define SUN_BUFFER_FRAMES (32)
 #endif
 
 /*
