@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.11 2019/06/01 20:24:03 wiz Exp $
+$NetBSD: distinfo,v 1.12 2019/06/14 17:22:21 nia Exp $
 
 SHA1 (src-firefox-tor-browser-60.7.0esr-8.5-1-build1.tar.xz) = 2521274bb159d2ed3a955094d19330cdb13b3041
 RMD160 (src-firefox-tor-browser-60.7.0esr-8.5-1-build1.tar.xz) = 41e5674c7eca8ea14cc57be16ffeed97a2753c1b
 SHA512 (src-firefox-tor-browser-60.7.0esr-8.5-1-build1.tar.xz) = 5b58abffab98cc43de19d6fcc0416e195487ce39226c5dfedc6ddeb6194b2660bbd4bf895f690e277cfdb9205898b3ae8330c1557101a55efe4749ed85e8c23d
 Size (src-firefox-tor-browser-60.7.0esr-8.5-1-build1.tar.xz) = 279370536 bytes
 SHA1 (patch-.mozconfig) = 3377e91db2560d79503e9a9dd69011f5a84b6994
-SHA1 (patch-aa) = 17ea1093941cabc3dac1c653ba9edd92ec9877da
+SHA1 (patch-aa) = a67963a9a53546061acaaa6f219bbd04685157f9
 SHA1 (patch-browser_app_profile_firefox.js) = 9a43095d94f83f315b9a3ce4a7b0a4301e9c40e6
 SHA1 (patch-build_moz.configure_old.configure) = 1df6867eaf73a350fbe8fcd5bd34e1fcab09d707
 SHA1 (patch-build_moz.configure_rust.configure) = 2818454ba4df3cbd85174edc4828206b3bf0a82b
@@ -24,11 +24,11 @@ SHA1 (patch-js_src_threading_posix_Thread.cpp) = 47e612a676e614fd6dd43b8a3140218
 SHA1 (patch-js_src_util_NativeStack.cpp) = ac5c7cb9ca553773ebff18a926e2a4d1b473faa5
 SHA1 (patch-js_src_wasm_WasmSignalHandlers.cpp) = 19a396b57b42f4b7b0861f08e4ae2b2d6effc729
 SHA1 (patch-media_libcubeb_gtest_moz.build) = 921a001726cda9e9782df5e59ae02b19d76ef47e
-SHA1 (patch-media_libcubeb_src_cubeb.c) = 1b1b8d57eb710cad13518ded79a0ddee2681881b
+SHA1 (patch-media_libcubeb_src_cubeb.c) = b5bc831d1ea32d185c4e6ec2eb7a13e87f8230bb
 SHA1 (patch-media_libcubeb_src_cubeb__alsa.c) = 3ee36f58bb525767c7d2b9e814ba4ccaa4868717
 SHA1 (patch-media_libcubeb_src_cubeb__oss.c) = 103f751d5a7bc14a81a6ed43e1afc722bc092f7e
-SHA1 (patch-media_libcubeb_src_moz.build) = f243068c8908dcb16434221edef8c65db3bb0c83
-SHA1 (patch-media_libcubeb_update.sh) = 3a322de06bbe9aafba9da349954ef022bd094992
+SHA1 (patch-media_libcubeb_src_moz.build) = 66d63d585f8b576219d07cd92e894b780c1b3f50
+SHA1 (patch-media_libcubeb_update.sh) = 136b3f3b44ef8d819db0e122816d8d669bca1b8c
 SHA1 (patch-media_libpng_pngpriv.h) = c8084332560017cd7c9b519b61d125fa28af0dbc
 SHA1 (patch-media_webrtc_trunk_webrtc_modules_audio__device_linux_audio__device__alsa__linux.cc) = 91e8ce496c1f4dbbd0a463d83cb033afd1de3f49
 SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info__linux.cc) = 0141dd1372c13ea1fce6e2f5ffb65e0cb0f3a13e
