@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/06/14 22:28:35 mef Exp $
+# $NetBSD: Makefile,v 1.22 2019/06/14 22:32:06 mef Exp $
 
 DISTNAME=		gprolog-1.4.5
 CATEGORIES=		lang
@@ -20,8 +20,8 @@ CONFIGURE_ARGS+=	--with-install-dir=${PREFIX}/lib/${PKGNAME_NOREV} \
 
 # Apparently build failures hang forever if multiple MAKE_JOBS are in use.
 # MAKE_JOBS_SAFE= 	no
-# but try this
-MAKE_JOBS_SAFE= 	yes
+# but try to remove above (mef)
+
 
 TEST_TARGET=	check
 
