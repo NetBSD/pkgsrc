@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/05/12 14:04:00 maya Exp $
+# $NetBSD: Makefile,v 1.6 2019/06/14 15:12:40 adam Exp $
 
-DISTNAME=	blosc-1.14.2
-PKGREVISION=	2
+DISTNAME=	blosc-1.16.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Blosc/}
 GITHUB_PROJECT=	c-blosc
@@ -13,8 +12,8 @@ COMMENT=	Blocking, shuffling, and lossless compression library
 LICENSE=	modified-bsd
 
 USE_CMAKE=	yes
-USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config
 
 CMAKE_ARGS+=	-DPREFER_EXTERNAL_LZ4=ON
 CMAKE_ARGS+=	-DPREFER_EXTERNAL_SNAPPY=ON
