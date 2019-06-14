@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.13 2015/11/03 22:50:36 agc Exp $
+$NetBSD: distinfo,v 1.14 2019/06/14 17:30:13 maya Exp $
 
 SHA1 (gprolog-1.4.4.tar.gz) = 658b0efa5d916510dcddbbd980d90bc4d43a6e58
 RMD160 (gprolog-1.4.4.tar.gz) = 081ad0e6a2edd47de63db79ab1dc65a0e0d341da
 SHA512 (gprolog-1.4.4.tar.gz) = b6227a06794d31162f2c790a025f7372a6676c1891a76e880d2152aeab6322d3341aeab85e11d9be6d97ff1c69801bee73fa3ea6b0659af61f55990a455dc212
 Size (gprolog-1.4.4.tar.gz) = 3538152 bytes
+SHA1 (patch-src_EnginePl_dl__malloc.c) = 6146a8af0a6d64eba8446fe21374b2cea7e39420
