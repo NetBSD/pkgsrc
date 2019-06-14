@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2013/06/11 20:05:37 asau Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/06/14 22:28:35 mef Exp $
 bin/fd2c
 bin/gplc
 bin/gprolog
@@ -30,6 +30,7 @@ lib/${PKGNAME}/lib/libengine_fd.a
 lib/${PKGNAME}/lib/libengine_pl.a
 lib/${PKGNAME}/lib/liblinedit.a
 lib/${PKGNAME}/lib/top_level.o
+lib/${PKGNAME}/lib/top_level_main.o
 share/doc/gprolog/compil-scheme.eps
 share/doc/gprolog/compil-scheme.pdf
 share/doc/gprolog/contents_motif.gif
@@ -127,6 +128,7 @@ share/examples/gprolog/ExamplesC/examp.pl
 share/examples/gprolog/ExamplesC/examp_c.c
 share/examples/gprolog/ExamplesC/new_main.pl
 share/examples/gprolog/ExamplesC/new_main_c.c
+share/examples/gprolog/ExamplesFD/BUILD_HOUSE.pl
 share/examples/gprolog/ExamplesFD/Makefile
 share/examples/gprolog/ExamplesFD/alpha.pl
 share/examples/gprolog/ExamplesFD/array.pl
