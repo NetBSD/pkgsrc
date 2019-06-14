@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2522 2019/06/14 16:14:25 taca Exp $
+$NetBSD: CHANGES-2019,v 1.2523 2019/06/14 19:37:04 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4236,3 +4236,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added cad/kicad-symbols version 5.1.2 [bouyer 2019-06-14]
 	Added cad/kicad-templates version 5.1.2 [bouyer 2019-06-14]
 	Updated net/bind914 to 9.14.2nb1 [taca 2019-06-14]
+	Updated net/gallery-dl to 1.8.6 [leot 2019-06-14]
