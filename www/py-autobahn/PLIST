@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2019/05/30 09:10:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/06/14 08:01:02 adam Exp $
 bin/wamp
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -59,6 +59,9 @@ ${PYSITELIB}/autobahn/rawsocket/util.pyo
 ${PYSITELIB}/autobahn/test/__init__.py
 ${PYSITELIB}/autobahn/test/__init__.pyc
 ${PYSITELIB}/autobahn/test/__init__.pyo
+${PYSITELIB}/autobahn/test/test_rng.py
+${PYSITELIB}/autobahn/test/test_rng.pyc
+${PYSITELIB}/autobahn/test/test_rng.pyo
 ${PYSITELIB}/autobahn/test/test_util.py
 ${PYSITELIB}/autobahn/test/test_util.pyc
 ${PYSITELIB}/autobahn/test/test_util.pyo
@@ -83,6 +86,9 @@ ${PYSITELIB}/autobahn/twisted/rawsocket.pyo
 ${PYSITELIB}/autobahn/twisted/resource.py
 ${PYSITELIB}/autobahn/twisted/resource.pyc
 ${PYSITELIB}/autobahn/twisted/resource.pyo
+${PYSITELIB}/autobahn/twisted/testing/__init__.py
+${PYSITELIB}/autobahn/twisted/testing/__init__.pyc
+${PYSITELIB}/autobahn/twisted/testing/__init__.pyo
 ${PYSITELIB}/autobahn/twisted/util.py
 ${PYSITELIB}/autobahn/twisted/util.pyc
 ${PYSITELIB}/autobahn/twisted/util.pyo
@@ -441,6 +447,36 @@ ${PYSITELIB}/autobahn/websocket/util.pyo
 ${PYSITELIB}/autobahn/websocket/xormasker.py
 ${PYSITELIB}/autobahn/websocket/xormasker.pyc
 ${PYSITELIB}/autobahn/websocket/xormasker.pyo
+${PYSITELIB}/autobahn/xbr/__init__.py
+${PYSITELIB}/autobahn/xbr/__init__.pyc
+${PYSITELIB}/autobahn/xbr/__init__.pyo
+${PYSITELIB}/autobahn/xbr/_abi.py
+${PYSITELIB}/autobahn/xbr/_abi.pyc
+${PYSITELIB}/autobahn/xbr/_abi.pyo
+${PYSITELIB}/autobahn/xbr/_buyer.py
+${PYSITELIB}/autobahn/xbr/_buyer.pyc
+${PYSITELIB}/autobahn/xbr/_buyer.pyo
+${PYSITELIB}/autobahn/xbr/_interfaces.py
+${PYSITELIB}/autobahn/xbr/_interfaces.pyc
+${PYSITELIB}/autobahn/xbr/_interfaces.pyo
+${PYSITELIB}/autobahn/xbr/_seller.py
+${PYSITELIB}/autobahn/xbr/_seller.pyc
+${PYSITELIB}/autobahn/xbr/_seller.pyo
+${PYSITELIB}/autobahn/xbr/_util.py
+${PYSITELIB}/autobahn/xbr/_util.pyc
+${PYSITELIB}/autobahn/xbr/_util.pyo
+${PYSITELIB}/autobahn/xbr/contracts/ECDSA.json
+${PYSITELIB}/autobahn/xbr/contracts/ERC20.json
+${PYSITELIB}/autobahn/xbr/contracts/ERC20Detailed.json
+${PYSITELIB}/autobahn/xbr/contracts/IERC20.json
+${PYSITELIB}/autobahn/xbr/contracts/Migrations.json
+${PYSITELIB}/autobahn/xbr/contracts/Roles.json
+${PYSITELIB}/autobahn/xbr/contracts/SafeMath.json
+${PYSITELIB}/autobahn/xbr/contracts/XBRMaintained.json
+${PYSITELIB}/autobahn/xbr/contracts/XBRNetwork.json
+${PYSITELIB}/autobahn/xbr/contracts/XBRNetworkProxy.json
+${PYSITELIB}/autobahn/xbr/contracts/XBRPaymentChannel.json
+${PYSITELIB}/autobahn/xbr/contracts/XBRToken.json
 ${PYSITELIB}/twisted/plugins/autobahn_endpoints.py
 ${PYSITELIB}/twisted/plugins/autobahn_endpoints.pyc
 ${PYSITELIB}/twisted/plugins/autobahn_endpoints.pyo
