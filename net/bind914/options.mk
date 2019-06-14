@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.1 2019/04/30 03:34:34 taca Exp $
+# $NetBSD: options.mk,v 1.2 2019/06/14 16:14:05 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bind914
 PKG_SUPPORTED_OPTIONS=	bind-dig-sigchase bind-xml-statistics-server
 PKG_SUPPORTED_OPTIONS+=	bind-json-statistics-server blacklist
 PKG_SUPPORTED_OPTIONS+=	threads readline mysql pgsql ldap dlz-filesystem
-PKG_SUPPORTED_OPTIONS+=	geoip pkcs11 tuning dnstap
+PKG_SUPPORTED_OPTIONS+=	geoip tuning dnstap # pkcs11
 PKG_SUGGESTED_OPTIONS+=	readline
 
 PLIST_VARS+=	dnstap pkcs11
