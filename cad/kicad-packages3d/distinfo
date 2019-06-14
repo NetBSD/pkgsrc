@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/06/14 15:59:33 bouyer Exp $
+
+SHA1 (kicad-packages3d-5.1.2.tar.gz) = 605e005f87d43f4cbe1dda16229523a0b3e56d4e
+RMD160 (kicad-packages3d-5.1.2.tar.gz) = 03652a89f43b924749114a73f84666d37b5d6b94
+SHA512 (kicad-packages3d-5.1.2.tar.gz) = 21f59182ebe9fd65ae5bff050da2504f5418741c7390c6a0024bfbeb0dd701f34de29e2f2f5b08b94d512ba22c1a72facc51432a0858770916206300129ff4ad
+Size (kicad-packages3d-5.1.2.tar.gz) = 888156027 bytes
