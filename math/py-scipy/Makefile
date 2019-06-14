@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2018/09/03 08:36:44 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2019/06/14 14:53:29 adam Exp $
 
-DISTNAME=	scipy-1.1.0
+DISTNAME=	scipy-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scipy/}
@@ -16,9 +16,9 @@ MAKE_ENV+=	ATLAS=None
 # XXX Avoid picking up other compilers when installed
 .include "../../mk/compiler.mk"
 
-.if defined(PKGSRC_FORTRAN) && !empty(PKGSRC_FORTRAN:Mg95)
+.if defined(PKGSRC_FORTRAN) && ${PKGSRC_FORTRAN} == "g95"
 PYSETUPBUILDARGS+=	--fcompiler=g95
-.elif defined(PKGSRC_FORTRAN) && !empty(PKGSRC_FORTRAN:Mgfortran)
+.elif defined(PKGSRC_FORTRAN) && ${PKGSRC_FORTRAN} == "gfortran"
 PYSETUPBUILDARGS+=	--fcompiler=gnu95
 LDFLAGS.Darwin+=	-undefined dynamic_lookup
 .else
@@ -30,57 +30,9 @@ FFLAGS+=	-fPIC
 
 LDFLAGS.Darwin+=	-headerpad_max_install_names
 
-REPLACE_PYTHON+=	scipy/cluster/setup.py
-REPLACE_PYTHON+=	scipy/cluster/tests/test_hierarchy.py
-REPLACE_PYTHON+=	scipy/cluster/tests/test_vq.py
-REPLACE_PYTHON+=	scipy/fftpack/setup.py
-REPLACE_PYTHON+=	scipy/fftpack/tests/test_basic.py
-REPLACE_PYTHON+=	scipy/fftpack/tests/test_helper.py
-REPLACE_PYTHON+=	scipy/fftpack/tests/test_pseudo_diffs.py
-REPLACE_PYTHON+=	scipy/fftpack/tests/test_real_transforms.py
-REPLACE_PYTHON+=	scipy/integrate/setup.py
-REPLACE_PYTHON+=	scipy/interpolate/fitpack.py
-REPLACE_PYTHON+=	scipy/interpolate/setup.py
-REPLACE_PYTHON+=	scipy/interpolate/tests/test_fitpack.py
-REPLACE_PYTHON+=	scipy/interpolate/tests/test_fitpack2.py
-REPLACE_PYTHON+=	scipy/interpolate/tests/test_rbf.py
-REPLACE_PYTHON+=	scipy/io/arff/arffread.py
-REPLACE_PYTHON+=	scipy/io/arff/setup.py
-REPLACE_PYTHON+=	scipy/io/arff/tests/test_arffread.py
-REPLACE_PYTHON+=	scipy/io/harwell_boeing/setup.py
-REPLACE_PYTHON+=	scipy/io/matlab/setup.py
-REPLACE_PYTHON+=	scipy/io/matlab/tests/test_mio.py
-REPLACE_PYTHON+=	scipy/io/matlab/tests/test_mio_funcs.py
-REPLACE_PYTHON+=	scipy/io/setup.py
-REPLACE_PYTHON+=	scipy/io/tests/test_mmio.py
-REPLACE_PYTHON+=	scipy/linalg/setup.py
-REPLACE_PYTHON+=	scipy/linalg/tests/test_basic.py
-REPLACE_PYTHON+=	scipy/linalg/tests/test_blas.py
-REPLACE_PYTHON+=	scipy/linalg/tests/test_decomp.py
-REPLACE_PYTHON+=	scipy/linalg/tests/test_lapack.py
-REPLACE_PYTHON+=	scipy/linalg/tests/test_matfuncs.py
-REPLACE_PYTHON+=	scipy/odr/setup.py
-REPLACE_PYTHON+=	scipy/optimize/setup.py
-REPLACE_PYTHON+=	scipy/optimize/tests/test_zeros.py
-REPLACE_PYTHON+=	scipy/signal/setup.py
-REPLACE_PYTHON+=	scipy/sparse/generate_sparsetools.py
-REPLACE_PYTHON+=	scipy/sparse/linalg/dsolve/setup.py
-REPLACE_PYTHON+=	scipy/sparse/linalg/eigen/arpack/setup.py
-REPLACE_PYTHON+=	scipy/sparse/linalg/eigen/arpack/tests/test_arpack.py
-REPLACE_PYTHON+=	scipy/sparse/linalg/eigen/lobpcg/setup.py
-REPLACE_PYTHON+=	scipy/sparse/linalg/eigen/lobpcg/tests/test_lobpcg.py
-REPLACE_PYTHON+=	scipy/sparse/linalg/eigen/setup.py
-REPLACE_PYTHON+=	scipy/sparse/linalg/isolve/setup.py
-REPLACE_PYTHON+=	scipy/sparse/linalg/isolve/tests/test_iterative.py
-REPLACE_PYTHON+=	scipy/sparse/linalg/isolve/tests/test_lgmres.py
-REPLACE_PYTHON+=	scipy/sparse/linalg/setup.py
-REPLACE_PYTHON+=	scipy/sparse/linalg/tests/test_matfuncs.py
-REPLACE_PYTHON+=	scipy/sparse/setup.py
-REPLACE_PYTHON+=	scipy/spatial/setup.py
-REPLACE_PYTHON+=	scipy/spatial/tests/test_distance.py
-REPLACE_PYTHON+=	scipy/special/setup.py
-REPLACE_PYTHON+=	scipy/special/spfun_stats.py
-REPLACE_PYTHON+=	scipy/stats/setup.py
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+REPLACE_PYTHON+=	scipy/sparse/linalg/isolve/tests/test_gcrotmk.py
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -103,12 +55,15 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 # https://github.com/scipy/scipy/issues/9196
 # needs 'make install' first!
 do-test:
+	cd ${WRKDIR} && \
 	${PYTHONBIN} -c "import scipy; scipy.test('full')"
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../devel/py-cython/buildlink3.mk"
+.include "../../math/blas/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
+.include "../../math/lapack/buildlink3.mk"
 BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.8.2
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
