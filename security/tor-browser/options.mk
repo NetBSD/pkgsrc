@@ -1,11 +1,16 @@
-# $NetBSD: options.mk,v 1.3 2019/03/15 11:51:26 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2019/06/14 17:22:21 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tor-browser
 PKG_SUPPORTED_OPTIONS+=	alsa debug debug-info mozilla-jemalloc pulseaudio
 PLIST_VARS+=		debug
 
 PKG_SUGGESTED_OPTIONS.Linux+=	alsa mozilla-jemalloc
-PKG_SUGGESTED_OPTIONS.*+=	pulseaudio
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if ${OPSYS} != "NetBSD"
+PKG_SUGGESTED_OPTIONS+=		pulseaudio
+.endif
 
 .include "../../mk/bsd.options.mk"
 
