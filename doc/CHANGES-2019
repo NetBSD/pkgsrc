@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2533 2019/06/15 09:39:53 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2534 2019/06/15 09:43:09 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4251,3 +4251,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/gsm to 1.0.18 [adam 2019-06-15]
 	Removed www/py-pendrell [adam 2019-06-15]
 	Removed www/py-flask-cache successor www/py-flask-caching [adam 2019-06-15]
+	Updated misc/tmux to 2.9anb1 [leot 2019-06-15]
