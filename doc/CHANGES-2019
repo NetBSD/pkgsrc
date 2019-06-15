@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2535 2019/06/15 10:03:52 leot Exp $
+$NetBSD: CHANGES-2019,v 1.2536 2019/06/15 12:52:39 fox Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4253,3 +4253,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed www/py-flask-cache successor www/py-flask-caching [adam 2019-06-15]
 	Updated misc/tmux to 2.9anb1 [leot 2019-06-15]
 	Updated misc/less to 551 [leot 2019-06-15]
+	Updated www/cliqz to 1.27.2 [fox 2019-06-15]
