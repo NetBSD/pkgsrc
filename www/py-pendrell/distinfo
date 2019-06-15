@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 02:47:30 agc Exp $
-
-SHA1 (pendrell-0.2.3.tar.gz) = eeeb76dcbb2a9dcc539d84c4b374f52d795fb0bb
-RMD160 (pendrell-0.2.3.tar.gz) = 879dc096abb0b840be850efa906fcdadf5455e6b
-SHA512 (pendrell-0.2.3.tar.gz) = 942fb98b341712acb283a21fe8483ad7fef8aa7ce1b9b6579ca27da79cc124a2c4a51350efc4c948a04220547628e9b924a2aa8714b5ace466d7e7d158f578d4
-Size (pendrell-0.2.3.tar.gz) = 31038 bytes
