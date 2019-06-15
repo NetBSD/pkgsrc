@@ -1,8 +1,12 @@
-$NetBSD: patch-ab,v 1.3 2006/05/12 03:07:14 simonb Exp $
+$NetBSD: patch-ab,v 1.4 2019/06/15 15:01:03 christos Exp $
 
---- nttcp.c.orig	2000-12-18 21:16:54.000000000 +1100
-+++ nttcp.c
-@@ -136,9 +136,9 @@ void syslog(int priority, const char *me
+1. handle SIGCLD portably
+2. define a large enough value for SO_LINGER that does not fail
+3. add a runtime option -U <seconds>
+
+--- nttcp.c.orig	2000-12-18 05:16:54.000000000 -0500
++++ nttcp.c	2019-06-15 10:56:28.798775017 -0400
+@@ -136,9 +136,9 @@
  #endif /* aix */ 
  
  /*====================================================================*/
@@ -14,7 +18,7 @@ $NetBSD: patch-ab,v 1.3 2006/05/12 03:07:14 simonb Exp $
  
  /*====================================================================*/
  #if defined(BSD42)
-@@ -268,6 +268,7 @@ Usage: nttcp [local options] host [remot
+@@ -268,6 +268,7 @@
  \t-n#	number of source bufs written to network (default 2048)\n\
  \t-u	use UDP instead of TCP\n\
  \t-g#us	gap in micro seconds between UDP packets (default 0s)\n\
@@ -22,7 +26,24 @@ $NetBSD: patch-ab,v 1.3 2006/05/12 03:07:14 simonb Exp $
  \t-d	set SO_DEBUG in sockopt\n\
  \t-D	don't buffer TCP writes (sets TCP_NODELAY socket option)\n\
  \t-w#	set the send buffer space to #kilobytes, which is\n\
-@@ -346,6 +347,7 @@ typedef struct {
+@@ -310,9 +311,15 @@
+ 	setitimer(ITIMER_REAL, &itval, Nil(struct itimerval))
+ #define	Suspend(msec)	SetItVal(msec); pause()
+ 
++/*
++ * we use 32767 (9 hours) because this is the largest implementation-specific
++ * value that we can since on the BSD's the kernel linger value is
++ * unsigned short, on opensolaris is int, and on linux is unsigned long
++ * scaled by HZ.
++ */
+ struct linger Ling = {
+ 	1,		/* option on */
+-	1000000		/* linger time, for our control connection */
++	32767		/* linger time, for our control connection */
+ };
+ 
+ /* global variables needed by StartTimer, StopTimer */
+@@ -346,6 +353,7 @@
      int FixedDataSize;		/* if>0: calc BufCnt/BufLen from this */
      int Window,	SndWin, RcvWin; /* TCP window sizes */
      int	Verbose;		/* ==1: more diagnostics */
@@ -30,7 +51,7 @@ $NetBSD: patch-ab,v 1.3 2006/05/12 03:07:14 simonb Exp $
      char *MulticastChannel;	/* we send multicast traffic */
      short MulticastPort;	
      int GapLength;		/* Gap length between packets */
-@@ -496,6 +498,13 @@ void StartTimer() {
+@@ -496,6 +504,13 @@
      SysCalls=0;
  }
  
@@ -44,7 +65,7 @@ $NetBSD: patch-ab,v 1.3 2006/05/12 03:07:14 simonb Exp $
  void StopTimer(double *cput, double *realt) {
      /* delivers in cput:  the amount of cpu time in seconds
       *          in realt: the real time in seconds
-@@ -878,6 +887,7 @@ void InitOptions(Options *opt) {
+@@ -878,6 +893,7 @@
      opt->Verbose=0;		/* ==1: more diagnostics */
      opt->GapLength=0;		/* no delay, send as fast as possible */
      opt->inetd= 0;		/* ==1: run in inetd mode */
@@ -52,7 +73,7 @@ $NetBSD: patch-ab,v 1.3 2006/05/12 03:07:14 simonb Exp $
      opt->Service= GetService();	/* the service-port to listen to */
      opt->MulticastChannel= NULL;
      opt->MulticastPort= 0;
-@@ -1013,6 +1023,10 @@ void ParseOptions(int *ac, char **av[], 
+@@ -1013,6 +1029,10 @@
  #endif /*MULTICAST*/
  	    break;
  	  }
@@ -63,7 +84,7 @@ $NetBSD: patch-ab,v 1.3 2006/05/12 03:07:14 simonb Exp $
  	  default: {
  	    strcpy(MsgBuf, "unknown option: ");
  	    strncat(MsgBuf, argv[0], sizeof(MsgBuf)-strlen(MsgBuf)-1);
-@@ -1427,6 +1441,10 @@ int main(int argc, char *argv[]) {
+@@ -1427,6 +1447,10 @@
  	    sprintf(OptBuf, "-g%d", opt.GapLength);
  	    StrVecAppend(RemOpt, OptBuf);
  	}
@@ -74,7 +95,7 @@ $NetBSD: patch-ab,v 1.3 2006/05/12 03:07:14 simonb Exp $
  	if (opt.MulticastChannel) {
  	    sprintf(OptBuf, "-m%s:%d",
  	      opt.MulticastChannel, opt.MulticastPort);
-@@ -1781,9 +1799,17 @@ int main(int argc, char *argv[]) {
+@@ -1781,9 +1805,17 @@
  	    else
  		Pattern(buf, opt.BufLen);
  	    StartTimer();
@@ -93,7 +114,7 @@ $NetBSD: patch-ab,v 1.3 2006/05/12 03:07:14 simonb Exp $
  	    }
  	    StopTimer(&cput, &realt);
  	    opt.GapLength= 0;
-@@ -1797,9 +1823,17 @@ int main(int argc, char *argv[]) {
+@@ -1797,9 +1829,17 @@
  	    nBytes= 0;
  	    nBuffer= 0;
  	    StartTimer();
