@@ -1,26 +1,27 @@
-$NetBSD: patch-ab,v 1.11 2018/01/17 12:03:01 wiz Exp $
+$NetBSD: patch-Makefile,v 1.1 2019/06/15 08:41:30 adam Exp $
 
---- Makefile.orig	2006-04-26 19:14:26.000000000 +0000
+Do not overwrite compiler flags.
+Use proper installation tools and paths.
+
+--- Makefile.orig	2018-05-06 02:07:28.000000000 +0000
 +++ Makefile
-@@ -43,7 +43,7 @@ WAV49	= -DWAV49
+@@ -43,7 +43,6 @@ WAV49	= -DWAV49
  # CC		= /usr/lang/acc
  # CCFLAGS 	= -c -O
  
 -CC		= gcc -ansi -pedantic
-+# CC		= gcc -ansi -pedantic
- CCFLAGS 	= -c -O2 -DNeedFunctionPrototypes=1
+ CCFLAGS 	= -c -O2 -DNeedFunctionPrototypes=1 -Wall -Wno-comment
  
  LD 		= $(CC)
-@@ -71,7 +71,7 @@ LD 		= $(CC)
+@@ -71,7 +70,6 @@ LD 		= $(CC)
  # Leave INSTALL_ROOT empty (or just don't execute "make install") to
  # not install gsm and toast outside of this directory.
  
 -INSTALL_ROOT	=
-+# INSTALL_ROOT	=
  
  # Where do you want to install the gsm library, header file, and manpages?
  #
-@@ -80,8 +80,8 @@ INSTALL_ROOT	=
+@@ -80,8 +78,8 @@ INSTALL_ROOT	=
  
  GSM_INSTALL_ROOT = $(INSTALL_ROOT)
  GSM_INSTALL_LIB = $(GSM_INSTALL_ROOT)/lib
@@ -31,7 +32,7 @@ $NetBSD: patch-ab,v 1.11 2018/01/17 12:03:01 wiz Exp $
  
  
  # Where do you want to install the toast binaries and their manpage?
-@@ -91,13 +91,14 @@ GSM_INSTALL_MAN = $(GSM_INSTALL_ROOT)/ma
+@@ -91,13 +89,14 @@ GSM_INSTALL_MAN = $(GSM_INSTALL_ROOT)/ma
  
  TOAST_INSTALL_ROOT	  = $(INSTALL_ROOT)
  TOAST_INSTALL_BIN = $(TOAST_INSTALL_ROOT)/bin
@@ -48,16 +49,15 @@ $NetBSD: patch-ab,v 1.11 2018/01/17 12:03:01 wiz Exp $
  AR		= ar
  ARFLAGS		= cr
  RMFLAGS		=
-@@ -114,7 +115,7 @@ RANLIB	 	= ranlib
+@@ -114,7 +113,6 @@ RANLIB	 	= ranlib
  
  # Local Directories
  
 -ROOT	= .
-+#ROOT	= .
  ADDTST	= $(ROOT)/add-test
  TST	= $(ROOT)/tst
  MAN	= $(ROOT)/man
-@@ -129,7 +130,7 @@ INC	= $(ROOT)/inc
+@@ -129,7 +127,7 @@ INC	= $(ROOT)/inc
  # DEBUG	= -DNDEBUG
  ######### Remove -DNDEBUG to enable assertions.
  
@@ -66,7 +66,7 @@ $NetBSD: patch-ab,v 1.11 2018/01/17 12:03:01 wiz Exp $
  	$(WAV49) $(CCINC) -I$(INC)
  ######### It's $(CC) $(CFLAGS)
  
-@@ -139,7 +140,7 @@ LFLAGS	= $(LDFLAGS) $(LDINC)
+@@ -139,7 +137,7 @@ LFLAGS	= $(LDFLAGS) $(LDINC)
  
  # Targets
  
@@ -75,7 +75,7 @@ $NetBSD: patch-ab,v 1.11 2018/01/17 12:03:01 wiz Exp $
  
  TOAST	= $(BIN)/toast
  UNTOAST	= $(BIN)/untoast
-@@ -257,7 +258,7 @@ STUFF = 	ChangeLog			\
+@@ -257,7 +255,7 @@ STUFF = 	ChangeLog			\
  # Install targets
  
  GSM_INSTALL_TARGETS =	\
@@ -84,7 +84,7 @@ $NetBSD: patch-ab,v 1.11 2018/01/17 12:03:01 wiz Exp $
  		$(GSM_INSTALL_INC)/gsm.h		\
  		$(GSM_INSTALL_MAN)/gsm.3		\
  		$(GSM_INSTALL_MAN)/gsm_explode.3	\
-@@ -273,10 +274,15 @@ TOAST_INSTALL_TARGETS =	\
+@@ -273,10 +271,15 @@ TOAST_INSTALL_TARGETS =	\
  
  # Default rules
  
@@ -100,7 +100,7 @@ $NetBSD: patch-ab,v 1.11 2018/01/17 12:03:01 wiz Exp $
  # Target rules
  
  all:		$(LIBGSM) $(TOAST) $(TCAT) $(UNTOAST)
-@@ -299,16 +305,20 @@ install:	toastinstall gsminstall
+@@ -299,16 +302,20 @@ install:	toastinstall gsminstall
  
  # The basic API: libgsm
  
@@ -125,7 +125,7 @@ $NetBSD: patch-ab,v 1.11 2018/01/17 12:03:01 wiz Exp $
  
  $(UNTOAST):	$(BIN) $(TOAST)
  		-rm $(RMFLAGS) $(UNTOAST)
-@@ -332,12 +342,12 @@ $(LIB):
+@@ -332,12 +339,12 @@ $(LIB):
  
  gsminstall:
  		-if [ x"$(GSM_INSTALL_ROOT)" != x ] ; then	\
@@ -140,7 +140,7 @@ $NetBSD: patch-ab,v 1.11 2018/01/17 12:03:01 wiz Exp $
  		fi
  
  gsmuninstall:
-@@ -351,52 +361,34 @@ toastuninstall:
+@@ -351,52 +358,34 @@ toastuninstall:
  		fi
  
  $(TOAST_INSTALL_BIN)/toast:	$(TOAST)
