@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2008/11/16 11:22:55 bjs Exp $
+$NetBSD: patch-config_sysdeps_atomicity.h,v 1.1 2019/06/15 08:21:32 adam Exp $
 
 --- config/sysdeps/atomicity.h.orig	2008-11-11 17:36:35.000000000 -0500
 +++ config/sysdeps/atomicity.h

@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.2 2008/11/16 11:22:55 bjs Exp $
+$NetBSD: patch-tools_transport.c,v 1.1 2019/06/15 08:21:33 adam Exp $
 
 --- tools/transport.c.orig	2008-11-11 17:36:30.000000000 -0500
 +++ tools/transport.c

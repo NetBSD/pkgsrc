@@ -1,24 +1,21 @@
-$NetBSD: distinfo,v 1.19 2016/02/14 09:22:47 jperkin Exp $
+$NetBSD: distinfo,v 1.20 2019/06/15 08:21:32 adam Exp $
 
-SHA1 (jack-audio-connection-kit-0.124.1.tar.gz) = e9ba4a4c754ec95fbe653dcf7344edd6cc47cd60
-RMD160 (jack-audio-connection-kit-0.124.1.tar.gz) = 075c6ce5342d31e359908c01d7123f20818021aa
-SHA512 (jack-audio-connection-kit-0.124.1.tar.gz) = 9c885da516f2ca246edba94db26c851229d063f1557ea91ec76ca57d675a510d16cc4baad5adb316cf46aaaa8b8d7579b484a53b9a803b34fc9bb34c983a8fe2
-Size (jack-audio-connection-kit-0.124.1.tar.gz) = 1113456 bytes
-SHA1 (patch-aa) = f2346262d7590491f005af1c450f4436ec60c58e
-SHA1 (patch-ab) = 8531e1af0c3781a238d3793bdd58577ed598b67a
-SHA1 (patch-ad) = 3f13c886c7564f7f0b494c7891fcc3c945cf15ba
-SHA1 (patch-af) = 2a40f3a51a088e62352d7cdcc27eb41f3064ae7e
-SHA1 (patch-ah) = 09965c317dfabfc9f867cfd69d68e69724d17b38
-SHA1 (patch-aj) = f03901740098fdebf7711c333f959a2d6c2f20f7
-SHA1 (patch-ak) = 90006096f7c4035edea75ebebeff58c18f04e39e
-SHA1 (patch-ao) = 60930e5ecd408ebccbca8342083189b7d2d06a1b
-SHA1 (patch-ap) = f80d1547051324d9b241ce64027f13a5120ce5da
-SHA1 (patch-aq) = aad14525e2edf5a665e4de794e5e25930a27eec0
-SHA1 (patch-ar) = 892dcd268eef033a9dcb2251560fc48662b54916
-SHA1 (patch-as) = 46c609026d53fdebf1d46263d8f196cd8ecbac77
-SHA1 (patch-config_os_macosx_pThreadUtilities.h) = 7df929e00bac3612ceb5685d297dd998155b9dd1
+SHA1 (jack-audio-connection-kit-0.125.0.tar.gz) = 6b7516b442878ffd1ca875310084b33d0edee400
+RMD160 (jack-audio-connection-kit-0.125.0.tar.gz) = 25f1baa1d8f03f0bbfc0b48c300b63d89d4e881b
+SHA512 (jack-audio-connection-kit-0.125.0.tar.gz) = acdac0588c8a6b79763177677885b6e7bfa8ee3cd9556b33bfe09512bc1191414bb4f97eed62c3c71567b13b4eb69d95ec6b438e5a9d2e22a956c073d500c46f
+Size (jack-audio-connection-kit-0.125.0.tar.gz) = 1217977 bytes
+SHA1 (patch-config_sysdeps_atomicity.h) = f2346262d7590491f005af1c450f4436ec60c58e
+SHA1 (patch-config_sysdeps_cycles.h) = cbaefbefd0758625210c94bcba008b22c2c3a9d4
+SHA1 (patch-configure) = 79abcf4d7514cb4e66e3246fcd897f82c6d75e78
 SHA1 (patch-drivers_coreaudio_Makefile.in) = 13f5e5914ae0304c93dca54518fecb19f5ecdec5
 SHA1 (patch-drivers_netjack_netjack__packet.c) = eb70ec5644e960e0cf0258a15d763be31c11bb02
+SHA1 (patch-drivers_oss_oss__driver.c) = 302f20e82abde4a5b1678d2c3e9cbc8a63fad5ad
+SHA1 (patch-drivers_oss_oss__driver.h) = f23595db3fe80cae36ce222d89cdfbc37916e325
+SHA1 (patch-include_engine.h) = c58651bccc910131ffc9b263a75fa732a7a2b168
 SHA1 (patch-jack_control.h) = 8d6f07fd226b68cacf170501f557503cd674249a
+SHA1 (patch-jack_types.h) = a58fcdafab7e014760287d763c944c8a77281f7f
+SHA1 (patch-jackd_engine.c) = 703242e74bb6d0cae1274b5e4f2c477a689432d9
+SHA1 (patch-libjack_unlock.c) = 4e346eb5dc2bce74968b894158cb3871d5076149
 SHA1 (patch-tools_netsource.c) = 836550efb8c53e7f546c2708f8670496b78daec1
 SHA1 (patch-tools_session__notify.c) = 6ab077be462993a054289803ffc3e8a6654c533e
+SHA1 (patch-tools_transport.c) = 2a40f3a51a088e62352d7cdcc27eb41f3064ae7e
