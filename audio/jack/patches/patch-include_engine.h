@@ -1,11 +1,11 @@
-$NetBSD: patch-ah,v 1.4 2016/02/10 09:19:22 wiz Exp $
+$NetBSD: patch-include_engine.h,v 1.1 2019/06/15 08:21:33 adam Exp $
 
 Allow overriding the watchdog timeout.
 
---- include/engine.h.orig	2011-06-08 23:54:48.000000000 +0000
+--- include/engine.h.orig	2016-03-02 22:50:14.000000000 +0000
 +++ include/engine.h
 @@ -56,8 +56,12 @@ typedef struct _jack_reserved_name {
-     char name[JACK_CLIENT_NAME_SIZE];
+ 	char name[JACK_CLIENT_NAME_SIZE];
  } jack_reserved_name_t;
  
 +#ifndef JACKD_WATCHDOG_TIMEOUT
