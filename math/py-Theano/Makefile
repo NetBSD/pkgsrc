@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/06/15 18:01:47 adam Exp $
+# $NetBSD: Makefile,v 1.5 2019/06/15 18:13:14 adam Exp $
 
 DISTNAME=	Theano-1.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose>=1.3.0:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-parameterized-[0-9]*:../../devel/py-parameterized
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_TOOLS+=	bash
 USE_LANGUAGES=	c c++
@@ -26,14 +27,13 @@ REPLACE_FILES.bash=	theano/misc/check_blas_many.sh
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-scipy
 
-zz-do-test:
-	cd ${WRKSRC}/theano/tests && \
-	${SETENV} ${TEST_ENV} ${PYTHONBIN} main.py
-
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} theano-cache theano-cache-${PYVERSSUFFIX} && \
 	${MV} theano-nose theano-nose-${PYVERSSUFFIX} || ${TRUE}
+
+do-test:
+	cd ${WRKSRC}/theano && pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
