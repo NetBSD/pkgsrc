@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2529 2019/06/15 04:49:23 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.2530 2019/06/15 07:05:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4243,3 +4243,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/nim to 0.20.0 [ryoon 2019-06-15]
 	Updated archivers/ruby-zip to 1.2.3 [taca 2019-06-15]
 	Updated x11/xfce4-exo to 0.12.6 [gutteridge 2019-06-15]
+	Updated math/py-asteval to 0.9.14 [adam 2019-06-15]
+	Updated devel/py-test-xdist to 1.29.0 [adam 2019-06-15]
