@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/11/28 14:48:15 adam Exp $
+# $NetBSD: Makefile,v 1.5 2019/06/15 19:04:24 adam Exp $
 
-DISTNAME=	guessit-3.0.3
+DISTNAME=	guessit-3.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/guessit/}
@@ -22,8 +22,7 @@ USE_LANGUAGES=	# none
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} guessit guessit-${PYVERSSUFFIX} || ${TRUE}
+	${MV} guessit guessit-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
