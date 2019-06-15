@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2016/02/25 11:09:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2019/06/15 15:01:02 christos Exp $
 
 DISTNAME=	nttcp-1.47
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	benchmarks net
 MASTER_SITES=	http://www.sfr-fresh.com/unix/privat/
 
