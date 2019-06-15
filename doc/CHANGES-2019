@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2532 2019/06/15 08:41:59 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2533 2019/06/15 09:39:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4249,3 +4249,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated math/py-lmfit to 0.9.13 [adam 2019-06-15]
 	Updated audio/jack to 0.125.0 [adam 2019-06-15]
 	Updated audio/gsm to 1.0.18 [adam 2019-06-15]
+	Removed www/py-pendrell [adam 2019-06-15]
+	Removed www/py-flask-cache successor www/py-flask-caching [adam 2019-06-15]
