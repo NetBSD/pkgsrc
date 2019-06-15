@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/12/16 14:54:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/06/15 18:01:47 adam Exp $
 bin/theano-cache-${PYVERSSUFFIX}
 bin/theano-nose-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -656,6 +656,7 @@ ${PYSITELIB}/theano/scalar/basic_scipy.pyo
 ${PYSITELIB}/theano/scalar/basic_sympy.py
 ${PYSITELIB}/theano/scalar/basic_sympy.pyc
 ${PYSITELIB}/theano/scalar/basic_sympy.pyo
+${PYSITELIB}/theano/scalar/c_code/gamma.c
 ${PYSITELIB}/theano/scalar/sharedvar.py
 ${PYSITELIB}/theano/scalar/sharedvar.pyc
 ${PYSITELIB}/theano/scalar/sharedvar.pyo
