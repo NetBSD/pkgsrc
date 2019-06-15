@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/05/04 02:01:35 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.14 2019/06/15 04:49:09 gutteridge Exp $
 bin/exo-csource
 bin/exo-desktop-item-edit
 bin/exo-open
@@ -135,7 +135,9 @@ share/locale/gl/LC_MESSAGES/exo-1.mo
 share/locale/he/LC_MESSAGES/exo-1.mo
 share/locale/hr/LC_MESSAGES/exo-1.mo
 share/locale/hu/LC_MESSAGES/exo-1.mo
+share/locale/hy_AM/LC_MESSAGES/exo-1.mo
 share/locale/id/LC_MESSAGES/exo-1.mo
+share/locale/ie/LC_MESSAGES/exo-1.mo
 share/locale/is/LC_MESSAGES/exo-1.mo
 share/locale/it/LC_MESSAGES/exo-1.mo
 share/locale/ja/LC_MESSAGES/exo-1.mo
