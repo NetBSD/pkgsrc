@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.20 2019/05/04 02:01:35 gutteridge Exp $
+$NetBSD: distinfo,v 1.21 2019/06/15 04:49:09 gutteridge Exp $
 
-SHA1 (exo-0.12.5.tar.bz2) = 0c63ac01443687c584c04ba359ea3b58b5bdd042
-RMD160 (exo-0.12.5.tar.bz2) = 15656ac2d335cfb8fe1905a2ce906acb7fb21013
-SHA512 (exo-0.12.5.tar.bz2) = 00165ef85145603f59cc4188d2637ec51c8cc51d9f2288c4e5b0328a2b085e940fbaaa987bf5a51c9999184f2d4f6f9751f4304feb6143416bade826007b3bf6
-Size (exo-0.12.5.tar.bz2) = 1236257 bytes
+SHA1 (exo-0.12.6.tar.bz2) = a7c38ac96f643bf0d62e779725503ed2eb39ee06
+RMD160 (exo-0.12.6.tar.bz2) = 1b078ca638ec510476cd09951c165cbfd9246fa5
+SHA512 (exo-0.12.6.tar.bz2) = 468f8e95068135a08da58abd35e8b886864262550fe3860a8e61ed6376783491139ae837427e0cabfe9b46184b339e482f0e9a9c9c8439c695d4268c94b5e405
+Size (exo-0.12.6.tar.bz2) = 1288734 bytes
 SHA1 (patch-af) = d983808d490ef8f1d47c8a8469b8f3ec4f2d7cf4
 SHA1 (patch-exo-helper_helpers_Thunar.desktop.in.in) = efe98db2f48309043c80276c4d39934cb949efa7
