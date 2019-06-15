@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.25 2019/05/27 15:18:29 bsiegert Exp $
+# $NetBSD: Makefile,v 1.26 2019/06/15 15:28:11 leot Exp $
 
-DISTNAME=	hub-2.11.2
-PKGREVISION=	2
+DISTNAME=	hub-2.12.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=github/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://hub.github.com/
-COMMENT=	hub helps you win at git
+COMMENT=	Command-line tool that makes git easier to use with GitHub
 LICENSE=	mit
 
 GO_DIST_BASE=	${DISTNAME}
