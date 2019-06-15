@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2016/07/09 06:37:48 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2019/06/15 08:21:32 adam Exp $
 
-DISTNAME=	jack-audio-connection-kit-${JACK_VERSION}
-PKGNAME=	jack-${JACK_VERSION}
-PKGREVISION=	2
+DISTNAME=	jack-audio-connection-kit-0.125.0
+PKGNAME=	${DISTNAME:S/audio-connection-kit-//}
 CATEGORIES=	audio
-#MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITES=	http://jackaudio.org/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,33 +10,28 @@ HOMEPAGE=	http://www.jackaudio.org/
 COMMENT=	JACK audio connection kit
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
-JACK_VERSION=	0.124.1
-
 BUILD_DEFS+=		JACKD_DEFAULT_TMPDIR
 BUILD_DEFS+=		JACKD_PROCFS_PATH
 
-GNU_CONFIGURE=		yes
 SET_LIBDIR=		yes
 USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
-
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-alsa
+CONFIGURE_ARGS+=	--disable-firewire
+CONFIGURE_ARGS+=	--disable-freebob
+CONFIGURE_ARGS+=	--disable-optimize
+CONFIGURE_ARGS+=	--enable-timestamps
+CONFIGURE_ARGS+=	--enable-resize
+CONFIGURE_ENV+=		HAVE_DOXYGEN=no
+CONFIGURE_ENV+=		ac_cv_header_readline_chardefs_h=yes
 PKGCONFIG_OVERRIDE+=	jack.pc.in
 
 PTHREAD_OPTS+=		require native
 
-CONFIGURE_ARGS+=	--disable-alsa
-CONFIGURE_ARGS+=	--disable-freebob
-CONFIGURE_ARGS+=	--disable-coreaudio
-CONFIGURE_ARGS+=	--disable-firewire
-CONFIGURE_ARGS+=	--disable-optimize
-CONFIGURE_ARGS+=	--enable-resize
-CONFIGURE_ARGS+=	--enable-timestamps
-
 CFLAGS.NetBSD+=		-D_NETBSD_SOURCE -lossaudio
 CFLAGS.Linux+=		-D_GNU_SOURCE
 CFLAGS.SunOS+=		-std=c99 -D_XOPEN_SOURCE=600 -D__EXTENSIONS__
-
-CONFIGURE_ENV+=		ac_cv_header_readline_chardefs_h=yes
 
 JACKD_DEFAULT_TMPDIR?=	/tmp
 
@@ -71,6 +64,8 @@ PLIST_VARS=		coreaudio oss sunaudio
 .if ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--enable-coreaudio
 PLIST.coreaudio=	yes
+.else
+CONFIGURE_ARGS+=	--disable-coreaudio
 .endif
 ###
 ### XXX The sun driver is buggy on NetBSD right now.  I hope to remedy
@@ -88,7 +83,7 @@ CONFIGURE_ARGS+=	--disable-sun
 .if ${OSS_TYPE} != "none"
 CONFIGURE_ARGS+=	--enable-oss
 PLIST.oss=		yes
-MAKE_ENV+=		LIBOSSAUDIO=${LIBOSSAUDIO:Q}
+MAKE_ENV+=		LIBOSSAUDIO=${LIBOSSAUDIO}
 CFLAGS+=		-DDEVOSSAUDIO=\"${DEVOSSAUDIO:U/dev/dsp}\"
 .else
 CONFIGURE_ARGS+=	--disable-oss
@@ -118,16 +113,17 @@ CONFIGURE_ARGS+=	--disable-dynsimd
 .  endif
 .endif
 
-BUILDLINK_TRANSFORM+=	l:db:db4
+BDB_ACCEPTED=	db4 db5
+BUILDLINK_TRANSFORM+=	l:db:${BDB_TYPE}
 
 post-extract:
-	${RUN} ${MKDIR} ${WRKSRC}/config/os/netbsd && \
-		${CP} ${FILESDIR}/atomicity.h ${WRKSRC}/config/os/netbsd
+	${MKDIR} ${WRKSRC}/config/os/netbsd
+	${CP} ${FILESDIR}/atomicity.h ${WRKSRC}/config/os/netbsd
 
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../devel/libuuid/buildlink3.mk"
-.include "../../databases/db4/buildlink3.mk"
-.include "../../mk/readline.buildlink3.mk"
+.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
