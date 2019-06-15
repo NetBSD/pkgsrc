@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2528 2019/06/15 03:06:08 taca Exp $
+$NetBSD: CHANGES-2019,v 1.2529 2019/06/15 04:49:23 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4242,3 +4242,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/thunderbird-l10n to 60.7.1 [ryoon 2019-06-15]
 	Updated lang/nim to 0.20.0 [ryoon 2019-06-15]
 	Updated archivers/ruby-zip to 1.2.3 [taca 2019-06-15]
+	Updated x11/xfce4-exo to 0.12.6 [gutteridge 2019-06-15]
