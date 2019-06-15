@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/12/16 14:54:39 adam Exp $
+# $NetBSD: Makefile,v 1.4 2019/06/15 18:01:47 adam Exp $
 
-DISTNAME=	Theano-1.0.3
+DISTNAME=	Theano-1.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=T/Theano/}
@@ -24,15 +24,16 @@ REPLACE.bash.old=	.*/bin/bash
 REPLACE.bash.new=	${SH}
 REPLACE_FILES.bash=	theano/misc/check_blas_many.sh
 
-do-test:
-	${RUN} cd ${WRKSRC}/theano/tests && \
-		${SETENV} ${TEST_ENV} ${PYTHONBIN} main.py
+PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-scipy
+
+zz-do-test:
+	cd ${WRKSRC}/theano/tests && \
+	${SETENV} ${TEST_ENV} ${PYTHONBIN} main.py
 
 post-install:
-.for cmd in theano-cache theano-nose
-	${MV} ${DESTDIR}${PREFIX}/bin/${cmd} \
-		${DESTDIR}${PREFIX}/bin/${cmd}-${PYVERSSUFFIX} || ${TRUE}
-.endfor
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} theano-cache theano-cache-${PYVERSSUFFIX} && \
+	${MV} theano-nose theano-nose-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
