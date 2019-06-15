@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2526 2019/06/15 01:20:08 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.2527 2019/06/15 01:30:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4240,3 +4240,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/gprolog to 1.4.5 [mef 2019-06-14]
 	Updated mail/thunderbird to 60.7.1 [ryoon 2019-06-15]
 	Updated mail/thunderbird-l10n to 60.7.1 [ryoon 2019-06-15]
+	Updated lang/nim to 0.20.0 [ryoon 2019-06-15]
