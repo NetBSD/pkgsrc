@@ -1,10 +1,11 @@
-$NetBSD: patch-get.gawk,v 1.2 2012/08/25 13:01:42 christos Exp $
+$NetBSD: patch-get.gawk,v 1.3 2019/06/15 15:16:30 christos Exp $
 
 o Add a new parameter to specify the name of the url to get the files from.
   Well, partial name but that is good enough.
+o Add a user-agent, because iana now requires one
 
---- get.gawk	2008-03-05 20:04:18.000000000 +0200
-+++ get.gawk	2012-08-25 13:10:28.000000000 +0300
+--- get.gawk.orig	2008-03-05 13:04:18.000000000 -0500
++++ get.gawk	2019-06-15 11:14:57.692498675 -0400
 @@ -7,7 +7,7 @@
  
  # get.awk: retrieves IANA numbers assignments from iana.org.
@@ -21,7 +22,7 @@ o Add a new parameter to specify the name of the url to get the files from.
 -    print "Getting http://" host path file >"/dev/stderr"
 -    printf "GET %s%s HTTP/1.0\r\nHost: %s\r\n\r\n", path, file, host |& socket
 +    print "Getting http://" host path url "/" url ".txt" >"/dev/stderr"
-+    printf "GET %s%s/%s.txt HTTP/1.0\r\nHost: %s\r\n\r\n", path, url, url, host |& socket
++    printf "GET %s%s/%s.txt HTTP/1.0\r\nHost: %s\r\nUser-Agent: MickeyMouse/1.0\r\n\r\n", path, url, url, host |& socket
      printf "Request sent, waiting for data... " >"/dev/stderr"
  
      NR = 0
