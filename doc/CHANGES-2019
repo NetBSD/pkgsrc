@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2530 2019/06/15 07:05:10 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2531 2019/06/15 07:21:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4245,3 +4245,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/xfce4-exo to 0.12.6 [gutteridge 2019-06-15]
 	Updated math/py-asteval to 0.9.14 [adam 2019-06-15]
 	Updated devel/py-test-xdist to 1.29.0 [adam 2019-06-15]
+	Added math/py-uncertainties version 3.1.1 [adam 2019-06-15]
+	Updated math/py-lmfit to 0.9.13 [adam 2019-06-15]
