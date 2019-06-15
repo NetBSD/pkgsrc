@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2009/02/03 06:09:09 obache Exp $
+$NetBSD: patch-inc_config.h,v 1.1 2019/06/15 08:41:30 adam Exp $
+
+Add support for Interix.
 
 --- inc/config.h.orig	2006-04-26 19:14:26.000000000 +0000
 +++ inc/config.h
