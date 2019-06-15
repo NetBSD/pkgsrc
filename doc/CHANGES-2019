@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2524 2019/06/14 22:28:45 mef Exp $
+$NetBSD: CHANGES-2019,v 1.2525 2019/06/15 01:18:17 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4238,3 +4238,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/bind914 to 9.14.2nb1 [taca 2019-06-14]
 	Updated net/gallery-dl to 1.8.6 [leot 2019-06-14]
 	Updated lang/gprolog to 1.4.5 [mef 2019-06-14]
+	Updated mail/thunderbird to 60.7.1 [ryoon 2019-06-15]
