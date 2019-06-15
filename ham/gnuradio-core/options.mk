@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2015/01/27 06:01:44 dbj Exp $
+# $NetBSD: options.mk,v 1.4 2019/06/15 17:54:22 adam Exp $
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.gnuradio
 PKG_SUPPORTED_OPTIONS=  ninja-build filter-design alsa
@@ -27,7 +27,7 @@ do-build:
 
 .if !empty(PKG_OPTIONS:Mfilter-design)
 # Running gr_filter_design asks for the package
-DEPENDS+=		${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
+DEPENDS+=		${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy12
 .endif
 
 .if !empty(PKG_OPTIONS:Malsa)
