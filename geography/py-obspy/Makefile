@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2019/03/16 23:12:54 wen Exp $
+# $NetBSD: Makefile,v 1.15 2019/06/15 18:06:04 adam Exp $
 
 DISTNAME=	obspy-1.1.1
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	geography python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/obspy/}
@@ -24,6 +25,8 @@ USE_TOOLS+=	bash:run
 
 REPLACE_BASH=	obspy/taup/tests/data/TauP_test_data/gendata.sh
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-scipy
+
 pre-configure:
 	${FIND} ${WRKSRC} -type f -exec ${CHMOD} -x {} \;
 
@@ -33,8 +36,8 @@ pre-configure:
 PYPLATFORM!=	${PYTHONBIN} -c 'import platform; print (platform.system() + "_" + platform.architecture()[0])'
 
 PLIST_SUBST+=		PYPLATFORM=${PYPLATFORM} PYPKGPREFIX=${PYPKGPREFIX}
-PRINT_PLIST_AWK+=       /^${PYPLATFORM:S|/|\\/|g}/ \
-                        { gsub(/${PYPLATFORM:S|/|\\/|g}/, "$${PYPLATFORM}") }
+PRINT_PLIST_AWK+=	/^${PYPLATFORM:S|/|\\/|g}/ \
+			{ gsub(/${PYPLATFORM:S|/|\\/|g}/, "$${PYPLATFORM}") }
 .endif
 
 .include "../../lang/python/egg.mk"
