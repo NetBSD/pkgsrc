@@ -1,8 +1,8 @@
-$NetBSD: patch-gobject_meson.build,v 1.1 2019/06/03 09:53:50 prlw1 Exp $
+$NetBSD: patch-gobject_meson.build,v 1.2 2019/06/16 01:54:40 ryoon Exp $
 
 Leave glib-genmarshal and glib-mkenums to devel/glib2-tools.
  
---- gobject/meson.build.orig	2019-04-15 10:54:04.000000000 +0000
+--- gobject/meson.build.orig	2019-06-10 17:47:20.000000000 +0000
 +++ gobject/meson.build
 @@ -75,7 +75,7 @@ foreach tool: python_tools
      input : tool + '.in',
@@ -13,3 +13,11 @@ Leave glib-genmarshal and glib-mkenums to devel/glib2-tools.
      install_dir : glib_bindir,
    )
  
+@@ -132,6 +132,7 @@ libgobject = library('gobject-2.0',
+ )
+ 
+ pkg.generate(libgobject,
++  libraries: ['-Wl,-rpath${libdir}'],
+   requires : ['glib-2.0'],
+   version : glib_version,
+   install_dir : glib_pkgconfigreldir,

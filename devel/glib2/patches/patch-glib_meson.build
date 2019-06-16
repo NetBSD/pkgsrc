@@ -1,11 +1,20 @@
-$NetBSD: patch-glib_meson.build,v 1.1 2019/06/03 09:53:50 prlw1 Exp $
+$NetBSD: patch-glib_meson.build,v 1.2 2019/06/16 01:54:40 ryoon Exp $
 
 - Don't bother with gtester as it's slated for deprecation anyway:
   https://gitlab.gnome.org/GNOME/glib/issues/1441
 - Don't build tests
 
---- glib/meson.build.orig	2019-04-15 10:54:04.000000000 +0000
+--- glib/meson.build.orig	2019-06-10 17:47:20.000000000 +0000
 +++ glib/meson.build
+@@ -284,7 +284,7 @@ libglib_dep = declare_dependency(
+   include_directories : [configinc, glibinc])
+ 
+ pkg.generate(libglib,
+-  libraries : [libintl],
++  libraries : [libintl, '-Wl,-rpath${libdir}'],
+   libraries_private : [osx_ldflags, win32_ldflags],
+   subdirs : ['glib-2.0'],
+   extra_cflags : ['-I${libdir}/glib-2.0/include'] + win32_cflags,
 @@ -324,24 +324,8 @@ if host_system == 'windows'
        include_directories : configinc,
        dependencies : [libglib_dep])
