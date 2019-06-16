@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2017/07/14 15:00:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/06/16 19:28:47 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/seaborn/__init__.py
 ${PYSITELIB}/seaborn/__init__.pyc
@@ -21,9 +22,18 @@ ${PYSITELIB}/seaborn/categorical.pyo
 ${PYSITELIB}/seaborn/cm.py
 ${PYSITELIB}/seaborn/cm.pyc
 ${PYSITELIB}/seaborn/cm.pyo
-${PYSITELIB}/seaborn/crayons.py
-${PYSITELIB}/seaborn/crayons.pyc
-${PYSITELIB}/seaborn/crayons.pyo
+${PYSITELIB}/seaborn/colors/__init__.py
+${PYSITELIB}/seaborn/colors/__init__.pyc
+${PYSITELIB}/seaborn/colors/__init__.pyo
+${PYSITELIB}/seaborn/colors/crayons.py
+${PYSITELIB}/seaborn/colors/crayons.pyc
+${PYSITELIB}/seaborn/colors/crayons.pyo
+${PYSITELIB}/seaborn/colors/xkcd_rgb.py
+${PYSITELIB}/seaborn/colors/xkcd_rgb.pyc
+${PYSITELIB}/seaborn/colors/xkcd_rgb.pyo
+${PYSITELIB}/seaborn/conftest.py
+${PYSITELIB}/seaborn/conftest.pyc
+${PYSITELIB}/seaborn/conftest.pyo
 ${PYSITELIB}/seaborn/distributions.py
 ${PYSITELIB}/seaborn/distributions.pyc
 ${PYSITELIB}/seaborn/distributions.pyo
@@ -54,6 +64,9 @@ ${PYSITELIB}/seaborn/rcmod.pyo
 ${PYSITELIB}/seaborn/regression.py
 ${PYSITELIB}/seaborn/regression.pyc
 ${PYSITELIB}/seaborn/regression.pyo
+${PYSITELIB}/seaborn/relational.py
+${PYSITELIB}/seaborn/relational.pyc
+${PYSITELIB}/seaborn/relational.pyo
 ${PYSITELIB}/seaborn/tests/__init__.py
 ${PYSITELIB}/seaborn/tests/__init__.pyc
 ${PYSITELIB}/seaborn/tests/__init__.pyo
@@ -84,6 +97,9 @@ ${PYSITELIB}/seaborn/tests/test_rcmod.pyo
 ${PYSITELIB}/seaborn/tests/test_regression.py
 ${PYSITELIB}/seaborn/tests/test_regression.pyc
 ${PYSITELIB}/seaborn/tests/test_regression.pyo
+${PYSITELIB}/seaborn/tests/test_relational.py
+${PYSITELIB}/seaborn/tests/test_relational.pyc
+${PYSITELIB}/seaborn/tests/test_relational.pyo
 ${PYSITELIB}/seaborn/tests/test_utils.py
 ${PYSITELIB}/seaborn/tests/test_utils.pyc
 ${PYSITELIB}/seaborn/tests/test_utils.pyo
@@ -96,6 +112,3 @@ ${PYSITELIB}/seaborn/utils.pyo
 ${PYSITELIB}/seaborn/widgets.py
 ${PYSITELIB}/seaborn/widgets.pyc
 ${PYSITELIB}/seaborn/widgets.pyo
-${PYSITELIB}/seaborn/xkcd_rgb.py
-${PYSITELIB}/seaborn/xkcd_rgb.pyc
-${PYSITELIB}/seaborn/xkcd_rgb.pyo
