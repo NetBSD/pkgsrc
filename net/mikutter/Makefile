@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.174 2019/05/25 12:14:04 tsutsui Exp $
+# $NetBSD: Makefile,v 1.175 2019/06/16 16:39:57 tsutsui Exp $
 #
 
-DISTNAME=	mikutter.3.8.8
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/./-/}
+DISTNAME=	mikutter.3.9.0-alpha1
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/-//:S/./-/}
 CATEGORIES=	net
 MASTER_SITES=	https://mikutter.hachune.net/bin/
 
@@ -13,21 +13,20 @@ LICENSE=	mit AND cc-by-sa-v3.0
 
 .include "../../lang/ruby/rubyversion.mk"
 
-DEPENDS+=	${RUBY_PKGPREFIX}-pluggaloid>=1.1.2:../../net/ruby-pluggaloid
-DEPENDS+=	${RUBY_PKGPREFIX}-diva>=0.3.2:../../devel/ruby-diva
-DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtk>=3.3.2:../../x11/ruby-gnome2-gtk
+DEPENDS+=	${RUBY_PKGPREFIX}-pluggaloid>=1.2.0:../../net/ruby-pluggaloid
+DEPENDS+=	${RUBY_PKGPREFIX}-diva>=1.0.0:../../devel/ruby-diva
+DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtk>=3.3.6:../../x11/ruby-gnome2-gtk
 DEPENDS+=	${RUBY_PKGPREFIX}-gettext>=3.2.9:../../devel/ruby-gettext
-DEPENDS+=	${RUBY_PKGPREFIX}-oauth>=0.5.1:../../security/ruby-oauth
-DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=2.5.2:../../net/ruby-addressable
+DEPENDS+=	${RUBY_PKGPREFIX}-oauth>=0.5.4:../../security/ruby-oauth
+DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=2.6.0:../../net/ruby-addressable
 DEPENDS+=	${RUBY_PKGPREFIX}-memoist>=0.16.0:../../devel/ruby-memoist
-DEPENDS+=	${RUBY_PKGPREFIX}-hmac>=0.4:../../security/ruby-hmac
-DEPENDS+=	${RUBY_PKGPREFIX}-typed-array>=0.1:../../misc/ruby-typed-array
-DEPENDS+=	${RUBY_PKGPREFIX}-delayer-[0-9]*:../../devel/ruby-delayer
-DEPENDS+=	${RUBY_PKGPREFIX}-delayer-deferred>=2.0.0:../../devel/ruby-delayer-deferred
+DEPENDS+=	${RUBY_PKGPREFIX}-typed-array>=0.1.2:../../misc/ruby-typed-array
+DEPENDS+=	${RUBY_PKGPREFIX}-delayer>=1.0.0:../../devel/ruby-delayer
+DEPENDS+=	${RUBY_PKGPREFIX}-delayer-deferred>=2.1.0:../../devel/ruby-delayer-deferred
 DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri-[0-9]*:../../textproc/ruby-nokogiri
 DEPENDS+=	${RUBY_PKGPREFIX}-httpclient-[0-9]*:../../www/ruby-httpclient
 DEPENDS+=	${RUBY_PKGPREFIX}-moneta>=0.7:../../databases/ruby-moneta
-DEPENDS+=	${RUBY_PKGPREFIX}-twitter-text>=2.1.0:../../net/ruby-twitter-text
+DEPENDS+=	${RUBY_PKGPREFIX}-twitter-text>=3.0.0:../../net/ruby-twitter-text
 
 WRKSRC=		${WRKDIR}/mikutter
 USE_LANGUAGES=	# none
