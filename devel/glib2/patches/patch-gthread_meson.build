@@ -1,0 +1,13 @@
+$NetBSD: patch-gthread_meson.build,v 1.1 2019/06/16 01:54:40 ryoon Exp $
+
+--- gthread/meson.build.orig	2019-06-10 17:47:20.000000000 +0000
++++ gthread/meson.build
+@@ -24,7 +24,7 @@ libgthread = library('gthread-2.0',
+ )
+ 
+ pkg.generate(libgthread,
+-  libraries : [thread_dep],
++  libraries : [thread_dep, '-Wl,-rpath${libdir}'],
+   requires : ['glib-2.0'],
+   version : glib_version,
+   install_dir : glib_pkgconfigreldir,
