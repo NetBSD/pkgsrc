@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/05/18 02:52:41 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/06/16 16:05:21 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/Gemfile
@@ -9,7 +9,6 @@ ${GEM_LIBDIR}/delayer.gemspec
 ${GEM_LIBDIR}/lib/delayer.rb
 ${GEM_LIBDIR}/lib/delayer/error.rb
 ${GEM_LIBDIR}/lib/delayer/extend.rb
-${GEM_LIBDIR}/lib/delayer/priority.rb
 ${GEM_LIBDIR}/lib/delayer/procedure.rb
 ${GEM_LIBDIR}/lib/delayer/version.rb
 ${GEM_LIBDIR}/test/test_delayer.rb
