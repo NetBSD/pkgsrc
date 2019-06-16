@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2541 2019/06/16 13:19:17 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2542 2019/06/16 14:12:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4262,3 +4262,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/py-matplotlib to 3.1.0 [adam 2019-06-16]
 	Removed graphics/py-matplotlib-gtk2 [adam 2019-06-16]
 	Removed graphics/py-matplotlib-tk [adam 2019-06-16]
+	Updated time/py-arrow to 0.14.2 [adam 2019-06-16]
+	Updated devel/py-h5py to 2.9.0 [adam 2019-06-16]
