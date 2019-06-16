@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2019/06/16 13:11:34 adam Exp $
+
+MatPlotLib can use additional user interface backends.
+
+For GTK3-base backends, install devel/py-gobject3 and x11/gtk3 packages.
+For Qt5-base backends, install x11/py-qt5 package.
+For Tk-base backends, install x11/py-Tk package.
+
+===========================================================================
