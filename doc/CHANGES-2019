@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2544 2019/06/16 16:05:36 tsutsui Exp $
+$NetBSD: CHANGES-2019,v 1.2545 2019/06/16 16:07:30 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4266,3 +4266,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-h5py to 2.9.0 [adam 2019-06-16]
 	Updated net/ruby-addressable to 2.6.0 [tsutsui 2019-06-16]
 	Updated devel/ruby-delayer to 1.0.0 [tsutsui 2019-06-16]
+	Updated devel/ruby-delayer-deferred to 2.1.0 [tsutsui 2019-06-16]
