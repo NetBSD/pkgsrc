@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q1,v 1.1.2.10 2019/06/05 05:32:01 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q1,v 1.1.2.11 2019/06/16 18:13:48 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q1 branch:
 
@@ -139,4 +139,10 @@ meta-pkgs/php72-extensions: security update
 
 Pullup ticket #5975 - requested by taca
 lang/php73: security update
+
+Pullup ticket #5977 - requested by tm
+databases/phpmyadmin: security update
+
+Pullup ticket #5978 - requested by leot
+net/py-rt: functionality fix
 
