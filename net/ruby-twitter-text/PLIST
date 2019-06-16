@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2017/12/30 04:40:20 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/06/16 16:16:48 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/.gitignore
@@ -12,11 +12,13 @@ ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/config/README.md
 ${GEM_LIBDIR}/config/v1.json
 ${GEM_LIBDIR}/config/v2.json
+${GEM_LIBDIR}/config/v3.json
 ${GEM_LIBDIR}/lib/assets/tld_lib.yml
 ${GEM_LIBDIR}/lib/twitter-text.rb
 ${GEM_LIBDIR}/lib/twitter-text/autolink.rb
 ${GEM_LIBDIR}/lib/twitter-text/configuration.rb
 ${GEM_LIBDIR}/lib/twitter-text/deprecation.rb
+${GEM_LIBDIR}/lib/twitter-text/emoji_regex.rb
 ${GEM_LIBDIR}/lib/twitter-text/extractor.rb
 ${GEM_LIBDIR}/lib/twitter-text/hash_helper.rb
 ${GEM_LIBDIR}/lib/twitter-text/hit_highlighter.rb
