@@ -1,0 +1,1 @@
+bin/mprof @PREFIX@/bin/mprof-@PYVERSSUFFIX@
