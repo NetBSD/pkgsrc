@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/12/30 04:38:12 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/06/16 16:10:13 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -10,7 +10,6 @@ ${GEM_LIBDIR}/bin/console
 ${GEM_LIBDIR}/bin/setup
 ${GEM_LIBDIR}/diva.gemspec
 ${GEM_LIBDIR}/lib/diva.rb
-${GEM_LIBDIR}/lib/diva/combinator.rb
 ${GEM_LIBDIR}/lib/diva/datasource.rb
 ${GEM_LIBDIR}/lib/diva/error.rb
 ${GEM_LIBDIR}/lib/diva/field.rb
