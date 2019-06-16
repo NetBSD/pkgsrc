@@ -1,9 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1 2017/09/29 21:14:48 joerg Exp $
-bin/mprof
+@comment $NetBSD: PLIST,v 1.2 2019/06/16 19:12:40 adam Exp $
+bin/mprof-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/memory_profiler.py
 ${PYSITELIB}/memory_profiler.pyc
 ${PYSITELIB}/memory_profiler.pyo
+${PYSITELIB}/mprof.py
+${PYSITELIB}/mprof.pyc
+${PYSITELIB}/mprof.pyo
