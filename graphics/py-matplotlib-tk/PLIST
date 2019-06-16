@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2014/01/21 19:22:08 drochner Exp $
-${PYSITELIB}/matplotlib/backends/_tkagg.so
