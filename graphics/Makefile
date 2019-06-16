@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.819 2019/06/05 21:21:12 wiz Exp $
+# $NetBSD: Makefile,v 1.820 2019/06/16 13:11:34 adam Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -470,8 +470,6 @@ SUBDIR+=	py-imagesize
 SUBDIR+=	py-imaging
 SUBDIR+=	py-imagingtk
 SUBDIR+=	py-matplotlib
-SUBDIR+=	py-matplotlib-gtk2
-SUBDIR+=	py-matplotlib-tk
 SUBDIR+=	py-mcomix
 SUBDIR+=	py-nwdiag
 SUBDIR+=	py-objgraph
