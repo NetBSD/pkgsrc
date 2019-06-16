@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2019/06/08 20:04:23 leot Exp $
+# $NetBSD: Makefile,v 1.60 2019/06/16 19:25:10 adam Exp $
 
 DISTNAME=	bulk-medium-20190518
 CATEGORIES=	meta-pkgs
@@ -9,8 +9,6 @@ MAINTAINER=	dholland@NetBSD.org
 COMMENT=	Meta-package for a standard medium-sized limited bulk build
 
 META_PACKAGE=	yes
-
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-matplotlib-gtk2
 
 RESTRICTED=		Just for test build purpose
 NO_BIN_ON_CDROM=	${RESTRICTED}
@@ -78,7 +76,6 @@ BUILD_DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 BUILD_DEPENDS+=	gnuplot-[0-9]*:../../graphics/gnuplot
 BUILD_DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 BUILD_DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
-BUILD_DEPENDS+=	${PYPKGPREFIX}-matplotlib-gtk-[0-9]*:../../graphics/py-matplotlib-gtk2
 BUILD_DEPENDS+=	gawk-[0-9]*:../../lang/gawk
 BUILD_DEPENDS+=	php>=7.1<7.2:../../lang/php71
 BUILD_DEPENDS+=	ruby24-base-[0-9]*:../../lang/ruby24-base
