@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2018/12/13 08:22:42 tm Exp $
+@comment $NetBSD: PLIST,v 1.47.4.1 2019/06/16 17:43:39 spz Exp $
 share/doc/phpmyadmin/CODE_OF_CONDUCT.md
 share/doc/phpmyadmin/CONTRIBUTING.md
 share/doc/phpmyadmin/ChangeLog
@@ -743,6 +743,7 @@ share/phpmyadmin/locale/ia/LC_MESSAGES/phpmyadmin.mo
 share/phpmyadmin/locale/id/LC_MESSAGES/phpmyadmin.mo
 share/phpmyadmin/locale/it/LC_MESSAGES/phpmyadmin.mo
 share/phpmyadmin/locale/ja/LC_MESSAGES/phpmyadmin.mo
+share/phpmyadmin/locale/kk/LC_MESSAGES/phpmyadmin.mo
 share/phpmyadmin/locale/ko/LC_MESSAGES/phpmyadmin.mo
 share/phpmyadmin/locale/lt/LC_MESSAGES/phpmyadmin.mo
 share/phpmyadmin/locale/nb/LC_MESSAGES/phpmyadmin.mo
@@ -1599,6 +1600,7 @@ share/phpmyadmin/vendor/bacon/bacon-qr-code/tests/bootstrap.php
 share/phpmyadmin/vendor/bacon/bacon-qr-code/tests/phpunit.xml
 share/phpmyadmin/vendor/bin/highlight-query
 share/phpmyadmin/vendor/bin/lint-query
+share/phpmyadmin/vendor/bin/tokenize-query
 share/phpmyadmin/vendor/composer/ClassLoader.php
 share/phpmyadmin/vendor/composer/LICENSE
 share/phpmyadmin/vendor/composer/autoload_classmap.php
@@ -1655,7 +1657,6 @@ share/phpmyadmin/vendor/paragonie/constant_time_encoding/tests/HexTest.php
 share/phpmyadmin/vendor/paragonie/constant_time_encoding/tests/RFC4648Test.php
 share/phpmyadmin/vendor/paragonie/constant_time_encoding/tests/autoload.php
 share/phpmyadmin/vendor/paragonie/random_compat/LICENSE
-share/phpmyadmin/vendor/paragonie/random_compat/build-phar.sh
 share/phpmyadmin/vendor/paragonie/random_compat/composer.json
 share/phpmyadmin/vendor/paragonie/random_compat/dist/random_compat.phar.pubkey
 share/phpmyadmin/vendor/paragonie/random_compat/dist/random_compat.phar.pubkey.asc
@@ -1669,9 +1670,6 @@ share/phpmyadmin/vendor/paragonie/random_compat/lib/random_bytes_libsodium.php
 share/phpmyadmin/vendor/paragonie/random_compat/lib/random_bytes_libsodium_legacy.php
 share/phpmyadmin/vendor/paragonie/random_compat/lib/random_bytes_mcrypt.php
 share/phpmyadmin/vendor/paragonie/random_compat/lib/random_int.php
-share/phpmyadmin/vendor/paragonie/random_compat/other/build_phar.php
-share/phpmyadmin/vendor/paragonie/random_compat/psalm-autoload.php
-share/phpmyadmin/vendor/paragonie/random_compat/psalm.xml
 share/phpmyadmin/vendor/phpmyadmin/motranslator/.github/stale.yml
 share/phpmyadmin/vendor/phpmyadmin/motranslator/CHANGES.md
 share/phpmyadmin/vendor/phpmyadmin/motranslator/CONTRIBUTING.md
@@ -1699,6 +1697,7 @@ share/phpmyadmin/vendor/phpmyadmin/shapefile/src/Util.php
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/.github/stale.yml
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/.weblate
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/CHANGELOG.md
+share/phpmyadmin/vendor/phpmyadmin/sql-parser/CODE_OF_CONDUCT.md
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/CONTRIBUTING.md
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/LICENSE.txt
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/README.md
@@ -1791,7 +1790,8 @@ share/phpmyadmin/vendor/phpmyadmin/sql-parser/locale/vi/LC_MESSAGES/sqlparser.mo
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/locale/vls/LC_MESSAGES/sqlparser.mo
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/locale/zh_CN/LC_MESSAGES/sqlparser.mo
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/locale/zh_TW/LC_MESSAGES/sqlparser.mo
-share/phpmyadmin/vendor/phpmyadmin/sql-parser/phpunit.xml
+share/phpmyadmin/vendor/phpmyadmin/sql-parser/phpcs.xml.dist
+share/phpmyadmin/vendor/phpmyadmin/sql-parser/phpunit.xml.dist
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/src/Component.php
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/src/Components/AlterOperation.php
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/src/Components/Array2d.php
@@ -1804,10 +1804,12 @@ share/phpmyadmin/vendor/phpmyadmin/sql-parser/src/Components/Expression.php
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/src/Components/ExpressionArray.php
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/src/Components/FunctionCall.php
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/src/Components/GroupKeyword.php
+share/phpmyadmin/vendor/phpmyadmin/sql-parser/src/Components/IndexHint.php
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/src/Components/IntoKeyword.php
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/src/Components/JoinKeyword.php
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/src/Components/Key.php
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/src/Components/Limit.php
+share/phpmyadmin/vendor/phpmyadmin/sql-parser/src/Components/LockExpression.php
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/src/Components/OptionsArray.php
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/src/Components/OrderKeyword.php
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/src/Components/ParameterDefinition.php
@@ -1846,9 +1848,11 @@ share/phpmyadmin/vendor/phpmyadmin/sql-parser/src/Statements/DropStatement.php
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/src/Statements/ExplainStatement.php
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/src/Statements/InsertStatement.php
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/src/Statements/LoadStatement.php
+share/phpmyadmin/vendor/phpmyadmin/sql-parser/src/Statements/LockStatement.php
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/src/Statements/MaintenanceStatement.php
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/src/Statements/NotImplementedStatement.php
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/src/Statements/OptimizeStatement.php
+share/phpmyadmin/vendor/phpmyadmin/sql-parser/src/Statements/PurgeStatement.php
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/src/Statements/RenameStatement.php
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/src/Statements/RepairStatement.php
 share/phpmyadmin/vendor/phpmyadmin/sql-parser/src/Statements/ReplaceStatement.php
@@ -1972,9 +1976,11 @@ share/phpmyadmin/vendor/symfony/polyfill-util/Binary.php
 share/phpmyadmin/vendor/symfony/polyfill-util/BinaryNoFuncOverload.php
 share/phpmyadmin/vendor/symfony/polyfill-util/BinaryOnFuncOverload.php
 share/phpmyadmin/vendor/symfony/polyfill-util/LICENSE
-share/phpmyadmin/vendor/symfony/polyfill-util/LegacyTestListener.php
 share/phpmyadmin/vendor/symfony/polyfill-util/README.md
 share/phpmyadmin/vendor/symfony/polyfill-util/TestListener.php
+share/phpmyadmin/vendor/symfony/polyfill-util/TestListenerForV5.php
+share/phpmyadmin/vendor/symfony/polyfill-util/TestListenerForV6.php
+share/phpmyadmin/vendor/symfony/polyfill-util/TestListenerForV7.php
 share/phpmyadmin/vendor/symfony/polyfill-util/TestListenerTrait.php
 share/phpmyadmin/vendor/symfony/polyfill-util/composer.json
 share/phpmyadmin/vendor/tecnickcom/tcpdf/CHANGELOG.TXT
@@ -2053,6 +2059,7 @@ share/phpmyadmin/vendor/twig/twig/CHANGELOG
 share/phpmyadmin/vendor/twig/twig/LICENSE
 share/phpmyadmin/vendor/twig/twig/README.rst
 share/phpmyadmin/vendor/twig/twig/composer.json
+share/phpmyadmin/vendor/twig/twig/drupal_test.sh
 share/phpmyadmin/vendor/twig/twig/ext/twig/config.m4
 share/phpmyadmin/vendor/twig/twig/ext/twig/config.w32
 share/phpmyadmin/vendor/twig/twig/ext/twig/php_twig.h
@@ -2112,6 +2119,7 @@ share/phpmyadmin/vendor/twig/twig/lib/Twig/Node/Block.php
 share/phpmyadmin/vendor/twig/twig/lib/Twig/Node/BlockReference.php
 share/phpmyadmin/vendor/twig/twig/lib/Twig/Node/Body.php
 share/phpmyadmin/vendor/twig/twig/lib/Twig/Node/CheckSecurity.php
+share/phpmyadmin/vendor/twig/twig/lib/Twig/Node/Deprecated.php
 share/phpmyadmin/vendor/twig/twig/lib/Twig/Node/Do.php
 share/phpmyadmin/vendor/twig/twig/lib/Twig/Node/Embed.php
 share/phpmyadmin/vendor/twig/twig/lib/Twig/Node/Expression.php
@@ -2233,6 +2241,7 @@ share/phpmyadmin/vendor/twig/twig/lib/Twig/Token.php
 share/phpmyadmin/vendor/twig/twig/lib/Twig/TokenParser.php
 share/phpmyadmin/vendor/twig/twig/lib/Twig/TokenParser/AutoEscape.php
 share/phpmyadmin/vendor/twig/twig/lib/Twig/TokenParser/Block.php
+share/phpmyadmin/vendor/twig/twig/lib/Twig/TokenParser/Deprecated.php
 share/phpmyadmin/vendor/twig/twig/lib/Twig/TokenParser/Do.php
 share/phpmyadmin/vendor/twig/twig/lib/Twig/TokenParser/Embed.php
 share/phpmyadmin/vendor/twig/twig/lib/Twig/TokenParser/Extends.php
@@ -2293,10 +2302,13 @@ share/phpmyadmin/vendor/twig/twig/src/Node/BlockNode.php
 share/phpmyadmin/vendor/twig/twig/src/Node/BlockReferenceNode.php
 share/phpmyadmin/vendor/twig/twig/src/Node/BodyNode.php
 share/phpmyadmin/vendor/twig/twig/src/Node/CheckSecurityNode.php
+share/phpmyadmin/vendor/twig/twig/src/Node/CheckToStringNode.php
+share/phpmyadmin/vendor/twig/twig/src/Node/DeprecatedNode.php
 share/phpmyadmin/vendor/twig/twig/src/Node/DoNode.php
 share/phpmyadmin/vendor/twig/twig/src/Node/EmbedNode.php
 share/phpmyadmin/vendor/twig/twig/src/Node/Expression/AbstractExpression.php
 share/phpmyadmin/vendor/twig/twig/src/Node/Expression/ArrayExpression.php
+share/phpmyadmin/vendor/twig/twig/src/Node/Expression/ArrowFunctionExpression.php
 share/phpmyadmin/vendor/twig/twig/src/Node/Expression/AssignNameExpression.php
 share/phpmyadmin/vendor/twig/twig/src/Node/Expression/Binary/AbstractBinary.php
 share/phpmyadmin/vendor/twig/twig/src/Node/Expression/Binary/AddBinary.php
@@ -2332,6 +2344,7 @@ share/phpmyadmin/vendor/twig/twig/src/Node/Expression/Filter/DefaultFilter.php
 share/phpmyadmin/vendor/twig/twig/src/Node/Expression/FilterExpression.php
 share/phpmyadmin/vendor/twig/twig/src/Node/Expression/FunctionExpression.php
 share/phpmyadmin/vendor/twig/twig/src/Node/Expression/GetAttrExpression.php
+share/phpmyadmin/vendor/twig/twig/src/Node/Expression/InlinePrint.php
 share/phpmyadmin/vendor/twig/twig/src/Node/Expression/MethodCallExpression.php
 share/phpmyadmin/vendor/twig/twig/src/Node/Expression/NameExpression.php
 share/phpmyadmin/vendor/twig/twig/src/Node/Expression/NullCoalesceExpression.php
@@ -2402,8 +2415,10 @@ share/phpmyadmin/vendor/twig/twig/src/Test/IntegrationTestCase.php
 share/phpmyadmin/vendor/twig/twig/src/Test/NodeTestCase.php
 share/phpmyadmin/vendor/twig/twig/src/Token.php
 share/phpmyadmin/vendor/twig/twig/src/TokenParser/AbstractTokenParser.php
+share/phpmyadmin/vendor/twig/twig/src/TokenParser/ApplyTokenParser.php
 share/phpmyadmin/vendor/twig/twig/src/TokenParser/AutoEscapeTokenParser.php
 share/phpmyadmin/vendor/twig/twig/src/TokenParser/BlockTokenParser.php
+share/phpmyadmin/vendor/twig/twig/src/TokenParser/DeprecatedTokenParser.php
 share/phpmyadmin/vendor/twig/twig/src/TokenParser/DoTokenParser.php
 share/phpmyadmin/vendor/twig/twig/src/TokenParser/EmbedTokenParser.php
 share/phpmyadmin/vendor/twig/twig/src/TokenParser/ExtendsTokenParser.php
