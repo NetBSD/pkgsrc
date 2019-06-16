@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2539 2019/06/15 19:05:09 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2540 2019/06/16 01:55:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4258,3 +4258,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added math/py-scipy12 version 1.2.2 [adam 2019-06-15]
 	Updated math/py-kiwisolver to 1.1.0 [adam 2019-06-15]
 	Updated textproc/py-guessit to 3.0.4 [adam 2019-06-15]
+	Updated devel/glib2 to 2.60.4nb1 [ryoon 2019-06-16]
