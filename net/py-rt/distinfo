@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2018/09/15 10:53:31 leot Exp $
+$NetBSD: distinfo,v 1.1.6.1 2019/06/16 18:10:29 spz Exp $
 
 SHA1 (py-rt/rt-1.0.11.tar.gz) = 2a919c9df7a7aec75aa9f1f19df9fbc81341e784
 RMD160 (py-rt/rt-1.0.11.tar.gz) = cd0ee2929ede3c878e21bf0750e4fe262550ded5
 SHA512 (py-rt/rt-1.0.11.tar.gz) = 00007710d152472bf25e656b6298502e0b571932c8c3f4c498074fe7a849d575fd2deaad91a4814a7aece4dbfa847c913045e927830a8e0a02d3d13876562696
 Size (py-rt/rt-1.0.11.tar.gz) = 35084 bytes
+SHA1 (patch-rt.py) = a1180f06f39e1dba6fca86205755549c34d6b8b8
