@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/09/29 21:14:48 joerg Exp $
+$NetBSD: distinfo,v 1.2 2019/06/16 19:12:40 adam Exp $
 
-SHA1 (memory_profiler-0.47.tar.gz) = 612f140ccdcd143096f9f91f8f2cd7edf17b3531
-RMD160 (memory_profiler-0.47.tar.gz) = 47e870b9aa116dd9a27c6fc74460c530043b3013
-SHA512 (memory_profiler-0.47.tar.gz) = 110e16ecad33068d31cf53b2f0b775d65230d51345f24a4d7d3cafafb706b10a0c7e2d98a799256b0366f1bafa9b69c060222595bb4eb9e1689301428a36fc3d
-Size (memory_profiler-0.47.tar.gz) = 33725 bytes
+SHA1 (memory_profiler-0.55.0.tar.gz) = 41f4f60e7af430cc8e285612e0bb163979b27949
+RMD160 (memory_profiler-0.55.0.tar.gz) = 6d741c120cbf48c6607abe695b87c6d42fd383a7
+SHA512 (memory_profiler-0.55.0.tar.gz) = 9f280af163b124809d0276b2a473f66d9f11071f38afbabf7247d4e49f120c137f69dde2cc3fb27fcc88cfc6dc71355ba01efeb102098c401c7e953462ed4a1b
+Size (memory_profiler-0.55.0.tar.gz) = 40951 bytes
