@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2548 2019/06/16 16:17:02 tsutsui Exp $
+$NetBSD: CHANGES-2019,v 1.2549 2019/06/16 16:42:19 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4270,3 +4270,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ruby-diva to 1.0.0 [tsutsui 2019-06-16]
 	Updated net/ruby-pluggaloid to 1.2.0 [tsutsui 2019-06-16]
 	Updated net/ruby-twitter-text to 3.0.0 [tsutsui 2019-06-16]
+	Updated net/mikutter to 3.9.0alpha1 [tsutsui 2019-06-16]
