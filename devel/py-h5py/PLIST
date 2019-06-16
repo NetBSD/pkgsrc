@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/11/20 05:39:28 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/06/16 14:11:49 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -45,6 +45,9 @@ ${PYSITELIB}/h5py/_hl/selections.pyo
 ${PYSITELIB}/h5py/_hl/selections2.py
 ${PYSITELIB}/h5py/_hl/selections2.pyc
 ${PYSITELIB}/h5py/_hl/selections2.pyo
+${PYSITELIB}/h5py/_hl/vds.py
+${PYSITELIB}/h5py/_hl/vds.pyc
+${PYSITELIB}/h5py/_hl/vds.pyo
 ${PYSITELIB}/h5py/_objects.so
 ${PYSITELIB}/h5py/_proxy.so
 ${PYSITELIB}/h5py/defs.so
@@ -94,6 +97,9 @@ ${PYSITELIB}/h5py/tests/hl/test_dataset_swmr.pyo
 ${PYSITELIB}/h5py/tests/hl/test_datatype.py
 ${PYSITELIB}/h5py/tests/hl/test_datatype.pyc
 ${PYSITELIB}/h5py/tests/hl/test_datatype.pyo
+${PYSITELIB}/h5py/tests/hl/test_deprecation.py
+${PYSITELIB}/h5py/tests/hl/test_deprecation.pyc
+${PYSITELIB}/h5py/tests/hl/test_deprecation.pyo
 ${PYSITELIB}/h5py/tests/hl/test_dims_dimensionproxy.py
 ${PYSITELIB}/h5py/tests/hl/test_dims_dimensionproxy.pyc
 ${PYSITELIB}/h5py/tests/hl/test_dims_dimensionproxy.pyo
@@ -106,6 +112,18 @@ ${PYSITELIB}/h5py/tests/hl/test_filters.pyo
 ${PYSITELIB}/h5py/tests/hl/test_threads.py
 ${PYSITELIB}/h5py/tests/hl/test_threads.pyc
 ${PYSITELIB}/h5py/tests/hl/test_threads.pyo
+${PYSITELIB}/h5py/tests/hl/test_vds/__init__.py
+${PYSITELIB}/h5py/tests/hl/test_vds/__init__.pyc
+${PYSITELIB}/h5py/tests/hl/test_vds/__init__.pyo
+${PYSITELIB}/h5py/tests/hl/test_vds/test_highlevel_vds.py
+${PYSITELIB}/h5py/tests/hl/test_vds/test_highlevel_vds.pyc
+${PYSITELIB}/h5py/tests/hl/test_vds/test_highlevel_vds.pyo
+${PYSITELIB}/h5py/tests/hl/test_vds/test_lowlevel_vds.py
+${PYSITELIB}/h5py/tests/hl/test_vds/test_lowlevel_vds.pyc
+${PYSITELIB}/h5py/tests/hl/test_vds/test_lowlevel_vds.pyo
+${PYSITELIB}/h5py/tests/hl/test_vds/test_virtual_source.py
+${PYSITELIB}/h5py/tests/hl/test_vds/test_virtual_source.pyc
+${PYSITELIB}/h5py/tests/hl/test_vds/test_virtual_source.pyo
 ${PYSITELIB}/h5py/tests/old/__init__.py
 ${PYSITELIB}/h5py/tests/old/__init__.pyc
 ${PYSITELIB}/h5py/tests/old/__init__.pyo
