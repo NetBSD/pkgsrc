@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2018/11/30 10:37:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2019/06/17 14:58:26 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -293,6 +293,12 @@ ${PYSITELIB}/networkx/algorithms/centrality/tests/test_second_order_centrality.p
 ${PYSITELIB}/networkx/algorithms/centrality/tests/test_subgraph.py
 ${PYSITELIB}/networkx/algorithms/centrality/tests/test_subgraph.pyc
 ${PYSITELIB}/networkx/algorithms/centrality/tests/test_subgraph.pyo
+${PYSITELIB}/networkx/algorithms/centrality/tests/test_voterank.py
+${PYSITELIB}/networkx/algorithms/centrality/tests/test_voterank.pyc
+${PYSITELIB}/networkx/algorithms/centrality/tests/test_voterank.pyo
+${PYSITELIB}/networkx/algorithms/centrality/voterank_alg.py
+${PYSITELIB}/networkx/algorithms/centrality/voterank_alg.pyc
+${PYSITELIB}/networkx/algorithms/centrality/voterank_alg.pyo
 ${PYSITELIB}/networkx/algorithms/chains.py
 ${PYSITELIB}/networkx/algorithms/chains.pyc
 ${PYSITELIB}/networkx/algorithms/chains.pyo
@@ -308,6 +314,9 @@ ${PYSITELIB}/networkx/algorithms/cluster.pyo
 ${PYSITELIB}/networkx/algorithms/coloring/__init__.py
 ${PYSITELIB}/networkx/algorithms/coloring/__init__.pyc
 ${PYSITELIB}/networkx/algorithms/coloring/__init__.pyo
+${PYSITELIB}/networkx/algorithms/coloring/equitable_coloring.py
+${PYSITELIB}/networkx/algorithms/coloring/equitable_coloring.pyc
+${PYSITELIB}/networkx/algorithms/coloring/equitable_coloring.pyo
 ${PYSITELIB}/networkx/algorithms/coloring/greedy_coloring.py
 ${PYSITELIB}/networkx/algorithms/coloring/greedy_coloring.pyc
 ${PYSITELIB}/networkx/algorithms/coloring/greedy_coloring.pyo
@@ -637,6 +646,9 @@ ${PYSITELIB}/networkx/algorithms/minors.pyo
 ${PYSITELIB}/networkx/algorithms/mis.py
 ${PYSITELIB}/networkx/algorithms/mis.pyc
 ${PYSITELIB}/networkx/algorithms/mis.pyo
+${PYSITELIB}/networkx/algorithms/moral.py
+${PYSITELIB}/networkx/algorithms/moral.pyc
+${PYSITELIB}/networkx/algorithms/moral.pyo
 ${PYSITELIB}/networkx/algorithms/node_classification/__init__.py
 ${PYSITELIB}/networkx/algorithms/node_classification/__init__.pyc
 ${PYSITELIB}/networkx/algorithms/node_classification/__init__.pyo
@@ -682,6 +694,9 @@ ${PYSITELIB}/networkx/algorithms/operators/tests/test_unary.pyo
 ${PYSITELIB}/networkx/algorithms/operators/unary.py
 ${PYSITELIB}/networkx/algorithms/operators/unary.pyc
 ${PYSITELIB}/networkx/algorithms/operators/unary.pyo
+${PYSITELIB}/networkx/algorithms/planar_drawing.py
+${PYSITELIB}/networkx/algorithms/planar_drawing.pyc
+${PYSITELIB}/networkx/algorithms/planar_drawing.pyo
 ${PYSITELIB}/networkx/algorithms/planarity.py
 ${PYSITELIB}/networkx/algorithms/planarity.pyc
 ${PYSITELIB}/networkx/algorithms/planarity.pyo
@@ -748,6 +763,9 @@ ${PYSITELIB}/networkx/algorithms/structuralholes.pyo
 ${PYSITELIB}/networkx/algorithms/swap.py
 ${PYSITELIB}/networkx/algorithms/swap.pyc
 ${PYSITELIB}/networkx/algorithms/swap.pyo
+${PYSITELIB}/networkx/algorithms/tests/__init__.py
+${PYSITELIB}/networkx/algorithms/tests/__init__.pyc
+${PYSITELIB}/networkx/algorithms/tests/__init__.pyo
 ${PYSITELIB}/networkx/algorithms/tests/test_boundary.py
 ${PYSITELIB}/networkx/algorithms/tests/test_boundary.pyc
 ${PYSITELIB}/networkx/algorithms/tests/test_boundary.pyo
@@ -829,6 +847,12 @@ ${PYSITELIB}/networkx/algorithms/tests/test_minors.pyo
 ${PYSITELIB}/networkx/algorithms/tests/test_mis.py
 ${PYSITELIB}/networkx/algorithms/tests/test_mis.pyc
 ${PYSITELIB}/networkx/algorithms/tests/test_mis.pyo
+${PYSITELIB}/networkx/algorithms/tests/test_moral.py
+${PYSITELIB}/networkx/algorithms/tests/test_moral.pyc
+${PYSITELIB}/networkx/algorithms/tests/test_moral.pyo
+${PYSITELIB}/networkx/algorithms/tests/test_planar_drawing.py
+${PYSITELIB}/networkx/algorithms/tests/test_planar_drawing.pyc
+${PYSITELIB}/networkx/algorithms/tests/test_planar_drawing.pyo
 ${PYSITELIB}/networkx/algorithms/tests/test_planarity.py
 ${PYSITELIB}/networkx/algorithms/tests/test_planarity.pyc
 ${PYSITELIB}/networkx/algorithms/tests/test_planarity.pyo
@@ -1106,6 +1130,9 @@ ${PYSITELIB}/networkx/generators/expanders.pyo
 ${PYSITELIB}/networkx/generators/geometric.py
 ${PYSITELIB}/networkx/generators/geometric.pyc
 ${PYSITELIB}/networkx/generators/geometric.pyo
+${PYSITELIB}/networkx/generators/harary_graph.py
+${PYSITELIB}/networkx/generators/harary_graph.pyc
+${PYSITELIB}/networkx/generators/harary_graph.pyo
 ${PYSITELIB}/networkx/generators/intersection.py
 ${PYSITELIB}/networkx/generators/intersection.pyc
 ${PYSITELIB}/networkx/generators/intersection.pyo
@@ -1169,6 +1196,9 @@ ${PYSITELIB}/networkx/generators/tests/test_expanders.pyo
 ${PYSITELIB}/networkx/generators/tests/test_geometric.py
 ${PYSITELIB}/networkx/generators/tests/test_geometric.pyc
 ${PYSITELIB}/networkx/generators/tests/test_geometric.pyo
+${PYSITELIB}/networkx/generators/tests/test_harary_graph.py
+${PYSITELIB}/networkx/generators/tests/test_harary_graph.pyc
+${PYSITELIB}/networkx/generators/tests/test_harary_graph.pyo
 ${PYSITELIB}/networkx/generators/tests/test_intersection.py
 ${PYSITELIB}/networkx/generators/tests/test_intersection.pyc
 ${PYSITELIB}/networkx/generators/tests/test_intersection.pyo
