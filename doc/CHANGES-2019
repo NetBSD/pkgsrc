@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2567 2019/06/17 16:36:19 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2568 2019/06/17 16:43:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4293,3 +4293,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated finance/py-empyrical to 0.5.0 [adam 2019-06-17]
 	Updated finance/py-pyfolio to 0.9.2 [adam 2019-06-17]
 	Added parallel/openmp version 8.0.0 [adam 2019-06-17]
+	Removed devel/py-tabular [adam 2019-06-17]
+	Removed graphics/py-imagingtk [adam 2019-06-17]
