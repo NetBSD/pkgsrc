@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/07/05 09:21:29 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/06/17 05:31:49 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -22,6 +22,7 @@ ${PYSITELIB}/alphalens/examples/returns_tear.png
 ${PYSITELIB}/alphalens/examples/sector_tear.png
 ${PYSITELIB}/alphalens/examples/table_tear.png
 ${PYSITELIB}/alphalens/examples/tear_sheet_walk_through.ipynb
+${PYSITELIB}/alphalens/examples/thomas data.ipynb
 ${PYSITELIB}/alphalens/performance.py
 ${PYSITELIB}/alphalens/performance.pyc
 ${PYSITELIB}/alphalens/performance.pyo
