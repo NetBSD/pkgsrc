@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2017/09/04 18:00:55 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2019/06/17 20:27:16 adam Exp $
 
-DISTNAME=	ggplot-0.10.4
+DISTNAME=	ggplot-0.11.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/ggplot/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	https://yhat.github.io/ggplot/
+HOMEPAGE=	https://github.com/yhat/ggplot
 COMMENT=	Python implementation of the grammar of graphics
 LICENSE=	2-clause-bsd
 
@@ -16,13 +16,14 @@ DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-pandas-[0-9]*:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-patsy-[0-9]*:../../math/py-patsy
 DEPENDS+=	${PYPKGPREFIX}-statsmodels-[0-9]*:../../math/py-statsmodels
-# TEST_DEPENDS
-BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
-BUILD_DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
+TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+TEST_DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
 # self tests fail in ggplot.aes.aes, see
 # https://github.com/yhat/ggplot/issues/507
 
-USE_LANGUAGES=	c
+USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-pandas
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
