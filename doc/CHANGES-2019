@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2565 2019/06/17 15:16:40 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2566 2019/06/17 15:31:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4290,3 +4290,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated math/py-scikit-learn to 0.21.2 [adam 2019-06-17]
 	Updated math/py-scikit-image to 0.15.0 [adam 2019-06-17]
 	Updated emulators/openmsx to 0.15.0 [nia 2019-06-17]
+	Updated finance/py-empyrical to 0.5.0 [adam 2019-06-17]
+	Updated finance/py-pyfolio to 0.9.2 [adam 2019-06-17]
