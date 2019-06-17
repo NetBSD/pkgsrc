@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/07/15 07:29:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/06/17 20:27:16 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -102,6 +102,9 @@ ${PYSITELIB}/ggplot/geoms/geom_path.pyo
 ${PYSITELIB}/ggplot/geoms/geom_point.py
 ${PYSITELIB}/ggplot/geoms/geom_point.pyc
 ${PYSITELIB}/ggplot/geoms/geom_point.pyo
+${PYSITELIB}/ggplot/geoms/geom_polygon.py
+${PYSITELIB}/ggplot/geoms/geom_polygon.pyc
+${PYSITELIB}/ggplot/geoms/geom_polygon.pyo
 ${PYSITELIB}/ggplot/geoms/geom_rect.py
 ${PYSITELIB}/ggplot/geoms/geom_rect.pyc
 ${PYSITELIB}/ggplot/geoms/geom_rect.pyo
