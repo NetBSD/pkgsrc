@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2572 2019/06/17 20:59:13 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2573 2019/06/17 21:05:02 pgoyette Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4302,3 +4302,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/py-ggplot to 0.11.5 [adam 2019-06-17]
 	Added www/py-flask-api version 1.1 [adam 2019-06-17]
 	Added www/py-flask-jwt-extended version 3.18.2 [adam 2019-06-17]
+	Updated sysutils/decode-dimms to 0.0.20190405nb2 [pgoyette 2019-06-17]
