@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/11/22 11:06:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/06/17 14:54:57 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,9 +7,15 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pywt/__init__.py
 ${PYSITELIB}/pywt/__init__.pyc
 ${PYSITELIB}/pywt/__init__.pyo
+${PYSITELIB}/pywt/_c99_config.py
+${PYSITELIB}/pywt/_c99_config.pyc
+${PYSITELIB}/pywt/_c99_config.pyo
 ${PYSITELIB}/pywt/_cwt.py
 ${PYSITELIB}/pywt/_cwt.pyc
 ${PYSITELIB}/pywt/_cwt.pyo
+${PYSITELIB}/pywt/_doc_utils.py
+${PYSITELIB}/pywt/_doc_utils.pyc
+${PYSITELIB}/pywt/_doc_utils.pyo
 ${PYSITELIB}/pywt/_dwt.py
 ${PYSITELIB}/pywt/_dwt.pyc
 ${PYSITELIB}/pywt/_dwt.pyo
@@ -35,6 +41,9 @@ ${PYSITELIB}/pywt/_swt.pyo
 ${PYSITELIB}/pywt/_thresholding.py
 ${PYSITELIB}/pywt/_thresholding.pyc
 ${PYSITELIB}/pywt/_thresholding.pyo
+${PYSITELIB}/pywt/_utils.py
+${PYSITELIB}/pywt/_utils.pyc
+${PYSITELIB}/pywt/_utils.pyo
 ${PYSITELIB}/pywt/_wavelet_packets.py
 ${PYSITELIB}/pywt/_wavelet_packets.pyc
 ${PYSITELIB}/pywt/_wavelet_packets.pyo
@@ -44,6 +53,9 @@ ${PYSITELIB}/pywt/data/__init__.pyo
 ${PYSITELIB}/pywt/data/_readers.py
 ${PYSITELIB}/pywt/data/_readers.pyc
 ${PYSITELIB}/pywt/data/_readers.pyo
+${PYSITELIB}/pywt/data/_wavelab_signals.py
+${PYSITELIB}/pywt/data/_wavelab_signals.pyc
+${PYSITELIB}/pywt/data/_wavelab_signals.pyo
 ${PYSITELIB}/pywt/data/aero.npz
 ${PYSITELIB}/pywt/data/ascent.npz
 ${PYSITELIB}/pywt/data/camera.npz
@@ -60,6 +72,7 @@ ${PYSITELIB}/pywt/tests/data/generate_matlab_data.pyo
 ${PYSITELIB}/pywt/tests/data/generate_matlab_data_cwt.py
 ${PYSITELIB}/pywt/tests/data/generate_matlab_data_cwt.pyc
 ${PYSITELIB}/pywt/tests/data/generate_matlab_data_cwt.pyo
+${PYSITELIB}/pywt/tests/data/wavelab_test_signals.npz
 ${PYSITELIB}/pywt/tests/test__pywt.py
 ${PYSITELIB}/pywt/tests/test__pywt.pyc
 ${PYSITELIB}/pywt/tests/test__pywt.pyo
