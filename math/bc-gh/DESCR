@@ -1,0 +1,4 @@
+Implementation of POSIX bc with GNU extensions
+
+This bc is optimized for use by programmers. It includes several
+extensions beyond the GNU extensions for that purpose.
