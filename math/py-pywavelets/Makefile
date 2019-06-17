@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2017/11/22 11:06:23 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/06/17 14:54:57 adam Exp $
 
-DISTNAME=	PyWavelets-0.5.2
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	PyWavelets-1.0.3
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyWavelets/}
 
@@ -11,6 +11,9 @@ COMMENT=	Discrete Wavelet Transforms in Python
 LICENSE=	mit
 
 REPLACE_PYTHON+=	pywt/tests/*.py
+
+do-test:
+	${PYTHONBIN} -c 'import pywt; pywt.test()'
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/application.mk"
