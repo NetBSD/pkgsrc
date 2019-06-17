@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2557 2019/06/17 12:51:53 mef Exp $
+$NetBSD: CHANGES-2019,v 1.2558 2019/06/17 13:49:10 micha Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4281,3 +4281,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-mercurial to 5.0.1 [wiz 2019-06-17]
 	Updated devel/ocaml-fmt to 0.8.5nb1 [jaapb 2019-06-17]
 	Updated net/unbound to 1.9.2 [he 2019-06-17]
+	Added games/doomlegacy version 1.47.2 [baeuerle 2019-06-17]
