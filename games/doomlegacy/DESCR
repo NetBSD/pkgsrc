@@ -1,0 +1,23 @@
+This is one of the most popular Doom source ports.
+It enhances Doom with things like:
+- Free Look
+- OpenGL renderer
+- Heretic support,
+- TCP/IP networking
+and much more.
+
+Doom Legacy can play Doom, Boom, Marine's Best Friend (MBF), and Heretic maps.
+In addition to the original games by id Software and Raven Software, there are
+hundreds of free, fan-made maps available on the Internet. These maps are
+typically distributed as PWAD files, which are not fully self-contained.
+For each game you will also need the corresponding IWAD data file, which
+contains all the graphics, wall and floor textures, sounds, and music for that
+game. For example, if you want to play Doom II maps, you'll need the IWAD file
+doom2.wad, or one of the free replacements.
+
+Legacy has implemented the fundamental and de-facto-standard Boom extensions,
+and the Marine's Best Friend (MBF) extensions. Legacy also has implemented
+among other things 3D floors, swimmable water and other special effects using
+extended linedef codes, and supports the FraggleScript scripting language.
+
+This package contains the SDL build of Doom Legacy.
