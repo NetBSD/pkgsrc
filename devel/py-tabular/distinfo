@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:29:16 agc Exp $
-
-SHA1 (tabular-0.1.tar.gz) = 8e7b63599231363859df7054beee3b508ff49485
-RMD160 (tabular-0.1.tar.gz) = 43302ec518a27e77910980eb9409cabcda269bae
-SHA512 (tabular-0.1.tar.gz) = 9d97821ebd2c11354d60d02ca6a3a1e9eb02b595d5e6ce47dd83faf570a3606f5f1a073270e8a2f250f2811869a1cecf068a2e79f342d958dca1a488ff78a77d
-Size (tabular-0.1.tar.gz) = 1096296 bytes
-SHA1 (patch-setup.py) = 6f97300f285f4c828b3ebcd6863d3ac7cbb67ea7
