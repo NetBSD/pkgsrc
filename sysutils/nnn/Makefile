@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/06/14 06:47:01 sjmulder Exp $
+# $NetBSD: Makefile,v 1.10 2019/06/17 18:24:00 sjmulder Exp $
 
 DISTNAME=	nnn-2.5
 PKGREVISION=	2
@@ -12,10 +12,7 @@ COMMENT=	Optimized, feature-packed terminal file manager
 LICENSE=	2-clause-bsd
 
 USE_TOOLS+=	gmake pkg-config
-USE_CURSES=	wide
-
-# missing mousemask(), getmouse()
-INCOMPAT_CURSES+=	NetBSD-*
+USE_CURSES=	wide set_escdelay getmouse
 
 # build without readline unless option set (see options.mk)
 BUILD_TARGET=	norl
