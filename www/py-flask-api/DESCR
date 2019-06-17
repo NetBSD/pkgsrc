@@ -1,0 +1,3 @@
+Flask API is a drop-in replacement for Flask that provides an implementation of
+browsable APIs similar to what Django REST framework provides. It gives you
+properly content negotiated-responses and smart request parsing.
