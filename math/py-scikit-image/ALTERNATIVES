@@ -1,1 +1,1 @@
-bin/skivi @PREFIX@/bin/skivi@PYVERSSUFFIX@
+bin/skivi @PREFIX@/bin/skivi-@PYVERSSUFFIX@
