@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2019/06/10 19:08:42 nia Exp $
+# $NetBSD: Makefile,v 1.53 2019/06/17 07:31:12 nia Exp $
 #
 
 VERSION=		1.2.0
@@ -34,10 +34,6 @@ BUILDLINK_TRANSFORM+=	rm:-floop-optimize2 rm:-fgcse-las
 # for libzynaddsubfx.so in plugins/zynaddsubfx/.
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/lmms
 
-# libSDL defines some symbols that are also defined in libX11, which has
-# been fixed in SDL 1.2.11.
-BUILDLINK_ABI_DEPENDS.SDL+=	SDL>=1.2.11
-
 .include "options.mk"
 .include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
@@ -49,6 +45,7 @@ BUILDLINK_ABI_DEPENDS.SDL+=	SDL>=1.2.11
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
