@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/07/06 03:54:01 minskim Exp $
+$NetBSD: distinfo,v 1.2 2019/06/17 15:31:09 adam Exp $
 
-SHA1 (pyfolio-0.8.0.tar.gz) = 2239f0be07a291277bdb90d23c8473b46da241eb
-RMD160 (pyfolio-0.8.0.tar.gz) = 1ec5d17780ad70164f55f870002d082b6c9b6f30
-SHA512 (pyfolio-0.8.0.tar.gz) = ff84c19ded776ea3549b907e7d8e8488060e9231bcaa297789e5f8aa77de227af9c287ac8df768319d52de82d6556d995ea817cd550679b2e51b0351802a11d1
-Size (pyfolio-0.8.0.tar.gz) = 79473 bytes
+SHA1 (pyfolio-0.9.2.tar.gz) = f2278ce6d868917e606969820b899e1da6cfed9b
+RMD160 (pyfolio-0.9.2.tar.gz) = 805dd34db5af10669002448f7d17059245d48fce
+SHA512 (pyfolio-0.9.2.tar.gz) = fd0910a334864a41a0b5cdebc537a95c7f27119ecfe9622e6be7325bc3d8d09ba6401336b2587e39151c534b4a3f7c74b9e2050fcf646ffa9f341a86b573c53b
+Size (pyfolio-0.9.2.tar.gz) = 91135 bytes
