@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2019/06/05 06:57:04 nia Exp $
+# $NetBSD: Makefile,v 1.35 2019/06/17 10:46:37 nia Exp $
 
 DISTNAME=	exempi-2.5.0
 CATEGORIES=	devel graphics
@@ -15,6 +15,8 @@ CONFIGURE_ENV+=	ac_cv_tls=none
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++11
+
+GCC_REQD+=	4.8
 
 CONFIGURE_ARGS+=	LIBS=${BUILDLINK_LDADD.iconv:Q}
 
