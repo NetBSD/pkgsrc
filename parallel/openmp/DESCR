@@ -1,0 +1,5 @@
+The OpenMP subproject of LLVM contains the components required to build an
+executable OpenMP program that are outside the compiler itself.
+
+Here you can find the code for the runtime library against which code compiled
+by clang -fopenmp must be linked before it can run.
