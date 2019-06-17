@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2018/07/31 11:03:57 prlw1 Exp $
-bin/imageio_download_bin
-bin/imageio_remove_bin
+@comment $NetBSD: PLIST,v 1.2 2019/06/17 14:52:30 adam Exp $
+bin/imageio_download_bin-${PYVERSSUFFIX}
+bin/imageio_remove_bin-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -106,12 +106,22 @@ ${PYSITELIB}/imageio/plugins/pillowmulti.pyo
 ${PYSITELIB}/imageio/plugins/simpleitk.py
 ${PYSITELIB}/imageio/plugins/simpleitk.pyc
 ${PYSITELIB}/imageio/plugins/simpleitk.pyo
+${PYSITELIB}/imageio/plugins/spe.py
+${PYSITELIB}/imageio/plugins/spe.pyc
+${PYSITELIB}/imageio/plugins/spe.pyo
 ${PYSITELIB}/imageio/plugins/swf.py
 ${PYSITELIB}/imageio/plugins/swf.pyc
 ${PYSITELIB}/imageio/plugins/swf.pyo
 ${PYSITELIB}/imageio/plugins/tifffile.py
 ${PYSITELIB}/imageio/plugins/tifffile.pyc
 ${PYSITELIB}/imageio/plugins/tifffile.pyo
+${PYSITELIB}/imageio/resources/images/astronaut.png
+${PYSITELIB}/imageio/resources/images/chelsea.png
+${PYSITELIB}/imageio/resources/images/chelsea.zip
+${PYSITELIB}/imageio/resources/images/cockatoo.mp4
+${PYSITELIB}/imageio/resources/images/newtonscradle.gif
+${PYSITELIB}/imageio/resources/images/realshort.mp4
+${PYSITELIB}/imageio/resources/images/stent.npz
 ${PYSITELIB}/imageio/resources/shipped_resources_go_here
 ${PYSITELIB}/imageio/testing.py
 ${PYSITELIB}/imageio/testing.pyc
