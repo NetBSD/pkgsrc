@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2018/05/12 22:06:53 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2019/06/17 05:43:02 adam Exp $
 
-DISTNAME=	backtrader-1.9.58.122
+DISTNAME=	backtrader-1.9.74.123
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	finance python
+#MASTER_SITES=	${MASTER_SITE_PYPI:=b/backtrader/}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mementum/}
 GITHUB_PROJECT=	backtrader
-GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://github.com/mementum/backtrader
@@ -16,12 +16,14 @@ DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-pandas-[0-9]*:../../math/py-pandas
 
-.include "../../lang/python/egg.mk"
+USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-matplotlib
 
 post-install:
-.for f in bt-run.py btrun
-	${MV} ${DESTDIR}${PREFIX}/bin/${f} \
-		${DESTDIR}${PREFIX}/bin/${f}${PYVERSSUFFIX}
-.endfor
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} bt-run.py bt-run-${PYVERSSUFFIX}.py && \
+	${MV} btrun btrun-${PYVERSSUFFIX} || ${TRUE}
 
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
