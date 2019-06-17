@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/09/13 16:10:21 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2019/06/17 15:24:34 adam Exp $
 
-DISTNAME=	empyrical-0.3.2
+DISTNAME=	empyrical-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	finance
+CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/empyrical/}
 
 MAINTAINER=	minskim@NetBSD.org
@@ -10,11 +10,15 @@ HOMEPAGE=	https://github.com/quantopian/empyrical
 COMMENT=	Common financial risk and performance metrics
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-bottleneck-[0-9]*:../../math/py-bottleneck
-DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
-DEPENDS+=	${PYPKGPREFIX}-pandas-[0-9]*:../../math/py-pandas
-DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-bottleneck>=1.0.0:../../math/py-bottleneck
+DEPENDS+=	${PYPKGPREFIX}-numpy>=1.9.2:../../math/py-numpy
+DEPENDS+=	${PYPKGPREFIX}-pandas>=0.16.1:../../math/py-pandas
+DEPENDS+=	${PYPKGPREFIX}-pandas-datareader>=0.2:../../math/py-pandas-datareader
+DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
+
+USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-scipy
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
