@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2555 2019/06/17 09:20:06 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.2556 2019/06/17 09:49:39 he Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4280,3 +4280,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added math/bc-gh version 2.0.3 [gdt 2019-06-17]
 	Updated devel/py-mercurial to 5.0.1 [wiz 2019-06-17]
 	Updated devel/ocaml-fmt to 0.8.5nb1 [jaapb 2019-06-17]
+	Updated net/unbound to 1.9.2 [he 2019-06-17]
