@@ -1,0 +1,2 @@
+bin/bt-run.py @PREFIX@/bin/bt-run-@PYVERSSUFFIX@.py
+bin/btrun @PREFIX@/bin/btrun-@PYVERSSUFFIX@
