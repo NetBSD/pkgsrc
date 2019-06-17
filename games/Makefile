@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.426 2019/06/13 13:04:02 nia Exp $
+# $NetBSD: Makefile,v 1.427 2019/06/17 13:41:05 micha Exp $
 #
 
 COMMENT=	Games
@@ -82,6 +82,7 @@ SUBDIR+=	defendguin
 SUBDIR+=	digger
 SUBDIR+=	dipmap
 SUBDIR+=	doom1
+SUBDIR+=	doomlegacy
 SUBDIR+=	dopewars
 SUBDIR+=	duckmaze
 SUBDIR+=	dungeon
