@@ -1,11 +1,24 @@
-$NetBSD: patch-configure,v 1.2 2018/12/31 15:38:55 rhialto Exp $
+$NetBSD: patch-configure,v 1.3 2019/06/17 14:12:18 nia Exp $
 
 1. Use the NetBSD configuration for every OS since the PLIST is
    hardcoded for that.  Should fix every non-NetBSD platform.
 
+2. Ignore the option --enable-option-checking instead of erroring,
+   it's the default anyway.
+
 --- configure.orig	2018-12-19 21:25:02.000000000 +0000
 +++ configure
-@@ -8782,34 +8782,6 @@ case "$host_os" in
+@@ -3300,6 +3300,9 @@ for argcheck in $@
+ do
+   argvalid=yes
+   case $argcheck in
++    --enable-option-checking=*)
++      argvalid=yes
++      ;;
+     --enable-arch=*)
+       argvalid=yes
+       ;;
+@@ -8782,34 +8785,6 @@ case "$host_os" in
  esac
  
  
@@ -40,7 +53,7 @@ $NetBSD: patch-configure,v 1.2 2018/12/31 15:38:55 rhialto Exp $
  
  
  if test x"$enable_shared_ffmpeg" = "xyes" -o x"$enable_static_ffmpeg" = "xyes"; then
-@@ -21894,7 +21866,7 @@ _ACEOF
+@@ -21894,7 +21869,7 @@ _ACEOF
  
  
  case "$host_os" in
@@ -49,7 +62,7 @@ $NetBSD: patch-configure,v 1.2 2018/12/31 15:38:55 rhialto Exp $
      VICEDIR="$PREFIX/share/vice"
       if true; then
    ALTERNATE_DOCDIR_TRUE=
-@@ -21905,51 +21877,6 @@ else
+@@ -21905,51 +21880,6 @@ else
  fi
  
      ;;
