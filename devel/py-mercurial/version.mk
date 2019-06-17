@@ -1,6 +1,6 @@
-# $NetBSD: version.mk,v 1.1 2019/05/21 20:55:02 wiz Exp $
+# $NetBSD: version.mk,v 1.2 2019/06/17 05:33:10 wiz Exp $
 
-VERSION=	5.0
+VERSION=	5.0.1
 
 PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # 5.0 has "beta" support for python 3
 # see https://www.mercurial-scm.org/wiki/Python3
