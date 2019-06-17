@@ -1,4 +1,4 @@
-# $NetBSD: curses.builtin.mk,v 1.19 2018/10/04 15:34:42 roy Exp $
+# $NetBSD: curses.builtin.mk,v 1.20 2019/06/17 18:19:55 sjmulder Exp $
 
 BUILTIN_PKG:=	curses
 
@@ -13,6 +13,7 @@ BUILTIN_FIND_HEADERS.H_CURSES=			curses.h
 BUILTIN_TEST_CURSES_FUNCS=	chgat getsyx halfdelay putwin
 BUILTIN_TEST_CURSES_FUNCS+=	resize_term resizeterm ripoffline set_escdelay syncok
 BUILTIN_TEST_CURSES_FUNCS+=	wgetnstr wsyncup mvwchgat vw_printw
+BUILTIN_TEST_CURSES_FUNCS+=	getmouse
 BUILTIN_TEST_CURSES_DEFINES=	WA_NORMAL
 
 .for func in ${BUILTIN_TEST_CURSES_FUNCS}
