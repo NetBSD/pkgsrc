@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/05/18 19:26:50 thorpej Exp $
+# $NetBSD: Makefile,v 1.3 2019/06/17 17:08:26 gdt Exp $
 
 # Version isn't super-meaningful; we're grabbing a collection of non-changing
 # tools from a variety of locations.
@@ -11,8 +11,13 @@ CATEGORIES=	sysutils
 MAINTAINER=	port-arm@NetBSD.org
 COMMENT=	Trusted Firmware packaging tools for the Amlogic Meson family of SoCs
 
-RESTRICTED=	Redistribution not permitted - see licenses/amlogic-meson-fwtools
 LICENSE=	amlogic-meson-fwtools-license
+
+RESTRICTED=	Redistribution not permitted - see licenses/amlogic-meson-fwtools
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 #
 # These tools are distributed only as Linux x86_64 binaries.
