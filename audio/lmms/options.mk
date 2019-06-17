@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2019/06/10 19:08:42 nia Exp $
+# $NetBSD: options.mk,v 1.2 2019/06/17 07:31:12 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lmms
 
@@ -38,6 +38,9 @@ CMAKE_ARGS+=	-DWANT_PULSEAUDIO=OFF
 
 .if !empty(PKG_OPTIONS:Msdl)
 CMAKE_ARGS+=	-DWANT_SDL=ON
+# libSDL defines some symbols that are also defined in libX11, which has
+# been fixed in SDL 1.2.11.
+BUILDLINK_ABI_DEPENDS.SDL+=	SDL>=1.2.11
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../audio/SDL_sound/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
