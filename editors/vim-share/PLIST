@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2019/03/10 18:45:45 morr Exp $
+@comment $NetBSD: PLIST,v 1.46 2019/06/17 22:18:02 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -213,6 +213,7 @@ share/vim/${VIM_SUBDIR}/doc/pi_spec.txt
 share/vim/${VIM_SUBDIR}/doc/pi_tar.txt
 share/vim/${VIM_SUBDIR}/doc/pi_vimball.txt
 share/vim/${VIM_SUBDIR}/doc/pi_zip.txt
+share/vim/${VIM_SUBDIR}/doc/popup.txt
 share/vim/${VIM_SUBDIR}/doc/print.txt
 share/vim/${VIM_SUBDIR}/doc/quickfix.txt
 share/vim/${VIM_SUBDIR}/doc/quickref.txt
@@ -417,6 +418,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/muttrc.vim
 share/vim/${VIM_SUBDIR}/ftplugin/nanorc.vim
 share/vim/${VIM_SUBDIR}/ftplugin/neomuttrc.vim
 share/vim/${VIM_SUBDIR}/ftplugin/netrc.vim
+share/vim/${VIM_SUBDIR}/ftplugin/nroff.vim
 share/vim/${VIM_SUBDIR}/ftplugin/nsis.vim
 share/vim/${VIM_SUBDIR}/ftplugin/objc.vim
 share/vim/${VIM_SUBDIR}/ftplugin/ocaml.vim
@@ -618,6 +620,7 @@ share/vim/${VIM_SUBDIR}/indent/tex.vim
 share/vim/${VIM_SUBDIR}/indent/tf.vim
 share/vim/${VIM_SUBDIR}/indent/tilde.vim
 share/vim/${VIM_SUBDIR}/indent/treetop.vim
+share/vim/${VIM_SUBDIR}/indent/typescript.vim
 share/vim/${VIM_SUBDIR}/indent/vb.vim
 share/vim/${VIM_SUBDIR}/indent/verilog.vim
 share/vim/${VIM_SUBDIR}/indent/vhdl.vim
@@ -1259,6 +1262,7 @@ share/vim/${VIM_SUBDIR}/syntax/taskedit.vim
 share/vim/${VIM_SUBDIR}/syntax/tasm.vim
 share/vim/${VIM_SUBDIR}/syntax/tcl.vim
 share/vim/${VIM_SUBDIR}/syntax/tcsh.vim
+share/vim/${VIM_SUBDIR}/syntax/template.vim
 share/vim/${VIM_SUBDIR}/syntax/teraterm.vim
 share/vim/${VIM_SUBDIR}/syntax/terminfo.vim
 share/vim/${VIM_SUBDIR}/syntax/tex.vim
@@ -1280,6 +1284,7 @@ share/vim/${VIM_SUBDIR}/syntax/tssop.vim
 share/vim/${VIM_SUBDIR}/syntax/tt2.vim
 share/vim/${VIM_SUBDIR}/syntax/tt2html.vim
 share/vim/${VIM_SUBDIR}/syntax/tt2js.vim
+share/vim/${VIM_SUBDIR}/syntax/typescript.vim
 share/vim/${VIM_SUBDIR}/syntax/uc.vim
 share/vim/${VIM_SUBDIR}/syntax/udevconf.vim
 share/vim/${VIM_SUBDIR}/syntax/udevperm.vim
@@ -1398,6 +1403,7 @@ share/vim/${VIM_SUBDIR}/tutor/tutor.it.utf-8
 share/vim/${VIM_SUBDIR}/tutor/tutor.ja.euc
 share/vim/${VIM_SUBDIR}/tutor/tutor.ja.sjis
 share/vim/${VIM_SUBDIR}/tutor/tutor.ja.utf-8
+share/vim/${VIM_SUBDIR}/tutor/tutor.ko
 share/vim/${VIM_SUBDIR}/tutor/tutor.ko.euc
 share/vim/${VIM_SUBDIR}/tutor/tutor.ko.utf-8
 share/vim/${VIM_SUBDIR}/tutor/tutor.lv.utf-8
