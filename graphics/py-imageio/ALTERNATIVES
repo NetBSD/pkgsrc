@@ -1,0 +1,2 @@
+bin/imageio_download_bin @PREFIX@/bin/imageio_download_bin-@PYVERSSUFFIX@
+bin/imageio_remove_bin @PREFIX@/bin/imageio_remove_bin-@PYVERSSUFFIX@
