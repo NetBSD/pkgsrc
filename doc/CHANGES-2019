@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2568 2019/06/17 16:43:50 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2569 2019/06/17 17:05:14 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4295,3 +4295,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added parallel/openmp version 8.0.0 [adam 2019-06-17]
 	Removed devel/py-tabular [adam 2019-06-17]
 	Removed graphics/py-imagingtk [adam 2019-06-17]
+	Updated print/gutenprint-lib to 5.2.15 [gdt 2019-06-17]
