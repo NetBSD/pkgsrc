@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1388 2019/06/15 09:38:03 adam Exp $
+# $NetBSD: Makefile,v 1.1389 2019/06/17 20:57:39 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -682,6 +682,7 @@ SUBDIR+=	py-feedgenerator
 SUBDIR+=	py-filebrowser_safe
 SUBDIR+=	py-flask
 SUBDIR+=	py-flask-admin
+SUBDIR+=	py-flask-api
 SUBDIR+=	py-flask-assets
 SUBDIR+=	py-flask-babel
 SUBDIR+=	py-flask-babelex
@@ -692,6 +693,7 @@ SUBDIR+=	py-flask-cors
 SUBDIR+=	py-flask-debugtoolbar
 SUBDIR+=	py-flask-flatpages
 SUBDIR+=	py-flask-frozen
+SUBDIR+=	py-flask-jwt-extended
 SUBDIR+=	py-flask-limiter
 SUBDIR+=	py-flask-login
 SUBDIR+=	py-flask-mail
