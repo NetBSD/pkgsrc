@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2553 2019/06/17 00:37:01 gdt Exp $
+$NetBSD: CHANGES-2019,v 1.2554 2019/06/17 05:33:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4278,3 +4278,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated math/py-powerlaw to 1.4.6 [adam 2019-06-16]
 	Updated audio/fasttracker2 to 2.159 [fox 2019-06-16]
 	Added math/bc-gh version 2.0.3 [gdt 2019-06-17]
+	Updated devel/py-mercurial to 5.0.1 [wiz 2019-06-17]
