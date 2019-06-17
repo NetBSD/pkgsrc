@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/05/31 12:43:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/06/17 21:03:11 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,4 +7,6 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/cfscrape/__init__.py
 ${PYSITELIB}/cfscrape/__init__.pyc
 ${PYSITELIB}/cfscrape/__init__.pyo
-${PYSITELIB}/cfscrape/user_agents.json
+${PYSITELIB}/cfscrape/user_agents.py
+${PYSITELIB}/cfscrape/user_agents.pyc
+${PYSITELIB}/cfscrape/user_agents.pyo
