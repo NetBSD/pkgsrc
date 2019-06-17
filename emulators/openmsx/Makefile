@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.53 2019/05/29 19:52:49 adam Exp $
+# $NetBSD: Makefile,v 1.54 2019/06/17 15:16:28 nia Exp $
 
-DISTNAME=		openmsx-0.14.0
-PKGREVISION=		2
+DISTNAME=		openmsx-0.15.0
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_GITHUB:=openMSX/}
 GITHUB_PROJECT=		openMSX
-GITHUB_RELEASE=		RELEASE_0_14_0
+GITHUB_RELEASE=		RELEASE_0_15_0
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://openmsx.org/
+HOMEPAGE=		https://openmsx.org/
 COMMENT=		MSX emulator that aims for perfection
 LICENSE=		gnu-gpl-v2
 
 USE_TOOLS+=		gmake
-USE_LANGUAGES+=		c++03
+USE_LANGUAGES=		c c++14
 HAS_CONFIGURE=		yes
 
 MAKE_FILE=		GNUmakefile
@@ -31,18 +30,26 @@ SUBST_CLASSES+=			bswap
 SUBST_STAGE.bswap=		pre-configure
 SUBST_MESSAGE.bswap=		Do not conflict bswap functions.
 SUBST_FILES.bswap=		src/utils/endian.hh
+SUBST_FILES.bswap+=		src/utils/sha1.cc
 SUBST_FILES.bswap+=		src/utils/tiger.cc
 SUBST_SED.bswap=		-e 's, bswap, openmsx_bswap,g'
 SUBST_SED.bswap+=		-e 's,::bswap,::openmsx_bswap,g'
 
+# c++14
+GCC_REQD+=	5
+
 .include "../../mk/bsd.prefs.mk"
 
-.if "${PKGSRC_COMPILER}" == "clang"
-# As a result of predefining CXX, .wrapper/bin/clang++ is automatically
-# hardlinked to c++, g++, which is exactly what we what!
-CXX=clang++
-.elif "${PKGSRC_COMPILER}" == "gcc"
-CXX=g++
+do-configure:
+.if !empty(PKGSRC_COMPILER:Mclang)
+	cd ${WRKSRC} && ${CONFIGURE_ENV} CXX=clang++ \
+	    ${GMAKE} -f build/main.mk probe
+.elif !empty(PKGSRC_COMPILER:Mgcc)
+	cd ${WRKSRC} && ${CONFIGURE_ENV} CXX=g++ \
+	    ${GMAKE} -f build/main.mk probe
+.else
+	cd ${WRKSRC} && ${CONFIGURE_ENV} \
+	    ${GMAKE} -f build/main.mk probe
 .endif
 
 post-extract:
