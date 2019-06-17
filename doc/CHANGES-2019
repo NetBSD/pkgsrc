@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2562 2019/06/17 14:08:30 micha Exp $
+$NetBSD: CHANGES-2019,v 1.2563 2019/06/17 14:28:58 tron Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4283,3 +4283,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/unbound to 1.9.2 [he 2019-06-17]
 	Updated emulators/stella to 6.0.1 [nia 2019-06-17]
 	Added games/doomlegacy version 1.47.2 [baeuerle 2019-06-17]
+	Updated mail/mutt to 1.12.1 [tron 2019-06-17]
