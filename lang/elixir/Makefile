@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/05/23 23:42:27 yyamano Exp $
+# $NetBSD: Makefile,v 1.12 2019/06/17 16:58:42 nia Exp $
 
 DISTNAME=		elixir-1.7.4
 PKGREVISION=		1
@@ -19,6 +19,9 @@ REPLACE_INTERPRETER+=	elixir
 REPLACE.elixir.old=	.*elixir
 REPLACE.elixir.new=	${TOOLS_PLATFORM.env} ${PREFIX}/bin/elixir
 REPLACE_FILES.elixir=	bin/mix
+
+CHECK_INTERPRETER_SKIP+=	bin/mix
+CHECK_INTERPRETER_SKIP+=	lib/elixir/bin/mix
 
 BUILD_TARGET=		compile
 TEST_TARGET=		test
