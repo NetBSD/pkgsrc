@@ -1,0 +1,267 @@
+.\"=============================================================================
+.\" Header
+.\"
+.\" Copyright (c) 2019 by Michael Baeuerle.
+.\" License: GNU Free Documentation License (GFDL)
+.\"
+.TH $NAME 1 2019-06-16 Unix "$NAME $VERSION manual"
+.\"
+.\"
+.\"=============================================================================
+.\" NAME section
+.\"
+.SH NAME
+Doom Legacy
+.\"
+.\"
+.\"=============================================================================
+.\" SYNOPSIS section
+.\"
+.SH SYNOPSIS
+.B $NAME
+[-opengl] [-iwad xxx.wad] [-file pwad1.wad [pwad2.wad ...]]
+.PP
+.B $NAME
+[-h [g|m|c|s|d|D] | --version]
+.\"
+.\"
+.\"=============================================================================
+.\" DESCRIPTION section
+.\"
+.SH DESCRIPTION
+
+The following information is quoted from Reference Manual:
+.PP
+.B http://doomlegacy.sourceforge.net/docs/legacy.html
+.PP
+
+Doom Legacy can play Doom, Boom, Marine's Best Friend (MBF), and Heretic maps.
+In addition to the original games by id Software and Raven Software, there are
+hundreds of free, fan-made maps available on the Internet. These maps are
+typically distributed as PWAD files, which are not fully self-contained.
+For each game you will also need the corresponding IWAD data file, which
+contains all the graphics, wall and floor textures, sounds, and music for that
+game. For example, if you want to play Doom II maps, you'll need the IWAD file
+doom2.wad, or one of the free replacements.
+
+Legacy has implemented the fundamental and de-facto-standard Boom extensions,
+and the Marine's Best Friend (MBF) extensions. Legacy also has implemented
+among other things 3D floors, swimmable water and other special effects using
+extended linedef codes, and supports the FraggleScript scripting language.
+
+Legacy includes two different graphics engines, the old Doom software renderer
+(with many improvements) and an OpenGL-based hardware renderer.
+The OpenGL renderer is shinier and has fancier effects than the software one,
+but it does not do everything that the software renderer does. It does have
+coronas, explosion light, and other light effects that the software renderer
+does not do.
+Some wads rely upon violating wad rules to get trick effects. Most rely upon
+tricking the software renderer into not drawing something. Using those wads
+with the OpenGL renderer you will see holes in the floor and ceiling, and
+warning messges about polygons.
+
+The first game console we know of was from id Software's game Quake.
+We have been inspired by it and have tried to implement the same functionality
+for the benefit of Quake/Doom fans.
+
+Since Legacy 1.2, the network part of Doom has been totally rewritten.
+It now uses a better transfer method for the packets, (which is usually faster),
+and also implements a basic Client/Server model, where some critical game
+options are changeable only by the server in multiplayer games. Since the
+network communication is faster, we have upped the maximum number of players to
+32!
+.\"
+.\"
+.\"=============================================================================
+.\" OPTIONS section
+.\"
+.SH OPTIONS
+.TP 25
+.BI -config " file
+Set the configfile to use.
+.br
+Default: config.cfg
+.TP
+.BI -file " file [file ...]
+Set PWAD (Patch WAD) files to use.
+.TP
+.BI -game " mode
+Forces a particular game mode to be used.
+.br
+Examples for mode: doom, doomu, doom2, heretic
+.br
+(See Reference Manual for complete table)
+.TP
+.BI -h " [section]
+Print help. An optional section can be specified for details.
+.TP
+.BI -home " directory
+Home directory location, where your configfiles and savegames are kept.
+.TP
+.BI -iwad " file
+Set the main IWAD (Internal WAD) file to use.
+This also determines the game mode when -game is not used.
+.TP
+.BI -noendtext
+Suppress the game EndText screen, which could disrupt some terminal emulations
+because of the special character attributes used.
+.TP
+.BI -opengl
+Hardware accelerated rendering using the OpenGL library.
+Will use hardware acceleration for OpenGL if available.
+If the video card does not have OpenGL hardware acceleration then it will use
+the OpenGL emulation in software, which is very slow.
+.TP
+.BI --version
+Print version and build date.
+.TP
+.BI -warp " num
+Select the map, start game immediately.
+.br
+In DoomII, -warp 13 will goto MAP13.
+.br
+In Ultimate Doom, -warp 1 3 will goto E1M3.
+.TP
+See Reference Manual for a complete options list.
+.\"
+.\"
+.\"=============================================================================
+.\" ENVIRONMENT section
+.\"
+.SH ENVIRONMENT
+.TP 25
+.B DISPLAY
+X display to use. More information about X can be found in
+.BR X (7).
+.TP
+.B DOOMWADDIR
+This environment variable defines a path where WAD files are located.
+.br
+The default is $WADDIR.
+.TP
+.B HOME
+This variable indicates your home directory.
+.TP
+.B USER
+This variable contains your username, is used as the default value for your
+player name in multiplayer games.
+.\"
+.\"
+.\"=============================================================================
+.\" FILES section
+.\"
+.SH FILES
+.TP 25
+.B ~/.doomlegacy/config.cfg
+Default configuration file.
+.TP
+.B ~/.doomlegacy/glconfig.cfg
+Default configuration file for OpenGL mode.
+.TP
+.B ~/.doomlegacy/doomsav*.dsg
+Saved game states.
+.\"
+.\"
+.\"=============================================================================
+.\" NOTES section
+.\"
+.SH NOTES
+If you get no MIDI music, ensure that SDL_mixer has a working MIDI synthesizer
+available. If you use timidity, check that instruments are installed (e.g.
+freepats).
+.PP
+Acknowledgments:
+.IP \(bu 3
+Thanks to id Software of course, for creating the greatest game of all time!
+.PP
+.IP \(bu 3
+To Raven Software, for Heretic and Hexen!
+.PP
+.IP \(bu 3
+Chi Hoang for DosDoom which got us started.
+.PP
+.IP \(bu 3
+Bell Kin for porting Doom Legacy to Linux.
+.PP
+.IP \(bu 3
+Stephane Dierickx for the two pictures in the laucher and the help screen of
+Legacy.
+.PP
+.IP \(bu 3
+Sebastien Bacquet for Qmus2mid.
+.PP
+.IP \(bu 3
+Simon Howard for FraggleScript.
+.PP
+.IP \(bu 3
+TeamTNT for Boom.
+.PP
+.IP \(bu 3
+Steven McGranahan and Robert Baeuml for their large contributions.
+.PP
+.IP \(bu 3
+To all of you who send us ideas and bug reports, thank you!
+.RE
+.\"
+.\"
+.\"=============================================================================
+.\" AUTHORS section
+.\"
+.SH AUTHORS
+Original game by id Software.
+.br
+Heretic by Raven Software.
+.br
+Doom Legacy by Fabrice Denis, Boris Pereira and Thierry Van Elsuwe.
+.br
+Maintained by the Doom Legacy Team since 2001.
+.br
+Man page for pkgsrc by Michael Baeuerle.
+.\"
+.\"
+.\"=============================================================================
+.\" BUGS section
+.\"
+.\" .SH BUGS
+.\"
+.\"
+.\"=============================================================================
+.\" EXAMPLES section
+.\"
+.SH EXAMPLES
+Start the shareware Episode 1 of Doom:
+.IP
+$ $NAME
+.PP
+For the following examples you need the original WAD files of the games
+(copy them to $WADDIR or set DOOMWADDIR to the desired location).
+
+Start Doom and use the OpenGL renderer:
+.IP
+$ $NAME -opengl -iwad doom.wad
+.PP
+Start Doom II:
+.IP
+$ $NAME -iwad doom2.wad
+.PP
+Start Sigil (Doom Episode 5) in compatibility mode as Episode 3:
+.IP
+$ $NAME -game doomu -iwad doomu.wad -file SIGIL_COMPAT.wad
+.PP
+Start Heretic:
+.IP
+$ $NAME -iwad heretic.wad
+.PP
+.\"
+.\"
+.\"=============================================================================
+.\" SEE ALSO section
+.\"
+.SH SEE ALSO
+.BR timidity (1),
+.BR X (7)
+.br
+.BR http://doomlegacy.sourceforge.net/docs/legacy.html
+.\"
+.\"
+.\" EOF

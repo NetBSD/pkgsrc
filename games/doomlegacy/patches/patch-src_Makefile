@@ -1,0 +1,135 @@
+$NetBSD: patch-src_Makefile,v 1.1 2019/06/17 13:53:22 micha Exp $
+
+Add NetBSD to OS list.
+Honor environment variables CFLAGS, LDFLAGS and LIBS.
+Silence warnings about common symbol merging.
+
+--- src/Makefile.orig	2018-07-16 09:17:06.000000000 +0000
++++ src/Makefile
+@@ -449,13 +449,14 @@ endif
+ endif
+ 
+ 
+-OS_LIST:=LINUX FREEBSD WIN32 WIN7 WIN98 OS2 DOS MAC
++OS_LIST:=LINUX FREEBSD NETBSD WIN32 WIN7 WIN98 OS2 DOS MAC
+ 
+-OPTS:=
++# Do not reset OPTS (init to CFLAGS from environment)
++OPTS:=$(CFLAGS)
+ 
+ ifeq ($(OS), LINUX)
+   LINUX=1
+-  OPTS:=-DLINUX
++  OPTS+=-DLINUX
+   #Known Compiler symbols
+   # linux  __linux  __linux__
+   # AIX defines: _AIX
+@@ -474,15 +475,23 @@ else
+ ifeq ($(OS), FREEBSD)
+   # Has some linking differences from the rest of Linux-like OS.
+   FREEBSD=1
+-  OPTS:=-DLINUX -DFREEBSD
++  OPTS+=-DLINUX -DFREEBSD
+   #Known Compiler symbols
+   # __FreeBSD__  __FreeBSD_kernel__  __DragonFly__
+   # SDL_platform.h for FreeBSD defines: __FREEBSD__
+ else
++ifeq ($(OS), NETBSD)
++  # Uses statvfs(5).
++  NETBSD=1
++  OPTS+=-DLINUX -DNETBSD
++  #Known Compiler symbols
++  # __NetBSD__
++  # SDL_platform.h for FreeBSD defines: __NETBSD__
++else
+ ifeq ($(OS), WIN32)
+   WIN32=1
+   DOSFILE=1
+-  OPTS:=-DWIN32
++  OPTS+=-DWIN32
+   # if have windows > Win98, and want large memory reports
+   ifdef WIN_LARGE_MEM
+     OPTS+=-DWIN_LARGE_MEM
+@@ -500,7 +509,7 @@ ifeq ($(OS), WIN7)
+   # This does  NOT YET  make a version customized to Win7/8.
+   WIN32=1
+   DOSFILE=1
+-  OPTS:=-DWIN32
++  OPTS+=-DWIN32
+   # probably want large memory reports
+   OPTS+=-DWIN_LARGE_MEM
+   #Known Compiler symbols
+@@ -511,12 +520,12 @@ ifeq ($(OS), WIN98)
+   # If Win98 differences occur, this category can isolate them.
+   WIN32=1
+   DOSFILE=1
+-  OPTS:=-DWIN32
++  OPTS+=-DWIN32
+ else
+ ifeq ($(OS), OS2)
+   OS2=1
+   DOSFILE=1
+-  OPTS:=-D__OS2__
++  OPTS+=-D__OS2__
+   #Known Compiler symbols
+   # __OS2__
+ else
+@@ -545,15 +554,19 @@ endif
+ endif
+ endif
+ endif
++endif
+ export DOSFILE
+ 
+ # all OPTINC need to have -I. because of how includes are written
+ # however the order of -I may be important, so it is left to each SMIF.
+ OPTINC:=
+-LIBS:=
+-LDFLAGS:=
++# Do not reset LIBS
++#LIBS:=
++# Do not reset LDFLAGS
++#LDFLAGS:=
+ INSTALL_SUPPL:=
+ 
++# Note: External CFLAGS are now part of OPTS and appended later
+ CFLAGS:=
+ # Machine architecture.
+ ifdef ARCH
+@@ -597,14 +610,14 @@ ifeq ($(SMIF), SDL)
+     ifndef MAC
+       # default is Linux, for all unix SDL
+       EXENAME:=doomlegacy
+-      LDFLAGS=-L/usr/X11R6/lib
+-      LIBS:=-lGL -lGLU -lm
++      LDFLAGS +=-L/usr/X11R6/lib
++      LIBS +=-lGL -lGLU -lm
+       # -L/usr/X11R6/lib is needed by Linux 2.4 and others that still have
+       # the GLU libraries in an X11 directory.
+       # -lm is needed for pow, powf, and other MATH1 functions.
+     else
+       EXENAME:=doomlegacy
+-      LDFLAGS=-framework OpenGL
++      LDFLAGS +=-framework OpenGL
+     endif
+ 
+     SDL_CONFIG:=1
+@@ -1010,12 +1023,12 @@ CFLAGS+=-ffast-math -fno-strict-aliasing
+ LCFLAGS:=$(CFLAGS)
+ CFLAGS+=$(OPTS) $(OPTINC)
+ 
+-ifdef MAC
+-  # MAC linker does not accept these flags.
+-else
+-  # Flags to the linker.
+-  LDFLAGS+=-Xlinker --warn-common
+-endif
++#ifdef MAC
++#  # MAC linker does not accept these flags.
++#else
++#  # Flags to the linker.
++#  # LDFLAGS+=-Xlinker --warn-common
++#endif
+ 
+ SNDSERV_EXTRAFLAGS:=
+ ifdef HAVE_ESD
