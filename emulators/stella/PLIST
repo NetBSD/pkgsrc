@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2015/12/21 06:46:04 dbj Exp $
+@comment $NetBSD: PLIST,v 1.11 2019/06/17 13:51:08 nia Exp $
 bin/stella
 share/applications/stella.desktop
 share/doc/stella/Announce.txt
@@ -14,6 +14,7 @@ share/doc/stella/graphics/chucky_cheese.png
 share/doc/stella/graphics/circuit.png
 share/doc/stella/graphics/commandmenu.png
 share/doc/stella/graphics/console.png
+share/doc/stella/graphics/debugger_audiotab.png
 share/doc/stella/graphics/debugger_bankcomplex.png
 share/doc/stella/graphics/debugger_banksimple.png
 share/doc/stella/graphics/debugger_bpstatus.png
@@ -22,6 +23,7 @@ share/doc/stella/graphics/debugger_dataops.png
 share/doc/stella/graphics/debugger_globalbuttons.png
 share/doc/stella/graphics/debugger_iotab.png
 share/doc/stella/graphics/debugger_main.png
+share/doc/stella/graphics/debugger_options.png
 share/doc/stella/graphics/debugger_ram-dpc.png
 share/doc/stella/graphics/debugger_ram-f8sc.png
 share/doc/stella/graphics/debugger_ram.png
@@ -39,29 +41,37 @@ share/doc/stella/graphics/eventmapping_devsports.png
 share/doc/stella/graphics/eventmapping_remap.png
 share/doc/stella/graphics/jr_pacman.png
 share/doc/stella/graphics/launcher.png
-share/doc/stella/graphics/launcher_filter.png
 share/doc/stella/graphics/launcher_options_files.png
 share/doc/stella/graphics/launcher_options_snapshots.png
 share/doc/stella/graphics/launcher_override.png
 share/doc/stella/graphics/logs.png
 share/doc/stella/graphics/options.png
 share/doc/stella/graphics/options_audio.png
-share/doc/stella/graphics/options_debugger.png
+share/doc/stella/graphics/options_developer.png
+share/doc/stella/graphics/options_developer_debugger.png
+share/doc/stella/graphics/options_developer_emulation.png
+share/doc/stella/graphics/options_developer_timemachine.png
+share/doc/stella/graphics/options_developer_video.png
 share/doc/stella/graphics/options_gameinfo.png
-share/doc/stella/graphics/options_input.png
+share/doc/stella/graphics/options_gameinfo_console.png
+share/doc/stella/graphics/options_gameinfo_controller.png
+share/doc/stella/graphics/options_gameinfo_display.png
 share/doc/stella/graphics/options_misc.png
+share/doc/stella/graphics/options_misc_classic.png
+share/doc/stella/graphics/options_misc_light.png
 share/doc/stella/graphics/options_ui.png
 share/doc/stella/graphics/options_video.png
+share/doc/stella/graphics/options_video_dbgcolors.png
 share/doc/stella/graphics/options_video_tv.png
 share/doc/stella/graphics/pacman.png
-share/doc/stella/graphics/rom_browser.png
+share/doc/stella/graphics/qwertz.png
 share/doc/stella/graphics/romaudit.png
 share/doc/stella/graphics/rominfo_1x_large.png
 share/doc/stella/graphics/rominfo_1x_small.png
 share/doc/stella/graphics/rominfo_2x_small.png
 share/doc/stella/graphics/secret_quest.png
-share/doc/stella/graphics/select_romdir.png
 share/doc/stella/graphics/space_invaders.png
+share/doc/stella/graphics/timemachine.png
 share/doc/stella/index.html
 share/icons/hicolor/128x128/apps/stella.png
 share/icons/hicolor/16x16/apps/stella.png
