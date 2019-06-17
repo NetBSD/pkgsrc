@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2017/09/15 06:40:44 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/06/17 20:50:02 adam Exp $
 
 GITHUB_PROJECT=	fecon235
 GITHUB_TAG=	v5.17.0722
 DISTNAME=	${GITHUB_TAG}
 PKGNAME=	${PYPKGPREFIX}-${GITHUB_PROJECT}-${DISTNAME:S/v//}
-CATEGORIES=	finance
+CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rsvp/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
@@ -21,12 +21,15 @@ DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-statsmodels-[0-9]*:../../math/py-statsmodels
 DEPENDS+=	${PYPKGPREFIX}-sympy-[0-9]*:../../math/py-sympy
 
-NO_BUILD=	yes
-PY_PATCHPLIST=	yes
+USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-matplotlib, py-scipy
+
+NO_BUILD=		yes
+PY_PATCHPLIST=		yes
+PYTHON_SELF_CONFLICT=	yes
 
 INSTALLATION_DIRS+=	${PYSITELIB}/fecon235/lib share/doc/fecon235
-
-.include "../../lang/python/extension.mk"
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/fecon235.py \
@@ -38,4 +41,5 @@ do-install:
 		${INSTALL_DATA} $$f ${DESTDIR}${PREFIX}/share/doc/fecon235/; \
 	done
 
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
