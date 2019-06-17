@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE.doomlegacy,v 1.1 2019/06/17 13:53:22 micha Exp $
+
+Note: The location of the ${PKGNAME} WAD directory has been set to:
+
+	${DOOMWADDIR_CONF}
+
+This is the pkgsrc standard Doom WAD directory location (shared with other
+Doom packages).
+===========================================================================
