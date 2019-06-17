@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.408 2019/06/15 17:51:13 adam Exp $
+# $NetBSD: Makefile,v 1.409 2019/06/17 00:36:10 gdt Exp $
 
 COMMENT=	Mathematics
 
@@ -98,6 +98,7 @@ SUBDIR+=	antixls
 SUBDIR+=	aribas
 SUBDIR+=	arpack
 SUBDIR+=	bc
+SUBDIR+=	bc-gh
 SUBDIR+=	bcal
 SUBDIR+=	blas
 SUBDIR+=	blitz++
