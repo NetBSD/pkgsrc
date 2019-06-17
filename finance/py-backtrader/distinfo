@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/05/12 22:06:53 minskim Exp $
+$NetBSD: distinfo,v 1.2 2019/06/17 05:43:02 adam Exp $
 
-SHA1 (backtrader-1.9.58.122.tar.gz) = b87380b70991aac2ea0142afbd80a150ab7afd7b
-RMD160 (backtrader-1.9.58.122.tar.gz) = e60f9c1441ebe02be1e771616f5182bece90ff2e
-SHA512 (backtrader-1.9.58.122.tar.gz) = 5d3c06bd59bbf190a379e3fb090815209dc61489428e5b46e9b9d732c893a75150e5e967d2a74f83d327245292100492e3ac03d7126be7f548306d1bd83b6b26
-Size (backtrader-1.9.58.122.tar.gz) = 16191032 bytes
-SHA1 (patch-backtrader_datacache.py) = e4b6130f4eef6b8a8479c843386604b8e18c9783
+SHA1 (backtrader-1.9.74.123.tar.gz) = 55a49a0c7561afa89d5127013fed8844c0ddbb42
+RMD160 (backtrader-1.9.74.123.tar.gz) = c740a47055c8fac4502ed31e71c7b1114453310c
+SHA512 (backtrader-1.9.74.123.tar.gz) = cd8429d0c08e778727e07cb31f9dd462e9ba289f54b407b086107b2a0267c95d4bf8ac85bbfa3762900408eb5e7d57c89d675fd5241a87de847e39fd5d0ddd11
+Size (backtrader-1.9.74.123.tar.gz) = 2175081 bytes
