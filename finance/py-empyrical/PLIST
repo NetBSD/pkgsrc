@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2017/09/13 16:10:21 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/06/17 15:24:34 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/empyrical/__init__.py
@@ -10,6 +11,12 @@ ${PYSITELIB}/empyrical/__init__.pyo
 ${PYSITELIB}/empyrical/_version.py
 ${PYSITELIB}/empyrical/_version.pyc
 ${PYSITELIB}/empyrical/_version.pyo
+${PYSITELIB}/empyrical/deprecate.py
+${PYSITELIB}/empyrical/deprecate.pyc
+${PYSITELIB}/empyrical/deprecate.pyo
+${PYSITELIB}/empyrical/perf_attrib.py
+${PYSITELIB}/empyrical/perf_attrib.pyc
+${PYSITELIB}/empyrical/perf_attrib.pyo
 ${PYSITELIB}/empyrical/periods.py
 ${PYSITELIB}/empyrical/periods.pyc
 ${PYSITELIB}/empyrical/periods.pyo
@@ -19,6 +26,9 @@ ${PYSITELIB}/empyrical/stats.pyo
 ${PYSITELIB}/empyrical/tests/__init__.py
 ${PYSITELIB}/empyrical/tests/__init__.pyc
 ${PYSITELIB}/empyrical/tests/__init__.pyo
+${PYSITELIB}/empyrical/tests/test_perf_attrib.py
+${PYSITELIB}/empyrical/tests/test_perf_attrib.pyc
+${PYSITELIB}/empyrical/tests/test_perf_attrib.pyo
 ${PYSITELIB}/empyrical/tests/test_stats.py
 ${PYSITELIB}/empyrical/tests/test_stats.pyc
 ${PYSITELIB}/empyrical/tests/test_stats.pyo
