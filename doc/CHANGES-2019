@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2558 2019/06/17 13:49:10 micha Exp $
+$NetBSD: CHANGES-2019,v 1.2559 2019/06/17 13:51:43 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4282,3 +4282,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ocaml-fmt to 0.8.5nb1 [jaapb 2019-06-17]
 	Updated net/unbound to 1.9.2 [he 2019-06-17]
 	Added games/doomlegacy version 1.47.2 [baeuerle 2019-06-17]
+	Updated emulators/stella to 6.0.1 [nia 2019-06-17]
