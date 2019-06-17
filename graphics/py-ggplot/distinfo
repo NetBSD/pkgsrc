@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.1 2016/07/15 07:29:54 wiz Exp $
+$NetBSD: distinfo,v 1.2 2019/06/17 20:27:16 adam Exp $
 
-SHA1 (ggplot-0.10.4.tar.gz) = d10280682996b765b499841b6c2eecfbf355d0f4
-RMD160 (ggplot-0.10.4.tar.gz) = ee16262ecf6f593752027cb8ed22fbad787e3862
-SHA512 (ggplot-0.10.4.tar.gz) = 488e34dd43053c613677d9906df66f8de1ac6c0393a3130cad5214a3eba4648e1724b017e6beab1bbfc6f08296157f2e86740736534cb8d910aa1513fcd725b2
-Size (ggplot-0.10.4.tar.gz) = 1943413 bytes
+SHA1 (ggplot-0.11.5.tar.gz) = a28f95147f1dd4d91df45ddd230b119343d66e2d
+RMD160 (ggplot-0.11.5.tar.gz) = 661ff2a7f5734b3df71d9da8f7ffd7c4d2975e7c
+SHA512 (ggplot-0.11.5.tar.gz) = e505ffcda39ba3a4c60f617b7fd46d80392a4f0e1964ba2d5de754c22824c495a5f38cd25c9d0ce00a0b5f5fcd746eb207083ce7648a2bfd7fd2835a2019c4c5
+Size (ggplot-0.11.5.tar.gz) = 1948627 bytes
+SHA1 (patch-ggplot_stats_smoothers.py) = 190df144f953b745d6376894c4ada67c64215ed7
+SHA1 (patch-ggplot_utils.py) = d303ae6f240589f62110f3ff6586eab21976738b
