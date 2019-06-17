@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/09/13 16:10:21 minskim Exp $
+$NetBSD: distinfo,v 1.2 2019/06/17 15:24:34 adam Exp $
 
-SHA1 (empyrical-0.3.2.tar.gz) = 34593901a04694785e9173c07b71be2a04e06005
-RMD160 (empyrical-0.3.2.tar.gz) = 54e1be05ce4789cfa51b110b4f17f692a4302139
-SHA512 (empyrical-0.3.2.tar.gz) = c79ff3210c19317bc51bdf331ffab8a599ae3e9d41b88acaffe83d1bba47587d9199d3811e4abfdec75245e08c51c2a6ae2eda6164736e4d1cc55e975df2c162
-Size (empyrical-0.3.2.tar.gz) = 37741 bytes
+SHA1 (empyrical-0.5.0.tar.gz) = 81ed040a605a08cbf60e0a4f3bc7f223d8224611
+RMD160 (empyrical-0.5.0.tar.gz) = 23ea59a927291050cef2b9528bf90a45b317116b
+SHA512 (empyrical-0.5.0.tar.gz) = 0715414e7781b9593aba4e748ad6198c4a9694423727286a437c5b8d68d11797d7b7ce475a96aa56a05916d10bc303effea964c3254a4fda3a8d9d26f3eacaaf
+Size (empyrical-0.5.0.tar.gz) = 49802 bytes
