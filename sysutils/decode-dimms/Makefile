@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2019/04/08 00:16:06 pgoyette Exp $
+# $NetBSD: Makefile,v 1.15 2019/06/17 21:03:50 pgoyette Exp $
 
 # no Release yet
 _DATE=		20190405
-PKGREVISION=	1
+PKGREVISION=	2
 GIT_COMMIT=	cea0000657a2dde506df91ecce6b18ac2d7224db
 DISTNAME=	i2c-tools-${GIT_COMMIT}
 PKGNAME=	decode-dimms-0.0.${_DATE}
