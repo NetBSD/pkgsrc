@@ -1,10 +1,10 @@
-$NetBSD: patch-decode-dimms,v 1.12 2019/04/08 00:16:06 pgoyette Exp $
+$NetBSD: patch-decode-dimms,v 1.13 2019/06/17 21:03:51 pgoyette Exp $
 
 Add NetBSD-specific ability to use spdmem(4)'s sysctl values as
-input.
+input.  Remove attempts to use linux-specific data sources.
 
---- eeprom/decode-dimms.orig	2019-01-17 13:29:22.361611073 +0800
-+++ eeprom/decode-dimms	2019-01-17 13:35:48.518437248 +0800
+--- eeprom/decode-dimms.orig	2019-06-17 13:50:38.126887013 -0700
++++ eeprom/decode-dimms	2019-06-17 13:51:53.574600812 -0700
 @@ -42,8 +42,9 @@
  use Fcntl qw(:DEFAULT :seek);
  use File::Basename;
@@ -102,16 +102,15 @@ input.
  }
  
  # Default values
-@@ -2564,7 +2598,7 @@
+@@ -2564,7 +2598,6 @@
  #  * chk_spd: The checksum or CRC value found in the EEPROM
  #  * chk_calc: The checksum or CRC computed from the EEPROM data
  # Keys are added over time.
 -@dimm = get_dimm_list() unless $use_hexdump;
-+@dimm = get_dimm_list() unless ($use_sysctl || $use_hexdump);
  
  for my $i (0 .. $#dimm) {
  	my @bytes = readspd(0, 128, $dimm[$i]->{file});
-@@ -2616,7 +2650,7 @@
+@@ -2616,7 +2649,7 @@
  		printl("Decoding EEPROM", $dimm[$current]->{eeprom});
  	}
  
