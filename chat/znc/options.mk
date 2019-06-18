@@ -1,8 +1,10 @@
-# $NetBSD: options.mk,v 1.1 2018/12/16 02:05:23 nia Exp $
+# $NetBSD: options.mk,v 1.2 2019/06/18 15:19:20 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.znc
-PKG_SUPPORTED_OPTIONS=	debug inet6 perl python sasl tcl
+PKG_SUPPORTED_OPTIONS=	debug inet6 perl python sasl-cyrus tcl
 PKG_SUGGESTED_OPTIONS=	inet6
+
+PKG_OPTIONS_LEGACY_OPTS+=	sasl:sasl-cyrus
 
 .include "../../mk/bsd.options.mk"
 
@@ -41,7 +43,7 @@ PLIST_SRC+=		PLIST.python
 .endif
 
 # Cyrus SASL support
-.if !empty(PKG_OPTIONS:Msasl)
+.if !empty(PKG_OPTIONS:Msasl-cyrus)
 .include		"../../security/cyrus-sasl/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-cyrus
 PLIST_SRC+=		PLIST.cyrus
