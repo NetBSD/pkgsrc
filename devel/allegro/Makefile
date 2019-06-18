@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.40 2016/02/25 12:12:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.41 2019/06/18 17:38:18 nia Exp $
 
-DISTNAME=	allegro-4.4.2
-PKGREVISION=	3
+DISTNAME=	allegro-4.4.3.1
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=alleg/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=liballeg/}
+GITHUB_PROJECT=	allegro5
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://alleg.sourceforge.net/
+HOMEPAGE=	https://liballeg.org/
 COMMENT=	Allegro game programming library
 #LICENSE=	# TODO: (see mk/license.mk)
 
