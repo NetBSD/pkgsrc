@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/04/25 07:33:00 maya Exp $
+# $NetBSD: Makefile,v 1.6 2019/06/18 12:42:26 mef Exp $
 
 DISTNAME=		hackrf-2018.01.1
 PKGREVISION=		1
@@ -15,6 +15,7 @@ LICENSE=		gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
 USE_CMAKE=		yes
+USE_TOOLS=		pkg-config
 
 # Suppress warning for developer
 CMAKE_ARGS+=		-Wno-dev
