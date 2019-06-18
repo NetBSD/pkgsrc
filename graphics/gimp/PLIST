@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.66 2019/04/09 13:09:43 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.67 2019/06/18 14:29:20 ryoon Exp $
 bin/gimp
 bin/gimp-2.10
 bin/gimp-console
@@ -320,7 +320,7 @@ lib/gimp/2.0/plug-ins/file-wmf/file-wmf
 lib/gimp/2.0/plug-ins/file-xbm/file-xbm
 ${PLIST.remote}lib/gimp/2.0/plug-ins/file-xmc/file-xmc
 ${PLIST.remote}lib/gimp/2.0/plug-ins/file-xpm/file-xpm
-lib/gimp/2.0/plug-ins/file-xwd/file-xwd
+${PLIST.remote}lib/gimp/2.0/plug-ins/file-xwd/file-xwd
 lib/gimp/2.0/plug-ins/film/film
 lib/gimp/2.0/plug-ins/filter-pack/filter-pack
 lib/gimp/2.0/plug-ins/flame/flame
@@ -381,7 +381,7 @@ lib/libgimpwidgets-2.0.la
 lib/pkgconfig/gimp-2.0.pc
 lib/pkgconfig/gimpthumb-2.0.pc
 lib/pkgconfig/gimpui-2.0.pc
-${GIMP_DEBUG_TOOL_DIR}/gimp-debug-tool-2.0
+libexec/gimp-debug-tool-2.0
 man/man1/gimp-2.10.1
 man/man1/gimp-console-2.10.1
 man/man1/gimp-console.1
@@ -873,6 +873,7 @@ share/gimp/2.0/icons/Color/24x24/apps/gimp-tool-levels.svg
 share/gimp/2.0/icons/Color/24x24/apps/gimp-tool-measure.svg
 share/gimp/2.0/icons/Color/24x24/apps/gimp-tool-mypaint-brush.svg
 share/gimp/2.0/icons/Color/24x24/apps/gimp-tool-n-point-deformation.svg
+share/gimp/2.0/icons/Color/24x24/apps/gimp-tool-offset.svg
 share/gimp/2.0/icons/Color/24x24/apps/gimp-tool-options.svg
 share/gimp/2.0/icons/Color/24x24/apps/gimp-tool-paintbrush.svg
 share/gimp/2.0/icons/Color/24x24/apps/gimp-tool-path.svg
@@ -973,6 +974,8 @@ share/gimp/2.0/icons/Color/scalable/apps/gimp-convert-indexed.svg
 share/gimp/2.0/icons/Color/scalable/apps/gimp-convert-rgb.svg
 share/gimp/2.0/icons/Color/scalable/apps/gimp-cursor.svg
 share/gimp/2.0/icons/Color/scalable/apps/gimp-curve-free.svg
+share/gimp/2.0/icons/Color/scalable/apps/gimp-curve-point-corner.svg
+share/gimp/2.0/icons/Color/scalable/apps/gimp-curve-point-smooth.svg
 share/gimp/2.0/icons/Color/scalable/apps/gimp-curve-smooth.svg
 share/gimp/2.0/icons/Color/scalable/apps/gimp-dashboard.svg
 share/gimp/2.0/icons/Color/scalable/apps/gimp-default-colors.svg
@@ -1041,8 +1044,8 @@ share/gimp/2.0/icons/Color/scalable/apps/gimp-letter-spacing.svg
 share/gimp/2.0/icons/Color/scalable/apps/gimp-line-spacing.svg
 share/gimp/2.0/icons/Color/scalable/apps/gimp-linked.svg
 share/gimp/2.0/icons/Color/scalable/apps/gimp-list.svg
-share/gimp/2.0/icons/Color/scalable/apps/gimp-menu-left.svg
 share/gimp/2.0/icons/Color/scalable/apps/gimp-marker.svg
+share/gimp/2.0/icons/Color/scalable/apps/gimp-menu-left.svg
 share/gimp/2.0/icons/Color/scalable/apps/gimp-menu-right.svg
 share/gimp/2.0/icons/Color/scalable/apps/gimp-merge-down.svg
 share/gimp/2.0/icons/Color/scalable/apps/gimp-move-to-screen.svg
@@ -1169,6 +1172,7 @@ share/gimp/2.0/icons/Color/scalable/apps/gimp-tool-measure.svg
 share/gimp/2.0/icons/Color/scalable/apps/gimp-tool-move.svg
 share/gimp/2.0/icons/Color/scalable/apps/gimp-tool-mypaint-brush.svg
 share/gimp/2.0/icons/Color/scalable/apps/gimp-tool-n-point-deformation.svg
+share/gimp/2.0/icons/Color/scalable/apps/gimp-tool-offset.svg
 share/gimp/2.0/icons/Color/scalable/apps/gimp-tool-options.svg
 share/gimp/2.0/icons/Color/scalable/apps/gimp-tool-paintbrush.svg
 share/gimp/2.0/icons/Color/scalable/apps/gimp-tool-path.svg
@@ -1823,6 +1827,7 @@ share/gimp/2.0/icons/Symbolic-Inverted/24x24/apps/gimp-tool-levels.svg
 share/gimp/2.0/icons/Symbolic-Inverted/24x24/apps/gimp-tool-measure.svg
 share/gimp/2.0/icons/Symbolic-Inverted/24x24/apps/gimp-tool-mypaint-brush.svg
 share/gimp/2.0/icons/Symbolic-Inverted/24x24/apps/gimp-tool-n-point-deformation.svg
+share/gimp/2.0/icons/Symbolic-Inverted/24x24/apps/gimp-tool-offset.svg
 share/gimp/2.0/icons/Symbolic-Inverted/24x24/apps/gimp-tool-options.svg
 share/gimp/2.0/icons/Symbolic-Inverted/24x24/apps/gimp-tool-paintbrush.svg
 share/gimp/2.0/icons/Symbolic-Inverted/24x24/apps/gimp-tool-path.svg
@@ -1923,6 +1928,8 @@ share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-convert-indexed.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-convert-rgb.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-cursor.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-curve-free.svg
+share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-curve-point-corner.svg
+share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-curve-point-smooth.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-curve-smooth.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-dashboard.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-default-colors.svg
@@ -2119,6 +2126,7 @@ share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-tool-measure.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-tool-move.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-tool-mypaint-brush.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-tool-n-point-deformation.svg
+share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-tool-offset.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-tool-options.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-tool-paintbrush.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-tool-path.svg
@@ -2175,10 +2183,10 @@ share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/help-about.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/list-add.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/list-remove.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/media-floppy.svg
-share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/media-record.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/media-optical.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/media-playback-pause.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/media-playback-start.svg
+share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/media-record.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/media-seek-backward.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/media-skip-backward.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/media-skip-forward.svg
@@ -2326,6 +2334,7 @@ share/gimp/2.0/icons/Symbolic/24x24/apps/gimp-tool-levels.svg
 share/gimp/2.0/icons/Symbolic/24x24/apps/gimp-tool-measure.svg
 share/gimp/2.0/icons/Symbolic/24x24/apps/gimp-tool-mypaint-brush.svg
 share/gimp/2.0/icons/Symbolic/24x24/apps/gimp-tool-n-point-deformation.svg
+share/gimp/2.0/icons/Symbolic/24x24/apps/gimp-tool-offset.svg
 share/gimp/2.0/icons/Symbolic/24x24/apps/gimp-tool-options.svg
 share/gimp/2.0/icons/Symbolic/24x24/apps/gimp-tool-paintbrush.svg
 share/gimp/2.0/icons/Symbolic/24x24/apps/gimp-tool-path.svg
@@ -2426,6 +2435,8 @@ share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-convert-indexed.svg
 share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-convert-rgb.svg
 share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-cursor.svg
 share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-curve-free.svg
+share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-curve-point-corner.svg
+share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-curve-point-smooth.svg
 share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-curve-smooth.svg
 share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-dashboard.svg
 share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-default-colors.svg
@@ -2622,6 +2633,7 @@ share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-tool-measure.svg
 share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-tool-move.svg
 share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-tool-mypaint-brush.svg
 share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-tool-n-point-deformation.svg
+share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-tool-offset.svg
 share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-tool-options.svg
 share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-tool-paintbrush.svg
 share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-tool-path.svg
@@ -3661,6 +3673,8 @@ share/gtk-doc/html/libgimpwidgets/gimp-convert-indexed.png
 share/gtk-doc/html/libgimpwidgets/gimp-convert-rgb.png
 share/gtk-doc/html/libgimpwidgets/gimp-cursor.png
 share/gtk-doc/html/libgimpwidgets/gimp-curve-free.png
+share/gtk-doc/html/libgimpwidgets/gimp-curve-point-corner.png
+share/gtk-doc/html/libgimpwidgets/gimp-curve-point-smooth.png
 share/gtk-doc/html/libgimpwidgets/gimp-curve-smooth.png
 share/gtk-doc/html/libgimpwidgets/gimp-dashboard.png
 share/gtk-doc/html/libgimpwidgets/gimp-default-colors.png
@@ -3859,6 +3873,7 @@ share/gtk-doc/html/libgimpwidgets/gimp-tool-measure.png
 share/gtk-doc/html/libgimpwidgets/gimp-tool-move.png
 share/gtk-doc/html/libgimpwidgets/gimp-tool-mypaint-brush.png
 share/gtk-doc/html/libgimpwidgets/gimp-tool-n-point-deformation.png
+share/gtk-doc/html/libgimpwidgets/gimp-tool-offset.png
 share/gtk-doc/html/libgimpwidgets/gimp-tool-options.png
 share/gtk-doc/html/libgimpwidgets/gimp-tool-paintbrush.png
 share/gtk-doc/html/libgimpwidgets/gimp-tool-path.png
@@ -4365,3 +4380,4 @@ share/locale/zh_TW/LC_MESSAGES/gimp20-tips.mo
 share/locale/zh_TW/LC_MESSAGES/gimp20.mo
 share/metainfo/gimp-data-extras.metainfo.xml
 share/metainfo/org.gimp.GIMP.appdata.xml
+@pkgdir share/gimp/2.0/fonts
