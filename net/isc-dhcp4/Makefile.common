@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.37 2018/10/23 13:10:05 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.38 2019/06/18 20:02:24 nia Exp $
 #
 # used by net/isc-dhcp4/Makefile
 # used by net/isc-dhcpd4/Makefile
@@ -12,7 +12,7 @@ MASTER_SITES=		ftp://ftp.isc.org/isc/dhcp/${VERSION}/
 MASTER_SITES+=		http://ftp.isc.org/isc/dhcp/${VERSION}/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://www.isc.org/sw/dhcp
+HOMEPAGE=		https://www.isc.org/dhcp/
 LICENSE=		isc
 
 CONFLICTS+=		isc-dhcp-base-3.*
