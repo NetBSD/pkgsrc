@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2019/06/18 12:33:43 gdt Exp $
+# $NetBSD: Makefile,v 1.42 2019/06/18 12:36:59 gdt Exp $
 
 PKGNAME=	${DISTNAME:S/ZoneMinder-/zoneminder-/}
 DISTNAME=	ZoneMinder-1.28.1
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ZoneMinder/}
 GITHUB_PROJECT=	ZoneMinder
