@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2019/06/18 12:38:36 nia Exp $
+# $NetBSD: Makefile,v 1.108 2019/06/18 12:40:22 nia Exp $
 
 DISTNAME=	gxine-0.5.910
 CATEGORIES=	multimedia
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xine-project.org/home
 COMMENT=	Gtk-based media player
+LICENSE=	gnu-gpl-v2
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
