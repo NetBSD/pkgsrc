@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19076 2019/06/17 14:28:58 tron Exp $
+$NetBSD: TODO,v 1.19077 2019/06/18 12:40:55 nia Exp $
 
 Suggested new packages
 ======================
@@ -734,7 +734,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o guile-gtk-2.1
 	o gvfs-1.22.0
 	o gworkspace-0.9.4
-	o gxine-0.99.9
 	o gxmessage-3.4.3
 	o h323plus-1.24.0 [replaces openh323, from http://www.h323plus.org/]
 	o hamster-applet-2.32.1
