@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2576 2019/06/18 00:30:50 gdt Exp $
+$NetBSD: CHANGES-2019,v 1.2577 2019/06/18 08:02:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4307,3 +4307,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-test-relaxed to 1.1.5 [adam 2019-06-17]
 	Updated graphics/ansilove to 3.0.9 [fcambus 2019-06-17]
 	Added net/p5-Net-SFTP-Foreign version 1.90 [gdt 2019-06-17]
+	Updated devel/py-wrapt to 1.11.2 [adam 2019-06-18]
+	Updated www/py-django-extensions to 2.1.9 [adam 2019-06-18]
