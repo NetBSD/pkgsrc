@@ -1,21 +1,8 @@
-$NetBSD: distinfo,v 1.27 2015/11/03 23:54:26 agc Exp $
+$NetBSD: distinfo,v 1.28 2019/06/18 12:38:36 nia Exp $
 
-SHA1 (gxine-0.5.905.tar.bz2) = dc01b617641d6eac4152259c592f15f31b9d9bf0
-RMD160 (gxine-0.5.905.tar.bz2) = 3dc30ba9f402d20e3ad3f469cc753607ccc3d194
-SHA512 (gxine-0.5.905.tar.bz2) = 744f283866b7fb4a5b834d3e6f2715538ad7a00fedf5819039129b07cfc25a1404e193118b94ebc74881b37b3e73540300992f164c1b30660b3f2cf6e5816747
-Size (gxine-0.5.905.tar.bz2) = 1203720 bytes
-SHA1 (patch-aa) = 168f7149dbffd7b191721a30193c6d58320534fc
-SHA1 (patch-ab) = b2488c6febee6bc41be26ab8a36563fed5105a52
-SHA1 (patch-ad) = 42fa73c04ecbffd900df6f5231519abe38be9852
-SHA1 (patch-af) = 6d58e572729217ae7a9a3ef2a177fb929f3da453
-SHA1 (patch-ag) = 7e7ae5e189e9d315b8993883bd1b51db484f3692
-SHA1 (patch-ah) = 201f42c4043cd2c1e5302d476713080554c02b86
-SHA1 (patch-ai) = 792fabf23d55fac337d6825e5ba28d1a80393ce9
-SHA1 (patch-aj) = 0a9efacd2aa90855bf990944c058028af367c24d
-SHA1 (patch-ak) = d055caed81560d53c922f772dc713bfca8ef5691
-SHA1 (patch-an) = 10789072010e0a2d868a24c21d97f902364f2587
-SHA1 (patch-aq) = 51acfd7107eed0cf73462daa73024ef28964d9eb
-SHA1 (patch-ba) = 7ef029a5bdfa7cf037218ef134b418a2b4f2b03b
-SHA1 (patch-bb) = f4f96102cff0589e3c823b4dd96693668aa16a5f
-SHA1 (patch-src_console_output_h) = 6e0cab99bc57497f52e6d965ffbaa5e18317edbe
-SHA1 (patch-src_engine_c) = 827d08132f8dbe1b88e1d6f8a073643cfdd9ca8c
+SHA1 (gxine-0.5.910.tar.xz) = d3e5569e7534600600fcfb1232916763c6150205
+RMD160 (gxine-0.5.910.tar.xz) = f06d641596b936ae137480c1a8334957ded87d7d
+SHA512 (gxine-0.5.910.tar.xz) = f105060bb0a86215ee7bfb5804795d400f1c79973e3141e8c8e3ecab249d8a6cdd6467a926625a6f89081d7160f192ea63a57f623de46c7634c4cc08431f897d
+Size (gxine-0.5.910.tar.xz) = 931616 bytes
+SHA1 (patch-ak) = 46ab35de6ac6f20b43955a72327806753eff143f
+SHA1 (patch-aq) = df68a399401f989b43d2d3f32026776418428e33
