@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/01/21 10:31:16 adam Exp $
+$NetBSD: distinfo,v 1.5 2019/06/18 08:00:34 adam Exp $
 
-SHA1 (wrapt-1.11.1.tar.gz) = e40a3b628c9b5503d47160d08d1bf93a2c7471fe
-RMD160 (wrapt-1.11.1.tar.gz) = 3a61778530d5de6f4773fe671b111c82578c8859
-SHA512 (wrapt-1.11.1.tar.gz) = 82cf9a2113dd73d692033ed5b8d1c6475873c8676cb33bd42384a7a27bff1451809ff490f755d31e1753fc1f7eb8288474873753eed1c0c6a61cda6f7cff17b7
-Size (wrapt-1.11.1.tar.gz) = 27225 bytes
+SHA1 (wrapt-1.11.2.tar.gz) = 50e81f0e1053b40300addfa0382aa075efaab620
+RMD160 (wrapt-1.11.2.tar.gz) = 3842fa4627a5115db35261d613402c4667d4085e
+SHA512 (wrapt-1.11.2.tar.gz) = 4aed5beacf099cb50d1c562fe2193f79af7b7693e2d5d5aacea6594029e9987c9f0bb000dc404be810f1b16de6e8b641dcd631d46f8c9f9b3c94c67859fb5079
+Size (wrapt-1.11.2.tar.gz) = 27308 bytes
