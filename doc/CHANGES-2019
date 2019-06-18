@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2575 2019/06/17 21:31:58 fcambus Exp $
+$NetBSD: CHANGES-2019,v 1.2576 2019/06/18 00:30:50 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4306,3 +4306,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-cfscrape to 2.0.7 [adam 2019-06-17]
 	Updated devel/py-test-relaxed to 1.1.5 [adam 2019-06-17]
 	Updated graphics/ansilove to 3.0.9 [fcambus 2019-06-17]
+	Added net/p5-Net-SFTP-Foreign version 1.90 [gdt 2019-06-17]
