@@ -1,8 +1,15 @@
-@comment $NetBSD: PLIST,v 1.2 2017/07/31 04:55:26 adam Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.3 2019/06/18 14:59:45 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/.pbr.json.icloud
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/audioread/__init__.py
 ${PYSITELIB}/audioread/__init__.pyc
 ${PYSITELIB}/audioread/__init__.pyo
+${PYSITELIB}/audioread/exceptions.py
+${PYSITELIB}/audioread/exceptions.pyc
+${PYSITELIB}/audioread/exceptions.pyo
 ${PYSITELIB}/audioread/ffdec.py
 ${PYSITELIB}/audioread/ffdec.pyc
 ${PYSITELIB}/audioread/ffdec.pyo
