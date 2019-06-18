@@ -1,32 +1,49 @@
-$NetBSD: patch-ak,v 1.11 2010/01/19 20:33:26 drochner Exp $
+$NetBSD: patch-ak,v 1.12 2019/06/18 12:38:36 nia Exp $
 
---- configure.orig	2010-01-01 01:02:28.000000000 +0000
+Disable logo demuxer detection, it doesn't work and stops
+us from building. In practice, not having it isn't a problem.
+
+--- configure.orig	2017-12-27 19:53:11.000000000 +0000
 +++ configure
-@@ -11614,7 +11614,7 @@ $as_echo "$ac_cv_always_inline" >&6; }
-     fi
+@@ -19817,39 +19817,8 @@ else
+   withval=auto
+ fi
+ 
+-LOGO_FORMAT=''
+-logo_sub=''
+-while test "$LOGO_FORMAT" = ''; do
+-  echo "$as_me:$LINENO: trying type=$withval" >&5
+-  if test "$withval" = auto; then
+-    # preferred is last
+-    if test "$HAVE_IMAGE" = yes; then withval=image; fi
+-    if test "$HAVE_MPEG" = yes; then withval=mpeg; fi
+-    # handle missing-demuxer case
+-    if test "$withval" = auto; then
+-      as_fn_error $? "no available demuxer for the logo image - rebuild/reinstall xine-lib?" "$LINENO" 5
+-    fi
+-  fi
+-  case "$withval" in
+-    image)
+-	if test "$HAVE_IMAGE" = no; then
+-	  logo_sub="$withval"
+-	  withval=auto
+-	else
+-	  LOGO_FORMAT=jpg
+-	fi
+-	;;
+-    mpeg)
+-	if test "$HAVE_MPEG" = no; then
+-	  logo_sub="$withval"
+-	  withval=auto
+-	else
+-	  LOGO_FORMAT=mpv
+-	fi
+-	;;
+-  esac
+-done
+-
++LOGO_FORMAT='mpv'
++logo_sub='mpeg'
  
  cat >>confdefs.h <<_ACEOF
--#define always_inline $always_inline
-+#define gxine_always_inline $always_inline
- _ACEOF
- 
- 
-@@ -16578,14 +16578,14 @@ case $host in
-     LDFLAGS="$LDFLAGS -L/usr/local/lib"
-     ;;
-   *)
--   THREAD_LIBS="-lpthread"
--    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for pthread_create in -lpthread" >&5
--$as_echo_n "checking for pthread_create in -lpthread... " >&6; }
-+   THREAD_LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
-+    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
-+$as_echo_n "checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}... " >&6; }
- if test "${ac_cv_lib_pthread_pthread_create+set}" = set; then :
-   $as_echo_n "(cached) " >&6
- else
-   ac_check_lib_save_LIBS=$LIBS
--LIBS="-lpthread  $LIBS"
-+LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}  $LIBS"
- cat confdefs.h - <<_ACEOF >conftest.$ac_ext
- /* end confdefs.h.  */
- 
+ #define LOGO_FORMAT "$LOGO_FORMAT"

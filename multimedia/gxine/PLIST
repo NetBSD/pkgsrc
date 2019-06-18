@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.13 2010/11/30 18:21:01 drochner Exp $
+@comment $NetBSD: PLIST,v 1.14 2019/06/18 12:38:36 nia Exp $
 bin/gxine
 bin/gxine_client
-lib/gxine/gxineplugin.la
+man/de/man1/gxine.1
+man/de/man1/gxine_client.1
+man/es/man1/gxine.1
+man/es/man1/gxine_client.1
 man/man1/gxine.1
 man/man1/gxine_client.1
 share/applications/gxine.desktop
+share/examples/gxine/gtk.css
 share/examples/gxine/gtkrc
 share/examples/gxine/keypad.xml
 share/examples/gxine/startup
@@ -19,6 +23,7 @@ share/gxine/pixmaps/set-channel.svg
 share/gxine/pixmaps/set-contrast.svg
 share/gxine/pixmaps/set-hue.svg
 share/gxine/pixmaps/set-saturation.svg
+share/gxine/pixmaps/set-sharpness.svg
 share/gxine/pixmaps/set-sync.svg
 share/gxine/pixmaps/set-volume.svg
 share/gxine/pixmaps/speaker.png
