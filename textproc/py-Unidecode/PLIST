@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/11/21 11:00:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/06/18 14:40:48 adam Exp $
 bin/unidecode-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -8,6 +8,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/unidecode/__init__.py
 ${PYSITELIB}/unidecode/__init__.pyc
 ${PYSITELIB}/unidecode/__init__.pyo
+${PYSITELIB}/unidecode/__main__.py
+${PYSITELIB}/unidecode/__main__.pyc
+${PYSITELIB}/unidecode/__main__.pyo
 ${PYSITELIB}/unidecode/util.py
 ${PYSITELIB}/unidecode/util.pyc
 ${PYSITELIB}/unidecode/util.pyo
