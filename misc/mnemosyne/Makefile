@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2019/06/17 20:41:04 adam Exp $
+# $NetBSD: Makefile,v 1.40 2019/06/18 05:54:02 wiz Exp $
 
 DISTNAME=	Mnemosyne-2.3.1
 PKGNAME=	${DISTNAME:S/M/m/}
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 BROKEN=		MatPlotLib requires Python 3.x and newer Mnemosyne requires qt5-qtwebengine.
 
-DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
+#DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-sip-[0-9]*:../../x11/py-sip
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
