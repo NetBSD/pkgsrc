@@ -1,0 +1,12 @@
+SFTP stands for SSH File Transfer Protocol and is a method of
+transferring files between machines over a secure, encrypted
+connection (as opposed to regular FTP, which functions over an
+insecure connection). The security in SFTP comes through its
+integration with SSH, which provides an encrypted transport layer over
+which the SFTP commands are executed.
+
+Net::SFTP::Foreign is a Perl client for the SFTP version 3 as
+defined in the SSH File Transfer Protocol IETF draft, which can be
+found at http://www.openssh.org/txt/draft-ietf-secsh-filexfer-02.txt
+
+This implementation uses an external OpenSSH-compatible program.
