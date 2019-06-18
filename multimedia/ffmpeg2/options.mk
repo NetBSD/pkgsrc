@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2019/01/03 11:56:08 bsiegert Exp $
+# $NetBSD: options.mk,v 1.16 2019/06/18 14:41:09 nia Exp $
 
 # Global and legacy options
 
@@ -9,9 +9,11 @@ PKG_OPTIONS_GROUP.ssl=		gnutls openssl
 
 PKG_SUPPORTED_OPTIONS=	ass doc faac fdk-aac fontconfig freetype lame \
 			libvpx opencore-amr rtmp theora vorbis x11 x264 \
-			x265 xcb xvid
+			x265 xvid
 PKG_SUGGESTED_OPTIONS=	lame ass freetype fontconfig libvpx \
 			theora vorbis x11 x264 xvid
+
+PKG_OPTIONS_LEGACY_OPTS+=	xcb:x11
 
 PLIST_VARS+=		doc
 
@@ -196,7 +198,7 @@ CONFIGURE_ARGS+=	--disable-libvpx
 .endif
 
 # X11 screen capture support using libxcb
-.if !empty(PKG_OPTIONS:Mxcb)
+.if !empty(PKG_OPTIONS:Mx11)
 CONFIGURE_ARGS+=	--enable-libxcb
 CONFIGURE_ARGS+=	--enable-libxcb-shape
 CONFIGURE_ARGS+=	--enable-libxcb-shm
