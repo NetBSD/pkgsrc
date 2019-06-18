@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.3 2019/03/31 15:20:42 nia Exp $
+$NetBSD: distinfo,v 1.4 2019/06/18 10:21:37 nia Exp $
 
 SHA1 (znc-1.7.3.tar.gz) = 76c1c32d3ec6fc052b0c3854dbbb8896aecafee5
 RMD160 (znc-1.7.3.tar.gz) = a52f7f8500dc3156dd3387f9450e8558132013d6
 SHA512 (znc-1.7.3.tar.gz) = 4cd63be2cb3bc1e3950f38984b128c6511bd1b9fc01a00d51cfcdc46826c2dedad120d6ed8e30d9c400909e33d39b2b14579fb40ee1e3508b7f3a07eff3a15d8
 Size (znc-1.7.3.tar.gz) = 2084575 bytes
+SHA1 (patch-include_znc_Modules.h) = 57f5d2dcb0021c3c7c0162ccd06ad8698e68022e
+SHA1 (patch-src_Modules.cpp) = adb6f87f4c441cd438110aa58fdb31b481212eff
