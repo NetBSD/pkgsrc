@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2018/11/21 11:00:05 adam Exp $
+# $NetBSD: Makefile,v 1.9 2019/06/18 14:40:48 adam Exp $
 
-DISTNAME=	Unidecode-1.0.23
+DISTNAME=	Unidecode-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=U/Unidecode/}
@@ -14,7 +14,7 @@ USE_LANGUAGES=	# none
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} unidecode unidecode-${PYVERSSUFFIX} || ${TRUE}
+	${MV} unidecode unidecode-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
