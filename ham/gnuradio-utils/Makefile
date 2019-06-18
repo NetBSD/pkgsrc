@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/06/17 20:44:41 adam Exp $
+# $NetBSD: Makefile,v 1.16 2019/06/18 05:52:30 wiz Exp $
 
 PKGNAME=	gnuradio-utils-${VERSION}
 PKGREVISION=	2
@@ -9,7 +9,7 @@ COMMENT=	Utilities in GNU Radio
 
 BROKEN=		MatPlotLib requires Python 3.x.
 
-DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
+#DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 #ONF_FILES+=	${EGDIR}/modtool.conf	${PKG_SYSCONFDIR}/modtool.conf
 
 CMAKE_ARGS+=	-DENABLE_DEFAULT=False
