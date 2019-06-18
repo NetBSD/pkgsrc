@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.58 2019/05/17 08:20:34 wiz Exp $
+# $NetBSD: Makefile.common,v 1.59 2019/06/18 20:11:50 nia Exp $
 #
 # used by databases/libgda/Makefile
 # used by databases/libgda-mysql/Makefile
@@ -10,7 +10,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgda/5.2/}
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnome-db.org/
+HOMEPAGE=		https://www.gnome-db.org/
 COMMENT=		GNU database access library
 LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
 
