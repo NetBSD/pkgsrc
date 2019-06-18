@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1253 2019/06/18 00:31:35 gdt Exp $
+# $NetBSD: Makefile,v 1.1254 2019/06/18 15:20:08 ryoon Exp $
 #
 
 COMMENT=	Networking tools
@@ -420,7 +420,6 @@ SUBDIR+=	netpipes
 SUBDIR+=	nfdump
 SUBDIR+=	ngrep
 SUBDIR+=	nicotine
-SUBDIR+=	nicovideo-dl
 SUBDIR+=	nidentd
 SUBDIR+=	nipper
 SUBDIR+=	nload
