@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/05/27 15:18:29 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7 2019/06/18 20:05:10 nia Exp $
 
 DISTNAME=		go-framestream-0.1.0
 PKGREVISION=		5
@@ -8,7 +8,7 @@ GITHUB_PROJECT=		golang-framestream
 GITHUB_TAG=		tags/v${PKGVERSION_NOREV}
 GITHUB_TYPE=		tag
 
-HOMEPAGE=		http://${GO_SRCPATH}
+HOMEPAGE=		https://${GO_SRCPATH}
 COMMENT=		Go language implementation of framestream protocol
 LICENSE=		apache-2.0
 
