@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2019/06/18 12:36:59 gdt Exp $
+# $NetBSD: Makefile,v 1.43 2019/06/18 12:37:35 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/ZoneMinder-/zoneminder-/}
 DISTNAME=	ZoneMinder-1.28.1
@@ -35,7 +35,7 @@ USE_TOOLS+=	aclocal autoconf autoheader automake gmake perl pkg-config
 # configuration.  We take the view that if an installation can be
 # reasonably configured to use a module, that module should be a
 # dependency, absent some reason that it is so heavyweight that it
-# shoudl be an option.
+# should be an option.
 
 # MIME::Entity is needed from p5-MIME-tools
 # LWP::UserAgent is needed from p5-libwww
