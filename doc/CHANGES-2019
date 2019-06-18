@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2579 2019/06/18 12:38:46 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2580 2019/06/18 13:31:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4312,3 +4312,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-virtualenv to 16.6.1 [adam 2019-06-18]
 	Updated databases/py-apsw to 3.28.0 [adam 2019-06-18]
 	Updated multimedia/gxine to 0.5.910 [nia 2019-06-18]
+	Updated graphics/GraphicsMagick to 1.3.32 [adam 2019-06-18]
+	Updated graphics/p5-GraphicsMagick to 1.3.32 [adam 2019-06-18]
