@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/05/27 16:43:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/06/18 08:02:35 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -351,6 +351,9 @@ ${PYSITELIB}/django_extensions/templatetags/indent_text.pyo
 ${PYSITELIB}/django_extensions/templatetags/syntax_color.py
 ${PYSITELIB}/django_extensions/templatetags/syntax_color.pyc
 ${PYSITELIB}/django_extensions/templatetags/syntax_color.pyo
+${PYSITELIB}/django_extensions/templatetags/text_tags.py
+${PYSITELIB}/django_extensions/templatetags/text_tags.pyc
+${PYSITELIB}/django_extensions/templatetags/text_tags.pyo
 ${PYSITELIB}/django_extensions/templatetags/truncate_letters.py
 ${PYSITELIB}/django_extensions/templatetags/truncate_letters.pyc
 ${PYSITELIB}/django_extensions/templatetags/truncate_letters.pyo
