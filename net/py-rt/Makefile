@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2019/06/09 13:57:27 leot Exp $
+# $NetBSD: Makefile,v 1.3 2019/06/19 10:51:54 leot Exp $
 
 DISTNAME=	rt-1.0.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rt/}
 
