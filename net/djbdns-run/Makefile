@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2019/01/08 18:19:27 schmonz Exp $
+# $NetBSD: Makefile,v 1.34 2019/06/19 17:50:30 schmonz Exp $
 #
 
-DISTNAME=		djbdns-run-20190108
+DISTNAME=		djbdns-run-20190619
 CATEGORIES=		net
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -47,21 +47,6 @@ CONF_FILES+=		${PREFIX}/share/examples/${PKGBASE}/axfrdns-tcp \
 			${PKG_SYSCONFDIR}/axfrdns/tcp
 
 .include "options.mk"
-
-.include "../../mk/bsd.prefs.mk"
-
-# Detect the PKG_SYSCONFDIR of the installed djbdns, so we can create
-# config files there and refer to them from rc.d scripts.
-#
-.if !defined(PKG_SYSCONFDIR.djbdns-run)
-PKG_SYSCONFDIR.djbdns-run!=						\
-	${PKG_INFO} -Q PKG_SYSCONFDIR					\
-		${DEPENDS_DJBDNS:C/:.*$//:Q} 2>/dev/null ||		\
-	${ECHO} "PKG_SYSCONFDIR.djbdns-run_not_set"
-.  if empty(PKG_SYSCONFDIR.djbdns-run:M*not_set)
-MAKEVARS+=	PKG_SYSCONFDIR.djbdns-run
-.  endif
-.endif
 
 do-install:
 	${INSTALL_DATA} ${FILESDIR}/README.pkgsrc ${DESTDIR}${PREFIX}/share/doc/djbdns-run
