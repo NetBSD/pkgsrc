@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2598 2019/06/19 12:26:28 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.2599 2019/06/19 17:06:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4334,3 +4334,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed chat/bsflite [nia 2019-06-19]
 	Updated www/firefox to 67.0.3 [ryoon 2019-06-19]
 	Updated www/firefox-l10n to 67.0.3 [ryoon 2019-06-19]
+	Updated fonts/encodings to 1.0.5 [wiz 2019-06-19]
