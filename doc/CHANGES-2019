@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2587 2019/06/18 22:43:57 leot Exp $
+$NetBSD: CHANGES-2019,v 1.2588 2019/06/19 03:09:03 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4323,3 +4323,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed net/nicovideo-dl [ryoon 2019-06-18]
 	Updated devel/allegro to 4.4.3.1 [nia 2019-06-18]
 	Updated mail/msmtp to 1.8.4 [leot 2019-06-18]
+	Updated sysutils/intel-microcode-netbsd to 20190618 [msaitoh 2019-06-19]
