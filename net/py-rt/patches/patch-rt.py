@@ -1,7 +1,9 @@
-$NetBSD: patch-rt.py,v 1.1 2019/06/09 13:57:27 leot Exp $
+$NetBSD: patch-rt.py,v 1.2 2019/06/19 10:51:54 leot Exp $
 
-Backport upstream commit bb07009c4f62dd2ac393aab82fded6424eead82f
-to ignore ignore possible empty lines.
+- Backport upstream commit bb07009c4f62dd2ac393aab82fded6424eead82f
+  to ignore ignore possible empty lines.
+- RT 4 when a ticket is not modified return an empty response, treat it as
+  a successfull operation.
 
 --- rt.py.orig	2018-07-16 12:47:27.000000000 +0000
 +++ rt.py
@@ -27,3 +29,12 @@ to ignore ignore possible empty lines.
                  _, ticket_id = msg.split('/', 1)
                  items.append({'id': 'ticket/' + ticket_id})
              return items
+@@ -685,6 +689,8 @@ class Rt:
+             else:
+                 post_data += "CF.{{{}}}: {}\n".format(key[3:], value)
+         msg = self.__request('ticket/{}/edit'.format(str(ticket_id)), post_data={'content': post_data})
++        if "" == msg: # Ticket not modified
++            return True
+         state = msg.split('\n')[2]
+         return self.RE_PATTERNS['update_pattern'].match(state) is not None
+ 
