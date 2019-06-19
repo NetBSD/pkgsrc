@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.219 2019/06/19 11:03:38 nia Exp $
+# $NetBSD: Makefile,v 1.220 2019/06/19 11:50:13 nia Exp $
 #
 
 COMMENT=	Communication programs
@@ -37,7 +37,6 @@ SUBDIR+=	gloox
 SUBDIR+=	gnomeicu
 SUBDIR+=	goofey
 SUBDIR+=	gossip
-SUBDIR+=	gtmess
 SUBDIR+=	hexchat
 SUBDIR+=	i2cb
 SUBDIR+=	i2cbd
