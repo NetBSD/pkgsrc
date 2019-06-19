@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.59 2019/05/25 12:36:59 kamil Exp $
+@comment $NetBSD: PLIST,v 1.60 2019/06/19 19:08:05 gson Exp $
 bin/elf2dmp
 ${PLIST.ivshmem}bin/ivshmem-client
 ${PLIST.ivshmem}bin/ivshmem-server
@@ -74,9 +74,11 @@ ${PLIST.tilegx}bin/qemu-tilegx
 ${PLIST.x86_64}bin/qemu-x86_64
 ${PLIST.xtensa}bin/qemu-xtensa
 ${PLIST.xtensaeb}bin/qemu-xtensaeb
+${PLIST.virtfs-proxy-helper}bin/virtfs-proxy-helper
 ${PLIST.bridge-helper}libexec/qemu-bridge-helper
 man/man1/qemu-img.1
 man/man1/qemu.1
+${PLIST.virtfs-proxy-helper}man/man1/virtfs-proxy-helper.1
 man/man7/qemu-block-drivers.7
 man/man7/qemu-cpu-models.7
 man/man7/qemu-ga-ref.7
