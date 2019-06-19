@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2604 2019/06/19 17:50:35 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.2605 2019/06/19 17:52:08 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4340,3 +4340,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/qgreylist to 0.3nb8 [schmonz 2019-06-19]
 	Updated mail/qmail-run to 20190619 [schmonz 2019-06-19]
 	Updated net/djbdns-run to 20190619 [schmonz 2019-06-19]
+	Updated sysutils/daemontools-run to 20190619 [schmonz 2019-06-19]
