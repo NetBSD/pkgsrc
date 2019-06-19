@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2018/09/28 22:45:39 schmonz Exp $
+# $NetBSD: Makefile,v 1.22 2019/06/19 17:42:25 schmonz Exp $
 #
 
 DISTNAME=		mailfront-2.22
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}archive/
 
@@ -11,8 +12,7 @@ COMMENT=		Mail server network protocol front-ends
 LICENSE=		gnu-gpl-v2
 
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
-DEPENDS_QMAIL=		qmail>=1.03nb8:../../mail/qmail
-DEPENDS+=		${DEPENDS_QMAIL}
+DEPENDS+=		qmail>=1.03nb8:../../mail/qmail
 
 DJB_RESTRICTED=		NO
 DJB_MAKE_TARGETS=	NO
@@ -32,9 +32,9 @@ USE_LIBTOOL=		yes
 
 MAKE_JOBS_SAFE=		no # due to hacky libtoolization
 
-.include "options.mk"
+PKG_SYSCONFSUBDIR=	qmail
 
-.include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 post-install:
 	cd ${WRKSRC};							\
@@ -42,19 +42,6 @@ post-install:
 		${INSTALL_DATA} $${f} 					\
 			${DESTDIR}${PREFIX}/share/doc/mailfront;	\
 	done
-
-# Detect the PKG_SYSCONFDIR of the installed qmail, so we can create
-# config files there and refer to them from rc.d scripts.
-#
-.if !defined(PKG_SYSCONFDIR.mailfront)
-PKG_SYSCONFDIR.mailfront!=						\
-	${PKG_INFO} -Q PKG_SYSCONFDIR					\
-		${DEPENDS_QMAIL:C/:.*$//:Q} 2>/dev/null ||		\
-	${ECHO} "PKG_SYSCONFDIR.mailfront_not_set"
-.  if empty(PKG_SYSCONFDIR.mailfront:M*not_set)
-MAKEVARS+=	PKG_SYSCONFDIR.mailfront
-.  endif
-.endif
 
 BUILDLINK_API_DEPENDS.bglibs+=	bglibs>=2.01
 .include "../../devel/bglibs/buildlink3.mk"
