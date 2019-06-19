@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.197 2019/06/14 10:37:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.198 2019/06/19 11:37:42 jperkin Exp $
 
 DISTNAME=	R-3.6.0
 CATEGORIES=	math
@@ -143,6 +143,9 @@ BUILDLINK_API_DEPENDS.bzip2+=	bzip2>=1.0.5
 
 # failed to convert strong functions and variables: Invalid type identifier
 CTF_FILES_SKIP+=	lib/R/library/mgcv/libs/mgcv.so
+
+# Exposes PKG_CONFIG_LIBDIR buildlink paths in a comment.
+CHECK_WRKREF_SKIP+=	lib/R/etc/Makeconf
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && autoreconf -fvi
