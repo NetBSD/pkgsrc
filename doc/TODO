@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19079 2019/06/18 14:29:45 ryoon Exp $
+$NetBSD: TODO,v 1.19080 2019/06/19 17:03:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -549,6 +549,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o elscreen-1.5.3
 	o embryo-1.7.10
 	o emerillon-0.1.90
+	o encodings-1.0.5
 	o enigma-1.21
 	o enlightenment-0.21
 	o eog-plugins-3.6.1
@@ -872,6 +873,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ldapsdk-6.0.7
 	o leafpad-0.8.18.1
 	o lgeneral-1.3.1
+	o libX11-1.6.8
 	o libbpg-0.9.6
 	o libcaca-0.99.19
 	o libcarddav-14.0.4
@@ -966,6 +968,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o minivmac-3.2.3
 	o mit-krb5-1.17
 	o mit-scheme-bin-9.2
+	o mnemosyne-2.6.1
 	o modular-xorg-server-1.20.5
 	o modular-xorg-xquartz-1.18.0
 	o molden-4.8 [after which PR 40252 can be closed]
