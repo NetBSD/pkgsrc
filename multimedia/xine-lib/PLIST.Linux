@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Linux,v 1.17 2018/11/13 11:10:41 markd Exp $
+@comment $NetBSD: PLIST.Linux,v 1.18 2019/06/19 13:31:02 nia Exp $
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_ao_out_oss.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_ao_out_oss.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_dxr3_spu.a
@@ -17,7 +17,5 @@ lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_dxr3.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_dxr3.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_fb.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_fb.so
-lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_vaapi.a
-lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_vaapi.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_vdpau.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_vdpau.so
