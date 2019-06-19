@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.220 2019/06/19 11:50:13 nia Exp $
+# $NetBSD: Makefile,v 1.221 2019/06/19 12:18:04 nia Exp $
 #
 
 COMMENT=	Communication programs
@@ -9,7 +9,6 @@ SUBDIR+=	bitchbot
 SUBDIR+=	bitchx
 SUBDIR+=	bitlbee
 SUBDIR+=	bnc
-SUBDIR+=	bsflite
 SUBDIR+=	carbons-purple
 SUBDIR+=	centerim
 SUBDIR+=	centerim5
