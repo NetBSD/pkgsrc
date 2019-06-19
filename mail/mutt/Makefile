@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.210 2019/06/17 14:28:43 tron Exp $
+# $NetBSD: Makefile,v 1.211 2019/06/19 12:05:12 jperkin Exp $
 
 DISTNAME=		mutt-1.12.1
 CATEGORIES=		mail
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ARGS+=	--enable-external-dotlock
 CONFIGURE_ARGS+=	--enable-pop
 CONFIGURE_ARGS+=	--enable-imap
+CONFIGURE_ARGS.SunOS+=	--disable-filemonitor
 INFO_FILES=		yes
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD"
