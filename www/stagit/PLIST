@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2019/06/19 10:04:58 fcambus Exp $
+bin/stagit
+bin/stagit-index
+man/man1/stagit-index.1
+man/man1/stagit.1
+share/doc/stagit/README
+share/doc/stagit/example_create.sh
+share/doc/stagit/example_post-receive.sh
+share/doc/stagit/favicon.png
+share/doc/stagit/logo.png
+share/doc/stagit/style.css
