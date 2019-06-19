@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2594 2019/06/19 11:41:53 leot Exp $
+$NetBSD: CHANGES-2019,v 1.2595 2019/06/19 11:51:14 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4330,3 +4330,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/py-rt to 1.0.11nb2 [leot 2019-06-19]
 	Removed chat/gale [nia 2019-06-19]
 	Added net/stagit-gopher version 0.9.2 [leot 2019-06-19]
+	Removed chat/gtmess [nia 2019-06-19]
