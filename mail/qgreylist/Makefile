@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2018/10/31 20:37:20 schmonz Exp $
+# $NetBSD: Makefile,v 1.22 2019/06/19 17:44:15 schmonz Exp $
 
 DISTNAME=		qgreylist-0.3
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		mail
 #MASTER_SITES=		${HOMEPAGE}
 
@@ -10,8 +10,7 @@ MAINTAINER=		schmonz@NetBSD.org
 COMMENT=		Simple greylisting for qmail
 LICENSE=		mit
 
-DEPENDS_QMAIL=		qmail>=1.03nb8:../../mail/qmail
-DEPENDS+=		${DEPENDS_QMAIL}
+DEPENDS+=		qmail>=1.03nb8:../../mail/qmail
 
 WRKSRC=			${WRKDIR}/qgreylist
 
@@ -24,20 +23,7 @@ BUILD_DEFS+=		QMAIL_DAEMON_USER
 
 REPLACE_PERL=		greylist
 
-.include "../../mk/bsd.prefs.mk"
-
-# Detect the PKG_SYSCONFDIR of the installed qmail, so we can create
-# config files there and refer to them from rc.d scripts.
-#
-.if !defined(PKG_SYSCONFDIR.qgreylist)
-PKG_SYSCONFDIR.qgreylist!=						\
-	${PKG_INFO} -Q PKG_SYSCONFDIR					\
-		${DEPENDS_QMAIL:C/:.*$//:Q} 2>/dev/null ||		\
-	${ECHO} "PKG_SYSCONFDIR.qgreylist_not_set"
-.  if empty(PKG_SYSCONFDIR.qgreylist:M*not_set)
-MAKEVARS+=	PKG_SYSCONFDIR.qgreylist
-.  endif
-.endif
+PKG_SYSCONFSUBDIR=	qmail
 
 SUBST_CLASSES+=		qmaildirs
 SUBST_STAGE.qmaildirs=	do-configure
