@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2589 2019/06/19 10:09:05 fcambus Exp $
+$NetBSD: CHANGES-2019,v 1.2590 2019/06/19 10:22:30 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4322,6 +4322,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/py-acoustid to 1.1.7 [adam 2019-06-18]
 	Removed net/nicovideo-dl [ryoon 2019-06-18]
 	Updated devel/allegro to 4.4.3.1 [nia 2019-06-18]
+	Removed emulators/darcnes successor emulators/mednafen [nia 2019-06-18]
 	Updated mail/msmtp to 1.8.4 [leot 2019-06-18]
 	Updated sysutils/intel-microcode-netbsd to 20190618 [msaitoh 2019-06-19]
 	Added www/stagit version 0.9.2 [fcambus 2019-06-19]
