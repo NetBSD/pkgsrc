@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2602 2019/06/19 17:44:20 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.2603 2019/06/19 17:49:18 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4338,3 +4338,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/libXi to 1.7.10 [wiz 2019-06-19]
 	Updated mail/mailfront to 2.22nb1 [schmonz 2019-06-19]
 	Updated mail/qgreylist to 0.3nb8 [schmonz 2019-06-19]
+	Updated mail/qmail-run to 20190619 [schmonz 2019-06-19]
