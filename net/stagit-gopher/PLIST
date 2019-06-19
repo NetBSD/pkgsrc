@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2019/06/19 11:40:51 leot Exp $
+bin/stagit-gopher
+bin/stagit-gopher-index
+man/man1/stagit-gopher-index.1
+man/man1/stagit-gopher.1
+share/doc/stagit-gopher/README
+share/doc/stagit-gopher/example_create.sh
+share/doc/stagit-gopher/example_post-receive.sh
