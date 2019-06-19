@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.63 2019/04/10 22:24:57 schmonz Exp $
+# $NetBSD: options.mk,v 1.64 2019/06/19 17:46:39 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=		eai inet6 pam syncdir tai-system-clock tls
@@ -89,17 +89,7 @@ SUBST_CLASSES+=			libtai
 SUBST_STAGE.libtai=		do-configure
 SUBST_FILES.libtai=		leapsecs_read.c
 SUBST_SED.libtai=		-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR.libtai}|g'
-DEPENDS_LIBTAI=			libtai>=0.60nb5:../../devel/libtai
-DEPENDS+=			${DEPENDS_LIBTAI}
-.  if !defined(PKG_SYSCONFDIR.libtai)
-PKG_SYSCONFDIR.libtai!=							\
-	${PKG_INFO} -Q PKG_SYSCONFDIR					\
-		${DEPENDS_LIBTAI:C/:.*$//:Q} 2>/dev/null ||		\
-	${ECHO} "PKG_SYSCONFDIR.libtai_not_set"
-.    if empty(PKG_SYSCONFDIR.libtai:M*not_set)
-MAKEVARS+=	PKG_SYSCONFDIR.libtai
-.    endif
-.  endif
+DEPENDS+=			libtai>=0.60nb5:../../devel/libtai
 .endif
 
 PLIST_VARS+=			tls
