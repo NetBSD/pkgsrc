@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2018/07/30 00:02:39 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2019/06/19 17:52:03 schmonz Exp $
 #
 
-DISTNAME=		daemontools-run-20180730
+DISTNAME=		daemontools-run-20190619
 CATEGORIES=		sysutils
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -10,8 +10,7 @@ MAINTAINER=		schmonz@NetBSD.org
 COMMENT=		Configures daemontools to run supervised services
 LICENSE=		2-clause-bsd
 
-DEPENDS_DAEMONTOOLS=	daemontools-[0-9]*:../../sysutils/daemontools
-DEPENDS+=		${DEPENDS_DAEMONTOOLS}
+DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
 
 WRKSRC=			${WRKDIR}
 NO_BUILD=		yes
@@ -29,21 +28,6 @@ FILES_SUBST+=		PKGNAME=${PKGNAME:Q}
 
 INSTALLATION_DIRS=	share/doc/${PKGBASE}
 BUILD_DEFS+=		VARBASE DAEMONTOOLS_LOG_USER
-
-.include "../../mk/bsd.prefs.mk"
-
-# Detect the PKG_SYSCONFDIR of the installed daemontools, so we can create
-# config files there and refer to them from rc.d scripts.
-#
-.if !defined(PKG_SYSCONFDIR.daemontools-run)
-PKG_SYSCONFDIR.daemontools-run!=					\
-	${PKG_INFO} -Q PKG_SYSCONFDIR					\
-		${DEPENDS_DAEMONTOOLS:C/:.*$//:Q} 2>/dev/null ||	\
-	${ECHO} "PKG_SYSCONFDIR.daemontools-run_not_set"
-.  if empty(PKG_SYSCONFDIR.daemontools-run:M*not_set)
-MAKEVARS+=	PKG_SYSCONFDIR.daemontools-run
-.  endif
-.endif
 
 .include "options.mk"
 
