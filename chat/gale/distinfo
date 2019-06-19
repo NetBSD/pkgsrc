@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 01:20:19 agc Exp $
-
-SHA1 (gale-0.99fruit.tar.bz2) = 1a89f4db45b0fb23e678161199531c1a5a5a3625
-RMD160 (gale-0.99fruit.tar.bz2) = 71e3190c6ff91bd8831cf3f3eac479b928ae89e9
-SHA512 (gale-0.99fruit.tar.bz2) = e44297566ce8fb17d903837b6985bcd27cd2c10e8f56b6f70f48fa1b5ddfacbd9a09e007448493a951da2fecd80a37350a744189f511b10e997f0ae78ad9faa0
-Size (gale-0.99fruit.tar.bz2) = 384552 bytes
-SHA1 (patch-aa) = 5061914b02f33df1d3845aec34630abdc2ba3882
-SHA1 (patch-ac) = 4da3c0bf6c1788b0d1b8658edb51369a32e35471
-SHA1 (patch-liboop_test-oop.c) = 69de8d170d5d26675017da2606ce153d3e82483d
