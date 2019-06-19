@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/06/19 10:04:58 fcambus Exp $
+
+SHA1 (stagit-0.9.2.tar.gz) = 288674c4b8f15473ca2e769105d8c1c06fce5387
+RMD160 (stagit-0.9.2.tar.gz) = 2cbc32171fec7ce30fdf0fbb9da42588cc6716b6
+SHA512 (stagit-0.9.2.tar.gz) = 30a1c43672c94bcf85af25e2c2d0137a1014c625361dc53f78f8a31b194d9a678372d0cc98e6fa8ea3ddd1d632bdbc8ecb37f40e0bac44fa05dfdf981417fe2c
+Size (stagit-0.9.2.tar.gz) = 18525 bytes
