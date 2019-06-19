@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2018/10/24 16:33:40 schmonz Exp $
+# $NetBSD: Makefile,v 1.32 2019/06/19 17:43:28 schmonz Exp $
 #
 
 DISTNAME=		mess822-0.58
@@ -11,8 +11,7 @@ HOMEPAGE=		http://cr.yp.to/mess822.html
 COMMENT=		Library for parsing Internet mail messages
 LICENSE=		public-domain
 
-DEPENDS_LIBTAI+=	libtai>=0.60nb5:../../devel/libtai
-DEPENDS+=		${DEPENDS_LIBTAI}
+DEPENDS+=		libtai>=0.60nb5:../../devel/libtai
 DEPENDS+=		qmail>=1.03nb7:../../mail/qmail
 
 DJB_RESTRICTED=		no
