@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/03/01 23:46:54 wiz Exp $
+$NetBSD: distinfo,v 1.5 2019/06/20 06:58:27 wiz Exp $
 
-SHA1 (xorgproto-2018.4.tar.bz2) = 2e4a3db312e1ce81e15515dfcac52ba0aa5a920c
-RMD160 (xorgproto-2018.4.tar.bz2) = 82de862ca473efd86c3d07e4aed4e7cdc993c88c
-SHA512 (xorgproto-2018.4.tar.bz2) = 2db682d10280ca58cdc04d8eb9fef30c111d4cd379de9fec86cff317865b859a576de5426447be9231d24be9762cc1d684c57383a99ad499398e8b7d62b1c03c
-Size (xorgproto-2018.4.tar.bz2) = 390293 bytes
+SHA1 (xorgproto-2019.1.tar.bz2) = f0001f318dff617912b40a9a8ec182de9ffc47b0
+RMD160 (xorgproto-2019.1.tar.bz2) = d8802607a695a185a8cb825ef6ab4ac949333ad6
+SHA512 (xorgproto-2019.1.tar.bz2) = f26c17f4a027acdc799b532fa65c3ea1b0e8c30794c7b7293060ee9d9dec84b4878966cd2dcda43584849232e73a208abd4213374f89b05c10e5aae92bdc00be
+Size (xorgproto-2019.1.tar.bz2) = 865840 bytes
