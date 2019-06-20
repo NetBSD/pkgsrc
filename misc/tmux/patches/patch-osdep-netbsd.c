@@ -1,6 +1,10 @@
-$NetBSD: patch-osdep-netbsd.c,v 1.4 2019/06/15 09:42:52 leot Exp $
+$NetBSD: patch-osdep-netbsd.c,v 1.5 2019/06/20 08:54:19 leot Exp $
 
 Add support for KERN_PROC_CWD.
+
+Patch shared and applied upstream via:
+
+ <https://github.com/tmux/tmux/pull/1802>
 
 --- osdep-netbsd.c.orig	2019-03-26 14:34:58.000000000 +0000
 +++ osdep-netbsd.c
