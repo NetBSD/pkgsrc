@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2019/05/23 19:22:59 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2019/06/20 16:12:39 adam Exp $
 
-DISTNAME=	jupyter_core-4.4.0
+DISTNAME=	jupyter_core-4.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter_core/}
 
@@ -12,7 +11,7 @@ COMMENT=	Jupyter core package
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=4.1.0:../../devel/py-traitlets
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
@@ -24,12 +23,12 @@ SUBST_VARS.fix-prefix=		PREFIX
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} jupyter jupyter${PYVERSSUFFIX} && \
-	${MV} jupyter-migrate jupyter-migrate${PYVERSSUFFIX} || ${TRUE}
+	${MV} jupyter jupyter-${PYVERSSUFFIX} && \
+	${MV} jupyter-migrate jupyter-migrate-${PYVERSSUFFIX} && \
+	${MV} jupyter-troubleshoot jupyter-troubleshoot-${PYVERSSUFFIX} || ${TRUE}
 
 do-test:
 	cd ${WRKSRC}/jupyter_core && py.test-${PYVERSSUFFIX}
 
-.include "../../lang/python/distutils.mk"
-.include "../../lang/python/application.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
