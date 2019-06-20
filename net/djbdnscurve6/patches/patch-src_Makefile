@@ -1,8 +1,8 @@
-$NetBSD: patch-src_Makefile,v 1.1 2019/01/05 06:20:19 schmonz Exp $
+$NetBSD: patch-src_Makefile,v 1.2 2019/06/20 02:09:25 schmonz Exp $
 
-DESTDIR support.
+DESTDIR and libsodium support.
 
---- src/Makefile.orig	2018-08-10 07:57:14.000000000 +0000
+--- src/Makefile.orig	2019-06-09 10:27:03.000000000 +0000
 +++ src/Makefile
 @@ -12,6 +12,14 @@ auto-str.o: \
  compile auto-str.c  
@@ -19,7 +19,7 @@ DESTDIR support.
  auto_home.c: \
  auto-str ../conf-home
  	./auto-str auto_home `head -1 ../conf-home` > auto_home.c
-@@ -259,16 +267,16 @@ compile hier.c auto_home.h
+@@ -260,16 +268,16 @@ compile hier.c auto_home.h
  	./compile hier.c
  
  install: \
@@ -40,3 +40,12 @@ DESTDIR support.
  	
  instcheck.o: \
  compile instcheck.c 
+@@ -297,7 +305,7 @@ warn-auto.sh ../conf-ld
+ 	( cat warn-auto.sh; \
+ 	echo 'main="$$1"; shift'; \
+ 	echo exec "`head -1 ../conf-ld`" \
+-	'-o "$$main" "$$main".o $${1+"$$@"} -lqlibs -lnacl' \
++	'-o "$$main" "$$main".o $${1+"$$@"} -lqlibs -lsodium' \
+ 	) > load
+ 	chmod 755 load
+ 
