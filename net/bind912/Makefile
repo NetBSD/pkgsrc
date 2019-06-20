@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2019/05/02 13:31:07 taca Exp $
+# $NetBSD: Makefile,v 1.12 2019/06/20 02:15:20 taca Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/
 
@@ -16,7 +15,7 @@ CONFLICTS+=	host-[0-9]*
 MAKE_JOBS_SAFE=	no
 USE_CWRAPPERS=	no
 
-BIND_VERSION=	9.12.4-P1
+BIND_VERSION=	9.12.4-P2
 
 .include "../../mk/bsd.prefs.mk"
 
