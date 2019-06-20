@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.265 2019/05/07 19:54:46 rillig Exp $
+# $NetBSD: bootstrap,v 1.266 2019/06/20 09:11:26 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -571,7 +571,7 @@ CYGWIN_*)
 	need_bsd_install=no
 	opsys=`uname -o`
 	need_awk=no
-	need_sed=no
+	need_sed=yes
 	need_xargs=no
 	machine_arch=`uname -m`
 	# only used for unprivileged builds.
