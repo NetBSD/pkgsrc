@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2019/04/02 13:18:07 nia Exp $
+# $NetBSD: Makefile,v 1.6 2019/06/20 13:24:52 nia Exp $
 
-DISTNAME=	papirus-icon-theme-20190331
+DISTNAME=	papirus-icon-theme-20190615
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PapirusDevelopmentTeam/}
 GITHUB_PROJECT=	papirus-icon-theme
