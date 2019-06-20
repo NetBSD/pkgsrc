@@ -1,12 +1,12 @@
-$NetBSD: patch-configure,v 1.3 2019/05/20 16:03:55 taca Exp $
+$NetBSD: patch-configure,v 1.4 2019/06/20 02:13:58 taca Exp $
 
 * Add DragonFly support.
 * Use proper link options for NetBSD.
 * Link proper postgresql library.
 
---- configure.orig	2019-05-10 05:03:58.000000000 +0000
+--- configure.orig	2019-06-04 16:01:00.000000000 +0000
 +++ configure
-@@ -15470,6 +15470,8 @@ case $host in
+@@ -15481,6 +15481,8 @@ case $host in
  	use_threads=false ;;
  *-freebsd*)
  	use_threads=true ;;
@@ -15,7 +15,7 @@ $NetBSD: patch-configure,v 1.3 2019/05/20 16:03:55 taca Exp $
  *-bsdi[234]*)
  	# Thread signals do not work reliably on some versions of BSD/OS.
  	use_threads=false ;;
-@@ -18023,27 +18025,10 @@ case "$use_libjson" in
+@@ -18034,27 +18036,10 @@ case "$use_libjson" in
  		libjson_libs=""
  		;;
  	auto|yes)
@@ -47,7 +47,7 @@ $NetBSD: patch-configure,v 1.3 2019/05/20 16:03:55 taca Exp $
  		;;
  	*)
  		if test -f "${use_libjson}/include/json/json.h"
-@@ -23798,7 +23783,7 @@ else
+@@ -23809,7 +23794,7 @@ else
  
  fi
  	        ;; #(
@@ -56,7 +56,7 @@ $NetBSD: patch-configure,v 1.3 2019/05/20 16:03:55 taca Exp $
  
  		 LDFLAGS="${LDFLAGS} -Wl,-E"
  		 SO_CFLAGS="-fpic"
-@@ -23830,9 +23815,9 @@ fi
+@@ -23841,9 +23826,9 @@ fi
  	        ;; #(
    *-solaris*) :
  
@@ -67,9 +67,9 @@ $NetBSD: patch-configure,v 1.3 2019/05/20 16:03:55 taca Exp $
 +		 SO_LDFLAGS="-Xcompiler -shared -Wl,-z -Wl,text"
 +		 SO_LD="${CC}"
  	        ;; #(
-   *) :
+   ia64-hp-hpux*) :
  
-@@ -24082,8 +24067,8 @@ $as_echo "no" >&6; }
+@@ -24099,8 +24084,8 @@ $as_echo "no" >&6; }
  	fi
  	if test -n "-L$use_dlz_postgres_lib -lpq"
  	then
