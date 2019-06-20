@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2628 2019/06/20 16:11:08 bouyer Exp $
+$NetBSD: CHANGES-2019,v 1.2629 2019/06/20 16:31:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4366,3 +4366,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/papirus-icon-theme to 20190615 [nia 2019-06-20]
 	Updated www/firefox60 to 60.7.1 [bouyer 2019-06-20]
 	Updated www/firefox60-l10n to 60.7.1 [bouyer 2019-06-20]
+	Updated devel/py-jupyter_core to 4.5.0 [adam 2019-06-20]
+	Updated graphics/py-graphviz to 0.11 [adam 2019-06-20]
