@@ -1,8 +1,8 @@
-$NetBSD: patch-src_makefile,v 1.5 2019/04/04 14:14:28 schmonz Exp $
+$NetBSD: patch-src_makefile,v 1.6 2019/06/20 03:08:12 schmonz Exp $
 
 Use pkgsrc-specified compiler and flags.
 
---- src/makefile.orig	2019-03-26 19:58:45.000000000 +0000
+--- src/makefile.orig	2019-05-28 18:47:06.000000000 +0000
 +++ src/makefile
 @@ -8,18 +8,18 @@
  # See ../makefile for the definition of ${data_dir}
@@ -23,7 +23,7 @@ Use pkgsrc-specified compiler and flags.
  # Added -std=c++11 because of auto_ptr to unique_ptr transition
 -CFLAGS:=-Wall -O2 ${CFLAGS} -DNDEBUG -std=c++11
 +#CFLAGS:=-Wall -O2 ${CFLAGS} -DNDEBUG -std=c++11
- #CFLAGS:=-ggdb ${CFLAGS} -std=c++11
+ #CFLAGS:=-ggdb -O0 ${CFLAGS} -std=c++11
  
  CFLAGS_DILU=-fno-strict-aliasing
 @@ -54,27 +54,30 @@ REGEX_DIR=${CORE_DIR}re/
