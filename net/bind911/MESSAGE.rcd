@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2019/05/20 16:31:08 taca Exp $
+$NetBSD: MESSAGE.rcd,v 1.1 2019/06/20 12:26:33 jperkin Exp $
 
 Please consider running BIND under the pseudo user account "${BIND_USER}"
 in a chroot environment for security reasons.
