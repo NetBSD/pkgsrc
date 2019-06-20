@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19081 2019/06/19 17:06:01 wiz Exp $
+$NetBSD: TODO,v 1.19082 2019/06/20 05:48:14 nia Exp $
 
 Suggested new packages
 ======================
@@ -870,7 +870,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o labelnation-1.218
 	o lcc-4.2
 	o ldapsdk-6.0.7
-	o leafpad-0.8.18.1
 	o lgeneral-1.3.1
 	o libX11-1.6.8
 	o libbpg-0.9.6

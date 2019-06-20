@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2617 2019/06/20 03:08:33 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.2618 2019/06/20 05:48:14 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4353,3 +4353,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/libhighlight to 3.52 [schmonz 2019-06-20]
 	Updated textproc/highlight to 3.52 [schmonz 2019-06-20]
 	Updated textproc/p5-highlight to 3.52 [schmonz 2019-06-20]
+	Updated editors/leafpad to 0.8.18.1 [nia 2019-06-20]
