@@ -1,11 +1,11 @@
-$NetBSD: patch-configure,v 1.1 2019/04/30 03:34:34 taca Exp $
+$NetBSD: patch-configure,v 1.2 2019/06/20 02:16:53 taca Exp $
 
 * Add DragonFly support.
 * Use proper link options for NetBSD.
 * Link proper postgresql library.
 * Add support for blacklistd.
 
---- configure.orig	2019-04-06 20:09:59.000000000 +0000
+--- configure.orig	2019-06-04 15:20:04.000000000 +0000
 +++ configure
 @@ -725,6 +725,9 @@ purify_path
  MKDEPPROG
@@ -17,7 +17,7 @@ $NetBSD: patch-configure,v 1.1 2019/04/30 03:34:34 taca Exp $
  ZLIB
  JSONSTATS
  XMLSTATS
-@@ -879,6 +882,7 @@ with_pic
+@@ -882,6 +885,7 @@ with_pic
  enable_fast_install
  with_aix_soname
  with_gnu_ld
@@ -25,7 +25,7 @@ $NetBSD: patch-configure,v 1.1 2019/04/30 03:34:34 taca Exp $
  with_sysroot
  enable_libtool_lock
  enable_libbind
-@@ -1672,6 +1676,7 @@ Optional Packages:
+@@ -1675,6 +1679,7 @@ Optional Packages:
    --with-dlz-stub=ARG     Build with stub DLZ driver [yes|no]. (Required to
                            use stub driver with DLZ)
    --with-make-clean       run "make clean" at end of configure [yes|no]
@@ -33,7 +33,7 @@ $NetBSD: patch-configure,v 1.1 2019/04/30 03:34:34 taca Exp $
  
  Some influential environment variables:
    CC          C compiler command
-@@ -3818,7 +3823,7 @@ fi
+@@ -3821,7 +3826,7 @@ fi
  
  # On IRIX 5.3, sys/types and inttypes.h are conflicting.
  for ac_header in sys/types.h sys/stat.h stdlib.h string.h memory.h strings.h \
@@ -42,7 +42,7 @@ $NetBSD: patch-configure,v 1.1 2019/04/30 03:34:34 taca Exp $
  do :
    as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
  ac_fn_c_check_header_compile "$LINENO" "$ac_header" "$as_ac_Header" "$ac_includes_default
-@@ -16679,27 +16684,10 @@ case "$use_libjson" in
+@@ -16709,27 +16714,10 @@ case "$use_libjson" in
  		libjson_libs=""
  		;;
  	auto|yes)
@@ -74,7 +74,7 @@ $NetBSD: patch-configure,v 1.1 2019/04/30 03:34:34 taca Exp $
  		;;
  	*)
  		if test -f "${use_libjson}/include/json/json.h"
-@@ -16805,6 +16793,139 @@ $as_echo "#define HAVE_JSON_C 1" >>confd
+@@ -16835,6 +16823,139 @@ $as_echo "#define HAVE_JSON_C 1" >>confd
  	JSONSTATS=1
  fi
  
@@ -214,7 +214,7 @@ $NetBSD: patch-configure,v 1.1 2019/04/30 03:34:34 taca Exp $
  
  #
  # was --with-zlib specified?
-@@ -20234,7 +20355,7 @@ else
+@@ -20264,7 +20385,7 @@ else
  
  fi
  	        ;; #(
@@ -223,7 +223,7 @@ $NetBSD: patch-configure,v 1.1 2019/04/30 03:34:34 taca Exp $
  
  		 LDFLAGS="${LDFLAGS} -Wl,-E"
  		 SO_CFLAGS="-fpic"
-@@ -20266,9 +20387,9 @@ fi
+@@ -20296,9 +20417,9 @@ fi
  	        ;; #(
    *-solaris*) :
  
@@ -234,9 +234,9 @@ $NetBSD: patch-configure,v 1.1 2019/04/30 03:34:34 taca Exp $
 +		 SO_LDFLAGS="-Xcompiler -shared -Wl,-z -Wl,text"
 +		 SO_LD="${CC}"
  	        ;; #(
-   *) :
+   ia64-hp-hpux*) :
  
-@@ -20691,8 +20812,8 @@ $as_echo "no" >&6; }
+@@ -20727,8 +20848,8 @@ $as_echo "no" >&6; }
  	fi
  	if test -n "-L$use_dlz_postgres_lib -lpq"
  	then
@@ -247,7 +247,7 @@ $NetBSD: patch-configure,v 1.1 2019/04/30 03:34:34 taca Exp $
  	fi
  
  
-@@ -23892,6 +24013,7 @@ report() {
+@@ -23928,6 +24049,7 @@ report() {
  	test "X$PYTHON" = "X" || echo "    Python tools (--with-python)"
  	test "X$XMLSTATS" = "X" || echo "    XML statistics (--with-libxml2)"
  	test "X$JSONSTATS" = "X" || echo "    JSON statistics (--with-libjson)"
@@ -255,7 +255,7 @@ $NetBSD: patch-configure,v 1.1 2019/04/30 03:34:34 taca Exp $
  	test "X$ZLIB" = "X" || echo "    HTTP zlib compression (--with-zlib)"
  	test "X$NZD_TOOLS" = "X" || echo "    LMDB database to store configuration for 'addzone' zones (--with-lmdb)"
  	test "no" = "$with_libidn2" || echo "    IDN support (--with-libidn2)"
-@@ -23970,6 +24092,7 @@ report() {
+@@ -24006,6 +24128,7 @@ report() {
      test "X$PYTHON" = "X" && echo "    Python tools (--with-python)"
      test "X$XMLSTATS" = "X" && echo "    XML statistics (--with-libxml2)"
      test "X$JSONSTATS" = "X" && echo "    JSON statistics (--with-libjson)"
