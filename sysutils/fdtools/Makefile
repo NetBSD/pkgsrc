@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2018/05/28 12:00:39 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2019/06/20 17:31:06 schmonz Exp $
 
 DISTNAME=		fdtools-2015.03.28
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://code.dogmap.org/fdtools/releases/
 EXTRACT_SUFX=		.tar.bz2
