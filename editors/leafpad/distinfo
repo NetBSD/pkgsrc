@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 03:32:17 agc Exp $
+$NetBSD: distinfo,v 1.8 2019/06/20 05:48:03 nia Exp $
 
-SHA1 (leafpad-0.8.17.tar.gz) = d13f585f3b2d9ea263102e1abb9fc688e3e5874a
-RMD160 (leafpad-0.8.17.tar.gz) = 8302c5cff5174167567ab7a5eac664b95e6947a5
-SHA512 (leafpad-0.8.17.tar.gz) = bd5b76ee526c6aea6c23e7429f23fd6dfad4487f052d0f42dca955668e4be75fc63ceb24e5bbf29869ab625285ebf5ef2415be08ea13d122b995cf26acbb77d1
-Size (leafpad-0.8.17.tar.gz) = 290002 bytes
+SHA1 (leafpad-0.8.18.1.tar.gz) = 73876d02f808fb8bf5ef316d01afb9a478a4ff38
+RMD160 (leafpad-0.8.18.1.tar.gz) = df9caa1d4248e7da3dc5ecae31f3e758f477732e
+SHA512 (leafpad-0.8.18.1.tar.gz) = 1caad712967f634f585ab32e406534b5ce2c5621008c1eb5b2b48f17ca0f48cd834ea2ea1c67eda4053fa84e8727ff0e708e99d3b5dad838dcf0701389788257
+Size (leafpad-0.8.18.1.tar.gz) = 289117 bytes
