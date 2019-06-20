@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 20:30:57 agc Exp $
+$NetBSD: distinfo,v 1.9 2019/06/20 12:13:19 nia Exp $
 
-SHA1 (dgen-sdl-1.32.tar.gz) = 68ab5dcdc29e5172bc760a13724afb35e8ca4378
-RMD160 (dgen-sdl-1.32.tar.gz) = fcc0bf27a2360d6d26eec48da1483e4f99271e69
-SHA512 (dgen-sdl-1.32.tar.gz) = 5848572f2e92d554af11e6e5ab5be281be11fff552795be691455ebb0e5aea445ce69eec20a499e4364f16233860a20447f4804f037ee1a41e817a670da3aa38
-Size (dgen-sdl-1.32.tar.gz) = 885601 bytes
+SHA1 (dgen-sdl-1.33.tar.gz) = 08629d9396a582ecc1ca50dba2f211e9405c5adc
+RMD160 (dgen-sdl-1.33.tar.gz) = 4c6df66bf861390db7150e12c0252de6b549218b
+SHA512 (dgen-sdl-1.33.tar.gz) = c98ab8cdced62a5d26fd677ad36b031e756620114c946ac067599e84ae6ebcfab731554dd4337b6314c3b5db4601c8a6cc67c285d2aad136e659b9973c01a749
+Size (dgen-sdl-1.33.tar.gz) = 939297 bytes
 SHA1 (patch-cyclone_Cyclone.h) = 80922337ccb228b701a1f08a45d44f91a2f2da7b
 SHA1 (patch-cyclone_Ea.cpp) = 51314ba86c0f91f7a2e4f4f2e05dec8ec8847096
 SHA1 (patch-cyclone_Main.cpp) = 568c4515b78882b3a8601ca15c7ad883dfe432c1

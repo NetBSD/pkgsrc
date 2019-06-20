@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2018/07/18 00:06:14 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2019/06/20 12:13:19 nia Exp $
 #
 
-DISTNAME=	dgen-sdl-1.32
-PKGREVISION=	1
+DISTNAME=	dgen-sdl-1.33
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dgen/}
 
@@ -32,5 +31,6 @@ BUILDLINK_TRANSFORM+=	rm:-mpentium
 BUILDLINK_TRANSFORM+=	rm:-march=pentium
 BUILDLINK_TRANSFORM+=	rm:-fno-rtti
 
+.include "../../archivers/libarchive/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
