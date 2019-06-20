@@ -1,12 +1,12 @@
-$NetBSD: patch-config.h.in,v 1.1 2019/04/30 03:34:34 taca Exp $
+$NetBSD: patch-config.h.in,v 1.2 2019/06/20 02:16:53 taca Exp $
 
 * Add support for blacklistd.
 
---- config.h.in.orig	2019-04-06 20:09:59.000000000 +0000
+--- config.h.in.orig	2019-06-04 15:20:04.000000000 +0000
 +++ config.h.in
-@@ -45,6 +45,9 @@
- /* Define to 1 if you have the `arc4random_uniform' function. */
- #undef HAVE_ARC4RANDOM_UNIFORM
+@@ -48,6 +48,9 @@
+ /* define if the ARM yield instruction is available */
+ #undef HAVE_ARM_YIELD
  
 +/* Define to 1 if blacklist is supported. */
 +#undef HAVE_BLACKLIST
