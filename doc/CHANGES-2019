@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2621 2019/06/20 11:41:38 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2622 2019/06/20 11:46:14 fox Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4358,3 +4358,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/py-bcrypt to 3.1.7 [adam 2019-06-20]
 	Updated lang/py-mypy to 0.710 [adam 2019-06-20]
 	Updated fonts/terminus-font to 4.47 [nia 2019-06-20]
+	Updated audio/fasttracker2 to 2.160 [fox 2019-06-20]
