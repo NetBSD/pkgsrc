@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2608 2019/06/20 01:03:13 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.2609 2019/06/20 01:06:32 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4344,3 +4344,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/samba4 to 4.10.5 [adam 2019-06-19]
 	Updated devel/skalibs to 2.8.1.0 [schmonz 2019-06-20]
 	Updated net/fehqlibs to 0.9.12 [schmonz 2019-06-20]
+	Updated net/ucspi-tcp6 to 1.10.6 [schmonz 2019-06-20]
