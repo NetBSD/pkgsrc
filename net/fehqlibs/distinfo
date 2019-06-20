@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/12/14 22:51:32 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2019/06/20 01:03:08 schmonz Exp $
 
-SHA1 (fehQlibs-10.tgz) = 13c64b1fdf23ffab1fe6cffd47323855118124a6
-RMD160 (fehQlibs-10.tgz) = b00b4cd5c66369654c0da75484f84d64c67969ba
-SHA512 (fehQlibs-10.tgz) = cb5af7a976ba272288493ab797d5710e30e2cc54827dff35189941653f5e6220a5fdf83f7dfc89264ddda6692ab55ad5e2880d3da10b548f060f69c0486ab914
-Size (fehQlibs-10.tgz) = 75859 bytes
+SHA1 (fehQlibs-12.tgz) = 20af4b9a743b25e9771c54b206c31e8fd9b0dc3f
+RMD160 (fehQlibs-12.tgz) = b5c6f1229e2d94cced2f5e1ddfcf728a3368185a
+SHA512 (fehQlibs-12.tgz) = 5ac200d119f4d5b02ffa9bf47b037c8a351780e16759361cf8abba3a36cb1c88721d780ce7cb6b444e81d94b779122b7922ac0aabea3e4c90d668538df4455c8
+Size (fehQlibs-12.tgz) = 77120 bytes
