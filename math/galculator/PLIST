@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2015/02/03 15:29:48 mef Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/06/20 11:54:25 nia Exp $
 bin/galculator
 man/man1/galculator.1
+share/appdata/galculator.appdata.xml
 share/applications/galculator.desktop
 share/galculator/ui/about.ui
 share/galculator/ui/basic_buttons_gtk2.ui
@@ -22,15 +23,21 @@ share/galculator/ui/scientific_buttons_gtk2.ui
 share/galculator/ui/scientific_buttons_gtk3.ui
 share/icons/hicolor/48x48/apps/galculator.png
 share/icons/hicolor/scalable/apps/galculator.svg
-share/locale/da_DK/LC_MESSAGES/galculator.mo
+share/locale/cs/LC_MESSAGES/galculator.mo
 share/locale/de/LC_MESSAGES/galculator.mo
+share/locale/el/LC_MESSAGES/galculator.mo
+share/locale/en_AU/LC_MESSAGES/galculator.mo
 share/locale/es/LC_MESSAGES/galculator.mo
 share/locale/es_MX/LC_MESSAGES/galculator.mo
 share/locale/fr/LC_MESSAGES/galculator.mo
+share/locale/gl/LC_MESSAGES/galculator.mo
 share/locale/hu/LC_MESSAGES/galculator.mo
+share/locale/id/LC_MESSAGES/galculator.mo
+share/locale/it/LC_MESSAGES/galculator.mo
 share/locale/ja/LC_MESSAGES/galculator.mo
-share/locale/kk_KZ/LC_MESSAGES/galculator.mo
+share/locale/kk/LC_MESSAGES/galculator.mo
 share/locale/lt/LC_MESSAGES/galculator.mo
+share/locale/mr/LC_MESSAGES/galculator.mo
 share/locale/pl/LC_MESSAGES/galculator.mo
 share/locale/pt/LC_MESSAGES/galculator.mo
 share/locale/pt_BR/LC_MESSAGES/galculator.mo
@@ -39,6 +46,7 @@ share/locale/ru/LC_MESSAGES/galculator.mo
 share/locale/sk/LC_MESSAGES/galculator.mo
 share/locale/sv/LC_MESSAGES/galculator.mo
 share/locale/tr/LC_MESSAGES/galculator.mo
+share/locale/uk/LC_MESSAGES/galculator.mo
 share/locale/zh_CN/LC_MESSAGES/galculator.mo
 share/locale/zh_TW/LC_MESSAGES/galculator.mo
 share/pixmaps/galculator.xpm
