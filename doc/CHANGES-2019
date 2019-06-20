@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2614 2019/06/20 02:17:33 taca Exp $
+$NetBSD: CHANGES-2019,v 1.2615 2019/06/20 03:08:18 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4350,3 +4350,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/bind911 to 9.11.8 [taca 2019-06-20]
 	Updated net/bind912 to 9.12.4pl2 [taca 2019-06-20]
 	Updated net/bind914 to 9.14.3 [taca 2019-06-20]
+	Updated textproc/libhighlight to 3.52 [schmonz 2019-06-20]
