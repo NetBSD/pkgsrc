@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/08/26 19:35:42 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2019/06/20 00:56:58 schmonz Exp $
 
-DISTNAME=		skalibs-2.7.0.0
+DISTNAME=		skalibs-2.8.1.0
 CATEGORIES=		devel
 MASTER_SITES=		http://skarnet.org/software/skalibs/
 
@@ -13,14 +13,13 @@ USE_LANGUAGES=		c
 HAS_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 
-PLIST_VARS+=		include-shared-objects
-PLIST.include-shared-objects=	yes
-
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 
+PLIST_VARS+=		include-shared-objects
 .if "${OPSYS}" == "Darwin"
-PLIST.include-shared-objects=	no
 CONFIGURE_ARGS+=	"--disable-shared"
+.else
+PLIST.include-shared-objects=	yes
 .endif
 
 .include "../../mk/bsd.pkg.mk"
