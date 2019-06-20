@@ -1,10 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2017/04/23 04:23:52 markd Exp $
-bin/jupyter${PYVERSSUFFIX}
-bin/jupyter-migrate${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.2 2019/06/20 16:12:39 adam Exp $
+bin/jupyter-${PYVERSSUFFIX}
+bin/jupyter-migrate-${PYVERSSUFFIX}
+bin/jupyter-troubleshoot-${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/jupyter.py
 ${PYSITELIB}/jupyter.pyc
 ${PYSITELIB}/jupyter.pyo
-${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/jupyter_core/__init__.py
 ${PYSITELIB}/jupyter_core/__init__.pyc
 ${PYSITELIB}/jupyter_core/__init__.pyo
