@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2018/08/22 09:45:07 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/06/20 11:41:28 nia Exp $
 
-DISTNAME=		terminus-font-4.40
-PKGREVISION=		1
+DISTNAME=		terminus-font-4.47
 CATEGORIES=		fonts
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=terminus-font/}
 
@@ -20,7 +19,12 @@ INSTALL_TARGET=		install-pcf
 FONTS_DIRS.x11=		${PREFIX}/share/fonts/X11/misc
 REQD_DIRS+=		${PREFIX}/share/fonts/X11/misc
 
+PYTHON_FOR_BUILD_ONLY=		yes
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 USE_LANGUAGES=		# none
+
+MAKE_FLAGS+=	INT=${PYTHONBIN}
 
 EGDIR=		${PREFIX}/share/examples/terminus-font
 
@@ -40,4 +44,5 @@ post-install:
 	${INSTALL_DATA} ${DOCFILES} ${DESTDIR}${DOCDIR}; \
 	${INSTALL_DATA} 75-yes-terminus.conf ${DESTDIR}${EGDIR}
 
+.include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
