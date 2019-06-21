@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2016/11/27 00:03:17 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/06/21 06:12:32 triaxx Exp $
 bin/gnome-help
 bin/yelp
 include/libyelp/yelp-bookmarks.h
@@ -42,6 +42,8 @@ share/gtk-doc/html/libyelp/right.png
 share/gtk-doc/html/libyelp/style.css
 share/gtk-doc/html/libyelp/up-insensitive.png
 share/gtk-doc/html/libyelp/up.png
+share/icons/hicolor/scalable/apps/org.gnome.Yelp.svg
+share/icons/hicolor/symbolic/apps/org.gnome.Yelp-symbolic.svg
 share/locale/af/LC_MESSAGES/yelp.mo
 share/locale/am/LC_MESSAGES/yelp.mo
 share/locale/an/LC_MESSAGES/yelp.mo
@@ -145,6 +147,7 @@ share/locale/zh_CN/LC_MESSAGES/yelp.mo
 share/locale/zh_HK/LC_MESSAGES/yelp.mo
 share/locale/zh_TW/LC_MESSAGES/yelp.mo
 share/locale/zu/LC_MESSAGES/yelp.mo
+share/metainfo/yelp.appdata.xml
 share/yelp-xsl/xslt/common/domains/yelp.xml
 share/yelp/dtd/catalog
 share/yelp/dtd/docbookx.dtd
