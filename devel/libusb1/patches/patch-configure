@@ -1,10 +1,13 @@
-$NetBSD: patch-configure,v 1.6 2018/11/25 17:03:34 gdt Exp $
+$NetBSD: patch-configure,v 1.7 2019/06/21 16:58:23 sjmulder Exp $
 
 prepare DragonFlyBSD backend support
 
---- configure.orig	2018-03-25 01:20:03.000000000 +0000
-+++ configure
-@@ -16266,6 +16266,11 @@ $as_echo "OpenBSD" >&6; }
+Fix clock_gettime check
+https://github.com/libusb/libusb/pull/439
+
+--- configure.orig	2019-06-21 01:40:18.666466601 +0200
++++ configure	2019-06-21 01:40:50.766082708 +0200
+@@ -16266,6 +16266,11 @@
  	backend=openbsd
  	threads=posix
  	;;
@@ -16,3 +19,63 @@ prepare DragonFlyBSD backend support
  *-netbsd*)
  	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: NetBSD" >&5
  $as_echo "NetBSD" >&6; }
+@@ -16308,9 +16313,9 @@
+ $as_echo "#define OS_LINUX 1" >>confdefs.h
+ 
+ 
+-	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for library containing clock_gettime2" >&5
+-$as_echo_n "checking for library containing clock_gettime2... " >&6; }
+-if ${ac_cv_search_clock_gettime2+:} false; then :
++	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for library containing clock_gettime" >&5
++$as_echo_n "checking for library containing clock_gettime... " >&6; }
++if ${ac_cv_search_clock_gettime+:} false; then :
+   $as_echo_n "(cached) " >&6
+ else
+   ac_func_search_save_LIBS=$LIBS
+@@ -16323,11 +16328,11 @@
+ #ifdef __cplusplus
+ extern "C"
+ #endif
+-char clock_gettime2 ();
++char clock_gettime ();
+ int
+ main ()
+ {
+-return clock_gettime2 ();
++return clock_gettime ();
+   ;
+   return 0;
+ }
+@@ -16340,25 +16345,25 @@
+     LIBS="-l$ac_lib -pthread $ac_func_search_save_LIBS"
+   fi
+   if ac_fn_c_try_link "$LINENO"; then :
+-  ac_cv_search_clock_gettime2=$ac_res
++  ac_cv_search_clock_gettime=$ac_res
+ fi
+ rm -f core conftest.err conftest.$ac_objext \
+     conftest$ac_exeext
+-  if ${ac_cv_search_clock_gettime2+:} false; then :
++  if ${ac_cv_search_clock_gettime+:} false; then :
+   break
+ fi
+ done
+-if ${ac_cv_search_clock_gettime2+:} false; then :
++if ${ac_cv_search_clock_gettime+:} false; then :
+ 
+ else
+-  ac_cv_search_clock_gettime2=no
++  ac_cv_search_clock_gettime=no
+ fi
+ rm conftest.$ac_ext
+ LIBS=$ac_func_search_save_LIBS
+ fi
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_search_clock_gettime2" >&5
+-$as_echo "$ac_cv_search_clock_gettime2" >&6; }
+-ac_res=$ac_cv_search_clock_gettime2
++{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_search_clock_gettime" >&5
++$as_echo "$ac_cv_search_clock_gettime" >&6; }
++ac_res=$ac_cv_search_clock_gettime
+ if test "$ac_res" != no; then :
+   test "$ac_res" = "none required" || LIBS="$ac_res $LIBS"
+ 
