@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.57 2019/05/08 02:12:07 wen Exp $
+$NetBSD: distinfo,v 1.58 2019/06/21 08:19:35 wen Exp $
 
-SHA1 (mediawiki-1.32.1.tar.gz) = 0b45049473254221b3e133ff5df0ad11c82b9822
-RMD160 (mediawiki-1.32.1.tar.gz) = 990b2b0d27bd2a54a11a694348818ad089a8d46f
-SHA512 (mediawiki-1.32.1.tar.gz) = 597af44ba140a50b4dfec9dd1a81db1c96e6672f33870ad15d9be875c4a7109eff57034e10762c45c47bad4afdfe27b96949dd6dd4bea24db6ea54bafd80c376
-Size (mediawiki-1.32.1.tar.gz) = 36175836 bytes
+SHA1 (mediawiki-1.32.2.tar.gz) = c2b8317e71dae43f1d3a2f5fa42d75460a9748dd
+RMD160 (mediawiki-1.32.2.tar.gz) = 636a36de489251d26979b5e3cde5ddff898c3190
+SHA512 (mediawiki-1.32.2.tar.gz) = 79f13245fe2a8851780ac9f38c3f439a4911f6760e810712922b18c577e3ee6e4b0f3e336c567f6115258aebd5fc5e7c6c1045f43b5d0f615bfdcfb54fd16335
+Size (mediawiki-1.32.2.tar.gz) = 36188194 bytes
