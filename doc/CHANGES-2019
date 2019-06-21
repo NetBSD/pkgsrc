@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2644 2019/06/21 16:39:54 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.2645 2019/06/21 16:42:46 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4383,7 +4383,27 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/xfig to 3.2.6anb1 [wiz 2019-06-21]
 	Updated mail/rspamd to 1.9.4 [jperkin 2019-06-21]
 	Updated sysutils/decode-dimms to 0.0.20190619 [pgoyette 2019-06-21]
-	Updated ham/gnuradio-* to 3.7.13.5 [mef 2019-06-21]
+	Updated ham/gnuradio-atsc to 3.7.13.5 [mef 2019-06-21]
+	Updated ham/gnuradio-channels to 3.7.13.5 [mef 2019-06-21]
+	Updated ham/gnuradio-companion to 3.7.13.5 [mef 2019-06-21]
+	Updated ham/gnuradio-core to 3.7.13.5 [mef 2019-06-21]
+	Updated ham/gnuradio-ctrlport to 3.7.13.5 [mef 2019-06-21]
+	Updated ham/gnuradio-digital to 3.7.13.5 [mef 2019-06-21]
+	Updated ham/gnuradio-doxygen to 3.7.13.5 [mef 2019-06-21]
+	Updated ham/gnuradio-dtv to 3.7.13.5 [mef 2019-06-21]
+	Updated ham/gnuradio-fcd to 3.7.13.5 [mef 2019-06-21]
+	Updated ham/gnuradio-fec to 3.7.13.5 [mef 2019-06-21]
+	Updated ham/gnuradio-noaa to 3.7.13.5 [mef 2019-06-21]
+	Updated ham/gnuradio-pager to 3.7.13.5 [mef 2019-06-21]
+	Updated ham/gnuradio-qtgui to 3.7.13.5 [mef 2019-06-21]
+	Updated ham/gnuradio-trellis to 3.7.13.5 [mef 2019-06-21]
+	Updated ham/gnuradio-uhd to 3.7.13.5 [mef 2019-06-21]
+	Updated ham/gnuradio-utils to 3.7.13.5 [mef 2019-06-21]
+	Updated ham/gnuradio-video-sdl to 3.7.13.5 [mef 2019-06-21]
+	Updated ham/gnuradio-vocoder to 3.7.13.5 [mef 2019-06-21]
+	Updated ham/gnuradio-wavelet to 3.7.13.5 [mef 2019-06-21]
+	Updated ham/gnuradio-wxgui to 3.7.13.5 [mef 2019-06-21]
+	Updated ham/gnuradio-zeromq to 3.7.13.5 [mef 2019-06-21]
 	Updated www/firefox to 67.0.4 [ryoon 2019-06-21]
 	Updated www/firefox-l10n to 67.0.4 [ryoon 2019-06-21]
 	Updated www/firefox60 to 60.7.2 [ryoon 2019-06-21]
