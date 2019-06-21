@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2019/05/17 09:59:18 nia Exp $
+# $NetBSD: Makefile,v 1.8 2019/06/21 14:06:48 nia Exp $
 
 DISTNAME=	inspircd-3.1.0
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=inspircd/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 EXTRACT_USING=	bsdtar
 USE_TOOLS+=	gmake perl pkg-config
-USE_LANGUAGES=	c99 c++03
+USE_LANGUAGES=	c99 gnu++03
 HAS_CONFIGURE=	yes
 MAKE_FILE=	GNUmakefile
 MAKE_ENV+=	INSTALL=${INSTALL:Q}
