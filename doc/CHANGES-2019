@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2643 2019/06/21 16:38:23 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.2644 2019/06/21 16:39:54 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4387,3 +4387,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/firefox to 67.0.4 [ryoon 2019-06-21]
 	Updated www/firefox-l10n to 67.0.4 [ryoon 2019-06-21]
 	Updated www/firefox60 to 60.7.2 [ryoon 2019-06-21]
+	Updated www/firefox60-l10n to 60.7.2 [ryoon 2019-06-21]
