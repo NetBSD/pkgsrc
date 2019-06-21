@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2635 2019/06/21 11:25:22 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2636 2019/06/21 12:34:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4379,3 +4379,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-Pyro to 4.76 [adam 2019-06-21]
 	Updated net/py-amqp to 2.5.0 [adam 2019-06-21]
 	Updated net/py-kombu to 4.6.3 [adam 2019-06-21]
+	Updated misc/py-tqdm to 4.32.2 [adam 2019-06-21]
