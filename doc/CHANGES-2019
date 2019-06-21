@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2645 2019/06/21 16:42:46 leot Exp $
+$NetBSD: CHANGES-2019,v 1.2646 2019/06/21 17:00:13 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4408,3 +4408,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/firefox-l10n to 67.0.4 [ryoon 2019-06-21]
 	Updated www/firefox60 to 60.7.2 [ryoon 2019-06-21]
 	Updated www/firefox60-l10n to 60.7.2 [ryoon 2019-06-21]
+	Updated textproc/libxlsxwriter to 0.8.7 [sjmulder 2019-06-21]
