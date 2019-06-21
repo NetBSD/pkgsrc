@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2631 2019/06/21 06:26:39 triaxx Exp $
+$NetBSD: CHANGES-2019,v 1.2632 2019/06/21 07:46:35 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4370,3 +4370,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/py-graphviz to 0.11 [adam 2019-06-20]
 	Updated sysutils/fdtools to 2015.03.28nb1 [schmonz 2019-06-20]
 	Updated audio/easytag to 2.4.3 [triaxx 2019-06-21]
+	Updated misc/yelp3 to 3.32.0 [triaxx 2019-06-21]
