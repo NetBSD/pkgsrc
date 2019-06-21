@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2019/01/15 23:46:24 wen Exp $
+@comment $NetBSD: PLIST,v 1.39 2019/06/21 08:19:35 wen Exp $
 share/examples/mediawiki/mediawiki.conf
 share/mediawiki/CODE_OF_CONDUCT.md
 share/mediawiki/COPYING
@@ -9077,6 +9077,7 @@ share/mediawiki/resources/lib/jquery.ui/themes/smoothness/jquery.ui.tabs.css
 share/mediawiki/resources/lib/jquery.ui/themes/smoothness/jquery.ui.theme.css
 share/mediawiki/resources/lib/jquery.ui/themes/smoothness/jquery.ui.tooltip.css
 share/mediawiki/resources/lib/jquery.xmldom.js
+share/mediawiki/resources/lib/jquery/jquery-3.3.1.patch
 share/mediawiki/resources/lib/jquery/jquery.js
 share/mediawiki/resources/lib/jquery/jquery.migrate.js
 share/mediawiki/resources/lib/moment/LICENSE
@@ -12765,6 +12766,7 @@ share/mediawiki/tests/phpunit/includes/api/ApiDisabledTest.php
 share/mediawiki/tests/phpunit/includes/api/ApiEditPageTest.php
 share/mediawiki/tests/phpunit/includes/api/ApiErrorFormatterTest.php
 share/mediawiki/tests/phpunit/includes/api/ApiLoginTest.php
+share/mediawiki/tests/phpunit/includes/api/ApiLogoutTest.php
 share/mediawiki/tests/phpunit/includes/api/ApiMainTest.php
 share/mediawiki/tests/phpunit/includes/api/ApiMessageTest.php
 share/mediawiki/tests/phpunit/includes/api/ApiModuleManagerTest.php
@@ -13479,9 +13481,9 @@ share/mediawiki/vendor/composer/semver/src/VersionParser.php
 share/mediawiki/vendor/cssjanus/cssjanus/APACHE-LICENSE-2.0.txt
 share/mediawiki/vendor/cssjanus/cssjanus/README.md
 share/mediawiki/vendor/cssjanus/cssjanus/composer.json
-share/mediawiki/vendor/cssjanus/cssjanus/phpcs.xml
-share/mediawiki/vendor/cssjanus/cssjanus/phpunit.xml.dist
 share/mediawiki/vendor/cssjanus/cssjanus/src/CSSJanus.php
+share/mediawiki/vendor/cssjanus/cssjanus/test/CSSJanusBenchmark.php
+share/mediawiki/vendor/cssjanus/cssjanus/test/bench.php
 share/mediawiki/vendor/cssjanus/cssjanus/test/suites/CSSJanusTest.php
 share/mediawiki/vendor/liuggio/statsd-php-client/CHANGELOG.md
 share/mediawiki/vendor/liuggio/statsd-php-client/LICENSE
