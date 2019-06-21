@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2018/12/16 14:38:18 adam Exp $
+# $NetBSD: options.mk,v 1.5 2019/06/21 11:25:00 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-kombu
 PKG_SUPPORTED_OPTIONS=	beanstalk couchdb mongo msgpack pyro redis slmq
@@ -35,7 +35,7 @@ DEPENDS+=	${PYPKGPREFIX}-Pyro4-[0-9]*:../../devel/py-Pyro
 .endif
 
 .if !empty(PKG_OPTIONS:Mredis)
-DEPENDS+=	${PYPKGPREFIX}-redis>=2.10.5:../../databases/py-redis
+DEPENDS+=	${PYPKGPREFIX}-redis>=3.2.0:../../databases/py-redis
 .endif
 
 .if !empty(PKG_OPTIONS:Mslmq)
