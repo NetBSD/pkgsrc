@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.31 2018/07/21 13:09:01 mef Exp $
+$NetBSD: distinfo,v 1.32 2019/06/21 16:02:16 mef Exp $
 
-SHA1 (gnuradio-3.7.13.4.tar.gz) = a3c60d00a434da002d46a804654855951dd11e52
-RMD160 (gnuradio-3.7.13.4.tar.gz) = 4e84ed451367fd011e6b8a2640105621be54c154
-SHA512 (gnuradio-3.7.13.4.tar.gz) = 85c265851b43d4b62590869c91a9b7b262601dce233515096f1a1e68a14ea2710f08cc07859326efdfde29a2f156477d3bbd42e3bdd9b8ac13f6769637bf794b
-Size (gnuradio-3.7.13.4.tar.gz) = 4546663 bytes
+SHA1 (gnuradio-3.7.13.5.tar.gz) = c81a9cb1ec5e9455d885c804ba8fb656c4573b53
+RMD160 (gnuradio-3.7.13.5.tar.gz) = 87786c5f333069c15316c6a45dbce11f329ddac6
+SHA512 (gnuradio-3.7.13.5.tar.gz) = 35fad30ccbc8a82e03d44815bb958dc3718089bce628795ded53f554dff68a4acb1a0f1110b97446f5dc0182c0313855c0f1624b5e9caea26ae6189be81453bf
+Size (gnuradio-3.7.13.5.tar.gz) = 4548612 bytes
 SHA1 (patch-cmake_Modules_FindSphinx.cmake) = 1e42ad000962f4766810fbd322c80dad1f0b1c3c
 SHA1 (patch-gnuradio_runtime_include_gnuradio_high__res__timer__h) = 59ad8192e7ac76b2ce35cda68c378bc2abad20a5
 SHA1 (patch-gnuradio_runtime_lib_thread_thread_cc) = 7e8aa146447fc7ffd006ffd540764ae4b15da2a5
