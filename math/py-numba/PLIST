@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/06/02 09:04:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/06/21 08:07:47 adam Exp $
 bin/numba-${PYVERSSUFFIX}
 bin/pycc-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -1522,6 +1522,9 @@ ${PYSITELIB}/numba/tests/test_pipeline.pyo
 ${PYSITELIB}/numba/tests/test_polynomial.py
 ${PYSITELIB}/numba/tests/test_polynomial.pyc
 ${PYSITELIB}/numba/tests/test_polynomial.pyo
+${PYSITELIB}/numba/tests/test_practical_lowering_issues.py
+${PYSITELIB}/numba/tests/test_practical_lowering_issues.pyc
+${PYSITELIB}/numba/tests/test_practical_lowering_issues.pyo
 ${PYSITELIB}/numba/tests/test_print.py
 ${PYSITELIB}/numba/tests/test_print.pyc
 ${PYSITELIB}/numba/tests/test_print.pyo
