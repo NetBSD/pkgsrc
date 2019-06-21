@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2019/05/09 13:22:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.77 2019/06/21 13:46:04 nia Exp $
 
 DISTNAME=		cmus-2.8.0
 CATEGORIES=		audio
@@ -15,6 +15,9 @@ HAS_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config
 
 REPLACE_SH+=		cmus-status-display
+
+# C11 atomics
+GCC_REQD+=		4.9
 
 CONFIGURE_ARGS+=	prefix=${PREFIX}
 CONFIGURE_ARGS+=	CONFIG_ALSA=n
