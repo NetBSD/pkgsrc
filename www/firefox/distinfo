@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.359 2019/06/19 12:24:06 ryoon Exp $
+$NetBSD: distinfo,v 1.360 2019/06/21 16:35:32 ryoon Exp $
 
-SHA1 (firefox-67.0.3.source.tar.xz) = 544cacc388ef0611faa78ba2679aa7b854fd56f4
-RMD160 (firefox-67.0.3.source.tar.xz) = 37da8e3741059cab5c85c0edc35dafa854cfeda5
-SHA512 (firefox-67.0.3.source.tar.xz) = c75075a48d950decdac295c879d0d9d75a17fdc5d32d1fd4b0ec9141f09f97603e2c5c1266257a21f7ccc53b919869f09e5829ab742811d040b4ecad29998682
-Size (firefox-67.0.3.source.tar.xz) = 285477708 bytes
+SHA1 (firefox-67.0.4.source.tar.xz) = a6a28648bfad6aa9c2bbf1e9b4999909196dd741
+RMD160 (firefox-67.0.4.source.tar.xz) = 70431afccd2d31056fcdcd2abede3e6892d754cd
+SHA512 (firefox-67.0.4.source.tar.xz) = 42abc837b5808a55e68273db6aa45fa73f8fe1df3c9072c94d8d049b6803ce8758745cc0a68af64c4ce9f86e5dd3b3619824ba67fabddce428204605894d9ee7
+Size (firefox-67.0.4.source.tar.xz) = 286036836 bytes
 SHA1 (patch-aa) = 1f292aae7d37bd480ba834324b737bfebee52503
 SHA1 (patch-browser_app_profile_firefox.js) = 2ea08bf7030853fe9aff3c43c69266c07f0b0b14
 SHA1 (patch-build_moz.configure_old.configure) = 91bab1cbbe02332ec076b49b6e598730202fbc99
