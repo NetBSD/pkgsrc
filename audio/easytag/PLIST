@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.23 2016/03/07 20:56:39 nros Exp $
+@comment $NetBSD: PLIST,v 1.24 2019/06/21 06:25:58 triaxx Exp $
 bin/easytag
+man/man1/easytag.1
 share/appdata/easytag.appdata.xml
 share/applications/easytag.desktop
 share/glib-2.0/schemas/org.gnome.EasyTAG.enums.xml
@@ -205,6 +206,7 @@ share/locale/en_GB/LC_MESSAGES/easytag.mo
 share/locale/es/LC_MESSAGES/easytag.mo
 share/locale/fr/LC_MESSAGES/easytag.mo
 share/locale/he/LC_MESSAGES/easytag.mo
+share/locale/hr/LC_MESSAGES/easytag.mo
 share/locale/hu/LC_MESSAGES/easytag.mo
 share/locale/id/LC_MESSAGES/easytag.mo
 share/locale/it/LC_MESSAGES/easytag.mo
@@ -213,6 +215,7 @@ share/locale/ko/LC_MESSAGES/easytag.mo
 share/locale/lt/LC_MESSAGES/easytag.mo
 share/locale/nb/LC_MESSAGES/easytag.mo
 share/locale/nl/LC_MESSAGES/easytag.mo
+share/locale/oc/LC_MESSAGES/easytag.mo
 share/locale/pl/LC_MESSAGES/easytag.mo
 share/locale/pt/LC_MESSAGES/easytag.mo
 share/locale/pt_BR/LC_MESSAGES/easytag.mo
