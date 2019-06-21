@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2019/05/06 08:58:16 sjmulder Exp $
+$NetBSD: distinfo,v 1.4 2019/06/21 16:59:48 sjmulder Exp $
 
-SHA1 (libxlsxwriter-0.8.6.tar.gz) = e1e1d292882d229f766711e2b3cf4d4f0fa888d4
-RMD160 (libxlsxwriter-0.8.6.tar.gz) = ddbbbf70e93dc9ebaa674e453b7b4e39df1eccc2
-SHA512 (libxlsxwriter-0.8.6.tar.gz) = 60822dc5f87531edc97cf774e234f25229a605d4430061c24b95c387318e6e05dde1b0f2f433cea14c6f84ee901c1dffe0d174bfd7e2a8459f59bcee900097db
-Size (libxlsxwriter-0.8.6.tar.gz) = 13987986 bytes
-SHA1 (patch-src_Makefile) = af5047178ce52cb37dfb8c4317f7602f8bfca1c7
+SHA1 (libxlsxwriter-0.8.7.tar.gz) = 549ef430a2b3563d4e078bb9350f541da7969741
+RMD160 (libxlsxwriter-0.8.7.tar.gz) = 0aa09e59fd330d2ee6762767d264cbed6759aba4
+SHA512 (libxlsxwriter-0.8.7.tar.gz) = 20bf09f084808a8db00315848213c550fb809b587ea49ce3b25b310de981c176a44c518452507b6e00ca3f0a8e0056d88a6f575c031d54aa68791575cb9ab285
+Size (libxlsxwriter-0.8.7.tar.gz) = 14115578 bytes
+SHA1 (patch-src_Makefile) = b8acd956657cd1bcc4d888a71f8d493935b8a424
