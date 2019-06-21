@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2639 2019/06/21 15:43:31 pgoyette Exp $
+$NetBSD: CHANGES-2019,v 1.2640 2019/06/21 16:04:21 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4383,3 +4383,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/xfig to 3.2.6anb1 [wiz 2019-06-21]
 	Updated mail/rspamd to 1.9.4 [jperkin 2019-06-21]
 	Updated sysutils/decode-dimms to 0.0.20190619 [pgoyette 2019-06-21]
+	Updated ham/gnuradio-* to 3.7.13.5 [mef 2019-06-21]
