@@ -1,4 +1,4 @@
-$NetBSD: patch-decode-dimms,v 1.13 2019/06/17 21:03:51 pgoyette Exp $
+$NetBSD: patch-decode-dimms,v 1.14 2019/06/21 15:42:19 pgoyette Exp $
 
 Add NetBSD-specific ability to use spdmem(4)'s sysctl values as
 input.  Remove attempts to use linux-specific data sources.
@@ -25,7 +25,7 @@ input.  Remove attempts to use linux-specific data sources.
  
  # We consider that no data was written to this area of the SPD EEPROM if
  # all bytes read 0x00 or all bytes read 0xff
-@@ -2337,6 +2339,26 @@
+@@ -2343,6 +2345,26 @@
  	}
  }
  
@@ -52,7 +52,7 @@ input.  Remove attempts to use linux-specific data sources.
  # Read bytes from SPD-EEPROM
  # Note: offset must be a multiple of 16!
  sub readspd($$$)
-@@ -2346,6 +2368,9 @@
+@@ -2352,6 +2374,9 @@
  	if ($use_hexdump) {
  		@bytes = read_hexdump($dimm_i);
  		return @bytes[$offset..($offset + $size - 1)];
@@ -62,7 +62,7 @@ input.  Remove attempts to use linux-specific data sources.
  	} elsif ($use_sysfs) {
  		# Kernel 2.6 with sysfs
  		sysopen(HANDLE, "$dimm_i/eeprom", O_RDONLY)
-@@ -2422,7 +2447,7 @@
+@@ -2428,7 +2453,7 @@
  # Parse command-line
  foreach (@ARGV) {
  	if ($_ eq '-h' || $_ eq '--help') {
@@ -71,7 +71,7 @@ input.  Remove attempts to use linux-specific data sources.
  			"       $0 -h\n\n",
  			"  -f, --format            Print nice html output\n",
  			"  -b, --bodyonly          Don't print html header\n",
-@@ -2436,6 +2461,8 @@
+@@ -2442,6 +2467,8 @@
  			"  -x,                     Read data from hexdump files\n",
  			"  -X,                     Same as -x except treat multibyte hex\n",
  			"                          data as little endian\n",
@@ -80,7 +80,7 @@ input.  Remove attempts to use linux-specific data sources.
  			"  -h, --help              Display this usage summary\n";
  		print <<"EOF";
  
-@@ -2480,13 +2507,20 @@
+@@ -2486,13 +2513,20 @@
  		$use_hexdump = LITTLEENDIAN;
  		next;
  	}
@@ -102,7 +102,7 @@ input.  Remove attempts to use linux-specific data sources.
  }
  
  # Default values
-@@ -2564,7 +2598,6 @@
+@@ -2570,7 +2604,6 @@
  #  * chk_spd: The checksum or CRC value found in the EEPROM
  #  * chk_calc: The checksum or CRC computed from the EEPROM data
  # Keys are added over time.
@@ -110,7 +110,7 @@ input.  Remove attempts to use linux-specific data sources.
  
  for my $i (0 .. $#dimm) {
  	my @bytes = readspd(0, 128, $dimm[$i]->{file});
-@@ -2616,7 +2649,7 @@
+@@ -2622,7 +2655,7 @@
  		printl("Decoding EEPROM", $dimm[$current]->{eeprom});
  	}
  
