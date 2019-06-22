@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2657 2019/06/22 12:59:25 mef Exp $
+$NetBSD: CHANGES-2019,v 1.2658 2019/06/22 13:01:58 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4417,3 +4417,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/cliqz to 1.27.3 [fox 2019-06-22]
 	Updated chat/znc to 1.7.4 [nia 2019-06-22]
 	Updated cad/openscad to 2019.05 [mef 2019-06-22]
+	Updated net/bftpd to 5.1 [nia 2019-06-22]
