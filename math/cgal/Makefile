@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.42 2019/06/22 05:54:27 mef Exp $
+# $NetBSD: Makefile,v 1.43 2019/06/22 23:43:04 mef Exp $
 
-VERSION=	4.14
-DISTNAME=	CGAL-${VERSION}
+DISTNAME=	CGAL-4.14
 PKGNAME=	${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=CGAL/}
-GITHUB_RELEASE=	releases/CGAL-${VERSION}
+GITHUB_RELEASE=	releases/${DISTNAME}
 
 EXTRACT_SUFX=	.tar.xz
 
@@ -16,12 +16,10 @@ LICENSE=	gnu-lgpl-v3
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++03
-# CMAKE_ARGS+=	-DCMAKE_INSTALL_MANDIR:PATH=${PKGMANDIR}  # default, but not effective now
-# CMAKE_ARGS+=	-DCMAKE_INSTALL_MANDIR:STRING=${PKGMANDIR}
-# CMAKE_ARGS+=	-DCMAKE_INSTALL_MANDIR=${PKGMANDIR}		# neither one work
+CMAKE_ARGS+=	-DCGAL_INSTALL_MAN_DIR=${PREFIX}/${PKGMANDIR}/man1
 
-REPLACE_BASH+=	scripts/cgal_create_CMakeLists
-REPLACE_BASH+=	scripts/cgal_create_cmake_script
+REPLACE_SH+=	scripts/cgal_create_CMakeLists
+REPLACE_SH+=	scripts/cgal_create_cmake_script
 
 pre-install:
 	find ${WRKSRC} -name \*.orig -exec rm {} \;
