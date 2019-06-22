@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/02/15 19:58:14 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/06/22 11:37:13 nia Exp $
 
 DISTNAME=		luit-20190106
 # check if this line needs changes when packaging newer snapshots
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://ftp.invisible-island.net/luit/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://invisible-island.net/luit/
+HOMEPAGE=		https://invisible-island.net/luit/
 COMMENT=		Locale and ISO 2022 support for Unicode terminals
 LICENSE=		mit
 
