@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2019/06/16 16:39:57 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.47 2019/06/22 06:47:05 tsutsui Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -390,8 +390,6 @@ share/mikutter/core/plugin/intent_selector/intent_selector.rb
 share/mikutter/core/plugin/intent_selector/listview.rb
 share/mikutter/core/plugin/libnotify/.mikutter.yml
 share/mikutter/core/plugin/libnotify/libnotify.rb
-share/mikutter/core/plugin/libnotify/notify-send.rb
-share/mikutter/core/plugin/libnotify/rnotify.rb
 share/mikutter/core/plugin/list/.mikutter.yml
 share/mikutter/core/plugin/list/list.rb
 share/mikutter/core/plugin/list_for_profile/.mikutter.yml
@@ -537,6 +535,10 @@ share/mikutter/core/plugin/proxy/po/zh/proxy.po
 share/mikutter/core/plugin/proxy/po/zh_CN/proxy.po
 share/mikutter/core/plugin/proxy/po/zh_TW/proxy.po
 share/mikutter/core/plugin/proxy/proxy.rb
+share/mikutter/core/plugin/quickstep/.mikutter.yml
+share/mikutter/core/plugin/quickstep/complete.rb
+share/mikutter/core/plugin/quickstep/model/command.rb
+share/mikutter/core/plugin/quickstep/quickstep.rb
 share/mikutter/core/plugin/quoted_message/.mikutter.yml
 share/mikutter/core/plugin/quoted_message/quoted_message.rb
 share/mikutter/core/plugin/ratelimit/.mikutter.yml
@@ -756,6 +758,7 @@ share/mikutter/core/plugin/tco/.mikutter.yml
 share/mikutter/core/plugin/tco/tco.rb
 share/mikutter/core/plugin/template
 share/mikutter/core/plugin/twitter/.mikutter.yml
+share/mikutter/core/plugin/twitter/Gemfile
 share/mikutter/core/plugin/twitter/builder.rb
 share/mikutter/core/plugin/twitter/configuration.json
 share/mikutter/core/plugin/twitter/mikutwitter.rb
