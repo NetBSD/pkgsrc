@@ -1,0 +1,33 @@
+$NetBSD: patch-configure,v 1.1 2019/06/22 18:54:04 bsiegert Exp $
+
+Remove non-portable test usage, https://github.com/BLAKE2/libb2/pull/29
+
+--- configure.orig	2019-03-10 15:36:30.000000000 +0000
++++ configure
+@@ -12759,7 +12759,7 @@ else
+   :
+ fi
+ 
+-if test $enable_native == "yes"; then
++if test $enable_native = "yes"; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether C compiler accepts -march=native" >&5
+ $as_echo_n "checking whether C compiler accepts -march=native... " >&6; }
+ if ${ax_cv_check_cflags___march_native+:} false; then :
+@@ -12797,7 +12797,7 @@ fi
+ 
+ fi
+ 
+-if test $enable_fat == "yes"; then
++if test $enable_fat = "yes"; then
+     { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether C compiler accepts -msse2" >&5
+ $as_echo_n "checking whether C compiler accepts -msse2... " >&6; }
+ if ${ax_cv_check_cflags___msse2+:} false; then :
+@@ -12973,7 +12973,7 @@ else
+   as_fn_error $? "Compiler does not know -mxop." "$LINENO" 5
+ fi
+ 
+-elif test $enable_native == "yes"; then
++elif test $enable_native = "yes"; then
+ 
+ ac_ext=c
+ ac_cpp='$CPP $CPPFLAGS'
