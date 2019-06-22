@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.16 2015/11/03 20:56:45 agc Exp $
+$NetBSD: distinfo,v 1.17 2019/06/22 13:29:19 nia Exp $
 
-SHA1 (bzflag-2.4.2.tar.gz) = d5926e58b89ec989aa8a11b75080908f18254bba
-RMD160 (bzflag-2.4.2.tar.gz) = b42a7f8554c3d73e25db39c27a9499cbc7350348
-SHA512 (bzflag-2.4.2.tar.gz) = 0cd6bcb262d7076838cbed4201afcf0f3b67938aa696077f548ac0bc58707fba256dfd385d2d57bfcc612725a9f740db5868d91e5f4b18c87a9c29b936f08051
-Size (bzflag-2.4.2.tar.gz) = 17423705 bytes
+SHA1 (bzflag-2.4.18.tar.gz) = f0bace06612000c64bc0a9a14bf8af569f2e33c7
+RMD160 (bzflag-2.4.18.tar.gz) = de5bd3982c13e14d31adcfa20ae7c158c50a4e41
+SHA512 (bzflag-2.4.18.tar.gz) = 61515b2a052ebf92e881608fe9f60879ca78e0fa2e65427f1388429f5678e50436eac421cf8a6a25a0d9b2467230c67749ca87751a8eee374843d37a0eea084e
+Size (bzflag-2.4.18.tar.gz) = 15003332 bytes
 SHA1 (patch-ad) = 626ff20e3b73f77734995732f34869550f590d5e
-SHA1 (patch-include_VotingArbiter.h) = 2d6348c5c7a834f29462d028f003866243959e56
+SHA1 (patch-src_bzadmin_curses__wrapper.h) = 3e978e7f699b91023c49a416e073fcc6ae732555
