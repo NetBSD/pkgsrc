@@ -1,0 +1,19 @@
+$NetBSD: patch-features_qscintilla2-priv.prf,v 1.1 2019/06/22 12:57:50 mef Exp $
+
+To avoid following problem
+-------
+ ....
+QtMultimedia -lQtOpenGL -lQtGui -lQtNetwork -lQtCore -lGLU -lGL -lXmu -lX11
+ld: cannot find -lqscintilla2_qt4
+*** [openscad] Error code 1
+-------
+
+--- features/qscintilla2-priv.prf.orig	2019-05-10 14:03:44.000000000 +0900
++++ features/qscintilla2-priv.prf	2019-05-28 21:34:58.087656036 +0900
+@@ -23,5 +23,5 @@ CONFIG(debug, debug|release) {
+         }
+     }
+ } else {
+-    LIBS += -lqscintilla2_qt$${QT_MAJOR_VERSION}
++    LIBS += -lqscintilla2
+ }
