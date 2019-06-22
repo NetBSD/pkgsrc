@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.8 2019/06/22 00:32:21 tsutsui Exp $
+
+SHA1 (nicovideo-dl-0.0.20190126.tar.gz) = 4b5684d87cd9b7d92d0849a32ce9bdd8013b8dce
+RMD160 (nicovideo-dl-0.0.20190126.tar.gz) = 76babd46a1bf0499ee344c893137db09c44e9902
+SHA512 (nicovideo-dl-0.0.20190126.tar.gz) = 8b7764a87dbafa2ebb735ed78c52514d205a22536dc0af2d12d393d48238ed9bcf7ca311af79f8a5faf791209287cd426c1ce23ee58adbc0dd5ae594687604e1
+Size (nicovideo-dl-0.0.20190126.tar.gz) = 6868 bytes
