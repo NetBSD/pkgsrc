@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2658 2019/06/22 13:01:58 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2659 2019/06/22 13:29:30 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4418,3 +4418,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated chat/znc to 1.7.4 [nia 2019-06-22]
 	Updated cad/openscad to 2019.05 [mef 2019-06-22]
 	Updated net/bftpd to 5.1 [nia 2019-06-22]
+	Updated games/bzflag to 2.4.18 [nia 2019-06-22]
