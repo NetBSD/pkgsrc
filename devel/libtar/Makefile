@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/12/13 18:26:07 bsiegert Exp $
+# $NetBSD: Makefile,v 1.17 2019/06/22 11:31:06 nia Exp $
 #
 
 DISTNAME=	libtar-1.2.20
@@ -6,7 +6,7 @@ CATEGORIES=	devel archivers
 MASTER_SITES=	http://pkgbuild.com/~giovanni/libtar/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://repo.or.cz/w/libtar.git/
+HOMEPAGE=	https://repo.or.cz/w/libtar.git/
 COMMENT=	Library for manipulating POSIX tar files
 
 WRKSRC=			${WRKDIR}/libtar
