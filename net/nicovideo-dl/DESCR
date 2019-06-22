@@ -1,0 +1,3 @@
+nicovideo-dl is a small command-line program to download videos
+from www.nicovideo.jp. It is implemented by Python. It is
+platform-independent and should work on Unix/Windows/Mac.
