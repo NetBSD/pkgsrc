@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/02/15 19:49:15 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/06/22 11:37:13 nia Exp $
 
 DISTNAME=	cproto-4.7o
 CATEGORIES=	devel
@@ -6,7 +6,7 @@ MASTER_SITES=	ftp://ftp.invisible-island.net/cproto/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://invisible-island.net/cproto/
+HOMEPAGE=	https://invisible-island.net/cproto/
 COMMENT=	Generates function prototypes from C source
 LICENSE=	public-domain
 

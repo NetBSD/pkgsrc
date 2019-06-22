@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.40 2019/02/25 11:54:05 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.41 2019/06/22 11:37:14 nia Exp $
 #
 # used by devel/ncurses/Makefile
 # used by devel/ncursesw/Makefile
@@ -11,7 +11,7 @@ MASTER_SITES+=	ftp://dickey.his.com/ncurses/
 MASTER_SITES+=	ftp://dickey.his.com/ncurses/${NC_VERS}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://invisible-island.net/ncurses/ncurses.html
+HOMEPAGE=	https://invisible-island.net/ncurses/ncurses.html
 LICENSE=	mit
 
 USE_LANGUAGES=		c c++

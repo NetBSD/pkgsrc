@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2018/11/14 16:09:03 nia Exp $
+# $NetBSD: Makefile,v 1.133 2019/06/22 11:37:13 nia Exp $
 
 DISTNAME=	lynx2.8.9rel.1
 PKGNAME=	${DISTNAME:S/lynx/lynx-/:S/rel//}
@@ -8,7 +8,7 @@ MASTER_SITES+=	ftp://ftp.cyf-kr.edu.pl/pub/unix/lynx/${SUBDIR:Q}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://lynx.invisible-island.net/
+HOMEPAGE=	https://lynx.invisible-island.net/
 COMMENT=	Alphanumeric display oriented World-Wide Web Client
 LICENSE=	gnu-gpl-v2
 
