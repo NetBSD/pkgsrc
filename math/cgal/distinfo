@@ -1,12 +1,6 @@
-$NetBSD: distinfo,v 1.7 2016/04/01 12:17:33 jperkin Exp $
+$NetBSD: distinfo,v 1.8 2019/06/22 05:54:27 mef Exp $
 
-SHA1 (CGAL-3.9.tar.gz) = cc99fad7116f221b6301326834f71ff65cebf2eb
-RMD160 (CGAL-3.9.tar.gz) = 0a5a929ecedeeac3833ec90f802b7f5ac069ad47
-SHA512 (CGAL-3.9.tar.gz) = 9b03c08aae470877eb7fb2f16d7091a4ea2c79a643ba075d7b1bd5c056342c10e6fb3eed48a2756d74da48f6b7171f7d041446a0edb57ca212f0bb053912995d
-Size (CGAL-3.9.tar.gz) = 14276059 bytes
-SHA1 (patch-include_CGAL_Mesh__2_Do__not__refine__edges.h) = 5a66b2ff56d3e20e554ab73829e3c8c735144489
-SHA1 (patch-include_CGAL_Qt_GraphicsItem.h) = 34f78072a610d7054d9b879aa697b96b7ee62e5a
-SHA1 (patch-include_CGAL_Qt_GraphicsViewInput.h) = f842396bfb15a264cf86528781fac90c61c58ce9
-SHA1 (patch-include_CGAL_config.h) = ba29667305fc4868a9995048801408e95d75bd41
-SHA1 (patch-manpage-installation) = 1381c12f46ae7b791d78378b742529f77f04136c
-SHA1 (patch-src-CMakeLists.txt) = 26e92c17b26bce8f0dd5a97ded689764fd243da0
+SHA1 (CGAL-4.14.tar.xz) = c70ac5017cbc755853457fc2415f6ccd9b1d17ac
+RMD160 (CGAL-4.14.tar.xz) = 12b008b415133061f6b4933093c889890e4f4c72
+SHA512 (CGAL-4.14.tar.xz) = 1f22da098a136c26fd51c7ac401212865dce7cc5110ca6a083ef6f09ead5c03a002bfd16752cb298427b84bd5b4900b52c6514f97ccd0e199ffb28e9fe640c43
+Size (CGAL-4.14.tar.xz) = 15602228 bytes
