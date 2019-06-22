@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2019/01/12 14:31:38 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.29 2019/06/22 04:11:59 tsutsui Exp $
 bin/nokogiri${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -143,4 +143,7 @@ ${GEM_LIBDIR}/lib/nokogiri/xslt.rb
 ${GEM_LIBDIR}/lib/nokogiri/xslt/stylesheet.rb
 ${GEM_LIBDIR}/lib/xsd/xmlparser/nokogiri.rb
 ${GEM_LIBDIR}/patches/libxml2/0001-Revert-Do-not-URI-escape-in-server-side-includes.patch
+${GEM_LIBDIR}/patches/libxml2/0002-Remove-script-macro-support.patch
+${GEM_LIBDIR}/patches/libxml2/0003-Update-entities-to-remove-handling-of-ssi.patch
+${GEM_LIBDIR}/patches/libxslt/0001-Fix-security-framework-bypass.patch
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
