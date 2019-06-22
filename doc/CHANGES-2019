@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2651 2019/06/22 04:12:17 tsutsui Exp $
+$NetBSD: CHANGES-2019,v 1.2652 2019/06/22 05:54:42 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4412,3 +4412,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/glib2 to 2.60.4nb2 [prlw1 2019-06-21]
 	Updated devel/nss to 3.44.1 [ryoon 2019-06-22]
 	Updated textproc/ruby-nokogiri to 1.10.3 [tsutsui 2019-06-22]
+	Updated math/cgal to 4.14 [mef 2019-06-22]
