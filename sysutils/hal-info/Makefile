@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2018/08/22 09:46:34 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2019/06/22 11:47:15 nia Exp $
 
 DISTNAME=		hal-info-20091130
 PKGREVISION=		6
@@ -6,7 +6,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		http://hal.freedesktop.org/releases/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://hal.freedesktop.org/
+HOMEPAGE=		https://www.freedesktop.org/wiki/Software/hal/
 COMMENT=		FreeDesktop hardware abstraction layer (info subpackage)
 LICENSE=		gnu-gpl-v2 # OR Academic-Free-License-v2.1
 
