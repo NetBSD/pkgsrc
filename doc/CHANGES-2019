@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2649 2019/06/22 00:39:30 tsutsui Exp $
+$NetBSD: CHANGES-2019,v 1.2650 2019/06/22 03:54:41 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4410,3 +4410,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/libxlsxwriter to 0.8.7 [sjmulder 2019-06-21]
 	Updated net/youtube-dl to 20190621 [leot 2019-06-21]
 	Updated devel/glib2 to 2.60.4nb2 [prlw1 2019-06-21]
+	Updated devel/nss to 3.44.1 [ryoon 2019-06-22]
