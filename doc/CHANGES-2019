@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2656 2019/06/22 12:58:02 mef Exp $
+$NetBSD: CHANGES-2019,v 1.2657 2019/06/22 12:59:25 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4415,5 +4415,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated math/cgal to 4.14 [mef 2019-06-22]
 	Updated net/mikutter to 3.9.0alpha2 [tsutsui 2019-06-22]
 	Updated www/cliqz to 1.27.3 [fox 2019-06-22]
-	Updated chat/znc to 1.7.4 [nia 2019-06-21]
+	Updated chat/znc to 1.7.4 [nia 2019-06-22]
 	Updated cad/openscad to 2019.05 [mef 2019-06-22]
