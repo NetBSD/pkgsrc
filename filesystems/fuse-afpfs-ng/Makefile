@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/07/04 13:40:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.15 2019/06/22 11:52:31 nia Exp $
 
 DISTNAME=	afpfs-ng-0.8.1
 PKGNAME=	fuse-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=afpfs-ng/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/afpfs-ng
+HOMEPAGE=	https://sourceforge.net/projects/afpfs-ng
 COMMENT=	FUSE filesystem for network mounting using AFP
 
 GNU_CONFIGURE=	yes
