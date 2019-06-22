@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2019/05/01 19:51:45 maya Exp $
+# $NetBSD: Makefile,v 1.84 2019/06/22 11:47:15 nia Exp $
 
 DISTNAME=		hal-0.5.14
 PKGREVISION=		21
@@ -7,7 +7,7 @@ MASTER_SITES=		http://hal.freedesktop.org/releases/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://hal.freedesktop.org/
+HOMEPAGE=		https://www.freedesktop.org/wiki/Software/hal/
 COMMENT=		FreeDesktop hardware abstraction layer
 LICENSE=		gnu-gpl-v2
 
