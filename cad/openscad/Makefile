@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.56 2019/06/08 11:04:29 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.57 2019/06/22 12:57:50 mef Exp $
 
-DISTNAME=	openscad-2015.03-3.src
-PKGNAME=	openscad-2015.03p3
-PKGREVISION=	14
+VERSION=	2019.05
+DISTNAME=	openscad-${VERSION}
 CATEGORIES=	cad
-MASTER_SITES=	http://files.openscad.org/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=openscad/}
+GITHUB_TAG=	openscad-${VERSION}
 
 MAINTAINER=	reinoud@NetBSD.org
 HOMEPAGE=	http://www.openscad.org/
@@ -16,9 +15,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	bison gettext pkg-config
 USE_LIBTOOL=	yes
 
-WRKSRC=		${WRKDIR}/${DISTNAME:R}
-
-MAKE_JOBS_SAFE=	no
+WRKSRC=		${WRKDIR}/${PKGBASE}-${DISTNAME}
 
 CHECK_PORTABILITY_SKIP+=	tests/compare-bitmaps.sh
 
@@ -49,5 +46,6 @@ do-configure:
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../x11/qt4-qscintilla/buildlink3.mk"
-
+.include "../../textproc/libxml++/buildlink3.mk"
+.include "../../math/double-conversion/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
