@@ -1,4 +1,6 @@
-$NetBSD: patch-buildtools_wafsamba_samba__utils.py,v 1.1 2019/06/22 12:14:49 jmcneill Exp $
+$NetBSD: patch-buildtools_wafsamba_samba__utils.py,v 1.2 2019/06/22 12:53:03 jmcneill Exp $
+
+Fixes a build failure when the letter 'j' appears in MAKEFLAGS.
 
 --- buildtools/wafsamba/samba_utils.py.orig	2019-03-21 10:12:32.000000000 +0000
 +++ buildtools/wafsamba/samba_utils.py
