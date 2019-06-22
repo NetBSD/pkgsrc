@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.703 2019/06/11 21:14:43 triaxx Exp $
+# $NetBSD: Makefile,v 1.704 2019/06/22 18:54:24 bsiegert Exp $
 #
 
 COMMENT=	Security tools
@@ -144,6 +144,7 @@ SUBDIR+=	kwalletmanager
 SUBDIR+=	lasso
 SUBDIR+=	lastpass-cli
 SUBDIR+=	libassuan2
+SUBDIR+=	libb2
 SUBDIR+=	libbf
 SUBDIR+=	libcrack
 SUBDIR+=	libcurvecpr
