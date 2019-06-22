@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/11/26 11:17:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2019/06/22 11:30:11 nia Exp $
 
 DISTNAME=	libusb-1.0.22
 PKGNAME=	${DISTNAME:S/libusb/libusb1/}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libusb/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://libusb.info/
+HOMEPAGE=	https://libusb.info/
 COMMENT=	USB Access Library (version 1)
 LICENSE=	gnu-lgpl-v2.1
 
