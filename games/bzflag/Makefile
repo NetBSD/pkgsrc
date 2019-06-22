@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.66 2019/05/29 19:52:49 adam Exp $
+# $NetBSD: Makefile,v 1.67 2019/06/22 13:29:19 nia Exp $
 
-DISTNAME=	bzflag-2.4.2
-PKGREVISION=	19
+DISTNAME=	bzflag-2.4.18
 CATEGORIES=	games x11
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bzflag/}
+MASTER_SITES=	https://download.bzflag.org/bzflag/source/${PKGVERSION_NOREV}/
 
 MAINTAINER=	blymn@NetBSD.org
-HOMEPAGE=	http://bzflag.org/
+HOMEPAGE=	https://www.bzflag.org/
 COMMENT=	OpenGL tank game
 LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake perl
+USE_TOOLS+=	gmake perl pkg-config
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 FAKE_NCURSES=	yes	# They assume non ncurses is Solaris
@@ -27,17 +26,16 @@ SUBST_SED.fixme=	-e "s|@LINUX_TRUE@||g"
 SUBST_SED.fixme+=	-e "s|@LINUX_FALSE@|\#|g"
 .endif
 
-CONFIGURE_ARGS+=	--with-ncurses
-
 CHECK_PORTABILITY_SKIP+=	debian/*
 
-.include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../net/libcares/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
