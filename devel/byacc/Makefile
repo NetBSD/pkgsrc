@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/12/08 12:22:03 wen Exp $
+# $NetBSD: Makefile,v 1.16 2019/06/22 11:37:13 nia Exp $
 #
 
 DISTNAME=	byacc-20180609
@@ -7,7 +7,7 @@ MASTER_SITES=	https://invisible-mirror.net/archives/byacc/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://invisible-island.net/byacc/byacc.html
+HOMEPAGE=	https://invisible-island.net/byacc/byacc.html
 COMMENT=	Berkeley Yacc
 LICENSE=	public-domain
 
