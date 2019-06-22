@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.7 2019/06/03 15:22:51 bouyer Exp $
+$NetBSD: distinfo,v 1.8 2019/06/22 12:57:50 mef Exp $
 
-SHA1 (openscad-2015.03-3.src.tar.gz) = a04d154e77f5ae2251ea65333d5ac76834a19227
-RMD160 (openscad-2015.03-3.src.tar.gz) = 323eda5bd96b2093d4fbb2274763f7a0ae4eb7f4
-SHA512 (openscad-2015.03-3.src.tar.gz) = b2cee90563bdf2cb9f7b5a0d637b2266f5fcd62add6147c9326b843a5b0975b8ec900d13a2aa86485fce4a5e7e53a08cf4171a3d1d66355e813d01ca9096faee
-Size (openscad-2015.03-3.src.tar.gz) = 13309147 bytes
+SHA1 (openscad-2019.05.tar.gz) = 3817758e0c7299dbfbe340cdae0fe39da915c799
+RMD160 (openscad-2019.05.tar.gz) = 047761217599899d40226ee051f2f0d14e65b650
+SHA512 (openscad-2019.05.tar.gz) = 4a9408131bc3529239f350f99eefa717b2309296935158badeb430b574ef300411158a9c696498febf81ae659ba7f88009a633a4d14440c8b3fec66fd3fd7dd4
+Size (openscad-2019.05.tar.gz) = 14605674 bytes
+SHA1 (patch-features_qscintilla2-priv.prf) = ca5d5735d091441d6daf7535802f5ba7362c808c
 SHA1 (patch-openscad.pro) = 8b4250254ea66338ecafdac437ce9a69deb2fe27
-SHA1 (patch-src_CSGTermEvaluator.cc) = 6364b4b48478c0a003ac849367ff4024aae16977
-SHA1 (patch-src_colormap.h) = 6e2a4509dc0a93bd5c5e656b8dff3b2de7a30c1a
-SHA1 (patch-src_scintillaeditor.h) = c28a86e8c9951ed27b571fb943b3099138c97b5c
+SHA1 (patch-src_colormap.h) = d218a17ac71e0178d32b79723b532c9f098bc038
+SHA1 (patch-src_scintillaeditor.h) = 5da071ca50470c36bab3792d4aaeb135df84726d
