@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2018/12/16 14:08:03 nia Exp $
+$NetBSD: MESSAGE.rcd,v 1.1 2019/06/22 14:17:44 nia Exp $
 
 Add the following to /etc/rc.conf:
 
