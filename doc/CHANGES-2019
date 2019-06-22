@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2648 2019/06/21 20:21:24 prlw1 Exp $
+$NetBSD: CHANGES-2019,v 1.2649 2019/06/22 00:39:30 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4320,7 +4320,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/py-Unidecode to 1.1.0 [adam 2019-06-18]
 	Updated audio/py-audioread to 2.1.8 [adam 2019-06-18]
 	Updated audio/py-acoustid to 1.1.7 [adam 2019-06-18]
-	Removed net/nicovideo-dl [ryoon 2019-06-18]
 	Updated devel/allegro to 4.4.3.1 [nia 2019-06-18]
 	Removed emulators/darcnes successor emulators/mednafen [nia 2019-06-18]
 	Updated mail/msmtp to 1.8.4 [leot 2019-06-18]
