@@ -1,5 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2019/04/11 20:56:34 nia Exp $
+$NetBSD: MESSAGE,v 1.2 2019/06/23 13:28:04 nia Exp $
+
+Enemy Territory is available as a free download, but the data files are not
+redistributable.
 
 pak0.pk3, pak1.pk3 and pak2.pk3 must be copied from the official game
 files to ${PREFIX}/share/etlegacy/etmain to play Enemy Territory.
