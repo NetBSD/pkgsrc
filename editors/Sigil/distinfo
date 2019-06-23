@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.42 2019/04/01 21:40:55 wiz Exp $
+$NetBSD: distinfo,v 1.43 2019/06/23 10:35:05 wiz Exp $
 
-SHA1 (Sigil-0.9.13.tar.gz) = d7936ef9a68aa99c52d3a693e73edb5c1dee68c1
-RMD160 (Sigil-0.9.13.tar.gz) = 712d5dccb10477c322c9f49768b8bb68311681b3
-SHA512 (Sigil-0.9.13.tar.gz) = cafc6b075827239b73e80d3efa02e4e77d5903fed1faf8b600f70b178fb0c248c38d43e115f249124859edc12ddd8caf199ef0b0d05f20852eb060b27e5a3578
-Size (Sigil-0.9.13.tar.gz) = 18235134 bytes
+SHA1 (Sigil-0.9.14.tar.gz) = ed90736968747a5e65f31f883ab2f1b045fc8a20
+RMD160 (Sigil-0.9.14.tar.gz) = 39dd812eaa26ec139d75ca038dcf398125d46186
+SHA512 (Sigil-0.9.14.tar.gz) = 8bf0d887d96fa9ee5ff372dae58b36b699c468fc1d2a163aa5be14a39e744ea634f38e465acb686df603dc82d5d4949c8fd0dfe1a92789fbda2596058222e2f1
+Size (Sigil-0.9.14.tar.gz) = 18253774 bytes
 SHA1 (patch-3rdparty_minizip_ioapi.c) = a68dead89687529b7022cda3bc8a079e5f5c1459
 SHA1 (patch-CMakeLists.txt) = f7dc6af8449fb79b378dc5f6b78d5c5e6beaf7db
