@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.427 2019/06/17 13:41:05 micha Exp $
+# $NetBSD: Makefile,v 1.428 2019/06/23 16:02:00 nia Exp $
 #
 
 COMMENT=	Games
@@ -276,6 +276,7 @@ SUBDIR+=	openmortal
 SUBDIR+=	openttd
 SUBDIR+=	openttd-data
 SUBDIR+=	orbital_eunuchs_sniper
+SUBDIR+=	oshu
 SUBDIR+=	pag
 SUBDIR+=	palapeli
 SUBDIR+=	picmi
