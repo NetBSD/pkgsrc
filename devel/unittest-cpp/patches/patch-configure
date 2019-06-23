@@ -1,0 +1,26 @@
+$NetBSD: patch-configure,v 1.1 2019/06/23 09:40:54 wiz Exp $
+
+Avoid bash-isms.
+
+--- configure.orig	2017-01-13 22:09:58.000000000 +0000
++++ configure
+@@ -3131,13 +3131,16 @@ case $host_os in *\ *) host_os=`echo "$h
+ 
+ 
+ 
+- if test "${host//mingw/}" != "${host}" -o "${host//msvc/}" != "${host}"; then
++case "${host}" in
++*mingw* | *msvc* )
+   WINDOWS_TRUE=
+   WINDOWS_FALSE='#'
+-else
++  ;;
++* )
+   WINDOWS_TRUE='#'
+   WINDOWS_FALSE=
+-fi
++  ;;
++esac
+ 
+ 
+ case `pwd` in
