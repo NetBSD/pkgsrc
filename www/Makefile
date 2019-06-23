@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1390 2019/06/19 10:07:50 fcambus Exp $
+# $NetBSD: Makefile,v 1.1391 2019/06/23 09:21:30 nia Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -11,7 +11,6 @@ SUBDIR+=	adzap
 SUBDIR+=	aipo
 SUBDIR+=	album
 SUBDIR+=	album_themes
-SUBDIR+=	amaya
 SUBDIR+=	analog
 SUBDIR+=	ap-auth-kerb
 SUBDIR+=	ap-auth-mellon
