@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/08/16 11:25:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/06/23 09:14:58 wiz Exp $
 guile/2.2/bin/guild
 guile/2.2/bin/guile
 guile/2.2/bin/guile-config
@@ -438,7 +438,7 @@ guile/2.2/lib/guile/2.2/ccache/web/server/http.go
 guile/2.2/lib/guile/2.2/ccache/web/uri.go
 guile/2.2/lib/guile/2.2/extensions/guile-readline.la
 guile/2.2/lib/libguile-2.2.la
-guile/2.2/lib/libguile-2.2.so.1.3.1-gdb.scm
+guile/2.2/lib/libguile-2.2.so.1.4.0-gdb.scm
 guile/2.2/lib/pkgconfig/guile-2.2.pc
 guile/2.2/man/man1/guile.1
 guile/2.2/share/aclocal/guile.m4
