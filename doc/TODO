@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19085 2019/06/23 08:38:19 wiz Exp $
+$NetBSD: TODO,v 1.19086 2019/06/23 09:15:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -730,7 +730,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o guile-gtk-2.1
-	o guile22-2.2.5
 	o gvfs-1.22.0
 	o gworkspace-0.9.4
 	o gxmessage-3.4.3
