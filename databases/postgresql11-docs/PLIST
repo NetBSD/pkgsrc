@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/05/13 20:38:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/06/23 07:55:58 adam Exp $
 man/man1/clusterdb.1
 man/man1/createdb.1
 man/man1/createuser.1
@@ -947,6 +947,7 @@ share/doc/postgresql/html/regress.html
 share/doc/postgresql/html/release-11-1.html
 share/doc/postgresql/html/release-11-2.html
 share/doc/postgresql/html/release-11-3.html
+share/doc/postgresql/html/release-11-4.html
 share/doc/postgresql/html/release-11.html
 share/doc/postgresql/html/release-prior.html
 share/doc/postgresql/html/release.html
