@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2019/04/11 20:56:34 nia Exp $
+$NetBSD: distinfo,v 1.2 2019/06/23 11:20:23 maya Exp $
 
 SHA1 (etlegacy-2.76/etlegacy-libs.tar.gz) = 27da78b9c118be2bb931543ee217f95246e26658
 RMD160 (etlegacy-2.76/etlegacy-libs.tar.gz) = 3052bd1c8f3164016d5402452e76f4ed66e3571f
@@ -9,5 +9,6 @@ RMD160 (etlegacy-2.76/etlegacy.tar.gz) = 09060499b3fbaea5fbf0d94c0563290cf327e71
 SHA512 (etlegacy-2.76/etlegacy.tar.gz) = 911c91dac71741067b9ac4e4651fae64c7def77c4061d31aafa2d473b14fb0db20c2c2fd03edf16efaabab4a026c89c647883864e031e17c551584f0ee06a5e2
 Size (etlegacy-2.76/etlegacy.tar.gz) = 10381173 bytes
 SHA1 (patch-cmake_ETLInstall.cmake) = f89a99b5c280227f520fbd6f2eec06139cec503f
+SHA1 (patch-cmake_ETLPlatform.cmake) = d73dd745cf2d70f0f0fe6385364d54ac2cdbe0e8
 SHA1 (patch-src_client_snd__main.c) = 82d4fef339044d6677eadad526b8f2b57099514f
 SHA1 (patch-src_qcommon_q__platform.h) = b377ad5033c4f47a2c6659837e2a0b72082dd570
