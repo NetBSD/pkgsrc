@@ -1,4 +1,6 @@
-$NetBSD: patch-libguile_loader.c,v 1.1 2018/01/08 22:37:08 joerg Exp $
+$NetBSD: patch-libguile_loader.c,v 1.2 2019/06/23 09:14:58 wiz Exp $
+
+Use correct mmap permissions for later PROT_WRITE mprotect.
 
 --- libguile/loader.c.orig	2018-01-08 16:21:04.790894906 +0000
 +++ libguile/loader.c
