@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/04/20 12:10:30 nros Exp $
+# $NetBSD: Makefile,v 1.7 2019/06/23 23:26:05 schmonz Exp $
 #
 
 DISTNAME=	qtplay1.3.1
@@ -11,7 +11,7 @@ HOMEPAGE=	http://rainbowflight.googlepages.com/
 COMMENT=	QuickTime command-line player
 LICENSE=	modified-bsd
 
-ONLY_FOR_PLATFORM=	Darwin-*-*
+ONLY_FOR_PLATFORM=	Darwin-[0-9].*-* Darwin-1[012345].*-*
 
 WRKSRC=			${WRKDIR}
 
