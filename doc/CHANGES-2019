@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2666 2019/06/23 09:47:03 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2667 2019/06/23 10:35:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4430,3 +4430,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed www/amaya [nia 2019-06-23]
 	Added devel/unittest-cpp version 2.0.0 [wiz 2019-06-23]
 	Updated textproc/enchant2 to 2.2.4 [wiz 2019-06-23]
+	Updated editors/Sigil to 0.9.14 [wiz 2019-06-23]
