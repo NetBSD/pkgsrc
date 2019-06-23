@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/05/29 19:52:49 adam Exp $
+# $NetBSD: Makefile,v 1.4 2019/06/23 11:20:23 maya Exp $
 
 PKGNAME=	etlegacy-2.76
 PKGREVISION=	2
@@ -73,7 +73,6 @@ post-extract:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
-BUILDLINK_TRANSFORM+=	rm:-ldl
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
