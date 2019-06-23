@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2019/04/30 21:04:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.36 2019/06/23 18:37:45 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -206,6 +206,7 @@ share/mame/hash/ec1841.xml
 share/mame/hash/einstein.xml
 share/mame/hash/ekara_japan.xml
 share/mame/hash/ekara_japan_a.xml
+share/mame/hash/ekara_japan_ac.xml
 share/mame/hash/ekara_japan_bh.xml
 share/mame/hash/ekara_japan_d.xml
 share/mame/hash/ekara_japan_en.xml
