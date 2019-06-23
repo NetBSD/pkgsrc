@@ -1,0 +1,18 @@
+$NetBSD: patch-configure,v 1.1 2019/06/23 10:04:27 nia Exp $
+
+Allow building as wheel group. We can't predict the gid the user will
+be assigned before the package is installed.
+
+--- configure.orig	2019-05-17 08:51:03.000000000 +0000
++++ configure
+@@ -219,10 +219,6 @@ This is almost never what you should do.
+ unprivileged user/group to build and run as or pass the '--gid [id|name]' flag
+ to specify an unprivileged group to run as.
+ EOW
+-		if (!prompt_bool $interactive, "Are you sure you want to build as the $group[0] group?", 0) {
+-			say STDERR "If you are sure you want to build as the $group[0] group pass the --gid $group[2] flag." unless $interactive;
+-			exit 1;
+-		}
+ 	}
+ }
+ $config{GROUP} = $group[0];
