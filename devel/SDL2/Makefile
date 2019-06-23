@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.36 2019/05/27 17:21:01 nia Exp $
+# $NetBSD: Makefile,v 1.37 2019/06/23 09:30:10 nia Exp $
 
 DISTNAME=	SDL2-2.0.9
 PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	http://www.libsdl.org/release/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	http://www.libsdl.org/
 COMMENT=	Simple DirectMedia Layer is a cross-platform multimedia library
 LICENSE=	zlib
