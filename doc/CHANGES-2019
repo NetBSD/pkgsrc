@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2663 2019/06/23 09:15:11 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2664 2019/06/23 09:26:15 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4427,3 +4427,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/postgresql11 to 11.4 [adam 2019-06-23]
 	Updated audio/mpc to 0.32 [wiz 2019-06-23]
 	Updated lang/guile22 to 2.2.5 [wiz 2019-06-23]
+	Removed www/amaya [nia 2019-06-23]
