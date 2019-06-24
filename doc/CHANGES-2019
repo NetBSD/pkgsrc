@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2671 2019/06/24 13:46:04 brook Exp $
+$NetBSD: CHANGES-2019,v 1.2672 2019/06/24 19:05:16 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4435,3 +4435,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated emulators/mame to 0.210 [wiz 2019-06-23]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2019Q2 branch [jperkin 2019-06-24]
 	Updated pkgtools/R2pkg to 0.4 [brook 2019-06-24]
+	Updated comms/lirc to 0.9.0nb4 [triaxx 2019-06-24]
