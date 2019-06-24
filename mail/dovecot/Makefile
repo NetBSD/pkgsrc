@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.194 2019/05/23 19:23:05 rillig Exp $
+# $NetBSD: Makefile,v 1.195 2019/06/24 10:59:41 nia Exp $
 
 DOVECOT_VERSION=	1.2
 DOVECOT_SUBVERSION=	.17
@@ -15,7 +15,7 @@ SITES.${MANAGESIEVE_PATCH}=	${DOVECOT_SIEVE_SITES}
 PATCH_DIST_STRIP.${MANAGESIEVE_PATCH}=	-p1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.dovecot.org/
+HOMEPAGE=		https://www.dovecot.org/
 COMMENT=		Secure IMAP and POP3 server
 LICENSE=		mit AND gnu-lgpl-v2.1 AND modified-bsd
 
