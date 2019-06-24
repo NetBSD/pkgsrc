@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/07/18 00:06:20 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2019/06/24 10:59:41 nia Exp $
 #
 
 VERSION=	6.45
@@ -8,7 +8,7 @@ CATEGORIES=	mail
 MASTER_SITES=	http://www.five-ten-sg.com/dnsbl/packages/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.five-ten-sg.com/dnsbl/
+HOMEPAGE=	https://www.five-ten-sg.com/dnsbl/
 COMMENT=	DNSBL Sendmail milter
 LICENSE=	gnu-gpl-v3
 

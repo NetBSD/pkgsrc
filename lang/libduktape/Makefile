@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/03/20 18:29:20 agc Exp $
+# $NetBSD: Makefile,v 1.4 2019/06/24 10:59:42 nia Exp $
 
 DISTNAME=	duktape-2.3.0
 PKGNAME=	lib${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	http://duktape.org/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://duktape.org/
+HOMEPAGE=	https://duktape.org/
 COMMENT=	Embeddable Javascript engine library
 LICENSE=	mit
 
