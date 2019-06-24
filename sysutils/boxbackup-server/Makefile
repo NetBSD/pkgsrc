@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/08/22 09:46:31 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/06/24 10:36:50 nia Exp $
 #
 
 DISTNAME=	boxbackup-0.11.1
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=boxbackup/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.boxbackup.org/
+HOMEPAGE=	https://www.boxbackup.org/
 COMMENT=	Backup tool
 
 PATCHDIR=	${.CURDIR}/../../sysutils/boxbackup-client/patches
