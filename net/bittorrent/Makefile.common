@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2015/10/11 10:56:43 tron Exp $
+# $NetBSD: Makefile.common,v 1.21 2019/06/24 10:36:50 nia Exp $
 #
 # used by net/bittorrent/Makefile
 # used by net/bittorrent-gui/Makefile
@@ -8,7 +8,7 @@ CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE}/dl/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.bittorrent.com/
+HOMEPAGE=	https://www.bittorrent.com/
 COMMENT=	File sharing tool
 
 DISTINFO_FILE=	${.CURDIR}/../../net/bittorrent/distinfo
