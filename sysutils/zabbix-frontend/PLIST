@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/12/01 09:50:24 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/06/24 12:05:36 he Exp $
 share/zabbix/php/actionconf.php
 share/zabbix/php/adm.gui.php
 share/zabbix/php/adm.housekeeper.php
@@ -40,6 +40,7 @@ share/zabbix/php/app/controllers/CControllerMediatypeEdit.php
 share/zabbix/php/app/controllers/CControllerMediatypeEnable.php
 share/zabbix/php/app/controllers/CControllerMediatypeList.php
 share/zabbix/php/app/controllers/CControllerMediatypeUpdate.php
+share/zabbix/php/app/controllers/CControllerMenuPopup.php
 share/zabbix/php/app/controllers/CControllerPopupGeneric.php
 share/zabbix/php/app/controllers/CControllerPopupHttpStep.php
 share/zabbix/php/app/controllers/CControllerPopupMedia.php
@@ -160,6 +161,19 @@ share/zabbix/php/app/views/report.services.php
 share/zabbix/php/app/views/report.status.php
 share/zabbix/php/app/views/system.warning.php
 share/zabbix/php/applications.php
+share/zabbix/php/assets/fonts/DejaVuSans.ttf
+share/zabbix/php/assets/img/apple-touch-icon-120x120-precomposed.png
+share/zabbix/php/assets/img/apple-touch-icon-152x152-precomposed.png
+share/zabbix/php/assets/img/apple-touch-icon-180x180-precomposed.png
+share/zabbix/php/assets/img/apple-touch-icon-76x76-precomposed.png
+share/zabbix/php/assets/img/browser-sprite.png
+share/zabbix/php/assets/img/icon-sprite.svg
+share/zabbix/php/assets/img/ms-tile-144x144.png
+share/zabbix/php/assets/img/touch-icon-192x192.png
+share/zabbix/php/assets/styles/blue-theme.css
+share/zabbix/php/assets/styles/dark-theme.css
+share/zabbix/php/assets/styles/hc-dark.css
+share/zabbix/php/assets/styles/hc-light.css
 share/zabbix/php/audio/alarm_average.wav
 share/zabbix/php/audio/alarm_disaster.wav
 share/zabbix/php/audio/alarm_high.wav
@@ -186,7 +200,6 @@ share/zabbix/php/correlation.php
 share/zabbix/php/disc_prototypes.php
 share/zabbix/php/discoveryconf.php
 share/zabbix/php/favicon.ico
-share/zabbix/php/fonts/DejaVuSans.ttf
 share/zabbix/php/graphs.php
 share/zabbix/php/history.php
 share/zabbix/php/host_discovery.php
@@ -207,14 +220,6 @@ share/zabbix/php/images/general/tr_top_bottom.gif
 share/zabbix/php/images/general/tr_top_right.gif
 share/zabbix/php/images/general/tr_top_right_bottom.gif
 share/zabbix/php/images/general/tree/zero.gif
-share/zabbix/php/img/apple-touch-icon-120x120-precomposed.png
-share/zabbix/php/img/apple-touch-icon-152x152-precomposed.png
-share/zabbix/php/img/apple-touch-icon-180x180-precomposed.png
-share/zabbix/php/img/apple-touch-icon-76x76-precomposed.png
-share/zabbix/php/img/browser-sprite.png
-share/zabbix/php/img/icon-sprite.svg
-share/zabbix/php/img/ms-tile-144x144.png
-share/zabbix/php/img/touch-icon-192x192.png
 share/zabbix/php/imgstore.php
 share/zabbix/php/include/.htaccess
 share/zabbix/php/include/actions.inc.php
@@ -230,8 +235,14 @@ share/zabbix/php/include/classes/api/CRelationMap.php
 share/zabbix/php/include/classes/api/clients/CApiClient.php
 share/zabbix/php/include/classes/api/clients/CLocalApiClient.php
 share/zabbix/php/include/classes/api/managers/CApplicationManager.php
+share/zabbix/php/include/classes/api/managers/CGraphManager.php
+share/zabbix/php/include/classes/api/managers/CGraphPrototypeManager.php
 share/zabbix/php/include/classes/api/managers/CHistoryManager.php
 share/zabbix/php/include/classes/api/managers/CHttpTestManager.php
+share/zabbix/php/include/classes/api/managers/CItemManager.php
+share/zabbix/php/include/classes/api/managers/CItemPrototypeManager.php
+share/zabbix/php/include/classes/api/managers/CTriggerManager.php
+share/zabbix/php/include/classes/api/managers/CTriggerPrototypeManager.php
 share/zabbix/php/include/classes/api/services/CAPIInfo.php
 share/zabbix/php/include/classes/api/services/CAction.php
 share/zabbix/php/include/classes/api/services/CAlert.php
@@ -399,6 +410,7 @@ share/zabbix/php/include/classes/html/svg/CSvgGraphAxis.php
 share/zabbix/php/include/classes/html/svg/CSvgGraphGrid.php
 share/zabbix/php/include/classes/html/svg/CSvgGraphLegend.php
 share/zabbix/php/include/classes/html/svg/CSvgGraphLine.php
+share/zabbix/php/include/classes/html/svg/CSvgGraphLineGroup.php
 share/zabbix/php/include/classes/html/svg/CSvgGraphPoints.php
 share/zabbix/php/include/classes/html/svg/CSvgGroup.php
 share/zabbix/php/include/classes/html/svg/CSvgLine.php
@@ -560,6 +572,7 @@ share/zabbix/php/include/classes/validators/schema/CSchemaValidator.php
 share/zabbix/php/include/classes/widgets/CWidgetConfig.php
 share/zabbix/php/include/classes/widgets/CWidgetHelper.php
 share/zabbix/php/include/classes/widgets/fields/CWidgetField.php
+share/zabbix/php/include/classes/widgets/fields/CWidgetFieldApplication.php
 share/zabbix/php/include/classes/widgets/fields/CWidgetFieldCheckBox.php
 share/zabbix/php/include/classes/widgets/fields/CWidgetFieldComboBox.php
 share/zabbix/php/include/classes/widgets/fields/CWidgetFieldDatePicker.php
@@ -737,6 +750,7 @@ share/zabbix/php/include/views/js/common.init.js.php
 share/zabbix/php/include/views/js/common.item.edit.js.php
 share/zabbix/php/include/views/js/conf.import.js.php
 share/zabbix/php/include/views/js/configuration.action.edit.js.php
+share/zabbix/php/include/views/js/configuration.copy.elements.js.php
 share/zabbix/php/include/views/js/configuration.correlation.edit.js.php
 share/zabbix/php/include/views/js/configuration.discovery.edit.js.php
 share/zabbix/php/include/views/js/configuration.graph.edit.js.php
@@ -917,10 +931,6 @@ share/zabbix/php/setup.php
 share/zabbix/php/slideconf.php
 share/zabbix/php/slides.php
 share/zabbix/php/srv_status.php
-share/zabbix/php/styles/blue-theme.css
-share/zabbix/php/styles/dark-theme.css
-share/zabbix/php/styles/hc-dark.css
-share/zabbix/php/styles/hc-light.css
 share/zabbix/php/sysmap.php
 share/zabbix/php/sysmaps.php
 share/zabbix/php/templates.php
