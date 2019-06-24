@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2019/05/14 18:26:42 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2019/06/24 20:39:55 schmonz Exp $
 
-DISTNAME=	vpnc-script-20190424
+DISTNAME=	vpnc-script-20190606
 CATEGORIES=	net security
-MASTER_SITES=	http://git.infradead.org/users/dwmw2/vpnc-scripts.git/blob_plain/33b5d8198b5f375418379e483031d3ec9019225d:/
+MASTER_SITES=	http://git.infradead.org/users/dwmw2/vpnc-scripts.git/blob_plain/c84fb8e5a523a647a01a1229a9104db934e19f00:/
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	vpnc-script
 
