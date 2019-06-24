@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/08/22 09:43:28 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/06/24 10:59:41 nia Exp $
 
 DISTNAME=	commit-patch-2.5.2
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	devel scm
 MASTER_SITES=	http://www.porkrind.org/commit-patch/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.porkrind.org/commit-patch/
+HOMEPAGE=	https://www.porkrind.org/commit-patch/
 COMMENT=	Commit patches to most common SCM repositories
 LICENSE=	gnu-gpl-v2
 
