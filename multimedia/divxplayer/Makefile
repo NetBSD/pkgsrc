@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/08 09:20:58 asau Exp $
+# $NetBSD: Makefile,v 1.18 2019/06/24 10:59:41 nia Exp $
 
 DISTNAME=	divx-player-installer
 PKGNAME=	divxplayer-0.2.0
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL:=${PKGNAME}/}
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	david@silicium.ath.cx
-HOMEPAGE=	http://www.divx.com/
+HOMEPAGE=	https://www.divx.com/
 COMMENT=	DivX(TM) Video Player for Linux from DivX.com
 
 EMUL_PLATFORMS=		linux-i386
