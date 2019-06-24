@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2018/09/21 13:24:34 maya Exp $
+# $NetBSD: Makefile,v 1.2 2019/06/24 10:36:50 nia Exp $
 
 DISTNAME=	alure-1.2
 CATEGORIES=	audio
 MASTER_SITES=	http://kcat.strangesoft.net/alure-releases/
 
 MAINTAINER=	bastiangermann@fishpost.de
-HOMEPAGE=	http://kcat.strangesoft.net/alure
+HOMEPAGE=	https://kcat.strangesoft.net/alure
 COMMENT=	Helps manage common tasks with OpenAL applications
 LICENSE=	mit
 

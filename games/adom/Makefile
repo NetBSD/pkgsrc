@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2017/10/08 07:41:26 maya Exp $
+# $NetBSD: Makefile,v 1.20 2019/06/24 10:36:50 nia Exp $
 
 DISTNAME=	adom-111-elf
 PKGNAME=	adom-1.1.1
@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://www.adom.de/adom/download/linux/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.adom.de/
+HOMEPAGE=	https://www.adom.de/home/index.html
 COMMENT=	Ancient Domains of Mystery - yet another roguelike game
 LICENSE=	adom-license
 
