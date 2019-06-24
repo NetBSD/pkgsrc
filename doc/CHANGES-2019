@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2670 2019/06/24 11:35:45 jperkin Exp $
+$NetBSD: CHANGES-2019,v 1.2671 2019/06/24 13:46:04 brook Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4434,3 +4434,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added games/oshu version 2.0.0 [nia 2019-06-23]
 	Updated emulators/mame to 0.210 [wiz 2019-06-23]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2019Q2 branch [jperkin 2019-06-24]
+	Updated pkgtools/R2pkg to 0.4 [brook 2019-06-24]
