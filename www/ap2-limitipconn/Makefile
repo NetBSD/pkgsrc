@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/08/27 11:15:14 is Exp $
+# $NetBSD: Makefile,v 1.2 2019/06/24 10:36:51 nia Exp $
 #
 #        * APACHE_PKG_PREFIX = ap24
 #        * PKG_APACHE = apache24
@@ -18,7 +18,7 @@ PATCH_SITES=		http://dominia.org/djao/limit/contrib/dg/
 PATCHFILES=		mod_limitipconn_local_IP_patch_2.diff
 
 MAINTAINER=		tv@NetBSD.org
-HOMEPAGE=		http://dominia.org/djao/limitipconn2.html
+HOMEPAGE=		https://dominia.org/djao/limitipconn2.html
 COMMENT=		Limits per-IP connections to an Apache 2 server
 
 APACHE_MODULE=		yes
