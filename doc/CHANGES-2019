@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2672 2019/06/24 19:05:16 triaxx Exp $
+$NetBSD: CHANGES-2019,v 1.2673 2019/06/24 20:40:01 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4436,3 +4436,4 @@ Changes to the packages collection and infrastructure in 2019:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2019Q2 branch [jperkin 2019-06-24]
 	Updated pkgtools/R2pkg to 0.4 [brook 2019-06-24]
 	Updated comms/lirc to 0.9.0nb4 [triaxx 2019-06-24]
+	Updated net/vpnc-script to 20190606 [schmonz 2019-06-24]
