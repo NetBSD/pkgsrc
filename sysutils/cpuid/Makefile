@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2012/10/23 19:50:56 asau Exp $
+# $NetBSD: Makefile,v 1.10 2019/06/24 10:59:41 nia Exp $
 
 DISTNAME=	cpuid-3.3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.ka9q.net/code/cpuid/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://directory.fsf.org/project/cpuid/
+HOMEPAGE=	https://directory.fsf.org/project/cpuid/
 COMMENT=	CPU identification feature
 
 ONLY_FOR_PLATFORM=	*-*-i386
