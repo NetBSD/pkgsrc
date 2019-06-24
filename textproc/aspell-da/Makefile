@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/08/22 09:46:44 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2019/06/24 10:36:50 nia Exp $
 
 DISTNAME=	aspell-da-1.7.42
 PKGREVISION=	3
@@ -7,7 +7,7 @@ MASTER_SITES=	http://da.speling.org/filer/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://da.speling.org/
+HOMEPAGE=	https://da.speling.org/
 COMMENT=	Danish language support for aspell
 LICENSE=	gnu-gpl-v2
 
