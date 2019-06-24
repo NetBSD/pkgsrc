@@ -1,8 +1,7 @@
 #!/bin/sh
-# $NetBSD: R2pkg.sh,v 1.3 2018/01/13 09:10:33 jperkin Exp $
-# R2pkg
+# $NetBSD: R2pkg.sh,v 1.4 2019/06/24 13:46:04 brook Exp $
 #
-# Copyright (c) 2014,2015,2016,2017
+# Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -35,7 +34,9 @@
 NAME="R2pkg"
 VERS="@VERS@"
 
-USAGE="${NAME} [-DVehqrv] [-E editor] [-R dependency_file] [package] -- create an R package for pkgsrc"
+R2PKG=${0}
+
+USAGE="${NAME} [-DVehqrv] [-E editor] [-M maintainer] [-R dependency_file] [package] -- create an R package for pkgsrc"
 
 : ${CRAN_URL:=ftp://cran.r-project.org}
 : ${PKGEDITOR:=${EDITOR:=vi}}
@@ -43,6 +44,7 @@ USAGE="${NAME} [-DVehqrv] [-E editor] [-R dependency_file] [package] -- create a
 # Substituted by pkgsrc at pre-configure time.
 MAKE=@MAKE@
 EDIT=1
+MAINTAINER_EMAIL=pkgsrc-users@NetBSD.org
 QUIET=0
 RECURSIVE=0
 TOP_LEVEL=1
@@ -51,18 +53,19 @@ VERBOSE=0
 
 DESCRIPTION_CONNECTION=connection
 
-while getopts DE:R:Vehqruv f
+while getopts DE:M:R:Vehqruv f
 do
     case $f in
 	D) DESCRIPTION=yes; DESCRIPTION_CONNECTION="'DESCRIPTION'"; ARGS="${ARGS} -D";;
 	E) PKGEDITOR=${OPTARG}; ARGS="${ARGS} -E ${PKGEDITOR}";;
+	M) MAINTAINER_EMAIL=${OPTARG}; ARGS="${ARGS} -M ${MAINTAINER_EMAIL}";;
 	R) DEPENDENCY_LIST=${OPTARG}; RECURSIVE=1; TOP_LEVEL=0; ARGS="${ARGS} -R ${DEPENDENCY_LIST}";;
 	V) echo "${NAME} v${VERS}"; exit 0;;
 	e) EDIT=0; ARGS="${ARGS} -e";;
 	h) echo ${USAGE}; exit 0;;
 	q) QUIET=1; ARGS="${ARGS} -q";;
 	r) RECURSIVE=1; RECURSIVE_MESSAGE=1; ARGS="${ARGS} -r";;
-	u) UPDATE=1;;
+	u) UPDATE=1; ARGS="${ARGS} -u";;
 	v) VERBOSE=$((${VERBOSE}+1)); ARGS="${ARGS} -v";;
         \?) echo ${USAGE}; exit 1;;
     esac
@@ -149,6 +152,7 @@ check_for_R ()
 preserve_original_files ()
 {
     [ -f DESCR ]    && mv DESCR DESCR.orig
+    [ -f Makefile ] && grep -e "MAINTAINER=" Makefile > MAINTAINER
     [ -f Makefile ] && mv Makefile Makefile.orig
     [ -f distinfo ] && mv distinfo distinfo.orig
 }
@@ -209,6 +213,19 @@ package <- function(s) field('R_PKGNAME',one.line(s))
 version <- function(s) field('R_PKGVER',one.line(s))
 comment <- function(s) field('COMMENT',one.line(s))
 license <- function(s) field(todo.license(s),pkgsrc.license(s))
+maintainer <- function(email)
+  {
+     if (file.exists('MAINTAINER'))
+       {
+         x <- scan('MAINTAINER','character',quiet=TRUE)
+         if (length(x) == 2)
+           email = x[2]
+         else
+           message('WARNING: previous MAINTAINER is ignored')
+       }
+     email <- paste0('MAINTAINER=	',email)
+     email
+   }
 
 categories <- function() paste('CATEGORIES=',paste(basename(dirname(getwd())),'R'),sep='	')
 description <- function(s) strwrap(s,width=71)
@@ -244,7 +261,8 @@ make.dependency <- function(s)
 depends <- function(s1,s2)
 {
   imports <- make.imports(s1,s2)
-  DEPENDS <- list()
+  DEPENDS <- data.frame()
+  BUILDLINK3.MK <- data.frame()
   if (length(imports) > 0)
     {
       for (i in 1:length(imports))
@@ -252,46 +270,85 @@ depends <- function(s1,s2)
           dependency <- make.dependency(imports[i])
           depends <- dependency[1]
           depends.pkg <- Sys.glob(paste('../../*/R-',depends,sep=''))
-          if (length(depends.pkg) != 1) # a unique dependency cannot be found
+          if (length(depends.pkg) == 0) # a dependency cannot be found
             {
+	      message('WARNING: creating the dependency',depends)
               if (${RECURSIVE})
                 {
-                  dependency.dir <- paste('../../R/R-',depends,sep='')
+                  dependency.dir <- paste('../../wip/R-',depends,sep='')
                   dir.create(path=dependency.dir,recursive=TRUE)
-                  error <- system(paste('(cd',dependency.dir,'&& R2pkg.sh ${ARGS}',depends,')'))
+                  error <- system(paste('(cd',dependency.dir,'&& ${R2PKG} ${ARGS}',depends,')'))
                   if (error != 0)
                     file.remove(dependency.dir)
                 }
             }
           depends.pkg <- Sys.glob(paste('../../*/R-',depends,sep=''))
-          if (length(depends.pkg) == 1) # a unique dependency found
+	  if (length(depends.pkg) == 0) # no dependency was created
+	    message('WARNING: the dependency',depends,'does not exist')
+          else if (length(depends.pkg) == 1) # a unique dependency found
             {
-              depends.pkg.fullname <- system(paste('cd',depends.pkg,'&& bmake show-var VARNAME=PKGNAME'),intern=TRUE)
-              depends.pkg.name <- sub('^(.*)-([^-]*)$','\\\\1',depends.pkg.fullname)
-              depends.pkg.vers <- sub('^(.*)-([^-]*)$','\\\\2',depends.pkg.fullname)
-              if (length(dependency) == 2)
-                depends.vers <- dependency[2]
-              else
-                depends.vers <- paste('>=',depends.pkg.vers,sep='')
-              depends.line <- paste('DEPENDS+=\tR-',depends,depends.vers,':',depends.pkg,sep='')
-              if (length(dependency) == 2)
-                depends.line <- paste(depends.line,'	# XXX - found ',depends.pkg.fullname,' (',depends.pkg,')',sep='')
+	      fields <- strsplit(depends.pkg,'/',fixed=TRUE)
+	      depends.dir <- fields[[1]][3]
+	      buildlink3.mk <- paste(depends.pkg,'/buildlink3.mk',sep='')
+	      if (file.exists(buildlink3.mk))
+                {
+                  buildlink3.line <- paste('.include "',buildlink3.mk,'"',sep='')
+                  BUILDLINK3.MK <- rbind(BUILDLINK3.MK,data.frame(key=depends.dir,value=buildlink3.line))
+                }
+	      else
+	        {
+                  depends.pkg.fullname <- system(paste('cd',depends.pkg,'&& bmake show-var VARNAME=PKGNAME'),intern=TRUE)
+                  depends.pkg.name <- sub('^(.*)-([^-]*)$','\\\\1',depends.pkg.fullname)
+                  depends.pkg.vers <- sub('^(.*)-([^-]*)$','\\\\2',depends.pkg.fullname)
+                  if (length(dependency) == 2)
+                    depends.vers <- dependency[2]
+                  else
+                    depends.vers <- paste('>=',depends.pkg.vers,sep='')
+                  depends.line <- paste('DEPENDS+=\tR-',depends,depends.vers,':',depends.pkg,sep='')
+                  depends.line <- paste(depends.line,'	# XXX - found ',depends.pkg.fullname,' (',depends.pkg,')',sep='')
+                  DEPENDS <- rbind(DEPENDS,data.frame(key=depends.dir,value=depends.line))
+                }
             }
-          else
+          else			# more than 1 dependency found
             {
+	      msg <- paste('WARNING: too many dependencies found for ',depends,':',sep='')
+	      for (pkg in depends.pkg)
+	        msg <- paste(msg,' ',pkg,sep='')
+	      message(msg)
               depends.vers <- ifelse(length(dependency) == 2, dependency[2], '>=???')
               depends.vers <- trim.space(depends.vers)
-              depends.line <- paste('DEPENDS+=\tR-',depends,depends.vers,':../../R/R-',depends,sep='')
+              depends.line <- paste('DEPENDS+=\tR-',depends,depends.vers,':../../???/R-',depends,sep='')
+ 	      depends.line <- paste(depends.line,'	# XXX - found',sep='')
+	      for (pkg in depends.pkg)
+ 	        depends.line <- paste(depends.line,' ',pkg,sep='')
+              DEPENDS <- rbind(DEPENDS,data.frame(key='???',value=depends.line))
             }
-          DEPENDS <- list(DEPENDS,depends.line)
-          new.depends.pkg <- Sys.glob(paste('../../R/R-',depends,sep=''))
+          new.depends.pkg <- Sys.glob(paste('../../wip/R-',depends,sep=''))
           if (length(new.depends.pkg) > 0)
             system(paste('echo',depends,'${RPKG} >> ${DEPENDENCY_LIST}'))
         }
     }
-  if (length(DEPENDS) > 0)
-    DEPENDS <- append(DEPENDS,'')
-  DEPENDS
+  if (nrow(DEPENDS) > 0)
+    {
+      key <- as.vector(DEPENDS[,1])
+      value <- as.vector(DEPENDS[,2])
+      key <- order(key,value)
+      DEPENDS <- as.list(value[key])
+      if (length(DEPENDS) > 0)
+        DEPENDS <- append(DEPENDS,'')
+    }
+  else
+    DEPENDS = list()
+  if (nrow(BUILDLINK3.MK) > 0)
+    {
+      key <- as.vector(BUILDLINK3.MK[,1])
+      value <- as.vector(BUILDLINK3.MK[,2])
+      key <- order(key,value)
+      BUILDLINK3.MK <- as.list(value[key])
+    }
+  else
+    BUILDLINK3.MK <- list()
+  list(DEPENDS,BUILDLINK3.MK)
 }
 
 use.languages <- function(s1,s2)
@@ -300,20 +357,10 @@ use.languages <- function(s1,s2)
   s <- paste(s1,s2)
   Rcpp <- grepl('Rcpp',s)
   if (Rcpp)
-    USE_LANGUAGES <- append(USE_LANGUAGES,list('USE_LANGUAGES+=	c++'))
+    USE_LANGUAGES <- append(USE_LANGUAGES,list('USE_LANGUAGES+=	c c++'))
   if (length(USE_LANGUAGES) > 0)
     USE_LANGUAGES <- append(USE_LANGUAGES,'')
   USE_LANGUAGES
-}
-
-buildlink <- function(s1,s2)
-{
-  BUILDLINK <- list()
-  s <- paste(s1,s2)
-  Rcpp <- grepl('Rcpp',s)
-  if (Rcpp)
-    BUILDLINK <- append(BUILDLINK,'.include "../../devel/R-Rcpp/buildlink3.mk"')
-  BUILDLINK
 }
 
 copy.description <- function(connection)
@@ -327,20 +374,21 @@ if (error)
   quit(status=error)
 
 metadata <- read.dcf(file='DESCRIPTION', fields=c('Package','Version','Title','Description','License','Imports','Depends'))
- 
+
 CVS               <- '# \$NetBSD\$'
 CATEGORIES        <- categories()
 MASTER.SITES      <- 'MASTER_SITES=	\${MASTER_SITE_R_CRAN:=contrib/}'
-MAINTAINER        <- 'MAINTAINER=	pkgsrc-users@NetBSD.org'
+MAINTAINER        <- maintainer('${MAINTAINER_EMAIL}')
 HOMEPAGE          <- 'HOMEPAGE=	\${R_HOMEPAGE_BASE}/${RPKG}/'
 COMMENT           <- comment(metadata[3])
 LICENSE           <- license(metadata[5])
 R_PKGNAME         <- package(metadata[1])
 R_PKGVER          <- version(metadata[2])
 USE_LANGUAGES     <- use.languages(metadata[6],metadata[7])
-DEPENDS           <- depends(metadata[6],metadata[7])
+DEPENDENCIES      <- depends(metadata[6],metadata[7])
+DEPENDS		  <- DEPENDENCIES[1]
+BUILDLINK3.MK     <- DEPENDENCIES[2]
 INCLUDE.R         <- '.include "../../math/R/Makefile.extension"'
-INCLUDE.BUILDLINK <- buildlink(metadata[6],metadata[7])
 INCLUDE.PKG       <- '.include "../../mk/bsd.pkg.mk"'
 
 DESCR        <- description(metadata[4])
@@ -362,7 +410,7 @@ Makefile <- append(Makefile,'')
 Makefile <- append(Makefile,USE_LANGUAGES)
 Makefile <- append(Makefile,DEPENDS)
 Makefile <- append(Makefile,INCLUDE.R)
-Makefile <- append(Makefile,INCLUDE.BUILDLINK)
+Makefile <- append(Makefile,BUILDLINK3.MK)
 Makefile <- append(Makefile,INCLUDE.PKG)
 Makefile <- paste(unlist(Makefile),collapse='\n')
 
@@ -419,6 +467,7 @@ cleanup ()
 	mv distinfo.orig distinfo
     fi
     rm -f ${R_FILE}
+    rm -f MAINTAINER
 }
 
 messages ()
@@ -437,7 +486,7 @@ EOF
 	if [ ${RECURSIVE} -ne 0 ]; then
 	    cat << EOF
 
-Recursive packages may have been created in ../../R; please do the following:
+Recursive packages may have been created in ../../wip; please do the following:
 - edit each Makefile as follows (in addition to following the notes above):
   o move recursively created packages to the appropriate category.
   o fix the category in Makefile.

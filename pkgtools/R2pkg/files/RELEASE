@@ -1,0 +1,30 @@
+$NetBSD: RELEASE,v 1.1 2019/06/24 13:46:04 brook Exp $
+
+RELEASE
+=======
+
+R2pkg v.0.2 (2015-04-25)
+------------------------
+
+* Initial public release
+
+R2pkg v.0.3 (2017-07-18)
+------------------------
+
+* Add to packages conflicting with the base R package.
+
+* Add recursion (-r).
+
+* Add support for updating packages (-u).
+
+R2pkg v.0.4 (2019-06-24)
+------------------------
+
+* Fix recursion.
+
+* Add both c and c++ to USE_LANGUAGES.
+
+* Add maintainer email handling (-M).
+
+* Use buildlink3.mk files for dependencies when available.
+
