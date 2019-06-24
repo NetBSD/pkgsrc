@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2018/02/02 17:43:51 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.10 2019/06/24 10:59:42 nia Exp $
 #
 # used by graphics/exiv2/Makefile
 # used by graphics/exiv2-organize/Makefile
@@ -10,7 +10,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://www.exiv2.org/builds/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.exiv2.org/
+HOMEPAGE=	https://www.exiv2.org/
 COMMENT=	Image metadata manipulation
 LICENSE=	gnu-gpl-v2
 
