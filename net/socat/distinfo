@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.26 2019/04/07 19:26:56 leot Exp $
+$NetBSD: distinfo,v 1.27 2019/06/25 16:43:47 schmonz Exp $
 
 SHA1 (socat-1.7.3.3.tar.gz) = acbb6c4c303a9bd8428c7846545849f25d92bd76
 RMD160 (socat-1.7.3.3.tar.gz) = ed1e304fe3e0c7cffdab6dbb1f5f752c3dd53ca4
 SHA512 (socat-1.7.3.3.tar.gz) = b3ea4cb6081f7778a0281a3ec36ea7e5daf07dc19f2e0de08f767417112776e96e1bcac7962ebb6dd8b960ad91fc4a452f0da8327736d50e215e4ab43947ff78
 Size (socat-1.7.3.3.tar.gz) = 614101 bytes
+SHA1 (patch-xio-termios.h) = dd07f9bbf96d0943e1a22fe4851f2f2336e7b828
