@@ -1,6 +1,10 @@
-$NetBSD: patch-unix_Makefile.in,v 1.8 2017/08/25 11:05:33 adam Exp $
+$NetBSD: patch-unix_Makefile.in,v 1.9 2019/06/25 12:06:41 bsiegert Exp $
 
---- unix/Makefile.in.orig	2016-02-29 19:13:21.000000000 +0000
+Support MirBSD.
+Honor LDFLAGS.
+Standardize file names.
+
+--- unix/Makefile.in.orig	2019-06-24 09:27:45.000000000 +0000
 +++ unix/Makefile.in
 @@ -14,6 +14,7 @@ MAJOR_VERSION		= @TK_MAJOR_VERSION@
  MINOR_VERSION		= @TK_MINOR_VERSION@
@@ -28,6 +32,15 @@ $NetBSD: patch-unix_Makefile.in,v 1.8 2017/08/25 11:05:33 adam Exp $
  
  # The directory containing the platform specific Tcl sources and headers
  # appropriate for this version of Tk:
+@@ -119,7 +122,7 @@ TK_SHARED_BUILD		= @TK_SHARED_BUILD@
+ # Subdirectory of $(libdir) containing the pkgIndex.tcl file for loadable Tk
+ TK_PKG_DIR		= @TK_PKG_DIR@
+ 
+-# Directory in which to install the pkgIndex.tcl file for loadable Tk
++	# Directory in which to install the pkgIndex.tcl file for loadable Tk
+ PKG_INSTALL_DIR		= $(LIB_INSTALL_DIR)/$(TK_PKG_DIR)
+ 
+ # Package index file for loadable Tk
 @@ -137,7 +140,7 @@ CFLAGS_OPTIMIZE		= @CFLAGS_OPTIMIZE@
  #CFLAGS			= $(CFLAGS_DEBUG)
  #CFLAGS			= $(CFLAGS_OPTIMIZE)
@@ -54,7 +67,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.8 2017/08/25 11:05:33 adam Exp $
  # Additional search flags needed to find the various shared libraries
  # at run-time.  The first symbol is for use when creating a binary
  # with cc, and the second is for use when running ld directly.
-@@ -562,6 +568,9 @@ PRIVATE_HDRS = $(GENERIC_DIR)/tkInt.h $(
+@@ -563,6 +569,9 @@ PRIVATE_HDRS = $(GENERIC_DIR)/tkInt.h $(
  
  DEMOPROGS = browse hello ixset rmt rolodex square tcolor timer widget
  
@@ -64,7 +77,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.8 2017/08/25 11:05:33 adam Exp $
  SHELL_ENV = \
  	@LD_LIBRARY_PATH_VAR@="`pwd`:${TCL_BIN_DIR}:$${@LD_LIBRARY_PATH_VAR@}"; \
  	export @LD_LIBRARY_PATH_VAR@; \
-@@ -585,6 +594,11 @@ ${LIB_FILE}: ${STUB_LIB_FILE} @LIB_RSRC_
+@@ -586,6 +595,11 @@ ${LIB_FILE}: ${STUB_LIB_FILE} @LIB_RSRC_
  	rm -f $@
  	@MAKE_LIB@
  
@@ -76,7 +89,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.8 2017/08/25 11:05:33 adam Exp $
  ${STUB_LIB_FILE}: ${STUB_LIB_OBJS}
  	@if test "x${LIB_FILE}" = "xlibtk${MAJOR_VERSION}.${MINOR_VERSION}.dll"; then \
  	    (cd ${TOP_DIR}/win; ${MAKE} tk${MAJOR_VERSION}${MINOR_VERSION}.dll); \
-@@ -709,7 +723,7 @@ install-strip:
+@@ -710,7 +724,7 @@ install-strip:
  		INSTALL_PROGRAM="$(INSTALL_PROGRAM) ${INSTALL_STRIP_PROGRAM}" \
  		INSTALL_LIBRARY="$(INSTALL_LIBRARY) ${INSTALL_STRIP_LIBRARY}"
  
@@ -85,7 +98,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.8 2017/08/25 11:05:33 adam Exp $
  	@for i in "$(LIB_INSTALL_DIR)" "$(BIN_INSTALL_DIR)" \
  	    "$(PKG_INSTALL_DIR)" "$(CONFIG_INSTALL_DIR)" ; \
  	    do \
-@@ -739,7 +753,13 @@ install-binaries: $(TK_STUB_LIB_FILE) $(
+@@ -740,7 +754,13 @@ install-binaries: $(TK_STUB_LIB_FILE) $(
  	    fi
  	@echo "Installing $(LIB_FILE) to $(DLL_INSTALL_DIR)/"
  	@@INSTALL_LIB@
@@ -100,7 +113,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.8 2017/08/25 11:05:33 adam Exp $
  	@if test -f "tk${MAJOR_VERSION}${MINOR_VERSION}.dll"; then \
  	    $(INSTALL_LIBRARY) "tk${MAJOR_VERSION}${MINOR_VERSION}.dll" "$(DLL_INSTALL_DIR)";\
  	    chmod 555 "$(DLL_INSTALL_DIR)/tk${MAJOR_VERSION}${MINOR_VERSION}.dll";\
-@@ -748,6 +768,7 @@ install-binaries: $(TK_STUB_LIB_FILE) $(
+@@ -749,6 +769,7 @@ install-binaries: $(TK_STUB_LIB_FILE) $(
  	fi
  	@echo "Installing ${WISH_EXE} as $(BIN_INSTALL_DIR)/wish$(VERSION)${EXE_SUFFIX}"
  	@$(INSTALL_PROGRAM) ${WISH_EXE} "$(BIN_INSTALL_DIR)/wish$(VERSION)${EXE_SUFFIX}"
@@ -108,7 +121,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.8 2017/08/25 11:05:33 adam Exp $
  	@echo "Installing tkConfig.sh to $(CONFIG_INSTALL_DIR)/"
  	@$(INSTALL_DATA) tkConfig.sh "$(CONFIG_INSTALL_DIR)/tkConfig.sh"
  	@if test "$(STUB_LIB_FILE)" != "" ; then \
-@@ -855,7 +876,7 @@ install-doc:
+@@ -856,7 +877,7 @@ install-doc:
  install-headers:
  	@if test "$(@TK_WINDOWINGSYSTEM@_XLIB_HDRS)" != ""; then \
  	    XLIB_INCLUDE_INSTALL_DIR="$(INCLUDE_INSTALL_DIR)"/X11; fi; \
@@ -117,7 +130,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.8 2017/08/25 11:05:33 adam Exp $
  	    do \
  	    if [ -n "$$i" -a ! -d "$$i" ] ; then \
  		echo "Making directory $$i"; \
-@@ -864,9 +885,12 @@ install-headers:
+@@ -865,9 +886,12 @@ install-headers:
  		fi; \
  	    done;
  	@echo "Installing header files to $(INCLUDE_INSTALL_DIR)/";
