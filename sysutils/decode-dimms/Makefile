@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/06/25 15:19:36 pgoyette Exp $
+# $NetBSD: Makefile,v 1.18 2019/06/25 15:35:33 pgoyette Exp $
 
 # no Release yet
 PKG_DATE=	20190619
@@ -17,7 +17,7 @@ USE_TOOLS+=	perl:run
 REPLACE_PERL=	eeprom/decode-dimms
 
 SUBST_CLASSES+=		rev
-SUBST_STAGE.rev=	pre-patch
+SUBST_STAGE.rev=	post-extract
 SUBST_FILES.rev=	eeprom/decode-dimms
 SUBST_SED.rev=		-e 's/^$$revision = .*;/$$revision = "${PKG_DATE}-${GIT_COMMIT}";/'
 SUBST_SED.rev+=		-e '/^$$revision =~/d'
@@ -26,6 +26,9 @@ NO_BUILD=	yes
 
 USE_LANGUAGES=	# empty
 
+# This package's primary purpose is to introduce use of hw.spdmem* sysctl
+# as the source of SPD data; these sysctl variables are only available on
+# NetBSD (and only if the spdmem(4) device is configured).
 ONLY_FOR_PLATFORM=	NetBSD-*-*
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
