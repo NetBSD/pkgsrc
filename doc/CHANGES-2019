@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2673 2019/06/24 20:40:01 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.2674 2019/06/25 10:59:26 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4437,3 +4437,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated pkgtools/R2pkg to 0.4 [brook 2019-06-24]
 	Updated comms/lirc to 0.9.0nb4 [triaxx 2019-06-24]
 	Updated net/vpnc-script to 20190606 [schmonz 2019-06-24]
+	Updated devel/glib2 to 2.60.4nb3 [prlw1 2019-06-25]
