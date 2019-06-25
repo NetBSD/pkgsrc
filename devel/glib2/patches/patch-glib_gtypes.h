@@ -1,7 +1,8 @@
-$NetBSD: patch-glib_gtypes.h,v 1.2 2019/06/25 15:11:36 schmonz Exp $
+$NetBSD: patch-glib_gtypes.h,v 1.3 2019/06/25 16:08:55 schmonz Exp $
 
 We insist on C99, so size_t exists => use it.
 PR pkg/54298
+Include <sys/types.h> for ssize_t definition on at least OS X 10.14.
 
 --- glib/gtypes.h.orig	2019-06-10 17:47:20.000000000 +0000
 +++ glib/gtypes.h
