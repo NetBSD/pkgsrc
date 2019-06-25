@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.308 2019/06/18 14:29:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.309 2019/06/25 18:17:22 rjs Exp $
 
 DISTNAME=	gimp-2.10.12
 CATEGORIES=	graphics
@@ -61,7 +61,7 @@ BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.8.1
 BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.12.4
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-BUILDLINK_API_DEPENDS.babl+=		babl>=0.1.50
+BUILDLINK_API_DEPENDS.babl+=		babl>=0.1.66
 .include "../../graphics/babl/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.2
 .include "../../graphics/gegl/buildlink3.mk"
