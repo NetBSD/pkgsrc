@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/07/19 20:44:40 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/06/25 10:24:58 maya Exp $
 include/gstreamer-1.0/gst/gl/egl/gstegl.h
 include/gstreamer-1.0/gst/gl/egl/gsteglimagememory.h
 include/gstreamer-1.0/gst/gl/egl/gstglcontext_egl.h
@@ -20,6 +20,7 @@ include/gstreamer-1.0/gst/gl/glprototypes/query.h
 include/gstreamer-1.0/gst/gl/glprototypes/shaders.h
 include/gstreamer-1.0/gst/gl/glprototypes/sync.h
 include/gstreamer-1.0/gst/gl/glprototypes/vao.h
+include/gstreamer-1.0/gst/gl/gsteglimage.h
 include/gstreamer-1.0/gst/gl/gstgl_enums.h
 include/gstreamer-1.0/gst/gl/gstgl_fwd.h
 include/gstreamer-1.0/gst/gl/gstglapi.h
@@ -37,9 +38,11 @@ include/gstreamer-1.0/gst/gl/gstglfilter.h
 include/gstreamer-1.0/gst/gl/gstglformat.h
 include/gstreamer-1.0/gst/gl/gstglframebuffer.h
 include/gstreamer-1.0/gst/gl/gstglmemory.h
+include/gstreamer-1.0/gst/gl/gstglmemoryegl.h
 include/gstreamer-1.0/gst/gl/gstglmemorypbo.h
 include/gstreamer-1.0/gst/gl/gstgloverlaycompositor.h
 include/gstreamer-1.0/gst/gl/gstglquery.h
+include/gstreamer-1.0/gst/gl/gstglrenderbuffer.h
 include/gstreamer-1.0/gst/gl/gstglshader.h
 include/gstreamer-1.0/gst/gl/gstglshaderstrings.h
 include/gstreamer-1.0/gst/gl/gstglsl.h
