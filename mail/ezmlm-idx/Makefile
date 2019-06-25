@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2019/05/07 14:24:03 schmonz Exp $
+# $NetBSD: Makefile,v 1.51 2019/06/25 14:39:20 schmonz Exp $
 #
 
 DISTNAME=		ezmlm-idx-${IDXVERSION}
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		mail
 IDXVERSION=		7.2.2
 MASTER_SITES=		http://untroubled.org/ezmlm/archive/${IDXVERSION}/
@@ -60,7 +60,7 @@ post-extract:
 post-build:
 .	if ${OPSYS} == Darwin
 	cd ${WRKSRC} && for lib in *.so; do \
-	  install_name_tool -id ${PREFIX}/lib/$${lib} $${lib}; \
+	  install_name_tool -id ${PREFIX}/lib/ezmlm/$${lib} $${lib}; \
 	done
 .	endif
 
