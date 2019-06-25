@@ -1,0 +1,24 @@
+$NetBSD: patch-glib_glibconfig.h.in,v 1.1 2019/06/25 10:57:28 prlw1 Exp $
+
+We insist on C99, so size_t exists => use it.
+PR pkg/54298
+
+--- glib/glibconfig.h.in.orig	2019-06-10 17:47:20.000000000 +0000
++++ glib/glibconfig.h.in
+@@ -74,12 +74,10 @@ typedef unsigned @gint32@ guint32;
+ #define GLIB_SIZEOF_SIZE_T @glib_size_t@
+ #define GLIB_SIZEOF_SSIZE_T @glib_ssize_t@
+ 
+-typedef signed @glib_size_type_define@ gssize;
+-typedef unsigned @glib_size_type_define@ gsize;
+-#define G_GSIZE_MODIFIER @gsize_modifier@
+-#define G_GSSIZE_MODIFIER @gssize_modifier@
+-#define G_GSIZE_FORMAT @gsize_format@
+-#define G_GSSIZE_FORMAT @gssize_format@
++#define G_GSIZE_MODIFIER "z"
++#define G_GSSIZE_MODIFIER "z"
++#define G_GSIZE_FORMAT "zu"
++#define G_GSSIZE_FORMAT "zi"
+ 
+ #define G_MAXSIZE	G_MAXU@glib_msize_type@
+ #define G_MINSSIZE	G_MIN@glib_msize_type@
