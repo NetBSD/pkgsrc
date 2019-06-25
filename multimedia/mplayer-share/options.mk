@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.64 2019/06/22 22:46:45 tsutsui Exp $
+# $NetBSD: options.mk,v 1.65 2019/06/25 20:50:22 markd Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -88,7 +88,10 @@ PKG_SUPPORTED_OPTIONS+= xvid
 PKG_SUGGESTED_OPTIONS+=	${o}
 .  endif
 .endfor
-PKG_SUGGESTED_OPTIONS.Linux+=	alsa vidix
+.if !empty(PKGNAME:M*mplayer*)
+PKG_SUGGESTED_OPTIONS.Linux+=	alsa
+.endif
+PKG_SUGGESTED_OPTIONS.Linux+=	vidix
 
 # -------------------------------------------------------------------------
 # Handle extra libraries (part 1)
