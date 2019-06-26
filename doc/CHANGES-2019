@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2676 2019/06/25 14:39:28 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.2677 2019/06/26 06:13:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4353,7 +4353,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/highlight to 3.52 [schmonz 2019-06-20]
 	Updated textproc/p5-highlight to 3.52 [schmonz 2019-06-20]
 	Updated editors/leafpad to 0.8.18.1 [nia 2019-06-20]
-	Updated x11/xorgproto to 2019.1 [wiz 2019-06-20]
 	Updated security/py-bcrypt to 3.1.7 [adam 2019-06-20]
 	Updated lang/py-mypy to 0.710 [adam 2019-06-20]
 	Updated fonts/terminus-font to 4.47 [nia 2019-06-20]
