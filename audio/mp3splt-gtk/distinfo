@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2019/06/25 21:25:24 schmonz Exp $
+$NetBSD: distinfo,v 1.8 2019/06/26 01:16:10 schmonz Exp $
 
 SHA1 (mp3splt-gtk-0.9.2.tar.gz) = 45f04541ed9e747038198adab076bd0d41dd0ead
 RMD160 (mp3splt-gtk-0.9.2.tar.gz) = 14cf17ceb82847f68182319f1e844790485d4bca
 SHA512 (mp3splt-gtk-0.9.2.tar.gz) = e837cbc0759cd6535fc466099a170d066ab72b4854f8546f524261fe660887f5d2add60d9fa1e19d68d811004c682a324b5bcba86aa8cb89ae1ad2bc2f9b1d9d
 Size (mp3splt-gtk-0.9.2.tar.gz) = 1070580 bytes
-SHA1 (patch-src_player__window.c) = c964a9a7557a0a4536e3dbcdf48d5ce261160b07
+SHA1 (patch-src_player__window.c) = 2d74a1db567920f98b48771760a168aec6ab29c6
