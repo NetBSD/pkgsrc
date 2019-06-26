@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2019/04/25 07:32:41 maya Exp $
+# $NetBSD: Makefile,v 1.36 2019/06/26 16:39:59 gdt Exp $
 
 DISTNAME=	mongodb-src-r4.0.6
 PKGNAME=	${DISTNAME:S/src-r//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases
 MASTER_SITES=	http://fastdl.mongodb.org/src/
 
@@ -22,7 +22,8 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-regex-[0-9]*:../../textproc/py-regex
 BUILD_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 NO_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c99 c++14
+# USE_LANGUAGES+=	c11
 USE_TOOLS+=	pkg-config
 
 SCONS_ARGS=	${_MAKE_JOBS}
