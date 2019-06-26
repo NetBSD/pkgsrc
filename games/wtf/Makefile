@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2018/06/20 22:21:25 sevan Exp $
+# $NetBSD: Makefile,v 1.6 2019/06/26 13:14:54 sevan Exp $
 #
 
-DISTNAME=	wtf-20180615
+DISTNAME=	wtf-20190623
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bsdwtf/}
 
