@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.91 2019/02/22 00:06:46 rillig Exp $
+# $NetBSD: compiler.mk,v 1.92 2019/06/26 00:22:56 ryoon Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -43,7 +43,7 @@
 #	Declares the languages used in the source code of the package.
 #	This is used to determine the correct compilers to make
 #	visible to the build environment, installing them if
-#	necessary.  Flags such as --std=c++99 are also added.
+#	necessary.  Flags such as -std=c++99 are also added.
 #	Valid values are: c, c99, c++, c++03, gnu++03, c++0x, gnu++0x,
 #	c++11, gnu++11, c++14, gnu++14, fortran, fortran77, java, objc,
 #	obj-c++, and ada.  The default is "c".
