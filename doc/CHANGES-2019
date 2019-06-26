@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2678 2019/06/26 10:07:49 roy Exp $
+$NetBSD: CHANGES-2019,v 1.2679 2019/06/26 10:43:09 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4440,3 +4440,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/tk to 8.6.9.1 [bsiegert 2019-06-25]
 	Updated mail/ezmlm-idx to 7.2.2nb10 [schmonz 2019-06-25]
 	Updated net/dhcpcd to 7.2.3 [roy 2019-06-26]
+	Updated devel/glib2 to 2.60.4nb4 [prlw1 2019-06-26]
