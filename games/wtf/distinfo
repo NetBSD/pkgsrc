@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/06/20 22:21:25 sevan Exp $
+$NetBSD: distinfo,v 1.6 2019/06/26 13:14:54 sevan Exp $
 
-SHA1 (wtf-20180615.tar.gz) = 41a085b245aef7c22325e97180fa1b8dae9e2c69
-RMD160 (wtf-20180615.tar.gz) = 0911b1d0d74b12c45c4d507726bdceec42486734
-SHA512 (wtf-20180615.tar.gz) = 53e9ce5cdb8566cb05199d19e6b7ce9bba35509de241c9f5b56845b56abcd4eb2c5cd24080f4dc5c8eac9af3b1e6d4a90846ba4bccb9dfada87fdfff864bd178
-Size (wtf-20180615.tar.gz) = 26498 bytes
+SHA1 (wtf-20190623.tar.gz) = 8a2d4363fea1fdb343dd57d04b62d81d55d155b5
+RMD160 (wtf-20190623.tar.gz) = 1310f6addf341140b85450a424504b0c1e848a2d
+SHA512 (wtf-20190623.tar.gz) = 3021a811d017e2edae2bb77db9df326f5b3a065a7188a7f35ab1de49ce00dc28ecd708e490ce8e7fa3d504c1a90a40c39e25383d67a97f64f268c39d9e7a52cf
+Size (wtf-20190623.tar.gz) = 29024 bytes
