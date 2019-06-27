@@ -1,4 +1,4 @@
-$NetBSD: patch-unix_configure,v 1.14 2019/06/25 12:06:41 bsiegert Exp $
+$NetBSD: patch-unix_configure,v 1.15 2019/06/27 09:33:27 jperkin Exp $
 
 Support MirBSD.
 Honor LDFLAGS.
@@ -130,7 +130,7 @@ Standardize file names.
  	TK_BUILD_LIB_SPEC="-L`pwd | sed -e 's/ /\\\\ /g'` ${TK_LIB_FLAG}"
      fi
 -    TK_LIB_SPEC="-L${libdir} ${TK_LIB_FLAG}"
-+    TK_LIB_SPEC="-L${libdir} ${COMPILER_RPATH_FLAG}${libdir} {TK_LIB_FLAG}"
++    TK_LIB_SPEC="-L${libdir} ${COMPILER_RPATH_FLAG}${libdir} ${TK_LIB_FLAG}"
  fi
  
  #--------------------------------------------------------------------
