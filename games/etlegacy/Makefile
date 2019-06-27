@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2019/06/23 13:28:04 nia Exp $
+# $NetBSD: Makefile,v 1.6 2019/06/27 16:05:11 nia Exp $
 
 PKGNAME=	etlegacy-2.76
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 
 DIST_SUBDIR=	etlegacy-${PKGVERSION_NOREV}
@@ -62,6 +62,34 @@ CMAKE_ARGS+=	-DINSTALL_DEFAULT_MODDIR="share/etlegacy"
 CFLAGS+=	-DIOAPI_NO_64
 
 CHECK_PORTABILITY_SKIP+=	libs/sdl2/build-scripts/*
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "x86_64"
+PLIST_SUBST+=	ARCH_STRING="x86_64"
+.elif ${MACHINE_ARCH} == "i386"
+PLIST_SUBST+=	ARCH_STRING="i386"
+.elif ${MACHINE_ARCH} == "alpha"
+PLIST_SUBST+=	ARCH_STRING="alpha"
+.elif ${MACHINE_ARCH} == "hppa"
+PLIST_SUBST+=	ARCH_STRING="hppa"
+.elif !empty(MACHINE_ARCH:Mpowerpc64*)
+PLIST_SUBST+=	ARCH_STRING="ppc64"
+.elif !empty(MACHINE_ARCH:Mpowerpc*)
+PLIST_SUBST+=	ARCH_STRING="ppc"
+.elif !empty(MACHINE_ARCH:Msh3*)
+PLIST_SUBST+=	ARCH_STRING="sh"
+.elif !empty(MACHINE_ARCH:Mmips*)
+PLIST_SUBST+=	ARCH_STRING="mips"
+.elif !empty(MACHINE_ARCH:Msparc*)
+PLIST_SUBST+=	ARCH_STRING="sparc"
+.elif !empty(MACHINE_ARCH:M*arm*)
+PLIST_SUBST+=	ARCH_STRING="arm"
+.else
+# maybe architecture-neutral shared objects could be generated
+PKG_SKIP_REASON+=\
+	"unsupported MACHINE_ARCH, maybe needs to be added to q_platform.h"
+.endif
 
 post-extract:
 	${MV} ${WRKDIR}/etlegacy-libs-${LIBS_TAG}/* \
