@@ -1,6 +1,6 @@
-$NetBSD: patch-bridges_source_cpp__uno_gcc3__linux__x86-64_share.hxx,v 1.4 2016/12/06 15:21:00 ryoon Exp $
+$NetBSD: patch-bridges_source_cpp__uno_gcc3__linux__x86-64_share.hxx,v 1.5 2019/06/27 13:50:49 ryoon Exp $
 
-* NetBSD has no _Unwind_Exception
+* NetBSD has no _Unwind_Exception, fix runtime crash
 
 --- bridges/source/cpp_uno/gcc3_linux_x86-64/share.hxx.orig	2016-10-28 14:50:26.000000000 +0000
 +++ bridges/source/cpp_uno/gcc3_linux_x86-64/share.hxx
