@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.79 2019/06/02 03:11:30 ryoon Exp $
+$NetBSD: distinfo,v 1.80 2019/06/27 13:48:11 ryoon Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -217,7 +217,7 @@ SHA1 (patch-autogen.sh) = eedd0091745cf6a32ee9b33227502baaa661270e
 SHA1 (patch-bridges_source_cpp__uno_gcc3__linux__intel_share.hxx) = c1f5a013b88e847dd9ecfb4e4abe78b1b5965a0b
 SHA1 (patch-bridges_source_cpp__uno_gcc3__linux__x86-64_share.hxx) = f7eaf2748c66a27a772fdbdb370a4c6b3bdafca4
 SHA1 (patch-configure.ac) = c9b10c86e809961f9312d1dbd925c6bc77042f56
-SHA1 (patch-desktop_scripts_soffice.sh) = 8f2b909ac798ba00f0f9ab5accd0c128c50b1fa5
+SHA1 (patch-desktop_scripts_soffice.sh) = e6342e08781ca8dac72a1f28407517d79155577c
 SHA1 (patch-desktop_unx_source_pagein.c) = 0aa2b289df6d0fa524bf057d532aa5f9ceb6dde5
 SHA1 (patch-download.lst) = f6db8e621d9fee8652e62d5bb637d54618bfdb04
 SHA1 (patch-external_harfbuzz_UnpackedTarball__harfbuzz.mk) = 5c5d965558f3c431cde6fc280438b23494b22607
