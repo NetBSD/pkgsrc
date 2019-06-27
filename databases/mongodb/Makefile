@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2019/06/26 16:39:59 gdt Exp $
+# $NetBSD: Makefile,v 1.37 2019/06/27 00:56:32 gdt Exp $
 
 DISTNAME=	mongodb-src-r4.0.6
 PKGNAME=	${DISTNAME:S/src-r//}
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	databases
 MASTER_SITES=	http://fastdl.mongodb.org/src/
 
-MAINTAINER=	bartosz.kuzma@gmail.com
+MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	https://www.mongodb.com/
 COMMENT=	NoSQL distributed document-oriented database
 LICENSE=	gnu-agpl-v3 # Client and tools licensed under apache-2.0
