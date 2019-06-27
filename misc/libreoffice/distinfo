@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.80 2019/06/27 13:48:11 ryoon Exp $
+$NetBSD: distinfo,v 1.81 2019/06/27 13:50:49 ryoon Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -212,10 +212,10 @@ SHA1 (libreoffice/xmlsec1-1.2.27.tar.gz) = 11a3329bd6b0b910c5d60d4562e3a15258894
 RMD160 (libreoffice/xmlsec1-1.2.27.tar.gz) = 0d49f995732b6f95f94eb752121a6a32de422c4e
 SHA512 (libreoffice/xmlsec1-1.2.27.tar.gz) = 01f7231d7d7ac8037aecc1f922acc572cbfe0903abf5bd5879d836438c36684e23402b803d20806fff6b1cdc5ad9af114d1341b10b336f71c0bce28b4716f920
 Size (libreoffice/xmlsec1-1.2.27.tar.gz) = 2013651 bytes
-SHA1 (patch-Makefile.in) = 5bb39185b12d57b69c72771a3afc214ac243e694
+SHA1 (patch-Makefile.in) = c16214631f0e40af4b366c790c7b84e0e11a892e
 SHA1 (patch-autogen.sh) = eedd0091745cf6a32ee9b33227502baaa661270e
-SHA1 (patch-bridges_source_cpp__uno_gcc3__linux__intel_share.hxx) = c1f5a013b88e847dd9ecfb4e4abe78b1b5965a0b
-SHA1 (patch-bridges_source_cpp__uno_gcc3__linux__x86-64_share.hxx) = f7eaf2748c66a27a772fdbdb370a4c6b3bdafca4
+SHA1 (patch-bridges_source_cpp__uno_gcc3__linux__intel_share.hxx) = 2eed9efc4a145687f409ba87806147dac2210c68
+SHA1 (patch-bridges_source_cpp__uno_gcc3__linux__x86-64_share.hxx) = e664faa4044feaafe8214fdf42f7d008b9aa29fc
 SHA1 (patch-configure.ac) = c9b10c86e809961f9312d1dbd925c6bc77042f56
 SHA1 (patch-desktop_scripts_soffice.sh) = e6342e08781ca8dac72a1f28407517d79155577c
 SHA1 (patch-desktop_unx_source_pagein.c) = 0aa2b289df6d0fa524bf057d532aa5f9ceb6dde5
