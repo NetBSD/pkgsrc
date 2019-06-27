@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.8 2018/08/05 20:42:10 nia Exp $
+$NetBSD: patch-ad,v 1.9 2019/06/27 14:19:51 hauke Exp $
 
 --- src/js/jsBSD.cxx.orig	2008-03-11 02:06:21.000000000 +0000
 +++ src/js/jsBSD.cxx
-@@ -49,16 +49,14 @@
+@@ -49,16 +49,16 @@
  #include <sys/ioctl.h>
  #if defined(__FreeBSD__)
  # include <sys/joystick.h>
@@ -14,7 +14,9 @@ $NetBSD: patch-ad,v 1.8 2018/08/05 20:42:10 nia Exp $
  #if defined(__NetBSD__)
 -#ifdef HAVE_USBHID_H
 +#define HAVE_USBHID_H 1
-+#include <dev/hid/hid.h>
++#  if __NetBSD_Version__ > 899000900
++#    include <dev/hid/hid.h>
++#  endif
  #include <usbhid.h>
 -#else
 -#include <usb.h>
@@ -22,7 +24,7 @@ $NetBSD: patch-ad,v 1.8 2018/08/05 20:42:10 nia Exp $
  #elif defined(__FreeBSD__)
  extern "C" {
  #  if __FreeBSD_version < 500000
-@@ -85,7 +83,9 @@ struct os_specific_s {
+@@ -85,7 +85,9 @@ struct os_specific_s {
    int              fd;
    int              is_analog;
    // The following structure members are specific to analog joysticks
@@ -32,7 +34,7 @@ $NetBSD: patch-ad,v 1.8 2018/08/05 20:42:10 nia Exp $
  #ifdef HAVE_USB_JS
    // The following structure members are specific to USB joysticks
    struct hid_item *hids;
-@@ -437,7 +437,7 @@ void jsJoystick::rawRead ( int *buttons,
+@@ -437,7 +439,7 @@ void jsJoystick::rawRead ( int *buttons,
  
      return ;
    }
@@ -41,7 +43,7 @@ $NetBSD: patch-ad,v 1.8 2018/08/05 20:42:10 nia Exp $
    if ( os->is_analog )
    {
      int status = ::read ( os->fd, &os->ajs, sizeof(os->ajs) );
-@@ -462,6 +462,7 @@ void jsJoystick::rawRead ( int *buttons,
+@@ -462,6 +464,7 @@ void jsJoystick::rawRead ( int *buttons,
  
      return;
    }
