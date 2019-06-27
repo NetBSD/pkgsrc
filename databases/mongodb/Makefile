@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2019/06/27 00:58:54 gdt Exp $
+# $NetBSD: Makefile,v 1.39 2019/06/27 01:02:22 gdt Exp $
 
 DISTNAME=	mongodb-src-r4.0.6
 PKGNAME=	${DISTNAME:S/src-r//}
@@ -34,7 +34,7 @@ SCONS_ARGS+=	--release
 SCONS_ARGS+=	--runtime-hardening=off # does not produce executables
 #SCONS_ARGS+=	--use-system-asio
 SCONS_ARGS+=	--use-system-boost
-#SCONS_ARGS+=	--use-system-icu # fails with >57.1
+SCONS_ARGS+=	--use-system-icu
 SCONS_ARGS+=	--use-system-mongo-c
 SCONS_ARGS+=	--use-system-pcre
 SCONS_ARGS+=	--use-system-snappy
@@ -173,7 +173,7 @@ post-install:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../net/libpcap/buildlink3.mk"
-#.include "../../textproc/icu/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/yaml-cpp/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
