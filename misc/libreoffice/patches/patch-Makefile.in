@@ -1,4 +1,6 @@
-$NetBSD: patch-Makefile.in,v 1.3 2017/02/05 02:26:01 ryoon Exp $
+$NetBSD: patch-Makefile.in,v 1.4 2019/06/27 13:50:49 ryoon Exp $
+
+* Enable build without root privilege
 
 --- Makefile.in.orig	2017-01-26 22:22:46.000000000 +0000
 +++ Makefile.in
