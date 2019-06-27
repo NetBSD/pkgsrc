@@ -1,6 +1,7 @@
-$NetBSD: patch-desktop_scripts_soffice.sh,v 1.4 2019/02/19 16:28:03 ryoon Exp $
+$NetBSD: patch-desktop_scripts_soffice.sh,v 1.5 2019/06/27 13:48:11 ryoon Exp $
 
-1. chunk: ?
+1. chunk: Recent Firefox use newer version of NSS database format, cert9.db
+   Use LibreOffice own cert8.db (older format).
 
 other chunks: javaPathHelper is OpenBSD-specific
 https://cgit.freedesktop.org/libreoffice/core/commit/?id=8db53bfd74e48f60e3002b2ae5f7f13c9387725a
