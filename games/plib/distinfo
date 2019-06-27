@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2018/08/05 20:42:10 nia Exp $
+$NetBSD: distinfo,v 1.16 2019/06/27 14:19:51 hauke Exp $
 
 SHA1 (plib-1.8.5.tar.gz) = c2cf7e3e1e58f7b63dae4bb21e4fa82c3e4d4cfc
 RMD160 (plib-1.8.5.tar.gz) = 55019bf3758ec2542804d8e3994f4bed5a188e60
@@ -6,7 +6,7 @@ SHA512 (plib-1.8.5.tar.gz) = 17154cc77243fe576c2bcbcb0285b98aef1a0634658f5473e95
 Size (plib-1.8.5.tar.gz) = 779133 bytes
 SHA1 (patch-aa) = 6a9e3badb63de5b9b100805fa7151ce5db8ced69
 SHA1 (patch-ab) = 1bb0950b08427f8bcef84ee2da1cfd231ca60385
-SHA1 (patch-ad) = e158c9d0eed70146a8ee979eb3488c365455259a
+SHA1 (patch-ad) = 97626674d127eeb7f7f6f0390a441dbf6419de0b
 SHA1 (patch-ae) = fe166e1b3b5d150d3d83bad49e2576d9ebaa0fb7
 SHA1 (patch-af) = ea774a54a3cff4d43abae164bbcae745d4642aea
 SHA1 (patch-ag) = d715adee05f8e6973a5883f74573cc39bfd8d72e
