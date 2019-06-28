@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2019/06/28 12:04:59 gdt Exp $
+# $NetBSD: Makefile,v 1.42 2019/06/28 12:57:28 adam Exp $
 
 DISTNAME=	mongodb-src-r4.0.6
 PKGNAME=	${DISTNAME:S/src-r//}
@@ -24,7 +24,6 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 NO_CONFIGURE=	yes
 # https://github.com/mongodb/mongo/blob/master/docs/building.md
 USE_LANGUAGES=	c99 c++17
-# USE_LANGUAGES+=	c11
 GCC_REQD+=	8
 
 USE_TOOLS+=	pkg-config
