@@ -239,7 +239,7 @@ case "$method" in
     if [ ${result} = ${SMF_EXIT_OK} ]; then
 	echo "$I: Executing: ${server} ${cmdopts}"
 	# Execute named(1M) with relevant command line options.
-	ppriv -s A-all -s A+basic,net_privaddr,file_dac_read,file_dac_search,sys_resource,proc_chroot,proc_setid -e ${server} ${cmdopts}
+	${server} ${cmdopts}
 	result=$?
     fi
     ;;
