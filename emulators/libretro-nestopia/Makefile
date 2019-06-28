@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/10/02 21:09:30 nia Exp $
+# $NetBSD: Makefile,v 1.5 2019/06/28 19:14:08 nia Exp $
 
 DISTNAME=	libretro-nestopia-1.49
 CATEGORIES=	emulators
@@ -17,7 +17,7 @@ USE_LANGUAGES=	c c++03
 USE_TOOLS+=	gmake
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
-CFLAGS+=	-DPREFIX=\"${PREFIX}\"
+CXXFLAGS+=	-DPREFIX=\"${PREFIX}\"
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-version-script=link.T
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-no-undefined
