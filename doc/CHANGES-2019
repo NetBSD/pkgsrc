@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2681 2019/06/28 16:31:51 gdt Exp $
+$NetBSD: CHANGES-2019,v 1.2682 2019/06/28 17:01:42 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4443,3 +4443,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/glib2 to 2.60.4nb4 [prlw1 2019-06-26]
 	Updated games/wtf to 20190623 [sevan 2019-06-26]
 	Added databases/mongodb3 version 3.4.4nb6 [gdt 2019-06-28]
+	Updated net/bind911 to 9.11.8nb1 [jperkin 2019-06-28]
