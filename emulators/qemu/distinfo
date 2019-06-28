@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.148 2019/04/27 18:00:46 kamil Exp $
+$NetBSD: distinfo,v 1.149 2019/06/28 17:11:14 jperkin Exp $
 
 SHA1 (qemu-4.0.0.tar.xz) = 74cfb8f4724d9651fdd354560f2d291887b32cad
 RMD160 (qemu-4.0.0.tar.xz) = 58135f00c391823edce780d55a816f29dd73c34b
@@ -14,7 +14,7 @@ SHA1 (patch-hw_display_omap__dss.c) = 6b13242f28e32346bc70548c216c578d98fd3420
 SHA1 (patch-hw_net_etraxfs__eth.c) = e5dd1661d60dbcd27b332403e0843500ba9544bc
 SHA1 (patch-hw_net_xilinx__axienet.c) = ebcd2676d64ce6f31e4a8c976d4fdf530ad5e8b7
 SHA1 (patch-hw_tpm_tpm__ioctl.h) = f99aa2912a2229b4ae52d3a0a8f2a7b15756c9be
-SHA1 (patch-hw_usb_dev-mtp.c) = c48e11fbe3a017f0e9f8dbd7bf46898b758ab79c
+SHA1 (patch-hw_usb_dev-mtp.c) = 0f9034fb3904e5d5e3b98d24b94e054181687d95
 SHA1 (patch-include_sysemu_kvm.h) = f99e8ad021f6c8e89e3ca52538bd9b0656e6f619
 SHA1 (patch-roms_u-boot_tools_imx8m__image.sh) = e4c452062f40569e33aa93eec4a65bd3af2e74fc
 SHA1 (patch-target_hppa_insns.decode) = 111ad3d5db1c46fd42bb033ac09db377303d352e
