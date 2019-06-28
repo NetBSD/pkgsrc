@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2685 2019/06/28 19:42:12 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.2686 2019/06/28 20:27:10 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4447,3 +4447,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/bind912 to 9.12.4pl2nb1 [jperkin 2019-06-28]
 	Updated net/bind914 to 9.14.3nb1 [jperkin 2019-06-28]
 	Updated devel/glib2 to 2.60.4nb5 [schmonz 2019-06-28]
+	Updated biology/ncbi-blast+ to 2.8.1nb3 [bacon 2019-06-28]
