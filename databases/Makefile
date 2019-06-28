@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.581 2019/05/31 14:42:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.582 2019/06/28 16:31:31 gdt Exp $
 
 COMMENT=	Databases
 
@@ -95,6 +95,7 @@ SUBDIR+=	metakit-lib
 SUBDIR+=	mongo-c-driver
 SUBDIR+=	mongo-tools
 SUBDIR+=	mongodb
+SUBDIR+=	mongodb3
 SUBDIR+=	myodbc
 SUBDIR+=	mysql-cluster
 SUBDIR+=	mysql-connector-c++
