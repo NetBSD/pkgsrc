@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2680 2019/06/26 13:23:43 sevan Exp $
+$NetBSD: CHANGES-2019,v 1.2681 2019/06/28 16:31:51 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4442,3 +4442,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/dhcpcd to 7.2.3 [roy 2019-06-26]
 	Updated devel/glib2 to 2.60.4nb4 [prlw1 2019-06-26]
 	Updated games/wtf to 20190623 [sevan 2019-06-26]
+	Added databases/mongodb3 version 3.4.4nb6 [gdt 2019-06-28]
