@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2019/06/22 13:27:12 jmcneill Exp $
+$NetBSD: distinfo,v 1.32 2019/06/28 17:13:50 jperkin Exp $
 
 SHA1 (samba-4.10.5.tar.gz) = 9444a1a0cafd2c734eab39d76908c5344421df99
 RMD160 (samba-4.10.5.tar.gz) = c6ebda08f6dba92446383b18d0f3cce3a2199312
@@ -14,6 +14,7 @@ SHA1 (patch-dynconfig_wscript) = 1858e5fcca913f21aa3e7868d9760b9c40c9f5c4
 SHA1 (patch-lib_param_loadparm.h) = 0216b69d33d1e17260a446e11bee764116c52b18
 SHA1 (patch-lib_replace_wscript) = 2a754e7310850b376d5881b82a8467041284fce9
 SHA1 (patch-lib_tevent_wscript) = fbbe2024096b57d651d90064f53489a974db9d7a
+SHA1 (patch-libcli_dns_wscript__build) = 40e6f864e2fb1b6abb198f1a51bb2c95bc8c6fb2
 SHA1 (patch-nsswitch_winbind__nss__netbsd.c) = 71d8acd0aa4c297d75555fba650461c778495caa
 SHA1 (patch-nsswitch_wscript__build) = e8a6251e031ffa13d6347fade8891f7afd65d3eb
 SHA1 (patch-source4_dsdb_samdb_ldb__modules_wscript__build__server) = c322cf56995192039fa22548d6d6e50641c4c796
