@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.40 2019/06/28 00:46:53 gdt Exp $
+# $NetBSD: Makefile,v 1.41 2019/06/28 12:04:59 gdt Exp $
 
 DISTNAME=	mongodb-src-r4.0.6
 PKGNAME=	${DISTNAME:S/src-r//}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	databases
 MASTER_SITES=	http://fastdl.mongodb.org/src/
 
 MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	https://www.mongodb.com/
 COMMENT=	NoSQL distributed document-oriented database
-LICENSE=	gnu-agpl-v3 # Client and tools licensed under apache-2.0
+LICENSE=	server-side-public-license # Client and tools licensed under apache-2.0
 
 # MongoDB 3.4 onwards explicitly does not support 32-bit x86 platforms
 NOT_FOR_PLATFORM+=	*-*-i386
