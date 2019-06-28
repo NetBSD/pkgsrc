@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2019/06/28 16:30:56 gdt Exp $
+bin/mongo
+bin/mongod
+bin/mongoperf
+bin/mongos
+man/man1/bsondump.1
+man/man1/mongo.1
+man/man1/mongod.1
+man/man1/mongodump.1
+man/man1/mongoexport.1
+man/man1/mongofiles.1
+man/man1/mongoimport.1
+man/man1/mongooplog.1
+man/man1/mongoperf.1
+man/man1/mongorestore.1
+man/man1/mongos.1
+man/man1/mongosniff.1
+man/man1/mongostat.1
+man/man1/mongotop.1
+share/doc/mongodb/README
+share/examples/mongodb/mongod.conf
