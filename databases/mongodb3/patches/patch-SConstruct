@@ -1,0 +1,200 @@
+$NetBSD: patch-SConstruct,v 1.1 2019/06/28 16:30:56 gdt Exp $
+
+Add support for NetBSD/Dragonfly, fix locations.
+Respect LDFLAGS and CXXFLAGS
+
+--- SConstruct.orig	2017-04-20 21:43:42.000000000 +0000
++++ SConstruct
+@@ -30,7 +30,7 @@ EnsureSConsVersion( 2, 3, 0 )
+ def print_build_failures():
+     from SCons.Script import GetBuildFailures
+     for bf in GetBuildFailures():
+-        print "%s failed: %s" % (bf.node, bf.errstr)
++        print("%s failed: %s" % (bf.node, bf.errstr))
+ atexit.register(print_build_failures)
+ 
+ def versiontuple(v):
+@@ -49,8 +49,12 @@ def get_running_os_name():
+     running_os = os.sys.platform
+     if running_os.startswith('linux'):
+         running_os = 'linux'
++    elif running_os.startswith('dragonfly'):
++        running_os = 'dragonfly'
+     elif running_os.startswith('freebsd'):
+         running_os = 'freebsd'
++    elif running_os.startswith('netbsd'):
++        running_os = 'netbsd'
+     elif running_os.startswith('openbsd'):
+         running_os = 'openbsd'
+     elif running_os == 'sunos5':
+@@ -68,7 +72,7 @@ def env_get_os_name_wrapper(self):
+ 
+ def is_os_raw(target_os, os_list_to_check):
+     okay = False
+-    posix_os_list = [ 'linux', 'openbsd', 'freebsd', 'osx', 'solaris' ]
++    posix_os_list = [ 'linux', 'openbsd', 'freebsd', 'osx', 'solaris', 'dragonfly', 'netbsd' ]
+ 
+     for p in os_list_to_check:
+         if p == 'posix' and target_os in posix_os_list:
+@@ -511,7 +515,7 @@ try:
+         version_data = json.load(version_fp)
+ 
+     if 'version' not in version_data:
+-        print "version.json does not contain a version string"
++        print("version.json does not contain a version string")
+         Exit(1)
+     if 'githash' not in version_data:
+         version_data['githash'] = utils.getGitVersion()
+@@ -519,7 +523,7 @@ try:
+ except IOError as e:
+     # If the file error wasn't because the file is missing, error out
+     if e.errno != errno.ENOENT:
+-        print "Error opening version.json: {0}".format(e.strerror)
++        print("Error opening version.json: {0}".format(e.strerror))
+         Exit(1)
+ 
+     version_data = {
+@@ -528,7 +532,7 @@ except IOError as e:
+     }
+ 
+ except ValueError as e:
+-    print "Error decoding version.json: {0}".format(e)
++    print("Error decoding version.json: {0}".format(e))
+     Exit(1)
+ 
+ # Setup the command-line variables
+@@ -598,7 +602,7 @@ def variable_distsrc_converter(val):
+ 
+ variables_files = variable_shlex_converter(get_option('variables-files'))
+ for file in variables_files:
+-    print "Using variable customization file %s" % file
++    print("Using variable customization file %s" % file)
+ 
+ env_vars = Variables(
+     files=variables_files,
+@@ -892,6 +896,7 @@ envDict = dict(BUILD_ROOT=buildDir,
+                INSTALL_DIR=installDir,
+                CONFIG_HEADER_DEFINES={},
+                LIBDEPS_TAG_EXPANSIONS=[],
++               ENV = os.environ,
+                )
+ 
+ env = Environment(variables=env_vars, **envDict)
+@@ -901,12 +906,12 @@ env.AddMethod(env_os_is_wrapper, 'Target
+ env.AddMethod(env_get_os_name_wrapper, 'GetTargetOSName')
+ 
+ def fatal_error(env, msg, *args):
+-    print msg.format(*args)
++    print(msg.format(*args))
+     Exit(1)
+ 
+ def conf_error(env, msg, *args):
+-    print msg.format(*args)
+-    print "See {0} for details".format(env['CONFIGURELOG'].abspath)
++    print(msg.format(*args))
++    print("See {0} for details".format(env['CONFIGURELOG'].abspath))
+ 
+     Exit(1)
+ 
+@@ -926,7 +931,7 @@ else:
+ env.AddMethod(lambda env: env['VERBOSE'], 'Verbose')
+ 
+ if has_option('variables-help'):
+-    print env_vars.GenerateHelpText(env)
++    print(env_vars.GenerateHelpText(env))
+     Exit(0)
+ 
+ unknown_vars = env_vars.UnknownVariables()
+@@ -1029,7 +1034,9 @@ def CheckForProcessor(context, which_arc
+ os_macros = {
+     "windows": "_WIN32",
+     "solaris": "__sun",
++    "dragonfly": "__DragonFly__",
+     "freebsd": "__FreeBSD__",
++    "netbsd": "__NetBSD__",
+     "openbsd": "__OpenBSD__",
+     "osx": "__APPLE__",
+     "linux": "__linux__",
+@@ -1124,7 +1131,7 @@ else:
+     env['TARGET_ARCH'] = detected_processor
+ 
+ if env['TARGET_OS'] not in os_macros:
+-    print "No special config for [{0}] which probably means it won't work".format(env['TARGET_OS'])
++    print("No special config for [{0}] which probably means it won't work".format(env['TARGET_OS']))
+ elif not detectConf.CheckForOS(env['TARGET_OS']):
+     env.ConfError("TARGET_OS ({0}) is not supported by compiler", env['TARGET_OS'])
+ 
+@@ -1360,7 +1367,7 @@ elif env['_LIBDEPS'] == '$_LIBDEPS_LIBS'
+ 
+ libdeps.setup_environment(env, emitting_shared=(link_model.startswith("dynamic")))
+ 
+-if env.TargetOSIs('linux', 'freebsd', 'openbsd'):
++if env.TargetOSIs('linux', 'dragonfly', 'freebsd', 'netbsd', 'openbsd'):
+     env['LINK_LIBGROUP_START'] = '-Wl,--start-group'
+     env['LINK_LIBGROUP_END'] = '-Wl,--end-group'
+     env['LINK_WHOLE_ARCHIVE_START'] = '-Wl,--whole-archive'
+@@ -1388,10 +1395,24 @@ if env.TargetOSIs('linux'):
+ elif env.TargetOSIs('solaris'):
+      env.Append( LIBS=["socket","resolv","lgrp"] )
+ 
++elif os.sys.platform.startswith( "dragonfly" ):
++    env.Append( CPPPATH=[ "@PREFIX@/include" ] )
++    env.Append( LIBPATH=[ "@PREFIX@/lib" ] )
++    env.Append( LIBS=[ "m" ] )
++    env.Append( LIBS=[ "kvm" ] )
++    env.Append( CPPDEFINES=[ "__dragonfly__" ] )
++
+ elif env.TargetOSIs('freebsd'):
+     env.Append( LIBS=[ "kvm" ] )
+     env.Append( CCFLAGS=[ "-fno-omit-frame-pointer" ] )
+ 
++elif os.sys.platform.startswith( "netbsd" ):
++    env.Append( CPPPATH=[ "@PREFIX@/include" ] )
++    env.Append( LIBPATH=[ "@PREFIX@/lib" ] )
++    env.Append( LIBS=[ "m" ] )
++    env.Append( LIBS=[ "kvm" ] )
++    env.Append( CPPDEFINES=[ "__netbsd__" ] )
++
+ elif env.TargetOSIs('openbsd'):
+     env.Append( LIBS=[ "kvm" ] )
+ 
+@@ -1570,6 +1591,9 @@ if env.TargetOSIs('posix'):
+ 
+     env.Append( CXXFLAGS=["-Woverloaded-virtual"] )
+     env.Append( LINKFLAGS=["-pthread"] )
++    env.Append( CPPDEFINES=["XP_UNIX=1"] )
++    env.Append( CXXFLAGS=os.environ['CXXFLAGS'] )
++    env.Append( LINKFLAGS=os.environ['LDFLAGS'] )
+ 
+     # SERVER-9761: Ensure early detection of missing symbols in dependent libraries at program
+     # startup.
+@@ -2158,9 +2182,9 @@ def doConfigure(myenv):
+     if usingLibStdCxx:
+         def CheckModernLibStdCxx(context):
+             test_body = """
+-            #if !__has_include(<experimental/filesystem>)
+-            #error "libstdc++ from GCC 5.3.0 or newer is required"
+-            #endif
++            //#if !__has_include(<experimental/filesystem>)
++            //#error "libstdc++ from GCC 5.3.0 or newer is required"
++            //#endif
+             """
+ 
+             context.Message('Checking for libstdc++ 5.3.0 or better... ')
+@@ -2764,6 +2788,7 @@ def doConfigure(myenv):
+             # permit more than four parameters.
+             "BOOST_THREAD_DONT_PROVIDE_VARIADIC_THREAD",
+             "BOOST_SYSTEM_NO_DEPRECATED",
++            "BOOST_OPTIONAL_USE_SINGLETON_DEFINITION_OF_NONE",
+         ]
+     )
+ 
+@@ -2830,7 +2855,7 @@ def doConfigure(myenv):
+         myenv.ConfError("Couldn't find SASL header/libraries")
+ 
+     # requires ports devel/libexecinfo to be installed
+-    if env.TargetOSIs('freebsd', 'openbsd'):
++    if env.TargetOSIs('dragonfly', 'freebsd', 'netbsd', 'openbsd'):
+         if not conf.CheckLib("execinfo"):
+             myenv.ConfError("Cannot find libexecinfo, please install devel/libexecinfo.")
+ 
