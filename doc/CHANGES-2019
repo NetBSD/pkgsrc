@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2683 2019/06/28 17:01:52 jperkin Exp $
+$NetBSD: CHANGES-2019,v 1.2684 2019/06/28 17:02:04 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4445,3 +4445,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added databases/mongodb3 version 3.4.4nb6 [gdt 2019-06-28]
 	Updated net/bind911 to 9.11.8nb1 [jperkin 2019-06-28]
 	Updated net/bind912 to 9.12.4pl2nb1 [jperkin 2019-06-28]
+	Updated net/bind914 to 9.14.3nb1 [jperkin 2019-06-28]
