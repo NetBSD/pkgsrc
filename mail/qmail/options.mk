@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.64 2019/06/19 17:46:39 schmonz Exp $
+# $NetBSD: options.mk,v 1.65 2019/06/28 19:18:25 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=		eai inet6 pam syncdir tai-system-clock tls
@@ -14,7 +14,7 @@ QMAILPATCHES+=			eai:${EAI_PATCH}
 EAI_PATCH=			netqmail-1.06-tls-20160918-onlyremote-20181107-spp-20181109-smtputf8-20181109.patch
 PATCHFILES+=			${EAI_PATCH}
 SITES.${EAI_PATCH}=		https://schmonz.com/qmail/eai/
-CFLAGS+=			-DEHLO=1
+CPPFLAGS+=			-DEHLO=1
 .endif
 
 .if !empty(PKG_OPTIONS:Mpam)
@@ -96,7 +96,7 @@ PLIST_VARS+=			tls
 .if !empty(PKG_OPTIONS:Mtls)
 PLIST.tls=			yes
 .  include "../../security/openssl/buildlink3.mk"
-CFLAGS+=			-DTLS=20190408	# NOTE: match what's _in_ the patch
+CPPFLAGS+=			-DTLS=20190408	# NOTE: match what's _in_ the patch
 USE_TOOLS+=			openssl
 SUBST_CLASSES+=			tmprsadh
 SUBST_STAGE.tmprsadh=		do-configure
