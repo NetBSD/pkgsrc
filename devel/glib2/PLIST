@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.104 2019/06/11 09:15:54 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.105 2019/06/28 19:42:05 schmonz Exp $
 ${PLIST.nococoa}bin/gapplication
 bin/gdbus
 bin/gio
@@ -10,7 +10,7 @@ bin/glib-gettextize
 bin/gobject-query
 bin/gresource
 bin/gsettings
-${PLIST.nococoa}include/gio-unix-2.0/gio/gdesktopappinfo.h
+include/gio-unix-2.0/gio/gdesktopappinfo.h
 include/gio-unix-2.0/gio/gfiledescriptorbased.h
 include/gio-unix-2.0/gio/gunixconnection.h
 include/gio-unix-2.0/gio/gunixcredentialsmessage.h
