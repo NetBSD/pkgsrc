@@ -1,0 +1,15 @@
+$NetBSD: patch-src_mongo_installer_msi_SConscript,v 1.1 2019/06/28 16:30:56 gdt Exp $
+
+--- src/mongo/installer/msi/SConscript.orig	2017-04-20 21:43:42.000000000 +0000
++++ src/mongo/installer/msi/SConscript
+@@ -69,8 +69,8 @@ else:
+       upgrade_code = '9295A251-1B1F-45FB-96FF-35B57E490613'
+ 
+ if 'msi' in BUILD_TARGETS and msi_edition == 'SSL' and msi_flavor != '2008R2Plus':
+-  print "Building the MongoDB SSL MSI is only supported on Windows 2008 R2+ or Windows 7+ platforms."
+-  print "You must add --win-version-min=ws08r2 to your scons flags"
++  print("Building the MongoDB SSL MSI is only supported on Windows 2008 R2+ or Windows 7+ platforms.")
++  print("You must add --win-version-min=ws08r2 to your scons flags")
+   exit(1)
+ 
+ if msi_platform == 'x64':
