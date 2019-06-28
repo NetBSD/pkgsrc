@@ -1,11 +1,20 @@
-$NetBSD: patch-gio_meson.build,v 1.4 2019/06/16 15:28:12 leot Exp $
+$NetBSD: patch-gio_meson.build,v 1.5 2019/06/28 19:42:05 schmonz Exp $
 
 Don't build tests, as have strong dependency on libdl.
 Disable inotify on SunOS.
+Install gio/gdesktopappinfo.h on OS X.
 
 --- gio/meson.build.orig	2019-06-10 17:47:20.000000000 +0000
 +++ gio/meson.build
-@@ -758,7 +758,7 @@ gioenumtypes_c = custom_target('gioenumt
+@@ -421,6 +421,7 @@ if host_system != 'windows'
+       unix_sources += files('gcocoanotificationbackend.m')
+     endif
+     application_headers += files('gosxappinfo.h')
++    gio_unix_include_headers += files('gdesktopappinfo.h')
+   else
+     contenttype_sources += files('gcontenttype.c')
+     appinfo_sources += files('gdesktopappinfo.c')
+@@ -758,7 +759,7 @@ gioenumtypes_c = custom_target('gioenumt
  gioenumtypes_dep = declare_dependency(sources : [gioenumtypes_h, glib_enumtypes_h])
  
  # inotify
