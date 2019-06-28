@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2019/01/05 06:18:11 schmonz Exp $
+# $NetBSD: Makefile,v 1.69 2019/06/28 19:11:11 schmonz Exp $
 
 DISTNAME=		djbdns-1.05
 PKGREVISION=		14
@@ -25,7 +25,7 @@ SUBST_SED.etc=		-e 's|/etc/dnsrewrite|${PKG_SYSCONFBASE}/dnsrewrite|g'
 SUBST_MESSAGE.etc=	Fixing prefix.
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
-CFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
+CPPFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 MAKE_DIRS+=		${PKG_SYSCONFDIR}
 CONF_FILES+=		${EGDIR}/dnsroots.global ${PKG_SYSCONFDIR}/dnsroots.global
 BUILD_DEFS+=		PKG_SYSCONFBASE
