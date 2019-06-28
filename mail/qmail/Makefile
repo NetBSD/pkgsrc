@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2019/04/10 22:24:57 schmonz Exp $
+# $NetBSD: Makefile,v 1.111 2019/06/28 19:18:25 schmonz Exp $
 #
 
 DISTNAME=		netqmail-1.06
@@ -39,7 +39,7 @@ DJB_BUILD_TARGETS=	man
 INSTALL_TARGET=		setup
 DJB_RESTRICTED=		no
 
-CFLAGS.Darwin+=		-DBIND_8_COMPAT=1
+CPPFLAGS.Darwin+=	-DBIND_8_COMPAT=1
 
 PKG_SYSCONFSUBDIR=	qmail
 OWN_DIRS+=		${PKG_SYSCONFDIR} ${PKG_SYSCONFDIR}/alias
