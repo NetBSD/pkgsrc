@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2686 2019/06/28 20:27:10 bacon Exp $
+$NetBSD: CHANGES-2019,v 1.2687 2019/06/29 09:29:54 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4448,3 +4448,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/bind914 to 9.14.3nb1 [jperkin 2019-06-28]
 	Updated devel/glib2 to 2.60.4nb5 [schmonz 2019-06-28]
 	Updated biology/ncbi-blast+ to 2.8.1nb3 [bacon 2019-06-28]
+	Updated chat/irssi to 1.2.1 [nia 2019-06-29]
