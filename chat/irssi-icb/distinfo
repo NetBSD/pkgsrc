@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.36 2019/02/12 04:44:15 maya Exp $
+$NetBSD: distinfo,v 1.37 2019/06/29 09:29:43 nia Exp $
 
-SHA1 (irssi-1.2.0.tar.gz) = a5895aa550d3f5bdb5913bcbcd74d4f028b8f8a4
-RMD160 (irssi-1.2.0.tar.gz) = e546439948f15da6d10f215e1a3b0705e3306a16
-SHA512 (irssi-1.2.0.tar.gz) = a94f09606a913423df346a6e7ab5b74dc929e2c55a1ec10c0949ec1fd68a9fce3d7b8019345f2bb257c438d036c89bac8c262a81f094915739801d9ff769f8e0
-Size (irssi-1.2.0.tar.gz) = 1840945 bytes
+SHA1 (irssi-1.2.1.tar.gz) = 91b5d89615e640723b877455b69d5553efa0fa6f
+RMD160 (irssi-1.2.1.tar.gz) = 6ca0b1196bfb3fd083211e2e7f009cb0a47e8d19
+SHA512 (irssi-1.2.1.tar.gz) = ef7672137b4ef61744c0f3d9d701a439c4a8adb33fbb4f00c999d9d5c38a5fc28e9452da0a5bc80b53cc3bc13d81a00932864dc83d20522e4e605dde4b1d83a7
+Size (irssi-1.2.1.tar.gz) = 1843164 bytes
 SHA1 (irssi-icb-0.15.tar.gz) = c5a739960eb98e6686a94f6d4662cfab5a95d447
 RMD160 (irssi-icb-0.15.tar.gz) = b947a341e1fc2f6d42bee3cb7b738bfdbb0a031d
 SHA512 (irssi-icb-0.15.tar.gz) = 00af04d14c2c6b65eaf93f9859e6f9f51be4bc8b270c602f4f3b2cc722b148f35c29c7efb12432b063dd41095cf823f2ad329515b0298d0c541742199f3c5fa5
