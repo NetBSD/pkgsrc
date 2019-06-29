@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2688 2019/06/29 13:45:00 fox Exp $
+$NetBSD: CHANGES-2019,v 1.2689 2019/06/29 17:47:05 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4450,3 +4450,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated biology/ncbi-blast+ to 2.8.1nb3 [bacon 2019-06-28]
 	Updated chat/irssi to 1.2.1 [nia 2019-06-29]
 	Updated www/cliqz to 1.27.4 [fox 2019-06-29]
+	Updated textproc/link-grammar to 5.6.2 [gutteridge 2019-06-29]
