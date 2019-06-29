@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2019/06/22 09:21:46 fox Exp $
+# $NetBSD: Makefile,v 1.14 2019/06/29 13:42:18 fox Exp $
 
-DISTNAME=	cliqz-1.27.3
+DISTNAME=	cliqz-1.27.4
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cliqz-oss/}
 GITHUB_PROJECT=	browser-f
@@ -15,7 +15,7 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 CLIQZ_CHANNEL=		release
 # If the PKGVERSION_NOREV is updated, make sure to update the last build id from
 # ftp -Vo - https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${PKGVERSION_NOREV}/lastbuildid
-CLIQZ_LAST_BUILD_ID=	20190619154110
+CLIQZ_LAST_BUILD_ID=	20190626103837
 CLIQZ_PLUGIN_SUFX=	@cliqz.com.xpi
 
 SITES.adult-domains.bin= \
