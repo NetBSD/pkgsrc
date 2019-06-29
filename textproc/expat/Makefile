@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2018/08/20 05:24:49 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2019/06/29 22:36:04 wiz Exp $
 
-DISTNAME=	expat-2.2.6
+DISTNAME=	expat-2.2.7
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=expat/}
 EXTRACT_SUFX=	.tar.bz2
