@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2689 2019/06/29 17:47:05 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.2690 2019/06/29 18:01:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4451,3 +4451,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated chat/irssi to 1.2.1 [nia 2019-06-29]
 	Updated www/cliqz to 1.27.4 [fox 2019-06-29]
 	Updated textproc/link-grammar to 5.6.2 [gutteridge 2019-06-29]
+	Updated sysutils/py-psutil to 5.6.3nb1 [wiz 2019-06-29]
