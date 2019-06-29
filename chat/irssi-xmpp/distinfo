@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.18 2019/02/12 04:44:15 maya Exp $
+$NetBSD: distinfo,v 1.19 2019/06/29 09:29:43 nia Exp $
 
-SHA1 (irssi-1.2.0.tar.gz) = a5895aa550d3f5bdb5913bcbcd74d4f028b8f8a4
-RMD160 (irssi-1.2.0.tar.gz) = e546439948f15da6d10f215e1a3b0705e3306a16
-SHA512 (irssi-1.2.0.tar.gz) = a94f09606a913423df346a6e7ab5b74dc929e2c55a1ec10c0949ec1fd68a9fce3d7b8019345f2bb257c438d036c89bac8c262a81f094915739801d9ff769f8e0
-Size (irssi-1.2.0.tar.gz) = 1840945 bytes
+SHA1 (irssi-1.2.1.tar.gz) = 91b5d89615e640723b877455b69d5553efa0fa6f
+RMD160 (irssi-1.2.1.tar.gz) = 6ca0b1196bfb3fd083211e2e7f009cb0a47e8d19
+SHA512 (irssi-1.2.1.tar.gz) = ef7672137b4ef61744c0f3d9d701a439c4a8adb33fbb4f00c999d9d5c38a5fc28e9452da0a5bc80b53cc3bc13d81a00932864dc83d20522e4e605dde4b1d83a7
+Size (irssi-1.2.1.tar.gz) = 1843164 bytes
 SHA1 (irssi-xmpp-0.53.tar.gz) = 57d993bbebc30c72b500e2c4b4c4e79c15d8b6f9
 RMD160 (irssi-xmpp-0.53.tar.gz) = ed65af7220834f7fb6701612e81c6a523f730b06
 SHA512 (irssi-xmpp-0.53.tar.gz) = 09969db01b77e95248a080599d480b8271dcbe6d42bc90e5e2bb304a2d1b9695b70090ef0a6b7342bf6e17326e0f7a50c11c85e02e6ed742ec55820ffad655be
