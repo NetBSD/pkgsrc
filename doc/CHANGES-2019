@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2705 2019/06/30 21:50:12 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2706 2019/06/30 21:56:41 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4466,3 +4466,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added games/sauerbraten version 2013_04_04 [nia 2019-06-30]
 	Added games/assaultcube version 1.2.0.2 [nia 2019-06-30]
 	Added games/7kaa version 2.15.2 [nia 2019-06-30]
+	Added games/7kaa-music version 2.15 [nia 2019-06-30]
