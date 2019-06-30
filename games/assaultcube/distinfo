@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2019/06/30 21:44:30 nia Exp $
+
+SHA1 (AssaultCube_v1.2.0.2.tar.bz2) = 16b5239c1e2129ba980aee2b96ee52c6128e5821
+RMD160 (AssaultCube_v1.2.0.2.tar.bz2) = 861c5d59e8313b7dd8548605f08d6829dca76326
+SHA512 (AssaultCube_v1.2.0.2.tar.bz2) = e2a0d3380db6d2ac2773ea90703fd572504729b9214a6c105f39aefa4c06ff48720634c6601efdad8b9b3b22dec9bc3a9ea7e094839042bc3ff5cfdd88eac976
+Size (AssaultCube_v1.2.0.2.tar.bz2) = 48181347 bytes
+SHA1 (patch-source_src_Makefile) = 8825c40bf869166708a1f9277b1f77901137771d
