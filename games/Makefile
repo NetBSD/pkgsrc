@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.431 2019/06/30 21:44:30 nia Exp $
+# $NetBSD: Makefile,v 1.432 2019/06/30 21:49:59 nia Exp $
 #
 
 COMMENT=	Games
@@ -6,6 +6,7 @@ COMMENT=	Games
 SUBDIR+=	0verkill
 SUBDIR+=	2048-cli
 SUBDIR+=	4stAttack
+SUBDIR+=	7kaa
 SUBDIR+=	AitDoB
 SUBDIR+=	InterLOGIC
 SUBDIR+=	KoboDeluxe
