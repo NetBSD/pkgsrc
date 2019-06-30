@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/08/22 09:47:51 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/06/30 20:17:42 nia Exp $
 
 DISTNAME=	Plack-Middleware-Test-StashWarnings-0.08
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Plack/}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Plack/
+HOMEPAGE=	https://metacpan.org/release/Plack
 COMMENT=	TODO: Short description of the package
 LICENSE=	${PERL5_LICENSE}
 

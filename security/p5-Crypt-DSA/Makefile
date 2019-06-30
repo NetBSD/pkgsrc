@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2018/08/22 09:46:21 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2019/06/30 20:16:38 nia Exp $
 #
 
 DISTNAME=		Crypt-DSA-1.17
@@ -8,7 +8,7 @@ CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/Crypt-DSA/
+HOMEPAGE=		https://metacpan.org/release/Crypt-DSA
 COMMENT=		Perl5 module for the DSA public key algorithm
 LICENSE=		${PERL5_LICENSE}
 

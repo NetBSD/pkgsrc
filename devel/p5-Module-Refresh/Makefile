@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/08/22 09:44:18 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/06/30 20:15:21 nia Exp $
 #
 
 DISTNAME=	Module-Refresh-0.17
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Module/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Module-Refresh/
+HOMEPAGE=	https://metacpan.org/release/Module-Refresh
 COMMENT=	Perl5 module providing %INC files refreshing when updated on disk
 LICENSE=	${PERL5_LICENSE}
 

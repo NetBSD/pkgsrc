@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/08/22 09:44:11 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2019/06/30 20:15:13 nia Exp $
 #
 
 DISTNAME=		Internals-1.1
@@ -10,7 +10,7 @@ MASTER_SITES=		http://search.cpan.org/CPAN/authors/id/S/ST/STBEY/
 
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/Internals/
+HOMEPAGE=		https://metacpan.org/release/Internals
 COMMENT=		Write-protect Perl variables, manipulate refcounts
 
 USE_LANGUAGES=		c

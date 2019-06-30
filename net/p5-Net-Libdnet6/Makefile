@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/08/22 09:46:01 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2019/06/30 20:16:30 nia Exp $
 
 DISTNAME=	Net-Libdnet6-0.27
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	perl5 net
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Net-Libdnet6/
+HOMEPAGE=	https://metacpan.org/release/Net-Libdnet6
 COMMENT=	Adds IPv6 support to Net::Libdnet
 LICENSE=	artistic
 

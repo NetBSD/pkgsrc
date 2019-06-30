@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/08/22 09:44:40 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/06/30 20:15:46 nia Exp $
 
 DISTNAME=	Sub-Override-0.09
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Sub/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Sub-Override/
+HOMEPAGE=	https://metacpan.org/release/Sub-Override
 COMMENT=	Perl 5 module for easily overriding subroutines
 LICENSE=	${PERL5_LICENSE}
 

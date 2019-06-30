@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/08/22 09:43:49 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/06/30 20:14:48 nia Exp $
 
 DISTNAME=	Data-Hierarchy-0.34
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Data-Hierarchy/
+HOMEPAGE=	https://metacpan.org/release/Data-Hierarchy
 COMMENT=	Perl module for handling data in a hierarchical structure
 LICENSE=	${PERL5_LICENSE}
 

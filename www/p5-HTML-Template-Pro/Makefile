@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/08/22 09:47:40 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/06/30 20:17:32 nia Exp $
 
 DISTNAME=	HTML-Template-Pro-0.9510
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTML/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/HTML-Template-Pro/
+HOMEPAGE=	https://metacpan.org/release/HTML-Template-Pro
 COMMENT=	Perl/XS module to use HTML Templates from CGI scripts
 LICENSE=	${PERL5_LICENSE} OR gnu-lgpl-v2.1
 

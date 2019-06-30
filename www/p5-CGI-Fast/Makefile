@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/04/04 06:51:52 wen Exp $
+# $NetBSD: Makefile,v 1.14 2019/06/30 20:17:21 nia Exp $
 
 DISTNAME=		CGI-Fast-2.15
 PKGNAME=		p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=CGI/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/CGI-Fast/
+HOMEPAGE=		https://metacpan.org/release/CGI-Fast
 COMMENT=		CGI Interface for Fast CGI
 LICENSE=		${PERL5_LICENSE}
 

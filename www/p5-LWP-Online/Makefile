@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/08/22 09:47:47 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/06/30 20:17:38 nia Exp $
 #
 
 DISTNAME=	LWP-Online-1.08
@@ -8,7 +8,7 @@ CATEGORIES=	www net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=LWP/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/LWP-Online/
+HOMEPAGE=	https://metacpan.org/release/LWP-Online
 COMMENT=	Does your process have access to the web
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2018/08/22 09:46:05 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2019/06/30 20:16:34 nia Exp $
 
 DISTNAME=	Test-TCP-2.19
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Test-TCP/
+HOMEPAGE=	https://metacpan.org/release/Test-TCP
 COMMENT=	Perl 5 module to test TCP program
 LICENSE=	${PERL5_LICENSE}
 

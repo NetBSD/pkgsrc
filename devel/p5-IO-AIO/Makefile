@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/04/07 03:57:03 wen Exp $
+# $NetBSD: Makefile,v 1.22 2019/06/30 20:15:08 nia Exp $
 
 DISTNAME=	IO-AIO-4.72
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IO/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/IO-AIO/
+HOMEPAGE=	https://metacpan.org/release/IO-AIO
 COMMENT=	Perl 5 module implementing asynchronous input/output
 LICENSE=	${PERL5_LICENSE}
 

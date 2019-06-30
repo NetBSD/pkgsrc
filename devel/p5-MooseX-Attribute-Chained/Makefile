@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/08/22 09:44:21 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2019/06/30 20:15:23 nia Exp $
 #
 
 DISTNAME=	MooseX-Attribute-Chained-1.0.3
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/MooseX-Attribute-Chained/
+HOMEPAGE=	https://metacpan.org/release/MooseX-Attribute-Chained
 COMMENT=	Attribute that returns the instance to allow for chaining
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2018/08/22 09:43:48 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/06/30 20:14:46 nia Exp $
 
 DISTNAME=	Contextual-Return-0.004014
 # insert dot between each 3 digits
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DC/DCONWAY/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Contextual-Return/
+HOMEPAGE=	https://metacpan.org/release/Contextual-Return
 COMMENT=	Perl 5 module to create context-senstive return values
 LICENSE=	${PERL5_LICENSE}
 

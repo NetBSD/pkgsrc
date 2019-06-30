@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/08/22 09:44:52 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/06/30 20:15:58 nia Exp $
 
 DISTNAME=		TheSchwartz-1.12
 PKGNAME=		p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=		devel perl5
 MASTER_SITES=		http://search.cpan.org/CPAN/authors/id/J/JF/JFEARN/
 
 MAINTAINER=		hiramatu@boreas.dti.ne.jp
-HOMEPAGE=		http://search.cpan.org/dist/TheSchwartz/
+HOMEPAGE=		https://metacpan.org/release/TheSchwartz
 COMMENT=		Reliable job queue system
 LICENSE=		artistic-2.0
 

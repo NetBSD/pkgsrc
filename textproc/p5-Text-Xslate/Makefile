@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2018/08/22 09:47:04 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2019/06/30 20:17:05 nia Exp $
 
 DISTNAME=	Text-Xslate-v3.5.6
 PKGNAME=	p5-${DISTNAME:S/-v/-/}
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SK/SKAJI/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Text-Xslate/
+HOMEPAGE=	https://metacpan.org/release/Text-Xslate
 COMMENT=	Scalable template engine for Perl5
 LICENSE=	${PERL5_LICENSE}
 

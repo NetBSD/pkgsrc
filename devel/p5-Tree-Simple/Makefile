@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2018/08/22 09:44:53 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2019/06/30 20:16:00 nia Exp $
 
 DISTNAME=	Tree-Simple-1.33
 PKGNAME=	p5-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Tree/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Tree-Simple/
+HOMEPAGE=	https://metacpan.org/release/Tree-Simple
 COMMENT=	Simple extension to manipulate tree objects
 LICENSE=	${PERL5_LICENSE}
 

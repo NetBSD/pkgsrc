@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/08/22 09:46:37 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/06/30 20:16:45 nia Exp $
 #
 
 DISTNAME=		Filesys-Df-0.92
@@ -8,7 +8,7 @@ CATEGORIES=		sysutils devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Filesys/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/Filesys-Df/
+HOMEPAGE=		https://metacpan.org/release/Filesys-Df
 COMMENT=		Perl extension for filesystem disk space information
 
 PERL5_MODULE_TYPE=	MakeMaker

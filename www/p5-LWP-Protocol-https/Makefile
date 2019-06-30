@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/08/22 09:47:48 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/06/30 20:17:38 nia Exp $
 
 DISTNAME=	LWP-Protocol-https-6.07
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/O/OA/OALDERS/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/LWP-Protocol-https/
+HOMEPAGE=	https://metacpan.org/release/LWP-Protocol-https
 COMMENT=	Provide https support for LWP::UserAgent
 LICENSE=	${PERL5_LICENSE}
 

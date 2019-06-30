@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/08/22 09:46:02 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/06/30 20:16:32 nia Exp $
 #
 
 DISTNAME=	Net-Stomp-0.57
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
-HOMEPAGE=	http://search.cpan.org/dist/Net-Stomp/
+HOMEPAGE=	https://metacpan.org/release/Net-Stomp
 COMMENT=	Streaming Text Orientated Messaging Protocol Client
 LICENSE=	${PERL5_LICENSE}
 
