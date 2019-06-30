@@ -1,4 +1,4 @@
-# $NetBSD: oss.builtin.mk,v 1.5 2016/09/18 05:25:18 richard Exp $
+# $NetBSD: oss.builtin.mk,v 1.6 2019/06/30 21:28:28 rillig Exp $
 
 BUILTIN_PKG:=	oss
 
@@ -8,7 +8,7 @@ BUILTIN_FIND_HEADERS.H_SOUNDCARD=	soundcard.h		\
 					linux/soundcard.h	\
 					sys/soundcard.h
 
-.include "../../mk/buildlink3/bsd.builtin.mk"
+.include "buildlink3/bsd.builtin.mk"
 
 ###
 ### Determine if there is a built-in implementation of the package and
