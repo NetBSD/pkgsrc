@@ -1,0 +1,18 @@
+$NetBSD: patch-plugins_CMakeLists.txt,v 1.1 2019/06/30 21:01:24 nia Exp $
+
+Support NetBSD.
+
+--- plugins/CMakeLists.txt.orig	2019-06-14 05:28:10.000000000 +0000
++++ plugins/CMakeLists.txt
+@@ -46,6 +46,11 @@ elseif("${CMAKE_SYSTEM_NAME}" MATCHES "F
+ 	add_subdirectory(linux-pulseaudio)
+ 	add_subdirectory(linux-v4l2)
+ 	add_subdirectory(linux-jack)
++elseif("${CMAKE_SYSTEM_NAME}" MATCHES "NetBSD")
++	add_subdirectory(linux-capture)
++	add_subdirectory(linux-pulseaudio)
++	add_subdirectory(linux-jack)
++	add_subdirectory(linux-alsa)
+ endif()
+ 
+ if(WIN32 OR APPLE)
