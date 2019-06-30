@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2710 2019/06/30 22:55:47 sevan Exp $
+$NetBSD: CHANGES-2019,v 1.2711 2019/06/30 23:33:55 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4471,3 +4471,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added graphics/irrlicht version 1.8.4 [nia 2019-06-30]
 	Added games/minetest version 5.0.1 [nia 2019-06-30]
 	Updated security/openssl to 1.0.2s [sevan 2019-06-30]
+	Added games/etlegacy-server version 2.76 [nia 2019-06-30]
