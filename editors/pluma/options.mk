@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2019/04/26 13:13:56 maya Exp $
+# $NetBSD: options.mk,v 1.10 2019/06/30 13:34:40 gutteridge Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pluma
 PKG_SUPPORTED_OPTIONS=	enchant
@@ -35,5 +35,6 @@ CONFIGURE_ARGS+=	--disable-python
 # XXX: Due to the mess described above, and the fact that python is required
 # by the build process but is not python3 compatible, we need to override and
 # use python2.7 explicitly.
+TOOL_DEPENDS+=		python27-[0-9]*:../../lang/python27
 PYTHONBIN=		${PREFIX}/bin/python2.7
 .endif
