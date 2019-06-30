@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2700 2019/06/30 21:00:04 rillig Exp $
+$NetBSD: CHANGES-2019,v 1.2701 2019/06/30 21:01:41 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4461,3 +4461,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated emulators/gxemul to 0.6.1nb4 [skrll 2019-06-30]
 	Added games/redeclipse version 1.6.0 [nia 2019-06-30]
 	Updated pkgtools/pkglint to 5.7.14 [rillig 2019-06-30]
+	Added multimedia/obs-studio version 23.2.1 [nia 2019-06-30]
