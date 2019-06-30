@@ -1,0 +1,9 @@
+#!/bin/sh
+if [ -n "${XDG_CONFIG_HOME}" ]; then
+	DIR="${XDG_CONFIG_HOME}/sauerbraten"
+else
+	DIR="${HOME}/.config/sauerbraten"
+fi
+mkdir -p "${DIR}" && \
+	cd "@PREFIX@/share/sauerbraten" && \
+	exec "@PREFIX@/libexec/${0##*/}" "-q${DIR}" "$@"

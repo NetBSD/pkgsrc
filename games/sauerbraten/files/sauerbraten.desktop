@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Cube 2: Sauerbraten
+Comment=Multiplayer & singleplayer first person shooter
+Icon=sauerbraten
+Exec=sauer_client
+Terminal=false
+Categories=Game;Shooter;
