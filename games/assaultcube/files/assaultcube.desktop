@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=AssaultCube
+Comment=Cube-based FPS with realistic environments
+Icon=assaultcube
+Exec=ac_client
+Terminal=false
+Categories=Game;Shooter;
