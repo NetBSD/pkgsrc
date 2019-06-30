@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2699 2019/06/30 20:53:23 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2700 2019/06/30 21:00:04 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4460,3 +4460,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated news/sfeed to 0.9.12 [leot 2019-06-30]
 	Updated emulators/gxemul to 0.6.1nb4 [skrll 2019-06-30]
 	Added games/redeclipse version 1.6.0 [nia 2019-06-30]
+	Updated pkgtools/pkglint to 5.7.14 [rillig 2019-06-30]
