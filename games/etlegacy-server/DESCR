@@ -1,0 +1,6 @@
+Enemy Territory: Legacy is an open source project that aims to
+create a fully compatible client and server for the popular online
+FPS game Wolfenstein: Enemy Territory.
+
+This package contains only the server and is intended for headless
+systems.
