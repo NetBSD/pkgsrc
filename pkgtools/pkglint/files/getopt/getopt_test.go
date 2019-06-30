@@ -169,13 +169,17 @@ func (s *Suite) Test_Options_Parse__string_list(c *check.C) {
 	c.Check(includes, check.DeepEquals, []string{"included1", "included2", "included3", "included4"})
 	c.Check(excludes, check.DeepEquals, []string{"excluded1", "excluded2", "excluded3", "excluded4"})
 
-	args, err = opts.Parse([]string{"progname", "-i"})
+	_, err = opts.Parse([]string{"progname", "-i"})
 
-	c.Check(err.Error(), check.Equals, "progname: option requires an argument: -i")
+	if c.Check(err, check.NotNil) {
+		c.Check(err.Error(), check.Equals, "progname: option requires an argument: -i")
+	}
 
-	args, err = opts.Parse([]string{"progname", "--include"})
+	_, err = opts.Parse([]string{"progname", "--include"})
 
-	c.Check(err.Error(), check.Equals, "progname: option requires an argument: --include")
+	if c.Check(err, check.NotNil) {
+		c.Check(err.Error(), check.Equals, "progname: option requires an argument: --include")
+	}
 }
 
 func (s *Suite) Test_Options_Parse__long_flags(c *check.C) {
