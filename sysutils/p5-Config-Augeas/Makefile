@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/08/22 09:46:36 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/06/30 20:16:44 nia Exp $
 
 DISTNAME=	Config-Augeas-1.000
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	perl5 sysutils
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/R/RA/RAPHINK/}
 
 MAINTAINER=	bsiegert@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Config-Augeas
+HOMEPAGE=	https://metacpan.org/release/Config-Augeas
 COMMENT=	Edit configuration files through Augeas C library
 LICENSE=	gnu-lgpl-v2.1
 

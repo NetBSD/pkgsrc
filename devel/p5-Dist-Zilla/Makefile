@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2018/08/22 09:43:56 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2019/06/30 20:14:57 nia Exp $
 
 DISTNAME=	Dist-Zilla-6.012
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Dist/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Dist-Zilla/
+HOMEPAGE=	https://metacpan.org/release/Dist-Zilla
 COMMENT=	Perl 5 module distribution builder; installer not included
 LICENSE=	${PERL5_LICENSE}
 

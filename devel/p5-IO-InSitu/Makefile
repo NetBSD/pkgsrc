@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/08/22 09:44:08 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/06/30 20:15:09 nia Exp $
 #
 
 DISTNAME=	IO-InSitu-0.0.2
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IO/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/IO-InSitu/
+HOMEPAGE=	https://metacpan.org/release/IO-InSitu
 COMMENT=	Perl 5 module to do in-situ processing on a file
 
 DEPENDS+=	p5-version-[0-9]*:../../devel/p5-version

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/08/22 09:45:14 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/06/30 20:16:09 nia Exp $
 
 DISTNAME=	Chart-ThreeD-0.01
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	graphics perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Chart/}
 
 MAINTAINER=	he@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Chart-ThreeD/
+HOMEPAGE=	https://metacpan.org/release/Chart-ThreeD
 COMMENT=	Three-Dimentional pie chart plotting
 
 DEPENDS+=	p5-GD>=2.16:../../graphics/p5-GD

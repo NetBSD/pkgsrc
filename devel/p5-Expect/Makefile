@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2018/08/22 09:43:57 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2019/06/30 20:14:58 nia Exp $
 
 DISTNAME=	Expect-1.35
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Expect/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Expect/
+HOMEPAGE=	https://metacpan.org/release/Expect
 COMMENT=	Perl version of the TCL "expect" tool
 LICENSE=	${PERL5_LICENSE}
 

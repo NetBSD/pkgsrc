@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/08/22 09:43:40 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/06/30 20:14:36 nia Exp $
 
 DISTNAME=	Cache-LRU-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Cache/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Cache-LRU/
+HOMEPAGE=	https://metacpan.org/release/Cache-LRU
 COMMENT=	Simple, fast implementation of an in-memory LRU cache
 LICENSE=	${PERL5_LICENSE}
 

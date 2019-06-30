@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/08/22 09:46:49 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/06/30 20:16:49 nia Exp $
 
 DISTNAME=	Encode-Locale-1.05
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Encode/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Encode-Locale/
+HOMEPAGE=	https://metacpan.org/release/Encode-Locale
 COMMENT=	Determine the locale encoding for Encode
 LICENSE=	${PERL5_LICENSE}
 

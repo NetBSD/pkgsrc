@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/08/22 09:47:36 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/06/30 20:17:28 nia Exp $
 
 DISTNAME=	CatalystX-LeakChecker-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CatalystX/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/CatalystX-LeakChecker/
+HOMEPAGE=	https://metacpan.org/release/CatalystX-LeakChecker
 COMMENT=	Debug memory leaks in Catalyst applications
 LICENSE=	${PERL5_LICENSE}
 

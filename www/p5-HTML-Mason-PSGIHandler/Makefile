@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/08/22 09:47:38 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/06/30 20:17:30 nia Exp $
 #
 
 DISTNAME=	HTML-Mason-PSGIHandler-0.53
@@ -8,7 +8,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTML/}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/HTML-Mason-PSGIHandler/
+HOMEPAGE=	https://metacpan.org/release/HTML-Mason-PSGIHandler
 COMMENT=	PSGI handler for HTML::Mason
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/08/22 09:46:25 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2019/06/30 20:16:41 nia Exp $
 
 DISTNAME=		Digest-JHash-0.10
 PKGNAME=		p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Digest/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/Digest-JHash/
+HOMEPAGE=		https://metacpan.org/release/Digest-JHash
 COMMENT=		Perl extension for 32 bit Jenkins Hashing Algorithm
 LICENSE=		artistic-2.0
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2019/01/27 13:00:26 wen Exp $
+# $NetBSD: Makefile,v 1.35 2019/06/30 20:14:31 nia Exp $
 
 DISTNAME=	App-perlbrew-0.86
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=App/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/App-perlbrew/
+HOMEPAGE=	https://metacpan.org/release/App-perlbrew
 COMMENT=	Manage perl installations in your $$HOME
 LICENSE=	mit
 

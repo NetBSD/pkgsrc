@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/08/22 09:43:49 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/06/30 20:14:48 nia Exp $
 
 DISTNAME=	Data-GUID-0.049
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Data-GUID/
+HOMEPAGE=	https://metacpan.org/release/Data-GUID
 COMMENT=	Perl 5 module for globally unique identifiers
 LICENSE=	${PERL5_LICENSE}
 

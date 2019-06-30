@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/08/22 09:46:28 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/06/30 20:16:44 nia Exp $
 
 DISTNAME=	String-Random-0.30
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	perl5 security
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=String/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/String-Random/
+HOMEPAGE=	https://metacpan.org/release/String-Random
 COMMENT=	Perl module to generate random strings based on a pattern
 LICENSE=	${PERL5_LICENSE}
 
