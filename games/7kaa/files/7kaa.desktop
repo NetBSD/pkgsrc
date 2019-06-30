@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Seven Kingdoms: Ancient Adversaries
+GenericName=Strategy Game
+Comment=Fantasy real-time strategy game
+Icon=7kaa
+Exec=7kaa
+Terminal=false
+Categories=Game;StrategyGame;
