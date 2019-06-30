@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/08/22 09:43:14 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/06/30 20:14:21 nia Exp $
 
 DISTNAME=	DBD-PgPP-0.08
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBD/}
 
 MAINTAINER=	ficovh@yahoo.com
-HOMEPAGE=	http://search.cpan.org/dist/DBD-PgPP/
+HOMEPAGE=	https://metacpan.org/release/DBD-PgPP
 COMMENT=	DBD::PgPP - Pure Perl PostgreSQL driver for the DBI
 LICENSE=	${PERL5_LICENSE}
 

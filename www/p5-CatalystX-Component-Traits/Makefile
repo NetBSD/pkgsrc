@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/08/22 09:47:36 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/06/30 20:17:28 nia Exp $
 
 DISTNAME=	CatalystX-Component-Traits-0.19
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CatalystX/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/CatalystX-Component-Traits/
+HOMEPAGE=	https://metacpan.org/release/CatalystX-Component-Traits
 COMMENT=	Automatic Trait Loading and Resolution for Catalyst Components
 LICENSE=	${PERL5_LICENSE}
 

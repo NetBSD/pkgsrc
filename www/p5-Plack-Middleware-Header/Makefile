@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/08/22 09:47:50 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/06/30 20:17:41 nia Exp $
 
 DISTNAME=	Plack-Middleware-Header-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Plack/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Plack-Middleware-Header/
+HOMEPAGE=	https://metacpan.org/release/Plack-Middleware-Header
 COMMENT=	Plack middleware to modify HTTP response headers
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/08/22 09:44:47 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/06/30 20:15:53 nia Exp $
 #
 
 DISTNAME=	Test-Log4perl-0.1001
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Test-Log4perl/
+HOMEPAGE=	https://metacpan.org/release/Test-Log4perl
 COMMENT=	Perl 5 module to test Log::Log4perl
 
 USE_LANGUAGES=	# empty

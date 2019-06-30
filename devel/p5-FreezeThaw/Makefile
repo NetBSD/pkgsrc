@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2018/08/22 09:44:04 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2019/06/30 20:15:05 nia Exp $
 #
 
 DISTNAME=	FreezeThaw-0.5001
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=FreezeThaw/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/FreezeThaw/
+HOMEPAGE=	https://metacpan.org/release/FreezeThaw
 COMMENT=	Converting Perl structures to strings and back
 LICENSE=	${PERL5_LICENSE}
 

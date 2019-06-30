@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2018/08/22 09:47:51 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2019/06/30 20:17:42 nia Exp $
 
 DISTNAME=	Rose-HTML-Objects-0.623
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Rose/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Rose-HTML-Objects/
+HOMEPAGE=	https://metacpan.org/release/Rose-HTML-Objects
 COMMENT=	Object-oriented interfaces for HTML
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/08/22 09:43:59 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/06/30 20:14:59 nia Exp $
 
 DISTNAME=	ExtUtils-Manifest-1.71
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/B/BI/BINGOS/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/ExtUtils-Manifest/
+HOMEPAGE=	https://metacpan.org/release/ExtUtils-Manifest
 COMMENT=	Perl utilities to write and check a MANIFEST file
 LICENSE=	${PERL5_LICENSE}
 

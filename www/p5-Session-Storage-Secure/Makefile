@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/08/22 09:47:52 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2019/06/30 20:17:44 nia Exp $
 
 DISTNAME=	Session-Storage-Secure-0.011
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DA/DAGOLDEN/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Session-Storage-Secure/
+HOMEPAGE=	https://metacpan.org/release/Session-Storage-Secure
 COMMENT=	Encrypted, expiring, compressed, serialized session data with integrity
 LICENSE=	${PERL5_LICENSE}
 

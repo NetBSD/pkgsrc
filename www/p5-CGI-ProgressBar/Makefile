@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/08/22 09:47:30 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/06/30 20:17:22 nia Exp $
 #
 
 DISTNAME=	CGI-ProgressBar-0.05
@@ -8,7 +8,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/L/LG/LGODDARD/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/CGI-ProgressBar/
+HOMEPAGE=	https://metacpan.org/release/CGI-ProgressBar
 COMMENT=	CGI.pm sub-class with a progress bar object
 LICENSE=	${PERL5_LICENSE}
 

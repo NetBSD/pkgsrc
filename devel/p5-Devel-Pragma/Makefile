@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/08/22 09:43:55 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/06/30 20:14:55 nia Exp $
 
 DISTNAME=	Devel-Pragma-1.1.0
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Devel/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Devel-Pragma/
+HOMEPAGE=	https://metacpan.org/release/Devel-Pragma
 COMMENT=	Perl5 helper functions for developers of lexical pragmas
 LICENSE=	${PERL5_LICENSE}
 

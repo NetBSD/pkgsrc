@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2018/08/22 09:44:04 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2019/06/30 20:15:06 nia Exp $
 
 DISTNAME=	Getopt-Long-Descriptive-0.103
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Getopt/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Getopt-Long-Descriptive/
+HOMEPAGE=	https://metacpan.org/release/Getopt-Long-Descriptive
 COMMENT=	Perl 5 module providing Getopt::Long with usage text
 LICENSE=	${PERL5_LICENSE}
 
