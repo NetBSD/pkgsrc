@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/01/27 14:28:03 wen Exp $
+# $NetBSD: Makefile,v 1.28 2019/06/30 20:16:33 nia Exp $
 
 DISTNAME=	Nmap-Parser-1.37
 PKGNAME=	p5-${DISTNAME}0
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Nmap/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Nmap-Parser/
+HOMEPAGE=	https://metacpan.org/release/Nmap-Parser
 COMMENT=	Parse nmap scan data with perl
 LICENSE=	mit
 

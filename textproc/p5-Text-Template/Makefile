@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2019/03/02 14:34:08 wen Exp $
+# $NetBSD: Makefile,v 1.43 2019/06/30 20:17:04 nia Exp $
 
 DISTNAME=	Text-Template-1.55
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Text-Template/
+HOMEPAGE=	https://metacpan.org/release/Text-Template
 COMMENT=	Perl5 library for generating form letters
 LICENSE=	artistic AND gnu-gpl-v2
 

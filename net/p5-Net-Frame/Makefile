@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/08/22 09:45:59 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/06/30 20:16:28 nia Exp $
 
 DISTNAME=	Net-Frame-1.19
 PKGNAME=	p5-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	The base framework for frame crafting
-HOMEPAGE=	http://search.cpan.org/dist/Net-Frame/
+HOMEPAGE=	https://metacpan.org/release/Net-Frame
 LICENSE=	artistic
 
 DEPENDS+=	p5-Class-Gomor>=1.0:../../devel/p5-Class-Gomor

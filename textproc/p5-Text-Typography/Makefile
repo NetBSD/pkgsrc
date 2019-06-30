@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/08/22 09:47:03 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/06/30 20:17:04 nia Exp $
 #
 
 DISTNAME=		Text-Typography-0.01
@@ -8,7 +8,7 @@ CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Text/}
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/Text-Typography
+HOMEPAGE=		https://metacpan.org/release/Text-Typography
 COMMENT=		Markup ASCII text with correct typography for HTML
 LICENSE=		${PERL5_LICENSE}
 

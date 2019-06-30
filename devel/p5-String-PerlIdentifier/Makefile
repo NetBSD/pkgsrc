@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/08/22 09:44:39 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/06/30 20:15:45 nia Exp $
 #
 
 DISTNAME=	String-PerlIdentifier-0.06
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=String/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/String-PerlIdentifier/
+HOMEPAGE=	https://metacpan.org/release/String-PerlIdentifier
 COMMENT=	Generate a random name for a Perl variable
 LICENSE=	${PERL5_LICENSE}
 

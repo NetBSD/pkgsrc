@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/08/22 09:47:53 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/06/30 20:17:45 nia Exp $
 
 DISTNAME=	Template-Plugin-Clickable-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Template/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Template-Plugin-Clickable/
+HOMEPAGE=	https://metacpan.org/release/Template-Plugin-Clickable
 COMMENT=	TT2 plugin to make URLs clickable in HTML
 LICENSE=	${PERL5_LICENSE}
 

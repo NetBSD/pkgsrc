@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/08/22 09:47:43 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/06/30 20:17:36 nia Exp $
 
 DISTNAME=	HTTP-Server-Simple-PSGI-0.16
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/HTTP-Server-Simple-PSGI/
+HOMEPAGE=	https://metacpan.org/release/HTTP-Server-Simple-PSGI
 COMMENT=	PSGI handler for HTTP::Server::Simple
 LICENSE=	${PERL5_LICENSE}
 

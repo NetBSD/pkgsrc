@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/08/22 09:47:01 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/06/30 20:17:02 nia Exp $
 #
 
 DISTNAME=	Text-Ngram-0.15
@@ -8,7 +8,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Text-Ngram/
+HOMEPAGE=	https://metacpan.org/release/Text-Ngram
 COMMENT=	Ngram analysis of text
 LICENSE=	${PERL5_LICENSE}
 

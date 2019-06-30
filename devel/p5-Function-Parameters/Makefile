@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/08/22 09:44:04 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2019/06/30 20:15:05 nia Exp $
 
 DISTNAME=	Function-Parameters-2.001003
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MA/MAUKE/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Function-Parameters/
+HOMEPAGE=	https://metacpan.org/release/Function-Parameters
 COMMENT=	Perl5 subroutine definitions with parameter lists
 LICENSE=	${PERL5_LICENSE}
 

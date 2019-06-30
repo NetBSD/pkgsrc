@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/08/22 09:44:52 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/06/30 20:15:59 nia Exp $
 
 DISTNAME=	Tie-Cache-LRU-20150301
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Tie/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Tie-Cache-LRU/
+HOMEPAGE=	https://metacpan.org/release/Tie-Cache-LRU
 COMMENT=	Least-Recently Used cache
 LICENSE=	${PERL5_LICENSE}
 

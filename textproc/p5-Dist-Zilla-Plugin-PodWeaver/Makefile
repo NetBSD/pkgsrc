@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/08/22 09:46:48 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/06/30 20:16:48 nia Exp $
 
 DISTNAME=	Dist-Zilla-Plugin-PodWeaver-4.008
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Dist/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Dist-Zilla-Plugin-PodWeaver/
+HOMEPAGE=	https://metacpan.org/release/Dist-Zilla-Plugin-PodWeaver
 COMMENT=	Weave your Pod together from configuration and Dist::Zilla
 LICENSE=	${PERL5_LICENSE}
 

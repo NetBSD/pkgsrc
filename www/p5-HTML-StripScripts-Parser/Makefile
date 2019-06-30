@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/08/22 09:47:39 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/06/30 20:17:32 nia Exp $
 
 DISTNAME=	HTML-StripScripts-Parser-1.03
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTML/}
 
 MAINTAINER=	bouyer@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/HTML-HTML-StripScripts-Parser/
+HOMEPAGE=	https://metacpan.org/release/HTML-HTML-StripScripts-Parser
 COMMENT=	Perl5 module XSS filter using HTML::Parser
 LICENSE=	${PERL5_LICENSE}
 
