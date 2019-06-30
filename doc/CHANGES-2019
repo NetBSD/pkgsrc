@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2709 2019/06/30 22:27:38 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2710 2019/06/30 22:55:47 sevan Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4470,3 +4470,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added graphics/libansilove version 1.1.2 [fcambus 2019-06-30]
 	Added graphics/irrlicht version 1.8.4 [nia 2019-06-30]
 	Added games/minetest version 5.0.1 [nia 2019-06-30]
+	Updated security/openssl to 1.0.2s [sevan 2019-06-30]
