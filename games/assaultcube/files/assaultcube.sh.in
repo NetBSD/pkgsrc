@@ -1,0 +1,9 @@
+#!/bin/sh
+if [ -n "${XDG_CONFIG_HOME}" ]; then
+	DIR="${XDG_CONFIG_HOME}/assaultcube"
+else
+	DIR="${HOME}/.config/assaultcube"
+fi
+mkdir -p "${DIR}" && \
+	cd "@PREFIX@/share/assaultcube" && \
+	exec "@PREFIX@/libexec/${0##*/}" "--home=${DIR}" --init "$@"
