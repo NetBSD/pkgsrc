@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2019/06/30 21:56:28 nia Exp $
+share/7kaa/MUSIC/CHINESE.WAV
+share/7kaa/MUSIC/GREEK.WAV
+share/7kaa/MUSIC/JAPANESE.WAV
+share/7kaa/MUSIC/LOSE.WAV
+share/7kaa/MUSIC/MAYA.WAV
+share/7kaa/MUSIC/NORMAN.WAV
+share/7kaa/MUSIC/PERSIAN.WAV
+share/7kaa/MUSIC/VIKING.WAV
+share/7kaa/MUSIC/WAR.WAV
+share/7kaa/MUSIC/WIN.WAV
+share/doc/7kaa/COPYING-Music.txt
+share/doc/7kaa/README-Music.txt
