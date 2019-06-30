@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.111 2019/06/28 19:18:25 schmonz Exp $
+# $NetBSD: Makefile,v 1.112 2019/06/30 21:51:49 schmonz Exp $
 #
 
 DISTNAME=		netqmail-1.06
 PKGNAME=		qmail-1.03
 PKGREVISION=		45
 CATEGORIES=		mail
-MASTER_SITES=		http://qmail.org/
+MASTER_SITES=		${HOMEPAGE}
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://qmail.org/netqmail/
+HOMEPAGE=		http://netqmail.org/
 COMMENT=		Secure, reliable, efficient, simple, and fast MTA
 LICENSE=		public-domain
 
