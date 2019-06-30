@@ -58,7 +58,7 @@ func (reg *VarTypeRegistry) DefineType(varcanon string, vartype *Vartype) {
 
 func (reg *VarTypeRegistry) Define(varname string, basicType *BasicType, options vartypeOptions, aclEntries ...ACLEntry) {
 	m, varbase, varparam := match2(varname, `^([A-Z_.][A-Z0-9_]*|@)(|\*|\.\*)$`)
-	assertf(m, "invalid variable name")
+	assert(m) // invalid variable name
 
 	vartype := NewVartype(basicType, options, aclEntries...)
 
@@ -177,14 +177,6 @@ func (reg *VarTypeRegistry) pkgappend(varname string, basicType *BasicType) {
 func (reg *VarTypeRegistry) pkgappendbl3(varname string, basicType *BasicType) {
 	reg.acl(varname, basicType,
 		PackageSettable,
-		"Makefile, Makefile.*, *.mk: default, set, append, use")
-}
-
-// Like pkgappend, but always needs a rationale.
-func (reg *VarTypeRegistry) pkgappendrat(varname string, basicType *BasicType) {
-	reg.acl(varname, basicType,
-		PackageSettable|NeedsRationale,
-		"buildlink3.mk, builtin.mk: none",
 		"Makefile, Makefile.*, *.mk: default, set, append, use")
 }
 
@@ -313,7 +305,7 @@ func (reg *VarTypeRegistry) cmdline(varname string, basicType *BasicType) {
 func (reg *VarTypeRegistry) infralist(varname string, basicType *BasicType) {
 	reg.acllist(varname, basicType,
 		List,
-		"*: append")
+		"*: set, append")
 }
 
 // compilerLanguages reads the available languages that are typically
@@ -809,7 +801,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.pkglist("BOOTSTRAP_DEPENDS", BtDependencyWithPath)
 	reg.pkg("BOOTSTRAP_PKG", BtYesNo)
 	// BROKEN should better be a list of messages instead of a simple string.
-	reg.pkgappendrat("BROKEN", BtMessage)
+	reg.pkgappend("BROKEN", BtMessage)
 	reg.pkg("BROKEN_GETTEXT_DETECTION", BtYesNo)
 	reg.pkglistrat("BROKEN_EXCEPT_ON_PLATFORM", BtMachinePlatformPattern)
 	reg.pkglistrat("BROKEN_ON_PLATFORM", BtMachinePlatformPattern)
@@ -1132,7 +1124,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.pkgload("HAS_CONFIGURE", BtYes)
 	reg.pkglist("HEADER_TEMPLATES", BtPathname)
 	reg.pkg("HOMEPAGE", BtHomepage)
-	reg.pkg("ICON_THEMES", BtYes)
+	reg.pkgbl3("ICON_THEMES", BtYes)
 	reg.acl("IGNORE_PKG.*", BtYes,
 		PackageSettable,
 		"*: set, use-loadtime")
@@ -1232,16 +1224,20 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.pkglist("MASTER_SITES", BtFetchURL)
 
 	for _, filename := range []string{"mk/fetch/sites.mk", "mk/fetch/fetch.mk"} {
-		sitesMk := LoadMk(src.File(filename), NotEmpty)
+		loadOptions := NotEmpty | MustSucceed
+		if G.Testing {
+			loadOptions = NotEmpty
+		}
+		sitesMk := LoadMk(src.File(filename), loadOptions)
 		if sitesMk != nil {
-			sitesMk.ForEach(func(mkline MkLine) {
+			sitesMk.ForEach(func(mkline *MkLine) {
 				if mkline.IsVarassign() && hasPrefix(mkline.Varname(), "MASTER_SITE_") {
 					reg.syslist(mkline.Varname(), BtFetchURL)
 				}
 			})
-		} else {
-			// During tests, use t.SetUpMasterSite instead to declare these variables.
 		}
+
+		// During tests, use t.SetUpMasterSite instead to declare these variables.
 	}
 
 	reg.pkglist("MESSAGE_SRC", BtPathname)
@@ -1670,11 +1666,13 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.pkglist("_WRAP_EXTRA_ARGS.*", BtShellWord)
 
 	reg.infralist("_VARGROUPS", BtIdentifier)
-	reg.infralist("_USER_VARS.*", BtIdentifier)
-	reg.infralist("_PKG_VARS.*", BtIdentifier)
-	reg.infralist("_SYS_VARS.*", BtIdentifier)
-	reg.infralist("_DEF_VARS.*", BtIdentifier)
-	reg.infralist("_USE_VARS.*", BtIdentifier)
+	reg.infralist("_USER_VARS.*", BtVariableName)
+	reg.infralist("_PKG_VARS.*", BtVariableName)
+	reg.infralist("_SYS_VARS.*", BtVariableName)
+	reg.infralist("_DEF_VARS.*", BtVariableName)
+	reg.infralist("_USE_VARS.*", BtVariableName)
+	reg.infralist("_SORTED_VARS.*", BtVariableNamePattern)
+	reg.infralist("_LISTED_VARS.*", BtVariableNamePattern)
 }
 
 func enum(values string) *BasicType {
@@ -1692,7 +1690,7 @@ func enum(values string) *BasicType {
 
 func (reg *VarTypeRegistry) parseACLEntries(varname string, aclEntries ...string) []ACLEntry {
 
-	assertf(len(aclEntries) > 0, "At least one ACL entry must be given.")
+	assert(len(aclEntries) > 0)
 
 	// TODO: Use separate rules for infrastructure files.
 	//  These rules would have the "infra:" prefix
@@ -1727,8 +1725,7 @@ func (reg *VarTypeRegistry) parseACLEntries(varname string, aclEntries ...string
 				}
 			}
 			for _, prev := range result {
-				matched, err := path.Match(prev.glob, glob)
-				assertNil(err, "Invalid ACL pattern %q for %q", glob, varname)
+				matched := prev.matcher.matches(glob)
 				assertf(!matched, "Unreachable ACL pattern %q for %q.", glob, varname)
 			}
 			result = append(result, NewACLEntry(glob, permissions))

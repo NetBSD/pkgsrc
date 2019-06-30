@@ -6,7 +6,7 @@ func (s *Suite) Test_CheckdirToplevel(c *check.C) {
 	t := s.Init(c)
 
 	t.CreateFileLines("Makefile",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"SUBDIR+= x11",
 		"SUBDIR+=\tarchivers",
@@ -39,7 +39,7 @@ func (s *Suite) Test_Toplevel_checkSubdir__sorting_x11(c *check.C) {
 	t := s.Init(c)
 
 	t.CreateFileLines("Makefile",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"SUBDIR+=\tx11",
 		"SUBDIR+=\tsysutils",
@@ -60,7 +60,7 @@ func (s *Suite) Test_Toplevel_checkSubdir__commented_without_reason(c *check.C) 
 	t := s.Init(c)
 
 	t.CreateFileLines("Makefile",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"#SUBDIR+=\taaa",
 		"#SUBDIR+=\tbbb\t#",
@@ -81,15 +81,15 @@ func (s *Suite) Test_CheckdirToplevel__recursive(c *check.C) {
 	t := s.Init(c)
 
 	t.CreateFileLines("mk/misc/category.mk",
-		MkRcsID)
+		MkCvsID)
 	t.SetUpPackage("category/package",
 		"UNKNOWN=\tvalue")
 	t.CreateFileLines("Makefile",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"SUBDIR+=\tcategory")
 	t.CreateFileLines("category/Makefile",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"COMMENT=\tThe category",
 		"",
@@ -109,15 +109,15 @@ func (s *Suite) Test_CheckdirToplevel__recursive_inter_package(c *check.C) {
 	t := s.Init(c)
 
 	t.CreateFileLines("mk/misc/category.mk",
-		MkRcsID)
+		MkCvsID)
 	t.SetUpPackage("category/package",
 		"UNKNOWN=\tvalue")
 	t.CreateFileLines("Makefile",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"SUBDIR+=\tcategory")
 	t.CreateFileLines("category/Makefile",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"COMMENT=\tThe category",
 		"",

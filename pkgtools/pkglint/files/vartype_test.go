@@ -62,7 +62,7 @@ func (s *Suite) Test_Vartype_AlternativeFiles(c *check.C) {
 	test(
 		rules(
 			"buildlink3.mk: set",
-			"special:b*.mk: set, append",
+			"special:*3.mk: set, append",
 			"*.mk: set",
 			"Makefile: set, append",
 			"Makefile.*: set"),
@@ -72,7 +72,7 @@ func (s *Suite) Test_Vartype_AlternativeFiles(c *check.C) {
 	test(
 		rules(
 			"buildlink3.mk: set",
-			"special:b*.mk: set, append",
+			"special:*3.mk: set, append",
 			"*.mk: set",
 			"Makefile: set, append",
 			"Makefile.*: set",
@@ -99,12 +99,12 @@ func (s *Suite) Test_Vartype_AlternativeFiles(c *check.C) {
 	test(
 		rules(
 			"buildlink3.mk: none",
-			"special:b*.mk: set",
+			"special:*3.mk: set",
 			"*.mk: none",
 			"Makefile: set",
 			"Makefile.*: none",
 			"*: set"),
-		"b*.mk, Makefile or *, but not buildlink3.mk, *.mk or Makefile.*")
+		"*3.mk, Makefile or *, but not buildlink3.mk, *.mk or Makefile.*")
 
 	test(
 		rules(

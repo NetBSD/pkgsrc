@@ -9,6 +9,7 @@ import (
 	"os"
 	"path"
 	"path/filepath"
+	"reflect"
 	"regexp"
 	"sort"
 	"strconv"
@@ -159,6 +160,30 @@ func assertNil(err error, format string, args ...interface{}) {
 	}
 }
 
+func assertNotNil(obj interface{}) {
+
+	// https://stackoverflow.com/questions/13476349/check-for-nil-and-nil-interface-in-go
+	isNil := func() bool {
+		defer func() { _ = recover() }()
+		return reflect.ValueOf(obj).IsNil()
+	}
+
+	if obj == nil || isNil() {
+		panic("Pkglint internal error: unexpected nil pointer")
+	}
+}
+
+// assert checks that the condition is true. Otherwise it terminates the
+// process with a fatal error message, prefixed with "Pkglint internal error".
+//
+// This method must only be used for programming errors.
+// For runtime errors, use dummyLine.Fatalf.
+func assert(cond bool) {
+	if !cond {
+		panic("Pkglint internal error")
+	}
+}
+
 // assertf checks that the condition is true. Otherwise it terminates the
 // process with a fatal error message, prefixed with "Pkglint internal error".
 //
@@ -177,7 +202,7 @@ func isEmptyDir(filename string) bool {
 
 	dirents, err := ioutil.ReadDir(filename)
 	if err != nil {
-		return true
+		return true // XXX: Why not false?
 	}
 
 	for _, dirent := range dirents {
@@ -233,46 +258,47 @@ func dirglob(dirname string) []string {
 
 // Checks whether a file is already committed to the CVS repository.
 func isCommitted(filename string) bool {
-	lines := G.loadCvsEntries(filename)
-	if lines == nil {
-		return false
-	}
-	needle := "/" + path.Base(filename) + "/"
-	for _, line := range lines.Lines {
-		if hasPrefix(line.Text, needle) {
-			return true
-		}
-	}
-	return false
+	entries := G.loadCvsEntries(filename)
+	_, found := entries[path.Base(filename)]
+	return found
 }
 
+// isLocallyModified tests whether a file (not a directory) is modified,
+// as seen by CVS.
+//
+// There is no corresponding test for Git (as used by pkgsrc-wip) since that
+// is more difficult to implement than simply reading a CVS/Entries file.
 func isLocallyModified(filename string) bool {
-	baseName := path.Base(filename)
-
-	lines := G.loadCvsEntries(filename)
-	if lines == nil {
+	entries := G.loadCvsEntries(filename)
+	entry, found := entries[path.Base(filename)]
+	if !found {
 		return false
 	}
 
-	for _, line := range lines.Lines {
-		fields := strings.Split(line.Text, "/")
-		if 3 < len(fields) && fields[1] == baseName {
-			st, err := os.Stat(filename)
-			if err != nil {
-				return true
-			}
-
-			// Following http://cvsman.com/cvs-1.12.12/cvs_19.php, format both timestamps.
-			cvsModTime := fields[3]
-			fsModTime := st.ModTime().UTC().Format(time.ANSIC)
-			if trace.Tracing {
-				trace.Stepf("cvs.time=%q fs.time=%q", cvsModTime, fsModTime)
-			}
-
-			return cvsModTime != fsModTime
-		}
+	st, err := os.Stat(filename)
+	if err != nil {
+		return true
 	}
-	return false
+
+	// Following http://cvsman.com/cvs-1.12.12/cvs_19.php, format both timestamps.
+	cvsModTime := entry.Timestamp
+	fsModTime := st.ModTime().UTC().Format(time.ANSIC)
+	if trace.Tracing {
+		trace.Stepf("cvs.time=%q fs.time=%q", cvsModTime, fsModTime)
+	}
+
+	return cvsModTime != fsModTime
+}
+
+// CvsEntry is one of the entries in a CVS/Entries file.
+//
+// See http://cvsman.com/cvs-1.12.12/cvs_19.php.
+type CvsEntry struct {
+	Name      string
+	Revision  string
+	Timestamp string
+	Options   string
+	TagDate   string
 }
 
 // Returns the number of columns that a string occupies when printed with
@@ -488,6 +514,34 @@ func cleanpath(filename string) string {
 	return strings.Join(parts, "/")
 }
 
+func pathContains(haystack, needle string) bool {
+	n0 := needle[0]
+	for i := 0; i < 1+len(haystack)-len(needle); i++ {
+		if haystack[i] == n0 && hasPrefix(haystack[i:], needle) {
+			if i == 0 || haystack[i-1] == '/' {
+				if i+len(needle) == len(haystack) || haystack[i+len(needle)] == '/' {
+					return true
+				}
+			}
+		}
+	}
+	return false
+}
+
+func pathContainsDir(haystack, needle string) bool {
+	n0 := needle[0]
+	for i := 0; i < 1+len(haystack)-len(needle); i++ {
+		if haystack[i] == n0 && hasPrefix(haystack[i:], needle) {
+			if i == 0 || haystack[i-1] == '/' {
+				if i+len(needle) < len(haystack) && haystack[i+len(needle)] == '/' {
+					return true
+				}
+			}
+		}
+	}
+	return false
+}
+
 func containsVarRef(s string) bool {
 	return contains(s, "${")
 }
@@ -561,26 +615,26 @@ func (o *Once) check(key uint64) bool {
 // TODO: Merge this code with Var, which defines essentially the
 //  same features.
 type Scope struct {
-	firstDef       map[string]MkLine // TODO: Can this be removed?
-	lastDef        map[string]MkLine
+	firstDef       map[string]*MkLine // TODO: Can this be removed?
+	lastDef        map[string]*MkLine
 	value          map[string]string
-	used           map[string]MkLine
+	used           map[string]*MkLine
 	usedAtLoadTime map[string]bool
 	fallback       map[string]string
 }
 
 func NewScope() Scope {
 	return Scope{
-		make(map[string]MkLine),
-		make(map[string]MkLine),
+		make(map[string]*MkLine),
+		make(map[string]*MkLine),
 		make(map[string]string),
-		make(map[string]MkLine),
+		make(map[string]*MkLine),
 		make(map[string]bool),
 		make(map[string]string)}
 }
 
 // Define marks the variable and its canonicalized form as defined.
-func (s *Scope) Define(varname string, mkline MkLine) {
+func (s *Scope) Define(varname string, mkline *MkLine) {
 	def := func(name string) {
 		if s.firstDef[name] == nil {
 			s.firstDef[name] = mkline
@@ -621,7 +675,7 @@ func (s *Scope) Fallback(varname string, value string) {
 }
 
 // Use marks the variable and its canonicalized form as used.
-func (s *Scope) Use(varname string, line MkLine, time vucTime) {
+func (s *Scope) Use(varname string, line *MkLine, time VucTime) {
 	use := func(name string) {
 		if s.used[name] == nil {
 			s.used[name] = line
@@ -629,7 +683,7 @@ func (s *Scope) Use(varname string, line MkLine, time vucTime) {
 				trace.Step2("Using %q in %s", name, line.String())
 			}
 		}
-		if time == vucTimeLoad {
+		if time == VucLoadTime {
 			s.usedAtLoadTime[name] = true
 		}
 	}
@@ -642,7 +696,7 @@ func (s *Scope) Use(varname string, line MkLine, time vucTime) {
 //  - defined,
 //  - mentioned in a commented variable assignment,
 //  - mentioned in a documentation comment.
-func (s *Scope) Mentioned(varname string) MkLine {
+func (s *Scope) Mentioned(varname string) *MkLine {
 	return s.firstDef[varname]
 }
 
@@ -703,7 +757,7 @@ func (s *Scope) UsedAtLoadTime(varname string) bool {
 // value, and the including file later overrides that value. Or the other way
 // round: the including file sets a value first, and the included file then
 // assigns a default value using ?=.
-func (s *Scope) FirstDefinition(varname string) MkLine {
+func (s *Scope) FirstDefinition(varname string) *MkLine {
 	mkline := s.firstDef[varname]
 	if mkline != nil && mkline.IsVarassign() {
 		lastLine := s.LastDefinition(varname)
@@ -724,7 +778,7 @@ func (s *Scope) FirstDefinition(varname string) MkLine {
 // value, and the including file later overrides that value. Or the other way
 // round: the including file sets a value first, and the included file then
 // assigns a default value using ?=.
-func (s *Scope) LastDefinition(varname string) MkLine {
+func (s *Scope) LastDefinition(varname string) *MkLine {
 	mkline := s.lastDef[varname]
 	if mkline != nil && mkline.IsVarassign() {
 		return mkline
@@ -735,8 +789,8 @@ func (s *Scope) LastDefinition(varname string) MkLine {
 // Commented returns whether the variable has only been defined in commented
 // variable assignments. These are ignored by bmake but used heavily in
 // mk/defaults/mk.conf for documentation.
-func (s *Scope) Commented(varname string) MkLine {
-	var mklines []MkLine
+func (s *Scope) Commented(varname string) *MkLine {
+	var mklines []*MkLine
 	if first := s.firstDef[varname]; first != nil {
 		mklines = append(mklines, first)
 	}
@@ -759,7 +813,7 @@ func (s *Scope) Commented(varname string) MkLine {
 	return nil
 }
 
-func (s *Scope) FirstUse(varname string) MkLine {
+func (s *Scope) FirstUse(varname string) *MkLine {
 	return s.used[varname]
 }
 
@@ -908,7 +962,7 @@ type fileCacheEntry struct {
 	count   int
 	key     string
 	options LoadOptions
-	lines   Lines
+	lines   *Lines
 }
 
 func NewFileCache(size int) *FileCache {
@@ -919,7 +973,7 @@ func NewFileCache(size int) *FileCache {
 		0}
 }
 
-func (c *FileCache) Put(filename string, options LoadOptions, lines Lines) {
+func (c *FileCache) Put(filename string, options LoadOptions, lines *Lines) {
 	key := c.key(filename)
 
 	entry := c.mapping[key]
@@ -973,14 +1027,14 @@ func (c *FileCache) removeOldEntries() {
 	}
 }
 
-func (c *FileCache) Get(filename string, options LoadOptions) Lines {
+func (c *FileCache) Get(filename string, options LoadOptions) *Lines {
 	key := c.key(filename)
 	entry, found := c.mapping[key]
 	if found && entry.options == options {
 		c.hits++
 		entry.count++
 
-		lines := make([]Line, entry.lines.Len())
+		lines := make([]*Line, entry.lines.Len())
 		for i, line := range entry.lines.Lines {
 			lines[i] = NewLineMulti(filename, int(line.firstLine), int(line.lastLine), line.Text, line.raw)
 		}
@@ -1163,6 +1217,48 @@ func joinSkipEmptyOxford(conn string, elements ...string) string {
 
 	return strings.Join(nonempty, ", ")
 }
+
+type pathMatcher struct {
+	matchType       pathMatchType
+	pattern         string
+	originalPattern string
+}
+
+func newPathMatcher(pattern string) *pathMatcher {
+	assert(strings.IndexByte(pattern, '[') == -1)
+	assert(strings.IndexByte(pattern, '?') == -1)
+
+	stars := strings.Count(pattern, "*")
+	assert(stars == 0 || stars == 1)
+	switch {
+	case stars == 0:
+		return &pathMatcher{pmExact, pattern, pattern}
+	case pattern[0] == '*':
+		return &pathMatcher{pmSuffix, pattern[1:], pattern}
+	default:
+		assert(pattern[len(pattern)-1] == '*')
+		return &pathMatcher{pmPrefix, pattern[:len(pattern)-1], pattern}
+	}
+}
+
+func (m pathMatcher) matches(subject string) bool {
+	switch m.matchType {
+	case pmPrefix:
+		return hasPrefix(subject, m.pattern)
+	case pmSuffix:
+		return hasSuffix(subject, m.pattern)
+	default:
+		return subject == m.pattern
+	}
+}
+
+type pathMatchType uint8
+
+const (
+	pmExact pathMatchType = iota
+	pmPrefix
+	pmSuffix
+)
 
 // StringInterner collects commonly used strings to avoid wasting heap memory
 // by duplicated strings.

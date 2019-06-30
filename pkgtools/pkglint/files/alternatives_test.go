@@ -17,7 +17,7 @@ func (s *Suite) Test_CheckFileAlternatives__PLIST(c *check.C) {
 		"highscores   @VARBASE@/game/scores",
 		"sbin/init /sbin/init")
 	t.CreateFileLines("PLIST",
-		PlistRcsID,
+		PlistCvsID,
 		"bin/echo",
 		"bin/vim",
 		"sbin/sendmail.exim${EXIMVER}")

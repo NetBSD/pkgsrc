@@ -6,7 +6,7 @@ type ShTokenizer struct {
 	parser *MkParser
 }
 
-func NewShTokenizer(line Line, text string, emitWarnings bool) *ShTokenizer {
+func NewShTokenizer(line *Line, text string, emitWarnings bool) *ShTokenizer {
 	// TODO: Switching to NewMkParser is nontrivial since emitWarnings must equal (line != nil).
 	p := MkParser{line, textproc.NewLexer(text), emitWarnings}
 	return &ShTokenizer{&p}
@@ -428,7 +428,6 @@ func (p *ShTokenizer) ShToken() *ShToken {
 
 	lexer := p.parser.lexer
 	initialMark := lexer.Mark()
-	var atoms []*ShAtom
 
 	for peek() != nil && peek().Type == shtSpace {
 		skip()
@@ -439,20 +438,20 @@ func (p *ShTokenizer) ShToken() *ShToken {
 		return nil
 	}
 
-	if atom := peek(); !atom.Type.IsWord() && atom.Quoting != shqSubsh {
-		return NewShToken(atom.MkText, atom)
+	if !curr.Type.IsWord() && q != shqSubsh {
+		return NewShToken(curr.MkText, curr)
 	}
 
+	var atoms []*ShAtom
 	for {
 		mark := lexer.Mark()
-		atom := peek()
-		if atom != nil && (atom.Type.IsWord() || q != shqPlain || prevQ == shqSubsh) {
-			skip()
-			atoms = append(atoms, atom)
-			continue
+		peek()
+		if curr == nil || !curr.Type.IsWord() && q == shqPlain && prevQ != shqSubsh {
+			lexer.Reset(mark)
+			break
 		}
-		lexer.Reset(mark)
-		break
+		atoms = append(atoms, curr)
+		skip()
 	}
 
 	if q != shqPlain {
@@ -460,7 +459,6 @@ func (p *ShTokenizer) ShToken() *ShToken {
 		return nil
 	}
 
-	assertf(len(atoms) > 0, "ShTokenizer.ShToken")
 	return NewShToken(lexer.Since(initialMark), atoms...)
 }
 
