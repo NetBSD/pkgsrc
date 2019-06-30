@@ -225,16 +225,11 @@ func (c *StrCommand) AnyArgMatches(pattern regex.Pattern) bool {
 }
 
 func (c *StrCommand) String() string {
-	var strs []string
-	for _, assignment := range c.Assignments {
-		strs = append(strs, assignment)
-	}
+	strs := append([]string(nil), c.Assignments...)
 	if c.Name != "" {
 		strs = append(strs, c.Name)
 	}
-	for _, arg := range c.Args {
-		strs = append(strs, arg)
-	}
+	strs = append(strs, c.Args...)
 	return strings.Join(strs, " ")
 }
 

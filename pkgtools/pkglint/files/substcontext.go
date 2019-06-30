@@ -44,7 +44,7 @@ func (st *SubstContextStats) Or(other SubstContextStats) {
 	st.seenTransform = st.seenTransform || other.seenTransform
 }
 
-func (ctx *SubstContext) Process(mkline MkLine) {
+func (ctx *SubstContext) Process(mkline *MkLine) {
 	switch {
 	case mkline.IsEmpty():
 		ctx.Finish(mkline)
@@ -55,7 +55,7 @@ func (ctx *SubstContext) Process(mkline MkLine) {
 	}
 }
 
-func (ctx *SubstContext) Varassign(mkline MkLine) {
+func (ctx *SubstContext) Varassign(mkline *MkLine) {
 	if trace.Tracing {
 		trace.Stepf("SubstContext.Varassign curr=%v all=%v", ctx.curr, ctx.inAllBranches)
 	}
@@ -181,7 +181,7 @@ func (ctx *SubstContext) Varassign(mkline MkLine) {
 	}
 }
 
-func (ctx *SubstContext) Directive(mkline MkLine) {
+func (ctx *SubstContext) Directive(mkline *MkLine) {
 	if ctx.id == "" {
 		return
 	}
@@ -214,7 +214,7 @@ func (ctx *SubstContext) IsComplete() bool {
 	return ctx.stage != "" && ctx.curr.seenFiles && ctx.curr.seenTransform
 }
 
-func (ctx *SubstContext) Finish(mkline MkLine) {
+func (ctx *SubstContext) Finish(mkline *MkLine) {
 	if ctx.id == "" {
 		return
 	}
@@ -233,21 +233,21 @@ func (ctx *SubstContext) Finish(mkline MkLine) {
 	*ctx = *NewSubstContext()
 }
 
-func (*SubstContext) dupString(mkline MkLine, pstr *string, varname, value string) {
+func (*SubstContext) dupString(mkline *MkLine, pstr *string, varname, value string) {
 	if *pstr != "" {
 		mkline.Warnf("Duplicate definition of %q.", varname)
 	}
 	*pstr = value
 }
 
-func (*SubstContext) dupBool(mkline MkLine, flag *bool, varname string, op MkOperator, value string) {
+func (*SubstContext) dupBool(mkline *MkLine, flag *bool, varname string, op MkOperator, value string) {
 	if *flag && op != opAssignAppend {
 		mkline.Warnf("All but the first %q lines should use the \"+=\" operator.", varname)
 	}
 	*flag = true
 }
 
-func (ctx *SubstContext) suggestSubstVars(mkline MkLine) {
+func (ctx *SubstContext) suggestSubstVars(mkline *MkLine) {
 
 	tokens, _ := splitIntoShellTokens(mkline.Line, mkline.Value())
 	for _, token := range tokens {

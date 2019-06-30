@@ -16,7 +16,7 @@ const (
 	LogErrors                           //
 )
 
-func Load(filename string, options LoadOptions) Lines {
+func Load(filename string, options LoadOptions) *Lines {
 	if fromCache := G.fileCache.Get(filename, options); fromCache != nil {
 		return fromCache
 	}
@@ -54,7 +54,7 @@ func Load(filename string, options LoadOptions) Lines {
 	return result
 }
 
-func LoadMk(filename string, options LoadOptions) MkLines {
+func LoadMk(filename string, options LoadOptions) *MkLines {
 	lines := Load(filename, options|Makefile)
 	if lines == nil {
 		return nil
@@ -62,7 +62,7 @@ func LoadMk(filename string, options LoadOptions) MkLines {
 	return NewMkLines(lines)
 }
 
-func nextLogicalLine(filename string, rawLines []*RawLine, index int) (Line, int) {
+func nextLogicalLine(filename string, rawLines []*RawLine, index int) (*Line, int) {
 	{ // Handle the common case efficiently
 		rawLine := rawLines[index]
 		textnl := rawLine.textnl
@@ -137,7 +137,7 @@ func matchContinuationLine(textnl string) (leadingWhitespace, text, trailingWhit
 	return
 }
 
-func convertToLogicalLines(filename string, rawText string, joinBackslashLines bool) Lines {
+func convertToLogicalLines(filename string, rawText string, joinBackslashLines bool) *Lines {
 	var rawLines []*RawLine
 	for lineno, rawLine := range strings.SplitAfter(rawText, "\n") {
 		if rawLine != "" {
@@ -145,7 +145,7 @@ func convertToLogicalLines(filename string, rawText string, joinBackslashLines b
 		}
 	}
 
-	var loglines []Line
+	var loglines []*Line
 	if joinBackslashLines {
 		for lineno := 0; lineno < len(rawLines); {
 			line, nextLineno := nextLogicalLine(filename, rawLines, lineno)

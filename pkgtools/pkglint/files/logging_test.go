@@ -775,7 +775,7 @@ func (s *Suite) Test_Logger_Diag__source_duplicates(c *check.C) {
 
 	t.SetUpPkgsrc()
 	t.CreateFileLines("category/dependency/patches/patch-aa",
-		RcsID,
+		CvsID,
 		"",
 		"--- old file",
 		"+++ new file",

@@ -580,7 +580,7 @@ func (s *Suite) Test_ShTokenizer__examples_from_fuzzing(c *check.C) {
 
 	test := func(input string, diagnostics ...string) {
 		mklines := t.NewMkLines("filename.mk",
-			MkRcsID,
+			MkCvsID,
 			"\t"+input)
 		mklines.Check()
 		t.CheckOutput(diagnostics)

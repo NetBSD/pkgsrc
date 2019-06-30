@@ -9,16 +9,16 @@ import (
 
 // VartypeCheck groups together the various checks for variables of the different types.
 type VartypeCheck struct {
-	MkLines MkLines
+	MkLines *MkLines
 
 	// Note: if "go vet" or "go test" complains about a "variable with invalid type", update to go1.11.4.
 	// See https://github.com/golang/go/issues/28972.
 	// That doesn't help though since pkglint contains these "more convoluted alias declarations"
 	// mentioned in https://github.com/golang/go/commit/6971090515ba.
-	// Therefore MkLine is declared as *MkLineImpl here.
+	// Therefore MkLine is declared as *MkLine here.
 	// Ideally the "more convoluted cyclic type declaration" should be broken up.
 
-	MkLine *MkLineImpl
+	MkLine *MkLine
 
 	// The name of the variable being checked.
 	//
@@ -201,21 +201,19 @@ func (cv *VartypeCheck) CFlag() {
 	if cv.Op == opUseMatch {
 		return
 	}
+
 	cflag := cv.Value
 	switch {
-	case matches(cflag, `^-[DILOUWfgm]`),
-		hasPrefix(cflag, "-std="),
-		cflag == "-c99",
-		cflag == "-c",
-		cflag == "-no-integrated-as",
-		cflag == "-pthread",
-		hasPrefix(cflag, "`") && hasSuffix(cflag, "`"),
-		containsVarRef(cflag):
-		return
-	case hasPrefix(cflag, "-"):
-		cv.Warnf("Unknown compiler flag %q.", cflag)
-	default:
-		cv.Warnf("Compiler flag %q should start with a hyphen.", cflag)
+	case hasPrefix(cflag, "-l"), hasPrefix(cflag, "-L"):
+		cv.Warnf("%q is a linker flag and belong to LDFLAGS, LIBS or LDADD instead of %s.",
+			cflag, cv.Varname)
+	}
+
+	if strings.Count(cflag, "\"")%2 != 0 {
+		cv.Warnf("Compiler flag %q has unbalanced double quotes.", cflag)
+	}
+	if strings.Count(cflag, "'")%2 != 0 {
+		cv.Warnf("Compiler flag %q has unbalanced single quotes.", cflag)
 	}
 }
 
@@ -612,34 +610,45 @@ func (cv *VartypeCheck) GccReqd() {
 func (cv *VartypeCheck) Homepage() {
 	cv.URL()
 
-	if m, wrong, sitename, subdir := match3(cv.Value, `^(\$\{(MASTER_SITE\w+)(?::=([\w\-/]+))?\})`); m {
-		baseURL := G.Pkgsrc.MasterSiteVarToURL[sitename]
-		if sitename == "MASTER_SITES" && G.Pkg != nil {
-			if mkline := G.Pkg.vars.FirstDefinition("MASTER_SITES"); mkline != nil {
-				if masterSites := mkline.Value(); !containsVarRef(masterSites) {
-					baseURL = masterSites
+	m, wrong, sitename, subdir := match3(cv.Value, `^(\$\{(MASTER_SITE\w+)(?::=([\w\-/]+))?\})`)
+	if !m {
+		return
+	}
+
+	baseURL := G.Pkgsrc.MasterSiteVarToURL[sitename]
+	if sitename == "MASTER_SITES" && G.Pkg != nil {
+		mkline := G.Pkg.vars.FirstDefinition("MASTER_SITES")
+		if mkline != nil {
+			if !containsVarRef(mkline.Value()) {
+				masterSites := cv.MkLine.ValueFields(mkline.Value())
+				if len(masterSites) > 0 {
+					baseURL = masterSites[0]
 				}
 			}
 		}
-
-		fixedURL := baseURL + subdir
-
-		fix := cv.Autofix()
-		if baseURL != "" {
-			fix.Warnf("HOMEPAGE should not be defined in terms of MASTER_SITEs. Use %s directly.", fixedURL)
-		} else {
-			fix.Warnf("HOMEPAGE should not be defined in terms of MASTER_SITEs.")
-		}
-		fix.Explain(
-			"The HOMEPAGE is a single URL, while MASTER_SITES is a list of URLs.",
-			"As long as this list has exactly one element, this works, but as",
-			"soon as another site is added, the HOMEPAGE would not be a valid",
-			"URL anymore.",
-			"",
-			"Defining MASTER_SITES=${HOMEPAGE} is ok, though.")
-		fix.Replace(wrong, fixedURL)
-		fix.Apply()
 	}
+
+	fixedURL := baseURL + subdir
+
+	fix := cv.Autofix()
+	if baseURL != "" {
+		fix.Warnf("HOMEPAGE should not be defined in terms of MASTER_SITEs. Use %s directly.", fixedURL)
+	} else {
+		fix.Warnf("HOMEPAGE should not be defined in terms of MASTER_SITEs.")
+	}
+	fix.Explain(
+		"The HOMEPAGE is a single URL, while MASTER_SITES is a list of URLs.",
+		"As long as this list has exactly one element, this works, but as",
+		"soon as another site is added, the HOMEPAGE would not be a valid",
+		"URL anymore.",
+		"",
+		"Defining MASTER_SITES=${HOMEPAGE} is ok, though.")
+	if baseURL != "" {
+		fix.Replace(wrong, fixedURL)
+	} else {
+		fix.Anyway()
+	}
+	fix.Apply()
 }
 
 // Identifier checks for valid identifiers in various contexts, limiting the
@@ -679,6 +688,7 @@ func (cv *VartypeCheck) LdFlag() {
 	if cv.Op == opUseMatch {
 		return
 	}
+
 	ldflag := cv.Value
 	if m, rpathFlag := match1(ldflag, `^(-Wl,(?:-R|-rpath|--rpath))`); m {
 		cv.Warnf("Please use \"${COMPILER_RPATH_FLAG}\" instead of %q.", rpathFlag)
@@ -686,19 +696,12 @@ func (cv *VartypeCheck) LdFlag() {
 	}
 
 	switch {
-	case hasPrefix(ldflag, "-L"),
-		hasPrefix(ldflag, "-l"),
-		ldflag == "-pthread",
-		ldflag == "-static",
-		hasPrefix(ldflag, "-static-"),
-		hasPrefix(ldflag, "-Wl,-"),
-		hasPrefix(ldflag, "`") && hasSuffix(ldflag, "`"),
-		ldflag != cv.ValueNoVar:
-		return
-	case hasPrefix(ldflag, "-"):
-		cv.Warnf("Unknown linker flag %q.", cv.Value)
-	default:
-		cv.Warnf("Linker flag %q should start with a hyphen.", cv.Value)
+	case ldflag == "-P",
+		ldflag == "-E",
+		hasPrefix(ldflag, "-D"),
+		hasPrefix(ldflag, "-U"),
+		hasPrefix(ldflag, "-I"):
+		cv.Warnf("%q is a compiler flag and belongs on CFLAGS, CPPFLAGS, CXXFLAGS or FFLAGS instead of %s.", cv.Value, cv.Varname)
 	}
 }
 
@@ -791,7 +794,7 @@ func (cv *VartypeCheck) Option() {
 	}
 
 	if m, optname := match1(value, `^-?([a-z][-0-9a-z+]*)$`); m {
-		if !cv.MkLines.FirstTimeSlice("option:", optname) {
+		if !cv.MkLines.once.FirstTimeSlice("option:", optname) {
 			return
 		}
 
@@ -820,7 +823,7 @@ func (cv *VartypeCheck) Pathlist() {
 	value := cv.Value
 
 	// Sometimes, variables called PATH contain a single pathname,
-	// especially those with auto-guessed type from MkLineImpl.VariableType.
+	// especially those with auto-guessed type from MkLine.VariableType.
 	if !contains(value, ":") && cv.Guessed {
 		cv.Pathname()
 		return
@@ -1095,7 +1098,7 @@ func (cv *VartypeCheck) SedCommands() {
 }
 
 func (cv *VartypeCheck) ShellCommand() {
-	if cv.Op == opUseMatch || cv.Op == opUseCompare {
+	if cv.Op == opUseMatch || cv.Op == opUseCompare || cv.Op == opAssignAppend {
 		return
 	}
 	setE := true
@@ -1200,6 +1203,7 @@ func (cv *VartypeCheck) UserGroupName() {
 
 // VariableName checks that the value is a valid variable name to be used in Makefiles.
 func (cv *VartypeCheck) VariableName() {
+	// TODO: sync with MkParser.Varname
 	if cv.Value == cv.ValueNoVar && !matches(cv.Value, `^[A-Z_][0-9A-Z_]*(?:[.].*)?$`) {
 		cv.Warnf("%q is not a valid variable name.", cv.Value)
 		cv.Explain(
@@ -1211,6 +1215,30 @@ func (cv *VartypeCheck) VariableName() {
 			"* PKGNAME",
 			"* PKG_OPTIONS.gtk+-2.0")
 	}
+}
+
+func (cv *VartypeCheck) VariableNamePattern() {
+	if cv.Value != cv.ValueNoVar {
+		return
+	}
+
+	// TODO: sync with MkParser.Varname
+	if matches(cv.Value, `^[*A-Z_][*0-9A-Z_]*(?:[.].*)?$`) {
+		return
+	}
+
+	cv.Warnf("%q is not a valid variable name pattern.", cv.Value)
+	cv.Explain(
+		"Variable names are restricted to only uppercase letters and the",
+		"underscore in the basename, and arbitrary characters in the",
+		"parameterized part, following the dot.",
+		"",
+		"In addition to these characters, variable name patterns may use",
+		"the * placeholder.",
+		"",
+		"Examples:",
+		"* PKGNAME",
+		"* PKG_OPTIONS.gtk+-2.0")
 }
 
 func (cv *VartypeCheck) Version() {

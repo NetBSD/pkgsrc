@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkglint.1,v 1.55 2019/03/10 19:01:50 rillig Exp $
+.\"	$NetBSD: pkglint.1,v 1.56 2019/06/30 20:56:19 rillig Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
@@ -8,7 +8,7 @@
 .\" Thomas Klausner <wiz@NetBSD.org>, 2012.
 .\" Roland Illig <rillig@NetBSD.org>, 2015-2019.
 .\"
-.Dd January 14, 2018
+.Dd June 17, 2019
 .Dt PKGLINT 1
 .Os
 .Sh NAME
@@ -88,8 +88,6 @@ For a list of warnings, see below.
 Enable all checks.
 .It Cm none
 Disable all checks.
-.It Cm [no-]extra
-Check remaining files in the package directory.
 .It Cm [no-]global
 Check inter-package consistency for distfile hashes and used licenses.
 .El

@@ -2,7 +2,7 @@ package pkglint
 
 import "gopkg.in/check.v1"
 
-func (s *Suite) Test_Lines_CheckRcsID(c *check.C) {
+func (s *Suite) Test_Lines_CheckCvsID(c *check.C) {
 	t := s.Init(c)
 
 	lines := t.NewLines("filename",
@@ -13,7 +13,7 @@ func (s *Suite) Test_Lines_CheckRcsID(c *check.C) {
 		"$"+"FreeBSD$")
 
 	for i := range lines.Lines {
-		lines.CheckRcsID(i, ``, "")
+		lines.CheckCvsID(i, ``, "")
 	}
 
 	t.CheckOutputLines(
@@ -27,7 +27,7 @@ func (s *Suite) Test_Lines_CheckRcsID(c *check.C) {
 // "$NetBSD:" is a copy-and-paste mistake rather than an intentional
 // documentation of the file's history. Therefore, pkgsrc-wip files should
 // only use the unexpanded form.
-func (s *Suite) Test_Lines_CheckRcsID__wip(c *check.C) {
+func (s *Suite) Test_Lines_CheckCvsID__wip(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPkgsrc()

@@ -7,16 +7,12 @@ import (
 	"strings"
 )
 
-func CheckLinesPatch(lines Lines) {
-	if trace.Tracing {
-		defer trace.Call1(lines.FileName)()
-	}
-
+func CheckLinesPatch(lines *Lines) {
 	(&PatchChecker{lines, NewLinesLexer(lines), false, false}).Check()
 }
 
 type PatchChecker struct {
-	lines             Lines
+	lines             *Lines
 	llex              *LinesLexer
 	seenDocumentation bool
 	previousLineEmpty bool
@@ -29,11 +25,7 @@ const (
 )
 
 func (ck *PatchChecker) Check() {
-	if trace.Tracing {
-		defer trace.Call0()()
-	}
-
-	if ck.lines.CheckRcsID(0, ``, "") {
+	if ck.lines.CheckCvsID(0, ``, "") {
 		ck.llex.Skip()
 	}
 	if ck.llex.EOF() {
@@ -94,25 +86,17 @@ func (ck *PatchChecker) Check() {
 	}
 
 	CheckLinesTrailingEmptyLines(ck.lines)
-	sha1Before, err := computePatchSha1Hex(ck.lines.FileName)
-	if SaveAutofixChanges(ck.lines) && G.Pkg != nil && err == nil {
-		sha1After, err := computePatchSha1Hex(ck.lines.FileName)
-		if err == nil {
-			G.Pkg.AutofixDistinfo(sha1Before, sha1After)
-		}
+	sha1Before := computePatchSha1Hex(ck.lines)
+	if SaveAutofixChanges(ck.lines) && G.Pkg != nil {
+		linesAfter := Load(ck.lines.Filename, 0)
+		sha1After := computePatchSha1Hex(linesAfter)
+		G.Pkg.AutofixDistinfo(sha1Before, sha1After)
 	}
 }
 
 // See https://www.gnu.org/software/diffutils/manual/html_node/Detailed-Unified.html
 func (ck *PatchChecker) checkUnifiedDiff(patchedFile string) {
-	if trace.Tracing {
-		defer trace.Call0()()
-	}
-
-	patchedFileType := guessFileType(patchedFile)
-	if trace.Tracing {
-		trace.Stepf("guessFileType(%q) = %s", patchedFile, patchedFileType)
-	}
+	isConfigure := ck.isConfigure(patchedFile)
 
 	hasHunks := false
 	for {
@@ -125,12 +109,9 @@ func (ck *PatchChecker) checkUnifiedDiff(patchedFile string) {
 		hasHunks = true
 		linesToDel := toInt(m[2], 1)
 		linesToAdd := toInt(m[4], 1)
-		if trace.Tracing {
-			trace.Stepf("hunk -%d +%d", linesToDel, linesToAdd)
-		}
 
 		ck.checktextUniHunkCr()
-		ck.checktextRcsid(text)
+		ck.checktextCvsID(text)
 
 		for !ck.llex.EOF() && (linesToDel > 0 || linesToAdd > 0 || hasPrefix(ck.llex.CurrentLine().Text, "\\")) {
 			line := ck.llex.CurrentLine()
@@ -149,15 +130,15 @@ func (ck *PatchChecker) checkUnifiedDiff(patchedFile string) {
 			case hasPrefix(text, " "), hasPrefix(text, "\t"):
 				linesToDel--
 				linesToAdd--
-				ck.checklineContext(text[1:], patchedFileType)
+				ck.checktextCvsID(text)
 
 			case hasPrefix(text, "-"):
 				linesToDel--
 
 			case hasPrefix(text, "+"):
 				linesToAdd--
-				ck.checktextRcsid(text)
-				ck.checklineAdded(text[1:], patchedFileType)
+				ck.checktextCvsID(text)
+				ck.checkConfigure(text[1:], isConfigure)
 
 			case hasPrefix(text, "\\"):
 				// \ No newline at end of file (or a translation of that message)
@@ -196,11 +177,7 @@ func (ck *PatchChecker) checkUnifiedDiff(patchedFile string) {
 	}
 }
 
-func (ck *PatchChecker) checkBeginDiff(line Line, patchedFiles int) {
-	if trace.Tracing {
-		defer trace.Call0()()
-	}
-
+func (ck *PatchChecker) checkBeginDiff(line *Line, patchedFiles int) {
 	if !ck.seenDocumentation && patchedFiles == 0 {
 		line.Errorf("Each patch must be documented.")
 		line.Explain(
@@ -222,6 +199,7 @@ func (ck *PatchChecker) checkBeginDiff(line Line, patchedFiles int) {
 			"After submitting a patch upstream, the corresponding bug report should",
 			"be mentioned in this file, to prevent duplicate work.")
 	}
+
 	if G.Opts.WarnSpace && !ck.previousLineEmpty {
 		fix := line.Autofix()
 		fix.Notef("Empty line expected.")
@@ -230,64 +208,48 @@ func (ck *PatchChecker) checkBeginDiff(line Line, patchedFiles int) {
 	}
 }
 
-func (ck *PatchChecker) checklineContext(text string, patchedFileType FileType) {
-	if trace.Tracing {
-		defer trace.Call2(text, patchedFileType.String())()
+func (ck *PatchChecker) checkConfigure(addedText string, isConfigure bool) {
+	if !isConfigure {
+		return
 	}
-
-	ck.checktextRcsid(text)
-
-	if G.Opts.WarnExtra {
-		ck.checklineAdded(text, patchedFileType)
-	}
-}
-
-func (ck *PatchChecker) checklineAdded(addedText string, patchedFileType FileType) {
-	if trace.Tracing {
-		defer trace.Call2(addedText, patchedFileType.String())()
+	if !hasSuffix(addedText, ": Avoid regenerating within pkgsrc") {
+		return
 	}
 
 	line := ck.llex.PreviousLine()
-	switch patchedFileType {
-	case ftConfigure:
-		if hasSuffix(addedText, ": Avoid regenerating within pkgsrc") {
-			line.Errorf("This code must not be included in patches.")
-			line.Explain(
-				"It is generated automatically by pkgsrc after the patch phase.",
-				"",
-				"For more details, look for \"configure-scripts-override\" in",
-				"mk/configure/gnu-configure.mk.")
-		}
-	}
+	line.Errorf("This code must not be included in patches.")
+	line.Explain(
+		"It is generated automatically by pkgsrc after the patch phase.",
+		"",
+		"For more details, look for \"configure-scripts-override\" in",
+		"mk/configure/gnu-configure.mk.")
 }
 
 func (ck *PatchChecker) checktextUniHunkCr() {
-	if trace.Tracing {
-		defer trace.Call0()()
+	line := ck.llex.PreviousLine()
+	if !hasSuffix(line.Text, "\r") {
+		return
 	}
 
-	line := ck.llex.PreviousLine()
-	if hasSuffix(line.Text, "\r") {
-		// This code has been introduced around 2006.
-		// As of 2018, this might be fixed by now.
-		fix := line.Autofix()
-		fix.Errorf("The hunk header must not end with a CR character.")
-		fix.Explain(
-			"The MacOS X patch utility cannot handle these.")
-		fix.Replace("\r\n", "\n")
-		fix.Apply()
-	}
+	// This code has been introduced around 2006.
+	// As of 2018, this might be fixed by now.
+	fix := line.Autofix()
+	fix.Errorf("The hunk header must not end with a CR character.")
+	fix.Explain(
+		"The MacOS X patch utility cannot handle these.")
+	fix.Replace("\r\n", "\n")
+	fix.Apply()
 }
 
-func (ck *PatchChecker) checktextRcsid(text string) {
+func (ck *PatchChecker) checktextCvsID(text string) {
 	if strings.IndexByte(text, '$') == -1 {
 		return
 	}
 	if m, tagname := match1(text, `\$(Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State|NetBSD)(?::[^\$]*)?\$`); m {
 		if matches(text, rePatchUniHunk) {
-			ck.llex.PreviousLine().Warnf("Found RCS tag \"$%s$\". Please remove it.", tagname)
+			ck.llex.PreviousLine().Warnf("Found CVS tag \"$%s$\". Please remove it.", tagname)
 		} else {
-			ck.llex.PreviousLine().Warnf("Found RCS tag \"$%s$\". Please remove it by reducing the number of context lines using pkgdiff or \"diff -U[210]\".", tagname)
+			ck.llex.PreviousLine().Warnf("Found CVS tag \"$%s$\". Please remove it by reducing the number of context lines using pkgdiff or \"diff -U[210]\".", tagname)
 		}
 	}
 }
@@ -303,32 +265,10 @@ func (ck *PatchChecker) isEmptyLine(text string) bool {
 		hasPrefix(text, "=============")
 }
 
-type FileType uint8
-
-const (
-	ftConfigure FileType = iota
-	ftUnknown
-)
-
-func (ft FileType) String() string {
-	return [...]string{
-		"configure file",
-		"unknown",
-	}[ft]
-}
-
-// This is used to select the proper subroutine for detecting absolute pathnames.
-func guessFileType(filename string) (fileType FileType) {
-	if trace.Tracing {
-		defer trace.Call(filename, trace.Result(&fileType))()
+func (*PatchChecker) isConfigure(filename string) bool {
+	switch path.Base(filename) {
+	case "configure", "configure.in", "configure.ac":
+		return true
 	}
-
-	basename := path.Base(filename)
-	basename = strings.TrimSuffix(basename, ".in") // doesn't influence the content type
-
-	switch {
-	case basename == "configure" || basename == "configure.ac":
-		return ftConfigure
-	}
-	return ftUnknown
+	return false
 }
