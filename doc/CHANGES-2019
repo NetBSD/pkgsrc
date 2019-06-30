@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2694 2019/06/30 19:26:47 leot Exp $
+$NetBSD: CHANGES-2019,v 1.2695 2019/06/30 19:29:12 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4456,3 +4456,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated editors/pluma to 1.22.1nb1 [gutteridge 2019-06-30]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2019Q2 branch [jperkin 2019-06-30]
 	Updated net/youtube-dl to 20190627 [leot 2019-06-30]
+	Updated net/gallery-dl to 1.8.7 [leot 2019-06-30]
