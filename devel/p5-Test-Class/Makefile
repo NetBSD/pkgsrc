@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2018/08/22 09:44:44 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2019/06/30 20:15:50 nia Exp $
 
 DISTNAME=	Test-Class-0.50
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Test-Class/
+HOMEPAGE=	https://metacpan.org/release/Test-Class
 COMMENT=	Easily create test classes in an xUnit/JUnit style
 LICENSE=	${PERL5_LICENSE}
 

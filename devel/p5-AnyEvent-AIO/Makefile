@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/08/22 09:43:35 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2019/06/30 20:14:30 nia Exp $
 
 DISTNAME=	AnyEvent-AIO-1.1
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=AnyEvent/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/AnyEvent-AIO/
+HOMEPAGE=	https://metacpan.org/release/AnyEvent-AIO
 COMMENT=	Perl 5 module providing truly asynchronous file and directory I/O
 LICENSE=	${PERL5_LICENSE}
 

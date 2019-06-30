@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2018/08/22 09:46:27 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2019/06/30 20:16:43 nia Exp $
 
 DISTNAME=		Net-SSH-Perl-2.14
 PKGNAME=		p5-${DISTNAME:C/-Perl//}
@@ -7,7 +7,7 @@ CATEGORIES=		security net perl5
 MASTER_SITES=		http://search.cpan.org/CPAN/authors/id/S/SC/SCHWIGON/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/Net-SSH-Perl/
+HOMEPAGE=		https://metacpan.org/release/Net-SSH-Perl
 COMMENT=		Perl implementations of SSH1 and SSH2 protocols
 LICENSE=		${PERL5_LICENSE}
 

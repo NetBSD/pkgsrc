@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/08/22 09:44:20 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2019/06/30 20:15:22 nia Exp $
 
 DISTNAME=	MooX-HandlesVia-0.001008
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MA/MATTP/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/MooX-HandlesVia/
+HOMEPAGE=	https://metacpan.org/release/MooX-HandlesVia
 COMMENT=	NativeTrait-like behavior for Moo
 LICENSE=	gnu-gpl-v1 OR artistic
 

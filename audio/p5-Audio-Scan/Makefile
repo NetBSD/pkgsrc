@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2018/08/22 09:42:56 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2019/06/30 20:14:14 nia Exp $
 
 DISTNAME=	Audio-Scan-1.01
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	audio perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/A/AG/AGRUNDMA/}
 
 MAINTAINER=	wenheping@gmail.com
-HOMEPAGE=	http://search.cpan.org/dist/Audio-Scan/
+HOMEPAGE=	https://metacpan.org/release/Audio-Scan
 COMMENT=	XS parser for MP3, MP4, Ogg Vorbis, etc
 LICENSE=	gnu-gpl-v2
 

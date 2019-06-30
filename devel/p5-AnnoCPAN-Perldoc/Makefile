@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/08/22 09:43:35 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2019/06/30 20:14:30 nia Exp $
 
 DISTNAME=	AnnoCPAN-Perldoc-0.10
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/I/IT/ITUB/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/AnnoCPAN-Perldoc/
+HOMEPAGE=	https://metacpan.org/release/AnnoCPAN-Perldoc
 COMMENT=	Integrate AnnoCPAN notes locally into perldoc
 LICENSE=	${PERL5_LICENSE}
 

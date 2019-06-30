@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/08/22 09:44:54 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/06/30 20:16:01 nia Exp $
 
 DISTNAME=	VCP-Dest-svk-0.29
 PKGNAME=	p5-${DISTNAME}
@@ -9,7 +9,7 @@ MODULE_DIR=	modules/by-module
 AUTHOR_DIR=	authors/id/C/CL/CLKAO
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/VCP-Dest-svk/
+HOMEPAGE=	https://metacpan.org/release/VCP-Dest-svk
 COMMENT=	VCP destination driver for SVN/SVK repositories
 
 DEPENDS+=	p5-VCP>=0.9beta20050110:../../devel/p5-VCP

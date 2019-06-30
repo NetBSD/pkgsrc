@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/08/22 09:44:43 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/06/30 20:15:49 nia Exp $
 #
 
 DISTNAME=	Test-Approx-0.03
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Test-Approx
+HOMEPAGE=	https://metacpan.org/release/Test-Approx
 COMMENT=	Perl module for testing approximate equality of values
 LICENSE=	${PERL5_LICENSE}
 

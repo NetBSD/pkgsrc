@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/08/22 09:46:14 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/06/30 20:16:35 nia Exp $
 
 DISTNAME=	LaTeX-Encode-0.092.0
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=LaTeX/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/LaTeX-Encode/
+HOMEPAGE=	https://metacpan.org/release/LaTeX-Encode
 COMMENT=	Encode characters for LaTeX formatting
 LICENSE=	gnu-gpl-v2 # OR artistic
 

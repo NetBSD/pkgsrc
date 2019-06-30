@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/08/22 09:45:57 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/06/30 20:16:26 nia Exp $
 
 DISTNAME=		IO-SessionData-1.03
 PKGNAME=		p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=		net perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=IO/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/IO-SessionData/
+HOMEPAGE=		https://metacpan.org/release/IO-SessionData
 COMMENT=		Supporting module for SOAP::Lite
 LICENSE=		${PERL5_LICENSE}
 

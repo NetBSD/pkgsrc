@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/08/22 09:47:55 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/06/30 20:17:47 nia Exp $
 
 DISTNAME=	URI-Nested-0.10
 PKGNAME=	p5-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=URI/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Perl extension to provide nested URIs
-HOMEPAGE=	http://search.cpan.org/dist/URI-db/
+HOMEPAGE=	https://metacpan.org/release/URI-db
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI

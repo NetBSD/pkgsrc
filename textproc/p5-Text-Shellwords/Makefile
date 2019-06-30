@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/08/22 09:47:02 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/06/30 20:17:03 nia Exp $
 #
 
 DISTNAME=		Text-Shellwords-1.08
@@ -8,7 +8,7 @@ CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Text/}
 
 MAINTAINER=		dprice@cs.nmsu.edu
-HOMEPAGE=		http://search.cpan.org/dist/Text-Shellwords/
+HOMEPAGE=		https://metacpan.org/release/Text-Shellwords
 COMMENT=		Wrapper around shellwords.pl package
 
 PERL5_PACKLIST=		auto/Text/Shellwords/.packlist

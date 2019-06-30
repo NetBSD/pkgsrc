@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/08/22 09:42:54 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/06/30 20:14:13 nia Exp $
 
 DISTNAME=	Compress-LZMA-Simple-0.2
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Compress/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Compress-LZMA-Simple/
+HOMEPAGE=	https://metacpan.org/release/Compress-LZMA-Simple
 COMMENT=	Perl interface of lzmalib
 LICENSE=	${PERL5_LICENSE}
 

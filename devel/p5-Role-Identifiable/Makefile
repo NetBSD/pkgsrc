@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/08/22 09:44:35 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/06/30 20:15:40 nia Exp $
 
 DISTNAME=	Role-Identifiable-0.007
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/R/RJ/RJBS/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Role-Identifiable/
+HOMEPAGE=	https://metacpan.org/release/Role-Identifiable
 COMMENT=	Perl 5 role with an ident attribute
 LICENSE=	${PERL5_LICENSE}
 

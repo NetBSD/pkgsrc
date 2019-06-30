@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/08/22 09:45:41 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/06/30 20:16:23 nia Exp $
 
 DISTNAME=	Statistics-TTest-1.1.0
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	math perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Statistics/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Statistics-TTest/
+HOMEPAGE=	https://metacpan.org/release/Statistics-TTest
 COMMENT=	Perl module of confidence interval computation using T-Tests
 #LICENSE=	Unknown
 

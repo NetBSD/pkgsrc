@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/08/22 09:47:55 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/06/30 20:17:47 nia Exp $
 
 DISTNAME=		WWW-CSRF-1.00
 PKGNAME=		p5-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=WWW/}
 LICENSE=		${PERL5_LICENSE}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/WWW-CSRF/
+HOMEPAGE=		https://metacpan.org/release/WWW-CSRF
 COMMENT=		Generate and check tokens to protect against CSRF attacks
 
 DEPENDS+=		p5-Bytes-Random-Secure>=0.26:../../security/p5-Bytes-Random-Secure

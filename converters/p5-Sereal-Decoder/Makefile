@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/04/19 14:36:05 wen Exp $
+# $NetBSD: Makefile,v 1.17 2019/06/30 20:14:18 nia Exp $
 
 DISTNAME=	Sereal-Decoder-4.007
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	security perl5 converters
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../CPAN/authors/id/Y/YV/YVES/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Sereal-Decoder/
+HOMEPAGE=	https://metacpan.org/release/Sereal-Decoder
 COMMENT=	Perl5 module for fast, compact, powerful binary deserialization
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2018/08/22 09:43:04 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2019/06/30 20:14:15 nia Exp $
 #
 
 DISTNAME=	Device-Gsm-1.61
@@ -8,7 +8,7 @@ CATEGORIES=	comms perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Device/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Device-Gsm/
+HOMEPAGE=	https://metacpan.org/release/Device-Gsm
 COMMENT=	Perl module to interface GSM cellular / modems
 LICENSE=	${PERL5_LICENSE}
 

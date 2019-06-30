@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/08/22 09:44:49 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/06/30 20:15:55 nia Exp $
 #
 
 DISTNAME=	Test-Pod-Spelling-CommonMistakes-1.001
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Test-Pod-Spelling-CommonMistakes/
+HOMEPAGE=	https://metacpan.org/release/Test-Pod-Spelling-CommonMistakes
 COMMENT=	Checks POD for common spelling mistake
 LICENSE=	${PERL5_LICENSE}
 

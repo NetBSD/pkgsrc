@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/08/22 09:44:51 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/06/30 20:15:57 nia Exp $
 
 DISTNAME=		Test-Version-2.09
 PKGNAME=		p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Test/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/Test-Version/
+HOMEPAGE=		https://metacpan.org/release/Test-Version
 COMMENT=		Check to see that version's in modules are sane
 LICENSE=		${PERL5_LICENSE}
 

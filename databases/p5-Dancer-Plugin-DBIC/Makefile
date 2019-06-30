@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/08/22 09:43:18 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/06/30 20:14:25 nia Exp $
 
 DISTNAME=	Dancer-Plugin-DBIC-0.2104
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Dancer/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Dancer-Plugin-DBIC/
+HOMEPAGE=	https://metacpan.org/release/Dancer-Plugin-DBIC
 COMMENT=	DBIx::Class interface for Dancer applications
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2018/11/14 22:22:48 kleink Exp $
+# $NetBSD: Makefile,v 1.46 2019/06/30 20:17:50 nia Exp $
 
 DISTNAME=	Wx-Perl-ProcessStream-0.32
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	x11 perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Wx/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Wx-Perl-ProcessStream/
+HOMEPAGE=	https://metacpan.org/release/Wx-Perl-ProcessStream
 COMMENT=	Access IO of external processes via events from WxWidgets
 LICENSE=	${PERL5_LICENSE}
 

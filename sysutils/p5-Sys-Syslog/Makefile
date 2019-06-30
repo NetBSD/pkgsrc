@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/08/22 09:46:39 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/06/30 20:16:47 nia Exp $
 #
 
 DISTNAME=	Sys-Syslog-0.35
@@ -8,7 +8,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Sys/}
 
 MAINTAINER=	evaldo@gardenali.biz
-HOMEPAGE=	http://search.cpan.org/dist/Sys-Syslog/
+HOMEPAGE=	https://metacpan.org/release/Sys-Syslog
 COMMENT=	Perl interface to the UNIX syslog(3) calls
 LICENSE=	${PERL5_LICENSE}
 

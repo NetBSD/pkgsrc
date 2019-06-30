@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/08/22 09:44:55 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/06/30 20:16:03 nia Exp $
 
 DISTNAME=	autodie-2.29
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=autodie/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/autodie/
+HOMEPAGE=	https://metacpan.org/release/autodie
 COMMENT=	Replace functions with ones that succeed or die with lexical scope
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/08/22 09:47:35 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2019/06/30 20:17:28 nia Exp $
 
 DISTNAME=	CatalystX-CRUD-Controller-RHTMLO-0.20
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CatalystX/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/CatalystX-CRUD-Controller-RHTMLO/
+HOMEPAGE=	https://metacpan.org/release/CatalystX-CRUD-Controller-RHTMLO
 COMMENT=	Rose::HTML::Objects CRUD controller
 LICENSE=	${PERL5_LICENSE}
 

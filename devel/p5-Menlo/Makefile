@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/08/22 09:44:15 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/06/30 20:15:17 nia Exp $
 
 DISTNAME=	Menlo-1.9019
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MI/MIYAGAWA/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Menlo
+HOMEPAGE=	https://metacpan.org/release/Menlo
 COMMENT=	A CPAN client
 LICENSE=	${PERL5_LICENSE}
 

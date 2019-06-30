@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/08/22 09:44:02 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/06/30 20:15:03 nia Exp $
 
 DISTNAME=	File-Policy-1.005
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/File-Policy/
+HOMEPAGE=	https://metacpan.org/release/File-Policy
 COMMENT=	Perl 5 module to provide site policy for file I/O functions
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2018/08/22 09:43:46 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2019/06/30 20:14:44 nia Exp $
 
 DISTNAME=	Compress-Raw-Zlib-2.081
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Compress/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Compress-Raw-Zlib/
+HOMEPAGE=	https://metacpan.org/release/Compress-Raw-Zlib
 COMMENT=	Perl5 module interface to the zlib compression library
 LICENSE=	${PERL5_LICENSE}
 

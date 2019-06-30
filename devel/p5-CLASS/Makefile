@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/08/22 09:43:38 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/06/30 20:14:34 nia Exp $
 
 DISTNAME=	CLASS-1.00
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MS/MSCHWERN/}
 
 MAINTAINER=	he@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/CLASS/
+HOMEPAGE=	https://metacpan.org/release/CLASS
 COMMENT=	Alias for __PACKAGE__
 LICENSE=	${PERL5_LICENSE}
 

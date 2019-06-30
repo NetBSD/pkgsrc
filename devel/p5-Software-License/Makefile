@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2018/12/04 08:01:24 wen Exp $
+# $NetBSD: Makefile,v 1.25 2019/06/30 20:15:43 nia Exp $
 
 DISTNAME=	Software-License-0.103014
 # put a period in the center of 6 digit, for example, 0.103004 -> 0.103.004
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/L/LE/LEONT/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Software-License/
+HOMEPAGE=	https://metacpan.org/release/Software-License
 COMMENT=	Perl 5 module which provide templated software licenses
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2018/08/22 09:44:26 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2019/06/30 20:15:29 nia Exp $
 
 DISTNAME=	OLE-Storage_Lite-0.19
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=OLE/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/OLE-Storage_Lite/
+HOMEPAGE=	https://metacpan.org/release/OLE-Storage_Lite
 COMMENT=	Module for reading and writing OLE-Structured files
 
 DEPENDS+=		p5-IO-stringy>=2.101:../../devel/p5-IO-stringy

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/08/22 09:47:32 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/06/30 20:17:24 nia Exp $
 
 DISTNAME=	Catalyst-Authentication-Credential-HTTP-1.018
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Authentication-Credential-HTTP/
+HOMEPAGE=	https://metacpan.org/release/Catalyst-Authentication-Credential-HTTP
 COMMENT=	HTTP Basic and Digest authentication for Catalyst
 LICENSE=	${PERL5_LICENSE}
 

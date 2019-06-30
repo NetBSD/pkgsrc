@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/08/22 09:47:41 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/06/30 20:17:33 nia Exp $
 
 DISTNAME=	HTTP-Cookies-6.04
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/HTTP-Cookies/
+HOMEPAGE=	https://metacpan.org/release/HTTP-Cookies
 COMMENT=	HTTP cookie jars
 LICENSE=	${PERL5_LICENSE}
 

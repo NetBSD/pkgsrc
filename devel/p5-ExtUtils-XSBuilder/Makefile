@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2018/08/22 09:43:59 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/06/30 20:15:00 nia Exp $
 
 DISTNAME=	ExtUtils-XSBuilder-0.28
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=ExtUtils/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/ExtUtils-XSBuilder/
+HOMEPAGE=	https://metacpan.org/release/ExtUtils-XSBuilder
 COMMENT=	Perl5 module for automatic XS glue code generation
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/08/22 09:47:15 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/06/30 20:17:14 nia Exp $
 
 DISTNAME=		DateTime-Event-Recurrence-0.19
 PKGNAME=		p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=		time perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=DateTime/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/DateTime-Event-Recurrence
+HOMEPAGE=		https://metacpan.org/release/DateTime-Event-Recurrence
 COMMENT=		DateTime::Set extension to create basic recurrence sets
 LICENSE=		${PERL5_LICENSE}
 

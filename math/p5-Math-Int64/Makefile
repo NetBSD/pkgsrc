@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/08/22 09:45:38 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/06/30 20:16:19 nia Exp $
 #
 
 DISTNAME=	Math-Int64-0.54
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	math perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Math/}
 
-HOMEPAGE=	http://search.cpan.org/dist/Math-Int64/
+HOMEPAGE=	https://metacpan.org/release/Math-Int64
 COMMENT=	Manipulate 64 bits integers in Perl
 LICENSE=	${PERL5_LICENSE}
 

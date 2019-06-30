@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/08/22 09:46:19 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2019/06/30 20:16:36 nia Exp $
 #
 
 DISTNAME=	Authen-CAS-Client-0.08
@@ -8,7 +8,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Authen/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Authen-CAS-Client/
+HOMEPAGE=	https://metacpan.org/release/Authen-CAS-Client
 COMMENT=	Perl 5 module providing an interface for JA-SIG's CAS
 LICENSE=	2-clause-bsd
 

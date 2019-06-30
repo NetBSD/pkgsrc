@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/08/22 09:44:47 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/06/30 20:15:53 nia Exp $
 #
 
 DISTNAME=	Test-Mock-LWP-0.08
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5 net
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Test-Mock-LWP/
+HOMEPAGE=	https://metacpan.org/release/Test-Mock-LWP
 COMMENT=	Perl 5 package providing easy mocking of LWP packages
 LICENSE=	${PERL5_LICENSE}
 

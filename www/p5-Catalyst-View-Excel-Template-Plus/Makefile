@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/08/22 09:47:35 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/06/30 20:17:27 nia Exp $
 
 DISTNAME=	Catalyst-View-Excel-Template-Plus-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Catalyst-View-Excel-Template-Plus/
+HOMEPAGE=	https://metacpan.org/release/Catalyst-View-Excel-Template-Plus
 COMMENT=	Catalyst View for Excel::Template::Plus
 LICENSE=	${PERL5_LICENSE}
 

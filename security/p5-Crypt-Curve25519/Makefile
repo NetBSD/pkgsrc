@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/08/22 09:46:21 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/06/30 20:16:37 nia Exp $
 
 DISTNAME=		Crypt-Curve25519-0.06
 PKGNAME=		p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/Crypt-Curve25519/
+HOMEPAGE=		https://metacpan.org/release/Crypt-Curve25519
 COMMENT=		Perl5 module for the elliptic-curve Diffie-Hellman key exchange
 LICENSE=		${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2018/08/22 09:47:53 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2019/06/30 20:17:44 nia Exp $
 
 DISTNAME=		Template-Extract-0.41
 PKGNAME=		p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Template/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/Template-Extract/
+HOMEPAGE=		https://metacpan.org/release/Template-Extract
 COMMENT=		Perl5 module for extracting data structure from TT2-rendered documents
 LICENSE=		mit
 

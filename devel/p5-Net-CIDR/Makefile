@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/04/20 02:49:25 wen Exp $
+# $NetBSD: Makefile,v 1.27 2019/06/30 20:15:29 nia Exp $
 #
 
 DISTNAME=	Net-CIDR-0.20
@@ -7,7 +7,7 @@ CATEGORIES=	devel net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Net-CIDR/
+HOMEPAGE=	https://metacpan.org/release/Net-CIDR
 COMMENT=	Perl5 module to manipulate IPv4/IPv6 netblocks in CIDR notation
 LICENSE=	${PERL5_LICENSE}
 

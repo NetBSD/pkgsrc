@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2018/08/22 09:46:28 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2019/06/30 20:16:44 nia Exp $
 #
 
 DISTNAME=		SHA-2.01
@@ -8,7 +8,7 @@ CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=SHA/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/SHA/
+HOMEPAGE=		https://metacpan.org/release/SHA
 COMMENT=		Perl5 interface to the SHA1 algorithm
 
 DEPENDS+=		p5-Digest-SHA1>=1.0:../../security/p5-Digest-SHA1

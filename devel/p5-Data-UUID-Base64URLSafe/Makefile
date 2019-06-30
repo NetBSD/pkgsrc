@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/08/22 09:43:51 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/06/30 20:14:51 nia Exp $
 #
 
 DISTNAME=	Data-UUID-Base64URLSafe-0.35
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
 
-HOMEPAGE=	http://search.cpan.org/dist/Data-UUID-Base64URLSafe/
+HOMEPAGE=	https://metacpan.org/release/Data-UUID-Base64URLSafe
 COMMENT=	URL-safe UUIDs
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2018/08/22 09:44:30 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2019/06/30 20:15:34 nia Exp $
 
 DISTNAME=	Parse-RecDescent-1.967015
 PKGNAME=	p5-${DISTNAME:S/9670/967./}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Parse/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Parse-RecDescent/
+HOMEPAGE=	https://metacpan.org/release/Parse-RecDescent
 COMMENT=	Perl5 module to generate recursive-descent parsers
 LICENSE=	${PERL5_LICENSE}
 

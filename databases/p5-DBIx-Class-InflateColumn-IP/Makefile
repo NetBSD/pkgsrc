@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/08/22 09:43:17 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/06/30 20:14:24 nia Exp $
 
 DISTNAME=	DBIx-Class-InflateColumn-IP-0.02003
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBIx/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/DBIx-Class-InflateColumn-IP/
+HOMEPAGE=	https://metacpan.org/release/DBIx-Class-InflateColumn-IP
 COMMENT=	DBIx::Class component to auto-create NetAddr::IP objects from columns
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/08/22 09:45:15 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/06/30 20:16:10 nia Exp $
 #
 
 DISTNAME=	GD-SVG-0.33
@@ -8,7 +8,7 @@ CATEGORIES=	graphics perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=GD/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/GD-SVG/
+HOMEPAGE=	https://metacpan.org/release/GD-SVG
 COMMENT=	Enables SVG output from scripts written using GD
 LICENSE=	${PERL5_LICENSE}
 

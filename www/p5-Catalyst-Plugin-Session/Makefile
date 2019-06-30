@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/01/04 06:26:51 wen Exp $
+# $NetBSD: Makefile,v 1.34 2019/06/30 20:17:26 nia Exp $
 
 DISTNAME=	Catalyst-Plugin-Session-0.41
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Plugin-Session/
+HOMEPAGE=	https://metacpan.org/release/Catalyst-Plugin-Session
 COMMENT=	Generic Catalyst Session plugin
 LICENSE=	${PERL5_LICENSE}
 

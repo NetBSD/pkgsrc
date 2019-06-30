@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/08/22 09:45:02 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/06/30 20:16:06 nia Exp $
 
 DISTNAME=	Padre-Plugin-DataWalker-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	editors perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Padre/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Padre-Plugin-DataWalker/
+HOMEPAGE=	https://metacpan.org/release/Padre-Plugin-DataWalker
 COMMENT=	Simple Perl data structure browser Padre
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/08/22 09:45:56 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/06/30 20:16:25 nia Exp $
 #
 
 DISTNAME=	Data-Stream-Bulk-0.11
@@ -8,7 +8,7 @@ CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Data-Stream-Bulk/
+HOMEPAGE=	https://metacpan.org/release/Data-Stream-Bulk
 COMMENT=	N at a time iteration API for data transfers
 LICENSE=	${PERL5_LICENSE}
 

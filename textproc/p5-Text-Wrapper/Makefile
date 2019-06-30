@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2018/08/22 09:47:03 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2019/06/30 20:17:05 nia Exp $
 #
 
 DISTNAME=	Text-Wrapper-1.05
@@ -8,7 +8,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Text-Wrapper/
+HOMEPAGE=	https://metacpan.org/release/Text-Wrapper
 COMMENT=	Perl5 module that provides simple word wrapping
 LICENSE=	${PERL5_LICENSE}
 

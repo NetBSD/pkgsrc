@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/05/20 12:01:33 nia Exp $
+# $NetBSD: Makefile,v 1.18 2019/06/30 20:17:49 nia Exp $
 
 DISTNAME=	Clipboard-0.20
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	x11 perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SH/SHLOMIF/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Clipboard/
+HOMEPAGE=	https://metacpan.org/release/Clipboard
 COMMENT=	Copy and paste with any OS
 LICENSE=	${PERL5_LICENSE}
 

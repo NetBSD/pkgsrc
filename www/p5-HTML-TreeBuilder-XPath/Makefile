@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/08/22 09:47:40 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/06/30 20:17:33 nia Exp $
 
 DISTNAME=	HTML-TreeBuilder-XPath-0.14
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTML/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/HTML-TreeBuilder-XPath/
+HOMEPAGE=	https://metacpan.org/release/HTML-TreeBuilder-XPath
 COMMENT=	Perl 5 module adding XPath support to HTML::TreeBuilder
 LICENSE=	${PERL5_LICENSE}
 

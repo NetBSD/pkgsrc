@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/08/22 09:47:31 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/06/30 20:17:23 nia Exp $
 #
 
 DISTNAME=	Captcha-reCAPTCHA-0.97
@@ -8,7 +8,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/P/PH/PHRED/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Captcha-reCAPTCHA/
+HOMEPAGE=	https://metacpan.org/release/Captcha-reCAPTCHA
 COMMENT=	Perl implementation of the reCAPTCHA API
 LICENSE=	${PERL5_LICENSE}
 

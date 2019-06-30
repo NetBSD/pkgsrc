@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/08/22 09:44:47 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2019/06/30 20:15:53 nia Exp $
 #
 
 DISTNAME=		Test-MinimumVersion-0.101082
@@ -8,7 +8,7 @@ CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Test/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/Test-MinimumVersion/
+HOMEPAGE=		https://metacpan.org/release/Test-MinimumVersion
 COMMENT=		Test to prove a module requires newer perl than expected
 LICENSE=		${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/01/26 02:08:02 wen Exp $
+# $NetBSD: Makefile,v 1.17 2019/06/30 20:17:04 nia Exp $
 
 DISTNAME=	Text-Trac-0.24
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	perl5 textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Text-Trac/
+HOMEPAGE=	https://metacpan.org/release/Text-Trac
 COMMENT=	Perl extension for formatting text with Trac Wiki Style
 LICENSE=	${PERL5_LICENSE}
 

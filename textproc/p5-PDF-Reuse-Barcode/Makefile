@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/08/22 09:46:52 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/06/30 20:16:52 nia Exp $
 
 DISTNAME=	PDF-Reuse-Barcode-0.07
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	textproc print perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/C/CN/CNIGHS/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/PDF-Reuse-Barcode/
+HOMEPAGE=	https://metacpan.org/release/PDF-Reuse-Barcode
 COMMENT=	Create barcodes for PDF documents with PDF::Reuse
 LICENSE=	${PERL5_LICENSE}
 

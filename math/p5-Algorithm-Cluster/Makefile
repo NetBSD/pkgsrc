@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/01/12 04:07:08 wen Exp $
+# $NetBSD: Makefile,v 1.13 2019/06/30 20:16:17 nia Exp $
 
 DISTNAME=	Algorithm-Cluster-1.57
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Algorithm/}
 #MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/E/ET/ETHER/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Algorithm-Cluster/
+HOMEPAGE=	https://metacpan.org/release/Algorithm-Cluster
 COMMENT=	Perl interface to the C Clustering Library
 LICENSE=	${PERL5_LICENSE}
 

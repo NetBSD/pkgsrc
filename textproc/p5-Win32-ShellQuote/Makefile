@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/08/22 09:47:04 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/06/30 20:17:06 nia Exp $
 
 DISTNAME=	Win32-ShellQuote-0.003001
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Win32/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Win32-ShellQuote/
+HOMEPAGE=	https://metacpan.org/release/Win32-ShellQuote
 COMMENT=	Quote argument lists for Win32
 LICENSE=	${PERL5_LICENSE}
 

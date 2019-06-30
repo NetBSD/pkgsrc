@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2018/08/22 09:44:23 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2019/06/30 20:15:25 nia Exp $
 #
 
 DISTNAME=	MooseX-Method-Signatures-0.49
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 #MASTER_SITES+=	${MASTER_SITE_PERL_CPAN:=../../authors/id/E/ET/ETHER/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/MooseX-Method-Signatures/
+HOMEPAGE=	https://metacpan.org/release/MooseX-Method-Signatures
 COMMENT=	Perl 5 module for method declarations with type constraints
 LICENSE=	${PERL5_LICENSE}
 

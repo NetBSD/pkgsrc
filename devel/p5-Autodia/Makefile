@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/08/22 09:43:37 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2019/06/30 20:14:33 nia Exp $
 
 DISTNAME=	Autodia-2.14
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TE/TEEJAY/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Autodia/
+HOMEPAGE=	https://metacpan.org/release/Autodia
 COMMENT=	Create documentation through templates
 LICENSE=	gnu-gpl-v2
 

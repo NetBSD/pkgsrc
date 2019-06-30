@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/03/02 04:01:58 wen Exp $
+# $NetBSD: Makefile,v 1.19 2019/06/30 20:14:17 nia Exp $
 
 DISTNAME=	JSON-PP-4.02
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	www perl5 converters
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=JSON/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/JSON-PP/
+HOMEPAGE=	https://metacpan.org/release/JSON-PP
 COMMENT=	JSON::XS compatible pure-Perl module
 LICENSE=	${PERL5_LICENSE}
 

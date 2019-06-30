@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/08/22 09:46:21 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2019/06/30 20:16:37 nia Exp $
 #
 
 DISTNAME=	Crypt-Blowfish_PP-1.12
@@ -8,7 +8,7 @@ CATEGORIES=	security perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Crypt/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Crypt-Blowfish_PP/
+HOMEPAGE=	https://metacpan.org/release/Crypt-Blowfish_PP
 COMMENT=	Blowfish encryption algorithm implemented purely in Perl
 LICENSE=	${PERL5_LICENSE}
 

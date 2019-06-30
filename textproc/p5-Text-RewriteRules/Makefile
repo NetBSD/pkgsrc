@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2018/08/22 09:47:01 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/06/30 20:17:03 nia Exp $
 #
 
 DISTNAME=	Text-RewriteRules-0.25
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Text-RewriteRules/
+HOMEPAGE=	https://metacpan.org/release/Text-RewriteRules
 COMMENT=	Perl 5 module to rewrite text using regexp-based rules
 LICENSE=	${PERL5_LICENSE}
 

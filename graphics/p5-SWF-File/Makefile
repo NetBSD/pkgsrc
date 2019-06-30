@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2018/08/22 09:45:16 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2019/06/30 20:16:11 nia Exp $
 #
 
 DISTNAME=	SWF-File-0.42
@@ -8,7 +8,7 @@ CATEGORIES=	graphics www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/Y/YS/YSAS/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/SWF-File/
+HOMEPAGE=	https://metacpan.org/release/SWF-File
 COMMENT=	Manipulating Flash movie (SWF) files
 
 DEPENDS+=	p5-Data-TemporaryBag-[0-9]*:../../devel/p5-Data-TemporaryBag

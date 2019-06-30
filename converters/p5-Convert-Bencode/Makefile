@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/08/22 09:43:06 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/06/30 20:14:15 nia Exp $
 
 DISTNAME=	Convert-Bencode-1.03
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	converters perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Convert/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Convert-Bencode/
+HOMEPAGE=	https://metacpan.org/release/Convert-Bencode
 COMMENT=	Functions for converting to/from bencoded strings
 LICENSE=	${PERL5_LICENSE}
 

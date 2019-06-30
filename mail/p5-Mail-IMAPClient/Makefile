@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2019/01/03 12:51:26 wen Exp $
+# $NetBSD: Makefile,v 1.48 2019/06/30 20:16:16 nia Exp $
 
 DISTNAME=	Mail-IMAPClient-3.40
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Mail-IMAPClient/
+HOMEPAGE=	https://metacpan.org/release/Mail-IMAPClient
 COMMENT=	Perl5 module for talking to RFC-2060 IMAP servers
 LICENSE=	gnu-gpl-v2 # OR artistic
 

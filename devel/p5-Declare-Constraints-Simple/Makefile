@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/08/22 09:43:52 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/06/30 20:14:52 nia Exp $
 
 DISTNAME=	Declare-Constraints-Simple-0.03
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/P/PH/PHAYLON/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Declare-Constraints-Simple/
+HOMEPAGE=	https://metacpan.org/release/Declare-Constraints-Simple
 COMMENT=	Perl 5 module for declarative validation of data structures
 LICENSE=	${PERL5_LICENSE}
 

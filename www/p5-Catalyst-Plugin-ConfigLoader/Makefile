@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2018/08/22 09:47:34 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/06/30 20:17:26 nia Exp $
 
 DISTNAME=	Catalyst-Plugin-ConfigLoader-0.34
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Plugin-ConfigLoader/
+HOMEPAGE=	https://metacpan.org/release/Catalyst-Plugin-ConfigLoader
 COMMENT=	Load Catalyst config from YAML file
 LICENSE=	${PERL5_LICENSE}
 

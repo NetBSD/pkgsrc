@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/08/22 09:44:15 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/06/30 20:15:18 nia Exp $
 
 DISTNAME=	Method-Signatures-20170211
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/B/BA/BAREFOOT/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Method-Signatures/
+HOMEPAGE=	https://metacpan.org/release/Method-Signatures
 COMMENT=	Method and function declarations with signatures and no source filter
 LICENSE=	${PERL5_LICENSE}
 

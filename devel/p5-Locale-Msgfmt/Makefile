@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/08/22 09:44:12 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/06/30 20:15:15 nia Exp $
 #
 
 DISTNAME=	Locale-Msgfmt-0.15
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Module/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Locale-Msgfmt/
+HOMEPAGE=	https://metacpan.org/release/Locale-Msgfmt
 COMMENT=	Perl 5 module to compile .po files to .mo files
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/08/22 09:44:44 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/06/30 20:15:50 nia Exp $
 #
 
 DISTNAME=	Test-CPAN-Meta-YAML-0.25
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Test-CPAN-Meta-YAML/
+HOMEPAGE=	https://metacpan.org/release/Test-CPAN-Meta-YAML
 COMMENT=	Perl 5 module to validate the META.yml file in a distribution
 LICENSE=	artistic-2.0
 

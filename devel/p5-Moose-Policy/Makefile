@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/08/22 09:44:21 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/06/30 20:15:23 nia Exp $
 #
 
 DISTNAME=	Moose-Policy-0.05
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Moose-Policy/
+HOMEPAGE=	https://metacpan.org/release/Moose-Policy
 COMMENT=	Moose-mounted police
 LICENSE=	${PERL5_LICENSE}
 

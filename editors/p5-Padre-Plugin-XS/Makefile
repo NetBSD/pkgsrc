@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/08/22 09:45:03 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/06/30 20:16:08 nia Exp $
 
 DISTNAME=	Padre-Plugin-XS-0.12
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	editors perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Padre/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Padre-Plugin-XS/
+HOMEPAGE=	https://metacpan.org/release/Padre-Plugin-XS
 COMMENT=	Padre support for perl XS (and perlapi)
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/08/22 09:47:30 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/06/30 20:17:21 nia Exp $
 
 DISTNAME=	CGI-Emulate-PSGI-0.23
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CGI/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/CGI-Emulate-PSGI/
+HOMEPAGE=	https://metacpan.org/release/CGI-Emulate-PSGI
 COMMENT=	Perl 5 module prodiving PSGI adapter for CGI
 LICENSE=	${PERL5_LICENSE}
 

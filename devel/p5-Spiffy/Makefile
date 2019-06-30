@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2018/08/22 09:44:38 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2019/06/30 20:15:44 nia Exp $
 
 DISTNAME=	Spiffy-0.46
 PKGNAME=	p5-${DISTNAME}
@@ -9,7 +9,7 @@ MODULE_DIR=	modules/by-module
 AUTHOR_DIR=	authors/id/I/IN/INGY
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Spiffy/
+HOMEPAGE=	https://metacpan.org/release/Spiffy
 COMMENT=	Object-oriented Perl framework
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/08/22 09:43:54 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/06/30 20:14:54 nia Exp $
 
 DISTNAME=	Devel-FindRef-1.46
 PKGNAME=	p5-${DISTNAME}0
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Devel/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Devel-FindRef/
+HOMEPAGE=	https://metacpan.org/release/Devel-FindRef
 COMMENT=	Perl 5 module to track down references
 LICENSE=	${PERL5_LICENSE}
 

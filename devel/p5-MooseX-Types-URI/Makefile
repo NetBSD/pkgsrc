@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/08/22 09:44:25 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/06/30 20:15:28 nia Exp $
 #
 
 DISTNAME=	MooseX-Types-URI-0.08
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/MooseX-Types-URI/
+HOMEPAGE=	https://metacpan.org/release/MooseX-Types-URI
 COMMENT=	URI related types and coercions for Moose
 LICENSE=	${PERL5_LICENSE}
 

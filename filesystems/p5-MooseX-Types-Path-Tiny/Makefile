@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/08/22 09:45:06 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/06/30 20:16:08 nia Exp $
 
 DISTNAME=	MooseX-Types-Path-Tiny-0.012
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/MooseX-Types-Path-Tiny/
+HOMEPAGE=	https://metacpan.org/release/MooseX-Types-Path-Tiny
 COMMENT=	Path::Tiny types and coercions for Moose
 LICENSE=	${PERL5_LICENSE}
 

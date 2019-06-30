@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/08/22 09:46:53 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/06/30 20:16:53 nia Exp $
 
 DISTNAME=	Pod-Elemental-PerlMunger-0.200006
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Pod/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Pod-Elemental-PerlMunger/
+HOMEPAGE=	https://metacpan.org/release/Pod-Elemental-PerlMunger
 COMMENT=	Perl5 module that takes a string of Perl and rewrites its Pod
 LICENSE=	${PERL5_LICENSE}
 

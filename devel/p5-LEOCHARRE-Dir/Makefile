@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/08/22 09:44:11 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/06/30 20:15:14 nia Exp $
 #
 
 DISTNAME=	LEOCHARRE-Dir-1.08
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/L/LE/LEOCHARRE/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/LEOCHARRE-Dir/
+HOMEPAGE=	https://metacpan.org/release/LEOCHARRE-Dir
 COMMENT=	Subs for general directory needs
 LICENSE=	${PERL5_LICENSE}
 

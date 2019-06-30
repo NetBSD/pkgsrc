@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2018/08/22 09:45:50 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/06/30 20:16:25 nia Exp $
 
 DISTNAME=	GStreamer-0.20
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	multimedia perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=GStreamer/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/GStreamer/
+HOMEPAGE=	https://metacpan.org/release/GStreamer
 COMMENT=	Perl interface to the GStreamer library
 LICENSE=	gnu-lgpl-v2.1
 

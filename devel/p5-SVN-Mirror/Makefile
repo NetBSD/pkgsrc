@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2018/08/22 09:44:36 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2019/06/30 20:15:41 nia Exp $
 
 DISTNAME=	SVN-Mirror-0.75
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5 scm
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=OurNet/CLKAO/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/SVN-Mirror/
+HOMEPAGE=	https://metacpan.org/release/SVN-Mirror
 COMMENT=	Mirrors one Subversion repository to another
 
 DEPENDS+=	p5-subversion>=1.2.0:../../devel/p5-subversion

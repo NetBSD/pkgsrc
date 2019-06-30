@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/08/22 09:44:51 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/06/30 20:15:58 nia Exp $
 #
 
 DISTNAME=		Test-utf8-1.01
@@ -8,7 +8,7 @@ CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Test/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/Test-utf8/
+HOMEPAGE=		https://metacpan.org/release/Test-utf8
 COMMENT=		Handy UTF-8 tests
 LICENSE=		${PERL5_LICENSE}
 

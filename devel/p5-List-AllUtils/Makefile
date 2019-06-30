@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/12/16 06:40:19 wen Exp $
+# $NetBSD: Makefile,v 1.21 2019/06/30 20:15:14 nia Exp $
 
 DISTNAME=	List-AllUtils-0.15
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=List/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/List-AllUtils/
+HOMEPAGE=	https://metacpan.org/release/List-AllUtils
 COMMENT=	Combines List::Util and List::SomeUtils
 LICENSE=	${PERL5_LICENSE}
 
