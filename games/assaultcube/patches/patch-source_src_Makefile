@@ -1,0 +1,64 @@
+$NetBSD: patch-source_src_Makefile,v 1.1 2019/06/30 21:44:30 nia Exp $
+
+- Do not force a compiler or CXXFLAGS.
+- Use LDFLAGS when linking.
+- Use libenet from pkgsrc.
+
+--- source/src/Makefile.orig	2013-11-09 23:12:11.000000000 +0000
++++ source/src/Makefile
+@@ -1,11 +1,9 @@
+-CXXFLAGS= -O3 -fomit-frame-pointer
+-CXX=clang++	# Use clang++, as g++ optimizations cause crashes...
+-override CXXFLAGS+= -Wall -fsigned-char
++CXXFLAGS+= -Wall -fsigned-char
+ 
+ PLATFORM= $(shell uname -s)
+ PLATFORM_PREFIX=native
+ 
+-INCLUDES= -I. -Ibot -I../enet/include
++INCLUDES= -I. -Ibot
+ 
+ STRIP=
+ ifeq (,$(findstring -g,$(CXXFLAGS)))
+@@ -20,10 +18,9 @@ WINDRES= windres
+ CLIENT_INCLUDES= $(INCLUDES) -I../include
+ CLIENT_LIBS= -mwindows -L../lib -lSDL -lSDL_image -lzdll -lopengl32 -lenet -lOpenAL32 -llibvorbisfile -llibintl -lws2_32 -lwinmm -lcurl
+ else
+-USRLIB=$(shell if [ -e /usr/lib64 ]; then echo "/usr/lib64"; else echo "/usr/lib"; fi)
+ # override CXXFLAGS+= -rdynamic		# clang++ doesn't use this...
+-CLIENT_INCLUDES= $(INCLUDES) -I/usr/include `sdl-config --cflags` -idirafter ../include
+-CLIENT_LIBS= -L../enet/.libs -lenet -L$(USRLIB) -lX11 `sdl-config --libs` -lSDL_image -lz -lGL -lopenal -lvorbisfile -lcurl
++CLIENT_INCLUDES= $(INCLUDES) `sdl-config --cflags` `pkg-config --cflags libenet` -I../include
++CLIENT_LIBS= -lX11 `sdl-config --libs` `pkg-config --libs libenet` -lSDL_image -lz -lGL -lopenal -lvorbisfile -lcurl
+ endif
+ 
+ CLIENT_OBJS= \
+@@ -88,7 +85,7 @@ SERVER_INCLUDES= -DSTANDALONE $(INCLUDES
+ SERVER_LIBS= -L../lib -lzdll -lenet -llibintl -lws2_32 -lwinmm
+ else
+ SERVER_INCLUDES= -DSTANDALONE $(INCLUDES)
+-SERVER_LIBS= -L../enet/.libs -lenet -lz
++SERVER_LIBS= `pkg-config --libs libenet` -lz
+ endif
+ 
+ SERVER_OBJS= \
+@@ -155,13 +152,13 @@ client_install: client
+ server_install: server
+ 
+ else
+-client: libenet $(CLIENT_OBJS)
+-	$(CXX) $(CXXFLAGS) -o ac_client $(CLIENT_OBJS) $(CLIENT_LIBS)
++client: $(CLIENT_OBJS)
++	$(CXX) $(LDFLAGS) -o ac_client $(CLIENT_OBJS) $(CLIENT_LIBS)
+ 
+-server: libenet $(SERVER_OBJS)
+-	$(CXX) $(CXXFLAGS) -o ac_server $(SERVER_OBJS) $(SERVER_LIBS)
+-master: libenet $(MASTER_OBJS)
+-	$(CXX) $(CXXFLAGS) -o ac_master $(MASTER_OBJS) $(SERVER_LIBS)
++server: $(SERVER_OBJS)
++	$(CXX) $(LDFLAGS) -o ac_server $(SERVER_OBJS) $(SERVER_LIBS)
++master: $(MASTER_OBJS)
++	$(CXX) $(LDFLAGS) -o ac_master $(MASTER_OBJS) $(SERVER_LIBS)
+ 
+ client_install: client
+ 	install -d ../../bin_unix/

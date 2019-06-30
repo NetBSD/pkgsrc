@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.430 2019/06/30 21:41:46 nia Exp $
+# $NetBSD: Makefile,v 1.431 2019/06/30 21:44:30 nia Exp $
 #
 
 COMMENT=	Games
@@ -30,6 +30,7 @@ SUBDIR+=	armagetronad-server
 SUBDIR+=	arx-libertatis
 SUBDIR+=	asc
 SUBDIR+=	asciiquarium
+SUBDIR+=	assaultcube
 SUBDIR+=	atomix
 SUBDIR+=	atque
 SUBDIR+=	barrage
