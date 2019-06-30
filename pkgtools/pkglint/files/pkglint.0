@@ -1,61 +1,60 @@
-PKGLINT(1)                  General Commands Manual                 PKGLINT(1)
+PKGLINT(1)              NetBSD General Commands Manual              PKGLINT(1)
 
 NNAAMMEE
-     ppkkgglliinntt - static analyzer for pkgsrc packages
+     ppkkgglliinntt — static analyzer for pkgsrc packages
 
 SSYYNNOOPPSSIISS
-     ppkkgglliinntt [--ooppttiioonnss] [_d_i_r _._._.]
+     ppkkgglliinntt [−−ooppttiioonnss] [_d_i_r _._._.]
 
 DDEESSCCRRIIPPTTIIOONN
      ppkkgglliinntt attempts to detect features of the named pkgsrc packages that are
      likely to be bugs, or that are simply deprecated.
 
-
    OOppttiioonnss
-     --CC{{[[nnoo--]]cchheecckk,,......}}  Enable or disable specific checks.  For a list of
+     −−CC{{[[nnoo‐‐]]cchheecckk,,......}}  Enable or disable specific checks.  For a list of
                          checks, see below.
 
-     --dd|----ddeebbuugg          Enable or disable verbose log for debugging pkglint.
+     −−dd|−−‐‐ddeebbuugg          Enable or disable verbose log for debugging pkglint.
 
-     --ee|----eexxppllaaiinn        Print verbose explanations for diagnostics.
+     −−ee|−−‐‐eexxppllaaiinn        Print verbose explanations for diagnostics.
 
-     --FF|----aauuttooffiixx        Repair some of the warnings automatically.
+     −−FF|−−‐‐aauuttooffiixx        Repair some of the warnings automatically.
 
-     --gg|----ggcccc--oouuttppuutt--ffoorrmmaatt
+     −−gg|−−‐‐ggcccc‐‐oouuttppuutt‐‐ffoorrmmaatt
                          Use a format for the diagnostics that is understood
                          by most programs, especially editors, so they can
-                         provide a point-and-goto interface.
+                         provide a point‐and‐goto interface.
 
-     --hh|----hheellpp           Show the summary of command line options, then exit.
+     −−hh|−−‐‐hheellpp           Show the summary of command line options, then exit.
 
-     --II                  Show the _M_a_k_e_f_i_l_e that is constructed by including
-                         all the files that are slurped in via `.include'
+     −−II                  Show the _M_a_k_e_f_i_l_e that is constructed by including
+                         all the files that are slurped in via ‘.include’
                          directives.  This flag is mainly for debugging.
 
-     --ii|----iimmppoorrtt         Check if a package is ready to be imported into
+     −−ii|−−‐‐iimmppoorrtt         Check if a package is ready to be imported into
                          pkgsrc.  This is especially useful for packages from
-                         the pkgsrc-wip project.
+                         the pkgsrc‐wip project.
 
-     --oo|----oonnllyy _s_u_b_s_t_r_i_n_g
+     −−oo|−−‐‐oonnllyy _s_u_b_s_t_r_i_n_g
                          Only handle those diagnostics that have _s_u_b_s_t_r_i_n_g in
                          their text.  This is useful in combination with
-                         ----aauuttooffiixx and ----rreeccuurrssiivvee,, to fix only a single kind
+                         −−‐‐aauuttooffiixx and −−‐‐rreeccuurrssiivvee,, to fix only a single kind
                          of warning in a large number of files.
 
-     --qq|----qquuiieett          Don't print the errors and warnings summary before
+     −−qq|−−‐‐qquuiieett          Don’t print the errors and warnings summary before
                          terminating.
 
-     --rr|----rreeccuurrssiivvee      Check subdirectories, too.  The subdirectories are
-                         those that are mentioned in a `SUBDIR+=' line.
+     −−rr|−−‐‐rreeccuurrssiivvee      Check subdirectories, too.  The subdirectories are
+                         those that are mentioned in a ‘SUBDIR+=’ line.
 
-     --ss|----ssoouurrccee         For all diagnostics having file and line number
+     −−ss|−−‐‐ssoouurrccee         For all diagnostics having file and line number
                          information, show the source code along with the
                          diagnostics.  This is especially useful together with
-                         the --ff|----sshhooww--aauuttooffiixx option.
+                         the −−ff|−−‐‐sshhooww‐‐aauuttooffiixx option.
 
-     --VV|----vveerrssiioonn        Print the current ppkkgglliinntt version number and exit.
+     −−VV|−−‐‐vveerrssiioonn        Print the current ppkkgglliinntt version number and exit.
 
-     --WW{{[[nnoo--]]wwaarrnn,,......}}   Enable or disable specific warnings.  For a list of
+     −−WW{{[[nnoo‐‐]]wwaarrnn,,......}}   Enable or disable specific warnings.  For a list of
                          warnings, see below.
 
    CChheecckkss
@@ -63,9 +62,7 @@ DDEESSCCRRIIPPTTIIOONN
 
      nnoonnee                Disable all checks.
 
-     [[nnoo--]]eexxttrraa          Check remaining files in the package directory.
-
-     [[nnoo--]]gglloobbaall         Check inter-package consistency for distfile hashes
+     [[nnoo‐‐]]gglloobbaall         Check inter‐package consistency for distfile hashes
                          and used licenses.
 
    WWaarrnniinnggss
@@ -73,31 +70,31 @@ DDEESSCCRRIIPPTTIIOONN
 
      nnoonnee                Disable all warnings.
 
-     [[nnoo--]]eexxttrraa          Emit some additional warnings that are not enabled by
+     [[nnoo‐‐]]eexxttrraa          Emit some additional warnings that are not enabled by
                          default.
 
-     [[nnoo--]]ppeerrmm           Warn if a variable is used or modified outside its
+     [[nnoo‐‐]]ppeerrmm           Warn if a variable is used or modified outside its
                          specified scope.
 
-     [[nnoo--]]qquuoottiinngg        Warn for possibly invalid quoting of make variables
+     [[nnoo‐‐]]qquuoottiinngg        Warn for possibly invalid quoting of make variables
                          in shell programs and shell variables themselves.
 
-     [[nnoo--]]ssppaaccee          Emit notes for inconsistent use of whitespace.
+     [[nnoo‐‐]]ssppaaccee          Emit notes for inconsistent use of whitespace.
 
-     [[nnoo--]]ssttyyllee          Warn for stylistic issues that don't affect the build
+     [[nnoo‐‐]]ssttyyllee          Warn for stylistic issues that don’t affect the build
                          process.
 
    OOtthheerr aarrgguummeennttss
-           _d_i_r _._._.             The pkgsrc directories to be checked.  If
-                               omitted, the current directory is checked.
+           _d_i_r _._._.             The pkgsrc directories to be checked.  If omit‐
+                               ted, the current directory is checked.
 
 FFIILLEESS
-     _p_k_g_s_r_c_/_m_k_/_*  Files from the pkgsrc infrastructure.
+     pkgsrc/mk/*  Files from the pkgsrc infrastructure.
 
 EEXXAAMMPPLLEESS
      ppkkgglliinntt ..   Checks the package in the current directory.
 
-     ppkkgglliinntt --WWaallll //uussrr//ppkkggssrrcc//ddeevveell
+     ppkkgglliinntt −−WWaallll //uussrr//ppkkggssrrcc//ddeevveell
                  Checks the category Makefile and reports any warnings it can
                  find.
 
@@ -111,10 +108,10 @@ DDIIAAGGNNOOSSTTIICCSS
                    critical as errors.
 
 AAUUTTHHOORRSS
-     Roland Illig <_r_i_l_l_i_g_@_N_e_t_B_S_D_._o_r_g>
+     Roland Illig ⟨_r_i_l_l_i_g_@_N_e_t_B_S_D_._o_r_g⟩
 
 BBUUGGSS
-     If you don't understand the messages, feel free to ask the author or on
-     the <pkgsrc-users@pkgsrc.org> mailing list.
+     If you don’t understand the messages, feel free to ask the author or on
+     the ⟨pkgsrc‐users@pkgsrc.org⟩ mailing list.
 
-NetBSD 8.0                     January 14, 2018                     NetBSD 8.0
+NetBSD 8.0                       June 17, 2019                      NetBSD 8.0
