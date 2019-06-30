@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/08/22 09:47:15 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/06/30 20:17:13 nia Exp $
 #
 
 DISTNAME=	DateTime-Calendar-Discordian-1.0
@@ -8,7 +8,7 @@ CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DateTime/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/DateTime-Calendar-Discordian
+HOMEPAGE=	https://metacpan.org/release/DateTime-Calendar-Discordian
 COMMENT=	Perl extension for the Discordian Calendar
 LICENSE=	${PERL5_LICENSE}
 

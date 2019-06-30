@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/08/22 09:47:52 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/06/30 20:17:43 nia Exp $
 
 DISTNAME=	Rose-URI-1.02
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/J/JS/JSIRACUSA/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Rose-URI/
+HOMEPAGE=	https://metacpan.org/release/Rose-URI
 COMMENT=	URI class for easy and efficient manipulation of URI components
 LICENSE=	${PERL5_LICENSE}
 

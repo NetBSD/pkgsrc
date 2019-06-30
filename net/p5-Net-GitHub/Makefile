@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2018/08/22 09:46:00 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2019/06/30 20:16:29 nia Exp $
 
 DISTNAME=	Net-GitHub-0.95
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	net devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Net-GitHub/
+HOMEPAGE=	https://metacpan.org/release/Net-GitHub
 COMMENT=	Perl 5 interface for github.com
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/08/22 09:46:58 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/06/30 20:16:58 nia Exp $
 
 DISTNAME=	Test-YAML-1.07
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	perl5 textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Test-YAML/
+HOMEPAGE=	https://metacpan.org/release/Test-YAML
 COMMENT=	Testing Module for YAML Implementations
 LICENSE=	${PERL5_LICENSE}
 

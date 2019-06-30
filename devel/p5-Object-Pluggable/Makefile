@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/08/22 09:44:27 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2019/06/30 20:15:30 nia Exp $
 #
 
 DISTNAME=	Object-Pluggable-1.29
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Object/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Object-Pluggable/
+HOMEPAGE=	https://metacpan.org/release/Object-Pluggable
 COMMENT=	Base class for creating plugin-enabled objects
 LICENSE=	${PERL5_LICENSE}
 

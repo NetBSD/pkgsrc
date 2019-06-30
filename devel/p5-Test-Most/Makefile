@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2018/08/22 09:44:48 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2019/06/30 20:15:54 nia Exp $
 
 DISTNAME=	Test-Most-0.35
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Test-Most/
+HOMEPAGE=	https://metacpan.org/release/Test-Most
 COMMENT=	Most commonly needed test functions and features
 LICENSE=	${PERL5_LICENSE}
 

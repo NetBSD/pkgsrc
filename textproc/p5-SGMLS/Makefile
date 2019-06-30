@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/08/22 09:46:55 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/06/30 20:16:55 nia Exp $
 #
 
 DISTNAME=		SGMLSpm-1.03ii
@@ -8,7 +8,7 @@ CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=SGMLS/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/SGMLSpm/
+HOMEPAGE=		https://metacpan.org/release/SGMLSpm
 COMMENT=		Class for postprocessing the output from the sgmls and nsgmls parsers
 
 USE_LANGUAGES=		# empty

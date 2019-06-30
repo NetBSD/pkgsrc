@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2018/08/22 09:47:28 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2019/06/30 20:17:20 nia Exp $
 
 DISTNAME=	App-Nopaste-1.012
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=App/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/App-Nopaste/
+HOMEPAGE=	https://metacpan.org/release/App-Nopaste
 COMMENT=	Perl 5 module providing easy access to any pastebin
 LICENSE=	${PERL5_LICENSE}
 

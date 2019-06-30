@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/08/22 09:43:47 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/06/30 20:14:45 nia Exp $
 
 DISTNAME=	Config-INI-0.025
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Config/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Config-INI/
+HOMEPAGE=	https://metacpan.org/release/Config-INI
 COMMENT=	Perl 5 module to handle simple .ini-file format
 LICENSE=	${PERL5_LICENSE}
 

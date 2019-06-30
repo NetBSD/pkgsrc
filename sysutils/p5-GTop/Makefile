@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2018/08/22 09:46:37 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/06/30 20:16:45 nia Exp $
 
 DISTNAME=		GTop-0.18
 PKGNAME=		p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=		sysutils perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=GTop/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/GTop/
+HOMEPAGE=		https://metacpan.org/release/GTop
 COMMENT=		Perl interface to libgtop
 
 LICENSE=		${PERL5_LICENSE}

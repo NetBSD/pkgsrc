@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/08/22 09:47:33 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/06/30 20:17:25 nia Exp $
 
 DISTNAME=	Catalyst-Engine-HTTP-Prefork-0.51
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Engine-HTTP-Prefork/
+HOMEPAGE=	https://metacpan.org/release/Catalyst-Engine-HTTP-Prefork
 COMMENT=	High-performance pre-forking Catalyst engine
 LICENSE=	${PERL5_LICENSE}
 

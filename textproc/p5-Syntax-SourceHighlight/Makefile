@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/12/13 19:52:23 adam Exp $
+# $NetBSD: Makefile,v 1.16 2019/06/30 20:16:57 nia Exp $
 
 DISTNAME=	Syntax-SourceHighlight-1.1.2
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/M/MU/MURPHY/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Syntax-SourceHighlight/
+HOMEPAGE=	https://metacpan.org/release/Syntax-SourceHighlight
 COMMENT=	Perl binding to GNU source-highlight
 #LICENSE=	# TODO: (see mk/license.mk)
 

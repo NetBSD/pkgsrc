@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/08/22 09:46:54 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/06/30 20:16:55 nia Exp $
 
 DISTNAME=	Pod-Weaver-4.015
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Pod/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Pod-Weaver/
+HOMEPAGE=	https://metacpan.org/release/Pod-Weaver
 COMMENT=	Weave together a Pod document from an outline
 LICENSE=	${PERL5_LICENSE}
 
