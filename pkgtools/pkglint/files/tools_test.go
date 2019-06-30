@@ -40,7 +40,7 @@ func (s *Suite) Test_Tools_ParseToolLine__opsys(c *check.C) {
 	t.SetUpTool("tool1", "", Nowhere)
 	t.SetUpVartypes()
 	t.CreateFileLines("Makefile",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"USE_TOOLS.NetBSD+=\ttool1")
 
@@ -55,7 +55,7 @@ func (s *Suite) Test_Tools_ParseToolLine__invalid_tool_name(c *check.C) {
 
 	t.SetUpVartypes()
 	mklines := t.NewMkLines("Makefile",
-		MkRcsID,
+		MkCvsID,
 		"",
 		".for t in abc ${UNDEFINED}",
 		"TOOLS_CREATE+=\t\t${t}",
@@ -78,7 +78,7 @@ func (s *Suite) Test_Tools_parseUseTools(c *check.C) {
 
 	t.SetUpPkgsrc()
 	t.CreateFileLines("mk/triple-tool.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"USE_TOOLS+=\tunknown unknown unknown")
 	t.FinishSetUp()
@@ -128,7 +128,7 @@ func (s *Suite) Test_Tools__USE_TOOLS_predefined_sed(c *check.C) {
 	t.CreateFileLines("mk/tools/defaults.mk",
 		"_TOOLS_VARNAME.sed=\tSED")
 	t.CreateFileLines("module.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"do-build:",
 		"\t${SED} < input > output",
@@ -174,12 +174,12 @@ func (s *Suite) Test_Tools__load_from_infrastructure(c *check.C) {
 	dummyMklines := t.NewMkLines("dummy.mk")
 
 	createMklines := t.NewMkLines("create.mk",
-		MkRcsID,
+		MkCvsID,
 		"TOOLS_CREATE+= load",
 		"TOOLS_CREATE+= run",
 		"TOOLS_CREATE+= nowhere")
 
-	createMklines.ForEach(func(mkline MkLine) {
+	createMklines.ForEach(func(mkline *MkLine) {
 		tools.ParseToolLine(createMklines, mkline, true, false)
 	})
 
@@ -197,12 +197,12 @@ func (s *Suite) Test_Tools__load_from_infrastructure(c *check.C) {
 
 	// The variable name RUN is reserved by pkgsrc, therefore RUN_CMD.
 	varnamesMklines := t.NewMkLines("varnames.mk",
-		MkRcsID,
+		MkCvsID,
 		"_TOOLS_VARNAME.load=    LOAD",
 		"_TOOLS_VARNAME.run=     RUN_CMD",
 		"_TOOLS_VARNAME.nowhere= NOWHERE")
 
-	varnamesMklines.ForEach(func(mkline MkLine) {
+	varnamesMklines.ForEach(func(mkline *MkLine) {
 		tools.ParseToolLine(varnamesMklines, mkline, true, false)
 	})
 
@@ -314,7 +314,7 @@ func (s *Suite) Test_Tools__builtin_mk(c *check.C) {
 	// may be used in any file at load time.
 
 	mklines := t.SetUpFileMkLines("category/package/builtin.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"VAR!=   ${ECHO} 'too early'",
 		"VAR!=   ${LOAD} 'too early'",
@@ -347,7 +347,7 @@ func (s *Suite) Test_Tools__implicit_definition_in_bsd_pkg_mk(c *check.C) {
 	t.SetUpPkgsrc()
 	t.SetUpCommandLine("-Wall,no-space")
 	t.CreateFileLines("mk/tools/defaults.mk",
-		MkRcsID) // None
+		MkCvsID) // None
 	t.CreateFileLines("mk/bsd.prefs.mk",
 		"USE_TOOLS+=     load")
 	t.CreateFileLines("mk/bsd.pkg.mk",
@@ -368,7 +368,7 @@ func (s *Suite) Test_Tools__both_prefs_and_pkg_mk(c *check.C) {
 	t.SetUpPkgsrc()
 	t.SetUpCommandLine("-Wall,no-space")
 	t.CreateFileLines("mk/tools/defaults.mk",
-		MkRcsID)
+		MkCvsID)
 	t.CreateFileLines("mk/bsd.prefs.mk",
 		"USE_TOOLS+=     both")
 	t.CreateFileLines("mk/bsd.pkg.mk",
@@ -458,7 +458,7 @@ func (s *Suite) Test_Tools__var(c *check.C) {
 	t.FinishSetUp()
 
 	mklines := t.NewMkLines("module.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"pre-configure:",
 		"\t${LN} from to")
@@ -552,16 +552,14 @@ func (s *Suite) Test_Tools_Fallback__called_twice(c *check.C) {
 
 	tools.Fallback(fallback)
 
-	t.ExpectPanic(
-		func() { tools.Fallback(fallback) },
-		"Pkglint internal error: Tools.Fallback must only be called once.")
+	t.ExpectAssert(func() { tools.Fallback(fallback) })
 }
 
 func (s *Suite) Test_Tools__aliases(c *check.C) {
 	t := s.Init(c)
 
 	mklines := t.NewMkLines("mk/tools/replace.mk",
-		MkRcsID,
+		MkCvsID,
 		"TOOLS_CREATE+=\tsed",
 		"TOOLS_PATH.sed=\t/bin/sed",
 		"",
@@ -570,7 +568,7 @@ func (s *Suite) Test_Tools__aliases(c *check.C) {
 		"TOOLS_ALIASES.gsed=\tsed ${tool}")
 
 	infraTools := NewTools()
-	mklines.ForEach(func(mkline MkLine) {
+	mklines.ForEach(func(mkline *MkLine) {
 		infraTools.ParseToolLine(mklines, mkline, false, false)
 	})
 
@@ -595,7 +593,7 @@ func (s *Suite) Test_Tools__aliases_in_for_loop(c *check.C) {
 	t := s.Init(c)
 
 	mklines := t.NewMkLines("mk/tools/replace.mk",
-		MkRcsID,
+		MkCvsID,
 		"_TOOLS_GREP=\tgrep egrep fgrep",
 		"TOOLS_CREATE+=\tgrep egrep fgrep ggrep",
 		".for t in ${_TOOLS_GREP}",
@@ -685,7 +683,7 @@ func (s *Suite) Test_Tools_IsValidToolName(c *check.C) {
 	t.SetUpTool("[", "", AtRunTime)
 	t.SetUpTool("echo -n", "ECHO_N", AtRunTime)
 	mklines := t.NewMkLines("filename.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"USE_TOOLS+=\t[")
 

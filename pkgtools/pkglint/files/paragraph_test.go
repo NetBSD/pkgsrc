@@ -2,34 +2,13 @@ package pkglint
 
 import "gopkg.in/check.v1"
 
-func (s *Suite) Test_Paragraph_Clear(c *check.C) {
+func (s *Suite) Test_Paragraph__empty_line(c *check.C) {
 	t := s.Init(c)
 
-	para := NewParagraph(nil)
+	mklines := t.NewMkLines("filename.mk",
+		"")
 
-	para.Clear()
-
-	t.Check(para.mklines, check.IsNil)
-
-	para.Add(t.NewMkLine("filename.mk", 123, "#"))
-
-	para.Clear()
-
-	t.Check(para.mklines, check.IsNil)
-}
-
-func (s *Suite) Test_Paragraph_Add__empty_line(c *check.C) {
-	t := s.Init(c)
-
-	para := NewParagraph(nil)
-
-	para.Clear()
-
-	t.Check(para.mklines, check.IsNil)
-
-	t.ExpectPanic(
-		func() { para.Add(t.NewMkLine("filename.mk", 123, "")) },
-		"Pkglint internal error: A paragraph must not contain empty lines.")
+	t.ExpectAssert(func() { _ = NewParagraph(mklines, 0, 1) })
 }
 
 func (s *Suite) Test_Paragraph_Align(c *check.C) {
@@ -37,15 +16,10 @@ func (s *Suite) Test_Paragraph_Align(c *check.C) {
 
 	t.SetUpCommandLine("-Wall", "--autofix")
 	mklines := t.SetUpFileMkLines("filename.mk",
-		MkRcsID,
+		MkCvsID,
 		"VAR=value",
 		"VAR=\t\t\tvalue")
-	para := NewParagraph(nil)
-	for _, mkline := range mklines.mklines {
-		// Strictly speaking, lines 1 and 2 don't belong to the paragraph,
-		// but aligning the lines works nevertheless.
-		para.Add(mkline)
-	}
+	para := NewParagraph(mklines, 1, 3)
 
 	para.Align()
 	mklines.SaveAutofixChanges()
@@ -55,7 +29,7 @@ func (s *Suite) Test_Paragraph_Align(c *check.C) {
 		"AUTOFIX: ~/filename.mk:3: Replacing \"\\t\\t\\t\" with \"\\t\".")
 
 	t.CheckFileLinesDetab("filename.mk",
-		MkRcsID,
+		MkCvsID,
 		"VAR=    value",
 		"VAR=    value")
 }
@@ -65,30 +39,27 @@ func (s *Suite) Test_Paragraph_AlignTo(c *check.C) {
 
 	t.SetUpCommandLine("-Wall", "--autofix")
 	mklines := t.SetUpFileMkLines("filename.mk",
-		MkRcsID,
+		MkCvsID,
 		"VAR=value",
 		"VAR=\t\tvalue",
+		"# comment between the variable assignments",
 		"VAR=\t \tvalue",
 		"VAR=\t\t\tvalue")
-	para := NewParagraph(nil)
-	for _, mkline := range mklines.mklines {
-		// Strictly speaking, lines 1 and 2 don't belong to the paragraph,
-		// but aligning the lines works nevertheless.
-		para.Add(mkline)
-	}
+	para := NewParagraph(mklines, 1, 6)
 
 	para.AlignTo(16)
 	mklines.SaveAutofixChanges()
 
 	t.CheckOutputLines(
 		"AUTOFIX: ~/filename.mk:2: Replacing \"\" with \"\\t\\t\".",
-		"AUTOFIX: ~/filename.mk:4: Replacing \"\\t \\t\" with \"\\t\\t\".",
-		"AUTOFIX: ~/filename.mk:5: Replacing \"\\t\\t\\t\" with \"\\t\\t\".")
+		"AUTOFIX: ~/filename.mk:5: Replacing \"\\t \\t\" with \"\\t\\t\".",
+		"AUTOFIX: ~/filename.mk:6: Replacing \"\\t\\t\\t\" with \"\\t\\t\".")
 
 	t.CheckFileLinesDetab("filename.mk",
-		MkRcsID,
+		MkCvsID,
 		"VAR=            value",
 		"VAR=            value",
+		"# comment between the variable assignments",
 		"VAR=            value",
 		"VAR=            value")
 }
@@ -98,16 +69,13 @@ func (s *Suite) Test_Paragraph_AlignTo__continued_lines(c *check.C) {
 
 	t.SetUpCommandLine("-Wall", "--autofix")
 	mklines := t.SetUpFileMkLines("filename.mk",
-		MkRcsID,
+		MkCvsID,
 		"VAR= \\",
 		"  value",
 		"VAR= value1 \\",
 		"value2 \\",
 		"\t\tvalue3")
-	para := NewParagraph(nil)
-	for _, mkline := range mklines.mklines {
-		para.Add(mkline)
-	}
+	para := NewParagraph(mklines, 1, 3)
 
 	para.AlignTo(16)
 	mklines.SaveAutofixChanges()
@@ -116,7 +84,7 @@ func (s *Suite) Test_Paragraph_AlignTo__continued_lines(c *check.C) {
 		"AUTOFIX: ~/filename.mk:4: Replacing \" \" with \"\\t\\t\".")
 
 	t.CheckFileLinesDetab("filename.mk",
-		MkRcsID,
+		MkCvsID,
 		// Since this line does not contain the actual value, it doesn't need to be aligned.
 		"VAR= \\",
 		"  value",
@@ -131,13 +99,10 @@ func (s *Suite) Test_Paragraph_AlignTo__outlier(c *check.C) {
 
 	t.SetUpCommandLine("-Wall", "--autofix")
 	mklines := t.SetUpFileMkLines("filename.mk",
-		MkRcsID,
+		MkCvsID,
 		"VAR= value",
 		"VERY_LONG_VARIABLE_NAME= value1")
-	para := NewParagraph(nil)
-	for _, mkline := range mklines.mklines {
-		para.Add(mkline)
-	}
+	para := NewParagraph(mklines, 1, 3)
 
 	para.AlignTo(8)
 	mklines.SaveAutofixChanges()
@@ -146,7 +111,7 @@ func (s *Suite) Test_Paragraph_AlignTo__outlier(c *check.C) {
 		"AUTOFIX: ~/filename.mk:2: Replacing \" \" with \"\\t\".")
 
 	t.CheckFileLinesDetab("filename.mk",
-		MkRcsID,
+		MkCvsID,
 		"VAR=    value",
 		// The space is preserved since this line is an outlier.
 		"VERY_LONG_VARIABLE_NAME= value1")

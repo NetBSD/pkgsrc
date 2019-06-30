@@ -173,10 +173,40 @@ func (s *Suite) Test_matchContinuationLine(c *check.C) {
 	c.Check(continuation, equals, "\\")
 }
 
-func (s *Suite) Test_Load__errors(c *check.C) {
+func (s *Suite) Test_Load(c *check.C) {
 	t := s.Init(c)
 
-	t.CreateFileLines("empty")
+	nonexistent := t.File("nonexistent")
+	empty := t.CreateFileLines("empty")
+	oneLiner := t.CreateFileLines("one-liner",
+		"hello, world")
+
+	t.Check(Load(nonexistent, 0), check.IsNil)
+	t.Check(Load(empty, 0).Lines, check.HasLen, 0)
+	t.Check(Load(oneLiner, 0).Lines[0].Text, equals, "hello, world")
+
+	t.CheckOutputEmpty()
+
+	t.Check(Load(nonexistent, LogErrors), check.IsNil)
+	t.Check(Load(empty, LogErrors).Lines, check.HasLen, 0)
+	t.Check(Load(oneLiner, LogErrors).Lines[0].Text, equals, "hello, world")
+
+	t.CheckOutputLines(
+		"ERROR: ~/nonexistent: Cannot be read.")
+
+	t.Check(Load(nonexistent, NotEmpty), check.IsNil)
+	t.Check(Load(empty, NotEmpty), check.IsNil)
+	t.Check(Load(oneLiner, NotEmpty).Lines[0].Text, equals, "hello, world")
+
+	t.CheckOutputEmpty()
+
+	t.Check(Load(nonexistent, NotEmpty|LogErrors), check.IsNil)
+	t.Check(Load(empty, NotEmpty|LogErrors), check.IsNil)
+	t.Check(Load(oneLiner, NotEmpty|LogErrors).Lines[0].Text, equals, "hello, world")
+
+	t.CheckOutputLines(
+		"ERROR: ~/nonexistent: Cannot be read.",
+		"ERROR: ~/empty: Must not be empty.")
 
 	t.ExpectFatal(
 		func() { Load(t.File("does-not-exist"), MustSucceed) },

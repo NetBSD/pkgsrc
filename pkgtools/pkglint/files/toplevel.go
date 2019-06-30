@@ -35,7 +35,7 @@ func CheckdirToplevel(dir string) {
 	}
 }
 
-func (ctx *Toplevel) checkSubdir(mkline MkLine) {
+func (ctx *Toplevel) checkSubdir(mkline *MkLine) {
 	subdir := mkline.Value()
 
 	if mkline.IsCommentedVarassign() && (mkline.VarassignComment() == "#" || mkline.VarassignComment() == "") {

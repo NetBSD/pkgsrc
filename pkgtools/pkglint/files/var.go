@@ -31,8 +31,8 @@ type Var struct {
 	value      string
 	valueInfra string
 
-	readLocations  []MkLine
-	writeLocations []MkLine
+	readLocations  []*MkLine
+	writeLocations []*MkLine
 
 	conditional     bool
 	conditionalVars StringSet
@@ -106,7 +106,7 @@ func (v *Var) Constant() bool {
 // Variable assignments in the pkgsrc infrastructure are taken into account
 // for determining the constant value.
 func (v *Var) ConstantValue() string {
-	assertf(v.Constant(), "Variable must be constant.")
+	assert(v.Constant())
 	return v.constantValue
 }
 
@@ -146,7 +146,7 @@ func (v *Var) ValueInfra() string {
 // are not listed.
 //
 // Variable uses in the pkgsrc infrastructure are taken into account.
-func (v *Var) ReadLocations() []MkLine {
+func (v *Var) ReadLocations() []*MkLine {
 	return v.readLocations
 }
 
@@ -156,11 +156,11 @@ func (v *Var) ReadLocations() []MkLine {
 // reachable in practice.
 //
 // Variable assignments in the pkgsrc infrastructure are taken into account.
-func (v *Var) WriteLocations() []MkLine {
+func (v *Var) WriteLocations() []*MkLine {
 	return v.writeLocations
 }
 
-func (v *Var) Read(mkline MkLine) {
+func (v *Var) Read(mkline *MkLine) {
 	v.readLocations = append(v.readLocations, mkline)
 	v.constantState = [...]uint8{3, 2, 2, 3}[v.constantState]
 }
@@ -169,8 +169,8 @@ func (v *Var) Read(mkline MkLine) {
 // Only standard assignments (VAR=value) are handled.
 // Side-effect assignments (${VAR::=value}) are not handled here since
 // they don't occur in practice.
-func (v *Var) Write(mkline MkLine, conditional bool, conditionVarnames ...string) {
-	assertf(mkline.Varname() == v.Name, "wrong variable name")
+func (v *Var) Write(mkline *MkLine, conditional bool, conditionVarnames ...string) {
+	assert(mkline.Varname() == v.Name)
 
 	v.writeLocations = append(v.writeLocations, mkline)
 
@@ -179,7 +179,7 @@ func (v *Var) Write(mkline MkLine, conditional bool, conditionVarnames ...string
 	}
 	v.conditionalVars.AddAll(conditionVarnames)
 
-	mkline.ForEachUsed(func(varUse *MkVarUse, time vucTime) {
+	mkline.ForEachUsed(func(varUse *MkVarUse, time VucTime) {
 		v.refs.Add(varUse.varname)
 	})
 	v.refs.AddAll(conditionVarnames)
@@ -192,7 +192,7 @@ func (v *Var) Write(mkline MkLine, conditional bool, conditionVarnames ...string
 	v.updateConstantValue(mkline)
 }
 
-func (v *Var) update(mkline MkLine, update *string) {
+func (v *Var) update(mkline *MkLine, update *string) {
 	firstWrite := len(v.writeLocations) == 1
 	if v.Conditional() && !firstWrite {
 		return
@@ -218,7 +218,7 @@ func (v *Var) update(mkline MkLine, update *string) {
 	}
 }
 
-func (v *Var) updateConstantValue(mkline MkLine) {
+func (v *Var) updateConstantValue(mkline *MkLine) {
 	if v.constantState == 3 {
 		return
 	}

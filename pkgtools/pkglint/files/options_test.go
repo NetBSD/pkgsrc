@@ -16,10 +16,10 @@ func (s *Suite) Test_CheckLinesOptionsMk(c *check.C) {
 	t.SetUpOption("x11", "")
 
 	t.CreateFileLines("mk/bsd.options.mk",
-		MkRcsID)
+		MkCvsID)
 
 	mklines := t.SetUpFileMkLines("category/package/options.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"PKG_OPTIONS_VAR=                PKG_OPTIONS.mc",
 		"PKG_OPTIONS_REQUIRED_GROUPS=    screen",
@@ -76,13 +76,13 @@ func (s *Suite) Test_CheckLinesOptionsMk__edge_cases(c *check.C) {
 	t.SetUpVartypes()
 	t.SetUpOption("option1", "Description for option1")
 	t.CreateFileLines("mk/compiler.mk",
-		MkRcsID)
+		MkCvsID)
 	t.CreateFileLines("mk/bsd.options.mk",
-		MkRcsID)
+		MkCvsID)
 	t.DisableTracing()
 
 	mklines := t.SetUpFileMkLines("category/package/options.mk",
-		MkRcsID)
+		MkCvsID)
 
 	CheckLinesOptionsMk(mklines)
 
@@ -90,7 +90,7 @@ func (s *Suite) Test_CheckLinesOptionsMk__edge_cases(c *check.C) {
 		"WARN: ~/category/package/options.mk:EOF: Expected definition of PKG_OPTIONS_VAR.")
 
 	mklines = t.SetUpFileMkLines("category/package/options.mk",
-		MkRcsID,
+		MkCvsID,
 		"PKG_SUPPORTED_OPTIONS=\toption1")
 
 	CheckLinesOptionsMk(mklines)
@@ -99,7 +99,7 @@ func (s *Suite) Test_CheckLinesOptionsMk__edge_cases(c *check.C) {
 		"WARN: ~/category/package/options.mk:2: Expected definition of PKG_OPTIONS_VAR.")
 
 	mklines = t.SetUpFileMkLines("category/package/options.mk",
-		MkRcsID,
+		MkCvsID,
 		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.pkgbase",
 		"PKG_SUPPORTED_OPTIONS=\toption1",
 		".include \"../../mk/compiler.mk\"")
@@ -111,7 +111,7 @@ func (s *Suite) Test_CheckLinesOptionsMk__edge_cases(c *check.C) {
 			"Option \"option1\" should be handled below in an .if block.")
 
 	mklines = t.SetUpFileMkLines("category/package/options.mk",
-		MkRcsID,
+		MkCvsID,
 		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.pkgbase",
 		"PKG_SUPPORTED_OPTIONS=\toption1",
 		".include \"../../mk/bsd.options.mk\"",
@@ -142,10 +142,10 @@ func (s *Suite) Test_CheckLinesOptionsMk__unexpected_line(c *check.C) {
 	t.SetUpVartypes()
 
 	t.CreateFileLines("mk/bsd.options.mk",
-		MkRcsID)
+		MkCvsID)
 
 	mklines := t.SetUpFileMkLines("category/package/options.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"PKG_OPTIONS_VAR=                PKG_OPTIONS.mc",
 		"",
@@ -169,10 +169,10 @@ func (s *Suite) Test_CheckLinesOptionsMk__malformed_condition(c *check.C) {
 	t.SetUpOption("x11", "")
 
 	t.CreateFileLines("mk/bsd.options.mk",
-		MkRcsID)
+		MkCvsID)
 
 	mklines := t.SetUpFileMkLines("category/package/options.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"PKG_OPTIONS_VAR=                PKG_OPTIONS.mc",
 		"PKG_SUPPORTED_OPTIONS=          # none",
@@ -202,7 +202,7 @@ func (s *Suite) Test_CheckLinesOptionsMk__PLIST_VARS_based_on_PKG_SUPPORTED_OPTI
 	t.SetUpPackage("category/package")
 	t.CreateFileLines("mk/bsd.options.mk")
 	t.SetUpFileMkLines("category/package/options.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.package",
 		"PKG_SUPPORTED_OPTIONS+=\tone",
@@ -246,7 +246,7 @@ func (s *Suite) Test_OptionsLinesChecker_handleLowerCondition__foreign_variable(
 	t.SetUpPackage("category/package",
 		".include \"options.mk\"")
 	t.CreateFileLines("category/package/options.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.package",
 		"PKG_SUPPORTED_OPTIONS=\topt",
@@ -273,7 +273,7 @@ func (s *Suite) Test_CheckLinesOptionsMk__autofix(c *check.C) {
 	t.SetUpPackage("category/package",
 		".include \"options.mk\"")
 	t.CreateFileLines("category/package/options.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.package",
 		"PKG_SUPPORTED_OPTIONS=\t# none",
@@ -312,7 +312,7 @@ func (s *Suite) Test_CheckLinesOptionsMk__autofix(c *check.C) {
 		"AUTOFIX: options.mk:10: Replacing \".\" with \".  \".")
 
 	t.CheckFileLinesDetab("options.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"PKG_OPTIONS_VAR=        PKG_OPTIONS.package",
 		"PKG_SUPPORTED_OPTIONS=  # none",

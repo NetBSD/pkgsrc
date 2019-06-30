@@ -71,9 +71,10 @@ func NewMkShWalker() *MkShWalker {
 func (w *MkShWalker) Path() string {
 	var path []string
 	for _, level := range w.Context {
-		typeName := reflect.TypeOf(level.Element).Elem().Name()
-		if typeName == "" && reflect.TypeOf(level.Element).Kind() == reflect.Slice {
-			typeName = "[]" + reflect.TypeOf(level.Element).Elem().Elem().Name()
+		elementType := reflect.TypeOf(level.Element)
+		typeName := elementType.Elem().Name()
+		if typeName == "" {
+			typeName = "[]" + elementType.Elem().Elem().Name()
 		}
 		abbreviated := strings.TrimPrefix(typeName, "MkSh")
 		if level.Index == -1 {
@@ -91,8 +92,8 @@ func (w *MkShWalker) Path() string {
 func (w *MkShWalker) Walk(list *MkShList) {
 	w.walkList(-1, list)
 
-	// If this fails, the calls to w.push and w.pop are unbalanced.
-	assertf(len(w.Context) == 0, "MkShWalker.Walk %v", w.Context)
+	// The calls to w.push and w.pop must be balanced.
+	assert(len(w.Context) == 0)
 }
 
 func (w *MkShWalker) walkList(index int, list *MkShList) {
