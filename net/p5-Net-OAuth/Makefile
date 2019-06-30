@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/08/22 09:46:01 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/06/30 20:16:30 nia Exp $
 
 DISTNAME=	Net-OAuth-0.28
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Net-OAuth/
+HOMEPAGE=	https://metacpan.org/release/Net-OAuth
 COMMENT=	Perl5 extension for OAuth protocol support
 LICENSE=	${PERL5_LICENSE}
 

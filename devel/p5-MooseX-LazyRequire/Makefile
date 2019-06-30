@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/08/22 09:44:22 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/06/30 20:15:25 nia Exp $
 #
 
 DISTNAME=	MooseX-LazyRequire-0.11
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/MooseX-LazyRequire/
+HOMEPAGE=	https://metacpan.org/release/MooseX-LazyRequire
 COMMENT=	Required attributes which fail only when trying to use them
 LICENSE=	${PERL5_LICENSE}
 

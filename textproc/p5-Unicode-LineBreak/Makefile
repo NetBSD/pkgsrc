@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/01/26 02:01:44 wen Exp $
+# $NetBSD: Makefile,v 1.19 2019/06/30 20:17:05 nia Exp $
 
 DISTNAME=	Unicode-LineBreak-2019.001
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Unicode/}
 
 MAINTAINER=	bouyer@NetBSD.org
 COMMENT=	Text::LineFold, Unicode::GCString and Unicode::LineBreak
-HOMEPAGE=	http://search.cpan.org/dist/Unicode-LineBreak/
+HOMEPAGE=	https://metacpan.org/release/Unicode-LineBreak
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-MIME-Charset>=1.006.2:../../mail/p5-MIME-Charset

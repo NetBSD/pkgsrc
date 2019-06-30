@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/08/22 09:45:46 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/06/30 20:16:24 nia Exp $
 #
 
 DISTNAME=	Locale-US-3.04
@@ -8,7 +8,7 @@ CATEGORIES=	misc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Locale/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Locale-US/
+HOMEPAGE=	https://metacpan.org/release/Locale-US
 COMMENT=	Perl 5 module to maps US two-letter codes to states and vice versa
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/08/22 09:44:06 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/06/30 20:15:08 nia Exp $
 #
 
 DISTNAME=		Hash-MultiValue-0.16
@@ -8,7 +8,7 @@ CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Hash/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/Hash-MultiValue/
+HOMEPAGE=		https://metacpan.org/release/Hash-MultiValue
 COMMENT=		Perl5 module to store multiple values per key
 LICENSE=		${PERL5_LICENSE}
 

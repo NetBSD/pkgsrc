@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/08/22 09:46:21 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/06/30 20:16:37 nia Exp $
 
 DISTNAME=		Crypt-DH-0.07
 PKGNAME=		p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/Crypt-DH/
+HOMEPAGE=		https://metacpan.org/release/Crypt-DH
 COMMENT=		Perl5 module for the Diffie-Hellman key exchange system
 LICENSE=		${PERL5_LICENSE}
 

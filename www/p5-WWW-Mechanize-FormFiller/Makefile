@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/08/22 09:47:56 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/06/30 20:17:48 nia Exp $
 
 DISTNAME=	WWW-Mechanize-FormFiller-0.12
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=WWW/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/WWW-Mechanize-FormFiller/
+HOMEPAGE=	https://metacpan.org/release/WWW-Mechanize-FormFiller
 COMMENT=	Framework to automate HTML forms
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/08/22 09:47:03 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2019/06/30 20:17:04 nia Exp $
 #
 
 DISTNAME=	Text-WagnerFischer-0.04
@@ -8,7 +8,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Text-WagnerFischer
+HOMEPAGE=	https://metacpan.org/release/Text-WagnerFischer
 COMMENT=	Perl module for configurable edit distance calculations
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/08/22 09:44:02 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/06/30 20:15:03 nia Exp $
 
 DISTNAME=	File-Path-Tiny-0.9
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/File-Path-Tiny/
+HOMEPAGE=	https://metacpan.org/release/File-Path-Tiny
 COMMENT=	Perl 5 module providing recursive mkdir and rmdir
 LICENSE=	${PERL5_LICENSE}
 
