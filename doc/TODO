@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19092 2019/06/26 06:13:57 wiz Exp $
+$NetBSD: TODO,v 1.19093 2019/06/30 21:25:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -339,6 +339,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
+	o ImageMagick-7.0.8.50
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaLib-19.1.0
@@ -453,6 +454,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
 	o catdoc-tk-1.1
+	o cbindgen-0.9.0
 	o cddbd-1.5.2
 	o cdrkit-1.1.10
 	o cfengine3-3.10.2
@@ -593,6 +595,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fet-5.28.6
 	o fetchyahoo-2.14.0
 	o filerunner-14.06.18.10
+	o filezilla-3.43.0
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o flashplayer-0.4.13
@@ -733,6 +736,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o h323plus-1.24.0 [replaces openh323, from http://www.h323plus.org/]
 	o hamster-applet-2.32.1
 	o hanzim-3.5
+	o haproxy-2.0
 	o harminv-1.4
 	o haskell-mode-13.20
 	o hatari-2.2.0
@@ -846,6 +850,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kdevelop-5.1
 	o kdevelop4-4.7.2
 	o kdevplatform-1.7.1
+	o keepassxc-2.4.3
 	o keybinder-0.3.1
 	o khard-0.14.0
 	o kipi-plugins-4.14.0
@@ -875,6 +880,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libcaca-0.99.19
 	o libcarddav-14.0.4
 	o libconfuse-3.1
+	o libev-4.27
+	o libfilezilla-0.17.1
 	o libflash-0.4.13
 	o libfolks-0.10.1 [wip]
 	o libgdiplus-4.2
@@ -896,6 +903,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmtag-0.3.6
 	o liboobs-2.32.0
 	o liboop-1.0.1
+	o libpaper-1.1.28
 	o libpcap-1.9.0
 	o libpgm-5.2.122
 	o libprelude-3.1.0
@@ -906,6 +914,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libtcl-nothread-8.5.1
 	o libtecla-1.6.3
 	o libtrace-3.0.22
+	o libuv-1.30.0
 	o libv4l-0.8.5
 	o libvirt-2.3
 	o libxdg-basedir-1.2.0
@@ -937,6 +946,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mailutis-2.2 [wip]
 	o maketool-0.8.4
 	o makeztxt-1.60
+	o mame-0.211
 	o manedit-1.2.1
 	o mapserver-7.0.1
 	o matchbox-panel-0.9.3
@@ -1000,6 +1010,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nethack-3.6.2
 	o netio-1.32
 	o netramet-50
+	o nettle-3.5
 	o newmail-1.0.2
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
@@ -1010,6 +1021,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nxtvepg-2.8.1
 	o oath-toolkit-2.6.1
 	o objc-3.3.1
+	o ocaml-4.08.0
 	o ocrad-0.25
 	o odbc-postgresql-09.03.0400
 	o olvwm-4.5
@@ -1088,7 +1100,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o polkit-0.116 [needs mozjs-60]
 	o polsms-2.1.0
 	o poppass-4.0.14
-	o poppler-0.77.0
+	o poppler-0.78.0
 	o postfix-3.4.5
 	o postal-0.72
 	o pound-2.8a
@@ -1113,12 +1125,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-cassa-1.11.0
 	o py-curl-7.43.0.3
 	o py-ephem3-3.7.6.0
+	o py-flaky-3.6.0
 	o py-gnome-menus-3.8.0
 	o py-gobject3-3.30.4
 	o py-hgview-1.9.0
 	o py-hsm-1.1.1
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
+	o py-more-itertools-7.1.0
 	o py-musicbrainz-0.7.4
 	o py-newt-0.52.20
 	o py-omniORBpy-3.7
@@ -1126,6 +1140,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-ptt-1.10.2
 	o py-pycountry-1.20
 	o py-simpletal-5.1
+	o py-snowballstemmer-1.9.0
 	o py-spf-2.0.12t
 	o py-sybase-0.37
 	o py-wxWidgets-4.0.0
@@ -1135,6 +1150,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o qlandkartegt-1.8.1 [pkg/53376]
 	o qnetwalk-1.4
 	o qt4-creator-3.4.0
+	o qt5-qtbase-5.13
 	o quodlibet2-3.5.3
 	o racket-7.1
 	o radiance-4R1
@@ -1410,6 +1426,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o zkt-1.1.3
 	o zoneminder-1.29.0
 	o zopeedit-0.8
+	o zsh-autosuggestions-0.6.3
 
 Licenses of packages
 ====================
