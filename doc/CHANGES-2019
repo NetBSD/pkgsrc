@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2703 2019/06/30 21:43:48 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2704 2019/06/30 21:44:45 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4464,3 +4464,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added multimedia/obs-studio version 23.2.1 [nia 2019-06-30]
 	Updated net/hub to 2.12.1 [leot 2019-06-30]
 	Added games/sauerbraten version 2013_04_04 [nia 2019-06-30]
+	Added games/assaultcube version 1.2.0.2 [nia 2019-06-30]
