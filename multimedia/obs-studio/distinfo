@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2019/06/30 21:01:24 nia Exp $
+
+SHA1 (obs-studio-23.2.1.tar.gz) = e3ecba635f87d4dc4423f5d85a500abe5232acfc
+RMD160 (obs-studio-23.2.1.tar.gz) = c289dda912138274698332235ef53edbccfc3e8e
+SHA512 (obs-studio-23.2.1.tar.gz) = aabc23d825c2ca3f40274a8e2c4935939dab4955d929c44b28cebde114e808543c1c0dc05791bb6d9f2611effb0f2cb3e20c9a653154c30a9851ea94e74c8169
+Size (obs-studio-23.2.1.tar.gz) = 6204515 bytes
+SHA1 (patch-UI_obs-app.cpp) = 6f9fc9e1882bbc5fcf263876f7b5624586f636c7
+SHA1 (patch-libobs_graphics_graphics.h) = 8074e4f482ec8d393e58c0bd5b54f285c76ad815
+SHA1 (patch-libobs_obs-nix.c) = 1df73c37851f4870893a4d03e016d58503f359af
+SHA1 (patch-plugins_CMakeLists.txt) = 479c6fef54d7dafed70b0f7d369029021b572214
+SHA1 (patch-plugins_obs-outputs_net-if.h) = 246b624586b841f47aa7420c0cb462ff003188bb
