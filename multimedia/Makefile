@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.269 2019/05/02 07:58:03 wiz Exp $
+# $NetBSD: Makefile,v 1.270 2019/06/30 21:01:24 nia Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -162,6 +162,7 @@ SUBDIR+=	mplayer-share
 SUBDIR+=	mplayerthumbs
 SUBDIR+=	mpv
 SUBDIR+=	nostt
+SUBDIR+=	obs-studio
 SUBDIR+=	ogle
 SUBDIR+=	ogle_gui
 SUBDIR+=	ogmtools
