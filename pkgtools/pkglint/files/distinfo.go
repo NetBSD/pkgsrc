@@ -13,12 +13,12 @@ import (
 	"strings"
 )
 
-func CheckLinesDistinfo(pkg *Package, lines Lines) {
+func CheckLinesDistinfo(pkg *Package, lines *Lines) {
 	if trace.Tracing {
-		defer trace.Call1(lines.FileName)()
+		defer trace.Call1(lines.Filename)()
 	}
 
-	filename := lines.FileName
+	filename := lines.Filename
 	patchdir := "patches"
 	if pkg != nil && dirExists(pkg.File(pkg.Patchdir)) {
 		patchdir = pkg.Patchdir
@@ -41,7 +41,7 @@ func CheckLinesDistinfo(pkg *Package, lines Lines) {
 
 type distinfoLinesChecker struct {
 	pkg                 *Package
-	lines               Lines
+	lines               *Lines
 	patchdir            string // Relative to pkg
 	distinfoIsCommitted bool
 
@@ -53,7 +53,7 @@ func (ck *distinfoLinesChecker) parse() {
 	lines := ck.lines
 
 	llex := NewLinesLexer(lines)
-	if lines.CheckRcsID(0, ``, "") {
+	if lines.CheckCvsID(0, ``, "") {
 		llex.Skip()
 	}
 	llex.SkipEmptyOrNote()
@@ -273,7 +273,7 @@ func (ck *distinfoLinesChecker) checkAlgorithmsDistfile(info distinfoFileInfo) {
 	// that the distfile is the expected one. Now generate the missing hashes
 	// and insert them, in the correct order.
 
-	var insertion Line
+	var insertion *Line
 	var remainingHashes = info.hashes
 	for _, alg := range algorithms {
 		if missing[alg] {
@@ -313,7 +313,7 @@ func (ck *distinfoLinesChecker) checkUnrecordedPatches() {
 	for _, file := range patchFiles {
 		patchName := file.Name()
 		if file.Mode().IsRegular() && ck.infos[patchName].isPatch != yes && hasPrefix(patchName, "patch-") {
-			line := NewLineWhole(ck.lines.FileName)
+			line := NewLineWhole(ck.lines.Filename)
 			line.Errorf("Patch %q is not recorded. Run %q.",
 				line.PathToFile(ck.pkg.File(ck.patchdir+"/"+patchName)),
 				bmake("makepatchsum"))
@@ -381,12 +381,14 @@ func (ck *distinfoLinesChecker) checkUncommittedPatch(info distinfoHash) {
 	}
 }
 
-func (ck *distinfoLinesChecker) checkPatchSha1(line Line, patchFileName, distinfoSha1Hex string) {
-	fileSha1Hex, err := computePatchSha1Hex(ck.pkg.File(patchFileName))
-	if err != nil {
+func (ck *distinfoLinesChecker) checkPatchSha1(line *Line, patchFileName, distinfoSha1Hex string) {
+	lines := Load(ck.pkg.File(patchFileName), 0)
+	if lines == nil {
 		line.Errorf("Patch %s does not exist.", patchFileName)
 		return
 	}
+
+	fileSha1Hex := computePatchSha1Hex(lines)
 	if distinfoSha1Hex != fileSha1Hex {
 		fix := line.Autofix()
 		fix.Errorf("SHA1 hash of %s differs (distinfo has %s, patch file has %s).",
@@ -408,7 +410,7 @@ type distinfoFileInfo struct {
 }
 
 func (info *distinfoFileInfo) filename() string { return info.hashes[0].filename }
-func (info *distinfoFileInfo) line() Line       { return info.hashes[0].line }
+func (info *distinfoFileInfo) line() *Line      { return info.hashes[0].line }
 
 func (info *distinfoFileInfo) algorithms() string {
 	var algs []string
@@ -419,25 +421,24 @@ func (info *distinfoFileInfo) algorithms() string {
 }
 
 type distinfoHash struct {
-	line      Line
+	line      *Line
 	filename  string
 	algorithm string
 	hash      string
 }
 
 // Same as in mk/checksum/distinfo.awk:/function patchsum/
-func computePatchSha1Hex(patchFilename string) (string, error) {
-	patchBytes, err := ioutil.ReadFile(patchFilename)
-	if err != nil {
-		return "", err
-	}
+func computePatchSha1Hex(lines *Lines) string {
 
 	hasher := sha1.New()
-	skipText := []byte("$" + "NetBSD")
-	for _, patchLine := range bytes.SplitAfter(patchBytes, []byte("\n")) {
-		if !bytes.Contains(patchLine, skipText) {
-			_, _ = hasher.Write(patchLine)
+	skipText := "$" + "NetBSD"
+	for _, line := range lines.Lines {
+		for _, raw := range line.raw {
+			textnl := raw.orignl
+			if !contains(textnl, skipText) {
+				_, _ = hasher.Write([]byte(textnl))
+			}
 		}
 	}
-	return sprintf("%x", hasher.Sum(nil)), nil
+	return sprintf("%x", hasher.Sum(nil))
 }

@@ -15,9 +15,7 @@ func (s *Suite) Test_RawLine_String(c *check.C) {
 func (s *Suite) Test_NewLine__assertion(c *check.C) {
 	t := s.Init(c)
 
-	t.ExpectPanic(
-		func() { NewLine("filename", 123, "text", nil) },
-		"Pkglint internal error: use NewLineMulti for creating a Line with no RawLine attached to it")
+	t.ExpectAssert(func() { NewLine("filename", 123, "text", nil) })
 }
 
 func (s *Suite) Test_Line_IsMultiline(c *check.C) {
