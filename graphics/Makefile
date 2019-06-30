@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.822 2019/06/30 21:59:55 fcambus Exp $
+# $NetBSD: Makefile,v 1.823 2019/06/30 22:13:13 nia Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -256,6 +256,7 @@ SUBDIR+=	imlib2
 SUBDIR+=	impress
 SUBDIR+=	inkscape
 SUBDIR+=	ipe
+SUBDIR+=	irrlicht
 SUBDIR+=	ivtools
 SUBDIR+=	jasper
 SUBDIR+=	jbig2dec
