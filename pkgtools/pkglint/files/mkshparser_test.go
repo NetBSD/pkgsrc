@@ -12,7 +12,7 @@ func (s *Suite) Test_parseShellProgram__parse_error_for_dollar(c *check.C) {
 	test := func(text string, expProgram *MkShList, expError error, expDiagnostics ...string) {
 		mklines := t.NewMkLines("module.mk", "\t"+text)
 
-		mklines.ForEach(func(mkline MkLine) {
+		mklines.ForEach(func(mkline *MkLine) {
 			program, err := parseShellProgram(mkline.Line, text)
 
 			if err == nil {

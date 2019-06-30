@@ -2,13 +2,11 @@
 package intqa
 
 import (
-	"bytes"
 	"fmt"
 	"go/ast"
 	"go/parser"
 	"go/token"
 	"gopkg.in/check.v1"
-	"io/ioutil"
 	"os"
 	"path/filepath"
 	"sort"
@@ -119,35 +117,6 @@ func (ck *TestNameChecker) addElement(elements *[]*testeeElement, decl ast.Decl,
 			}
 		}
 		*elements = append(*elements, newElement(typeName, decl.Name.Name, filename))
-	}
-}
-
-// fixTabs replaces literal tabs with proper escape sequences,
-// except for the indentation tabs.
-//
-// It doesn't really belong to this type (TestNameChecker) but
-// merely uses its infrastructure.
-func (ck *TestNameChecker) fixTabs(filename string) {
-	if ck.isIgnored(filename) {
-		return
-	}
-
-	readBytes, err := ioutil.ReadFile(filename)
-	ck.c.Assert(err, check.IsNil)
-
-	var fixed bytes.Buffer
-	for _, line := range strings.SplitAfter(string(readBytes), "\n") {
-		rest := strings.TrimLeft(line, "\t")
-		fixed.WriteString(line[:len(line)-len(rest)])
-		fixed.WriteString(strings.Replace(rest, "\t", "\\t", -1))
-	}
-
-	if fixed.String() != string(readBytes) {
-		tmpName := filename + ".tmp"
-		err = ioutil.WriteFile(tmpName, fixed.Bytes(), 0666)
-		ck.c.Assert(err, check.IsNil)
-		err = os.Rename(tmpName, filename)
-		ck.c.Assert(err, check.IsNil)
 	}
 }
 

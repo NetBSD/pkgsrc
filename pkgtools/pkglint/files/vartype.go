@@ -14,11 +14,6 @@ type Vartype struct {
 }
 
 func NewVartype(basicType *BasicType, options vartypeOptions, aclEntries ...ACLEntry) *Vartype {
-	for _, aclEntry := range aclEntries {
-		_, err := path.Match(aclEntry.glob, "")
-		assertNil(err, "path.Match")
-	}
-
 	return &Vartype{basicType, options, aclEntries}
 }
 
@@ -47,12 +42,12 @@ const (
 )
 
 type ACLEntry struct {
-	glob        string // Examples: "Makefile", "*.mk"
+	matcher     *pathMatcher
 	permissions ACLPermissions
 }
 
 func NewACLEntry(glob string, permissions ACLPermissions) ACLEntry {
-	return ACLEntry{glob, permissions}
+	return ACLEntry{newPathMatcher(glob), permissions}
 }
 
 type ACLPermissions uint8
@@ -109,7 +104,7 @@ func (vt *Vartype) NeedsRationale() bool      { return vt.options&NeedsRationale
 
 func (vt *Vartype) EffectivePermissions(basename string) ACLPermissions {
 	for _, aclEntry := range vt.aclEntries {
-		if m, _ := path.Match(aclEntry.glob, basename); m {
+		if aclEntry.matcher.matches(basename) {
 			return aclEntry.permissions
 		}
 	}
@@ -157,9 +152,9 @@ func (vt *Vartype) AlternativeFiles(perms ACLPermissions) string {
 
 	for _, aclEntry := range vt.aclEntries {
 		if aclEntry.permissions.Contains(perms) {
-			pos = append(pos, aclEntry.glob)
+			pos = append(pos, aclEntry.matcher.originalPattern)
 		} else {
-			neg = append(neg, aclEntry.glob)
+			neg = append(neg, aclEntry.matcher.originalPattern)
 		}
 	}
 
@@ -356,6 +351,7 @@ var (
 	BtURL                    = &BasicType{"URL", (*VartypeCheck).URL}
 	BtUserGroupName          = &BasicType{"UserGroupName", (*VartypeCheck).UserGroupName}
 	BtVariableName           = &BasicType{"VariableName", (*VartypeCheck).VariableName}
+	BtVariableNamePattern    = &BasicType{"VariableNamePattern", (*VartypeCheck).VariableNamePattern}
 	BtVersion                = &BasicType{"Version", (*VartypeCheck).Version}
 	BtWrapperReorder         = &BasicType{"WrapperReorder", (*VartypeCheck).WrapperReorder}
 	BtWrapperTransform       = &BasicType{"WrapperTransform", (*VartypeCheck).WrapperTransform}

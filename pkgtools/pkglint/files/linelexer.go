@@ -4,24 +4,24 @@ import "netbsd.org/pkglint/regex"
 
 // LinesLexer records the state when checking a list of lines from top to bottom.
 type LinesLexer struct {
-	lines Lines
+	lines *Lines
 	index int
 }
 
-func NewLinesLexer(lines Lines) *LinesLexer {
+func NewLinesLexer(lines *Lines) *LinesLexer {
 	return &LinesLexer{lines, 0}
 }
 
 // CurrentLine returns the line that the lexer is currently looking at.
 // If it is at the end of file, the line number of the line is EOF.
-func (llex *LinesLexer) CurrentLine() Line {
+func (llex *LinesLexer) CurrentLine() *Line {
 	if llex.index < llex.lines.Len() {
 		return llex.lines.Lines[llex.index]
 	}
-	return NewLineEOF(llex.lines.FileName)
+	return NewLineEOF(llex.lines.Filename)
 }
 
-func (llex *LinesLexer) PreviousLine() Line {
+func (llex *LinesLexer) PreviousLine() *Line {
 	return llex.lines.Lines[llex.index-1]
 }
 
@@ -115,23 +115,23 @@ func (llex *LinesLexer) SkipContainsOrWarn(text string) bool {
 
 // MkLinesLexer records the state when checking a list of Makefile lines from top to bottom.
 type MkLinesLexer struct {
-	mklines MkLines
+	mklines *MkLines
 	LinesLexer
 }
 
-func NewMkLinesLexer(mklines MkLines) *MkLinesLexer {
+func NewMkLinesLexer(mklines *MkLines) *MkLinesLexer {
 	return &MkLinesLexer{mklines, *NewLinesLexer(mklines.lines)}
 }
 
-func (mlex *MkLinesLexer) PreviousMkLine() MkLine {
+func (mlex *MkLinesLexer) PreviousMkLine() *MkLine {
 	return mlex.mklines.mklines[mlex.index-1]
 }
 
-func (mlex *MkLinesLexer) CurrentMkLine() MkLine {
+func (mlex *MkLinesLexer) CurrentMkLine() *MkLine {
 	return mlex.mklines.mklines[mlex.index]
 }
 
-func (mlex *MkLinesLexer) SkipWhile(pred func(mkline MkLine) bool) {
+func (mlex *MkLinesLexer) SkipWhile(pred func(mkline *MkLine) bool) {
 	if trace.Tracing {
 		defer trace.Call(mlex.CurrentMkLine().Text)()
 	}
@@ -141,7 +141,7 @@ func (mlex *MkLinesLexer) SkipWhile(pred func(mkline MkLine) bool) {
 	}
 }
 
-func (mlex *MkLinesLexer) SkipIf(pred func(mkline MkLine) bool) bool {
+func (mlex *MkLinesLexer) SkipIf(pred func(mkline *MkLine) bool) bool {
 	if !mlex.EOF() && pred(mlex.CurrentMkLine()) {
 		mlex.Skip()
 		return true

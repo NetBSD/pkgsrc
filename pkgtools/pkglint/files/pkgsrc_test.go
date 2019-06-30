@@ -10,12 +10,17 @@ func (s *Suite) Test_Pkgsrc_loadMasterSites(c *check.C) {
 	t := s.Init(c)
 
 	t.CreateFileLines("mk/fetch/sites.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"MASTER_SITE_A+= https://example.org/distfiles/",
 		"MASTER_SITE_B+= https://b.example.org/distfiles/ \\",
 		"  https://b2.example.org/distfiles/",
-		"MASTER_SITE_A+= https://a.example.org/distfiles/")
+		"MASTER_SITE_A+= https://a.example.org/distfiles/ ${other}",
+		"",
+		"MASTER_SITE_BACKUP+=\t",
+		"\thttps://backup.example.org/",
+		"",
+		"OTHER_VARIABLE=\tyes # only for code coverage")
 
 	G.Pkgsrc.loadMasterSites()
 
@@ -25,6 +30,11 @@ func (s *Suite) Test_Pkgsrc_loadMasterSites(c *check.C) {
 	c.Check(G.Pkgsrc.MasterSiteURLToVar["https://a.example.org/distfiles/"], equals, "MASTER_SITE_A")
 	c.Check(G.Pkgsrc.MasterSiteVarToURL["MASTER_SITE_A"], equals, "https://example.org/distfiles/")
 	c.Check(G.Pkgsrc.MasterSiteVarToURL["MASTER_SITE_B"], equals, "https://b.example.org/distfiles/")
+
+	// Ignored entries:
+	c.Check(G.Pkgsrc.MasterSiteURLToVar["${other}"], equals, "")
+	c.Check(G.Pkgsrc.MasterSiteURLToVar["https://backup.example.org/"], equals, "")
+	c.Check(G.Pkgsrc.MasterSiteVarToURL["MASTER_SITE_BACKUP"], equals, "")
 }
 
 func (s *Suite) Test_Pkgsrc_parseSuggestedUpdates(c *check.C) {
@@ -57,26 +67,30 @@ func (s *Suite) Test_Pkgsrc_checkToplevelUnusedLicenses(c *check.C) {
 	t.CreateFileLines("licenses/gnu-gpl-v3")
 
 	t.CreateFileLines("Makefile",
-		MkRcsID,
+		MkCvsID,
 		"SUBDIR+=\tcategory")
 
 	t.CreateFileLines("category/Makefile",
-		MkRcsID,
+		MkCvsID,
 		"COMMENT=\tExample category",
 		"",
 		"SUBDIR+=\tpackage",
+		"SUBDIR+=\tpackage2",
 		"",
 		".include \"../mk/misc/category.mk\"")
 
 	t.SetUpPackage("category/package",
 		"LICENSE=\t2-clause-bsd")
+	t.SetUpPackage("category/package2",
+		"LICENSE=\tmissing")
 
 	t.Main("-r", "-Cglobal", t.File("."))
 
 	t.CheckOutputLines(
+		"WARN: ~/category/package2/Makefile:11: License file ~/licenses/missing does not exist.",
 		"WARN: ~/licenses/gnu-gpl-v2: This license seems to be unused.", // Added by Tester.SetUpPkgsrc
 		"WARN: ~/licenses/gnu-gpl-v3: This license seems to be unused.",
-		"0 errors and 2 warnings found.")
+		"0 errors and 3 warnings found.")
 }
 
 func (s *Suite) Test_Pkgsrc_loadUntypedVars(c *check.C) {
@@ -85,7 +99,7 @@ func (s *Suite) Test_Pkgsrc_loadUntypedVars(c *check.C) {
 	t.SetUpPkgsrc()
 	t.SetUpTool("echo", "ECHO", AtRunTime)
 	t.CreateFileLines("mk/infra.mk",
-		MkRcsID,
+		MkCvsID,
 		"#",
 		"# System-provided variables:",
 		"#",
@@ -109,7 +123,7 @@ func (s *Suite) Test_Pkgsrc_loadUntypedVars(c *check.C) {
 	t.FinishSetUp()
 
 	mklines := t.NewMkLines("filename.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"do-build:",
 		"\t: ${INFRA_MK} ${UNTYPED.three} ${ECHO}",
@@ -125,12 +139,25 @@ func (s *Suite) Test_Pkgsrc_loadUntypedVars(c *check.C) {
 		"WARN: filename.mk:6: INDIRECT_param is used but not defined.")
 }
 
+func (s *Suite) Test_Pkgsrc_loadUntypedVars__badly_named_directory(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPkgsrc()
+	t.CreateFileLines("mk/subdir.mk/file.mk",
+		MkCvsID)
+	t.FinishSetUp()
+
+	// Even when a directory is named *.mk, pkglint doesn't crash.
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_Pkgsrc_loadTools(c *check.C) {
 	t := s.Init(c)
 
 	t.CreateFileLines("mk/tools/bsd.tools.mk",
 		".include \"flex.mk\"",
 		".include \"gettext.mk\"",
+		".include \"../nonexistent.mk\"", // Is skipped because of the slash.
 		".include \"strip.mk\"",
 		".include \"replace.mk\"")
 	t.CreateFileLines("mk/tools/defaults.mk",
@@ -197,10 +224,10 @@ func (s *Suite) Test_Pkgsrc_loadTools__BUILD_DEFS(c *check.C) {
 		"pre-configure:",
 		"\t@${ECHO} ${PKG_SYSCONFDIR} ${VARBASE}")
 	t.CreateFileLines("mk/bsd.pkg.mk",
-		MkRcsID,
+		MkCvsID,
 		"_BUILD_DEFS+=\tPKG_SYSCONFBASEDIR PKG_SYSCONFDIR")
 	t.CreateFileLines("mk/defaults/mk.conf",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"VARBASE=\t\t/var/pkg",
 		"PKG_SYSCONFBASEDIR=\t/usr/pkg/etc",
@@ -215,6 +242,21 @@ func (s *Suite) Test_Pkgsrc_loadTools__BUILD_DEFS(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: ~/category/package/Makefile:21: " +
 			"The user-defined variable VARBASE is used but not added to BUILD_DEFS.")
+}
+
+func (s *Suite) Test_Pkgsrc_loadDocChanges(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPkgsrc()
+	t.CreateFileLines("doc/CHANGES-2018",
+		CvsID,
+		"",
+		"\tUpdated pkgpath to 1.0 [author 2018-01-01]",
+		"\tRenamed pkgpath to new-pkg [author 2018-02-01]",
+		"\tMoved pkgpath to category/new-pkg [author 2018-03-01]")
+	t.FinishSetUp()
+
+	t.Check(G.Pkgsrc.LastChange["pkgpath"].Action, equals, Moved)
 }
 
 func (s *Suite) Test_Pkgsrc_loadDocChanges__not_found(c *check.C) {
@@ -241,6 +283,7 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile(c *check.C) {
 		"\tRemoved category/package [author5 2018-01-09]", // Too far in the future
 		"\tRemoved category/package successor category/package2 [author6 2018-01-06]",
 		"\tDowngraded category/package to 1.2 [author7 2018-01-07]",
+		"\tReworked category/package to 1.2 [author8 2018-01-08]",
 		"",
 		"\ttoo few fields",
 		"\ttoo many many many many many fields",
@@ -251,24 +294,25 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile(c *check.C) {
 
 	c.Assert(len(changes), equals, 7)
 	c.Check(*changes[0], equals, Change{changes[0].Location,
-		"Added", "category/package", "1.0", "author1", "2015-01-01"})
+		Added, "category/package", "1.0", "author1", "2015-01-01"})
 	c.Check(*changes[1], equals, Change{changes[1].Location,
-		"Updated", "category/package", "1.5", "author2", "2018-01-02"})
+		Updated, "category/package", "1.5", "author2", "2018-01-02"})
 	c.Check(*changes[2], equals, Change{changes[2].Location,
-		"Renamed", "category/package", "", "author3", "2018-01-03"})
+		Renamed, "category/package", "category/pkg", "author3", "2018-01-03"})
 	c.Check(*changes[3], equals, Change{changes[3].Location,
-		"Moved", "category/package", "", "author4", "2018-01-04"})
+		Moved, "category/package", "other/package", "author4", "2018-01-04"})
 	c.Check(*changes[4], equals, Change{changes[4].Location,
-		"Removed", "category/package", "", "author5", "2018-01-09"})
+		Removed, "category/package", "", "author5", "2018-01-09"})
 	c.Check(*changes[5], equals, Change{changes[5].Location,
-		"Removed", "category/package", "", "author6", "2018-01-06"})
+		Removed, "category/package", "category/package2", "author6", "2018-01-06"})
 	c.Check(*changes[6], equals, Change{changes[6].Location,
-		"Downgraded", "category/package", "1.2", "author7", "2018-01-07"})
+		Downgraded, "category/package", "1.2", "author7", "2018-01-07"})
 
 	t.CheckOutputLines(
-		"WARN: ~/doc/CHANGES-2018:1: Year 2015 for category/package does not match the filename ~/doc/CHANGES-2018.",
-		"WARN: ~/doc/CHANGES-2018:6: Date 2018-01-06 for category/package is earlier than 2018-01-09 in line 5.",
-		"WARN: ~/doc/CHANGES-2018:12: Unknown doc/CHANGES line: \tAdded another [new package]")
+		"WARN: ~/doc/CHANGES-2018:1: Year \"2015\" for category/package does not match the filename ~/doc/CHANGES-2018.",
+		"WARN: ~/doc/CHANGES-2018:6: Date \"2018-01-06\" for category/package is earlier than \"2018-01-09\" in line 5.",
+		"WARN: ~/doc/CHANGES-2018:8: Unknown doc/CHANGES line: \tReworked category/package to 1.2 [author8 2018-01-08]",
+		"WARN: ~/doc/CHANGES-2018:13: Unknown doc/CHANGES line: \tAdded another [new package]")
 }
 
 func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__not_found(c *check.C) {
@@ -287,12 +331,14 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__wip_suppresses_warnings(c *c
 
 	t.SetUpPackage("wip/package")
 	t.CreateFileLines("doc/CHANGES-2018",
-		RcsID,
+		CvsID,
 		"",
 		"Changes to the packages collection and infrastructure in 2018:",
 		"",
 		"\tUpdated sysutils/checkperms to 1.10 [rillig 2018-01-05]",
-		"\tUpdated sysutils/checkperms to 1.11 [rillig 2018-01-01]")
+		"\tUpdated sysutils/checkperms to 1.11 [rillig 2018-01-01]",
+		"\t\tWrong indentation",
+		"\tInvalid pkgpath to 1.16 [rillig 2019-06-16]")
 
 	t.Main(t.File("wip/package"))
 
@@ -305,7 +351,7 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__wrong_indentation(c *check.C
 
 	t.SetUpPackage("category/package")
 	t.CreateFileLines("doc/CHANGES-2018",
-		RcsID,
+		CvsID,
 		"",
 		"Changes to the packages collection and infrastructure in 2018:",
 		"",
@@ -328,7 +374,7 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__infrastructure(c *check.C) {
 
 	t.SetUpPackage("category/package")
 	t.CreateFileLines("doc/CHANGES-2018",
-		RcsID,
+		CvsID,
 		"",
 		"Changes to the packages collection and infrastructure in 2018:",
 		"",
@@ -345,13 +391,135 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__infrastructure(c *check.C) {
 		"Looks fine.")
 }
 
+func (s *Suite) Test_Pkgsrc_parseDocChange(c *check.C) {
+	t := s.Init(c)
+
+	test := func(text string, diagnostics ...string) {
+		line := t.NewLine("doc/CHANGES-2019", 123, text)
+		_ = (*Pkgsrc)(nil).parseDocChange(line, true)
+		t.CheckOutput(diagnostics)
+	}
+
+	test(CvsID,
+		nil...)
+	test("",
+		nil...)
+	test("Changes to the packages collection and infrastructure in 2019:",
+		nil...)
+
+	test("\tAdded something [author date]",
+		"WARN: doc/CHANGES-2019:123: Unknown doc/CHANGES line: \tAdded something [author date]")
+
+	test("\t\tToo large indentation",
+		"WARN: doc/CHANGES-2019:123: Package changes should be indented using a single tab, not \"\\t\\t\".")
+	test("\t Too large indentation",
+		"WARN: doc/CHANGES-2019:123: Package changes should be indented using a single tab, not \"\\t \".")
+
+	// TODO: Add a warning here, since it's easy to forget a bracket.
+	test("\t1 2 3 4",
+		nil...)
+	test("\t1 2 3 4 5",
+		nil...)
+	test("\t1 2 3 4 5 6",
+		nil...)
+	test("\t1 2 3 4 5 6 7",
+		nil...)
+	test("\t1 2 [3 4",
+		nil...)
+	test("\t1 2 [3 4]",
+		"WARN: doc/CHANGES-2019:123: Unknown doc/CHANGES line: \t1 2 [3 4]")
+	test("\tAdded 2 [3 4]",
+		"WARN: doc/CHANGES-2019:123: Unknown doc/CHANGES line: \tAdded 2 [3 4]")
+
+	test("\tAdded pkgpath version 1.0 [author date]",
+		nil...)
+	// "to" is wrong
+	test("\tAdded pkgpath to 1.0 [author date]",
+		"WARN: doc/CHANGES-2019:123: Unknown doc/CHANGES line: \tAdded pkgpath to 1.0 [author date]")
+
+	test("\tUpdated pkgpath to 1.0 [author date]",
+		nil...)
+	// "from" is wrong
+	test("\tUpdated pkgpath from 1.0 [author date]",
+		"WARN: doc/CHANGES-2019:123: Unknown doc/CHANGES line: \tUpdated pkgpath from 1.0 [author date]")
+
+	test("\tDowngraded pkgpath to 1.0 [author date]",
+		nil...)
+	// "from" is wrong
+	test("\tDowngraded pkgpath from 1.0 [author date]",
+		"WARN: doc/CHANGES-2019:123: Unknown doc/CHANGES line: \tDowngraded pkgpath from 1.0 [author date]")
+
+	test("\tRemoved pkgpath [author date]",
+		nil...)
+	test("\tRemoved pkgpath successor pkgpath [author date]",
+		nil...)
+	// "and" is wrong
+	test("\tRemoved pkgpath and pkgpath [author date]",
+		"WARN: doc/CHANGES-2019:123: Unknown doc/CHANGES line: \tRemoved pkgpath and pkgpath [author date]")
+
+	test("\tRenamed pkgpath to other [author date]",
+		nil...)
+	// "from" is wrong
+	test("\tRenamed pkgpath from previous [author date]",
+		"WARN: doc/CHANGES-2019:123: Unknown doc/CHANGES line: \tRenamed pkgpath from previous [author date]")
+
+	test("\tMoved pkgpath to other [author date]",
+		nil...)
+	// "from" is wrong
+	test("\tMoved pkgpath from previous [author date]",
+		"WARN: doc/CHANGES-2019:123: Unknown doc/CHANGES line: \tMoved pkgpath from previous [author date]")
+
+	// "Split" is wrong
+	// TODO: Add a warning since this is probably a typo.
+	test("\tSplit pkgpath into a and b [author date]",
+		nil...)
+}
+
+func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__old(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPkgsrc()
+	t.CreateFileLines("doc/CHANGES-2010",
+		CvsID,
+		"",
+		"Changes to the packages collection and infrastructure in 2015:",
+		"",
+		"\tInvalid line [3 4]")
+	t.CreateFileLines("doc/CHANGES-2015",
+		CvsID,
+		"",
+		"Changes to the packages collection and infrastructure in 2015:",
+		"",
+		"\tUpdated pkgpath to 1.0 [author 2015-07-01]",
+		"\tInvalid line [3 4]",
+		// The date of the below entry is earlier than that of the above entry;
+		// this error is ignored because the 2015 file is too old.
+		"\tUpdated pkgpath to 1.2 [author 2015-02-01]")
+	t.CreateFileLines("doc/CHANGES-2018",
+		CvsID,
+		"",
+		"Changes to the packages collection and infrastructure in 2018:",
+		"",
+		"\tUpdated pkgpath to 1.0 [author date]",
+		"\tUpdated pkgpath to 1.0 [author d]")
+	t.FinishSetUp()
+
+	// The 2010 file is so old that it is skipped completely.
+	// The 2015 file is so old that the date is not checked.
+	// Since 2018, each date in the file must match the filename.
+	t.CheckOutputLines(
+		"WARN: ~/doc/CHANGES-2015:6: Unknown doc/CHANGES line: \tInvalid line [3 4]",
+		"WARN: ~/doc/CHANGES-2018:5: Year \"date\" for pkgpath does not match the filename ~/doc/CHANGES-2018.",
+		"WARN: ~/doc/CHANGES-2018:6: Date \"d\" for pkgpath is earlier than \"date\" in line 5.")
+}
+
 func (s *Suite) Test_Pkgsrc_parseSuggestedUpdates__wip(c *check.C) {
 	t := s.Init(c)
 
 	pkg := t.SetUpPackage("wip/package",
 		"DISTNAME=\tpackage-1.11")
 	t.CreateFileLines("wip/TODO",
-		RcsID,
+		CvsID,
 		"",
 		"Suggested package updates",
 		"",
@@ -372,7 +540,7 @@ func (s *Suite) Test_Pkgsrc__deprecated(c *check.C) {
 	t.SetUpVartypes()
 	G.Pkgsrc.initDeprecatedVars()
 	mklines := t.NewMkLines("Makefile",
-		MkRcsID,
+		MkCvsID,
 		"USE_PERL5=\t\tyes",
 		"SUBST_POSTCMD.class=\t${ECHO}",
 		"CPPFLAGS+=\t\t${BUILDLINK_CPPFLAGS.${PKG_JVM}}")
@@ -576,9 +744,13 @@ func (s *Suite) Test_Pkgsrc_ListVersions__go(c *check.C) {
 func (s *Suite) Test_Pkgsrc_ListVersions__invalid_argument(c *check.C) {
 	t := s.Init(c)
 
-	t.ExpectPanic(
-		func() { G.Pkgsrc.ListVersions("databases", `postgresql[0-9]+`, "$0", true) },
-		"Pkglint internal error: Regular expression \"postgresql[0-9]+\" must be anchored at both ends.")
+	t.ExpectAssert(func() { G.Pkgsrc.ListVersions("databases", `postgresql[0-9]+`, "$0", true) })
+	t.ExpectAssert(func() { G.Pkgsrc.ListVersions("databases", `^postgresql[0-9]+`, "$0", true) })
+
+	G.Testing = false
+	versions := G.Pkgsrc.ListVersions("databases", `^postgresql[0-9]+`, "$0", false)
+
+	t.Check(versions, check.HasLen, 0)
 }
 
 func (s *Suite) Test_Pkgsrc_loadPkgOptions(c *check.C) {
@@ -612,7 +784,7 @@ func (s *Suite) Test_Pkgsrc_loadTools__no_tools_found(c *check.C) {
 		"FATAL: ~/mk/tools/bsd.tools.mk: Must not be empty.")
 
 	t.CreateFileLines("mk/tools/bsd.tools.mk",
-		MkRcsID)
+		MkCvsID)
 
 	t.ExpectFatal(
 		G.Pkgsrc.loadTools,
@@ -624,6 +796,7 @@ func (s *Suite) Test_Pkgsrc_VariableType(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpVartypes()
+	t.SetUpTool("echo", "ECHO", AtRunTime)
 
 	test := func(varname string, vartype string) {
 		actualType := G.Pkgsrc.VariableType(nil, varname)
@@ -647,6 +820,8 @@ func (s *Suite) Test_Pkgsrc_VariableType(c *check.C) {
 	test("MY_CMD_CFLAGS", "CFlag (list, guessed)")
 	test("MY_CMD_LDFLAGS", "LdFlag (list, guessed)")
 	test("PLIST.abcde", "Yes (package-settable)")
+	test("TOOLS_ECHO", "Pathname")
+	test("TOOLS_UNKNOWN", "")
 }
 
 // Guessing the variable type works for both plain and parameterized variable names.
@@ -678,7 +853,7 @@ func (s *Suite) Test_Pkgsrc_VariableType__from_mk(c *check.C) {
 
 	t.SetUpPkgsrc()
 	t.CreateFileLines("mk/sys-vars.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"PKGSRC_MAKE_ENV?=\t# none",
 		"CPPPATH?=\tcpp",
@@ -717,7 +892,7 @@ func (s *Suite) Test_Pkgsrc_guessVariableType__SKIP(c *check.C) {
 	t := s.Init(c)
 
 	mklines := t.NewMkLines("filename.mk",
-		MkRcsID,
+		MkCvsID,
 		"MY_CHECK_SKIP=\t*.c \"bad*pathname\"",
 		"MY_CHECK_SKIP+=\t*.cpp",
 		".if ${MY_CHECK_SKIP}",
@@ -740,4 +915,107 @@ func (s *Suite) Test_Pkgsrc_guessVariableType__SKIP(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: filename.mk:2: The pathname pattern \"\\\"bad*pathname\\\"\" " +
 			"contains the invalid characters \"\\\"\\\"\".")
+}
+
+func (s *Suite) Test_Pkgsrc__frozen(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("doc/CHANGES-2018",
+		"\tmk/bsd.pkg.mk: started freeze for pkgsrc-2018Q2 branch [freezer 2018-03-25]")
+	t.FinishSetUp()
+
+	t.Check(G.Pkgsrc.FreezeStart, equals, "2018-03-25")
+}
+
+func (s *Suite) Test_Pkgsrc__not_frozen(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("doc/CHANGES-2018",
+		"\tmk/bsd.pkg.mk: started freeze for pkgsrc-2018Q2 branch [freezer 2018-03-25]",
+		"\tmk/bsd.pkg.mk: freeze ended for pkgsrc-2018Q2 branch [freezer 2018-03-27]")
+	t.FinishSetUp()
+
+	t.Check(G.Pkgsrc.FreezeStart, equals, "")
+}
+
+func (s *Suite) Test_Pkgsrc__frozen_with_typo(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("doc/CHANGES-2018",
+		// The closing bracket is missing.
+		"\tmk/bsd.pkg.mk: started freeze for pkgsrc-2018Q2 branch [freezer 2018-03-25")
+	t.FinishSetUp()
+
+	t.Check(G.Pkgsrc.FreezeStart, equals, "")
+}
+
+func (s *Suite) Test_Change_Version(c *check.C) {
+	t := s.Init(c)
+
+	loc := Location{"doc/CHANGES-2019", 5, 5}
+	added := Change{loc, Added, "category/path", "1.0", "author", "2019-01-01"}
+	updated := Change{loc, Updated, "category/path", "1.0", "author", "2019-01-01"}
+	downgraded := Change{loc, Downgraded, "category/path", "1.0", "author", "2019-01-01"}
+	removed := Change{loc, Removed, "category/path", "1.0", "author", "2019-01-01"}
+
+	t.Check(added.Version(), equals, "1.0")
+	t.Check(updated.Version(), equals, "1.0")
+	t.Check(downgraded.Version(), equals, "1.0")
+	t.ExpectAssert(func() { removed.Version() })
+}
+
+func (s *Suite) Test_Change_Target(c *check.C) {
+	t := s.Init(c)
+
+	loc := Location{"doc/CHANGES-2019", 5, 5}
+	renamed := Change{loc, Renamed, "category/path", "category/other", "author", "2019-01-01"}
+	moved := Change{loc, Moved, "category/path", "category/other", "author", "2019-01-01"}
+	downgraded := Change{loc, Downgraded, "category/path", "1.0", "author", "2019-01-01"}
+
+	t.Check(renamed.Target(), equals, "category/other")
+	t.Check(moved.Target(), equals, "category/other")
+	t.ExpectAssert(func() { downgraded.Target() })
+}
+
+func (s *Suite) Test_Change_Successor(c *check.C) {
+	t := s.Init(c)
+
+	loc := Location{"doc/CHANGES-2019", 5, 5}
+	removed := Change{loc, Removed, "category/path", "", "author", "2019-01-01"}
+	removedSucc := Change{loc, Removed, "category/path", "category/successor", "author", "2019-01-01"}
+	downgraded := Change{loc, Downgraded, "category/path", "1.0", "author", "2019-01-01"}
+
+	t.Check(removed.Successor(), equals, "")
+	t.Check(removedSucc.Successor(), equals, "category/successor")
+	t.ExpectAssert(func() { downgraded.Successor() })
+}
+
+func (s *Suite) Test_ChangeAction_String(c *check.C) {
+	t := s.Init(c)
+
+	t.Check(Added.String(), equals, "Added")
+	t.Check(Removed.String(), equals, "Removed")
+}
+
+func (s *Suite) Test_Pkgsrc_ReadDir(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("dir/aaa-subdir/file")
+	t.CreateFileLines("dir/subdir/file")
+	t.CreateFileLines("dir/file")
+	t.CreateFileLines("dir/.git/file")
+	t.CreateFileLines("dir/CVS/Entries")
+	t.CreateFileLines("dir/empty/empty/empty/empty/CVS/Entries")
+
+	infos := G.Pkgsrc.ReadDir("dir")
+
+	var names []string
+	for _, info := range infos {
+		names = append(names, info.Name())
+	}
+
+	t.Check(names, deepEquals, []string{"aaa-subdir", "file", "subdir"})
 }

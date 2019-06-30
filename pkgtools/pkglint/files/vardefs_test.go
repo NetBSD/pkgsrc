@@ -16,18 +16,18 @@ func (s *Suite) Test_VarTypeRegistry_enumFrom(c *check.C) {
 	t := s.Init(c)
 
 	t.CreateFileLines("editors/emacs/modules.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"_EMACS_VERSIONS_ALL=    emacs31",
 		"_EMACS_VERSIONS_ALL+=   emacs29")
 	t.CreateFileLines("mk/java-vm.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"_PKG_JVMS.8=            openjdk8 oracle-jdk8",
 		"_PKG_JVMS.7=            ${_PKG_JVMS.8} openjdk7 sun-jdk7",
 		"_PKG_JVMS.6=            ${_PKG_JVMS.7} jdk16")
 	t.CreateFileLines("mk/compiler.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"_COMPILERS=             gcc ido mipspro-ucode \\",
 		"                        sunpro",
@@ -63,7 +63,7 @@ func (s *Suite) Test_VarTypeRegistry_enumFrom__no_tracing(c *check.C) {
 	t := s.Init(c)
 
 	t.CreateFileLines("mk/existing.mk",
-		MkRcsID,
+		MkCvsID,
 		"VAR=\tfirst second")
 	reg := NewVarTypeRegistry()
 	t.DisableTracing()
@@ -82,8 +82,8 @@ func (s *Suite) Test_VarTypeRegistry_enumFromDirs(c *check.C) {
 
 	// To make the test useful, these directories must differ from the
 	// PYPKGPREFIX default value in vardefs.go.
-	t.CreateFileLines("lang/python28/Makefile", MkRcsID)
-	t.CreateFileLines("lang/python33/Makefile", MkRcsID)
+	t.CreateFileLines("lang/python28/Makefile", MkCvsID)
+	t.CreateFileLines("lang/python33/Makefile", MkCvsID)
 
 	t.SetUpVartypes()
 
@@ -146,9 +146,7 @@ func (s *Suite) Test_VarTypeRegistry_parseACLEntries__invalid_arguments(c *check
 		func() { parseACLEntries("VARNAME", "too: many: colons") },
 		"Pkglint internal error: ACL entry \"too: many: colons\" must have exactly 1 colon.")
 
-	t.ExpectPanic(
-		func() { parseACLEntries("VAR") },
-		"Pkglint internal error: At least one ACL entry must be given.")
+	t.ExpectAssert(func() { parseACLEntries("VAR") })
 }
 
 func (s *Suite) Test_VarTypeRegistry_Init__LP64PLATFORMS(c *check.C) {
@@ -168,7 +166,7 @@ func (s *Suite) Test_VarTypeRegistry_Init__no_tracing(c *check.C) {
 	t := s.Init(c)
 
 	t.CreateFileLines("editors/emacs/modules.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"_EMACS_VERSIONS_ALL=    emacs31",
 		"_EMACS_VERSIONS_ALL+=   emacs29")
@@ -179,11 +177,22 @@ func (s *Suite) Test_VarTypeRegistry_Init__no_tracing(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
+func (s *Suite) Test_VarTypeRegistry_Init__no_testing(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.Remove("mk/fetch/sites.mk")
+	G.Testing = false
+	t.ExpectFatal(
+		t.FinishSetUp,
+		"FATAL: ~/mk/fetch/sites.mk: Cannot be read.")
+}
+
 func (s *Suite) Test_VarTypeRegistry_Init__MASTER_SITES(c *check.C) {
 	t := s.Init(c)
 
 	t.CreateFileLines("mk/fetch/sites.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"MASTER_SITE_GITHUB=\thttps://github.com/",
 		"",

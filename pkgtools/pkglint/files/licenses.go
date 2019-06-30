@@ -3,8 +3,8 @@ package pkglint
 import "netbsd.org/pkglint/licenses"
 
 type LicenseChecker struct {
-	MkLines MkLines
-	MkLine  MkLine
+	MkLines *MkLines
+	MkLine  *MkLine
 }
 
 func (lc *LicenseChecker) Check(value string, op MkOperator) {
