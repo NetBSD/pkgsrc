@@ -305,7 +305,7 @@ func (s *Suite) Test_SubstContext__pre_patch(c *check.C) {
 	t.SetUpVartypes()
 
 	mklines := t.NewMkLines("os.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"SUBST_CLASSES+=         os",
 		"SUBST_STAGE.os=         pre-patch",
@@ -326,7 +326,7 @@ func (s *Suite) Test_SubstContext__post_patch(c *check.C) {
 	t.SetUpVartypes()
 
 	mklines := t.NewMkLines("os.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"SUBST_CLASSES+=         os",
 		"SUBST_STAGE.os=         post-patch",
@@ -395,7 +395,7 @@ func (s *Suite) Test_SubstContext__adjacent(c *check.C) {
 	t.SetUpVartypes()
 
 	mklines := t.NewMkLines("os.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"SUBST_CLASSES+=         1",
 		"SUBST_STAGE.1=          pre-configure",
@@ -420,7 +420,7 @@ func (s *Suite) Test_SubstContext__do_patch(c *check.C) {
 	t.SetUpVartypes()
 
 	mklines := t.NewMkLines("os.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"SUBST_CLASSES+=         os",
 		"SUBST_STAGE.os=         do-patch",
@@ -443,7 +443,7 @@ func (s *Suite) Test_SubstContext__SUBST_VARS_defined_in_block(c *check.C) {
 	t.SetUpVartypes()
 
 	mklines := t.NewMkLines("os.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"SUBST_CLASSES+=         os",
 		"SUBST_STAGE.os=         pre-configure",
@@ -468,7 +468,7 @@ func (s *Suite) Test_SubstContext__SUBST_VARS_in_next_paragraph(c *check.C) {
 	t.SetUpVartypes()
 
 	mklines := t.NewMkLines("os.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"SUBST_CLASSES+=         os",
 		"SUBST_STAGE.os=         pre-configure",
@@ -491,7 +491,7 @@ func (s *Suite) Test_SubstContext__multiple_SUBST_VARS(c *check.C) {
 	t.SetUpVartypes()
 
 	mklines := t.NewMkLines("os.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"SUBST_CLASSES+=         os",
 		"SUBST_STAGE.os=         pre-configure",
@@ -513,7 +513,7 @@ func (s *Suite) Test_SubstContext_Directive__before_SUBST_CLASSES(c *check.C) {
 	t.DisableTracing() // Just for branch coverage.
 
 	mklines := t.NewMkLines("os.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		".if 0",
 		".endif",
@@ -536,7 +536,7 @@ func (s *Suite) Test_SubstContext_suggestSubstVars(c *check.C) {
 	t.SetUpTool("sh", "SH", AtRunTime)
 
 	mklines := t.NewMkLines("subst.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"SUBST_CLASSES+=\t\ttest",
 		"SUBST_STAGE.test=\tpre-configure",
@@ -626,7 +626,7 @@ func (s *Suite) Test_SubstContext_suggestSubstVars__plus(c *check.C) {
 	t.SetUpTool("sh", "SH", AtRunTime)
 
 	mklines := t.NewMkLines("subst.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"SUBST_CLASSES+=\t\tgtk+",
 		"SUBST_STAGE.gtk+ =\tpre-configure",
@@ -667,7 +667,7 @@ func (s *Suite) Test_SubstContext_suggestSubstVars__autofix_realign_paragraph(c 
 	t.Chdir(".")
 
 	mklines := t.SetUpFileMkLines("subst.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"SUBST_CLASSES+=\t\tpfx",
 		"SUBST_STAGE.pfx=\tpre-configure",
@@ -694,7 +694,7 @@ func (s *Suite) Test_SubstContext_suggestSubstVars__autofix_realign_paragraph(c 
 			"with \"SUBST_VARS.pfx+=\\tPREFIX\".")
 
 	t.CheckFileLinesDetab("subst.mk",
-		"# $NetBSD: substcontext_test.go,v 1.26 2019/06/10 19:51:57 rillig Exp $",
+		"# $NetBSD: substcontext_test.go,v 1.27 2019/06/30 20:56:19 rillig Exp $",
 		"",
 		"SUBST_CLASSES+=         pfx",
 		"SUBST_STAGE.pfx=        pre-configure",
@@ -710,7 +710,7 @@ func (s *Suite) Test_SubstContext_suggestSubstVars__autofix_plus_sed(c *check.C)
 	t.Chdir(".")
 
 	mklines := t.SetUpFileMkLines("subst.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"SUBST_CLASSES+=\t\tpfx",
 		"SUBST_STAGE.pfx=\tpre-configure",
@@ -733,7 +733,7 @@ func (s *Suite) Test_SubstContext_suggestSubstVars__autofix_plus_sed(c *check.C)
 			"with \"SUBST_VARS.pfx=\\t\\tPREFIX\".")
 
 	t.CheckFileLinesDetab("subst.mk",
-		"# $NetBSD: substcontext_test.go,v 1.26 2019/06/10 19:51:57 rillig Exp $",
+		"# $NetBSD: substcontext_test.go,v 1.27 2019/06/30 20:56:19 rillig Exp $",
 		"",
 		"SUBST_CLASSES+=         pfx",
 		"SUBST_STAGE.pfx=        pre-configure",
@@ -752,7 +752,7 @@ func (s *Suite) Test_SubstContext_suggestSubstVars__autofix_plus_vars(c *check.C
 	t.Chdir(".")
 
 	mklines := t.SetUpFileMkLines("subst.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"SUBST_CLASSES+=\tid",
 		"SUBST_STAGE.id=\tpre-configure",
@@ -767,7 +767,7 @@ func (s *Suite) Test_SubstContext_suggestSubstVars__autofix_plus_vars(c *check.C
 			"with \"SUBST_VARS.id=\\tPREFIX\".")
 
 	t.CheckFileLinesDetab("subst.mk",
-		"# $NetBSD: substcontext_test.go,v 1.26 2019/06/10 19:51:57 rillig Exp $",
+		"# $NetBSD: substcontext_test.go,v 1.27 2019/06/30 20:56:19 rillig Exp $",
 		"",
 		"SUBST_CLASSES+= id",
 		"SUBST_STAGE.id= pre-configure",
@@ -786,7 +786,7 @@ func (s *Suite) Test_SubstContext_suggestSubstVars__autofix_indentation(c *check
 	t.Chdir(".")
 
 	mklines := t.SetUpFileMkLines("subst.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"SUBST_CLASSES+=\t\t\tfix-paths",
 		"SUBST_STAGE.fix-paths=\t\tpre-configure",
@@ -801,7 +801,7 @@ func (s *Suite) Test_SubstContext_suggestSubstVars__autofix_indentation(c *check
 			"with \"SUBST_VARS.fix-paths=\\t\\tPREFIX\".")
 
 	t.CheckFileLinesDetab("subst.mk",
-		"# $NetBSD: substcontext_test.go,v 1.26 2019/06/10 19:51:57 rillig Exp $",
+		"# $NetBSD: substcontext_test.go,v 1.27 2019/06/30 20:56:19 rillig Exp $",
 		"",
 		"SUBST_CLASSES+=                 fix-paths",
 		"SUBST_STAGE.fix-paths=          pre-configure",
@@ -866,7 +866,7 @@ func (s *Suite) Test_SubstContext__unusual_variable_order(c *check.C) {
 	t.SetUpVartypes()
 
 	mklines := t.NewMkLines("subst.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"SUBST_CLASSES+=\t\tid",
 		"SUBST_SED.id=\t\t-e /deleteme/d",
