@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/08/22 09:46:49 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/06/30 20:16:49 nia Exp $
 
 DISTNAME=	Encode-HanExtra-0.23
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Encode/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Encode-HanExtra/
+HOMEPAGE=	https://metacpan.org/release/Encode-HanExtra
 COMMENT=	Extra sets of Chinese encodings
 LICENSE=	mit
 

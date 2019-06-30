@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2018/08/22 09:44:25 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2019/06/30 20:15:28 nia Exp $
 #
 
 DISTNAME=	MooseX-Types-Structured-0.36
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/MooseX-Types-Structured/
+HOMEPAGE=	https://metacpan.org/release/MooseX-Types-Structured
 COMMENT=	Perl 5 module providing structured type constraints for Moose
 LICENSE=	${PERL5_LICENSE}
 

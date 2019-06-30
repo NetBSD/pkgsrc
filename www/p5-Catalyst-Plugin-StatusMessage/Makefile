@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/08/22 09:47:35 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/06/30 20:17:27 nia Exp $
 
 DISTNAME=	Catalyst-Plugin-StatusMessage-1.002000
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Plugin-StatusMessage/
+HOMEPAGE=	https://metacpan.org/release/Catalyst-Plugin-StatusMessage
 COMMENT=	Handle passing of status messages between screens of a web application
 LICENSE=	${PERL5_LICENSE}
 

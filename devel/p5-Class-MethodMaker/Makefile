@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2018/08/22 09:43:44 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2019/06/30 20:14:41 nia Exp $
 #
 
 DISTNAME=		Class-MethodMaker-2.24
@@ -8,7 +8,7 @@ CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Class/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/Class-MethodMaker/
+HOMEPAGE=		https://metacpan.org/release/Class-MethodMaker
 COMMENT=		Getter/setter OO method maker for class elements
 LICENSE=		${PERL5_LICENSE}
 

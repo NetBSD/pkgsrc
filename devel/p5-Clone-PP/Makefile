@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/08/22 09:43:46 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/06/30 20:14:44 nia Exp $
 
 DISTNAME=	Clone-PP-1.07
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Clone/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Clone-PP/
+HOMEPAGE=	https://metacpan.org/release/Clone-PP
 COMMENT=	Recursively copy Perl datatypes
 LICENSE=	${PERL5_LICENSE}
 

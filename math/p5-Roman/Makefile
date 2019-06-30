@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/08/22 09:45:40 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/06/30 20:16:22 nia Exp $
 #
 
 DISTNAME=	Roman-1.24
@@ -8,7 +8,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Roman/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Roman/
+HOMEPAGE=	https://metacpan.org/release/Roman
 COMMENT=	Conversion of numeric notation between Roman and Arabic
 LICENSE=	${PERL5_LICENSE}
 

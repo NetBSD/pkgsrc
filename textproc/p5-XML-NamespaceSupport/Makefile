@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2018/08/22 09:47:07 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2019/06/30 20:17:09 nia Exp $
 
 DISTNAME=	XML-NamespaceSupport-1.12
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/XML-NamespaceSupport/
+HOMEPAGE=	https://metacpan.org/release/XML-NamespaceSupport
 COMMENT=	Perl module to the SAX2 NamespaceSupport class
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2018/08/22 09:43:40 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/06/30 20:14:36 nia Exp $
 
 DISTNAME=	Cache-Memcached-1.30
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Cache/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Cache-Memcached/
+HOMEPAGE=	https://metacpan.org/release/Cache-Memcached
 COMMENT=	Perl API for distributed memory cache daemon memcached
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/08/22 09:46:55 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2019/06/30 20:16:55 nia Exp $
 
 DISTNAME=	Snowball-Swedish-1.2
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/A/AS/ASKSH/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Snowball-Swedish/
+HOMEPAGE=	https://metacpan.org/release/Snowball-Swedish
 COMMENT=	Porters stemming algorithm for Swedish
 LICENSE=	${PERL5_LICENSE}
 

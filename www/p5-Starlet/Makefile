@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/08/22 09:47:52 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/06/30 20:17:44 nia Exp $
 
 DISTNAME=	Starlet-0.31
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Plack/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Starlet/
+HOMEPAGE=	https://metacpan.org/release/Starlet
 COMMENT=	Perl 5 Plack based standalone HTTP/1.0 server
 LICENSE=	${PERL5_LICENSE}
 

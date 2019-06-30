@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2018/08/22 09:43:46 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2019/06/30 20:14:44 nia Exp $
 
 DISTNAME=	Config-AutoConf-0.317
 PKGNAME=	p5-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Config/}
 MASTER_SITES+=	${MASTER_SITE_PERL_CPAN:=../../authors/id/A/AM/AMBS/irConfig/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Config-AutoConf/
+HOMEPAGE=	https://metacpan.org/release/Config-AutoConf
 COMMENT=	Perl 5 module to implement some of AutoConf macros in pure perl
 LICENSE=	${PERL5_LICENSE}
 

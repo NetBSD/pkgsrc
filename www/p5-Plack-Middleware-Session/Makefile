@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/08/22 09:47:50 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/06/30 20:17:42 nia Exp $
 
 DISTNAME=	Plack-Middleware-Session-0.30
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Plack/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Plack-Middleware-Session/
+HOMEPAGE=	https://metacpan.org/release/Plack-Middleware-Session
 COMMENT=	Plack middleware for session management
 LICENSE=	${PERL5_LICENSE}
 

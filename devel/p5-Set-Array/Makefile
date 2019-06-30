@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/08/22 09:44:37 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2019/06/30 20:15:42 nia Exp $
 #
 
 DISTNAME=	Set-Array-0.30
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Set/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Set-Array/
+HOMEPAGE=	https://metacpan.org/release/Set-Array
 COMMENT=	Arrays as objects with lots of handy methods
 LICENSE=	${PERL5_LICENSE}
 

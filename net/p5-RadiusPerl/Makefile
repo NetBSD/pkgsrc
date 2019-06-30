@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/08/22 09:46:04 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/06/30 20:16:33 nia Exp $
 #
 
 DISTNAME=	RadiusPerl-0.22
@@ -8,7 +8,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Authen/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/RadiusPerl/
+HOMEPAGE=	https://metacpan.org/release/RadiusPerl
 COMMENT=	Provide simple Radius client facilities
 LICENSE=	artistic-2.0
 

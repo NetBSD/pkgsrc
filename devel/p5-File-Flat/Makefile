@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2018/12/31 13:20:16 wen Exp $
+# $NetBSD: Makefile,v 1.25 2019/06/30 20:15:01 nia Exp $
 
 DISTNAME=	File-Flat-1.05
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/File-Flat/
+HOMEPAGE=	https://metacpan.org/release/File-Flat
 COMMENT=	Implements a flat file system
 LICENSE=	${PERL5_LICENSE}
 

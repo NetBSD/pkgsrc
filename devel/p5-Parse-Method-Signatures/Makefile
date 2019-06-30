@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2018/08/22 09:44:30 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/06/30 20:15:34 nia Exp $
 #
 
 DISTNAME=	Parse-Method-Signatures-1.003019
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Parse/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Parse-Method-Signatures/
+HOMEPAGE=	https://metacpan.org/release/Parse-Method-Signatures
 COMMENT=	Perl 5 module providing Perl 6 like method signature parser
 LICENSE=	${PERL5_LICENSE}
 

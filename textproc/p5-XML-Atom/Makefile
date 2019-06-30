@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2018/08/22 09:47:04 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2019/06/30 20:17:06 nia Exp $
 
 DISTNAME=	XML-Atom-0.42
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
 MAINTAINER=	kleink@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/XML-Atom/
+HOMEPAGE=	https://metacpan.org/release/XML-Atom
 COMMENT=	Atom feed and API implementation
 LICENSE=	${PERL5_LICENSE}
 

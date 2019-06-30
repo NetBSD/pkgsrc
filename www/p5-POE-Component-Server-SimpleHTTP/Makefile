@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/11/24 08:21:23 wen Exp $
+# $NetBSD: Makefile,v 1.13 2019/06/30 20:17:39 nia Exp $
 
 DISTNAME=	POE-Component-Server-SimpleHTTP-2.28
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=POE/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/POE-Component-Server-SimpleHTTP/
+HOMEPAGE=	https://metacpan.org/release/POE-Component-Server-SimpleHTTP
 COMMENT=	Simple HTTP Server implementation for POE
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/02/24 05:15:18 mef Exp $
+# $NetBSD: Makefile,v 1.18 2019/06/30 20:16:10 nia Exp $
 
 DISTNAME=	GD-SecurityImage-1.75
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=GD/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Perl5 security image (CAPTCHA) generator
-HOMEPAGE=	http://search.cpan.org/dist/GD-SecurityImage/
+HOMEPAGE=	https://metacpan.org/release/GD-SecurityImage
 LICENSE=	gnu-gpl-v2 # OR artistic
 
 DEPENDS+=	p5-GD-[0-9]*:../../graphics/p5-GD

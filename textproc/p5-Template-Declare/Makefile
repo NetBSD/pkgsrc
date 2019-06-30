@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2018/08/22 09:46:57 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2019/06/30 20:16:57 nia Exp $
 
 DISTNAME=	Template-Declare-0.47
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Template/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Template-Declare/
+HOMEPAGE=	https://metacpan.org/release/Template-Declare
 COMMENT=	Perl 5 module to make Perlish declarative templates
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/08/22 09:44:34 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/06/30 20:15:39 nia Exp $
 
 DISTNAME=	RT-Authen-ExternalAuth-0.17
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=RT/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/RT-Authen-ExternalAuth/
+HOMEPAGE=	https://metacpan.org/release/RT-Authen-ExternalAuth
 COMMENT=	RT extension for external authentication methods
 LICENSE=	${PERL5_LICENSE}
 

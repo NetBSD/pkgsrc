@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/08/22 09:43:38 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2019/06/30 20:14:32 nia Exp $
 
 DISTNAME=	CHI-0.60
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CHI/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/CHI/
+HOMEPAGE=	https://metacpan.org/release/CHI
 COMMENT=	Unified cache handling interface
 LICENSE=	${PERL5_LICENSE}
 

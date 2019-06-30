@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/08/22 09:44:55 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/06/30 20:16:02 nia Exp $
 #
 
 DISTNAME=	accessors-fast-0.03
@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MO/MONS/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/accessors-fast/
+HOMEPAGE=	https://metacpan.org/release/accessors-fast
 COMMENT=	Compiletime accessors using Class::Accessor::Fast
 LICENSE=	${PERL5_LICENSE}
 

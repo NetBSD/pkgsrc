@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/08/22 09:47:37 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/06/30 20:17:30 nia Exp $
 
 DISTNAME=		HTML-Escape-1.10
 PKGNAME=		p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=HTML/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/HTML-Escape/
+HOMEPAGE=		https://metacpan.org/release/HTML-Escape
 COMMENT=		Extremely fast HTML escape
 LICENSE=		${PERL5_LICENSE}
 

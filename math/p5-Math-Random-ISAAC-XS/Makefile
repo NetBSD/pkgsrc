@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/08/22 09:45:39 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/06/30 20:16:20 nia Exp $
 #
 
 DISTNAME=	Math-Random-ISAAC-XS-1.004
@@ -8,7 +8,7 @@ CATEGORIES=	math perl5 security
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Math/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Math-Random-ISAAC-XS/
+HOMEPAGE=	https://metacpan.org/release/Math-Random-ISAAC-XS
 COMMENT=	C implementation of the ISAAC PRNG algorithm for Perl modules
 LICENSE=	cc0-1.0-universal
 

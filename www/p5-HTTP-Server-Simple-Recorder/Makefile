@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/08/22 09:47:44 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/06/30 20:17:36 nia Exp $
 
 DISTNAME=	HTTP-Server-Simple-Recorder-0.03
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/HTTP-Server-Simple-Recorder/
+HOMEPAGE=	https://metacpan.org/release/HTTP-Server-Simple-Recorder
 COMMENT=	Perl 5 module mixin to record HTTP::Server::Simple's sockets
 
 USE_LANGUAGES=	# empty

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2019/01/13 03:28:41 wen Exp $
+# $NetBSD: Makefile,v 1.41 2019/06/30 20:16:34 nia Exp $
 
 DISTNAME=	SNMP-Info-3.64
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=SNMP/}
 
 MAINTAINER=	bouyer@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/SNMP-Info/
+HOMEPAGE=	https://metacpan.org/release/SNMP-Info
 #HOMEPAGE=	http://snmp-info.sourceforge.net/
 COMMENT=	Perl5 object oriented interface to SNMP informations
 LICENSE=	modified-bsd

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/08/22 09:46:20 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/06/30 20:16:36 nia Exp $
 #
 
 DISTNAME=	Authen-SASL-Authd-0.04
@@ -8,7 +8,7 @@ CATEGORIES=	security perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Authen/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Authen-SASL-Authd/
+HOMEPAGE=	https://metacpan.org/release/Authen-SASL-Authd
 COMMENT=	Perl module to handle SASL auth via Cyrus saslauthd or Dovecot
 LICENSE=	${PERL5_LICENSE}
 

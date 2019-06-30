@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/08/22 09:47:16 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/06/30 20:17:15 nia Exp $
 
 DISTNAME=	DateTime-Format-Mail-0.403
 # make sure it has 4 digits
@@ -8,7 +8,7 @@ CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DateTime/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/DateTime-Format-Mail/
+HOMEPAGE=	https://metacpan.org/release/DateTime-Format-Mail
 COMMENT=	Convert between DateTime and RFC2822/822 formats
 LICENSE=	${PERL5_LICENSE}
 

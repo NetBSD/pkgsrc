@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/08/22 09:47:55 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/06/30 20:17:46 nia Exp $
 
 DISTNAME=		URI-Find-20160806
 PKGNAME=		p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=URI/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/URI-Find/
+HOMEPAGE=		https://metacpan.org/release/URI-Find
 COMMENT=		Perl5 module to find URIs in arbitrary text
 LICENSE=		${PERL5_LICENSE}
 

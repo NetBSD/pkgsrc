@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/08/22 09:44:48 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/06/30 20:15:55 nia Exp $
 #
 
 DISTNAME=	Test-Perl-Critic-1.04
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Test-Perl-Critic/
+HOMEPAGE=	https://metacpan.org/release/Test-Perl-Critic
 COMMENT=	Perl 5 module providing a Perl::Critic interface for test programs
 LICENSE=	${PERL5_LICENSE}
 

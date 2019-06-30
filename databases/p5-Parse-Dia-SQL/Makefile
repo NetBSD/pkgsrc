@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/08/22 09:43:20 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/06/30 20:14:27 nia Exp $
 
 DISTNAME=	Parse-Dia-SQL-0.30
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Parse/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Parse-Dia-SQL
+HOMEPAGE=	https://metacpan.org/release/Parse-Dia-SQL
 COMMENT=	Perl module to convert Dia diagrams to SQL
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 

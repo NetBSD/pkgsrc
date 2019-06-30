@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2018/08/22 09:43:17 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2019/06/30 20:14:23 nia Exp $
 
 DISTNAME=	DBIx-Class-Helpers-2.033004
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBIx/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/DBIx-Class-Helpers/
+HOMEPAGE=	https://metacpan.org/release/DBIx-Class-Helpers
 COMMENT=	Perl5 modules to simplify the common case stuff for DBIx::Class
 LICENSE=	${PERL5_LICENSE}
 

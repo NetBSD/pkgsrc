@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2018/08/22 09:43:17 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2019/06/30 20:14:24 nia Exp $
 
 DISTNAME=	DBIx-Class-Schema-Loader-0.07049
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBIx/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/DBIx-Class-Schema-Loader/
+HOMEPAGE=	https://metacpan.org/release/DBIx-Class-Schema-Loader
 COMMENT=	Dynamic definition of a DBIx::Class::Schema
 LICENSE=	${PERL5_LICENSE}
 

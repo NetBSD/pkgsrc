@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2018/08/22 09:47:10 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/06/30 20:17:11 nia Exp $
 #
 
 DISTNAME=	XML-XUpdate-LibXML-0.6.0
@@ -8,7 +8,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/XML-XUpdate-LibXML/
+HOMEPAGE=	https://metacpan.org/release/XML-XUpdate-LibXML
 COMMENT=	Simple implementation of XUpdate format based on and XML::LibXML
 
 DEPENDS+=	p5-XML-LibXML>=1.54:../../textproc/p5-XML-LibXML

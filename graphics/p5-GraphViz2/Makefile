@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/08/22 09:45:15 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/06/30 20:16:11 nia Exp $
 
 DISTNAME=	GraphViz2-2.47
 PKGNAME=	p5-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=GraphViz2/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/GraphViz2/
+HOMEPAGE=	https://metacpan.org/release/GraphViz2
 COMMENT=	Wrapper for AT&T\'s Graphviz
 LICENSE=	artistic-2.0
 

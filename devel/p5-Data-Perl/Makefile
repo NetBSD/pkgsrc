@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/08/22 09:43:50 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/06/30 20:14:49 nia Exp $
 
 DISTNAME=	Data-Perl-0.002009
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Data-Perl/
+HOMEPAGE=	https://metacpan.org/release/Data-Perl
 COMMENT=	Base classes wrapping fundamental Perl data types
 LICENSE=	${PERL5_LICENSE}
 

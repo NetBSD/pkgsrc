@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/08/22 09:46:50 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/06/30 20:16:50 nia Exp $
 #
 
 DISTNAME=		Lingua-EN-Numbers-Ordinate-1.04
@@ -8,7 +8,7 @@ CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Lingua/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/Lingua-EN-Numbers-Ordinate/
+HOMEPAGE=		https://metacpan.org/release/Lingua-EN-Numbers-Ordinate
 COMMENT=		Go from cardinal number (3) to ordinal ("3rd")
 
 #DEPENDS+=		p5-Array-Compare-[0-9]*:../../devel/p5-Array-Compare

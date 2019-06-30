@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/03/17 14:01:39 wen Exp $
+# $NetBSD: Makefile,v 1.17 2019/06/30 20:15:16 nia Exp $
 
 DISTNAME=	Log-Dispatchouli-2.017
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Log/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Log-Dispatchouli/
+HOMEPAGE=	https://metacpan.org/release/Log-Dispatchouli
 COMMENT=	Perl 5 wrapper module around Log::Dispatch
 LICENSE=	${PERL5_LICENSE}
 

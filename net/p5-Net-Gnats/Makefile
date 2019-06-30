@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2018/08/22 09:46:00 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2019/06/30 20:16:29 nia Exp $
 
 DISTNAME=	Net-Gnats-0.22
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	net perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/R/RI/RICHE/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Net-Gnats/
+HOMEPAGE=	https://metacpan.org/release/Net-Gnats
 COMMENT=	Perl interface to the gnatsd daemon
 LICENSE=	${PERL5_LICENSE}
 

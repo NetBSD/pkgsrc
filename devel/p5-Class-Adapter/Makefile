@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/08/22 09:43:42 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/06/30 20:14:38 nia Exp $
 
 DISTNAME=	Class-Adapter-1.09
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Class-Adapter/
+HOMEPAGE=	https://metacpan.org/release/Class-Adapter
 COMMENT=	Perl 5 module implementing the adapter design pattern
 LICENSE=	${PERL5_LICENSE}
 

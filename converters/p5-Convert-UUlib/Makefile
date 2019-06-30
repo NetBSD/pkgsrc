@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2018/08/22 09:43:06 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2019/06/30 20:14:16 nia Exp $
 
 DISTNAME=	Convert-UUlib-1.5
 PKGNAME=	p5-${DISTNAME}0
@@ -7,7 +7,7 @@ CATEGORIES=	converters perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Convert/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Convert-UUlib/
+HOMEPAGE=	https://metacpan.org/release/Convert-UUlib
 COMMENT=	Perl5 module interface to the uulib library
 LICENSE=	gnu-gpl-v2
 

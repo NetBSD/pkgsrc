@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/08/22 09:47:45 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/06/30 20:17:37 nia Exp $
 #
 
 DISTNAME=	JavaScript-Value-Escape-0.07
@@ -8,7 +8,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=JavaScript/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/JavaScript-Value-Escape/
+HOMEPAGE=	https://metacpan.org/release/JavaScript-Value-Escape
 COMMENT=	Avoid XSS with JavaScript value interpolation
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/08/22 09:47:44 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2019/06/30 20:17:36 nia Exp $
 
 DISTNAME=	HTTP-Server-Simple-Static-0.14
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/HTTP-Server-Simple-Static/
+HOMEPAGE=	https://metacpan.org/release/HTTP-Server-Simple-Static
 COMMENT=	Serve static files with HTTP::Server::Simple
 LICENSE=	${PERL5_LICENSE}
 

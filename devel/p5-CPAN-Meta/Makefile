@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2018/08/22 09:43:39 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2019/06/30 20:14:35 nia Exp $
 
 DISTNAME=	CPAN-Meta-2.150010
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CPAN/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/CPAN-Meta/
+HOMEPAGE=	https://metacpan.org/release/CPAN-Meta
 COMMENT=	Perl module for handling the distribution metadata for a CPAN dist
 LICENSE=	${PERL5_LICENSE}
 

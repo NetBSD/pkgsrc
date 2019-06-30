@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/08/22 09:46:20 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/06/30 20:16:36 nia Exp $
 #
 
 DISTNAME=	Authen-PluggableCaptcha-0.05
@@ -8,7 +8,7 @@ CATEGORIES=	security perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Authen/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Authen-PluggableCaptcha/
+HOMEPAGE=	https://metacpan.org/release/Authen-PluggableCaptcha
 COMMENT=	Perl5 module implementing a pluggable Captcha framework
 LICENSE=	${PERL5_LICENSE}
 

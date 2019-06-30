@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2018/11/25 14:24:43 wen Exp $
+# $NetBSD: Makefile,v 1.25 2019/06/30 20:16:05 nia Exp $
 #
 
 DISTNAME=	prefork-1.05
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/E/ET/ETHER/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/prefork/
+HOMEPAGE=	https://metacpan.org/release/prefork
 COMMENT=	Optimize module loading across forking and non-forking scenarios
 LICENSE=	${PERL5_LICENSE}
 

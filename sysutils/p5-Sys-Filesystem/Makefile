@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/08/22 09:46:38 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/06/30 20:16:46 nia Exp $
 #
 
 DISTNAME=	Sys-Filesystem-1.406
@@ -8,7 +8,7 @@ CATEGORIES=	sysutils devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Sys/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Sys-Filesystem/
+HOMEPAGE=	https://metacpan.org/release/Sys-Filesystem
 COMMENT=	Retrieve list of filesystems and their properties
 LICENSE=	apache-2.0
 

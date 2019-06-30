@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/12/16 06:59:46 wen Exp $
+# $NetBSD: Makefile,v 1.5 2019/06/30 20:15:43 nia Exp $
 
 DISTNAME=	Shell-Guess-0.09
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Shell/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Shell-Guess/
+HOMEPAGE=	https://metacpan.org/release/Shell-Guess
 COMMENT=	Make an educated guess about the shell in use
 LICENSE=	${PERL5_LICENSE}
 
