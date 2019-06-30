@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2697 2019/06/30 20:34:56 skrll Exp $
+$NetBSD: CHANGES-2019,v 1.2698 2019/06/30 20:35:50 skrll Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4458,4 +4458,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/youtube-dl to 20190627 [leot 2019-06-30]
 	Updated net/gallery-dl to 1.8.7 [leot 2019-06-30]
 	Updated news/sfeed to 0.9.12 [leot 2019-06-30]
-	Updated emulators/gxemul to 0.6.1nb4 [nick 2019-06-30]
+	Updated emulators/gxemul to 0.6.1nb4 [skrll 2019-06-30]
