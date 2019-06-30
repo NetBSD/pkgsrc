@@ -1,4 +1,4 @@
-# $NetBSD: pthread.buildlink3.mk,v 1.32 2016/04/11 04:22:34 dbj Exp $
+# $NetBSD: pthread.buildlink3.mk,v 1.33 2019/06/30 21:28:28 rillig Exp $
 #
 # The pthreads strategy for pkgsrc is to "bless" a particular pthread
 # package as the Official Pthread Replacement (OPR).  The following
@@ -79,12 +79,12 @@ _PKG_PTHREAD_BUILDLINK3_MK?=	${_PKG_PTHREAD_PKGSRCDIR}/buildlink3.mk
 # can actually be used to replace a native pthreads.
 _PKG_PTHREAD_COMPAT_PATTERNS=	*-*-*
 
-.include "../../mk/bsd.fast.prefs.mk"
+.include "bsd.fast.prefs.mk"
 
 PTHREAD_OPTS?=	# empty
 
 CHECK_BUILTIN.pthread:=  yes
-.include "../../mk/pthread.builtin.mk"
+.include "pthread.builtin.mk"
 CHECK_BUILTIN.pthread:=  no
 
 #
