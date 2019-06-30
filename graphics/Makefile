@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.821 2019/06/17 16:42:29 adam Exp $
+# $NetBSD: Makefile,v 1.822 2019/06/30 21:59:55 fcambus Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -295,6 +295,7 @@ SUBDIR+=	lensfun
 SUBDIR+=	lepton
 SUBDIR+=	leptonica
 SUBDIR+=	lib3ds
+SUBDIR+=	libansilove
 SUBDIR+=	libart
 SUBDIR+=	libbpg
 SUBDIR+=	libcaca
