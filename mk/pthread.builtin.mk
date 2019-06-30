@@ -1,4 +1,4 @@
-# $NetBSD: pthread.builtin.mk,v 1.15 2013/11/23 09:10:14 obache Exp $
+# $NetBSD: pthread.builtin.mk,v 1.16 2019/06/30 21:28:28 rillig Exp $
 
 BUILTIN_PKG:=	pthread
 
@@ -6,7 +6,7 @@ BUILTIN_FIND_LIBS:=		pthread c_r rt
 BUILTIN_FIND_HEADERS_VAR=	H_PTHREAD
 BUILTIN_FIND_HEADERS.H_PTHREAD=	pthread.h
 
-.include "../../mk/buildlink3/bsd.builtin.mk"
+.include "buildlink3/bsd.builtin.mk"
 
 ###
 ### Determine if there is a built-in implementation of the package and
