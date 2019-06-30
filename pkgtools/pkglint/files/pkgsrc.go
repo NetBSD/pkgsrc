@@ -33,10 +33,13 @@ type Pkgsrc struct {
 
 	PkgOptions map[string]string // "x11" => "Provides X11 support"
 
-	suggestedUpdates    []SuggestedUpdate   //
-	suggestedWipUpdates []SuggestedUpdate   //
-	LastChange          map[string]*Change  //
-	listVersions        map[string][]string // See ListVersions
+	suggestedUpdates    []SuggestedUpdate
+	suggestedWipUpdates []SuggestedUpdate
+
+	LastChange  map[string]*Change
+	FreezeStart string // e.g. "2018-01-01", or ""
+
+	listVersions map[string][]string // See Pkgsrc.ListVersions
 
 	// Variables that may be overridden by the pkgsrc user.
 	// They are typically defined in mk/defaults/mk.conf.
@@ -60,6 +63,7 @@ func NewPkgsrc(dir string) Pkgsrc {
 		nil,
 		nil,
 		make(map[string]*Change),
+		"",
 		make(map[string][]string),
 		NewScope(),
 		make(map[string]string),
@@ -184,9 +188,9 @@ func (src *Pkgsrc) Latest(category string, re regex.Pattern, repl string) string
 //      => {"php-53", "php-56", "php-73"}
 func (src *Pkgsrc) ListVersions(category string, re regex.Pattern, repl string, errorIfEmpty bool) []string {
 	if G.Testing {
-		assertf(
-			hasPrefix(string(re), "^") && hasSuffix(string(re), "$"),
-			"Regular expression %q must be anchored at both ends.", re)
+		// Regular expression must be anchored at both ends, to avoid typos.
+		assert(hasPrefix(string(re), "^"))
+		assert(hasSuffix(string(re), "$"))
 	}
 
 	// TODO: Maybe convert cache key to a struct, to save allocations.
@@ -243,7 +247,7 @@ func (src *Pkgsrc) ListVersions(category string, re regex.Pattern, repl string, 
 		return naturalLess(names[i], names[j])
 	})
 
-	var repls = make([]string, len(names), len(names))
+	var repls = make([]string, len(names))
 	for i, name := range names {
 		repls[i] = replaceAll(name, re, repl)
 	}
@@ -262,9 +266,7 @@ func (src *Pkgsrc) checkToplevelUnusedLicenses() {
 		licenseName := licenseFile.Name()
 		if !G.InterPackage.LicenseUsed(licenseName) {
 			licensePath := licensesDir + "/" + licenseName
-			if fileExists(licensePath) {
-				NewLineWhole(licensePath).Warnf("This license seems to be unused.")
-			}
+			NewLineWhole(licensePath).Warnf("This license seems to be unused.")
 		}
 	}
 }
@@ -291,24 +293,15 @@ func (src *Pkgsrc) loadTools() {
 	}
 
 	// TODO: parse bsd.prefs.mk and bsd.pkg.mk instead of hardcoding this.
-	toolDefs := [...]struct {
-		Name     string
-		Varname  string
-		Validity Validity
-	}{
-		{"echo", "ECHO", AfterPrefsMk},
-		{"echo -n", "ECHO_N", AfterPrefsMk},
-		{"false", "FALSE", AtRunTime}, // from bsd.pkg.mk
-		{"test", "TEST", AfterPrefsMk},
-		{"true", "TRUE", AfterPrefsMk}}
-
-	for _, toolDef := range toolDefs {
-		tools.def(toolDef.Name, toolDef.Varname, true, toolDef.Validity, nil)
-	}
+	tools.def("echo", "ECHO", true, AfterPrefsMk, nil)
+	tools.def("echo -n", "ECHO_N", true, AfterPrefsMk, nil)
+	tools.def("false", "FALSE", true, AtRunTime, nil) // from bsd.pkg.mk
+	tools.def("test", "TEST", true, AfterPrefsMk, nil)
+	tools.def("true", "TRUE", true, AfterPrefsMk, nil)
 
 	for _, basename := range toolFiles {
 		mklines := src.LoadMk("mk/tools/"+basename, MustSucceed|NotEmpty)
-		mklines.ForEach(func(mkline MkLine) {
+		mklines.ForEach(func(mkline *MkLine) {
 			tools.ParseToolLine(mklines, mkline, true, !mklines.indentation.IsConditional())
 		})
 	}
@@ -316,7 +309,7 @@ func (src *Pkgsrc) loadTools() {
 	for _, relativeName := range [...]string{"mk/bsd.prefs.mk", "mk/bsd.pkg.mk"} {
 
 		mklines := src.LoadMk(relativeName, MustSucceed|NotEmpty)
-		mklines.ForEach(func(mkline MkLine) {
+		mklines.ForEach(func(mkline *MkLine) {
 			if mkline.IsVarassign() {
 				varname := mkline.Varname()
 				switch varname {
@@ -349,7 +342,7 @@ func (src *Pkgsrc) loadUntypedVars() {
 	// Setting guessed to false prevents the vartype.guessed case in MkLineChecker.CheckVaruse.
 	unknownType := NewVartype(BtUnknown, NoVartypeOptions, NewACLEntry("*", aclpAll))
 
-	define := func(varcanon string, mkline MkLine) {
+	define := func(varcanon string, mkline *MkLine) {
 		switch {
 		case src.vartypes.DefinedCanon(varcanon):
 			// Already defined, can also be a tool.
@@ -376,23 +369,21 @@ func (src *Pkgsrc) loadUntypedVars() {
 	}
 
 	handleMkFile := func(path string) {
-		mklines := LoadMk(path, 0)
-		if mklines != nil && len(mklines.mklines) > 0 {
-			mklines.collectDefinedVariables()
-			mklines.collectUsedVariables()
-			for varname, mkline := range mklines.vars.firstDef {
-				define(varnameCanon(varname), mkline)
-			}
-			for varname, mkline := range mklines.vars.used {
-				define(varnameCanon(varname), mkline)
-			}
+		mklines := LoadMk(path, MustSucceed)
+		mklines.collectDefinedVariables()
+		mklines.collectUsedVariables()
+		for varname, mkline := range mklines.vars.firstDef {
+			define(varnameCanon(varname), mkline)
+		}
+		for varname, mkline := range mklines.vars.used {
+			define(varnameCanon(varname), mkline)
 		}
 	}
 
 	handleFile := func(pathName string, info os.FileInfo, err error) error {
 		assertNil(err, "handleFile %q", pathName)
 		baseName := info.Name()
-		if hasSuffix(baseName, ".mk") || baseName == "mk.conf" {
+		if info.Mode().IsRegular() && (hasSuffix(baseName, ".mk") || baseName == "mk.conf") {
 			handleMkFile(filepath.ToSlash(pathName))
 		}
 		return nil
@@ -402,7 +393,7 @@ func (src *Pkgsrc) loadUntypedVars() {
 	assertNil(err, "Walk error in pkgsrc infrastructure")
 }
 
-func (src *Pkgsrc) parseSuggestedUpdates(lines Lines) []SuggestedUpdate {
+func (src *Pkgsrc) parseSuggestedUpdates(lines *Lines) []SuggestedUpdate {
 	if lines == nil {
 		return nil
 	}
@@ -444,79 +435,77 @@ func (src *Pkgsrc) loadSuggestedUpdates() {
 	src.suggestedWipUpdates = src.parseSuggestedUpdates(Load(src.File("wip/TODO"), NotEmpty))
 }
 
-func (src *Pkgsrc) loadDocChangesFromFile(filename string) []*Change {
+func (*Pkgsrc) parseDocChange(line *Line, warn bool) *Change {
+	lex := textproc.NewLexer(line.Text)
 
-	warn := !G.Wip
+	space := lex.NextHspace()
+	if space == "" {
+		return nil
+	}
 
-	parseChange := func(line Line) *Change {
-		lex := textproc.NewLexer(line.Text)
-
-		space := lex.NextHspace()
-		if space == "" {
-			return nil
+	if space != "\t" {
+		if warn {
+			line.Warnf("Package changes should be indented using a single tab, not %q.", space)
+			line.Explain(
+				"To avoid this formatting mistake in the future, just run",
+				sprintf("%q", bmake("cce")),
+				"after committing the update to the package.")
 		}
-
-		if space != "\t" {
-			if warn {
-				line.Warnf("Package changes should be indented using a single tab, not %q.", space)
-				line.Explain(
-					"To avoid this formatting mistake in the future, just run",
-					sprintf("%q", bmake("cce")),
-					"after committing the update to the package.")
-			}
-
-			return nil
-		}
-
-		f := strings.Fields(lex.Rest())
-		n := len(f)
-		if n != 4 && n != 6 {
-			return nil
-		}
-
-		action, pkgpath, author, date := f[0], f[1], f[len(f)-2], f[len(f)-1]
-		if !hasPrefix(author, "[") || !hasSuffix(date, "]") {
-			return nil
-		}
-		author, date = author[1:], date[:len(date)-1]
-
-		newChange := func(version string) *Change {
-			return &Change{
-				Location: line.Location,
-				Action:   intern(action),
-				Pkgpath:  intern(pkgpath),
-				Version:  intern(version),
-				Author:   intern(author),
-				Date:     intern(date),
-			}
-		}
-
-		switch {
-		case action == "Added" && f[2] == "version" && n == 6:
-			return newChange(f[3])
-
-		case (action == "Updated" || action == "Downgraded") && f[2] == "to" && n == 6:
-			return newChange(f[3])
-
-		case action == "Removed" && (n == 6 && f[2] == "successor" || n == 4):
-			return newChange("")
-
-		case (action == "Renamed" || action == "Moved") && f[2] == "to" && n == 6:
-			return newChange("")
-		}
-
-		line.Warnf("Unknown doc/CHANGES line: %s", line.Text)
-		line.Explain(
-			"See mk/misc/developer.mk for the rules.")
 
 		return nil
 	}
+
+	f := strings.Fields(lex.Rest())
+	n := len(f)
+	if n != 4 && n != 6 {
+		return nil
+	}
+
+	action := ParseChangeAction(f[0])
+	pkgpath := f[1]
+	author := f[len(f)-2]
+	date := f[len(f)-1]
+
+	if !hasPrefix(author, "[") || !hasSuffix(date, "]") {
+		return nil
+	}
+	author, date = author[1:], date[:len(date)-1]
+
+	switch {
+	case
+		action == Added && f[2] == "version",
+		action == Updated && f[2] == "to",
+		action == Downgraded && f[2] == "to",
+		action == Removed && (f[2] == "successor" || n == 4),
+		(action == Renamed || action == Moved) && f[2] == "to":
+		return &Change{
+			Location: line.Location,
+			Action:   action,
+			Pkgpath:  intern(pkgpath),
+			target:   intern(ifelseStr(n == 6, f[3], "")),
+			Author:   intern(author),
+			Date:     intern(date),
+		}
+	}
+
+	if warn {
+		line.Warnf("Unknown doc/CHANGES line: %s", line.Text)
+		line.Explain(
+			"See mk/misc/developer.mk for the rules.")
+	}
+
+	return nil
+}
+
+func (src *Pkgsrc) loadDocChangesFromFile(filename string) []*Change {
+
+	warn := !G.Wip
 
 	// Each date in the file should be from the same year as the filename says.
 	// This check has been added in 2018.
 	// For years earlier than 2018 pkglint doesn't care because it's not a big issue anyway.
 	year := ""
-	if m, yyyy := match1(filename, `-(\d+)$`); m && yyyy >= "2018" {
+	if _, yyyy := match1(filename, `-(\d\d\d\d)$`); yyyy >= "2018" {
 		year = yyyy
 	}
 
@@ -527,6 +516,13 @@ func (src *Pkgsrc) loadDocChangesFromFile(filename string) []*Change {
 
 		if hasPrefix(line.Text, "\tmk/") {
 			infra = true
+			if hasPrefix(line.Text, "\tmk/bsd.pkg.mk: started freeze for") {
+				if m, freezeDate := match1(line.Text, `(\d\d\d\d-\d\d-\d\d)\]$`); m {
+					src.FreezeStart = freezeDate
+				}
+			} else if hasPrefix(line.Text, "\tmk/bsd.pkg.mk: freeze ended for") {
+				src.FreezeStart = ""
+			}
 		}
 		if infra {
 			if hasSuffix(line.Text, "]") {
@@ -535,7 +531,7 @@ func (src *Pkgsrc) loadDocChangesFromFile(filename string) []*Change {
 			continue
 		}
 
-		change := parseChange(line)
+		change := src.parseDocChange(line, warn)
 		if change == nil {
 			continue
 		}
@@ -546,14 +542,14 @@ func (src *Pkgsrc) loadDocChangesFromFile(filename string) []*Change {
 			continue
 		}
 
-		if year != "" && change.Date[0:4] != year {
-			line.Warnf("Year %s for %s does not match the filename %s.",
+		if year != "" && len(change.Date) >= 4 && change.Date[0:4] != year {
+			line.Warnf("Year %q for %s does not match the filename %s.",
 				change.Date[0:4], change.Pkgpath, filename)
 		}
 
 		if len(changes) >= 2 && year != "" {
 			if prev := changes[len(changes)-2]; change.Date < prev.Date {
-				line.Warnf("Date %s for %s is earlier than %s in %s.",
+				line.Warnf("Date %q for %s is earlier than %q in %s.",
 					change.Date, change.Pkgpath, prev.Date, line.RefToLocation(prev.Location))
 				line.Explain(
 					"The entries in doc/CHANGES should be in chronological order, and",
@@ -597,12 +593,14 @@ func (src *Pkgsrc) loadDocChanges() {
 		}
 	}
 
-	sort.Strings(filenames)
 	src.LastChange = make(map[string]*Change)
 	for _, filename := range filenames {
 		changes := src.loadDocChangesFromFile(docDir + "/" + filename)
 		for _, change := range changes {
 			src.LastChange[change.Pkgpath] = change
+			if change.Action == Renamed || change.Action == Moved {
+				src.LastChange[change.Target()] = change
+			}
 		}
 	}
 }
@@ -782,17 +780,18 @@ func (src *Pkgsrc) initDeprecatedVars() {
 }
 
 // Load loads the file relative to the pkgsrc top directory.
-func (src *Pkgsrc) Load(filename string, options LoadOptions) Lines {
+func (src *Pkgsrc) Load(filename string, options LoadOptions) *Lines {
 	return Load(src.File(filename), options)
 }
 
 // LoadMk loads the Makefile relative to the pkgsrc top directory.
-func (src *Pkgsrc) LoadMk(filename string, options LoadOptions) MkLines {
+func (src *Pkgsrc) LoadMk(filename string, options LoadOptions) *MkLines {
 	return LoadMk(src.File(filename), options)
 }
 
-// ReadDir reads the file listing from the given directory (relative to the pkgsrc root),
-// filtering out any ignored files (CVS/*) and empty directories.
+// ReadDir lists the files and subdirectories from the given directory
+// (relative to the pkgsrc root), filtering out any ignored files (CVS/*)
+// and empty directories.
 func (src *Pkgsrc) ReadDir(dirName string) []os.FileInfo {
 	dir := src.File(dirName)
 	files, err := ioutil.ReadDir(dir)
@@ -901,7 +900,7 @@ func (src *Pkgsrc) loadPkgOptions() {
 // VariableType returns the type of the variable
 // (possibly guessed based on the variable name),
 // or nil if the type cannot even be guessed.
-func (src *Pkgsrc) VariableType(mklines MkLines, varname string) (vartype *Vartype) {
+func (src *Pkgsrc) VariableType(mklines *MkLines, varname string) (vartype *Vartype) {
 	if trace.Tracing {
 		defer trace.Call(varname, trace.Result(&vartype))()
 	}
@@ -976,6 +975,8 @@ func (src *Pkgsrc) guessVariableType(varname string) (vartype *Vartype) {
 		return listType(BtCFlag, aclpAllRuntime)
 	case hasSuffix(varname, "_LDFLAGS"):
 		return listType(BtLdFlag, aclpAllRuntime)
+	case hasSuffix(varname, "FLAGS"):
+		return listType(BtShellWord, aclpAll)
 	case hasSuffix(varbase, "_MK"):
 		// TODO: Add BtGuard for inclusion guards, since these variables may only be checked using defined().
 		return plainType(BtUnknown, aclpAll)
@@ -1005,11 +1006,62 @@ func (src *Pkgsrc) guessVariableType(varname string) (vartype *Vartype) {
 // Change describes a modification to a single package, from the doc/CHANGES-* files.
 type Change struct {
 	Location Location
-	Action   string
-	Pkgpath  string
-	Version  string
+	Action   ChangeAction // Added, Updated, Downgraded, Renamed, Moved, Removed
+	Pkgpath  string       // For renamed or moved packages, the previous PKGPATH
+	target   string
 	Author   string
 	Date     string
+}
+
+// Version returns the version number for an Added, Updated or Downgraded package.
+func (ch *Change) Version() string {
+	assert(ch.Action == Added || ch.Action == Updated || ch.Action == Downgraded)
+	return ch.target
+}
+
+// Target returns the target PKGPATH for a Renamed or Moved package.
+func (ch *Change) Target() string {
+	assert(ch.Action == Renamed || ch.Action == Moved)
+	return ch.target
+}
+
+// Successor returns the successor for a Removed package.
+func (ch *Change) Successor() string {
+	assert(ch.Action == Removed)
+	return ch.target
+}
+
+type ChangeAction uint8
+
+const (
+	Added ChangeAction = 1 + iota
+	Updated
+	Downgraded
+	Renamed
+	Moved
+	Removed
+)
+
+func ParseChangeAction(s string) ChangeAction {
+	switch s {
+	case "Added":
+		return Added
+	case "Updated":
+		return Updated
+	case "Downgraded":
+		return Downgraded
+	case "Renamed":
+		return Renamed
+	case "Moved":
+		return Moved
+	case "Removed":
+		return Removed
+	}
+	return 0
+}
+
+func (ca ChangeAction) String() string {
+	return [...]string{"", "Added", "Updated", "Downgraded", "Renamed", "Moved", "Removed"}[ca]
 }
 
 // SuggestedUpdate describes a desired package update, from the doc/TODO file.

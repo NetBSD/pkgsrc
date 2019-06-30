@@ -5,6 +5,15 @@ import (
 	"strings"
 )
 
+func (s *Suite) Test_NewMkParser__invalid_arguments(c *check.C) {
+	t := s.Init(c)
+
+	line := t.NewLine("filename.mk", 123, "")
+
+	t.ExpectAssert(func() { NewMkParser(line, "", false) })
+	t.ExpectAssert(func() { NewMkParser(nil, "", true) })
+}
+
 func (s *Suite) Test_MkParser_MkTokens(c *check.C) {
 	t := s.Init(c)
 
@@ -89,7 +98,9 @@ func (s *Suite) Test_MkParser_VarUse(c *check.C) {
 	testRest := func(input string, expectedTokens []*MkToken, expectedRest string, diagnostics ...string) {
 		line := t.NewLines("Test_MkParser_VarUse.mk", input).Lines[0]
 		p := NewMkParser(line, input, true)
+
 		actualTokens := p.MkTokens()
+
 		c.Check(actualTokens, deepEquals, expectedTokens)
 		for i, expectedToken := range expectedTokens {
 			if i < len(actualTokens) {
@@ -243,6 +254,10 @@ func (s *Suite) Test_MkParser_VarUse(c *check.C) {
 	test("${RUBY_RAILS_SUPPORTED:[#]}",
 		varuse("RUBY_RAILS_SUPPORTED", "[#]"))
 
+	test("${GZIP_CMD:[asdf]:Q}",
+		varuseText("${GZIP_CMD:[asdf]:Q}", "GZIP_CMD", "Q"),
+		"WARN: Test_MkParser_VarUse.mk:1: Invalid variable modifier \"[asdf]\" for \"GZIP_CMD\".")
+
 	test("${DISTNAME:C/-[0-9]+$$//:C/_/-/}",
 		varuse("DISTNAME", "C/-[0-9]+$$//", "C/_/-/"))
 
@@ -367,6 +382,142 @@ func (s *Suite) Test_MkParser_VarUse(c *check.C) {
 		"WARN: Test_MkParser_VarUse.mk:1: Missing closing \"}\" for \"${\".")
 }
 
+func (s *Suite) Test_MkParser_varUseModifier__invalid_ts_modifier_with_warning(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("-Wall", "--explain")
+	line := t.NewLine("filename.mk", 123, "${VAR:tsabc}")
+	p := NewMkParser(line, "tsabc}", true)
+
+	modifier := p.varUseModifier("VAR", '}')
+
+	t.Check(modifier, equals, "tsabc")
+	t.Check(p.Rest(), equals, "}")
+	t.CheckOutputLines(
+		"WARN: filename.mk:123: Invalid separator \"abc\" for :ts modifier of \"VAR\".",
+		"",
+		"\tThe separator for the :ts modifier must be either a single character",
+		"\tor an escape sequence like \\t or \\n or an octal or decimal escape",
+		"\tsequence; see the bmake man page for further details.",
+		"")
+}
+
+func (s *Suite) Test_MkParser_varUseModifier__invalid_ts_modifier_without_warning(c *check.C) {
+	t := s.Init(c)
+
+	p := NewMkParser(nil, "tsabc}", false)
+
+	modifier := p.varUseModifier("VAR", '}')
+
+	t.Check(modifier, equals, "tsabc")
+	t.Check(p.Rest(), equals, "}")
+}
+
+func (s *Suite) Test_MkParser_varUseModifier__square_bracket(c *check.C) {
+	t := s.Init(c)
+
+	line := t.NewLine("filename.mk", 123, "\t${VAR:[asdf]}")
+	p := NewMkParser(line, "[asdf]", true)
+
+	modifier := p.varUseModifier("VAR", '}')
+
+	t.Check(modifier, equals, "")
+	t.Check(p.Rest(), equals, "")
+
+	t.CheckOutputLines(
+		"WARN: filename.mk:123: Invalid variable modifier \"[asdf]\" for \"VAR\".")
+}
+
+func (s *Suite) Test_MkParser_varUseModifier__condition_without_colon(c *check.C) {
+	t := s.Init(c)
+
+	line := t.NewLine("filename.mk", 123, "${${VAR}:?yes:no}${${VAR}:?yes}")
+	p := NewMkParser(line, line.Text, true)
+
+	varUse1 := p.VarUse()
+	varUse2 := p.VarUse()
+
+	t.Check(varUse1, deepEquals, NewMkVarUse("${VAR}", "?yes:no"))
+	t.Check(varUse2, deepEquals, NewMkVarUse("${VAR}"))
+	t.Check(p.Rest(), equals, "")
+
+	t.CheckOutputLines(
+		"WARN: filename.mk:123: Invalid variable modifier \"?yes\" for \"${VAR}\".")
+}
+
+func (s *Suite) Test_MkParser_varUseModifier__malformed_in_parentheses(c *check.C) {
+	t := s.Init(c)
+
+	line := t.NewLine("filename.mk", 123, "$(${VAR}:?yes)")
+	p := NewMkParser(line, line.Text, true)
+
+	varUse := p.VarUse()
+
+	t.Check(varUse, deepEquals, NewMkVarUse("${VAR}"))
+	t.Check(p.Rest(), equals, "")
+
+	t.CheckOutputLines(
+		"WARN: filename.mk:123: Invalid variable modifier \"?yes\" for \"${VAR}\".",
+		"WARN: filename.mk:123: Please use curly braces {} instead of round parentheses () for ${VAR}.")
+}
+
+func (s *Suite) Test_MkParser_varUseModifier__varuse_in_malformed_modifier(c *check.C) {
+	t := s.Init(c)
+
+	line := t.NewLine("filename.mk", 123, "${${VAR}:?yes${INNER}}")
+	p := NewMkParser(line, line.Text, true)
+
+	varUse := p.VarUse()
+
+	t.Check(varUse, deepEquals, NewMkVarUse("${VAR}"))
+	t.Check(p.Rest(), equals, "")
+
+	t.CheckOutputLines(
+		"WARN: filename.mk:123: Invalid variable modifier \"?yes${INNER}\" for \"${VAR}\".")
+}
+
+func (s *Suite) Test_MkParser_varUseModifierAt__missing_at_after_variable_name(c *check.C) {
+	t := s.Init(c)
+
+	line := t.NewLine("filename.mk", 123, "${VAR:@varname}")
+	p := NewMkParser(line, line.Text, true)
+
+	varUse := p.VarUse()
+
+	t.Check(varUse, deepEquals, NewMkVarUse("VAR"))
+	t.Check(p.Rest(), equals, "")
+	t.CheckOutputLines(
+		"WARN: filename.mk:123: Invalid variable modifier \"@varname\" for \"VAR\".")
+}
+
+func (s *Suite) Test_MkParser_varUseModifierAt__dollar(c *check.C) {
+	t := s.Init(c)
+
+	line := t.NewLine("filename.mk", 123, "${VAR:@var@$$var@}")
+	p := NewMkParser(line, line.Text, true)
+
+	varUse := p.VarUse()
+
+	t.Check(varUse, deepEquals, NewMkVarUse("VAR", "@var@$$var@"))
+	t.Check(p.Rest(), equals, "")
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_MkParser_varUseModifierAt__incomplete_without_warning(c *check.C) {
+	t := s.Init(c)
+
+	p := NewMkParser(nil, "${VAR:@var@$$var}rest", false)
+
+	varUse := p.VarUse()
+
+	// TODO: It's inconsistent that this syntax error still produces a
+	//  variable modifier, while most other syntax errors don't.
+	// FIXME: The } must not be part of the variable modifier.
+	t.Check(varUse, deepEquals, NewMkVarUse("VAR", "@var@$$var}rest"))
+	t.Check(p.Rest(), equals, "")
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_MkParser_VarUse__ambiguous(c *check.C) {
 	t := s.Init(c)
 
@@ -400,13 +551,13 @@ func (s *Suite) Test_MkParser_VarUse__ambiguous(c *check.C) {
 func (s *Suite) Test_MkParser_MkCond(c *check.C) {
 	t := s.Init(c)
 
-	testRest := func(input string, expectedTree MkCond, expectedRest string) {
+	testRest := func(input string, expectedTree *MkCond, expectedRest string) {
 		p := NewMkParser(nil, input, false)
 		actualTree := p.MkCond()
 		c.Check(actualTree, deepEquals, expectedTree)
 		c.Check(p.Rest(), equals, expectedRest)
 	}
-	test := func(input string, expectedTree MkCond) {
+	test := func(input string, expectedTree *MkCond) {
 		testRest(input, expectedTree, "")
 	}
 	varuse := NewMkVarUse
@@ -414,119 +565,122 @@ func (s *Suite) Test_MkParser_MkCond(c *check.C) {
 	t.Use(testRest, test, varuse)
 
 	test("${OPSYS:MNetBSD}",
-		&mkCond{Var: varuse("OPSYS", "MNetBSD")})
+		&MkCond{Var: varuse("OPSYS", "MNetBSD")})
 
 	test("defined(VARNAME)",
-		&mkCond{Defined: "VARNAME"})
+		&MkCond{Defined: "VARNAME"})
 
 	test("empty(VARNAME)",
-		&mkCond{Empty: varuse("VARNAME")})
+		&MkCond{Empty: varuse("VARNAME")})
 
 	test("!empty(VARNAME)",
-		&mkCond{Not: &mkCond{Empty: varuse("VARNAME")}})
+		&MkCond{Not: &MkCond{Empty: varuse("VARNAME")}})
 
 	test("!empty(VARNAME:M[yY][eE][sS])",
-		&mkCond{Not: &mkCond{Empty: varuse("VARNAME", "M[yY][eE][sS]")}})
+		&MkCond{Not: &MkCond{Empty: varuse("VARNAME", "M[yY][eE][sS]")}})
 
 	// Colons are unescaped at this point because they cannot be mistaken for separators anymore.
 	test("!empty(USE_TOOLS:Mautoconf\\:run)",
-		&mkCond{Not: &mkCond{Empty: varuse("USE_TOOLS", "Mautoconf:run")}})
+		&MkCond{Not: &MkCond{Empty: varuse("USE_TOOLS", "Mautoconf:run")}})
 
 	test("${VARNAME} != \"Value\"",
-		&mkCond{CompareVarStr: &MkCondCompareVarStr{varuse("VARNAME"), "!=", "Value"}})
+		&MkCond{CompareVarStr: &MkCondCompareVarStr{varuse("VARNAME"), "!=", "Value"}})
 
 	test("${VARNAME:Mi386} != \"Value\"",
-		&mkCond{CompareVarStr: &MkCondCompareVarStr{varuse("VARNAME", "Mi386"), "!=", "Value"}})
+		&MkCond{CompareVarStr: &MkCondCompareVarStr{varuse("VARNAME", "Mi386"), "!=", "Value"}})
 
 	test("${VARNAME} != Value",
-		&mkCond{CompareVarStr: &MkCondCompareVarStr{varuse("VARNAME"), "!=", "Value"}})
+		&MkCond{CompareVarStr: &MkCondCompareVarStr{varuse("VARNAME"), "!=", "Value"}})
 
 	test("\"${VARNAME}\" != Value",
-		&mkCond{CompareVarStr: &MkCondCompareVarStr{varuse("VARNAME"), "!=", "Value"}})
+		&MkCond{CompareVarStr: &MkCondCompareVarStr{varuse("VARNAME"), "!=", "Value"}})
 
 	test("${pkg} == \"${name}\"",
-		&mkCond{CompareVarVar: &MkCondCompareVarVar{varuse("pkg"), "==", varuse("name")}})
+		&MkCond{CompareVarVar: &MkCondCompareVarVar{varuse("pkg"), "==", varuse("name")}})
 
 	test("\"${pkg}\" == \"${name}\"",
-		&mkCond{CompareVarVar: &MkCondCompareVarVar{varuse("pkg"), "==", varuse("name")}})
+		&MkCond{CompareVarVar: &MkCondCompareVarVar{varuse("pkg"), "==", varuse("name")}})
 
 	// The right-hand side is not analyzed further to keep the data types simple.
 	test("${ABC} == \"${A}B${C}\"",
-		&mkCond{CompareVarStr: &MkCondCompareVarStr{varuse("ABC"), "==", "${A}B${C}"}})
+		&MkCond{CompareVarStr: &MkCondCompareVarStr{varuse("ABC"), "==", "${A}B${C}"}})
 
 	test("${ABC} == \"${A}\\\"${B}\\\\${C}$${shellvar}${D}\"",
-		&mkCond{CompareVarStr: &MkCondCompareVarStr{varuse("ABC"), "==", "${A}\"${B}\\${C}$${shellvar}${D}"}})
+		&MkCond{CompareVarStr: &MkCondCompareVarStr{varuse("ABC"), "==", "${A}\"${B}\\${C}$${shellvar}${D}"}})
 
 	test("exists(/etc/hosts)",
-		&mkCond{Call: &MkCondCall{"exists", "/etc/hosts"}})
+		&MkCond{Call: &MkCondCall{"exists", "/etc/hosts"}})
 
 	test("exists(${PREFIX}/var)",
-		&mkCond{Call: &MkCondCall{"exists", "${PREFIX}/var"}})
+		&MkCond{Call: &MkCondCall{"exists", "${PREFIX}/var"}})
 
 	test("${OPSYS} == \"NetBSD\" || ${OPSYS} == \"OpenBSD\"",
-		&mkCond{Or: []*mkCond{
+		&MkCond{Or: []*MkCond{
 			{CompareVarStr: &MkCondCompareVarStr{varuse("OPSYS"), "==", "NetBSD"}},
 			{CompareVarStr: &MkCondCompareVarStr{varuse("OPSYS"), "==", "OpenBSD"}}}})
 
 	test("${OPSYS} == \"NetBSD\" && ${MACHINE_ARCH} == \"i386\"",
-		&mkCond{And: []*mkCond{
+		&MkCond{And: []*MkCond{
 			{CompareVarStr: &MkCondCompareVarStr{varuse("OPSYS"), "==", "NetBSD"}},
 			{CompareVarStr: &MkCondCompareVarStr{varuse("MACHINE_ARCH"), "==", "i386"}}}})
 
 	test("defined(A) && defined(B) || defined(C) && defined(D)",
-		&mkCond{Or: []*mkCond{
-			{And: []*mkCond{
+		&MkCond{Or: []*MkCond{
+			{And: []*MkCond{
 				{Defined: "A"},
 				{Defined: "B"}}},
-			{And: []*mkCond{
+			{And: []*MkCond{
 				{Defined: "C"},
 				{Defined: "D"}}}}})
 
 	test("${MACHINE_ARCH:Mi386} || ${MACHINE_OPSYS:MNetBSD}",
-		&mkCond{Or: []*mkCond{
+		&MkCond{Or: []*MkCond{
 			{Var: varuse("MACHINE_ARCH", "Mi386")},
 			{Var: varuse("MACHINE_OPSYS", "MNetBSD")}}})
+
+	test("${VAR} == \"${VAR}suffix\"",
+		&MkCond{CompareVarStr: &MkCondCompareVarStr{varuse("VAR"), "==", "${VAR}suffix"}})
 
 	// Exotic cases
 
 	// ".if 0" can be used to skip over a block of code.
 	test("0",
-		&mkCond{Num: "0"})
+		&MkCond{Num: "0"})
 
 	test("0xCAFEBABE",
-		&mkCond{Num: "0xCAFEBABE"})
+		&MkCond{Num: "0xCAFEBABE"})
 
 	test("${VAR} == 0xCAFEBABE",
-		&mkCond{
+		&MkCond{
 			CompareVarNum: &MkCondCompareVarNum{
 				Var: varuse("VAR"),
 				Op:  "==",
 				Num: "0xCAFEBABE"}})
 
 	test("! ( defined(A)  && empty(VARNAME) )",
-		&mkCond{Not: &mkCond{
-			And: []*mkCond{
+		&MkCond{Not: &MkCond{
+			And: []*MkCond{
 				{Defined: "A"},
 				{Empty: varuse("VARNAME")}}}})
 
 	test("${REQD_MAJOR} > ${MAJOR}",
-		&mkCond{CompareVarVar: &MkCondCompareVarVar{varuse("REQD_MAJOR"), ">", varuse("MAJOR")}})
+		&MkCond{CompareVarVar: &MkCondCompareVarVar{varuse("REQD_MAJOR"), ">", varuse("MAJOR")}})
 
 	test("${OS_VERSION} >= 6.5",
-		&mkCond{CompareVarNum: &MkCondCompareVarNum{varuse("OS_VERSION"), ">=", "6.5"}})
+		&MkCond{CompareVarNum: &MkCondCompareVarNum{varuse("OS_VERSION"), ">=", "6.5"}})
 
 	test("${OS_VERSION} == 5.3",
-		&mkCond{CompareVarNum: &MkCondCompareVarNum{varuse("OS_VERSION"), "==", "5.3"}})
+		&MkCond{CompareVarNum: &MkCondCompareVarNum{varuse("OS_VERSION"), "==", "5.3"}})
 
 	test("!empty(${OS_VARIANT:MIllumos})", // Probably not intended
-		&mkCond{Not: &mkCond{Empty: varuse("${OS_VARIANT:MIllumos}")}})
+		&MkCond{Not: &MkCond{Empty: varuse("${OS_VARIANT:MIllumos}")}})
 
 	// There may be whitespace before the parenthesis; see devel/bmake/files/cond.c:^compare_function.
 	test("defined (VARNAME)",
-		&mkCond{Defined: "VARNAME"})
+		&MkCond{Defined: "VARNAME"})
 
 	test("${\"${PKG_OPTIONS:Moption}\":?--enable-option:--disable-option}",
-		&mkCond{Var: varuse("\"${PKG_OPTIONS:Moption}\"", "?--enable-option:--disable-option")})
+		&MkCond{Var: varuse("\"${PKG_OPTIONS:Moption}\"", "?--enable-option:--disable-option")})
 
 	// Contrary to most other programming languages, the == operator binds
 	// more tightly that the ! operator.
@@ -534,16 +688,40 @@ func (s *Suite) Test_MkParser_MkCond(c *check.C) {
 	// TODO: Since this operator precedence is surprising there should be a warning,
 	//  suggesting to replace "!${VAR} == value" with "${VAR} != value".
 	test("!${VAR} == value",
-		&mkCond{Not: &mkCond{CompareVarStr: &MkCondCompareVarStr{varuse("VAR"), "==", "value"}}})
+		&MkCond{Not: &MkCond{CompareVarStr: &MkCondCompareVarStr{varuse("VAR"), "==", "value"}}})
 
 	// Errors
 
+	testRest("defined()",
+		nil,
+		"defined()")
+
+	testRest("empty()",
+		nil,
+		"empty()")
+
+	testRest("empty(UNFINISHED",
+		nil,
+		"empty(UNFINISHED")
+
+	testRest("empty(UNFINISHED:Mpattern",
+		nil,
+		"empty(UNFINISHED:Mpattern")
+
+	testRest("exists(/$$sys)",
+		nil,
+		"exists(/$$sys)")
+
+	testRest("exists(/unfinished",
+		nil,
+		"exists(/unfinished")
+
 	testRest("!empty(PKG_OPTIONS:Msndfile) || defined(PKG_OPTIONS:Msamplerate)",
-		&mkCond{Not: &mkCond{Empty: varuse("PKG_OPTIONS", "Msndfile")}},
+		&MkCond{Not: &MkCond{Empty: varuse("PKG_OPTIONS", "Msndfile")}},
 		"|| defined(PKG_OPTIONS:Msamplerate)")
 
 	testRest("${LEFT} &&",
-		&mkCond{Var: varuse("LEFT")},
+		&MkCond{Var: varuse("LEFT")},
 		"&&")
 
 	testRest("\"unfinished string literal",
@@ -562,6 +740,61 @@ func (s *Suite) Test_MkParser_MkCond(c *check.C) {
 	testRest("${VAR} == \"unfinished string literal",
 		nil,
 		"${VAR} == \"unfinished string literal")
+
+	// A logical not must always be followed by an expression.
+	testRest("!<",
+		nil,
+		"!<")
+
+	// Empty parentheses are a syntax error.
+	testRest("()",
+		nil,
+		"()")
+
+	// Unfinished conditions are a syntax error.
+	testRest("(${VAR}",
+		nil,
+		"(${VAR}")
+
+	// The left-hand side of the comparison can only be a variable.
+	// FIXME: bmake accepts this, and so should pkglint.
+	testRest("\"${VAR}suffix\" == value",
+		nil,
+		"\"${VAR}suffix\" == value")
+}
+
+func (s *Suite) Test_MkParser_Varname(c *check.C) {
+	t := s.Init(c)
+
+	test := func(text string) {
+		line := t.NewLine("filename.mk", 1, text)
+		p := NewMkParser(line, text, true)
+
+		varname := p.Varname()
+
+		t.Check(varname, equals, text)
+		t.Check(p.Rest(), equals, "")
+	}
+
+	testRest := func(text string, expectedVarname string, expectedRest string) {
+		line := t.NewLine("filename.mk", 1, text)
+		p := NewMkParser(line, text, true)
+
+		varname := p.Varname()
+
+		t.Check(varname, equals, expectedVarname)
+		t.Check(p.Rest(), equals, expectedRest)
+	}
+
+	test("VARNAME")
+	test("VARNAME.param")
+	test("VARNAME.${param}")
+	test("SITES_${param}")
+	test("SITES_distfile-1.0.tar.gz")
+	test("SITES.gtk+-2.0")
+	test("PKGPATH.category/package")
+
+	testRest("VARNAME/rest", "VARNAME", "/rest")
 }
 
 // Pkglint can replace $(VAR) with ${VAR}. It doesn't look at all components
@@ -574,7 +807,7 @@ func (s *Suite) Test_MkParser_VarUse__parentheses_autofix(c *check.C) {
 	t.SetUpCommandLine("--autofix")
 	t.SetUpVartypes()
 	lines := t.SetUpFileLines("Makefile",
-		MkRcsID,
+		MkCvsID,
 		"COMMENT=$(P1) $(P2)) $(P3:Q) ${BRACES} $(A.$(B.$(C)))")
 	mklines := NewMkLines(lines)
 
@@ -586,7 +819,7 @@ func (s *Suite) Test_MkParser_VarUse__parentheses_autofix(c *check.C) {
 		"AUTOFIX: ~/Makefile:2: Replacing \"$(P3:Q)\" with \"${P3:Q}\".",
 		"AUTOFIX: ~/Makefile:2: Replacing \"$(C)\" with \"${C}\".")
 	t.CheckFileLines("Makefile",
-		MkRcsID,
+		MkCvsID,
 		"COMMENT=${P1} ${P2}) ${P3:Q} ${BRACES} $(A.$(B.${C}))")
 }
 
@@ -718,28 +951,54 @@ func (s *Suite) Test_MkParser_varUseModifierAt(c *check.C) {
 		"")
 }
 
+func (s *Suite) Test_MkParser_isPkgbasePart(c *check.C) {
+
+	test := func(str string, expected bool) {
+		actual := (*MkParser)(nil).isPkgbasePart(str)
+
+		c.Check(actual, equals, expected)
+	}
+
+	test("X11", true)
+	test("client", true)
+	test("${PKGNAME}", true)
+	test("[a-z]", true)
+	test("{client,server}", true)
+
+	test("1.2", false)
+	test("[0-9]*", false)
+	test("{5.[1-7].*,6.[0-9]*}", false)
+	test("${PKGVERSION}", false)
+	test("${PKGNAME:C/^.*-//}", false)
+	test(">=1.0", false)
+	test("_client", false) // The combination foo-_client looks strange.
+}
+
 func (s *Suite) Test_MkParser_PkgbasePattern(c *check.C) {
 
-	testRest := func(pattern, expected, rest string) {
+	test := func(pattern, expected, rest string) {
 		parser := NewMkParser(nil, pattern, false)
+
 		actual := parser.PkgbasePattern()
+
 		c.Check(actual, equals, expected)
 		c.Check(parser.Rest(), equals, rest)
 	}
 
-	testRest("fltk", "fltk", "")
-	testRest("fltk|", "fltk", "|")
-	testRest("boost-build-1.59.*", "boost-build", "-1.59.*")
-	testRest("${PHP_PKG_PREFIX}-pdo-5.*", "${PHP_PKG_PREFIX}-pdo", "-5.*")
-	testRest("${PYPKGPREFIX}-metakit-[0-9]*", "${PYPKGPREFIX}-metakit", "-[0-9]*")
+	test("fltk", "fltk", "")
+	test("fltk-", "fltk", "-")
+	test("fltk|", "fltk", "|")
+	test("boost-build-1.59.*", "boost-build", "-1.59.*")
+	test("${PHP_PKG_PREFIX}-pdo-5.*", "${PHP_PKG_PREFIX}-pdo", "-5.*")
+	test("${PYPKGPREFIX}-metakit-[0-9]*", "${PYPKGPREFIX}-metakit", "-[0-9]*")
 
-	testRest("pkgbase-[0-9]*", "pkgbase", "-[0-9]*")
+	test("pkgbase-[0-9]*", "pkgbase", "-[0-9]*")
 
-	testRest("pkgbase-client-[0-9]*", "pkgbase-client", "-[0-9]*")
+	test("pkgbase-client-[0-9]*", "pkgbase-client", "-[0-9]*")
 
-	testRest("pkgbase-${VARIANT}-[0-9]*", "pkgbase-${VARIANT}", "-[0-9]*")
+	test("pkgbase-${VARIANT}-[0-9]*", "pkgbase-${VARIANT}", "-[0-9]*")
 
-	testRest("pkgbase-${VERSION}-[0-9]*", "pkgbase", "-${VERSION}-[0-9]*")
+	test("pkgbase-${VERSION}-[0-9]*", "pkgbase", "-${VERSION}-[0-9]*")
 
 	// This PKGNAME pattern is the one from bsd.pkg.mk.
 	// The pattern assumes that the version number does not contain a hyphen,
@@ -748,16 +1007,16 @@ func (s *Suite) Test_MkParser_PkgbasePattern(c *check.C) {
 	// Since variable substitutions are more common for version numbers
 	// than for parts of the package name, pkglint treats the PKGNAME
 	// as a version number.
-	testRest("pkgbase-${PKGNAME:C/^.*-//}-[0-9]*", "pkgbase", "-${PKGNAME:C/^.*-//}-[0-9]*")
+	test("pkgbase-${PKGNAME:C/^.*-//}-[0-9]*", "pkgbase", "-${PKGNAME:C/^.*-//}-[0-9]*")
 
 	// Using the [a-z] pattern in the package base is only rarely seen in the wild.
-	testRest("pkgbase-[a-z]*-1.0", "pkgbase-[a-z]*", "-1.0")
+	test("pkgbase-[a-z]*-1.0", "pkgbase-[a-z]*", "-1.0")
 
 	// This is a valid dependency pattern, but it's more complicated
 	// than the patterns pkglint can handle as of January 2019.
 	//
 	// This pattern doesn't have a single package base, which means it cannot be parsed at all.
-	testRest("{ssh{,6}-[0-9]*,openssh-[0-9]*}", "", "{ssh{,6}-[0-9]*,openssh-[0-9]*}")
+	test("{ssh{,6}-[0-9]*,openssh-[0-9]*}", "", "{ssh{,6}-[0-9]*,openssh-[0-9]*}")
 }
 
 func (s *Suite) Test_MkParser_Dependency(c *check.C) {
@@ -782,6 +1041,18 @@ func (s *Suite) Test_MkParser_Dependency(c *check.C) {
 	test := func(pattern string, expected DependencyPattern) {
 		testRest(pattern, expected, "")
 	}
+
+	test("pkgbase>=1.0",
+		DependencyPattern{"pkgbase", ">=", "1.0", "", "", ""})
+
+	test("pkgbase>1.0",
+		DependencyPattern{"pkgbase", ">", "1.0", "", "", ""})
+
+	test("pkgbase<=1.0",
+		DependencyPattern{"pkgbase", "", "", "<=", "1.0", ""})
+
+	test("pkgbase<1.0",
+		DependencyPattern{"pkgbase", "", "", "<", "1.0", ""})
 
 	test("fltk>=1.1.5rc1<1.3",
 		DependencyPattern{"fltk", ">=", "1.1.5rc1", "<", "1.3", ""})
@@ -828,6 +1099,12 @@ func (s *Suite) Test_MkParser_Dependency(c *check.C) {
 	testRest("gnome-control-center>=2.20.1{,nb*}",
 		DependencyPattern{"gnome-control-center", ">=", "2.20.1", "", "", ""}, "{,nb*}")
 
+	testNil("pkgbase")
+
+	testNil("pkgbase-")
+
+	testNil("pkgbase-client")
+
 	testNil(">=2.20.1{,nb*}")
 
 	testNil("pkgbase<=")
@@ -861,7 +1138,7 @@ func (s *Suite) Test_MkCondWalker_Walk(c *check.C) {
 	var events []string
 
 	varuseStr := func(varuse *MkVarUse) string {
-		strs := make([]string, 1+len(varuse.modifiers), 1+len(varuse.modifiers))
+		strs := make([]string, 1+len(varuse.modifiers))
 		strs[0] = varuse.varname
 		for i, mod := range varuse.modifiers {
 			strs[1+i] = mod.Text
@@ -921,4 +1198,24 @@ func (s *Suite) Test_MkCondWalker_Walk(c *check.C) {
 		"        varUse  FILE",
 		"           var  NONEMPTY",
 		"        varUse  NONEMPTY"})
+}
+
+// Ensure that the code works even if none of the callbacks are set.
+// This is only for code coverage.
+func (s *Suite) Test_MkCondWalker_Walk__empty_callbacks(c *check.C) {
+	t := s.Init(c)
+
+	mkline := t.NewMkLine("Makefile", 4, ""+
+		".if ${VAR:Mmatch} == ${OTHER} || "+
+		"${STR} == Str || "+
+		"${VAR} == \"${PRE}text${POST}\" || "+
+		"${NUM} == 3 && "+
+		"defined(VAR) && "+
+		"!exists(file.mk) && "+
+		"exists(${FILE}) && "+
+		"(((${NONEMPTY})))")
+
+	mkline.Cond().Walk(&MkCondCallback{})
+
+	t.CheckOutputEmpty()
 }
