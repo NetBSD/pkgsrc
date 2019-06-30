@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2019/06/14 19:36:46 leot Exp $
+@comment $NetBSD: PLIST,v 1.30 2019/06/30 19:28:59 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -237,6 +237,9 @@ ${PYSITELIB}/gallery_dl/extractor/nhentai.pyo
 ${PYSITELIB}/gallery_dl/extractor/nijie.py
 ${PYSITELIB}/gallery_dl/extractor/nijie.pyc
 ${PYSITELIB}/gallery_dl/extractor/nijie.pyo
+${PYSITELIB}/gallery_dl/extractor/nsfwalbum.py
+${PYSITELIB}/gallery_dl/extractor/nsfwalbum.pyc
+${PYSITELIB}/gallery_dl/extractor/nsfwalbum.pyo
 ${PYSITELIB}/gallery_dl/extractor/oauth.py
 ${PYSITELIB}/gallery_dl/extractor/oauth.pyc
 ${PYSITELIB}/gallery_dl/extractor/oauth.pyo
@@ -330,6 +333,9 @@ ${PYSITELIB}/gallery_dl/extractor/tumblr.pyo
 ${PYSITELIB}/gallery_dl/extractor/twitter.py
 ${PYSITELIB}/gallery_dl/extractor/twitter.pyc
 ${PYSITELIB}/gallery_dl/extractor/twitter.pyo
+${PYSITELIB}/gallery_dl/extractor/vanillarock.py
+${PYSITELIB}/gallery_dl/extractor/vanillarock.pyc
+${PYSITELIB}/gallery_dl/extractor/vanillarock.pyo
 ${PYSITELIB}/gallery_dl/extractor/wallhaven.py
 ${PYSITELIB}/gallery_dl/extractor/wallhaven.pyc
 ${PYSITELIB}/gallery_dl/extractor/wallhaven.pyo
