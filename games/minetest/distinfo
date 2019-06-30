@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1 2019/06/30 22:27:22 nia Exp $
+
+SHA1 (minetest-5.0.1/minetest-game.tar.gz) = 65b334b8492be6073f7e62659b7079c280943185
+RMD160 (minetest-5.0.1/minetest-game.tar.gz) = 94b2763a7e2c2a162866cb545c6746d79dfdd39c
+SHA512 (minetest-5.0.1/minetest-game.tar.gz) = 9798b032e3fea010eacb581c16a8f2b8a94d5d4365864b3d5c29a5962e32b7ed4e9c423f4093a0772c719bc9ac8e724e9226ed2c8fb8fd6100c650a1b064595e
+Size (minetest-5.0.1/minetest-game.tar.gz) = 1509625 bytes
+SHA1 (minetest-5.0.1/minetest.tar.gz) = bec37dc480932e870052a2f65d2f07f34178e24d
+RMD160 (minetest-5.0.1/minetest.tar.gz) = 25cdaa4b7829cbf330a9d1b8013e33fb315eb236
+SHA512 (minetest-5.0.1/minetest.tar.gz) = 00f0c77c19eb9619387285e5dad690c8aa9969ff11c4de0bdae99ee6e9a4508a8c2f977837fc2e01aebc5d4c1a5191d4f56acb131182d73c8f50da1458695607
+Size (minetest-5.0.1/minetest.tar.gz) = 8761122 bytes
+SHA1 (patch-CMakeLists.txt) = 50ceef7b158a92900c8d5b6b178d1ab0570e16b1
+SHA1 (patch-src_noise.h) = 54e72bf65fb642542985b1eb5dcd45fb3da4a57f
+SHA1 (patch-src_threading_thread.cpp) = c5334a9fd1e5a65cfa0828b47ebd8e50ba1ed7d7
+SHA1 (patch-src_util_string.cpp) = 152488b322764a788b1fa8858cc7034887741534
