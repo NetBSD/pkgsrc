@@ -153,7 +153,7 @@ func (l *Logger) shallBeLogged(format string) bool {
 // and duplicates are suppressed unless the --log-verbose command line option is given.
 //
 // See Logf for logging arbitrary messages.
-func (l *Logger) Diag(line Line, level *LogLevel, format string, args ...interface{}) {
+func (l *Logger) Diag(line *Line, level *LogLevel, format string, args ...interface{}) {
 	if l.Opts.ShowAutofix || l.Opts.Autofix {
 		// In these two cases, the only interesting diagnostics are those that can
 		// be fixed automatically. These are logged by Autofix.Apply.

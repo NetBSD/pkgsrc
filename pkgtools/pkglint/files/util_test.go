@@ -18,6 +18,19 @@ func (s *Suite) Test_assertNil(c *check.C) {
 		"Pkglint internal error: Oops: unexpected error")
 }
 
+func (s *Suite) Test_assertNotNil(c *check.C) {
+	t := s.Init(c)
+
+	assertNotNil("this string is not nil")
+
+	t.ExpectPanic(
+		func() { assertNotNil(nil) },
+		"Pkglint internal error: unexpected nil pointer")
+	t.ExpectPanic(
+		func() { var ptr *string; assertNotNil(ptr) },
+		"Pkglint internal error: unexpected nil pointer")
+}
+
 func (s *Suite) Test_YesNoUnknown_String(c *check.C) {
 	c.Check(yes.String(), equals, "yes")
 	c.Check(no.String(), equals, "no")
@@ -173,6 +186,80 @@ func (s *Suite) Test_relpath__quick(c *check.C) {
 
 	test("some/dir", ".", "../..")
 	test("some/dir/.", ".", "../..")
+}
+
+func (s *Suite) Test_pathContains(c *check.C) {
+	t := s.Init(c)
+
+	test := func(haystack, needle string, expected bool) {
+		actual := pathContains(haystack, needle)
+		t.Check(actual, equals, expected)
+	}
+
+	testPanic := func(haystack, needle string) {
+		t.c.Check(
+			func() { _ = pathContains(haystack, needle) },
+			check.PanicMatches,
+			`runtime error: index out of range`)
+	}
+
+	testPanic("", "")
+	testPanic("a", "")
+	testPanic("a/b/c", "")
+
+	test("a", "a", true)
+	test("a", "b", false)
+	test("a", "A", false)
+	test("a/b/c", "a", true)
+	test("a/b/c", "b", true)
+	test("a/b/c", "c", true)
+	test("a/b/c", "a/b", true)
+	test("a/b/c", "b/c", true)
+	test("a/b/c", "a/b/c", true)
+	test("aa/bb/cc", "a/b", false)
+	test("aa/bb/cc", "a/bb", false)
+	test("aa/bb/cc", "aa/b", false)
+	test("aa/bb/cc", "aa/bb", true)
+	test("aa/bb/cc", "a", false)
+	test("aa/bb/cc", "b", false)
+	test("aa/bb/cc", "c", false)
+}
+
+func (s *Suite) Test_pathContainsDir(c *check.C) {
+	t := s.Init(c)
+
+	test := func(haystack, needle string, expected bool) {
+		actual := pathContainsDir(haystack, needle)
+		t.Check(actual, equals, expected)
+	}
+
+	testPanic := func(haystack, needle string) {
+		t.c.Check(
+			func() { _ = pathContainsDir(haystack, needle) },
+			check.PanicMatches,
+			`runtime error: index out of range`)
+	}
+
+	testPanic("", "")
+	testPanic("a", "")
+	testPanic("a/b/c", "")
+
+	test("a", "a", false)
+	test("a", "b", false)
+	test("a", "A", false)
+	test("a/b/c", "a", true)
+	test("a/b/c", "b", true)
+	test("a/b/c", "c", false)
+	test("a/b/c", "a/b", true)
+	test("a/b/c", "b/c", false)
+	test("a/b/c", "a/b/c", false)
+	test("aa/bb/cc", "a/b", false)
+	test("aa/bb/cc", "a/bb", false)
+	test("aa/bb/cc", "aa/b", false)
+	test("aa/bb/cc", "aa/bb", true)
+	test("aa/bb/cc", "a", false)
+	test("aa/bb/cc", "b", false)
+	test("aa/bb/cc", "c", false)
 }
 
 func (s *Suite) Test_fileExists(c *check.C) {
@@ -394,7 +481,6 @@ func (s *Suite) Test_isLocallyModified(c *check.C) {
 	modified := t.CreateFileLines("modified")
 
 	t.CreateFileLines("CVS/Entries",
-		"//", // Just for code coverage.
 		"/unmodified//"+modTime.Format(time.ANSIC)+"//",
 		"/modified//"+modTime.Format(time.ANSIC)+"//",
 		"/enoent//"+modTime.Format(time.ANSIC)+"//")
@@ -448,7 +534,7 @@ func (s *Suite) Test_Scope_Used(c *check.C) {
 
 	scope := NewScope()
 	mkline := t.NewMkLine("file.mk", 1, "\techo ${VAR.param}")
-	scope.Use("VAR.param", mkline, vucTimeRun)
+	scope.Use("VAR.param", mkline, VucRunTime)
 
 	c.Check(scope.Used("VAR.param"), equals, true)
 	c.Check(scope.Used("VAR.other"), equals, false)
@@ -500,7 +586,7 @@ func (s *Suite) Test_Scope_LastValue(c *check.C) {
 	t := s.Init(c)
 
 	mklines := t.NewMkLines("file.mk",
-		MkRcsID,
+		MkCvsID,
 		"VAR=\tfirst",
 		"VAR=\tsecond",
 		".if 1",
@@ -637,7 +723,7 @@ func (s *Suite) Test_FileCache(c *check.C) {
 	cache := NewFileCache(3)
 
 	lines := t.NewLines("Makefile",
-		MkRcsID,
+		MkCvsID,
 		"# line 2")
 
 	c.Check(cache.Get("Makefile", 0), check.IsNil)
@@ -648,13 +734,13 @@ func (s *Suite) Test_FileCache(c *check.C) {
 	c.Check(cache.Get("Makefile", MustSucceed|LogErrors), check.IsNil) // Wrong LoadOptions.
 
 	linesFromCache := cache.Get("Makefile", 0)
-	c.Check(linesFromCache.FileName, equals, "Makefile")
+	c.Check(linesFromCache.Filename, equals, "Makefile")
 	c.Check(linesFromCache.Lines, check.HasLen, 2)
 	c.Check(linesFromCache.Lines[0].Filename, equals, "Makefile")
 
 	// Cache keys are normalized using path.Clean.
 	linesFromCache2 := cache.Get("./Makefile", 0)
-	c.Check(linesFromCache2.FileName, equals, "./Makefile")
+	c.Check(linesFromCache2.Filename, equals, "./Makefile")
 	c.Check(linesFromCache2.Lines, check.HasLen, 2)
 	c.Check(linesFromCache2.Lines[0].Filename, equals, "./Makefile")
 
@@ -700,7 +786,7 @@ func (s *Suite) Test_FileCache_removeOldEntries__branch_coverage(c *check.C) {
 	G.Testing = false
 
 	lines := t.NewLines("filename.mk",
-		MkRcsID)
+		MkCvsID)
 	cache := NewFileCache(3)
 	cache.Put("filename1.mk", 0, lines)
 	cache.Put("filename2.mk", 0, lines)
@@ -721,7 +807,7 @@ func (s *Suite) Test_FileCache_removeOldEntries__no_tracing(c *check.C) {
 	t.DisableTracing()
 
 	lines := t.NewLines("filename.mk",
-		MkRcsID)
+		MkCvsID)
 	cache := NewFileCache(3)
 	cache.Put("filename1.mk", 0, lines)
 	cache.Put("filename2.mk", 0, lines)
@@ -738,7 +824,7 @@ func (s *Suite) Test_FileCache_removeOldEntries__zero_capacity(c *check.C) {
 	t := s.Init(c)
 
 	lines := t.NewLines("filename.mk",
-		MkRcsID)
+		MkCvsID)
 	cache := NewFileCache(1)
 	cache.Put("filename1.mk", 0, lines)
 
@@ -751,7 +837,7 @@ func (s *Suite) Test_FileCache_Evict__sort(c *check.C) {
 	t := s.Init(c)
 
 	lines := t.NewLines("filename.mk",
-		MkRcsID)
+		MkCvsID)
 	cache := NewFileCache(10)
 	cache.Put("filename0.mk", 0, lines)
 	cache.Put("filename1.mk", 0, lines)
@@ -937,6 +1023,56 @@ func (s *Suite) Test_joinSkipEmptyOxford(c *check.C) {
 		joinSkipEmptyOxford("and", "", "one", "", "", "two", "", "three"),
 		deepEquals,
 		"one, two, and three")
+}
+
+func (s *Suite) Test_newPathMatcher(c *check.C) {
+	t := s.Init(c)
+
+	test := func(pattern string, matchType pathMatchType, matchPattern string) {
+		c.Check(*newPathMatcher(pattern), equals, pathMatcher{matchType, matchPattern, pattern})
+	}
+
+	testPanic := func(pattern string) {
+		t.ExpectPanic(
+			func() { _ = newPathMatcher(pattern) },
+			"Pkglint internal error")
+	}
+
+	testPanic("*.[0123456]")
+	testPanic("file.???")
+	testPanic("*.???")
+	test("", pmExact, "")
+	test("exact", pmExact, "exact")
+	test("*.mk", pmSuffix, ".mk")
+	test("Makefile.*", pmPrefix, "Makefile.")
+	testPanic("*.*")
+	testPanic("**")
+	testPanic("a*b")
+	testPanic("[")
+	testPanic("malformed[")
+}
+
+func (s *Suite) Test_pathMatcher_matches(c *check.C) {
+
+	test := func(pattern string, subject string, expected bool) {
+		matcher := newPathMatcher(pattern)
+		c.Check(matcher.matches(subject), equals, expected)
+	}
+
+	test("", "", true)
+	test("", "any", false)
+	test("exact", "exact", true)
+	test("exact", "different", false)
+
+	test("*.mk", "filename.mk", true)
+	test("*.mk", "filename.txt", false)
+	test("*.mk", "filename.mkx", false)
+	test("*.mk", ".mk", true)
+
+	test("Makefile.*", "Makefile", false)
+	test("Makefile.*", "Makefile.", true)
+	test("Makefile.*", "Makefile.txt", true)
+	test("Makefile.*", "makefile.txt", false)
 }
 
 func (s *Suite) Test_StringInterner(c *check.C) {

@@ -2,7 +2,7 @@ package pkglint
 
 import "fmt"
 
-func parseShellProgram(line Line, program string) (*MkShList, error) {
+func parseShellProgram(line *Line, program string) (*MkShList, error) {
 	if trace.Tracing {
 		defer trace.Call(program)()
 	}
@@ -16,7 +16,7 @@ func parseShellProgram(line Line, program string) (*MkShList, error) {
 	switch {
 	case succeeded == 0 && lexer.error == "":
 		return lexer.result, nil
-	case succeeded == 0 && rest != "":
+	case succeeded == 0:
 		return nil, fmt.Errorf("splitIntoShellTokens couldn't parse %q", rest)
 	default:
 		return nil, &ParseError{append([]string{lexer.current}, lexer.remaining...)}

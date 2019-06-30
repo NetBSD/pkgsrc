@@ -225,7 +225,6 @@ func (s *Suite) Test_MkTokensLexer__constructor_uses_shared_array(c *check.C) {
 
 	tokens[0].Text = "modified text"
 	tokens[0].Varuse = NewMkVarUse("MODIFIED", "Mpattern")
-	tokens = tokens[0:0]
 
 	t.Check(lexer.Rest(), equals, "modified text")
 }

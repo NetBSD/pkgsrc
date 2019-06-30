@@ -7,12 +7,12 @@ func (s *Suite) Test_CheckLinesDistinfo__parse_errors(c *check.C) {
 
 	t.Chdir("category/package")
 	t.CreateFileLines("patches/patch-aa",
-		RcsID+" line is ignored for computing the SHA1 hash",
+		CvsID+" line is ignored for computing the SHA1 hash",
 		"patch contents")
 	t.CreateFileLines("patches/patch-ab",
 		"patch contents")
 	lines := t.SetUpFileLines("distinfo",
-		"should be the RCS ID",
+		"should be the CVS ID",
 		"should be empty",
 		"MD5 (distfile.tar.gz) = 12345678901234567890123456789012",
 		"SHA1 (distfile.tar.gz) = 1234567890123456789012345678901234567890",
@@ -28,7 +28,7 @@ func (s *Suite) Test_CheckLinesDistinfo__parse_errors(c *check.C) {
 	t.CheckOutputLines(
 		"ERROR: distinfo:1: Expected \"$"+"NetBSD$\".",
 		"NOTE: distinfo:1: Empty line expected before this line.",
-		"ERROR: distinfo:1: Invalid line: should be the RCS ID",
+		"ERROR: distinfo:1: Invalid line: should be the CVS ID",
 		"ERROR: distinfo:2: Invalid line: should be empty",
 		"ERROR: distinfo:8: Invalid line: Another invalid line",
 		"ERROR: distinfo:3: Expected SHA1, RMD160, SHA512, Size checksums for \"distfile.tar.gz\", got MD5, SHA1.",
@@ -41,7 +41,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithms__nonexistent_distfile_
 
 	t.Chdir("category/package")
 	lines := t.SetUpFileLines("distinfo",
-		RcsID,
+		CvsID,
 		"",
 		"MD5 (patch-5.3.tar.gz) = 12345678901234567890123456789012",
 		"SHA1 (patch-5.3.tar.gz) = 1234567890123456789012345678901234567890")
@@ -62,7 +62,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithms__wrong_distfile_algori
 
 	t.Chdir("category/package")
 	lines := t.SetUpFileLines("distinfo",
-		RcsID,
+		CvsID,
 		"",
 		"MD5 (distfile.tar.gz) = 12345678901234567890123456789012",
 		"SHA1 (distfile.tar.gz) = 1234567890123456789012345678901234567890")
@@ -86,7 +86,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithms__ambiguous_distfile(c 
 	t.SetUpCommandLine("--explain")
 	t.Chdir("category/package")
 	lines := t.SetUpFileLines("distinfo",
-		RcsID,
+		CvsID,
 		"",
 		"MD5 (patch-4.2.tar.gz) = 12345678901234567890123456789012")
 
@@ -109,7 +109,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithms__wrong_patch_algorithm
 	t.Chdir("category/package")
 	t.CreateFileDummyPatch("patches/patch-aa")
 	t.SetUpFileLines("distinfo",
-		RcsID,
+		CvsID,
 		"",
 		"MD5 (patch-aa) = 12345678901234567890123456789012",
 		"SHA1 (patch-aa) = 1234567890123456789012345678901234567890")
@@ -128,7 +128,7 @@ func (s *Suite) Test_distinfoLinesChecker_parse__empty(c *check.C) {
 	t := s.Init(c)
 
 	lines := t.SetUpFileLines("distinfo",
-		RcsID,
+		CvsID,
 		"")
 
 	CheckLinesDistinfo(nil, lines)
@@ -150,25 +150,25 @@ func (s *Suite) Test_distinfoLinesChecker_checkGlobalDistfileMismatch(c *check.C
 	t.SetUpPackage("category/package1")
 	t.SetUpPackage("category/package2")
 	t.CreateFileLines("category/package1/distinfo",
-		RcsID,
+		CvsID,
 		"",
 		"SHA512 (distfile-1.0.tar.gz) = 1234567811111111",
 		"SHA512 (distfile-1.1.tar.gz) = 1111111111111111",
 		"SHA512 (patch-4.2.tar.gz) = 1234567812345678")
 	t.CreateFileLines("category/package2/distinfo",
-		RcsID,
+		CvsID,
 		"",
 		"SHA512 (distfile-1.0.tar.gz) = 1234567822222222",
 		"SHA512 (distfile-1.1.tar.gz) = 1111111111111111",
 		"SHA512 (encoding-error.tar.gz) = 12345678abcdefgh")
 	t.CreateFileLines("Makefile",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"COMMENT=\tThis is pkgsrc",
 		"",
 		"SUBDIR+=\tcategory")
 	t.CreateFileLines("category/Makefile",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"COMMENT=\tUseful programs",
 		"",
@@ -212,7 +212,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithms__missing_patch_with_di
 	t := s.Init(c)
 
 	lines := t.SetUpFileLines("distinfo",
-		RcsID,
+		CvsID,
 		"",
 		"SHA1 (patch-aa) = ...",
 		"RMD160 (patch-aa) = ...",
@@ -234,7 +234,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithms__existing_patch_with_d
 
 	t.SetUpPackage("category/package")
 	t.CreateFileLines("category/package/distinfo",
-		RcsID,
+		CvsID,
 		"",
 		"SHA1 (patch-aa) = ...",
 		"RMD160 (patch-aa) = ...",
@@ -264,7 +264,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithms__missing_patch_with_wr
 
 	t.SetUpPackage("category/package")
 	t.SetUpFileLines("category/package/distinfo",
-		RcsID,
+		CvsID,
 		"",
 		"RMD160 (patch-aa) = ...")
 	t.FinishSetUp()
@@ -286,9 +286,9 @@ func (s *Suite) Test_distinfoLinesChecker_checkUncommittedPatch__bad(c *check.C)
 	t.Chdir("category/package")
 	t.CreateFileDummyPatch("patches/patch-aa")
 	t.CreateFileLines("CVS/Entries",
-		"/distinfo/...")
+		"/distinfo//modified//")
 	t.SetUpFileLines("distinfo",
-		RcsID,
+		CvsID,
 		"",
 		"SHA1 (patch-aa) = ebbf34b0641bcb508f17d5a27f2bf2a536d810ac")
 	t.FinishSetUp()
@@ -306,11 +306,11 @@ func (s *Suite) Test_distinfoLinesChecker_checkUncommittedPatch__good(c *check.C
 	t.Chdir("category/package")
 	t.CreateFileDummyPatch("patches/patch-aa")
 	t.CreateFileLines("CVS/Entries",
-		"/distinfo/...")
+		"/distinfo//modified//")
 	t.CreateFileLines("patches/CVS/Entries",
-		"/patch-aa/...")
+		"/patch-aa//modified//")
 	t.SetUpFileLines("distinfo",
-		RcsID,
+		CvsID,
 		"",
 		"SHA1 (patch-aa) = ebbf34b0641bcb508f17d5a27f2bf2a536d810ac")
 	t.FinishSetUp()
@@ -329,7 +329,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkUnrecordedPatches(c *check.C) {
 	t.CreateFileDummyPatch("patches/patch-aa")
 	t.CreateFileDummyPatch("patches/patch-src-Makefile")
 	t.SetUpFileLines("distinfo",
-		RcsID,
+		CvsID,
 		"",
 		"SHA1 (distfile.tar.gz) = ...",
 		"RMD160 (distfile.tar.gz) = ...",
@@ -358,7 +358,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkPatchSha1__relative_path_in_disti
 	t.CreateFileDummyPatch("devel/patches/patches/patch-aa")
 	t.CreateFileDummyPatch("devel/patches/patches/patch-only-in-patches")
 	t.SetUpFileLines("other/common/distinfo",
-		RcsID,
+		CvsID,
 		"",
 		"SHA1 (patch-aa) = ...",
 		"SHA1 (patch-only-in-distinfo) = ...")
@@ -389,7 +389,7 @@ func (s *Suite) Test_CheckLinesDistinfo__distinfo_and_patches_in_separate_direct
 	t.CreateFileDummyPatch("other/common/patches/patch-aa")
 	t.CreateFileDummyPatch("other/common/patches/patch-only-in-patches")
 	t.SetUpFileLines("other/common/distinfo",
-		RcsID,
+		CvsID,
 		"",
 		"SHA1 (patch-aa) = ...",
 		"SHA1 (patch-only-in-distinfo) = ...")
@@ -413,7 +413,7 @@ func (s *Suite) Test_CheckLinesDistinfo__manual_patches(c *check.C) {
 	t.Chdir("category/package")
 	t.CreateFileLines("patches/manual-libtool.m4")
 	lines := t.SetUpFileLines("distinfo",
-		RcsID,
+		CvsID,
 		"",
 		"SHA1 (patch-aa) = ...")
 
@@ -446,7 +446,7 @@ func (s *Suite) Test_CheckLinesDistinfo__missing_php_patches(c *check.C) {
 	t.SetUpCommandLine("-Wall,no-space")
 	t.CreateFileLines("licenses/unknown-license")
 	t.CreateFileLines("lang/php/ext.mk",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"PHPEXT_MK=      # defined",
 		"PHPPKGSRCDIR=   ../../lang/php72",
@@ -462,12 +462,12 @@ func (s *Suite) Test_CheckLinesDistinfo__missing_php_patches(c *check.C) {
 		".endif")
 	t.CreateFileDummyPatch("lang/php72/patches/patch-php72")
 	t.CreateFileLines("lang/php72/distinfo",
-		RcsID,
+		CvsID,
 		"",
 		"SHA1 (patch-php72) = ebbf34b0641bcb508f17d5a27f2bf2a536d810ac")
 
 	t.CreateFileLines("archivers/php-bz2/Makefile",
-		MkRcsID,
+		MkCvsID,
 		"",
 		"USE_PHP_EXT_PATCHES=    yes",
 		"",
@@ -478,7 +478,7 @@ func (s *Suite) Test_CheckLinesDistinfo__missing_php_patches(c *check.C) {
 	G.Check(t.File("archivers/php-bz2"))
 
 	t.CreateFileLines("archivers/php-zlib/Makefile",
-		MkRcsID,
+		MkCvsID,
 		"",
 		".include \"../../lang/php/ext.mk\"",
 		".include \"../../mk/bsd.pkg.mk\"")
@@ -510,7 +510,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__add_missing_h
 	t.SetUpCommandLine("-Wall", "--explain")
 	t.SetUpPackage("category/package")
 	t.CreateFileLines("category/package/distinfo",
-		RcsID,
+		CvsID,
 		"",
 		"RMD160 (package-1.0.txt) = 1a88147a0344137404c63f3b695366eab869a98a",
 		"Size (package-1.0.txt) = 13 bytes",
@@ -578,7 +578,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__add_missing_h
 	t.SetUpCommandLine("-Wall", "--explain")
 	t.SetUpPackage("category/package")
 	t.CreateFileLines("category/package/distinfo",
-		RcsID,
+		CvsID,
 		"",
 		"RMD160 (package-1.0.txt) = 1a88147a0344137404c63f3b695366eab869a98a",
 		"Size (package-1.0.txt) = 13 bytes",
@@ -622,7 +622,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__wrong_distfil
 
 	t.SetUpPackage("category/package")
 	t.CreateFileLines("category/package/distinfo",
-		RcsID,
+		CvsID,
 		"",
 		"RMD160 (package-1.0.txt) = 1234wrongHash1234")
 	t.CreateFileLines("distfiles/package-1.0.txt",
@@ -645,7 +645,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__no_usual_algo
 
 	t.SetUpPackage("category/package")
 	t.CreateFileLines("category/package/distinfo",
-		RcsID,
+		CvsID,
 		"",
 		"MD5 (package-1.0.txt) = 1234wrongHash1234")
 	t.CreateFileLines("distfiles/package-1.0.txt",
@@ -665,7 +665,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__top_algorithm
 
 	t.SetUpPackage("category/package")
 	t.CreateFileLines("category/package/distinfo",
-		RcsID,
+		CvsID,
 		"",
 		"SHA512 (package-1.0.txt) = f65f341b35981fda842b09b2c8af9bcdb7602a4c2e6fa1f7"+
 			"d41f0974d3e3122f268fc79d5a4af66358f5133885cd1c165c916f80ab25e5d8d95db46f803c782c",
@@ -689,7 +689,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__bottom_algori
 
 	t.SetUpPackage("category/package")
 	t.CreateFileLines("category/package/distinfo",
-		RcsID,
+		CvsID,
 		"",
 		"SHA1 (package-1.0.txt) = cd50d19784897085a8d0e3e413f8612b097c03f1",
 		"RMD160 (package-1.0.txt) = 1a88147a0344137404c63f3b695366eab869a98a")
@@ -724,7 +724,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__algorithms_in
 
 	t.SetUpPackage("category/package")
 	t.CreateFileLines("category/package/distinfo",
-		RcsID,
+		CvsID,
 		"",
 		"RMD160 (package-1.0.txt) = 1a88147a0344137404c63f3b695366eab869a98a",
 		"SHA1 (package-1.0.txt) = cd50d19784897085a8d0e3e413f8612b097c03f1",
@@ -750,7 +750,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__some_algorith
 
 	t.SetUpPackage("category/package")
 	t.CreateFileLines("category/package/distinfo",
-		RcsID,
+		CvsID,
 		"",
 		"RMD160 (package-1.0.txt) = 1a88147a0344137404c63f3b695366eab869a98a",
 		"Size (package-1.0.txt) = 13 bytes",
