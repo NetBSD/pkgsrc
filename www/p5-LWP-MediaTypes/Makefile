@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/08/22 09:47:47 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/06/30 20:17:38 nia Exp $
 
 DISTNAME=	LWP-MediaTypes-6.02
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=LWP/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/LWP-MediaTypes/
+HOMEPAGE=	https://metacpan.org/release/LWP-MediaTypes
 COMMENT=	Guess media type for a file or a URL
 LICENSE=	${PERL5_LICENSE}
 

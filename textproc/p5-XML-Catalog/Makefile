@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/08/22 09:47:05 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/06/30 20:17:06 nia Exp $
 
 DISTNAME=	XML-Catalog-1.03
 PKGNAME=	p5-${DISTNAME:S/03/0.3/}
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/J/JF/JFEARN/}
 
 MAINTAINER=	wen@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/XML-Catalog/
+HOMEPAGE=	https://metacpan.org/release/XML-Catalog
 COMMENT=	Resolve public identifiers and remap system identifiers
 LICENSE=	${PERL5_LICENSE}
 

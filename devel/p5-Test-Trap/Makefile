@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/11/25 12:43:40 wen Exp $
+# $NetBSD: Makefile,v 1.17 2019/06/30 20:15:57 nia Exp $
 
 DISTNAME=		Test-Trap-v0.3.4
 PKGNAME=		p5-${DISTNAME:S/v0/0/}
@@ -6,7 +6,7 @@ CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Test/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/Test-Trap/
+HOMEPAGE=		https://metacpan.org/release/Test-Trap
 COMMENT=		Perl extension to trap exit codes, exceptions, output
 LICENSE=		${PERL5_LICENSE}
 

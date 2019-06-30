@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/08/22 09:47:40 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/06/30 20:17:33 nia Exp $
 
 DISTNAME=	HTML-TreeBuilder-LibXML-0.26
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTML/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/HTML-TreeBuilder-LibXML/
+HOMEPAGE=	https://metacpan.org/release/HTML-TreeBuilder-LibXML
 COMMENT=	Perl 5 HTML::TreeBuilder and XPath compatible interface with libxml
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/10/20 04:19:47 wen Exp $
+# $NetBSD: Makefile,v 1.4 2019/06/30 20:17:37 nia Exp $
 
 DISTNAME=	HTTP-Tinyish-0.15
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/HTTP-Tinyish/
+HOMEPAGE=	https://metacpan.org/release/HTTP-Tinyish
 COMMENT=	HTTP::Tiny compatible HTTP client wrappers
 LICENSE=	${PERL5_LICENSE}
 

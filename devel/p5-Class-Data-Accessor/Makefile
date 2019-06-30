@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/08/22 09:43:43 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/06/30 20:14:39 nia Exp $
 
 DISTNAME=	Class-Data-Accessor-0.04004
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Class-Data-Accessor/
+HOMEPAGE=	https://metacpan.org/release/Class-Data-Accessor
 COMMENT=	Inheritable and overridable class and instance data accessors
 LICENSE=	${PERL5_LICENSE}
 

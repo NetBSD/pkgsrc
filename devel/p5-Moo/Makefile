@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2018/08/22 09:44:19 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2019/06/30 20:15:20 nia Exp $
 
 DISTNAME=	Moo-2.003004
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/H/HA/HAARG/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Moo/
+HOMEPAGE=	https://metacpan.org/release/Moo
 COMMENT=	Minimalist Object Orientation (with Moose compatiblity)
 LICENSE=	${PERL5_LICENSE}
 

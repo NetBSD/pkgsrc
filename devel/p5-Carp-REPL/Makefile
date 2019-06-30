@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/08/22 09:43:41 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/06/30 20:14:37 nia Exp $
 
 DISTNAME=	Carp-REPL-0.18
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Carp/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Carp-REPL/
+HOMEPAGE=	https://metacpan.org/release/Carp-REPL
 COMMENT=	Perl 5 read-eval-print-loop on die and/or warn
 LICENSE=	${PERL5_LICENSE}
 

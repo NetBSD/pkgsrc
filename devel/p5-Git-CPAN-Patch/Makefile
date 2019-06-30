@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2018/08/26 06:24:17 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2019/06/30 20:15:06 nia Exp $
 
 DISTNAME=	Git-CPAN-Patch-2.3.4
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Git/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Git-CPAN-Patch/
+HOMEPAGE=	https://metacpan.org/release/Git-CPAN-Patch
 COMMENT=	Patch CPAN modules using Git
 LICENSE=	${PERL5_LICENSE}
 

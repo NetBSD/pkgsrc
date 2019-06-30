@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/08/22 09:45:31 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/06/30 20:16:16 nia Exp $
 
 DISTNAME=	Mail-SPF-v2.9.0
 PKGNAME=	p5-${DISTNAME:S/-v/-/}
@@ -7,7 +7,7 @@ CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 
 MAINTAINER=	aniou@smutek.pl
-HOMEPAGE=	http://search.cpan.org/dist/Mail-SPF/
+HOMEPAGE=	https://metacpan.org/release/Mail-SPF
 COMMENT=	Perl implementation of the Sender Policy Framework
 LICENSE=	modified-bsd
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2018/08/22 09:47:08 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2019/06/30 20:17:09 nia Exp $
 
 DISTNAME=	XML-RAI-1.3031
 PKGNAME=	p5-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Maps RSS tags to one common simplified interface
-HOMEPAGE=	http://search.cpan.org/dist/XML-RAI/
+HOMEPAGE=	https://metacpan.org/release/XML-RAI
 LICENSE=	artistic
 
 DEPENDS+=	p5-Task-Weaken>=1.02:../../devel/p5-Task-Weaken

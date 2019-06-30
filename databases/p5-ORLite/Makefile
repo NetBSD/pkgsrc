@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2018/08/22 09:43:20 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2019/06/30 20:14:27 nia Exp $
 
 DISTNAME=	ORLite-1.98
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/A/AD/ADAMK/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/ORLite/
+HOMEPAGE=	https://metacpan.org/release/ORLite
 COMMENT=	Perl 5 extremely light weight SQLite-specific ORM
 LICENSE=	${PERL5_LICENSE}
 

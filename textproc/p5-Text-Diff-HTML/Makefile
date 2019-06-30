@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/08/24 09:35:51 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/06/30 20:17:00 nia Exp $
 
 DISTNAME=	Text-Diff-HTML-0.08
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	perl5 textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Text-Diff-HTML/
+HOMEPAGE=	https://metacpan.org/release/Text-Diff-HTML
 COMMENT=	HTML formatting class for Text::Diff
 LICENSE=	gnu-gpl-v2 # OR artistic
 

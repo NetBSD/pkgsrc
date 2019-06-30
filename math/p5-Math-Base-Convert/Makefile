@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/08/22 09:45:37 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/06/30 20:16:18 nia Exp $
 
 DISTNAME=	Math-Base-Convert-0.11
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	math perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Math/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Math-Base-Convert/
+HOMEPAGE=	https://metacpan.org/release/Math-Base-Convert
 COMMENT=	Very fast base to base conversion
 LICENSE=	${PERL5_LICENSE}
 

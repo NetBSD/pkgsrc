@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/08/22 09:44:57 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2019/06/30 20:16:04 nia Exp $
 
 DISTNAME=	inc-latest-0.500
 PKGNAME=	p5-${DISTNAME}
@@ -9,7 +9,7 @@ MODULE_DIR=	modules/by-module
 AUTHOR_DIR=	authors/id/D/DA/DAGOLDEN/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/inc-latest/
+HOMEPAGE=	https://metacpan.org/release/inc-latest
 COMMENT=	Use modules bundled in inc/ if they are newer than installed ones
 LICENSE=	apache-2.0
 

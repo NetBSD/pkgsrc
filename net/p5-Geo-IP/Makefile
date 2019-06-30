@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2018/08/22 09:45:57 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2019/06/30 20:16:25 nia Exp $
 
 DISTNAME=	Geo-IP-1.51
 PKGNAME=	p5-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Geo/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://www.maxmind.com/geoip/api/perl.shtml
-HOMEPAGE=	http://search.cpan.org/dist/Geo-IP/
+HOMEPAGE=	https://metacpan.org/release/Geo-IP
 COMMENT=	Gets country name by IP or hostname
 LICENSE=	${PERL5_LICENSE}
 

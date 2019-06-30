@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2018/08/22 09:44:53 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2019/06/30 20:15:59 nia Exp $
 #
 
 DISTNAME=	Tie-IxHash-1.23
@@ -8,7 +8,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Tie/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Tie-IxHash/
+HOMEPAGE=	https://metacpan.org/release/Tie-IxHash
 COMMENT=	Perl module that implements ordered in-memory associative arrays
 LICENSE=	${PERL5_LICENSE}
 
