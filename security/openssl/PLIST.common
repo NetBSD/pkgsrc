@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.33 2018/09/12 12:44:17 fhajny Exp $
+@comment $NetBSD: PLIST.common,v 1.34 2019/06/30 22:52:54 sevan Exp $
 bin/c_rehash
 bin/openssl
 include/openssl/aes.h
@@ -1049,6 +1049,7 @@ man/man3/OBJ_txt2nid.3
 man/man3/OBJ_txt2obj.3
 man/man3/OPENSSL_Applink.3
 man/man3/OPENSSL_VERSION_NUMBER.3
+man/man3/OPENSSL_VERSION_TEXT.3
 man/man3/OPENSSL_config.3
 man/man3/OPENSSL_ia32cap.3
 man/man3/OPENSSL_ia32cap_loc.3
@@ -1626,6 +1627,7 @@ man/man3/X509_check_host.3
 man/man3/X509_check_ip.3
 man/man3/X509_check_ip_asc.3
 man/man3/X509_check_private_key.3
+man/man3/X509_cmp_time.3
 man/man3/X509_free.3
 man/man3/X509_new.3
 man/man3/X509_verify_cert.3
