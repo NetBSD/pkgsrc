@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2019/06/30 22:27:22 nia Exp $
+
+Use CMAKE_INSTALL_MANDIR.
+
+--- CMakeLists.txt.orig	2019-03-31 20:57:45.000000000 +0000
++++ CMakeLists.txt
+@@ -97,7 +97,7 @@ elseif(UNIX) # Linux, BSD etc
+ 		set(SHAREDIR "${CMAKE_INSTALL_PREFIX}/share/${PROJECT_NAME}")
+ 		set(BINDIR "${CMAKE_INSTALL_PREFIX}/bin")
+ 		set(DOCDIR "${CMAKE_INSTALL_PREFIX}/share/doc/${PROJECT_NAME}")
+-		set(MANDIR "${CMAKE_INSTALL_PREFIX}/share/man")
++		set(MANDIR "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_MANDIR}")
+ 		set(EXAMPLE_CONF_DIR ${DOCDIR})
+ 		set(XDG_APPS_DIR "${CMAKE_INSTALL_PREFIX}/share/applications")
+ 		set(APPDATADIR "${CMAKE_INSTALL_PREFIX}/share/metainfo")
