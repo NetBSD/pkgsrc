@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2018/08/22 09:46:25 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2019/06/30 20:16:41 nia Exp $
 
 DISTNAME=	Digest-MD2-2.04
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	security perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Digest/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Digest-MD2/
+HOMEPAGE=	https://metacpan.org/release/Digest-MD2
 COMMENT=	Perl5 module for MD2
 LICENSE=	${PERL5_LICENSE}
 

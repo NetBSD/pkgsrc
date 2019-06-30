@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/08/22 09:44:28 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/06/30 20:15:31 nia Exp $
 
 DISTNAME=	PPI-XS-0.910
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=PPI/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/PPI-XS/
+HOMEPAGE=	https://metacpan.org/release/PPI-XS
 COMMENT=	Perl 5 XS acceleration for the PPI perl parser
 LICENSE=	gnu-gpl-v2 # OR artistic
 

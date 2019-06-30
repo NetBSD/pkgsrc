@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/08/22 09:46:23 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/06/30 20:16:38 nia Exp $
 
 DISTNAME=	Crypt-PWSafe3-1.22
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	security perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Crypt/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Crypt-PWSafe3/
+HOMEPAGE=	https://metacpan.org/release/Crypt-PWSafe3
 COMMENT=	Perl module interface to Passwordsafe v3 files
 LICENSE=	${PERL5_LICENSE}
 

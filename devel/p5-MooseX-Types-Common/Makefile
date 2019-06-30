@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/08/22 09:44:24 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/06/30 20:15:27 nia Exp $
 #
 
 DISTNAME=	MooseX-Types-Common-0.001014
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/MooseX-Types-Common/
+HOMEPAGE=	https://metacpan.org/release/MooseX-Types-Common
 COMMENT=	Commonly-used type constraints that do not ship with Moose by default
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2018/08/22 09:44:47 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2019/06/30 20:15:53 nia Exp $
 
 DISTNAME=	Test-MockObject-1.20180705
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Test-MockObject/
+HOMEPAGE=	https://metacpan.org/release/Test-MockObject
 COMMENT=	Perl extension for emulating troublesome interfaces
 LICENSE=	${PERL5_LICENSE}
 

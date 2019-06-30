@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2018/08/22 09:46:14 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/06/30 20:16:35 nia Exp $
 
 DISTNAME=	LaTeX-Driver-0.300.2
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=LaTeX/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/LaTeX-Driver/
+HOMEPAGE=	https://metacpan.org/release/LaTeX-Driver
 COMMENT=	Perl module encapsulates the details of invoking the Latex programs
 LICENSE=	${PERL5_LICENSE}
 

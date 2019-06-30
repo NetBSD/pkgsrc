@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/08/22 09:46:23 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/06/30 20:16:39 nia Exp $
 #
 
 DISTNAME=		Crypt-RandPasswd-0.06
@@ -8,7 +8,7 @@ CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 
 MAINTAINER=		he@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/Crypt-RandPasswd/
+HOMEPAGE=		https://metacpan.org/release/Crypt-RandPasswd
 COMMENT=		Random password generator based on FIPS-181
 LICENSE=		${PERL5_LICENSE}
 

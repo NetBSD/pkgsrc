@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/08/22 09:44:24 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2019/06/30 20:15:26 nia Exp $
 #
 
 DISTNAME=	MooseX-SemiAffordanceAccessor-0.10
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/MooseX-SemiAffordanceAccessor/
+HOMEPAGE=	https://metacpan.org/release/MooseX-SemiAffordanceAccessor
 COMMENT=	Perl 5 module to name your accessors foo() and set_foo()
 LICENSE=	artistic-2.0
 

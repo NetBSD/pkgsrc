@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/08/22 09:44:44 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2019/06/30 20:15:51 nia Exp $
 
 DISTNAME=		Test-Continuous-0.76
 PKGNAME=		p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Test/}
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/Test-Continuous/
+HOMEPAGE=		https://metacpan.org/release/Test-Continuous
 COMMENT=		Run your Perl test suite continuously when developing
 LICENSE=		${PERL5_LICENSE}
 

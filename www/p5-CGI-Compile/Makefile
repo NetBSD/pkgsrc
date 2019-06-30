@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/08/22 09:47:29 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/06/30 20:17:21 nia Exp $
 
 DISTNAME=	CGI-Compile-0.22
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CGI/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/CGI-Compile/
+HOMEPAGE=	https://metacpan.org/release/CGI-Compile
 COMMENT=	Perl 5 module to compile .cgi scripts to a code reference
 LICENSE=	${PERL5_LICENSE}
 

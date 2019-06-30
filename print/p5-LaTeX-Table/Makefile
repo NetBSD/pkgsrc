@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/08/22 09:46:14 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/06/30 20:16:35 nia Exp $
 #
 
 DISTNAME=	LaTeX-Table-v1.0.6
@@ -8,7 +8,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=LaTeX/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/LaTeX-Table/
+HOMEPAGE=	https://metacpan.org/release/LaTeX-Table
 COMMENT=	Perl extension for the automatic generation of LaTeX tables
 LICENSE=	${PERL5_LICENSE}
 

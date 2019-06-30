@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2019/05/18 04:06:06 wen Exp $
+# $NetBSD: Makefile,v 1.101 2019/06/30 20:17:16 nia Exp $
 
 DISTNAME=	DateTime-TimeZone-2.35
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DateTime/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/DateTime-TimeZone/
+HOMEPAGE=	https://metacpan.org/release/DateTime-TimeZone
 COMMENT=	Perl module to handle time zone manipulation
 LICENSE=	${PERL5_LICENSE}
 

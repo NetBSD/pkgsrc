@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/08/22 09:43:58 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/06/30 20:14:59 nia Exp $
 
 DISTNAME=	ExtUtils-Config-0.008
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=ExtUtils/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/ExtUtils-Config/
+HOMEPAGE=	https://metacpan.org/release/ExtUtils-Config
 COMMENT=	Wrapper for configuration of Perl
 LICENSE=	${PERL5_LICENSE}
 

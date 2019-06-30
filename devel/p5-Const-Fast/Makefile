@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/08/22 09:43:47 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/06/30 20:14:46 nia Exp $
 
 DISTNAME=	Const-Fast-0.014
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/L/LE/LEONT/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Const-Fast/
+HOMEPAGE=	https://metacpan.org/release/Const-Fast
 COMMENT=	Perl5 facility for creating read-only scalars, arrays, and hashes
 LICENSE=	${PERL5_LICENSE}
 

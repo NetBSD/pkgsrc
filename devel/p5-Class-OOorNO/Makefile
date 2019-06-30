@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/08/22 09:43:44 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/06/30 20:14:41 nia Exp $
 
 DISTNAME=	Class-OOorNO-0.011
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Class-OOorNO/
+HOMEPAGE=	https://metacpan.org/release/Class-OOorNO
 COMMENT=	Give your module classic *AND* OO interfaces
 LICENSE=	${PERL5_LICENSE}
 

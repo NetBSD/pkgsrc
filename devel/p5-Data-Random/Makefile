@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/08/22 09:43:50 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/06/30 20:14:50 nia Exp $
 
 DISTNAME=		Data-Random-0.13
 PKGNAME=		p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Data/}
 
 MAINTAINER=		phil@cs.wwu.edu
-HOMEPAGE=		http://search.cpan.org/dist/Data-Random/
+HOMEPAGE=		https://metacpan.org/release/Data-Random
 COMMENT=		Perl module to generate random data
 LICENSE=		${PERL5_LICENSE}
 

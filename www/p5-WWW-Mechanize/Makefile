@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2019/01/27 05:47:53 wen Exp $
+# $NetBSD: Makefile,v 1.53 2019/06/30 20:17:48 nia Exp $
 
 DISTNAME=	WWW-Mechanize-1.91
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=WWW/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/WWW-Mechanize/
+HOMEPAGE=	https://metacpan.org/release/WWW-Mechanize
 COMMENT=	Automates web page form & link interaction
 LICENSE=	${PERL5_LICENSE}
 

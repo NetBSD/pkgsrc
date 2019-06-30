@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/08/22 09:46:26 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/06/30 20:16:42 nia Exp $
 
 DISTNAME=	File-KeePass-2.03
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/File-KeePass/
+HOMEPAGE=	https://metacpan.org/release/File-KeePass
 COMMENT=	Perl module interface to KeePass V1 and V2 database files
 LICENSE=	${PERL5_LICENSE}
 

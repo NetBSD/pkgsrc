@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/08/22 09:46:20 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2019/06/30 20:16:36 nia Exp $
 
 DISTNAME=	Bytes-Random-Secure-0.29
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	security perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Bytes/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Bytes-Random-Secure/
+HOMEPAGE=	https://metacpan.org/release/Bytes-Random-Secure
 COMMENT=	Perl extension to generate cryptographically-secure random bytes
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/12/31 09:48:33 wen Exp $
+# $NetBSD: Makefile,v 1.17 2019/06/30 20:15:01 nia Exp $
 
 DISTNAME=	File-Find-Rule-Permissions-2.04
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/File-Find-Rule-Permissions/
+HOMEPAGE=	https://metacpan.org/release/File-Find-Rule-Permissions
 COMMENT=	Rule to match on file permissions and user access
 LICENSE=	${PERL5_LICENSE}
 

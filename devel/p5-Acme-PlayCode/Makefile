@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/08/22 09:43:34 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/06/30 20:14:29 nia Exp $
 
 DISTNAME=	Acme-PlayCode-0.12
 PKGNAME=	p5-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Acme/}
 #MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SA/SARTAK/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Acme-PlayCode/
+HOMEPAGE=	https://metacpan.org/release/Acme-PlayCode
 COMMENT=	Perl5 module for code transforming to avoid typical typing mistakes
 LICENSE=	${PERL5_LICENSE}
 

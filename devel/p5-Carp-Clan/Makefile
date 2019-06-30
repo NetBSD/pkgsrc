@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2018/12/31 09:18:44 wen Exp $
+# $NetBSD: Makefile,v 1.28 2019/06/30 20:14:37 nia Exp $
 
 DISTNAME=	Carp-Clan-6.07
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Carp/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Carp-Clan/
+HOMEPAGE=	https://metacpan.org/release/Carp-Clan
 COMMENT=	Report errors from perspective of a "clan" of modules
 LICENSE=	${PERL5_LICENSE}
 

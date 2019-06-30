@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/08/22 09:47:56 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/06/30 20:17:48 nia Exp $
 
 DISTNAME=	WWW-Mechanize-Shell-0.57
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=WWW/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/WWW-Mechanize-Shell/
+HOMEPAGE=	https://metacpan.org/release/WWW-Mechanize-Shell
 COMMENT=	Interactive shell for WWW::Mechanize
 LICENSE=	${PERL5_LICENSE}
 

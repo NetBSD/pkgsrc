@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/08/22 09:46:04 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2019/06/30 20:16:34 nia Exp $
 #
 
 DISTNAME=	Regexp-Common-net-CIDR-0.03
@@ -8,7 +8,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Regexp/}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Regexp-Common-net-CIDR/
+HOMEPAGE=	https://metacpan.org/release/Regexp-Common-net-CIDR
 COMMENT=	Provide patterns for CIDR blocks
 LICENSE=	${PERL5_LICENSE}
 

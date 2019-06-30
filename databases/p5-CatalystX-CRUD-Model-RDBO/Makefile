@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/08/22 09:43:13 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/06/30 20:14:20 nia Exp $
 
 DISTNAME=	CatalystX-CRUD-Model-RDBO-0.302
 # separate the last digit by '.', like  0.31 > 0.30.2
@@ -9,7 +9,7 @@ CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CatalystX/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/CatalystX-CRUD-Model-RDBO/
+HOMEPAGE=	https://metacpan.org/release/CatalystX-CRUD-Model-RDBO
 COMMENT=	Rose::DB::Object CRUD
 LICENSE=	${PERL5_LICENSE}
 

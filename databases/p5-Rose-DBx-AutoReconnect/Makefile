@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/08/22 09:43:20 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/06/30 20:14:27 nia Exp $
 #
 
 DISTNAME=	Rose-DBx-AutoReconnect-0.04
@@ -8,7 +8,7 @@ CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Rose/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Rose-DBx-AutoReconnect/
+HOMEPAGE=	https://metacpan.org/release/Rose-DBx-AutoReconnect
 COMMENT=	Perl5 module for Rose::DB with auto-reconnect to server
 LICENSE=	${PERL5_LICENSE}
 

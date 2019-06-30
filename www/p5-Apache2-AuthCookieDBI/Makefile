@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/08/22 09:47:28 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2019/06/30 20:17:20 nia Exp $
 #
 
 DISTNAME=	Apache2-AuthCookieDBI-2.17
@@ -8,7 +8,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Apache2/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Apache2-AuthCookieDBI
+HOMEPAGE=	https://metacpan.org/release/Apache2-AuthCookieDBI
 COMMENT=	Perl5 module AuthCookie backed by a DBI database
 LICENSE=	gnu-lgpl-v2.1
 

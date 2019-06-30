@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/08/22 09:45:31 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/06/30 20:16:16 nia Exp $
 #
 
 DISTNAME=	Mail-RFC822-Address-0.3
@@ -8,7 +8,7 @@ CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 
 MAINTAINER=	pettai@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Mail-RFC822-Address/
+HOMEPAGE=	https://metacpan.org/release/Mail-RFC822-Address
 COMMENT=	Perl extension for validating email addresses according to RFC822
 LICENSE=	mit
 

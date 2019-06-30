@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2018/08/22 09:44:57 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2019/06/30 20:16:05 nia Exp $
 
 DISTNAME=	namespace-autoclean-0.28
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=namespace/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/namespace-autoclean/
+HOMEPAGE=	https://metacpan.org/release/namespace-autoclean
 COMMENT=	Keep imports out of your namespace
 LICENSE=	${PERL5_LICENSE}
 

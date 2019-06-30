@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/08/22 09:45:31 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2019/06/30 20:16:16 nia Exp $
 #
 
 DISTNAME=	Mail-POP3Client-2.19
@@ -8,7 +8,7 @@ CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Mail-POP3Client/
+HOMEPAGE=	https://metacpan.org/release/Mail-POP3Client
 COMMENT=	Perl 5 module to talk to a POP3 (RFC1939) server
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/08/22 09:44:34 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/06/30 20:15:39 nia Exp $
 #
 
 DISTNAME=	Readonly-2.05
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Readonly/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Readonly/
+HOMEPAGE=	https://metacpan.org/release/Readonly
 COMMENT=	Perl 5 module for creating read-only scalars, arrays and hashes
 LICENSE=	${PERL5_LICENSE}
 

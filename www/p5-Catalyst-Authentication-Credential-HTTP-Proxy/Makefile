@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/08/22 09:47:32 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/06/30 20:17:24 nia Exp $
 
 DISTNAME=	Catalyst-Authentication-Credential-HTTP-Proxy-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Authentication-Credential-HTTP-Proxy/
+HOMEPAGE=	https://metacpan.org/release/Catalyst-Authentication-Credential-HTTP-Proxy
 COMMENT=	HTTP Proxy authentication for Catalyst
 LICENSE=	${PERL5_LICENSE}
 

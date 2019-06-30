@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/08/22 09:44:52 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/06/30 20:15:59 nia Exp $
 #
 
 DISTNAME=	Tie-Array-Sorted-1.41
@@ -8,7 +8,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Tie/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Tie-Array-Sorted/
+HOMEPAGE=	https://metacpan.org/release/Tie-Array-Sorted
 COMMENT=	Array which is kept sorted
 
 PERL5_PACKLIST=		auto/Tie/Array/Sorted/.packlist

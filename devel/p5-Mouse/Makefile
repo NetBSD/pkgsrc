@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2018/08/22 09:44:25 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2019/06/30 20:15:28 nia Exp $
 
 DISTNAME=	Mouse-v2.5.6
 PKGNAME=	p5-${DISTNAME:S/v//1}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SK/SKAJI/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Mouse/
+HOMEPAGE=	https://metacpan.org/release/Mouse
 COMMENT=	Perl module implementing an extension of the perl object system
 LICENSE=	${PERL5_LICENSE}
 

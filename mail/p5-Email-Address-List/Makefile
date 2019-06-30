@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/02/22 14:12:34 wen Exp $
+# $NetBSD: Makefile,v 1.11 2019/06/30 20:16:12 nia Exp $
 
 DISTNAME=	Email-Address-List-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Email/}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Email-Address-List/
+HOMEPAGE=	https://metacpan.org/release/Email-Address-List
 COMMENT=	RFC close address list parsing
 LICENSE=	${PERL5_LICENSE}
 

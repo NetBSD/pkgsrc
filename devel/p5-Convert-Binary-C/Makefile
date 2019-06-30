@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/08/22 09:43:48 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2019/06/30 20:14:46 nia Exp $
 
 DISTNAME=	Convert-Binary-C-0.78
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Convert/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Convert-Binary-C
+HOMEPAGE=	https://metacpan.org/release/Convert-Binary-C
 COMMENT=	Binary Data Conversion using C Types
 LICENSE=	${PERL5_LICENSE}
 

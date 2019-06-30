@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/08/22 09:47:18 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/06/30 20:17:16 nia Exp $
 #
 
 DISTNAME=	Olson-Abbreviations-0.04
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/E/EC/ECARROLL/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Olson-Abbreviations/
+HOMEPAGE=	https://metacpan.org/release/Olson-Abbreviations
 COMMENT=	Perl extension for globally unique timezones abbreviation handling
 LICENSE=	${PERL5_LICENSE}
 

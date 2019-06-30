@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/08/22 09:45:58 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/06/30 20:16:27 nia Exp $
 
 DISTNAME=	Net-Bind-0.05
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Net-Bind
+HOMEPAGE=	https://metacpan.org/release/Net-Bind
 COMMENT=	Perl5 module to grovel DNS resolver information
 LICENSE=	${PERL5_LICENSE}
 

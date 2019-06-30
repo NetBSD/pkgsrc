@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/08/22 09:44:15 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/06/30 20:15:18 nia Exp $
 #
 
 DISTNAME=	Mixin-ExtraFields-Param-0.021
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/R/RJ/RJBS/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Mixin-ExtraFields-Param/
+HOMEPAGE=	https://metacpan.org/release/Mixin-ExtraFields-Param
 COMMENT=	Perl 5 module to make your class provide a familiar "param" method
 LICENSE=	${PERL5_LICENSE}
 

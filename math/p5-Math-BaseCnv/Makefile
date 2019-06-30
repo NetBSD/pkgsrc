@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/08/22 09:45:37 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/06/30 20:16:18 nia Exp $
 #
 
 DISTNAME=	Math-BaseCnv-1.14
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Math/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Math-BaseCnv/
+HOMEPAGE=	https://metacpan.org/release/Math-BaseCnv
 COMMENT=	Fast functions to CoNVert between number Bases
 LICENSE=	gnu-gpl-v3
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/08/22 09:47:54 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/06/30 20:17:45 nia Exp $
 
 DISTNAME=	Test-WWW-Declare-0.02
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5 devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Test-WWW-Declare/
+HOMEPAGE=	https://metacpan.org/release/Test-WWW-Declare
 COMMENT=	Perl 5 module for declarative testing of web app
 LICENSE=	${PERL5_LICENSE}
 

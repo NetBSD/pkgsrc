@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/08/22 09:44:28 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/06/30 20:15:31 nia Exp $
 
 DISTNAME=	POE-Test-Loops-1.360
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=POE/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/POE-Test-Loops/
+HOMEPAGE=	https://metacpan.org/release/POE-Test-Loops
 COMMENT=	Perl module providing reusable tests for POE::Loop authors
 LICENSE=	${PERL5_LICENSE}
 

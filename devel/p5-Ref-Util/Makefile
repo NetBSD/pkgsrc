@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/08/22 09:44:34 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/06/30 20:15:39 nia Exp $
 
 DISTNAME=	Ref-Util-0.204
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Ref/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Ref-Util/
+HOMEPAGE=	https://metacpan.org/release/Ref-Util
 COMMENT=	Utility functions for checking references
 LICENSE=	${PERL5_LICENSE}
 

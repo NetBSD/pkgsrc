@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/08/22 09:43:21 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/06/30 20:14:28 nia Exp $
 #
 
 DISTNAME=	SQL-Abstract-Limit-0.141
@@ -8,7 +8,7 @@ CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=SQL/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/SQL-Abstract-Limit/
+HOMEPAGE=	https://metacpan.org/release/SQL-Abstract-Limit
 COMMENT=	Generate SQL from Perl data structures
 
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception

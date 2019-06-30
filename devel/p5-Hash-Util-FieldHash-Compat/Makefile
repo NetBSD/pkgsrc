@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/08/22 09:44:07 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/06/30 20:15:08 nia Exp $
 #
 
 DISTNAME=	Hash-Util-FieldHash-Compat-0.11
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Hash/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Hash-Util-FieldHash-Compat/
+HOMEPAGE=	https://metacpan.org/release/Hash-Util-FieldHash-Compat
 COMMENT=	Perl 5 module to user Hash::Util::FieldHash or ties
 LICENSE=	${PERL5_LICENSE}
 

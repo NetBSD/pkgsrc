@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2018/08/22 09:45:40 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2019/06/30 20:16:22 nia Exp $
 #
 
 DISTNAME=	Spreadsheet-WriteExcel-2.40
@@ -8,7 +8,7 @@ CATEGORIES=	math perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Spreadsheet/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Spreadsheet-WriteExcel/
+HOMEPAGE=	https://metacpan.org/release/Spreadsheet-WriteExcel
 COMMENT=	Create Excel data files
 LICENSE=	${PERL5_LICENSE}
 
