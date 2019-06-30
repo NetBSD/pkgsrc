@@ -1,17 +1,10 @@
-# $NetBSD: options.mk,v 1.1 2019/04/11 20:56:34 nia Exp $
+# $NetBSD: options.mk,v 1.2 2019/06/30 23:33:40 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.etlegacy
-PKG_SUPPORTED_OPTIONS=		curl lua ogg theora freetype sqlite3 openssl
-PKG_SUGGESTED_OPTIONS=		curl lua ogg theora freetype sqlite3 openssl
+PKG_SUPPORTED_OPTIONS=		lua ogg theora freetype sqlite3
+PKG_SUGGESTED_OPTIONS=		lua ogg theora freetype sqlite3
 
 .include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mcurl)
-CMAKE_ARGS+=	-DFEATURE_CURL=ON
-.include "../../www/curl/buildlink3.mk"
-.else
-CMAKE_ARGS+=	-DFEATURE_CURL=OFF
-.endif
 
 .if !empty(PKG_OPTIONS:Mlua)
 CMAKE_ARGS+=	-DFEATURE_LUA=ON
@@ -46,11 +39,4 @@ CMAKE_ARGS+=	-DFEATURE_DBMS=ON
 .include "../../databases/sqlite3/buildlink3.mk"
 .else
 CMAKE_ARGS+=	-DFEATURE_DBMS=OFF
-.endif
-
-.if !empty(PKG_OPTIONS:Mopenssl)
-CMAKE_ARGS+=	-DFEATURE_OPENSSL=ON
-.include "../../security/openssl/buildlink3.mk"
-.else
-CMAKE_ARGS+=	-DFEATURE_OPENSSL=OFF
 .endif

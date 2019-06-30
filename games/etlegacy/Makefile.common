@@ -1,0 +1,92 @@
+# $NetBSD: Makefile.common,v 1.1 2019/06/30 23:33:40 nia Exp $
+# used by games/etlegacy/Makefile
+# used by games/etlegacy-server/Makefile
+
+ETL_VERSION=	2.76
+CATEGORIES=	games
+
+DIST_SUBDIR=	etlegacy-${PKGVERSION_NOREV}
+
+DISTFILES+=	etlegacy.tar.gz
+DISTFILES+=	etlegacy-libs.tar.gz
+
+LIBS_TAG=	f04f846898a92d36fd9cfe7425b1ab4d31bca794
+
+SITES.etlegacy.tar.gz= \
+    -https://github.com/etlegacy/etlegacy/archive/v${PKGVERSION_NOREV}.tar.gz
+
+SITES.etlegacy-libs.tar.gz= \
+    -https://github.com/etlegacy/etlegacy-libs/archive/${LIBS_TAG}.tar.gz
+
+MAINTAINER=	nia@NetBSD.org
+HOMEPAGE=	https://www.etlegacy.com/
+LICENSE=	gnu-gpl-v3
+
+DISTINFO_FILE=	${.CURDIR}/../../games/etlegacy/distinfo
+PATCHDIR=	${.CURDIR}/../../games/etlegacy/patches
+MESSAGE_SRC=	${.CURDIR}/../../games/etlegacy/MESSAGE
+PLIST_SRC=	${.CURDIR}/../../games/etlegacy/PLIST
+PLIST_SRC+=	${.CURDIR}/../../games/etlegacy/PLIST.${OPSYS}
+
+WRKSRC=		${WRKDIR}/etlegacy-${ETL_VERSION}
+
+USE_CMAKE=	yes
+USE_LANGUAGES=	c c++
+
+# use libraries from pkgsrc
+CMAKE_ARGS+=	-DBUNDLED_CURL=OFF
+CMAKE_ARGS+=	-DBUNDLED_FREETYPE=OFF
+CMAKE_ARGS+=	-DBUNDLED_GLEW=OFF
+CMAKE_ARGS+=	-DBUNDLED_JANSSON=OFF
+CMAKE_ARGS+=	-DBUNDLED_JPEG=OFF
+CMAKE_ARGS+=	-DBUNDLED_LUA=OFF
+CMAKE_ARGS+=	-DBUNDLED_OGG_VORBIS=OFF
+CMAKE_ARGS+=	-DBUNDLED_OPENAL=OFF
+CMAKE_ARGS+=	-DBUNDLED_OPENSSL=OFF
+CMAKE_ARGS+=	-DBUNDLED_SDL=OFF
+CMAKE_ARGS+=	-DBUNDLED_SQLITE3=OFF
+CMAKE_ARGS+=	-DBUNDLED_THEORA=OFF
+CMAKE_ARGS+=	-DBUNDLED_ZLIB=OFF
+
+# don't try to build i386 binaries on amd64
+CMAKE_ARGS+=	-DCROSS_COMPILE32=OFF
+
+CMAKE_ARGS+=	-DFEATURE_AUTOUPDATE=OFF
+
+# tries to install binaries
+# but maybe this can be built from source separately
+CMAKE_ARGS+=	-DFEATURE_OMNIBOT=OFF
+CMAKE_ARGS+=	-DINSTALL_OMNIBOT=OFF
+
+CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
+CMAKE_ARGS+=	-DINSTALL_DEFAULT_BASEDIR="${PREFIX}/share/etlegacy"
+CMAKE_ARGS+=	-DINSTALL_DEFAULT_BINDIR="bin"
+CMAKE_ARGS+=	-DINSTALL_DEFAULT_MODDIR="share/etlegacy"
+
+# don't use fopen64 etc
+CFLAGS+=	-DIOAPI_NO_64
+
+CHECK_PORTABILITY_SKIP+=	libs/sdl2/build-scripts/*
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if ${MACHINE_ARCH} == "x86_64"
+PLIST_SUBST+=	ARCH_STRING="x86_64"
+.elif ${MACHINE_ARCH} == "i386"
+PLIST_SUBST+=	ARCH_STRING="i386"
+.elif !empty(MACHINE_ARCH:M*arm*)
+PLIST_SUBST+=	ARCH_STRING="arm"
+.else
+# maybe architecture-neutral shared objects could be generated
+PKG_SKIP_REASON+=\
+	"unsupported MACHINE_ARCH, add it to ETLPlatform.cmake"
+.endif
+
+post-extract:
+	${MV} ${WRKDIR}/etlegacy-libs-${LIBS_TAG}/* \
+	    ${WRKDIR}/etlegacy-${PKGVERSION_NOREV}/libs
+
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
