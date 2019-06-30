@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2692 2019/06/30 13:34:59 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.2693 2019/06/30 19:07:26 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4454,3 +4454,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/py-psutil to 5.6.3nb1 [wiz 2019-06-29]
 	Updated textproc/expat to 2.2.7 [wiz 2019-06-29]
 	Updated editors/pluma to 1.22.1nb1 [gutteridge 2019-06-30]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2019Q2 branch [jperkin 2019-06-30]
