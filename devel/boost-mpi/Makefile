@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/08/24 19:31:32 adam Exp $
+# $NetBSD: Makefile,v 1.2 2019/07/01 04:00:10 ryoon Exp $
 
 BOOST_PACKAGE=		mpi
 BOOST_COMMENT=		(Boost.MPI binary library)
@@ -23,7 +23,7 @@ do-install: boost-install-libs
 
 # boost_serialization already in boost-libs
 post-install:
-	${RM} -f ${DESTDIR}${PREFIX}/lib/libboost_serialization.*
+	${RM} -f ${DESTDIR}${PREFIX}/lib/libboost_*serialization.*
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../mk/mpi.buildlink3.mk"
