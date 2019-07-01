@@ -1,74 +1,42 @@
-# $NetBSD: Makefile,v 1.24 2019/07/01 04:08:17 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.25 2019/07/01 10:56:20 nia Exp $
 
-DISTNAME=	supertuxkart-0.8.1-src
+VERSION=	1.0
+DISTNAME=	supertuxkart-${VERSION}-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	14
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=supertuxkart/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://supertuxkart.sourceforge.net/
+HOMEPAGE=	https://supertuxkart.net/Main_Page
 COMMENT=	Free 3D kart racing game
-#LICENSE=	gnu-gpl-v3 AND Creative-Commons-Attribution AND Creative-Commons-BY-SA AND Creative-Commons-Sampling+ AND FreeArt License AND SoundSnap license AND Public Domain AND Image*After terms
+LICENSE=	gnu-gpl-v3
 
-WRKSRC=			${WRKDIR}/SuperTuxKart-0.8.1
+WRKSRC=			${WRKDIR}/supertuxkart-${VERSION}
 USE_CMAKE=		yes
-#USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake
-
-CXXFLAGS+=	-DNO_IRR_USE_NON_SYSTEM_JPEG_LIB_=1
-CXXFLAGS+=	-DNO_IRR_USE_NON_SYSTEM_LIB_PNG_=1
-CXXFLAGS+=	-DNO_IRR_USE_NON_SYSTEM_ZLIB_=1
-CXXFLAGS+=	-DNO_IRR_USE_NON_SYSTEM_BZLIB_=1
-
-NOT_PAX_ASLR_SAFE+=	bin/supertuxkart
-NOT_PAX_MPROTECT_SAFE+=	bin/supertuxkart
-
-# Debug nob for STK
-#CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
-
-SUBST_CLASSES+=			dos_eol
-SUBST_MESSAGE.dos_eol=		Removing DOS line-ends
-SUBST_STAGE.dos_eol=		post-extract
-SUBST_FILES.dos_eol=		lib/irrlicht/source/Irrlicht/Makefile
-SUBST_FILES.dos_eol+=		lib/irrlicht/source/Irrlicht/os.cpp
-SUBST_FILES.dos_eol+=		lib/irrlicht/source/Irrlicht/COSOperator.cpp
-SUBST_FILES.dos_eol+=		lib/irrlicht/source/Irrlicht/CIrrDeviceLinux.cpp
-SUBST_FILTER_CMD.dos_eol=	${TR} -d '\r'
+USE_TOOLS+=		cmake pkg-config
 
 CMAKE_ARGS+=	-DUSE_WIIUSE=OFF
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} != "Linux"
-SUBST_CLASSES+=		js
-SUBST_STAGE.js=		pre-configure
-SUBST_MESSAGE.js=	Disable Linux joystick support.
-SUBST_FILES.js+=	lib/irrlicht/include/IrrCompileConfig.h
-SUBST_SED.js+=		-e '/define.*_IRR_COMPILE_WITH_JOYSTICK_EVENTS_/d'
-.endif
-
-# for irrlicht debugging
-#pre-build:
-#	cd ${WRKSRC}/lib/irrlicht/source/Irrlicht && \
-#		${MAKE_ENV} DEBUG=1 make ${_MAKE_JOBS}
-
-pre-build:
-	cd ${WRKSRC}/lib/irrlicht/source/Irrlicht && \
-		${MAKE_ENV} NDEBUG=1 make ${_MAKE_JOBS}
+CMAKE_ARGS+=	-DBUILD_RECORDER=OFF
 
 .include "../../archivers/bzip2/buildlink3.mk"
-.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../games/plib/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/glew/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../multimedia/libogg/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../net/enet/buildlink3.mk"
+.include "../../security/nettle/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../x11/libXxf86vm/buildlink3.mk"
+.if ${OPSYS} != "Darwin"
+.  include "../../x11/libX11/buildlink3.mk"
+.  include "../../x11/libXrandr/buildlink3.mk"
+.endif
+.include "../../mk/jpeg.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
