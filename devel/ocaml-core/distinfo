@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2019/03/25 09:14:48 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2019/07/01 12:38:53 jaapb Exp $
 
-SHA1 (ocaml-core/core-0.12.0.tar.gz) = 28f82e0a20ad1c23a75b5406a8ec864c1eff1a1c
-RMD160 (ocaml-core/core-0.12.0.tar.gz) = 36444f04bb5957637c2ff11259121dee7f785889
-SHA512 (ocaml-core/core-0.12.0.tar.gz) = 04f1cf4652a94d0f604d8bbcc11740417cb7fc48a9684d71b4280732184d6850c0a15626e5b5eaa7b65c340d4db5f8a1087ddd59bd93706f47e79b64edbf2996
-Size (ocaml-core/core-0.12.0.tar.gz) = 693577 bytes
+SHA1 (core-0.12.3.tar.gz) = 402f9021ea7dcbd061384abe44695adc5810cef7
+RMD160 (core-0.12.3.tar.gz) = e824f4ec1bf16ee7ea13462412a77ce4209dd297
+SHA512 (core-0.12.3.tar.gz) = 06f00ce0285055fc2a91dab940dcb8968585bd80e5203e7874d2997196f1b26492508f6f0c1ea86ead9285551d5142a4dfaf34375b90c330f2858604042d0743
+Size (core-0.12.3.tar.gz) = 693666 bytes
 SHA1 (patch-src_dune) = d8063672e7077ff38bd62bc93eb28dd96523669a

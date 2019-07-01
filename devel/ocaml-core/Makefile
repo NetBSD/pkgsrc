@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.1 2019/03/25 09:14:48 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2019/07/01 12:38:53 jaapb Exp $
 
 GITHUB_PROJECT=	core
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	${GITHUB_PROJECT}-0.12.0
+DISTNAME=	${GITHUB_PROJECT}-0.12.3
 PKGNAME=	ocaml-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
-DIST_SUBDIR=	ocaml-${GITHUB_PROJECT}
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	https://github.com/janestreet/core/
 COMMENT=	Standard library overlay for OCaml by Jane Street
 LICENSE=	mit
+
+USE_TOOLS+=	bash
 
 OCAML_USE_DUNE=	yes
 OCAML_USE_OPAM=	no
