@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2713 2019/07/01 05:51:49 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2714 2019/07/01 07:15:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4482,3 +4482,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated meta-pkgs/boost to 1.70.0nb1 [ryoon 2019-07-01]
 	Updated x11/qt5 to 5.12.4 [adam 2019-07-01]
 	Updated multimedia/mkvtoolnix to 35.0.0 [adam 2019-07-01]
+	Updated devel/py-ipython to 7.6.0 [adam 2019-07-01]
+	Updated devel/py-isort to 4.3.21 [adam 2019-07-01]
