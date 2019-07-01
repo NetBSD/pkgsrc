@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/08/22 09:45:57 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/07/01 21:50:09 nia Exp $
 #
 
 DISTNAME=	Geo-IPfree-1.151940
@@ -8,7 +8,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Geo/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~bricas/${DISTNAME}/
+HOMEPAGE=	https://metacpan.org/release/BRICAS/${DISTNAME}
 COMMENT=	Gets country name by IP or hostname
 LICENSE=	${PERL5_LICENSE}
 
