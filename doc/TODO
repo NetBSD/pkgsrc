@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19097 2019/07/01 13:58:13 wiz Exp $
+$NetBSD: TODO,v 1.19098 2019/07/01 15:13:39 nia Exp $
 
 Suggested new packages
 ======================
@@ -1259,7 +1259,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o streamtuner-2.2.0
 	o subtitleeditor-0.54.0 [https://github.com/kitone/subtitleeditor]
 	o superlu-5.1.1
-	o supertux-0.5
 	o swapd-1.0.5
 	o swath-0.5.2
 	o swfdec-gnome-2.30.1
