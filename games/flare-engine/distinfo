@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 20:56:49 agc Exp $
+$NetBSD: distinfo,v 1.4 2019/07/01 13:20:51 nia Exp $
 
-SHA1 (flare-engine/v0.19.tar.gz) = ec33aaf68738d7422fdada5599bb7c001abd5ed3
-RMD160 (flare-engine/v0.19.tar.gz) = 0799e2b0ac9b4a07c6215c2f213efe0c48e1229c
-SHA512 (flare-engine/v0.19.tar.gz) = 196b0e0e1d9f1eab369854cec1484f4536e7c3e6183710d780a8101b3d6d1f07c02fc0c5c36d848713c0a9f1840241c5cdbfc370a80a6d33d2e9b81d9bfa7e75
-Size (flare-engine/v0.19.tar.gz) = 544468 bytes
-SHA1 (patch-CMakeLists.txt) = 5c4d0f4b33c7ef4896911d1c2cbf9389033336c7
+SHA1 (flare-engine-1.10.tar.gz) = 1c5254009c7729d61c8b12a0a2f0397b0ea2cf46
+RMD160 (flare-engine-1.10.tar.gz) = f2b4415c58a0b107f23882f4ff7c09f22c217319
+SHA512 (flare-engine-1.10.tar.gz) = db6cef0bd0aa1c17bbce94af72aec640a839dc0ad0d0079ec76ad9256dc64d91c05d42c98f0b4e6cf02ed56c37fce45f284ca857dd14d1bf6fa646b79748a577
+Size (flare-engine-1.10.tar.gz) = 5716744 bytes
