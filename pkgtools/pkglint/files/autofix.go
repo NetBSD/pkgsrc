@@ -52,9 +52,6 @@ const SilentAutofixFormat = "SilentAutofixFormat"
 const AutofixFormat = "AutofixFormat"
 
 func NewAutofix(line *Line) *Autofix {
-	// FIXME: replacing the returned value with
-	//  &Autofix{line: line, autofixShortTerm: autofixShortTerm{anyway: true}}
-	//  makes some tests output source code without diagnostic.
 	return &Autofix{line: line}
 }
 

@@ -1214,8 +1214,8 @@ func (pkg *Package) checkOwnerMaintainer(filename string) {
 }
 
 func (pkg *Package) checkFreeze(filename string) {
-	freezeStart := G.Pkgsrc.FreezeStart
-	if freezeStart == "" {
+	freezeStart := G.Pkgsrc.LastFreezeStart
+	if freezeStart == "" || G.Pkgsrc.LastFreezeEnd != "" {
 		return
 	}
 

@@ -251,7 +251,7 @@ func (p *MkParser) varUseModifier(varname string, closing byte) string {
 
 	case '=', 'D', 'M', 'N', 'U':
 		lexer.Skip(1)
-		re := G.res.Compile(regex.Pattern(ifelseStr(closing == '}', `^([^$:\\}]|\$\$|\\.)+`, `^([^$:\\)]|\$\$|\\.)+`)))
+		re := regcomp(regex.Pattern(ifelseStr(closing == '}', `^([^$:\\}]|\$\$|\\.)+`, `^([^$:\\)]|\$\$|\\.)+`)))
 		for p.VarUse() != nil || lexer.SkipRegexp(re) {
 		}
 		arg := lexer.Since(mark)
@@ -268,7 +268,7 @@ func (p *MkParser) varUseModifier(varname string, closing byte) string {
 		}
 
 	case '[':
-		if lexer.SkipRegexp(G.res.Compile(`^\[(?:[-.\d]+|#)\]`)) {
+		if lexer.SkipRegexp(regcomp(`^\[(?:[-.\d]+|#)\]`)) {
 			return lexer.Since(mark)
 		}
 
@@ -283,7 +283,7 @@ func (p *MkParser) varUseModifier(varname string, closing byte) string {
 
 	lexer.Reset(mark)
 
-	re := G.res.Compile(regex.Pattern(ifelseStr(closing == '}', `^([^:$}]|\$\$)+`, `^([^:$)]|\$\$)+`)))
+	re := regcomp(regex.Pattern(ifelseStr(closing == '}', `^([^:$}]|\$\$)+`, `^([^:$)]|\$\$)+`)))
 	for p.VarUse() != nil || lexer.SkipRegexp(re) {
 	}
 	modifier := lexer.Since(mark)
@@ -309,7 +309,7 @@ func (p *MkParser) varUseModifier(varname string, closing byte) string {
 func (p *MkParser) varUseText(closing byte) string {
 	lexer := p.lexer
 	start := lexer.Mark()
-	re := G.res.Compile(regex.Pattern(ifelseStr(closing == '}', `^([^$:}]|\$\$)+`, `^([^$:)]|\$\$)+`)))
+	re := regcomp(regex.Pattern(ifelseStr(closing == '}', `^([^$:}]|\$\$)+`, `^([^$:)]|\$\$)+`)))
 	for p.VarUse() != nil || lexer.SkipRegexp(re) {
 	}
 	return lexer.Since(start)
@@ -391,7 +391,7 @@ func (p *MkParser) varUseModifierAt(lexer *textproc.Lexer, varname string) bool 
 		return false
 	}
 
-	re := G.res.Compile(`^([^$@\\]|\\.)+`)
+	re := regcomp(`^([^$@\\]|\\.)+`)
 	for p.VarUse() != nil || lexer.SkipString("$$") || lexer.SkipRegexp(re) {
 	}
 
@@ -498,11 +498,11 @@ func (p *MkParser) mkCondAtom() *MkCond {
 		if lhs != nil {
 			lexer.SkipHspace()
 
-			if m := lexer.NextRegexp(G.res.Compile(`^(<|<=|==|!=|>=|>)[\t ]*(0x[0-9A-Fa-f]+|\d+(?:\.\d+)?)`)); m != nil {
+			if m := lexer.NextRegexp(regcomp(`^(<|<=|==|!=|>=|>)[\t ]*(0x[0-9A-Fa-f]+|\d+(?:\.\d+)?)`)); m != nil {
 				return &MkCond{CompareVarNum: &MkCondCompareVarNum{lhs, m[1], m[2]}}
 			}
 
-			m := lexer.NextRegexp(G.res.Compile(`^(?:<|<=|==|!=|>=|>)`))
+			m := lexer.NextRegexp(regcomp(`^(?:<|<=|==|!=|>=|>)`))
 			if m == nil {
 				return &MkCond{Var: lhs} // See devel/bmake/files/cond.c:/\* For \.if \$/
 			}
@@ -510,7 +510,7 @@ func (p *MkParser) mkCondAtom() *MkCond {
 
 			op := m[0]
 			if op == "==" || op == "!=" {
-				if mrhs := lexer.NextRegexp(G.res.Compile(`^"([^"\$\\]*)"`)); mrhs != nil {
+				if mrhs := lexer.NextRegexp(regcomp(`^"([^"\$\\]*)"`)); mrhs != nil {
 					return &MkCond{CompareVarStr: &MkCondCompareVarStr{lhs, op, mrhs[1]}}
 				}
 			}
@@ -559,7 +559,7 @@ func (p *MkParser) mkCondAtom() *MkCond {
 		}
 
 		// See devel/bmake/files/cond.c:/^CondCvtArg
-		if m := lexer.NextRegexp(G.res.Compile(`^(?:0x[0-9A-Fa-f]+|\d+(?:\.\d+)?)`)); m != nil {
+		if m := lexer.NextRegexp(regcomp(`^(?:0x[0-9A-Fa-f]+|\d+(?:\.\d+)?)`)); m != nil {
 			return &MkCond{Num: m[0]}
 		}
 	}
@@ -652,8 +652,8 @@ func (p *MkParser) PkgbasePattern() string {
 
 	for {
 		if p.VarUse() != nil ||
-			lexer.SkipRegexp(G.res.Compile(`^[\w.*+,{}]+`)) ||
-			lexer.SkipRegexp(G.res.Compile(`^\[[\w-]+\]`)) {
+			lexer.SkipRegexp(regcomp(`^[\w.*+,{}]+`)) ||
+			lexer.SkipRegexp(regcomp(`^\[[\w-]+\]`)) {
 			continue
 		}
 
@@ -696,7 +696,7 @@ func (p *MkParser) Dependency() *DependencyPattern {
 			return lexer.Since(mark)
 		}
 
-		m := lexer.NextRegexp(G.res.Compile(`^\d[\w.]*`))
+		m := lexer.NextRegexp(regcomp(`^\d[\w.]*`))
 		if m != nil {
 			return m[0]
 		}
@@ -749,7 +749,7 @@ func (p *MkParser) Dependency() *DependencyPattern {
 	if lexer.SkipByte('-') && lexer.Rest() != "" {
 		versionMark := lexer.Mark()
 
-		for p.VarUse() != nil || lexer.SkipRegexp(G.res.Compile(`^[\w\[\]*_.\-]+`)) {
+		for p.VarUse() != nil || lexer.SkipRegexp(regcomp(`^[\w\[\]*_.\-]+`)) {
 		}
 
 		if !lexer.SkipString("{,nb*}") {

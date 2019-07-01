@@ -988,6 +988,31 @@ func (s *Suite) Test_Autofix_Apply__anyway_error(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
+func (s *Suite) Test_Autofix_Apply__source_autofix_no_change(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("--autofix", "--source")
+	lines := t.SetUpFileLines("filename",
+		"word word word")
+
+	fix := lines.Lines[0].Autofix()
+	fix.Notef("Word should be replaced, but pkglint is not sure which one.")
+	fix.Replace("word", "replacement")
+	fix.Anyway()
+	fix.Apply()
+
+	lines.SaveAutofixChanges()
+
+	// Nothing is replaced since, as of June 2019, pkglint doesn't
+	// know which of the three "word" should be replaced.
+	//
+	// The note is not logged since fix.Anyway only applies when neither
+	// --show-autofix nor --autofix is given in the command line.
+	t.CheckOutputEmpty()
+	t.CheckFileLines("filename",
+		"word word word")
+}
+
 // Ensures that without explanations, the separator between the individual
 // diagnostics are generated.
 func (s *Suite) Test_Autofix_Apply__source_without_explain(c *check.C) {
