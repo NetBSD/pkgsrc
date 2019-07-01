@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2019/07/01 15:53:30 jaapb Exp $
+${OCAML_SITELIB}/magic-mime/META
+${OCAML_SITELIB}/magic-mime/dune-package
+${OCAML_SITELIB}/magic-mime/magic_mime.cmi
+${OCAML_SITELIB}/magic-mime/magic_mime.cmt
+${OCAML_SITELIB}/magic-mime/magic_mime.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/magic-mime/magic_mime.cmx
+${OCAML_SITELIB}/magic-mime/magic_mime.ml
+${OCAML_SITELIB}/magic-mime/magic_mime.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/magic-mime/magic_mime_library.a
+${OCAML_SITELIB}/magic-mime/magic_mime_library.cma
+${PLIST.ocaml-opt}${OCAML_SITELIB}/magic-mime/magic_mime_library.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/magic-mime/magic_mime_library.cmxs
+${OCAML_SITELIB}/magic-mime/mime_types.cmi
+${OCAML_SITELIB}/magic-mime/mime_types.cmt
+${OCAML_SITELIB}/magic-mime/mime_types.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/magic-mime/mime_types.cmx
+${OCAML_SITELIB}/magic-mime/mime_types.ml
+${OCAML_SITELIB}/magic-mime/mime_types.mli
+${OCAML_SITELIB}/magic-mime/opam
+share/doc/magic-mime/CHANGES.md
+share/doc/magic-mime/LICENSE.md
+share/doc/magic-mime/README.md
