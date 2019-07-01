@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/08/22 09:44:08 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/07/01 21:35:38 nia Exp $
 #
 
 DISTNAME=	IO-Prompt-0.997004
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IO/}
 
 MAINTAINER=	abs@absd.org
-HOMEPAGE=	http://search.cpan.org/~dconway/IO-Prompt/
+HOMEPAGE=	https://metacpan.org/release/IO-Prompt
 COMMENT=	Interactively prompt for user input
 LICENSE=	${PERL5_LICENSE}
 

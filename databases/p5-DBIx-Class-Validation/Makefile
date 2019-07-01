@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/08/22 09:43:17 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/07/01 21:35:34 nia Exp $
 
 DISTNAME=	DBIx-Class-Validation-0.02005
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBIx/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/perldoc?DBIx::Class::Validation
+HOMEPAGE=	https://metacpan.org/pod/DBIx::Class::Validation
 COMMENT=	Validate all data before submitting to database
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/08/22 09:46:20 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2019/07/01 21:35:51 nia Exp $
 #
 
 DISTNAME=	BSD-arc4random-1.50
@@ -8,7 +8,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/S/SJ/SJSZ/
 
 MAINTAINER=	bsiegert@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~sjsz/BSD-arc4random/
+HOMEPAGE=	https://metacpan.org/release/BSD-arc4random
 COMMENT=	Perl interface to the arc4 random number generator
 LICENSE=	miros
 

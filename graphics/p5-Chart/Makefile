@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2018/08/22 09:45:14 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2019/07/01 21:35:46 nia Exp $
 
 DISTNAME=	Chart-2.4.10
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	graphics perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Chart/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~chartgrp/Chart/
+HOMEPAGE=	https://metacpan.org/release/Chart
 COMMENT=	Perl5 charting library
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.13 2018/08/22 09:46:48 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/07/01 21:35:52 nia Exp $
 #
 
 DISTNAME=	Data-HexDump-0.02
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	9
 CATEGORIES=	textproc
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/F/FT/FTASSIN/
+MASTER_SITES=	https://cpan.metacpan.org/authors/id/F/FT/FTASSIN/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/F/FT/FTASSIN/
+HOMEPAGE=	https://cpan.metacpan.org/authors/id/F/FT/FTASSIN/
 COMMENT=	Hexadecial Dumper
 LICENSE=	${PERL5_LICENSE}
 

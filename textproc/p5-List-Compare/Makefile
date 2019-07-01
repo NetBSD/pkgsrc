@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/08/22 09:46:51 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/07/01 21:35:53 nia Exp $
 #
 
 DISTNAME=		List-Compare-0.53
@@ -8,7 +8,7 @@ CATEGORIES=		perl5 textproc
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=List/}
 
 MAINTAINER=		pettai@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/~jkeenan/List-Compare/
+HOMEPAGE=		https://metacpan.org/release/List-Compare
 COMMENT=		Compare elements of two or more lists
 LICENSE=		${PERL5_LICENSE}
 

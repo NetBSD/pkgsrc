@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/08/22 09:44:20 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/07/01 21:35:40 nia Exp $
 
 DISTNAME=	MooX-StrictConstructor-0.010
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/H/HA/HARTZELL/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~hartzell/MooX-StrictConstructor/
+HOMEPAGE=	https://metacpan.org/release/MooX-StrictConstructor
 COMMENT=	Make your Moo-based object constructors blow up on unknown attributes
 LICENSE=	${PERL5_LICENSE}
 
