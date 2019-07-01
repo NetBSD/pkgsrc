@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/08/22 09:44:00 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/07/01 21:35:37 nia Exp $
 
 DISTNAME=	File-Find-Object-v0.3.2
 PKGNAME=	p5-${DISTNAME:C/t-v/t-/:}
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~shlomif/File-Find-Object/lib/File/Find/Object.pm
+HOMEPAGE=	https://metacpan.org/pod/distribution/File-Find-Object/lib/File/Find/Object.pm
 COMMENT=	Object-oriented and iterative replacement for File::Find
 LICENSE=	artistic-2.0
 

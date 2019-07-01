@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2018/08/22 09:44:26 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2019/07/01 21:35:41 nia Exp $
 
 DISTNAME=	OOTools-2.4
 PKGNAME=	p5-${DISTNAME}0
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/S/SK/SKNPP/
 
 MAINTAINER=	hiramatu@boreas.dti.ne.jp
-HOMEPAGE=	http://search.cpan.org/~domizio/OOTools/
+HOMEPAGE=	https://metacpan.org/release/DOMIZIO/OOTools-2.21
 COMMENT=	Perl module collection to easily create constructors methods
 LICENSE=	${PERL5_LICENSE}
 

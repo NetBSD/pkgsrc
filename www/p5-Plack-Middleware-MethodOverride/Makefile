@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/08/22 09:47:50 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/07/01 21:35:59 nia Exp $
 
 DISTNAME=	Plack-Middleware-MethodOverride-0.20
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/M/MI/MIYAGAWA/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/D/DW/DWHEELER/
+HOMEPAGE=	https://cpan.metacpan.org/authors/id/D/DW/DWHEELER/
 COMMENT=	Override REST methods to Plack apps via POST
 LICENSE=	${PERL5_LICENSE}
 

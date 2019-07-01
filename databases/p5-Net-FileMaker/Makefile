@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2018/08/22 09:43:19 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/07/01 21:35:34 nia Exp $
 
 DISTNAME=	Net-FileMaker-0.064
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	2
 CATEGORIES=	databases perl5
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/S/SQ/SQUEEK/
+MASTER_SITES=	https://cpan.metacpan.org/authors/id/S/SQ/SQUEEK/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/S/SQ/SQUEEK/
+HOMEPAGE=	https://cpan.metacpan.org/authors/id/S/SQ/SQUEEK/
 COMMENT=	Perl Module to interact with FileMaker services
 LICENSE=	${PERL5_LICENSE}
 

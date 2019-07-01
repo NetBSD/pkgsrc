@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/08/22 09:47:34 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/07/01 21:35:59 nia Exp $
 
 DISTNAME=	Catalyst-Plugin-Session-Store-File-0.18
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/perldoc?Catalyst::Plugin::Session::Store::File
+HOMEPAGE=	https://metacpan.org/pod/Catalyst::Plugin::Session::Store::File
 COMMENT=	File storage backend for session data
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2018/08/22 09:47:17 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/07/01 21:35:57 nia Exp $
 
 DISTNAME=	DateTime-Incomplete-0.08
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	2
 CATEGORIES=	time perl5
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/F/FG/FGLOCK/
+MASTER_SITES=	https://cpan.metacpan.org/authors/id/F/FG/FGLOCK/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/F/FG/FGLOCK/
+HOMEPAGE=	https://cpan.metacpan.org/authors/id/F/FG/FGLOCK/
 COMMENT=	DateTime::Incomplete - An incomplete datetime, like January 5
 LICENSE=	${PERL5_LICENSE}
 

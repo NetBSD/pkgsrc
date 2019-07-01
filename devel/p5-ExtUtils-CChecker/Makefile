@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2018/08/22 09:43:58 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/07/01 21:35:36 nia Exp $
 
 DISTNAME=	ExtUtils-CChecker-0.10
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/P/PE/PEVANS/
+MASTER_SITES=	https://cpan.metacpan.org/authors/id/P/PE/PEVANS/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/P/PE/PEVANS/
+HOMEPAGE=	https://cpan.metacpan.org/authors/id/P/PE/PEVANS/
 COMMENT=	Perl5 configure-check utilities
 LICENSE=	${PERL5_LICENSE}
 

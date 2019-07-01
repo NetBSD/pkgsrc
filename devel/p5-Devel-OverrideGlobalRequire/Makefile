@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/08/22 09:43:55 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/07/01 21:35:36 nia Exp $
 
 DISTNAME=	Devel-OverrideGlobalRequire-0.001
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5 net
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/D/DA/DAGOLDEN/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~dagolden/Devel-OverrideGlobalRequire/
+HOMEPAGE=	https://metacpan.org/release/Devel-OverrideGlobalRequire
 COMMENT=	Perl 5 package that overrides CORE::GLOBAL::require safely
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/08/22 09:43:19 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/07/01 21:35:34 nia Exp $
 #
 
 DISTNAME=	Net-MySQL-0.11
@@ -8,7 +8,7 @@ CATEGORIES=	databases
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/T/TS/TSUCCHI/
 
 MAINTAINER=	ficovh@yahoo.com
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/O/OY/OYAMA/
+HOMEPAGE=	https://cpan.metacpan.org/authors/id/O/OY/OYAMA/
 COMMENT=	Net::MySQL - Pure Perl MySQL network protocol interface
 
 DEPENDS+=       p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1

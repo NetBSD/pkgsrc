@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/08/22 09:43:07 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/07/01 21:35:33 nia Exp $
 
 DISTNAME=	Data-Hexify-1.00
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	converters perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~jv/Data-Hexify/lib/Data/Hexify.pm
+HOMEPAGE=	https://metacpan.org/pod/distribution/Data-Hexify/lib/Data/Hexify.pm
 COMMENT=	Perl extension for hexdumping arbitrary data
 LICENSE=	${PERL5_LICENSE}
 

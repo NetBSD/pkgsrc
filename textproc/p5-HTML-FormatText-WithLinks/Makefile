@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/08/22 09:46:49 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2019/07/01 21:35:53 nia Exp $
 #
 
 DISTNAME=	HTML-FormatText-WithLinks-0.15
@@ -8,7 +8,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTML/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~struan/HTML-FormatText-WithLinks/
+HOMEPAGE=	https://metacpan.org/release/HTML-FormatText-WithLinks
 COMMENT=	HTML to text conversion with links as footnotes
 LICENSE=	${PERL5_LICENSE}
 

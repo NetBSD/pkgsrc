@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/08/22 09:46:01 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/07/01 21:35:50 nia Exp $
 #
 
 DISTNAME=	Net-NBName-0.26
@@ -8,7 +8,7 @@ CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	bouyer@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~jmacfarla/Net-NBName-0.26/
+HOMEPAGE=	https://metacpan.org/release/JMACFARLA/Net-NBName-0.26
 COMMENT=	Perl extension to perform simple NetBIOS Name Service Requests
 
 PERL5_PACKLIST=		auto/Net/NBName/.packlist
