@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2018/12/13 19:51:31 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2019/07/01 04:07:45 ryoon Exp $
 
 BUILDLINK_TREE+=	libe-book
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libe-book
 LIBE_BOOK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libe-book+=	libe-book>=0.0.2
-BUILDLINK_ABI_DEPENDS.libe-book?=	libe-book>=0.1.3nb6
+BUILDLINK_ABI_DEPENDS.libe-book?=	libe-book>=0.1.3nb8
 BUILDLINK_PKGSRCDIR.libe-book?=		../../converters/libe-book
 
 .include "../../converters/librevenge/buildlink3.mk"

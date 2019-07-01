@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2019/04/25 07:33:24 maya Exp $
+# $NetBSD: Makefile,v 1.77 2019/07/01 04:08:49 ryoon Exp $
 
 DISTNAME=	gtk-doc-1.29
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-doc/${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.xz

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2019/06/28 16:30:56 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2019/07/01 04:08:01 ryoon Exp $
 
 # This package is intentionally old to avoid:
 #   Server Side Public License
 #   c++17 (and c++14 if 3.4.4 does not already need it)
 DISTNAME=	mongodb-src-r3.4.4
 PKGNAME=	${DISTNAME:S/src-r//:S/-rc/rc/}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	databases
 MASTER_SITES=	http://fastdl.mongodb.org/src/
 

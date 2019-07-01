@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2018/12/13 19:52:12 adam Exp $
+# $NetBSD: Makefile,v 1.39 2019/07/01 04:08:36 ryoon Exp $
 
 DISTNAME=	step-${_KDE_VERSION}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	misc
 COMMENT=	KDE interactive physical simulator
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2019/04/25 07:32:57 maya Exp $
+# $NetBSD: Makefile,v 1.26 2019/07/01 04:07:48 ryoon Exp $
 
 DISTNAME=	edje-1.7.7
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2

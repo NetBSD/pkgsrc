@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2018/12/13 19:52:18 adam Exp $
+# $NetBSD: Makefile,v 1.18 2019/07/01 04:08:43 ryoon Exp $
 
 CONFLICTS+=	Transmission-[0-9]*
-PKGREVISION=	10
+PKGREVISION=	11
 
 pre-configure:
 	touch ${WRKSRC}/po/Makefile

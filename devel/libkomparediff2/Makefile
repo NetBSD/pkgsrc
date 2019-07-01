@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2018/12/13 19:51:48 adam Exp $
+# $NetBSD: Makefile,v 1.15 2019/07/01 04:08:05 ryoon Exp $
 
 DISTNAME=	libkomparediff2-${_KDE_VERSION}
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	devel
 COMMENT=	Library to compare files and strings
 
