@@ -36,8 +36,9 @@ type Pkgsrc struct {
 	suggestedUpdates    []SuggestedUpdate
 	suggestedWipUpdates []SuggestedUpdate
 
-	LastChange  map[string]*Change
-	FreezeStart string // e.g. "2018-01-01", or ""
+	LastChange      map[string]*Change
+	LastFreezeStart string // e.g. "2018-01-01", or ""
+	LastFreezeEnd   string // e.g. "2018-01-01", or ""
 
 	listVersions map[string][]string // See Pkgsrc.ListVersions
 
@@ -63,6 +64,7 @@ func NewPkgsrc(dir string) Pkgsrc {
 		nil,
 		nil,
 		make(map[string]*Change),
+		"",
 		"",
 		make(map[string][]string),
 		NewScope(),
@@ -517,11 +519,14 @@ func (src *Pkgsrc) loadDocChangesFromFile(filename string) []*Change {
 		if hasPrefix(line.Text, "\tmk/") {
 			infra = true
 			if hasPrefix(line.Text, "\tmk/bsd.pkg.mk: started freeze for") {
-				if m, freezeDate := match1(line.Text, `(\d\d\d\d-\d\d-\d\d)\]$`); m {
-					src.FreezeStart = freezeDate
+				if m, date := match1(line.Text, `(\d\d\d\d-\d\d-\d\d)\]$`); m {
+					src.LastFreezeStart = date
+					src.LastFreezeEnd = ""
 				}
 			} else if hasPrefix(line.Text, "\tmk/bsd.pkg.mk: freeze ended for") {
-				src.FreezeStart = ""
+				if m, date := match1(line.Text, `(\d\d\d\d-\d\d-\d\d)\]$`); m {
+					src.LastFreezeEnd = date
+				}
 			}
 		}
 		if infra {
@@ -602,6 +607,40 @@ func (src *Pkgsrc) loadDocChanges() {
 				src.LastChange[change.Target()] = change
 			}
 		}
+	}
+
+	src.checkRemovedAfterLastFreeze()
+}
+
+func (src *Pkgsrc) checkRemovedAfterLastFreeze() {
+	if src.LastFreezeStart == "" || G.Wip {
+		return
+	}
+
+	var wrong []*Change
+	for pkgpath, change := range src.LastChange {
+		switch change.Action {
+		case Added, Updated, Downgraded:
+			if !dirExists(src.File(pkgpath)) {
+				wrong = append(wrong, change)
+			}
+		}
+	}
+
+	sort.Slice(wrong, func(i, j int) bool {
+		ei, ej := wrong[i], wrong[j]
+		if ei.Date != ej.Date {
+			return ei.Date < ej.Date
+		}
+		return ei.Location.firstLine < ej.Location.firstLine
+	})
+
+	for _, change := range wrong {
+		// It's a bit cheated to construct a Line from only a Location,
+		// without the wrong text. That's only because I'm too lazy loading
+		// the file again, and the original text is not lying around anywhere.
+		line := NewLineMulti(change.Location.Filename, int(change.Location.firstLine), int(change.Location.lastLine), "", nil)
+		line.Errorf("Package %s must either exist or be marked as removed.", change.Pkgpath)
 	}
 }
 

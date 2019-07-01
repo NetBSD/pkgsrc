@@ -48,7 +48,7 @@ func (llex *LinesLexer) NextRegexp(re regex.Pattern) []string {
 	}
 
 	if !llex.EOF() {
-		if m := G.res.Match(llex.lines.Lines[llex.index].Text, re); m != nil {
+		if m := match(llex.lines.Lines[llex.index].Text, re); m != nil {
 			llex.index++
 			return m
 		}

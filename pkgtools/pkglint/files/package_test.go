@@ -962,7 +962,7 @@ func (s *Suite) Test_Package_load__extra_files(c *check.C) {
 		"ERROR: gnu-style.mk:1: Unknown Makefile line format: \"ifeq ($(CC),gcc)\".",
 		"ERROR: gnu-style.mk:3: Unknown Makefile line format: \"else\".",
 		"ERROR: gnu-style.mk:5: Unknown Makefile line format: \"endif\".",
-		"ERROR: gnu-style.mk:1: Expected \"# $NetBSD: package_test.go,v 1.48 2019/06/30 20:56:19 rillig Exp $\".",
+		"ERROR: gnu-style.mk:1: Expected \""+MkCvsID+"\".",
 		"WARN: gnu-style.mk:2: IS_GCC is defined but not used.",
 
 		// There is no warning about files/gnu-style.mk since pkglint
@@ -983,7 +983,7 @@ func (s *Suite) Test_Package_load__extra_files(c *check.C) {
 		"ERROR: ../../category/other/gnu-style.mk:1: Unknown Makefile line format: \"ifeq ($(CC),gcc)\".",
 		"ERROR: ../../category/other/gnu-style.mk:3: Unknown Makefile line format: \"else\".",
 		"ERROR: ../../category/other/gnu-style.mk:5: Unknown Makefile line format: \"endif\".",
-		"ERROR: ../../category/other/gnu-style.mk:1: Expected \"# $NetBSD: package_test.go,v 1.48 2019/06/30 20:56:19 rillig Exp $\".",
+		"ERROR: ../../category/other/gnu-style.mk:1: Expected \""+MkCvsID+"\".",
 		"WARN: ../../category/other/gnu-style.mk:2: IS_GCC is defined but not used.",
 
 		"ERROR: patches/patch-Makefile.mk: Contains no patch.",
