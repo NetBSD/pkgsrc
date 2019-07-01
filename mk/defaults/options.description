@@ -36,6 +36,7 @@ ares			Use the ares library for asynchronous name resolution.
 aria2-metalink		Enable Metalink support.
 arts			Use the aRts audio daemon.
 aspell			Add spell checking support using aspell.
+async	Use the async library
 ass			Enable subtitle renderer for the ASS/SSA format
 asterisk-config		Control installation of Asterisk sample config files.
 aterm-big5		Enable Chinese support.
@@ -298,6 +299,7 @@ halfops			Halfops are similar to plain ops, but can't kick/deop plain ops.
 hawknl			Enable HawkNL network API support.
 hping-suid		Install hping executable setuid root.
 hpn-patch		High Performance Enabled SSH/SCP for OpenSSH.
+http	Add support for HTTP.
 http2			Add support for HTTP/2.
 hunspell		Add spell checking support using hunspell.
 i586-optimized		Optimize for i586 (only).
@@ -778,6 +780,7 @@ uds			Enable support for Unix domain sockets.
 uim			Enable UIM support.
 uim-fep			Enable UIM FEP support.
 umefont			Add Umefont.
+unix	Enable support for unix.
 unicode			Enable support for Unicode.
 unixodbc		Enable ODBC support via unixODBC.
 unrealircd-chroot	Enable support for running in a chroot jail.
