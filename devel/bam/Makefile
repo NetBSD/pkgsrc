@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2015/09/12 20:03:01 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2019/07/01 13:39:43 nia Exp $
 
-DISTNAME=	bam-0.4.0
+DISTNAME=	bam-0.5.1
 CATEGORIES=	devel
-MASTER_SITES=	https://cloud.github.com/downloads/matricks/bam/
-MASTER_SITES+=	http://penenen.de/
-#enable when updating next time
-#EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=matricks/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	fstd.lkml@gmail.com
-HOMEPAGE=	http://matricks.github.io/bam/
+HOMEPAGE=	https://matricks.github.io/bam/
 COMMENT=	Fast and flexible LUA-driven build system
 LICENSE=	zlib
 
@@ -18,7 +16,7 @@ INSTALLATION_DIRS=	bin
 
 do-build:
 	set -e; cd ${WRKSRC}; \
-	./make_unix.sh
+	CC=${CC:Q} ./make_unix.sh
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bam ${DESTDIR}${PREFIX}/bin/bam
