@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2019/06/30 21:51:49 schmonz Exp $
+# $NetBSD: Makefile,v 1.113 2019/07/01 14:57:31 schmonz Exp $
 #
 
 DISTNAME=		netqmail-1.06
@@ -154,8 +154,7 @@ SITES.${TLSREMOTE_PATCH}=	https://schmonz.com/qmail/tlsonlyremote/
 QMAILPATCHES+=			bigdns:${BIGDNS_PATCH}
 BIGDNS_PATCH=			qmail-103.patch
 PATCHFILES+=			${BIGDNS_PATCH}
-SITES.${BIGDNS_PATCH}=		http://www.ckdhr.com/ckd/
-SITES.${BIGDNS_PATCH}+=		${MASTER_SITE_LOCAL}
+SITES.${BIGDNS_PATCH}=		https://www.ckdhr.com/ckd/
 PATCH_DIST_STRIP.${BIGDNS_PATCH}=-p1
 
 QMAILPATCHES+=			destdir:${DESTDIR_PATCH}
@@ -176,7 +175,7 @@ PATCH_DIST_CAT.${MAILDIRUNIQ_PATCH}= \
 QMAILPATCHES+=			outgoingip:${OUTGOINGIP_PATCH}
 OUTGOINGIP_PATCH=		outgoingip.patch
 PATCHFILES+=			${OUTGOINGIP_PATCH}
-SITES.${OUTGOINGIP_PATCH}=	http://www.qmail.org/
+SITES.${OUTGOINGIP_PATCH}=	http://qmailorg.schmonz.com/
 
 QMAILPATCHES+=			qbiffutmpx:${QBIFFUTMPX_PATCH}
 QBIFFUTMPX_PATCH=		netqmail-1.06-qbiffutmpx-20170820.patch
