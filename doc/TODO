@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19098 2019/07/01 15:13:39 nia Exp $
+$NetBSD: TODO,v 1.19099 2019/07/01 16:19:45 nia Exp $
 
 Suggested new packages
 ======================
@@ -1515,7 +1515,7 @@ Suggested cleanups in pkgsrc
 	  FOO_USE_* variables.
 
 	o Fix packages installing manual pages under share/man to install
-	  them directly under man.
+	  them under PKGMANDIR.
 	  Affects: net/tsclient
 
 	o Convert packages to use generic install scripts where possible
