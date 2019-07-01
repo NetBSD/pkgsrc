@@ -1,7 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2018/04/29 20:41:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/07/01 04:00:10 ryoon Exp $
 lib/libboost_numpy${PYVER}.a
 lib/libboost_numpy${PYVER}.so
-lib/libboost_numpy${PYVER}.so.${BOOST_VERSION}
+lib/libboost_numpy${PYVER}.so.1
+lib/libboost_numpy${PYVER}.so.1.70
+lib/libboost_numpy${PYVER}.so.${PKGVERSION}
 lib/libboost_python${PYVER}.a
 lib/libboost_python${PYVER}.so
-lib/libboost_python${PYVER}.so.${BOOST_VERSION}
+lib/libboost_python${PYVER}.so.1
+lib/libboost_python${PYVER}.so.1.70
+lib/libboost_python${PYVER}.so.${PKGVERSION}
