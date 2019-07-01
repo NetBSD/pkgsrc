@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/08/22 09:46:51 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/07/01 21:35:53 nia Exp $
 #
 
 DISTNAME=	Locale-Maketext-Gettext-1.28
@@ -8,7 +8,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Locale/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~imacat/Locale-Maketext-Gettext/
+HOMEPAGE=	https://metacpan.org/release/Locale-Maketext-Gettext
 COMMENT=	Joins the gettext and Maketext frameworks
 LICENSE=	${PERL5_LICENSE}
 
