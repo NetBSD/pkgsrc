@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2018/11/14 22:21:19 kleink Exp $
+# $NetBSD: Makefile,v 1.66 2019/07/01 21:35:42 nia Exp $
 
 DISTNAME=	SDL-2.548
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=SDL/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~froggs/SDL/lib/pods/SDL.pod
+HOMEPAGE=	https://metacpan.org/pod/distribution/SDL/lib/pods/SDL.pod
 COMMENT=	SDL - Simple DirectMedia Layer for Perl
 LICENSE=	${PERL5_LICENSE}
 
