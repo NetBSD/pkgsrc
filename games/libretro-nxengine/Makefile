@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/12/23 15:05:52 nia Exp $
+# $NetBSD: Makefile,v 1.2 2019/07/01 08:22:49 nia Exp $
 
 DISTNAME=	libretro-nxengine-20181126
 CATEGORIES=	games
@@ -21,7 +21,7 @@ USE_LANGUAGES=	c c++
 CFLAGS+=	-DMSB_FIRST
 .endif
 
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-version-script=build/link.T
+BUILDLINK_TRANSFORM.SunOS+=	rm:--version-script=nxengine/libretro/link.T
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-no-undefined
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
