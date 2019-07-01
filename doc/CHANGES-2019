@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2715 2019/07/01 10:29:40 triaxx Exp $
+$NetBSD: CHANGES-2019,v 1.2716 2019/07/01 10:51:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4485,3 +4485,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-ipython to 7.6.0 [adam 2019-07-01]
 	Updated devel/py-isort to 4.3.21 [adam 2019-07-01]
 	Updated audio/pulseaudio to 12.2nb5 [triaxx 2019-07-01]
+	Updated devel/libuv to 1.30.0 [adam 2019-07-01]
+	Updated lang/npm to 6.9.2 [adam 2019-07-01]
