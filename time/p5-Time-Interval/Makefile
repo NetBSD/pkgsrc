@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.18 2018/08/22 09:47:19 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2019/07/01 21:35:57 nia Exp $
 
 DISTNAME=	Time-Interval-1.234
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	time
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/A/AH/AHICOX/
+MASTER_SITES=	https://cpan.metacpan.org/authors/id/A/AH/AHICOX/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/A/AH/AHICOX/
+HOMEPAGE=	https://cpan.metacpan.org/authors/id/A/AH/AHICOX/
 COMMENT=	Converts time intervals of days, hours, minutes, and seconds
 LICENSE=	${PERL5_LICENSE}
 
