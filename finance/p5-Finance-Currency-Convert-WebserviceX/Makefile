@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/08/22 09:45:06 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/07/01 21:35:46 nia Exp $
 
 DISTNAME=	Finance-Currency-Convert-WebserviceX-0.07001
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	finance perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/C/CL/CLACO/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/perldoc?Finance::Currency::Convert::WebserviceX
+HOMEPAGE=	https://metacpan.org/pod/Finance::Currency::Convert::WebserviceX
 COMMENT=	Lightweight currency conversion using WebserviceX.NET
 LICENSE=	${PERL5_LICENSE}
 

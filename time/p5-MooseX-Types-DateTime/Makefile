@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/08/22 09:47:18 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/07/01 21:35:57 nia Exp $
 #
 
 DISTNAME=	MooseX-Types-DateTime-0.13
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/perldoc?MooseX::Types::DateTime
+HOMEPAGE=	https://metacpan.org/pod/MooseX::Types::DateTime
 COMMENT=	DateTime related constraints and coercions for Moose
 LICENSE=	${PERL5_LICENSE}
 
