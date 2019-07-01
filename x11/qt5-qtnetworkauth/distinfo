@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/04/25 19:43:16 adam Exp $
+$NetBSD: distinfo,v 1.5 2019/07/01 05:49:45 adam Exp $
 
-SHA1 (qtnetworkauth-everywhere-src-5.12.3.tar.xz) = 3cde6f8832c8b2a9662b356d10c49fdd89e5e383
-RMD160 (qtnetworkauth-everywhere-src-5.12.3.tar.xz) = fff829a523aa3cb63005521f80f7183b6f182a3a
-SHA512 (qtnetworkauth-everywhere-src-5.12.3.tar.xz) = 07bf159360fe126c23387c6ed5b955218771ac37848ddb83542733c786b415f9aa5c22fd4a965fff591869d2d819bba420b69718e487df3cce382f411f493142
-Size (qtnetworkauth-everywhere-src-5.12.3.tar.xz) = 139092 bytes
+SHA1 (qtnetworkauth-everywhere-src-5.12.4.tar.xz) = 090dbbf9fa22677855bd01cf17d0bc00f05ae5b3
+RMD160 (qtnetworkauth-everywhere-src-5.12.4.tar.xz) = ab720760b4ab54b5e5df397f874d168f819195fe
+SHA512 (qtnetworkauth-everywhere-src-5.12.4.tar.xz) = 0f36530393abe5315154bf95d0cae1330a8af1af8af5a525d20336d4227f11aa9133b7e3258f651be6f212593ad7e0d2d5d15536fab3c07392a94f2954afe7c8
+Size (qtnetworkauth-everywhere-src-5.12.4.tar.xz) = 139112 bytes
