@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.13 2018/08/22 09:42:55 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/07/01 22:00:09 nia Exp $
 
 DISTNAME=	mp3cut-1.13
 PKGREVISION=	8
 CATEGORIES=	audio perl5
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/J/JV/JV/
+MASTER_SITES=	https://cpan.metacpan.org/authors/id/J/JV/JV/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~jv/mp3cut/
+HOMEPAGE=	https://metacpan.org/release/JV/mp3cut-1.13
 COMMENT=	Tools to concatenate and split MP3 files
 LICENSE=	${PERL5_LICENSE}
 
