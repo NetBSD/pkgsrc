@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2019/04/25 07:32:46 maya Exp $
+# $NetBSD: Makefile,v 1.26 2019/07/01 04:08:04 ryoon Exp $
 
 DISTNAME=	kcachegrind-16.12.0
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	devel
 COMMENT=	Visualization of Performance Profiling Data
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/16.12.0/src/}
