@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2019/01/01 15:34:54 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2019/07/01 15:31:51 schmonz Exp $
 
 DISTNAME=		netqmail-1.06
 PKGNAME=		qmail-rejectutils-${RJPATCHVERSION}
 PKGREVISION=		1
 CATEGORIES=		mail
-MASTER_SITES=		http://www.qmail.org/
+MASTER_SITES=		http://netqmail.org/
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://schmonz.com/qmail/rejectutils/
