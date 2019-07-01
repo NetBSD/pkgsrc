@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/11/14 22:21:19 kleink Exp $
+# $NetBSD: Makefile,v 1.7 2019/07/01 21:35:35 nia Exp $
 
 DISTNAME=	Alien-SDL-1.446
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Alien/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~froggs/Alien-SDL/lib/Alien/SDL.pm
+HOMEPAGE=	https://metacpan.org/pod/distribution/Alien-SDL/lib/Alien/SDL.pm
 COMMENT=	Alien::SDL - building, finding and using SDL binaries
 LICENSE=	${PERL5_LICENSE}
 

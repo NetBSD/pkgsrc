@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/01/27 13:48:41 wen Exp $
+# $NetBSD: Makefile,v 1.11 2019/07/01 21:35:59 nia Exp $
 
 DISTNAME=	Hijk-0.28
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/G/GU/GUGOD/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/A/AV/AVAR/
+HOMEPAGE=	https://cpan.metacpan.org/authors/id/A/AV/AVAR/
 COMMENT=	Hijk - Fast & minimal low-level HTTP client
 LICENSE=	mit
 

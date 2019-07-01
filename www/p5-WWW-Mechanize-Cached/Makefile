@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/08/22 09:47:56 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2019/07/01 21:36:00 nia Exp $
 
 DISTNAME=	WWW-Mechanize-Cached-1.51
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=WWW/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~oalders/WWW-Mechanize-Cached/
+HOMEPAGE=	https://metacpan.org/release/WWW-Mechanize-Cached
 COMMENT=	Cache response to be polite
 LICENSE=	${PERL5_LICENSE}
 

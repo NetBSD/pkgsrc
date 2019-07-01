@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/01/26 10:45:00 wen Exp $
+# $NetBSD: Makefile,v 1.10 2019/07/01 21:35:36 nia Exp $
 
 DISTNAME=	ExtUtils-MakeMaker-CPANfile-0.09
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/I/IS/ISHIGAKI/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~ishigaki/ExtUtils-MakeMaker-CPANfile/
+HOMEPAGE=	https://metacpan.org/release/ExtUtils-MakeMaker-CPANfile
 COMMENT=	Loads CPANfile & modifies parameters for WriteMakefile (Makefile.PL)
 LICENSE=	${PERL5_LICENSE}
 

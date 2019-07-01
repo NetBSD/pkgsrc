@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2018/08/22 09:43:20 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2019/07/01 21:35:34 nia Exp $
 
 DISTNAME=	Rose-DB-Object-0.815
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Rose/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~jsiracusa/Rose-DB-Object/
+HOMEPAGE=	https://metacpan.org/release/Rose-DB-Object
 COMMENT=	Extensible, high performance RDBMS-OO mapper
 LICENSE=	${PERL5_LICENSE}
 

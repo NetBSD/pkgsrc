@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/08/22 09:46:50 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/07/01 21:35:53 nia Exp $
 
 DISTNAME=	Lingua-EN-Syllable-0.30
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	perl5 textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Lingua/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~gregfast/Lingua-EN-Syllable-0.251/
+HOMEPAGE=	https://metacpan.org/release/GREGFAST/Lingua-EN-Syllable-0.251
 COMMENT=	Routine for estimating syllable count in words
 LICENSE=	${PERL5_LICENSE}
 

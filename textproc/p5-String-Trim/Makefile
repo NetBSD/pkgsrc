@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/08/22 09:46:57 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2019/07/01 21:35:54 nia Exp $
 
 DISTNAME=	String-Trim-0.005
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=String/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~doherty/String-Trim/
+HOMEPAGE=	https://metacpan.org/release/String-Trim
 COMMENT=	Perl5 module to trim whitespace from your strings
 LICENSE=	${PERL5_LICENSE}
 

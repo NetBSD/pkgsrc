@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/11/10 09:54:12 wen Exp $
+# $NetBSD: Makefile,v 1.9 2019/07/01 21:35:48 nia Exp $
 
 DISTNAME=	Business-ISMN-1.201
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	misc
 MASTER_SITES+=	${MASTER_SITE_PERL_CPAN:=Business/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~bdfoy/Business-ISMN/
+HOMEPAGE=	https://metacpan.org/release/Business-ISMN
 COMMENT=	Perl5 module to work with ISMNs
 LICENSE=	${PERL5_LICENSE}
 

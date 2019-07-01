@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.10 2018/08/22 09:44:45 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/07/01 21:35:44 nia Exp $
 #
 
 DISTNAME=	Test-DistManifest-1.014
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	4
 CATEGORIES=	devel
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/E/ET/ETHER/
+MASTER_SITES=	https://cpan.metacpan.org/authors/id/E/ET/ETHER/
 
 MAINTAINER=	imil@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/E/ET/ETHER/
+HOMEPAGE=	https://cpan.metacpan.org/authors/id/E/ET/ETHER/
 COMMENT=	Author test that validates a package MANIFEST
 LICENSE=	gnu-gpl-v1
 

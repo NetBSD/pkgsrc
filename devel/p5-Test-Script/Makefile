@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2018/11/25 12:56:10 wen Exp $
+# $NetBSD: Makefile,v 1.26 2019/07/01 21:35:44 nia Exp $
 
 DISTNAME=	Test-Script-1.25
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	perl5 devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/A/AD/ADAMK/
+HOMEPAGE=	https://cpan.metacpan.org/authors/id/A/AD/ADAMK/
 COMMENT=	Test::Script - Cross-platform basic tests for scripts
 LICENSE=	${PERL5_LICENSE}
 

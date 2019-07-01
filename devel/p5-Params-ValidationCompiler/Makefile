@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.16 2018/08/22 09:44:29 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/07/01 21:35:41 nia Exp $
 
 DISTNAME=	Params-ValidationCompiler-0.30
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	devel perl5
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/
+MASTER_SITES=	https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/
+HOMEPAGE=	https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/
 COMMENT=	Build an optimized subroutine parameter validator once, use it forever
 LICENSE=	artistic-2.0
 

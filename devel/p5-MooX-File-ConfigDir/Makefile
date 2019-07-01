@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/08/22 09:44:20 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2019/07/01 21:35:39 nia Exp $
 
 DISTNAME=	MooX-File-ConfigDir-0.007
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/R/RE/REHSACK/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~rehsack/MooX-File-ConfigDir
+HOMEPAGE=	https://metacpan.org/release/MooX-File-ConfigDir
 COMMENT=	Moo eXtension for File::ConfigDir
 LICENSE=	${PERL5_LICENSE}
 

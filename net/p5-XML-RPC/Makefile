@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/08/22 09:46:05 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2019/07/01 21:35:50 nia Exp $
 
 DISTNAME=	XML-RPC-1.1
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	perl5 net
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/C/CA/CAVAC/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~cavac/XML-RPC/
+HOMEPAGE=	https://metacpan.org/release/XML-RPC
 COMMENT=	Pure Perl implementation for an XML-RPC client and server
 LICENSE=	${PERL5_LICENSE}
 

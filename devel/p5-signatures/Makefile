@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/06/01 13:29:59 wen Exp $
+# $NetBSD: Makefile,v 1.20 2019/07/01 21:35:45 nia Exp $
 
 DISTNAME=	signatures-0.14
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/E/ET/ETHER/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/perldoc?signatures
+HOMEPAGE=	https://metacpan.org/pod/signatures
 COMMENT=	Subroutine signatures with no source filter
 LICENSE=	${PERL5_LICENSE}
 

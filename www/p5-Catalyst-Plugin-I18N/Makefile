@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/08/22 09:47:34 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/07/01 21:35:58 nia Exp $
 
 DISTNAME=	Catalyst-Plugin-I18N-0.10
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/perldoc?Catalyst::Plugin::I18N
+HOMEPAGE=	https://metacpan.org/pod/Catalyst::Plugin::I18N
 COMMENT=	I18N for Catalyst
 LICENSE=	${PERL5_LICENSE}
 

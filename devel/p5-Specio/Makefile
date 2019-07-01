@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/11/25 13:17:48 wen Exp $
+# $NetBSD: Makefile,v 1.20 2019/07/01 21:35:42 nia Exp $
 
 DISTNAME=	Specio-0.43
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~drolsky/Specio/
+HOMEPAGE=	https://metacpan.org/release/Specio
 COMMENT=	Type constraints and coercions for Perl
 LICENSE=	artistic-2.0
 

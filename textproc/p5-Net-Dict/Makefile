@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/08/22 09:46:52 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/07/01 21:35:54 nia Exp $
 
 DISTNAME=		Net-Dict-2.21
 PKGNAME=		p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=		net textproc
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/~neilb/Net-Dict/
+HOMEPAGE=		https://metacpan.org/release/Net-Dict
 COMMENT=		Client API for the DICT protocol defined in RFC2229
 LICENSE=		${PERL5_LICENSE}
 

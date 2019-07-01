@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/08/22 09:44:15 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/07/01 21:35:39 nia Exp $
 
 DISTNAME=	Memoize-Memcached-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Memoize/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist//Memoize-Memcached/
+HOMEPAGE=	https://metacpan.org/release/Memoize-Memcached
 COMMENT=	Use a memcached cache to memoize functions
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/08/22 09:45:46 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/07/01 21:35:49 nia Exp $
 
 DISTNAME=		Mac-PropertyList-1.413
 PKGNAME=		p5-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Mac/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Work with Mac plists at a low level
-HOMEPAGE=		http://search.cpan.org/~bdfoy/Mac-PropertyList/
+HOMEPAGE=		https://metacpan.org/release/Mac-PropertyList
 LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		p5-XML-Entities-[0-9]*:../../textproc/p5-XML-Entities

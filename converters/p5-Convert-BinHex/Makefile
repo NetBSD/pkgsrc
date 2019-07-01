@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2018/08/22 09:43:06 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2019/07/01 21:35:32 nia Exp $
 
 DISTNAME=	Convert-BinHex-1.125
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	converters perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Convert/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/search?query=convert+binhex
+HOMEPAGE=	https://metacpan.org/search?q=convert+binhex
 COMMENT=	Read and write Macintosh BinHex streams
 LICENSE=	${PERL5_LICENSE}
 

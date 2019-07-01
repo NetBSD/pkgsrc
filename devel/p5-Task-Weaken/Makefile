@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/08/22 09:44:41 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/07/01 21:35:43 nia Exp $
 
 DISTNAME=	Task-Weaken-1.06
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Task/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist//Task-Weaken/
+HOMEPAGE=	https://metacpan.org/release/Task-Weaken
 COMMENT=	Perl 5 module to ensure that a platform has weaken support
 LICENSE=	${PERL5_LICENSE}
 

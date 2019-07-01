@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/08/22 09:44:57 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/07/01 21:35:45 nia Exp $
 
 DISTNAME=	forks-0.36
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/R/RY/RYBSKEJ/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~rybskej/forks/
+HOMEPAGE=	https://metacpan.org/release/forks
 COMMENT=	Drop-in replacement for Perl threads using fork()
 LICENSE=	${PERL5_LICENSE}
 

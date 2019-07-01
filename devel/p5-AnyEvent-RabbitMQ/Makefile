@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/08/22 09:43:35 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2019/07/01 21:35:35 nia Exp $
 
 DISTNAME=	AnyEvent-RabbitMQ-1.19
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/D/DL/DLAMBLEY/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~dlambley/AnyEvent-RabbitMQ/
+HOMEPAGE=	https://metacpan.org/release/AnyEvent-RabbitMQ
 COMMENT=	RabbitMQ interface with AnyEvent
 LICENSE=	${PERL5_LICENSE}
 

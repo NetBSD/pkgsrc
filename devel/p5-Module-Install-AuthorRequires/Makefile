@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/08/22 09:44:17 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/07/01 21:35:39 nia Exp $
 
 DISTNAME=	Module-Install-AuthorRequires-0.02
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/F/FL/FLORA/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~flora/Module-Install-AuthorRequires/
+HOMEPAGE=	https://metacpan.org/release/Module-Install-AuthorRequires
 COMMENT=	Module::Install::AuthorRequires - declare author-only dependencies
 LICENSE=	${PERL5_LICENSE}
 
