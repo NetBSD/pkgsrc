@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/08/22 09:43:14 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2019/07/01 21:35:33 nia Exp $
 #
 
 DISTNAME=	Class-DBI-BaseDSN-1.22
@@ -8,7 +8,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~rclamp/Class-DBI-BaseDSN-1.22/lib/Class/DBI/BaseDSN.pm
+HOMEPAGE=	https://metacpan.org/pod/release/RCLAMP/Class-DBI-BaseDSN-1.22/lib/Class/DBI/BaseDSN.pm
 COMMENT=	DSN sensitive base class
 LICENSE=	${PERL5_LICENSE}
 

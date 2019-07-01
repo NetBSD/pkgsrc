@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/08/22 09:44:41 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2019/07/01 21:35:43 nia Exp $
 #
 
 DISTNAME=	Term-Animation-2.6
@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/K/KB/KBAUCOM/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~kbaucom/Term-Animation/
+HOMEPAGE=	https://metacpan.org/release/Term-Animation
 COMMENT=	ASCII sprite animation package
 LICENSE=	${PERL5_LICENSE}
 

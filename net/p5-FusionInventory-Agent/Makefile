@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/08/22 09:45:56 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/07/01 21:35:49 nia Exp $
 
 DISTNAME=	FusionInventory-Agent-2.3.21
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/G/GB/GBOUGARD/}
 
 MAINTAINER=	bouyer@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~fusinv/
+HOMEPAGE=	https://metacpan.org/author/FUSINV
 COMMENT=	Fusion Inventory agent
 LICENSE=	gnu-gpl-v2
 

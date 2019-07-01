@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2018/08/22 09:44:26 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/07/01 21:35:40 nia Exp $
 
 DISTNAME=	Net-LDAP-SID-0.001
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	2
 CATEGORIES=	devel perl5
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/K/KA/KARMAN/
+MASTER_SITES=	https://cpan.metacpan.org/authors/id/K/KA/KARMAN/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/K/KA/KARMAN/
+HOMEPAGE=	https://cpan.metacpan.org/authors/id/K/KA/KARMAN/
 COMMENT=	Active Directory Security Identifier manipulation
 LICENSE=	artistic-2.0
 
