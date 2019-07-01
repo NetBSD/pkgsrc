@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/06/03 12:39:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/07/01 18:26:22 adam Exp $
 bin/django-admin-${PYVERSSUFFIX}
 bin/django-admin-${PYVERSSUFFIX}.py
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -2889,6 +2889,8 @@ ${PYSITELIB}/django/contrib/humanize/locale/mn/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/humanize/locale/mn/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/humanize/locale/mr/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/humanize/locale/mr/LC_MESSAGES/django.po
+${PYSITELIB}/django/contrib/humanize/locale/ms/LC_MESSAGES/django.mo
+${PYSITELIB}/django/contrib/humanize/locale/ms/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/humanize/locale/my/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/humanize/locale/my/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/humanize/locale/nb/LC_MESSAGES/django.mo
@@ -3164,6 +3166,8 @@ ${PYSITELIB}/django/contrib/postgres/locale/sq/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/postgres/locale/sq/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/postgres/locale/sr/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/postgres/locale/sr/LC_MESSAGES/django.po
+${PYSITELIB}/django/contrib/postgres/locale/sr_Latn/LC_MESSAGES/django.mo
+${PYSITELIB}/django/contrib/postgres/locale/sr_Latn/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/postgres/locale/sv/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/postgres/locale/sv/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/postgres/locale/tr/LC_MESSAGES/django.mo
