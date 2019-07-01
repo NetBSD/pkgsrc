@@ -1,10 +1,10 @@
-$NetBSD: patch-boost_stacktrace_detail_collect__unwind.ipp,v 1.1 2017/08/25 21:49:43 prlw1 Exp $
+$NetBSD: patch-boost_stacktrace_detail_collect__unwind.ipp,v 1.2 2019/07/01 04:00:10 ryoon Exp $
 
 Fix build with gcc 5.4.0 "error: expected id-expression before numeric constant"
 
---- boost/stacktrace/detail/collect_unwind.ipp.orig	2017-08-25 18:22:01.228205991 +0000
+--- boost/stacktrace/detail/collect_unwind.ipp.orig	2019-04-09 19:36:33.000000000 +0000
 +++ boost/stacktrace/detail/collect_unwind.ipp
-@@ -31,7 +31,7 @@ inline _Unwind_Reason_Code unwind_callba
+@@ -48,7 +48,7 @@ inline _Unwind_Reason_Code unwind_callba
      unwind_state* const state = static_cast<unwind_state*>(arg);
      if (state->frames_to_skip) {
          --state->frames_to_skip;
@@ -13,7 +13,7 @@ Fix build with gcc 5.4.0 "error: expected id-expression before numeric constant"
      }
  
      *state->current =  reinterpret_cast<native_frame_ptr_t>(
-@@ -40,9 +40,9 @@ inline _Unwind_Reason_Code unwind_callba
+@@ -57,9 +57,9 @@ inline _Unwind_Reason_Code unwind_callba
  
      ++state->current;
      if (!*(state->current - 1) || state->current == state->end) {
@@ -23,5 +23,5 @@ Fix build with gcc 5.4.0 "error: expected id-expression before numeric constant"
 -    return ::_URC_NO_REASON;
 +    return _URC_NO_REASON;
  }
+ #endif //!defined(BOOST_STACKTRACE_USE_LIBC_BACKTRACE_FUNCTION)
  
- std::size_t this_thread_frames::collect(native_frame_ptr_t* out_frames, std::size_t max_frames_count, std::size_t skip) BOOST_NOEXCEPT {
