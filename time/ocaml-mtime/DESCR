@@ -1,0 +1,3 @@
+Mtime has platform independent support for monotonic wall-clock time in pure
+OCaml. The additional Mtime_clock library provide access to a system monotonic
+clock.

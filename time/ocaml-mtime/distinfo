@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2019/07/01 16:06:55 jaapb Exp $
+
+SHA1 (mtime-1.1.0.tbz) = a9c8c2324565bd7850cc29ee86f5e655800082cd
+RMD160 (mtime-1.1.0.tbz) = 5fef7eb2a2400e1a5254176ab74d6be4ca4631bd
+SHA512 (mtime-1.1.0.tbz) = 8ed5dae589dd27fc6e748218a9d9fb9d7d954d231fc2100d61c1b336e0ed38a215bc608cdea9965547729177c78c868c1de6a5ceac6735686a3de1c4a791746c
+Size (mtime-1.1.0.tbz) = 15467 bytes
+SHA1 (patch-src-jsoo_mtime__clock.ml) = 6588c65526f64f502d5e67edc27ee6f50b89fa7b
