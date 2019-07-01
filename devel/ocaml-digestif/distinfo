@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/03/19 11:15:12 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2019/07/01 12:42:16 jaapb Exp $
 
-SHA1 (digestif-0.7.1.tar.gz) = 8209f750fb1da2d190026ddf0ff8d137d7908aa6
-RMD160 (digestif-0.7.1.tar.gz) = 930dde197845f3b6261a38376f0ade35fab5e72c
-SHA512 (digestif-0.7.1.tar.gz) = 87e10be29b5b7ba5713f46317071abb27599c2cb6464e22f37cbf19b0997ce8291d261e03fa6a9bc11aeb2b06b46742ae3d93b2a38bd0c161a0fdbcc12997efb
-Size (digestif-0.7.1.tar.gz) = 116232 bytes
+SHA1 (digestif-0.7.2.tar.gz) = 946530ecf020b121fb10f0e1e2cffa4134a300a5
+RMD160 (digestif-0.7.2.tar.gz) = 9610094203963f266d9574467d5791514acaf469
+SHA512 (digestif-0.7.2.tar.gz) = 2d7b8e94e36cea214b35769e190b975bdd14d9b294652e8e78444e7c38380924d67f354f42aa85def50aac736773c6e8c9c874d500ab1eb8758ee472cc3755ad
+Size (digestif-0.7.2.tar.gz) = 116445 bytes
