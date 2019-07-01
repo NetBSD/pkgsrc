@@ -1,0 +1,23 @@
+$NetBSD: patch-external_SDL__ttf_configure,v 1.1 2019/07/01 15:13:20 nia Exp $
+
+Fix shell script portability.
+
+--- external/SDL_ttf/configure.orig	2018-12-23 19:11:38.000000000 +0000
++++ external/SDL_ttf/configure
+@@ -13549,14 +13549,14 @@ $as_echo "yes" >&6; }
+ fi
+ fi
+ 
+-if test "x$have_raqm" == "xyes"; then
++if test "x$have_raqm" = "xyes"; then
+     $as_echo "#define HAVE_RAQM 1" >>confdefs.h
+ 
+     CFLAGS="$CFLAGS $RAQM_CFLAGS"
+     LIBS="$LIBS $RAQM_LIBS"
+ 
+ fi
+- if test "x$have_raqm" == "xyes"; then
++ if test "x$have_raqm" = "xyes"; then
+   HAVE_RAQM_TRUE=
+   HAVE_RAQM_FALSE='#'
+ else

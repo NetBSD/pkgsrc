@@ -1,0 +1,14 @@
+$NetBSD: patch-external_squirrel_CMakeLists.txt,v 1.1 2019/07/01 15:13:20 nia Exp $
+
+Disable building the dynamic library.
+
+--- external/squirrel/CMakeLists.txt.orig	2018-12-23 19:11:41.000000000 +0000
++++ external/squirrel/CMakeLists.txt
+@@ -6,6 +6,7 @@ endif()
+ 
+ set(CMAKE_INSTALL_PREFIX "${CMAKE_SOURCE_DIR}" CACHE PATH "")
+ set(CMAKE_BUILD_TYPE "Release" CACHE STRING "")
++set(DISABLE_DYNAMIC ON)
+ 
+ project(squirrel C CXX)
+ 
