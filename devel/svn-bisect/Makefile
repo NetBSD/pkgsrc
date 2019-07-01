@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/08/22 09:45:00 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/07/01 22:00:10 nia Exp $
 
 DISTNAME=	svn-bisect-1.1
 PKGREVISION=	2
@@ -8,7 +8,7 @@ GITHUB_TAG=	3768ca85fb962e6380564aa5ab11853ec5720abc
 GITHUB_PROJECT=	svn-bisect
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/App-SVN-Bisect/
+HOMEPAGE=	https://metacpan.org/release/App-SVN-Bisect
 COMMENT=	Bisect SVN repositories to find a particular change
 LICENSE=	artistic-2.0
 
