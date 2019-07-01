@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5231 2016/06/12 08:50:15 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.5232 2019/07/01 22:13:09 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -84,7 +84,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed lang/twelf [dholland 2015-01-04]
 	Updated archivers/arc to 5.21p [wiz 2015-01-04]
 	Updated archivers/lziprecover to 1.16 [wiz 2015-01-04]
-	Added audio/eyed3 version 0.7.5 [wiz 2015-01-04]
+	Added audio/eyeD3 version 0.7.5 [wiz 2015-01-04]
 	Removed chat/zephyr-mode [joerg 2015-01-04]
 	Added audio/p5-MusicBrainz-DiscID version 0.03 [wiz 2015-01-04]
 	Removed chat/tzc [joerg 2015-01-04]
