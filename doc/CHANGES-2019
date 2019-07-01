@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2714 2019/07/01 07:15:17 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2715 2019/07/01 10:29:40 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4484,3 +4484,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated multimedia/mkvtoolnix to 35.0.0 [adam 2019-07-01]
 	Updated devel/py-ipython to 7.6.0 [adam 2019-07-01]
 	Updated devel/py-isort to 4.3.21 [adam 2019-07-01]
+	Updated audio/pulseaudio to 12.2nb5 [triaxx 2019-07-01]
