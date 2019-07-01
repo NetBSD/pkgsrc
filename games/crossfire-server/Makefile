@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2019/04/25 07:32:54 maya Exp $
+# $NetBSD: Makefile,v 1.43 2019/07/01 04:08:10 ryoon Exp $
 
 DISTNAME=	crossfire-1.11.0
 PKGNAME=	crossfire-server-1.11.0
-PKGREVISION=	33
+PKGREVISION=	34
 CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=crossfire/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}

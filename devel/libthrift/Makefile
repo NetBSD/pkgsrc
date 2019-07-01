@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.72 2019/04/03 00:32:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.73 2019/07/01 04:08:05 ryoon Exp $
 
 DISTNAME=	thrift-0.11.0
 PKGNAME=	lib${DISTNAME}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_APACHE:=thrift/${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.gz

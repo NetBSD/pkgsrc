@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2019/03/20 12:13:21 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2019/07/01 04:07:46 ryoon Exp $
 
 DISTNAME=	ecore-1.7.7
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	devel
 MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2019/04/26 13:14:00 maya Exp $
+# $NetBSD: Makefile,v 1.19 2019/07/01 04:08:20 ryoon Exp $
 
 DISTNAME=	gpick-gpick-0.2.5
 PKGNAME=	${DISTNAME:S/gpick-//}
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	graphics
 MASTER_SITES=	-http://github.com/thezbyg/gpick/archive/gpick-0.2.5.tar.gz
 
