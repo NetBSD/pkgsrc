@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2018/12/13 19:51:46 adam Exp $
+# $NetBSD: Makefile,v 1.42 2019/07/01 04:08:03 ryoon Exp $
 
 DISTNAME=	cervisia-16.04.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel
 COMMENT=	CVS frontend
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/16.04.0/src/}

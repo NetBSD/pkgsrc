@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2019/06/30 23:33:41 nia Exp $
+# $NetBSD: Makefile,v 1.2 2019/07/01 04:08:11 ryoon Exp $
 
+PKGREVISION= 1
 .include "../../games/etlegacy/Makefile.common"
 
 PKGNAME=	etlegacy-server-${ETL_VERSION}

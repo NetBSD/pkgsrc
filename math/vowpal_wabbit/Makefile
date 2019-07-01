@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2018/12/13 19:52:09 adam Exp $
+# $NetBSD: Makefile,v 1.12 2019/07/01 04:08:32 ryoon Exp $
 
 DISTNAME=		vowpal_wabbit-8.2.0
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_GITHUB:=JohnLangford/}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2018/12/13 19:51:56 adam Exp $
+# $NetBSD: Makefile,v 1.31 2019/07/01 04:08:16 ryoon Exp $
 
 DISTNAME=	libkdegames-${_KDE_VERSION}
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	games
 COMMENT=	library for the kdegames package
 

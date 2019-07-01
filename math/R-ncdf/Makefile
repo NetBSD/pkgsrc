@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2018/12/13 19:52:08 adam Exp $
+# $NetBSD: Makefile,v 1.17 2019/07/01 04:08:31 ryoon Exp $
 #
 
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

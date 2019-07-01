@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2018/12/13 19:52:14 adam Exp $
+# $NetBSD: Makefile,v 1.32 2019/07/01 04:08:38 ryoon Exp $
 
 DISTNAME=	libkcddb-16.08.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	multimedia
 COMMENT=	KDE CDDB library
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/16.08.0/src/}
