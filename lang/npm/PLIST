@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2019/02/14 10:36:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2019/07/01 10:50:32 adam Exp $
 bin/npm
 bin/npx
 lib/node_modules/npm/.licensee.json
@@ -3099,6 +3099,7 @@ lib/node_modules/npm/node_modules/qs/test/index.js
 lib/node_modules/npm/node_modules/qs/test/parse.js
 lib/node_modules/npm/node_modules/qs/test/stringify.js
 lib/node_modules/npm/node_modules/qs/test/utils.js
+lib/node_modules/npm/node_modules/query-string/index.d.ts
 lib/node_modules/npm/node_modules/query-string/index.js
 lib/node_modules/npm/node_modules/query-string/license
 lib/node_modules/npm/node_modules/query-string/package.json
@@ -3205,7 +3206,6 @@ lib/node_modules/npm/node_modules/readable-stream/lib/internal/streams/stream.js
 lib/node_modules/npm/node_modules/readable-stream/package.json
 lib/node_modules/npm/node_modules/readable-stream/readable-browser.js
 lib/node_modules/npm/node_modules/readable-stream/readable.js
-lib/node_modules/npm/node_modules/readable-stream/yarn.lock
 lib/node_modules/npm/node_modules/readdir-scoped-modules/.travis.yml
 lib/node_modules/npm/node_modules/readdir-scoped-modules/LICENSE
 lib/node_modules/npm/node_modules/readdir-scoped-modules/README.md
@@ -3324,39 +3324,9 @@ lib/node_modules/npm/node_modules/set-blocking/LICENSE.txt
 lib/node_modules/npm/node_modules/set-blocking/README.md
 lib/node_modules/npm/node_modules/set-blocking/index.js
 lib/node_modules/npm/node_modules/set-blocking/package.json
-lib/node_modules/npm/node_modules/sha/.npmignore
 lib/node_modules/npm/node_modules/sha/LICENSE
 lib/node_modules/npm/node_modules/sha/README.md
 lib/node_modules/npm/node_modules/sha/index.js
-lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/.travis.yml
-lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/CONTRIBUTING.md
-lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/GOVERNANCE.md
-lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/LICENSE
-lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/README.md
-lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/doc/wg-meetings/2015-01-30.md
-lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/duplex-browser.js
-lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/duplex.js
-lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/lib/_stream_duplex.js
-lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/lib/_stream_passthrough.js
-lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/lib/_stream_readable.js
-lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/lib/_stream_transform.js
-lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/lib/_stream_writable.js
-lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/lib/internal/streams/BufferList.js
-lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/lib/internal/streams/destroy.js
-lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/lib/internal/streams/stream-browser.js
-lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/lib/internal/streams/stream.js
-lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/package.json
-lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/passthrough.js
-lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/readable-browser.js
-lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/readable.js
-lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/transform.js
-lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/writable-browser.js
-lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/writable.js
-lib/node_modules/npm/node_modules/sha/node_modules/string_decoder/.travis.yml
-lib/node_modules/npm/node_modules/sha/node_modules/string_decoder/LICENSE
-lib/node_modules/npm/node_modules/sha/node_modules/string_decoder/README.md
-lib/node_modules/npm/node_modules/sha/node_modules/string_decoder/lib/string_decoder.js
-lib/node_modules/npm/node_modules/sha/node_modules/string_decoder/package.json
 lib/node_modules/npm/node_modules/sha/package.json
 lib/node_modules/npm/node_modules/shebang-command/index.js
 lib/node_modules/npm/node_modules/shebang-command/license
