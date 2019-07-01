@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/08/22 09:46:20 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/07/01 21:35:51 nia Exp $
 #
 
 DISTNAME=	Authen-TacacsPlus-0.26
@@ -8,7 +8,7 @@ CATEGORIES=	perl5 security
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Authen/}
 
 MAINTAINER=	pettai@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~mikem/Authen-TacacsPlus/TacacsPlus.pm
+HOMEPAGE=	https://metacpan.org/pod/distribution/Authen-TacacsPlus/TacacsPlus.pm
 COMMENT=	Perl extension for authentication using tacacs+ server
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2018/08/22 09:43:02 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2019/07/01 21:35:32 nia Exp $
 
 DISTNAME=	Net-Jabber-2.0
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	chat perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~reatmon/Net-Jabber-2.0/
+HOMEPAGE=	https://metacpan.org/release/REATMON/Net-Jabber-2.0
 #HOMEPAGE=	http://www.jabber.org/
 COMMENT=	Provide a Perl Developer access to the Jabber protocol
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/08/22 09:45:31 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/07/01 21:35:48 nia Exp $
 
 DISTNAME=	Mail-Sender-0.903
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 
 MAINTAINER=	abs@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~capoeirab/Mail-Sender-0.903/
+HOMEPAGE=	https://metacpan.org/release/CAPOEIRAB/Mail-Sender-0.903
 COMMENT=	Sending mails with attachments through an SMTP server
 LICENSE=	${PERL5_LICENSE}
 

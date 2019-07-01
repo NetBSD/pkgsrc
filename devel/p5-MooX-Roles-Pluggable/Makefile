@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/08/22 09:44:20 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2019/07/01 21:35:40 nia Exp $
 
 DISTNAME=	MooX-Roles-Pluggable-0.003
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/R/RE/REHSACK/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~rehsack/MooX-Roles-Pluggable//
+HOMEPAGE=	https://metacpan.org/release/MooX-Roles-Pluggable
 COMMENT=	Moo eXtension for pluggable roles
 LICENSE=	${PERL5_LICENSE}
 

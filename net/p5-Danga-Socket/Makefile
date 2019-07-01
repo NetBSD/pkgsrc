@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.11 2018/08/22 09:45:56 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2019/07/01 21:35:49 nia Exp $
 #
 
 DISTNAME=	Danga-Socket-1.61
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	8
 CATEGORIES=	net
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/B/BR/BRADFITZ/
+MASTER_SITES=	https://cpan.metacpan.org/authors/id/B/BR/BRADFITZ/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/B/BR/BRADFITZ/
+HOMEPAGE=	https://cpan.metacpan.org/authors/id/B/BR/BRADFITZ/
 COMMENT=	Event loop and event-driven async socket base class
 LICENSE=	${PERL5_LICENSE}
 

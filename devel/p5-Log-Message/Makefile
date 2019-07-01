@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/08/22 09:44:14 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/07/01 21:35:38 nia Exp $
 #
 
 DISTNAME=	Log-Message-0.08
@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Log/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~bingos/Log-Message/
+HOMEPAGE=	https://metacpan.org/release/Log-Message
 COMMENT=	Log::Message - A generic message storing mechanism
 LICENSE=	${PERL5_LICENSE}
 

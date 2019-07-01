@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/08/22 09:45:36 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2019/07/01 21:35:48 nia Exp $
 
 DISTNAME=	Alien-GMP-1.14
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Alien/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~plicease/Alien-GMP/
+HOMEPAGE=	https://metacpan.org/release/Alien-GMP
 COMMENT=	Alien package for the GNU Multiple Precision library
 LICENSE=	gnu-lgpl-v3
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/08/22 09:44:56 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2019/07/01 21:35:45 nia Exp $
 
 DISTNAME=	autovivification-0.18
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/V/VP/VPIT/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Tie-Cycle/lib/Tie/Cycle.pm
+HOMEPAGE=	https://metacpan.org/pod/distribution/Tie-Cycle/lib/Tie/Cycle.pm
 COMMENT=	Perl5 module to lexically disable autovivification
 LICENSE=	${PERL5_LICENSE}
 

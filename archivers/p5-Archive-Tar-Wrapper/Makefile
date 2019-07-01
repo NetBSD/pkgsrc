@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/08/22 09:42:53 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2019/07/01 21:35:32 nia Exp $
 
 DISTNAME=	Archive-Tar-Wrapper-0.33
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Archive/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~mschilli/Archive-Tar-Wrapper/
+HOMEPAGE=	https://metacpan.org/release/MSCHILLI/Archive-Tar-Wrapper-0.23
 COMMENT=	API wrapper around the 'tar' utility
 LICENSE=	gnu-gpl-v3
 

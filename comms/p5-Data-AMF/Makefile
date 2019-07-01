@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/08/22 09:43:04 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/07/01 21:35:32 nia Exp $
 #
 
 DISTNAME=	Data-AMF-0.09
@@ -8,7 +8,7 @@ CATEGORIES=	comms
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/T/TY/TYPESTER/
 
 MAINTAINER=	dsainty@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/perldoc?Data::AMF
+HOMEPAGE=	https://metacpan.org/pod/Data::AMF
 COMMENT=	Serialise/deserialise AMF Packets
 LICENSE=	${PERL5_LICENSE}
 
