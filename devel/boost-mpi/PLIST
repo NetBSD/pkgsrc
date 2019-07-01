@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2017/08/24 19:31:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/07/01 04:00:10 ryoon Exp $
 lib/libboost_mpi.a
 lib/libboost_mpi.so
-lib/libboost_mpi.so.${BOOST_VERSION}
+lib/libboost_mpi.so.1
+lib/libboost_mpi.so.1.70
+lib/libboost_mpi.so.${PKGVERSION}
