@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.12 2018/08/22 09:46:17 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/07/01 22:00:10 nia Exp $
 
 DISTNAME=	App-ClusterSSH-4.03_06
 PKGNAME=	p5-${DISTNAME:S/_/./}
 PKGREVISION=	3
 CATEGORIES=	security
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/D/DU/DUNCS/
+MASTER_SITES=	https://cpan.metacpan.org/authors/id/D/DU/DUNCS/
 
 MAINTAINER=	imil@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/D/DU/DUNCS/
+HOMEPAGE=	https://cpan.metacpan.org/authors/id/D/DU/DUNCS/
 COMMENT=	Cluster administration tool
 LICENSE=	gnu-gpl-v1
 
