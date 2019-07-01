@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2720 2019/07/01 12:39:05 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.2721 2019/07/01 12:39:19 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4492,3 +4492,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-test-django to 3.5.1 [adam 2019-07-01]
 	Removed audio/openal successor audio/openal-soft [nia 2019-07-01]
 	Updated devel/ocaml-checkseum to 0.1.0 [jaapb 2019-07-01]
+	Updated devel/ocaml-core to 0.12.3 [jaapb 2019-07-01]
