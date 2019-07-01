@@ -1,0 +1,2 @@
+Cohttp is an OCaml library for creating HTTP daemons. It has a portable HTTP
+parser, and implementations using various asynchronous programming libraries.
