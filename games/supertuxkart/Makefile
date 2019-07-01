@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/07/01 10:56:20 nia Exp $
+# $NetBSD: Makefile,v 1.26 2019/07/01 16:35:14 nia Exp $
 
 VERSION=	1.0
 DISTNAME=	supertuxkart-${VERSION}-src
@@ -19,6 +19,8 @@ USE_TOOLS+=		cmake pkg-config
 
 CMAKE_ARGS+=	-DUSE_WIIUSE=OFF
 CMAKE_ARGS+=	-DBUILD_RECORDER=OFF
+
+.include "../../mk/bsd.prefs.mk"
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
