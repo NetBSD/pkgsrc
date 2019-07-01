@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2727 2019/07/01 15:13:39 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2728 2019/07/01 15:49:02 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4499,3 +4499,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/bam to 0.5.1 [nia 2019-07-01]
 	Updated games/teeworlds to 0.7.3.1 [nia 2019-07-01]
 	Updated games/supertux to 0.6.0 [nia 2019-07-01]
+	Updated www/ocaml-cohttp to 2.1.2 [jaapb 2019-07-01]
