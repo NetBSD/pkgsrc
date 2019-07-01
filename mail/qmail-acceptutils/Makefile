@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2018/12/29 12:21:57 schmonz Exp $
+# $NetBSD: Makefile,v 1.11 2019/07/01 15:31:51 schmonz Exp $
 
 DISTNAME=		netqmail-1.06
 PKGNAME=		qmail-acceptutils-${ACPATCHVERSION}
 CATEGORIES=		mail
-MASTER_SITES=		http://www.qmail.org/
+MASTER_SITES=		http://netqmail.org/
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://schmonz.com/qmail/acceptutils/
