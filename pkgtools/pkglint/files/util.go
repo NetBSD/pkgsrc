@@ -42,6 +42,12 @@ func hasSuffix(s, suffix string) bool {
 func sprintf(format string, args ...interface{}) string {
 	return fmt.Sprintf(format, args...)
 }
+func regcomp(re regex.Pattern) *regexp.Regexp {
+	return G.res.Compile(re)
+}
+func match(s string, re regex.Pattern) []string {
+	return G.res.Match(s, re)
+}
 func matches(s string, re regex.Pattern) bool {
 	return G.res.Matches(s, re)
 }
