@@ -451,7 +451,7 @@ func (mklines *MkLines) collectDocumentedVariables() {
 				break
 			}
 			if hasSuffix(varname, ".") {
-				if !parser.lexer.SkipRegexp(G.res.Compile(`^<\w+>`)) {
+				if !parser.lexer.SkipRegexp(regcomp(`^<\w+>`)) {
 					break
 				}
 				varname += "*"
