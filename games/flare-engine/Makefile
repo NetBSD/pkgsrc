@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2019/04/25 07:32:54 maya Exp $
+# $NetBSD: Makefile,v 1.7 2019/07/01 13:20:51 nia Exp $
 #
 
-DISTNAME=	v0.19
-PKGNAME=	flare-engine-${DISTNAME:S/v//1}
-PKGREVISION=	3
+DISTNAME=	flare-engine-1.10
 CATEGORIES=	games
-MASTER_SITES=	https://github.com/clintbellanger/flare-engine/archive/
-DIST_SUBDIR=	${PKGBASE}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=flareteam/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://flarerpg.org/
@@ -21,10 +19,11 @@ CMAKE_ARGS+=	-DDATADIR:STRING="${PREFIX}/share/flare" -DBINDIR:STRING=bin -DMAND
 
 REPLACE_PYTHON+=	mods/default/languages/xgettext.py
 
+.include "../../audio/SDL2_mixer/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
+.include "../../fonts/SDL2_ttf/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../audio/SDL_mixer/buildlink3.mk"
-.include "../../devel/SDL_ttf/buildlink3.mk"
-.include "../../graphics/SDL_image/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
