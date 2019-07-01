@@ -246,7 +246,7 @@ func (s *Suite) Test_Pkglint_Main__autofix_exitcode(c *check.C) {
 	exitcode := t.Main("-Wall", "--autofix", t.File("filename.mk"))
 
 	t.CheckOutputLines(
-		"AUTOFIX: ~/filename.mk:1: Inserting a line \"# $NetBSD: pkglint_test.go,v 1.44 2019/06/30 20:56:19 rillig Exp $\" before this line.")
+		"AUTOFIX: ~/filename.mk:1: Inserting a line \"" + MkCvsID + "\" before this line.")
 	t.Check(exitcode, equals, 0)
 }
 
