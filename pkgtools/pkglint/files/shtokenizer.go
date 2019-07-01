@@ -137,7 +137,7 @@ func (p *ShTokenizer) shAtomBackt() *ShAtom {
 		return &ShAtom{shtText, lexer.Since(mark), shqBacktSquot, nil}
 	case lexer.NextHspace() != "":
 		return &ShAtom{shtSpace, lexer.Since(mark), q, nil}
-	case lexer.SkipRegexp(G.res.Compile("^#[^`]*")):
+	case lexer.SkipRegexp(regcomp("^#[^`]*")):
 		return &ShAtom{shtComment, lexer.Since(mark), q, nil}
 	}
 	return p.shAtomInternal(q, false, false)
@@ -158,7 +158,7 @@ func (p *ShTokenizer) shAtomSubsh() *ShAtom {
 		return &ShAtom{shtText, lexer.Since(mark), shqSubshSquot, nil}
 	case lexer.SkipByte('`'):
 		return &ShAtom{shtText, lexer.Since(mark), shqSubshBackt, nil}
-	case lexer.SkipRegexp(G.res.Compile(`^#[^)]*`)):
+	case lexer.SkipRegexp(regcomp(`^#[^)]*`)):
 		return &ShAtom{shtComment, lexer.Since(mark), q, nil}
 	case lexer.SkipByte(')'):
 		// The closing parenthesis can have multiple meanings:
@@ -191,7 +191,7 @@ func (p *ShTokenizer) shAtomDquotBackt() *ShAtom {
 		return &ShAtom{shtText, lexer.Since(mark), shqDquotBacktDquot, nil}
 	case lexer.SkipByte('\''):
 		return &ShAtom{shtText, lexer.Since(mark), shqDquotBacktSquot, nil}
-	case lexer.SkipRegexp(G.res.Compile("^#[^`]*")):
+	case lexer.SkipRegexp(regcomp("^#[^`]*")):
 		return &ShAtom{shtComment, lexer.Since(mark), q, nil}
 	case lexer.NextHspace() != "":
 		return &ShAtom{shtSpace, lexer.Since(mark), q, nil}
@@ -300,13 +300,13 @@ loop:
 		_ = `^[\t "$&'();<>\\|]+` // These are not allowed in shqPlain.
 
 		switch {
-		case lexer.SkipRegexp(G.res.Compile(`^[!#%*+,\-./0-9:=?@A-Z\[\]^_a-z{}~]+`)):
+		case lexer.SkipRegexp(regcomp(`^[!#%*+,\-./0-9:=?@A-Z\[\]^_a-z{}~]+`)):
 			break
-		case dquot && lexer.SkipRegexp(G.res.Compile(`^[\t &'();<>|]+`)):
+		case dquot && lexer.SkipRegexp(regcomp(`^[\t &'();<>|]+`)):
 			break
 		case squot && lexer.SkipByte('`'):
 			break
-		case squot && lexer.SkipRegexp(G.res.Compile(`^[\t "&();<>\\|]+`)):
+		case squot && lexer.SkipRegexp(regcomp(`^[\t "&();<>\\|]+`)):
 			break
 		case squot && lexer.SkipString("$$"):
 			break
@@ -314,7 +314,7 @@ loop:
 			break loop
 		case lexer.SkipString("\\$$"):
 			break
-		case lexer.SkipRegexp(G.res.Compile(`^\\[^$]`)):
+		case lexer.SkipRegexp(regcomp(`^\\[^$]`)):
 			break
 		case matches(lexer.Rest(), `^\$\$[^!#(*\-0-9?@A-Z_a-z{]`):
 			lexer.NextString("$$")
@@ -353,7 +353,7 @@ func (p *ShTokenizer) shVarUse(q ShQuoting) *ShAtom {
 	brace := lexer.SkipByte('{')
 
 	varnameStart := lexer.Mark()
-	if !lexer.SkipRegexp(G.res.Compile(`^(?:[!#*\-?@]|\$\$|[A-Za-z_]\w*|\d+)`)) {
+	if !lexer.SkipRegexp(regcomp(`^(?:[!#*\-?@]|\$\$|[A-Za-z_]\w*|\d+)`)) {
 		lexer.Reset(beforeDollar)
 		return nil
 	}
@@ -364,7 +364,7 @@ func (p *ShTokenizer) shVarUse(q ShQuoting) *ShAtom {
 	}
 
 	if brace {
-		lexer.SkipRegexp(G.res.Compile(`^(?:##?|%%?|:?[+\-=?])[^$\\{}]*`))
+		lexer.SkipRegexp(regcomp(`^(?:##?|%%?|:?[+\-=?])[^$\\{}]*`))
 		if !lexer.SkipByte('}') {
 			lexer.Reset(beforeDollar)
 			return nil
@@ -388,7 +388,7 @@ func (p *ShTokenizer) shOperator(q ShQuoting) *ShAtom {
 		lexer.SkipByte('|'),
 		lexer.SkipByte('&'):
 		return &ShAtom{shtOperator, lexer.Since(mark), q, nil}
-	case lexer.SkipRegexp(G.res.Compile(`^\d*(?:<<-|<<|<&|<>|>>|>&|>\||<|>)`)):
+	case lexer.SkipRegexp(regcomp(`^\d*(?:<<-|<<|<&|<>|>>|>&|>\||<|>)`)):
 		return &ShAtom{shtOperator, lexer.Since(mark), q, nil}
 	}
 	return nil
