@@ -1,7 +1,12 @@
-# $NetBSD: options.mk,v 1.9 2018/07/25 12:15:59 adam Exp $
+# $NetBSD: options.mk,v 1.10 2019/07/01 10:25:24 triaxx Exp $
+
+.include "../../comms/lirc/available.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pulseaudio
 PKG_SUPPORTED_OPTIONS=	avahi fftw gsettings x11
+.if ${LIRC_AVAILABLE} == "yes"
+PKG_SUPPORTED_OPTIONS+=	lirc
+.endif
 PKG_SUGGESTED_OPTIONS=	avahi x11
 PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
 
@@ -12,13 +17,6 @@ PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
 PLIST.avahi=		yes
 .else
 CONFIGURE_ARGS+=	--disable-avahi
-.endif
-
-.if !empty(PKG_OPTIONS:Mgsettings)
-PLIST.gsettings=	yes
-CONFIGURE_ARGS+=	--enable-gsettings
-.else
-CONFIGURE_ARGS+=	--disable-gsettings
 .endif
 
 .if !empty(PKG_OPTIONS:Mfftw)
@@ -38,6 +36,21 @@ REPLACE_FILES.pulse_py=	src/utils/qpaeq
 .include "../../x11/py-sip/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-fftw
+.endif
+
+.if !empty(PKG_OPTIONS:Mgsettings)
+PLIST.gsettings=	yes
+CONFIGURE_ARGS+=	--enable-gsettings
+.else
+CONFIGURE_ARGS+=	--disable-gsettings
+.endif
+
+.if !empty(PKG_OPTIONS:Mlirc)
+PLIST.lirc=		yes
+CONFIGURE_ARGS+=	--enable-lirc
+.include "../../comms/lirc/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-lirc
 .endif
 
 .if !empty(PKG_OPTIONS:Mx11)

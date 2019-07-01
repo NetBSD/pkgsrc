@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2018/07/25 12:15:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2019/07/01 10:25:24 triaxx Exp $
 bin/esdcompat
 bin/pacat
 bin/pacmd
@@ -147,6 +147,8 @@ lib/pulse-${PULSELIBVER}/modules/module-intended-roles.a
 lib/pulse-${PULSELIBVER}/modules/module-intended-roles.so
 lib/pulse-${PULSELIBVER}/modules/module-ladspa-sink.a
 lib/pulse-${PULSELIBVER}/modules/module-ladspa-sink.so
+${PLIST.lirc}lib/pulse-${PULSELIBVER}/modules/module-lirc.a
+${PLIST.lirc}lib/pulse-${PULSELIBVER}/modules/module-lirc.so
 lib/pulse-${PULSELIBVER}/modules/module-loopback.a
 lib/pulse-${PULSELIBVER}/modules/module-loopback.so
 lib/pulse-${PULSELIBVER}/modules/module-match.a
