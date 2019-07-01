@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2735 2019/07/01 22:06:05 rillig Exp $
+$NetBSD: CHANGES-2019,v 1.2736 2019/07/01 22:26:05 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4578,3 +4578,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-django2 to 2.2.3 [adam 2019-07-01]
 	Updated misc/stellarium to 0.19.1 [adam 2019-07-01]
 	Updated www/sassc to 3.6.1 [adam 2019-07-01]
+	Updated pkgtools/pkglint to 5.7.15 [rillig 2019-07-01]
