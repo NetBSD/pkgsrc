@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2019/04/25 07:33:03 maya Exp $
+# $NetBSD: Makefile,v 1.23 2019/07/01 10:50:32 adam Exp $
 
-DISTNAME=	cli-6.9.0
+DISTNAME=	cli-6.9.2
 PKGNAME=	${DISTNAME:S/cli/npm/}
-PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=npm/}
 GITHUB_PROJECT=	cli
@@ -14,7 +13,7 @@ COMMENT=	Package manager for JavaScript
 LICENSE=	artistic-2.0
 
 # Pre-fetch marked so that man pages can be built offline
-MARKED=			marked-0.6.1
+MARKED=			marked-0.6.3
 DISTFILES+=		${DISTNAME}${EXTRACT_SUFX} ${MARKED}.tar.gz
 SITES.${MARKED}.tar.gz=	-https://github.com/markedjs/marked/archive/v${MARKED:S/marked-//}.tar.gz
 
