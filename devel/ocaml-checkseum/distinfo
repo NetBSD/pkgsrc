@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/03/12 17:57:08 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2019/07/01 12:32:56 jaapb Exp $
 
-SHA1 (checkseum-0.0.3.tar.gz) = 0606244cc1ef021d5367843fbefcda5add00a707
-RMD160 (checkseum-0.0.3.tar.gz) = 70d7edec315ebef7a62af2d8cc718a9b42d24904
-SHA512 (checkseum-0.0.3.tar.gz) = ebf91c71e0d1be87202bc826e7c187b94f7bcf4d065bed71b02a2150648aa5f87b507f907822a013eb346b40dcaa4d1fee901db2ef9c67743e7124c636352524
-Size (checkseum-0.0.3.tar.gz) = 31345 bytes
+SHA1 (checkseum-0.1.0.tar.gz) = 20b2d6f2f73d7e814f4a361fc0c3955785077af8
+RMD160 (checkseum-0.1.0.tar.gz) = 1835dcd9a7c2c01fbe046145e2e4b64267627fd5
+SHA512 (checkseum-0.1.0.tar.gz) = 6c10fb0ce649c0e603a5d75f580894e8b2fb5540575cb49c3eb42ac5ca7bc1f4eaa52c735e4f91688fdb5c3ec11c94f97663603fb880e84fdcec67ec7a3fb6cb
+Size (checkseum-0.1.0.tar.gz) = 32124 bytes
