@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19093 2019/06/30 21:25:46 wiz Exp $
+$NetBSD: TODO,v 1.19094 2019/07/01 04:10:51 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -14,6 +14,7 @@ Suggested new packages
 
 	Any interesting packages in OpenBSD's ports.
 	http://openports.se/
+	http://ports.su/
 
 	bacula-rescue
 	Scripts used to help create rescue boot CDs for bare metal
@@ -434,7 +435,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o blur6ex-0.3.462
 	o bmkdep-20140112
 	o boolean-7.1
-	o boost-libs-1.70.0 [ryoon]
 	o borgbackup-1.1.8
 	o bos-2.5
 	o boson-0.13
