@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2718 2019/07/01 11:02:53 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2719 2019/07/01 12:33:32 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4490,3 +4490,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated games/supertuxkart to 1.0 [nia 2019-07-01]
 	Updated devel/py-xopen to 0.7.3 [adam 2019-07-01]
 	Updated www/py-test-django to 3.5.1 [adam 2019-07-01]
+	Removed audio/openal successor audio/openal-soft [nia 2019-07-01]
