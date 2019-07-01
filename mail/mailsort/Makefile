@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2018/08/22 09:45:26 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/07/01 22:00:10 nia Exp $
 #
 
 DISTNAME=	mailsort-1.26
 PKGREVISION=	5
 CATEGORIES=	mail
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/A/AZ/AZS/mailsort/
+MASTER_SITES=	https://cpan.metacpan.org/authors/id/A/AZ/AZS/mailsort/
 
 MAINTAINER=	reed@reedmedia.net
-HOMEPAGE=	http://search.cpan.org/~azs/mailsort/
+HOMEPAGE=	https://metacpan.org/release/AZS/mailsort-1.26
 COMMENT=	Sort mbox mail folders by date
 
 LICENSE=	gnu-gpl-v2
