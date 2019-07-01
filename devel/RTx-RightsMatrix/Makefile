@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/08/22 09:43:27 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/07/01 22:00:10 nia Exp $
 #
 
 DISTNAME=	RTx-RightsMatrix-0.03.00
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=RTx/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~htchapman/RTx-RightsMatrix/
+HOMEPAGE=	https://metacpan.org/release/RTx-RightsMatrix
 COMMENT=	Utility to efficiently manage rights to a RT installation
 
 DEPENDS+=	rt>=3.4.5:../../devel/rt3
