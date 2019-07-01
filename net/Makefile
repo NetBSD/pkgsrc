@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1256 2019/06/22 00:33:33 tsutsui Exp $
+# $NetBSD: Makefile,v 1.1257 2019/07/01 16:02:20 jaapb Exp $
 #
 
 COMMENT=	Networking tools
@@ -436,6 +436,7 @@ SUBDIR+=	ntopng
 SUBDIR+=	ntp4
 SUBDIR+=	nyx
 SUBDIR+=	obfs4proxy
+SUBDIR+=	ocaml-conduit
 SUBDIR+=	ocaml-ipaddr
 SUBDIR+=	ocaml-protocol_version_header
 SUBDIR+=	ocamlnet
