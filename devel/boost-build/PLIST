@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2018/12/13 19:22:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2019/07/01 04:00:09 ryoon Exp $
 share/boost-build/__init__.py
 share/boost-build/bootstrap.jam
 share/boost-build/build-system.jam
@@ -100,6 +100,7 @@ share/boost-build/tools/features/asmflags-feature.jam
 share/boost-build/tools/features/build-feature.jam
 share/boost-build/tools/features/cflags-feature.jam
 share/boost-build/tools/features/conditional-feature.jam
+share/boost-build/tools/features/coverage-feature.jam
 share/boost-build/tools/features/cxx-template-depth-feature.jam
 share/boost-build/tools/features/cxxabi-feature.jam
 share/boost-build/tools/features/cxxflags-feature.jam
@@ -205,6 +206,7 @@ share/boost-build/tools/quickbook.jam
 share/boost-build/tools/rc.jam
 share/boost-build/tools/rc.py
 share/boost-build/tools/sass.jam
+share/boost-build/tools/saxonhe.jam
 share/boost-build/tools/stage.jam
 share/boost-build/tools/stage.py
 share/boost-build/tools/stlport.jam
