@@ -694,7 +694,7 @@ func (s *Suite) Test_SubstContext_suggestSubstVars__autofix_realign_paragraph(c 
 			"with \"SUBST_VARS.pfx+=\\tPREFIX\".")
 
 	t.CheckFileLinesDetab("subst.mk",
-		"# $NetBSD: substcontext_test.go,v 1.27 2019/06/30 20:56:19 rillig Exp $",
+		MkCvsID,
 		"",
 		"SUBST_CLASSES+=         pfx",
 		"SUBST_STAGE.pfx=        pre-configure",
@@ -733,7 +733,7 @@ func (s *Suite) Test_SubstContext_suggestSubstVars__autofix_plus_sed(c *check.C)
 			"with \"SUBST_VARS.pfx=\\t\\tPREFIX\".")
 
 	t.CheckFileLinesDetab("subst.mk",
-		"# $NetBSD: substcontext_test.go,v 1.27 2019/06/30 20:56:19 rillig Exp $",
+		MkCvsID,
 		"",
 		"SUBST_CLASSES+=         pfx",
 		"SUBST_STAGE.pfx=        pre-configure",
@@ -767,7 +767,7 @@ func (s *Suite) Test_SubstContext_suggestSubstVars__autofix_plus_vars(c *check.C
 			"with \"SUBST_VARS.id=\\tPREFIX\".")
 
 	t.CheckFileLinesDetab("subst.mk",
-		"# $NetBSD: substcontext_test.go,v 1.27 2019/06/30 20:56:19 rillig Exp $",
+		MkCvsID,
 		"",
 		"SUBST_CLASSES+= id",
 		"SUBST_STAGE.id= pre-configure",
@@ -801,7 +801,7 @@ func (s *Suite) Test_SubstContext_suggestSubstVars__autofix_indentation(c *check
 			"with \"SUBST_VARS.fix-paths=\\t\\tPREFIX\".")
 
 	t.CheckFileLinesDetab("subst.mk",
-		"# $NetBSD: substcontext_test.go,v 1.27 2019/06/30 20:56:19 rillig Exp $",
+		MkCvsID,
 		"",
 		"SUBST_CLASSES+=                 fix-paths",
 		"SUBST_STAGE.fix-paths=          pre-configure",
