@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2723 2019/07/01 13:21:07 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2724 2019/07/01 13:21:19 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4495,3 +4495,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ocaml-core to 0.12.3 [jaapb 2019-07-01]
 	Updated devel/ocaml-digestif to 0.7.2 [jaapb 2019-07-01]
 	Updated games/flare-engine to 1.10 [nia 2019-07-01]
+	Updated games/flare-game to 1.10 [nia 2019-07-01]
