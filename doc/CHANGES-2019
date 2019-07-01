@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2731 2019/07/01 16:01:48 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.2732 2019/07/01 16:07:05 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4502,3 +4502,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added www/ocaml-cohttp version 2.1.2 [jaapb 2019-07-01]
 	Added misc/ocaml-magic-mime version 1.1.1 [jaapb 2019-07-01]
 	Added net/ocaml-conduit version 1.4.0 [jaapb 2019-07-01]
+	Added time/ocaml-mtime version 1.1.0 [jaapb 2019-07-01]
