@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/08/22 09:47:53 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/07/01 21:36:00 nia Exp $
 
 DISTNAME=	Template-Stash-EscapeHTML-0.02
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/I/IK/IKEBE/}
 
 MAINTAINER=	abs@absd.org
-HOMEPAGE=	http://search.cpan.org/~ikebe/Template-Stash-EscapeHTML/
+HOMEPAGE=	https://metacpan.org/release/Template-Stash-EscapeHTML
 COMMENT=	Escape HTML automatically in Template-Toolkit
 LICENSE=	${PERL5_LICENSE}
 

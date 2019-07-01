@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/08/22 09:46:03 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/07/01 21:35:50 nia Exp $
 #
 
 DISTNAME=	Net-XMPP-1.05
@@ -8,7 +8,7 @@ CATEGORIES=	chat perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~hacker/Net-XMPP-1.02/
+HOMEPAGE=	https://metacpan.org/release/HACKER/Net-XMPP-1.02
 COMMENT=	Provide a Perl Developer access to the XMPP protocol
 LICENSE=	gnu-lgpl-v2.1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/08/22 09:43:04 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/07/01 21:35:32 nia Exp $
 #
 
 DISTNAME=	Device-XBee-API-0.8
@@ -8,7 +8,7 @@ CATEGORIES=	comms
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/J/JE/JEAGLE/
 
 MAINTAINER=	dsainty@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/perldoc?Device::XBee::API
+HOMEPAGE=	https://metacpan.org/pod/Device::XBee::API
 COMMENT=	Object-oriented Perl interface to Digi XBee module API mode
 LICENSE=	${PERL5_LICENSE}
 
