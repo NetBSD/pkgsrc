@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/08/22 09:43:41 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2019/07/01 21:50:09 nia Exp $
 
 DISTNAME=	Canary-Stability-2012
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/M/ML/MLEHMANN/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~mlehmann/${DISTNAME}/
+HOMEPAGE=	https://metacpan.org/release/MLEHMANN/${DISTNAME}
 COMMENT=	Canary to check Perl compatibility
 LICENSE=	${PERL5_LICENSE}
 
