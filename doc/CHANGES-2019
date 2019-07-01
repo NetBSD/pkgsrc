@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2717 2019/07/01 10:56:33 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2718 2019/07/01 11:02:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4488,3 +4488,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/libuv to 1.30.0 [adam 2019-07-01]
 	Updated lang/npm to 6.9.2 [adam 2019-07-01]
 	Updated games/supertuxkart to 1.0 [nia 2019-07-01]
+	Updated devel/py-xopen to 0.7.3 [adam 2019-07-01]
+	Updated www/py-test-django to 3.5.1 [adam 2019-07-01]
