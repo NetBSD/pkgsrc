@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2733 2019/07/01 18:26:43 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2734 2019/07/01 19:15:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4505,3 +4505,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Added time/ocaml-mtime version 1.1.0 [jaapb 2019-07-01]
 	Updated www/py-django to 1.11.22 [adam 2019-07-01]
 	Updated www/py-django2 to 2.2.3 [adam 2019-07-01]
+	Updated misc/stellarium to 0.19.1 [adam 2019-07-01]
+	Updated www/sassc to 3.6.1 [adam 2019-07-01]
