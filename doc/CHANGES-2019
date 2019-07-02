@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2758 2019/07/02 13:44:15 gdt Exp $
+$NetBSD: CHANGES-2019,v 1.2759 2019/07/02 15:46:54 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4613,3 +4613,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/chicken5 to 5.1.0 [ryoon 2019-07-02]
 	Added sysutils/usbhid-dump version 1.4 [ryoon 2019-07-02]
 	Updated geography/gpsd to 3.19 [gdt 2019-07-02]
+	Updated graphics/ansilove to 4.0.1 [fcambus 2019-07-02]
