@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/25 15:40:35 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/07/02 00:13:07 gdt Exp $
 bin/ntpdig
 bin/ntpfrob
 bin/ntpkeygen
 bin/ntpleapfetch
+bin/ntploggps
 bin/ntplogtemp
 bin/ntpmon
 bin/ntpq
@@ -23,6 +24,7 @@ ${PYSITELIB}/ntp/poly.py
 ${PYSITELIB}/ntp/statfiles.py
 ${PYSITELIB}/ntp/util.py
 man/man1/ntpdig.1
+man/man1/ntploggps.1
 man/man1/ntplogtemp.1
 man/man1/ntpmon.1
 man/man1/ntpq.1
