@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2015/04/25 14:22:52 tnn Exp $
+# $NetBSD: Makefile,v 1.30 2019/07/02 13:05:35 nia Exp $
 
 DISTNAME=	battleball.21.src
 PKGNAME=	battleball-2.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	games x11
 MASTER_SITES=	#
 
@@ -11,7 +11,7 @@ HOMEPAGE=	http://web.archive.org/web/*/http://www.cs.utexas.edu/users/pahardin/b
 COMMENT=	3d game of soccer, with tanks
 
 WRKSRC=		${WRKDIR}/battleball-2.1-src
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 
 SED_CMDS=	-e '/^INCS/s|$$|${CPPFLAGS}|' -e '/^LIBS/s|$$|${LDFLAGS}|'
 
