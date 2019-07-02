@@ -1,4 +1,4 @@
-$NetBSD: patch-download.lst,v 1.12 2019/04/03 13:36:30 ryoon Exp $
+$NetBSD: patch-download.lst,v 1.13 2019/07/02 13:03:11 ryoon Exp $
 
 --- download.lst.orig	2019-01-23 19:35:25.000000000 +0000
 +++ download.lst
@@ -8,8 +8,8 @@ $NetBSD: patch-download.lst,v 1.12 2019/04/03 13:36:30 ryoon Exp $
  export GRAPHITE_TARBALL := graphite2-minimal-1.3.10.tgz
 -export HARFBUZZ_SHA256SUM := 3c592f86fa0da69e2e0e98cae9f5d5b61def3bb7948aa00ca45748f27fa545fd
 -export HARFBUZZ_TARBALL := harfbuzz-1.8.4.tar.bz2
-+export HARFBUZZ_SHA256SUM := 9035005903da74667d28bb181986e879e11da3d5986722759fa145cca781ead6
-+export HARFBUZZ_TARBALL := harfbuzz-2.4.0.tar.bz2
++export HARFBUZZ_SHA256SUM := fed00dc797b7ba3ca943225f0a854baaed4c1640fff8a31d455cd3b5caec855c
++export HARFBUZZ_TARBALL := harfbuzz-2.5.3.tar.xz
  export HSQLDB_SHA256SUM := d30b13f4ba2e3b6a2d4f020c0dee0a9fb9fc6fbcc2d561f36b78da4bf3802370
  export HSQLDB_TARBALL := 17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip
  export HUNSPELL_SHA256SUM := 57be4e03ae9dd62c3471f667a0d81a14513e314d4d92081292b90435944ff951
