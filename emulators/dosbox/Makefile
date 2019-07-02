@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2019/06/10 12:41:23 nia Exp $
+# $NetBSD: Makefile,v 1.46.2.1 2019/07/02 13:00:16 bsiegert Exp $
 
-DISTNAME=	dosbox-0.74-2
-PKGNAME=	dosbox-0.74.2
+DISTNAME=	dosbox-0.74-3
+PKGNAME=	dosbox-0.74.3
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dosbox/}
 
