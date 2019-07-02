@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.81 2019/06/27 13:50:49 ryoon Exp $
+$NetBSD: distinfo,v 1.82 2019/07/02 13:03:11 ryoon Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -144,10 +144,10 @@ SHA1 (libreoffice/graphite2-minimal-1.3.10.tgz) = a2dac9614ab6b11ba5529f9043467d
 RMD160 (libreoffice/graphite2-minimal-1.3.10.tgz) = 508f69ef2f6c4e8e3843d4a367aea8e1c00439e3
 SHA512 (libreoffice/graphite2-minimal-1.3.10.tgz) = 0bbf2b586d3b9f09aa6f8e68575482d63ea4ebc712bd2103ba678074b581ac0e5593fdb6d26be60a74fea0261da2797d4c0db7d384d75837fbf93dd4ac3579a2
 Size (libreoffice/graphite2-minimal-1.3.10.tgz) = 155690 bytes
-SHA1 (libreoffice/harfbuzz-2.4.0.tar.bz2) = 76a229231d35145fab8f3862dd5395a9a61c62aa
-RMD160 (libreoffice/harfbuzz-2.4.0.tar.bz2) = 884745083c4dcaa9acdde63c6eabf009488c4eaa
-SHA512 (libreoffice/harfbuzz-2.4.0.tar.bz2) = daeaf029bd5d0d0674f930a8d0dcdc4e0b1253b2369c732c7b4fd130ab9438d0d9526967224a583ee58974c3b492874acaccdac13c71b58c950f0b3f031e505c
-Size (libreoffice/harfbuzz-2.4.0.tar.bz2) = 17919355 bytes
+SHA1 (libreoffice/harfbuzz-2.5.3.tar.xz) = 85d7fc0cf7c55c5ae21575fd188f827fc8b2c46a
+RMD160 (libreoffice/harfbuzz-2.5.3.tar.xz) = d3e57a0c2b0b43df571200db8635c88ae1959d5b
+SHA512 (libreoffice/harfbuzz-2.5.3.tar.xz) = a2e6cedbe0e505fa31b540e0d0bc6c0b07080bd39879c27e04d351103e21201d75a809dd2fad559bf994b82b311f67ad85778cbbfb670d7e2580beafa09e93ff
+Size (libreoffice/harfbuzz-2.5.3.tar.xz) = 5685712 bytes
 SHA1 (libreoffice/language-subtag-registry-2018-04-23.tar.bz2) = 9414d32c4898e2c424dce590bab6e925df151a17
 RMD160 (libreoffice/language-subtag-registry-2018-04-23.tar.bz2) = 8b10fc6ec25128a79274a67e84c2585aad540ee8
 SHA512 (libreoffice/language-subtag-registry-2018-04-23.tar.bz2) = 94972420f4227933c27789b5a808071d11e9ee53f5184a47452772ac235ed17c1ac02c8a8d24a3f3c1067f75161d524fb587097e348c144ae50ee539b4e78cd7
@@ -219,7 +219,7 @@ SHA1 (patch-bridges_source_cpp__uno_gcc3__linux__x86-64_share.hxx) = e664faa4044
 SHA1 (patch-configure.ac) = c9b10c86e809961f9312d1dbd925c6bc77042f56
 SHA1 (patch-desktop_scripts_soffice.sh) = e6342e08781ca8dac72a1f28407517d79155577c
 SHA1 (patch-desktop_unx_source_pagein.c) = 0aa2b289df6d0fa524bf057d532aa5f9ceb6dde5
-SHA1 (patch-download.lst) = f6db8e621d9fee8652e62d5bb637d54618bfdb04
+SHA1 (patch-download.lst) = 67ce8ba0ff3fe376f862d6ed603cd56af8a96646
 SHA1 (patch-external_harfbuzz_UnpackedTarball__harfbuzz.mk) = 5c5d965558f3c431cde6fc280438b23494b22607
 SHA1 (patch-external_mariadb-connector-c_UnpackedTarball__mariadb-connector-c.mk) = 01798842e3f573f627be31660195edbac802df89
 SHA1 (patch-external_mariadb-connector-c_netbsd.patch) = e20e0cc58153b865551a8dd2819fb141f20fcb8d
