@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2746 2019/07/02 10:21:26 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2747 2019/07/02 10:48:21 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4597,3 +4597,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-google-apitools to 0.5.30 [adam 2019-07-02]
 	Updated devel/py-cachetools to 3.1.1 [adam 2019-07-02]
 	Updated textproc/py-Unidecode to 1.1.1 [adam 2019-07-02]
+	Updated www/webkit-gtk to 2.24.3 [leot 2019-07-02]
