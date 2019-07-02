@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2747 2019/07/02 10:48:21 leot Exp $
+$NetBSD: CHANGES-2019,v 1.2748 2019/07/02 12:02:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4598,3 +4598,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-cachetools to 3.1.1 [adam 2019-07-02]
 	Updated textproc/py-Unidecode to 1.1.1 [adam 2019-07-02]
 	Updated www/webkit-gtk to 2.24.3 [leot 2019-07-02]
+	Added security/py-google-auth version 1.6.3 [adam 2019-07-02]
+	Added security/py-google-auth-httplib2 version 0.0.3 [adam 2019-07-02]
+	Added security/py-google-auth-oauthlib version 0.4.0 [adam 2019-07-02]
