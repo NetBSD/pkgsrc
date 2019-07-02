@@ -1,15 +1,12 @@
-# $NetBSD: options.mk,v 1.32 2017/05/15 11:07:20 jperkin Exp $
+# $NetBSD: options.mk,v 1.33 2019/07/02 20:52:12 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
-PKG_SUPPORTED_OPTIONS=		dbus debug dts faad gnome jack live pulseaudio
-PKG_SUPPORTED_OPTIONS+=		sdl vlc-skins x11
-PKG_SUGGESTED_OPTIONS=		dbus x11
+PKG_SUPPORTED_OPTIONS=		alsa avahi dbus debug dts jack pulseaudio
+PKG_SUPPORTED_OPTIONS+=		vlc-skins qt5
+PKG_SUGGESTED_OPTIONS=		dbus qt5
+PKG_SUGGESTED_OPTIONS.Linux+=	alsa
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} != "SunOS"
-PKG_SUGGESTED_OPTIONS+=		live
-.endif
 
 ### Add VAAPI if it is available
 .include "../../multimedia/libva/available.mk"
@@ -32,6 +29,26 @@ PKG_SUGGESTED_OPTIONS+=	lirc
 
 PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
 
+## ALSA support
+
+.if !empty(PKG_OPTIONS:Malsa)
+CONFIGURE_ARGS+=	--enable-alsa
+.include "../../audio/alsa-lib/buildlink3.mk"
+PLIST.alsa=	yes
+.else
+CONFIGURE_ARGS+=	--disable-alsa
+.endif
+
+## Avahi support
+
+.if !empty(PKG_OPTIONS:Mavahi)
+CONFIGURE_ARGS+=	--enable-avahi
+.include "../../net/avahi/buildlink3.mk"
+PLIST.avahi=	yes
+.else
+CONFIGURE_ARGS+=	--disable-avahi
+.endif
+
 ## PulseAudio support
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
@@ -50,29 +67,6 @@ CONFIGURE_ARGS+=	--enable-jack
 PLIST.jack=		yes
 .else
 CONFIGURE_ARGS+=	--disable-jack
-.endif
-
-## SDL backend support
-
-.if !empty(PKG_OPTIONS:Msdl)
-CONFIGURE_ARGS+=	--enable-sdl
-CONFIGURE_ARGS+=	--enable-sdl-image
-.include "../../devel/SDL/buildlink3.mk"
-.include "../../graphics/SDL_image/buildlink3.mk"
-PLIST.sdl=		yes
-.else
-CONFIGURE_ARGS+=	--disable-sdl
-CONFIGURE_ARGS+=	--disable-sdl-image
-.endif
-
-## gnome integration
-
-.if !empty(PKG_OPTIONS:Mgnome)
-CONFIGURE_ARGS+=	--enable-gnomevfs
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
-PLIST.gnome=	yes
-.else
-CONFIGURE_ARGS+=	--disable-gnomevfs
 .endif
 
 ## DBUS message bus support
@@ -102,10 +96,10 @@ INSTALLATION_DIRS+=	share/vlc/skins2
 CONFIGURE_ARGS+=	--disable-skins2
 .endif
 
-## X11 dependency and QT4 frontend
+## X11 dependency and QT5 frontend
 
 PLIST_VARS+=		egl
-.if !empty(PKG_OPTIONS:Mx11)
+.if !empty(PKG_OPTIONS:Mqt5)
 DEPENDS+= dejavu-ttf>=2.0:../../fonts/dejavu-ttf
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
@@ -118,26 +112,21 @@ DEPENDS+= dejavu-ttf>=2.0:../../fonts/dejavu-ttf
 .include "../../x11/xcb-util-keysyms/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtsvg/buildlink3.mk"
+.include "../../x11/qt5-qtx11extras/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-qt \
 			--with-x
-PLIST.x11=		yes
-.if ${X11_TYPE} == "modular" || exists(${X11BASE}/include/EGL/egl.h)
+PLIST.qt5=		yes
+.  if ${X11_TYPE} == "modular" || exists(${X11BASE}/include/EGL/egl.h)
 PLIST.egl=		yes
-.endif
+.  endif
 .else
 CONFIGURE_ARGS+=	--without-x \
 			--disable-xcb \
 			--disable-qt \
-			--disable-freetype
-.endif
-
-.if !empty(PKG_OPTIONS:Mfaad)
-CONFIGURE_ARGS+=	--enable-faad
-PLIST.faad=		yes
-.include "../../audio/faad2/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-faad
+			--disable-freetype \
+			--disable-vdpau
 .endif
 
 ## DTS support (libdca is non-redistributable)
@@ -148,17 +137,6 @@ PLIST.dts=		yes
 .  include "../../audio/libdca/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--enable-dca=no
-.endif
-
-## RTSP support
-
-.if !empty(PKG_OPTIONS:Mlive)
-CONFIGURE_ARGS+=	--enable-live555
-PLIST.live=		yes
-BUILDLINK_API_DEPENDS.liblive+= liblive>=20111223
-.  include "../../net/liblive/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-live555
 .endif
 
 ## VAAPI support

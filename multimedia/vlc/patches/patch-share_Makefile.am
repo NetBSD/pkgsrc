@@ -1,0 +1,15 @@
+$NetBSD: patch-share_Makefile.am,v 1.1 2019/07/02 20:52:13 nia Exp $
+
+Remove unportable tar parameters.
+
+--- share/Makefile.am.orig	2018-02-06 18:41:06.000000000 +0000
++++ share/Makefile.am
+@@ -94,7 +94,7 @@ skins2/default.vlt: $(skins2_default_vlt
+ 	$(AM_V_at)rm -f -- skins2/default.vlt.tmp
+ 	$(AM_V_GEN)GZIP=--no-name \
+ 	tar cvvzf skins2/default.vlt.tmp \
+-		--owner=root --group=root --directory="$(srcdir)/skins2" \
++		--directory="$(srcdir)/skins2" \
+ 		default/
+ 	$(AM_V_at)mv -f -- skins2/default.vlt.tmp skins2/default.vlt
+ 
