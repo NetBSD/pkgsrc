@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2740 2019/07/02 05:19:21 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2741 2019/07/02 07:28:02 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4589,3 +4589,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-landslide to 1.1.6 [adam 2019-07-02]
 	Updated security/py-paramiko to 2.6.0 [adam 2019-07-02]
 	Updated emulators/dosbox to 0.74.3 [nia 2019-07-02]
+	Updated mail/p5-Mail-Box-IMAP4 to 3.007 [wen 2019-07-02]
