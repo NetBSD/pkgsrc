@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.44 2019/06/04 10:43:21 gdt Exp $
+# $NetBSD: Makefile,v 1.45 2019/07/02 13:44:05 gdt Exp $
 
-DISTNAME=	gpsd-3.18.1
-PKGREVISION=	1
+DISTNAME=	gpsd-3.19
 CATEGORIES=	geography
 MASTER_SITES=	http://download-mirror.savannah.gnu.org/releases/gpsd/
 # will probably switch to https://gitlab.com/gpsd/gpsd/releases
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://gpsd.io/
-#HOMEPAGE_OLD	=https://savannah.nongnu.org/projects/gpsd
 COMMENT=	GPS information daemon
 
 LICENSE=	modified-bsd
@@ -51,6 +49,7 @@ SUBST_FILES.pyenv+=	ubxtool
 SUBST_FILES.pyenv+=	xgps
 SUBST_FILES.pyenv+=	xgpsspeed
 SUBST_FILES.pyenv+=	zerk
+SUBST_FILES.pyenv+=	test_misc.py
 SUBST_SED.pyenv=	-e 's,/usr/bin/env python.*$$,${PYTHONBIN},'
 
 # \todo: Determine if CC/CXX are needed (e.g, when using other than gcc).
