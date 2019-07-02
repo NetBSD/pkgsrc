@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2019/03/15 16:32:13 hauke Exp $
+$NetBSD: MESSAGE,v 1.6 2019/07/02 12:23:41 hauke Exp $
 
 GLPI requires a web server set up to run PHP scripts;
 ${PREFIX}/share/examples/glpi/http-glpi.conf is a sample
@@ -29,5 +29,9 @@ above glpi user's credentials, and select the newly created glpi
 database.
 
 Rename install.php when you are done.
+
+To update from the commandline, run
+
+su -m ${APACHE_USER} -c '${PREFIX}/share/glpi/bin/console --config-dir=${PKG_SYSCONFDIR} db:update'
 
 ===========================================================================

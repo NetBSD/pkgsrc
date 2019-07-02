@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2019/04/12 13:23:57 hauke Exp $
+# $NetBSD: Makefile,v 1.8 2019/07/02 12:23:41 hauke Exp $
 
 DISTNAME=	glpi-${GLPI_VERSION}
-GLPI_VERSION=	9.4.2
+GLPI_VERSION=	9.4.3
 CATEGORIES=	www
 
 MASTER_SITES=	https://github.com/glpi-project/glpi/releases/download/${GLPI_VERSION}/
@@ -32,10 +32,9 @@ USE_TOOLS+=	chmod find pax
 
 BUILD_DEFS+=    APACHE_USER APACHE_GROUP VARBASE
 
-.include "../../mk/bsd.prefs.mk"
+MESSAGE_SUBST+=	APACHE_USER="${APACHE_USER}"
 
-APACHE_USER?=   www
-APACHE_GROUP?=  www
+.include "../../mk/bsd.prefs.mk"
 
 WRKSRC=		${WRKDIR}/glpi
 
