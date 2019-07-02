@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2741 2019/07/02 07:28:02 wen Exp $
+$NetBSD: CHANGES-2019,v 1.2742 2019/07/02 07:32:58 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4590,3 +4590,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/py-paramiko to 2.6.0 [adam 2019-07-02]
 	Updated emulators/dosbox to 0.74.3 [nia 2019-07-02]
 	Updated mail/p5-Mail-Box-IMAP4 to 3.007 [wen 2019-07-02]
+	Updated textproc/p5-PPIx-QuoteLike to 0.007 [wen 2019-07-02]
