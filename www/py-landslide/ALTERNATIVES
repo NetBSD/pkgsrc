@@ -1,1 +1,1 @@
-bin/landslide @PREFIX@/bin/landslide
+bin/landslide @PREFIX@/bin/landslide-@PYVERSSUFFIX@
