@@ -1,3 +1,16 @@
-$NetBSD: CHANGES-pkgsrc-2019Q2,v 1.1.2.1 2019/06/30 19:05:48 jperkin Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q2,v 1.1.2.2 2019/07/02 13:19:10 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q2 branch:
+
+Pullup ticket #5983 - requested by kamil
+net/net-snmp: build fix for PR pkg/54333
+
+Pullup ticket #5984 - requested by nia
+graphics/openimageio: build fix
+
+Pullup ticket #5985 - requested by nia
+emulators/dosbox: security fix
+
+Pullup ticket #5986 - requested by nia
+news/newsbeuter: build fix
+
