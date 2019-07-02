@@ -1,11 +1,12 @@
-# $NetBSD: options.mk,v 1.20 2019/02/11 10:07:37 nia Exp $
+# $NetBSD: options.mk,v 1.21 2019/07/02 06:23:50 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.cmus
-PKG_SUPPORTED_OPTIONS=		flac mad vorbis libao musepack faad wavpack \
-				ffmpeg opus jack pulseaudio
+PKG_SUPPORTED_OPTIONS+=		alsa flac mad vorbis libao musepack faad
+PKG_SUPPORTED_OPTIONS+=		wavpack ffmpeg opus jack pulseaudio
 PKG_OPTIONS_OPTIONAL_GROUPS=	mod
 PKG_OPTIONS_GROUP.mod=		modplug mikmod
 PKG_SUGGESTED_OPTIONS=		faad flac libao mad modplug opus vorbis
+PKG_SUGGESTED_OPTIONS.Linux+=	alsa
 PKG_OPTIONS_LEGACY_OPTS+=	ao:libao
 PKG_OPTIONS_LEGACY_OPTS+=	mpcdec:musepack
 
@@ -29,11 +30,13 @@ CONFIGURE_ARGS+=	CONFIG_AO=n
 
 # ALSA support
 #
-# UNTESTED
-#.if !empty(PKG_OPTIONS:Malsa)
-#ONLY_FOR_PLATFORM=  Linux-*-* # Alsa is Linux only
-#CONFIGURE_ARGS+=	CONFIG_ALSA=y
-#.endif
+.if !empty(PKG_OPTIONS:Malsa)
+. include "../../audio/alsa-lib/buildlink3.mk"
+CONFIGURE_ARGS+=	CONFIG_ALSA=y
+PLIST.alsa=		yes
+.else
+CONFIGURE_ARGS+=	CONFIG_ALSA=n
+.endif
 
 # PULSE support
 #
