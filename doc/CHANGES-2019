@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2736 2019/07/01 22:26:05 rillig Exp $
+$NetBSD: CHANGES-2019,v 1.2737 2019/07/02 03:54:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4579,3 +4579,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated misc/stellarium to 0.19.1 [adam 2019-07-01]
 	Updated www/sassc to 3.6.1 [adam 2019-07-01]
 	Updated pkgtools/pkglint to 5.7.15 [rillig 2019-07-01]
+	Updated www/py-flask-jwt-extended to 3.19.0 [adam 2019-07-02]
+	Updated finance/py-braintree to 3.55.0 [adam 2019-07-02]
+	Updated sysutils/py-crontab to 2.3.7 [adam 2019-07-02]
+	Updated devel/py-Pympler to 0.7 [adam 2019-07-02]
