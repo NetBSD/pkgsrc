@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/05/25 23:29:18 wen Exp $
+$NetBSD: distinfo,v 1.3 2019/07/02 07:27:06 wen Exp $
 
-SHA1 (Mail-Box-IMAP4-3.004.tar.gz) = 5cde1251b7690d0995450d06bd2912c5b2913cfd
-RMD160 (Mail-Box-IMAP4-3.004.tar.gz) = 6931a883751b70f05855b2219f24842fba755a89
-SHA512 (Mail-Box-IMAP4-3.004.tar.gz) = dea841d7659642dbce11967f5aeaf7524ff08c53e5db1354d65a245eb248da68806025c0ba8b17957bf63373f52adda737213979666b96c3040db4b834c6e711
-Size (Mail-Box-IMAP4-3.004.tar.gz) = 44117 bytes
+SHA1 (Mail-Box-IMAP4-3.007.tar.gz) = 34b571bc072c57cb80718bff0db746d8fb63310a
+RMD160 (Mail-Box-IMAP4-3.007.tar.gz) = 79c1c176fb7e66c14de59a0df6bc19b5dbbbd6a6
+SHA512 (Mail-Box-IMAP4-3.007.tar.gz) = f2cdf0063ec5ba66b9e29aa71c827aa5eb7f14cb25d139ff9dcdbcd111ebf5507763f501d7ca80b4269961cee83a91d8b282191e3beb0711536a505453342faf
+Size (Mail-Box-IMAP4-3.007.tar.gz) = 44532 bytes
