@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/11/29 18:41:38 adam Exp $
+$NetBSD: distinfo,v 1.5 2019/07/02 10:01:09 adam Exp $
 
-SHA1 (pathlib2-2.3.3.tar.gz) = 3a902176bb4b5b7f1f112e501409b84c21c7f50c
-RMD160 (pathlib2-2.3.3.tar.gz) = ab3afd70e158d70e8c5ba700ec273ef08b15fe60
-SHA512 (pathlib2-2.3.3.tar.gz) = 78426f9ec2a091e526538e488a39dcae60372e0855083d844c32ebddf16ba62024aa04965854af078fbe2fd7ba7f2f324366c311c6667a9827aea416e49f5d16
-Size (pathlib2-2.3.3.tar.gz) = 33813 bytes
+SHA1 (pathlib2-2.3.4.tar.gz) = 88b1a68b62725467c6a527a59ada62335f24b7e6
+RMD160 (pathlib2-2.3.4.tar.gz) = 869593d496986363c7c384cb3870049a5989ffc5
+SHA512 (pathlib2-2.3.4.tar.gz) = b51d18b74039c86f4d38521709d54342d8b68f6656829867c5ba7fcc69b6732cb0316c99ee0144dfd7455f0c168437467bafe90605ef5dd29ff008afae4454d9
+Size (pathlib2-2.3.4.tar.gz) = 34325 bytes
