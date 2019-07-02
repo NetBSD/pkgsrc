@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2738 2019/07/02 04:10:52 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2739 2019/07/02 04:31:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4586,3 +4586,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed net/py-zsi [adam 2019-07-02]
 	Removed devel/accerciser successor devel/accerciser3 [adam 2019-07-02]
 	Removed devel/py-ipython010 successor devel/py-ipython [adam 2019-07-02]
+	Updated www/py-landslide to 1.1.6 [adam 2019-07-02]
+	Updated security/py-paramiko to 2.6.0 [adam 2019-07-02]
