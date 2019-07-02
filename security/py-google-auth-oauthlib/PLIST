@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2019/07/02 12:01:30 adam Exp $
+bin/google-oauthlib-tool-${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/google_auth_oauthlib/__init__.py
+${PYSITELIB}/google_auth_oauthlib/__init__.pyc
+${PYSITELIB}/google_auth_oauthlib/__init__.pyo
+${PYSITELIB}/google_auth_oauthlib/flow.py
+${PYSITELIB}/google_auth_oauthlib/flow.pyc
+${PYSITELIB}/google_auth_oauthlib/flow.pyo
+${PYSITELIB}/google_auth_oauthlib/helpers.py
+${PYSITELIB}/google_auth_oauthlib/helpers.pyc
+${PYSITELIB}/google_auth_oauthlib/helpers.pyo
+${PYSITELIB}/google_auth_oauthlib/interactive.py
+${PYSITELIB}/google_auth_oauthlib/interactive.pyc
+${PYSITELIB}/google_auth_oauthlib/interactive.pyo
+${PYSITELIB}/google_auth_oauthlib/tool/__init__.py
+${PYSITELIB}/google_auth_oauthlib/tool/__init__.pyc
+${PYSITELIB}/google_auth_oauthlib/tool/__init__.pyo
+${PYSITELIB}/google_auth_oauthlib/tool/__main__.py
+${PYSITELIB}/google_auth_oauthlib/tool/__main__.pyc
+${PYSITELIB}/google_auth_oauthlib/tool/__main__.pyo
