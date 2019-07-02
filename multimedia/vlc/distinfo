@@ -1,32 +1,13 @@
-$NetBSD: distinfo,v 1.74 2017/05/26 13:26:37 maya Exp $
+$NetBSD: distinfo,v 1.75 2019/07/02 20:52:12 nia Exp $
 
-SHA1 (vlc-2.2.6.tar.xz) = d299dce6a5c94af4292657b6cb99c44654024f70
-RMD160 (vlc-2.2.6.tar.xz) = b2727834bcbbf0d274e3a0b4a3317f3b914f9ad4
-SHA512 (vlc-2.2.6.tar.xz) = 9aff5922eb8b3c6a24e6153c367b0170dbc67602ae3e9304f52d2da00c9081d66cc98abd722b7c95b6c7d2e6cc7c86f21f9cba42c7d4bf29ca97d0f2d3553f8d
-Size (vlc-2.2.6.tar.xz) = 22198720 bytes
-SHA1 (patch-bin_override.c) = 0190b65ec29ccdb7ef89d7c6af74a6bfdfc17076
-SHA1 (patch-compat_Makefile.am) = 983e9e29380702326d114274db99af72b5bdb3dd
-SHA1 (patch-compat_Makefile.in) = d520534929290864ee30a286633f8ae118106ae1
-SHA1 (patch-configure) = 90cdfc62aa0bbc68ec76758ca0acdcb13dbfe56d
-SHA1 (patch-include_vlc__common.h) = 26ab2c96230e3fbe26dd4bce60db7c5331eb3f6c
-SHA1 (patch-include_vlc__fixups.h) = 1a9f58b70f43fb87381d75d856682e3bcad14f6c
-SHA1 (patch-include_vlc_atomic.h) = 3f3acc51e2e3645951b8c39c2cf61dab6c7d756d
-SHA1 (patch-modules_access_directory.c) = 95bc95cb7eb0bf44684c04d2cecc2c4e8339f0f7
-SHA1 (patch-modules_access_file.c) = 22eb568aa5a1fea765e65a770432282024baaaf1
-SHA1 (patch-modules_access_rtp_Makefile.am) = cd2c1bcbde8fc04c15f4030ff8708e32b800dd53
-SHA1 (patch-modules_gui_qt4_components_controller.cpp) = 5822f018f910d1b0e441782ffeff193ebc35b6d2
-SHA1 (patch-modules_gui_qt4_components_extended__panels.cpp) = eaa7a4732fa5a462d5769fc71e097366e5bc2f70
-SHA1 (patch-modules_gui_qt4_components_interface__widgets.cpp) = b630de531ec90afd1f2aecc769f34952780b6ddb
-SHA1 (patch-modules_gui_qt4_components_interface__widgets.hpp) = 9ac2782bcb1a306123662fd3e4f44b82149c111a
-SHA1 (patch-modules_gui_qt4_dialogs_messages.cpp) = 8f4abf85ecd435bb1d2964e5ac16fc09ecaa5ab0
-SHA1 (patch-modules_gui_qt4_input__manager.cpp) = cf9db2c8a4bd4b6080cca0534dcc5065555c6d4a
-SHA1 (patch-modules_gui_qt4_input__manager.hpp) = ccc5f5fd53942f168e95d472731ee3f6a4d8ddb0
-SHA1 (patch-modules_gui_qt4_main__interface.cpp) = 11b9600a6e3c11268afc7c38859c5b62a1e8ee0d
-SHA1 (patch-modules_gui_qt4_main__interface.hpp) = 1c3028519662d99c023375c5ee74e9f490c16f3c
-SHA1 (patch-modules_gui_qt4_util_input__slider.cpp) = 17aa058d6a7fd5b006b063bdf78cee3302733811
-SHA1 (patch-modules_gui_qt4_util_input__slider.hpp) = 146f2a2e5a9fc70b7aaefefd859a59cb39555e6a
-SHA1 (patch-modules_gui_skins2_src_theme__loader.cpp) = cbf1dfa33aa89bbb9382b789d77f6eea69d85b04
-SHA1 (patch-modules_misc_inhibit_xdg.c) = f84a8d629c8cd98c30b0acf41d87d55c7dc90d30
-SHA1 (patch-modules_services__discovery_mtp.c) = 03ad7d3efecc95bb27aaa216b78719662999102e
-SHA1 (patch-modules_video__output_sdl.c) = fcb5daacd5fe0627dcf1eaad79c8e2a27d6c948a
-SHA1 (patch-src_config_file.c) = 87c53b6d3a2d1fa9cf5b7e8e672ab2a08cafe3bb
+SHA1 (vlc-3.0.7.1.tar.xz) = 3f6f9e56695eeea662b86602963721f1ac7afd23
+RMD160 (vlc-3.0.7.1.tar.xz) = 9ed6e0f890582efb455c6ff005233cff6c83fcf3
+SHA512 (vlc-3.0.7.1.tar.xz) = 6b99ae0564630a7a7ca9187c3bb954c601e384522ce93460b73f2dbf31787ce5828daca9f31c781b97db77872d76b6a3e871ff3401d70f1b5829fee7c4e847fd
+Size (vlc-3.0.7.1.tar.xz) = 26052372 bytes
+SHA1 (patch-compat_Makefile.am) = 1c3e0a7c4610c55c3ec9ba80d66b9959661139b3
+SHA1 (patch-configure.ac) = 99e975954323b4e94daeb75ce2ae439b49c51b0f
+SHA1 (patch-lib_core.c) = 8ec5557424e6ddc05cc365aacd1ec847d9a94605
+SHA1 (patch-lib_video.c) = 362aaf7977c264bb70a79e98cf18da923ae62e39
+SHA1 (patch-m4_dolt.m4) = a1aac0c1021001a489f9b515e218904e065ed659
+SHA1 (patch-modules_access_http_Makefile.am) = d91904c6cba1a75a6872d042e4fe87ed9ce65a22
+SHA1 (patch-share_Makefile.am) = 380dc4ac4a1a19cd1ccc8219b3d1d3b927585c49
