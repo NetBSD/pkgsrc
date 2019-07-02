@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST.Linux,v 1.2 2015/10/25 11:00:18 wiz Exp $
-lib/vlc/plugins/access/libaccess_alsa_plugin.la
+@comment $NetBSD: PLIST.Linux,v 1.3 2019/07/02 20:52:12 nia Exp $
 lib/vlc/plugins/access/libdtv_plugin.la
 lib/vlc/plugins/access/liblinsys_hdsdi_plugin.la
 ${PLIST.v4l2}lib/vlc/plugins/access/libv4l2_plugin.la
-lib/vlc/plugins/audio_output/libalsa_plugin.la
 lib/vlc/plugins/video_filter/libatmo_plugin.la
 lib/vlc/plugins/video_output/libfb_plugin.la

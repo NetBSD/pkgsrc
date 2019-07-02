@@ -1,0 +1,15 @@
+$NetBSD: patch-modules_access_http_Makefile.am,v 1.1 2019/07/02 20:52:13 nia Exp $
+
+Remove doubled symbols in libcompat in the vlc_http module.
+
+--- modules/access/http/Makefile.am.orig	2017-11-24 15:29:17.000000000 +0000
++++ modules/access/http/Makefile.am
+@@ -16,7 +16,7 @@ libvlc_http_la_SOURCES = \
+ 	access/http/connmgr.c access/http/connmgr.h
+ libvlc_http_la_CPPFLAGS = -Dneedsomethinghere
+ libvlc_http_la_LIBADD = \
+-	$(LTLIBVLCCORE) ../compat/libcompat.la \
++	$(LTLIBVLCCORE) \
+ 	$(SOCKET_LIBS) $(LIBPTHREAD)
+ #libvlc_http_la_LDFLAGS = -no-undefined -export-symbols-regex ^vlc_http_
+ #pkglib_LTLIBRARIES += libvlc_http.la
