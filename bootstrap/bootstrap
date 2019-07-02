@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.266 2019/06/20 09:11:26 jperkin Exp $
+# $NetBSD: bootstrap,v 1.267 2019/07/02 16:27:04 rillig Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -353,7 +353,8 @@ checkarg_sane_absolute_path()
 	*/)	die "ERROR: The argument to $2 must not end in /." ;;
 	*//* | */. | */./* | */.. | */../*)
 		die "ERROR: The path $1 (from $2) must be canonical." ;;
-	/*)	checkarg_no_symlink_path "$1" "$2" ;;
+	/*)	[ "${3-}" = "may-be-symlink" ] \
+		|| checkarg_no_symlink_path "$1" "$2" ;;
 	*)	die "ERROR: The argument to $2 must be an absolute path." ;;
 	esac
 }
@@ -505,7 +506,7 @@ checkarg_sane_absolute_path "$sysconfdir" "--sysconfdir"
 checkarg_sane_absolute_path "$varbase" "--varbase"
 checkarg_sane_relative_path "$pkginfodir" "--pkginfodir"
 checkarg_sane_relative_path "$pkgmandir" "--pkgmandir"
-checkarg_sane_absolute_path "$wrkdir" "--workdir"
+checkarg_sane_absolute_path "$wrkdir" "--workdir" may-be-symlink
 
 # set defaults for system locations if not already set by the user
 wrkobjdir=${wrkdir}/pkgsrc
