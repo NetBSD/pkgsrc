@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.25 2019/06/10 12:41:23 nia Exp $
+$NetBSD: distinfo,v 1.26 2019/07/02 05:19:11 nia Exp $
 
-SHA1 (dosbox-0.74-2.tar.gz) = 3008694ef998853257c6a4cb5374229e157ceaf3
-RMD160 (dosbox-0.74-2.tar.gz) = cd8e465a22840932d20b52293f76206e8d3b8ed2
-SHA512 (dosbox-0.74-2.tar.gz) = 5e02ba84bfb89318f2ce4d2f387d36a0988e4e5c04e89d6c902f865bbf951a38850fc51b24632cec706687b51b4f661de918975367e6fd0d775c5f40a623cf78
-Size (dosbox-0.74-2.tar.gz) = 1324059 bytes
+SHA1 (dosbox-0.74-3.tar.gz) = 1e1dd91d13c283fd5fc3104a3eac95bec7203dbc
+RMD160 (dosbox-0.74-3.tar.gz) = 6446289c2cb20861e3e11c2d05a5d802f93b4f2d
+SHA512 (dosbox-0.74-3.tar.gz) = 3770f1578e71730168fba01809585f2a05cf8c4d420524687ba28791d242faad294401bb9cd268bba725798e1db853551f274dc00a4024331f5dcef9f87f8f5f
+Size (dosbox-0.74-3.tar.gz) = 1326339 bytes
 SHA1 (patch-src_Makefile.in) = 64e5f4fa66d4784961afc375fbe2d8d91008d8d0
