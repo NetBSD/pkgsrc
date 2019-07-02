@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/03/02 15:59:04 joerg Exp $
+$NetBSD: distinfo,v 1.2 2019/07/02 03:53:18 adam Exp $
 
-SHA1 (Pympler-0.5.tar.gz) = 227d47d25a3cbd46f08ffb8ed5520fa9566ba43a
-RMD160 (Pympler-0.5.tar.gz) = 1dcfef01c7720a677c4b5692d98c9fa78ee79136
-SHA512 (Pympler-0.5.tar.gz) = 6fcc2624cec69db11ff12d8ad0113face752a910be18ffe13cc8d68beeeb5223f4515364cb63cbadbcaf1f6e5c6807b262928eae7119cebcba50053ea0b0eb50
-Size (Pympler-0.5.tar.gz) = 170396 bytes
+SHA1 (Pympler-0.7.tar.gz) = 1cab1aab73631aa6fae6838bc1b6a7c78c12b21e
+RMD160 (Pympler-0.7.tar.gz) = 8ebdd5c3c927c497d20d94a390cfa8ec4ea88ffd
+SHA512 (Pympler-0.7.tar.gz) = a7eea6068b81b184628dac31cbdb43b1cff5943635dee9a38949152730d3b85250f42367dcd0d687e5925424a3355ea8e822694a3a499050658859fcb64a0e66
+Size (Pympler-0.7.tar.gz) = 176177 bytes
