@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2753 2019/07/02 13:00:12 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2754 2019/07/02 13:03:53 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4608,3 +4608,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated fonts/harfbuzz to 2.5.3 [ryoon 2019-07-02]
 	Updated games/armagetronad to 0.2.8.3.4 [nia 2019-07-02]
 	Updated games/armagetronad-server to 0.2.8.3.4 [nia 2019-07-02]
+	Updated misc/libreoffice to 6.2.4.2nb2 [ryoon 2019-07-02]
