@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2019/06/11 12:24:41 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2019/07/02 12:06:13 adam Exp $
 
 DISTNAME=	google-api-python-client-1.7.9
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-api-python-client/}
@@ -10,17 +11,15 @@ HOMEPAGE=	https://github.com/google/google-api-python-client
 COMMENT=	Python client library for Google's discovery based APIs
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.9.2:../../www/py-httplib2
-# use google-auth instead? (unpackaged)
-DEPENDS+=	${PYPKGPREFIX}-oauth2client>=1.5.0:../../security/py-oauth2client
+DEPENDS+=	${PYPKGPREFIX}-google-auth>=1.4.1:../../security/py-google-auth
+DEPENDS+=	${PYPKGPREFIX}-google-auth-httplib2>=0.0.3:../../security/py-google-auth-httplib2
 DEPENDS+=	${PYPKGPREFIX}-six>=1.6.1:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-uritemplate>=3.0.0:../../textproc/py-uritemplate
-# TEST_DEPENDS
-BUILD_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-BUILD_DEPENDS+=	${PYPKGPREFIX}-unittest2-[0-9]*:../../devel/py-unittest2
+TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-oauth2client-[0-9]*:../../security/py-oauth2client
+TEST_DEPENDS+=	${PYPKGPREFIX}-unittest2-[0-9]*:../../devel/py-unittest2
 
-# https://github.com/googleapis/google-api-python-client/pull/603/commits/31c468787f91eb047bc11b388e2b1b8e9be2df8a
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
