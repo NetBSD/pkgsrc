@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2749 2019/07/02 12:13:22 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2750 2019/07/02 12:24:21 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4604,3 +4604,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-google-api-python-client to 1.7.9nb1 [adam 2019-07-02]
 	Updated devel/py-cython to 0.29.11 [adam 2019-07-02]
 	Updated net/py-zmq to 18.0.2 [adam 2019-07-02]
+	Updated www/php-glpi to 9.4.3 [hauke 2019-07-02]
