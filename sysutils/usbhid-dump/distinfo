@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2019/07/02 13:29:33 ryoon Exp $
+
+SHA1 (usbhid-dump-1.4.tar.gz) = 6a3160fa68b3b8186b66fb48afd1173a74d32de6
+RMD160 (usbhid-dump-1.4.tar.gz) = b9d3694f4db81ee3b6dc29db4a9112e0c87aa4ab
+SHA512 (usbhid-dump-1.4.tar.gz) = bc0e5af87833fea0146f006577ab28573a441c275eb39f84fb96cf30976dfa2e193f240b4f5600128362a1b65aaa8f14a02863ac262b92aa4886f1a526fa3c29
+Size (usbhid-dump-1.4.tar.gz) = 341411 bytes
+SHA1 (patch-src_usbhid-dump.c) = 4c8abcc7b45ea2b6e77b1917dcc74b1f77ef59f6
