@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2019/05/09 13:22:58 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.18 2019/07/02 06:23:50 nia Exp $
 bin/cmus
 bin/cmus-remote
 ${PLIST.faad}lib/cmus/ip/aac.so
@@ -14,6 +14,7 @@ ${PLIST.opus}lib/cmus/ip/opus.so
 ${PLIST.vorbis}lib/cmus/ip/vorbis.so
 lib/cmus/ip/wav.so
 ${PLIST.wavpack}lib/cmus/ip/wavpack.so
+${PLIST.alsa}lib/cmus/op/alsa.so
 ${PLIST.libao}lib/cmus/op/ao.so
 ${PLIST.coreaudio}lib/cmus/op/coreaudio.so
 ${PLIST.jack}lib/cmus/op/jack.so
