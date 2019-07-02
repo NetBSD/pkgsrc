@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.123 2019/05/20 11:15:48 leot Exp $
+$NetBSD: distinfo,v 1.124 2019/07/02 10:48:08 leot Exp $
 
-SHA1 (webkitgtk-2.24.2.tar.xz) = 632a65d93beb996bebdf7592ef9591f3993dea91
-RMD160 (webkitgtk-2.24.2.tar.xz) = 067a23d186b0c363c53a2a05ec7bcb1e8da483e7
-SHA512 (webkitgtk-2.24.2.tar.xz) = 8376167cfc4530886a2ac644ab84ff1021a63f6236d7be9eeb9e0ecade8bad5384b652dfe3720fdd31cddb39df6c935f859f1c0a59f42d7c71998992c4a9ffaa
-Size (webkitgtk-2.24.2.tar.xz) = 17908808 bytes
+SHA1 (webkitgtk-2.24.3.tar.xz) = 26a33fd0af8223c130427cd59aaf5ccaba584114
+RMD160 (webkitgtk-2.24.3.tar.xz) = e2ce5fc050e8ebd080e1ef63c3c8f7b29b502243
+SHA512 (webkitgtk-2.24.3.tar.xz) = b358bb11f7df477e5b3d6a12e2e6b41cb4e6a7274e34ce6299bf0c56044ffc7db5a834e9abf5c71d992ef41d194d30171b8be406420ffc54fe766cc811afb79f
+Size (webkitgtk-2.24.3.tar.xz) = 17912032 bytes
 SHA1 (patch-CMakeLists.txt) = 571c65d258b6e12503971145777a8d442578145f
 SHA1 (patch-Source_JavaScriptCore_Scripts_check-xcfilelists.sh) = 5bb44be142b474d517b2b1459f0edc7d2453aa61
 SHA1 (patch-Source_JavaScriptCore_Scripts_generate-unified-sources.sh) = 308a7c8f687253b4fc75de0c66016dd18666e697
-SHA1 (patch-Source_JavaScriptCore_assembler_ARM64Assembler.h) = f80d9811f108a72efe16f0e39b97f503d7738840
+SHA1 (patch-Source_JavaScriptCore_assembler_ARM64Assembler.h) = 2a8f28316ffd1acc0e8c746ad8c9cee9aaf8c611
 SHA1 (patch-Source_JavaScriptCore_assembler_ARMv7Assembler.h) = 985c19ffb6a16df031bd284f7e79041adb8cd311
 SHA1 (patch-Source_JavaScriptCore_heap_MarkedSpace.cpp) = e6a23d5ef22bddd0a9606fb0e472960e4cf5673e
 SHA1 (patch-Source_JavaScriptCore_jit_ExecutableAllocator.cpp) = d600887955128cecece21ba401f6f53ba5cfbeb6
@@ -23,7 +23,6 @@ SHA1 (patch-Source_WebCore_Scripts_generate-unified-sources.sh) = 740eb33931b6f9
 SHA1 (patch-Source_WebCore_inspector_InspectorFrontendHost.cpp) = daf6351a1a0b5a49592a2bb6db0d54620c7b09e3
 SHA1 (patch-Source_WebCore_platform_graphics_filters_FEMorphology.cpp) = 16b36d2d91fd7f43156b9ee09bcafd19602ebbd9
 SHA1 (patch-Source_WebCore_platform_graphics_gstreamer_MediaPlayerPrivateGStreamer.cpp) = 38c24500c7619d290b22efd730eb36086e32461f
-SHA1 (patch-Source_WebCore_platform_graphics_gstreamer_MediaPlayerPrivateGStreamerBase.cpp) = a82885add0e9c70b14b598b4ad967277ebb96942
 SHA1 (patch-Source_WebCore_rendering_shapes_RasterShape.cpp) = 551e47698dee50d097b11e3218f13bb3447edfea
 SHA1 (patch-Source_WebKit_CMakeLists.txt) = 228cc4734de3b08a3877ac839b1ffa2fbf2d3aa8
 SHA1 (patch-Source_WebKit_NetworkProcess_cache_NetworkCacheFileSystem.cpp) = 8c19692e78b1cfb021b95435508a10bc6542b173
