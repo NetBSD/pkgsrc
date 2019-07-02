@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2019/05/11 22:07:01 kamil Exp $
+$NetBSD: distinfo,v 1.3 2019/07/02 04:19:59 adam Exp $
 
-SHA1 (landslide-1.1.3.tar.gz) = 07e5adbe9c0264a66c348a92aebea1d64f2baea2
-RMD160 (landslide-1.1.3.tar.gz) = 03eb20ea51997234a50b0aac0995f8b3ec286bd7
-SHA512 (landslide-1.1.3.tar.gz) = ba46dca4a93630ef700b2d5a6e1871d5ffbeb9943c165a00874ed9d931693c4b8d824658105792ca05e4d17d017066d4075b04c2a82d565749ee21670f8dc240
-Size (landslide-1.1.3.tar.gz) = 150998 bytes
-SHA1 (patch-src_landslide_parser.py) = 918b96e85298c2631422f7ce099ca4b05436ce14
+SHA1 (landslide-1.1.6.tar.gz) = a714a0bdff7b049fa2d610c7595e2ab003de2fbf
+RMD160 (landslide-1.1.6.tar.gz) = 3a0b9e717b352e93480aa8162b0fd7857b14718f
+SHA512 (landslide-1.1.6.tar.gz) = 944d958432ac3564bf292aa354d7b4122d060d4bcb49445531a01041407886e24fd80fabacf52d18d8c2915c703e8935c76899182b2cf967b19abf6f505f881e
+Size (landslide-1.1.6.tar.gz) = 148250 bytes
+SHA1 (patch-landslide_parser.py) = 0ada02373749cde3d953e17dbaa791a0008ea28e
+SHA1 (patch-setup.py) = 94b7fcc7039b80a1b912c82a24132c1f5571f4f8
