@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.167 2019/05/20 11:46:57 leot Exp $
+# $NetBSD: Makefile,v 1.168 2019/07/02 10:48:08 leot Exp $
 
-DISTNAME=	webkitgtk-2.24.2
+DISTNAME=	webkitgtk-2.24.3
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
 CATEGORIES=	www
 MASTER_SITES=	https://www.webkitgtk.org/releases/
@@ -123,7 +123,7 @@ BUILDLINK_API_DEPENDS.gst-plugins1-base+=	gst-plugins1-base>=1.0.3
 BUILDLINK_API_DEPENDS.libsoup+= libsoup>=2.42.2nb3
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
-.include "../../security/gnutls/buildlink3.mk"
+.include "../../security/libtasn1/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
