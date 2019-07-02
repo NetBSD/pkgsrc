@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2017/02/18 14:01:22 joerg Exp $
+$NetBSD: distinfo,v 1.14 2019/07/02 13:37:34 nia Exp $
 
 SHA1 (quakeforge-0.5.5.tar.gz) = 3ceb229b3d777b6c5e0cb1530b4547b20737f402
 RMD160 (quakeforge-0.5.5.tar.gz) = d22b29498e950bfdf96169bafee6409fca1a8e11
@@ -10,7 +10,7 @@ SHA1 (patch-ac) = fd8daa6dc4a32418c1c31790f9b969db43746e8f
 SHA1 (patch-ad) = a6d824831a5444f92c7b3ab396ea31ef52503dea
 SHA1 (patch-ae) = aa0431df430f4fc08da32550f7fc5a156096bb43
 SHA1 (patch-af) = 15c725bc5c99f558518a1b7ebb219b8b20b19926
-SHA1 (patch-ag) = a039a25dce8e9a625f461730c70b46c510d4aac3
+SHA1 (patch-ag) = 41b8acf4e012646d5a15e35540275b5584b2603d
 SHA1 (patch-ah) = b8da2ec1d52c89535d949445871e85872d9a135f
 SHA1 (patch-ai) = 67ef987cfa9dc50485a5a44341a7576e0e99d5c0
 SHA1 (patch-aj) = 5b28f79846fd2dff62004ff52bfc0dad33a91a67
@@ -28,7 +28,7 @@ SHA1 (patch-au) = 5fbe311a03bc65e39e501b38f50a9c42b298a03a
 SHA1 (patch-av) = 8ba99fa13916ab9efd881a89760307fc5863e9d5
 SHA1 (patch-aw) = d02d3a0cfbb47ad2f73e3ee523aed2964a8fcbae
 SHA1 (patch-include_QF_llist.h) = 34b69e99ca69d4564d7100b0e3bcd8d8a024ec94
-SHA1 (patch-include_QF_mathlib.h) = d867387c23ebfc2542711af655cb27cb3dab261d
+SHA1 (patch-include_QF_mathlib.h) = 9f8ff732bbabdc64bba7354c581dc42b4f242330
 SHA1 (patch-include_r__dynamic.h) = e37cd1d4e242db48793c29c2b78aa78eb14d138d
 SHA1 (patch-include_r__local.h) = 7bb3b46ea3835489a20609739bd7a8dc79b36c96
 SHA1 (patch-libs_util_llist.c) = d41fdac88ac1c9dbccd1bffd512f7e34ae381860
