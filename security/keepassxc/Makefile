@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2019/05/10 19:39:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2019/07/02 13:13:01 ryoon Exp $
 
 DISTNAME=	keepassxc-${GITHUB_RELEASE}-src
 PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	security x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=keepassxreboot/}
-GITHUB_RELEASE=	2.4.1
+GITHUB_RELEASE=	2.4.3
 GITHUB_PROJECT=	keepassxc
 EXTRACT_SUFX=	.tar.xz
 
@@ -14,6 +14,10 @@ COMMENT=	Password generator and manager
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND gnu-lgpl-v2 AND gnu-lgpl-v3 AND mit AND cc0-1.0-universal
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
+
+.if exists(/usr/lib/libjemalloc.so)
+LDFLAGS.NetBSD+=	-ljemalloc # for malloc_usable_size()
+.endif
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
@@ -37,6 +41,7 @@ pre-configure:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/argon2/buildlink3.mk"
+.include "../../security/libsodium/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
