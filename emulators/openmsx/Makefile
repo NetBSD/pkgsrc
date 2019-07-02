@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2019/06/17 15:23:34 nia Exp $
+# $NetBSD: Makefile,v 1.56 2019/07/02 08:31:02 nia Exp $
 
 DISTNAME=		openmsx-0.15.0
 CATEGORIES=		emulators
@@ -44,11 +44,8 @@ do-configure:
 .if !empty(PKGSRC_COMPILER:Mclang)
 	cd ${WRKSRC} && ${CONFIGURE_ENV} CXX=clang++ \
 	    ${GMAKE} -f build/main.mk probe
-.elif !empty(PKGSRC_COMPILER:Mgcc)
-	cd ${WRKSRC} && ${CONFIGURE_ENV} CXX=g++ \
-	    ${GMAKE} -f build/main.mk probe
 .else
-	cd ${WRKSRC} && ${CONFIGURE_ENV} \
+	cd ${WRKSRC} && ${CONFIGURE_ENV} CXX=g++ \
 	    ${GMAKE} -f build/main.mk probe
 .endif
 
