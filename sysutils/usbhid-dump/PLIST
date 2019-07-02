@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2019/07/02 13:29:33 ryoon Exp $
+bin/usbhid-dump
+man/man8/usbhid-dump.8
