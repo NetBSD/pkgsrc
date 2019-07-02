@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.149 2019/05/31 20:52:00 adam Exp $
+$NetBSD: distinfo,v 1.150 2019/07/02 17:09:25 jperkin Exp $
 
 SHA1 (node-v10.16.0.tar.gz) = 7e228646ef32c7eb4e509c220201366d6e86cc36
 RMD160 (node-v10.16.0.tar.gz) = 7a5610db052012bff785a16a522703c458f725d5
@@ -18,6 +18,7 @@ SHA1 (patch-deps_openssl_openssl-cl__no__asm.gypi) = 73368f336dbe500e45f0ba6bbb7
 SHA1 (patch-deps_openssl_openssl__asm.gypi) = b85e1f5a9f862d469afcb36ff6e1ad202bea704a
 SHA1 (patch-deps_openssl_openssl__no__asm.gypi) = b549ea34f51e26669a41a64da0db10e92f0d0a99
 SHA1 (patch-deps_openssl_openssl_crypto_init.c) = e544fb218fd927a6d7097df3718c145750198555
+SHA1 (patch-deps_openssl_openssl_crypto_rand_rand__unix.c) = ba8d4602c3386801ad8d3c33c757c69ad3d25a34
 SHA1 (patch-deps_uv_common.gypi) = d38a9c8d9e3522f15812aec2f5b1e1e636d4bab3
 SHA1 (patch-deps_uv_src_unix_netbsd.c) = 76b27ae86aa80582554ee824146ee7c42c33883b
 SHA1 (patch-deps_v8_src_arm_assembler-arm-inl.h) = 56a5d6539d31e19673ef61cc91f003109c69dc29
