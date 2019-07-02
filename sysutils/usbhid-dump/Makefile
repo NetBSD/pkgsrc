@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2019/07/02 13:29:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2019/07/02 13:38:13 ryoon Exp $
 
 DISTNAME=	usbhid-dump-1.4
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=DIGImend/}
-GITHUB_RELEASE=	1.4
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/DIGImend/usbhid-dump/
