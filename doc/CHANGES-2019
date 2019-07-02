@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2737 2019/07/02 03:54:03 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2738 2019/07/02 04:10:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4583,3 +4583,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated finance/py-braintree to 3.55.0 [adam 2019-07-02]
 	Updated sysutils/py-crontab to 2.3.7 [adam 2019-07-02]
 	Updated devel/py-Pympler to 0.7 [adam 2019-07-02]
+	Removed net/py-zsi [adam 2019-07-02]
+	Removed devel/accerciser successor devel/accerciser3 [adam 2019-07-02]
+	Removed devel/py-ipython010 successor devel/py-ipython [adam 2019-07-02]
