@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/06/13 13:04:02 nia Exp $
+# $NetBSD: Makefile,v 1.2 2019/07/02 06:03:00 nia Exp $
 
 DISTNAME=	lugaru-${VERSION}
 VERSION=	1.2
@@ -22,6 +22,7 @@ CMAKE_ARGS+=	-DSYSTEM_INSTALL=ON
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
