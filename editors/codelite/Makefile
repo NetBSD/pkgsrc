@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/04/03 00:32:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2019/07/02 13:18:03 ryoon Exp $
 
 DISTNAME=	codelite-9.1
 PKGREVISION=	17
@@ -6,7 +6,7 @@ CATEGORIES=	editors x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=eranif/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/eranif/codelite/
+HOMEPAGE=	https://codelite.org/
 COMMENT=	Cross platform C/C++/PHP and Node.js IDE written in C++
 LICENSE=	gnu-gpl-v2
 
