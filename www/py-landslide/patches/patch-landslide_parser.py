@@ -1,11 +1,10 @@
-$NetBSD: patch-src_landslide_parser.py,v 1.1 2019/05/11 22:09:21 kamil Exp $
+$NetBSD: patch-landslide_parser.py,v 1.1 2019/07/02 04:19:59 adam Exp $
 
-Cherry pick support for `markdown` v3.0+
+Fix for py-markdown >= 3.0.0
+https://github.com/adamzap/landslide/pull/211
 
- - https://github.com/adamzap/landslide/commit/e4005a418f851314ce272fbc8cb5f5e3100568ed
-
---- src/landslide/parser.py.orig	2015-03-12 03:47:59.000000000 +0000
-+++ src/landslide/parser.py
+--- landslide/parser.py.orig	2015-03-12 03:47:59.000000000 +0000
++++ landslide/parser.py
 @@ -58,7 +58,7 @@ class Parser(object):
              if text.startswith(u'\ufeff'):  # check for unicode BOM
                  text = text[1:]
