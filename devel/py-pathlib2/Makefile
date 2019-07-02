@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2019/05/02 09:16:47 adam Exp $
+# $NetBSD: Makefile,v 1.6 2019/07/02 10:01:09 adam Exp $
 
-DISTNAME=	pathlib2-2.3.3
+DISTNAME=	pathlib2-2.3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pathlib2/}
@@ -18,6 +18,9 @@ DEPENDS+=	${PYPKGPREFIX}-scandir-[0-9]*:../../devel/py-scandir
 .endif
 
 USE_LANGUAGES=	# none
+
+do-test:
+	cd ${WRKSRC} && ${PYTHONBIN} tests/test_pathlib2.py
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
