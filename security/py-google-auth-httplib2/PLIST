@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2019/07/02 12:00:13 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/google_auth_httplib2.py
+${PYSITELIB}/google_auth_httplib2.pyc
+${PYSITELIB}/google_auth_httplib2.pyo
