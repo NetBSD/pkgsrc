@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2019/05/01 20:22:02 gdt Exp $
+@comment $NetBSD: PLIST,v 1.12 2019/07/02 13:44:05 gdt Exp $
 bin/cgps
 bin/gegps
 bin/gps2udp
@@ -9,6 +9,7 @@ bin/gpsfake
 bin/gpsmon
 bin/gpspipe
 bin/gpsprof
+bin/gpsrinex
 bin/gpxlogger
 bin/lcdgps
 bin/ntpshmmon
@@ -20,8 +21,8 @@ include/gps.h
 @comment include/gpsd.h
 include/libgpsmm.h
 lib/libgps.so
-lib/libgps.so.24
-lib/libgps.so.24.0.0
+lib/libgps.so.25
+lib/libgps.so.25.0.0
 @comment lib/libgpsd.la
 lib/pkgconfig/libgps.pc
 @comment lib/pkgconfig/libgpsd.pc
@@ -45,6 +46,7 @@ man/man1/gpsfake.1
 man/man1/gpsmon.1
 man/man1/gpspipe.1
 man/man1/gpsprof.1
+man/man1/gpsrinex.1
 man/man1/gpxlogger.1
 man/man1/lcdgps.1
 man/man1/ntpshmmon.1
