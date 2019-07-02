@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 20:56:58 agc Exp $
+$NetBSD: distinfo,v 1.10 2019/07/02 13:46:29 nia Exp $
 
 SHA1 (lincity-1.12.1.tar.gz) = 280375273f6e741d707dc8e11fdedb160d230c95
 RMD160 (lincity-1.12.1.tar.gz) = 5b0a3bfa77372577ac3d9cc42e6a806f27a52ef3
 SHA512 (lincity-1.12.1.tar.gz) = a0436297154d07c3a8b5b15cbe5390e5fd13f08efe84aae3bbb2296aa7bf69c598d461272abe746e93ce34194c1e6c35861c0164b3f946c1608970c95d4cdf05
 Size (lincity-1.12.1.tar.gz) = 795709 bytes
+SHA1 (patch-mouse.c) = ddd911d32d0536d3e58417a02172cbed547d9658
 SHA1 (patch-pixmap.c) = 6d9064ba0d427ddd78d1b304748d47b7d8a168d7
 SHA1 (patch-pixmap.h) = 44fc362939408a206dd47a514c070f235a15db02

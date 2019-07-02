@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.27 2012/10/06 11:54:45 asau Exp $
+# $NetBSD: Makefile,v 1.28 2019/07/02 13:46:29 nia Exp $
 
 DISTNAME=	lincity-1.12.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lincity/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lincity.sourceforge.net/
 COMMENT=	Free clone of SimCity for X11
+LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=		gmake msgfmt
 USE_PKGLOCALEDIR=	yes
