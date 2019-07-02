@@ -1,23 +1,15 @@
-$NetBSD: patch-compat_Makefile.am,v 1.1 2015/10/25 11:00:18 wiz Exp $
+$NetBSD: patch-compat_Makefile.am,v 1.2 2019/07/02 20:52:13 nia Exp $
 
-Revert upstream commit 78d45cc159a0cf1c44feef11a2b9800d9398048e by
-Rémi Denis-Courmont <remi@remlab.net>.  Mail asking for that to
-be applied upstream was turned down:
+libcompat must be prebuilt with PIC properties in order to be linked
+into PIC libraries.
 
-The goal is and always was to link the compat library statically into the
-VLC plugins. If your OS cannot import symbols from a static library into a
-dynamic library, then you are screwed and I cannot help you with that. If
-it theoretically can, but libtool fails anyway, then I cannot help you with
-that either.
-
-
---- compat/Makefile.am.orig	2014-06-14 15:14:12.000000000 +0000
+--- compat/Makefile.am.orig	2018-03-14 22:07:38.000000000 +0000
 +++ compat/Makefile.am
 @@ -1,7 +1,7 @@
 -pkglib_LTLIBRARIES = libcompat.la
 +noinst_LTLIBRARIES = libcompat.la
  libcompat_la_SOURCES = dummy.c
- libcompat_la_LIBADD = $(LTLIBOBJS)
+ libcompat_la_LIBADD = $(LTLIBOBJS) $(LIBRT) $(LIBM)
 -libcompat_la_LDFLAGS = -no-undefined -static
 +libcompat_la_LDFLAGS = -no-undefined
  
