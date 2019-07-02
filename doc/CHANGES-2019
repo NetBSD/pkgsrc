@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2744 2019/07/02 07:52:15 wen Exp $
+$NetBSD: CHANGES-2019,v 1.2745 2019/07/02 10:08:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4593,3 +4593,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/p5-PPIx-QuoteLike to 0.007 [wen 2019-07-02]
 	Updated www/p5-Dancer2 to 0.208000 [wen 2019-07-02]
 	Updated converters/p5-JSON-PP to 4.04 [wen 2019-07-02]
+	Updated devel/py-pathlib2 to 2.3.4 [adam 2019-07-02]
+	Updated www/py-google-apitools to 0.5.30 [adam 2019-07-02]
