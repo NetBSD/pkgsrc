@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.7 2015/11/04 00:35:33 agc Exp $
-
-SHA1 (ZSI-2.0.tar.gz) = e691d9610f04afad9cf62f7990cfd3b4df47ff01
-RMD160 (ZSI-2.0.tar.gz) = 9fc0171e03f759cbab89046916d979c5505ba5b8
-SHA512 (ZSI-2.0.tar.gz) = eb1aca6ceb9e2f6c53e472f8f2aa593ace8dc5a365d21b6369520f81d8645aa7d0154a7445a048cd0618fce8cfc40092070a709d0e2025957044530525b348c3
-Size (ZSI-2.0.tar.gz) = 805956 bytes
-SHA1 (patch-aa) = 9fa3a914a5bcd2302bce33f7661fb69c0754ddcc

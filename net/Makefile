@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1257 2019/07/01 16:02:20 jaapb Exp $
+# $NetBSD: Makefile,v 1.1258 2019/07/02 03:58:14 adam Exp $
 #
 
 COMMENT=	Networking tools
@@ -732,7 +732,6 @@ SUBDIR+=	py-txtorcon
 SUBDIR+=	py-xandikos
 SUBDIR+=	py-zeep
 SUBDIR+=	py-zmq
-SUBDIR+=	py-zsi
 SUBDIR+=	pygopherd
 SUBDIR+=	qadsl
 SUBDIR+=	quagga
