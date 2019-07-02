@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2016/12/16 00:00:25 joerg Exp $
+$NetBSD: distinfo,v 1.2.24.1 2019/07/02 13:15:50 bsiegert Exp $
 
 SHA1 (newsbeuter-2.9.tar.gz) = e0d61cda874ea9b77ed27f2edfea50a6ea471894
 RMD160 (newsbeuter-2.9.tar.gz) = b93adbf5305191c40f3e4b2d770d9984bb7c32e3
@@ -9,3 +9,6 @@ SHA1 (patch-config.sh) = e5d4adf96cae46c8febf818ff03b4f598a865945
 SHA1 (patch-include_configcontainer.h) = 54c7756cf29550c60181c3cdf52e9178183b78ed
 SHA1 (patch-src_configcontainer.cpp) = 3f799235a4d36acbfa3938ed68abd48776eb143f
 SHA1 (patch-src_controller.cpp) = 927b11064deac38acbb577aa0d3f750f72c0e55a
+SHA1 (patch-src_feedhq__api.cpp) = 53d2807fc03cc048b6af928d304efcf9c6bd5c70
+SHA1 (patch-src_oldreader__api.cpp) = fccad7823870717eab2f0c87e3ab78465dbf8128
+SHA1 (patch-src_ttrss__api.cpp) = 60e0f71819c6a91d7d8ab44daf24e1df06029601
