@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2739 2019/07/02 04:31:33 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2740 2019/07/02 05:19:21 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4588,3 +4588,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed devel/py-ipython010 successor devel/py-ipython [adam 2019-07-02]
 	Updated www/py-landslide to 1.1.6 [adam 2019-07-02]
 	Updated security/py-paramiko to 2.6.0 [adam 2019-07-02]
+	Updated emulators/dosbox to 0.74.3 [nia 2019-07-02]
