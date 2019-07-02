@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.818 2019/06/13 03:29:28 jnemeth Exp $
+# $NetBSD: Makefile,v 1.819 2019/07/02 13:30:56 ryoon Exp $
 #
 
 COMMENT=	System utilities
@@ -665,6 +665,7 @@ SUBDIR+=	ups-nut
 SUBDIR+=	ups-nut-cgi
 SUBDIR+=	ups-nut-snmp
 SUBDIR+=	ups-nut-usb
+SUBDIR+=	usbhid-dump
 SUBDIR+=	usbutil
 SUBDIR+=	user_cygwin
 SUBDIR+=	user_darwin
