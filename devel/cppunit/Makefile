@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2017/04/19 12:20:08 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2019/07/02 22:25:10 sevan Exp $
 
 DISTNAME=	cppunit-1.14.0
 CATEGORIES=	devel
@@ -9,7 +9,7 @@ HOMEPAGE=	http://www.freedesktop.org/wiki/Software/cppunit
 COMMENT=	C++ unit testing framework
 LICENSE=	gnu-lgpl-v2.1
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
