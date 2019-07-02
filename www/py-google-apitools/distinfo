@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2018/10/07 11:18:46 adam Exp $
+$NetBSD: distinfo,v 1.4 2019/07/02 10:08:19 adam Exp $
 
-SHA1 (google-apitools-0.5.24.tar.gz) = 806dee29bec9856410ba930ba74075b1955f45d5
-RMD160 (google-apitools-0.5.24.tar.gz) = 7d53441af63b40d0bf8b6525df3bc4415cc62eb7
-SHA512 (google-apitools-0.5.24.tar.gz) = 4fb40d7d4ab31462becff7734e3d328577503779f1cd099e4b8f0071244e1d8380efa51555b4a0959d769743b1d0198ee74e8ee40c6fa4c0e44c4a1966b61897
-Size (google-apitools-0.5.24.tar.gz) = 238203 bytes
+SHA1 (google-apitools-0.5.30.tar.gz) = b95c4b32a8108deae3d1a649c362af56d77dc8f8
+RMD160 (google-apitools-0.5.30.tar.gz) = 09b285a99deb37af6d5ae145ceec0f568b27eb04
+SHA512 (google-apitools-0.5.30.tar.gz) = c09f1b4297b0f7d59de3c5d80b07ae76de1e192036e19bceae0ead5f8ae78c6903b71bc76b5b4d659ffbcb337ce2da43cdfae617b6e440bd7117d30ec486ffd8
+Size (google-apitools-0.5.30.tar.gz) = 171958 bytes
