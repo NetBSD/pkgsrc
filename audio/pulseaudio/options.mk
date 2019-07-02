@@ -1,11 +1,14 @@
-# $NetBSD: options.mk,v 1.11 2019/07/02 03:30:18 ryoon Exp $
+# $NetBSD: options.mk,v 1.12 2019/07/02 12:51:34 ryoon Exp $
 
 .include "../../comms/lirc/available.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pulseaudio
-PKG_SUPPORTED_OPTIONS=	avahi fftw gsettings x11 lirc
+PKG_SUPPORTED_OPTIONS=	avahi fftw gsettings x11
+.if ${LIRC_AVAILABLE} == "yes"
+PKG_SUPPORTED_OPTIONS+=	lirc
+.endif
 PKG_SUGGESTED_OPTIONS=	avahi x11
-PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
+PLIST_VARS+=		avahi fftw gsettings x11 lirc
 
 .include "../../mk/bsd.options.mk"
 
