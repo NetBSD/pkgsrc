@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/05/23 19:23:00 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2019/07/02 06:06:48 nia Exp $
 
 DISTNAME=	B-emv2.2Linux
 PKGNAME=	b-em-2.2
@@ -49,6 +49,7 @@ do-install:
 
 BUILDLINK_API_DEPENDS.allegro+=	allegro>=4.4.2nb2
 .include "../../devel/allegro/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../audio/freealut/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
