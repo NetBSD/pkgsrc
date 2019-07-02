@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/02/25 14:53:49 kamil Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/07/02 04:19:59 adam Exp $
 bin/landslide-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
@@ -28,9 +28,6 @@ ${PYSITELIB}/landslide/parser.pyo
 ${PYSITELIB}/landslide/rst.py
 ${PYSITELIB}/landslide/rst.pyc
 ${PYSITELIB}/landslide/rst.pyo
-${PYSITELIB}/landslide/tests.py
-${PYSITELIB}/landslide/tests.pyc
-${PYSITELIB}/landslide/tests.pyo
 ${PYSITELIB}/landslide/themes/default/base.html
 ${PYSITELIB}/landslide/themes/default/css/print.css
 ${PYSITELIB}/landslide/themes/default/css/screen.css
