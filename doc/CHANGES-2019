@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2759 2019/07/02 15:46:54 fcambus Exp $
+$NetBSD: CHANGES-2019,v 1.2760 2019/07/02 16:45:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4614,3 +4614,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Added sysutils/usbhid-dump version 1.4 [ryoon 2019-07-02]
 	Updated geography/gpsd to 3.19 [gdt 2019-07-02]
 	Updated graphics/ansilove to 4.0.1 [fcambus 2019-07-02]
+	Updated devel/libuv to 1.30.1 [adam 2019-07-02]
+	Updated ham/uhd to 3.14.1.0 [adam 2019-07-02]
