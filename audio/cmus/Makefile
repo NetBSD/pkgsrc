@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2019/07/02 06:15:29 nia Exp $
+# $NetBSD: Makefile,v 1.79 2019/07/02 06:23:50 nia Exp $
 
 DISTNAME=		cmus-2.8.0
 CATEGORIES=		audio
@@ -20,7 +20,6 @@ REPLACE_SH+=		cmus-status-display
 GCC_REQD+=		4.9
 
 CONFIGURE_ARGS+=	prefix=${PREFIX}
-CONFIGURE_ARGS+=	CONFIG_ALSA=n
 # not in pkgsrc yet
 CONFIGURE_ARGS+=	CONFIG_ROAR=n
 # requires systemd
