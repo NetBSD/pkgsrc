@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2763 2019/07/03 10:58:24 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2764 2019/07/03 18:19:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4619,3 +4619,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated multimedia/vlc to 3.0.7.1 [nia 2019-07-02]
 	Updated net/youtube-dl to 20190702 [leot 2019-07-03]
 	Added games/devilutionx version 0.4.0 [nia 2019-07-03]
+	Updated graphics/py-Pillow to 6.1.0 [adam 2019-07-03]
+	Updated graphics/py-matplotlib to 3.1.1 [adam 2019-07-03]
