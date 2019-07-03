@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 20:57:06 agc Exp $
+$NetBSD: distinfo,v 1.6 2019/07/03 19:02:59 nia Exp $
 
-SHA1 (tyrquake-0.61_20140630.tar.gz) = 62e4e36f193e8ce2f2d555a9ff8f156300f7762a
-RMD160 (tyrquake-0.61_20140630.tar.gz) = d5f8100ae108ae18bf898094e76f417f6f5e111f
-SHA512 (tyrquake-0.61_20140630.tar.gz) = 4664d62b3f36217039a8013f543e95ae071d27737f7417016725c237fcbf50c07af0d3a23b03d160a80c24a2c893ee0d7037052310baa5eea2473d3c8c5878ac
-Size (tyrquake-0.61_20140630.tar.gz) = 4077622 bytes
-SHA1 (patch-Makefile) = 38507b8ec0af0b929904cc2eb5894922b13fc0a6
+SHA1 (tyrquake-0.62.tar.gz) = 7d60ad70e13444d6f15e7df406a00813861cb4f8
+RMD160 (tyrquake-0.62.tar.gz) = 6412f1f6f8aa355e298d6ba17cbf86f4af996809
+SHA512 (tyrquake-0.62.tar.gz) = 16b4c5f6de2e77e09933248c030836ad07c129e8680f7f8b14e526fa865dad15cf94fce25bf2c3cc2e33da9a6ffa849475c02d0a8aa777e5037befd468d1ee4f
+Size (tyrquake-0.62.tar.gz) = 948269 bytes
+SHA1 (patch-Makefile) = 58cd46fcd266d7d766cf3f166c19dc60b1d93e72
