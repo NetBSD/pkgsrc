@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/01/22 10:29:46 adam Exp $
+# $NetBSD: Makefile,v 1.14 2019/07/03 07:19:03 nia Exp $
 
 DISTNAME=	pydoctor-16.3.0
 PKGNAME=	${DISTNAME:S/py/${PYPKGPREFIX}-/}
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydoctor/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/twisted/pydoctor
+HOMEPAGE=	https://github.com/twisted/pydoctor
 COMMENT=	API doc generator
 LICENSE=	mit
 
