@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.435 2019/06/30 23:33:40 nia Exp $
+# $NetBSD: Makefile,v 1.436 2019/07/03 10:58:12 nia Exp $
 #
 
 COMMENT=	Games
@@ -82,6 +82,7 @@ SUBDIR+=	crossfire-server
 SUBDIR+=	d2x
 SUBDIR+=	dd2
 SUBDIR+=	defendguin
+SUBDIR+=	devilutionx
 SUBDIR+=	digger
 SUBDIR+=	dipmap
 SUBDIR+=	doom1
