@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2019/06/09 22:10:45 nia Exp $
+# $NetBSD: Makefile.common,v 1.30 2019/07/03 06:09:22 triaxx Exp $
 #
 # when updating to a new release, update ABI depends in
 # the buildlink3.mk file as well, since the plugins' version
@@ -26,6 +26,8 @@ PATCHDIR=	${.CURDIR}/../../mail/dovecot2/patches
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config rpcgen
 GNU_CONFIGURE=		yes
+
+BUILD_DEFS+=		VARBASE
 
 .include "../../mk/bsd.prefs.mk"
 
