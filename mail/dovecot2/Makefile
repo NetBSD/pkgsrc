@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2018/10/23 16:29:18 adam Exp $
+# $NetBSD: Makefile,v 1.98 2019/07/03 06:09:22 triaxx Exp $
 
 .include "../../mail/dovecot2/Makefile.common"
 
@@ -31,8 +31,6 @@ INSTALLATION_DIRS+=	libexec/dovecot sbin share/doc/dovecot
 INSTALLATION_DIRS+=	share/examples/dovecot share/examples/dovecot/conf.d
 OWN_DIRS=		${PKG_SYSCONFDIR}/dovecot/
 OWN_DIRS+=		${PKG_SYSCONFDIR}/dovecot/conf.d
-
-BUILD_DEFS+=		VARBASE
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/dovecot-openssl.cnf ${DESTDIR}${EGDIR}
