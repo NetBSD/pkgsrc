@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2013/05/23 19:45:50 adam Exp $
+$NetBSD: patch-aa,v 1.7 2019/07/03 06:09:22 triaxx Exp $
+
+* Make the example directory pkgsrc compliant.
 
 --- doc/example-config/Makefile.in.orig	2013-05-19 23:04:29.000000000 +0000
 +++ doc/example-config/Makefile.in
