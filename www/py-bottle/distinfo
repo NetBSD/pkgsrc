@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2018/12/22 22:48:35 adam Exp $
+$NetBSD: distinfo,v 1.8 2019/07/03 19:52:53 adam Exp $
 
-SHA1 (bottle-0.12.16.tar.gz) = 377f5f2e38930f4386c41388ffe69113d98ba560
-RMD160 (bottle-0.12.16.tar.gz) = 3ba0f8d0b0d73a96b4e161d684a975f6bc287aa0
-SHA512 (bottle-0.12.16.tar.gz) = 3c167f95902522c8f264e8478403da8e9b8cd84594318c4a773d38b7548b5ba95c99ef922033f6885cdc044b31f9c2e2f7ed263886637ce2a048e99c0c6e1403
-Size (bottle-0.12.16.tar.gz) = 72248 bytes
+SHA1 (bottle-0.12.17.tar.gz) = ee3cb96241ebc69b11171ea53cd0d20292c8d462
+RMD160 (bottle-0.12.17.tar.gz) = 54922ff4be3b2964f0e67234d49cb7c8085335f4
+SHA512 (bottle-0.12.17.tar.gz) = 349231666b41d10f2af7ce834cd64aa8dbe187aee05699a83ab5b7810ffe28994392bee2149d0f134087df24a5b0632ccfefeb3e1152773034f68c583fe520c3
+Size (bottle-0.12.17.tar.gz) = 72283 bytes
