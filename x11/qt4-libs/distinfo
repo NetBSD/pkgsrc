@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.114 2018/01/17 18:37:34 markd Exp $
+$NetBSD: distinfo,v 1.115 2019/07/03 10:04:23 markd Exp $
 
 SHA1 (qt-everywhere-opensource-src-4.8.7.tar.gz) = 76aef40335c0701e5be7bb3a9101df5d22fe3666
 RMD160 (qt-everywhere-opensource-src-4.8.7.tar.gz) = afb5e5a99388e6429faca59cb5000054feffd166
@@ -73,6 +73,7 @@ SHA1 (patch-src_3rdparty_webkit_Source_WebCore_platform_graphics_filters_arm_FEG
 SHA1 (patch-src_3rdparty_webkit_Source_WebCore_platform_graphics_filters_arm_FELightingNEON.cpp) = a0a3d9d066aa6ae3c42cee198287b10e46e7f25d
 SHA1 (patch-src_3rdparty_webkit_Source_WebCore_platform_qt_PlatformKeyboardEventQt.cpp) = b28cf71983f8e71b82b1c634a10b3898ca13ede5
 SHA1 (patch-src_3rdparty_webkit_Source_WebKit2_DerivedSources.pro) = 7ae5feb79efd0836b74000e183b96f5775fd3043
+SHA1 (patch-src_corelib_global_qglobal.h) = 508cc9ae19eaa3144bfd676822a22add6a2e4127
 SHA1 (patch-src_corelib_io_io.pri) = cde98927b524c92fae1e053c2359e77bde2c240a
 SHA1 (patch-src_corelib_io_qfilesystemwatcher.cpp) = bb16b95d20286b1aa069dc25843d7e0067cc0268
 SHA1 (patch-src_corelib_thread_qthread__unix.cpp) = 67fbdc29d6da0aa7309a7aeb653a5abf10bd4d78
