@@ -1,20 +1,17 @@
-# $NetBSD: Makefile,v 1.10 2018/07/04 13:40:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2019/07/03 19:02:59 nia Exp $
 
-DISTNAME=	tyrquake-0.61_20140630
-PKGREVISION=	2
+DISTNAME=	tyrquake-0.62
 CATEGORIES=	games x11
-#MASTER_SITES=	https://disenchant.net/files/engine/
-MASTER_SITES=	http://ftp.NetBSD.org/pub/NetBSD/misc/snj/tyrquake/
+MASTER_SITES=	https://disenchant.net/files/engine/
 
 MAINTAINER=	snj@NetBSD.org
 HOMEPAGE=	https://disenchant.net/tyrquake/
 COMMENT=	Conservative branch of Quake
-
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake
 
-WRKSRC=		${WRKDIR}/tyrquake
+WRKSRC=		${WRKDIR}/tyrutils-${PKGVERSION_NOREV}
 
 LDFLAGS+=	${LIBOSSAUDIO}
 
@@ -35,5 +32,4 @@ do-install:
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
