@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.51 2019/03/27 11:05:57 markd Exp $
+$NetBSD: distinfo,v 1.52 2019/07/03 10:21:08 markd Exp $
 
 SHA1 (blender-2.79b.tar.gz) = 4fd307ccfd1d6df5cc1898009712d4b1ae35430f
 RMD160 (blender-2.79b.tar.gz) = 787fc2ee718157aa95ffcced4935355d3086ca0d
@@ -10,6 +10,7 @@ SHA1 (patch-extern_glog_src_config.h) = 9666c5d925cfeebeef2f178418c9fc2403831da1
 SHA1 (patch-extern_glog_src_config__netbsd.h) = be4727135b8fe1ddbcb5ad52f8230aec51a1a909
 SHA1 (patch-extern_glog_src_utilities.h) = c78ef191ab6ec7e65837b88468a7e1b8eaf325d3
 SHA1 (patch-intern_cycles_util_util_sseb.h) = 5d5bf8d71a443b63959ec79072e458f1a43cde94
+SHA1 (patch-intern_elbeem_intern_solver_main.cpp) = 2dca2892e5f71742785fc34c20738c6b61dbfa8b
 SHA1 (patch-intern_guardedalloc_intern_mallocn__intern.h) = c7bc89af1c03b50ae0bd8af5aacc25cd82dfcbfc
 SHA1 (patch-intern_itasc_kdl_tree.hpp) = b0c6640853ace08c07b443ff8f18290367f1d8da
 SHA1 (patch-source_blender_imbuf_intern_dds_DirectDrawSurface.cpp) = b38f61900aa30b02479c7397062d71d295932847
