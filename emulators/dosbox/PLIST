@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:51:03 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/07/03 09:06:37 nia Exp $
 bin/dosbox
 man/man1/dosbox.1
+share/applications/dosbox.desktop
 share/doc/dosbox/README
+share/icons/hicolor/16x16/apps/dosbox.png
+share/icons/hicolor/24x24/apps/dosbox.png
+share/icons/hicolor/256x256/apps/dosbox.png
+share/icons/hicolor/32x32/apps/dosbox.png
+share/icons/hicolor/48x48/apps/dosbox.png
