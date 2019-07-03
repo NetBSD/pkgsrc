@@ -1,12 +1,12 @@
-$NetBSD: patch-Makefile,v 1.1 2015/02/10 22:10:33 snj Exp $
+$NetBSD: patch-Makefile,v 1.2 2019/07/03 19:02:59 nia Exp $
 
 - add DragonFly support
 - add Solaris support
 - honor pkgsrc LDFLAGS
 - don't invoke git to obtain version info
 
---- Makefile.orig	2015-02-10 13:43:40.000000000 -0800
-+++ Makefile	2015-02-10 14:00:56.000000000 -0800
+--- Makefile.orig	2019-06-09 11:15:40.000000000 +0000
++++ Makefile
 @@ -28,7 +28,7 @@ TARGET_UNIX      ?= $(if $(filter UNIX,$
  # ============================================================================
  
@@ -16,16 +16,16 @@ $NetBSD: patch-Makefile,v 1.1 2015/02/10 22:10:33 snj Exp $
  TYR_VERSION := $(if $(TYR_GIT),$(TYR_GIT),$(TYR_RELEASE))
  TYR_VERSION_NUM ?= $(patsubst v%,%,$(TYR_VERSION))
  
-@@ -52,7 +52,7 @@ TOPDIR := $(shell pwd)
- ifneq (,$(findstring MINGW32,$(SYSNAME)))
- HOST_OS = WIN32
+@@ -55,7 +55,7 @@ else
+ ifneq (,$(findstring MINGW64,$(SYSNAME)))
+ HOST_OS = WIN64
  else
 -ifneq (,$(findstring $(SYSNAME),FreeBSD NetBSD))
 +ifneq (,$(findstring $(SYSNAME),FreeBSD NetBSD DragonFly))
  HOST_OS = UNIX
  HOST_UNIX = bsd
  else
-@@ -68,12 +68,19 @@ ifneq (,$(findstring $(SYSNAME),Linux))
+@@ -71,6 +71,12 @@ ifneq (,$(findstring $(SYSNAME),Linux))
  HOST_OS = UNIX
  HOST_UNIX = linux
  else
@@ -38,6 +38,7 @@ $NetBSD: patch-Makefile,v 1.1 2015/02/10 22:10:33 snj Exp $
  $(error OS type not detected.)
  endif
  endif
+@@ -78,6 +84,7 @@ endif
  endif
  endif
  endif
@@ -45,16 +46,16 @@ $NetBSD: patch-Makefile,v 1.1 2015/02/10 22:10:33 snj Exp $
  
  # --------------------------------------------------------------------
  # Setup driver options, choosing sensible defaults based on target OS
-@@ -412,7 +419,7 @@ endef
+@@ -416,7 +423,7 @@ endef
  endif
  endif
  
 -git_date = $(shell git log -1 --date=short --format="%ad" -- $< 2>/dev/null)
-+git_date = 2014-06-30
++git_date = 2019-06-09
  doc_version = $(git_date) $(TYR_VERSION)
  
  quiet_cmd_man2man = '  MAN2MAN  $@'
-@@ -988,23 +995,23 @@ ALL_QWSV_LFLAGS += $(patsubst %,-l%,$(AL
+@@ -989,23 +996,23 @@ ALL_QWSV_LFLAGS += $(patsubst %,-l%,$(AL
  # ============================================================================
  
  $(BIN_DIR)/tyr-quake$(EXT):	$(patsubst %,$(NQSWDIR)/%,$(ALL_NQSW_OBJS))
