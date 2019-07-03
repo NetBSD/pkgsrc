@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2018/09/23 14:57:48 taca Exp $
+# $NetBSD: Makefile,v 1.18 2019/07/03 07:28:23 nia Exp $
 
 DISTNAME=	Net_Sieve-1.4.4
 CATEGORIES+=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pear.php.net/package/Net_Sieve/
+HOMEPAGE=	https://pear.php.net/package/Net_Sieve/
 COMMENT=	PHP classes that handles talking to timsieved
 LICENSE=	modified-bsd
 
