@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/01/07 12:56:22 adam Exp $
+# $NetBSD: Makefile,v 1.2 2019/07/03 07:19:04 nia Exp $
 
 DISTNAME=	django-timezone-field-3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-timezone-field/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/mfogel/django-timezone-field
+HOMEPAGE=	https://github.com/mfogel/django-timezone-field
 COMMENT=	Database and form fields for pytz timezone objects
 LICENSE=	modified-bsd
 
