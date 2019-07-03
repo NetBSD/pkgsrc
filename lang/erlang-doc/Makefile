@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/01/23 12:46:22 nia Exp $
+# $NetBSD: Makefile,v 1.15 2019/07/03 07:26:36 nia Exp $
 
 DISTNAME=		otp_doc_html_${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}
 PKGNAME=		${DISTNAME:S/otp_doc_html_/erlang-doc-/}
@@ -6,7 +6,7 @@ CATEGORIES=		lang
 MASTER_SITES=		http://www.erlang.org/download/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.erlang.org/
+HOMEPAGE=		https://www.erlang.org/
 COMMENT=		Documentation for Erlang, a concurrent functional programming language
 
 DIST_SUBDIR=		erlang
