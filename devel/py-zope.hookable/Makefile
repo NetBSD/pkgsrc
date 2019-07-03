@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/10/28 15:17:47 taca Exp $
+# $NetBSD: Makefile,v 1.2 2019/07/03 07:19:04 nia Exp $
 
 DISTNAME=	zope.hookable-4.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.hookable/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/zopefoundation/zope.hookable
+HOMEPAGE=	https://github.com/zopefoundation/zope.hookable
 COMMENT=	Zope hookable
 LICENSE=	zpl-2.1
 
