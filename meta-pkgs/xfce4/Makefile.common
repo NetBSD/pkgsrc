@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.63 2018/05/18 17:09:22 youri Exp $
+# $NetBSD: Makefile.common,v 1.64 2019/07/03 07:34:40 nia Exp $
 #
 # used by archivers/xfce4-thunar-archive/Makefile
 # used by audio/xfce4-mixer/Makefile
@@ -68,7 +68,7 @@ MASTER_SITES=		http://archive.xfce.org/xfce/4.12/src/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		youri@NetBSD.org
-HOMEPAGE=		http://www.xfce.org/
+HOMEPAGE=		https://www.xfce.org/
 LICENSE=		gnu-gpl-v2
 
 XFCE4_VERSION=		4.12.0
