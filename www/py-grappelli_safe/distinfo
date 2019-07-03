@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/10/26 09:24:14 adam Exp $
+$NetBSD: distinfo,v 1.3 2019/07/03 19:55:56 adam Exp $
 
-SHA1 (grappelli_safe-0.5.1.tar.gz) = 0f2c6ae6301fbc790789d79256cb9506edb6e695
-RMD160 (grappelli_safe-0.5.1.tar.gz) = fa0d7912fc558bf5354ca19ad9bc0e12281d7821
-SHA512 (grappelli_safe-0.5.1.tar.gz) = b36a0a7b091d5813b586030617e40b62c14ac0dff5c38e74d09830765a57327eb24aaf13e53ea8305f2e10d2d0c46f4860dc378a80ba9288bad8bd6f1af81294
-Size (grappelli_safe-0.5.1.tar.gz) = 82158 bytes
+SHA1 (grappelli_safe-0.5.2.tar.gz) = b459533803abf9c8314ecf722db00bf4ee3d5321
+RMD160 (grappelli_safe-0.5.2.tar.gz) = 75d37f914ed30cebfb106412ab5abb25365d794a
+SHA512 (grappelli_safe-0.5.2.tar.gz) = 368d62e735e2efc9480b44c63d1a07bede62cbc86448c4afcd5b4ea1cd963623d21581a6cfdfb5b753ebf90e10c605183c77d48ca18c773b2640abe8b1895f6e
+Size (grappelli_safe-0.5.2.tar.gz) = 82140 bytes
