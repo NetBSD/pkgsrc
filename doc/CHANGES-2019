@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2766 2019/07/03 19:15:00 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2767 2019/07/03 19:41:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4623,3 +4623,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/py-matplotlib to 3.1.1 [adam 2019-07-03]
 	Updated games/tyrquake to 0.62 [nia 2019-07-03]
 	Updated games/quakespasm to 0.93.1 [nia 2019-07-03]
+	Updated textproc/py-validators to 0.13.0 [adam 2019-07-03]
+	Updated lang/py-mypy to 0.711 [adam 2019-07-03]
