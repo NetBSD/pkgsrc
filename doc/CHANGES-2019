@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2768 2019/07/03 20:00:10 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2769 2019/07/03 20:11:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4629,3 +4629,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-bottle to 0.12.17 [adam 2019-07-03]
 	Updated www/py-grappelli_safe to 0.5.2 [adam 2019-07-03]
 	Updated www/py-cherrypy to 18.1.2 [adam 2019-07-03]
+	Updated net/grpc to 1.22.0 [adam 2019-07-03]
+	Updated net/py-grpcio to 1.22.0 [adam 2019-07-03]
+	Updated lang/python36 to 3.6.9 [adam 2019-07-03]
