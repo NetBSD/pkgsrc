@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2019/04/29 10:27:33 adam Exp $
+# $NetBSD: Makefile,v 1.17 2019/07/03 20:24:24 adam Exp $
 
-DISTNAME=	alembic-1.0.10
+DISTNAME=	alembic-1.0.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/alembic/}
@@ -21,10 +21,10 @@ USE_LANGUAGES=	# none
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} alembic alembic-${PYVERSSUFFIX} || ${TRUE}
+	${MV} alembic alembic-${PYVERSSUFFIX} || ${TRUE}
 
 do-test:
-	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
+	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
