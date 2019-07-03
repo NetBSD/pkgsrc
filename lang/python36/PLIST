@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2019/04/25 15:59:54 roy Exp $
+@comment $NetBSD: PLIST,v 1.15 2019/07/03 20:10:41 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -3070,6 +3070,7 @@ lib/python${PY_VER_SUFFIX}/test/support/script_helper.pyo
 lib/python${PY_VER_SUFFIX}/test/support/testresult.py
 lib/python${PY_VER_SUFFIX}/test/support/testresult.pyc
 lib/python${PY_VER_SUFFIX}/test/support/testresult.pyo
+lib/python${PY_VER_SUFFIX}/test/talos-2019-0758.pem
 lib/python${PY_VER_SUFFIX}/test/test___all__.py
 lib/python${PY_VER_SUFFIX}/test/test___all__.pyc
 lib/python${PY_VER_SUFFIX}/test/test___all__.pyo
