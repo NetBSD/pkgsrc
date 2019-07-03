@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=DevilutionX
+Comment=Port of the RPG Diablo for modern operating systems
+Icon=devilutionx
+Exec=devilutionx
+Terminal=false
+Categories=Game;RolePlaying;
