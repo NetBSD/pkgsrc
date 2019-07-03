@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2019/03/20 01:25:48 gutteridge Exp $
+# $NetBSD: Makefile,v 1.94 2019/07/03 07:26:36 nia Exp $
 
 DISTNAME=		OTP-${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}${!empty(DIST_VERSION_PATCH):?.:}${DIST_VERSION_PATCH}
 PKGNAME=		${DISTNAME:S/OTP-/erlang-/}
@@ -6,7 +6,7 @@ CATEGORIES=		lang
 MASTER_SITES=		https://github.com/erlang/otp/archive/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.erlang.org/
+HOMEPAGE=		https://www.erlang.org/
 COMMENT=		Concurrent functional programming language
 LICENSE=		apache-2.0
 
