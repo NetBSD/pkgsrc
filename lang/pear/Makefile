@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2019/05/23 19:23:03 rillig Exp $
+# $NetBSD: Makefile,v 1.49 2019/07/03 07:28:22 nia Exp $
 #
 
 DISTNAME=	PEAR-1.10.9
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tgz
 DIST_SUBDIR=	pear20151210
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pear.php.net/
+HOMEPAGE=	https://pear.php.net/
 COMMENT=	PEAR Base System for PHP
 LICENSE=	2-clause-bsd
 
