@@ -1,8 +1,8 @@
-$NetBSD: patch-setup.py,v 1.18 2019/04/03 08:05:44 adam Exp $
+$NetBSD: patch-setup.py,v 1.19 2019/07/03 17:19:01 adam Exp $
 
 Disable mp_compile hack; it has problems with native parallel building.
 
---- setup.py.orig	2019-04-02 04:19:42.000000000 +0000
+--- setup.py.orig	2019-07-02 19:13:39.000000000 +0000
 +++ setup.py
 @@ -22,7 +22,6 @@ from setuptools import Extension, setup
  
@@ -12,7 +12,7 @@ Disable mp_compile hack; it has problems with native parallel building.
  
  
  if sys.platform == "win32" and sys.version_info >= (3, 8):
-@@ -265,12 +264,6 @@ class pil_build_ext(build_ext):
+@@ -321,12 +320,6 @@ class pil_build_ext(build_ext):
          if self.debug:
              global DEBUG
              DEBUG = True
@@ -23,5 +23,5 @@ Disable mp_compile hack; it has problems with native parallel building.
 -            # number of jobs.
 -            self.parallel = mp_compile.MAX_PROCS
          for x in self.feature:
-             if getattr(self, 'disable_%s' % x):
+             if getattr(self, "disable_%s" % x):
                  setattr(self.feature, x, False)

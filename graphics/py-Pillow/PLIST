@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2019/04/03 08:05:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2019/07/03 17:19:00 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -262,6 +262,9 @@ ${PYSITELIB}/PIL/XpmImagePlugin.pyo
 ${PYSITELIB}/PIL/__init__.py
 ${PYSITELIB}/PIL/__init__.pyc
 ${PYSITELIB}/PIL/__init__.pyo
+${PYSITELIB}/PIL/__main__.py
+${PYSITELIB}/PIL/__main__.pyc
+${PYSITELIB}/PIL/__main__.pyo
 ${PYSITELIB}/PIL/_binary.py
 ${PYSITELIB}/PIL/_binary.pyc
 ${PYSITELIB}/PIL/_binary.pyo
