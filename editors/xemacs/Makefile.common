@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2019/06/08 10:41:00 rillig Exp $
+# $NetBSD: Makefile.common,v 1.30 2019/07/03 10:06:50 hauke Exp $
 #
 # used by editors/xemacs-nox11/Makefile
 # used by editors/xemacs/Makefile
@@ -41,6 +41,7 @@ CONFIGURE_ARGS+=	--infopath=${PREFIX}/${PKGINFODIR}
 CONFIGURE_ARGS+=	--with-clash-detection
 CONFIGURE_ARGS+=	--with-mule=yes
 CONFIGURE_ARGS+=	--with-msw=no
+CONFIGURE_ARGS+=	--with-postgresql=no
 CONFIGURE_ARGS+=	--pdump
 CONFIGURE_ARGS+=	--with-system-malloc
 CFLAGS+=		-Dunix
