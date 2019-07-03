@@ -1,0 +1,13 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2019/07/03 10:58:12 nia Exp $
+
+DevilutionX requires DIABDAT.MPQ from an original copy of Diablo I.
+
+Copy it to $HOME/.local/share/diasurgical/devilution.
+
+Make sure the resulting filename is all lowercase, e.g. "diabdat.mpq":
+
+$ mkdir -p ~/.local/share/diasurgical/devilution
+$ cp DIABDAT.MPQ ~/.local/share/diasurgical/devilution/diabdat.mpq
+
+===========================================================================

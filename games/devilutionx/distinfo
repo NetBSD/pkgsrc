@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/07/03 10:58:12 nia Exp $
+
+SHA1 (devilutonx-0.4.0.tar.gz) = d5d71cf752dc0b5c89f9827b52f1567cb5cfb8f4
+RMD160 (devilutonx-0.4.0.tar.gz) = 0b647b8ee4641d9af000d4d54e1008a506a9fc66
+SHA512 (devilutonx-0.4.0.tar.gz) = ba8f650f8dd00e3b08f6ac082566351c8f3b6162d7bfa2fdf3464b38c201b08677d2f6151f2272e1d73eb972b8babc49b38364523d10763eb179f6b682641443
+Size (devilutonx-0.4.0.tar.gz) = 1351201 bytes
