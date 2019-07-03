@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/10/28 15:13:13 taca Exp $
+# $NetBSD: Makefile,v 1.2 2019/07/03 07:19:03 nia Exp $
 
 DISTNAME=	zope.deferredimport-4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.deferredimport/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/zopefoundation/zope.deferredimport
+HOMEPAGE=	https://github.com/zopefoundation/zope.deferredimport
 COMMENT=	Imports names that will only be resolved when used in the code
 LICENSE=	zpl-2.1
 
