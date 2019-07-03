@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/11/14 12:54:55 adam Exp $
+# $NetBSD: Makefile,v 1.22 2019/07/03 20:48:26 sevan Exp $
 
 DISTNAME=	re2c-1.1.1
 CATEGORIES=	devel
@@ -11,7 +11,7 @@ COMMENT=	Deterministic Finite State Automaton generator
 LICENSE=	public-domain
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake
+USE_TOOLS+=		bison gmake
 GNU_CONFIGURE=		yes
 TEST_TARGET=		check
 
