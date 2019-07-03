@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/08/28 09:58:54 adam Exp $
+# $NetBSD: Makefile,v 1.2 2019/07/03 07:19:03 nia Exp $
 
 DISTNAME=	behave-1.2.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/behave/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/behave/behave
+HOMEPAGE=	https://github.com/behave/behave
 COMMENT=	Behaviour-driven development
 LICENSE=	modified-bsd
 
