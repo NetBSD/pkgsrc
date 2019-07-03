@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2018/10/26 09:24:14 adam Exp $
+# $NetBSD: Makefile,v 1.3 2019/07/03 19:55:56 adam Exp $
 
-DISTNAME=	grappelli_safe-0.5.1
+DISTNAME=	grappelli_safe-0.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/grappelli_safe/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/stephenmcd/grappelli-safe/
+HOMEPAGE=	https://github.com/stephenmcd/grappelli-safe
 COMMENT=	Permanent fork of Grapelli admin skin for Mezzanine
 LICENSE=	modified-bsd
 
