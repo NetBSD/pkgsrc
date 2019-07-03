@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/03/06 10:38:22 jaapb Exp $
+# $NetBSD: Makefile,v 1.7 2019/07/03 07:19:04 nia Exp $
 
 GITHUB_PROJECT=	opaline
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -8,7 +8,7 @@ CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jaapb/}
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	http://github.com/jaapb/opaline
+HOMEPAGE=	https://github.com/jaapb/opaline
 COMMENT=	Lightweight OCaml/opam installer
 LICENSE=	mit
 
