@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/12/09 16:18:25 taca Exp $
+# $NetBSD: Makefile,v 1.10 2019/07/03 07:30:50 nia Exp $
 
 DISTNAME=	${PHP_PKG_PREFIX}-extensions-${PHP_VERSION}
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.php.net/
+HOMEPAGE=	https://www.php.net/
 COMMENT=	"meta-package" for the PHP 5.6 HTML-embedded scripting language
 
 DEPENDS+=	php>=${PHP_VERSION}<${NEXT_VERS}:${PHPPKGSRCDIR}
