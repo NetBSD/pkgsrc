@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2764 2019/07/03 18:19:04 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2765 2019/07/03 19:04:12 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4621,3 +4621,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added games/devilutionx version 0.4.0 [nia 2019-07-03]
 	Updated graphics/py-Pillow to 6.1.0 [adam 2019-07-03]
 	Updated graphics/py-matplotlib to 3.1.1 [adam 2019-07-03]
+	Updated games/tyrquake to 0.62 [nia 2019-07-03]
