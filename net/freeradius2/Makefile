@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2018/08/22 09:45:52 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2019/07/04 12:26:48 adam Exp $
 
-DISTNAME=	freeradius-server-${RADVER}
+DISTNAME=	freeradius-server-2.2.10
 PKGNAME=	${DISTNAME:S/-server//}
-PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.freeradius.org/pub/freeradius/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,15 +17,12 @@ USE_TOOLS+=		gmake perl:run
 USE_LANGUAGES+=		c c++
 USE_LIBTOOL=		yes
 USE_OLD_DES_API=	yes
-MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
 
 BUILD_DEFS+=		VARBASE
 FILES_SUBST+=		RADIUS_USER=${RADIUS_USER}
 FILES_SUBST+=		RADIUS_GROUP=${RADIUS_GROUP}
-PLIST_SUBST+=		RADVER=${RADVER}
-PLIST_SUBST+=		RADVERALT=${RADVERALT}
 MESSAGE_SRC+=		${PKGDIR}/MESSAGE
 MESSAGE_SUBST+=		CHOWN=${CHOWN:Q} CHMOD=${CHMOD:Q} VARBASE=${VARBASE}
 MESSAGE_SUBST+=		RADIUS_USER=${RADIUS_USER} XARGS=${XARGS:Q}
@@ -47,8 +43,6 @@ OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd \
 OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd/radacct \
 			${RADIUS_USER} ${RADIUS_GROUP} 0750
 
-RADVER=			2.2.9
-RADVERALT=		020209
 EGDIR=			${PREFIX}/share/examples/freeradius
 
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7
@@ -159,8 +153,8 @@ post-install:
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/src/modules/rlm_perl/example.pl ${DESTDIR}${EGDIR}
 
-.include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
