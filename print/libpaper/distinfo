@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2019/02/13 20:21:37 wiz Exp $
+$NetBSD: distinfo,v 1.9 2019/07/04 13:34:57 ryoon Exp $
 
-SHA1 (libpaper_1.1.26.tar.gz) = eb8b0b0c5f6c526911f56158a6a8cd98bc6a6089
-RMD160 (libpaper_1.1.26.tar.gz) = b2650ec593455916fc8fa635e1bcbeb485f26e74
-SHA512 (libpaper_1.1.26.tar.gz) = 6c54d28004c2dc95cfcc58467026d87b1590d35c9acf09d85568be0c558a04c183e0657afe3278dc894825428372ae60ccf417ece955b7d358fd9ce7b3d78b76
-Size (libpaper_1.1.26.tar.gz) = 42304 bytes
+SHA1 (libpaper_1.1.28.tar.gz) = c6583fbdaebe091d11d81c4e59514e58996f22ba
+RMD160 (libpaper_1.1.28.tar.gz) = 36b669b51e81e1483232f73726952491304ab34a
+SHA512 (libpaper_1.1.28.tar.gz) = 3bf6ebb0af89931d2f72ea4a09a7fa958b2facda5f238983ec7bac39652e08614b33f0de3af74a03457b2a4203eee4950bf18a4b726e79aa64093ace6a1fb0bc
+Size (libpaper_1.1.28.tar.gz) = 42356 bytes

@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2019/02/13 20:21:37 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/07/04 13:34:57 ryoon Exp $
 
-DISTNAME=	libpaper_1.1.26
+DISTNAME=	libpaper_1.1.28
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/libp/libpaper/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://packages.debian.org/unstable/libs/libpaper1
+HOMEPAGE=	https://packages.qa.debian.org/libp/libpaper.html
 COMMENT=	Paper size handling library
 LICENSE=	gnu-gpl-v2
 
