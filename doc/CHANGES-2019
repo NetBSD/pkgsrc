@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2775 2019/07/04 12:09:35 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2776 2019/07/04 12:42:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4646,3 +4646,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/freeradius to 3.0.19 [adam 2019-07-04]
 	Updated lang/py-uncompyle6 to 3.3.5 [adam 2019-07-04]
 	Updated fonts/py-fonttools to 3.43.1 [adam 2019-07-04]
+	Updated net/freeradius2 to 2.2.10 [adam 2019-07-04]
