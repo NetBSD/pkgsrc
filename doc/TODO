@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19102 2019/07/04 07:30:33 adam Exp $
+$NetBSD: TODO,v 1.19103 2019/07/04 13:16:47 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -454,7 +454,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
 	o catdoc-tk-1.1
-	o cbindgen-0.9.0
 	o cddbd-1.5.2
 	o cdrkit-1.1.10
 	o cfengine3-3.10.2
