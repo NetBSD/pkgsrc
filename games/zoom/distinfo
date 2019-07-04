@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 20:57:10 agc Exp $
+$NetBSD: distinfo,v 1.9 2019/07/04 10:17:34 nia Exp $
 
 SHA1 (zoom-1.1.5.tar.gz) = 67bebc7b14e1380a848277aa582921ceac5bfb1e
 RMD160 (zoom-1.1.5.tar.gz) = 9636dacc3a3f29d3bbb5a218eb579b13d90703dc
@@ -6,4 +6,5 @@ SHA512 (zoom-1.1.5.tar.gz) = 800b29e3517ce39000d8c05148d6af0d7c8666db20a06867e35
 Size (zoom-1.1.5.tar.gz) = 2185098 bytes
 SHA1 (patch-ab) = c0953b6dcbbb41f7941b06ac86b22b62e225b90e
 SHA1 (patch-configure) = 714c33ba4b06654bfbab9c3b5b2e3ad501db5466
+SHA1 (patch-src_interp.c) = d1fd852dc03b3772bb52de86709303831883f48d
 SHA1 (patch-src_tokenise.c) = 878fb78143499ee3116f218db3749464aafbc2e5
