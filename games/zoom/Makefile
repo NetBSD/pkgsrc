@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.40 2018/08/22 09:45:09 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2019/07/04 10:05:33 nia Exp $
 
 DISTNAME=	zoom-1.1.5
 PKGREVISION=	4
 CATEGORIES=	games
-MASTER_SITES=	http://www.logicalshift.co.uk/unix/zoom/
+MASTER_SITES=	https://www.logicalshift.co.uk/unix/zoom/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.logicalshift.demon.co.uk/unix/zoom/
+HOMEPAGE=		https://www.logicalshift.co.uk/unix/zoom/
 COMMENT=		Plays Infocom-compatible games, with graphics support
-LICENSE=		gnu-gpl-v1
+LICENSE=		gnu-lgpl-v2.1
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
