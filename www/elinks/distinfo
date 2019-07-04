@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2015/11/04 02:46:52 agc Exp $
+$NetBSD: distinfo,v 1.30 2019/07/04 12:15:04 nia Exp $
 
 SHA1 (elinks-0.12pre6.tar.bz2) = 3517795e8a390cb36ca249a5be6514b9784520a5
 RMD160 (elinks-0.12pre6.tar.bz2) = 99d92dde61ed9c626f10d3d431ed4d325b2e33f6
@@ -11,3 +11,5 @@ SHA1 (patch-ad) = 089e2455c64cbfb48907693a653e76cc97961622
 SHA1 (patch-ae) = a46c419ec3d96825958903459708b8b131862053
 SHA1 (patch-ag) = c31bede62a6baa1d43ab1dff639f9d7265d2bece
 SHA1 (patch-ah) = 25357fd0b0aa08f7ca55f3f8c262d2d1a4874710
+SHA1 (patch-src_network_ssl_socket.c) = 8929de875b61dc0c343764f01b9f587b0f3760f9
+SHA1 (patch-src_network_ssl_ssl.c) = e74b65f4b866ec0ce1ec290d012cb17cf076fbb1
