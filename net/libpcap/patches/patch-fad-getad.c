@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.7 2015/03/11 21:05:09 tnn Exp $
+$NetBSD: patch-fad-getad.c,v 1.1 2019/07/04 07:17:25 adam Exp $
 
-* Re-order includes to avoid bpf_program re-definition.
+Re-order includes to avoid bpf_program re-definition.
 
 --- fad-getad.c.orig	2014-11-13 08:58:52.000000000 +0000
 +++ fad-getad.c
