@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2018/04/09 15:03:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.28 2019/07/04 13:26:33 nia Exp $
 #
 
 DISTNAME=		arnsrc04012004
@@ -10,6 +10,12 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://arnold.emuunlim.com/
 COMMENT=		Amstrad CPC, Amstrad CPC+ and KC Compact emulator
+
+RESTRICTED=		ROM image copyright is questionable.
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
 
 WRKSRC=			${WRKDIR}/arnold
 GNU_CONFIGURE=		yes
@@ -45,5 +51,4 @@ CONFIGURE_ARGS+=	--x-libraries=${PREFIX}/lib
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
-.include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
