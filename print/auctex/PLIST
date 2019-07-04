@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2016/08/20 12:27:32 mef Exp $
+@comment $NetBSD: PLIST,v 1.18 2019/07/04 15:06:06 hauke Exp $
 ${EMACS_INFOPREFIX}/auctex.info
 share/doc/auctex/tex-ref.pdf
 ${EMACS_LISPPREFIX}/auctex.el
@@ -477,4 +477,3 @@ ${EMACS_LISPPREFIX}/auctex/texmathp.elc
 ${EMACS_LISPPREFIX}/auctex/toolbar-x.el
 ${EMACS_LISPPREFIX}/auctex/toolbar-x.elc
 ${EMACS_LISPPREFIX}/tex-site.el
-var/auctex/.nosearch
