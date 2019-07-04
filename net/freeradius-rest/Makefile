@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.8 2019/07/01 04:08:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2019/07/04 07:44:53 adam Exp $
 
-PKGREVISION= 2
 .include "../../net/freeradius/Makefile.module"
 
-PKGNAME=		${DISTNAME:S/-server/-rest/}
-COMMENT=		Free RADIUS rlm_rest module
-CATEGORIES=		net
+PKGNAME=	${DISTNAME:S/-server/-rest/}
+COMMENT=	Free RADIUS rlm_rest module
 
-CONFIGURE_ARGS+=    --with-rlm_rest
+CONFIGURE_ARGS+=	--with-rlm_rest
+CONFIGURE_ARGS+=	--without-rlm_yubikey
 
 do-install:
-	${INSTALL_LIB} ${WRKSRC}/build/lib/.libs/rlm_rest.so ${DESTDIR}${PREFIX}/lib
+	${INSTALL_LIB} ${WRKSRC}/build/lib/.libs/rlm_rest.${SOEXT} \
+		${DESTDIR}${PREFIX}/lib
 
 .include "../../textproc/json-c/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
