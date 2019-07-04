@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/12/16 09:54:41 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/07/04 13:46:46 ryoon Exp $
 bin/sbt
 share/sbt/bin/java9-rt-export.jar
 share/sbt/bin/sbt
@@ -241,12 +241,12 @@ share/sbt/lib/local-preloaded/org.scala-sbt.ipcsocket/ipcsocket/1.0.0/ivys/ivy.x
 share/sbt/lib/local-preloaded/org.scala-sbt.ipcsocket/ipcsocket/1.0.0/jars/ipcsocket.jar
 share/sbt/lib/local-preloaded/org.scala-sbt.ipcsocket/ipcsocket/1.0.0/jars/ipcsocket.jar.md5
 share/sbt/lib/local-preloaded/org.scala-sbt.ipcsocket/ipcsocket/1.0.0/jars/ipcsocket.jar.sha1
-share/sbt/lib/local-preloaded/org.scala-sbt.ivy/ivy/2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310/ivys/ivy.xml
-share/sbt/lib/local-preloaded/org.scala-sbt.ivy/ivy/2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310/ivys/ivy.xml.md5
-share/sbt/lib/local-preloaded/org.scala-sbt.ivy/ivy/2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310/ivys/ivy.xml.sha1
-share/sbt/lib/local-preloaded/org.scala-sbt.ivy/ivy/2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310/jars/ivy.jar
-share/sbt/lib/local-preloaded/org.scala-sbt.ivy/ivy/2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310/jars/ivy.jar.md5
-share/sbt/lib/local-preloaded/org.scala-sbt.ivy/ivy/2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310/jars/ivy.jar.sha1
+share/sbt/lib/local-preloaded/org.scala-sbt.ivy/ivy/2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832/ivys/ivy.xml
+share/sbt/lib/local-preloaded/org.scala-sbt.ivy/ivy/2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832/ivys/ivy.xml.md5
+share/sbt/lib/local-preloaded/org.scala-sbt.ivy/ivy/2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832/ivys/ivy.xml.sha1
+share/sbt/lib/local-preloaded/org.scala-sbt.ivy/ivy/2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832/jars/ivy.jar
+share/sbt/lib/local-preloaded/org.scala-sbt.ivy/ivy/2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832/jars/ivy.jar.md5
+share/sbt/lib/local-preloaded/org.scala-sbt.ivy/ivy/2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832/jars/ivy.jar.sha1
 share/sbt/lib/local-preloaded/org.scala-sbt/actions_2.12/${PKGVERSION}/ivys/ivy.xml
 share/sbt/lib/local-preloaded/org.scala-sbt/actions_2.12/${PKGVERSION}/ivys/ivy.xml.md5
 share/sbt/lib/local-preloaded/org.scala-sbt/actions_2.12/${PKGVERSION}/ivys/ivy.xml.sha1
@@ -301,18 +301,18 @@ share/sbt/lib/local-preloaded/org.scala-sbt/launcher-interface/1.0.4/ivys/ivy.xm
 share/sbt/lib/local-preloaded/org.scala-sbt/launcher-interface/1.0.4/jars/launcher-interface.jar
 share/sbt/lib/local-preloaded/org.scala-sbt/launcher-interface/1.0.4/jars/launcher-interface.jar.md5
 share/sbt/lib/local-preloaded/org.scala-sbt/launcher-interface/1.0.4/jars/launcher-interface.jar.sha1
-share/sbt/lib/local-preloaded/org.scala-sbt/librarymanagement-core_2.12/1.2.3/ivys/ivy.xml
-share/sbt/lib/local-preloaded/org.scala-sbt/librarymanagement-core_2.12/1.2.3/ivys/ivy.xml.md5
-share/sbt/lib/local-preloaded/org.scala-sbt/librarymanagement-core_2.12/1.2.3/ivys/ivy.xml.sha1
-share/sbt/lib/local-preloaded/org.scala-sbt/librarymanagement-core_2.12/1.2.3/jars/librarymanagement-core_2.12.jar
-share/sbt/lib/local-preloaded/org.scala-sbt/librarymanagement-core_2.12/1.2.3/jars/librarymanagement-core_2.12.jar.md5
-share/sbt/lib/local-preloaded/org.scala-sbt/librarymanagement-core_2.12/1.2.3/jars/librarymanagement-core_2.12.jar.sha1
-share/sbt/lib/local-preloaded/org.scala-sbt/librarymanagement-ivy_2.12/1.2.3/ivys/ivy.xml
-share/sbt/lib/local-preloaded/org.scala-sbt/librarymanagement-ivy_2.12/1.2.3/ivys/ivy.xml.md5
-share/sbt/lib/local-preloaded/org.scala-sbt/librarymanagement-ivy_2.12/1.2.3/ivys/ivy.xml.sha1
-share/sbt/lib/local-preloaded/org.scala-sbt/librarymanagement-ivy_2.12/1.2.3/jars/librarymanagement-ivy_2.12.jar
-share/sbt/lib/local-preloaded/org.scala-sbt/librarymanagement-ivy_2.12/1.2.3/jars/librarymanagement-ivy_2.12.jar.md5
-share/sbt/lib/local-preloaded/org.scala-sbt/librarymanagement-ivy_2.12/1.2.3/jars/librarymanagement-ivy_2.12.jar.sha1
+share/sbt/lib/local-preloaded/org.scala-sbt/librarymanagement-core_2.12/1.2.4/ivys/ivy.xml
+share/sbt/lib/local-preloaded/org.scala-sbt/librarymanagement-core_2.12/1.2.4/ivys/ivy.xml.md5
+share/sbt/lib/local-preloaded/org.scala-sbt/librarymanagement-core_2.12/1.2.4/ivys/ivy.xml.sha1
+share/sbt/lib/local-preloaded/org.scala-sbt/librarymanagement-core_2.12/1.2.4/jars/librarymanagement-core_2.12.jar
+share/sbt/lib/local-preloaded/org.scala-sbt/librarymanagement-core_2.12/1.2.4/jars/librarymanagement-core_2.12.jar.md5
+share/sbt/lib/local-preloaded/org.scala-sbt/librarymanagement-core_2.12/1.2.4/jars/librarymanagement-core_2.12.jar.sha1
+share/sbt/lib/local-preloaded/org.scala-sbt/librarymanagement-ivy_2.12/1.2.4/ivys/ivy.xml
+share/sbt/lib/local-preloaded/org.scala-sbt/librarymanagement-ivy_2.12/1.2.4/ivys/ivy.xml.md5
+share/sbt/lib/local-preloaded/org.scala-sbt/librarymanagement-ivy_2.12/1.2.4/ivys/ivy.xml.sha1
+share/sbt/lib/local-preloaded/org.scala-sbt/librarymanagement-ivy_2.12/1.2.4/jars/librarymanagement-ivy_2.12.jar
+share/sbt/lib/local-preloaded/org.scala-sbt/librarymanagement-ivy_2.12/1.2.4/jars/librarymanagement-ivy_2.12.jar.md5
+share/sbt/lib/local-preloaded/org.scala-sbt/librarymanagement-ivy_2.12/1.2.4/jars/librarymanagement-ivy_2.12.jar.sha1
 share/sbt/lib/local-preloaded/org.scala-sbt/logic_2.12/${PKGVERSION}/ivys/ivy.xml
 share/sbt/lib/local-preloaded/org.scala-sbt/logic_2.12/${PKGVERSION}/ivys/ivy.xml.md5
 share/sbt/lib/local-preloaded/org.scala-sbt/logic_2.12/${PKGVERSION}/ivys/ivy.xml.sha1

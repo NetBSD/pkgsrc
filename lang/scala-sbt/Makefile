@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/12/16 09:54:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2019/07/04 13:46:46 ryoon Exp $
 
-DISTNAME=	sbt-1.2.7
+DISTNAME=	sbt-1.2.8
 PKGNAME=	scala-${DISTNAME}
 CATEGORIES=	lang
 MASTER_SITES=	https://piccolo.link/
