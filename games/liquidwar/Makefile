@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.12 2012/10/06 11:54:46 asau Exp $
+# $NetBSD: Makefile,v 1.13 2019/07/04 17:15:21 nia Exp $
 #
 
-DISTNAME=	liquidwar-5.6.4
-PKGREVISION=	1
+DISTNAME=	liquidwar-5.6.5
 CATEGORIES=	games
-MASTER_SITES=	http://www.ufoot.org/download/liquidwar/v5/5.6.4/
+MASTER_SITES=	https://www.ufoot.org/download/liquidwar/v5/${PKGVERSION_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.ufoot.org/liquidwar/v5
+HOMEPAGE=	https://ufoot.org/liquidwar/v5
 COMMENT=	Unique multiplayer wargame
+LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	YES

@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2019/07/04 17:15:21 nia Exp $
+
+Remove bashisms.
+
+--- configure.orig	2018-12-23 19:04:36.000000000 +0000
++++ configure
+@@ -4385,7 +4385,7 @@ $as_echo_n "checking for host specific o
+ # Check whether --enable-host-opt was given.
+ if test "${enable_host_opt+set}" = set; then :
+   enableval=$enable_host_opt;
+-  if test "$I386" == "yes" && test "$enableval" != "no" ; then
++  if test "$I386" = "yes" && test "$enableval" != "no" ; then
+     HOST_OPT=yes
+     { $as_echo "$as_me:${as_lineno-$LINENO}: result: enabled" >&5
+ $as_echo "enabled" >&6; }
+@@ -4397,7 +4397,7 @@ $as_echo "disabled" >&6; }
+ 
+ else
+ 
+-  if test "$I386" == "yes" ; then
++  if test "$I386" = "yes" ; then
+     HOST_OPT=yes
+     { $as_echo "$as_me:${as_lineno-$LINENO}: result: enabled" >&5
+ $as_echo "enabled" >&6; }
