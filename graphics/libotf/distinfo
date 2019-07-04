@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.12 2019/05/29 12:54:10 ryoon Exp $
+$NetBSD: distinfo,v 1.13 2019/07/04 13:26:59 ryoon Exp $
 
 SHA1 (libotf-0.9.16.tar.gz) = ee3037f468a5381de89846ee1c78320964cfbf78
 RMD160 (libotf-0.9.16.tar.gz) = ddea1124409fa97a58386251aa70b961c11b9374
 SHA512 (libotf-0.9.16.tar.gz) = 0f68c45c1224f02dc0f1a8e9915dd9c1c70d71259b4e2f7bbd4fbec6426e58d4a26e4cbf28dbb8ed051ba6f532f99fc4e74b4ddf97a93ec947fa6260c875d0b4
 Size (libotf-0.9.16.tar.gz) = 423979 bytes
 SHA1 (patch-configure) = 5d43a445f6950ac14e5a91f37b25601d951868c2
-SHA1 (patch-example_otfview.c) = db34c8354a3af3615b144adabf32f0d9e8717ab0
+SHA1 (patch-example_otfview.c) = f5ddb893c447b1bfebe0a1fd49aae6daac45edad
