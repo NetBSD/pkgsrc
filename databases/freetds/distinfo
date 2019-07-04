@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.25 2019/03/03 15:10:32 taca Exp $
+$NetBSD: distinfo,v 1.26 2019/07/04 07:15:35 adam Exp $
 
-SHA1 (freetds-1.00.111.tar.bz2) = ed46d5bf0416048d7d06470a472a5aca4f2e721e
-RMD160 (freetds-1.00.111.tar.bz2) = 08aa67afa2389ac8b7980113fff1e258e1f251ac
-SHA512 (freetds-1.00.111.tar.bz2) = f6a4dd746b7b30a9b1c592e877fd336c5e44c83b96b9104b66a91e685423bdf7f494746dc6ebcd714591d7549999c3f08942fb6d72ee670394fc3d9731e3a534
-Size (freetds-1.00.111.tar.bz2) = 2159358 bytes
+SHA1 (freetds-1.00.112.tar.bz2) = 607b2f8bedf8487be2471623638757a55adce5a9
+RMD160 (freetds-1.00.112.tar.bz2) = 0e1b8a5aa99efea0932fe0ef0485bae5bc69f415
+SHA512 (freetds-1.00.112.tar.bz2) = 162fd65552260a25af7399e8f69ec6b7f609d72b1822c6cec00a33b055958a267f0bb580f074a59d325a4e93d57244a9b515f7581b0186d35f402ab6b3b86f83
+Size (freetds-1.00.112.tar.bz2) = 2225521 bytes
 SHA1 (patch-Makefile.in) = 46a2663d03502cb913cff5b55bd4c95a4ff670bc
 SHA1 (patch-ac) = 7533cc71d37949038e2cad093fad0f371b49d729
 SHA1 (patch-include_freetds_thread.h) = 28c4cf6ad79f8662b5b3b51171791b9e4fd3ede5
