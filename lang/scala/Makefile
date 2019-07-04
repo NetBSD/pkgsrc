@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2019/05/23 19:23:04 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2019/07/04 13:41:56 ryoon Exp $
 
-DISTNAME=	scala-2.12.8
+DISTNAME=	scala-2.13.0
 CATEGORIES=	lang
 MASTER_SITES=	http://www.scala-lang.org/files/archive/
 EXTRACT_SUFX=	.tgz
