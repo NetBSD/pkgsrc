@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:50 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/07/04 17:15:21 nia Exp $
 bin/liquidwar
 bin/liquidwar-mapgen
 bin/liquidwar-server
@@ -8,6 +8,7 @@ share/doc/liquidwar/README
 share/doc/liquidwar/README.de
 share/doc/liquidwar/README.dk
 share/doc/liquidwar/README.fr
+share/doc/liquidwar/README.pl
 share/games/liquidwar/liquidwar.dat
 share/games/liquidwar/map/meditate.bmp
 share/games/liquidwar/map/pacman.bmp
