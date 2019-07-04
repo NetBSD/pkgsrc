@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2772 2019/07/03 21:10:09 leot Exp $
+$NetBSD: CHANGES-2019,v 1.2773 2019/07/04 07:30:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4641,3 +4641,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/gpgme to 1.13.1 [adam 2019-07-03]
 	Updated www/py-waitress to 1.3.0 [adam 2019-07-03]
 	Updated lang/py36-html-docs to 3.6.9 [leot 2019-07-03]
+	Updated databases/freetds to 1.00.112 [adam 2019-07-04]
+	Updated net/libpcap to 1.9.0 [adam 2019-07-04]
