@@ -1,15 +1,11 @@
-$NetBSD: patch-ac,v 1.12 2017/04/19 11:50:18 dsainty Exp $
+$NetBSD: patch-Makefile.in,v 1.1 2019/07/04 07:17:25 adam Exp $
 
-Add libtoolization
+Add libtoolization.
+Fix manpage installation.
 
-Fix manpage installation
-
-Remove dependencies on VERSION, which trigger unintended implicit rules against
-version.c on case-insensitive file systems.
-
---- Makefile.in.orig	2016-10-26 11:07:59.000000000 +1100
-+++ Makefile.in	2017-04-19 21:01:59.000000000 +1000
-@@ -43,7 +43,7 @@
+--- Makefile.in.orig	2018-07-22 17:08:39.000000000 +0000
++++ Makefile.in
+@@ -45,7 +45,7 @@ VPATH = @srcdir@
  #
  
  LD = /usr/bin/ld
@@ -18,7 +14,7 @@ version.c on case-insensitive file systems.
  AR = @AR@
  LN_S = @LN_S@
  MKDEP = @MKDEP@
-@@ -75,7 +75,8 @@
+@@ -82,7 +82,8 @@ YACC = @YACC@
  # Explicitly define compilation rule since SunOS 4's make doesn't like gcc.
  # Also, gcc does not remove the .o before forking 'as', which can be a
  # problem if you don't own the file but can write to the directory.
@@ -28,10 +24,10 @@ version.c on case-insensitive file systems.
  	@rm -f $@
  	$(CC) $(FULL_CFLAGS) -c $(srcdir)/$*.c
  
-@@ -86,13 +87,13 @@
- 	etherent.c savefile.c sf-pcap.c sf-pcap-ng.c pcap-common.c \
- 	bpf_image.c bpf_dump.c
- GENSRC = scanner.c grammar.c bpf_filter.c version.c
+@@ -94,13 +95,13 @@ CSRC =	pcap.c gencode.c optimize.c namet
+ 	savefile.c sf-pcap.c sf-pcapng.c pcap-common.c \
+ 	bpf_image.c bpf_filter.c bpf_dump.c
+ GENSRC = scanner.c grammar.c
 -LIBOBJS = @LIBOBJS@
 +LIBOBJS = @LTLIBOBJS@
  
@@ -44,12 +40,12 @@ version.c on case-insensitive file systems.
  PUBHDR = \
  	pcap.h \
  	pcap-bpf.h \
-@@ -358,12 +359,10 @@
+@@ -379,12 +380,10 @@ EXTRA_DIST = \
  	Win32/Prj/wpcap.vcxproj \
  	Win32/Prj/wpcap.vcxproj.filters
  
--all: libpcap.a shared pcap-config
-+all: libpcap.la pcap-config
+-all: libpcap.a shared $(BUILD_RPCAPD) libpcap.pc pcap-config
++all: libpcap.la $(BUILD_RPCAPD) libpcap.pc pcap-config
  
 -libpcap.a: $(OBJ)
 -	@rm -f $@
@@ -60,7 +56,7 @@ version.c on case-insensitive file systems.
  
  shared: libpcap.$(DYEXT)
  
-@@ -452,10 +451,10 @@
+@@ -471,7 +470,7 @@ scanner.h: scanner.c
  		$(MAKE) $(MAKEFLAGS) scanner.c; \
  	fi
  
@@ -68,26 +64,18 @@ version.c on case-insensitive file systems.
 +scanner.lo: scanner.c grammar.h
  	$(CC) $(FULL_CFLAGS) -c scanner.c
  
--pcap.o: pcap_version.h
-+pcap.lo: pcap_version.h
- 
  grammar.c: $(srcdir)/grammar.y
- 	$(YACC) -p pcap_ -o grammar.c -d $<
-@@ -466,22 +465,22 @@
+@@ -483,16 +482,16 @@ grammar.h: grammar.c
  		$(MAKE) $(MAKEFLAGS) grammar.c; \
  	fi
  
--grammar.o: grammar.c
-+grammar.lo: grammar.c
+-grammar.o: grammar.c scanner.h
++grammar.lo: grammar.c scanner.h
  	$(CC) $(FULL_CFLAGS) -c grammar.c
  
 -gencode.o: $(srcdir)/gencode.c grammar.h scanner.h
 +gencode.lo: $(srcdir)/gencode.c grammar.h scanner.h
  	$(CC) $(FULL_CFLAGS) -c $(srcdir)/gencode.c
- 
--version.o: version.c
-+version.lo: version.c
- 	$(CC) $(FULL_CFLAGS) -c version.c
  
 -snprintf.o: $(srcdir)/missing/snprintf.c
 +snprintf.lo: $(srcdir)/missing/snprintf.c
@@ -97,39 +85,17 @@ version.c on case-insensitive file systems.
 +strtok_r.lo: $(srcdir)/missing/strtok_r.c
  	$(CC) $(FULL_CFLAGS) -o $@ -c $(srcdir)/missing/strtok_r.c
  
--version.c: $(srcdir)/VERSION $(srcdir)/gen_version_c.sh
-+version.c: $(srcdir)/gen_version_c.sh
- 	#
- 	# Older programs import this if they want to show the
- 	# libpcap version number, rather than calling
-@@ -490,7 +489,7 @@
- 	@rm -f $@
- 	$(srcdir)/gen_version_c.sh $(srcdir)/VERSION $@
- 
--pcap_version.h: $(srcdir)/VERSION $(srcdir)/pcap_version.h.in $(srcdir)/gen_version_header.sh
-+pcap_version.h: $(srcdir)/pcap_version.h.in $(srcdir)/gen_version_header.sh
- 	@rm -f $@
- 	$(srcdir)/gen_version_header.sh $(srcdir)/VERSION $(srcdir)/pcap_version.h.in $@
- 
-@@ -498,7 +497,7 @@
- 	rm -f bpf_filter.c
- 	ln -s $(srcdir)/bpf/net/bpf_filter.c bpf_filter.c
- 
--bpf_filter.o: bpf_filter.c
-+bpf_filter.lo: bpf_filter.c
- 	$(CC) $(FULL_CFLAGS) -c bpf_filter.c
- 
  #
-@@ -550,7 +549,7 @@
- valgrindtest: tests/valgrindtest.c libpcap.a
- 	$(CC) $(FULL_CFLAGS) -I. -L. -o valgrindtest $(srcdir)/tests/valgrindtest.c libpcap.a $(LIBS)
+@@ -538,7 +537,7 @@ testprogs: FORCE
  
--install: install-shared install-archive pcap-config
-+install: libpcap.la pcap-config
+ FORCE:
+ 
+-install: install-shared install-archive libpcap.pc pcap-config @INSTALL_RPCAPD@
++install: libpcap.pc pcap-config @INSTALL_RPCAPD@
  	[ -d $(DESTDIR)$(libdir) ] || \
  	    (mkdir -p $(DESTDIR)$(libdir); chmod 755 $(DESTDIR)$(libdir))
  	[ -d $(DESTDIR)$(includedir) ] || \
-@@ -565,56 +564,73 @@
+@@ -553,59 +552,60 @@ install: install-shared install-archive 
  	    (mkdir -p $(DESTDIR)$(mandir)/man@MAN_FILE_FORMATS@; chmod 755 $(DESTDIR)$(mandir)/man@MAN_FILE_FORMATS@)
  	[ -d $(DESTDIR)$(mandir)/man@MAN_MISC_INFO@ ] || \
  	    (mkdir -p $(DESTDIR)$(mandir)/man@MAN_MISC_INFO@; chmod 755 $(DESTDIR)$(mandir)/man@MAN_MISC_INFO@)
@@ -141,6 +107,9 @@ version.c on case-insensitive file systems.
  	    (mkdir -p $(DESTDIR)$(bindir); chmod 755 $(DESTDIR)$(bindir))
 -	$(INSTALL_PROGRAM) pcap-config $(DESTDIR)$(bindir)/pcap-config
 +	$(BSD_INSTALL_SCRIPT) pcap-config $(DESTDIR)$(bindir)/pcap-config
+ 	[ -d $(DESTDIR)$(libdir)/pkgconfig ] || \
+ 	    (mkdir -p $(DESTDIR)$(libdir)/pkgconfig; chmod 755 $(DESTDIR)$(libdir)/pkgconfig)
+ 	$(INSTALL_DATA) libpcap.pc $(DESTDIR)$(libdir)/pkgconfig/libpcap.pc
  	for i in $(MAN1); do \
  		$(INSTALL_DATA) $(srcdir)/$$i \
  		    $(DESTDIR)$(mandir)/man1/$$i; done
@@ -154,7 +123,7 @@ version.c on case-insensitive file systems.
 +	for i in $(MAN3PCAP_EXPAND:.3pcap.in=.3); do \
 +		$(INSTALL_DATA) $${i}pcap \
  		    $(DESTDIR)$(mandir)/man3/$$i; done
--	(cd $(DESTDIR)$(mandir)/man3 && \
+ 	(cd $(DESTDIR)$(mandir)/man3 && \
 -	rm -f pcap_datalink_val_to_description.3pcap && \
 -	$(LN_S) pcap_datalink_val_to_name.3pcap \
 -		 pcap_datalink_val_to_description.3pcap && \
@@ -189,61 +158,44 @@ version.c on case-insensitive file systems.
 -	$(LN_S) pcap_tstamp_type_val_to_name.3pcap pcap_tstamp_type_val_to_description.3pcap && \
 -	rm -f pcap_getnonblock.3pcap && \
 -	$(LN_S) pcap_setnonblock.3pcap pcap_getnonblock.3pcap)
-+	rm -f $(DESTDIR)$(mandir)/man3/pcap_datalink_val_to_description.3
-+	ln $(DESTDIR)$(mandir)/man3/pcap_datalink_val_to_name.3 \
-+		 $(DESTDIR)$(mandir)/man3/pcap_datalink_val_to_description.3
-+	rm -f $(DESTDIR)$(mandir)/man3/pcap_dump_fopen.3
-+	ln $(DESTDIR)$(mandir)/man3/pcap_dump_open.3 \
-+		 $(DESTDIR)$(mandir)/man3/pcap_dump_fopen.3
-+	rm -f $(DESTDIR)$(mandir)/man3/pcap_freealldevs.3
-+	ln $(DESTDIR)$(mandir)/man3/pcap_findalldevs.3 \
-+		 $(DESTDIR)$(mandir)/man3/pcap_freealldevs.3
-+	rm -f $(DESTDIR)$(mandir)/man3/pcap_perror.3
-+	ln $(DESTDIR)$(mandir)/man3/pcap_geterr.3 \
-+		 $(DESTDIR)$(mandir)/man3/pcap_perror.3
-+	rm -f $(DESTDIR)$(mandir)/man3/pcap_sendpacket.3
-+	ln $(DESTDIR)$(mandir)/man3/pcap_inject.3 \
-+		 $(DESTDIR)$(mandir)/man3/pcap_sendpacket.3
-+	rm -f $(DESTDIR)$(mandir)/man3/pcap_free_datalinks.3
-+	ln $(DESTDIR)$(mandir)/man3/pcap_list_datalinks.3 \
-+		 $(DESTDIR)$(mandir)/man3/pcap_free_datalinks.3
-+	rm -f $(DESTDIR)$(mandir)/man3/pcap_free_tstamp_types.3
-+	ln $(DESTDIR)$(mandir)/man3/pcap_list_tstamp_types.3 \
-+		 $(DESTDIR)$(mandir)/man3/pcap_free_tstamp_types.3
-+	rm -f $(DESTDIR)$(mandir)/man3/pcap_dispatch.3
-+	ln $(DESTDIR)$(mandir)/man3/pcap_loop.3 \
-+		 $(DESTDIR)$(mandir)/man3/pcap_dispatch.3
-+	rm -f $(DESTDIR)$(mandir)/man3/pcap_minor_version.3
-+	ln $(DESTDIR)$(mandir)/man3/pcap_major_version.3 \
-+		 $(DESTDIR)$(mandir)/man3/pcap_minor_version.3
-+	rm -f $(DESTDIR)$(mandir)/man3/pcap_next.3
-+	ln $(DESTDIR)$(mandir)/man3/pcap_next_ex.3 \
-+		 $(DESTDIR)$(mandir)/man3/pcap_next.3
-+	rm -f $(DESTDIR)$(mandir)/man3/pcap_open_dead_with_tstamp_precision.3
-+	ln $(DESTDIR)$(mandir)/man3/pcap_open_dead.3 \
-+		 $(DESTDIR)$(mandir)/man3/pcap_open_dead_with_tstamp_precision.3
-+	rm -f $(DESTDIR)$(mandir)/man3/pcap_open_offline_with_tstamp_precision.3
-+	ln $(DESTDIR)$(mandir)/man3/pcap_open_offline.3 \
-+		 $(DESTDIR)$(mandir)/man3/pcap_open_offline_with_tstamp_precision.3
-+	rm -f $(DESTDIR)$(mandir)/man3/pcap_fopen_offline.3
-+	ln $(DESTDIR)$(mandir)/man3/pcap_open_offline.3 \
-+		 $(DESTDIR)$(mandir)/man3/pcap_fopen_offline.3
-+	rm -f $(DESTDIR)$(mandir)/man3/pcap_fopen_offline_with_tstamp_precision.3
-+	ln $(DESTDIR)$(mandir)/man3/pcap_fopen_offline.3 \
-+		 $(DESTDIR)$(mandir)/man3/pcap_fopen_offline_with_tstamp_precision.3
-+	rm -f $(DESTDIR)$(mandir)/man3/pcap_fopen_offline.3
-+	ln $(DESTDIR)$(mandir)/man3/pcap_open_offline.3 \
-+		 $(DESTDIR)$(mandir)/man3/pcap_fopen_offline.3
-+	rm -f $(DESTDIR)$(mandir)/man3/pcap_tstamp_type_val_to_description.3
-+	ln $(DESTDIR)$(mandir)/man3/pcap_tstamp_type_val_to_name.3 \
-+		 $(DESTDIR)$(mandir)/man3/pcap_tstamp_type_val_to_description.3
-+	rm -f $(DESTDIR)$(mandir)/man3/pcap_getnonblock.3
-+	ln $(DESTDIR)$(mandir)/man3/pcap_setnonblock.3 \
-+		 $(DESTDIR)$(mandir)/man3/pcap_getnonblock.3
++	rm -f pcap_datalink_val_to_description.3 && \
++	$(LN_S) pcap_datalink_val_to_name.3 \
++		 pcap_datalink_val_to_description.3 && \
++	rm -f pcap_dump_fopen.3 && \
++	$(LN_S) pcap_dump_open.3 pcap_dump_fopen.3 && \
++	rm -f pcap_freealldevs.3 && \
++	$(LN_S) pcap_findalldevs.3 pcap_freealldevs.3 && \
++	rm -f pcap_perror.3 && \
++	$(LN_S) pcap_geterr.3 pcap_perror.3 && \
++	rm -f pcap_sendpacket.3 && \
++	$(LN_S) pcap_inject.3 pcap_sendpacket.3 && \
++	rm -f pcap_free_datalinks.3 && \
++	$(LN_S) pcap_list_datalinks.3 pcap_free_datalinks.3 && \
++	rm -f pcap_free_tstamp_types.3 && \
++	$(LN_S) pcap_list_tstamp_types.3 pcap_free_tstamp_types.3 && \
++	rm -f pcap_dispatch.3 && \
++	$(LN_S) pcap_loop.3 pcap_dispatch.3 && \
++	rm -f pcap_minor_version.3 && \
++	$(LN_S) pcap_major_version.3 pcap_minor_version.3 && \
++	rm -f pcap_next.3 && \
++	$(LN_S) pcap_next_ex.3 pcap_next.3 && \
++	rm -f pcap_open_dead_with_tstamp_precision.3 && \
++	$(LN_S) pcap_open_dead.3 \
++		 pcap_open_dead_with_tstamp_precision.3 && \
++	rm -f pcap_open_offline_with_tstamp_precision.3 && \
++	$(LN_S) pcap_open_offline.3 pcap_open_offline_with_tstamp_precision.3 && \
++	rm -f pcap_fopen_offline.3 && \
++	$(LN_S) pcap_open_offline.3 pcap_fopen_offline.3 && \
++	rm -f pcap_fopen_offline_with_tstamp_precision.3 && \
++	$(LN_S) pcap_open_offline.3 pcap_fopen_offline_with_tstamp_precision.3 && \
++	rm -f pcap_tstamp_type_val_to_description.3 && \
++	$(LN_S) pcap_tstamp_type_val_to_name.3 pcap_tstamp_type_val_to_description.3 && \
++	rm -f pcap_getnonblock.3 && \
++	$(LN_S) pcap_setnonblock.3 pcap_getnonblock.3)
  	for i in $(MANFILE); do \
  		$(INSTALL_DATA) `echo $$i | sed 's/.manfile.in/.manfile/'` \
  		    $(DESTDIR)$(mandir)/man@MAN_FILE_FORMATS@/`echo $$i | sed 's/.manfile.in/.@MAN_FILE_FORMATS@/'`; done
-@@ -656,15 +672,15 @@
+@@ -647,15 +647,15 @@ install-shared-shareda: libpcap.shareda
  install-shared-none:
  
  install-archive: install-archive-$(DYEXT)
@@ -262,21 +214,3 @@ version.c on case-insensitive file systems.
  install-archive-shareda:
  	#
  	# AIX, however, doesn't, so we don't install the archive
-@@ -672,7 +688,7 @@
- 	#
- 
- uninstall: uninstall-shared
--	rm -f $(DESTDIR)$(libdir)/libpcap.a
-+	rm -f $(DESTDIR)$(libdir)/libpcap.la
- 	for i in $(PUBHDR); do \
- 		rm -f $(DESTDIR)$(includedir)/$$i; done
- 	-rmdir $(DESTDIR)$(includedir)/pcap
-@@ -720,7 +736,7 @@
- 	rm -f $(DESTDIR)$(libdir)/libpcap.$$MAJOR_VER; \
- 	rm -f $(DESTDIR)$(libdir)/libpcap.sl
- uninstall-shared-shareda:
--	rm -f $(DESTDIR)$(libdir)/libpcap.a
-+	rm -f $(DESTDIR)$(libdir)/libpcap.la
- uninstall-shared-none:
- 
- clean:
