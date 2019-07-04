@@ -5,3 +5,5 @@ can be viewed as a "scripting language" counterpart of such
 languages. However, Python is more accurately described as a very
 high level language (VHLL). MyHDL users have access to the
 amazing power and elegance of Python for their modeling work.
+
+This package is GPL Cver cosimulation support for py-MyHDL.
