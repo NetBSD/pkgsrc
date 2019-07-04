@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.99 2018/10/08 15:50:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.100 2019/07/04 07:44:52 adam Exp $
 
 .include "Makefile.common"
 
-PKGNAME=		${DISTNAME:S/-server//}
-COMMENT=		Free RADIUS server implementation
+PKGNAME=	${DISTNAME:S/-server//}
+COMMENT=	Free RADIUS server implementation
 
 BUILD_DEFS+=		VARBASE
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
@@ -42,14 +42,8 @@ OWN_DIRS_PERMS+=	${VARBASE}/run/radiusd \
 
 PKG_SYSCONFSUBDIR=	raddb
 
-OPSYSVARS+=		SOEXT
-SOEXT.Darwin=		dylib
-SOEXT.*=		so
-PLIST_SUBST+=		SOEXT=${SOEXT}
-PRINT_PLIST_AWK+=	{gsub(/\.${SOEXT}$$/, ".$${SOEXT}");}
-
 FILES_SUBST+=		RADIUS_USER=${RADIUS_USER} RADIUS_GROUP=${RADIUS_GROUP}
-MESSAGE_SUBST+=		BOOTSTRAP=${PKG_SYSCONFDIR:Q}/certs/bootstrap
+MESSAGE_SUBST+=		BOOTSTRAP=${PKG_SYSCONFDIR}/certs/bootstrap
 
 EGDIR=			${PREFIX}/share/examples/freeradius
 
@@ -181,7 +175,7 @@ EGFILES=		certs/ca.cnf certs/client.cnf certs/inner-server.cnf \
 			sites-available/virtual.example.com \
 			users templates.conf trigger.conf
 
-EGDIRS= 		certs mods-available mods-config mods-config/attr_filter mods-config/files \
+EGDIRS=			certs mods-available mods-config mods-config/attr_filter mods-config/files \
 			mods-config/perl mods-config/preprocess mods-config/sql mods-config/sql/counter  \
 			mods-config/sql/counter/mysql mods-config/sql/counter/postgresql  \
 			mods-config/sql/counter/sqlite mods-config/sql/cui mods-config/sql/cui/mysql  \

@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2017/08/26 10:07:28 fhajny Exp $
-lib/rlm_ldap.so
+@comment $NetBSD: PLIST,v 1.2 2019/07/04 07:44:52 adam Exp $
+lib/rlm_ldap.${SOEXT}

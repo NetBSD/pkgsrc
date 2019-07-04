@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2018/09/25 12:16:36 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.31 2019/07/04 07:44:52 adam Exp $
 bin/dhcpclient
 bin/map_unit
 bin/rad_counter
@@ -15,6 +15,7 @@ bin/radzap
 bin/rlm_ippool_tool
 bin/smbencrypt
 include/freeradius/attributes.h
+include/freeradius/autoconf.h
 include/freeradius/base64.h
 include/freeradius/build.h
 include/freeradius/conf.h
@@ -39,6 +40,7 @@ include/freeradius/radiusd.h
 include/freeradius/radpaths.h
 include/freeradius/radutmp.h
 include/freeradius/realms.h
+include/freeradius/regex.h
 include/freeradius/rfc2865.h
 include/freeradius/rfc2866.h
 include/freeradius/rfc2867.h
@@ -71,9 +73,13 @@ include/freeradius/rfc7155.h
 include/freeradius/rfc7268.h
 include/freeradius/rfc7499.h
 include/freeradius/rfc7930.h
+include/freeradius/rfc8045.h
+include/freeradius/rfc8559.h
 include/freeradius/sha1.h
 include/freeradius/stats.h
 include/freeradius/sysutmp.h
+include/freeradius/tcp.h
+include/freeradius/threads.h
 include/freeradius/tls.h
 include/freeradius/token.h
 include/freeradius/udpfromto.h
@@ -439,6 +445,7 @@ share/examples/freeradius/mods-config/sql/ippool/mysql/schema.sql
 share/examples/freeradius/mods-config/sql/ippool/oracle/procedures.sql
 share/examples/freeradius/mods-config/sql/ippool/oracle/queries.conf
 share/examples/freeradius/mods-config/sql/ippool/oracle/schema.sql
+share/examples/freeradius/mods-config/sql/ippool/postgresql/procedure.sql
 share/examples/freeradius/mods-config/sql/ippool/postgresql/queries.conf
 share/examples/freeradius/mods-config/sql/ippool/postgresql/schema.sql
 share/examples/freeradius/mods-config/sql/ippool/sqlite/queries.conf
@@ -511,6 +518,7 @@ share/examples/freeradius/policy.d/eap
 share/examples/freeradius/policy.d/filter
 share/examples/freeradius/policy.d/moonshot-targeted-ids
 share/examples/freeradius/policy.d/operator-name
+share/examples/freeradius/policy.d/rfc7542
 share/examples/freeradius/proxy.conf
 share/examples/freeradius/radiusd.conf
 share/examples/freeradius/sites-available/README
@@ -574,6 +582,7 @@ share/freeradius/dictionary.audiocodes
 share/freeradius/dictionary.avaya
 share/freeradius/dictionary.azaire
 share/freeradius/dictionary.bay
+share/freeradius/dictionary.bigswitch
 share/freeradius/dictionary.bintec
 share/freeradius/dictionary.bluecoat
 share/freeradius/dictionary.boingo
@@ -632,6 +641,7 @@ share/freeradius/dictionary.hp
 share/freeradius/dictionary.huawei
 share/freeradius/dictionary.iana
 share/freeradius/dictionary.iea
+share/freeradius/dictionary.infinera
 share/freeradius/dictionary.infoblox
 share/freeradius/dictionary.infonet
 share/freeradius/dictionary.ipunplugged
@@ -671,6 +681,7 @@ share/freeradius/dictionary.packeteer
 share/freeradius/dictionary.paloalto
 share/freeradius/dictionary.patton
 share/freeradius/dictionary.perle
+share/freeradius/dictionary.pfsense
 share/freeradius/dictionary.propel
 share/freeradius/dictionary.prosoft
 share/freeradius/dictionary.proxim
@@ -710,6 +721,8 @@ share/freeradius/dictionary.rfc7155
 share/freeradius/dictionary.rfc7268
 share/freeradius/dictionary.rfc7499
 share/freeradius/dictionary.rfc7930
+share/freeradius/dictionary.rfc8045
+share/freeradius/dictionary.rfc8559
 share/freeradius/dictionary.riverbed
 share/freeradius/dictionary.riverstone
 share/freeradius/dictionary.roaringpenguin
@@ -742,6 +755,7 @@ share/freeradius/dictionary.usr
 share/freeradius/dictionary.usr.illegal
 share/freeradius/dictionary.utstarcom
 share/freeradius/dictionary.valemount
+share/freeradius/dictionary.verizon
 share/freeradius/dictionary.versanet
 share/freeradius/dictionary.vqp
 share/freeradius/dictionary.walabi

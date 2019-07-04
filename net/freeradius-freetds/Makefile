@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.6 2018/09/25 12:20:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2019/07/04 07:44:52 adam Exp $
 
 .include "../../net/freeradius/Makefile.module"
 
-PKGNAME=		${DISTNAME:S/-server/-freetds/}
-COMMENT=		Free RADIUS FreeTDS support
-CATEGORIES=		net
+PKGNAME=	${DISTNAME:S/-server/-freetds/}
+COMMENT=	Free RADIUS FreeTDS support
 
-CONFIGURE_ARGS+=    --with-rlm_sql_freetds
-CONFIGURE_ARGS+=    --without-rlm_ldap
+CONFIGURE_ARGS+=	--with-rlm_sql_freetds
+CONFIGURE_ARGS+=	--without-rlm_ldap
+CONFIGURE_ARGS+=	--without-rlm_yubikey
 
 do-install:
-	${INSTALL_LIB} ${WRKSRC}/build/lib/.libs/rlm_sql_freetds.so ${DESTDIR}${PREFIX}/lib
+	${INSTALL_LIB} ${WRKSRC}/build/lib/.libs/rlm_sql_freetds.${SOEXT} \
+		${DESTDIR}${PREFIX}/lib
 
 .include "../../databases/freetds/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
