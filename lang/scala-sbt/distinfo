@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2018/12/16 09:54:41 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2019/07/04 13:46:46 ryoon Exp $
 
-SHA1 (sbt-1.2.7.tgz) = 449d077110cb7d5403d2e3f67d01df368e263321
-RMD160 (sbt-1.2.7.tgz) = 5fe0868b28d3190895c46d0ac19a911759dc4372
-SHA512 (sbt-1.2.7.tgz) = 9e539396a8223ab2b78e88433d4d3f5fc19a731bdd7f9c5c303ac9d89274a50a1fd147a0285bf5e263b76b64d69ca1a4fe37c071220ce33d1986f9e95e784a73
-Size (sbt-1.2.7.tgz) = 47171488 bytes
+SHA1 (sbt-1.2.8.tgz) = ee0be85cc6741c1bd68ae35cbd6af6e0bbf51337
+RMD160 (sbt-1.2.8.tgz) = b6f5183cb6646d477558476848c23aea6d095181
+SHA512 (sbt-1.2.8.tgz) = e12d50de4481dc599b8e129b5caf86b4a6a42426612308f9c8dd791525b5ae325e65f1c1db479bdc00fed2421c108a0dcdd00585f90334446e2cef914484719a
+Size (sbt-1.2.8.tgz) = 47179935 bytes
 SHA1 (patch-bin_sbt) = 0a848665cc715a5749d1554ddd67e3184427e769
-SHA1 (patch-bin_sbt-launch-lib.bash) = 7f3fc8314497c4b03c46cea751025874817a82b4
+SHA1 (patch-bin_sbt-launch-lib.bash) = 2e239046baa2e4c911bb3540a205a899ebdeccbb
