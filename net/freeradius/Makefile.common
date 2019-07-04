@@ -1,19 +1,18 @@
-# $NetBSD: Makefile.common,v 1.4 2018/10/08 15:50:39 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.5 2019/07/04 07:44:52 adam Exp $
 # used by net/freeradius/Makefile.module
 
-DISTNAME=		freeradius-server-3.0.17
-CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.freeradius.org/pub/freeradius/
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	freeradius-server-3.0.19
+CATEGORIES=	net
+MASTER_SITES=	ftp://ftp.freeradius.org/pub/freeradius/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.freeradius.org/
-LICENSE=		gnu-gpl-v2
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.freeradius.org/
+LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake perl
 USE_LANGUAGES+=		c c++
-
+USE_TOOLS+=		gmake perl
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-openssl-include-dir=${BUILDLINK_PREFIX.openssl}/include
 CONFIGURE_ARGS+=	--with-openssl-lib-dir=${BUILDLINK_PREFIX.openssl}/lib
 CONFIGURE_ARGS+=	--without-rlm_yubikey
@@ -25,6 +24,12 @@ MAKE_ENV+=		R=${DESTDIR}
 MAKE_ENV+=		PACKAGE=yes
 
 INSTALLATION_DIRS+=	lib
+
+OPSYSVARS+=		SOEXT
+SOEXT.Darwin=		dylib
+SOEXT.*=		so
+PLIST_SUBST+=		SOEXT=${SOEXT}
+PRINT_PLIST_AWK+=	{gsub(/\.${SOEXT}$$/, ".$${SOEXT}");}
 
 .include "../../databases/gdbm/buildlink3.mk"
 .include "../../devel/talloc/buildlink3.mk"

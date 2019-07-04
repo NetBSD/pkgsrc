@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.2 2018/09/25 12:16:36 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2019/07/04 07:44:52 adam Exp $
 
 .include "../../net/freeradius/Makefile.module"
 
-PKGNAME=		${DISTNAME:S/-server/-memcached/}
-COMMENT=		Free RADIUS support for memcached
-CATEGORIES=		net
+PKGNAME=	${DISTNAME:S/-server/-memcached/}
+COMMENT=	Free RADIUS support for memcached
 
-CONFIGURE_ARGS+=    --with-rlm_cache_memcached
-CONFIGURE_ARGS+=    --without-rlm_ldap
+CONFIGURE_ARGS+=	--with-rlm_cache_memcached
+CONFIGURE_ARGS+=	--without-rlm_ldap
+CONFIGURE_ARGS+=	--without-rlm_yubikey
 
 do-install:
-	${INSTALL_LIB} ${WRKSRC}/build/lib/.libs/rlm_cache_memcached.so ${DESTDIR}${PREFIX}/lib
+	${INSTALL_LIB} ${WRKSRC}/build/lib/.libs/rlm_cache_memcached.${SOEXT} \
+		${DESTDIR}${PREFIX}/lib
 
 .include "../../devel/libmemcached/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

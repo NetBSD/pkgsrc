@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.1 2017/08/26 10:07:28 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2019/07/04 07:44:52 adam Exp $
 
 .include "../../net/freeradius/Makefile.module"
 
-PKGNAME=		${DISTNAME:S/-server/-ldap/}
-COMMENT=		Free RADIUS rlm_ldap module
-CATEGORIES=		net
+PKGNAME=	${DISTNAME:S/-server/-ldap/}
+COMMENT=	Free RADIUS rlm_ldap module
 
-CONFIGURE_ARGS+=    --with-rlm_ldap
+CONFIGURE_ARGS+=	--with-rlm_ldap
+CONFIGURE_ARGS+=	--without-rlm_yubikey
 
 do-install:
-	${INSTALL_LIB} ${WRKSRC}/build/lib/.libs/rlm_ldap.so ${DESTDIR}${PREFIX}/lib
+	${INSTALL_LIB} ${WRKSRC}/build/lib/.libs/rlm_ldap.${SOEXT} \
+		${DESTDIR}${PREFIX}/lib
 
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

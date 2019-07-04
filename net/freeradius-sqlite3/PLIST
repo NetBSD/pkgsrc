@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2017/08/26 10:07:29 fhajny Exp $
-lib/rlm_sql_sqlite.so
+@comment $NetBSD: PLIST,v 1.2 2019/07/04 07:44:53 adam Exp $
+lib/rlm_sql_sqlite.${SOEXT}
