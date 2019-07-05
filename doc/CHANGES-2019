@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2783 2019/07/05 07:59:12 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2784 2019/07/05 09:17:38 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4655,3 +4655,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated games/liquidwar to 5.6.5 [nia 2019-07-04]
 	Updated www/py-flask-jwt-extended to 3.20.0 [adam 2019-07-05]
 	Updated textproc/py-regex to 2019.06.08 [adam 2019-07-05]
+	Removed chat/licq-core [nia 2019-07-05]
+	Removed chat/licq-gui-console [nia 2019-07-05]
