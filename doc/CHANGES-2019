@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2789 2019/07/05 16:05:57 tsutsui Exp $
+$NetBSD: CHANGES-2019,v 1.2790 2019/07/05 16:54:09 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4663,3 +4663,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated chat/inspircd3 to 3.2.0 [nia 2019-07-05]
 	Updated print/auctex to 11.92 [hauke 2019-07-05]
 	Updated devel/ruby-delayer-deferred to 2.1.1 [tsutsui 2019-07-05]
+	Updated net/mikutter to 3.9.0alpha3 [tsutsui 2019-07-05]
