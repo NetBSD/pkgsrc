@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2019/07/02 03:36:18 adam Exp $
+# $NetBSD: Makefile,v 1.3 2019/07/05 07:57:02 adam Exp $
 
-DISTNAME=	Flask-JWT-Extended-3.19.0
+DISTNAME=	Flask-JWT-Extended-3.20.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-JWT-Extended/}
