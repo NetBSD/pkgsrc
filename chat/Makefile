@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.221 2019/06/19 12:18:04 nia Exp $
+# $NetBSD: Makefile,v 1.222 2019/07/05 09:14:49 nia Exp $
 #
 
 COMMENT=	Communication programs
@@ -76,8 +76,6 @@ SUBDIR+=	libotr
 SUBDIR+=	libpurple
 SUBDIR+=	libtelepathy
 SUBDIR+=	libtlen
-SUBDIR+=	licq-core
-SUBDIR+=	licq-gui-console
 SUBDIR+=	loudmouth
 SUBDIR+=	lurch-purple
 SUBDIR+=	matterircd
