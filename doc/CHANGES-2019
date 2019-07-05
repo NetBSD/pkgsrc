@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2784 2019/07/05 09:17:38 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2785 2019/07/05 09:56:14 he Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4657,3 +4657,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/py-regex to 2019.06.08 [adam 2019-07-05]
 	Removed chat/licq-core [nia 2019-07-05]
 	Removed chat/licq-gui-console [nia 2019-07-05]
+	Updated lang/rust to 1.36.0 [he 2019-07-05]
