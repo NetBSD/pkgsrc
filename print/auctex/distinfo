@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.20 2019/07/04 14:44:15 hauke Exp $
+$NetBSD: distinfo,v 1.21 2019/07/05 15:32:09 hauke Exp $
 
-SHA1 (auctex-11.89.tar.gz) = 339244eee9ac932b6a6e342313ea7ea8653d86f7
-RMD160 (auctex-11.89.tar.gz) = 8926fe01a469bd145ddc191eb76e63712302d14f
-SHA512 (auctex-11.89.tar.gz) = a78ddefb46c1eb271646f3c4e723f49a913e391eb58263df3d3de272bc1ad5b70c0a9de682f28124aa5a48b36c030b3e83425667ee1a1973a054ff03ef1d8be9
-Size (auctex-11.89.tar.gz) = 1332904 bytes
-SHA1 (patch-Makefile.in) = 9dd75aa62f8013a87f23dabbbf949520717f7952
-SHA1 (patch-style_subfigure.el) = 41a4c7030a14796896ed37a649961a555406308b
+SHA1 (auctex-11.92.tar.gz) = d1ac60f96abef76242b099073a7a05b24624ae81
+RMD160 (auctex-11.92.tar.gz) = 8013ad7a1d1acbd235996ea1b5bfa5bfa1f3f0a1
+SHA512 (auctex-11.92.tar.gz) = 758bf82903ba0499decf0ade77c7ac70865132a24195d7e8794538b7857c448811b7ef26149a915b60ed3ee34c2ebaddb3282a320bd459c9ee3f461d6ee9b84e
+Size (auctex-11.92.tar.gz) = 1486606 bytes
+SHA1 (patch-configure) = 036377c0acfd73997b06e25d6c62351045847dd7

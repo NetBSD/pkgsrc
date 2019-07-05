@@ -1,0 +1,81 @@
+$NetBSD: patch-configure,v 1.1 2019/07/05 15:32:10 hauke Exp $
+
+configure takes offense at details of an installed auctex package, but
+it really is the pkgsrc framework's business to check for installation
+conflicts.
+
+--- configure.orig	2017-12-03 19:10:55.000000000 +0000
++++ configure
+@@ -3844,72 +3844,6 @@ test -n "$TEXHASH" || TEXHASH=":"
+      fi
+    fi
+ 
+-   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for glaring installation conflicts" >&5
+-$as_echo_n "checking for glaring installation conflicts... " >&6; }
+-   exppackagelispdir="$packagelispdir"
+-    __ac_tmp_oldprefix__="${prefix}"
+-  __ac_tmp_oldexec_prefix__="$exec_prefix"
+- test "x${prefix}" = xNONE && prefix="${ac_default_prefix}"
+- test "x${exec_prefix}" = xNONE && exec_prefix='${prefix}'
+- while :;do case "$exppackagelispdir" in *\$*) __ac_tmp__='s/[\`"-"]/\\&/g'
+-eval "exppackagelispdir=`sed ${__ac_tmp__} <<EOF
+-$exppackagelispdir
+-EOF
+-`";; *) break ;; esac; done
+-  prefix="${__ac_tmp_oldprefix__}"
+-  exec_prefix="${__ac_tmp_oldexec_prefix__}"
+-   exppreviewstartfile="$previewstartfile"
+-    __ac_tmp_oldprefix__="${prefix}"
+-  __ac_tmp_oldexec_prefix__="$exec_prefix"
+- test "x${prefix}" = xNONE && prefix="${ac_default_prefix}"
+- test "x${exec_prefix}" = xNONE && exec_prefix='${prefix}'
+- while :;do case "$exppreviewstartfile" in *\$*) __ac_tmp__='s/[\`"-"]/\\&/g'
+-eval "exppreviewstartfile=`sed ${__ac_tmp__} <<EOF
+-$exppreviewstartfile
+-EOF
+-`";; *) break ;; esac; done
+-  prefix="${__ac_tmp_oldprefix__}"
+-  exec_prefix="${__ac_tmp_oldexec_prefix__}"
+-
+-
+-  elisp="
+-     (concat
+-       (and (setq tmp (locate-library \"preview.elc\"))
+-            (not (string= (file-truename tmp)
+-                       (file-truename (expand-file-name \"preview.elc\"
+-                                         packagelispdir))))
+-            (format \"Conflicting previous installation in \`%s' found!\n\"
+-                    (file-name-directory tmp)))
+-       (and (setq tmp (locate-library \"preview-latex.el\"))
+-            (not (string= (file-truename tmp)
+-                          (file-truename previewstartfile)))
+-            (format \"Conflicting previous startup file \`%s' found!\n\" tmp)))"
+-  OUTPUT=./conftest-$$
+-  echo "${EMACS}" -batch  -eval "(let* ((packagelispdir(pop command-line-args-left)) (previewstartfile(pop command-line-args-left))(x ${elisp})) (write-region (if (stringp x) x (prin1-to-string x)) nil \"${OUTPUT}\"))" "${exppackagelispdir}" "${exppreviewstartfile}" >& 5 2>&1
+-  "${EMACS}" -batch  -eval "(let* ((packagelispdir(pop command-line-args-left)) (previewstartfile(pop command-line-args-left))(x ${elisp})) (write-region (if (stringp x) x (prin1-to-string x)) nil \"${OUTPUT}\"))" "${exppackagelispdir}" "${exppreviewstartfile}" >& 5 2>&1
+-  shadows="`cat ${OUTPUT}`"
+-  echo "=> ${shadows}" >& 5 2>&1
+-  rm -f ${OUTPUT}
+-
+-   if test "NONE${shadows}" != NONE
+-   then
+-     conflictsmsg="Conflicts with previous installations have been detected.
+-   Please fix them before continuing.
+-   "
+-     { $as_echo "$as_me:${as_lineno-$LINENO}: result: ouch!
+-   " >&5
+-$as_echo "ouch!
+-   " >&6; }
+-   { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: ${shadows}
+-   " >&5
+-$as_echo "$as_me: WARNING: ${shadows}
+-   " >&2;}
+-   else
+-     conflictsmsg=
+-     { $as_echo "$as_me:${as_lineno-$LINENO}: result: probably none" >&5
+-$as_echo "probably none" >&6; }
+-   fi
+-
+    texmfdir="`sed 's/[^-0-9a-zA-Z_./:$]/\\\\&/g;s/[$]\\\\[{(]\\([^)}]*\\)\\\\[})]/${\\1}/g' <<EOF
+ $texmfdir
+ EOF
