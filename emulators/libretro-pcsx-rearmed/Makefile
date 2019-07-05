@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/08/16 13:25:28 nia Exp $
+# $NetBSD: Makefile,v 1.8 2019/07/05 08:38:36 nia Exp $
 
 DISTNAME=	libretro-pcsx-rearmed-0.22
 CATEGORIES=	emulators
@@ -35,4 +35,6 @@ do-install:
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 .include "../../mk/bsd.pkg.mk"
