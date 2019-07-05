@@ -1,5 +1,5 @@
 bitlbee is an IRC gateway to other chat networks.  It provides an IRC server
-where users connect to and have access to all their contacts in ICQ, MSN,
-Jabber or even IRC itself.  Protocols are implemented using Gaim's code.
-Multiple users are supported too, where each one has its own set of accounts
-and contacts.
+where users connect to and have access to all their contacts in XMPP, Twitter,
+or even IRC itself.  External plugins are also available for Steam, Facebook,
+Discord, etc.  Multiple users are supported too, where each one has its own
+set of accounts and contacts.
