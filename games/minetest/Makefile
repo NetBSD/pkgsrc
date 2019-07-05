@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/07/01 04:08:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2019/07/05 07:57:48 nia Exp $
 
 PKGNAME=	minetest-5.0.1
 PKGREVISION=	1
@@ -22,8 +22,8 @@ USE_CMAKE=	yes
 USE_TOOLS+=	msgfmt
 USE_LANGUAGES=	c c++11
 
-# C++11
-GCC_REQD+=	4.8
+# "Insufficient gcc version, found 4.8.5.  Version 4.9 or higher is required."
+GCC_REQD+=	4.9
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 
