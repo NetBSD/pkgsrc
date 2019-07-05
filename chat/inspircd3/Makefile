@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2019/06/23 10:04:26 nia Exp $
+# $NetBSD: Makefile,v 1.10 2019/07/05 12:11:49 nia Exp $
 
-DISTNAME=	inspircd-3.1.0
-PKGREVISION=	2
+DISTNAME=	inspircd-3.2.0
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=inspircd/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -23,6 +22,7 @@ BUILD_DEFS+=	PKG_SYSCONFDIR
 PKG_SYSCONFSUBDIR=	inspircd
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--example-dir=${EGDIR}
 CONFIGURE_ARGS+=	--manual-dir=${PREFIX}/${PKGMANDIR}/man1
 CONFIGURE_ARGS+=	--module-dir=${PREFIX}/lib/inspircd/modules
 CONFIGURE_ARGS+=	--config-dir=${PKG_SYSCONFDIR}
@@ -105,10 +105,6 @@ INSPIRCD_EXTRAS+=	m_sslrehashsignal.cpp
 post-configure:
 	cd ${WRKSRC} && ${CONFIGURE_ENV} ${PERL5} ./configure \
 	    --enable-extras=${INSPIRCD_EXTRAS:S/.cpp m_/.cpp,m_/gW}
-
-post-install:
-	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/examples/* ${DESTDIR}${EGDIR}
-	${RM} -rf ${DESTDIR}${PKG_SYSCONFDIR}/examples
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
