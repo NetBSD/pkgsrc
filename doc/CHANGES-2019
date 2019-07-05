@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2782 2019/07/04 17:15:32 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2783 2019/07/05 07:59:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4653,3 +4653,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/scala to 2.13.0 [ryoon 2019-07-04]
 	Updated lang/scala-sbt to 1.2.8 [ryoon 2019-07-04]
 	Updated games/liquidwar to 5.6.5 [nia 2019-07-04]
+	Updated www/py-flask-jwt-extended to 3.20.0 [adam 2019-07-05]
+	Updated textproc/py-regex to 2019.06.08 [adam 2019-07-05]
