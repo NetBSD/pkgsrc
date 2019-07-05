@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.21 2018/12/09 21:05:33 adam Exp $
-#
+# $NetBSD: Makefile,v 1.22 2019/07/05 19:16:19 adam Exp $
 
 DISTNAME=	iftop-1.0pre4
 CATEGORIES=	net
 MASTER_SITES=	http://www.ex-parrot.com/~pdw/iftop/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.ex-parrot.com/~pdw/iftop/download/
+HOMEPAGE=	http://www.ex-parrot.com/pdw/iftop/
 COMMENT=	Display bandwidth usage on an interface
+LICENSE=	gnu-gpl-v2
 
 USE_CURSES=		chgat
 FAKE_NCURSES=		yes
