@@ -1,4 +1,4 @@
-# $NetBSD: pear.mk,v 1.30 2016/04/10 16:39:27 joerg Exp $
+# $NetBSD: pear.mk,v 1.31 2019/07/05 08:51:25 nia Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install pear packages.
@@ -38,7 +38,7 @@ MASTER_SITES+=	${MASTER_SITE_PEAR_PACKAGE}
 
 DIST_SUBDIR=	pear
 
-HOMEPAGE?=	http://pear.php.net/package/${DISTNAME:C/-.*//}
+HOMEPAGE?=	https://pear.php.net/package/${DISTNAME:C/-.*//}
 
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-[0-9]*:../../lang/pear
 
