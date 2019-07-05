@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.102 2019/06/13 13:21:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.103 2019/07/05 07:53:10 bsiegert Exp $
 
 DISTNAME=	nsd-4.2.0
 CATEGORIES=	net
 MASTER_SITES=	http://www.nlnetlabs.nl/downloads/nsd/
 
 MAINTAINER=	pettai@NetBSD.org
-HOMEPAGE=	http://www.nlnetlabs.nl/nsd/index.html
+HOMEPAGE=	https://www.nlnetlabs.nl/projects/nsd/about/
 COMMENT=	Authoritative-only DNS server
 LICENSE=	modified-bsd
 
