@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2019/07/04 15:06:06 hauke Exp $
+# $NetBSD: Makefile,v 1.45 2019/07/05 15:32:09 hauke Exp $
 
-DISTNAME=		auctex-11.89
+DISTNAME=		auctex-11.92
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=		2
+#PKGREVISION=		1
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_GNU:=auctex/}
 
@@ -11,25 +11,20 @@ HOMEPAGE=		http://www.gnu.org/software/auctex/
 COMMENT=		Enhanced LaTeX mode for Emacs
 LICENSE=		gnu-gpl-v3
 
-INSTALLATION_DIRS=	share/doc/auctex
-INSTALLATION_DIRS+=	${EMACS_INFOPREFIX}
-INSTALLATION_DIRS+=	${EMACS_LISPPREFIX}
-INSTALLATION_DIRS+=	${EMACS_LISPPREFIX}/auctex
+# Emacsen pre-22 lack graphics support
+EMACS_VERSIONS_ACCEPTED= ${_EMACS_VERSIONS_ALL:Nemacs2[01]*}
 
-BUILD_DEFS+=		VARBASE
+DEPENDS+=		texlive-collection-latex>=2014:../../meta-pkgs/texlive-collection-latex
 
-EMACS_MODULES=		base
+.include "../../mk/bsd.prefs.mk"
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake makeinfo perl
 GNU_CONFIGURE=		YES
 
+CONFIGURE_ENV=		GS=${PREFIX}/bin/gs
 CONFIGURE_ARGS+=	${CONFIGURE_ARGS.${EMACS_FLAVOR}}
-CONFIGURE_ARGS+=	--disable-preview
+CONFIGURE_ARGS+=	--enable-preview
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-
-MAKEFLAGS+=		EMACS=${EMACS_BIN:Q}
-MESSAGE_SUBST+=		LISPDIR=${EMACS_LISPPREFIX:Q}
-INFO_FILES=		YES
 
 CONFIGURE_ARGS.emacs=	--with-lispdir=${EMACS_LISPPREFIX}
 
@@ -37,8 +32,26 @@ CONFIGURE_ARGS.emacs=	--with-lispdir=${EMACS_LISPPREFIX}
 CONFIGURE_ARGS.xemacs=	--without-packagedir
 CONFIGURE_ARGS.xemacs+=	--with-lispdir=${EMACS_LISPPREFIX}
 
+MAKEFLAGS+=		EMACS=${EMACS_BIN:Q}
+
+BUILD_DEFS+=		VARBASE
+
+EMACS_MODULES=		base
+
+MESSAGE_SUBST+=		LISPDIR=${EMACS_LISPPREFIX:Q}
+INFO_FILES=		YES
+
+TEXMFDIR=		share/texmf-local
+
+INSTALLATION_DIRS=	share/doc/auctex
+INSTALLATION_DIRS+=	${EMACS_INFOPREFIX}
+INSTALLATION_DIRS+=	${EMACS_LISPPREFIX}
+INSTALLATION_DIRS+=	${EMACS_LISPPREFIX}/auctex
+INSTALLATION_DIRS+=	${TEXMFDIR}/tex/latex/preview
+
 MAKE_DIRS_PERMS+=	${VARBASE}/auctex ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 1777
 
+.include "../../print/ghostscript/buildlink3.mk"
 .include "../../editors/emacs/modules.mk"
 
 .include "../../mk/bsd.pkg.mk"
