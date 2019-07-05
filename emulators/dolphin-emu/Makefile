@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/07/01 04:08:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2019/07/05 08:27:12 nia Exp $
 
 DISTNAME=	dolphin-emu-5.0
 PKGREVISION=	4
@@ -15,7 +15,10 @@ LICENSE=	gnu-gpl-v2
 EXTRACT_USING=	bsdtar
 USE_TOOLS+=	msgfmt msgmerge pkg-config
 USE_CMAKE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++14
+
+# std::make_unique
+GCC_REQD+=	4.9
 
 # Since SFML is not available in pkgsrc, make sure the included version
 # is always used.
@@ -25,7 +28,10 @@ CMAKE_ARGS+=	-DPKGMANDIR=${PKGMANDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
+# Claims to only support little endian architectures.
 ONLY_FOR_PLATFORM=	${LITTLEENDIANPLATFORMS}
+
+# No support in the code.
 BROKEN_ON_PLATFORM+=	SunOS-*-*
 
 .if ${MACHINE_ARCH} != "x86_64" && ${MACHINE_ARCH} != "aarch64"
@@ -37,6 +43,7 @@ CMAKE_ARGS.Linux+=	-DENABLE_EVDEV=0
 
 BUILDLINK_TRANSFORM+=	rm:-ldl
 
+# JIT
 NOT_PAX_MPROTECT_SAFE+=	bin/dolphin-emu
 NOT_PAX_MPROTECT_SAFE+=	bin/dolphin-emu-nogui
 
