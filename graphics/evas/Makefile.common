@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2016/01/24 16:14:44 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.16 2019/07/05 08:53:20 nia Exp $
 
 # used by graphics/evas-buffer/Makefile
 # used by graphics/evas-edb/Makefile
@@ -20,7 +20,7 @@ MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://enlightenment.org/
+HOMEPAGE=	https://enlightenment.org/
 LICENSE=	2-clause-bsd
 
 DISTINFO_FILE=	${.CURDIR}/../../graphics/evas/distinfo
