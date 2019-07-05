@@ -1,24 +1,25 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2005/12/03 11:12:28 wiz Exp $
+$NetBSD: MESSAGE,v 1.6 2019/07/05 15:32:09 hauke Exp $
 
-To customize AUC TeX you will need to edit the file
+To customize AUCTeX, you will need to edit the file
 
 	`${LISPDIR}/tex-site.el'
 
-in the site lisp directory.  Add the parts of `tex.el' (in the
-`auctex' subdirectory) which need to be changed to `tex-site.el'. This
-way you can keep your customizations and they will not get deleted
-when you update to a newer version of AUC TeX.
+in the site-lisp directory.  Add the parts of `tex.el' (in the
+`auctex' subdirectory) which need to be changed to `tex-site.el'.
+This way, your customizations will not get deleted when you update to
+a newer version of AUCTeX.
 
-You may then put
+Users may then put
 
 	(load "auctex.el" nil t t)
+	(load "preview-latex.el" nil t t)
 
-in your `${HOME}/.emacs.el' file.
+in their (X)Emacs init file.
 
-If your site TeX macro files and style files are put elsewhere than
-`${PREFIX}/share/texmf/tex', set `TeX-macro-global' to the directory in
-your `${HOME}/.emacs.el' file.
+If your site TeX macro files and style files are in a location
+different from `${PREFIX}/share/texmf/tex', set `TeX-macro-global' to
+the directory in your (X)Emacs init file:
 
 	;;; Note that the directory name must end with a slash!
 	(setq TeX-macro-global "/home/foo/my/tex/")
