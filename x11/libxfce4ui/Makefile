@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/05/23 02:02:53 gutteridge Exp $
+# $NetBSD: Makefile,v 1.20 2019/07/05 14:52:41 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -26,6 +26,8 @@ CONF_FILES=	${XFCE4_EGBASE}/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.
 
 MAKE_DIRS+=	${XFCE4_EGBASE}/xfconf/xfce-perchannel-xml \
 		${PKG_SYSCONFDIR}/xfce4/xfconf/xfce-perchannel-xml
+
+USE_LANGUAGES=	c99
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/xfce4-conf/buildlink3.mk"
