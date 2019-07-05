@@ -1,0 +1,51 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2019/07/05 18:20:19 adam Exp $
+
+Don't make application bundle on Darwin.
+
+--- CMakeLists.txt.orig	2018-10-20 22:39:39.000000000 +0000
++++ CMakeLists.txt
+@@ -81,7 +81,7 @@ if (AVAHI_FOUND)
+     set(CANTATA_LIBS ${CANTATA_LIBS} ${AVAHI_LIBRARIES})
+ endif()
+ 
+-if (NOT APPLE AND NOT WIN32 AND NOT HAIKU)
++if (NOT WIN32 AND NOT HAIKU)
+     set(SHARE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}/share"
+         CACHE PATH "Define install directory for read-only architecture-independent data")
+ else ()
+@@ -91,7 +91,7 @@ endif ()
+ 
+ if (WIN32)
+     set(CANTATA_ICON_INSTALL_PREFIX ${CMAKE_INSTALL_PREFIX}/icons/cantata)
+-elseif (APPLE)
++elseif (FALSE)
+     set(MACOSX_BUNDLE_BUNDLE_NAME Cantata)
+     set(MACOSX_BUNDLE_EXECUTABLE cantata)
+     set(MACOSX_BUNDLE_SHORT_VERSION_STRING ${CANTATA_VERSION})
+@@ -124,7 +124,7 @@ if (NOT APPLE AND NOT WIN32)
+ endif ()
+ 
+ 
+-if (CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT AND NOT APPLE AND NOT WIN32 AND NOT HAIKU)
++if (CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT AND NOT WIN32 AND NOT HAIKU)
+     set(CMAKE_INSTALL_PREFIX "/usr")
+     message("-- Set install prefix to ${CMAKE_INSTALL_PREFIX}")
+ endif ()
+@@ -361,8 +361,6 @@ set(CANTATA_LIBS ${CANTATA_LIBS} support
+ 
+ if (WIN32)
+     # Not installed for windows - script uses sym-links...
+-elseif (APPLE)
+-    install(PROGRAMS playlists/cantata-dynamic DESTINATION ${MACOSX_BUNDLE_RESOURCES}/scripts/)
+ else ()
+     install(PROGRAMS playlists/cantata-dynamic DESTINATION ${SHARE_INSTALL_PREFIX}/${CMAKE_PROJECT_NAME}/scripts)
+ endif ()
+@@ -526,7 +524,7 @@ if (WIN32)
+     set(CMAKE_BUILD_TYPE "Release")
+     ADD_EXECUTABLE(cantata WIN32 ${CANTATA_SRCS} ${CANTATA_RC_SRCS} ${CANTATA_UI_HDRS} ${CANTATA_PO})
+     install(TARGETS cantata DESTINATION ${CMAKE_INSTALL_PREFIX})
+-elseif (APPLE)
++elseif (FALSE)
+     ADD_EXECUTABLE(cantata MACOSX_BUNDLE ${CANTATA_SRCS} ${CANTATA_RC_SRCS} ${CANTATA_UI_HDRS} ${CANTATA_PO})
+ 
+     set(BREW_OPENSSL_PATH /usr/local/opt/openssl/lib)
