@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/06/09 15:46:09 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/07/05 18:20:19 adam Exp $
 
 DISTNAME=	cantata-2.3.3
 CATEGORIES=	audio
@@ -17,6 +17,15 @@ USE_TOOLS+=	bash:run perl:run
 
 REPLACE_PERL+=	playlists/cantata-dynamic
 REPLACE_BASH+=	cantata-remote.cmake
+
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=	unix
+.if ${OPSYS} == "Darwin"
+.include "../../x11/qt5-qtmacextras/buildlink3.mk"
+.else
+PLIST.unix=	yes
+.endif
 
 .include "../../audio/libebur128/buildlink3.mk"
 .include "../../audio/mpg123/buildlink3.mk"
