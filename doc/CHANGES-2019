@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2790 2019/07/05 16:54:09 tsutsui Exp $
+$NetBSD: CHANGES-2019,v 1.2791 2019/07/06 11:28:05 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4664,3 +4664,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/auctex to 11.92 [hauke 2019-07-05]
 	Updated devel/ruby-delayer-deferred to 2.1.1 [tsutsui 2019-07-05]
 	Updated net/mikutter to 3.9.0alpha3 [tsutsui 2019-07-05]
+	Updated print/mupdf to 1.15.0nb1 [leot 2019-07-06]
