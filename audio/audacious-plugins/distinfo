@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 01:12:25 agc Exp $
+$NetBSD: distinfo,v 1.6 2019/07/06 13:17:01 nia Exp $
 
-SHA1 (audacious-plugins-3.5.2.tar.bz2) = 470a9c009a92627fb824118762b156eb4604099f
-RMD160 (audacious-plugins-3.5.2.tar.bz2) = 2cf98e4fbf0e778672d509cd486274a8f7e4f10d
-SHA512 (audacious-plugins-3.5.2.tar.bz2) = eaf46f403a77b5de63f26e096b968a6d94bbe3917df4400e5791143d846c1f3cbf83f2937210055a9b493dfa56ddb36b12d6d57b1453708b23dd41c0e2a94a72
-Size (audacious-plugins-3.5.2.tar.bz2) = 1734588 bytes
+SHA1 (audacious-plugins-3.10.1.tar.bz2) = d2e549a402baa59b0181aabad6d7481369e8930e
+RMD160 (audacious-plugins-3.10.1.tar.bz2) = 96b7f2b0041508e8cea5f8188d9fb7b69b08f0a3
+SHA512 (audacious-plugins-3.10.1.tar.bz2) = 454e9ce4061e92a0ecda40f562d4cc7453fc0019fd76b25dbe9e319319fa37c22f9785cb29563e8074de8a88e6130106aca1e431790297e1b4636dc974fde565
+Size (audacious-plugins-3.10.1.tar.bz2) = 1715477 bytes
