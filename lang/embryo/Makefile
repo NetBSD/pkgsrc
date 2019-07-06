@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/06/16 18:56:05 sno Exp $
+# $NetBSD: Makefile,v 1.11 2019/07/06 16:46:10 nia Exp $
 #
 
 DISTNAME=	embryo-1.7.7
@@ -7,7 +7,7 @@ MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://enlightenment.org/
+HOMEPAGE=	https://enlightenment.org/
 COMMENT=	Embeddable Scripting Language
 
 # some potions of the code have a special license - but it's free, too
