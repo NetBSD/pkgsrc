@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2019/07/02 13:22:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2019/07/06 21:16:59 leot Exp $
 
 DISTNAME=	chicken-5.1.0
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://code.call-cc.org/releases/${PKGVERSION_NOREV}/
 
@@ -15,7 +16,11 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 UNLIMIT_RESOURCES=	datasize
 
-OWN_DIRS=		${PREFIX}/lib/chicken ${PREFIX}/lib/chicken/9
+BUILD_DEFS+=		CHICKEN_BINARY_VERSION
+CHICKEN_BINARY_VERSION=	11
+
+OWN_DIRS+=	${PREFIX}/lib/chicken
+OWN_DIRS+=	${PREFIX}/lib/chicken/${CHICKEN_BINARY_VERSION}
 
 BUILD_TARGET=		all
 
@@ -51,5 +56,9 @@ MAKE_FLAGS+=	DOCDIR=${PREFIX:Q}/share/doc/${PKGNAME_NOREV}
 MAKE_FLAGS+=	INSTALL_PROGRAM=${INSTALL:Q}
 
 TEST_TARGET=	check
+
+PLIST_SUBST+=		CHICKEN_BINARY_VERSION=${CHICKEN_BINARY_VERSION:Q}
+PRINT_PLIST_AWK+=	{ sub("/${CHICKEN_BINARY_VERSION}/", "/$${CHICKEN_BINARY_VERSION}/") }
+PRINT_PLIST_AWK+=	{ sub(".so.${CHICKEN_BINARY_VERSION}$$", ".so.$${CHICKEN_BINARY_VERSION}") }
 
 .include "../../mk/bsd.pkg.mk"
