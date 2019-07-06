@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/04/29 08:48:10 adam Exp $
+$NetBSD: distinfo,v 1.8 2019/07/06 22:49:00 adam Exp $
 
-SHA1 (soupsieve-1.9.1.tar.gz) = e8b9fdb5264cd7140394a1f6fd8e522082bc0bec
-RMD160 (soupsieve-1.9.1.tar.gz) = da7165deb019cd6e056783775efe0377a4e0cc05
-SHA512 (soupsieve-1.9.1.tar.gz) = 9474fd5beb9a688a71f670feb2a20238be9e050cd35f3e57f03074d80e5a59afc9ee4a6e77fa553ce28d97483b391d4f2bc98d3145eabf0356a319dc50f7d3ca
-Size (soupsieve-1.9.1.tar.gz) = 95089 bytes
+SHA1 (soupsieve-1.9.2.tar.gz) = d1eb367b6b831eb35a78c109ee4f01d5e1ca03cb
+RMD160 (soupsieve-1.9.2.tar.gz) = 0da8641b45fb79f81943ca1e3b27d3a1a576d3aa
+SHA512 (soupsieve-1.9.2.tar.gz) = 7d741d7119ecfb886c3c08853aa268c81b8eccae304518367e8ff479b7925d95131f484c4f57af7c5d0dc87cbdb511a48581a3ca9bd206711d5f4700e0896906
+Size (soupsieve-1.9.2.tar.gz) = 95448 bytes
