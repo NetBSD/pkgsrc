@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.92 2019/07/05 15:21:18 nia Exp $
+# $NetBSD: Makefile,v 1.93 2019/07/06 13:17:01 nia Exp $
 
-DISTNAME=	audacious-plugins-3.5.2
-PKGREVISION=	29
+DISTNAME=	audacious-plugins-3.10.1
 CATEGORIES=	audio
-MASTER_SITES=	http://distfiles.audacious-media-player.org/
+MASTER_SITES=	https://distfiles.audacious-media-player.org/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,70 +10,55 @@ HOMEPAGE=	https://audacious-media-player.org/
 COMMENT=	Plugins for Audacious media player
 LICENSE=	2-clause-bsd
 
-TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	gmake intltool pkg-config
+USE_TOOLS+=	msgfmt msgmerge xgettext
+GNU_CONFIGURE=	yes
 
-USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake intltool pkg-config
-USE_TOOLS+=		msgfmt msgmerge xgettext
-GNU_CONFIGURE=		yes
-#CONFIGURE_ARGS+=	--disable-aac
-CONFIGURE_ARGS+=	--disable-amidiplug
-#CONFIGURE_ARGS+=	--disable-coreaudio
-CONFIGURE_ARGS+=	--disable-gnomeshortcuts
-CONFIGURE_ARGS+=	--disable-modplug
-CONFIGURE_ARGS+=	--with-ffmpeg=none
+CONFIGURE_ARGS+=	--disable-ampache
+CONFIGURE_ARGS+=	--disable-bs2b
+CONFIGURE_ARGS+=	--disable-cue
+CONFIGURE_ARGS+=	--disable-notify
+# use SDL instead, it has working volume control
+CONFIGURE_ARGS+=	--disable-oss4
+CONFIGURE_ARGS+=	--disable-qtaudio
+CONFIGURE_ARGS+=	--disable-sndio
 
-.include "../../mk/compiler.mk"
-.if empty(PKGSRC_COMPILER:Mclang)
-# This should avoid an error like: libstdc++.so.6: Undefined PLT symbol "_Unwind_GetIP" on NetBSD i386 and maybe amd64, with gcc4 at least.
-# This seems to happen when libstdc++ gets linked in with the plug-ins and the code is not compiled with g++.
-# For a similar problem see http://archive.netbsd.se/?ml=netbsd-java&a=2007-08&m=4912662 :
-# Systems with Clang are supposed to be new enough to have a correctly linked
-# libstdc++.
-LDFLAGS.NetBSD+=	-lgcc_s
-.endif
+PLIST_VARS+=	dbus gtk qt
 
-# From audio/bmp/Makefile:
-# XXX Workaround a crash during shutdown that happens when dlclose(3)ing
-# any open plugin.  libstdc++ gets dynamically linked in when the id3lib
-# library is loaded, and is the one causing problems.  See PR pkg/26846
-# for more information.
-LDFLAGS.NetBSD+=	-lstdc++ -lm
-
-# cdaudio plugin complains about missing OSS at runtime
-LDFLAGS+=		${LIBOSSAUDIO}
-
-# do not use pkgsrc' flac if it is installed
-CFLAGS+=	-I. -I../flacng -Ilibflacng
-
-.include "../../mk/bsd.prefs.mk"
 .include "options.mk"
-
-PLIST_VARS+=	oss4
-
-.if ${OPSYS} == "NetBSD"
-RAWPART_cmd=		/sbin/sysctl -n kern.rawpartition | ${TR} 0-9 a-j
-.elif ${OPSYS} == "SunOS"
-CPPFLAGS.SunOS=	-D__EXTENSIONS__ -D__uint32_t=uint32_t -D__uint64_t=uint64_t
-CONFIGURE_ARGS+=	--enable-oss4
-PLIST.oss4=	yes
-.endif
-
 .include "../../audio/audacious/buildlink3.mk"
+.if !empty(PKG_BUILD_OPTIONS.audacious:Mdbus)
+TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
+PLIST.dbus=		yes
+.else
+CONFIGURE_ARGS+=	--disable-mpris2
+.endif
+.if !empty(PKG_BUILD_OPTIONS.audacious:Mqt5)
+PLIST.qt=		yes
+CONFIGURE_ARGS+=	--enable-qt
+.endif
+.if !empty(PKG_BUILD_OPTIONS.audacious:Mgtk2)
+PLIST.gtk=		yes
+.else
+CONFIGURE_ARGS+=	--disable-gtk
+.endif
 .include "../../audio/faad2/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libcddb/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
+.include "../../audio/libsoxr/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/mpg123/buildlink3.mk"
 .include "../../audio/wavpack/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/libbinio/buildlink3.mk"
 .include "../../misc/libcdio-paranoia/buildlink3.mk"
+.include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../net/libmms/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../www/neon/buildlink3.mk"
-.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
