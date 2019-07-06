@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2793 2019/07/06 13:17:13 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2794 2019/07/06 13:17:26 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4667,3 +4667,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/mupdf to 1.15.0nb1 [leot 2019-07-06]
 	Updated net/mikutter to 3.9.0 [tsutsui 2019-07-06]
 	Updated audio/audacious to 3.10.1 [nia 2019-07-06]
+	Updated audio/audacious-plugins to 3.10.1 [nia 2019-07-06]
