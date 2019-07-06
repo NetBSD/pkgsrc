@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2796 2019/07/06 16:13:58 fox Exp $
+$NetBSD: CHANGES-2019,v 1.2797 2019/07/06 19:23:55 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4670,3 +4670,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/audacious-plugins to 3.10.1 [nia 2019-07-06]
 	Updated www/mediawiki to 1.33.0 [wen 2019-07-06]
 	Updated audio/fasttracker2 to 2.161 [fox 2019-07-06]
+	Updated textproc/aspell-en to 2018.04.16.0 [nia 2019-07-06]
