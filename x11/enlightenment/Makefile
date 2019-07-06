@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2019/07/01 04:07:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.52 2019/07/06 16:46:10 nia Exp $
 
 DISTNAME=	enlightenment-0.17.3
 PKGREVISION=	18
@@ -7,7 +7,7 @@ MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://enlightenment.org/
+HOMEPAGE=	https://enlightenment.org/
 COMMENT=	Enlightenment Window Manager, Development Release
 LICENSE=	2-clause-bsd
 
