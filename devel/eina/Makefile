@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/06/16 18:56:04 sno Exp $
+# $NetBSD: Makefile,v 1.10 2019/07/06 16:46:09 nia Exp $
 #
 
 DISTNAME=	eina-1.7.7
@@ -7,7 +7,7 @@ MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://enlightenment.org/
+HOMEPAGE=	https://enlightenment.org/
 COMMENT=	Data types library
 LICENSE=	gnu-lgpl-v2.1
 
