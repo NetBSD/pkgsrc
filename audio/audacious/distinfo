@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2018/07/31 13:46:31 jperkin Exp $
+$NetBSD: distinfo,v 1.11 2019/07/06 13:17:00 nia Exp $
 
-SHA1 (audacious-3.5.2.tar.bz2) = 1c92ddb079ec1b0109cd4bc65a1329db5eb8cb1b
-RMD160 (audacious-3.5.2.tar.bz2) = dd41e56544d9563b47401a670d96a34d7be920b6
-SHA512 (audacious-3.5.2.tar.bz2) = 70fd5bf81fd86a867102917c9328e1e647e9566ecfbc773b15fe0d181f176cfb333976c817493b1e485f15a045da054f19a9d6d81106d55636fca14ac09f8008
-Size (audacious-3.5.2.tar.bz2) = 448436 bytes
-SHA1 (patch-configure) = b35fcc193c90401ed5b927d200022e8b05e1fee8
+SHA1 (audacious-3.10.1.tar.bz2) = 297000119e0d7b94e355bd78d484c85baeab3795
+RMD160 (audacious-3.10.1.tar.bz2) = 6fc2c88fc681a58f42f45d19de36f2f24bc7e1bf
+SHA512 (audacious-3.10.1.tar.bz2) = e88891caaa3897f9b4abf39136e20834aedf1287d0d5eefea392fda89050db8db00c6f363976a68fe250ddbae4e27590f7615916a76370a44ca9235f1fa60b43
+Size (audacious-3.10.1.tar.bz2) = 564481 bytes
+SHA1 (patch-configure) = 2f310b55fdfc4147af6132dd821a9f81a1be6864
+SHA1 (patch-src_libaudcore_audio.h.in) = 621afba8a610ab0f30d064d5d9ed581e781de7d2
