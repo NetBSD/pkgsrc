@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/07/14 13:35:14 mef Exp $
+# $NetBSD: Makefile,v 1.5 2019/07/06 19:12:47 nia Exp $
 
 DISTNAME=	aspell5-ga-4.8-0
 PKGNAME=	${DISTNAME:S/5-/-/1:S/-0/.0/1}
@@ -8,7 +8,7 @@ MASTER_SITES=	https://github.com/kscanne/gaelspell/releases/download/v4.8/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://borel.slu.edu/~kps/ispell/
+HOMEPAGE=	http://aspell.net/
 COMMENT=	Irish language support for aspell
 LICENSE=	gnu-gpl-v2
 
