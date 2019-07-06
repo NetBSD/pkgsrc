@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2798 2019/07/06 19:58:00 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2799 2019/07/06 22:53:36 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4672,3 +4672,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/fasttracker2 to 2.161 [fox 2019-07-06]
 	Updated textproc/aspell-en to 2018.04.16.0 [nia 2019-07-06]
 	Updated net/get_iplayer to 3.20 [nia 2019-07-06]
+	Updated games/quakeforge to 0.7.2 [nia 2019-07-06]
