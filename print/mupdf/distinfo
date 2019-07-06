@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.45 2019/05/17 05:45:10 wiz Exp $
+$NetBSD: distinfo,v 1.46 2019/07/06 11:27:48 leot Exp $
 
 SHA1 (mupdf-1.15.0-source.tar.gz) = 4354a1c7245d4351ba604a4deed4a4ecf3e27492
 RMD160 (mupdf-1.15.0-source.tar.gz) = 892247f12a9e85d384c6cbc6c5a394d36e783158
@@ -10,5 +10,6 @@ SHA1 (patch-ac) = 94294d03a0ad31e2e4063fca05e02bc6e2713bec
 SHA1 (patch-ae) = c6b113818b32cb4470e8549c00a16e0b2f364ede
 SHA1 (patch-platform_gl_gl-app.h) = f8682b54821a560b2ba1082bcf215eeefb549644
 SHA1 (patch-platform_gl_gl-main.c) = edff1aa77c4d6af59b2eca442340606a0bae9970
+SHA1 (patch-source_fitz_list-device.c) = ea8ca9df49c16a91546ab05e8f3e57b1308c2278
 SHA1 (patch-source_fitz_load-jpx.c) = 161d21bca13bb57db37807aec844c85dc5b34157
 SHA1 (patch-thirdparty_mujs_Makefile) = 833e44f4e23d2a6ff61e6276feede4892feeb9bb
