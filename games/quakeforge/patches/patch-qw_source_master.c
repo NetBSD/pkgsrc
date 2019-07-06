@@ -1,8 +1,10 @@
-$NetBSD: patch-qw_source_master.c,v 1.1 2013/08/31 14:49:08 joerg Exp $
+$NetBSD: patch-qw_source_master.c,v 1.2 2019/07/06 22:53:25 nia Exp $
 
---- qw/source/master.c.orig	2013-08-31 13:54:32.000000000 +0000
+Don't use IN_PKTINFO on NetBSD.
+
+--- qw/source/master.c.orig	2013-01-23 03:10:55.000000000 +0000
 +++ qw/source/master.c
-@@ -76,7 +76,7 @@ static __attribute__ ((unused)) const ch
+@@ -73,7 +73,7 @@
  static void __attribute__ ((format (printf, 1, 2)))
  ma_log (const char *fmt, ...);
  
