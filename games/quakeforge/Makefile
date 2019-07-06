@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.37 2019/07/02 13:37:34 nia Exp $
+# $NetBSD: Makefile,v 1.38 2019/07/06 22:53:24 nia Exp $
 
-DISTNAME=		quakeforge-0.5.5
-PKGREVISION=		18
+DISTNAME=		quakeforge-0.7.2
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=quake/}
 
 MAINTAINER=		snj@NetBSD.org
 HOMEPAGE=		http://www.quakeforge.net/
 COMMENT=		Improved Quake engine
+LICENSE=		gnu-gpl-v2
 
+CONFIGURE_ARGS+=	--enable-xdg
 CONFIGURE_ARGS+=	--with-cpp=${CPP:Q}" %d %i %o"
-CONFIGURE_ARGS+=	--disable-ogg
-CONFIGURE_ARGS+=	--disable-xmms
 GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		bison gmake
+USE_TOOLS+=		bison gmake pkg-config
 USE_LIBTOOL=		YES
 
 SUBST_CLASSES+=		dsp
@@ -23,19 +22,11 @@ SUBST_MESSAGE.dsp=	Adjusting sound device path.
 SUBST_FILES.dsp=	libs/audio/targets/snd_oss.c
 SUBST_SED.dsp=		-e "s|/dev/dsp|${DEVOSSAUDIO}|"
 
+LIBS+=			${BUILDLINK_LDADD.oss}
+
 REPLACE_PYTHON+=	tools/qfcc/source/qfpreqcc
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.quakeforge
-PKG_SUPPORTED_OPTIONS=	inet6
-PKG_SUGGESTED_OPTIONS=	inet6
-
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Minet6)
-CONFIGURE_ARGS+=	--with-ipv6
-.else
-CONFIGURE_ARGS+=	--without-ipv6
-.endif
+.include "../../mk/bsd.prefs.mk"
 
 PLIST_VARS+=		sunaudio linux
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
@@ -48,10 +39,16 @@ PLIST.linux=		yes
 
 INSTALLATION_DIRS=	include/QF/GL include/QF/plugin include/QF/ruamoko/gui
 
+.include "options.mk"
 .include "../../lang/python/application.mk"
+.include "../../audio/flac/buildlink3.mk"
+.include "../../audio/libsamplerate/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../audio/libwildmidi/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXxf86dga/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
