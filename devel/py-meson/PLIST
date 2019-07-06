@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/05/22 09:52:52 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/07/06 22:42:25 adam Exp $
 bin/meson
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -53,6 +53,18 @@ ${PYSITELIB}/mesonbuild/backend/xcodebackend.pyo
 ${PYSITELIB}/mesonbuild/build.py
 ${PYSITELIB}/mesonbuild/build.pyc
 ${PYSITELIB}/mesonbuild/build.pyo
+${PYSITELIB}/mesonbuild/cmake/__init__.py
+${PYSITELIB}/mesonbuild/cmake/__init__.pyc
+${PYSITELIB}/mesonbuild/cmake/__init__.pyo
+${PYSITELIB}/mesonbuild/cmake/client.py
+${PYSITELIB}/mesonbuild/cmake/client.pyc
+${PYSITELIB}/mesonbuild/cmake/client.pyo
+${PYSITELIB}/mesonbuild/cmake/common.py
+${PYSITELIB}/mesonbuild/cmake/common.pyc
+${PYSITELIB}/mesonbuild/cmake/common.pyo
+${PYSITELIB}/mesonbuild/cmake/interpreter.py
+${PYSITELIB}/mesonbuild/cmake/interpreter.pyc
+${PYSITELIB}/mesonbuild/cmake/interpreter.pyo
 ${PYSITELIB}/mesonbuild/compilers/__init__.py
 ${PYSITELIB}/mesonbuild/compilers/__init__.pyc
 ${PYSITELIB}/mesonbuild/compilers/__init__.pyo
@@ -62,6 +74,9 @@ ${PYSITELIB}/mesonbuild/compilers/c.pyo
 ${PYSITELIB}/mesonbuild/compilers/c_function_attributes.py
 ${PYSITELIB}/mesonbuild/compilers/c_function_attributes.pyc
 ${PYSITELIB}/mesonbuild/compilers/c_function_attributes.pyo
+${PYSITELIB}/mesonbuild/compilers/clike.py
+${PYSITELIB}/mesonbuild/compilers/clike.pyc
+${PYSITELIB}/mesonbuild/compilers/clike.pyo
 ${PYSITELIB}/mesonbuild/compilers/compilers.py
 ${PYSITELIB}/mesonbuild/compilers/compilers.pyc
 ${PYSITELIB}/mesonbuild/compilers/compilers.pyo
@@ -111,6 +126,7 @@ ${PYSITELIB}/mesonbuild/dependencies/boost.py
 ${PYSITELIB}/mesonbuild/dependencies/boost.pyc
 ${PYSITELIB}/mesonbuild/dependencies/boost.pyo
 ${PYSITELIB}/mesonbuild/dependencies/data/CMakeLists.txt
+${PYSITELIB}/mesonbuild/dependencies/data/CMakeListsLLVM.txt
 ${PYSITELIB}/mesonbuild/dependencies/data/CMakePathInfo.txt
 ${PYSITELIB}/mesonbuild/dependencies/dev.py
 ${PYSITELIB}/mesonbuild/dependencies/dev.pyc
@@ -202,12 +218,18 @@ ${PYSITELIB}/mesonbuild/modules/qt5.pyo
 ${PYSITELIB}/mesonbuild/modules/rpm.py
 ${PYSITELIB}/mesonbuild/modules/rpm.pyc
 ${PYSITELIB}/mesonbuild/modules/rpm.pyo
+${PYSITELIB}/mesonbuild/modules/sourceset.py
+${PYSITELIB}/mesonbuild/modules/sourceset.pyc
+${PYSITELIB}/mesonbuild/modules/sourceset.pyo
 ${PYSITELIB}/mesonbuild/modules/unstable_cuda.py
 ${PYSITELIB}/mesonbuild/modules/unstable_cuda.pyc
 ${PYSITELIB}/mesonbuild/modules/unstable_cuda.pyo
 ${PYSITELIB}/mesonbuild/modules/unstable_icestorm.py
 ${PYSITELIB}/mesonbuild/modules/unstable_icestorm.pyc
 ${PYSITELIB}/mesonbuild/modules/unstable_icestorm.pyo
+${PYSITELIB}/mesonbuild/modules/unstable_kconfig.py
+${PYSITELIB}/mesonbuild/modules/unstable_kconfig.pyc
+${PYSITELIB}/mesonbuild/modules/unstable_kconfig.pyo
 ${PYSITELIB}/mesonbuild/modules/unstable_simd.py
 ${PYSITELIB}/mesonbuild/modules/unstable_simd.pyc
 ${PYSITELIB}/mesonbuild/modules/unstable_simd.pyo
