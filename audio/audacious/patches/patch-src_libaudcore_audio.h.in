@@ -1,0 +1,27 @@
+$NetBSD: patch-src_libaudcore_audio.h.in,v 1.1 2019/07/06 13:17:01 nia Exp $
+
+NetBSD has these in libc.
+
+--- src/libaudcore/audio.h.in.orig	2018-12-26 06:55:16.000000000 +0000
++++ src/libaudcore/audio.h.in
+@@ -42,7 +42,10 @@ struct StereoVolume {
+ };
+ 
+ #ifdef WANT_AUD_BSWAP
+-
++#ifdef __NetBSD__
++#include <sys/types.h>
++#include <machine/bswap.h>
++#else
+ #include <stdint.h>
+ 
+ #undef bswap16
+@@ -66,7 +69,7 @@ constexpr uint64_t bswap64 (uint64_t x)
+            ((x & 0x00000000ff000000) << 8) | ((x & 0x0000000000ff0000) << 24) |
+            ((x & 0x000000000000ff00) << 40) | ((x & 0x00000000000000ff) << 56);
+ }
+-
++#endif // __NetBSD__
+ #endif // WANT_AUD_BSWAP
+ 
+ #if @BIGENDIAN@
