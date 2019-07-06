@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2019/07/04 13:26:33 nia Exp $
+# $NetBSD: Makefile,v 1.29 2019/07/06 09:48:43 nia Exp $
 #
 
 DISTNAME=		arnsrc04012004
@@ -51,4 +51,5 @@ CONFIGURE_ARGS+=	--x-libraries=${PREFIX}/lib
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
