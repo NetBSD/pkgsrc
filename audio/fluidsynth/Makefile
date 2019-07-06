@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2014/10/09 14:05:55 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2019/07/06 18:52:06 nia Exp $
 
 DISTNAME=	fluidsynth-1.1.6
 PKGREVISION=	2
@@ -17,7 +17,7 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	fluidsynth.pc.in
 PTHREAD_AUTO_VARS=	yes
 
-CFLAGS+=		-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
+CPPFLAGS+=		-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
 LDFLAGS+=		${LIBOSSAUDIO}
 
 CPPFLAGS.SunOS+=	-Du_int8_t=uint8_t -Du_int16_t=uint16_t
