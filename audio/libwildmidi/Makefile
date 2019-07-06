@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2016/09/15 20:21:37 wiedi Exp $
+# $NetBSD: Makefile,v 1.6 2019/07/06 21:05:25 nia Exp $
 
 DISTNAME=	wildmidi-0.4.0
 PKGNAME=	lib${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://github.com/Mindwerks/wildmidi/archive/
 
@@ -21,5 +22,17 @@ SUBST_FILES.man+=	src/CMakeLists.txt
 SUBST_STAGE.man=	post-extract
 SUBST_MESSAGE.man=	Fixing man page installation path.
 
-.include "../../mk/oss.buildlink3.mk"
+.include "../../mk/bsd.prefs.mk"
+
+CMAKE_ARGS+=	-DWANT_OPENAL=OFF
+.if ${OPSYS} == "Linux"
+CMAKE_ARGS+=	-DWANT_ALSA=ON
+.  include "../../audio/alsa-lib/buildlink3.mk"
+.else
+.  include "../../mk/oss.buildlink3.mk"
+.  if ${OSS_TYPE} != "none"
+CMAKE_ARGS+=	-DWANT_OSS=ON
+.  endif
+.endif
+
 .include "../../mk/bsd.pkg.mk"
