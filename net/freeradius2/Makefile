@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2019/07/04 12:26:48 adam Exp $
+# $NetBSD: Makefile,v 1.50 2019/07/06 18:40:01 adam Exp $
 
 DISTNAME=	freeradius-server-2.2.10
 PKGNAME=	${DISTNAME:S/-server//}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.freeradius.org/pub/freeradius/
 EXTRACT_SUFX=	.tar.bz2
@@ -80,8 +81,8 @@ SUBST_MESSAGE.config=	Fixing configuration files.
 .include "options.mk"
 
 EGFILES=acct_users attrs attrs.access_reject attrs.accounting_response \
-	attrs.pre-proxy certs/README certs/bootstrap certs/ca.cnf \
-	certs/client.cnf certs/demoCA/cacert.pem certs/server.cnf \
+	attrs.pre-proxy certs/README certs/Makefile certs/bootstrap \
+	certs/ca.cnf certs/client.cnf certs/server.cnf \
 	certs/xpextensions clients.conf dictionary eap.conf experimental.conf \
 	hints huntgroups ldap.attrmap modules/acct_unique modules/always \
 	modules/attr_filter modules/attr_rewrite modules/chap modules/checkval \
@@ -116,7 +117,7 @@ EGFILES=acct_users attrs attrs.access_reject attrs.accounting_response \
 	sql/postgresql/schema.sql \
 	sql/postgresql/update_radacct_group_trigger.sql \
 	sql/postgresql/voip-postpaid.conf sqlippool.conf templates.conf users
-EGDIRS=	certs certs/demoCA modules sql sql/mssql sql/mysql sql/oracle \
+EGDIRS=	certs modules sql sql/mssql sql/mysql sql/oracle \
 	sql/postgresql sites-available sites-enabled
 
 .for f in ${EGFILES}
