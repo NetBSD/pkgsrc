@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/08/22 09:46:44 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2019/07/06 19:13:33 nia Exp $
 
 DISTNAME=	aspell-fo-0.4.2
 PKGREVISION=	5
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://fo.speling.org/filer/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://fo.speling.org/installation/aspell
+HOMEPAGE=	http://aspell.net/
 COMMENT=	Faroese language support for aspell
 LICENSE=	gnu-gpl-v2
 
