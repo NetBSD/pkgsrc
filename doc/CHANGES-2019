@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2794 2019/07/06 13:17:26 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2795 2019/07/06 15:03:25 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4668,3 +4668,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/mikutter to 3.9.0 [tsutsui 2019-07-06]
 	Updated audio/audacious to 3.10.1 [nia 2019-07-06]
 	Updated audio/audacious-plugins to 3.10.1 [nia 2019-07-06]
+	Updated www/mediawiki to 1.33.0 [wen 2019-07-06]
