@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.16 2016/09/18 11:20:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2019/07/07 08:54:30 bsiegert Exp $
 bin/gcpio
 gnu/bin/cpio
 gnu/man/man1/cpio.1
 gnu/man/man1/mt.1
 info/cpio.info
-libexec/grmt
+${PLIST.rmt}libexec/grmt
 man/man1/gcpio.1
-man/man8/grmt.8
+${PLIST.rmt}man/man8/grmt.8
 share/locale/da/LC_MESSAGES/cpio.mo
 share/locale/de/LC_MESSAGES/cpio.mo
 share/locale/es/LC_MESSAGES/cpio.mo
