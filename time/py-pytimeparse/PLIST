@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2019/07/07 10:14:44 bsiegert Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pytimeparse/VERSION
+${PYSITELIB}/pytimeparse/__init__.py
+${PYSITELIB}/pytimeparse/__init__.pyc
+${PYSITELIB}/pytimeparse/__init__.pyo
+${PYSITELIB}/pytimeparse/tests/__init__.py
+${PYSITELIB}/pytimeparse/tests/__init__.pyc
+${PYSITELIB}/pytimeparse/tests/__init__.pyo
+${PYSITELIB}/pytimeparse/tests/testtimeparse.py
+${PYSITELIB}/pytimeparse/tests/testtimeparse.pyc
+${PYSITELIB}/pytimeparse/tests/testtimeparse.pyo
+${PYSITELIB}/pytimeparse/timeparse.py
+${PYSITELIB}/pytimeparse/timeparse.pyc
+${PYSITELIB}/pytimeparse/timeparse.pyo
