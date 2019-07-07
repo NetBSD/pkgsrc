@@ -1,0 +1,14 @@
+A small Python library to parse various kinds of time expressions,
+inspired by a StackOverflow question.
+
+The single function pytimeparse.timeparse.timeparse defined in the
+library (also available as pytimeparse.parse) parses time expressions
+like the following:
+
+    32m
+    2h32m
+    3d2h32m
+    1w3d2h32m
+    1w 3d 2h 32m
+    1 w 3 d 2 h 32 m
+    ...
