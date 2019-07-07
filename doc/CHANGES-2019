@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2813 2019/07/07 21:37:17 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2814 2019/07/07 22:48:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4691,3 +4691,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/diffutils to 3.7 [schwarz 2019-07-07]
 	Updated geography/gama to 2.06 [gdt 2019-07-07]
 	Removed games/rtcw [nia 2019-07-07]
+	Updated emulators/ucon64 to 2.2.0 [wiz 2019-07-07]
