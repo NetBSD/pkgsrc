@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2803 2019/07/07 09:31:22 bsiegert Exp $
+$NetBSD: CHANGES-2019,v 1.2804 2019/07/07 09:44:15 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4682,3 +4682,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/SDL2_image to 2.0.5 [nia 2019-07-07]
 	Updated textproc/enchant2 to 2.2.5 [bsiegert 2019-07-07]
 	Added databases/py-dbfread version 2.0.7 [bsiegert 2019-07-07]
+	Added graphics/py-leather version 0.3.3 [bsiegert 2019-07-07]
