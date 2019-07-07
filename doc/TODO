@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19107 2019/07/06 13:17:26 nia Exp $
+$NetBSD: TODO,v 1.19108 2019/07/07 14:36:30 nia Exp $
 
 Suggested new packages
 ======================
@@ -298,6 +298,74 @@ Suggested new packages
 	NetBox
 	https://github.com/digitalocean/netbox
 	IP address management and data center infrastructure management tool
+
+	Flowblade
+	https://jliljebl.github.io/flowblade/
+	Video editor
+
+	OpenShot
+	https://www.openshot.org/
+	Video editor
+
+	ManaPlus
+	https://manaplus.org/
+	MMORPG client
+
+	linx-server
+	Self-hosted file/code/media sharing website
+	https://github.com/andreimarcu/linx-server
+
+	neatvi [pkgsrc-wip]
+	https://github.com/aligrudi/neatvi
+	Small vi/ex editor for editing bidirectional UTF-8 text
+
+	qBittorrent [pkgsrc-wip]
+	https://www.qbittorrent.org/
+	Bittorrent client, open source alternative to uTorrent
+
+	Simutrans [pkgsrc-wip]
+	https://www.simutrans.com/en/
+	Transportation simulator game
+
+	gemrb [pkgsrc-wip]
+	https://github.com/gemrb/gemrb
+	Reimplementation of Bioware's Infinity Engine used for playing Baldur's Gate
+
+	luakit [pkgsrc-wip]
+	https://luakit.github.io/
+	Webkit based browser extensible with Lua
+
+	Aquaria [pkgsrc-wip]
+	https://github.com/AquariaOSE/Aquaria
+	Open source release of the successful indie game
+
+	CaveExpress/CavePacker
+	http://www.caveproductions.org/
+	Sokoban game/2D platformer with physics-based gameplay and dozens of levels.
+
+	StepMania
+	https://www.stepmania.com/
+	Rhythm game
+
+	Widelands
+	https://www.widelands.org/
+	RTS game
+
+	Unknown Horizons
+	http://unknown-horizons.org/
+	2D realtime strategy simulation with an emphasis on economy and city building
+
+	0 A.D.
+	https://play0ad.com/
+	A free, open-source game of ancient warfare
+
+	Hedgewars
+	https://www.hedgewars.org/
+	Strategy game similar to Worms
+
+	Barbie Seahorse Adventures
+	http://www.imitationpickles.org/barbie/
+	You're a seahorse - and you want to go to the moon!
 
 	Missing xorg packages
 	app: constype, intel-gpu-tools
