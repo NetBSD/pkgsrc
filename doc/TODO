@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19110 2019/07/07 15:02:03 leot Exp $
+$NetBSD: TODO,v 1.19111 2019/07/07 15:46:27 nia Exp $
 
 Suggested new packages
 ======================
@@ -351,7 +351,7 @@ Suggested new packages
 	http://unknown-horizons.org/
 	2D realtime strategy simulation with an emphasis on economy and city building
 
-	0 A.D.
+	0 A.D. [pkgsrc-wip]
 	https://play0ad.com/
 	A free, open-source game of ancient warfare
 
