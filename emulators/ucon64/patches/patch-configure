@@ -1,24 +1,15 @@
-$NetBSD: patch-configure,v 1.1 2018/03/07 12:34:55 wiz Exp $
+$NetBSD: patch-configure,v 1.2 2019/07/07 22:47:57 wiz Exp $
 
 Patch from upstream to improve build on NetBSD.
 
---- configure.orig	2017-04-28 17:02:28.000000000 +0000
+--- configure.orig	2019-05-30 15:37:45.000000000 +0000
 +++ configure
-@@ -629,7 +629,7 @@ RANLIB
- LIBOBJS
- DEFINE_USB_MAKE
- DEFINE_ZLIB_MAKE
--LIBI386_MAKE
-+LIBIOPL_NETBSD_MAKE
- DEFINE_LIBCD64_MAKE
- DEFINE_DISCMAGE_MAKE
- DEFINE_DLOPEN_MAKE
-@@ -3300,7 +3300,7 @@ $as_echo "#define USE_LIBCD64 1" >>confd
+@@ -3434,7 +3434,7 @@ fi
  
-   DEFINE_LIBCD64_MAKE="USE_LIBCD64=1"
- else
--      LIBI386_MAKE="-li386"
-+      LIBIOPL_NETBSD_MAKE="-lx86_64"
- fi
- { $as_echo "$as_me:${as_lineno-$LINENO}: result: $with_libcd64" >&5
- $as_echo "$with_libcd64" >&6; }
+ if test $with_libcd64 = yes; then
+   CFLAGS0=$CFLAGS
+-  CFLAGS+=" -Ibackup/libcd64"
++  CFLAGS="$CFLAGS -Ibackup/libcd64"
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ #include "ultra64/host/cd64lib.h"
