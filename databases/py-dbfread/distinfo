@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/07/07 09:30:52 bsiegert Exp $
+
+SHA1 (dbfread-2.0.7.tar.gz) = 8b53c4b81ae3165fadf050119c6d947cf9b5362b
+RMD160 (dbfread-2.0.7.tar.gz) = 6599d0c691b9047c46ec75842ed380880c595567
+SHA512 (dbfread-2.0.7.tar.gz) = 86c3a29e351b985984be67401a6dfe3e39cd92451a122788ade83d65313dde37a3706ce36c4365bd36ba1df62ee057b625f1e0f077aa4a248c7456258189f548
+Size (dbfread-2.0.7.tar.gz) = 33212 bytes
