@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2018/03/07 12:34:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/07/07 22:47:57 wiz Exp $
 bin/ucon64
-lib/libdiscmage.so
+lib/discmage.so
 share/doc/ucon64/changes.html
 share/doc/ucon64/developers.html
 share/doc/ucon64/faq.html
@@ -20,6 +20,7 @@ share/doc/ucon64/images/logo.png
 share/doc/ucon64/images/mdpro.png
 share/doc/ucon64/images/msg.png
 share/doc/ucon64/images/pcepro.png
+share/doc/ucon64/images/pl.png
 share/doc/ucon64/images/qd16.png
 share/doc/ucon64/images/sc.png
 share/doc/ucon64/images/sf3.png
@@ -29,6 +30,7 @@ share/doc/ucon64/images/smd.png
 share/doc/ucon64/images/smspro.png
 share/doc/ucon64/images/snesppak.png
 share/doc/ucon64/images/swc.png
+share/doc/ucon64/images/ufosd.png
 share/doc/ucon64/images/v64.png
 share/doc/ucon64/images/v64jr.png
 share/doc/ucon64/install.html
