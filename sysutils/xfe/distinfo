@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.14 2015/11/04 01:32:41 agc Exp $
+$NetBSD: distinfo,v 1.15 2019/07/07 15:22:29 nia Exp $
 
-SHA1 (xfe-1.40.tar.gz) = 95c8ee8e853136d58d126ec559828c43000c19c3
-RMD160 (xfe-1.40.tar.gz) = a2add3bdac71706da9ea791d88bc96cbcdc3afb3
-SHA512 (xfe-1.40.tar.gz) = 22cf9fd60dcd4b594d7ff39ea78d10a8c71ee2433025acf32b7e69457a5e86852b54e448ebc1e3f63f39bf720767064c74c46eaf2b999c14ae76417d33272892
-Size (xfe-1.40.tar.gz) = 2574477 bytes
-SHA1 (patch-ac) = 001140df584ef01d52e0737a57e0babbc574a0b4
-SHA1 (patch-configure) = 406757b915cbd266bc9e4dfd2402f6676c976ee6
-SHA1 (patch-src_main.cpp) = 2e875f4235b7e4c22ad5a0c236144bdd549fb8a1
+SHA1 (xfe-1.43.2.tar.gz) = 9336d2ea5d780685205c038540fea8f454d2a120
+RMD160 (xfe-1.43.2.tar.gz) = 4b366d27af97d8d6197debfa013b48b879f34af0
+SHA512 (xfe-1.43.2.tar.gz) = ad7b450d0828747f801219c23824b0751fc2a7f0eea791369c4adb3090ffe1279056fa8804ef97b25a2f810e00d37357efc962dc9d4087c3d7cc5f8ffb37d51d
+Size (xfe-1.43.2.tar.gz) = 2834576 bytes
+SHA1 (patch-intl_Makefile.in) = 521eeb9b72c4a48af6cc17819c8def558364a501
