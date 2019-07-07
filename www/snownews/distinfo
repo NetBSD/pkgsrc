@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.14 2015/11/04 02:47:39 agc Exp $
+$NetBSD: distinfo,v 1.15 2019/07/07 18:13:23 nia Exp $
 
 SHA1 (snownews-1.5.12.tar.gz) = b3addaac25c2c093aa5e60b8b89e50e7d7450bcf
 RMD160 (snownews-1.5.12.tar.gz) = dbe9c6b88e77ce37bb23e4d3ddc8d63f8bd66151
 SHA512 (snownews-1.5.12.tar.gz) = 7a7ccd5ea57f8bbb73f1429ab931a38203e858c74a383c5347e66088b84f6a7240feeee99e179687ce0a7a89c6c1406ce20d6c5d6771d25a0a0301fa5526e220
 Size (snownews-1.5.12.tar.gz) = 167944 bytes
+SHA1 (patch-conversions.c) = 4ca23e1a1c6f1b98533c4f74eba2e7aa2bed8e75
+SHA1 (patch-digcalc.c) = ce73645e350f8dad93c3801077ceb1628bbed5bd
 SHA1 (patch-os-support_c) = 144a9c0910618ddd64d5d56eb62aa8a9e8155145
