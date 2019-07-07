@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 00:35:39 agc Exp $
+$NetBSD: distinfo,v 1.7 2019/07/07 17:57:29 schwarz Exp $
 
-SHA1 (tacacs+-F4.0.4.27a.tar.gz) = 1d65cee89180cbf7c5369db5daed5769d3988abe
-RMD160 (tacacs+-F4.0.4.27a.tar.gz) = 085871278a6533ad7448cd2734c775aac885eb6b
-SHA512 (tacacs+-F4.0.4.27a.tar.gz) = 2251a21f609d516b3ebc7d3d2d7d030ea1bb491e0fe5e08e7639d2d9bdb0ef9a1ab4d17f340e50e83771dc9a512c5dacc99716fd882ba3f6db2fafb0915e86bd
-Size (tacacs+-F4.0.4.27a.tar.gz) = 504395 bytes
+SHA1 (tacacs-F4.0.4.28.tar.gz) = 7ceb93ed743096dd9755dccf7405f9b1d70188a3
+RMD160 (tacacs-F4.0.4.28.tar.gz) = 1336eee599a47068b657c333da66517f5620a144
+SHA512 (tacacs-F4.0.4.28.tar.gz) = aec97bf1c2ea4171ba1aeabeb6ac7405ca693439c15a9f09868b77932a1ed72036043c05d8bfcfc938c43549318e41fd1ab4f3251ce2536278318d6a318c53cb
+Size (tacacs-F4.0.4.28.tar.gz) = 530049 bytes
 SHA1 (patch-ag) = 3ddc4916cfd85b0d501be8957c1e6dcc42cf523a
 SHA1 (patch-ah) = 43698e384eba7fe091a155fc005c21a077aa0cf3
-SHA1 (patch-aj) = 9da6c0e2bb520d776accb16acf9674e259a743ed
-SHA1 (patch-ak) = 476ffac771b882ad856556052fdd050f04d49996
+SHA1 (patch-ak) = dfea118845574688b71ace7a4afb6969868bf8c6
