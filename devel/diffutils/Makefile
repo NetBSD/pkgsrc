@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2017/09/08 09:42:34 adam Exp $
+# $NetBSD: Makefile,v 1.39 2019/07/07 18:02:43 schwarz Exp $
 
-DISTNAME=	diffutils-3.6
+DISTNAME=	diffutils-3.7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=diffutils/}
 EXTRACT_SUFX=	.tar.xz
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/diffutils/diffutils.html
 COMMENT=	GNU diff utilities - find the differences between files
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v3
 
 AUTO_MKDIRS=		yes
 INFO_FILES=		yes
