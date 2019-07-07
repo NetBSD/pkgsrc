@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19109 2019/07/07 14:37:44 nia Exp $
+$NetBSD: TODO,v 1.19110 2019/07/07 15:02:03 leot Exp $
 
 Suggested new packages
 ======================
@@ -314,10 +314,6 @@ Suggested new packages
 	linx-server
 	Self-hosted file/code/media sharing website
 	https://github.com/andreimarcu/linx-server
-
-	neatvi [pkgsrc-wip]
-	https://github.com/aligrudi/neatvi
-	Small vi/ex editor for editing bidirectional UTF-8 text
 
 	qBittorrent [pkgsrc-wip]
 	https://www.qbittorrent.org/
