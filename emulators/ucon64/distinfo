@@ -1,16 +1,13 @@
-$NetBSD: distinfo,v 1.9 2018/03/07 12:34:55 wiz Exp $
+$NetBSD: distinfo,v 1.10 2019/07/07 22:47:57 wiz Exp $
 
-SHA1 (ucon64-2.1.0-src.tar.gz) = 83506c965ba4ab6fa7122c9dcebbabe6c553cbc3
-RMD160 (ucon64-2.1.0-src.tar.gz) = b3b6b95a44cb50ac7e3634d07b1b50960fb971f8
-SHA512 (ucon64-2.1.0-src.tar.gz) = da2dbe8a573e7dc779f69859f4d3508d4818dcfd99b6b397a7b23a2038a1d8c85835fae9e237a1639ec6179e8ceabb95fd0d65f95f963de99bc61024f686580e
-Size (ucon64-2.1.0-src.tar.gz) = 1348408 bytes
-SHA1 (patch-Makefile) = 9cfc3c474562d5073099286a9659e4e5d4cf5d2f
-SHA1 (patch-backup_libcd64_Makefile) = b46127daa77cd9516954365897247c8f33088883
-SHA1 (patch-backup_libcd64_cd64io.c) = b47d14bb41708caa5a582444d5f4ef35cda973ea
-SHA1 (patch-backup_libcd64_cd64io.h) = 026c79ecc577e701b27113d369e6c8d977f01d53
-SHA1 (patch-config.mak.in) = 87db3e62bbd5fa94fa83878b227e3ed3ff8920e1
-SHA1 (patch-configure) = a4b89f6885abe731b75f6277bc563ec992f8d0c9
-SHA1 (patch-configure.in) = 3d5a3ecad1b50499b001eda39ec0100d0ed8ee16
-SHA1 (patch-libdiscmage_libdiscmage.h) = 7a5ced96ae619fd843d3b1acdcd28788937cc79a
-SHA1 (patch-misc_parallel.c) = 164137f352049698a2ff4758bd3dda72ab4dadec
-SHA1 (patch-misc_unzip.h) = 3a065530cd80c74985a997459ee67847b8f75864
+SHA1 (ucon64-2.2.0-src.tar.gz) = e92167c4537c9b74c879242b785d108f0f91e641
+RMD160 (ucon64-2.2.0-src.tar.gz) = 4bd6e17fbe970800f1f4e563263ccc86794eddf7
+SHA512 (ucon64-2.2.0-src.tar.gz) = 1f21083585d9e3a32546139e2b0786ff37d32e070b21ecc39a1d179e39be3e786d5d07b06c1dce8b3f43e14800974159f54a9a469e59070b2b50c4cbb85136dc
+Size (ucon64-2.2.0-src.tar.gz) = 1488002 bytes
+SHA1 (patch-backup_libcd64_Makefile) = c6d659c96ea2389266b6480f2d3afe79a647685d
+SHA1 (patch-backup_libcd64_cd64io.c) = ab1d2b9ad9c3258114f946b13c28520b40eb60b2
+SHA1 (patch-backup_libcd64_cd64io.h) = c4f915436c3867ea77ddc95942a074a8266a5c03
+SHA1 (patch-configure) = 2f56081b1ea8b0fcabc1979866fddc144241bc62
+SHA1 (patch-configure.in) = 069ffe610faec56696b71b42f2abafa53488a5ff
+SHA1 (patch-libdiscmage_misc__z.h) = 3456714ff4ea4328a7d6b3cd785e76abbca2423a
+SHA1 (patch-misc_archive.h) = 3ed6b8a6464e0fcb2992e0065b1e84ac0572f670
