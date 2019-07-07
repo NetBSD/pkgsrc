@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE.NetBSD,v 1.1 2019/07/07 13:32:18 nia Exp $
+
+Note that detecting controllers/joysticks is currently unsupported in
+Mednaffe.
+
+You have to set the mappings in Mednafen itself. The default binding for
+this is ctrl+shift+[n], where N is the controller number.
+
+===========================================================================
