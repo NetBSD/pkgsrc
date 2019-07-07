@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2807 2019/07/07 13:32:41 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2808 2019/07/07 15:00:47 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4686,3 +4686,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added time/py-pytimeparse version 1.1.8 [bsiegert 2019-07-07]
 	Updated misc/libreoffice6-bin to 6.2.4 [tsutsui 2019-07-07]
 	Added emulators/mednaffe version 0.8.8 [nia 2019-07-07]
+	Added editors/neatvi version 06 [leot 2019-07-07]
