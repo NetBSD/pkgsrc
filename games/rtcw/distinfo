@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2017/03/23 17:06:52 joerg Exp $
-
-SHA1 (wolf-linux-1.33.x86.run) = d5af6c6a6d49aaa44dbfd855034ef5c7fa04aac1
-RMD160 (wolf-linux-1.33.x86.run) = 34065feea25b2edd385646cf9f2610ddc89fc88d
-SHA512 (wolf-linux-1.33.x86.run) = 40b4a63f30a60d0bff796b32264edb4ca65512793598d40c36ae0dc2a6aa4061d6a747b2957215bb8251424f9b74f12440c264d742e79518962ba86465f85597
-Size (wolf-linux-1.33.x86.run) = 7776599 bytes
