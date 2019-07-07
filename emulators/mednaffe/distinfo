@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2019/07/07 13:32:18 nia Exp $
+
+SHA1 (mednaffe-0.8.8.tar.gz) = f66f7bd3b015741a7632728b23af9df6124f1e3c
+RMD160 (mednaffe-0.8.8.tar.gz) = 0a7b0a6b2d6988098dc7103108014f72b431cecc
+SHA512 (mednaffe-0.8.8.tar.gz) = 93e80f9c1d7a4caf5324c00760cd559031df5f29ad98d917ca2d514b012fcd616692eb2ae85eee3c17750dea890fa0206d9c1a548227ac3b762aab44837d2ae4
+Size (mednaffe-0.8.8.tar.gz) = 304228 bytes
+SHA1 (patch-src_input.c) = b221955b7210438c38a65eec11d4a1f041df88ce
