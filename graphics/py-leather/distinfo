@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/07/07 09:38:40 bsiegert Exp $
+
+SHA1 (leather-0.3.3.tar.gz) = 208b05c99c560e2c218902e1a8f3f11ff27ac86e
+RMD160 (leather-0.3.3.tar.gz) = 5d9701a4ef7ac3e32bd9275e0dd2906aa0b6a624
+SHA512 (leather-0.3.3.tar.gz) = 3387353d4da129fa3601799efe8742aea08f94579caab7a5a05175ff7ad50a815fc7ca4aee5d1c390027bda3a9bf1ecd1ed5167575386a7a58f56625f5165350
+Size (leather-0.3.3.tar.gz) = 18391 bytes
