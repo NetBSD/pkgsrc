@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2810 2019/07/07 18:02:44 schwarz Exp $
+$NetBSD: CHANGES-2019,v 1.2811 2019/07/07 18:38:20 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4687,5 +4687,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated misc/libreoffice6-bin to 6.2.4 [tsutsui 2019-07-07]
 	Added emulators/mednaffe version 0.8.8 [nia 2019-07-07]
 	Added editors/neatvi version 06 [leot 2019-07-07]
-	Updated net/tacas-shrubbery to F4.0.4.28 [schwarz 2019-07-07]
+	Updated net/tacacs-shrubbery to F4.0.4.28 [schwarz 2019-07-07]
 	Updated devel/diffutils to 3.7 [schwarz 2019-07-07]
