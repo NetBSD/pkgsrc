@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.823 2019/06/30 22:13:13 nia Exp $
+# $NetBSD: Makefile,v 1.824 2019/07/07 09:38:40 bsiegert Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -470,6 +470,7 @@ SUBDIR+=	py-gtkglext
 SUBDIR+=	py-imageio
 SUBDIR+=	py-imagesize
 SUBDIR+=	py-imaging
+SUBDIR+=	py-leather
 SUBDIR+=	py-matplotlib
 SUBDIR+=	py-mcomix
 SUBDIR+=	py-nwdiag
