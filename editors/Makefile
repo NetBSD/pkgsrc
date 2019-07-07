@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.187 2019/03/02 20:50:33 gutteridge Exp $
+# $NetBSD: Makefile,v 1.188 2019/07/07 15:00:15 leot Exp $
 #
 
 COMMENT=	Editors
@@ -82,6 +82,7 @@ SUBDIR+=	mule
 SUBDIR+=	mule-ucs
 SUBDIR+=	nano
 SUBDIR+=	ne
+SUBDIR+=	neatvi
 SUBDIR+=	nedit
 SUBDIR+=	ng
 SUBDIR+=	notecase
