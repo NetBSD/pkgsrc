@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.298 2019/06/18 20:50:05 nia Exp $
+# $NetBSD: Makefile,v 1.299 2019/07/07 13:32:18 nia Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -138,6 +138,7 @@ SUBDIR+=	m1
 SUBDIR+=	makeppf
 SUBDIR+=	mame
 SUBDIR+=	mednafen
+SUBDIR+=	mednaffe
 SUBDIR+=	mgba
 SUBDIR+=	minivmac
 SUBDIR+=	mmix
