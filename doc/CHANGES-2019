@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2805 2019/07/07 10:15:21 bsiegert Exp $
+$NetBSD: CHANGES-2019,v 1.2806 2019/07/07 12:50:30 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4684,3 +4684,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added databases/py-dbfread version 2.0.7 [bsiegert 2019-07-07]
 	Added graphics/py-leather version 0.3.3 [bsiegert 2019-07-07]
 	Added time/py-pytimeparse version 1.1.8 [bsiegert 2019-07-07]
+	Updated misc/libreoffice6-bin to 6.2.4 [tsutsui 2019-07-07]
