@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19113 2019/07/07 21:37:17 nia Exp $
+$NetBSD: TODO,v 1.19114 2019/07/07 22:48:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1375,7 +1375,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o turba-4.2.12
 	o uae-0.8.29
 	o ubs-0.20
-	o ucon64-2.2.0
 	o ucview-0.33
 	o udpcast-20120424
 	o udunits-2.1.17 [pkg/43529, breaks ncview-1.x, also need to update it to 2.x]
