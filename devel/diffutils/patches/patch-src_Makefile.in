@@ -1,11 +1,11 @@
-$NetBSD: patch-src_Makefile.in,v 1.1 2017/09/08 09:42:34 adam Exp $
+$NetBSD: patch-src_Makefile.in,v 1.2 2019/07/07 18:02:44 schwarz Exp $
 
 Let to exactly point to own diff program.
 Fixes PR 39941.
 
---- src/Makefile.in.orig	2017-05-21 20:24:50.000000000 +0000
-+++ src/Makefile.in
-@@ -1302,7 +1302,7 @@ noinst_HEADERS = \
+--- src/Makefile.in.orig	2019-01-01 02:37:29.000000000 +0100
++++ src/Makefile.in	2019-07-07 00:38:35.000000000 +0200
+@@ -1325,7 +1325,7 @@
    system.h
  
  MOSTLYCLEANFILES = paths.h paths.ht
