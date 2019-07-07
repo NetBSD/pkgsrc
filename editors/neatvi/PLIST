@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2019/07/07 14:59:43 leot Exp $
+bin/neatvi
+share/doc/neatvi/README
