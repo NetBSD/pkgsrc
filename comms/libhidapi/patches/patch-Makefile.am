@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile.am,v 1.1 2019/07/08 12:52:42 nia Exp $
+
+Support NetBSD.
+
+--- Makefile.am.orig	2019-06-19 10:34:38.000000000 +0000
++++ Makefile.am
+@@ -31,6 +31,10 @@ if OS_KFREEBSD
+ SUBDIRS += libusb
+ endif
+ 
++if OS_NETBSD
++SUBDIRS += libusb
++endif
++
+ if OS_WINDOWS
+ SUBDIRS += windows
+ endif
