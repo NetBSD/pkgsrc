@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2018/11/18 18:07:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2019/07/08 18:37:03 adam Exp $
 bin/ambiguous_words
 bin/classifier_tester
 bin/cntraining
@@ -23,7 +23,6 @@ include/tesseract/baseapi.h
 include/tesseract/capi.h
 include/tesseract/genericvector.h
 include/tesseract/helpers.h
-include/tesseract/host.h
 include/tesseract/ltrresultiterator.h
 include/tesseract/ocrclass.h
 include/tesseract/osdetect.h
@@ -78,18 +77,21 @@ share/tessdata/chi_sim_vert.traineddata
 share/tessdata/chi_tra.traineddata
 share/tessdata/chi_tra_vert.traineddata
 share/tessdata/chr.traineddata
+share/tessdata/configs/alto
 share/tessdata/configs/ambigs.train
 share/tessdata/configs/api_config
 share/tessdata/configs/bigram
 share/tessdata/configs/box.train
 share/tessdata/configs/box.train.stderr
 share/tessdata/configs/digits
+share/tessdata/configs/get.images
 share/tessdata/configs/hocr
 share/tessdata/configs/inter
 share/tessdata/configs/kannada
 share/tessdata/configs/linebox
 share/tessdata/configs/logfile
 share/tessdata/configs/lstm.train
+share/tessdata/configs/lstmbox
 share/tessdata/configs/lstmdebug
 share/tessdata/configs/makebox
 share/tessdata/configs/pdf
@@ -99,6 +101,7 @@ share/tessdata/configs/strokewidth
 share/tessdata/configs/tsv
 share/tessdata/configs/txt
 share/tessdata/configs/unlv
+share/tessdata/configs/wordstrbox
 share/tessdata/cos.traineddata
 share/tessdata/cym.traineddata
 share/tessdata/dan.traineddata
