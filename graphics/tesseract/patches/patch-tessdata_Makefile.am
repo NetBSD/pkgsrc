@@ -1,12 +1,12 @@
-$NetBSD: patch-tessdata_Makefile.am,v 1.3 2019/05/04 16:05:33 leot Exp $
+$NetBSD: patch-tessdata_Makefile.am,v 1.4 2019/07/08 18:37:03 adam Exp $
 
 Revert a trunk commit that broke install-lang for tesseract<4.
 
---- tessdata/Makefile.am.orig	2018-10-29 08:53:12.000000000 +0000
+--- tessdata/Makefile.am.orig	2019-07-07 12:34:08.000000000 +0000
 +++ tessdata/Makefile.am
-@@ -29,6 +29,27 @@ langdata = bul.traineddata mlt.trainedda
- 	chi_tra.traineddata ita.traineddata spa_old.traineddata \
- 	deu-frak.traineddata aze.traineddata
+@@ -7,6 +7,27 @@ SUBDIRS = configs tessconfigs
+ 
+ langdata =
  
 +.PHONY: install-langs
 +install-langs:
