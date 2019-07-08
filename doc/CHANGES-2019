@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2826 2019/07/08 16:28:32 leot Exp $
+$NetBSD: CHANGES-2019,v 1.2827 2019/07/08 16:48:33 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4708,3 +4708,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/ruby-domain_name to 0.5.20190701 [taca 2019-07-08]
 	Updated www/ruby-net-http-persistent to 3.0.1 [leot 2019-07-08]
 	Updated math/glpk to 4.65 [leot 2019-07-08]
+	Added audio/mixxx version 2.2.1 [nia 2019-07-08]
