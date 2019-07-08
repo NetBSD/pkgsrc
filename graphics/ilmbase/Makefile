@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/11/20 08:59:29 maya Exp $
+# $NetBSD: Makefile,v 1.22 2019/07/08 10:36:27 nia Exp $
 
 DISTNAME=	ilmbase-2.3.0
 CATEGORIES=	graphics
@@ -7,7 +7,7 @@ GITHUB_PROJECT=	openexr
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://www.openexr.com/
+HOMEPAGE=	https://www.openexr.com/
 COMMENT=	High dynamic-range (HDR) image file format library and tools
 LICENSE=	modified-bsd
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2018/11/14 22:21:59 kleink Exp $
+# $NetBSD: Makefile,v 1.75 2019/07/08 10:36:26 nia Exp $
 #
 
 DISTNAME=		genius-1.0.17
@@ -7,7 +7,7 @@ CATEGORIES=		math
 MASTER_SITES=		http://ftp.5z.com/pub/genius/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.jirka.org/genius.html
+HOMEPAGE=		https://www.jirka.org/genius.html
 COMMENT=		Calculator and math tool
 LICENSE=		gnu-gpl-v3
 
