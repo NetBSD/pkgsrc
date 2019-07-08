@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2815 2019/07/08 06:48:08 sjmulder Exp $
+$NetBSD: CHANGES-2019,v 1.2816 2019/07/08 07:49:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4693,3 +4693,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed games/rtcw [nia 2019-07-07]
 	Updated emulators/ucon64 to 2.2.0 [wiz 2019-07-07]
 	Added lang/cbmbasic version 0.0.20141206 [sjmulder 2019-07-08]
+	Updated www/py-asgiref to 3.1.4 [adam 2019-07-08]
+	Updated www/py-pylint-django to 2.0.10 [adam 2019-07-08]
+	Updated devel/py-cython to 0.29.12 [adam 2019-07-08]
+	Updated www/py-autobahn to 19.7.1 [adam 2019-07-08]
