@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 02:46:57 agc Exp $
+$NetBSD: distinfo,v 1.6 2019/07/08 21:20:28 schwarz Exp $
 
-SHA1 (micro_httpd_10jul2014.tar.gz) = 9171770319a2b74a9976ff3adcdb04dff185f684
-RMD160 (micro_httpd_10jul2014.tar.gz) = b8990a06800389431d5d2545a556ee2a90c7b60b
-SHA512 (micro_httpd_10jul2014.tar.gz) = 1da7aa70d83610044a146d9c84e1328c912409016ef351b85a2447658b96fda8208408c8c565a77b1d725b8a6a53076aeab4eec45bcea19025caffc31dd3149e
-Size (micro_httpd_10jul2014.tar.gz) = 5253 bytes
-SHA1 (patch-aa) = 0e28f7c330a0860238e131f9e891fdf6daaaee88
+SHA1 (micro_httpd_14Aug2014.tar.gz) = 02157e28b71e12ecbd905451b9e2f682c36b70ad
+RMD160 (micro_httpd_14Aug2014.tar.gz) = 363647215b11c37c5287824373d0c1a6f1e68fcb
+SHA512 (micro_httpd_14Aug2014.tar.gz) = f8655cda2f7222cf22a3efffd621997ff48d451c94edbb3874a49967d8a1dc1da982d944faa058526cb136faf75e7a05f3b818ce5014a296cc41b7627e9e1fb8
+Size (micro_httpd_14Aug2014.tar.gz) = 5318 bytes
+SHA1 (patch-aa) = e0ea105e08965b98c4c83f9cc2dd18381ec8dac1
