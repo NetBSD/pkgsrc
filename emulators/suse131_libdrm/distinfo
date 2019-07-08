@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:31:07 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/07/08 17:48:21 maya Exp $
 
 SHA1 (suse131/libdrm2-2.4.46-3.2.2.i586.rpm) = 12a0398c8bfbcbe87d24229ada5cc7876763fd6a
 RMD160 (suse131/libdrm2-2.4.46-3.2.2.i586.rpm) = 41eab1566ce723e4b5b1afcebb7726974a330c1f
@@ -8,3 +8,27 @@ SHA1 (suse131/libdrm2-2.4.46-3.2.2.x86_64.rpm) = 2b7c4fde7c516e924085cc4a3cfb847
 RMD160 (suse131/libdrm2-2.4.46-3.2.2.x86_64.rpm) = 0e5215e5fb2cdea88e27fedfe10ac12338492769
 SHA512 (suse131/libdrm2-2.4.46-3.2.2.x86_64.rpm) = aba6e27fb109bf3682686248851a169f904b7a0a1973795f26903067484ca3c164f59f477bab74f43ba765589cabc82ec7823468675125968b9109f4d056561e
 Size (suse131/libdrm2-2.4.46-3.2.2.x86_64.rpm) = 36844 bytes
+SHA1 (suse131/libdrm_intel1-2.4.46-3.2.2.i586.rpm) = c78ee350ad497d55b3f43d57f801b3bbe47694c7
+RMD160 (suse131/libdrm_intel1-2.4.46-3.2.2.i586.rpm) = 295740e2f7d7d51096928b5bfc31568ee70c3af1
+SHA512 (suse131/libdrm_intel1-2.4.46-3.2.2.i586.rpm) = 688f6b26995b0276c0d59cadf34f6ce17f8d834e35c3f4b74c7791bc2d227b07bf7cb360a7d4e1f7115ad4538f9f021fb17dc71dbf5a982714e60d92987d9c65
+Size (suse131/libdrm_intel1-2.4.46-3.2.2.i586.rpm) = 68880 bytes
+SHA1 (suse131/libdrm_intel1-2.4.46-3.2.2.x86_64.rpm) = 3dc0308b33223ceb9bb0301f0946f8664c78e916
+RMD160 (suse131/libdrm_intel1-2.4.46-3.2.2.x86_64.rpm) = d7fbeb4977cf5ce489c2453e6a91f5f0d842e2ee
+SHA512 (suse131/libdrm_intel1-2.4.46-3.2.2.x86_64.rpm) = a7ecdd297c1a43699fb723726dc2532e475b8ba69a098befde0570e5d9cc30e6eaee0b48b4f8d3975d70fc5e9c6ee2cbdce978653201df6f4fea7a5d6d579d09
+Size (suse131/libdrm_intel1-2.4.46-3.2.2.x86_64.rpm) = 69455 bytes
+SHA1 (suse131/libdrm_nouveau2-2.4.46-3.2.2.i586.rpm) = 27e7fb0308add1b7ab23b88e8f3666b38208197f
+RMD160 (suse131/libdrm_nouveau2-2.4.46-3.2.2.i586.rpm) = 13a749700e84001605d3bdf31710ea8da7272511
+SHA512 (suse131/libdrm_nouveau2-2.4.46-3.2.2.i586.rpm) = 37b844af6cf15e1323970c99c0119535f6769a763120bdf3238d88cb890b538460dc3c0f45325927d7fb59426b64658f64782ae85b7194a05ddac578e1337b51
+Size (suse131/libdrm_nouveau2-2.4.46-3.2.2.i586.rpm) = 29799 bytes
+SHA1 (suse131/libdrm_nouveau2-2.4.46-3.2.2.x86_64.rpm) = 21a477facad98ceb872109095c0aa410ea609eac
+RMD160 (suse131/libdrm_nouveau2-2.4.46-3.2.2.x86_64.rpm) = e79eb45f795cdb1ebc808db5cbe7dca56e690b42
+SHA512 (suse131/libdrm_nouveau2-2.4.46-3.2.2.x86_64.rpm) = b582efb2aa5882d78b9c1d2b79be8c8e7e84494b30671a198cdca5c193ba1de5156137ee6980b9c2dae78ca1e06af1dd4d2d9b0f6c3652e11bb1167c69ff3c22
+Size (suse131/libdrm_nouveau2-2.4.46-3.2.2.x86_64.rpm) = 29047 bytes
+SHA1 (suse131/libdrm_radeon1-2.4.46-3.2.2.i586.rpm) = d17cb13b326020b0923d21a71318732e8bf2486b
+RMD160 (suse131/libdrm_radeon1-2.4.46-3.2.2.i586.rpm) = ea521ac0eededd70d4aad250718be377671f51c0
+SHA512 (suse131/libdrm_radeon1-2.4.46-3.2.2.i586.rpm) = 37b71b695655ea2783dca55688aa358d023360451e1e5915ed725eee8795b3f882734f8b5e3d6deccb4080edb695d608db05b4513d29f03ece5c0cf33d432a0d
+Size (suse131/libdrm_radeon1-2.4.46-3.2.2.i586.rpm) = 38467 bytes
+SHA1 (suse131/libdrm_radeon1-2.4.46-3.2.2.x86_64.rpm) = 4ab316f08fc8c1514f6886c072a989a528f5bbfd
+RMD160 (suse131/libdrm_radeon1-2.4.46-3.2.2.x86_64.rpm) = d7136f5f1d0ab1090a4310c319f84e92e1fdee67
+SHA512 (suse131/libdrm_radeon1-2.4.46-3.2.2.x86_64.rpm) = 1b6a70b02e66d54c645b93b826123d740cd2e219ee19dd81b9b4d8307395d39dc4823c35ce2a5f4a21b920bdb6bc7a788b55c174f867746b9d99a11af1db2808
+Size (suse131/libdrm_radeon1-2.4.46-3.2.2.x86_64.rpm) = 37868 bytes
