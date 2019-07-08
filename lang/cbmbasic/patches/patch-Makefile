@@ -1,0 +1,23 @@
+$NetBSD: patch-Makefile,v 1.1 2019/07/08 06:46:22 sjmulder Exp $
+
+ - Respect existing CFLAGS by appending, rather than replacing.
+ - Respect LDFLAGS
+ - Remove -O3 default.
+
+https://github.com/mist64/cbmbasic/pull/5
+
+--- Makefile
++++ Makefile
+@@ -1,10 +1,10 @@
+ OBJS=cbmbasic.o runtime.o plugin.o console.o
+-CFLAGS=-Wall -O3
++CFLAGS+=-Wall
+ 
+ all: cbmbasic
+ 
+ cbmbasic: $(OBJS)
+-	$(CC) -o cbmbasic $(OBJS)
++	$(CC) $(LDFLAGS) -o cbmbasic $(OBJS)
+ 
+ clean:
+ 	rm -f $(OBJS) cbmbasic
