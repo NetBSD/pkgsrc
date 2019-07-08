@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/06 11:54:53 asau Exp $
+# $NetBSD: Makefile,v 1.8 2019/07/08 10:36:25 nia Exp $
 #
 
 DISTNAME=		FOTAQ_Floppy
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scummvm/}
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.scummvm.org/
+HOMEPAGE=		https://www.scummvm.org/
 COMMENT=		Flight Of The Amazon Queen
 
 WRKSRC=			${WRKDIR}/FOTAQ_Floppy

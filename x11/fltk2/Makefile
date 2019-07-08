@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2018/07/18 00:06:25 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2019/07/08 10:36:25 nia Exp $
 
 VERS=		6129
 PKGREVISION=	14
@@ -11,7 +11,7 @@ MASTER_SITES+=	ftp://ftp.rz.tu-bs.de/pub/mirror/ftp.easysw.com/ftp/pub/fltk/snap
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.fltk.org/
+HOMEPAGE=	https://www.fltk.org/
 COMMENT=	Fast Light Tool Kit for graphical user interfaces
 
 USE_LANGUAGES=		c c++03

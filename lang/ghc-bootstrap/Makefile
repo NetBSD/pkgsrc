@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/05/23 19:23:02 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2019/07/08 10:36:26 nia Exp $
 
 DISTNAME=	ghc-6.8.3
 PKGNAME=	ghc-bootstrap-6.8.3
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.haskell.org/ghc/dist/6.8.3/
 DISTFILES=	ghc-6.8.3-src.tar.bz2
 
 OWNER=		dholland@NetBSD.org
-HOMEPAGE=	http://www.haskell.org/ghc/
+HOMEPAGE=	https://www.haskell.org/ghc/
 COMMENT=	Bootstrap kit generator for the GHC Haskell compiler
 
 #

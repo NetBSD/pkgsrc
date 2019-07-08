@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/01/10 18:11:56 maya Exp $
+# $NetBSD: Makefile,v 1.33 2019/07/08 10:36:26 nia Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -10,7 +10,7 @@ MASTER_SITES=	https://www.haskell.org/ghc/dist/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://www.haskell.org/ghc/
+HOMEPAGE=	https://www.haskell.org/ghc/
 COMMENT=	Compiler for the functional language Haskell
 LICENSE=	modified-bsd
 
