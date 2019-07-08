@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/01/15 11:57:21 adam Exp $
+$NetBSD: distinfo,v 1.4 2019/07/08 19:44:49 adam Exp $
 
-SHA1 (typing_extensions-3.7.2.tar.gz) = 35edeecf1fa2b86e2df83f7bfcf5b64a2c29a2ca
-RMD160 (typing_extensions-3.7.2.tar.gz) = 1d1302683ac52407f12bfc2edf2b17449ef6dbeb
-SHA512 (typing_extensions-3.7.2.tar.gz) = 7f4c47d8f4e9689c73aac923043a7084372c82b634d53923172aedd03b6d952d83e4d8c7d8716582fac0411900e5cc29c863113e522e0324185aca846928a673
-Size (typing_extensions-3.7.2.tar.gz) = 34042 bytes
+SHA1 (typing_extensions-3.7.4.tar.gz) = 90fb48502fdf3e75bcdca669ac52916f2dea4ba7
+RMD160 (typing_extensions-3.7.4.tar.gz) = 623ea46a0384ec1b4899d5fc477add73514f622c
+SHA512 (typing_extensions-3.7.4.tar.gz) = 82c15e6e67dde23456c3b01705729804dc21bd2088dee3aa63e53a5e597f474d34b1a37fb16bc5e3497f93d338c0115f49a070621523fb0fa3e994632785c6d9
+Size (typing_extensions-3.7.4.tar.gz) = 36058 bytes
