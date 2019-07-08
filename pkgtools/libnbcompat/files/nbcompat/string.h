@@ -1,4 +1,4 @@
-/*	$NetBSD: string.h,v 1.3 2015/06/08 00:44:46 joerg Exp $	*/
+/*	$NetBSD: string.h,v 1.4 2019/07/08 20:34:54 sevan Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -54,6 +54,10 @@ size_t	strlcat(char *, const char *, size_t);
 
 #if !HAVE_STRLCPY
 size_t	strlcpy(char *, const char *, size_t);
+#endif
+
+#if !HAVE_STRNLEN
+size_t strlen(const char *str);
 #endif
 
 #if !HAVE_STRSEP
