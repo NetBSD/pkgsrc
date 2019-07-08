@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2019/04/27 09:35:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2019/07/08 07:41:44 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -194,6 +194,9 @@ ${PYSITELIB}/pylint_django/tests/input/models/__init__.pyo
 ${PYSITELIB}/pylint_django/tests/input/models/author.py
 ${PYSITELIB}/pylint_django/tests/input/models/author.pyc
 ${PYSITELIB}/pylint_django/tests/input/models/author.pyo
+${PYSITELIB}/pylint_django/tests/input/models/func_noerror_foreign_key_key_cls_unbound_in_same_package.py
+${PYSITELIB}/pylint_django/tests/input/models/func_noerror_foreign_key_key_cls_unbound_in_same_package.pyc
+${PYSITELIB}/pylint_django/tests/input/models/func_noerror_foreign_key_key_cls_unbound_in_same_package.pyo
 ${PYSITELIB}/pylint_django/tests/test_func.py
 ${PYSITELIB}/pylint_django/tests/test_func.pyc
 ${PYSITELIB}/pylint_django/tests/test_func.pyo
