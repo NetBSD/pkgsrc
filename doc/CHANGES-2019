@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2823 2019/07/08 13:51:39 taca Exp $
+$NetBSD: CHANGES-2019,v 1.2824 2019/07/08 14:29:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4705,3 +4705,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/php72 to 7.2.20 [taca 2019-07-08]
 	Updated lang/php73 to 7.3.7 [taca 2019-07-08]
 	Updated time/ruby-tzinfo-data to 1.2019.2 [taca 2019-07-08]
+	Updated net/ruby-domain_name to 0.5.20190701 [taca 2019-07-08]
