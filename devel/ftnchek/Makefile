@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.22 2016/08/15 12:46:35 mef Exp $
+# $NetBSD: Makefile,v 1.23 2019/07/08 10:36:25 nia Exp $
 
 DISTNAME=	ftnchek-3.3.1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.dsm.fordham.edu/~ftnchek/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.dsm.fordham.edu/~ftnchek/
+HOMEPAGE=	https://www.dsm.fordham.edu/~ftnchek/
 COMMENT=	Static analyzer for Fortran programs
 
 GNU_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/04/12 12:56:46 leot Exp $
+# $NetBSD: Makefile,v 1.4 2019/07/08 10:36:26 nia Exp $
 #
 
 DISTNAME=	glfw-3.2.1
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=glfw/}
 
 MAINTAINER=	ryo_on@yk.rim.or.jp
-HOMEPAGE=	http://www.glfw.org/
+HOMEPAGE=	https://www.glfw.org/
 COMMENT=	GLFW is a free, Open Source, multi-platform library of OpenGL
 LICENSE=	zlib
 

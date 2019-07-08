@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/05/27 15:18:35 bsiegert Exp $
+# $NetBSD: Makefile,v 1.19 2019/07/08 10:36:27 nia Exp $
 
 DISTNAME=	hugo-0.55.6
 PKGNAME=	go-${DISTNAME}
@@ -9,7 +9,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 GITHUB_PROJECT= ${PKGBASE:S/^go-//}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gohugo.io/
+HOMEPAGE=	https://gohugo.io/
 COMMENT=	A Fast & Modern Static Website Engine
 LICENSE=	apache-2.0
 
