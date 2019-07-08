@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2019/07/02 16:44:06 adam Exp $
+# $NetBSD: Makefile,v 1.52 2019/07/08 22:15:46 sevan Exp $
 
 DISTNAME=	libuv-1.30.1
 CATEGORIES=	devel
@@ -12,6 +12,7 @@ LICENSE=	mit AND 2-clause-bsd AND isc AND modified-bsd
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	autoconf automake pkg-config
+USE_FEATURES+=	strnlen
 GNU_CONFIGURE=	yes
 TEST_TARGET=	check
 
