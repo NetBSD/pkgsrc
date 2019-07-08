@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.558 2019/07/01 12:30:20 nia Exp $
+# $NetBSD: Makefile,v 1.559 2019/07/08 16:46:31 nia Exp $
 #
 
 COMMENT=	Audio tools
@@ -306,6 +306,7 @@ SUBDIR+=	mbrolavox-us3
 SUBDIR+=	mikmod
 SUBDIR+=	milkytracker
 SUBDIR+=	mixer.app
+SUBDIR+=	mixxx
 SUBDIR+=	mkcdtoc
 SUBDIR+=	moc
 SUBDIR+=	moodbar
