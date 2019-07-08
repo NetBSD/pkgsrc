@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19115 2019/07/08 10:21:54 nia Exp $
+$NetBSD: TODO,v 1.19116 2019/07/08 16:48:33 nia Exp $
 
 Suggested new packages
 ======================
@@ -306,10 +306,6 @@ Suggested new packages
 	OpenShot
 	https://www.openshot.org/
 	Video editor
-
-	Mixxx
-	https://mixxx.org/
-	DJ software
 
 	ManaPlus
 	https://manaplus.org/
