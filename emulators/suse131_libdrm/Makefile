@@ -1,8 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2015/02/16 10:15:48 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2019/07/08 17:48:21 maya Exp $
 
 PKGNAME=	suse_libdrm-${SUSE_VERSION}
 CATEGORIES=	emulators
 RPMPKGS+=	libdrm2-2.4.46-3.2.2.${SUSE_ARCH}
+RPMPKGS+=	libdrm_nouveau2-2.4.46-3.2.2.${SUSE_ARCH}
+RPMPKGS+=	libdrm_intel1-2.4.46-3.2.2.${SUSE_ARCH}
+RPMPKGS+=	libdrm_radeon1-2.4.46-3.2.2.${SUSE_ARCH}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Linux compatibility package for libdrm
