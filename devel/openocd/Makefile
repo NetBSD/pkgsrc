@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/03/13 03:01:15 dholland Exp $
+# $NetBSD: Makefile,v 1.6 2019/07/08 16:27:13 martin Exp $
 
 DISTNAME=	openocd-0.10.0
 PKGREVISION=	1
@@ -19,6 +19,7 @@ MAKE_JOBS_SAFE=	no
 INFO_FILES=	yes
 
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "options.mk"
 
