@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2820 2019/07/08 12:53:00 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2821 2019/07/08 13:19:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4702,3 +4702,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/iperf3 to 3.7 [adam 2019-07-08]
 	Updated time/py-tzdata to 2019.2 [adam 2019-07-08]
 	Updated comms/libhidapi to 0.9.0 [nia 2019-07-08]
+	Updated lang/php72 to 7.2.20 [taca 2019-07-08]
