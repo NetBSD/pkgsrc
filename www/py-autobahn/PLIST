@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2019/06/14 08:01:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2019/07/08 07:49:07 adam Exp $
 bin/wamp
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -34,6 +34,9 @@ ${PYSITELIB}/autobahn/asyncio/wamp.pyo
 ${PYSITELIB}/autobahn/asyncio/websocket.py
 ${PYSITELIB}/autobahn/asyncio/websocket.pyc
 ${PYSITELIB}/autobahn/asyncio/websocket.pyo
+${PYSITELIB}/autobahn/exception.py
+${PYSITELIB}/autobahn/exception.pyc
+${PYSITELIB}/autobahn/exception.pyo
 ${PYSITELIB}/autobahn/nvx/__init__.py
 ${PYSITELIB}/autobahn/nvx/__init__.pyc
 ${PYSITELIB}/autobahn/nvx/__init__.pyo
