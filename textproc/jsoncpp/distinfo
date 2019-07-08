@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.9 2019/04/09 07:08:18 wiz Exp $
+$NetBSD: distinfo,v 1.10 2019/07/08 18:42:19 adam Exp $
 
-SHA1 (jsoncpp-1.8.4.tar.gz) = 98a56dba0cc6378c91668b6e1c120a657820c45e
-RMD160 (jsoncpp-1.8.4.tar.gz) = 5444cc199daef95c3297aacafb7471d1a4e2b3bf
-SHA512 (jsoncpp-1.8.4.tar.gz) = f70361a3263dd8b9441374a9a409462be1426c0d6587c865171a80448ab73b3f69de2b4d70d2f0c541764e1e6cccc727dd53178347901f625ec6fb54fb94f4f1
-Size (jsoncpp-1.8.4.tar.gz) = 200226 bytes
-SHA1 (patch-CMakeLists.txt) = ce873c2fb1a1c6df0748613f0d1fe8441ceb1132
-SHA1 (patch-src_lib__json_CMakeLists.txt) = 13cd2b4fb864644bc67a493d00acc9c32822aa38
+SHA1 (jsoncpp-1.9.0.tar.gz) = 2a61b81cba7c5a1c83b5e5fcce6193716f1f7304
+RMD160 (jsoncpp-1.9.0.tar.gz) = 201f2650e679acf1bb4d97b6e16714cd80241f21
+SHA512 (jsoncpp-1.9.0.tar.gz) = b1da96c12d9ad4c7e002ed84b6c0ff24a7c86034f462a4eb29d93be2f81d7961a03d6f7aa3e7fa58366a2ed76242f6c72e8c3c6d34bdf562c86ca9951f5f3785
+Size (jsoncpp-1.9.0.tar.gz) = 203176 bytes
+SHA1 (patch-CMakeLists.txt) = 43a6e243cc6aebb4bd2cb21c4657cdac14ce9d18
