@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2814 2019/07/07 22:48:17 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2815 2019/07/08 06:48:08 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4692,3 +4692,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated geography/gama to 2.06 [gdt 2019-07-07]
 	Removed games/rtcw [nia 2019-07-07]
 	Updated emulators/ucon64 to 2.2.0 [wiz 2019-07-07]
+	Added lang/cbmbasic version 0.0.20141206 [sjmulder 2019-07-08]
