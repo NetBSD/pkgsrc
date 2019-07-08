@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.23 2018/04/30 10:41:35 wiz Exp $
+$NetBSD: README,v 1.24 2019/07/08 20:34:54 sevan Exp $
 
  0 Introduction
  ==============
@@ -111,6 +111,13 @@ on the following operating systems:
 	NetBSD/i386 5.2.3		<tnn@NetBSD.org>
 	HP-UX/hppa 11.11		<tnn@NetBSD.org>
 	
+libnbcompat-20190608 has been tested to build and install correctly
+on the following operating systems:
+
+	NetBSD/amd64 8.99.49		<sevan@NetBSD.org>
+	Darwin/powerpc 8.11.0		<sevan@NetBSD.org>
+	FreeBSD/amd64 13-CURRENT	<sevan@NetBSD.org>
+
  3 Usage
  =======
 

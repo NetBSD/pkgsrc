@@ -1,8 +1,8 @@
-dnl $NetBSD: configure.ac,v 1.86 2015/09/01 23:17:51 kamil Exp $
+dnl $NetBSD: configure.ac,v 1.87 2019/07/08 20:34:54 sevan Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
-AC_INIT([libnbcompat], [20150419], [joerg@NetBSD.org])
+AC_INIT([libnbcompat], [20190708], [joerg@NetBSD.org])
 AC_CONFIG_HEADER(nbcompat/config.h)
 AC_ARG_PROGRAM
 
@@ -364,6 +364,13 @@ AC_CHECK_FUNCS([getmode setmode], [:], [need_setmode=yes])
 
 if test $need_setmode = yes; then
 	AC_LIBOBJ(setmode)
+fi
+
+need_strnlen=no
+AC_CHECK_FUNCS([strnlen], [:], [need_strnlen=yes])
+
+if test $need_strnlen = yes; then
+        AC_LIBOBJ(strnlen)
 fi
 
 AC_CHECK_DECLS([endgrent, endpwent, setpassent])
