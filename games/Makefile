@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.437 2019/07/07 21:35:13 nia Exp $
+# $NetBSD: Makefile,v 1.438 2019/07/08 08:27:18 nia Exp $
 #
 
 COMMENT=	Games
@@ -321,7 +321,6 @@ SUBDIR+=	rftg
 SUBDIR+=	robotfindskitten
 SUBDIR+=	rocksndiamonds
 SUBDIR+=	rocksndiamonds-levels
-SUBDIR+=	rollemup
 SUBDIR+=	ruby-squib
 SUBDIR+=	sarien
 SUBDIR+=	sauerbraten
