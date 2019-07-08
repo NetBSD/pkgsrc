@@ -1,8 +1,8 @@
-$NetBSD: patch-src_Makefile.in,v 1.6 2017/08/18 21:47:51 adam Exp $
+$NetBSD: patch-src_Makefile.in,v 1.7 2019/07/08 16:28:16 leot Exp $
 
 Use external zlib.
 
---- src/Makefile.in.orig	2017-07-25 07:00:00.000000000 +0000
+--- src/Makefile.in.orig	2018-02-16 07:00:00.000000000 +0000
 +++ src/Makefile.in
 @@ -94,7 +94,7 @@ am__uninstall_files_from_dir = { \
    }
@@ -10,10 +10,10 @@ Use external zlib.
  LTLIBRARIES = $(lib_LTLIBRARIES)
 -libglpk_la_LIBADD =
 +libglpk_la_LIBADD = -lz
- am_libglpk_la_OBJECTS = libglpk_la-bfd.lo libglpk_la-bfx.lo \
- 	libglpk_la-glpapi06.lo libglpk_la-glpapi07.lo \
- 	libglpk_la-glpapi08.lo libglpk_la-glpapi09.lo \
-@@ -162,13 +162,7 @@ am_libglpk_la_OBJECTS = libglpk_la-bfd.l
+ am_libglpk_la_OBJECTS = libglpk_la-amd_1.lo libglpk_la-amd_2.lo \
+ 	libglpk_la-amd_aat.lo libglpk_la-amd_control.lo \
+ 	libglpk_la-amd_defaults.lo libglpk_la-amd_dump.lo \
+@@ -162,13 +162,7 @@ am_libglpk_la_OBJECTS = libglpk_la-amd_1
  	libglpk_la-spxchuzr.lo libglpk_la-spxlp.lo libglpk_la-spxnt.lo \
  	libglpk_la-spxprim.lo libglpk_la-spxprob.lo \
  	libglpk_la-spychuzc.lo libglpk_la-spychuzr.lo \
@@ -28,17 +28,17 @@ Use external zlib.
  libglpk_la_OBJECTS = $(am_libglpk_la_OBJECTS)
  libglpk_la_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
  	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
-@@ -325,8 +319,7 @@ libglpk_la_CPPFLAGS = \
- -I$(srcdir)/misc \
+@@ -327,8 +321,7 @@ libglpk_la_CPPFLAGS = \
  -I$(srcdir)/mpl \
+ -I$(srcdir)/npp \
  -I$(srcdir)/proxy \
 --I$(srcdir)/simplex \
 --I$(srcdir)/zlib
 +-I$(srcdir)/simplex
  
  libglpk_la_LDFLAGS = \
- -version-info 42:2:2 \
-@@ -505,22 +498,7 @@ simplex/spxprim.c \
+ -version-info 43:0:3 \
+@@ -511,22 +504,7 @@ simplex/spxprim.c \
  simplex/spxprob.c \
  simplex/spychuzc.c \
  simplex/spychuzr.c \
