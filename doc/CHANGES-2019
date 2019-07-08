@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2818 2019/07/08 08:28:18 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2819 2019/07/08 09:24:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4699,3 +4699,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-autobahn to 19.7.1 [adam 2019-07-08]
 	Updated net/ldns to 1.7.0 [roy 2019-07-08]
 	Removed games/rollemup [nia 2019-07-08]
+	Updated net/iperf3 to 3.7 [adam 2019-07-08]
+	Updated time/py-tzdata to 2019.2 [adam 2019-07-08]
