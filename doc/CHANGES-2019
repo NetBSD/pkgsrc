@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2825 2019/07/08 16:25:02 leot Exp $
+$NetBSD: CHANGES-2019,v 1.2826 2019/07/08 16:28:32 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4707,3 +4707,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated time/ruby-tzinfo-data to 1.2019.2 [taca 2019-07-08]
 	Updated net/ruby-domain_name to 0.5.20190701 [taca 2019-07-08]
 	Updated www/ruby-net-http-persistent to 3.0.1 [leot 2019-07-08]
+	Updated math/glpk to 4.65 [leot 2019-07-08]
