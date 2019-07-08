@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2833 2019/07/08 21:20:28 schwarz Exp $
+$NetBSD: CHANGES-2019,v 1.2834 2019/07/08 21:30:18 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4717,3 +4717,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-typing-extensions to 3.7.4 [adam 2019-07-08]
 	Updated pkgtools/libnbcompat to 20190708 [sevan 2019-07-08]
 	Updated www/micro_httpd to 20140814 [schwarz 2019-07-08]
+	Updated net/arping to 2.19 [schwarz 2019-07-08]
