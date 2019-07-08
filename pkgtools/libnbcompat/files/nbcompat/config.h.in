@@ -348,6 +348,9 @@
 /* Define to 1 if you have the `strmode' function. */
 #undef HAVE_STRMODE
 
+/* Define to 1 if you have the `strnlen' function. */
+#undef HAVE_STRNLEN
+
 /* Define to 1 if you have the `strsep' function. */
 #undef HAVE_STRSEP
 
