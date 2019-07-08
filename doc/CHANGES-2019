@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2817 2019/07/08 08:26:13 roy Exp $
+$NetBSD: CHANGES-2019,v 1.2818 2019/07/08 08:28:18 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4698,3 +4698,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-cython to 0.29.12 [adam 2019-07-08]
 	Updated www/py-autobahn to 19.7.1 [adam 2019-07-08]
 	Updated net/ldns to 1.7.0 [roy 2019-07-08]
+	Removed games/rollemup [nia 2019-07-08]
