@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/07/01 04:08:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2019/07/08 10:36:27 nia Exp $
 
 DISTNAME=	ibus-rime-1.0
 PKGREVISION=	11
@@ -6,7 +6,7 @@ CATEGORIES=	inputmethod chinese
 MASTER_SITES=	http://rimeime.googlecode.com/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rime.im/
+HOMEPAGE=	https://rime.im/
 COMMENT=	Rime Input Method Engine for Linux/IBus
 LICENSE=	gnu-gpl-v3
 
