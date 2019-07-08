@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2830 2019/07/08 18:54:32 jperkin Exp $
+$NetBSD: CHANGES-2019,v 1.2831 2019/07/08 19:45:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4713,3 +4713,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/tesseract to 4.1.0 [adam 2019-07-08]
 	Updated textproc/jsoncpp to 1.9.0 [adam 2019-07-08]
 	Updated sysutils/salt to 2019.2.0nb2 [jperkin 2019-07-08]
+	Updated devel/py-typing to 3.7.4 [adam 2019-07-08]
+	Updated devel/py-typing-extensions to 3.7.4 [adam 2019-07-08]
