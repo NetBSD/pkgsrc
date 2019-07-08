@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/04/10 12:33:01 gdt Exp $
+# $NetBSD: Makefile,v 1.18 2019/07/08 10:36:26 nia Exp $
 #
 
 GITHUB_PROJECT=	encfs
@@ -10,7 +10,7 @@ CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vgough/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.arg0.net/encfs
+HOMEPAGE=	https://www.arg0.net/encfs
 COMMENT=	FUSE Encrypted Filesystem
 LICENSE=	gnu-gpl-v3
 

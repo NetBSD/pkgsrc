@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/11/14 22:21:25 kleink Exp $
+# $NetBSD: Makefile,v 1.16 2019/07/08 10:36:25 nia Exp $
 
 DISTNAME=	free42
 PKGNAME=	${DISTNAME}-1.4.78
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_BACKUP}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://thomasokken.com/free42/
+HOMEPAGE=	https://thomasokken.com/free42/
 COMMENT=	HP42S Calculator Simulator
 LICENSE=	gnu-gpl-v2
 
