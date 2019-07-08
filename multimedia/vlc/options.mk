@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.33 2019/07/02 20:52:12 nia Exp $
+# $NetBSD: options.mk,v 1.34 2019/07/08 10:16:12 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
 PKG_SUPPORTED_OPTIONS=		alsa avahi dbus debug dts jack pulseaudio
@@ -118,7 +118,7 @@ DEPENDS+= dejavu-ttf>=2.0:../../fonts/dejavu-ttf
 CONFIGURE_ARGS+=	--enable-qt \
 			--with-x
 PLIST.qt5=		yes
-.  if ${X11_TYPE} == "modular" || exists(${X11BASE}/include/EGL/egl.h)
+.  if ${MESALIB_SUPPORTS_EGL} == "yes"
 PLIST.egl=		yes
 .  endif
 .else
