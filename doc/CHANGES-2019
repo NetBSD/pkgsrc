@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2827 2019/07/08 16:48:33 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2828 2019/07/08 17:57:00 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4709,3 +4709,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/ruby-net-http-persistent to 3.0.1 [leot 2019-07-08]
 	Updated math/glpk to 4.65 [leot 2019-07-08]
 	Added audio/mixxx version 2.2.1 [nia 2019-07-08]
+	Updated misc/libreoffice to 6.2.5.2 [ryoon 2019-07-08]
