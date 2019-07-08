@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2019/07/02 12:58:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.117 2019/07/08 17:48:01 ryoon Exp $
 
 DISTNAME=	harfbuzz-2.5.3
 CATEGORIES=	fonts
@@ -14,7 +14,7 @@ LICENSE=	mit
 PLIST_VARS+=		graphite2
 .include "../../graphics/librsvg/available.mk"
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
