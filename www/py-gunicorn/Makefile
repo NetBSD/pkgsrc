@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/07/04 03:43:12 adam Exp $
+# $NetBSD: Makefile,v 1.15 2019/07/08 10:36:27 nia Exp $
 
 DISTNAME=	gunicorn-19.9.0
 CATEGORIES=	www python
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=g/gunicorn/}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 
 MAINTAINER=	gls@NetBSD.org
-HOMEPAGE=	http://gunicorn.org/
+HOMEPAGE=	https://gunicorn.org/
 COMMENT=	Python WSGI HTTP server
 LICENSE=	mit
 
