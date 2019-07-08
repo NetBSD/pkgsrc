@@ -1,15 +1,15 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2019/04/09 06:48:18 wiz Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2019/07/08 18:42:19 adam Exp $
 
 Make so version match symlink versions.
 
---- CMakeLists.txt.orig	2017-12-20 21:07:10.000000000 +0000
+--- CMakeLists.txt.orig	2019-07-08 12:02:29.000000000 +0000
 +++ CMakeLists.txt
-@@ -64,7 +64,7 @@ jsoncpp_parse_version( ${JSONCPP_VERSION
- #IF(NOT JSONCPP_VERSION_FOUND)
- #    MESSAGE(FATAL_ERROR "Failed to parse version string properly. Expect X.Y.Z")
- #ENDIF(NOT JSONCPP_VERSION_FOUND)
--SET( JSONCPP_SOVERSION 19 )
-+SET( JSONCPP_SOVERSION ${JSONCPP_VERSION_MAJOR} )
- SET( JSONCPP_USE_SECURE_MEMORY "0" CACHE STRING "-D...=1 to use memory-wiping allocator for STL" )
+@@ -67,7 +67,7 @@ project(JSONCPP
+         LANGUAGES CXX)
  
- MESSAGE(STATUS "JsonCpp Version: ${JSONCPP_VERSION_MAJOR}.${JSONCPP_VERSION_MINOR}.${JSONCPP_VERSION_PATCH}")
+ message(STATUS "JsonCpp Version: ${JSONCPP_VERSION_MAJOR}.${JSONCPP_VERSION_MINOR}.${JSONCPP_VERSION_PATCH}")
+-set( JSONCPP_SOVERSION 21 )
++set( JSONCPP_SOVERSION ${JSONCPP_VERSION_MAJOR} )
+ 
+ option(JSONCPP_WITH_TESTS "Compile and (for jsoncpp_check) run JsonCpp test executables" ON)
+ option(JSONCPP_WITH_POST_BUILD_UNITTEST "Automatically run unit-tests as a post build step" ON)
