@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.199 2019/07/09 15:45:46 riastradh Exp $
+# $NetBSD: gcc.mk,v 1.200 2019/07/09 15:46:02 riastradh Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -893,6 +893,9 @@ _COMPILER_ABI_FLAG.32=	-mabi=n32	# ABI == "32" == "n32"
 _COMPILER_ABI_FLAG.n32=	-mabi=n32
 _COMPILER_ABI_FLAG.o32=	-mabi=32
 _COMPILER_ABI_FLAG.64=	-mabi=64
+.elif !empty(MACHINE_ARCH:Maarch64*)
+_COMPILER_ABI_FLAG.32=	-m32
+_COMPILER_ABI_FLAG.64=	# empty
 .else
 _COMPILER_ABI_FLAG.32=	-m32
 _COMPILER_ABI_FLAG.64=	-m64
