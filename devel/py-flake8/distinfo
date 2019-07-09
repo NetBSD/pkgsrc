@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2019/02/26 10:54:11 adam Exp $
+$NetBSD: distinfo,v 1.21 2019/07/09 11:19:33 adam Exp $
 
-SHA1 (flake8-3.7.7.tar.gz) = b69ad771b1e9136cdd39dce1c05b64f75af00c6b
-RMD160 (flake8-3.7.7.tar.gz) = f803451aaa8a18e494c526f1cb108863072347f2
-SHA512 (flake8-3.7.7.tar.gz) = 45a1d6d0ff84bc79738853930f14c2aa423cb7ac68b1655887ac9f68efdcce3d49d13f01cfa86ac82b759bbfe2b1182006c51b612b9230882aa03932100b5511
-Size (flake8-3.7.7.tar.gz) = 148457 bytes
+SHA1 (flake8-3.7.8.tar.gz) = 42f076e7549baf83b39944c9bc9e6ba16d3b4593
+RMD160 (flake8-3.7.8.tar.gz) = e5a6db012f91340c5c27018e0c1fd38032bef9f2
+SHA512 (flake8-3.7.8.tar.gz) = a25076bb7f978ca23af0f2016b30bf5fe4680371b4c0939361a6f8c496f3c846cf98ecadee35fc2dedd588116c8cd982529972dd2411ab139621912b69132a1e
+Size (flake8-3.7.8.tar.gz) = 150113 bytes
