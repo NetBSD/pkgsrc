@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2846 2019/07/09 16:33:52 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2847 2019/07/09 17:38:55 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4733,3 +4733,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/quilt to 0.66 [ryoon 2019-07-09]
 	Updated lang/spidermonkey52 to 52.7.4nb10 [maya 2019-07-09]
 	Added multimedia/lightspark version 0.8.1 [nia 2019-07-09]
+	Updated multimedia/adobe-flash-player to 32.0.0.223 [tsutsui 2019-07-09]
