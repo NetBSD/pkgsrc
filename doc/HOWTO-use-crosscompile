@@ -1,7 +1,7 @@
 Cross-compilation in pkgsrc (user's guide)              -*- outline -*-
 Taylor R. Campbell <riastradh@NetBSD.org>
 
-$NetBSD: HOWTO-use-crosscompile,v 1.5 2017/03/05 10:36:40 kamil Exp $
+$NetBSD: HOWTO-use-crosscompile,v 1.6 2019/07/09 15:45:25 riastradh Exp $
 
 The following steps enable you to build binary packages for a machine
 architecture other than the one you are building on.  For example, you
@@ -39,11 +39,6 @@ In addition to whatever else you want in your mk.conf for pkgsrc, add:
    # XXX This currently can't be set to `yes' on the command line,
    # which is a bug.
    USE_CROSS_COMPILE?=  yes
-
-   # This is a kludge for cross-libtool.
-   #
-   # XXX Should not need this.
-   CROSSBASE=           ${LOCALBASE}/cross-${TARGET_ARCH:U${MACHINE_ARCH}}
 
    .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
    # Specify the machine architecture of target packages.
