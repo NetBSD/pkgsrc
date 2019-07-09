@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/10/05 12:20:55 adam Exp $
+# $NetBSD: Makefile,v 1.4 2019/07/09 23:02:29 nia Exp $
 
 DISTNAME=	django-formtools-2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-formtools/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://django-formtools.readthedocs.io/
+HOMEPAGE=	https://django-formtools.readthedocs.io/
 COMMENT=	Collection of assorted utilities for specific form use cases
 LICENSE=	mit
 
