@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2019/04/01 14:21:14 wiz Exp $
+$NetBSD: distinfo,v 1.12 2019/07/09 10:42:59 nia Exp $
 
-SHA1 (libssh2-1.8.2.tar.gz) = 9250682b0df0ab61e47cc4192f99731949f605bc
-RMD160 (libssh2-1.8.2.tar.gz) = b2b84b3fe14e4e527db4a391abd8706a8e028e23
-SHA512 (libssh2-1.8.2.tar.gz) = 390ab4ad93bb738415ec11a6eb92806c9b9e9e5d8ee7c442d841a58b4292c1c447a9bc99e153ba464e2e11f9c0d1913469303598c3046722d1ae821991e8cb93
-Size (libssh2-1.8.2.tar.gz) = 859587 bytes
+SHA1 (libssh2-1.9.0.tar.gz) = 21e98282b103307a16792e5e2d4c99beaf0b3b9c
+RMD160 (libssh2-1.9.0.tar.gz) = eb3553a9b2c05d5b6a24159db8a1478f9aea3877
+SHA512 (libssh2-1.9.0.tar.gz) = 41a3ebcf84e32eab69b7411ffb0a3b6e6db71491c968602b17392cfe3490ef00239726ec28acb3d25bf0ed62700db7f4d0bb5a9175618f413865f40badca6e17
+Size (libssh2-1.9.0.tar.gz) = 888551 bytes
