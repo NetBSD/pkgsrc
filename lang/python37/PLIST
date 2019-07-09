@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/04/25 15:59:54 roy Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/07/09 07:46:37 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 ${PLIST.pymalloc}bin/python${PY_VER_SUFFIX}
@@ -754,6 +754,7 @@ lib/python${PY_VER_SUFFIX}/distutils/tests/Setup.sample
 lib/python${PY_VER_SUFFIX}/distutils/tests/__init__.py
 lib/python${PY_VER_SUFFIX}/distutils/tests/__init__.pyc
 lib/python${PY_VER_SUFFIX}/distutils/tests/__init__.pyo
+lib/python${PY_VER_SUFFIX}/distutils/tests/includetest.rst
 lib/python${PY_VER_SUFFIX}/distutils/tests/support.py
 lib/python${PY_VER_SUFFIX}/distutils/tests/support.pyc
 lib/python${PY_VER_SUFFIX}/distutils/tests/support.pyo
@@ -2980,6 +2981,9 @@ lib/python${PY_VER_SUFFIX}/test/libregrtest/setup.pyo
 lib/python${PY_VER_SUFFIX}/test/libregrtest/utils.py
 lib/python${PY_VER_SUFFIX}/test/libregrtest/utils.pyc
 lib/python${PY_VER_SUFFIX}/test/libregrtest/utils.pyo
+lib/python${PY_VER_SUFFIX}/test/libregrtest/win_utils.py
+lib/python${PY_VER_SUFFIX}/test/libregrtest/win_utils.pyc
+lib/python${PY_VER_SUFFIX}/test/libregrtest/win_utils.pyo
 lib/python${PY_VER_SUFFIX}/test/list_tests.py
 lib/python${PY_VER_SUFFIX}/test/list_tests.pyc
 lib/python${PY_VER_SUFFIX}/test/list_tests.pyo
@@ -4693,6 +4697,9 @@ lib/python${PY_VER_SUFFIX}/test/test_tools/test_gprof2html.pyo
 lib/python${PY_VER_SUFFIX}/test/test_tools/test_i18n.py
 lib/python${PY_VER_SUFFIX}/test/test_tools/test_i18n.pyc
 lib/python${PY_VER_SUFFIX}/test/test_tools/test_i18n.pyo
+lib/python${PY_VER_SUFFIX}/test/test_tools/test_lll.py
+lib/python${PY_VER_SUFFIX}/test/test_tools/test_lll.pyc
+lib/python${PY_VER_SUFFIX}/test/test_tools/test_lll.pyo
 lib/python${PY_VER_SUFFIX}/test/test_tools/test_md5sum.py
 lib/python${PY_VER_SUFFIX}/test/test_tools/test_md5sum.pyc
 lib/python${PY_VER_SUFFIX}/test/test_tools/test_md5sum.pyo
