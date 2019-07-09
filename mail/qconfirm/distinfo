@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.1 2019/07/09 18:23:15 schmonz Exp $
+
+SHA1 (qconfirm-0.14.3.tar.gz) = c19f1335aa71f8423551a12e4efa9ac151adedd9
+RMD160 (qconfirm-0.14.3.tar.gz) = 221172ab6ee7586d642299a85712850dda14ddfc
+SHA512 (qconfirm-0.14.3.tar.gz) = a4b018927ac58244e7780e9e741947202d7ed14a56e3593844eeb682e7695a69cd7310171ea9f9a15bd693b8145ce7736b7d800e6eecfae981a848cf22707016
+Size (qconfirm-0.14.3.tar.gz) = 99317 bytes
+SHA1 (patch-src_Makefile) = e09d7365d9139fa0d033ec42feca59f40e0a65b4
+SHA1 (patch-src_TARGETS) = 29333aee6b7b55fcd73ce29f62dce204b72b3fb9
+SHA1 (patch-src_qconfirm-check-mid.c) = 3ef0a8476ce042e8a028c1d591893ceb7284d0d2
+SHA1 (patch-src_qconfirm-check.c) = 4f913d84fd3b17e005d0cb132347ac1959d9250c
+SHA1 (patch-src_qconfirm-control.c) = 4ef3f8a023adae7f57b188862367c3bab3d80541
+SHA1 (patch-src_qconfirm-notice.c) = c891373851a088fc4ca471e86a35960f254712ab
+SHA1 (patch-src_qconfirm-return.c) = e4e13d094aa2b3ecd36555f989979c4d6d0b068b
+SHA1 (patch-src_qconfirm__getline.c) = 7f3d4162aa4c7bc368bf4dd79a2c74b838acee07
+SHA1 (patch-src_qconfirm__getline.h) = 3f2a201f21d3fe4e8821bd2c03639366869e671c
