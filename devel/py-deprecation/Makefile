@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/10/07 07:16:55 adam Exp $
+# $NetBSD: Makefile,v 1.10 2019/07/09 11:35:14 nia Exp $
 
 DISTNAME=	deprecation-2.0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/deprecation/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://deprecation.readthedocs.io/
+HOMEPAGE=	https://deprecation.readthedocs.io/
 COMMENT=	Library to handle automated deprecations
 LICENSE=	apache-2.0
 

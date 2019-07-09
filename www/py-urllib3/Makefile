@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/05/27 12:44:46 adam Exp $
+# $NetBSD: Makefile,v 1.17 2019/07/09 11:35:14 nia Exp $
 
 DISTNAME=	urllib3-1.25.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/urllib3/}
 
 MAINTAINER=	imil@NetBSD.org
-HOMEPAGE=	http://urllib3.readthedocs.io/
+HOMEPAGE=	https://urllib3.readthedocs.io/
 COMMENT=	HTTP library with thread-safe connection pooling
 LICENSE=	mit
 

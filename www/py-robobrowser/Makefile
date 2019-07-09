@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/02/01 15:27:14 leot Exp $
+# $NetBSD: Makefile,v 1.2 2019/07/09 11:35:14 nia Exp $
 
 DISTNAME=	robobrowser-0.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/robobrowser/}
 
 MAINTAINER=	leot@NetBSD.org
-HOMEPAGE=	http://robobrowser.readthedocs.io/
+HOMEPAGE=	https://robobrowser.readthedocs.io/
 COMMENT=	Your friendly neighborhood web scraper
 LICENSE=	modified-bsd
 
