@@ -1,9 +1,12 @@
-$NetBSD: patch-SConstruct,v 1.1 2019/06/28 16:30:56 gdt Exp $
+$NetBSD: patch-SConstruct,v 1.2 2019/07/09 07:28:30 adam Exp $
 
-Add support for NetBSD/Dragonfly, fix locations.
+Add support for NetBSD/Dragonfly.
+Fix locations.
+Don't compile with debug info.
+Don't mess with the linker.
 Respect LDFLAGS and CXXFLAGS
 
---- SConstruct.orig	2017-04-20 21:43:42.000000000 +0000
+--- SConstruct.orig	2019-05-21 17:07:37.000000000 +0000
 +++ SConstruct
 @@ -30,7 +30,7 @@ EnsureSConsVersion( 2, 3, 0 )
  def print_build_failures():
@@ -72,7 +75,7 @@ Respect LDFLAGS and CXXFLAGS
  
  env_vars = Variables(
      files=variables_files,
-@@ -892,6 +896,7 @@ envDict = dict(BUILD_ROOT=buildDir,
+@@ -899,6 +903,7 @@ envDict = dict(BUILD_ROOT=buildDir,
                 INSTALL_DIR=installDir,
                 CONFIG_HEADER_DEFINES={},
                 LIBDEPS_TAG_EXPANSIONS=[],
@@ -80,7 +83,7 @@ Respect LDFLAGS and CXXFLAGS
                 )
  
  env = Environment(variables=env_vars, **envDict)
-@@ -901,12 +906,12 @@ env.AddMethod(env_os_is_wrapper, 'Target
+@@ -908,12 +913,12 @@ env.AddMethod(env_os_is_wrapper, 'Target
  env.AddMethod(env_get_os_name_wrapper, 'GetTargetOSName')
  
  def fatal_error(env, msg, *args):
@@ -96,7 +99,7 @@ Respect LDFLAGS and CXXFLAGS
  
      Exit(1)
  
-@@ -926,7 +931,7 @@ else:
+@@ -933,7 +938,7 @@ else:
  env.AddMethod(lambda env: env['VERBOSE'], 'Verbose')
  
  if has_option('variables-help'):
@@ -105,7 +108,7 @@ Respect LDFLAGS and CXXFLAGS
      Exit(0)
  
  unknown_vars = env_vars.UnknownVariables()
-@@ -1029,7 +1034,9 @@ def CheckForProcessor(context, which_arc
+@@ -1036,7 +1041,9 @@ def CheckForProcessor(context, which_arc
  os_macros = {
      "windows": "_WIN32",
      "solaris": "__sun",
@@ -115,7 +118,7 @@ Respect LDFLAGS and CXXFLAGS
      "openbsd": "__OpenBSD__",
      "osx": "__APPLE__",
      "linux": "__linux__",
-@@ -1124,7 +1131,7 @@ else:
+@@ -1131,7 +1138,7 @@ else:
      env['TARGET_ARCH'] = detected_processor
  
  if env['TARGET_OS'] not in os_macros:
@@ -124,7 +127,7 @@ Respect LDFLAGS and CXXFLAGS
  elif not detectConf.CheckForOS(env['TARGET_OS']):
      env.ConfError("TARGET_OS ({0}) is not supported by compiler", env['TARGET_OS'])
  
-@@ -1360,7 +1367,7 @@ elif env['_LIBDEPS'] == '$_LIBDEPS_LIBS'
+@@ -1367,7 +1374,7 @@ elif env['_LIBDEPS'] == '$_LIBDEPS_LIBS'
  
  libdeps.setup_environment(env, emitting_shared=(link_model.startswith("dynamic")))
  
@@ -133,13 +136,13 @@ Respect LDFLAGS and CXXFLAGS
      env['LINK_LIBGROUP_START'] = '-Wl,--start-group'
      env['LINK_LIBGROUP_END'] = '-Wl,--end-group'
      env['LINK_WHOLE_ARCHIVE_START'] = '-Wl,--whole-archive'
-@@ -1388,10 +1395,24 @@ if env.TargetOSIs('linux'):
+@@ -1395,10 +1402,24 @@ if env.TargetOSIs('linux'):
  elif env.TargetOSIs('solaris'):
       env.Append( LIBS=["socket","resolv","lgrp"] )
  
 +elif os.sys.platform.startswith( "dragonfly" ):
-+    env.Append( CPPPATH=[ "@PREFIX@/include" ] )
-+    env.Append( LIBPATH=[ "@PREFIX@/lib" ] )
++    env.Append( CPPPATH=[ "/dist/pkg/include" ] )
++    env.Append( LIBPATH=[ "/dist/pkg/lib" ] )
 +    env.Append( LIBS=[ "m" ] )
 +    env.Append( LIBS=[ "kvm" ] )
 +    env.Append( CPPDEFINES=[ "__dragonfly__" ] )
@@ -149,8 +152,8 @@ Respect LDFLAGS and CXXFLAGS
      env.Append( CCFLAGS=[ "-fno-omit-frame-pointer" ] )
  
 +elif os.sys.platform.startswith( "netbsd" ):
-+    env.Append( CPPPATH=[ "@PREFIX@/include" ] )
-+    env.Append( LIBPATH=[ "@PREFIX@/lib" ] )
++    env.Append( CPPPATH=[ "/dist/pkg/include" ] )
++    env.Append( LIBPATH=[ "/dist/pkg/lib" ] )
 +    env.Append( LIBS=[ "m" ] )
 +    env.Append( LIBS=[ "kvm" ] )
 +    env.Append( CPPDEFINES=[ "__netbsd__" ] )
@@ -158,7 +161,15 @@ Respect LDFLAGS and CXXFLAGS
  elif env.TargetOSIs('openbsd'):
      env.Append( LIBS=[ "kvm" ] )
  
-@@ -1570,6 +1591,9 @@ if env.TargetOSIs('posix'):
+@@ -1564,7 +1585,6 @@ if env.TargetOSIs('posix'):
+     # -Winvalid-pch Warn if a precompiled header (see Precompiled Headers) is found in the search path but can't be used.
+     env.Append( CCFLAGS=["-fno-omit-frame-pointer",
+                          "-fno-strict-aliasing",
+-                         "-ggdb",
+                          "-pthread",
+                          "-Wall",
+                          "-Wsign-compare",
+@@ -1577,6 +1597,9 @@ if env.TargetOSIs('posix'):
  
      env.Append( CXXFLAGS=["-Woverloaded-virtual"] )
      env.Append( LINKFLAGS=["-pthread"] )
@@ -168,7 +179,7 @@ Respect LDFLAGS and CXXFLAGS
  
      # SERVER-9761: Ensure early detection of missing symbols in dependent libraries at program
      # startup.
-@@ -2158,9 +2182,9 @@ def doConfigure(myenv):
+@@ -2165,9 +2188,9 @@ def doConfigure(myenv):
      if usingLibStdCxx:
          def CheckModernLibStdCxx(context):
              test_body = """
@@ -181,15 +192,24 @@ Respect LDFLAGS and CXXFLAGS
              """
  
              context.Message('Checking for libstdc++ 5.3.0 or better... ')
-@@ -2764,6 +2788,7 @@ def doConfigure(myenv):
-             # permit more than four parameters.
+@@ -2375,7 +2398,7 @@ def doConfigure(myenv):
+         #
+         myenv.Append( CCFLAGS=["/Zc:inline"])
+ 
+-    if myenv.ToolchainIs('gcc', 'clang'):
++    if myenv.ToolchainIs('gcc', 'clang') and get_option('runtime-hardening') == "on":
+         # This tells clang/gcc to use the gold linker if it is available - we prefer the gold linker
+         # because it is much faster.
+         AddToLINKFLAGSIfSupported(myenv, '-fuse-ld=gold')
+@@ -2800,6 +2823,7 @@ def doConfigure(myenv):
              "BOOST_THREAD_DONT_PROVIDE_VARIADIC_THREAD",
              "BOOST_SYSTEM_NO_DEPRECATED",
+             "BOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS",
 +            "BOOST_OPTIONAL_USE_SINGLETON_DEFINITION_OF_NONE",
          ]
      )
  
-@@ -2830,7 +2855,7 @@ def doConfigure(myenv):
+@@ -2866,7 +2890,7 @@ def doConfigure(myenv):
          myenv.ConfError("Couldn't find SASL header/libraries")
  
      # requires ports devel/libexecinfo to be installed
