@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2835 2019/07/09 00:38:50 gdt Exp $
+$NetBSD: CHANGES-2019,v 1.2836 2019/07/09 02:38:27 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4719,3 +4719,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/micro_httpd to 20140814 [schwarz 2019-07-08]
 	Updated net/arping to 2.19 [schwarz 2019-07-08]
 	Updated net/unifi to 5.10.25 [gdt 2019-07-09]
+	Updated graphics/mate-themes to 3.22.20 [gutteridge 2019-07-09]
