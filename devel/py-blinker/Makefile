@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/06/08 17:43:24 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2019/07/09 11:29:30 nia Exp $
 
 DISTNAME=	blinker-1.4
 PKGREVISION=	1
@@ -7,7 +7,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/blinker/}
 
 MAINTAINER=	kleink@NetBSD.org
-HOMEPAGE=	http://pythonhosted.org/blinker/
+HOMEPAGE=	https://pythonhosted.org/blinker/
 COMMENT=	Fast, simple object-to-object and broadcast signaling
 LICENSE=	mit
 
