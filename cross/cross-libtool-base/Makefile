@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/07/09 06:37:58 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/07/09 15:45:25 riastradh Exp $
 
 # XXX This is kludgerific copypasta of devel/libtool-base/Makefile for
 # cross-compilation.  Please make it go away!
@@ -20,8 +20,13 @@
 # these patch files properly; otherwise your changes WILL be lost on the
 # next libtool update.
 #
-# DO NOT MAKE CHANGES TO patch-ab OR patch-ad WITHOUT FOLLOWING THESE
-# INSTRUCTIONS.  There are no exceptions to this rule.
+# DO NOT MAKE CHANGES TO THESE FILES:
+#
+#   patches/patch-build-aux_ltmain.sh
+#   patches/patch-configure
+#   patches/patch-libltdl_configure
+#
+# WITHOUT FOLLOWING THESE INSTRUCTIONS.  There are no exceptions to this rule.
 #
 ###########################################################################
 ###########################################################################
@@ -31,7 +36,7 @@
 # XXX Tweaked for cross-compilation.
 #PKGNAME=	${DISTNAME:S/-/-base-/}
 PKGNAME=	${DISTNAME:S/^libtool-/cross-libtool-base-${MACHINE_ARCH}-/}
-PKGREVISION=	4
+PKGREVISION=	5
 
 COMMENT=	Generic shared library support script (the script itself)
 
@@ -57,8 +62,12 @@ CFLAGS.SunOS+=	${_COMPILER_ABI_FLAG.${ABI}}
 # and Fortran compilers.
 #
 USE_LANGUAGES=		c c++
-GNU_CONFIGURE_PREFIX=	${PREFIX}/cross
+# XXX Added for cross-compilation.  XXX Should be ${TARGET_ARCH}, but
+# currently we have to fake-cross-compile libtool because it's broken
+# upstream.
+GNU_CONFIGURE_PREFIX=	${PREFIX}/cross-${MACHINE_ARCH}
 CONFIGURE_ARGS+=	--disable-ltdl-install
+CONFIGURE_ARGS+=	F77=no FC=no
 
 USE_TOOLS+=		echo
 
@@ -68,7 +77,9 @@ FILESDIR=	../../devel/libtool-base/files
 .PHONY: fix-libtool
 fix-libtool:
 	cd ${WRKSRC}; for f in libtool; do				\
-		${SED}	-e "s,-L${BUILDLINK_DIR}/lib,," $$f > $$f.new;	\
+		${SED}	-e "s,-L${BUILDLINK_DIR}/lib *,,g"		\
+			-e "s,${BUILDLINK_DIR}/lib *,,g"		\
+			$$f > $$f.new;					\
 		if [ -x $$f ]; then ${CHMOD} +x $$f.new; fi;		\
 		${MV} -f $$f.new $$f;					\
 	done
@@ -81,7 +92,7 @@ post-build:
 		${FILESDIR}/shlibtool.in > ${WRKSRC}/shlibtool
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/shlibtool ${DESTDIR}${PREFIX}/cross/bin/shlibtool
+	${INSTALL_SCRIPT} ${WRKSRC}/shlibtool ${DESTDIR}${PREFIX}/cross-${MACHINE_ARCH}/bin/shlibtool
 
 BUILDLINK_DEPMETHOD.dlcompat=	build
 

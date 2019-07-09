@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.67 2018/01/02 05:49:44 maya Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.68 2019/07/09 15:45:25 riastradh Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -86,8 +86,8 @@ BUILD_DEPENDS+=		libtool-fortran>=${_OPSYS_LIBTOOL_REQD:U${LIBTOOL_REQD}}:../../
 .  endif
 .else
 .  if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
-PKG_LIBTOOL?=		${CROSSBASE}/bin/libtool
-PKG_SHLIBTOOL?=		${CROSSBASE}/bin/shlibtool
+PKG_LIBTOOL?=		${LOCALBASE}/cross-${TARGET_ARCH:U${MACHINE_ARCH}}/bin/libtool
+PKG_SHLIBTOOL?=		${LOCALBASE}/cross-${TARGET_ARCH:U${MACHINE_ARCH}}/bin/shlibtool
 .  else
 PKG_LIBTOOL?=		${LOCALBASE}/bin/libtool
 PKG_SHLIBTOOL?=		${LOCALBASE}/bin/shlibtool
