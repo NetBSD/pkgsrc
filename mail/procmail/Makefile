@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2017/11/26 20:39:40 snj Exp $
+# $NetBSD: Makefile,v 1.51 2019/07/09 15:46:42 riastradh Exp $
 
 DISTNAME=	procmail-3.22
 PKGREVISION=	5
@@ -43,6 +43,19 @@ pre-configure:
 .if defined(PROCMAIL_MAILSPOOLHOME)
 	${ECHO} "#define MAILSPOOLHOME \"/${PROCMAIL_MAILSPOOLHOME}\""	\
 	>> ${WRKSRC}/src/authenticate.h
+.endif
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+MAKE_FLAGS+=	CC_FOR_BUILD=${NATIVE_CC:Q}
+
+.if exists(${FILESDIR}/autoconf-${OPSYS}.h.in)
+post-configure:
+	cd ${WRKSRC} && ${MAKE} init
+	${SED} -e s,@PREFIX@,${PREFIX:U},g				\
+		-e s,@PKGVERSION@,${PKGVERSION:U},g			\
+	    < ${FILESDIR}/autoconf-${OPSYS}.h.in			\
+	    > ${WRKSRC}/autoconf.h
+.endif
 .endif
 
 .if ${OPSYS} == "SunOS"
