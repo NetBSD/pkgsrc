@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2018/09/17 06:56:22 maya Exp $
+# $NetBSD: Makefile,v 1.116 2019/07/09 15:46:10 riastradh Exp $
 
 DISTNAME=	fontconfig-2.13.1
 CATEGORIES=	fonts
@@ -11,7 +11,7 @@ COMMENT=	Library for configuring and customizing font access
 #LICENSE=	x11?
 
 # https://bugs.freedesktop.org/show_bug.cgi?id=101280
-BUILD_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
+TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config msgfmt
