@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/01/16 18:21:09 youri Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/07/09 02:37:27 gutteridge Exp $
 share/icons/ContrastHigh/16x16/actions/action-unavailable.png
 share/icons/ContrastHigh/16x16/actions/bookmark-add.png
 share/icons/ContrastHigh/16x16/actions/bookmark-new.png
@@ -155,7 +155,6 @@ share/icons/ContrastHigh/16x16/apps/gnome-disks.png
 share/icons/ContrastHigh/16x16/apps/gnome-documents.png
 share/icons/ContrastHigh/16x16/apps/gnome-freecell.png
 share/icons/ContrastHigh/16x16/apps/gnome-nettool.png
-share/icons/ContrastHigh/16x16/apps/gnome-power-manager.png
 share/icons/ContrastHigh/16x16/apps/gnome-tweak-tool.png
 share/icons/ContrastHigh/16x16/apps/goa-panel.png
 share/icons/ContrastHigh/16x16/apps/gok.png
@@ -176,11 +175,11 @@ share/icons/ContrastHigh/16x16/apps/libreoffice-startcenter.png
 share/icons/ContrastHigh/16x16/apps/libreoffice-writer.png
 share/icons/ContrastHigh/16x16/apps/mate-application-generic.png
 share/icons/ContrastHigh/16x16/apps/mate-brightness-applet.png
+share/icons/ContrastHigh/16x16/apps/mate-desktop.png
 share/icons/ContrastHigh/16x16/apps/mate-invest-applet.png
 share/icons/ContrastHigh/16x16/apps/mate-log.png
 share/icons/ContrastHigh/16x16/apps/mate-logo-icon-transparent.png
 share/icons/ContrastHigh/16x16/apps/mate-netspeed-applet.png
-share/icons/ContrastHigh/16x16/apps/mate-network-properties.png
 share/icons/ContrastHigh/16x16/apps/mate-notification-properties.png
 share/icons/ContrastHigh/16x16/apps/mate-panel-clock.png
 share/icons/ContrastHigh/16x16/apps/mate-panel-drawer.png
@@ -189,7 +188,7 @@ share/icons/ContrastHigh/16x16/apps/mate-panel-launcher.png
 share/icons/ContrastHigh/16x16/apps/mate-panel-window-list.png
 share/icons/ContrastHigh/16x16/apps/mate-panel-window-menu.png
 share/icons/ContrastHigh/16x16/apps/mate-panel-workspace-switcher.png
-share/icons/ContrastHigh/16x16/apps/mate-preferences-desktop-display.png
+share/icons/ContrastHigh/16x16/apps/mate-power-manager.png
 share/icons/ContrastHigh/16x16/apps/mate-session-properties.png
 share/icons/ContrastHigh/16x16/apps/miro.png
 share/icons/ContrastHigh/16x16/apps/mozo.png
@@ -671,7 +670,6 @@ share/icons/ContrastHigh/22x22/apps/gnome-disks.png
 share/icons/ContrastHigh/22x22/apps/gnome-documents.png
 share/icons/ContrastHigh/22x22/apps/gnome-freecell.png
 share/icons/ContrastHigh/22x22/apps/gnome-nettool.png
-share/icons/ContrastHigh/22x22/apps/gnome-power-manager.png
 share/icons/ContrastHigh/22x22/apps/gnome-tweak-tool.png
 share/icons/ContrastHigh/22x22/apps/goa-panel.png
 share/icons/ContrastHigh/22x22/apps/gok.png
@@ -692,11 +690,11 @@ share/icons/ContrastHigh/22x22/apps/libreoffice-startcenter.png
 share/icons/ContrastHigh/22x22/apps/libreoffice-writer.png
 share/icons/ContrastHigh/22x22/apps/mate-application-generic.png
 share/icons/ContrastHigh/22x22/apps/mate-brightness-applet.png
+share/icons/ContrastHigh/22x22/apps/mate-desktop.png
 share/icons/ContrastHigh/22x22/apps/mate-invest-applet.png
 share/icons/ContrastHigh/22x22/apps/mate-log.png
 share/icons/ContrastHigh/22x22/apps/mate-logo-icon-transparent.png
 share/icons/ContrastHigh/22x22/apps/mate-netspeed-applet.png
-share/icons/ContrastHigh/22x22/apps/mate-network-properties.png
 share/icons/ContrastHigh/22x22/apps/mate-notification-properties.png
 share/icons/ContrastHigh/22x22/apps/mate-panel-clock.png
 share/icons/ContrastHigh/22x22/apps/mate-panel-drawer.png
@@ -705,7 +703,7 @@ share/icons/ContrastHigh/22x22/apps/mate-panel-launcher.png
 share/icons/ContrastHigh/22x22/apps/mate-panel-window-list.png
 share/icons/ContrastHigh/22x22/apps/mate-panel-window-menu.png
 share/icons/ContrastHigh/22x22/apps/mate-panel-workspace-switcher.png
-share/icons/ContrastHigh/22x22/apps/mate-preferences-desktop-display.png
+share/icons/ContrastHigh/22x22/apps/mate-power-manager.png
 share/icons/ContrastHigh/22x22/apps/mate-session-properties.png
 share/icons/ContrastHigh/22x22/apps/miro.png
 share/icons/ContrastHigh/22x22/apps/mozo.png
@@ -1188,7 +1186,6 @@ share/icons/ContrastHigh/24x24/apps/gnome-disks.png
 share/icons/ContrastHigh/24x24/apps/gnome-documents.png
 share/icons/ContrastHigh/24x24/apps/gnome-freecell.png
 share/icons/ContrastHigh/24x24/apps/gnome-nettool.png
-share/icons/ContrastHigh/24x24/apps/gnome-power-manager.png
 share/icons/ContrastHigh/24x24/apps/gnome-tweak-tool.png
 share/icons/ContrastHigh/24x24/apps/goa-panel.png
 share/icons/ContrastHigh/24x24/apps/gok.png
@@ -1209,11 +1206,11 @@ share/icons/ContrastHigh/24x24/apps/libreoffice-startcenter.png
 share/icons/ContrastHigh/24x24/apps/libreoffice-writer.png
 share/icons/ContrastHigh/24x24/apps/mate-application-generic.png
 share/icons/ContrastHigh/24x24/apps/mate-brightness-applet.png
+share/icons/ContrastHigh/24x24/apps/mate-desktop.png
 share/icons/ContrastHigh/24x24/apps/mate-invest-applet.png
 share/icons/ContrastHigh/24x24/apps/mate-log.png
 share/icons/ContrastHigh/24x24/apps/mate-logo-icon-transparent.png
 share/icons/ContrastHigh/24x24/apps/mate-netspeed-applet.png
-share/icons/ContrastHigh/24x24/apps/mate-network-properties.png
 share/icons/ContrastHigh/24x24/apps/mate-notification-properties.png
 share/icons/ContrastHigh/24x24/apps/mate-panel-clock.png
 share/icons/ContrastHigh/24x24/apps/mate-panel-drawer.png
@@ -1222,7 +1219,7 @@ share/icons/ContrastHigh/24x24/apps/mate-panel-launcher.png
 share/icons/ContrastHigh/24x24/apps/mate-panel-window-list.png
 share/icons/ContrastHigh/24x24/apps/mate-panel-window-menu.png
 share/icons/ContrastHigh/24x24/apps/mate-panel-workspace-switcher.png
-share/icons/ContrastHigh/24x24/apps/mate-preferences-desktop-display.png
+share/icons/ContrastHigh/24x24/apps/mate-power-manager.png
 share/icons/ContrastHigh/24x24/apps/mate-session-properties.png
 share/icons/ContrastHigh/24x24/apps/miro.png
 share/icons/ContrastHigh/24x24/apps/mozo.png
@@ -1693,7 +1690,6 @@ share/icons/ContrastHigh/256x256/apps/gnome-disks.png
 share/icons/ContrastHigh/256x256/apps/gnome-documents.png
 share/icons/ContrastHigh/256x256/apps/gnome-freecell.png
 share/icons/ContrastHigh/256x256/apps/gnome-nettool.png
-share/icons/ContrastHigh/256x256/apps/gnome-power-manager.png
 share/icons/ContrastHigh/256x256/apps/gnome-tweak-tool.png
 share/icons/ContrastHigh/256x256/apps/goa-panel.png
 share/icons/ContrastHigh/256x256/apps/gtranslator.png
@@ -1711,7 +1707,10 @@ share/icons/ContrastHigh/256x256/apps/libreoffice-math.png
 share/icons/ContrastHigh/256x256/apps/libreoffice-startcenter.png
 share/icons/ContrastHigh/256x256/apps/libreoffice-writer.png
 share/icons/ContrastHigh/256x256/apps/mate-brightness-applet.png
+share/icons/ContrastHigh/256x256/apps/mate-desktop.png
+share/icons/ContrastHigh/256x256/apps/mate-logo-icon-transparent.png
 share/icons/ContrastHigh/256x256/apps/mate-netspeed-applet.png
+share/icons/ContrastHigh/256x256/apps/mate-power-manager.png
 share/icons/ContrastHigh/256x256/apps/miro.png
 share/icons/ContrastHigh/256x256/apps/multimedia-volume-control.png
 share/icons/ContrastHigh/256x256/apps/palimpsest.png
@@ -2176,7 +2175,6 @@ share/icons/ContrastHigh/32x32/apps/gnome-disks.png
 share/icons/ContrastHigh/32x32/apps/gnome-documents.png
 share/icons/ContrastHigh/32x32/apps/gnome-freecell.png
 share/icons/ContrastHigh/32x32/apps/gnome-nettool.png
-share/icons/ContrastHigh/32x32/apps/gnome-power-manager.png
 share/icons/ContrastHigh/32x32/apps/gnome-tweak-tool.png
 share/icons/ContrastHigh/32x32/apps/goa-panel.png
 share/icons/ContrastHigh/32x32/apps/gok.png
@@ -2197,11 +2195,11 @@ share/icons/ContrastHigh/32x32/apps/libreoffice-startcenter.png
 share/icons/ContrastHigh/32x32/apps/libreoffice-writer.png
 share/icons/ContrastHigh/32x32/apps/mate-application-generic.png
 share/icons/ContrastHigh/32x32/apps/mate-brightness-applet.png
+share/icons/ContrastHigh/32x32/apps/mate-desktop.png
 share/icons/ContrastHigh/32x32/apps/mate-invest-applet.png
 share/icons/ContrastHigh/32x32/apps/mate-log.png
 share/icons/ContrastHigh/32x32/apps/mate-logo-icon-transparent.png
 share/icons/ContrastHigh/32x32/apps/mate-netspeed-applet.png
-share/icons/ContrastHigh/32x32/apps/mate-network-properties.png
 share/icons/ContrastHigh/32x32/apps/mate-notification-properties.png
 share/icons/ContrastHigh/32x32/apps/mate-panel-clock.png
 share/icons/ContrastHigh/32x32/apps/mate-panel-drawer.png
@@ -2210,7 +2208,7 @@ share/icons/ContrastHigh/32x32/apps/mate-panel-launcher.png
 share/icons/ContrastHigh/32x32/apps/mate-panel-window-list.png
 share/icons/ContrastHigh/32x32/apps/mate-panel-window-menu.png
 share/icons/ContrastHigh/32x32/apps/mate-panel-workspace-switcher.png
-share/icons/ContrastHigh/32x32/apps/mate-preferences-desktop-display.png
+share/icons/ContrastHigh/32x32/apps/mate-power-manager.png
 share/icons/ContrastHigh/32x32/apps/mate-session-properties.png
 share/icons/ContrastHigh/32x32/apps/miro.png
 share/icons/ContrastHigh/32x32/apps/mozo.png
@@ -2693,7 +2691,6 @@ share/icons/ContrastHigh/48x48/apps/gnome-disks.png
 share/icons/ContrastHigh/48x48/apps/gnome-documents.png
 share/icons/ContrastHigh/48x48/apps/gnome-freecell.png
 share/icons/ContrastHigh/48x48/apps/gnome-nettool.png
-share/icons/ContrastHigh/48x48/apps/gnome-power-manager.png
 share/icons/ContrastHigh/48x48/apps/gnome-tweak-tool.png
 share/icons/ContrastHigh/48x48/apps/goa-panel.png
 share/icons/ContrastHigh/48x48/apps/gok.png
@@ -2714,11 +2711,11 @@ share/icons/ContrastHigh/48x48/apps/libreoffice-startcenter.png
 share/icons/ContrastHigh/48x48/apps/libreoffice-writer.png
 share/icons/ContrastHigh/48x48/apps/mate-application-generic.png
 share/icons/ContrastHigh/48x48/apps/mate-brightness-applet.png
+share/icons/ContrastHigh/48x48/apps/mate-desktop.png
 share/icons/ContrastHigh/48x48/apps/mate-invest-applet.png
 share/icons/ContrastHigh/48x48/apps/mate-log.png
 share/icons/ContrastHigh/48x48/apps/mate-logo-icon-transparent.png
 share/icons/ContrastHigh/48x48/apps/mate-netspeed-applet.png
-share/icons/ContrastHigh/48x48/apps/mate-network-properties.png
 share/icons/ContrastHigh/48x48/apps/mate-notification-properties.png
 share/icons/ContrastHigh/48x48/apps/mate-panel-clock.png
 share/icons/ContrastHigh/48x48/apps/mate-panel-drawer.png
@@ -2727,7 +2724,7 @@ share/icons/ContrastHigh/48x48/apps/mate-panel-launcher.png
 share/icons/ContrastHigh/48x48/apps/mate-panel-window-list.png
 share/icons/ContrastHigh/48x48/apps/mate-panel-window-menu.png
 share/icons/ContrastHigh/48x48/apps/mate-panel-workspace-switcher.png
-share/icons/ContrastHigh/48x48/apps/mate-preferences-desktop-display.png
+share/icons/ContrastHigh/48x48/apps/mate-power-manager.png
 share/icons/ContrastHigh/48x48/apps/mate-session-properties.png
 share/icons/ContrastHigh/48x48/apps/mate-starthere.png
 share/icons/ContrastHigh/48x48/apps/miro.png
@@ -3157,6 +3154,7 @@ share/icons/ContrastHigh/scalable/apps/accessories-character-map.svg
 share/icons/ContrastHigh/scalable/apps/accessories-text-editor.svg
 share/icons/ContrastHigh/scalable/apps/atril.svg
 share/icons/ContrastHigh/scalable/apps/help-browser.svg
+share/icons/ContrastHigh/scalable/apps/mate-desktop.svg
 share/icons/ContrastHigh/scalable/apps/mate-invest-applet.svg
 share/icons/ContrastHigh/scalable/apps/meld.svg
 share/icons/ContrastHigh/scalable/apps/preferences-desktop-accessibility.svg
@@ -3524,6 +3522,22 @@ share/icons/mate/cursors/watch
 share/icons/mate/cursors/xterm
 share/icons/mate/cursors/zoom-in
 share/icons/mate/cursors/zoom-out
+share/themes/BlackMATE-border/index.theme
+share/themes/BlackMATE-border/metacity-1/bar.png
+share/themes/BlackMATE-border/metacity-1/bar_unfocused.png
+share/themes/BlackMATE-border/metacity-1/button-close-focus.png
+share/themes/BlackMATE-border/metacity-1/button-max-focus.png
+share/themes/BlackMATE-border/metacity-1/button-max-focus1.png
+share/themes/BlackMATE-border/metacity-1/button-min-focus.png
+share/themes/BlackMATE-border/metacity-1/menu-button-pressed.png
+share/themes/BlackMATE-border/metacity-1/metacity-theme-1.xml
+share/themes/BlackMATE-border/metacity-1/metacity-theme-2.xml
+share/themes/BlackMATE-border/metacity-1/metacity-theme-3.xml
+share/themes/BlackMATE-border/metacity-1/neutral.png
+share/themes/BlackMATE-border/metacity-1/unabove-button-unfocus.png
+share/themes/BlackMATE-border/metacity-1/unabove-button.png
+share/themes/BlackMATE-border/metacity-1/unfocus.png
+share/themes/BlackMATE-border/metacity-1/yellow.png
 share/themes/BlackMATE/COPYING
 share/themes/BlackMATE/README
 share/themes/BlackMATE/apps/yumex.css
@@ -3708,6 +3722,17 @@ share/themes/BlackMATE/unity/unmaximize_focused_pressed.png
 share/themes/BlackMATE/unity/unmaximize_unfocused.png
 share/themes/BlackMATE/unity/unmaximize_unfocused_prelight.png
 share/themes/BlackMATE/unity/unmaximize_unfocused_pressed.png
+share/themes/Blue-Submarine-border/index.theme
+share/themes/Blue-Submarine-border/metacity-1/icon_close.png
+share/themes/Blue-Submarine-border/metacity-1/icon_close_u.png
+share/themes/Blue-Submarine-border/metacity-1/icon_maximize.png
+share/themes/Blue-Submarine-border/metacity-1/icon_maximize_u.png
+share/themes/Blue-Submarine-border/metacity-1/icon_minimize.png
+share/themes/Blue-Submarine-border/metacity-1/icon_minimize_u.png
+share/themes/Blue-Submarine-border/metacity-1/icon_restore.png
+share/themes/Blue-Submarine-border/metacity-1/icon_restore_u.png
+share/themes/Blue-Submarine-border/metacity-1/metacity-theme-1.xml
+share/themes/Blue-Submarine-border/metacity-1/stripes.png
 share/themes/Blue-Submarine/cinnamon/add-workspace.png
 share/themes/Blue-Submarine/cinnamon/calendar-arrow-left.svg
 share/themes/Blue-Submarine/cinnamon/calendar-arrow-right.svg
@@ -3867,6 +3892,37 @@ share/themes/Blue-Submarine/metacity-1/icon_restore.png
 share/themes/Blue-Submarine/metacity-1/icon_restore_u.png
 share/themes/Blue-Submarine/metacity-1/metacity-theme-1.xml
 share/themes/Blue-Submarine/metacity-1/stripes.png
+share/themes/BlueMenta-border/COPYING
+share/themes/BlueMenta-border/README
+share/themes/BlueMenta-border/index.theme
+share/themes/BlueMenta-border/metacity-1/close_focused_normal.svg
+share/themes/BlueMenta-border/metacity-1/close_focused_prelight.svg
+share/themes/BlueMenta-border/metacity-1/close_focused_pressed.svg
+share/themes/BlueMenta-border/metacity-1/close_unfocused.svg
+share/themes/BlueMenta-border/metacity-1/close_unfocused_prelight.svg
+share/themes/BlueMenta-border/metacity-1/maximize_focused_normal.svg
+share/themes/BlueMenta-border/metacity-1/maximize_focused_prelight.svg
+share/themes/BlueMenta-border/metacity-1/maximize_focused_pressed.svg
+share/themes/BlueMenta-border/metacity-1/maximize_unfocused.svg
+share/themes/BlueMenta-border/metacity-1/maximize_unfocused_prelight.svg
+share/themes/BlueMenta-border/metacity-1/menu.png
+share/themes/BlueMenta-border/metacity-1/menu_prelight.png
+share/themes/BlueMenta-border/metacity-1/metacity-theme-1.xml
+share/themes/BlueMenta-border/metacity-1/metacity-theme-2.xml
+share/themes/BlueMenta-border/metacity-1/metacity-theme-3.xml
+share/themes/BlueMenta-border/metacity-1/minimize_focused_normal.svg
+share/themes/BlueMenta-border/metacity-1/minimize_focused_prelight.svg
+share/themes/BlueMenta-border/metacity-1/minimize_focused_pressed.svg
+share/themes/BlueMenta-border/metacity-1/minimize_unfocused.svg
+share/themes/BlueMenta-border/metacity-1/minimize_unfocused_prelight.svg
+share/themes/BlueMenta-border/metacity-1/trough_left.png
+share/themes/BlueMenta-border/metacity-1/trough_middle.png
+share/themes/BlueMenta-border/metacity-1/trough_right.png
+share/themes/BlueMenta-border/metacity-1/unmaximize_focused_normal.svg
+share/themes/BlueMenta-border/metacity-1/unmaximize_focused_prelight.svg
+share/themes/BlueMenta-border/metacity-1/unmaximize_focused_pressed.svg
+share/themes/BlueMenta-border/metacity-1/unmaximize_unfocused.svg
+share/themes/BlueMenta-border/metacity-1/unmaximize_unfocused_prelight.svg
 share/themes/BlueMenta/COPYING
 share/themes/BlueMenta/README
 share/themes/BlueMenta/cinnamon/add-workspace.png
@@ -4164,6 +4220,17 @@ share/themes/BlueMenta/xfwm4/top-right-active-shaded.xpm
 share/themes/BlueMenta/xfwm4/top-right-active.xpm
 share/themes/BlueMenta/xfwm4/top-right-inactive.xpm
 share/themes/ContrastHigh/index.theme
+share/themes/Green-Submarine-border/index.theme
+share/themes/Green-Submarine-border/metacity-1/icon_close.png
+share/themes/Green-Submarine-border/metacity-1/icon_close_u.png
+share/themes/Green-Submarine-border/metacity-1/icon_maximize.png
+share/themes/Green-Submarine-border/metacity-1/icon_maximize_u.png
+share/themes/Green-Submarine-border/metacity-1/icon_minimize.png
+share/themes/Green-Submarine-border/metacity-1/icon_minimize_u.png
+share/themes/Green-Submarine-border/metacity-1/icon_restore.png
+share/themes/Green-Submarine-border/metacity-1/icon_restore_u.png
+share/themes/Green-Submarine-border/metacity-1/metacity-theme-1.xml
+share/themes/Green-Submarine-border/metacity-1/stripes.png
 share/themes/Green-Submarine/cinnamon/add-workspace.png
 share/themes/Green-Submarine/cinnamon/calendar-arrow-left.svg
 share/themes/Green-Submarine/cinnamon/calendar-arrow-right.svg
@@ -4323,6 +4390,21 @@ share/themes/Green-Submarine/metacity-1/icon_restore.png
 share/themes/Green-Submarine/metacity-1/icon_restore_u.png
 share/themes/Green-Submarine/metacity-1/metacity-theme-1.xml
 share/themes/Green-Submarine/metacity-1/stripes.png
+share/themes/GreenLaguna-border/COPYING
+share/themes/GreenLaguna-border/index.theme
+share/themes/GreenLaguna-border/metacity-1/button-close-focus.png
+share/themes/GreenLaguna-border/metacity-1/button-max-focus.png
+share/themes/GreenLaguna-border/metacity-1/button-max-focus1.png
+share/themes/GreenLaguna-border/metacity-1/button-min-focus.png
+share/themes/GreenLaguna-border/metacity-1/menu-button-pressed.png
+share/themes/GreenLaguna-border/metacity-1/metacity-theme-1.xml
+share/themes/GreenLaguna-border/metacity-1/metacity-theme-2.xml
+share/themes/GreenLaguna-border/metacity-1/metacity-theme-3.xml
+share/themes/GreenLaguna-border/metacity-1/neutral.png
+share/themes/GreenLaguna-border/metacity-1/unabove-button-unfocus.png
+share/themes/GreenLaguna-border/metacity-1/unabove-button.png
+share/themes/GreenLaguna-border/metacity-1/unfocus.png
+share/themes/GreenLaguna-border/metacity-1/yellow.png
 share/themes/GreenLaguna/COPYING
 share/themes/GreenLaguna/README
 share/themes/GreenLaguna/gtk-2.0/Styles/caja.rc
@@ -4419,6 +4501,7 @@ share/themes/GreenLaguna/metacity-1/button-min-focus.png
 share/themes/GreenLaguna/metacity-1/menu-button-pressed.png
 share/themes/GreenLaguna/metacity-1/metacity-theme-1.xml
 share/themes/GreenLaguna/metacity-1/metacity-theme-2.xml
+share/themes/GreenLaguna/metacity-1/metacity-theme-3.xml
 share/themes/GreenLaguna/metacity-1/neutral.png
 share/themes/GreenLaguna/metacity-1/unabove-button-unfocus.png
 share/themes/GreenLaguna/metacity-1/unabove-button.png
@@ -4584,6 +4667,37 @@ share/themes/HighContrastInverse/pixmaps/volume-medium.png
 share/themes/HighContrastInverse/pixmaps/volume-min.png
 share/themes/HighContrastInverse/pixmaps/volume-mute.png
 share/themes/HighContrastInverse/pixmaps/volume-zero.png
+share/themes/Menta-border/COPYING
+share/themes/Menta-border/README
+share/themes/Menta-border/index.theme
+share/themes/Menta-border/metacity-1/close_focused_normal.svg
+share/themes/Menta-border/metacity-1/close_focused_prelight.svg
+share/themes/Menta-border/metacity-1/close_focused_pressed.svg
+share/themes/Menta-border/metacity-1/close_unfocused.svg
+share/themes/Menta-border/metacity-1/close_unfocused_prelight.svg
+share/themes/Menta-border/metacity-1/maximize_focused_normal.svg
+share/themes/Menta-border/metacity-1/maximize_focused_prelight.svg
+share/themes/Menta-border/metacity-1/maximize_focused_pressed.svg
+share/themes/Menta-border/metacity-1/maximize_unfocused.svg
+share/themes/Menta-border/metacity-1/maximize_unfocused_prelight.svg
+share/themes/Menta-border/metacity-1/menu.png
+share/themes/Menta-border/metacity-1/menu_prelight.png
+share/themes/Menta-border/metacity-1/metacity-theme-1.xml
+share/themes/Menta-border/metacity-1/metacity-theme-2.xml
+share/themes/Menta-border/metacity-1/metacity-theme-3.xml
+share/themes/Menta-border/metacity-1/minimize_focused_normal.svg
+share/themes/Menta-border/metacity-1/minimize_focused_prelight.svg
+share/themes/Menta-border/metacity-1/minimize_focused_pressed.svg
+share/themes/Menta-border/metacity-1/minimize_unfocused.svg
+share/themes/Menta-border/metacity-1/minimize_unfocused_prelight.svg
+share/themes/Menta-border/metacity-1/trough_left.png
+share/themes/Menta-border/metacity-1/trough_middle.png
+share/themes/Menta-border/metacity-1/trough_right.png
+share/themes/Menta-border/metacity-1/unmaximize_focused_normal.svg
+share/themes/Menta-border/metacity-1/unmaximize_focused_prelight.svg
+share/themes/Menta-border/metacity-1/unmaximize_focused_pressed.svg
+share/themes/Menta-border/metacity-1/unmaximize_unfocused.svg
+share/themes/Menta-border/metacity-1/unmaximize_unfocused_prelight.svg
 share/themes/Menta/COPYING
 share/themes/Menta/README
 share/themes/Menta/cinnamon/add-workspace.png
@@ -5098,75 +5212,133 @@ share/themes/TraditionalOk/xfwm4/top-left-inactive.xpm
 share/themes/TraditionalOk/xfwm4/top-right-active.png
 share/themes/TraditionalOk/xfwm4/top-right-active.xpm
 share/themes/TraditionalOk/xfwm4/top-right-inactive.xpm
+@pkgdir share/locale/zu/LC_MESSAGES
 @pkgdir share/locale/zh_TW/LC_MESSAGES
 @pkgdir share/locale/zh_HK/LC_MESSAGES
 @pkgdir share/locale/zh_CN/LC_MESSAGES
+@pkgdir share/locale/zh-Hans/LC_MESSAGES
+@pkgdir share/locale/yo/LC_MESSAGES
+@pkgdir share/locale/yi/LC_MESSAGES
 @pkgdir share/locale/xh/LC_MESSAGES
 @pkgdir share/locale/wa/LC_MESSAGES
 @pkgdir share/locale/vi/LC_MESSAGES
 @pkgdir share/locale/uz/LC_MESSAGES
+@pkgdir share/locale/ur_PK/LC_MESSAGES
+@pkgdir share/locale/ur/LC_MESSAGES
 @pkgdir share/locale/uk/LC_MESSAGES
 @pkgdir share/locale/ug/LC_MESSAGES
+@pkgdir share/locale/tt/LC_MESSAGES
+@pkgdir share/locale/ts/LC_MESSAGES
 @pkgdir share/locale/tr/LC_MESSAGES
+@pkgdir share/locale/tl/LC_MESSAGES
+@pkgdir share/locale/tk/LC_MESSAGES
 @pkgdir share/locale/th/LC_MESSAGES
+@pkgdir share/locale/tg/LC_MESSAGES
 @pkgdir share/locale/te/LC_MESSAGES
 @pkgdir share/locale/ta/LC_MESSAGES
+@pkgdir share/locale/sw/LC_MESSAGES
 @pkgdir share/locale/sv/LC_MESSAGES
 @pkgdir share/locale/sr@latin/LC_MESSAGES
 @pkgdir share/locale/sr/LC_MESSAGES
 @pkgdir share/locale/sq/LC_MESSAGES
+@pkgdir share/locale/so/LC_MESSAGES
 @pkgdir share/locale/sl/LC_MESSAGES
 @pkgdir share/locale/sk/LC_MESSAGES
 @pkgdir share/locale/si/LC_MESSAGES
+@pkgdir share/locale/sco/LC_MESSAGES
+@pkgdir share/locale/sc/LC_MESSAGES
+@pkgdir share/locale/rw/LC_MESSAGES
 @pkgdir share/locale/ru/LC_MESSAGES
 @pkgdir share/locale/ro/LC_MESSAGES
 @pkgdir share/locale/pt_BR/LC_MESSAGES
 @pkgdir share/locale/pt/LC_MESSAGES
+@pkgdir share/locale/ps/LC_MESSAGES
+@pkgdir share/locale/pms/LC_MESSAGES
 @pkgdir share/locale/pl/LC_MESSAGES
 @pkgdir share/locale/pa/LC_MESSAGES
 @pkgdir share/locale/or/LC_MESSAGES
+@pkgdir share/locale/om/LC_MESSAGES
 @pkgdir share/locale/oc/LC_MESSAGES
+@pkgdir share/locale/nso/LC_MESSAGES
+@pkgdir share/locale/nqo/LC_MESSAGES
 @pkgdir share/locale/nn/LC_MESSAGES
 @pkgdir share/locale/nl/LC_MESSAGES
 @pkgdir share/locale/ne/LC_MESSAGES
 @pkgdir share/locale/nds/LC_MESSAGES
 @pkgdir share/locale/nb/LC_MESSAGES
+@pkgdir share/locale/nah/LC_MESSAGES
+@pkgdir share/locale/my/LC_MESSAGES
 @pkgdir share/locale/ms/LC_MESSAGES
 @pkgdir share/locale/mr/LC_MESSAGES
 @pkgdir share/locale/mn/LC_MESSAGES
 @pkgdir share/locale/ml/LC_MESSAGES
 @pkgdir share/locale/mk/LC_MESSAGES
+@pkgdir share/locale/mi/LC_MESSAGES
 @pkgdir share/locale/mg/LC_MESSAGES
 @pkgdir share/locale/mai/LC_MESSAGES
 @pkgdir share/locale/lv/LC_MESSAGES
 @pkgdir share/locale/lt/LC_MESSAGES
+@pkgdir share/locale/lo/LC_MESSAGES
 @pkgdir share/locale/li/LC_MESSAGES
+@pkgdir share/locale/lb/LC_MESSAGES
+@pkgdir share/locale/la/LC_MESSAGES
 @pkgdir share/locale/ky/LC_MESSAGES
+@pkgdir share/locale/ku_IQ/LC_MESSAGES
+@pkgdir share/locale/ku/LC_MESSAGES
+@pkgdir share/locale/ks/LC_MESSAGES
 @pkgdir share/locale/ko/LC_MESSAGES
 @pkgdir share/locale/kn/LC_MESSAGES
+@pkgdir share/locale/km/LC_MESSAGES
 @pkgdir share/locale/kk/LC_MESSAGES
+@pkgdir share/locale/kab/LC_MESSAGES
 @pkgdir share/locale/ka/LC_MESSAGES
+@pkgdir share/locale/jv/LC_MESSAGES
 @pkgdir share/locale/ja/LC_MESSAGES
 @pkgdir share/locale/it/LC_MESSAGES
 @pkgdir share/locale/is/LC_MESSAGES
+@pkgdir share/locale/ig/LC_MESSAGES
+@pkgdir share/locale/ie/LC_MESSAGES
 @pkgdir share/locale/id/LC_MESSAGES
+@pkgdir share/locale/ia/LC_MESSAGES
 @pkgdir share/locale/hy/LC_MESSAGES
 @pkgdir share/locale/hu/LC_MESSAGES
 @pkgdir share/locale/hr/LC_MESSAGES
 @pkgdir share/locale/hi/LC_MESSAGES
 @pkgdir share/locale/he/LC_MESSAGES
+@pkgdir share/locale/ha/LC_MESSAGES
+@pkgdir share/locale/gug_PY/LC_MESSAGES
 @pkgdir share/locale/gu/LC_MESSAGES
 @pkgdir share/locale/gl/LC_MESSAGES
+@pkgdir share/locale/gd/LC_MESSAGES
 @pkgdir share/locale/ga/LC_MESSAGES
 @pkgdir share/locale/fy/LC_MESSAGES
 @pkgdir share/locale/fur/LC_MESSAGES
+@pkgdir share/locale/frp/LC_MESSAGES
+@pkgdir share/locale/fr_CA/LC_MESSAGES
 @pkgdir share/locale/fr/LC_MESSAGES
+@pkgdir share/locale/fo/LC_MESSAGES
+@pkgdir share/locale/fil/LC_MESSAGES
 @pkgdir share/locale/fi/LC_MESSAGES
 @pkgdir share/locale/fa/LC_MESSAGES
 @pkgdir share/locale/eu/LC_MESSAGES
 @pkgdir share/locale/et/LC_MESSAGES
+@pkgdir share/locale/es_VE/LC_MESSAGES
+@pkgdir share/locale/es_UY/LC_MESSAGES
+@pkgdir share/locale/es_US/LC_MESSAGES
+@pkgdir share/locale/es_SV/LC_MESSAGES
+@pkgdir share/locale/es_PR/LC_MESSAGES
+@pkgdir share/locale/es_PE/LC_MESSAGES
+@pkgdir share/locale/es_PA/LC_MESSAGES
+@pkgdir share/locale/es_NI/LC_MESSAGES
 @pkgdir share/locale/es_MX/LC_MESSAGES
+@pkgdir share/locale/es_ES/LC_MESSAGES
+@pkgdir share/locale/es_EC/LC_MESSAGES
+@pkgdir share/locale/es_DO/LC_MESSAGES
+@pkgdir share/locale/es_CR/LC_MESSAGES
 @pkgdir share/locale/es_CO/LC_MESSAGES
+@pkgdir share/locale/es_CL/LC_MESSAGES
+@pkgdir share/locale/es_AR/LC_MESSAGES
+@pkgdir share/locale/es_419/LC_MESSAGES
 @pkgdir share/locale/es/LC_MESSAGES
 @pkgdir share/locale/eo/LC_MESSAGES
 @pkgdir share/locale/en_GB/LC_MESSAGES
@@ -5174,9 +5346,12 @@ share/themes/TraditionalOk/xfwm4/top-right-inactive.xpm
 @pkgdir share/locale/en_AU/LC_MESSAGES
 @pkgdir share/locale/el/LC_MESSAGES
 @pkgdir share/locale/dz/LC_MESSAGES
+@pkgdir share/locale/de_CH/LC_MESSAGES
 @pkgdir share/locale/de/LC_MESSAGES
 @pkgdir share/locale/da/LC_MESSAGES
 @pkgdir share/locale/cy/LC_MESSAGES
+@pkgdir share/locale/cv/LC_MESSAGES
+@pkgdir share/locale/csb/LC_MESSAGES
 @pkgdir share/locale/cs/LC_MESSAGES
 @pkgdir share/locale/crh/LC_MESSAGES
 @pkgdir share/locale/cmn/LC_MESSAGES
@@ -5192,5 +5367,6 @@ share/themes/TraditionalOk/xfwm4/top-right-inactive.xpm
 @pkgdir share/locale/ast/LC_MESSAGES
 @pkgdir share/locale/as/LC_MESSAGES
 @pkgdir share/locale/ar/LC_MESSAGES
+@pkgdir share/locale/an/LC_MESSAGES
 @pkgdir share/locale/am/LC_MESSAGES
 @pkgdir share/locale/af/LC_MESSAGES
