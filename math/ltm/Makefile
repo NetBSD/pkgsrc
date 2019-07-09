@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2017/09/26 14:34:23 mspo Exp $
+# $NetBSD: Makefile,v 1.23 2019/07/09 11:27:16 nia Exp $
 
-DISTNAME=		ltm-1.0.1
-PKGREVISION=		1
+DISTNAME=		ltm-1.1.0
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_GITHUB:=libtom/}
 GITHUB_PROJECT=		libtommath
@@ -13,7 +12,7 @@ HOMEPAGE=		http://libtom.net/
 COMMENT=		Number theoretic multiple-precision integer library
 LICENSE=		public-domain
 
-WRKSRC=			${WRKDIR}/libtommath-1.0.1
+WRKSRC=			${WRKDIR}/libtommath-${PKGVERSION_NOREV}
 USE_LIBTOOL=		yes
 MAKE_FILE=		makefile.shared
 MAKE_ENV+=		LIBPATH=${PREFIX}/lib
