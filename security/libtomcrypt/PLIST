@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/03/10 10:02:34 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/07/09 11:20:58 nia Exp $
 include/tomcrypt.h
 include/tomcrypt_argchk.h
 include/tomcrypt_cfg.h
@@ -12,7 +12,5 @@ include/tomcrypt_misc.h
 include/tomcrypt_pk.h
 include/tomcrypt_pkcs.h
 include/tomcrypt_prng.h
-include/tomcrypt_test.h
 lib/libtomcrypt.la
-lib/libtomcrypt_prof.la
-share/doc/libtomcrypt/crypt.pdf
+lib/pkgconfig/libtomcrypt.pc
