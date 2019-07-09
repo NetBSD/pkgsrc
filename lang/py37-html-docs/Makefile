@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2019/03/26 21:29:20 leot Exp $
-#
+# $NetBSD: Makefile,v 1.5 2019/07/09 07:46:37 adam Exp $
 
-VERS=		3.7.3
+VERS=		3.7.4
 DISTNAME=	python-${VERS}-docs-html
 PKGNAME=	py37-html-docs-${VERS}
 CATEGORIES=	lang python
@@ -13,8 +12,6 @@ HOMEPAGE=	https://www.python.org/doc/
 COMMENT=	HTML Documentation for Python 3.7
 LICENSE=	python-software-foundation
 
-DIST_SUBDIR=	python
-
 USE_TOOLS+=	pax
 
 NO_CONFIGURE=	yes
@@ -25,6 +22,6 @@ HTMLDIR=	share/doc/python3.7
 INSTALLATION_DIRS=	${HTMLDIR}
 
 do-install:
-	cd ${WRKSRC} && pax -rw -pp . ${DESTDIR}${PREFIX}/${HTMLDIR}
+	cd ${WRKSRC} && ${PAX} -rw -pp . ${DESTDIR}${PREFIX}/${HTMLDIR}
 
 .include "../../mk/bsd.pkg.mk"
