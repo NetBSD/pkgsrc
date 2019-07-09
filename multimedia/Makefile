@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.270 2019/06/30 21:01:24 nia Exp $
+# $NetBSD: Makefile,v 1.271 2019/07/09 16:33:30 nia Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -140,6 +140,7 @@ SUBDIR+=	libva-driver-vdpau
 SUBDIR+=	libva-utils
 SUBDIR+=	libvdpau
 SUBDIR+=	libvpx
+SUBDIR+=	lightspark
 SUBDIR+=	lsdvd
 SUBDIR+=	mate-media
 SUBDIR+=	mediainfo

@@ -1,0 +1,42 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2019/07/09 16:33:30 nia Exp $
+
+Use /lib for "private libs" (liblightspark). This may be evil,
+but currently the private rpath isn't being added properly.
+
+Recognize LLVM 3.4.x.
+
+Install config file as example.
+
+--- CMakeLists.txt.orig	2018-06-02 09:25:36.000000000 +0000
++++ CMakeLists.txt
+@@ -171,10 +171,10 @@ IF(UNIX)
+    SET(DATADIR "share")
+    # Absolute path, because this path is embedded in the binary
+    SET(LSDATADIR "${CMAKE_INSTALL_PREFIX}/${DATADIR}/lightspark")
+-   SET(LIBDIR "lib${LIB_SUFFIX}")
++   SET(LIBDIR "lib")
+    #We need a absolute path here because we use it for rpath
+    #later on
+-   SET(PRIVATELIBDIR "${CMAKE_INSTALL_PREFIX}/${LIBDIR}/lightspark")
++   SET(PRIVATELIBDIR "${CMAKE_INSTALL_PREFIX}/${LIBDIR}")
+    SET(CMAKE_INSTALL_RPATH "${PRIVATELIBDIR}")
+ ELSE()
+   SET(ETCDIR ".")
+@@ -236,7 +236,7 @@ ENDIF(${LLVM_STRING_VERSION} VERSION_GRE
+ IF(${LLVM_STRING_VERSION} VERSION_GREATER 3.3)
+ 	ADD_DEFINITIONS(-DLLVM_34)
+ ENDIF(${LLVM_STRING_VERSION} VERSION_GREATER 3.3)
+-IF(${LLVM_STRING_VERSION} VERSION_GREATER 3.4)
++IF(${LLVM_STRING_VERSION} VERSION_GREATER 3.4 AND NOT ${LLVM_STRING_VERSION} VERSION_LESS 3.5)
+ 	ADD_DEFINITIONS(-DLLVM_35)
+ ENDIF(${LLVM_STRING_VERSION} VERSION_GREATER 3.4)
+ IF(NOT (${LLVM_STRING_VERSION} VERSION_LESS 3.6))
+@@ -536,7 +536,7 @@ GETTEXT_CREATE_TRANSLATIONS(i18n/lightsp
+ 
+ if(UNIX)
+ 	INSTALL(FILES etc/xdg/lightspark.conf
+-		      DESTINATION ${ETCDIR}/xdg/)
++		      DESTINATION ${CMAKE_INSTALL_PREFIX}/share/examples/lightspark/xdg)
+ ELSE()
+   INSTALL(FILES COPYING DESTINATION "." RENAME COPYING.txt)
+   INSTALL(FILES COPYING.LESSER DESTINATION "." RENAME COPYING.LESSER.txt)
