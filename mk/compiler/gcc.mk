@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.198 2018/11/12 14:22:58 jperkin Exp $
+# $NetBSD: gcc.mk,v 1.199 2019/07/09 15:45:46 riastradh Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -161,7 +161,11 @@ _CC:=	${_dir_}/${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
 .      endif
 .    endif
 .  endfor
+.  if empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+# Pass along _CC only if we're working on native packages -- don't pass
+# the cross-compiler on to submakes for building native packages.
 MAKEFLAGS+=	_CC=${_CC:Q}
+.  endif
 .endif
 
 .if !defined(_GCC_VERSION)
