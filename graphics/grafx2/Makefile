@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/07/17 21:32:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2019/07/09 15:38:23 nia Exp $
 
 DISTNAME=	grafx2-2.5.1960-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -12,7 +12,7 @@ COMMENT=	Ultimate 256-color bitmap paint program
 LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/grafx2/src
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
 
 SUBST_CLASSES+=			fix-paths
