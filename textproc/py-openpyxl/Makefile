@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/04/01 09:12:03 adam Exp $
+# $NetBSD: Makefile,v 1.24 2019/07/09 11:35:14 nia Exp $
 
 DISTNAME=	openpyxl-2.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/openpyxl/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://openpyxl.readthedocs.io/
+HOMEPAGE=	https://openpyxl.readthedocs.io/
 COMMENT=	Python library to read/write Excel 2007 xlsx/xlsm files
 LICENSE=	mit
 
