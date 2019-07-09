@@ -1,0 +1,74 @@
+$NetBSD: patch-src_Makefile,v 1.1 2019/07/09 18:23:15 schmonz Exp $
+
+Rename local getline() to avoid duplicating a system-provided definition.
+
+--- src/Makefile.orig	2004-12-12 16:57:17.000000000 +0000
++++ src/Makefile
+@@ -17,9 +17,9 @@ qconfirm-accept: load qconfirm-accept.o 
+ 
+ qconfirm-check: load qconfirm-check.o qconfirm_key.o sha1.o \
+ 	  qconfirm_conf_get.o qconfirm_inject.o qconfirm_address2id.o \
+-	  getline.o unix.a byte.a time.a
++	  qconfirm_getline.o unix.a byte.a time.a
+ 	./load qconfirm-check qconfirm_key.o sha1.o qconfirm_conf_get.o \
+-	  qconfirm_inject.o qconfirm_address2id.o getline.o unix.a byte.a \
++	  qconfirm_inject.o qconfirm_address2id.o qconfirm_getline.o unix.a byte.a \
+ 	  time.a
+ 
+ qconfirm-conf: load qconfirm-conf.o qconfirm_key.o sha1.o unix.a byte.a \
+@@ -27,16 +27,16 @@ qconfirm-conf: load qconfirm-conf.o qcon
+ 	./load qconfirm-conf qconfirm_key.o sha1.o unix.a byte.a time.a
+ 
+ qconfirm-control: load qconfirm-control.o qconfirm_inject.o qconfirm_key.o \
+-	  qconfirm_conf_get.o next_paragraph.o getline.o sha1.o unix.a \
++	  qconfirm_conf_get.o next_paragraph.o qconfirm_getline.o sha1.o unix.a \
+ 	  byte.a time.a
+ 	./load qconfirm-control qconfirm_inject.o qconfirm_key.o \
+-	  qconfirm_conf_get.o sha1.o next_paragraph.o getline.o unix.a \
++	  qconfirm_conf_get.o sha1.o next_paragraph.o qconfirm_getline.o unix.a \
+ 	  byte.a time.a
+ 
+ qconfirm-return: load qconfirm-return.o qconfirm_address2id.o \
+-	  next_paragraph.o getline.o unix.a byte.a
++	  next_paragraph.o qconfirm_getline.o unix.a byte.a
+ 	./load qconfirm-return qconfirm_address2id.o next_paragraph.o \
+-	  getline.o unix.a byte.a
++	  qconfirm_getline.o unix.a byte.a
+ 
+ qconfirm-cdb-check: load qconfirm-cdb-check.o qconfirm_address2id.o \
+ 	  qconfirm_conf_get.o cdb.a unix.a byte.a time.a
+@@ -48,9 +48,9 @@ qconfirm-cdb-update: load qconfirm-cdb-u
+ 	./load qconfirm-cdb-update qconfirm_conf_get.o cdb.a unix.a byte.a \
+ 	  time.a
+ 
+-qconfirm-check-mid: load qconfirm-check-mid.o getline.o \
++qconfirm-check-mid: load qconfirm-check-mid.o qconfirm_getline.o \
+ 	  qconfirm_address2id.o qconfirm_conf_get.o unix.a byte.a
+-	./load qconfirm-check-mid getline.o qconfirm_address2id.o \
++	./load qconfirm-check-mid qconfirm_getline.o qconfirm_address2id.o \
+ 	  qconfirm_conf_get.o unix.a byte.a
+ 
+ qconfirm-inject: load qconfirm-inject.o qconfirm_conf_get.o qconfirm_key.o \
+@@ -59,9 +59,9 @@ qconfirm-inject: load qconfirm-inject.o 
+ 	  unix.a byte.a time.a
+ 
+ qconfirm-notice: load qconfirm-notice.o qconfirm_conf_get.o qconfirm_key.o \
+-	  sha1.o qconfirm_inject.o getline.o unix.a byte.a time.a
++	  sha1.o qconfirm_inject.o qconfirm_getline.o unix.a byte.a time.a
+ 	./load qconfirm-notice qconfirm_conf_get.o qconfirm_key.o sha1.o \
+-	  qconfirm_inject.o getline.o unix.a byte.a time.a
++	  qconfirm_inject.o qconfirm_getline.o unix.a byte.a time.a
+ 
+ check-qconfirm-cdb: load check-qconfirm-cdb.o uint32_unpack.o unix.a byte.a
+ 	./load check-qconfirm-cdb uint32_unpack.o unix.a byte.a
+@@ -121,8 +121,8 @@ qconfirm-check-mid.o: compile qconfirm-c
+ qconfirm_conf_get.o: compile qconfirm_conf_get.c
+ 	./compile qconfirm_conf_get.c
+ 
+-getline.o: compile getline.c getline.h
+-	./compile getline.c
++qconfirm_getline.o: compile qconfirm_getline.c qconfirm_getline.h
++	./compile qconfirm_getline.c
+ 
+ next_paragraph.o: compile next_paragraph.c next_paragraph.h
+ 	./compile next_paragraph.c
