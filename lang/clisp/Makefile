@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.111 2019/05/04 19:38:08 rillig Exp $
+# $NetBSD: Makefile,v 1.112 2019/07/09 22:55:41 he Exp $
 
 DISTNAME=		clisp-2.49
-PKGREVISION=		24
+PKGREVISION=		25
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=clisp/}
 #EXTRACT_SUFX=		.tar.bz2
@@ -47,6 +47,16 @@ TEST_TARGET=		check mod-check
 
 .if ${MACHINE_ARCH:Malpha} || ${MACHINE_ARCH:Mamd64} || ${MACHINE_ARCH:Mx86_64} || ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	--disable-mmap
+.endif
+
+# Try to make the built-in src/malloc/gmalloc.c work with modern GCC
+.if ${OPSYS} == "NetBSD"
+CFLAGS+=	-fno-builtin-calloc
+CFLAGS+=	-fno-builtin-malloc
+CFLAGS+=	-fno-builtin-memalign
+CFLAGS+=	-fno-builtin-realloc
+CFLAGS+=	-fno-builtin-valloc
+CFLAGS+=	-fno-builtin-free
 .endif
 
 .if $(MACHINE_ARCH:Mi386)
