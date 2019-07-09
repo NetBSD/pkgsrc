@@ -1,11 +1,7 @@
-$NetBSD: distinfo,v 1.7 2017/07/15 17:23:03 wiz Exp $
+$NetBSD: distinfo,v 1.8 2019/07/09 11:20:58 nia Exp $
 
-SHA1 (crypt-1.17.tar.bz2) = 9c746822c84e4276e432b64964f94d1d5ddd13ad
-RMD160 (crypt-1.17.tar.bz2) = 742d72d82fea2e6a9865d8c682c10cbaba69ea2f
-SHA512 (crypt-1.17.tar.bz2) = 9335df5ae0a2c8e33e8f03ced0cfb0a8d1ac4bccd007b74818228c3b8b232446b4425356f304a08320b75542a537a46b305b92c3011dee76dfd636497bf57af2
-Size (crypt-1.17.tar.bz2) = 1599215 bytes
-SHA1 (patch-aa) = a2385cf0543a19b1555d4370a10c012c5141b48a
-SHA1 (patch-ab) = 9ccfd1f43607c4b781f31f2ddd53500db5c94efd
-SHA1 (patch-ac) = f3beb2d6ffc2db483891b61d1fe53db38434fe38
-SHA1 (patch-src_headers_tomcrypt__macros.h) = 4aa1e0773a11c32fca83e7de82e12d44fdbb8202
-SHA1 (patch-src_pk_rsa_rsa__verify__hash.c) = 0bc2467fa3fc0a372baafbfea4c7b328422f8adb
+SHA1 (crypt-1.18.2.tar.xz) = 55bd8c2015f39bba73aca13b5e4e37f44a292b3f
+RMD160 (crypt-1.18.2.tar.xz) = 484fa6695e84448270d45851123249276d8add8d
+SHA512 (crypt-1.18.2.tar.xz) = f6117a12a42b07f8de4a8aedbccf6ff4ee94b4b81cb7263af99627c32eae646ca8ead7d3063737918db4aa118673001fcf2cfa8e4ca8b528fb00045fda7cc893
+Size (crypt-1.18.2.tar.xz) = 2638064 bytes
+SHA1 (patch-ab) = 8c3750217ec90663a90f2b871e8eb8a940fe2fb0
