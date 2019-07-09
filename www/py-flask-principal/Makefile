@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/06/08 17:43:46 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/07/09 23:02:29 nia Exp $
 
 DISTNAME=	Flask-Principal-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -6,7 +6,7 @@ CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Principal/}
 
 MAINTAINER=	kleink@NetBSD.org
-HOMEPAGE=	http://pythonhosted.org/Flask-Principal/
+HOMEPAGE=	https://pythonhosted.org/Flask-Principal/
 COMMENT=	Identity management for Flask
 LICENSE=	mit
 

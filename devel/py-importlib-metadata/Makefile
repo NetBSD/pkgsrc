@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/06/05 10:17:44 adam Exp $
+# $NetBSD: Makefile,v 1.3 2019/07/09 23:02:28 nia Exp $
 
 DISTNAME=	importlib_metadata-0.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/importlib-metadata/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://importlib-metadata.readthedocs.io/
+HOMEPAGE=	https://importlib-metadata.readthedocs.io/
 COMMENT=	Read metadata from Python packages
 LICENSE=	apache-2.0
 

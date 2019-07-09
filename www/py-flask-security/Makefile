@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/12/27 16:04:54 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2019/07/09 23:02:29 nia Exp $
 
 DISTNAME=	Flask-Security-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -7,7 +7,7 @@ CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Security/}
 
 MAINTAINER=	kleink@NetBSD.org
-HOMEPAGE=	http://pythonhosted.org/Flask-Security/
+HOMEPAGE=	https://pythonhosted.org/Flask-Security/
 COMMENT=	Simple security for Flask apps
 LICENSE=	mit
 
