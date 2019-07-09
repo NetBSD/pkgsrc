@@ -1,0 +1,12 @@
+qconfirm is an implementation of a delivery confirmation process for a
+mailing list or mail address. It is invoked by qmail-local through a
+dot-qmail file, and can reduce the amount of junk mail hitting a mailbox
+or the mailboxes of mailing list subscribers. qconfirm performs this
+delivery confirmation process either sender based or message based.
+
+When used for a public mail address, not a mailing list, qconfirm is
+capable of detecting follow-ups on mail messages originated from this
+mail address, and doesn't request delivery confirmation is this case.
+qconfirm also is able to identify delivery confirmation requests from
+recipients of mail messages, and automatically confirms the delivery
+if desired.

@@ -1,0 +1,15 @@
+$NetBSD: patch-src_TARGETS,v 1.1 2019/07/09 18:23:15 schmonz Exp $
+
+Rename local getline() to avoid duplicating a system-provided definition.
+
+--- src/TARGETS.orig	2004-12-12 16:57:17.000000000 +0000
++++ src/TARGETS
+@@ -39,7 +39,7 @@ qconfirm-inject.local
+ qconfirm-notice.local
+ qconfirm-return.local
+ qconfirm.local
+-getline.o
++qconfirm_getline.o
+ next_paragraph.o
+ sha1.o
+ sysdeps
