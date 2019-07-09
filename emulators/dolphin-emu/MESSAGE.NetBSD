@@ -1,10 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.1 2019/01/01 17:19:58 nia Exp $
+$NetBSD: MESSAGE.NetBSD,v 1.2 2019/07/09 18:50:40 nia Exp $
 
 Dolphin has several audio backend options in its audio settings menu.
 
 * AOSound seems to stutter badly on NetBSD.
-* OpenAL seems slightly better, after the "latency" is increased.
 * ALSA seems best.
 
 Install the audio/alsa-plugins-oss package, then add this to ~/.asoundrc:
