@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2017/05/16 21:55:50 snj Exp $
+# $NetBSD: Makefile,v 1.8 2019/07/09 11:20:58 nia Exp $
 
-DISTNAME=	crypt-1.17
+DISTNAME=	crypt-1.18.2
 PKGNAME=	libtom${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	security
-MASTER_SITES=	http://libtom.org/files/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libtom/}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	https://github.com/libtom/libtomcrypt
@@ -16,11 +16,12 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 MAKE_FILE=	makefile.shared
-MAKE_ENV+=	CFLAGS_OPTS="-DUSE_LTM -DLTM_DESC"
-BUILD_TARGET=	default
 
-AUTO_MKDIRS=	yes
+# This disables funrolling the loops.
+MAKE_FLAGS+=	IGNORE_SPEED=1
+MAKE_FLAGS+=	EXTRALIBS="-ltommath"
+
+CPPFLAGS+=	-DUSE_LTM -DLTM_DESC
 
 .include "../../math/ltm/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
