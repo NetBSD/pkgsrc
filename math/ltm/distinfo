@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2017/09/26 14:34:23 mspo Exp $
+$NetBSD: distinfo,v 1.10 2019/07/09 11:27:16 nia Exp $
 
-SHA1 (ltm-1.0.1.tar.xz) = f24ee181d0edd5383afa39728f138354632e2cf3
-RMD160 (ltm-1.0.1.tar.xz) = 34cc4e294f1593a03ec959e386260cf1c459a151
-SHA512 (ltm-1.0.1.tar.xz) = f98f7b0f91268e898803478fd52f578f476d378d096a25e48fa2e291159dc89bd1a6dc7d8c5c2254df840c731e5d009ec9728b72190318b6d1ba2916f5c66fb6
-Size (ltm-1.0.1.tar.xz) = 2210120 bytes
+SHA1 (ltm-1.1.0.tar.xz) = ce7a27614ff4c25cc281e43d8607eef0154ba833
+RMD160 (ltm-1.1.0.tar.xz) = 0ec39b8089a7fccf7b10c064be9e440a37aa1ad7
+SHA512 (ltm-1.1.0.tar.xz) = 6d1b8b09d5b975a2b84ef6ab9cb1cc63db2f0503a906e499cb9d7eaba3f487be6e7f69bf692b188f888418c61ea563aa7e2411638d8979eac426b3d603ad1b91
+Size (ltm-1.1.0.tar.xz) = 2125456 bytes
