@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.36 2018/07/25 01:16:04 manu Exp $
+$NetBSD: distinfo,v 1.37 2019/07/09 11:55:56 jperkin Exp $
 
 SHA1 (cyrus-sasl-2.1.27-rc7.tar.gz) = d4b72782975be980cc46ac9ccf176b8307bfcf67
 RMD160 (cyrus-sasl-2.1.27-rc7.tar.gz) = 6679c7b887f73da50a314dba97f676848d067684
@@ -12,4 +12,3 @@ SHA1 (patch-common_crypto-compat) = ad8575c62648aba83983172ec8fef08d2c9f537e
 SHA1 (patch-configure) = 1afa4777f2cc2a24bb526fab9fb6d9265677fb9f
 SHA1 (patch-plugins_otp.c) = 1dd8763d5b14c2f2462349ce5f73353ae70313fa
 SHA1 (patch-saslauthd_Makefile.in) = 397bc893975ff4d8b0067dae571381f06486493d
-SHA1 (patch-saslauthd_ipc__doors.c) = 2470ed0f04a19f487811dec405f68ce91d4a4cd0
