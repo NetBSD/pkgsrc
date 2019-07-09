@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2019/04/11 07:47:16 adam Exp $
+# $NetBSD: Makefile,v 1.46 2019/07/09 11:29:30 nia Exp $
 
 DISTNAME=	pytz-2019.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytz/}
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://pythonhosted.org/pytz/
+HOMEPAGE=	https://pythonhosted.org/pytz/
 COMMENT=	World timezone definitions, modern and historical
 LICENSE=	mit
 

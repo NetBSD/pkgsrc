@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/06/08 11:04:29 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2019/07/09 11:29:30 nia Exp $
 
 DISTNAME=	gdsCAD-0.4.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=hohlraum/}
 GITHUB_PROJECT=	gdsCAD
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pythonhosted.org/gdsCAD/
+HOMEPAGE=	https://pythonhosted.org/gdsCAD/
 COMMENT=	Package for creating, reading, and manipulating GDSII layout files
 LICENSE=	gnu-gpl-v3
 
