@@ -1,0 +1,39 @@
+$NetBSD: patch-src_Makefile.0,v 1.1 2019/07/09 15:46:42 riastradh Exp $
+
+Compile recommend with CC_FOR_BUILD since it is executed during build.
+
+--- src/Makefile.0.orig	2001-06-29 02:20:35.000000000 +0000
++++ src/Makefile.0
+@@ -156,11 +156,15 @@ setid.$(O): setid.c
+ 	@$(CC) -c $(CFLAGS) $*.c
+ 
+ recommend.$(O): recommend.c
+-	@$(CC) -c $(CFLAGS) $*.c
++	@$(CC_FOR_BUILD) -c $(CFLAGS) $*.c
+ 
+ .c.$(O):
+ 	$(CC) -c $(CFLAGS) $<
+ 
++.SUFFIXES: .host-$(O)
++.c.host-$(O):
++	$(CC_FOR_BUILD) -c -o $@ $(CFLAGS) $<
++
+ gethome: gethome.$(O) setid
+ 	@$(CC) $(CFLAGS) $@.$(O) -o $@ $(LDFLAGS)
+ 
+@@ -170,12 +174,12 @@ getparams:
+ setid: setid.$(O)
+ 	@$(CC) $(CFLAGS) $@.$(O) -o $@ $(LDFLAGS)
+ 
+-recommend: recommend.$(O) sublib.$(O)
+-	@$(CC) $(CFLAGS) $@.$(O) sublib.$(O) -o $@ $(LDFLAGS)
++recommend: recommend.$(O) sublib.host-$(O)
++	@$(CC_FOR_BUILD) $(CFLAGS) $@.$(O) sublib.host-$(O) -o $@ $(LDFLAGS)
+ 
+ ../man/man.sed: manconf.c ../autoconf.h ../config.h includes.h procmail.h
+ ../man/man.sed: ../patchlevel.h
+-	@$(CC) $(CFLAGS) "-DBINDIR=\"$(VISIBLE_BINDIR)\"" -o _autotst \
++	@$(CC_FOR_BUILD) $(CFLAGS) "-DBINDIR=\"$(VISIBLE_BINDIR)\"" -o _autotst \
+  manconf.c $(LDFLAGS)
+ 	@./_autotst $@
+ 	@echo Housekeeping file >$@
