@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2847 2019/07/09 17:38:55 tsutsui Exp $
+$NetBSD: CHANGES-2019,v 1.2848 2019/07/09 18:24:08 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4734,3 +4734,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/spidermonkey52 to 52.7.4nb10 [maya 2019-07-09]
 	Added multimedia/lightspark version 0.8.1 [nia 2019-07-09]
 	Updated multimedia/adobe-flash-player to 32.0.0.223 [tsutsui 2019-07-09]
+	Added mail/qconfirm version 0.14.3 [schmonz 2019-07-09]
