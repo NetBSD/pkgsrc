@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2848 2019/07/09 18:24:08 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.2849 2019/07/09 22:56:31 he Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4735,3 +4735,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added multimedia/lightspark version 0.8.1 [nia 2019-07-09]
 	Updated multimedia/adobe-flash-player to 32.0.0.223 [tsutsui 2019-07-09]
 	Added mail/qconfirm version 0.14.3 [schmonz 2019-07-09]
+	Updated lang/clisp to 2.49nb25 [he 2019-07-09]
