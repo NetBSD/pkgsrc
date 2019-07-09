@@ -1,6 +1,7 @@
-$NetBSD: patch-src_mongo_platform_random.cpp,v 1.1 2019/06/28 16:30:56 gdt Exp $
+$NetBSD: patch-src_mongo_platform_random.cpp,v 1.2 2019/07/09 07:28:30 adam Exp $
 
 Add NetBSD support.
+
 --- src/mongo/platform/random.cpp.orig	2016-01-05 18:31:44.000000000 +0000
 +++ src/mongo/platform/random.cpp
 @@ -145,7 +145,7 @@ SecureRandom* SecureRandom::create() {

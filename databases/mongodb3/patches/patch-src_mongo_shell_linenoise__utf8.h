@@ -1,6 +1,7 @@
-$NetBSD: patch-src_mongo_shell_linenoise__utf8.h,v 1.1 2019/06/28 16:30:56 gdt Exp $
+$NetBSD: patch-src_mongo_shell_linenoise__utf8.h,v 1.2 2019/07/09 07:28:30 adam Exp $
 
 Use Boost swap instead of std. Fixes build on SunOS.
+
 --- src/mongo/shell/linenoise_utf8.h.orig	2016-01-05 18:31:44.000000000 +0000
 +++ src/mongo/shell/linenoise_utf8.h
 @@ -27,6 +27,7 @@

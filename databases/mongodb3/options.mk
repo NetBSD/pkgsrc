@@ -1,10 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2019/06/28 16:30:56 gdt Exp $
+# $NetBSD: options.mk,v 1.2 2019/07/09 07:28:30 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mongodb
 PKG_SUPPORTED_OPTIONS=	ssl wiredtiger
-PKG_SUGGESTED_OPTIONS=	#
 
-.if !empty(MACHINE_ARCH:Mx86_64)
+.if ${MACHINE_ARCH} == "x86_64"
 PKG_SUGGESTED_OPTIONS+=	wiredtiger
 .endif
 
@@ -19,7 +18,7 @@ SCONS_ARGS+=		--ssl
 # MongoDB doesn't provide guarantees for non-bundled WiredTiger:
 # https://groups.google.com/forum/#!msg/mongodb-dev/31FQSo4KVCI/Fx-WtJ9fzU4J
 .if !empty(PKG_OPTIONS:Mwiredtiger)
-.  if empty(MACHINE_ARCH:Mx86_64)
+.  if ${MACHINE_ARCH} != "x86_64"
 PKG_FAIL_REASON+=	"WiredTiger is not supported on 32-bit platforms"
 .  endif
 SCONS_ARGS+=		--wiredtiger=on
