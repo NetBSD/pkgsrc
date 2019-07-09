@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/07/09 20:23:07 nia Exp $
+# $NetBSD: Makefile,v 1.5 2019/07/09 20:36:21 nia Exp $
 
 DISTNAME=	uncrustify-uncrustify-0.69.0
 PKGNAME=	${DISTNAME:S/uncrustify-//}
@@ -19,7 +19,7 @@ OBJDIR=			${WRKSRC}/build
 CONFIGURE_DIRS=		${OBJDIR}
 CMAKE_ARG_PATH=		${WRKSRC}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37
+PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_FOR_BUILD_ONLY=	yes
 
 pre-configure:
