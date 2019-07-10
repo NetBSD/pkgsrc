@@ -1,0 +1,9 @@
+# $NetBSD: xorg.libvdpau,v 1.1 2019/07/10 22:36:49 rjs Exp $
+#
+include/vdpau/vdpau.h
+include/vdpau/vdpau_x11.h
+lib/libvdpau.a
+lib/libvdpau.so
+lib/libvdpau.so.1
+lib/libvdpau.so.1.0
+lib/pkgconfig/vdpau.pc
