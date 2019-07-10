@@ -1,4 +1,4 @@
-# $NetBSD: features-vars.mk,v 1.25 2019/07/08 22:09:22 sevan Exp $
+# $NetBSD: features-vars.mk,v 1.26 2019/07/10 17:15:27 sevan Exp $
 #
 # The platforms that are supported by pkgsrc differ in the amount of
 # functions they provide in the C library (libc). Functions that are
@@ -183,10 +183,6 @@ MISSING_FEATURES+=	${_feature_}
 .    endif
 .  endif
 .endfor
-
-.if !empty(USE_FEATURES:Mstrnlen)
-MISSING_FEATURES+= 	strnlen
-.endif
 
 .for _feature_ in utimes
 .  if !empty(USE_FEATURES:M${_feature_})
