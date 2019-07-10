@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2019/04/25 07:32:44 maya Exp $
+# $NetBSD: Makefile,v 1.50 2019/07/10 10:51:29 markd Exp $
 
 DISTNAME=	dconf-0.30.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dconf/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -19,15 +19,6 @@ USE_LANGUAGES=	c99
 USE_TOOLS+=	pkg-config gmake
 
 REPLACE_PYTHON+=	*.py
-
-SUBST_CLASSES+=		sysdir
-SUBST_MESSAGE.sysdir=	Fixes hard-coded dconf database directory name
-SUBST_STAGE.sysdir=	post-configure
-SUBST_FILES.sysdir+=	engine/dconf-engine-source-system.c
-SUBST_FILES.sysdir+=	engine/dconf-engine-profile.c
-SUBST_FILES.sysdir+=	tests/engine.c
-SUBST_FILES.sysdir+=	bin/dconf-update.vala
-SUBST_SED.sysdir=	-e s,/etc,${PKG_SYSCONFDIR},g
 
 # gtk-doc wants to run dconf-scan, but that does not find its library libdconf.so.1
 # https://bugzilla.gnome.org/show_bug.cgi?id=795348
