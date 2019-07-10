@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/03/15 09:05:37 he Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/07/10 08:41:26 he Exp $
 bin/protoc-gen-go
 gopkg/pkg/${GO_PLATFORM}/github.com/golang/protobuf/descriptor.a
 gopkg/pkg/${GO_PLATFORM}/github.com/golang/protobuf/jsonpb.a
@@ -94,6 +94,8 @@ gopkg/src/github.com/golang/protobuf/protoc-gen-go/testdata/extension_user/exten
 gopkg/src/github.com/golang/protobuf/protoc-gen-go/testdata/extension_user/extension_user.proto
 gopkg/src/github.com/golang/protobuf/protoc-gen-go/testdata/grpc/grpc.pb.go
 gopkg/src/github.com/golang/protobuf/protoc-gen-go/testdata/grpc/grpc.proto
+gopkg/src/github.com/golang/protobuf/protoc-gen-go/testdata/grpc/grpc_empty.pb.go
+gopkg/src/github.com/golang/protobuf/protoc-gen-go/testdata/grpc/grpc_empty.proto
 gopkg/src/github.com/golang/protobuf/protoc-gen-go/testdata/import_public/a.pb.go
 gopkg/src/github.com/golang/protobuf/protoc-gen-go/testdata/import_public/a.proto
 gopkg/src/github.com/golang/protobuf/protoc-gen-go/testdata/import_public/b.pb.go
