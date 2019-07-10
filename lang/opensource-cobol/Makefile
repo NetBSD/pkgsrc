@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/01/05 15:46:06 roy Exp $
+# $NetBSD: Makefile,v 1.9 2019/07/10 17:53:38 sevan Exp $
 
 DISTNAME=	opensource-cobol-1.5.1J-utf8
 PKGNAME=	${DISTNAME:S/-utf8//}
@@ -17,6 +17,7 @@ BDB_ACCEPTED=		db4
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
+USE_FEATURES+=		strnlen
 
 CONFIGURE_ARGS+=	--enable-utf8
 
