@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.94 2019/05/14 10:49:37 leot Exp $
+# $NetBSD: Darwin.mk,v 1.95 2019/07/10 17:15:27 sevan Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -213,4 +213,10 @@ CONFIGURE_ENV+=		gl_cv_func_getcwd_abort_bug=no
      !empty(OS_VERSION:M1[4-9].*)) && \
     exists(/bin/ksh)
 WRAPPER_BIN_SH?=	/bin/ksh
+.endif
+
+# strnlen(3) wasn't included until Lion, pull it in from libnbcompat on prior
+# releases.
+.if ${OS_VERSION:R} <= 11
+_OPSYS_MISSING_FEATURES+= 	strnlen
 .endif
