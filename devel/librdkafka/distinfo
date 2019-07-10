@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.6 2018/04/05 09:01:16 fhajny Exp $
+$NetBSD: distinfo,v 1.7 2019/07/10 01:31:21 minskim Exp $
 
-SHA1 (librdkafka-0.11.4.tar.gz) = 00e5b9c610697a0f32910fd1ef19e9b2c684824e
-RMD160 (librdkafka-0.11.4.tar.gz) = ce9a8261a874183b61b56df3aeecd163567f679f
-SHA512 (librdkafka-0.11.4.tar.gz) = 6b34e7c476d328a2f8e8321f6ddcaeaf43730284bb3aaddac81c3cd9a1fa5d7f7ef7481f1093b36d89edde7b766da6cd27a9eb9a635b12b640e8a46a269bafc8
-Size (librdkafka-0.11.4.tar.gz) = 1900117 bytes
+SHA1 (librdkafka-1.0.1.tar.gz) = 95b78a6607addc36b1cd00ff034478a9502c7217
+RMD160 (librdkafka-1.0.1.tar.gz) = 66af0e1f29b67074e1f07fa72bc248e862a58c85
+SHA512 (librdkafka-1.0.1.tar.gz) = 094599e974236814c03e688eaa5e39d817cca110ff691501826268c45653fcd6b21b60e741140a1f7ffccd49902247f08fcec82475be2e9f85feaa4340b32d4c
+Size (librdkafka-1.0.1.tar.gz) = 2466259 bytes
 SHA1 (patch-Makefile) = 31731833723acada1c53d01a632f8ba726788a5a
 SHA1 (patch-src_rd.h) = 698000dcad93ccaa07e2462e0932967272b2a915
 SHA1 (patch-src_rdendian.h) = 75cb69e2cbdbcad6a82a943539d5707ff1df7d6d
 SHA1 (patch-src_rdposix.h) = 72ac80d3ac57a87b3c289b3c7a8698234af9984c
-SHA1 (patch-src_snappy__compat.h) = c728f0e575ccf944d6990aa64cc4ccd926e4e5d4
+SHA1 (patch-src_snappy__compat.h) = 7fdc6dfcc292da4b4c67b4b79234d8af0561fa6f
