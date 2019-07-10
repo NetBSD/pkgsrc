@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2849 2019/07/09 22:56:31 he Exp $
+$NetBSD: CHANGES-2019,v 1.2850 2019/07/10 01:32:28 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4736,3 +4736,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated multimedia/adobe-flash-player to 32.0.0.223 [tsutsui 2019-07-09]
 	Added mail/qconfirm version 0.14.3 [schmonz 2019-07-09]
 	Updated lang/clisp to 2.49nb25 [he 2019-07-09]
+	Updated devel/librdkafka to 1.0.1 [minskim 2019-07-10]
