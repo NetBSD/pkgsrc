@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2019/04/03 00:32:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.76 2019/07/10 10:38:18 nia Exp $
 
 PKGNAME=		racket-6.12
 PKGREVISION=		4
@@ -17,7 +17,7 @@ MASTER_SITES=		${MASTER_SITES_PLT}
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=	asau@inbox.ru
-HOMEPAGE=	http://racket-lang.org/
+HOMEPAGE=	https://racket-lang.org/
 COMMENT=	Scheme-based dialect of Lisp
 LICENSE=	gnu-lgpl-v2
 

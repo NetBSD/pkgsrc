@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2018/09/30 22:31:59 wiedi Exp $
+# $NetBSD: Makefile,v 1.35 2019/07/10 10:38:18 nia Exp $
 
 PKGNAME=		racket-minimal-6.12
 DISTNAME=		${PKGNAME_NOREV}-src
@@ -14,7 +14,7 @@ MASTER_SITES=		${MASTER_SITES_PLT}
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=	asau@inbox.ru
-HOMEPAGE=	http://racket-lang.org/
+HOMEPAGE=	https://racket-lang.org/
 COMMENT=	Scheme-based dialect of Lisp
 LICENSE=	gnu-lgpl-v2
 
