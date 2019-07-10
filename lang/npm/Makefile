@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/04/25 07:33:03 maya Exp $
+# $NetBSD: Makefile,v 1.22.2.1 2019/07/10 15:15:40 bsiegert Exp $
 
 DISTNAME=	cli-6.9.0
 PKGNAME=	${DISTNAME:S/cli/npm/}
@@ -20,7 +20,7 @@ SITES.${MARKED}.tar.gz=	-https://github.com/markedjs/marked/archive/v${MARKED:S/
 
 DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
 
-USE_TOOLS+=	gmake perl
+USE_TOOLS+=	bash gmake perl
 
 PYTHON_VERSIONS_ACCEPTED=	27 # required by gyp scripts included
 
