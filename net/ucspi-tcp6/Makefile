@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/07/10 11:23:34 schmonz Exp $
+# $NetBSD: Makefile,v 1.16 2019/07/10 12:59:54 schmonz Exp $
 
 DISTNAME=		ucspi-tcp6-1.10.6
 PKGREVISION=		2
@@ -17,9 +17,6 @@ WRKSRC=			${WRKDIR}/net/${PKGBASE}/${DISTNAME}
 DJB_SLASHPACKAGE=	yes
 DJB_RESTRICTED=		no
 DJB_CONFIG_DIR=		${WRKSRC}
-
-CPPFLAGS+=		-I${PREFIX}/include/qlibs
-LDFLAGS+=		-L${PREFIX}/lib/qlibs
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
