@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2017/08/16 20:21:03 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/07/10 20:01:57 nia Exp $
 #
 
 DISTNAME=	libmad-0.15.1b
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mad/}
 
