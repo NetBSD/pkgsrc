@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/06/17 16:33:35 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2019/07/10 17:53:38 sevan Exp $
 
 DISTNAME=	fluent-bit-0.13.2
 CATEGORIES=	sysutils
@@ -13,6 +13,7 @@ LICENSE=	apache-2.0
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
+USE_FEATURES+=	strnlen
 
 CMAKE_ARGS+=	-DCMAKE_INSTALL_SYSCONFDIR=${PKG_SYSCONFDIR}
 CMAKE_ARGS+=	-DEGDIR:PATH=${EGDIR}
