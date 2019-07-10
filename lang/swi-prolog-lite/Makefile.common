@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2019/03/10 21:46:12 leot Exp $
+# $NetBSD: Makefile.common,v 1.18 2019/07/10 10:32:05 nia Exp $
 #
 # used by lang/swi-prolog/Makefile
 # used by lang/swi-prolog-packages/Makefile
@@ -7,10 +7,10 @@
 SWIPLVERS=		8.0.2
 DISTNAME=		swipl-${SWIPLVERS}
 CATEGORIES=		lang
-MASTER_SITES=		http://www.swi-prolog.org/download/stable/src/
-MASTER_SITES+=		http://www.swi-prolog.org/download/devel/src/
+MASTER_SITES=		https://www.swi-prolog.org/download/stable/src/
+MASTER_SITES+=		https://www.swi-prolog.org/download/devel/src/
 
-HOMEPAGE=		http://www.swi-prolog.org/
+HOMEPAGE=		https://www.swi-prolog.org/
 LICENSE=		gnu-lgpl-v2.1
 
 DIST_SUBDIR=		swi-prolog
