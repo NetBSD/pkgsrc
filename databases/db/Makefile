@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2014/10/09 14:06:05 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2019/07/10 10:37:13 nia Exp $
 
 DISTNAME=	db-2.7.7
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	databases
 MASTER_SITES=	http://download.oracle.com/berkeley-db/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.oracle.com/database/berkeley-db.html
+HOMEPAGE=	https://www.oracle.com/database/berkeley-db.html
 COMMENT=	Sleepycat Software's Berkeley DB version 2
 LICENSE=	sleepycat-license # minus ASM stanza
 
