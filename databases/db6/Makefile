@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/01/26 11:03:17 adam Exp $
+# $NetBSD: Makefile,v 1.5 2019/07/10 10:37:13 nia Exp $
 #
 # NOTE:
 # When updating this package, a change in the minor (6.n -> 6.(n+1))
@@ -12,7 +12,7 @@ CATEGORIES=	databases
 MASTER_SITES=	http://download.oracle.com/berkeley-db/
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://www.oracle.com/technetwork/database/database-technologies/berkeleydb/overview/index.html
+HOMEPAGE=	https://www.oracle.com/technetwork/database/database-technologies/berkeleydb/overview/index.html
 COMMENT=	Berkeley DB version 6 from Oracle
 LICENSE=	gnu-agpl-v3
 
