@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2019/07/10 11:20:02 schmonz Exp $
+
+Link needed symbols into shared libdnsresolv.
+
+--- Makefile.orig	2018-12-14 13:09:29.000000000 +0000
++++ Makefile
+@@ -40,7 +40,7 @@ setup:
+ shared: $(COMPILE) $(SCHARDLIB) $(OBJS) ./dnsstub/$(OBJS)
+ 	@echo Building shared qlibs ...
+ 	$(SHAREDLIB) $(OBJS) -o libqlibs.so 
+-	$(SHAREDLIB) ./dnsstub/$(OBJS) -o libdnsresolv.so
++	$(SHAREDLIB) $(OBJS) ./dnsstub/$(OBJS) -o libdnsresolv.so
+  
+ qlibs.a: obj socket.a 
+ 	$(MAKELIB) qlibs.a *.o 
