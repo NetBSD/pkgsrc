@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2019/05/27 11:19:22 tnn Exp $
+# $NetBSD: Makefile,v 1.80 2019/07/10 10:32:56 nia Exp $
 
 DISTNAME=	openttd-1.9.1-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -7,7 +7,7 @@ MASTER_SITES=	https://proxy.binaries.openttd.org/openttd-releases/${PKGVERSION_N
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.openttd.org/
+HOMEPAGE=	https://www.openttd.org/
 COMMENT=	Open source clone of Transport Tycoon Deluxe
 LICENSE=	gnu-gpl-v2
 
