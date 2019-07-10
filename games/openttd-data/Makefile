@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/04/25 15:56:29 adam Exp $
+# $NetBSD: Makefile,v 1.9 2019/07/10 10:32:56 nia Exp $
 
 GFXVER=		0.5.5
 PKGNAME=	openttd-data-${GFXVER}
@@ -13,7 +13,7 @@ SITES.openmsx-0.3.1-all.zip=		${MASTER_SITES:Q}/openmsx/0.3.1/
 SITES.opensfx-0.2.3-all.zip=		${MASTER_SITES:Q}/opensfx/0.2.3/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.openttd.org/
+HOMEPAGE=	https://www.openttd.org/
 COMMENT=	Free data files for OpenTTD
 LICENSE=	gnu-gpl-v2
 
