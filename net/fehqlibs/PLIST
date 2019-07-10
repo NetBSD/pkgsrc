@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/10/07 12:53:54 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/07/10 11:20:02 schmonz Exp $
 include/qlibs/alloc.h
 include/qlibs/base64.h
 include/qlibs/buffer.h
@@ -56,7 +56,9 @@ lib/qlibs/getln.a
 lib/qlibs/getopt.a
 lib/qlibs/ip.a
 lib/qlibs/libdnsresolv.a
+lib/qlibs/libdnsresolv.so
 lib/qlibs/libqlibs.a
+lib/qlibs/libqlibs.so
 lib/qlibs/lock.a
 lib/qlibs/logmsg.a
 lib/qlibs/ndelay.a
