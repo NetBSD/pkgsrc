@@ -1,0 +1,15 @@
+# $NetBSD: xorg.libepoxy,v 1.1 2019/07/10 22:36:49 rjs Exp $
+#
+include/epoxy/common.h
+include/epoxy/egl.h
+include/epoxy/egl_generated.h
+include/epoxy/gl.h
+include/epoxy/gl_generated.h
+include/epoxy/glx.h
+include/epoxy/glx_generated.h
+lib/libepoxy.a
+lib/libepoxy.so
+lib/libepoxy.so.0
+lib/libepoxy.so.0.0
+lib/libepoxy.so.0.1
+lib/pkgconfig/epoxy.pc
