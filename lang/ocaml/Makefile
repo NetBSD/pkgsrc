@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2019/05/15 09:39:21 jaapb Exp $
+# $NetBSD: Makefile,v 1.125 2019/07/10 17:53:38 sevan Exp $
 
 .include "Makefile.common"
 
@@ -11,6 +11,7 @@ MAKE_JOBS_SAFE=		no
 UNLIMIT_RESOURCES=	stacksize
 
 USE_TOOLS+=		bash
+USE_FEATURES+=		strnlen
 
 USE_GCC_RUNTIME=	yes
 

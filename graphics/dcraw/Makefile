@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2017/02/12 20:28:23 adam Exp $
+# $NetBSD: Makefile,v 1.45 2019/07/10 17:53:39 sevan Exp $
 #
 # Changes can be found in the RCS file at
 # http://www.cybercom.net/~dcoffin/dcraw/RCS/dcraw.c,v
@@ -16,6 +16,7 @@ WRKSRC=			${WRKDIR}/${PKGBASE}
 USE_LANGUAGES=		c
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt
+USE_FEATURES+=		strnlen
 
 LIBS+=		-lm -ljasper -ljpeg
 CFLAGS+=	-DLOCALEDIR=\"${PREFIX}/${PKGLOCALEDIR}/locale\"

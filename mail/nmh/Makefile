@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2019/07/01 04:08:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.102 2019/07/10 17:53:38 sevan Exp $
 
 DISTNAME=		nmh-1.7.1
 PKGREVISION=		5
@@ -14,6 +14,7 @@ CONFLICTS=		ja-mh-[0-9]*
 CONFLICTS+=		ja-mh6-[0-9]*
 
 USE_TOOLS+=		lex
+USE_FEATURES+=		strnlen
 
 .include "../../mk/bsd.prefs.mk"
 
