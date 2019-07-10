@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2015/09/08 11:57:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.51 2019/07/10 10:24:06 nia Exp $
 
 DISTNAME=		nhc98src-1.22
 PKGNAME=		nhc98-1.22
@@ -7,7 +7,7 @@ CATEGORIES=		lang
 MASTER_SITES=		http://www.haskell.org/nhc98/
 
 MAINTAINER=		kristerw@NetBSD.org
-HOMEPAGE=		http://www.haskell.org/nhc98/
+HOMEPAGE=		https://www.haskell.org/nhc98/
 COMMENT=		Portable Haskell 98 compiler
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
