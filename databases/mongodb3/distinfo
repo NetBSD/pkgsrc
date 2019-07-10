@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.2 2019/07/09 07:28:30 adam Exp $
+$NetBSD: distinfo,v 1.3 2019/07/10 17:45:58 adam Exp $
 
 SHA1 (mongodb-src-r3.4.21.tar.gz) = af4e39c4d91332e9216e924c27f9e7230fb0fe88
 RMD160 (mongodb-src-r3.4.21.tar.gz) = d276839102a6dbef7f069154172025f8990b5d59
 SHA512 (mongodb-src-r3.4.21.tar.gz) = 8f4f091ab0a018e6476b860392c26bd379d34b62d5f6a510ae515c992b177407ee370c213579f70d5595d98a8dc0c2fd6b97ccf77683f7995d5d4e1bf5ca367b
 Size (mongodb-src-r3.4.21.tar.gz) = 40151763 bytes
-SHA1 (patch-SConstruct) = da410da1bd59c5a7b6ac5e3ba00144bf569efd77
+SHA1 (patch-SConstruct) = b6c2893d82d9b954c889d867ec909a05728af83d
 SHA1 (patch-src_mongo_base_initializer.h) = f82d58895251f7be08a09012ed7db64e3863a1fe
 SHA1 (patch-src_mongo_db_matcher_expression__leaf.cpp) = 52064034fabb5de63eccf87ddd140303c54f0312
 SHA1 (patch-src_mongo_db_repl_isself.c) = 82321c918b91ce1a68ce79c14589126aca6baf96
