@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2017/08/16 20:21:14 wiz Exp $
+# $NetBSD: Makefile.common,v 1.22 2019/07/10 11:12:16 markd Exp $
 #
 # used by textproc/catdoc-tk/Makefile
 
@@ -22,5 +22,6 @@ USE_FEATURES=		glob
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_LIBDIR=	${PREFIX}/share
 CONFIGURE_ARGS+=	--with-install-root=${DESTDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 CPPFLAGS+=		-Dunix -D__unix
