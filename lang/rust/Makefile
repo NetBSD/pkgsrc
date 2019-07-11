@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2019/07/08 15:16:40 he Exp $
+# $NetBSD: Makefile,v 1.108 2019/07/11 10:24:14 nia Exp $
 
 DISTNAME=	rustc-1.36.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -14,8 +14,6 @@ USE_GCC_RUNTIME=	yes
 USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bash ggrep gmake perl:build pkg-config
-# For internal llvm
-BUILD_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
 
 # The NetBSD bootstraps are built for NetBSD 8 (because rust doesn't
 # build on 7).  Mark earlier versions as broken.
@@ -124,17 +122,7 @@ CHECK_SSP_SUPPORTED=	no
 
 CHECK_PORTABILITY_SKIP+=	src/vendor/openssl-src/openssl/.travis-create-release.sh
 
-# Required for LLVM (-std=c++11)
-GCC_REQD+=	4.8
-
 .include "../../mk/bsd.prefs.mk"
-
-# The bundled LLVM current has issues building on SunOS.
-.if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
-.include "../../lang/llvm/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-llvm-link-shared
-CONFIGURE_ARGS+=	--llvm-root=${BUILDLINK_PREFIX.llvm}
-.endif
 
 #
 # Under NetBSD, do not use DT_RUNPATH
@@ -457,6 +445,8 @@ stage0-bootstrap: install
 	 ${GTAR} -zcf ${PKGNAME_NOREV}-${RUST_ARCH}.tar.gz ${PKGNAME_NOREV}-${RUST_ARCH})
 .endif
 
+.include "options.mk"
+
 # These dependencies currently use the bundled sources as they require
 # development features not yet available in released versions.
 #
@@ -465,7 +455,6 @@ stage0-bootstrap: install
 #.include "../../www/curl/buildlink3.mk"
 #.include "../../www/http-parser/buildlink3.mk"
 
-.include "../../devel/cmake/buildlink3.mk"
 #.include "../../devel/jemalloc/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
