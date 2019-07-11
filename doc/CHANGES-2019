@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2857 2019/07/11 04:46:05 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.2858 2019/07/11 09:33:42 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4745,3 +4745,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/hub to 2.12.2 [leot 2019-07-10]
 	Updated graphics/libraw to 0.19.3 [nia 2019-07-10]
 	Updated audio/solfege to 3.22.2 [schmonz 2019-07-11]
+	Removed misc/yelp successor misc/yelp3 [nia 2019-07-11]
