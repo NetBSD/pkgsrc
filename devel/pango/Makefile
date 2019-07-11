@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.219 2019/06/08 19:53:26 leot Exp $
+# $NetBSD: Makefile,v 1.220 2019/07/11 09:28:44 nia Exp $
 
 DISTNAME=	pango-1.42.4
 PKGREVISION=	4
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pango/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.pango.org/
+HOMEPAGE=	https://www.pango.org/
 COMMENT=	Library for layout and rendering of text
 LICENSE=	gnu-lgpl-v2
 
