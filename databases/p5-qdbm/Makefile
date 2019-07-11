@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/08/22 09:43:22 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/07/11 09:25:24 nia Exp $
 #
 
 PKGREVISION= 4
@@ -8,7 +8,7 @@ PKGNAME=	p5-qdbm-1.0.0.${QDBM_VERSION}
 CATEGORIES=	databases perl5
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://fallabs.com/qdbm/plspex.html
+HOMEPAGE=	https://fallabs.com/qdbm/plspex.html
 COMMENT=	Perl interface of QDBM
 LICENSE=	gnu-lgpl-v2.1
 
