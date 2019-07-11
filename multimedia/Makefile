@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.271 2019/07/09 16:33:30 nia Exp $
+# $NetBSD: Makefile,v 1.272 2019/07/11 09:35:29 nia Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -158,7 +158,6 @@ SUBDIR+=	mpeg-lib
 SUBDIR+=	mpeg_encode
 SUBDIR+=	mpeg_play
 SUBDIR+=	mplayer
-SUBDIR+=	mplayer-plugin
 SUBDIR+=	mplayer-share
 SUBDIR+=	mplayerthumbs
 SUBDIR+=	mpv
