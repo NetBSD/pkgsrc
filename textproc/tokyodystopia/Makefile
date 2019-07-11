@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2015/03/15 17:20:19 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.19 2019/07/11 09:25:26 nia Exp $
 #
 
 DISTNAME=	tokyodystopia-0.9.15
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${HOMEPAGE}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://fallabs.com/tokyodystopia/
+HOMEPAGE=	https://fallabs.com/tokyodystopia/
 COMMENT=	Full-text search system
 LICENSE=	gnu-lgpl-v2.1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/02/02 20:32:18 fhajny Exp $
+# $NetBSD: Makefile,v 1.16 2019/07/11 09:25:24 nia Exp $
 #
 
 DISTNAME=	tokyocabinet-java-1.24
@@ -7,7 +7,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${HOMEPAGE:S/javadoc/javapkg/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://fallabs.com/tokyocabinet/javadoc/
+HOMEPAGE=	https://fallabs.com/tokyocabinet/javadoc/
 COMMENT=	Java binding of Tokyo Cabinet
 LICENSE=	gnu-lgpl-v2.1
 
