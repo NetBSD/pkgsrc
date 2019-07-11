@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2860 2019/07/11 11:33:45 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.2861 2019/07/11 11:34:59 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4748,3 +4748,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed misc/yelp successor misc/yelp3 [nia 2019-07-11]
 	Removed multimedia/mplayer-plugin [nia 2019-07-11]
 	Updated www/firefox to 68.0 [ryoon 2019-07-11]
+	Updated www/firefox-l10n to 68.0 [ryoon 2019-07-11]
