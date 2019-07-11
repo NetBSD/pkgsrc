@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/11/14 22:21:19 kleink Exp $
+# $NetBSD: Makefile,v 1.17 2019/07/11 09:28:44 nia Exp $
 
 DISTNAME=	pangox-compat-0.0.2
 PKGREVISION=	7
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pangox-compat/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.pango.org/
+HOMEPAGE=	https://www.pango.org/
 COMMENT=	Backwards compatibility library for pango X support
 LICENSE=	gnu-lgpl-v2
 
