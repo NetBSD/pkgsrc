@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2856 2019/07/10 20:28:21 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2857 2019/07/11 04:46:05 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4744,3 +4744,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/fehqlibs to 0.9.12.10nb1 [schmonz 2019-07-10]
 	Updated net/hub to 2.12.2 [leot 2019-07-10]
 	Updated graphics/libraw to 0.19.3 [nia 2019-07-10]
+	Updated audio/solfege to 3.22.2 [schmonz 2019-07-11]
