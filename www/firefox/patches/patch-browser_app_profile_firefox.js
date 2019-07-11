@@ -1,10 +1,10 @@
-$NetBSD: patch-browser_app_profile_firefox.js,v 1.12 2019/02/01 16:47:59 ryoon Exp $
+$NetBSD: patch-browser_app_profile_firefox.js,v 1.13 2019/07/11 11:32:40 ryoon Exp $
 
---- browser/app/profile/firefox.js.orig	2019-01-24 18:48:38.000000000 +0000
+--- browser/app/profile/firefox.js.orig	2019-07-06 01:48:29.000000000 +0000
 +++ browser/app/profile/firefox.js
-@@ -1770,6 +1770,15 @@ pref("toolkit.coverage.endpoint.base", "
- pref("prio.enabled", true);
- #endif
+@@ -1865,6 +1865,15 @@ pref("prio.publicKeyB", "26E6674E65425B8
+ pref("toolkit.coverage.enabled", false);
+ pref("toolkit.coverage.endpoint.base", "https://coverage.mozilla.org");
  
 +// Select UI locale from LANG/LC_MESSAGE environmental variables
 +pref("intl.locale.requested", "");
