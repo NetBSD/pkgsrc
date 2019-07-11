@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/03/15 19:57:40 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.9 2019/07/11 09:25:25 nia Exp $
 #
 
 .include "../../databases/qdbm/Makefile.common"
@@ -7,7 +7,7 @@ PKGNAME=	qdbm-cgi-0.0.1.${QDBM_VERSION}
 CATEGORIES=	databases www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://fallabs.com/qdbm/cgispex.html
+HOMEPAGE=	https://fallabs.com/qdbm/cgispex.html
 COMMENT=	CGI scripts of QDBM
 LICENSE=	gnu-lgpl-v2.1
 

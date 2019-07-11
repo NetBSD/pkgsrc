@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2015/03/15 16:47:19 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.45 2019/07/11 09:25:26 nia Exp $
 #
 
 DISTNAME=	tokyocabinet-1.4.48
@@ -6,7 +6,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${HOMEPAGE}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://fallabs.com/tokyocabinet/
+HOMEPAGE=	https://fallabs.com/tokyocabinet/
 COMMENT=	Modern implementation of DBM
 LICENSE=	gnu-lgpl-v2.1
 
