@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2019/05/18 17:55:10 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.22 2019/07/11 12:05:34 ryoon Exp $
 share/nextcloud/.htaccess
 share/nextcloud/.user.ini
 share/nextcloud/3rdparty/LICENSE INFO
@@ -3838,6 +3838,8 @@ share/nextcloud/apps/accessibility/js/accessibility.js
 share/nextcloud/apps/accessibility/js/accessibility.js.map
 share/nextcloud/apps/accessibility/l10n/af.js
 share/nextcloud/apps/accessibility/l10n/af.json
+share/nextcloud/apps/accessibility/l10n/bg.js
+share/nextcloud/apps/accessibility/l10n/bg.json
 share/nextcloud/apps/accessibility/l10n/ca.js
 share/nextcloud/apps/accessibility/l10n/ca.json
 share/nextcloud/apps/accessibility/l10n/cs.js
@@ -3858,6 +3860,8 @@ share/nextcloud/apps/accessibility/l10n/es_AR.js
 share/nextcloud/apps/accessibility/l10n/es_AR.json
 share/nextcloud/apps/accessibility/l10n/eu.js
 share/nextcloud/apps/accessibility/l10n/eu.json
+share/nextcloud/apps/accessibility/l10n/fa.js
+share/nextcloud/apps/accessibility/l10n/fa.json
 share/nextcloud/apps/accessibility/l10n/fi.js
 share/nextcloud/apps/accessibility/l10n/fi.json
 share/nextcloud/apps/accessibility/l10n/fo.js
@@ -4600,6 +4604,7 @@ share/nextcloud/apps/dav/lib/BackgroundJob/CleanupDirectLinksJob.php
 share/nextcloud/apps/dav/lib/BackgroundJob/CleanupInvitationTokenJob.php
 share/nextcloud/apps/dav/lib/BackgroundJob/GenerateBirthdayCalendarBackgroundJob.php
 share/nextcloud/apps/dav/lib/BackgroundJob/RefreshWebcalJob.php
+share/nextcloud/apps/dav/lib/BackgroundJob/RegisterRegenerateBirthdayCalendars.php
 share/nextcloud/apps/dav/lib/BackgroundJob/UpdateCalendarResourcesRoomsBackgroundJob.php
 share/nextcloud/apps/dav/lib/BackgroundJob/UploadCleanup.php
 share/nextcloud/apps/dav/lib/CalDAV/Activity/Backend.php
@@ -6574,10 +6579,14 @@ share/nextcloud/apps/files_rightclick/l10n/is.js
 share/nextcloud/apps/files_rightclick/l10n/is.json
 share/nextcloud/apps/files_rightclick/l10n/it.js
 share/nextcloud/apps/files_rightclick/l10n/it.json
+share/nextcloud/apps/files_rightclick/l10n/ja.js
+share/nextcloud/apps/files_rightclick/l10n/ja.json
 share/nextcloud/apps/files_rightclick/l10n/ko.js
 share/nextcloud/apps/files_rightclick/l10n/ko.json
 share/nextcloud/apps/files_rightclick/l10n/lt_LT.js
 share/nextcloud/apps/files_rightclick/l10n/lt_LT.json
+share/nextcloud/apps/files_rightclick/l10n/lv.js
+share/nextcloud/apps/files_rightclick/l10n/lv.json
 share/nextcloud/apps/files_rightclick/l10n/nb.js
 share/nextcloud/apps/files_rightclick/l10n/nb.json
 share/nextcloud/apps/files_rightclick/l10n/nl.js
@@ -6627,7 +6636,6 @@ share/nextcloud/apps/files_sharing/css/publicView.scss
 share/nextcloud/apps/files_sharing/css/sharedfilelist.css
 share/nextcloud/apps/files_sharing/img/app.svg
 share/nextcloud/apps/files_sharing/js/additionalScripts.js
-share/nextcloud/apps/files_sharing/js/additionalScripts.js.map
 share/nextcloud/apps/files_sharing/js/app.js
 share/nextcloud/apps/files_sharing/js/dist/additionalScripts.js
 share/nextcloud/apps/files_sharing/js/dist/additionalScripts.js.map
@@ -7007,8 +7015,6 @@ share/nextcloud/apps/files_texteditor/js/sidebarpreview.js
 share/nextcloud/apps/files_texteditor/js/supported_mimetypes.json
 share/nextcloud/apps/files_texteditor/l10n/ast.js
 share/nextcloud/apps/files_texteditor/l10n/ast.json
-share/nextcloud/apps/files_texteditor/l10n/az.js
-share/nextcloud/apps/files_texteditor/l10n/az.json
 share/nextcloud/apps/files_texteditor/l10n/bg.js
 share/nextcloud/apps/files_texteditor/l10n/bg.json
 share/nextcloud/apps/files_texteditor/l10n/ca.js
@@ -7707,6 +7713,8 @@ share/nextcloud/apps/firstrunwizard/l10n/it.json
 share/nextcloud/apps/firstrunwizard/l10n/ja.js
 share/nextcloud/apps/firstrunwizard/l10n/ja.json
 share/nextcloud/apps/firstrunwizard/l10n/km.php
+share/nextcloud/apps/firstrunwizard/l10n/ko.js
+share/nextcloud/apps/firstrunwizard/l10n/ko.json
 share/nextcloud/apps/firstrunwizard/l10n/ku_IQ.php
 share/nextcloud/apps/firstrunwizard/l10n/lt_LT.js
 share/nextcloud/apps/firstrunwizard/l10n/lt_LT.json
@@ -9015,6 +9023,8 @@ share/nextcloud/apps/recommendations/l10n/it.js
 share/nextcloud/apps/recommendations/l10n/it.json
 share/nextcloud/apps/recommendations/l10n/ja.js
 share/nextcloud/apps/recommendations/l10n/ja.json
+share/nextcloud/apps/recommendations/l10n/ko.js
+share/nextcloud/apps/recommendations/l10n/ko.json
 share/nextcloud/apps/recommendations/l10n/lt_LT.js
 share/nextcloud/apps/recommendations/l10n/lt_LT.json
 share/nextcloud/apps/recommendations/l10n/nb.js
@@ -9023,8 +9033,12 @@ share/nextcloud/apps/recommendations/l10n/nl.js
 share/nextcloud/apps/recommendations/l10n/nl.json
 share/nextcloud/apps/recommendations/l10n/pl.js
 share/nextcloud/apps/recommendations/l10n/pl.json
+share/nextcloud/apps/recommendations/l10n/ps.js
+share/nextcloud/apps/recommendations/l10n/ps.json
 share/nextcloud/apps/recommendations/l10n/pt_BR.js
 share/nextcloud/apps/recommendations/l10n/pt_BR.json
+share/nextcloud/apps/recommendations/l10n/pt_PT.js
+share/nextcloud/apps/recommendations/l10n/pt_PT.json
 share/nextcloud/apps/recommendations/l10n/ru.js
 share/nextcloud/apps/recommendations/l10n/ru.json
 share/nextcloud/apps/recommendations/l10n/sk.js
@@ -10647,38 +10661,6 @@ share/nextcloud/apps/viewer/COPYING
 share/nextcloud/apps/viewer/appinfo/app.php
 share/nextcloud/apps/viewer/appinfo/info.xml
 share/nextcloud/apps/viewer/appinfo/signature.json
-share/nextcloud/apps/viewer/cypress.json
-share/nextcloud/apps/viewer/cypress/fixtures/image-small.png
-share/nextcloud/apps/viewer/cypress/fixtures/image.bmp
-share/nextcloud/apps/viewer/cypress/fixtures/image.gif
-share/nextcloud/apps/viewer/cypress/fixtures/image.png
-share/nextcloud/apps/viewer/cypress/fixtures/image.svg
-share/nextcloud/apps/viewer/cypress/fixtures/image1.jpg
-share/nextcloud/apps/viewer/cypress/fixtures/image2.jpg
-share/nextcloud/apps/viewer/cypress/fixtures/image3.jpg
-share/nextcloud/apps/viewer/cypress/fixtures/image4.jpg
-share/nextcloud/apps/viewer/cypress/fixtures/video.mkv
-share/nextcloud/apps/viewer/cypress/fixtures/video.ogv
-share/nextcloud/apps/viewer/cypress/fixtures/video.webm
-share/nextcloud/apps/viewer/cypress/fixtures/video1.mp4
-share/nextcloud/apps/viewer/cypress/fixtures/video2.mp4
-share/nextcloud/apps/viewer/cypress/integration/files.spec.js
-share/nextcloud/apps/viewer/cypress/integration/image-small.png.spec.js
-share/nextcloud/apps/viewer/cypress/integration/image.gif.spec.js
-share/nextcloud/apps/viewer/cypress/integration/image.png.spec.js
-share/nextcloud/apps/viewer/cypress/integration/image.svg.spec.js
-share/nextcloud/apps/viewer/cypress/integration/images.spec.js
-share/nextcloud/apps/viewer/cypress/integration/video.mkv.spec.js
-share/nextcloud/apps/viewer/cypress/integration/video.mp4.spec.js
-share/nextcloud/apps/viewer/cypress/integration/video.ogv.spec.js
-share/nextcloud/apps/viewer/cypress/integration/video.webm.spec.js
-share/nextcloud/apps/viewer/cypress/integration/videos.spec.js
-share/nextcloud/apps/viewer/cypress/plugins/index.js
-share/nextcloud/apps/viewer/cypress/start.sh
-share/nextcloud/apps/viewer/cypress/stop.sh
-share/nextcloud/apps/viewer/cypress/support/commands.js
-share/nextcloud/apps/viewer/cypress/support/index.js
-share/nextcloud/apps/viewer/cypress/utils/index.js
 share/nextcloud/apps/viewer/img/app.svg
 share/nextcloud/apps/viewer/js/viewer.js
 share/nextcloud/apps/viewer/js/viewer.js.map
@@ -10694,6 +10676,8 @@ share/nextcloud/apps/viewer/l10n/de.js
 share/nextcloud/apps/viewer/l10n/de.json
 share/nextcloud/apps/viewer/l10n/de_DE.js
 share/nextcloud/apps/viewer/l10n/de_DE.json
+share/nextcloud/apps/viewer/l10n/eo.js
+share/nextcloud/apps/viewer/l10n/eo.json
 share/nextcloud/apps/viewer/l10n/es.js
 share/nextcloud/apps/viewer/l10n/es.json
 share/nextcloud/apps/viewer/l10n/eu.js
@@ -10704,6 +10688,8 @@ share/nextcloud/apps/viewer/l10n/fr.js
 share/nextcloud/apps/viewer/l10n/fr.json
 share/nextcloud/apps/viewer/l10n/gl.js
 share/nextcloud/apps/viewer/l10n/gl.json
+share/nextcloud/apps/viewer/l10n/he.js
+share/nextcloud/apps/viewer/l10n/he.json
 share/nextcloud/apps/viewer/l10n/hu.js
 share/nextcloud/apps/viewer/l10n/hu.json
 share/nextcloud/apps/viewer/l10n/is.js
@@ -10712,8 +10698,12 @@ share/nextcloud/apps/viewer/l10n/it.js
 share/nextcloud/apps/viewer/l10n/it.json
 share/nextcloud/apps/viewer/l10n/ja.js
 share/nextcloud/apps/viewer/l10n/ja.json
+share/nextcloud/apps/viewer/l10n/ko.js
+share/nextcloud/apps/viewer/l10n/ko.json
 share/nextcloud/apps/viewer/l10n/lt_LT.js
 share/nextcloud/apps/viewer/l10n/lt_LT.json
+share/nextcloud/apps/viewer/l10n/lv.js
+share/nextcloud/apps/viewer/l10n/lv.json
 share/nextcloud/apps/viewer/l10n/nb.js
 share/nextcloud/apps/viewer/l10n/nb.json
 share/nextcloud/apps/viewer/l10n/nl.js
@@ -10726,6 +10716,8 @@ share/nextcloud/apps/viewer/l10n/pt_PT.js
 share/nextcloud/apps/viewer/l10n/pt_PT.json
 share/nextcloud/apps/viewer/l10n/ru.js
 share/nextcloud/apps/viewer/l10n/ru.json
+share/nextcloud/apps/viewer/l10n/sk.js
+share/nextcloud/apps/viewer/l10n/sk.json
 share/nextcloud/apps/viewer/l10n/sl.js
 share/nextcloud/apps/viewer/l10n/sl.json
 share/nextcloud/apps/viewer/l10n/sq.js
@@ -12282,6 +12274,8 @@ share/nextcloud/lib/l10n/nn_NO.js
 share/nextcloud/lib/l10n/nn_NO.json
 share/nextcloud/lib/l10n/pl.js
 share/nextcloud/lib/l10n/pl.json
+share/nextcloud/lib/l10n/ps.js
+share/nextcloud/lib/l10n/ps.json
 share/nextcloud/lib/l10n/pt_BR.js
 share/nextcloud/lib/l10n/pt_BR.json
 share/nextcloud/lib/l10n/pt_PT.js
@@ -12785,6 +12779,7 @@ share/nextcloud/lib/private/Repair/NC14/RepairPendingCronJobs.php
 share/nextcloud/lib/private/Repair/NC15/SetVcardDatabaseUID.php
 share/nextcloud/lib/private/Repair/NC16/AddClenupLoginFlowV2BackgroundJob.php
 share/nextcloud/lib/private/Repair/NC16/CleanupCardDAVPhotoCache.php
+share/nextcloud/lib/private/Repair/NC16/RemoveCypressFiles.php
 share/nextcloud/lib/private/Repair/OldGroupMembershipShares.php
 share/nextcloud/lib/private/Repair/Owncloud/DropAccountTermsTable.php
 share/nextcloud/lib/private/Repair/Owncloud/SaveAccountsTableData.php
@@ -13408,12 +13403,6 @@ share/nextcloud/settings/js/templates/federationscopemenu.handlebars
 share/nextcloud/settings/js/usersettings.js
 share/nextcloud/settings/js/vue-0.js
 share/nextcloud/settings/js/vue-0.js.map
-share/nextcloud/settings/js/vue-1.js
-share/nextcloud/settings/js/vue-1.js.map
-share/nextcloud/settings/js/vue-2.js
-share/nextcloud/settings/js/vue-2.js.map
-share/nextcloud/settings/js/vue-3.js
-share/nextcloud/settings/js/vue-3.js.map
 share/nextcloud/settings/js/vue-4.js
 share/nextcloud/settings/js/vue-4.js.map
 share/nextcloud/settings/js/vue-5.js
@@ -13422,8 +13411,6 @@ share/nextcloud/settings/js/vue-6.js
 share/nextcloud/settings/js/vue-6.js.map
 share/nextcloud/settings/js/vue-7.js
 share/nextcloud/settings/js/vue-7.js.map
-share/nextcloud/settings/js/vue-8.js
-share/nextcloud/settings/js/vue-8.js.map
 share/nextcloud/settings/js/vue-settings-admin-security.js
 share/nextcloud/settings/js/vue-settings-admin-security.js.map
 share/nextcloud/settings/js/vue-settings-apps-users-management.js
