@@ -1,15 +1,13 @@
-@comment $NetBSD: PLIST,v 1.63 2019/05/22 13:34:21 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.64 2019/07/11 11:34:31 ryoon Exp $
 lib/firefox/browser/extensions/langpack-ach@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-an@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org.xpi
-lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-az@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org.xpi
-lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org.xpi
-lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org.xpi
+lib/firefox/browser/extensions/langpack-bn@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org.xpi
@@ -23,7 +21,6 @@ lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-en-CA@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org.xpi
-lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org.xpi
@@ -61,9 +58,7 @@ lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-lij@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org.xpi
-lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org.xpi
-lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-ms@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-my@firefox.mozilla.org.xpi
@@ -72,7 +67,6 @@ lib/firefox/browser/extensions/langpack-ne-NP@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-oc@firefox.mozilla.org.xpi
-lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org.xpi
