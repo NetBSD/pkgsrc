@@ -1,0 +1,14 @@
+$NetBSD: patch-libmpcdec_CMakeLists.txt,v 1.1 2019/07/11 10:11:26 nia Exp $
+
+Let CMake manage the RPATH by adding an INSTALL statement.
+
+--- libmpcdec/CMakeLists.txt.orig	2010-08-21 15:55:01.000000000 +0000
++++ libmpcdec/CMakeLists.txt
+@@ -1,6 +1,7 @@
+ include_directories(${libmpc_SOURCE_DIR}/include)
+ if(SHARED)
+   add_library(mpcdec SHARED huffman mpc_decoder mpc_reader streaminfo mpc_bits_reader mpc_demux requant synth_filter ${libmpc_SOURCE_DIR}/common/crc32)
++  install(TARGETS mpcdec LIBRARY DESTINATION lib)
+ else(SHARED)
+   add_library(mpcdec_static STATIC huffman mpc_decoder mpc_reader streaminfo mpc_bits_reader mpc_demux requant synth_filter ${libmpc_SOURCE_DIR}/common/crc32)
+ endif(SHARED)
