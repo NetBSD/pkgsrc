@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2019/06/05 07:52:58 nia Exp $
+# $NetBSD: Makefile,v 1.11 2019/07/11 17:04:04 nia Exp $
 #
 
-DISTNAME=	flashrom-v1.0.1
+DISTNAME=	flashrom-v1.1
 PKGNAME=	${DISTNAME:S/-v/-/}
 CATEGORIES=	sysutils
 MASTER_SITES=	https://download.flashrom.org/releases/
@@ -12,7 +12,7 @@ HOMEPAGE=	https://www.flashrom.org/
 COMMENT=	Universal (coreboot/LinuxBIOS) flash utility
 LICENSE=        gnu-gpl-v2
 
-USE_TOOLS+= gmake pkg-config
+USE_TOOLS+=	gmake pkg-config
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -34,7 +34,9 @@ CPPFLAGS+=	-I/${PREFIX}/include
 .endif
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
-MAKE_ENV.SunOS+=	WARNERROR=0
+
+# Disable -Werror.
+MAKE_ENV+=		WARNERROR=no
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
 
