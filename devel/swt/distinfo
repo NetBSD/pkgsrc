@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:29:34 agc Exp $
-
-SHA1 (swt-3.5.1-gtk-linux-x86.zip) = 654744a3a2bc7eadfd807d2f1238580ac31571ee
-RMD160 (swt-3.5.1-gtk-linux-x86.zip) = 2b0723130751a700bbe14004587a5a4f801a07df
-SHA512 (swt-3.5.1-gtk-linux-x86.zip) = 4c7e93b4bda1856faf7818e99e94a1dc47fd6434c7f9114bb65c6b492b8cd42c0fd90beb771134370d52da1ccf46b2e47431777aac44c93ade4b03dc667c570f
-Size (swt-3.5.1-gtk-linux-x86.zip) = 4879027 bytes
