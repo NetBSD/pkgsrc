@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2018/08/15 13:08:21 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.14 2019/07/11 11:20:06 sevan Exp $
 # used by sysutils/syslog-ng/Makefile
 # used by sysutils/syslog-ng/Makefile.module
 
@@ -20,6 +20,7 @@ USE_LANGUAGES=	c c99
 USE_TOOLS+=	flex pkg-config gmake awk:run
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
+USE_FEATURES+=	strnlen
 
 CHECK_PORTABILITY_SKIP+=	debian/syslog-ng.init
 
