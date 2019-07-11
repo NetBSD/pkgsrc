@@ -1,12 +1,17 @@
-$NetBSD: patch-ab,v 1.4 2009/04/07 05:07:03 schmonz Exp $
+$NetBSD: patch-ab,v 1.5 2019/07/11 04:45:53 schmonz Exp $
 
---- Makefile.in.orig	2008-04-29 13:31:56.000000000 -0400
+Avoid GNUism (from MacPorts).
+
+--- Makefile.in.orig	2013-10-05 20:57:48.000000000 +0000
 +++ Makefile.in
-@@ -24,6 +24,7 @@ export datadir:=@datadir@
- export sysconfdir:=@sysconfdir@
- export libdir:=@libdir@
- export mandir:=@mandir@
-+export localedir:=@localedir@
- export CC:=@CC@
- export CFLAGS:=@CFLAGS@
- export RSVG:=@RSVG@
+@@ -144,7 +144,9 @@ install-program-files: mkinstalldirs
+ 	$(INSTALL_DATA) system.rc $(DESTDIR)/$(sysconfdir)/$(PACKAGE)
+ 	$(INSTALL_DATA) solfege.desktop $(DESTDIR)/$(datadir)/applications/
+ 	for ifile in $(installfiles); do \
+-	    cp --parents $$ifile $(DESTDIR)/$(datadir)/$(PACKAGE)/; \
++	    dname=$$(dirname "$$ifile"); \
++	    $(INSTALL) -d -m 755 "$(DESTDIR)/$(datadir)/$(PACKAGE)/$$dname"; \
++	    $(INSTALL_DATA) "$$ifile" "$(DESTDIR)/$(datadir)/$(PACKAGE)/$$dname"; \
+ 	done
+ 
+ compileall:
