@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2858 2019/07/11 09:33:42 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2859 2019/07/11 09:36:33 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4746,3 +4746,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/libraw to 0.19.3 [nia 2019-07-10]
 	Updated audio/solfege to 3.22.2 [schmonz 2019-07-11]
 	Removed misc/yelp successor misc/yelp3 [nia 2019-07-11]
+	Removed multimedia/mplayer-plugin [nia 2019-07-11]
