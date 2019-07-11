@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2865 2019/07/11 14:54:48 sevan Exp $
+$NetBSD: CHANGES-2019,v 1.2866 2019/07/11 17:04:20 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4754,3 +4754,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed devel/swt [nia 2019-07-11]
 	Removed devel/xulrunner192 [nia 2019-07-11]
 	Updated security/gnutls to 3.6.8 [sevan 2019-07-11]
+	Updated sysutils/flashrom to 1.1 [nia 2019-07-11]
