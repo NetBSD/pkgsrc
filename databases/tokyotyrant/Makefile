@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2015/03/15 20:13:24 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.37 2019/07/11 09:25:26 nia Exp $
 #
 
 DISTNAME=	tokyotyrant-1.1.41
@@ -7,7 +7,7 @@ CATEGORIES=	databases net
 MASTER_SITES=	${HOMEPAGE}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://fallabs.com/tokyotyrant/
+HOMEPAGE=	https://fallabs.com/tokyotyrant/
 COMMENT=	Network interface of Tokyo Cabinet
 LICENSE=	gnu-lgpl-v2.1
 
