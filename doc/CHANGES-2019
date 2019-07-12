@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2867 2019/07/11 18:56:33 leot Exp $
+$NetBSD: CHANGES-2019,v 1.2868 2019/07/12 04:14:19 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4756,3 +4756,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/gnutls to 3.6.8 [sevan 2019-07-11]
 	Updated sysutils/flashrom to 1.1 [nia 2019-07-11]
 	Updated net/youtube-dl to 20190712 [leot 2019-07-11]
+	Updated textproc/aspell-en to 2018.04.16.0nb1 [gutteridge 2019-07-12]
