@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2019/07/01 04:08:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.32 2019/07/12 09:33:22 adam Exp $
 
-DISTNAME=	ntopng-3.6.1
-PKGREVISION=	6
+DISTNAME=	ntopng-3.8
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ntop/}
 
