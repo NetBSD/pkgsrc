@@ -1,9 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2015/04/11 02:07:41 mef Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/07/12 04:04:38 gutteridge Exp $
 lib/aspell/american-variant_0.alias
 lib/aspell/american-variant_1.alias
 lib/aspell/american-w_accents.alias
 lib/aspell/american-wo_accents.alias
 lib/aspell/american.alias
+lib/aspell/australian-variant_0.alias
+lib/aspell/australian-variant_1.alias
+lib/aspell/australian-w_accents.alias
+lib/aspell/australian-wo_accents.alias
+lib/aspell/australian.alias
 lib/aspell/british-ise-w_accents.alias
 lib/aspell/british-ise-wo_accents.alias
 lib/aspell/british-ise.alias
@@ -32,6 +37,15 @@ lib/aspell/en-w_accents.multi
 lib/aspell/en-wo_accents-only.rws
 lib/aspell/en-wo_accents.multi
 lib/aspell/en.multi
+lib/aspell/en_AU-variant_0.multi
+lib/aspell/en_AU-variant_0.rws
+lib/aspell/en_AU-variant_1.multi
+lib/aspell/en_AU-variant_1.rws
+lib/aspell/en_AU-w_accents-only.rws
+lib/aspell/en_AU-w_accents.multi
+lib/aspell/en_AU-wo_accents-only.rws
+lib/aspell/en_AU-wo_accents.multi
+lib/aspell/en_AU.multi
 lib/aspell/en_CA-variant_0.multi
 lib/aspell/en_CA-variant_0.rws
 lib/aspell/en_CA-variant_1.multi

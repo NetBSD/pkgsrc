@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2019/07/06 19:20:57 nia Exp $
+# $NetBSD: Makefile,v 1.5 2019/07/12 04:04:38 gutteridge Exp $
 #
 
+PKGREVISION=	1
 DISTNAME=	aspell6-en-2018.04.16-0
 PKGNAME=	${DISTNAME:S/6-/-/1:S/-0/.0/1}
 CATEGORIES=	textproc
