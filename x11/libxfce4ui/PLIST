@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/05/23 02:02:53 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/07/12 23:53:07 gutteridge Exp $
 bin/xfce4-about
 include/xfce4/libxfce4kbd-private-2/libxfce4kbd-private/xfce-shortcut-dialog.h
 include/xfce4/libxfce4kbd-private-2/libxfce4kbd-private/xfce-shortcuts-grabber.h
@@ -88,6 +88,7 @@ share/locale/gl/LC_MESSAGES/libxfce4ui.mo
 share/locale/he/LC_MESSAGES/libxfce4ui.mo
 share/locale/hr/LC_MESSAGES/libxfce4ui.mo
 share/locale/hu/LC_MESSAGES/libxfce4ui.mo
+share/locale/hy_AM/LC_MESSAGES/libxfce4ui.mo
 share/locale/id/LC_MESSAGES/libxfce4ui.mo
 share/locale/ie/LC_MESSAGES/libxfce4ui.mo
 share/locale/is/LC_MESSAGES/libxfce4ui.mo
