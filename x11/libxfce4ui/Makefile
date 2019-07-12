@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2019/07/05 14:52:41 gutteridge Exp $
+# $NetBSD: Makefile,v 1.21 2019/07/12 23:53:07 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	libxfce4ui-4.13.5
+DISTNAME=	libxfce4ui-4.13.6
 CATEGORIES=	x11
 MASTER_SITES+=	http://archive.xfce.org/src/xfce/libxfce4ui/4.13/
 
