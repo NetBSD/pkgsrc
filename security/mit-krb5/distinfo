@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.68 2019/05/06 14:06:05 wiz Exp $
+$NetBSD: distinfo,v 1.69 2019/07/12 15:40:55 jperkin Exp $
 
 SHA1 (krb5-1.16.2.tar.gz) = 6d6ef205194be386fb5f4e6bef32cb9fc79e853b
 RMD160 (krb5-1.16.2.tar.gz) = 76188113d13eb9667d6057fe23d653a3d09d4817
 SHA512 (krb5-1.16.2.tar.gz) = 738c071a90e0f38680bb17bdcf950310bc4549f3cb851e1d34de11239ae88178e6ee1a5e5d48c6d3efef544339b07d22dba5347dd763a4266d8d4df7cf47afc9
 Size (krb5-1.16.2.tar.gz) = 9652415 bytes
 SHA1 (patch-Makefile.in) = adacbcb9d569107e6b7af9b0e7ee177f79a9103c
-SHA1 (patch-aclocal.m4) = f94e587c4b3e15bcf7dde215cf146ba077202218
+SHA1 (patch-aclocal.m4) = 07b5d9ae38c74eaea6ba62aed9062dca1bf7f3fb
 SHA1 (patch-build-tools_krb5-config.in) = 4ab922df1d86d86f9ef043f2c5cdf048c0477d3a
 SHA1 (patch-config_lib.in) = 974db26486b3239e4fcd53be7280b32c802f6007
-SHA1 (patch-config_libnover.in) = 53f539cf98a961483e2b4ccf278c7376dbcf52d9
+SHA1 (patch-config_libnover.in) = 9337e06792e2dcc50c610503ef842ebfc18fc08b
 SHA1 (patch-config_libobj.in) = c7395b9de5baf6612b8787fad55dbc051a680bfd
 SHA1 (patch-config_libpriv.in) = 78342f649f8e9d3a3b5a4f83e65b6c46f589586b
 SHA1 (patch-config_pre.in) = 255973132db9327190211214c3e33b4551bd283b
