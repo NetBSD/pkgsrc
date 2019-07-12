@@ -1,4 +1,4 @@
-$NetBSD: patch-aclocal.m4,v 1.1 2018/12/21 15:45:13 adam Exp $
+$NetBSD: patch-aclocal.m4,v 1.2 2019/07/12 15:40:55 jperkin Exp $
 
 Don't make sunpro warnings into errors (warnings are seen in gcc too)
 Add --enable-pkgsrc-libtool option
@@ -56,7 +56,7 @@ Add --enable-pkgsrc-libtool option
 +	LIBINSTLIST=install-libtool
 +	DEPLIBEXT=$LALIBEXT
 +	DEPSTLIBEXT=$LALIBEXT
-+	PLUGIN='lib$(LIBBASE)$(LALIBEXT)'
++	PLUGIN='$(LIBBASE)$(LALIBEXT)'
 +	PLUGININST=install-libtool
 +	CC_LINK="$CC_LINK_LIBTOOL"
 +	INSTALL_LIBTOOL='$(LIBTOOL) --mode=install'
