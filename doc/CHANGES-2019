@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2873 2019/07/12 15:41:04 jperkin Exp $
+$NetBSD: CHANGES-2019,v 1.2874 2019/07/12 19:07:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4767,3 +4767,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/lemon to 1.0.3.29.0 [adam 2019-07-12]
 	Updated databases/repmgr to 4.4.0 [adam 2019-07-12]
 	Updated security/mit-krb5 to 1.16.2nb2 [jperkin 2019-07-12]
+	Updated databases/py-orderedmultidict to 1.0.1 [adam 2019-07-12]
+	Updated sysutils/py-crontab to 2.3.8 [adam 2019-07-12]
+	Updated devel/py-meson to 0.51.1 [adam 2019-07-12]
+	Updated time/py-aniso8601 to 7.0.0 [adam 2019-07-12]
