@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/10/18 16:24:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/07/12 09:30:34 adam Exp $
 bin/ndpiReader
 include/ndpi/ndpi_api.h
 include/ndpi/ndpi_config.h
@@ -13,4 +13,5 @@ include/ndpi/ndpi_win32.h
 lib/libndpi.a
 lib/libndpi.so
 lib/libndpi.so.${PKGVERSION}.0
+lib/libndpi.so.2
 lib/pkgconfig/libndpi.pc

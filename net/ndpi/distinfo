@@ -1,12 +1,10 @@
-$NetBSD: distinfo,v 1.4 2018/10/18 16:24:29 adam Exp $
+$NetBSD: distinfo,v 1.5 2019/07/12 09:30:34 adam Exp $
 
-SHA1 (nDPI-2.4.tar.gz) = 6ff0d034a2badade2e1deb835594a42fc297646a
-RMD160 (nDPI-2.4.tar.gz) = 5f022327354c55a773d17e83f76d50cc68fa3c78
-SHA512 (nDPI-2.4.tar.gz) = 7c746c167ab3ebafbe8646f752c95e32d66237a0a86adeec9ded1ec7e20f62170a9b1c4e5d25594f6459f5c0f616c27c5b393151d936471590f16df3fa3fa884
-Size (nDPI-2.4.tar.gz) = 19308586 bytes
-SHA1 (patch-autogen.sh) = 61dbff4cce826994726da317667de9534030c5c1
-SHA1 (patch-configure.seed) = 885956b856b37d3f77e2c05630eee60af8ba5759
+SHA1 (nDPI-2.8.tar.gz) = 5b5f613cf55deeb040483f7c04ede7a2ed415c26
+RMD160 (nDPI-2.8.tar.gz) = c26bfadeee1db4abbf86a06fdfa338cbfaf42d9b
+SHA512 (nDPI-2.8.tar.gz) = aae757047810bbc32700ecf7ac2e5df4b93528021a50da4a0b83865a5248dfca8b1643c75aa7eeb6eac4f155638d45666db487318b2be9adb2f3412cb8ec8497
+Size (nDPI-2.8.tar.gz) = 19754226 bytes
+SHA1 (patch-Makefile.am) = 3f4649a55e519a21e1c5b645669f1febcef82d4e
+SHA1 (patch-configure.seed) = 154f2d6a690bd6e7e01862769bcf0fa4b1a86ad6
 SHA1 (patch-src_include_ndpi__includes.h) = db5da9ca24ecf32fd8c264e193af280814dc74c6
-SHA1 (patch-src_lib_Makefile.in) = 60b03e8e6daaa9d882732c6fcf9897f5d843c3de
-SHA1 (patch-src_lib_ndpi__main.c) = 6a10a5318a033ce686b7fef37b0f2bf597b4eb06
-SHA1 (patch-src_lib_third__party_include_hash.h) = af82b9a7b418a5cba0c678c40d331dc5bffc0f0b
+SHA1 (patch-src_lib_Makefile.in) = 458e095e55a3b6f24166813a249350a32a1e0589
