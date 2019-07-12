@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2019/04/05 13:42:30 adam Exp $
+# $NetBSD: Makefile,v 1.6 2019/07/12 12:49:26 adam Exp $
 
-DISTNAME=	repmgr-4.3.0
+DISTNAME=	repmgr-4.4.0
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
 CATEGORIES=	databases
 MASTER_SITES=	https://repmgr.org/download/
@@ -31,9 +31,9 @@ CONF_FILES_PERMS+=	${EGDIR}/repmgr.conf.sample \
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.md \
-	    ${DESTDIR}${PREFIX}/${DOCDIR}
+		${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/repmgr.conf.sample \
-	    ${DESTDIR}${PREFIX}/${EGDIR}
+		${DESTDIR}${PREFIX}/${EGDIR}
 
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
