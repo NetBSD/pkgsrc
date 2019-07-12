@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2870 2019/07/12 09:33:39 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2871 2019/07/12 10:05:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4761,3 +4761,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Added sysutils/u-boot-a20-olinuxino-lime2-emmc version 2018.11 [thorpej 2019-07-12]
 	Updated net/ndpi to 2.8 [adam 2019-07-12]
 	Updated net/ntopng to 3.8 [adam 2019-07-12]
+	Updated databases/sqlite3 to 3.29.0 [adam 2019-07-12]
+	Updated databases/sqlite3-docs to 3.29.0 [adam 2019-07-12]
+	Updated databases/sqlite3-tcl to 3.29.0 [adam 2019-07-12]
+	Updated devel/lemon to 1.0.3.29.0 [adam 2019-07-12]
