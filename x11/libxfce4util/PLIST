@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2019/05/23 01:59:21 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.19 2019/07/12 23:50:34 gutteridge Exp $
 include/xfce4/libxfce4util/libxfce4util-config.h
 include/xfce4/libxfce4util/libxfce4util.h
 include/xfce4/libxfce4util/xfce-debug.h
@@ -64,6 +64,7 @@ share/locale/gl/LC_MESSAGES/libxfce4util.mo
 share/locale/he/LC_MESSAGES/libxfce4util.mo
 share/locale/hr/LC_MESSAGES/libxfce4util.mo
 share/locale/hu/LC_MESSAGES/libxfce4util.mo
+share/locale/hy_AM/LC_MESSAGES/libxfce4util.mo
 share/locale/id/LC_MESSAGES/libxfce4util.mo
 share/locale/ie/LC_MESSAGES/libxfce4util.mo
 share/locale/is/LC_MESSAGES/libxfce4util.mo
