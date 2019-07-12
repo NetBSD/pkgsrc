@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.am,v 1.1 2019/07/12 09:30:34 adam Exp $
+
+Use standard pkgconfigdir.
+
+--- Makefile.am.orig	2019-07-11 10:20:02.000000000 +0000
++++ Makefile.am
+@@ -1,7 +1,7 @@
+ ACLOCAL_AMFLAGS = -I m4
+ SUBDIRS = src/lib example tests
+ 
+-pkgconfigdir = $(prefix)/libdata/pkgconfig
++pkgconfigdir = $(prefix)/lib/pkgconfig
+ pkgconfig_DATA = libndpi.pc
+ 
+ EXTRA_DIST = autogen.sh
