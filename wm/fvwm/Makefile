@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2018/08/22 09:47:21 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2019/07/12 13:29:31 hauke Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	x11 wm
 MASTER_SITES=	ftp://ftp.fvwm.org/pub/fvwm/version-2/
 MASTER_SITES+=	http://www.fvwm.org/generated/icon_download/
@@ -65,6 +65,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
