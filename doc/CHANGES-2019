@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2872 2019/07/12 12:50:04 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2873 2019/07/12 15:41:04 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4766,3 +4766,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/sqlite3-tcl to 3.29.0 [adam 2019-07-12]
 	Updated devel/lemon to 1.0.3.29.0 [adam 2019-07-12]
 	Updated databases/repmgr to 4.4.0 [adam 2019-07-12]
+	Updated security/mit-krb5 to 1.16.2nb2 [jperkin 2019-07-12]
