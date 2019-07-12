@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2868 2019/07/12 04:14:19 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.2869 2019/07/12 05:16:52 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4757,3 +4757,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/flashrom to 1.1 [nia 2019-07-11]
 	Updated net/youtube-dl to 20190712 [leot 2019-07-11]
 	Updated textproc/aspell-en to 2018.04.16.0nb1 [gutteridge 2019-07-12]
+	Added sysutils/u-boot-a20-olinuxino-lime2 version 2018.11 [thorpej 2019-07-12]
+	Added sysutils/u-boot-a20-olinuxino-lime2-emmc version 2018.11 [thorpej 2019-07-12]
