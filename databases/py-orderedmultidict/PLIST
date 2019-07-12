@@ -1,12 +1,15 @@
-@comment $NetBSD: PLIST,v 1.2 2015/04/01 02:05:51 rodent Exp $
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
+@comment $NetBSD: PLIST,v 1.3 2019/07/12 18:53:58 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/orderedmultidict/__init__.py
 ${PYSITELIB}/orderedmultidict/__init__.pyc
 ${PYSITELIB}/orderedmultidict/__init__.pyo
+${PYSITELIB}/orderedmultidict/__version__.py
+${PYSITELIB}/orderedmultidict/__version__.pyc
+${PYSITELIB}/orderedmultidict/__version__.pyo
 ${PYSITELIB}/orderedmultidict/itemlist.py
 ${PYSITELIB}/orderedmultidict/itemlist.pyc
 ${PYSITELIB}/orderedmultidict/itemlist.pyo
