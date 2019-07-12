@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/04/03 09:31:40 adam Exp $
+$NetBSD: distinfo,v 1.4 2019/07/12 19:07:09 adam Exp $
 
-SHA1 (aniso8601-6.0.0.tar.gz) = 48fa13510125cb075c3af2fdb392bba0c09a6985
-RMD160 (aniso8601-6.0.0.tar.gz) = d552fc8e5d64614aed300054482f9b6cab4ff41a
-SHA512 (aniso8601-6.0.0.tar.gz) = 04b032058ac836fb904e1254c8d7543d06a1d81ece22880757f0b990fe1997ce895a3513f7606cdd8c11475285ed758b62186f11c8129b005229d2ba7c0911f3
-Size (aniso8601-6.0.0.tar.gz) = 36429 bytes
+SHA1 (aniso8601-7.0.0.tar.gz) = 2e5ccf3466393c58c56747ec2f7ba40ee4d533d1
+RMD160 (aniso8601-7.0.0.tar.gz) = 04a9b085d5b622390d0179ecbbde9a8f8a37b415
+SHA512 (aniso8601-7.0.0.tar.gz) = 725072cac3be98a84655061be033e711c0deb6a8806acb941a7ae6ead527d6255bf3b1db0caa03d79ab9e71cd5303c0d8cffac1f82676a85fdfc352ff584a603
+Size (aniso8601-7.0.0.tar.gz) = 36465 bytes
