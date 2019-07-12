@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2875 2019/07/12 19:58:03 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2876 2019/07/12 23:45:06 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4773,3 +4773,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated time/py-aniso8601 to 7.0.0 [adam 2019-07-12]
 	Updated devel/protobuf to 3.9.0 [adam 2019-07-12]
 	Updated devel/py-protobuf to 3.9.0 [adam 2019-07-12]
+	Updated devel/xfce4-dev-tools to 4.13.0 [gutteridge 2019-07-12]
