@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19122 2019/07/11 12:09:33 nia Exp $
+$NetBSD: TODO,v 1.19123 2019/07/12 03:52:36 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1124,7 +1124,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o php-jpgraph-3.5.0b1
 	o php-memcache-3.0.8
 	o php-mrbs-1.5.0
-	o php-nextcloud-16.0.2 [ryoon: 16.0.2 has a fatal bug. Do not update.]
 	o php-orangehrm-3.3.1
 	o php-phrasea2-3.8.6 (php-phrasea-3.8.6?)
 	o php-pthread-3.1.6
