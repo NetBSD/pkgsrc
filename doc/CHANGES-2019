@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2884 2019/07/13 00:21:17 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.2885 2019/07/13 00:24:41 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4782,3 +4782,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/xfce4-panel to 4.13.6 [gutteridge 2019-07-13]
 	Updated x11/xfce4-settings to 4.13.7 [gutteridge 2019-07-13]
 	Updated x11/xfce4-session to 4.13.3 [gutteridge 2019-07-13]
+	Updated x11/xfce4-tumbler to 0.2.5 [gutteridge 2019-07-13]
