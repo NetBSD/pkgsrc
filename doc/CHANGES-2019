@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2894 2019/07/13 09:22:20 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2895 2019/07/13 09:32:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4793,3 +4793,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/msmtp to 1.8.5 [leot 2019-07-13]
 	Updated devel/yarn to 1.17.3 [adam 2019-07-13]
 	Updated textproc/py-deepdiff to 4.0.7 [adam 2019-07-13]
+	Updated www/py-flask to 1.1.1 [adam 2019-07-13]
+	Updated archivers/py-zipp to 0.5.2 [adam 2019-07-13]
