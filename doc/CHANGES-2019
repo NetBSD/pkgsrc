@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2892 2019/07/13 02:28:04 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.2893 2019/07/13 08:43:00 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4790,3 +4790,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/xfce4-power-manager to 1.6.3 [gutteridge 2019-07-13]
 	Updated meta-pkgs/xfce4 to 4.14pre2 [gutteridge 2019-07-13]
 	Updated meta-pkgs/xfce4-extras to 4.14pre2 [gutteridge 2019-07-13]
+	Updated mail/msmtp to 1.8.5 [leot 2019-07-13]
