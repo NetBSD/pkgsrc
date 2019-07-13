@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2888 2019/07/13 00:36:40 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.2889 2019/07/13 00:40:31 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4786,3 +4786,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/xfce4-desktop to 4.13.5 [gutteridge 2019-07-13]
 	Updated sysutils/xfce4-thunar to 1.8.7 [gutteridge 2019-07-13]
 	Updated sysutils/xfce4-appfinder to 4.13.4 [gutteridge 2019-07-13]
+	Updated sysutils/xfce4-cpugraph-plugin to 1.1.0 [gutteridge 2019-07-13]
