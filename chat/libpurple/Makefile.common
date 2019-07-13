@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.49 2018/04/16 21:13:28 wiz Exp $
+# $NetBSD: Makefile.common,v 1.50 2019/07/13 22:00:27 maya Exp $
 #
 # used by chat/finch/Makefile
 # used by chat/libpurple/Makefile
@@ -44,6 +44,7 @@ CONFIGURE_ARGS+=	--disable-vv
 
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 CFLAGS.SunOS+=		-Wno-error=implicit-function-declaration
+LDFLAGS.SunOS+=		-lnsl
 
 PKGCONFIG_OVERRIDE+=	finch/finch.pc.in
 PKGCONFIG_OVERRIDE+=	finch/libgnt/gnt.pc.in
