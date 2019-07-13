@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2013/10/15 16:21:46 asau Exp $
+@comment $NetBSD: PLIST,v 1.22 2019/07/13 09:43:56 bsiegert Exp $
 bin/clisp
 bin/clisp-link
 lib/clisp/base/bogomips.o
@@ -51,12 +51,12 @@ share/doc/clisp/SUMMARY
 share/doc/clisp/clisp-link.1
 share/doc/clisp/clisp-link.html
 ${PLIST.doc}share/doc/clisp/clisp-link.pdf
-share/doc/clisp/clisp-link.ps
+${PLIST.doc}share/doc/clisp/clisp-link.ps
 share/doc/clisp/clisp.1
 share/doc/clisp/clisp.html
 ${PLIST.doc}share/doc/clisp/clisp.pdf
 share/doc/clisp/clisp.png
-share/doc/clisp/clisp.ps
+${PLIST.doc}share/doc/clisp/clisp.ps
 share/doc/clisp/impnotes.css
 share/doc/clisp/impnotes.html
 share/locale/da/LC_MESSAGES/clisp.mo
