@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2017/10/07 07:05:49 adam Exp $
+# $NetBSD: Makefile,v 1.16 2019/07/13 15:51:52 wiz Exp $
 
 DISTNAME=	pyenchant-1.6.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyenchant/}
 
@@ -12,7 +13,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 .include "../../lang/python/pyversion.mk"
 
-DEPENDS+=	enchant-[0-9]*:../../textproc/enchant
+DEPENDS+=	enchant2-[0-9]*:../../textproc/enchant2
 
 USE_LANGUAGES=	# empty
 
@@ -20,7 +21,7 @@ USE_LANGUAGES=	# empty
 
 DLEXT.dylib=		dylib
 DLEXT=			${DLEXT.${SHLIB_TYPE}:Uso}
-PYENCHANT_LIBRARY_PATH=	${PREFIX}/lib/libenchant.${DLEXT}
+PYENCHANT_LIBRARY_PATH=	${PREFIX}/lib/libenchant-2.${DLEXT}
 
 # fix the path of libenchant with patch-ab.
 SUBST_CLASSES+=		dlpath
