@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2018/11/14 22:22:31 kleink Exp $
+# $NetBSD: Makefile,v 1.70 2019/07/13 15:41:27 wiz Exp $
 
 DISTNAME=	gtkspell-2.0.16
-PKGREVISION=	29
+PKGREVISION=	30
 CATEGORIES=	textproc devel
 MASTER_SITES=	http://gtkspell.sourceforge.net/download/
 
@@ -18,6 +18,6 @@ PKGCONFIG_OVERRIDE=	gtkspell-2.0.pc.in
 CONFIGURE_ARGS+=	--disable-gtk-doc
 
 .include "../../devel/pango/buildlink3.mk"
-.include "../../textproc/enchant/buildlink3.mk"
+.include "../../textproc/enchant2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
