@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.64 2019/07/01 04:08:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.65 2019/07/13 00:24:21 gutteridge Exp $
 
-PKGREVISION= 1
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	0.2.4
+VERSION=	0.2.5
 DISTNAME=	tumbler-${VERSION}
 PKGNAME=	xfce4-tumbler-${VERSION}
 CATEGORIES=	x11
@@ -30,9 +29,6 @@ MAKE_DIRS+=	${PKG_SYSCONFDIR}/tumbler
 
 CONF_FILES=	${EGDIR}/tumbler.rc \
 	       	${PKG_SYSCONFDIR}/tumbler/tumbler.rc
-
-INSTALL_UNSTRIPPED=	yes
-CFLAGS+=		-g
 
 .include "options.mk"
 
