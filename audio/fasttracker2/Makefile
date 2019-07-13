@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2019/07/06 16:11:35 fox Exp $
+# $NetBSD: Makefile,v 1.29 2019/07/13 21:39:34 fox Exp $
 
 DISTNAME=	ft2clone-${DISTVERSION}-code
 PKGNAME=	fasttracker2-${DISTVERSION:C/b/2./}
-DISTVERSION=	b161
+DISTVERSION=	b162
 CATEGORIES=	audio
 MASTER_SITES=	https://16-bits.org/ \
 		${MASTER_SITE_FREEBSD_LOCAL:=ehaupt/}
