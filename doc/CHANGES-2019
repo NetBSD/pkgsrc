@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2896 2019/07/13 09:58:52 wiedi Exp $
+$NetBSD: CHANGES-2019,v 1.2897 2019/07/13 14:28:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4796,3 +4796,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-flask to 1.1.1 [adam 2019-07-13]
 	Updated archivers/py-zipp to 0.5.2 [adam 2019-07-13]
 	Updated editors/nano to 4.3 [wiedi 2019-07-13]
+	Updated databases/ruby-sequel to 5.22.0 [taca 2019-07-13]
