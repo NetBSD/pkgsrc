@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q2,v 1.1.2.3 2019/07/06 19:07:59 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q2,v 1.1.2.4 2019/07/13 11:29:06 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q2 branch:
 
@@ -22,4 +22,29 @@ www/php-glpi: security fix
 
 Pullup ticket #5989 - requested by leot
 print/mupdf: security fix
+
+Pullup ticket #5990 - requested by nia
+graphics/SDL2_image: security fix
+
+Pullup ticket #5991 - requested by nia
+security/libtomcrypt: security fix
+
+Pullup ticket #5992 - requested by nia
+lang/npm: build fix
+
+Pullup ticket #5993 - requested by he
+lang/clisp: build fix
+
+Pullup ticket #5994 - requested by schmonz
+net/fehqlibs: bugfix
+net/djbdnscurve6, net/ucspi-ssl, net/ucspi-tcp6: bump revision
+
+Pullup ticket #5995 - requested by nia
+audio/libmad: security fix
+
+Pullup ticket #5996 - requested by nia
+audio/faad2: security fix
+
+Pullup ticket #5997 - requested by taca
+fonts/ricty-ttf: build fix
 
