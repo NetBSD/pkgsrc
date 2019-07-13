@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/06/01 19:53:19 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/07/13 00:40:21 gutteridge Exp $
 lib/xfce4/panel/plugins/libcpugraph.la
 share/icons/hicolor/16x16/apps/xfce4-cpugraph-plugin.png
 share/icons/hicolor/22x22/apps/xfce4-cpugraph-plugin.png
@@ -23,6 +23,7 @@ share/locale/he/LC_MESSAGES/xfce4-cpugraph-plugin.mo
 share/locale/hr/LC_MESSAGES/xfce4-cpugraph-plugin.mo
 share/locale/hu/LC_MESSAGES/xfce4-cpugraph-plugin.mo
 share/locale/id/LC_MESSAGES/xfce4-cpugraph-plugin.mo
+share/locale/ie/LC_MESSAGES/xfce4-cpugraph-plugin.mo
 share/locale/is/LC_MESSAGES/xfce4-cpugraph-plugin.mo
 share/locale/it/LC_MESSAGES/xfce4-cpugraph-plugin.mo
 share/locale/ja/LC_MESSAGES/xfce4-cpugraph-plugin.mo
