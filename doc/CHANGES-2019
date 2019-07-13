@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2900 2019/07/13 15:59:54 taca Exp $
+$NetBSD: CHANGES-2019,v 1.2901 2019/07/13 16:04:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4800,3 +4800,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/gtkspell to 2.0.16nb30 [wiz 2019-07-13]
 	Updated textproc/py-enchant to 1.6.11nb1 [wiz 2019-07-13]
 	Updated databases/ruby-hiera to 3.5.0 [taca 2019-07-13]
+	Updated databases/ruby-arel-helpers to 2.9.1 [taca 2019-07-13]
