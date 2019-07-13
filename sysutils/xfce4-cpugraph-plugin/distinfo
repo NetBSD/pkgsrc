@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.13 2019/06/01 19:53:19 gutteridge Exp $
+$NetBSD: distinfo,v 1.14 2019/07/13 00:40:21 gutteridge Exp $
 
-SHA1 (xfce4-cpugraph-plugin-1.0.90.tar.bz2) = 7963b0cd4070cf7433e97fbebc47212306854669
-RMD160 (xfce4-cpugraph-plugin-1.0.90.tar.bz2) = d75e133273c62d995bdab4fb10189a102bcc9992
-SHA512 (xfce4-cpugraph-plugin-1.0.90.tar.bz2) = 7f2be5b41948ba4c730e6fd58038e96044ef8d007ae55f107a434308bfffc99071706c92854e41a589a807913fb98b9b216c141fc1d37c744275d5a3944aee09
-Size (xfce4-cpugraph-plugin-1.0.90.tar.bz2) = 386127 bytes
-SHA1 (patch-panel-plugin_os.c) = 300d2addff16a8d498e258f427ca9c1d2fe54d44
+SHA1 (xfce4-cpugraph-plugin-1.1.0.tar.bz2) = 4f712fe055d259ced8d279bad631743a065653d1
+RMD160 (xfce4-cpugraph-plugin-1.1.0.tar.bz2) = 8b8be46cef88fafd99df5dc212c44d7cec2e6bf8
+SHA512 (xfce4-cpugraph-plugin-1.1.0.tar.bz2) = c928baac776517da8929b8ce3842be7e02a2b3394b7cc848028d1720ca611e1aa4ef706bd00736fecfed0b3b2d0cce94c09b0f905a226db5e50c036dabb8df2a
+Size (xfce4-cpugraph-plugin-1.1.0.tar.bz2) = 391629 bytes
+SHA1 (patch-panel-plugin_os.c) = 45c85bd846d5e8d1d7ad82f803c928306a60f1f5
