@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2015/11/21 09:33:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/07/13 16:19:27 bsiegert Exp $
 include/microhttpd.h
 info/libmicrohttpd-tutorial.info
 info/libmicrohttpd.info
+info/libmicrohttpd_performance_data.png
 lib/libmicrohttpd.la
 lib/pkgconfig/libmicrohttpd.pc
 man/man3/libmicrohttpd.3
