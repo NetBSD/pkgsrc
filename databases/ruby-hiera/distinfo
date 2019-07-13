@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2018/09/23 13:50:46 taca Exp $
+$NetBSD: distinfo,v 1.12 2019/07/13 15:59:26 taca Exp $
 
-SHA1 (hiera-3.4.5.gem) = 0bb6eb47f094267a1050bc0e056b1b8f4d507eb2
-RMD160 (hiera-3.4.5.gem) = 82bd326bc875095b7751afc5d73a6c29a46089c0
-SHA512 (hiera-3.4.5.gem) = 0bf739cbbba49534b3147623e2aaf3513e0bff65a74441668a44cbad0e436abdb6033e25dfd13b2d5bdbf560127f891997c270f314e9f08efde4c1e95bd9dc6d
-Size (hiera-3.4.5.gem) = 41472 bytes
+SHA1 (hiera-3.5.0.gem) = 0ba1c4c55116c2d763815f05fa68376706ed3e41
+RMD160 (hiera-3.5.0.gem) = b9a42dd2045378c3384565a5b86f0bd97305e440
+SHA512 (hiera-3.5.0.gem) = b9cdff688829fd8f124011abb4a43640a7531567a678c116e40259e1d110fd20dc7d2ac1711264f4ea61f2728f93027d65df25d5d4d8c339e465010ba2a269bf
+Size (hiera-3.5.0.gem) = 40960 bytes
