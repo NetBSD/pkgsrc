@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.16 2019/01/18 13:27:09 youri Exp $
+# $NetBSD: Makefile,v 1.17 2019/07/13 00:00:56 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	garcon-0.6.2
-PKGNAME=	xfce4-garcon-0.6.2
+VERSION=	0.6.3
+DISTNAME=	garcon-${VERSION}
+PKGNAME=	xfce4-garcon-${VERSION}
 CATEGORIES=	x11
-MASTER_SITES=	http://archive.xfce.org/src/xfce/garcon/0.6/
+MASTER_SITES=	http://archive.xfce.org/src/xfce/garcon/${VERSION:R}/
 
 HOMEPAGE=	https://wiki.xfce.org/dev/garcon
 COMMENT=	Xfce menu library
