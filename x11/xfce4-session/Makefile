@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.73 2019/07/13 00:21:07 gutteridge Exp $
+# $NetBSD: Makefile,v 1.74 2019/07/13 22:36:05 rillig Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=		xfce4-session-4.13.3
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES+=		http://archive.xfce.org/src/xfce/xfce4-session/4.13/
 
@@ -40,7 +41,7 @@ CONF_FILES=	${EGDIR}/autostart/xscreensaver.desktop					\
 		${EGDIR}/xinitrc							\
 		${PKG_SYSCONFDIR}/xfce4/xinitrc
 
-.if !empty(Darwin-*-*)
+.if ${OPSYS} == Darwin
 .include "../../sysutils/consolekit/buildlink3.mk"
 .endif
 
