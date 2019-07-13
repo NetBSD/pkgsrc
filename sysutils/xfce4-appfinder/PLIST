@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2019/05/23 02:41:54 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.15 2019/07/13 00:36:30 gutteridge Exp $
 bin/xfce4-appfinder
 bin/xfrun4
 share/applications/xfce4-appfinder.desktop
@@ -26,6 +26,7 @@ share/locale/gl/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/he/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/hr/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/hu/LC_MESSAGES/xfce4-appfinder.mo
+share/locale/hy_AM/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/id/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/ie/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/is/LC_MESSAGES/xfce4-appfinder.mo
