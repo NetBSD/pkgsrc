@@ -556,7 +556,7 @@ func (scc *SimpleCommandChecker) handleCommandVariable() bool {
 	}
 
 	shellword := scc.strcmd.Name
-	varuse := NewMkParser(nil, shellword, false).VarUse()
+	varuse := NewMkParser(nil, shellword).VarUse()
 	if varuse == nil {
 		return false
 	}
@@ -701,7 +701,15 @@ func (scc *SimpleCommandChecker) checkAutoMkdirs() {
 		// TODO: Replace regex with proper VarUse.
 		if !contains(arg, "$$") && !matches(arg, `\$\{[_.]*[a-z]`) {
 			if m, dirname := match1(arg, `^(?:\$\{DESTDIR\})?\$\{PREFIX(?:|:Q)\}/(.*)`); m {
-				if G.Pkg != nil && G.Pkg.Plist.Dirs[dirname] {
+				autoMkdirs := false
+				if G.Pkg != nil {
+					plistLine := G.Pkg.Plist.Dirs[dirname]
+					if plistLine != nil && !containsVarRef(plistLine.Text) {
+						autoMkdirs = true
+					}
+				}
+
+				if autoMkdirs {
 					scc.Notef("You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= %s\" instead of %q.", dirname, cmdname)
 					scc.Explain(
 						"Many packages include a list of all needed directories in their",
@@ -978,7 +986,7 @@ func (spc *ShellProgramChecker) checkSetE(list *MkShList, index int, andor *MkSh
 	}
 
 	line := spc.mkline.Line
-	if !line.FirstTime("switch to set -e") {
+	if !line.once.FirstTime("switch to set -e") {
 		return
 	}
 

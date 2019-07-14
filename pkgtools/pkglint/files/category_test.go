@@ -208,18 +208,12 @@ func (s *Suite) Test_CheckdirCategory__recursive(c *check.C) {
 	// It is only removed in Pkglint.Main, therefore it stays there even
 	// after the call to CheckdirCategory. This is a bit unrealistic,
 	// but close enough for this test.
-	t.Check(
-		G.Todo,
-		deepEquals,
-		[]string{"."})
+	t.CheckDeepEquals(G.Todo, []string{"."})
 
 	CheckdirCategory(".")
 
 	t.CheckOutputEmpty()
-	t.Check(
-		G.Todo,
-		deepEquals,
-		[]string{"./package", "."})
+	t.CheckDeepEquals(G.Todo, []string{"./package", "."})
 }
 
 // Ensures that a directory in the file system can be added at the very

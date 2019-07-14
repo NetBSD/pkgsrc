@@ -372,7 +372,7 @@ func (src *Pkgsrc) loadUntypedVars() {
 
 	handleMkFile := func(path string) {
 		mklines := LoadMk(path, MustSucceed)
-		mklines.collectDefinedVariables()
+		mklines.collectVariables()
 		mklines.collectUsedVariables()
 		for varname, mkline := range mklines.vars.firstDef {
 			define(varnameCanon(varname), mkline)
@@ -484,7 +484,7 @@ func (*Pkgsrc) parseDocChange(line *Line, warn bool) *Change {
 			Location: line.Location,
 			Action:   action,
 			Pkgpath:  intern(pkgpath),
-			target:   intern(ifelseStr(n == 6, f[3], "")),
+			target:   intern(condStr(n == 6, f[3], "")),
 			Author:   intern(author),
 			Date:     intern(date),
 		}
@@ -627,13 +627,7 @@ func (src *Pkgsrc) checkRemovedAfterLastFreeze() {
 		}
 	}
 
-	sort.Slice(wrong, func(i, j int) bool {
-		ei, ej := wrong[i], wrong[j]
-		if ei.Date != ej.Date {
-			return ei.Date < ej.Date
-		}
-		return ei.Location.firstLine < ej.Location.firstLine
-	})
+	sort.Slice(wrong, func(i, j int) bool { return wrong[i].Above(wrong[j]) })
 
 	for _, change := range wrong {
 		// It's a bit cheated to construct a Line from only a Location,
@@ -648,7 +642,7 @@ func (src *Pkgsrc) loadUserDefinedVars() {
 	mklines := src.LoadMk("mk/defaults/mk.conf", MustSucceed|NotEmpty)
 
 	for _, mkline := range mklines.mklines {
-		if mkline.IsVarassign() || mkline.IsCommentedVarassign() {
+		if mkline.IsVarassignMaybeCommented() {
 			src.UserDefinedVars.Define(mkline.Varname(), mkline)
 		}
 	}
@@ -1068,6 +1062,13 @@ func (ch *Change) Target() string {
 func (ch *Change) Successor() string {
 	assert(ch.Action == Removed)
 	return ch.target
+}
+
+func (ch *Change) Above(other *Change) bool {
+	if ch.Date != other.Date {
+		return ch.Date < other.Date
+	}
+	return ch.Location.firstLine < other.Location.firstLine
 }
 
 type ChangeAction uint8

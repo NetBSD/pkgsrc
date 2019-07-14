@@ -10,24 +10,28 @@ import (
 // Suppressing duplicate messages or filtering messages happens
 // in other methods of the Logger, namely Relevant, FirstTime, Diag.
 func (s *Suite) Test_Logger_Logf(c *check.C) {
+	t := s.Init(c)
+
 	var sw strings.Builder
 	logger := Logger{out: NewSeparatorWriter(&sw)}
 
 	logger.Logf(Error, "filename", "3", "Blue should be %s.", "Blue should be orange.")
 
-	c.Check(sw.String(), equals, ""+
+	t.CheckEquals(sw.String(), ""+
 		"ERROR: filename:3: Blue should be orange.\n")
 }
 
 // Logf doesn't filter duplicates, but Diag does.
 func (s *Suite) Test_Logger_Logf__duplicates(c *check.C) {
+	t := s.Init(c)
+
 	var sw strings.Builder
 	logger := Logger{out: NewSeparatorWriter(&sw)}
 
 	logger.Logf(Error, "filename", "3", "Blue should be %s.", "Blue should be orange.")
 	logger.Logf(Error, "filename", "3", "Blue should be %s.", "Blue should be orange.")
 
-	c.Check(sw.String(), equals, ""+
+	t.CheckEquals(sw.String(), ""+
 		"ERROR: filename:3: Blue should be orange.\n"+
 		"ERROR: filename:3: Blue should be orange.\n")
 }
@@ -46,7 +50,7 @@ func (s *Suite) Test_Logger_Logf__mixed_with_Diag(c *check.C) {
 	logger.Diag(line, Error, "Diag %s.", "1") // Duplicate, therefore suppressed
 	logger.Logf(Error, "filename", "3", "Logf output 3.", "Logf output 3.")
 
-	c.Check(sw.String(), equals, ""+
+	t.CheckEquals(sw.String(), ""+
 		"ERROR: filename:3: Logf output 1.\n"+
 		"ERROR: filename:3: Diag 1.\n"+
 		"ERROR: filename:3: Logf output 2.\n"+
@@ -54,6 +58,8 @@ func (s *Suite) Test_Logger_Logf__mixed_with_Diag(c *check.C) {
 }
 
 func (s *Suite) Test_Logger_Logf__production(c *check.C) {
+	t := s.Init(c)
+
 	var sw strings.Builder
 	logger := Logger{out: NewSeparatorWriter(&sw)}
 
@@ -63,7 +69,7 @@ func (s *Suite) Test_Logger_Logf__production(c *check.C) {
 	G.Testing = false
 	logger.Logf(Error, "filename", "3", "diagnostic", "message")
 
-	c.Check(sw.String(), equals, ""+
+	t.CheckEquals(sw.String(), ""+
 		"ERROR: filename:3: message\n")
 }
 
@@ -125,7 +131,7 @@ func (s *Suite) Test_Logger_Diag__duplicates(c *check.C) {
 	logger.Diag(line, Error, "Blue should be %s.", "orange")
 	logger.Diag(line, Error, "Blue should be %s.", "orange")
 
-	c.Check(sw.String(), equals, ""+
+	t.CheckEquals(sw.String(), ""+
 		"ERROR: filename:3: Blue should be orange.\n")
 }
 
@@ -153,7 +159,7 @@ func (s *Suite) Test_Logger_Diag__explanation(c *check.C) {
 	logger.Explain(
 		"The colors have further changed.")
 
-	c.Check(sw.String(), equals, ""+
+	t.CheckEquals(sw.String(), ""+
 		"ERROR: filename:3: Blue should be orange.\n"+
 		"\n"+
 		"\tThe colors have changed.\n"+
@@ -453,7 +459,7 @@ func (s *Suite) Test_Logger_ShowSummary__explanations_with_only(c *check.C) {
 	// adding --explain to the options would not show any explanation.
 	// Therefore, "Run \"pkglint -e\"" is not advertised in this case,
 	// but see below.
-	c.Check(G.Logger.explanationsAvailable, equals, false)
+	t.CheckEquals(G.Logger.explanationsAvailable, false)
 	t.CheckOutputLines(
 		"Looks fine.")
 
@@ -461,10 +467,10 @@ func (s *Suite) Test_Logger_ShowSummary__explanations_with_only(c *check.C) {
 	line.Explain("This explanation is available.")
 	G.Logger.ShowSummary()
 
-	c.Check(G.Logger.explanationsAvailable, equals, true)
+	t.CheckEquals(G.Logger.explanationsAvailable, true)
 	t.CheckOutputLines(
 		"WARN: Makefile:27: This warning is interesting.",
-		"0 errors and 1 warning found.",
+		"1 warning found.",
 		"(Run \"pkglint -e\" to show explanations.)")
 }
 
@@ -553,7 +559,7 @@ func (s *Suite) Test_Logger_ShowSummary__explanations_available(c *check.C) {
 
 	t.CheckOutputLines(
 		"ERROR: .",
-		"1 error and 0 warnings found.",
+		"1 error found.",
 		"(Run \"pkglint -e\" to show explanations.)")
 }
 
@@ -572,7 +578,7 @@ func (s *Suite) Test_Logger_ShowSummary__explanations_available_in_explain_mode(
 
 	t.CheckOutputLines(
 		"ERROR: .",
-		"1 error and 0 warnings found.")
+		"1 error found.")
 }
 
 func (s *Suite) Test_Logger_ShowSummary__autofix_available(c *check.C) {
@@ -802,7 +808,7 @@ func (s *Suite) Test_Logger_Diag__source_duplicates(c *check.C) {
 			"Patch \"../../category/dependency/patches/patch-aa\" is not recorded. "+
 			"Run \""+confMake+" makepatchsum\".",
 		"",
-		"3 errors and 0 warnings found.",
+		"3 errors found.",
 		"(Run \"pkglint -e\" to show explanations.)")
 }
 
@@ -811,17 +817,17 @@ func (s *Suite) Test_Logger_shallBeLogged(c *check.C) {
 
 	t.SetUpCommandLine( /* none */ )
 
-	c.Check(G.Logger.shallBeLogged("Options should not contain whitespace."), equals, true)
+	t.CheckEquals(G.Logger.shallBeLogged("Options should not contain whitespace."), true)
 
 	t.SetUpCommandLine("--only", "whitespace")
 
-	c.Check(G.Logger.shallBeLogged("Options should not contain whitespace."), equals, true)
-	c.Check(G.Logger.shallBeLogged("Options should not contain space."), equals, false)
+	t.CheckEquals(G.Logger.shallBeLogged("Options should not contain whitespace."), true)
+	t.CheckEquals(G.Logger.shallBeLogged("Options should not contain space."), false)
 
 	t.SetUpCommandLine( /* none again */ )
 
-	c.Check(G.Logger.shallBeLogged("Options should not contain whitespace."), equals, true)
-	c.Check(G.Logger.shallBeLogged("Options should not contain space."), equals, true)
+	t.CheckEquals(G.Logger.shallBeLogged("Options should not contain whitespace."), true)
+	t.CheckEquals(G.Logger.shallBeLogged("Options should not contain space."), true)
 }
 
 // Even if verbose logging is disabled, the "Replacing" diagnostics
@@ -852,57 +858,63 @@ func (s *Suite) Test_Logger_Logf__panic(c *check.C) {
 }
 
 func (s *Suite) Test_SeparatorWriter(c *check.C) {
+	t := s.Init(c)
+
 	var sb strings.Builder
 	wr := NewSeparatorWriter(&sb)
 
 	wr.WriteLine("a")
 	wr.WriteLine("b")
 
-	c.Check(sb.String(), equals, "a\nb\n")
+	t.CheckEquals(sb.String(), "a\nb\n")
 
 	wr.Separate()
 
-	c.Check(sb.String(), equals, "a\nb\n")
+	t.CheckEquals(sb.String(), "a\nb\n")
 
 	wr.WriteLine("c")
 
-	c.Check(sb.String(), equals, "a\nb\n\nc\n")
+	t.CheckEquals(sb.String(), "a\nb\n\nc\n")
 }
 
 func (s *Suite) Test_SeparatorWriter_Flush(c *check.C) {
+	t := s.Init(c)
+
 	var sb strings.Builder
 	wr := NewSeparatorWriter(&sb)
 
 	wr.Write("a")
 	wr.Write("b")
 
-	c.Check(sb.String(), equals, "")
+	t.CheckEquals(sb.String(), "")
 
 	wr.Flush()
 
-	c.Check(sb.String(), equals, "ab")
+	t.CheckEquals(sb.String(), "ab")
 
 	wr.Separate()
 
 	// The current line is terminated immediately by the above Separate(),
 	// but the empty line for separating two paragraphs is kept in mind.
 	// It will be added later, before the next non-newline character.
-	c.Check(sb.String(), equals, "ab\n")
+	t.CheckEquals(sb.String(), "ab\n")
 
 	wr.Write("c")
 	wr.Flush()
 
-	c.Check(sb.String(), equals, "ab\n\nc")
+	t.CheckEquals(sb.String(), "ab\n\nc")
 }
 
 func (s *Suite) Test_SeparatorWriter_Separate(c *check.C) {
+	t := s.Init(c)
+
 	var sb strings.Builder
 	wr := NewSeparatorWriter(&sb)
 
 	wr.WriteLine("a")
 	wr.Separate()
 
-	c.Check(sb.String(), equals, "a\n")
+	t.CheckEquals(sb.String(), "a\n")
 
 	// The call to Separate had requested an empty line. That empty line
 	// can either be given explicitly (like here), or it will be written
@@ -910,10 +922,10 @@ func (s *Suite) Test_SeparatorWriter_Separate(c *check.C) {
 	wr.WriteLine("")
 	wr.Separate()
 
-	c.Check(sb.String(), equals, "a\n\n")
+	t.CheckEquals(sb.String(), "a\n\n")
 
 	wr.WriteLine("c")
 	wr.Separate()
 
-	c.Check(sb.String(), equals, "a\n\nc\n")
+	t.CheckEquals(sb.String(), "a\n\nc\n")
 }

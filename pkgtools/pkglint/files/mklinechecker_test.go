@@ -603,9 +603,9 @@ func (s *Suite) Test_MkLineChecker_checkVartype__simple_type(c *check.C) {
 	vartype := G.Pkgsrc.VariableType(nil, "COMMENT")
 
 	c.Assert(vartype, check.NotNil)
-	c.Check(vartype.basicType.name, equals, "Comment")
-	c.Check(vartype.Guessed(), equals, false)
-	c.Check(vartype.List(), equals, false)
+	t.CheckEquals(vartype.basicType.name, "Comment")
+	t.CheckEquals(vartype.Guessed(), false)
+	t.CheckEquals(vartype.List(), false)
 
 	mklines := t.NewMkLines("Makefile",
 		MkCvsID,
@@ -779,37 +779,106 @@ func (s *Suite) Test_MkLineChecker_checkDirectiveCond(c *check.C) {
 			"} for MACHINE_ARCH.",
 		"NOTE: filename.mk:1: MACHINE_ARCH should be compared using == instead of matching against \":Mx86\".")
 
+	// Doesn't occur in practice since it is surprising that the ! applies
+	// to the comparison operator, and not to one of its arguments.
+	test(".if !${VAR} == value",
+		"WARN: filename.mk:1: VAR is used but not defined.")
+
+	// Doesn't occur in practice since this string can never be empty.
+	test(".if !\"${VAR}str\"",
+		"WARN: filename.mk:1: VAR is used but not defined.")
+
+	// Doesn't occur in practice since !${VAR} && !${VAR2} is more idiomatic.
+	test(".if !\"${VAR}${VAR2}\"",
+		"WARN: filename.mk:1: VAR is used but not defined.",
+		"WARN: filename.mk:1: VAR2 is used but not defined.")
+
+	// Just for code coverage; always evaluates to true.
+	test(".if \"string\"",
+		nil...)
+
+	// Code coverage for checkVar.
+	test(".if ${OPSYS} || ${MACHINE_ARCH}",
+		nil...)
+
+	test(".if ${VAR}",
+		"WARN: filename.mk:1: VAR is used but not defined.")
+
+	test(".if ${VAR} == 3",
+		"WARN: filename.mk:1: VAR is used but not defined.")
+
+	test(".if \"value\" == ${VAR}",
+		"WARN: filename.mk:1: VAR is used but not defined.")
+
 	test(".if ${MASTER_SITES:Mftp://*} == \"ftp://netbsd.org/\"",
 		"WARN: filename.mk:1: Invalid variable modifier \"//*\" for \"MASTER_SITES\".",
 		"WARN: filename.mk:1: \"ftp\" is not a valid URL.",
 		"WARN: filename.mk:1: MASTER_SITES should not be used at load time in any file.",
 		"WARN: filename.mk:1: Invalid variable modifier \"//*\" for \"MASTER_SITES\".")
+}
 
-	// The only interesting line from the below tracing output is the one
-	// containing "checkCompareVarStr".
+func (s *Suite) Test_MkLineChecker_checkDirectiveCondCompare(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+
+	test := func(cond string, output ...string) {
+		mklines := t.NewMkLines("filename.mk",
+			cond)
+		mklines.ForEach(func(mkline *MkLine) {
+			MkLineChecker{mklines, mkline}.checkDirectiveCond()
+		})
+		t.CheckOutput(output)
+	}
+
+	// As of July 2019, pkglint doesn't have specific checks for comparing
+	// variables to numbers.
+	test(".if ${VAR} > 0",
+		"WARN: filename.mk:1: VAR is used but not defined.")
+
+	// For string comparisons, the checks from vartypecheck.go are
+	// performed.
+	test(".if ${DISTNAME} == \"<>\"",
+		"WARN: filename.mk:1: The filename \"<>\" contains the invalid characters \"<>\".",
+		"WARN: filename.mk:1: DISTNAME should not be used at load time in any file.")
+
+	// This type of comparison doesn't occur in practice since it is
+	// overly verbose.
+	test(".if \"${BUILD_DIRS}str\" == \"str\"",
+		// TODO: why should it not be used? In a .for loop it sounds pretty normal.
+		"WARN: filename.mk:1: BUILD_DIRS should not be used at load time in any file.")
+
+	// This is a shorthand for defined(VAR), but it is not used in practice.
+	test(".if VAR",
+		"WARN: filename.mk:1: Invalid condition, unrecognized part: \"VAR\".")
+
+	// Calling a function with braces instead of parentheses is syntactically
+	// invalid. Pkglint is stricter than bmake in this situation.
+	//
+	// Bmake reads the "empty{VAR}" as a variable name. It then checks whether
+	// this variable is defined. It is not, of course, therefore the expression
+	// is false. The ! in front of it negates this false, which makes the whole
+	// condition true.
+	//
+	// See https://mail-index.netbsd.org/tech-pkg/2019/07/07/msg021539.html
+	test(".if !empty{VAR}",
+		"WARN: filename.mk:1: Invalid condition, unrecognized part: \"empty{VAR}\".")
+}
+
+func (s *Suite) Test_MkLineChecker_checkDirectiveCond__tracing(c *check.C) {
+	t := s.Init(c)
+
 	t.EnableTracingToLog()
-	test(".if ${VAR:Mpattern1:Mpattern2} == comparison",
-		"TRACE:   Indentation before line 1: []",
-		"TRACE: + MkLineChecker.checkDirectiveCond(\"${VAR:Mpattern1:Mpattern2} == comparison\")",
-		"TRACE: 1 + (*MkParser).mkCondAtom(\"${VAR:Mpattern1:Mpattern2} == comparison\")",
-		"TRACE: 1 - (*MkParser).mkCondAtom(\"${VAR:Mpattern1:Mpattern2} == comparison\")",
+	mklines := t.NewMkLines("filename.mk",
+		".if ${VAR:Mpattern1:Mpattern2} == comparison")
+
+	mklines.ForEach(func(mkline *MkLine) {
+		MkLineChecker{mklines, mkline}.checkDirectiveCond()
+	})
+
+	t.CheckOutputLinesMatching(`^WARN|checkCompare`,
 		"TRACE: 1   checkCompareVarStr ${VAR:Mpattern1:Mpattern2} == comparison",
-		"TRACE: 1 + MkLineChecker.CheckVaruse(filename.mk:1, ${VAR:Mpattern1:Mpattern2}, (no-type time:load quoting:plain wordpart:false))",
-		"TRACE: 1 2 + (*Pkgsrc).VariableType(\"VAR\")",
-		"TRACE: 1 2 3   No type definition found for \"VAR\".",
-		"TRACE: 1 2 - (*Pkgsrc).VariableType(\"VAR\", \"=>\", (*pkglint.Vartype)(nil))",
-		"WARN: filename.mk:1: VAR is used but not defined.",
-		"TRACE: 1 2 + MkLineChecker.checkVarusePermissions(\"VAR\", (no-type time:load quoting:plain wordpart:false))",
-		"TRACE: 1 2 3   No type definition found for \"VAR\".",
-		"TRACE: 1 2 - MkLineChecker.checkVarusePermissions(\"VAR\", (no-type time:load quoting:plain wordpart:false))",
-		"TRACE: 1 2 + (*MkLine).VariableNeedsQuoting(${VAR:Mpattern1:Mpattern2}, (*pkglint.Vartype)(nil), (no-type time:load quoting:plain wordpart:false))",
-		"TRACE: 1 2 - (*MkLine).VariableNeedsQuoting(${VAR:Mpattern1:Mpattern2}, (*pkglint.Vartype)(nil), (no-type time:load quoting:plain wordpart:false), \"=>\", unknown)",
-		"TRACE: 1 - MkLineChecker.CheckVaruse(filename.mk:1, ${VAR:Mpattern1:Mpattern2}, (no-type time:load quoting:plain wordpart:false))",
-		"TRACE: - MkLineChecker.checkDirectiveCond(\"${VAR:Mpattern1:Mpattern2} == comparison\")",
-		"TRACE: + (*MkParser).mkCondAtom(\"${VAR:Mpattern1:Mpattern2} == comparison\")",
-		"TRACE: - (*MkParser).mkCondAtom(\"${VAR:Mpattern1:Mpattern2} == comparison\")",
-		"TRACE:   Indentation after line 1: [2 (VAR)]")
-	t.EnableSilentTracing()
+		"WARN: filename.mk:1: VAR is used but not defined.")
 }
 
 func (s *Suite) Test_MkLineChecker_checkVarassign(c *check.C) {
@@ -1513,15 +1582,15 @@ func (s *Suite) Test_MkLineChecker_warnVarusePermissions__not_directly_and_no_al
 	mklines.Check()
 
 	toolDependsType := G.Pkgsrc.VariableType(nil, "TOOL_DEPENDS")
-	t.Check(toolDependsType.String(), equals, "DependencyWithPath (list, package-settable)")
-	t.Check(toolDependsType.AlternativeFiles(aclpAppend), equals, "Makefile, Makefile.* or *.mk")
-	t.Check(toolDependsType.AlternativeFiles(aclpUse), equals, "Makefile, Makefile.* or *.mk")
-	t.Check(toolDependsType.AlternativeFiles(aclpUseLoadtime), equals, "")
+	t.CheckEquals(toolDependsType.String(), "DependencyWithPath (list, package-settable)")
+	t.CheckEquals(toolDependsType.AlternativeFiles(aclpAppend), "Makefile, Makefile.* or *.mk")
+	t.CheckEquals(toolDependsType.AlternativeFiles(aclpUse), "Makefile, Makefile.* or *.mk")
+	t.CheckEquals(toolDependsType.AlternativeFiles(aclpUseLoadtime), "")
 
 	apiDependsType := G.Pkgsrc.VariableType(nil, "BUILDLINK_API_DEPENDS.*")
-	t.Check(apiDependsType.String(), equals, "Dependency (list, package-settable)")
-	t.Check(apiDependsType.AlternativeFiles(aclpUse), equals, "")
-	t.Check(apiDependsType.AlternativeFiles(aclpUseLoadtime), equals, "buildlink3.mk or builtin.mk only")
+	t.CheckEquals(apiDependsType.String(), "Dependency (list, package-settable)")
+	t.CheckEquals(apiDependsType.AlternativeFiles(aclpUse), "")
+	t.CheckEquals(apiDependsType.AlternativeFiles(aclpUseLoadtime), "buildlink3.mk or builtin.mk only")
 
 	t.CheckOutputLines(
 		"WARN: mk-c.mk:7: BUILDLINK_API_DEPENDS.mk-c should not be used in any file.",
@@ -1785,7 +1854,7 @@ func (s *Suite) Test_MkLineChecker_checkDirectiveCondEmpty(c *check.C) {
 			after := diagnosticsAndAfter[diagLen-1]
 
 			t.CheckOutput(diagnostics)
-			t.Check(afterMklines.mklines[1].Text, equals, after)
+			t.CheckEquals(afterMklines.mklines[1].Text, after)
 		} else {
 			t.CheckOutputEmpty()
 		}
@@ -2020,7 +2089,7 @@ func (s *Suite) Test_MkLineChecker_checkVartype__CFLAGS_with_backticks(c *check.
 
 	words := mkline.Fields()
 
-	c.Check(words, deepEquals, []string{"`pkg-config pidgin --cflags`"})
+	t.CheckDeepEquals(words, []string{"`pkg-config pidgin --cflags`"})
 
 	ck := MkLineChecker{mklines, mklines.mklines[1]}
 	ck.checkVartype("CFLAGS", opAssignAppend, "`pkg-config pidgin --cflags`", "")
@@ -2714,7 +2783,7 @@ func (s *Suite) Test_MkLineChecker_CheckRelativePath(c *check.C) {
 func (s *Suite) Test_MkLineChecker_CheckRelativePath__absolute_path(c *check.C) {
 	t := s.Init(c)
 
-	absDir := ifelseStr(runtime.GOOS == "windows", "C:/", "/")
+	absDir := condStr(runtime.GOOS == "windows", "C:/", "/")
 	// Just a random UUID, to really guarantee that the file does not exist.
 	absPath := absDir + "0f5c2d56-8a7a-4c9d-9caa-859b52bbc8c7"
 

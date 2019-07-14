@@ -17,7 +17,7 @@ func CheckFileAlternatives(filename string) {
 	}
 
 	checkPlistWrapper := func(line *Line, wrapper string) {
-		if plist.Files[wrapper] {
+		if plist.Files[wrapper] != nil {
 			line.Errorf("Alternative wrapper %q must not appear in the PLIST.", wrapper)
 		}
 	}
@@ -25,7 +25,7 @@ func CheckFileAlternatives(filename string) {
 	checkPlistAlternative := func(line *Line, alternative string) {
 		relImplementation := strings.Replace(alternative, "@PREFIX@/", "", 1)
 		plistName := replaceAll(relImplementation, `@(\w+)@`, "${$1}")
-		if plist.Files[plistName] || G.Pkg.vars.Defined("ALTERNATIVES_SRC") {
+		if plist.Files[plistName] != nil || G.Pkg.vars.Defined("ALTERNATIVES_SRC") {
 			return
 		}
 
