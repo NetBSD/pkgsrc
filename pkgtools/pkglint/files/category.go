@@ -64,7 +64,7 @@ func CheckdirCategory(dir string) {
 	for !mlex.EOF() {
 		mkline := mlex.CurrentMkLine()
 
-		if (mkline.IsVarassign() || mkline.IsCommentedVarassign()) && mkline.Varname() == "SUBDIR" {
+		if (mkline.IsVarassignMaybeCommented()) && mkline.Varname() == "SUBDIR" {
 			mlex.Skip()
 
 			name := mkline.Value()

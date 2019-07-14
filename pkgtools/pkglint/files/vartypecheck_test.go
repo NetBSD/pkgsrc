@@ -689,6 +689,18 @@ func (s *Suite) Test_VartypeCheck_Homepage(c *check.C) {
 	vt.Output(
 		"WARN: filename.mk:31: HOMEPAGE should not be defined in terms of MASTER_SITEs.")
 
+	delete(G.Pkg.vars.firstDef, "MASTER_SITES")
+	delete(G.Pkg.vars.lastDef, "MASTER_SITES")
+	G.Pkg.vars.Define("MASTER_SITES", t.NewMkLine(G.Pkg.File("Makefile"), 5,
+		"MASTER_SITES=\t# none"))
+
+	vt.Values(
+		"${MASTER_SITES}")
+
+	// When MASTER_SITES is empty, pkglint cannot extract the first of the URLs
+	// for using it in the HOMEPAGE.
+	vt.Output(
+		"WARN: filename.mk:41: HOMEPAGE should not be defined in terms of MASTER_SITEs.")
 }
 
 func (s *Suite) Test_VartypeCheck_Identifier(c *check.C) {
@@ -791,7 +803,7 @@ func (s *Suite) Test_VartypeCheck_License(c *check.C) {
 		MkCvsID,
 		"PERL5_LICENSE= gnu-gpl-v2 OR artistic")
 	// Also registers the PERL5_LICENSE variable in the package.
-	mklines.collectDefinedVariables()
+	mklines.collectVariables()
 
 	vt := NewVartypeCheckTester(t, (*VartypeCheck).License)
 
@@ -1610,7 +1622,7 @@ func (vt *VartypeCheckTester) Values(values ...string) {
 			panic("Invalid operator: " + opStr)
 		}
 
-		space := ifelseStr(hasSuffix(varname, "+") && opStr == "=", " ", "")
+		space := condStr(hasSuffix(varname, "+") && opStr == "=", " ", "")
 		return varname + space + opStr + value
 	}
 

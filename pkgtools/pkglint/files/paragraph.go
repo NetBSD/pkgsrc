@@ -62,8 +62,8 @@ func (p *Paragraph) AlignTo(column int) {
 			return
 		}
 
-		trimmed := strings.TrimRightFunc(align, isHspaceRune)
-		newSpace := strings.Repeat("\t", (7+column-tabWidth(trimmed))/8)
+		trimmed := rtrimHspace(align)
+		newSpace := alignmentAfter(trimmed, column)
 
 		fix := mkline.Autofix()
 		fix.Notef(SilentAutofixFormat)
