@@ -8,8 +8,8 @@ func (s *Suite) Test_VarTypeRegistry_Init(c *check.C) {
 	src := NewPkgsrc(t.File("."))
 	src.vartypes.Init(&src)
 
-	c.Check(src.vartypes.Canon("BSD_MAKE_ENV").basicType.name, equals, "ShellWord")
-	c.Check(src.vartypes.Canon("USE_BUILTIN.*").basicType.name, equals, "YesNoIndirectly")
+	t.CheckEquals(src.vartypes.Canon("BSD_MAKE_ENV").basicType.name, "ShellWord")
+	t.CheckEquals(src.vartypes.Canon("USE_BUILTIN.*").basicType.name, "YesNoIndirectly")
 }
 
 func (s *Suite) Test_VarTypeRegistry_enumFrom(c *check.C) {
@@ -49,7 +49,7 @@ func (s *Suite) Test_VarTypeRegistry_enumFrom(c *check.C) {
 
 	test := func(varname, values string) {
 		vartype := G.Pkgsrc.VariableType(nil, varname).String()
-		c.Check(vartype, equals, values)
+		t.CheckEquals(vartype, values)
 	}
 
 	test("EMACS_VERSIONS_ACCEPTED", "enum: emacs29 emacs31  (list, package-settable)")
@@ -72,9 +72,9 @@ func (s *Suite) Test_VarTypeRegistry_enumFrom__no_tracing(c *check.C) {
 	noAssignmentsType := reg.enumFrom(&G.Pkgsrc, "mk/existing.mk", "defval", "OTHER_VAR")
 	nonexistentType := reg.enumFrom(&G.Pkgsrc, "mk/nonexistent.mk", "defval", "VAR")
 
-	t.Check(existingType.AllowedEnums(), equals, "first second")
-	t.Check(noAssignmentsType.AllowedEnums(), equals, "defval")
-	t.Check(nonexistentType.AllowedEnums(), equals, "defval")
+	t.CheckEquals(existingType.AllowedEnums(), "first second")
+	t.CheckEquals(noAssignmentsType.AllowedEnums(), "defval")
+	t.CheckEquals(nonexistentType.AllowedEnums(), "defval")
 }
 
 func (s *Suite) Test_VarTypeRegistry_enumFromDirs(c *check.C) {
@@ -89,7 +89,7 @@ func (s *Suite) Test_VarTypeRegistry_enumFromDirs(c *check.C) {
 
 	test := func(varname, values string) {
 		vartype := G.Pkgsrc.VariableType(nil, varname).String()
-		c.Check(vartype, equals, values)
+		t.CheckEquals(vartype, values)
 	}
 
 	test("PYPKGPREFIX", "enum: py28 py33  (system-provided)")
@@ -107,7 +107,7 @@ func (s *Suite) Test_VarTypeRegistry_enumFromFiles(c *check.C) {
 
 	test := func(varname, values string) {
 		vartype := G.Pkgsrc.VariableType(nil, varname).String()
-		c.Check(vartype, equals, values)
+		t.CheckEquals(vartype, values)
 	}
 
 	test("OPSYS", "enum: NetBSD SunOS  (system-provided)")
@@ -201,5 +201,5 @@ func (s *Suite) Test_VarTypeRegistry_Init__MASTER_SITES(c *check.C) {
 	t.SetUpVartypes()
 
 	vartype := G.Pkgsrc.VariableType(nil, "MASTER_SITE_GITHUB")
-	t.Check(vartype.String(), equals, "FetchURL (list, system-provided)")
+	t.CheckEquals(vartype.String(), "FetchURL (list, system-provided)")
 }
