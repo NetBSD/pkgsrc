@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2017/05/17 21:58:05 he Exp $
+# $NetBSD: Makefile,v 1.76 2019/07/14 15:39:32 nia Exp $
 
 DISTNAME=	libsndfile-1.0.28
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://www.mega-nerd.com/libsndfile/files/
 
