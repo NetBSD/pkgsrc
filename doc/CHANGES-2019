@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2903 2019/07/13 21:41:37 fox Exp $
+$NetBSD: CHANGES-2019,v 1.2904 2019/07/14 10:59:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4803,3 +4803,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/ruby-arel-helpers to 2.9.1 [taca 2019-07-13]
 	Updated www/libmicrohttpd to 0.9.65 [bsiegert 2019-07-13]
 	Updated audio/fasttracker2 to 2.162 [fox 2019-07-13]
+	Updated devel/py-mercurial to 5.0.2 [wiz 2019-07-14]
