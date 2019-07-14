@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2019/06/04 19:00:09 nia Exp $
+# $NetBSD: Makefile,v 1.80 2019/07/14 14:53:20 wiedi Exp $
 
 DISTNAME=		bitlbee-3.6
 CATEGORIES=		chat
@@ -26,6 +26,7 @@ CONFIGURE_ARGS+=	--pidfile=${VARBASE}/run/bitlbee/pid
 CONFIGURE_ARGS+=	--ipcsocket=${VARBASE}/run/bitlbee/sock
 CONFIGURE_ARGS+=	--flood=0
 CONFIGURE_ARGS+=	--ssl=gnutls
+CONFIGURE_ARGS.SunOS+=	--pie=0
 
 PKG_SYSCONFSUBDIR=	bitlbee
 CONF_FILES=		${DATADIR}/motd.txt ${PKG_SYSCONFDIR}/motd.txt
@@ -50,6 +51,8 @@ PKG_USERS=		${BITLBEE_USER}:${BITLBEE_GROUP}
 PKG_HOME.bitlbee=	${VARBASE}/db/bitlbee
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin
+
+CPPFLAGS.SunOS+=	-Du_int16_t=uint16_t
 
 post-build:
 	cd ${WRKSRC}/doc/user-guide && \
