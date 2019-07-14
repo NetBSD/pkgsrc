@@ -47,6 +47,32 @@ func (s *Suite) Test_CheckFileAlternatives__PLIST(c *check.C) {
 		"AUTOFIX: ALTERNATIVES:4: Replacing \"bin/vim\" with \"@PREFIX@/bin/vim\".")
 }
 
+// A file that is mentioned in the ALTERNATIVES file must appear
+// in the package's PLIST files. It may appear there conditionally,
+// assuming that manual testing will reveal inconsistencies. Or
+// that this scenario is an edge case anyway.
+func (s *Suite) Test_CheckFileAlternatives__PLIST_conditional(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.Chdir("category/package")
+	t.CreateFileLines("ALTERNATIVES",
+		"bin/wrapper1 @PREFIX@/bin/always-exists",
+		"bin/wrapper2 @PREFIX@/bin/conditional",
+		"bin/wrapper3 @PREFIX@/bin/not-found")
+	t.CreateFileLines("PLIST",
+		PlistCvsID,
+		"bin/always-exists",
+		"${PLIST.cond}bin/conditional")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"ERROR: ALTERNATIVES:3: Alternative implementation \"@PREFIX@/bin/not-found\" " +
+			"must appear in the PLIST as \"bin/not-found\".")
+}
+
 func (s *Suite) Test_CheckFileAlternatives__empty(c *check.C) {
 	t := s.Init(c)
 

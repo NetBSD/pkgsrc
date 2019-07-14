@@ -17,9 +17,9 @@ func (s *Suite) Test_MkVarUse_Mod(c *check.C) {
 
 	test := func(varUseText string, mod string) {
 		line := t.NewLine("filename.mk", 123, "")
-		varUse := NewMkParser(line, varUseText, true).VarUse()
+		varUse := NewMkParser(line, varUseText).VarUse()
 		t.CheckOutputEmpty()
-		c.Check(varUse.Mod(), equals, mod)
+		t.CheckEquals(varUse.Mod(), mod)
 	}
 
 	test("${varname:Q}", ":Q")
@@ -41,7 +41,7 @@ func (s *Suite) Test_MkVarUseModifier_ChangesWords(c *check.C) {
 
 	test := func(modifier string, changes bool) {
 		mod := MkVarUseModifier{modifier}
-		t.Check(mod.ChangesWords(), equals, changes)
+		t.CheckEquals(mod.ChangesWords(), changes)
 	}
 
 	test("E", false)
@@ -73,31 +73,35 @@ func (s *Suite) Test_MkVarUseModifier_ChangesWords__empty(c *check.C) {
 	})
 
 	t.CheckOutputEmpty()
-	t.Check(n, equals, 100)
+	t.CheckEquals(n, 100)
 }
 
 func (s *Suite) Test_MkVarUseModifier_MatchSubst(c *check.C) {
+	t := s.Init(c)
+
 	mod := MkVarUseModifier{"S/from/to/1g"}
 
 	ok, regex, from, to, options := mod.MatchSubst()
 
-	c.Check(ok, equals, true)
-	c.Check(regex, equals, false)
-	c.Check(from, equals, "from")
-	c.Check(to, equals, "to")
-	c.Check(options, equals, "1g")
+	t.CheckEquals(ok, true)
+	t.CheckEquals(regex, false)
+	t.CheckEquals(from, "from")
+	t.CheckEquals(to, "to")
+	t.CheckEquals(options, "1g")
 }
 
 func (s *Suite) Test_MkVarUseModifier_MatchSubst__backslash(c *check.C) {
+	t := s.Init(c)
+
 	mod := MkVarUseModifier{"S/\\//\\:/"}
 
 	ok, regex, from, to, options := mod.MatchSubst()
 
-	c.Check(ok, equals, true)
-	c.Check(regex, equals, false)
-	c.Check(from, equals, "\\/")
-	c.Check(to, equals, "\\:")
-	c.Check(options, equals, "")
+	t.CheckEquals(ok, true)
+	t.CheckEquals(regex, false)
+	t.CheckEquals(from, "\\/")
+	t.CheckEquals(to, "\\:")
+	t.CheckEquals(options, "")
 }
 
 // Some pkgsrc users really explore the darkest corners of bmake by using
@@ -107,37 +111,43 @@ func (s *Suite) Test_MkVarUseModifier_MatchSubst__backslash(c *check.C) {
 // Using the backslash as separator means that it cannot be used for anything
 // else, not even for escaping other characters.
 func (s *Suite) Test_MkVarUseModifier_MatchSubst__backslash_as_separator(c *check.C) {
+	t := s.Init(c)
+
 	mod := MkVarUseModifier{"S\\.post1\\\\1"}
 
 	ok, regex, from, to, options := mod.MatchSubst()
 
-	c.Check(ok, equals, true)
-	c.Check(regex, equals, false)
-	c.Check(from, equals, ".post1")
-	c.Check(to, equals, "")
-	c.Check(options, equals, "1")
+	t.CheckEquals(ok, true)
+	t.CheckEquals(regex, false)
+	t.CheckEquals(from, ".post1")
+	t.CheckEquals(to, "")
+	t.CheckEquals(options, "1")
 }
 
 // As of 2019-03-24, pkglint doesn't know how to handle complicated
 // :C modifiers.
 func (s *Suite) Test_MkVarUseModifier_Subst__regexp(c *check.C) {
+	t := s.Init(c)
+
 	mod := MkVarUseModifier{"C,.*,,"}
 
 	empty, ok := mod.Subst("anything")
 
-	c.Check(ok, equals, false)
-	c.Check(empty, equals, "")
+	t.CheckEquals(ok, false)
+	t.CheckEquals(empty, "")
 }
 
 // When given a modifier that is not actually a :S or :C, Subst
 // doesn't do anything.
 func (s *Suite) Test_MkVarUseModifier_Subst__invalid_argument(c *check.C) {
+	t := s.Init(c)
+
 	mod := MkVarUseModifier{"Mpattern"}
 
 	empty, ok := mod.Subst("anything")
 
-	c.Check(ok, equals, false)
-	c.Check(empty, equals, "")
+	t.CheckEquals(ok, false)
+	t.CheckEquals(empty, "")
 }
 
 func (s *Suite) Test_MkVarUseModifier_Subst__no_tracing(c *check.C) {
@@ -148,8 +158,8 @@ func (s *Suite) Test_MkVarUseModifier_Subst__no_tracing(c *check.C) {
 
 	result, ok := mod.Subst("from a to b")
 
-	c.Check(ok, equals, true)
-	c.Check(result, equals, "to a to b")
+	t.CheckEquals(ok, true)
+	t.CheckEquals(result, "to a to b")
 }
 
 // Since the replacement text is not a simple string, the :C modifier
@@ -157,10 +167,12 @@ func (s *Suite) Test_MkVarUseModifier_Subst__no_tracing(c *check.C) {
 // one of the special characters that would need to be escaped in the
 // replacement text.
 func (s *Suite) Test_MkVarUseModifier_Subst__C_with_complex_replacement(c *check.C) {
+	t := s.Init(c)
+
 	mod := MkVarUseModifier{"C,from,${VAR},"}
 
 	result, ok := mod.Subst("from a to b")
 
-	c.Check(ok, equals, false)
-	c.Check(result, equals, "")
+	t.CheckEquals(ok, false)
+	t.CheckEquals(result, "")
 }

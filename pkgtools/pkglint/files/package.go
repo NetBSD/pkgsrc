@@ -666,8 +666,8 @@ func (pkg *Package) checkfilePackageMakefile(filename string, mklines *MkLines, 
 
 	pkg.checkUpdate()
 
-	allLines.collectDefinedVariables() // To get the tool definitions
-	mklines.Tools = allLines.Tools     // TODO: also copy the other collected data
+	allLines.collectVariables()    // To get the tool definitions
+	mklines.Tools = allLines.Tools // TODO: also copy the other collected data
 	mklines.Check()
 
 	pkg.CheckVarorder(mklines)
@@ -847,7 +847,7 @@ func (pkg *Package) determineEffectivePkgVars() {
 }
 
 func (pkg *Package) pkgnameFromDistname(pkgname, distname string) (string, bool) {
-	tokens := NewMkParser(nil, pkgname, false).MkTokens()
+	tokens := NewMkParser(nil, pkgname).MkTokens()
 
 	// TODO: Make this resolving of variable references available to all other variables as well.
 
@@ -1007,7 +1007,7 @@ func (pkg *Package) CheckVarorder(mklines *MkLines) {
 		firstIrrelevant := -1
 		for i, mkline := range mklines.mklines {
 			switch {
-			case mkline.IsVarassign(), mkline.IsCommentedVarassign():
+			case mkline.IsVarassignMaybeCommented():
 				varcanon := mkline.Varcanon()
 				if relevantVars[varcanon] {
 					if firstRelevant == -1 {
@@ -1105,7 +1105,7 @@ func (pkg *Package) CheckVarorder(mklines *MkLines) {
 
 			found := false
 			for _, mkline := range relevantLines {
-				if (mkline.IsVarassign() || mkline.IsCommentedVarassign()) &&
+				if mkline.IsVarassignMaybeCommented() &&
 					mkline.Varcanon() == variable.Name {
 
 					canonical = append(canonical, mkline.Varname())
@@ -1202,15 +1202,14 @@ func (pkg *Package) checkOwnerMaintainer(filename string) {
 		line.Warnf("Don't commit changes to this file without asking the OWNER, %s.", owner)
 		line.Explain(
 			seeGuide("Package components, Makefile", "components.Makefile"))
+		return
 	}
 
-	if maintainer != "" {
-		line := NewLineWhole(filename)
-		line.Notef("Please only commit changes that %s would approve.", maintainer)
-		line.Explain(
-			"See the pkgsrc guide, section \"Package components\",",
-			"keyword \"maintainer\", for more information.")
-	}
+	line := NewLineWhole(filename)
+	line.Notef("Please only commit changes that %s would approve.", maintainer)
+	line.Explain(
+		"See the pkgsrc guide, section \"Package components\",",
+		"keyword \"maintainer\", for more information.")
 }
 
 func (pkg *Package) checkFreeze(filename string) {
@@ -1263,15 +1262,20 @@ func (pkg *Package) checkIncludeConditionally(mkline *MkLine, indentation *Inden
 
 func (pkg *Package) loadPlistDirs(plistFilename string) {
 	lines := Load(plistFilename, MustSucceed)
-	for _, line := range lines.Lines {
-		text := line.Text
-		pkg.Plist.Files[text] = true // XXX: ignores PLIST conditions for now
-		// Keep in sync with PlistChecker.collectFilesAndDirs
-		if !contains(text, "$") && !contains(text, "@") {
-			for dir := path.Dir(text); dir != "."; dir = path.Dir(dir) {
-				pkg.Plist.Dirs[dir] = true
-			}
-		}
+	ck := PlistChecker{
+		pkg,
+		make(map[string]*PlistLine),
+		make(map[string]*PlistLine),
+		"",
+		Once{},
+		false}
+	ck.Load(lines)
+
+	for filename, pline := range ck.allFiles {
+		pkg.Plist.Files[filename] = pline
+	}
+	for dirname, pline := range ck.allDirs {
+		pkg.Plist.Dirs[dirname] = pline
 	}
 }
 
@@ -1335,13 +1339,21 @@ func (pkg *Package) checkUseLanguagesCompilerMk(mklines *MkLines) {
 	})
 }
 
+// PlistContent lists the directories and files that appear in the
+// package's PLIST files. It serves two purposes:
+//
+// 1. Decide whether AUTO_MKDIRS can be used instead of listing
+// the INSTALLATION_DIRS redundantly.
+//
+// 2. Ensure that the entries mentioned in the ALTERNATIVES file
+// also appear in the PLIST files.
 type PlistContent struct {
-	Dirs  map[string]bool
-	Files map[string]bool
+	Dirs  map[string]*PlistLine
+	Files map[string]*PlistLine
 }
 
 func NewPlistContent() PlistContent {
 	return PlistContent{
-		make(map[string]bool),
-		make(map[string]bool)}
+		make(map[string]*PlistLine),
+		make(map[string]*PlistLine)}
 }

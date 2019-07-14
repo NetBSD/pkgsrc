@@ -100,7 +100,7 @@ func (s *Suite) Test_MkLines__varuse_sh_modifier(c *check.C) {
 		vars2 = append(vars2, varUse.varname)
 	})
 
-	c.Check(vars2, deepEquals, []string{"SED"})
+	t.CheckDeepEquals(vars2, []string{"SED"})
 
 	var vars3 []string
 	mklines.mklines[2].ForEachUsed(func(varUse *MkVarUse, time VucTime) {
@@ -108,7 +108,7 @@ func (s *Suite) Test_MkLines__varuse_sh_modifier(c *check.C) {
 	})
 
 	// qore-version, despite its unusual name, is a pretty normal Make variable.
-	c.Check(vars3, deepEquals, []string{"qore-version"})
+	t.CheckDeepEquals(vars3, []string{"qore-version"})
 
 	mklines.Check()
 
@@ -315,7 +315,7 @@ func (s *Suite) Test_MkLines_CheckUsedBy__show_autofix(c *check.C) {
 			"WARN: Makefile.common:4: Please add a line \"# used by category/package\" here.",
 			"AUTOFIX: Makefile.common:4: Inserting a line \"# used by category/package\" after this line."))
 
-	c.Check(G.Logger.autofixAvailable, equals, true)
+	t.CheckEquals(G.Logger.autofixAvailable, true)
 }
 
 func (s *Suite) Test_MkLines_CheckUsedBy(c *check.C) {
@@ -383,7 +383,33 @@ func (s *Suite) Test_MkLines_CheckUsedBy(c *check.C) {
 			"WARN: Makefile.common:4: There should only be a single \"used by\" paragraph per file.",
 			"WARN: Makefile.common:2: Please add a line \"# used by category/package\" here."))
 
-	c.Check(G.Logger.autofixAvailable, equals, true)
+	// Code coverage for hasOther being true and conflict being non-nil.
+	// Ensures that the warning is printed in the first wrong line.
+	test("category/package",
+		lines(
+			MkCvsID,
+			"",
+			"# Unrelated comment.",
+			"# used by category/package1",
+			"# used by category/package2"),
+		diagnostics(
+			"WARN: Makefile.common:4: The \"used by\" lines should be in a separate paragraph.",
+			"WARN: Makefile.common:1: Please add a line \"# used by category/package\" here."))
+
+	// Code coverage for hasUsedBy being true and conflict being non-nil.
+	// Ensures that the warning is printed in the first wrong line.
+	test("category/package",
+		lines(
+			MkCvsID,
+			"",
+			"# used by category/package1",
+			"# Unrelated comment.",
+			"# Unrelated comment 2."),
+		diagnostics(
+			"WARN: Makefile.common:4: The \"used by\" lines should be in a separate paragraph.",
+			"WARN: Makefile.common:1: Please add a line \"# used by category/package\" here."))
+
+	t.CheckEquals(G.Logger.autofixAvailable, true)
 }
 
 func (s *Suite) Test_MkLines_CheckUsedBy__separate_paragraph(c *check.C) {
@@ -424,8 +450,8 @@ func (s *Suite) Test_MkLines_ExpandLoopVar(c *check.C) {
 		}
 	})
 
-	t.Check(files, deepEquals, strings.Split("abcdefgh", ""))
-	t.Check(ranks, deepEquals, strings.Split("12345678", ""))
+	t.CheckDeepEquals(files, strings.Split("abcdefgh", ""))
+	t.CheckDeepEquals(ranks, strings.Split("12345678", ""))
 	t.Check(diagonals, check.HasLen, 0)
 }
 
@@ -475,7 +501,7 @@ func (s *Suite) Test_MkLines_ExpandLoopVar__malformed_for(c *check.C) {
 	t.Check(values, check.HasLen, 0)
 }
 
-func (s *Suite) Test_MkLines_collectDefinedVariables(c *check.C) {
+func (s *Suite) Test_MkLines_collectVariables(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpCommandLine("-Wall,no-space")
@@ -512,7 +538,7 @@ func (s *Suite) Test_MkLines_collectDefinedVariables(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_MkLines_collectDefinedVariables__BUILTIN_FIND_FILES_VAR(c *check.C) {
+func (s *Suite) Test_MkLines_collectVariables__BUILTIN_FIND_FILES_VAR(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpCommandLine("-Wall,no-space")
@@ -537,7 +563,7 @@ func (s *Suite) Test_MkLines_collectDefinedVariables__BUILTIN_FIND_FILES_VAR(c *
 		"WARN: ~/category/package/builtin.mk:8: H_UNDEF is used but not defined.")
 }
 
-func (s *Suite) Test_MkLines_collectDefinedVariables__no_tracing(c *check.C) {
+func (s *Suite) Test_MkLines_collectVariables__no_tracing(c *check.C) {
 	t := s.Init(c)
 
 	mklines := t.SetUpFileMkLines("filename.mk",
@@ -548,7 +574,7 @@ func (s *Suite) Test_MkLines_collectDefinedVariables__no_tracing(c *check.C) {
 		"SUBST_VARS.id+=\tVAR3")
 	t.DisableTracing()
 
-	mklines.collectDefinedVariables()
+	mklines.collectVariables()
 
 	t.CheckOutputEmpty()
 }
@@ -562,8 +588,8 @@ func (s *Suite) Test_MkLines_collectUsedVariables__simple(c *check.C) {
 
 	mklines.collectUsedVariables()
 
-	c.Check(mklines.vars.used, deepEquals, map[string]*MkLine{"VAR": mkline})
-	c.Check(mklines.vars.FirstUse("VAR"), equals, mkline)
+	t.CheckDeepEquals(mklines.vars.used, map[string]*MkLine{"VAR": mkline})
+	t.CheckEquals(mklines.vars.FirstUse("VAR"), mkline)
 }
 
 func (s *Suite) Test_MkLines_collectUsedVariables__nested(c *check.C) {
@@ -581,12 +607,12 @@ func (s *Suite) Test_MkLines_collectUsedVariables__nested(c *check.C) {
 
 	mklines.collectUsedVariables()
 
-	c.Check(len(mklines.vars.used), equals, 5)
-	c.Check(mklines.vars.FirstUse("lparam"), equals, assignMkline)
-	c.Check(mklines.vars.FirstUse("rparam"), equals, assignMkline)
-	c.Check(mklines.vars.FirstUse("inner"), equals, shellMkline)
-	c.Check(mklines.vars.FirstUse("outer.*"), equals, shellMkline)
-	c.Check(mklines.vars.FirstUse("outer.${inner}"), equals, shellMkline)
+	t.CheckEquals(len(mklines.vars.used), 5)
+	t.CheckEquals(mklines.vars.FirstUse("lparam"), assignMkline)
+	t.CheckEquals(mklines.vars.FirstUse("rparam"), assignMkline)
+	t.CheckEquals(mklines.vars.FirstUse("inner"), shellMkline)
+	t.CheckEquals(mklines.vars.FirstUse("outer.*"), shellMkline)
+	t.CheckEquals(mklines.vars.FirstUse("outer.${inner}"), shellMkline)
 }
 
 func (s *Suite) Test_MkLines__private_tool_undefined(c *check.C) {
@@ -860,7 +886,7 @@ func (s *Suite) Test_MkLines_collectDocumentedVariables(c *check.C) {
 		"VARBASE1.* (line 27)",
 		"VARBASE2.* (line 28)",
 		"VARBASE3.* (line 29)"}
-	c.Check(varnames, deepEquals, expected)
+	t.CheckDeepEquals(varnames, expected)
 }
 
 func (s *Suite) Test_MkLines__shell_command_indentation(c *check.C) {
@@ -1021,9 +1047,9 @@ func (s *Suite) Test_MkLines_collectElse(c *check.C) {
 
 	mklines.collectElse()
 
-	c.Check(mklines.mklines[2].HasElseBranch(), equals, false)
-	c.Check(mklines.mklines[5].HasElseBranch(), equals, true)
-	c.Check(mklines.mklines[9].HasElseBranch(), equals, false)
+	t.CheckEquals(mklines.mklines[2].HasElseBranch(), false)
+	t.CheckEquals(mklines.mklines[5].HasElseBranch(), true)
+	t.CheckEquals(mklines.mklines[9].HasElseBranch(), false)
 }
 
 func (s *Suite) Test_MkLines_Check__defined_and_used_variables(c *check.C) {
@@ -1225,7 +1251,7 @@ func (s *Suite) Test_MkLines_SplitToParagraphs(c *check.C) {
 			exp = append(exp, NewParagraph(mklines, r.from, r.to))
 		}
 
-		t.Check(paras, deepEquals, exp)
+		t.CheckDeepEquals(paras, exp)
 	}
 
 	para := func(from, to int) lineRange { return lineRange{from, to} }
@@ -1250,6 +1276,31 @@ func (s *Suite) Test_MkLines_SplitToParagraphs(c *check.C) {
 		t.NewMkLines("filename.mk",
 			""),
 		nil...)
+
+	// Test coverage for i == 0.
+	test(
+		t.NewMkLines("filename.mk",
+			"#"),
+		nil...)
+
+	// The empty comment line is not a paragraph separator. To be a
+	// separator, it would have to be enclosed by comment lines.
+	test(
+		t.NewMkLines("filename.mk",
+			"VAR=\tvalue",
+			"#"),
+		para(0, 2))
+
+	// The empty comment line is not a paragraph separator because
+	// below it there is no comment. This is a typical way of separating
+	// a multi-line comment from a variable definition.
+	test(
+		t.NewMkLines("filename.mk",
+			"# This comment spans",
+			"# multiple lines.",
+			"#",
+			"VAR=\tvalue"),
+		para(0, 4))
 }
 
 // Ensures that during MkLines.ForEach, the conditional variables in
@@ -1277,17 +1328,17 @@ func (s *Suite) Test_MkLines_ForEach__conditional_variables(c *check.C) {
 		if mkline.IsVarassign() {
 			switch mkline.Varname() {
 			case "DEVELOPER":
-				c.Check(mklines.indentation.IsConditional(), equals, true)
+				t.CheckEquals(mklines.indentation.IsConditional(), true)
 				seenDeveloper = true
 			case "USES_GETTEXT":
-				c.Check(mklines.indentation.IsConditional(), equals, true)
+				t.CheckEquals(mklines.indentation.IsConditional(), true)
 				seenUsesGettext = true
 			}
 		}
 	})
 
-	c.Check(seenDeveloper, equals, true)
-	c.Check(seenUsesGettext, equals, true)
+	t.CheckEquals(seenDeveloper, true)
+	t.CheckEquals(seenUsesGettext, true)
 }
 
 // At 2018-12-02, pkglint had resolved ${MY_PLIST_VARS} into a single word,
@@ -1309,120 +1360,4 @@ func (s *Suite) Test_MkLines_checkVarassignPlist__indirect(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputEmpty()
-}
-
-func (s *Suite) Test_VaralignBlock_Process__autofix(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpCommandLine("-Wspace", "--show-autofix")
-
-	mklines := t.NewMkLines("file.mk",
-		"VAR=   value",    // Indentation 7, fixed to 8.
-		"",                //
-		"VAR=    value",   // Indentation 8, fixed to 8.
-		"",                //
-		"VAR=     value",  // Indentation 9, fixed to 8.
-		"",                //
-		"VAR= \tvalue",    // Mixed indentation 8, fixed to 8.
-		"",                //
-		"VAR=   \tvalue",  // Mixed indentation 8, fixed to 8.
-		"",                //
-		"VAR=    \tvalue", // Mixed indentation 16, fixed to 16.
-		"",                //
-		"VAR=\tvalue")     // Already aligned with tabs only, left unchanged.
-
-	var varalign VaralignBlock
-	for _, line := range mklines.mklines {
-		varalign.Process(line)
-	}
-	varalign.Finish()
-
-	t.CheckOutputLines(
-		"NOTE: file.mk:1: This variable value should be aligned with tabs, not spaces, to column 9.",
-		"AUTOFIX: file.mk:1: Replacing \"   \" with \"\\t\".",
-		"NOTE: file.mk:3: Variable values should be aligned with tabs, not spaces.",
-		"AUTOFIX: file.mk:3: Replacing \"    \" with \"\\t\".",
-		"NOTE: file.mk:5: This variable value should be aligned with tabs, not spaces, to column 9.",
-		"AUTOFIX: file.mk:5: Replacing \"     \" with \"\\t\".",
-		"NOTE: file.mk:7: Variable values should be aligned with tabs, not spaces.",
-		"AUTOFIX: file.mk:7: Replacing \" \\t\" with \"\\t\".",
-		"NOTE: file.mk:9: Variable values should be aligned with tabs, not spaces.",
-		"AUTOFIX: file.mk:9: Replacing \"   \\t\" with \"\\t\".",
-		"NOTE: file.mk:11: Variable values should be aligned with tabs, not spaces.",
-		"AUTOFIX: file.mk:11: Replacing \"    \\t\" with \"\\t\\t\".")
-}
-
-// When the lines of a paragraph are inconsistently aligned,
-// they are realigned to the minimum required width.
-func (s *Suite) Test_VaralignBlock_Process__reduce_indentation(c *check.C) {
-	t := s.Init(c)
-
-	mklines := t.NewMkLines("file.mk",
-		"VAR= \tvalue",
-		"VAR=    \tvalue",
-		"VAR=\t\t\t\tvalue",
-		"",
-		"VAR=\t\t\tneedlessly", // Nothing to be fixed here, since it looks good.
-		"VAR=\t\t\tdeep",
-		"VAR=\t\t\tindentation")
-
-	var varalign VaralignBlock
-	for _, mkline := range mklines.mklines {
-		varalign.Process(mkline)
-	}
-	varalign.Finish()
-
-	t.CheckOutputLines(
-		"NOTE: file.mk:1: Variable values should be aligned with tabs, not spaces.",
-		"NOTE: file.mk:2: This variable value should be aligned with tabs, not spaces, to column 9.",
-		"NOTE: file.mk:3: This variable value should be aligned to column 9.")
-}
-
-// For every variable assignment, there is at least one space or tab between the variable
-// name and the value. Even if it is the longest line, and even if the value would start
-// exactly at a tab stop.
-func (s *Suite) Test_VaralignBlock_Process__longest_line_no_space(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpCommandLine("-Wspace")
-	mklines := t.NewMkLines("file.mk",
-		"SUBST_CLASSES+= aaaaaaaa",
-		"SUBST_STAGE.aaaaaaaa= pre-configure",
-		"SUBST_FILES.aaaaaaaa= *.pl",
-		"SUBST_FILTER_CMD.aaaaaa=cat")
-
-	var varalign VaralignBlock
-	for _, mkline := range mklines.mklines {
-		varalign.Process(mkline)
-	}
-	varalign.Finish()
-
-	t.CheckOutputLines(
-		"NOTE: file.mk:1: This variable value should be aligned with tabs, not spaces, to column 33.",
-		"NOTE: file.mk:2: This variable value should be aligned with tabs, not spaces, to column 33.",
-		"NOTE: file.mk:3: This variable value should be aligned with tabs, not spaces, to column 33.",
-		"NOTE: file.mk:4: This variable value should be aligned to column 33.")
-}
-
-func (s *Suite) Test_VaralignBlock_Process__only_spaces(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpCommandLine("-Wspace")
-	mklines := t.NewMkLines("file.mk",
-		"SUBST_CLASSES+= aaaaaaaa",
-		"SUBST_STAGE.aaaaaaaa= pre-configure",
-		"SUBST_FILES.aaaaaaaa= *.pl",
-		"SUBST_FILTER_CMD.aaaaaaaa= cat")
-
-	var varalign VaralignBlock
-	for _, mkline := range mklines.mklines {
-		varalign.Process(mkline)
-	}
-	varalign.Finish()
-
-	t.CheckOutputLines(
-		"NOTE: file.mk:1: This variable value should be aligned with tabs, not spaces, to column 33.",
-		"NOTE: file.mk:2: This variable value should be aligned with tabs, not spaces, to column 33.",
-		"NOTE: file.mk:3: This variable value should be aligned with tabs, not spaces, to column 33.",
-		"NOTE: file.mk:4: This variable value should be aligned with tabs, not spaces, to column 33.")
 }

@@ -125,6 +125,41 @@ func (fix *Autofix) ReplaceAfter(prefix, from string, to string) {
 	}
 }
 
+// ReplaceAt replaces the text "from" with "to", a single time.
+// But only if the text at the given position is indeed "from".
+func (fix *Autofix) ReplaceAt(rawIndex int, column int, from string, to string) {
+	assert(from != to)
+	fix.assertRealLine()
+
+	if fix.skip() {
+		return
+	}
+
+	rawLine := fix.line.raw[rawIndex]
+	if column >= len(rawLine.textnl) || !hasPrefix(rawLine.textnl[column:], from) {
+		return
+	}
+
+	replaced := rawLine.textnl[:column] + to + rawLine.textnl[column+len(from):]
+
+	if G.Logger.IsAutofix() {
+		rawLine.textnl = replaced
+
+		// Fix the parsed text as well.
+		// This is only approximate and won't work in some edge cases
+		// that involve escaped comments or replacements across line breaks.
+		//
+		// TODO: Do this properly by parsing the whole line again,
+		//  and ideally everything that depends on the parsed line.
+		//  This probably requires a generic notification mechanism.
+		if strings.Count(fix.line.Text, from) == 1 {
+			fix.line.Text = strings.Replace(fix.line.Text, from, to, 1)
+		}
+	}
+	fix.Describef(rawLine.Lineno, "Replacing %q with %q.", from, to)
+	return
+}
+
 // ReplaceRegex replaces the first howOften or all occurrences (if negative)
 // of the `from` pattern with the fixed string `toText`.
 //
@@ -313,11 +348,12 @@ func (fix *Autofix) Apply() {
 	logFix := G.Logger.IsAutofix()
 
 	if logDiagnostic {
+		linenos := fix.affectedLinenos()
 		msg := sprintf(fix.diagFormat, fix.diagArgs...)
-		if !logFix && G.Logger.FirstTime(line.Filename, line.Linenos(), msg) {
-			line.showSource(G.Logger.out)
+		if !logFix && G.Logger.FirstTime(line.Filename, linenos, msg) {
+			G.Logger.showSource(line)
 		}
-		G.Logger.Logf(fix.level, line.Filename, line.Linenos(), fix.diagFormat, msg)
+		G.Logger.Logf(fix.level, line.Filename, linenos, fix.diagFormat, msg)
 	}
 
 	if logFix {
@@ -332,7 +368,7 @@ func (fix *Autofix) Apply() {
 
 	if logDiagnostic || logFix {
 		if logFix {
-			line.showSource(G.Logger.out)
+			G.Logger.showSource(line)
 		}
 		if logDiagnostic && len(fix.explanation) > 0 {
 			line.Explain(fix.explanation...)
@@ -347,66 +383,31 @@ func (fix *Autofix) Apply() {
 	reset()
 }
 
-func (fix *Autofix) Realign(mkline *MkLine, newWidth int) {
-
-	// XXX: Check whether this method can be implemented as Custom fix.
-	// This complicated code should not be in the Autofix type.
-
-	fix.assertRealLine()
-	assert(mkline.IsMultiline())
-	assert(mkline.IsVarassign() || mkline.IsCommentedVarassign())
-
-	if fix.skip() {
-		return
+func (fix *Autofix) affectedLinenos() string {
+	if len(fix.actions) == 0 {
+		return fix.line.Linenos()
 	}
 
-	normalized := true // Whether all indentation is tabs, followed by spaces.
-	oldWidth := 0      // The minimum required indentation in the original lines.
+	var first, last int
+	for _, action := range fix.actions {
+		if action.lineno == 0 {
+			continue
+		}
 
-	{
-		// Parsing the continuation marker as variable value is cheating but works well.
-		text := strings.TrimSuffix(mkline.raw[0].orignl, "\n")
-		data := MkLineParser{}.split(nil, text)
-		_, a := MkLineParser{}.MatchVarassign(mkline.Line, text, data)
-		if a.value != "\\" {
-			oldWidth = tabWidth(a.valueAlign)
+		if last == 0 || action.lineno < first {
+			first = action.lineno
+		}
+		if last == 0 || action.lineno > last {
+			last = action.lineno
 		}
 	}
 
-	for _, rawLine := range fix.line.raw[1:] {
-		_, comment, space := match2(rawLine.textnl, `^(#?)([ \t]*)`)
-		width := tabWidth(comment + space)
-		if (oldWidth == 0 || width < oldWidth) && width >= 8 {
-			oldWidth = width
-		}
-		if !matches(space, `^\t* {0,7}$`) {
-			normalized = false
-		}
-	}
-
-	if normalized && newWidth == oldWidth {
-		return
-	}
-
-	// 8 spaces is the minimum possible indentation that can be
-	// distinguished from an initial line, by looking only at the
-	// beginning of the line. Therefore, this indentation is always
-	// regarded as intentional and is not realigned.
-	if oldWidth == 8 {
-		return
-	}
-
-	for _, rawLine := range fix.line.raw[1:] {
-		_, comment, oldSpace := match2(rawLine.textnl, `^(#?)([ \t]*)`)
-		newLineWidth := tabWidth(oldSpace) - oldWidth + newWidth
-		newSpace := strings.Repeat("\t", newLineWidth/8) + strings.Repeat(" ", newLineWidth%8)
-		replaced := strings.Replace(rawLine.textnl, comment+oldSpace, comment+newSpace, 1)
-		if replaced != rawLine.textnl {
-			if G.Logger.IsAutofix() {
-				rawLine.textnl = replaced
-			}
-			fix.Describef(rawLine.Lineno, "Replacing indentation %q with %q.", oldSpace, newSpace)
-		}
+	if last == 0 {
+		return fix.line.Linenos()
+	} else if first < last {
+		return sprintf("%d--%d", first, last)
+	} else {
+		return strconv.Itoa(first)
 	}
 }
 
@@ -425,6 +426,8 @@ func (fix *Autofix) setDiag(level *LogLevel, format string, args []interface{}) 
 	fix.diagArgs = args
 }
 
+// skip returns whether this autofix should be skipped because
+// its message is matched by one of the --only command line options.
 func (fix *Autofix) skip() bool {
 	assert(fix.diagFormat != "") // The diagnostic must be given before the action.
 

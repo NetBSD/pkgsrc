@@ -15,14 +15,14 @@ func (s *Suite) Test_ShTokenizer_ShAtom(c *check.C) {
 
 		actualAtoms := p.ShAtoms()
 
-		t.Check(p.Rest(), equals, expectedRest)
-		c.Check(len(actualAtoms), equals, len(expectedAtoms))
+		t.CheckEquals(p.Rest(), expectedRest)
+		t.CheckEquals(len(actualAtoms), len(expectedAtoms))
 
 		for i, actualAtom := range actualAtoms {
 			if i < len(expectedAtoms) {
-				c.Check(actualAtom, deepEquals, expectedAtoms[i])
+				t.CheckDeepEquals(actualAtom, expectedAtoms[i])
 			} else {
-				c.Check(actualAtom, deepEquals, nil)
+				t.CheckDeepEquals(actualAtom, nil)
 			}
 		}
 	}
@@ -415,6 +415,8 @@ func (s *Suite) Test_ShTokenizer_ShAtom(c *check.C) {
 }
 
 func (s *Suite) Test_ShTokenizer_ShAtom__quoting(c *check.C) {
+	t := s.Init(c)
+
 	test := func(input, expectedOutput string) {
 		p := NewShTokenizer(dummyLine, input, false)
 		q := shqPlain
@@ -430,8 +432,8 @@ func (s *Suite) Test_ShTokenizer_ShAtom__quoting(c *check.C) {
 				result += "[" + q.String() + "]"
 			}
 		}
-		c.Check(result, equals, expectedOutput)
-		c.Check(p.Rest(), equals, "")
+		t.CheckEquals(result, expectedOutput)
+		t.CheckEquals(p.Rest(), "")
 	}
 
 	test("hello, world", "hello, world")
@@ -456,7 +458,7 @@ func (s *Suite) Test_ShTokenizer_ShToken(c *check.C) {
 	testRest := func(str string, expected ...string) string {
 		p := NewShTokenizer(dummyLine, str, false)
 		for _, exp := range expected {
-			c.Check(p.ShToken().MkText, equals, exp)
+			t.CheckEquals(p.ShToken().MkText, exp)
 		}
 		return p.Rest()
 	}
@@ -464,16 +466,16 @@ func (s *Suite) Test_ShTokenizer_ShToken(c *check.C) {
 	test := func(str string, expected ...string) {
 		p := NewShTokenizer(dummyLine, str, false)
 		for _, exp := range expected {
-			c.Check(p.ShToken().MkText, equals, exp)
+			t.CheckEquals(p.ShToken().MkText, exp)
 		}
-		c.Check(p.Rest(), equals, "")
+		t.CheckEquals(p.Rest(), "")
 		t.CheckOutputEmpty()
 	}
 
 	testNil := func(str string) {
 		p := NewShTokenizer(dummyLine, str, false)
 		c.Check(p.ShToken(), check.IsNil)
-		c.Check(p.Rest(), equals, "")
+		t.CheckEquals(p.Rest(), "")
 		t.CheckOutputEmpty()
 	}
 
@@ -481,7 +483,7 @@ func (s *Suite) Test_ShTokenizer_ShToken(c *check.C) {
 	testNil(" ")
 	rest := testRest("\t\t\t\n\n\n\n\t ",
 		"\n\n\n\n")
-	c.Check(rest, equals, "\t ")
+	t.CheckEquals(rest, "\t ")
 
 	test("echo",
 		"echo")
@@ -522,13 +524,14 @@ func (s *Suite) Test_ShTokenizer_ShToken(c *check.C) {
 }
 
 func (s *Suite) Test_ShTokenizer_shVarUse(c *check.C) {
+	t := s.Init(c)
 
 	test := func(input string, output *ShAtom, rest string) {
 		tok := NewShTokenizer(nil, input, false)
 		actual := tok.shVarUse(shqPlain)
 
-		c.Check(actual, deepEquals, output)
-		c.Check(tok.Rest(), equals, rest)
+		t.CheckDeepEquals(actual, output)
+		t.CheckEquals(tok.Rest(), rest)
 	}
 
 	shvar := func(text, varname string) *ShAtom {

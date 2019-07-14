@@ -10,60 +10,72 @@ func (s *Suite) Test_splitIntoShellTokens__line_continuation(c *check.C) {
 
 	words, rest := splitIntoShellTokens(dummyLine, "if true; then \\")
 
-	c.Check(words, check.DeepEquals, []string{"if", "true", ";", "then"})
-	c.Check(rest, equals, "\\")
+	t.CheckDeepEquals(words, []string{"if", "true", ";", "then"})
+	t.CheckEquals(rest, "\\")
 
 	t.CheckOutputLines(
 		"WARN: Internal pkglint error in ShTokenizer.ShAtom at \"\\\\\" (quoting=plain).")
 }
 
 func (s *Suite) Test_splitIntoShellTokens__dollar_slash(c *check.C) {
+	t := s.Init(c)
+
 	words, rest := splitIntoShellTokens(dummyLine, "pax -s /.*~$$//g")
 
-	c.Check(words, check.DeepEquals, []string{"pax", "-s", "/.*~$$//g"})
-	c.Check(rest, equals, "")
+	t.CheckDeepEquals(words, []string{"pax", "-s", "/.*~$$//g"})
+	t.CheckEquals(rest, "")
 }
 
 func (s *Suite) Test_splitIntoShellTokens__dollar_subshell(c *check.C) {
+	t := s.Init(c)
+
 	words, rest := splitIntoShellTokens(dummyLine, "id=$$(${AWK} '{print}' < ${WRKSRC}/idfile) && echo \"$$id\"")
 
-	c.Check(words, deepEquals, []string{"id=$$(${AWK} '{print}' < ${WRKSRC}/idfile)", "&&", "echo", "\"$$id\""})
-	c.Check(rest, equals, "")
+	t.CheckDeepEquals(words, []string{"id=$$(${AWK} '{print}' < ${WRKSRC}/idfile)", "&&", "echo", "\"$$id\""})
+	t.CheckEquals(rest, "")
 }
 
 func (s *Suite) Test_splitIntoShellTokens__semicolons(c *check.C) {
+	t := s.Init(c)
+
 	words, rest := splitIntoShellTokens(dummyLine, "word1 word2;;;")
 
-	c.Check(words, deepEquals, []string{"word1", "word2", ";;", ";"})
-	c.Check(rest, equals, "")
+	t.CheckDeepEquals(words, []string{"word1", "word2", ";;", ";"})
+	t.CheckEquals(rest, "")
 }
 
 func (s *Suite) Test_splitIntoShellTokens__whitespace(c *check.C) {
+	t := s.Init(c)
+
 	text := "\t${RUN} cd ${WRKSRC}&&(${ECHO} ${PERL5:Q};${ECHO})|${BASH} ./install"
 	words, rest := splitIntoShellTokens(dummyLine, text)
 
-	c.Check(words, deepEquals, []string{
+	t.CheckDeepEquals(words, []string{
 		"${RUN}",
 		"cd", "${WRKSRC}",
 		"&&", "(", "${ECHO}", "${PERL5:Q}", ";", "${ECHO}", ")",
 		"|", "${BASH}", "./install"})
-	c.Check(rest, equals, "")
+	t.CheckEquals(rest, "")
 }
 
 func (s *Suite) Test_splitIntoShellTokens__finished_dquot(c *check.C) {
+	t := s.Init(c)
+
 	text := "\"\""
 	words, rest := splitIntoShellTokens(dummyLine, text)
 
-	c.Check(words, deepEquals, []string{"\"\""})
-	c.Check(rest, equals, "")
+	t.CheckDeepEquals(words, []string{"\"\""})
+	t.CheckEquals(rest, "")
 }
 
 func (s *Suite) Test_splitIntoShellTokens__unfinished_dquot(c *check.C) {
+	t := s.Init(c)
+
 	text := "\t\""
 	words, rest := splitIntoShellTokens(dummyLine, text)
 
 	c.Check(words, check.IsNil)
-	c.Check(rest, equals, "\"")
+	t.CheckEquals(rest, "\"")
 }
 
 func (s *Suite) Test_splitIntoShellTokens__unescaped_dollar_in_dquot(c *check.C) {
@@ -72,41 +84,49 @@ func (s *Suite) Test_splitIntoShellTokens__unescaped_dollar_in_dquot(c *check.C)
 	text := "echo \"$$\""
 	words, rest := splitIntoShellTokens(dummyLine, text)
 
-	c.Check(words, deepEquals, []string{"echo", "\"$$\""})
-	c.Check(rest, equals, "")
+	t.CheckDeepEquals(words, []string{"echo", "\"$$\""})
+	t.CheckEquals(rest, "")
 
 	t.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_splitIntoShellTokens__varuse_with_embedded_space_and_other_vars(c *check.C) {
+	t := s.Init(c)
+
 	varuseWord := "${GCONF_SCHEMAS:@.s.@${INSTALL_DATA} ${WRKSRC}/src/common/dbus/${.s.} ${DESTDIR}${GCONF_SCHEMAS_DIR}/@}"
 	words, rest := splitIntoShellTokens(dummyLine, varuseWord)
 
-	c.Check(words, deepEquals, []string{varuseWord})
-	c.Check(rest, equals, "")
+	t.CheckDeepEquals(words, []string{varuseWord})
+	t.CheckEquals(rest, "")
 }
 
 // Two shell variables, next to each other,
 // are two separate atoms but count as a single token.
 func (s *Suite) Test_splitIntoShellTokens__two_shell_variables(c *check.C) {
+	t := s.Init(c)
+
 	code := "echo $$i$$j"
 	words, rest := splitIntoShellTokens(dummyLine, code)
 
-	c.Check(words, deepEquals, []string{"echo", "$$i$$j"})
-	c.Check(rest, equals, "")
+	t.CheckDeepEquals(words, []string{"echo", "$$i$$j"})
+	t.CheckEquals(rest, "")
 }
 
 func (s *Suite) Test_splitIntoShellTokens__varuse_with_embedded_space(c *check.C) {
+	t := s.Init(c)
+
 	words, rest := splitIntoShellTokens(dummyLine, "${VAR:S/ /_/g}")
 
-	c.Check(words, deepEquals, []string{"${VAR:S/ /_/g}"})
-	c.Check(rest, equals, "")
+	t.CheckDeepEquals(words, []string{"${VAR:S/ /_/g}"})
+	t.CheckEquals(rest, "")
 }
 
 func (s *Suite) Test_splitIntoShellTokens__redirect(c *check.C) {
+	t := s.Init(c)
+
 	words, rest := splitIntoShellTokens(dummyLine, "echo 1>output 2>>append 3>|clobber 4>&5 6<input >>append")
 
-	c.Check(words, deepEquals, []string{
+	t.CheckDeepEquals(words, []string{
 		"echo",
 		"1>", "output",
 		"2>>", "append",
@@ -114,11 +134,11 @@ func (s *Suite) Test_splitIntoShellTokens__redirect(c *check.C) {
 		"4>&", "5",
 		"6<", "input",
 		">>", "append"})
-	c.Check(rest, equals, "")
+	t.CheckEquals(rest, "")
 
 	words, rest = splitIntoShellTokens(dummyLine, "echo 1> output 2>> append 3>| clobber 4>& 5 6< input >> append")
 
-	c.Check(words, deepEquals, []string{
+	t.CheckDeepEquals(words, []string{
 		"echo",
 		"1>", "output",
 		"2>>", "append",
@@ -126,7 +146,7 @@ func (s *Suite) Test_splitIntoShellTokens__redirect(c *check.C) {
 		"4>&", "5",
 		"6<", "input",
 		">>", "append"})
-	c.Check(rest, equals, "")
+	t.CheckEquals(rest, "")
 }
 
 func (s *Suite) Test_ShellLineChecker_CheckShellCommandLine(c *check.C) {
@@ -232,7 +252,10 @@ func (s *Suite) Test_ShellLineChecker_CheckShellCommandLine(c *check.C) {
 		"WARN: filename.mk:1: Using a leading \"-\" to suppress errors is deprecated.")
 
 	G.Pkg = NewPackage(t.File("category/pkgbase"))
-	G.Pkg.Plist.Dirs["share/pkgbase"] = true
+	G.Pkg.Plist.Dirs["share/pkgbase"] = &PlistLine{
+		t.NewLine("PLIST", 123, "share/pkgbase/file"),
+		nil,
+		"share/pkgbase/file"}
 
 	// A directory that is found in the PLIST.
 	// TODO: Add a test for using this command inside a conditional;
@@ -385,8 +408,8 @@ func (s *Suite) Test_ShellLineChecker_CheckShellCommandLine__implementation(c *c
 
 	tokens, rest := splitIntoShellTokens(dummyLine, text)
 
-	c.Check(tokens, deepEquals, []string{text})
-	c.Check(rest, equals, "")
+	t.CheckDeepEquals(tokens, []string{text})
+	t.CheckEquals(rest, "")
 
 	mklines.ForEach(func(mkline *MkLine) { ck.CheckWord(text, false, RunTime) })
 
@@ -598,9 +621,10 @@ func (s *Suite) Test_ShellLineChecker_unescapeBackticks__unfinished_direct(c *ch
 }
 
 func (s *Suite) Test_ShellLineChecker_variableNeedsQuoting(c *check.C) {
+	t := s.Init(c)
 
 	test := func(shVarname string, expected bool) {
-		c.Check((*ShellLineChecker).variableNeedsQuoting(nil, shVarname), equals, expected)
+		t.CheckEquals((*ShellLineChecker).variableNeedsQuoting(nil, shVarname), expected)
 	}
 
 	test("#", false) // A length is always an integer.
@@ -927,7 +951,7 @@ func (s *Suite) Test_ShellLineChecker_unescapeBackticks(c *check.C) {
 			q = atoms[0].Quoting
 			atoms = atoms[1:]
 		}
-		c.Check(tok.Rest(), equals, "")
+		t.CheckEquals(tok.Rest(), "")
 
 		backtCommand := ck.unescapeBackticks(&atoms, q)
 
@@ -936,8 +960,8 @@ func (s *Suite) Test_ShellLineChecker_unescapeBackticks(c *check.C) {
 			actualRest.WriteString(atom.MkText)
 		}
 
-		c.Check(backtCommand, equals, expectedOutput)
-		c.Check(actualRest.String(), equals, expectedRest)
+		t.CheckEquals(backtCommand, expectedOutput)
+		t.CheckEquals(actualRest.String(), expectedRest)
 		t.CheckOutput(diagnostics)
 	}
 
@@ -1385,6 +1409,7 @@ func (s *Suite) Test_SimpleCommandChecker_checkAutoMkdirs(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpVartypes()
+	// TODO: Check whether these tools are actually necessary for this test.
 	t.SetUpTool("awk", "AWK", AtRunTime)
 	t.SetUpTool("cp", "CP", AtRunTime)
 	t.SetUpTool("echo", "", AtRunTime)
@@ -1413,7 +1438,10 @@ func (s *Suite) Test_SimpleCommandChecker_checkAutoMkdirs(c *check.C) {
 		"NOTE: filename.mk:1: You can use \"INSTALLATION_DIRS+= second\" instead of \"${INSTALL} -d\".")
 
 	G.Pkg = NewPackage(t.File("category/pkgbase"))
-	G.Pkg.Plist.Dirs["share/pkgbase"] = true
+	G.Pkg.Plist.Dirs["share/pkgbase"] = &PlistLine{
+		t.NewLine("PLIST", 123, "share/pkgbase/file"),
+		nil,
+		"share/pkgbase/file"}
 
 	// A directory that is found in the PLIST.
 	// TODO: Add a test for using this command inside a conditional;
@@ -1432,6 +1460,43 @@ func (s *Suite) Test_SimpleCommandChecker_checkAutoMkdirs(c *check.C) {
 	// therefore only INSTALLATION_DIRS is suggested.
 	test("${RUN} ${INSTALL_DATA_DIR} ${PREFIX}/share/other",
 		"NOTE: filename.mk:1: You can use \"INSTALLATION_DIRS+= share/other\" instead of \"${INSTALL_DATA_DIR}\".")
+}
+
+// The AUTO_MKDIRS code in mk/install/install.mk (install-dirs-from-PLIST)
+// skips conditional directories, as well as directories with placeholders.
+func (s *Suite) Test_SimpleCommandChecker_checkAutoMkdirs__conditional_PLIST(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"LIB_SUBDIR=\tsubdir",
+		"",
+		"do-install:",
+		"\t${RUN} ${INSTALL_DATA_DIR} ${PREFIX}/libexec/always",
+		"\t${RUN} ${INSTALL_DATA_DIR} ${PREFIX}/libexec/conditional",
+		"\t${RUN} ${INSTALL_DATA_DIR} ${PREFIX}/${LIB_SUBDIR}",
+	)
+	t.Chdir("category/package")
+	t.CreateFileLines("PLIST",
+		PlistCvsID,
+		"libexec/always/always",
+		"${LIB_SUBDIR}/file",
+		"${PLIST.cond}libexec/conditional/conditional")
+	t.FinishSetUp()
+
+	G.checkdirPackage(".")
+
+	// As libexec/conditional will not be created automatically,
+	// AUTO_MKDIRS must not be suggested in that line.
+	t.CheckOutputLines(
+		"NOTE: Makefile:23: You can use AUTO_MKDIRS=yes "+
+			"or \"INSTALLATION_DIRS+= libexec/always\" "+
+			"instead of \"${INSTALL_DATA_DIR}\".",
+		"NOTE: Makefile:24: You can use "+
+			"\"INSTALLATION_DIRS+= libexec/conditional\" "+
+			"instead of \"${INSTALL_DATA_DIR}\".",
+		"NOTE: Makefile:25: You can use "+
+			"\"INSTALLATION_DIRS+= ${LIB_SUBDIR}\" "+
+			"instead of \"${INSTALL_DATA_DIR}\".")
 }
 
 func (s *Suite) Test_ShellProgramChecker_checkSetE__simple_commands(c *check.C) {

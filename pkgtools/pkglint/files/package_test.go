@@ -3,6 +3,7 @@ package pkglint
 import (
 	"gopkg.in/check.v1"
 	"os"
+	"sort"
 	"strings"
 )
 
@@ -78,7 +79,7 @@ func (s *Suite) Test_Package_pkgnameFromDistname(c *check.C) {
 		pkg := NewPackage(t.File("category/package"))
 		pkg.loadPackageMakefile()
 		pkg.determineEffectivePkgVars()
-		t.Check(pkg.EffectivePkgname, equals, expectedPkgname)
+		t.CheckEquals(pkg.EffectivePkgname, expectedPkgname)
 		t.CheckOutput(diagnostics)
 	}
 
@@ -563,12 +564,12 @@ func (s *Suite) Test_Package_nbPart(c *check.C) {
 	pkg := NewPackage(t.File("category/pkgbase"))
 	pkg.vars.Define("PKGREVISION", t.NewMkLine("Makefile", 1, "PKGREVISION=14"))
 
-	c.Check(pkg.nbPart(), equals, "nb14")
+	t.CheckEquals(pkg.nbPart(), "nb14")
 
 	pkg.vars = NewScope()
 	pkg.vars.Define("PKGREVISION", t.NewMkLine("Makefile", 1, "PKGREVISION=asdf"))
 
-	c.Check(pkg.nbPart(), equals, "")
+	t.CheckEquals(pkg.nbPart(), "")
 }
 
 // PKGNAME is stronger than DISTNAME.
@@ -586,9 +587,9 @@ func (s *Suite) Test_Package_determineEffectivePkgVars__precedence(c *check.C) {
 
 	pkg.determineEffectivePkgVars()
 
-	c.Check(pkg.EffectivePkgbase, equals, "pkgname")
-	c.Check(pkg.EffectivePkgname, equals, "pkgname-1.0nb13")
-	c.Check(pkg.EffectivePkgversion, equals, "1.0")
+	t.CheckEquals(pkg.EffectivePkgbase, "pkgname")
+	t.CheckEquals(pkg.EffectivePkgname, "pkgname-1.0nb13")
+	t.CheckEquals(pkg.EffectivePkgversion, "1.0")
 }
 
 func (s *Suite) Test_Package_determineEffectivePkgVars__same(c *check.C) {
@@ -674,7 +675,7 @@ func (s *Suite) Test_Package_determineEffectivePkgVars__C_modifier(c *check.C) {
 
 	pkg.check(files, mklines, allLines)
 
-	t.Check(pkg.EffectivePkgname, equals, "p5-gtk2-1.0")
+	t.CheckEquals(pkg.EffectivePkgname, "p5-gtk2-1.0")
 }
 
 // In some cases the PKGNAME is derived from DISTNAME, and it seems as
@@ -693,7 +694,7 @@ func (s *Suite) Test_Package_determineEffectivePkgVars__ineffective_C_modifier(c
 
 	pkg.check(files, mklines, allLines)
 
-	t.Check(pkg.EffectivePkgname, equals, "distname-1.0")
+	t.CheckEquals(pkg.EffectivePkgname, "distname-1.0")
 	t.CheckOutputEmpty()
 }
 
@@ -736,7 +737,7 @@ func (s *Suite) Test_Package_checkPossibleDowngrade__moved(c *check.C) {
 	pkg.determineEffectivePkgVars()
 	pkg.checkPossibleDowngrade()
 
-	t.Check(G.Pkgsrc.LastChange["category/pkgbase"].Action, equals, Moved)
+	t.CheckEquals(G.Pkgsrc.LastChange["category/pkgbase"].Action, Moved)
 	// No warning because the latest action is not Updated.
 	t.CheckOutputEmpty()
 }
@@ -1101,7 +1102,7 @@ func (s *Suite) Test_Package_check__patches_Makefile(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: ~/category/package/patches/Makefile: Patch files should be "+
 			"named \"patch-\", followed by letters, '-', '_', '.', and digits only.",
-		"0 errors and 1 warning found.")
+		"1 warning found.")
 }
 
 func (s *Suite) Test_Package_checkDirent__errors(c *check.C) {
@@ -1380,7 +1381,7 @@ func (s *Suite) Test_Package_checkUpdate(c *check.C) {
 		"NOTE: category/pkg1/Makefile:4: The update request to 1.0 from doc/TODO has been done.",
 		"WARN: category/pkg2/Makefile:4: This package should be updated to 2.0 ([nice new features]).",
 		"NOTE: category/pkg3/Makefile:4: This package is newer than the update request to 3.0 ([security update]).",
-		"0 errors and 4 warnings found.",
+		"4 warnings and 2 notes found.",
 		"(Run \"pkglint -e\" to show explanations.)")
 }
 
@@ -1739,9 +1740,34 @@ func (s *Suite) Test_Package_loadPlistDirs(c *check.C) {
 	pkg := NewPackage(t.File("category/package"))
 	pkg.load()
 
-	// FIXME: dir/subdir should also be included in pkg.Plist.Dirs.
-	t.Check(pkg.Plist.Dirs, deepEquals, map[string]bool{
-		"bin": true})
+	var dirs []string
+	for dir := range pkg.Plist.Dirs {
+		dirs = append(dirs, dir)
+	}
+	sort.Strings(dirs)
+
+	t.CheckDeepEquals(dirs, []string{"bin", "dir", "dir/subdir"})
+}
+
+// Just ensure that pkglint doesn't crash.
+func (s *Suite) Test_Package_loadPlistDirs__empty(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("category/package/PLIST.common",
+		nil...)
+	t.FinishSetUp()
+
+	pkg := NewPackage(t.File("category/package"))
+	pkg.load()
+
+	var dirs []string
+	for dir := range pkg.Plist.Dirs {
+		dirs = append(dirs, dir)
+	}
+	sort.Strings(dirs)
+
+	t.CheckDeepEquals(dirs, []string{"bin"})
 }
 
 func (s *Suite) Test_Package_checkUseLanguagesCompilerMk__too_late(c *check.C) {
@@ -1993,7 +2019,7 @@ func (s *Suite) Test_Package_parse__skipping(c *check.C) {
 		}
 	}
 
-	c.Check(relevant, deepEquals, []string{
+	t.CheckDeepEquals(relevant, []string{
 		"TRACE: 1 2 3 4   ~/category/package/Makefile:20: " +
 			"Skipping unresolvable include file \"${MYSQL_PKGSRCDIR:S/-client$/-server/}/buildlink3.mk\"."})
 }
@@ -2166,7 +2192,7 @@ func (s *Suite) Test_Package_collectSeenInclude__builtin_mk(c *check.C) {
 	pkg := NewPackage(t.File("category/package"))
 	pkg.load()
 
-	t.Check(pkg.seenInclude, equals, true)
+	t.CheckEquals(pkg.seenInclude, true)
 }
 
 func (s *Suite) Test_Package_diveInto(c *check.C) {
@@ -2174,7 +2200,7 @@ func (s *Suite) Test_Package_diveInto(c *check.C) {
 
 	test := func(including, included string, expected bool) {
 		actual := (*Package)(nil).diveInto(including, included)
-		t.Check(actual, equals, expected)
+		t.CheckEquals(actual, expected)
 	}
 
 	// The variables that appear in these files are largely modeled by
@@ -2383,11 +2409,8 @@ func (s *Suite) Test_Package_checkOwnerMaintainer__both(c *check.C) {
 	G.Check(t.File("category/package"))
 
 	t.CheckOutputLines(
-		"WARN: ~/category/package/Makefile: "+
-			"Don't commit changes to this file without asking the OWNER, owner@example.org.",
-		// FIXME: OWNER is stronger than MAINTAINER, therefore this note should disappear.
-		"NOTE: ~/category/package/Makefile: "+
-			"Please only commit changes that maintainer@example.org would approve.")
+		"WARN: ~/category/package/Makefile: " +
+			"Don't commit changes to this file without asking the OWNER, owner@example.org.")
 }
 
 // Just for code coverage.
@@ -2455,6 +2478,23 @@ func (s *Suite) Test_Package_checkFreeze(c *check.C) {
 		"\tcarefully. See https://www.netbsd.org/developers/pkgsrc/ for the",
 		"\texact rules.",
 		"")
+}
+
+func (s *Suite) Test_Package_checkFreeze__freeze_ended(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("-Wall", "--explain")
+	pkg := t.SetUpPackage("category/package")
+	t.CreateFileLines("category/package/CVS/Entries",
+		"/Makefile//modified//")
+	t.CreateFileLines("doc/CHANGES-2018",
+		"\tmk/bsd.pkg.mk: started freeze for 2018Q2 [freezer 2018-03-20]",
+		"\tmk/bsd.pkg.mk: freeze ended for 2018Q2 [freezer 2018-03-27]")
+	t.FinishSetUp()
+
+	G.Check(pkg)
+
+	t.CheckOutputEmpty()
 }
 
 // In practice the distinfo file can always be autofixed since it has

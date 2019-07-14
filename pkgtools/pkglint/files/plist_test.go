@@ -182,7 +182,7 @@ func (s *Suite) Test_plistLineSorter_Sort(c *check.C) {
 	plines := ck.NewLines(lines)
 
 	sorter1 := NewPlistLineSorter(plines)
-	c.Check(sorter1.unsortable, equals, lines.Lines[5])
+	t.CheckEquals(sorter1.unsortable, lines.Lines[5])
 
 	cleanedLines := append(append(lines.Lines[0:5], lines.Lines[6:8]...), lines.Lines[9:]...) // Remove ${UNKNOWN} and @exec
 

@@ -503,7 +503,7 @@ func CheckLinesDescr(lines *Lines) {
 		ck.CheckValidCharacters()
 
 		if contains(line.Text, "${") {
-			for _, token := range NewMkParser(nil, line.Text, false).MkTokens() {
+			for _, token := range NewMkParser(nil, line.Text).MkTokens() {
 				if token.Varuse != nil && G.Pkgsrc.VariableType(nil, token.Varuse.varname) != nil {
 					line.Notef("Variables are not expanded in the DESCR file.")
 				}

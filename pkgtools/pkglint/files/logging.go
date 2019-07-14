@@ -23,6 +23,7 @@ type Logger struct {
 
 	errors                int
 	warnings              int
+	notes                 int
 	explanationsAvailable bool
 	autofixAvailable      bool
 }
@@ -114,9 +115,21 @@ func (l *Logger) ShowSummary() {
 	}
 
 	if l.errors != 0 || l.warnings != 0 {
-		l.out.Write(sprintf("%d %s and %d %s found.\n",
-			l.errors, ifelseStr(l.errors == 1, "error", "errors"),
-			l.warnings, ifelseStr(l.warnings == 1, "warning", "warnings")))
+		num := func(n int, singular, plural string) string {
+			if n == 0 {
+				return ""
+			} else if n == 1 {
+				return sprintf("%d %s", n, singular)
+			} else {
+				return sprintf("%d %s", n, plural)
+			}
+		}
+
+		l.out.Write(sprintf("%s found.\n",
+			joinSkipEmptyCambridge("and",
+				num(l.errors, "error", "errors"),
+				num(l.warnings, "warning", "warnings"),
+				num(l.notes, "note", "notes"))))
 	} else {
 		l.out.WriteLine("Looks fine.")
 	}
@@ -174,11 +187,58 @@ func (l *Logger) Diag(line *Line, level *LogLevel, format string, args ...interf
 	}
 
 	if l.Opts.ShowSource {
-		line.showSource(l.out)
+		l.showSource(line)
 		l.Logf(level, filename, linenos, format, msg)
 		l.out.Separate()
 	} else {
 		l.Logf(level, filename, linenos, format, msg)
+	}
+}
+
+func (l *Logger) showSource(line *Line) {
+	if !G.Logger.Opts.ShowSource {
+		return
+	}
+
+	out := l.out
+	writeLine := func(prefix, line string) {
+		out.Write(prefix)
+		out.Write(escapePrintable(line))
+		if !hasSuffix(line, "\n") {
+			out.Write("\n")
+		}
+	}
+
+	printDiff := func(rawLines []*RawLine) {
+		prefix := ">\t"
+		for _, rawLine := range rawLines {
+			if rawLine.textnl != rawLine.orignl {
+				prefix = "\t" // Make it look like an actual diff
+			}
+		}
+
+		for _, rawLine := range rawLines {
+			if rawLine.textnl != rawLine.orignl {
+				writeLine("-\t", rawLine.orignl)
+				if rawLine.textnl != "" {
+					writeLine("+\t", rawLine.textnl)
+				}
+			} else {
+				writeLine(prefix, rawLine.orignl)
+			}
+		}
+	}
+
+	if line.autofix != nil {
+		for _, before := range line.autofix.linesBefore {
+			writeLine("+\t", before)
+		}
+		printDiff(line.raw)
+		for _, after := range line.autofix.linesAfter {
+			writeLine("+\t", after)
+		}
+	} else {
+		printDiff(line.raw)
 	}
 }
 
@@ -213,9 +273,9 @@ func (l *Logger) Logf(level *LogLevel, filename, lineno, format, msg string) {
 		out = l.err
 	}
 
-	filenameSep := ifelseStr(filename != "", ": ", "")
-	effLineno := ifelseStr(filename != "", lineno, "")
-	linenoSep := ifelseStr(effLineno != "", ":", "")
+	filenameSep := condStr(filename != "", ": ", "")
+	effLineno := condStr(filename != "", lineno, "")
+	linenoSep := condStr(effLineno != "", ":", "")
 	var diag string
 	if l.Opts.GccOutput {
 		diag = sprintf("%s%s%s%s%s: %s\n", filename, linenoSep, effLineno, filenameSep, level.GccName, msg)
@@ -231,6 +291,8 @@ func (l *Logger) Logf(level *LogLevel, filename, lineno, format, msg string) {
 		l.errors++
 	case Warn:
 		l.warnings++
+	case Note:
+		l.notes++
 	}
 }
 

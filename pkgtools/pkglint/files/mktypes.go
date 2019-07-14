@@ -43,7 +43,7 @@ func (m MkVarUseModifier) IsSuffixSubst() bool {
 }
 
 func (m MkVarUseModifier) MatchSubst() (ok bool, regex bool, from string, to string, options string) {
-	p := NewMkParser(nil, m.Text, false)
+	p := NewMkParser(nil, m.Text)
 	return p.varUseModifierSubst('}')
 }
 

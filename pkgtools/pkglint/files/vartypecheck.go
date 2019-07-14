@@ -297,7 +297,7 @@ func (cv *VartypeCheck) ConfFiles() {
 func (cv *VartypeCheck) Dependency() {
 	value := cv.Value
 
-	parser := NewMkParser(nil, value, false)
+	parser := NewMkParser(nil, value)
 	deppat := parser.Dependency()
 	rest := parser.Rest()
 
@@ -544,7 +544,7 @@ func (cv *VartypeCheck) FetchURL() {
 //
 // See http://www.opengroup.org/onlinepubs/009695399/basedefs/xbd_chap03.html#tag_03_169
 func (cv *VartypeCheck) Filename() {
-	valid := regex.Pattern(ifelseStr(
+	valid := regex.Pattern(condStr(
 		cv.Op == opUseMatch,
 		`[%*+,\-.0-9?@A-Z\[\]_a-z~]`,
 		`[%+,\-.0-9@A-Z_a-z~]`))
@@ -555,11 +555,11 @@ func (cv *VartypeCheck) Filename() {
 	}
 
 	cv.Warnf(
-		ifelseStr(cv.Op == opUseMatch,
+		condStr(cv.Op == opUseMatch,
 			"The filename pattern %q contains the invalid character%s %q.",
 			"The filename %q contains the invalid character%s %q."),
 		cv.Value,
-		ifelseStr(len(invalid) > 1, "s", ""),
+		condStr(len(invalid) > 1, "s", ""),
 		invalid)
 }
 
@@ -574,7 +574,7 @@ func (cv *VartypeCheck) FileMask() {
 
 	cv.Warnf("The filename pattern %q contains the invalid character%s %q.",
 		cv.Value,
-		ifelseStr(len(invalid) > 1, "s", ""),
+		condStr(len(invalid) > 1, "s", ""),
 		invalid)
 }
 
@@ -858,7 +858,7 @@ func (cv *VartypeCheck) PathMask() {
 
 	cv.Warnf("The pathname pattern %q contains the invalid character%s %q.",
 		cv.Value,
-		ifelseStr(len(invalid) > 1, "s", ""),
+		condStr(len(invalid) > 1, "s", ""),
 		invalid)
 }
 
@@ -868,7 +868,7 @@ func (cv *VartypeCheck) PathMask() {
 //
 // See http://www.opengroup.org/onlinepubs/009695399/basedefs/xbd_chap03.html#tag_03_266
 func (cv *VartypeCheck) Pathname() {
-	valid := regex.Pattern(ifelseStr(
+	valid := regex.Pattern(condStr(
 		cv.Op == opUseMatch,
 		`[%*+,\-./0-9?@A-Z\[\]_a-z~]`,
 		`[%+,\-./0-9@A-Z_a-z~]`))
@@ -878,11 +878,11 @@ func (cv *VartypeCheck) Pathname() {
 	}
 
 	cv.Warnf(
-		ifelseStr(cv.Op == opUseMatch,
+		condStr(cv.Op == opUseMatch,
 			"The pathname pattern %q contains the invalid character%s %q.",
 			"The pathname %q contains the invalid character%s %q."),
 		cv.Value,
-		ifelseStr(len(invalid) > 1, "s", ""),
+		condStr(len(invalid) > 1, "s", ""),
 		invalid)
 }
 

@@ -10,20 +10,21 @@ func (s *Suite) Test_Vartype_EffectivePermissions(c *check.C) {
 	t.SetUpVartypes()
 
 	if typ := G.Pkgsrc.vartypes.Canon("PREFIX"); c.Check(typ, check.NotNil) {
-		c.Check(typ.basicType.name, equals, "Pathname")
-		c.Check(typ.aclEntries, deepEquals, []ACLEntry{NewACLEntry("*", aclpUse)})
-		c.Check(typ.EffectivePermissions("Makefile"), equals, aclpUse)
-		c.Check(typ.EffectivePermissions("buildlink3.mk"), equals, aclpUse)
+		t.CheckEquals(typ.basicType.name, "Pathname")
+		t.CheckDeepEquals(typ.aclEntries, []ACLEntry{NewACLEntry("*", aclpUse)})
+		t.CheckEquals(typ.EffectivePermissions("Makefile"), aclpUse)
+		t.CheckEquals(typ.EffectivePermissions("buildlink3.mk"), aclpUse)
 	}
 
 	if typ := G.Pkgsrc.vartypes.Canon("EXTRACT_OPTS"); c.Check(typ, check.NotNil) {
-		c.Check(typ.basicType.name, equals, "ShellWord")
-		c.Check(typ.EffectivePermissions("Makefile"), equals, aclpAllWrite|aclpUse)
-		c.Check(typ.EffectivePermissions("options.mk"), equals, aclpAllWrite|aclpUse)
+		t.CheckEquals(typ.basicType.name, "ShellWord")
+		t.CheckEquals(typ.EffectivePermissions("Makefile"), aclpAllWrite|aclpUse)
+		t.CheckEquals(typ.EffectivePermissions("options.mk"), aclpAllWrite|aclpUse)
 	}
 }
 
 func (s *Suite) Test_Vartype_AlternativeFiles(c *check.C) {
+	t := s.Init(c)
 
 	// test generates the files description for the "set" permission.
 	test := func(rules []string, alternatives string) {
@@ -32,7 +33,7 @@ func (s *Suite) Test_Vartype_AlternativeFiles(c *check.C) {
 
 		alternativeFiles := vartype.AlternativeFiles(aclpSet)
 
-		c.Check(alternativeFiles, equals, alternatives)
+		t.CheckEquals(alternativeFiles, alternatives)
 	}
 
 	// rules parses the given permission rules.
@@ -122,42 +123,50 @@ func (s *Suite) Test_Vartype_String(c *check.C) {
 	t.SetUpVartypes()
 
 	vartype := G.Pkgsrc.VariableType(nil, "PKG_DEBUG_LEVEL")
-	t.Check(vartype.String(), equals, "Integer (command-line-provided)")
+	t.CheckEquals(vartype.String(), "Integer (command-line-provided)")
 }
 
 func (s *Suite) Test_BasicType_HasEnum(c *check.C) {
+	t := s.Init(c)
+
 	vc := enum("start middle end")
 
-	c.Check(vc.HasEnum("start"), equals, true)
-	c.Check(vc.HasEnum("middle"), equals, true)
-	c.Check(vc.HasEnum("end"), equals, true)
+	t.CheckEquals(vc.HasEnum("start"), true)
+	t.CheckEquals(vc.HasEnum("middle"), true)
+	t.CheckEquals(vc.HasEnum("end"), true)
 
-	c.Check(vc.HasEnum("star"), equals, false)
-	c.Check(vc.HasEnum("mid"), equals, false)
-	c.Check(vc.HasEnum("nd"), equals, false)
-	c.Check(vc.HasEnum("start middle"), equals, false)
+	t.CheckEquals(vc.HasEnum("star"), false)
+	t.CheckEquals(vc.HasEnum("mid"), false)
+	t.CheckEquals(vc.HasEnum("nd"), false)
+	t.CheckEquals(vc.HasEnum("start middle"), false)
 }
 
 func (s *Suite) Test_ACLPermissions_Contains(c *check.C) {
+	t := s.Init(c)
+
 	perms := aclpAllRuntime
 
-	c.Check(perms.Contains(aclpAllRuntime), equals, true)
-	c.Check(perms.Contains(aclpUse), equals, true)
-	c.Check(perms.Contains(aclpUseLoadtime), equals, false)
+	t.CheckEquals(perms.Contains(aclpAllRuntime), true)
+	t.CheckEquals(perms.Contains(aclpUse), true)
+	t.CheckEquals(perms.Contains(aclpUseLoadtime), false)
 }
 
 func (s *Suite) Test_ACLPermissions_String(c *check.C) {
-	c.Check(ACLPermissions(0).String(), equals, "none")
-	c.Check(aclpAll.String(), equals, "set, set-default, append, use-loadtime, use")
+	t := s.Init(c)
+
+	t.CheckEquals(ACLPermissions(0).String(), "none")
+	t.CheckEquals(aclpAll.String(), "set, set-default, append, use-loadtime, use")
 }
 
 func (s *Suite) Test_ACLPermissions_HumanString(c *check.C) {
+	t := s.Init(c)
 
-	c.Check(ACLPermissions(0).HumanString(),
-		equals, "") // Doesn't happen in practice
+	// Doesn't happen in practice
+	t.CheckEquals(ACLPermissions(0).HumanString(), "")
 
-	c.Check(aclpAll.HumanString(),
-		equals, "set, given a default value, appended to, used at load time, or used")
+	t.CheckEquals(
+		aclpAll.HumanString(),
+		"set, given a default value, appended to, used at load time, or used")
 }
 
 func (s *Suite) Test_Vartype_MayBeAppendedTo(c *check.C) {
@@ -165,8 +174,8 @@ func (s *Suite) Test_Vartype_MayBeAppendedTo(c *check.C) {
 
 	t.SetUpVartypes()
 
-	c.Check(G.Pkgsrc.VariableType(nil, "COMMENT").MayBeAppendedTo(), equals, true)
-	c.Check(G.Pkgsrc.VariableType(nil, "DEPENDS").MayBeAppendedTo(), equals, true)
-	c.Check(G.Pkgsrc.VariableType(nil, "PKG_FAIL_REASON").MayBeAppendedTo(), equals, true)
-	c.Check(G.Pkgsrc.VariableType(nil, "CONF_FILES").MayBeAppendedTo(), equals, true)
+	t.CheckEquals(G.Pkgsrc.VariableType(nil, "COMMENT").MayBeAppendedTo(), true)
+	t.CheckEquals(G.Pkgsrc.VariableType(nil, "DEPENDS").MayBeAppendedTo(), true)
+	t.CheckEquals(G.Pkgsrc.VariableType(nil, "PKG_FAIL_REASON").MayBeAppendedTo(), true)
+	t.CheckEquals(G.Pkgsrc.VariableType(nil, "CONF_FILES").MayBeAppendedTo(), true)
 }
