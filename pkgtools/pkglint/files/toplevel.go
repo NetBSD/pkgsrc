@@ -20,7 +20,7 @@ func CheckdirToplevel(dir string) {
 	}
 
 	for _, mkline := range mklines.mklines {
-		if (mkline.IsVarassign() || mkline.IsCommentedVarassign()) && mkline.Varname() == "SUBDIR" {
+		if mkline.IsVarassignMaybeCommented() && mkline.Varname() == "SUBDIR" {
 			ctx.checkSubdir(mkline)
 		}
 	}
@@ -38,15 +38,14 @@ func CheckdirToplevel(dir string) {
 func (ctx *Toplevel) checkSubdir(mkline *MkLine) {
 	subdir := mkline.Value()
 
-	if mkline.IsCommentedVarassign() && (mkline.VarassignComment() == "#" || mkline.VarassignComment() == "") {
-		mkline.Warnf("%q commented out without giving a reason.", subdir)
+	if mkline.IsCommentedVarassign() {
+		comment := mkline.VarassignComment()
+		if comment == "" || comment == "#" {
+			mkline.Warnf("%q commented out without giving a reason.", subdir)
+		}
 	}
 
-	if !hasSuffix(mkline.ValueAlign(), "=\t") {
-		mkline.Warnf("Indentation should be a single tab character.")
-	}
-
-	if contains(subdir, "$") || !fileExists(ctx.dir+"/"+subdir+"/Makefile") {
+	if containsVarRef(subdir) || !fileExists(ctx.dir+"/"+subdir+"/Makefile") {
 		return
 	}
 

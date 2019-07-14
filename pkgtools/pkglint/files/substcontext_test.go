@@ -13,19 +13,19 @@ func (s *Suite) Test_SubstContext__incomplete(c *check.C) {
 
 	ctx.Varassign(t.NewMkLine("Makefile", 10, "PKGNAME=pkgname-1.0"))
 
-	c.Check(ctx.id, equals, "")
+	t.CheckEquals(ctx.id, "")
 
 	ctx.Varassign(t.NewMkLine("Makefile", 11, "SUBST_CLASSES+=interp"))
 
-	c.Check(ctx.id, equals, "interp")
+	t.CheckEquals(ctx.id, "interp")
 
 	ctx.Varassign(t.NewMkLine("Makefile", 12, "SUBST_FILES.interp=Makefile"))
 
-	c.Check(ctx.IsComplete(), equals, false)
+	t.CheckEquals(ctx.IsComplete(), false)
 
 	ctx.Varassign(t.NewMkLine("Makefile", 13, "SUBST_SED.interp=s,@PREFIX@,${PREFIX},g"))
 
-	c.Check(ctx.IsComplete(), equals, false)
+	t.CheckEquals(ctx.IsComplete(), false)
 
 	ctx.Finish(t.NewMkLine("Makefile", 14, ""))
 
@@ -46,11 +46,11 @@ func (s *Suite) Test_SubstContext__complete(c *check.C) {
 	ctx.Varassign(t.NewMkLine("Makefile", 12, "SUBST_FILES.p=Makefile"))
 	ctx.Varassign(t.NewMkLine("Makefile", 13, "SUBST_SED.p=s,@PREFIX@,${PREFIX},g"))
 
-	c.Check(ctx.IsComplete(), equals, false)
+	t.CheckEquals(ctx.IsComplete(), false)
 
 	ctx.Varassign(t.NewMkLine("Makefile", 14, "SUBST_STAGE.p=post-configure"))
 
-	c.Check(ctx.IsComplete(), equals, true)
+	t.CheckEquals(ctx.IsComplete(), true)
 
 	ctx.Finish(t.NewMkLine("Makefile", 15, ""))
 
@@ -72,7 +72,7 @@ func (s *Suite) Test_SubstContext__OPSYSVARS(c *check.C) {
 	ctx.Varassign(t.NewMkLine("Makefile", 14, "SUBST_SED.prefix=s,@PREFIX@,${PREFIX},g"))
 	ctx.Varassign(t.NewMkLine("Makefile", 15, "SUBST_STAGE.prefix=post-configure"))
 
-	c.Check(ctx.IsComplete(), equals, true)
+	t.CheckEquals(ctx.IsComplete(), true)
 
 	ctx.Finish(t.NewMkLine("Makefile", 15, ""))
 
@@ -814,7 +814,7 @@ func (s *Suite) Test_SubstContext_extractVarname(c *check.C) {
 	t := s.Init(c)
 
 	test := func(input, expected string) {
-		t.Check((*SubstContext).extractVarname(nil, input), equals, expected)
+		t.CheckEquals((*SubstContext).extractVarname(nil, input), expected)
 	}
 
 	// A simple variable name.
@@ -890,7 +890,7 @@ func simulateSubstLines(t *Tester, texts ...string) {
 		assertNil(err, "")
 
 		if lineno != 0 {
-			t.Check(curr, equals, lineno)
+			t.CheckEquals(curr, lineno)
 		}
 
 		text := lineText[4:]
