@@ -11,7 +11,6 @@ import (
 func (s *Suite) Test__test_names(c *check.C) {
 	ck := intqa.NewTestNameChecker(c)
 	ck.IgnoreFiles("*yacc.go")
-	ck.AllowPrefix("Varalign", "mklines_varalign.go")
 	ck.AllowPrefix("ShellParser", "mkshparser.go")
 	ck.AllowCamelCaseDescriptions(
 		"compared_to_splitIntoShellTokens",

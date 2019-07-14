@@ -9,7 +9,7 @@ func (s *Suite) Test_RawLine_String(c *check.C) {
 
 	line := t.NewLine("filename", 123, "text")
 
-	c.Check(line.raw[0].String(), equals, "123:text\n")
+	t.CheckEquals(line.raw[0].String(), "123:text\n")
 }
 
 func (s *Suite) Test_NewLine__assertion(c *check.C) {
@@ -21,10 +21,10 @@ func (s *Suite) Test_NewLine__assertion(c *check.C) {
 func (s *Suite) Test_Line_IsMultiline(c *check.C) {
 	t := s.Init(c)
 
-	t.Check(t.NewLine("filename", 123, "text").IsMultiline(), equals, false)
-	t.Check(NewLineEOF("filename").IsMultiline(), equals, false)
+	t.CheckEquals(t.NewLine("filename", 123, "text").IsMultiline(), false)
+	t.CheckEquals(NewLineEOF("filename").IsMultiline(), false)
 
-	t.Check(NewLineMulti("filename", 123, 125, "text", nil).IsMultiline(), equals, true)
+	t.CheckEquals(NewLineMulti("filename", 123, 125, "text", nil).IsMultiline(), true)
 }
 
 // In case of a fatal error, pkglint quits in a controlled manner,
