@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/03/24 14:29:19 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2019/07/14 15:31:46 wiedi Exp $
 
 DISTNAME=	epam-1.0.4
 CATEGORIES=	security
@@ -15,7 +15,7 @@ SUPERSEDES=	erlang-p1_epam-[0-9]*
 
 GNU_CONFIGURE=	yes
 
-LDFLAGS.SunOS+=	-lnsl
+LDFLAGS.SunOS+=	-lnsl -lsocket
 
 .include "../../lang/erlang/module.mk"
 .include "../../mk/bsd.pkg.mk"
