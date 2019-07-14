@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2905 2019/07/14 12:25:42 bsiegert Exp $
+$NetBSD: CHANGES-2019,v 1.2906 2019/07/14 15:21:32 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4805,3 +4805,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/fasttracker2 to 2.162 [fox 2019-07-13]
 	Updated devel/py-mercurial to 5.0.2 [wiz 2019-07-14]
 	Updated lang/go111 to 1.11.12 [bsiegert 2019-07-14]
+	Updated lang/go112 to 1.12.7 [bsiegert 2019-07-14]
