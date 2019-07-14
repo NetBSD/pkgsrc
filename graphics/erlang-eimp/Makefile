@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/07/20 09:26:21 fhajny Exp $
+# $NetBSD: Makefile,v 1.8 2019/07/14 15:55:06 wiedi Exp $
 
 DISTNAME=	eimp-1.0.6
 PKGNAME=	erlang-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	erlang-p1_utils>=1.0.12:../../misc/erlang-p1_utils
 
 GNU_CONFIGURE=	yes
 
-LDFLAGS.SunOS+=     -lnsl
+LDFLAGS.SunOS+=     -lnsl -lsocket
 
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../lang/erlang/module.mk"
