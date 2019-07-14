@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2906 2019/07/14 15:21:32 bsiegert Exp $
+$NetBSD: CHANGES-2019,v 1.2907 2019/07/14 20:49:07 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4806,3 +4806,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-mercurial to 5.0.2 [wiz 2019-07-14]
 	Updated lang/go111 to 1.11.12 [bsiegert 2019-07-14]
 	Updated lang/go112 to 1.12.7 [bsiegert 2019-07-14]
+	Updated net/syncthing to 1.2.0 [triaxx 2019-07-14]
