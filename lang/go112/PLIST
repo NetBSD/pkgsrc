@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/05/27 15:16:38 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/07/14 15:19:55 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go112/AUTHORS
@@ -332,6 +332,7 @@ go112/misc/cgo/test/issue29781.go
 go112/misc/cgo/test/issue30065.go
 go112/misc/cgo/test/issue3250.go
 go112/misc/cgo/test/issue3250w.go
+go112/misc/cgo/test/issue32579.go
 go112/misc/cgo/test/issue3261.go
 go112/misc/cgo/test/issue3729.go
 go112/misc/cgo/test/issue3729w.go
@@ -5482,8 +5483,10 @@ go112/src/os/dir_plan9.go
 go112/src/os/dir_unix.go
 go112/src/os/dir_windows.go
 go112/src/os/env.go
+go112/src/os/env_default.go
 go112/src/os/env_test.go
 go112/src/os/env_unix_test.go
+go112/src/os/env_windows.go
 go112/src/os/error.go
 go112/src/os/error_plan9.go
 go112/src/os/error_posix.go
@@ -8348,6 +8351,11 @@ go112/test/fixedbugs/issue31252.dir/b.go
 go112/test/fixedbugs/issue31252.dir/c.go
 go112/test/fixedbugs/issue31252.dir/main.go
 go112/test/fixedbugs/issue31252.go
+go112/test/fixedbugs/issue31987.go
+go112/test/fixedbugs/issue32477.go
+go112/test/fixedbugs/issue32560.go
+go112/test/fixedbugs/issue32680.go
+go112/test/fixedbugs/issue32680.out
 go112/test/fixedbugs/issue3552.dir/one.go
 go112/test/fixedbugs/issue3552.dir/two.go
 go112/test/fixedbugs/issue3552.go
