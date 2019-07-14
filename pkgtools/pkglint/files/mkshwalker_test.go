@@ -3,6 +3,7 @@ package pkglint
 import "gopkg.in/check.v1"
 
 func (s *Suite) Test_MkShWalker_Walk(c *check.C) {
+	t := s.Init(c)
 
 	pathFor := map[string]bool{}
 
@@ -67,13 +68,13 @@ func (s *Suite) Test_MkShWalker_Walk(c *check.C) {
 		//    Case with 1 item(s)
 		//      ...
 
-		c.Check(commands, deepEquals, output)
+		t.CheckDeepEquals(commands, output)
 
 		// After parsing, there is not a single level of indentation,
 		// therefore even Parent(0) returns nil.
 		//
 		// This ensures that the w.push/w.pop calls are balanced.
-		c.Check(walker.Parent(0), equals, nil)
+		t.CheckEquals(walker.Parent(0), nil)
 	}
 
 	outputPathFor("SimpleCommand")
@@ -240,6 +241,7 @@ func (s *Suite) Test_MkShWalker_Walk(c *check.C) {
 }
 
 func (s *Suite) Test_MkShWalker_Walk__empty_callback(c *check.C) {
+	t := s.Init(c)
 
 	test := func(program string) {
 		list, err := parseShellProgram(dummyLine, program)
@@ -248,7 +250,7 @@ func (s *Suite) Test_MkShWalker_Walk__empty_callback(c *check.C) {
 		walker := NewMkShWalker()
 		walker.Walk(list)
 
-		c.Check(walker.Parent(0), equals, nil)
+		t.CheckEquals(walker.Parent(0), nil)
 	}
 
 	test("" +

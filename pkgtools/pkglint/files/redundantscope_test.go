@@ -1498,9 +1498,8 @@ func (s *Suite) Test_RedundantScope_handleVarassign__conditional(c *check.C) {
 	scope.Check(mklines)
 	writeLocations := scope.get("VAR").vari.WriteLocations()
 
-	t.Check(
+	t.CheckDeepEquals(
 		writeLocations,
-		deepEquals,
 		[]*MkLine{mklines.mklines[0], mklines.mklines[2]})
 }
 
@@ -1537,15 +1536,15 @@ func (s *Suite) Test_includePath_includes(c *check.C) {
 		mo  = path("Makefile", "other.mk")
 	)
 
-	t.Check(m.includes(m), equals, false)
+	t.CheckEquals(m.includes(m), false)
 
-	t.Check(m.includes(mc), equals, true)
-	t.Check(m.includes(mco), equals, true)
-	t.Check(mc.includes(mco), equals, true)
+	t.CheckEquals(m.includes(mc), true)
+	t.CheckEquals(m.includes(mco), true)
+	t.CheckEquals(mc.includes(mco), true)
 
-	t.Check(mc.includes(m), equals, false)
-	t.Check(mc.includes(mo), equals, false)
-	t.Check(mo.includes(mc), equals, false)
+	t.CheckEquals(mc.includes(m), false)
+	t.CheckEquals(mc.includes(mo), false)
+	t.CheckEquals(mo.includes(mc), false)
 }
 
 func (s *Suite) Test_includePath_equals(c *check.C) {
@@ -1562,13 +1561,13 @@ func (s *Suite) Test_includePath_equals(c *check.C) {
 		mo  = path("Makefile", "other.mk")
 	)
 
-	t.Check(m.equals(m), equals, true)
+	t.CheckEquals(m.equals(m), true)
 
-	t.Check(m.equals(mc), equals, false)
-	t.Check(m.equals(mco), equals, false)
-	t.Check(mc.equals(mco), equals, false)
+	t.CheckEquals(m.equals(mc), false)
+	t.CheckEquals(m.equals(mco), false)
+	t.CheckEquals(mc.equals(mco), false)
 
-	t.Check(mc.equals(m), equals, false)
-	t.Check(mc.equals(mo), equals, false)
-	t.Check(mo.equals(mc), equals, false)
+	t.CheckEquals(mc.equals(m), false)
+	t.CheckEquals(mc.equals(mo), false)
+	t.CheckEquals(mo.equals(mc), false)
 }

@@ -16,7 +16,7 @@ func (s *Suite) Test_Pkglint_Main__help(c *check.C) {
 
 	exitCode := t.Main("-h")
 
-	c.Check(exitCode, equals, 0)
+	t.CheckEquals(exitCode, 0)
 	t.CheckOutputLines(
 		"usage: pkglint [options] dir...",
 		"",
@@ -60,7 +60,7 @@ func (s *Suite) Test_Pkglint_Main__version(c *check.C) {
 
 	exitcode := t.Main("--version")
 
-	c.Check(exitcode, equals, 0)
+	t.CheckEquals(exitcode, 0)
 	t.CheckOutputLines(
 		confVersion)
 }
@@ -71,7 +71,7 @@ func (s *Suite) Test_Pkglint_Main__no_args(c *check.C) {
 	exitcode := t.Main()
 
 	// The "." from the error message is the implicit argument added in Pkglint.Main.
-	c.Check(exitcode, equals, 1)
+	t.CheckEquals(exitcode, 1)
 	t.CheckOutputLines(
 		"FATAL: \".\" must be inside a pkgsrc tree.")
 }
@@ -82,9 +82,9 @@ func (s *Suite) Test_Pkglint_ParseCommandLine__only(c *check.C) {
 	exitcode := G.ParseCommandLine([]string{"pkglint", "-Wall", "--only", ":Q", "--version"})
 
 	if exitcode != -1 {
-		c.Check(exitcode, equals, 0)
+		t.CheckEquals(exitcode, 0)
 	}
-	c.Check(G.Opts.LogOnly, deepEquals, []string{":Q"})
+	t.CheckDeepEquals(G.Opts.LogOnly, []string{":Q"})
 	t.CheckOutputLines(
 		confVersion)
 }
@@ -94,7 +94,7 @@ func (s *Suite) Test_Pkglint_Main__unknown_option(c *check.C) {
 
 	exitcode := t.Main("--unknown-option")
 
-	c.Check(exitcode, equals, 1)
+	t.CheckEquals(exitcode, 1)
 	c.Check(t.Output(), check.Matches,
 		`\Qpkglint: unknown option: --unknown-option\E\n`+
 			`\Q\E\n`+
@@ -230,7 +230,7 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 			"(distinfo has asdfasdf, patch file has e775969de639ec703866c0336c4c8e0fdd96309c).",
 		"WARN: ~/sysutils/checkperms/patches/patch-checkperms.c:12: Premature end of patch hunk "+
 			"(expected 1 lines to be deleted and 0 lines to be added).",
-		"4 errors and 2 warnings found.",
+		"4 errors, 2 warnings and 1 note found.",
 		"(Run \"pkglint -e\" to show explanations.)",
 		"(Run \"pkglint -fs\" to show what can be fixed automatically.)",
 		"(Run \"pkglint -F\" to automatically fix some issues.)")
@@ -247,7 +247,7 @@ func (s *Suite) Test_Pkglint_Main__autofix_exitcode(c *check.C) {
 
 	t.CheckOutputLines(
 		"AUTOFIX: ~/filename.mk:1: Inserting a line \"" + MkCvsID + "\" before this line.")
-	t.Check(exitcode, equals, 0)
+	t.CheckEquals(exitcode, 0)
 }
 
 // Run pkglint in a realistic environment.
@@ -441,7 +441,7 @@ func (s *Suite) Test_resolveVariableRefs__circular_reference(c *check.C) {
 
 	// TODO: The ${VAR} after "b:" should also be expanded since there
 	//  is no recursion.
-	c.Check(resolved, equals, "the a:1:${VAR}+ 2:${VAR} b:${VAR}")
+	t.CheckEquals(resolved, "the a:1:${VAR}+ 2:${VAR} b:${VAR}")
 }
 
 func (s *Suite) Test_resolveVariableRefs__multilevel(c *check.C) {
@@ -460,7 +460,7 @@ func (s *Suite) Test_resolveVariableRefs__multilevel(c *check.C) {
 	//  in such a case.
 	resolved := resolveVariableRefs(nil, "you ${FIRST}")
 
-	c.Check(resolved, equals, "you got it")
+	t.CheckEquals(resolved, "you got it")
 }
 
 // Usually, a dot in a variable name means a parameterized form.
@@ -475,7 +475,7 @@ func (s *Suite) Test_resolveVariableRefs__special_chars(c *check.C) {
 
 	resolved := resolveVariableRefs(nil, "gst-plugins0.10-${GST_PLUGINS0.10_TYPE}/distinfo")
 
-	c.Check(resolved, equals, "gst-plugins0.10-x11/distinfo")
+	t.CheckEquals(resolved, "gst-plugins0.10-x11/distinfo")
 }
 
 func (s *Suite) Test_CheckLinesDescr(c *check.C) {
@@ -610,7 +610,7 @@ func (s *Suite) Test_Pkglint_checkReg__alternatives(c *check.C) {
 
 	t.CheckOutputLines(
 		"ERROR: ~/category/package/ALTERNATIVES:1: Alternative implementation \"bin/gnu-tar\" must be an absolute path.",
-		"1 error and 0 warnings found.",
+		"1 error found.",
 		"(Run \"pkglint -e\" to show explanations.)")
 }
 
@@ -658,7 +658,7 @@ func (s *Suite) Test_Pkglint__profiling(c *check.C) {
 
 	// Pkglint always writes the profiling data into the current directory.
 	// TODO: Make the location of the profiling log a mandatory parameter.
-	c.Check(fileExists("pkglint.pprof"), equals, true)
+	t.CheckEquals(fileExists("pkglint.pprof"), true)
 
 	err := os.Remove("pkglint.pprof")
 	c.Check(err, check.IsNil)
@@ -667,7 +667,7 @@ func (s *Suite) Test_Pkglint__profiling(c *check.C) {
 	// or not interesting enough, since that info includes the exact timing
 	// that the top time-consuming regular expressions took.
 	firstOutput := strings.Split(t.Output(), "\n")[0]
-	c.Check(firstOutput, equals, "ERROR: Makefile: Cannot be read.")
+	t.CheckEquals(firstOutput, "ERROR: Makefile: Cannot be read.")
 }
 
 func (s *Suite) Test_Pkglint__profiling_error(c *check.C) {
@@ -678,7 +678,7 @@ func (s *Suite) Test_Pkglint__profiling_error(c *check.C) {
 
 	exitcode := t.Main("--profiling")
 
-	c.Check(exitcode, equals, 1)
+	t.CheckEquals(exitcode, 1)
 	t.CheckOutputMatches(
 		`FATAL: Cannot create profiling file: open pkglint\.pprof: .*`)
 }
@@ -694,7 +694,7 @@ func (s *Suite) Test_Pkglint_checkReg__in_current_working_directory(c *check.C) 
 
 	t.CheckOutputLines(
 		"WARN: log: Unexpected file found.",
-		"0 errors and 1 warning found.")
+		"1 warning found.")
 }
 
 func (s *Suite) Test_Pkglint_Tool__prefer_mk_over_pkgsrc(c *check.C) {
@@ -711,10 +711,10 @@ func (s *Suite) Test_Pkglint_Tool__prefer_mk_over_pkgsrc(c *check.C) {
 	loadTimeTool, loadTimeUsable := G.Tool(mklines, "tool", LoadTime)
 	runTimeTool, runTimeUsable := G.Tool(mklines, "tool", RunTime)
 
-	c.Check(loadTimeTool, equals, local)
-	c.Check(loadTimeUsable, equals, false)
-	c.Check(runTimeTool, equals, local)
-	c.Check(runTimeUsable, equals, true)
+	t.CheckEquals(loadTimeTool, local)
+	t.CheckEquals(loadTimeUsable, false)
+	t.CheckEquals(runTimeTool, local)
+	t.CheckEquals(runTimeUsable, true)
 }
 
 func (s *Suite) Test_Pkglint_Tool__lookup_by_name_fallback(c *check.C) {
@@ -729,10 +729,10 @@ func (s *Suite) Test_Pkglint_Tool__lookup_by_name_fallback(c *check.C) {
 	// The tool is returned even though it may not be used at the moment.
 	// The calling code must explicitly check for usability.
 
-	c.Check(loadTimeTool.String(), equals, "tool:::Nowhere")
-	c.Check(loadTimeUsable, equals, false)
-	c.Check(runTimeTool.String(), equals, "tool:::Nowhere")
-	c.Check(runTimeUsable, equals, false)
+	t.CheckEquals(loadTimeTool.String(), "tool:::Nowhere")
+	t.CheckEquals(loadTimeUsable, false)
+	t.CheckEquals(runTimeTool.String(), "tool:::Nowhere")
+	t.CheckEquals(runTimeUsable, false)
 }
 
 // TODO: Document the purpose of this test.
@@ -750,10 +750,10 @@ func (s *Suite) Test_Pkglint_Tool__lookup_by_varname(c *check.C) {
 	loadTimeTool, loadTimeUsable := G.Tool(mklines, "${TOOL}", LoadTime)
 	runTimeTool, runTimeUsable := G.Tool(mklines, "${TOOL}", RunTime)
 
-	c.Check(loadTimeTool, equals, local)
-	c.Check(loadTimeUsable, equals, false)
-	c.Check(runTimeTool, equals, local)
-	c.Check(runTimeUsable, equals, true)
+	t.CheckEquals(loadTimeTool, local)
+	t.CheckEquals(loadTimeUsable, false)
+	t.CheckEquals(runTimeTool, local)
+	t.CheckEquals(runTimeUsable, true)
 }
 
 // TODO: Document the purpose of this test.
@@ -766,10 +766,10 @@ func (s *Suite) Test_Pkglint_Tool__lookup_by_varname_fallback(c *check.C) {
 	loadTimeTool, loadTimeUsable := G.Tool(mklines, "${TOOL}", LoadTime)
 	runTimeTool, runTimeUsable := G.Tool(mklines, "${TOOL}", RunTime)
 
-	c.Check(loadTimeTool.String(), equals, "tool:TOOL::Nowhere")
-	c.Check(loadTimeUsable, equals, false)
-	c.Check(runTimeTool.String(), equals, "tool:TOOL::Nowhere")
-	c.Check(runTimeUsable, equals, false)
+	t.CheckEquals(loadTimeTool.String(), "tool:TOOL::Nowhere")
+	t.CheckEquals(loadTimeUsable, false)
+	t.CheckEquals(runTimeTool.String(), "tool:TOOL::Nowhere")
+	t.CheckEquals(runTimeUsable, false)
 }
 
 // TODO: Document the purpose of this test.
@@ -782,10 +782,10 @@ func (s *Suite) Test_Pkglint_Tool__lookup_by_varname_fallback_runtime(c *check.C
 	loadTimeTool, loadTimeUsable := G.Tool(mklines, "${TOOL}", LoadTime)
 	runTimeTool, runTimeUsable := G.Tool(mklines, "${TOOL}", RunTime)
 
-	c.Check(loadTimeTool.String(), equals, "tool:TOOL::AtRunTime")
-	c.Check(loadTimeUsable, equals, false)
-	c.Check(runTimeTool.String(), equals, "tool:TOOL::AtRunTime")
-	c.Check(runTimeUsable, equals, true)
+	t.CheckEquals(loadTimeTool.String(), "tool:TOOL::AtRunTime")
+	t.CheckEquals(loadTimeUsable, false)
+	t.CheckEquals(runTimeTool.String(), "tool:TOOL::AtRunTime")
+	t.CheckEquals(runTimeUsable, true)
 }
 
 func (s *Suite) Test_Pkglint_ToolByVarname__prefer_mk_over_pkgsrc(c *check.C) {
@@ -799,7 +799,7 @@ func (s *Suite) Test_Pkglint_ToolByVarname__prefer_mk_over_pkgsrc(c *check.C) {
 	global.Validity = Nowhere
 	local.Validity = AtRunTime
 
-	c.Check(G.ToolByVarname(mklines, "TOOL"), equals, local)
+	t.CheckEquals(G.ToolByVarname(mklines, "TOOL"), local)
 }
 
 func (s *Suite) Test_Pkglint_ToolByVarname(c *check.C) {
@@ -808,7 +808,7 @@ func (s *Suite) Test_Pkglint_ToolByVarname(c *check.C) {
 	mklines := t.NewMkLines("Makefile", MkCvsID)
 	G.Pkgsrc.Tools.def("tool", "TOOL", false, AtRunTime, nil)
 
-	c.Check(G.ToolByVarname(mklines, "TOOL").String(), equals, "tool:TOOL::AtRunTime")
+	t.CheckEquals(G.ToolByVarname(mklines, "TOOL").String(), "tool:TOOL::AtRunTime")
 }
 
 func (s *Suite) Test_Pkglint_checkReg__other(c *check.C) {
@@ -899,7 +899,7 @@ func (s *Suite) Test_Pkglint_checkReg__readme_and_todo(c *check.C) {
 	t.CheckOutputLines(
 		"ERROR: category/package/README: Packages in main pkgsrc must not have a README file.",
 		"ERROR: category/package/TODO: Packages in main pkgsrc must not have a TODO file.",
-		"2 errors and 0 warnings found.")
+		"2 errors found.")
 
 	t.Main("--import", "category/package", "wip/package")
 
@@ -908,7 +908,7 @@ func (s *Suite) Test_Pkglint_checkReg__readme_and_todo(c *check.C) {
 		"ERROR: category/package/TODO: Packages in main pkgsrc must not have a TODO file.",
 		"ERROR: wip/package/README: Must be cleaned up before committing the package.",
 		"ERROR: wip/package/TODO: Must be cleaned up before committing the package.",
-		"4 errors and 0 warnings found.")
+		"4 errors found.")
 }
 
 func (s *Suite) Test_Pkglint_checkReg__unknown_file_in_patches(c *check.C) {
@@ -1152,7 +1152,7 @@ func (s *Suite) Test_Pkglint_checkExecutable(c *check.C) {
 	// file is readonly or not.
 	st, err := os.Lstat(filename)
 	if t.Check(err, check.IsNil) {
-		t.Check(st.Mode()&0111, equals, os.FileMode(0))
+		t.CheckEquals(st.Mode()&0111, os.FileMode(0))
 	}
 }
 
@@ -1202,7 +1202,7 @@ func (s *Suite) Test_Pkglint_Main(c *check.C) {
 
 	runMain := func(out *os.File, commandLine ...string) {
 		exitCode := G.Main(out, out, commandLine)
-		c.Check(exitCode, equals, 0)
+		t.CheckEquals(exitCode, 0)
 	}
 
 	runMain(out, "pkglint", ".")
@@ -1246,7 +1246,7 @@ func (s *Suite) Test_Pkglint_loadCvsEntries(c *check.C) {
 		"must be silently ignored",
 		"/name/revision/timestamp/options/tagdate")
 
-	t.Check(isCommitted(t.File("name")), equals, true)
+	t.CheckEquals(isCommitted(t.File("name")), true)
 
 	t.CheckOutputLines(
 		"ERROR: ~/CVS/Entries:1: Invalid line: /invalid/")
@@ -1268,9 +1268,9 @@ func (s *Suite) Test_Pkglint_loadCvsEntries__with_Entries_Log(c *check.C) {
 		"R /invalid/",
 		"R /removed//modified//")
 
-	t.Check(isCommitted(t.File("name")), equals, true)
-	t.Check(isCommitted(t.File("added")), equals, true)
-	t.Check(isCommitted(t.File("removed")), equals, false)
+	t.CheckEquals(isCommitted(t.File("name")), true)
+	t.CheckEquals(isCommitted(t.File("added")), true)
+	t.CheckEquals(isCommitted(t.File("removed")), false)
 
 	t.CheckOutputLines(
 		"ERROR: ~/CVS/Entries:1: Invalid line: /invalid/",
