@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2904 2019/07/14 10:59:53 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2905 2019/07/14 12:25:42 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4804,3 +4804,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/libmicrohttpd to 0.9.65 [bsiegert 2019-07-13]
 	Updated audio/fasttracker2 to 2.162 [fox 2019-07-13]
 	Updated devel/py-mercurial to 5.0.2 [wiz 2019-07-14]
+	Updated lang/go111 to 1.11.12 [bsiegert 2019-07-14]
