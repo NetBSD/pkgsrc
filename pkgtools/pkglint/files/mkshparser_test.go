@@ -16,10 +16,10 @@ func (s *Suite) Test_parseShellProgram__parse_error_for_dollar(c *check.C) {
 			program, err := parseShellProgram(mkline.Line, text)
 
 			if err == nil {
-				c.Check(err, equals, expError)
+				t.CheckEquals(err, expError)
 			} else {
-				c.Check(err, deepEquals, expError)
-				c.Check(program, deepEquals, expProgram)
+				t.CheckDeepEquals(err, expError)
+				t.CheckDeepEquals(program, expProgram)
 			}
 
 			t.CheckOutput(expDiagnostics)
@@ -51,6 +51,7 @@ func (s *Suite) Test_parseShellProgram__parse_error_for_dollar(c *check.C) {
 }
 
 type ShSuite struct {
+	t *Tester
 	c *check.C
 }
 
@@ -538,12 +539,15 @@ func (s *ShSuite) Test_ShellParser__io_here(c *check.C) {
 
 func (s *ShSuite) init(c *check.C) *MkShBuilder {
 	s.c = c
+	s.t = &Tester{c: c, testName: c.TestName()}
 	return NewMkShBuilder()
 }
 
 func (s *ShSuite) test(program string, expected *MkShList) {
+	t := s.t
+
 	tokens, rest := splitIntoShellTokens(dummyLine, program)
-	s.c.Check(rest, equals, "")
+	t.CheckEquals(rest, "")
 	lexer := ShellLexer{
 		current:        "",
 		remaining:      tokens,
@@ -555,72 +559,75 @@ func (s *ShSuite) test(program string, expected *MkShList) {
 
 	c := s.c
 
-	if c.Check(succeeded, equals, 0) && c.Check(lexer.error, equals, "") {
-		if !c.Check(lexer.result, deepEquals, expected) {
+	if t.CheckEquals(succeeded, 0) && t.CheckEquals(lexer.error, "") {
+		if !t.CheckDeepEquals(lexer.result, expected) {
 			actualJSON, actualErr := json.MarshalIndent(lexer.result, "", "  ")
 			expectedJSON, expectedErr := json.MarshalIndent(expected, "", "  ")
 			if c.Check(actualErr, check.IsNil) && c.Check(expectedErr, check.IsNil) {
-				c.Check(string(actualJSON), deepEquals, string(expectedJSON))
+				t.CheckDeepEquals(string(actualJSON), string(expectedJSON))
 			}
 		}
 	} else {
-		c.Check(lexer.remaining, deepEquals, []string{})
+		t.CheckDeepEquals(lexer.remaining, []string{})
 	}
 }
 
 func (s *ShSuite) Test_ShellLexer_Lex__redirects(c *check.C) {
+	t := s.t
+
 	tokens, rest := splitIntoShellTokens(dummyLine, "2>&1 <& <>file >>file <<EOF <<-EOF > /dev/stderr")
 
-	c.Check(tokens, deepEquals, []string{"2>&", "1", "<&", "<>", "file", ">>", "file", "<<", "EOF", "<<-", "EOF", ">", "/dev/stderr"})
-	c.Check(rest, equals, "")
+	t.CheckDeepEquals(tokens, []string{"2>&", "1", "<&", "<>", "file", ">>", "file", "<<", "EOF", "<<-", "EOF", ">", "/dev/stderr"})
+	t.CheckEquals(rest, "")
 
 	lexer := NewShellLexer(tokens, rest)
 	var llval shyySymType
 
-	c.Check(lexer.Lex(&llval), equals, tkIO_NUMBER)
-	c.Check(llval.IONum, equals, 2)
+	t.CheckEquals(lexer.Lex(&llval), tkIO_NUMBER)
+	t.CheckEquals(llval.IONum, 2)
 
-	c.Check(lexer.Lex(&llval), equals, tkGTAND)
+	t.CheckEquals(lexer.Lex(&llval), tkGTAND)
 
-	c.Check(lexer.Lex(&llval), equals, tkWORD)
-	c.Check(llval.Word.MkText, equals, "1")
+	t.CheckEquals(lexer.Lex(&llval), tkWORD)
+	t.CheckEquals(llval.Word.MkText, "1")
 
-	c.Check(lexer.Lex(&llval), equals, tkLTAND)
+	t.CheckEquals(lexer.Lex(&llval), tkLTAND)
 
-	c.Check(lexer.Lex(&llval), equals, tkLTGT)
+	t.CheckEquals(lexer.Lex(&llval), tkLTGT)
 
-	c.Check(lexer.Lex(&llval), equals, tkWORD)
-	c.Check(llval.Word.MkText, equals, "file")
+	t.CheckEquals(lexer.Lex(&llval), tkWORD)
+	t.CheckEquals(llval.Word.MkText, "file")
 
-	c.Check(lexer.Lex(&llval), equals, tkGTGT)
+	t.CheckEquals(lexer.Lex(&llval), tkGTGT)
 
-	c.Check(lexer.Lex(&llval), equals, tkWORD)
-	c.Check(llval.Word.MkText, equals, "file")
+	t.CheckEquals(lexer.Lex(&llval), tkWORD)
+	t.CheckEquals(llval.Word.MkText, "file")
 
-	c.Check(lexer.Lex(&llval), equals, tkLTLT)
+	t.CheckEquals(lexer.Lex(&llval), tkLTLT)
 
-	c.Check(lexer.Lex(&llval), equals, tkWORD)
-	c.Check(llval.Word.MkText, equals, "EOF")
+	t.CheckEquals(lexer.Lex(&llval), tkWORD)
+	t.CheckEquals(llval.Word.MkText, "EOF")
 
-	c.Check(lexer.Lex(&llval), equals, tkLTLTDASH)
+	t.CheckEquals(lexer.Lex(&llval), tkLTLTDASH)
 
-	c.Check(lexer.Lex(&llval), equals, tkWORD)
-	c.Check(llval.Word.MkText, equals, "EOF")
+	t.CheckEquals(lexer.Lex(&llval), tkWORD)
+	t.CheckEquals(llval.Word.MkText, "EOF")
 
-	c.Check(lexer.Lex(&llval), equals, tkGT)
+	t.CheckEquals(lexer.Lex(&llval), tkGT)
 
-	c.Check(lexer.Lex(&llval), equals, tkWORD)
-	c.Check(llval.Word.MkText, equals, "/dev/stderr")
+	t.CheckEquals(lexer.Lex(&llval), tkWORD)
+	t.CheckEquals(llval.Word.MkText, "/dev/stderr")
 
-	c.Check(lexer.Lex(&llval), equals, 0)
+	t.CheckEquals(lexer.Lex(&llval), 0)
 }
 
 func (s *ShSuite) Test_ShellLexer_Lex__keywords(c *check.C) {
 	b := s.init(c)
+	t := s.t
 
 	testErr := func(program, error, remaining string) {
 		tokens, rest := splitIntoShellTokens(dummyLine, program)
-		s.c.Check(rest, equals, "")
+		t.CheckEquals(rest, "")
 
 		lexer := ShellLexer{
 			current:        "",
@@ -631,9 +638,9 @@ func (s *ShSuite) Test_ShellLexer_Lex__keywords(c *check.C) {
 
 		succeeded := parser.Parse(&lexer)
 
-		c.Check(succeeded, equals, 1)
-		c.Check(lexer.error, equals, error)
-		c.Check(joinSkipEmpty(" ", append([]string{lexer.current}, lexer.remaining...)...), equals, remaining)
+		t.CheckEquals(succeeded, 1)
+		t.CheckEquals(lexer.error, error)
+		t.CheckEquals(joinSkipEmpty(" ", append([]string{lexer.current}, lexer.remaining...)...), remaining)
 	}
 
 	s.test(

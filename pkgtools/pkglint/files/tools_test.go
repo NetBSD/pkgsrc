@@ -3,30 +3,32 @@ package pkglint
 import "gopkg.in/check.v1"
 
 func (s *Suite) Test_Tool_UsableAtLoadTime(c *check.C) {
+	t := s.Init(c)
 
 	nowhere := Tool{"nowhere", "", false, Nowhere, nil}
-	c.Check(nowhere.UsableAtLoadTime(false), equals, false)
-	c.Check(nowhere.UsableAtLoadTime(true), equals, false)
+	t.CheckEquals(nowhere.UsableAtLoadTime(false), false)
+	t.CheckEquals(nowhere.UsableAtLoadTime(true), false)
 
 	load := Tool{"load", "", false, AfterPrefsMk, nil}
-	c.Check(load.UsableAtLoadTime(false), equals, false)
-	c.Check(load.UsableAtLoadTime(true), equals, true)
+	t.CheckEquals(load.UsableAtLoadTime(false), false)
+	t.CheckEquals(load.UsableAtLoadTime(true), true)
 
 	run := Tool{"run", "", false, AtRunTime, nil}
-	c.Check(run.UsableAtLoadTime(false), equals, false)
-	c.Check(run.UsableAtLoadTime(true), equals, false)
+	t.CheckEquals(run.UsableAtLoadTime(false), false)
+	t.CheckEquals(run.UsableAtLoadTime(true), false)
 }
 
 func (s *Suite) Test_Tool_UsableAtRunTime(c *check.C) {
+	t := s.Init(c)
 
 	nowhere := Tool{"nowhere", "", false, Nowhere, nil}
-	c.Check(nowhere.UsableAtRunTime(), equals, false)
+	t.CheckEquals(nowhere.UsableAtRunTime(), false)
 
 	load := Tool{"load", "", false, AfterPrefsMk, nil}
-	c.Check(load.UsableAtRunTime(), equals, true)
+	t.CheckEquals(load.UsableAtRunTime(), true)
 
 	run := Tool{"run", "", false, AtRunTime, nil}
-	c.Check(run.UsableAtRunTime(), equals, true)
+	t.CheckEquals(run.UsableAtRunTime(), true)
 }
 
 // USE_TOOLS is an operating-system-dependent variable.
@@ -66,9 +68,9 @@ func (s *Suite) Test_Tools_ParseToolLine__invalid_tool_name(c *check.C) {
 		"_TOOLS.${t}=\t${t}",
 		".endfor")
 
-	mklines.collectDefinedVariables()
+	mklines.collectVariables()
 	t.Check(mklines.Tools.byName, check.HasLen, 1)
-	t.Check(mklines.Tools.ByName("tool").String(), equals, "tool:::Nowhere:abc")
+	t.CheckEquals(mklines.Tools.ByName("tool").String(), "tool:::Nowhere:abc")
 
 	t.CheckOutputEmpty()
 }
@@ -141,7 +143,7 @@ func (s *Suite) Test_Tools__USE_TOOLS_predefined_sed(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: ~/module.mk:5: Unknown shell command \"${AWK}\".",
 		"WARN: ~/module.mk:5: AWK is used but not defined.",
-		"0 errors and 2 warnings found.",
+		"2 warnings found.",
 		"(Run \"pkglint -e\" to show explanations.)")
 }
 
@@ -155,14 +157,14 @@ func (s *Suite) Test_Tools__add_varname_later(c *check.C) {
 	tools := NewTools()
 	tool := tools.Define("tool", "", mkline)
 
-	c.Check(tool.Name, equals, "tool")
-	c.Check(tool.Varname, equals, "")
+	t.CheckEquals(tool.Name, "tool")
+	t.CheckEquals(tool.Varname, "")
 
 	// Updates the existing tool definition.
 	tools.Define("tool", "TOOL", mkline)
 
-	c.Check(tool.Name, equals, "tool")
-	c.Check(tool.Varname, equals, "TOOL")
+	t.CheckEquals(tool.Name, "tool")
+	t.CheckEquals(tool.Varname, "TOOL")
 }
 
 func (s *Suite) Test_Tools__load_from_infrastructure(c *check.C) {
@@ -191,9 +193,9 @@ func (s *Suite) Test_Tools__load_from_infrastructure(c *check.C) {
 
 	// All tools are defined by name, but their variable names are not yet known.
 	// At this point they may not be used, neither by the pkgsrc infrastructure nor by a package.
-	c.Check(load.String(), equals, "load:::AtRunTime")
-	c.Check(run.String(), equals, "run:::AtRunTime")
-	c.Check(nowhere.String(), equals, "nowhere:::AtRunTime")
+	t.CheckEquals(load.String(), "load:::AtRunTime")
+	t.CheckEquals(run.String(), "run:::AtRunTime")
+	t.CheckEquals(nowhere.String(), "nowhere:::AtRunTime")
 
 	// The variable name RUN is reserved by pkgsrc, therefore RUN_CMD.
 	varnamesMklines := t.NewMkLines("varnames.mk",
@@ -208,29 +210,29 @@ func (s *Suite) Test_Tools__load_from_infrastructure(c *check.C) {
 
 	// At this point the tools can be found by their variable names, too.
 	// They still may not be used.
-	c.Check(load.String(), equals, "load:LOAD::AtRunTime")
-	c.Check(run.String(), equals, "run:RUN_CMD::AtRunTime")
-	c.Check(nowhere.String(), equals, "nowhere:NOWHERE::AtRunTime")
-	c.Check(tools.ByVarname("LOAD"), equals, load)
-	c.Check(tools.ByVarname("RUN_CMD"), equals, run)
-	c.Check(tools.ByVarname("NOWHERE"), equals, nowhere)
-	c.Check(load.String(), equals, "load:LOAD::AtRunTime")
-	c.Check(run.String(), equals, "run:RUN_CMD::AtRunTime")
-	c.Check(nowhere.String(), equals, "nowhere:NOWHERE::AtRunTime")
+	t.CheckEquals(load.String(), "load:LOAD::AtRunTime")
+	t.CheckEquals(run.String(), "run:RUN_CMD::AtRunTime")
+	t.CheckEquals(nowhere.String(), "nowhere:NOWHERE::AtRunTime")
+	t.CheckEquals(tools.ByVarname("LOAD"), load)
+	t.CheckEquals(tools.ByVarname("RUN_CMD"), run)
+	t.CheckEquals(tools.ByVarname("NOWHERE"), nowhere)
+	t.CheckEquals(load.String(), "load:LOAD::AtRunTime")
+	t.CheckEquals(run.String(), "run:RUN_CMD::AtRunTime")
+	t.CheckEquals(nowhere.String(), "nowhere:NOWHERE::AtRunTime")
 
 	tools.ParseToolLine(dummyMklines, t.NewMkLine("bsd.prefs.mk", 2, "USE_TOOLS+= load"), true, true)
 
 	// Tools that are added to USE_TOOLS in bsd.prefs.mk may be used afterwards.
 	// By variable name, they may be used both at load time as well as run time.
 	// By plain name, they may be used only in {pre,do,post}-* targets.
-	c.Check(load.String(), equals, "load:LOAD::AfterPrefsMk")
+	t.CheckEquals(load.String(), "load:LOAD::AfterPrefsMk")
 
 	tools.ParseToolLine(dummyMklines, t.NewMkLine("bsd.pkg.mk", 2, "USE_TOOLS+= run"), true, true)
 
 	// Tools that are added to USE_TOOLS in bsd.pkg.mk may be used afterwards at run time.
 	// The {pre,do,post}-* targets may use both forms (${CAT} and cat).
 	// All other targets must use the variable form (${CAT}).
-	c.Check(run.String(), equals, "run:RUN_CMD::AtRunTime")
+	t.CheckEquals(run.String(), "run:RUN_CMD::AtRunTime")
 
 	// That's all for parsing tool definitions from the pkgsrc infrastructure.
 	// See Test_Tools__package_Makefile for a continuation.
@@ -266,9 +268,9 @@ func (s *Suite) Test_Tools__package_Makefile(c *check.C) {
 	before := tools.ByName("pkg-before-prefs")
 	after := tools.ByName("pkg-after-prefs")
 
-	c.Check(load.UsableAtRunTime(), equals, true)
-	c.Check(run.UsableAtRunTime(), equals, true)
-	c.Check(nowhere.UsableAtRunTime(), equals, true)
+	t.CheckEquals(load.UsableAtRunTime(), true)
+	t.CheckEquals(run.UsableAtRunTime(), true)
+	t.CheckEquals(nowhere.UsableAtRunTime(), true)
 
 	// The seenPrefs variable is only relevant for the package Makefile.
 	// All other files must not use the tools at load time.
@@ -279,16 +281,16 @@ func (s *Suite) Test_Tools__package_Makefile(c *check.C) {
 
 	tools.ParseToolLine(dummyMklines, t.NewMkLine("Makefile", 2, "USE_TOOLS+=     pkg-before-prefs"), false, true)
 
-	c.Check(before.Validity, equals, AfterPrefsMk)
-	c.Check(tools.SeenPrefs, equals, false)
+	t.CheckEquals(before.Validity, AfterPrefsMk)
+	t.CheckEquals(tools.SeenPrefs, false)
 
 	tools.ParseToolLine(dummyMklines, t.NewMkLine("Makefile", 3, ".include \"../../mk/bsd.prefs.mk\""), false, true)
 
-	c.Check(tools.SeenPrefs, equals, true)
+	t.CheckEquals(tools.SeenPrefs, true)
 
 	tools.ParseToolLine(dummyMklines, t.NewMkLine("Makefile", 4, "USE_TOOLS+=     pkg-after-prefs"), false, true)
 
-	c.Check(after.Validity, equals, AtRunTime)
+	t.CheckEquals(after.Validity, AtRunTime)
 }
 
 func (s *Suite) Test_Tools__builtin_mk(c *check.C) {
@@ -359,7 +361,7 @@ func (s *Suite) Test_Tools__implicit_definition_in_bsd_pkg_mk(c *check.C) {
 	// In other words, this test is only there for the code coverage.
 	t.FinishSetUp()
 
-	c.Check(G.Pkgsrc.Tools.ByName("run").String(), equals, "run:::AtRunTime")
+	t.CheckEquals(G.Pkgsrc.Tools.ByName("run").String(), "run:::AtRunTime")
 }
 
 func (s *Suite) Test_Tools__both_prefs_and_pkg_mk(c *check.C) {
@@ -378,7 +380,7 @@ func (s *Suite) Test_Tools__both_prefs_and_pkg_mk(c *check.C) {
 	// grants more use cases (load time + run time), therefore it wins.
 	t.FinishSetUp()
 
-	c.Check(G.Pkgsrc.Tools.ByName("both").Validity, equals, AfterPrefsMk)
+	t.CheckEquals(G.Pkgsrc.Tools.ByName("both").Validity, AfterPrefsMk)
 }
 
 func (s *Suite) Test_Tools__tools_having_the_same_variable_name(c *check.C) {
@@ -396,10 +398,10 @@ func (s *Suite) Test_Tools__tools_having_the_same_variable_name(c *check.C) {
 
 	t.FinishSetUp()
 
-	c.Check(G.Pkgsrc.Tools.ByName("awk").Validity, equals, AfterPrefsMk)
-	c.Check(G.Pkgsrc.Tools.ByName("sed").Validity, equals, AfterPrefsMk)
-	c.Check(G.Pkgsrc.Tools.ByName("gawk").Validity, equals, Nowhere)
-	c.Check(G.Pkgsrc.Tools.ByName("gsed").Validity, equals, Nowhere)
+	t.CheckEquals(G.Pkgsrc.Tools.ByName("awk").Validity, AfterPrefsMk)
+	t.CheckEquals(G.Pkgsrc.Tools.ByName("sed").Validity, AfterPrefsMk)
+	t.CheckEquals(G.Pkgsrc.Tools.ByName("gawk").Validity, Nowhere)
+	t.CheckEquals(G.Pkgsrc.Tools.ByName("gsed").Validity, Nowhere)
 
 	t.EnableTracingToLog()
 	G.Pkgsrc.Tools.Trace()
@@ -442,8 +444,10 @@ func (s *Suite) Test_Tools__tools_having_the_same_variable_name(c *check.C) {
 }
 
 func (s *Suite) Test_ToolTime_String(c *check.C) {
-	c.Check(LoadTime.String(), equals, "LoadTime")
-	c.Check(RunTime.String(), equals, "RunTime")
+	t := s.Init(c)
+
+	t.CheckEquals(LoadTime.String(), "LoadTime")
+	t.CheckEquals(RunTime.String(), "RunTime")
 }
 
 func (s *Suite) Test_Tools__var(c *check.C) {
@@ -476,6 +480,8 @@ func (s *Suite) Test_Tools__var(c *check.C) {
 //
 // See also Pkglint.Tool.
 func (s *Suite) Test_Tools_Fallback__tools_having_the_same_variable_name_realistic(c *check.C) {
+	t := s.Init(c)
+
 	nonGnu := NewTools()
 	nonGnu.def("sed", "SED", false, AfterPrefsMk, nil)
 
@@ -486,21 +492,21 @@ func (s *Suite) Test_Tools_Fallback__tools_having_the_same_variable_name_realist
 	local1.def("sed", "SED", false, AfterPrefsMk, nil)
 	local1.Fallback(gnu)
 
-	c.Check(local1.ByName("sed").Validity, equals, AfterPrefsMk)
-	c.Check(local1.ByName("gsed").Validity, equals, Nowhere)
+	t.CheckEquals(local1.ByName("sed").Validity, AfterPrefsMk)
+	t.CheckEquals(local1.ByName("gsed").Validity, Nowhere)
 
 	local2 := NewTools()
 	local2.def("gsed", "SED", false, Nowhere, nil)
 	local2.Fallback(nonGnu)
 
-	c.Check(local2.ByName("sed").Validity, equals, AfterPrefsMk)
-	c.Check(local2.ByName("gsed").Validity, equals, Nowhere)
+	t.CheckEquals(local2.ByName("sed").Validity, AfterPrefsMk)
+	t.CheckEquals(local2.ByName("gsed").Validity, Nowhere)
 
 	// No matter in which order the tool definitions are encountered,
 	// the non-GNU version is always chosen since the GNU version is
 	// not available at all.
-	c.Check(local1.ByVarname("SED").String(), equals, "sed:SED::AfterPrefsMk")
-	c.Check(local2.ByVarname("SED").String(), equals, "sed:SED::AfterPrefsMk")
+	t.CheckEquals(local1.ByVarname("SED").String(), "sed:SED::AfterPrefsMk")
+	t.CheckEquals(local2.ByVarname("SED").String(), "sed:SED::AfterPrefsMk")
 }
 
 // Demonstrates how the Tools type handles tools that share the same
@@ -511,6 +517,7 @@ func (s *Suite) Test_Tools_Fallback__tools_having_the_same_variable_name_realist
 //
 // See also Pkglint.Tool.
 func (s *Suite) Test_Tools_Fallback__tools_having_the_same_variable_name_unrealistic(c *check.C) {
+	t := s.Init(c)
 
 	// This simulates a tool defined in the tools framework but not added
 	// to USE_TOOLS, neither by bsd.prefs.mk nor by bsd.pkg.mk.
@@ -530,18 +537,18 @@ func (s *Suite) Test_Tools_Fallback__tools_having_the_same_variable_name_unreali
 	local1.def("sed", "SED", false, Nowhere, nil)
 	local1.Fallback(gnu)
 
-	c.Check(local1.ByName("sed").Validity, equals, Nowhere)
-	c.Check(local1.ByName("gsed").Validity, equals, AfterPrefsMk)
+	t.CheckEquals(local1.ByName("sed").Validity, Nowhere)
+	t.CheckEquals(local1.ByName("gsed").Validity, AfterPrefsMk)
 
 	local2 := NewTools()
 	local2.def("gsed", "SED", false, AfterPrefsMk, []string{"sed"})
 	local2.Fallback(nonGnu)
 
-	c.Check(local2.ByName("sed").Validity, equals, AfterPrefsMk)
-	c.Check(local2.ByName("gsed").Validity, equals, AfterPrefsMk)
+	t.CheckEquals(local2.ByName("sed").Validity, AfterPrefsMk)
+	t.CheckEquals(local2.ByName("gsed").Validity, AfterPrefsMk)
 
-	c.Check(local1.ByVarname("SED").String(), equals, "sed:SED::AfterPrefsMk")
-	c.Check(local2.ByVarname("SED").String(), equals, "sed:SED::AfterPrefsMk")
+	t.CheckEquals(local1.ByVarname("SED").String(), "sed:SED::AfterPrefsMk")
+	t.CheckEquals(local2.ByVarname("SED").String(), "sed:SED::AfterPrefsMk")
 }
 
 func (s *Suite) Test_Tools_Fallback__called_twice(c *check.C) {
@@ -572,21 +579,21 @@ func (s *Suite) Test_Tools__aliases(c *check.C) {
 		infraTools.ParseToolLine(mklines, mkline, false, false)
 	})
 
-	c.Check(infraTools.ByName("sed").String(), equals, "sed:::AtRunTime")
-	c.Check(infraTools.ByName("gsed").String(), equals, "gsed:::AtRunTime:sed")
+	t.CheckEquals(infraTools.ByName("sed").String(), "sed:::AtRunTime")
+	t.CheckEquals(infraTools.ByName("gsed").String(), "gsed:::AtRunTime:sed")
 
 	pkgTools := NewTools()
 	pkgTools.Fallback(infraTools)
 
-	c.Check(pkgTools.ByName("sed").String(), equals, "sed:::AtRunTime")
-	c.Check(pkgTools.ByName("gsed").String(), equals, "gsed:::AtRunTime:sed")
+	t.CheckEquals(pkgTools.ByName("sed").String(), "sed:::AtRunTime")
+	t.CheckEquals(pkgTools.ByName("gsed").String(), "gsed:::AtRunTime:sed")
 
 	mkline := t.NewMkLine("Makefile", 123, "USE_TOOLS+=\tgsed")
 	pkgTools.ParseToolLine(mklines, mkline, false, false)
 
 	// Since sed is an alias of gsed, it gets the same validity.
-	c.Check(pkgTools.ByName("sed").String(), equals, "sed:::AfterPrefsMk")
-	c.Check(pkgTools.ByName("gsed").String(), equals, "gsed:::AfterPrefsMk:sed")
+	t.CheckEquals(pkgTools.ByName("sed").String(), "sed:::AfterPrefsMk")
+	t.CheckEquals(pkgTools.ByName("gsed").String(), "gsed:::AfterPrefsMk:sed")
 }
 
 func (s *Suite) Test_Tools__aliases_in_for_loop(c *check.C) {
@@ -600,10 +607,11 @@ func (s *Suite) Test_Tools__aliases_in_for_loop(c *check.C) {
 		"TOOLS_ALIASES.ggrep+=\t${t}",
 		".endfor")
 
-	mklines.collectDefinedVariables() // calls ParseToolLine internally
+	mklines.collectVariables() // calls ParseToolLine internally
 
-	c.Check(mklines.Tools.ByName("ggrep").Aliases,
-		deepEquals, []string{"grep", "egrep", "fgrep"})
+	t.CheckDeepEquals(
+		mklines.Tools.ByName("ggrep").Aliases,
+		[]string{"grep", "egrep", "fgrep"})
 }
 
 // The cmake tool is included conditionally. The condition is so simple that

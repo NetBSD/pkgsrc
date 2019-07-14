@@ -43,9 +43,9 @@ func (s *Suite) Test_LinesLexer_SkipPrefix(c *check.C) {
 		"line 2")
 	llex := NewLinesLexer(lines)
 
-	t.Check(llex.SkipPrefix("line 1"), equals, true)
-	t.Check(llex.SkipPrefix("line 1"), equals, false)
-	t.Check(llex.SkipPrefix("line 2"), equals, true)
-	t.Check(llex.SkipPrefix("line 2"), equals, false)
-	t.Check(llex.SkipPrefix(""), equals, false)
+	t.CheckEquals(llex.SkipPrefix("line 1"), true)
+	t.CheckEquals(llex.SkipPrefix("line 1"), false)
+	t.CheckEquals(llex.SkipPrefix("line 2"), true)
+	t.CheckEquals(llex.SkipPrefix("line 2"), false)
+	t.CheckEquals(llex.SkipPrefix(""), false)
 }

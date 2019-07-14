@@ -78,20 +78,20 @@ func (perms ACLPermissions) String() string {
 		return "none"
 	}
 	return joinSkipEmpty(", ",
-		ifelseStr(perms.Contains(aclpSet), "set", ""),
-		ifelseStr(perms.Contains(aclpSetDefault), "set-default", ""),
-		ifelseStr(perms.Contains(aclpAppend), "append", ""),
-		ifelseStr(perms.Contains(aclpUseLoadtime), "use-loadtime", ""),
-		ifelseStr(perms.Contains(aclpUse), "use", ""))
+		condStr(perms.Contains(aclpSet), "set", ""),
+		condStr(perms.Contains(aclpSetDefault), "set-default", ""),
+		condStr(perms.Contains(aclpAppend), "append", ""),
+		condStr(perms.Contains(aclpUseLoadtime), "use-loadtime", ""),
+		condStr(perms.Contains(aclpUse), "use", ""))
 }
 
 func (perms ACLPermissions) HumanString() string {
 	return joinSkipEmptyOxford("or",
-		ifelseStr(perms.Contains(aclpSet), "set", ""),
-		ifelseStr(perms.Contains(aclpSetDefault), "given a default value", ""),
-		ifelseStr(perms.Contains(aclpAppend), "appended to", ""),
-		ifelseStr(perms.Contains(aclpUseLoadtime), "used at load time", ""),
-		ifelseStr(perms.Contains(aclpUse), "used", ""))
+		condStr(perms.Contains(aclpSet), "set", ""),
+		condStr(perms.Contains(aclpSetDefault), "given a default value", ""),
+		condStr(perms.Contains(aclpAppend), "appended to", ""),
+		condStr(perms.Contains(aclpUseLoadtime), "used at load time", ""),
+		condStr(perms.Contains(aclpUse), "used", ""))
 }
 
 func (vt *Vartype) List() bool                { return vt.options&List != 0 }

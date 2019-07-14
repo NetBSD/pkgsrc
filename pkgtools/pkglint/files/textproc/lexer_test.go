@@ -88,7 +88,7 @@ func (s *Suite) Test_Lexer_Skip(c *check.C) {
 	c.Check(
 		func() { lexer.Skip(6) },
 		check.PanicMatches,
-		`^runtime error: slice bounds out of range$`)
+		`runtime error: slice bounds out of range.*`)
 }
 
 func (s *Suite) Test_Lexer_NextString(c *check.C) {

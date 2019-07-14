@@ -43,6 +43,10 @@ type Location struct {
 	lastLine  int32  // usually the same as firstLine, may differ in Makefiles
 }
 
+func (loc *Location) String() string {
+	return loc.Filename + ":" + loc.Linenos()
+}
+
 func NewLocation(filename string, firstLine, lastLine int) Location {
 	return Location{filename, int32(firstLine), int32(lastLine)}
 }
@@ -74,7 +78,7 @@ type Line struct {
 
 	raw     []*RawLine // contains the original text including trailing newline
 	autofix *Autofix   // any changes that pkglint would like to apply to the line
-	Once
+	once    Once
 
 	// XXX: Filename and Basename could be replaced with a pointer to a Lines object.
 }
@@ -126,52 +130,6 @@ func (line *Line) IsMultiline() bool {
 func (line *Line) IsCvsID(prefixRe regex.Pattern) (found bool, expanded bool) {
 	m, exp := match1(line.Text, `^`+prefixRe+`\$`+`NetBSD(:[^\$]+)?\$$`)
 	return m, exp != ""
-}
-
-func (line *Line) showSource(out *SeparatorWriter) {
-	if !G.Logger.Opts.ShowSource {
-		return
-	}
-
-	writeLine := func(prefix, line string) {
-		out.Write(prefix)
-		out.Write(escapePrintable(line))
-		if !hasSuffix(line, "\n") {
-			out.Write("\n")
-		}
-	}
-
-	printDiff := func(rawLines []*RawLine) {
-		prefix := ">\t"
-		for _, rawLine := range rawLines {
-			if rawLine.textnl != rawLine.orignl {
-				prefix = "\t" // Make it look like an actual diff
-			}
-		}
-
-		for _, rawLine := range rawLines {
-			if rawLine.textnl != rawLine.orignl {
-				writeLine("-\t", rawLine.orignl)
-				if rawLine.textnl != "" {
-					writeLine("+\t", rawLine.textnl)
-				}
-			} else {
-				writeLine(prefix, rawLine.orignl)
-			}
-		}
-	}
-
-	if line.autofix != nil {
-		for _, before := range line.autofix.linesBefore {
-			writeLine("+\t", before)
-		}
-		printDiff(line.raw)
-		for _, after := range line.autofix.linesAfter {
-			writeLine("+\t", after)
-		}
-	} else {
-		printDiff(line.raw)
-	}
 }
 
 func (line *Line) Fatalf(format string, args ...interface{}) {

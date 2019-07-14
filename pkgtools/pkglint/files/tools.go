@@ -41,7 +41,7 @@ func (tool *Tool) String() string {
 		aliases = ":" + strings.Join(tool.Aliases, ",")
 	}
 
-	varForm := ifelseStr(tool.MustUseVarForm, "var", "")
+	varForm := condStr(tool.MustUseVarForm, "var", "")
 
 	return sprintf("%s:%s:%s:%s%s",
 		tool.Name, tool.Varname, varForm, tool.Validity, aliases)
