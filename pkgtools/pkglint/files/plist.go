@@ -54,16 +54,22 @@ type PlistLine struct {
 	text       string   // Line.Text without any conditions of the form ${PLIST.cond}
 }
 
-func (ck *PlistChecker) Check(plainLines *Lines) {
-	plines := ck.NewLines(plainLines)
+func (ck *PlistChecker) Load(lines *Lines) []*PlistLine {
+	plines := ck.NewLines(lines)
 	ck.collectFilesAndDirs(plines)
 
-	if plines[0].Basename == "PLIST.common_end" {
-		commonLines := Load(strings.TrimSuffix(plines[0].Filename, "_end"), NotEmpty)
+	if lines.BaseName == "PLIST.common_end" {
+		commonLines := Load(strings.TrimSuffix(lines.Filename, "_end"), NotEmpty)
 		if commonLines != nil {
 			ck.collectFilesAndDirs(ck.NewLines(commonLines))
 		}
 	}
+
+	return plines
+}
+
+func (ck *PlistChecker) Check(plainLines *Lines) {
+	plines := ck.Load(plainLines)
 
 	for _, pline := range plines {
 		ck.checkLine(pline)
