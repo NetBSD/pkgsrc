@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/08/19 00:28:10 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2019/07/14 21:46:22 rillig Exp $
 
 DISTNAME=	guile-2.0.14
 PKGNAME=	${DISTNAME:S/guile/guile20/}
@@ -16,7 +16,7 @@ LICENSE=	gnu-lgpl-v3
 GUILE_SUBDIR=	# empty
 
 # guile does not like the --build and --host triplets on NetBSD
-HAS_CONFIGURE=	yes
+HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-shared
 # not until boehm-gc is threaded
 CONFIGURE_ARGS+=	--without-threads
@@ -24,16 +24,16 @@ CONFIGURE_ARGS+=	SHELL=${CONFIG_SHELL}
 
 .if !empty(GUILE_SUBDIR)
 # Installation prefix is non-default.
-GUILE_PREFIX=		${PREFIX}/${GUILE_SUBDIR}
-CONFIGURE_ARGS+=	--prefix=${GUILE_PREFIX:Q}
-CONFIGURE_ARGS+=	--infodir=${GUILE_PREFIX:Q}/info
-CONFIGURE_ARGS+=	--mandir=${GUILE_PREFIX:Q}/man
+GUILE_PREFIX=			${PREFIX}/${GUILE_SUBDIR}
+CONFIGURE_ARGS+=		--prefix=${GUILE_PREFIX:Q}
+CONFIGURE_ARGS+=		--infodir=${GUILE_PREFIX:Q}/info
+CONFIGURE_ARGS+=		--mandir=${GUILE_PREFIX:Q}/man
 BUILDLINK_PASSTHRU_DIRS+=	${GUILE_PREFIX}
 LDFLAGS+=			${COMPILER_RPATH_FLAG}${GUILE_PREFIX}/lib
 .else
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
-CONFIGURE_ARGS+=	--infodir=${PREFIX:Q}/${PKGINFODIR:Q}
-CONFIGURE_ARGS+=	--mandir=${PREFIX:Q}/${PKGMANDIR:Q}
+CONFIGURE_ARGS+=		--prefix=${PREFIX}
+CONFIGURE_ARGS+=		--infodir=${PREFIX}/${PKGINFODIR}
+CONFIGURE_ARGS+=		--mandir=${PREFIX}/${PKGMANDIR}
 .endif
 
 INFO_FILES=	yes
