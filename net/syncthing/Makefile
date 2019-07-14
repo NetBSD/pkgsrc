@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2019/06/04 14:03:57 triaxx Exp $
+# $NetBSD: Makefile,v 1.92 2019/07/14 20:48:39 triaxx Exp $
 
 # Upstream used to frequently break protocol compatibility.  While
 # users of pkgsrc syncthing on multiple systems can update
@@ -14,7 +14,7 @@
 # Note that the android versioning is disconnected from syncthing versioning;
 # see https://github.com/syncthing/syncthing-android/issues/652 for
 # a fuller explanation.
-DISTNAME=	syncthing-source-v1.1.4
+DISTNAME=	syncthing-source-v1.2.0
 PKGNAME=	${DISTNAME:S,source-v,,}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
