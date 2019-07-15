@@ -1,0 +1,4 @@
+# $NetBSD: site.config.m4-ffr_badrcptshutdown,v 1.1 2019/07/15 02:06:42 jnemeth Exp $
+
+# enable _FFR_BARRCPT_SHUTDOWN
+APPENDDEF(`conf_sendmail_ENVDEF', `-D_FFR_BADRCPT_SHUTDOWN')
