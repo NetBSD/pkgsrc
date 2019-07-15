@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2912 2019/07/15 07:07:44 jnemeth Exp $
+$NetBSD: CHANGES-2019,v 1.2913 2019/07/15 10:45:47 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4813,3 +4813,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added cross/or1k-none-elf-binutils version 2.32 [maya 2019-07-10]
 	Updated x11/xcb to 2.4nb2 [wiz 2019-07-15]
 	Updated mail/sendmail to 8.15.2nb5 [jnemeth 2019-07-15]
+	Added devel/ocaml-ppxfind version 1.3 [jaapb 2019-07-15]
