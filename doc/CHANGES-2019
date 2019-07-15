@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2910 2019/07/15 06:02:44 maya Exp $
+$NetBSD: CHANGES-2019,v 1.2911 2019/07/15 07:03:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4811,3 +4811,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/sendmail to 8.15.2nb4 [jnemeth 2019-07-15]
 	Added cross/or1k-none-elf-gcc version 9.1.0 [maya 2019-07-10]
 	Added cross/or1k-none-elf-binutils version 2.32 [maya 2019-07-10]
+	Updated x11/xcb to 2.4nb2 [wiz 2019-07-15]
