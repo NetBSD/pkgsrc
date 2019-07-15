@@ -1,0 +1,14 @@
+$NetBSD: patch-bp,v 1.1 2019/07/15 05:30:33 jnemeth Exp $
+
+--- cf/README.orig	2015-06-17 16:51:58.000000000 +0000
++++ cf/README
+@@ -4456,6 +4456,9 @@ confMILTER_MACROS_EOH		Milter.macros.eoh
+ confMILTER_MACROS_DATA		Milter.macros.data
+ 					Macros to transmit to milters
+ 					after DATA command is received.
++confUSE_BLACKLIST	UseBlacklist	[False] Whether to send authentication
++					failure and success information to
++					blacklistd.
+ 
+ 
+ See also the description of OSTYPE for some parameters that can be
