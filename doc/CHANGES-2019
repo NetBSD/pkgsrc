@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2909 2019/07/15 05:33:12 jnemeth Exp $
+$NetBSD: CHANGES-2019,v 1.2910 2019/07/15 06:02:44 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4809,3 +4809,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/syncthing to 1.2.0 [triaxx 2019-07-14]
 	Updated pkgtools/pkglint to 5.7.16 [rillig 2019-07-14]
 	Updated mail/sendmail to 8.15.2nb4 [jnemeth 2019-07-15]
+	Added cross/or1k-none-elf-gcc version 9.1.0 [maya 2019-07-10]
+	Added cross/or1k-none-elf-binutils version 2.32 [maya 2019-07-10]
