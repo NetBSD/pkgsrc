@@ -1,10 +1,16 @@
-$NetBSD: patch-list.c,v 1.2 2017/02/04 23:25:59 wiz Exp $
+$NetBSD: patch-list.c,v 1.3 2019/07/15 14:08:03 nia Exp $
 
 chunk 1:
+CVE-2018-18384 fix from
+https://sourceforge.net/p/infozip/bugs/53/
+and
+https://sources.debian.org/patches/unzip/6.0-24/07-increase-size-of-cfactorstr.patch/
+
+chunk 2:
 Big-hammer fix for
 http://seclists.org/oss-sec/2014/q4/497
 
-chunk 2:
+chunk 3:
 CVE-2014-9913 fix from
 https://people.debian.org/~sanvila/unzip/cve-2014-9913/cve-2014-9913-unzip-buffer-overflow.txt
 via
@@ -12,6 +18,15 @@ http://www.info-zip.org/phpBB3/viewtopic.php?f=7&t=529
 
 --- list.c.orig	2009-02-08 17:11:34.000000000 +0000
 +++ list.c
+@@ -97,7 +97,7 @@ int list_files(__G)    /* return PK-type
+ {
+     int do_this_file=FALSE, cfactor, error, error_in_archive=PK_COOL;
+ #ifndef WINDLL
+-    char sgn, cfactorstr[10];
++    char sgn, cfactorstr[12];
+     int longhdr=(uO.vflag>1);
+ #endif
+     int date_format;
 @@ -116,7 +116,7 @@ int list_files(__G)    /* return PK-type
      ulg acl_size, tot_aclsize=0L, tot_aclfiles=0L;
  #endif
