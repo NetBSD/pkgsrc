@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.130 2018/07/06 15:06:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.131 2019/07/15 13:42:34 nia Exp $
 
 DISTNAME=	SDL-1.2.15
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	devel games
 MASTER_SITES=	http://www.libsdl.org/release/
 
@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
 
@@ -30,6 +30,9 @@ NASMFLAGS_a.out=	-f aoutb
 .else
 CONFIGURE_ARGS+=	--disable-nasm
 .endif
+
+CONFIGURE_ARGS+=	--disable-video-ps2gs
+CONFIGURE_ARGS+=	--disable-video-ps3
 
 CONFIGURE_ENV+=		NASMFLAGS="${NASMFLAGS_${OBJECT_FMT}}"
 MAKE_ENV+=		NASMFLAGS="${NASMFLAGS_${OBJECT_FMT}}"
