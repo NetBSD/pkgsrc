@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.1 2019/07/15 05:59:13 maya Exp $
+
+SHA1 (gcc-9.1.0.tar.xz) = ded538076858926d361af790d59c1f8440dd29b2
+RMD160 (gcc-9.1.0.tar.xz) = b9dd53082905c4ca2f7f8291af1e4d015bc97d39
+SHA512 (gcc-9.1.0.tar.xz) = b6134df027e734cee5395afd739fcfa4ea319a6017d662e54e89df927dea19d3fff7a6e35d676685383034e3db01c9d0b653f63574c274eeb15a2cb0bc7a1f28
+Size (gcc-9.1.0.tar.xz) = 70546856 bytes
+SHA1 (newlib-3.1.0.tar.gz) = 6c0e467345ca6832eff6add85124c6e81e11d174
+RMD160 (newlib-3.1.0.tar.gz) = bf4f474ef482a8ba0b2d57254051d79c48c5a633
+SHA512 (newlib-3.1.0.tar.gz) = efc4c3ab7153387780d141386bca5d3e20c9d25ae3e6b87cf94c8df9d301ce5926dacdff9bd33aeb9781559d933c3d0ae77f4e5b46120d90792f75dbfde702c7
+Size (newlib-3.1.0.tar.gz) = 17958952 bytes
+SHA1 (patch-contrib_download__prerequisites) = 98427276ac8e6ca20f902dc616a70db45a40ad49
+SHA1 (patch-gcc_system.h) = d8686e881cd30a385840295761d222f752a37bf3
+SHA1 (patch-libcc1_configure) = 8329d9b52badb38ffac3c25d07ed34f71c707cf2
+SHA1 (patch-libcc1_connection.cc) = 6f90edc27d813738e5455bb6e9c7b3d6eeda9a15
+SHA1 (patch-libiberty_Makefile.in) = 27f4b5e5ef3e8cafb8aa836468b6c5ce5d5bf9cc
