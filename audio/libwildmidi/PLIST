@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2016/08/24 10:09:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/07/15 14:39:54 nia Exp $
 bin/wildmidi
 include/wildmidi_lib.h
 lib/libWildMidi.so
 lib/libWildMidi.so.2
-lib/libWildMidi.so.2.0.0
+lib/libWildMidi.so.2.1.0
+lib/pkgconfig/wildmidi.pc
 man/man1/wildmidi.1
 man/man3/WildMidi_ClearError.3
 man/man3/WildMidi_Close.3
@@ -18,6 +19,7 @@ man/man3/WildMidi_GetOutput.3
 man/man3/WildMidi_GetString.3
 man/man3/WildMidi_GetVersion.3
 man/man3/WildMidi_Init.3
+man/man3/WildMidi_InitVIO.3
 man/man3/WildMidi_MasterVolume.3
 man/man3/WildMidi_Open.3
 man/man3/WildMidi_OpenBuffer.3
