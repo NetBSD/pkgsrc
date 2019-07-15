@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.23 2015/07/11 10:08:32 jnemeth Exp $
+# $NetBSD: options.mk,v 1.24 2019/07/15 02:06:42 jnemeth Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sendmail
 PKG_SUPPORTED_OPTIONS=	inet6 db2 db4 ldap sasl tls tcpwrappers
-PKG_SUPPORTED_OPTIONS+=	sendmail-ffr-tls
+PKG_SUPPORTED_OPTIONS+=	sendmail-ffr-tls sendmail-ffr-badrcptshutdown
 PKG_SUGGESTED_OPTIONS=	inet6 tcpwrappers tls
 
 PKG_OPTIONS_LEGACY_OPTS+=	starttls:tls ffr_tls_1:sendmail-ffr-tls
@@ -40,7 +40,13 @@ PKG_OPTIONS_LEGACY_OPTS+=	starttls:tls ffr_tls_1:sendmail-ffr-tls
 .endif
 
 ###
-### 'For Future Release' FFR_TLS_* options: CipherList, multiple certs
+### 'For Future Release' _FFR_TLS_* options: CipherList, multiple certs
+###
+# Nothing to do here, activation is done in Makefile
+
+###
+### 'For Future Release' _FFR_BADRCPT_SHUTDOWN options:
+###      BadRcptShutdown, BadRcptShutdownGood
 ###
 # Nothing to do here, activation is done in Makefile
 
