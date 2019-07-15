@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2018/12/05 12:10:21 bsiegert Exp $
+# $NetBSD: Makefile,v 1.131 2019/07/15 02:06:42 jnemeth Exp $
 
 PKGNAME=	sendmail-${DIST_VERS}
 PKGREVISION=	3
@@ -102,6 +102,9 @@ post-patch: make-sendmail-siteconfig
 .endif
 .if !empty(PKG_OPTIONS:Msasl)
 	cat ${FILESDIR}/site.config.m4-sasl2 >>${SITECONFIG}
+.endif
+.if !empty(PKG_OPTIONS:Msendmail-ffr-badrcptshutdown)
+	cat ${FILESDIR}/site.config.m4-ffr_badrcptshutdown >>${SITECONFIG}
 .endif
 
 post-extract:
