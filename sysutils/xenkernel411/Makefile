@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/04/25 07:33:22 maya Exp $
+# $NetBSD: Makefile,v 1.7 2019/07/15 16:24:18 nia Exp $
 
 VERSION=	4.11.1
 PKGREVISION=	3
@@ -9,7 +9,7 @@ MASTER_SITES=	https://downloads.xenproject.org/release/xen/${VERSION}/
 DIST_SUBDIR=	xen411
 
 MAINTAINER=	bouyer@NetBSD.org
-HOMEPAGE=	http://xenproject.org/
+HOMEPAGE=	https://xenproject.org/
 COMMENT=	Xen 4.11.x Kernel
 
 LICENSE=	gnu-gpl-v2
