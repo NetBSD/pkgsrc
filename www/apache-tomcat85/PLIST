@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/03/26 20:57:51 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/07/15 14:28:24 ryoon Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -16,6 +16,7 @@ share/tomcat/README.md
 share/tomcat/bin/bootstrap.jar
 share/tomcat/bin/catalina-tasks.xml
 share/tomcat/bin/catalina.sh
+share/tomcat/bin/ciphers.sh
 share/tomcat/bin/commons-daemon-native.tar.gz
 share/tomcat/bin/commons-daemon.jar
 share/tomcat/bin/configtest.sh
@@ -62,7 +63,6 @@ share/tomcat/webapps/ROOT/WEB-INF/web.xml
 share/tomcat/webapps/ROOT/asf-logo-wide.svg
 share/tomcat/webapps/ROOT/bg-button.png
 share/tomcat/webapps/ROOT/bg-middle.png
-share/tomcat/webapps/ROOT/bg-nav-item.png
 share/tomcat/webapps/ROOT/bg-nav.png
 share/tomcat/webapps/ROOT/bg-upper.png
 share/tomcat/webapps/ROOT/favicon.ico
@@ -180,10 +180,8 @@ share/tomcat/webapps/docs/images/fonts/OpenSans600italic.woff
 share/tomcat/webapps/docs/images/fonts/OpenSans700.woff
 share/tomcat/webapps/docs/images/fonts/OpenSans700italic.woff
 share/tomcat/webapps/docs/images/fonts/fonts.css
-share/tomcat/webapps/docs/images/printer.gif
 share/tomcat/webapps/docs/images/tomcat.gif
 share/tomcat/webapps/docs/images/tomcat.png
-share/tomcat/webapps/docs/images/tomcat.svg
 share/tomcat/webapps/docs/images/update.gif
 share/tomcat/webapps/docs/images/void.gif
 share/tomcat/webapps/docs/index.html
@@ -226,7 +224,6 @@ share/tomcat/webapps/examples/WEB-INF/classes/CookieExample.java
 share/tomcat/webapps/examples/WEB-INF/classes/HelloWorldExample.class
 share/tomcat/webapps/examples/WEB-INF/classes/HelloWorldExample.java
 share/tomcat/webapps/examples/WEB-INF/classes/LocalStrings.properties
-share/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_en.properties
 share/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_es.properties
 share/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_fr.properties
 share/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_pt.properties
@@ -450,7 +447,6 @@ share/tomcat/webapps/examples/jsp/forward/one.jsp.html
 share/tomcat/webapps/examples/jsp/forward/two.html
 share/tomcat/webapps/examples/jsp/images/code.gif
 share/tomcat/webapps/examples/jsp/images/execute.gif
-share/tomcat/webapps/examples/jsp/images/read.gif
 share/tomcat/webapps/examples/jsp/images/return.gif
 share/tomcat/webapps/examples/jsp/include/foo.html
 share/tomcat/webapps/examples/jsp/include/foo.jsp
@@ -598,15 +594,8 @@ share/tomcat/webapps/host-manager/WEB-INF/jsp/401.jsp
 share/tomcat/webapps/host-manager/WEB-INF/jsp/403.jsp
 share/tomcat/webapps/host-manager/WEB-INF/jsp/404.jsp
 share/tomcat/webapps/host-manager/WEB-INF/web.xml
-share/tomcat/webapps/host-manager/images/add.gif
 share/tomcat/webapps/host-manager/images/asf-logo.svg
-share/tomcat/webapps/host-manager/images/code.gif
-share/tomcat/webapps/host-manager/images/design.gif
-share/tomcat/webapps/host-manager/images/docs.gif
-share/tomcat/webapps/host-manager/images/fix.gif
 share/tomcat/webapps/host-manager/images/tomcat.gif
-share/tomcat/webapps/host-manager/images/update.gif
-share/tomcat/webapps/host-manager/images/void.gif
 share/tomcat/webapps/host-manager/index.jsp
 share/tomcat/webapps/host-manager/manager.xml
 share/tomcat/webapps/manager/META-INF/context.xml
@@ -619,15 +608,8 @@ share/tomcat/webapps/manager/WEB-INF/jsp/connectorTrustedCerts.jsp
 share/tomcat/webapps/manager/WEB-INF/jsp/sessionDetail.jsp
 share/tomcat/webapps/manager/WEB-INF/jsp/sessionsList.jsp
 share/tomcat/webapps/manager/WEB-INF/web.xml
-share/tomcat/webapps/manager/images/add.gif
 share/tomcat/webapps/manager/images/asf-logo.svg
-share/tomcat/webapps/manager/images/code.gif
-share/tomcat/webapps/manager/images/design.gif
-share/tomcat/webapps/manager/images/docs.gif
-share/tomcat/webapps/manager/images/fix.gif
 share/tomcat/webapps/manager/images/tomcat.gif
-share/tomcat/webapps/manager/images/update.gif
-share/tomcat/webapps/manager/images/void.gif
 share/tomcat/webapps/manager/index.jsp
 share/tomcat/webapps/manager/status.xsd
 share/tomcat/webapps/manager/xform.xsl
