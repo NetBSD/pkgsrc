@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/05/07 08:50:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/07/15 12:52:54 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -11,9 +11,6 @@ ${PYSITELIB}/certbot_apache/__init__.pyo
 ${PYSITELIB}/certbot_apache/apache_util.py
 ${PYSITELIB}/certbot_apache/apache_util.pyc
 ${PYSITELIB}/certbot_apache/apache_util.pyo
-${PYSITELIB}/certbot_apache/augeas_configurator.py
-${PYSITELIB}/certbot_apache/augeas_configurator.pyc
-${PYSITELIB}/certbot_apache/augeas_configurator.pyo
 ${PYSITELIB}/certbot_apache/augeas_lens/httpd.aug
 ${PYSITELIB}/certbot_apache/centos-options-ssl-apache.conf
 ${PYSITELIB}/certbot_apache/configurator.py
@@ -62,9 +59,6 @@ ${PYSITELIB}/certbot_apache/parser.pyo
 ${PYSITELIB}/certbot_apache/tests/__init__.py
 ${PYSITELIB}/certbot_apache/tests/__init__.pyc
 ${PYSITELIB}/certbot_apache/tests/__init__.pyo
-${PYSITELIB}/certbot_apache/tests/augeas_configurator_test.py
-${PYSITELIB}/certbot_apache/tests/augeas_configurator_test.pyc
-${PYSITELIB}/certbot_apache/tests/augeas_configurator_test.pyo
 ${PYSITELIB}/certbot_apache/tests/autohsts_test.py
 ${PYSITELIB}/certbot_apache/tests/autohsts_test.pyc
 ${PYSITELIB}/certbot_apache/tests/autohsts_test.pyo
@@ -77,6 +71,9 @@ ${PYSITELIB}/certbot_apache/tests/centos_test.pyo
 ${PYSITELIB}/certbot_apache/tests/complex_parsing_test.py
 ${PYSITELIB}/certbot_apache/tests/complex_parsing_test.pyc
 ${PYSITELIB}/certbot_apache/tests/complex_parsing_test.pyo
+${PYSITELIB}/certbot_apache/tests/configurator_reverter_test.py
+${PYSITELIB}/certbot_apache/tests/configurator_reverter_test.pyc
+${PYSITELIB}/certbot_apache/tests/configurator_reverter_test.pyo
 ${PYSITELIB}/certbot_apache/tests/configurator_test.py
 ${PYSITELIB}/certbot_apache/tests/configurator_test.pyc
 ${PYSITELIB}/certbot_apache/tests/configurator_test.pyo
