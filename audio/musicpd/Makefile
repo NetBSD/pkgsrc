@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.187 2019/07/01 04:07:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.188 2019/07/15 13:47:14 nia Exp $
 
-DISTNAME=		mpd-0.21.10
+DISTNAME=		mpd-0.21.11
 PKGNAME=		${DISTNAME:S/mpd/musicpd/}
-PKGREVISION=		1
 CATEGORIES=		audio
-MASTER_SITES=		http://www.musicpd.org/download/mpd/0.21/
-#MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=musicpd/}
+MASTER_SITES=		https://www.musicpd.org/download/mpd/0.21/
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://musicpd.org/
+HOMEPAGE=		https://www.musicpd.org/
 COMMENT=		Remote controllable audio player
 LICENSE=		gnu-gpl-v2
 
@@ -20,6 +18,19 @@ CONFLICTS=		mpd-[0-9]*
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 MESON_ARGS+=		-Ddocumentation=true
+
+# worrying libraries with limited maintainance:
+# - audiofile, many CVEs, no activity since 2016
+#   using sndfile instead
+# - mad, no release since 2004
+#   using mpg123 instead
+MESON_ARGS+=		-Dmad=disabled
+MESON_ARGS+=		-Daudiofile=disabled
+
+# not available in pkgsrc?
+MESON_ARGS+=		-Dnfs=disabled
+MESON_ARGS+=		-Diso9660=disabled
+MESON_ARGS+=		-Dsndio=disabled
 
 # c++14
 GCC_REQD+=		6
@@ -32,7 +43,7 @@ EGDIR=			${PREFIX}/share/examples/mpd
 CONF_FILES=		${EGDIR}/mpd.conf ${PKG_SYSCONFDIR}/mpd.conf
 RCD_SCRIPTS=		mpd
 
-FILES_SUBST+=		DEVOSSAUDIO=${DEVOSSAUDIO:Q}
+FILES_SUBST+=		DEVOSSAUDIO=${DEVOSSAUDIO}
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
@@ -58,10 +69,17 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/mpdconf.example ${DESTDIR}${EGDIR}
 
 .include "../../devel/py-meson/build.mk"
+BUILDLINK_ABI_DEPENDS.flac+=	flac>=1.2
+.include "../../audio/flac/buildlink3.mk"
+.include "../../audio/libopus/buildlink3.mk"
+.include "../../audio/mpg123/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../textproc/icu/buildlink3.mk"
-.include "../../audio/libmad/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-
+.include "../../security/libgcrypt/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
