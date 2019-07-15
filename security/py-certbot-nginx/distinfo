@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/06/12 10:27:38 adam Exp $
+$NetBSD: distinfo,v 1.8 2019/07/15 12:52:55 adam Exp $
 
-SHA1 (certbot-nginx-0.35.1.tar.gz) = d17e7b50d9901af06c6a002fa207ef60139da612
-RMD160 (certbot-nginx-0.35.1.tar.gz) = 88d504eebd512ac61ab3ca2a6cd41a5ba558f3c3
-SHA512 (certbot-nginx-0.35.1.tar.gz) = 4682c3e92bca4f59792eab55f1c8f6b1c3eb2f72fddba408bc0873738ee7ea355fd5993ecb09e8603b763424d2c9f7c96f30e88c4c7f32b35beb7533f3d2e1ef
-Size (certbot-nginx-0.35.1.tar.gz) = 75839 bytes
+SHA1 (certbot-nginx-0.36.0.tar.gz) = ba2a08928f90cb0ab54205542a787e7cfe94d568
+RMD160 (certbot-nginx-0.36.0.tar.gz) = 8b8ea6eadbd86d25b184576d2827e0c5b88e6e15
+SHA512 (certbot-nginx-0.36.0.tar.gz) = 340936d4d5b81931b67972e5259f9a9cbbe3a914ca32158a5fbb46de60b68ffaf79ee9d1e1fb0676086b1a6434175608ff84094f7495ea55b8dcaa956ec2f929
+Size (certbot-nginx-0.36.0.tar.gz) = 76634 bytes
