@@ -1,14 +1,13 @@
-$NetBSD: patch-src_build-data_os_openbsd.txt,v 1.2 2017/04/10 21:14:45 joerg Exp $
+$NetBSD: patch-src_build-data_os_openbsd.txt,v 1.3 2019/07/15 18:31:29 bsiegert Exp $
 
---- src/build-data/os/openbsd.txt.orig	2017-04-10 20:31:58.319297182 +0000
+--- src/build-data/os/openbsd.txt.orig	2019-07-01 10:23:16.000000000 +0000
 +++ src/build-data/os/openbsd.txt
-@@ -1,8 +1,6 @@
- os_type unix
+@@ -1,7 +1,5 @@
  
--soname_pattern_base  "libbotan-{version_major}.so"
--soname_pattern_abi   "libbotan-{version_major}.so.{abi_rev}"
--soname_pattern_patch "libbotan-{version_major}.so.{abi_rev}.{version_minor}"
+-soname_pattern_base  "lib{libname}.so"
+-soname_pattern_abi   "lib{libname}.so.{abi_rev}.{version_minor}"
+-soname_pattern_patch "lib{libname}.so.{abi_rev}.{version_minor}"
 +soname_suffix "so"
  
- <target_features>
- arc4random
+ shared_lib_symlinks no
+ 
