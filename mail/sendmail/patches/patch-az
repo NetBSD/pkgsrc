@@ -1,6 +1,6 @@
-$NetBSD: patch-az,v 1.2 2014/12/06 23:22:20 jnemeth Exp $
+$NetBSD: patch-az,v 1.3 2019/07/15 04:32:49 jnemeth Exp $
 
---- sendmail/srvrsmtp.c.orig	2014-11-12 03:02:04.000000000 +0000
+--- sendmail/srvrsmtp.c.orig	2015-03-18 11:47:12.000000000 +0000
 +++ sendmail/srvrsmtp.c
 @@ -46,6 +46,10 @@ static bool	tls_ok_srv = false;
  static bool	NotFirstDelivery = false;
@@ -13,7 +13,53 @@ $NetBSD: patch-az,v 1.2 2014/12/06 23:22:20 jnemeth Exp $
  /* server features */
  #define SRV_NONE	0x0000	/* none... */
  #define SRV_OFFER_TLS	0x0001	/* offer STARTTLS */
-@@ -3983,8 +3987,8 @@ smtp_data(smtp, e)
+@@ -1328,6 +1332,7 @@ smtp(nullserver, d_flags, e)
+ 					  (int) tp.tv_sec +
+ 						(tp.tv_usec >= 500000 ? 1 : 0)
+ 					 );
++				BLACKLIST_NOTIFY(BLACKLIST_AUTH_FAIL, fd, "pre-greeting traffic");
+ 			}
+ 		}
+ 	}
+@@ -1589,7 +1594,12 @@ smtp(nullserver, d_flags, e)
+ 			/* get an OK if we're done */
+ 			if (result == SASL_OK)
+ 			{
++				int fd;
++
+   authenticated:
++				fd = sm_io_getinfo(InChannel, SM_IO_WHAT_FD, NULL);
++				BLACKLIST_NOTIFY(BLACKLIST_AUTH_OK, fd, "AUTH OK");
++
+ 				message("235 2.0.0 OK Authenticated");
+ 				authenticating = SASL_IS_AUTH;
+ 				macdefine(&BlankEnvelope.e_macro, A_TEMP,
+@@ -1721,8 +1731,12 @@ smtp(nullserver, d_flags, e)
+ 			}
+ 			else
+ 			{
++				int fd;
++
+ 				/* not SASL_OK or SASL_CONT */
+ 				message("535 5.7.0 authentication failed");
++				fd = sm_io_getinfo(InChannel, SM_IO_WHAT_FD, NULL);
++				BLACKLIST_NOTIFY(BLACKLIST_AUTH_FAIL, fd, "AUTH FAIL");
+ 				if (LogLevel > 9)
+ 					sm_syslog(LOG_WARNING, e->e_id,
+ 						  "AUTH failure (%s): %s (%d) %s, relay=%.100s",
+@@ -3523,7 +3537,11 @@ doquit:
+ #if MAXBADCOMMANDS > 0
+ 			if (++n_badcmds > MAXBADCOMMANDS)
+ 			{
++				int fd;
++
+   stopattack:
++				fd = sm_io_getinfo(InChannel, SM_IO_WHAT_FD, NULL);
++				BLACKLIST_NOTIFY(BLACKLIST_ABUSIVE_BEHAVIOR, fd, "too many bad commands");
+ 				message("421 4.7.0 %s Too many bad commands; closing connection",
+ 					MyHostName);
+ 
+@@ -3992,8 +4010,8 @@ smtp_data(smtp, e)
  	id = e->e_id;
  
  #if NAMED_BIND
