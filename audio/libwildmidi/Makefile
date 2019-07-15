@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2019/07/06 21:05:25 nia Exp $
+# $NetBSD: Makefile,v 1.7 2019/07/15 14:39:54 nia Exp $
 
-DISTNAME=	wildmidi-0.4.0
+DISTNAME=	wildmidi-0.4.3
 PKGNAME=	lib${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	audio
-MASTER_SITES=	https://github.com/Mindwerks/wildmidi/archive/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=Mindwerks/}
+GITHUB_PROJECT=	wildmidi
+GITHUB_TAG=	${DISTNAME}
 
 MAINTAINER=	pallegra@gmail.com
 HOMEPAGE=	http://www.mindwerks.net/projects/wildmidi/
