@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2019/06/04 23:09:51 nia Exp $
+# $NetBSD: Makefile,v 1.120 2019/07/15 18:44:32 nia Exp $
 
 DISTNAME=		audacity-2.3.2
 CATEGORIES=		audio
@@ -46,12 +46,16 @@ CONFIGURE_ARGS+=	--with-libsoxr=system
 CONFIGURE_ARGS+=	--with-widgetextra=local
 
 # for internal portaudio...
-
 .if ${OPSYS} == "Linux"
 CONFIGURE_ARGS+=	--with-alsa
 .else
 CONFIGURE_ARGS+=	--without-alsa
 CONFIGURE_ENV+=		ac_cv_header_pa_linux_alsa_h=no
+.endif
+
+.if ${MACHINE_ARCH} == "i386"
+# 64 bit atomic ops are required
+CXXFLAGS+=	-march=i586
 .endif
 
 .include "../../mk/oss.buildlink3.mk"
