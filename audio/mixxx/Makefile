@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/07/08 16:46:32 nia Exp $
+# $NetBSD: Makefile,v 1.2 2019/07/15 16:55:52 nia Exp $
 
 DISTNAME=	mixxx-2.2.1
 CATEGORIES=	audio
@@ -62,6 +62,9 @@ REPLACE.node.old=	.*/usr/bin/env node
 REPLACE.node.new=	${PREFIX}/bin/node
 REPLACE_FILES.node+=	res/controllers/novation-launchpad/scripts/compile-mapping.js
 REPLACE_FILES.node+=	res/controllers/novation-launchpad/scripts/compile-scripts.js
+
+# avoid a hard nodejs dependency
+CHECK_INTERPRETER_SKIP+=	res/controllers/novation-launchpad/scripts/*
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONSBIN} ${SCONS_ARGS} \
