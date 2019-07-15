@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/06/04 05:09:33 dbj Exp $
+$NetBSD: distinfo,v 1.6 2019/07/15 22:07:08 nia Exp $
 
-SHA1 (gexiv2-0.10.8.tar.xz) = 8caafc5557a9acda3fcc023ee0e55d342b167cff
-RMD160 (gexiv2-0.10.8.tar.xz) = 0add27365ba86b6afd6c5b1f3a7571ec76ccbce3
-SHA512 (gexiv2-0.10.8.tar.xz) = 4c25cf6884495151947a70e62a096f3279223673bece4d4ff02720b2820aaad9e80c8715e02bf46c3f5598f582fdf07b4b3ddabd017d53001245e3381a4cc286
-Size (gexiv2-0.10.8.tar.xz) = 634696 bytes
-SHA1 (patch-configure) = 74dee7f4dce403569fc5279c91b27e1b4ce84694
-SHA1 (patch-configure.ac) = 336549798b0189aa7ad132fecc31d8e456878203
+SHA1 (gexiv2-0.12.0.tar.xz) = 2d8894d307363726b345d0535d5fe5b7153a7ea9
+RMD160 (gexiv2-0.12.0.tar.xz) = 1e8f6d3cc45caf39afa7ca0b519b4de14f631b52
+SHA512 (gexiv2-0.12.0.tar.xz) = c89e7d307359c718dff1f3991acb4ece66bce985a3d8bee1c8fccf4ce39187af62684c87eaae9b0425a6fdbf147b7330902041d9588e52a4bad1da4255d245e9
+Size (gexiv2-0.12.0.tar.xz) = 370816 bytes

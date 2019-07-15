@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/02/15 08:15:55 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/07/15 22:07:08 nia Exp $
 include/gexiv2/gexiv2-enums.h
 include/gexiv2/gexiv2-log.h
 include/gexiv2/gexiv2-managed-stream.h
@@ -8,26 +8,11 @@ include/gexiv2/gexiv2-preview-properties.h
 include/gexiv2/gexiv2-startup.h
 include/gexiv2/gexiv2-version.h
 include/gexiv2/gexiv2.h
-lib/libgexiv2.la
+lib/girepository-1.0/GExiv2-0.10.typelib
+lib/libgexiv2.so
+lib/libgexiv2.so.2
+lib/libgexiv2.so.2.0.0
 lib/pkgconfig/gexiv2.pc
-share/gtk-doc/html/gexiv2/GExiv2Metadata.html
-share/gtk-doc/html/gexiv2/GExiv2PreviewImage.html
-share/gtk-doc/html/gexiv2/GExiv2PreviewProperties.html
-share/gtk-doc/html/gexiv2/annotation-glossary.html
-share/gtk-doc/html/gexiv2/api-index-0-10-6.html
-share/gtk-doc/html/gexiv2/api-index-full.html
-share/gtk-doc/html/gexiv2/ch01.html
-share/gtk-doc/html/gexiv2/deprecated-api-index.html
-share/gtk-doc/html/gexiv2/gexiv2-Library-initialisation.html
-share/gtk-doc/html/gexiv2/gexiv2-Logging-functionality.html
-share/gtk-doc/html/gexiv2/gexiv2-gexiv2-version.html
-share/gtk-doc/html/gexiv2/gexiv2.devhelp2
-share/gtk-doc/html/gexiv2/home.png
-share/gtk-doc/html/gexiv2/index.html
-share/gtk-doc/html/gexiv2/left-insensitive.png
-share/gtk-doc/html/gexiv2/left.png
-share/gtk-doc/html/gexiv2/right-insensitive.png
-share/gtk-doc/html/gexiv2/right.png
-share/gtk-doc/html/gexiv2/style.css
-share/gtk-doc/html/gexiv2/up-insensitive.png
-share/gtk-doc/html/gexiv2/up.png
+share/gir-1.0/GExiv2-0.10.gir
+share/vala/vapi/gexiv2.deps
+share/vala/vapi/gexiv2.vapi
