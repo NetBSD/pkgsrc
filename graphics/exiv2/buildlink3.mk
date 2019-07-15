@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.17 2018/12/05 10:04:15 bsiegert Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2019/07/15 22:07:08 nia Exp $
 
 BUILDLINK_TREE+=	exiv2
 
 .if !defined(EXIV2_BUILDLINK3_MK)
 EXIV2_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.exiv2+=	exiv2>=0.26
-BUILDLINK_ABI_DEPENDS.exiv2+=	exiv2>=0.26
+BUILDLINK_API_DEPENDS.exiv2+=	exiv2>=0.27
+BUILDLINK_ABI_DEPENDS.exiv2+=	exiv2>=0.27
 BUILDLINK_PKGSRCDIR.exiv2?=	../../graphics/exiv2
 
 .include "../../devel/gettext-lib/buildlink3.mk"
