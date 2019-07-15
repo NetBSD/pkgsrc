@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.824 2019/07/07 09:38:40 bsiegert Exp $
+# $NetBSD: Makefile,v 1.825 2019/07/15 22:18:10 nia Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -119,7 +119,6 @@ SUBDIR+=	exif
 SUBDIR+=	exifprobe
 SUBDIR+=	exiftags
 SUBDIR+=	exiv2
-SUBDIR+=	exiv2-organize
 SUBDIR+=	extrema
 SUBDIR+=	f-spot
 SUBDIR+=	fbm
