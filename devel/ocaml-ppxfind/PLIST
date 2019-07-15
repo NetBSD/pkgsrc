@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2019/07/15 10:45:28 jaapb Exp $
+bin/ppxfind
+${OCAML_SITELIB}/ppxfind/META
+${OCAML_SITELIB}/ppxfind/dune-package
+${OCAML_SITELIB}/ppxfind/opam
+share/doc/ppxfind/CHANGES.md
+share/doc/ppxfind/LICENSE.md
+share/doc/ppxfind/README.md

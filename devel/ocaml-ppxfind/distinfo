@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/07/15 10:45:28 jaapb Exp $
+
+SHA1 (ppxfind-1.3.tar.gz) = 7a3f3df793bce75f6d5aac212b805ce0930afccd
+RMD160 (ppxfind-1.3.tar.gz) = daceff8c4b9d120ab1f7bd3abdb82b2bd6b2217f
+SHA512 (ppxfind-1.3.tar.gz) = fcfb5df45c14b80a661944db690c1f99c67363c181ec410f30569b971fe61ea58e021065c5cfe5a9e2ef7b101ac88dc37d4c925f7270ef98dd7ba301fcae13eb
+Size (ppxfind-1.3.tar.gz) = 4040 bytes

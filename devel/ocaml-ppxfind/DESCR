@@ -1,0 +1,3 @@
+Ppxfind is a small command line tool that allow to apply ppx rewriters installed
+on the system on a file. It supports both new style ppx rewriters (driverised)
+and old style ones.
