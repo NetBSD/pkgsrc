@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/04/25 07:33:23 maya Exp $
+# $NetBSD: Makefile,v 1.38 2019/07/15 16:24:18 nia Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 .include		"version.mk"
@@ -14,7 +14,7 @@ DISTFILES+=					ipxe-git-${VERSION_IPXE}.tar.gz
 SITES.ipxe-git-${VERSION_IPXE}.tar.gz +=	http://xenbits.xensource.com/xen-extfiles/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://xenproject.org/
+HOMEPAGE=		https://xenproject.org/
 COMMENT=		Userland Tools for Xen 4.6.x
 LICENSE=		gnu-gpl-v2
 

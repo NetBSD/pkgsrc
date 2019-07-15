@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/04/25 07:33:23 maya Exp $
+# $NetBSD: Makefile,v 1.27 2019/07/15 16:24:18 nia Exp $
 #
 VERSION=	4.8.3
 VERSION_IPXE=	827dd1bfee67daa683935ce65316f7e0f057fe1c
@@ -55,7 +55,7 @@ DISTFILES+=			${DIST_LIBPCI}
 SITES.${DIST_LIBPCI} +=		${XEN_EXTFILES}
 
 MAINTAINER=		bouyer@NetBSD.org
-HOMEPAGE=		http://xenproject.org/
+HOMEPAGE=		https://xenproject.org/
 COMMENT=		Userland Tools for Xen 4.8.x
 LICENSE=		gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/04/25 07:33:22 maya Exp $
+# $NetBSD: Makefile,v 1.22 2019/07/15 16:24:18 nia Exp $
 
 VERSION=	4.6.6
 DISTNAME=	xen-${VERSION}
@@ -8,7 +8,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	https://downloads.xenproject.org/release/xen/${VERSION}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xenproject.org/
+HOMEPAGE=	https://xenproject.org/
 COMMENT=	Xen 4.6.x Kernel
 
 LICENSE=	gnu-gpl-v2

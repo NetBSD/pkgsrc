@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/04/25 07:33:22 maya Exp $
+# $NetBSD: Makefile,v 1.16 2019/07/15 16:24:18 nia Exp $
 
 VERSION=	4.8.3
 DISTNAME=	xen-${VERSION}
@@ -9,7 +9,7 @@ MASTER_SITES=	https://downloads.xenproject.org/release/xen/${VERSION}/
 DIST_SUBDIR=	xen48
 
 MAINTAINER=	bouyer@NetBSD.org
-HOMEPAGE=	http://xenproject.org/
+HOMEPAGE=	https://xenproject.org/
 COMMENT=	Xen 4.8.x Kernel
 
 LICENSE=	gnu-gpl-v2
