@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2016/08/24 10:09:40 wiz Exp $
+$NetBSD: distinfo,v 1.7 2019/07/15 14:39:54 nia Exp $
 
-SHA1 (wildmidi-0.4.0.tar.gz) = 200431b9de9a04d87035a556c0bb088432d0ed49
-RMD160 (wildmidi-0.4.0.tar.gz) = a44d6d2a0f6c8ea10e68de7a0a5638dfd5e261b8
-SHA512 (wildmidi-0.4.0.tar.gz) = fd32314bffbc1a2fe895b77aa6517a9c7d2781d4c04f4edfe7a00e73f378d6987b331403de4b742f7ac65d026719f9450031e58f43089befeb73e379ba56c63f
-Size (wildmidi-0.4.0.tar.gz) = 175575 bytes
+SHA1 (wildmidi-0.4.3.tar.gz) = 0a2294106690709263f9bf2b5604edb5ad8f5920
+RMD160 (wildmidi-0.4.3.tar.gz) = 366715c08a344e07bdf783c21b2f00c078feea8f
+SHA512 (wildmidi-0.4.3.tar.gz) = 7e86e998ee97cdf57328e4cf5ef52a64926fd01999879c0eae5b6c823be4e6d116f7026230bd15d209e6616fbc7ba1c29ebd1f3be04735e341ce5c83298f956f
+Size (wildmidi-0.4.3.tar.gz) = 196750 bytes
