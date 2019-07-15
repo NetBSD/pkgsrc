@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.25 2019/07/15 04:32:49 jnemeth Exp $
+# $NetBSD: options.mk,v 1.26 2019/07/15 05:30:33 jnemeth Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sendmail
 PKG_SUPPORTED_OPTIONS=	inet6 db2 db4 ldap sasl tls tcpwrappers
@@ -7,10 +7,12 @@ PKG_SUGGESTED_OPTIONS=	inet6 tcpwrappers tls
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
+.for dir in ${COMPILER_INCLUDE_DIRS}
+.  if exists(${dir}/blacklist.h)
 PKG_SUPPORTED_OPTIONS+=	blacklistd
 PKG_SUGGESTED_OPTIONS+=	blacklistd
-.endif
+.  endif
+.endfor
 
 PKG_OPTIONS_LEGACY_OPTS+=	starttls:tls ffr_tls_1:sendmail-ffr-tls
 
