@@ -1,9 +1,9 @@
-# $NetBSD: site.config.m4-sasl2,v 1.4 2019/07/15 04:32:49 jnemeth Exp $
+# $NetBSD: site.config.m4-sasl2,v 1.5 2019/07/15 07:05:02 jnemeth Exp $
 
 # enable SASL 2
 APPENDDEF(`confENVDEF', `-DSASL=2')
 APPENDDEF(`conf_sendmail_LIBS', `-lsasl2')
 
-# XXX JMN  always enable NAMED_RESN for now
-## for some strange reason SASL, and NAMED_RESN and MILTER are incompatible
-#APPENDDEF(`confENVDEF', `-DNAMED_RESN=0')
+dnl # XXX JMN  always enable NAMED_RESN for now
+dnl # for some strange reason SASL, and NAMED_RESN and MILTER are incompatible
+dnl APPENDDEF(`confENVDEF', `-DNAMED_RESN=0')
