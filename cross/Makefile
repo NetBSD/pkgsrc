@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2019/03/24 12:03:48 tnn Exp $
+# $NetBSD: Makefile,v 1.84 2019/07/15 06:01:06 maya Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -60,6 +60,8 @@ SUBDIR+=	nios2-gcc
 SUBDIR+=	nios2-gcc3
 SUBDIR+=	nios2-gcc41
 SUBDIR+=	objconv
+SUBDIR+=	or1k-none-elf-binutils
+SUBDIR+=	or1k-none-elf-gcc
 SUBDIR+=	pdp11-aout-binutils
 SUBDIR+=	pdp11-aout-gcc
 SUBDIR+=	stlink
