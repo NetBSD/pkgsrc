@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.58 2018/12/05 12:10:21 bsiegert Exp $
+$NetBSD: distinfo,v 1.59 2019/07/15 04:32:49 jnemeth Exp $
 
 SHA1 (sendmail.8.15.2.tar.gz) = 5801d4b06f4e38ef228a5954a44d17636eaa5a16
 RMD160 (sendmail.8.15.2.tar.gz) = 1fe2210e1ded1fe2ee640fceb1de29f19ceaa8e4
@@ -10,19 +10,19 @@ SHA1 (patch-ag) = f76de45c7e8d16207670e151265b7edbca4c045c
 SHA1 (patch-ah) = e6be09008b9230ffdd1560aaacbdbb2ee4fb8028
 SHA1 (patch-ai) = 0bd3676dce988cf1167fae09443da0d1a1363abb
 SHA1 (patch-aj) = e65e6fe44380de2f9c397c1a97677eb4ad285433
-SHA1 (patch-an) = 739c9081979bdb3eb77b117fd905c2875a1fc064
+SHA1 (patch-an) = 56b8b82880b9ef8fefd7cbbe98dad30b8db753f1
 SHA1 (patch-ao) = 88dd76b71ad57a8d0efdb6e8518ff01689ecf634
 SHA1 (patch-ap) = 9c83d9ed1b4d8c851c106597638763515923a4ab
 SHA1 (patch-aq) = 722382daf085ac2f4a06d0c812bb00f49bcdfd2c
-SHA1 (patch-ar) = d68984a057d7a0a674a8d46cf903585c8279f7a8
+SHA1 (patch-ar) = 1ecf39ddded8504079c5c446625bf9ad9497044f
 SHA1 (patch-as) = 652b107d5f68507a0b2fb7c5402186eff96c6bc0
 SHA1 (patch-at) = 7c206df88d29671faef950276a5119ef2f525f4b
 SHA1 (patch-au) = 87e907f36482f3ca03754160bc1ee106e17e3aaa
 SHA1 (patch-av) = 1b6bd4547930507ab67427bcf8a390c0afce0fb0
-SHA1 (patch-aw) = 9077b9fc4063bd1a66500b203d246bcddae8eb0f
+SHA1 (patch-aw) = 33066ae7770e7f8ea6520b3fc0ecbe46dd4d958d
 SHA1 (patch-ax) = adba9177404e10d5f461e1e8f0c4dd5840d78dd1
 SHA1 (patch-ay) = 94f9c633c1d15037ddd0a6ed46a4f3aaec236fc2
-SHA1 (patch-az) = 592ec93f700723485a5969ae1f1836c64975d1d0
+SHA1 (patch-az) = 5885c524fcae3a314c07eadf661bbe6ae1c081e7
 SHA1 (patch-ba) = c190b11b9874f00a18b9c75b6e734f4a9dd3f68f
 SHA1 (patch-bb) = 6c86a60af25b02fc0389f1d40f59c5031d9679f1
 SHA1 (patch-bc) = 9e7346342dfe1ca5d84053b913df4be41a979683
@@ -31,3 +31,7 @@ SHA1 (patch-be) = d2f3397b7880f23f8cbd5d3c4eb5ccfe6a6ca75b
 SHA1 (patch-bf) = 9c5faf5b38c18623e5ce4ffafc00a4430965e41a
 SHA1 (patch-bg) = 17b750d84333eacd39a23aa313d5ba24dc7d2156
 SHA1 (patch-bk) = 0b0b85fb6c5c80c8419c783dc3e35d28edbdb70b
+SHA1 (patch-bl) = 4fff262691deb2fcacf5013bfeb5aede45783dcd
+SHA1 (patch-bm) = a30f2152407a1f5ac84d95f5c28c506b5645f4bc
+SHA1 (patch-bn) = 3af37c9d3523d6093181ae3b7d4c25bc8173b7f9
+SHA1 (patch-bo) = b92941be46a3dc86226a774b5df31ce62e9fbc17

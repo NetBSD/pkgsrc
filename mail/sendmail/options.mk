@@ -1,9 +1,16 @@
-# $NetBSD: options.mk,v 1.24 2019/07/15 02:06:42 jnemeth Exp $
+# $NetBSD: options.mk,v 1.25 2019/07/15 04:32:49 jnemeth Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sendmail
 PKG_SUPPORTED_OPTIONS=	inet6 db2 db4 ldap sasl tls tcpwrappers
 PKG_SUPPORTED_OPTIONS+=	sendmail-ffr-tls sendmail-ffr-badrcptshutdown
 PKG_SUGGESTED_OPTIONS=	inet6 tcpwrappers tls
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
+PKG_SUPPORTED_OPTIONS+=	blacklistd
+PKG_SUGGESTED_OPTIONS+=	blacklistd
+.endif
 
 PKG_OPTIONS_LEGACY_OPTS+=	starttls:tls ffr_tls_1:sendmail-ffr-tls
 
@@ -62,3 +69,9 @@ PKG_OPTIONS_LEGACY_OPTS+=	starttls:tls ffr_tls_1:sendmail-ffr-tls
 ###
 .if !empty(PKG_OPTIONS:Minet6)
 .endif
+
+###
+### NetBSD blacklistd(8) support.
+###
+# Nothing to do here, activation is done in Makefile
+
