@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/02/24 16:22:26 taca Exp $
+# $NetBSD: Makefile,v 1.3 2019/07/15 16:14:29 nia Exp $
 
 DISTNAME=	sass-3.4.25
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/sass/sass34/}
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sass-lang.com/
+HOMEPAGE=	https://sass-lang.com/
 COMMENT=	Powerful, but elegant CSS compiler that makes CSS fun again
 LICENSE=	mit
 
