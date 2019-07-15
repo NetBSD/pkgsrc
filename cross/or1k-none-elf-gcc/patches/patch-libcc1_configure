@@ -1,0 +1,14 @@
+$NetBSD: patch-libcc1_configure,v 1.1 2019/07/15 05:59:13 maya Exp $
+
+--- libcc1/configure.orig	2018-10-31 17:03:16.000000000 +0000
++++ libcc1/configure
+@@ -14650,9 +14650,6 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+ 
+ 
+ libsuffix=
+-if test "$GXX" = yes; then
+-  libsuffix=`$CXX -print-multi-os-directory`
+-fi
+ 
+ 
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for socket libraries" >&5
