@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.24 2019/05/14 15:35:19 jaapb Exp $
+# $NetBSD: ocaml.mk,v 1.25 2019/07/15 09:36:26 jaapb Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 #
@@ -23,7 +23,7 @@
 # OCAML_USE_OASIS_DYNRUN [implies OCAML_USE_OASIS]
 # package uses oasis.dynrun
 # OCAML_USE_OPAM
-# package uses OPAM installer
+# package uses OPAM installer [implies OCAML_USE_FINDLIB]
 # OCAML_USE_TOPKG
 # package uses topkg [implies OCAML_USE_FINDLIB]
 # OCAML_USE_JBUILDER
@@ -194,6 +194,9 @@ PLIST_VARS+=	ocaml-opt
 # The opt compiler needs the C compiler suite
 USE_LANGUAGES+=	c
 PLIST.ocaml-opt=	yes
+.else
+# If we're bytecode compiling, don't strip executables
+INSTALL_UNSTRIPPED=	yes
 .endif
 
 #
