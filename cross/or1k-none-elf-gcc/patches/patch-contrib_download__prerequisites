@@ -1,0 +1,13 @@
+$NetBSD: patch-contrib_download__prerequisites,v 1.1 2019/07/15 05:59:13 maya Exp $
+
+--- contrib/download_prerequisites.orig	2019-03-10 12:49:13.000000000 +0000
++++ contrib/download_prerequisites
+@@ -122,7 +122,7 @@ md5_check() {
+   md5_checksum_output=$(md5 -r "${file_to_check}")
+   # Grab the text before the first space
+   md5_checksum_detected="${md5_checksum_output%% *}"
+-  [ "${md5_checksum_expected}" == "${md5_checksum_detected}" ] \
++  [ "${md5_checksum_expected}" = "${md5_checksum_detected}" ] \
+     || die "Cannot verify integrity of possibly corrupted file ${file_to_check}"
+   echo "${file_to_check}: OK"
+ }
