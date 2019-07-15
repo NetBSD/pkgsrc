@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2920 2019/07/15 15:12:04 prlw1 Exp $
+$NetBSD: CHANGES-2019,v 1.2921 2019/07/15 18:32:20 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4835,3 +4835,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/apache-tomcat9 to 9.0.22 [ryoon 2019-07-15]
 	Updated audio/libwildmidi to 0.4.3 [nia 2019-07-15]
 	Updated devel/py-meson to 0.51.1nb1 [prlw1 2019-07-15]
+	Updated security/botan-devel to 2.11.0 [bsiegert 2019-07-15]
