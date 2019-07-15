@@ -1,8 +1,10 @@
-$NetBSD: patch-ab,v 1.4 2012/01/11 18:05:09 hans Exp $
+$NetBSD: patch-ab,v 1.5 2019/07/15 22:58:50 nia Exp $
+
+Add endian.h header for macosx
 
 --- applyplugin.c.orig	2007-11-06 10:52:56.000000000 +0000
 +++ applyplugin.c
-@@ -6,7 +6,17 @@
+@@ -6,7 +6,19 @@
  /*****************************************************************************/
  
  #include <dlfcn.h>
@@ -15,6 +17,8 @@ $NetBSD: patch-ab,v 1.4 2012/01/11 18:05:09 hans Exp $
 +#  define LITTLE_ENDIAN 1234
 +#  define BYTE_ORDER LITTLE_ENDIAN
 +# endif
++#elif defined(__APPLE__)
++# include <machine/endian.h>
 +#else
 +# include <sys/endian.h>
 +#endif
