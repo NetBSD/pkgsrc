@@ -1,6 +1,6 @@
-$NetBSD: patch-ar,v 1.1 2014/06/15 20:48:50 jnemeth Exp $
+$NetBSD: patch-ar,v 1.2 2019/07/15 04:32:49 jnemeth Exp $
 
---- sendmail/daemon.c.orig	2014-05-16 20:40:15.000000000 +0000
+--- sendmail/daemon.c.orig	2015-02-28 00:50:03.000000000 +0000
 +++ sendmail/daemon.c
 @@ -57,6 +57,10 @@ SM_RCSID("@(#)$Id: daemon.c,v 8.698 2013
  # endif /* HAS_IN_H */
@@ -13,7 +13,16 @@ $NetBSD: patch-ar,v 1.1 2014/06/15 20:48:50 jnemeth Exp $
  #include <sm/fdset.h>
  
  #define DAEMON_C 1
-@@ -2295,16 +2299,16 @@ makeconnection(host, port, mci, e, enoug
+@@ -754,6 +758,8 @@ getrequests(e)
+ 						anynet_ntoa(&RealHostAddr));
+ 			}
+ 
++			BLACKLIST_INIT();
++
+ 			if (pipefd[0] != -1)
+ 			{
+ 				auto char c;
+@@ -2298,16 +2304,16 @@ makeconnection(host, port, mci, e, enoug
  				if (hp == NULL && p[-1] == '.')
  				{
  #if NAMED_BIND
@@ -33,7 +42,7 @@ $NetBSD: patch-ar,v 1.1 2014/06/15 20:48:50 jnemeth Exp $
  #endif /* NAMED_BIND */
  				}
  				*p = ']';
-@@ -2333,15 +2337,15 @@ makeconnection(host, port, mci, e, enoug
+@@ -2336,15 +2342,15 @@ makeconnection(host, port, mci, e, enoug
  			if (hp == NULL && *p == '.')
  			{
  #if NAMED_BIND
@@ -52,7 +61,7 @@ $NetBSD: patch-ar,v 1.1 2014/06/15 20:48:50 jnemeth Exp $
  #endif /* NAMED_BIND */
  			}
  		}
-@@ -4005,13 +4009,13 @@ host_map_lookup(map, name, av, statp)
+@@ -4007,13 +4013,13 @@ host_map_lookup(map, name, av, statp)
  #if NAMED_BIND
  	if (map->map_timeout > 0)
  	{
@@ -70,7 +79,7 @@ $NetBSD: patch-ar,v 1.1 2014/06/15 20:48:50 jnemeth Exp $
  	}
  #endif /* NAMED_BIND */
  
-@@ -4074,9 +4078,9 @@ host_map_lookup(map, name, av, statp)
+@@ -4076,9 +4082,9 @@ host_map_lookup(map, name, av, statp)
  	}
  #if NAMED_BIND
  	if (map->map_timeout > 0)
@@ -82,7 +91,7 @@ $NetBSD: patch-ar,v 1.1 2014/06/15 20:48:50 jnemeth Exp $
  #endif /* NAMED_BIND */
  
  	s->s_namecanon.nc_flags |= NCF_VALID;	/* will be soon */
-@@ -4407,11 +4411,11 @@ hostnamebyanyaddr(sap)
+@@ -4407,11 +4413,11 @@ hostnamebyanyaddr(sap)
  
  # if NAMED_BIND
  	/* shorten name server timeout to avoid higher level timeouts */
@@ -99,7 +108,7 @@ $NetBSD: patch-ar,v 1.1 2014/06/15 20:48:50 jnemeth Exp $
  # endif /* NAMED_BIND */
  
  	switch (sap->sa.sa_family)
-@@ -4450,7 +4454,7 @@ hostnamebyanyaddr(sap)
+@@ -4450,7 +4456,7 @@ hostnamebyanyaddr(sap)
  	}
  
  # if NAMED_BIND
