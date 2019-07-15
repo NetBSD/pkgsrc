@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.92 2019/06/26 00:22:56 ryoon Exp $
+# $NetBSD: compiler.mk,v 1.93 2019/07/15 16:06:19 ryoon Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -83,7 +83,8 @@ USE_LANGUAGES?=	c
 USE_LANGUAGES+=	c
 .endif
 
-.for _version_ in gnu++14 c++14 gnu++11 c++11 gnu++0x c++0x gnu++03 c++03
+_CXX_STD_VERSIONS=	gnu++14 c++14 gnu++11 c++11 gnu++0x c++0x gnu++03 c++03
+.for _version_ in ${_CXX_STD_VERSIONS}
 .  if !empty(USE_LANGUAGES:M${_version_})
 USE_LANGUAGES+=		c++
 .  endif
@@ -177,11 +178,11 @@ ${_var_}:=	${${_var_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//:T} ${${_var_}:C/^/_asdf_
 # the respective mk/compiler/*.mk files.
 #
 _CXX_VERSION_REQD=
-.for _version_ in gnu++14 c++14 gnu++11 c++11 gnu++0x c++0x gnu++03 c++03
+.for _version_ in ${_CXX_STD_VERSIONS}
 .  if empty(_CXX_VERSION_REQD) && !empty(USE_LANGUAGES:M${_version_})
 _CXX_VERSION_REQD=	${_version_}
-_WRAP_EXTRA_ARGS.CXX+=	-std=${_CXX_VERSION_REQD}
-CWRAPPERS_PREPEND.cxx+=	-std=${_CXX_VERSION_REQD}
+_WRAP_EXTRA_ARGS.CXX+=	${_CXX_STD_FLAG.${_CXX_VERSION_REQD}}
+CWRAPPERS_PREPEND.cxx+=	${_CXX_STD_FLAG.${_CXX_VERSION_REQD}}
 .  endif
 .endfor
 
