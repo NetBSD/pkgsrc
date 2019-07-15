@@ -1,0 +1,5 @@
+# $Id: site.config.m4-blacklistd,v 1.1 2019/07/15 04:32:49 jnemeth Exp $
+
+APPENDDEF(`conf_sendmail_ENVDEF', `-DUSE_BLACKLIST')
+APPENDDEF(`conf_sendmail_LIBS', `-lblacklist')
+
