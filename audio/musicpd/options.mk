@@ -1,168 +1,239 @@
-# $NetBSD: options.mk,v 1.33 2019/01/06 14:47:20 wiz Exp $
+# $NetBSD: options.mk,v 1.34 2019/07/15 13:47:14 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
-PKG_SUPPORTED_OPTIONS=	adplug audiofile avahi bzip2 curl faad ffmpeg flac fluidsynth game-music-emu id3 libao lame jack libmms libmpdclient libsoxr libwildmidi mikmod modplug mpg123 musepack musicpd-soundcloud openal opus pulseaudio shine shout sqlite3 tremor twolame vorbis wavpack zziplib
-PKG_SUGGESTED_OPTIONS=	audiofile curl faad flac id3 libao musepack shout vorbis
+PKG_SUPPORTED_OPTIONS=	adplug avahi bzip2 cdparanoia chromaprint curl dbus faad ffmpeg fluidsynth id3 libao libgme lame jack libmms libmpdclient libsoxr libwildmidi mikmod modplug musepack musicpd-soundcloud openal pulseaudio samba samplerate sidplay shine shout sndfile tremor twolame upnp wavpack zziplib
+PKG_SUGGESTED_OPTIONS=	curl faad ffmpeg id3 libao musepack samplerate shout sndfile vorbis
 
-PKG_OPTIONS_OPTIONAL_GROUPS=	vorbis
+PKG_OPTIONS_LEGACY_OPTS+=	game-music-emu:libgme
+
+PKG_OPTIONS_OPTIONAL_GROUPS=	resampler vorbis
 PKG_OPTIONS_GROUP.vorbis=	tremor vorbis
+PKG_OPTIONS_GROUP.resampler=	samplerate libsoxr
 
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Madplug)
 .  include "../../audio/adplug/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Maudiofile)
-BUILDLINK_API_DEPENDS.libaudiofile+=	libaudiofile>=0.3
-.  include "../../audio/libaudiofile/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dadplug=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mavahi)
 .  include "../../net/avahi/buildlink3.mk"
+MESON_ARGS+=	-Dzeroconf=avahi
+.else
+MESON_ARGS+=	-Dzeroconf=auto
 .endif
 
 .if !empty(PKG_OPTIONS:Mbzip2)
 .  include "../../archivers/bzip2/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dbzip2=disabled
 .endif
 
-# wants a different version of the library than we have in pkgsrc
-#.if !empty(PKG_OPTIONS:Mcdparanoia)
-#.  include "../../audio/cdparanoia/buildlink3.mk"
-#.endif
+.if !empty(PKG_OPTIONS:Mcdparanoia)
+.  include "../../misc/libcdio-paranoia/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dcdio_paranoia=disabled
+.endif
+
+.if !empty(PKG_OPTIONS:Mchromaprint)
+.  include "../../audio/chromaprint/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dchromaprint=disabled
+.endif
 
 .if !empty(PKG_OPTIONS:Mcurl)
 .  include "../../www/curl/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dcurl=disabled
+.endif
+
+.if !empty(PKG_OPTIONS:Mdbus)
+.  include "../../sysutils/dbus/buildlink3.mk"
+.else
+MESON_ARGS+=	-Ddbus=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mfaad)
 .  include "../../audio/faad2/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dfaad=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mffmpeg)
 .  include "../../multimedia/ffmpeg4/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Mflac)
-BUILDLINK_ABI_DEPENDS.flac+=	flac>=1.2
-.  include "../../audio/flac/buildlink3.mk"
-# XXX whole album flac files can appearently be parsed without libcue,
-# so I've yet to find out what libcue is good for
-#.  include "../../audio/libcue/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dffmpeg=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mfluidsynth)
 .  include "../../audio/fluidsynth/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dfluidsynth=disabled
 .endif
 
-.if !empty(PKG_OPTIONS:Mgame-music-emu)
+.if !empty(PKG_OPTIONS:Mlibgme)
 .  include "../../audio/game-music-emu/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dgme=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mid3)
 .  include "../../audio/libid3tag/buildlink3.mk"
+.else
+MESON_ARGS+=	-Did3tag=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mjack)
 .  include "../../audio/jack/buildlink3.mk"
+.else
+MESON_ARGS+=	-Djack=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mlame)
 .  include "../../audio/lame/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dlame=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibao)
 .  include "../../audio/libao/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dao=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibmms)
 .  include "../../net/libmms/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dmms=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibmpdclient)
 .  include "../../audio/libmpdclient/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dlibmpdclient=disabled
 .endif
-
-# does not find libresid-builder
-#.if !empty(PKG_OPTIONS:Mlibsidplay2)
-#.  include "../../audio/libsidplay2/buildlink3.mk"
-#.endif
 
 .if !empty(PKG_OPTIONS:Mlibsoxr)
 .  include "../../audio/libsoxr/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dsoxr=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibwildmidi)
 .  include "../../audio/libwildmidi/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dwildmidi=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mmikmod)
 .  include "../../audio/libmikmod/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dmikmod=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mmodplug)
 .  include "../../audio/libmodplug/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Mmpg123)
-.  include "../../audio/mpg123/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dmodplug=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mmusepack)
 .  include "../../audio/musepack/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dmpcdec=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mmusicpd-soundcloud)
 BUILDLINK_API_DEPENDS.yajl+=	yajl>=2.1
 .  include "../../devel/yajl/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dyajl=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mopenal)
 .  include "../../audio/openal-soft/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Mopus)
-.  include "../../audio/libopus/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dopenal=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
 .  include "../../audio/pulseaudio/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dpulse=disabled
+.endif
+
+.if !empty(PKG_OPTIONS:Msamba)
+.  include "../../net/samba4/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dsmbclient=disabled
+.endif
+
+.if !empty(PKG_OPTIONS:Msamplerate)
+.  include "../../audio/libsamplerate/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dsamplerate=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mshine)
 .  include "../../audio/shine/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dshine=disabled
+.endif
+
+.if !empty(PKG_OPTIONS:Msidplay)
+.  include "../../audio/libsidplay2/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dsidplay=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mshout)
 .  include "../../audio/libshout/buildlink3.mk"
 .  include "../../audio/lame/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dshout=disabled
 .endif
 
-# needs libresid-builder or libsidutils, both not packaged yet
-#.if !empty(PKG_OPTIONS:Msidplay)
-#.  include "../../audio/libsidplay2/buildlink3.mk"
-#.endif
-
-.if !empty(PKG_OPTIONS:Msqlite3)
-.  include "../../databases/sqlite3/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Msndfile)
+.  include "../../audio/libsndfile/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dsndfile=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mtremor)
 .  include "../../audio/tremor/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dtremor=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mtwolame)
 .  include "../../audio/twolame/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dtwolame=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mvorbis)
 .  include "../../audio/libvorbis/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dvorbis=disabled
+MESON_ARGS+=	-Dvorbisenc=disabled
+.endif
+
+.if !empty(PKG_OPTIONS:Mupnp)
+.  include "../../net/libupnp/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dupnp=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mwavpack)
 .  include "../../audio/wavpack/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dwavpack=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mzziplib)
 .  include "../../archivers/zziplib/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dzzip=disabled
 .endif
