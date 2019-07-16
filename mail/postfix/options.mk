@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.40 2015/09/08 14:03:04 fhajny Exp $
+# $NetBSD: options.mk,v 1.41 2019/07/16 15:18:28 triaxx Exp $
 
 # Global and legacy options
 
@@ -50,7 +50,7 @@ CCARGS+=	-DDEF_SERVER_SASL_TYPE=\"dovecot\"
 ###
 .if !empty(PKG_OPTIONS:Meai)
 .  include "../../textproc/icu/buildlink3.mk"
-CCARGS+=	-DHAS_EAI -I${BUILDLINK_PREFIX.icu}/include
+CCARGS+=	-I${BUILDLINK_PREFIX.icu}/include
 AUXLIBS+=	-L${BUILDLINK_PREFIX.icu}/lib -licuuc			\
 		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.icu}/lib
 .else
