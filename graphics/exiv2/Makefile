@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2019/07/15 22:07:08 nia Exp $
+# $NetBSD: Makefile,v 1.42 2019/07/16 08:43:16 adam Exp $
 
-VER=		0.27.1
-DISTNAME=	exiv2-${VER}-Source
+DISTNAME=	exiv2-0.27.1-Source
 PKGNAME=	${DISTNAME:S/-Source//}
 CATEGORIES=	graphics
 MASTER_SITES=	https://www.exiv2.org/builds/
@@ -16,7 +15,12 @@ USE_TOOLS+=	msgfmt
 USE_LANGUAGES=	c c++
 GCC_REQD+=	3.3
 
+.include "../../mk/bsd.prefs.mk"
+
 CMAKE_ARGS+=	-DEXIV2_BUILD_SAMPLES:BOOL=OFF
+.if ${OPSYS} == "Darwin"
+CMAKE_ARGS+=	-DIntl_INCLUDE_DIR=${BUILDLINK_PREFIX.gettext}/include
+.endif
 
 LDFLAGS.Linux+=	-ldl
 LDFLAGS.SunOS+=	-lsocket -lnsl
