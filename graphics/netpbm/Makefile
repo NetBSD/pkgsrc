@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.219 2018/08/22 09:45:14 wiz Exp $
+# $NetBSD: Makefile,v 1.220 2019/07/16 22:37:17 nia Exp $
 
 DISTNAME=	netpbm-10.79.04
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	#
 # manually created from svn checkout of
@@ -86,6 +86,8 @@ SUBST_SED.xopen+=	-e '/_POSIX_SOURCE.*fdopen/s/_POSIX_SOURCE/_XOPEN_SOURCE 600/'
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PKGMANDIR}/man3 ${PKGMANDIR}/man5 share/netpbm
 
+.include "options.mk"
+
 post-extract:
 	cd ${WRKSRC} && ${CP} config.mk.in config.mk
 	${ECHO} "CFLAGS_SHLIB = -fPIC" >> ${WRKSRC}/config.mk
@@ -93,6 +95,12 @@ post-extract:
 	${ECHO} "JPEGHDR_DIR = ${BUILDLINK_PREFIX.jpeg}/include" >> ${WRKSRC}/config.mk
 	${ECHO} "TIFFLIB = ${BUILDLINK_PREFIX.tiff}/lib/libtiff.so" >> ${WRKSRC}/config.mk
 	${ECHO} "TIFFHDR_DIR = ${BUILDLINK_PREFIX.tiff}/include" >> ${WRKSRC}/config.mk
+.if !empty(PKG_OPTIONS:Mjasper)
+	${ECHO} "JASPERLIB = ${BUILDLINK_PREFIX.jasper}/lib/libjasper.so" >> ${WRKSRC}/config.mk
+	${ECHO} "JASPERHDR_DIR = ${BUILDLINK_PREFIX.jasper}/include" >> ${WRKSRC}/config.mk
+.else
+	${ECHO} "JASPERLIB = NONE" >> ${WRKSRC}/config.mk
+.endif
 	${ECHO} "ZLIB = ${BUILDLINK_PREFIX.zlib}/lib/libz.so" >> ${WRKSRC}/config.mk
 	${ECHO} "ZHDR_DIR = ${BUILDLINK_PREFIX.zlib}/include" >> ${WRKSRC}/config.mk
 .if ${OPSYS} == "Darwin"
@@ -117,7 +125,6 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/netpbm-userguide/*.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
