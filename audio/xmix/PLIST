@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/11/06 23:58:05 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/07/16 10:46:45 micha Exp $
 bin/xmix
 lib/X11/app-defaults/XMix
-${IMAKE_MAN_DIR}/xmix.${IMAKE_MANNEWSUFFIX}
+${IMAKE_MAN_DIR}/xmix.1

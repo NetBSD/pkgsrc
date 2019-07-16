@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.7 2012/02/06 03:16:15 sbd Exp $
+$NetBSD: patch-xmix.c,v 1.1 2019/07/16 10:46:45 micha Exp $
 
 - support more OSes (is the first hunk actually correct?)
 - fix void main
 - remove debug printout
 
---- xmix.c.orig	2012-02-06 03:11:54.306900057 +0000
+--- xmix.c.orig	2019-07-03 12:47:36.000000000 +0000
 +++ xmix.c
 @@ -77,7 +77,16 @@ to Rick! I'll call this version V2.1
  #include "square_empty.bit"
@@ -23,7 +23,7 @@ $NetBSD: patch-ab,v 1.7 2012/02/06 03:16:15 sbd Exp $
  
  #define SOUND_FULL_SCALE 100.0
  #define MAX_SOUND_VOL 95
-@@ -450,7 +459,7 @@ static void set_supported(VolumeControl
+@@ -450,7 +459,7 @@ static void set_supported(VolumeControl 
  }
  
  
