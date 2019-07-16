@@ -1,6 +1,10 @@
-$NetBSD: patch-aa,v 1.5 2005/11/06 23:49:03 joerg Exp $
+$NetBSD: patch-Imakefile,v 1.1 2019/07/16 10:46:45 micha Exp $
 
---- Imakefile.orig	Tue Feb  1 23:54:35 1994
+Remove CDEBUGFLAGS.
+Honor LDFLAGS from environment.
+Add local libraries.
+
+--- Imakefile.orig	1994-02-02 04:54:35.000000000 +0000
 +++ Imakefile
 @@ -2,7 +2,7 @@
  # xmix Imakefile.
@@ -11,14 +15,17 @@ $NetBSD: patch-aa,v 1.5 2005/11/06 23:49:03 joerg Exp $
  #define PassCDebugFlags 'CDEBUGFLAGS=$(CDEBUGFLAGS)'
  
  SRCS1=	xmix.c
-@@ -12,6 +12,8 @@
+@@ -12,6 +12,11 @@ PROGRAMS = xmix
  
  all::  $(PROGRAMS)
  
 -LOCAL_LIBRARIES = $(XAWLIB) $(XMULIB) $(XTOOLLIB) $(XLIB)
-+LOCAL_LIBRARIES = $(XAWLIB) $(XMULIB) $(XTOOLLIB) $(XLIB) $(LIBOSSAUDIO)
++# Honor LDFLAGS from environment
++LOCAL_LDFLAGS = $(LDFLAGS)
  
 -NormalProgramTarget(xmix,$(OBJS1),,$(LOCAL_LIBRARIES),)
++LOCAL_LIBRARIES = $(XAWLIB) $(XMULIB) $(XTOOLLIB) $(XLIB) $(LIBOSSAUDIO)
++
 +PROGRAM = $(PROGRAMS)
 +
 +ComplexProgramTarget_1($(PROGRAM),$(LOCAL_LIBRARIES),)
