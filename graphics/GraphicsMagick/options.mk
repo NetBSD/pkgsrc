@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.8 2019/04/01 09:21:23 abs Exp $
+# $NetBSD: options.mk,v 1.9 2019/07/16 19:31:16 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.GraphicsMagick
 PKG_SUPPORTED_OPTIONS=	x11 jasper ghostscript wmf
-PKG_SUGGESTED_OPTIONS=	x11 jasper
+PKG_SUGGESTED_OPTIONS=	x11
 
 .include "../../mk/bsd.options.mk"
 
