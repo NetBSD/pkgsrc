@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/07/15 22:07:08 nia Exp $
+# $NetBSD: Makefile,v 1.5 2019/07/16 08:27:39 nia Exp $
 
 DISTNAME=	gexiv2-0.12.0
 CATEGORIES=	graphics devel
@@ -20,8 +20,6 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gexiv2
 
 MESON_ARGS+=	-Dpython2_girdir=no
 MESON_ARGS+=	-Dpython3_girdir=no
-
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 PKGCONFIG_OVERRIDE=	gexiv2.pc.in
 
