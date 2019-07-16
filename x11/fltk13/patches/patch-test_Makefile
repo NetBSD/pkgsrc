@@ -1,22 +1,27 @@
-$NetBSD: patch-test_Makefile,v 1.4 2018/07/13 04:24:39 dbj Exp $
+$NetBSD: patch-test_Makefile,v 1.5 2019/07/16 11:21:25 micha Exp $
 
---- test/Makefile.orig	2016-09-03 08:14:43.000000000 +0000
+Use libtool.
+
+--- test/Makefile.orig	2019-03-03 08:40:23.000000000 +0000
 +++ test/Makefile
-@@ -308,19 +308,19 @@ buttons$(EXEEXT): buttons.o
+@@ -308,14 +308,14 @@ buttons$(EXEEXT): buttons.o
  
  blocks$(EXEEXT): blocks.o
  	echo Linking $@...
 -	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) blocks.o -o $@ $(AUDIOLIBS) $(LINKFLTK) $(LDLIBS)
 +	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) blocks.o -o $@ $(AUDIOLIBS) $(LINKFLTK) $(LDLIBS)
+ 	$(OSX_ONLY) $(RM) -r -f blocks.app/Contents/MacOS
+ 	$(OSX_ONLY) mkdir blocks.app/Contents/MacOS
  	$(OSX_ONLY) $(INSTALL_BIN) blocks$(EXEEXT) blocks.app/Contents/MacOS
  
  checkers$(EXEEXT): checkers.o
  	echo Linking $@...
 -	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) checkers.o -o $@ $(LINKFLTK) $(LDLIBS)
 +	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) checkers.o -o $@ $(LINKFLTK) $(LDLIBS)
+ 	$(OSX_ONLY) $(RM) -r -f checkers.app/Contents/MacOS
+ 	$(OSX_ONLY) mkdir checkers.app/Contents/MacOS
  	$(OSX_ONLY) $(INSTALL_BIN) checkers$(EXEEXT) checkers.app/Contents/MacOS
- 
- clock$(EXEEXT): clock.o
+@@ -324,7 +324,7 @@ clock$(EXEEXT): clock.o
  
  colbrowser$(EXEEXT): colbrowser.o
  	echo Linking $@...
@@ -25,7 +30,7 @@ $NetBSD: patch-test_Makefile,v 1.4 2018/07/13 04:24:39 dbj Exp $
  	$(OSX_ONLY) ../fltk-config --post $@
  	$(OSX_ONLY) mkdir -p colbrowser.app/Contents/Resources
  	$(OSX_ONLY) cp -f rgb.txt colbrowser.app/Contents/Resources/
-@@ -333,21 +333,21 @@ curve$(EXEEXT): curve.o
+@@ -337,21 +337,21 @@ curve$(EXEEXT): curve.o
  
  demo$(EXEEXT): demo.o
  	echo Linking $@...
@@ -50,7 +55,7 @@ $NetBSD: patch-test_Makefile,v 1.4 2018/07/13 04:24:39 dbj Exp $
  	$(OSX_ONLY) ../fltk-config --post $@
  	$(OSX_ONLY) cp -f ../ide/Xcode4/plists/editor-Info.plist editor.app/Contents/Info.plist
  
-@@ -356,21 +356,21 @@ fast_slow.cxx:	fast_slow.fl ../fluid/flu
+@@ -360,21 +360,21 @@ fast_slow.cxx:	fast_slow.fl ../fluid/flu
  
  file_chooser$(EXEEXT): file_chooser.o $(IMGLIBNAME)
  	echo Linking $@...
@@ -75,7 +80,7 @@ $NetBSD: patch-test_Makefile,v 1.4 2018/07/13 04:24:39 dbj Exp $
  	$(OSX_ONLY) ../fltk-config --post $@
  	$(OSX_ONLY) mkdir -p help.app/Contents/Resources
  	$(OSX_ONLY) cp -f help-test.html help.app/Contents/Resources/
-@@ -390,14 +390,14 @@ input_choice$(EXEEXT): input_choice.o
+@@ -394,14 +394,14 @@ input_choice$(EXEEXT): input_choice.o
  
  keyboard$(EXEEXT): keyboard_ui.o keyboard.o
  	echo Linking $@...
@@ -92,7 +97,7 @@ $NetBSD: patch-test_Makefile,v 1.4 2018/07/13 04:24:39 dbj Exp $
  	$(OSX_ONLY) ../fltk-config --post $@
  
  line_style$(EXEEXT): line_style.o
-@@ -406,7 +406,7 @@ list_visuals$(EXEEXT): list_visuals.o
+@@ -410,7 +410,7 @@ list_visuals$(EXEEXT): list_visuals.o
  
  mandelbrot$(EXEEXT): mandelbrot_ui.o mandelbrot.o
  	echo Linking $@...
@@ -101,7 +106,7 @@ $NetBSD: patch-test_Makefile,v 1.4 2018/07/13 04:24:39 dbj Exp $
  	$(OSX_ONLY) ../fltk-config --post $@
  mandelbrot_ui.o:	mandelbrot_ui.h
  mandelbrot_ui.cxx:	mandelbrot_ui.fl ../fluid/fluid$(EXEEXT)
-@@ -419,7 +419,7 @@ minimum$(EXEEXT): minimum.o
+@@ -423,7 +423,7 @@ minimum$(EXEEXT): minimum.o
  
  native-filechooser$(EXEEXT): native-filechooser.o $(IMGLIBNAME)
  	echo Linking $@...
@@ -110,7 +115,7 @@ $NetBSD: patch-test_Makefile,v 1.4 2018/07/13 04:24:39 dbj Exp $
  	$(OSX_ONLY) ../fltk-config --post $@
  
  navigation$(EXEEXT): navigation.o
-@@ -428,7 +428,7 @@ offscreen$(EXEEXT): offscreen.o
+@@ -432,7 +432,7 @@ offscreen$(EXEEXT): offscreen.o
  
  output$(EXEEXT): output.o $(FLLIBNAME)
  	echo Linking $@...
@@ -119,7 +124,7 @@ $NetBSD: patch-test_Makefile,v 1.4 2018/07/13 04:24:39 dbj Exp $
  	$(OSX_ONLY) ../fltk-config --post $@
  
  overlay$(EXEEXT): overlay.o
-@@ -439,7 +439,7 @@ pixmap$(EXEEXT): pixmap.o
+@@ -443,7 +443,7 @@ pixmap$(EXEEXT): pixmap.o
  
  pixmap_browser$(EXEEXT): pixmap_browser.o $(IMGLIBNAME)
  	echo Linking $@...
@@ -128,14 +133,16 @@ $NetBSD: patch-test_Makefile,v 1.4 2018/07/13 04:24:39 dbj Exp $
  	$(OSX_ONLY) ../fltk-config --post $@
  
  preferences$(EXEEXT):	preferences.o
-@@ -463,13 +463,13 @@ subwindow$(EXEEXT): subwindow.o
+@@ -467,7 +467,7 @@ subwindow$(EXEEXT): subwindow.o
  
  sudoku: sudoku.o
  	echo Linking $@...
 -	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) sudoku.o -o $@ $(AUDIOLIBS) $(LINKFLTKIMG) $(LDLIBS)
 +	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) sudoku.o -o $@ $(AUDIOLIBS) $(LINKFLTKIMG) $(LDLIBS)
+ 	$(OSX_ONLY) $(RM) -r -f sudoku.app/Contents/MacOS
+ 	$(OSX_ONLY) mkdir sudoku.app/Contents/MacOS
  	$(OSX_ONLY) $(INSTALL_BIN) sudoku$(EXEEXT) sudoku.app/Contents/MacOS
- 
+@@ -475,7 +475,7 @@ sudoku: sudoku.o
  sudoku.exe: sudoku.o sudoku.rc
  	echo Linking $@...
  	$(RC) sudoku.rc sudokures.o
@@ -144,7 +151,7 @@ $NetBSD: patch-test_Makefile,v 1.4 2018/07/13 04:24:39 dbj Exp $
  
  symbols$(EXEEXT): symbols.o
  
-@@ -501,7 +501,7 @@ $(GLALL): $(LIBNAME) $(GLLIBNAME)
+@@ -507,7 +507,7 @@ $(GLALL): $(LIBNAME) $(GLLIBNAME)
  # OpenGL demos...
  CubeView$(EXEEXT): CubeMain.o CubeView.o CubeViewUI.o
  	echo Linking $@...
@@ -153,7 +160,7 @@ $NetBSD: patch-test_Makefile,v 1.4 2018/07/13 04:24:39 dbj Exp $
  		CubeMain.o CubeView.o CubeViewUI.o \
  		$(LINKFLTKGL) $(LINKFLTK) $(GLDLIBS)
  	$(OSX_ONLY) ../fltk-config --post $@
-@@ -512,37 +512,37 @@ CubeViewUI.cxx:	CubeViewUI.fl ../fluid/f
+@@ -518,37 +518,37 @@ CubeViewUI.cxx:	CubeViewUI.fl ../fluid/f
  
  cube$(EXEEXT): cube.o
  	echo Linking $@...
