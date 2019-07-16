@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2930 2019/07/16 14:47:26 jperkin Exp $
+$NetBSD: CHANGES-2019,v 1.2931 2019/07/16 15:19:42 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4845,3 +4845,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/stunnel to 5.55 [ryoon 2019-07-16]
 	Updated graphics/libwebp to 1.0.3 [ryoon 2019-07-16]
 	Updated net/fetch to 1.8nb4 [jperkin 2019-07-16]
+	Updated mail/postfix to 3.3.3nb1 [triaxx 2019-07-16]
