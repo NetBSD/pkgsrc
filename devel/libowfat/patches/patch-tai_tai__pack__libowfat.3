@@ -1,0 +1,18 @@
+$NetBSD: patch-tai_tai__pack__libowfat.3,v 1.1 2019/07/16 21:39:11 schmonz Exp $
+
+Avoid conflict with libtai's manpages.
+
+--- tai/tai_pack_libowfat.3.orig	2017-05-13 22:51:52.000000000 +0000
++++ tai/tai_pack_libowfat.3
+@@ -1,4 +1,4 @@
+-.TH tai_pack 3
++.TH tai_pack_libowfat 3
+ .SH NAME
+ tai_pack \- convert to external TAI64 format
+ .SH SYNTAX
+@@ -11,4 +11,4 @@ TAI64 format in \fIbuf\fR.
+ 
+ See http://cr.yp.to/libtai/tai64.html
+ .SH "SEE ALSO"
+-taia_pack(3), tai_unpack(3)
++taia_pack_libowfat(3), tai_unpack(3)
