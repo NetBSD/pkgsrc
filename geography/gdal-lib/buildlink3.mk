@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.52 2019/07/01 04:07:48 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.53 2019/07/16 21:24:47 nia Exp $
 
 BUILDLINK_TREE+=	gdal-lib
 
@@ -25,7 +25,6 @@ pkgbase := gdal-lib
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../geography/geos/buildlink3.mk"
 .include "../../geography/proj/buildlink3.mk"
-.include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
