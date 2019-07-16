@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2019/04/24 19:34:44 adam Exp $
+# $NetBSD: Makefile.common,v 1.2 2019/07/16 15:36:02 nia Exp $
 # used by graphics/opencv/Makefile
 # used by graphics/opencv-contrib-face/Makefile
 
@@ -31,9 +31,6 @@ CMAKE_ARGS.SunOS+=	-DENABLE_PRECOMPILED_HEADERS=OFF
 CMAKE_ARGS.SunOS+=	-DOPENCV_PYTHON_SKIP_LINKER_EXCLUDE_LIBS=ON
 
 CONFIGURE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
-
-# jasper uses SIZE_MAX and friends in its headers.
-CXXFLAGS+=		-D__STDC_LIMIT_MACROS
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/build
