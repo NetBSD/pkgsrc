@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2934 2019/07/16 21:40:15 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.2935 2019/07/16 21:40:28 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4848,3 +4848,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/postfix to 3.3.3nb1 [triaxx 2019-07-16]
 	Updated www/wordpress to 5.2.2 [schmonz 2019-07-16]
 	Updated devel/libtai to 0.60nb8 [schmonz 2019-07-16]
+	Updated devel/libowfat to 0.32nb1 [schmonz 2019-07-16]
