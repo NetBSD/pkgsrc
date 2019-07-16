@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.29 2017/11/23 19:16:28 snj Exp $
+$NetBSD: distinfo,v 1.30 2019/07/16 10:06:07 nia Exp $
 
-SHA1 (jasper-2.0.14.tar.gz) = 32c959d883fdb661c32afd76c94b206638972cb1
-RMD160 (jasper-2.0.14.tar.gz) = 0b2b51b22b7421773255955de6bad27f9b434712
-SHA512 (jasper-2.0.14.tar.gz) = 9e5cffd2e899e37ba08890e2377ddfc3c2fb13d9fe00dea6b4612e4d241a6f4327de6835809b415c41ae4bf44208cf7871c1982ff5fc04ae6bc09fd376b0afc8
-Size (jasper-2.0.14.tar.gz) = 1677951 bytes
+SHA1 (jasper-2.0.16.tar.gz) = f7c2019cfcfd790b0aae04b5e92c5cb4b61f1d3a
+RMD160 (jasper-2.0.16.tar.gz) = b45b6c5539f22a96a962047129ca935835459539
+SHA512 (jasper-2.0.16.tar.gz) = b3bca227f833567c9061c4a29c0599784ed6a131b5cceddfd1696542d19add821eda445ce6d83782b454b266723b24d0f028cbc644a25c0e3a75304e615b34ee
+Size (jasper-2.0.16.tar.gz) = 1311944 bytes
 SHA1 (patch-CMakeLists.txt) = 047ea526e4f4d81036043e0d831ef76be1e3b456
 SHA1 (patch-doc_CMakeLists.txt) = 08156df737458cec48ea1965586b9acdbf30753b
 SHA1 (patch-src_libjasper_base_jas__seq.c) = a0208cd0271388ae0fdc2e359da3223a35a7ae14
