@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.38 2015/04/25 14:20:33 tnn Exp $
+# $NetBSD: Makefile,v 1.39 2019/07/16 22:45:42 nia Exp $
 #
 
 DISTNAME=	DevIL-${DEVIL_VERSION}
 PKGNAME=	${DISTNAME:S/D/d/}
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openil/}
 
@@ -12,6 +12,7 @@ DEVIL_VERSION=	1.7.8
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://openil.sourceforge.net/
 COMMENT=	Developer's Image Library
+LICENSE=	gnu-lgpl-v2.1
 
 WRKSRC=			${WRKDIR}/devil-${DEVIL_VERSION}
 GNU_CONFIGURE=		yes
@@ -24,9 +25,9 @@ INFO_FILES=		yes
 CONFIGURE_ARGS+=	--enable-ILU
 CONFIGURE_ARGS+=	--enable-ILUT
 
+.include "options.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../graphics/jasper/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/mng/buildlink3.mk"
