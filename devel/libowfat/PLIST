@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/10/07 12:13:46 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/07/16 21:39:11 schmonz Exp $
 include/libowfat/array.h
 include/libowfat/buffer.h
 include/libowfat/byte.h
@@ -379,8 +379,8 @@ man/man3/sub_of.3
 man/man3/tai_add.3
 man/man3/tai_approx.3
 man/man3/tai_less.3
-man/man3/tai_now.3
-man/man3/tai_pack.3
+man/man3/tai_now_libowfat.3
+man/man3/tai_pack_libowfat.3
 man/man3/tai_sub.3
 man/man3/tai_unpack.3
 man/man3/taia_add.3
@@ -388,8 +388,8 @@ man/man3/taia_addsec.3
 man/man3/taia_approx.3
 man/man3/taia_frac.3
 man/man3/taia_less.3
-man/man3/taia_now.3
-man/man3/taia_pack.3
+man/man3/taia_now_libowfat.3
+man/man3/taia_pack_libowfat.3
 man/man3/taia_sub.3
 man/man3/taia_tai.3
 man/man3/taia_uint.3

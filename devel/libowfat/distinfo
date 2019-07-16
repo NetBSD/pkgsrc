@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2018/10/07 12:13:46 schmonz Exp $
+$NetBSD: distinfo,v 1.7 2019/07/16 21:39:11 schmonz Exp $
 
 SHA1 (libowfat-0.32.tar.xz) = 7b66caa576e9ce2d789e230a5a42c63e4f103471
 RMD160 (libowfat-0.32.tar.xz) = 2338a3f31d55c3f6a97c3073664e6aeec198f28c
@@ -6,3 +6,7 @@ SHA512 (libowfat-0.32.tar.xz) = c762a1aa27dfb30e2f6da67d1ad16da03d301b2e3cce33c8
 Size (libowfat-0.32.tar.xz) = 195820 bytes
 SHA1 (patch-aa) = 5f7cbfd30e151957b18439bb3bacabe17c292d47
 SHA1 (patch-io_iom__wait.c) = a458e96b0b2cf27c92e8aafc8ea6d5199b389baf
+SHA1 (patch-tai_tai__now__libowfat.3) = cd51600b7c0da29ccca3c649039f8fe07f7276c9
+SHA1 (patch-tai_tai__pack__libowfat.3) = 8dd463a76d289773827793538373a7a029617a0a
+SHA1 (patch-taia_taia__now__libowfat.3) = 0d9aa54facfc7b26d952a952a431c65b62db95ed
+SHA1 (patch-taia_taia__pack__libowfat.3) = 8298df8d3101a2567ba4933f09b789efe0c2bb7b

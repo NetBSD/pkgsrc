@@ -1,0 +1,18 @@
+$NetBSD: patch-taia_taia__now__libowfat.3,v 1.1 2019/07/16 21:39:11 schmonz Exp $
+
+Avoid conflict with libtai's manpages.
+
+--- taia/taia_now_libowfat.3.orig	2017-05-13 22:51:53.000000000 +0000
++++ taia/taia_now_libowfat.3
+@@ -1,4 +1,4 @@
+-.TH taia_now 3
++.TH taia_now_libowfat 3
+ .SH NAME
+ taia_now \- get current time
+ .SH SYNTAX
+@@ -19,4 +19,4 @@ Beware that many clocks are not set accu
+ scientific clocks are nowhere near 1-attosecond accuracy; however, an
+ inaccurate clock may still produce reasonably accurate time differences.
+ .SH "SEE ALSO"
+-tai_now(3)
++tai_now_libowfat(3)
