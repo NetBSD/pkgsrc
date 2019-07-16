@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2925 2019/07/16 10:06:21 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2926 2019/07/16 11:01:01 micha Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4840,3 +4840,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/gexiv2 to 0.12.0 [nia 2019-07-15]
 	Removed graphics/exiv2-organize [nia 2019-07-15]
 	Updated graphics/jasper to 2.0.16 [nia 2019-07-16]
+	Updated audio/xmix to 2.1nb4 [micha 2019-07-16]
