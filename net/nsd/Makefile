@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2019/07/05 07:53:10 bsiegert Exp $
+# $NetBSD: Makefile,v 1.104 2019/07/16 11:38:27 ryoon Exp $
 
 DISTNAME=	nsd-4.2.0
 CATEGORIES=	net
@@ -49,11 +49,6 @@ CONFIGURE_ARGS+=--with-dbfile=${VARBASE}/nsd/nsd.db
 CONFIGURE_ARGS+=--with-xfrdfile=${VARBASE}/nsd/nsd-xfrd.state
 CONFIGURE_ARGS+=--with-libevent=${BUILDLINK_PREFIX.libevent}
 CONFIGURE_ARGS+=--with-ssl=${BUILDLINK_PREFIX.openssl}
-
-.if ${OPSYS} == "NetBSD"
-# For reallocarray(3)
-CPPFLAGS+=	-D_OPENBSD_SOURCE
-.endif
 
 RCD_SCRIPTS=	nlnsd
 
