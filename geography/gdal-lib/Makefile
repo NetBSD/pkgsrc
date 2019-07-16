@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.114 2019/07/01 04:07:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.115 2019/07/16 21:24:47 nia Exp $
 
-PKGREVISION=	3
+PKGREVISION=	4
 .include "../../geography/gdal-lib/Makefile.common"
 PKGNAME=	${DISTNAME:S/gdal/gdal-lib/}
 
@@ -35,7 +35,6 @@ CPPFLAGS+=	-D__STDC_LIMIT_MACROS
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../geography/geos/buildlink3.mk"
 .include "../../geography/proj/buildlink3.mk"
-.include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
