@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.83 2019/04/25 07:32:59 maya Exp $
+# $NetBSD: Makefile,v 1.84 2019/07/16 15:36:02 nia Exp $
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "Makefile.common"
 
 DISTNAME=	opencv-${OPENCV_VERSION}
@@ -32,7 +32,6 @@ post-install:
 
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
