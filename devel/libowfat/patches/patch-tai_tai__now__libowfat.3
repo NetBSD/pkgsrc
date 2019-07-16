@@ -1,0 +1,18 @@
+$NetBSD: patch-tai_tai__now__libowfat.3,v 1.1 2019/07/16 21:39:11 schmonz Exp $
+
+Avoid conflict with libtai's manpages.
+
+--- tai/tai_now_libowfat.3.orig	2017-05-13 22:51:52.000000000 +0000
++++ tai/tai_now_libowfat.3
+@@ -1,4 +1,4 @@
+-.TH tai_now 3
++.TH tai_now_libowfat 3
+ .SH NAME
+ tai_now \- get current time
+ .SH SYNTAX
+@@ -15,4 +15,4 @@ time function represents the number of T
+ 00:00:10 TAI. This matches the convention used by the Olson tz library
+ in ``right'' mode.
+ .SH "SEE ALSO"
+-taia_now(3)
++taia_now_libowfat(3)
