@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 01:12:55 agc Exp $
+$NetBSD: distinfo,v 1.10 2019/07/16 10:46:45 micha Exp $
 
-SHA1 (xmix-2.1.tar.gz) = 390096a541a41ffb47c9b57ee6029211d31393d3
-RMD160 (xmix-2.1.tar.gz) = 0f1bc15b89bfc657ade9b12cb9decb248d780925
-SHA512 (xmix-2.1.tar.gz) = 1acdb835ed5791b7642910909ea932c9750935d795e14dcc88da011ece8e303e20610945f8f7382b4e141311de42c16df2626d8b313bf187ee08f7bfcfa1b988
-Size (xmix-2.1.tar.gz) = 34835 bytes
 SHA1 (xmix-2.1.mixers.patch) = 86b423774a6afcd56a8f8931108823d702db1ea5
 RMD160 (xmix-2.1.mixers.patch) = bbbc4b44ed603e54044fc1c71fa20f4373cae81a
 SHA512 (xmix-2.1.mixers.patch) = c5f72de9d0f28208269fcf6a2e2db6ed6b5c40c94c82effeef1b9c2d5ffc086c92c0a55f28d674ae9be9d592f7969046701f664325338d9f45506326d0aa9a7a
 Size (xmix-2.1.mixers.patch) = 1684 bytes
-SHA1 (patch-aa) = a60baf409d6f9182f185fbd41676d85c31971363
-SHA1 (patch-ab) = ad1c8f86668fc0a56e1df875f42896097718e7c9
+SHA1 (xmix-2.1.tar.gz) = 390096a541a41ffb47c9b57ee6029211d31393d3
+RMD160 (xmix-2.1.tar.gz) = 0f1bc15b89bfc657ade9b12cb9decb248d780925
+SHA512 (xmix-2.1.tar.gz) = 1acdb835ed5791b7642910909ea932c9750935d795e14dcc88da011ece8e303e20610945f8f7382b4e141311de42c16df2626d8b313bf187ee08f7bfcfa1b988
+Size (xmix-2.1.tar.gz) = 34835 bytes
+SHA1 (patch-Imakefile) = ddaa95bd48632bff826d1da484d0360a6b3e720e
+SHA1 (patch-xmix.c) = 449734b8de82dda37c61d8703ecafcf1d8921607
