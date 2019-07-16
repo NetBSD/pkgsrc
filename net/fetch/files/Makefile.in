@@ -5,5 +5,6 @@
 PROG=		fetch
 LDADD+=		-lfetch @LIBS@
 CPPFLAGS+=	-DHAVE_CONFIG_H
+CPPFLAGS+=	-D_LARGEFILE_SOURCE -D_LARGE_FILES -D_FILE_OFFSET_BITS=64
 
 .include <bsd.prog.mk>
