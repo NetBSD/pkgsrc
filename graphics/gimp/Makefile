@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.309 2019/06/25 18:17:22 rjs Exp $
+# $NetBSD: Makefile,v 1.310 2019/07/16 09:54:41 nia Exp $
 
 DISTNAME=	gimp-2.10.12
 CATEGORIES=	graphics
@@ -67,12 +67,12 @@ BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.2
 .include "../../graphics/gegl/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/gexiv2/buildlink3.mk"
-.include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/libmypaint/buildlink3.mk"
 .include "../../graphics/mypaint-brushes/buildlink3.mk"
+.include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
