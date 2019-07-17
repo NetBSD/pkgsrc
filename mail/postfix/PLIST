@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2016/09/18 17:10:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.31 2019/07/17 13:33:00 triaxx Exp $
 bin/mailq
 bin/newaliases
 lib/postfix/libpostfix-dns.so
@@ -29,6 +29,7 @@ libexec/postfix/postfix-files
 libexec/postfix/postfix-script
 libexec/postfix/postfix-tls-script
 libexec/postfix/postfix-wrapper
+libexec/postfix/postlogd
 libexec/postfix/postmulti-script
 libexec/postfix/postscreen
 libexec/postfix/proxymap
@@ -100,6 +101,7 @@ man/man8/master.8
 man/man8/oqmgr.8
 man/man8/pickup.8
 man/man8/pipe.8
+man/man8/postlogd.8
 man/man8/postscreen.8
 man/man8/proxymap.8
 man/man8/qmgr.8
@@ -201,3 +203,20 @@ share/examples/postfix/relocated
 ${PLIST.csasl}share/examples/postfix/smtpd.conf
 share/examples/postfix/transport
 share/examples/postfix/virtual
+@pkgdir var/spool/postfix/trace
+@pkgdir var/spool/postfix/saved
+@pkgdir var/spool/postfix/public
+@pkgdir var/spool/postfix/private
+@pkgdir var/spool/postfix/pid
+@pkgdir var/spool/postfix/maildrop
+@pkgdir var/spool/postfix/incoming
+@pkgdir var/spool/postfix/hold
+@pkgdir var/spool/postfix/flush
+@pkgdir var/spool/postfix/deferred
+@pkgdir var/spool/postfix/defer
+@pkgdir var/spool/postfix/corrupt
+@pkgdir var/spool/postfix/bounce
+@pkgdir var/spool/postfix/active
+@pkgdir var/db/postfix
+@pkgdir libexec/postfix/postfix-files.d
+@pkgdir libexec/postfix/dynamicmaps.cf.d
