@@ -1,15 +1,15 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2017/08/15 10:57:35 triaxx Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2019/07/17 22:08:58 nia Exp $
 
-Use pkgsrc lua interpreter instead of builtin one.
+Install config file to the examples directory.
 
---- CMakeLists.txt.orig	2017-07-15 13:53:13.000000000 +0000
+--- CMakeLists.txt.orig	2019-01-28 06:53:24.000000000 +0000
 +++ CMakeLists.txt
-@@ -406,7 +406,7 @@ add_custom_target(check-integration
-     VERBATIM)
- add_dependencies(check-integration test-gravity)
- add_custom_target(check-requires
--    lua "${CMAKE_SOURCE_DIR}/build-utils/check_for_invalid_requires.lua"
-+    @LUA_INTERPRETER@ "${CMAKE_SOURCE_DIR}/build-utils/check_for_invalid_requires.lua"
-     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-     COMMENT "Checking use of require()"
-     USES_TERMINAL
+@@ -371,7 +371,7 @@ install(TARGETS ${PROJECT_AWE_NAME} RUNT
+ install(FILES "utils/awesome-client" DESTINATION bin PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE)
+ install(DIRECTORY ${BUILD_DIR}/lib DESTINATION ${AWESOME_DATA_PATH}
+     PATTERN "*.in" EXCLUDE)
+-install(FILES ${BUILD_DIR}/awesomerc.lua DESTINATION ${AWESOME_SYSCONFDIR}
++install(FILES ${BUILD_DIR}/awesomerc.lua DESTINATION ${CMAKE_INSTALL_PREFIX}/share/examples/awesome
+         RENAME rc.lua)
+ if(GENERATE_MANPAGES)
+     if(COMPRESS_MANPAGES)
