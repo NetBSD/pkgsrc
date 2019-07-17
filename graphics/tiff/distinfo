@@ -1,7 +1,11 @@
-$NetBSD: distinfo,v 1.93 2018/11/10 21:14:53 maya Exp $
+$NetBSD: distinfo,v 1.94 2019/07/17 09:25:45 nia Exp $
 
 SHA1 (tiff-4.0.10.tar.gz) = c783b80f05cdacf282aa022dc5f5b0ede5e021ae
 RMD160 (tiff-4.0.10.tar.gz) = b25cc4002f2493e71763d0a465a50e9d6ee2aff0
 SHA512 (tiff-4.0.10.tar.gz) = d213e5db09fd56b8977b187c5a756f60d6e3e998be172550c2892dbdb4b2a8e8c750202bc863fe27d0d1c577ab9de1710d15e9f6ed665aadbfd857525a81eea8
 Size (tiff-4.0.10.tar.gz) = 2402867 bytes
+SHA1 (patch-CVE-2018-12900) = 31d6dcc66a293aa722d7d27b7edd48db50cf9482
+SHA1 (patch-CVE-2018-17000) = c7e4047c007a7519cfbd09125a0b3d5de48af069
+SHA1 (patch-CVE-2018-19210) = d915af6121a13aca5b30dd8506cdae49198e67b6
+SHA1 (patch-CVE-2019-6128) = cb18a950e95ceec348294178348847eeb7340bab
 SHA1 (patch-configure) = a0032133f06b6ac92bbf52349fabe83f74ea14a6
