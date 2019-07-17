@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/07/17 09:18:42 nia Exp $
+# $NetBSD: Makefile,v 1.34 2019/07/17 09:22:11 nia Exp $
 
 DISTNAME=	hexchat-2.14.2
 CATEGORIES=	chat
@@ -41,22 +41,8 @@ PLIST_SUBST+=		SOEXT=${SOEXT}
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
-# Let's see if this helps with the non-deterministic builds...
+# It seems generated files are sometimes not generated in time.
 MAKE_JOBS_SAFE=		no
-
-# I have no idea why it sometimes isn't doing this, causing the build
-# to fail without the generated files.
-post-configure:
-	${PYTHONBIN} ${WRKSRC}/src/common/make-te.py \
-		${WRKSRC}/src/common/textevents.in \
-		${WRKSRC}/src/common/textevents.h \
-		${WRKSRC}/src/common/textenums.h
-	cd ${WRKSRC} && ${PREFIX}/bin/glib-genmarshal \
-		--prefix _hexchat_marshal --internal \
-		--output src/common/marshal.c \
-		--body src/common/marshalers.list \
-		--include-header marshal.h
-
 
 .include "../../devel/py-meson/build.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
