@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2019/05/08 17:19:41 nia Exp $
+$NetBSD: distinfo,v 1.9 2019/07/17 10:53:22 nia Exp $
 
 SHA1 (hexchat-2.14.2.tar.xz) = 650f6247cc68c022ba4fee09ebde578dc2ec1c33
 RMD160 (hexchat-2.14.2.tar.xz) = a41067f7dd9b0eceaf2252aa7a8b8eca7dd228fd
@@ -9,3 +9,4 @@ SHA1 (patch-plugins_sysinfo_meson.build) = 4f5309ddded3c23014711e1b3305ff6a1c5f6
 SHA1 (patch-plugins_sysinfo_unix_parse.c) = 92b882b7573cfcfc280351353a7bdcb0a7940c06
 SHA1 (patch-plugins_sysinfo_unix_pci.c) = db2d20261419bed6d6c4b716b4416d73b3386053
 SHA1 (patch-plugins_sysinfo_unix_pci.h) = 018b74796143b26d6a1f9ad821f3889b74b09cc8
+SHA1 (patch-src_common_meson.build) = 56f1376208c6ab198162d62ae990c8a6ed6c2b58
