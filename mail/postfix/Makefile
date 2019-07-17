@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.311 2019/07/16 15:18:28 triaxx Exp $
+# $NetBSD: Makefile,v 1.312 2019/07/17 13:33:00 triaxx Exp $
 
 .include "../../mail/postfix/Makefile.common"
 
-PKGREVISION=	1
-COMMENT=	Postfix SMTP server and tools
+COMMENT=	Fast, easy to administer, and secure mail transfer agent
 
 CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 sendmail-[0-9]*
 CONFLICTS+=	esmtp>=1.2 nullmailer-[0-9]*
