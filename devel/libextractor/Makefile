@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2019/07/17 00:51:02 nia Exp $
+# $NetBSD: Makefile,v 1.79 2019/07/17 01:03:38 nia Exp $
 
 DISTNAME=	libextractor-1.9
 PKGREVISION=	2
@@ -41,6 +41,7 @@ DEPENDS+= ImageMagick-[0-9]*:../../graphics/ImageMagick
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../multimedia/libmpeg2/buildlink3.mk"
 .include "../../multimedia/mp4v2/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/file/buildlink3.mk"
 .include "../../www/tidy/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
