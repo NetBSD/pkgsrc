@@ -1,12 +1,12 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.6 2019/01/24 13:42:55 tnn Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.7 2019/07/17 09:45:13 nia Exp $
 
 Always install the libtool .la file.
 
---- src/CMakeLists.txt.orig	2018-03-05 04:05:42.000000000 +0000
+--- src/CMakeLists.txt.orig	2018-12-20 06:28:50.000000000 +0000
 +++ src/CMakeLists.txt
-@@ -159,6 +159,12 @@ if  (${CMAKE_SYSTEM_NAME} STREQUAL "Wind
+@@ -151,6 +151,12 @@ if  (${CMAKE_SYSTEM_NAME} STREQUAL "Wind
          COMPILE_DEFINITIONS "_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;UNICODE;GRAPHITE2_EXPORTING")
- endif (${CMAKE_SYSTEM_NAME} STREQUAL "Windows")
+ endif()
  
 +if  (NOT ${CMAKE_SYSTEM_NAME} STREQUAL "Windows" AND NOT ${CMAKE_SYSTEM_NAME} STREQUAL "Linux" AND NOT ${CMAKE_SYSTEM_NAME} STREQUAL "Darwin")
 +    target_link_libraries(graphite2 c)
