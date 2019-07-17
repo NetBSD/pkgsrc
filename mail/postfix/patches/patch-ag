@@ -1,15 +1,16 @@
-$NetBSD: patch-ag,v 1.39 2017/06/23 19:18:07 maya Exp $
+$NetBSD: patch-ag,v 1.40 2019/07/17 13:33:00 triaxx Exp $
 
 * Add support for NetBSD 8.
 * Only define HAS_DB if it hasn't been defined.
 * Add support for FreeBSD 11 and 12.
 
---- src/util/sys_defs.h.orig	2017-02-02 01:31:15.000000000 +0000
+--- src/util/sys_defs.h.orig	2019-03-10 16:58:04.000000000 +0000
 +++ src/util/sys_defs.h
-@@ -30,13 +30,11 @@
+@@ -30,14 +30,11 @@
  #if defined(FREEBSD2) || defined(FREEBSD3) || defined(FREEBSD4) \
      || defined(FREEBSD5) || defined(FREEBSD6) || defined(FREEBSD7) \
      || defined(FREEBSD8) || defined(FREEBSD9) || defined(FREEBSD10) \
+-    || defined(FREEBSD11) \
 +    || defined(FREEBSD11) || defined(FREEBSD12) \
      || defined(BSDI2) || defined(BSDI3) || defined(BSDI4) \
      || defined(OPENBSD2) || defined(OPENBSD3) || defined(OPENBSD4) \
@@ -22,7 +23,7 @@ $NetBSD: patch-ag,v 1.39 2017/06/23 19:18:07 maya Exp $
  #define SUPPORTED
  #include <sys/param.h>
  #define UINT32_TYPE	unsigned int
-@@ -48,7 +46,9 @@
+@@ -49,7 +46,9 @@
  #define DEF_MAILBOX_LOCK "flock, dotlock"
  #define HAS_SUN_LEN
  #define HAS_FSYNC
@@ -32,7 +33,7 @@ $NetBSD: patch-ag,v 1.39 2017/06/23 19:18:07 maya Exp $
  #define HAS_SA_LEN
  #define NATIVE_DB_TYPE	"hash"
  #if (defined(__NetBSD_Version__) && __NetBSD_Version__ >= 104250000)
-@@ -1250,6 +1250,8 @@ extern int h_errno;
+@@ -1252,6 +1251,8 @@ extern int h_errno;
  #define DEF_SMTP_CACHE_DEMAND	0
  #endif
  

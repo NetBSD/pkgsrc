@@ -1,27 +1,18 @@
-$NetBSD: patch-ai,v 1.40 2017/06/23 19:18:07 maya Exp $
+$NetBSD: patch-ai,v 1.41 2019/07/17 13:33:00 triaxx Exp $
 
 1) Add shlib definitions for NetBSD 5; the build system must be
 hard-coded per OS per version.  Not yet reported upstream.
 
 2) Make this pkgsrc friendly.
 
-3) Add support for FreeBSD 11 & 12.
+3) Add support for FreeBSD 12.
 
---- makedefs.orig	2017-02-12 15:32:10.000000000 +0000
+--- makedefs.orig	2019-03-10 23:42:59.000000000 +0000
 +++ makedefs
-@@ -284,6 +284,24 @@ case "$SYSTEM.$RELEASE" in
+@@ -298,6 +298,15 @@ case "$SYSTEM.$RELEASE" in
  		: ${SHLIB_ENV="LD_LIBRARY_PATH=`pwd`/lib"}
  		: ${PLUGIN_LD="${CC} -shared"}
  		;;
-+  FreeBSD.11*)	SYSTYPE=FREEBSD11
-+		: ${CC=cc}
-+		: ${SHLIB_SUFFIX=.so}
-+		: ${SHLIB_CFLAGS=-fPIC}
-+		: ${SHLIB_LD="${CC} -shared"' -Wl,-soname,${LIB}'}
-+		: ${SHLIB_RPATH='-Wl,-rpath,${SHLIB_DIR}'}
-+		: ${SHLIB_ENV="LD_LIBRARY_PATH=`pwd`/lib"}
-+		: ${PLUGIN_LD="${CC} -shared"}
-+		;;
 +  FreeBSD.12*)	SYSTYPE=FREEBSD12
 +		: ${CC=cc}
 +		: ${SHLIB_SUFFIX=.so}
@@ -34,7 +25,7 @@ hard-coded per OS per version.  Not yet reported upstream.
   DragonFly.*)	SYSTYPE=DRAGONFLY
  		;;
    OpenBSD.2*)	SYSTYPE=OPENBSD2
-@@ -312,25 +330,7 @@ case "$SYSTEM.$RELEASE" in
+@@ -326,25 +335,7 @@ case "$SYSTEM.$RELEASE" in
  		;;
    ekkoBSD.1*)	SYSTYPE=EKKOBSD1
  		;;
@@ -61,7 +52,7 @@ hard-coded per OS per version.  Not yet reported upstream.
  		: ${SHLIB_SUFFIX=.so}
  		: ${SHLIB_CFLAGS=-fPIC}
  		: ${SHLIB_LD="${CC-gcc} -shared"' -Wl,-soname,${LIB}'}
-@@ -409,13 +409,6 @@ case "$SYSTEM.$RELEASE" in
+@@ -423,13 +414,6 @@ case "$SYSTEM.$RELEASE" in
  		esac
  		;;
     ULTRIX.4*)	SYSTYPE=ULTRIX4
@@ -75,7 +66,7 @@ hard-coded per OS per version.  Not yet reported upstream.
  		for l in syslog resolv; do
  		    if [ -f /usr/local/lib/lib$l.a ]; then
  			SYSLIBS="$SYSLIBS -l$l"
-@@ -457,33 +450,8 @@ case "$SYSTEM.$RELEASE" in
+@@ -471,33 +455,8 @@ case "$SYSTEM.$RELEASE" in
  		esac;;
  		# Tested with RedHat 3.03 on 20020729.
      Linux.1*)	SYSTYPE=LINUX1
@@ -109,33 +100,7 @@ hard-coded per OS per version.  Not yet reported upstream.
  		for name in nsl resolv $GDBM_LIBS
  		do
  		    for lib in /usr/lib64 /lib64 /usr/lib /lib
-@@ -544,25 +512,6 @@ EOF
- 		: ${PLUGIN_LD="${CC-gcc} -shared"}
- 		;;
-   Linux.[34].*)	SYSTYPE=LINUX$RELEASE_MAJOR
--		case "$CCARGS" in
--		 *-DNO_DB*) ;;
--		 *-DHAS_DB*) ;;
--		 *) if [ -f /usr/include/db.h ]
--		    then
--			: we are all set
--		    elif [ -f /usr/include/db/db.h ]
--		    then
--			CCARGS="$CCARGS -I/usr/include/db"
--		    else
--			# On a properly installed system, Postfix builds
--			# by including <db.h> and by linking with -ldb
--			echo "No <db.h> include file found." 1>&2
--			echo "Install the appropriate db*-devel package first." 1>&2
--			exit 1
--		    fi
--		    SYSLIBS="-ldb"
--		    ;;
--		esac
- 		for name in nsl resolv
- 		do
- 		    for lib in /usr/lib64 /lib64 /usr/lib /usr/lib/* /lib /lib/*
-@@ -583,24 +532,6 @@ EOF
+@@ -597,24 +556,6 @@ EOF
  		;;
       GNU.0*|GNU/kFreeBSD.[567]*)
  		SYSTYPE=GNU0
@@ -160,7 +125,7 @@ hard-coded per OS per version.  Not yet reported upstream.
  		for name in nsl resolv
  		do
  		    for lib in /usr/lib64 /lib64 /usr/lib /lib
-@@ -631,26 +562,14 @@ EOF
+@@ -645,26 +586,14 @@ EOF
  HP-UX.A.09.*)	SYSTYPE=HPUX9
  		SYSLIBS=-ldbm
  		CCARGS="$CCARGS -DMISSING_USLEEP -DNO_SNPRINTF"
@@ -187,7 +152,7 @@ hard-coded per OS per version.  Not yet reported upstream.
  		;;
  ReliantUNIX-?.5.43) SYSTYPE=ReliantUnix543
  		RANLIB=echo
-@@ -692,12 +611,12 @@ ReliantUNIX-?.5.43) SYSTYPE=ReliantUnix5
+@@ -706,12 +635,12 @@ ReliantUNIX-?.5.43) SYSTYPE=ReliantUnix5
  		esac
  		: ${SHLIB_CFLAGS=-fPIC}
  		: ${SHLIB_SUFFIX=.dylib}
@@ -202,14 +167,3 @@ hard-coded per OS per version.  Not yet reported upstream.
  		;;
      dcosx.1*)	SYSTYPE=DCOSX1
  		RANLIB=echo
-@@ -778,8 +697,8 @@ esac
- #
- case "$CCARGS" in
- *-DNO_EAI*) CCARGS="$CCARGS "'-DDEF_SMTPUTF8_ENABLE=\"no\"';;
--	 *) icu_cppflags=`(icu-config --cppflags) 2>/dev/null` && {
--		icu_ldflags=`(icu-config --ldflags) 2>/dev/null` && {
-+	 *) icu_cppflags=`(pkg-config --cflags icu-i18n) 2>/dev/null` && {
-+		icu_ldflags=`(pkg-config --libs icu-i18n) 2>/dev/null` && {
- 		    trap 'rm -f makedefs.test makedefs.test.[co]' 1 2 3 15
- 		    cat >makedefs.test.c <<'EOF'
- #include <unicode/uidna.h>
