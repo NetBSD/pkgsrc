@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2019/04/09 13:09:03 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.23 2019/07/17 01:05:41 ryoon Exp $
 bin/gegl
 bin/gegl-gcut
 bin/gegl-imgcmp
@@ -91,7 +91,7 @@ lib/gegl-0.4/gegl-core.la
 lib/gegl-0.4/gegl-generated.la
 lib/gegl-0.4/gif-load.la
 lib/gegl-0.4/grey2.json
-lib/gegl-0.4/jp2-load.la
+${PLIST.jasper}lib/gegl-0.4/jp2-load.la
 lib/gegl-0.4/jpg-load.la
 lib/gegl-0.4/jpg-save.la
 lib/gegl-0.4/lcms-from-profile.la
