@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/05/08 17:19:41 nia Exp $
+# $NetBSD: Makefile,v 1.33 2019/07/17 09:18:42 nia Exp $
 
 DISTNAME=	hexchat-2.14.2
 CATEGORIES=	chat
@@ -40,6 +40,9 @@ SOEXT.*=		so
 PLIST_SUBST+=		SOEXT=${SOEXT}
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
+
+# Let's see if this helps with the non-deterministic builds...
+MAKE_JOBS_SAFE=		no
 
 # I have no idea why it sometimes isn't doing this, causing the build
 # to fail without the generated files.
