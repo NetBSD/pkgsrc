@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/06/15 01:29:49 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2019/07/17 21:56:37 ryoon Exp $
 
-SHA1 (nim-0.20.0.tar.xz) = c00605af76241c1da4d5acef5261861689e14592
-RMD160 (nim-0.20.0.tar.xz) = d0a7fcdd3723fec3a33065ba29c8558e2f9f8716
-SHA512 (nim-0.20.0.tar.xz) = e41fc9f9337535d07ebdd14ae8195bf9c666a0a242516f24d50241e69d50e89fcb9ac1a0b1fbeee0bc75b0218aeb18698ff2ac87447005dad52dc18da80bb02d
-Size (nim-0.20.0.tar.xz) = 4997088 bytes
+SHA1 (nim-0.20.2.tar.xz) = 5a503fde01fa877b13dc244e61ea4280dddfb9fe
+RMD160 (nim-0.20.2.tar.xz) = 7e5ec6ae96ddedbb1d4c476c14e09db85020aae4
+SHA512 (nim-0.20.2.tar.xz) = 231d95950ca5a7abe86175f93085ea27fae493e4f8dde3c9e086993431f9517781ceffeb4f9e761eb524523df3703d0a315fe53e32bc6daea6a684bf90589282
+Size (nim-0.20.2.tar.xz) = 5032768 bytes
