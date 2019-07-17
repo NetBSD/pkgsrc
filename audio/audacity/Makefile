@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2019/07/15 18:44:32 nia Exp $
+# $NetBSD: Makefile,v 1.121 2019/07/17 11:58:23 nia Exp $
 
 DISTNAME=		audacity-2.3.2
 CATEGORIES=		audio
@@ -21,9 +21,14 @@ USE_TOOLS+=		automake autoreconf bash
 USE_TOOLS+=		gmake intltool msgfmt msgmerge pkg-config
 USE_TOOLS+=		xgettext zip:run
 USE_LANGUAGES=		c c++
+# configure: error: Audacity requires at least GCC 4.9
+GCC_REQD+=		4.9
+
 WRAPPER_SHELL=		${BASH}
 CONFIG_SHELL=		${BASH}
+
 GNU_CONFIGURE=		yes
+
 CONFIGURE_ARGS+=	--enable-nyquist=yes
 CONFIGURE_ARGS+=	--with-expat=system
 CONFIGURE_ARGS+=	--with-ffmpeg=system
