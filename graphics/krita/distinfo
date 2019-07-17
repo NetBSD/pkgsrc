@@ -1,8 +1,17 @@
-$NetBSD: distinfo,v 1.4 2018/10/05 20:11:53 maya Exp $
+$NetBSD: distinfo,v 1.5 2019/07/17 00:39:57 nia Exp $
 
 SHA1 (krita-4.1.3.tar.gz) = 7be35bdfa1163d5c718622d1dbe121153201a7d4
 RMD160 (krita-4.1.3.tar.gz) = e48ebf62845913ca85c965b0a51d7f82cc91ce72
 SHA512 (krita-4.1.3.tar.gz) = b0d9d8fecdf9f49e6431d0e31fdd6df2f53e654f64e93a05c73afbbdff0625c072a00347e667f1ba87c6d145185fe98d0518df3a4c0c56ccb944216a42d53d5c
 Size (krita-4.1.3.tar.gz) = 243979838 bytes
+SHA1 (patch-CMakeLists.txt) = 92dee70269c2e9d5c22ef73aeacdeb1c50f21836
+SHA1 (patch-cmake_modules_FindExiv2.cmake) = 2ef3712de4acf89e685e63666212408497b3de53
+SHA1 (patch-cmake_modules_FindLibExiv2.cmake) = 2dd9d73a7f45297c6d697ff3da181dd5c14a4880
 SHA1 (patch-krita_data_CMakeLists.txt) = bc0a37c1a60a2e0702c4a87b70ae0abf8359cc45
+SHA1 (patch-libs_ui_CMakeLists.txt) = bbdcb9eb9aeb7ce4c4c3a55c1d82a7c47117741f
+SHA1 (patch-libs_ui_kisexiv2_kis__exif__io.cpp) = 6b982fcd4a8b5fadf0efff6caaa769ccae3c10aa
+SHA1 (patch-libs_ui_kisexiv2_kis__exiv2.h) = 9be33078755584485a1653ec2998a5fce6e32b90
+SHA1 (patch-libs_ui_kisexiv2_kis__iptc__io.cpp) = 088167d6be1b82a0c6618dd26a11b7e1cf2f0c64
+SHA1 (patch-libs_ui_kisexiv2_kis__xmp__io.cpp) = 981e8494d19706da5efdf4b24904161b9a74a425
+SHA1 (patch-plugins_impex_jpeg_CMakeLists.txt) = ed99d0d7e4f116c0d4f780b61bca38884773762c
 SHA1 (patch-xcftools.h) = eeeed207e9b1995999a16efbbae91ed8f6255f48
