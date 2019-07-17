@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.7 2019/05/13 21:18:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/07/17 11:14:13 markd Exp $
 share/texmf-dist/doc/generic/pgf/AUTHORS
 share/texmf-dist/doc/generic/pgf/ChangeLog
 share/texmf-dist/doc/generic/pgf/FILES
 share/texmf-dist/doc/generic/pgf/INSTALL
 share/texmf-dist/doc/generic/pgf/README
 share/texmf-dist/doc/generic/pgf/README-3.0.0
+share/texmf-dist/doc/generic/pgf/extract.lua
 share/texmf-dist/doc/generic/pgf/images/brave-gnu-world-logo-mask.bb
 share/texmf-dist/doc/generic/pgf/images/brave-gnu-world-logo-mask.jpg
 share/texmf-dist/doc/generic/pgf/images/brave-gnu-world-logo.25.bb
