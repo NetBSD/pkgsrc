@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2015/07/10 17:32:57 khorben Exp $
+# $NetBSD: Makefile,v 1.5 2019/07/17 14:33:28 gdt Exp $
 
 .include "../../devel/git/Makefile.version"
 
 DISTNAME=	# empty
 PKGNAME=	git-${GIT_VERSION}
+PKGREVISION=	1
 CATEGORIES+=	meta-pkgs devel
 DISTFILES=	# empty
 MASTER_SITES=	http://www.kernel.org/pub/software/scm/git/
@@ -19,6 +20,5 @@ META_PACKAGE=	yes
 DEPENDS+=	git-base>=${GIT_VERSION}:../../devel/git-base
 DEPENDS+=	git-contrib>=${GIT_VERSION}:../../devel/git-contrib
 DEPENDS+=	git-docs>=${GIT_VERSION}:../../devel/git-docs
-DEPENDS+=	git-gitk>=${GIT_VERSION}:../../devel/git-gitk
 
 .include "../../mk/bsd.pkg.mk"
