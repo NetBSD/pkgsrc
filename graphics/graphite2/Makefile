@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2019/04/25 07:32:57 maya Exp $
+# $NetBSD: Makefile,v 1.11 2019/07/17 09:45:13 nia Exp $
 
-DISTNAME=	graphite2-1.3.11
-PKGREVISION=	2
+DISTNAME=	graphite2-1.3.13
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=silgraphite/}
 EXTRACT_SUFX=	.tgz
@@ -11,9 +10,12 @@ HOMEPAGE=	https://sourceforge.net/projects/silgraphite/
 COMMENT=	Cross-platform rendering for complex writing systems
 LICENSE=	gnu-lgpl-v2
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 USE_CMAKE=	yes
 USE_LIBTOOL=	yes
+
+# C++11
+GCC_REQD+=	4.8
 
 .include "../../mk/bsd.prefs.mk"
 
