@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2019/06/28 20:22:41 nia Exp $
+# $NetBSD: Makefile,v 1.25 2019/07/17 12:42:36 nia Exp $
 
 PKGNAME=	mate-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	meta-pkgs
 
 COMMENT=	Meta-package for MATE desktop environment
@@ -46,6 +46,6 @@ DEPENDS+=	mate-themes>=3.22.19:../../graphics/mate-themes
 #DEPENDS+=	mate-user-share>=${VERSION}:../../net/mate-user-share
 DEPENDS+=	mate-utils>=${VERSION}:../../misc/mate-utils
 DEPENDS+=	mozo>=${VERSION}:../../x11/mozo
-#DEPENDS+=	pluma>=${VERSION}:../../editors/pluma
+DEPENDS+=	pluma>=${VERSION}:../../editors/pluma
 
 .include "../../mk/bsd.pkg.mk"
