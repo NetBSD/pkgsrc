@@ -1,4 +1,4 @@
-# $NetBSD: egg.mk,v 1.27 2017/02/08 12:09:30 wiz Exp $
+# $NetBSD: egg.mk,v 1.28 2019/07/17 18:34:16 rillig Exp $
 #
 # Common logic to handle Python Eggs
 #
@@ -28,11 +28,11 @@ PY_PATCHPLIST=	yes
 
 PLIST_SUBST+=	EGG_NAME=${EGG_NAME}-py${PYVERSSUFFIX}
 PLIST_SUBST+=	EGG_INFODIR=${EGG_INFODIR}
-PRINT_PLIST_AWK+=	{ gsub(/${EGG_NAME}-py${PYVERSSUFFIX}.egg-info/, \
+PRINT_PLIST_AWK+=	{ gsub(/${EGG_NAME}-py${PYVERSSUFFIX:S,.,\.,g}.egg-info/, \
 			       "$${EGG_INFODIR}") }
-PRINT_PLIST_AWK+=	{ gsub(/${EGG_NAME}-py${PYVERSSUFFIX}-nspkg.pth/, \
+PRINT_PLIST_AWK+=	{ gsub(/${EGG_NAME}-py${PYVERSSUFFIX:S,.,\.,g}-nspkg.pth/, \
 			       "$${EGG_NAME}-nspkg.pth") }
-PRINT_PLIST_AWK+=	{ gsub(/${PYVERSSUFFIX}/, \
+PRINT_PLIST_AWK+=	{ gsub(/${PYVERSSUFFIX:S,.,\.,g}/, \
 			       "$${PYVERSSUFFIX}") }
 
 _PYSETUPTOOLSINSTALLARGS=	--single-version-externally-managed

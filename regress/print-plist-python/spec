@@ -1,0 +1,12 @@
+# $NetBSD: spec,v 1.1 2019/07/17 18:34:16 rillig Exp $
+
+MAKEARGS_TEST="-s install print-PLIST"
+
+MAKEARGS_CLEAN="deinstall clean"
+
+check_result()
+{
+	exit_status 0
+	output_require "^share/emul3270$"
+	output_require "^share/file-\\\${PYVERSSUFFIX}\\.txt$"
+}

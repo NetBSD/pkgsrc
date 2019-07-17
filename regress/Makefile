@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/05/04 15:17:39 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2019/07/17 18:34:16 rillig Exp $
 #
 # See https://www.netbsd.org/docs/pkgsrc/regression.html for more
 # information about these tests.
@@ -22,6 +22,7 @@ SUBDIR+=	make-quoting
 SUBDIR+=	pkg-options
 SUBDIR+=	pkgfail
 SUBDIR+=	print-plist
+SUBDIR+=	print-plist-python
 SUBDIR+=	show-all
 SUBDIR+=	subst
 SUBDIR+=	tools
