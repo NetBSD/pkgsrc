@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/06/15 01:29:49 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/07/17 21:56:37 ryoon Exp $
 bin/nim
 nim/bin/nim
 nim/compiler.nimble
@@ -48,6 +48,7 @@ nim/compiler/importer.nim
 nim/compiler/incremental.nim
 nim/compiler/injectdestructors.nim
 nim/compiler/installer.ini
+nim/compiler/int128.nim
 nim/compiler/jsgen.nim
 nim/compiler/jstypes.nim
 nim/compiler/lambdalifting.nim
@@ -126,6 +127,7 @@ nim/compiler/semtypinst.nim
 nim/compiler/sighashes.nim
 nim/compiler/sigmatch.nim
 nim/compiler/sizealignoffsetimpl.nim
+nim/compiler/spawn.nim
 nim/compiler/suggest.nim
 nim/compiler/syntaxes.nim
 nim/compiler/tccgen.nim
@@ -206,6 +208,7 @@ nim/lib/posix/linux.nim
 nim/lib/posix/posix.nim
 nim/lib/posix/posix_linux_amd64.nim
 nim/lib/posix/posix_linux_amd64_consts.nim
+nim/lib/posix/posix_macos_amd64.nim
 nim/lib/posix/posix_nintendoswitch.nim
 nim/lib/posix/posix_nintendoswitch_consts.nim
 nim/lib/posix/posix_other.nim
@@ -371,7 +374,6 @@ nim/lib/system/hti.nim
 nim/lib/system/inclrtl.nim
 nim/lib/system/indexerrors.nim
 nim/lib/system/io.nim
-nim/lib/system/io.nim.cfg
 nim/lib/system/iterators.nim
 nim/lib/system/jssys.nim
 nim/lib/system/memory.nim
