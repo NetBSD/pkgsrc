@@ -1,0 +1,35 @@
+$NetBSD: patch-plugins_impex_jpeg_CMakeLists.txt,v 1.1 2019/07/17 00:39:57 nia Exp $
+
+Fix building against exiv2-0.27
+
+Upstream commit:
+https://github.com/KDE/krita/commit/6b6758bb37da4997be36a7e2a839b07278160559.patch
+
+--- plugins/impex/jpeg/CMakeLists.txt.orig	2018-09-26 12:18:03.000000000 +0000
++++ plugins/impex/jpeg/CMakeLists.txt
+@@ -4,7 +4,6 @@ set(ICCJPEG_SOURCE_DIR "${CMAKE_CURRENT_
+ 
+ include_directories(
+     ${ICCJPEG_SOURCE_DIR}
+-    ${EXIV2_INCLUDE_DIR}
+ )
+ 
+ include_directories(SYSTEM
+@@ -25,7 +24,7 @@ set(kritajpegimport_SOURCES
+ 
+ add_library(kritajpegimport MODULE ${kritajpegimport_SOURCES})
+ 
+-target_link_libraries(kritajpegimport kritaui  ${JPEG_LIBRARIES} ${LCMS2_LIBRARIES} ${EXIV2_LIBRARIES} )
++target_link_libraries(kritajpegimport kritaui  ${JPEG_LIBRARIES} ${LCMS2_LIBRARIES} LibExiv2::LibExiv2 )
+ 
+ install(TARGETS kritajpegimport  DESTINATION ${KRITA_PLUGIN_INSTALL_DIR})
+ 
+@@ -38,7 +37,7 @@ ki18n_wrap_ui(kritajpegexport_SOURCES ki
+ 
+ add_library(kritajpegexport MODULE ${kritajpegexport_SOURCES})
+ 
+-target_link_libraries(kritajpegexport kritaui kritaimpex ${JPEG_LIBRARIES} ${LCMS2_LIBRARIES} ${EXIV2_LIBRARIES} )
++target_link_libraries(kritajpegexport kritaui kritaimpex ${JPEG_LIBRARIES} ${LCMS2_LIBRARIES} LibExiv2::LibExiv2 )
+ 
+ install(TARGETS kritajpegexport  DESTINATION ${KRITA_PLUGIN_INSTALL_DIR})
+ install( PROGRAMS  krita_jpeg.desktop  DESTINATION ${XDG_APPS_INSTALL_DIR})

@@ -1,0 +1,22 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2019/07/17 00:39:57 nia Exp $
+
+Fix building against exiv2-0.27
+
+Upstream commit:
+https://github.com/KDE/krita/commit/6b6758bb37da4997be36a7e2a839b07278160559.patch
+
+--- CMakeLists.txt.orig	2018-09-26 12:23:39.000000000 +0000
++++ CMakeLists.txt
+@@ -600,11 +600,7 @@ set_package_properties(Eigen3 PROPERTIES
+ ##
+ ## Test for exiv2
+ ##
+-find_package(Exiv2 0.16 REQUIRED)
+-set_package_properties(Exiv2 PROPERTIES
+-    DESCRIPTION "Image metadata library and tools"
+-    URL "http://www.exiv2.org"
+-    PURPOSE "Required by Krita")
++find_package(LibExiv2 0.16 REQUIRED)
+ 
+ ##
+ ## Test for lcms
