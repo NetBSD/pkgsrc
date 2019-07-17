@@ -1,5 +1,7 @@
-This package is a meta package, collecting the components normally
-expected to be installed for the GIT distributed version control suite
-(the tool itself, the man pages, contrib scripts, and the tk-based
-browser gitk.)  (See git-base for a minimal installation of the
-command-line tools.)
+This package is a meta package, collecting the components that are
+widely expected to be installed for the GIT distributed version
+control suite, i.e., the tool itself, the man pages, and contrib scripts.
+
+See git-base for a minimal installation of the command-line tools.
+See git-gitk for the tk-based browser gitk, no longer included in the
+git meta-package.
