@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2018/01/10 09:38:32 wiz Exp $
+$NetBSD: distinfo,v 1.13 2019/07/17 00:16:49 nia Exp $
 
 SHA1 (geeqie-1.4.tar.xz) = bef0e6c6a0aba8b957375087bcb570cb9dac64b1
 RMD160 (geeqie-1.4.tar.xz) = 1e3ffccba08edc2739051f1252ca653f008de35b
@@ -8,4 +8,5 @@ SHA1 (patch-Makefile.am) = 49aba28dcb6a3671550ddab5c80d93f3a094d47f
 SHA1 (patch-ac) = e551d5e733354902254c1a392be5738da6c88170
 SHA1 (patch-configure.in) = d606bab2b701a48af92fc90404740d9a16492e44
 SHA1 (patch-doc_Makefile.am) = 9ffbcd6f8e5bc5710b61dfbfb020e92497d3414f
+SHA1 (patch-src_exiv2.cc) = 67a08c87fe66defb1c43b509b1069b591943559d
 SHA1 (patch-src_layout__util.c) = cb5d82d7c02690fcad6ef8139788100928d03ac1
