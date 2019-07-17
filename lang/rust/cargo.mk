@@ -1,4 +1,4 @@
-# $NetBSD: cargo.mk,v 1.6 2018/11/27 15:45:23 adam Exp $
+# $NetBSD: cargo.mk,v 1.7 2019/07/17 11:04:45 fox Exp $
 #
 # Common logic that can be used by packages that depend on cargo crates
 # from crates.io. This lets existing pkgsrc infrastructure fetch and verify
@@ -28,7 +28,7 @@ CARGO_VENDOR_DIR=	${WRKDIR}/vendor
 DISTFILES?=	${DEFAULT_DISTFILES}
 .for _crate in ${CARGO_CRATE_DEPENDS}
 DISTFILES+=	${_crate}.crate
-SITES.${_crate}.crate+=	-${MASTER_SITE_CRATESIO}${_crate:C/-[0-9.]+$//}/${_crate:C/^.*-([0-9.]+)$/\1/}/download
+SITES.${_crate}.crate+=	-${MASTER_SITE_CRATESIO}${_crate:C/-[0-9]+\.[0-9.]+.*$//}/${_crate:C/^.*-([0-9]+\.[0-9.]+.*)$/\1/}/download
 EXTRACT_DIR.${_crate}.crate?=	${CARGO_VENDOR_DIR}
 .endfor
 
