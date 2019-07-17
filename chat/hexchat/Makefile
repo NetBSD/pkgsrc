@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2019/07/17 09:22:11 nia Exp $
+# $NetBSD: Makefile,v 1.35 2019/07/17 10:53:22 nia Exp $
 
 DISTNAME=	hexchat-2.14.2
 CATEGORIES=	chat
@@ -40,9 +40,6 @@ SOEXT.*=		so
 PLIST_SUBST+=		SOEXT=${SOEXT}
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
-
-# It seems generated files are sometimes not generated in time.
-MAKE_JOBS_SAFE=		no
 
 .include "../../devel/py-meson/build.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
