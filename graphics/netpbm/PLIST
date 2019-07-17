@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2017/09/04 20:31:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2019/07/17 01:05:12 ryoon Exp $
 bin/411toppm
 bin/anytopnm
 bin/asciitopgm
@@ -30,7 +30,7 @@ bin/ilbmtoppm
 bin/imgtoppm
 bin/infotopam
 bin/jbigtopnm
-bin/jpeg2ktopam
+${PLIST.jasper}bin/jpeg2ktopam
 bin/jpegtopnm
 bin/leaftoppm
 bin/lispmtopgm
@@ -100,7 +100,7 @@ bin/pamtofits
 bin/pamtogif
 bin/pamtohdiff
 bin/pamtohtmltbl
-bin/pamtojpeg2k
+${PLIST.jasper}bin/pamtojpeg2k
 bin/pamtompfont
 bin/pamtooctaveimg
 bin/pamtopam
