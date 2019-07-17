@@ -1,0 +1,3 @@
+This test verifies that the dots that may appear as "3.7" in PYVERSSUFFIX
+are properly escaped when that variable is treated as a regular
+expression in PLIST_AWK.
