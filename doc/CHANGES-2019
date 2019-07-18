@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2960 2019/07/18 14:18:55 wen Exp $
+$NetBSD: CHANGES-2019,v 1.2961 2019/07/18 14:26:17 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4882,3 +4882,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/dovecot2-pigeonhole to 0.5.7 [taca 2019-07-18]
 	Updated www/p5-CGI to 4.44 [wen 2019-07-18]
 	Updated devel/p5-Test-Compile to 2.2.2 [wen 2019-07-18]
+	Updated devel/p5-Test-Refcount to 0.10 [wen 2019-07-18]
