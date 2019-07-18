@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2954 2019/07/18 11:30:28 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2955 2019/07/18 11:54:42 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4872,3 +4872,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/feh to 3.2 [nia 2019-07-18]
 	Updated devel/py-virtualenv to 16.6.2 [adam 2019-07-18]
 	Updated time/py-pendulum to 2.0.5 [adam 2019-07-18]
+	Updated games/frotz to 2.44 [nia 2019-07-18]
