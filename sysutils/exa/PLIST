@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2019/07/18 00:22:13 fox Exp $
+bin/exa
+man/man1/exa.1
+share/bash-completion/completions/exa
+share/fish/vendor_completions.d/exa.fish
+share/zsh/site-functions/_exa
