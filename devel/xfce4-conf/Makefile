@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/07/13 00:05:50 gutteridge Exp $
+# $NetBSD: Makefile,v 1.23 2019/07/18 08:15:39 nia Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -8,7 +8,7 @@ PKGNAME=	xfce4-conf-${VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	http://archive.xfce.org/src/xfce/xfconf/${VERSION:R}/
 
-HOMEPAGE=	http://docs.xfce.org/xfce/xfconf/start
+HOMEPAGE=	https://docs.xfce.org/xfce/xfconf/start
 COMMENT=	Xfce client-server configuration storage and query system
 
 PKGCONFIG_OVERRIDE=	xfconf/libxfconf-0.pc.in

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2018/11/14 22:21:06 kleink Exp $
+# $NetBSD: Makefile,v 1.49 2019/07/18 08:15:34 nia Exp $
 
 PKGREVISION= 10
 .include "../../meta-pkgs/xfce4/Makefile.common"
@@ -7,7 +7,7 @@ DISTNAME=	xfce4-xmms-plugin-0.5.3
 CATEGORIES=	audio
 MASTER_SITES=	http://archive.xfce.org/src/panel-plugins/xfce4-xmms-plugin/0.5/
 
-HOMEPAGE=	http://goodies.xfce.org/projects/panel-plugins/xfce4-xmms-plugin
+HOMEPAGE=	https://goodies.xfce.org/projects/panel-plugins/xfce4-xmms-plugin
 COMMENT=	Xfce XMMS plugin
 
 .include "../../audio/bmp/buildlink3.mk"
