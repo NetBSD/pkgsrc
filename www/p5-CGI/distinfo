@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.55 2019/05/08 02:24:35 wen Exp $
+$NetBSD: distinfo,v 1.56 2019/07/18 13:51:32 wen Exp $
 
-SHA1 (CGI-4.43.tar.gz) = 5bdad1a8ec05a7edf7d7942de2c7be1872ee7a42
-RMD160 (CGI-4.43.tar.gz) = 646804b2ab2fd2eb890652079a09f61cfa3ccf34
-SHA512 (CGI-4.43.tar.gz) = 620634861c66bbebaa31c03273a9f91151865954310e697afc697ca3274a97ae90235bcdafd829ed63d647ed5256689073de09a5d71a0779b6219ab8045be61d
-Size (CGI-4.43.tar.gz) = 204823 bytes
+SHA1 (CGI-4.44.tar.gz) = 5ec34c8cb99eb9aaab413e3efac670a13a5cdf29
+RMD160 (CGI-4.44.tar.gz) = 6c78b3400997d32324eff2a18a300805fac10668
+SHA512 (CGI-4.44.tar.gz) = 3cbb7d8c54a08ded7a78f971bda8dbd95ebe52cb10ff20a1094bbff7aa422eb76d456aa4a425aa45c6add2a6a2d669fc3814ee4ba554079d64a5226e0538ccfc
+Size (CGI-4.44.tar.gz) = 204816 bytes
