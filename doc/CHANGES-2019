@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2957 2019/07/18 13:40:16 taca Exp $
+$NetBSD: CHANGES-2019,v 1.2958 2019/07/18 13:42:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4879,3 +4879,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/dovecot2-mysql to 2.3.7 [taca 2019-07-18]
 	Updated mail/dovecot2-pgsql to 2.3.7 [taca 2019-07-18]
 	Updated mail/dovecot2-sqlite to 2.3.7 [taca 2019-07-18]
+	Updated mail/dovecot2-pigeonhole to 0.5.7 [taca 2019-07-18]
