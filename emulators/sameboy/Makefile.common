@@ -1,0 +1,18 @@
+# $NetBSD: Makefile.common,v 1.1 2019/07/18 10:44:57 nia Exp $
+# used by emulators/sameboy/Makefile
+# used by emulators/libretro-sameboy/Makefile
+
+DISTNAME=	sameboy-0.12.1
+CATEGORIES=	emulators
+MASTER_SITES=	${MASTER_SITE_GITHUB:=LIJI32/}
+GITHUB_PROJECT=	SameBoy
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+
+LICENSE=	mit
+
+EXTRACT_USING=	bsdtar
+USE_TOOLS+=	gmake
+
+TOOL_DEPENDS+=	rgbds-[0-9]*:../../devel/rgbds
+
+DISTINFO_FILE=	${.CURDIR}/../../emulators/sameboy/distinfo
