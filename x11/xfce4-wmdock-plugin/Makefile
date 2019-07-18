@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/07/10 17:53:38 sevan Exp $
+# $NetBSD: Makefile,v 1.12 2019/07/18 08:15:39 nia Exp $
 #
 PKGREVISION= 9
 .include "../../meta-pkgs/xfce4/Makefile.common"
@@ -7,7 +7,7 @@ DISTNAME=		xfce4-wmdock-plugin-0.6.0
 CATEGORIES=		x11
 MASTER_SITES=	http://archive.xfce.org/src/panel-plugins/xfce4-wmdock-plugin/0.6/
 
-HOMEPAGE=		http://goodies.xfce.org/projects/panel-plugins/xfce4-wmdock-plugin
+HOMEPAGE=		https://goodies.xfce.org/projects/panel-plugins/xfce4-wmdock-plugin
 COMMENT=		Xfce wmdock plugin
 
 USE_FEATURES+=		strnlen
