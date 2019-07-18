@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.23 2017/12/04 16:36:24 maya Exp $
+$NetBSD: distinfo,v 1.24 2019/07/18 14:48:08 prlw1 Exp $
 
-SHA1 (at-spi2-core-2.26.2.tar.xz) = 1c39d66c1ca02005abff884fdab0ab510311d018
-RMD160 (at-spi2-core-2.26.2.tar.xz) = 8b4da05431a7c764701a36d8be4753ff0dc17574
-SHA512 (at-spi2-core-2.26.2.tar.xz) = 6a8e158e30c37ce475467b6634aff046a318875271966d7bfa3e56052d0cd26cd37435d0b9ae14f079542b8b3e76088da5bd50ed39eb39f3f40394c55ed3f255
-Size (at-spi2-core-2.26.2.tar.xz) = 494484 bytes
-SHA1 (patch-bus_at-spi-bus-launcher.c) = f897928b6b032c729c409ccecc9d8088b45bca5a
+SHA1 (at-spi2-core-2.33.2.tar.xz) = ef2d8acadf46af988a1dcee3fea3a1baa33e0089
+RMD160 (at-spi2-core-2.33.2.tar.xz) = aa9e536b92529be80f1376c888cf2364a4062c96
+SHA512 (at-spi2-core-2.33.2.tar.xz) = b2b9648693409c1e3da0b0a70224447c848cff7c343d03559d36bd08a25bdf878127078f768937b2d81725928a4197a0b1938b91a2d3bbfe150992df90591740
+Size (at-spi2-core-2.33.2.tar.xz) = 183308 bytes
