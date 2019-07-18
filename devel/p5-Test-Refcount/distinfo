@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 03:28:53 agc Exp $
+$NetBSD: distinfo,v 1.4 2019/07/18 14:25:22 wen Exp $
 
-SHA1 (Test-Refcount-0.08.tar.gz) = 320ca502381dbc8443881a5b95a83617937b170a
-RMD160 (Test-Refcount-0.08.tar.gz) = cda497f58ffed3e7ba5aacd06f7662b02a8ea3ba
-SHA512 (Test-Refcount-0.08.tar.gz) = 9a5ffe332f9a61c2f019963f49117f4a6af0b855371cd6aa24cc5e3edd7ee6caa54f25bcdd1edf57044c764030f8db37a1ee232d49130656643135cfac96d570
-Size (Test-Refcount-0.08.tar.gz) = 17567 bytes
+SHA1 (Test-Refcount-0.10.tar.gz) = 2cbfaff306dd7cef4f450243c90c1227eef346e1
+RMD160 (Test-Refcount-0.10.tar.gz) = 19e9eda378380d0af9ad9595675295e4ee0955ce
+SHA512 (Test-Refcount-0.10.tar.gz) = 7fac2a6bcb96da0ed61c53aaa2278e1ac998bd62314b95f307fe6ee032fd7d89264968f3ad78066186b112af0ba45960d5d1c81822bcd5f218418ea81236c4e1
+Size (Test-Refcount-0.10.tar.gz) = 17218 bytes
