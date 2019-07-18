@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2943 2019/07/17 22:09:15 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2944 2019/07/18 00:14:24 fox Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4858,3 +4858,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/openresolv to 3.9.1 [roy 2019-07-17]
 	Updated lang/nim to 0.20.2 [ryoon 2019-07-17]
 	Updated wm/awesome to 4.3 [nia 2019-07-17]
+	Added textproc/bat version 0.11.0 [fox 2019-07-18]
