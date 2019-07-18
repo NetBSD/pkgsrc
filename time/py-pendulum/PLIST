@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/08/14 15:23:51 leot Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/07/18 11:29:30 adam Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/pendulum/__init__.py
 ${PYSITELIB}/pendulum/__init__.pyc
@@ -137,6 +137,15 @@ ${PYSITELIB}/pendulum/locales/pt_br/custom.pyo
 ${PYSITELIB}/pendulum/locales/pt_br/locale.py
 ${PYSITELIB}/pendulum/locales/pt_br/locale.pyc
 ${PYSITELIB}/pendulum/locales/pt_br/locale.pyo
+${PYSITELIB}/pendulum/locales/ru/__init__.py
+${PYSITELIB}/pendulum/locales/ru/__init__.pyc
+${PYSITELIB}/pendulum/locales/ru/__init__.pyo
+${PYSITELIB}/pendulum/locales/ru/custom.py
+${PYSITELIB}/pendulum/locales/ru/custom.pyc
+${PYSITELIB}/pendulum/locales/ru/custom.pyo
+${PYSITELIB}/pendulum/locales/ru/locale.py
+${PYSITELIB}/pendulum/locales/ru/locale.pyc
+${PYSITELIB}/pendulum/locales/ru/locale.pyo
 ${PYSITELIB}/pendulum/locales/zh/__init__.py
 ${PYSITELIB}/pendulum/locales/zh/__init__.pyc
 ${PYSITELIB}/pendulum/locales/zh/__init__.pyo
