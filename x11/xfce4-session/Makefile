@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2019/07/13 22:36:05 rillig Exp $
+# $NetBSD: Makefile,v 1.75 2019/07/18 08:15:39 nia Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -7,7 +7,7 @@ PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES+=		http://archive.xfce.org/src/xfce/xfce4-session/4.13/
 
-HOMEPAGE=		http://docs.xfce.org/xfce/xfce4-session/start
+HOMEPAGE=		https://docs.xfce.org/xfce/xfce4-session/start
 COMMENT=		Xfce session manager
 
 PKGCONFIG_OVERRIDE+=	libxfsm/xfce4-session-2.0.pc.in

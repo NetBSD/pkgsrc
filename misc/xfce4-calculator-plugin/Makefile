@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/03/09 19:38:43 gutteridge Exp $
+# $NetBSD: Makefile,v 1.14 2019/07/18 08:15:35 nia Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -7,7 +7,7 @@ DISTNAME=	xfce4-calculator-plugin-${VERSION}
 CATEGORIES=	misc
 MASTER_SITES=	http://archive.xfce.org/src/panel-plugins/xfce4-calculator-plugin/0.7/
 
-HOMEPAGE=	http://goodies.xfce.org/projects/panel-plugins/xfce4-calculator-plugin
+HOMEPAGE=	https://goodies.xfce.org/projects/panel-plugins/xfce4-calculator-plugin
 COMMENT=	Xfce calculator plugin
 
 .include "../../x11/xfce4-panel/buildlink3.mk"

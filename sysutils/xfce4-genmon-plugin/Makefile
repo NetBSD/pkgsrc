@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2018/11/14 22:22:29 kleink Exp $
+# $NetBSD: Makefile,v 1.38 2019/07/18 08:15:36 nia Exp $
 
 PKGREVISION= 3
 .include "../../meta-pkgs/xfce4/Makefile.common"
@@ -8,7 +8,7 @@ DISTNAME=	xfce4-genmon-plugin-${VERSION}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://archive.xfce.org/src/panel-plugins/xfce4-genmon-plugin/${VERSION:R}/
 
-HOMEPAGE=	http://goodies.xfce.org/projects/panel-plugins/xfce4-genmon-plugin
+HOMEPAGE=	https://goodies.xfce.org/projects/panel-plugins/xfce4-genmon-plugin
 COMMENT=	Xfce general purpose monitor plugin
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}

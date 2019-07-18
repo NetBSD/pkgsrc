@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/01/17 06:20:10 gutteridge Exp $
+# $NetBSD: Makefile,v 1.14 2019/07/18 08:15:37 nia Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -6,7 +6,7 @@ DISTNAME=	xfce4-dict-0.8.2
 CATEGORIES=	textproc
 MASTER_SITES=	http://archive.xfce.org/src/apps/xfce4-dict/0.8/
 
-HOMEPAGE=	http://goodies.xfce.org/projects/applications/xfce4-dict
+HOMEPAGE=	https://goodies.xfce.org/projects/applications/xfce4-dict
 COMMENT=	Xfce dictionary application
 
 .include "../../x11/gtk2/buildlink3.mk"
