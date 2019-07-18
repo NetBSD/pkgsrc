@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2962 2019/07/18 14:35:19 wen Exp $
+$NetBSD: CHANGES-2019,v 1.2963 2019/07/18 14:41:25 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4884,3 +4884,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-Test-Compile to 2.2.2 [wen 2019-07-18]
 	Updated devel/p5-Test-Refcount to 0.10 [wen 2019-07-18]
 	Updated devel/p5-Test-Simple to 1.302164 [wen 2019-07-18]
+	Updated devel/atk to 2.33.3 [prlw1 2019-07-18]
