@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2946 2019/07/18 02:53:46 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.2947 2019/07/18 03:04:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4861,3 +4861,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Added textproc/bat version 0.11.0 [fox 2019-07-18]
 	Added sysutils/exa version 0.9.0 [fox 2019-07-18]
 	Updated graphics/ristretto to 0.8.5 [gutteridge 2019-07-18]
+	Updated net/bind914 to 9.14.4 [taca 2019-07-18]
+	Updated net/bind911 to 9.11.9 [taca 2019-07-18]
