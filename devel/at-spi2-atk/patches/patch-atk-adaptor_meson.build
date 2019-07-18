@@ -1,0 +1,26 @@
+$NetBSD: patch-atk-adaptor_meson.build,v 1.1 2019/07/18 15:03:51 prlw1 Exp $
+
+Assume that anyone wanting the gtk2 module will use devel/at-spi.
+
+--- atk-adaptor/meson.build.orig	2019-06-18 11:14:23.000000000 +0000
++++ atk-adaptor/meson.build
+@@ -36,19 +36,6 @@ libatk_bridge_dep = declare_dependency(l
+                                          include_directories('.')
+                                        ])
+ 
+-atk_bridge_module = shared_module('atk-bridge', 'gtk-2.0/module.c',
+-                                  include_directories: root_inc,
+-                                  dependencies: [
+-                                    libatk_bridge_dep,
+-                                    libdbus_dep,
+-                                    atk_dep,
+-                                    atspi_dep,
+-                                    gmodule_dep,
+-                                  ],
+-                                  c_args: p2p_cflags,
+-                                  install: true,
+-                                  install_dir: join_paths(get_option('libdir'), 'gtk-2.0', 'modules'))
+-
+ pkgconfig = import('pkgconfig')
+ pkgconfig.generate(
+   name: 'atk-bridge-2.0',
