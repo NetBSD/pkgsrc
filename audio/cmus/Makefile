@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2019/06/21 13:46:04 nia Exp $
+# $NetBSD: Makefile,v 1.77.2.1 2019/07/18 13:17:06 bsiegert Exp $
 
 DISTNAME=		cmus-2.8.0
 CATEGORIES=		audio
@@ -42,6 +42,11 @@ CONFIGURE_ARGS+=	CONFIG_SUN=n
 
 .if ${OPSYS} == "Darwin"
 PLIST.coreaudio=	yes
+.endif
+
+.if ${MACHINE_ARCH} == "i386"
+# 64 bit atomic ops are required
+CXXFLAGS+=	-march=i586
 .endif
 
 NOT_PAX_MPROTECT_SAFE+=	bin/cmus
