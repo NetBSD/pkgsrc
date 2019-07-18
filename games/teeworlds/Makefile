@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/07/01 14:01:27 nia Exp $
+# $NetBSD: Makefile,v 1.12 2019/07/18 10:46:23 wiedi Exp $
 
 DISTNAME=	teeworlds-0.7.3.1-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -14,6 +14,8 @@ LICENSE=	zlib AND 2-clause-bsd AND modified-bsd AND cc-by-sa-v3.0
 USE_LANGUAGES=	c c++03
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 INSTALLATION_DIRS+=	share/appdata
 INSTALLATION_DIRS+=	share/applications
