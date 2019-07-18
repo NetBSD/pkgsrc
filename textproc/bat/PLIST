@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2019/07/18 00:11:45 fox Exp $
+bin/bat
+man/man1/bat.1
