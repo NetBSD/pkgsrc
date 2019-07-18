@@ -1,8 +1,10 @@
-$NetBSD: patch-libs.mk,v 1.1 2019/02/12 20:47:14 adam Exp $
+$NetBSD: patch-libs.mk,v 1.2 2019/07/18 10:28:45 adam Exp $
 
---- libs.mk.orig	2019-02-04 17:02:33.000000000 +0000
+Do not install debug library.
+
+--- libs.mk.orig	2019-07-15 21:55:33.000000000 +0000
 +++ libs.mk
-@@ -163,7 +163,6 @@ INSTALL-LIBS-$(CONFIG_SHARED) += $(forea
+@@ -162,7 +162,6 @@ INSTALL-LIBS-$(CONFIG_SHARED) += $(forea
  endif
  else
  INSTALL-LIBS-$(CONFIG_STATIC) += $(LIBSUBDIR)/libvpx.a
@@ -10,7 +12,7 @@ $NetBSD: patch-libs.mk,v 1.1 2019/02/12 20:47:14 adam Exp $
  endif
  
  CODEC_SRCS=$(call enabled,CODEC_SRCS)
-@@ -230,8 +229,8 @@ endif
+@@ -229,8 +228,8 @@ endif
  else
  LIBVPX_OBJS=$(call objs, $(filter-out $(ASM_INCLUDES), $(CODEC_SRCS)))
  OBJS-yes += $(LIBVPX_OBJS)
@@ -20,4 +22,4 @@ $NetBSD: patch-libs.mk,v 1.1 2019/02/12 20:47:14 adam Exp $
 +$(BUILD_PFX)libvpx.a: $(LIBVPX_OBJS)
  
  SO_VERSION_MAJOR := 6
- SO_VERSION_MINOR := 0
+ SO_VERSION_MINOR := 1
