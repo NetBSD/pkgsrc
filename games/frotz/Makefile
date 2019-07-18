@@ -1,25 +1,30 @@
-# $NetBSD: Makefile,v 1.32 2017/01/19 18:52:10 agc Exp $
+# $NetBSD: Makefile,v 1.33 2019/07/18 11:54:26 nia Exp $
 
-DISTNAME=	frotz-2.43
-PKGREVISION=	5
+DISTNAME=	frotz-2.44
 CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=frotz/}
-MASTER_SITES+=	ftp://ftp.ifarchive.org/if-archive/infocom/interpreters/frotz/
+MASTER_SITES=	https://gitlab.com/DavidGriffith/frotz/-/archive/${PKGVERSION_NOREV}/
 
 MAINTAINER=	seebs@plethora.net
-HOMEPAGE=	http://frotz.sourceforge.net/
+HOMEPAGE=	https://davidgriffith.gitlab.io/frotz/j
 COMMENT=	Curses-based interpreter for Infocom-compatible games
+LICENSE=	gnu-gpl-v2
+
+USE_TOOLS+=	gmake
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "Darwin"
-MAKE_ENV+=	SOUND_DEFS=-DOSS_SOUND
-MAKE_ENV+=	SOUND_LIB=${LIBOSSAUDIO}
-MAKE_ENV+=	SOUND_DEV=${DEVOSSSOUND}
+MAKE_FLAGS+=	SOUND_DEFS=-DOSS_SOUND
+MAKE_FLAGS+=	SOUND_LIB=${LIBOSSAUDIO}
+CPPFLAGS+=	-DSOUND_DEV=\"${DEVOSSSOUND}\"
 .endif
+
+MAKE_FLAGS+=	CONFIG_DIR=${PKG_SYSCONFDIR}
 
 SAMPLEDIR=	${PREFIX}/share/examples/frotz
 DOCDIR=		${PREFIX}/share/doc/frotz
+
+CONF_FILES+=	${SAMPLEDIR}/frotz.conf ${PKG_SYSCONFDIR}/frotz.conf
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 

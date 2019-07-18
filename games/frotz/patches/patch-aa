@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.8 2009/08/19 04:04:40 yyamano Exp $
+$NetBSD: patch-aa,v 1.9 2019/07/18 11:54:26 nia Exp $
 
---- Makefile.orig	2002-10-27 17:21:52.000000000 -0800
+Honour pkgsrc settings.
+
+--- Makefile.orig	2015-05-20 09:29:14.000000000 +0000
 +++ Makefile
-@@ -1,7 +1,7 @@
+@@ -1,30 +1,27 @@
  # Define your C compiler.  I recommend gcc if you have it.
  # MacOS users should use "cc" even though it's really "gcc".
  #
@@ -11,7 +13,12 @@ $NetBSD: patch-aa,v 1.8 2009/08/19 04:04:40 yyamano Exp $
  #CC = cc
  
  # Define your optimization flags.  Most compilers understand -O and -O2,
-@@ -14,7 +14,7 @@ OPTS = -O2 
+ # Standard (note: Solaris on UltraSparc using gcc 2.8.x might not like this.)
+ #
+-OPTS = -O2
+ 
+ # Pentium with gcc 2.7.0 or better
+ #OPTS = -O2 -fomit-frame-pointer -malign-functions=2 -malign-loops=2 \
  #-malign-jumps=2
  
  # Define where you want Frotz installed.  Usually this is /usr/local
@@ -20,21 +27,47 @@ $NetBSD: patch-aa,v 1.8 2009/08/19 04:04:40 yyamano Exp $
  
  MAN_PREFIX = $(PREFIX)
  #MAN_PREFIX = /usr/local/share
-@@ -24,7 +24,7 @@ CONFIG_DIR = $(PREFIX)/etc
+ 
+-CONFIG_DIR = $(PREFIX)/etc
+ #CONFIG_DIR = /etc
  
  # Define where you want Frotz to look for frotz.conf.
  #
 -CONFIG_DIR = /usr/local/etc
-+CONFIG_DIR = ${PREFIX}/etc
  #CONFIG_DIR = /etc
  #CONFIG_DIR = /usr/pkg/etc
  #CONFIG_DIR =
-@@ -163,7 +163,7 @@ FLAGS = $(OPTS) $(COMP_DEFS) $(INCL)
+@@ -195,7 +192,7 @@ FLAGS = $(OPTS) $(CURSES_DEFS) $(INCL)
  $(NAME): $(NAME)-curses
+ curses:  $(NAME)-curses
+ $(NAME)-curses: $(COMMON_TARGET) $(CURSES_TARGET) $(BLORB_TARGET)
+-	$(CC) -o $(BINNAME)$(EXTENSION) $(TARGETS) $(LIB) $(CURSES) $(SOUND_LIB)
++	$(CC) $(LDFLAGS) -o $(BINNAME)$(EXTENSION) $(TARGETS) $(LIB) $(CURSES) $(SOUND_LIB)
  
- $(NAME)-curses:		soundcard.h  $(COMMON_TARGET) $(CURSES_TARGET)
--	$(CC) -o $(BINNAME)$(EXTENSION) $(TARGETS) $(LIB) $(CURSES) \
-+	$(CC) $(LDFLAGS) -o $(BINNAME)$(EXTENSION) $(TARGETS) $(LIB) $(CURSES) \
- 		$(SOUND_LIB)
+ dumb:		$(NAME)-dumb
+ d$(NAME):	$(NAME)-dumb
+@@ -214,19 +211,19 @@ all:	$(NAME) d$(NAME)
+ .SUFFIXES: .c .o .h
  
- all:	$(NAME) d$(NAME)
+ $(COMMON_OBJECT): %.o: %.c
+-	$(CC) $(OPTS) $(COMMON_DEFS) -o $@ -c $<
++	$(CC) $(CFLAGS) $(CPPFLAGS) $(COMMON_DEFS) -o $@ -c $<
+ 
+ $(BLORB_OBJECT): %.o: %.c
+-	$(CC) $(OPTS) -o $@ -c $<
++	$(CC) $(CFLAGS) $(CPPFLAGS) -o $@ -c $<
+ 
+ $(DUMB_OBJECT): %.o: %.c
+-	$(CC) $(OPTS) -o $@ -c $<
++	$(CC) $(CFLAGS) $(CPPFLAGS) -o $@ -c $<
+ 
+ $(CURSES_OBJECT): %.o: %.c
+-	$(CC) $(OPTS) $(CURSES_DEFS) -o $@ -c $<
++	$(CC) $(CFLAGS) $(CPPFLAGS) $(CURSES_DEFS) -o $@ -c $<
+ 
+ $(SDL_OBJECT): %.o: %.c
+-	$(CC) $(OPTS) $(SDL_DEFS) -o $@ -c $<
++	$(CC) $(CFLAGS) $(CPPFLAGS) $(SDL_DEFS) -o $@ -c $<
+ 
+ 
+ # If you're going to make this target manually, you'd better know which
