@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2019/07/17 01:32:37 gutteridge Exp $
+# $NetBSD: Makefile,v 1.50 2019/07/18 08:15:36 nia Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -6,7 +6,7 @@ DISTNAME=	xfce4-cpugraph-plugin-1.1.0
 CATEGORIES=	sysutils
 MASTER_SITES=	http://archive.xfce.org/src/panel-plugins/xfce4-cpugraph-plugin/1.1/
 
-HOMEPAGE=	http://goodies.xfce.org/projects/panel-plugins/xfce4-cpugraph-plugin
+HOMEPAGE=	https://goodies.xfce.org/projects/panel-plugins/xfce4-cpugraph-plugin
 COMMENT=	Xfce CPU load plugin
 
 USE_LANGUAGES=	c99
