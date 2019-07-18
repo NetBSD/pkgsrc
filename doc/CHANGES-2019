@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2945 2019/07/18 00:24:33 fox Exp $
+$NetBSD: CHANGES-2019,v 1.2946 2019/07/18 02:53:46 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4860,3 +4860,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated wm/awesome to 4.3 [nia 2019-07-17]
 	Added textproc/bat version 0.11.0 [fox 2019-07-18]
 	Added sysutils/exa version 0.9.0 [fox 2019-07-18]
+	Updated graphics/ristretto to 0.8.5 [gutteridge 2019-07-18]
