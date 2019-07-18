@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2019/03/26 07:29:02 triaxx Exp $
+$NetBSD: distinfo,v 1.13 2019/07/18 16:00:45 prlw1 Exp $
 
-SHA1 (yelp-xsl-3.32.0.tar.xz) = b78844fa5de95b5c46647228c3b1d446ac42a29e
-RMD160 (yelp-xsl-3.32.0.tar.xz) = bf080a6df82bc54978c6dabe4048c9493cde46b0
-SHA512 (yelp-xsl-3.32.0.tar.xz) = 1a703e58e97931fd00d875d8652185ff7c21845c119cfe3312982f18882178b06d088a26caff8067d7eebe8679b1ba1ca0f232e7bc03c685172d7ac3da308e30
-Size (yelp-xsl-3.32.0.tar.xz) = 528316 bytes
+SHA1 (yelp-xsl-3.32.1.tar.xz) = 29befb4ba818fb991a162d7405d6053b8224ec3d
+RMD160 (yelp-xsl-3.32.1.tar.xz) = 03b463bfd04e233d7f92adb1c06d718bf0abe9d6
+SHA512 (yelp-xsl-3.32.1.tar.xz) = 05a03e045c8278faaf39604d6cbccb449130d2c85e3231c8c9737e344fc249cd2949011fb1a0e4fb6085dc21374e7804fc7fa4161f51607d93b301cbcf5453be
+Size (yelp-xsl-3.32.1.tar.xz) = 528412 bytes
