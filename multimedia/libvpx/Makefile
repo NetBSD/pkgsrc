@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.76 2019/02/12 20:47:14 adam Exp $
+# $NetBSD: Makefile,v 1.77 2019/07/18 10:28:45 adam Exp $
 
-DISTNAME=	libvpx-1.8.0
+DISTNAME=	libvpx-1.8.1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=webmproject/}
 GITHUB_PROJECT=	libvpx
@@ -93,7 +93,7 @@ SUBST_STAGE.clang=	pre-configure
 SUBST_FILES.clang=	build/make/Makefile
 SUBST_MESSAGE.clang=	Disabling clang integrated assembler
 # Test for whether clang supports -fno-integrated-as instead of -no-integrated-as
-CLANG_INTEGRATED_AS!=  if ${CCPATH:Utrue} --version -fno-integrated-as > /dev/null 2>&1; then ${ECHO} "-fno-integrated-as"; else ${ECHO} "-no-integrated-as"; fi
+CLANG_INTEGRATED_AS!=	if ${CCPATH:Utrue} --version -fno-integrated-as > /dev/null 2>&1; then ${ECHO} "-fno-integrated-as"; else ${ECHO} "-no-integrated-as"; fi
 SUBST_SED.clang=	-e 's/-DINLINE_ASM/-DINLINE_ASM ${CLANG_INTEGRATED_AS}/'
 .  endif
 .endif
@@ -103,7 +103,7 @@ CONFIGURE_ARGS+=	--target=mips32-linux-gcc
 .endif
 
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "powerpc"
-CONFIGURE_ARGS+= 	--target=generic-gnu
+CONFIGURE_ARGS+=	--target=generic-gnu
 .endif
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-*arm*) || !empty(MACHINE_PLATFORM:MNetBSD-*-*aarch64*)
@@ -120,7 +120,7 @@ CONFIGURE_ARGS.MirBSD+=		--disable-runtime-cpu-detect
 # Under Solaris 10 its /usr/xpg4/bin/tr is not sufficient. PR pkg/48508
 .if !empty(MACHINE_PLATFORM:MSunOS-5.10*)
 BUILD_DEPENDS=		coreutils-[0-9]*:../../sysutils/coreutils
-TOOLS_PLATFORM.tr=	${LOCALBASE}/bin/gtr
+TOOLS_PLATFORM.tr=	${PREFIX}/bin/gtr
 .endif
 
 BUILD_TARGET=	# none
