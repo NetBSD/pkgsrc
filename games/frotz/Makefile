@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.33 2019/07/18 11:54:26 nia Exp $
+# $NetBSD: Makefile,v 1.34 2019/07/18 15:06:50 nia Exp $
 
 DISTNAME=	frotz-2.44
 CATEGORIES=	games
 MASTER_SITES=	https://gitlab.com/DavidGriffith/frotz/-/archive/${PKGVERSION_NOREV}/
 
 MAINTAINER=	seebs@plethora.net
-HOMEPAGE=	https://davidgriffith.gitlab.io/frotz/j
+HOMEPAGE=	https://davidgriffith.gitlab.io/frotz/
 COMMENT=	Curses-based interpreter for Infocom-compatible games
 LICENSE=	gnu-gpl-v2
 
