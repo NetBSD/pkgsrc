@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.820 2019/07/12 05:08:37 thorpej Exp $
+# $NetBSD: Makefile,v 1.821 2019/07/18 00:25:50 fox Exp $
 #
 
 COMMENT=	System utilities
@@ -164,6 +164,7 @@ SUBDIR+=	etckeeper
 SUBDIR+=	etcmanage
 SUBDIR+=	etcutils
 SUBDIR+=	eventlog
+SUBDIR+=	exa
 SUBDIR+=	extipl
 SUBDIR+=	fabric
 SUBDIR+=	facette
