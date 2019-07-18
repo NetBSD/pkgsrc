@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19131 2019/07/17 13:33:50 triaxx Exp $
+$NetBSD: TODO,v 1.19132 2019/07/18 11:54:42 nia Exp $
 
 Suggested new packages
 ======================
@@ -673,7 +673,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o freetype-utils-1.5.20050518
 	o freewais-sf-2.2.14
 	o frink-2.3.1a2
-	o frotz-2.44
 	o ftplibpp-2.0.2
 	o fuse-archivemount-0.8.7
 	o fuse-bindfs-1.13.7
