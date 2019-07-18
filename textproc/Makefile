@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1032 2019/05/28 14:10:55 wiz Exp $
+# $NetBSD: Makefile,v 1.1033 2019/07/18 00:15:24 fox Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -120,6 +120,7 @@ SUBDIR+=	aspell-yi
 SUBDIR+=	aspell-zu
 SUBDIR+=	aspic
 SUBDIR+=	awf
+SUBDIR+=	bat
 SUBDIR+=	bibclean
 SUBDIR+=	biblook
 SUBDIR+=	bibparse
