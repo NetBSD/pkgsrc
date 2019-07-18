@@ -1,0 +1,11 @@
+$NetBSD: patch-meson.build,v 1.1 2019/07/18 15:03:51 prlw1 Exp $
+
+Avoid libxml2 dependency by dropping tests.
+
+--- meson.build.orig	2019-06-18 11:14:23.000000000 +0000
++++ meson.build
+@@ -61,4 +61,3 @@ install_data('at-spi2-atk.desktop',
+ 
+ subdir('droute')
+ subdir('atk-adaptor')
+-subdir('tests')
