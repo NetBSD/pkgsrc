@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q2,v 1.1.2.4 2019/07/13 11:29:06 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q2,v 1.1.2.5 2019/07/18 13:39:59 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q2 branch:
 
@@ -47,4 +47,28 @@ audio/faad2: security fix
 
 Pullup ticket #5997 - requested by taca
 fonts/ricty-ttf: build fix
+
+Pullup ticket #5998 - requested by nia
+audio/libsndfile: security fix
+
+Pullup ticket #5999 - requested by nia
+archivers/unzip: security fix
+
+Pullup ticket #6000 - requested by nia
+audio/audacity: i386 build fix
+
+Pullup ticket #6001 - requested by nia
+audio/cmus: i386 build fix
+
+Pullup ticket #6003 - requested by gutteridge
+x11/libxfceui: build fix
+
+Pullup ticket #6004 - requested by nia
+graphics/tiff: security fix
+
+Pullup ticket #6005 - requested by nia
+audio/taglib: security fix
+
+Pullup ticket #6006 - requested by nia
+archivers/p7zip: security fix
 
