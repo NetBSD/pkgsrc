@@ -1,0 +1,15 @@
+$NetBSD: patch-configs_A20-OLinuXino-Lime2_defconfig,v 1.1 2019/07/18 19:18:33 bouyer Exp $
+
+CONFIG_GMAC_TX_DELAY=4 required for lime2 boards with a Micrel PHY,
+doesn't hurt for older ones (with the realtek PHY)
+
+--- configs/A20-OLinuXino-Lime2_defconfig.orig	2019-07-17 18:57:03.912432611 +0200
++++ configs/A20-OLinuXino-Lime2_defconfig	2019-07-17 18:59:35.091714198 +0200
+@@ -9,6 +9,7 @@
+ CONFIG_I2C1_ENABLE=y
+ CONFIG_SATAPWR="PC3"
+ CONFIG_AHCI=y
++CONFIG_GMAC_TX_DELAY=4
+ CONFIG_NR_DRAM_BANKS=1
+ # CONFIG_SYS_MALLOC_CLEAR_ON_INIT is not set
+ CONFIG_SPL_I2C_SUPPORT=y
