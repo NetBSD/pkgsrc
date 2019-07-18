@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/11/14 22:22:28 kleink Exp $
+# $NetBSD: Makefile,v 1.11 2019/07/18 08:15:36 nia Exp $
 
 DISTNAME=	xfburn-0.5.5
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	http://archive.xfce.org/src/apps/xfburn/0.5/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://goodies.xfce.org/projects/applications/xfburn
+HOMEPAGE=	https://goodies.xfce.org/projects/applications/xfburn
 COMMENT=	Simple CD/DVD burning program for xfce
 LICENSE=	gnu-gpl-v2
 
