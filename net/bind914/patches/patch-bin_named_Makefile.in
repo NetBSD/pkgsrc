@@ -1,18 +1,18 @@
-$NetBSD: patch-bin_named_Makefile.in,v 1.1 2019/04/30 03:34:34 taca Exp $
+$NetBSD: patch-bin_named_Makefile.in,v 1.2 2019/07/18 03:02:02 taca Exp $
 
 * Add support for blacklistd.
 
---- bin/named/Makefile.in.orig	2019-04-06 20:09:59.000000000 +0000
+--- bin/named/Makefile.in.orig	2019-07-09 18:15:48.000000000 +0000
 +++ bin/named/Makefile.in
-@@ -84,6 +84,7 @@ SUBDIRS =	unix
+@@ -85,6 +85,7 @@ SUBDIRS =	unix
  
  TARGETS =	named@EXEEXT@
  
 +BLACKLISTLINKOBJS= pfilter.@O@
  GEOIPLINKOBJS = geoip.@O@
+ GEOIP2LINKOBJS = geoip.@O@
  
- OBJS =		builtin.@O@ config.@O@ control.@O@ \
-@@ -91,12 +92,13 @@ OBJS =		builtin.@O@ config.@O@ control.@
+@@ -94,12 +95,13 @@ OBJS =		builtin.@O@ config.@O@ control.@
  		log.@O@ logconf.@O@ main.@O@ \
  		server.@O@ statschannel.@O@ \
  		tkeyconf.@O@ tsigconf.@O@ zoneconf.@O@ \
@@ -25,9 +25,9 @@ $NetBSD: patch-bin_named_Makefile.in,v 1.1 2019/04/30 03:34:34 taca Exp $
  
 +BLACKLISTLINKSRCS= pfilter.c
  GEOIPLINKSRCS = geoip.c
+ GEOIP2LINKSRCS = geoip.c
  
- SRCS =		builtin.c config.c control.c \
-@@ -104,7 +106,7 @@ SRCS =		builtin.c config.c control.c \
+@@ -109,7 +111,7 @@ SRCS =		builtin.c config.c control.c \
  		log.c logconf.c main.c \
  		server.c statschannel.c \
  		tkeyconf.c tsigconf.c zoneconf.c \
