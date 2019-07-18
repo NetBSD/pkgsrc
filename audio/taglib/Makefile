@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2017/05/03 08:38:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.39.20.1 2019/07/18 13:33:52 bsiegert Exp $
 
 DISTNAME=	taglib-1.11.1
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://taglib.github.io/releases/
 
