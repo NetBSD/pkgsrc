@@ -1,0 +1,5 @@
+SameBoy is an extremely accurate open source Nintendo Gameboy (DMG)
+and Gameboy Color (CGB) emulator, written in portable C.
+
+It features link cable emulation, and includes open source DMG and CGB
+boot ROMs.
