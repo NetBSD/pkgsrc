@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2953 2019/07/18 11:29:30 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2954 2019/07/18 11:30:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4869,5 +4869,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated multimedia/libvpx to 1.8.1 [adam 2019-07-18]
 	Updated emulators/libretro-sameboy to 0.12.1 [nia 2019-07-18]
 	Added emulators/sameboy version 0.12.1 [nia 2019-07-18]
-	Added emulators/sameboy version 0.12.1 [nia 2019-07-18]
 	Updated graphics/feh to 3.2 [nia 2019-07-18]
+	Updated devel/py-virtualenv to 16.6.2 [adam 2019-07-18]
+	Updated time/py-pendulum to 2.0.5 [adam 2019-07-18]
