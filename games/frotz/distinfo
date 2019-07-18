@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.12 2015/11/03 20:56:50 agc Exp $
+$NetBSD: distinfo,v 1.13 2019/07/18 11:54:26 nia Exp $
 
-SHA1 (frotz-2.43.tar.gz) = 2b2684ec670b471489c15be732c7dd1c59821b00
-RMD160 (frotz-2.43.tar.gz) = ccfc303e116e517caff0fec8f3bd555dfc02ae4e
-SHA512 (frotz-2.43.tar.gz) = 654f2ca2d1a625df8f88b5629e09a873668cea42688acdf154636b066b94fc9d70b7f45acb33a71d234c19b59c394c63aee38d6224245b3b329210e6b4a58409
-Size (frotz-2.43.tar.gz) = 160771 bytes
-SHA1 (patch-aa) = 1d6f92a0c5fae76d13e4de0ce4a9886eda4d1ca9
-SHA1 (patch-pb) = e7d63332e82b5835de051ec0696a76dbe3822042
+SHA1 (frotz-2.44.tar.gz) = d7203a80605d4dc9731b65c92c677738ba105100
+RMD160 (frotz-2.44.tar.gz) = 69314238d040ca1aefd87b9e4a3468463842b312
+SHA512 (frotz-2.44.tar.gz) = a6d41005fc62a93fd4b3a0b573365999bc635108cca5fc8cb03f347e3e1ddac0a6f7aec2e90f079d4875886ed779af9cf8c75543dd530165b0b78b51d05c3862
+Size (frotz-2.44.tar.gz) = 276718 bytes
+SHA1 (patch-aa) = e087f9f519b492f1e0fdb60b358d8ebe07288415
+SHA1 (patch-src_curses_ux__audio__oss.c) = 74ecf48d2dab36bc9ebb4c5bbf70e011a4b6cd49
