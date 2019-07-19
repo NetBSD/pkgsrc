@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19133 2019/07/19 09:12:33 nia Exp $
+$NetBSD: TODO,v 1.19134 2019/07/19 09:13:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -964,7 +964,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmtag-0.3.6
 	o liboobs-2.32.0
 	o liboop-1.0.1
-	o libpciaccess-0.15
+	o libpciaccess-0.16
 	o libpgm-5.2.122
 	o libprelude-3.1.0
 	o libpreludedb-3.1.0
@@ -1021,7 +1021,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mftrace-1.2.18
 	o mg-20160118
 	o mgetty+sendfax-1.1.35
-	o micro_httpd-20140814
 	o miller-5.3.0
 	o milter-greylist-4.6
 	o milter-manager-2.1.1
@@ -1093,7 +1092,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o opensc-0.19.0
 	o openslp-2.0.0
 	o opensmtpd-6.0.0
-	o openssl-1.0.2q
 	o openvas-libraries-8.0.8
 	o opera-26
 	o oroborus-2.0.18
@@ -1101,7 +1099,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o oto-0.5
 	o p0f-3.08b
 	o p5-DBD-DB2-1.85
-	o p5-MooseX-App-1.41
 	o p5-Publican-4.3.2
 	o p5-RT-Authen-ExternalAuth-0.27
 	o packagekit-0.5.3
@@ -1120,7 +1117,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pflogsumm-1.1.5
 	o pgadmin4-1.0
 	o pgbuildfarm-4.17
-	o phoronix-test-suite-8.8
 	o php-basercms-4.0.0
 	o php-concrete5-8.3.2
 	o php-jpgraph-3.5.0b1
@@ -1241,7 +1237,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rt4-4.4.0
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.4
-	o ruby-jquery-rails-4.2.1
 	o ruby-redmine-3.3.9
 	o ruby-redmine-3.4.8
 	o ruby-redmine-4.0.1
@@ -1358,7 +1353,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tomboy-1.10.2
 	o top-3.8beta1
 	o topgit-0.8
-	o tor-browser-8.5.1
+	o tor-browser-8.5.4
 	o totem-3.14.1
 	o totem-pl-parser-3.10.3
 	o transmission-2.94
@@ -1436,6 +1431,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xfsprogs-4.3.0
 	o xhippo-3.5
 	o xine-1.2.3
+	o xinput-1.6.3
 	o xjman-0.7
 	o xkeyboard-config-2.27
 	o xli-2006.11.10
