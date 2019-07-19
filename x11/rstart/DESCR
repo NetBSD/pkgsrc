@@ -1,6 +1,0 @@
-This package includes both the client and server sides implementing the protocol
-described in the "A Flexible Remote Execution Protocol Based on rsh" paper found
-in the specs/ subdirectory.
-
-This software has been deprecated in favor of the X11 forwarding provided in
-common ssh implementations.

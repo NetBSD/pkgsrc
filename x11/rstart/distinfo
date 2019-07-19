@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 03:28:53 agc Exp $
-
-SHA1 (rstart-1.0.5.tar.bz2) = 97fad3686b4687104a58b3f2b7b387d316b26b92
-RMD160 (rstart-1.0.5.tar.bz2) = e23d45cd744f60ece5a876bc8dc693d8ddfe5913
-SHA512 (rstart-1.0.5.tar.bz2) = bda43dd29f95ba5ea4ab42e78069c4011afc6987d00dc580250aec8bec217fabb67577a3038607468de1739d54da596a43cea4c1f5be72e3e572ae6d5abbc09a
-Size (rstart-1.0.5.tar.bz2) = 144607 bytes
