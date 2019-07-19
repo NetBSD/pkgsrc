@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2019/06/30 19:28:59 leot Exp $
+@comment $NetBSD: PLIST,v 1.31 2019/07/19 20:38:40 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -99,6 +99,9 @@ ${PYSITELIB}/gallery_dl/extractor/dynastyscans.pyo
 ${PYSITELIB}/gallery_dl/extractor/e621.py
 ${PYSITELIB}/gallery_dl/extractor/e621.pyc
 ${PYSITELIB}/gallery_dl/extractor/e621.pyo
+${PYSITELIB}/gallery_dl/extractor/erolord.py
+${PYSITELIB}/gallery_dl/extractor/erolord.pyc
+${PYSITELIB}/gallery_dl/extractor/erolord.pyo
 ${PYSITELIB}/gallery_dl/extractor/exhentai.py
 ${PYSITELIB}/gallery_dl/extractor/exhentai.pyc
 ${PYSITELIB}/gallery_dl/extractor/exhentai.pyo
@@ -390,6 +393,9 @@ ${PYSITELIB}/gallery_dl/postprocessor/exec.pyo
 ${PYSITELIB}/gallery_dl/postprocessor/metadata.py
 ${PYSITELIB}/gallery_dl/postprocessor/metadata.pyc
 ${PYSITELIB}/gallery_dl/postprocessor/metadata.pyo
+${PYSITELIB}/gallery_dl/postprocessor/mtime.py
+${PYSITELIB}/gallery_dl/postprocessor/mtime.pyc
+${PYSITELIB}/gallery_dl/postprocessor/mtime.pyo
 ${PYSITELIB}/gallery_dl/postprocessor/ugoira.py
 ${PYSITELIB}/gallery_dl/postprocessor/ugoira.pyc
 ${PYSITELIB}/gallery_dl/postprocessor/ugoira.pyo
