@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/05/31 00:28:47 rodent Exp $
-lib/libWindowsWM.la
-lib/pkgconfig/windowswm.pc
-man/man3/WindowsWM.3

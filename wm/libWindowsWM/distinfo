@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/11/02 23:42:53 agc Exp $
-
-SHA1 (libWindowsWM-1.0.1.tar.bz2) = 23e0fe25060c859b4c40999d264133127e6e1ca7
-RMD160 (libWindowsWM-1.0.1.tar.bz2) = 0bd8e647b63c6e725e870b71d6286f84fbd12c1c
-SHA512 (libWindowsWM-1.0.1.tar.bz2) = 7fe408c0c413d1c0898942fb73bf1a98d7afaad0dd0e23f656e1d1e6548fdc7e866eafa2bae4ed4b88fe9e2dc51800c4eee32d05482e5b447df7568d041178e7
-Size (libWindowsWM-1.0.1.tar.bz2) = 246815 bytes

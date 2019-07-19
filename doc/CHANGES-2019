@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2971 2019/07/19 12:09:01 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2972 2019/07/19 12:09:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4893,3 +4893,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/cmake to 3.15.0 [adam 2019-07-19]
 	Updated graphics/ImageMagick to 7.0.8.54 [nia 2019-07-19]
 	Updated meta-pkgs/modular-xorg-libs to 1.7 [wiz 2019-07-19]
+	Removed wm/libWindowsWM [wiz 2019-07-19]
