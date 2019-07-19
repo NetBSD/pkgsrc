@@ -1,5 +1,0 @@
-WindowsWM - Cygwin/X rootless window management extension.
-
-WindowsWM is a simple library designed to interface with the Windows-WM
-extension.  This extension allows X window managers to better interact with the
-Cygwin XWin server when running X11 in a rootless mode.

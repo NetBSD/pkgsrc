@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2019/04/02 01:50:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.138 2019/07/19 12:09:56 wiz Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -52,7 +52,6 @@ SUBDIR+=	icewmconf
 SUBDIR+=	jwm
 SUBDIR+=	larswm
 SUBDIR+=	libAppleWM
-SUBDIR+=	libWindowsWM
 SUBDIR+=	lwm
 SUBDIR+=	marco
 SUBDIR+=	matchbox-wm
