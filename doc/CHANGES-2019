@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2968 2019/07/19 08:32:56 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2969 2019/07/19 09:07:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4890,3 +4890,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-at-spi2 to 2.33.2 [prlw1 2019-07-18]
 	Updated textproc/yelp-xsl to 3.32.1 [prlw1 2019-07-18]
 	Updated net/get_iplayer to 3.21 [nia 2019-07-19]
+	Updated devel/cmake to 3.15.0 [adam 2019-07-19]
