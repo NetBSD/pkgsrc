@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.142 2019/06/01 20:24:07 adam Exp $
+$NetBSD: distinfo,v 1.143 2019/07/19 09:06:23 adam Exp $
 
-SHA1 (cmake-3.14.5.tar.gz) = a4c021c4fa91e812b87d9c88fdd047ead4201a2f
-RMD160 (cmake-3.14.5.tar.gz) = dd8c7c0aa7a64584453eec13fbc292c4d7edfd7c
-SHA512 (cmake-3.14.5.tar.gz) = 9acd2de17db86052801194cac570bfc104320c249b83058aa59554b42c3d5af9c9293d1c069f3fe8512a80103d511186d840168cbc190ce9584ca99cb9b11e46
-Size (cmake-3.14.5.tar.gz) = 8854929 bytes
+SHA1 (cmake-3.15.0.tar.gz) = 0a1c3870d566061da8b9ed02bbfe17a39c7bf3cd
+RMD160 (cmake-3.15.0.tar.gz) = 7f765e330737c04e99473804cacab752b7609233
+SHA512 (cmake-3.15.0.tar.gz) = f7286513a215a9b9094c1f630761995dbc7f4e33c38bc5585ddc89d9b4742630962921aff59570e0de39887e0cc66df6eebc83ab478796876364d2de5d2c0d6f
+Size (cmake-3.15.0.tar.gz) = 9266870 bytes
 SHA1 (patch-CMakeLists.txt) = 01329182725814e27bc3945d1d62555b3a4a4033
 SHA1 (patch-Modules_Compiler_GNU.cmake) = e091c53ac3f3a6cd811119d3231563df32e76bf9
 SHA1 (patch-Modules_FindCurses.cmake) = 1372faaf1b7a1b5f5f592c797f39e1a9002a24a6
@@ -15,10 +15,11 @@ SHA1 (patch-Modules_Platform_UnixPaths.cmake) = 38720e11b7b62cb702e80da19e044f07
 SHA1 (patch-Source_CMakeLists.txt) = 533667d43048b8bc2be17a766b5dc32f3101866e
 SHA1 (patch-Source_Checks_Curses_CMakeLists.txt) = 37d95c6162cc1f4c0e47b537ac8204cb9fe75b8c
 SHA1 (patch-Source_Checks_Curses_CheckCurses.c) = c86cae48f7b39fb735eba4788d4e9d595b2ccf3b
-SHA1 (patch-Source_Checks_cm__cxx17__check.cpp) = e6cd7c8d96559a3e249914343e0991777d7c0a34
+SHA1 (patch-Source_Checks_cm__cxx17__check.cpp) = 69619695a17798e7bcf1416a2eb2abbca0369481
 SHA1 (patch-Source_Checks_cm_cxx_features.cmake) = 3ae61236f065729a5cf719abbad0f5be618a0548
 SHA1 (patch-Source_CursesDialog_ccmake.cxx) = d7baafe6612b6ac9b0542ed10ffcf90cd8d1df87
 SHA1 (patch-Source_cmAlgorithms.h) = c51cc61b1a95c07bd903363d4a04e1430e510516
+SHA1 (patch-Source_cmArchiveWrite.cxx) = 01977c6033a849de52b086aa4227107df3cde04e
 SHA1 (patch-Source_cm__string__view.hxx) = 9f2fa518d26dcaebb1e988c8027fb16456e1b80d
 SHA1 (patch-Utilities_KWIML_CMakeLists.txt) = e4bdf9fc58757e87bf7e3e3e195839eededbc796
 SHA1 (patch-bootstrap) = 9d99cfe9f9ae826250f94bc297f5a22b8de09e84
