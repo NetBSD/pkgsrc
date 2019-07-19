@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2974 2019/07/19 20:38:53 leot Exp $
+$NetBSD: CHANGES-2019,v 1.2975 2019/07/19 21:13:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4896,3 +4896,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed wm/libWindowsWM [wiz 2019-07-19]
 	Updated www/curl to 7.65.3 [leot 2019-07-19]
 	Updated net/gallery-dl to 1.9.0 [leot 2019-07-19]
+	Removed x11/xtrap [wiz 2019-07-19]
+	Removed x11/libXTrap [wiz 2019-07-19]
+	Updated meta-pkgs/modular-xorg-apps to 1.14.1.11 [wiz 2019-07-19]
+	Updated meta-pkgs/modular-xorg-libs to 1.8 [wiz 2019-07-19]
