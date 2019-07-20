@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2019/07/20 22:46:42 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2019/07/20 23:14:41 wiz Exp $
 
 PKGNAME=	transmission-qt-${VERSION}
-PKGREVISION=	25
+COMMENT=	Free, lightweight BitTorrent client (QT version)
 
-USE_LANGUAGES=		c c++
 MAKE_ENV+=		QTDIR=${QTDIR}
 
 .include "../../mk/bsd.fast.prefs.mk"
@@ -21,6 +20,8 @@ CONFIGURE_ARGS+=	--without-gtk
 
 CONFLICTS+=		Transmission-gui-[0-9]*
 
+INSTALLATION_DIRS=	share/applications
+
 .include "../../net/transmission/Makefile.common"
 
 post-build:
@@ -31,7 +32,6 @@ do-install:
 	cd ${WRKSRC}/qt && ${SETENV} ${INSTALL_ENV} make install
 
 post-install:
-	${MKDIR} ${DESTDIR}${PREFIX}/share/applications &&		\
 	${INSTALL_DATA} ${FILESDIR}/transmission-qt.desktop		\
 	${DESTDIR}${PREFIX}/share/applications/transmission-qt.desktop
 
