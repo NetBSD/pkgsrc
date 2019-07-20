@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1258 2019/07/02 03:58:14 adam Exp $
+# $NetBSD: Makefile,v 1.1259 2019/07/20 23:09:27 gdt Exp $
 #
 
 COMMENT=	Networking tools
@@ -361,6 +361,7 @@ SUBDIR+=	mono-nat
 SUBDIR+=	monotorrent
 SUBDIR+=	monsoon
 SUBDIR+=	mosh
+SUBDIR+=	mosquitto
 SUBDIR+=	mouse-pppoe
 SUBDIR+=	mping
 SUBDIR+=	mrstat
