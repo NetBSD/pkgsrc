@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2867 2019/07/20 21:17:39 schmonz Exp $
+# $NetBSD: Makefile,v 1.2868 2019/07/20 21:19:35 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -509,6 +509,7 @@ SUBDIR+=	java-subversion
 SUBDIR+=	javacc
 SUBDIR+=	javadeps
 SUBDIR+=	jd-gui
+SUBDIR+=	jdebp-redo
 SUBDIR+=	jemalloc
 SUBDIR+=	jenkins
 SUBDIR+=	jenkins-lts
