@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2019/07/20 21:18:59 schmonz Exp $
+
+SHA1 (redo-1.4.tar.gz) = 3dc3d19e4b253478bd75c392fe988717f5f5fbaf
+RMD160 (redo-1.4.tar.gz) = 15a6a91a084a13a0c7eecafdb19f061562ea920c
+SHA512 (redo-1.4.tar.gz) = c90c75acc53cb478edefb6fa5d6e76807239f94837416cbf814e0d08c4b30bcf5a9edb7b9065358e30395619ad5deb749790819eb8ed45719facbe680e150d63
+Size (redo-1.4.tar.gz) = 21514 bytes
+SHA1 (patch-package_prepare) = 9dc0295ab3fe6830d920c49beeb9caae6bca0eab
