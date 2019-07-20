@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2019/05/23 19:22:58 rillig Exp $
+# $NetBSD: Makefile,v 1.60 2019/07/20 18:01:45 tnn Exp $
 
 DISTNAME=	gps-${GPS_VERSION}
 PKGREVISION=	22
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 # GPS is no longer buildable and needs to be updated to work with
 # current Ada compilers. The former MAINTAINER abandoned it.
-PKG_FAIL_REASON=	Unbuildable with gcc5-aux.
+PKG_FAIL_REASON+=	"Unbuildable with gcc5-aux."
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake sed perl awk pkg-config
