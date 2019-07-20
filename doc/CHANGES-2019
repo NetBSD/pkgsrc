@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2990 2019/07/20 22:53:08 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2991 2019/07/20 22:57:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4916,3 +4916,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/libev to 4.27 [wiz 2019-07-20]
 	Updated security/nettle to 3.5.1 [wiz 2019-07-20]
 	Updated mail/thunderbird-enigmail to 2.0.12 [wiz 2019-07-20]
+	Updated textproc/py-enchant to 2.0.0 [wiz 2019-07-20]
