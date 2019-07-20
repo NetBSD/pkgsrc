@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2019/07/08 16:46:32 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/07/20 10:39:18 nia Exp $
 bin/mixxx
 lib/mixxx/plugins/soundsourceqt5/libsoundsourcem4a.so
-lib/mixxx/plugins/soundsourceqt5/libsoundsourcewv.so
+${PLIST.wavpack}lib/mixxx/plugins/soundsourceqt5/libsoundsourcewv.so
 share/appdata/mixxx.appdata.xml
 share/applications/mixxx.desktop
 share/doc/mixxx/LICENSE
