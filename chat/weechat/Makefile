@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.97 2019/07/17 12:10:32 nia Exp $
+# $NetBSD: Makefile,v 1.98 2019/07/20 12:08:01 leot Exp $
 
 DISTNAME=	weechat-2.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	chat
 MASTER_SITES=	https://www.weechat.org/files/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -20,6 +20,7 @@ USE_LIBTOOL=		yes
 USE_CMAKE=		yes
 FAKE_NCURSES=		yes
 
+CMAKE_ARGS+=		-DCA_FILE:STRING=${PREFIX}/share/mozilla-rootcerts/cacert.pem
 CMAKE_ARGS+=		-DENABLE_GUILE:BOOL=OFF
 CMAKE_ARGS+=		-DENABLE_TCL:BOOL=OFF
 CMAKE_ARGS+=		-DENABLE_MAN:BOOL=OFF # Requires ascii-doctor
