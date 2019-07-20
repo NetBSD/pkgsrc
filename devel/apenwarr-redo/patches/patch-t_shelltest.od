@@ -1,0 +1,14 @@
+$NetBSD: patch-t_shelltest.od,v 1.1 2019/07/20 21:17:11 schmonz Exp $
+
+Avoid spurious output.
+
+--- t/shelltest.od.orig	2019-01-02 19:49:33.000000000 +0000
++++ t/shelltest.od
+@@ -14,6 +14,7 @@
+ #
+ exec >&2
+ set +e
++unset CDPATH
+ 
+ : ${SHELLTEST_QUIET:=}
+ 

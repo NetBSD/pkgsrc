@@ -1,0 +1,15 @@
+$NetBSD: patch-do,v 1.1 2019/07/20 21:17:11 schmonz Exp $
+
+Avoid spurious output.
+
+--- do.orig	2019-01-02 19:49:33.000000000 +0000
++++ do
+@@ -11,6 +11,8 @@
+ # redo itself does.
+ #
+ 
++unset CDPATH
++
+ die() {
+ 	echo "$0:" "$@" >&2
+ 	exit 42
