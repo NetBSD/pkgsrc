@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2019/06/08 10:40:55 rillig Exp $
+# $NetBSD: Makefile,v 1.52 2019/07/20 22:46:17 wiz Exp $
 #
 
 DISTNAME=	ghex-2.24.0
-PKGREVISION=	44
+PKGREVISION=	45
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/ghex/2.24/}
 EXTRACT_SUFX=	.tar.bz2
