@@ -1,18 +1,18 @@
-# $NetBSD: Makefile.common,v 1.8 2016/04/15 09:28:39 wiz Exp $
+# $NetBSD: Makefile.common,v 1.9 2019/07/20 23:14:40 wiz Exp $
 #
 # used by net/transmission/Makefile
 # used by net/transmission-gtk/Makefile
 # used by net/transmission-qt/Makefile
 
-VERSION=	2.92
+VERSION=	2.94
 DISTNAME=	transmission-${VERSION}
 CATEGORIES=	net
-MASTER_SITES=	http://download.m0k.org/transmission/files/
+MASTER_SITES=	https://github.com/transmission/transmission-releases/raw/master/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.transmissionbt.com/
-COMMENT=	Free, lightweight BitTorrent client
+COMMENT?=	Free, lightweight BitTorrent client
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
@@ -29,10 +29,10 @@ GNU_CONFIGURE=		yes
 LDFLAGS+=		${BUILDLINK_LDADD.getopt} ${BUILDLINK_LDADD.gettext}
 
 .include "../../mk/bsd.prefs.mk"
-.if !empty(OPSYS:M*BSD) || !empty(OPSYS:MDragonFly)
+.if !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly"
 CPPFLAGS+=		-DBSD
 .endif
-.if !empty(OPSYS:MDarwin)
+.if ${OPSYS} == "Darwin"
 LDFLAGS+=		-framework CoreFoundation
 .endif
 
