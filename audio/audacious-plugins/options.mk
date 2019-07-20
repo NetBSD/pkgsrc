@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.10 2019/07/06 13:17:01 nia Exp $
+# $NetBSD: options.mk,v 1.11 2019/07/20 10:39:18 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.audacious-plugins
 PKG_SUPPORTED_OPTIONS+=		alsa jack pulseaudio lirc
-PKG_SUPPORTED_OPTIONS+=		adplug sidplay fluidsynth libgme modplug
+PKG_SUPPORTED_OPTIONS+=		adplug sidplay fluidsynth libgme modplug wavpack
 PKG_SUGGESTED_OPTIONS.Linux+=	alsa lirc
 PKG_OPTIONS_LEGACY_OPTS+=	sid:sidplay
 
@@ -78,4 +78,12 @@ PLIST_VARS+=	modplug
 PLIST.modplug=	yes
 .else
 CONFIGURE_ARGS+=	--disable-modplug
+.endif
+
+PLIST_VARS+=	wavpack
+.if !empty(PKG_OPTIONS:Mwavpack)
+.  include "../../audio/wavpack/buildlink3.mk"
+PLIST.wavpack=	yes
+.else
+CONFIGURE_ARGS+=	--disable-wavpack
 .endif
