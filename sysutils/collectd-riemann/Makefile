@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2018/08/22 09:46:32 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/07/20 22:46:50 wiz Exp $
 
 COLLECTD_PACKAGE=	riemann
 COLLECTD_PLUGINS=	write_riemann
 
 COMMENT=		Statistics collection daemon - riemann plugin
-PKGREVISION=		3
+PKGREVISION=		4
 
 .include "../../sysutils/collectd/Makefile.common"
 
