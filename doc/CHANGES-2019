@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2982 2019/07/20 21:01:34 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2983 2019/07/20 21:11:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4908,3 +4908,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/gimp2-wideangle to 1.0.10 [tnn 2019-07-20]
 	Updated graphics/gimp-warp-sharp to 1.5 [tnn 2019-07-20]
 	Updated lang/guile22 to 2.2.6 [wiz 2019-07-20]
+	Updated pkgtools/x11-links to 1.21 [wiz 2019-07-20]
