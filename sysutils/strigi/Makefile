@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.67 2019/07/17 00:51:07 nia Exp $
+# $NetBSD: Makefile,v 1.68 2019/07/20 20:36:28 nia Exp $
 
 DISTNAME=	strigi-0.7.8
-PKGREVISION=	27
+PKGREVISION=	28
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.vandenoever.info/software/strigi/
 EXTRACT_SUFX=	.tar.bz2
@@ -34,6 +34,7 @@ LDFLAGS.Linux+=		-lclucene-shared
 CFLAGS.SunOS+=	-DCMAKE_HAVE_PTHREAD_CREATE
 LDFLAGS.SunOS+=	-mimpure-text -lrt -lsocket -lclucene-shared
 
+CMAKE_ARGS+=	-DENABLE_EXIV2=OFF
 CMAKE_ARGS+=	-DENABLE_FFMPEG=OFF
 .if !empty(RT_LIB_SCHED)
 # these use sched_setscheduler
@@ -49,7 +50,6 @@ BUILDLINK_API_DEPENDS.libclucene+=	libclucene>=2.3.3.4
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/cppunit/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/exiv2/buildlink3.mk"
 .include "../../textproc/libclucene/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
