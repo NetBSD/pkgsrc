@@ -1,4 +1,7 @@
-$NetBSD: patch-qt_qtr.pro,v 1.5 2017/07/13 13:38:59 wiz Exp $
+$NetBSD: patch-qt_qtr.pro,v 1.6 2019/07/20 23:14:40 wiz Exp $
+
+1. Fix man page installation path.
+2. add openssl cflags/ldflags (still needed?)
 
 --- qt/qtr.pro.orig	2015-12-29 00:47:32.464150631 +0000
 +++ qt/qtr.pro
