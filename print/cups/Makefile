@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.263 2018/12/10 07:54:49 leot Exp $
+# $NetBSD: Makefile,v 1.264 2019/07/20 22:46:44 wiz Exp $
 
+PKGREVISION= 1
 .include "../../print/cups/Makefile.common"
 
 PKGNAME=	cups-${CUPS_VERS}

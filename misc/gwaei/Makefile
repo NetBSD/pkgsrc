@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.68 2019/07/01 04:08:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.69 2019/07/20 22:46:33 wiz Exp $
 #
 
 DISTNAME=	gwaei-3.6.2
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gwaei/}
 EXTRACT_SUFX=	.tar.xz

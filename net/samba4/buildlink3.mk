@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2019/03/20 19:09:10 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2019/07/20 22:46:03 wiz Exp $
 
 BUILDLINK_TREE+=	samba
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	samba
 SAMBA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.samba+=	samba>=4.9.4
+BUILDLINK_ABI_DEPENDS.samba?=	samba>=4.10.5nb2
 BUILDLINK_PKGSRCDIR.samba?=	../../net/samba4
 
 .include "../../archivers/libarchive/buildlink3.mk"
