@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2018/04/17 22:29:33 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2019/07/20 22:46:03 wiz Exp $
 #
 
 DISTNAME=	net6-1.3.14
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	http://releases.0x539.de/net6/
 

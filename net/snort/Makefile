@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2018/07/04 13:40:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.60 2019/07/20 22:46:41 wiz Exp $
 #
 
 DISTNAME=		snort-2.9.9.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net security
 MASTER_SITES=		https://www.snort.org/downloads/archive/snort/
 

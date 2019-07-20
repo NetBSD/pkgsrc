@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2019/03/26 19:29:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2019/07/20 22:46:00 wiz Exp $
 
 DISTNAME=	radare2-3.3.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://radare.mikelloc.com/get/3.3.0/
 
