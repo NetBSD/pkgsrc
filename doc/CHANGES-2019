@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2980 2019/07/20 19:02:50 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2981 2019/07/20 20:06:33 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4905,3 +4905,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/qt5-qtwebkit to 5.212.0.alpha3 [nia 2019-07-20]
 	Updated wm/xfce4-wm to 4.13.3nb2 [gutteridge 2019-07-20]
 	Updated graphics/ImageMagick to 7.0.8.55 [nia 2019-07-20]
+	Updated graphics/gimp2-wideangle to 1.0.10 [tnn 2019-07-20]
+	Updated graphics/gimp-warp-sharp to 1.5 [tnn 2019-07-20]
