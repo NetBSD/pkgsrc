@@ -1,0 +1,20 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2019/07/20 23:09:27 gdt Exp $
+
+Adjust pkgconfig installation location to lib, not share.
+
+Sent upstream via email 20190427.
+
+--- CMakeLists.txt.orig	2019-06-18 11:45:59.000000000 +0000
++++ CMakeLists.txt
+@@ -108,9 +108,9 @@ install(FILES mosquitto.conf aclfile.exa
+ # ========================================
+ 
+ configure_file(libmosquitto.pc.in libmosquitto.pc @ONLY)
+-install(FILES "${CMAKE_CURRENT_BINARY_DIR}/libmosquitto.pc" DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pkgconfig")
++install(FILES "${CMAKE_CURRENT_BINARY_DIR}/libmosquitto.pc" DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig")
+ configure_file(libmosquittopp.pc.in libmosquittopp.pc @ONLY)
+-install(FILES "${CMAKE_CURRENT_BINARY_DIR}/libmosquittopp.pc" DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pkgconfig")
++install(FILES "${CMAKE_CURRENT_BINARY_DIR}/libmosquittopp.pc" DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig")
+ 
+ # ========================================
+ # Testing

@@ -1,0 +1,23 @@
+$NetBSD: patch-lib_CMakeLists.txt,v 1.1 2019/07/20 23:09:27 gdt Exp $
+
+On NetBSD, do not include librt.
+\todo Why?  All other "UNIX" does, except Mac.
+\todo Consider filing upstream.
+
+--- lib/CMakeLists.txt.orig	2018-09-04 16:57:17.000000000 +0000
++++ lib/CMakeLists.txt
+@@ -73,12 +73,12 @@ set(C_SRC
+ 
+ set (LIBRARIES ${OPENSSL_LIBRARIES} ${PTHREAD_LIBRARIES})
+ 
+-if (UNIX AND NOT APPLE)
++if (UNIX AND NOT APPLE AND NOT ${CMAKE_SYSTEM_NAME} MATCHES "NetBSD")
+ 	find_library(LIBRT rt)
+ 	if (LIBRT)
+ 		set (LIBRARIES ${LIBRARIES} rt)
+ 	endif (LIBRT)
+-endif (UNIX AND NOT APPLE)
++endif (UNIX AND NOT APPLE AND NOT ${CMAKE_SYSTEM_NAME} MATCHES "NetBSD")
+ 
+ if (WIN32)
+ 	set (LIBRARIES ${LIBRARIES} ws2_32)
