@@ -1,17 +1,9 @@
-$NetBSD: distinfo,v 1.13 2018/11/09 13:45:00 bsiegert Exp $
+$NetBSD: distinfo,v 1.14 2019/07/20 18:29:33 nia Exp $
 
-SHA1 (0325d51c4a2a05fb.patch) = f92b975fdebefe2184be1bf7f334e73459293a00
-RMD160 (0325d51c4a2a05fb.patch) = 94110d0252f314e4a26db0b44ea7d9f380f1cfb4
-SHA512 (0325d51c4a2a05fb.patch) = eba1fd73330d69ddc080154a557ba5e9ba545e3dfad7b8ec7450663548f030f1d5b2c79b170bbd37798328827cfd8fe57224f824b8a2cf627e3ce6e44d63b6a8
-Size (0325d51c4a2a05fb.patch) = 7134 bytes
-SHA1 (6c7b0f61c12d28cc.patch) = bb4c649709496ccdcb539152d0d591c91a0df5a8
-RMD160 (6c7b0f61c12d28cc.patch) = 0624bf894107908f7a27228fb1c51a68aadcf57f
-SHA512 (6c7b0f61c12d28cc.patch) = 7df1df77c6d817d4185e4b318c7dbaf5ecb9980948bf3d5760df8d204fd0df1c3075b31cb5106a436f0580344ede9ff2330d5460e13fe8578ba95c84ab3702fb
-Size (6c7b0f61c12d28cc.patch) = 1164 bytes
-SHA1 (qtwebkit-5.212.0-alpha2.tar.xz) = 6a361cc3f3b7ab1d35955bafe20fbbae61bc80c8
-RMD160 (qtwebkit-5.212.0-alpha2.tar.xz) = 33c3f7c68090fa16f72950ef85c20978432cc058
-SHA512 (qtwebkit-5.212.0-alpha2.tar.xz) = b15985aab20c5618dc1f71a0d91f02dbed993516272090a4a12990714bf4c9554ccbdcf9d6a143bf46fcc2c170f691e571114d61686fe49791f8d5c540785758
-Size (qtwebkit-5.212.0-alpha2.tar.xz) = 12456284 bytes
+SHA1 (qtwebkit-5.212.0-alpha3.tar.xz) = dd17b3884ccc20c9fce0f151738f923ec8cd147b
+RMD160 (qtwebkit-5.212.0-alpha3.tar.xz) = 5a28f56735b7d3e98dd82f0a2566d9e31e0c37a3
+SHA512 (qtwebkit-5.212.0-alpha3.tar.xz) = 38794514b886de3fa63a41277c2bcbb970e87a12070962b527e3898466cf7ad3b65ce4588669498415d365310b37729e81aabb457808fe11120558ef8e35445f
+Size (qtwebkit-5.212.0-alpha3.tar.xz) = 12457896 bytes
 SHA1 (patch-Source_JavaScriptCore_API_ObjCCallbackFunction.h) = be77c4b19f5f97c12180c1b7d3b72968364f3229
 SHA1 (patch-Source_JavaScriptCore_assembler_ARMAssembler.h) = 7bbb0a59a0c087abaaddda08fc31aa24809acb70
 SHA1 (patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp) = 79b54cb1d03d976a0629fbd8ee9ac1881951ba10
@@ -30,5 +22,4 @@ SHA1 (patch-Source_WebCore_platform_graphics_cpu_arm_filters_FELightingNEON.cpp)
 SHA1 (patch-Source_WebCore_platform_graphics_surfaces_GraphicsSurface.h) = d1d986afd5525143fc786a959240a72167f03352
 SHA1 (patch-Source_WebCore_platform_graphics_surfaces_GraphicsSurfaceToken.h) = 838acb2d7ecf41e5f6989d98459d103f4268cdcf
 SHA1 (patch-Source_WebKit2_Platform_unix_SharedMemoryUnix.cpp) = d18013d0e07d7ad7e9d84cb6ef2d418d9bba4c7e
-SHA1 (patch-Source_WebKit_PlatformQt.cmake) = 5dfde3b2e3092ffcd11fc6746bed1767b2c3b692
-SHA1 (patch-Source_cmake_OptionsQt.cmake) = 2527e56468709bd9fd0a98bf754ac9c692cac4dc
+SHA1 (patch-Source_cmake_OptionsQt.cmake) = 35cc2b9904897cd2f1d540b473ce2905d95a0143
