@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2019/07/20 23:40:05 gdt Exp $
+${PYSITELIB}/paho/__init__.py
+${PYSITELIB}/paho/__init__.pyc
+${PYSITELIB}/paho/__init__.pyo
+${PYSITELIB}/paho/mqtt/__init__.py
+${PYSITELIB}/paho/mqtt/__init__.pyc
+${PYSITELIB}/paho/mqtt/__init__.pyo
+${PYSITELIB}/paho/mqtt/client.py
+${PYSITELIB}/paho/mqtt/client.pyc
+${PYSITELIB}/paho/mqtt/client.pyo
+${PYSITELIB}/paho/mqtt/matcher.py
+${PYSITELIB}/paho/mqtt/matcher.pyc
+${PYSITELIB}/paho/mqtt/matcher.pyo
+${PYSITELIB}/paho/mqtt/publish.py
+${PYSITELIB}/paho/mqtt/publish.pyc
+${PYSITELIB}/paho/mqtt/publish.pyo
+${PYSITELIB}/paho/mqtt/subscribe.py
+${PYSITELIB}/paho/mqtt/subscribe.pyc
+${PYSITELIB}/paho/mqtt/subscribe.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
