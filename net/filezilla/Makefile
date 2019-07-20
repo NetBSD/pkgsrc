@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.113 2019/06/12 00:50:05 gutteridge Exp $
+# $NetBSD: Makefile,v 1.114 2019/07/20 21:22:35 wiz Exp $
 
-VERSION=	3.42.1
+VERSION=	3.43.0
 DISTNAME=	FileZilla_${VERSION}_src
 PKGNAME=	filezilla-${VERSION}
 CATEGORIES=	net x11
@@ -21,6 +21,7 @@ CONFIGURE_ARGS+=	--disable-autoupdatecheck
 # avoid xdg-utils dependency
 CONFIGURE_ENV+=		ac_cv_path_xdgopen=firefox
 
+# TODO: update GCC_REQD, as of 3.43.0 this requires C++17
 # GCC 4.9 is required to support C++14.
 GCC_REQD+=		4.9
 
@@ -34,7 +35,7 @@ CXXFLAGS+=	-march=i586
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libfilezilla+=	libfilezilla>=0.16
+BUILDLINK_API_DEPENDS.libfilezilla+=	libfilezilla>=0.17.1
 .include "../../net/libfilezilla/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gnutls+=	gnutls>=3.4.0
 .include "../../security/gnutls/buildlink3.mk"
