@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 21:34:00 agc Exp $
+$NetBSD: distinfo,v 1.4 2019/07/20 19:38:14 tnn Exp $
 
-SHA1 (gimp-warp-sharp-1.4/warp-sharp.scm) = 5f53121fe82f4874c48dbc37a3bcb4aaf1630100
-RMD160 (gimp-warp-sharp-1.4/warp-sharp.scm) = b29378e61a77ca91e03d5203f85a6a112a9f761a
-SHA512 (gimp-warp-sharp-1.4/warp-sharp.scm) = 094f8b77de0c7f89b52efc847e1a71d7c7f89d4d212d4929a7c9a5c65f6d1be55d3cc343cefd6c5a8a44bf74b9af99d6f95fb5bf31e6b77942702f6ae12d72f8
-Size (gimp-warp-sharp-1.4/warp-sharp.scm) = 3875 bytes
-SHA1 (patch-aa) = 94d62a9e72e9bc700345744dcf7dd7e8b1599ab1
+SHA1 (gimp-warp-sharp-1.5/warp-sharp.scm) = 41db3fa1d09f3c61732d9d9aa3bd07a37d16ee6c
+RMD160 (gimp-warp-sharp-1.5/warp-sharp.scm) = dfa51e8eaf90de8a423545d7320aa8e52e8ca6a2
+SHA512 (gimp-warp-sharp-1.5/warp-sharp.scm) = 923978febf18c817bfea871433d8b3694aa1405c567124c2dab361bbc52f204a08f32312303a6a89318a4ec89ccff09791229c214e5fd21bddb6e8639fc0e7d1
+Size (gimp-warp-sharp-1.5/warp-sharp.scm) = 4119 bytes
