@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2018/12/13 10:49:38 gson Exp $
+# $NetBSD: Makefile,v 1.22 2019/07/20 22:01:57 wiz Exp $
 
-DISTNAME=	nettle-3.4.1
+DISTNAME=	nettle-3.5.1
 CATEGORIES=	devel security
 MASTER_SITES=	http://www.lysator.liu.se/~nisse/archive/
 MASTER_SITES+=	ftp://ftp.lysator.liu.se/pub/security/lsh/
