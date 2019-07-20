@@ -1,11 +1,11 @@
-$NetBSD: patch-Source_cmake_OptionsQt.cmake,v 1.1 2018/01/17 19:37:33 markd Exp $
+$NetBSD: patch-Source_cmake_OptionsQt.cmake,v 1.2 2019/07/20 18:29:33 nia Exp $
 
 ECM_MODULE_DIR wants a single directory, not a path
 
---- Source/cmake/OptionsQt.cmake.orig	2017-06-15 23:36:48.000000000 +0000
+--- Source/cmake/OptionsQt.cmake.orig	2019-06-26 16:25:02.000000000 +0000
 +++ Source/cmake/OptionsQt.cmake
-@@ -1,7 +1,7 @@
- include(FeatureSummary)
+@@ -3,7 +3,7 @@ include(FeatureSummary)
+ include(ECMEnableSanitizers)
  include(ECMPackageConfigHelpers)
  
 -set(ECM_MODULE_DIR ${CMAKE_MODULE_PATH})
