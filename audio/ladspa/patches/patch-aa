@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2019/07/15 22:58:50 nia Exp $
+$NetBSD: patch-aa,v 1.9 2019/07/20 19:45:57 nia Exp $
 
 * Fix the destination directories
 * Use cc(1) to link the plug-ins
@@ -63,7 +63,7 @@ $NetBSD: patch-aa,v 1.8 2019/07/15 22:58:50 nia Exp $
  
  ###############################################################################
  #
-@@ -50,39 +51,39 @@ test:	/tmp/test.wav ../snd/noise.wav alw
+@@ -50,59 +51,71 @@ test:	/tmp/test.wav ../snd/noise.wav alw
  	@echo ---------------------------------------------
  	@echo First listen to the white noise input signal:
  	@echo ---------------------------------------------
@@ -129,33 +129,43 @@ $NetBSD: patch-aa,v 1.8 2019/07/15 22:58:50 nia Exp $
  
  ###############################################################################
  #
-@@ -90,19 +91,21 @@ targets:	$(PLUGINS) $(PROGRAMS)
+ # PROGRAMS
  #
  
++default.o:
++	${LIBTOOL} --tag=CC --mode=compile $(CC) -c default.c
++
++load.o:
++	${LIBTOOL} --tag=CC --mode=compile $(CC) -c load.c
++
++applyplugin.o:
++	${LIBTOOL} --tag=CC --mode=compile $(CC) -c applyplugin.c
++
++analyseplugin.o:
++	${LIBTOOL} --tag=CC --mode=compile $(CC) -c analyseplugin.c
++
++listplugins.o:
++	${LIBTOOL} --tag=CC --mode=compile $(CC) -c listplugins.c
++
++search.o:
++	${LIBTOOL} --tag=CC --mode=compile $(CC) -c search.c
++
  ../bin/applyplugin:	applyplugin.o load.o default.o
 -	$(CC) $(CFLAGS) $(LIBRARIES)					\
 -		-o ../bin/applyplugin					\
 -		applyplugin.o load.o default.o
-+	${LIBTOOL} --tag=CC --mode=compile $(CC) -c applyplugin.c
-+	${LIBTOOL} --tag=CC --mode=compile $(CC) -c load.c
-+	${LIBTOOL} --tag=CC --mode=compile $(CC) -c default.c
 +	${LIBTOOL} --tag=CC --mode=link $(CC) $(LOCAL_LDFLAGS) -o $@ $(^:.o=.lo) $(LIBRARIES)					\
  
  ../bin/analyseplugin:	analyseplugin.o load.o default.o
 -	$(CC) $(CFLAGS) $(LIBRARIES)					\
 -		-o ../bin/analyseplugin 				\
 -		analyseplugin.o load.o default.o
-+	${LIBTOOL} --tag=CC --mode=compile $(CC) -c analyseplugin.c
-+	${LIBTOOL} --tag=CC --mode=compile $(CC) -c load.c
-+	${LIBTOOL} --tag=CC --mode=compile $(CC) -c default.c
 +	${LIBTOOL} --tag=CC --mode=link $(CC) $(LOCAL_LDFLAGS) -o $@ $(^:.o=.lo) $(LIBRARIES)
  
  ../bin/listplugins:	listplugins.o search.o
 -	$(CC) $(CFLAGS) $(LIBRARIES)					\
 -		-o ../bin/listplugins	 				\
 -		listplugins.o search.o
-+	${LIBTOOL} --tag=CC --mode=compile $(CC) -c listplugins.c
-+	${LIBTOOL} --tag=CC --mode=compile $(CC) -c search.c
 +	${LIBTOOL} --tag=CC --mode=link $(CC) $(LOCAL_LDFLAGS) -o $@ $(^:.o=.lo) $(LIBRARIES)
  
  ###############################################################################
