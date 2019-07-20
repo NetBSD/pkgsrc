@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2018/04/17 22:29:32 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/07/20 22:46:01 wiz Exp $
 #
 
 DISTNAME=	ggz-client-libs-0.0.14.1
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	games
 MASTER_SITES=	http://mirrors.ibiblio.org/pub/mirrors/ggzgamingzone/ggz/0.0.14.1/
 

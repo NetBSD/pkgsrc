@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2018/11/14 22:22:09 kleink Exp $
+# $NetBSD: Makefile,v 1.14 2019/07/20 22:46:37 wiz Exp $
 #
 
 DISTNAME=	VNCViewer-0.0.0
 PKGNAME=	deforaos-vncviewer-0.0.0
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	net
 MASTER_SITES=	https://www.defora.org/os/download/download/4407/
 

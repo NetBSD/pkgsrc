@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2018/03/07 11:57:38 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/07/20 22:46:58 wiz Exp $
 
 DISTNAME=	xorg-server-1.17.2
 PKGNAME=	${DISTNAME:S/xorg-server/modular-xorg-xquartz/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	https://www.x.org/releases/individual/xserver/
 EXTRACT_SUFX=	.tar.bz2

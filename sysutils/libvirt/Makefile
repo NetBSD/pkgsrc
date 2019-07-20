@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2019/07/01 04:08:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.64 2019/07/20 22:46:51 wiz Exp $
 
 DISTNAME=		libvirt-1.2.9
-PKGREVISION=		28
+PKGREVISION=		29
 CATEGORIES=		sysutils
 MASTER_SITES=		http://libvirt.org/sources/
 

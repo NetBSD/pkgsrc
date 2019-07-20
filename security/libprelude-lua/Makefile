@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2018/04/17 22:29:49 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/07/20 22:46:47 wiz Exp $
 
 PKGNAME=		libprelude-lua-${VERSION}
-PKGREVISION=		12
+PKGREVISION=		13
 COMMENT=                Lua bindings to LibPrelude
 
 LUA_VERSIONS_ACCEPTED=	51

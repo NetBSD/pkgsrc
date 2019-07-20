@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.212 2019/07/01 04:08:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.213 2019/07/20 22:46:19 wiz Exp $
 
 DISTNAME=	qemu-4.0.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz

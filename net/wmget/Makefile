@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2019/07/01 04:08:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.27 2019/07/20 22:46:43 wiz Exp $
 
 DISTNAME=	wmget-0.6.0-src
 PKGNAME=	${DISTNAME:S/-src//}
 WRKSRC=		${WRKDIR}/wmget
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	net
 MASTER_SITES=	http://amtrickey.net/download/
 

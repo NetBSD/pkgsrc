@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2019/03/18 16:17:48 gdt Exp $
+# $NetBSD: Makefile,v 1.34 2019/07/20 22:46:25 wiz Exp $
 #
 
 DISTNAME=	x11rec-0.3
 PKGNAME=	${RUBY_PKGPREFIX}-x11rec-0.3
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	graphics ruby
 MASTER_SITES=	http://0xcc.net/x11rec/
 
