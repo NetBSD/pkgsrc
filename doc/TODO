@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19141 2019/07/20 22:57:11 wiz Exp $
+$NetBSD: TODO,v 1.19142 2019/07/20 23:15:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1350,9 +1350,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tor-browser-8.5.4
 	o totem-3.14.1
 	o totem-pl-parser-3.10.3
-	o transmission-2.94
-	o transmission-gtk-2.94
-	o transmission-qt-2.94
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.6
 	o ts-0.7.5
