@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.14 2019/07/15 22:58:50 nia Exp $
+$NetBSD: distinfo,v 1.15 2019/07/20 19:45:57 nia Exp $
 
 SHA1 (ladspa_sdk_1.13.tgz) = 2b69e28afb62c0d97943124f48ed82de796f83ed
 RMD160 (ladspa_sdk_1.13.tgz) = e9eeae8edd24a6890fac3e34c4b55f844f44f8a0
 SHA512 (ladspa_sdk_1.13.tgz) = a1dab807fda58e08869d3f519be5fa91c394690eb13006fbe7f20b332548e4676b32b01273f5695bf36c8da72190c07618662a76d50f991b3f05068ac2b346ef
 Size (ladspa_sdk_1.13.tgz) = 70540 bytes
-SHA1 (patch-aa) = 32adf919fe4194e5cc747a27f12047d6b8c66d00
+SHA1 (patch-aa) = c233427fd90b701841f113bd980e7538cb4b2b62
 SHA1 (patch-ab) = 1357f25ef53c24c737a4888ba7d01fb724a3f315
 SHA1 (patch-ac) = 40108e5e4fdba9b2be322d0de532a97322d22325
 SHA1 (patch-plugins_amp.c) = e0336ff7fe078aa6b4e6b3d25b21b70ac6dc127d
