@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2019/07/20 21:18:59 schmonz Exp $
+bin/cubehash
+bin/redo
+bin/redo-ifchange
+bin/redo-ifcreate
+man/man1/cubehash.1
+man/man1/redo-ifchange.1
+man/man1/redo-ifcreate.1
+man/man1/redo.1
