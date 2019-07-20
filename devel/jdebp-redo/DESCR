@@ -1,0 +1,3 @@
+Daniel J. Bernstein's redo idea is a system for incrementally building
+target files from source files. This is the redo implementation by
+Jonathan de Boyne Pollard written in C++.

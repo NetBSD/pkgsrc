@@ -1,0 +1,15 @@
+$NetBSD: patch-package_prepare,v 1.1 2019/07/20 21:18:59 schmonz Exp $
+
+Avoid spurious output during configure.
+
+--- package/prepare.orig	2013-07-24 18:27:53.000000000 +0000
++++ package/prepare
+@@ -6,6 +6,8 @@ then
+ 	exit 100
+ fi
+ 
++unset CDPATH
++
+ # Create and populate the build directory.
+ if [ \! -d build ]
+ then
