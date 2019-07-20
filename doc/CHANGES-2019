@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2986 2019/07/20 21:21:26 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2987 2019/07/20 21:22:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4912,3 +4912,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/apenwarr-redo version 0.41 [schmonz 2019-07-20]
 	Added devel/jdebp-redo version 1.4 [schmonz 2019-07-20]
 	Updated net/libfilezilla to 0.17.1 [wiz 2019-07-20]
+	Updated net/filezilla to 3.43.0 [wiz 2019-07-20]
