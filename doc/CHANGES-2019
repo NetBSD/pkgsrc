@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2978 2019/07/20 18:29:52 nia Exp $
+$NetBSD: CHANGES-2019,v 1.2979 2019/07/20 18:39:27 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4903,3 +4903,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed x11/rstart [wiz 2019-07-19]
 	Updated net/mikutter to 3.9.1 [tsutsui 2019-07-20]
 	Updated x11/qt5-qtwebkit to 5.212.0.alpha3 [nia 2019-07-20]
+	Updated wm/xfce4-wm to 4.13.3nb2 [gutteridge 2019-07-20]
