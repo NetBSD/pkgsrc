@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2019/06/22 06:47:05 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.48 2019/07/20 14:03:42 tsutsui Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -516,6 +516,22 @@ share/mikutter/core/plugin/photo/photo.rb
 share/mikutter/core/plugin/photo_support/.mikutter.yml
 share/mikutter/core/plugin/photo_support/Gemfile
 share/mikutter/core/plugin/photo_support/photo_support.rb
+share/mikutter/core/plugin/profile/po/ar/profile.po
+share/mikutter/core/plugin/profile/po/de/profile.po
+share/mikutter/core/plugin/profile/po/el/profile.po
+share/mikutter/core/plugin/profile/po/en/profile.po
+share/mikutter/core/plugin/profile/po/eo/profile.po
+share/mikutter/core/plugin/profile/po/es/profile.po
+share/mikutter/core/plugin/profile/po/fr/profile.po
+share/mikutter/core/plugin/profile/po/nl_NL/profile.po
+share/mikutter/core/plugin/profile/po/pt_PT/profile.po
+share/mikutter/core/plugin/profile/po/ro_RO/profile.po
+share/mikutter/core/plugin/profile/po/ru/profile.po
+share/mikutter/core/plugin/profile/po/sr/profile.po
+share/mikutter/core/plugin/profile/po/vi/profile.po
+share/mikutter/core/plugin/profile/po/zh/profile.po
+share/mikutter/core/plugin/profile/po/zh_CN/profile.po
+share/mikutter/core/plugin/profile/po/zh_TW/profile.po
 share/mikutter/core/plugin/proxy/.mikutter.yml
 share/mikutter/core/plugin/proxy/po/ar/proxy.po
 share/mikutter/core/plugin/proxy/po/de/proxy.po
