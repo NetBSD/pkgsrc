@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2013/08/13 11:55:24 abs Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/07/20 20:36:28 nia Exp $
 bin/deepfind
 bin/deepgrep
 bin/lucene2indexer
@@ -98,7 +98,6 @@ lib/libstrigiqtdbusclient.so.0
 lib/pkgconfig/libstreamanalyzer.pc
 lib/pkgconfig/libstreams.pc
 lib/strigi/strigiea_digest.so
-lib/strigi/strigiea_jpeg.so
 lib/strigi/strigiea_riff.so
 lib/strigi/strigiindex_cluceneng.so
 lib/strigi/strigila_cpp.so
