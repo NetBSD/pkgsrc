@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19137 2019/07/20 21:22:54 wiz Exp $
+$NetBSD: TODO,v 1.19138 2019/07/20 21:51:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -939,7 +939,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libcarddav-14.0.4
 	o libconfuse-3.1
 	o libdrm-2.4.99
-	o libev-4.27
 	o libflash-0.4.13
 	o libfolks-0.10.1 [wip]
 	o libgdiplus-4.2
