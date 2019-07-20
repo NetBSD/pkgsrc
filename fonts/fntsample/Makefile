@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.32 2018/11/14 22:21:27 kleink Exp $
+# $NetBSD: Makefile,v 1.33 2019/07/20 19:17:55 tnn Exp $
 #
 
 DISTNAME=	fntsample-5.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=eugmes/}
 GITHUB_TAG=	release/${PKGVERSION_NOREV}
 
-DISTFILES=	${DEFAULT_DISTFILES} Blocks.txt
-SITES.Blocks.txt=	http://unicode.org/Public/UNIDATA/
+BLOCKS_TXT=	Blocks-20190308.txt
+DISTFILES=	${DEFAULT_DISTFILES} ${BLOCKS_TXT}
+SITES.${BLOCKS_TXT}=	-http://unicode.org/Public/UNIDATA/Blocks.txt
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/eugmes/fntsample/
@@ -22,7 +23,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/-/-release-/}
 
 REPLACE_PERL=	pdfoutline.pl
 
-CMAKE_ARGS+=	-DUNICODE_BLOCKS=${WRKDIR}/Blocks.txt
+CMAKE_ARGS+=	-DUNICODE_BLOCKS=${WRKDIR}/${BLOCKS_TXT}
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
