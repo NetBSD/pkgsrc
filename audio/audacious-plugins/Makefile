@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.93 2019/07/06 13:17:01 nia Exp $
+# $NetBSD: Makefile,v 1.94 2019/07/20 10:39:18 nia Exp $
 
 DISTNAME=	audacious-plugins-3.10.1
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://distfiles.audacious-media-player.org/
 EXTRACT_SUFX=	.tar.bz2
@@ -51,7 +52,6 @@ CONFIGURE_ARGS+=	--disable-gtk
 .include "../../audio/libsoxr/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/mpg123/buildlink3.mk"
-.include "../../audio/wavpack/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/libbinio/buildlink3.mk"
 .include "../../misc/libcdio-paranoia/buildlink3.mk"
