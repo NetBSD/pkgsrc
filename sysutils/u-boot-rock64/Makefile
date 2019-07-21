@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/06/08 12:25:05 mrg Exp $
+# $NetBSD: Makefile,v 1.2 2019/07/21 15:17:12 tnn Exp $
 
 UBOOT_TARGET=		rock64
 UBOOT_CONFIG=		rock64-rk3328_defconfig
@@ -11,13 +11,13 @@ U_BOOT_IMAGE_TYPE=	rk3328
 
 # Boot Loader stage 3-1 (BL31) EL3 Runtime Firmware
 # XXX LICENSE?
-BL31=		rk322xh_bl31_v1.40.elf
+BL31=		rk322xh_bl31_v1.41.elf
 DISTFILES+=	${BL31}
-SITES.${BL31}=	${MASTER_SITE_GITHUB:=rockchip-linux/rkbin/raw/master/bin/rk33/}
+SITES.${BL31}=	${MASTER_SITE_GITHUB:=rockchip-linux/rkbin/raw/fc322b129b4438307ac18cbdc73c38400c7b33d9/bin/rk33/}
 
 # DDR init binary
 DDR_BIN=		rk3328_ddr_333MHz_v1.16.bin
-SITES.${DDR_BIN}=	${MASTER_SITE_GITHUB:=rockchip-linux/rkbin/raw/master/bin/rk33/}
+SITES.${DDR_BIN}=	${MASTER_SITE_GITHUB:=rockchip-linux/rkbin/raw/6ee03f14441f4f2812c713e1027b88e3a24c546b/bin/rk33/}
 DISTFILES+=		${DDR_BIN}
 
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
