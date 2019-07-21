@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2995 2019/07/21 08:11:22 adam Exp $
+$NetBSD: CHANGES-2019,v 1.2996 2019/07/21 08:35:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4926,3 +4926,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-beautifulsoup4 to 4.8.0 [adam 2019-07-21]
 	Updated devel/py-mako to 1.0.14 [adam 2019-07-21]
 	Updated net/py-grpcio-tools to 1.22.0 [adam 2019-07-21]
+	Updated emulators/mame to 0.211 [wiz 2019-07-21]
