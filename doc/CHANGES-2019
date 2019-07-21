@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3002 2019/07/21 11:52:39 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3003 2019/07/21 12:19:53 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4936,3 +4936,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed x11/xmms-osd [wiz 2019-07-21]
 	Removed graphics/gdk-pixbuf successor graphics/gdk-pixbuf2 [wiz 2019-07-21]
 	Updated archivers/bzip2 to 1.0.8 [nia 2019-07-21]
+	Updated net/mitmproxy to 4.0.4nb3 [leot 2019-07-21]
