@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2019/07/20 18:29:33 nia Exp $
+# $NetBSD: Makefile,v 1.64 2019/07/21 12:41:24 nia Exp $
 
 DISTNAME=	qtwebkit-${QTWKVERSION}
 PKGNAME=	qt5-qtwebkit-${QTWKVERSION:S/-/./}
@@ -8,7 +8,7 @@ GITHUB_RELEASE=	${DISTNAME}
 CATEGORIES=	x11
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://qt-project.org/
+HOMEPAGE=	https://github.com/qtwebkit/qtwebkit/wiki
 COMMENT=	Qt5 WebView module
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v3
 EXTRACT_SUFX=	.tar.xz
