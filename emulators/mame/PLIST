@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2019/06/23 18:37:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.37 2019/07/21 08:34:54 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -172,6 +172,7 @@ share/mame/hash/cc40_cart.xml
 share/mame/hash/cd32.xml
 share/mame/hash/cdi.xml
 share/mame/hash/cdtv.xml
+share/mame/hash/cecflop.xml
 share/mame/hash/cgenie_cass.xml
 share/mame/hash/cgenie_flop_rom.xml
 share/mame/hash/channelf.xml
@@ -299,6 +300,7 @@ share/mame/hash/jakks_gamekey_mv.xml
 share/mame/hash/jakks_gamekey_nk.xml
 share/mame/hash/jakks_gamekey_nm.xml
 share/mame/hash/jakks_gamekey_sw.xml
+share/mame/hash/jb3000_flop.xml
 share/mame/hash/jpopira_jp.xml
 share/mame/hash/juicebox.xml
 share/mame/hash/jupace_cass.xml
@@ -362,6 +364,7 @@ share/mame/hash/msx2_cass.xml
 share/mame/hash/msx2_flop.xml
 share/mame/hash/msx2p_flop.xml
 share/mame/hash/msxr_flop.xml
+share/mame/hash/mt65_snap.xml
 share/mame/hash/mtx_cart.xml
 share/mame/hash/mtx_cass.xml
 share/mame/hash/mtx_flop.xml
