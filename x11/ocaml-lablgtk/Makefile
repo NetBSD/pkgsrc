@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.54 2019/07/20 22:46:07 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2019/07/21 22:24:19 wiz Exp $
 
 DISTNAME=	lablgtk-2.18.8
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	https://github.com/garrigue/lablgtk/releases/download/lablgtk2188/
 

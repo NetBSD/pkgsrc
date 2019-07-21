@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2018/11/14 22:22:50 kleink Exp $
+# $NetBSD: Makefile,v 1.25 2019/07/21 22:24:20 wiz Exp $
 #
 
 .include "Makefile.common"
 
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	x11
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2019/05/23 19:23:01 rillig Exp $
+# $NetBSD: Makefile,v 1.38 2019/07/21 22:24:57 wiz Exp $
 #
 
 DISTNAME=	frameworks-0.3.7
-PKGREVISION=	30
+PKGREVISION=	31
 CATEGORIES=	graphics
 MASTER_SITES=	http://frameworks.polycrystal.org/release/
 SITES.frameworks.png=	http://frameworks.polycrystal.org/images/

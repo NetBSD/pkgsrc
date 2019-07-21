@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.29 2018/11/14 22:21:17 kleink Exp $
+# $NetBSD: buildlink3.mk,v 1.30 2019/07/21 22:24:02 wiz Exp $
 
 BUILDLINK_TREE+=	libview
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libview
 LIBVIEW_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libview+=	libview>=0.6.4
-BUILDLINK_ABI_DEPENDS.libview+=	libview>=0.6.4nb27
+BUILDLINK_ABI_DEPENDS.libview+=	libview>=0.6.4nb28
 BUILDLINK_PKGSRCDIR.libview?=	../../devel/libview
 
 .include "../../x11/gtk2/buildlink3.mk"

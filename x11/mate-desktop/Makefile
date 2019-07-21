@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2019/06/08 19:57:28 leot Exp $
+# $NetBSD: Makefile,v 1.22 2019/07/21 22:26:01 wiz Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
-PKGREVISION=	2
+PKGREVISION=	3
 DISTNAME=	mate-desktop-${VERSION:R}.1
 CATEGORIES=	x11
 

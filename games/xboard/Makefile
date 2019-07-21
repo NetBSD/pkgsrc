@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2019/06/16 22:04:20 rillig Exp $
+# $NetBSD: Makefile,v 1.57 2019/07/21 22:24:53 wiz Exp $
 
 DISTNAME=	xboard-4.8.0
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GNU:=xboard/}
 

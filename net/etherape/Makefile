@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.102 2018/11/29 11:21:55 prlw1 Exp $
+# $NetBSD: Makefile,v 1.103 2019/07/21 22:25:30 wiz Exp $
 
 DISTNAME=	etherape-0.9.12
-PKGREVISION=	36
+PKGREVISION=	37
 CATEGORIES=	gnome net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=etherape/}
 
