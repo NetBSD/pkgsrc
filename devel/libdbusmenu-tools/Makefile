@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2019/04/25 07:32:47 maya Exp $
+# $NetBSD: Makefile,v 1.15 2019/07/21 22:24:38 wiz Exp $
 
-PKGREVISION= 13
+PKGREVISION= 14
 .include "../../meta-pkgs/libdbusmenu/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-tools-/}

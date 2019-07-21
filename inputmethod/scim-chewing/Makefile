@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2019/04/03 00:32:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.50 2019/07/21 22:25:12 wiz Exp $
 #
 
 DISTNAME=		scim-chewing-0.3.5
-PKGREVISION=		25
+PKGREVISION=		26
 CATEGORIES=		inputmethod
 MASTER_SITES=		http://chewing.googlecode.com/files/
 EXTRACT_SUFX=		.tar.bz2
