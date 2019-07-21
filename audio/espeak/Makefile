@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2018/02/28 21:49:55 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2019/07/21 22:47:56 nia Exp $
 
-DISTNAME=	espeak-1.31-source
+MINOR_VER=	48
+DISTNAME=	espeak-1.${MINOR_VER}.04-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=espeak/}
 EXTRACT_SUFX=	.zip
@@ -12,24 +12,38 @@ HOMEPAGE=	http://espeak.sourceforge.net/
 COMMENT=	Speech synthesizer
 LICENSE=	gnu-gpl-v3
 
-USE_LANGUAGES=	c++
-USE_TOOLS+=	gmake
-WRKSRC=		${WRKDIR}/${DISTNAME}/src
+BUILD_DIRS=	src
+USE_LANGUAGES=	c c++03
+USE_TOOLS+=	gmake pax
+
+MAKE_FLAGS+=	DATADIR=${PREFIX}/share/espeak-data
+
+# use portaudio v19
+MAKE_FLAGS+=	WAVE=wave.cpp
+MAKE_FLAGS+=	LIB_AUDIO=-lportaudio
+MAKE_FLAGS+=	USE_AUDIO=-DUSE_PORTAUDIO
+
+PLIST_SUBST+=	MINOR_VER=${MINOR_VER}
+
+CXXFLAGS+=	-funsigned-char
 
 INSTALLATION_DIRS=	bin include lib share
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/espeak ${DESTDIR}${PREFIX}/bin
-	${INSTALL_LIB} ${WRKSRC}/libespeak.so.1.1.31 ${DESTDIR}${PREFIX}/lib
-	${LN} -sf libespeak.so.1.1.31 \
-		${DESTDIR}${PREFIX}/lib/libespeak.so.1
-	${LN} -sf libespeak.so.1.1.31 \
-		${DESTDIR}${PREFIX}/lib/libespeak.so
-	${INSTALL_LIB} ${WRKSRC}/libespeak.a ${DESTDIR}${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/speak_lib.h ${DESTDIR}${PREFIX}/include
-	${CP} -r ${WRKDIR}/espeak-1.31-source/espeak-data \
-		${DESTDIR}${PREFIX}/share
+pre-configure:
+	${CP} ${WRKSRC}/src/portaudio19.h ${WRKSRC}/src/portaudio.h
 
-.include "../../audio/portaudio/buildlink3.mk"
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/src/espeak ${DESTDIR}${PREFIX}/bin
+	${INSTALL_LIB} ${WRKSRC}/src/libespeak.so.1.1.${MINOR_VER} ${DESTDIR}${PREFIX}/lib
+	${LN} -sf libespeak.so.1.1.${MINOR_VER} \
+		${DESTDIR}${PREFIX}/lib/libespeak.so.1
+	${LN} -sf libespeak.so.1.1.${MINOR_VER} \
+		${DESTDIR}${PREFIX}/lib/libespeak.so
+	${INSTALL_LIB} ${WRKSRC}/src/libespeak.a ${DESTDIR}${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/src/speak_lib.h ${DESTDIR}${PREFIX}/include
+	cd ${WRKSRC}/espeak-data && \
+		${PAX} -rw -pp . ${DESTDIR}${PREFIX}/share/espeak-data
+
+.include "../../audio/portaudio-devel/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
