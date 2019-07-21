@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2997 2019/07/21 08:37:54 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2998 2019/07/21 08:51:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4928,3 +4928,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/py-grpcio-tools to 1.22.0 [adam 2019-07-21]
 	Updated emulators/mame to 0.211 [wiz 2019-07-21]
 	Updated archivers/zstd to 1.4.1 [wiz 2019-07-21]
+	Updated misc/khard to 0.14.0 [wiz 2019-07-21]
