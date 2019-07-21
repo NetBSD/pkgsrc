@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2019/05/02 20:29:45 nia Exp $
+# $NetBSD: Makefile,v 1.4 2019/07/21 22:24:54 wiz Exp $
 
 DISTNAME=	adapta-gtk-theme-3.95.0.11
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=adapta-project/}
 

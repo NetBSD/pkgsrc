@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2019/04/25 07:32:40 maya Exp $
+# $NetBSD: Makefile,v 1.14 2019/07/21 22:24:34 wiz Exp $
 
 DISTNAME=	sratom-0.6.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	converters
 MASTER_SITES=	http://download.drobilla.net/
 EXTRACT_SUFX=	.tar.bz2

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.65 2018/11/14 22:21:27 kleink Exp $
+# $NetBSD: Makefile,v 1.66 2019/07/21 22:24:48 wiz Exp $
 #
 
 DISTNAME=		gkrellstock-0.5.1
 PKGNAME=		gkrellm-stock-0.5.1
-PKGREVISION=		46
+PKGREVISION=		47
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gkrellstock/}
 

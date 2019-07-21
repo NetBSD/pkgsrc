@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.51 2018/11/14 22:22:49 kleink Exp $
+# $NetBSD: buildlink3.mk,v 1.52 2019/07/21 22:24:20 wiz Exp $
 
 BUILDLINK_TREE+=	${PYPKGPREFIX}-wxWidgets
 
@@ -8,7 +8,7 @@ PY_WXWIDGETS_BUILDLINK3_MK:=
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_API_DEPENDS.${PYPKGPREFIX}-wxWidgets+=	${PYPKGPREFIX}-wxWidgets>=2.6.1.0
-BUILDLINK_ABI_DEPENDS.${PYPKGPREFIX}-wxWidgets+=	${PYPKGPREFIX}-wxWidgets>=2.8.12.0nb11
+BUILDLINK_ABI_DEPENDS.${PYPKGPREFIX}-wxWidgets+=	${PYPKGPREFIX}-wxWidgets>=2.8.12.0nb12
 BUILDLINK_ABI_DEPENDS.${PYPKGPREFIX}-wxWidgets?=	${PYPKGPREFIX}-wxWidgets>=2.8.12.0nb6
 BUILDLINK_PKGSRCDIR.${PYPKGPREFIX}-wxWidgets?=		../../x11/py-wxWidgets
 
