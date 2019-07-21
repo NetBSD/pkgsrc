@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2017/10/15 23:19:11 prlw1 Exp $
+# $NetBSD: Makefile,v 1.36 2019/07/21 10:11:13 wiz Exp $
 
 DISTNAME=	gdk-pixbuf-${PIXBUF2_VERSION}
 PKGNAME=	${DISTNAME:S/pixbuf/pixbuf2/}
@@ -15,22 +15,18 @@ CONFLICTS+=	gtk2+<2.22
 
 .include "../../graphics/gdk-pixbuf2/Makefile.version"
 
-USE_LIBTOOL=		yes
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config
-GNU_CONFIGURE=		yes
-PKGCONFIG_OVERRIDE+=	contrib/gdk-pixbuf-xlib/gdk-pixbuf-xlib-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	gdk-pixbuf-2.0.pc.in
+USE_TOOLS+=	gmake pkg-config
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gdk-pixbuf
+
+MESON_ARGS+=	-D installed_tests=false
+MESON_ARGS+=	-D x11=false
+PKGCONFIG_OVERRIDE_STAGE=pre-install
+PKGCONFIG_OVERRIDE=    output/meson-private/gdk-pixbuf-2.0.pc
 
 _BUILDING_GTK2= yes
 .include "loaders.mk"
 
-# We remove the loader database during post-install since we create it
-# anew in the +INSTALL script as part of the POST-INSTALL action.
-#
-post-install:
-	${RM} -f ${DESTDIR}${GDK_PIXBUF_LOADERS_DB}
-
+.include "../../devel/py-meson/build.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+= glib2>=2.37.2
 .include "../../devel/glib2/buildlink3.mk"
