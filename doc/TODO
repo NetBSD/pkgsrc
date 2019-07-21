@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19144 2019/07/21 08:35:13 wiz Exp $
+$NetBSD: TODO,v 1.19145 2019/07/21 08:37:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1475,7 +1475,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o zoneminder-1.29.0
 	o zopeedit-0.8
 	o zsh-autosuggestions-0.6.3
-	o zstd-1.4.1
 
 Licenses of packages
 ====================
