@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/14 20:13:40 drochner Exp $
-lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-jasper.la
