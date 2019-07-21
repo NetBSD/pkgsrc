@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.8 2019/07/15 13:42:34 nia Exp $
+# $NetBSD: options.mk,v 1.9 2019/07/21 11:25:52 nia Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.SDL
-PKG_SUPPORTED_OPTIONS=	aalib alsa esound nas pulseaudio
+PKG_OPTIONS_VAR=		PKG_OPTIONS.SDL
+PKG_SUPPORTED_OPTIONS=		aalib alsa esound nas pulseaudio
 PKG_SUGGESTED_OPTIONS.Linux+=	alsa
 
 .include "../../mk/bsd.options.mk"
