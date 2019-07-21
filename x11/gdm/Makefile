@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.192 2018/11/14 22:22:40 kleink Exp $
+# $NetBSD: Makefile,v 1.193 2019/07/21 22:25:57 wiz Exp $
 #
 
 DISTNAME=	gdm-2.20.11
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.20/}
 EXTRACT_SUFX=	.tar.bz2
