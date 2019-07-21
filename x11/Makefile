@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.840 2019/07/19 21:15:16 wiz Exp $
+# $NetBSD: Makefile,v 1.841 2019/07/21 10:34:52 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -628,7 +628,6 @@ SUBDIR+=	xmascot
 SUBDIR+=	xmessage
 SUBDIR+=	xmh
 SUBDIR+=	xmindpath
-SUBDIR+=	xmms-osd
 SUBDIR+=	xmodmap
 SUBDIR+=	xmon
 SUBDIR+=	xmore
