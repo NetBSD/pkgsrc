@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.49 2019/06/08 19:51:38 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.50 2019/07/21 22:24:06 wiz Exp $
 
 BUILDLINK_TREE+=	librsvg
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	librsvg
 LIBRSVG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.librsvg+=		librsvg>=2.12.6nb1
-BUILDLINK_ABI_DEPENDS.librsvg+=		librsvg>=2.40.20nb4
+BUILDLINK_ABI_DEPENDS.librsvg+=		librsvg>=2.44.14nb2
 
 .include "../../mk/bsd.fast.prefs.mk"
 

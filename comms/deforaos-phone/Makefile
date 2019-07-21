@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2018/11/14 22:21:10 kleink Exp $
+# $NetBSD: Makefile,v 1.35 2019/07/21 22:23:58 wiz Exp $
 
 DISTNAME=	Phone-0.5.1
 PKGNAME=	deforaos-phone-0.5.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	comms net
 MASTER_SITES=	https://www.defora.org/os/download/download/4455/
 
