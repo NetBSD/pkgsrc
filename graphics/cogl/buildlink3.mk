@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2016/08/03 10:22:13 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2019/07/21 22:24:04 wiz Exp $
 #
 
 BUILDLINK_TREE+=	cogl
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	cogl
 COGL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.cogl+=	cogl>=1.14.0
-BUILDLINK_ABI_DEPENDS.cogl+=	cogl>=1.22.0nb1
+BUILDLINK_ABI_DEPENDS.cogl+=	cogl>=1.22.0nb8
 BUILDLINK_PKGSRCDIR.cogl?=	../../graphics/cogl
 
 .include "../../devel/glib2/buildlink3.mk"

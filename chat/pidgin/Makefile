@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2019/07/13 15:41:55 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2019/07/21 22:24:32 wiz Exp $
 
 COMMENT=		Multi-protocol Instant Messaging client GTK frontend
-PKGREVISION=		5
+PKGREVISION=		6
 
 .include		"../../chat/libpurple/Makefile.common"
 

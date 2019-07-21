@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.128 2019/05/05 22:49:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.129 2019/07/21 22:25:29 wiz Exp $
 #
 
 DISTNAME=		bug-buddy-2.30.0
-PKGREVISION=		25
+PKGREVISION=		26
 CATEGORIES=		net gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/bug-buddy/2.30/}
 EXTRACT_SUFX=		.tar.bz2

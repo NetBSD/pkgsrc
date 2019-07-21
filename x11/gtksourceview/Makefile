@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.96 2019/07/20 22:46:07 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2019/07/21 22:24:17 wiz Exp $
 
 DISTNAME=	gtksourceview-1.8.5
-PKGREVISION=	45
+PKGREVISION=	46
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtksourceview/1.8/}
 EXTRACT_SUFX=	.tar.bz2

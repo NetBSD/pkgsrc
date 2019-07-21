@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2019/07/18 08:15:36 nia Exp $
+# $NetBSD: Makefile,v 1.51 2019/07/21 22:25:46 wiz Exp $
 
+PKGREVISION= 1
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-cpugraph-plugin-1.1.0

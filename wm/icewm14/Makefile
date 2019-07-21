@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2018/11/28 16:24:54 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2019/07/21 22:25:51 wiz Exp $
 
 DISTNAME=	icewm-1.4.2
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bbidulock/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

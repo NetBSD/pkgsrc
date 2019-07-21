@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.165 2019/04/03 00:33:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.166 2019/07/21 22:25:54 wiz Exp $
 
 DISTNAME=		liferea-1.12.5a
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		www
 GITHUB_RELEASE=		v${PKGVERSION_NOREV:S/a//}
 MASTER_SITES=		${MASTER_SITE_GITHUB:=lwindolf/}
