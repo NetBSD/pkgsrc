@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/07/09 10:42:59 nia Exp $
+# $NetBSD: Makefile,v 1.19 2019/07/21 08:18:53 nia Exp $
 
 DISTNAME=	libssh2-1.9.0
 CATEGORIES=	security
@@ -15,6 +15,7 @@ USE_LIBTOOL=	yes
 CONFIGURE_ARGS+=	--with-libgcrypt=no
 CONFIGURE_ARGS+=	--with-libz=${BUILDLINK_PREFIX.zlib:Q}
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
+CONFIGURE_ARGS+=	--disable-examples-build
 
 PKGCONFIG_OVERRIDE+=	libssh2.pc.in
 TEST_TARGET=		check
