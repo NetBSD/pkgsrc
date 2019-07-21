@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/08/27 15:50:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/07/21 21:11:37 wiz Exp $
 bin/khard-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -36,4 +36,5 @@ ${PYSITELIB}/khard/object_type.pyo
 ${PYSITELIB}/khard/version.py
 ${PYSITELIB}/khard/version.pyc
 ${PYSITELIB}/khard/version.pyo
+man/man1/khard.1
 share/examples/khard/khard.conf.example
