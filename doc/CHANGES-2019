@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.2993 2019/07/20 23:15:50 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.2994 2019/07/21 06:55:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4921,3 +4921,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/transmission to 2.94 [wiz 2019-07-20]
 	Updated net/transmission-gtk to 2.94 [wiz 2019-07-20]
 	Updated net/transmission-qt to 2.94 [wiz 2019-07-20]
+	Added net/py-paho-mqtt version 1.4.0 [gdt 2019-07-20]
