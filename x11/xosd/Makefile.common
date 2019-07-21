@@ -1,6 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2018/07/04 13:40:44 jperkin Exp $
-#
-# used by x11/xmms-osd/Makefile
+# $NetBSD: Makefile.common,v 1.30 2019/07/21 10:34:52 wiz Exp $
 
 DISTNAME=	xosd-2.2.14
 CATEGORIES=	x11
