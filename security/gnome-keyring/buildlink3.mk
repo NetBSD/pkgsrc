@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.44 2018/11/14 22:22:20 kleink Exp $
+# $NetBSD: buildlink3.mk,v 1.45 2019/07/21 22:24:11 wiz Exp $
 
 BUILDLINK_TREE+=	gnome-keyring
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnome-keyring
 GNOME_KEYRING_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnome-keyring+=	gnome-keyring>=0.4.0
-BUILDLINK_ABI_DEPENDS.gnome-keyring+=	gnome-keyring>=2.32.1nb26
+BUILDLINK_ABI_DEPENDS.gnome-keyring+=	gnome-keyring>=2.32.1nb27
 BUILDLINK_PKGSRCDIR.gnome-keyring?=	../../security/gnome-keyring
 
 .include "../../devel/gettext-lib/buildlink3.mk"

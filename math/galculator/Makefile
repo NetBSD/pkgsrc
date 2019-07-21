@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2019/06/20 11:54:25 nia Exp $
+# $NetBSD: Makefile,v 1.52 2019/07/21 22:25:19 wiz Exp $
 #
 
 DISTNAME=		galculator-2.1.4
+PKGREVISION=		1
 CATEGORIES=		math
 MASTER_SITES=		http://galculator.mnim.org/downloads/
 

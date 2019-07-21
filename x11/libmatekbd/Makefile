@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2019/04/25 07:33:30 maya Exp $
+# $NetBSD: Makefile,v 1.15 2019/07/21 22:26:00 wiz Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	libmatekbd-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 
 COMMENT=	MATE keyboard configuration library

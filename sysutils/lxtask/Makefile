@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2018/11/14 22:22:26 kleink Exp $
+# $NetBSD: Makefile,v 1.12 2019/07/21 22:25:44 wiz Exp $
 
 DISTNAME=	lxtask-0.1.8
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 EXTRACT_SUFX=	.tar.xz
