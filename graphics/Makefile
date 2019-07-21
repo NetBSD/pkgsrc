@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.826 2019/07/21 10:09:44 wiz Exp $
+# $NetBSD: Makefile,v 1.827 2019/07/21 10:34:51 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -139,7 +139,6 @@ SUBDIR+=	fujiplay
 SUBDIR+=	g2
 SUBDIR+=	gd
 SUBDIR+=	gdchart
-SUBDIR+=	gdk-pixbuf
 SUBDIR+=	gdk-pixbuf2
 SUBDIR+=	gdk-pixbuf2-xlib
 SUBDIR+=	geeqie
