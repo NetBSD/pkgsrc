@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2019/05/15 14:37:55 leot Exp $
+# $NetBSD: Makefile,v 1.65 2019/07/21 22:25:09 wiz Exp $
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "Makefile.common"
 
 COMMENT=	Intelligent Input Bus
