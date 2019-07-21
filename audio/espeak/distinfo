@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.5 2018/02/28 21:49:55 wiz Exp $
+$NetBSD: distinfo,v 1.6 2019/07/21 22:47:56 nia Exp $
 
-SHA1 (espeak-1.31-source.zip) = e33291b29153d0fc179da11ac4a61cc85fba679a
-RMD160 (espeak-1.31-source.zip) = a26596f25d8897848238d81fe5e5d179d47f01a6
-SHA512 (espeak-1.31-source.zip) = ec2e6a49be743952d1440bd5e80c270ed3a31fd522079c93d13d495fda9803e0fc9676a514a9ef168c469d668bf3551cbbc5dc269030f81f1ba8e785940063c9
-Size (espeak-1.31-source.zip) = 1204202 bytes
-SHA1 (patch-aa) = a01dccb651c0160a7af5af14f3292578c8396ae0
-SHA1 (patch-ab) = 37e434f3c3e2fb722f927da4ca83a2b814c28879
-SHA1 (patch-ac) = 33043b93dde7beea7879d1e9b7c751aef0728d44
+SHA1 (espeak-1.48.04-source.zip) = b22c0361885d05e61d98ecedca0a4926ea2fb2ad
+RMD160 (espeak-1.48.04-source.zip) = 95f45d86c86756c3bd3b359aaba3c844f4a1c23c
+SHA512 (espeak-1.48.04-source.zip) = f0759e6ace2604c8cbb19e8c3fd4b106edf4dcece247a6677f6b734af7746c35a367126edfbe585396c98f6c54f07e25d64bfab35e258e64f09bd2c0833247fa
+Size (espeak-1.48.04-source.zip) = 3019245 bytes
+SHA1 (patch-src_Makefile) = ad90e699c15c266c6e6b2db73340fdf5506389d8
