@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2019/07/16 15:34:25 nia Exp $
+# $NetBSD: Makefile,v 1.74 2019/07/21 13:36:00 ryoon Exp $
 
 DISTNAME=	gegl-0.4.16
 PKGREVISION=	1
@@ -35,6 +35,7 @@ PLIST.v4l=	yes
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} gcut gegl-gcut
 
+.include "../../databases/shared-mime-info/buildlink3.mk"
 BUILDLINK_API_DEPENDS.babl+=	babl>=0.1.52
 .include "../../graphics/babl/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
