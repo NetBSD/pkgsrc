@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.268 2019/07/08 19:44:08 sevan Exp $
+# $NetBSD: bootstrap,v 1.269 2019/07/21 20:14:06 rillig Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -31,8 +31,13 @@
 # compiler/linker flags: CFLAGS, CPPFLAGS, LDFLAGS, LIBS
 # tools: CP, GREP, ID, MKDIR, SH, TEST, TOUCH, XARGS
 
+# The bootstrap program must be able to run with very limited shells.
+# It must not use any of the following features:
+#
+# * the ${var%pattern} or ${var#pattern} expansions
+# * the $(command) subshell
 
-BOOTSTRAP_VERSION=20060721
+BOOTSTRAP_VERSION=20190721
 
 # Don't let the bootstrap program get confused by a pre-existing mk.conf
 # file.
@@ -363,7 +368,7 @@ checkarg_no_symlink_path()
 {
 	_dir=$1
 	while [ ! -d "$_dir" ]; do
-		_dir=${_dir%/*}
+		_dir=`dirname "$_dir"`
 		[ "$_dir" ] || _dir="/"
 	done
 
