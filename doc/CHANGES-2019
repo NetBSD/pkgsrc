@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3001 2019/07/21 10:34:51 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.3002 2019/07/21 11:52:39 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4935,3 +4935,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed geography/gpsdrive [wiz 2019-07-21]
 	Removed x11/xmms-osd [wiz 2019-07-21]
 	Removed graphics/gdk-pixbuf successor graphics/gdk-pixbuf2 [wiz 2019-07-21]
+	Updated archivers/bzip2 to 1.0.8 [nia 2019-07-21]
