@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/06/08 12:25:05 mrg Exp $
+# $NetBSD: Makefile,v 1.4 2019/07/21 15:17:13 tnn Exp $
 
 UBOOT_TARGET=		rockpro64
 UBOOT_CONFIG=		rockpro64-rk3399_defconfig
@@ -11,13 +11,13 @@ U_BOOT_IMAGE_TYPE=	rk3399
 
 # Boot Loader stage 3-1 (BL31) EL3 Runtime Firmware
 # XXX LICENSE?
-BL31=		rk3399_bl31_v1.18.elf
+BL31=		rk3399_bl31_v1.29.elf
 DISTFILES+=	${BL31}
-SITES.${BL31}=	${MASTER_SITE_GITHUB:=rockchip-linux/rkbin/raw/9e6625e7551ffa591f0ac4c271f12a7ab5cedcf4/bin/rk33/}
+SITES.${BL31}=	${MASTER_SITE_GITHUB:=rockchip-linux/rkbin/raw/0b8a4e66958b5d3d87fc61fc4bd8e069c79e931a/bin/rk33/}
 
 # DDR init binary
-DDR_BIN=		rk3399_ddr_800MHz_v1.14.bin
-SITES.${DDR_BIN}=	${MASTER_SITE_GITHUB:=rockchip-linux/rkbin/raw/dbc8710a93406669fb2df2d57dc086228bf1979f/bin/rk33/}
+DDR_BIN=		rk3399_ddr_800MHz_v1.23.bin
+SITES.${DDR_BIN}=	${MASTER_SITE_GITHUB:=rockchip-linux/rkbin/raw/016471bcfb1a0b1e1269895cb7b6f534813edfdc/bin/rk33/}
 DISTFILES+=		${DDR_BIN}
 
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
