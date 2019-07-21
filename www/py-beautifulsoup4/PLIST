@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/05/09 20:05:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/07/21 08:05:31 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -28,6 +28,9 @@ ${PYSITELIB}/bs4/diagnose.pyo
 ${PYSITELIB}/bs4/element.py
 ${PYSITELIB}/bs4/element.pyc
 ${PYSITELIB}/bs4/element.pyo
+${PYSITELIB}/bs4/formatter.py
+${PYSITELIB}/bs4/formatter.pyc
+${PYSITELIB}/bs4/formatter.pyo
 ${PYSITELIB}/bs4/testing.py
 ${PYSITELIB}/bs4/testing.pyc
 ${PYSITELIB}/bs4/testing.pyo
