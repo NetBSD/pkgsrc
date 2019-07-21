@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.54 2014/10/09 14:05:51 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2019/07/21 11:51:24 nia Exp $
 #
 
-DISTNAME=	bzip2-1.0.6
-PKGREVISION=	1
+DISTNAME=	bzip2-1.0.8
 CATEGORIES=	archivers
-MASTER_SITES=	http://www.bzip.org/1.0.6/
+MASTER_SITES=	https://sourceware.org/pub/bzip2/
+DISTFILES=	# empty
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://www.bzip.org/
+HOMEPAGE=	https://sourceware.org/bzip2/
 COMMENT=	Block-sorting file compressor
-
-DISTFILES=	# empty
+LICENSE=	zlib # ish
 
 REPLACE_SH=	bzdiff bzgrep bzmore
 
