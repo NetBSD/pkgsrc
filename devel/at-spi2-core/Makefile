@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/07/18 20:13:42 prlw1 Exp $
+# $NetBSD: Makefile,v 1.30 2019/07/22 14:52:51 prlw1 Exp $
 
 DISTNAME=	at-spi2-core-2.33.2
 CATEGORIES=	devel gnome
@@ -34,7 +34,7 @@ CONF_FILES=	${eg_busconfigdir}/accessibility.conf \
 			${busconfigdir}/accessibility.conf
 CONF_FILES+=	${eg_default_sessiondir}/at-spi-dbus-bus.desktop \
 			${default_sessiondir}/at-spi-dbus-bus.desktop
-MAKE_DIRS+=	${default_sessiondir}
+MAKE_DIRS+=	${busconfigdir} ${default_sessiondir}
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${eg_default_sessiondir}
