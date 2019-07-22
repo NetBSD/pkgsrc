@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/10/17 18:30:02 adam Exp $
+# $NetBSD: Makefile,v 1.3 2019/07/22 08:42:50 nia Exp $
 
 DISTNAME=	nbformat-4.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nbformat/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://jupyter.org/
+HOMEPAGE=	https://jupyter.org/
 COMMENT=	Jupyter Notebook format
 LICENSE=	modified-bsd
 
