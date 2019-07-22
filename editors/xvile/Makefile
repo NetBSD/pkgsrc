@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2019/02/15 19:50:52 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2019/07/22 08:37:58 nia Exp $
 
 DISTNAME=		vile-9.8t
 PKGNAME=		x${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=		ftp://ftp.invisible-island.net/vile/current/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://invisible-island.net/vile/
+HOMEPAGE=		https://invisible-island.net/vile/
 COMMENT=		VI Like Emacs, X11 version -- a fully "X aware" vi work-alike
 LICENSE=		gnu-gpl-v2
 
