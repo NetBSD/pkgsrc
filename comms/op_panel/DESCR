@@ -1,7 +1,7 @@
 The Flash Operator panel is a 'switchboard' application for the Asterisk PBX
 system. It displays information about your Asterisk PBX activity in real time
 via a standard web browser with Flash plugin. The display and button layout is
-configurable, you can have more than a 100 buttons on the screen at once.
+configurable; you can have more than 100 buttons on the screen at once.
 
 You can see at a glance:
  * What extensions are busy, ringing or available
@@ -15,7 +15,8 @@ You can see at a glance:
 
 You can perform these actions:
  * Hang-up a channel (double click the colored dot on the button)
- * Transfer a call leg via drag&drop (drag the phone icon on a button to another   button)
+ * Transfer a call leg via drag&drop (drag the phone icon on a button to
+   another button)
  * Originate calls via drag&drop
  * Drag an available extension to an ongoing conversation and conference the
    three together.
