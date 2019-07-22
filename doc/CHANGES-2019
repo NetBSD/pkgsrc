@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3013 2019/07/22 22:41:40 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.3014 2019/07/22 23:05:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4948,3 +4948,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated finance/gnucash to 3.6 [wiz 2019-07-22]
 	Updated devel/at-spi2-core to 2.33.2nb1 [wiz 2019-07-22]
 	Updated security/tor-browser to 8.5.4 [wiz 2019-07-22]
+	Updated sysutils/i3status to 2.13 [wiz 2019-07-22]
