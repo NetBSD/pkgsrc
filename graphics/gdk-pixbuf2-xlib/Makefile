@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/07/21 22:24:05 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/07/22 14:03:33 rjs Exp $
 
 DISTNAME=	gdk-pixbuf-${PIXBUF2_VERSION}
 PKGNAME=	gdk-pixbuf2-xlib-${PIXBUF2_VERSION}
@@ -42,7 +42,7 @@ post-install:
 .include "../../devel/py-meson/build.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+= glib2>=2.37.2
