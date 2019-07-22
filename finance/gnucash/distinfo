@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.94 2019/03/31 20:46:52 wiz Exp $
+$NetBSD: distinfo,v 1.95 2019/07/22 13:39:57 wiz Exp $
 
-SHA1 (gnucash-3.5.tar.bz2) = bba13b850bc6332a437d07eec971bc79c4837fd5
-RMD160 (gnucash-3.5.tar.bz2) = 54d42e8670c9169644c9383efa8eebbca65d5e78
-SHA512 (gnucash-3.5.tar.bz2) = 76230d2fe1ba4cc605d0d58976ed3214b10a2549fc7eaa1e327bbf85c861baa082523c70ed088a59bb56deb6af9a7808752fc719eda0df3e9209cec05c9c8d13
-Size (gnucash-3.5.tar.bz2) = 13766397 bytes
+SHA1 (gnucash-3.6.tar.bz2) = b2c3e71d2a5014af459e2a35451ad5ccb42118ca
+RMD160 (gnucash-3.6.tar.bz2) = 925ef37de2ac5c1404d70ed188819f23ba444b49
+SHA512 (gnucash-3.6.tar.bz2) = 3d99235a6171e7189dbb15fed11e7f3acb4f49ef8dc6124b26807e74ce4326ac5ae6e23e693a34947604ecb0253ecbcd80f669803a629eb7d236fd3444dbfe82
+Size (gnucash-3.6.tar.bz2) = 13811045 bytes
+SHA1 (patch-gnucash_register_register-gnome_CMakeLists.txt) = 3e47ca8dc49955cb0642a7e0d1da7e535b308a79
