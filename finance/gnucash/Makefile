@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.279 2019/07/21 22:24:48 wiz Exp $
+# $NetBSD: Makefile,v 1.280 2019/07/22 13:39:57 wiz Exp $
 
-DISTNAME=		gnucash-3.5
-PKGREVISION=		4
+DISTNAME=		gnucash-3.6
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 EXTRACT_SUFX=		.tar.bz2
@@ -22,7 +21,7 @@ USE_LANGUAGES=		c c++
 USE_CMAKE=		yes
 USE_LIBTOOL=		yes
 INFO_FILES=		yes
-USE_TOOLS+=		perl:run pkg-config
+USE_TOOLS+=		bash perl:run pkg-config
 # remove when using ninja
 USE_TOOLS+=		gmake
 
