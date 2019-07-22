@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/04/25 13:19:48 adam Exp $
+# $NetBSD: Makefile,v 1.15 2019/07/22 08:42:50 nia Exp $
 
 DISTNAME=	notebook-5.7.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/notebook/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://jupyter.org/
+HOMEPAGE=	https://jupyter.org/
 COMMENT=	Web-based notebook environment for interactive computing
 LICENSE=	modified-bsd
 
