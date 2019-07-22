@@ -1,10 +1,10 @@
-$NetBSD: patch-src_print__wireless__info.c,v 1.2 2019/03/14 11:55:29 wiz Exp $
+$NetBSD: patch-src_print__wireless__info.c,v 1.3 2019/07/22 23:04:31 wiz Exp $
 
-Add includes for AF_INET & AF_INET6, and for free().
+Add includes for AF_INET & AF_INET6.
 
---- src/print_wireless_info.c.orig	2018-05-11 09:10:46.000000000 +0000
+--- src/print_wireless_info.c.orig	2019-01-23 08:03:56.000000000 +0000
 +++ src/print_wireless_info.c
-@@ -60,10 +60,13 @@
+@@ -61,6 +61,7 @@
  
  #ifdef __NetBSD__
  #include <sys/types.h>
@@ -12,9 +12,3 @@ Add includes for AF_INET & AF_INET6, and for free().
  #include <net80211/ieee80211.h>
  #define IW_ESSID_MAX_SIZE IEEE80211_NWID_LEN
  #endif
- 
-+#include <stdlib.h>
-+
- #include "i3status.h"
- 
- #define WIRELESS_INFO_FLAG_HAS_ESSID (1 << 0)
