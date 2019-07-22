@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/06/14 06:39:37 kamil Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/07/22 23:04:31 wiz Exp $
 bin/i3status
 man/man1/i3status.1
-share/doc/i3status/LICENSE
 share/examples/i3status/i3status.conf
