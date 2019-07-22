@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/06/14 14:49:12 adam Exp $
+# $NetBSD: Makefile,v 1.6 2019/07/22 08:42:50 nia Exp $
 
 DISTNAME=	nbconvert-5.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nbconvert/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://jupyter.org/
+HOMEPAGE=	https://jupyter.org/
 COMMENT=	Converting Jupyter Notebooks
 LICENSE=	modified-bsd
 
