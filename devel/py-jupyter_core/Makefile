@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/06/20 16:12:39 adam Exp $
+# $NetBSD: Makefile,v 1.6 2019/07/22 08:42:49 nia Exp $
 
 DISTNAME=	jupyter_core-4.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter_core/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://jupyter.org/
+HOMEPAGE=	https://jupyter.org/
 COMMENT=	Jupyter core package
 LICENSE=	modified-bsd
 
