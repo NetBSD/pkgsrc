@@ -1,0 +1,25 @@
+$NetBSD: patch-make_common_MakeBase.gmk,v 1.1 2019/07/22 10:46:56 tnn Exp $
+
+NetBSD's printf(1) doesn't handle the "--" end-of-options delimiter.
+src/usr.bin/printf/printf.c rev1.49
+
+--- make/common/MakeBase.gmk.orig	2019-02-19 13:34:21.000000000 +0000
++++ make/common/MakeBase.gmk
+@@ -57,7 +57,7 @@ endef
+ 
+ define ListPathsSafely_Printf
+ 	$(if $(strip $($1_LPS$4)),$(if $(findstring $(LOG_LEVEL),trace),,@)printf \
+-	    -- "$(strip $($1_LPS$4))\n" | $(decompress_paths) $3)
++	    "$(strip $($1_LPS$4))\n" | $(decompress_paths) $3)
+ endef
+ 
+ # Receipt example:
+@@ -232,7 +232,7 @@ endef
+ define ListPathsSafelyNow_IfPrintf
+   ifneq (,$$(word $4,$$($1)))
+     $$(eval $1_LPS$4:=$$(call compress_paths,$$(wordlist $4,$5,$$($1))))
+-    $$(shell printf -- "$$(strip $$($1_LPS$4))\n" | $(decompress_paths) $3)
++    $$(shell printf "$$(strip $$($1_LPS$4))\n" | $(decompress_paths) $3)
+   endif
+ endef
+ 
