@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3009 2019/07/22 01:36:20 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.3010 2019/07/22 03:39:52 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4944,3 +4944,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/espeak to 1.48.04 [nia 2019-07-21]
 	Removed audio/portaudio successor audio/portaudio-devel [nia 2019-07-21]
 	Updated security/py-acme-tiny to 4.1.0 [schmonz 2019-07-22]
+	Updated comms/op_panel to 0.30 [jnemeth 2019-07-22]
