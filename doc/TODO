@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19150 2019/07/22 22:41:40 wiz Exp $
+$NetBSD: TODO,v 1.19151 2019/07/22 23:05:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -853,7 +853,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o html2wml-0.4.11
 	o htmldoc-1.8.28
 	o http_load-20140814
-	o i3status-2.13
 	o icbirc-2.0
 	o icc11-13.0
 	o icdprog-0.5
