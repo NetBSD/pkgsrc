@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3008 2019/07/21 23:09:56 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3009 2019/07/22 01:36:20 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4943,3 +4943,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/u-boot-rock64 to 2017.09nb4 [tnn 2019-07-21]
 	Updated audio/espeak to 1.48.04 [nia 2019-07-21]
 	Removed audio/portaudio successor audio/portaudio-devel [nia 2019-07-21]
+	Updated security/py-acme-tiny to 4.1.0 [schmonz 2019-07-22]
