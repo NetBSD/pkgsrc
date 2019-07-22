@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2019/02/16 00:52:06 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2019/07/22 08:37:58 nia Exp $
 
 DISTNAME=		vile-9.8t
 CATEGORIES=		editors
@@ -6,7 +6,7 @@ MASTER_SITES=		ftp://ftp.invisible-island.net/vile/current/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://invisible-island.net/vile/
+HOMEPAGE=		https://invisible-island.net/vile/
 COMMENT=		VI Like Emacs.  a vi "workalike", with many additional features
 LICENSE=		gnu-gpl-v2
 
