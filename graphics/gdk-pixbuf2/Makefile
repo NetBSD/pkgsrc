@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/07/21 12:45:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.38 2019/07/22 09:13:13 nia Exp $
 
 DISTNAME=	gdk-pixbuf-${PIXBUF2_VERSION}
 PKGNAME=	${DISTNAME:S/pixbuf/pixbuf2/}
@@ -23,6 +23,17 @@ MESON_ARGS+=	-D x11=false
 MESON_ARGS+=	-D man=false
 PKGCONFIG_OVERRIDE_STAGE=pre-install
 PKGCONFIG_OVERRIDE=    output/meson-private/gdk-pixbuf-2.0.pc
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/pyversion.mk"
+
+REPLACE_INTERPRETER+=	py3
+REPLACE.py3.old=	.*/usr/bin/env python[^ ]*
+REPLACE.py3.new=	${PYTHONBIN}
+REPLACE_FILES.py3+=	build-aux/gen-installed-test.py
+REPLACE_FILES.py3+=	build-aux/gen-thumbnailer.py
+REPLACE_FILES.py3+=	build-aux/gen-resources.py
 
 _BUILDING_GTK2= yes
 .include "loaders.mk"
