@@ -1,7 +1,8 @@
-$NetBSD: patch-meson.build,v 1.1 2019/07/22 22:04:35 tnn Exp $
+$NetBSD: patch-meson.build,v 1.2 2019/07/22 22:48:47 wiz Exp $
 
 -D_XOPEN_SOURCE=1 implies POSIX.1 but we need at least 500 (SUSv2) for
 struct timeval. Fixes build on SunOS.
+https://gitlab.gnome.org/GNOME/gdk-pixbuf/issues/128
 
 --- meson.build.orig	2019-02-28 16:22:57.000000000 +0000
 +++ meson.build
