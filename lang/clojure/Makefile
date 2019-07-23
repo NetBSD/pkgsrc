@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2019/05/23 19:23:02 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2019/07/23 20:33:51 sevan Exp $
 
-DISTNAME=	clojure-1.5.1
+DISTNAME=	clojure-1.8.0
 CATEGORIES=	lang
 MASTER_SITES=	http://repo1.maven.org/maven2/org/clojure/clojure/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.zip
