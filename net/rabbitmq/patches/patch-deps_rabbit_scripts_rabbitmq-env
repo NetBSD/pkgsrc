@@ -1,8 +1,8 @@
-$NetBSD: patch-deps_rabbit_scripts_rabbitmq-env,v 1.1 2016/12/02 11:00:39 fhajny Exp $
+$NetBSD: patch-deps_rabbit_scripts_rabbitmq-env,v 1.2 2019/07/23 16:12:39 jperkin Exp $
 
 Remove cumbersome symlink handling, we know where stuff is.
 
---- deps/rabbit/scripts/rabbitmq-env.orig	2015-11-12 16:42:49.000000000 +0000
+--- deps/rabbit/scripts/rabbitmq-env.orig	2019-07-23 15:31:05.072674789 +0000
 +++ deps/rabbit/scripts/rabbitmq-env
 @@ -20,29 +20,7 @@ if [ "$RABBITMQ_ENV_LOADED" = 1 ]; then
  fi
@@ -34,4 +34,4 @@ Remove cumbersome symlink handling, we know where stuff is.
 +    RABBITMQ_SCRIPTS_DIR="@RABBITMQ_HOME@/sbin"
  fi
  
- rmq_realpath() {
+ _rmq_env_now()
