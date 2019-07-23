@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.43 2019/04/25 07:33:12 maya Exp $
+# $NetBSD: Makefile,v 1.44 2019/07/23 16:12:39 jperkin Exp $
 
-DISTNAME=		rabbitmq-server-3.7.7
+DISTNAME=		rabbitmq-server-3.7.16
 PKGNAME=		${DISTNAME:S/-server//}
-PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=rabbitmq/}
 EXTRACT_SUFX=		.tar.xz
 GITHUB_PROJECT=		rabbitmq-server
 GITHUB_RELEASE=		v${PKGVERSION_NOREV}
 
-MAINTAINER=		fhajny@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.rabbitmq.com/server.html
 COMMENT=		Implementation of AMQP that provides robust messaging for applications
 LICENSE=		mpl-1.1
@@ -48,9 +47,9 @@ PKG_SHELL.${RMQ_USER}=	${RMQ_SHELL}
 
 PKG_SYSCONFSUBDIR=	${PKGBASE}
 CONF_FILES+=		share/examples/rabbitmq/rabbitmq-env.conf \
-			  ${PKG_SYSCONFDIR}/rabbitmq-env.conf
+			${PKG_SYSCONFDIR}/rabbitmq-env.conf
 CONF_FILES+=		share/examples/rabbitmq/rabbitmq.config.example \
-			  ${PKG_SYSCONFDIR}/rabbitmq.config
+			${PKG_SYSCONFDIR}/rabbitmq.config
 
 FILES_SUBST+=		RMQ_USER=${RMQ_USER}
 FILES_SUBST+=		RMQ_GROUP=${RMQ_GROUP}
@@ -96,9 +95,9 @@ INSTALL_TARGET=		install-erlapp install-scripts install-bin install-man
 TEST_TARGET=		check
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/deps/rabbit/docs/rabbitmq.config.example		\
+	${INSTALL_DATA} ${WRKSRC}/deps/rabbit/docs/rabbitmq.config.example \
 		${DESTDIR}${PREFIX}/share/examples/rabbitmq
-	${INSTALL_DATA} ${FILESDIR}/rabbitmq-env.conf 				\
+	${INSTALL_DATA} ${FILESDIR}/rabbitmq-env.conf \
 		${DESTDIR}${PREFIX}/share/examples/rabbitmq
 
 .include "../../lang/erlang/buildlink3.mk"
