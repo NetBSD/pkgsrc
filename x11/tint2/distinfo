@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2019/01/02 15:35:12 tnn Exp $
+$NetBSD: distinfo,v 1.9 2019/07/23 09:08:32 tnn Exp $
 
-SHA1 (tint2-v16.6.1.tar.bz2) = a2645c3d82c9759592539b5eba8d5312a559533d
-RMD160 (tint2-v16.6.1.tar.bz2) = 3e4db9b0cb9c45a411419eee930cb4df4e0c2cf3
-SHA512 (tint2-v16.6.1.tar.bz2) = d82e64883f40ae93daa67b4dc0aaa530456d28ee2d52c224d8eb1c91bc59bc43ba530843250274079e1567cd30eb9fd1eb79324aeec1af4bb3d748a046fd93aa
-Size (tint2-v16.6.1.tar.bz2) = 398345 bytes
+SHA1 (tint2-v16.7.tar.bz2) = 5400e1ec20bbd6686882a41c4be45574460160d5
+RMD160 (tint2-v16.7.tar.bz2) = 0e3f14facd7b654282a77b899b35c5b382fe3127
+SHA512 (tint2-v16.7.tar.bz2) = 92d3bb3b26fe356553b711727d86c46ab1530990e972791b10ddde57c7479ce983dda97bacb5dd37be1e846c767b00a0e36388271d5e6618552243c8e2a7fa43
+Size (tint2-v16.7.tar.bz2) = 402712 bytes
 SHA1 (patch-aa) = fdf0fe697ceb576068b0873532ac406b59752370
