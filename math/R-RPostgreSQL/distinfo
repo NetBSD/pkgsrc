@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/07/07 12:15:38 wen Exp $
+$NetBSD: distinfo,v 1.5 2019/07/23 22:58:46 brook Exp $
 
 SHA1 (R/RPostgreSQL_0.6-2.tar.gz) = 41034b13eeb6ecec56ff8385afbf062acc85e725
 RMD160 (R/RPostgreSQL_0.6-2.tar.gz) = 66fc1f1e5091bb8d3032301f3d33459d07bd5b12
 SHA512 (R/RPostgreSQL_0.6-2.tar.gz) = 8c032938a92e336b51abefae3aea9266e7d2b342cf6f1937db739d545f3ba4abaff28687d68c547f1f341b127f72b9cf1478ea2545d705f930055dcc930b3045
 Size (R/RPostgreSQL_0.6-2.tar.gz) = 579968 bytes
-SHA1 (patch-configure) = 6c73a381bc4ebf96466645902395b552e6abc21d
-SHA1 (patch-configure.in) = b9d242940d8ed1f24ec0456dc0f346c3fce2f33c
