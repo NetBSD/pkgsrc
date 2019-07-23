@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/06/11 19:51:27 asau Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/07/23 20:33:51 sevan Exp $
 bin/clj
 lib/java/clojure/clojure.jar
 share/doc/${PKGNAME}/CommonLispFormat.markdown
@@ -10,16 +10,22 @@ share/examples/${PKGNAME}/test_clojure/agents.clj
 share/examples/${PKGNAME}/test_clojure/annotations.clj
 share/examples/${PKGNAME}/test_clojure/annotations/java_5.clj
 share/examples/${PKGNAME}/test_clojure/annotations/java_6.clj
+share/examples/${PKGNAME}/test_clojure/api.clj
 share/examples/${PKGNAME}/test_clojure/atoms.clj
 share/examples/${PKGNAME}/test_clojure/clojure_set.clj
 share/examples/${PKGNAME}/test_clojure/clojure_walk.clj
 share/examples/${PKGNAME}/test_clojure/clojure_xml.clj
 share/examples/${PKGNAME}/test_clojure/clojure_zip.clj
 share/examples/${PKGNAME}/test_clojure/compilation.clj
+share/examples/${PKGNAME}/test_clojure/compilation/examples.clj
+share/examples/${PKGNAME}/test_clojure/compilation/line_number_examples.clj
+share/examples/${PKGNAME}/test_clojure/compilation/load_ns.clj
 share/examples/${PKGNAME}/test_clojure/control.clj
 share/examples/${PKGNAME}/test_clojure/data.clj
 share/examples/${PKGNAME}/test_clojure/data_structures.clj
+share/examples/${PKGNAME}/test_clojure/data_structures_interop.clj
 share/examples/${PKGNAME}/test_clojure/def.clj
+share/examples/${PKGNAME}/test_clojure/delays.clj
 share/examples/${PKGNAME}/test_clojure/edn.clj
 share/examples/${PKGNAME}/test_clojure/errors.clj
 share/examples/${PKGNAME}/test_clojure/evaluation.clj
@@ -52,7 +58,7 @@ share/examples/${PKGNAME}/test_clojure/protocols.clj
 share/examples/${PKGNAME}/test_clojure/protocols/examples.clj
 share/examples/${PKGNAME}/test_clojure/protocols/hash_collisions.clj
 share/examples/${PKGNAME}/test_clojure/protocols/more_examples.clj
-share/examples/${PKGNAME}/test_clojure/reader.clj
+share/examples/${PKGNAME}/test_clojure/reader.cljc
 share/examples/${PKGNAME}/test_clojure/reducers.clj
 share/examples/${PKGNAME}/test_clojure/reflect.clj
 share/examples/${PKGNAME}/test_clojure/refs.clj
@@ -61,12 +67,15 @@ share/examples/${PKGNAME}/test_clojure/repl/example.clj
 share/examples/${PKGNAME}/test_clojure/rt.clj
 share/examples/${PKGNAME}/test_clojure/sequences.clj
 share/examples/${PKGNAME}/test_clojure/serialization.clj
+share/examples/${PKGNAME}/test_clojure/server.clj
 share/examples/${PKGNAME}/test_clojure/special.clj
 share/examples/${PKGNAME}/test_clojure/string.clj
 share/examples/${PKGNAME}/test_clojure/test.clj
 share/examples/${PKGNAME}/test_clojure/test_fixtures.clj
+share/examples/${PKGNAME}/test_clojure/transducers.clj
 share/examples/${PKGNAME}/test_clojure/transients.clj
 share/examples/${PKGNAME}/test_clojure/try_catch.clj
 share/examples/${PKGNAME}/test_clojure/vars.clj
 share/examples/${PKGNAME}/test_clojure/vectors.clj
+share/examples/${PKGNAME}/test_clojure/volatiles.clj
 share/examples/${PKGNAME}/test_helper.clj
