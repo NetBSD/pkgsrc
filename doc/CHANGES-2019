@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3015 2019/07/23 00:49:25 tnn Exp $
+$NetBSD: CHANGES-2019,v 1.3016 2019/07/23 09:25:30 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4951,3 +4951,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/i3status to 2.13 [wiz 2019-07-22]
 	Updated www/geckodriver to 0.24.0 [tnn 2019-07-22]
 	Updated devel/git-lfs to 2.7.2 [tnn 2019-07-22]
+	Updated x11/tint2 to 16.7 [tnn 2019-07-23]
