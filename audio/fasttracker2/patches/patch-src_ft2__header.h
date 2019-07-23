@@ -1,9 +1,7 @@
-$NetBSD: patch-src_ft2__header.h,v 1.1 2019/07/22 23:38:47 fox Exp $
+$NetBSD: patch-src_ft2__header.h,v 1.2 2019/07/23 08:20:22 fox Exp $
 
 Add the HAS_SSE macro so that build failures do not occur in i386
 systems that lack SSE support.
-
-Suggestion by leot@
 
 --- src/ft2_header.h.orig	2019-07-22 16:21:07.522137321 +0000
 +++ src/ft2_header.h
