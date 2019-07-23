@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.93 2019/07/15 16:06:19 ryoon Exp $
+# $NetBSD: compiler.mk,v 1.94 2019/07/23 13:57:04 gdt Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -45,8 +45,8 @@
 #	visible to the build environment, installing them if
 #	necessary.  Flags such as -std=c++99 are also added.
 #	Valid values are: c, c99, c++, c++03, gnu++03, c++0x, gnu++0x,
-#	c++11, gnu++11, c++14, gnu++14, fortran, fortran77, java, objc,
-#	obj-c++, and ada.  The default is "c".
+#	c++11, gnu++11, c++14, gnu++14, c++17, gnu++17, fortran,
+#	fortran77, java, objc, obj-c++, and ada.  The default is "c".
 #
 #       The above is partly aspirational.  As an example c++11 does
 #       not force a new enough version of gcc.
@@ -83,7 +83,7 @@ USE_LANGUAGES?=	c
 USE_LANGUAGES+=	c
 .endif
 
-_CXX_STD_VERSIONS=	gnu++14 c++14 gnu++11 c++11 gnu++0x c++0x gnu++03 c++03
+_CXX_STD_VERSIONS=	gnu++17 c++17 gnu++14 c++14 gnu++11 c++11 gnu++0x c++0x gnu++03 c++03
 .for _version_ in ${_CXX_STD_VERSIONS}
 .  if !empty(USE_LANGUAGES:M${_version_})
 USE_LANGUAGES+=		c++
