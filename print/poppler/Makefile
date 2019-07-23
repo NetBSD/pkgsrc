@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2019/05/09 09:28:22 adam Exp $
+# $NetBSD: Makefile,v 1.74 2019/07/23 16:45:18 wiz Exp $
 
 .include "../../print/poppler/Makefile.common"
 
@@ -34,7 +34,7 @@ CFLAGS+=	-D__LONG_LONG_SUPPORTED=
 .endif
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/poppler/
+	${INSTALL_MAN} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/poppler/
 	${INSTALL_MAN} ${WRKSRC}/README-XPDF ${DESTDIR}${PREFIX}/share/doc/poppler/
 	${RMDIR} ${DESTDIR}${PREFIX}/include/poppler || ${TRUE}
 
