@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/07/20 22:46:39 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/07/23 16:28:36 gdt Exp $
 
 DISTNAME=	libfilezilla-0.17.1
 PKGREVISION=	1
@@ -15,13 +15,12 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake msgfmt pkg-config
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++17
 
 PKGCONFIG_OVERRIDE+=	lib/libfilezilla.pc.in
 
-# TODO: update GCC_REQD, as of 0.17.1 this requires C++17
-# GCC 4.9 is required to support C++14
-GCC_REQD+=	4.9
+# for C++17
+GCC_REQD+=	7
 
 BUILDLINK_API_DEPENDS.nettle+=	nettle>=3.1
 .include "../../security/nettle/buildlink3.mk"
