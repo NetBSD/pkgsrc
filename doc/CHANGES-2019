@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3018 2019/07/23 15:12:52 taca Exp $
+$NetBSD: CHANGES-2019,v 1.3019 2019/07/23 16:18:30 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4954,3 +4954,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/tint2 to 16.7 [tnn 2019-07-23]
 	Updated mail/dovecot2 to 2.3.7.1 [taca 2019-07-23]
 	Updated mail/dovecot2-pigeonhole to 0.5.7.1 [taca 2019-07-23]
+	Updated net/rabbitmq to 3.7.16 [jperkin 2019-07-23]
+	Updated net/rabbitmq to 3.7.16 [jperkin 2019-07-23]
