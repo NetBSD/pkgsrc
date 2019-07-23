@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3016 2019/07/23 09:25:30 tnn Exp $
+$NetBSD: CHANGES-2019,v 1.3017 2019/07/23 15:11:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4952,3 +4952,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/geckodriver to 0.24.0 [tnn 2019-07-22]
 	Updated devel/git-lfs to 2.7.2 [tnn 2019-07-22]
 	Updated x11/tint2 to 16.7 [tnn 2019-07-23]
+	Updated mail/dovecot2 to 2.3.7.1 [taca 2019-07-23]
