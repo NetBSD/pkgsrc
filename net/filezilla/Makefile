@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2019/07/21 22:25:30 wiz Exp $
+# $NetBSD: Makefile,v 1.117 2019/07/23 16:40:06 wiz Exp $
 
 VERSION=	3.43.0
 DISTNAME=	FileZilla_${VERSION}_src
@@ -14,7 +14,7 @@ COMMENT=	FTP, FTPS, and SFTP client with intuitive GUI
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++17
 USE_TOOLS+=	gmake pkg-config msgfmt msgmerge xgettext
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
@@ -22,9 +22,8 @@ CONFIGURE_ARGS+=	--disable-autoupdatecheck
 # avoid xdg-utils dependency
 CONFIGURE_ENV+=		ac_cv_path_xdgopen=firefox
 
-# TODO: update GCC_REQD, as of 3.43.0 this requires C++17
-# GCC 4.9 is required to support C++14.
-GCC_REQD+=		4.9
+# For C++17.
+GCC_REQD+=		7
 
 .include "options.mk"
 
