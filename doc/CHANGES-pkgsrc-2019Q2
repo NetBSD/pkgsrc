@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q2,v 1.1.2.5 2019/07/18 13:39:59 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q2,v 1.1.2.6 2019/07/23 13:06:23 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q2 branch:
 
@@ -71,4 +71,19 @@ audio/taglib: security fix
 
 Pullup ticket #6006 - requested by nia
 archivers/p7zip: security fix
+
+Pullup ticket #6007 - requested by nia
+graphics/ImageMagick: security fix
+
+Pullup ticket #6008 - requested by nia
+devel/SDL: security fix
+
+Pullup ticket #6009 - requested by leot
+net/mitmproxy: bugfix
+
+Pullup ticket #6010 - requested by rillig
+bootstrap: Solaris 10 build fix (PR pkg/54349)
+
+Pullup ticket #6011 - requested by fox
+audio/fasttracker2: update, i386 build fix
 
