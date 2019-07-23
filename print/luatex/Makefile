@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.85 2019/05/09 09:47:35 adam Exp $
+# $NetBSD: Makefile,v 1.86 2019/07/23 17:20:00 wiz Exp $
 
+PKGREVISION= 1
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	luatex-1.10.0
