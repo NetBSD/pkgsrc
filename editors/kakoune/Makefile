@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/07/24 17:01:02 nia Exp $
+# $NetBSD: Makefile,v 1.2 2019/07/24 17:43:02 nia Exp $
 
 DISTNAME=	kakoune-2019.07.01
 CATEGORIES=	editors
@@ -13,7 +13,7 @@ LICENSE=	unlicense
 
 BUILD_DIRS=	src
 USE_TOOLS+=	gmake pkg-config
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++17
 
 # C++17
 GCC_REQD+=	7
