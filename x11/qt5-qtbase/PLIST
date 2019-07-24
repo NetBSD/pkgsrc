@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2019/07/01 05:49:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2019/07/24 19:44:55 nia Exp $
 lib/pkgconfig/Qt5Concurrent.pc
 lib/pkgconfig/Qt5Core.pc
 lib/pkgconfig/Qt5DBus.pc
@@ -1559,6 +1559,17 @@ ${PLIST.unix}qt5/include/QtKmsSupport/QtKmsSupport
 ${PLIST.unix}qt5/include/QtKmsSupport/QtKmsSupportDepends
 ${PLIST.unix}qt5/include/QtKmsSupport/QtKmsSupportVersion
 ${PLIST.unix}qt5/include/QtKmsSupport/qtkmssupportversion.h
+${PLIST.gtk3}qt5/include/QtLinuxAccessibilitySupport/${PKGVERSION}/QtLinuxAccessibilitySupport/private/application_p.h
+${PLIST.gtk3}qt5/include/QtLinuxAccessibilitySupport/${PKGVERSION}/QtLinuxAccessibilitySupport/private/atspiadaptor_p.h
+${PLIST.gtk3}qt5/include/QtLinuxAccessibilitySupport/${PKGVERSION}/QtLinuxAccessibilitySupport/private/bridge_p.h
+${PLIST.gtk3}qt5/include/QtLinuxAccessibilitySupport/${PKGVERSION}/QtLinuxAccessibilitySupport/private/cache_p.h
+${PLIST.gtk3}qt5/include/QtLinuxAccessibilitySupport/${PKGVERSION}/QtLinuxAccessibilitySupport/private/constant_mappings_p.h
+${PLIST.gtk3}qt5/include/QtLinuxAccessibilitySupport/${PKGVERSION}/QtLinuxAccessibilitySupport/private/dbusconnection_p.h
+${PLIST.gtk3}qt5/include/QtLinuxAccessibilitySupport/${PKGVERSION}/QtLinuxAccessibilitySupport/private/struct_marshallers_p.h
+${PLIST.gtk3}qt5/include/QtLinuxAccessibilitySupport/QtLinuxAccessibilitySupport
+${PLIST.gtk3}qt5/include/QtLinuxAccessibilitySupport/QtLinuxAccessibilitySupportDepends
+${PLIST.gtk3}qt5/include/QtLinuxAccessibilitySupport/QtLinuxAccessibilitySupportVersion
+${PLIST.gtk3}qt5/include/QtLinuxAccessibilitySupport/qtlinuxaccessibilitysupportversion.h
 qt5/include/QtNetwork/${PKGVERSION}/QtNetwork/private/bitstreams_p.h
 qt5/include/QtNetwork/${PKGVERSION}/QtNetwork/private/hpack_p.h
 qt5/include/QtNetwork/${PKGVERSION}/QtNetwork/private/hpacktable_p.h
@@ -2544,6 +2555,7 @@ qt5/lib/cmake/Qt5DBus/Qt5DBusMacros.cmake
 qt5/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake
 qt5/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake
 qt5/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake
+${PLIST.gtk3}qt5/lib/cmake/Qt5Gui/Qt5Gui_QGtk3ThemePlugin.cmake
 ${PLIST.unix}qt5/lib/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake
 ${PLIST.egl}qt5/lib/cmake/Qt5Gui/Qt5Gui_QEglFSEmulatorIntegrationPlugin.cmake
 ${PLIST.egl}qt5/lib/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake
@@ -2635,6 +2647,8 @@ qt5/lib/libQt5Gui.so.5
 qt5/lib/libQt5Gui.so.5.12
 ${PLIST.unix}qt5/lib/libQt5KmsSupport.a
 ${PLIST.unix}qt5/lib/libQt5KmsSupport.prl
+${PLIST.gtk3}qt5/lib/libQt5LinuxAccessibilitySupport.a
+${PLIST.gtk3}qt5/lib/libQt5LinuxAccessibilitySupport.prl
 qt5/lib/libQt5Network.prl
 qt5/lib/libQt5Network.so
 qt5/lib/libQt5Network.so.${PKGVERSION}
@@ -3123,6 +3137,7 @@ qt5/mkspecs/modules/qt_lib_fontdatabase_support_private.pri
 ${PLIST.unix}qt5/mkspecs/modules/qt_lib_glx_support_private.pri
 qt5/mkspecs/modules/qt_lib_gui.pri
 qt5/mkspecs/modules/qt_lib_gui_private.pri
+${PLIST.gtk3}qt5/mkspecs/modules/qt_lib_linuxaccessibility_support_private.pri
 ${PLIST.unix}qt5/mkspecs/modules/qt_lib_kms_support_private.pri
 qt5/mkspecs/modules/qt_lib_network.pri
 qt5/mkspecs/modules/qt_lib_network_private.pri
@@ -3246,6 +3261,7 @@ qt5/plugins/platforms/libqoffscreen.so
 ${PLIST.unix}qt5/plugins/platforms/libqvnc.so
 ${PLIST.unix}qt5/plugins/platforms/libqxcb.so
 qt5/plugins/platformthemes/libqxdgdesktopportal.so
+${PLIST.gtk3}qt5/plugins/platformthemes/libqgtk3.so
 ${PLIST.cups}qt5/plugins/printsupport/libcupsprintersupport.so
 qt5/plugins/sqldrivers/libqsqlite.so
 ${PLIST.egl}qt5/plugins/xcbglintegrations/libqxcb-egl-integration.so
