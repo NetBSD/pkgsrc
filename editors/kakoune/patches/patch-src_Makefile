@@ -1,0 +1,30 @@
+$NetBSD: patch-src_Makefile,v 1.1 2019/07/24 17:01:02 nia Exp $
+
+Do not force -O3 or -g.
+
+Allow KAK_BIN_PATH to be used as a fallback for finding the executable
+path on more platforms.
+
+--- src/Makefile.orig	2019-07-01 12:07:29.000000000 +0000
++++ src/Makefile
+@@ -14,7 +14,6 @@ ifeq ($(debug),yes)
+     suffix := .debug
+ else
+     ifeq ($(debug),no)
+-        CXXFLAGS += -O3
+         suffix := .opt
+     else
+         $(error debug should be either yes or no)
+@@ -85,10 +84,11 @@ else
+ 
+     LIBS += $(shell $(PKG_CONFIG) $(PKG_CONFIG_FLAGS) --libs ncursesw)
+     NCURSES_CFLAGS += $(shell $(PKG_CONFIG) $(PKG_CONFIG_FLAGS) --cflags ncursesw)
++    CPPFLAGS += -D'KAK_BIN_PATH="$(bindir)/kak"'
+     LDFLAGS += -rdynamic
+ endif
+ 
+-CXXFLAGS += -pedantic -std=c++17 -g -Wall -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-address
++CXXFLAGS += -pedantic -std=c++17 -Wall -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-address
+ 
+ all : kak
+ 
