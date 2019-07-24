@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2019/03/22 23:42:33 ryoon Exp $
+$NetBSD: distinfo,v 1.19 2019/07/24 14:01:09 ryoon Exp $
 
-SHA1 (OmegaT_4.1.5_04_Beta_Without_JRE.zip) = ebfe8bc61a82d9e31f10087292464e485e553934
-RMD160 (OmegaT_4.1.5_04_Beta_Without_JRE.zip) = 71bc91fff242c4b37f8861781cb1facb764877c5
-SHA512 (OmegaT_4.1.5_04_Beta_Without_JRE.zip) = c45f27999741e0143b7a0d94c0d141a56d6dd046182d8fb688ee347ccbc3e2b75892eaf88a9cb4639131432ac25145fa0fa8de9cf78e52baf54f605d92f91439
-Size (OmegaT_4.1.5_04_Beta_Without_JRE.zip) = 142951571 bytes
+SHA1 (OmegaT_4.3.0_Without_JRE.zip) = 5eafdf3b537bfc481c9475ebfbed883545413401
+RMD160 (OmegaT_4.3.0_Without_JRE.zip) = 7cf43d56f40c245ab71e5c78be701479a4ba2603
+SHA512 (OmegaT_4.3.0_Without_JRE.zip) = e6b1d819313c3abe058394fce586a0bb402aeefc5ebeaddae4b9327fd8ce931ef141e0bb01adbf90f129940738566834adab0f8899c9237054dc3d603c40dc62
+Size (OmegaT_4.3.0_Without_JRE.zip) = 151075878 bytes
