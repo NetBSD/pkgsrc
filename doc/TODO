@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19152 2019/07/23 16:45:39 wiz Exp $
+$NetBSD: TODO,v 1.19153 2019/07/24 17:02:27 nia Exp $
 
 Suggested new packages
 ======================
@@ -353,10 +353,6 @@ Suggested new packages
 	Hedgewars
 	https://www.hedgewars.org/
 	Strategy game similar to Worms
-
-	Kakoune code editor
-	http://kakoune.org/
-	Experimental modal text editor
 
 	Barbie Seahorse Adventures
 	http://www.imitationpickles.org/barbie/
