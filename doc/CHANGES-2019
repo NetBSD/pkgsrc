@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3021 2019/07/23 16:45:39 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.3022 2019/07/24 02:43:05 rin Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4956,3 +4956,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/dovecot2-pigeonhole to 0.5.7.1 [taca 2019-07-23]
 	Updated net/rabbitmq to 3.7.16 [jperkin 2019-07-23]
 	Updated print/poppler to 0.79.0 [wiz 2019-07-23]
+	Updated x11/mlterm to 3.8.8nb3 [rin 2019-07-24]
