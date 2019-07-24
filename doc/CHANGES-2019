@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3023 2019/07/24 03:50:06 taca Exp $
+$NetBSD: CHANGES-2019,v 1.3024 2019/07/24 10:08:29 roy Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4958,3 +4958,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/poppler to 0.79.0 [wiz 2019-07-23]
 	Updated x11/mlterm to 3.8.8nb3 [rin 2019-07-24]
 	Updated mail/squirrelmail to 1.4.23pre14832 [taca 2019-07-24]
+	Updated net/dhcpcd to 8.0.0 [roy 2019-07-24]
