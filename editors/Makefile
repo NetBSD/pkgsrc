@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.188 2019/07/07 15:00:15 leot Exp $
+# $NetBSD: Makefile,v 1.189 2019/07/24 17:01:02 nia Exp $
 #
 
 COMMENT=	Editors
@@ -62,6 +62,7 @@ SUBDIR+=	jde
 SUBDIR+=	jed
 SUBDIR+=	joe
 SUBDIR+=	jove
+SUBDIR+=	kakoune
 SUBDIR+=	kate
 SUBDIR+=	kile
 SUBDIR+=	kilo
