@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3025 2019/07/24 11:16:22 maya Exp $
+$NetBSD: CHANGES-2019,v 1.3026 2019/07/24 13:53:22 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4960,3 +4960,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/squirrelmail to 1.4.23pre14832 [taca 2019-07-24]
 	Updated net/dhcpcd to 8.0.0 [roy 2019-07-24]
 	Updated shells/oksh to 6.5 [maya 2019-07-24]
+	Updated www/firefox to 68.0.1 [ryoon 2019-07-24]
