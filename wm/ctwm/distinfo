@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2018/09/22 07:00:38 maya Exp $
+$NetBSD: distinfo,v 1.21 2019/07/24 20:31:43 rhialto Exp $
 
-SHA1 (ctwm-4.0.2.tar.xz) = e5768bf6c242441aff9a96290840d4e2647cb4ed
-RMD160 (ctwm-4.0.2.tar.xz) = 6de49077a321162223ca80bde9074f91ed951a7f
-SHA512 (ctwm-4.0.2.tar.xz) = 445151f12084acd44bcf8a7d895e29363411a1a663b93e098fa9db5b96ae5cb43921eaf0695026aff2196117b810b96712a60570f57d6dabbee7fba34d5bd57f
-Size (ctwm-4.0.2.tar.xz) = 672608 bytes
+SHA1 (ctwm-4.0.3.tar.xz) = 8b1e1af265f2c8d39459271566ea2d9fc128741f
+RMD160 (ctwm-4.0.3.tar.xz) = 8b7e7ab7fbcefd9bc4a8cfcc0d570850896ba385
+SHA512 (ctwm-4.0.3.tar.xz) = f9bb2f8f28a050cce0fc2f1f4e00e79acd7c54055016d8483e045d8f5fa9829f8f5d92bb53f0c1d9500f97d6f52cd827ddd15515c84451ea03551025a8ab831d
+Size (ctwm-4.0.3.tar.xz) = 683684 bytes
