@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.1 2018/11/09 22:15:12 maya Exp $
+$NetBSD: distinfo,v 1.2 2019/07/24 11:15:41 maya Exp $
 
-SHA1 (oksh-20181009-20181009.tar.gz) = decc85574c362889f7f9eb74b1ae25eea0241f3c
-RMD160 (oksh-20181009-20181009.tar.gz) = d2c8217d9271ac9ac9ed1f10a2884fdc3ba537a1
-SHA512 (oksh-20181009-20181009.tar.gz) = ba4d5d00e5a45ed035da1e4129163e9043f84a662bd100972754fe330ee7811b8b448321d202e61a63b1cc36ceac8df005a17e1473ac842cb536b1e50122e29b
-Size (oksh-20181009-20181009.tar.gz) = 301271 bytes
+SHA1 (oksh-6.5.tar.gz) = 80ca09d09a430b70ad38d7b3098d642560f5323e
+RMD160 (oksh-6.5.tar.gz) = d774a686fc76f6671cc9d6be542c6d4f0afcd07c
+SHA512 (oksh-6.5.tar.gz) = 473fc21e829018d3dd2977ae2909d95488a0c8f7a293778fe1e73f8e047cf46da2e3afe4786e95ff650fc7d207da342e0b2a8f8ccd98aa5957765a25bb844f98
+Size (oksh-6.5.tar.gz) = 301894 bytes
+SHA1 (patch-io.c) = e231fe9fbef5df7f7a73facbedb0260134e8158c
+SHA1 (patch-portable.h) = 9b4cdc1511db6093a0fe24c101bd4491c5df2f49
