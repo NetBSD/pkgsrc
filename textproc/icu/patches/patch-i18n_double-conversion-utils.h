@@ -1,4 +1,4 @@
-$ NetBSD $
+$NetBSD: patch-i18n_double-conversion-utils.h,v 1.5 2019/07/24 17:02:07 rin Exp $
 
 Add support for ARMEB.
 
