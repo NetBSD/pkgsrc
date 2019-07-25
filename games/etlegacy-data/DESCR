@@ -1,0 +1,13 @@
+Enemy Territory: Legacy is an open source project that aims to create
+a fully compatible client and server for the popular online FPS game
+Wolfenstein:  Enemy Territory.
+
+This package contains the official data files for Wolfenstein:  Enemy
+Territory provided by Splash Damage. They are installed to a location
+that makes them immediately usable by etlegacy.
+
+This includes pak0.pk3, pak1.pk3, and pak2.pk3, as well as associated
+documentation.
+
+This content is distributed without charge, but not available under a
+free license.
