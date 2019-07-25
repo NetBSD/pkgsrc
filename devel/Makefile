@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2868 2019/07/20 21:19:35 schmonz Exp $
+# $NetBSD: Makefile,v 1.2869 2019/07/25 16:48:41 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -499,7 +499,6 @@ SUBDIR+=	include-what-you-use
 SUBDIR+=	iniparser
 SUBDIR+=	intel2gas
 SUBDIR+=	intellij-ce-bin
-SUBDIR+=	intellij-idea-ce
 SUBDIR+=	intellij-ue-bin
 SUBDIR+=	isect
 SUBDIR+=	ivykis
