@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2019/07/25 12:00:08 tnn Exp $
+@comment $NetBSD: PLIST,v 1.11 2019/07/25 19:08:30 tnn Exp $
 bin/openjdk8-jar
 bin/openjdk8-java
 bin/openjdk8-javac
@@ -26,8 +26,6 @@ java/openjdk8/bin/hsdb
 java/openjdk8/bin/idlj
 java/openjdk8/bin/jar
 java/openjdk8/bin/jarsigner
-java/openjdk8/bin/clhsdb
-java/openjdk8/bin/hsdb
 java/openjdk8/bin/java
 java/openjdk8/bin/java-rmi.cgi
 java/openjdk8/bin/javac
