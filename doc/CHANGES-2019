@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3039 2019/07/25 16:49:53 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.3040 2019/07/25 21:32:15 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4974,3 +4974,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/putty to 0.72 [ryoon 2019-07-25]
 	Added games/etlegacy-data version 2.60b [nia 2019-07-25]
 	Removed devel/intellij-idea-ce successor intellij-ce-bin [ryoon 2019-07-25]
+	Updated sysutils/xfce4-thunar to 1.8.8 [gutteridge 2019-07-25]
