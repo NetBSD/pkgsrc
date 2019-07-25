@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/09/19 18:18:30 abs Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/07/25 12:00:08 tnn Exp $
 bin/openjdk8-jar
 bin/openjdk8-java
 bin/openjdk8-javac
@@ -20,10 +20,14 @@ java/openjdk8/ASSEMBLY_EXCEPTION
 java/openjdk8/LICENSE
 java/openjdk8/THIRD_PARTY_README
 ${PLIST.x11}java/openjdk8/bin/appletviewer
+java/openjdk8/bin/clhsdb
 java/openjdk8/bin/extcheck
+java/openjdk8/bin/hsdb
 java/openjdk8/bin/idlj
 java/openjdk8/bin/jar
 java/openjdk8/bin/jarsigner
+java/openjdk8/bin/clhsdb
+java/openjdk8/bin/hsdb
 java/openjdk8/bin/java
 java/openjdk8/bin/java-rmi.cgi
 java/openjdk8/bin/javac
@@ -336,6 +340,8 @@ java/openjdk8/include/${LOWER_OPSYS}/jni_md.h
 java/openjdk8/jre/ASSEMBLY_EXCEPTION
 java/openjdk8/jre/LICENSE
 java/openjdk8/jre/THIRD_PARTY_README
+java/openjdk8/jre/bin/clhsdb
+java/openjdk8/jre/bin/hsdb
 java/openjdk8/jre/bin/java
 java/openjdk8/jre/bin/jjs
 java/openjdk8/jre/bin/keytool
@@ -399,8 +405,8 @@ java/openjdk8/jre/lib/content-types.properties
 java/openjdk8/jre/lib/currency.data
 java/openjdk8/jre/lib/ext/cldrdata.jar
 java/openjdk8/jre/lib/ext/dnsns.jar
-java/openjdk8/jre/lib/ext/localedata.jar
 java/openjdk8/jre/lib/ext/jaccess.jar
+java/openjdk8/jre/lib/ext/localedata.jar
 java/openjdk8/jre/lib/ext/meta-index
 java/openjdk8/jre/lib/ext/nashorn.jar
 java/openjdk8/jre/lib/ext/sunec.jar
