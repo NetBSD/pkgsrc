@@ -1,0 +1,15 @@
+$NetBSD: patch-jdk_make_gensrc_GensrcMisc.gmk,v 1.1 2019/07/25 12:00:08 tnn Exp $
+
+Use compiler to link executable, otherwise libc and crt will be absent.
+
+--- jdk/make/gensrc/GensrcMisc.gmk.orig	2019-07-18 21:55:16.000000000 +0000
++++ jdk/make/gensrc/GensrcMisc.gmk
+@@ -76,7 +76,7 @@ $(eval $(call SetupNativeCompilation,BUI
+     INCLUDE_FILES := $(GENSRC_SOR_SRC_FILE), \
+     LANG := C, \
+     CC := $(BUILD_CC), \
+-    LDEXE := $(BUILD_LD), \
++    LDEXE := $(BUILD_CC), \
+     OBJECT_DIR := $(GENSRC_SOR_BIN), \
+     OUTPUT_DIR := $(GENSRC_SOR_BIN), \
+     PROGRAM := genSocketOptionRegistry))
