@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2019/07/21 22:25:40 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2019/07/25 12:50:06 ryoon Exp $
 #
 
-DISTNAME=	putty-0.71
-PKGREVISION=	1
+DISTNAME=	putty-0.72
 CATEGORIES=	security
 MASTER_SITES=	http://the.earth.li/~sgtatham/putty/${PKGVERSION_NOREV}/
 
@@ -37,6 +36,7 @@ CFLAGS+=	-DBSD_PTYS
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 CFLAGS.SunOS+=	-DBSD_COMP
+CFLAGS.NetBSD+=	-DHAVE_FUTIMES
 
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
