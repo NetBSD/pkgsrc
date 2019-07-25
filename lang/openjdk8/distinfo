@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.70 2019/07/24 10:03:34 tnn Exp $
+$NetBSD: distinfo,v 1.71 2019/07/25 12:00:08 tnn Exp $
 
 SHA1 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 7408f52d3bbe35c2b14bbd3215cbf60f1335d334
 RMD160 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 24f1577b5fc86d137f070aedb4610c8c89e45815
@@ -48,11 +48,11 @@ SHA1 (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = 29b
 RMD160 (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = b13d0e42839fb746d41f9001e488162b47803140
 SHA512 (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = 1403e582dacd0474e57d9aa8f1333060c50d099ef5d2c5a992ff7f63dcde2e538ff1e7fb78e45d12fd5aea6daf0704672e7f326399d415ee0d6bb53b6f925e9f
 Size (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = 37883700 bytes
-SHA1 (openjdk7/openjdk-1.8.202-20190219.tar.xz) = 57d466f31faa95ba8ecaa31512cd2f4fe5a3994a
-RMD160 (openjdk7/openjdk-1.8.202-20190219.tar.xz) = 13e2d440494a70a9b282457ca22bfc050ceaa4fe
-SHA512 (openjdk7/openjdk-1.8.202-20190219.tar.xz) = 3a8944e69d74439765010bc58ea191a471af22be135835d0cc25e550acd506d08c7dcbbcfecd8280ce85e1624aec91da843b2d36abae0d11af272fcf6d672120
-Size (openjdk7/openjdk-1.8.202-20190219.tar.xz) = 55869224 bytes
-SHA1 (patch-aa) = 37b2d569fac98c2a66433f2c27a462c6d565000c
+SHA1 (openjdk7/openjdk8-1.8.222.tar.gz) = 01c72ea589f75c4e0c2d2f930c30053dd0414692
+RMD160 (openjdk7/openjdk8-1.8.222.tar.gz) = a0d4d87155a1c86293d89d66b6130990ed0b404a
+SHA512 (openjdk7/openjdk8-1.8.222.tar.gz) = e4c02422fe7652ad8b2987354626591efbaf94dde975d7eabfd852b6a5abada6d2ece463f9ebd21b73d67428456c7f7b9bbb66368f7ba486a8346f677a1a0ce2
+Size (openjdk7/openjdk8-1.8.222.tar.gz) = 85692163 bytes
+SHA1 (patch-aa) = df056ced73a06e9a2c5ae59d15218a6f38c2ab5e
 SHA1 (patch-al) = f65f739805c2ef471a4de10d6da42e86c5561b8c
 SHA1 (patch-an) = fce4da00762770c1c0592bd225bf73e875252178
 SHA1 (patch-ap) = 89114a9ee048b92d897509feb283cf9aeeac9fc5
@@ -84,9 +84,7 @@ SHA1 (patch-hotspot_make_solaris_makefiles_saproc.make) = 0ca85ba72d154643b93481
 SHA1 (patch-hotspot_make_solaris_makefiles_vm.make) = 787e0c68cf976fc0df3e19fb2a22b1b7e3662c07
 SHA1 (patch-hotspot_src_cpu_zero_vm_methodHandles__zero.cpp) = 9f7acf1eff3baba430880be9fd0f6148056dd088
 SHA1 (patch-hotspot_src_cpu_zero_vm_nativeInst__zero.cpp) = 446b96a91a2e4fa76f43ac653d1608f037c64af9
-SHA1 (patch-hotspot_src_os__cpu_bsd__zero_vm_atomic__bsd__zero.inline.hpp) = e87224f8b67dc78fa411d30beff82ce5ccbb4cc5
-SHA1 (patch-hotspot_src_os__cpu_bsd__zero_vm_orderAccess__bsd__zero.inline.hpp) = 6311d68db9064afc470f1d9fd37e63011899659a
-SHA1 (patch-hotspot_src_os__cpu_bsd__zero_vm_os__bsd__zero.cpp) = cea10db5bf4ee4b939543b66340bfd59474ca5e0
+SHA1 (patch-hotspot_src_os__cpu_bsd__zero_vm_atomic__bsd__zero.inline.hpp) = f46713855507654be42707b1f80a779796929069
 SHA1 (patch-hotspot_src_os__cpu_solaris__x86_vm_atomic__solaris__x86.inline.hpp) = 2bf9147643be4ac711d1bf94eb0e6ae4abad20c6
 SHA1 (patch-hotspot_src_os__cpu_solaris__x86_vm_orderAccess__solaris__x86.inline.hpp) = 82818bc8d8fee46403b88cf52a7c978b5ea0005c
 SHA1 (patch-hotspot_src_os__cpu_solaris__x86_vm_os__solaris__x86.cpp) = 6a6b719a52408e88b27d3f2a5a41789dc15ef39d
@@ -113,6 +111,7 @@ SHA1 (patch-jdk_make_CompileLaunchers.gmk) = d496999f10fc56b1d68283ab4636787058f
 SHA1 (patch-jdk_make_CreateJars.gmk) = 0f49c8ec33121d7878ea4b6bd06d2e4e4af9a1d5
 SHA1 (patch-jdk_make_GenerateSources.gmk) = ec1b64805afb6edca637d87529b1d3fa59d20828
 SHA1 (patch-jdk_make_Images.gmk) = e6643dcb25ad5457efe610f6ab7fd0ccc9b5ed41
+SHA1 (patch-jdk_make_gensrc_GensrcMisc.gmk) = 184d89fdfeedbd9c7fcb4ddfbe3ec0314796e7da
 SHA1 (patch-jdk_make_lib_Awt2dLibraries.gmk) = 1e29aaa4a4ce5bb104bdd8d8ba1b87f8ff09b8be
 SHA1 (patch-jdk_make_lib_CoreLibraries.gmk) = 21a46be1c8247d528a2e0666ca9a40520327771a
 SHA1 (patch-jdk_make_lib_NioLibraries.gmk) = 5a1044c444e534d627b46d820d27bb545e65959d
