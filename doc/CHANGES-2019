@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3043 2019/07/26 22:54:41 he Exp $
+$NetBSD: CHANGES-2019,v 1.3044 2019/07/26 23:30:16 rin Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4978,3 +4978,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/vamp-plugin-sdk to 2.8.0 [nia 2019-07-26]
 	Removed wm/py-tyle [wiz 2019-07-26]
 	Updated net/ldns to 1.7.1 [he 2019-07-26]
+	Updated x11/mlterm to 3.8.8nb4 [rin 2019-07-26]
