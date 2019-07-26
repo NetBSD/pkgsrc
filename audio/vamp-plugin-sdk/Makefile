@@ -1,31 +1,23 @@
-# $NetBSD: Makefile,v 1.1 2015/12/27 23:35:33 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2019/07/26 15:31:08 nia Exp $
 
-# During upgrade please adjust files/wscript and doublecheck libs major/minor
-DISTNAME=	vamp-plugin-sdk-2.6
+DISTNAME=	vamp-plugin-sdk-2.8.0
 CATEGORIES=	audio
-MASTER_SITES=	https://code.soundsoftware.ac.uk/attachments/download/1520/
+MASTER_SITES=	https://code.soundsoftware.ac.uk/attachments/download/2450/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.vamp-plugins.org/
+HOMEPAGE=	https://www.vamp-plugins.org/
 COMMENT=	The Vamp audio analysis plugin system
 LICENSE=	x11
 
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c c++
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE+=	pkgconfig/vamp-hostsdk.pc.in
 PKGCONFIG_OVERRIDE+=	pkgconfig/vamp-sdk.pc.in
 PKGCONFIG_OVERRIDE+=	pkgconfig/vamp.pc.in
 
-BUILD_DEPENDS+=	waf-[0-9]*:../../devel/waf
-
-pre-patch:
-	${RUN} cp ${FILESDIR}/wscript ${WRKSRC}
-
-.include "../../devel/waf/waf.mk"
-# Missing --mandir
-WAF_ARGS=
-.include "../../math/fftw/buildlink3.mk"
-.include "../../math/fftwf/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
