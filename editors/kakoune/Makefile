@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/07/24 17:43:02 nia Exp $
+# $NetBSD: Makefile,v 1.3 2019/07/26 09:36:58 nia Exp $
 
 DISTNAME=	kakoune-2019.07.01
 CATEGORIES=	editors
@@ -17,6 +17,8 @@ USE_LANGUAGES=	c c++17
 
 # C++17
 GCC_REQD+=	7
+
+LDFLAGS.SunOS+=	-lsocket  -lnsl
 
 FAKE_NCURSES=	yes
 
