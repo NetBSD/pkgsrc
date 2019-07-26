@@ -1,8 +1,8 @@
-# $NetBSD: u-boot.mk,v 1.19 2019/06/08 12:25:05 mrg Exp $
+# $NetBSD: u-boot.mk,v 1.20 2019/07/26 10:22:07 tnn Exp $
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
-PKGNAME=	u-boot-${UBOOT_TARGET}-${UBOOT_VERSION}
+PKGNAME=	u-boot-${UBOOT_TARGET}-${UBOOT_VERSION:S/-/./}
 DISTNAME?=	u-boot-${UBOOT_VERSION}
 DISTINFO_FILE?=	${.CURDIR}/../../sysutils/u-boot/distinfo
 CATEGORIES=	sysutils
