@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2019/07/08 16:46:32 nia Exp $
+$NetBSD: distinfo,v 1.2 2019/07/26 23:35:09 nia Exp $
 
 SHA1 (mixxx-2.2.1.tar.gz) = b6da5dff30c8cdbccd84d55801fcbd67bd337b06
 RMD160 (mixxx-2.2.1.tar.gz) = 919d19785d8ee17ae8cb380ffe8df9ffe30ae93c
@@ -6,7 +6,9 @@ SHA512 (mixxx-2.2.1.tar.gz) = 16f0f4f6a83cd18501fdba3cb8d4f7fe4ac14b980d390406cb
 Size (mixxx-2.2.1.tar.gz) = 34763333 bytes
 SHA1 (patch-build_depends.py) = 0025d32ac9c57a65253fd3c59ea04b244b0f3cd4
 SHA1 (patch-build_features.py) = 52471069ffcda271f52cf8d87388ffbf3c1a3dc8
+SHA1 (patch-lib_vamp_src_vamp-hostsdk_PluginHostAdapter.cpp) = 656f09d146a81ea143af2ddd85cc66392fa3fce8
 SHA1 (patch-src_controllers_controllermanager.cpp) = df7cf07336a6fd511bc09a4253bb409511056938
 SHA1 (patch-src_encoder_encodermp3.cpp) = 2cbd5b4351fe88a6841857817081163ce5c01bb7
 SHA1 (patch-src_util_screensaver.cpp) = da16ba829646298af7a57567894c732ef1ecd53e
 SHA1 (patch-src_util_screensaver.h) = 8bea9c3365219fd52db60f38af4fdcab4be40b81
+SHA1 (patch-vamp-plugins_SConscript) = 91840864b658e2cd9a5cfcb1d9c4f7a35a156824
