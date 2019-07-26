@@ -1,21 +1,23 @@
-$NetBSD: patch-bo,v 1.1 2019/07/15 04:32:49 jnemeth Exp $
+$NetBSD: patch-bo,v 1.2 2019/07/26 19:33:33 jnemeth Exp $
 
 --- sendmail/sendmail.h.orig	2015-06-19 12:59:29.000000000 +0000
 +++ sendmail/sendmail.h
-@@ -57,6 +57,8 @@ SM_UNUSED(static char SmailId[]) = "@(#)
+@@ -57,6 +57,10 @@ SM_UNUSED(static char SmailId[]) = "@(#)
  #endif /* _DEFINE */
  
  #include "bf.h"
++#ifdef USE_BLACKLIST
 +#include <blacklist.h>
++#endif
 +#include "blacklist_client.h"
  #include "timers.h"
  #include <sm/exc.h>
  #include <sm/heap.h>
-@@ -2544,6 +2546,10 @@ EXTERN int ConnectionRateWindowSize;
+@@ -2544,6 +2548,10 @@ EXTERN int ConnectionRateWindowSize;
  EXTERN bool	SSLEngineInitialized;
  #endif /* STARTTLS && USE_OPENSSL_ENGINE */
  
-+#if USE_BLACKLIST
++#ifdef USE_BLACKLIST
 +EXTERN bool    UseBlacklist;
 +#endif
 +
