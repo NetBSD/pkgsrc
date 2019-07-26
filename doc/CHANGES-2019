@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3041 2019/07/26 15:31:24 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3042 2019/07/26 18:12:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4976,3 +4976,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed devel/intellij-idea-ce successor intellij-ce-bin [ryoon 2019-07-25]
 	Updated sysutils/xfce4-thunar to 1.8.8 [gutteridge 2019-07-25]
 	Updated audio/vamp-plugin-sdk to 2.8.0 [nia 2019-07-26]
+	Removed wm/py-tyle [wiz 2019-07-26]
