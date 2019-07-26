@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.25 2019/07/15 09:36:26 jaapb Exp $
+# $NetBSD: ocaml.mk,v 1.26 2019/07/26 09:59:27 tnn Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 #
@@ -270,12 +270,12 @@ do-install:
 do-build:
 .if !empty(JBUILDER_BUILD_PACKAGES)
 	${RUN} ${_ULIMIT_CMD} \
-		cd ${WRKSRC} && jbuilder build -j ${MAKE_JOBS} \
+		cd ${WRKSRC} && jbuilder build -j ${MAKE_JOBS:U1} \
 		${JBUILDER_BUILD_FLAGS} -p ${JBUILDER_BUILD_PACKAGES:ts,} \
 		${JBUILDER_BUILD_TARGETS}
 .else
 	${RUN} ${_ULIMIT_CMD} \
-		cd ${WRKSRC} && jbuilder build -j ${MAKE_JOBS} \
+		cd ${WRKSRC} && jbuilder build -j ${MAKE_JOBS:U1} \
 		${JBUILDER_BUILD_FLAGS} ${JBUILDER_BUILD_TARGETS}
 .endif
 
@@ -289,12 +289,12 @@ do-build:
 do-build:
 .if !empty(DUNE_BUILD_PACKAGES)
 	${RUN} ${_ULIMIT_CMD} \
-		cd ${WRKSRC} && dune build -j ${MAKE_JOBS} \
+		cd ${WRKSRC} && dune build -j ${MAKE_JOBS:U1} \
 		${DUNE_BUILD_FLAGS} -p ${DUNE_BUILD_PACKAGES:ts,} \
 		${DUNE_BUILD_TARGETS}
 .else
 	${RUN} ${_ULIMIT_CMD} \
-		cd ${WRKSRC} && dune build --profile release -j ${MAKE_JOBS} \
+		cd ${WRKSRC} && dune build --profile release -j ${MAKE_JOBS:U1} \
 		${DUNE_BUILD_FLAGS} ${DUNE_BUILD_TARGETS}
 .endif
 
