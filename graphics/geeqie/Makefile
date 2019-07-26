@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2019/07/21 22:24:57 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2019/07/26 09:10:41 nia Exp $
 
 DISTNAME=	geeqie-1.4
 PKGREVISION=	11
@@ -36,5 +36,4 @@ post-build:
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
