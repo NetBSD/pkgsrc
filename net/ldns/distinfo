@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.23 2019/07/08 08:25:59 roy Exp $
+$NetBSD: distinfo,v 1.24 2019/07/26 22:53:58 he Exp $
 
-SHA1 (ldns-1.7.0.tar.gz) = ceeeccf8a27e61a854762737f6ee02f44662c1b8
-RMD160 (ldns-1.7.0.tar.gz) = b0dfb70085258e69dda0fc343f0eece6df52e0a1
-SHA512 (ldns-1.7.0.tar.gz) = 8a4e48bcc2a244b92447a9830b60efbb656fb7955f3559ef2eb6f8e724c4c0208776350c44ccf7dcf1ffe0b7b9d9ccc4cbddc5bc16e8888db494ab4d0bce3bd8
-Size (ldns-1.7.0.tar.gz) = 1304424 bytes
-SHA1 (patch-parse.c) = 3dbf4443b4a068f02e2799e820e8fcbf50abaa15
-SHA1 (patch-str2host.c) = 002e2f04059a9bc2479a8d66335595d4d7dd598f
+SHA1 (ldns-1.7.1.tar.gz) = d075a08972c0f573101fb4a6250471daaa53cb3e
+RMD160 (ldns-1.7.1.tar.gz) = 40e7eed3f76076f581b388563cbecb440c1a7753
+SHA512 (ldns-1.7.1.tar.gz) = e8f72a4ff4aa544acac5e7be9a8ba38c6b8d388bb26f9a0ed04c1a921622f8582cc8539beafc76a29187a55c94069b7c1875e77522e1a7e7bb3e297dd1e4c2b7
+Size (ldns-1.7.1.tar.gz) = 1244394 bytes
