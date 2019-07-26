@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/05/08 05:06:48 thorpej Exp $
+# $NetBSD: Makefile,v 1.5 2019/07/26 10:25:15 tnn Exp $
 
 UBOOT_TARGET=		bananapi-r2
 UBOOT_CONFIG=		mt7623n_bpir2_defconfig
@@ -13,6 +13,10 @@ UBOOT_VERSION=		2019.04-rc4
 DISTINFO_FILE=		${.CURDIR}/../../sysutils/u-boot-bananapi-r2/distinfo
 PATCHDIR=		${.CURDIR}/../../sysutils/u-boot-bananapi-r2/patches
 DISTFILES=		${DEFAULT_DISTFILES}
+
+# This could be moved to u-boot.mk as long as we don't have support for
+# any imx8 boards.
+CHECK_PORTABILITY_SKIP+=	tools/imx8m_image.sh
 
 # SDMMC_BOOT-signature
 SDMMC_BOOT_IMG=		BPI-R2-HEAD440-0k.img
