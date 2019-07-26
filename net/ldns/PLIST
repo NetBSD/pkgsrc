@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2019/07/08 08:25:59 roy Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/07/26 22:53:58 he Exp $
 bin/ldns-chaos
 bin/ldns-compare-zones
 bin/ldns-config
@@ -58,6 +58,7 @@ include/ldns/util.h
 include/ldns/wire2host.h
 include/ldns/zone.h
 lib/libldns.la
+lib/pkgconfig/ldns.pc
 man/man1/ldns-chaos.1
 man/man1/ldns-compare-zones.1
 man/man1/ldns-config.1

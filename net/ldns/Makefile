@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2019/07/08 08:25:59 roy Exp $
+# $NetBSD: Makefile,v 1.41 2019/07/26 22:53:58 he Exp $
 
-DISTNAME=	ldns-1.7.0
+DISTNAME=	ldns-1.7.1
 CATEGORIES=	net
 MASTER_SITES=	http://www.nlnetlabs.nl/downloads/ldns/
 
@@ -19,6 +19,9 @@ CHECK_BUILTIN.openssl=	yes
 .include "../../security/openssl/builtin.mk"
 CHECK_BUILTIN.openssl=	no
 .include "../../security/openssl/buildlink3.mk"
+
+# if openssl < 1.1.0
+CONFIGURE_ARGS+=	--disable-dane-verify
 
 PLIST_VARS+=		sha2 gost
 .if defined(USE_BUILTIN.openssl) && !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
