@@ -1,4 +1,4 @@
-$NetBSD: README.MacOSX,v 1.37 2019/05/04 19:27:49 gutteridge Exp $
+$NetBSD: README.MacOSX,v 1.38 2019/07/26 15:41:43 prlw1 Exp $
 
 This file describes the use of current versions of pkgsrc with
 multiple versions of Darwin and macOS, omitting information about
@@ -182,12 +182,12 @@ without fixing.
 
 macOS 10.14 is either new or current.
 
-macOS 10.13 is current; significant amounts of hardware are cannot
-be upgraded beyond this version.
+macOS 10.13 is current; significant amounts of hardware cannot be
+upgraded beyond this version.
 
 macOS 10.12 is current; Joyent has an active bulk build.
 
-OS X 10.11 is semi-current; significant amounts of hardware are cannot
+OS X 10.11 is semi-current; significant amounts of hardware cannot
 be upgraded beyond this version.
 
 OS X 10.10 is old.
