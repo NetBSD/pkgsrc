@@ -1,0 +1,15 @@
+$NetBSD: patch-vamp-plugins_SConscript,v 1.1 2019/07/26 23:35:09 nia Exp $
+
+Correct pkg-config identifier.
+
+--- vamp-plugins/SConscript.orig	2019-04-22 07:50:04.000000000 +0000
++++ vamp-plugins/SConscript
+@@ -54,7 +54,7 @@ if int(build.flags['vamp']):
+     # If there is no system vamp-sdk is installed or if the version
+     # of the installed vamp-sdk is less than the bundled version,
+     # then we'll directly link the bundled vamp-sdk.
+-    if not conf.CheckLib('vamp-sdk') or not conf.CheckForPKG('vamp-plugin-sdk', '2.7.1'):
++    if not conf.CheckLib('vamp-hostsdk') or not conf.CheckForPKG('vamp-sdk', '2.7.1'):
+         INTERNAL_VAMP_PATH = '#lib/vamp'
+         # For header includes
+         env.Append(CPPPATH=[INTERNAL_VAMP_PATH])
