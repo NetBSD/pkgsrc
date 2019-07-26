@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/12/27 23:35:33 kamil Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/07/26 15:31:08 nia Exp $
 bin/vamp-rdf-template-generator
 bin/vamp-simple-host
 include/vamp-hostsdk/Plugin.h
@@ -22,12 +22,11 @@ include/vamp-sdk/RealTime.h
 include/vamp-sdk/plugguard.h
 include/vamp-sdk/vamp-sdk.h
 include/vamp/vamp.h
-lib/libvamp-hostsdk.so
-lib/libvamp-hostsdk.so.3
-lib/libvamp-hostsdk.so.3.6.0
-lib/libvamp-sdk.so
-lib/libvamp-sdk.so.2
-lib/libvamp-sdk.so.${PKGVERSION}.0
+lib/libvamp-hostsdk.la
+lib/libvamp-sdk.la
 lib/pkgconfig/vamp-hostsdk.pc
 lib/pkgconfig/vamp-sdk.pc
 lib/pkgconfig/vamp.pc
+lib/vamp/vamp-example-plugins.cat
+lib/vamp/vamp-example-plugins.n3
+lib/vamp/vamp-example-plugins.so
