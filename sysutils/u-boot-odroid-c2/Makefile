@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/05/18 17:55:06 thorpej Exp $
+# $NetBSD: Makefile,v 1.5 2019/07/26 10:32:32 tnn Exp $
 
 UBOOT_TARGET=		odroid-c2
 UBOOT_CONFIG=		odroid-c2_defconfig
@@ -63,16 +63,16 @@ post-extract:
 #
 BUILD_DEPENDS+=		amlogic-meson-fwtools>=0.0:../../sysutils/amlogic-meson-fwtools
 post-build:
-	aml_fip_create \
+	${PREFIX}/bin/aml_fip_create \
 		--bl30 ${WRKSRC}/${xBL30_BIN} \
 		--bl301 ${WRKSRC}/${xBL301_BIN} \
 		--bl31 ${WRKSRC}/${xBL31_BIN} \
 		--bl33 ${WRKSRC}/u-boot-dtb.bin \
 		${WRKSRC}/u-boot-fip.bin
-	aml_fip_create --dump ${WRKSRC}/u-boot-fip.bin
+	${PREFIX}/bin/aml_fip_create --dump ${WRKSRC}/u-boot-fip.bin
 	cat ${WRKSRC}/${xBL2_PKG} ${WRKSRC}/u-boot-fip.bin > \
 		${WRKSRC}/u-boot-combined.bin
-	aml_encrypt_gxb --bootsig \
+	${PREFIX}/bin/aml_encrypt_gxb --bootsig \
 		--input ${WRKSRC}/u-boot-combined.bin \
 		--output ${WRKSRC}/u-boot.img
 	dd if=${WRKSRC}/u-boot.img of=${WRKSRC}/u-boot.gxbb \
