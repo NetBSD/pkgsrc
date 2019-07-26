@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/11/02 23:42:54 agc Exp $
-
-SHA1 (pytyle-0.7.5.tar.gz) = af8cabdaaba576680fab39cae054df776d9c1a68
-RMD160 (pytyle-0.7.5.tar.gz) = 81f58410eff5f6a6dd1bb79ed06b9df94399b681
-SHA512 (pytyle-0.7.5.tar.gz) = adf311cc81d909be6756048bc983e16a3ea2065f5e581861c3572ce4bd457bd130de2a26afd208e1eb5c9d209166718a7283e10251f42a0cbb0c5e40315f7e52
-Size (pytyle-0.7.5.tar.gz) = 59661 bytes
