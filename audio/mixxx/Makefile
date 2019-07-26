@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2019/07/20 10:39:18 nia Exp $
+# $NetBSD: Makefile,v 1.5 2019/07/26 23:35:09 nia Exp $
 
 DISTNAME=	mixxx-2.2.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mixxxdj/}
 GITHUB_TAG=	release-${PKGVERSION_NOREV}
@@ -36,7 +36,6 @@ SUBST_VARS.base=	LOCALBASE
 
 SCONS_ARGS+=	faad=1
 SCONS_ARGS+=	modplug=1
-SCONS_ARGS+=	vamp=0 # XXX needs vamp-plugin-sdk update
 
 SCONS_ARGS+=	build="release"
 
@@ -94,6 +93,7 @@ do-install:
 .include "../../audio/rubberband/buildlink3.mk"
 .include "../../audio/soundtouch/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
+.include "../../audio/vamp-plugin-sdk/buildlink3.mk"
 .include "../../comms/libhidapi/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/protobuf/buildlink3.mk"
