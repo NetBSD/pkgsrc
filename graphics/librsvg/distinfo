@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.38 2019/05/29 12:38:23 wiz Exp $
+$NetBSD: distinfo,v 1.39 2019/07/27 19:31:00 tnn Exp $
 
 SHA1 (aho-corasick-0.6.8.crate) = e39bb67748289a94512db5c32c599c37e6bb0317
 RMD160 (aho-corasick-0.6.8.crate) = adc1808fb3ec73db2643b6ad3754029e2e495e5f
@@ -220,10 +220,10 @@ SHA1 (lazy_static-1.1.0.crate) = 4b95eab679872497f6a64d3ba3e0aac7c623b9a1
 RMD160 (lazy_static-1.1.0.crate) = 3cd4086bfce143b673d7589f8b05539871405aee
 SHA512 (lazy_static-1.1.0.crate) = 82df91ddf79e2c6e46cda92d6dc8afe20d428f40940a16a352db3c3482ec21ec4b5147bf723dd0b16320ebe0fea489d715671c7fecaf8d0d7982edad3b6919c5
 Size (lazy_static-1.1.0.crate) = 12317 bytes
-SHA1 (libc-0.2.43.crate) = 794bcf9b456cc3fcfd7428634d1f1f4ce1936a42
-RMD160 (libc-0.2.43.crate) = b401dc3bd4dfe6bdc8f24d2857e3aa2c735304fe
-SHA512 (libc-0.2.43.crate) = d53b9fc460c68ed77b9c1a23c093c927125c0946b5231c343cf239e706d859af42efc2c7a4b95fecb46ab6ea9dd8473f7de308176a7dbab18e220246c5a7a8fe
-Size (libc-0.2.43.crate) = 353810 bytes
+SHA1 (libc-0.2.60.crate) = 19b399fa96e8fde936a8ec1dd15515f36d473876
+RMD160 (libc-0.2.60.crate) = 15e5de92d6750eb53e7f69c50809e03a9ae6f7ad
+SHA512 (libc-0.2.60.crate) = 649bb508f5e2800712618e76686c12dd3e7956ce2197d620b1b53427496296889f2743cf060e53400b33ea86982dff2c7d7c85b151fc1233895fb4c7f786b39c
+Size (libc-0.2.60.crate) = 409744 bytes
 SHA1 (libm-0.1.2.crate) = dc16f409be8a4621125c5b5ead07691ef0fe2317
 RMD160 (libm-0.1.2.crate) = df0295c7f10403f97696a4b4671f15b50bb79821
 SHA512 (libm-0.1.2.crate) = 707a42632a5d92cccf8eb32fc507061e5b3b724c4fccb21f998bed5e187772a2015dee40a0225fb860a38ce2caa2ec3d9060ddd32b86a927308b253b41d73c95
@@ -560,5 +560,6 @@ SHA1 (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = eadfdb146024d37b6887b5b9cb6a69
 RMD160 (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 300417853d251d91cadb9650992a6aa98248619f
 SHA512 (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 4a654af6a5d649dc87e00497245096b35a2894ae66f155cb62389902c3b93ddcc5cf7d0d8b9dd97b291d2d80bc686af2298e80abef6ac69883f4a54e79712513
 Size (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 2947998 bytes
+SHA1 (patch-Cargo.lock) = 6767f39a384c89d5ee449bde02ae79d321c229d2
 SHA1 (patch-Makefile.am) = fd57625bed8e908a6b56f78cb75283d1d566cdd6
 SHA1 (patch-configure.ac) = bdad8c486f552dbd301abb49cef3f73aaeb81165
