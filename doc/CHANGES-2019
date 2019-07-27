@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3049 2019/07/27 15:14:54 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3050 2019/07/27 15:29:26 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4984,3 +4984,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/mikutter to 3.9.2 [tsutsui 2019-07-27]
 	Updated fonts/koruri-ttf to 20180915 [nia 2019-07-27]
 	Updated audio/mpg123 to 1.25.11 [nia 2019-07-27]
+	Updated devel/SDL2 to 2.0.10 [nia 2019-07-27]
