@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/07/27 14:52:26 nia Exp $
+# $NetBSD: Makefile,v 1.14 2019/07/27 15:02:55 nia Exp $
 
 DISTNAME=	Koruri-${KORURI_VERSION}
 PKGNAME=	koruri-ttf-${KORURI_VERSION}
@@ -9,7 +9,7 @@ GITHUB_PROJECT=	Koruri
 GITHUB_RELEASE=	Koruri-${KORURI_VERSION}
 
 MAINTAINER=	nonakap@gmail.com
-HOMEPAGE=	http://koruri.lindwurm.biz/
+HOMEPAGE=	https://koruri.github.io/
 COMMENT=	Koruri Japanese TrueType fonts
 LICENSE=	apache-2.0
 
