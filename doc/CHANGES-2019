@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3050 2019/07/27 15:29:26 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3051 2019/07/27 20:23:07 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4985,3 +4985,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated fonts/koruri-ttf to 20180915 [nia 2019-07-27]
 	Updated audio/mpg123 to 1.25.11 [nia 2019-07-27]
 	Updated devel/SDL2 to 2.0.10 [nia 2019-07-27]
+	Updated net/youtube-dl to 20190727 [leot 2019-07-27]
