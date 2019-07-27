@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2019/06/22 11:37:13 nia Exp $
+# $NetBSD: Makefile,v 1.41 2019/07/27 14:04:06 nia Exp $
 
-DISTNAME=		cdk-5.0-20180306
+DISTNAME=		cdk-5.0-20190303
 PKGNAME=		${DISTNAME:S/5.0-/5.0./}
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.invisible-island.net/cdk/
