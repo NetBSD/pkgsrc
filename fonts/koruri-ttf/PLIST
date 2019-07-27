@@ -1,14 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2014/09/04 12:47:15 nonaka Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/07/27 14:52:52 nia Exp $
 share/fonts/X11/TTF/Koruri-Bold.ttf
 share/fonts/X11/TTF/Koruri-Extrabold.ttf
 share/fonts/X11/TTF/Koruri-Light.ttf
 share/fonts/X11/TTF/Koruri-Regular.ttf
 share/fonts/X11/TTF/Koruri-Semibold.ttf
-share/doc/${PKGBASE}/LICENSE
-share/doc/${PKGBASE}/LICENSE_E.mplus
-share/doc/${PKGBASE}/LICENSE_J.mplus
-share/doc/${PKGBASE}/LICENSE_opensans
-share/doc/${PKGBASE}/README.md
-share/doc/${PKGBASE}/README_E.mplus
-share/doc/${PKGBASE}/README_J.mplus
-share/doc/${PKGBASE}/README_ja.md
+@pkgdir share/fonts/X11/OTF
