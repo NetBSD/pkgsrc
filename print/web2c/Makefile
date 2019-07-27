@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2019/07/23 17:20:00 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2019/07/27 13:26:48 gdt Exp $
 
 PKGREVISION= 1
 .include "../../print/texlive/Makefile.common"
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.tug.org/web2c/
 COMMENT=	TeX implementation translating WEB to C
 
 DEPENDS+=	kpathsea>=6.2.1:../../print/kpathsea
-DEPENDS+=	ptexenc>=1.3.4:../../print/ptexenc
+DEPENDS+=	ptexenc>=1.3.7:../../print/ptexenc
 
 EXTRACT_ELEMENTS+=	${DISTNAME}/texk/web2c
 
