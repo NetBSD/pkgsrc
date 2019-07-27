@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.13 2015/02/01 16:36:32 taca Exp $
+# $NetBSD: Makefile,v 1.14 2019/07/27 08:01:43 mef Exp $
 
 DISTNAME=	rcsparse-${VERS}
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel ruby
+# no release tag placed yet
 MASTER_SITES=	-https://github.com/corecode/rcsparse/archive/${REVISION}.zip
 EXTRACT_SUFX=	.zip
+# for 0.0.0.47, different (checksum) version may exist
+DIST_SUBDIR=	rcsparse
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/corecode/rcsparse/
