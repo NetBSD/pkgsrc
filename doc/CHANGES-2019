@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3046 2019/07/27 14:04:21 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3047 2019/07/27 14:05:38 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4981,3 +4981,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/mlterm to 3.8.8nb4 [rin 2019-07-26]
 	Updated devel/ccache to 3.7.2 [nia 2019-07-27]
 	Updated devel/cdk to 5.0.20190303 [nia 2019-07-27]
+	Updated net/mikutter to 3.9.2 [tsutsui 2019-07-27]
