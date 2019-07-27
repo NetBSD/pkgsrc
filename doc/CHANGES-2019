@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3045 2019/07/27 13:40:50 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3046 2019/07/27 14:04:21 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4980,3 +4980,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/ldns to 1.7.1 [he 2019-07-26]
 	Updated x11/mlterm to 3.8.8nb4 [rin 2019-07-26]
 	Updated devel/ccache to 3.7.2 [nia 2019-07-27]
+	Updated devel/cdk to 5.0.20190303 [nia 2019-07-27]
