@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2019/07/28 15:22:56 nia Exp $
+lib/bitlbee/steam.la
