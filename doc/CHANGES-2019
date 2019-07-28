@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3052 2019/07/27 20:35:24 leot Exp $
+$NetBSD: CHANGES-2019,v 1.3053 2019/07/28 15:16:54 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4987,3 +4987,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/SDL2 to 2.0.10 [nia 2019-07-27]
 	Updated net/youtube-dl to 20190727 [leot 2019-07-27]
 	Updated textproc/translate-shell to 0.9.6.11 [leot 2019-07-27]
+	Added chat/bitlbee-discord version 0.4.2 [nia 2019-07-28]
