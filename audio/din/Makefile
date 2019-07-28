@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/07/01 04:07:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2019/07/28 17:12:46 fox Exp $
 
 DISTNAME=	din-42
 PKGREVISION=	1
@@ -14,7 +14,8 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	autoreconf pkg-config gmake
 GNU_CONFIGURE=	yes
 
-LDFLAGS+=	-ltcl -lSDL -lGL -lpthread
+LDFLAGS+=		-ltcl -lSDL -lGL -lpthread
+LDFLAGS.Darwin+=	-lSDLmain
 
 .include "options.mk"
 
