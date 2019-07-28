@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.2 2019/07/11 12:56:04 nia Exp $
+$NetBSD: distinfo,v 1.3 2019/07/28 10:26:43 nia Exp $
 
 SHA1 (devilutionx-0.4.0.tar.gz) = d5d71cf752dc0b5c89f9827b52f1567cb5cfb8f4
 RMD160 (devilutionx-0.4.0.tar.gz) = 0b647b8ee4641d9af000d4d54e1008a506a9fc66
 SHA512 (devilutionx-0.4.0.tar.gz) = ba8f650f8dd00e3b08f6ac082566351c8f3b6162d7bfa2fdf3464b38c201b08677d2f6151f2272e1d73eb972b8babc49b38364523d10763eb179f6b682641443
 Size (devilutionx-0.4.0.tar.gz) = 1351201 bytes
+SHA1 (patch-Source_inv.cpp) = 788414c9141da13391cd4f540e364a034fd87b41
+SHA1 (patch-Source_loadsave.cpp) = 22d8d6e4ca44358dfbc55741b8aebeac6af8e468
+SHA1 (patch-Source_loadsave.h) = 6d7e7cc9e188e5a406c10caceb0aa80139c6e301
+SHA1 (patch-structs.h) = d9cba47b2ca876529aef33d4190f082d134cdcb6

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2019/07/11 12:56:04 nia Exp $
+# $NetBSD: Makefile,v 1.6 2019/07/28 10:26:43 nia Exp $
 
 DISTNAME=	devilutionx-0.4.0
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=diasurgical/}
 GITHUB_PROJECT=	devilutionX
