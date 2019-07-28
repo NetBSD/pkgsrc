@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3056 2019/07/28 15:23:15 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3057 2019/07/28 16:10:12 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4991,3 +4991,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added chat/bitlbee-facebook version 1.2.0 [nia 2019-07-28]
 	Added chat/bitlbee-mastodon version 1.4.2 [nia 2019-07-28]
 	Added chat/bitlbee-steam version 1.4.2 [nia 2019-07-28]
+	Updated chat/py-mastodon to 1.4.6 [nia 2019-07-28]
