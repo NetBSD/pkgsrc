@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/09/11 12:35:19 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/07/28 18:56:11 nia Exp $
 
 # The upstream distfile (http://schismtracker.org/hg/archive/default.tar.bz2)
 # is a repository snapshot and as such a moving target.
@@ -18,9 +18,12 @@ USE_TOOLS+=	aclocal autoheader autoconf automake
 MAKE_JOBS_SAFE=	no
 GNU_CONFIGURE=	yes
 
+PYTHON_FOR_BUILD_ONLY=	yes
+
 pre-configure:
 	set -e; cd ${WRKSRC}; \
 	aclocal; autoheader; automake -a --foreign -i; autoconf
 
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
