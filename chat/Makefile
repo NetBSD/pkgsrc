@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.225 2019/07/28 15:21:08 nia Exp $
+# $NetBSD: Makefile,v 1.226 2019/07/28 15:22:55 nia Exp $
 #
 
 COMMENT=	Communication programs
@@ -11,6 +11,7 @@ SUBDIR+=	bitlbee
 SUBDIR+=	bitlbee-discord
 SUBDIR+=	bitlbee-facebook
 SUBDIR+=	bitlbee-mastodon
+SUBDIR+=	bitlbee-steam
 SUBDIR+=	bnc
 SUBDIR+=	carbons-purple
 SUBDIR+=	centerim
