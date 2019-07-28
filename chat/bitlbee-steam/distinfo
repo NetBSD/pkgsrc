@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2019/07/28 15:22:56 nia Exp $
+
+SHA1 (bitlbee-steam-1.4.2.tar.gz) = b02bc15047855c995db388263bd47574bcd66198
+RMD160 (bitlbee-steam-1.4.2.tar.gz) = c331fd38f3e6629e64301d94dd8693e041d77efb
+SHA512 (bitlbee-steam-1.4.2.tar.gz) = 30f463e4f523a9676c3bfe5a5cde27da6f4f9e4664476f311d089982903f53d1f0d41887344e85922bf833ff37b22f2ffc9022ed5ba34948005729f0f1bd1d9c
+Size (bitlbee-steam-1.4.2.tar.gz) = 375563 bytes
+SHA1 (patch-configure) = dcee1d76e582e7a28077ca59fff8b6174fc03a32

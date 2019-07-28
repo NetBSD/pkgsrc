@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2019/07/28 15:22:56 nia Exp $
+
+Use portable test operator.
+
+--- configure.orig	2016-07-30 01:31:53.000000000 +0000
++++ configure
+@@ -12115,7 +12115,7 @@ else
+ fi
+ 
+ 
+-if test "x$WARNINGS" == "xyes"; then :
++if test "x$WARNINGS" = "xyes"; then :
+   CFLAGS="$CFLAGS -Wall -Wextra \
+      -Waggregate-return \
+      -Wdeclaration-after-statement \

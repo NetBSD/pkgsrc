@@ -1,0 +1,3 @@
+The Steam protocol plugin for bitlbee. This plugin uses the Steam Mobile
+API allowing it to run alongside the main Steam client. It is worth noting
+that the Steam Mobile API is HTTP based, which does lead to mild latency.
