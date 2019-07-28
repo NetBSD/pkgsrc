@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/07/28 15:21:08 nia Exp $
+
+SHA1 (bitlbee-mastodon-1.4.2.tar.gz) = fcf4921dabe91a724a22ee2213130a477239d3ee
+RMD160 (bitlbee-mastodon-1.4.2.tar.gz) = 4d97e11b699765d70acd37f5c885e6f08f733a08
+SHA512 (bitlbee-mastodon-1.4.2.tar.gz) = 0581f9e106ce9e939474348a8dd493ee609b7905a310fd27d62316c159b36117584a5aee02b843bded8c2710d3af602f8c67423b646d19c569089235b747ab6f
+Size (bitlbee-mastodon-1.4.2.tar.gz) = 65712 bytes
