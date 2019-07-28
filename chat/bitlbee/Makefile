@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.81 2019/07/20 22:46:10 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2019/07/28 15:16:35 nia Exp $
 
 DISTNAME=		bitlbee-3.6
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		chat
 MASTER_SITES=		http://get.bitlbee.org/src/
 
@@ -52,6 +52,7 @@ PKG_USERS=		${BITLBEE_USER}:${BITLBEE_GROUP}
 PKG_HOME.bitlbee=	${VARBASE}/db/bitlbee
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin
+INSTALLATION_DIRS+=	lib/pkgconfig include/bitlbee
 
 CPPFLAGS.SunOS+=	-Du_int16_t=uint16_t
 
@@ -74,6 +75,10 @@ do-install:
 .for f in AUTHORS FAQ README CREDITS user-guide/user-guide.txt user-guide/user-guide.html
 	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${DESTDIR}${DOCDIR}
 .endfor
+	${INSTALL_DATA} ${WRKSRC}/bitlbee.pc ${DESTDIR}${PREFIX}/lib/pkgconfig
+	${INSTALL_DATA} ${WRKSRC}/*.h ${DESTDIR}${PREFIX}/include/bitlbee
+	${INSTALL_DATA} ${WRKSRC}/lib/*.h ${DESTDIR}${PREFIX}/include/bitlbee
+	${INSTALL_DATA} ${WRKSRC}/protocols/*.h ${DESTDIR}${PREFIX}/include/bitlbee
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bitlbee
 PKG_SUPPORTED_OPTIONS=	inet6
