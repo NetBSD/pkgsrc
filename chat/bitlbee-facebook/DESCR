@@ -1,0 +1,4 @@
+The Facebook protocol plugin for bitlbee.
+This plugin uses the Facebook Messenger MQTT-based protocol.
+
+This project is not affiliated with Facebook, Inc.
