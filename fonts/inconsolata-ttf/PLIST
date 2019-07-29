@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.3 2019/04/06 08:50:20 wiz Exp $
-share/fonts/X11/OTF/Inconsolata.otf
+@comment $NetBSD: PLIST,v 1.4 2019/07/29 08:43:17 nia Exp $
+share/fonts/X11/TTF/Inconsolata-Bold.ttf
+share/fonts/X11/TTF/Inconsolata-Regular.ttf
