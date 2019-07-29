@@ -1,0 +1,6 @@
+The package combines the use of soul with the savepos mechanism
+of current pdfTeX so that the user can create (almost)
+arbitrary underlining and similar "decorations", including
+rules, leaders and even pictures (pgf, pstricks, etc.). Unlike
+soul underlines, which are built by repeating small elements,
+here each chunk of text to be underlined is a single element.
