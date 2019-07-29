@@ -1,0 +1,3 @@
+The package provides two commands: \dotlessi and \dotlessj,
+which give access to dotless i's and j's in math mode. They are
+intended for symbols in non English languages.
