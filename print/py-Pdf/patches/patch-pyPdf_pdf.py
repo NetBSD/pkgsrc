@@ -1,7 +1,8 @@
-$NetBSD: patch-pyPdf_pdf.py,v 1.2 2017/01/09 12:02:23 joerg Exp $
+$NetBSD: patch-pyPdf_pdf.py,v 1.3 2019/07/29 20:39:39 joerg Exp $
 
 python-3.x compatibility.
 When renaming resources, make sure that the new name is actually new.
+Preserve annotations on page merge.
 
 --- pyPdf/pdf.py.orig	2010-12-04 22:49:56.000000000 +0000
 +++ pyPdf/pdf.py
@@ -67,3 +68,12 @@ When renaming resources, make sure that the new name is actually new.
                  renameRes[key] = newname
                  newRes[newname] = page2Res[key]
              elif not newRes.has_key(key):
+@@ -1149,7 +1155,7 @@ class PageObject(DictionaryObject):
+         originalResources = self["/Resources"].getObject()
+         page2Resources = page2["/Resources"].getObject()
+ 
+-        for res in "/ExtGState", "/Font", "/XObject", "/ColorSpace", "/Pattern", "/Shading", "/Properties":
++        for res in "/ExtGState", "/Font", "/XObject", "/ColorSpace", "/Pattern", "/Shading", "/Properties", "/Annots":
+             new, newrename = PageObject._mergeResources(originalResources, page2Resources, res)
+             if new:
+                 newResources[NameObject(res)] = new
