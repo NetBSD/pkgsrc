@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.45 2019/07/20 22:46:51 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2019/07/29 19:12:01 nia Exp $
 
 DISTNAME=	kfilemetadata-${_KDE_VERSION}
-PKGREVISION=	43
+PKGREVISION=	44
 CATEGORIES=	sysutils
 COMMENT=	Library for extracting file metadata
 LICENSE=	gnu-gpl-v3
+
+# breaks with newer exiv2 versions
+CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Exiv2=TRUE
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 
 .include "../../audio/taglib/buildlink3.mk"
-.include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/kdegraphics-mobipocket/buildlink3.mk"
 .include "../../multimedia/ffmpeg2/buildlink3.mk"
 #.include "../../print/poppler-qt4/buildlink3.mk"
