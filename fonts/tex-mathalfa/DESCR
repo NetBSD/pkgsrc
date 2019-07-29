@@ -1,4 +1,0 @@
-The package provides means of loading maths alphabets (such as
-are normally addressed via macros \mathcal, \mathbb, \mathfrak
-and \mathscr), offering various features normally missing in
-existing packages for this job.
