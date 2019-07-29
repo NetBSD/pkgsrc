@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2019/05/15 09:13:36 markd Exp $
+# $NetBSD: Makefile,v 1.17 2019/07/29 11:34:56 markd Exp $
 
 DISTNAME=	collection-binextra
 PKGNAME=	texlive-${DISTNAME}-2019pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	50324
+TEXLIVE_REV=	51464
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -47,7 +47,6 @@ DEPENDS+=	dvipng-[0-9]*:../../graphics/dvipng
 # depend findhyph
 # depend fragmaster
 # depend hook-pre-commit-pkg
-# depend hyphenex
 # depend installfont
 # depend ketcindy
 DEPENDS+=	lacheck-[0-9]*:../../print/lacheck
