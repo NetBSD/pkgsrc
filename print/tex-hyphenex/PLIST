@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2019/07/29 11:03:58 markd Exp $
+share/texmf-dist/tex/generic/hyphenex/ushyphex.tex
