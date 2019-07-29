@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2019/04/26 18:14:15 gdt Exp $
+# $NetBSD: Makefile,v 1.44 2019/07/29 14:48:17 gdt Exp $
 
-PKGNAME=	pkg_rolling-replace-0.24.6
+PKGNAME=	pkg_rolling-replace-0.24.7
 CATEGORIES=	pkgtools
 
 MAINTAINER=	gdt@NetBSD.org
