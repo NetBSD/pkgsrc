@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2019/07/29 10:52:52 markd Exp $
+share/texmf-dist/doc/latex/accents/README.md
+share/texmf-dist/doc/latex/accents/accents.pdf
+share/texmf-dist/doc/latex/accents/accents.tex
