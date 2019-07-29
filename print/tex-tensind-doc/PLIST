@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2019/07/29 11:02:18 markd Exp $
+share/texmf-dist/doc/latex/tensind/README.md
+share/texmf-dist/doc/latex/tensind/tensind.pdf
+share/texmf-dist/doc/latex/tensind/tensind.tex
