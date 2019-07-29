@@ -1,0 +1,7 @@
+When an environment is left open, LaTeX gives an error at the
+end of the document. However it only informs about the first of
+them, while the rest are shown with meaningless errors: (\end
+occurred inside a group at level N) This package replaces these
+errors with more useful messages which show which environments
+(in reverse order) were not closed. There are no user macros:
+just use the package.
