@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2019/05/15 09:52:22 markd Exp $
+# $NetBSD: Makefile,v 1.10 2019/07/29 12:08:03 markd Exp $
 
 DISTNAME=	collection-mathscience
-PKGNAME=	texlive-${DISTNAME}-2019pre1
+PKGNAME=	texlive-${DISTNAME}-2019pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	51039
+TEXLIVE_REV=	51596
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -16,12 +16,14 @@ DEPENDS+=	texlive-collection-latex-[0-9]*:../../meta-pkgs/texlive-collection-lat
 # depend 12many
 DEPENDS+=	tex-SIstyle-[0-9]*:../../print/tex-SIstyle
 DEPENDS+=	tex-SIunits-[0-9]*:../../print/tex-SIunits
+DEPENDS+=	tex-accents-[0-9]*:../../print/tex-accents
 # depend alg
 # depend algobox
 DEPENDS+=	tex-algorithm2e-[0-9]*:../../print/tex-algorithm2e
 DEPENDS+=	tex-algorithmicx-[0-9]*:../../print/tex-algorithmicx
 DEPENDS+=	tex-algorithms-[0-9]*:../../print/tex-algorithms
 # depend aligned-overset
+# depend amscdx
 DEPENDS+=	tex-amstex-[0-9]*:../../print/tex-amstex
 # depend apxproof
 # depend autobreak
@@ -55,6 +57,7 @@ DEPENDS+=	tex-chemgreek-[0-9]*:../../print/tex-chemgreek
 # depend chemstyle
 DEPENDS+=	tex-clrscode-[0-9]*:../../print/tex-clrscode
 # depend clrscode3e
+# depend codeanatomy
 # depend commath
 # depend complexity
 # depend computational-complexity
@@ -114,6 +117,7 @@ DEPENDS+=	tex-ebproof-[0-9]*:../../print/tex-ebproof
 # depend lpform
 # depend lplfitch
 # depend lstbayes
+# depend mathcommand
 DEPENDS+=	tex-mathcomp-[0-9]*:../../print/tex-mathcomp
 # depend mathfixs
 DEPENDS+=	tex-mathpartir-[0-9]*:../../math/tex-mathpartir
@@ -145,6 +149,7 @@ DEPENDS+=	tex-oubraces-[0-9]*:../../print/tex-oubraces
 # depend proba
 # depend proof-at-the-end
 # depend prooftrees
+# depend pseudo
 # depend pseudocode
 # depend pythonhighlight
 # depend qsharp
@@ -177,12 +182,14 @@ DEPENDS+=	tex-stmaryrd-[0-9]*:../../fonts/tex-stmaryrd
 # depend struktex
 # depend substances
 # depend subsupscripts
+# depend subtext
 # depend susy
 # depend syllogism
 # depend sympytexpackage
 # depend synproof
 # depend t-angles
 # depend tablor
+DEPENDS+=	tex-tensind-[0-9]*:../../print/tex-tensind
 # depend tensor
 # depend tex-ewd
 # depend textgreek
