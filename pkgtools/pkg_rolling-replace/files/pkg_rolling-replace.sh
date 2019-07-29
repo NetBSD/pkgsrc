@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.38 2019/04/26 18:14:15 gdt Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.39 2019/07/29 14:48:17 gdt Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -151,7 +151,7 @@ OPC='rr>' # continuation
 # supported.  Newer versions may or may not work (patches welcome).
 check_packages_mismatched()
 {
-    ${PKG_CHK} -u -q $opt_B | while read line; do
+    ${PKG_CHK} -u -q $opt_B | egrep -v missing | while read line; do
         # duplicate output of pkg_chk to stderr (bypass $(...) or `...`)
         echo "${OPC} $line" 1>&2
 	# Look for the first thing that looks like pkg-version rather
