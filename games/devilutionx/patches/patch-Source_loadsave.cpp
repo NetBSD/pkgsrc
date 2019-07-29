@@ -1,4 +1,4 @@
-$NetBSD: patch-Source_loadsave.cpp,v 1.1 2019/07/28 10:26:43 nia Exp $
+$NetBSD: patch-Source_loadsave.cpp,v 1.2 2019/07/29 09:34:32 nia Exp $
 
 64bit Compatible Saves
 https://patch-diff.githubusercontent.com/raw/diasurgical/devilutionX/pull/162.patch
@@ -6,9 +6,18 @@ https://patch-diff.githubusercontent.com/raw/diasurgical/devilutionX/pull/162.pa
 [PATCH] Fix load/save monster padding
 https://github.com/diasurgical/devilutionX/commit/10ebca4efd422bbf46bad6d12ea4cdade9038b01.patch
 
+[PATCH] Fix typo in SaveObject.
+https://github.com/diasurgical/devilutionX/commit/15d046dc644cc1661483cd68bcc8de8888a17f7a.patch
+
+[PATCH] Fix typo in LoadPremium, SavePremium.
+https://github.com/diasurgical/devilutionX/commit/6e3619022144a39c57de8aab83ee07326ac61694.patch
+
+[PATCH] Fix MonstStruct load/save
+https://github.com/diasurgical/devilutionX/commit/b2f358874705598ec139f290b21e340c73d250f6.patch
+
 --- Source/loadsave.cpp.orig	2019-05-19 17:06:45.000000000 +0000
 +++ Source/loadsave.cpp
-@@ -207,42 +207,829 @@ BOOL OLoad()
+@@ -207,42 +207,830 @@ BOOL OLoad()
  		return FALSE;
  }
  
@@ -561,7 +570,8 @@ https://github.com/diasurgical/devilutionX/commit/10ebca4efd422bbf46bad6d12ea4cd
 +	CopyChar(tbuff, &pMonster->leaderflag);
 +	CopyChar(tbuff, &pMonster->packsize);
 +	CopyChar(tbuff, &pMonster->mlid);
-+	
++
++	tbuff += sizeof(DWORD) * 3; // Skip 3 pointers
  	SyncMonsterAnim(i);
  }
  
@@ -846,11 +856,11 @@ https://github.com/diasurgical/devilutionX/commit/10ebca4efd422bbf46bad6d12ea4cd
  {
 -	memcpy(&premiumitem[i], tbuff, sizeof(*premiumitem));
 -	tbuff += sizeof(*premiumitem);
-+	CopyItem(&item[i]);
++	CopyItem(&premiumitem[i]);
  }
  
  void LoadQuest(int i)
-@@ -348,7 +1135,7 @@ void SaveGame()
+@@ -348,7 +1136,7 @@ void SaveGame()
  	for (i = 0; i < MAXITEMS; i++)
  		BSave(itemavail[i]);
  	for (i = 0; i < numitems; i++)
@@ -859,7 +869,7 @@ https://github.com/diasurgical/devilutionX/commit/10ebca4efd422bbf46bad6d12ea4cd
  	for (i = 0; i < 128; i++)
  		OSave(UniqueItemFlag[i]);
  
-@@ -446,40 +1233,201 @@ void OSave(BOOL v)
+@@ -446,40 +1234,203 @@ void OSave(BOOL v)
  		*tbuff++ = FALSE;
  }
  
@@ -968,6 +978,8 @@ https://github.com/diasurgical/devilutionX/commit/10ebca4efd422bbf46bad6d12ea4cd
 +	CopyChar(&pMonster->leaderflag, tbuff);
 +	CopyChar(&pMonster->packsize, tbuff);
 +	CopyChar(&pMonster->mlid, tbuff);
++
++	tbuff += sizeof(DWORD) * 3; // Skip 3 pointers
  }
  
  void SaveMissile(int i)
@@ -1035,7 +1047,7 @@ https://github.com/diasurgical/devilutionX/commit/10ebca4efd422bbf46bad6d12ea4cd
 -	memcpy(tbuff, &item[i], sizeof(*item));
 -	tbuff += sizeof(*item);
 +	ObjectStruct *pObject = &object[i];
-+	CopyInt(tbuff, &pObject->_otype);
++	CopyInt(&pObject->_otype, tbuff);
 +	CopyInt(&pObject->_ox, tbuff);
 +	CopyInt(&pObject->_oy, tbuff);
 +	CopyInt(&pObject->_oLight, tbuff);
@@ -1077,11 +1089,11 @@ https://github.com/diasurgical/devilutionX/commit/10ebca4efd422bbf46bad6d12ea4cd
  {
 -	memcpy(tbuff, &premiumitem[i], sizeof(*premiumitem));
 -	tbuff += sizeof(*premiumitem);
-+	SaveItem(&item[i]);
++	SaveItem(&premiumitem[i]);
  }
  
  void SaveQuest(int i)
-@@ -554,7 +1502,7 @@ void SaveLevel()
+@@ -554,7 +1505,7 @@ void SaveLevel()
  	for (i = 0; i < MAXITEMS; i++)
  		BSave(itemavail[i]);
  	for (i = 0; i < numitems; i++)
