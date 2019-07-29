@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3060 2019/07/29 08:43:36 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3061 2019/07/29 11:30:12 micha Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -4995,3 +4995,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated chat/tootstream to 0.3.7 [nia 2019-07-28]
 	Updated mail/exim to 4.92.1 [abs 2019-07-28]
 	Updated fonts/inconsolata-ttf to 2.001 [nia 2019-07-29]
+	Updated sysutils/usbutil to 0.5nb6 [micha 2019-07-29]
