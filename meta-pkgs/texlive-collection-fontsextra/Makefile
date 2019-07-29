@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2019/05/15 11:42:53 markd Exp $
+# $NetBSD: Makefile,v 1.17 2019/07/29 11:41:17 markd Exp $
 
 DISTNAME=	collection-fontsextra
 PKGNAME=	texlive-${DISTNAME}-2019pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	49909
+TEXLIVE_REV=	51523
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -21,6 +21,7 @@ DEPENDS+=	tex-aecc-[0-9]*:../../fonts/tex-aecc
 DEPENDS+=	tex-alegreya-[0-9]*:../../fonts/tex-alegreya
 # depend algolrevived
 DEPENDS+=	tex-allrunes-[0-9]*:../../fonts/tex-allrunes
+# depend almendra
 DEPENDS+=	tex-almfixed-[0-9]*:../../fonts/tex-almfixed
 DEPENDS+=	tex-anonymouspro-[0-9]*:../../fonts/tex-anonymouspro
 DEPENDS+=	tex-antiqua-[0-9]*:../../fonts/tex-antiqua
@@ -50,6 +51,7 @@ DEPENDS+=	tex-bera-[0-9]*:../../fonts/tex-bera
 DEPENDS+=	tex-berenisadf-[0-9]*:../../fonts/tex-berenisadf
 # depend beuron
 DEPENDS+=	tex-bguq-[0-9]*:../../fonts/tex-bguq
+# depend bitter
 DEPENDS+=	tex-blacklettert1-[0-9]*:../../fonts/tex-blacklettert1
 DEPENDS+=	tex-boisik-[0-9]*:../../fonts/tex-boisik
 DEPENDS+=	tex-bookhands-[0-9]*:../../fonts/tex-bookhands
@@ -139,6 +141,7 @@ DEPENDS+=	tex-fontawesome-[0-9]*:../../fonts/tex-fontawesome
 # depend fontawesome5
 DEPENDS+=	tex-fontmfizz-[0-9]*:../../fonts/tex-fontmfizz
 # depend fonts-churchslavonic
+# depend forum
 DEPENDS+=	tex-fourier-[0-9]*:../../fonts/tex-fourier
 DEPENDS+=	tex-fouriernc-[0-9]*:../../fonts/tex-fouriernc
 DEPENDS+=	tex-frcursive-[0-9]*:../../fonts/tex-frcursive
@@ -190,11 +193,15 @@ DEPENDS+=	tex-libertine-[0-9]*:../../fonts/tex-libertine
 DEPENDS+=	tex-librebaskerville-[0-9]*:../../fonts/tex-librebaskerville
 # depend librebodoni
 DEPENDS+=	tex-librecaslon-[0-9]*:../../fonts/tex-librecaslon
+# depend librefranklin
 DEPENDS+=	tex-libris-[0-9]*:../../fonts/tex-libris
 DEPENDS+=	tex-linearA-[0-9]*:../../fonts/tex-linearA
+# depend linguisticspro
 DEPENDS+=	tex-lobster2-[0-9]*:../../fonts/tex-lobster2
+# depend logix
 DEPENDS+=	tex-lxfonts-[0-9]*:../../fonts/tex-lxfonts
 DEPENDS+=	tex-ly1-[0-9]*:../../fonts/tex-ly1
+# depend marcellus
 DEPENDS+=	tex-mathabx-[0-9]*:../../fonts/tex-mathabx
 DEPENDS+=	tex-mathabx-type1-[0-9]*:../../fonts/tex-mathabx-type1
 DEPENDS+=	tex-mathdesign-[0-9]*:../../fonts/tex-mathdesign
@@ -235,6 +242,7 @@ DEPENDS+=	tex-pigpen-[0-9]*:../../fonts/tex-pigpen
 DEPENDS+=	tex-playfair-[0-9]*:../../fonts/tex-playfair
 # depend plex
 # depend plex-otf
+# depend poiretone
 DEPENDS+=	tex-poltawski-[0-9]*:../../print/tex-poltawski
 DEPENDS+=	tex-prodint-[0-9]*:../../fonts/tex-prodint
 DEPENDS+=	tex-punk-[0-9]*:../../fonts/tex-punk
