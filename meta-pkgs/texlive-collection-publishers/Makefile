@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2019/05/15 10:09:52 markd Exp $
+# $NetBSD: Makefile,v 1.18 2019/07/29 12:14:21 markd Exp $
 
 DISTNAME=	collection-publishers
 PKGNAME=	texlive-${DISTNAME}-2019pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	50974
+TEXLIVE_REV=	51647
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -92,6 +92,7 @@ DEPENDS+=	tex-elsarticle-[0-9]*:../../print/tex-elsarticle
 # depend hecthese
 # depend hithesis
 # depend hobete
+# depend hu-berlin-bundle
 # depend hustthesis
 # depend icsv
 # depend ieeepes
@@ -99,6 +100,7 @@ DEPENDS+=	tex-elsarticle-[0-9]*:../../print/tex-elsarticle
 # depend ijsra
 # depend imac
 # depend imtekda
+# depend inkpaper
 # depend iodhbwm
 # depend iscram
 # depend jacow
@@ -181,6 +183,7 @@ DEPENDS+=	tex-revtex4-[0-9]*:../../print/tex-revtex4
 # depend thesis-gwu
 # depend thesis-qom
 # depend thesis-titlepage-fhac
+# depend thuaslogos
 # depend thucoursework
 # depend thuthesis
 # depend timbreicmc
@@ -208,10 +211,12 @@ DEPENDS+=	tex-toptesi-[0-9]*:../../print/tex-toptesi
 # depend umbclegislation
 # depend umthesis
 # depend umich-thesis
+# depend unam-thesis
 # depend unamth-template
 # depend unamthesis
 # depend unitn-bimrep
 # depend univie-ling
+# depend unizgklasa
 # depend unswcover
 # depend uothesis
 # depend urcls
