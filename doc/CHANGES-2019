@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3080 2019/07/30 22:26:11 brook Exp $
+$NetBSD: CHANGES-2019,v 1.3081 2019/07/30 22:31:32 brook Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5036,3 +5036,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed graphics/opencv2 successor graphics/opencv [nia 2019-07-30]
 	Updated pkgtools/pkglint to 5.7.17 [rillig 2019-07-30]
 	Added archivers/R-zip version 2.0.3 [brook 2019-07-30]
+	Added devel/R-checkmate version 1.9.4 [brook 2019-07-30]
