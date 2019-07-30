@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/12/28 03:29:33 kamil Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/07/30 08:57:14 nia Exp $
 bin/rubberband
 include/rubberband/RubberBandStretcher.h
 include/rubberband/rubberband-c.h
@@ -7,7 +7,7 @@ lib/ladspa/ladspa-rubberband.so
 lib/librubberband.a
 lib/librubberband.so
 lib/librubberband.so.2
-lib/librubberband.so.2.1.0
+lib/librubberband.so.2.1.1
 lib/pkgconfig/rubberband.pc
 lib/vamp/vamp-rubberband.cat
 lib/vamp/vamp-rubberband.so
