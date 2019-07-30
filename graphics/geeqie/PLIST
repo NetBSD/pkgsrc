@@ -1,8 +1,14 @@
-@comment $NetBSD: PLIST,v 1.7 2018/01/10 09:38:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/07/30 13:03:18 ryoon Exp $
 bin/geeqie
-lib/geeqie/geeqie-import
+lib/geeqie/geeqie-camera-import
+lib/geeqie/geeqie-camera-import-hook-script
+lib/geeqie/geeqie-export-jpeg
+lib/geeqie/geeqie-image-crop
+lib/geeqie/geeqie-random-image
 lib/geeqie/geeqie-rotate
 lib/geeqie/geeqie-symlink
+lib/geeqie/geeqie-tethered-photography
+lib/geeqie/geeqie-tethered-photography-hook-script
 lib/geeqie/geeqie-ufraw
 lib/geeqie/geocode-parameters.awk
 man/man1/geeqie.1
@@ -31,6 +37,7 @@ share/doc/${PKGNAME}/html/GuideImagePresentation.html
 share/doc/${PKGNAME}/html/GuideImagePresentationFullscreen.html
 share/doc/${PKGNAME}/html/GuideImagePresentationSlideshow.html
 share/doc/${PKGNAME}/html/GuideImageSearch.html
+share/doc/${PKGNAME}/html/GuideImageSearchCache.html
 share/doc/${PKGNAME}/html/GuideImageSearchFindingDuplicates.html
 share/doc/${PKGNAME}/html/GuideImageSearchSearch.html
 share/doc/${PKGNAME}/html/GuideIndex-info.html
@@ -53,9 +60,11 @@ share/doc/${PKGNAME}/html/GuideOptionsGeneral.html
 share/doc/${PKGNAME}/html/GuideOptionsHidden.html
 share/doc/${PKGNAME}/html/GuideOptionsImage.html
 share/doc/${PKGNAME}/html/GuideOptionsKeyboard.html
+share/doc/${PKGNAME}/html/GuideOptionsKeywords.html
 share/doc/${PKGNAME}/html/GuideOptionsLayout.html
 share/doc/${PKGNAME}/html/GuideOptionsMain.html
 share/doc/${PKGNAME}/html/GuideOptionsMetadata.html
+share/doc/${PKGNAME}/html/GuideOptionsOSD.html
 share/doc/${PKGNAME}/html/GuideOptionsStereo.html
 share/doc/${PKGNAME}/html/GuideOptionsToolbar.html
 share/doc/${PKGNAME}/html/GuideOptionsWindow.html
@@ -74,10 +83,13 @@ share/doc/${PKGNAME}/html/GuideReferenceLIRC.html
 share/doc/${PKGNAME}/html/GuideReferenceLua.html
 share/doc/${PKGNAME}/html/GuideReferenceManagement.html
 share/doc/${PKGNAME}/html/GuideReferenceMetadata.html
+share/doc/${PKGNAME}/html/GuideReferencePCRE.html
 share/doc/${PKGNAME}/html/GuideReferencePixbufLoaders.html
+share/doc/${PKGNAME}/html/GuideReferenceStandardPlugins.html
 share/doc/${PKGNAME}/html/GuideReferenceStandards.html
 share/doc/${PKGNAME}/html/GuideReferenceSupportedFormats.html
 share/doc/${PKGNAME}/html/GuideReferenceThumbnails.html
+share/doc/${PKGNAME}/html/GuideReferenceUTC.html
 share/doc/${PKGNAME}/html/GuideReferenceXmpExif.html
 share/doc/${PKGNAME}/html/GuideSidebars.html
 share/doc/${PKGNAME}/html/GuideSidebarsInfo.html
@@ -122,13 +134,16 @@ share/doc/${PKGNAME}/html/zoom-fit-best.png
 share/doc/${PKGNAME}/html/zoom-in.png
 share/doc/${PKGNAME}/html/zoom-original.png
 share/doc/${PKGNAME}/html/zoom-out.png
-share/geeqie/applications/geeqie-import-geeqie.desktop
-share/geeqie/applications/geeqie-import-gqview.desktop
+share/geeqie/applications/camera-import.desktop
+share/geeqie/applications/export-jpeg.desktop
 share/geeqie/applications/geeqie-ufraw-id.desktop
 share/geeqie/applications/geeqie-ufraw-recursive.desktop
 share/geeqie/applications/geeqie-ufraw.desktop
+share/geeqie/applications/image-crop.desktop
+share/geeqie/applications/random-image.desktop
 share/geeqie/applications/rotate.desktop
 share/geeqie/applications/symlink.desktop
+share/geeqie/applications/tethered-photography.desktop
 share/geeqie/template.desktop
 share/locale/ar/LC_MESSAGES/geeqie.mo
 share/locale/be/LC_MESSAGES/geeqie.mo
@@ -138,6 +153,7 @@ share/locale/cs/LC_MESSAGES/geeqie.mo
 share/locale/da/LC_MESSAGES/geeqie.mo
 share/locale/de/LC_MESSAGES/geeqie.mo
 share/locale/el/LC_MESSAGES/geeqie.mo
+share/locale/en_GB/LC_MESSAGES/geeqie.mo
 share/locale/eo/LC_MESSAGES/geeqie.mo
 share/locale/es/LC_MESSAGES/geeqie.mo
 share/locale/et/LC_MESSAGES/geeqie.mo
