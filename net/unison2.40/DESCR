@@ -3,3 +3,6 @@ two replicas of a collection of files and directories to be stored
 on different hosts (or different disks on the same host), modified
 separately, and then brought up to date by propagating the changes
 in each replica to the other.
+
+This package contains the very old 2.40 version, because unison does
+not interoperate across versions.
