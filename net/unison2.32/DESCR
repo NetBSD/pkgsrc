@@ -4,4 +4,5 @@ on different hosts (or different disks on the same host), modified
 separately, and then brought up to date by propagating the changes
 in each replica to the other.
 
-This package contains the old 2.32 version for compatibility reasons.
+This package contains the very old 2.32 version, because unison does
+not interoperate across versions.
