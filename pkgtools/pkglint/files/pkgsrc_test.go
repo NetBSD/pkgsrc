@@ -340,6 +340,7 @@ func (s *Suite) Test_Pkgsrc_loadDocChanges__not_found(c *check.C) {
 func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile(c *check.C) {
 	t := s.Init(c)
 
+	t.SetUpCommandLine("-Cglobal", "-Wall")
 	t.CreateFileLines("doc/CHANGES-2018",
 		"\tAdded category/package version 1.0 [author1 2015-01-01]", // Wrong year
 		"\tUpdated category/package to 1.5 [author2 2018-01-02]",
@@ -410,10 +411,49 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__wip_suppresses_warnings(c *c
 		"\t\tWrong indentation",
 		"\tInvalid pkgpath to 1.16 [rillig 2019-06-16]")
 
-	t.Main(t.File("wip/package"))
+	t.Main("-Cglobal", "-Wall", "wip/package")
 
 	t.CheckOutputLines(
 		"Looks fine.")
+}
+
+// When a single package is checked, only the lines from doc/CHANGES
+// that are related to that package are shown. The others are too
+// unrelated.
+func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__default(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("doc/CHANGES-2018",
+		CvsID,
+		"",
+		"Changes to the packages collection and infrastructure in 2018:",
+		"",
+		"\tUpdated sysutils/checkperms to 1.10 [rillig 2018-01-05]",
+		"\tUpdated sysutils/checkperms to 1.11 [rillig 2018-01-01]",
+		"\t\tWrong indentation",
+		"\tInvalid pkgpath to 1.16 [rillig 2019-06-16]",
+		"\tUpdated category/package to 2.0 [rillig 2019-07-24]")
+	t.CreateFileLines("Makefile",
+		MkCvsID)
+
+	t.Main("category/package")
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/Makefile:3: The package is being downgraded from 2.0 (see ../../doc/CHANGES-2018:9) to 1.0.",
+		"1 warning found.",
+		"(Run \"pkglint -e\" to show explanations.)")
+
+	// Only when the global checks are enabled, the errors from doc/CHANGES are shown.
+	t.Main("-Cglobal", "-Wall", ".")
+
+	t.CheckOutputLines(
+		"WARN: ~/doc/CHANGES-2018:6: Date \"2018-01-01\" for sysutils/checkperms is earlier than \"2018-01-05\" in line 5.",
+		"WARN: ~/doc/CHANGES-2018:7: Package changes should be indented using a single tab, not \"\\t\\t\".",
+		"WARN: ~/doc/CHANGES-2018:8: Unknown doc/CHANGES line: \tInvalid pkgpath to 1.16 [rillig 2019-06-16]",
+		"WARN: ~/doc/CHANGES-2018:9: Year \"2019\" for category/package does not match the filename ~/doc/CHANGES-2018.",
+		"4 warnings found.",
+		"(Run \"pkglint -e\" to show explanations.)")
 }
 
 func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__wrong_indentation(c *check.C) {
@@ -428,7 +468,7 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__wrong_indentation(c *check.C
 		"        Updated sysutils/checkperms to 1.10 [rillig 2018-01-05]",
 		"    \tUpdated sysutils/checkperms to 1.11 [rillig 2018-01-01]")
 
-	t.Main(t.File("category/package"))
+	t.Main("-Cglobal", "-Wall", "category/package")
 
 	t.CheckOutputLines(
 		"WARN: ~/doc/CHANGES-2018:5: Package changes should be indented using a single tab, not \"        \".",
@@ -548,6 +588,7 @@ func (s *Suite) Test_Pkgsrc_parseDocChange(c *check.C) {
 func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__old(c *check.C) {
 	t := s.Init(c)
 
+	t.SetUpCommandLine("-Cglobal", "-Wall")
 	t.SetUpPkgsrc()
 	t.CreateFileLines("doc/CHANGES-2010",
 		CvsID,
