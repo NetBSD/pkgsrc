@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2018/01/13 23:18:26 rillig Exp $
+# $NetBSD: Makefile,v 1.44 2019/07/30 18:41:58 gdt Exp $
 #
 
 DISTNAME=		jabber-1.4.2
@@ -8,7 +8,7 @@ CATEGORIES=		chat
 MASTER_SITES=		http://download.jabberd.org/jabberd14/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-#HOMEPAGE=		http://jabberstudio.org/projects/jabberd
+HOMEPAGE=		https://jabberd.org/
 COMMENT=		Instant messaging server
 
 CONFLICTS=		jabberd2-[0-9]*
