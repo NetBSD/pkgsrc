@@ -490,8 +490,8 @@ func (s *Suite) Test_VartypeCheck_FetchURL(c *check.C) {
 
 	vt.Output(
 		"WARN: filename.mk:1: Please use ${MASTER_SITE_GITHUB:=example/} "+
-			"instead of \"https://github.com/example/project/\" "+
-			"and run \""+confMake+" help topic=github\" for further tips.",
+			"instead of \"https://github.com/example/\" "+
+			"and run \""+confMake+" help topic=github\" for further instructions.",
 		"WARN: filename.mk:2: Please use ${MASTER_SITE_GNU:=bison} "+
 			"instead of \"http://ftp.gnu.org/pub/gnu/bison\".",
 		"ERROR: filename.mk:3: The subdirectory in MASTER_SITE_GNU must end with a slash.",
@@ -525,6 +525,13 @@ func (s *Suite) Test_VartypeCheck_FetchURL(c *check.C) {
 	vt.Values(
 		"${MASTER_SITE_GNU:S,$,subdir/,}")
 	vt.OutputEmpty()
+
+	vt.Values(
+		"https://github.com/transmission/transmission-releases/raw/master/")
+	vt.Output(
+		"WARN: filename.mk:51: Please use ${MASTER_SITE_GITHUB:=transmission/} " +
+			"instead of \"https://github.com/transmission/\" " +
+			"and run \"" + confMake + " help topic=github\" for further instructions.")
 }
 
 func (s *Suite) Test_VartypeCheck_FetchURL__without_package(c *check.C) {
