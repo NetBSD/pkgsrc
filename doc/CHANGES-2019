@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3072 2019/07/30 10:30:32 roy Exp $
+$NetBSD: CHANGES-2019,v 1.3073 2019/07/30 12:19:08 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5028,3 +5028,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/libtorrent to 0.13.8 [nia 2019-07-30]
 	Updated net/rtorrent to 0.9.8 [nia 2019-07-30]
 	Updated net/dhcpcd to 8.0.2 [roy 2019-07-30]
+	Updated devel/nss to 3.45 [ryoon 2019-07-30]
