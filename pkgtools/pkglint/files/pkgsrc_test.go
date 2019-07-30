@@ -277,6 +277,28 @@ func (s *Suite) Test_Pkgsrc_checkRemovedAfterLastFreeze(c *check.C) {
 	t.SetUpPackage("category/still-there")
 	t.FinishSetUp()
 
+	// No error message since -Cglobal is not given.
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Pkgsrc_checkRemovedAfterLastFreeze__check_global(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("-Wall", "-Cglobal", "--source")
+	t.CreateFileLines("doc/CHANGES-2019",
+		CvsID,
+		"",
+		"\tUpdated category/updated-before to 1.0 [updater 2019-04-01]",
+		"\tmk/bsd.pkg.mk: started freeze for pkgsrc-2019Q1 branch [freezer 2019-06-21]",
+		"\tmk/bsd.pkg.mk: freeze ended for pkgsrc-2019Q1 branch [freezer 2019-06-25]",
+		"\tUpdated category/updated-after to 1.0 [updater 2019-07-01]",
+		"\tAdded category/added-after version 1.0 [updater 2019-07-01]",
+		"\tMoved category/moved-from to category/moved-to [author 2019-07-02]",
+		"\tDowngraded category/downgraded to 1.0 [author 2019-07-03]",
+		"\tUpdated category/still-there to 1.0 [updater 2019-07-04]")
+	t.SetUpPackage("category/still-there")
+	t.FinishSetUp()
+
 	// It doesn't matter whether the last visible package change was before
 	// or after the latest freeze. The crucial point is that the most
 	// interesting change is the invisible one, which is the removal.
