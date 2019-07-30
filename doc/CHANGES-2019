@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3076 2019/07/30 14:21:33 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3077 2019/07/30 14:22:27 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5032,3 +5032,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/geeqie to 1.5 [ryoon 2019-07-30]
 	Updated audio/libebur128 to 1.2.4 [nia 2019-07-30]
 	Updated misc/goffice0.10 to 0.10.45 [nia 2019-07-30]
+	Updated math/gnumeric112 to 1.12.45 [nia 2019-07-30]
