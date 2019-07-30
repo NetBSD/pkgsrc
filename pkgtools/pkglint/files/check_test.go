@@ -68,7 +68,8 @@ func (s *Suite) SetUpTest(c *check.C) {
 	G.Pkgsrc = NewPkgsrc(t.File("."))
 
 	t.c = c
-	t.SetUpCommandLine("-Wall") // To catch duplicate warnings
+	t.SetUpCommandLine("-Wall")    // To catch duplicate warnings
+	t.seenSetUpCommandLine = false // This default call doesn't count.
 
 	// To improve code coverage and ensure that trace.Result works
 	// in all cases. The latter cannot be ensured at compile time.
@@ -131,9 +132,10 @@ type Tester struct {
 	prevdir string // The current working directory before the test started
 	relCwd  string // See Tester.Chdir
 
-	seenSetupPkgsrc int
-	seenFinish      bool
-	seenMain        bool
+	seenSetUpCommandLine bool
+	seenSetupPkgsrc      int
+	seenFinish           bool
+	seenMain             bool
 }
 
 // SetUpCommandLine simulates a command line for the remainder of the test.
@@ -159,6 +161,8 @@ func (t *Tester) SetUpCommandLine(args ...string) {
 	// It also reveals diagnostics that are logged multiple times per
 	// line and thus can easily get annoying to the pkgsrc developers.
 	G.Logger.Opts.LogVerbose = true
+
+	t.seenSetUpCommandLine = true
 }
 
 // SetUpVartypes registers a few hundred variables like MASTER_SITES,
@@ -672,6 +676,10 @@ func (t *Tester) Main(args ...string) int {
 	if t.seenFinish && !t.seenMain {
 		t.Errorf("Calling t.FinishSetup() before t.Main() is redundant " +
 			"since t.Main() loads the pkgsrc infrastructure.")
+	}
+	if t.seenSetUpCommandLine {
+		t.Errorf("Calling t.SetupCommandLine() before t.Main() is redundant " +
+			"since t.Main() accepts the command line options directly.")
 	}
 
 	t.seenMain = true

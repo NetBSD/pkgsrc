@@ -1514,17 +1514,17 @@ func (s *Suite) Test_MkLine_ResolveVarsInRelativePath__directory_depth(c *check.
 	t := s.Init(c)
 
 	t.SetUpVartypes()
-	mklines := t.SetUpFileMkLines("multimedia/totem/bla.mk",
+	mklines := t.SetUpFileMkLines("multimedia/totem/filename.mk",
 		MkCvsID,
 		"BUILDLINK_PKGSRCDIR.totem?=\t../../multimedia/totem")
 
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"WARN: ~/multimedia/totem/bla.mk:2: "+
+		"WARN: ~/multimedia/totem/filename.mk:2: "+
 			"The variable BUILDLINK_PKGSRCDIR.totem should not be given a default value in this file; "+
 			"it would be ok in buildlink3.mk.",
-		"ERROR: ~/multimedia/totem/bla.mk:2: Relative path \"../../multimedia/totem/Makefile\" does not exist.")
+		"ERROR: ~/multimedia/totem/filename.mk:2: Relative path \"../../multimedia/totem/Makefile\" does not exist.")
 }
 
 // Just for code coverage
