@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.162 2019/05/29 19:48:29 adam Exp $
+# $NetBSD: Makefile,v 1.163 2019/07/30 22:26:11 brook Exp $
 #
 
 COMMENT=	Archivers
 
 SUBDIR+=	9e
+SUBDIR+=	R-zip
 SUBDIR+=	advancecomp
 SUBDIR+=	afio
 SUBDIR+=	arc
