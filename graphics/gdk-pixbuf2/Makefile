@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2019/07/29 19:40:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.41 2019/07/30 18:28:32 jperkin Exp $
 
 DISTNAME=	gdk-pixbuf-${PIXBUF2_VERSION}
 PKGNAME=	${DISTNAME:S/pixbuf/pixbuf2/}
@@ -39,7 +39,7 @@ _BUILDING_GTK2= yes
 .include "loaders.mk"
 
 pre-build:
-	${CHMOD} +x ${WRKSRC}/build-aux/*.{py,sh}
+	${CHMOD} +x ${WRKSRC}/build-aux/*.py ${WRKSRC}/build-aux/*.sh
 
 .include "../../devel/py-meson/build.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
