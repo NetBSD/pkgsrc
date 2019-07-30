@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/07/30 22:58:20 brook Exp $
+
+SHA1 (R/clipr_0.7.0.tar.gz) = 9aadfc1b24c492ae855f538e16f237b7a2c53615
+RMD160 (R/clipr_0.7.0.tar.gz) = 9e5c75d0cf8c4441634893b88d1fb364b88aa8b6
+SHA512 (R/clipr_0.7.0.tar.gz) = 5139524fde07cd070b1699560548621a8913aaac24e6d3c54908a4f50482c10f3355ce71868ab12fe19bfc41bacc902f8077b85cb7d806896dfcb60d4b747297
+Size (R/clipr_0.7.0.tar.gz) = 20381 bytes
