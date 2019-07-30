@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2019/04/25 07:33:13 maya Exp $
+# $NetBSD: Makefile,v 1.6 2019/07/30 08:30:06 nia Exp $
 
-DISTNAME=	speedtest-cli-0.3.2
+DISTNAME=	speedtest-cli-2.1.1
+CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sivel/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-PKGREVISION=	1
-CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/sivel/speedtest-cli/
+HOMEPAGE=	https://github.com/sivel/speedtest-cli
 COMMENT=	Command line client for use with speedtest.net
 LICENSE=	apache-2.0
 
@@ -16,8 +15,9 @@ DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 REPLACE_PYTHON=	*.py
 
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+
 post-install:
-	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/speedtest-cli.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/speedtest-cli.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/speedtest.1
 
