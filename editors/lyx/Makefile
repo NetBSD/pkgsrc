@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2019/07/01 04:08:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.79 2019/07/30 08:01:42 jperkin Exp $
 
 DISTNAME=		lyx-2.3.2
 PKGREVISION=		3
@@ -22,7 +22,7 @@ DEPENDS+=		tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
 DEPENDS+=		tex-amsmath-[0-9]*:../../print/tex-amsmath
 DEPENDS+=		tex-babel-[0-9]*:../../print/tex-babel
 DEPENDS+=		tex-bera-[0-9]*:../../fonts/tex-bera
-DEPENDS+=		tex-bezos-[0-9]*:../../print/tex-bezos
+#DEPENDS+=		tex-bezos-[0-9]*:../../print/tex-bezos
 DEPENDS+=		tex-bibtex-[0-9]*:../../print/tex-bibtex
 DEPENDS+=		tex-bibtopic-[0-9]*:../../print/tex-bibtopic
 DEPENDS+=		tex-eco-[0-9]*:../../fonts/tex-eco
