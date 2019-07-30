@@ -501,7 +501,7 @@ func (*Pkgsrc) parseDocChange(line *Line, warn bool) *Change {
 
 func (src *Pkgsrc) loadDocChangesFromFile(filename string) []*Change {
 
-	warn := !G.Wip
+	warn := G.Opts.CheckGlobal && !G.Wip
 
 	// Each date in the file should be from the same year as the filename says.
 	// This check has been added in 2018.
