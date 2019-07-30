@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3064 2019/07/29 18:09:01 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.3065 2019/07/30 08:08:41 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5020,3 +5020,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated pkgtools/pkg_rolling-replace to 0.24.7 [gdt 2019-07-29]
 	Added net/unison2.48 version 2.48.15v4nb5 [wiz 2019-07-29]
 	Removed net/unison successor net/unison2.48 [wiz 2019-07-29]
+	Updated emulators/BasiliskII to 20190405 [nia 2019-07-30]
