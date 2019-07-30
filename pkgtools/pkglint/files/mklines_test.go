@@ -1155,7 +1155,6 @@ func (s *Suite) Test_MkLines_Check__autofix_MASTER_SITE_in_HOMEPAGE(c *check.C) 
 func (s *Suite) Test_MkLines_Check__autofix_MASTER_SITE_in_HOMEPAGE_in_package(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wall", "--autofix")
 	t.SetUpPackage("category/package",
 		"MASTER_SITES=\thttps://cdn1.example.org/ https://cdn2.example.org/",
 		"HOMEPAGE=\t${MASTER_SITES}")
