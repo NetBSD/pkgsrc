@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.827 2019/07/21 10:34:51 wiz Exp $
+# $NetBSD: Makefile,v 1.828 2019/07/30 15:32:48 nia Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -368,7 +368,6 @@ SUBDIR+=	opencolorio
 SUBDIR+=	opencsg
 SUBDIR+=	opencv
 SUBDIR+=	opencv-contrib-face
-SUBDIR+=	opencv2
 SUBDIR+=	opendis
 SUBDIR+=	openexr
 SUBDIR+=	openimageio
