@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3066 2019/07/30 08:30:20 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3067 2019/07/30 08:35:05 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5022,3 +5022,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed net/unison successor net/unison2.48 [wiz 2019-07-29]
 	Updated emulators/BasiliskII to 20190405 [nia 2019-07-30]
 	Updated net/speedtest-cli to 2.1.1 [nia 2019-07-30]
+	Updated sysutils/xfce4-appfinder to 4.13.5 [nia 2019-07-30]
