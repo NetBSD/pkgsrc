@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3078 2019/07/30 15:33:56 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3079 2019/07/30 18:16:23 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5034,3 +5034,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated misc/goffice0.10 to 0.10.45 [nia 2019-07-30]
 	Updated math/gnumeric112 to 1.12.45 [nia 2019-07-30]
 	Removed graphics/opencv2 successor graphics/opencv [nia 2019-07-30]
+	Updated pkgtools/pkglint to 5.7.17 [rillig 2019-07-30]
