@@ -613,7 +613,7 @@ func (src *Pkgsrc) loadDocChanges() {
 }
 
 func (src *Pkgsrc) checkRemovedAfterLastFreeze() {
-	if src.LastFreezeStart == "" || G.Wip {
+	if src.LastFreezeStart == "" || G.Wip || !G.Opts.CheckGlobal {
 		return
 	}
 
