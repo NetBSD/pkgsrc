@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/07/30 22:31:32 brook Exp $
+
+SHA1 (R/checkmate_1.9.4.tar.gz) = 12e769c45d1c96773f7a2c11fda2125dc633d898
+RMD160 (R/checkmate_1.9.4.tar.gz) = b0cd4685baad21de2f106df2edfd1937c7a83f72
+SHA512 (R/checkmate_1.9.4.tar.gz) = c07c8691400ff4285de7669b3467b5ae489fcac0c1ce72c3e245e474889d513654ad7c7689f8946d1728d170f2a8c1ae54817f8e221d93b514255fe757fbf32b
+Size (R/checkmate_1.9.4.tar.gz) = 214038 bytes
