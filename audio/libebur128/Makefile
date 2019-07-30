@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2016/10/10 23:16:32 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2019/07/30 13:36:32 nia Exp $
 
-DISTNAME=	libebur128-1.1.0
+DISTNAME=	libebur128-1.2.4
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jiixyj/}
 GITHUB_PROJECT=	libebur128
-GITHUB_TAG=	${DISTNAME:S/libebur128-/v/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/jiixyj/libebur128/
