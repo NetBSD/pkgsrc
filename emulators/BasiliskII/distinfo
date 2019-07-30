@@ -1,19 +1,7 @@
-$NetBSD: distinfo,v 1.19 2015/11/03 20:30:54 agc Exp $
+$NetBSD: distinfo,v 1.20 2019/07/30 08:08:22 nia Exp $
 
-SHA1 (BasiliskII_src_01052006.tar.bz2) = 6373b33adf6caec53c5d1ed46a00adcac89ad3bb
-RMD160 (BasiliskII_src_01052006.tar.bz2) = bb1a061c504bd7d28b869e0eec2806cf8a79cf8d
-SHA512 (BasiliskII_src_01052006.tar.bz2) = cbe78f525e729aedafc98d8f469b4eaddc93e1088f2341fe4eef612d5ba1d076d7a9e3c7547392a1ddb80280a5bd48dbbcee6ff80d405954c60bd52f2cb28171
-Size (BasiliskII_src_01052006.tar.bz2) = 1310908 bytes
-SHA1 (patch-aa) = 387f7a3f6edac21b99d81ba88a0eeed4591c75ef
-SHA1 (patch-ab) = 4ada93db64772e70e95c58b6a324019c1da6a72d
-SHA1 (patch-ac) = ac4d313a8c60a807a5ea563dcca995e092be9c15
-SHA1 (patch-ad) = 6a215532e891848fe449ef5fe4307793c34bb9d6
-SHA1 (patch-ae) = dcac9287614535fa72fe9c8b0e3c516575e40887
-SHA1 (patch-af) = 285b46cc6e1b761e12498603579424b4f49689c1
-SHA1 (patch-ag) = 962620071eec777d22c49a35795b819432aa8974
-SHA1 (patch-ah) = 0f67eed6f59e6c381c1a6fbeb98261cad4697760
-SHA1 (patch-ai) = fc527be478576f157bffbd6a91eb1bdc85903fb1
-SHA1 (patch-aj) = c331aa7080b330cf58f58c72456b91b0e5a2156f
-SHA1 (patch-ak) = 1dad263b22ae3257a6e34b90972ba264ada7b287
-SHA1 (patch-src-slirp-misc.c) = c9209ae4f3b142a506d42d296ed854974ec47117
-SHA1 (patch-src-slirp-slirp.h) = c0c93d01e5b8d5182ddeed87b1434a7b113175e0
+SHA1 (BasiliskII-20190405-01052ca89d22882c870b84c5498cd0ee9a843b6b.tar.gz) = b83f76e9b37318b6bc4e43e73db0d2ed00fc2981
+RMD160 (BasiliskII-20190405-01052ca89d22882c870b84c5498cd0ee9a843b6b.tar.gz) = 1c16c477fd1e2980ceb4e172d896fb2da4d9580b
+SHA512 (BasiliskII-20190405-01052ca89d22882c870b84c5498cd0ee9a843b6b.tar.gz) = 82a7720c369489d8a27f175550973a72fa77c76553e38734fb2efef6ecf29a2a1c195797d4d487b1e6cca0f21f778a640d69c2686af6ae1687e3e8234dbf7245
+Size (BasiliskII-20190405-01052ca89d22882c870b84c5498cd0ee9a843b6b.tar.gz) = 2198906 bytes
+SHA1 (patch-ad) = 1d8bc61f6386855c6d83ff4e5a13f55d5e22325a

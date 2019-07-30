@@ -1,32 +1,46 @@
-# $NetBSD: Makefile,v 1.39 2018/07/18 00:06:14 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2019/07/30 08:08:22 nia Exp $
 
-DISTNAME=	BasiliskII_src_01052006
-PKGNAME=	BasiliskII-1.0.20060501
-PKGREVISION=	5
+DISTNAME=	BasiliskII-20190405
 CATEGORIES=	emulators
-#MASTER_SITES=	http://gwenole.beauchesne.info/projects/basilisk2/files/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=cebix/}
+GITHUB_PROJECT=	macemu
+GITHUB_TAG=	01052ca89d22882c870b84c5498cd0ee9a843b6b
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://gwenole.beauchesne.info/projects/basilisk2/
+HOMEPAGE=	https://basilisk.cebix.net/
 COMMENT=	Open Source 68k Macintosh emulator
+LICENSE=	gnu-gpl-v2
 
-WRKSRC=			${WRKDIR}/BasiliskII-1.0
-USE_LANGUAGES=		c c++03
-USE_TOOLS+=		gmake
+WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}/BasiliskII
+CONFIGURE_DIRS=	src/Unix
+BUILD_DIRS=	src/Unix
+
+USE_LANGUAGES=	c c++03
+USE_TOOLS+=	aclocal autoheader autoconf automake
+USE_TOOLS+=	msgfmt msgmerge xgettext
+USE_TOOLS+=	pkg-config gmake
+
 GNU_CONFIGURE=		yes
-CONFIGURE_DIRS=		src/Unix
 CONFIGURE_ARGS+=	--disable-fbdev-dga
+CONFIGURE_ARGS+=	--disable-xf86-dga
+CONFIGURE_ARGS+=	--disable-xf86-vidmode
+
 CONFIGURE_ARGS+=	--enable-addressing=banks
 CONFIGURE_ARGS+=	--without-mon
-BUILD_DIRS=		${CONFIGURE_DIRS}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+CONFIGURE_ARGS+=	--enable-macosx-gui
+CONFIGURE_ARGS+=	--enable-macosx-sound
+.endif
 
 .include "options.mk"
 
 INSTALLATION_DIRS=	share/doc/BasiliskII
 
-post-extract:
-	${MKDIR} ${WRKSRC}/src/Unix/obj
+pre-configure:
+	cd ${WRKSRC}/src/Unix && NO_CONFIGURE=x ./autogen.sh
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/BasiliskII/
