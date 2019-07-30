@@ -4,4 +4,5 @@ on different hosts (or different disks on the same host), modified
 separately, and then brought up to date by propagating the changes
 in each replica to the other.
 
-This package contains the outdated 2.48 release.
+This package contains the old 2.48 release, because unison does not
+interoperate across versions.
