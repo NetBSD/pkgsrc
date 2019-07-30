@@ -1,4 +1,4 @@
-# $NetBSD: go-deps.mk,v 1.1 2019/05/15 18:03:33 jperkin Exp $
+# $NetBSD: go-deps.mk,v 1.2 2019/07/30 08:37:33 triaxx Exp $
 
 GO_DEPS+=	github.com/collectd/go-collectd:2ce14454:collectd.org
 GO_DEPS+=	github.com/BurntSushi/toml:a368813c
@@ -61,7 +61,7 @@ GO_DEPS+=	github.com/paulbellamy/ratecounter:524851a9
 GO_DEPS+=	github.com/peterh/liner:8c1271fc
 GO_DEPS+=	github.com/philhofer/fwd:bb6d471d
 GO_DEPS+=	github.com/pkg/errors:645ef004
-GO_DEPS+=	github.com/pkg/term:bffc007b
+GO_DEPS+=	github.com/pkg/term:e10e523
 GO_DEPS+=	github.com/prometheus/client_golang:661e31bf
 GO_DEPS+=	github.com/prometheus/client_model:5c3871d8
 GO_DEPS+=	github.com/prometheus/common:7600349d
@@ -80,7 +80,7 @@ GO_DEPS+=	github.com/golang/crypto:a2144134:golang.org/x/crypto
 GO_DEPS+=	github.com/golang/net:a680a1ef:golang.org/x/net
 GO_DEPS+=	github.com/golang/oauth2:c57b0fac:golang.org/x/oauth2
 GO_DEPS+=	github.com/golang/sync:1d60e460:golang.org/x/sync
-GO_DEPS+=	github.com/golang/sys:ac767d65:golang.org/x/sys
+GO_DEPS+=	github.com/golang/sys:66b7b13:golang.org/x/sys
 GO_DEPS+=	github.com/golang/text:f21a4dfb:golang.org/x/text
 GO_DEPS+=	github.com/golang/time:fbb02b22:golang.org/x/time
 GO_DEPS+=	github.com/golang/tools:45ff765b:golang.org/x/tools
