@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/07/31 13:11:29 brook Exp $
+
+SHA1 (R/backports_1.1.4.tar.gz) = 5928c8b69a53339f0e1ebce8771fd7a21f7bf819
+RMD160 (R/backports_1.1.4.tar.gz) = 5106b05d8a016d0446f7468335d027ae6ec363ba
+SHA512 (R/backports_1.1.4.tar.gz) = 323d7761b113cd2b21f61c4855b9ed1ce0f472033175a689f3e3c545aef5c8103f1a23b55f6a4db2e88b18338903ec3ef0888bc7a7d1dbd30bc3741582186b15
+Size (R/backports_1.1.4.tar.gz) = 13859 bytes
