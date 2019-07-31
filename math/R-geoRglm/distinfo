@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/02/24 06:46:39 wen Exp $
+$NetBSD: distinfo,v 1.4 2019/07/31 19:34:35 brook Exp $
 
-SHA1 (R/geoRglm_0.9-8.tar.gz) = 8beb214578ef6efe02dbf7aa620da974d1fd8154
-RMD160 (R/geoRglm_0.9-8.tar.gz) = 67147aa0dc49f8902912b2f5418af425367e644a
-SHA512 (R/geoRglm_0.9-8.tar.gz) = ae62b273a18f0cfe8b96c54f781c37f4d3ca8aa41eba36901bc98ee2743f13da32efc597653e1df6b85e3e8cba3106be920968491972d566aefbfa5d208ed7a8
-Size (R/geoRglm_0.9-8.tar.gz) = 201150 bytes
+SHA1 (R/geoRglm_0.9-11.tar.gz) = 9739546a0db27b341044fab8b1c1272a678431c2
+RMD160 (R/geoRglm_0.9-11.tar.gz) = 2abf766d4e28e115a3800d46b2ae497907adc76b
+SHA512 (R/geoRglm_0.9-11.tar.gz) = 1410d82143c46ef33de66550c2714324c55e4c47d6f1cf04b77677f2a715b04dad1aa0040e725ce539232efaaa4e52dda5ef822bfbbb1b4c2bb5082930a61e18
+Size (R/geoRglm_0.9-11.tar.gz) = 204528 bytes
