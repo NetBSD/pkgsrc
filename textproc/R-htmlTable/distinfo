@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/07/31 13:47:23 brook Exp $
+
+SHA1 (R/htmlTable_1.13.1.tar.gz) = c373aab5addfee38c857d722596620f8166a5a2f
+RMD160 (R/htmlTable_1.13.1.tar.gz) = bd9bfd3dc6d200f0e4497edca7b9800cecb71cee
+SHA512 (R/htmlTable_1.13.1.tar.gz) = edcc7e9fae15acf134e1046c7457bd1fc194094ada86451c9af4623005a89a21ed98104881a680885bce1f946565bf8cb7de3a337bada94c3175ecea52a623ae
+Size (R/htmlTable_1.13.1.tar.gz) = 175601 bytes
