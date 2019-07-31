@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2018/12/21 02:59:50 wen Exp $
+$NetBSD: distinfo,v 1.3 2019/07/31 18:08:51 brook Exp $
 
-SHA1 (R/FNN_1.1.2.2.tar.gz) = 2ea238320948b7b8ca7aa8fd4a24ffbf0e672091
-RMD160 (R/FNN_1.1.2.2.tar.gz) = 78d7f6c2dcd8c3e720217211bb67685d698c9912
-SHA512 (R/FNN_1.1.2.2.tar.gz) = 3a51c010688bfc99848c02e8e32257e0827b44ec352c668d8721f8ec8e7c162c47522ebe4f3766511aae4970b1ad828d4e2b88ab7a7f89c2f829ee9514d08fb7
-Size (R/FNN_1.1.2.2.tar.gz) = 78528 bytes
+SHA1 (R/FNN_1.1.3.tar.gz) = 6d6bcc6b5e992a19cd9ea5b20c21fb4c13af6488
+RMD160 (R/FNN_1.1.3.tar.gz) = fc1ae8c49a1018d581c31c9b29b4e00288da74af
+SHA512 (R/FNN_1.1.3.tar.gz) = dd4455b3541e4e2262cc360e1f94e9a03e5b3b42e76c26c4336e721e2552bde513ec6a276c17affbba1de681c383e9954383d214b004934bfd0cdbec88337dc9
+Size (R/FNN_1.1.3.tar.gz) = 78492 bytes
 SHA1 (patch-src_Makevars) = ea930ea74f2571f137b36893aca7cb3d9491f0c0
