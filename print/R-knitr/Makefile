@@ -1,22 +1,25 @@
-# $NetBSD: Makefile,v 1.6 2018/07/28 14:40:52 brook Exp $
+# $NetBSD: Makefile,v 1.7 2019/07/31 20:46:05 brook Exp $
 
-CATEGORIES=	print
+CATEGORIES=	print R
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/knitr/
 COMMENT=	General-purpose package for dynamic report generation in R
-LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
+LICENSE=	gnu-gpl-v1 OR gnu-gpl-v2 OR gnu-gpl-v3
 
 R_PKGNAME=	knitr
-R_PKGVER=	1.15.1
+R_PKGVER=	1.23
 
 DEPENDS+=	R-evaluate>=0.10:../../devel/R-evaluate
+DEPENDS+=	R-xfun>=0.8:../../devel/R-xfun
 DEPENDS+=	R-digest>=0.6.4:../../security/R-digest
 DEPENDS+=	R-formatR>=0.10:../../textproc/R-formatR
-DEPENDS+=	R-highr>=0.3:../../textproc/R-highr
-DEPENDS+=	R-markdown>=0.6.5:../../textproc/R-markdown
+DEPENDS+=	R-highr>=0.8:../../textproc/R-highr
+DEPENDS+=	R-markdown>=1.0:../../textproc/R-markdown
 DEPENDS+=	R-stringr>=0.6:../../textproc/R-stringr
-DEPENDS+=	R-yaml>=2.1.5:../../textproc/R-yaml
+DEPENDS+=	R-yaml>=2.1.19:../../textproc/R-yaml
+
+USE_LANGUAGES=	# none
 
 REPLACE_RSCRIPT+=	inst/bin/knit
 REPLACE_RSCRIPT+=	inst/examples/knit-all.R
