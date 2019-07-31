@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/02/04 23:40:02 minskim Exp $
+$NetBSD: distinfo,v 1.2 2019/07/31 15:46:40 brook Exp $
 
-SHA1 (R/TTR_0.23-3.tar.gz) = 474a1d0c7694f30290e90d2449cd5d589e79e27d
-RMD160 (R/TTR_0.23-3.tar.gz) = 0c605d20e8fd6801664b8f8f5c6f0d7bf81cf206
-SHA512 (R/TTR_0.23-3.tar.gz) = 6aa3f47971c4d554ab59e77c5969aae4b10608fdc900579399c0e6599d25381069fd219c7463a5d65cc1fea1fd6f0e8086e810a6644075698d819e1a0ac35c55
-Size (R/TTR_0.23-3.tar.gz) = 309683 bytes
+SHA1 (R/TTR_0.23-4.tar.gz) = 1e30c870e70b9b8bb5d8cb29b1119af0eaaae225
+RMD160 (R/TTR_0.23-4.tar.gz) = d9c5866acdb1ab65ff064ec3bc35de03bb29547d
+SHA512 (R/TTR_0.23-4.tar.gz) = e0c3049c8ee8d58fbb5ccdd8e426e9e6d5a30f2476e6fc9302216273153a0ddf5eff22b0a00c84cdd0e8d214d1dc180e3c7e2052010bedfe904ef400aa91fcc0
+Size (R/TTR_0.23-4.tar.gz) = 310105 bytes
