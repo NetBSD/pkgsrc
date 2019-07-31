@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3186 2019/07/31 19:54:05 brook Exp $
+$NetBSD: CHANGES-2019,v 1.3187 2019/07/31 19:55:15 brook Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5143,3 +5143,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated math/R-lmm to 1.2 [brook 2019-07-31]
 	Updated math/R-lmtest to 0.9.37 [brook 2019-07-31]
 	Updated math/R-mapproj to 1.2.6 [brook 2019-07-31]
+	Updated math/R-maps to 3.3.0 [brook 2019-07-31]
