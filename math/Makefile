@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.412 2019/07/31 13:07:38 brook Exp $
+# $NetBSD: Makefile,v 1.413 2019/07/31 13:09:36 brook Exp $
 
 COMMENT=	Mathematics
 
@@ -28,6 +28,7 @@ SUBDIR+=	R-SparseM
 SUBDIR+=	R-VGAM
 SUBDIR+=	R-XML
 SUBDIR+=	R-abind
+SUBDIR+=	R-acepack
 SUBDIR+=	R-akima
 SUBDIR+=	R-aplpack
 SUBDIR+=	R-bbmle
