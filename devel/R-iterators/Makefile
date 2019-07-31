@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2019/04/07 13:16:02 wen Exp $
+# $NetBSD: Makefile,v 1.3 2019/07/31 15:26:50 brook Exp $
 
-DISTNAME=	iterators_1.0.10
-CATEGORIES=	devel
+CATEGORIES=	devel R
 
 MAINTAINER=	mishka@NetBSD.org
-COMMENT=	Provides Iterator Construct for R
+COMMENT=	Provides iterator construct
 LICENSE=	apache-2.0
+
+R_PKGNAME=	iterators
+R_PKGVER=	1.0.12
 
 USE_LANGUAGES=	# none
 
-BUILDLINK_API_DEPENDS.R+=	R>=2.5.0
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
