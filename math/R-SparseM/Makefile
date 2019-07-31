@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2018/07/28 14:40:46 brook Exp $
-#
+# $NetBSD: Makefile,v 1.4 2019/07/31 18:43:15 brook Exp $
 
-CATEGORIES=	math
+CATEGORIES=	math R
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/SparseM/
-COMMENT=	Sparse Linear Algebra
+COMMENT=	Sparse linear algebra
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 R_PKGNAME=	SparseM
