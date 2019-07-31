@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19159 2019/07/31 19:43:12 brook Exp $
+$NetBSD: TODO,v 1.19160 2019/07/31 19:55:15 brook Exp $
 
 Suggested new packages
 ======================
@@ -409,7 +409,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o Pantomime-1.2.2
 	o R-akima-11
 	o R-mapproj-3
-	o R-maps-3.1.0
 	o R-ncdf-1.6.8
 	o SOGo-4.0.7
 	o SOPE-4.0.7
