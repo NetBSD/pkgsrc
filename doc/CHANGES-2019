@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3094 2019/07/31 09:27:48 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.3095 2019/07/31 10:40:31 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5051,3 +5051,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ocaml-ppx_tools_versioned to 5.2.3 [jaapb 2019-07-31]
 	Updated graphics/exiv2 to 0.27.2 [nia 2019-07-31]
 	Updated devel/ocaml-ppx_custom_printf to 0.12.1 [jaapb 2019-07-31]
+	Updated devel/libidn2 to 2.2.0 [nia 2019-07-31]
