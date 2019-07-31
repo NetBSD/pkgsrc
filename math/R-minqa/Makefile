@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/07/28 14:40:49 brook Exp $
-#
+# $NetBSD: Makefile,v 1.3 2019/07/31 19:56:41 brook Exp $
 
-CATEGORIES=		math
+CATEGORIES=	math R
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/minqa/
