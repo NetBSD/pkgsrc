@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/03/19 15:27:45 minskim Exp $
+$NetBSD: distinfo,v 1.2 2019/07/31 20:35:18 brook Exp $
 
-SHA1 (R/tibble_1.4.2.tar.gz) = 445bc804c36b332cb91e2959364b56a759a55c87
-RMD160 (R/tibble_1.4.2.tar.gz) = 596cf3e01fee60e2cf72e0568b586de0ca98084e
-SHA512 (R/tibble_1.4.2.tar.gz) = 388087528b0c04b0ad93421c6b2cb8cce3dee789fa8443badab9aa58400db2ba67a0073b761c1379d8d69dd7a1a01040c3ff8253b79aa95afd362b06b1e01ebb
-Size (R/tibble_1.4.2.tar.gz) = 109808 bytes
+SHA1 (R/tibble_2.1.3.tar.gz) = 0435e40c7d0eb91574023ff272b43d7685304a32
+RMD160 (R/tibble_2.1.3.tar.gz) = a9457f470c90290c2975d12653a5ed9ca4f82386
+SHA512 (R/tibble_2.1.3.tar.gz) = 1401712ca97a6988c53d8c4f0f5f47d3392404e1538cb0782822789c7f3bc7965444b3cd161c9eb64ece0732b81e9164b076de2089ea6548c63467ca159ecd75
+Size (R/tibble_2.1.3.tar.gz) = 310774 bytes
