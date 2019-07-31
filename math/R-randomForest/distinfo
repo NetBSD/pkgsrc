@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 23:33:29 agc Exp $
+$NetBSD: distinfo,v 1.6 2019/07/31 20:23:32 brook Exp $
 
-SHA1 (R/randomForest_4.6-10.tar.gz) = 783a11470ec41e3a517e349288edef4825c56ec9
-RMD160 (R/randomForest_4.6-10.tar.gz) = bae834a90ae9d42f9a0e473c4a573413b4b06cd7
-SHA512 (R/randomForest_4.6-10.tar.gz) = 47ed09cdea58bc296f8a235d1d13457b10709f58e29a86445c98b66b9e02232cc60b19d725af7f56283366eb34ba857b0ba8d8e73adc93f0ed20eff400a9faae
-Size (R/randomForest_4.6-10.tar.gz) = 79096 bytes
+SHA1 (R/randomForest_4.6-14.tar.gz) = d79fb647ffd3249cf467c5ea97bbad9abc932cb4
+RMD160 (R/randomForest_4.6-14.tar.gz) = 3f97152ea2a220d7a6f3e3b703a1e811688752a3
+SHA512 (R/randomForest_4.6-14.tar.gz) = 3e1ff9be3517a6b3ea6e3749e7c8697d7c3c695272ef699224e56bbbcd26e856ad8f556a434b73011ca0f0053de216a9e97a1aa0b77304bc4245638621436cd2
+Size (R/randomForest_4.6-14.tar.gz) = 80074 bytes
