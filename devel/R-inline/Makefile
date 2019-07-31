@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2018/06/01 02:02:11 wen Exp $
+# $NetBSD: Makefile,v 1.3 2019/07/31 15:25:25 brook Exp $
 
-DISTNAME=	inline_0.3.15
-CATEGORIES=	devel
+CATEGORIES=	devel R
 
 MAINTAINER=	minskim@NetBSD.org
-COMMENT=	Functions to Inline C, C++, Fortran Function Calls from R
-LICENSE=	gnu-lgpl-v2
+COMMENT=	Functions to inline C, C++, Fortran function calls from R
+LICENSE=	gnu-lgpl-v2 OR gnu-lgpl-v2.1 OR gnu-lgpl-v3
+
+R_PKGNAME=	inline
+R_PKGVER=	0.3.15
 
 USE_LANGUAGES=	# none
 
-BUILDLINK_API_DEPENDS.R+=	R>=2.4.0
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
