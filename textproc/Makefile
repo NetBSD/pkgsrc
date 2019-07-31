@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1037 2019/07/31 13:47:23 brook Exp $
+# $NetBSD: Makefile,v 1.1038 2019/07/31 13:48:46 brook Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -21,6 +21,7 @@ SUBDIR+=	R-htmlTable
 SUBDIR+=	R-htmltools
 SUBDIR+=	R-jsonlite
 SUBDIR+=	R-markdown
+SUBDIR+=	R-openxlsx
 SUBDIR+=	R-stringi
 SUBDIR+=	R-stringr
 SUBDIR+=	R-utf8
