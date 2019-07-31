@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3115 2019/07/31 13:33:31 brook Exp $
+$NetBSD: CHANGES-2019,v 1.3116 2019/07/31 13:34:58 brook Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5072,3 +5072,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added math/R-survey version 3.36 [brook 2019-07-31]
 	Added math/R-urca version 1.3.0 [brook 2019-07-31]
 	Added math/R-vctrs version 0.2.0 [brook 2019-07-31]
+	Added math/R-zeallot version 0.1.0 [brook 2019-07-31]
