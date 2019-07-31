@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/09/08 18:56:47 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/07/31 10:39:54 nia Exp $
 bin/idn2
 include/idn2.h
 info/libidn2.info
@@ -14,6 +14,7 @@ man/man3/idn2_register_ul.3
 man/man3/idn2_strerror.3
 man/man3/idn2_strerror_name.3
 man/man3/idn2_to_ascii_4i.3
+man/man3/idn2_to_ascii_4i2.3
 man/man3/idn2_to_ascii_4z.3
 man/man3/idn2_to_ascii_8z.3
 man/man3/idn2_to_ascii_lz.3
@@ -53,6 +54,7 @@ share/locale/nl/LC_MESSAGES/libidn2.mo
 share/locale/pl/LC_MESSAGES/libidn2.mo
 share/locale/pt_BR/LC_MESSAGES/libidn2.mo
 share/locale/ro/LC_MESSAGES/libidn2.mo
+share/locale/ru/LC_MESSAGES/libidn2.mo
 share/locale/sr/LC_MESSAGES/libidn2.mo
 share/locale/sv/LC_MESSAGES/libidn2.mo
 share/locale/uk/LC_MESSAGES/libidn2.mo
