@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 23:33:28 agc Exp $
+$NetBSD: distinfo,v 1.6 2019/07/31 19:29:34 brook Exp $
 
-SHA1 (R/gdata_2.8.2.tar.gz) = ddfd4befdc283eeda39aba14215a7cd428e1042b
-RMD160 (R/gdata_2.8.2.tar.gz) = 1be56ea4950349b85317b905aecb2143523ad4bd
-SHA512 (R/gdata_2.8.2.tar.gz) = e4d57a9cca39dda329913f6c768d464d0e014d8ab1ed52eeea85918080828046cb134ca8d96e0cef0c1b2f9ce2058035016f020b9a21f67c70bd2055294a387a
-Size (R/gdata_2.8.2.tar.gz) = 631443 bytes
+SHA1 (R/gdata_2.18.0.tar.gz) = 14e2d51a6d516de04ab40bfd05bddb1de0f81f40
+RMD160 (R/gdata_2.18.0.tar.gz) = cc3c33d1a1105c4ddffeec8eef52d58fdc0628b7
+SHA512 (R/gdata_2.18.0.tar.gz) = 609a412970d46bed0d12191b1015fac96b48244cb9fb35506be07ae0544583566669c0e233a52f418dafdfc787a92cfbbf6554cb336af06c257b3bb6058e4fd5
+Size (R/gdata_2.18.0.tar.gz) = 1058430 bytes
