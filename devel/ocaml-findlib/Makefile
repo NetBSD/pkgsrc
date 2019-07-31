@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2019/05/23 19:22:58 rillig Exp $
+# $NetBSD: Makefile,v 1.45 2019/07/31 09:07:00 jaapb Exp $
 
-DISTNAME=		findlib-1.8.0
+DISTNAME=		findlib-1.8.1
 PKGNAME=		ocaml-${DISTNAME}
-PKGREVISION=		5
 CATEGORIES=		devel
 MASTER_SITES=		http://download.camlcity.org/download/
 
