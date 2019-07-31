@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.1 2018/07/15 21:22:46 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2019/07/31 16:15:36 brook Exp $
 
-DISTNAME=	codetools_0.2-15
-CATEGORIES=	lang
+CATEGORIES=	lang R
 
 MAINTAINER=	minskim@NetBSD.org
-COMMENT=	Code Analysis Tools for R
-LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
+COMMENT=	Code analysis tools for R
+LICENSE=	gnu-gpl-v1 OR gnu-gpl-v2 OR gnu-gpl-v3
+
+R_PKGNAME=	codetools
+R_PKGVER=	0.2-16
+
+CONFLICTS=	R>=3.6.0
 
 USE_LANGUAGES=	# none
 
-BUILDLINK_API_DEPENDS.R+=	R>=2.1
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
