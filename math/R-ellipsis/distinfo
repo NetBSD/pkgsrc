@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/07/31 13:13:39 brook Exp $
+
+SHA1 (R/ellipsis_0.2.0.1.tar.gz) = 6f68eb3196b40d640448c0d612cc3d133d52b5cc
+RMD160 (R/ellipsis_0.2.0.1.tar.gz) = 9bb251f123806b9a5cbe7993fe5f1310949fa71f
+SHA512 (R/ellipsis_0.2.0.1.tar.gz) = e38a149d8fdc83c694bae2c1a07ad2e1974680e84d2bef304fcddb51eff6ca8994cd01c3cbd8746541b99e8c36938017896d02e22348c2879e17a1c0789003fe
+Size (R/ellipsis_0.2.0.1.tar.gz) = 7045 bytes
