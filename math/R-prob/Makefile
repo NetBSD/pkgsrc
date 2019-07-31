@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.2 2018/07/28 14:53:46 brook Exp $
+# $NetBSD: Makefile,v 1.3 2019/07/31 20:19:10 brook Exp $
 
-CATEGORIES=	math
+CATEGORIES=	math R
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://prob.r-forge.r-project.org/
 COMMENT=	Elementary probability on finite sample spaces
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	R-combinat-[0-9]*:../../math/R-combinat
-DEPENDS+=	R-fAsianOptions-[0-9]*:../../finance/R-fAsianOptions
-
 R_PKGNAME=	prob
-R_PKGVER=	1.0-0
+R_PKGVER=	1.0-1
+
+DEPENDS+=	R-fAsianOptions>=3042.82:../../finance/R-fAsianOptions
+DEPENDS+=	R-combinat>=0.0.8:../../math/R-combinat
 
 USE_LANGUAGES=	# none
 
