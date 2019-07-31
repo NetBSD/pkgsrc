@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.425 2019/07/31 13:33:31 brook Exp $
+# $NetBSD: Makefile,v 1.426 2019/07/31 13:34:58 brook Exp $
 
 COMMENT=	Mathematics
 
@@ -102,6 +102,7 @@ SUBDIR+=	R-vctrs
 SUBDIR+=	R-wle
 SUBDIR+=	R-xtable
 SUBDIR+=	R-xts
+SUBDIR+=	R-zeallot
 SUBDIR+=	R-zoo
 SUBDIR+=	TinySVM
 SUBDIR+=	aamath
