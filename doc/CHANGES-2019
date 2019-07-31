@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3160 2019/07/31 18:41:30 brook Exp $
+$NetBSD: CHANGES-2019,v 1.3161 2019/07/31 18:45:22 brook Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5117,3 +5117,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated math/R-Rcmdr to 2.5.3 [brook 2019-07-31]
 	Updated math/R-RcppArmadillo to 0.9.600.4.0 [brook 2019-07-31]
 	Updated math/R-RcppEigen to 0.3.3.5.0 [brook 2019-07-31]
+	Updated math/R-VGAM to 1.1.1 [brook 2019-07-31]
