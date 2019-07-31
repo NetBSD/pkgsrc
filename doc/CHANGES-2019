@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3152 2019/07/31 16:19:01 brook Exp $
+$NetBSD: CHANGES-2019,v 1.3153 2019/07/31 16:33:56 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5109,3 +5109,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/R-scales to 1.0.0 [brook 2019-07-31]
 	Updated lang/R-codetools to 0.2.16 [brook 2019-07-31]
 	Updated mail/R-mime to 0.7 [brook 2019-07-31]
+	Updated www/vimb to 3.5.0 [leot 2019-07-31]
