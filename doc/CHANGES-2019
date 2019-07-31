@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3087 2019/07/31 01:29:16 brook Exp $
+$NetBSD: CHANGES-2019,v 1.3088 2019/07/31 01:38:22 fox Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5044,3 +5044,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/R-tcltk2 version 1.2.11 [brook 2019-07-31]
 	Added devel/R-withr version 2.1.2 [brook 2019-07-31]
 	Added devel/R-xfun version 0.8 [brook 2019-07-31]
+	Updated www/cliqz to 1.28.0 [fox 2019-07-31]
