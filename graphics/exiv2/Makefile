@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2019/07/31 09:16:26 nia Exp $
+# $NetBSD: Makefile,v 1.44 2019/07/31 09:47:20 nia Exp $
 
 DISTNAME=	exiv2-0.27.2-Source
 PKGNAME=	${DISTNAME:S/-Source//}
@@ -24,6 +24,8 @@ CMAKE_ARGS+=	-DIntl_INCLUDE_DIR=${BUILDLINK_PREFIX.gettext}/include
 
 LDFLAGS.Linux+=	-ldl
 LDFLAGS.SunOS+=	-lsocket -lnsl
+
+CXXFLAGS.SunOS+=	-fPIC
 
 USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE=	config/exiv2.pc.in
