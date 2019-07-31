@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/03/12 15:47:48 minskim Exp $
+$NetBSD: distinfo,v 1.2 2019/07/31 16:11:55 brook Exp $
 
-SHA1 (R/scales_0.5.0.tar.gz) = df1c718aebea32eaeebb4332405a8cfd53ae4268
-RMD160 (R/scales_0.5.0.tar.gz) = 68fbf10b1315b2536e265d6e7dc2c90485fbc689
-SHA512 (R/scales_0.5.0.tar.gz) = 68152b4ce0b589932ee8b9971f506098bacdcd679afb2dd5d710731e3d9139618a031566598461945a336e064350c32e3a0095c53e86f094a17fccaabd53181d
-Size (R/scales_0.5.0.tar.gz) = 59867 bytes
+SHA1 (R/scales_1.0.0.tar.gz) = b1683361971eee37234ffab3474f3d92218f6e18
+RMD160 (R/scales_1.0.0.tar.gz) = c2edaddec61239a1a7e163e34a10ce8169c7471d
+SHA512 (R/scales_1.0.0.tar.gz) = 6fcd2f29f260faa7bb58bbeaf8876fef476f424f77200ebe6b9dce2c16a131f1efac50072fa07d253545879cb0b78684036586a4a61a6412ee37eba1a46abcc0
+Size (R/scales_1.0.0.tar.gz) = 299262 bytes
