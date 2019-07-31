@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.424 2019/07/31 13:31:55 brook Exp $
+# $NetBSD: Makefile,v 1.425 2019/07/31 13:33:31 brook Exp $
 
 COMMENT=	Mathematics
 
@@ -98,6 +98,7 @@ SUBDIR+=	R-statmod
 SUBDIR+=	R-survey
 SUBDIR+=	R-tibble
 SUBDIR+=	R-urca
+SUBDIR+=	R-vctrs
 SUBDIR+=	R-wle
 SUBDIR+=	R-xtable
 SUBDIR+=	R-xts
