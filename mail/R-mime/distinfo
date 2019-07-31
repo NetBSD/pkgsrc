@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/04/13 14:14:58 wen Exp $
+$NetBSD: distinfo,v 1.4 2019/07/31 16:19:01 brook Exp $
 
-SHA1 (R/mime_0.4.tar.gz) = 1937ad906b574333545124d18aa95c2e703cb621
-RMD160 (R/mime_0.4.tar.gz) = 31c641be9b26e39a34b413443251de6c15dc2c40
-SHA512 (R/mime_0.4.tar.gz) = 838f9f9ce295e3a069b0a3d3ca189ebaa5e4419f25e0321d63fc4324fcd3a135e9e45ef15808c6a56b3fbe39518d5da116ebd0944ea51d4ced0d3140a91f268d
-Size (R/mime_0.4.tar.gz) = 12545 bytes
+SHA1 (R/mime_0.7.tar.gz) = 7c5e5ecd90c76c8cf5c51be196efb65c148e7fca
+RMD160 (R/mime_0.7.tar.gz) = 32ca5cf19580f6275b366254510f4bc21d7b684c
+SHA512 (R/mime_0.7.tar.gz) = b02926266e124a2c8fdb0b6de1203eb44a8dc7ec77b24c9e5b5564351125152cf78393cd7b3bab31522c624b81c80982b60dfb0ae7d61a140620d5cf355edf9e
+Size (R/mime_0.7.tar.gz) = 13130 bytes
