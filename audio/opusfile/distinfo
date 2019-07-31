@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.9 2018/05/13 09:44:03 maya Exp $
+$NetBSD: distinfo,v 1.10 2019/07/31 10:48:31 nia Exp $
 
-SHA1 (opusfile-0.10.tar.gz) = ddbeba72d45cde54872cc6811ae3273ed1520968
-RMD160 (opusfile-0.10.tar.gz) = b9fcc6fd243b45c853aa64137f006d71d0c7cc2b
-SHA512 (opusfile-0.10.tar.gz) = 302601c31ca28bff175cefa99ac16177122a786d043be229616e2c98b7ffaf4a96b8bb17ca16e31240325a92763f417315b54d8f1b2f4f63f445cb7ad43c4a37
-Size (opusfile-0.10.tar.gz) = 467700 bytes
+SHA1 (opusfile-0.11.tar.gz) = fc3bf2a73be16836a16d9e55ff1097de3835dce3
+RMD160 (opusfile-0.11.tar.gz) = 1698cdc450eaffc00aba4cc4912e6eb9b21bb565
+SHA512 (opusfile-0.11.tar.gz) = ec3e282310cc4f25475c27b7bc8d1652dcb25d3ac6badf87bd1b4e5397fbe106a0dab81c60d88d198003a23d8a2c9bae8b661edc9b31433effeca438ce56a349
+Size (opusfile-0.11.tar.gz) = 467420 bytes
 SHA1 (patch-configure) = 27f0176b889eab6494e83b4d8cf2bdba1c03efa8
 SHA1 (patch-configure.ac) = 7a49191176154c0e7f9fb0182e0dda7dfab8d39c
 SHA1 (patch-src_http.c) = 6b4f64a875c0fb5f9b9f63e041c232344c804dd3
