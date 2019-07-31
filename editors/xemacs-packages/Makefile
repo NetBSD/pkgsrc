@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.71 2019/06/08 10:41:00 rillig Exp $
+# $NetBSD: Makefile,v 1.72 2019/07/31 14:04:40 hauke Exp $
 
 DISTNAME=	xemacs-packages
 PKGNAME=	xemacs-packages-1.18
-PKGREVISION=	2
+PKGREVISION=	3
 
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_XEMACS:=${XEMACSPKG_PATH}/}
@@ -142,7 +142,7 @@ DISTFILES=	\
 #		leim-1.38-pkg.tar.gz \
 
 DISTFILES+=	leim-1.31-pkg.tar.gz
-SITES.leim-1.31-pkg.tar.gz= ${MASTER_SITE_XEMACS:="packages/"}
+SITES.leim-1.31-pkg.tar.gz= ${MASTER_SITE_XEMACS:=packages/}
 
 MAINTAINER=	hauke@NetBSD.org
 HOMEPAGE=	http://www.xemacs.org/
@@ -224,7 +224,7 @@ xemacs-merge-package-list:
 
 .PHONY: xemacs-update-package
 xemacs-update-package: xemacs-fetch-package-list xemacs-merge-package-list
-.endif	# PKG_DEVELOPER && OPSYS == "NetBSD"
+.endif	# defined(PKG_DEVELOPER) && ${OPSYS} == "NetBSD"
 
 pre-configure:
 	@${ECHO_MSG} "Fixing file permissions ... "
