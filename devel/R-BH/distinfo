@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/04/11 15:23:52 minskim Exp $
+$NetBSD: distinfo,v 1.2 2019/07/31 18:01:32 brook Exp $
 
-SHA1 (R/BH_1.66.0-1.tar.gz) = afddd33153a8c957a52c4d98e7ae3ee5e9651d26
-RMD160 (R/BH_1.66.0-1.tar.gz) = e45177775cdd349de7f70a5ed5f0dfeec55629e5
-SHA512 (R/BH_1.66.0-1.tar.gz) = c3f05ef8a52f98578e7beb2c71e0f15a38eeb2317a45767ef3b8ffabd33ff839a53a030fe24b185d2103e726d1174bdf34fb1338914fa0dc706df22b24ff4c5c
-Size (R/BH_1.66.0-1.tar.gz) = 11583445 bytes
+SHA1 (R/BH_1.69.0-1.tar.gz) = 2e32f2bdff9a086a6662523a64a1ca654b619bec
+RMD160 (R/BH_1.69.0-1.tar.gz) = b9d598c0489f49b06f5af87583638182a6c44bcc
+SHA512 (R/BH_1.69.0-1.tar.gz) = 25f0c5e12152f0416e7e102ee2351b4af626bd1e7e6f78c05303cb9f56a432b6468a0473de141afc0fe1e2a9b43f0bb1f59da13eb6ab323268a59b1df0c1818a
+Size (R/BH_1.69.0-1.tar.gz) = 12378154 bytes
