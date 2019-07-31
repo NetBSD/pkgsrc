@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2019/01/27 14:49:39 wen Exp $
+# $NetBSD: Makefile,v 1.4 2019/07/31 15:30:41 brook Exp $
 
-CATEGORIES=	devel
+CATEGORIES=	devel R
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://github.com/gaborcsardi/pkgconfig
-COMMENT=	Private Configuration for 'R' Packages
+COMMENT=	Private configuration for R packages
 LICENSE=	mit
 
 R_PKGNAME=	pkgconfig
