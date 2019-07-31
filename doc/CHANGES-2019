@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3178 2019/07/31 19:38:44 brook Exp $
+$NetBSD: CHANGES-2019,v 1.3179 2019/07/31 19:40:17 brook Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5135,3 +5135,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated math/R-geoRglm to 0.9.11 [brook 2019-07-31]
 	Updated math/R-gss to 2.1.10 [brook 2019-07-31]
 	Updated math/R-gstat to 2.0.2 [brook 2019-07-31]
+	Updated math/R-gtable to 0.3.0 [brook 2019-07-31]
