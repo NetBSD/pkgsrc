@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2018/12/21 02:59:50 wen Exp $
+# $NetBSD: Makefile,v 1.4 2019/07/31 18:08:51 brook Exp $
 
-CATEGORIES=	math
+CATEGORIES=	math R
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/FNN/
-COMMENT=	Fast Nearest Neighbor Search Algorithms and Applications
-LICENSE=	gnu-gpl-v2
+COMMENT=	Fast nearest neighbor search algorithms and applications
+LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 R_PKGNAME=	FNN
-R_PKGVER=	1.1.2.2
+R_PKGVER=	1.1.3
 
 USE_LANGUAGES+=	c c++
 
