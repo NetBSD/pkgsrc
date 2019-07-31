@@ -6,4 +6,7 @@ in each replica to the other.
 
 This package contains the old 2.48 release, because unison does not
 interoperate across versions.  It installs the binary as unison-2.48
-so that it can be installed at the same time as ../unison.
+so that it can be installed at the same time as ../unison.  Note that
+peers will need to use "-addversionno" to use this version as a
+remote.
+
