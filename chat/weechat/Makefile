@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2019/07/20 12:08:01 leot Exp $
+# $NetBSD: Makefile,v 1.99 2019/07/31 10:27:55 nia Exp $
 
 DISTNAME=	weechat-2.5
 PKGREVISION=	3
@@ -42,7 +42,6 @@ BUILDLINK_TRANSFORM+=	rm:-Werror-implicit-function-declaration
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 #.include "../../devel/readline/buildlink3.mk"
-.include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
