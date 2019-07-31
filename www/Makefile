@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1392 2019/07/01 15:49:47 jaapb Exp $
+# $NetBSD: Makefile,v 1.1393 2019/07/31 13:58:41 brook Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
 
 SUBDIR+=	R-curl
+SUBDIR+=	R-htmlwidgets
 SUBDIR+=	SOGo
 SUBDIR+=	SOGo3
 SUBDIR+=	SpeedyCGI
