@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2018/07/28 14:40:44 brook Exp $
+# $NetBSD: Makefile,v 1.3 2019/07/31 16:01:57 brook Exp $
 
-CATEGORIES=	graphics
+CATEGORIES=	graphics R
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/colorspace/
-COMMENT=	Color space manipulation
+COMMENT=	Toolbox for manipulating and assessing colors and palettes
 LICENSE=	modified-bsd
 
 R_PKGNAME=	colorspace
-R_PKGVER=	1.3-2
+R_PKGVER=	1.4-1
 
-BUILDLINK_API_DEPENDS.R+=	R>=2.13.0
+USE_LANGUAGES=	c
+
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
