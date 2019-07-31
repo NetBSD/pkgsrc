@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/01/17 19:09:15 minskim Exp $
+$NetBSD: distinfo,v 1.2 2019/07/31 18:53:17 brook Exp $
 
-SHA1 (R/aplpack_1.3.0.tar.gz) = d21651b13175f38cb3e07b208b0968d10b2dcb47
-RMD160 (R/aplpack_1.3.0.tar.gz) = f8c4c7e926cc5b2372ddc7e75853bc4266bf5b13
-SHA512 (R/aplpack_1.3.0.tar.gz) = 5a2231b3ca46fb11705a838a76bbef2222f10c3c6c360d97c107edfabc0890fc23bc638a90d43016f80b8124941eb5aab3c52b5784817b726c7e1a4c333d1d34
-Size (R/aplpack_1.3.0.tar.gz) = 3409812 bytes
+SHA1 (R/aplpack_1.3.2.tar.gz) = d07ffe22c67f7c8d9150c045f10effeac179c19f
+RMD160 (R/aplpack_1.3.2.tar.gz) = 941fed5eb163e1429f3e4ff0ef62e46a2785c6de
+SHA512 (R/aplpack_1.3.2.tar.gz) = 0cd80eec9b79717458c927634ca81f62ed8451684dc6557705f1922e44c9dfcc8f41dba4c18ef200637e4710384586d52bbbfbd1ac7a4569a958b1a4cef708db
+Size (R/aplpack_1.3.2.tar.gz) = 3423583 bytes
