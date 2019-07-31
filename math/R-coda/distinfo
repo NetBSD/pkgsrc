@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/03/04 01:03:32 minskim Exp $
+$NetBSD: distinfo,v 1.2 2019/07/31 19:15:51 brook Exp $
 
-SHA1 (R/coda_0.19-1.tar.gz) = ad5f932f7600394c7c88963013812df743bd2169
-RMD160 (R/coda_0.19-1.tar.gz) = 04ad94bf57d659cd8a8d2e04bc12b6c628347876
-SHA512 (R/coda_0.19-1.tar.gz) = 18cc55c6cdd93552dfa0203ecb06534eb7d58d51864e2de6ce3af848d2acf9f54933dab6c0da9881f11c7b730d87018b8e4fed352a5a3b9a0e906b2c2712a133
-Size (R/coda_0.19-1.tar.gz) = 73734 bytes
+SHA1 (R/coda_0.19-3.tar.gz) = 073845a45dd2e89a634fd8a83bc4abfee37778ff
+RMD160 (R/coda_0.19-3.tar.gz) = c4c3fa17708d10d0c8938c2924c0b9ece456451d
+SHA512 (R/coda_0.19-3.tar.gz) = 1833b7a8c7de5220455d101ce4f14348eb750deb245a82d994810fc16b4c01efdf6782ea6d6442ba325ba8cba57d8c0439892fdf15f4bae85b95f2a2eaf28221
+Size (R/coda_0.19-3.tar.gz) = 73555 bytes
