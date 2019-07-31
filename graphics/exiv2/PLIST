@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2019/07/15 22:07:08 nia Exp $
+@comment $NetBSD: PLIST,v 1.20 2019/07/31 09:16:26 nia Exp $
 bin/exiv2
 include/exiv2/asfvideo.hpp
 include/exiv2/basicio.hpp
@@ -50,9 +50,9 @@ include/exiv2/version.hpp
 include/exiv2/webpimage.hpp
 include/exiv2/xmp_exiv2.hpp
 include/exiv2/xmpsidecar.hpp
-lib/exiv2/cmake/exiv2Config-noconfig.cmake
-lib/exiv2/cmake/exiv2Config.cmake
-lib/exiv2/cmake/exiv2ConfigVersion.cmake
+lib/cmake/exiv2/exiv2Config-noconfig.cmake
+lib/cmake/exiv2/exiv2Config.cmake
+lib/cmake/exiv2/exiv2ConfigVersion.cmake
 lib/libexiv2-xmp.a
 lib/libexiv2.so
 lib/libexiv2.so.${PKGVERSION}

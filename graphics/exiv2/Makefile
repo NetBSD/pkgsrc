@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2019/07/16 08:43:16 adam Exp $
+# $NetBSD: Makefile,v 1.43 2019/07/31 09:16:26 nia Exp $
 
-DISTNAME=	exiv2-0.27.1-Source
+DISTNAME=	exiv2-0.27.2-Source
 PKGNAME=	${DISTNAME:S/-Source//}
 CATEGORIES=	graphics
 MASTER_SITES=	https://www.exiv2.org/builds/
