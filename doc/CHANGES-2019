@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3191 2019/07/31 20:16:40 brook Exp $
+$NetBSD: CHANGES-2019,v 1.3192 2019/07/31 20:19:10 brook Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5148,3 +5148,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated math/R-nloptr to 1.2.1 [brook 2019-07-31]
 	Updated math/R-numDeriv to 2016.8.1.1 [brook 2019-07-31]
 	Updated math/R-poweRlaw to 0.70.2 [brook 2019-07-31]
+	Updated math/R-prob to 1.0.1 [brook 2019-07-31]
