@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/07/31 13:30:20 brook Exp $
+
+SHA1 (R/survey_3.36.tar.gz) = 9505042993c610a311b6b26f9b56bbd004e358c3
+RMD160 (R/survey_3.36.tar.gz) = f5268b49a748f2a379130d938468d68174d52b20
+SHA512 (R/survey_3.36.tar.gz) = c383068281004b855638eb0835969b35d7fad2bd4bace0f75f4bedf1925121231e5373662f2d26cdbd4c4543564109b3de37e7a6edde9a560bdc241e5314c008
+Size (R/survey_3.36.tar.gz) = 1550706 bytes
