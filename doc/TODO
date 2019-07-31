@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19156 2019/07/30 13:37:13 nia Exp $
+$NetBSD: TODO,v 1.19157 2019/07/31 18:34:10 brook Exp $
 
 Suggested new packages
 ======================
@@ -407,7 +407,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o PACK-0.0.4
 	o PAM-0.99.7.1
 	o Pantomime-1.2.2
-	o R-RandomFields-3.1.8
 	o R-akima-11
 	o R-gdata-2.17.0
 	o R-httpRequest-0.0.10
