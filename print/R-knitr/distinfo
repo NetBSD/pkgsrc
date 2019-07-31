@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2017/03/11 12:42:19 wen Exp $
+$NetBSD: distinfo,v 1.6 2019/07/31 20:46:05 brook Exp $
 
-SHA1 (R/knitr_1.15.1.tar.gz) = d1b33ad7682eb287918748217eaf872dc7a88aff
-RMD160 (R/knitr_1.15.1.tar.gz) = 8741a44082652d7335a3593ba5838fbca390dffc
-SHA512 (R/knitr_1.15.1.tar.gz) = 164ef112cac815c56eacfc57568fd9bce740b5a0436a689a59c23b502a37d5f12bf18932092845ddd42e6d4b38afffb4bcad9fe718d0f1e40b6075eb98592e92
-Size (R/knitr_1.15.1.tar.gz) = 1027808 bytes
+SHA1 (R/knitr_1.23.tar.gz) = 736badb51c0de0d51d9310989e74ceb99a97be53
+RMD160 (R/knitr_1.23.tar.gz) = 9045b9ef208cccd3bfab651c56006f869c2581f0
+SHA512 (R/knitr_1.23.tar.gz) = 8a612d7ae8417a83694992f107a258df6b849b2dfc1ad8d05190e889f620643abd0fa24a84ad8acd084c55b5d8ee259865591788bae2ea12a2c2f2249b0f84c5
+Size (R/knitr_1.23.tar.gz) = 880134 bytes
