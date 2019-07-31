@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.12 2019/04/20 12:46:05 wen Exp $
+# $NetBSD: Makefile,v 1.13 2019/07/31 15:00:16 brook Exp $
 
-CATEGORIES=	devel
+CATEGORIES=	devel R
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/Rcpp/
-COMMENT=	Seamless R and C++ Integration
-LICENSE=	gnu-gpl-v2
+COMMENT=	Seamless R and C++ integration
+LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 R_PKGNAME=	Rcpp
-R_PKGVER=	1.0.1
+R_PKGVER=	1.0.2
 
 USE_LANGUAGES+=	c++
 
 REPLACE_R+=		inst/examples/*/*.r
-REPLACE_R+=		inst/examples/SugarPerformance/sugarBenchmarks.R \
-			inst/unitTests/runit.Date.R
+REPLACE_R+=		inst/examples/SugarPerformance/sugarBenchmarks.R
+REPLACE_R+=		inst/unitTests/runit.Date.R
 
 REPLACE_RSCRIPT+=	inst/discovery/cxx0x.R
 
