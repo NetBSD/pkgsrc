@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/07/31 13:56:46 brook Exp $
+
+SHA1 (R/hms_0.5.0.tar.gz) = e5257ca2ee658dfe766f2a62b6570c9c77b7f734
+RMD160 (R/hms_0.5.0.tar.gz) = c07aabbd335fbda91bef9ddc0171494021c9994c
+SHA512 (R/hms_0.5.0.tar.gz) = b4c2ac8bd5425e7ed3607d215d98947d5fb225dbe80fa061306ef6a6803be6c255cfdd196ab273861c2fce84414b65ba5342524fe3e46b111fa10496fd392531
+Size (R/hms_0.5.0.tar.gz) = 136036 bytes
