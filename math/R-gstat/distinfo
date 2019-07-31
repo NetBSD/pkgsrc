@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2016/02/25 01:59:08 wen Exp $
+$NetBSD: distinfo,v 1.8 2019/07/31 19:38:44 brook Exp $
 
-SHA1 (R/gstat_1.1-2.tar.gz) = 1c1770159afd40238d790b8dddad00256fabdfc5
-RMD160 (R/gstat_1.1-2.tar.gz) = 5e23bd6198fc3603f7ceffef0dd08d7dbf78dc17
-SHA512 (R/gstat_1.1-2.tar.gz) = 6240d43b89642fb08447fd315c570457640fddc28af4f193e11e15dc42314b2eb8fe44750eb742532667d64db069420e609d247179dbff05676dce2a2c56e289
-Size (R/gstat_1.1-2.tar.gz) = 2618748 bytes
+SHA1 (R/gstat_2.0-2.tar.gz) = 6e8261d0f8a064880fadfe4e8ca7a2ee070da614
+RMD160 (R/gstat_2.0-2.tar.gz) = edd056e4892216a0298c51bd33f896878b436aaa
+SHA512 (R/gstat_2.0-2.tar.gz) = 03af9895366a0c7bf26f7f1127877ce2ec2c7b6c631e14772d7c6d1ded4497475d87a1b60a80902141ed32e4cff46b4f050692eb55c6e5c15b4813e1e21a0165
+Size (R/gstat_2.0-2.tar.gz) = 2285965 bytes
