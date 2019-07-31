@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/07/28 14:40:43 brook Exp $
+# $NetBSD: Makefile,v 1.3 2019/07/31 15:20:13 brook Exp $
 
-CATEGORIES=	devel
+CATEGORIES=	devel R
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://github.com/r-lib/crayon/
