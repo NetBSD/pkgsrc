@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/07/28 14:40:44 brook Exp $
+# $NetBSD: Makefile,v 1.3 2019/07/31 16:03:07 brook Exp $
 
-CATEGORIES=	graphics
+CATEGORIES=	graphics R
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/dichromat/
@@ -12,6 +12,5 @@ R_PKGVER=	2.0-0
 
 USE_LANGUAGES=	# none
 
-BUILDLINK_API_DEPENDS.R+=	R>=2.10
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
