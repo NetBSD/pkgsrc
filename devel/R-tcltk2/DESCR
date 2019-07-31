@@ -1,0 +1,3 @@
+A series of additional Tcl commands and Tk widgets with style and
+various functions (under Windows: DDE exchange, access to the registry
+and icon manipulation) to supplement the tcltk package

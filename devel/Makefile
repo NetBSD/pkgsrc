@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2873 2019/07/31 00:47:04 brook Exp $
+# $NetBSD: Makefile,v 1.2874 2019/07/31 01:24:09 brook Exp $
 #
 
 COMMENT=	Development utilities
@@ -40,6 +40,7 @@ SUBDIR+=	R-rematch
 SUBDIR+=	R-repr
 SUBDIR+=	R-rio
 SUBDIR+=	R-rlang
+SUBDIR+=	R-tcltk2
 SUBDIR+=	R-uuid
 SUBDIR+=	RBTools
 SUBDIR+=	RTFM
