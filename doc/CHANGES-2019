@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3091 2019/07/31 09:14:11 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.3092 2019/07/31 09:16:12 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5048,3 +5048,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ocaml-findlib to 1.8.1 [jaapb 2019-07-31]
 	Updated devel/ocaml-migrate-parsetree to 1.4.0 [jaapb 2019-07-31]
 	Updated devel/ocaml-ppx_tools to 5.3 [jaapb 2019-07-31]
+	Updated devel/ocaml-ppx_tools_versioned to 5.2.3 [jaapb 2019-07-31]
