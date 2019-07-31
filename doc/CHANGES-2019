@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3195 2019/07/31 20:23:32 brook Exp $
+$NetBSD: CHANGES-2019,v 1.3196 2019/07/31 20:26:23 brook Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5152,3 +5152,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated math/R-quadprog to 1.5.7 [brook 2019-07-31]
 	Updated math/R-quantreg to 5.42.1 [brook 2019-07-31]
 	Updated math/R-randomForest to 4.6.14 [brook 2019-07-31]
+	Updated math/R-sgeostat to 1.0.27 [brook 2019-07-31]
