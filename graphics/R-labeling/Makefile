@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/07/28 14:40:44 brook Exp $
+# $NetBSD: Makefile,v 1.3 2019/07/31 16:07:32 brook Exp $
 
-CATEGORIES=	graphics
+CATEGORIES=	graphics R
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/labeling/
