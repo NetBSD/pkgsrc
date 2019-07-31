@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/03/05 16:52:13 minskim Exp $
+$NetBSD: distinfo,v 1.2 2019/07/31 20:03:25 brook Exp $
 
-SHA1 (R/numDeriv_2016.8-1.tar.gz) = 8d43a502c4ee1efcf8b3dcf5ba1c91667c84198a
-RMD160 (R/numDeriv_2016.8-1.tar.gz) = 53f6370b6d0104b9c3da04bb8510730c0a8371ab
-SHA512 (R/numDeriv_2016.8-1.tar.gz) = c77db5cb3f21f08c9f55be9ffc26ad3238450e74190cf8dccdf50a2a4dd5319d50dd9a8c206c8675239a74f53a4d4aac6339765a1f305c92e293b1591f07a6d4
-Size (R/numDeriv_2016.8-1.tar.gz) = 76303 bytes
+SHA1 (R/numDeriv_2016.8-1.1.tar.gz) = 972f38b7076ba80298544bbf5a6b17ef02203851
+RMD160 (R/numDeriv_2016.8-1.1.tar.gz) = 5d1e84c8caff78f58b181d46707255172f51d3d4
+SHA512 (R/numDeriv_2016.8-1.1.tar.gz) = 20e9dda1af54ff581f4f9218c34af204de5b78bb21eed88aef836ea215c37d90f7af8f1d972436316eab80451f531e1c9badb34f33001e3441a583a3ac4776e0
+Size (R/numDeriv_2016.8-1.1.tar.gz) = 76053 bytes
