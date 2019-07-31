@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2019/07/21 22:25:53 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/07/31 01:35:27 fox Exp $
 
-DISTNAME=	cliqz-1.27.4
-PKGREVISION=	1
+DISTNAME=	cliqz-1.28.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cliqz-oss/}
 GITHUB_PROJECT=	browser-f
@@ -16,7 +15,7 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 CLIQZ_CHANNEL=		release
 # If the PKGVERSION_NOREV is updated, make sure to update the last build id from
 # ftp -Vo - https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${PKGVERSION_NOREV}/lastbuildid
-CLIQZ_LAST_BUILD_ID=	20190626103837
+CLIQZ_LAST_BUILD_ID=	20190726184423
 CLIQZ_PLUGIN_SUFX=	@cliqz.com.xpi
 
 SITES.adult-domains.bin= \
@@ -124,7 +123,7 @@ BUILDLINK_DEPMETHOD.clang=     build
 BUILDLINK_API_DEPENDS.clang+=  clang>=6.0.1nb1
 .include "../../lang/clang/buildlink3.mk"
 BUILDLINK_DEPMETHOD.rust=      build
-BUILDLINK_API_DEPENDS.rust+=   rust>=1.31.0
+BUILDLINK_API_DEPENDS.rust+=   rust>=1.34.0
 .include "../../lang/rust/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
