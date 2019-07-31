@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2018/07/28 14:40:50 brook Exp $
+# $NetBSD: Makefile,v 1.8 2019/07/31 20:15:09 brook Exp $
 
-CATEGORIES=	math
+CATEGORIES=	math R
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/plyr/
