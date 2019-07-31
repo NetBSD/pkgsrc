@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.1 2018/05/09 00:32:50 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2019/07/31 16:17:04 brook Exp $
 
-DISTNAME=	sourcetools_0.1.7
-CATEGORIES=	lang
+CATEGORIES=	lang R
 
 MAINTAINER=	minskim@NetBSD.org
-COMMENT=	Tools for Reading, Tokenizing and Parsing R Code
+COMMENT=	Tools for reading, tokenizing and parsing R code
 LICENSE=	mit
 
-USE_LANGUAGES=	c c++
+R_PKGNAME=	sourcetools
+R_PKGVER=	0.1.7
 
-BUILDLINK_API_DEPENDS.R+=	R>=3.0.2
-.include "../../math/R/Makefile.extension"
+USE_LANGUAGES=	c c++
 
 post-configure:
 	${ECHO} PKG_CFLAGS=${CFLAGS:Q} >> ${WRKSRC}/src/Makevars
 	${ECHO} PKG_CXXFLAGS=${CXXFLAGS:Q} >> ${WRKSRC}/src/Makevars
 
+.include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
