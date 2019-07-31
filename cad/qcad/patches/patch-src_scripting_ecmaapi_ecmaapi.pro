@@ -1,9 +1,9 @@
-$NetBSD: patch-src_scripting_ecmaapi_ecmaapi.pro,v 1.1 2016/08/30 10:56:04 plunky Exp $
+$NetBSD: patch-src_scripting_ecmaapi_ecmaapi.pro,v 1.2 2019/07/31 19:30:21 plunky Exp $
 
 fix build for pkgsrc, by allowing qmake to link binaries in situ
 and create an install target
 
---- src/scripting/ecmaapi/ecmaapi.pro.orig	2016-07-01 07:13:14.000000000 +0000
+--- src/scripting/ecmaapi/ecmaapi.pro.orig	2019-02-27 15:06:55.000000000 +0000
 +++ src/scripting/ecmaapi/ecmaapi.pro
 @@ -2,6 +2,7 @@ include( ../../../shared.pri )
  TEMPLATE = lib
@@ -13,7 +13,7 @@ and create an install target
  CONFIG -= warn_on
  CONFIG += warn_off
  CONFIG += precompile_header
-@@ -19,13 +20,13 @@ SOURCES += \
+@@ -20,11 +21,11 @@ SOURCES += \
  include(adapters/adapters.pri)
  include(generated/generated.pri)
  LIBS += \
@@ -24,9 +24,7 @@ and create an install target
 -    -l$${RLIBNAME}operations \
 -    -l$${RLIBNAME}snap \
 -    -l$${RLIBNAME}spatialindex \
--    -l$${RLIBNAME}stemmer \
--    -l$${RLIBNAME}zip \
--    -lquazip
+-    -l$${RLIBNAME}stemmer
 +    -L../../core -l$${RLIBNAME}core \
 +    -L../../entity -l$${RLIBNAME}entity \
 +    -L../../grid -l$${RLIBNAME}grid \
@@ -34,6 +32,4 @@ and create an install target
 +    -L../../operations -l$${RLIBNAME}operations \
 +    -L../../snap -l$${RLIBNAME}snap \
 +    -L../../spatialindex -l$${RLIBNAME}spatialindex \
-+    -L../../stemmer -l$${RLIBNAME}stemmer \
-+    -L../../zip -l$${RLIBNAME}zip \
-+    -L../../3rdparty/quazip -lquazip
++    -L../../stemmer -l$${RLIBNAME}stemmer
