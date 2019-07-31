@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2018/05/24 22:11:03 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2019/07/31 15:28:51 brook Exp $
 
-DISTNAME=	magrittr_1.5
-CATEGORIES=	devel
+CATEGORIES=	devel R
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-COMMENT=	Forward-Pipe Operator for R
+COMMENT=	Forward-pipe operator for R
 LICENSE=	mit
+
+R_PKGNAME=	magrittr
+R_PKGVER=	1.5
 
 USE_LANGUAGES=	# none
 
