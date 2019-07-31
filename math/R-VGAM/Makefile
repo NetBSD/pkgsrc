@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.3 2018/07/28 14:40:46 brook Exp $
+# $NetBSD: Makefile,v 1.4 2019/07/31 18:45:22 brook Exp $
 
-CATEGORIES=	math
+CATEGORIES=	math R
 
 MAINTAINER=	mishka@NetBSD.org
 HOMEPAGE=	http://www.stat.auckland.ac.nz/~yee/VGAM/
-COMMENT=	Vector Generalized Linear and Additive Models
-LICENSE=	gnu-gpl-v2
+COMMENT=	Vector generalized linear and additive models
+LICENSE=	gnu-gpl-v3
 
 R_PKGNAME=	VGAM
-R_PKGVER=	1.0-5
+R_PKGVER=	1.1-1
 
 USE_LANGUAGES=	c fortran
-
-BUILDLINK_API_DEPENDS.R+=	R>=3.4.0
 
 .include "../../math/R/Makefile.extension"
 .include "../../devel/gettext-lib/buildlink3.mk"

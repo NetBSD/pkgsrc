@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/06/01 07:10:54 wen Exp $
+$NetBSD: distinfo,v 1.3 2019/07/31 18:45:22 brook Exp $
 
-SHA1 (R/VGAM_1.0-5.tar.gz) = 61108ebc40739fb1753680ea822d31e620df33bd
-RMD160 (R/VGAM_1.0-5.tar.gz) = b9ffee8f357ab81723b71e7a4c79d21fc7241e21
-SHA512 (R/VGAM_1.0-5.tar.gz) = 3e2096535153069e200ede3f4c073ab6f753b3a2c38d5ffd102bcfd94c5505f403f22275d03fde892332ad0c0eb217be61de2022fdbf5f4b394813635aa06d2e
-Size (R/VGAM_1.0-5.tar.gz) = 2552397 bytes
+SHA1 (R/VGAM_1.1-1.tar.gz) = 535566d53110d7f58e4667fdca5b8f200bae8fb8
+RMD160 (R/VGAM_1.1-1.tar.gz) = 264d8486c35869c1de9ab5f232978b64e5b565ee
+SHA512 (R/VGAM_1.1-1.tar.gz) = c868bd0ccde59d6d9b15446331c3fc4762d3356bda7063e6b38b7e1bfd7bbedddedb5a94b4e3812173fefc6f8b806123201f6a2a619d8bd038bcb4b4ec268b8e
+Size (R/VGAM_1.1-1.tar.gz) = 2624046 bytes
