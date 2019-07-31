@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2018/07/28 14:40:51 brook Exp $
+# $NetBSD: Makefile,v 1.3 2019/07/31 20:32:42 brook Exp $
 
-CATEGORIES=	math
+CATEGORIES=	math R
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://www.rmetrics.org/
 COMMENT=	Stable distribution functions
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 R_PKGNAME=	stabledist
 R_PKGVER=	0.7-1
