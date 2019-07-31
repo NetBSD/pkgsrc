@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3139 2019/07/31 15:35:44 brook Exp $
+$NetBSD: CHANGES-2019,v 1.3140 2019/07/31 15:43:26 brook Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5096,3 +5096,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/R-evaluate to 0.14 [brook 2019-07-31]
 	Updated devel/R-iterators to 1.0.12 [brook 2019-07-31]
 	Updated devel/R-repr to 1.0.1 [brook 2019-07-31]
+	Updated devel/R-rlang to 0.4.0 [brook 2019-07-31]
