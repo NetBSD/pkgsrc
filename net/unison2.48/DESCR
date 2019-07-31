@@ -5,4 +5,5 @@ separately, and then brought up to date by propagating the changes
 in each replica to the other.
 
 This package contains the old 2.48 release, because unison does not
-interoperate across versions.
+interoperate across versions.  It installs the binary as unison-2.48
+so that it can be installed at the same time as ../unison.
