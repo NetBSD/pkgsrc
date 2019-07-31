@@ -1,18 +1,19 @@
-# $NetBSD: Makefile,v 1.1 2018/05/12 21:54:24 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2019/07/31 20:52:24 brook Exp $
 
-DISTNAME=	htmltools_0.3.6
-CATEGORIES=	textproc
+CATEGORIES=	textproc R
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://github.com/rstudio/htmltools
 COMMENT=	Tools for HTML
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
-DEPENDS+=	R-digest-[0-9]*:../../security/R-digest
+R_PKGNAME=	htmltools
+R_PKGVER=	0.3.6
+
+DEPENDS+=	R-digest>=0.6.20:../../security/R-digest
 
 USE_LANGUAGES+=	c c++
 
-BUILDLINK_API_DEPENDS.R+=	R>=2.14.1
 .include "../../math/R/Makefile.extension"
 .include "../../devel/R-Rcpp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
