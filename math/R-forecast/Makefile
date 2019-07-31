@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/07/28 14:40:48 brook Exp $
+# $NetBSD: Makefile,v 1.3 2019/07/31 19:25:41 brook Exp $
 
-CATEGORIES=	math
+CATEGORIES=	math R
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://pkg.robjhyndman.com/forecast/
@@ -8,21 +8,21 @@ COMMENT=	Forecasting functions for time series and linear models
 LICENSE=	gnu-gpl-v3
 
 R_PKGNAME=	forecast
-R_PKGVER=	8.2
+R_PKGVER=	8.7
 
-DEPENDS+=	R-colorspace-[0-9]*:../../graphics/R-colorspace
-DEPENDS+=	R-fracdiff-[0-9]*:../../math/R-fracdiff
-DEPENDS+=	R-ggplot2>=2.0.0:../../graphics/R-ggplot2
-DEPENDS+=	R-lmtest-[0-9]*:../../math/R-lmtest
-DEPENDS+=	R-magrittr-[0-9]*:../../devel/R-magrittr
-DEPENDS+=	R-timeDate-[0-9]*:../../time/R-timeDate
-DEPENDS+=	R-tseries-[0-9]*:../../finance/R-tseries
-DEPENDS+=	R-zoo-[0-9]*:../../math/R-zoo
+DEPENDS+=	R-magrittr>=1.5:../../devel/R-magrittr
+DEPENDS+=	R-tseries>=0.10.47:../../finance/R-tseries
+DEPENDS+=	R-colorspace>=1.4.1:../../graphics/R-colorspace
+DEPENDS+=	R-ggplot2>=2.2.1:../../graphics/R-ggplot2
+DEPENDS+=	R-fracdiff>=1.4.2:../../math/R-fracdiff
+DEPENDS+=	R-lmtest>=0.9.37:../../math/R-lmtest
+DEPENDS+=	R-urca>=1.3.0:../../math/R-urca
+DEPENDS+=	R-zoo>=1.8.6:../../math/R-zoo
+DEPENDS+=	R-timeDate>=3043.102:../../time/R-timeDate
 
 USE_LANGUAGES=	c c++ fortran
 
-.include "../../devel/R-Rcpp/buildlink3.mk"
-BUILDLINK_ABI_DEPENDS.R+=	R>=3.0.2
 .include "../../math/R/Makefile.extension"
+.include "../../devel/R-Rcpp/buildlink3.mk"
 .include "../../math/R-RcppArmadillo/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
