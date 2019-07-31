@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.27 2019/07/21 22:25:18 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.28 2019/07/31 18:03:35 brook Exp $
 
-PKGREVISION=		20
-CATEGORIES=		math
+PKGREVISION=	20
+CATEGORIES=	math
 
-MAINTAINER=		mchittur@cs.nmsu.edu
-HOMEPAGE=		${R_HOMEPAGE_BASE}/CGIwithR/
-COMMENT=		Facilities for the use of R to write CGI scripts
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	${R_HOMEPAGE_BASE}/CGIwithR/
+COMMENT=	Facilities for the use of R to write CGI scripts
 
-R_PKGNAME=		CGIwithR
-R_PKGVER=		0.73-0
+R_PKGNAME=	CGIwithR
+R_PKGVER=	0.73-0
+
+USE_LANGUAGES=	# none
 
 REPLACE_INTERPRETER+=	r
 REPLACE.r.old=		.*R
