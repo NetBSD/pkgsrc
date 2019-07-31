@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/03/07 19:23:21 minskim Exp $
+$NetBSD: distinfo,v 1.2 2019/07/31 15:55:32 brook Exp $
 
-SHA1 (R/tseries_0.10-43.tar.gz) = fd629cb8e2382fd5dc5c062f88f303d6e6ed1a02
-RMD160 (R/tseries_0.10-43.tar.gz) = 89429283a9d906c6ad04101aaaa3dcda47eb003b
-SHA512 (R/tseries_0.10-43.tar.gz) = 36d2c286b20cb245c8fbeab5941cbf7e3a2b115d3e48995e03495f35e268a997a66363a99559f04674333631c99f42e4ce20a692e7a7f1fde0aff1003e02bc00
-Size (R/tseries_0.10-43.tar.gz) = 164508 bytes
+SHA1 (R/tseries_0.10-47.tar.gz) = 898cf2e0a7f130e58efd614b9cc8ed683d04771c
+RMD160 (R/tseries_0.10-47.tar.gz) = 0f510703c41ba0ee7f2fbc418b7ec7b7cdbe1520
+SHA512 (R/tseries_0.10-47.tar.gz) = 18ad8ca8f49ad8accca4e1b58b3f08cdb22921c90c4b94644a8276449fe7580949fd87b0f2087038d09a2d22623eca3edafc65fa1ff9b82fc640bc931c5effd6
+Size (R/tseries_0.10-47.tar.gz) = 164796 bytes
