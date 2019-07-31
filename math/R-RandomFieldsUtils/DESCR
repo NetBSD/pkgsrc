@@ -1,0 +1,4 @@
+Various utilities are provided that might be used in spatial
+statistics and elsewhere. It delivers a method for solving linear
+equations that checks the sparsity of the matrix before any algorithm
+is used. Furthermore, it includes the Struve functions.
