@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/02/25 19:43:57 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2019/07/31 20:50:08 brook Exp $
 
-SHA1 (R/gsubfn_0.6-6.tar.gz) = 0a6fba7a3490e62b617d67663ef9f1a39184aa41
-RMD160 (R/gsubfn_0.6-6.tar.gz) = e95c27bb4a4c40f189b4fe2227ee13ef7540ba6d
-SHA512 (R/gsubfn_0.6-6.tar.gz) = 72f86f6d00cf5be69e68d4f24922ebb3c91bddd6a770db252ff1b172ebaf434f9b2decb19543b7bceae2d4eba49d70bab30e162f3fcf0babfa686b0553b166ba
-Size (R/gsubfn_0.6-6.tar.gz) = 313330 bytes
+SHA1 (R/gsubfn_0.7.tar.gz) = d4be8c9578522ae8884f33f4bd615165c9d4f0d2
+RMD160 (R/gsubfn_0.7.tar.gz) = dd35c90c63054b1aee417991f49ded64c03637d0
+SHA512 (R/gsubfn_0.7.tar.gz) = 42e35f0471e21370aad3e7c7eabbbfc494ec9d521bae9681df2aaf4eae4d8f8a7d1743da8ea6fee38cdeada688e6e2ea30ae4c8d53110f8a5656cd73c87808a8
+Size (R/gsubfn_0.7.tar.gz) = 311271 bytes
