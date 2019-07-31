@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2016/02/24 06:41:46 wen Exp $
+$NetBSD: distinfo,v 1.8 2019/07/31 19:32:49 brook Exp $
 
-SHA1 (R/geoR_1.7-5.1.tar.gz) = 0f6c795a67a9155a158b1f8ccb122277fb38b72f
-RMD160 (R/geoR_1.7-5.1.tar.gz) = 5afa74049928448cbfe2581f60fd16a293f44d76
-SHA512 (R/geoR_1.7-5.1.tar.gz) = 69f20e829f68c1521d49b572b74de3ec9cadd83f73d9428a3f37ccc9a4bd4c1bb8f25f30fc77a270c1dcde853986f1a6a19fb0b3014e709fd92d52278ba5fade
-Size (R/geoR_1.7-5.1.tar.gz) = 421558 bytes
+SHA1 (R/geoR_1.7-5.2.1.tar.gz) = 7b82e013bdbf295d8258be73aee3e2f903959b5d
+RMD160 (R/geoR_1.7-5.2.1.tar.gz) = 5575c3cb014f24104e79007a3330b5d6fb352abd
+SHA512 (R/geoR_1.7-5.2.1.tar.gz) = 11df4c9e909bf8063160a0566f3a8eb1dc3a98bfb8ffc8f312942bfbd98039dfc52f177fe8a00ba67022c84e71ace73c1d6dfe1fc13845e983d6fbe0db1cf232
+Size (R/geoR_1.7-5.2.1.tar.gz) = 413766 bytes
