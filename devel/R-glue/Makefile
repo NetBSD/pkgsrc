@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2019/04/07 13:19:52 wen Exp $
+# $NetBSD: Makefile,v 1.3 2019/07/31 15:24:11 brook Exp $
 
-DISTNAME=	glue_1.3.1
-CATEGORIES=	devel
+CATEGORIES=	devel R
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://github.com/tidyverse/glue
-COMMENT=	Interpreted String Literals
+COMMENT=	Interpreted string literals
 LICENSE=	mit
+
+R_PKGNAME=	glue
+R_PKGVER=	1.3.1
 
 USE_LANGUAGES=	c
 
-BUILDLINK_API_DEPENDS.R+=	R>=3.1
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
