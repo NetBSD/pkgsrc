@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3082 2019/07/30 22:58:20 brook Exp $
+$NetBSD: CHANGES-2019,v 1.3083 2019/07/31 00:43:29 brook Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5039,3 +5039,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/R-checkmate version 1.9.4 [brook 2019-07-30]
 	Added devel/R-checkmate version 1.9.4 [brook 2019-07-30]
 	Added devel/R-clipr version 0.7.0 [brook 2019-07-30]
+	Added devel/R-rematch version 1.0.1 [brook 2019-07-31]
