@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/07/28 14:25:34 wen Exp $
+$NetBSD: distinfo,v 1.5 2019/07/31 20:51:22 brook Exp $
 
-SHA1 (R/highr_0.6.tar.gz) = f5062744edfaf3fd7e20df0a2ef098d3f73b33db
-RMD160 (R/highr_0.6.tar.gz) = 848caab20f84245d3ffe1fc5074f73f1148a386a
-SHA512 (R/highr_0.6.tar.gz) = e3bb6742279274a3038ac0a48b00aaa251fb74fb96e715f36e82d3b0e6cac148dc5b177e6362e6eace5fb7e747bbe9de48e9c806542ead7ec56b9d7212e3bd71
-Size (R/highr_0.6.tar.gz) = 17294 bytes
+SHA1 (R/highr_0.8.tar.gz) = ad160596233230f67d34421be4366725a53d4f69
+RMD160 (R/highr_0.8.tar.gz) = 7441b587de84dfeac67309591d259a29e61fbc5f
+SHA512 (R/highr_0.8.tar.gz) = 3ca3bf64457fdb2f4b0122568dac969a33cc1cdeba437d29417c5bea4e8ed4b0ac43d6cf5ad1a4a75719beafc09dcbd31a6b57fd22142b096ce809c5d4c04ab5
+Size (R/highr_0.8.tar.gz) = 17445 bytes
