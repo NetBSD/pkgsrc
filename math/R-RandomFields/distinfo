@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 23:33:27 agc Exp $
+$NetBSD: distinfo,v 1.5 2019/07/31 18:34:10 brook Exp $
 
-SHA1 (R/RandomFields_2.0.66.tar.gz) = 58f5ec3c5c2995e88268bc4eaae0360b80dc636b
-RMD160 (R/RandomFields_2.0.66.tar.gz) = 8713109ab626cabf52b7a3a02ced34951843f373
-SHA512 (R/RandomFields_2.0.66.tar.gz) = fe8334614790acd391a103cae47a58fcc5d54e44dce6d79d6af6f2d8446148f9676717df4eb5a2b4b11f4ced9555cd055644f4a1e597384f8bc36aa515bbc39c
-Size (R/RandomFields_2.0.66.tar.gz) = 451832 bytes
-SHA1 (patch-src_MLE.cc) = 859ea7c42d6b680f7f03d81292f34df75249558f
-SHA1 (patch-src_getNset.cc) = 49d769a7254de108442a97d0966acb4110c9306f
-SHA1 (patch-src_userinterfaces.cc) = 195b7e9c27b297c7e13124c873b159bf19969eae
+SHA1 (R/RandomFields_3.3.6.tar.gz) = c0a5090e8db226d09ddaeeaedb2a5602b139f022
+RMD160 (R/RandomFields_3.3.6.tar.gz) = 6c4e175b86b440404b42d95d28cea0f4fc2111e7
+SHA512 (R/RandomFields_3.3.6.tar.gz) = 233c0b2e9b4123984f8cbed67578f48eb80ce699e978a01002b6a15f7910d33b848415443e499f02007cf47762b8f7b47b25b4e343175f2547f3c02c613d2a61
+Size (R/RandomFields_3.3.6.tar.gz) = 1065533 bytes
