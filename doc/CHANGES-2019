@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3166 2019/07/31 19:09:38 brook Exp $
+$NetBSD: CHANGES-2019,v 1.3167 2019/07/31 19:15:50 brook Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5123,3 +5123,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated math/R-car to 3.0.3 [brook 2019-07-31]
 	Updated math/R-chron to 2.3.53 [brook 2019-07-31]
 	Updated math/R-classInt to 0.3.3 [brook 2019-07-31]
+	Updated math/R-coda to 0.19.3 [brook 2019-07-31]
