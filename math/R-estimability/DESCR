@@ -1,0 +1,6 @@
+Provides tools for determining estimability of linear functions of
+regression coefficients, and 'epredict' methods that handle
+non-estimable cases correctly. Estimability theory is discussed in
+many linear-models textbooks including Chapter 3 of Monahan, JF
+(2008), "A Primer on Linear Models", Chapman and Hall (ISBN
+978-1-4200-6201-4).

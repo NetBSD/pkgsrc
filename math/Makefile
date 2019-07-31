@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.415 2019/07/31 13:13:39 brook Exp $
+# $NetBSD: Makefile,v 1.416 2019/07/31 13:17:00 brook Exp $
 
 COMMENT=	Mathematics
 
@@ -46,6 +46,7 @@ SUBDIR+=	R-date
 SUBDIR+=	R-e1071
 SUBDIR+=	R-ellipsis
 SUBDIR+=	R-emdbook
+SUBDIR+=	R-estimability
 SUBDIR+=	R-forecast
 SUBDIR+=	R-fracdiff
 SUBDIR+=	R-gdata
