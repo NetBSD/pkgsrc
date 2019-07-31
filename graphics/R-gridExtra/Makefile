@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.1 2018/05/01 16:05:57 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2019/07/31 16:06:21 brook Exp $
 
-DISTNAME=	gridExtra_2.3
-CATEGORIES=	graphics
+CATEGORIES=	graphics R
 
 MAINTAINER=	minskim@NetBSD.org
-COMMENT=	Miscellaneous Functions for "Grid" Graphics
-LICENSE=	gnu-gpl-v2
+COMMENT=	Miscellaneous functions for "grid" graphics
+LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
-DEPENDS+=	R-gtable-[0-9]*:../../math/R-gtable
+R_PKGNAME=	gridExtra
+R_PKGVER=	2.3
+
+DEPENDS+=	R-gtable>=0.3.0:../../math/R-gtable
 
 USE_LANGUAGES=	# none
 
