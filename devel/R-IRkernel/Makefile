@@ -1,33 +1,29 @@
-# $NetBSD: Makefile,v 1.2 2018/12/21 06:14:14 wen Exp $
+# $NetBSD: Makefile,v 1.3 2019/07/31 14:56:44 brook Exp $
 
-CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=IRkernel/}
+CATEGORIES=	devel R
 GITHUB_PROJECT=	${R_PKGNAME}
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://irkernel.github.io/
-COMMENT=	R kernel for Jupyter Notebook
+COMMENT=	Native R kernel for the Jupyter notebook
 
 R_PKGNAME=	IRkernel
-R_PKGVER=	0.8.14
+R_PKGVER=	1.0.2
 
-DEPENDS+=	R-crayon-[0-9]*:../../devel/R-crayon
-DEPENDS+=	R-digest-[0-9]*:../../security/R-digest
+DEPENDS+=	R-IRdisplay>=0.3.0.9999:../../devel/R-IRdisplay
+DEPENDS+=	R-crayon>=1.3.4:../../devel/R-crayon
 DEPENDS+=	R-evaluate>=0.10:../../devel/R-evaluate
-DEPENDS+=	R-IRdisplay-[0-9]*:../../devel/R-IRdisplay
-DEPENDS+=	R-jsonlite>=0.9.6*:../../textproc/R-jsonlite
-DEPENDS+=	R-pbdZMQ>=0.2.1:../../net/R-pbdZMQ
 DEPENDS+=	R-repr>=0.4.99:../../devel/R-repr
-DEPENDS+=	R-uuid-[0-9]*:../../devel/R-uuid
+DEPENDS+=	R-uuid>=0.1.2:../../devel/R-uuid
+DEPENDS+=	R-pbdZMQ>=0.2.1:../../net/R-pbdZMQ
+DEPENDS+=	R-digest>=0.6.15:../../security/R-digest
+DEPENDS+=	R-jsonlite>=0.9.6:../../textproc/R-jsonlite
 
 USE_LANGUAGES=	# none
 
 .include "../../math/R/Makefile.extension"
 
 INSTALLATION_DIRS+=	share/jupyter/kernels/ir
-
-post-extract:
-	${MV} ${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG} ${WRKSRC}
 
 post-install:
 .for f in kernel.js logo-64x64.png
