@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.30 2019/07/15 22:07:08 nia Exp $
+$NetBSD: distinfo,v 1.31 2019/07/31 09:16:26 nia Exp $
 
-SHA1 (exiv2-0.27.1-Source.tar.gz) = e80a4d879a1831a855fc6ef980d3212b1ca8e945
-RMD160 (exiv2-0.27.1-Source.tar.gz) = fec35a92361c701d98ee14d13166548fa31f07a3
-SHA512 (exiv2-0.27.1-Source.tar.gz) = 038b51241f5bfb323eb298695b5397a7d88d5c7d7303828e5e20b3f82c3df2615cee3e7e3426ea17438ca05d5abea10984cfd41f0649ddab72df1d1415bf3529
-Size (exiv2-0.27.1-Source.tar.gz) = 27210365 bytes
+SHA1 (exiv2-0.27.2-Source.tar.gz) = 1a72065c95e721b1c21df4f2ee64d8338c6acf94
+RMD160 (exiv2-0.27.2-Source.tar.gz) = d19c3f29fc5e9637339a9f39c1a4539fc85b1d36
+SHA512 (exiv2-0.27.2-Source.tar.gz) = 39eb7d920dce18b275ac66f4766c7c73f7c72ee10e3e1e43d84c611b24f48ce20a70eac6d53948914e93242a25b8b52cc4bc760ee611ddcd77481306c1f9e721
+Size (exiv2-0.27.2-Source.tar.gz) = 27591236 bytes
 SHA1 (patch-contrib_organize_Makefile) = 27348fdb0f80092b6e16f27e3ac1dca988eefe70
 SHA1 (patch-contrib_organize_helpers.cpp) = ec003c826d463b3e7e571ab4c41baffaca1240e9
 SHA1 (patch-include_exiv2_types.hpp) = 829e101c1c5f06de0a497b8c6a052b0a4e667d25
