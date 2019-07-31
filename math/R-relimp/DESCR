@@ -1,0 +1,3 @@
+Functions to facilitate inference on the relative importance of
+predictors in a linear or generalized linear model, and a couple of
+useful Tcl/Tk widgets.
