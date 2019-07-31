@@ -1,25 +1,27 @@
-# $NetBSD: Makefile,v 1.2 2018/07/28 14:40:44 brook Exp $
+# $NetBSD: Makefile,v 1.3 2019/07/31 16:04:39 brook Exp $
 
-CATEGORIES=	graphics
+CATEGORIES=	graphics R
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ggplot2.tidyverse.org/
-COMMENT=	Elegant data visualization using the Grammar of Graphcis
+COMMENT=	Create elegant data visualisations using the grammar of graphics
 LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	ggplot2
-R_PKGVER=	2.2.1
+R_PKGVER=	3.2.0
 
-DEPENDS+=	R-digest-[0-9]*:../../security/R-digest
+DEPENDS+=	R-lazyeval>=0.2.2:../../devel/R-lazyeval
+DEPENDS+=	R-rlang>=0.3.0:../../devel/R-rlang
+DEPENDS+=	R-withr>=2.0.0:../../devel/R-withr
+DEPENDS+=	R-scales>=0.5.0:../../graphics/R-scales
+DEPENDS+=	R-viridisLite>=0.3.0:../../graphics/R-viridisLite
 DEPENDS+=	R-gtable>=0.1.1:../../math/R-gtable
 DEPENDS+=	R-plyr>=1.7.1:../../math/R-plyr
-DEPENDS+=	R-reshape2-[0-9]*:../../math/R-reshape2
-DEPENDS+=	R-scales>=0.4.1:../../graphics/R-scales
-DEPENDS+=	R-tibble-[0-9]*:../../math/R-tibble
-DEPENDS+=	R-lazyeval-[0-9]*:../../devel/R-lazyeval
+DEPENDS+=	R-reshape2>=1.4.3:../../math/R-reshape2
+DEPENDS+=	R-tibble>=2.1.3:../../math/R-tibble
+DEPENDS+=	R-digest>=0.6.20:../../security/R-digest
 
 USE_LANGUAGES=	# none
 
-BUILDLINK_API_DEPENDS.R+=	R>=3.1
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
