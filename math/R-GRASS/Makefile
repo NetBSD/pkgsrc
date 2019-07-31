@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.9 2018/07/28 14:40:45 brook Exp $
+# $NetBSD: Makefile,v 1.10 2019/07/31 18:12:42 brook Exp $
 
-CATEGORIES=	databases math
+CATEGORIES=	math databases geography R
 
-MAINTAINER=	mchittur@cs.nmsu.edu
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/GRASS/
 COMMENT=	Interface between GRASS 5.0 geographical information system and R
 
 R_PKGNAME=	GRASS
 R_PKGVER=	0.3-8
 
-post-extract:
-	echo 'exportPattern("^[^\\.]")' > ${WRKSRC}/NAMESPACE
+USE_LANGUAGES=	c
 
-.include "../../devel/zlib/buildlink3.mk"
+post-extract:
+	${ECHO} 'exportPattern(".")' > ${WRKSRC}/NAMESPACE
+
 .include "../../math/R/Makefile.extension"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
