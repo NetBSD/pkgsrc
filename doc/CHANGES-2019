@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3085 2019/07/31 01:24:09 brook Exp $
+$NetBSD: CHANGES-2019,v 1.3086 2019/07/31 01:26:53 brook Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5042,3 +5042,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/R-rematch version 1.0.1 [brook 2019-07-31]
 	Added devel/R-rio version 0.5.16 [brook 2019-07-31]
 	Added devel/R-tcltk2 version 1.2.11 [brook 2019-07-31]
+	Added devel/R-withr version 2.1.2 [brook 2019-07-31]
