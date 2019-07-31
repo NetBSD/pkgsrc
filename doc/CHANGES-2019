@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3149 2019/07/31 16:10:15 brook Exp $
+$NetBSD: CHANGES-2019,v 1.3150 2019/07/31 16:11:55 brook Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5106,3 +5106,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/R-colorspace to 1.4.1 [brook 2019-07-31]
 	Updated graphics/R-ggplot2 to 3.2.0 [brook 2019-07-31]
 	Updated graphics/R-munsell to 0.5.0 [brook 2019-07-31]
+	Updated graphics/R-scales to 1.0.0 [brook 2019-07-31]
