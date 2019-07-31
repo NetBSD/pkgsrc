@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/07/28 14:40:42 brook Exp $
+# $NetBSD: Makefile,v 1.4 2019/07/31 15:05:50 brook Exp $
 
-CATEGORIES=	devel
+CATEGORIES=	devel R
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ff.r-forge.r-project.org/
@@ -12,6 +12,5 @@ R_PKGVER=	1.1-14
 
 USE_LANGUAGES=	c
 
-BUILDLINK_API_DEPENDS.R+=	R>=2.9.2
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
