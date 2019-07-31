@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3162 2019/07/31 18:48:28 brook Exp $
+$NetBSD: CHANGES-2019,v 1.3163 2019/07/31 18:53:16 brook Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5119,3 +5119,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated math/R-RcppEigen to 0.3.3.5.0 [brook 2019-07-31]
 	Updated math/R-VGAM to 1.1.1 [brook 2019-07-31]
 	Updated math/R-XML to 3.98.1.20 [brook 2019-07-31]
+	Updated math/R-aplpack to 1.3.2 [brook 2019-07-31]
