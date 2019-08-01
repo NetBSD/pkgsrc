@@ -1166,6 +1166,48 @@ func (s *Suite) Test_Autofix_Apply__text_after_replacing_regex(c *check.C) {
 	t.CheckEquals(mkline.Value(), "value")
 }
 
+// Pkglint tries to order the diagnostics from top to bottom.
+// Still, it could be possible that in a multiline the second line
+// gets a diagnostic before the first line. This only happens when
+// both replacements happen in the same autofix block, which doesn't
+// happen often.
+//
+// This covers the "action.lineno < first" condition.
+func (s *Suite) Test_Autofix_affectedLinenos__reverse(c *check.C) {
+	t := s.Init(c)
+
+	test := func(diagnostics ...string) {
+		mklines := t.NewMkLines("filename.mk",
+			"VAR=\tline 1 \\",
+			"\tline 2")
+		mkline := mklines.mklines[0]
+
+		fix := mkline.Autofix()
+		fix.Warnf("Replacements from bottom to top.")
+		fix.Replace("line 2", "bbb")
+		fix.Replace("line 1", "aaa")
+		fix.Apply()
+
+		t.CheckOutput(diagnostics)
+	}
+
+	t.SetUpCommandLine("--source")
+	test(
+		">\tVAR=\tline 1 \\",
+		">\t\tline 2",
+		"WARN: filename.mk:1--2: Replacements from bottom to top.")
+
+	t.SetUpCommandLine("--source", "--show-autofix")
+	test(
+		"WARN: filename.mk:1--2: Replacements from bottom to top.",
+		"AUTOFIX: filename.mk:2: Replacing \"line 2\" with \"bbb\".",
+		"AUTOFIX: filename.mk:1: Replacing \"line 1\" with \"aaa\".",
+		"-\tVAR=\tline 1 \\",
+		"+\tVAR=\taaa \\",
+		"-\t\tline 2",
+		"+\t\tbbb")
+}
+
 // Just for branch coverage.
 func (s *Suite) Test_Autofix_setDiag__no_testing_mode(c *check.C) {
 	t := s.Init(c)
