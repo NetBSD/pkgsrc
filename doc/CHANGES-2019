@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3213 2019/07/31 20:58:08 brook Exp $
+$NetBSD: CHANGES-2019,v 1.3214 2019/08/01 00:57:56 brook Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5170,3 +5170,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/R-markdown to 1.0 [brook 2019-07-31]
 	Updated textproc/R-stringi to 1.4.3 [brook 2019-07-31]
 	Updated textproc/R-stringr to 1.4.0 [brook 2019-07-31]
+	Updated textproc/R-utf8 to 1.1.4 [brook 2019-08-01]
