@@ -1,0 +1,15 @@
+$NetBSD: patch-scripts_build__apple__frameworks,v 1.1 2019/08/01 13:42:54 nia Exp $
+
+Use portable test operator.
+
+--- scripts/build_apple_frameworks.orig	2018-09-22 15:47:33.000000000 +0000
++++ scripts/build_apple_frameworks
+@@ -82,7 +82,7 @@ do
+   done
+ 
+   create_framework $PACKAGE $VERSION $PLATFORM
+-  if [ $PLATFORM == 'darwin' ]
++  if [ $PLATFORM = 'darwin' ]
+   then
+     # on darwin, build a .tar.bz2 of /usr and a .zip of aubio.framework
+     create_tarballs $PACKAGE $VERSION $PLATFORM
