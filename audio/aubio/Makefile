@@ -1,34 +1,40 @@
-# $NetBSD: Makefile,v 1.16 2019/04/26 14:12:31 maya Exp $
+# $NetBSD: Makefile,v 1.17 2019/08/01 13:42:54 nia Exp $
 
-DISTNAME=	aubio-0.3.2
-PKGREVISION=	3
+DISTNAME=	aubio-0.4.9
 CATEGORIES=	audio
 MASTER_SITES=	https://aubio.org/pub/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	https://aubio.org/
 COMMENT=	Extracting annotations from audio signals
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	aubio.pc.in
 
-# Python related variables:
-PY_PATCHPLIST=			yes
-REPLACE_PYTHON=	python/aubiocut python/aubiopitch
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 0.3.2
+MAKE_FLAGS+=	WAFCMD="${PYTHONBIN} ./waf"
+MAKE_FLAGS+=	WAFOPTS="--disable-tests"
+MAKE_FLAGS+=	MANDIR="${PREFIX}/${PKGMANDIR}"
+
+TOOL_DEPENDS+=	txt2man-[0-9]*:../../converters/txt2man
 
 CPPFLAGS.SunOS+=	-Du_int8_t=uint8_t -Du_int16_t=uint16_t -Du_int32_t=uint32_t -Du_int64_t=uint64_t
 
-.include "options.mk"
+#REPLACE_PYTHON+=	tests/create_tests_source.py
 
+PYTHON_FOR_BUILD_ONLY=	yes
+
+do-configure:
+	cd ${WRKSRC} && ${MAKE_ENV} ${MAKE} configure ${MAKE_FLAGS}
+
+.include "options.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../devel/swig/buildlink3.mk"
+.include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/pyversion.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
