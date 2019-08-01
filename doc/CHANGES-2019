@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3231 2019/08/01 21:40:48 leot Exp $
+$NetBSD: CHANGES-2019,v 1.3232 2019/08/01 22:39:02 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5188,3 +5188,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated emulators/haxm to 7.5.2 [kamil 2019-08-01]
 	Updated news/sfeed to 0.9.13 [leot 2019-08-01]
 	Updated net/gallery-dl to 1.10.0 [leot 2019-08-01]
+	Updated pkgtools/pkglint to 5.7.18 [rillig 2019-08-01]
