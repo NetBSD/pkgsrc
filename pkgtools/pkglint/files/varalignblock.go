@@ -209,10 +209,12 @@ func (*VaralignBlock) split(textnl string, initial bool) varalignSplitResult {
 				continue
 			}
 
-			assert(lexer.SkipByte('\\'))
-			if !lexer.EOF() {
-				lexer.Skip(1)
+			if len(lexer.Rest()) < 2 {
+				break
 			}
+
+			assert(lexer.SkipByte('\\'))
+			lexer.Skip(1)
 		}
 
 		valueSpace := lexer.Since(mark)
@@ -278,15 +280,13 @@ func (va *VaralignBlock) Finish() {
 
 	newWidth := va.optimalWidth(infos)
 
-	multiEmpty := false
 	for _, info := range infos {
 		if info.rawIndex == 0 {
 			va.indentDiffSet = false
 			va.indentDiff = 0
-			multiEmpty = info.multiEmpty
 		}
 
-		if newWidth > 0 || multiEmpty && info.rawIndex > 0 {
+		if newWidth > 0 || info.rawIndex > 0 {
 			va.realign(info, newWidth)
 		}
 	}
@@ -302,6 +302,7 @@ func (*VaralignBlock) optimalWidth(infos []*varalignLine) int {
 	longest := 0 // The longest seen varnameOpWidth
 	var longestLine *MkLine
 	secondLongest := 0 // The second-longest seen varnameOpWidth
+
 	for _, info := range infos {
 		if info.multiEmpty || info.rawIndex > 0 {
 			continue
@@ -589,11 +590,6 @@ func (l *varalignLine) continuation() bool {
 
 func (l *varalignLine) commentedOut() bool {
 	return hasPrefix(l.parts.leadingComment, "#")
-}
-
-func (l *varalignLine) outlier(width int) bool {
-	assert(width == width&-8)
-	return l.varnameOpSpaceWidth() > width+8
 }
 
 // canonicalInitial returns whether the space between the assignment

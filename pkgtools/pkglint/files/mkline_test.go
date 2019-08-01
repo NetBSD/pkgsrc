@@ -1737,6 +1737,15 @@ func (s *Suite) Test_MkLineParser_MatchVarassign(c *check.C) {
 		"")
 }
 
+func (s *Suite) Test_MkLineParser_getRawValueAlign__assertion(c *check.C) {
+	t := s.Init(c)
+
+	var p MkLineParser
+
+	// This is unrealistic; just for code coverage of the assertion.
+	t.ExpectAssert(func() { p.getRawValueAlign("a", "b") })
+}
+
 func (s *Suite) Test_NewMkOperator(c *check.C) {
 	t := s.Init(c)
 
