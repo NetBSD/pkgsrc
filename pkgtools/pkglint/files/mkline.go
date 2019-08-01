@@ -1591,7 +1591,7 @@ func (p MkLineParser) MatchVarassign(line *Line, text string) (bool, *mkLineAssi
 	}
 }
 
-func (*MkLineParser) getRawValueAlign(raw, parsed string) string {
+func (MkLineParser) getRawValueAlign(raw, parsed string) string {
 	r := textproc.NewLexer(raw)
 	p := textproc.NewLexer(parsed)
 	mark := r.Mark()
