@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2019/07/19 20:38:40 leot Exp $
+@comment $NetBSD: PLIST,v 1.32 2019/08/01 21:40:15 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -66,6 +66,9 @@ ${PYSITELIB}/gallery_dl/extractor/8muses.pyo
 ${PYSITELIB}/gallery_dl/extractor/__init__.py
 ${PYSITELIB}/gallery_dl/extractor/__init__.pyc
 ${PYSITELIB}/gallery_dl/extractor/__init__.pyo
+${PYSITELIB}/gallery_dl/extractor/adultempire.py
+${PYSITELIB}/gallery_dl/extractor/adultempire.pyc
+${PYSITELIB}/gallery_dl/extractor/adultempire.pyo
 ${PYSITELIB}/gallery_dl/extractor/artstation.py
 ${PYSITELIB}/gallery_dl/extractor/artstation.pyc
 ${PYSITELIB}/gallery_dl/extractor/artstation.pyo
@@ -162,6 +165,9 @@ ${PYSITELIB}/gallery_dl/extractor/imagefap.pyo
 ${PYSITELIB}/gallery_dl/extractor/imagehosts.py
 ${PYSITELIB}/gallery_dl/extractor/imagehosts.pyc
 ${PYSITELIB}/gallery_dl/extractor/imagehosts.pyo
+${PYSITELIB}/gallery_dl/extractor/imgbb.py
+${PYSITELIB}/gallery_dl/extractor/imgbb.pyc
+${PYSITELIB}/gallery_dl/extractor/imgbb.pyo
 ${PYSITELIB}/gallery_dl/extractor/imgbox.py
 ${PYSITELIB}/gallery_dl/extractor/imgbox.pyc
 ${PYSITELIB}/gallery_dl/extractor/imgbox.pyo
@@ -339,6 +345,9 @@ ${PYSITELIB}/gallery_dl/extractor/twitter.pyo
 ${PYSITELIB}/gallery_dl/extractor/vanillarock.py
 ${PYSITELIB}/gallery_dl/extractor/vanillarock.pyc
 ${PYSITELIB}/gallery_dl/extractor/vanillarock.pyo
+${PYSITELIB}/gallery_dl/extractor/vsco.py
+${PYSITELIB}/gallery_dl/extractor/vsco.pyc
+${PYSITELIB}/gallery_dl/extractor/vsco.pyo
 ${PYSITELIB}/gallery_dl/extractor/wallhaven.py
 ${PYSITELIB}/gallery_dl/extractor/wallhaven.pyc
 ${PYSITELIB}/gallery_dl/extractor/wallhaven.pyo
