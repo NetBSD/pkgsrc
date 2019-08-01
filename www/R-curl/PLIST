@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2017/10/09 22:38:12 brook Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/08/01 01:03:17 brook Exp $
 lib/R/library/curl/DESCRIPTION
 lib/R/library/curl/INDEX
 lib/R/library/curl/LICENSE
 lib/R/library/curl/Meta/Rd.rds
-lib/R/library/curl/Meta/data.rds
 lib/R/library/curl/Meta/hsearch.rds
 lib/R/library/curl/Meta/links.rds
 lib/R/library/curl/Meta/nsInfo.rds
@@ -14,9 +13,6 @@ lib/R/library/curl/NEWS
 lib/R/library/curl/R/curl
 lib/R/library/curl/R/curl.rdb
 lib/R/library/curl/R/curl.rdx
-lib/R/library/curl/data/Rdata.rdb
-lib/R/library/curl/data/Rdata.rds
-lib/R/library/curl/data/Rdata.rdx
 lib/R/library/curl/doc/index.html
 lib/R/library/curl/doc/intro.R
 lib/R/library/curl/doc/intro.Rmd
