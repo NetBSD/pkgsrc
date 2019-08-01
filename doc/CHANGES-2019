@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3233 2019/08/01 22:41:41 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3234 2019/08/01 23:40:47 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5190,3 +5190,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/gallery-dl to 1.10.0 [leot 2019-08-01]
 	Updated pkgtools/pkglint to 5.7.18 [rillig 2019-08-01]
 	Removed games/et successor games/etlegacy [nia 2019-08-01]
+	Updated net/mosquitto to 1.6.4 [gdt 2019-08-01]
