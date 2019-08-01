@@ -1,4 +1,4 @@
-$NetBSD: RELEASE,v 1.1 2019/06/24 13:46:04 brook Exp $
+$NetBSD: RELEASE,v 1.2 2019/08/01 13:11:08 brook Exp $
 
 RELEASE
 =======
@@ -27,4 +27,18 @@ R2pkg v.0.4 (2019-06-24)
 * Add maintainer email handling (-M).
 
 * Use buildlink3.mk files for dependencies when available.
+
+R2pkg v.0.5 (2019-07-31)
+------------------------
+
+* Improve support for updating packages.
+
+* Add explicit option to create packages (-c).
+
+* Relax comparisons for COMMENTS to allow case and some punctuation
+  differences.
+
+* Expand the list of licenses and base R packages checked for.
+
+* Improve support for recursion.
 
