@@ -1,4 +1,4 @@
-.\"	$NetBSD: R2pkg.8,v 1.5 2019/06/24 13:46:04 brook Exp $
+.\"	$NetBSD: R2pkg.8,v 1.6 2019/08/01 13:11:08 brook Exp $
 .\"
 .\" Copyright (c) 2014,2015,2016,2017,2018,2019
 .\"	Brook Milligan.  All rights reserved.
@@ -36,61 +36,97 @@
 .Nd create a pkgsrc package for an R package
 .Sh SYNOPSIS
 .Nm
-.Op Fl DehqruVv
+.Op Fl cDehqruVv
 .Op Fl E Ar editor
 .Op Fl M Ar maintainer_email
-.Op Fl R Ar dependency_file
 .Op Ar package
 .Sh DESCRIPTION
 .Nm
-takes the name of an R
-.Ar package
-that should be turned into a
+creates or updates a
 .Xr pkgsrc 7
-package in the current directory.
-The generated package includes a
-.Pa Makefile
-and a mostly complete set of files to get the package going.
-However,
+package for the corresponding R
+.Ar package .
+The
+.Xr pkgsrc 7
+package will be created in the current directory,
+which by convention should be named
+.Pa R-package .
+If the user does not supply the
+.Ar package
+on the command line, then
+.Nm
+will use the basename of the current directory
+as the name of the R package after stripping the leading
+.Pa R- .
+.Pp
+.Nm
+tries to make as complete a
+.Xr pkgsrc 7
+package as possible, and in the case of updating tries to maintain
+as much of the original as possible.
+Nevertheless,
 the files should be reviewed and perhaps adjusted manually after
 .Nm
 has finished its job.
 To help with this, the original versions of files created by
 .Nm
-are preserved for reference.
+are preserved for reference, but should be removed before commiting the
+.Xr pkgsrc 7
+package.
 .Pp
 .Nm
-is intended to help the process of creating a package but is not
+is intended to help the process of creating or updating a package but is not
 intended to fly on autopilot.
 .Pp
 The
-.Pa Makefile
-contains all of the variables required for an R package, with
-information being taken from the package's
+.Pa DESCR
+file is populated with information from the package's
 .Pa DESCRIPTION
 file on CRAN, which is automatically fetched by
 .Nm .
 Likewise, the
-.Pa DESCR
-file is populated with information from the same file.
-After
 .Pa Makefile
-and
+contains all of the variables required for an R package, with
+information being taken from the same
+.Pa DESCRIPTION
+file.
+In the case of updating, a file
+.Pq Pa DESCR.new
+containing the new description is created, and
+as much as possible of the original
+.Pa Makefile
+is retained.
+After
 .Pa DESCR
+and
+.Pa Makefile
 are completed,
 .Nm
-fetches the package and computes its checksum via the
+fetches the distfile and computes its checksum via the
 .Ic makesum
-target.
-.Pp
-If the user does not supply the
-.Ar package
-on the command line, then
-.Nm
-will prompt for it.
+and
+.Ic makepatchsum
+targets.
+Finally, a
+.Pa buildlink3.mk
+file may be created if necessary.
 .Pp
 The following options are available:
 .Bl -tag -width indent
+.It Fl c
+Create the
+.Xr pkgsrc 7
+package
+.Po
+and any dependencies if the
+.Fl r
+option is given
+.Pc .
+This is the default if neither
+.Fl c
+nor
+.Fl u
+is given.
 .It Fl D
 Write the package's description into
 .Pa DESCRIPTION .
@@ -103,55 +139,72 @@ Use
 .Ar editor
 instead of the user's default editor.
 .It Fl e
-Do not edit Makefile and DESCR.
+Do not present the
+.Pa Makefile
+and
+.Pa DESCR
+files for editing.
 .It Fl h
 Produce a short help message.
 .It Fl M Ar maintainer_email
 Set the maintainer email address for any newly created packages.
+By default, the email address will be
+.Aq pkgsrc-users@NetBSD.org .
 .It Fl q
 Do not produce status messages along the way.
-.It Fl R Ar dependency_file
-Process dependency packages recursively using
-.Pa dependency_file
-to record dependency information.
-This option is intended for
-internal use only to implement recursion over dependencies.
-Instead, the
-.Fl r
-option should be used to select recursion.
 .It Fl r
 Process dependency packages recursively.
+Dependency packages that do not exist will be created in the
+.Pa pkgsrc/wip
+directory, and processed by
+.Nm
+recursively.
+Dependency packages that do exist will only be processed when updating.
 A
 .Pa depends
 file is created that lists the dependencies in
 .Xr tsort 1
-order.
-This is likely the best order for testing the resulting
+order, which is likely the best for testing the resulting
 dependency packages.
 In particular, a useful strategy for creating
+.Po
+or updating with the
+.Fl u
+option
+.Pc
 packages recursively is to (i) run
 .Nm
 with the
 .Fl r
-option, (ii) fix all the leaf packages, (iii) rerun
+option,
+(ii) move any newly created packages from
+.Pa pkgsrc/wip
+into appropriate categories,
+(iii) fix each package as needed, and
+(iv) rerun
 .Nm
-with the
+with both the
 .Fl r
-option, and (iv) continue until all packages are created.
-Repeating runs of
-.Nm
-once the leaf dependencies are moved into the correct categories will
-allow the program to capture the correct dependencies in each
-.Pa Makefile .
+and
+.Fl u
+options.
+The second
+.Pq and subsequent
+run(s) will correct each package's
+.Pa Makefile
+with the correct category information and the correct dependency directories.
 .It Fl u
 Update the
 .Xr pkgsrc 7
-package.
-.Nm
-must be run in an R package directory, which is assumed to be named as
-.Pa R-package .
-The name of the package to be updated will be taken from the directory
-name and need not be given on the command line.
+package
+.Po
+and any dependencies if the
+.Fl r
+option is given
+.Pc .
+This has no effect if a package
+.Pq including a dependency
+is being newly created.
 .It Fl V
 Print the version.
 .It Fl v
@@ -178,29 +231,36 @@ Use the following commands to create a
 .Xr pkgsrc 7
 package for the R package
 .Ar foo :
-.Dl cd pkgsrc/math
+.Dl cd pkgsrc/category
 .Dl mkdir R-foo
 .Dl cd R-foo
-.Dl R2pkg foo
-Remember to test the resulting package and remove any extra files
-created by
-.Nm .
+.Dl R2pkg -c foo
 Adding
 .Fl r
 to the command line will also recursively create all necessary
 dependencies in the
-.Pa wip
-directory.
+.Pa pkgsrc/wip
+directory if they do not already exist.
 .Pp
 Use the following commands to update a
 .Xr pkgsrc 7
 package (and dependencies) for the R package
 .Ar foo :
-.Dl cd pkgsrc/math/R-foo
-.Dl R2pkg -r -u
-Packages built for any new dependencies will be added to the
-.Pa wip
+.Dl cd pkgsrc/category/R-foo
+.Dl R2pkg -u -r
+Packages created for any new dependencies will be added to the
+.Pa pkgsrc/wip
 directory.
+.Pp
+Remember to test the resulting package(s) and remove any extra files
+created by
+.Nm .
+If new packages are created in the
+.Pa pkgsrc/wip
+directory, they should be moved to appropriate categories
+and
+.Nm
+should be rerun to update categories and paths.
 .Sh SEE ALSO
 .Xr pkgsrc 7
 .Sh AUTHORS
@@ -212,14 +272,16 @@ was written by
 does not create a finished package; instead, it facilitates the task.
 However, the resulting files must be reviewed and possibly edited by
 hand.
-Although dependencies are included in the generated
-.Pa Makefile ,
-they are not fully analyzed and likely have incorrect category
-information.
 Packages created recursively for dependencies are placed
-in a newly created, nonstandard
-.Pa pkgsrc/R
-category directory and must be moved to appropriate category
-directories within
+in the
+.Pa pkgsrc/wip
+directory;
+they must be moved to appropriate category directories within
 .Xr pkgsrc 7
 and checked for correctness.
+Therefore, although dependencies are included in the generated
+.Pa Makefile ,
+they will have incorrect category information
+unless moved to an appopriate category and
+.Nm
+rerun.
