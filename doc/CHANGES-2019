@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3216 2019/08/01 01:00:28 brook Exp $
+$NetBSD: CHANGES-2019,v 1.3217 2019/08/01 01:03:17 brook Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5173,3 +5173,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/R-utf8 to 1.1.4 [brook 2019-08-01]
 	Updated textproc/R-yaml to 2.2.0 [brook 2019-08-01]
 	Updated time/R-timeDate to 3043.102 [brook 2019-08-01]
+	Updated www/R-curl to 4.0 [brook 2019-08-01]
