@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/07/31 09:13:50 jaapb Exp $
+# $NetBSD: Makefile,v 1.14 2019/08/01 20:31:47 jperkin Exp $
 
 VERSION= 	5.3
 GITHUB_PROJECT=	ppx_tools
@@ -20,7 +20,7 @@ OCAML_USE_FINDLIB=	yes
 
 MAKE_JOBS_SAFE=	no
 
-BUILDLINK_API_DEPENDS.ocaml+=   ocaml>=4.08.0 # this really needs 4.08
+#BUILDLINK_API_DEPENDS.ocaml+=   ocaml>=4.08.0 # this really needs 4.08
 
 .include "../../mk/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
