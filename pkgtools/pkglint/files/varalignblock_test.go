@@ -2320,7 +2320,6 @@ func (s *Suite) Test_VaralignBlock_Process__longest_line_no_space(c *check.C) {
 func (s *Suite) Test_VaralignBlock_Process__only_spaces(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wspace")
 	mklines := t.NewMkLines("file.mk",
 		"SUBST_CLASSES+= aaaaaaaa",
 		"SUBST_STAGE.aaaaaaaa= pre-configure",
@@ -2338,6 +2337,22 @@ func (s *Suite) Test_VaralignBlock_Process__only_spaces(c *check.C) {
 		"NOTE: file.mk:2: This variable value should be aligned with tabs, not spaces, to column 33.",
 		"NOTE: file.mk:3: This variable value should be aligned with tabs, not spaces, to column 33.",
 		"NOTE: file.mk:4: This variable value should be aligned with tabs, not spaces, to column 33.")
+}
+
+func (s *Suite) Test_VaralignBlock_realignMultiEmptyInitial(c *check.C) {
+	t := s.Init(c)
+
+	mklines := t.NewMkLines("filename.mk",
+		MkCvsID,
+		"VAR=\t${VAR}",
+		// FIXME: It's not possible to align with tabs to column 21.
+		"LONG_VARIABLE_NAME=    \t        \\",
+		"\t${LONG_VARIABLE_NAME}")
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"NOTE: filename.mk:3: This variable value should be aligned with tabs, not spaces, to column 21.")
 }
 
 func (s *Suite) Test_VaralignBlock_split(c *check.C) {
@@ -2514,6 +2529,21 @@ func (s *Suite) Test_VaralignBlock_split(c *check.C) {
 			trailingComment:   "",
 			spaceAfterComment: "",
 			continuation:      "",
+		})
+
+	// In practice it doesn't really happen that the last line of a file
+	// ends in a backslash and at the same time it doesn't have the usual
+	// newline ending.
+	test("    value \\", false,
+		varalignSplitResult{
+			leadingComment:    "",
+			varnameOp:         "",
+			spaceBeforeValue:  "    ",
+			value:             "value",
+			spaceAfterValue:   " ",
+			trailingComment:   "",
+			spaceAfterComment: "",
+			continuation:      "\\",
 		})
 
 	// Commented variable assignments are only valid if they
