@@ -1,11 +1,11 @@
-$NetBSD: patch-erts_lib__src_common_erl__printf.c,v 1.3 2018/09/13 09:17:40 fhajny Exp $
+$NetBSD: patch-erts_lib__src_common_erl__printf.c,v 1.4 2019/08/01 11:43:00 nia Exp $
 
 Set _XOPEN_SOURCE correctly on SunOS.
 
---- erts/lib_src/common/erl_printf.c.orig	2018-06-19 07:07:55.000000000 +0000
+--- erts/lib_src/common/erl_printf.c.orig	2019-07-10 16:05:15.000000000 +0000
 +++ erts/lib_src/common/erl_printf.c
-@@ -27,6 +27,14 @@
- #include "config.h"
+@@ -32,6 +32,14 @@
+     #define __EXTENSIONS__
  #endif
  
 +#ifdef __sun
