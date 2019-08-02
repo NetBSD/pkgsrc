@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.169 2019/07/30 12:18:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.170 2019/08/02 03:25:33 ryoon Exp $
 
 DISTNAME=		nss-${NSS_RELEASE:S/.0$//}
 NSS_RELEASE=		3.45.0
@@ -6,7 +6,7 @@ CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${NSS_DIST_DIR_VERSION:S/_0$//}_RTM/src/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.mozilla.org/projects/security/pki/nss/
+HOMEPAGE=		https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS
 COMMENT=		Libraries to support development of security-enabled applications
 LICENSE=		mpl-2.0
 
