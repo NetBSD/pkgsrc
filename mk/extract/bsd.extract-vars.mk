@@ -1,4 +1,4 @@
-# $NetBSD: bsd.extract-vars.mk,v 1.17 2018/11/30 18:38:19 rillig Exp $
+# $NetBSD: bsd.extract-vars.mk,v 1.18 2019/08/02 11:48:17 nia Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -60,7 +60,8 @@ USE_TOOLS+=	lzip
 .if !empty(EXTRACT_ONLY:M*.lzma)
 USE_TOOLS+=	xzcat
 .endif
-.if !empty(EXTRACT_ONLY:M*.xz)
+.if !empty(EXTRACT_ONLY:M*.xz) || \
+    !empty(EXTRACT_ONLY:M*.txz)
 USE_TOOLS+=	xzcat
 .endif
 .if !empty(EXTRACT_ONLY:M*.zip)
