@@ -1,9 +1,15 @@
-$NetBSD: patch-src_ft2__diskop.c,v 1.5 2019/07/30 00:06:50 fox Exp $
+$NetBSD: patch-src_ft2__diskop.c,v 1.6 2019/08/02 16:54:10 fox Exp $
 
-1. Added <sys/types.h> / <sys/stat.h> to prevent "unknown type name"
-   (dev_t, ino_t and nlink_t) error from the included <fts.h>.
-
+1. Added <sys/types.h> and <sys/stat.h> before the include of
+   <fts.h>. While fts(3) is not yet standardized by POSIX, NetBSD
+   contains an implementation that was expected to comply with the
+   eventual standard, and fts(3) on NetBSD documents that the above
+   includes are required. Resolves build failure on netbsd-8.
+   
 2. Added SunOS / SmartOS compatibility.
+
+Note: Contacted the upstream author regarding the patch and awaiting a
+reply. https://16-bits.org/ft2.php
 
 --- src/ft2_diskop.c.orig	2019-06-20 21:20:34.000000000 +0000
 +++ src/ft2_diskop.c
