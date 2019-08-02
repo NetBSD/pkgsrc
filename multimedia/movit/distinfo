@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/08/02 10:11:35 nia Exp $
+
+SHA1 (movit-1.6.3.tar.gz) = 201890a63977b05b218cc209c3da9d4d5267dfbb
+RMD160 (movit-1.6.3.tar.gz) = bba75c6e346dd2aa19de842bbea4f2e2cd66d8ec
+SHA512 (movit-1.6.3.tar.gz) = 6f7169710fbb60f79c44393aea57619f4c83d64fb296ea946d591e78fb9a71b513869dc6325f90e4c2dc843b7ed4841eaef41ca69f64787c8a57f4fde583b1e5
+Size (movit-1.6.3.tar.gz) = 605922 bytes
