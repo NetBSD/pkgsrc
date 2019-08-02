@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3241 2019/08/02 11:27:35 leot Exp $
+$NetBSD: CHANGES-2019,v 1.3242 2019/08/02 14:32:28 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5199,3 +5199,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added multimedia/movit version 1.6.3 [nia 2019-08-02]
 	Added chat/miniircd version 1.3 [leot 2019-08-02]
 	Updated www/midori to 9.0 [leot 2019-08-02]
+	Updated net/dnsdist to 1.3.3 [jperkin 2019-08-02]
