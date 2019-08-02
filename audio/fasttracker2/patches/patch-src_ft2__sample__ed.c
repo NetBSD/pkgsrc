@@ -1,7 +1,16 @@
-$NetBSD: patch-src_ft2__sample__ed.c,v 1.2 2019/07/23 08:20:22 fox Exp $
+$NetBSD: patch-src_ft2__sample__ed.c,v 1.3 2019/08/02 16:54:10 fox Exp $
 
 Add the HAS_SSE macro so that build failures do not occur in i386
 systems that lack SSE support.
+
+For example: On i386, the compiler may be targeting a CPU that does
+not have SSE (e.g., on NetBSD, the i386 target is i486). fasttracker2
+various assembly pieces that use different CPU features. HAS_SSE macro
+needs to be set in systems which has these CPU features and compile
+correctly.
+
+Note: Contacted the upstream author regarding the patch and awaiting a
+reply. https://16-bits.org/ft2.php
 
 --- src/ft2_sample_ed.c.orig	2019-07-22 16:27:23.010951973 +0000
 +++ src/ft2_sample_ed.c

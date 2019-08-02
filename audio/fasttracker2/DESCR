@@ -1,5 +1,8 @@
 fasttracker2 is a Fasttracker II clone in C using SDL 2.
 
+fasttracker2 is a music tracker (a type of music sequencer software)
+for creating and playing back tracker music.
+
 This clone is meant for computers with a modern GPU and CPU (about
 2007 or newer recommended).  It's also designed for 60Hz refresh
 rates, so it can act choppy if you're above 60Hz.
