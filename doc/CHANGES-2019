@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3238 2019/08/02 10:09:57 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3239 2019/08/02 10:11:54 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5196,3 +5196,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/cmake to 3.15.1 [adam 2019-08-02]
 	Updated net/youtube-dl to 20190802 [leot 2019-08-02]
 	Added multimedia/frei0r version 1.6.1 [nia 2019-08-02]
+	Added multimedia/movit version 1.6.3 [nia 2019-08-02]
