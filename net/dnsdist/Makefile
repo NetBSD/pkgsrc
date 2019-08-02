@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2018/12/15 21:12:22 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2019/08/02 14:32:18 jperkin Exp $
 
-DISTNAME=	dnsdist-1.3.2
+DISTNAME=	dnsdist-1.3.3
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.powerdns.com/releases/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	fhajny@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://dnsdist.org/
 COMMENT=	Highly DNS-, DoS- and abuse-aware loadbalancer
 LICENSE=	gnu-gpl-v2
@@ -28,8 +28,11 @@ FILES_SUBST+=	DNSDIST_GROUP=${DNSDIST_GROUP}
 CONF_FILES+=	share/examples/dnsdist/dnsdist.conf \
 		${PKG_SYSCONFDIR}/dnsdist.conf
 
+CONFIGURE_ARGS+=	--enable-dns-over-tls
 CONFIGURE_ARGS+=	--enable-dnscrypt
+CONFIGURE_ARGS+=	--enable-fstrm
 CONFIGURE_ARGS+=	--enable-libsodium
+CONFIGURE_ARGS+=	--enable-libssl
 CONFIGURE_ARGS+=	--enable-re2
 CONFIGURE_ARGS+=	--with-protobuf
 CONFIGURE_ARGS+=	--without-net-snmp
@@ -48,5 +51,7 @@ post-install:
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../devel/re2/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
+.include "../../net/fstrm/buildlink3.mk"
 .include "../../security/libsodium/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
