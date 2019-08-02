@@ -1,4 +1,4 @@
-$NetBSD: patch-src_ft2__sample__ed.c,v 1.3 2019/08/02 16:54:10 fox Exp $
+$NetBSD: patch-src_ft2__sample__ed.c,v 1.4 2019/08/02 17:16:33 fox Exp $
 
 Add the HAS_SSE macro so that build failures do not occur in i386
 systems that lack SSE support.
@@ -14,7 +14,7 @@ reply. https://16-bits.org/ft2.php
 
 --- src/ft2_sample_ed.c.orig	2019-07-22 16:27:23.010951973 +0000
 +++ src/ft2_sample_ed.c
-@@ -689,7 +689,7 @@ static void sampleLine(int16_t x1, int16
+@@ -743,7 +743,7 @@ static void sampleLine(int16_t x1, int16
  
  static void getMinMax16(const void *p, uint32_t scanLen, int16_t *min16, int16_t *max16)
  {
@@ -23,7 +23,7 @@ reply. https://16-bits.org/ft2.php
  	if (cpu.hasSSE2)
  	{
  		/* Taken with permission from the OpenMPT project (and slightly modified).
-@@ -775,7 +775,7 @@ static void getMinMax16(const void *p, u
+@@ -829,7 +829,7 @@ static void getMinMax16(const void *p, u
  
  static void getMinMax8(const void *p, uint32_t scanLen, int8_t *min8, int8_t *max8)
  {
