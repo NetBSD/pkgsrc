@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3245 2019/08/02 21:28:18 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.3246 2019/08/02 21:29:17 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5203,3 +5203,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/fasttracker2 to 2.163 [fox 2019-08-02]
 	Updated pkgtools/pkglint to 5.7.19 [rillig 2019-08-02]
 	Updated textproc/xapian to 1.4.12 [schmonz 2019-08-02]
+	Updated textproc/xapian-omega to 1.4.12 [schmonz 2019-08-02]
