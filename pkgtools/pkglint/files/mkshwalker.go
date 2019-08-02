@@ -215,7 +215,9 @@ func (w *MkShWalker) walkCase(caseClause *MkShCase) {
 			callback(caseItem)
 		}
 		w.walkWords(-1, caseItem.Patterns)
-		w.walkList(-1, caseItem.Action)
+		if caseItem.Action != nil {
+			w.walkList(-1, caseItem.Action)
+		}
 		w.pop()
 	}
 

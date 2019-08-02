@@ -1099,10 +1099,11 @@ func (s *Suite) Test_ShellLineChecker_CheckShellCommand__case_patterns_from_vari
 
 	mklines.Check()
 
-	// FIXME: Support the above variable expansion.
-	t.CheckOutputLines(
-		"WARN: Makefile:4: Pkglint ShellLine.CheckShellCommand: " +
-			"parse error at []string{\"*\", \")\", \"continue\", \";\", \"esac\"}")
+	// TODO: Ensure that the shell word is really only one variable use.
+	// TODO: Ensure that the last modifier is :@@@.
+	// TODO: Ensure that the replacement is a well-formed case-item.
+	// TODO: Ensure that the replacement contains ";;" as the last shell token.
+	t.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_ShellLineChecker_checkHiddenAndSuppress(c *check.C) {
