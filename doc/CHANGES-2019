@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3235 2019/08/02 03:13:14 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.3236 2019/08/02 04:46:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5192,3 +5192,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed games/et successor games/etlegacy [nia 2019-08-01]
 	Updated net/mosquitto to 1.6.4 [gdt 2019-08-01]
 	Updated lang/ocaml to 4.07.1nb4 [schmonz 2019-08-02]
+	Updated archivers/zstd to 1.4.2 [adam 2019-08-02]
+	Updated devel/cmake to 3.15.1 [adam 2019-08-02]
