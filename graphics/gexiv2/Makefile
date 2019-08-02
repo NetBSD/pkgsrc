@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/07/16 08:27:39 nia Exp $
+# $NetBSD: Makefile,v 1.6 2019/08/02 08:21:05 nia Exp $
 
 DISTNAME=	gexiv2-0.12.0
 CATEGORIES=	graphics devel
@@ -29,5 +29,6 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=./gexiv2/gexiv2.map
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
+BUILDLINK_DEPMETHOD.vala=	build
 .include "../../lang/vala/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
