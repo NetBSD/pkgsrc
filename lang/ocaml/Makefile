@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.125 2019/07/10 17:53:38 sevan Exp $
+# $NetBSD: Makefile,v 1.126 2019/08/02 03:13:06 schmonz Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=		3
+PKGREVISION=		4
 
 CONFIGURE_ENV+=		disable_x11=yes
 
@@ -106,6 +106,12 @@ post-install:
 	  ln -sf ${PREFIX}/lib/ocaml/${PKGMANDIR}/man1/$$m		\
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/$$m;		\
 	done
+.if ${OPSYS} == Darwin
+	set -e; cd ${DESTDIR}${PREFIX}/lib/ocaml;			\
+	for l in *.so */*.so; do					\
+	  install_name_tool -id ${PREFIX}/lib/ocaml/$${l} $${l};	\
+	done
+.endif
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
