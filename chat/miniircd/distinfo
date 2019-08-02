@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/08/02 10:20:53 leot Exp $
+
+SHA1 (miniircd-1.3.tar.gz) = 61d8273973de28b4edfa9b6a8297397ae3de767d
+RMD160 (miniircd-1.3.tar.gz) = 3e4ff007f458fde3fa1f79830ca1a30ca4003349
+SHA512 (miniircd-1.3.tar.gz) = 41ee2d7b9022fc94c46c2bad39a618e7f49e586d4bfd2de8512d73bceaade9b82914129d7b688002308c6c892a78530bec632e92e3067f9736157ac1cd7dbabe
+Size (miniircd-1.3.tar.gz) = 21581 bytes
