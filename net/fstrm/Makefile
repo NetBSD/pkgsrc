@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/03/12 08:53:23 he Exp $
+# $NetBSD: Makefile,v 1.4 2019/08/02 14:04:31 jperkin Exp $
 
 DISTNAME=	fstrm-0.5.0
 CATEGORIES=	net
@@ -20,6 +20,8 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES+=	c
 
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0
+
+LDFLAGS.SunOS+=	-lnsl
 
 pre-configure:
 	cd ${WRKSRC} && sh ./autogen.sh
