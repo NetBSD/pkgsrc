@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/08/02 04:42:23 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/08/02 21:28:53 schmonz Exp $
 ${RUBY_SITEARCHLIB}/_xapian.a
 ${RUBY_SITEARCHLIB}/_xapian.${RUBY_DLEXT}
 ${RUBY_SITELIB}/xapian.rb
@@ -22,6 +22,7 @@ share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/Xapian/Xapian/MSet.html
 share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/Xapian/Xapian/Match.html
 share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/Xapian/Xapian/Posting.html
 share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/Xapian/Xapian/Query.html
+share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/Xapian/Xapian/QueryParser.html
 share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/Xapian/Xapian/Value.html
 share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/Xapian/Xapian/ValueCountMatchSpy.html
 share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/Xapian/Xapian/Xapian.html

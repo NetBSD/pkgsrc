@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/07/06 16:23:11 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/08/02 21:28:53 schmonz Exp $
 ${PYSITELIB}/xapian/__init__.py
 ${PYSITELIB}/xapian/__init__.pyc
 ${PYSITELIB}/xapian/__init__.pyo
@@ -9,7 +9,6 @@ share/doc/xapian-bindings/python${PYTHON_3_OR_EMPTY}/examples/simpleindex.py
 share/doc/xapian-bindings/python${PYTHON_3_OR_EMPTY}/examples/simplematchdecider.py
 share/doc/xapian-bindings/python${PYTHON_3_OR_EMPTY}/examples/simplesearch.py
 share/doc/xapian-bindings/python${PYTHON_3_OR_EMPTY}/html/.buildinfo
-${PLIST.py3x}share/doc/xapian-bindings/python3/html/_modules/_weakref.html
 share/doc/xapian-bindings/python${PYTHON_3_OR_EMPTY}/html/_modules/index.html
 share/doc/xapian-bindings/python${PYTHON_3_OR_EMPTY}/html/_modules/xapian.html
 share/doc/xapian-bindings/python${PYTHON_3_OR_EMPTY}/html/_sources/examples.rst.txt
@@ -30,6 +29,7 @@ share/doc/xapian-bindings/python${PYTHON_3_OR_EMPTY}/html/_static/down.png
 share/doc/xapian-bindings/python${PYTHON_3_OR_EMPTY}/html/_static/file.png
 share/doc/xapian-bindings/python${PYTHON_3_OR_EMPTY}/html/_static/jquery-3.2.1.js
 share/doc/xapian-bindings/python${PYTHON_3_OR_EMPTY}/html/_static/jquery.js
+share/doc/xapian-bindings/python${PYTHON_3_OR_EMPTY}/html/_static/language_data.js
 share/doc/xapian-bindings/python${PYTHON_3_OR_EMPTY}/html/_static/minus.png
 share/doc/xapian-bindings/python${PYTHON_3_OR_EMPTY}/html/_static/plus.png
 share/doc/xapian-bindings/python${PYTHON_3_OR_EMPTY}/html/_static/pygments.css
