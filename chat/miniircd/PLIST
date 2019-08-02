@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2019/08/02 10:20:53 leot Exp $
+sbin/miniircd
+share/doc/miniircd/README
