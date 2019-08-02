@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: extract,v 1.18 2018/10/23 16:39:29 minskim Exp $
+# $NetBSD: extract,v 1.19 2019/08/02 11:48:17 nia Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -180,7 +180,7 @@ case "$distfile" in
 *.bz2|*.tbz|*.tbz2|*.bz)	_cformat=bzip ;;
 *.lz)				_cformat=lzip ;;
 *.lzma)				_cformat=lzma ;;
-*.xz)				_cformat=xz ;;
+*.xz|*.txz)			_cformat=xz ;;
 *.Z)				_cformat=compress ;;
 *)				_cformat=none ;;
 esac
@@ -202,7 +202,7 @@ esac
 
 # Derive the format of the archive based on the file extension.
 case "$distfile" in
-*.tar.gz|*.tgz|*-tar.gz|*_tar.gz|*.tar.bz2|*.tbz|*.tbz2|*.tar.lz|*.tar.lzma|*.tar.xz|*.tar.Z|*.tar.z|*.tar|*.tar.bz|*.tar.7z|*.crate)
+*.tar.gz|*.tgz|*-tar.gz|*_tar.gz|*.tar.bz2|*.txz|*.tbz|*.tbz2|*.tar.lz|*.tar.lzma|*.tar.xz|*.tar.Z|*.tar.z|*.tar|*.tar.bz|*.tar.7z|*.crate)
 		_format=tar ;;
 *.cpio|*.cpio.gz|*.cpio.bz2)
 		_format=cpio ;;
