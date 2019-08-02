@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/07/20 21:18:59 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2019/08/02 21:54:56 schmonz Exp $
 
 DISTNAME=	redo-1.4
 PKGNAME=	jdebp-${DISTNAME}
@@ -15,6 +15,11 @@ CONFLICTS+=	apenwarr-redo-[0-9]*
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	c++
 USE_TOOLS+=	pod2man
+
+SUBST_CLASSES+=		pkgmandir
+SUBST_STAGE.pkgmandir=	do-configure
+SUBST_FILES.pkgmandir=	package/export
+SUBST_SED.pkgmandir=	-e 's|"man/man1|${PKGMANDIR}"/man1|g'
 
 do-configure:
 	cd ${WRKSRC} && ./package/prepare
