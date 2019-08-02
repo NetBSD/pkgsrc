@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2019/03/02 11:01:55 leot Exp $
+@comment $NetBSD: PLIST,v 1.30 2019/08/02 11:27:21 leot Exp $
 bin/midori
 lib/girepository-1.0/Midori-0.6.typelib
 lib/libmidori-core.so
@@ -23,9 +23,9 @@ share/applications/org.midori_browser.Midori.desktop
 share/doc/midori/COPYING
 share/doc/midori/README.md
 share/gir-1.0/Midori-0.6.gir
-share/icons/hicolor/16x16/apps/midori.png
-share/icons/hicolor/22x22/apps/midori.png
-share/icons/hicolor/scalable/apps/midori.svg
+share/icons/hicolor/16x16/apps/org.midori_browser.Midori.png
+share/icons/hicolor/22x22/apps/org.midori_browser.Midori.png
+share/icons/hicolor/scalable/apps/org.midori_browser.Midori.svg
 share/locale/af/LC_MESSAGES/midori.mo
 share/locale/am/LC_MESSAGES/midori.mo
 share/locale/ar/LC_MESSAGES/midori.mo
@@ -104,4 +104,4 @@ share/locale/vi/LC_MESSAGES/midori.mo
 share/locale/zh_CN/LC_MESSAGES/midori.mo
 share/locale/zh_HK/LC_MESSAGES/midori.mo
 share/locale/zh_TW/LC_MESSAGES/midori.mo
-share/metainfo/midori.appdata.xml
+share/metainfo/org.midori_browser.Midori.appdata.xml

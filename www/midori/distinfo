@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.28 2019/03/02 11:01:55 leot Exp $
+$NetBSD: distinfo,v 1.29 2019/08/02 11:27:21 leot Exp $
 
-SHA1 (midori-v8.0.tar.gz) = ad4c766ba364eda5fefa349d923ecfa61b5a7a9c
-RMD160 (midori-v8.0.tar.gz) = a7759a0c0b68e0f8440c3bca133b6c914744c6e8
-SHA512 (midori-v8.0.tar.gz) = 3a8cbca941637160a41f8a638e2153ddd5d8930a3d26df2031d90de40234743f5663c853ddf655673331b8a9ec07c65d8920768a4744fa5412bc2eddf2b8d81f
-Size (midori-v8.0.tar.gz) = 1899654 bytes
+SHA1 (midori-v9.0.tar.gz) = 12c3ec68a303a267959b586ef5cb08e90f318fee
+RMD160 (midori-v9.0.tar.gz) = 3461c04d5cc16004c8a9e9d7f77b2d063eac2438
+SHA512 (midori-v9.0.tar.gz) = 0cc28643593f53c47b453838152dcbe35a9a287bff38bda830844eb8f321a4f48c99b21e16a9b07bebdd0abc936d88fd759c3222a36325aa667a28ae00148be3
+Size (midori-v9.0.tar.gz) = 1902467 bytes
