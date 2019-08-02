@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.56 2019/07/19 09:06:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.57 2019/08/02 04:46:12 adam Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -1418,6 +1418,7 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_SYSTEM_PROGRAM_PATH.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_SYSTEM_VERSION.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_Swift_LANGUAGE_VERSION.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_Swift_MODULE_DIRECTORY.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_Swift_NUM_THREADS.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_TOOLCHAIN_FILE.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_TRY_COMPILE_CONFIGURATION.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_TRY_COMPILE_PLATFORM_VARIABLES.rst
