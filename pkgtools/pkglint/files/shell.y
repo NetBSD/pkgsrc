@@ -208,20 +208,23 @@ case_selector : pattern tkRPAREN {
 }
 
 case_item_ns : case_selector linebreak {
-	$$ = &MkShCaseItem{$1, &MkShList{}, sepNone}
+	$$ = &MkShCaseItem{$1, &MkShList{}, sepNone, nil}
 }
 case_item_ns : case_selector linebreak term linebreak {
-	$$ = &MkShCaseItem{$1, $3, sepNone}
+	$$ = &MkShCaseItem{$1, $3, sepNone, nil}
 }
 case_item_ns : case_selector linebreak term separator_op linebreak {
-	$$ = &MkShCaseItem{$1, $3, $4}
+	$$ = &MkShCaseItem{$1, $3, $4, nil}
 }
 
 case_item : case_selector linebreak tkSEMISEMI linebreak {
-	$$ = &MkShCaseItem{$1, &MkShList{}, sepNone}
+	$$ = &MkShCaseItem{$1, &MkShList{}, sepNone, nil}
 }
 case_item : case_selector compound_list tkSEMISEMI linebreak {
-	$$ = &MkShCaseItem{$1, $2, sepNone}
+	$$ = &MkShCaseItem{$1, $2, sepNone, nil}
+}
+case_item : tkWORD {
+	$$ = &MkShCaseItem{Var: $1}
 }
 
 pattern : tkWORD {
