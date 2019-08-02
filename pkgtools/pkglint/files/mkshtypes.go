@@ -127,6 +127,7 @@ type MkShCaseItem struct {
 	Patterns  []*ShToken
 	Action    *MkShList
 	Separator MkShSeparator
+	Var       *ShToken // ${PATTERNS:@p@ (${p}) action ;; @}
 }
 
 // MkShIf is a conditional statement, possibly having
