@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3236 2019/08/02 04:46:39 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3237 2019/08/02 10:01:14 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5194,3 +5194,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/ocaml to 4.07.1nb4 [schmonz 2019-08-02]
 	Updated archivers/zstd to 1.4.2 [adam 2019-08-02]
 	Updated devel/cmake to 3.15.1 [adam 2019-08-02]
+	Updated net/youtube-dl to 20190802 [leot 2019-08-02]
