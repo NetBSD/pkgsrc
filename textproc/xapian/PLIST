@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2019/02/12 19:21:18 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.16 2019/08/02 21:28:12 schmonz Exp $
 bin/copydatabase
 bin/quest
 bin/simpleexpand
@@ -455,6 +455,7 @@ share/doc/xapian-core/apidoc/html/namespaceXapian_1_1Remote.html
 share/doc/xapian-core/apidoc/html/namespaceXapian_1_1Unicode.html
 share/doc/xapian-core/apidoc/html/namespacemembers.html
 share/doc/xapian-core/apidoc/html/namespacemembers_enum.html
+share/doc/xapian-core/apidoc/html/namespacemembers_eval.html
 share/doc/xapian-core/apidoc/html/namespacemembers_func.html
 share/doc/xapian-core/apidoc/html/namespacemembers_type.html
 share/doc/xapian-core/apidoc/html/namespacemembers_vars.html
