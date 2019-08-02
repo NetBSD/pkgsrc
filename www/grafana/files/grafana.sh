@@ -16,6 +16,15 @@ grafana_home="@PREFIX@/share/${name}"
 pidfile="@VARBASE@/run/${name}.pid"
 command="@PREFIX@/bin/grafana-server"
 command_args="-homepath ${grafana_home} -config @PKG_SYSCONFDIR@/grafana.conf -pidfile ${pidfile} < /dev/null > /dev/null 2>&1 &"
+start_precmd="grafana_precmd"
+
+grafana_precmd() {
+	if [ ! -r "${pidfile}" ]; then
+		touch "${pidfile}"
+		chown "${grafana_user}:${grafana_group}" "${pidfile}"
+		chmod 644 "${pidfile}"
+	fi
+}
 
 if [ -f /etc/rc.subr -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
 	load_rc_config $name
@@ -36,7 +45,7 @@ else
 	stop)
 		if [ -r "${pidfile}" ]; then
 			@ECHO@ "Stopping ${name}."
-			kill `@CAT@ ${pidfile}` && @RM@ ${pidfile}
+			kill `@CAT@ "${pidfile}"` && @RM@ "${pidfile}"
 		fi
 		;;
 	*)
