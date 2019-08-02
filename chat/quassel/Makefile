@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2019/04/03 00:32:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2019/08/02 08:37:43 nia Exp $
 
 DISTNAME=	quassel-0.13.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	https://quassel-irc.org/pub/
 EXTRACT_SUFX=	.tar.bz2
@@ -31,6 +31,5 @@ REPLACE_PERL+=	data/scripts/mpris
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/qca2-qt5/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qtmultimedia/buildlink3.mk"
 .include "../../x11/qt5-qtscript/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
