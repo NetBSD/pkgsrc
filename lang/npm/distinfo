@@ -1,16 +1,16 @@
-$NetBSD: distinfo,v 1.16 2019/07/01 10:50:32 adam Exp $
+$NetBSD: distinfo,v 1.17 2019/08/03 07:32:55 adam Exp $
 
-SHA1 (cli-6.9.2.tar.gz) = 19528ac7bdb89f910cbd7b97fde959a65254344f
-RMD160 (cli-6.9.2.tar.gz) = 28e572429678df91de38b078fc9c4df5a5617d28
-SHA512 (cli-6.9.2.tar.gz) = 2a9459223719d051fe384a6568fd3c9b1279405318c260e468207ec477d925021ef2e20542f71cad7760f075b0b5b90f6349943912a5d24a03dd4dfd2445be81
-Size (cli-6.9.2.tar.gz) = 7667848 bytes
-SHA1 (marked-0.6.3.tar.gz) = c51f23d0cf0725140531349b36dd38c05c2e14b4
-RMD160 (marked-0.6.3.tar.gz) = 0ab3f62570d4fa6537f0c8c996a2462454dc5e91
-SHA512 (marked-0.6.3.tar.gz) = daf2f971b12a55eebd7a8bab39eb69af89a181ba9487994686cb61dea185ce493a29be1d17c7172b8776b6aab62826ad526c7a116f6306da24b892a9b9d480ec
-Size (marked-0.6.3.tar.gz) = 139327 bytes
+SHA1 (cli-6.10.2.tar.gz) = 74765a3e8c96f2718dc477a47af6b6fe1fe3534b
+RMD160 (cli-6.10.2.tar.gz) = b0b496f885aad7ec3fd0099909412e495803a6ce
+SHA512 (cli-6.10.2.tar.gz) = b509046bb119ea431538d529bf19f970b5331e2950a5af0d2f7b5296274cd6fa734d6f8c0b3bef992082779d6476442e062b63a89216c858b9f060fc1a5c32ea
+Size (cli-6.10.2.tar.gz) = 5656352 bytes
+SHA1 (marked-0.7.0.tar.gz) = 4094c4aa4bf00aa4d1bb0d2f0b9c50c1e81b7754
+RMD160 (marked-0.7.0.tar.gz) = 5fc126026dad9b24957089c147244217af9ecd83
+SHA512 (marked-0.7.0.tar.gz) = dc754b83f6bfa64ddc87b046935df91b16927eb98edaa47712610bfcb87f948ba878fa782e90b38213c710b33f512e65dc94d965e66e9ad14533b16b39861ee8
+Size (marked-0.7.0.tar.gz) = 160448 bytes
 SHA1 (patch-Makefile) = 29b3e9515ee2a45f3b12c116075c00faca73d270
 SHA1 (patch-lib_config_defaults.js) = 5a00cbef781c9ab4efcec41ad781987f3f540886
 SHA1 (patch-node__modules_bin-links_index.js) = adbabdccde34483973ba134aa461b48ba690b5a2
 SHA1 (patch-node__modules_node-gyp_gyp_pylib_gyp_generator_make.py) = 291e079fb48caea7501ab864c19ef26672b76bc5
 SHA1 (patch-node__modules_node-gyp_gyp_pylib_gyp_xcode__emulation.py) = 7f9f5cd8aadafd309ba8dfb27f96fe8fa56a8af8
-SHA1 (patch-node__modules_node-gyp_lib_configure.js) = 5cee993904ffeb1497418706e258c2e61bbd847e
+SHA1 (patch-node__modules_node-gyp_lib_configure.js) = 3fb2fe036a4206c57c29da53009c81d4a05c7b96
