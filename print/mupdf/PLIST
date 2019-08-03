@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.18 2019/05/12 12:27:02 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.19 2019/08/03 14:47:41 leot Exp $
 bin/mupdf
+${PLIST.curl}bin/mupdf-curl
 ${PLIST.opengl}bin/mupdf-gl
 bin/muraster
 bin/mutool
@@ -9,8 +10,7 @@ include/mupdf/fitz/band-writer.h
 include/mupdf/fitz/bidi.h
 include/mupdf/fitz/bitmap.h
 include/mupdf/fitz/buffer.h
-include/mupdf/fitz/color-management.h
-include/mupdf/fitz/colorspace.h
+include/mupdf/fitz/color.h
 include/mupdf/fitz/compress.h
 include/mupdf/fitz/compressed-buffer.h
 include/mupdf/fitz/config.h
@@ -81,10 +81,10 @@ share/doc/mupdf/CHANGES
 share/doc/mupdf/COPYING
 share/doc/mupdf/README
 share/doc/mupdf/android-sdk.html
-share/doc/mupdf/api-changes.html
 share/doc/mupdf/artifex-logo.png
 share/doc/mupdf/building.html
 share/doc/mupdf/coding-overview.html
+share/doc/mupdf/coding-progressive.html
 share/doc/mupdf/coding-style.html
 share/doc/mupdf/examples/bbox-device.js
 share/doc/mupdf/examples/create-thumbnail.js
