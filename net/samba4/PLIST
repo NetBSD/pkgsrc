@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2019/04/08 18:35:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2019/08/03 06:54:39 adam Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/dumpmscat
@@ -444,6 +444,7 @@ ${PYSITELIB}/samba/tests/kcc/graph_utils.py
 ${PYSITELIB}/samba/tests/kcc/kcc_utils.py
 ${PYSITELIB}/samba/tests/kcc/ldif_import_export.py
 ${PYSITELIB}/samba/tests/krb5_credentials.py
+${PYSITELIB}/samba/tests/ldap_referrals.py
 ${PYSITELIB}/samba/tests/libsmb.py
 ${PYSITELIB}/samba/tests/loadparm.py
 ${PYSITELIB}/samba/tests/lsa_string.py
@@ -1001,6 +1002,7 @@ share/samba/setup/provision_self_join.ldif
 share/samba/setup/provision_self_join_config.ldif
 share/samba/setup/provision_self_join_modify.ldif
 share/samba/setup/provision_self_join_modify_config.ldif
+share/samba/setup/provision_self_join_modify_schema.ldif
 share/samba/setup/provision_users.ldif
 share/samba/setup/provision_users_add.ldif
 share/samba/setup/provision_users_modify.ldif
