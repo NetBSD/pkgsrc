@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2018/12/16 17:56:54 adam Exp $
+# $NetBSD: Makefile,v 1.29 2019/08/03 12:28:49 adam Exp $
 
-DISTNAME=	Pygments-2.3.1
+DISTNAME=	Pygments-2.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pygments/}
@@ -19,6 +19,9 @@ USE_LANGUAGES=		# none
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/pygmentize \
 		${DESTDIR}${PREFIX}/bin/pygmentize-${PYVERSSUFFIX} || ${TRUE}
+
+do-test:
+	cd ${WRKSRC} && ${PYTHONBIN} tests/run.py
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
