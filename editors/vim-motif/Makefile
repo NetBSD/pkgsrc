@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/06/08 10:40:59 rillig Exp $
+# $NetBSD: Makefile,v 1.38 2019/08/03 21:01:11 morr Exp $
 
 PKGNAME=		vim-motif-${VIM_VERSION}.${VIM_PATCHLEVEL}
 
@@ -17,7 +17,7 @@ CONFIGURE_ENV+=		MOTIFBASE=${MOTIFBASE}
 MAKE_ENV+=		MOTIFBASE=${MOTIFBASE}
 
 BUILD_TARGET=		vim
-INSTALL_TARGET=		installvimbin
+INSTALL_TARGET=		installvimbin installvimdiff installtutorbin
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
