@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3260 2019/08/03 20:56:30 morr Exp $
+$NetBSD: CHANGES-2019,v 1.3261 2019/08/03 21:01:57 morr Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5230,3 +5230,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/mupdf to 1.16.0 [leot 2019-08-03]
 	Updated print/zathura-pdf-mupdf to 0.3.4nb5 [leot 2019-08-03]
 	Updated net/haproxy to 2.0.3 [morr 2019-08-03]
+	Updated editors/vim to 8.1.1778 [morr 2019-08-03]
