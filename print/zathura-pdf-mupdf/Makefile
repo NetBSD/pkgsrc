@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2019/07/21 22:25:39 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2019/08/03 14:48:48 leot Exp $
 #
 
 DISTNAME=	zathura-pdf-mupdf-0.3.4
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	print
 MASTER_SITES=	https://pwmt.org/projects/zathura/plugins/download/
 EXTRACT_SUFX=	.tar.xz
@@ -21,6 +21,7 @@ CPPFLAGS+=	-D_XOPEN_SOURCE=600
 
 .include "../../devel/py-meson/build.mk"
 .include "../../graphics/cairo/buildlink3.mk"
+BUILDLINK_API_DEPENDS.mupdf+=	mupdf>=1.16.0
 .include "../../print/mupdf/buildlink3.mk"
 .include "../../print/zathura/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
