@@ -1,1 +1,1 @@
-bin/pydisasm.py @PREFIX@/bin/pydisasm-@PYVERSSUFFIX@.py
+bin/pydisasm @PREFIX@/bin/pydisasm-@PYVERSSUFFIX@

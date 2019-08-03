@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2019/06/13 07:52:45 adam Exp $
+# $NetBSD: Makefile,v 1.10 2019/08/03 08:55:10 adam Exp $
 
-DISTNAME=	xdis-4.0.2
+DISTNAME=	xdis-4.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xdis/}
@@ -18,7 +18,7 @@ USE_LANGUAGES=	# none
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} pydisasm.py pydisasm-${PYVERSSUFFIX}.py || ${TRUE}
+	${MV} pydisasm pydisasm-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
