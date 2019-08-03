@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3249 2019/08/03 06:55:09 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3250 2019/08/03 07:33:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5213,3 +5213,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/openldap to 2.4.48 [adam 2019-08-03]
 	Updated databases/ldb to 1.5.5 [adam 2019-08-03]
 	Updated net/samba4 to 4.10.6 [adam 2019-08-03]
+	Updated lang/nodejs to 10.16.1 [adam 2019-08-03]
+	Updated lang/npm to 6.10.2 [adam 2019-08-03]
