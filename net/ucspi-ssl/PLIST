@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/10/14 12:21:11 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/08/03 10:44:07 schmonz Exp $
 bin/https@
 bin/sslcat
 bin/sslclient
@@ -9,6 +9,7 @@ man/man1/https@.1
 man/man1/sslcat.1
 man/man1/sslclient.1
 man/man1/sslconnect.1
+man/man1/sslhandle.1
 man/man1/sslserver.1
 man/man2/ucspi-tls.2
 share/doc/ucspi-ssl/CERTS
