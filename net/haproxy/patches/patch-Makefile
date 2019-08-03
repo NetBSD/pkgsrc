@@ -1,15 +1,37 @@
-$NetBSD: patch-Makefile,v 1.6 2019/06/13 09:07:08 adam Exp $
+$NetBSD: patch-Makefile,v 1.7 2019/08/03 20:37:19 morr Exp $
 
 Do not hardcode _XOPEN_SOURCE.
 
---- Makefile.orig	2019-04-25 21:59:27.000000000 +0000
+--- Makefile.orig	2019-07-23 13:21:26.000000000 +0000
 +++ Makefile
-@@ -316,7 +316,7 @@ ifeq ($(TARGET),solaris)
-   # This is for Solaris 8
-   # We also enable getaddrinfo() which works since solaris 8.
-   USE_POLL       = implicit
--  TARGET_CFLAGS  = -fomit-frame-pointer -DFD_SETSIZE=65536 -D_REENTRANT -D_XOPEN_SOURCE=500 -D__EXTENSIONS__
+@@ -333,7 +333,7 @@ ifeq ($(TARGET),solaris)
+   set_target_defaults = $(call default_opts, \
+     USE_POLL USE_TPROXY USE_LIBCRYPT USE_CRYPT_H USE_GETADDRINFO USE_THREAD \
+     USE_RT USE_OBSOLETE_LINKER USE_EVPORTS)
+-  TARGET_CFLAGS  = -DFD_SETSIZE=65536 -D_REENTRANT -D_XOPEN_SOURCE=500 -D__EXTENSIONS__
 +  TARGET_CFLAGS  = -DFD_SETSIZE=65536 -D_REENTRANT -D__EXTENSIONS__
    TARGET_LDFLAGS = -lnsl -lsocket
-   USE_TPROXY     = implicit
-   USE_LIBCRYPT    = implicit
+ endif
+ 
+@@ -852,8 +852,8 @@ src/haproxy.o:	src/haproxy.c $(DEP)
+ 	       -c -o $@ $<
+ 
+ install-man:
+-	$(Q)install -v -d "$(DESTDIR)$(MANDIR)"/man1
+-	$(Q)install -v -m 644 doc/haproxy.1 "$(DESTDIR)$(MANDIR)"/man1
++	$(Q)install -d "$(DESTDIR)$(MANDIR)"/man1
++	$(Q)install -m 644 doc/haproxy.1 "$(DESTDIR)$(MANDIR)"/man1
+ 
+ EXCLUDE_DOCUMENTATION = lgpl gpl coding-style
+ DOCUMENTATION = $(filter-out $(EXCLUDE_DOCUMENTATION),$(patsubst doc/%.txt,%,$(wildcard doc/*.txt)))
+@@ -871,8 +871,8 @@ install-bin:
+ 			exit 1; \
+ 		fi; \
+ 	done
+-	$(Q)install -v -d "$(DESTDIR)$(SBINDIR)"
+-	$(Q)install -v haproxy $(EXTRA) "$(DESTDIR)$(SBINDIR)"
++	$(Q)install -d "$(DESTDIR)$(SBINDIR)"
++	$(Q)install haproxy $(EXTRA) "$(DESTDIR)$(SBINDIR)"
+ 
+ install: install-bin install-man install-doc
+ 
