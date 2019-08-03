@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3251 2019/08/03 08:55:28 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3252 2019/08/03 10:42:55 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5217,3 +5217,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/npm to 6.10.2 [adam 2019-08-03]
 	Updated graphics/freetype2 to 2.10.1 [adam 2019-08-03]
 	Updated devel/py-xdis to 4.0.3 [adam 2019-08-03]
+	Updated net/fehqlibs to 0.9.12.12c [schmonz 2019-08-03]
