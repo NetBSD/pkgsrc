@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2018/12/16 17:56:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2019/08/03 12:28:49 adam Exp $
 bin/pygmentize-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -114,6 +114,9 @@ ${PYSITELIB}/pygments/lexers/_stata_builtins.pyo
 ${PYSITELIB}/pygments/lexers/_tsql_builtins.py
 ${PYSITELIB}/pygments/lexers/_tsql_builtins.pyc
 ${PYSITELIB}/pygments/lexers/_tsql_builtins.pyo
+${PYSITELIB}/pygments/lexers/_vbscript_builtins.py
+${PYSITELIB}/pygments/lexers/_vbscript_builtins.pyc
+${PYSITELIB}/pygments/lexers/_vbscript_builtins.pyo
 ${PYSITELIB}/pygments/lexers/_vim_builtins.py
 ${PYSITELIB}/pygments/lexers/_vim_builtins.pyc
 ${PYSITELIB}/pygments/lexers/_vim_builtins.pyo
@@ -150,6 +153,9 @@ ${PYSITELIB}/pygments/lexers/basic.pyo
 ${PYSITELIB}/pygments/lexers/bibtex.py
 ${PYSITELIB}/pygments/lexers/bibtex.pyc
 ${PYSITELIB}/pygments/lexers/bibtex.pyo
+${PYSITELIB}/pygments/lexers/boa.py
+${PYSITELIB}/pygments/lexers/boa.pyc
+${PYSITELIB}/pygments/lexers/boa.pyo
 ${PYSITELIB}/pygments/lexers/business.py
 ${PYSITELIB}/pygments/lexers/business.pyc
 ${PYSITELIB}/pygments/lexers/business.pyo
@@ -234,6 +240,9 @@ ${PYSITELIB}/pygments/lexers/fantom.pyo
 ${PYSITELIB}/pygments/lexers/felix.py
 ${PYSITELIB}/pygments/lexers/felix.pyc
 ${PYSITELIB}/pygments/lexers/felix.pyo
+${PYSITELIB}/pygments/lexers/floscript.py
+${PYSITELIB}/pygments/lexers/floscript.pyc
+${PYSITELIB}/pygments/lexers/floscript.pyo
 ${PYSITELIB}/pygments/lexers/forth.py
 ${PYSITELIB}/pygments/lexers/forth.pyc
 ${PYSITELIB}/pygments/lexers/forth.pyo
@@ -243,6 +252,9 @@ ${PYSITELIB}/pygments/lexers/fortran.pyo
 ${PYSITELIB}/pygments/lexers/foxpro.py
 ${PYSITELIB}/pygments/lexers/foxpro.pyc
 ${PYSITELIB}/pygments/lexers/foxpro.pyo
+${PYSITELIB}/pygments/lexers/freefem.py
+${PYSITELIB}/pygments/lexers/freefem.pyc
+${PYSITELIB}/pygments/lexers/freefem.pyo
 ${PYSITELIB}/pygments/lexers/functional.py
 ${PYSITELIB}/pygments/lexers/functional.pyc
 ${PYSITELIB}/pygments/lexers/functional.pyo
@@ -372,6 +384,9 @@ ${PYSITELIB}/pygments/lexers/perl.pyo
 ${PYSITELIB}/pygments/lexers/php.py
 ${PYSITELIB}/pygments/lexers/php.pyc
 ${PYSITELIB}/pygments/lexers/php.pyo
+${PYSITELIB}/pygments/lexers/pony.py
+${PYSITELIB}/pygments/lexers/pony.pyc
+${PYSITELIB}/pygments/lexers/pony.pyo
 ${PYSITELIB}/pygments/lexers/praat.py
 ${PYSITELIB}/pygments/lexers/praat.pyc
 ${PYSITELIB}/pygments/lexers/praat.pyo
@@ -417,9 +432,15 @@ ${PYSITELIB}/pygments/lexers/sas.pyo
 ${PYSITELIB}/pygments/lexers/scripting.py
 ${PYSITELIB}/pygments/lexers/scripting.pyc
 ${PYSITELIB}/pygments/lexers/scripting.pyo
+${PYSITELIB}/pygments/lexers/sgf.py
+${PYSITELIB}/pygments/lexers/sgf.pyc
+${PYSITELIB}/pygments/lexers/sgf.pyo
 ${PYSITELIB}/pygments/lexers/shell.py
 ${PYSITELIB}/pygments/lexers/shell.pyc
 ${PYSITELIB}/pygments/lexers/shell.pyo
+${PYSITELIB}/pygments/lexers/slash.py
+${PYSITELIB}/pygments/lexers/slash.pyc
+${PYSITELIB}/pygments/lexers/slash.pyo
 ${PYSITELIB}/pygments/lexers/smalltalk.py
 ${PYSITELIB}/pygments/lexers/smalltalk.pyc
 ${PYSITELIB}/pygments/lexers/smalltalk.pyo
@@ -447,6 +468,9 @@ ${PYSITELIB}/pygments/lexers/tcl.pyo
 ${PYSITELIB}/pygments/lexers/templates.py
 ${PYSITELIB}/pygments/lexers/templates.pyc
 ${PYSITELIB}/pygments/lexers/templates.pyo
+${PYSITELIB}/pygments/lexers/teraterm.py
+${PYSITELIB}/pygments/lexers/teraterm.pyc
+${PYSITELIB}/pygments/lexers/teraterm.pyo
 ${PYSITELIB}/pygments/lexers/testing.py
 ${PYSITELIB}/pygments/lexers/testing.pyc
 ${PYSITELIB}/pygments/lexers/testing.pyo
@@ -468,6 +492,9 @@ ${PYSITELIB}/pygments/lexers/trafficscript.pyo
 ${PYSITELIB}/pygments/lexers/typoscript.py
 ${PYSITELIB}/pygments/lexers/typoscript.pyc
 ${PYSITELIB}/pygments/lexers/typoscript.pyo
+${PYSITELIB}/pygments/lexers/unicon.py
+${PYSITELIB}/pygments/lexers/unicon.pyc
+${PYSITELIB}/pygments/lexers/unicon.pyo
 ${PYSITELIB}/pygments/lexers/urbi.py
 ${PYSITELIB}/pygments/lexers/urbi.pyc
 ${PYSITELIB}/pygments/lexers/urbi.pyo
@@ -588,9 +615,15 @@ ${PYSITELIB}/pygments/styles/rrt.pyo
 ${PYSITELIB}/pygments/styles/sas.py
 ${PYSITELIB}/pygments/styles/sas.pyc
 ${PYSITELIB}/pygments/styles/sas.pyo
-${PYSITELIB}/pygments/styles/stata.py
-${PYSITELIB}/pygments/styles/stata.pyc
-${PYSITELIB}/pygments/styles/stata.pyo
+${PYSITELIB}/pygments/styles/solarized.py
+${PYSITELIB}/pygments/styles/solarized.pyc
+${PYSITELIB}/pygments/styles/solarized.pyo
+${PYSITELIB}/pygments/styles/stata_dark.py
+${PYSITELIB}/pygments/styles/stata_dark.pyc
+${PYSITELIB}/pygments/styles/stata_dark.pyo
+${PYSITELIB}/pygments/styles/stata_light.py
+${PYSITELIB}/pygments/styles/stata_light.pyc
+${PYSITELIB}/pygments/styles/stata_light.pyo
 ${PYSITELIB}/pygments/styles/tango.py
 ${PYSITELIB}/pygments/styles/tango.pyc
 ${PYSITELIB}/pygments/styles/tango.pyo
