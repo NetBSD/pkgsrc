@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.23 2019/05/17 05:45:10 wiz Exp $
+$NetBSD: patch-ac,v 1.24 2019/08/03 14:47:41 leot Exp $
 
 - libtool support 
 - Install target cleanup
@@ -6,10 +6,11 @@ $NetBSD: patch-ac,v 1.23 2019/05/17 05:45:10 wiz Exp $
 - Do not force `-O0' flag when building
 - Get rid of unused VERSION variable and `version:' target (otherwise `git' can
   be invoked during the building phase)
+- Install mupdf with curl support as `mupdf-curl'
 
---- Makefile.orig	2019-05-06 11:53:09.000000000 +0000
+--- Makefile.orig	2019-07-26 14:10:07.000000000 +0000
 +++ Makefile
-@@ -51,65 +51,65 @@ ifneq ($(verbose),yes)
+@@ -51,68 +51,68 @@ ifneq ($(verbose),yes)
  endif
  
  MKTGTDIR = mkdir -p $(dir $@)
@@ -51,13 +52,16 @@ $NetBSD: patch-ac,v 1.23 2019/05/17 05:45:10 wiz Exp $
  	$(CC_CMD) -Wall $(THIRD_CFLAGS) $(THREADING_CFLAGS)
  
 -$(OUT)/generated/%.o : generated/%.c
--	$(CC_CMD) -O0
 +$(OUT)/generated/%.lo : generated/%.c
-+	$(CC_CMD)
+ 	$(CC_CMD) -O0
  
 -$(OUT)/platform/x11/%.o : platform/x11/%.c
 +$(OUT)/platform/x11/%.lo : platform/x11/%.c
  	$(CC_CMD) -Wall $(X11_CFLAGS)
+ 
+-$(OUT)/platform/x11/curl/%.o : platform/x11/%.c
++$(OUT)/platform/x11/curl/%.lo : platform/x11/%.c
+ 	$(CC_CMD) -Wall $(X11_CFLAGS) $(CURL_CFLAGS) -DHAVE_CURL
  
 -$(OUT)/platform/gl/%.o : platform/gl/%.c
 +$(OUT)/platform/gl/%.lo : platform/gl/%.c
@@ -94,9 +98,9 @@ $NetBSD: patch-ac,v 1.23 2019/05/17 05:45:10 wiz Exp $
  
  MUPDF_SRC := $(sort $(wildcard source/fitz/*.c))
  MUPDF_SRC += $(sort $(wildcard source/pdf/*.c))
-@@ -119,14 +119,14 @@ MUPDF_SRC += $(sort $(wildcard source/ht
+@@ -121,14 +121,14 @@ MUPDF_SRC += $(sort $(wildcard source/sv
+ MUPDF_SRC += $(sort $(wildcard source/html/*.c))
  MUPDF_SRC += $(sort $(wildcard source/cbz/*.c))
- MUPDF_SRC += $(sort $(wildcard source/gprf/*.c))
  
 -MUPDF_OBJ := $(MUPDF_SRC:%.c=$(OUT)/%.o)
 +MUPDF_OBJ := $(MUPDF_SRC:%.c=$(OUT)/%.lo)
@@ -112,16 +116,27 @@ $NetBSD: patch-ac,v 1.23 2019/05/17 05:45:10 wiz Exp $
  
  # --- Generated embedded font files ---
  
-@@ -153,7 +153,7 @@ ifeq ($(HAVE_OBJCOPY),yes)
-   $(OUT)/%.ttf.o : %.ttf ; $(OBJCOPY_CMD)
-   $(OUT)/%.ttc.o : %.ttc ; $(OBJCOPY_CMD)
+@@ -149,13 +149,13 @@ generated/%.ttf.c : %.ttf $(HEXDUMP_EXE)
+ generated/%.ttc.c : %.ttc $(HEXDUMP_EXE) ; $(QUIET_GEN) $(MKTGTDIR) ; $(HEXDUMP_EXE) -s $@ $<
+ 
+ ifeq ($(HAVE_OBJCOPY),yes)
+-  MUPDF_OBJ += $(FONT_BIN:%=$(OUT)/%.o)
+-  $(OUT)/%.cff.o : %.cff ; $(OBJCOPY_CMD)
+-  $(OUT)/%.otf.o : %.otf ; $(OBJCOPY_CMD)
+-  $(OUT)/%.ttf.o : %.ttf ; $(OBJCOPY_CMD)
+-  $(OUT)/%.ttc.o : %.ttc ; $(OBJCOPY_CMD)
++  MUPDF_OBJ += $(FONT_BIN:%=$(OUT)/%.lo)
++  $(OUT)/%.cff.lo : %.cff ; $(OBJCOPY_CMD)
++  $(OUT)/%.otf.lo : %.otf ; $(OBJCOPY_CMD)
++  $(OUT)/%.ttf.lo : %.ttf ; $(OBJCOPY_CMD)
++  $(OUT)/%.ttc.lo : %.ttc ; $(OBJCOPY_CMD)
  else
 -  MUPDF_OBJ += $(FONT_GEN:%.c=$(OUT)/%.o)
 +  MUPDF_OBJ += $(FONT_GEN:%.c=$(OUT)/%.lo)
  endif
  
  generate: $(FONT_GEN)
-@@ -187,17 +187,17 @@ generate: source/pdf/js/util.js.h
+@@ -189,17 +189,17 @@ generate: source/pdf/js/util.js.h
  
  # --- Library ---
  
@@ -144,7 +159,7 @@ $NetBSD: patch-ac,v 1.23 2019/05/17 05:45:10 wiz Exp $
  
  # --- Main tools and viewers ---
  
-@@ -208,13 +208,13 @@ MUTOOL_SRC += source/tools/murun.c
+@@ -210,13 +210,13 @@ MUTOOL_SRC += source/tools/murun.c
  MUTOOL_SRC += source/tools/mutrace.c
  MUTOOL_SRC += source/tools/cmapdump.c
  MUTOOL_SRC += $(sort $(wildcard source/tools/pdf*.c))
@@ -160,7 +175,7 @@ $NetBSD: patch-ac,v 1.23 2019/05/17 05:45:10 wiz Exp $
  MURASTER_EXE := $(OUT)/muraster
  $(MURASTER_EXE) : $(MURASTER_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(THREAD_LIB)
  	$(LINK_CMD) $(THIRD_LIBS) $(THREADING_LIBS)
-@@ -222,7 +222,7 @@ TOOL_APPS += $(MURASTER_EXE)
+@@ -224,7 +224,7 @@ TOOL_APPS += $(MURASTER_EXE)
  
  ifeq ($(HAVE_GLUT),yes)
    MUVIEW_GLUT_SRC += $(sort $(wildcard platform/gl/*.c))
@@ -169,7 +184,7 @@ $NetBSD: patch-ac,v 1.23 2019/05/17 05:45:10 wiz Exp $
    MUVIEW_GLUT_EXE := $(OUT)/mupdf-gl
    $(MUVIEW_GLUT_EXE) : $(MUVIEW_GLUT_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(PKCS7_LIB) $(GLUT_LIB)
  	$(LINK_CMD) $(THIRD_LIBS) $(LIBCRYPTO_LIBS) $(WIN32_LDFLAGS) $(GLUT_LIBS)
-@@ -230,10 +230,10 @@ ifeq ($(HAVE_GLUT),yes)
+@@ -232,10 +232,10 @@ ifeq ($(HAVE_GLUT),yes)
  endif
  
  ifeq ($(HAVE_X11),yes)
@@ -184,7 +199,7 @@ $NetBSD: patch-ac,v 1.23 2019/05/17 05:45:10 wiz Exp $
    $(MUVIEW_X11_EXE) : $(MUVIEW_X11_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(PKCS7_LIB)
  	$(LINK_CMD) $(THIRD_LIBS) $(X11_LIBS) $(LIBCRYPTO_LIBS)
    VIEW_APPS += $(MUVIEW_X11_EXE)
-@@ -241,9 +241,9 @@ endif
+@@ -243,9 +243,9 @@ endif
  
  ifeq ($(HAVE_WIN32),yes)
    MUVIEW_WIN32_EXE := $(OUT)/mupdf-w32
@@ -197,7 +212,26 @@ $NetBSD: patch-ac,v 1.23 2019/05/17 05:45:10 wiz Exp $
    $(MUVIEW_WIN32_EXE) : $(MUVIEW_WIN32_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(PKCS7_LIB)
  	$(LINK_CMD) $(THIRD_LIBS) $(WIN32_LDFLAGS) $(WIN32_LIBS) $(LIBCRYPTO_LIBS)
    VIEW_APPS += $(MUVIEW_WIN32_EXE)
-@@ -251,18 +251,18 @@ endif
+@@ -254,12 +254,12 @@ endif
+ ifeq ($(HAVE_X11),yes)
+ ifeq ($(HAVE_CURL),yes)
+ ifeq ($(HAVE_PTHREAD),yes)
+-  MUVIEW_X11_CURL_EXE := $(OUT)/mupdf-x11-curl
+-  MUVIEW_X11_CURL_OBJ += $(OUT)/platform/x11/curl/pdfapp.o
+-  MUVIEW_X11_CURL_OBJ += $(OUT)/platform/x11/curl/x11_main.o
+-  MUVIEW_X11_CURL_OBJ += $(OUT)/platform/x11/curl/x11_image.o
+-  MUVIEW_X11_CURL_OBJ += $(OUT)/platform/x11/curl/curl_stream.o
+-  MUVIEW_X11_CURL_OBJ += $(OUT)/platform/x11/curl/prog_stream.o
++  MUVIEW_X11_CURL_EXE := $(OUT)/mupdf-curl
++  MUVIEW_X11_CURL_OBJ += $(OUT)/platform/x11/curl/pdfapp.lo
++  MUVIEW_X11_CURL_OBJ += $(OUT)/platform/x11/curl/x11_main.lo
++  MUVIEW_X11_CURL_OBJ += $(OUT)/platform/x11/curl/x11_image.lo
++  MUVIEW_X11_CURL_OBJ += $(OUT)/platform/x11/curl/curl_stream.lo
++  MUVIEW_X11_CURL_OBJ += $(OUT)/platform/x11/curl/prog_stream.lo
+   $(MUVIEW_X11_CURL_EXE) : $(MUVIEW_X11_CURL_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(PKCS7_LIB) $(CURL_LIB)
+ 	$(LINK_CMD) $(THIRD_LIBS) $(X11_LIBS) $(LIBCRYPTO_LIBS) $(CURL_LIBS) $(PTHREAD_LIBS)
+   VIEW_APPS += $(MUVIEW_X11_CURL_EXE)
+@@ -269,19 +269,19 @@ endif
  
  # --- Generated dependencies ---
  
@@ -223,11 +257,13 @@ $NetBSD: patch-ac,v 1.23 2019/05/17 05:45:10 wiz Exp $
 +-include $(MUVIEW_WIN32_OBJ:%.lo=%.d)
  
 --include $(MURASTER_OBJ:%.o=%.d)
+--include $(MUVIEW_X11_CURL_OBJ:%.o=%.d)
 +-include $(MURASTER_OBJ:%.lo=%.d)
++-include $(MUVIEW_X11_CURL_OBJ:%.lo=%.d)
  
  # --- Examples ---
  
-@@ -273,10 +273,10 @@ $(OUT)/multi-threaded: docs/examples/mul
+@@ -292,10 +292,10 @@ $(OUT)/multi-threaded: docs/examples/mul
  
  # --- Update version string header ---
  
@@ -242,7 +278,7 @@ $NetBSD: patch-ac,v 1.23 2019/05/17 05:45:10 wiz Exp $
  
  # --- Format man pages ---
  
-@@ -304,27 +304,30 @@ tools: $(TOOL_APPS)
+@@ -323,27 +323,30 @@ tools: $(TOOL_APPS)
  apps: $(TOOL_APPS) $(VIEW_APPS)
  
  install: libs apps
