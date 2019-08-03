@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2018/04/02 13:40:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2019/08/03 06:46:52 adam Exp $
 bin/ldapadd
 bin/ldapcompare
 bin/ldapdelete
@@ -17,6 +17,7 @@ include/ldap_features.h
 include/ldap_schema.h
 include/ldap_utf8.h
 include/ldif.h
+include/openldap.h
 include/slapi-plugin.h
 lib/liblber.la
 lib/libldap.la
