@@ -1,0 +1,15 @@
+$NetBSD: patch-install,v 1.1 2019/08/03 12:51:22 schmonz Exp $
+
+Install shared libraries.
+
+--- install.orig	2017-07-30 13:22:57.000000000 +0000
++++ install
+@@ -2,7 +2,7 @@
+ 
+ . ./conf-build
+ 
+-install_libs() { cp *.a $OFILES "$LIBDIR" ; }
++install_libs() { cp *.a *.so $OFILES "$LIBDIR" ; }
+ install_hdrs() { cp include/*.h "$HDRDIR" ; }
+ 
+ echo -n "Installing qlibs ..."
