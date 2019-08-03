@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2005/10/23 14:13:50 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/08/03 21:01:11 morr Exp $
 bin/rview
 bin/rvim
 bin/vim
+bin/vimdiff
+bin/vimtutor
