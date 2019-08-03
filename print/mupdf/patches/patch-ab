@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.20 2019/05/13 11:03:58 leot Exp $
+$NetBSD: patch-ab,v 1.21 2019/08/03 14:47:41 leot Exp $
 
 - Handle the various operating systems in the same way avoiding hardcoding
 - Avoid to use objcopy by setting HAVE_OBJCOPY to no (if `yes', and with
@@ -14,7 +14,7 @@ $NetBSD: patch-ab,v 1.20 2019/05/13 11:03:58 leot Exp $
   If no lcms2 is available just pass `-DFZ_ENABLE_ICC=0' to disable it via
   CFLAGS.
 
---- Makerules.orig	2019-05-06 11:53:09.000000000 +0000
+--- Makerules.orig	2019-07-23 12:23:08.000000000 +0000
 +++ Makerules
 @@ -6,17 +6,6 @@ OS := $(OS:MSYS%=MINGW)
  OS := $(OS:Windows_NT=MINGW)
@@ -34,7 +34,7 @@ $NetBSD: patch-ab,v 1.20 2019/05/13 11:03:58 leot Exp $
  SANITIZE_FLAGS += -fsanitize=address
  SANITIZE_FLAGS += -fsanitize=leak
  
-@@ -72,52 +61,40 @@ SYS_MUJS_LIBS := -lmujs
+@@ -72,77 +61,63 @@ SYS_MUJS_LIBS := -lmujs
  SYS_OPENJPEG_LIBS := -lopenjp2
  SYS_ZLIB_LIBS := -lz
  
@@ -50,11 +50,11 @@ $NetBSD: patch-ab,v 1.20 2019/05/13 11:03:58 leot Exp $
 -  AR = xcrun ar
 -  LD = xcrun ld
 -  RANLIB = xcrun ranlib
--
--else ifeq ($(OS),Linux)
--  HAVE_OBJCOPY := yes
 +HAVE_OBJCOPY := no
  
+-else ifeq ($(OS),Linux)
+-  HAVE_OBJCOPY := yes
+-
 -  ifeq ($(shell pkg-config --exists freetype2 && echo yes),yes)
 +ifeq ($(shell pkg-config --exists freetype2 && echo yes),yes)
  	SYS_FREETYPE_CFLAGS := $(shell pkg-config --cflags freetype2)
@@ -94,22 +94,34 @@ $NetBSD: patch-ab,v 1.20 2019/05/13 11:03:58 leot Exp $
 -  endif
 +endif
  
+-  HAVE_SYS_CURL := $(shell pkg-config --exists libcurl && echo yes)
+-  ifeq ($(HAVE_SYS_CURL),yes)
++HAVE_SYS_CURL := $(shell pkg-config --exists libcurl && echo yes)
++ifeq ($(HAVE_SYS_CURL),yes)
+ 	SYS_CURL_CFLAGS := $(shell pkg-config --cflags libcurl)
+ 	SYS_CURL_LIBS := $(shell pkg-config --libs libcurl)
+-  endif
++endif
+ 
 -  HAVE_GLUT := yes
 -  ifeq ($(HAVE_GLUT),yes)
 -	SYS_GLUT_CFLAGS :=
 -	SYS_GLUT_LIBS := -lglut -lGL
 -  endif
-+ifeq ($(shell pkg-config --exists glut && echo yes),yes)
-+  HAVE_GLUT ?= yes
-+  SYS_GLUT_CFLAGS := $(shell pkg-config --cflags glut)
-+  SYS_GLUT_LIBS := $(shell pkg-config --libs glut)
++HAVE_GLUT ?= $(shell pkg-config --exists glut && echo yes)
++ifeq ($(HAVE_GLUT),yes)
++	SYS_GLUT_CFLAGS := $(shell pkg-config --cflags glut)
++	SYS_GLUT_LIBS := $(shell pkg-config --libs glut)
 +endif
  
-   HAVE_X11 := $(shell pkg-config --exists x11 xext && echo yes)
-   ifeq ($(HAVE_X11),yes)
-@@ -125,18 +102,16 @@ else ifeq ($(OS),Linux)
+-  HAVE_X11 := $(shell pkg-config --exists x11 xext && echo yes)
+-  ifeq ($(HAVE_X11),yes)
++HAVE_X11 := $(shell pkg-config --exists x11 xext && echo yes)
++ifeq ($(HAVE_X11),yes)
+ 	X11_CFLAGS := $(shell pkg-config --cflags x11 xext)
  	X11_LIBS := $(shell pkg-config --libs x11 xext)
-   endif
+-  endif
++endif
  
 -  HAVE_LIBCRYPTO := $(shell pkg-config --exists 'libcrypto >= 1.1.0' && echo yes)
 -  ifeq ($(HAVE_LIBCRYPTO),yes)
