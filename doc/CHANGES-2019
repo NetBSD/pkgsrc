@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3246 2019/08/02 21:29:17 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.3247 2019/08/03 04:30:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5204,3 +5204,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated pkgtools/pkglint to 5.7.19 [rillig 2019-08-02]
 	Updated textproc/xapian to 1.4.12 [schmonz 2019-08-02]
 	Updated textproc/xapian-omega to 1.4.12 [schmonz 2019-08-02]
+	Updated textproc/py-lxml to 4.4.0 [adam 2019-08-03]
+	Updated time/py-pytz to 2019.2 [adam 2019-08-03]
