@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.117 2019/04/02 07:17:17 adam Exp $
+# $NetBSD: Makefile,v 1.118 2019/08/03 08:31:25 adam Exp $
 
-DISTNAME=	freetype-2.10.0
+DISTNAME=	freetype-2.10.1
 PKGNAME=	${DISTNAME:S/-/2-/}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freetype/}
 MASTER_SITES+=	http://download.savannah.gnu.org/releases/freetype/
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.freetype.org/
