@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3257 2019/08/03 12:32:09 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3258 2019/08/03 14:47:55 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5227,3 +5227,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/py-asyncssh to 1.17.1 [adam 2019-08-03]
 	Updated textproc/py-pygments to 2.4.2 [adam 2019-08-03]
 	Updated devel/py-ipython to 7.7.0 [adam 2019-08-03]
+	Updated print/mupdf to 1.16.0 [leot 2019-08-03]
