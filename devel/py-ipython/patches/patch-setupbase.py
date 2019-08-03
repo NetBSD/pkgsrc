@@ -1,14 +1,17 @@
-$NetBSD: patch-setupbase.py,v 1.2 2014/04/20 10:06:22 imil Exp $
+$NetBSD: patch-setupbase.py,v 1.3 2019/08/03 12:31:47 adam Exp $
 
 Honor PKGMANDIR
 
---- setupbase.py.orig	2014-04-02 05:31:02.000000000 +0000
+--- setupbase.py.orig	2019-07-26 21:57:01.000000000 +0000
 +++ setupbase.py
-@@ -272,7 +272,7 @@ def find_data_files():
+@@ -162,10 +162,7 @@ def find_data_files():
      Just man pages at this point.
      """
  
--    manpagebase = pjoin('share', 'man', 'man1')
+-    if "freebsd" in sys.platform:
+-        manpagebase = pjoin('man', 'man1')
+-    else:
+-        manpagebase = pjoin('share', 'man', 'man1')
 +    manpagebase = pjoin(os.environ.get('PKGMANDIR'), 'man1')
  
      # Simple file lists can be made by hand
