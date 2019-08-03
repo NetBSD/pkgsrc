@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2019/07/10 12:59:54 schmonz Exp $
+# $NetBSD: Makefile,v 1.35 2019/08/03 10:44:07 schmonz Exp $
 #
 
-DISTNAME=		ucspi-ssl-0.10.10
+DISTNAME=		ucspi-ssl-0.10.11
 PKGNAME=		${DISTNAME:S/-0./-0.999./}
-PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		https://www.fehcom.de/ipnet/ucspi-ssl/
 EXTRACT_SUFX=		.tgz
@@ -19,6 +18,7 @@ DJB_RESTRICTED=		no
 SSL_SCRIPTS=		https@ sslcat sslconnect
 SSL_PROGRAMS=		sslclient sslserver
 SSL_MAN1PAGES=		${SSL_SCRIPTS:S/$/.1/g} ${SSL_PROGRAMS:S/$/.1/g}
+SSL_MAN1PAGES+=		sslhandle.1
 SSL_MAN2PAGES=		ucspi-tls.2
 
 PKG_USERS_VARS+=	UCSPI_SSL_USER
@@ -35,7 +35,6 @@ CONF_FILES+=		${EGDIR}/dh1024.pem ${PKG_SYSCONFDIR}/dh1024.pem
 
 DJB_CONFIG_DIR=		${WRKSRC}
 DJB_CONFIG_CMDS=							\
-	${ECHO} ${PREFIX}/bin > conf-tcpbin;				\
 	${ECHO} > conf-ssl;						\
 	${ECHO} ${SSLDIR}/certs > conf-cadir;				\
 	${ECHO} ${PKG_SYSCONFDIR}/dh1024.pem > conf-dhfile;		\
@@ -45,6 +44,10 @@ DJB_CONFIG_CMDS=							\
 DEFAULT_MEDIUM_CIPHERS=	aNULL:-aNULL:ALL:!EXPORT:!LOW:+RC4:@STRENGTH
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man2 share/doc/${PKGBASE} ${EGDIR}
+
+do-test:
+	cd ${WRKSRC}; \
+		./package/rts
 
 do-install: do-install-sslperl
 .	for i in ${SSL_SCRIPTS}
