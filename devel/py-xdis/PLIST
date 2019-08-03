@@ -1,13 +1,20 @@
-@comment $NetBSD: PLIST,v 1.6 2019/06/13 07:52:45 adam Exp $
-bin/pydisasm-${PYVERSSUFFIX}.py
+@comment $NetBSD: PLIST,v 1.7 2019/08/03 08:55:10 adam Exp $
+bin/pydisasm-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/xdis/__init__.py
 ${PYSITELIB}/xdis/__init__.pyc
 ${PYSITELIB}/xdis/__init__.pyo
+${PYSITELIB}/xdis/bin/__init__.py
+${PYSITELIB}/xdis/bin/__init__.pyc
+${PYSITELIB}/xdis/bin/__init__.pyo
+${PYSITELIB}/xdis/bin/pydisasm.py
+${PYSITELIB}/xdis/bin/pydisasm.pyc
+${PYSITELIB}/xdis/bin/pydisasm.pyo
 ${PYSITELIB}/xdis/bytecode.py
 ${PYSITELIB}/xdis/bytecode.pyc
 ${PYSITELIB}/xdis/bytecode.pyo
