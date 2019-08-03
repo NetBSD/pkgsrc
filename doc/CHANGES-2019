@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3248 2019/08/03 04:38:52 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3249 2019/08/03 06:55:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5209,3 +5209,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated time/py-arrow to 0.14.4 [adam 2019-08-03]
 	Updated security/py-asn1 to 0.4.6 [adam 2019-08-03]
 	Updated security/py-asn1-modules to 0.2.6 [adam 2019-08-03]
+	Updated www/py-google-api-python-client to 1.7.10 [adam 2019-08-03]
+	Updated databases/openldap to 2.4.48 [adam 2019-08-03]
+	Updated databases/ldb to 1.5.5 [adam 2019-08-03]
+	Updated net/samba4 to 4.10.6 [adam 2019-08-03]
