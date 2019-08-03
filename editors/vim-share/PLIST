@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2019/06/17 22:18:02 morr Exp $
+@comment $NetBSD: PLIST,v 1.47 2019/08/03 21:01:11 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -234,6 +234,7 @@ share/vim/${VIM_SUBDIR}/doc/tags
 share/vim/${VIM_SUBDIR}/doc/tagsrch.txt
 share/vim/${VIM_SUBDIR}/doc/term.txt
 share/vim/${VIM_SUBDIR}/doc/terminal.txt
+share/vim/${VIM_SUBDIR}/doc/testing.txt
 share/vim/${VIM_SUBDIR}/doc/textprop.txt
 share/vim/${VIM_SUBDIR}/doc/tips.txt
 share/vim/${VIM_SUBDIR}/doc/todo.txt
@@ -340,6 +341,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/dosbatch.vim
 share/vim/${VIM_SUBDIR}/ftplugin/dosini.vim
 share/vim/${VIM_SUBDIR}/ftplugin/dtd.vim
 share/vim/${VIM_SUBDIR}/ftplugin/dtrace.vim
+share/vim/${VIM_SUBDIR}/ftplugin/dune.vim
 share/vim/${VIM_SUBDIR}/ftplugin/eiffel.vim
 share/vim/${VIM_SUBDIR}/ftplugin/elinks.vim
 share/vim/${VIM_SUBDIR}/ftplugin/erlang.vim
@@ -884,6 +886,7 @@ share/vim/${VIM_SUBDIR}/syntax/dtd.vim
 share/vim/${VIM_SUBDIR}/syntax/dtml.vim
 share/vim/${VIM_SUBDIR}/syntax/dtrace.vim
 share/vim/${VIM_SUBDIR}/syntax/dts.vim
+share/vim/${VIM_SUBDIR}/syntax/dune.vim
 share/vim/${VIM_SUBDIR}/syntax/dylan.vim
 share/vim/${VIM_SUBDIR}/syntax/dylanintr.vim
 share/vim/${VIM_SUBDIR}/syntax/dylanlid.vim
@@ -1313,6 +1316,7 @@ share/vim/${VIM_SUBDIR}/syntax/voscm.vim
 share/vim/${VIM_SUBDIR}/syntax/vrml.vim
 share/vim/${VIM_SUBDIR}/syntax/vroom.vim
 share/vim/${VIM_SUBDIR}/syntax/vsejcl.vim
+share/vim/${VIM_SUBDIR}/syntax/vuejs.vim
 share/vim/${VIM_SUBDIR}/syntax/wast.vim
 share/vim/${VIM_SUBDIR}/syntax/wdiff.vim
 share/vim/${VIM_SUBDIR}/syntax/web.vim
