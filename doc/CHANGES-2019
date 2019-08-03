@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3253 2019/08/03 10:43:35 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.3254 2019/08/03 10:44:14 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5219,3 +5219,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-xdis to 4.0.3 [adam 2019-08-03]
 	Updated net/fehqlibs to 0.9.12.12c [schmonz 2019-08-03]
 	Updated net/ucspi-tcp6 to 1.10.7 [schmonz 2019-08-03]
+	Updated net/ucspi-ssl to 0.999.10.11 [schmonz 2019-08-03]
