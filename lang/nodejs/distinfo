@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.150 2019/07/02 17:09:25 jperkin Exp $
+$NetBSD: distinfo,v 1.151 2019/08/03 07:31:15 adam Exp $
 
-SHA1 (node-v10.16.0.tar.gz) = 7e228646ef32c7eb4e509c220201366d6e86cc36
-RMD160 (node-v10.16.0.tar.gz) = 7a5610db052012bff785a16a522703c458f725d5
-SHA512 (node-v10.16.0.tar.gz) = 2adf0ad593cb2583cc0d0556612644076fd16485ea22ecffb1167482639a4c102e91282f1e7671b545980f5431269fb6677b4d9e4b97cb69b781c47dd04be471
-Size (node-v10.16.0.tar.gz) = 45543679 bytes
+SHA1 (node-v10.16.1.tar.gz) = 315174cdbe6730e8ee31e2177b73b58d5d2a0849
+RMD160 (node-v10.16.1.tar.gz) = 6f90fb3cc8d64086a4fc81566f4bb396f744d7ab
+SHA512 (node-v10.16.1.tar.gz) = a86f19985e440aa0ab2187b673399c72d43ee9062719a6d7dad418d88d4539f63da5c0d83a4bcffcae17b3c5f268217db593f376eadf1c4cee7683d324f8d621
+Size (node-v10.16.1.tar.gz) = 45866789 bytes
 SHA1 (patch-common.gypi) = de37949f38d9bd39a18b59d59ec74e528bd323ac
-SHA1 (patch-deps_cares_cares.gyp) = 2235eb44bc984fa2e745fdf1786f1ae6de6ef80f
+SHA1 (patch-deps_cares_cares.gyp) = 22b44f2ac59963f694dfe4f4585e08960b3dec32
 SHA1 (patch-deps_openssl_config_archs_linux-elf_asm_openssl-cl.gypi) = 12c91ca27ced24cabd714902fad9c9eb0ba40f9b
 SHA1 (patch-deps_openssl_config_bn__conf__asm.h) = a4cf4f0771c96fb09a00b76b25d35000d65ef92f
 SHA1 (patch-deps_openssl_config_bn__conf__no-asm.h) = c13b305c7a93b7adf61186d50ac637a6d180fa18
@@ -17,7 +17,6 @@ SHA1 (patch-deps_openssl_openssl-cl__asm.gypi) = addb5837ea7b8ea2732cd2f5aaa8a24
 SHA1 (patch-deps_openssl_openssl-cl__no__asm.gypi) = 73368f336dbe500e45f0ba6bbb7656416a27b294
 SHA1 (patch-deps_openssl_openssl__asm.gypi) = b85e1f5a9f862d469afcb36ff6e1ad202bea704a
 SHA1 (patch-deps_openssl_openssl__no__asm.gypi) = b549ea34f51e26669a41a64da0db10e92f0d0a99
-SHA1 (patch-deps_openssl_openssl_crypto_init.c) = e544fb218fd927a6d7097df3718c145750198555
 SHA1 (patch-deps_openssl_openssl_crypto_rand_rand__unix.c) = ba8d4602c3386801ad8d3c33c757c69ad3d25a34
 SHA1 (patch-deps_uv_common.gypi) = d38a9c8d9e3522f15812aec2f5b1e1e636d4bab3
 SHA1 (patch-deps_uv_src_unix_netbsd.c) = 76b27ae86aa80582554ee824146ee7c42c33883b
