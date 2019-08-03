@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.74 2019/07/21 22:25:33 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2019/08/03 06:54:39 adam Exp $
 
-DISTNAME=	samba-4.10.5
-PKGREVISION=	3
+DISTNAME=	samba-4.10.6
 CATEGORIES=	net
 MASTER_SITES=	http://download.samba.org/pub/samba/stable/
 
@@ -208,6 +207,7 @@ REPLACE_PYTHON+=	source4/scripting/bin/*
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/ldb/buildlink3.mk"
+.include "../../databases/lmdb/buildlink3.mk"
 .include "../../devel/cmocka/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
