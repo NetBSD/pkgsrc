@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/05/11 06:57:25 markd Exp $
+$NetBSD: distinfo,v 1.8 2019/08/04 12:36:52 markd Exp $
 
-SHA1 (tex-hyphen-french-50792/hyphen-french.tar.xz) = 0f9d4ae6f3fa18095e6fdd7313ae7d6eb17c9a0f
-RMD160 (tex-hyphen-french-50792/hyphen-french.tar.xz) = c385e90f20b0d0bd2c2f555d1d28323411ed87d9
-SHA512 (tex-hyphen-french-50792/hyphen-french.tar.xz) = 2ccbba2378cb768e8631552b46752c732b551b2defc88e79fb9d86172dc7638dfea788c487d979ecc3fd13bbcdc91193ac2f2fc095eb4546c4ba054618545b10
-Size (tex-hyphen-french-50792/hyphen-french.tar.xz) = 11620 bytes
+SHA1 (tex-hyphen-french-51186/hyphen-french.tar.xz) = 7ef548dfbdfa4a09169ed3c0de3f39d1d1b77013
+RMD160 (tex-hyphen-french-51186/hyphen-french.tar.xz) = 29fdad017c3ca31cee8c6f49049f275c1cc5baf5
+SHA512 (tex-hyphen-french-51186/hyphen-french.tar.xz) = 625087254c231e68c1f9abecbc3b315c08021c22d9c0332ae07eea8e600b800b12ac5147ce11488ec99d6368d695c0766edbd78115c8d5ac6cd6fb71478723d7
+Size (tex-hyphen-french-51186/hyphen-french.tar.xz) = 11416 bytes
