@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/01/26 11:06:19 markd Exp $
+$NetBSD: distinfo,v 1.5 2019/08/04 04:14:30 markd Exp $
 
-SHA1 (tex-tikzmark-48929/tikzmark.tar.xz) = 7a291f51f31bcf725605459f4960ac51e89ef297
-RMD160 (tex-tikzmark-48929/tikzmark.tar.xz) = c539ce4352d14d7013cdf1e21b49a0f5d8b62972
-SHA512 (tex-tikzmark-48929/tikzmark.tar.xz) = 6236705424fcd846a4ccabd49b72d1e3750c358446b231537394bf2cf0cead1282dd8e73e19fe7b67205c1eefa805f77f0712f3d6bd13f267dce3cd4076064f2
-Size (tex-tikzmark-48929/tikzmark.tar.xz) = 5040 bytes
+SHA1 (tex-tikzmark-51050/tikzmark.tar.xz) = a08e9c39cfb046cd5044652bf5416e2d78cfdbc3
+RMD160 (tex-tikzmark-51050/tikzmark.tar.xz) = 1596bf8e34c77c790403b74e5bf36c67cb40f1b8
+SHA512 (tex-tikzmark-51050/tikzmark.tar.xz) = 470bd579472e928b0b0ac362d874abd5859467d1fe696363e09d6fe878f135cb39bfb014bbe53f78bee8e7e5b14c046f90879b1b4cb1d671f3dc98a7db704f07
+Size (tex-tikzmark-51050/tikzmark.tar.xz) = 5432 bytes
