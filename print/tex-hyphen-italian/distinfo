@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/05/11 06:57:26 markd Exp $
+$NetBSD: distinfo,v 1.8 2019/08/04 19:55:48 markd Exp $
 
-SHA1 (tex-hyphen-italian-50792/hyphen-italian.tar.xz) = ab8b8dfe906385638b802df2f7fe4963faa88b05
-RMD160 (tex-hyphen-italian-50792/hyphen-italian.tar.xz) = 05da28400d57d30e59170f65e16b745794dfa2bb
-SHA512 (tex-hyphen-italian-50792/hyphen-italian.tar.xz) = cafc45614a97f6bbf0a477d6204bc69bbc568f57b5009078f6addce79d345965a57cb631ad9358df6b25e150954f155eff5f4f81ccdb4ac703750d41c28737ee
-Size (tex-hyphen-italian-50792/hyphen-italian.tar.xz) = 3676 bytes
+SHA1 (tex-hyphen-italian-51186/hyphen-italian.tar.xz) = dfca64e0461f4500230fea9cebc104d484420576
+RMD160 (tex-hyphen-italian-51186/hyphen-italian.tar.xz) = 2f45e7ab6eeb550981acffda31c0c229226addcd
+SHA512 (tex-hyphen-italian-51186/hyphen-italian.tar.xz) = f873581b4e5f674e4cd37101d89fb3d5099930bff904d2c7a55512ac4dc7dc48e050cd18615bfebc269d894bb46b65642badc7de37e95e6730d8312afff95b65
+Size (tex-hyphen-italian-51186/hyphen-italian.tar.xz) = 3524 bytes
