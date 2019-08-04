@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/08/04 20:00:05 markd Exp $
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-la-x-classic.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-la-x-liturgic.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-la.tex
@@ -7,15 +7,6 @@ share/texmf-dist/tex/generic/hyph-utf8/patterns/ptex/hyph-la.ec.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-la-x-classic.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-la-x-liturgic.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-la.tex
-share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-la-x-classic.chr.txt
-share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-la-x-classic.hyp.txt
-share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-la-x-classic.lic.txt
 share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-la-x-classic.pat.txt
-share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-la-x-liturgic.chr.txt
-share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-la-x-liturgic.hyp.txt
-share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-la-x-liturgic.lic.txt
 share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-la-x-liturgic.pat.txt
-share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-la.chr.txt
-share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-la.hyp.txt
-share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-la.lic.txt
 share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-la.pat.txt
