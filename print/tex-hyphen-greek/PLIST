@@ -1,15 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2016/06/16 04:06:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/08/04 12:49:35 markd Exp $
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-el-monoton.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-el-polyton.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-el-monoton.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-el-polyton.tex
-share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-el-monoton.chr.txt
-share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-el-monoton.hyp.txt
-share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-el-monoton.lic.txt
 share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-el-monoton.pat.txt
-share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-el-polyton.chr.txt
-share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-el-polyton.hyp.txt
-share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-el-polyton.lic.txt
 share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-el-polyton.pat.txt
 share/texmf-dist/tex/generic/hyphen/grmhyph5.tex
 share/texmf-dist/tex/generic/hyphen/grphyph5.tex
