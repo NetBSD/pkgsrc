@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:32:28 agc Exp $
+$NetBSD: distinfo,v 1.5 2019/08/04 11:24:52 adam Exp $
 
-SHA1 (xattr/v0.7.6.tar.gz) = f250cf1b5711391bef112be538a54f207143ed38
-RMD160 (xattr/v0.7.6.tar.gz) = 340fa56fb6ad474eee328fdd68c4e158b1f01c76
-SHA512 (xattr/v0.7.6.tar.gz) = 1d96f6f9301f5d2825e59282b92d7ba2e25ee23a28d003bdc9ddf504e9ee4597da3f64bad8456ce8fe237e706f572171209633d3ab206be887423cb6cee3d21a
-Size (xattr/v0.7.6.tar.gz) = 10123 bytes
-SHA1 (patch-xattr_lib.py) = 1b83f0ab0e8820e8a76c5ad00ed1b71d95803cf6
+SHA1 (xattr-0.9.6.tar.gz) = 2b02755354879aafbf46dfd6860edb80f0948b90
+RMD160 (xattr-0.9.6.tar.gz) = 53b0bcd0dd7ec35f5495c5d9a57245e22c45de31
+SHA512 (xattr-0.9.6.tar.gz) = e62239341453ca69e7c05da1676b53d42c96a354f6ba8c58cfeb58a584dfe4c3a4e33a0d1ae0c1e9e398a03979fc0bc2099e1272956cb58ead784ac4e61ca2ea
+Size (xattr-0.9.6.tar.gz) = 13284 bytes
