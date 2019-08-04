@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/05/11 06:57:23 markd Exp $
+$NetBSD: distinfo,v 1.8 2019/08/04 11:50:46 markd Exp $
 
-SHA1 (tex-hyphen-basque-50792/hyphen-basque.tar.xz) = f5c386f9ca9e322f07b7dccd4e47194d91e97f17
-RMD160 (tex-hyphen-basque-50792/hyphen-basque.tar.xz) = b2a455e3dcb41a717d30ec03056ab4e5eafc38c7
-SHA512 (tex-hyphen-basque-50792/hyphen-basque.tar.xz) = f6b0cb1b9f3dc34a326df60c35e9934dc38ec5acabd9f299fa2fc876528962a4eabe9e6e2514a3a6eec38115a0ba7adf28683c2124a7010b8a126875b114cfe7
-Size (tex-hyphen-basque-50792/hyphen-basque.tar.xz) = 3380 bytes
+SHA1 (tex-hyphen-basque-51186/hyphen-basque.tar.xz) = 11e9bb05754ceac93ce072a044c32dbec0826c6e
+RMD160 (tex-hyphen-basque-51186/hyphen-basque.tar.xz) = 83f5f5de4998f12696d0c710b7d82ec0a80a6bf8
+SHA512 (tex-hyphen-basque-51186/hyphen-basque.tar.xz) = dc57f3ec18dc77de7f638084dfd42e236fb53cdd4027261f81b1425e89397e3343568558c869bc2def57cadebaa5ad113e9993bbc903b157ef3de88d9b6ce23e
+Size (tex-hyphen-basque-51186/hyphen-basque.tar.xz) = 3240 bytes
