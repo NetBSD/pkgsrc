@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3265 2019/08/04 11:40:23 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3266 2019/08/04 14:30:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5250,3 +5250,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/mupdf to 1.16.1 [leot 2019-08-04]
 	Updated sysutils/py-xattr to 0.9.6 [adam 2019-08-04]
 	Updated www/gitea to 1.9.0 [nia 2019-08-04]
+	Updated devel/radare2 to 3.6.0 [ryoon 2019-08-04]
