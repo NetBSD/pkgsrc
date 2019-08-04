@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2019/06/19 10:04:10 nia Exp $
+$NetBSD: distinfo,v 1.5 2019/08/04 11:39:53 nia Exp $
 
-SHA1 (gitea-1.8.3.tar.gz) = b4091ff082cc75f7168a98508151d6974c698ce3
-RMD160 (gitea-1.8.3.tar.gz) = bcef135147dc2cab988dc31a1c284d577e4f320e
-SHA512 (gitea-1.8.3.tar.gz) = f6019fbfc056e4c7176222ccaca1cf638bd1f52323de54fcddc618129aeb778674f6e305de60e7d17b69505ad65439445ee6b5e368afdf0a6fbace7407acb495
-Size (gitea-1.8.3.tar.gz) = 24320679 bytes
+SHA1 (gitea-1.9.0.tar.gz) = 87aebbedadb057ec66c7c904c40f403f6429d5c9
+RMD160 (gitea-1.9.0.tar.gz) = 9204908635064810fea61287a987dae8be2a3c67
+SHA512 (gitea-1.9.0.tar.gz) = 3cc7fb5162c89d3f068b5909b9a86cbb6802c35009c64baae5428e3b406fcd1dba146ad964168557db174333efecc101a85b00f37dce4e016337ef1bb29149c6
+Size (gitea-1.9.0.tar.gz) = 24057144 bytes
 SHA1 (patch-vendor_github.com_edsrzf_mmap-go_mmap.go) = fb6036fca52ad3ecf779080849a015fee640aba5
 SHA1 (patch-vendor_github.com_edsrzf_mmap-go_mmap__solaris.go) = f4341dfab2b452f926353350ce861aa75e3e47f9
 SHA1 (patch-vendor_github.com_edsrzf_mmap-go_mmap__sys.go) = 4e6121157bbd4072feaca297c081efa49379a57c
