@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/01/22 11:46:50 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/08/04 04:35:35 markd Exp $
 share/texmf-dist/tex/generic/listofitems/listofitems.sty
 share/texmf-dist/tex/generic/listofitems/listofitems.tex
+share/texmf-dist/tex/generic/listofitems/listofitemsold.tex
