@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2019/05/11 06:57:23 markd Exp $
+# $NetBSD: Makefile,v 1.12 2019/08/04 11:46:16 markd Exp $
 
 DISTNAME=	hyphen-ancientgreek
-PKGNAME=	tex-${DISTNAME}-2019
-TEXLIVE_REV=	50805
+PKGNAME=	tex-${DISTNAME}-2019.51186
+TEXLIVE_REV=	51186
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Hyphenation patterns for ancient Greek
