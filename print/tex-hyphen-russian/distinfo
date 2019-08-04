@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/05/11 06:57:27 markd Exp $
+$NetBSD: distinfo,v 1.8 2019/08/04 20:19:38 markd Exp $
 
-SHA1 (tex-hyphen-russian-50792/hyphen-russian.tar.xz) = 134e359f3beb262f3eae24b5048976b53dc81aaa
-RMD160 (tex-hyphen-russian-50792/hyphen-russian.tar.xz) = f0415013db34a2294ffcef50d8b2d9039433a52b
-SHA512 (tex-hyphen-russian-50792/hyphen-russian.tar.xz) = d20071c8db823db7ee342a4b0a08d1ea0c4d5d84be9f301b1d636eb6411fb2e26946b27f54049af15a30b05e5eaec7d84dcbbf1f1ece318a2ef114ed4c998f68
-Size (tex-hyphen-russian-50792/hyphen-russian.tar.xz) = 34672 bytes
+SHA1 (tex-hyphen-russian-51186/hyphen-russian.tar.xz) = a271a5ad9c7c8aa2a37ee8faad6cb23c7b228f38
+RMD160 (tex-hyphen-russian-51186/hyphen-russian.tar.xz) = b626e6e1b8f3fd420c6dee4d2c93084e7032fc6d
+SHA512 (tex-hyphen-russian-51186/hyphen-russian.tar.xz) = b13290533a666b3377f9d0fad9d441f6475a3363e32e3675ab836402ed03083b4a1ddbc2fed946e7e7d048a4ef9a8e6d13ece7c98e77a828af3ba6e7ef14c0cb
+Size (tex-hyphen-russian-51186/hyphen-russian.tar.xz) = 34524 bytes
