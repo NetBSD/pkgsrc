@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3262 2019/08/04 04:43:17 markd Exp $
+$NetBSD: CHANGES-2019,v 1.3263 2019/08/04 09:38:51 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5247,3 +5247,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/tex-listofitems-doc to 1.62 [markd 2019-08-04]
 	Updated fonts/tex-libertine to 5.3.0.51174 [markd 2019-08-04]
 	Updated fonts/tex-libertine-doc to 5.3.0.51174 [markd 2019-08-04]
+	Updated print/mupdf to 1.16.1 [leot 2019-08-04]
