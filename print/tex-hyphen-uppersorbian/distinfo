@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/05/11 06:57:28 markd Exp $
+$NetBSD: distinfo,v 1.8 2019/08/04 21:01:17 markd Exp $
 
-SHA1 (tex-hyphen-uppersorbian-50792/hyphen-uppersorbian.tar.xz) = 22ee3c0bad42522f57f2dd2f927823635b91e6bd
-RMD160 (tex-hyphen-uppersorbian-50792/hyphen-uppersorbian.tar.xz) = fe468e99692b4b6ceaa7934feaa54b197c6be097
-SHA512 (tex-hyphen-uppersorbian-50792/hyphen-uppersorbian.tar.xz) = 21d4f40c6b2eb6fe4219385538fc2b3d83da5089f08b9b739900d9ef0135c9f035c7393ccc84c29dbdba1c662f32dc92db80598ae5a62e968d083fa1b57254e3
-Size (tex-hyphen-uppersorbian-50792/hyphen-uppersorbian.tar.xz) = 5644 bytes
+SHA1 (tex-hyphen-uppersorbian-51186/hyphen-uppersorbian.tar.xz) = 2b18f28d7d054eab345ceed5ffd6bf520a2a7fb9
+RMD160 (tex-hyphen-uppersorbian-51186/hyphen-uppersorbian.tar.xz) = 15fd78043c25183266f600d1f4fcecd65652900a
+SHA512 (tex-hyphen-uppersorbian-51186/hyphen-uppersorbian.tar.xz) = b60b36ae0816f11b6064285d79098ad6aac605bc1b20bd97191b97bb10a28b445e0e71d1ea2476c0731a72d96c20d114d640c3d4471d53a8b6726dc089377a0b
+Size (tex-hyphen-uppersorbian-51186/hyphen-uppersorbian.tar.xz) = 5500 bytes
