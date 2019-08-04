@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/08/04 20:07:57 markd Exp $
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-nb.tex
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-nn.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/ptex/hyph-nb.ec.tex
@@ -6,11 +6,7 @@ share/texmf-dist/tex/generic/hyph-utf8/patterns/ptex/hyph-nn.ec.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-nb.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-nn.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-no.tex
-share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-nb.chr.txt
 share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-nb.hyp.txt
-share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-nb.lic.txt
 share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-nb.pat.txt
-share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-nn.chr.txt
 share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-nn.hyp.txt
-share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-nn.lic.txt
 share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-nn.pat.txt
