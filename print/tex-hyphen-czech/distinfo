@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/05/11 06:57:24 markd Exp $
+$NetBSD: distinfo,v 1.8 2019/08/04 12:13:52 markd Exp $
 
-SHA1 (tex-hyphen-czech-50792/hyphen-czech.tar.xz) = e661061384ec18a009de73a61c4190d7a65bf5b9
-RMD160 (tex-hyphen-czech-50792/hyphen-czech.tar.xz) = ad81f31c9a41691c602b0cdb406c1ee52dff5e5c
-SHA512 (tex-hyphen-czech-50792/hyphen-czech.tar.xz) = 9c49567abdb93298c58dc914a7d68c4b305947a4863a0fd06758d4516427596458d95e031f7264297278d5fb242205781bda244121eed135967a5a9cd2e6836a
-Size (tex-hyphen-czech-50792/hyphen-czech.tar.xz) = 15908 bytes
+SHA1 (tex-hyphen-czech-51186/hyphen-czech.tar.xz) = a909760a7affd7ad76a5fd030e1b75f84b46dc65
+RMD160 (tex-hyphen-czech-51186/hyphen-czech.tar.xz) = 752b53ae1bc843534ff40812389419791217a82e
+SHA512 (tex-hyphen-czech-51186/hyphen-czech.tar.xz) = ea97fbb5b273238881865f8499c300d9b1886e921eb50ccf01291c40059cde75088890d4a06cdf2e43d4aaddc7aa43ab82174c0a50097044a69a53a694b47aba
+Size (tex-hyphen-czech-51186/hyphen-czech.tar.xz) = 15748 bytes
