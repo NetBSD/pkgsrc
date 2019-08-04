@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/05/11 06:57:24 markd Exp $
+$NetBSD: distinfo,v 1.8 2019/08/04 11:58:55 markd Exp $
 
-SHA1 (tex-hyphen-catalan-50792/hyphen-catalan.tar.xz) = 2e8b30756f5b5000a40602d1fe3456f8b2e36902
-RMD160 (tex-hyphen-catalan-50792/hyphen-catalan.tar.xz) = bfc20c9ce44942bb2bbfd7a00810fc168434ea23
-SHA512 (tex-hyphen-catalan-50792/hyphen-catalan.tar.xz) = 29454662cb701c63e8017dc034a31db9539483319e36307aa99dfdadf9d7fa7d3c44500397c0af079b3026f874803522768212e1249cc888898a593f79fed32b
-Size (tex-hyphen-catalan-50792/hyphen-catalan.tar.xz) = 5232 bytes
+SHA1 (tex-hyphen-catalan-51186/hyphen-catalan.tar.xz) = 2a3fa726ec36cb4a5038e27ae0ae412858435fa1
+RMD160 (tex-hyphen-catalan-51186/hyphen-catalan.tar.xz) = be2d5da768fd699f6d2e2aa4c85394adfa50aeec
+SHA512 (tex-hyphen-catalan-51186/hyphen-catalan.tar.xz) = 86979241d2a216460d2cd53cb5bb5a6df257b0273c4a4f5b1b799397be48ab6783e37fd041cc8071a1433a8af138a4d3a777cc050cbaf4907578e7ce0645ab5c
+Size (tex-hyphen-catalan-51186/hyphen-catalan.tar.xz) = 5032 bytes
