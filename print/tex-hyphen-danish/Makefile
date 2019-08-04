@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2019/05/11 06:57:24 markd Exp $
+# $NetBSD: Makefile,v 1.10 2019/08/04 12:18:09 markd Exp $
 
 DISTNAME=	hyphen-danish
-PKGNAME=	tex-${DISTNAME}-2019
-TEXLIVE_REV=	50792
+PKGNAME=	tex-${DISTNAME}-2019.51186
+TEXLIVE_REV=	51186
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Danish hyphenation patterns
