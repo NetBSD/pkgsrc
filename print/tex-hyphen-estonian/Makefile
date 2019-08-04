@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2019/01/26 22:48:26 markd Exp $
+# $NetBSD: Makefile,v 1.9 2019/08/04 12:30:22 markd Exp $
 
 DISTNAME=	hyphen-estonian
-PKGNAME=	tex-${DISTNAME}-2018
-TEXLIVE_REV=	49078
+PKGNAME=	tex-${DISTNAME}-2019.51186
+TEXLIVE_REV=	51186
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Hyphenation patterns for Estonian
