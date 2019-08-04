@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2017/07/30 22:32:20 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2019/08/04 14:41:27 ryoon Exp $
 #
 
 VERSION=		20130705
@@ -19,6 +19,8 @@ ONLY_FOR_PLATFORM=	Linux-*-* SunOS-*-* NetBSD-*-* DragonFly-*-*
 INSTALLATION_DIRS=	lib include/rump ${PKGMANDIR}/man3
 
 WRKSRC=			${WRKDIR}/buildrump
+
+CHECK_SHLIBS_SUPPORTED=	no
 
 do-build:
 	cd ${WRKSRC} && ./buildrump.sh -r tools build install
