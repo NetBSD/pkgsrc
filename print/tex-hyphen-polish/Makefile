@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2019/05/11 06:57:27 markd Exp $
+# $NetBSD: Makefile,v 1.10 2019/08/04 20:12:39 markd Exp $
 
 DISTNAME=	hyphen-polish
-PKGNAME=	tex-${DISTNAME}-3.0a.2019
-TEXLIVE_REV=	50792
+PKGNAME=	tex-${DISTNAME}-3.0a.2019.51186
+TEXLIVE_REV=	51186
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Hyphenation for Polish
