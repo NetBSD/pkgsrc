@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/02/21 09:59:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/08/04 00:20:10 nia Exp $
 bin/cdk5-config
 include/cdk.h
 include/cdk/alphalist.h
@@ -43,6 +43,7 @@ include/cdk/uscale.h
 include/cdk/uslider.h
 include/cdk/viewer.h
 lib/libcdk.a
+man/man1/cdk5-config.1
 man/man3/Beep.3
 man/man3/CDKallocStrings.3
 man/man3/CDKcountStrings.3
@@ -405,6 +406,7 @@ man/man3/getCDKViewerHighlight.3
 man/man3/getCDKViewerInfo.3
 man/man3/getCDKViewerInfoLine.3
 man/man3/getCDKViewerTitle.3
+man/man3/getCdkTitle.3
 man/man3/getDirectoryContents.3
 man/man3/getListIndex.3
 man/man3/getString.3
@@ -1038,6 +1040,7 @@ share/examples/cdk/lowerCDKObject_ex.c
 share/examples/cdk/marquee_ex.c
 share/examples/cdk/matrix_ex.c
 share/examples/cdk/mentry_ex.c
+share/examples/cdk/mentry_ex2.c
 share/examples/cdk/menu_ex.c
 share/examples/cdk/position_ex.c
 share/examples/cdk/preprocess_ex.c
@@ -1046,6 +1049,7 @@ share/examples/cdk/radio_ex.c
 share/examples/cdk/raiseCDKObject_ex.c
 share/examples/cdk/scale_ex.c
 share/examples/cdk/scroll_ex.c
+share/examples/cdk/scroll_ex2.c
 share/examples/cdk/selection_ex.c
 share/examples/cdk/slider_ex.c
 share/examples/cdk/subwindow_ex.c
