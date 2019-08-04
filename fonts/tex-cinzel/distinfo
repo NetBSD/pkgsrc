@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:44:48 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/08/04 03:50:39 markd Exp $
 
-SHA1 (tex-cinzel-34408/cinzel.tar.xz) = 42b908e08446017dc78453a8cf6635c24cb815cc
-RMD160 (tex-cinzel-34408/cinzel.tar.xz) = fc87b313741301fae554abc045c8839f089541fe
-SHA512 (tex-cinzel-34408/cinzel.tar.xz) = 1dbe7c50c873a74f5e1ddefb8192a2c8ea09fc41441b1121705a5c382d58deff3857bf066f73671aa2ac2ce7aca5888510055da4027101bc6e535facf1c09b2f
-Size (tex-cinzel-34408/cinzel.tar.xz) = 532864 bytes
+SHA1 (tex-cinzel-51101/cinzel.tar.xz) = f6a18aea2b0b20814a455bc004e920abe9470119
+RMD160 (tex-cinzel-51101/cinzel.tar.xz) = f6e7c5b8c294aca17d2c5e6070e158d0bda32eb6
+SHA512 (tex-cinzel-51101/cinzel.tar.xz) = 1ac78f86bd959e4d863e4adf5e6ea69e804132ef7aecb8fa68011bb215d59d924677446c1c63515be4e658d98fd409da42a5b1b9c903268e03ca302e59d4185f
+Size (tex-cinzel-51101/cinzel.tar.xz) = 533008 bytes
