@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/05/11 06:57:25 markd Exp $
+$NetBSD: distinfo,v 1.6 2019/08/04 12:56:27 markd Exp $
 
-SHA1 (tex-hyphen-indic-50792/hyphen-indic.tar.xz) = 566aac74398a6d39c4cdd93d7dd85a765da89a16
-RMD160 (tex-hyphen-indic-50792/hyphen-indic.tar.xz) = f0a12231d24dfebf4a3e77ef0ca8532b26673c7a
-SHA512 (tex-hyphen-indic-50792/hyphen-indic.tar.xz) = d326eeaf638982be4c5621ee129f868161d07de3bfd0c0ca9cf3a3dd337ed48671b1f04a061724d2431559ac7c38bb661a7d476ca2b3f015518da2036dbf22d5
-Size (tex-hyphen-indic-50792/hyphen-indic.tar.xz) = 6652 bytes
+SHA1 (tex-hyphen-indic-51186/hyphen-indic.tar.xz) = ad3e8eb66f26a2ab96366f5122487c6b53f312be
+RMD160 (tex-hyphen-indic-51186/hyphen-indic.tar.xz) = a1c2168f2f0597b426054c4101398e256fab5491
+SHA512 (tex-hyphen-indic-51186/hyphen-indic.tar.xz) = 857d447939444570c5d34639789f2846d33e11e434fb708c2748d275b0673de72b001e6c6c724271496cecae5814e02fa0a96f765cec8df27b719a9e686e2a07
+Size (tex-hyphen-indic-51186/hyphen-indic.tar.xz) = 5148 bytes
