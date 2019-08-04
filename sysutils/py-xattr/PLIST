@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/05/27 06:35:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/08/04 11:24:52 adam Exp $
 bin/xattr-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -10,10 +10,20 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/xattr/__init__.py
 ${PYSITELIB}/xattr/__init__.pyc
 ${PYSITELIB}/xattr/__init__.pyo
+${PLIST.py2x}${PYSITELIB}/xattr/_lib.so
+${PLIST.py3x}${PYSITELIB}/xattr/_lib.abi3.so
+${PYSITELIB}/xattr/compat.py
+${PYSITELIB}/xattr/compat.pyc
+${PYSITELIB}/xattr/compat.pyo
 ${PYSITELIB}/xattr/lib.py
 ${PYSITELIB}/xattr/lib.pyc
 ${PYSITELIB}/xattr/lib.pyo
+${PYSITELIB}/xattr/lib_build.py
+${PYSITELIB}/xattr/lib_build.pyc
+${PYSITELIB}/xattr/lib_build.pyo
+${PYSITELIB}/xattr/pyxattr_compat.py
+${PYSITELIB}/xattr/pyxattr_compat.pyc
+${PYSITELIB}/xattr/pyxattr_compat.pyo
 ${PYSITELIB}/xattr/tool.py
 ${PYSITELIB}/xattr/tool.pyc
 ${PYSITELIB}/xattr/tool.pyo
-${PYSITELIB}/xattr/xattr.so
