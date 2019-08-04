@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/06/16 03:57:31 markd Exp $
+$NetBSD: distinfo,v 1.5 2019/08/04 04:19:52 markd Exp $
 
-SHA1 (tex-sourcecodepro-40597/sourcecodepro.tar.xz) = a3f2570d21054f02270c856e099aad2777e70ab2
-RMD160 (tex-sourcecodepro-40597/sourcecodepro.tar.xz) = c3222866c8287f374b7e29aaeb9d7340b2af3678
-SHA512 (tex-sourcecodepro-40597/sourcecodepro.tar.xz) = a091e9f0827a0bf13c3f13e8b57078a099d8db6bf0f0f402464e75b44153602b67b37f4f6bb27407c4b7828f9e60266b56d7501e25a6e196df9afaac51f023bf
-Size (tex-sourcecodepro-40597/sourcecodepro.tar.xz) = 3357360 bytes
+SHA1 (tex-sourcecodepro-51163/sourcecodepro.tar.xz) = 0d31a7efa926b612a1dadca89e4db9374e3e7b0c
+RMD160 (tex-sourcecodepro-51163/sourcecodepro.tar.xz) = 1f4869ad6b99ed557157fb88e7db2491532256eb
+SHA512 (tex-sourcecodepro-51163/sourcecodepro.tar.xz) = 45c41d470f0e84cc35d4c06cacc1beebd7891e98326a0e0f6462c7dc0fdf1eb9f4e0da59ced33e47c2c93c9662eec31efb8cebcab471350eb2c1c198873268e0
+Size (tex-sourcecodepro-51163/sourcecodepro.tar.xz) = 3704752 bytes
