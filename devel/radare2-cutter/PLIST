@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/03/26 19:40:08 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/08/04 14:32:58 ryoon Exp $
 bin/Cutter
 share/doc/radare2-cutter/Doxyfile
 share/doc/radare2-cutter/Makefile
@@ -8,8 +8,11 @@ share/doc/radare2-cutter/source/building.rst
 share/doc/radare2-cutter/source/code.rst
 share/doc/radare2-cutter/source/common-errors.rst
 share/doc/radare2-cutter/source/conf.py
+share/doc/radare2-cutter/source/crash-handling-system.rst
+share/doc/radare2-cutter/source/images/crash-dialog.png
 share/doc/radare2-cutter/source/images/cutter_path_settings.png
 share/doc/radare2-cutter/source/images/screenshot.png
+share/doc/radare2-cutter/source/images/success-dump-dialog.png
 share/doc/radare2-cutter/source/index.rst
 share/doc/radare2-cutter/source/plugins.rst
 share/doc/radare2-cutter/source/plugins/disasm-dynamic.png
@@ -20,4 +23,3 @@ share/doc/radare2-cutter/source/plugins/preferences-plugins.png
 share/doc/radare2-cutter/source/plugins/tutorial-python.rst
 share/doc/radare2-cutter/source/shortcuts.rst
 share/icons/hicolor/scalable/apps/cutter.svg
-@pkgdir share/applications
