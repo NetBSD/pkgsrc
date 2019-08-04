@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2019/03/26 19:29:52 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/08/04 14:30:13 ryoon Exp $
 bin/r2
 bin/r2agent
+bin/r2p
 bin/r2pm
 bin/rabin2
 bin/radare2
@@ -12,6 +13,7 @@ bin/rarun2
 bin/rasm2
 bin/rax2
 include/libr/r2naked.h
+include/libr/r_agraph.h
 include/libr/r_anal.h
 include/libr/r_anal_ex.h
 include/libr/r_asm.h
@@ -33,6 +35,7 @@ include/libr/r_endian.h
 include/libr/r_flag.h
 include/libr/r_flist.h
 include/libr/r_fs.h
+include/libr/r_getopt.h
 include/libr/r_hash.h
 include/libr/r_heap_glibc.h
 include/libr/r_heap_jemalloc.h
@@ -41,6 +44,7 @@ include/libr/r_lang.h
 include/libr/r_lib.h
 include/libr/r_list.h
 include/libr/r_magic.h
+include/libr/r_main.h
 include/libr/r_parse.h
 include/libr/r_pdb.h
 include/libr/r_qrcode.h
@@ -177,6 +181,8 @@ lib/libr_lang.so
 lib/libr_lang.so.${PKGVERSION}
 lib/libr_magic.so
 lib/libr_magic.so.${PKGVERSION}
+lib/libr_main.so
+lib/libr_main.so.${PKGVERSION}
 lib/libr_parse.so
 lib/libr_parse.so.${PKGVERSION}
 lib/libr_reg.so
@@ -295,6 +301,7 @@ share/radare2/${PKGVERSION}/cons/ayu
 share/radare2/${PKGVERSION}/cons/basic
 share/radare2/${PKGVERSION}/cons/behelit
 share/radare2/${PKGVERSION}/cons/bold
+share/radare2/${PKGVERSION}/cons/bright
 share/radare2/${PKGVERSION}/cons/cga
 share/radare2/${PKGVERSION}/cons/consonance
 share/radare2/${PKGVERSION}/cons/cutter
@@ -302,6 +309,7 @@ share/radare2/${PKGVERSION}/cons/dark
 share/radare2/${PKGVERSION}/cons/darkda
 share/radare2/${PKGVERSION}/cons/defragger
 share/radare2/${PKGVERSION}/cons/focus
+share/radare2/${PKGVERSION}/cons/gentoo
 share/radare2/${PKGVERSION}/cons/lima
 share/radare2/${PKGVERSION}/cons/matrix
 share/radare2/${PKGVERSION}/cons/monokai
@@ -335,6 +343,7 @@ share/radare2/${PKGVERSION}/fcnsign/spec.sdb
 share/radare2/${PKGVERSION}/fcnsign/types-16.sdb
 share/radare2/${PKGVERSION}/fcnsign/types-32.sdb
 share/radare2/${PKGVERSION}/fcnsign/types-64.sdb
+share/radare2/${PKGVERSION}/fcnsign/types-android.sdb
 share/radare2/${PKGVERSION}/fcnsign/types-arm-ios-16.sdb
 share/radare2/${PKGVERSION}/fcnsign/types-arm-ios-32.sdb
 share/radare2/${PKGVERSION}/fcnsign/types-arm-ios-64.sdb
@@ -346,6 +355,7 @@ share/radare2/${PKGVERSION}/fcnsign/types-x86-windows-32.sdb
 share/radare2/${PKGVERSION}/fcnsign/types-x86-windows-64.sdb
 share/radare2/${PKGVERSION}/fcnsign/types.sdb
 share/radare2/${PKGVERSION}/flag/tags.r2
+share/radare2/${PKGVERSION}/format/dex
 share/radare2/${PKGVERSION}/format/dll/aclui.sdb
 share/radare2/${PKGVERSION}/format/dll/activeds.sdb
 share/radare2/${PKGVERSION}/format/dll/atl.sdb
@@ -360,7 +370,9 @@ share/radare2/${PKGVERSION}/format/dll/dsound.sdb
 share/radare2/${PKGVERSION}/format/dll/gsprop32.sdb
 share/radare2/${PKGVERSION}/format/dll/iertutil.sdb
 share/radare2/${PKGVERSION}/format/dll/kernel32.sdb
+share/radare2/${PKGVERSION}/format/dll/mfc100u.sdb
 share/radare2/${PKGVERSION}/format/dll/mfc120.sdb
+share/radare2/${PKGVERSION}/format/dll/mfc140u.sdb
 share/radare2/${PKGVERSION}/format/dll/mfc30.sdb
 share/radare2/${PKGVERSION}/format/dll/mfc40.sdb
 share/radare2/${PKGVERSION}/format/dll/mfc42.sdb
@@ -394,6 +406,7 @@ share/radare2/${PKGVERSION}/format/dll/wsock32.sdb
 share/radare2/${PKGVERSION}/format/elf32
 share/radare2/${PKGVERSION}/format/elf64
 share/radare2/${PKGVERSION}/format/elf_enums
+share/radare2/${PKGVERSION}/format/macho
 share/radare2/${PKGVERSION}/format/mz
 share/radare2/${PKGVERSION}/format/pe32
 share/radare2/${PKGVERSION}/format/trx
@@ -442,6 +455,7 @@ share/radare2/${PKGVERSION}/opcodes/LH5801.sdb
 share/radare2/${PKGVERSION}/opcodes/arc.sdb
 share/radare2/${PKGVERSION}/opcodes/arm.sdb
 share/radare2/${PKGVERSION}/opcodes/avr.sdb
+share/radare2/${PKGVERSION}/opcodes/chip8.sdb
 share/radare2/${PKGVERSION}/opcodes/dalvik.sdb
 share/radare2/${PKGVERSION}/opcodes/i4004.sdb
 share/radare2/${PKGVERSION}/opcodes/i8080.sdb
@@ -604,4 +618,3 @@ share/radare2/${PKGVERSION}/www/t/rlogo.png
 share/radare2/${PKGVERSION}/www/t/stylesheet.css
 share/radare2/${PKGVERSION}/www/upload.html
 share/radare2/last
-@pkgdir lib/radare2/${PKGVERSION}
