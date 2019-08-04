@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/05/11 06:57:26 markd Exp $
+$NetBSD: distinfo,v 1.6 2019/08/04 19:58:04 markd Exp $
 
-SHA1 (tex-hyphen-kurmanji-50792/hyphen-kurmanji.tar.xz) = 12734766faaec8ec4741076b2f76e14dda3cc474
-RMD160 (tex-hyphen-kurmanji-50792/hyphen-kurmanji.tar.xz) = b75cf119d58201251a3ff705f804bf457a9b3d4e
-SHA512 (tex-hyphen-kurmanji-50792/hyphen-kurmanji.tar.xz) = 6508e2a1de29235a2ef045575e351a0354469174144336f98b59c6f57f6943b547d451c282d06248324be64004117ede73567ba0103be74d2ade45076b1f84ea
-Size (tex-hyphen-kurmanji-50792/hyphen-kurmanji.tar.xz) = 2840 bytes
+SHA1 (tex-hyphen-kurmanji-51186/hyphen-kurmanji.tar.xz) = b0ae7345947daa7959d2e242332550808cf16c7c
+RMD160 (tex-hyphen-kurmanji-51186/hyphen-kurmanji.tar.xz) = 9ef08024c6745bac8b2e64a96cfb772c83ee06b8
+SHA512 (tex-hyphen-kurmanji-51186/hyphen-kurmanji.tar.xz) = fb7bc7353bc20cac4a76330afda172f56048374dc231df8cb171f6a8fdcfb05ffe720ea358603df991e6ea34cf83495e573a95b4195f545ca68fce7aff0f5679
+Size (tex-hyphen-kurmanji-51186/hyphen-kurmanji.tar.xz) = 2696 bytes
