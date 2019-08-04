@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: gitea.sh,v 1.1 2019/03/24 21:34:23 nia Exp $
+# $NetBSD: gitea.sh,v 1.2 2019/08/04 12:26:59 nia Exp $
 #
 # PROVIDE: gitea
 # REQUIRE: DAEMON
@@ -11,7 +11,7 @@ name="gitea"
 rcvar=${name}
 required_files="@PKG_SYSCONFDIR@/conf/app.ini"
 command="@PREFIX@/sbin/gitea"
-command_args="--config @PKG_SYSCONFDIR@/app.ini web &"
+command_args="--config @PKG_SYSCONFDIR@/conf/app.ini web &"
 
 gitea_env="GITEA_WORK_DIR=@GITEA_SHARE_DIR@"
 gitea_env="${gitea_env} GITEA_CUSTOM=@PKG_SYSCONFDIR@"
