@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/05/14 10:53:47 markd Exp $
+$NetBSD: distinfo,v 1.5 2019/08/04 04:07:59 markd Exp $
 
-SHA1 (tex-ebgaramond-51011/ebgaramond.doc.tar.xz) = 5a7ce82ea23f5dd93027189f558c35f3e8582916
-RMD160 (tex-ebgaramond-51011/ebgaramond.doc.tar.xz) = 75548ab9a838795a2b12ca737549a93b5bd956df
-SHA512 (tex-ebgaramond-51011/ebgaramond.doc.tar.xz) = a61b2be15161cc90607005048f7433c117841525d79daa80685bdbde48a2fea6acbdbb084d9a2b6862528d7a886493244edf31319ad03bcd8a401d69b6ca8e5a
-Size (tex-ebgaramond-51011/ebgaramond.doc.tar.xz) = 510196 bytes
+SHA1 (tex-ebgaramond-51134/ebgaramond.doc.tar.xz) = 737ac6c0a9616aaad2a76f34ab5aad7c82a493bd
+RMD160 (tex-ebgaramond-51134/ebgaramond.doc.tar.xz) = 7c94055422dbb916d72af99a8a074281ad394e3b
+SHA512 (tex-ebgaramond-51134/ebgaramond.doc.tar.xz) = 3572018938e2d0e490ef1ace5e3811a2c6292e08c8056322232880bc0db2e6e01febc072384ffded7545c22a6d9893f1c5f2c7308a91af7dbd9a9a7257aab19c
+Size (tex-ebgaramond-51134/ebgaramond.doc.tar.xz) = 510184 bytes

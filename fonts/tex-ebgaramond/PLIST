@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/05/14 10:53:47 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/08/04 04:07:59 markd Exp $
 share/texmf-dist/fonts/enc/dvips/ebgaramond/ebgm_23xtno.enc
 share/texmf-dist/fonts/enc/dvips/ebgaramond/ebgm_2xdej5.enc
 share/texmf-dist/fonts/enc/dvips/ebgaramond/ebgm_3e4qg2.enc
@@ -979,6 +979,7 @@ share/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond-MediumItalic.pfb
 share/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond-Regular.pfb
 share/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond-SemiBold.pfb
 share/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond-SemiBoldItalic.pfb
+share/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond12-Italic.pfb
 share/texmf-dist/fonts/type1/public/ebgaramond/EBGaramondInitials.pfb
 share/texmf-dist/fonts/vf/public/ebgaramond/EBGaramond-Bold-inf-t1.vf
 share/texmf-dist/fonts/vf/public/ebgaramond/EBGaramond-Bold-lf-sc-ly1.vf
