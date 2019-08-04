@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2019/05/11 06:57:24 markd Exp $
+# $NetBSD: Makefile,v 1.7 2019/08/04 12:24:41 markd Exp $
 
 DISTNAME=	hyphen-english
-PKGNAME=	tex-${DISTNAME}-2019
-TEXLIVE_REV=	50792
+PKGNAME=	tex-${DISTNAME}-2019.51186
+TEXLIVE_REV=	51186
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	English hyphenation patterns
