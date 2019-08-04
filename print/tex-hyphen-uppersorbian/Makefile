@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2019/05/11 06:57:28 markd Exp $
+# $NetBSD: Makefile,v 1.11 2019/08/04 21:01:17 markd Exp $
 
 DISTNAME=	hyphen-uppersorbian
-PKGNAME=	tex-${DISTNAME}-2019
-TEXLIVE_REV=	50792
+PKGNAME=	tex-${DISTNAME}-2019.51186
+TEXLIVE_REV=	51186
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Hyphenation patterns for Upper Sorbian
