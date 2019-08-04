@@ -1,9 +1,9 @@
-$NetBSD: patch-libr_debug_Makefile,v 1.1 2018/02/18 17:40:18 kamil Exp $
+$NetBSD: patch-libr_debug_Makefile,v 1.2 2019/08/04 14:30:13 ryoon Exp $
 
---- libr/debug/Makefile.orig	2018-01-29 10:36:59.000000000 +0000
+--- libr/debug/Makefile.orig	2019-06-24 12:09:20.000000000 +0000
 +++ libr/debug/Makefile
 @@ -6,7 +6,7 @@ DEPS+=r_socket
- CFLAGS+=-DCORELIB
+ CFLAGS+=-DR2_PLUGIN_INCORE
  
  ifeq ($(OSTYPE),bsd)
 -LDFLAGS=-lkvm
