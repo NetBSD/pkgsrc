@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/05/11 06:57:26 markd Exp $
+$NetBSD: distinfo,v 1.8 2019/08/04 19:51:44 markd Exp $
 
-SHA1 (tex-hyphen-interlingua-50792/hyphen-interlingua.tar.xz) = 1d86e634d5f4a76160e3c094c07d25262a411790
-RMD160 (tex-hyphen-interlingua-50792/hyphen-interlingua.tar.xz) = 8a621c5f0d0efbd89e0ae730929c2c43557eed1d
-SHA512 (tex-hyphen-interlingua-50792/hyphen-interlingua.tar.xz) = 6801dcd5fb9d4c716fe61ea72c59648cdb1f16c56bb41a0176e2b47b7782903bc89fa29933aec173725c872de9e295da70e5932aac54b05243e73a035fc8f715
-Size (tex-hyphen-interlingua-50792/hyphen-interlingua.tar.xz) = 2992 bytes
+SHA1 (tex-hyphen-interlingua-51186/hyphen-interlingua.tar.xz) = bcf4ce1d20abb820f405b2370b9b894045dbf185
+RMD160 (tex-hyphen-interlingua-51186/hyphen-interlingua.tar.xz) = a5d3134426df24a8040bb49c4903ee536bea2084
+SHA512 (tex-hyphen-interlingua-51186/hyphen-interlingua.tar.xz) = f341dede7a02b24952a18dd26310386f9dfeea3ceddf6cae3e589528991fcf3fba889096b920bd85a20f5405150d374e2f35f520fba693afba52d071765e9493
+Size (tex-hyphen-interlingua-51186/hyphen-interlingua.tar.xz) = 2872 bytes
