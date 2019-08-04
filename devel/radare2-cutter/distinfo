@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/03/26 19:40:08 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2019/08/04 14:32:58 ryoon Exp $
 
-SHA1 (cutter-1.8.0.tar.gz) = 97d8496f935ce7c337026295e20d743827b597c0
-RMD160 (cutter-1.8.0.tar.gz) = cabd0506f97bd31d60a45d17ccc72c681655bba8
-SHA512 (cutter-1.8.0.tar.gz) = f88b581720ca969a1c34b671f31c8084bc588d5c7c3b1975d2012ac04abba953eaf87f28b72cc9ef608d14d8281aa92502efa965378fa89a9c174b049a9fca7e
-Size (cutter-1.8.0.tar.gz) = 1431831 bytes
+SHA1 (cutter-1.8.3.tar.gz) = 89be1fd915dcd7a3d5c7302236414a7cd90716b9
+RMD160 (cutter-1.8.3.tar.gz) = 22ca96525ec0a8b3e889716dfe89180b7ba90a4d
+SHA512 (cutter-1.8.3.tar.gz) = 808f77e2dbdeeca212cd0a7926f78b09ebc81ac9c956e75ec8229b1fd3321307ba9dafb58793b3acef529230f33567017fd6c7b2a386821ebe66b4544d7502f3
+Size (cutter-1.8.3.tar.gz) = 1531282 bytes
