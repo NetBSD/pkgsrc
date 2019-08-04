@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Linux,v 1.4 2018/01/01 22:29:44 rillig Exp $
+@comment $NetBSD: PLIST.Linux,v 1.5 2019/08/04 14:41:27 ryoon Exp $
 lib/librumphijack.so
 lib/librumphijack.so.0
 lib/librumphijack.so.0.0
@@ -8,3 +8,4 @@ lib/librumpkern_sys_linux.so
 lib/librumpkern_sys_linux.so.0
 lib/librumpkern_sys_linux.so.0.0
 lib/librumpkern_sys_linux_pic.a
+share/man/man3/rumphijack.3
