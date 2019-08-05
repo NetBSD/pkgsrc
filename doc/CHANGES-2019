@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3272 2019/08/05 10:22:23 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3273 2019/08/05 11:49:24 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5314,3 +5314,31 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/ruby-yard to 0.9.20 [taca 2019-08-05]
 	Updated www/py-werkzeug to 0.15.5 [adam 2019-08-05]
 	Updated www/py-werkzeug-docs to 0.15.5 [adam 2019-08-05]
+	Updated print/tex-eplain to 3.9 [markd 2019-08-05]
+	Updated print/tex-eplain-doc to 3.9 [markd 2019-08-05]
+	Updated print/tex-multirow to 2.5 [markd 2019-08-05]
+	Updated print/tex-multirow-doc to 2.5 [markd 2019-08-05]
+	Updated print/tex-translator to 1.12a [markd 2019-08-05]
+	Updated print/tex-translator-doc to 1.12a [markd 2019-08-05]
+	Updated fonts/tex-overlock to 2019 [markd 2019-08-05]
+	Updated fonts/tex-overlock-doc to 2019 [markd 2019-08-05]
+	Updated print/tex-babel to 3.32 [markd 2019-08-05]
+	Updated print/tex-babel-doc to 3.32 [markd 2019-08-05]
+	Updated fonts/tex-merriweather to 2019 [markd 2019-08-05]
+	Updated fonts/tex-merriweather-doc to 2019 [markd 2019-08-05]
+	Updated print/tex-csplain to 2019.51317 [markd 2019-08-05]
+	Updated fonts/tex-roboto to 2019.51315 [markd 2019-08-05]
+	Updated fonts/tex-roboto-doc to 2019.51315 [markd 2019-08-05]
+	Updated print/tex-texinfo to 5.1.51312 [markd 2019-08-05]
+	Updated devel/tex-doclicense to 1.10.0 [markd 2019-08-05]
+	Updated devel/tex-doclicense-doc to 1.10.0 [markd 2019-08-05]
+	Updated fonts/tex-fira to 4.3.51328 [markd 2019-08-05]
+	Updated fonts/tex-fira-doc to 4.3.51328 [markd 2019-08-05]
+	Updated textproc/tex-lwarp to 0.72 [markd 2019-08-05]
+	Updated textproc/tex-lwarp-doc to 0.72 [markd 2019-08-05]
+	Updated fonts/tex-sansmathfonts to 2019.51356 [markd 2019-08-05]
+	Updated fonts/tex-sansmathfonts-doc to 2019.51356 [markd 2019-08-05]
+	Updated fonts/tex-erewhon to 1.093 [markd 2019-08-05]
+	Updated fonts/tex-erewhon-doc to 1.093 [markd 2019-08-05]
+	Updated fonts/tex-heuristica to 1.092 [markd 2019-08-05]
+	Updated fonts/tex-heuristica-doc to 1.092 [markd 2019-08-05]
