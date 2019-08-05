@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/09/23 16:44:15 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/08/05 09:55:00 taca Exp $
 bin/yard${RUBY_SUFFIX}
 bin/yardoc${RUBY_SUFFIX}
 bin/yri${RUBY_SUFFIX}
@@ -109,6 +109,7 @@ ${GEM_LIBDIR}/lib/yard/handlers/c/override_comment_handler.rb
 ${GEM_LIBDIR}/lib/yard/handlers/c/path_handler.rb
 ${GEM_LIBDIR}/lib/yard/handlers/c/struct_handler.rb
 ${GEM_LIBDIR}/lib/yard/handlers/c/symbol_handler.rb
+${GEM_LIBDIR}/lib/yard/handlers/common/method_handler.rb
 ${GEM_LIBDIR}/lib/yard/handlers/processor.rb
 ${GEM_LIBDIR}/lib/yard/handlers/ruby/alias_handler.rb
 ${GEM_LIBDIR}/lib/yard/handlers/ruby/attribute_handler.rb
@@ -363,6 +364,7 @@ ${GEM_LIBDIR}/spec/parser/c_parser_spec.rb
 ${GEM_LIBDIR}/spec/parser/examples/array.c.txt
 ${GEM_LIBDIR}/spec/parser/examples/example1.rb.txt
 ${GEM_LIBDIR}/spec/parser/examples/extrafile.c.txt
+${GEM_LIBDIR}/spec/parser/examples/file.c.txt
 ${GEM_LIBDIR}/spec/parser/examples/multifile.c.txt
 ${GEM_LIBDIR}/spec/parser/examples/namespace.cpp.txt
 ${GEM_LIBDIR}/spec/parser/examples/override.c.txt
