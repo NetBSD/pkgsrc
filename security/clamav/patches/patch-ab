@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/12/24 07:11:05 kefren Exp $
+$NetBSD: patch-ab,v 1.2 2019/08/05 14:44:20 prlw1 Exp $
 
-Make this pkgsrc friedly.
+Make this pkgsrc friendly.
 
 --- libclamav/c++/llvm/utils/buildit/build_llvm.orig	2010-11-10 16:57:04.000000000 +0000
 +++ libclamav/c++/llvm/utils/buildit/build_llvm
