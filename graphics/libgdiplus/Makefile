@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.77 2018/11/14 22:21:42 kleink Exp $
+# $NetBSD: Makefile,v 1.78 2019/08/05 16:58:33 nia Exp $
 
-DISTNAME=	libgdiplus-3.12
-PKGREVISION=	3
+DISTNAME=	libgdiplus-6.0.1
 CATEGORIES=	graphics
-MASTER_SITES=	http://download.mono-project.com/sources/libgdiplus/
+MASTER_SITES=	https://download.mono-project.com/sources/libgdiplus/
 
 MAINTAINER=	kefren@NetBSD.org
-HOMEPAGE=	http://www.mono-project.com/
+HOMEPAGE=	https://www.mono-project.com/
 COMMENT=	Implementation of the GDI+ API
 LICENSE=	mit
 
@@ -26,9 +25,13 @@ BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8
 BUILDLINK_TRANSFORM+=		rm:-Werror
 
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
+.include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
