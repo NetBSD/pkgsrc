@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.50 2019/07/20 22:46:46 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2019/08/05 14:44:20 prlw1 Exp $
 
-PKGREVISION= 5
 .include "Makefile.common"
 
 COMMENT=	Anti-virus toolkit
@@ -16,16 +15,20 @@ CONFIGURE_ARGS+=	--with-dbdir=${CLAMAV_DBDIR}
 CONFIGURE_ARGS+=	--with-group=${CLAMAV_GROUP}
 CONFIGURE_ARGS+=	--with-user=${CLAMAV_USER}
 CONFIGURE_ARGS+=	--with-libcurl=${BUILDLINK_PREFIX.curl}
+CONFIGURE_ARGS+=	--with-libjson=${BUILDLINK_PREFIX.json-c}
 CONFIGURE_ARGS+=	--with-ltdl-include=${BUILDLINK_PREFIX.libltdl}/include
 CONFIGURE_ARGS+=	--with-ltdl-lib=${BUILDLINK_PREFIX.libltdl}/lib
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-pcre=${BUILDLINK_PREFIX.pcre2}
+CONFIGURE_ARGS+=	--with-system-libmspack=${BUILDLINK_PREFIX.libmspack}
 CONFIGURE_ARGS+=	--with-xml=${BUILDLINK_PREFIX.libxml2}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 CONFIGURE_ARGS+=	--enable-readdir_r
 # pkgsrc enforces a "secure" version of zlib, so don't let this check
 # bomb the build
 CONFIGURE_ARGS+=	--disable-zlib-vcheck
+# Work around build failure PR pkg/54420
+CONFIGURE_ARGS+=	--disable-unrar
 
 CHECK_PORTABILITY_SKIP=	contrib/* unit_tests/* win32/*
 
@@ -46,11 +49,6 @@ FILES_SUBST+=	CLAMAV_GROUP=${CLAMAV_GROUP}
 FILES_SUBST+=	CLAMAV_DBDIR=${CLAMAV_DBDIR}
 MESSAGE_SUBST+=	CLAMAV_USER=${CLAMAV_USER}
 
-SUBST_CLASSES+=		vars
-SUBST_STAGE.vars=	pre-configure
-SUBST_FILES.vars=	etc/clamav-milter.conf.sample etc/clamd.conf.sample
-SUBST_VARS.vars=	CLAMAV_DBDIR
-
 RCD_SCRIPTS=	clamd freshclamd
 SMF_METHODS=	${RCD_SCRIPTS}
 SMF_INSTANCES=	${SMF_METHODS}
@@ -63,10 +61,11 @@ PKG_USERS_VARS=		CLAMAV_USER
 
 EGDIR=		${PREFIX}/share/examples/clamav
 
+CONF_SAMPLES=		clamd.conf freshclam.conf
 OWN_DIRS_PERMS=		${CLAMAV_DBDIR} ${CLAMAV_USER} ${CLAMAV_GROUP} 0775
 CONF_FILES=		# empty
 CONF_FILES_PERMS=	# empty
-.for i in clamav-milter.conf clamd.conf freshclam.conf
+.for i in ${CONF_SAMPLES}
 CONF_FILES+=		${EGDIR}/${i} ${PKG_SYSCONFDIR}/${i}
 .endfor
 
@@ -75,16 +74,18 @@ INSTALLATION_DIRS+=	${EGDIR}
 .include "options.mk"
 
 post-install:
-.for i in clamav-milter.conf clamd.conf freshclam.conf
-	${INSTALL_DATA} ${WRKSRC}/etc/${i}.sample ${DESTDIR}${EGDIR}/${i}
+.for i in ${CONF_SAMPLES}
+	${MV} ${DESTDIR}${PREFIX}/etc/${i}.sample ${DESTDIR}${EGDIR}/${i}
 .endfor
 
 .include "../../archivers/bzip2/buildlink3.mk"
+.include "../../archivers/libmspack/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/json-c/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"

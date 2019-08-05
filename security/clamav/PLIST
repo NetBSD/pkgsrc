@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/05/08 16:01:09 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/08/05 14:44:20 prlw1 Exp $
 bin/clamav-config
 bin/clambc
 bin/clamconf
@@ -8,10 +8,10 @@ bin/clamscan
 bin/clamsubmit
 bin/freshclam
 bin/sigtool
+include/clamav-types.h
 include/clamav.h
 lib/libclamav.la
-lib/libclamunrar.la
-lib/libclamunrar_iface.la
+lib/libclammspack.la
 lib/pkgconfig/libclamav.pc
 man/man1/clambc.1
 man/man1/clamconf.1
@@ -28,6 +28,6 @@ man/man8/clamav-milter.8
 man/man8/clamd.8
 ${PLIST.milter}sbin/clamav-milter
 sbin/clamd
-share/examples/clamav/clamav-milter.conf
+${PLIST.milter}share/examples/clamav/clamav-milter.conf
 share/examples/clamav/clamd.conf
 share/examples/clamav/freshclam.conf

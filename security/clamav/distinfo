@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.27 2019/04/13 08:48:22 szptvlfn Exp $
+$NetBSD: distinfo,v 1.28 2019/08/05 14:44:20 prlw1 Exp $
 
-SHA1 (clamav-0.99.4.tar.gz) = 31f91cb63329385325821a03db46e7001dc40fa2
-RMD160 (clamav-0.99.4.tar.gz) = 5925f4727c98d328f7f12267bb1af11fc368f9d8
-SHA512 (clamav-0.99.4.tar.gz) = 778d5ef510d8d4bdfac5dc33d92469ed4283c414b3d42da6e1a0b13ed70e37755d5c837622dc336bc728ba1f8bf5485fc8a8d3a67a90e9aaa9e4dc71ece0691d
-Size (clamav-0.99.4.tar.gz) = 16083015 bytes
-SHA1 (patch-Makefile.in) = c7f106f812952ef22f32aaa0354a15d501460c01
+SHA1 (clamav-0.101.2.tar.gz) = 6545fc72fbc4e3e8b7e845e08edd0a36142d033e
+RMD160 (clamav-0.101.2.tar.gz) = 53fddb9858c49c8b11654b204cf2e5938e193a7c
+SHA512 (clamav-0.101.2.tar.gz) = f9ea4589a8081acf7b6d454d1a068da05ae6574a9070a08f9438935795cb6dc084ffb9222b11fb1623f31962f859e6536a2f5bd1de29ef6b9b314efa5edc8c7e
+Size (clamav-0.101.2.tar.gz) = 21722932 bytes
+SHA1 (patch-Makefile.in) = c3bdefe7f7d0fee58ce3a1f16c00b3739ab8586a
 SHA1 (patch-aa) = 8539a90ac5591c86f7e9f6b8c073f36523f221a5
-SHA1 (patch-ab) = fea995ea944c2ae0f51a41e1a1076badf65c6c8b
+SHA1 (patch-ab) = 78793f0267ce8c820b51937186dc17dabb4a1ccf
 SHA1 (patch-af) = d217633ed33c72b6d01a9aeef03f0f5dd33b4336
 SHA1 (patch-configure) = d3a0a77c522b8abb4a5144e29aacc8b110f31c5a
 SHA1 (patch-etc_clamav-milter.conf.sample) = 0cbf22bf380213c9e9f2b9baf15d7eba745afd46
