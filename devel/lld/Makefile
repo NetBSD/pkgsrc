@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2019/06/02 08:37:39 adam Exp $
+# $NetBSD: Makefile,v 1.5 2019/08/05 19:06:50 adam Exp $
 
-DISTNAME=	lld-8.0.0.src
+DISTNAME=	lld-8.0.1.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	devel
-MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=llvm/}
+GITHUB_PROJECT=	llvm-project
+GITHUB_RELEASE=	llvmorg-${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	mgorny@NetBSD.org

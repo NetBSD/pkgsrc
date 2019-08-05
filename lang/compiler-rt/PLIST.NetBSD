@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST.NetBSD,v 1.2 2019/06/02 08:35:56 adam Exp $
-lib/clang/${PKGVERSION}/lib/netbsd/libclang_rt.asan-preinit-${MACHINE_ARCH}.a
+@comment $NetBSD: PLIST.NetBSD,v 1.3 2019/08/05 19:06:50 adam Exp $
 lib/clang/${PKGVERSION}/lib/netbsd/libclang_rt.asan-${MACHINE_ARCH}.a
 lib/clang/${PKGVERSION}/lib/netbsd/libclang_rt.asan-${MACHINE_ARCH}.a.syms
 lib/clang/${PKGVERSION}/lib/netbsd/libclang_rt.asan-${MACHINE_ARCH}.so
+lib/clang/${PKGVERSION}/lib/netbsd/libclang_rt.asan-preinit-${MACHINE_ARCH}.a
 lib/clang/${PKGVERSION}/lib/netbsd/libclang_rt.asan_cxx-${MACHINE_ARCH}.a
 lib/clang/${PKGVERSION}/lib/netbsd/libclang_rt.asan_cxx-${MACHINE_ARCH}.a.syms
 lib/clang/${PKGVERSION}/lib/netbsd/libclang_rt.builtins-${MACHINE_ARCH}.a
+lib/clang/${PKGVERSION}/lib/netbsd/libclang_rt.cfi-${MACHINE_ARCH}.a
+lib/clang/${PKGVERSION}/lib/netbsd/libclang_rt.cfi_diag-${MACHINE_ARCH}.a
 lib/clang/${PKGVERSION}/lib/netbsd/libclang_rt.dd-${MACHINE_ARCH}.a
 lib/clang/${PKGVERSION}/lib/netbsd/libclang_rt.dyndd-${MACHINE_ARCH}.so
 lib/clang/${PKGVERSION}/lib/netbsd/libclang_rt.fuzzer-${MACHINE_ARCH}.a
@@ -15,6 +17,7 @@ lib/clang/${PKGVERSION}/lib/netbsd/libclang_rt.msan-${MACHINE_ARCH}.a
 lib/clang/${PKGVERSION}/lib/netbsd/libclang_rt.msan-${MACHINE_ARCH}.a.syms
 lib/clang/${PKGVERSION}/lib/netbsd/libclang_rt.msan_cxx-${MACHINE_ARCH}.a
 lib/clang/${PKGVERSION}/lib/netbsd/libclang_rt.msan_cxx-${MACHINE_ARCH}.a.syms
+lib/clang/${PKGVERSION}/lib/netbsd/libclang_rt.profile-${MACHINE_ARCH}.a
 lib/clang/${PKGVERSION}/lib/netbsd/libclang_rt.safestack-${MACHINE_ARCH}.a
 lib/clang/${PKGVERSION}/lib/netbsd/libclang_rt.stats-${MACHINE_ARCH}.a
 lib/clang/${PKGVERSION}/lib/netbsd/libclang_rt.stats_client-${MACHINE_ARCH}.a
@@ -30,7 +33,8 @@ lib/clang/${PKGVERSION}/lib/netbsd/libclang_rt.ubsan_standalone-${MACHINE_ARCH}.
 lib/clang/${PKGVERSION}/lib/netbsd/libclang_rt.ubsan_standalone-${MACHINE_ARCH}.so
 lib/clang/${PKGVERSION}/lib/netbsd/libclang_rt.ubsan_standalone_cxx-${MACHINE_ARCH}.a
 lib/clang/${PKGVERSION}/lib/netbsd/libclang_rt.ubsan_standalone_cxx-${MACHINE_ARCH}.a.syms
+lib/clang/${PKGVERSION}/lib/netbsd/libclang_rt.xray-${MACHINE_ARCH}.a
 lib/clang/${PKGVERSION}/lib/netbsd/libclang_rt.xray-basic-${MACHINE_ARCH}.a
 lib/clang/${PKGVERSION}/lib/netbsd/libclang_rt.xray-fdr-${MACHINE_ARCH}.a
 lib/clang/${PKGVERSION}/lib/netbsd/libclang_rt.xray-profiling-${MACHINE_ARCH}.a
-lib/clang/${PKGVERSION}/lib/netbsd/libclang_rt.xray-${MACHINE_ARCH}.a
+${PLIST.asan}lib/clang/${PKGVERSION}/share/msan_blacklist.txt
