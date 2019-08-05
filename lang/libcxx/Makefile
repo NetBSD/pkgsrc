@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2019/06/02 08:41:58 adam Exp $
+# $NetBSD: Makefile,v 1.5 2019/08/05 19:06:49 adam Exp $
 
-DISTNAME=	libcxx-8.0.0.src
+DISTNAME=	libcxx-8.0.1.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
-MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=llvm/}
+GITHUB_PROJECT=	llvm-project
+GITHUB_RELEASE=	llvmorg-${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,9 +17,11 @@ LICENSE=	modified-bsd OR mit
 # libcxx's includes to build, so we have this unholy extra distfiles thing
 # in both of them to get them to build against each other without causing
 # circular dependencies.  This must be kept in sync with libcxxabi/Makefile.
-#
-LIBCXXABI=	libcxxabi-${PKGVERSION_NOREV}.src
-DISTFILES=	${DEFAULT_DISTFILES} ${LIBCXXABI}${EXTRACT_SUFX}
+LIBCXXABI=		${DISTNAME:S/cxx/cxxabi/}
+_EXTRA_DIST=		${LIBCXXABI}${EXTRACT_SUFX}
+SITES.${_EXTRA_DIST}=	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
+
+DISTFILES=	${DEFAULT_DISTFILES} ${_EXTRA_DIST}
 
 CONFIGURE_DIRS=	${WRKDIR}/build
 CMAKE_ARG_PATH=	${WRKSRC}
@@ -33,7 +37,7 @@ CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
 CMAKE_ARGS+=	-DCMAKE_CXX_LINK_FLAGS=${LDFLAGS:Q}
 CMAKE_ARGS+=	-DLIBCXX_CXX_ABI=libcxxabi
 CMAKE_ARGS+=	-DLIBCXX_CXX_ABI_INCLUDE_PATHS=${WRKDIR}/${LIBCXXABI}/include
-CMAKE_ARGS+=	-DLIBCXX_ENABLE_ABI_LINKER_SCRIPT:BOOL=OFF
+CMAKE_ARGS+=	-DLIBCXX_ENABLE_ABI_LINKER_SCRIPT=OFF
 
 # avoid conflict with stddef.h
 CXXFLAGS.NetBSD+=	-D__DEFINED_max_align_t=1
