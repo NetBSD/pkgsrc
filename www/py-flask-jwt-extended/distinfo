@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/07/05 07:57:02 adam Exp $
+$NetBSD: distinfo,v 1.4 2019/08/05 07:59:22 adam Exp $
 
-SHA1 (Flask-JWT-Extended-3.20.0.tar.gz) = ba2211037147ed5353e93e620e9575b900c6137a
-RMD160 (Flask-JWT-Extended-3.20.0.tar.gz) = 5ff4e022c603e3fd24ae33427b0db77db5551931
-SHA512 (Flask-JWT-Extended-3.20.0.tar.gz) = c53e43a823441353b67a56aed4eda0c19b23396062d7aea365b4fb465f31c692b58a984c03367ef69dc4d0de7e65cc388ab5b64d04bebaedbfb55052a9ee465f
-Size (Flask-JWT-Extended-3.20.0.tar.gz) = 30614 bytes
+SHA1 (Flask-JWT-Extended-3.21.0.tar.gz) = 8024fd2e520949b6ee8498d4fe5c351d870422cb
+RMD160 (Flask-JWT-Extended-3.21.0.tar.gz) = ecd3cacc6afd4394dc0228a35b6ea81e8089b8c1
+SHA512 (Flask-JWT-Extended-3.21.0.tar.gz) = 00d5324ea898b75e9ce6308e88cf68200d0b2201859aabc9ae010271356601f0385480c17119843e1957d39fd62a883f82f092dec81584fd59bf46129f3120e9
+Size (Flask-JWT-Extended-3.21.0.tar.gz) = 31002 bytes
