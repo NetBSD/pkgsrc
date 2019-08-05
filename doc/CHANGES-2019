@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3280 2019/08/05 19:09:22 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3281 2019/08/05 19:32:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5361,3 +5361,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/lldb to 8.0.1 [adam 2019-08-05]
 	Updated devel/polly to 8.0.1 [adam 2019-08-05]
 	Updated parallel/openmp to 8.0.1 [adam 2019-08-05]
+	Updated devel/py-cython to 0.29.13 [adam 2019-08-05]
+	Updated devel/py-coverage to 4.5.4 [adam 2019-08-05]
