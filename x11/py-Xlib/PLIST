@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2012/04/08 20:22:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/08/05 12:26:15 prlw1 Exp $
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/requires.txt
+${PYSITELIB}/${EGG_FILE}/top_level.txt
 ${PYSITELIB}/Xlib/X.py
 ${PYSITELIB}/Xlib/X.pyc
 ${PYSITELIB}/Xlib/X.pyo
@@ -26,15 +31,36 @@ ${PYSITELIB}/Xlib/error.pyo
 ${PYSITELIB}/Xlib/ext/__init__.py
 ${PYSITELIB}/Xlib/ext/__init__.pyc
 ${PYSITELIB}/Xlib/ext/__init__.pyo
+${PYSITELIB}/Xlib/ext/composite.py
+${PYSITELIB}/Xlib/ext/composite.pyc
+${PYSITELIB}/Xlib/ext/composite.pyo
+${PYSITELIB}/Xlib/ext/ge.py
+${PYSITELIB}/Xlib/ext/ge.pyc
+${PYSITELIB}/Xlib/ext/ge.pyo
+${PYSITELIB}/Xlib/ext/nvcontrol.py
+${PYSITELIB}/Xlib/ext/nvcontrol.pyc
+${PYSITELIB}/Xlib/ext/nvcontrol.pyo
+${PYSITELIB}/Xlib/ext/randr.py
+${PYSITELIB}/Xlib/ext/randr.pyc
+${PYSITELIB}/Xlib/ext/randr.pyo
 ${PYSITELIB}/Xlib/ext/record.py
 ${PYSITELIB}/Xlib/ext/record.pyc
 ${PYSITELIB}/Xlib/ext/record.pyo
+${PYSITELIB}/Xlib/ext/security.py
+${PYSITELIB}/Xlib/ext/security.pyc
+${PYSITELIB}/Xlib/ext/security.pyo
 ${PYSITELIB}/Xlib/ext/shape.py
 ${PYSITELIB}/Xlib/ext/shape.pyc
 ${PYSITELIB}/Xlib/ext/shape.pyo
+${PYSITELIB}/Xlib/ext/xfixes.py
+${PYSITELIB}/Xlib/ext/xfixes.pyc
+${PYSITELIB}/Xlib/ext/xfixes.pyo
 ${PYSITELIB}/Xlib/ext/xinerama.py
 ${PYSITELIB}/Xlib/ext/xinerama.pyc
 ${PYSITELIB}/Xlib/ext/xinerama.pyo
+${PYSITELIB}/Xlib/ext/xinput.py
+${PYSITELIB}/Xlib/ext/xinput.pyc
+${PYSITELIB}/Xlib/ext/xinput.pyo
 ${PYSITELIB}/Xlib/ext/xtest.py
 ${PYSITELIB}/Xlib/ext/xtest.pyc
 ${PYSITELIB}/Xlib/ext/xtest.pyo
@@ -89,6 +115,9 @@ ${PYSITELIB}/Xlib/keysymdef/technical.pyo
 ${PYSITELIB}/Xlib/keysymdef/thai.py
 ${PYSITELIB}/Xlib/keysymdef/thai.pyc
 ${PYSITELIB}/Xlib/keysymdef/thai.pyo
+${PYSITELIB}/Xlib/keysymdef/xf86.py
+${PYSITELIB}/Xlib/keysymdef/xf86.pyc
+${PYSITELIB}/Xlib/keysymdef/xf86.pyo
 ${PYSITELIB}/Xlib/keysymdef/xk3270.py
 ${PYSITELIB}/Xlib/keysymdef/xk3270.pyc
 ${PYSITELIB}/Xlib/keysymdef/xk3270.pyo
@@ -158,4 +187,3 @@ ${PYSITELIB}/Xlib/xobject/icccm.pyo
 ${PYSITELIB}/Xlib/xobject/resource.py
 ${PYSITELIB}/Xlib/xobject/resource.pyc
 ${PYSITELIB}/Xlib/xobject/resource.pyo
-${PYSITELIB}/${EGG_FILE}
