@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3268 2019/08/04 21:05:34 markd Exp $
+$NetBSD: CHANGES-2019,v 1.3269 2019/08/05 07:59:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5306,3 +5306,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/tex-hyphen-ukrainian to 2019.51186 [markd 2019-08-04]
 	Updated print/tex-hyphen-uppersorbian to 2019.51186 [markd 2019-08-04]
 	Updated print/tex-hyphen-welsh to 2019.51186 [markd 2019-08-04]
+	Updated databases/py-peewee to 3.10.0 [adam 2019-08-05]
+	Updated www/py-flask-jwt-extended to 3.21.0 [adam 2019-08-05]
