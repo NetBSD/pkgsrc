@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:52 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/08/05 10:47:19 markd Exp $
 
 DISTNAME=	overlock
-PKGNAME=	tex-${DISTNAME}-2014
-TEXLIVE_REV=	34409
+PKGNAME=	tex-${DISTNAME}-2019
+TEXLIVE_REV=	51294
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/overlock
+HOMEPAGE=	https://ctan.org/pkg/overlock
 COMMENT=	Overlook sans fonts with LaTeX support
 LICENSE=	ofl-v1.1
 
