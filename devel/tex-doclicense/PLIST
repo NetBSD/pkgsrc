@@ -1,14 +1,16 @@
-@comment $NetBSD: PLIST,v 1.3 2019/05/12 11:16:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/08/05 11:14:51 markd Exp $
 share/texmf-dist/tex/latex/doclicense/doclicense-UKenglish.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-USenglish.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-acadian.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-american.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-australian.ldf
+share/texmf-dist/tex/latex/doclicense/doclicense-brazilian.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-british.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-canadian.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-canadien.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-catalan.ldf
-share/texmf-dist/tex/latex/doclicense/doclicense-chinese.ldf
+share/texmf-dist/tex/latex/doclicense/doclicense-chinese-gbk.ldf
+share/texmf-dist/tex/latex/doclicense/doclicense-chinese-utf8.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-english.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-french.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-galician.ldf
