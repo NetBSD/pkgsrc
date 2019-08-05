@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3270 2019/08/05 09:35:05 markd Exp $
+$NetBSD: CHANGES-2019,v 1.3271 2019/08/05 09:55:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5311,3 +5311,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added print/tex-hyphen-belarusian version 2019 [markd 2019-08-05]
 	Added print/tex-hyphen-churchslavonic version 2019 [markd 2019-08-05]
 	Added print/tex-hyphen-occitan version 2019 [markd 2019-08-05]
+	Updated textproc/ruby-yard to 0.9.20 [taca 2019-08-05]
