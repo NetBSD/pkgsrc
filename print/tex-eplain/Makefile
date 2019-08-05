@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2019/01/26 04:18:48 markd Exp $
+# $NetBSD: Makefile,v 1.6 2019/08/05 10:32:45 markd Exp $
 
 DISTNAME=	eplain
-PKGNAME=	tex-${DISTNAME}-3.8
-PKGREVISION=	1
-TEXLIVE_REV=	41154
+PKGNAME=	tex-${DISTNAME}-3.9
+TEXLIVE_REV=	51280
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/eplain
+HOMEPAGE=	https://ctan.org/pkg/eplain
 COMMENT=	Extended plain TeX macros
 LICENSE=	gnu-gpl-v2
 
