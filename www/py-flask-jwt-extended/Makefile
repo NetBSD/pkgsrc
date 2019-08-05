@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2019/07/05 07:57:02 adam Exp $
+# $NetBSD: Makefile,v 1.4 2019/08/05 07:59:22 adam Exp $
 
-DISTNAME=	Flask-JWT-Extended-3.20.0
+DISTNAME=	Flask-JWT-Extended-3.21.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-JWT-Extended/}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://github.com/vimalloc/flask-jwt-extended
 COMMENT=	Extended JWT integration with Flask
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-JWT-[0-9]*:../../textproc/py-JWT
-DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask
+DEPENDS+=	${PYPKGPREFIX}-JWT>=1.6.4:../../textproc/py-JWT
+DEPENDS+=	${PYPKGPREFIX}-flask>=1.0:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=2.3:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-werkzeug>=0.14:../../www/py-werkzeug
