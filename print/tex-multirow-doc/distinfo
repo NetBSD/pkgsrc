@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2019/01/29 09:02:14 markd Exp $
+$NetBSD: distinfo,v 1.7 2019/08/05 10:34:33 markd Exp $
 
-SHA1 (tex-multirow-49572/multirow.doc.tar.xz) = b1c8d4db1d7a04a2f7bce0821d02a91e0e326df4
-RMD160 (tex-multirow-49572/multirow.doc.tar.xz) = 2fb94bcdc561b6c9b034323427747f49a57f6d17
-SHA512 (tex-multirow-49572/multirow.doc.tar.xz) = 6c54881acd21ad8948f6199736ac459c2292612bfd6f88ec6cd0290cdddbfea9a4c1577a0b16cb396b71b530817a0f205f24103e61bb90d7863473973fd9bbf8
-Size (tex-multirow-49572/multirow.doc.tar.xz) = 612424 bytes
+SHA1 (tex-multirow-51278/multirow.doc.tar.xz) = eebb85ef3b1d73a1604db7bfb60cb014c61ac988
+RMD160 (tex-multirow-51278/multirow.doc.tar.xz) = 9eaf53297ba439173814d95be23eee4bb18c6c87
+SHA512 (tex-multirow-51278/multirow.doc.tar.xz) = ae7b86866d6271f99bbda77e1df62276383b3759f59c30c86eaee3a5e14e0633dee081bcbb39fc9e52a5f4afe43ab0357aaeb11d81560a7c1c671d8773de742f
+Size (tex-multirow-51278/multirow.doc.tar.xz) = 613256 bytes
