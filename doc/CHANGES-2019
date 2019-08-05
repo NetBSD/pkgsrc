@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3271 2019/08/05 09:55:33 taca Exp $
+$NetBSD: CHANGES-2019,v 1.3272 2019/08/05 10:22:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5312,3 +5312,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Added print/tex-hyphen-churchslavonic version 2019 [markd 2019-08-05]
 	Added print/tex-hyphen-occitan version 2019 [markd 2019-08-05]
 	Updated textproc/ruby-yard to 0.9.20 [taca 2019-08-05]
+	Updated www/py-werkzeug to 0.15.5 [adam 2019-08-05]
+	Updated www/py-werkzeug-docs to 0.15.5 [adam 2019-08-05]
