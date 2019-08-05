@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2019/05/23 12:00:48 adam Exp $
+$NetBSD: distinfo,v 1.21 2019/08/05 10:21:32 adam Exp $
 
-SHA1 (Werkzeug-0.15.4.tar.gz) = 361e014a1a2ec55a62921ba8f119b345e9aa61ec
-RMD160 (Werkzeug-0.15.4.tar.gz) = 46ff02cb0d331c1d006fd43c98129a2556feb659
-SHA512 (Werkzeug-0.15.4.tar.gz) = b27b313cb29128ad1a1d0b04be7d1b29eacd4fb8280757510ce662b4f8743e7311966f7fb170531bd5dcb9668e9c6672f0cc0cf53bb4af3ec7328312a88b53ab
-Size (Werkzeug-0.15.4.tar.gz) = 925334 bytes
+SHA1 (Werkzeug-0.15.5.tar.gz) = 7a06ed962908d1317f685fb09b1f8861dccc371e
+RMD160 (Werkzeug-0.15.5.tar.gz) = 573d57c112a7116c7647a8f07b146bb46f15c217
+SHA512 (Werkzeug-0.15.5.tar.gz) = e2980b649db0c246fa87b94972f1a1e00b19f20a90e34733267cb50b0d1c8e83701f4bde3e466f9f12243c47b3cc40c6977e63164f18ee5e518b75e952988edd
+Size (Werkzeug-0.15.5.tar.gz) = 926570 bytes
