@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:45:10 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/08/05 10:57:00 markd Exp $
 
-SHA1 (tex-merriweather-34315/merriweather.doc.tar.xz) = d0305fb148c5a7272765a993aab46fae9c1b23c1
-RMD160 (tex-merriweather-34315/merriweather.doc.tar.xz) = 75eaef720e430de11116d8c81b2dcd9d800ece22
-SHA512 (tex-merriweather-34315/merriweather.doc.tar.xz) = 0ab27a93918e855634c17a38213d7cbacf615aa610ab98e52ea91ff998a96c97898f0c94775f26d4d9872dfa4b414f3704b80a2debfa4ca10dc3710b9305488e
-Size (tex-merriweather-34315/merriweather.doc.tar.xz) = 112496 bytes
+SHA1 (tex-merriweather-51304/merriweather.doc.tar.xz) = 5ba19511afb37f12de5435a5db13a427478c84e3
+RMD160 (tex-merriweather-51304/merriweather.doc.tar.xz) = 4ef79727dcaf715cb3a9e30eed6724d0fb2e13b2
+SHA512 (tex-merriweather-51304/merriweather.doc.tar.xz) = 1380fab54fec1a839aa671d29c189faadd50dba4cdc0e4f1fadfad3d0b34393e7a515f62caceb91e308c171c4c56a3b2f70951e9d2983d01dac98a84dd34b46e
+Size (tex-merriweather-51304/merriweather.doc.tar.xz) = 112508 bytes
