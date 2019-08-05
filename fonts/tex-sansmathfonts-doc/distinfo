@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/05/12 04:08:12 markd Exp $
+$NetBSD: distinfo,v 1.5 2019/08/05 11:37:40 markd Exp $
 
-SHA1 (tex-sansmathfonts-50756/sansmathfonts.doc.tar.xz) = 4ddc7480dc81f2f850f9b6b436755c9072364f4d
-RMD160 (tex-sansmathfonts-50756/sansmathfonts.doc.tar.xz) = c67e0c084ff3350f267b9213060cc643e0619fd4
-SHA512 (tex-sansmathfonts-50756/sansmathfonts.doc.tar.xz) = adec2b1f7825c980ae2cba33cb6fefbce0206da513692993fedebf26d20d489c2d719efc180a6972871aef0e2f345901a001a9dbf5cbd036b3e236ad87d52f0c
-Size (tex-sansmathfonts-50756/sansmathfonts.doc.tar.xz) = 268316 bytes
+SHA1 (tex-sansmathfonts-51356/sansmathfonts.doc.tar.xz) = 96a27eb7ab254ebb5d66c4ce90e9ccfbf34f34a6
+RMD160 (tex-sansmathfonts-51356/sansmathfonts.doc.tar.xz) = 4696d221025cb1767ac223f1cb362dec95d96e4a
+SHA512 (tex-sansmathfonts-51356/sansmathfonts.doc.tar.xz) = e61cc601588681dc29113391426cb345c207eefb04562ea6eb8369cdb8ec4844b0bab586ed91bb2a1506c49c5a60661748de95cf792b07fd52ba23cbe58d254d
+Size (tex-sansmathfonts-51356/sansmathfonts.doc.tar.xz) = 268192 bytes
