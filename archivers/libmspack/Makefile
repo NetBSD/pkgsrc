@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2018/12/01 06:01:12 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/08/05 13:39:24 prlw1 Exp $
 
-DISTNAME=	libmspack-0.9.1alpha
+DISTNAME=	libmspack-0.10.1alpha
 CATEGORIES=	devel
 MASTER_SITES=	https://www.cabextract.org.uk/libmspack/
 
