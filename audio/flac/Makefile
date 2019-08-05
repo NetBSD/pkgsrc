@@ -1,28 +1,23 @@
-# $NetBSD: Makefile,v 1.53 2017/08/01 14:58:52 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2019/08/05 15:35:12 adam Exp $
 
-DISTNAME=	flac-1.3.2
+DISTNAME=	flac-1.3.3
 CATEGORIES=	audio archivers
 MASTER_SITES=	http://downloads.xiph.org/releases/flac/
 EXTRACT_SUFX=	.tar.xz
-
-# XXX remove at next update
-DIST_SUBDIR=	flac
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xiph.org/flac/
 COMMENT=	Free lossless audio codec
 LICENSE=	modified-bsd AND gnu-gpl-v2 AND gnu-lgpl-v2.1
 
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
-
-CONFIGURE_ENV+=		ac_cv_path_XMMS_CONFIG="no"
-CONFIGURE_ENV+=		ac_cv_prog_DOXYGEN=""
-
-PKGCONFIG_OVERRIDE+=	src/libFLAC++/flac++.pc.in src/libFLAC/flac.pc.in
+CONFIGURE_ARGS+=	--disable-doxygen-docs
+CONFIGURE_ARGS+=	--disable-xmms-plugin
+PKGCONFIG_OVERRIDE+=	src/libFLAC++/flac++.pc.in
+PKGCONFIG_OVERRIDE+=	src/libFLAC/flac.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 
