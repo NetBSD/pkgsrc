@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3279 2019/08/05 17:03:59 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3280 2019/08/05 19:09:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5349,3 +5349,15 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/flac to 1.3.3 [adam 2019-08-05]
 	Updated audio/fasttracker2 to 2.164 [fox 2019-08-05]
 	Updated graphics/libgdiplus to 6.0.1 [nia 2019-08-05]
+	Updated lang/llvm to 8.0.1 [adam 2019-08-05]
+	Updated lang/clang to 8.0.1 [adam 2019-08-05]
+	Updated lang/clang-static-analyzer to 8.0.1 [adam 2019-08-05]
+	Updated lang/clang-tools-extra to 8.0.1 [adam 2019-08-05]
+	Updated lang/libcxxabi to 8.0.1 [adam 2019-08-05]
+	Updated lang/libcxx to 8.0.1 [adam 2019-08-05]
+	Updated lang/libunwind to 8.0.1 [adam 2019-08-05]
+	Updated lang/compiler-rt to 8.0.1 [adam 2019-08-05]
+	Updated devel/lld to 8.0.1 [adam 2019-08-05]
+	Updated devel/lldb to 8.0.1 [adam 2019-08-05]
+	Updated devel/polly to 8.0.1 [adam 2019-08-05]
+	Updated parallel/openmp to 8.0.1 [adam 2019-08-05]
