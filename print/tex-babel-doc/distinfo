@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2019/05/13 11:42:58 markd Exp $
+$NetBSD: distinfo,v 1.13 2019/08/05 10:52:08 markd Exp $
 
-SHA1 (tex-babel-50977/babel.doc.tar.xz) = 722a4ba3e214d89ba085aeea27f7497d7f233ffd
-RMD160 (tex-babel-50977/babel.doc.tar.xz) = 561094183f49410760c06e468f8946f2bac95151
-SHA512 (tex-babel-50977/babel.doc.tar.xz) = 9589f48f6dd443c0fb87f476e661b761cd7b128e12750e33d7a724c07529af003ac4b20ba2945a29c08b5b521a6254e448153cf8c66e4f72f6395438afbded9b
-Size (tex-babel-50977/babel.doc.tar.xz) = 696336 bytes
+SHA1 (tex-babel-51309/babel.doc.tar.xz) = 6413bb0855f545d381f342fe77c7162e52516ae9
+RMD160 (tex-babel-51309/babel.doc.tar.xz) = 2c524c458cde6e774a8b71515d14bdc3d983c605
+SHA512 (tex-babel-51309/babel.doc.tar.xz) = 7d37765160d1971ab85788fc5f7b28596c18236a5c8bc2675d99db6f47fd7a6ee9dcbece340198869b7a50e2b450e05ca5f7a7c9036013c73b28a01e534da26e
+Size (tex-babel-51309/babel.doc.tar.xz) = 804220 bytes
