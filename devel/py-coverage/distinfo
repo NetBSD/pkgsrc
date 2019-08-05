@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2019/03/11 13:55:28 adam Exp $
+$NetBSD: distinfo,v 1.13 2019/08/05 19:31:44 adam Exp $
 
-SHA1 (coverage-4.5.3.tar.gz) = c97eeed9b91b4e8606d138f2964cacfd8bb52122
-RMD160 (coverage-4.5.3.tar.gz) = 29ccb06fb2829810952a75b117dd122af94bb1cb
-SHA512 (coverage-4.5.3.tar.gz) = 4493139c8fdd7e3fd09f8f99af330d270cb48c2a0645ba5131fa3c5190b53e7d779e2c07fddf4f8ddf9f4215ce11536c29b8796602cb113c5d3d89144ddbec82
-Size (coverage-4.5.3.tar.gz) = 384747 bytes
+SHA1 (coverage-4.5.4.tar.gz) = d101ed17fa2c3f932dc0a6a663031f86698570eb
+RMD160 (coverage-4.5.4.tar.gz) = 81ff5f8a5616864d7393a7348c16332667958355
+SHA512 (coverage-4.5.4.tar.gz) = ba534e04fe35cbadc4b16735f25c08f579a49a6677ec106680f222f2dfb3d0f1e011d0962f1c2108c375173ac4588bea1619ecda05ff9ba6fd888daddfd27b0e
+Size (coverage-4.5.4.tar.gz) = 385185 bytes
