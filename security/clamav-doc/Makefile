@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/01/26 12:20:16 bouyer Exp $
+# $NetBSD: Makefile,v 1.5 2019/08/05 14:47:33 prlw1 Exp $
 
 .include "../../security/clamav/Makefile.common"
 
@@ -10,15 +10,10 @@ NO_CONFIGURE=	yes
 USE_TOOLS+=	pax
 
 DOCDIR=		${PREFIX}/share/doc/clamav
-PDFDOC=		clamav-mirror-howto.pdf clamdoc.pdf phishsigs_howto.pdf \
-		signatures.pdf
 
 INSTALLATION_DIRS+=	${DOCDIR}/html
 
 do-install:
-	cd ${WRKSRC}/docs && for f in ${PDFDOC}; do \
-		${INSTALL_DATA} $$f ${DESTDIR}${DOCDIR}; \
-	done
 	cd ${WRKSRC}/docs && ${FIND} html -type f -print | \
 		pax -rw ${DESTDIR}${DOCDIR}
 
