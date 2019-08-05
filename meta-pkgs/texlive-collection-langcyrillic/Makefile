@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2019/05/15 11:42:54 markd Exp $
+# $NetBSD: Makefile,v 1.11 2019/08/05 09:30:24 markd Exp $
 
 DISTNAME=	collection-langcyrillic
-PKGNAME=	texlive-${DISTNAME}-2019pre1
+PKGNAME=	texlive-${DISTNAME}-2019pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	44895
@@ -28,9 +28,9 @@ DEPENDS+=	tex-cyrplain-[0-9]*:../../print/tex-cyrplain
 # depend eskd
 # depend eskdx
 # depend gost
-# depend hyphen-belarusian
+DEPENDS+=	tex-hyphen-belarusian-[0-9]*:../../print/tex-hyphen-belarusian
 DEPENDS+=	tex-hyphen-bulgarian-[0-9]*:../../print/tex-hyphen-bulgarian
-# depend hyphen-churchslavonic
+DEPENDS+=	tex-hyphen-churchslavonic-[0-9]*:../../print/tex-hyphen-churchslavonic
 DEPENDS+=	tex-hyphen-mongolian-[0-9]*:../../print/tex-hyphen-mongolian
 DEPENDS+=	tex-hyphen-russian-[0-9]*:../../print/tex-hyphen-russian
 DEPENDS+=	tex-hyphen-serbian-[0-9]*:../../print/tex-hyphen-serbian
