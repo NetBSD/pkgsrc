@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/05/12 11:16:37 markd Exp $
+$NetBSD: distinfo,v 1.5 2019/08/05 11:14:51 markd Exp $
 
-SHA1 (tex-doclicense-50871/doclicense.tar.xz) = 81e6c7321faecbbc8e372034ab6d1286f4bb3621
-RMD160 (tex-doclicense-50871/doclicense.tar.xz) = 9dff50b86f0deb497c3794a6bf3c5f3ecf50d59b
-SHA512 (tex-doclicense-50871/doclicense.tar.xz) = d3d8b812d6a229f1d31a40d82651f067843448d64f1fb33d0117490eacd31183417e3346008a5ce6aa6696e4d5626e22241a5e1b3cfa322812a9724e6c13f554
-Size (tex-doclicense-50871/doclicense.tar.xz) = 74976 bytes
+SHA1 (tex-doclicense-51332/doclicense.tar.xz) = 039425ccbfc4fba26b443fcaf57b644ba39c4d8a
+RMD160 (tex-doclicense-51332/doclicense.tar.xz) = 6232b74f4c8a21a18891f686c5ca5bcb772911fa
+SHA512 (tex-doclicense-51332/doclicense.tar.xz) = a66bae24e43e619dfed88b039b8fd44143a1ee1c94a7764d49f7e5d7920f041deb66c8c0ebc91ddc19e7725895a5e5793196724b45945cd31675765caf06a236
+Size (tex-doclicense-51332/doclicense.tar.xz) = 75188 bytes
