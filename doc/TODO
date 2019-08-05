@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19166 2019/08/04 09:38:52 leot Exp $
+$NetBSD: TODO,v 1.19167 2019/08/05 14:49:58 prlw1 Exp $
 
 Suggested new packages
 ======================
@@ -521,8 +521,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o chromium-bsu-0.9.16.1
 	o cim-5.1
 	o cjk-lyx-1.4.4
-	o clamav-0.100.3
-	o clamav-0.101.2
 	o classpath-0.99
 	o classpath-gui-0.99
 	o clawsker-0.7.13

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3275 2019/08/05 13:39:51 prlw1 Exp $
+$NetBSD: CHANGES-2019,v 1.3276 2019/08/05 14:49:58 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5344,3 +5344,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated fonts/tex-heuristica-doc to 1.092 [markd 2019-08-05]
 	Updated x11/py-Xlib to 0.25 [prlw1 2019-08-05]
 	Updated archivers/libmspack to 0.10.1alpha [prlw1 2019-08-05]
+	Updated security/clamav to 0.101.2 [prlw1 2019-08-05]
+	Updated security/clamav-doc to 0.101.2 [prlw1 2019-08-05]
