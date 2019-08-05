@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2019/05/15 11:42:54 markd Exp $
+# $NetBSD: Makefile,v 1.8 2019/08/05 09:32:28 markd Exp $
 
 DISTNAME=	collection-langeuropean
-PKGNAME=	texlive-${DISTNAME}-2019pre1
+PKGNAME=	texlive-${DISTNAME}-2019pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	46803
@@ -58,7 +58,7 @@ DEPENDS+=	tex-hyphen-latin-[0-9]*:../../print/tex-hyphen-latin
 DEPENDS+=	tex-hyphen-latvian-[0-9]*:../../print/tex-hyphen-latvian
 DEPENDS+=	tex-hyphen-lithuanian-[0-9]*:../../print/tex-hyphen-lithuanian
 DEPENDS+=	tex-hyphen-norwegian-[0-9]*:../../print/tex-hyphen-norwegian
-# depend hyphen-occitan
+DEPENDS+=	tex-hyphen-occitan-[0-9]*:../../print/tex-hyphen-occitan
 DEPENDS+=	tex-hyphen-piedmontese-[0-9]*:../../print/tex-hyphen-piedmontese
 DEPENDS+=	tex-hyphen-romanian-[0-9]*:../../print/tex-hyphen-romanian
 DEPENDS+=	tex-hyphen-romansh-[0-9]*:../../print/tex-hyphen-romansh
