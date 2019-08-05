@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/05/12 11:39:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/08/05 11:33:54 markd Exp $
 bin/lwarpmk
 share/texmf-dist/tex/latex/lwarp/lwarp-2in1.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-2up.sty
@@ -36,6 +36,7 @@ share/texmf-dist/tex/latex/lwarp/lwarp-authblk.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-autonum.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-axessibility.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-axodraw2.sty
+share/texmf-dist/tex/latex/lwarp/lwarp-backnaur.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-backref.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-balance.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-bbding.sty
@@ -143,6 +144,7 @@ share/texmf-dist/tex/latex/lwarp/lwarp-fnlineno.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-fnpos.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-fontawesome.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-fontawesome5.sty
+share/texmf-dist/tex/latex/lwarp/lwarp-fontaxes.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-fontenc.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-footmisc.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-footnote.sty
@@ -172,6 +174,7 @@ share/texmf-dist/tex/latex/lwarp/lwarp-grid.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-gridset.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-hang.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-hanging.sty
+share/texmf-dist/tex/latex/lwarp/lwarp-hypbmsec.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-hypcap.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-hypdestopt.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-hypernat.sty
@@ -226,6 +229,7 @@ share/texmf-dist/tex/latex/lwarp/lwarp-mhchem.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-microtype.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-midfloat.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-midpage.sty
+share/texmf-dist/tex/latex/lwarp/lwarp-minibox.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-minitoc.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-morefloats.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-moreverb.sty
@@ -244,6 +248,7 @@ share/texmf-dist/tex/latex/lwarp/lwarp-natbib.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-nccfancyhdr.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-needspace.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-nextpage.sty
+share/texmf-dist/tex/latex/lwarp/lwarp-nfssext-cfr.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-nicefrac.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-niceframe.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-nomencl.sty
@@ -266,6 +271,7 @@ share/texmf-dist/tex/latex/lwarp/lwarp-patch-komascript.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-patch-memoir.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-pbox.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-pdfcomment.sty
+share/texmf-dist/tex/latex/lwarp/lwarp-pdfcrypt.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-pdflscape.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-pdfmarginpar.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-pdfpages.sty
@@ -325,12 +331,14 @@ share/texmf-dist/tex/latex/lwarp/lwarp-sectsty.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-semantic-markup.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-setspace.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-shadow.sty
+share/texmf-dist/tex/latex/lwarp/lwarp-shapepar.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-showidx.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-showkeys.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-showtags.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-sidecap.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-sidenotes.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-siunitx.sty
+share/texmf-dist/tex/latex/lwarp/lwarp-slantsc.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-soul.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-soulpos.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-soulutf8.sty
@@ -345,6 +353,7 @@ share/texmf-dist/tex/latex/lwarp/lwarp-subfig.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-subfigure.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-supertabular.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-syntonly.sty
+share/texmf-dist/tex/latex/lwarp/lwarp-tabfigures.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-tablefootnote.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-tabls.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-tabularx.sty
@@ -416,6 +425,8 @@ share/texmf-dist/tex/latex/lwarp/lwarp-xltxtra.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-xmpincl.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-xpiano.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-xpinyin.sty
+share/texmf-dist/tex/latex/lwarp/lwarp-xr-hyper.sty
+share/texmf-dist/tex/latex/lwarp/lwarp-xr.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-xtab.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-xunicode.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-xurl.sty
