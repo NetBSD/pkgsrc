@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.732 2019/07/29 11:16:53 markd Exp $
+# $NetBSD: Makefile,v 1.733 2019/08/05 09:26:20 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -719,9 +719,11 @@ SUBDIR+=	tex-hyphen-arabic
 SUBDIR+=	tex-hyphen-armenian
 SUBDIR+=	tex-hyphen-base
 SUBDIR+=	tex-hyphen-basque
+SUBDIR+=	tex-hyphen-belarusian
 SUBDIR+=	tex-hyphen-bulgarian
 SUBDIR+=	tex-hyphen-catalan
 SUBDIR+=	tex-hyphen-chinese
+SUBDIR+=	tex-hyphen-churchslavonic
 SUBDIR+=	tex-hyphen-coptic
 SUBDIR+=	tex-hyphen-croatian
 SUBDIR+=	tex-hyphen-czech
@@ -754,6 +756,7 @@ SUBDIR+=	tex-hyphen-latvian
 SUBDIR+=	tex-hyphen-lithuanian
 SUBDIR+=	tex-hyphen-mongolian
 SUBDIR+=	tex-hyphen-norwegian
+SUBDIR+=	tex-hyphen-occitan
 SUBDIR+=	tex-hyphen-piedmontese
 SUBDIR+=	tex-hyphen-polish
 SUBDIR+=	tex-hyphen-portuguese
