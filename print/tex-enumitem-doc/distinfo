@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/05/07 10:41:24 markd Exp $
+$NetBSD: distinfo,v 1.8 2019/08/06 10:33:30 markd Exp $
 
-SHA1 (tex-enumitem-49937/enumitem.doc.tar.xz) = 51d7950c5ab2a4c8b81e5d79d1d3d2815c8f0382
-RMD160 (tex-enumitem-49937/enumitem.doc.tar.xz) = f57c25c6b94255f7d9ef43ee9178013ea13e1ca7
-SHA512 (tex-enumitem-49937/enumitem.doc.tar.xz) = 1cf666526ecb425e58e095c549d358104f04a6714369faa5ac940e79558f39780de541e20edc1539e00fe29420efe9ed0be0473cd82f850ea49467cf824c1c4b
-Size (tex-enumitem-49937/enumitem.doc.tar.xz) = 159352 bytes
+SHA1 (tex-enumitem-51423/enumitem.doc.tar.xz) = 80f0ef3839cc3f0247580fd8602dc94f34ee84e0
+RMD160 (tex-enumitem-51423/enumitem.doc.tar.xz) = aadf887763573f11277ad409e6f6c00d6c4b3e8d
+SHA512 (tex-enumitem-51423/enumitem.doc.tar.xz) = b61f62bb0da61c7124f661739ebfaff6147d73899511d8b1a1d4b98b31bc596c3994acfd73c3c1922f5cc8a05c6a98572254067718be394c48976a10b2351503
+Size (tex-enumitem-51423/enumitem.doc.tar.xz) = 163332 bytes
