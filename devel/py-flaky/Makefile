@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2019/01/21 09:34:53 adam Exp $
+# $NetBSD: Makefile,v 1.3 2019/08/06 09:50:12 adam Exp $
 
-DISTNAME=	flaky-3.5.3
+DISTNAME=	flaky-3.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flaky/}

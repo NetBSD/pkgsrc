@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/01/21 09:34:53 adam Exp $
+$NetBSD: distinfo,v 1.3 2019/08/06 09:50:12 adam Exp $
 
-SHA1 (flaky-3.5.3.tar.gz) = e6215cebb86c78f3dcdfea822ece4c5f44973edd
-RMD160 (flaky-3.5.3.tar.gz) = 94736b4773b85082fa1f6cce30aee020b1f21283
-SHA512 (flaky-3.5.3.tar.gz) = 9ecb80ab1ec2e0db96b7a7a5856a147434c22d29a603e76d3db3f8d94ddea06ecab799943179910bc1d9d8d5dc1c7bcc94156628352479d67e2dcaaf5cbabf27
-Size (flaky-3.5.3.tar.gz) = 29320 bytes
+SHA1 (flaky-3.6.0.tar.gz) = d3e15b471ebf786b54afd5ed1db01c8a8becebeb
+RMD160 (flaky-3.6.0.tar.gz) = 30e5ad53dd655d9f900da6a770606071a283dd82
+SHA512 (flaky-3.6.0.tar.gz) = 766a33b1c314b05410fa0c474acf6ffe85b0b60a5763e72b4ee964afe38821c9de32b684d507cf40661b7476c78a5993a1dfcfed645554229c2458b9c97579d9
+Size (flaky-3.6.0.tar.gz) = 29523 bytes
