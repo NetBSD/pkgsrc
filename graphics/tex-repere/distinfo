@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/05/08 11:07:21 markd Exp $
+$NetBSD: distinfo,v 1.6 2019/08/06 10:11:21 markd Exp $
 
-SHA1 (tex-repere-45779/repere.tar.xz) = ec8038e745c0feffa1e85f00f7379a8096e2b765
-RMD160 (tex-repere-45779/repere.tar.xz) = 4b1e16052e6e6fa1a7ff19849496a991ed7459ec
-SHA512 (tex-repere-45779/repere.tar.xz) = e3ce2652e341725ed471dcb6ec77a3e52beb9890f91d6278429f06482f9feb74bbc0bc4eff9c7d406177fdf6908809578ea1a26ad60919b1faed35b0565605d5
-Size (tex-repere-45779/repere.tar.xz) = 16008 bytes
+SHA1 (tex-repere-51363/repere.tar.xz) = 0f982904e1473c39d121bd3cd0065e83fad8ce85
+RMD160 (tex-repere-51363/repere.tar.xz) = 558669de394ecd57c2f536a55183bafbbedde7b3
+SHA512 (tex-repere-51363/repere.tar.xz) = 4bcfbea44ee34209ce95d6a64de3973eed864ac0e2453ab0afd8e1e05faa2d97fd8d90e90f4d2e1c8f1eb337321cba8c10b03975e1cd75aa32ec5c7373d54316
+Size (tex-repere-51363/repere.tar.xz) = 16768 bytes
