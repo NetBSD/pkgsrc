@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:44:54 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/08/06 11:09:16 markd Exp $
 
-SHA1 (tex-droid-23912/droid.doc.tar.xz) = 4071c56a87b3ce9c2c2cd75fde4863cdbcf16e84
-RMD160 (tex-droid-23912/droid.doc.tar.xz) = 22df01e862562a29ed24e4de7dca2f015e5ce55d
-SHA512 (tex-droid-23912/droid.doc.tar.xz) = f67b1a30880d93c54b34afd8cce6ddb905b9bbe1d5a32e6ea864980849bcd6899c3d39cfcf91ba85153b33b716bf6430956242ef1da572bd5cef2a96f365b98d
-Size (tex-droid-23912/droid.doc.tar.xz) = 541012 bytes
+SHA1 (tex-droid-51468/droid.doc.tar.xz) = 6094c2d62ae283e24920cf58e75c891e8a69cd90
+RMD160 (tex-droid-51468/droid.doc.tar.xz) = 93d2fbb3390baac0c71be594fe9e7b75b311d51f
+SHA512 (tex-droid-51468/droid.doc.tar.xz) = 82613922360967cced68b24fd997b06ee8a082512f6567c4ae17f0046972eca84ec1e154d78ba196eecd0aeff8e9b7adae12f3b7efd780e1eb1e161f8b18ebe7
+Size (tex-droid-51468/droid.doc.tar.xz) = 691972 bytes
