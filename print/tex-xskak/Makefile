@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2015/05/06 08:51:59 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/08/06 10:45:43 markd Exp $
 
 DISTNAME=	xskak
-PKGNAME=	tex-${DISTNAME}-1.4
-TEXLIVE_REV=	35945
+PKGNAME=	tex-${DISTNAME}-1.5
+TEXLIVE_REV=	51432
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/xskak
+HOMEPAGE=	https://ctan.org/pkg/xskak
 COMMENT=	Extension to the skak package for chess typesetting
 LICENSE=	lppl-1.3c
 
