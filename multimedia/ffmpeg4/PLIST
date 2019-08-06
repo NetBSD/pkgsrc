@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/11/06 19:31:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/08/06 07:51:33 adam Exp $
 bin/ffmpeg4
 bin/ffprobe4
 include/ffmpeg4/libavcodec/ac3_parser.h
@@ -62,6 +62,7 @@ include/ffmpeg4/libavutil/fifo.h
 include/ffmpeg4/libavutil/file.h
 include/ffmpeg4/libavutil/frame.h
 include/ffmpeg4/libavutil/hash.h
+include/ffmpeg4/libavutil/hdr_dynamic_metadata.h
 include/ffmpeg4/libavutil/hmac.h
 include/ffmpeg4/libavutil/hwcontext.h
 include/ffmpeg4/libavutil/hwcontext_cuda.h
@@ -108,6 +109,7 @@ include/ffmpeg4/libavutil/timecode.h
 include/ffmpeg4/libavutil/timestamp.h
 include/ffmpeg4/libavutil/tree.h
 include/ffmpeg4/libavutil/twofish.h
+include/ffmpeg4/libavutil/tx.h
 include/ffmpeg4/libavutil/version.h
 include/ffmpeg4/libavutil/xtea.h
 include/ffmpeg4/libpostproc/postprocess.h
@@ -119,19 +121,19 @@ include/ffmpeg4/libswscale/version.h
 lib/ffmpeg4/libavcodec.a
 lib/ffmpeg4/libavcodec.so
 lib/ffmpeg4/libavcodec.so.58
-lib/ffmpeg4/libavcodec.so.58.35.100
+lib/ffmpeg4/libavcodec.so.58.54.100
 lib/ffmpeg4/libavdevice.a
 lib/ffmpeg4/libavdevice.so
 lib/ffmpeg4/libavdevice.so.58
-lib/ffmpeg4/libavdevice.so.58.5.100
+lib/ffmpeg4/libavdevice.so.58.8.100
 lib/ffmpeg4/libavfilter.a
 lib/ffmpeg4/libavfilter.so
 lib/ffmpeg4/libavfilter.so.7
-lib/ffmpeg4/libavfilter.so.7.40.101
+lib/ffmpeg4/libavfilter.so.7.57.100
 lib/ffmpeg4/libavformat.a
 lib/ffmpeg4/libavformat.so
 lib/ffmpeg4/libavformat.so.58
-lib/ffmpeg4/libavformat.so.58.20.100
+lib/ffmpeg4/libavformat.so.58.29.100
 lib/ffmpeg4/libavresample.a
 lib/ffmpeg4/libavresample.so
 lib/ffmpeg4/libavresample.so.4
@@ -139,19 +141,19 @@ lib/ffmpeg4/libavresample.so.4.0.0
 lib/ffmpeg4/libavutil.a
 lib/ffmpeg4/libavutil.so
 lib/ffmpeg4/libavutil.so.56
-lib/ffmpeg4/libavutil.so.56.22.100
+lib/ffmpeg4/libavutil.so.56.31.100
 lib/ffmpeg4/libpostproc.a
 lib/ffmpeg4/libpostproc.so
 lib/ffmpeg4/libpostproc.so.55
-lib/ffmpeg4/libpostproc.so.55.3.100
+lib/ffmpeg4/libpostproc.so.55.5.100
 lib/ffmpeg4/libswresample.a
 lib/ffmpeg4/libswresample.so
 lib/ffmpeg4/libswresample.so.3
-lib/ffmpeg4/libswresample.so.3.3.100
+lib/ffmpeg4/libswresample.so.3.5.100
 lib/ffmpeg4/libswscale.a
 lib/ffmpeg4/libswscale.so
 lib/ffmpeg4/libswscale.so.5
-lib/ffmpeg4/libswscale.so.5.3.100
+lib/ffmpeg4/libswscale.so.5.5.100
 lib/ffmpeg4/pkgconfig/libavcodec.pc
 lib/ffmpeg4/pkgconfig/libavdevice.pc
 lib/ffmpeg4/pkgconfig/libavfilter.pc
