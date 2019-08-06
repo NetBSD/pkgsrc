@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3285 2019/08/06 08:50:49 maya Exp $
+$NetBSD: CHANGES-2019,v 1.3286 2019/08/06 09:12:35 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5371,3 +5371,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/jemalloc to 5.2.1 [adam 2019-08-06]
 	Updated multimedia/ffmpeg4 to 4.2 [adam 2019-08-06]
 	Updated devel/libusb1 to 1.0.22nb1 [maya 2019-08-06]
+	Updated devel/libusb to 0.1.12nb6 [maya 2019-08-06]
