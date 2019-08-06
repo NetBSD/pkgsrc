@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/06 08:43:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/08/06 10:50:02 markd Exp $
+share/texmf-dist/tex/latex/chessboard/UF-chessboard-documentation.sty
 share/texmf-dist/tex/latex/chessboard/chessboard-keys-main.sty
 share/texmf-dist/tex/latex/chessboard/chessboard-keys-pgf.sty
 share/texmf-dist/tex/latex/chessboard/chessboard-pgf.sty
