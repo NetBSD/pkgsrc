@@ -1,8 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/08/06 11:02:47 markd Exp $
 share/texmf-dist/doc/fonts/cantarell/CHANGES
 share/texmf-dist/doc/fonts/cantarell/README
 share/texmf-dist/doc/fonts/cantarell/cantarell-samples.pdf
-share/texmf-dist/doc/fonts/cantarell/cantarell-samples.tex
 share/texmf-dist/doc/fonts/cantarell/cantarell.pdf
-share/texmf-dist/doc/fonts/cantarell/cantarell.tex
-share/texmf-dist/doc/fonts/cantarell/manifest.txt

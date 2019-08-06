@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:44:47 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/08/06 11:02:47 markd Exp $
 
-SHA1 (tex-cantarell-27066/cantarell.doc.tar.xz) = 41d0abd9afeb007da5914120f14b00cd7e14f428
-RMD160 (tex-cantarell-27066/cantarell.doc.tar.xz) = f816f1e8a0f4f73d0dfe648839c3ae830c396b22
-SHA512 (tex-cantarell-27066/cantarell.doc.tar.xz) = 413af98d28f7704712bf5e8ed2a742d5a75ab72e1041dc6debf14dd14797138546808637a9cfe4a18dc787854c9e47026aa4d044b5eecfbec9f761b3c5944e28
-Size (tex-cantarell-27066/cantarell.doc.tar.xz) = 201272 bytes
+SHA1 (tex-cantarell-51459/cantarell.doc.tar.xz) = 5fb7388e2130f3ac2c7d79542c2d453a6ee7034c
+RMD160 (tex-cantarell-51459/cantarell.doc.tar.xz) = ed84c7d4bd81d2df632e219f145ab378e6214b69
+SHA512 (tex-cantarell-51459/cantarell.doc.tar.xz) = 2c696061a46a3b83951869ebb36b31da87e61d9489441d14b8f8ca2eaf4616802ac917e9e68d56d6e81fc03a534175b592d74ac42f8079340f476725f869f0b7
+Size (tex-cantarell-51459/cantarell.doc.tar.xz) = 405644 bytes
