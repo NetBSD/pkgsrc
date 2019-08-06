@@ -1,3 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/06 08:52:12 wiz Exp $
-share/texmf-dist/doc/latex/xskak/README
-share/texmf-dist/doc/latex/xskak/README.TEXLIVE
+@comment $NetBSD: PLIST,v 1.2 2019/08/06 10:45:44 markd Exp $
+share/texmf-dist/doc/latex/xskak/README.md
+share/texmf-dist/doc/latex/xskak/UF-xskak-documentation.sty
+share/texmf-dist/doc/latex/xskak/skak-comment-test.pdf
+share/texmf-dist/doc/latex/xskak/skak-comment-test.tex
+share/texmf-dist/doc/latex/xskak/skak-longmoves-test-new.pdf
+share/texmf-dist/doc/latex/xskak/skak-longmoves-test-new.tex
+share/texmf-dist/doc/latex/xskak/xskak.pdf
+share/texmf-dist/doc/latex/xskak/xskak.tex
+share/texmf-dist/doc/latex/xskak/xskak_and_beamer.pdf
+share/texmf-dist/doc/latex/xskak/xskak_and_beamer.tex
+share/texmf-dist/doc/latex/xskak/xskakgames.xsk
