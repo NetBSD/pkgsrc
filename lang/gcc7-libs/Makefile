@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/01/05 00:39:13 adam Exp $
+# $NetBSD: Makefile,v 1.5 2019/08/06 14:05:05 maya Exp $
 
 GCC_PKGNAME=	gcc7
 .include	"../../lang/${GCC_PKGNAME}/version.mk"
@@ -9,7 +9,7 @@ PKGNAME=	${GCC_PKGNAME}-libs-${GCC7_DIST_VERSION}
 ## The PKGREVISION of this package needs to be at least 1 more than the
 ## PKGREVISION of the lang/gcc7 package so that with the dependence pattern
 ## '{gcc7,gcc7-libs}>=7.4.*' pkg_add will choose gcc7-libs over gcc7.
-PKGREVISION=	1
+PKGREVISION=	2
 
 CATEGORIES=	lang
 MASTER_SITES=	# empty
