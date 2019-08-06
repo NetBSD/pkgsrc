@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19170 2019/08/06 19:43:35 nia Exp $
+$NetBSD: TODO,v 1.19171 2019/08/06 20:38:24 nia Exp $
 
 Suggested new packages
 ======================
@@ -294,21 +294,21 @@ Suggested new packages
 	https://github.com/digitalocean/netbox
 	IP address management and data center infrastructure management tool
 
-	Flowblade
-	https://jliljebl.github.io/flowblade/
-	Video editor
+	linx-server
+	Self-hosted file/code/media sharing website
+	https://github.com/andreimarcu/linx-server
 
 	OpenShot
 	https://www.openshot.org/
 	Video editor
 
-	ManaPlus
-	https://manaplus.org/
-	MMORPG client
+	Flowblade
+	https://jliljebl.github.io/flowblade/
+	MLT-based video editor
 
-	linx-server
-	Self-hosted file/code/media sharing website
-	https://github.com/andreimarcu/linx-server
+	Shotcut [pkgsrc-wip]
+	https://www.shotcut.org/
+	MLT-based video editor
 
 	qBittorrent [pkgsrc-wip]
 	https://www.qbittorrent.org/
