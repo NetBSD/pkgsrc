@@ -1,0 +1,20 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2019/08/06 19:42:20 nia Exp $
+
+Support NetBSD.
+
+--- src/CMakeLists.txt.orig	2019-05-02 05:23:39.000000000 +0000
++++ src/CMakeLists.txt
+@@ -142,9 +142,11 @@ wl_library(helper
+     base_exceptions
+ )
+ 
+-if (CMAKE_SYSTEM_NAME MATCHES "FreeBSD" OR CMAKE_SYSTEM_NAME MATCHES "OpenBSD")
++if (CMAKE_SYSTEM_NAME MATCHES "FreeBSD" OR
++    CMAKE_SYSTEM_NAME MATCHES "NetBSD" OR
++    CMAKE_SYSTEM_NAME MATCHES "OpenBSD")
+   target_link_libraries(widelands_ball_of_mud ${EXECINFO_LIBRARY})
+-endif (CMAKE_SYSTEM_NAME MATCHES "FreeBSD" OR CMAKE_SYSTEM_NAME MATCHES "OpenBSD")
++endif ()
+ 
+ if (WIN32)
+   target_link_libraries(widelands_ball_of_mud wsock32)
