@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:34 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/08/06 11:02:47 markd Exp $
 
 DISTNAME=	cantarell
-PKGNAME=	tex-${DISTNAME}-2.4
-TEXLIVE_REV=	27066
+PKGNAME=	tex-${DISTNAME}-3.2
+TEXLIVE_REV=	51459
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/cantarell
+HOMEPAGE=	https://ctan.org/pkg/cantarell
 COMMENT=	LaTeX support for the Cantarell font family
-LICENSE=	lppl-1.3c
+LICENSE=	ofl-v1.1 AND lppl-1.3c
 
 TEX_MAP_FILES+=	cantarell.map
 
