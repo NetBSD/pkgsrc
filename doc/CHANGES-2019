@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3290 2019/08/06 11:31:36 markd Exp $
+$NetBSD: CHANGES-2019,v 1.3291 2019/08/06 14:05:26 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5403,3 +5403,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated fonts/tex-librecaslon-doc to 2019 [markd 2019-08-06]
 	Updated fonts/tex-opensans to 2.2 [markd 2019-08-06]
 	Updated fonts/tex-opensans-doc to 2.2 [markd 2019-08-06]
+	Updated lang/gcc7 to 7.4.0nb1 [maya 2019-08-06]
