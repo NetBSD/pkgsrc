@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3294 2019/08/06 20:36:10 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3295 2019/08/06 20:58:48 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5407,3 +5407,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Added games/widelands version 20 [nia 2019-08-06]
 	Updated math/py-numba to 0.45.1 [adam 2019-08-06]
 	Added games/manaplus version 1.9.3.23 [nia 2019-08-06]
+	Updated print/tex-urlbst to 0.8 [markd 2019-08-06]
+	Updated print/tex-urlbst-doc to 0.8 [markd 2019-08-06]
+	Updated print/tex-zxjafont to 0.5 [markd 2019-08-06]
+	Updated print/tex-zxjafont-doc to 0.5 [markd 2019-08-06]
