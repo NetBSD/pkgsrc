@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2017/10/14 14:46:00 ryoon Exp $
+$NetBSD: distinfo,v 1.16 2019/08/06 06:16:15 maya Exp $
 
 SHA1 (ecj-4.5.jar) = 58c1d79c64c8cd718550f32a932ccfde8d1e6449
 RMD160 (ecj-4.5.jar) = d3f4da657f086b6423f74e93f001132f4855368a
@@ -24,7 +24,7 @@ SHA1 (patch-gcc_config_x-netbsd) = 6dc3d78e26df62054ea29f98ca51592858e671e3
 SHA1 (patch-gcc_configure) = b925cb971ec547a9c25b518927493a168391d7da
 SHA1 (patch-gcc_fortran_f95-lang.c) = 9dbac16c146821eed9b06e1e9f0da85ff5c4ee75
 SHA1 (patch-gcc_ggc-common.c) = fa577bc25260d7e6304f166686ba51c0b677d7f6
-SHA1 (patch-gcc_ginclude_stddef.h) = 8af3e4b4058fc623c61e91f5771699f0ce679957
+SHA1 (patch-gcc_ginclude_stddef.h) = d1141d2f8b0e4975bbcf90c84836f410e65d39bc
 SHA1 (patch-gcc_system.h) = 4c959a6b1c4d524cbdf44cfb80f0e5758ec20783
 SHA1 (patch-gcc_targhooks.c) = ac5bf5f201389f5bb79866d9e0dc93ee28af51f2
 SHA1 (patch-include_libiberty.h) = 5254c6a421ae16c71571820f6f07906367f042ba
