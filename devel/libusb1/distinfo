@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2019/06/21 16:58:23 sjmulder Exp $
+$NetBSD: distinfo,v 1.11 2019/08/06 08:50:28 maya Exp $
 
 SHA1 (libusb-1.0.22.tar.bz2) = 10116aa265aac4273a0c894faa089370262ec0dc
 RMD160 (libusb-1.0.22.tar.bz2) = 59b800abb0b4c088dbee950fa67bb31240b8a134
@@ -7,3 +7,4 @@ Size (libusb-1.0.22.tar.bz2) = 598833 bytes
 SHA1 (patch-configure) = 2776ff354ea8f17663a9a5330f6fe990af27d8fe
 SHA1 (patch-configure.ac) = 9344b3d6439348164410d1b2071cf14c3f388354
 SHA1 (patch-libusb_os_sunos__usb.c) = 4896e497d451487a09b3be9ad74f72595a441086
+SHA1 (patch-ub) = 14bffca93ec8445cbfccb613dfda92f652b0ceb0
