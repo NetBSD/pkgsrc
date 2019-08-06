@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2019/04/25 10:13:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2019/08/06 06:56:43 adam Exp $
 @pkgdir lib/mysql/plugin/debug
 bin/innochecksum
 bin/lz4_decompress
@@ -462,6 +462,7 @@ share/mysql/test/include/delete_all_rows.inc
 share/mysql/test/include/delete_anonymous_users.inc
 share/mysql/test/include/diff_servers.inc
 share/mysql/test/include/diff_tables.inc
+share/mysql/test/include/disconnect_connections.inc
 share/mysql/test/include/end_include_file.inc
 share/mysql/test/include/end_replace_gtid_combination.inc
 share/mysql/test/include/endspace.inc
@@ -2143,6 +2144,7 @@ share/mysql/test/std_data/crl-client-revoked.crl
 share/mysql/test/std_data/crl-server-cert.pem
 share/mysql/test/std_data/crl-server-key.pem
 share/mysql/test/std_data/crldir/ab8a3803.r0
+share/mysql/test/std_data/data_50722.zip
 share/mysql/test/std_data/des_key_file
 share/mysql/test/std_data/dtrace.d
 share/mysql/test/std_data/expired-ca-key.pem
@@ -2235,6 +2237,9 @@ share/mysql/test/std_data/server-key.pem
 share/mysql/test/std_data/server8k-cert.pem
 share/mysql/test/std_data/server8k-key.pem
 share/mysql/test/std_data/shutdown.sql
+share/mysql/test/std_data/slave-relay-bin-win.index
+share/mysql/test/std_data/slave-relay-bin.000001
+share/mysql/test/std_data/slave-relay-bin.index
 share/mysql/test/std_data/slave-relay-bin_linux.index
 share/mysql/test/std_data/slave-relay-bin_win.index
 share/mysql/test/std_data/system_tap.stp
@@ -2500,6 +2505,7 @@ share/mysql/test/suite/binlog/r/binlog_mysqlbinlog_row_trans.result
 share/mysql/test/suite/binlog/r/binlog_mysqlbinlog_start_stop.result
 share/mysql/test/suite/binlog/r/binlog_mysqlbinlog_start_stop_slave_server_id.result
 share/mysql/test/suite/binlog/r/binlog_nogtid_mix_response_packet.result
+share/mysql/test/suite/binlog/r/binlog_noop_dml_with_readonly.result
 share/mysql/test/suite/binlog/r/binlog_old_versions.result
 share/mysql/test/suite/binlog/r/binlog_purge_binary_logs_stall.result
 share/mysql/test/suite/binlog/r/binlog_purge_binary_logs_to.result
@@ -2710,6 +2716,7 @@ share/mysql/test/suite/binlog/t/binlog_mysqlbinlog_row_trans.test
 share/mysql/test/suite/binlog/t/binlog_mysqlbinlog_start_stop.test
 share/mysql/test/suite/binlog/t/binlog_mysqlbinlog_start_stop_slave_server_id.test
 share/mysql/test/suite/binlog/t/binlog_nogtid_mix_response_packet.test
+share/mysql/test/suite/binlog/t/binlog_noop_dml_with_readonly.test
 share/mysql/test/suite/binlog/t/binlog_old_versions.test
 share/mysql/test/suite/binlog/t/binlog_purge_binary_logs_stall-master.opt
 share/mysql/test/suite/binlog/t/binlog_purge_binary_logs_stall.test
@@ -9674,6 +9681,7 @@ share/mysql/test/suite/rpl/r/rpl_extra_col_slave_innodb.result
 share/mysql/test/suite/rpl/r/rpl_extra_col_slave_myisam.result
 share/mysql/test/suite/rpl/r/rpl_extra_row_data.result
 share/mysql/test/suite/rpl/r/rpl_failed_optimize.result
+share/mysql/test/suite/rpl/r/rpl_fde_write.result
 share/mysql/test/suite/rpl/r/rpl_filter_database.result
 share/mysql/test/suite/rpl/r/rpl_filter_dbs_dynamic.result
 share/mysql/test/suite/rpl/r/rpl_filter_rewrite_db_dynamic.result
@@ -9694,7 +9702,6 @@ share/mysql/test/suite/rpl/r/rpl_get_master_version_and_clock.result
 share/mysql/test/suite/rpl/r/rpl_gis_geometry.result
 share/mysql/test/suite/rpl/r/rpl_grant.result
 share/mysql/test/suite/rpl/r/rpl_grant_plugin.result
-share/mysql/test/suite/rpl/r/rpl_grant_select_columns.result
 share/mysql/test/suite/rpl/r/rpl_group_commit_deadlock.result
 share/mysql/test/suite/rpl/r/rpl_group_commit_update_commit_group.result
 share/mysql/test/suite/rpl/r/rpl_group_replication_commands.result
@@ -10370,6 +10377,7 @@ share/mysql/test/suite/rpl/t/rpl_extra_col_slave_innodb.test
 share/mysql/test/suite/rpl/t/rpl_extra_col_slave_myisam.test
 share/mysql/test/suite/rpl/t/rpl_extra_row_data.test
 share/mysql/test/suite/rpl/t/rpl_failed_optimize.test
+share/mysql/test/suite/rpl/t/rpl_fde_write.test
 share/mysql/test/suite/rpl/t/rpl_filter_database-slave.opt
 share/mysql/test/suite/rpl/t/rpl_filter_database.test
 share/mysql/test/suite/rpl/t/rpl_filter_dbs_dynamic.test
@@ -10400,7 +10408,6 @@ share/mysql/test/suite/rpl/t/rpl_grant.test
 share/mysql/test/suite/rpl/t/rpl_grant_plugin-master.opt
 share/mysql/test/suite/rpl/t/rpl_grant_plugin-slave.opt
 share/mysql/test/suite/rpl/t/rpl_grant_plugin.test
-share/mysql/test/suite/rpl/t/rpl_grant_select_columns.test
 share/mysql/test/suite/rpl/t/rpl_group_commit_deadlock-master.opt
 share/mysql/test/suite/rpl/t/rpl_group_commit_deadlock.test
 share/mysql/test/suite/rpl/t/rpl_group_commit_update_commit_group.test
