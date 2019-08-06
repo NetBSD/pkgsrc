@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:45:23 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/08/06 10:19:34 markd Exp $
 
-SHA1 (tex-zlmtt-34485/zlmtt.doc.tar.xz) = c939bc7ee6564bffc6aaedbf72bf2d85cb77ebb7
-RMD160 (tex-zlmtt-34485/zlmtt.doc.tar.xz) = 3027463b46e2a2b0dd3bf006aac4028c99137c96
-SHA512 (tex-zlmtt-34485/zlmtt.doc.tar.xz) = 312a1b56057282594a96b80e864889d6b2dfcbf70de548a41411c3aae47e1a87f27b73377660595b3b27f6030baf6afa33604e97e5ed265fcd939f133b9f87f0
-Size (tex-zlmtt-34485/zlmtt.doc.tar.xz) = 53492 bytes
+SHA1 (tex-zlmtt-51368/zlmtt.doc.tar.xz) = a1b02eeaba9e5c337552c2ab961435c973bf6285
+RMD160 (tex-zlmtt-51368/zlmtt.doc.tar.xz) = 1bf580fdbd591583846492fc5a905acf6e13664d
+SHA512 (tex-zlmtt-51368/zlmtt.doc.tar.xz) = 22e301f72e0b62078d7b6fe7d7740e0477d9b18beb59ab55b81dd65c50cb250ae711886f01944cdfd25f82d0dd2089c41e662cb2f16eaa0252d70c1006eed8d8
+Size (tex-zlmtt-51368/zlmtt.doc.tar.xz) = 45412 bytes
