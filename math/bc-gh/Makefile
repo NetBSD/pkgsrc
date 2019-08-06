@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2019/06/17 00:35:33 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2019/08/06 11:13:07 gdt Exp $
 
-VERSION=	2.0.3
+VERSION=	2.1.0
 DISTNAME=	bc-${VERSION}
 PKGNAME=	bc-gh-${VERSION}
 CATEGORIES=	math
