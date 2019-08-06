@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19171 2019/08/06 20:38:24 nia Exp $
+$NetBSD: TODO,v 1.19172 2019/08/06 22:10:50 nia Exp $
 
 Suggested new packages
 ======================
@@ -218,10 +218,6 @@ Suggested new packages
 	tkimg [pkg/38026]
 	http://tkimg.sourceforge.net/
 	Add support for several image formats to Tk
-
-	xine-plugin [pkg/38159]
-	http://xinehq.de/
-	Plugin for www/firefox for using multimedia/xine-lib
 
 	flyback [pkgsrc-wip]
 	http://code.google.com/p/flyback/
