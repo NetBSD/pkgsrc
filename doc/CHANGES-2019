@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3289 2019/08/06 11:13:16 gdt Exp $
+$NetBSD: CHANGES-2019,v 1.3290 2019/08/06 11:31:36 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5377,3 +5377,29 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-pylint-django to 2.0.11 [adam 2019-08-06]
 	Updated devel/py-flaky to 3.6.0 [adam 2019-08-06]
 	Updated math/bc-gh to 2.1.0 [gdt 2019-08-06]
+	Updated graphics/tex-repere to 19.06 [markd 2019-08-06]
+	Updated graphics/tex-repere-doc to 19.06 [markd 2019-08-06]
+	Updated fonts/tex-zlmtt to 1.02 [markd 2019-08-06]
+	Updated fonts/tex-zlmtt-doc to 1.02 [markd 2019-08-06]
+	Updated print/tex-biblatex-ieee to 1.3a [markd 2019-08-06]
+	Updated print/tex-biblatex-ieee-doc to 1.3a [markd 2019-08-06]
+	Updated print/tex-enumitem to 3.9 [markd 2019-08-06]
+	Updated print/tex-enumitem-doc to 3.9 [markd 2019-08-06]
+	Updated fonts/tex-inconsolata to 1.121 [markd 2019-08-06]
+	Updated fonts/tex-inconsolata-doc to 1.121 [markd 2019-08-06]
+	Updated print/tex-xskak to 1.5 [markd 2019-08-06]
+	Updated print/tex-xskak-doc to 1.5 [markd 2019-08-06]
+	Updated print/tex-chessboard to 1.8 [markd 2019-08-06]
+	Updated print/tex-chessboard-doc to 1.8 [markd 2019-08-06]
+	Updated fonts/tex-comfortaa to 3.2 [markd 2019-08-06]
+	Updated fonts/tex-comfortaa-doc to 3.2 [markd 2019-08-06]
+	Updated fonts/tex-cantarell to 3.2 [markd 2019-08-06]
+	Updated fonts/tex-cantarell-doc to 3.2 [markd 2019-08-06]
+	Updated fonts/tex-droid to 3.2 [markd 2019-08-06]
+	Updated fonts/tex-droid-doc to 3.2 [markd 2019-08-06]
+	Updated fonts/tex-lato to 3.3 [markd 2019-08-06]
+	Updated fonts/tex-lato-doc to 3.3 [markd 2019-08-06]
+	Updated fonts/tex-librecaslon to 2019 [markd 2019-08-06]
+	Updated fonts/tex-librecaslon-doc to 2019 [markd 2019-08-06]
+	Updated fonts/tex-opensans to 2.2 [markd 2019-08-06]
+	Updated fonts/tex-opensans-doc to 2.2 [markd 2019-08-06]
