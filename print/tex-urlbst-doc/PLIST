@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2017/01/26 06:36:22 markd Exp $
-share/texmf-dist/doc/bibtex/urlbst/Makefile.in
+@comment $NetBSD: PLIST,v 1.2 2019/08/06 20:50:25 markd Exp $
+share/texmf-dist/doc/bibtex/urlbst/LICENCE-gpl-2.0.txt
+share/texmf-dist/doc/bibtex/urlbst/LICENCE-lppl.txt
 share/texmf-dist/doc/bibtex/urlbst/README
 share/texmf-dist/doc/bibtex/urlbst/VERSION
 share/texmf-dist/doc/bibtex/urlbst/urlbst.bib
 share/texmf-dist/doc/bibtex/urlbst/urlbst.html
-share/texmf-dist/doc/bibtex/urlbst/urlbst.html.in
 share/texmf-dist/doc/bibtex/urlbst/urlbst.in
 share/texmf-dist/doc/bibtex/urlbst/urlbst.pdf
 share/texmf-dist/doc/bibtex/urlbst/urlbst.tex
-share/texmf-dist/doc/bibtex/urlbst/urlbst.tex.in
