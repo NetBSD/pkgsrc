@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/08/06 11:18:16 markd Exp $
 share/texmf-dist/doc/fonts/librecaslon/OFL.txt
 share/texmf-dist/doc/fonts/librecaslon/README
-share/texmf-dist/doc/fonts/librecaslon/samples.pdf
-share/texmf-dist/doc/fonts/librecaslon/samples.tex
+share/texmf-dist/doc/fonts/librecaslon/librecaslon-samples.pdf
+share/texmf-dist/doc/fonts/librecaslon/librecaslon-samples.tex
