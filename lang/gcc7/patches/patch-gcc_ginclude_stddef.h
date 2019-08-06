@@ -1,7 +1,9 @@
-$NetBSD: patch-gcc_ginclude_stddef.h,v 1.1 2018/06/17 19:50:52 maya Exp $
+$NetBSD: patch-gcc_ginclude_stddef.h,v 1.2 2019/08/06 06:16:15 maya Exp $
 
 handle netbsd/arm not using the same include guards for
 ansi.h as other archs
+
+Upstreamed in 2018-06-20 (GCC 9.x)
 
 --- gcc/ginclude/stddef.h.orig	2017-01-01 12:07:43.000000000 +0000
 +++ gcc/ginclude/stddef.h
