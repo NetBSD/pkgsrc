@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:44:51 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/08/06 10:56:37 markd Exp $
 
-SHA1 (tex-comfortaa-27536/comfortaa.tar.xz) = 028918193626c6b03942bec5a12152be3cb2a75b
-RMD160 (tex-comfortaa-27536/comfortaa.tar.xz) = 54c92e8ec885364f586525bb476a11433c9764a8
-SHA512 (tex-comfortaa-27536/comfortaa.tar.xz) = 8dc944c729fb600c78d163b40b11aae87aa8acca314c32a3bc0599b4408e76ac7d9dd2e2cc4a6be74f3996813cabd0c89e98ed9f0c26a17f7e8924b972a7390e
-Size (tex-comfortaa-27536/comfortaa.tar.xz) = 516912 bytes
+SHA1 (tex-comfortaa-51461/comfortaa.tar.xz) = 69262398a4bc6a1195844e62e356c90f0000bf6b
+RMD160 (tex-comfortaa-51461/comfortaa.tar.xz) = ee19372a6b2ed2ed219afa3b88c476d951a76cda
+SHA512 (tex-comfortaa-51461/comfortaa.tar.xz) = 83398c18c37a1e2d2e780133910e5ccd59daffb548f689e22bb642d7a2776e425a80df8ded3982f9b343b83d3421d3d5a9f363840b5f4d9e5ab470439183aa70
+Size (tex-comfortaa-51461/comfortaa.tar.xz) = 555748 bytes
