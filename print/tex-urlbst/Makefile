@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2018/08/22 09:46:16 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/08/06 20:50:25 markd Exp $
 
 DISTNAME=	urlbst
-PKGNAME=	tex-${DISTNAME}-0.7
-PKGREVISION=	2
-TEXLIVE_REV=	29803
+PKGNAME=	tex-${DISTNAME}-0.8
+TEXLIVE_REV=	51530
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/urlbst
+HOMEPAGE=	https://ctan.org/pkg/urlbst
 COMMENT=	Web support for BibTeX
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v2 AND lppl-1.3c
 
 USE_TOOLS+=	perl:run
 REPLACE_PERL+=	bin/urlbst
