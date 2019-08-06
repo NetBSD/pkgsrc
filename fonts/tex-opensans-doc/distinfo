@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:45:13 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/08/06 11:29:55 markd Exp $
 
-SHA1 (tex-opensans-24706/opensans.doc.tar.xz) = 9567e780943b281e434fd8f5376d1da812c77786
-RMD160 (tex-opensans-24706/opensans.doc.tar.xz) = b8c0d8777c5f50b44da16e7245cb661b49257d03
-SHA512 (tex-opensans-24706/opensans.doc.tar.xz) = 0a85a9d4f60dd01d38fd50992019e417ddcc0f7aaa166aad4c0304bf8a90d77af765393ded374c255a5105fe912a22e9a01b90027164ec824ac3cfd487806358
-Size (tex-opensans-24706/opensans.doc.tar.xz) = 620160 bytes
+SHA1 (tex-opensans-51458/opensans.doc.tar.xz) = a89dcf24316374f90d91194e6d380bb26c1a86c3
+RMD160 (tex-opensans-51458/opensans.doc.tar.xz) = 725934ae66ce73096182d3952cf7ef07f1335c51
+SHA512 (tex-opensans-51458/opensans.doc.tar.xz) = e8c005fe3c22ca88ffa9f313bd1735dc879167abb17e9c3ba1ad60d609fd95c61377fffbcac15cb5fe2f3e855765b0981c7a602235c3ba5eaceb759f3c92236c
+Size (tex-opensans-51458/opensans.doc.tar.xz) = 598548 bytes
