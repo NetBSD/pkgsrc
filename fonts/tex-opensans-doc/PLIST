@@ -1,8 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/08/06 11:29:55 markd Exp $
 share/texmf-dist/doc/fonts/opensans/CHANGES
 share/texmf-dist/doc/fonts/opensans/README
-share/texmf-dist/doc/fonts/opensans/manifest.txt
 share/texmf-dist/doc/fonts/opensans/opensans-samples.pdf
-share/texmf-dist/doc/fonts/opensans/opensans-samples.tex
 share/texmf-dist/doc/fonts/opensans/opensans.pdf
-share/texmf-dist/doc/fonts/opensans/opensans.tex
