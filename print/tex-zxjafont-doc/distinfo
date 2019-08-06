@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/01/23 10:04:24 markd Exp $
+$NetBSD: distinfo,v 1.5 2019/08/06 20:55:22 markd Exp $
 
-SHA1 (tex-zxjafont-47613/zxjafont.doc.tar.xz) = 01fc0bdad2d3c2ed7bcba836780734195597c982
-RMD160 (tex-zxjafont-47613/zxjafont.doc.tar.xz) = 0e3a4b32a1f2ad4c06a325fd7ccddc00ac8848e9
-SHA512 (tex-zxjafont-47613/zxjafont.doc.tar.xz) = 755eb5876c626f3e26d80d8ab5fd8d45204b107d88f8405fa8101d5c82a6b66af7566d75bbc53972738b069bc8ca2bd72a1e45bf1edb01ce3c7de0706b3cbc6f
-Size (tex-zxjafont-47613/zxjafont.doc.tar.xz) = 145020 bytes
+SHA1 (tex-zxjafont-51531/zxjafont.doc.tar.xz) = 96db59e2fa26c494168050d5547d8d66679765ae
+RMD160 (tex-zxjafont-51531/zxjafont.doc.tar.xz) = 7bc37668e67996c4ce22ca9b8f97647d64cb4a59
+SHA512 (tex-zxjafont-51531/zxjafont.doc.tar.xz) = f6a332e3db7db28041cf0815122ec1134276b12c042fc2b1defb214ef6946598c9149e717309fde2c28b50cac545cbb2d0077890adffb8d3ec0371dfd876f66e
+Size (tex-zxjafont-51531/zxjafont.doc.tar.xz) = 145684 bytes
