@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3292 2019/08/06 19:43:02 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3293 2019/08/06 20:01:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5405,3 +5405,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated fonts/tex-opensans-doc to 2.2 [markd 2019-08-06]
 	Updated lang/gcc7 to 7.4.0nb1 [maya 2019-08-06]
 	Added games/widelands version 20 [nia 2019-08-06]
+	Updated math/py-numba to 0.45.1 [adam 2019-08-06]
