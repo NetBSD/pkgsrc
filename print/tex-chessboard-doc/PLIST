@@ -1,3 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/06 08:43:30 wiz Exp $
-share/texmf-dist/doc/latex/chessboard/README
-share/texmf-dist/doc/latex/chessboard/README.TEXLIVE
+@comment $NetBSD: PLIST,v 1.2 2019/08/06 10:50:03 markd Exp $
+share/texmf-dist/doc/latex/chessboard/README.md
+share/texmf-dist/doc/latex/chessboard/brett.jpg
+share/texmf-dist/doc/latex/chessboard/chessboard-skakps.pdf
+share/texmf-dist/doc/latex/chessboard/chessboard-skakps.tex
+share/texmf-dist/doc/latex/chessboard/chessboard.pdf
+share/texmf-dist/doc/latex/chessboard/chessboard.tex
+share/texmf-dist/doc/latex/chessboard/chessboard_and_beamer.pdf
+share/texmf-dist/doc/latex/chessboard/chessboard_and_beamer.tex
+share/texmf-dist/doc/latex/chessboard/file.fen
