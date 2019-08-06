@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19169 2019/08/06 09:50:31 adam Exp $
+$NetBSD: TODO,v 1.19170 2019/08/06 19:43:35 nia Exp $
 
 Suggested new packages
 ======================
@@ -337,10 +337,6 @@ Suggested new packages
 	StepMania
 	https://www.stepmania.com/
 	Rhythm game
-
-	Widelands
-	https://www.widelands.org/
-	RTS game
 
 	Unknown Horizons
 	http://unknown-horizons.org/
