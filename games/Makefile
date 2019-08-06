@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.440 2019/08/01 22:37:24 nia Exp $
+# $NetBSD: Makefile,v 1.441 2019/08/06 19:42:20 nia Exp $
 #
 
 COMMENT=	Games
@@ -369,6 +369,7 @@ SUBDIR+=	wargames
 SUBDIR+=	warmux
 SUBDIR+=	warzone2100
 SUBDIR+=	wesnoth
+SUBDIR+=	widelands
 SUBDIR+=	wordwarvi
 SUBDIR+=	wormz
 SUBDIR+=	wtf
