@@ -1,0 +1,25 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2019/08/06 19:42:20 nia Exp $
+
+Support NetBSD.
+
+--- CMakeLists.txt.orig	2019-05-02 05:23:39.000000000 +0000
++++ CMakeLists.txt
+@@ -113,6 +113,7 @@ endif()
+ 
+ if (APPLE OR WIN32 OR
+     CMAKE_SYSTEM_NAME MATCHES "FreeBSD" OR
++    CMAKE_SYSTEM_NAME MATCHES "NetBSD" OR
+     CMAKE_SYSTEM_NAME MATCHES "OpenBSD")
+   if (NOT CMAKE_SYSTEM_NAME MATCHES "kFreeBSD")
+     find_package(intl REQUIRED)
+@@ -275,7 +276,9 @@ IF (WIN32)
+ endif (WIN32)
+ 
+ # on BSD this must be explicitly linked
+-if (CMAKE_SYSTEM_NAME MATCHES "FreeBSD" OR CMAKE_SYSTEM_NAME MATCHES "OpenBSD")
++if (CMAKE_SYSTEM_NAME MATCHES "FreeBSD" OR
++    CMAKE_SYSTEM_NAME MATCHES "NetBSD" OR
++    CMAKE_SYSTEM_NAME MATCHES "OpenBSD")
+   # Not needed on Debian GNU/kFreeBSD..
+   if (NOT CMAKE_SYSTEM_NAME MATCHES "kFreeBSD")
+     find_library(EXECINFO_LIBRARY NAMES execinfo)
