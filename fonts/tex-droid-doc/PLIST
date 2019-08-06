@@ -1,12 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/08/06 11:09:16 markd Exp $
 share/texmf-dist/doc/fonts/droid/CHANGES
 share/texmf-dist/doc/fonts/droid/README
+share/texmf-dist/doc/fonts/droid/droid-samples.pdf
 share/texmf-dist/doc/fonts/droid/droid.pdf
-share/texmf-dist/doc/fonts/droid/droid.tex
-share/texmf-dist/doc/fonts/droid/droidsans-samples.pdf
-share/texmf-dist/doc/fonts/droid/droidsans-samples.tex
-share/texmf-dist/doc/fonts/droid/droidsansmono-samples.pdf
-share/texmf-dist/doc/fonts/droid/droidsansmono-samples.tex
-share/texmf-dist/doc/fonts/droid/droidserif-samples.pdf
-share/texmf-dist/doc/fonts/droid/droidserif-samples.tex
-share/texmf-dist/doc/fonts/droid/manifest.txt
