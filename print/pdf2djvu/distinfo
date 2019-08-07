@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2018/09/29 19:02:31 tnn Exp $
+$NetBSD: distinfo,v 1.15 2019/08/07 12:13:01 nia Exp $
 
-SHA1 (pdf2djvu-0.9.10.tar.xz) = a6651d5f458b73858e4a7b45e452ee587fc51077
-RMD160 (pdf2djvu-0.9.10.tar.xz) = 79681b300ec3e829bd9f4cb458cbddeabbbc5b37
-SHA512 (pdf2djvu-0.9.10.tar.xz) = a17f4d0d24beed0ab68ac56f907426d3a49ef219ca36b1cd7114edd41bd892ae35b567f5cd60c1620a82e8dbab380cdc9500ce20ca88fb7f8513ec63da0e59de
-Size (pdf2djvu-0.9.10.tar.xz) = 291944 bytes
+SHA1 (pdf2djvu-0.9.13.tar.xz) = 100614ae77cfc200740d62a9f0afa841f6782663
+RMD160 (pdf2djvu-0.9.13.tar.xz) = 2a8b473ca93eafc3b7f35daf4824410e91af6edf
+SHA512 (pdf2djvu-0.9.13.tar.xz) = 067c721d4f587fd38121ea104e1c08930df58108a2270d7142e539715c031b5bb6b302921dfd68ace09fddfb5c881f081d6a6d866f6038255e89754fc34bc006
+Size (pdf2djvu-0.9.13.tar.xz) = 296420 bytes
