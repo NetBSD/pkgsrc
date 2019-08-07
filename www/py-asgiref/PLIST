@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/07/06 23:00:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/08/07 12:26:04 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -11,6 +11,9 @@ ${PYSITELIB}/asgiref/__init__.pyo
 ${PYSITELIB}/asgiref/compatibility.py
 ${PYSITELIB}/asgiref/compatibility.pyc
 ${PYSITELIB}/asgiref/compatibility.pyo
+${PYSITELIB}/asgiref/current_thread_executor.py
+${PYSITELIB}/asgiref/current_thread_executor.pyc
+${PYSITELIB}/asgiref/current_thread_executor.pyo
 ${PYSITELIB}/asgiref/local.py
 ${PYSITELIB}/asgiref/local.pyc
 ${PYSITELIB}/asgiref/local.pyo
