@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3305 2019/08/07 13:14:33 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3306 2019/08/07 18:06:09 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5423,3 +5423,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated multimedia/py-m3u8 to 0.3.11 [adam 2019-08-07]
 	Updated security/argon2 to 20190702 [nia 2019-08-07]
 	Updated chat/unrealircd to 4.2.4.1 [nia 2019-08-07]
+	Added games/cataclysm-dda version 0.D [nia 2019-08-07]
