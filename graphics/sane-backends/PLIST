@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2018/05/15 14:58:08 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.34 2019/08/07 15:52:13 maya Exp $
 bin/gamma4scanimage
 bin/sane-config
 bin/sane-find-scanner
@@ -71,6 +71,7 @@ lib/sane/libsane-kodak.la
 lib/sane/libsane-kodakaio.la
 lib/sane/libsane-kvs1025.la
 lib/sane/libsane-kvs20xx.la
+${PLIST.kvs40xx}lib/sane/libsane-kvs40xx.la
 lib/sane/libsane-leo.la
 lib/sane/libsane-lexmark.la
 lib/sane/libsane-ma1509.la
@@ -156,6 +157,7 @@ man/man5/sane-kodak.5
 man/man5/sane-kodakaio.5
 man/man5/sane-kvs1025.5
 man/man5/sane-kvs20xx.5
+${PLIST.kvs40xx}man/man5/sane-kvs40xx.5
 man/man5/sane-leo.5
 man/man5/sane-lexmark.5
 man/man5/sane-ma1509.5
