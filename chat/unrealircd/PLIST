@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/08/07 13:14:16 nia Exp $
+@comment $NetBSD: PLIST,v 1.14 2019/08/07 13:30:37 nia Exp $
 bin/unrealircd
 lib/unrealircd/modules/antimixedutf8.so
 lib/unrealircd/modules/antirandom.so
@@ -174,9 +174,9 @@ share/examples/unrealircd/aliases/ircservices.conf
 share/examples/unrealircd/aliases/operstats.conf
 share/examples/unrealircd/badwords.conf
 share/examples/unrealircd/dccallow.conf
-share/examples/unrealircd/examples/example.conf
-share/examples/unrealircd/examples/example.fr.conf
-share/examples/unrealircd/examples/example.tr.conf
+share/examples/unrealircd/example.conf
+share/examples/unrealircd/example.fr.conf
+share/examples/unrealircd/example.tr.conf
 share/examples/unrealircd/help/help.conf
 share/examples/unrealircd/help/help.de.conf
 share/examples/unrealircd/help/help.fr.conf
