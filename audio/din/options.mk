@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2018/12/10 20:33:06 fox Exp $
+# $NetBSD: options.mk,v 1.2 2019/08/07 23:49:02 fox Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.din
 PKG_OPTIONS_OPTIONAL_GROUPS=	backend
@@ -11,8 +11,8 @@ PKG_SUGGESTED_OPTIONS=		jack
 ### Support ALSA
 ###
 .if !empty(PKG_OPTIONS:Malsa)
-CXXFLAGS+=		-D__LINUX_ALSA__
-LDFLAGS+=		-lasound
+CXXFLAGS+=	-D__LINUX_ALSA__
+LIBS+=		-lasound
 .include "../../audio/alsa-lib/buildlink3.mk"
 .endif
 
@@ -20,7 +20,7 @@ LDFLAGS+=		-lasound
 ### Support JACK
 ###
 .if !empty(PKG_OPTIONS:Mjack)
-CXXFLAGS+=		-D__UNIX_JACK__
-LDFLAGS+=		-ljack
+CXXFLAGS+=	-D__UNIX_JACK__
+LIBS+=		-ljack
 .include "../../audio/jack/buildlink3.mk"
 .endif
