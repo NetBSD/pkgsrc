@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2019/02/09 15:23:15 nia Exp $
+@comment $NetBSD: PLIST,v 1.13 2019/08/07 13:14:16 nia Exp $
 bin/unrealircd
 lib/unrealircd/modules/antimixedutf8.so
 lib/unrealircd/modules/antirandom.so
@@ -28,6 +28,7 @@ lib/unrealircd/modules/chanmodes/secureonly.so
 lib/unrealircd/modules/chanmodes/stripcolor.so
 lib/unrealircd/modules/charsys.so
 lib/unrealircd/modules/cloak.so
+lib/unrealircd/modules/connthrottle.so
 lib/unrealircd/modules/extbans/account.so
 lib/unrealircd/modules/extbans/certfp.so
 lib/unrealircd/modules/extbans/inchannel.so
@@ -102,6 +103,7 @@ lib/unrealircd/modules/m_sethost.so
 lib/unrealircd/modules/m_setident.so
 lib/unrealircd/modules/m_setname.so
 lib/unrealircd/modules/m_silence.so
+lib/unrealircd/modules/m_sinfo.so
 lib/unrealircd/modules/m_sjoin.so
 lib/unrealircd/modules/m_sqline.so
 lib/unrealircd/modules/m_squit.so
@@ -142,6 +144,7 @@ lib/unrealircd/modules/m_whois.so
 lib/unrealircd/modules/m_whowas.so
 lib/unrealircd/modules/m_whox.so
 lib/unrealircd/modules/nocodes.so
+lib/unrealircd/modules/reputation.so
 lib/unrealircd/modules/snomasks/dccreject.so
 lib/unrealircd/modules/ssl_antidos.so
 lib/unrealircd/modules/usermodes/bot.so
@@ -186,9 +189,4 @@ share/examples/unrealircd/operclass.default.conf
 share/examples/unrealircd/spamfilter.conf
 share/examples/unrealircd/ssl/curl-ca-bundle.crt
 unrealircd/scripts/unrealircd
-@pkgdir unrealircd/tmp
-@pkgdir unrealircd/logs
-@pkgdir unrealircd/data
-@pkgdir unrealircd/cache
 @pkgdir lib/unrealircd/modules/third
-@pkgdir etc/unrealircd
