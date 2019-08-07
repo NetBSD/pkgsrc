@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3296 2019/08/07 07:34:48 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3297 2019/08/07 08:45:03 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5413,3 +5413,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/tex-zxjafont-doc to 0.5 [markd 2019-08-06]
 	Updated lang/nodejs to 10.16.2 [adam 2019-08-07]
 	Updated lang/npm to 6.10.3 [adam 2019-08-07]
+	Updated games/liblcf to 0.6.1 [nia 2019-08-07]
