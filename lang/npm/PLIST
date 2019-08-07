@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2019/08/03 07:32:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2019/08/07 07:34:32 adam Exp $
 bin/npm
 bin/npx
 lib/node_modules/npm/.licensee.json
@@ -206,7 +206,6 @@ lib/node_modules/npm/lib/config/clear-credentials-by-uri.js
 lib/node_modules/npm/lib/config/cmd-list.js
 lib/node_modules/npm/lib/config/core.js
 lib/node_modules/npm/lib/config/defaults.js
-lib/node_modules/npm/lib/config/fetch-opts.js
 lib/node_modules/npm/lib/config/figgy-config.js
 lib/node_modules/npm/lib/config/gentle-fs.js
 lib/node_modules/npm/lib/config/get-credentials-by-uri.js
@@ -4105,6 +4104,7 @@ lib/node_modules/npm/scripts/gen-dev-ignores.js
 lib/node_modules/npm/scripts/index-build.js
 lib/node_modules/npm/scripts/install.sh
 lib/node_modules/npm/scripts/maketest
+lib/node_modules/npm/scripts/pr
 lib/node_modules/npm/scripts/publish-tag.js
 lib/node_modules/npm/scripts/release.sh
 lib/node_modules/npm/scripts/relocate.sh
