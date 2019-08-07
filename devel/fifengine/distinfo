@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2019/08/07 11:48:16 nia Exp $
+
+SHA1 (fifengine-0.4.2.tar.gz) = 964e5a1ad4f2c8acf7f35cd5d3e6008936fd133e
+RMD160 (fifengine-0.4.2.tar.gz) = ac07acea6996785d5ed5673627b16db4f66b74c4
+SHA512 (fifengine-0.4.2.tar.gz) = 2b92e936d3f900532c5dee235a217c338941c44da479dceb3e48b3e8b93a402b31dc5501a6533391a01af53d6dbd51b6793c74e8ac81301ae6f1fa18271761a4
+Size (fifengine-0.4.2.tar.gz) = 15713939 bytes
+SHA1 (patch-CMakeLists.txt) = 5cc3ade95e7011c460107d87d95f4001dc563ae2
