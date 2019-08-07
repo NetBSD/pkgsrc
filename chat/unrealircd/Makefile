@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2019/08/07 13:30:37 nia Exp $
+# $NetBSD: Makefile,v 1.64 2019/08/07 13:52:44 nia Exp $
 
 DISTNAME=	unrealircd-4.2.4.1
 PKGREVISION=	1
@@ -16,6 +16,12 @@ GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake gunzip pkg-config
 
 .include "options.mk"
+
+SUBST_CLASSES+=		argon2
+SUBST_STAGE.argon2=	pre-configure
+SUBST_MESSAGE.argon2=	Fixing Argon2 version number
+SUBST_FILES.argon2+=	configure
+SUBST_SED.argon2+=	-e 's|0~20161029|ZERO|g'
 
 PKG_SYSCONFSUBDIR=	unrealircd
 
