@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/08/06 22:15:24 nia Exp $
+# $NetBSD: Makefile,v 1.3 2019/08/07 13:59:09 nia Exp $
 
 DISTNAME=	widelands-build20
 PKGNAME=	widelands-20
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.widelands.org/
-COMMENT=	Fantasy real-time strategy game
+COMMENT=	Fantasy real-time strategy game inspired by Settlers II
 LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
