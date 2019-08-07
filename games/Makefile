@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.442 2019/08/06 20:35:48 nia Exp $
+# $NetBSD: Makefile,v 1.443 2019/08/07 12:07:35 nia Exp $
 #
 
 COMMENT=	Games
@@ -361,6 +361,7 @@ SUBDIR+=	tuxmath
 SUBDIR+=	tuxracer
 SUBDIR+=	tyrquake
 SUBDIR+=	ufoai
+SUBDIR+=	unknown-horizons
 SUBDIR+=	uqm
 SUBDIR+=	urban
 SUBDIR+=	velena
