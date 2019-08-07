@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3295 2019/08/06 20:58:48 markd Exp $
+$NetBSD: CHANGES-2019,v 1.3296 2019/08/07 07:34:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5411,3 +5411,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/tex-urlbst-doc to 0.8 [markd 2019-08-06]
 	Updated print/tex-zxjafont to 0.5 [markd 2019-08-06]
 	Updated print/tex-zxjafont-doc to 0.5 [markd 2019-08-06]
+	Updated lang/nodejs to 10.16.2 [adam 2019-08-07]
+	Updated lang/npm to 6.10.3 [adam 2019-08-07]
