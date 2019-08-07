@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19172 2019/08/06 22:10:50 nia Exp $
+$NetBSD: TODO,v 1.19173 2019/08/07 12:13:30 nia Exp $
 
 Suggested new packages
 ======================
@@ -333,10 +333,6 @@ Suggested new packages
 	StepMania
 	https://www.stepmania.com/
 	Rhythm game
-
-	Unknown Horizons
-	http://unknown-horizons.org/
-	2D realtime strategy simulation with an emphasis on economy and city building
 
 	0 A.D. [pkgsrc-wip]
 	https://play0ad.com/
