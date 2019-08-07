@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2877 2019/08/07 11:44:40 nia Exp $
+# $NetBSD: Makefile,v 1.2878 2019/08/07 11:48:16 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -280,6 +280,7 @@ SUBDIR+=	fann
 SUBDIR+=	fastdep
 SUBDIR+=	fhist
 SUBDIR+=	fifechan
+SUBDIR+=	fifengine
 SUBDIR+=	flatbuffers
 SUBDIR+=	flatzebra
 SUBDIR+=	flex
