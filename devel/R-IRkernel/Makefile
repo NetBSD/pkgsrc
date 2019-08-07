@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2019/07/31 14:56:44 brook Exp $
+# $NetBSD: Makefile,v 1.4 2019/08/07 21:48:01 brook Exp $
 
 CATEGORIES=	devel R
-GITHUB_PROJECT=	${R_PKGNAME}
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://irkernel.github.io/
