@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2018/05/15 13:19:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.70 2019/08/07 15:52:13 maya Exp $
 
 .include "Makefile.common"
 COMMENT=	API for access to scanners, digital cameras, frame grabbers, etc
@@ -25,13 +25,14 @@ CONFIGURE_ENV.SunOS+=	ac_cv_func_inet_pton=yes
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=		mustek pint sm3600
+PLIST_VARS+=		mustek pint sm3600 kvs40xx
 
 .if (${OPSYS} == "SunOS") || (${OPSYS} == "Linux") || (${OPSYS} == "DragonFly") || (${OPSYS} == "FreeBSD")
 PLIST.sm3600=		yes
 .elif (${OPSYS} == "Darwin")
 PLIST.mustek=		yes
 PLIST.sm3600=		yes
+PLIST.kvs40xx=		yes
 .else
 PLIST.pint=		yes
 PLIST.sm3600=		yes
