@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3298 2019/08/07 08:45:33 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3299 2019/08/07 11:45:04 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5415,3 +5415,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/npm to 6.10.3 [adam 2019-08-07]
 	Updated games/liblcf to 0.6.1 [nia 2019-08-07]
 	Updated games/easyrpg-player to 0.6.1 [nia 2019-08-07]
+	Added devel/fifechan version 0.1.5 [nia 2019-08-07]
