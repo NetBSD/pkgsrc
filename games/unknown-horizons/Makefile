@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/08/07 12:07:35 nia Exp $
+# $NetBSD: Makefile,v 1.2 2019/08/07 12:15:06 nia Exp $
 
 DISTNAME=	unknown-horizons-2019.1
 CATEGORIES=	games
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=unknown-horizons/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://unknown-horizons.org/
-COMMENT=	2D realtime strategy simulation
+COMMENT=	2D RTS game with an emphasis on economy and city building
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	intltool msgfmt
