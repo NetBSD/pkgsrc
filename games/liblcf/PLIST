@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/03/05 10:45:38 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/08/07 08:44:50 nia Exp $
 include/liblcf/command_codes.h
 include/liblcf/data.h
 include/liblcf/encoder.h
@@ -62,8 +62,8 @@ include/liblcf/rpg_save.h
 include/liblcf/rpg_saveactor.h
 include/liblcf/rpg_savecommonevent.h
 include/liblcf/rpg_saveeasyrpgdata.h
-include/liblcf/rpg_saveeventcommands.h
-include/liblcf/rpg_saveeventdata.h
+include/liblcf/rpg_saveeventexecframe.h
+include/liblcf/rpg_saveeventexecstate.h
 include/liblcf/rpg_saveinventory.h
 include/liblcf/rpg_savemapevent.h
 include/liblcf/rpg_savemapeventbase.h

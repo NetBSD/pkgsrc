@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/03/05 10:45:38 nia Exp $
+$NetBSD: distinfo,v 1.3 2019/08/07 08:44:50 nia Exp $
 
-SHA1 (liblcf-0.6.0.tar.gz) = be0cd84ad2cee8e32c6618aa25e1e42a201c5a01
-RMD160 (liblcf-0.6.0.tar.gz) = 4b9945ac5f00f7fb27155e3add0e3f3741b48e72
-SHA512 (liblcf-0.6.0.tar.gz) = 565ac006fa1de25760a761fbf2e08fadd0c893b52c39aafa646258ea9280c64737620a4cb20f2331f52c6619c6949ce058aa45d62240b67248340248ead17f8b
-Size (liblcf-0.6.0.tar.gz) = 584487 bytes
+SHA1 (liblcf-0.6.1.tar.gz) = 21a8e1c012930e2ad0324ca3f4a870f50d05901b
+RMD160 (liblcf-0.6.1.tar.gz) = 8042f64ad3994dafa43f1edaf758aceaa521322d
+SHA512 (liblcf-0.6.1.tar.gz) = 996df50b000acd023f28071312b0300cb10e816e1c01622133238635c0c4655dbddd51ffb8fc31394a5fb383092531e18ccbfb29d47ecf5afe0e85959bcea6a0
+Size (liblcf-0.6.1.tar.gz) = 584935 bytes
