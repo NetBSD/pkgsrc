@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2019/08/07 13:14:16 nia Exp $
+# $NetBSD: Makefile,v 1.63 2019/08/07 13:30:37 nia Exp $
 
 DISTNAME=	unrealircd-4.2.4.1
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	https://www.unrealircd.org/unrealircd4/
 
@@ -12,7 +13,6 @@ LICENSE=	gnu-gpl-v2
 CONFLICTS+=	ircu-[0-9]*
 
 GNU_CONFIGURE=	YES
-USE_TOOLS+=	aclocal autoconf autoheader automake bash
 USE_TOOLS+=	gmake gunzip pkg-config
 
 .include "options.mk"
@@ -98,7 +98,6 @@ INSTALLATION_DIRS+=	share/doc/unrealircd
 INSTALLATION_DIRS+=	${IRCD_EG}
 INSTALLATION_DIRS+=	${IRCD_EG}/aliases
 INSTALLATION_DIRS+=	${IRCD_EG}/help
-INSTALLATION_DIRS+=	${IRCD_EG}/examples
 INSTALLATION_DIRS+=	${IRCD_EG}/ssl
 
 OWN_DIRS_PERMS+=	unrealircd/tmp ${UIRCD_USER} ${UIRCD_GROUP} 0755
@@ -107,9 +106,6 @@ OWN_DIRS_PERMS+=	unrealircd/data ${UIRCD_USER} ${UIRCD_GROUP} 0755
 OWN_DIRS_PERMS+=	unrealircd/cache ${UIRCD_USER} ${UIRCD_GROUP} 0755
 OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR} ${UIRCD_USER} ${UIRCD_GROUP} 0755
 
-pre-configure:
-	cd ${WRKSRC} && ${BASH} ./autogen.sh
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/ircd ${DESTDIR}${PREFIX}/bin/unrealircd
 	${INSTALL_DATA} ${WRKSRC}/doc/Authors ${DESTDIR}${PREFIX}/share/doc/unrealircd
@@ -117,12 +113,12 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/tao.of.irc ${DESTDIR}${PREFIX}/share/doc/unrealircd
 	${INSTALL_DATA} ${WRKSRC}/doc/conf/*.default.conf ${DESTDIR}${IRCD_EG}
 	${INSTALL_DATA} ${WRKSRC}/doc/conf/*.optional.conf ${DESTDIR}${IRCD_EG}
+	${INSTALL_DATA} ${WRKSRC}/doc/conf/examples/*.conf ${DESTDIR}${IRCD_EG}
 	${INSTALL_DATA} ${WRKSRC}/doc/conf/spamfilter.conf ${DESTDIR}${IRCD_EG}
 	${INSTALL_DATA} ${WRKSRC}/doc/conf/badwords.conf ${DESTDIR}${IRCD_EG}
 	${INSTALL_DATA} ${WRKSRC}/doc/conf/dccallow.conf ${DESTDIR}${IRCD_EG}
 	${INSTALL_DATA} ${WRKSRC}/doc/conf/aliases/*.conf ${DESTDIR}${IRCD_EG}/aliases
 	${INSTALL_DATA} ${WRKSRC}/doc/conf/help/*.conf ${DESTDIR}${IRCD_EG}/help
-	${INSTALL_DATA} ${WRKSRC}/doc/conf/examples/*.conf ${DESTDIR}${IRCD_EG}/examples
 	${INSTALL_DATA} ${WRKSRC}/doc/conf/ssl/curl-ca-bundle.crt ${DESTDIR}${IRCD_EG}/ssl
 	${INSTALL_SCRIPT} ${WRKSRC}/unrealircd ${DESTDIR}${PREFIX}/unrealircd/scripts
 	${INSTALL_LIB} ${WRKSRC}/src/modules/*.so ${DESTDIR}${PREFIX}/lib/unrealircd/modules
