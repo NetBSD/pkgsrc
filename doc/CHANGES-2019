@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3302 2019/08/07 12:13:17 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3303 2019/08/07 12:27:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5419,3 +5419,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/fifengine version 0.4.2 [nia 2019-08-07]
 	Added games/unknown-horizons version 2019.1 [nia 2019-08-07]
 	Updated print/pdf2djvu to 0.9.13 [nia 2019-08-07]
+	Updated www/py-asgiref to 3.2.1 [adam 2019-08-07]
+	Updated multimedia/py-m3u8 to 0.3.11 [adam 2019-08-07]
