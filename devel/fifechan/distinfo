@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/08/07 11:44:40 nia Exp $
+
+SHA1 (fifechan-0.1.5.tar.gz) = be7d09356ad9eafdf413fe19163a629e54670145
+RMD160 (fifechan-0.1.5.tar.gz) = 08751bc5f516f9570c2b12cee7ec4de009cb834e
+SHA512 (fifechan-0.1.5.tar.gz) = 713f46ac8310f333c599a17c53e83b43c1e71dc0a631596eae0089877409e48f87fa25ca067734817ca8ddc75ecd7b99ccda227fc29036676a87e441f8aa7d2d
+Size (fifechan-0.1.5.tar.gz) = 272472 bytes
