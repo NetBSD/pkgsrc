@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/07/20 22:46:20 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/08/07 08:53:36 nia Exp $
 
 DISTNAME=	7kaa-2.15.2
 PKGREVISION=	2
@@ -19,6 +19,8 @@ USE_TOOLS+=	pkg-config
 
 # C++11
 GCC_REQD+=	4.6
+
+LDFLAGS.SunOS+=	-lintl -liconv
 
 TOOL_DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 
