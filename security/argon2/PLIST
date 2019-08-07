@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2017/02/23 16:55:07 kleink Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/08/07 12:58:49 nia Exp $
 bin/argon2
 include/argon2.h
 lib/libargon2.a
 lib/libargon2.${SO_SUFFIX}
+lib/pkgconfig/libargon2.pc
 man/man1/argon2.1
 share/doc/argon2/README.md
 share/doc/argon2/argon2-specs.pdf
