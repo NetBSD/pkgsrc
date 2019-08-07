@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2019/07/20 22:46:11 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2019/08/07 13:14:16 nia Exp $
 
-DISTNAME=	unrealircd-4.2.2
-PKGREVISION=	3
+DISTNAME=	unrealircd-4.2.4.1
 CATEGORIES=	chat
 MASTER_SITES=	https://www.unrealircd.org/unrealircd4/
 
@@ -16,23 +15,22 @@ GNU_CONFIGURE=	YES
 USE_TOOLS+=	aclocal autoconf autoheader automake bash
 USE_TOOLS+=	gmake gunzip pkg-config
 
-# 4.2.2 tarball was changed, remove on next update
-DIST_SUBDIR=	unrealircd-20190402
-
 .include "options.mk"
+
+PKG_SYSCONFSUBDIR=	unrealircd
 
 # Quoth ./configure,
 # "noone knows if disabling dynamic linking actually does anything or not".
 # Also needed to configure non-interactively.
 CONFIGURE_ARGS+=	--enable-dynamic-linking
 
-# not building without SSL is apparently unsupported but this still
-# seems to be required or the build breaks...
-CONFIGURE_ARGS+=	--enable-ssl
+CONFIGURE_ARGS+=	--enable-ssl=${BUILDLINK_PREFIX.openssl}
 
 CONFIGURE_ARGS+=	--with-system-cares
-CONFIGURE_ARGS+=	--with-system-tre
 CONFIGURE_ARGS+=	--with-system-pcre2
+
+# Deprecated
+CONFIGURE_ARGS+=	--without-tre
 
 CONFIGURE_ARGS+=	--with-permissions=0660
 CONFIGURE_ARGS+=	--with-datadir=${PREFIX}/unrealircd/data
@@ -44,7 +42,7 @@ CONFIGURE_ARGS+=	--with-scriptdir=${PREFIX}/unrealircd/scripts
 CONFIGURE_ARGS+=	--with-bindir=${PREFIX}/bin
 CONFIGURE_ARGS+=	--with-modulesdir=${PREFIX}/lib/unrealircd/modules
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/unrealircd
-CONFIGURE_ARGS+=	--with-confdir=${PKG_SYSCONFDIR}/unrealircd
+CONFIGURE_ARGS+=	--with-confdir=${PKG_SYSCONFDIR}
 
 OWN_DIRS_PERMS+=	${PREFIX}/unrealircd ${UIRCD_USER} ${UIRCD_GROUP} 0755
 OWN_DIRS_PERMS+=	${PREFIX}/unrealircd/data ${UIRCD_USER} ${UIRCD_GROUP} 0700
@@ -53,12 +51,11 @@ OWN_DIRS_PERMS+=	${PREFIX}/unrealircd/logs ${UIRCD_USER} ${UIRCD_GROUP} 0700
 OWN_DIRS_PERMS+=	${PREFIX}/unrealircd/tmp ${UIRCD_USER} ${UIRCD_GROUP} 0700
 
 CONFIGURE_ARGS+=	--with-sendq=${UIRCD_SENDQ:Q}
-CONFIGURE_ARGS+=	--with-fd-setsize=${UIRCD_FDSIZE:Q}
 CONFIGURE_ARGS+=	--with-nick-history=${UIRCD_NICKHIST:Q}
 
 IRCD_EG=	${PREFIX}/share/examples/unrealircd
 
-BUILD_DEFS+=	UIRCD_SENDQ UIRCD_NICKHIST UIRCD_FDSIZE VARBASE
+BUILD_DEFS+=	UIRCD_SENDQ UIRCD_NICKHIST VARBASE
 
 PTHREAD_OPTS+=	require
 
@@ -69,7 +66,6 @@ PTHREAD_OPTS+=	require
 #
 UIRCD_SENDQ?=		3000000
 UIRCD_NICKHIST?=	2000
-UIRCD_FDSIZE?=		1024
 UIRCD_USER?=		uircd
 UIRCD_GROUP?=		uircd
 
@@ -89,18 +85,55 @@ FILES_SUBST+=	UIRCD_GROUP=${UIRCD_GROUP}
 CFLAGS.Darwin+=	-DUSE_LOCALE
 CFLAGS.SunOS+=	-DUSE_LOCALE
 
+INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	unrealircd/scripts
+INSTALLATION_DIRS+=	lib/unrealircd/modules
+INSTALLATION_DIRS+=	lib/unrealircd/modules/usermodes
+INSTALLATION_DIRS+=	lib/unrealircd/modules/chanmodes
+INSTALLATION_DIRS+=	lib/unrealircd/modules/snomasks
+INSTALLATION_DIRS+=	lib/unrealircd/modules/extbans
+INSTALLATION_DIRS+=	lib/unrealircd/modules/cap
+INSTALLATION_DIRS+=	lib/unrealircd/modules/third
+INSTALLATION_DIRS+=	share/doc/unrealircd
 INSTALLATION_DIRS+=	${IRCD_EG}
+INSTALLATION_DIRS+=	${IRCD_EG}/aliases
+INSTALLATION_DIRS+=	${IRCD_EG}/help
+INSTALLATION_DIRS+=	${IRCD_EG}/examples
+INSTALLATION_DIRS+=	${IRCD_EG}/ssl
+
+OWN_DIRS_PERMS+=	unrealircd/tmp ${UIRCD_USER} ${UIRCD_GROUP} 0755
+OWN_DIRS_PERMS+=	unrealircd/logs ${UIRCD_USER} ${UIRCD_GROUP} 0755
+OWN_DIRS_PERMS+=	unrealircd/data ${UIRCD_USER} ${UIRCD_GROUP} 0755
+OWN_DIRS_PERMS+=	unrealircd/cache ${UIRCD_USER} ${UIRCD_GROUP} 0755
+OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR} ${UIRCD_USER} ${UIRCD_GROUP} 0755
 
 pre-configure:
 	cd ${WRKSRC} && ${BASH} ./autogen.sh
 
-post-install:
-	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/unrealircd/* ${DESTDIR}${IRCD_EG}
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/src/ircd ${DESTDIR}${PREFIX}/bin/unrealircd
+	${INSTALL_DATA} ${WRKSRC}/doc/Authors ${DESTDIR}${PREFIX}/share/doc/unrealircd
+	${INSTALL_DATA} ${WRKSRC}/doc/coding-guidelines ${DESTDIR}${PREFIX}/share/doc/unrealircd
+	${INSTALL_DATA} ${WRKSRC}/doc/tao.of.irc ${DESTDIR}${PREFIX}/share/doc/unrealircd
+	${INSTALL_DATA} ${WRKSRC}/doc/conf/*.default.conf ${DESTDIR}${IRCD_EG}
+	${INSTALL_DATA} ${WRKSRC}/doc/conf/*.optional.conf ${DESTDIR}${IRCD_EG}
+	${INSTALL_DATA} ${WRKSRC}/doc/conf/spamfilter.conf ${DESTDIR}${IRCD_EG}
+	${INSTALL_DATA} ${WRKSRC}/doc/conf/badwords.conf ${DESTDIR}${IRCD_EG}
+	${INSTALL_DATA} ${WRKSRC}/doc/conf/dccallow.conf ${DESTDIR}${IRCD_EG}
+	${INSTALL_DATA} ${WRKSRC}/doc/conf/aliases/*.conf ${DESTDIR}${IRCD_EG}/aliases
+	${INSTALL_DATA} ${WRKSRC}/doc/conf/help/*.conf ${DESTDIR}${IRCD_EG}/help
+	${INSTALL_DATA} ${WRKSRC}/doc/conf/examples/*.conf ${DESTDIR}${IRCD_EG}/examples
+	${INSTALL_DATA} ${WRKSRC}/doc/conf/ssl/curl-ca-bundle.crt ${DESTDIR}${IRCD_EG}/ssl
+	${INSTALL_SCRIPT} ${WRKSRC}/unrealircd ${DESTDIR}${PREFIX}/unrealircd/scripts
+	${INSTALL_LIB} ${WRKSRC}/src/modules/*.so ${DESTDIR}${PREFIX}/lib/unrealircd/modules
+	${INSTALL_LIB} ${WRKSRC}/src/modules/usermodes/*.so ${DESTDIR}${PREFIX}/lib/unrealircd/modules/usermodes
+	${INSTALL_LIB} ${WRKSRC}/src/modules/chanmodes/*.so ${DESTDIR}${PREFIX}/lib/unrealircd/modules/chanmodes
+	${INSTALL_LIB} ${WRKSRC}/src/modules/snomasks/*.so ${DESTDIR}${PREFIX}/lib/unrealircd/modules/snomasks
+	${INSTALL_LIB} ${WRKSRC}/src/modules/extbans/*.so ${DESTDIR}${PREFIX}/lib/unrealircd/modules/extbans
+	${INSTALL_LIB} ${WRKSRC}/src/modules/cap/*.so ${DESTDIR}${PREFIX}/lib/unrealircd/modules/cap
 
 .include "../../net/libcares/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../devel/tre/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../security/argon2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
