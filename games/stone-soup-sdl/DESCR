@@ -1,0 +1,6 @@
+Dungeon Crawl Stone Soup is an open-source, single-player, role-playing
+roguelike game of exploration and treasure-hunting in dungeons filled with
+dangerous and unfriendly monsters in a quest to rescue the mystifyingly fabulous
+Orb of Zot.
+
+This package contains the graphical SDL2-based interface with tiles.

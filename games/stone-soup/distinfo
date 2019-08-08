@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2019/08/08 13:40:30 nia Exp $
+
+SHA1 (stone_soup-0.23.2.tar.xz) = a38f28369441fd6dd2517a45d0b76fadcd687d91
+RMD160 (stone_soup-0.23.2.tar.xz) = c0fe2b11b7426ee01d463d7fd714ec9fab0e57a4
+SHA512 (stone_soup-0.23.2.tar.xz) = 61ccb0ac262a798e7c06fdb5e821c9885a690e082c33f6255358561929d6800b272106632279d27320e8ae240d903e2002f59d908d5db4841065a5cfa97bbee8
+Size (stone_soup-0.23.2.tar.xz) = 30157732 bytes
+SHA1 (patch-source_initfile.cc) = a57f7fcbb5461d61bd515907edc264741bd34553
+SHA1 (patch-source_platform.h) = 9ba1b2e4e917db783fbda7bbb606c84b3a224b79
