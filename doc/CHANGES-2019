@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3309 2019/08/08 07:22:02 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3310 2019/08/08 13:18:13 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5427,3 +5427,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added games/cataclysm-dda-sdl version 0.D [nia 2019-08-07]
 	Updated www/cliqz to 1.28.1 [fox 2019-08-08]
 	Updated devel/cmake to 3.15.2 [adam 2019-08-08]
+	Updated net/unifi to 5.10.26 [gdt 2019-08-08]
