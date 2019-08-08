@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2019/07/31 15:21:50 brook Exp $
-
-CATEGORIES=	devel R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/evaluate/
-COMMENT=	Parsing and evaluation tools
-LICENSE=	mit
+# $NetBSD: Makefile,v 1.8 2019/08/08 19:53:39 brook Exp $
 
 R_PKGNAME=	evaluate
 R_PKGVER=	0.14
+CATEGORIES=	devel
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Parsing and evaluation tools
+LICENSE=	mit
 
 DEPENDS+=	R-stringr>=0.6.2:../../textproc/R-stringr
 

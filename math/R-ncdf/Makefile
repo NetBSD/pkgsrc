@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.19 2019/07/31 19:59:31 brook Exp $
+# $NetBSD: Makefile,v 1.20 2019/08/08 19:53:51 brook Exp $
 
+R_PKGNAME=	ncdf
+R_PKGVER=	1.6.6
 PKGREVISION=	13
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/ncdf/
 COMMENT=	High-level R interface to Unidata's netCDF data files
 LICENSE=	gnu-gpl-v2
-
-R_PKGNAME=	ncdf
-R_PKGVER=	1.6.6
 
 USE_LANGUAGES=	c
 

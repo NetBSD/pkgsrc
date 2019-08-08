@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2019/07/31 13:37:02 brook Exp $
-
-CATEGORIES=	misc R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/Hmisc/
-COMMENT=	Harrell miscellaneous
-LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
+# $NetBSD: Makefile,v 1.2 2019/08/08 19:53:55 brook Exp $
 
 R_PKGNAME=	Hmisc
 R_PKGVER=	4.2-0
+CATEGORIES=	misc
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Harrell miscellaneous
+LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 DEPENDS+=	R-base64enc>=0.1.3:../../converters/R-base64enc
 DEPENDS+=	R-ggplot2>=2.2:../../graphics/R-ggplot2

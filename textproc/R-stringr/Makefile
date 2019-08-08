@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2019/07/31 20:58:08 brook Exp $
-
-CATEGORIES=	textproc R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/stringr/
-COMMENT=	Simple, consistent wrappers for common string operations
-LICENSE=	gnu-gpl-v2
+# $NetBSD: Makefile,v 1.7 2019/08/08 19:53:57 brook Exp $
 
 R_PKGNAME=	stringr
 R_PKGVER=	1.4.0
+CATEGORIES=	textproc
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Simple, consistent wrappers for common string operations
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	R-glue>=1.2.0:../../devel/R-glue
 DEPENDS+=	R-magrittr>=1.5:../../devel/R-magrittr

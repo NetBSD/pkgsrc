@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.12 2019/07/31 19:55:15 brook Exp $
-
-CATEGORIES=	math R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/maps/
-COMMENT=	Draw geographical maps
-LICENSE=	gnu-gpl-v2
+# $NetBSD: Makefile,v 1.13 2019/08/08 19:53:51 brook Exp $
 
 R_PKGNAME=	maps
 R_PKGVER=	3.3.0
+CATEGORIES=	math
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Draw geographical maps
+LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake
 MAKE_ENV+=	AWK=${AWK:Q}
