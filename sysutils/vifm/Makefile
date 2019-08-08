@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2019/06/10 17:33:29 nia Exp $
+# $NetBSD: Makefile,v 1.32 2019/08/08 20:17:48 nia Exp $
 #
 
-DISTNAME=	vifm-0.10
+DISTNAME=	vifm-0.10.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vifm/}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,9 +16,11 @@ USE_TOOLS+=	bash gmake perl pkg-config
 
 USE_CURSES=	resize_term wide
 FAKE_NCURSES=	yes
-REPLACE_PERL=	src/vifm-convert-dircolors
 
-REPLACE_BASH+=	data/vifm-media
+REPLACE_PERL+=		src/vifm-convert-dircolors
+
+REPLACE_BASH+=		data/vifm-media
+REPLACE_PYTHON+=	data/vifm-media-osx
 
 # using libmagic for file identification, don't use gtk
 CONFIGURE_ARGS+=	--with-libmagic
@@ -26,6 +28,12 @@ CONFIGURE_ARGS+=	--without-gtk
 CONFIGURE_ARGS+=	--without-X11
 CONFIGURE_ARGS+=	--without-dyn-X11
 
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} != "Darwin"
+PYTHON_FOR_BUILD_ONLY=	yes
+.endif
+
+.include "../../lang/python/application.mk"
 .include "../../sysutils/file/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
