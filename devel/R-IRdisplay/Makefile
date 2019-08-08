@@ -1,16 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2019/07/31 14:54:15 brook Exp $
+# $NetBSD: Makefile,v 1.6 2019/08/08 19:53:37 brook Exp $
 
-CATEGORIES=	devel R
+R_PKGNAME=	IRdisplay
+R_PKGVER=	0.7.0
+CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/IRdisplay/
 COMMENT=	Jupyter display machinery
 LICENSE=	mit
 
 DEPENDS+=	R-repr>=0.19.2:../../devel/R-repr
-
-R_PKGNAME=	IRdisplay
-R_PKGVER=	0.7.0
 
 USE_LANGUAGES=	# none
 
