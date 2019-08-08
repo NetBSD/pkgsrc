@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2019/07/31 20:25:06 brook Exp $
-
-CATEGORIES=	math R
-
-MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://had.co.nz/reshape/
-COMMENT=	Flexibly reshape data: a reboot of the reshape package
-LICENSE=	mit
+# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:53 brook Exp $
 
 R_PKGNAME=	reshape2
 R_PKGVER=	1.4.3
+CATEGORIES=	math
+
+MAINTAINER=	minskim@NetBSD.org
+COMMENT=	Flexibly reshape data: a reboot of the reshape package
+LICENSE=	mit
 
 DEPENDS+=	R-plyr>=1.8.1:../../math/R-plyr
 DEPENDS+=	R-stringr>=1.4.0:../../textproc/R-stringr

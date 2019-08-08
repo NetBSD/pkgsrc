@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2019/07/31 13:07:38 brook Exp $
-
-CATEGORIES=	math R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/RcmdrMisc/
-COMMENT=	R Commander miscellaneous functions
-LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
+# $NetBSD: Makefile,v 1.2 2019/08/08 19:53:46 brook Exp $
 
 R_PKGNAME=	RcmdrMisc
 R_PKGVER=	2.5-1
+CATEGORIES=	math
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	R Commander miscellaneous functions
+LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 USE_LANGUAGES=	# none
 

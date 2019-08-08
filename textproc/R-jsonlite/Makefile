@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2019/07/31 20:53:31 brook Exp $
-
-CATEGORIES=	textproc R
-
-MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/jsonlite/
-COMMENT=	Robust, high performance JSON parser and generator for R
-LICENSE=	mit
+# $NetBSD: Makefile,v 1.5 2019/08/08 19:53:57 brook Exp $
 
 R_PKGNAME=	jsonlite
 R_PKGVER=	1.6
+CATEGORIES=	textproc
+
+MAINTAINER=	minskim@NetBSD.org
+COMMENT=	Robust, high performance JSON parser and generator for R
+LICENSE=	mit
 
 USE_LANGUAGES=	c
 
