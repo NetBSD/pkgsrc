@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2019/07/01 12:42:57 nia Exp $
+# $NetBSD: Makefile,v 1.10 2019/08/08 21:18:43 nia Exp $
 
 DISTNAME=	openal-soft-1.19.1
 CATEGORIES=	audio
-MASTER_SITES=	http://kcat.strangesoft.net/openal-releases/
+MASTER_SITES=	https://kcat.strangesoft.net/openal-releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://kcat.strangesoft.net/openal.html
+HOMEPAGE=	https://kcat.strangesoft.net/openal.html
 COMMENT=	Software implementation of the OpenAL 3D audio API
 LICENSE=	gnu-lgpl-v2
 
