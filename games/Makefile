@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.444 2019/08/07 18:05:25 nia Exp $
+# $NetBSD: Makefile,v 1.445 2019/08/08 13:40:30 nia Exp $
 #
 
 COMMENT=	Games
@@ -345,6 +345,8 @@ SUBDIR+=	spellcast
 SUBDIR+=	spider
 SUBDIR+=	stegavorto
 SUBDIR+=	stockfish
+SUBDIR+=	stone-soup
+SUBDIR+=	stone-soup-sdl
 SUBDIR+=	stratagus
 SUBDIR+=	sudoku-cli
 SUBDIR+=	supertux
