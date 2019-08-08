@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2019/07/31 19:17:39 brook Exp $
-
-CATEGORIES=	math R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/combinat/
-COMMENT=	Combinatorics utilities
-LICENSE=	gnu-gpl-v2
+# $NetBSD: Makefile,v 1.9 2019/08/08 19:53:48 brook Exp $
 
 R_PKGNAME=	combinat
 R_PKGVER=	0.0-8
+CATEGORIES=	math
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Combinatorics utilities
+LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
 

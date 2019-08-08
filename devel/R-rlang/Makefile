@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2019/07/31 15:43:27 brook Exp $
-
-CATEGORIES=	devel R
-
-MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://rlang.tidyverse.org/
-COMMENT=	Functions for base types and core R and 'Tidyverse' features
-LICENSE=	gnu-gpl-v3
+# $NetBSD: Makefile,v 1.7 2019/08/08 19:53:40 brook Exp $
 
 R_PKGNAME=	rlang
 R_PKGVER=	0.4.0
+CATEGORIES=	devel
+
+MAINTAINER=	minskim@NetBSD.org
+COMMENT=	Functions for base types and core R and 'Tidyverse' features
+LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c
 

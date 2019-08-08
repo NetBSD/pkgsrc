@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2019/07/31 16:04:39 brook Exp $
-
-CATEGORIES=	graphics R
-
-MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ggplot2.tidyverse.org/
-COMMENT=	Create elegant data visualisations using the grammar of graphics
-LICENSE=	gnu-gpl-v2
+# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:42 brook Exp $
 
 R_PKGNAME=	ggplot2
 R_PKGVER=	3.2.0
+CATEGORIES=	graphics
+
+MAINTAINER=	minskim@NetBSD.org
+COMMENT=	Create elegant data visualisations using the grammar of graphics
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	R-lazyeval>=0.2.2:../../devel/R-lazyeval
 DEPENDS+=	R-rlang>=0.3.0:../../devel/R-rlang

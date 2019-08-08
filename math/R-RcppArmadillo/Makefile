@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2019/07/31 18:39:23 brook Exp $
-
-CATEGORIES=	math R
-
-MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://dirk.eddelbuettel.com/code/rcpp.armadillo.html
-COMMENT=	Rcpp integration for the Armadillo templated linear algebra library
-LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
+# $NetBSD: Makefile,v 1.5 2019/08/08 19:53:46 brook Exp $
 
 R_PKGNAME=	RcppArmadillo
 R_PKGVER=	0.9.600.4.0
+CATEGORIES=	math
+
+MAINTAINER=	minskim@NetBSD.org
+COMMENT=	Rcpp integration for the Armadillo templated linear algebra library
+LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 USE_LANGUAGES=	c++11 fortran
 

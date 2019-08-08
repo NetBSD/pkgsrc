@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2019/07/31 14:58:13 brook Exp $
-
-CATEGORIES=	devel R
-
-MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	https://github.com/wch/R6/
-COMMENT=	Encapsulated classes with reference semantics
-LICENSE=	mit
+# $NetBSD: Makefile,v 1.5 2019/08/08 19:53:37 brook Exp $
 
 R_PKGNAME=	R6
 R_PKGVER=	2.4.0
+CATEGORIES=	devel
+
+MAINTAINER=	minskim@NetBSD.org
+COMMENT=	Encapsulated classes with reference semantics
+LICENSE=	mit
 
 USE_LANGUAGES=	# none
 

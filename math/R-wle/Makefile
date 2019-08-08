@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.14 2019/07/31 20:36:36 brook Exp $
-
-CATEGORIES=	math
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/wle/
-COMMENT=	Weighted likelihood estimation
-LICENSE=	gnu-gpl-v2
+# $NetBSD: Makefile,v 1.15 2019/08/08 19:53:55 brook Exp $
 
 R_PKGNAME=	wle
 R_PKGVER=	0.9-9
+CATEGORIES=	math
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Weighted likelihood estimation
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	R-circular>=0.4.3:../../math/R-circular
 

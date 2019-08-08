@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2019/07/31 13:11:28 brook Exp $
-
-CATEGORIES=	math R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/backports/
-COMMENT=	Reimplementations of functions introduced since R-3.0.0
-LICENSE=	gnu-gpl-v2
+# $NetBSD: Makefile,v 1.2 2019/08/08 19:53:47 brook Exp $
 
 R_PKGNAME=	backports
 R_PKGVER=	1.1.4
+CATEGORIES=	math
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Reimplementations of functions introduced since R-3.0.0
+LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c
 

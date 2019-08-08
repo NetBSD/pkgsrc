@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2019/07/31 19:03:32 brook Exp $
-
-CATEGORIES=	math R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/car/
-COMMENT=	Companion to 'Applied Regression'
-LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
+# $NetBSD: Makefile,v 1.7 2019/08/08 19:53:47 brook Exp $
 
 R_PKGNAME=	car
 R_PKGVER=	3.0-3
+CATEGORIES=	math
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Companion to 'Applied Regression'
+LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 DEPENDS+=	R-rio>=0.5.16:../../devel/R-rio
 DEPENDS+=	R-maptools>=0.9.5:../../geography/R-maptools

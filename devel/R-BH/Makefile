@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2019/07/31 18:01:32 brook Exp $
+# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:37 brook Exp $
 
-CATEGORIES=	devel R
+R_PKGNAME=	BH
+R_PKGVER=	1.69.0-1
+CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Boost C++ header files
 LICENSE=	boost-license
-
-R_PKGNAME=	BH
-R_PKGVER=	1.69.0-1
 
 USE_LANGUAGES=	# none
 

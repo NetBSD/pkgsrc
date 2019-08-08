@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2019/07/31 00:43:29 brook Exp $
-
-CATEGORIES=	devel R
-
-MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://cran.r-project.org/web/packages/gmp/
-COMMENT=	Match regular expressions with a nicer API
-LICENSE=	mit
+# $NetBSD: Makefile,v 1.2 2019/08/08 19:53:40 brook Exp $
 
 R_PKGNAME=	rematch
 R_PKGVER=	1.0.1
+CATEGORIES=	devel
+
+MAINTAINER=	bacon@NetBSD.org
+COMMENT=	Match regular expressions with a nicer API
+LICENSE=	mit
 
 USE_LANGUAGES=	# none
 

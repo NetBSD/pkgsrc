@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2019/07/31 18:48:28 brook Exp $
-
-CATEGORIES=	math R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/XML/
-COMMENT=	Tools for parsing and generating XML within R
-LICENSE=	2-clause-bsd
+# $NetBSD: Makefile,v 1.11 2019/08/08 19:53:46 brook Exp $
 
 R_PKGNAME=	XML
 R_PKGVER=	3.98-1.20
+CATEGORIES=	math
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Tools for parsing and generating XML within R
+LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	c
 

@@ -1,16 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2019/07/31 20:31:28 brook Exp $
-
-CATEGORIES=	math R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/splancs/
-COMMENT=	Spatial and space-time point pattern analysis
-LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
+# $NetBSD: Makefile,v 1.8 2019/08/08 19:53:54 brook Exp $
 
 R_PKGNAME=	splancs
 R_PKGVER=	2.01-40
+CATEGORIES=	math
 
-DEPENDS+=	R-sp>=0.9.98:../../math/R-sp
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Spatial and space-time point pattern analysis
+LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
+
 DEPENDS+=	R-sp>=0.9:../../math/R-sp
 
 USE_LANGUAGES+=	c fortran

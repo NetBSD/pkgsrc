@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2019/07/30 22:26:11 brook Exp $
-
-CATEGORIES=	archivers R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/zip/
-COMMENT=	Cross-platform 'zip' compression
-LICENSE=	cc0-1.0-universal
+# $NetBSD: Makefile,v 1.2 2019/08/08 19:53:36 brook Exp $
 
 R_PKGNAME=	zip
 R_PKGVER=	2.0.3
+CATEGORIES=	archivers
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Cross-platform 'zip' compression
+LICENSE=	cc0-1.0-universal
 
 USE_LANGUAGES=	c
 

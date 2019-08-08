@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2019/07/31 16:07:32 brook Exp $
-
-CATEGORIES=	graphics R
-
-MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/labeling/
-COMMENT=	Axis labeling
-LICENSE=	mit
+# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:42 brook Exp $
 
 R_PKGNAME=	labeling
 R_PKGVER=	0.3
+CATEGORIES=	graphics
+
+MAINTAINER=	minskim@NetBSD.org
+COMMENT=	Axis labeling
+LICENSE=	mit
 
 USE_LANGUAGES=	# none
 

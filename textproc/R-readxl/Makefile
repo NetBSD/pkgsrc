@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2019/07/31 13:55:05 brook Exp $
-
-CATEGORIES=	textproc R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/readxl/
-COMMENT=	Read Excel files
-LICENSE=	gnu-gpl-v3
+# $NetBSD: Makefile,v 1.2 2019/08/08 19:53:57 brook Exp $
 
 R_PKGNAME=	readxl
 R_PKGVER=	1.3.1
+CATEGORIES=	textproc
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Read Excel files
+LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	R-tibble>=1.3.1:../../math/R-tibble
 DEPENDS+=	R-cellranger>=1.1.0:../../textproc/R-cellranger

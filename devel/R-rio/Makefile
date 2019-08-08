@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2019/07/31 00:47:04 brook Exp $
-
-CATEGORIES=	devel R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/rio/
-COMMENT=	Swiss-army knife for data I/O
-LICENSE=	gnu-gpl-v2
+# $NetBSD: Makefile,v 1.2 2019/08/08 19:53:40 brook Exp $
 
 R_PKGNAME=	rio
 R_PKGVER=	0.5.16
+CATEGORIES=	devel
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Swiss-army knife for data I/O
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	R-tibble>=2.1.3:../../math/R-tibble
 DEPENDS+=	R-data.table>=1.9.8:../../textproc/R-data.table

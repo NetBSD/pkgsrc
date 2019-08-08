@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2019/07/31 16:17:04 brook Exp $
+# $NetBSD: Makefile,v 1.3 2019/08/08 19:53:43 brook Exp $
 
-CATEGORIES=	lang R
+R_PKGNAME=	sourcetools
+R_PKGVER=	0.1.7
+CATEGORIES=	lang
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Tools for reading, tokenizing and parsing R code
 LICENSE=	mit
-
-R_PKGNAME=	sourcetools
-R_PKGVER=	0.1.7
 
 USE_LANGUAGES=	c c++
 

@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2019/07/31 13:43:56 brook Exp $
-
-CATEGORIES=	textproc R
-
-MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/data.table/
-COMMENT=	Extension of 'data.frame'
-LICENSE=	mpl-2.0
+# $NetBSD: Makefile,v 1.2 2019/08/08 19:53:56 brook Exp $
 
 R_PKGNAME=	data.table
 R_PKGVER=	1.12.2
+CATEGORIES=	textproc
+
+MAINTAINER=	bacon@NetBSD.org
+COMMENT=	Extension of 'data.frame'
+LICENSE=	mpl-2.0
 
 USE_LANGUAGES=	c
 

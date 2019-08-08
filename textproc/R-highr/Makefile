@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2019/07/31 20:51:22 brook Exp $
-
-CATEGORIES=	textproc R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/highr/
-COMMENT=	Syntax highlighting for R source code
-LICENSE=	gnu-gpl-v1 OR gnu-gpl-v2 OR gnu-gpl-v3
+# $NetBSD: Makefile,v 1.6 2019/08/08 19:53:56 brook Exp $
 
 R_PKGNAME=	highr
 R_PKGVER=	0.8
+CATEGORIES=	textproc
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Syntax highlighting for R source code
+LICENSE=	gnu-gpl-v1 OR gnu-gpl-v2 OR gnu-gpl-v3
 
 USE_LANGUAGES=	# none
 

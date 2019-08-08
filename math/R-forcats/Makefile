@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2019/07/31 13:19:38 brook Exp $
-
-CATEGORIES=	math R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/forcats/
-COMMENT=	Tools for working with categorical variables (factors)
-LICENSE=	gnu-gpl-v3
+# $NetBSD: Makefile,v 1.2 2019/08/08 19:53:49 brook Exp $
 
 R_PKGNAME=	forcats
 R_PKGVER=	0.4.0
+CATEGORIES=	math
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Tools for working with categorical variables (factors)
+LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	R-magrittr>=1.5:../../devel/R-magrittr
 DEPENDS+=	R-rlang>=0.4.0:../../devel/R-rlang

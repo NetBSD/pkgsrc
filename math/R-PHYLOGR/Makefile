@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2019/07/31 18:18:35 brook Exp $
-
-CATEGORIES=	math databases R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/PHYLOGR/
-COMMENT=	Functions for phylogenetically based statistical analyses
-LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
+# $NetBSD: Makefile,v 1.11 2019/08/08 19:53:45 brook Exp $
 
 R_PKGNAME=	PHYLOGR
 R_PKGVER=	1.0.10
+CATEGORIES=	math databases
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Functions for phylogenetically based statistical analyses
+LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 USE_LANGUAGES=	# none
 

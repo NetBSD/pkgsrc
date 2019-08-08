@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2019/07/31 16:00:30 brook Exp $
-
-CATEGORIES=	graphics R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.rforge.net/Cairo/
-COMMENT=	R graphics device using cairo graphics library
-LICENSE=	gnu-gpl-v2
+# $NetBSD: Makefile,v 1.5 2019/08/08 19:53:42 brook Exp $
 
 R_PKGNAME=	Cairo
 R_PKGVER=	1.5-10
+CATEGORIES=	graphics
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	R graphics device using cairo graphics library
+LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c

@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2019/07/31 16:11:55 brook Exp $
-
-CATEGORIES=	graphics R
-
-MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	https://github.com/hadley/scales
-COMMENT=	Scale functions for visualization
-LICENSE=	mit
+# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:43 brook Exp $
 
 R_PKGNAME=	scales
 R_PKGVER=	1.0.0
+CATEGORIES=	graphics
+
+MAINTAINER=	minskim@NetBSD.org
+COMMENT=	Scale functions for visualization
+LICENSE=	mit
 
 DEPENDS+=	R-R6-[0-9]*:../../devel/R-R6
 DEPENDS+=	R-dichromat-[0-9]*:../../graphics/R-dichromat

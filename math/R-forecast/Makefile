@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2019/07/31 19:25:41 brook Exp $
-
-CATEGORIES=	math R
-
-MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://pkg.robjhyndman.com/forecast/
-COMMENT=	Forecasting functions for time series and linear models
-LICENSE=	gnu-gpl-v3
+# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:49 brook Exp $
 
 R_PKGNAME=	forecast
 R_PKGVER=	8.7
+CATEGORIES=	math
+
+MAINTAINER=	minskim@NetBSD.org
+COMMENT=	Forecasting functions for time series and linear models
+LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	R-magrittr>=1.5:../../devel/R-magrittr
 DEPENDS+=	R-tseries>=0.10.47:../../finance/R-tseries

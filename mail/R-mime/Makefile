@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2019/07/31 16:19:01 brook Exp $
-
-CATEGORIES=	mail R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/mime/
-COMMENT=	Map filenames to MIME types
-LICENSE=	gnu-gpl-v1 OR gnu-gpl-v2 OR gnu-gpl-v3
+# $NetBSD: Makefile,v 1.5 2019/08/08 19:53:43 brook Exp $
 
 R_PKGNAME=	mime
 R_PKGVER=	0.7
+CATEGORIES=	mail
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Map filenames to MIME types
+LICENSE=	gnu-gpl-v1 OR gnu-gpl-v2 OR gnu-gpl-v3
 
 USE_LANGUAGES=	c
 

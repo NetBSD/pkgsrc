@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2019/07/31 18:34:10 brook Exp $
-
-CATEGORIES=	math R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/RandomFields/
-COMMENT=	Simulation and analysis of random fields
-LICENSE=	gnu-gpl-v3
+# $NetBSD: Makefile,v 1.5 2019/08/08 19:53:45 brook Exp $
 
 R_PKGNAME=	RandomFields
 R_PKGVER=	3.3.6
+CATEGORIES=	math
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Simulation and analysis of random fields
+LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	R-sp>=1.3.1:../../math/R-sp
 

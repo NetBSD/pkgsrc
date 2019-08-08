@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2019/07/31 20:01:42 brook Exp $
-
-CATEGORIES=	math R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/nloptr/
-COMMENT=	R interface to NLopt
-LICENSE=	gnu-lgpl-v3
+# $NetBSD: Makefile,v 1.6 2019/08/08 19:53:52 brook Exp $
 
 R_PKGNAME=	nloptr
 R_PKGVER=	1.2.1
+CATEGORIES=	math
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	R interface to NLopt
+LICENSE=	gnu-lgpl-v3
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
