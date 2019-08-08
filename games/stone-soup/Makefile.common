@@ -1,0 +1,70 @@
+# $NetBSD: Makefile.common,v 1.1 2019/08/08 13:40:30 nia Exp $
+# used by games/stone-soup/Makefile
+# used by games/stone-soup-sdl/Makefile
+
+DISTNAME=	stone_soup-0.23.2
+PKGNAME=	${DISTNAME:S/_/-/}
+CATEGORIES=	games
+MASTER_SITES=	https://crawl.develz.org/release/0.23/
+EXTRACT_SUFX=	.tar.xz
+
+HOMEPAGE=	https://crawl.develz.org/
+LICENSE=	gnu-gpl-v2
+
+DISTINFO_FILE=	${.CURDIR}/../../games/stone-soup/distinfo
+PATCHDIR=	${.CURDIR}/../../games/stone-soup/patches
+
+WRKSRC=		${WRKDIR}/stone_soup-${PKGVERSION_NOREV}
+BUILD_DIRS=	source
+USE_TOOLS+=	pkg-config gmake perl
+USE_LANGUAGES=	c c++11
+USE_LIBTOOL=	yes
+
+USE_CURSES=	wide
+
+# C++11
+GCC_REQD+=	4.8
+
+MAKE_FLAGS+=	prefix=${PREFIX}
+MAKE_FLAGS+=	SAVEDIR='~/.crawl'
+MAKE_FLAGS+=	V=y
+MAKE_FLAGS+=	DATADIR=${PREFIX}/share/stone-soup
+MAKE_FLAGS+=	NO_AUTO_OPT=YesPlease
+MAKE_FLAGS+=	FORCE_CXX="${CXX} ${CXXFLAGS} ${LDFLAGS}"
+
+.include "../../mk/curses.buildlink3.mk"
+.if !empty(CURSES_TYPE:Mncurses*)
+.  if ${CURSES_TYPE} == "ncursesw"
+MAKE_FLAGS+=	LIBNCURSES_IS_UNICODE=Yes
+.  endif
+.else
+MAKE_FLAGS+=	NO_NCURSES=YesPlease
+MAKE_FLAGS+=	EXTRA_LIBS="-lcurses -pthread"
+.endif
+
+REPLACE_PERL+=	source/util/*.pl
+REPLACE_PERL+=	source/util/mac-crawl-build-update-cdo
+REPLACE_PERL+=	source/util/gen-mi-enum
+REPLACE_PERL+=	source/util/gather*
+REPLACE_PERL+=	source/util/db_lint
+REPLACE_PERL+=	source/util/checkwhite
+REPLACE_PERL+=	source/util/good-depfile
+
+TOOL_DEPENDS+=		${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+
+REPLACE_PYTHON+=	sources/util/species-gen.py
+REPLACE_PYTHON+=	sources/util/txc
+REPLACE_PYTHON+=	sources/webserver/server.py
+REPLACE_PYTHON+=	sources/webserver/ws_handler.py
+
+LUA_VERSIONS_INCOMPATIBLE=	52 53
+
+CHECK_PORTABILITY_SKIP+=	source/contrib/sdl2/build-scripts/androidbuildlibs.sh
+CHECK_PORTABILITY_SKIP+=	source/contrib/sdl2/build-scripts/iosbuild.sh
+CHECK_PORTABILITY_SKIP+=	source/contrib/sdl2-image/external/tiff-4.0.3/configure
+
+.include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/lua/buildlink3.mk"
+.include "../../lang/python/tool.mk"
+.include "../../mk/pthread.buildlink3.mk"
