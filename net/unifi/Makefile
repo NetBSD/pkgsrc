@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2019/07/09 00:38:40 gdt Exp $
+# $NetBSD: Makefile,v 1.10 2019/08/08 13:18:06 gdt Exp $
 
-DISTNAME=	unifi-5.10.25
+DISTNAME=	unifi-5.10.26
 CATEGORIES=	net
 MASTER_SITES=	-http://dl.ubnt.com/unifi/${PKGVERSION_NOREV}/UniFi.unix.zip
 EXTRACT_SUFX=	.zip
