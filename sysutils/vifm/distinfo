@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/06/10 17:33:29 nia Exp $
+$NetBSD: distinfo,v 1.8 2019/08/08 20:17:48 nia Exp $
 
-SHA1 (vifm-0.10.tar.bz2) = fbdfe7bd9da754e9c8b09da5db8fd8f99bbb49ae
-RMD160 (vifm-0.10.tar.bz2) = fc331d5e3b0abcf2715149859bd32bfa9ccd9528
-SHA512 (vifm-0.10.tar.bz2) = 53f45824ffdbd987fecd3a7f7b6d6c5da036aeb3ddbb219d7665a63cae55d68db608239055b18b88a721b39002fcf57cbfd88aa366cffb02ca5f2eb94a206eb2
-Size (vifm-0.10.tar.bz2) = 1054361 bytes
+SHA1 (vifm-0.10.1.tar.bz2) = c5e6b110768dd14f8f13ed12e681cccaa2d49227
+RMD160 (vifm-0.10.1.tar.bz2) = 8cf32fea6b0daf09dcf78d936dfba2b9cbb23f9f
+SHA512 (vifm-0.10.1.tar.bz2) = 8116c4c31b01a9453684a90b26b87a33e5ec2cd2930162869507f673319d231f44e464d1056239f647531c3be5bc9bcf92045c79e5d545f9c75be11c7fe03ea2
+Size (vifm-0.10.1.tar.bz2) = 1097998 bytes
