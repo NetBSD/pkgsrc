@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/08/08 13:18:06 gdt Exp $
+# $NetBSD: Makefile,v 1.11 2019/08/08 13:24:41 gdt Exp $
 
 DISTNAME=	unifi-5.10.26
 CATEGORIES=	net
@@ -11,7 +11,7 @@ COMMENT=	Provisioning software for network products made by Ubiquiti
 LICENSE=	ubiquiti-license
 
 # Bundled firmware images cannot be redistributed
-RESTRICTED=		No redistribution allowed
+RESTRICTED=		No permission to redistribute
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
@@ -37,15 +37,19 @@ EXTRACT_ONLY+=		${SNAPPY}.tar.gz
 
 CHECK_SHLIBS_SKIP=	unifi/lib/native/*
 INSTALLATION_DIRS=	unifi
-# emulated JDK doesn't work; epoll issues. Also needs native libraries.
+
+# Emulated JDK doesn't work due to epoll issues.  Also, would require
+# matching emulated native libraries, and we only compile actual
+# native libaries.
 PKG_JVMS_ACCEPTED=	openjdk8
 PKGSRC_MAKE_ENV+=	JAVA_HOME=${PKG_JAVA_HOME}
 USE_LANGUAGES=		c c++	# for snappy JNI library
 USE_TOOLS+=		gmake pax
 WRKSRC=			${WRKDIR}/UniFi
 
-# mongodb 3.4.4 is known to work well with unifi; avoid mongodb4 for now.
-DEPENDS+=		mongodb>=2.4.14:../../databases/mongodb3
+# Upstream documents 3.4.15, but 3.4.4 actually works.  Avoid mongodb4 because it
+# has a problematic license.
+DEPENDS+=		mongodb>=3.4.4:../../databases/mongodb3
 
 FILES_SUBST+=		UNIFI_USER=${UNIFI_USER:Q} UNIFI_GROUP=${UNIFI_GROUP:Q}
 FILES_SUBST+=		JAVA=${PKG_JAVA_HOME}/bin/java
@@ -70,7 +74,7 @@ post-extract:
 	ln -s ${WRKDIR}/${SNAPPY} ${WRKDIR}/${SNAPPY_JAVA}/target
 
 do-build:
-# bundled mongod is a linux binary, replace with symlink to native binary
+# bundled mongod is a linux binary; replace with symlink to native binary
 	rm -f ${WRKSRC}/bin/mongod
 	ln -s ${PREFIX}/bin/mongod ${WRKSRC}/bin/mongod
 	cd ${WRKDIR}/${SNAPPY_JAVA} && ${BUILD_MAKE_CMD} native
