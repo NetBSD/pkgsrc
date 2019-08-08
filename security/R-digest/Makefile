@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2019/07/31 20:47:23 brook Exp $
-
-CATEGORIES=	security R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://dirk.eddelbuettel.com/code/digest.html
-COMMENT=	Create compact hash digests of R objects
-LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
+# $NetBSD: Makefile,v 1.7 2019/08/08 19:53:56 brook Exp $
 
 R_PKGNAME=	digest
 R_PKGVER=	0.6.20
+CATEGORIES=	security
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Create compact hash digests of R objects
+LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 USE_LANGUAGES+=	c c++
 

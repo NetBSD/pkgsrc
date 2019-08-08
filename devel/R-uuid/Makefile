@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2019/07/31 15:44:23 brook Exp $
-
-CATEGORIES=	devel R
-
-MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://www.rforge.net/uuid/
-COMMENT=	Tools for generating and handling of UUIDs
-LICENSE=	mit
+# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:40 brook Exp $
 
 R_PKGNAME=	uuid
 R_PKGVER=	0.1-2
+CATEGORIES=	devel
+
+MAINTAINER=	minskim@NetBSD.org
+COMMENT=	Tools for generating and handling of UUIDs
+LICENSE=	mit
 
 USE_LANGUAGES=	c
 

@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.13 2019/07/31 15:00:16 brook Exp $
-
-CATEGORIES=	devel R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/Rcpp/
-COMMENT=	Seamless R and C++ integration
-LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
+# $NetBSD: Makefile,v 1.14 2019/08/08 19:53:37 brook Exp $
 
 R_PKGNAME=	Rcpp
 R_PKGVER=	1.0.2
+CATEGORIES=	devel
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Seamless R and C++ integration
+LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 USE_LANGUAGES+=	c++
 

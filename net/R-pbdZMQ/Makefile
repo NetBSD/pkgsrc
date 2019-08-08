@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2019/07/31 20:44:35 brook Exp $
-
-CATEGORIES=	net R
-
-MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://r-pbd.org/
-COMMENT=	Interface to ZeroMQ
-LICENSE=	gnu-gpl-v3
+# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:55 brook Exp $
 
 R_PKGNAME=	pbdZMQ
 R_PKGVER=	0.3-3
+CATEGORIES=	net
+
+MAINTAINER=	minskim@NetBSD.org
+COMMENT=	Interface to ZeroMQ
+LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c
