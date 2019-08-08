@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2019/07/31 20:46:05 brook Exp $
-
-CATEGORIES=	print R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/knitr/
-COMMENT=	General-purpose package for dynamic report generation in R
-LICENSE=	gnu-gpl-v1 OR gnu-gpl-v2 OR gnu-gpl-v3
+# $NetBSD: Makefile,v 1.8 2019/08/08 19:53:55 brook Exp $
 
 R_PKGNAME=	knitr
 R_PKGVER=	1.23
+CATEGORIES=	print
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	General-purpose package for dynamic report generation in R
+LICENSE=	gnu-gpl-v1 OR gnu-gpl-v2 OR gnu-gpl-v3
 
 DEPENDS+=	R-evaluate>=0.10:../../devel/R-evaluate
 DEPENDS+=	R-xfun>=0.8:../../devel/R-xfun

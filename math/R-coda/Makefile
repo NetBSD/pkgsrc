@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2019/07/31 19:15:51 brook Exp $
-
-CATEGORIES=	math R
-
-MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/coda/
-COMMENT=	Output analysis and diagnostics for MCMC
-LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
+# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:48 brook Exp $
 
 R_PKGNAME=	coda
 R_PKGVER=	0.19-3
+CATEGORIES=	math
+
+MAINTAINER=	minskim@NetBSD.org
+COMMENT=	Output analysis and diagnostics for MCMC
+LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 USE_LANGUAGES+=	# none
 

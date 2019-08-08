@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2019/07/31 16:15:36 brook Exp $
+# $NetBSD: Makefile,v 1.3 2019/08/08 19:53:43 brook Exp $
 
-CATEGORIES=	lang R
+R_PKGNAME=	codetools
+R_PKGVER=	0.2-16
+CATEGORIES=	lang
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Code analysis tools for R
 LICENSE=	gnu-gpl-v1 OR gnu-gpl-v2 OR gnu-gpl-v3
-
-R_PKGNAME=	codetools
-R_PKGVER=	0.2-16
 
 CONFLICTS=	R>=3.6.0
 

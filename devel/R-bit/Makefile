@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2019/07/31 15:05:50 brook Exp $
-
-CATEGORIES=	devel R
-
-MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ff.r-forge.r-project.org/
-COMMENT=	Class for vectors of 1-bit booleans
-LICENSE=	gnu-gpl-v2
+# $NetBSD: Makefile,v 1.5 2019/08/08 19:53:38 brook Exp $
 
 R_PKGNAME=	bit
 R_PKGVER=	1.1-14
+CATEGORIES=	devel
+
+MAINTAINER=	minskim@NetBSD.org
+COMMENT=	Class for vectors of 1-bit booleans
+LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c
 

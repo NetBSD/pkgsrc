@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2019/07/31 20:03:25 brook Exp $
-
-CATEGORIES=	math R
-
-MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/numDeriv/
-COMMENT=	Accurate numerical derivatives
-LICENSE=	gnu-gpl-v2
+# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:52 brook Exp $
 
 R_PKGNAME=	numDeriv
 R_PKGVER=	2016.8-1.1
+CATEGORIES=	math
+
+MAINTAINER=	minskim@NetBSD.org
+COMMENT=	Accurate numerical derivatives
+LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES+=	# none
 
