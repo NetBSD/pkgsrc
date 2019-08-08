@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2019/07/31 01:29:17 brook Exp $
-
-CATEGORIES=	devel R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/xfun/
-COMMENT=	Miscellaneous functions by 'Yihui Xie'
-LICENSE=	mit
+# $NetBSD: Makefile,v 1.2 2019/08/08 19:53:41 brook Exp $
 
 R_PKGNAME=	xfun
 R_PKGVER=	0.8
+CATEGORIES=	devel
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Miscellaneous functions by 'Yihui Xie'
+LICENSE=	mit
 
 USE_LANGUAGES=	# none
 

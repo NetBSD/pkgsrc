@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2019/07/31 16:01:57 brook Exp $
-
-CATEGORIES=	graphics R
-
-MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/colorspace/
-COMMENT=	Toolbox for manipulating and assessing colors and palettes
-LICENSE=	modified-bsd
+# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:42 brook Exp $
 
 R_PKGNAME=	colorspace
 R_PKGVER=	1.4-1
+CATEGORIES=	graphics
+
+MAINTAINER=	minskim@NetBSD.org
+COMMENT=	Toolbox for manipulating and assessing colors and palettes
+LICENSE=	modified-bsd
 
 USE_LANGUAGES=	c
 

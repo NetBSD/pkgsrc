@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2019/07/31 13:17:00 brook Exp $
-
-CATEGORIES=	math R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/estimability/
-COMMENT=	Tools for assessing estimability of linear predictions
-LICENSE=	gnu-gpl-v3
+# $NetBSD: Makefile,v 1.2 2019/08/08 19:53:49 brook Exp $
 
 R_PKGNAME=	estimability
 R_PKGVER=	1.3
+CATEGORIES=	math
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Tools for assessing estimability of linear predictions
+LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	# none
 

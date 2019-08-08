@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2019/07/31 14:38:58 brook Exp $
-
-CATEGORIES=	databases R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/sqldf/
-COMMENT=	Manipulate R data frames using SQL
-LICENSE=	gnu-gpl-v2
+# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:37 brook Exp $
 
 R_PKGNAME=	sqldf
 R_PKGVER=	0.4-11
+CATEGORIES=	databases
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Manipulate R data frames using SQL
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	R-RSQLite>=1.0.0:../../databases/R-RSQLite
 DEPENDS+=	R-proto>=1.0.0:../../devel/R-proto

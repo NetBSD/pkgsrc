@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2019/07/31 20:42:03 brook Exp $
-
-CATEGORIES=	misc R
-
-MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	https://github.com/r-lib/pillar
-COMMENT=	Coloured formatting for columns
-LICENSE=	gnu-gpl-v3
+# $NetBSD: Makefile,v 1.5 2019/08/08 19:53:55 brook Exp $
 
 R_PKGNAME=	pillar
 R_PKGVER=	1.4.2
+CATEGORIES=	misc
+
+MAINTAINER=	minskim@NetBSD.org
+COMMENT=	Coloured formatting for columns
+LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	R-cli>=1.1.0:../../devel/R-cli
 DEPENDS+=	R-crayon>=1.3.4:../../devel/R-crayon

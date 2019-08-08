@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2019/07/31 01:24:09 brook Exp $
-
-CATEGORIES=	devel R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/tcltk2/
-COMMENT=	Tcl/Tk additions
-LICENSE=	gnu-lgpl-v3	# + file LICENSE
+# $NetBSD: Makefile,v 1.2 2019/08/08 19:53:40 brook Exp $
 
 R_PKGNAME=	tcltk2
 R_PKGVER=	1.2-11
+CATEGORIES=	devel
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Tcl/Tk additions
+LICENSE=	gnu-lgpl-v3	# + file LICENSE
 
 USE_LANGUAGES=	# none
 

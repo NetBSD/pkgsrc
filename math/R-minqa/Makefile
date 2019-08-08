@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2019/07/31 19:56:41 brook Exp $
-
-CATEGORIES=	math R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/minqa/
-COMMENT=	Derivative-free optimization algorithms by quadratic approximation
-LICENSE=	gnu-gpl-v2
+# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:51 brook Exp $
 
 R_PKGNAME=	minqa
 R_PKGVER=	1.2.4
+CATEGORIES=	math
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Derivative-free optimization algorithms by quadratic approximation
+LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c++ fortran
 

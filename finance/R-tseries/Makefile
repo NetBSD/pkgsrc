@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2019/07/31 15:55:32 brook Exp $
-
-CATEGORIES=	finance R
-
-MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/tseries/
-COMMENT=	Time series analysis and computational finance
-LICENSE=	gnu-gpl-v2
+# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:41 brook Exp $
 
 R_PKGNAME=	tseries
 R_PKGVER=	0.10-47
+CATEGORIES=	finance
+
+MAINTAINER=	minskim@NetBSD.org
+COMMENT=	Time series analysis and computational finance
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	R-quantmod>=0.4.9:../../finance/R-quantmod
 DEPENDS+=	R-quadprog>=1.5.7:../../math/R-quadprog
