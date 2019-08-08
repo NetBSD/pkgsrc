@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/08/08 13:24:41 gdt Exp $
+# $NetBSD: Makefile,v 1.12 2019/08/08 16:47:26 gdt Exp $
 
 DISTNAME=	unifi-5.10.26
 CATEGORIES=	net
@@ -7,6 +7,8 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://www.ubnt.com/download/unifi/
+# The content that belongs in NEWS are often in a blog.
+#BLOGPAGE=	https://community.ui.com/releases
 COMMENT=	Provisioning software for network products made by Ubiquiti
 LICENSE=	ubiquiti-license
 
