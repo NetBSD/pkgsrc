@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/05/15 22:07:58 youri Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/08/08 20:23:29 nia Exp $
 bin/xfce4-terminal
 man/man1/xfce4-terminal.1
 share/applications/xfce4-terminal-settings.desktop
@@ -25,7 +25,9 @@ share/locale/gl/LC_MESSAGES/xfce4-terminal.mo
 share/locale/he/LC_MESSAGES/xfce4-terminal.mo
 share/locale/hr/LC_MESSAGES/xfce4-terminal.mo
 share/locale/hu/LC_MESSAGES/xfce4-terminal.mo
+share/locale/hy_AM/LC_MESSAGES/xfce4-terminal.mo
 share/locale/id/LC_MESSAGES/xfce4-terminal.mo
+share/locale/ie/LC_MESSAGES/xfce4-terminal.mo
 share/locale/is/LC_MESSAGES/xfce4-terminal.mo
 share/locale/it/LC_MESSAGES/xfce4-terminal.mo
 share/locale/ja/LC_MESSAGES/xfce4-terminal.mo
