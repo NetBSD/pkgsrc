@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Dungeon Crawl Stone Soup
+Comment=Role-playing roguelike game of exploration and treasure-hunting
+Exec=crawl
+Icon=crawl
+Categories=Game;AdventureGame;
