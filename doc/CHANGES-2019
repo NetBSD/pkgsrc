@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3313 2019/08/08 20:18:03 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3314 2019/08/08 20:23:49 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5431,3 +5431,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added games/stone-soup version 0.23.2 [nia 2019-08-08]
 	Added games/stone-soup-sdl version 0.23.2 [nia 2019-08-08]
 	Updated sysutils/vifm to 0.10.1 [nia 2019-08-08]
+	Updated x11/xfce4-terminal to 0.8.8 [nia 2019-08-08]
