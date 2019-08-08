@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2019/07/31 18:53:17 brook Exp $
-
-CATEGORIES=	math R
-
-MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	https://cran.r-project.org/web/packages/aplpack/
-COMMENT=	Functions for drawing special plots
-LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
+# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:47 brook Exp $
 
 R_PKGNAME=	aplpack
 R_PKGVER=	1.3.2
+CATEGORIES=	math
+
+MAINTAINER=	minskim@NetBSD.org
+COMMENT=	Functions for drawing special plots
+LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 USE_LANGUAGES=	# none
 

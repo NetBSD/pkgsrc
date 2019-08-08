@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2019/07/31 13:47:23 brook Exp $
-
-CATEGORIES=	textproc R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/htmlTable/
-COMMENT=	Advanced tables for Markdown/HTML
-LICENSE=	gnu-gpl-v3
+# $NetBSD: Makefile,v 1.2 2019/08/08 19:53:56 brook Exp $
 
 R_PKGNAME=	htmlTable
 R_PKGVER=	1.13.1
+CATEGORIES=	textproc
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Advanced tables for Markdown/HTML
+LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	R-checkmate>=1.9.4:../../devel/R-checkmate
 DEPENDS+=	R-magrittr>=1.5:../../devel/R-magrittr

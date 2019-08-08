@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2019/07/31 15:53:04 brook Exp $
-
-CATEGORIES=	finance R
-
-MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://www.quantmod.com/
-COMMENT=	Quantitative financial modelling framework
-LICENSE=	gnu-gpl-v3
+# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:41 brook Exp $
 
 R_PKGNAME=	quantmod
 R_PKGVER=	0.4-15
+CATEGORIES=	finance
+
+MAINTAINER=	minskim@NetBSD.org
+COMMENT=	Quantitative financial modelling framework
+LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	R-TTR>=0.2:../../finance/R-TTR
 DEPENDS+=	R-xts>=0.9.0:../../math/R-xts
