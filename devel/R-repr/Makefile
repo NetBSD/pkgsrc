@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2019/07/31 15:35:44 brook Exp $
-
-CATEGORIES=	devel R
-
-MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/repr/
-COMMENT=	Serializable representations
-LICENSE=	gnu-gpl-v3
+# $NetBSD: Makefile,v 1.8 2019/08/08 19:53:40 brook Exp $
 
 R_PKGNAME=	repr
 R_PKGVER=	1.0.1
+CATEGORIES=	devel
+
+MAINTAINER=	minskim@NetBSD.org
+COMMENT=	Serializable representations
+LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	R-base64enc>=0.1.3:../../converters/R-base64enc
 DEPENDS+=	R-pillar>=1.4.0:../../misc/R-pillar
