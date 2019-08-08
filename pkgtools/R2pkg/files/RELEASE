@@ -1,4 +1,4 @@
-$NetBSD: RELEASE,v 1.2 2019/08/01 13:11:08 brook Exp $
+$NetBSD: RELEASE,v 1.3 2019/08/08 20:14:27 brook Exp $
 
 RELEASE
 =======
@@ -41,4 +41,15 @@ R2pkg v.0.5 (2019-07-31)
 * Expand the list of licenses and base R packages checked for.
 
 * Improve support for recursion.
+
+R2pkg v.0.6 (2019-08-08)
+------------------------
+
+* Improve the canonical format of an R package Makefile:
+
+  - Place R_PKGNAME, R_PKGVER, and CATEGORIES in the first stanza.
+  - Simplify CATEGORIES by defining common ones in Makefile.extension.
+  - Use the default value of HOMEPAGE defined in Makefile.extension.
+
+* Annotate generated comments with [R2pkg] to make them easier to find.
 
