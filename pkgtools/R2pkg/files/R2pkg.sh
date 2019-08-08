@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: R2pkg.sh,v 1.5 2019/08/01 13:11:08 brook Exp $
+# $NetBSD: R2pkg.sh,v 1.6 2019/08/08 20:14:27 brook Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -198,31 +198,40 @@ one.line <- function(s) gsub('\n',' ',s)
 pkg.vers <- function(s) gsub('_','.',s)
 field <- function(key,value) paste(key,'=\t',value,sep='')
 
-base.packages <- c(
+# The list of "recommended packages which are to be included in all
+# binary distributions of R." (R FAQ 5.1.2 2018-10-18)
+#
+base.packages.FAQ.5.1.2 <- c(
+  'KernSmooth',
   'MASS',
   'Matrix',
-  'R',
-  'Rcpp',
   'boot',
   'class',
   'cluster',
   'codetools',
   'foreign',
-  'grDevices',
-  'graphics',
-  'grid',
   'lattice',
-  'methods',
   'mgcv',
   'nlme',
   'nnet',
-  'parallel',
   'rpart',
+  'spatial',
+  'survival')
+
+# Other R packages that appear in dependency lists but are included in
+# the R package.
+#
+base.packages.other <- c(
+  'grDevices',
+  'graphics',
+  'grid',
+  'methods',
+  'parallel',
   'splines',
   'stats',
-  'survival',
   'tools',
   'utils')
+base.packages <- c('R',base.packages.FAQ.5.1.2,base.packages.other)
 
 licenses <- list()
 licenses[['ACM']]                                    <- 'acm-license'
@@ -255,6 +264,7 @@ licenses[['LGPL']]                                   <- 'gnu-lgpl-v2 OR gnu-lgpl
 licenses[['LGPL-2']]                                 <- 'gnu-lgpl-v2'
 licenses[['LGPL-2.1']]                               <- 'gnu-lgpl-v2.1'
 licenses[['LGPL-3']]                                 <- 'gnu-lgpl-v3'
+licenses[['LGPL-3 + file LICENSE']]                  <- 'gnu-lgpl-v3	# + file LICENSE'
 licenses[['LGPL-2 | LGPL-3']]                        <- 'gnu-lgpl-v2 OR gnu-lgpl-v3'
 licenses[['LGPL (>= 2)']]                            <- 'gnu-lgpl-v2 OR gnu-lgpl-v2.1 OR gnu-lgpl-v3'
 licenses[['LUCENT']]                                 <- 'lucent'
@@ -584,7 +594,7 @@ license <- function(s)
   license <- pkgsrc.license(s)
   old.license <- read.file.as.value('LICENSE')
   if (old.license != '' && old.license != license)
-    license <- paste0(license,'	# previously: ',old.license)
+    license <- paste0(license,'	# [R2pkg] previously: ',old.license)
   license
 }
 
@@ -671,7 +681,7 @@ makefile.fields <- function(key,values)
   fields
 }
 
-categories <- function() paste(basename(dirname(getwd())),'R')
+categories <- function() basename(dirname(getwd()))
 description <- function(s) strwrap(s,width=71)
 
 filter.imports <- function(s)
@@ -933,7 +943,6 @@ write.Makefile <- function(metadata)
   RCSID             <- '# \$NetBSD\$'
   CATEGORIES        <- makefile.field('CATEGORIES',categories())
   MAINTAINER        <- makefile.field('MAINTAINER',maintainer('${MAINTAINER_EMAIL}'))
-  HOMEPAGE          <- makefile.field('HOMEPAGE','\${R_HOMEPAGE_BASE}/${RPKG}/')
   COMMENT           <- makefile.field('COMMENT',comment(metadata[3]))
   LICENSE           <- makefile.field('LICENSE',license(metadata[5]))
   R_PKGNAME         <- makefile.field('R_PKGNAME',package(metadata[1]))
@@ -948,15 +957,13 @@ write.Makefile <- function(metadata)
   Makefile <- list()
   Makefile <- append(Makefile,RCSID)
   Makefile <- append(Makefile,'')
+  Makefile <- append(Makefile,R_PKGNAME)
+  Makefile <- append(Makefile,R_PKGVER)
   Makefile <- append(Makefile,CATEGORIES)
   Makefile <- append(Makefile,'')
   Makefile <- append(Makefile,MAINTAINER)
-  Makefile <- append(Makefile,HOMEPAGE)
   Makefile <- append(Makefile,COMMENT)
   Makefile <- append(Makefile,LICENSE)
-  Makefile <- append(Makefile,'')
-  Makefile <- append(Makefile,R_PKGNAME)
-  Makefile <- append(Makefile,R_PKGVER)
   Makefile <- append(Makefile,'')
   Makefile <- append(Makefile,DEPENDS)
   Makefile <- append(Makefile,USE_LANGUAGES)
@@ -1003,7 +1010,8 @@ make.categories <- function(df)
   directory <- basename(dirname(getwd()))
   categories <- unlist(element(df,'CATEGORIES','old_value'))
   categories <- unlist(strsplit(categories,'[[:blank:]]+'))
-  categories <- c(directory,categories,'R')
+  categories <- c(directory,categories)
+  categories <- categories[ categories != 'R' ]
   if (directory != 'wip')
     categories <- categories[ categories != 'wip' ]
   categories <- categories[!duplicated(categories)]
@@ -1025,7 +1033,7 @@ make.comment <- function(df)
   new.comment <- element(df,'COMMENT','new_value')
   comment <- old.comment
   if (!weakly.equals(old.comment,new.comment))
-    comment <- paste0(comment,'	# updated to: ',new.comment)
+    comment <- paste0(comment,'	# [R2pkg] updated to: ',new.comment)
   comment
 }
 
@@ -1057,23 +1065,23 @@ make.license <- function(df)
         }
       else
         {
-          license <- paste0(new_license,'	# previously: ',old_license)
+          license <- paste0(new_license,'	# [R2pkg] previously: ',old_license)
           todo <- old_todo
         }
     }
   else if (license.in.pkgsrc(old_license) && !license.in.pkgsrc(new_license))
     {
-      license <- paste0(old_license,'	# updated to: ',new_license)
+      license <- paste0(old_license,'	# [R2pkg] updated to: ',new_license)
       todo <- '# TODO: '
     }
   else if (!license.in.pkgsrc(old_license) && license.in.pkgsrc(new_license))
     {
-      license <- paste0(new_license,'	# previously: ',old_license)
+      license <- paste0(new_license,'	# [R2pkg] previously: ',old_license)
       todo <- ''
     }
   else if (!license.in.pkgsrc(old_license) && !license.in.pkgsrc(new_license))
     {
-      license <- paste0(new_license,'	# previously: ',old_license)
+      license <- paste0(new_license,'	# [R2pkg] previously: ',old_license)
       todo <- '# TODO: '
     }
 
@@ -1160,7 +1168,7 @@ annotate.distname.in.Makefile <- function(df)
   pkgver <- sub('^.+_','',value)
   PKGNAME <- paste0('R_PKGNAME=',pkgname)
   PKGVER <- paste0('R_PKGVER=',pkgver)
-  comment <- paste0('	# XXX -- replace this line with ',PKGNAME,' and ',PKGVER,' as third stanza (and rerun R2pkg)')
+  comment <- paste0('	# [R2pkg] replace this line with ',PKGNAME,' and ',PKGVER,' as first stanza')
   df\$new_line[match] <- paste0(line,comment)
   df
 }
@@ -1174,6 +1182,13 @@ annotate.Makefile <- function(df)
 remove.master.sites.from.Makefile <- function(df)
 {
   match <- grepl('^[[:blank:]]*MASTER_SITES',df\$new_line)
+  df <- df[!match,]
+  df
+}
+
+remove.homepage.from.Makefile <- function(df)
+{
+  match <- grepl('^[[:blank:]]*HOMEPAGE',df\$new_line)
   df <- df[!match,]
   df
 }
@@ -1195,8 +1210,29 @@ remove.buildlink.api.depends.from.Makefile <- function(df)
 remove.lines.from.Makefile <- function(df)
 {
   df <- remove.master.sites.from.Makefile(df)
+  df <- remove.homepage.from.Makefile(df)
   df <- remove.buildlink.abi.depends.from.Makefile(df)
   df <- remove.buildlink.api.depends.from.Makefile(df)
+  df
+}
+
+reassign.order <- function(df)
+{
+  # message('===> reassign.order():')
+  # str(df)
+  # print(df)
+
+  r_pkgname.order <- element(df,'R_PKGNAME','order')
+  categories.order <- element(df,'CATEGORIES','order')
+  if (r_pkgname.order > categories.order)
+    {
+      r_pkgname.index <- df\$key == 'R_PKGNAME'
+      r_pkgname.index[ is.na(r_pkgname.index) ] <- FALSE
+      r_pkgver.index <- df\$key == 'R_PKGVER'
+      r_pkgver.index[ is.na(r_pkgver.index) ] <- FALSE
+      df[r_pkgname.index,'order'] <- categories.order - 0.2
+      df[r_pkgver.index,'order'] <- categories.order - 0.1
+    }
   df
 }
 
@@ -1214,7 +1250,7 @@ conflicts <- function(pkg)
 
 conflicts.order <- function(df)
 {
-  order <- element(df,'R_PKGNAME','order')
+  order <- element(df,'COMMENT','order')
   order
 }
 
@@ -1322,6 +1358,7 @@ update.Makefile <- function(metadata)
   df <- update.Makefile.with.new.line(df)
   df <- annotate.Makefile(df)
   df <- remove.lines.from.Makefile(df)
+  df <- reassign.order(df)
 
   df.conflicts <- make.df.conflicts(df,metadata)
   df.depends <- make.df.depends(df,DEPENDS)
@@ -1441,6 +1478,9 @@ check_copying ()
 {
     if [ -f work/*/COPYING ]; then
 	cp work/*/COPYING .
+    fi
+    if [ -f work/*/COPYING.lib ]; then
+	cp work/*/COPYING.lib .
     fi
 }
 
