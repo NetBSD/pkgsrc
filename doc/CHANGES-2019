@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3310 2019/08/08 13:18:13 gdt Exp $
+$NetBSD: CHANGES-2019,v 1.3311 2019/08/08 13:41:00 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5428,3 +5428,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/cliqz to 1.28.1 [fox 2019-08-08]
 	Updated devel/cmake to 3.15.2 [adam 2019-08-08]
 	Updated net/unifi to 5.10.26 [gdt 2019-08-08]
+	Added games/stone-soup version 0.23.2 [nia 2019-08-08]
