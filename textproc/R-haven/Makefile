@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2019/07/31 13:45:24 brook Exp $
-
-CATEGORIES=	textproc R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/haven/
-COMMENT=	Import and export 'SPSS', 'Stata' and 'SAS' files
-LICENSE=	mit
+# $NetBSD: Makefile,v 1.2 2019/08/08 19:53:56 brook Exp $
 
 R_PKGNAME=	haven
 R_PKGVER=	2.1.1
+CATEGORIES=	textproc
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Import and export 'SPSS', 'Stata' and 'SAS' files
+LICENSE=	mit
 
 DEPENDS+=	R-forcats>=0.2.0:../../math/R-forcats
 DEPENDS+=	R-tibble>=2.1.3:../../math/R-tibble

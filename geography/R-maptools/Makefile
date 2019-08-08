@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2019/07/31 15:58:35 brook Exp $
-
-CATEGORIES=	geography R
-
-MAINTAINER=	wen@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/maptools/
-COMMENT=	Tools for handling spatial objects
-LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
+# $NetBSD: Makefile,v 1.3 2019/08/08 19:53:42 brook Exp $
 
 R_PKGNAME=	maptools
 R_PKGVER=	0.9-5
+CATEGORIES=	geography
+
+MAINTAINER=	wen@NetBSD.org
+COMMENT=	Tools for handling spatial objects
+LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 DEPENDS+=	R-sp>=1.0.11:../../math/R-sp
 

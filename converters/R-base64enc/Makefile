@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2019/07/31 14:32:04 brook Exp $
-
-CATEGORIES=	converters R
-
-MAINTAINER=	wen@NetBSD.org
-HOMEPAGE=	http://www.rforge.net/base64enc
-COMMENT=	Tools for base64 encoding
-LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
+# $NetBSD: Makefile,v 1.3 2019/08/08 19:53:37 brook Exp $
 
 R_PKGNAME=	base64enc
 R_PKGVER=	0.1-3
+CATEGORIES=	converters
+
+MAINTAINER=	wen@NetBSD.org
+COMMENT=	Tools for base64 encoding
+LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 USE_LANGUAGES+=	c c++
 

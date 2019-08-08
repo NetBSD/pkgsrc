@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2019/07/31 19:41:56 brook Exp $
-
-CATEGORIES=	math R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/gtools/
-COMMENT=	Various R programming tools
-LICENSE=	gnu-gpl-v2
+# $NetBSD: Makefile,v 1.9 2019/08/08 19:53:50 brook Exp $
 
 R_PKGNAME=	gtools
 R_PKGVER=	3.8.1
+CATEGORIES=	math
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Various R programming tools
+LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c
 

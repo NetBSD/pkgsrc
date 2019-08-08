@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2019/08/01 00:59:05 brook Exp $
-
-CATEGORIES=	textproc R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/yaml/
-COMMENT=	Methods to convert R data to YAML and back
-LICENSE=	modified-bsd AND mit
+# $NetBSD: Makefile,v 1.5 2019/08/08 19:53:58 brook Exp $
 
 R_PKGNAME=	yaml
 R_PKGVER=	2.2.0
+CATEGORIES=	textproc
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Methods to convert R data to YAML and back
+LICENSE=	modified-bsd
 
 USE_LANGUAGES=	c
 

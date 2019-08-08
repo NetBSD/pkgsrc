@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2019/07/31 18:19:47 brook Exp $
-
-CATEGORIES=	math R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/R2HTML/
-COMMENT=	HTML exportation for R objects
-LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
+# $NetBSD: Makefile,v 1.11 2019/08/08 19:53:45 brook Exp $
 
 R_PKGNAME=	R2HTML
 R_PKGVER=	2.3.2
+CATEGORIES=	math
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	HTML exportation for R objects
+LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 USE_LANGUAGES=	# none
 

@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2019/07/31 15:04:38 brook Exp $
-
-CATEGORIES=	devel R
-
-MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	https://github.com/krlmlr/bindr
-COMMENT=	Parametrized active bindings
-LICENSE=	mit
+# $NetBSD: Makefile,v 1.3 2019/08/08 19:53:38 brook Exp $
 
 R_PKGNAME=	bindr
 R_PKGVER=	0.1.1
+CATEGORIES=	devel
+
+MAINTAINER=	minskim@NetBSD.org
+COMMENT=	Parametrized active bindings
+LICENSE=	mit
 
 USE_LANGUAGES=	# none
 

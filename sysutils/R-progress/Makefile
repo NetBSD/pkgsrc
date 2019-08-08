@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2019/07/31 13:40:18 brook Exp $
-
-CATEGORIES=	sysutils R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/progress/
-COMMENT=	Terminal progress bars
-LICENSE=	mit
+# $NetBSD: Makefile,v 1.2 2019/08/08 19:53:56 brook Exp $
 
 R_PKGNAME=	progress
 R_PKGVER=	1.2.2
+CATEGORIES=	sysutils
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Terminal progress bars
+LICENSE=	mit
 
 DEPENDS+=	R-crayon>=1.3.4:../../devel/R-crayon
 DEPENDS+=	R-prettyunits>=1.0.2:../../math/R-prettyunits

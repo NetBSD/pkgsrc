@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2019/07/31 15:46:40 brook Exp $
-
-CATEGORIES=	finance R
-
-MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	https://github.com/joshuaulrich/TTR
-COMMENT=	Technical trading rules
-LICENSE=	gnu-gpl-v2
+# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:41 brook Exp $
 
 R_PKGNAME=	TTR
 R_PKGVER=	0.23-4
+CATEGORIES=	finance
+
+MAINTAINER=	minskim@NetBSD.org
+COMMENT=	Technical trading rules
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	R-zoo>=1.8.6:../../math/R-zoo
 DEPENDS+=	R-curl>=4.0:../../www/R-curl

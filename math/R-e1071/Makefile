@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2019/07/31 19:21:32 brook Exp $
-
-CATEGORIES=	math R
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://cran.r-project.org/web/packages/e1071/index.html
-COMMENT=	Misc Functions of the Department of Statistics (e1071), TU Wien
-LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
+# $NetBSD: Makefile,v 1.10 2019/08/08 19:53:48 brook Exp $
 
 R_PKGNAME=	e1071
 R_PKGVER=	1.7-2
+CATEGORIES=	math
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Misc Functions of the Department of Statistics (e1071), TU Wien
+LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 USE_LANGUAGES=	c c++
 
