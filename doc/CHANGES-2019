@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3370 2019/08/09 19:13:05 brook Exp $
+$NetBSD: CHANGES-2019,v 1.3371 2019/08/09 20:24:22 brook Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5493,3 +5493,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/R-pkgload version 1.0.2 [brook 2019-08-09]
 	Added devel/R-roxygen2 version 6.1.1 [brook 2019-08-09]
 	Added devel/R-devtools version 2.1.0 [brook 2019-08-09]
+	Added sysutils/R-later version 0.8.0 [brook 2019-08-09]
