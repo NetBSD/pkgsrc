@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/07/01 13:20:51 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/08/09 17:16:27 nia Exp $
 bin/flare
 man/man6/flare.6
 share/applications/flare.desktop
@@ -59,6 +59,7 @@ share/flare/mods/default/languages/data.fr.po
 share/flare/mods/default/languages/data.gd.po
 share/flare/mods/default/languages/data.gl.po
 share/flare/mods/default/languages/data.he.po
+share/flare/mods/default/languages/data.hu.po
 share/flare/mods/default/languages/data.it.po
 share/flare/mods/default/languages/data.ja.po
 share/flare/mods/default/languages/data.nb.po
@@ -85,6 +86,7 @@ share/flare/mods/default/languages/engine.fr.po
 share/flare/mods/default/languages/engine.gd.po
 share/flare/mods/default/languages/engine.gl.po
 share/flare/mods/default/languages/engine.he.po
+share/flare/mods/default/languages/engine.hu.po
 share/flare/mods/default/languages/engine.it.po
 share/flare/mods/default/languages/engine.ja.po
 share/flare/mods/default/languages/engine.nb.po
