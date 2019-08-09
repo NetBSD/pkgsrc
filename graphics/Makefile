@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.830 2019/07/31 13:01:17 brook Exp $
+# $NetBSD: Makefile,v 1.831 2019/08/09 15:20:31 brook Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -28,6 +28,7 @@ SUBDIR+=	R-effects
 SUBDIR+=	R-ggplot2
 SUBDIR+=	R-gridExtra
 SUBDIR+=	R-labeling
+SUBDIR+=	R-latex2exp
 SUBDIR+=	R-latticeExtra
 SUBDIR+=	R-munsell
 SUBDIR+=	R-scales
