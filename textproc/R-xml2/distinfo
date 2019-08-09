@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/08/09 18:31:06 brook Exp $
+
+SHA1 (R/xml2_1.2.2.tar.gz) = b4cccc91fe32a32df19f9beb5361ddffc476bab8
+RMD160 (R/xml2_1.2.2.tar.gz) = 01050856d4a9ebdaedbad80828a54053c77c43ae
+SHA512 (R/xml2_1.2.2.tar.gz) = 69cb2085cc536e68467a1947f107624ef4a561ed63c26fab04dea92f08fa7a740e71629b43e6adb1484ab57b0b494e0f68aa28a9788d54c8b2df05ddd796a92a
+Size (R/xml2_1.2.2.tar.gz) = 261081 bytes
