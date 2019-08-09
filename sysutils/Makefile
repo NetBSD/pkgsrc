@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.824 2019/08/09 18:38:11 brook Exp $
+# $NetBSD: Makefile,v 1.825 2019/08/09 19:03:17 brook Exp $
 #
 
 COMMENT=	System utilities
@@ -6,6 +6,7 @@ COMMENT=	System utilities
 SUBDIR+=	855resolution
 SUBDIR+=	915resolution
 SUBDIR+=	9base
+SUBDIR+=	R-processx
 SUBDIR+=	R-progress
 SUBDIR+=	R-ps
 SUBDIR+=	R-sys
