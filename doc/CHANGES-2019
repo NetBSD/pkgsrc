@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3361 2019/08/09 19:04:58 brook Exp $
+$NetBSD: CHANGES-2019,v 1.3362 2019/08/09 19:05:49 brook Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5484,3 +5484,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added sysutils/R-processx version 3.4.1 [brook 2019-08-09]
 	Added sysutils/R-xopen version 1.0.0 [brook 2019-08-09]
 	Added security/R-openssl version 1.4.1 [brook 2019-08-09]
+	Added devel/R-callr version 3.3.1 [brook 2019-08-09]
