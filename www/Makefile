@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1398 2019/08/09 20:53:39 brook Exp $
+# $NetBSD: Makefile,v 1.1399 2019/08/09 20:54:28 brook Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -8,6 +8,7 @@ SUBDIR+=	R-gh
 SUBDIR+=	R-htmlwidgets
 SUBDIR+=	R-httpuv
 SUBDIR+=	R-httr
+SUBDIR+=	R-miniUI
 SUBDIR+=	R-shiny
 SUBDIR+=	R-shinyjs
 SUBDIR+=	SOGo
