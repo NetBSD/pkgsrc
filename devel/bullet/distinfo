@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/06/15 20:10:50 rumko Exp $
+$NetBSD: distinfo,v 1.6 2019/08/09 16:00:22 nia Exp $
 
-SHA1 (bullet-2.82-r2704.tgz) = a0867257b9b18e9829bbeb4c6c5872a5b29d1d33
-RMD160 (bullet-2.82-r2704.tgz) = e474f915b0d0bc8dc7d8d137eced9291732cc7fc
-SHA512 (bullet-2.82-r2704.tgz) = 44bec0bd74e6d9cd8c75a41d0faa068dc05f0cdad92ff001cc53ff29912db245606827a9e763ce2cf1b551b545668a779fdc4455f73c1901b57aaa4eee31901f
-Size (bullet-2.82-r2704.tgz) = 7937108 bytes
-SHA1 (patch-aa) = edecca92f1c3ff2ed1544d2d98767883e3f8f497
+SHA1 (bullet-2.88.tar.gz) = afd641d2bf52bc52d4a68d4eba9cbc2d92392058
+RMD160 (bullet-2.88.tar.gz) = a5082b6056db98c6f356fa9bd8136dc0e14e644e
+SHA512 (bullet-2.88.tar.gz) = 15face1940d496c96fd19a44139d11d2cbb629526c40432be4a0eef5fa9a532c842ec7318248c0359a080f2034111bf1a3c2d3a6fd789bec675bd368fac7bd93
+Size (bullet-2.88.tar.gz) = 78575915 bytes
