@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.87 2019/06/09 21:26:45 leot Exp $
+@comment $NetBSD: PLIST,v 1.87.2.1 2019/08/09 13:37:33 bsiegert Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -512,6 +512,9 @@ ${PYSITELIB}/youtube_dl/extractor/disney.pyo
 ${PYSITELIB}/youtube_dl/extractor/dispeak.py
 ${PYSITELIB}/youtube_dl/extractor/dispeak.pyc
 ${PYSITELIB}/youtube_dl/extractor/dispeak.pyo
+${PYSITELIB}/youtube_dl/extractor/dlive.py
+${PYSITELIB}/youtube_dl/extractor/dlive.pyc
+${PYSITELIB}/youtube_dl/extractor/dlive.pyo
 ${PYSITELIB}/youtube_dl/extractor/dotsub.py
 ${PYSITELIB}/youtube_dl/extractor/dotsub.pyc
 ${PYSITELIB}/youtube_dl/extractor/dotsub.pyo
@@ -707,9 +710,6 @@ ${PYSITELIB}/youtube_dl/extractor/funimation.pyo
 ${PYSITELIB}/youtube_dl/extractor/funk.py
 ${PYSITELIB}/youtube_dl/extractor/funk.pyc
 ${PYSITELIB}/youtube_dl/extractor/funk.pyo
-${PYSITELIB}/youtube_dl/extractor/funnyordie.py
-${PYSITELIB}/youtube_dl/extractor/funnyordie.pyc
-${PYSITELIB}/youtube_dl/extractor/funnyordie.pyo
 ${PYSITELIB}/youtube_dl/extractor/fusion.py
 ${PYSITELIB}/youtube_dl/extractor/fusion.pyc
 ${PYSITELIB}/youtube_dl/extractor/fusion.pyo
@@ -1046,6 +1046,9 @@ ${PYSITELIB}/youtube_dl/extractor/linuxacademy.pyo
 ${PYSITELIB}/youtube_dl/extractor/litv.py
 ${PYSITELIB}/youtube_dl/extractor/litv.pyc
 ${PYSITELIB}/youtube_dl/extractor/litv.pyo
+${PYSITELIB}/youtube_dl/extractor/livejournal.py
+${PYSITELIB}/youtube_dl/extractor/livejournal.pyc
+${PYSITELIB}/youtube_dl/extractor/livejournal.pyo
 ${PYSITELIB}/youtube_dl/extractor/liveleak.py
 ${PYSITELIB}/youtube_dl/extractor/liveleak.pyc
 ${PYSITELIB}/youtube_dl/extractor/liveleak.pyo
@@ -1265,9 +1268,6 @@ ${PYSITELIB}/youtube_dl/extractor/nextmedia.pyo
 ${PYSITELIB}/youtube_dl/extractor/nexx.py
 ${PYSITELIB}/youtube_dl/extractor/nexx.pyc
 ${PYSITELIB}/youtube_dl/extractor/nexx.pyo
-${PYSITELIB}/youtube_dl/extractor/nfb.py
-${PYSITELIB}/youtube_dl/extractor/nfb.pyc
-${PYSITELIB}/youtube_dl/extractor/nfb.pyo
 ${PYSITELIB}/youtube_dl/extractor/nfl.py
 ${PYSITELIB}/youtube_dl/extractor/nfl.pyc
 ${PYSITELIB}/youtube_dl/extractor/nfl.pyo
@@ -1634,9 +1634,6 @@ ${PYSITELIB}/youtube_dl/extractor/rtvnh.pyo
 ${PYSITELIB}/youtube_dl/extractor/rtvs.py
 ${PYSITELIB}/youtube_dl/extractor/rtvs.pyc
 ${PYSITELIB}/youtube_dl/extractor/rtvs.pyo
-${PYSITELIB}/youtube_dl/extractor/rudo.py
-${PYSITELIB}/youtube_dl/extractor/rudo.pyc
-${PYSITELIB}/youtube_dl/extractor/rudo.pyo
 ${PYSITELIB}/youtube_dl/extractor/ruhd.py
 ${PYSITELIB}/youtube_dl/extractor/ruhd.pyc
 ${PYSITELIB}/youtube_dl/extractor/ruhd.pyo
