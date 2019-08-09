@@ -1,0 +1,4 @@
+Provides functions for the consistent analysis of compositional data
+(e.g. portions of substances) and positive numbers (e.g.
+concentrations) in the way proposed by J. Aitchison and V.
+Pawlowsky-Glahn.
