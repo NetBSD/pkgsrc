@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3342 2019/08/09 18:26:15 brook Exp $
+$NetBSD: CHANGES-2019,v 1.3343 2019/08/09 18:27:14 brook Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5465,3 +5465,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated games/flare-game to 1.11 [nia 2019-08-09]
 	Updated x11/qt5 to 5.13.0 [adam 2019-08-09]
 	Added devel/R-whisker version 0.3.2 [brook 2019-08-09]
+	Added devel/R-ini version 0.3.1 [brook 2019-08-09]
