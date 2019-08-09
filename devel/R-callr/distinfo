@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/08/09 19:05:49 brook Exp $
+
+SHA1 (R/callr_3.3.1.tar.gz) = 886f2ea0b8b6cf2f6ccceec6e91aced03100b8bc
+RMD160 (R/callr_3.3.1.tar.gz) = 407a15a6d8bdb732ccd5b859a6a20536424f26d4
+SHA512 (R/callr_3.3.1.tar.gz) = 684d8baa9254b70810f07d5feaa7bd99abd4248e72d94020f8c07b317437b11c7f41083f31157c2005d2ef9f79dccd4537f75a75bf2a7acb7bb4c0b20c33def8
+Size (R/callr_3.3.1.tar.gz) = 94264 bytes
