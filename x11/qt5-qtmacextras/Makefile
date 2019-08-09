@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/04/25 19:43:16 adam Exp $
+# $NetBSD: Makefile,v 1.28 2019/08/09 17:41:40 adam Exp $
 
 DISTNAME=	qtmacextras-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtmacextras-${QTVERSION}
@@ -15,7 +15,7 @@ ONLY_FOR_PLATFORM=	Darwin-*-*
 post-install:
 .for i in Qt5MacExtras.pc
 	cd ${DESTDIR}${PREFIX}/lib/pkgconfig && \
-	ln -f -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
+	${LN} -f -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
 .endfor
 
 .include "../../x11/qt5-qtxmlpatterns/buildlink3.mk"

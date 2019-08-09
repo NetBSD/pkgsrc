@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/06/19 07:21:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/08/09 17:41:40 adam Exp $
 qt5/qml/QtQuick/Controls/ApplicationWindow.qml
 qt5/qml/QtQuick/Controls/ApplicationWindow.qmlc
 qt5/qml/QtQuick/Controls/BusyIndicator.qml
@@ -265,6 +265,7 @@ qt5/qml/QtQuick/Controls/Styles/Desktop/TreeViewStyle.qml
 qt5/qml/QtQuick/Controls/Styles/Desktop/TreeViewStyle.qmlc
 qt5/qml/QtQuick/Controls/Styles/Desktop/qmldir
 qt5/qml/QtQuick/Controls/Styles/Flat/libqtquickextrasflatplugin.so
+qt5/qml/QtQuick/Controls/Styles/Flat/plugins.qmltypes
 qt5/qml/QtQuick/Controls/Styles/Flat/qmldir
 qt5/qml/QtQuick/Controls/Styles/qmldir
 qt5/qml/QtQuick/Controls/Switch.qml

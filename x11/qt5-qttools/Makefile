@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2019/04/25 19:43:17 adam Exp $
+# $NetBSD: Makefile,v 1.52 2019/08/09 17:41:41 adam Exp $
 
 DISTNAME=	qttools-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qttools-${QTVERSION}
@@ -27,7 +27,7 @@ QTPKGCONFIGPC=		Qt5Designer.pc Qt5Help.pc Qt5UiTools.pc
 post-install:
 .for i in ${QTPKGCONFIGPC}
 	cd ${DESTDIR}${PREFIX}/lib/pkgconfig && \
-	ln -f -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
+	${LN} -f -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
 .endfor
 
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"

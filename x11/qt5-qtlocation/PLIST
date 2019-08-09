@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2019/03/26 11:14:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2019/08/09 17:41:40 adam Exp $
 lib/pkgconfig/Qt5Location.pc
 lib/pkgconfig/Qt5Positioning.pc
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/error_messages_p.h
@@ -52,6 +52,7 @@ qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeocodereply_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeocodingmanager_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeocodingmanagerengine_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeofiletilecache_p.h
+qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeojson_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeomaneuver_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeomap_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeomap_p_p.h
@@ -225,8 +226,6 @@ qt5/include/QtLocation/qplaceuser.h
 qt5/include/QtLocation/qtlocation-config.h
 qt5/include/QtLocation/qtlocationversion.h
 qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qclipperutils_p.h
-qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qdeclarativegeoaddress_p.h
-qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qdeclarativegeolocation_p.h
 qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qdoublematrix4x4_p.h
 qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qdoublevector2d_p.h
 qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qdoublevector3d_p.h
@@ -236,6 +235,7 @@ qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qgeocoordinate_p.h
 qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qgeocoordinateobject_p.h
 qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qgeolocation_p.h
 qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qgeopath_p.h
+qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qgeopolygon_p.h
 qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qgeopositioninfo_p.h
 qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qgeopositioninfosource_p.h
 qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qgeorectangle_p.h
@@ -254,7 +254,6 @@ qt5/include/QtPositioning/QGeoCoordinate
 qt5/include/QtPositioning/QGeoLocation
 qt5/include/QtPositioning/QGeoPath
 qt5/include/QtPositioning/QGeoPolygon
-qt5/include/QtPositioning/QGeoPolygonPrivate
 qt5/include/QtPositioning/QGeoPositionInfo
 qt5/include/QtPositioning/QGeoPositionInfoSource
 qt5/include/QtPositioning/QGeoPositionInfoSourceFactory
@@ -285,6 +284,8 @@ qt5/include/QtPositioning/qnmeapositioninfosource.h
 qt5/include/QtPositioning/qpositioningglobal.h
 qt5/include/QtPositioning/qtpositioning-config.h
 qt5/include/QtPositioning/qtpositioningversion.h
+qt5/include/QtPositioningQuick/${PKGVERSION}/QtPositioningQuick/private/qdeclarativegeoaddress_p.h
+qt5/include/QtPositioningQuick/${PKGVERSION}/QtPositioningQuick/private/qdeclarativegeolocation_p.h
 qt5/include/QtPositioningQuick/${PKGVERSION}/QtPositioningQuick/private/qdeclarativeposition_p.h
 qt5/include/QtPositioningQuick/${PKGVERSION}/QtPositioningQuick/private/qdeclarativepositionsource_p.h
 qt5/include/QtPositioningQuick/${PKGVERSION}/QtPositioningQuick/private/qpositioningquickglobal_p.h
@@ -312,17 +313,17 @@ qt5/lib/libQt5Location.prl
 qt5/lib/libQt5Location.so
 qt5/lib/libQt5Location.so.${PKGVERSION}
 qt5/lib/libQt5Location.so.5
-qt5/lib/libQt5Location.so.5.12
+qt5/lib/libQt5Location.so.5.13
 qt5/lib/libQt5Positioning.prl
 qt5/lib/libQt5Positioning.so
 qt5/lib/libQt5Positioning.so.${PKGVERSION}
 qt5/lib/libQt5Positioning.so.5
-qt5/lib/libQt5Positioning.so.5.12
+qt5/lib/libQt5Positioning.so.5.13
 qt5/lib/libQt5PositioningQuick.prl
 qt5/lib/libQt5PositioningQuick.so
 qt5/lib/libQt5PositioningQuick.so.${PKGVERSION}
 qt5/lib/libQt5PositioningQuick.so.5
-qt5/lib/libQt5PositioningQuick.so.5.12
+qt5/lib/libQt5PositioningQuick.so.5.13
 qt5/lib/pkgconfig/Qt5Location.pc
 qt5/lib/pkgconfig/Qt5Positioning.pc
 qt5/lib/pkgconfig/Qt5PositioningQuick.pc
