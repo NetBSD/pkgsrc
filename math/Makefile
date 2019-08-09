@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.431 2019/08/09 15:50:05 brook Exp $
+# $NetBSD: Makefile,v 1.432 2019/08/09 16:23:46 brook Exp $
 
 COMMENT=	Mathematics
 
@@ -45,6 +45,7 @@ SUBDIR+=	R-coda
 SUBDIR+=	R-combinat
 SUBDIR+=	R-compositions
 SUBDIR+=	R-date
+SUBDIR+=	R-dplyr
 SUBDIR+=	R-e1071
 SUBDIR+=	R-ellipsis
 SUBDIR+=	R-emdbook
