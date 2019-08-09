@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3322 2019/08/09 12:59:26 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3323 2019/08/09 15:20:31 brook Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5446,3 +5446,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/py-zmq to 18.1.0 [adam 2019-08-09]
 	Updated graphics/libimagequant to 2.12.5 [adam 2019-08-09]
 	Updated graphics/pngquant to 2.12.5 [adam 2019-08-09]
+	Added graphics/R-latex2exp version 0.4.0 [brook 2019-08-09]
