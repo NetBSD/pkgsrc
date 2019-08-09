@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1044 2019/08/09 18:31:59 brook Exp $
+# $NetBSD: Makefile,v 1.1045 2019/08/09 18:32:48 brook Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -11,6 +11,7 @@ SUBDIR+=	GutenMark-words
 SUBDIR+=	LDoc
 SUBDIR+=	Markdown
 SUBDIR+=	OdfConverter
+SUBDIR+=	R-brew
 SUBDIR+=	R-cellranger
 SUBDIR+=	R-clisymbols
 SUBDIR+=	R-commonmark
