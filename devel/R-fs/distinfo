@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/08/09 18:28:06 brook Exp $
+
+SHA1 (R/fs_1.3.1.tar.gz) = 071a85d86eb9eb22443cac041d2035af532c55b3
+RMD160 (R/fs_1.3.1.tar.gz) = 1528f5434b755daa07e9bb8b3ec5c04d8c4fd895
+SHA512 (R/fs_1.3.1.tar.gz) = a64bab2c15baa630990fc927a0397be6ccb10f8bc97e01b28247b92c6a19ce47b8fc3b049bb75b7ceaadf295f8ed7c8eea3d78f1391f39e813f2bb25f0edceba
+Size (R/fs_1.3.1.tar.gz) = 812680 bytes
