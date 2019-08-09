@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/08/09 19:04:58 brook Exp $
+
+SHA1 (R/openssl_1.4.1.tar.gz) = a072c09de0216b20034fc16955624f60388c920d
+RMD160 (R/openssl_1.4.1.tar.gz) = d235e5223500054163d9e7c5b0e8666aa7018f97
+SHA512 (R/openssl_1.4.1.tar.gz) = 52549f5f301deab4252db0ff7f450d879b3cf6f716fe1dd6c4b5cce3f95d988ac1eeeb6a5fc719dadc072bfac37f5a341e5e5a0155e9268638e4885375013b23
+Size (R/openssl_1.4.1.tar.gz) = 1206885 bytes
