@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.18 2019/05/31 10:05:34 adam Exp $
+$NetBSD: distinfo,v 1.19 2019/08/09 12:59:02 adam Exp $
 
-SHA1 (libimagequant-2.12.3.tar.gz) = 35fb95d0b6d48753713bbf2263e6f1dc2efa574f
-RMD160 (libimagequant-2.12.3.tar.gz) = 3facf04126a05615846ba49b2d4706103f6ec782
-SHA512 (libimagequant-2.12.3.tar.gz) = 4818b00b6f154407f3e402d56f4891c2d7594c8056fada0402d7fa0024ae50127340dd8295da5f5dca13fe1829670a3fa8793aa528f3e74a2294c9a7e37b7257
-Size (libimagequant-2.12.3.tar.gz) = 75866 bytes
+SHA1 (libimagequant-2.12.5.tar.gz) = 06440c9f0e449512fdf414ab73968f49ef320499
+RMD160 (libimagequant-2.12.5.tar.gz) = 4547068301d8d1fb6192b43b152a735e500ece93
+SHA512 (libimagequant-2.12.5.tar.gz) = 5b120cdada79d48f469ea729f3585d7f40f9c1366b302e9fc2c2b3c959b7f49dab06f0038cbc93a522e66d99de5b5939e89ad43b0fd42d0c4888fb69d361de62
+Size (libimagequant-2.12.5.tar.gz) = 75956 bytes
 SHA1 (patch-Makefile) = e75e9fea798efed44e25b840d5d433f16e18522a
-SHA1 (patch-configure) = 7baac92db07ffb6fd58e41949407f339ee52622f
+SHA1 (patch-configure) = 452aca3dd76ac93d7b6b4cc8028ac97cd72d6eb7
