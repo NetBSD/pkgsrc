@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/08/09 18:28:57 brook Exp $
+
+SHA1 (R/clisymbols_1.2.0.tar.gz) = 588618df4eb8640167e3a653ef4d8f9e0606c0bd
+RMD160 (R/clisymbols_1.2.0.tar.gz) = 2d9375920694dcfdf42ad351e133cf3dc5a6309d
+SHA512 (R/clisymbols_1.2.0.tar.gz) = 467414dc3a2d154154c34fa3162509a35384fe88febeb25ffea01688c297ebe7c160d97dae1dedd049167faf04493ee55d845c157d7071f7f8b442160596c190
+Size (R/clisymbols_1.2.0.tar.gz) = 9666 bytes
