@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/08/09 15:43:48 brook Exp $
+
+SHA1 (R/DEoptimR_1.0-8.tar.gz) = 3974d3642d4426fa2ee2093c13cae7aeba2dd70f
+RMD160 (R/DEoptimR_1.0-8.tar.gz) = 7d8672d59375f1fc3b758032bd2920287829d787
+SHA512 (R/DEoptimR_1.0-8.tar.gz) = d1ff9e4b12619df383cf01da48b084e5f88c5f33a7d943c1625c25345ecc6913a0879c54542d8507c7ec261a29bac1e18a913b9efb46775f259cf48481814515
+Size (R/DEoptimR_1.0-8.tar.gz) = 35401 bytes
