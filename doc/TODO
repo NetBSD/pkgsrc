@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19174 2019/08/08 20:51:25 nia Exp $
+$NetBSD: TODO,v 1.19175 2019/08/09 07:46:54 adam Exp $
 
 Suggested new packages
 ======================
@@ -1164,7 +1164,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-cassa-1.11.0
 	o py-curl-7.43.0.3
 	o py-ephem3-3.7.6.0
-	o py-execnet-1.6.1
 	o py-gnome-menus-3.8.0
 	o py-gobject3-3.32.2
 	o py-hgview-1.9.0
@@ -1178,7 +1177,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-musicbrainz-0.7.4
 	o py-newt-0.52.20
 	o py-omniORBpy-3.7
-	o py-packaging-19.1
 	o py-pendrell-0.3.7
 	o py-ptt-1.10.2
 	o py-pycountry-1.20
