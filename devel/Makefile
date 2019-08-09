@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2892 2019/08/09 19:09:28 brook Exp $
+# $NetBSD: Makefile,v 1.2893 2019/08/09 19:10:28 brook Exp $
 #
 
 COMMENT=	Development utilities
@@ -43,6 +43,7 @@ SUBDIR+=	R-pkgconfig
 SUBDIR+=	R-plogr
 SUBDIR+=	R-proto
 SUBDIR+=	R-purrr
+SUBDIR+=	R-rcmdcheck
 SUBDIR+=	R-rematch
 SUBDIR+=	R-remotes
 SUBDIR+=	R-repr
