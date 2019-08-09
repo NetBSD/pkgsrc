@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2019/06/17 16:35:44 adam Exp $
+# $NetBSD: Makefile,v 1.27 2019/08/09 20:25:29 brook Exp $
 #
 
 COMMENT=	Applications dealing with parallelism in computing
 
+SUBDIR+=	R-promises
 SUBDIR+=	clusterit
 SUBDIR+=	dqs
 SUBDIR+=	dsh
