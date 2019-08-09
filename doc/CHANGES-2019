@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3349 2019/08/09 18:32:49 brook Exp $
+$NetBSD: CHANGES-2019,v 1.3350 2019/08/09 18:33:40 brook Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5472,3 +5472,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added textproc/R-xml2 version 1.2.2 [brook 2019-08-09]
 	Added textproc/R-commonmark version 1.7 [brook 2019-08-09]
 	Added textproc/R-brew version 1.0.6 [brook 2019-08-09]
+	Added devel/R-remotes version 2.1.0 [brook 2019-08-09]
