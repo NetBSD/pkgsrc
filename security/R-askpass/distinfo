@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/08/09 19:02:20 brook Exp $
+
+SHA1 (R/askpass_1.1.tar.gz) = 76db571cbbc61436661a0a3ed3ce2080281e8b06
+RMD160 (R/askpass_1.1.tar.gz) = 4220bcba606be6adc2d96469a4ba3360b4debc0c
+SHA512 (R/askpass_1.1.tar.gz) = eac868a7bf63d5aa204889157acc4bd39ed0c358c824a376b5adbfd1125bc557d081b7c2717799ddf7ccda4e23b16854a2e68dbf1c8c54b0c5535511cad4da83
+Size (R/askpass_1.1.tar.gz) = 5730 bytes
