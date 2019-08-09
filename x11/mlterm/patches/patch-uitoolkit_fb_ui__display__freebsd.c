@@ -5,8 +5,8 @@ $ NetBSD $
 Reported upstream:
 https://bitbucket.org/arakiken/mlterm/pull-requests/5/fix-for-wscons-framebuffer/diff
 
---- uitoolkit/fb/ui_display_freebsd.c	2019-07-24 10:51:04.208029557 +0900
-+++ ../mlterm.patched/uitoolkit/fb/ui_display_freebsd.c	2019-07-24 10:37:10.728676339 +0900
+--- uitoolkit/fb/ui_display_freebsd.c.orig	2019-07-24 10:51:04.208029557 +0900
++++ uitoolkit/fb/ui_display_freebsd.c	2019-07-24 10:37:10.728676339 +0900
 @@ -64,7 +64,7 @@ static int open_display(u_int depth) {
    ioctl(_display.fb_fd, FBIO_ADPINFO, &vainfo);
    ioctl(_display.fb_fd, FBIO_GETDISPSTART, &vstart);
