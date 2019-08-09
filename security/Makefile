@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.705 2019/07/02 12:02:51 adam Exp $
+# $NetBSD: Makefile,v 1.706 2019/08/09 19:02:20 brook Exp $
 #
 
 COMMENT=	Security tools
@@ -12,6 +12,7 @@ SUBDIR+=	HElib
 SUBDIR+=	KeePass
 SUBDIR+=	PACK
 SUBDIR+=	PortableSigner
+SUBDIR+=	R-askpass
 SUBDIR+=	R-digest
 SUBDIR+=	TweetNaCl
 SUBDIR+=	acmesh
