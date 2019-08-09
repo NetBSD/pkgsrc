@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3340 2019/08/09 17:17:13 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3341 2019/08/09 17:43:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5463,3 +5463,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added games/openmw version 0.45.0 [nia 2019-08-09]
 	Updated games/flare-engine to 1.11 [nia 2019-08-09]
 	Updated games/flare-game to 1.11 [nia 2019-08-09]
+	Updated x11/qt5 to 5.13.0 [adam 2019-08-09]
