@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2019/03/26 11:14:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2019/08/09 17:41:39 adam Exp $
 qt5/doc/qtdoc.qch
 qt5/doc/qtdoc/accelerators.html
 qt5/doc/qtdoc/accessibility.html
@@ -305,6 +305,9 @@ qt5/doc/qtdoc/images/used-in-examples/demos/tweetsearch/content/resources/icon-c
 qt5/doc/qtdoc/images/used-in-examples/demos/tweetsearch/content/resources/icon-loading.png
 qt5/doc/qtdoc/images/used-in-examples/demos/tweetsearch/content/resources/icon-refresh.png
 qt5/doc/qtdoc/images/used-in-examples/demos/tweetsearch/content/resources/icon-search.png
+qt5/doc/qtdoc/images/wayland-multi-process.png
+qt5/doc/qtdoc/images/wayland-single-process-develop.png
+qt5/doc/qtdoc/images/wayland-single-process-eglfs.png
 qt5/doc/qtdoc/images/xml-examples.png
 qt5/doc/qtdoc/index.html
 qt5/doc/qtdoc/integrity-building-monolith.html
@@ -345,6 +348,7 @@ qt5/doc/qtdoc/newclasses51.html
 qt5/doc/qtdoc/newclasses510.html
 qt5/doc/qtdoc/newclasses511.html
 qt5/doc/qtdoc/newclasses512.html
+qt5/doc/qtdoc/newclasses513.html
 qt5/doc/qtdoc/newclasses52.html
 qt5/doc/qtdoc/newclasses53.html
 qt5/doc/qtdoc/newclasses54.html
@@ -568,6 +572,7 @@ qt5/doc/qtdoc/qtquickcontrols-texteditor-action.html
 qt5/doc/qtdoc/qtquickcontrols-texteditor-logic.html
 qt5/doc/qtdoc/qtquickcontrols-texteditor-ui.html
 qt5/doc/qtdoc/qtquickcontrols-texteditor.html
+qt5/doc/qtdoc/qtwebassembly-platform-notes.html
 qt5/doc/qtdoc/qundo.html
 qt5/doc/qtdoc/rcc.html
 qt5/doc/qtdoc/reference-overview.html
@@ -608,12 +613,14 @@ qt5/doc/qtdoc/unicode.html
 qt5/doc/qtdoc/unix-signals.html
 qt5/doc/qtdoc/vxworks.html
 qt5/doc/qtdoc/wasm.html
+qt5/doc/qtdoc/wayland-and-qt.html
 qt5/doc/qtdoc/webgl.html
 qt5/doc/qtdoc/whatsnew50.html
 qt5/doc/qtdoc/whatsnew51.html
 qt5/doc/qtdoc/whatsnew510.html
 qt5/doc/qtdoc/whatsnew511.html
 qt5/doc/qtdoc/whatsnew512.html
+qt5/doc/qtdoc/whatsnew513.html
 qt5/doc/qtdoc/whatsnew52.html
 qt5/doc/qtdoc/whatsnew53.html
 qt5/doc/qtdoc/whatsnew54.html
