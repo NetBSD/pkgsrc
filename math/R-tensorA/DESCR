@@ -1,0 +1,5 @@
+Provides convenience functions for advanced linear algebra with
+tensors and computation with datasets of tensors on a higher level
+abstraction. It includes Einstein and Riemann summing conventions,
+dragging, co- and contravariate indices, parallel computations on
+sequences of tensors.
