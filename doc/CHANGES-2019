@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3332 2019/08/09 16:03:17 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3333 2019/08/09 16:04:00 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5455,4 +5455,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added math/R-compositions version 1.40.2 [brook 2019-08-09]
 	Added graphics/R-ggtern version 3.1.0 [brook 2019-08-09]
 	Updated devel/bullet to 2.88 [nia 2019-08-09]
-	Updated graphics/mygui to 3.2.3.20190707 [nia 2019-08-09]
+	Added graphics/mygui version 3.2.3.20190707 [nia 2019-08-09]
