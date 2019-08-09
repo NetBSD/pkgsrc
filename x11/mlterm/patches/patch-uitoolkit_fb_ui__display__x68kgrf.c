@@ -5,8 +5,8 @@ $ NetBSD $
 Reported upstream:
 https://bitbucket.org/arakiken/mlterm/pull-requests/5/fix-for-wscons-framebuffer/diff
 
---- uitoolkit/fb/ui_display_x68kgrf.c	2019-07-24 10:51:04.212502056 +0900
-+++ ../mlterm.patched/uitoolkit/fb/ui_display_x68kgrf.c	2019-07-24 10:01:35.627124287 +0900
+--- uitoolkit/fb/ui_display_x68kgrf.c.orig	2019-07-24 10:51:04.212502056 +0900
++++ uitoolkit/fb/ui_display_x68kgrf.c	2019-07-24 10:01:35.627124287 +0900
 @@ -173,7 +173,7 @@ static int open_display(u_int depth) {
  
    _display.smem_len = vinfo.gd_fbsize + vinfo.gd_regsize;
