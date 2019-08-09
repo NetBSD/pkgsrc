@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3364 2019/08/09 19:07:43 brook Exp $
+$NetBSD: CHANGES-2019,v 1.3365 2019/08/09 19:08:33 brook Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5487,3 +5487,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/R-callr version 3.3.1 [brook 2019-08-09]
 	Added devel/R-pkgbuild version 1.0.4 [brook 2019-08-09]
 	Added www/R-httr version 1.4.1 [brook 2019-08-09]
+	Added www/R-gh version 1.0.1 [brook 2019-08-09]
