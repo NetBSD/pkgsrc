@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2019/04/25 19:43:17 adam Exp $
+# $NetBSD: Makefile,v 1.35 2019/08/09 17:41:41 adam Exp $
 
 DISTNAME=	qtsensors-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtsensors-${QTVERSION}
@@ -15,7 +15,7 @@ INSTALLATION_DIRS+=	lib/pkgconfig
 post-install:
 .for i in Qt5Sensors.pc
 	cd ${DESTDIR}${PREFIX}/lib/pkgconfig && \
-	ln -f -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
+	${LN} -f -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
 .endfor
 
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
