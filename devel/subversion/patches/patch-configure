@@ -1,78 +1,278 @@
-$NetBSD: patch-configure,v 1.4 2019/05/27 16:10:08 ryoon Exp $
+$NetBSD: patch-configure,v 1.4.2.1 2019/08/09 13:09:32 bsiegert Exp $
 
 * Fix build with devel/apr-1.7.0
 
 --- configure.orig	2019-04-11 13:21:28.000000000 +0000
 +++ configure
-@@ -24344,7 +24344,7 @@ else
-                       MaTcHtHiS APR_INT64_T_FMT EnDeNd
- _ACEOF
- if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
+@@ -24329,67 +24329,6 @@ $as_echo "$ac_cv_python_libs" >&6; }
+   fi
+ `"
+ 
+-                SVN_PYCFMT_SAVE_CPPFLAGS="$CPPFLAGS"
+-    CPPFLAGS="$CPPFLAGS $SVN_APR_INCLUDES"
+-    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for apr_int64_t Python/C API format string" >&5
+-$as_echo_n "checking for apr_int64_t Python/C API format string... " >&6; }
+-if ${svn_cv_pycfmt_apr_int64_t+:} false; then :
+-  $as_echo_n "(cached) " >&6
+-else
+-
+-      if test "x$svn_cv_pycfmt_apr_int64_t" = "x"; then
+-        cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+-/* end confdefs.h.  */
+-#include <apr.h>
+-                      MaTcHtHiS APR_INT64_T_FMT EnDeNd
+-_ACEOF
+-if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
 -  $EGREP "MaTcHtHiS +\"lld\" +EnDeNd" >/dev/null 2>&1; then :
-+  $EGREP "MaTcHtHiS +\"ll(\" *\")?d\" +EnDeNd" >/dev/null 2>&1; then :
-   svn_cv_pycfmt_apr_int64_t="L"
- fi
- rm -f conftest*
-@@ -24358,7 +24358,7 @@ r
-                       MaTcHtHiS APR_INT64_T_FMT EnDeNd
- _ACEOF
- if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
+-  svn_cv_pycfmt_apr_int64_t="L"
+-fi
+-rm -f conftest*
+-
+-      fi
+-      if test "x$svn_cv_pycfmt_apr_int64_t" = "x"; then
+-        cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+-/* end confdefs.h.  */
+-r
+-                     #include <apr.h>
+-                      MaTcHtHiS APR_INT64_T_FMT EnDeNd
+-_ACEOF
+-if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
 -  $EGREP "MaTcHtHiS +\"ld\" +EnDeNd" >/dev/null 2>&1; then :
-+  $EGREP "MaTcHtHiS +\"l(\" *\")?d\" +EnDeNd" >/dev/null 2>&1; then :
-   svn_cv_pycfmt_apr_int64_t="l"
- fi
- rm -f conftest*
-@@ -24859,7 +24859,7 @@ else
-                       MaTcHtHiS APR_INT64_T_FMT EnDeNd
- _ACEOF
- if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
+-  svn_cv_pycfmt_apr_int64_t="l"
+-fi
+-rm -f conftest*
+-
+-      fi
+-      if test "x$svn_cv_pycfmt_apr_int64_t" = "x"; then
+-        cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+-/* end confdefs.h.  */
+-#include <apr.h>
+-                      MaTcHtHiS APR_INT64_T_FMT EnDeNd
+-_ACEOF
+-if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
+-  $EGREP "MaTcHtHiS +\"d\" +EnDeNd" >/dev/null 2>&1; then :
+-  svn_cv_pycfmt_apr_int64_t="i"
+-fi
+-rm -f conftest*
+-
+-      fi
+-
+-fi
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $svn_cv_pycfmt_apr_int64_t" >&5
+-$as_echo "$svn_cv_pycfmt_apr_int64_t" >&6; }
+-    CPPFLAGS="$SVN_PYCFMT_SAVE_CPPFLAGS"
+-    if test "x$svn_cv_pycfmt_apr_int64_t" = "x"; then
+-      as_fn_error $? "failed to recognize APR_INT64_T_FMT on this platform" "$LINENO" 5
+-    fi
+-
+-cat >>confdefs.h <<_ACEOF
+-#define SVN_APR_INT64_T_PYCFMT "$svn_cv_pycfmt_apr_int64_t"
+-_ACEOF
+-
+   fi
+ 
+   if test "$PERL" != "none"; then
+@@ -24844,67 +24783,6 @@ $as_echo "$ac_cv_python_libs" >&6; }
+   fi
+ `"
+ 
+-                SVN_PYCFMT_SAVE_CPPFLAGS="$CPPFLAGS"
+-    CPPFLAGS="$CPPFLAGS $SVN_APR_INCLUDES"
+-    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for apr_int64_t Python/C API format string" >&5
+-$as_echo_n "checking for apr_int64_t Python/C API format string... " >&6; }
+-if ${svn_cv_pycfmt_apr_int64_t+:} false; then :
+-  $as_echo_n "(cached) " >&6
+-else
+-
+-      if test "x$svn_cv_pycfmt_apr_int64_t" = "x"; then
+-        cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+-/* end confdefs.h.  */
+-#include <apr.h>
+-                      MaTcHtHiS APR_INT64_T_FMT EnDeNd
+-_ACEOF
+-if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
 -  $EGREP "MaTcHtHiS +\"lld\" +EnDeNd" >/dev/null 2>&1; then :
-+  $EGREP "MaTcHtHiS +\"ll(\" *\")?d\" +EnDeNd" >/dev/null 2>&1; then :
-   svn_cv_pycfmt_apr_int64_t="L"
- fi
- rm -f conftest*
-@@ -24873,7 +24873,7 @@ r
-                       MaTcHtHiS APR_INT64_T_FMT EnDeNd
- _ACEOF
- if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
+-  svn_cv_pycfmt_apr_int64_t="L"
+-fi
+-rm -f conftest*
+-
+-      fi
+-      if test "x$svn_cv_pycfmt_apr_int64_t" = "x"; then
+-        cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+-/* end confdefs.h.  */
+-r
+-                     #include <apr.h>
+-                      MaTcHtHiS APR_INT64_T_FMT EnDeNd
+-_ACEOF
+-if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
 -  $EGREP "MaTcHtHiS +\"ld\" +EnDeNd" >/dev/null 2>&1; then :
-+  $EGREP "MaTcHtHiS +\"l(\" *\")?d\" +EnDeNd" >/dev/null 2>&1; then :
-   svn_cv_pycfmt_apr_int64_t="l"
- fi
- rm -f conftest*
-@@ -25374,7 +25374,7 @@ else
-                       MaTcHtHiS APR_INT64_T_FMT EnDeNd
- _ACEOF
- if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
+-  svn_cv_pycfmt_apr_int64_t="l"
+-fi
+-rm -f conftest*
+-
+-      fi
+-      if test "x$svn_cv_pycfmt_apr_int64_t" = "x"; then
+-        cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+-/* end confdefs.h.  */
+-#include <apr.h>
+-                      MaTcHtHiS APR_INT64_T_FMT EnDeNd
+-_ACEOF
+-if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
+-  $EGREP "MaTcHtHiS +\"d\" +EnDeNd" >/dev/null 2>&1; then :
+-  svn_cv_pycfmt_apr_int64_t="i"
+-fi
+-rm -f conftest*
+-
+-      fi
+-
+-fi
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $svn_cv_pycfmt_apr_int64_t" >&5
+-$as_echo "$svn_cv_pycfmt_apr_int64_t" >&6; }
+-    CPPFLAGS="$SVN_PYCFMT_SAVE_CPPFLAGS"
+-    if test "x$svn_cv_pycfmt_apr_int64_t" = "x"; then
+-      as_fn_error $? "failed to recognize APR_INT64_T_FMT on this platform" "$LINENO" 5
+-    fi
+-
+-cat >>confdefs.h <<_ACEOF
+-#define SVN_APR_INT64_T_PYCFMT "$svn_cv_pycfmt_apr_int64_t"
+-_ACEOF
+-
+   fi
+ 
+   if test "$PERL" != "none"; then
+@@ -25359,67 +25237,6 @@ $as_echo "$ac_cv_python_libs" >&6; }
+   fi
+ `"
+ 
+-                SVN_PYCFMT_SAVE_CPPFLAGS="$CPPFLAGS"
+-    CPPFLAGS="$CPPFLAGS $SVN_APR_INCLUDES"
+-    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for apr_int64_t Python/C API format string" >&5
+-$as_echo_n "checking for apr_int64_t Python/C API format string... " >&6; }
+-if ${svn_cv_pycfmt_apr_int64_t+:} false; then :
+-  $as_echo_n "(cached) " >&6
+-else
+-
+-      if test "x$svn_cv_pycfmt_apr_int64_t" = "x"; then
+-        cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+-/* end confdefs.h.  */
+-#include <apr.h>
+-                      MaTcHtHiS APR_INT64_T_FMT EnDeNd
+-_ACEOF
+-if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
 -  $EGREP "MaTcHtHiS +\"lld\" +EnDeNd" >/dev/null 2>&1; then :
-+  $EGREP "MaTcHtHiS +\"ll(\" *\")?d\" +EnDeNd" >/dev/null 2>&1; then :
-   svn_cv_pycfmt_apr_int64_t="L"
- fi
- rm -f conftest*
-@@ -25388,7 +25388,7 @@ r
-                       MaTcHtHiS APR_INT64_T_FMT EnDeNd
- _ACEOF
- if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
+-  svn_cv_pycfmt_apr_int64_t="L"
+-fi
+-rm -f conftest*
+-
+-      fi
+-      if test "x$svn_cv_pycfmt_apr_int64_t" = "x"; then
+-        cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+-/* end confdefs.h.  */
+-r
+-                     #include <apr.h>
+-                      MaTcHtHiS APR_INT64_T_FMT EnDeNd
+-_ACEOF
+-if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
 -  $EGREP "MaTcHtHiS +\"ld\" +EnDeNd" >/dev/null 2>&1; then :
-+  $EGREP "MaTcHtHiS +\"l(\" *\")?d\" +EnDeNd" >/dev/null 2>&1; then :
-   svn_cv_pycfmt_apr_int64_t="l"
- fi
- rm -f conftest*
-@@ -25892,7 +25892,7 @@ else
-                       MaTcHtHiS APR_INT64_T_FMT EnDeNd
- _ACEOF
- if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
+-  svn_cv_pycfmt_apr_int64_t="l"
+-fi
+-rm -f conftest*
+-
+-      fi
+-      if test "x$svn_cv_pycfmt_apr_int64_t" = "x"; then
+-        cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+-/* end confdefs.h.  */
+-#include <apr.h>
+-                      MaTcHtHiS APR_INT64_T_FMT EnDeNd
+-_ACEOF
+-if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
+-  $EGREP "MaTcHtHiS +\"d\" +EnDeNd" >/dev/null 2>&1; then :
+-  svn_cv_pycfmt_apr_int64_t="i"
+-fi
+-rm -f conftest*
+-
+-      fi
+-
+-fi
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $svn_cv_pycfmt_apr_int64_t" >&5
+-$as_echo "$svn_cv_pycfmt_apr_int64_t" >&6; }
+-    CPPFLAGS="$SVN_PYCFMT_SAVE_CPPFLAGS"
+-    if test "x$svn_cv_pycfmt_apr_int64_t" = "x"; then
+-      as_fn_error $? "failed to recognize APR_INT64_T_FMT on this platform" "$LINENO" 5
+-    fi
+-
+-cat >>confdefs.h <<_ACEOF
+-#define SVN_APR_INT64_T_PYCFMT "$svn_cv_pycfmt_apr_int64_t"
+-_ACEOF
+-
+   fi
+ 
+   if test "$PERL" != "none"; then
+@@ -25877,67 +25694,6 @@ $as_echo "$ac_cv_python_libs" >&6; }
+   fi
+ `"
+ 
+-                SVN_PYCFMT_SAVE_CPPFLAGS="$CPPFLAGS"
+-    CPPFLAGS="$CPPFLAGS $SVN_APR_INCLUDES"
+-    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for apr_int64_t Python/C API format string" >&5
+-$as_echo_n "checking for apr_int64_t Python/C API format string... " >&6; }
+-if ${svn_cv_pycfmt_apr_int64_t+:} false; then :
+-  $as_echo_n "(cached) " >&6
+-else
+-
+-      if test "x$svn_cv_pycfmt_apr_int64_t" = "x"; then
+-        cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+-/* end confdefs.h.  */
+-#include <apr.h>
+-                      MaTcHtHiS APR_INT64_T_FMT EnDeNd
+-_ACEOF
+-if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
 -  $EGREP "MaTcHtHiS +\"lld\" +EnDeNd" >/dev/null 2>&1; then :
-+  $EGREP "MaTcHtHiS +\"ll(\" *\")?d\" +EnDeNd" >/dev/null 2>&1; then :
-   svn_cv_pycfmt_apr_int64_t="L"
- fi
- rm -f conftest*
-@@ -25906,7 +25906,7 @@ r
-                       MaTcHtHiS APR_INT64_T_FMT EnDeNd
- _ACEOF
- if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
+-  svn_cv_pycfmt_apr_int64_t="L"
+-fi
+-rm -f conftest*
+-
+-      fi
+-      if test "x$svn_cv_pycfmt_apr_int64_t" = "x"; then
+-        cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+-/* end confdefs.h.  */
+-r
+-                     #include <apr.h>
+-                      MaTcHtHiS APR_INT64_T_FMT EnDeNd
+-_ACEOF
+-if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
 -  $EGREP "MaTcHtHiS +\"ld\" +EnDeNd" >/dev/null 2>&1; then :
-+  $EGREP "MaTcHtHiS +\"l(\" *\")?d\" +EnDeNd" >/dev/null 2>&1; then :
-   svn_cv_pycfmt_apr_int64_t="l"
- fi
- rm -f conftest*
+-  svn_cv_pycfmt_apr_int64_t="l"
+-fi
+-rm -f conftest*
+-
+-      fi
+-      if test "x$svn_cv_pycfmt_apr_int64_t" = "x"; then
+-        cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+-/* end confdefs.h.  */
+-#include <apr.h>
+-                      MaTcHtHiS APR_INT64_T_FMT EnDeNd
+-_ACEOF
+-if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
+-  $EGREP "MaTcHtHiS +\"d\" +EnDeNd" >/dev/null 2>&1; then :
+-  svn_cv_pycfmt_apr_int64_t="i"
+-fi
+-rm -f conftest*
+-
+-      fi
+-
+-fi
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $svn_cv_pycfmt_apr_int64_t" >&5
+-$as_echo "$svn_cv_pycfmt_apr_int64_t" >&6; }
+-    CPPFLAGS="$SVN_PYCFMT_SAVE_CPPFLAGS"
+-    if test "x$svn_cv_pycfmt_apr_int64_t" = "x"; then
+-      as_fn_error $? "failed to recognize APR_INT64_T_FMT on this platform" "$LINENO" 5
+-    fi
+-
+-cat >>confdefs.h <<_ACEOF
+-#define SVN_APR_INT64_T_PYCFMT "$svn_cv_pycfmt_apr_int64_t"
+-_ACEOF
+-
+   fi
+ 
+   if test "$PERL" != "none"; then
