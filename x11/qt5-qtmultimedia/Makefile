@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2019/04/25 19:43:16 adam Exp $
+# $NetBSD: Makefile,v 1.52 2019/08/09 17:41:40 adam Exp $
 
 DISTNAME=	qtmultimedia-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtmultimedia-${QTVERSION}
@@ -18,7 +18,7 @@ MAKE_ENV+=		LFLAGS=${COMPILER_RPATH_FLAG}${PREFIX}/lib/pulseaudio
 post-install:
 .for i in Qt5Multimedia.pc Qt5MultimediaWidgets.pc
 	cd ${DESTDIR}${PREFIX}/lib/pkgconfig && \
-	ln -f -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
+	${LN} -f -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
 .endfor
 
 PLIST_VARS+=		alsa

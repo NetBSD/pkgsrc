@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2019/04/25 19:43:15 adam Exp $
+# $NetBSD: Makefile,v 1.41 2019/08/09 17:41:39 adam Exp $
 
 DISTNAME=	qtdeclarative-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtdeclarative-${QTVERSION}
@@ -13,7 +13,7 @@ INSTALLATION_DIRS+=	lib/pkgconfig
 post-install:
 .for i in Qt5Qml.pc Qt5Quick.pc Qt5QuickTest.pc Qt5QuickWidgets.pc
 	cd ${DESTDIR}${PREFIX}/lib/pkgconfig && \
-	ln -f -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
+	${LN} -f -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
 .endfor
 
 .include "../../x11/qt5-qtxmlpatterns/buildlink3.mk"

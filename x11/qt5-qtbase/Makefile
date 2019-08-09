@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.80 2019/07/21 22:26:03 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2019/08/09 17:41:39 adam Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
-PKGREVISION=	2
 COMMENT=	C++ X GUI toolkit
 
 .include "../../x11/qt5-qtbase/Makefile.common"
@@ -143,7 +142,7 @@ SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
 SUBST_MESSAGE.path=	Add to default XDG path.
 SUBST_FILES.path=	src/corelib/io/qstandardpaths_unix.cpp
-SUBST_VARS.path=	LOCALBASE
+SUBST_VARS.path=	PREFIX
 
 BROKEN_FILES=		qt5/mkspecs/modules/qt_lib_bootstrap_private.pri
 BROKEN_FILES1=		qt5/mkspecs/qmodule.pri
@@ -166,7 +165,7 @@ COMPILER+=	clang llvm
 .endif
 
 pre-configure:
-	${SED}  -e 's:@LOCALBASE@:${LOCALBASE}:g' \
+	${SED}  -e 's:@PREFIX@:${PREFIX}:g' \
 		-e 's:@X11BASE@:${X11BASE}:g' \
 		-e 's:@COMPILER@:${COMPILER:Q}:g' \
 		-e 's:@CC@:${CC:Q}:g' \
@@ -197,7 +196,7 @@ pre-configure:
 post-install:
 .for i in ${PC_FILES}
 	cd ${DESTDIR}${PREFIX}/lib/pkgconfig && \
-	ln -f -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
+	${LN} -f -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
 .endfor
 	cd ${WRKSRC} && env ${MAKE_ENV} ${INSTALL_ENV} \
 		${MAKE_PROGRAM} install_mkspecs

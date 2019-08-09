@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2019/04/25 19:43:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/08/09 17:41:40 adam Exp $
 lib/pkgconfig/Qt5QuickControls2.pc
 qt5/include/QtQuickControls2/${PKGVERSION}/QtQuickControls2/private/qquickanimatednode_p.h
 qt5/include/QtQuickControls2/${PKGVERSION}/QtQuickControls2/private/qquickattachedobject_p.h
@@ -102,6 +102,8 @@ qt5/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickscro
 qt5/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickshortcutcontext_p_p.h
 qt5/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickslider_p.h
 qt5/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickspinbox_p.h
+qt5/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquicksplitview_p.h
+qt5/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquicksplitview_p_p.h
 qt5/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickstackelement_p_p.h
 qt5/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickstacktransition_p_p.h
 qt5/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickstackview_p.h
@@ -142,12 +144,12 @@ qt5/lib/libQt5QuickControls2.prl
 qt5/lib/libQt5QuickControls2.so
 qt5/lib/libQt5QuickControls2.so.${PKGVERSION}
 qt5/lib/libQt5QuickControls2.so.5
-qt5/lib/libQt5QuickControls2.so.5.12
+qt5/lib/libQt5QuickControls2.so.5.13
 qt5/lib/libQt5QuickTemplates2.prl
 qt5/lib/libQt5QuickTemplates2.so
 qt5/lib/libQt5QuickTemplates2.so.${PKGVERSION}
 qt5/lib/libQt5QuickTemplates2.so.5
-qt5/lib/libQt5QuickTemplates2.so.5.12
+qt5/lib/libQt5QuickTemplates2.so.5.13
 qt5/lib/pkgconfig/Qt5QuickControls2.pc
 qt5/lib/pkgconfig/Qt5QuickTemplates2.pc
 qt5/mkspecs/modules/qt_lib_quickcontrols2.pri
@@ -222,6 +224,7 @@ qt5/qml/QtQuick/Controls.2/Fusion/Slider.qml
 qt5/qml/QtQuick/Controls.2/Fusion/SliderGroove.qml
 qt5/qml/QtQuick/Controls.2/Fusion/SliderHandle.qml
 qt5/qml/QtQuick/Controls.2/Fusion/SpinBox.qml
+qt5/qml/QtQuick/Controls.2/Fusion/SplitView.qml
 qt5/qml/QtQuick/Controls.2/Fusion/SwipeDelegate.qml
 qt5/qml/QtQuick/Controls.2/Fusion/Switch.qml
 qt5/qml/QtQuick/Controls.2/Fusion/SwitchDelegate.qml
@@ -270,6 +273,7 @@ qt5/qml/QtQuick/Controls.2/Imagine/ScrollBar.qml
 qt5/qml/QtQuick/Controls.2/Imagine/ScrollIndicator.qml
 qt5/qml/QtQuick/Controls.2/Imagine/Slider.qml
 qt5/qml/QtQuick/Controls.2/Imagine/SpinBox.qml
+qt5/qml/QtQuick/Controls.2/Imagine/SplitView.qml
 qt5/qml/QtQuick/Controls.2/Imagine/StackView.qml
 qt5/qml/QtQuick/Controls.2/Imagine/SwipeDelegate.qml
 qt5/qml/QtQuick/Controls.2/Imagine/SwipeView.qml
@@ -329,6 +333,7 @@ qt5/qml/QtQuick/Controls.2/Material/ScrollIndicator.qml
 qt5/qml/QtQuick/Controls.2/Material/Slider.qml
 qt5/qml/QtQuick/Controls.2/Material/SliderHandle.qml
 qt5/qml/QtQuick/Controls.2/Material/SpinBox.qml
+qt5/qml/QtQuick/Controls.2/Material/SplitView.qml
 qt5/qml/QtQuick/Controls.2/Material/StackView.qml
 qt5/qml/QtQuick/Controls.2/Material/SwipeDelegate.qml
 qt5/qml/QtQuick/Controls.2/Material/SwipeView.qml
@@ -366,6 +371,7 @@ qt5/qml/QtQuick/Controls.2/ScrollIndicator.qml
 qt5/qml/QtQuick/Controls.2/ScrollView.qml
 qt5/qml/QtQuick/Controls.2/Slider.qml
 qt5/qml/QtQuick/Controls.2/SpinBox.qml
+qt5/qml/QtQuick/Controls.2/SplitView.qml
 qt5/qml/QtQuick/Controls.2/StackView.qml
 qt5/qml/QtQuick/Controls.2/SwipeDelegate.qml
 qt5/qml/QtQuick/Controls.2/SwipeView.qml
@@ -415,6 +421,7 @@ qt5/qml/QtQuick/Controls.2/Universal/ScrollBar.qml
 qt5/qml/QtQuick/Controls.2/Universal/ScrollIndicator.qml
 qt5/qml/QtQuick/Controls.2/Universal/Slider.qml
 qt5/qml/QtQuick/Controls.2/Universal/SpinBox.qml
+qt5/qml/QtQuick/Controls.2/Universal/SplitView.qml
 qt5/qml/QtQuick/Controls.2/Universal/StackView.qml
 qt5/qml/QtQuick/Controls.2/Universal/SwipeDelegate.qml
 qt5/qml/QtQuick/Controls.2/Universal/Switch.qml
