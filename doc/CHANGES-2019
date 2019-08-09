@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3338 2019/08/09 16:26:34 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3339 2019/08/09 17:16:46 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5461,3 +5461,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added math/R-dplyr version 0.8.3 [brook 2019-08-09]
 	Added math/R-tidyr version 0.8.3 [brook 2019-08-09]
 	Added games/openmw version 0.45.0 [nia 2019-08-09]
+	Updated games/flare-engine to 1.11 [nia 2019-08-09]
