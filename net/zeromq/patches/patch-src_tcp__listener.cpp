@@ -1,10 +1,10 @@
-$NetBSD: patch-src_tcp__listener.cpp,v 1.4 2019/02/14 13:04:37 adam Exp $
+$NetBSD: patch-src_tcp__listener.cpp,v 1.5 2019/08/09 12:01:34 adam Exp $
 
 NetBSD<8 has SOCK_CLOEXEC, but uses it with paccept, not accept4
 
---- src/tcp_listener.cpp.orig	2019-01-12 16:17:39.000000000 +0000
+--- src/tcp_listener.cpp.orig	2019-07-08 16:19:27.000000000 +0000
 +++ src/tcp_listener.cpp
-@@ -291,8 +291,13 @@ zmq::fd_t zmq::tcp_listener_t::accept ()
+@@ -202,8 +202,13 @@ zmq::fd_t zmq::tcp_listener_t::accept ()
      socklen_t ss_len = sizeof (ss);
  #endif
  #if defined ZMQ_HAVE_SOCK_CLOEXEC && defined HAVE_ACCEPT4
