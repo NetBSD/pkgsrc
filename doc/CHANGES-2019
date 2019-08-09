@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3333 2019/08/09 16:04:00 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3334 2019/08/09 16:20:54 brook Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5456,3 +5456,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added graphics/R-ggtern version 3.1.0 [brook 2019-08-09]
 	Updated devel/bullet to 2.88 [nia 2019-08-09]
 	Added graphics/mygui version 3.2.3.20190707 [nia 2019-08-09]
+	Added devel/R-purrr version 0.3.2 [brook 2019-08-09]
