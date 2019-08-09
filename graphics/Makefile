@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.833 2019/08/09 16:04:44 nia Exp $
+# $NetBSD: Makefile,v 1.834 2019/08/09 20:55:25 brook Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -23,6 +23,7 @@ SUBDIR+=	OpenRM
 SUBDIR+=	PanoTools
 SUBDIR+=	R-Cairo
 SUBDIR+=	R-colorspace
+SUBDIR+=	R-colourpicker
 SUBDIR+=	R-dichromat
 SUBDIR+=	R-effects
 SUBDIR+=	R-ggplot2
