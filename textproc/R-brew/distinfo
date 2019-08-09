@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/08/09 18:32:49 brook Exp $
+
+SHA1 (R/brew_1.0-6.tar.gz) = ec1a4afc3ca5776aca8d98af0c4376c2eeab5b03
+RMD160 (R/brew_1.0-6.tar.gz) = 41d50c9d35028f309d1518eb25999600e002679b
+SHA512 (R/brew_1.0-6.tar.gz) = 258e0ed8097226a44bace2d6a68db846d7f665dcb0005d0809bdbb20775bca8b7f9f8e45310bbedd7a3cb11560fd0d454f36f0cfee6d1cdb5798da8d7e571f30
+Size (R/brew_1.0-6.tar.gz) = 83315 bytes
