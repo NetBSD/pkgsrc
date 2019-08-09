@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2887 2019/08/09 18:37:22 brook Exp $
+# $NetBSD: Makefile,v 1.2888 2019/08/09 18:39:06 brook Exp $
 #
 
 COMMENT=	Development utilities
@@ -48,6 +48,7 @@ SUBDIR+=	R-rlang
 SUBDIR+=	R-rprojroot
 SUBDIR+=	R-sessioninfo
 SUBDIR+=	R-tcltk2
+SUBDIR+=	R-testthat
 SUBDIR+=	R-tidyselect
 SUBDIR+=	R-uuid
 SUBDIR+=	R-whisker
