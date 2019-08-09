@@ -1,0 +1,3 @@
+Parses and converts LaTeX math formulas to R's plotmath expressions,
+used to enter mathematical formulas and symbols to be rendered as
+text, axis labels, etc. throughout R's plotting system.
