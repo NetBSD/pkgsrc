@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3347 2019/08/09 18:31:06 brook Exp $
+$NetBSD: CHANGES-2019,v 1.3348 2019/08/09 18:31:59 brook Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5470,3 +5470,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added textproc/R-clisymbols version 1.2.0 [brook 2019-08-09]
 	Added misc/R-praise version 1.0.0 [brook 2019-08-09]
 	Added textproc/R-xml2 version 1.2.2 [brook 2019-08-09]
+	Added textproc/R-commonmark version 1.7 [brook 2019-08-09]
