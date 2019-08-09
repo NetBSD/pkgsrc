@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1395 2019/08/09 19:08:32 brook Exp $
+# $NetBSD: Makefile,v 1.1396 2019/08/09 20:26:46 brook Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -6,6 +6,7 @@ COMMENT=	Packages related to the World Wide Web
 SUBDIR+=	R-curl
 SUBDIR+=	R-gh
 SUBDIR+=	R-htmlwidgets
+SUBDIR+=	R-httpuv
 SUBDIR+=	R-httr
 SUBDIR+=	SOGo
 SUBDIR+=	SOGo3
