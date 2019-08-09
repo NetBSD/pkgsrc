@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.427 2019/08/09 15:42:02 brook Exp $
+# $NetBSD: Makefile,v 1.428 2019/08/09 15:43:47 brook Exp $
 
 COMMENT=	Mathematics
 
@@ -6,6 +6,7 @@ SUBDIR+=	R
 SUBDIR+=	R-CGIwithR
 SUBDIR+=	R-DAAG
 SUBDIR+=	R-DBI
+SUBDIR+=	R-DEoptimR
 SUBDIR+=	R-FNN
 SUBDIR+=	R-Formula
 SUBDIR+=	R-GRASS
