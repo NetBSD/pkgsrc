@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.1 2019/08/09 16:26:09 nia Exp $
+
+SHA1 (openmw-0.45.0.tar.gz) = 57ffaa0e066ddd4ad22b56b58879061693fa0c0d
+RMD160 (openmw-0.45.0.tar.gz) = 26810d9a3373691969d3f1c4b78b8aa52c866ec7
+SHA512 (openmw-0.45.0.tar.gz) = b968426659457cf486f6756f7ab82cc4cb34a92923c433dd86f711e5d7097f75441ed17daa50d21f15f1847f5aed1f4c3a094a06cfd3f2e9b90aa182742c596f
+Size (openmw-0.45.0.tar.gz) = 4711103 bytes
+SHA1 (patch-CMakeLists.txt) = 03224ef628e2a7a0668a331728ff0896bb0e6ed4
+SHA1 (patch-apps_openmw_mwgui_bookpage.hpp) = 5a47f960d9082e8d62e97010422815c059fd4df3
+SHA1 (patch-apps_openmw_mwgui_spellview.hpp) = c263753e14b7cb3e61c6cd3fddd04e5b8594b6ef
+SHA1 (patch-apps_openmw_mwgui_videowidget.hpp) = 5882cebcf7a658676b672f2716ab0ba6b9f4572f
+SHA1 (patch-components_crashcatcher_crashcatcher.cpp) = ecb17b1f5a199ddc8b3bd299e0222ebf88c1fdec
+SHA1 (patch-components_esm_custommarkerstate.hpp) = 1b7caefd441ff9ac30a328d53e630030997ccbb2
+SHA1 (patch-components_files_fixedpath.hpp) = c4047ee90e1771228ce5179d8a082345a0310e03
+SHA1 (patch-components_files_linuxpath.cpp) = 706543e2a684dda0e21b39b35c829baf314deedf
+SHA1 (patch-components_files_linuxpath.hpp) = 0627dc0a15e62b2e3c7314d19d1bb2b099af576e

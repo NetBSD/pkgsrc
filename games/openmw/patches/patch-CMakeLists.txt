@@ -1,0 +1,29 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2019/08/09 16:26:09 nia Exp $
+
+Install configuration files to examples directory.
+
+--- CMakeLists.txt.orig	2019-08-09 16:06:59.842914670 +0000
++++ CMakeLists.txt
+@@ -420,15 +420,15 @@ IF(NOT WIN32 AND NOT APPLE)
+     ENDIF(BUILD_OPENCS)
+ 
+     # Install global configuration files
+-    INSTALL(FILES "${OpenMW_BINARY_DIR}/settings-default.cfg" DESTINATION "${SYSCONFDIR}" COMPONENT "openmw")
+-    INSTALL(FILES "${OpenMW_BINARY_DIR}/openmw.cfg.install" DESTINATION "${SYSCONFDIR}" RENAME "openmw.cfg" COMPONENT "openmw")
+-    INSTALL(FILES "${OpenMW_BINARY_DIR}/resources/version" DESTINATION "${SYSCONFDIR}" COMPONENT "openmw")
+-    INSTALL(FILES "${OpenMW_BINARY_DIR}/gamecontrollerdb.txt" DESTINATION "${SYSCONFDIR}" COMPONENT "openmw")
+-    INSTALL(FILES "${OpenMW_BINARY_DIR}/gamecontrollerdb_204.txt" DESTINATION "${SYSCONFDIR}" COMPONENT "openmw")
+-    INSTALL(FILES "${OpenMW_BINARY_DIR}/gamecontrollerdb_205.txt" DESTINATION "${SYSCONFDIR}" COMPONENT "openmw")
++    INSTALL(FILES "${OpenMW_BINARY_DIR}/settings-default.cfg" DESTINATION "${DATAROOTDIR}/examples/openmw" COMPONENT "openmw")
++    INSTALL(FILES "${OpenMW_BINARY_DIR}/openmw.cfg.install" DESTINATION "${DATAROOTDIR}/examples/openmw" RENAME "openmw.cfg" COMPONENT "openmw")
++    INSTALL(FILES "${OpenMW_BINARY_DIR}/resources/version" DESTINATION "${DATAROOTDIR}/examples/openmw" COMPONENT "openmw")
++    INSTALL(FILES "${OpenMW_BINARY_DIR}/gamecontrollerdb.txt" DESTINATION "${DATAROOTDIR}/examples/openmw" COMPONENT "openmw")
++    INSTALL(FILES "${OpenMW_BINARY_DIR}/gamecontrollerdb_204.txt" DESTINATION "${DATAROOTDIR}/examples/openmw" COMPONENT "openmw")
++    INSTALL(FILES "${OpenMW_BINARY_DIR}/gamecontrollerdb_205.txt" DESTINATION "${DATAROOTDIR}/examples/openmw" COMPONENT "openmw")
+ 
+     IF(BUILD_OPENCS)
+-        INSTALL(FILES "${OpenMW_BINARY_DIR}/openmw-cs.cfg" DESTINATION "${SYSCONFDIR}" COMPONENT "opencs")
++        INSTALL(FILES "${OpenMW_BINARY_DIR}/openmw-cs.cfg" DESTINATION "${DATAROOTDIR}/examples/openmw" COMPONENT "opencs")
+     ENDIF(BUILD_OPENCS)
+ 
+     # Install resources
