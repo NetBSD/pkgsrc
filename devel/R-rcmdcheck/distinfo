@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/08/09 19:10:28 brook Exp $
+
+SHA1 (R/rcmdcheck_1.3.3.tar.gz) = c7674ad08e3118a436efe5349a5519f528cc6552
+RMD160 (R/rcmdcheck_1.3.3.tar.gz) = 2152242c0fa6d9b70841bb2f2c3326d118b8219f
+SHA512 (R/rcmdcheck_1.3.3.tar.gz) = dd09b71796db3b7c174734a787634d9a5abf01f48522d566f846c12bbfc728a53442507ce5de70243f19d6ac9ac51ae74145c40d47876bab58e95b7b623391cd
+Size (R/rcmdcheck_1.3.3.tar.gz) = 45380 bytes
