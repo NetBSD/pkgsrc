@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2886 2019/08/09 18:35:36 brook Exp $
+# $NetBSD: Makefile,v 1.2887 2019/08/09 18:37:22 brook Exp $
 #
 
 COMMENT=	Development utilities
@@ -28,6 +28,7 @@ SUBDIR+=	R-crayon
 SUBDIR+=	R-evaluate
 SUBDIR+=	R-fansi
 SUBDIR+=	R-fs
+SUBDIR+=	R-git2r
 SUBDIR+=	R-glue
 SUBDIR+=	R-ini
 SUBDIR+=	R-inline
