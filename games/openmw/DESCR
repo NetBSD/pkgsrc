@@ -1,0 +1,7 @@
+OpenMW is a free, open source and modern game engine which reimplements and
+extends the one that runs the 2002 open-world RPG Morrowind. The engine
+comes with its own editor, called OpenMW-CS which allows the user to edit
+or create their own original games.
+
+NOTE: Playing Morrowind with this engine still requires the Morrowind data
+files that you own.

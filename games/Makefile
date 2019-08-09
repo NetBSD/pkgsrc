@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.445 2019/08/08 13:40:30 nia Exp $
+# $NetBSD: Makefile,v 1.446 2019/08/09 16:26:09 nia Exp $
 #
 
 COMMENT=	Games
@@ -282,6 +282,7 @@ SUBDIR+=	not_tetris
 SUBDIR+=	omega
 SUBDIR+=	onscripter
 SUBDIR+=	openmortal
+SUBDIR+=	openmw
 SUBDIR+=	openttd
 SUBDIR+=	openttd-data
 SUBDIR+=	orbital_eunuchs_sniper
