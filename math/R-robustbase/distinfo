@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/08/09 15:48:20 brook Exp $
+
+SHA1 (R/robustbase_0.93-5.tar.gz) = 62d3ce4e616c3a3692312ba2f2d4ecfd8b519baf
+RMD160 (R/robustbase_0.93-5.tar.gz) = ab243bdd7d93ea803d6e275309009008241a7457
+SHA512 (R/robustbase_0.93-5.tar.gz) = 81ae41c0f0009c77ab26d2f0b82414ae2f730acece2eb79da18ac676c1b506d078586fc0502579f092698fba858cf44578293583d7b074e07131952b333ea7aa
+Size (R/robustbase_0.93-5.tar.gz) = 2957246 bytes
