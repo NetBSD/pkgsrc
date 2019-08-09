@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.429 2019/08/09 15:46:29 brook Exp $
+# $NetBSD: Makefile,v 1.430 2019/08/09 15:48:20 brook Exp $
 
 COMMENT=	Mathematics
 
@@ -88,6 +88,7 @@ SUBDIR+=	R-quantreg
 SUBDIR+=	R-randomForest
 SUBDIR+=	R-relimp
 SUBDIR+=	R-reshape2
+SUBDIR+=	R-robustbase
 SUBDIR+=	R-rstudioapi
 SUBDIR+=	R-sandwich
 SUBDIR+=	R-sgeostat
