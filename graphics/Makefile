@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.834 2019/08/09 20:55:25 brook Exp $
+# $NetBSD: Makefile,v 1.835 2019/08/09 20:56:19 brook Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -26,6 +26,7 @@ SUBDIR+=	R-colorspace
 SUBDIR+=	R-colourpicker
 SUBDIR+=	R-dichromat
 SUBDIR+=	R-effects
+SUBDIR+=	R-ggExtra
 SUBDIR+=	R-ggplot2
 SUBDIR+=	R-ggtern
 SUBDIR+=	R-gridExtra
