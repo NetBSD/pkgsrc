@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.48 2018/04/13 08:20:06 adam Exp $
+# $NetBSD: Makefile.common,v 1.48.10.1 2019/08/09 13:11:04 bsiegert Exp $
 #
 # used by audio/mpg123-arts/Makefile
 # used by audio/mpg123-esound/Makefile
@@ -7,14 +7,14 @@
 # used by audio/mpg123-pulse/Makefile
 # used by audio/mpg123-sun/Makefile
 
-DISTNAME=	mpg123-1.25.10
+DISTNAME=	mpg123-1.25.11
 PKGNAME?=	${DISTNAME:C/[[:alnum:]]*/&-${MPG123_MODULE}/}
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpg123/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	martin@NetBSD.org
-HOMEPAGE=	http://www.mpg123.org/
+HOMEPAGE=	https://www.mpg123.org/
 COMMENT?=	Contains the ${MPG123_MODULE} module for mpg123
 LICENSE=	gnu-lgpl-v2.1
 
