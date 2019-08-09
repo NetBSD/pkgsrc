@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2885 2019/08/09 18:34:34 brook Exp $
+# $NetBSD: Makefile,v 1.2886 2019/08/09 18:35:36 brook Exp $
 #
 
 COMMENT=	Development utilities
@@ -44,6 +44,7 @@ SUBDIR+=	R-remotes
 SUBDIR+=	R-repr
 SUBDIR+=	R-rio
 SUBDIR+=	R-rlang
+SUBDIR+=	R-rprojroot
 SUBDIR+=	R-sessioninfo
 SUBDIR+=	R-tcltk2
 SUBDIR+=	R-tidyselect
