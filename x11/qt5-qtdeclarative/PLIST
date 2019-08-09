@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2018/12/18 09:57:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2019/08/09 17:41:39 adam Exp $
 lib/pkgconfig/Qt5Qml.pc
 lib/pkgconfig/Qt5Quick.pc
 lib/pkgconfig/Qt5QuickTest.pc
@@ -91,6 +91,7 @@ qt5/include/QtQml/${PKGVERSION}/QtQml/private/qqmljskeywords_p.h
 qt5/include/QtQml/${PKGVERSION}/QtQml/private/qqmljslexer_p.h
 qt5/include/QtQml/${PKGVERSION}/QtQml/private/qqmljsmemorypool_p.h
 qt5/include/QtQml/${PKGVERSION}/QtQml/private/qqmljsparser_p.h
+qt5/include/QtQml/${PKGVERSION}/QtQml/private/qqmljssourcelocation_p.h
 qt5/include/QtQml/${PKGVERSION}/QtQml/private/qqmllist_p.h
 qt5/include/QtQml/${PKGVERSION}/QtQml/private/qqmllistaccessor_p.h
 qt5/include/QtQml/${PKGVERSION}/QtQml/private/qqmllistcompositor_p.h
@@ -121,6 +122,7 @@ qt5/include/QtQml/${PKGVERSION}/QtQml/private/qqmlpropertyvalueinterceptor_p.h
 qt5/include/QtQml/${PKGVERSION}/QtQml/private/qqmlproxymetaobject_p.h
 qt5/include/QtQml/${PKGVERSION}/QtQml/private/qqmlrefcount_p.h
 qt5/include/QtQml/${PKGVERSION}/QtQml/private/qqmlscriptstring_p.h
+qt5/include/QtQml/${PKGVERSION}/QtQml/private/qqmlsourcecoordinate_p.h
 qt5/include/QtQml/${PKGVERSION}/QtQml/private/qqmlstringconverters_p.h
 qt5/include/QtQml/${PKGVERSION}/QtQml/private/qqmltableinstancemodel_p.h
 qt5/include/QtQml/${PKGVERSION}/QtQml/private/qqmlthread_p.h
@@ -175,6 +177,7 @@ qt5/include/QtQml/${PKGVERSION}/QtQml/private/qv4estable_p.h
 qt5/include/QtQml/${PKGVERSION}/QtQml/private/qv4executableallocator_p.h
 qt5/include/QtQml/${PKGVERSION}/QtQml/private/qv4function_p.h
 qt5/include/QtQml/${PKGVERSION}/QtQml/private/qv4functionobject_p.h
+qt5/include/QtQml/${PKGVERSION}/QtQml/private/qv4functiontable_p.h
 qt5/include/QtQml/${PKGVERSION}/QtQml/private/qv4generatorobject_p.h
 qt5/include/QtQml/${PKGVERSION}/QtQml/private/qv4global_p.h
 qt5/include/QtQml/${PKGVERSION}/QtQml/private/qv4globalobject_p.h
@@ -307,6 +310,10 @@ qt5/include/QtQmlDebug/${PKGVERSION}/QtQmlDebug/private/qqmldebugconnection_p.h
 qt5/include/QtQmlDebug/${PKGVERSION}/QtQmlDebug/private/qqmldebugmessageclient_p.h
 qt5/include/QtQmlDebug/${PKGVERSION}/QtQmlDebug/private/qqmlenginecontrolclient_p.h
 qt5/include/QtQmlDebug/${PKGVERSION}/QtQmlDebug/private/qqmlenginecontrolclient_p_p.h
+qt5/include/QtQmlDebug/${PKGVERSION}/QtQmlDebug/private/qqmlenginedebugclient_p.h
+qt5/include/QtQmlDebug/${PKGVERSION}/QtQmlDebug/private/qqmlenginedebugclient_p_p.h
+qt5/include/QtQmlDebug/${PKGVERSION}/QtQmlDebug/private/qqmlinspectorclient_p.h
+qt5/include/QtQmlDebug/${PKGVERSION}/QtQmlDebug/private/qqmlinspectorclient_p_p.h
 qt5/include/QtQmlDebug/${PKGVERSION}/QtQmlDebug/private/qqmlpreviewclient_p.h
 qt5/include/QtQmlDebug/${PKGVERSION}/QtQmlDebug/private/qqmlpreviewclient_p_p.h
 qt5/include/QtQmlDebug/${PKGVERSION}/QtQmlDebug/private/qqmlprofilerclient_p.h
@@ -317,6 +324,8 @@ qt5/include/QtQmlDebug/${PKGVERSION}/QtQmlDebug/private/qqmlprofilereventlocatio
 qt5/include/QtQmlDebug/${PKGVERSION}/QtQmlDebug/private/qqmlprofilereventreceiver_p.h
 qt5/include/QtQmlDebug/${PKGVERSION}/QtQmlDebug/private/qqmlprofilereventtype_p.h
 qt5/include/QtQmlDebug/${PKGVERSION}/QtQmlDebug/private/qqmlprofilertypedevent_p.h
+qt5/include/QtQmlDebug/${PKGVERSION}/QtQmlDebug/private/qv4debugclient_p.h
+qt5/include/QtQmlDebug/${PKGVERSION}/QtQmlDebug/private/qv4debugclient_p_p.h
 qt5/include/QtQmlDebug/QtQmlDebug
 qt5/include/QtQmlDebug/QtQmlDebugDepends
 qt5/include/QtQmlDebug/QtQmlDebugVersion
@@ -433,6 +442,7 @@ qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickshadereffectmesh_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickshadereffectsource_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickshortcut_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquicksinglepointhandler_p.h
+qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquicksinglepointhandler_p_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquicksmoothedanimation_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquicksmoothedanimation_p_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickspringanimation_p.h
@@ -707,7 +717,7 @@ qt5/lib/libQt5Qml.prl
 qt5/lib/libQt5Qml.so
 qt5/lib/libQt5Qml.so.${PKGVERSION}
 qt5/lib/libQt5Qml.so.5
-qt5/lib/libQt5Qml.so.5.12
+qt5/lib/libQt5Qml.so.5.13
 qt5/lib/libQt5QmlDebug.a
 qt5/lib/libQt5QmlDebug.prl
 qt5/lib/libQt5QmlDevTools.a
@@ -716,27 +726,27 @@ qt5/lib/libQt5Quick.prl
 qt5/lib/libQt5Quick.so
 qt5/lib/libQt5Quick.so.${PKGVERSION}
 qt5/lib/libQt5Quick.so.5
-qt5/lib/libQt5Quick.so.5.12
+qt5/lib/libQt5Quick.so.5.13
 qt5/lib/libQt5QuickParticles.prl
 qt5/lib/libQt5QuickParticles.so
 qt5/lib/libQt5QuickParticles.so.${PKGVERSION}
 qt5/lib/libQt5QuickParticles.so.5
-qt5/lib/libQt5QuickParticles.so.5.12
+qt5/lib/libQt5QuickParticles.so.5.13
 qt5/lib/libQt5QuickShapes.prl
 qt5/lib/libQt5QuickShapes.so
 qt5/lib/libQt5QuickShapes.so.${PKGVERSION}
 qt5/lib/libQt5QuickShapes.so.5
-qt5/lib/libQt5QuickShapes.so.5.12
+qt5/lib/libQt5QuickShapes.so.5.13
 qt5/lib/libQt5QuickTest.prl
 qt5/lib/libQt5QuickTest.so
 qt5/lib/libQt5QuickTest.so.${PKGVERSION}
 qt5/lib/libQt5QuickTest.so.5
-qt5/lib/libQt5QuickTest.so.5.12
+qt5/lib/libQt5QuickTest.so.5.13
 qt5/lib/libQt5QuickWidgets.prl
 qt5/lib/libQt5QuickWidgets.so
 qt5/lib/libQt5QuickWidgets.so.${PKGVERSION}
 qt5/lib/libQt5QuickWidgets.so.5
-qt5/lib/libQt5QuickWidgets.so.5.12
+qt5/lib/libQt5QuickWidgets.so.5.13
 qt5/lib/pkgconfig/Qt5Qml.pc
 qt5/lib/pkgconfig/Qt5Quick.pc
 qt5/lib/pkgconfig/Qt5QuickTest.pc
