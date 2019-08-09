@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/08/09 19:01:08 brook Exp $
+
+SHA1 (R/desc_1.2.0.tar.gz) = 1b58f9f275931c8e4d4fd9a99edc6423b1fe980a
+RMD160 (R/desc_1.2.0.tar.gz) = 90aac1900348f8420d5eb29ffe5887914e197e9b
+SHA512 (R/desc_1.2.0.tar.gz) = c0ef146faa28aa9b7f2ca20a5711d6e1f5553b8d4292d3e8d877e37ca78ebf720a8eca8fd3a5dc4ddef339fd28c639bb4e20813b8f2be4f5666897385eb456fc
+Size (R/desc_1.2.0.tar.gz) = 65612 bytes
