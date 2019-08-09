@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/08/09 18:37:22 brook Exp $
+
+SHA1 (R/git2r_0.26.1.tar.gz) = 32a45bf6676e0dc9d4e819f6c8780e332382cf40
+RMD160 (R/git2r_0.26.1.tar.gz) = 4c671fabfc9f8df8b5dcfdc20d3053418709be13
+SHA512 (R/git2r_0.26.1.tar.gz) = 478092db866a3ecc9b333bc9dade5522f484b18cc8ae6f214089b27d090966ba7b759790a0705e5c4cc414a20205ea290bfabf4d9441d82f77e9f8ba4d93bbcd
+Size (R/git2r_0.26.1.tar.gz) = 1214783 bytes
