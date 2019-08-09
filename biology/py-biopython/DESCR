@@ -1,0 +1,7 @@
+The Biopython package contains high-quality, reusable modules and
+scripts written in Python to make it as easy as possible to use Python
+for bioinformatics.  The Biopython includes the follwing: the ability
+to parse bioinformatics files into python utilizable data structures,
+including support for the formats such as Blast output, Clustalw,
+FASTA, GenBank, PubMed and Medicine, various Expasy files, SCOP,
+Rebase, UniGene, and SwissProt.
