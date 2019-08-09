@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3321 2019/08/09 12:03:28 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3322 2019/08/09 12:59:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5444,3 +5444,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-protobuf to 3.9.1 [adam 2019-08-09]
 	Updated net/zeromq to 4.3.2 [adam 2019-08-09]
 	Updated net/py-zmq to 18.1.0 [adam 2019-08-09]
+	Updated graphics/libimagequant to 2.12.5 [adam 2019-08-09]
+	Updated graphics/pngquant to 2.12.5 [adam 2019-08-09]
