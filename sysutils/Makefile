@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.825 2019/08/09 19:03:17 brook Exp $
+# $NetBSD: Makefile,v 1.826 2019/08/09 19:04:10 brook Exp $
 #
 
 COMMENT=	System utilities
@@ -10,6 +10,7 @@ SUBDIR+=	R-processx
 SUBDIR+=	R-progress
 SUBDIR+=	R-ps
 SUBDIR+=	R-sys
+SUBDIR+=	R-xopen
 SUBDIR+=	WCMCommander
 SUBDIR+=	accountsservice
 SUBDIR+=	acpica-utils
