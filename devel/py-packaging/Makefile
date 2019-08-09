@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2019/01/20 11:58:36 adam Exp $
+# $NetBSD: Makefile,v 1.6 2019/08/09 07:42:59 adam Exp $
 
-DISTNAME=	packaging-19.0
+DISTNAME=	packaging-19.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/packaging/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.python.org/pypi/packaging
+HOMEPAGE=	https://github.com/pypa/packaging
 COMMENT=	Core utilities for Python packages
 LICENSE=	modified-bsd OR apache-2.0
 
