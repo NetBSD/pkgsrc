@@ -6,8 +6,8 @@ $ NetBSD $
 Reported upstream:
 https://bitbucket.org/arakiken/mlterm/pull-requests/5/fix-for-wscons-framebuffer/diff
 
---- uitoolkit/fb/ui_display.c	2019-07-24 10:51:04.212256656 +0900
-+++ ../mlterm.patched/uitoolkit/fb/ui_display.c	2019-07-24 10:27:19.883218709 +0900
+--- uitoolkit/fb/ui_display.c.orig	2019-07-24 10:51:04.212256656 +0900
++++ uitoolkit/fb/ui_display.c	2019-07-24 10:27:19.883218709 +0900
 @@ -214,7 +214,7 @@ static inline ui_window_t *get_window(in
  }
  

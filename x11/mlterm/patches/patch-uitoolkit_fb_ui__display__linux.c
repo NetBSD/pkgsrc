@@ -5,8 +5,8 @@ $ NetBSD $
 Reported upstream:
 https://bitbucket.org/arakiken/mlterm/pull-requests/5/fix-for-wscons-framebuffer/diff
 
---- uitoolkit/fb/ui_display_linux.c	2019-07-24 10:51:04.215385175 +0900
-+++ ../mlterm.patched/uitoolkit/fb/ui_display_linux.c	2019-07-24 09:59:19.092709670 +0900
+--- uitoolkit/fb/ui_display_linux.c.orig	2019-07-24 10:51:04.215385175 +0900
++++ uitoolkit/fb/ui_display_linux.c	2019-07-24 09:59:19.092709670 +0900
 @@ -265,7 +265,7 @@ static int open_display(u_int depth) {
      _display.pixels_per_byte = 1;
    }
