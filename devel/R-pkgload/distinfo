@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/08/09 19:11:22 brook Exp $
+
+SHA1 (R/pkgload_1.0.2.tar.gz) = e2cebd156ba998a367f07405890ebd2777078a10
+RMD160 (R/pkgload_1.0.2.tar.gz) = 754b1e9ea418c4aa2008a41e7cb7208bbb9d51d4
+SHA512 (R/pkgload_1.0.2.tar.gz) = a1bb38f8a14b0ffd9cc5483b1e0920c1f1284f8a4c1196682c943345274911816cde0ef9ccc251253db52658dcd9185f492162091c8fafa216b82f934572a3bc
+Size (R/pkgload_1.0.2.tar.gz) = 55605 bytes
