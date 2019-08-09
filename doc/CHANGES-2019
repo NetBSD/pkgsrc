@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3336 2019/08/09 16:23:46 brook Exp $
+$NetBSD: CHANGES-2019,v 1.3337 2019/08/09 16:25:23 brook Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5459,3 +5459,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/R-purrr version 0.3.2 [brook 2019-08-09]
 	Added devel/R-tidyselect version 0.2.5 [brook 2019-08-09]
 	Added math/R-dplyr version 0.8.3 [brook 2019-08-09]
+	Added math/R-tidyr version 0.8.3 [brook 2019-08-09]
