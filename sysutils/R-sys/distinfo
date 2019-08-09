@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/08/09 18:36:29 brook Exp $
+
+SHA1 (R/sys_3.2.tar.gz) = 36685cebcf49f89db0651befdce6a90b119ef03e
+RMD160 (R/sys_3.2.tar.gz) = c76b2d727f4674d8fd2dfc14aa10c2ef5bafb4c7
+SHA512 (R/sys_3.2.tar.gz) = e3849e993df7f1ed6f2e74cb7c0dbcdd3b80e320b3c2d9d5158e7b40544e5a463ade1c94d41745de32053e956ddeb75816f634121e1b5ee6f05854f9883a7dad
+Size (R/sys_3.2.tar.gz) = 18491 bytes
