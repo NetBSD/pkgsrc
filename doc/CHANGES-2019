@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3330 2019/08/09 15:51:57 brook Exp $
+$NetBSD: CHANGES-2019,v 1.3331 2019/08/09 16:00:38 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5454,3 +5454,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added math/R-robustbase version 0.93.5 [brook 2019-08-09]
 	Added math/R-compositions version 1.40.2 [brook 2019-08-09]
 	Added graphics/R-ggtern version 3.1.0 [brook 2019-08-09]
+	Updated devel/bullet to 2.88 [nia 2019-08-09]
