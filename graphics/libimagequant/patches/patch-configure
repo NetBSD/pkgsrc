@@ -1,9 +1,9 @@
-$NetBSD: patch-configure,v 1.8 2018/06/12 10:15:03 adam Exp $
+$NetBSD: patch-configure,v 1.9 2019/08/09 12:59:02 adam Exp $
 
 Remove unwanted compiler flags.
 Avoid leaving scratch files in /tmp.
 
---- configure.orig	2018-06-03 19:46:28.000000000 +0000
+--- configure.orig	2019-07-27 12:50:23.000000000 +0000
 +++ configure
 @@ -5,7 +5,7 @@ PREFIX="/usr/local"
  LIBDIR="$PREFIX/lib"
@@ -22,7 +22,7 @@ Avoid leaving scratch files in /tmp.
 +    cflags "-DNDEBUG"
      status "Debug" "no"
  else
-     cflags "-O1 -g"
+     cflags "-O1 -g -DDEBUG"
 @@ -195,15 +195,9 @@ if [ -n "$OPENMP" ]; then
      else
          OPENMPFLAGS="-fopenmp"
