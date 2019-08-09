@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2017/06/21 15:07:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.41.20.1 2019/08/09 12:38:43 bsiegert Exp $
 man/man8/squirrelmail-conf.pl.8
 share/examples/squirrelmail/data/.htaccess
 share/examples/squirrelmail/data/index.php
@@ -95,6 +95,7 @@ share/squirrelmail/doc/russian_apache.txt
 share/squirrelmail/doc/security.txt
 share/squirrelmail/doc/translating.txt
 share/squirrelmail/doc/translating_help.txt
+share/squirrelmail/favicon.ico
 share/squirrelmail/functions/.htaccess
 share/squirrelmail/functions/abook_database.php
 share/squirrelmail/functions/abook_ldap_server.php
