@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3324 2019/08/09 15:39:04 brook Exp $
+$NetBSD: CHANGES-2019,v 1.3325 2019/08/09 15:42:02 brook Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5448,3 +5448,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/pngquant to 2.12.5 [adam 2019-08-09]
 	Added graphics/R-latex2exp version 0.4.0 [brook 2019-08-09]
 	Added finance/R-bayesm version 3.1.3 [brook 2019-08-09]
+	Added math/R-energy version 1.7.6 [brook 2019-08-09]
