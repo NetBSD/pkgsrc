@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2019/07/01 13:20:51 nia Exp $
-#
+# $NetBSD: Makefile,v 1.8 2019/08/09 17:16:27 nia Exp $
 
-DISTNAME=	flare-engine-1.10
+DISTNAME=	flare-engine-1.11
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=flareteam/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://flarerpg.org/
-COMMENT=	Fantasy action RPG using the FLARE engine
+COMMENT=	Free Libre Action Roleplaying Engine
 LICENSE=	gnu-gpl-v3 AND cc-by-sa-v3.0 AND ofl-v1.1
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}

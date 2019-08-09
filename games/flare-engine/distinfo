@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/07/01 13:20:51 nia Exp $
+$NetBSD: distinfo,v 1.5 2019/08/09 17:16:27 nia Exp $
 
-SHA1 (flare-engine-1.10.tar.gz) = 1c5254009c7729d61c8b12a0a2f0397b0ea2cf46
-RMD160 (flare-engine-1.10.tar.gz) = f2b4415c58a0b107f23882f4ff7c09f22c217319
-SHA512 (flare-engine-1.10.tar.gz) = db6cef0bd0aa1c17bbce94af72aec640a839dc0ad0d0079ec76ad9256dc64d91c05d42c98f0b4e6cf02ed56c37fce45f284ca857dd14d1bf6fa646b79748a577
-Size (flare-engine-1.10.tar.gz) = 5716744 bytes
+SHA1 (flare-engine-1.11.tar.gz) = ede49772a490000516418d931fd69e5f888e2e91
+RMD160 (flare-engine-1.11.tar.gz) = 5320c330e7177e3baffef6483be58b006a51c4c4
+SHA512 (flare-engine-1.11.tar.gz) = 1a210a9ce1812458faafc7ceadfdb69dfb2f70b785f93b7bc698b72b6305e8a3b268d53b085544ac54868e895cce6872abf9cb22389ed1280a27ca46bdb9ec3b
+Size (flare-engine-1.11.tar.gz) = 5729646 bytes
