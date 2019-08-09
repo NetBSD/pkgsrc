@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.823 2019/08/09 18:36:28 brook Exp $
+# $NetBSD: Makefile,v 1.824 2019/08/09 18:38:11 brook Exp $
 #
 
 COMMENT=	System utilities
@@ -7,6 +7,7 @@ SUBDIR+=	855resolution
 SUBDIR+=	915resolution
 SUBDIR+=	9base
 SUBDIR+=	R-progress
+SUBDIR+=	R-ps
 SUBDIR+=	R-sys
 SUBDIR+=	WCMCommander
 SUBDIR+=	accountsservice
