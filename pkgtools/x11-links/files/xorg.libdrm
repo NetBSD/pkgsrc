@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libdrm,v 1.14 2019/05/10 16:25:14 leot Exp $
+# $NetBSD: xorg.libdrm,v 1.15 2019/08/10 19:34:46 maya Exp $
 #
 include/X11/xf86drm.h
 include/X11/xf86mm.h
@@ -75,5 +75,7 @@ lib/libdrm_radeon.so.1.0
 lib/libdrm_radeon.so.3.0
 lib/libdrm_radeon.so.4.0
 lib/pkgconfig/libdrm.pc
+lib/pkgconfig/libdrm_amdgpu.pc
 lib/pkgconfig/libdrm_intel.pc
+lib/pkgconfig/libdrm_nouveau.pc
 lib/pkgconfig/libdrm_radeon.pc
