@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19176 2019/08/09 17:43:36 adam Exp $
+$NetBSD: TODO,v 1.19177 2019/08/10 11:42:41 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -793,7 +793,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hiredis-0.14.0
 	o honeyd-1.5c
 	o horde-5.2.9
-	o howm-1.4.3 [pkg/51101]
 	o hs-HTTP-4000.3.3
 	o hs-MonadRandom-0.4.2.2
 	o hs-QuickCheck-2.8.2
