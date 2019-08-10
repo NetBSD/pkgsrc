@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libdrm,v 1.15 2019/08/10 19:34:46 maya Exp $
+# $NetBSD: xorg.libdrm,v 1.16 2019/08/10 19:47:38 maya Exp $
 #
 include/X11/xf86drm.h
 include/X11/xf86mm.h
@@ -56,6 +56,10 @@ lib/libdrm.so.4.1
 lib/libdrm.so.5.0
 lib/libdrm.so.6.0
 lib/libdrm.so.7.0
+lib/libdrm_amdgpu.a
+lib/libdrm_amdgpu.so
+lib/libdrm_amdgpu.so.1
+lib/libdrm_amdgpu.so.1.0
 lib/libdrm_intel.a
 lib/libdrm_intel.so
 lib/libdrm_intel.so.0
@@ -67,6 +71,10 @@ lib/libdrm_intel.so.3.1
 lib/libdrm_intel.so.3.2
 lib/libdrm_intel.so.3.3
 lib/libdrm_intel.so.5.0
+lib/libdrm_nouveau.a
+lib/libdrm_nouveau.so
+lib/libdrm_nouveau.so.3
+lib/libdrm_nouveau.so.3.0
 lib/libdrm_radeon.a
 lib/libdrm_radeon.so
 lib/libdrm_radeon.so.0
