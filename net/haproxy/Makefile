@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2019/08/03 20:37:19 morr Exp $
+# $NetBSD: Makefile,v 1.48 2019/08/10 20:45:56 maya Exp $
 
 DISTNAME=	haproxy-2.0.3
 CATEGORIES=	net www
@@ -57,6 +57,7 @@ TARGET=	linux2628
 TARGET=	generic
 .endif
 
+CFLAGS.SunOS+=		-D_XPG4_2
 LIBS.SunOS+=		-lxnet
 
 post-install:
