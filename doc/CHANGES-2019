@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3383 2019/08/10 13:54:35 tsutsui Exp $
+$NetBSD: CHANGES-2019,v 1.3384 2019/08/10 19:35:06 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5506,3 +5506,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated misc/howm to 1.4.5 [ryoon 2019-08-10]
 	Updated misc/libreoffice to 6.3.0.4 [ryoon 2019-08-10]
 	Updated net/mikutter to 3.9.3 [tsutsui 2019-08-10]
+	Updated pkgtools/x11-links to 1.23 [maya 2019-08-10]
