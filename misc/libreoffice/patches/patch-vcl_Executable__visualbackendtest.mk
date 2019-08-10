@@ -1,8 +1,8 @@
-$NetBSD: patch-vcl_Executable__visualbackendtest.mk,v 1.2 2017/08/01 11:57:37 ryoon Exp $
+$NetBSD: patch-vcl_Executable__visualbackendtest.mk,v 1.3 2019/08/10 11:41:29 ryoon Exp $
 
 * Fix build on non-Linux Unix-like OSes
 
---- vcl/Executable_visualbackendtest.mk.orig	2017-07-25 20:26:39.000000000 +0000
+--- vcl/Executable_visualbackendtest.mk.orig	2019-08-06 17:26:35.000000000 +0000
 +++ vcl/Executable_visualbackendtest.mk
 @@ -41,10 +41,10 @@ $(eval $(call gb_Executable_use_static_l
      vclmain \
@@ -14,6 +14,6 @@ $NetBSD: patch-vcl_Executable__visualbackendtest.mk,v 1.2 2017/08/01 11:57:37 ry
  	-lm \
 -	-ldl \
 +	$(DLOPEN_LIBS) \
- 	-lpthread \
      -lX11 \
  ))
+ 
