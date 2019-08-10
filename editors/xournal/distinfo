@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2016/01/04 02:06:48 markd Exp $
+$NetBSD: distinfo,v 1.5 2019/08/10 06:53:28 yhardy Exp $
 
-SHA1 (xournal-0.4.8.tar.gz) = e8b15c427287928e0995cc1b3bc83c2897c689ef
-RMD160 (xournal-0.4.8.tar.gz) = 4e2afb964fc8b4808c125cd65e9c36f6124f8542
-SHA512 (xournal-0.4.8.tar.gz) = cfd5760a0e832ef02786a29cb744d4932aeee97c4d6992b430e647bd59aaef1042735203824d0eaf9da9b884dcdadcfb8f5acea221638db91438ae46a6ee42bf
-Size (xournal-0.4.8.tar.gz) = 641240 bytes
+SHA1 (xournal-0.4.8.2016.tar.gz) = a08d0fde395ea95570e560295df5f97be3c3a6e2
+RMD160 (xournal-0.4.8.2016.tar.gz) = 36a0b2bb848d4801e2b00cf2cd58c8f847488c5d
+SHA512 (xournal-0.4.8.2016.tar.gz) = 1426d5c9ba3486fbe342d49fc19fcc162965cd6a7b7754f79665e43fe0e60e6f42f61969405ace78fdaa7b99cbb3d4b07b7fb5df246d68a329b52084b6eec76e
+Size (xournal-0.4.8.2016.tar.gz) = 646082 bytes
 SHA1 (patch-src_xo-shapes.c) = ab5a56780dd6fa37a3b51f89468c6100137454f3
