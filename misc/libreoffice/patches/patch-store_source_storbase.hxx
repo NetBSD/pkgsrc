@@ -1,12 +1,12 @@
-$NetBSD: patch-store_source_storbase.hxx,v 1.1 2019/02/25 14:12:53 tnn Exp $
+$NetBSD: patch-store_source_storbase.hxx,v 1.2 2019/08/10 11:41:29 ryoon Exp $
 
 include <cstdlib> for std::free()
 
---- store/source/storbase.hxx.orig	2019-01-23 19:35:25.000000000 +0000
+--- store/source/storbase.hxx.orig	2019-08-06 17:26:35.000000000 +0000
 +++ store/source/storbase.hxx
-@@ -38,6 +38,7 @@
- #include <stddef.h>
- #include <string.h>
+@@ -35,6 +35,7 @@
+ 
+ #include <memory>
  #include <utility>
 +#include <cstdlib>
  

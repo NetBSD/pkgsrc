@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.5 2017/08/01 11:57:36 ryoon Exp $
+# $NetBSD: options.mk,v 1.6 2019/08/10 11:41:29 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libreoffice
-PKG_SUPPORTED_OPTIONS=	java debug kde4 gtk3 cups
+PKG_SUPPORTED_OPTIONS=	java debug gtk3 cups # kde4 
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
@@ -10,7 +10,7 @@ PKG_SUGGESTED_OPTIONS+=	java
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	java kde4 gtk3 cups
+PLIST_VARS+=	java gtk3 cups # kde4 
 
 .if !empty(PKG_OPTIONS:Mjava)
 .include "../../mk/java-env.mk"
@@ -51,14 +51,14 @@ PLIST.gtk3=		yes
 CONFIGURE_ARGS+=	--disable-gtk3
 .endif
 
-.if !empty(PKG_OPTIONS:Mkde4)
-CONFIGURE_ARGS+=	--enable-kde4
-CONFIGURE_ENV+=		KDE4DIR="${LOCALBASE}"
-PLIST.kde4=		yes
-.include "../../x11/kdelibs4/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-kde4
-.endif
+#.if !empty(PKG_OPTIONS:Mkde4)
+#CONFIGURE_ARGS+=	--enable-kde4
+#CONFIGURE_ENV+=		KDE4DIR="${LOCALBASE}"
+#PLIST.kde4=		yes
+#.include "../../x11/kdelibs4/buildlink3.mk"
+#.else
+#CONFIGURE_ARGS+=	--disable-kde4
+#.endif
 
 .if empty(PKG_OPTIONS:Mcups)
 CONFIGURE_ARGS+=	--disable-cups

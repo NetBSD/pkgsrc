@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.202 2019/07/23 17:19:59 wiz Exp $
+# $NetBSD: Makefile,v 1.203 2019/08/10 11:41:29 ryoon Exp $
 
-VERREL=		6.2.5
-VERRC=		2
+VERREL=		6.3.0
+VERRC=		4
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -60,8 +59,8 @@ MORE_DISTFILES= \
 	liberation-fonts-ttf-2.00.4.tar.gz \
 	907d6e99f241876695c19ff3db0b8923-source-code-pro-2.030R-ro-1.050R-it.tar.gz \
 	edc4d741888bc0d38e32dbaa17149596-source-sans-pro-2.010R-ro-1.065R-it.tar.gz \
-	source-serif-font-2.007R.tar.gz \
-	xmlsec1-1.2.27.tar.gz \
+	source-serif-pro-3.000R.tar.gz \
+	xmlsec1-1.2.28.tar.gz \
 	3404ab6b1792ae5f16bbd603bd1e1d03-libformula-1.1.7.zip \
 	35c94d2df8893241173de1d16b6034c0-swingExSrc.zip \
 	39bb3fcea1514f1369fcfc87542390fd-sacjava-1.3.zip \
@@ -107,8 +106,8 @@ DISTFILES+=		${md}
 SITES.${md}=		https://dev-www.libreoffice.org/src/
 .endfor
 
-MORE_DISTFILES2+=		49a64f3bcf20a7909ba2751349231d6652ded9cd2840e961b5164d09de3ffa63-opens___.ttf
-SITES.49a64f3bcf20a7909ba2751349231d6652ded9cd2840e961b5164d09de3ffa63-opens___.ttf=	https://dev-www.libreoffice.org/extern/
+MORE_DISTFILES2+=		884ed41809687c3e168fc7c19b16585149ff058eca79acbf3ee784f6630704cc-opens___.ttf
+SITES.884ed41809687c3e168fc7c19b16585149ff058eca79acbf3ee784f6630704cc-opens___.ttf=	https://dev-www.libreoffice.org/extern/
 
 .include "../../graphics/librsvg/available.mk"
 .if ${LIBRSVG_TYPE} == "c" || make(distinfo) || make(mdi)
