@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.13 2019/02/19 16:28:03 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.14 2019/08/10 11:41:29 ryoon Exp $
 
 add arm64 support.
 
@@ -6,10 +6,13 @@ fix __cxa_exception check.
 
 fix wrong default paths.
 
+Remove c++2a checks.
 
---- configure.ac.orig	2019-01-23 19:35:25.000000000 +0000
+NetBSD has no math_errhandling support yet.
+
+--- configure.ac.orig	2019-08-06 17:26:35.000000000 +0000
 +++ configure.ac
-@@ -4314,6 +4314,11 @@ linux-android*)
+@@ -4293,6 +4293,11 @@ haiku*)
      P_SEP=:
  
      case "$host_cpu" in
@@ -21,7 +24,7 @@ fix wrong default paths.
      i*86)
          CPUNAME=INTEL
          RTL_ARCH=x86
-@@ -6015,14 +6020,14 @@ if test "$GCC" = "yes" -o "$COM_IS_CLANG
+@@ -6236,14 +6241,14 @@ if test "$GCC" = "yes" -o "$COM_IS_CLANG
          ], [AC_MSG_RESULT([no])])
      AC_LANG_POP([C++])
  
@@ -39,7 +42,28 @@ fix wrong default paths.
              AC_MSG_RESULT([yes])
          ], [AC_MSG_RESULT([no])])
      AC_LANG_POP([C++])
-@@ -7782,7 +7787,7 @@ else
+@@ -6405,7 +6410,7 @@ CXXFLAGS_CXX11=
+ if test "$COM" = MSC -a "$COM_IS_CLANG" != TRUE; then
+     CXXFLAGS_CXX11='-std:c++17 -Zc:__cplusplus'
+ elif test "$GCC" = "yes" -o "$COM_IS_CLANG" = TRUE; then
+-    my_flags='-std=gnu++2a -std=c++2a -std=gnu++17 -std=gnu++1z -std=c++17 -std=c++1z'
++    my_flags='-std=gnu++17 -std=gnu++1z -std=c++17 -std=c++1z'
+     for flag in $my_flags; do
+         if test "$COM" = MSC; then
+             flag="-Xclang $flag"
+@@ -6474,7 +6479,11 @@ elif test "$GCC" = "yes" -o "$COM_IS_CLA
+             // solenv/gbuild/platform/LINUX_INTEL_GCC.mk), std=gnu* would cause math_errhandling to
+             // get undef'ed in /usr/include/bits/mathinline.h, while std=c* keeps it defined (as
+             // needed by sc/source/core/tool/math.cxx):
++#if defined(__NetBSD__)
++            int g() { return 1; }
++#else
+             int g() { return math_errhandling; }
++#endif
+             ]])],[CXXFLAGS_CXX11=$flag $my_float128hack])
+         AC_LANG_POP([C++])
+         CXXFLAGS=$save_CXXFLAGS
+@@ -8017,7 +8026,7 @@ else
      if test "$COM" = "MSC"; then
          LIBJPEG_LIBS="${WORKDIR}/UnpackedTarball/libjpeg-turbo/.libs/libjpeg.lib"
      else
@@ -48,7 +72,7 @@ fix wrong default paths.
      fi
  
      case "$host_cpu" in
-@@ -9333,11 +9338,11 @@ dnl HarfBuzz
+@@ -9586,11 +9595,11 @@ dnl HarfBuzz
  dnl ===================================================================
  libo_CHECK_SYSTEM_MODULE([graphite],[GRAPHITE],[graphite2 >= 0.9.3],
                           ["-I${WORKDIR}/UnpackedTarball/graphite/include -DGRAPHITE2_STATIC"],
@@ -62,7 +86,7 @@ fix wrong default paths.
  
  if test "$COM" = "MSC"; then # override the above
      GRAPHITE_LIBS="${WORKDIR}/LinkTarget/StaticLibrary/graphite.lib"
-@@ -10554,7 +10559,7 @@ elif test "$enable_mpl_subset" = "yes"; 
+@@ -10825,7 +10834,7 @@ elif test "$enable_mpl_subset" = "yes"; 
  elif test "$enable_fuzzers" = "yes"; then
      AC_MSG_CHECKING([whether gpgmepp should be disabled due to oss-fuzz])
      AC_MSG_RESULT([yes])
@@ -71,7 +95,7 @@ fix wrong default paths.
      dnl ===================================================================
      dnl Check for system gpgme
      dnl ===================================================================
-@@ -10564,7 +10569,7 @@ elif test "$_os" = "Linux" -o "$_os" = "
+@@ -10835,7 +10844,7 @@ elif test "$_os" = "Linux" -o "$_os" = "
          SYSTEM_GPGMEPP=TRUE
  
          # C++ library doesn't come with fancy gpgmepp-config, check for headers the old-fashioned way
@@ -80,7 +104,7 @@ fix wrong default paths.
              [AC_MSG_ERROR([gpgmepp headers not found, install gpgmepp development package])], [])
          # progress_callback is the only func with plain C linkage
          # checking for it also filters out older, KDE-dependent libgpgmepp versions
-@@ -11897,8 +11902,8 @@ EOF
+@@ -11885,8 +11894,8 @@ EOF
      dnl Checking for ant.jar
      if test "$ANT_HOME" != "NO_ANT_HOME"; then
          AC_MSG_CHECKING([Ant lib directory])
