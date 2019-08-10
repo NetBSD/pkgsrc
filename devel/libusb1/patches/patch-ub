@@ -1,0 +1,36 @@
+$NetBSD: patch-ub,v 1.1.2.2 2019/08/10 12:32:34 bsiegert Exp $
+
+Avoid undefined behaviour that breaks clang
+
+--- libusb/descriptor.c.orig	2019-08-02 09:59:25.784968424 +0900
++++ libusb/descriptor.c	2019-08-02 09:59:44.009134412 +0900
+@@ -54,7 +54,9 @@
+ 	for (cp = descriptor; *cp; cp++) {
+ 		switch (*cp) {
+ 			case 'b':	/* 8-bit byte */
+-				*dp++ = *sp++;
++				memcpy(dp, sp, 1);
++				dp += 1;
++				sp += 1;
+ 				break;
+ 			case 'w':	/* 16-bit word, convert from little endian to CPU */
+ 				dp += ((uintptr_t)dp & 1);	/* Align to word boundary */
+@@ -63,7 +65,7 @@
+ 					memcpy(dp, sp, 2);
+ 				} else {
+ 					w = (sp[1] << 8) | sp[0];
+-					*((uint16_t *)dp) = w;
++					memcpy(dp, &w, 4);
+ 				}
+ 				sp += 2;
+ 				dp += 2;
+@@ -76,7 +78,7 @@
+ 				} else {
+ 					d = (sp[3] << 24) | (sp[2] << 16) |
+ 						(sp[1] << 8) | sp[0];
+-					*((uint32_t *)dp) = d;
++					memcpy(dp, &d, 4);
+ 				}
+ 				sp += 4;
+ 				dp += 4;
+
