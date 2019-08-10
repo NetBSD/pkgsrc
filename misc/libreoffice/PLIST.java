@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.java,v 1.9 2019/02/19 16:28:03 ryoon Exp $
+@comment $NetBSD: PLIST.java,v 1.10 2019/08/10 11:41:29 ryoon Exp $
 ${PKGNAME}/lib/libreoffice/program/JREProperties.class
 ${PKGNAME}/lib/libreoffice/program/classes/ScriptFramework.jar
 ${PKGNAME}/lib/libreoffice/program/classes/ScriptProviderForBeanShell.jar
@@ -49,7 +49,6 @@ ${PKGNAME}/lib/libreoffice/program/libjuh.so
 ${PKGNAME}/lib/libreoffice/program/libjuhx.so
 ${PKGNAME}/lib/libreoffice/program/libjvmaccesslo.so
 ${PKGNAME}/lib/libreoffice/program/libjvmfwklo.so
-${PKGNAME}/lib/libreoffice/program/libmysql_jdbclo.so
 ${PKGNAME}/lib/libreoffice/program/libofficebean.so
 ${PKGNAME}/lib/libreoffice/program/librptlo.so
 ${PKGNAME}/lib/libreoffice/program/librptuilo.so
