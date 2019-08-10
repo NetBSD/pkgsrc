@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3381 2019/08/10 11:29:15 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.3382 2019/08/10 11:42:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5504,3 +5504,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added biology/py-biopython version 1.74 [brook 2019-08-09]
 	Updated editors/xournal to 0.4.8.2016 [yhardy 2019-08-10]
 	Updated misc/howm to 1.4.5 [ryoon 2019-08-10]
+	Updated misc/libreoffice to 6.3.0.4 [ryoon 2019-08-10]
