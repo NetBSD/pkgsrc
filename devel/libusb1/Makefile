@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2019/06/22 11:30:11 nia Exp $
+# $NetBSD: Makefile,v 1.18.2.1 2019/08/10 12:32:34 bsiegert Exp $
 
 DISTNAME=	libusb-1.0.22
 PKGNAME=	${DISTNAME:S/libusb/libusb1/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libusb/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,6 +20,13 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 MAKE_JOBS_SAFE=            no
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+# Uses undefined behaviour
+BUILDLINK_TRANSFORM+=	opt:-O2:-O1
+CFLAGS+=		-fno-strict-aliasing
+.endif
 
 PKGCONFIG_OVERRIDE+=	libusb-1.0.pc.in
 
