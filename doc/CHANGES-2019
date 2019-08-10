@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3385 2019/08/10 19:49:15 maya Exp $
+$NetBSD: CHANGES-2019,v 1.3386 2019/08/10 23:46:38 fox Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5508,3 +5508,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/mikutter to 3.9.3 [tsutsui 2019-08-10]
 	Updated pkgtools/x11-links to 1.23 [maya 2019-08-10]
 	Updated pkgtools/x11-links to 1.24 [maya 2019-08-10]
+	Updated audio/fasttracker2 to 2.165 [fox 2019-08-10]
