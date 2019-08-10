@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2015/06/29 11:06:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2019/08/10 11:28:42 ryoon Exp $
 
-DISTNAME=	howm-1.4.1
+DISTNAME=	howm-1.4.5
 CATEGORIES=	misc
 MASTER_SITES=	http://howm.osdn.jp/a/
 
