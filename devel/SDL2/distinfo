@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.33 2019/05/24 18:13:36 nia Exp $
+$NetBSD: distinfo,v 1.33.2.1 2019/08/10 13:24:56 bsiegert Exp $
 
-SHA1 (SDL2-2.0.9.tar.gz) = 4354c6baad9a48486182656a7506abfb63e9bff5
-RMD160 (SDL2-2.0.9.tar.gz) = db2efabf55af41cddf015db0b5213b11ef22b9d0
-SHA512 (SDL2-2.0.9.tar.gz) = a78a4708b2bb5b35a7c7b7501eb3bd60a9aa3bb95a3d84e57763df4a377185e7312a94b66321eef7ca0d17255e4b402fc950e83ef0dbbd08f14ff1194107dc10
-Size (SDL2-2.0.9.tar.gz) = 5246942 bytes
+SHA1 (SDL2-2.0.10.tar.gz) = fb31312ea1d4b45db839796ae2336dfe3d5884e5
+RMD160 (SDL2-2.0.10.tar.gz) = b35818cbf8eaf0c9c4d3b6d7a293c05a368366b2
+SHA512 (SDL2-2.0.10.tar.gz) = f49b869362699b3282f6e82920e59c7fac581bcbf955f18a81cc126293c08093a90df7fcb39517cc8bc32708d2213fe645a42b655d6d811c1386efebb3d3c798
+Size (SDL2-2.0.10.tar.gz) = 5550762 bytes
 SHA1 (patch-configure) = 1631314dab18886ea553ee53fac89e16718cacab
-SHA1 (patch-src_audio_netbsd_SDL__netbsdaudio.c) = a495f5ede3ab1bd01b0703b50081748a0e57f1c4
-SHA1 (patch-src_joystick_bsd_SDL__sysjoystick.c) = 152b5df76a91c7e7acde126b1464fdd464cf1ba2
+SHA1 (patch-src_joystick_bsd_SDL__sysjoystick.c) = 1c5756e47ad906235369b46b36d7b0b1ee776156
 SHA1 (patch-src_video_cocoa_SDL__cocoawindow.m) = 1d5ac9c17ceadf668925734b5cad311e26f2fc58
 SHA1 (patch-src_video_x11_SDL__x11opengl.c) = 70b63021c12c52760c0811c673b259844bdfcdc0
