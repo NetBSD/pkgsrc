@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3379 2019/08/09 21:52:34 brook Exp $
+$NetBSD: CHANGES-2019,v 1.3380 2019/08/10 07:00:35 yhardy Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5502,3 +5502,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added graphics/R-colourpicker version 1.0 [brook 2019-08-09]
 	Added graphics/R-ggExtra version 0.8 [brook 2019-08-09]
 	Added biology/py-biopython version 1.74 [brook 2019-08-09]
+	Updated editors/xournal to 0.4.8.2016 [yhardy 2019-08-10]
