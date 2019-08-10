@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q2,v 1.1.2.7 2019/08/09 20:39:26 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q2,v 1.1.2.8 2019/08/10 13:25:13 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q2 branch:
 
@@ -107,4 +107,25 @@ net/youtube-dl: update
 
 Pullup ticket #6018 - requested by maya
 devel/pango: security fix
+
+Pullup ticket #6019 - requested by taca
+lang/php72: security fix
+
+Pullup ticket #6020 - requested by taca
+lang/php73: security fix
+
+Pullup ticket #6021 - requested by taca
+lang/php71: security fix
+
+Pullup ticket #6026 - requested by taca
+textproc/ruby-yard: security fix
+
+Pullup ticket #6027 - requested by maya
+devel/libusb1: clang build fix
+
+Pullup ticket #6029 - requested by taca
+databases/mysql57-client, databases/mysql57-server: security fix
+
+Pullup ticket #6030 - requested by nia
+devel/SDL2: security fix
 
