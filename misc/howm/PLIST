@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/12/12 13:10:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/08/10 11:28:42 ryoon Exp $
 share/doc/howm/CL-HOWM.ja.rd
 share/doc/howm/OLD.rd
 share/doc/howm/README-j.html
@@ -26,18 +26,20 @@ ${EMACS_LISPPREFIX}/howm/honest-report.el
 ${EMACS_LISPPREFIX}/howm/honest-report.elc
 ${EMACS_LISPPREFIX}/howm/howm-backend.el
 ${EMACS_LISPPREFIX}/howm/howm-backend.elc
-${EMACS_LISPPREFIX}/howm/howm-cl.el
-${EMACS_LISPPREFIX}/howm/howm-cl.elc
 ${EMACS_LISPPREFIX}/howm/howm-common.el
 ${EMACS_LISPPREFIX}/howm/howm-common.elc
 ${EMACS_LISPPREFIX}/howm/howm-date.el
 ${EMACS_LISPPREFIX}/howm/howm-date.elc
 ${EMACS_LISPPREFIX}/howm/howm-lang-en.el
 ${EMACS_LISPPREFIX}/howm/howm-lang-en.elc
+${EMACS_LISPPREFIX}/howm/howm-lang-fr.el
+${EMACS_LISPPREFIX}/howm/howm-lang-fr.elc
 ${EMACS_LISPPREFIX}/howm/howm-lang-ja.el
 ${EMACS_LISPPREFIX}/howm/howm-lang-ja.elc
 ${EMACS_LISPPREFIX}/howm/howm-menu-en.el
 ${EMACS_LISPPREFIX}/howm/howm-menu-en.elc
+${EMACS_LISPPREFIX}/howm/howm-menu-fr.el
+${EMACS_LISPPREFIX}/howm/howm-menu-fr.elc
 ${EMACS_LISPPREFIX}/howm/howm-menu-ja.el
 ${EMACS_LISPPREFIX}/howm/howm-menu-ja.elc
 ${EMACS_LISPPREFIX}/howm/howm-menu.el
@@ -50,8 +52,6 @@ ${EMACS_LISPPREFIX}/howm/howm-reminder.el
 ${EMACS_LISPPREFIX}/howm/howm-reminder.elc
 ${EMACS_LISPPREFIX}/howm/howm-vars.el
 ${EMACS_LISPPREFIX}/howm/howm-vars.elc
-${EMACS_LISPPREFIX}/howm/howm-version.el
-${EMACS_LISPPREFIX}/howm/howm-version.elc
 ${EMACS_LISPPREFIX}/howm/howm-view.el
 ${EMACS_LISPPREFIX}/howm/howm-view.elc
 ${EMACS_LISPPREFIX}/howm/howm.el
