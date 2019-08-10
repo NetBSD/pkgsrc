@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3380 2019/08/10 07:00:35 yhardy Exp $
+$NetBSD: CHANGES-2019,v 1.3381 2019/08/10 11:29:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5503,3 +5503,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added graphics/R-ggExtra version 0.8 [brook 2019-08-09]
 	Added biology/py-biopython version 1.74 [brook 2019-08-09]
 	Updated editors/xournal to 0.4.8.2016 [yhardy 2019-08-10]
+	Updated misc/howm to 1.4.5 [ryoon 2019-08-10]
