@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2019/06/30 20:17:31 nia Exp $
+# $NetBSD: Makefile,v 1.21 2019/08/11 13:24:40 wiz Exp $
 
 DISTNAME=	HTML-Selector-XPath-0.25
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTML/}
 

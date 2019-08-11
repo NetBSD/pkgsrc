@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2018/08/22 09:43:33 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/08/11 13:18:46 wiz Exp $
 #
 
 DISTNAME=		myrepos_1.20180726
 PKGNAME=		${DISTNAME:S/_/-/}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/m/myrepos/}
 EXTRACT_SUFX=		.tar.xz

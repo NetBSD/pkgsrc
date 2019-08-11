@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2018/08/22 09:45:14 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/08/11 13:21:11 wiz Exp $
 #
 
 DISTNAME=	icon-naming-utils-0.8.90
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	graphics
 MASTER_SITES=	http://tango.freedesktop.org/releases/
 

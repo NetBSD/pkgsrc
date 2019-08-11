@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2018/08/22 09:44:47 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/08/11 13:20:32 wiz Exp $
 
 DISTNAME=	Test-LectroTest-0.5001
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TM/TMOERTEL/}
 

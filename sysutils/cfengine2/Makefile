@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2018/08/22 09:46:31 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2019/08/11 13:23:04 wiz Exp $
 
 DISTNAME=	cfengine-2.2.10
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	sysutils net
 #MASTER_SITES=	http://www.cfengine.org/tarballs/
 MASTER_SITES+=	http://ftp.osuosl.org/pub/cfengine/

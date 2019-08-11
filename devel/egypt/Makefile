@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2018/08/22 09:43:30 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/08/11 13:18:42 wiz Exp $
 
 DISTNAME=	egypt-1.10
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${HOMEPAGE}download/
 

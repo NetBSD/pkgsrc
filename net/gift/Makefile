@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2018/08/22 09:45:53 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2019/08/11 13:22:09 wiz Exp $
 #
 
 DISTNAME=	gift-0.11.8.1
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gift/}
 EXTRACT_SUFX=	.tar.bz2

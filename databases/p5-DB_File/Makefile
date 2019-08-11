@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2019/06/30 20:14:25 nia Exp $
+# $NetBSD: Makefile,v 1.54 2019/08/11 13:18:29 wiz Exp $
 
 DISTNAME=	DB_File-1.843
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DB_File/}
 

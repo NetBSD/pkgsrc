@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2018/08/22 09:46:35 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/08/11 13:23:09 wiz Exp $
 
 DISTNAME=	libcap-2.25
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2019/07/01 21:35:53 nia Exp $
+# $NetBSD: Makefile,v 1.9 2019/08/11 13:23:32 wiz Exp $
 #
 
 DISTNAME=	Locale-Maketext-Gettext-1.28
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Locale/}
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2019/06/30 20:15:11 nia Exp $
+# $NetBSD: Makefile,v 1.41 2019/08/11 13:19:39 wiz Exp $
 #
 
 DISTNAME=	IO-stringy-2.111
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IO/}
 

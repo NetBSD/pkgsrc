@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2019/07/21 22:25:47 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/08/11 13:23:19 wiz Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-mount-plugin-1.1.3

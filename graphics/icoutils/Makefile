@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2018/08/22 09:45:14 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2019/08/11 13:21:11 wiz Exp $
 
 DISTNAME=	icoutils-0.32.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	http://savannah.nongnu.org/download/icoutils/
 EXTRACT_SUFX=	.tar.bz2

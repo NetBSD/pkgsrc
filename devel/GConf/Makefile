@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.96 2019/04/25 07:32:42 maya Exp $
+# $NetBSD: Makefile,v 1.97 2019/08/11 13:18:37 wiz Exp $
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "../../devel/GConf/Makefile.common"
 
 CONFIGURE_ARGS+=	--disable-gtk

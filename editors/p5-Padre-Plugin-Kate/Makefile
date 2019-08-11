@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2019/06/30 20:16:07 nia Exp $
+# $NetBSD: Makefile,v 1.16 2019/08/11 13:20:55 wiz Exp $
 
 DISTNAME=	Padre-Plugin-Kate-0.06
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors perl5 textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Padre/}
 

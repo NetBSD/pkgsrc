@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2019/04/09 07:33:45 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2019/08/11 13:23:25 wiz Exp $
 
 DISTNAME=	json-schema-1.2
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nfotex/}
 GITHUB_RELEASE=	${DISTNAME}

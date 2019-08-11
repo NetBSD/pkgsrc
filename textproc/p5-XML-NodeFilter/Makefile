@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2019/06/30 20:17:09 nia Exp $
+# $NetBSD: Makefile,v 1.24 2019/08/11 13:23:54 wiz Exp $
 #
 
 DISTNAME=	XML-NodeFilter-0.01
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2019/07/01 21:35:43 nia Exp $
+# $NetBSD: Makefile,v 1.4 2019/08/11 13:20:23 wiz Exp $
 
 DISTNAME=	Taint-Util-0.08
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/A/AV/AVAR/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.60 2018/08/22 09:45:47 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2019/08/11 13:22:00 wiz Exp $
 #
 
 DISTNAME=	vfu-3.04
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	misc
 MASTER_SITES=	http://cade.datamax.bg/vfu/
 MASTER_SITES+=	${MASTER_SITE_SUNSITE:=utils/file/managers/}

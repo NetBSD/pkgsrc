@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2018/08/22 09:43:05 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/08/11 13:18:10 wiz Exp $
 #
 
 DISTNAME=	docx2txt-1.2
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docx2txt/}
 EXTRACT_SUFX=	.tgz

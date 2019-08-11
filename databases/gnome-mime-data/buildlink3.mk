@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2018/08/22 09:42:51 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2019/08/11 13:17:48 wiz Exp $
 
 BUILDLINK_TREE+=	gnome-mime-data
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnome-mime-data
 GNOME_MIME_DATA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnome-mime-data+=	gnome-mime-data>=2.4.0
-BUILDLINK_ABI_DEPENDS.gnome-mime-data+=	gnome-mime-data>=2.18.0nb7
+BUILDLINK_ABI_DEPENDS.gnome-mime-data+=	gnome-mime-data>=2.18.0nb8
 BUILDLINK_PKGSRCDIR.gnome-mime-data?=	../../databases/gnome-mime-data
 
 # intltool-{extract,merge,update} are Perl scripts included in the sources
