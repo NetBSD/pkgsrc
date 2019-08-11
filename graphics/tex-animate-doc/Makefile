@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2019/05/13 12:00:19 markd Exp $
+# $NetBSD: Makefile,v 1.11 2019/08/11 11:11:53 markd Exp $
 
 DISTNAME=	animate.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-20190409
-TEXLIVE_REV=	51009
+PKGNAME=	tex-${DISTNAME:S/./-/}-20190722
+TEXLIVE_REV=	51704
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/animate
+HOMEPAGE=	https://ctan.org/pkg/animate
 COMMENT=	Documentation for tex-animate
 LICENSE=	lppl-1.3c
 
