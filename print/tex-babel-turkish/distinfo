@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:01:50 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/08/11 03:45:14 markd Exp $
 
-SHA1 (tex-babel-turkish-33284/babel-turkish.tar.xz) = d03fe54800f4610f0f059ed8084aea2051c0c095
-RMD160 (tex-babel-turkish-33284/babel-turkish.tar.xz) = c79b35b0e6d45021bbff56757beb16c05da021d1
-SHA512 (tex-babel-turkish-33284/babel-turkish.tar.xz) = 88d44f59073e6c8be9558523c20da0db3160e767595f079ea7086d4a88bfd45d030ab5fb9b1f7fee5bbfc74d165fcd99fca884f31cff3db6fd6a51502d26cc6f
-Size (tex-babel-turkish-33284/babel-turkish.tar.xz) = 2916 bytes
+SHA1 (tex-babel-turkish-51560/babel-turkish.tar.xz) = 983fde9f9b7368e4c388f010de3f570b81f415c6
+RMD160 (tex-babel-turkish-51560/babel-turkish.tar.xz) = 1a11b532550eaf4d5c4b5d6f3e3ac505e9a3c6af
+SHA512 (tex-babel-turkish-51560/babel-turkish.tar.xz) = 02916936992e00e7aa884b46b6f786dd0fe5a0aaa6e2c6c4e28fe72de7fe5260fca7cdd37efc4a775a8d172e3993c98df7cec3d1ad08f01487f7cb0c8f2d179a
+Size (tex-babel-turkish-51560/babel-turkish.tar.xz) = 2932 bytes
