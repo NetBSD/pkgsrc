@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3392 2019/08/11 15:20:12 gdt Exp $
+$NetBSD: CHANGES-2019,v 1.3393 2019/08/11 16:53:01 fox Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5583,3 +5583,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/py-gssapi to 1.6.1 [adam 2019-08-11]
 	Updated textproc/py-lxml to 4.4.1 [adam 2019-08-11]
 	Updated databases/postgresql-postgis2 to 2.5.3 [gdt 2019-08-11]
+	Added security/libdecaf version 1.0.0 [fox 2019-08-11]
