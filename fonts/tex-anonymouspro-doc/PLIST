@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/08/11 04:55:54 markd Exp $
 share/texmf-dist/doc/fonts/anonymouspro/AnonymousPro-01.etx
 share/texmf-dist/doc/fonts/anonymouspro/AnonymousPro-02.etx
 share/texmf-dist/doc/fonts/anonymouspro/AnonymousPro-03.etx
@@ -8,7 +8,7 @@ share/texmf-dist/doc/fonts/anonymouspro/AnonymousPro-symbols.etx
 share/texmf-dist/doc/fonts/anonymouspro/AnonymousPro.pdf
 share/texmf-dist/doc/fonts/anonymouspro/FONTLOG.txt
 share/texmf-dist/doc/fonts/anonymouspro/OFL.txt
-share/texmf-dist/doc/fonts/anonymouspro/README
+share/texmf-dist/doc/fonts/anonymouspro/README.md
 share/texmf-dist/doc/fonts/anonymouspro/README_Mark-Simonson.txt
 share/texmf-dist/doc/fonts/anonymouspro/anonymouspro-fixlatin.mtx
 share/texmf-dist/doc/fonts/anonymouspro/anonymouspro-fixtextcomp.mtx
