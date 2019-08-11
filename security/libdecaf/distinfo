@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2019/08/11 16:47:52 fox Exp $
+
+SHA1 (libdecaf-1.0.0.tgz) = c36a3b392763d6ddae4304a7e4c48353d8f1f474
+RMD160 (libdecaf-1.0.0.tgz) = 1ff710c56f2e0682547ed78dc427893b40604c06
+SHA512 (libdecaf-1.0.0.tgz) = 0a962fe01e73655db98c98692938794d6ec4cee5656f9a6172ab24e385882229f9163d09212b2a13bff874623c18befb6aaa2f0ed65aa638e1a3c56dd3e124c0
+Size (libdecaf-1.0.0.tgz) = 614589 bytes
+SHA1 (patch-src_CMakeLists.txt) = f9ddfd9e6d3e334d310bfed9f2542477ba2cf9a6
