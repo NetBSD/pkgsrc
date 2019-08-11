@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2018/08/22 09:43:28 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2019/08/11 13:18:39 wiz Exp $
 #
 
 DISTNAME=		bglibs-2.04
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${HOMEPAGE}
 

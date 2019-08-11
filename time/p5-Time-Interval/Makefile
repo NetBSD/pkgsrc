@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2019/07/01 21:35:57 nia Exp $
+# $NetBSD: Makefile,v 1.20 2019/08/11 13:24:11 wiz Exp $
 
 DISTNAME=	Time-Interval-1.234
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	time
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/A/AH/AHICOX/
 

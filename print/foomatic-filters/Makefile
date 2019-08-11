@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.37 2018/08/22 09:46:12 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2019/08/11 13:22:38 wiz Exp $
 
 .include "Makefile.common"
 
 DISTNAME=	foomatic-filters-${FOOMATIC_FILTERS_VERSION}
-PKGREVISION=	16
+PKGREVISION=	17
 MASTER_SITES=	http://www.openprinting.org/download/foomatic/oldstuff/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
