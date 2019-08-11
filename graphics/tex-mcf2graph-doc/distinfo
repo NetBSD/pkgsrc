@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2019/05/11 23:28:46 markd Exp $
+$NetBSD: distinfo,v 1.12 2019/08/11 03:58:31 markd Exp $
 
-SHA1 (tex-mcf2graph-50506/mcf2graph.doc.tar.xz) = 1d3dffd76c22972555e3e5a33c14cf678daeed95
-RMD160 (tex-mcf2graph-50506/mcf2graph.doc.tar.xz) = 9b13270f4b40fae5b4d74ea2a359d07405825f39
-SHA512 (tex-mcf2graph-50506/mcf2graph.doc.tar.xz) = 5c80c1e9f93d1658a18f7b0afbe2b85bebcaa032a04b0d30b6e6164b8af50988abbb2983931b31d2493a90be321ed0f213dcb0249c8e1d724d08567f300e6819
-Size (tex-mcf2graph-50506/mcf2graph.doc.tar.xz) = 1040780 bytes
+SHA1 (tex-mcf2graph-51573/mcf2graph.doc.tar.xz) = 67ec9c43282a9f3f53cc40648422c70c06c2b952
+RMD160 (tex-mcf2graph-51573/mcf2graph.doc.tar.xz) = a194536a972cf967d6a8726696e777b2983ad9bb
+SHA512 (tex-mcf2graph-51573/mcf2graph.doc.tar.xz) = 7481f52a1a2ec59a542ef0d7d1775f26e55f2ad23c98a5cccb488721d3a4cf3491a4ef3d52355a4e6c44d86924e2664fddfbe41b031435f1a204e78b5828c1ad
+Size (tex-mcf2graph-51573/mcf2graph.doc.tar.xz) = 1042588 bytes
