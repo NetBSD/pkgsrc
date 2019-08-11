@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2019/05/13 11:48:11 markd Exp $
+# $NetBSD: Makefile,v 1.12 2019/08/11 04:50:53 markd Exp $
 
 DISTNAME=	fontools
-PKGNAME=	tex-${DISTNAME}-2019
-TEXLIVE_REV=	50982
+PKGNAME=	tex-${DISTNAME}-2019.51625
+TEXLIVE_REV=	51625
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/fontools
+HOMEPAGE=	https://ctan.org/pkg/fontools
 COMMENT=	Tools to simplify using fonts (especially TT/OTF ones)
 LICENSE=	gnu-gpl-v2
 
