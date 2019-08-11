@@ -1,0 +1,10 @@
+This packages defines commands to display counters spelled out
+in Portuguese. The styles are \numberpt for "all lowercase"
+\Numberpt for "First word capitalized" \NumberPt for "All
+Capitalized" \NUMBERPT for "ALL UPPERCASE" For example,
+\renewcommand{\thechapter}{\NumberPt{chapter}} makes chapter
+titles to be rendered as "Capitulo Um", "Capitulo Dois" etc.
+Options are offered to select variations in the spelling of
+"14", or Brazilian vs. European Portuguese forms in the
+spelling of "16", "17", and "19". The package requires expl3
+and xparse.
