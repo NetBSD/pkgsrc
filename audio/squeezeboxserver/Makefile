@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2018/08/22 09:42:57 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2019/08/11 13:17:57 wiz Exp $
 
 # To the poor soul who wants to update this package:
 #
@@ -43,7 +43,7 @@
 
 DISTNAME=	${PRODUCT:tl:S/_v/-/}-noCPAN
 PKGNAME=	${DISTNAME:S/-noCPAN//}
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.slimdevices.com/${PRODUCT}/
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2018/08/22 09:43:34 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/08/11 13:18:47 wiz Exp $
 #
 
 DISTNAME=		uuid-1.6.2
 PKGNAME=		ossp-${DISTNAME}
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.ossp.org/pkg/lib/uuid/
 

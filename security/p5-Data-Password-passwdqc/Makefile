@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2019/07/01 21:35:52 nia Exp $
+# $NetBSD: Makefile,v 1.4 2019/08/11 13:22:55 wiz Exp $
 
 DISTNAME=	Data-Password-passwdqc-0.09
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/S/SH/SHERWIN/
 

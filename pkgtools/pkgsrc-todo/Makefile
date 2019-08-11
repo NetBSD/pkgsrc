@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2019/05/23 19:23:13 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2019/08/11 13:22:36 wiz Exp $
 
 PKGNAME=	pkgsrc-todo-1.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	pkgtools
 
 MAINTAINER=	wiz@NetBSD.org

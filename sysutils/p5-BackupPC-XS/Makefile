@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2018/12/08 08:32:57 wen Exp $
+# $NetBSD: Makefile,v 1.3 2019/08/11 13:23:11 wiz Exp $
 
 DISTNAME=	BackupPC-XS-0.58
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/C/CB/CBARRATT/}
 

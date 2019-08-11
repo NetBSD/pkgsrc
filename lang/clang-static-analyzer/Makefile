@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2019/06/02 08:39:28 adam Exp $
+# $NetBSD: Makefile,v 1.14 2019/08/11 13:21:19 wiz Exp $
 
+PKGREVISION= 1
 .include "../../lang/clang/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/cfe/clang-static-analyzer/:S/.src//}
