@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3397 2019/08/11 22:16:30 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.3398 2019/08/11 23:15:05 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5591,3 +5591,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/py-whisper to 1.1.5 [adam 2019-08-11]
 	Updated textproc/py-html5-parser to 0.4.8 [adam 2019-08-11]
 	Updated devel/fossil to 2.9 [gutteridge 2019-08-11]
+	Updated textproc/ruby-nokogiri to 1.10.4 [tsutsui 2019-08-11]
