@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2019/08/11 03:32:46 markd Exp $
+share/texmf-dist/tex/latex/l3backend/l3backend-dvipdfmx.def
+share/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+share/texmf-dist/tex/latex/l3backend/l3backend-dvisvgm.def
+share/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+share/texmf-dist/tex/latex/l3backend/l3backend-xdvipdfmx.def
