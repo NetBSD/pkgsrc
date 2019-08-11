@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3391 2019/08/11 12:12:30 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3392 2019/08/11 15:20:12 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5582,3 +5582,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated finance/py-braintree to 3.56.0 [adam 2019-08-11]
 	Updated security/py-gssapi to 1.6.1 [adam 2019-08-11]
 	Updated textproc/py-lxml to 4.4.1 [adam 2019-08-11]
+	Updated databases/postgresql-postgis2 to 2.5.3 [gdt 2019-08-11]
