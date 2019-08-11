@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2019/07/29 12:08:03 markd Exp $
+# $NetBSD: Makefile,v 1.11 2019/08/11 12:19:22 markd Exp $
 
 DISTNAME=	collection-mathscience
 PKGNAME=	texlive-${DISTNAME}-2019pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	51596
+TEXLIVE_REV=	51823
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -69,6 +69,7 @@ DEPENDS+=	tex-concrete-[0-9]*:../../fonts/tex-concrete
 # depend delim
 # depend delimseasy
 # depend delimset
+# depend derivative
 # depend diffcoeff
 # depend digiconfigs
 # depend dijkstra
@@ -95,6 +96,7 @@ DEPENDS+=	tex-ebproof-[0-9]*:../../print/tex-ebproof
 # depend gastex
 # depend gene-logic
 # depend ghsystem
+# depend glosmathtools
 # depend gotoh
 # depend grundgesetze
 # depend gu
@@ -122,6 +124,7 @@ DEPENDS+=	tex-mathcomp-[0-9]*:../../print/tex-mathcomp
 # depend mathfixs
 DEPENDS+=	tex-mathpartir-[0-9]*:../../math/tex-mathpartir
 # depend mathpunctspace
+# depend matrix-skeleton
 # depend matlab-prettifier
 # depend mattens
 # depend memorygraphs
