@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2019/05/13 11:32:22 markd Exp $
+$NetBSD: distinfo,v 1.11 2019/08/11 04:34:57 markd Exp $
 
-SHA1 (tex-media9-50973/media9.tar.xz) = d21f94f71f86db95816ac738e3c4c060a5ec536b
-RMD160 (tex-media9-50973/media9.tar.xz) = fdb75ac1afdf834831ffca420cc0110ca11fb100
-SHA512 (tex-media9-50973/media9.tar.xz) = c9231985d52c20f92a200b50dd4d5cd296d094c977219d5630a1df71ba2d2bd54c50dab58be0267aa4b73223361c649fbcae596f9220839fbcff95ef5a4330df
-Size (tex-media9-50973/media9.tar.xz) = 1894860 bytes
+SHA1 (tex-media9-51619/media9.tar.xz) = 5d526ef9f0c02f1b0586343ef88ce1f1e8428602
+RMD160 (tex-media9-51619/media9.tar.xz) = 3fc980d96df0479b007fc1f2f14f90b630f2e466
+SHA512 (tex-media9-51619/media9.tar.xz) = 98adc9f8f0784a314827f20c8c09f26f78f4481418610c8566dd3803f5af493c9cf000e6d0d4b85e32a77c6ce3e528e64d1943d3e55079823abeb445441ab3be
+Size (tex-media9-51619/media9.tar.xz) = 1894884 bytes
