@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2896 2019/08/09 19:13:05 brook Exp $
+# $NetBSD: Makefile,v 1.2897 2019/08/11 03:33:55 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -2768,6 +2768,8 @@ SUBDIR+=	tex-doclicense
 SUBDIR+=	tex-doclicense-doc
 SUBDIR+=	tex-etoolbox
 SUBDIR+=	tex-etoolbox-doc
+SUBDIR+=	tex-l3backend
+SUBDIR+=	tex-l3backend-doc
 SUBDIR+=	tex-l3experimental
 SUBDIR+=	tex-l3kernel
 SUBDIR+=	tex-l3kernel-doc
