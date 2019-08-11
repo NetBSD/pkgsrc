@@ -1,31 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2019/01/30 05:47:29 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/08/11 03:17:31 markd Exp $
 share/texmf-dist/tex/latex/l3experimental/l3benchmark/l3benchmark.sty
 share/texmf-dist/tex/latex/l3experimental/l3cctab/l3cctab.sty
 share/texmf-dist/tex/latex/l3experimental/l3color/l3color.sty
 share/texmf-dist/tex/latex/l3experimental/l3draw/l3draw.sty
-share/texmf-dist/tex/latex/l3experimental/l3str/l3str-convert.sty
-share/texmf-dist/tex/latex/l3experimental/l3str/l3str-enc-iso88591.def
-share/texmf-dist/tex/latex/l3experimental/l3str/l3str-enc-iso885910.def
-share/texmf-dist/tex/latex/l3experimental/l3str/l3str-enc-iso885911.def
-share/texmf-dist/tex/latex/l3experimental/l3str/l3str-enc-iso885913.def
-share/texmf-dist/tex/latex/l3experimental/l3str/l3str-enc-iso885914.def
-share/texmf-dist/tex/latex/l3experimental/l3str/l3str-enc-iso885915.def
-share/texmf-dist/tex/latex/l3experimental/l3str/l3str-enc-iso885916.def
-share/texmf-dist/tex/latex/l3experimental/l3str/l3str-enc-iso88592.def
-share/texmf-dist/tex/latex/l3experimental/l3str/l3str-enc-iso88593.def
-share/texmf-dist/tex/latex/l3experimental/l3str/l3str-enc-iso88594.def
-share/texmf-dist/tex/latex/l3experimental/l3str/l3str-enc-iso88595.def
-share/texmf-dist/tex/latex/l3experimental/l3str/l3str-enc-iso88596.def
-share/texmf-dist/tex/latex/l3experimental/l3str/l3str-enc-iso88597.def
-share/texmf-dist/tex/latex/l3experimental/l3str/l3str-enc-iso88598.def
-share/texmf-dist/tex/latex/l3experimental/l3str/l3str-enc-iso88599.def
-share/texmf-dist/tex/latex/l3experimental/l3str/l3str-enc-utf16.def
-share/texmf-dist/tex/latex/l3experimental/l3str/l3str-enc-utf32.def
-share/texmf-dist/tex/latex/l3experimental/l3str/l3str-enc-utf8.def
-share/texmf-dist/tex/latex/l3experimental/l3str/l3str-esc-hex.def
-share/texmf-dist/tex/latex/l3experimental/l3str/l3str-esc-name.def
-share/texmf-dist/tex/latex/l3experimental/l3str/l3str-esc-string.def
-share/texmf-dist/tex/latex/l3experimental/l3str/l3str-esc-url.def
+share/texmf-dist/tex/latex/l3experimental/l3graphics/l3graphics.sty
+share/texmf-dist/tex/latex/l3experimental/l3pdf/l3pdf.sty
 share/texmf-dist/tex/latex/l3experimental/l3str/l3str-format.sty
 share/texmf-dist/tex/latex/l3experimental/l3sys-shell/l3sys-shell.sty
 share/texmf-dist/tex/latex/l3experimental/xcoffins/xcoffins.sty
