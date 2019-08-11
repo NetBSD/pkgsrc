@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2019/06/24 10:59:41 nia Exp $
+# $NetBSD: Makefile,v 1.7 2019/08/11 13:18:40 wiz Exp $
 
 DISTNAME=	commit-patch-2.5.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel scm
 MASTER_SITES=	http://www.porkrind.org/commit-patch/
 

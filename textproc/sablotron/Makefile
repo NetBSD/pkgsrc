@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2018/08/22 09:47:12 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2019/08/11 13:24:01 wiz Exp $
 
 DISTNAME=		Sablot-1.0.2
 PKGNAME=		${DISTNAME:S/Sablot/sablotron/}
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		textproc
 MASTER_SITES=		http://download-1.gingerall.cz/download/sablot/
 

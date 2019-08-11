@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2019/07/01 21:35:39 nia Exp $
+# $NetBSD: Makefile,v 1.8 2019/08/11 13:19:50 wiz Exp $
 
 DISTNAME=	Module-Install-AuthorRequires-0.02
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/F/FL/FLORA/
 
