@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.707 2019/08/09 19:04:57 brook Exp $
+# $NetBSD: Makefile,v 1.708 2019/08/11 16:52:12 fox Exp $
 #
 
 COMMENT=	Security tools
@@ -150,6 +150,7 @@ SUBDIR+=	libb2
 SUBDIR+=	libbf
 SUBDIR+=	libcrack
 SUBDIR+=	libcurvecpr
+SUBDIR+=	libdecaf
 SUBDIR+=	libdes
 SUBDIR+=	libfprint
 SUBDIR+=	libfwbuilder
