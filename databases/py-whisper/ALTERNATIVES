@@ -1,0 +1,16 @@
+bin/find-corrupt-whisper-files @PREFIX@/bin/find-corrupt-whisper-files-@PYVERSSUFFIX@
+bin/rrd2whisper @PREFIX@/bin/rrd2whisper-@PYVERSSUFFIX@
+bin/update-storage-times @PREFIX@/bin/update-storage-times-@PYVERSSUFFIX@
+bin/whisper-auto-resize @PREFIX@/bin/whisper-auto-resize-@PYVERSSUFFIX@
+bin/whisper-auto-update @PREFIX@/bin/whisper-auto-update-@PYVERSSUFFIX@
+bin/whisper-create @PREFIX@/bin/whisper-create-@PYVERSSUFFIX@
+bin/whisper-diff @PREFIX@/bin/whisper-diff-@PYVERSSUFFIX@
+bin/whisper-dump @PREFIX@/bin/whisper-dump-@PYVERSSUFFIX@
+bin/whisper-fetch @PREFIX@/bin/whisper-fetch-@PYVERSSUFFIX@
+bin/whisper-fill @PREFIX@/bin/whisper-fill-@PYVERSSUFFIX@
+bin/whisper-info @PREFIX@/bin/whisper-info-@PYVERSSUFFIX@
+bin/whisper-merge @PREFIX@/bin/whisper-merge-@PYVERSSUFFIX@
+bin/whisper-resize @PREFIX@/bin/whisper-resize-@PYVERSSUFFIX@
+bin/whisper-set-aggregation-method @PREFIX@/bin/whisper-set-aggregation-method-@PYVERSSUFFIX@
+bin/whisper-set-xfilesfactor @PREFIX@/bin/whisper-set-xfilesfactor-@PYVERSSUFFIX@
+bin/whisper-update @PREFIX@/bin/whisper-update-@PYVERSSUFFIX@
