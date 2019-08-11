@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2019/05/13 11:32:22 markd Exp $
+# $NetBSD: Makefile,v 1.11 2019/08/11 04:34:57 markd Exp $
 
 DISTNAME=	media9
-PKGNAME=	tex-${DISTNAME}-0.97
-TEXLIVE_REV=	50973
+PKGNAME=	tex-${DISTNAME}-1.02
+TEXLIVE_REV=	51619
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/media9
+HOMEPAGE=	https://ctan.org/pkg/media9
 COMMENT=	Multimedia inclusion package with Adobe Reader-9/X compatibility
 LICENSE=	lppl-1.3c
 
