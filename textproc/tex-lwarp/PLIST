@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/08/05 11:33:54 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/08/11 10:16:12 markd Exp $
 bin/lwarpmk
 share/texmf-dist/tex/latex/lwarp/lwarp-2in1.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-2up.sty
@@ -210,6 +210,7 @@ share/texmf-dist/tex/latex/lwarp/lwarp-lua-check-hyphen.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-lua-visual-debug.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-luacolor.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-luatodonotes.sty
+share/texmf-dist/tex/latex/lwarp/lwarp-lyluatex.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-magaz.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-makeidx.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-manyfoot.sty
@@ -346,6 +347,7 @@ share/texmf-dist/tex/latex/lwarp/lwarp-splitidx.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-srcltx.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-srctex.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-stabular.sty
+share/texmf-dist/tex/latex/lwarp/lwarp-stackengine.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-stfloats.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-struktex.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-subcaption.sty
