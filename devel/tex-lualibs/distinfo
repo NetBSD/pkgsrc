@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/05/07 12:32:55 markd Exp $
+$NetBSD: distinfo,v 1.8 2019/08/11 05:36:12 markd Exp $
 
-SHA1 (tex-lualibs-50130/lualibs.tar.xz) = 26edaa475405e2b0d8bb40784f5f61bfb11e7d00
-RMD160 (tex-lualibs-50130/lualibs.tar.xz) = 8d4186f8bb7cd69e583a9c294bbda0f86f102000
-SHA512 (tex-lualibs-50130/lualibs.tar.xz) = a83a831e872de9b75065c9801959af2304fbf902af5be2de8de7e1e0da4ce52517c1e8a0de7bb482f3a9e51dd83e741f6f95fa097b6b9cf0fb8c451347776306
-Size (tex-lualibs-50130/lualibs.tar.xz) = 116344 bytes
+SHA1 (tex-lualibs-51642/lualibs.tar.xz) = 5ec693821f4de5aaac1d0f2b3aea35df92414345
+RMD160 (tex-lualibs-51642/lualibs.tar.xz) = 9cc0f47589db555da375a508a0e23961cd9af90e
+SHA512 (tex-lualibs-51642/lualibs.tar.xz) = 0646f92e4dfe72939b408cbbe180ba7bd319f3075a6acbe1e9682760d89be17c5bd1212c6a40e35d88638b9908d8ae6f422fc89985d5cabbc785fd430d255d2d
+Size (tex-lualibs-51642/lualibs.tar.xz) = 118764 bytes
