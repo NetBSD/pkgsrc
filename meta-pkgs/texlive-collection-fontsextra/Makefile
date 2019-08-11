@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2019/07/29 11:41:17 markd Exp $
+# $NetBSD: Makefile,v 1.18 2019/08/11 12:11:16 markd Exp $
 
 DISTNAME=	collection-fontsextra
 PKGNAME=	texlive-${DISTNAME}-2019pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	51523
+TEXLIVE_REV=	51763
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -146,6 +146,7 @@ DEPENDS+=	tex-fourier-[0-9]*:../../fonts/tex-fourier
 DEPENDS+=	tex-fouriernc-[0-9]*:../../fonts/tex-fouriernc
 DEPENDS+=	tex-frcursive-[0-9]*:../../fonts/tex-frcursive
 # depend frederika2016
+# depend garamond-libre
 # depend garamond-math
 DEPENDS+=	tex-genealogy-[0-9]*:../../fonts/tex-genealogy
 DEPENDS+=	tex-gentium-tug-[0-9]*:../../fonts/tex-gentium-tug
@@ -279,6 +280,9 @@ DEPENDS+=	tex-tapir-[0-9]*:../../fonts/tex-tapir
 # depend tempora
 DEPENDS+=	tex-tengwarscript-[0-9]*:../../fonts/tex-tengwarscript
 DEPENDS+=	tex-tfrupee-[0-9]*:../../fonts/tex-tfrupee
+# depend theanodidot
+# depend theanomodern
+# depend theanooldstyle
 # depend tinos
 DEPENDS+=	tex-tpslifonts-[0-9]*:../../print/tex-tpslifonts
 DEPENDS+=	tex-trajan-[0-9]*:../../fonts/tex-trajan
