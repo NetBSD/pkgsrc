@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/08/11 13:21:04 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/08/11 18:04:36 nia Exp $
 
 PKGREVISION= 1
 .include "../../games/stone-soup/Makefile.common"
@@ -10,6 +10,7 @@ COMMENT=	Dungeon Crawl Stone Soup - roguelike adventure (tileset version)
 
 MAKE_FLAGS+=	TILES=YesPlease
 MAKE_FLAGS+=	SOUND=YesPlease
+MAKE_FLAGS+=	COPY_FONTS=YesPlease
 
 INSTALLATION_DIRS+=	share/applications
 INSTALLATION_DIRS+=	share/icons/hicolor/48x48/apps
