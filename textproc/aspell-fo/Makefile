@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2019/07/06 19:13:33 nia Exp $
+# $NetBSD: Makefile,v 1.10 2019/08/11 13:23:22 wiz Exp $
 
 DISTNAME=	aspell-fo-0.4.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	textproc
 MASTER_SITES=	http://fo.speling.org/filer/
 

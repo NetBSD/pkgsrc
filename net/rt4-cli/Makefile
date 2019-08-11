@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2019/05/31 17:19:25 leot Exp $
+# $NetBSD: Makefile,v 1.2 2019/08/11 13:22:29 wiz Exp $
 
 DISTNAME=	rt-4.4.4
 PKGNAME=	${DISTNAME:S/rt/rt4-cli/}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://download.bestpractical.com/pub/rt/release/
 

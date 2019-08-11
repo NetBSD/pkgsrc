@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2019/07/09 13:21:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2019/08/11 13:20:50 wiz Exp $
 #
 
 DISTNAME=	quilt-0.66
+PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	http://download.savannah.gnu.org/releases/quilt/
 

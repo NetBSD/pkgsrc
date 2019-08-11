@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2018/08/22 09:45:34 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/08/11 13:21:41 wiz Exp $
 #
 
 DISTNAME=		sendymail-0.5.8
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sendymail/}
 

@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2019/08/08 20:23:29 nia Exp $
+# $NetBSD: Makefile,v 1.53 2019/08/11 13:25:20 wiz Exp $
 
+PKGREVISION= 1
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-terminal-0.8.8
