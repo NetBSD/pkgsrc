@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2019/06/30 20:15:53 nia Exp $
+# $NetBSD: Makefile,v 1.17 2019/08/11 13:20:33 wiz Exp $
 #
 
 DISTNAME=	Test-Mock-LWP-0.08
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel perl5 net
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 

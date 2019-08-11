@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2018/08/22 09:47:59 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2019/08/11 13:25:09 wiz Exp $
 #
 
 DISTNAME=	wApua-0.05.1
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	www
 #MASTER_SITES=	http://fsinfo.cs.uni-sb.de/~abe/wApua/
 
