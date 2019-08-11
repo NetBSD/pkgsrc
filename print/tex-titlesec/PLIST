@@ -1,13 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/04/25 04:57:52 markd Exp $
-share/texmf-dist/tex/latex/titlesec/block.tss
-share/texmf-dist/tex/latex/titlesec/drop.tss
-share/texmf-dist/tex/latex/titlesec/frame.tss
-share/texmf-dist/tex/latex/titlesec/leftmargin.tss
-share/texmf-dist/tex/latex/titlesec/margin.tss
-share/texmf-dist/tex/latex/titlesec/rightmargin.tss
+@comment $NetBSD: PLIST,v 1.3 2019/08/11 10:44:43 markd Exp $
 share/texmf-dist/tex/latex/titlesec/titleps.sty
 share/texmf-dist/tex/latex/titlesec/titlesec.sty
 share/texmf-dist/tex/latex/titlesec/titletoc.sty
-share/texmf-dist/tex/latex/titlesec/ttlkeys.def
-share/texmf-dist/tex/latex/titlesec/ttlps.def
-share/texmf-dist/tex/latex/titlesec/wrap.tss
