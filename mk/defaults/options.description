@@ -179,6 +179,7 @@ enchant			Add spell checking support using enchant.
 enchant-zemberek	Add spell checking support for Turkish.
 epoll			Enable support for epoll I/O event notification facility.
 epub			Enable epub support.
+erlang-hipe		Enable HiPE support.
 esound			Enable support for the Enlightment Sound Daemon.
 evolution-data-server	Enable support for evolution-data-server.
 exim-build-eximon	Also build the X based exim queue monitoring tool.
