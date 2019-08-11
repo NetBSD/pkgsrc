@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2019/04/25 07:33:15 maya Exp $
+# $NetBSD: Makefile,v 1.6 2019/08/11 11:15:53 markd Exp $
 
 DISTNAME=	changes
-PKGNAME=	tex-${DISTNAME}-3.1.2
-PKGREVISION=	1
-TEXLIVE_REV=	49837
+PKGNAME=	tex-${DISTNAME}-3.1.3
+TEXLIVE_REV=	51705
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/changes
+HOMEPAGE=	https://ctan.org/pkg/changes
 COMMENT=	Manual change markup
 LICENSE=	lppl-1.3c
 
