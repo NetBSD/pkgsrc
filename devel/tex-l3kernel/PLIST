@@ -1,12 +1,22 @@
-@comment $NetBSD: PLIST,v 1.8 2019/01/30 05:44:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/08/11 03:29:45 markd Exp $
 share/texmf-dist/tex/latex/l3kernel/expl3-code.tex
 share/texmf-dist/tex/latex/l3kernel/expl3-generic.tex
 share/texmf-dist/tex/latex/l3kernel/expl3.lua
 share/texmf-dist/tex/latex/l3kernel/expl3.sty
 share/texmf-dist/tex/latex/l3kernel/l3doc.cls
 share/texmf-dist/tex/latex/l3kernel/l3docstrip.tex
-share/texmf-dist/tex/latex/l3kernel/l3dvipdfmx.def
-share/texmf-dist/tex/latex/l3kernel/l3dvips.def
-share/texmf-dist/tex/latex/l3kernel/l3dvisvgm.def
-share/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
-share/texmf-dist/tex/latex/l3kernel/l3xdvipdfmx.def
+share/texmf-dist/tex/latex/l3kernel/l3str-enc-iso88591.def
+share/texmf-dist/tex/latex/l3kernel/l3str-enc-iso885910.def
+share/texmf-dist/tex/latex/l3kernel/l3str-enc-iso885911.def
+share/texmf-dist/tex/latex/l3kernel/l3str-enc-iso885913.def
+share/texmf-dist/tex/latex/l3kernel/l3str-enc-iso885914.def
+share/texmf-dist/tex/latex/l3kernel/l3str-enc-iso885915.def
+share/texmf-dist/tex/latex/l3kernel/l3str-enc-iso885916.def
+share/texmf-dist/tex/latex/l3kernel/l3str-enc-iso88592.def
+share/texmf-dist/tex/latex/l3kernel/l3str-enc-iso88593.def
+share/texmf-dist/tex/latex/l3kernel/l3str-enc-iso88594.def
+share/texmf-dist/tex/latex/l3kernel/l3str-enc-iso88595.def
+share/texmf-dist/tex/latex/l3kernel/l3str-enc-iso88596.def
+share/texmf-dist/tex/latex/l3kernel/l3str-enc-iso88597.def
+share/texmf-dist/tex/latex/l3kernel/l3str-enc-iso88598.def
+share/texmf-dist/tex/latex/l3kernel/l3str-enc-iso88599.def
