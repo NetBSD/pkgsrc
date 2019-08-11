@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2019/07/29 12:14:21 markd Exp $
+# $NetBSD: Makefile,v 1.19 2019/08/11 12:21:55 markd Exp $
 
 DISTNAME=	collection-publishers
 PKGNAME=	texlive-${DISTNAME}-2019pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	51647
+TEXLIVE_REV=	51837
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -190,6 +190,7 @@ DEPENDS+=	tex-revtex4-[0-9]*:../../print/tex-revtex4
 # depend tlc-article
 # depend topletter
 DEPENDS+=	tex-toptesi-[0-9]*:../../print/tex-toptesi
+# depend tuda-ci
 # depend tudscr
 # depend tugboat
 # depend tugboat-plain
@@ -214,6 +215,7 @@ DEPENDS+=	tex-toptesi-[0-9]*:../../print/tex-toptesi
 # depend unam-thesis
 # depend unamth-template
 # depend unamthesis
+# depend unifith
 # depend unitn-bimrep
 # depend univie-ling
 # depend unizgklasa
@@ -230,6 +232,7 @@ DEPENDS+=	tex-toptesi-[0-9]*:../../print/tex-toptesi
 # depend xduthesis
 # depend wsemclassic
 # depend yathesis
+# depend yazd-thesis
 # depend york-thesis
 
 META_PACKAGE=	yes
