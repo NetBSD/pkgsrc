@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/08/11 04:55:54 markd Exp $
 share/texmf-dist/fonts/afm/public/anonymouspro/AnonymousPro-Bold.afm
 share/texmf-dist/fonts/afm/public/anonymouspro/AnonymousPro-BoldItalic.afm
 share/texmf-dist/fonts/afm/public/anonymouspro/AnonymousPro-Italic.afm
@@ -13,7 +13,6 @@ share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-Bold-02.tfm
 share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-Bold-03.tfm
 share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-Bold-Symbols-base.tfm
 share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-Bold-Symbols-u.tfm
-share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-Bold-base.tfm
 share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-Bold-t1.tfm
 share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-Bold-ts1.tfm
 share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-Bold.tfm
@@ -22,7 +21,6 @@ share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-BoldItalic-02.tfm
 share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-BoldItalic-03.tfm
 share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-BoldItalic-Symbols-base.tfm
 share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-BoldItalic-Symbols-u.tfm
-share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-BoldItalic-base.tfm
 share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-BoldItalic-t1.tfm
 share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-BoldItalic-ts1.tfm
 share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-BoldItalic.tfm
@@ -32,7 +30,6 @@ share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-Italic-02.tfm
 share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-Italic-03.tfm
 share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-Italic-Symbols-base.tfm
 share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-Italic-Symbols-u.tfm
-share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-Italic-base.tfm
 share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-Italic-t1.tfm
 share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-Italic-ts1.tfm
 share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-Italic.tfm
@@ -41,7 +38,6 @@ share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-Regular-02.tfm
 share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-Regular-03.tfm
 share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-Regular-Symbols-base.tfm
 share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-Regular-Symbols-u.tfm
-share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-Regular-base.tfm
 share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-Regular-t1.tfm
 share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-Regular-ts1.tfm
 share/texmf-dist/fonts/tfm/public/anonymouspro/AnonymousPro-Regular.tfm
