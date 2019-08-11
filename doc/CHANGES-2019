@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3394 2019/08/11 17:54:53 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3395 2019/08/11 18:06:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5586,3 +5586,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Added security/libdecaf version 1.0.0 [fox 2019-08-11]
 	Updated textproc/jsoncpp to 1.9.1 [adam 2019-08-11]
 	Updated multimedia/mkvtoolnix to 36.0.0 [adam 2019-08-11]
+	Updated devel/py-flaky to 3.6.1 [adam 2019-08-11]
+	Updated www/py-httplib2 to 0.13.1 [adam 2019-08-11]
