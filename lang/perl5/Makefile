@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.254 2019/05/05 07:58:38 adam Exp $
+# $NetBSD: Makefile,v 1.255 2019/08/11 10:14:17 adam Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -239,7 +239,7 @@ SUBST_VARS.policysh+=	SYSLIBPATH
 .include "../../mk/dlopen.buildlink3.mk"
 .include "options.mk"
 
-.if !empty(MACHINE_PLATFORM:MMirBSD)
+.if ${MACHINE_PLATFORM} == "MirBSD"
 SUBST_CLASSES+=			mirbsd-paths
 SUBST_STAGE.mirbsd-paths=	pre-configure
 SUBST_FILES.mirbsd-paths=	hints/mirbsd.sh
@@ -285,13 +285,7 @@ SUBST_FILES.dirmode=	installhtml install_lib.pl
 SUBST_SED.dirmode=	-e "s/755/${PKGDIRMODE}/g;/umask(/d"
 
 post-extract:
-	cp ${FILESDIR}/Policy.sh ${WRKSRC}/Policy.sh
-	cp ${FILESDIR}/cpan-DB_File-hints-netbsd.pl \
-		${WRKSRC}/cpan/DB_File/hints/netbsd.pl
-	cp ${FILESDIR}/cpan-DB_File-hints-openbsd.pl \
-		${WRKSRC}/cpan/DB_File/hints/openbsd.pl
-	cp ${FILESDIR}/cpan-DB_File-hints-minix.pl \
-		${WRKSRC}/cpan/DB_File/hints/minix.pl
+	${CP} ${FILESDIR}/Policy.sh ${WRKSRC}/Policy.sh
 
 pre-configure:
 	${FIND} ${WRKSRC} -name "*.orig" -type f -exec rm -f {} \;
