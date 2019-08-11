@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2017/06/20 22:07:24 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/08/11 05:03:12 markd Exp $
 
 DISTNAME=	circuitikz
-PKGNAME=	tex-${DISTNAME}-0.8.3
-TEXLIVE_REV=	44488
+PKGNAME=	tex-${DISTNAME}-0.9.3
+TEXLIVE_REV=	51634
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/circuitikz
+HOMEPAGE=	https://ctan.org/pkg/circuitikz
 COMMENT=	Draw electrical networks with TikZ
 LICENSE=	lppl-1.3c OR gnu-gpl-v1
 
