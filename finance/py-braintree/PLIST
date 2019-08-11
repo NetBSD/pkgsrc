@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2019/05/22 20:56:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2019/08/11 12:02:17 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -305,6 +305,9 @@ ${PYSITELIB}/braintree/paypal_account.pyo
 ${PYSITELIB}/braintree/paypal_account_gateway.py
 ${PYSITELIB}/braintree/paypal_account_gateway.pyc
 ${PYSITELIB}/braintree/paypal_account_gateway.pyo
+${PYSITELIB}/braintree/paypal_here.py
+${PYSITELIB}/braintree/paypal_here.pyc
+${PYSITELIB}/braintree/paypal_here.pyo
 ${PYSITELIB}/braintree/plan.py
 ${PYSITELIB}/braintree/plan.pyc
 ${PYSITELIB}/braintree/plan.pyo
