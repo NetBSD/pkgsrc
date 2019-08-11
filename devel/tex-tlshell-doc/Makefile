@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2019/05/15 08:39:05 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/08/11 04:06:00 markd Exp $
 
 DISTNAME=	tlshell.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2019
-TEXLIVE_REV=	50776
+PKGNAME=	tex-${DISTNAME:S/./-/}-2019.51579
+TEXLIVE_REV=	51579
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Documentation for tex-tlshell
