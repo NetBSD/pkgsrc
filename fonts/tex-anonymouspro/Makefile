@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:29 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/08/11 04:55:54 markd Exp $
 
 DISTNAME=	anonymouspro
-PKGNAME=	tex-${DISTNAME}-2.1
-TEXLIVE_REV=	33441
+PKGNAME=	tex-${DISTNAME}-2.2
+TEXLIVE_REV=	51631
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/anonymouspro
+HOMEPAGE=	https://ctan.org/pkg/anonymouspro
 COMMENT=	Use AnonymousPro fonts with LaTeX
 LICENSE=	lppl-1.3c
 
