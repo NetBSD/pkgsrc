@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2018/08/22 09:46:30 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2019/08/11 13:23:02 wiz Exp $
 
 DISTNAME=	zebedee-2.5.3
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zebedee/}
 

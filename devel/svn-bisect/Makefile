@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2019/07/01 22:00:10 nia Exp $
+# $NetBSD: Makefile,v 1.7 2019/08/11 13:20:52 wiz Exp $
 
 DISTNAME=	svn-bisect-1.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Infinoid/}
 GITHUB_TAG=	3768ca85fb962e6380564aa5ab11853ec5720abc
