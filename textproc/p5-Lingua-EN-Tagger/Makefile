@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2019/06/30 20:16:50 nia Exp $
+# $NetBSD: Makefile,v 1.20 2019/08/11 13:23:31 wiz Exp $
 
 DISTNAME=	Lingua-EN-Tagger-0.30
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Lingua/}
 EXTRACT_USING=	bsdtar

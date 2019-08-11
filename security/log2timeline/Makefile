@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2018/08/22 09:46:19 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2019/08/11 13:22:47 wiz Exp $
 #
 
 DISTNAME=	log2timeline_${L2T_VERSION}
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	security
 MASTER_SITES=	http://log2timeline.googlecode.com/files/
 EXTRACT_SUFX=	.tgz

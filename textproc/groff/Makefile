@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.89 2019/05/24 16:14:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.90 2019/08/11 13:23:24 wiz Exp $
 
 DISTNAME=	groff-1.22.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNU:=groff/}
 

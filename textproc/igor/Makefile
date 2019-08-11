@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2018/08/22 09:46:46 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/08/11 13:23:24 wiz Exp $
 
 DISTNAME=	igor
 PKGNAME=	igor-0.0.20140517
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.wonkity.com/~wblock/igor/
 DISTFILES=	igor igor.pdf readme.txt

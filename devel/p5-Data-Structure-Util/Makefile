@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2019/07/01 21:35:36 nia Exp $
+# $NetBSD: Makefile,v 1.5 2019/08/11 13:19:12 wiz Exp $
 
 DISTNAME=	Data-Structure-Util-0.16
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/A/AN/ANDYA/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2018/08/22 09:46:08 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2019/08/11 13:22:31 wiz Exp $
 #
 
 DISTNAME=		vcheck-1.2.1
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		net perl5
 MASTER_SITES=		http://keyserver.kjsl.com/~jharris/distfiles/
 
