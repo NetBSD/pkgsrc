@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2016/06/16 04:06:17 markd Exp $
-share/texmf-dist/doc/latex/titlesec/CHANGES
-share/texmf-dist/doc/latex/titlesec/README
+@comment $NetBSD: PLIST,v 1.4 2019/08/11 10:44:44 markd Exp $
+share/texmf-dist/doc/latex/titlesec/CHANGES.old
+share/texmf-dist/doc/latex/titlesec/README.md
 share/texmf-dist/doc/latex/titlesec/titleps.pdf
 share/texmf-dist/doc/latex/titlesec/titleps.tex
 share/texmf-dist/doc/latex/titlesec/titlesec.pdf
