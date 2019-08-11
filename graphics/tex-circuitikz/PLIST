@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2017/06/20 22:07:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/08/11 05:03:12 markd Exp $
+share/texmf-dist/tex/context/third/circuitikz/t-circuitikz-0.8.3.tex
 share/texmf-dist/tex/context/third/circuitikz/t-circuitikz.tex
 share/texmf-dist/tex/generic/circuitikz/pgfcirc.defines.tex
 share/texmf-dist/tex/generic/circuitikz/pgfcircbipoles.tex
@@ -6,10 +7,15 @@ share/texmf-dist/tex/generic/circuitikz/pgfcirccurrent.tex
 share/texmf-dist/tex/generic/circuitikz/pgfcircflow.tex
 share/texmf-dist/tex/generic/circuitikz/pgfcirclabel.tex
 share/texmf-dist/tex/generic/circuitikz/pgfcircmonopoles.tex
+share/texmf-dist/tex/generic/circuitikz/pgfcircmultipoles.tex
 share/texmf-dist/tex/generic/circuitikz/pgfcircpath.tex
 share/texmf-dist/tex/generic/circuitikz/pgfcircquadpoles.tex
 share/texmf-dist/tex/generic/circuitikz/pgfcircshapes.tex
 share/texmf-dist/tex/generic/circuitikz/pgfcirctripoles.tex
 share/texmf-dist/tex/generic/circuitikz/pgfcircutils.tex
 share/texmf-dist/tex/generic/circuitikz/pgfcircvoltage.tex
+share/texmf-dist/tex/latex/circuitikz/circuitikz-0.4.sty
+share/texmf-dist/tex/latex/circuitikz/circuitikz-0.6.sty
+share/texmf-dist/tex/latex/circuitikz/circuitikz-0.7.sty
+share/texmf-dist/tex/latex/circuitikz/circuitikz-0.8.3.sty
 share/texmf-dist/tex/latex/circuitikz/circuitikz.sty
