@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.735 2019/08/11 05:44:45 markd Exp $
+# $NetBSD: Makefile,v 1.736 2019/08/11 10:04:31 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -272,6 +272,7 @@ SUBDIR+=	tex-babel-romansh
 SUBDIR+=	tex-babel-russian
 SUBDIR+=	tex-babel-samin
 SUBDIR+=	tex-babel-scottish
+SUBDIR+=	tex-babel-serbian
 SUBDIR+=	tex-babel-serbianc
 SUBDIR+=	tex-babel-slovak
 SUBDIR+=	tex-babel-slovenian
