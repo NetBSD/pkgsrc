@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/07/14 11:57:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/08/11 05:03:13 markd Exp $
 share/texmf-dist/doc/context/third/circuitikz/circuitikz-context.pdf
 share/texmf-dist/doc/context/third/circuitikz/circuitikz-context.tex
 share/texmf-dist/doc/generic/circuitikz/CHANGELOG.md
@@ -7,3 +7,4 @@ share/texmf-dist/doc/latex/circuitikz/changelog.tex
 share/texmf-dist/doc/latex/circuitikz/circuitikzmanual.pdf
 share/texmf-dist/doc/latex/circuitikz/circuitikzmanual.tex
 share/texmf-dist/doc/latex/circuitikz/compatibility.tex
+share/texmf-dist/doc/latex/circuitikz/ctikzmanutils.sty
