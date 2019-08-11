@@ -1,20 +1,20 @@
-@comment $NetBSD: PLIST,v 1.2 2018/07/07 04:56:45 minskim Exp $
-bin/find-corrupt-whisper-files.py
-bin/rrd2whisper.py
-bin/update-storage-times.py
-bin/whisper-auto-resize.py
-bin/whisper-auto-update.py
-bin/whisper-create.py
-bin/whisper-diff.py
-bin/whisper-dump.py
-bin/whisper-fetch.py
-bin/whisper-fill.py
-bin/whisper-info.py
-bin/whisper-merge.py
-bin/whisper-resize.py
-bin/whisper-set-aggregation-method.py
-bin/whisper-set-xfilesfactor.py
-bin/whisper-update.py
+@comment $NetBSD: PLIST,v 1.3 2019/08/11 18:08:01 adam Exp $
+bin/find-corrupt-whisper-files-${PYVERSSUFFIX}
+bin/rrd2whisper-${PYVERSSUFFIX}
+bin/update-storage-times-${PYVERSSUFFIX}
+bin/whisper-auto-resize-${PYVERSSUFFIX}
+bin/whisper-auto-update-${PYVERSSUFFIX}
+bin/whisper-create-${PYVERSSUFFIX}
+bin/whisper-diff-${PYVERSSUFFIX}
+bin/whisper-dump-${PYVERSSUFFIX}
+bin/whisper-fetch-${PYVERSSUFFIX}
+bin/whisper-fill-${PYVERSSUFFIX}
+bin/whisper-info-${PYVERSSUFFIX}
+bin/whisper-merge-${PYVERSSUFFIX}
+bin/whisper-resize-${PYVERSSUFFIX}
+bin/whisper-set-aggregation-method-${PYVERSSUFFIX}
+bin/whisper-set-xfilesfactor-${PYVERSSUFFIX}
+bin/whisper-update-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/whisper.py
 ${PYSITELIB}/whisper.pyc
