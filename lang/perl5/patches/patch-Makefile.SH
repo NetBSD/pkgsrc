@@ -1,13 +1,11 @@
-$NetBSD: patch-Makefile.SH,v 1.8 2019/04/23 09:27:46 adam Exp $
+$NetBSD: patch-Makefile.SH,v 1.9 2019/08/11 10:14:18 adam Exp $
 
 Use correct -install_name on Darwin.
 Fix DTrace object generation.
-Fix Storable build on OS X where DYLD_LIBRARY_PATH is no longer
-inherited by child processes.
 
---- Makefile.SH.orig	2019-04-02 22:36:35.000000000 +0200
-+++ Makefile.SH	2019-04-23 10:07:15.000000000 +0200
-@@ -70,7 +70,7 @@
+--- Makefile.SH.orig	2019-05-11 23:02:19.000000000 +0000
++++ Makefile.SH
+@@ -70,7 +70,7 @@ true)
  				${revision}.${patchlevel}.${subversion}"
  		case "$osvers" in
  	        1[5-9]*|[2-9]*)
@@ -16,7 +14,7 @@ inherited by child processes.
  			exeldflags="-Xlinker -headerpad_max_install_names"
  			;;
  		*)
-@@ -283,6 +283,7 @@
+@@ -278,6 +278,7 @@ LNS = $lns
  # NOTE: some systems don't grok "cp -f". XXX Configure test needed?
  CPS = $cp
  RMS = rm -f
@@ -24,12 +22,3 @@ inherited by child processes.
  ranlib = $ranlib
  
  # The following are mentioned only to make metaconfig include the
-@@ -1197,7 +1198,7 @@
- $spitshell >>$Makefile <<EOT
- 
- dist/Storable/lib/Storable/Limit.pm : \$(PERL_EXE) dist/Storable/stacksize $storable_limit_dep
--	cd dist/Storable ; \$(LDLIBPTH) \$(MAKE) lib/Storable/Limit.pm
-+	cd dist/Storable ; LDLIBPTH=\$(LDLIBPTH) \$(MAKE) lib/Storable/Limit.pm
- 
- lib/Storable/Limit.pm : dist/Storable/lib/Storable/Limit.pm
- 	test -d lib/Storable || mkdir lib/Storable
