@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/08/11 03:32:46 markd Exp $
+
+SHA1 (tex-l3backend-51533/l3backend.doc.tar.xz) = 5cfe9c0b80f6a91a9959e4384282fa34dfa35828
+RMD160 (tex-l3backend-51533/l3backend.doc.tar.xz) = 7f737ee6cf1eb3d0e9d9641b2382a71c3d85db12
+SHA512 (tex-l3backend-51533/l3backend.doc.tar.xz) = 3ae6f8d6959b73e55c6f6eca5901b5b5da1dc1fd0d99f32b370aa300e8dc1cd315ab2c960584801795676bef9555948d30163d2d71c51c52108a7ac7b2cf2987
+Size (tex-l3backend-51533/l3backend.doc.tar.xz) = 706740 bytes
