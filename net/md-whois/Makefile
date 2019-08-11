@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2018/08/22 09:45:54 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2019/08/11 13:22:10 wiz Exp $
 #
 # todo: set location of [md-]whois.conf and fix in man page too
 # todo: build and install the po/ files and add to PLIST
@@ -7,7 +7,7 @@
 
 DISTNAME=	whois_${VERSION}
 PKGNAME=	md-whois-${VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/w/whois/}
 

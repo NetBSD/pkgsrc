@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.26 2018/08/22 09:43:04 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2019/08/11 13:18:09 wiz Exp $
 #
 
 .include "../../comms/pilot-link/Makefile.common"
 
 PKGNAME=		pilot-link-libs-${PILOT_LINK_VERS}
-PKGREVISION=		2
+PKGREVISION=		3
 COMMENT=		Libraries for talking to the 3Com Pilot PDA
 
 CONFLICTS+=		pilot-link<0.9.5

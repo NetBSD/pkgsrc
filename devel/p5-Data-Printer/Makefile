@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2019/06/30 20:14:49 nia Exp $
+# $NetBSD: Makefile,v 1.15 2019/08/11 13:19:11 wiz Exp $
 
 DISTNAME=	Data-Printer-0.40
 PKGNAME=	p5-${DISTNAME:S/_/./}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/G/GA/GARU/}
 #ASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}

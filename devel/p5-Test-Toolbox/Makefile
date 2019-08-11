@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2018/08/22 09:44:50 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/08/11 13:20:38 wiz Exp $
 
 DISTNAME=	Test-Toolbox-0.4
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/M/MI/MIKO/
 

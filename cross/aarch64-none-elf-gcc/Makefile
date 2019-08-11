@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2019/06/08 10:53:26 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2019/08/11 13:18:16 wiz Exp $
 
 DISTNAME=		gcc-8.2.0
 PKGNAME=		cross-aarch64-none-elf-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${PKGVERSION_NOREV}/}
 NEWLIBVER=		3.0.0

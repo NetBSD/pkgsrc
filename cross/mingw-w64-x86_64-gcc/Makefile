@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2019/05/10 19:30:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2019/08/11 13:18:17 wiz Exp $
 
+PKGREVISION= 1
 .include "../../cross/mingw-w64-x86_64-gcc/Makefile.common"
 
 PKGNAME=		mingw-w64-x86_64-${DISTNAME}

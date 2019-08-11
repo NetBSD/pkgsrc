@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2018/08/22 09:43:10 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2019/08/11 13:18:16 wiz Exp $
 
 DISTNAME=		gcc-4.8.3
 PKGNAME=		${DISTNAME:C/^/avr-/}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/releases/${DISTNAME}/}
 EXTRACT_SUFX=		.tar.bz2

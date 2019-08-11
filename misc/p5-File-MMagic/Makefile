@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2019/06/30 20:16:23 nia Exp $
+# $NetBSD: Makefile,v 1.35 2019/08/11 13:21:57 wiz Exp $
 
 DISTNAME=		File-MMagic-1.30
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		misc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=File/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2019/06/30 20:17:42 nia Exp $
+# $NetBSD: Makefile,v 1.12 2019/08/11 13:24:57 wiz Exp $
 
 DISTNAME=	Plack-Middleware-Test-StashWarnings-0.08
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Plack/}
 

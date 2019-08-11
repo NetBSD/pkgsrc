@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2018/08/22 09:47:58 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2019/08/11 13:25:08 wiz Exp $
 
 DISTNAME=	squid-3.5.28
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v3/${PKGVERSION_NOREV:R}/
 MASTER_SITES+=	ftp://ftp.squid-cache.org/pub/squid/

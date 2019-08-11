@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.105 2019/06/08 19:56:24 leot Exp $
+# $NetBSD: Makefile,v 1.106 2019/08/11 13:17:49 wiz Exp $
 
 DISTNAME=		gnome-icon-theme-3.12.0
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		graphics gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-icon-theme/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=		.tar.xz

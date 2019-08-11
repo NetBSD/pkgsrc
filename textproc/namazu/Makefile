@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2018/08/22 09:46:47 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/08/11 13:23:26 wiz Exp $
 
 DISTNAME=	namazu-2.0.21
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	japanese textproc www
 MASTER_SITES=	http://www.namazu.org/stable/
 

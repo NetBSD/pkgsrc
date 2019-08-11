@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2018/08/22 09:42:52 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2019/08/11 13:17:49 wiz Exp $
 
 BUILDLINK_TREE+=	gnome-icon-theme
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnome-icon-theme
 GNOME_ICON_THEME_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.8.0
-BUILDLINK_ABI_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=3.12.0nb3
+BUILDLINK_ABI_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=3.12.0nb4
 BUILDLINK_PKGSRCDIR.gnome-icon-theme?=		../../graphics/gnome-icon-theme
 
 # intltool-{extract,merge,update} are Perl scripts included in the sources

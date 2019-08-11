@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2018/08/22 09:43:26 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/08/11 13:18:36 wiz Exp $
 
 DISTNAME=	RDB-2.6d
 PKGNAME=	rdb-2.6.4
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	databases
 MASTER_SITES=	# ftp://ftp.sunet.se/pub/unix/databases/flat-file/RDB/
 

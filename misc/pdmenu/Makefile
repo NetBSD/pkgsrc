@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2018/08/22 09:45:46 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2019/08/11 13:21:59 wiz Exp $
 #
 
 DISTNAME=	pdmenu_1.2.65
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	misc
 MASTER_SITES=	http://www.kitenet.net/programs/pdmenu/
 

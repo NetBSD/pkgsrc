@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2019/05/23 19:23:12 rillig Exp $
+# $NetBSD: Makefile,v 1.47 2019/08/11 13:22:36 wiz Exp $
 #
 
 PKGNAME=	pkg_filecheck-0.4
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	pkgtools devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

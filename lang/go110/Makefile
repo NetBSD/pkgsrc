@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/11/04 12:36:09 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3 2019/08/11 13:21:21 wiz Exp $
 
+PKGREVISION= 1
 .include "../../lang/go/version.mk"
 
 DISTNAME=	go${GO110_VERSION}.src

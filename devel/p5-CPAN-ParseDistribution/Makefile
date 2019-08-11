@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2019/06/30 20:14:36 nia Exp $
+# $NetBSD: Makefile,v 1.9 2019/08/11 13:18:56 wiz Exp $
 #
 
 DISTNAME=	CPAN-ParseDistribution-1.54
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CPAN/}
 

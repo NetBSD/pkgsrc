@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2019/06/30 20:15:36 nia Exp $
+# $NetBSD: Makefile,v 1.19 2019/08/11 13:20:11 wiz Exp $
 #
 
 DISTNAME=		Perl-MinimumVersion-1.38
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Perl/}
 

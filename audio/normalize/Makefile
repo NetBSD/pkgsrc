@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2018/10/24 12:30:07 jperkin Exp $
+# $NetBSD: Makefile,v 1.35 2019/08/11 13:17:55 wiz Exp $
 
 DISTNAME=	normalize-0.7.7
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	audio
 MASTER_SITES=	http://savannah.nongnu.org/download/normalize/
 EXTRACT_SUFX=	.tar.bz2

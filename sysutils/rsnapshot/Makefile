@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2018/08/22 09:46:40 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/08/11 13:23:16 wiz Exp $
 
 DISTNAME=	rsnapshot-1.3.1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	net
 MASTER_SITES=	http://www.rsnapshot.org/downloads/
 
