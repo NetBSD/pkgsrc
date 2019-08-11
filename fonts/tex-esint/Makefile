@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2017/09/06 16:49:23 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/08/11 10:35:32 markd Exp $
 
 DISTNAME=	esint
-PKGNAME=	tex-${DISTNAME}-1.1
-TEXLIVE_REV=	15878
+PKGNAME=	tex-${DISTNAME}-1.2b
+TEXLIVE_REV=	51679
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	https://ctan.org/pkg/esint
 COMMENT=	Extended set of integrals for Computer Modern
-LICENSE=	public-domain
+LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 
