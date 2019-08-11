@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2019/05/07 11:34:55 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2019/08/11 04:14:40 markd Exp $
 share/texmf-dist/scripts/tex4ht/htcopy.pl
 share/texmf-dist/scripts/tex4ht/htmove.pl
 share/texmf-dist/tex/generic/tex4ht/2up.4ht
@@ -13,6 +13,7 @@ share/texmf-dist/tex/generic/tex4ht/aa.4ht
 share/texmf-dist/tex/generic/tex4ht/abidir.4ht
 share/texmf-dist/tex/generic/tex4ht/accents.4ht
 share/texmf-dist/tex/generic/tex4ht/acm_proc_article-sp.4ht
+share/texmf-dist/tex/generic/tex4ht/adjustbox.4ht
 share/texmf-dist/tex/generic/tex4ht/afterpage.4ht
 share/texmf-dist/tex/generic/tex4ht/alatex.4ht
 share/texmf-dist/tex/generic/tex4ht/algorithm.4ht
@@ -62,6 +63,7 @@ share/texmf-dist/tex/generic/tex4ht/book.4ht
 share/texmf-dist/tex/generic/tex4ht/booktabs.4ht
 share/texmf-dist/tex/generic/tex4ht/boxedminipage.4ht
 share/texmf-dist/tex/generic/tex4ht/braket.4ht
+share/texmf-dist/tex/generic/tex4ht/bussproofs.4ht
 share/texmf-dist/tex/generic/tex4ht/byname.4ht
 share/texmf-dist/tex/generic/tex4ht/caption.4ht
 share/texmf-dist/tex/generic/tex4ht/catalan.4ht
@@ -190,6 +192,7 @@ share/texmf-dist/tex/generic/tex4ht/hypcap.4ht
 share/texmf-dist/tex/generic/tex4ht/hyperref.4ht
 share/texmf-dist/tex/generic/tex4ht/idxmake.4ht
 share/texmf-dist/tex/generic/tex4ht/ifthen.4ht
+share/texmf-dist/tex/generic/tex4ht/imakeidx.4ht
 share/texmf-dist/tex/generic/tex4ht/index.4ht
 share/texmf-dist/tex/generic/tex4ht/info4ht.4ht
 share/texmf-dist/tex/generic/tex4ht/infoht4.4ht
@@ -291,9 +294,11 @@ share/texmf-dist/tex/generic/tex4ht/pifont.4ht
 share/texmf-dist/tex/generic/tex4ht/plain.4ht
 share/texmf-dist/tex/generic/tex4ht/polish.4ht
 share/texmf-dist/tex/generic/tex4ht/polski.4ht
+share/texmf-dist/tex/generic/tex4ht/polyglossia.4ht
 share/texmf-dist/tex/generic/tex4ht/portuges.4ht
 share/texmf-dist/tex/generic/tex4ht/powerdot-a.4ht
 share/texmf-dist/tex/generic/tex4ht/powerdot.4ht
+share/texmf-dist/tex/generic/tex4ht/proof.4ht
 share/texmf-dist/tex/generic/tex4ht/prosper-a.4ht
 share/texmf-dist/tex/generic/tex4ht/prosper.4ht
 share/texmf-dist/tex/generic/tex4ht/psfig.4ht
@@ -362,6 +367,7 @@ share/texmf-dist/tex/generic/tex4ht/textures.4ht
 share/texmf-dist/tex/generic/tex4ht/th4.4ht
 share/texmf-dist/tex/generic/tex4ht/theorem.4ht
 share/texmf-dist/tex/generic/tex4ht/titlesec.4ht
+share/texmf-dist/tex/generic/tex4ht/titling.4ht
 share/texmf-dist/tex/generic/tex4ht/tocloft.4ht
 share/texmf-dist/tex/generic/tex4ht/tuenc-luatex.4ht
 share/texmf-dist/tex/generic/tex4ht/tuenc-xetex-input.4ht
