@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2019/08/11 03:32:46 markd Exp $
+share/texmf-dist/doc/latex/l3backend/CHANGELOG.md
+share/texmf-dist/doc/latex/l3backend/README.md
+share/texmf-dist/doc/latex/l3backend/l3backend-code.pdf
+share/texmf-dist/doc/latex/l3backend/l3backend-code.tex
