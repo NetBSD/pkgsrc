@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2019/01/26 02:41:05 markd Exp $
+$NetBSD: distinfo,v 1.9 2019/08/11 10:22:56 markd Exp $
 
-SHA1 (tex-pst-plot-48526/pst-plot.doc.tar.xz) = 2e3356750cdd7b1bfcbdadc1c545aa8d114f2e96
-RMD160 (tex-pst-plot-48526/pst-plot.doc.tar.xz) = f78b794577ddd786aa2d42d3896ae40eb821fc87
-SHA512 (tex-pst-plot-48526/pst-plot.doc.tar.xz) = 6ac79e74d9a14544439993d3268d7959eb6ae55a90d8b3b91066d3be0c424d373edddccbe444e9cf261171fd6a57a0139f3bc6a6495a0fd4f196dd8f95e47e29
-Size (tex-pst-plot-48526/pst-plot.doc.tar.xz) = 1136464 bytes
+SHA1 (tex-pst-plot-51650/pst-plot.doc.tar.xz) = 6d414fbf9e7e8c1b3fc59e06f0846da3e8cfde60
+RMD160 (tex-pst-plot-51650/pst-plot.doc.tar.xz) = 370781517447925dd5c88f9fe3bc724736cf1d68
+SHA512 (tex-pst-plot-51650/pst-plot.doc.tar.xz) = 748945b66f21c63a160b793720ba5bd9243c73602e68e43ff72a5f52ccb4004de186e648ad0e5b5e883c3772197eb2a36ca0cab046f8313a7ed8ecad522fd761
+Size (tex-pst-plot-51650/pst-plot.doc.tar.xz) = 1121068 bytes
