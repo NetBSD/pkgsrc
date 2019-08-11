@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/07/08 18:42:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/08/11 17:53:27 adam Exp $
 include/json/allocator.h
 include/json/assertions.h
 include/json/autolink.h
@@ -14,6 +14,6 @@ lib/cmake/jsoncpp/jsoncppConfig-release.cmake
 lib/cmake/jsoncpp/jsoncppConfig.cmake
 lib/cmake/jsoncpp/jsoncppConfigVersion.cmake
 lib/libjsoncpp.so
-lib/libjsoncpp.so.${PKGVERSION}
 lib/libjsoncpp.so.1
+lib/libjsoncpp.so.1.9.0
 lib/pkgconfig/jsoncpp.pc
