@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3395 2019/08/11 18:06:12 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3396 2019/08/11 18:17:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5588,3 +5588,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated multimedia/mkvtoolnix to 36.0.0 [adam 2019-08-11]
 	Updated devel/py-flaky to 3.6.1 [adam 2019-08-11]
 	Updated www/py-httplib2 to 0.13.1 [adam 2019-08-11]
+	Updated databases/py-whisper to 1.1.5 [adam 2019-08-11]
+	Updated textproc/py-html5-parser to 0.4.8 [adam 2019-08-11]
