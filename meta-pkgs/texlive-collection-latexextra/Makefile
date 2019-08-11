@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.45 2019/07/29 12:00:18 markd Exp $
+# $NetBSD: Makefile,v 1.46 2019/08/11 12:14:59 markd Exp $
 
 DISTNAME=	collection-latexextra
 PKGNAME=	texlive-${DISTNAME}-2019pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	51514
+TEXLIVE_REV=	51779
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -908,6 +908,7 @@ DEPENDS+=	tex-placeins-[0-9]*:../../print/tex-placeins
 DEPENDS+=	tex-polytable-[0-9]*:../../print/tex-polytable
 # depend postcards
 # depend poster-mac
+# depend powerdot
 # depend ppr-prv
 DEPENDS+=	tex-preprint-[0-9]*:../../print/tex-preprint
 # depend pressrelease
@@ -988,6 +989,8 @@ DEPENDS+=	tex-scale-[0-9]*:../../print/tex-scale
 # depend scalebar
 # depend scalerel
 # depend scanpages
+# depend schedule
+# depend scontents
 # depend scrlttr2copy
 # depend sdrt
 DEPENDS+=	tex-secdot-[0-9]*:../../print/tex-secdot
