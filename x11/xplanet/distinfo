@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2018/02/13 12:45:02 ryoon Exp $
+$NetBSD: distinfo,v 1.22 2019/08/11 15:38:22 ng0 Exp $
 
 SHA1 (xplanet-1.3.0.tar.gz) = 7c5208b501b441a0184cbb334a5658d0309d7dac
 RMD160 (xplanet-1.3.0.tar.gz) = b5ba6239019669668aeb7f63391aa850cc3dd8b7
@@ -10,4 +10,5 @@ SHA1 (patch-src_libannotate_addSatellites.cpp) = 7c8976a3e88ebac7e4d9b59a38f98f8
 SHA1 (patch-src_libimage_gif.c) = 6c107bd1f733fe82f2b88af8ad778e0fe5aea5bd
 SHA1 (patch-src_libmultiple_RayleighScattering.cpp) = 3a64033dc0c6915c9cd2eed2e506dd4c802138c9
 SHA1 (patch-src_libmultiple_drawStars.cpp) = b6a3f3995f4f1ac77660fdad64524ef6a48c4d50
+SHA1 (patch-src_readConfig-fixclang.cpp) = 642e56513e0ae9ebba18ccc653cb089858a18637
 SHA1 (patch-src_readConfig.cpp) = c1a46209dfcbb6a37b6c7ff90f633a6450fbd5d9
