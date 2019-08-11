@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3387 2019/08/11 05:49:07 markd Exp $
+$NetBSD: CHANGES-2019,v 1.3388 2019/08/11 10:16:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5545,3 +5545,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated fonts/tex-luaotfload-doc to 2.98 [markd 2019-08-11]
 	Added print/tex-numberpt version 1.0 [markd 2019-08-11]
 	Added print/tex-numberpt-doc version 1.0 [markd 2019-08-11]
+	Updated lang/perl5 to 5.30.0 [adam 2019-08-11]
+	Updated devel/p5-Scalar-List-Utils to 1.51 [adam 2019-08-11]
