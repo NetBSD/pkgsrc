@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2018/08/22 09:46:15 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/08/11 13:22:41 wiz Exp $
 
 DISTNAME=	PDFlib-Lite-7.0.5
 PKGNAME=	pdflib-lite-7.0.5
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	print
 MASTER_SITES=	http://www.pdflib.com/binaries/PDFlib/705/
 

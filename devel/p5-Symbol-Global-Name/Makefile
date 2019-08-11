@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2019/06/30 20:15:46 nia Exp $
+# $NetBSD: Makefile,v 1.11 2019/08/11 13:20:23 wiz Exp $
 
 DISTNAME=	Symbol-Global-Name-0.05
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Symbol/}
 

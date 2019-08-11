@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2019/06/30 20:17:18 nia Exp $
+# $NetBSD: Makefile,v 1.18 2019/08/11 13:24:12 wiz Exp $
 
 DISTNAME=	Time-Warp-0.54
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5 time
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Time/}
 

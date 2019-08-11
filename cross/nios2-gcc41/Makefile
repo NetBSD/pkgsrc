@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2019/06/08 10:53:29 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2019/08/11 13:18:18 wiz Exp $
 
 DISTNAME=		nios2_gnu_gcc4_13.0
 PKG_VERSION=		4.1.2
 PKGNAME=		nios2-gcc41-${PKG_VERSION}
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		cross
 MASTER_SITES=		ftp://ftp.altera.com/outgoing/download/support/ip/processors/nios2/gnu/
 EXTRACT_SUFX=		.gz

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.71 2018/08/22 09:47:28 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2019/08/11 13:24:23 wiz Exp $
 
 DISTNAME=	Apache-Gallery-1.0.2-withoutworldwriteables
 PKGNAME=	${DISTNAME:C/-without.*//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics www
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/L/LE/LEGART/
 

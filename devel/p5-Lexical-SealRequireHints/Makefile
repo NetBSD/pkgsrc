@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2019/06/30 20:15:14 nia Exp $
+# $NetBSD: Makefile,v 1.19 2019/08/11 13:19:42 wiz Exp $
 
 DISTNAME=	Lexical-SealRequireHints-0.011
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/Z/ZE/ZEFRAM/
 

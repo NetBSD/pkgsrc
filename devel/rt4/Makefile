@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2019/06/13 03:19:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2019/08/11 13:20:50 wiz Exp $
 
 DISTNAME=	rt-4.2.16
 PKGNAME=	${DISTNAME:S/rt/rt4/}
+PKGREVISION=	1
 #PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://download.bestpractical.com/pub/rt/release/

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2018/08/22 09:43:26 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/08/11 13:18:37 wiz Exp $
 
 DISTNAME=	yasql-1.81
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=yasql/}
 

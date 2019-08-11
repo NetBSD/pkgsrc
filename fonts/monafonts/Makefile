@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2018/08/22 09:45:07 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2019/08/11 13:21:01 wiz Exp $
 
 DISTNAME=	monafont-2.90
 PKGNAME=	${DISTNAME:S/font/fonts/}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	fonts japanese
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=monafont/}
 EXTRACT_SUFX=	.tar.bz2

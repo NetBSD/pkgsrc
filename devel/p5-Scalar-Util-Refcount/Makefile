@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2018/08/22 09:44:36 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/08/11 13:20:18 wiz Exp $
 #
 
 DISTNAME=		Scalar-Util-Refcount-1.0.2
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		misc perl5
 MASTER_SITES=		http://cpan.metacpan.org/authors/id/J/JN/JNIXON/
 

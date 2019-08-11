@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2019/05/23 19:22:59 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2019/08/11 13:20:51 wiz Exp $
 
 
 DISTNAME=	sloccount-2.26
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://www.dwheeler.com/sloccount/
 

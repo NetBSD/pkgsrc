@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2019/07/01 21:35:58 nia Exp $
+# $NetBSD: Makefile,v 1.6 2019/08/11 13:24:25 wiz Exp $
 #
 
 DISTNAME=	CGI-Application-Plugin-Session-1.05
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/F/FR/FREW/
 

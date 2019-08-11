@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2018/08/27 08:59:52 triaxx Exp $
+# $NetBSD: Makefile,v 1.30 2019/08/11 13:22:48 wiz Exp $
 
 DISTNAME=	openpam-20170430
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openpam/}
 

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2018/08/22 09:46:41 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2019/08/11 13:23:18 wiz Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "version.mk"
 
 DISTNAME=	webmin-${WBM_VERSION}

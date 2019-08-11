@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.51 2019/07/21 22:25:26 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2019/08/11 13:22:03 wiz Exp $
 #
 
 DISTNAME=	HandBrake-1.2.2-source
 PKGNAME=	${DISTNAME:tl:S/-source//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	https://download.handbrake.fr/releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2

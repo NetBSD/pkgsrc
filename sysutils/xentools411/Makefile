@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/07/15 16:24:18 nia Exp $
+# $NetBSD: Makefile,v 1.8 2019/08/11 13:23:18 wiz Exp $
 #
 VERSION=	4.11.1
 VERSION_IPXE=	356f6c1b64d7a97746d1816cef8ca22bdd8d0b5d
@@ -7,7 +7,7 @@ DIST_IPXE=	ipxe-git-${VERSION_IPXE}.tar.gz
 DIST_SUBDIR=		xen411
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools411-${VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 #PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		https://downloads.xenproject.org/release/xen/${VERSION}/

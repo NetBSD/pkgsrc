@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2018/08/22 09:46:32 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2019/08/11 13:23:05 wiz Exp $
 
 COLLECTD_PACKAGE=	notify-email
 
 COMMENT=		Statistics collection daemon - notify_email plugin
-PKGREVISION=		1
+PKGREVISION=		2
 
 .include "../../sysutils/collectd/Makefile.common"
 

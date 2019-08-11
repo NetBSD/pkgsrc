@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2018/08/22 09:47:13 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2019/08/11 13:24:02 wiz Exp $
 
 DISTNAME=	texi2html-5.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	textproc
 MASTER_SITES=	http://savannah.nongnu.org/download/texi2html/
 EXTRACT_SUFX=	.tar.bz2

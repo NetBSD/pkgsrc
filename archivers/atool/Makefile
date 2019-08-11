@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2018/08/22 09:42:53 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/08/11 13:17:50 wiz Exp $
 
 DISTNAME=	atool-0.39.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	archivers
 MASTER_SITES=	http://savannah.nongnu.org/download/atool/
 

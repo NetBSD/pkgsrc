@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2019/07/01 21:35:50 nia Exp $
+# $NetBSD: Makefile,v 1.6 2019/08/11 13:22:27 wiz Exp $
 
 DISTNAME=	XML-RPC-1.1
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	perl5 net
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/C/CA/CAVAC/
 

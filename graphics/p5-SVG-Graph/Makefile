@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2019/06/30 20:16:11 nia Exp $
+# $NetBSD: Makefile,v 1.9 2019/08/11 13:21:15 wiz Exp $
 
 DISTNAME=	SVG-Graph-0.04
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/C/CJ/CJFIELDS/
 

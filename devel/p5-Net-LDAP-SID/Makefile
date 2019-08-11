@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2019/07/01 21:35:40 nia Exp $
+# $NetBSD: Makefile,v 1.5 2019/08/11 13:20:02 wiz Exp $
 
 DISTNAME=	Net-LDAP-SID-0.001
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/K/KA/KARMAN/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2019/06/30 20:16:29 nia Exp $
+# $NetBSD: Makefile,v 1.26 2019/08/11 13:22:19 wiz Exp $
 
 DISTNAME=	Net-Gnats-0.22
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/R/RI/RICHE/
 

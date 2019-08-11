@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2018/11/16 13:02:45 bsiegert Exp $
+# $NetBSD: Makefile,v 1.13 2019/08/11 13:23:26 wiz Exp $
 
 DISTNAME=	mythes-1.2.3
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hunspell}/
 

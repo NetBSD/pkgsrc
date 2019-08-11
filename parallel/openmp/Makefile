@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2019/08/05 19:06:49 adam Exp $
+# $NetBSD: Makefile,v 1.3 2019/08/11 13:22:34 wiz Exp $
 
 DISTNAME=	openmp-8.0.1.src
 PKGNAME=	${DISTNAME:S/.src//}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=llvm/}
 GITHUB_PROJECT=	llvm-project

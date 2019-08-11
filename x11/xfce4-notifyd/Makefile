@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2019/07/21 22:26:06 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/08/11 13:25:19 wiz Exp $
 #
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-notifyd-0.4.4

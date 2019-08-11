@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2019/06/30 20:16:47 nia Exp $
+# $NetBSD: Makefile,v 1.34 2019/08/11 13:23:27 wiz Exp $
 #
 
 DISTNAME=		Convert-ASCII-Armour-1.4
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		14
+PKGREVISION=		15
 CATEGORIES=		converters perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Convert/}
 

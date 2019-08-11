@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2019/03/26 15:18:33 leot Exp $
+# $NetBSD: Makefile,v 1.3 2019/08/11 13:22:16 wiz Exp $
 
 DISTNAME=	MaxMind-DB-Writer-0.300003
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MA/MAXMIND/}
 

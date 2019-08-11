@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2018/08/22 09:45:19 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2019/08/11 13:21:19 wiz Exp $
 
 PKGNAME=	gcc-aux-${SNAPSHOT}
-PKGREVISION=	3
+PKGREVISION=	4
 DISTNAME=	gcc-${GCC_VERSION}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}

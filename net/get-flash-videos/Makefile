@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2018/08/22 09:45:52 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/08/11 13:22:09 wiz Exp $
 
 DISTNAME=	get-flash-videos-0.0.20150331
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=monsieurvideo/}
 GITHUB_TYPE=	tag

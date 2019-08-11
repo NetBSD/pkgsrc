@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2019/05/30 09:34:38 adam Exp $
+# $NetBSD: Makefile,v 1.7 2019/08/11 13:25:07 wiz Exp $
 
 DISTNAME=	hyperlink-19.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hyperlink/}
 

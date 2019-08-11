@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2019/02/08 22:25:32 tonio Exp $
+# $NetBSD: Makefile,v 1.35 2019/08/11 13:18:19 wiz Exp $
 
 DISTNAME=		lbdb_0.48.1
 PKGNAME=		${DISTNAME:S/_/-/}
+PKGREVISION=		1
 CATEGORIES=		databases
 MASTER_SITES=		http://www.spinnaker.de/lbdb/download/
 

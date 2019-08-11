@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2019/05/23 19:23:20 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2019/08/11 13:24:16 wiz Exp $
 #
 
 DISTNAME=	bannerfilter-1.31
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	www
 MASTER_SITES=	http://phroggy.com/files/unix/
 

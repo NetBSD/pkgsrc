@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2019/07/21 22:25:47 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2019/08/11 13:23:20 wiz Exp $
 
-PKGREVISION= 11
+PKGREVISION= 12
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-quicklauncher-plugin-1.9.4

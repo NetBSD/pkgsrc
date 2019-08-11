@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2019/06/30 20:15:58 nia Exp $
+# $NetBSD: Makefile,v 1.5 2019/08/11 13:20:39 wiz Exp $
 
 DISTNAME=		TheSchwartz-1.12
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel perl5
 MASTER_SITES=		http://search.cpan.org/CPAN/authors/id/J/JF/JFEARN/
 

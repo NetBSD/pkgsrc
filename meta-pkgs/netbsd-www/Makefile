@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2018/08/22 09:45:42 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2019/08/11 13:21:53 wiz Exp $
 
 DISTNAME=	netbsd-www-1.10
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty

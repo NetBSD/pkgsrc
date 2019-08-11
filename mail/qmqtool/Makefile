@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2019/05/23 19:23:07 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2019/08/11 13:21:41 wiz Exp $
 #
 
 DISTNAME=		qmqtool-1.15
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}/files/
 EXTRACT_SUFX=		.tgz

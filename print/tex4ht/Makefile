@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2019/05/09 09:47:36 adam Exp $
+# $NetBSD: Makefile,v 1.11 2019/08/11 13:22:44 wiz Exp $
 
+PKGREVISION= 1
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	tex4ht-20180225

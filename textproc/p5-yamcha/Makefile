@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2018/08/22 09:47:12 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2019/08/11 13:24:00 wiz Exp $
 #
 
 .include "../../textproc/yamcha/Makefile.common"
 
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	9
+PKGREVISION=	10
 
 COMMENT=	YamCha perl module
 

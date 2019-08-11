@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2019/06/30 20:16:20 nia Exp $
+# $NetBSD: Makefile,v 1.8 2019/08/11 13:21:48 wiz Exp $
 #
 
 DISTNAME=	Math-Random-ISAAC-XS-1.004
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	math perl5 security
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Math/}
 

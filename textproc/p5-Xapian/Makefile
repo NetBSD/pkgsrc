@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2018/09/10 10:30:06 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2019/08/11 13:23:58 wiz Exp $
 
 PKGNAME=		p5-${PKGNAME_MODULE:S/^x/X/}
+PKGREVISION=		1
 COMMENT=		Perl bindings for Xapian search engine
 HOMEPAGE=		https://xapian.org/docs/bindings/perl/
 

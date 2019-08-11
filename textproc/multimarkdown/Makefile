@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2018/08/22 09:46:47 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/08/11 13:23:26 wiz Exp $
 
 DISTNAME=	MultiMarkdown-4-4.7.1
 PKGNAME=	${DISTNAME:S/MultiMarkdown-4-/multimarkdown-/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2018/08/22 09:46:33 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/08/11 13:23:06 wiz Exp $
 #
 
 DISTNAME=		cpogm-1.0
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		sysutils
 MASTER_SITES=		http://oss.gw.com/people/kim/
 

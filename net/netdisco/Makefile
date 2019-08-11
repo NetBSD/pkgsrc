@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2019/05/23 19:23:10 rillig Exp $
+# $NetBSD: Makefile,v 1.45 2019/08/11 13:22:13 wiz Exp $
 
-DISTNAME=		netdisco-${PKGVERSION}_with_mibs
-PKGNAME=		netdisco-${PKGVERSION}
-PKGVERSION=		1.3.3
-PKGREVISION=		3
+DISTNAME=		netdisco-1.3.3_with_mibs
+PKGNAME=		${DISTNAME:S/_with_mibs//}
+PKGREVISION=		4
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=netdisco/}
 SITES.oui.txt=		http://standards.ieee.org/regauth/oui/

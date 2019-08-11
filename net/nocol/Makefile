@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2018/08/22 09:45:55 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2019/08/11 13:22:13 wiz Exp $
 #
 
 DISTNAME=		nocol-4.3.1
-PKGREVISION=		14
+PKGREVISION=		15
 CATEGORIES=		net
 MASTER_SITES=		http://www.netplex-tech.com/software/nocol/downloads/
 

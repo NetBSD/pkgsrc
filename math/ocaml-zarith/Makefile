@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/11/28 12:04:35 jaapb Exp $
+# $NetBSD: Makefile,v 1.16 2019/08/11 13:21:44 wiz Exp $
 #
 
 VERSION=	1.7
@@ -6,6 +6,7 @@ GITHUB_PROJECT=	Zarith
 GITHUB_TAG=	release-${VERSION}
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 PKGNAME=	ocaml-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 

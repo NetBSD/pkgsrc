@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2019/07/21 22:24:33 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/08/11 13:18:09 wiz Exp $
 
-PKGREVISION= 10
+PKGREVISION= 11
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-modemlights-plugin-0.1.3.99

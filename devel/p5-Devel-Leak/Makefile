@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2019/06/30 20:14:54 nia Exp $
+# $NetBSD: Makefile,v 1.4 2019/08/11 13:19:17 wiz Exp $
 
 DISTNAME=	Devel-Leak-0.04
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/S/SR/SREZIC/
 

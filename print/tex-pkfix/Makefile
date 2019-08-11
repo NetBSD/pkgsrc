@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2018/08/22 09:46:16 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/08/11 13:22:43 wiz Exp $
 
 DISTNAME=	pkfix
 PKGNAME=	tex-${DISTNAME}-1.7
-PKGREVISION=	3
+PKGREVISION=	4
 TEXLIVE_REV=	26032
 
 MAINTAINER=	minskim@NetBSD.org

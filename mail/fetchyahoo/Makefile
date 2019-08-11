@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2018/08/22 09:45:25 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/08/11 13:21:27 wiz Exp $
 #
 
 DISTNAME=		fetchyahoo-2.11.0
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		mail
 MASTER_SITES=		http://fetchyahoo.sourceforge.net/
 #MASTER_SITES=	        ${MASTER_SITE_SOURCEFORGE:=fetchyahoo/}

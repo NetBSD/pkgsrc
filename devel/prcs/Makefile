@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2018/08/22 09:44:59 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2019/08/11 13:20:49 wiz Exp $
 
 DISTNAME=		prcs-1.3.3
-PKGREVISION=		13
+PKGREVISION=		14
 CATEGORIES=		devel scm
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=prcs/}
 

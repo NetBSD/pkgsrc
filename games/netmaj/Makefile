@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2018/08/22 09:45:09 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2019/08/11 13:21:04 wiz Exp $
 #
 
 DISTNAME=		netmaj-2.0.7
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		games
 MASTER_SITES=		http://www.sfc.wide.ad.jp/~kusune/netmaj/files/
 
