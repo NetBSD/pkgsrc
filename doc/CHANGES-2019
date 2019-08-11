@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3388 2019/08/11 10:16:03 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3389 2019/08/11 11:43:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5547,3 +5547,8 @@ Changes to the packages collection and infrastructure in 2019:
 	Added print/tex-numberpt-doc version 1.0 [markd 2019-08-11]
 	Updated lang/perl5 to 5.30.0 [adam 2019-08-11]
 	Updated devel/p5-Scalar-List-Utils to 1.51 [adam 2019-08-11]
+	Updated databases/postgresql94 to 9.4.24 [adam 2019-08-11]
+	Updated databases/postgresql95 to 9.5.19 [adam 2019-08-11]
+	Updated databases/postgresql96 to 9.6.15 [adam 2019-08-11]
+	Updated databases/postgresql10 to 10.10 [adam 2019-08-11]
+	Updated databases/postgresql11 to 11.5 [adam 2019-08-11]
