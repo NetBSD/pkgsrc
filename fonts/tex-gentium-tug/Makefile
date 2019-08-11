@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2015/06/14 11:19:59 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/08/11 04:21:42 markd Exp $
 
 DISTNAME=	gentium-tug
-PKGNAME=	tex-${DISTNAME}-1.1
-TEXLIVE_REV=	37378
+PKGNAME=	tex-${DISTNAME}-1.1.1
+TEXLIVE_REV=	51613
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/gentium-tug
+HOMEPAGE=	https://ctan.org/pkg/gentium-tug
 COMMENT=	Gentium fonts (in two formats) and support files
-#LICENSE=	other-free
+LICENSE=	ofl-v1.1
 
 TEX_MAP_FILES+=	gentium-type1.map
 
