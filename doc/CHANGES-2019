@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3402 2019/08/12 11:52:52 markd Exp $
+$NetBSD: CHANGES-2019,v 1.3403 2019/08/12 11:58:19 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5605,3 +5605,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/tex-tex4ht-doc to 2019.51746 [markd 2019-08-12]
 	Updated print/tex-oberdiek to 2019 [markd 2019-08-12]
 	Updated print/tex-oberdiek-doc to 2019 [markd 2019-08-12]
+	Updated sysutils/nnn to 2.6 [sjmulder 2019-08-12]
