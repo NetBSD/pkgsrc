@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/06/20 11:20:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/08/12 07:38:53 adam Exp $
 bin/dmypy-${PYVERSSUFFIX}
 bin/mypy-${PYVERSSUFFIX}
 bin/stubgen-${PYVERSSUFFIX}
@@ -401,6 +401,9 @@ ${PYSITELIB}/mypy/test/testipc.pyo
 ${PYSITELIB}/mypy/test/testmerge.py
 ${PYSITELIB}/mypy/test/testmerge.pyc
 ${PYSITELIB}/mypy/test/testmerge.pyo
+${PYSITELIB}/mypy/test/testmodulefinder.py
+${PYSITELIB}/mypy/test/testmodulefinder.pyc
+${PYSITELIB}/mypy/test/testmodulefinder.pyo
 ${PYSITELIB}/mypy/test/testmoduleinfo.py
 ${PYSITELIB}/mypy/test/testmoduleinfo.pyc
 ${PYSITELIB}/mypy/test/testmoduleinfo.pyo
