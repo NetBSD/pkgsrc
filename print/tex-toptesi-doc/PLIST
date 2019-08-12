@@ -1,18 +1,24 @@
-@comment $NetBSD: PLIST,v 1.7 2019/05/14 10:33:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/08/12 11:21:52 markd Exp $
 share/texmf-dist/doc/latex/toptesi/FrontespiziAssemblati.pdf
 share/texmf-dist/doc/latex/toptesi/FrontespiziAssemblati1.pdf
 share/texmf-dist/doc/latex/toptesi/FrontespiziAssemblati2.pdf
 share/texmf-dist/doc/latex/toptesi/Frontespizio-sss.pdf
 share/texmf-dist/doc/latex/toptesi/FrontespizioLandscape.pdf
 share/texmf-dist/doc/latex/toptesi/FrontespizioScudo.pdf
-share/texmf-dist/doc/latex/toptesi/README.TEXLIVE
+share/texmf-dist/doc/latex/toptesi/GuITlogo.pdf
+share/texmf-dist/doc/latex/toptesi/MPlogo.pdf
 share/texmf-dist/doc/latex/toptesi/README.txt
 share/texmf-dist/doc/latex/toptesi/TITDocScCropped.pdf
+share/texmf-dist/doc/latex/toptesi/TITlogoCropped.pdf
 share/texmf-dist/doc/latex/toptesi/Toptesi-con-topfront.pdf
 share/texmf-dist/doc/latex/toptesi/Toptesi-con-topfront.tex
 share/texmf-dist/doc/latex/toptesi/Toptesi-example-topfront.pdf
 share/texmf-dist/doc/latex/toptesi/Toptesi-example-topfront.tex
 share/texmf-dist/doc/latex/toptesi/VeraPDFiniziale.jpg
+share/texmf-dist/doc/latex/toptesi/logodue.pdf
+share/texmf-dist/doc/latex/toptesi/logoquattro.pdf
+share/texmf-dist/doc/latex/toptesi/logotre.pdf
+share/texmf-dist/doc/latex/toptesi/logouno.pdf
 share/texmf-dist/doc/latex/toptesi/lppl.tex
 share/texmf-dist/doc/latex/toptesi/topfront-example.pdf
 share/texmf-dist/doc/latex/toptesi/topfront-example.tex
