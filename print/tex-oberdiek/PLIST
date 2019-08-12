@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/01/28 08:21:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/08/12 11:40:53 markd Exp $
 bin/pdfatfi
 share/texmf-dist/bibtex/bib/oberdiek/oberdiek-bundle.bib
 share/texmf-dist/bibtex/bib/oberdiek/oberdiek-source.bib
@@ -99,6 +99,7 @@ share/texmf-dist/tex/latex/oberdiek/askinclude.sty
 share/texmf-dist/tex/latex/oberdiek/atenddvi.sty
 share/texmf-dist/tex/latex/oberdiek/atfi-dvipdfmx.def
 share/texmf-dist/tex/latex/oberdiek/atfi-dvips.def
+share/texmf-dist/tex/latex/oberdiek/atfi-luatex.def
 share/texmf-dist/tex/latex/oberdiek/atfi-pdftex.def
 share/texmf-dist/tex/latex/oberdiek/attachfile2.sty
 share/texmf-dist/tex/latex/oberdiek/atveryend.sty
