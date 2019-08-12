@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/01/01 21:28:59 adam Exp $
+$NetBSD: distinfo,v 1.6 2019/08/12 20:00:45 adam Exp $
 
-SHA1 (cssselect-1.0.3.tar.gz) = 396db1f50ac27836f71e9cfabeddba4365685f5b
-RMD160 (cssselect-1.0.3.tar.gz) = a950b4c4eae5302a5dd45f402a463c4c0449c254
-SHA512 (cssselect-1.0.3.tar.gz) = dec659e17d378b2afc23aecd59ccb80538c92978dd9622b9d909d398817a6dadcd28957c5983e7930135ca73ed0aad402617e41bc65088aa4a5b15c4324cadb0
-Size (cssselect-1.0.3.tar.gz) = 22824 bytes
+SHA1 (cssselect-1.1.0.tar.gz) = c34b045aafdafdbb583e5a43cd1db9270f1e7d1e
+RMD160 (cssselect-1.1.0.tar.gz) = 7d4898327b6d291a669bd82d1d6e568dfb0c5c64
+SHA512 (cssselect-1.1.0.tar.gz) = 98ce8233ef7486bb240ec55f0d07aff684c08376b301a2e8cbc0579515f204b56b1ed2cc7106bd7afac59a7286165ec87d73cf0db74e5741fed7b2ddfa04b544
+Size (cssselect-1.1.0.tar.gz) = 22718 bytes
