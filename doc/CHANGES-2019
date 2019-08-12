@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3401 2019/08/12 07:45:40 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3402 2019/08/12 11:52:52 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5598,3 +5598,10 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/py-pytoml to 0.1.21 [adam 2019-08-12]
 	Updated lang/py-mypy to 0.720 [adam 2019-08-12]
 	Updated security/py-oauthlib to 3.1.0 [adam 2019-08-12]
+	Updated pkgtools/texlive2pkg to 1.6 [markd 2019-08-12]
+	Updated print/tex-toptesi to 6.3.06 [markd 2019-08-12]
+	Updated print/tex-toptesi-doc to 6.3.06 [markd 2019-08-12]
+	Updated print/tex-tex4ht to 2019.51746 [markd 2019-08-12]
+	Updated print/tex-tex4ht-doc to 2019.51746 [markd 2019-08-12]
+	Updated print/tex-oberdiek to 2019 [markd 2019-08-12]
+	Updated print/tex-oberdiek-doc to 2019 [markd 2019-08-12]
