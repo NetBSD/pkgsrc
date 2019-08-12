@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/01/16 09:36:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/08/12 07:45:23 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -160,6 +160,9 @@ ${PYSITELIB}/oauthlib/openid/connect/core/endpoints/__init__.pyo
 ${PYSITELIB}/oauthlib/openid/connect/core/endpoints/pre_configured.py
 ${PYSITELIB}/oauthlib/openid/connect/core/endpoints/pre_configured.pyc
 ${PYSITELIB}/oauthlib/openid/connect/core/endpoints/pre_configured.pyo
+${PYSITELIB}/oauthlib/openid/connect/core/endpoints/userinfo.py
+${PYSITELIB}/oauthlib/openid/connect/core/endpoints/userinfo.pyc
+${PYSITELIB}/oauthlib/openid/connect/core/endpoints/userinfo.pyo
 ${PYSITELIB}/oauthlib/openid/connect/core/exceptions.py
 ${PYSITELIB}/oauthlib/openid/connect/core/exceptions.pyc
 ${PYSITELIB}/oauthlib/openid/connect/core/exceptions.pyo
