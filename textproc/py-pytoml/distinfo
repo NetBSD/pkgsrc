@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2018/12/09 20:50:51 adam Exp $
+$NetBSD: distinfo,v 1.7 2019/08/12 07:28:46 adam Exp $
 
-SHA1 (pytoml-0.1.20.tar.gz) = 6b06cc5bacceb78319502c4e39ab300b2c586c5a
-RMD160 (pytoml-0.1.20.tar.gz) = 5d129da241bd851c14a37ccb4b57790c83612a13
-SHA512 (pytoml-0.1.20.tar.gz) = 6f8349929cf14386ab3b999091ec0607da370e573465aadf4874197f2cee17539e3657d657fcfa43c98f7d53495e8c693298b9803705331d90ccef6f07ac26af
-Size (pytoml-0.1.20.tar.gz) = 8491 bytes
+SHA1 (pytoml-0.1.21.tar.gz) = 41b2a728de66332e7bcce167ba096d9ae2392154
+RMD160 (pytoml-0.1.21.tar.gz) = 35df9b38ed722b978413c2fb82c830c047a68562
+SHA512 (pytoml-0.1.21.tar.gz) = 6e261e7f979b7beb835061a90d098036b968b9f2e5b4ef74302e7bf59b49651d92e32fb0488831c0bc1325f14a2512e0b7681e8e2bbf59804835179812203875
+Size (pytoml-0.1.21.tar.gz) = 8783 bytes
