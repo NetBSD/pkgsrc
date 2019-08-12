@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2017/12/06 12:21:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/08/12 19:58:13 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -8,20 +8,12 @@ ${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/tzlocal/__init__.py
 ${PYSITELIB}/tzlocal/__init__.pyc
 ${PYSITELIB}/tzlocal/__init__.pyo
-${PYSITELIB}/tzlocal/test_data/Harare
-${PYSITELIB}/tzlocal/test_data/localtime/etc/localtime
-${PYSITELIB}/tzlocal/test_data/symlink_localtime/etc/localtime
-${PYSITELIB}/tzlocal/test_data/symlink_localtime/usr/share/zoneinfo/Africa/Harare
-${PYSITELIB}/tzlocal/test_data/timezone/etc/timezone
-${PYSITELIB}/tzlocal/test_data/timezone_setting/etc/conf.d/clock
-${PYSITELIB}/tzlocal/test_data/vardbzoneinfo/var/db/zoneinfo
-${PYSITELIB}/tzlocal/test_data/zone_setting/etc/sysconfig/clock
-${PYSITELIB}/tzlocal/tests.py
-${PYSITELIB}/tzlocal/tests.pyc
-${PYSITELIB}/tzlocal/tests.pyo
 ${PYSITELIB}/tzlocal/unix.py
 ${PYSITELIB}/tzlocal/unix.pyc
 ${PYSITELIB}/tzlocal/unix.pyo
+${PYSITELIB}/tzlocal/utils.py
+${PYSITELIB}/tzlocal/utils.pyc
+${PYSITELIB}/tzlocal/utils.pyo
 ${PYSITELIB}/tzlocal/win32.py
 ${PYSITELIB}/tzlocal/win32.pyc
 ${PYSITELIB}/tzlocal/win32.pyo
