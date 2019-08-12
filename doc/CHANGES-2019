@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3400 2019/08/12 07:29:06 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3401 2019/08/12 07:45:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5596,3 +5596,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-configparser to 3.8.1 [adam 2019-08-12]
 	Updated devel/py-whichcraft to 0.6.0 [adam 2019-08-12]
 	Updated textproc/py-pytoml to 0.1.21 [adam 2019-08-12]
+	Updated lang/py-mypy to 0.720 [adam 2019-08-12]
+	Updated security/py-oauthlib to 3.1.0 [adam 2019-08-12]
