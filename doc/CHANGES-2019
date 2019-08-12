@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3399 2019/08/12 07:08:39 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3400 2019/08/12 07:29:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5594,3 +5594,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/ruby-nokogiri to 1.10.4 [tsutsui 2019-08-11]
 	Updated devel/py-pip to 19.2.2 [adam 2019-08-12]
 	Updated devel/py-configparser to 3.8.1 [adam 2019-08-12]
+	Updated devel/py-whichcraft to 0.6.0 [adam 2019-08-12]
+	Updated textproc/py-pytoml to 0.1.21 [adam 2019-08-12]
