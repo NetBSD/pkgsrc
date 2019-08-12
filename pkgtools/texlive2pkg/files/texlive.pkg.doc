@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: texlive.pkg.doc,v 1.1 2016/01/24 19:34:44 markd Exp $
+# $NetBSD: texlive.pkg.doc,v 1.2 2019/08/12 08:35:14 markd Exp $
 
 $pkgname = $ARGV[0];
 $revision= $ARGV[1];
@@ -53,7 +53,7 @@ PKGNAME=	tex-\${DISTNAME:S/./-/}-$version
 TEXLIVE_REV=	$revision
 
 MAINTAINER=	pkgsrc-users\@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/$homepage
+HOMEPAGE=	https://ctan.org/pkg/$homepage
 COMMENT=	Documentation for tex-${pkgname}
 LICENSE=	$license
 
