@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: texlive.pkg,v 1.6 2019/06/03 10:36:25 markd Exp $
+# $NetBSD: texlive.pkg,v 1.7 2019/08/12 08:35:14 markd Exp $
 
 $version = "2019";
 $pkgname = $shortdesc = $revision = $license = $longdesc = $depend = $homepage = "";
@@ -47,10 +47,14 @@ $license = "lppl-1.3c" if ($license eq "lppl");
 $license = "lppl-1.3c" if ($license eq "lppl1.3");
 $license = "lppl-1.3c" if ($license eq "lppl1.3c");
 $license = "ofl-v1.1 AND lppl-1.3c" if ($license eq "ofllppl1.3");
+$license = "ofl-v1.1 AND lppl-1.3c" if ($license eq "ofllppl1.3c");
 $license = "ofl-v1.1 AND lppl-1.3c" if ($license eq "ofllppl");
 $license = "gnu-gpl-v2 AND ofl-v1.1 AND lppl-1.3c" if ($license eq "gplofllppl");
 $license = "gnu-gpl-v2 AND lppl-1.3c" if ($license eq "lpplgpl");
+$license = "gnu-gpl-v2 AND lppl-1.3c" if ($license eq "gpl2lppl");
 $license = "apache-2.0 AND lppl-1.3c" if ($license eq "apache2lppl");
+$license = "apache-2.0 AND lppl-1.3c" if ($license eq "apache2lppl1.3c");
+$license = "apache-2.0 AND lppl-1.3c" if ($license eq "lppl1.3capache2");
 $license = "mit AND lppl-1.3c" if ($license eq "mitlppl");
 $license = "gnu-gpl-v2 AND cc-by-sa-v4.0" if ($license eq "gpl3+cc-by-sa-4");
 $license = "modified-bsd" if ($license eq "bsd");
@@ -88,7 +92,7 @@ PKGNAME=	tex-\${DISTNAME}-$version
 TEXLIVE_REV=	$revision
 
 MAINTAINER=	pkgsrc-users\@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/$homepage
+HOMEPAGE=	https://ctan.org/pkg/$homepage
 COMMENT=	$shortdesc
 LICENSE=	$license
 $extras
