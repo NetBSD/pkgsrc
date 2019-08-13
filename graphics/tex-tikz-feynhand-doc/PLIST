@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2019/08/13 20:28:15 markd Exp $
+share/texmf-dist/doc/latex/tikz-feynhand/README.md
+share/texmf-dist/doc/latex/tikz-feynhand/changes.txt
+share/texmf-dist/doc/latex/tikz-feynhand/shell_escape.jpg
+share/texmf-dist/doc/latex/tikz-feynhand/tikz-feynhand.userguide.pdf
+share/texmf-dist/doc/latex/tikz-feynhand/tikz-feynhand.userguide.tex

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2019/08/13 20:28:15 markd Exp $
+share/texmf-dist/tex/latex/tikz-feynhand/tikz-feynhand.sty
+share/texmf-dist/tex/latex/tikz-feynhand/tikzfeynhand.keys.code.tex
+share/texmf-dist/tex/latex/tikz-feynhand/tikzlibraryfeynhand.code.tex
