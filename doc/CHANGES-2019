@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3425 2019/08/13 20:56:30 markd Exp $
+$NetBSD: CHANGES-2019,v 1.3426 2019/08/13 22:50:58 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5640,3 +5640,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added print/tex-ragged2e-doc version 2.2 [markd 2019-08-13]
 	Updated print/tex-ms to 2019 [markd 2019-08-13]
 	Updated print/tex-ms-doc to 2019 [markd 2019-08-13]
+	Updated devel/py-ruamel-yaml to 0.15.100 [gdt 2019-08-13]
