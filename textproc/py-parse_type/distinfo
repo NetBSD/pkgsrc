@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/08/28 09:56:44 adam Exp $
+$NetBSD: distinfo,v 1.2 2019/08/13 11:00:35 adam Exp $
 
-SHA1 (parse_type-0.4.2.tar.gz) = 8b8525c63ef4a39afc1da27c6c37c4639860616f
-RMD160 (parse_type-0.4.2.tar.gz) = 7ea4613143cc12c5f3e8313ec52d667351365acf
-SHA512 (parse_type-0.4.2.tar.gz) = 43044c09c73aa367fd5b565f045323fb7d2d44c89da8e8278223f17167431784023d7df830c5e0f6e2f5d7601f7d080bf57e86a4cc5340bce0e7e645a3d84208
-Size (parse_type-0.4.2.tar.gz) = 264473 bytes
+SHA1 (parse_type-0.5.2.tar.gz) = 89bf3d3ea0455b1f46b59221b8a3b033bf17ef58
+RMD160 (parse_type-0.5.2.tar.gz) = 5622e6f1e73611464e66c43b8363476cafce0285
+SHA512 (parse_type-0.5.2.tar.gz) = c3f586bee000e09ce1c115bd24679ee59d60b51319ee37233e0cdc358db6b30af3700f95f3e2172b3e64b02ede23aea3d3bb0aeab366e9b9fa6249459daf7e06
+Size (parse_type-0.5.2.tar.gz) = 272082 bytes
