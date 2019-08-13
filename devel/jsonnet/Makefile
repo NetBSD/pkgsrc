@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/06/21 20:55:29 seb Exp $
+# $NetBSD: Makefile,v 1.5 2019/08/13 18:04:28 seb Exp $
 
-DISTNAME=	jsonnet-0.10.0
+DISTNAME=	jsonnet-0.13.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -37,5 +37,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/include/libjsonnet.h ${DESTDIR}${PREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/include/libjsonnet++.h ${DESTDIR}${PREFIX}/include
 	${INSTALL_PROGRAM} ${WRKSRC}/jsonnet ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/jsonnetfmt ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
