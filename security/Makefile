@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.708 2019/08/11 16:52:12 fox Exp $
+# $NetBSD: Makefile,v 1.709 2019/08/13 02:39:45 brook Exp $
 #
 
 COMMENT=	Security tools
@@ -601,6 +601,7 @@ SUBDIR+=	tripwire
 SUBDIR+=	validns
 SUBDIR+=	vault
 SUBDIR+=	volatility
+SUBDIR+=	xca
 SUBDIR+=	xml-security-c
 SUBDIR+=	xmlsec1
 SUBDIR+=	yafic

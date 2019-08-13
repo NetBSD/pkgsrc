@@ -1,0 +1,12 @@
+X - Certificate and Key management
+
+This application is intended for creating and managing X.509
+certificates, certificate requests, RSA, DSA and EC private keys,
+Smartcards and CRLs.  Everything that is needed for a CA is
+implemented.  All CAs can sign sub-CAs recursively. These certificate
+chains are shown clearly.  For an easy company-wide use there are
+customiseable templates that can be used for certificate or request
+generation.
+
+All cryptographic data is stored in a SQL database. SQLite, MySQL
+(MariaDB) and PostgreSQL databases are supported.
