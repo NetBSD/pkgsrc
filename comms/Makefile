@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2019/08/13 11:44:10 gdt Exp $
+# $NetBSD: Makefile,v 1.111 2019/08/13 11:46:43 gdt Exp $
 #
 
 COMMENT=	Communication utilities
@@ -70,6 +70,7 @@ SUBDIR+=	plp
 SUBDIR+=	py-colorama
 SUBDIR+=	py-esptool
 SUBDIR+=	py-gammu
+SUBDIR+=	py-nodemcu-uploader
 SUBDIR+=	py-serial
 SUBDIR+=	py-termstyle
 SUBDIR+=	qpage
