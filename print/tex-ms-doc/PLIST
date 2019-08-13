@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/05/12 01:23:48 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/08/13 20:42:39 markd Exp $
 share/texmf-dist/doc/latex/ms/count1to.pdf
 share/texmf-dist/doc/latex/ms/everysel.pdf
 share/texmf-dist/doc/latex/ms/everyshi.asc
@@ -8,4 +8,3 @@ share/texmf-dist/doc/latex/ms/multitoc.asc
 share/texmf-dist/doc/latex/ms/multitoc.bug
 share/texmf-dist/doc/latex/ms/multitoc.pdf
 share/texmf-dist/doc/latex/ms/prelim2e.pdf
-share/texmf-dist/doc/latex/ms/ragged2e.pdf
