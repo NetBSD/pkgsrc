@@ -1,32 +1,7 @@
-$NetBSD: distinfo,v 1.57 2018/10/17 12:59:49 leot Exp $
+$NetBSD: distinfo,v 1.58 2019/08/13 15:16:54 rjs Exp $
 
-SHA1 (sbcl-1.4.3-source.tar.bz2) = cf610061ee2e8bf90efcf830f45412b68f43d0dc
-RMD160 (sbcl-1.4.3-source.tar.bz2) = eb3024ae6980239c6784ee4d234874782870cca4
-SHA512 (sbcl-1.4.3-source.tar.bz2) = e730f4f095e2c3b52836df0beae08219a2e3883b4e20ba7303f24d8e51aec7c6d278ad6f9d57fac36b5aebec3fefb118d07bfd4ca48a44a3324345f2993fca62
-Size (sbcl-1.4.3-source.tar.bz2) = 5953041 bytes
+SHA1 (sbcl-1.5.5-source.tar.bz2) = da88b751237d6a41a4ced1c88adac02e6acbedb2
+RMD160 (sbcl-1.5.5-source.tar.bz2) = 181844dc01653babd1c5a576669f1f76e0b4654b
+SHA512 (sbcl-1.5.5-source.tar.bz2) = 9de71dfc767e7d96e278b6ffe69465be5a829d9228be4e44c7ec511cbb6cec98cce2ae99e3a40d8917832e61d587f1302861f9e1808fe0b7e1fe0e2105d4c4b8
+Size (sbcl-1.5.5-source.tar.bz2) = 6351480 bytes
 SHA1 (patch-ab) = b087921f7317523fd78396518dfd2cb1c8e6d5f9
-SHA1 (patch-src_runtime_GNUmakefile) = bb1fffdaa90897d4ddcaedc3d480778917348281
-SHA1 (patch-src_runtime_backtrace.c) = ba3d7d152b279652d7074ebc9ba615c9d899f35c
-SHA1 (patch-src_runtime_breakpoint.c) = 019d98692411b5701ce14c023ed3afab71033323
-SHA1 (patch-src_runtime_bsd-os.c) = 1c2bb3ce517aea03bbc4f09708e8300085253286
-SHA1 (patch-src_runtime_bsd-os.h) = df48abd32b3b89b9d8a0ba4068c6723bea6617d6
-SHA1 (patch-src_runtime_coreparse.c) = 46f8b5ebea5ba3db7baaed124aaf15f2686f7202
-SHA1 (patch-src_runtime_dynbind.c) = 44b96758392c8d71834e665dfd62bc7464a033c9
-SHA1 (patch-src_runtime_gc-common.c) = e74f4537971ee61181f2ed9d1f88fedafd980a47
-SHA1 (patch-src_runtime_gencgc.c) = 6862366d1998205f6bcf9cfded9acda1d03a2f52
-SHA1 (patch-src_runtime_globals.c) = ad8aedc43460892edb96e55276f1343abda2b7f5
-SHA1 (patch-src_runtime_interr.c) = a12a0a6826d7dd506d6012f10f69862f2a551174
-SHA1 (patch-src_runtime_interrupt.c) = c6675f60565cc411a34e58927c9ca2510f822328
-SHA1 (patch-src_runtime_monitor.c) = cdf86207600a387fb092fa8018dd5a08f8c9f4f2
-SHA1 (patch-src_runtime_os-common.c) = 966e3d23e3b7024c4c6b4e1c704a505b1a56008f
-SHA1 (patch-src_runtime_os.h) = 68d6a85ed89e8534fe7c4178109b5208075dcee4
-SHA1 (patch-src_runtime_parse.c) = 2648ececdbc2fe21abde1565cb91b003d9676c2e
-SHA1 (patch-src_runtime_purify.c) = 8afaf55b47fb73ba08abee11ea6b7b04b77f917f
-SHA1 (patch-src_runtime_runtime.c) = 4282b1cdc47f94174d5adde3fee1f8e6c3276528
-SHA1 (patch-src_runtime_runtime.h) = 85d97c6c367ba60334c5c5ac56a34fd5a9899025
-SHA1 (patch-src_runtime_save.c) = acd4ecbf927df11e167b124258f659690ed0b782
-SHA1 (patch-src_runtime_thread.c) = 6ebd2b4e2bbe13e0e962a54b219fd4518d948fc9
-SHA1 (patch-src_runtime_validate.c) = 842f288f21fe865ab1475c5ba84b157c94aa6ec6
-SHA1 (patch-src_runtime_vars.c) = 390e56059243b02dfe31b769d1f8033aeedece90
-SHA1 (patch-src_runtime_x86-64-bsd-os.c) = 33fab747acaefc537d2f73da8be6b79ff5470dc3
-SHA1 (patch-tools-for-build_grovel-headers.c) = e91f06c7c83fbf0e32ef5607bec043029ae8879c

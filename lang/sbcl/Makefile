@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.79 2019/05/23 19:23:04 rillig Exp $
+# $NetBSD: Makefile,v 1.80 2019/08/13 15:16:54 rjs Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
-PKGNAME=		sbcl-1.4.3
-PKGREVISION=		1
+PKGNAME=		sbcl-1.5.5
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sbcl/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		asau@inbox.ru
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.sbcl.org/
 COMMENT=		SBCL, a Common Lisp implementation
 
