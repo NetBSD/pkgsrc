@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2017/09/06 16:49:41 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/08/13 20:42:39 markd Exp $
 
 DISTNAME=	ms
-PKGNAME=	tex-${DISTNAME}-2014
-TEXLIVE_REV=	29849
+PKGNAME=	tex-${DISTNAME}-2019
+TEXLIVE_REV=	51784
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	https://ctan.org/pkg/ms
 COMMENT=	Various LaTeX packages by Martin Schroeder
 LICENSE=	lppl-1.3c
 
