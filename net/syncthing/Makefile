@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2019/07/14 20:48:39 triaxx Exp $
+# $NetBSD: Makefile,v 1.93 2019/08/13 23:41:29 gdt Exp $
 
 # Upstream used to frequently break protocol compatibility.  While
 # users of pkgsrc syncthing on multiple systems can update
@@ -16,6 +16,7 @@
 # a fuller explanation.
 DISTNAME=	syncthing-source-v1.2.0
 PKGNAME=	${DISTNAME:S,source-v,,}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -73,7 +74,7 @@ FILES_SUBST+=		SYNCTHING_GROUP=${SYNCTHING_GROUP}
 RCD_SCRIPTS+=		syncthing
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GO} run build.go build syncthing
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GO} run build.go -no-upgrade build syncthing
 
 # Binaries other than syncthing proper should perhaps be installed.
 do-install:
