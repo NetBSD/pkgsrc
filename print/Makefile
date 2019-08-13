@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.739 2019/08/13 02:25:05 brook Exp $
+# $NetBSD: Makefile,v 1.740 2019/08/13 02:27:23 brook Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -986,6 +986,7 @@ SUBDIR+=	tex-newunicodechar
 SUBDIR+=	tex-newunicodechar-doc
 SUBDIR+=	tex-nextpage
 SUBDIR+=	tex-nfssext-cfr
+SUBDIR+=	tex-nfssext-cfr-doc
 SUBDIR+=	tex-nolbreaks
 SUBDIR+=	tex-nolbreaks-doc
 SUBDIR+=	tex-nomencl
