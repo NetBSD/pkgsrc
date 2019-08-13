@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile,v 1.1 2019/08/13 02:39:45 brook Exp $
+
+Remove needless otool commands.
+
+--- Makefile.orig	2018-11-07 18:06:57.000000000 +0000
++++ Makefile
+@@ -179,10 +179,7 @@ $(DMGSTAGE): xca$(SUFFIX)
+ 	$(MAKE) $(APPTARGET)
+ 	cp -r $(DMGSTAGE)/xca.app/Contents/Resources/*.html $(DMGSTAGE)/manual
+ 	ln -s xca.html $(DMGSTAGE)/manual/index.html
+-	otool -l $(DMGSTAGE)/xca.app/Contents/MacOS/xca | grep -e "chris\|Users" >&2
+ 	$(MACDEPLOYQT) $(DMGSTAGE)/xca.app
+-	rpath="`otool -l $(DMGSTAGE)/xca.app/Contents/MacOS/xca | grep -e "chris\|Users"`" && \
+-	if test -n "$$rpath"; then echo "  ERROR $$rpath"; false; fi
+ 	-codesign --force --deep --signature-size=96000 -s "Christian Hohnstaedt" $(DMGSTAGE)/xca.app --timestamp
+ 
+ xca.dmg: $(MACTARGET).dmg
