@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.742 2019/08/13 02:32:06 brook Exp $
+# $NetBSD: Makefile,v 1.743 2019/08/13 20:35:40 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1122,6 +1122,8 @@ SUBDIR+=	tex-qtree
 SUBDIR+=	tex-r_und_s
 SUBDIR+=	tex-r_und_s-doc
 SUBDIR+=	tex-rcs
+SUBDIR+=	tex-ragged2e
+SUBDIR+=	tex-ragged2e-doc
 SUBDIR+=	tex-rcsinfo
 SUBDIR+=	tex-rcsinfo-doc
 SUBDIR+=	tex-readarray
