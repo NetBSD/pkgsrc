@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2017/10/05 19:40:35 seb Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/08/13 18:04:28 seb Exp $
 bin/jsonnet
+bin/jsonnetfmt
 include/libjsonnet++.h
 include/libjsonnet.h
 lib/libjsonnet++.so
