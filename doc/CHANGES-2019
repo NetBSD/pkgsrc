@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3415 2019/08/13 11:00:51 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3416 2019/08/13 11:09:15 ng0 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5624,3 +5624,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added security/xca version 2.1.2 [brook 2019-08-13]
 	Updated devel/py-zconfig to 3.5.0 [adam 2019-08-13]
 	Updated textproc/py-parse_type to 0.5.2 [adam 2019-08-13]
+	Updated www/libmicrohttpd to 0.9.66 [ng0 2019-08-13]
