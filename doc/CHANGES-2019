@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3414 2019/08/13 02:39:45 brook Exp $
+$NetBSD: CHANGES-2019,v 1.3415 2019/08/13 11:00:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5622,3 +5622,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Added print/tex-outline version 2019 [brook 2019-08-13]
 	Added print/tex-outline-doc version 2019 [brook 2019-08-13]
 	Added security/xca version 2.1.2 [brook 2019-08-13]
+	Updated devel/py-zconfig to 3.5.0 [adam 2019-08-13]
+	Updated textproc/py-parse_type to 0.5.2 [adam 2019-08-13]
