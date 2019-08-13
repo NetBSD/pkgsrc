@@ -1,17 +1,20 @@
-@comment $NetBSD: PLIST,v 1.23 2017/09/04 18:05:58 adam Exp $
-bin/rst2html-${PYVERSSUFFIX}.py
-bin/rst2html4-${PYVERSSUFFIX}.py
-bin/rst2html5-${PYVERSSUFFIX}.py
-bin/rst2latex-${PYVERSSUFFIX}.py
-bin/rst2man-${PYVERSSUFFIX}.py
-bin/rst2odt-${PYVERSSUFFIX}.py
-bin/rst2odt_prepstyles-${PYVERSSUFFIX}.py
-bin/rst2pseudoxml-${PYVERSSUFFIX}.py
-bin/rst2s5-${PYVERSSUFFIX}.py
-bin/rst2xetex-${PYVERSSUFFIX}.py
-bin/rst2xml-${PYVERSSUFFIX}.py
-bin/rstpep2html-${PYVERSSUFFIX}.py
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.24 2019/08/13 12:35:12 adam Exp $
+bin/rst2html-${PYVERSSUFFIX}
+bin/rst2html4-${PYVERSSUFFIX}
+bin/rst2html5-${PYVERSSUFFIX}
+bin/rst2latex-${PYVERSSUFFIX}
+bin/rst2man-${PYVERSSUFFIX}
+bin/rst2odt-${PYVERSSUFFIX}
+bin/rst2odt_prepstyles-${PYVERSSUFFIX}
+bin/rst2pseudoxml-${PYVERSSUFFIX}
+bin/rst2s5-${PYVERSSUFFIX}
+bin/rst2xetex-${PYVERSSUFFIX}
+bin/rst2xml-${PYVERSSUFFIX}
+bin/rstpep2html-${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/docutils/__init__.py
 ${PYSITELIB}/docutils/__init__.pyc
 ${PYSITELIB}/docutils/__init__.pyo
@@ -78,6 +81,9 @@ ${PYSITELIB}/docutils/languages/it.pyo
 ${PYSITELIB}/docutils/languages/ja.py
 ${PYSITELIB}/docutils/languages/ja.pyc
 ${PYSITELIB}/docutils/languages/ja.pyo
+${PYSITELIB}/docutils/languages/ko.py
+${PYSITELIB}/docutils/languages/ko.pyc
+${PYSITELIB}/docutils/languages/ko.pyo
 ${PYSITELIB}/docutils/languages/lt.py
 ${PYSITELIB}/docutils/languages/lt.pyc
 ${PYSITELIB}/docutils/languages/lt.pyo
@@ -229,6 +235,9 @@ ${PYSITELIB}/docutils/parsers/rst/languages/it.pyo
 ${PYSITELIB}/docutils/parsers/rst/languages/ja.py
 ${PYSITELIB}/docutils/parsers/rst/languages/ja.pyc
 ${PYSITELIB}/docutils/parsers/rst/languages/ja.pyo
+${PYSITELIB}/docutils/parsers/rst/languages/ko.py
+${PYSITELIB}/docutils/parsers/rst/languages/ko.pyc
+${PYSITELIB}/docutils/parsers/rst/languages/ko.pyo
 ${PYSITELIB}/docutils/parsers/rst/languages/lt.py
 ${PYSITELIB}/docutils/parsers/rst/languages/lt.pyc
 ${PYSITELIB}/docutils/parsers/rst/languages/lt.pyo
