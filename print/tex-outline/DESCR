@@ -1,0 +1,2 @@
+The package defines an outline environment, which provides
+facilities similar to enumerate, but up to 6 levels deep.
