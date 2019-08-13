@@ -1,9 +1,13 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2018/09/01 12:04:56 tnn Exp $
+$NetBSD: MESSAGE,v 1.3 2019/08/13 21:28:47 tnn Exp $
 
 Example command to install U-Boot to an empty SD card:
 
 # dd if=${LOCALBASE}/share/u-boot/rockpro64/rksd_loader.img seek=64 of=/dev/rld0d
+
+Alternatively, to install to SPI flash:
+
+dd if=${LOCALBASE}/share/u-boot/rockpro64/rkspi_loader.img bs=64k of=/dev/spiflash0
 
 See also http://opensource.rock-chips.com/wiki_Boot_option
 
