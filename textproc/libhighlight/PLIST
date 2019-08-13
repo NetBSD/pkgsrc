@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2019/06/20 03:08:12 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/08/13 01:48:49 schmonz Exp $
 lib/libhighlight.la
 share/doc/highlight/AUTHORS
 share/doc/highlight/COPYING
@@ -136,6 +136,7 @@ share/highlight/langDefs/express.lang
 share/highlight/langDefs/fame.lang
 share/highlight/langDefs/fasm.lang
 share/highlight/langDefs/felix.lang
+share/highlight/langDefs/fish.lang
 share/highlight/langDefs/fortran77.lang
 share/highlight/langDefs/fortran90.lang
 share/highlight/langDefs/frink.lang
@@ -185,9 +186,9 @@ share/highlight/langDefs/lua.lang
 share/highlight/langDefs/luban.lang
 share/highlight/langDefs/make.lang
 share/highlight/langDefs/maple.lang
+share/highlight/langDefs/markdown.lang
 share/highlight/langDefs/matlab.lang
 share/highlight/langDefs/maya.lang
-share/highlight/langDefs/md.lang
 share/highlight/langDefs/mercury.lang
 share/highlight/langDefs/meson.lang
 share/highlight/langDefs/miranda.lang
