@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2019/08/11 12:14:59 markd Exp $
+# $NetBSD: Makefile,v 1.47 2019/08/13 20:55:15 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2019pre3
+PKGNAME=	texlive-${DISTNAME}-2019pre4
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	51779
@@ -77,7 +77,7 @@ DEPENDS+=	tex-background-[0-9]*:../../print/tex-background
 # depend beamerauxtheme
 # depend beamercolorthemeowl
 # depend beamerdarkthemes
-# depend beamerposter
+DEPENDS+=	tex-beamerposter-[0-9]*:../../print/tex-beamerposter
 # depend beamersubframe
 # depend beamertheme-cuerna
 # depend beamertheme-detlevcm
@@ -799,7 +799,7 @@ DEPENDS+=	tex-newunicodechar-[0-9]*:../../print/tex-newunicodechar
 # depend newvbtm
 # depend newverbs
 DEPENDS+=	tex-nextpage-[0-9]*:../../print/tex-nextpage
-# depend nfssext-cfr
+DEPENDS+=	tex-nfssext-cfr-[0-9]*:../../print/tex-nfssext-cfr
 # depend nicefilelist
 # depend niceframe
 # depend nicetext
@@ -837,7 +837,7 @@ DEPENDS+=	tex-onlyamsmath-[0-9]*:../../print/tex-onlyamsmath
 # depend optidef
 DEPENDS+=	tex-optional-[0-9]*:../../print/tex-optional
 DEPENDS+=	tex-options-[0-9]*:../../print/tex-options
-# depend outline
+DEPENDS+=	tex-outline-[0-9]*:../../print/tex-outline
 # depend outliner
 # depend outlines
 # depend outlining
@@ -908,7 +908,7 @@ DEPENDS+=	tex-placeins-[0-9]*:../../print/tex-placeins
 DEPENDS+=	tex-polytable-[0-9]*:../../print/tex-polytable
 # depend postcards
 # depend poster-mac
-# depend powerdot
+DEPENDS+=	tex-powerdot-[0-9]*:../../print/tex-powerdot
 # depend ppr-prv
 DEPENDS+=	tex-preprint-[0-9]*:../../print/tex-preprint
 # depend pressrelease
