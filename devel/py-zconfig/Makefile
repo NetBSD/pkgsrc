@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2019/02/18 12:48:58 adam Exp $
+# $NetBSD: Makefile,v 1.21 2019/08/13 10:55:19 adam Exp $
 
-DISTNAME=	ZConfig-3.4.0
+DISTNAME=	ZConfig-3.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=Z/ZConfig/}
@@ -11,7 +11,8 @@ COMMENT=	Configuration library
 LICENSE=	zpl-2.1
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
-#TEST_DEPENDS+=	${PYPKGPREFIX}-manuel-[0-9]*:../../?/py-manuel
+TEST_DEPENDS+=	${PYPKGPREFIX}-manuel-[0-9]*:../../textproc/py-manuel
+TEST_DEPENDS+=	${PYPKGPREFIX}-zope.exceptions-[0-9]*:../../devel/py-zope.exceptions
 TEST_DEPENDS+=	${PYPKGPREFIX}-ZopeTestrunner-[0-9]*:../../devel/py-ZopeTestrunner
 
 USE_LANGUAGES=	# none
