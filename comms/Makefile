@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2018/07/16 21:53:48 joerg Exp $
+# $NetBSD: Makefile,v 1.110 2019/08/13 11:44:10 gdt Exp $
 #
 
 COMMENT=	Communication utilities
@@ -68,6 +68,7 @@ SUBDIR+=	pilot-link-libs
 SUBDIR+=	pilotmgr
 SUBDIR+=	plp
 SUBDIR+=	py-colorama
+SUBDIR+=	py-esptool
 SUBDIR+=	py-gammu
 SUBDIR+=	py-serial
 SUBDIR+=	py-termstyle
