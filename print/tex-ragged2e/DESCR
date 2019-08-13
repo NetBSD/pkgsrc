@@ -1,0 +1,5 @@
+The package defines new commands \Centering, \RaggedLeft, and
+\RaggedRight and new environments Center, FlushLeft, and
+FlushRight, which set ragged text and are easily configurable
+to allow hyphenation (the corresponding commands in LaTeX, all
+of whose names are lower-case, prevent hyphenation altogether).
