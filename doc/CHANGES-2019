@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3424 2019/08/13 18:55:06 gdt Exp $
+$NetBSD: CHANGES-2019,v 1.3425 2019/08/13 20:56:30 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5634,3 +5634,9 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-importlib-metadata to 0.19 [gdt 2019-08-13]
 	Updated devel/jsonnet to 0.13.0 [seb 2019-08-13]
 	Updated devel/py-python-slugify to 3.0.3nb1 [gdt 2019-08-13]
+	Added graphics/tex-tikz-feynhand version 1.0.0 [markd 2019-08-13]
+	Added graphics/tex-tikz-feynhand-doc version 1.0.0 [markd 2019-08-13]
+	Added print/tex-ragged2e version 2.2 [markd 2019-08-13]
+	Added print/tex-ragged2e-doc version 2.2 [markd 2019-08-13]
+	Updated print/tex-ms to 2019 [markd 2019-08-13]
+	Updated print/tex-ms-doc to 2019 [markd 2019-08-13]
