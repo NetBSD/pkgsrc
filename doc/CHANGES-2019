@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3410 2019/08/13 02:25:05 brook Exp $
+$NetBSD: CHANGES-2019,v 1.3411 2019/08/13 02:27:23 brook Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5618,3 +5618,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added print/tex-beamerposter version 1.13 [brook 2019-08-13]
 	Added print/tex-beamerposter-doc version 1.13 [brook 2019-08-13]
 	Added print/tex-nfssext-cfr version 2019 [brook 2019-08-13]
+	Added print/tex-nfssext-cfr-doc version 2019 [brook 2019-08-13]

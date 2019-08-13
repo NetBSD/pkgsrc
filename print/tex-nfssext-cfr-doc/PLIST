@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2019/08/13 02:27:24 brook Exp $
+share/texmf-dist/doc/latex/nfssext-cfr/README
+share/texmf-dist/doc/latex/nfssext-cfr/nfssext-cfr.pdf
+share/texmf-dist/doc/latex/nfssext-cfr/nfssext-cfr.tex
