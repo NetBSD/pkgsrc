@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3421 2019/08/13 16:41:40 tsutsui Exp $
+$NetBSD: CHANGES-2019,v 1.3422 2019/08/13 16:53:06 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5631,3 +5631,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-google-api-python-client to 1.7.11 [adam 2019-08-13]
 	Updated lang/sbcl to 1.5.5 [rjs 2019-08-13]
 	Updated multimedia/adobe-flash-player to 32.0.0.238 [tsutsui 2019-08-13]
+	Updated devel/py-importlib-metadata to 0.19 [gdt 2019-08-13]
