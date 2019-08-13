@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3418 2019/08/13 11:47:06 gdt Exp $
+$NetBSD: CHANGES-2019,v 1.3419 2019/08/13 12:43:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5627,3 +5627,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/libmicrohttpd to 0.9.66 [ng0 2019-08-13]
 	Added comms/py-esptool version 2.7 [gdt 2019-08-13]
 	Added comms/py-nodemcu-uploader version 0.4.3 [gdt 2019-08-13]
+	Updated textproc/py-docutils to 0.15.2 [adam 2019-08-13]
+	Updated www/py-google-api-python-client to 1.7.11 [adam 2019-08-13]
