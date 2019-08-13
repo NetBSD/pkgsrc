@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2019/07/21 15:17:13 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2019/08/13 21:28:47 tnn Exp $
 
 UBOOT_TARGET=		rockpro64
 UBOOT_CONFIG=		rockpro64-rk3399_defconfig
-UBOOT_BIN=		idbloader.img rksd_loader.img u-boot.itb
+UBOOT_BIN=		idbloader.img rksd_loader.img rkspi_loader.img u-boot.itb
 
 DISTINFO_FILE=	${.CURDIR}/../../sysutils/u-boot-rockpro64/distinfo
 
