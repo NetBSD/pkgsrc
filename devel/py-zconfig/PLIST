@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2019/02/18 12:48:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/08/13 10:55:19 adam Exp $
 bin/zconfig-${PYVERSSUFFIX}
 bin/zconfig_schema2html-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -142,6 +142,7 @@ ${PYSITELIB}/ZConfig/tests/library/widget/__init__.pyc
 ${PYSITELIB}/ZConfig/tests/library/widget/__init__.pyo
 ${PYSITELIB}/ZConfig/tests/library/widget/component.xml
 ${PYSITELIB}/ZConfig/tests/library/widget/extra.xml
+${PYSITELIB}/ZConfig/tests/sphinx_test_schema.xml
 ${PYSITELIB}/ZConfig/tests/support.py
 ${PYSITELIB}/ZConfig/tests/support.pyc
 ${PYSITELIB}/ZConfig/tests/support.pyo
