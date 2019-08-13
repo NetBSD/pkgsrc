@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.741 2019/08/13 02:29:53 brook Exp $
+# $NetBSD: Makefile,v 1.742 2019/08/13 02:32:06 brook Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1026,6 +1026,7 @@ SUBDIR+=	tex-otibet-doc
 SUBDIR+=	tex-oubraces
 SUBDIR+=	tex-oubraces-doc
 SUBDIR+=	tex-outline
+SUBDIR+=	tex-outline-doc
 SUBDIR+=	tex-overpic
 SUBDIR+=	tex-pagenote
 SUBDIR+=	tex-pagenote-doc
