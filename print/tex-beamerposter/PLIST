@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2019/08/13 02:19:16 brook Exp $
+share/texmf-dist/tex/latex/beamerposter/beamerposter.sty
+share/texmf-dist/tex/latex/beamerposter/beamerthemeAachen.sty
+share/texmf-dist/tex/latex/beamerposter/beamerthemeI6dv.sty
+share/texmf-dist/tex/latex/beamerposter/beamerthemeI6pd.sty
+share/texmf-dist/tex/latex/beamerposter/beamerthemeI6pd2.sty
+share/texmf-dist/tex/latex/beamerposter/beamerthemeI6td.sty
+share/texmf-dist/tex/latex/beamerposter/beamerthemeZH.sty
