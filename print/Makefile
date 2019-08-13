@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.737 2019/08/13 02:19:16 brook Exp $
+# $NetBSD: Makefile,v 1.738 2019/08/13 02:21:43 brook Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -295,6 +295,7 @@ SUBDIR+=	tex-bbm-macros-doc
 SUBDIR+=	tex-beamer
 SUBDIR+=	tex-beamer-doc
 SUBDIR+=	tex-beamerposter
+SUBDIR+=	tex-beamerposter-doc
 SUBDIR+=	tex-beton
 SUBDIR+=	tex-beton-doc
 SUBDIR+=	tex-biblatex
