@@ -1,0 +1,17 @@
+$NetBSD: patch-tclpkg_gv_Makefile.in.patch,v 1.1 2019/08/13 03:07:00 brook Exp $
+
+Add missing -I flags to point to perl files.
+
+See https://gitlab.com/graphviz/graphviz/issues/1576.
+
+--- tclpkg/gv/Makefile.in.orig	2019-08-11 14:47:21.000000000 -0600
++++ tclpkg/gv/Makefile.in	2019-08-11 15:00:23.000000000 -0600
+@@ -1054,7 +1054,7 @@
+ libgv_perl_la_SOURCES = $(BASESOURCES) gv_dummy_init.c
+ libgv_perl_la_LIBADD = $(BASELIBS) $(PERL_LIBS)
+ libgv_perl_la_LDFLAGS = -module -avoid-version $(PERL_LD)
+-libgv_perl_la_CPPFLAGS = $(BASECPPFLAGS) $(PERL_CC)
++libgv_perl_la_CPPFLAGS = $(BASECPPFLAGS) $(PERL_INCLUDES) $(PERL_CC)
+ pkgphpdir = $(pkglibdir)/php
+ PHP_data = gv.php
+ nodist_libgv_php_la_SOURCES = gv_php.cpp php_gv.h
