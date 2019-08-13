@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2019/08/13 02:39:45 brook Exp $
+
+SHA1 (xca-2.1.2.tar.gz) = a3663d95c6781afe6b3372d2290f2c80b641dcb4
+RMD160 (xca-2.1.2.tar.gz) = 16717ab6eb2cd33599d9606b7908551ad01bbff3
+SHA512 (xca-2.1.2.tar.gz) = 1f104a22b83b802576b4820b7139971da50f9b3dd70aca8e1199e996bad4379b8681bb31b197b84a3dfa49cef4ae093f6622d15fac9667547ff47af43c1e5f07
+Size (xca-2.1.2.tar.gz) = 1086563 bytes
+SHA1 (patch-Makefile) = c23e7de9fcdff140a3863e56e2c666abf5c04d12
+SHA1 (patch-img_Makefile) = 040e2a2ca5c7caacf69ee282df0b12f8eb1a4200
