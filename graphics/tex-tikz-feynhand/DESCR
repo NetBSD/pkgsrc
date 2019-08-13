@@ -1,0 +1,12 @@
+This package lets you draw Feynman diagrams using TikZ. It is a
+low-end modification of the TikZ-Feynman package, one of whose
+principal advantages is the automatic generation of diagrams,
+for which it needs LuaTex. TikZ-FeynHand only provides the
+manual mode and hence runs in LaTeX without any reference to
+LuaTeX. In addition it provides some new styles for vertices
+and propagators, alternative shorter keywords in addition to
+TikZ-Feynman's longer ones, some shortcut commands for quickly
+customizing the diagrams' look, and the new feature of putting
+one propagator "on top" of another. It also includes a quick
+user guide for getting started, with many examples and a
+5-minute introduction to TikZ.
