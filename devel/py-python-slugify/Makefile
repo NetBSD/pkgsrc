@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/12/22 17:14:35 taca Exp $
+# $NetBSD: Makefile,v 1.4 2019/08/13 18:54:59 gdt Exp $
 
-DISTNAME=	python-slugify-1.2.6
+DISTNAME=	python-slugify-3.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	devel www python
