@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.836 2019/08/13 02:13:40 brook Exp $
+# $NetBSD: Makefile,v 1.837 2019/08/13 02:16:09 brook Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -562,6 +562,7 @@ SUBDIR+=	tex-blockdraw_mp-doc
 SUBDIR+=	tex-bpolynomial
 SUBDIR+=	tex-bpolynomial-doc
 SUBDIR+=	tex-chemfig
+SUBDIR+=	tex-chemfig-doc
 SUBDIR+=	tex-circuitikz
 SUBDIR+=	tex-circuitikz-doc
 SUBDIR+=	tex-cmarrows
