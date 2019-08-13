@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2019/07/13 09:43:56 bsiegert Exp $
+# $NetBSD: Makefile,v 1.114 2019/08/13 14:24:31 rjs Exp $
 
 DISTNAME=		clisp-2.49
 PKGREVISION=		26
@@ -13,6 +13,8 @@ LICENSE=		gnu-gpl-v2
 
 # XXX: is this still current?
 BROKEN_ON_PLATFORM+=	*-*-arm
+
+BROKEN_ON_PLATFORM+=	*-*-aarch64
 
 # makes the bulk build hang under MirBSD
 BROKEN_ON_PLATFORM+=	MirBSD-*-*
