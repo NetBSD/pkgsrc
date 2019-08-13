@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/08/13 11:46:43 gdt Exp $
+$NetBSD: distinfo,v 1.2 2019/08/13 16:49:08 gdt Exp $
 
-SHA1 (nodemcu-uploader/v0.4.3.tar.gz) = 397372a0f825f0ca5dc506a7c7fc3495edb71804
-RMD160 (nodemcu-uploader/v0.4.3.tar.gz) = 6597505610af5b3834eea4a00c1fccb7445a12b7
-SHA512 (nodemcu-uploader/v0.4.3.tar.gz) = b279eef2702a8ea0261362699ec2b707834281a8c7d68034ea60335ee2682b4cf4ca0c1c1a4bfb9dcd602cd7db246815d7ee093ab05a7bc6693afd64660c55c6
-Size (nodemcu-uploader/v0.4.3.tar.gz) = 15788 bytes
+SHA1 (nodemcu-uploader-0.4.3.tar.gz) = 1b5a9a04b4a935d5f76f7553a7cb54f86075cff3
+RMD160 (nodemcu-uploader-0.4.3.tar.gz) = 4eece26086c9967b2bcb3083f5f2347f77dfd3a2
+SHA512 (nodemcu-uploader-0.4.3.tar.gz) = bed8291cceea0f37b914fb45a409a6c259b32c325b09b71338382b29870591ce2003c235a2c231d8ffc0a3600d51a5f89acad1fa5a6fd01fe96fdcaaa55266a0
+Size (nodemcu-uploader-0.4.3.tar.gz) = 10034 bytes
