@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.837 2019/08/13 02:16:09 brook Exp $
+# $NetBSD: Makefile,v 1.838 2019/08/13 20:29:24 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -733,6 +733,8 @@ SUBDIR+=	tex-tikz-3dplot
 SUBDIR+=	tex-tikz-3dplot-doc
 SUBDIR+=	tex-tikz-cd
 SUBDIR+=	tex-tikz-cd-doc
+SUBDIR+=	tex-tikz-feynhand
+SUBDIR+=	tex-tikz-feynhand-doc
 SUBDIR+=	tex-tikzinclude
 SUBDIR+=	tex-tikzinclude-doc
 SUBDIR+=	tex-tikzmark
