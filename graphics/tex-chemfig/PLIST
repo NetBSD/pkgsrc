@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2019/08/13 02:13:40 brook Exp $
+share/texmf-dist/tex/generic/chemfig/chemfig.sty
+share/texmf-dist/tex/generic/chemfig/chemfig.tex
+share/texmf-dist/tex/generic/chemfig/t-chemfig.tex

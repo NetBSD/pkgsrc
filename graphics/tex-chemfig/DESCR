@@ -1,0 +1,7 @@
+The package provides the command \chemfig{<code>}, which draws
+molecules using the TikZ package. The <code> argument provides
+instructions for the drawing operation. While the diagrams
+produced are essentially 2-dimensional, the package supports
+many of the conventional notations for illustrating the
+3-dimensional layout of a molecule. The package uses TikZ for
+its actual drawing operations.
