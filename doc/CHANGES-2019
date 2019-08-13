@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3405 2019/08/13 01:50:18 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.3406 2019/08/13 02:13:40 brook Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5613,3 +5613,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/libhighlight to 3.53 [schmonz 2019-08-13]
 	Updated textproc/highlight to 3.53 [schmonz 2019-08-13]
 	Updated textproc/p5-highlight to 3.53 [schmonz 2019-08-13]
+	Added graphics/tex-chemfig version 1.41 [brook 2019-08-13]
