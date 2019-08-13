@@ -1,4 +1,4 @@
-#	$NetBSD: u-boot-rockchip.mk,v 1.3 2019/07/21 15:17:12 tnn Exp $
+#	$NetBSD: u-boot-rockchip.mk,v 1.4 2019/08/13 21:28:47 tnn Exp $
 
 #
 # Common makefile fragment for rockchip based u-boot targets.
@@ -8,7 +8,7 @@
 #	U_BOOT_IMAGE_TYPE	("rk3399", "rk3328")
 #
 
-PKGREVISION=	4
+PKGREVISION=	5
 UBOOT_VERSION=	${GITHUB_TAG:C/-.*$//}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ayufan-rock64/}
 GITHUB_PROJECT=	linux-u-boot
@@ -37,3 +37,6 @@ post-build:
 # wrap everything up into a single file that can be written to an SD card
 	cp ${WRKSRC}/idbloader.img ${WRKSRC}/rksd_loader.img
 	dd if=${WRKSRC}/u-boot.itb seek=448 conv=notrunc of=${WRKSRC}/rksd_loader.img
+# build SPI NOR flash image. See dev-ayufan/build.mk.
+	set -e; b=0; while [ "$$b" != 128 ]; do dd bs=2k count=1; dd if=/dev/zero bs=2k count=1; b=$$(expr $$b + 1); done < ${WRKSRC}/idbloader.img > ${WRKSRC}/rkspi_loader.img 2> /dev/null
+	dd if=${WRKSRC}/u-boot.itb seek=1024 conv=notrunc of=${WRKSRC}/rkspi_loader.img
