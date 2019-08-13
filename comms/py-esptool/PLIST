@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2019/08/13 11:44:10 gdt Exp $
+bin/espefuse.py
+bin/espsecure.py
+bin/esptool.py
+${PYSITELIB}/espefuse.pyo
+${PYSITELIB}/espefuse.pyc
+${PYSITELIB}/espsecure.pyo
+${PYSITELIB}/espsecure.pyc
+${PYSITELIB}/esptool.pyo
+${PYSITELIB}/esptool.pyc
+${PYSITELIB}/espefuse.py
+${PYSITELIB}/espsecure.py
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/esptool.py
