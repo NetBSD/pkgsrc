@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2019/08/14 17:21:06 fcambus Exp $
+bin/bdfresize
+man/man1/bdfresize.1
