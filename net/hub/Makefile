@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2019/07/21 12:39:44 leot Exp $
+# $NetBSD: Makefile,v 1.30 2019/08/14 15:45:45 bsiegert Exp $
 
 DISTNAME=	hub-2.12.3
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=github/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
