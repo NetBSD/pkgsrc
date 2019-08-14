@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3432 2019/08/14 07:17:01 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.3433 2019/08/14 07:48:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5647,3 +5647,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-indirect to 0.39 [wen 2019-08-14]
 	Updated devel/p5-IO-Async to 0.74 [wen 2019-08-14]
 	Updated devel/py-packaging to 19.1nb1 [wiz 2019-08-14]
+	Updated www/nghttp2 to 1.39.2 [adam 2019-08-14]
+	Updated devel/py-dulwich to 0.19.12 [adam 2019-08-14]
