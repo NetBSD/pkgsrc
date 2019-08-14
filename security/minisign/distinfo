@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/08/14 15:50:28 fcambus Exp $
+
+SHA1 (minisign-0.8.tar.gz) = c8bf3765193a72193219141a726fb617e40c957b
+RMD160 (minisign-0.8.tar.gz) = 345b27026ea30b6debeecea2441b8c9c8bdd654d
+SHA512 (minisign-0.8.tar.gz) = 79bf626d0c15e39ce3bdf53600038028c0b22904b648074bf516a9ea6962c9486c41244e80637a5fbac090cce1ed9b4b3d57b8a02632646e01b43aa413cd8bd9
+Size (minisign-0.8.tar.gz) = 14045 bytes

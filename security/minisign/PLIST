@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2019/08/14 15:50:28 fcambus Exp $
+bin/minisign
+man/man1/minisign.1
