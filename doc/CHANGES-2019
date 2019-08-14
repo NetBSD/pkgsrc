@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3439 2019/08/14 14:46:57 wen Exp $
+$NetBSD: CHANGES-2019,v 1.3440 2019/08/14 14:50:13 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5655,3 +5655,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/pgbouncer to 1.10.0 [fox 2019-08-14]
 	Updated math/R to 3.6.1 [wen 2019-08-14]
 	Updated net/p5-Test-TCP to 2.20 [wen 2019-08-14]
+	Updated devel/p5-Role-Tiny to 2.000008 [wen 2019-08-14]
