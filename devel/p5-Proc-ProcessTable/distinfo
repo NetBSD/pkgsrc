@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2019/03/02 10:31:49 wen Exp $
+$NetBSD: distinfo,v 1.13 2019/08/14 14:55:14 wen Exp $
 
-SHA1 (Proc-ProcessTable-0.56.tar.gz) = 85ce5da6d46e25263409e052666258dfb6dfde2b
-RMD160 (Proc-ProcessTable-0.56.tar.gz) = 4426ac903133d6487902604ed4bf442606085936
-SHA512 (Proc-ProcessTable-0.56.tar.gz) = 70a5f0b27e99ed45434664340068fef028cbf3c93242d7208f82f4608d030198ba65593443508e31a0637ddd8c20f3ecba80c25dabd903c5b3b04c3833db9a2d
-Size (Proc-ProcessTable-0.56.tar.gz) = 72944 bytes
+SHA1 (Proc-ProcessTable-0.59.tar.gz) = 0bacae521fed1e125ea4c02a7285518169747bb3
+RMD160 (Proc-ProcessTable-0.59.tar.gz) = ebc48b79b79f7ae060995bc22c8b745fffe5dc37
+SHA512 (Proc-ProcessTable-0.59.tar.gz) = 25162732cdbfdc151db69d6b225137c60dcd1dc31671119007814b2bb82dd7d7c50f4ec4ef49e0cdf2eb04d6d7b60f4d6d39804ab9acada5f1b0230b387e352c
+Size (Proc-ProcessTable-0.59.tar.gz) = 75949 bytes
