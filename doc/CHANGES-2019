@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3441 2019/08/14 14:56:23 wen Exp $
+$NetBSD: CHANGES-2019,v 1.3442 2019/08/14 15:14:36 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5657,3 +5657,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/p5-Test-TCP to 2.20 [wen 2019-08-14]
 	Updated devel/p5-Role-Tiny to 2.000008 [wen 2019-08-14]
 	Updated devel/p5-Proc-ProcessTable to 0.59 [wen 2019-08-14]
+	Updated devel/p5-PPI to 1.270 [wen 2019-08-14]
