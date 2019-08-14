@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2016/03/15 11:29:35 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/08/14 14:19:38 fox Exp $
 bin/pgbouncer
 man/man1/pgbouncer.1
 man/man5/pgbouncer.5
-share/doc/pgbouncer/NEWS.rst
-share/doc/pgbouncer/README.rst
+share/doc/pgbouncer/NEWS.md
+share/doc/pgbouncer/README.md
 share/examples/pgbouncer/pgbouncer.ini
 share/examples/pgbouncer/userlist.txt
