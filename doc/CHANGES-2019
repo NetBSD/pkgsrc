@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3431 2019/08/14 02:33:18 wen Exp $
+$NetBSD: CHANGES-2019,v 1.3432 2019/08/14 07:17:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5646,3 +5646,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-Getopt-Long-Descriptive to 0.104 [wen 2019-08-14]
 	Updated devel/p5-indirect to 0.39 [wen 2019-08-14]
 	Updated devel/p5-IO-Async to 0.74 [wen 2019-08-14]
+	Updated devel/py-packaging to 19.1nb1 [wiz 2019-08-14]
