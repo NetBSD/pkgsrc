@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/01/18 18:06:21 kamil Exp $
+$NetBSD: distinfo,v 1.8 2019/08/14 13:33:43 fcambus Exp $
 
-SHA1 (ansiweather-1.13.0.tar.gz) = 6a6bffbb29f1300f81dca9eff3427cec55913e8b
-RMD160 (ansiweather-1.13.0.tar.gz) = 1b8dfdb5f06fd97b8c973334199a344f96f93448
-SHA512 (ansiweather-1.13.0.tar.gz) = 58545815d3b1b84c0b80dcb647d41c0573a95cfb593cc75ac59eb3ff460b2de792540d246ca22b92f525c581e7028c9ccd9b8f9b98d8db6434ebec6a6bd12d07
-Size (ansiweather-1.13.0.tar.gz) = 17795 bytes
+SHA1 (ansiweather-1.14.0.tar.gz) = 8305973aabfcc50b13efde8b94303d93c860c94a
+RMD160 (ansiweather-1.14.0.tar.gz) = 0671206ef5d26a3b4801787ffe84ff885d650d28
+SHA512 (ansiweather-1.14.0.tar.gz) = 7550bee6e54f6433fa327bef2c819b7153b5b0e2f09734a4fbe2cf225888a1426d431116a4d64b2ef85587878ce0a113423eb33d7efe9670c6feb9ff6de0ec50
+Size (ansiweather-1.14.0.tar.gz) = 17976 bytes
