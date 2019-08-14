@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.827 2019/08/09 20:24:22 brook Exp $
+# $NetBSD: Makefile,v 1.828 2019/08/14 17:22:05 fcambus Exp $
 #
 
 COMMENT=	System utilities
@@ -52,6 +52,7 @@ SUBDIR+=	bbsload
 SUBDIR+=	bchunk
 SUBDIR+=	bcmfw
 SUBDIR+=	bcollect
+SUBDIR+=	bdfresize
 SUBDIR+=	beats
 SUBDIR+=	bfs
 SUBDIR+=	binwalk
