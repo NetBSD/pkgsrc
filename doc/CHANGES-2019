@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3436 2019/08/14 13:34:19 fcambus Exp $
+$NetBSD: CHANGES-2019,v 1.3437 2019/08/14 14:20:05 fox Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5652,3 +5652,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/zathura-pdf-mupdf to 0.3.5 [leot 2019-08-14]
 	Updated graphics/ansilove to 4.0.2 [fcambus 2019-08-14]
 	Updated misc/ansiweather to 1.14.0 [fcambus 2019-08-14]
+	Updated databases/pgbouncer to 1.10.0 [fox 2019-08-14]
