@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/08/09 21:52:34 brook Exp $
+# $NetBSD: Makefile,v 1.2 2019/08/14 18:12:00 brook Exp $
 
 DISTNAME=	biopython-1.74
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://biopython.org/DIST/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://biopython.org/
 COMMENT=	Python libraries for computational molecular biology
-LICENSE=	biopython-license
+LICENSE=	biopython
 
 USE_TOOLS+=	pax
 
