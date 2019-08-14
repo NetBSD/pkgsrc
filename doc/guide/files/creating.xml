@@ -1,4 +1,4 @@
-<!-- $NetBSD: creating.xml,v 1.29 2019/08/14 17:26:31 brook Exp $ -->
+<!-- $NetBSD: creating.xml,v 1.30 2019/08/14 17:31:34 brook Exp $ -->
 
 <chapter id="creating">
 <title>Creating a new pkgsrc package from scratch</title>
@@ -211,6 +211,42 @@ url="https://cran.r-project.org/web/packages/available_packages_by_name.html">CR
 Consequently, <command>R2pkg</command> downloads that information and
 creates or updates a package in the canonical form.  The resulting
 package should be reviewed for correctness.</para>
+
+</sect2>
+
+<sect2 id="creating.TeX-package">
+<title>TeXlive packages</title>
+
+<para>TeXlive packages from <ulink
+url="https://www.ctan.org/">CTAN</ulink> are handled automatically by
+<command>texlive2pkg</command>, which is available in <filename
+role="pkg">pkgtools/texlive2pkg</filename>.</para>
+
+<para>If the TeXlive package name is not known, it may be useful to
+search <ulink url="https://www.ctan.org/">CTAN</ulink>.  A
+<quote>Contained in</quote> field on the package page typically
+identifies the basename of the package file in the <ulink
+url="https://www.ctan.org/tex-archive/systems/texlive/tlnet/archive">TeXlive
+archive</ulink>.</para>
+
+<para>If the TeXlive package name is known, download the files from
+the <ulink
+url="https://www.ctan.org/tex-archive/systems/texlive/tlnet/archive">TeXlive
+archive</ulink>.  For package <filename>foo</filename>, you will need
+to download <filename>foo.tar.xz</filename>.  Most TeXlive packages
+also have associated documentation packages, so download
+<filename>foo.doc.tar.xz</filename> at the same time.  These files
+should be placed in the appropriate category directory, which is often
+but not always <filename>print</filename>.  Then run the following
+command in the category directory.</para>
+
+<programlisting>
+texlive2pkg foo.tar.xz foo.doc.tar.xz
+</programlisting>
+
+<para>This will create two packages, <filename>tex-foo</filename> and
+<filename>tex-foo-doc</filename>.  Be sure to check that both packages
+are correct.</para>
 
 </sect2>
 
