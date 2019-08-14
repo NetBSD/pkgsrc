@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.709 2019/08/13 02:39:45 brook Exp $
+# $NetBSD: Makefile,v 1.710 2019/08/14 15:52:21 fcambus Exp $
 #
 
 COMMENT=	Security tools
@@ -203,6 +203,7 @@ SUBDIR+=	md4-collision
 SUBDIR+=	md5-collision
 SUBDIR+=	merkletree
 SUBDIR+=	mhash
+SUBDIR+=	minisign
 SUBDIR+=	mirrordir
 SUBDIR+=	mit-krb5
 SUBDIR+=	mit-krb5-appl
