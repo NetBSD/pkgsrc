@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2019/08/14 17:21:06 fcambus Exp $
+
+SHA1 (bdfresize-1.5.tar.gz) = 4708736716b5a59af4af10820433084d98290238
+RMD160 (bdfresize-1.5.tar.gz) = 4006de25bcbbe76e895147315d112a23899caf4a
+SHA512 (bdfresize-1.5.tar.gz) = 94d483b65ed4a29315b0f6627b6118c147e6d80dda61c0c44ad34fa62f303e980d974c81c9b852a845d8f5cb678e043023c42bf300b10e6f18846bd8490ef878
+Size (bdfresize-1.5.tar.gz) = 50916 bytes
+SHA1 (patch-charresize.c) = dc13c596a15cf0ca5dc2d1ec66fad0dd80ad0ac0
