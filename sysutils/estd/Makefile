@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2019/05/23 19:23:17 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2019/08/14 21:36:09 macallan Exp $
 
 DISTNAME=	estd-r11
 PKGNAME=	estd-0.11
@@ -19,7 +19,9 @@ INSTALLATION_DIRS=	share/examples/rc.d
 ONLY_FOR_PLATFORM=	NetBSD-2.99.*-i386 NetBSD-[3-9]*-i386 \
 			NetBSD-[4-9]*-x86_64 \
 			NetBSD-5.99.*-powerpc \
+			NetBSD-[6-9]*-powerpc \
 			NetBSD-5.99.*-mips64el \
+			NetBSD-[6-9]*-mips64el \
 			NetBSD-[7-9]*-earm* NetBSD-[7-9]*-arm* \
 			NetBSD-[7-9]*-aarch64
 
