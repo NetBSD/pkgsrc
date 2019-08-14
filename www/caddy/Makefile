@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2019/05/27 15:18:33 bsiegert Exp $
+# $NetBSD: Makefile,v 1.17 2019/08/14 15:45:50 bsiegert Exp $
 
 DISTNAME=	caddy-${GITHUB_TAG:S/v//}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mholt/}
 GITHUB_TAG=	v0.11.4
