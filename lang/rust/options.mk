@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2019/08/14 13:05:25 nia Exp $
+# $NetBSD: options.mk,v 1.3 2019/08/14 16:00:23 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.rust
 
@@ -7,6 +7,10 @@ PKG_OPTIONS_VAR=		PKG_OPTIONS.rust
 # The bundled LLVM current has issues building on SunOS.
 .if ${OPSYS} != "SunOS" && ${OPSYS} != "Darwin"
 PKG_SUPPORTED_OPTIONS+=		rust-llvm
+# There may be compatibility issues with base LLVM.
+.  if !empty(HAVE_LLVM)
+PKG_SUGGESTED_OPTIONS+=		rust-llvm
+.  endif
 .endif
 
 .include "../../mk/bsd.options.mk"
