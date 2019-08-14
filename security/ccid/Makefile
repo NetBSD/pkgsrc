@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/08/11 13:22:45 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2019/08/14 00:17:43 ryoon Exp $
 #
 
 DISTNAME=	ccid-1.4.26
@@ -56,6 +56,10 @@ post-install:
 	${DESTDIR}${PREFIX}/share/doc/ccid/README_Kobil_mIDentity_switch.txt
 
 .include "../../security/pcsc-lite/buildlink3.mk"
+.if ${OPSYS} == "Linux"
+BUILDLINK_DEPMETHOD.flex=	full
+.include "../../devel/flex/buildlink3.mk"
+.endif
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
