@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3442 2019/08/14 15:14:36 wen Exp $
+$NetBSD: CHANGES-2019,v 1.3443 2019/08/14 15:43:31 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5658,3 +5658,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-Role-Tiny to 2.000008 [wen 2019-08-14]
 	Updated devel/p5-Proc-ProcessTable to 0.59 [wen 2019-08-14]
 	Updated devel/p5-PPI to 1.270 [wen 2019-08-14]
+	Updated lang/go111 to 1.11.13 [bsiegert 2019-08-14]
+	Updated lang/go112 to 1.12.8 [bsiegert 2019-08-14]
