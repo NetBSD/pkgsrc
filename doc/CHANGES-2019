@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3426 2019/08/13 22:50:58 gdt Exp $
+$NetBSD: CHANGES-2019,v 1.3427 2019/08/14 01:32:49 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5641,3 +5641,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/tex-ms to 2019 [markd 2019-08-13]
 	Updated print/tex-ms-doc to 2019 [markd 2019-08-13]
 	Updated devel/py-ruamel-yaml to 0.15.100 [gdt 2019-08-13]
+	Updated devel/p5-Mouse to 2.5.7 [wen 2019-08-14]
