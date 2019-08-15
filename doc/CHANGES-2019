@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3446 2019/08/14 22:46:20 leot Exp $
+$NetBSD: CHANGES-2019,v 1.3447 2019/08/15 00:46:50 kre Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5663,3 +5663,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added security/minisign version 0.8 [fcambus 2019-08-14]
 	Added sysutils/bdfresize version 1.5 [fcambus 2019-08-14]
 	Updated net/youtube-dl to 20190813 [leot 2019-08-14]
+	Updated shells/bash to 5.0.9 [kre 2019-08-15]
