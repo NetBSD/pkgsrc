@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.83 2019/08/11 13:17:50 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2019/08/15 08:03:38 adam Exp $
 #
 # When updating this package, make sure that no strings like
 # "PR 12345" are in the commit message. Upstream likes
 # to reference their own PRs this way, but this ends up
 # in NetBSD GNATS.
 
-DISTNAME=	httpd-2.4.39
+DISTNAME=	httpd-2.4.41
 PKGNAME=	${DISTNAME:S/httpd/apache/}
-PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=httpd/}
 MASTER_SITES+=	http://archive.apache.org/dist/httpd/
@@ -62,7 +61,7 @@ APACHE_MODULES?=	${DFLT_APACHE_MODULES}
 
 # LDAP support
 PLIST_VARS+=		ldap
-.if exists(${LOCALBASE}/lib/apr-util-1/apr_ldap.la)
+.if exists(${PREFIX}/lib/apr-util-1/apr_ldap.la)
 DFLT_APACHE_MODULES+=	ldap authnz_ldap
 PLIST.ldap=		yes
 .endif
@@ -122,8 +121,7 @@ SUBST_FILES.paths=	config.layout Makefile.in support/apxs.in
 SUBST_VARS.paths=	PREFIX
 SUBST_VARS.paths+=	VARBASE
 SUBST_SED.paths+=	-e "s|@SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
-SUBST_VARS.paths+=	PAX
-SUBST_SED.paths+=	-e "s|@LOCALBASE@|${PREFIX}|g"
+SUBST_VARS.paths+=	PAX PREFIX
 
 SUBST_CLASSES+=		apr-lt
 SUBST_STAGE.apr-lt=	post-configure
