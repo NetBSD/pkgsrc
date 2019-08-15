@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3448 2019/08/15 08:08:19 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3449 2019/08/15 08:46:20 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5667,3 +5667,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/apache24 to 2.4.41 [adam 2019-08-15]
 	Updated www/nginx to 1.16.1 [adam 2019-08-15]
 	Updated www/nginx-devel to 1.17.3 [adam 2019-08-15]
+	Added sysutils/ttyplot version 1.4 [fcambus 2019-08-15]
