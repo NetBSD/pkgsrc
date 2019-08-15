@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/08/15 08:43:47 fcambus Exp $
+
+SHA1 (ttyplot-1.4.tar.gz) = abfe6f0037290501b3f2497a4c753edd1c98ff20
+RMD160 (ttyplot-1.4.tar.gz) = d2c0371e58475d54100ca882a8e67bbacab73a23
+SHA512 (ttyplot-1.4.tar.gz) = 2ef3d85b8dc374ebe904132865b593503d12e82c3e404fe4d4c60adbbd92121ea3bc496ae481251f83bb7ab83648c867f29cb23555c782f3b48ebb5e310c3759
+Size (ttyplot-1.4.tar.gz) = 46922 bytes
