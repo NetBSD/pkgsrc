@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/03/05 00:40:37 gdt Exp $
+$NetBSD: distinfo,v 1.3 2019/08/15 17:19:09 ng0 Exp $
 
-SHA1 (gnurl-7.64.0.tar.Z) = 8e0f7dbee5df03859a5ee38d80766f6f740c2475
-RMD160 (gnurl-7.64.0.tar.Z) = 25cd4064f5865e702e6eb3585ebf501324ac1e84
-SHA512 (gnurl-7.64.0.tar.Z) = 139abdc92e77c64caee7d834cc1e539ca559938682afe23c6b61c6e7203c0fa76d8c45f70eb2c74e2a32fcac02962be28ae0b0364351bfd2fc4476b091ef70ef
-Size (gnurl-7.64.0.tar.Z) = 6288637 bytes
+SHA1 (gnurl-7.65.3.tar.Z) = 9b4b7eed42c5aeaf7b38f903c6362576a6c90b0b
+RMD160 (gnurl-7.65.3.tar.Z) = 64e6a31fcd8bcf40f446ee930997cc2bbca583ea
+SHA512 (gnurl-7.65.3.tar.Z) = 6887df326177b291bcf97567e247122eb2b8190e0491c5a819d39a738d98882778ad48c0936010f95c07646dd627fa9f2c72f1ad33adf317efdc1eadb5c8b93e
+Size (gnurl-7.65.3.tar.Z) = 6124086 bytes
