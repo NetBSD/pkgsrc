@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.828 2019/08/14 17:22:05 fcambus Exp $
+# $NetBSD: Makefile,v 1.829 2019/08/15 08:45:07 fcambus Exp $
 #
 
 COMMENT=	System utilities
@@ -625,6 +625,7 @@ SUBDIR+=	trash
 SUBDIR+=	tree
 SUBDIR+=	ts
 SUBDIR+=	tsm8
+SUBDIR+=	ttyplot
 #SUBDIR+=	u-boot			# only contains Makefile fragments
 SUBDIR+=	u-boot-a10-olinuxino-lime
 SUBDIR+=	u-boot-a20-olinuxino-lime2
