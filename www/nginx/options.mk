@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.50 2019/05/06 09:38:48 adam Exp $
+# $NetBSD: options.mk,v 1.51 2019/08/15 08:06:29 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=		dav flv gtools inet6 luajit mail-proxy memcache naxsi \
@@ -86,7 +86,7 @@ NEED_NDK=		yes
 .  endif
 .endfor
 .if defined(NEED_NDK) || make(makesum)
-NDK_VERSION=		0.3.0
+NDK_VERSION=		0.3.1
 NDK_DISTNAME=		ngx_devel_kit-${NDK_VERSION}
 NDK_DISTFILE=		${NDK_DISTNAME}.tar.gz
 SITES.${NDK_DISTFILE}=	-https://github.com/simpl/ngx_devel_kit/archive/v${NDK_VERSION}.tar.gz
@@ -185,7 +185,7 @@ CONFIGURE_ARGS+=	--without-http_uwsgi_module
 CONFIGURE_ARGS+=	--add-module=../nchan-${PUSH_VERSION}
 .endif
 .if !empty(PKG_OPTIONS:Mpush) || make(makesum)
-PUSH_VERSION=		1.2.5
+PUSH_VERSION=		1.2.6
 PUSH_DISTNAME=		nginx_http_push_module-${PUSH_VERSION}
 PUSH_DISTFILE=		${PUSH_DISTNAME}.tar.gz
 SITES.${PUSH_DISTFILE}=	-https://github.com/slact/nchan/archive/v${PUSH_VERSION}.tar.gz
