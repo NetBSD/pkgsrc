@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2019/06/07 11:26:20 tm Exp $
+@comment $NetBSD: PLIST,v 1.31 2019/08/15 08:03:38 adam Exp $
 bin/ab
 bin/apxs
 bin/dbmmanage
@@ -1218,6 +1218,8 @@ share/httpd/manual/mod/mod_socache_dc.html.fr.utf8
 share/httpd/manual/mod/mod_socache_memcache.html
 share/httpd/manual/mod/mod_socache_memcache.html.en
 share/httpd/manual/mod/mod_socache_memcache.html.fr.utf8
+share/httpd/manual/mod/mod_socache_redis.html
+share/httpd/manual/mod/mod_socache_redis.html.en
 share/httpd/manual/mod/mod_socache_shmcb.html
 share/httpd/manual/mod/mod_socache_shmcb.html.en
 share/httpd/manual/mod/mod_socache_shmcb.html.fr.utf8
@@ -1302,6 +1304,7 @@ share/httpd/manual/mod/mpmt_os2.html.en
 share/httpd/manual/mod/mpmt_os2.html.fr.utf8
 share/httpd/manual/mod/overrides.html
 share/httpd/manual/mod/overrides.html.en
+share/httpd/manual/mod/overrides.html.fr.utf8
 share/httpd/manual/mod/prefork.html
 share/httpd/manual/mod/prefork.html.de
 share/httpd/manual/mod/prefork.html.en
