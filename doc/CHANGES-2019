@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3447 2019/08/15 00:46:50 kre Exp $
+$NetBSD: CHANGES-2019,v 1.3448 2019/08/15 08:08:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5664,3 +5664,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Added sysutils/bdfresize version 1.5 [fcambus 2019-08-14]
 	Updated net/youtube-dl to 20190813 [leot 2019-08-14]
 	Updated shells/bash to 5.0.9 [kre 2019-08-15]
+	Updated www/apache24 to 2.4.41 [adam 2019-08-15]
+	Updated www/nginx to 1.16.1 [adam 2019-08-15]
+	Updated www/nginx-devel to 1.17.3 [adam 2019-08-15]
