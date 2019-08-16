@@ -1,10 +1,28 @@
-$NetBSD: patch-src_unix_fs.c,v 1.1 2017/03/22 01:45:08 taca Exp $
+$NetBSD: patch-src_unix_fs.c,v 1.2 2019/08/16 12:06:31 wiz Exp $
 
 * Fix portability on NetBSD.
 
---- src/unix/fs.c.orig	2017-02-01 00:38:56.000000000 +0000
+--- src/unix/fs.c.orig	2019-08-09 14:57:12.000000000 +0000
 +++ src/unix/fs.c
-@@ -778,7 +778,7 @@ static void uv__to_stat(struct stat* src
+@@ -537,7 +537,7 @@ static int uv__fs_closedir(uv_fs_t* req)
+ 
+ static int uv__fs_statfs(uv_fs_t* req) {
+   uv_statfs_t* stat_fs;
+-#if defined(__sun) || defined(__MVS__)
++#if defined(__sun) || defined(__MVS__) || defined(__NetBSD__)
+   struct statvfs buf;
+ 
+   if (0 != statvfs(req->path, &buf))
+@@ -554,7 +554,7 @@ static int uv__fs_statfs(uv_fs_t* req) {
+     return -1;
+   }
+ 
+-#if defined(__sun) || defined(__MVS__)
++#if defined(__sun) || defined(__MVS__) || defined(__NetBSD__)
+   stat_fs->f_type = 0;  /* f_type is not supported. */
+ #else
+   stat_fs->f_type = buf.f_type;
+@@ -1147,7 +1147,7 @@ static void uv__to_stat(struct stat* src
    dst->st_blksize = src->st_blksize;
    dst->st_blocks = src->st_blocks;
  
@@ -13,7 +31,7 @@ $NetBSD: patch-src_unix_fs.c,v 1.1 2017/03/22 01:45:08 taca Exp $
    dst->st_atim.tv_sec = src->st_atimespec.tv_sec;
    dst->st_atim.tv_nsec = src->st_atimespec.tv_nsec;
    dst->st_mtim.tv_sec = src->st_mtimespec.tv_sec;
-@@ -804,7 +804,6 @@ static void uv__to_stat(struct stat* src
+@@ -1173,7 +1173,6 @@ static void uv__to_stat(struct stat* src
      defined(__DragonFly__)   || \
      defined(__FreeBSD__)     || \
      defined(__OpenBSD__)     || \
@@ -21,7 +39,7 @@ $NetBSD: patch-src_unix_fs.c,v 1.1 2017/03/22 01:45:08 taca Exp $
      defined(_GNU_SOURCE)     || \
      defined(_BSD_SOURCE)     || \
      defined(_SVID_SOURCE)    || \
-@@ -816,8 +815,7 @@ static void uv__to_stat(struct stat* src
+@@ -1185,8 +1184,7 @@ static void uv__to_stat(struct stat* src
    dst->st_mtim.tv_nsec = src->st_mtim.tv_nsec;
    dst->st_ctim.tv_sec = src->st_ctim.tv_sec;
    dst->st_ctim.tv_nsec = src->st_ctim.tv_nsec;
