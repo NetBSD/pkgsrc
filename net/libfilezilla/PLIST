@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2019/07/20 21:21:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/08/16 09:40:06 wiz Exp $
 include/libfilezilla/apply.hpp
 include/libfilezilla/buffer.hpp
 include/libfilezilla/encode.hpp
@@ -35,7 +35,6 @@ include/libfilezilla/tls_system_trust_store.hpp
 include/libfilezilla/translate.hpp
 include/libfilezilla/uri.hpp
 include/libfilezilla/util.hpp
-include/libfilezilla/version.hpp
 lib/libfilezilla.la
 lib/pkgconfig/libfilezilla.pc
 share/locale/an/LC_MESSAGES/libfilezilla.mo
