@@ -68,7 +68,7 @@ func (ck *OptionsLinesChecker) lookingAtPkgOptionsVar(mlex *MkLinesLexer) bool {
 	return false
 }
 
-// checkLineUpper checks a line from the upper part of an options.mk file,
+// handleUpperLine checks a line from the upper part of an options.mk file,
 // before bsd.options.mk is included.
 func (ck *OptionsLinesChecker) handleUpperLine(mkline *MkLine) bool {
 	switch {
@@ -153,7 +153,7 @@ func (ck *OptionsLinesChecker) handleLowerCondition(mkline *MkLine, cond *MkCond
 			"and write the condition like this, which has the same effect",
 			"as the !empty(...).",
 			"",
-			"\t.if ${PKG_OPTIONS.packagename:Moption}")
+			"\t.if ${PKG_OPTIONS:Moption}")
 	}
 }
 
