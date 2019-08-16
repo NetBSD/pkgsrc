@@ -315,19 +315,19 @@ func (reg *VarTypeRegistry) compilerLanguages(src *Pkgsrc) *BasicType {
 	languages := make(map[string]bool)
 	if mklines != nil {
 		for _, mkline := range mklines.mklines {
-			if mkline.IsDirective() && mkline.Directive() == "for" {
-				words := mkline.ValueFields(mkline.Args())
-				if len(words) > 2 && words[0] == "_version_" {
-					for _, word := range words[2:] {
-						languages[intern(word)] = true
-					}
+			if mkline.IsVarassign() && mkline.Varname() == "_CXX_STD_VERSIONS" {
+				words := mkline.ValueFields(mkline.Value())
+				for _, word := range words {
+					languages[intern(word)] = true
 				}
 			}
 		}
 	}
+
 	alwaysAvailable := [...]string{
 		"ada", "c", "c99", "c++", "c++11", "c++14",
 		"fortran", "fortran77", "java", "objc", "obj-c++"}
+
 	for _, language := range alwaysAvailable {
 		languages[language] = true
 	}
