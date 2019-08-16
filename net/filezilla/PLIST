@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2018/08/16 09:13:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2019/08/16 09:40:29 wiz Exp $
 bin/filezilla
 bin/fzputtygen
 bin/fzsftp
@@ -683,10 +683,8 @@ share/filezilla/resources/tango/48x48/uploadadd.png
 share/filezilla/resources/tango/theme.xml
 share/filezilla/resources/xrc/certificate.xrc
 share/filezilla/resources/xrc/dialogs.xrc
-share/filezilla/resources/xrc/inputdialog.xrc
 share/filezilla/resources/xrc/netconfwizard.xrc
 share/filezilla/resources/xrc/settings.xrc
-share/filezilla/resources/xrc/sitemanager.xrc
 share/filezilla/resources/xrc/storj.xrc
 share/filezilla/resources/xrc/update.xrc
 share/icons/hicolor/16x16/apps/filezilla.png
@@ -745,6 +743,7 @@ share/locale/sk_SK/LC_MESSAGES/filezilla.mo
 share/locale/sl_SI/LC_MESSAGES/filezilla.mo
 share/locale/sr/LC_MESSAGES/filezilla.mo
 share/locale/sv/LC_MESSAGES/filezilla.mo
+share/locale/ta/LC_MESSAGES/filezilla.mo
 share/locale/th_TH/LC_MESSAGES/filezilla.mo
 share/locale/tr/LC_MESSAGES/filezilla.mo
 share/locale/uk_UA/LC_MESSAGES/filezilla.mo
