@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3460 2019/08/16 10:55:00 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.3461 2019/08/16 11:00:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5679,3 +5679,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/libsecret to 0.18.8 [wiz 2019-08-16]
 	Updated devel/pango to 1.44.3 [wiz 2019-08-16]
 	Updated devel/dconf to 0.32.0 [wiz 2019-08-16]
+	Updated wm/i3 to 4.17 [wiz 2019-08-16]
