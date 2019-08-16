@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2019/02/13 19:52:08 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/08/16 10:16:00 wiz Exp $
 
-DISTNAME=	libsecret-0.18.7
+DISTNAME=	libsecret-0.18.8
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsecret/0.18/}
 EXTRACT_SUFX=	.tar.xz
@@ -21,7 +21,7 @@ USE_TOOLS+=	gmake intltool pkg-config msgfmt gsed
 PKGCONFIG_OVERRIDE+=	libsecret/libsecret-unstable.pc.in
 PKGCONFIG_OVERRIDE+=	libsecret/libsecret.pc.in
 
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.38.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.44.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "options.mk"
