@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3451 2019/08/15 17:20:22 ng0 Exp $
+$NetBSD: CHANGES-2019,v 1.3452 2019/08/16 09:29:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5670,3 +5670,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added sysutils/ttyplot version 1.4 [fcambus 2019-08-15]
 	Updated audio/fasttracker2 to 2.166 [fox 2019-08-15]
 	Updated www/gnurl to 7.65.3 [ng0 2019-08-15]
+	Updated sysutils/desktop-file-utils to 0.24 [wiz 2019-08-16]
