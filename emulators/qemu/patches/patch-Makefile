@@ -1,12 +1,12 @@
-$NetBSD: patch-Makefile,v 1.1 2017/12/14 02:03:53 kamil Exp $
+$NetBSD: patch-Makefile,v 1.2 2019/08/16 15:12:19 adam Exp $
 
---- Makefile.orig	2017-12-13 17:27:20.000000000 +0000
+--- Makefile.orig	2019-08-15 19:01:42.000000000 +0000
 +++ Makefile
-@@ -385,6 +385,7 @@ subdir-%:
+@@ -474,6 +474,7 @@ $(TARGET_DIRS_RULES):
  DTC_MAKE_ARGS=-I$(SRC_PATH)/dtc VPATH=$(SRC_PATH)/dtc -C dtc V="$(V)" LIBFDT_srcdir=$(SRC_PATH)/dtc/libfdt
  DTC_CFLAGS=$(CFLAGS) $(QEMU_CFLAGS)
  DTC_CPPFLAGS=-I$(BUILD_DIR)/dtc -I$(SRC_PATH)/dtc -I$(SRC_PATH)/dtc/libfdt
 +ARFLAGS=	-rcs
  
- subdir-dtc: .git-submodule-status dtc/libfdt dtc/tests
- 	$(call quiet-command,$(MAKE) $(DTC_MAKE_ARGS) CPPFLAGS="$(DTC_CPPFLAGS)" CFLAGS="$(DTC_CFLAGS)" LDFLAGS="$(LDFLAGS)" ARFLAGS="$(ARFLAGS)" CC="$(CC)" AR="$(AR)" LD="$(LD)" $(SUBDIR_MAKEFLAGS) libfdt/libfdt.a,)
+ .PHONY: dtc/all
+ dtc/all: .git-submodule-status dtc/libfdt dtc/tests
