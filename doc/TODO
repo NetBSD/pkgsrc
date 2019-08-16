@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19191 2019/08/16 10:43:33 wiz Exp $
+$NetBSD: TODO,v 1.19192 2019/08/16 10:55:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -542,7 +542,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dar-2.4.14
 	o darcs-2.12.0
 	o dasher-4.11
-	o dconf-0.32.0
 	o dd_rescue-1.46
 	o dd_rhelp-0.3.0
 	o ddrescue-1.21
