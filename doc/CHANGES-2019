@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3457 2019/08/16 10:08:20 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.3458 2019/08/16 10:16:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5676,3 +5676,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/mtr to 0.93 [wiz 2019-08-16]
 	Updated devel/libgsf to 1.14.46 [wiz 2019-08-16]
 	Updated sysutils/libnotify to 0.7.8 [wiz 2019-08-16]
+	Updated security/libsecret to 0.18.8 [wiz 2019-08-16]
