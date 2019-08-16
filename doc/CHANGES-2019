@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3463 2019/08/16 12:00:45 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.3464 2019/08/16 12:04:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5682,3 +5682,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated wm/i3 to 4.17 [wiz 2019-08-16]
 	Updated graphics/ImageMagick to 7.0.8.60 [wiz 2019-08-16]
 	Updated graphics/p5-PerlMagick to 7.0.8.60 [wiz 2019-08-16]
+	Updated devel/libsigc++ to 2.10.2 [wiz 2019-08-16]
