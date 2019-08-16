@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.16 2018/12/17 15:33:01 jperkin Exp $
+$NetBSD: distinfo,v 1.17 2019/08/16 10:54:51 wiz Exp $
 
-SHA1 (dconf-0.30.1.tar.xz) = 181cdedc20a5ecd2d6e6aab4538ff199b5eaa1f9
-RMD160 (dconf-0.30.1.tar.xz) = c1b65608f36fd8f29a3e5204b95fc5afddd0affc
-SHA512 (dconf-0.30.1.tar.xz) = f7d136aec7cb75b64c7d9446d520f4c4af368e6d22346b7bb8ad66c08afaa03a72aacd44016dae7690e37b7d0deb9a16187445db176427a12a8b3cd3885c9e03
-Size (dconf-0.30.1.tar.xz) = 104376 bytes
+SHA1 (dconf-0.32.0.tar.xz) = 3b391ec3cc20b22bb029e1940223e3a583f17a3c
+RMD160 (dconf-0.32.0.tar.xz) = 47e61388174da261201cd6aa9646efb5f34c3bb6
+SHA512 (dconf-0.32.0.tar.xz) = 09ae65ad365947aed24228b94978b290060264e55b443d18a743e943627703c92e16e3a5ca8a0aaf3549f7a1d5aad77bdc285d4c8519db705d3104ec22b111a0
+Size (dconf-0.32.0.tar.xz) = 111700 bytes
 SHA1 (patch-client_meson.build) = c14f83a8577d35c8f32dfa3d9fcbbe1c9e67548b
 SHA1 (patch-gsettings_meson.build) = 63abfc31d9fede52340708739bc53a6f6a439108
 SHA1 (patch-meson.build) = 2015b184e88ed797b52152d00e96e45988cf01bf
