@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2019/05/21 20:55:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2019/08/16 12:59:02 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgdemandimport/__init__.py
 ${PYSITELIB}/hgdemandimport/__init__.pyc
@@ -391,9 +391,6 @@ ${PYSITELIB}/hgext/schemes.pyo
 ${PYSITELIB}/hgext/share.py
 ${PYSITELIB}/hgext/share.pyc
 ${PYSITELIB}/hgext/share.pyo
-${PYSITELIB}/hgext/shelve.py
-${PYSITELIB}/hgext/shelve.pyc
-${PYSITELIB}/hgext/shelve.pyo
 ${PYSITELIB}/hgext/show.py
 ${PYSITELIB}/hgext/show.pyc
 ${PYSITELIB}/hgext/show.pyo
@@ -629,6 +626,7 @@ ${PYSITELIB}/mercurial/help/internals/changegroups.txt
 ${PYSITELIB}/mercurial/help/internals/config.txt
 ${PYSITELIB}/mercurial/help/internals/extensions.txt
 ${PYSITELIB}/mercurial/help/internals/linelog.txt
+${PYSITELIB}/mercurial/help/internals/mergestate.txt
 ${PYSITELIB}/mercurial/help/internals/requirements.txt
 ${PYSITELIB}/mercurial/help/internals/revlogs.txt
 ${PYSITELIB}/mercurial/help/internals/wireprotocol.txt
@@ -874,6 +872,9 @@ ${PYSITELIB}/mercurial/server.pyo
 ${PYSITELIB}/mercurial/setdiscovery.py
 ${PYSITELIB}/mercurial/setdiscovery.pyc
 ${PYSITELIB}/mercurial/setdiscovery.pyo
+${PYSITELIB}/mercurial/shelve.py
+${PYSITELIB}/mercurial/shelve.pyc
+${PYSITELIB}/mercurial/shelve.pyo
 ${PYSITELIB}/mercurial/similar.py
 ${PYSITELIB}/mercurial/similar.pyc
 ${PYSITELIB}/mercurial/similar.pyo
