@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3455 2019/08/16 09:41:56 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.3456 2019/08/16 09:47:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5674,3 +5674,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/libfilezilla to 0.18.1 [wiz 2019-08-16]
 	Updated net/filezilla to 3.44.2 [wiz 2019-08-16]
 	Updated net/mtr to 0.93 [wiz 2019-08-16]
+	Updated devel/libgsf to 1.14.46 [wiz 2019-08-16]
