@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.168 2018/08/13 15:53:49 nia Exp $
+# $NetBSD: Makefile,v 1.169 2019/08/16 19:32:51 fcambus Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -10,6 +10,7 @@ SUBDIR+=	ack
 SUBDIR+=	autoconvert
 SUBDIR+=	base64
 SUBDIR+=	bbcim
+SUBDIR+=	bdf2psf
 SUBDIR+=	bib2xml
 SUBDIR+=	bibtex2html
 SUBDIR+=	cbmconvert
