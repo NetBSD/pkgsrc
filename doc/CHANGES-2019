@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3475 2019/08/16 21:00:28 rillig Exp $
+$NetBSD: CHANGES-2019,v 1.3476 2019/08/16 21:19:52 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5695,3 +5695,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/ansilove to 4.0.3 [fcambus 2019-08-16]
 	Added converters/bdf2psf version 1.193 [fcambus 2019-08-16]
 	Updated pkgtools/pkglint to 5.7.20 [rillig 2019-08-16]
+	Updated print/cups-base to 2.2.12 [leot 2019-08-16]
