@@ -1,12 +1,12 @@
-$NetBSD: patch-hw_tpm_tpm__ioctl.h,v 1.1 2019/02/13 14:08:43 jperkin Exp $
+$NetBSD: patch-hw_tpm_tpm__ioctl.h,v 1.2 2019/08/16 15:12:19 adam Exp $
 
 SunOS needs filio.h for _IO*() macros.
 
---- hw/tpm/tpm_ioctl.h.orig	2018-12-11 17:44:34.000000000 +0000
+--- hw/tpm/tpm_ioctl.h.orig	2019-08-15 19:01:42.000000000 +0000
 +++ hw/tpm/tpm_ioctl.h
-@@ -8,6 +8,9 @@
- #ifndef _TPM_IOCTL_H_
- #define _TPM_IOCTL_H_
+@@ -9,6 +9,9 @@
+ #ifndef TPM_IOCTL_H
+ #define TPM_IOCTL_H
  
 +#ifdef __sun
 +#include <sys/filio.h>
