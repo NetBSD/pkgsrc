@@ -33,16 +33,11 @@ func (s *Suite) Test_VarTypeRegistry_enumFrom(c *check.C) {
 		"                        sunpro",
 		"_PSEUDO_COMPILERS=      ccache distcc f2c g95",
 		"",
-		".for _version_ in gnu++14 c++14 gnu++11 c++11 gnu++0x c++0x gnu++03 c++03",
+		"_CXX_STD_VERSIONS=      gnu++14 c++14 gnu++11 c++11 gnu++0x c++0x gnu++03 c++03",
+		".for _version_ in ${_CXX_STD_VERSIONS}",
 		".  if !empty(USE_LANGUAGES:M${_version_})",
 		"USE_LANGUAGES+=         c++",
 		".  endif",
-		".endfor",
-		"",
-		".for _version_", // Just for code coverage.
-		".endfor",
-		"",
-		".for version in c99 c200x", // Just for code coverage.
 		".endfor")
 
 	t.SetUpVartypes()

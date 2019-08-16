@@ -202,13 +202,6 @@ func (src *Pkgsrc) ListVersions(category string, re regex.Pattern, repl string, 
 	}
 
 	categoryDir := src.File(category)
-	error := func() []string {
-		if errorIfEmpty {
-			dummyLine.Errorf("Cannot find package versions of %q in %q.", re, categoryDir)
-		}
-		src.listVersions[cacheKey] = nil
-		return nil
-	}
 
 	var names []string
 	for _, fileInfo := range src.ReadDir(category) {
@@ -218,7 +211,11 @@ func (src *Pkgsrc) ListVersions(category string, re regex.Pattern, repl string, 
 		}
 	}
 	if len(names) == 0 {
-		return error()
+		if errorIfEmpty {
+			dummyLine.Errorf("Cannot find package versions of %q in %q.", re, categoryDir)
+		}
+		src.listVersions[cacheKey] = nil
+		return nil
 	}
 
 	// In the pkgsrc directories, the major versions of packages are
