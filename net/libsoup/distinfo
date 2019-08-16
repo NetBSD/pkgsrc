@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.21 2018/10/23 07:17:53 leot Exp $
+$NetBSD: distinfo,v 1.22 2019/08/16 13:08:58 wiz Exp $
 
-SHA1 (libsoup-2.64.2.tar.xz) = 286b2dc5e4396b6328870da761798e61701f901a
-RMD160 (libsoup-2.64.2.tar.xz) = 12af987a048627f662788742ec3f66e3f8053348
-SHA512 (libsoup-2.64.2.tar.xz) = c001495be4e1eafd169b904431b22e961b52f5a3202f2e75b0657281cbfd91153148765bd95378bba3e85a66d7eaca428750641f20c07ca3232d1f9bdabdc90f
-Size (libsoup-2.64.2.tar.xz) = 1793440 bytes
-SHA1 (patch-tests_Makefile.in) = 7144b1b29fc35a950f2f0c3e2a1600483636a645
+SHA1 (libsoup-2.66.2.tar.xz) = f549a0ab984895a11053505806068bbad22a1dfc
+RMD160 (libsoup-2.66.2.tar.xz) = 787dc933e36ac75edb95438d47a4e495de5550ab
+SHA512 (libsoup-2.66.2.tar.xz) = 1df443470239f23d22301e37e36f3d34963352ee0122f317cd15b19d90115831091bddcee27bc6f0d4994adcf4e5bd9c0395de2bd7f39ae305ba0edea7789092
+Size (libsoup-2.66.2.tar.xz) = 1446024 bytes
