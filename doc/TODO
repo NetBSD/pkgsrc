@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19183 2019/08/15 23:09:23 ryoon Exp $
+$NetBSD: TODO,v 1.19184 2019/08/16 09:29:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -551,7 +551,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o denemo-2.0.12
 	o desklaunch-1.1.7
 	o deskmenu-1.4.5
-	o desktop-file-utils-0.24
 	o dhcpcd-dbus-0.6.1
 	o digikam-5.9
 	o dikt-2s1
