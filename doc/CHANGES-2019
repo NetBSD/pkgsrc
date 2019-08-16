@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3473 2019/08/16 19:29:44 fcambus Exp $
+$NetBSD: CHANGES-2019,v 1.3474 2019/08/16 19:33:15 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5693,3 +5693,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated emulators/qemu to 4.1.0 [adam 2019-08-16]
 	Updated lang/nodejs to 10.16.3 [adam 2019-08-16]
 	Updated graphics/ansilove to 4.0.3 [fcambus 2019-08-16]
+	Added converters/bdf2psf version 1.193 [fcambus 2019-08-16]
