@@ -1,4 +1,4 @@
-# $NetBSD: database.mk,v 1.2 2015/11/25 12:49:46 jperkin Exp $
+# $NetBSD: database.mk,v 1.3 2019/08/16 10:54:51 wiz Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # dconf database.  It takes care of update the corresponding databases
@@ -8,7 +8,7 @@
 .if !defined(DCONF_DATABASE_MK)
 DCONF_DATABASE_MK=	# defined
 
-DCONF=			${LOCALBASE}/bin/dconf
+DCONF=			${PREFIX}/bin/dconf
 
 FILES_SUBST+=		DCONF=${DCONF:Q}
 INSTALL_TEMPLATES+=	../../devel/dconf/files/database.tmpl
