@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19185 2019/08/16 09:40:14 wiz Exp $
+$NetBSD: TODO,v 1.19186 2019/08/16 09:40:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -631,7 +631,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fet-5.28.6
 	o fetchyahoo-2.14.0
 	o filerunner-14.06.18.10
-	o filezilla-3.44.1
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o flashplayer-0.4.13
