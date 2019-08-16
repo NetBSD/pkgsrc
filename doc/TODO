@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19186 2019/08/16 09:40:40 wiz Exp $
+$NetBSD: TODO,v 1.19187 2019/08/16 09:41:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1035,7 +1035,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mousetweaks-3.12.0 [wip]
 	o mpdas-0.4.1
 	o mserv-devel-0.41
-	o mtr-0.93
 	o multitail-6.4.2
 	o munin-doc-1.4.6
 	o munin-node-1.4.6
