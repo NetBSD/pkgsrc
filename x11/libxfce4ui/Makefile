@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2019/08/11 13:25:13 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2019/08/17 18:35:12 gutteridge Exp $
 
-PKGREVISION= 2
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	libxfce4ui-4.13.6
+DISTNAME=	libxfce4ui-4.14.1
 CATEGORIES=	x11
-MASTER_SITES+=	http://archive.xfce.org/src/xfce/libxfce4ui/4.13/
+MASTER_SITES+=	http://archive.xfce.org/src/xfce/libxfce4ui/4.14/
 
 COMMENT=	Xfce widget library
 
