@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.40 2019/08/17 11:57:36 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.41 2019/08/17 13:12:00 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -181,10 +181,11 @@ sub magic_perlmod() {
 		push(@build_vars, ["PERL5_MODULE_TYPE", "Module::Build"]);
 
 	} elsif (-f "${abs_wrksrc}/Makefile.PL") {
-		# To avoid fix_up_makefile error, generate Makefile previously.
-		# Ignore exit status (no "or die").
-		system("cd ${abs_wrksrc} && perl Makefile.PL");
-		open(DEPS, "cd ${abs_wrksrc} && perl -I${perllibdir} Makefile.PL |") or die;
+
+		# To avoid fix_up_makefile error for p5-HTML-Quoted, generate Makefile first.
+		system("cd ${abs_wrksrc} && perl -I. Makefile.PL < /dev/null") or "ignore";
+
+		open(DEPS, "cd ${abs_wrksrc} && perl -I${perllibdir} -I. Makefile.PL |") or die;
 		while (defined(my $dep = <DEPS>)) {
 			chomp($dep);
 			if ($dep =~ qr"\.\./\.\./") {
