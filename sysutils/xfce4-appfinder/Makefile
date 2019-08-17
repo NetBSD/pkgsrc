@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.56 2019/08/11 13:23:19 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2019/08/17 19:13:19 gutteridge Exp $
 
-PKGREVISION= 1
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	xfce4-appfinder-4.13.5
+DISTNAME=	xfce4-appfinder-4.14.0
 CATEGORIES=	sysutils
-MASTER_SITES+=	http://archive.xfce.org/src/xfce/xfce4-appfinder/4.13/
+MASTER_SITES+=	http://archive.xfce.org/src/xfce/xfce4-appfinder/4.14/
 
 HOMEPAGE=	https://docs.xfce.org/xfce/xfce4-appfinder/start
 COMMENT=	Xfce application finder
