@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3501 2019/08/17 19:49:11 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.3502 2019/08/17 20:28:42 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5721,3 +5721,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/xfce4-desktop to 4.14.1 [gutteridge 2019-08-17]
 	Updated meta-pkgs/xfce4 to 4.14.0 [gutteridge 2019-08-17]
 	Updated meta-pkgs/xfce4-extras to 4.14.0 [gutteridge 2019-08-17]
+	Updated editors/xfce4-mousepad to 0.4.2 [gutteridge 2019-08-17]
