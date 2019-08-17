@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3480 2019/08/17 09:55:09 ng0 Exp $
+$NetBSD: CHANGES-2019,v 1.3481 2019/08/17 10:23:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5700,3 +5700,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/logswan to 2.0.4 [fcambus 2019-08-16]
 	Updated devel/pango to 1.44.5 [ryoon 2019-08-17]
 	Added fonts/ibm-plex-ttf version 2.0.0 [ng0 2019-08-17]
+	Updated devel/py-setuptools to 41.1.0 [adam 2019-08-17]
