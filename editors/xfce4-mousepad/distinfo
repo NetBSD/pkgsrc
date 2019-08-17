@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2018/10/23 09:54:14 bsiegert Exp $
+$NetBSD: distinfo,v 1.8 2019/08/17 20:28:32 gutteridge Exp $
 
-SHA1 (mousepad-0.4.1.tar.bz2) = da034ac3711c273e71e0c2b194c12d72a9ca087a
-RMD160 (mousepad-0.4.1.tar.bz2) = 07b8d2295a23180d5c3ae8d3b1d8099ce7e36f34
-SHA512 (mousepad-0.4.1.tar.bz2) = 2ffbb4245a3344437bd41f9f28cc066ae45062f6b6d169aa274e933f033c434f0b10845ccf42ab846dcad25ae7cee36ea6619bfb6889e8cd41c994be87b77be8
-Size (mousepad-0.4.1.tar.bz2) = 644161 bytes
+SHA1 (mousepad-0.4.2.tar.bz2) = 26f0a2860973c4acd425dc8b5e7736ba6cb9a459
+RMD160 (mousepad-0.4.2.tar.bz2) = f02202f24a88d033a149966b6e3cbc3972568b83
+SHA512 (mousepad-0.4.2.tar.bz2) = f3266018ce61683dc62b6866649f3674cc363ea652de04d3f087341c61cf24fb5eb730411948e354d085792f88b59e3dba7e7712715d92711f750b33d8bfb69a
+Size (mousepad-0.4.2.tar.bz2) = 696014 bytes
