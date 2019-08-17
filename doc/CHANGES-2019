@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3482 2019/08/17 10:55:57 ng0 Exp $
+$NetBSD: CHANGES-2019,v 1.3483 2019/08/17 11:06:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5702,3 +5702,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added fonts/ibm-plex-ttf version 2.0.0 [ng0 2019-08-17]
 	Updated devel/py-setuptools to 41.1.0 [adam 2019-08-17]
 	Added fonts/ibm-plex-otf version 2.0.0 [ng0 2019-08-17]
+	Updated devel/py-uvloop to 0.13.0 [adam 2019-08-17]
