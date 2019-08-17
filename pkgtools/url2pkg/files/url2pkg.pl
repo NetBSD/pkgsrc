@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.43 2019/08/17 13:23:35 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.44 2019/08/17 13:25:50 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -121,7 +121,6 @@ my ($distname, $abs_wrkdir, $abs_wrksrc);
 my (@wrksrc_files, @wrksrc_dirs);
 my (@depends, @build_depends, @includes, @build_vars, @extra_vars, @todo);
 my ($pkgname);
-my $dist_subdir = "";
 
 #
 # And now to the real magic_* subroutines.
@@ -265,6 +264,7 @@ sub generate_initial_package($) {
 	my ($found, $master_site);
 	my ($master_sites, $distfile, $homepage, $dist_sufx, $category);
 	my ($gh_project, $gh_tag, $gh_release);
+	my $dist_subdir = "";
 
 	$found = false;
 	open(SITES, "<", "../../mk/fetch/sites.mk") or die;
