@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.70 2019/08/16 10:43:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.71 2019/08/17 04:36:27 ryoon Exp $
 bin/pango-list
 bin/pango-view
 include/pango-1.0/pango/pango-attributes.h
@@ -40,19 +40,21 @@ ${PLIST.x11}include/pango-1.0/pango/pangoxft.h
 lib/girepository-1.0/Pango-1.0.typelib
 lib/girepository-1.0/PangoCairo-1.0.typelib
 lib/girepository-1.0/PangoFT2-1.0.typelib
+lib/girepository-1.0/PangoFc-1.0.typelib
+lib/girepository-1.0/PangoOT-1.0.typelib
 ${PLIST.x11}lib/girepository-1.0/PangoXft-1.0.typelib
 lib/libpango-1.0.so
 lib/libpango-1.0.so.0
-lib/libpango-1.0.so.0.4400.3
+lib/libpango-1.0.so.0.4400.5
 lib/libpangocairo-1.0.so
 lib/libpangocairo-1.0.so.0
-lib/libpangocairo-1.0.so.0.4400.3
+lib/libpangocairo-1.0.so.0.4400.5
 lib/libpangoft2-1.0.so
 lib/libpangoft2-1.0.so.0
-lib/libpangoft2-1.0.so.0.4400.3
+lib/libpangoft2-1.0.so.0.4400.5
 ${PLIST.x11}lib/libpangoxft-1.0.so
 ${PLIST.x11}lib/libpangoxft-1.0.so.0
-${PLIST.x11}lib/libpangoxft-1.0.so.0.4400.3
+${PLIST.x11}lib/libpangoxft-1.0.so.0.4400.5
 lib/pkgconfig/pango.pc
 lib/pkgconfig/pangocairo.pc
 lib/pkgconfig/pangoft2.pc
@@ -61,4 +63,6 @@ man/man1/pango-view.1
 share/gir-1.0/Pango-1.0.gir
 share/gir-1.0/PangoCairo-1.0.gir
 share/gir-1.0/PangoFT2-1.0.gir
+share/gir-1.0/PangoFc-1.0.gir
+share/gir-1.0/PangoOT-1.0.gir
 ${PLIST.x11}share/gir-1.0/PangoXft-1.0.gir
