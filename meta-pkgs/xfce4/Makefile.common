@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.65 2019/07/13 01:05:01 gutteridge Exp $
+# $NetBSD: Makefile.common,v 1.66 2019/08/17 19:44:37 gutteridge Exp $
 #
 # used by archivers/xfce4-thunar-archive/Makefile
 # used by audio/xfce4-mixer/Makefile
@@ -71,7 +71,7 @@ MAINTAINER=		youri@NetBSD.org
 HOMEPAGE=		https://www.xfce.org/
 LICENSE=		gnu-gpl-v2
 
-XFCE4_VERSION=		4.14pre2
+XFCE4_VERSION=		4.14.0
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
