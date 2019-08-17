@@ -1,10 +1,10 @@
-$NetBSD: patch-configure,v 1.4 2019/05/23 02:56:07 gutteridge Exp $
+$NetBSD: patch-configure,v 1.5 2019/08/17 19:26:19 gutteridge Exp $
 
 Add NetBSD backend detection.
 
---- configure.orig	2019-05-18 22:03:14.000000000 +0000
+--- configure.orig	2019-08-11 20:13:50.000000000 +0000
 +++ configure
-@@ -17795,6 +17795,8 @@ if test x$with_backend = x; then
+@@ -17802,6 +17802,8 @@ if test x$with_backend = x; then
      with_backend=freebsd ;; #(
    *-*dragonfly*) :
      with_backend=freebsd ;; #(
@@ -13,7 +13,7 @@ Add NetBSD backend detection.
    *-openbsd*) :
      with_backend=openbsd ;; #(
    *) :
-@@ -17824,6 +17826,11 @@ if test x$with_backend = xopenbsd; then
+@@ -17831,6 +17833,11 @@ if test x$with_backend = xopenbsd; then
  $as_echo "#define BACKEND_TYPE_OPENBSD 1" >>confdefs.h
  
  fi
@@ -23,5 +23,5 @@ Add NetBSD backend detection.
 +
 +fi
  
- ac_config_files="$ac_config_files Makefile doc/Makefile icons/Makefile icons/48x48-actions/Makefile icons/48x48/Makefile icons/128x128/Makefile icons/scalable/Makefile libxfsm/Makefile libxfsm/xfce4-session-2.0.pc po/Makefile.in settings/Makefile scripts/Makefile scripts/xinitrc.in xfce4-session/Makefile xfce4-session-logout/Makefile xfsm-shutdown-helper/Makefile"
+ ac_config_files="$ac_config_files Makefile doc/Makefile icons/Makefile icons/48x48-actions/Makefile icons/48x48/Makefile icons/128x128/Makefile icons/scalable/Makefile libxfsm/Makefile po/Makefile.in settings/Makefile scripts/Makefile scripts/xinitrc.in xfce4-session/Makefile xfce4-session-logout/Makefile xfsm-shutdown-helper/Makefile"
  

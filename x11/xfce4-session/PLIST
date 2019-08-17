@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.23 2019/07/13 00:21:07 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.24 2019/08/17 19:26:19 gutteridge Exp $
 bin/startxfce4
 bin/xfce4-session
 bin/xfce4-session-logout
 bin/xfce4-session-settings
 bin/xflock4
-lib/libxfsm-4.6.la
-lib/pkgconfig/xfce4-session-2.0.pc
 lib/xfce4/session/xfsm-shutdown-helper
 man/man1/xfce4-session-logout.1
 man/man1/xfce4-session.1
