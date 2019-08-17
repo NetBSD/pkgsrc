@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.39 2019/05/25 03:58:50 maya Exp $
+# $NetBSD: url2pkg.pl,v 1.40 2019/08/17 11:57:36 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -273,7 +273,7 @@ sub generate_initial_package($) {
 		if ($line =~ qr"^(MASTER_SITE_.*)\+=") {
 			$master_site = $1;
 
-		} elsif ($line =~ qr"^\t(.*?)(?:\s+\\)$") {
+		} elsif ($line =~ qr"^\t(.*?)(?:\s+\\)?$") {
 			my ($site) = ($1);
 
 			if (index($url, $site) == 0) {
@@ -297,8 +297,9 @@ sub generate_initial_package($) {
 			}
 		}
 	}
+	close(SITES) or die;
 
-	if (!$found) {
+	if (true) {
 		if ($url =~ qr"^http://(?:pr)?downloads\.sourceforge\.net/([^/]*)/([^/?]+)(?:\?(?:download|use_mirror=.*))?$") {
 			my $pkgbase = $1;
 			$distfile = $2;
@@ -309,17 +310,7 @@ sub generate_initial_package($) {
 		}
 	}
 
-	if (!$found) {
-		if ($url =~ qr"^http://([^.]*).googlecode\.com/files/(.*$)") {
-			my $pkgbase = $1;
-			$distfile = $2;
-			$master_sites = "http://${pkgbase}.googlecode.com/files/";
-			$homepage = "http://code.google.com/p/${pkgbase}/";
-			$found = true;
-		}
-	}
-
-	if (!$found) {
+	if (true) {
 		if ($url =~ qr"^https?://github\.com/") {
 			if ($url =~ qr"^https?://github\.com/(.*)/(.*)/archive/(.*)(\.tar\.gz|\.zip)$") {
 				$master_sites = "\${MASTER_SITE_GITHUB:=$1/}";
