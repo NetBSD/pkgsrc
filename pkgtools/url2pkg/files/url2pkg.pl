@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.42 2019/08/17 13:21:42 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.43 2019/08/17 13:23:35 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -121,7 +121,7 @@ my ($distname, $abs_wrkdir, $abs_wrksrc);
 my (@wrksrc_files, @wrksrc_dirs);
 my (@depends, @build_depends, @includes, @build_vars, @extra_vars, @todo);
 my ($pkgname);
-my ($dist_subdir);
+my $dist_subdir = "";
 
 #
 # And now to the real magic_* subroutines.
@@ -339,7 +339,7 @@ sub generate_initial_package($) {
 			print("$0: ERROR: Invalid GitHub URL: ${url}, handling as normal URL\n");
 		}
 	} else {
-		$gh_project = ""; $gh_release = ""; $dist_subdir = "";
+		$gh_project = ""; $gh_release = "";
 	}
 
 	if (!$found) {
