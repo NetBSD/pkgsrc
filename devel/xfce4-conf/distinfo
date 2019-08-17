@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2019/07/13 00:05:50 gutteridge Exp $
+$NetBSD: distinfo,v 1.10 2019/08/17 18:30:21 gutteridge Exp $
 
-SHA1 (xfconf-4.13.8.tar.bz2) = c5aab94ef25a3f4c606b9e5cff32c555b5139c3c
-RMD160 (xfconf-4.13.8.tar.bz2) = d12839f5074a9acb18c36441c1821b65fd5b9280
-SHA512 (xfconf-4.13.8.tar.bz2) = 2b6afee1c9299e56e1576f93b34410c99b16109e83b0b34c4e13d952997d4812de6a6ab69f015c8f7fb8cf01e1b00b5d953261c3cbbfeab216c878aae3618f77
-Size (xfconf-4.13.8.tar.bz2) = 635519 bytes
+SHA1 (xfconf-4.14.1.tar.bz2) = edfa24dd862bc39d6002f40f6b9b3974c59fa250
+RMD160 (xfconf-4.14.1.tar.bz2) = ebf51b4e250e3b7516480a9c4db68e074a943a14
+SHA512 (xfconf-4.14.1.tar.bz2) = 727d013f7e71e0eb9ff17e464acd65c1fa507f8eba1bd29621dae070161042f60f47b8ac048b28849bf45232d04d5d6e48530aa0bd1e661a3f58db47703a8808
+Size (xfconf-4.14.1.tar.bz2) = 644804 bytes
 SHA1 (patch-gsettings-backend_xfconf-giomodule.c) = 5afc8c4822c551b72c7cfe1fbec8196127b05f9b
