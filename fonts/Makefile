@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.327 2019/07/29 11:26:05 markd Exp $
+# $NetBSD: Makefile,v 1.328 2019/08/17 09:47:47 ng0 Exp $
 #
 
 COMMENT=	Fonts
@@ -117,6 +117,7 @@ SUBDIR+=	go-ttf
 SUBDIR+=	gsftopkk
 SUBDIR+=	gucharmap
 SUBDIR+=	harfbuzz
+SUBDIR+=	ibm-plex-ttf
 SUBDIR+=	inconsolata-g
 SUBDIR+=	inconsolata-ttf
 SUBDIR+=	intlfonts
