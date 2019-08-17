@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.41 2019/08/17 13:12:00 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.42 2019/08/17 13:21:42 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -300,50 +300,46 @@ sub generate_initial_package($) {
 	}
 	close(SITES) or die;
 
-	if (true) {
-		if ($url =~ qr"^http://(?:pr)?downloads\.sourceforge\.net/([^/]*)/([^/?]+)(?:\?(?:download|use_mirror=.*))?$") {
-			my $pkgbase = $1;
-			$distfile = $2;
+	if ($url =~ qr"^http://(?:pr)?downloads\.sourceforge\.net/([^/]*)/([^/?]+)(?:\?(?:download|use_mirror=.*))?$") {
+		my $pkgbase = $1;
+		$distfile = $2;
 
-			$master_sites = "\${MASTER_SITE_SOURCEFORGE:=${pkgbase}/}";
-			$homepage = "http://${pkgbase}.sourceforge.net/";
-			$found = true;
-		}
+		$master_sites = "\${MASTER_SITE_SOURCEFORGE:=${pkgbase}/}";
+		$homepage = "http://${pkgbase}.sourceforge.net/";
+		$found = true;
 	}
 
-	if (true) {
-		if ($url =~ qr"^https?://github\.com/") {
-			if ($url =~ qr"^https?://github\.com/(.*)/(.*)/archive/(.*)(\.tar\.gz|\.zip)$") {
-				$master_sites = "\${MASTER_SITE_GITHUB:=$1/}";
-				$homepage = "https://github.com/$1/$2/";
-				$gh_project = $2;
-				$gh_tag = $3;
-				if (index($gh_tag, $gh_project) == -1 ) {
-					$pkgname = '${GITHUB_PROJECT}-${DISTNAME}';
-					$dist_subdir = '${GITHUB_PROJECT}';
-				}
-				$distfile = "$3$4";
-				$found = true;
-			} elsif ($url =~ qr"^https?://github\.com/(.*)/(.*)/releases/download/(.*)/(.*)(\.tar\.gz|\.zip)$") {
-				$master_sites = "\${MASTER_SITE_GITHUB:=$1/}";
-				$homepage = "https://github.com/$1/$2/";
-				if (index($4, $2) == -1) {
-					$gh_project = $2;
-					$dist_subdir = '${GITHUB_PROJECT}';
-				}
-				if ($3 eq $4) {
-					$gh_release = '${DISTNAME}';
-				} else {
-					$gh_release = $3;
-				}
-				$distfile = "$4$5";
-				$found = true;
-			} else {
-				print("$0: ERROR: Invalid GitHub URL: ${url}, handling as normal URL\n");
+	if ($url =~ qr"^https?://github\.com/") {
+		if ($url =~ qr"^https?://github\.com/(.*)/(.*)/archive/(.*)(\.tar\.gz|\.zip)$") {
+			$master_sites = "\${MASTER_SITE_GITHUB:=$1/}";
+			$homepage = "https://github.com/$1/$2/";
+			$gh_project = $2;
+			$gh_tag = $3;
+			if (index($gh_tag, $gh_project) == -1 ) {
+				$pkgname = '${GITHUB_PROJECT}-${DISTNAME}';
+				$dist_subdir = '${GITHUB_PROJECT}';
 			}
+			$distfile = "$3$4";
+			$found = true;
+		} elsif ($url =~ qr"^https?://github\.com/(.*)/(.*)/releases/download/(.*)/(.*)(\.tar\.gz|\.zip)$") {
+			$master_sites = "\${MASTER_SITE_GITHUB:=$1/}";
+			$homepage = "https://github.com/$1/$2/";
+			if (index($4, $2) == -1) {
+				$gh_project = $2;
+				$dist_subdir = '${GITHUB_PROJECT}';
+			}
+			if ($3 eq $4) {
+				$gh_release = '${DISTNAME}';
+			} else {
+				$gh_release = $3;
+			}
+			$distfile = "$4$5";
+			$found = true;
 		} else {
-			$gh_project = ""; $gh_release = ""; $dist_subdir = "";
+			print("$0: ERROR: Invalid GitHub URL: ${url}, handling as normal URL\n");
 		}
+	} else {
+		$gh_project = ""; $gh_release = ""; $dist_subdir = "";
 	}
 
 	if (!$found) {
