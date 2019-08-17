@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2018/10/23 09:54:14 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/08/17 20:28:32 gutteridge Exp $
 bin/mousepad
 share/applications/mousepad.desktop
 share/glib-2.0/schemas/org.xfce.mousepad.gschema.xml
 share/locale/ar/LC_MESSAGES/mousepad.mo
 share/locale/ast/LC_MESSAGES/mousepad.mo
+share/locale/be/LC_MESSAGES/mousepad.mo
 share/locale/bg/LC_MESSAGES/mousepad.mo
 share/locale/ca/LC_MESSAGES/mousepad.mo
 share/locale/cs/LC_MESSAGES/mousepad.mo
@@ -20,7 +21,9 @@ share/locale/gl/LC_MESSAGES/mousepad.mo
 share/locale/he/LC_MESSAGES/mousepad.mo
 share/locale/hr/LC_MESSAGES/mousepad.mo
 share/locale/hu/LC_MESSAGES/mousepad.mo
+share/locale/hy_AM/LC_MESSAGES/mousepad.mo
 share/locale/id/LC_MESSAGES/mousepad.mo
+share/locale/ie/LC_MESSAGES/mousepad.mo
 share/locale/is/LC_MESSAGES/mousepad.mo
 share/locale/it/LC_MESSAGES/mousepad.mo
 share/locale/ja/LC_MESSAGES/mousepad.mo
@@ -49,3 +52,4 @@ share/locale/ug/LC_MESSAGES/mousepad.mo
 share/locale/uk/LC_MESSAGES/mousepad.mo
 share/locale/zh_CN/LC_MESSAGES/mousepad.mo
 share/locale/zh_TW/LC_MESSAGES/mousepad.mo
+share/polkit-1/actions/org.xfce.mousepad.policy
