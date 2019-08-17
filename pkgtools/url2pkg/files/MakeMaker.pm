@@ -52,7 +52,7 @@ our $VERSION = '6.66';
 
 our $Verbose	= 0;	# exported
 our @EXPORT	= qw(&WriteMakefile &prompt $Verbose $version);
-our @EXPORT_OK	= qw(&neatvalue);
+our @EXPORT_OK	= qw(&neatvalue &_sprintf562);
 
 # Finds and returns the category a given package lies in.
 # If the package does not exist, C<undef> is returned.
@@ -111,6 +111,10 @@ sub prompt(@) {
 
 sub neatvalue {
 	return;
+}
+
+sub _sprintf562 {
+	return sprintf(@_);
 }
 
 1;
