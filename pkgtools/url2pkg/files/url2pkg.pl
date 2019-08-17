@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.44 2019/08/17 13:25:50 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.45 2019/08/17 13:55:41 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -182,7 +182,7 @@ sub magic_perlmod() {
 	} elsif (-f "${abs_wrksrc}/Makefile.PL") {
 
 		# To avoid fix_up_makefile error for p5-HTML-Quoted, generate Makefile first.
-		system("cd ${abs_wrksrc} && perl -I. Makefile.PL < /dev/null") or "ignore";
+		system("cd ${abs_wrksrc} && perl -I. Makefile.PL < /dev/null") or do {};
 
 		open(DEPS, "cd ${abs_wrksrc} && perl -I${perllibdir} -I. Makefile.PL |") or die;
 		while (defined(my $dep = <DEPS>)) {
@@ -259,14 +259,20 @@ sub magic_use_languages() {
 # the distfiles have been extracted.
 #
 
-sub generate_initial_package($) {
+sub generate_initial_package_Makefile($) {
 	my ($url) = @_;
-	my ($found, $master_site);
-	my ($master_sites, $distfile, $homepage, $dist_sufx, $category);
-	my ($gh_project, $gh_tag, $gh_release);
+
+	my $master_site = "";
+	my $master_sites = "";
+	my $distfile = "";
+	my $homepage = "";
+	my $dist_sufx = "";
+	my $category = "";
+	my $github_project = "";
+	my $github_release = "";
 	my $dist_subdir = "";
 
-	$found = false;
+	my $found = false;
 	open(SITES, "<", "../../mk/fetch/sites.mk") or die;
 	while (defined(my $line = <SITES>)) {
 		chomp($line);
@@ -311,35 +317,33 @@ sub generate_initial_package($) {
 
 	if ($url =~ qr"^https?://github\.com/") {
 		if ($url =~ qr"^https?://github\.com/(.*)/(.*)/archive/(.*)(\.tar\.gz|\.zip)$") {
-			$master_sites = "\${MASTER_SITE_GITHUB:=$1/}";
-			$homepage = "https://github.com/$1/$2/";
-			$gh_project = $2;
-			$gh_tag = $3;
-			if (index($gh_tag, $gh_project) == -1 ) {
+			my ($org, $proj, $tag, $ext) = ($1, $2, $3, $4);
+
+			$master_sites = "\${MASTER_SITE_GITHUB:=$org/}";
+			$homepage = "https://github.com/$org/$proj/";
+			$github_project = $proj;
+			if (index($tag, $github_project) == -1) {
 				$pkgname = '${GITHUB_PROJECT}-${DISTNAME}';
 				$dist_subdir = '${GITHUB_PROJECT}';
 			}
-			$distfile = "$3$4";
+			$distfile = "$tag$ext";
 			$found = true;
+
 		} elsif ($url =~ qr"^https?://github\.com/(.*)/(.*)/releases/download/(.*)/(.*)(\.tar\.gz|\.zip)$") {
-			$master_sites = "\${MASTER_SITE_GITHUB:=$1/}";
-			$homepage = "https://github.com/$1/$2/";
-			if (index($4, $2) == -1) {
-				$gh_project = $2;
+			my ($org, $proj, $tag, $base, $ext) = ($1, $2, $3, $4, $5);
+
+			$master_sites = "\${MASTER_SITE_GITHUB:=$org/}";
+			$homepage = "https://github.com/$org/$proj/";
+			if (index($base, $proj) == -1) {
+				$github_project = $proj;
 				$dist_subdir = '${GITHUB_PROJECT}';
 			}
-			if ($3 eq $4) {
-				$gh_release = '${DISTNAME}';
-			} else {
-				$gh_release = $3;
-			}
-			$distfile = "$4$5";
+			$github_release = $tag eq $base ? '${DISTNAME}' : $tag;
+			$distfile = "$base$ext";
 			$found = true;
 		} else {
 			print("$0: ERROR: Invalid GitHub URL: ${url}, handling as normal URL\n");
 		}
-	} else {
-		$gh_project = ""; $gh_release = "";
 	}
 
 	if (!$found) {
@@ -351,32 +355,30 @@ sub generate_initial_package($) {
 		}
 	}
 
-	if ($distfile =~ qr"^(.*)(\.tgz|\.tar\.Z|\.tar\.gz|\.tar\.bz2|\.tar\.xz|\.tar\.7z)$") {
-		($distname, $dist_sufx) = ($1, $2);
-	} elsif ($distfile =~ qr"^(.*)(\.[^.]+)$") {
+	if ($distfile =~ qr"^(.*?)((?:\.tar)?\.\w+)$") {
 		($distname, $dist_sufx) = ($1, $2);
 	} else {
 		($distname, $dist_sufx) = ($distfile, "# none");
 	}
 
-	# ignore errors.
-	rename("Makefile", "Makefile-url2pkg.bak");
+	rename("Makefile", "Makefile-url2pkg.bak") or do {};
 
 	`pwd` =~ qr".*/([^/]+)/[^/]+$" or die;
 	$category = $1;
 
 	open(MF, ">", "Makefile") or die;
-	print MF ("# \$Net" . "BSD\$\n");
+	print MF ("# \$" . "NetBSD\$\n");
 	print MF ("\n");
+
 	print_section(*MF, [
-		(($gh_project ne "")
-		? ["GITHUB_PROJECT", $gh_project]
+		(($github_project ne "")
+		? ["GITHUB_PROJECT", $github_project]
 		: ()),
 		["DISTNAME", $distname],
 		["CATEGORIES", $category],
 		["MASTER_SITES", $master_sites],
-		(($gh_release ne "")
-		? ["GITHUB_RELEASE", $gh_release]
+		(($github_release ne "")
+		? ["GITHUB_RELEASE", $github_release]
 		: ()),
 		(($dist_sufx ne ".tar.gz" && $dist_sufx ne ".gem")
 		? ["EXTRACT_SUFX", $dist_sufx]
@@ -385,18 +387,26 @@ sub generate_initial_package($) {
 		? ["DIST_SUBDIR", $dist_subdir]
 		: ())
 	]);
+
 	print_section(*MF, [
 		["MAINTAINER", get_maintainer()],
 		["HOMEPAGE", $homepage],
 		["COMMENT", "TODO: Short description of the package"],
 		["#LICENSE", "# TODO: (see mk/license.mk)"],
 	]);
+
 	print MF ("# url2pkg-marker (please do not remove this line.)\n");
 	print MF (".include \"../../mk/bsd.pkg.mk\"\n");
 	close(MF) or die;
+}
+
+sub generate_initial_package($) {
+	my ($url) = @_;
+
+	generate_initial_package_Makefile($url);
 
 	open(PLIST, ">", "PLIST") or die;
-	print PLIST ("\@comment \$Net" . "BSD\$\n");
+	print PLIST ("\@comment \$" . "NetBSD\$\n");
 	close(PLIST) or die;
 
 	open(DESCR, ">", "DESCR") or die;
