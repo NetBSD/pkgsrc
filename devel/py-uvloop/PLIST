@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/01/22 08:56:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/08/17 11:05:48 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -61,6 +61,7 @@ ${PYSITELIB}/uvloop/loop.c
 ${PYSITELIB}/uvloop/loop.pxd
 ${PYSITELIB}/uvloop/loop.pyx
 ${PYSITELIB}/uvloop/loop.so
+${PYSITELIB}/uvloop/lru.pyx
 ${PYSITELIB}/uvloop/pseudosock.pyx
 ${PYSITELIB}/uvloop/request.pxd
 ${PYSITELIB}/uvloop/request.pyx
