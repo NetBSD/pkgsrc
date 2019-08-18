@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3507 2019/08/18 06:23:41 maya Exp $
+$NetBSD: CHANGES-2019,v 1.3508 2019/08/18 07:20:03 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5748,3 +5748,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated editors/codelite to 13.0 [maya 2019-08-18]
 	Updated graphics/ristretto to 0.10.0 [gutteridge 2019-08-18]
 	Updated pkgtools/url2pkg to 2.31 [maya 2019-08-18]
+	Updated sysutils/dvdrecord to 0.1.5nb3 [maya 2019-08-18]
