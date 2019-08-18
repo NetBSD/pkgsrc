@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2019/08/11 13:23:19 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2019/08/18 21:58:55 gutteridge Exp $
 
-PKGREVISION= 2
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	1.1.2
+VERSION=	1.1.3
 DISTNAME=	xfce4-battery-plugin-${VERSION}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://archive.xfce.org/src/panel-plugins/xfce4-battery-plugin/1.1/
