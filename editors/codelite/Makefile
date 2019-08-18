@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2019/07/21 22:24:41 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/08/18 03:48:44 maya Exp $
 
-DISTNAME=	codelite-9.1
-PKGREVISION=	18
+DISTNAME=	codelite-13.0
 CATEGORIES=	editors x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=eranif/}
 
@@ -20,7 +19,10 @@ CMAKE_ARGS+=		-DPREFIX:STRING=${PREFIX}
 # For some reason CMAKE_ARGS.NetBSD+=-DIS_NETBSD:STRING=1 doesn't work for me
 .include "../../mk/bsd.prefs.mk"
 
+CHECK_PORTABILITY_SKIP+=	sdk/wxsqlite3/configure
+
 .if ${OPSYS} == "NetBSD"
+CMAKE_ARGS+=			-DIS_NETBSD:STRING=1
 SUBST_CLASSES+=			ena-netbsd
 SUBST_STAGE.ena-netbsd=		pre-configure
 SUBST_MESSAGE.ena-netbsd=	Enable NetBSD
@@ -51,9 +53,13 @@ REPLACE_BASH+=		svgs/convert-svg-to-png.sh
 REPLACE_BASH+=		svgs/create-logo-root.sh
 REPLACE_BASH+=		svgs/create-logo.sh
 REPLACE_BASH+=		svgs/find-bar/convert-svg-to-png.sh
+REPLACE_NODEJS+=	LanguageServer/codelite-lsp/codelite-lsp-helper
+REPLACE_PYTHON+=	codelite_open_helper.py
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/codelite
 
+.include "../../lang/nodejs/application.mk"
+.include "../../lang/python/application.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

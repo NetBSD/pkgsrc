@@ -1,8 +1,8 @@
-$NetBSD: patch-sdk_codelite__indexer_libctags_read.c,v 1.1 2016/06/15 22:04:17 kamil Exp $
+$NetBSD: patch-sdk_codelite__indexer_libctags_read.c,v 1.2 2019/08/18 03:48:44 maya Exp $
 
 Handle fpos_t on NetBSD.
 
---- sdk/codelite_indexer/libctags/read.c.orig	2016-01-30 10:49:18.000000000 +0000
+--- sdk/codelite_indexer/libctags/read.c.orig	2019-05-21 17:52:21.000000000 +0300
 +++ sdk/codelite_indexer/libctags/read.c
 @@ -605,6 +605,9 @@ extern int readChars (char *buffer, size
  #if defined(__WXMSW__) || defined(__APPLE__) || defined(__FreeBSD__)

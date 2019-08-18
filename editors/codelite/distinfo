@@ -1,17 +1,14 @@
-$NetBSD: distinfo,v 1.3 2017/02/14 21:31:43 joerg Exp $
+$NetBSD: distinfo,v 1.4 2019/08/18 03:48:44 maya Exp $
 
-SHA1 (codelite-9.1.tar.gz) = a177e3c04612d96918361fcaae226e23f68be90a
-RMD160 (codelite-9.1.tar.gz) = b0ccb31eeadc5a342eba3a562044131868f7ceca
-SHA512 (codelite-9.1.tar.gz) = e7caa895c5ba62def98a50a46132940f7135c77ebe3d2fce7f1d83755ed6ce7dfc6aeb013a665b28eb969afcc1004f49284a253297d2317e72bda5f3945ce978
-Size (codelite-9.1.tar.gz) = 90366396 bytes
-SHA1 (patch-CMakeLists.txt) = aa94edc0803e001f2f56598fa22eb942a250ad1c
-SHA1 (patch-CodeLite_CMakeLists.txt) = 8456740d0de117b8847d8d8745e23ab2c2203e1e
-SHA1 (patch-CodeLite_unixprocess__impl.cpp) = bdaf3b9ec65fc7b623ec875148b30c3d9897d17d
-SHA1 (patch-LiteEditor_CMakeLists.txt) = cc5f625b5ef79d21a0f2405d699757be20180f46
-SHA1 (patch-Plugin_CMakeLists.txt) = 0af7b1ea3f941ebb9ecf41d8b8e4ffa760370fee
-SHA1 (patch-Plugin_wxterminal.cpp) = 02e6c6e4c5813a33ff29e49d53750011d70d1534
-SHA1 (patch-codelite__terminal_MainFrame.cpp) = 5717e46fddde8f7fc1aaf6c794318582f4b6da96
-SHA1 (patch-codelite__terminal_unixprocess__impl.cpp) = 69dfb1cc102213595e97c4e7d690e369a66c4749
-SHA1 (patch-sdk_codelite__indexer_libctags_read.c) = 84dbb412d3879e3d5bb3cc0e18f6388d8b7d4ee5
-SHA1 (patch-sdk_codelite__indexer_network_np__connections__server.cpp) = cf579cc67603c70199992a11e14c458c189f3942
-SHA1 (patch-sdk_wxsqlite3_configure) = 2b10b03efe1ff07ac80a7d4616a63eeac8f18278
+SHA1 (codelite-13.0.tar.gz) = 011e1ce86f6c9bd88278e3935d7f7cc6d90ef2ce
+RMD160 (codelite-13.0.tar.gz) = af6b08ebca99fa7ac56f50ea415aff71d950af0c
+SHA512 (codelite-13.0.tar.gz) = 53b1e8610268ad368d40f31a7355b88a57bb77c29616e02c2eb8a98310ce362f1430a1112761ac81e5c287e84e0703102d18c753328fa7c57b22c66bc4162010
+Size (codelite-13.0.tar.gz) = 63051086 bytes
+SHA1 (patch-CodeLite_CMakeLists.txt) = d0e30ce409746d166c3f050834116623f42e2b31
+SHA1 (patch-CodeLite_unixprocess__impl.cpp) = ba497d2dd383f38c0405df45661ce2a29f38cdc3
+SHA1 (patch-LiteEditor_CMakeLists.txt) = 1b55945779f62bc9e4d0a1ee4ab9ea6e5b44f199
+SHA1 (patch-Plugin_CMakeLists.txt) = 29c4859a6092e6d025220df45199c90a93b6c862
+SHA1 (patch-Plugin_wxterminal.cpp) = 4a86640b6fc532eab93d2f97934b672d87140b06
+SHA1 (patch-codelite__terminal_TextView.cpp) = 4d93659144ecf4780a09a039165d172bc4bc87a7
+SHA1 (patch-sdk_codelite__indexer_libctags_read.c) = 9c9e166dbf895bb746194547e9b0bea99db14926
+SHA1 (patch-sdk_codelite__indexer_network_np__connections__server.cpp) = 98f8cba3597035c79ebfb60ba5d69a27c02c74e4
