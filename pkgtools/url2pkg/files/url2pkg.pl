@@ -1,5 +1,5 @@
 #! @PERL5@
-# $NetBSD: url2pkg.pl,v 1.61 2019/08/18 17:34:13 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.62 2019/08/18 18:02:48 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -647,15 +647,15 @@ sub adjust_lines_python_module($$) {
 	my $pkgbase1 = substr($pkgbase, 0, 1);
 	my $pkgversion_norev = $old{"DISTNAME"} =~ s/^v//r;
 
-	my @tx_lines = @$lines;
-	if (lines_remove(\@tx_lines, "GITHUB_PROJECT")
-		&& lines_set(\@tx_lines, "DISTNAME", "$pkgbase-$pkgversion_norev")
-		&& lines_set(\@tx_lines, "PKGNAME", "\${PYPKGPREFIX}-\${DISTNAME}")
-		&& lines_set(\@tx_lines, "MASTER_SITES", "\${MASTER_SITE_PYPI:=$pkgbase1/$pkgbase/}")
-		&& lines_remove(\@tx_lines, "DIST_SUBDIR")
-		&& (lines_remove_if(\@tx_lines, "EXTRACT_SUFX", ".zip") || true)) {
+	my @lines = @$lines;
+	if (lines_remove(\@lines, "GITHUB_PROJECT")
+		&& lines_set(\@lines, "DISTNAME", "$pkgbase-$pkgversion_norev")
+		&& lines_set(\@lines, "PKGNAME", "\${PYPKGPREFIX}-\${DISTNAME}")
+		&& lines_set(\@lines, "MASTER_SITES", "\${MASTER_SITE_PYPI:=$pkgbase1/$pkgbase/}")
+		&& lines_remove(\@lines, "DIST_SUBDIR")
+		&& (lines_remove_if(\@lines, "EXTRACT_SUFX", ".zip") || true)) {
 
-		@$lines = @tx_lines;
+		@$lines = @lines;
 		$regenerate_distinfo = true
 	}
 }
