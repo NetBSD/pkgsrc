@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.52 2019/08/18 06:56:20 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.53 2019/08/18 07:10:32 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -103,52 +103,59 @@ sub write_lines($@) {
 	close(F) or die;
 }
 
-# The following magic_* subroutines are called after the distfiles have
+# The following adjust_* subroutines are called after the distfiles have
 # been downloaded and extracted. They inspect the extracted files
-# to automatically define some variables in the package Makefile.
+# and adjust the variable definitions in the package Makefile.
+
 #
-# The following variables may be used in the magic_* subroutines:
+# The following variables may be used in the adjust_* subroutines:
 #
-# $distname
-#	contains the package name, including the version number.
-# $abs_wrkdir
-#	the absolute pathname to the working directory, containing
-#	the extracted distfiles.
-# $abs_wrksrc
-#	the absolute pathname to a subdirectory of $abs_wrkdir,
-#	typically containing package-provided Makefiles or configure
-#	scripts.
+
+# the package name, including the version number.
+my $distname;
+
+# the absolute pathname to the working directory, containing
+# the extracted distfiles.
+my $abs_wrkdir;
+
+# the absolute pathname to a subdirectory of $abs_wrkdir, typically
+# containing package-provided Makefiles or configure scripts.
+my $abs_wrksrc;
+
+my @wrksrc_files;
+my @wrksrc_dirs;
+# the regular files and directories relative to abs_wrksrc.
+
 #
-# The following lists may be extended by the magic_* routines and
+# The following variables may be set by the adjust_* subroutines and
 # will later appear in the package Makefile:
 #
-# @depends
-# @build_depends
-#	the dependencies of the package, in the form
-#	"package>=version:../../category/package".
-# @includes
-#	a list of pathnames relative to the package path.
-#	All these files will be included at the bottom of the Makefile.
-# @build_vars
-#	a list of variable assignments that will make up the fourth
-#	paragraph of the package Makefile, where the build configuration
-#	takes place.
-# @extra_vars
-#	similar to the @build_vars, but separated by an empty line in
-#	the Makefile, thereby forming the fifth paragraph.
-# @todos
-#	these are inserted below the second paragraph in the Makefile.
 
-my ($distname, $abs_wrkdir, $abs_wrksrc);
-my (@wrksrc_files, @wrksrc_dirs);
-my (@depends, @build_depends, @includes, @build_vars, @extra_vars, @todos);
-my ($pkgname);
+# the dependencies of the package, in the form
+# "package>=version:../../category/package".
+my @depends;
+my @build_depends;
 
-#
-# And now to the real magic_* subroutines.
-#
+# a list of pathnames relative to the package path.
+# All these files will be included at the bottom of the Makefile.
+my @includes;
 
-sub magic_configure() {
+# a list of variable assignments that will make up the fourth
+# paragraph of the package Makefile, where the build configuration
+# takes place.
+my @build_vars;
+
+# similar to the @build_vars, but separated by an empty line in
+# the Makefile, thereby forming the fifth paragraph.
+my @extra_vars;
+
+# these are inserted below the second paragraph in the Makefile.
+my @todos;
+
+# the package name, in case it differs from $distname.
+my $pkgname = "";
+
+sub adjust_configure() {
 	my $gnu_configure = false;
 
 	open(CONF, "<", "${abs_wrksrc}/configure") or return;
@@ -164,19 +171,19 @@ sub magic_configure() {
 	push(@build_vars, var($varname, "=", "yes"));
 }
 
-sub magic_cmake() {
+sub adjust_cmake() {
 	if (-f "$abs_wrksrc/CMakeLists.txt") {
 		push(@build_vars, var("USE_CMAKE", "=", "yes"));
 	}
 }
 
-sub magic_meson() {
+sub adjust_meson() {
 	if (-f "$abs_wrksrc/meson.build") {
 		push(@includes, "../../devel/py-meson/build.mk");
 	}
 }
 
-sub magic_gconf2_schemas() {
+sub adjust_gconf2_schemas() {
 	my @gconf2_files = grep(/schemas(?:\.in.*)$/, @wrksrc_files);
 	if (@gconf2_files) {
 		foreach my $f (@gconf2_files) {
@@ -188,7 +195,7 @@ sub magic_gconf2_schemas() {
 	}
 }
 
-sub magic_libtool() {
+sub adjust_libtool() {
 	if (-f "${abs_wrksrc}/ltconfig" || -f "${abs_wrksrc}/ltmain.sh") {
 		push(@build_vars, var("USE_LIBTOOL", "=", "yes"));
 	}
@@ -197,7 +204,7 @@ sub magic_libtool() {
 	}
 }
 
-sub magic_perlmod() {
+sub adjust_perlmod() {
 	if (-f "${abs_wrksrc}/Build.PL") {
 
 		# It's a Module::Build module. Dependencies cannot yet be
@@ -234,7 +241,7 @@ sub magic_perlmod() {
 	$pkgname = "p5-\${DISTNAME}";
 }
 
-sub magic_cargo() {
+sub adjust_cargo() {
 	open(CONF, "<", "${abs_wrksrc}/Cargo.lock") or return;
 
 	while (defined(my $line = <CONF>)) {
@@ -249,7 +256,7 @@ sub magic_cargo() {
 }
 
 
-sub magic_pkg_config() {
+sub adjust_pkg_config() {
 	my @pkg_config_files = grep { /\.pc\.in$/ && ! /-uninstalled\.pc\.in$/ } @wrksrc_files;
 	if (@pkg_config_files) {
 		push(@build_vars, var("USE_TOOLS", "+=", "pkg-config"));
@@ -259,13 +266,13 @@ sub magic_pkg_config() {
 	}
 }
 
-sub magic_po() {
+sub adjust_po() {
 	if (grep(/\.g?mo$/, @wrksrc_files)) {
 		push(@build_vars, var("USE_PKGLOCALEDIR", "=", "yes"));
 	}
 }
 
-sub magic_use_languages() {
+sub adjust_use_languages() {
 	my @languages;
 
 	grep(/\.(c|xs)$/, @wrksrc_files) and push(@languages, "c");
@@ -478,16 +485,16 @@ sub adjust_package_from_extracted_distfiles()
 	chomp(@wrksrc_files = `cd "${abs_wrksrc}" && find * -type f`);
 	chomp(@wrksrc_dirs = `cd "${abs_wrksrc}" && find * -type d`);
 
-	magic_configure();
-	magic_cmake();
-	magic_meson();
-	magic_gconf2_schemas();
-	magic_libtool();
-	magic_perlmod();
-	magic_cargo();
-	magic_pkg_config();
-	magic_po();
-	magic_use_languages();
+	adjust_configure();
+	adjust_cmake();
+	adjust_meson();
+	adjust_gconf2_schemas();
+	adjust_libtool();
+	adjust_perlmod();
+	adjust_cargo();
+	adjust_pkg_config();
+	adjust_po();
+	adjust_use_languages();
 
 	print("url2pkg> Adjusting the Makefile.\n");
 
@@ -505,7 +512,7 @@ sub adjust_package_from_extracted_distfiles()
 		}
 		push(@lines, $line);
 
-		if (defined($pkgname) && $line =~ qr"^DISTNAME=(\t+)") {
+		if ($pkgname ne "" && $line =~ qr"^DISTNAME=(\t+)") {
 			push(@lines, "PKGNAME=$1$pkgname");
 		}
 	}
