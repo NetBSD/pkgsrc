@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2897 2019/08/11 03:33:55 markd Exp $
+# $NetBSD: Makefile,v 1.2898 2019/08/18 16:05:11 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -2826,6 +2826,7 @@ SUBDIR+=	verifast
 SUBDIR+=	visualvm
 SUBDIR+=	vtcl
 SUBDIR+=	waf
+SUBDIR+=	wayland
 SUBDIR+=	woboq_codebrowser
 SUBDIR+=	xa65
 SUBDIR+=	xdelta
