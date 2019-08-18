@@ -1,2 +1,4 @@
-scrot is a commandline screen capture util like "import",
-but using imlib2
+scrot (SCReenshOT) is a simple command line screen capture
+utility that uses imlib2 to grab and save images. Multiple
+image formats are supported through imlib2's dynamic saver
+modules.

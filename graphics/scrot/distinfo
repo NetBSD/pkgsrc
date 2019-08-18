@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 21:34:20 agc Exp $
+$NetBSD: distinfo,v 1.7 2019/08/18 16:52:03 fox Exp $
 
-SHA1 (scrot-0.8.tar.gz) = 674fcb4860f1dcfa02cde7d82414e1e1c731aa75
-RMD160 (scrot-0.8.tar.gz) = e082ee2dedea50756df0b53d212f9270ca201533
-SHA512 (scrot-0.8.tar.gz) = cba8f589e45758ddbfe4e276399a1ecb0dbe29569be5d85d97733e7f64de2911bd2d03e62700ad0c718a1fc886c2e3def9dee1de5cac884f9e65e772cebe838c
-Size (scrot-0.8.tar.gz) = 74324 bytes
-SHA1 (patch-aa) = b42dd5e4e336db20cd1da9ceabb29392bd2c4f5d
-SHA1 (patch-ab) = d4da1775b6174f20785557ab96404514d426c5d0
+SHA1 (scrot-1.1.1.tar.gz) = f55835cd5ce3cc16154ca700ed664409a79a497e
+RMD160 (scrot-1.1.1.tar.gz) = dbdef82be484bc071acac01339841b8a21812426
+SHA512 (scrot-1.1.1.tar.gz) = 6444fec6d793053b120a6f81bb1696b2c3d1a48f2b7d3949f63ab7e97cbd60d87962b87e52bf43acfae12c3381d59f7924c0f7c71d5372876d14a698f9b9f138
+Size (scrot-1.1.1.tar.gz) = 36473 bytes
+SHA1 (patch-src_getopt.c) = 8008e9c52cfe5c3dd76fd47ce96a9e0d2d36783f
