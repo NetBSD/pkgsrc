@@ -81,7 +81,7 @@ sub writeDependency($$) {
 	my $category = find_category($pkgbase);
 
 	if (defined($category)) {
-		printf("%s>=%s:../../%s/%s\n", $pkgbase, $ver, $category, $pkgbase);
+		printf("DEPENDS\t%s>=%s:../../%s/%s\n", $pkgbase, $ver, $category, $pkgbase);
 		return;
 	}
 
