@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.85 2018/07/16 23:21:58 jnemeth Exp $
+$NetBSD: distinfo,v 1.86 2019/08/18 05:22:17 maya Exp $
 
 SHA1 (asterisk-11.25.3/asterisk-11.25.3.tar.gz) = e9419263150010a9d1b8ff5cabc904bbbd7448eb
 RMD160 (asterisk-11.25.3/asterisk-11.25.3.tar.gz) = 9eda6648ca8fbc2afad987a4f45db6a2da16feee
@@ -31,7 +31,7 @@ SHA1 (patch-channels_sip_sdp__crypto.c) = decb6cfe0d6893db912a9087b2155c225db5e1
 SHA1 (patch-codecs_codec__dahdi.c) = f412e1f60cb49076b8cabcd747c0f0168f1fa9e7
 SHA1 (patch-configure) = 7138e0c99c17f01298787e504fa1594b5bdb8572
 SHA1 (patch-configure.ac) = 4acdf055e402c810a7e40af9ab8d6afafee60764
-SHA1 (patch-contrib_scripts_vmail.cgi) = 650b9bbf3e322d1ad351932cfe6f747baa8f35e4
+SHA1 (patch-contrib_scripts_vmail.cgi) = 717f59c6d6c3bd5eed7278f16fe076cc21dc74f8
 SHA1 (patch-funcs_func__env.c) = 30ec2c804ea69c4825fe0a888f9e982c7418c528
 SHA1 (patch-funcs_func__strings.c) = 4c1db693d845691492b77bbf489764d362de2087
 SHA1 (patch-include_asterisk_autoconfig.h.in) = 09a8f8d5398612fdadba25f221b16c19429f81e2
