@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2019/08/18 11:26:33 rillig Exp $
+# $NetBSD: Makefile,v 1.95 2019/08/18 13:32:21 rillig Exp $
 
 PKGNAME=	url2pkg-2.32
 CATEGORIES=	pkgtools
@@ -16,7 +16,10 @@ USE_TOOLS+=	perl:run
 AUTO_MKDIRS=	yes
 
 do-extract:
-	cd ${FILESDIR} && cp *.pl *.pm *.py ${WRKSRC}/
+	${RUN} cd ${FILESDIR} && cp *.* ${WRKSRC}/
+
+do-test:
+	${RUN} cd ${WRKSRC} && env PKGSRCDIR=${PKGSRCDIR} perl -I. url2pkg.t
 
 .include "../../mk/bsd.prefs.mk"
 

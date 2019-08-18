@@ -1,5 +1,5 @@
 #! @PERL5@
-# $NetBSD: url2pkg.pl,v 1.56 2019/08/18 11:26:33 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.57 2019/08/18 13:32:21 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -111,6 +111,26 @@ sub find_package($) {
 	return scalar(@candidates) == 1 ? $candidates[0] : "";
 }
 
+# appends the given value to the variable assignment.
+sub update_var_append($$$) {
+	my ($lines, $varname, $value) = @_;
+
+	return if $value eq '';
+
+	my $i = 0;
+	foreach my $line (@$lines) {
+		if ($line =~ qr"^\Q$varname\E(\+?=)([ \t]+)([^#\\]*)(#.*|)$") {
+			my ($op, $indent, $old_value, $comment) = ($1, $2, $3, $4);
+
+			my $before = $old_value =~ qr'\S$' ? ' ' : '';
+			my $after = $comment eq '' ? '' : ' ';
+			$lines->[$i] = "$varname$op$indent$old_value$before$value$after$comment";
+			return;
+		}
+		$i++;
+	}
+}
+
 # The following adjust_* subroutines are called after the distfiles have
 # been downloaded and extracted. They inspect the extracted files
 # and adjust the variable definitions in the package Makefile.
@@ -138,6 +158,10 @@ my @wrksrc_dirs;
 # The following variables may be set by the adjust_* subroutines and
 # will later appear in the package Makefile:
 #
+
+# categories for the package, in addition to the usual
+# parent directory.
+my @categories;
 
 # the dependencies of the package, in the form
 # "package>=version:../../category/package".
@@ -168,6 +192,9 @@ my @todos;
 # the package name, in case it differs from $distname.
 my $pkgname = "";
 
+# Example:
+# add_dependency('DEPENDS', 'package', '>=1', '../../category/package');
+#
 sub add_dependency($$$$) {
 	my ($type, $pkgbase, $constraint, $dep_dir) = @_;
 
@@ -275,6 +302,7 @@ sub adjust_perl_module() {
 	push(@build_vars, var("PERL5_PACKLIST", "=", "auto/$packlist/.packlist"));
 	push(@includes, "../../lang/perl5/module.mk");
 	$pkgname = "p5-\${DISTNAME}";
+	push(@categories, "perl5");
 }
 
 sub adjust_python_module() {
@@ -306,8 +334,9 @@ sub adjust_python_module() {
 		}
 
 		add_dependency($type, $pkgbase, $constraint, $dep_dir);
-
 	}
+
+	push(@categories, "python");
 }
 
 sub adjust_cargo() {
@@ -462,10 +491,8 @@ sub generate_initial_package_Makefile_lines($) {
 		$extract_sufx = "# none";
 	}
 
-	rename("Makefile", "Makefile-url2pkg.bak") or do {};
-
 	`pwd` =~ qr".*/([^/]+)/[^/]+$" or die;
-	$categories = $1 eq "wip" ? "# TODO" : $1;
+	$categories = $1 eq "wip" ? "# TODO: add primary category" : $1;
 
 	if ($extract_sufx eq ".tar.gz" || $extract_sufx eq ".gem") {
 		$extract_sufx = "";
@@ -501,6 +528,7 @@ sub generate_initial_package_Makefile_lines($) {
 sub generate_initial_package($) {
 	my ($url) = @_;
 
+	rename("Makefile", "Makefile-url2pkg.bak") or do {};
 	write_lines("Makefile", generate_initial_package_Makefile_lines($url));
 
 	write_lines("PLIST", "\@comment \$" . "NetBSD\$");
@@ -611,6 +639,8 @@ sub adjust_package_from_extracted_distfiles()
 	}
 
 	close(MF1);
+
+	update_var_append(\@lines, 'CATEGORIES', join(' ', @categories));
 
 	write_lines("Makefile-url2pkg.new", @lines);
 
