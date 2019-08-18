@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.45 2019/08/17 13:55:41 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.46 2019/08/18 05:32:00 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -52,7 +52,12 @@ sub run_editor($$) {
 
 	my $editor = $ENV{"PKGEDITOR"} || $ENV{"EDITOR"} || "vi";
 
-	system { $editor } ($editor, "+${lineno}", $fname);
+	my @args;
+	push(@args, $editor);
+	push(@args, "+$lineno") if $editor =~ qr"(^|/)(mcedit|nano|pico|vi|vim)$";
+	push(@args, $fname);
+
+	system { $args[0] } (@args);
 }
 
 sub get_maintainer() {
