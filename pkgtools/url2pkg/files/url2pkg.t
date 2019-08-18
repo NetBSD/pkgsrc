@@ -1,5 +1,5 @@
 # -*- perl -*-
-# $NetBSD: url2pkg.t,v 1.3 2019/08/18 13:59:38 rillig Exp $
+# $NetBSD: url2pkg.t,v 1.4 2019/08/18 16:18:04 rillig Exp $
 
 require "url2pkg.pl";
 
@@ -51,34 +51,34 @@ sub test_add_section__operators() {
 	]);
 }
 
-sub test_var_append__not_found() {
+sub test_lines_append__not_found() {
 	my $lines = [];
 
-	update_var_append($lines, "VARNAME", "value");
+	lines_append($lines, "VARNAME", "value");
 
 	is_deeply($lines, []);
 }
 
-sub test_var_append__only_comment() {
+sub test_lines_append__only_comment() {
 	my $lines = ["VARNAME=\t\t\t# none"];
 
-	update_var_append($lines, "VARNAME", "value");
+	lines_append($lines, "VARNAME", "value");
 
 	is_deeply($lines, ["VARNAME=\t\t\tvalue # none"]);
 }
 
-sub test_var_append__value_with_comment() {
+sub test_lines_append__value_with_comment() {
 	my $lines = ["VARNAME=\tvalue # comment"];
 
-	update_var_append($lines, "VARNAME", "appended");
+	lines_append($lines, "VARNAME", "appended");
 
 	is_deeply($lines, ["VARNAME=\tvalue appended # comment"]);
 }
 
-sub test_var_append__value_without_comment() {
+sub test_lines_append__value_without_comment() {
 	my $lines = ["VARNAME+=\tvalue"];
 
-	update_var_append($lines, "VARNAME", "appended");
+	lines_append($lines, "VARNAME", "appended");
 
 	is_deeply($lines, ["VARNAME+=\tvalue appended"]);
 }
@@ -114,10 +114,10 @@ sub test_all() {
 	test_add_section__simple();
 	test_add_section__alignment();
 	test_add_section__operators();
-	test_var_append__not_found();
-	test_var_append__only_comment();
-	test_var_append__value_with_comment();
-	test_var_append__value_without_comment();
+	test_lines_append__not_found();
+	test_lines_append__only_comment();
+	test_lines_append__value_with_comment();
+	test_lines_append__value_without_comment();
 	test_generate_initial_package_Makefile_lines__GitHub();
 
 	done_testing();
