@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.53 2019/08/18 07:10:32 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.54 2019/08/18 07:47:58 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -340,17 +340,17 @@ sub generate_initial_package_Makefile_lines($) {
 	}
 	close(SITES) or die;
 
-	if ($url =~ qr"^http://(?:pr)?downloads\.sourceforge\.net/([^/]*)/([^/?]+)(?:\?(?:download|use_mirror=.*))?$") {
-		my $pkgbase = $1;
-		$distfile = $2;
+	if ($url =~ qr"^https://downloads\.sourceforge\.net/project/([^/?]+)/[^?]+/([^/?]+)(?:[?].*)?$") {
+		my ($project, $filename) = ($1, $2);
 
-		$master_sites = "\${MASTER_SITE_SOURCEFORGE:=${pkgbase}/}";
-		$homepage = "http://${pkgbase}.sourceforge.net/";
+		$master_sites = "\${MASTER_SITE_SOURCEFORGE:=${project}/}";
+		$homepage = "https://${project}.sourceforge.net/";
+		$distfile = $filename;
 		$found = true;
 	}
 
-	if ($url =~ qr"^https?://github\.com/") {
-		if ($url =~ qr"^https?://github\.com/(.*)/(.*)/archive/(.*)(\.tar\.gz|\.zip)$") {
+	if ($url =~ qr"^https://github\.com/") {
+		if ($url =~ qr"^https://github\.com/(.*)/(.*)/archive/(.*)(\.tar\.gz|\.zip)$") {
 			my ($org, $proj, $tag, $ext) = ($1, $2, $3, $4);
 
 			$master_sites = "\${MASTER_SITE_GITHUB:=$org/}";
@@ -363,7 +363,7 @@ sub generate_initial_package_Makefile_lines($) {
 			$distfile = "$tag$ext";
 			$found = true;
 
-		} elsif ($url =~ qr"^https?://github\.com/(.*)/(.*)/releases/download/(.*)/(.*)(\.tar\.gz|\.zip)$") {
+		} elsif ($url =~ qr"^https://github\.com/(.*)/(.*)/releases/download/(.*)/(.*)(\.tar\.gz|\.zip)$") {
 			my ($org, $proj, $tag, $base, $ext) = ($1, $2, $3, $4, $5);
 
 			$master_sites = "\${MASTER_SITE_GITHUB:=$org/}";
@@ -496,7 +496,7 @@ sub adjust_package_from_extracted_distfiles()
 	adjust_po();
 	adjust_use_languages();
 
-	print("url2pkg> Adjusting the Makefile.\n");
+	print("url2pkg> Adjusting the Makefile\n");
 
 	my @lines;
 
@@ -569,13 +569,11 @@ sub main() {
 	if (scalar(@extract_cookie) == 0) {
 		if (scalar(@ARGV) == 0) {
 			print("URL: ");
-			# Pressing Ctrl-D is considered equivalent to
-			# aborting the process.
 			if (!defined($url = <STDIN>)) {
 				print("\n");
-				print("No URL given -- aborting.\n");
 				exit(0);
 			}
+			chomp($url);
 		} else {
 			$url = shift(@ARGV);
 		}
@@ -588,9 +586,9 @@ sub main() {
 	adjust_package_from_extracted_distfiles();
 
 	print("\n");
-	print("Remember to correct CATEGORIES, HOMEPAGE, COMMENT, and DESCR when you're done!\n");
+	print("Remember to run pkglint when you're done.\n");
+	print("See ../../doc/pkgsrc.txt to get some help.\n");
 	print("\n");
-	print("Good luck! (See pkgsrc/doc/pkgsrc.txt for some more help :-)\n");
 }
 
 main() unless caller();
