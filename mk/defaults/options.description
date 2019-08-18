@@ -821,6 +821,7 @@ w3m-image-imlib		Use imlib as imaging library for W3m.
 w3m-image-imlib2	Use imlib2 as imaging library for W3m.
 w3m-lynx-key		Enable lynx-like key bindings.
 wavpack			Enable wavpack support.
+wayland			Enable support for the Wayland display server protocol.
 webdav			Enable WebDAV support.
 webkit-jit		Enable JIT compilation.
 webrtc			Enable web realtime communications API.
