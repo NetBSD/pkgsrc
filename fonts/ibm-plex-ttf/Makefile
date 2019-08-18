@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/08/17 09:47:47 ng0 Exp $
+# $NetBSD: Makefile,v 1.2 2019/08/18 12:42:52 ng0 Exp $
 
 PKGNAME=	ibm-plex-ttf-2.0.0
 GITHUB_PROJECT=	plex
@@ -15,14 +15,6 @@ COMMENT=	IBM plex typeface (TrueType)
 LICENSE=	ofl-v1.1
 
 USE_LANGUAGES=	# none
-NO_BUILD=	yes
 
-FONTSDIR=		${PREFIX}/share/fonts/X11/TTF
-FONTS_DIRS.ttf=		${FONTSDIR}
-INSTALLATION_DIRS=	share/fonts/X11/TTF
-
-do-install:
-	${INSTALL_DATA} ${WRKSRC}/*/*.ttf  ${DESTDIR}${FONTSDIR}
-
-
+.include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"
