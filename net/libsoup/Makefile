@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2019/08/16 13:08:58 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2019/08/18 08:13:30 wiz Exp $
 
 DISTNAME=	libsoup-2.66.2
+PKGREVISION=	1
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsoup/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -37,7 +38,6 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.38.0
 BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=0.9.5
 BUILDLINK_DEPMETHOD.gobject-introspection=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-introspection
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/libpsl/buildlink3.mk"
 .include "../../devel/py-meson/build.mk"
