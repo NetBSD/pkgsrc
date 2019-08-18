@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.93 2019/08/18 06:23:19 maya Exp $
+# $NetBSD: Makefile,v 1.94 2019/08/18 11:26:33 rillig Exp $
 
-PKGNAME=	url2pkg-2.31
+PKGNAME=	url2pkg-2.32
 CATEGORIES=	pkgtools
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,7 +16,7 @@ USE_TOOLS+=	perl:run
 AUTO_MKDIRS=	yes
 
 do-extract:
-	cd ${FILESDIR} && cp *.pl *.pm ${WRKSRC}/
+	cd ${FILESDIR} && cp *.pl *.pm *.py ${WRKSRC}/
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -24,9 +24,8 @@ SUBST_CLASSES+=		up
 SUBST_STAGE.up=		do-configure
 SUBST_MESSAGE.up=	Replacing variable placeholders
 SUBST_FILES.up=		url2pkg.pl MakeMaker.pm
-SUBST_VARS.up=		MAKE
-SUBST_SED.up+=		-e 's,@PERL@,${PERL5},g'
-SUBST_SED.up+=		-e 's,@PERLLIBDIR@,${PREFIX}/lib/url2pkg,g'
+SUBST_VARS.up=		MAKE PERL5 PYTHONBIN
+SUBST_SED.up+=		-e 's,@LIBDIR@,${PREFIX}/lib/url2pkg,g'
 .if defined(BATCH)
 SUBST_SED.up+=		-e 's,@PKGSRCDIR@,/usr/pkgsrc,g'
 .else
@@ -37,5 +36,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/url2pkg.pl ${DESTDIR}${PREFIX}/bin/url2pkg
 	${INSTALL_MAN} ${FILESDIR}/url2pkg.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA} ${WRKSRC}/MakeMaker.pm ${DESTDIR}${PREFIX}/lib/url2pkg/ExtUtils/
+	${INSTALL_DATA} ${WRKSRC}/setuptools.py ${DESTDIR}${PREFIX}/lib/url2pkg/
 
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
