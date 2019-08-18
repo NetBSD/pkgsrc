@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.46 2019/08/18 05:32:00 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.47 2019/08/18 05:43:28 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -68,18 +68,18 @@ sub get_maintainer() {
 sub print_section($$) {
 	my ($f, $vars) = @_;
 
-	if (scalar(@{$vars}) == 0) {
-		return;
-	}
+	return if scalar(@$vars) == 0;
 
 	my $width = 0;
 	foreach my $var (@{$vars}) {
+		next if $var->[1] eq "";
 		my $varname = $var->[0];
 		my $len = (length("$varname= ") + 7) & -8;
 		$width = ($len > $width) ? $len : $width;
 	}
 
 	foreach my $var (@{$vars}) {
+		next if $var->[1] eq "";
 		my ($varname, $varvalue) = @$var;
 		my $ntabs = ($width - length("$varname=") + 7) / 8;
 		printf $f ("%s=%s%s\n", $varname, "\t" x $ntabs, $varvalue);
@@ -375,22 +375,18 @@ sub generate_initial_package_Makefile($) {
 	print MF ("# \$" . "NetBSD\$\n");
 	print MF ("\n");
 
+	if ($dist_sufx eq ".tar.gz" || $dist_sufx eq ".gem") {
+		$dist_sufx = "";
+	}
+
 	print_section(*MF, [
-		(($github_project ne "")
-		? ["GITHUB_PROJECT", $github_project]
-		: ()),
+		["GITHUB_PROJECT", $github_project],
 		["DISTNAME", $distname],
 		["CATEGORIES", $category],
 		["MASTER_SITES", $master_sites],
-		(($github_release ne "")
-		? ["GITHUB_RELEASE", $github_release]
-		: ()),
-		(($dist_sufx ne ".tar.gz" && $dist_sufx ne ".gem")
-		? ["EXTRACT_SUFX", $dist_sufx]
-		: ()),
-		(($dist_subdir ne "")
-		? ["DIST_SUBDIR", $dist_subdir]
-		: ())
+		["GITHUB_RELEASE", $github_release],
+		["EXTRACT_SUFX", $dist_sufx],
+		["DIST_SUBDIR", $dist_subdir],
 	]);
 
 	print_section(*MF, [
@@ -499,11 +495,11 @@ sub adjust_package_from_extracted_distfiles()
 	}
 
 	my @depend_vars;
-	foreach my $bd (@build_depends) {
-		push(@depend_vars, ["BUILD_DEPENDS+", $bd]);
+	foreach my $dep (@build_depends) {
+		push(@depend_vars, ["BUILD_DEPENDS+", $dep]);
 	}
-	foreach my $d (@depends) {
-		push(@depend_vars, ["DEPENDS+", $d]);
+	foreach my $dep (@depends) {
+		push(@depend_vars, ["DEPENDS+", $dep]);
 	}
 	print_section(*MF2, \@depend_vars);
 
