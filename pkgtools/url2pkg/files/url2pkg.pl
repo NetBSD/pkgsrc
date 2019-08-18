@@ -1,5 +1,5 @@
 #! @PERL5@
-# $NetBSD: url2pkg.pl,v 1.57 2019/08/18 13:32:21 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.58 2019/08/18 13:49:13 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -37,9 +37,9 @@ use warnings;
 # Build-time Configuration.
 #
 
-my $make		= '@MAKE@';
-my $libdir		= '@LIBDIR@';
-my $pythonbin		= '@PYTHONBIN@';
+my $make		= "@MAKE@";
+my $libdir		= "@LIBDIR@";
+my $pythonbin		= "@PYTHONBIN@";
 
 use constant true	=> 1;
 use constant false	=> 0;
@@ -115,15 +115,15 @@ sub find_package($) {
 sub update_var_append($$$) {
 	my ($lines, $varname, $value) = @_;
 
-	return if $value eq '';
+	return if $value eq "";
 
 	my $i = 0;
 	foreach my $line (@$lines) {
 		if ($line =~ qr"^\Q$varname\E(\+?=)([ \t]+)([^#\\]*)(#.*|)$") {
 			my ($op, $indent, $old_value, $comment) = ($1, $2, $3, $4);
 
-			my $before = $old_value =~ qr'\S$' ? ' ' : '';
-			my $after = $comment eq '' ? '' : ' ';
+			my $before = $old_value =~ qr"\S$" ? " " : "";
+			my $after = $comment eq "" ? "" : " ";
 			$lines->[$i] = "$varname$op$indent$old_value$before$value$after$comment";
 			return;
 		}
@@ -193,7 +193,7 @@ my @todos;
 my $pkgname = "";
 
 # Example:
-# add_dependency('DEPENDS', 'package', '>=1', '../../category/package');
+# add_dependency("DEPENDS", "package", ">=1", "../../category/package");
 #
 sub add_dependency($$$$) {
 	my ($type, $pkgbase, $constraint, $dep_dir) = @_;
@@ -310,8 +310,8 @@ sub adjust_python_module() {
 	return unless -f "$abs_wrksrc/setup.py";
 
 	my %old_env = %ENV;
-	$ENV{'PYTHONDONTWRITEBYTECODE'} = 'x';
-	$ENV{'PYTHONPATH'} = $libdir;
+	$ENV{"PYTHONDONTWRITEBYTECODE"} = "x";
+	$ENV{"PYTHONPATH"} = $libdir;
 
 	my @dep_lines;
 	open(DEPS, "cd '$abs_wrksrc' && $pythonbin setup.py build |") or die;
@@ -451,8 +451,8 @@ sub generate_initial_package_Makefile_lines($) {
 			$homepage = "https://github.com/$org/$proj/";
 			$github_project = $proj;
 			if (index($tag, $github_project) == -1) {
-				$pkgname = '${GITHUB_PROJECT}-${DISTNAME}';
-				$dist_subdir = '${GITHUB_PROJECT}';
+				$pkgname = "\${GITHUB_PROJECT}-\${DISTNAME}";
+				$dist_subdir = "\${GITHUB_PROJECT}";
 			}
 			$distfile = "$tag$ext";
 
@@ -463,9 +463,9 @@ sub generate_initial_package_Makefile_lines($) {
 			$homepage = "https://github.com/$org/$proj/";
 			if (index($base, $proj) == -1) {
 				$github_project = $proj;
-				$dist_subdir = '${GITHUB_PROJECT}';
+				$dist_subdir = "\${GITHUB_PROJECT}";
 			}
-			$github_release = $tag eq $base ? '${DISTNAME}' : $tag;
+			$github_release = $tag eq $base ? "\${DISTNAME}" : $tag;
 			$distfile = "$base$ext";
 
 		} else {
@@ -559,8 +559,8 @@ sub adjust_package_from_extracted_distfiles()
 		no if $] >= 5.018, warnings => "experimental::smartmatch";
 		given ($f) {
 			next when qr"^\.";
-			next when 'pax_global_header';
-			next when 'package.xml';
+			next when "pax_global_header";
+			next when "package.xml";
 			next when qr".*\.gemspec";
 			default { push(@files, $f) }
 		}
@@ -640,7 +640,7 @@ sub adjust_package_from_extracted_distfiles()
 
 	close(MF1);
 
-	update_var_append(\@lines, 'CATEGORIES', join(' ', @categories));
+	update_var_append(\@lines, "CATEGORIES", join(" ", @categories));
 
 	write_lines("Makefile-url2pkg.new", @lines);
 
