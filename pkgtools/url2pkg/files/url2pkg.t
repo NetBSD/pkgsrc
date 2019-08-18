@@ -1,5 +1,5 @@
 # -*- perl -*-
-# $NetBSD: url2pkg.t,v 1.2 2019/08/18 13:50:32 rillig Exp $
+# $NetBSD: url2pkg.t,v 1.3 2019/08/18 13:59:38 rillig Exp $
 
 require "url2pkg.pl";
 
@@ -85,8 +85,6 @@ sub test_var_append__value_without_comment() {
 
 sub test_generate_initial_package_Makefile_lines__GitHub() {
 	my $url = "https://github.com/org/proj/archive/v1.0.0.tar.gz";
-	my $pkgsrcdir = $ENV{"PKGSRCDIR"} or die;
-	chdir("$pkgsrcdir/pkgtools/url2pkg") or die;
 
 	my @lines = generate_initial_package_Makefile_lines($url);
 
@@ -110,6 +108,9 @@ sub test_generate_initial_package_Makefile_lines__GitHub() {
 }
 
 sub test_all() {
+	my $pkgsrcdir = $ENV{"PKGSRCDIR"} or die;
+	chdir("$pkgsrcdir/pkgtools/url2pkg") or die;
+
 	test_add_section__simple();
 	test_add_section__alignment();
 	test_add_section__operators();
