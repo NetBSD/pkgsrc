@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2019/08/11 13:22:04 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2019/08/18 17:57:55 nia Exp $
 
 DISTNAME=	mpv-0.29.1
 PKGREVISION=	10
@@ -52,18 +52,7 @@ post-install:
 
 .include "options.mk"
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} != "Darwin"
-.include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../x11/libdrm/buildlink3.mk"
-.include "../../x11/libXinerama/buildlink3.mk"
-.include "../../x11/libXrandr/buildlink3.mk"
-.include "../../x11/libXScrnSaver/buildlink3.mk"
-.include "../../x11/libXv/buildlink3.mk"
-.include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
-.endif
-
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/waf/waf.mk"
 .include "../../devel/zlib/buildlink3.mk"
