@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2019/04/18 09:59:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2019/08/18 16:47:38 nia Exp $
 bin/gtk-builder-tool
 bin/gtk-encode-symbolic-svg
 bin/gtk-launch
@@ -52,6 +52,7 @@ include/gtk-3.0/gdk/gdkthreads.h
 include/gtk-3.0/gdk/gdktypes.h
 include/gtk-3.0/gdk/gdkversionmacros.h
 include/gtk-3.0/gdk/gdkvisual.h
+${PLIST.wayland}include/gtk-3.0/gdk/gdkwayland.h
 include/gtk-3.0/gdk/gdkwindow.h
 ${PLIST.x11}include/gtk-3.0/gdk/gdkx.h
 ${PLIST.quartz}include/gtk-3.0/gdk/quartz/gdkquartzcursor.h
@@ -67,6 +68,12 @@ ${PLIST.quartz}include/gtk-3.0/gdk/quartz/gdkquartzscreen.h
 ${PLIST.quartz}include/gtk-3.0/gdk/quartz/gdkquartzutils.h
 ${PLIST.quartz}include/gtk-3.0/gdk/quartz/gdkquartzvisual.h
 ${PLIST.quartz}include/gtk-3.0/gdk/quartz/gdkquartzwindow.h
+${PLIST.wayland}include/gtk-3.0/gdk/wayland/gdkwaylanddevice.h
+${PLIST.wayland}include/gtk-3.0/gdk/wayland/gdkwaylanddisplay.h
+${PLIST.wayland}include/gtk-3.0/gdk/wayland/gdkwaylandglcontext.h
+${PLIST.wayland}include/gtk-3.0/gdk/wayland/gdkwaylandmonitor.h
+${PLIST.wayland}include/gtk-3.0/gdk/wayland/gdkwaylandselection.h
+${PLIST.wayland}include/gtk-3.0/gdk/wayland/gdkwaylandwindow.h
 ${PLIST.x11}include/gtk-3.0/gdk/x11/gdkx-autocleanups.h
 ${PLIST.x11}include/gtk-3.0/gdk/x11/gdkx11applaunchcontext.h
 ${PLIST.x11}include/gtk-3.0/gdk/x11/gdkx11cursor.h
@@ -428,6 +435,8 @@ lib/gtk-3.0/3.0.0/immodules/im-thai.la
 lib/gtk-3.0/3.0.0/immodules/im-ti-er.la
 lib/gtk-3.0/3.0.0/immodules/im-ti-et.la
 lib/gtk-3.0/3.0.0/immodules/im-viqr.la
+${PLIST.wayland}lib/gtk-3.0/3.0.0/immodules/im-wayland.la
+${PLIST.wayland}lib/gtk-3.0/3.0.0/immodules/im-waylandgtk.la
 ${PLIST.x11}lib/gtk-3.0/3.0.0/immodules/im-xim.la
 ${PLIST.cups}lib/gtk-3.0/3.0.0/printbackends/libprintbackend-cups.la
 lib/gtk-3.0/3.0.0/printbackends/libprintbackend-file.la
@@ -438,10 +447,12 @@ lib/libgtk-3.la
 lib/pkgconfig/gail-3.0.pc
 lib/pkgconfig/gdk-3.0.pc
 ${PLIST.quartz}lib/pkgconfig/gdk-quartz-3.0.pc
+${PLIST.wayland}lib/pkgconfig/gdk-wayland-3.0.pc
 ${PLIST.x11}lib/pkgconfig/gdk-x11-3.0.pc
 lib/pkgconfig/gtk+-3.0.pc
 ${PLIST.quartz}lib/pkgconfig/gtk+-quartz-3.0.pc
 lib/pkgconfig/gtk+-unix-print-3.0.pc
+${PLIST.wayland}lib/pkgconfig/gtk+-wayland-3.0.pc
 ${PLIST.x11}lib/pkgconfig/gtk+-x11-3.0.pc
 libdata/gtk-3.0/im-multipress.conf
 man/man1/broadwayd.1

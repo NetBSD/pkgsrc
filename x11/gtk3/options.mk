@@ -1,13 +1,12 @@
-# $NetBSD: options.mk,v 1.13 2018/07/02 17:10:29 gdt Exp $
+# $NetBSD: options.mk,v 1.14 2019/08/18 16:47:38 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk3
-PKG_SUPPORTED_OPTIONS=	gtk3-atk-bridge cups debug
-PKG_OPTIONS_REQUIRED_GROUPS=	gdk-target
-PKG_OPTIONS_GROUP.gdk-target=	x11
+PKG_SUPPORTED_OPTIONS+=	gtk3-atk-bridge cups debug
+PKG_SUPPORTED_OPTIONS+=	wayland x11
 .if exists(/System/Library/Frameworks/Quartz.framework)
-PKG_OPTIONS_GROUP.gdk-target+=	quartz
+PKG_SUPPORTED_OPTIONS+=	quartz
 .endif
-PKG_SUGGESTED_OPTIONS=		gtk3-atk-bridge x11
+PKG_SUGGESTED_OPTIONS=	gtk3-atk-bridge x11
 
 .include "../../mk/bsd.options.mk"
 
@@ -23,15 +22,28 @@ CONFIGURE_ENV+=		ac_cv_path_CUPS_CONFIG=no
 CONFIGURE_ARGS+=	--enable-debug=yes
 .endif
 
-###
-### GDK target
-###
-PLIST_VARS+=		quartz x11
+PLIST_VARS+=		quartz
 .if !empty(PKG_OPTIONS:Mquartz)
-CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--enable-quartz-backend
 PLIST.quartz=		yes
 .else
+CONFIGURE_ARGS+=	--disable-quartz-backend
+.endif
+
+PLIST_VARS+=		wayland
+.if !empty(PKG_OPTIONS:Mwayland)
+PLIST.wayland=		yes
+.include "../../devel/wayland/buildlink3.mk"
+.include "../../devel/wayland-protocols/buildlink3.mk"
+.include "../../x11/libxkbcommon/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-wayland-backend
+.else
+CONFIGURE_ARGS+=	--disable-wayland-backend
+.endif
+
+PLIST_VARS+=		x11
+.if !empty(PKG_OPTIONS:Mx11)
+CONFIGURE_ARGS+=	--enable-x11-backend
 CONFIGURE_ENV+=		ac_cv_header_X11_extensions_Xinerama_h=no
 CONFIGURE_ENV+=		ac_cv_lib_Xinerama_XineramaQueryExtension=no
 PLIST.x11=		yes
@@ -57,5 +69,6 @@ BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2nb2
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
-
+.else
+CONFIGURE_ARGS+=	--disable-x11-backend
 .endif
