@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.50 2019/08/18 06:23:19 maya Exp $
+# $NetBSD: url2pkg.pl,v 1.51 2019/08/18 06:41:16 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -65,6 +65,12 @@ sub get_maintainer() {
 	return $ENV{"PKGMAINTAINER"} || $ENV{"REPLYTO"} || "INSERT_YOUR_MAIL_ADDRESS_HERE";
 }
 
+sub var($$$) {
+	my ($name, $op, $value) = @_;
+
+	return [$name, $op, $value];
+}
+
 sub add_section($$) {
 	my ($lines, $vars) = @_;
 
@@ -72,17 +78,17 @@ sub add_section($$) {
 
 	my $width = 0;
 	foreach my $var (@{$vars}) {
-		my ($name, $value) = @$var;
+		my ($name, $op, $value) = @$var;
 		next if $value eq "";
-		my $len = (length("$name= ") + 7) & -8;
+		my $len = (length("$name$op\t") + 7) & -8;
 		$width = ($len > $width) ? $len : $width;
 	}
 
 	foreach my $var (@{$vars}) {
-		my ($name, $value) = @$var;
+		my ($name, $op, $value) = @$var;
 		next if $value eq "";
-		my $tabs = "\t" x (($width - length("$name=") + 7) / 8);
-		push(@$lines, "$name=$tabs$value");
+		my $tabs = "\t" x (($width - length("$name$op") + 7) / 8);
+		push(@$lines, "$name$op$tabs$value");
 	}
 	push(@$lines, "");
 }
@@ -108,23 +114,24 @@ sub add_section($$) {
 #
 # @depends
 # @build_depends
-#	the dependencies of the package, in the form "package>=version".
+#	the dependencies of the package, in the form
+#	"package>=version:../../category/package".
 # @includes
 #	a list of pathnames relative to the package path.
 #	All these files will be included at the bottom of the Makefile.
 # @build_vars
-#	a list of [varname, value] items that contain variables that
-#	will be defined in the fourth paragraph of the package Makefile,
-#	where the build configuration takes place.
+#	a list of variable assignments that will make up the fourth
+#	paragraph of the package Makefile, where the build configuration
+#	takes place.
 # @extra_vars
 #	similar to the @build_vars, but separated by an empty line in
-#	the Makefile, therefore forming the fifth paragraph.
-# @todo
+#	the Makefile, thereby forming the fifth paragraph.
+# @todos
 #	these are inserted below the second paragraph in the Makefile.
 
 my ($distname, $abs_wrkdir, $abs_wrksrc);
 my (@wrksrc_files, @wrksrc_dirs);
-my (@depends, @build_depends, @includes, @build_vars, @extra_vars, @todo);
+my (@depends, @build_depends, @includes, @build_vars, @extra_vars, @todos);
 my ($pkgname);
 
 #
@@ -144,14 +151,14 @@ sub magic_configure() {
 	close(CONF);
 
 	my $varname = ($gnu_configure ? "GNU_CONFIGURE" : "HAS_CONFIGURE");
-	push(@build_vars, [$varname, "yes"]);
+	push(@build_vars, var($varname, "=", "yes"));
 }
 
 sub magic_cmake() {
 	open(CONF, "<", "${abs_wrksrc}/CMakeLists.txt") or return;
 	close(CONF);
 
-	push(@build_vars, ["USE_CMAKE", "yes"]);
+	push(@build_vars, var("USE_CMAKE", "=", "yes"));
 }
 
 sub magic_meson() {
@@ -166,7 +173,7 @@ sub magic_gconf2_schemas() {
 	if (@gconf2_files) {
 		foreach my $f (@gconf2_files) {
 			if ($f =~ qr"(.*schemas)") {
-				push(@extra_vars, ["GCONF_SCHEMAS+", $1]);
+				push(@extra_vars, var("GCONF_SCHEMAS", "+=", $1));
 			}
 		}
 		push(@includes, "../../devel/GConf/schemas.mk");
@@ -175,7 +182,7 @@ sub magic_gconf2_schemas() {
 
 sub magic_libtool() {
 	if (-f "${abs_wrksrc}/ltconfig" || -f "${abs_wrksrc}/ltmain.sh") {
-		push(@build_vars, ["USE_LIBTOOL", "yes"]);
+		push(@build_vars, var("USE_LIBTOOL", "=", "yes"));
 	}
 	if (-d "${abs_wrksrc}/libltdl") {
 		push(@includes, "../../devel/libltdl/convenience.mk");
@@ -187,9 +194,9 @@ sub magic_perlmod() {
 
 		# It's a Module::Build module. Dependencies cannot yet be
 		# extracted automatically.
-		push(@todo, "Look for the dependencies in Build.PL.");
+		push(@todos, "Look for the dependencies in Build.PL.");
 
-		push(@build_vars, ["PERL5_MODULE_TYPE", "Module::Build"]);
+		push(@build_vars, var("PERL5_MODULE_TYPE", "=", "Module::Build"));
 
 	} elsif (-f "${abs_wrksrc}/Makefile.PL") {
 
@@ -214,7 +221,7 @@ sub magic_perlmod() {
 	my $packlist = $distname;
 	$packlist =~ s/-[0-9].*//;
 	$packlist =~ s/-/\//g;
-	push(@build_vars, ["PERL5_PACKLIST", "auto/${packlist}/.packlist"]);
+	push(@build_vars, var("PERL5_PACKLIST", "=", "auto/${packlist}/.packlist"));
 	push(@includes, "../../lang/perl5/module.mk");
 	$pkgname = "p5-\${DISTNAME}";
 }
@@ -225,7 +232,7 @@ sub magic_cargo() {
 	while (defined(my $line = <CONF>)) {
 		# "checksum cargo-package-name cargo-package-version
 		if ($line =~ m/("checksum)\s(\S+)\s(\S+)/) {
-			push(@build_vars, ["CARGO_CRATE_DEPENDS", "$2-$3"]);
+			push(@build_vars, var("CARGO_CRATE_DEPENDS", "=", "$2-$3"));
 		}
 	}
 	close(CONF);
@@ -237,16 +244,16 @@ sub magic_cargo() {
 sub magic_pkg_config() {
 	my @pkg_config_files = grep { /\.pc\.in$/ && ! /-uninstalled\.pc\.in$/ } @wrksrc_files;
 	if (@pkg_config_files) {
-		push(@build_vars, ["USE_TOOLS+", "pkg-config"]);
+		push(@build_vars, var("USE_TOOLS", "+=", "pkg-config"));
 	}
 	foreach my $f (@pkg_config_files) {
-		push(@extra_vars, ["PKGCONFIG_OVERRIDE+", $f]);
+		push(@extra_vars, var("PKGCONFIG_OVERRIDE", "+=", $f));
 	}
 }
 
 sub magic_po() {
 	if (grep(/\.g?mo$/, @wrksrc_files)) {
-		push(@build_vars, ["USE_PKGLOCALEDIR", "yes"]);
+		push(@build_vars, var("USE_PKGLOCALEDIR", "=", "yes"));
 	}
 }
 
@@ -262,7 +269,7 @@ sub magic_use_languages() {
 		$use_languages = "# none";
 	}
 	if ($use_languages ne "c") {
-		push(@build_vars, ["USE_LANGUAGES", $use_languages]);
+		push(@build_vars, var("USE_LANGUAGES", "=", $use_languages));
 	}
 }
 
@@ -387,20 +394,20 @@ sub generate_initial_package_Makefile($) {
 	push(@lines, "");
 
 	add_section(\@lines, [
-		["GITHUB_PROJECT", $github_project],
-		["DISTNAME", $distname],
-		["CATEGORIES", $categories],
-		["MASTER_SITES", $master_sites],
-		["GITHUB_RELEASE", $github_release],
-		["EXTRACT_SUFX", $extract_sufx],
-		["DIST_SUBDIR", $dist_subdir],
+		var("GITHUB_PROJECT", "=", $github_project),
+		var("DISTNAME", "=", $distname),
+		var("CATEGORIES", "=", $categories),
+		var("MASTER_SITES", "=", $master_sites),
+		var("GITHUB_RELEASE", "=", $github_release),
+		var("EXTRACT_SUFX", "=", $extract_sufx),
+		var("DIST_SUBDIR", "=", $dist_subdir),
 	]);
 
 	add_section(\@lines, [
-		["MAINTAINER", get_maintainer()],
-		["HOMEPAGE", $homepage],
-		["COMMENT", "TODO: Short description of the package"],
-		["#LICENSE", "# TODO: (see mk/license.mk)"],
+		var("MAINTAINER", "=", get_maintainer()),
+		var("HOMEPAGE", "=", $homepage),
+		var("COMMENT", "=", "TODO: Short description of the package"),
+		var("#LICENSE", "=", "# TODO: (see mk/license.mk)"),
 	]);
 
 	push(@lines, "# url2pkg-marker (please do not remove this line.)");
@@ -458,12 +465,12 @@ sub adjust_package_from_extracted_distfiles()
 	closedir(WRKDIR);
 	if (@files == 1) {
 		if ($files[0] ne $distname) {
-			push(@build_vars, ["WRKSRC", "\${WRKDIR}/$files[0]"]);
+			push(@build_vars, var("WRKSRC", "=", "\${WRKDIR}/$files[0]"));
 		}
 		$abs_wrksrc = "${abs_wrkdir}/$files[0]";
 	} else {
-		push(@build_vars, ["WRKSRC", "\${WRKDIR}" .
-		    ((@files > 1) ? " # More than one possibility -- please check manually." : "")]);
+		push(@build_vars, var("WRKSRC", "=", "\${WRKDIR}" .
+		    ((@files > 1) ? " # More than one possibility -- please check manually." : "")));
 		$abs_wrksrc = $abs_wrkdir;
 	}
 
@@ -502,8 +509,8 @@ sub adjust_package_from_extracted_distfiles()
 		}
 	}
 
-	if (@todo) {
-		foreach my $todo (@todo) {
+	if (@todos) {
+		foreach my $todo (@todos) {
 			push(@lines, "# TODO: $todo");
 		}
 		push(@lines, "");
@@ -511,10 +518,10 @@ sub adjust_package_from_extracted_distfiles()
 
 	my @depend_vars;
 	foreach my $dep (@build_depends) {
-		push(@depend_vars, ["BUILD_DEPENDS+", $dep]);
+		push(@depend_vars, var("BUILD_DEPENDS", "+=", $dep));
 	}
 	foreach my $dep (@depends) {
-		push(@depend_vars, ["DEPENDS+", $dep]);
+		push(@depend_vars, var("DEPENDS", "+=", $dep));
 	}
 	add_section(\@lines, \@depend_vars);
 
