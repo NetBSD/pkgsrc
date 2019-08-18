@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/07/13 09:18:52 adam Exp $
+# $NetBSD: Makefile,v 1.8 2019/08/18 04:19:58 maya Exp $
 
 DISTNAME=	yarn-v1.17.3
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -16,10 +16,7 @@ USE_LANGUAGES=	# none
 
 INSTALLATION_DIRS=	bin libexec/yarn/bin libexec/yarn/lib
 
-REPLACE_INTERPRETER+=	nodejs
-REPLACE.nodejs.old=	.*node
-REPLACE.nodejs.new=	${PREFIX}/bin/node
-REPLACE_FILES.nodejs=	bin/yarn.js
+REPLACE_NODEJS=	bin/yarn.js
 
 do-build:
 	${SED} ${FILES_SUBST_SED} ${FILESDIR}/yarn.sh >${WRKSRC}/yarn.sh
@@ -34,4 +31,5 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/yarn.sh			\
 	    ${DESTDIR}${PREFIX}/bin/yarnpkg
 
+.include "../../lang/nodejs/application.mk"
 .include "../../mk/bsd.pkg.mk"
