@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3516 2019/08/18 16:53:05 fox Exp $
+$NetBSD: CHANGES-2019,v 1.3517 2019/08/18 20:48:46 nils Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5757,3 +5757,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/wayland version 1.17.0 [nia 2019-08-18]
 	Added devel/wayland-protocols version 1.17 [nia 2019-08-18]
 	Updated graphics/scrot to 1.1.1 [fox 2019-08-18]
+	Updated www/siege to 4.0.4 [nils 2019-08-18]
