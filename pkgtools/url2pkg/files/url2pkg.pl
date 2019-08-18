@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.47 2019/08/18 05:43:28 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.48 2019/08/18 05:47:53 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -271,8 +271,8 @@ sub generate_initial_package_Makefile($) {
 	my $master_sites = "";
 	my $distfile = "";
 	my $homepage = "";
-	my $dist_sufx = "";
-	my $category = "";
+	my $extract_sufx = "";
+	my $categories = "";
 	my $github_project = "";
 	my $github_release = "";
 	my $dist_subdir = "";
@@ -361,31 +361,31 @@ sub generate_initial_package_Makefile($) {
 	}
 
 	if ($distfile =~ qr"^(.*?)((?:\.tar)?\.\w+)$") {
-		($distname, $dist_sufx) = ($1, $2);
+		($distname, $extract_sufx) = ($1, $2);
 	} else {
-		($distname, $dist_sufx) = ($distfile, "# none");
+		($distname, $extract_sufx) = ($distfile, "# none");
 	}
 
 	rename("Makefile", "Makefile-url2pkg.bak") or do {};
 
 	`pwd` =~ qr".*/([^/]+)/[^/]+$" or die;
-	$category = $1;
+	$categories = $1;
 
 	open(MF, ">", "Makefile") or die;
 	print MF ("# \$" . "NetBSD\$\n");
 	print MF ("\n");
 
-	if ($dist_sufx eq ".tar.gz" || $dist_sufx eq ".gem") {
-		$dist_sufx = "";
+	if ($extract_sufx eq ".tar.gz" || $extract_sufx eq ".gem") {
+		$extract_sufx = "";
 	}
 
 	print_section(*MF, [
 		["GITHUB_PROJECT", $github_project],
 		["DISTNAME", $distname],
-		["CATEGORIES", $category],
+		["CATEGORIES", $categories],
 		["MASTER_SITES", $master_sites],
 		["GITHUB_RELEASE", $github_release],
-		["EXTRACT_SUFX", $dist_sufx],
+		["EXTRACT_SUFX", $extract_sufx],
 		["DIST_SUBDIR", $dist_subdir],
 	]);
 
