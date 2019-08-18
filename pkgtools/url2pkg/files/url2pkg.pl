@@ -1,5 +1,5 @@
-#! @PERL@
-# $NetBSD: url2pkg.pl,v 1.55 2019/08/18 07:51:40 rillig Exp $
+#! @PERL5@
+# $NetBSD: url2pkg.pl,v 1.56 2019/08/18 11:26:33 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -38,7 +38,8 @@ use warnings;
 #
 
 my $make		= '@MAKE@';
-my $perllibdir		= '@PERLLIBDIR@';
+my $libdir		= '@LIBDIR@';
+my $pythonbin		= '@PYTHONBIN@';
 
 use constant true	=> 1;
 use constant false	=> 0;
@@ -103,6 +104,13 @@ sub write_lines($@) {
 	close(F) or die;
 }
 
+sub find_package($) {
+	my ($pkgbase) = @_;
+
+	my @candidates = <../../*/$pkgbase>;
+	return scalar(@candidates) == 1 ? $candidates[0] : "";
+}
+
 # The following adjust_* subroutines are called after the distfiles have
 # been downloaded and extracted. They inspect the extracted files
 # and adjust the variable definitions in the package Makefile.
@@ -135,6 +143,11 @@ my @wrksrc_dirs;
 # "package>=version:../../category/package".
 my @depends;
 my @build_depends;
+my @test_depends;
+
+# .include, interleaved with BUILDLINK3_API_DEPENDS.
+# These lines are added at the bottom of the Makefile.
+my @bl3_lines;
 
 # a list of pathnames relative to the package path.
 # All these files will be included at the bottom of the Makefile.
@@ -155,10 +168,35 @@ my @todos;
 # the package name, in case it differs from $distname.
 my $pkgname = "";
 
+sub add_dependency($$$$) {
+	my ($type, $pkgbase, $constraint, $dep_dir) = @_;
+
+	if ($dep_dir ne "" && -f "$dep_dir/buildlink3.mk") {
+		# TODO: add type to bl3_lines (BUILDLINK_DEPENDS)
+		# TODO: add constraint to bl3_lines (BUILDLINK_API_DEPENDS)
+		push(@bl3_lines, ".include \"$dep_dir/buildlink3.mk\"");
+		return;
+	}
+
+	my $value = $dep_dir ne "" && -f "$dep_dir/Makefile"
+		? "$pkgbase$constraint:$dep_dir"
+		: "# TODO: $pkgbase$constraint";
+
+	if ($type eq "DEPENDS") {
+		push(@depends, $value);
+	} elsif ($type eq "BUILD_DEPENDS") {
+		push(@build_depends, $value);
+	} elsif ($type eq "TEST_DEPENDS") {
+		push(@test_depends, $value);
+	} else {
+		push(@todos, "dependency $type $value");
+	}
+}
+
 sub adjust_configure() {
 	my $gnu_configure = false;
 
-	open(CONF, "<", "${abs_wrksrc}/configure") or return;
+	open(CONF, "<", "$abs_wrksrc/configure") or return;
 	while (defined(my $line = <CONF>)) {
 		if ($line =~ qr"autoconf|Free Software Foundation"i) {
 			$gnu_configure = true;
@@ -196,16 +234,17 @@ sub adjust_gconf2_schemas() {
 }
 
 sub adjust_libtool() {
-	if (-f "${abs_wrksrc}/ltconfig" || -f "${abs_wrksrc}/ltmain.sh") {
+	if (-f "$abs_wrksrc/ltconfig" || -f "$abs_wrksrc/ltmain.sh") {
 		push(@build_vars, var("USE_LIBTOOL", "=", "yes"));
 	}
-	if (-d "${abs_wrksrc}/libltdl") {
+	if (-d "$abs_wrksrc/libltdl") {
 		push(@includes, "../../devel/libltdl/convenience.mk");
 	}
 }
 
-sub adjust_perlmod() {
-	if (-f "${abs_wrksrc}/Build.PL") {
+sub adjust_perl_module() {
+
+	if (-f "$abs_wrksrc/Build.PL") {
 
 		# It's a Module::Build module. Dependencies cannot yet be
 		# extracted automatically.
@@ -213,18 +252,17 @@ sub adjust_perlmod() {
 
 		push(@build_vars, var("PERL5_MODULE_TYPE", "=", "Module::Build"));
 
-	} elsif (-f "${abs_wrksrc}/Makefile.PL") {
+	} elsif (-f "$abs_wrksrc/Makefile.PL") {
 
 		# To avoid fix_up_makefile error for p5-HTML-Quoted, generate Makefile first.
-		system("cd ${abs_wrksrc} && perl -I. Makefile.PL < /dev/null") or do {};
+		system("cd '$abs_wrksrc' && perl -I. Makefile.PL < /dev/null") or do {};
 
-		open(DEPS, "cd ${abs_wrksrc} && perl -I${perllibdir} -I. Makefile.PL |") or die;
+		open(DEPS, "cd '$abs_wrksrc' && perl -I$libdir -I. Makefile.PL |") or die;
 		while (defined(my $dep = <DEPS>)) {
 			chomp($dep);
-			if ($dep =~ qr"\.\./\.\./") {
-				# Many Perl modules write other things to
-				# stdout, so filter them out.
-				push(@depends, $dep);
+
+			if ($dep =~ qr"^(\w+)\t(\S+)(>\S+|):(\.\./\.\./\S+)$") {
+				add_dependency($1, $2, $3, $4);
 			}
 		}
 		close(DEPS) or die;
@@ -233,16 +271,47 @@ sub adjust_perlmod() {
 		return;
 	}
 
-	my $packlist = $distname;
-	$packlist =~ s/-[0-9].*//;
-	$packlist =~ s/-/\//g;
-	push(@build_vars, var("PERL5_PACKLIST", "=", "auto/${packlist}/.packlist"));
+	my $packlist = $distname =~ s/-[0-9].*//r =~ s/-/\//gr;
+	push(@build_vars, var("PERL5_PACKLIST", "=", "auto/$packlist/.packlist"));
 	push(@includes, "../../lang/perl5/module.mk");
 	$pkgname = "p5-\${DISTNAME}";
 }
 
+sub adjust_python_module() {
+
+	return unless -f "$abs_wrksrc/setup.py";
+
+	my %old_env = %ENV;
+	$ENV{'PYTHONDONTWRITEBYTECODE'} = 'x';
+	$ENV{'PYTHONPATH'} = $libdir;
+
+	my @dep_lines;
+	open(DEPS, "cd '$abs_wrksrc' && $pythonbin setup.py build |") or die;
+	%ENV = %old_env;
+	while (defined(my $line = <DEPS>)) {
+		chomp($line);
+		if ($line =~ qr"^(\w+)\t(\S+?)(>=.*|)$") {
+			push(@dep_lines, [$1, $2, $3]);
+		}
+	}
+	close(DEPS) or die;
+
+	foreach my $dep_line (@dep_lines) {
+		my ($type, $pkgbase, $constraint) = @$dep_line;
+		my $dep_dir = find_package("py-$pkgbase");
+		if ($dep_dir ne "") {
+			$pkgbase = "py-$pkgbase";
+		} else {
+			$dep_dir = find_package($pkgbase);
+		}
+
+		add_dependency($type, $pkgbase, $constraint, $dep_dir);
+
+	}
+}
+
 sub adjust_cargo() {
-	open(CONF, "<", "${abs_wrksrc}/Cargo.lock") or return;
+	open(CONF, "<", "$abs_wrksrc/Cargo.lock") or return;
 
 	while (defined(my $line = <CONF>)) {
 		# "checksum cargo-package-name cargo-package-version
@@ -317,20 +386,20 @@ sub generate_initial_package_Makefile_lines($) {
 			my ($site) = ($1);
 
 			if (index($url, $site) == 0) {
-				if ($url =~ qr"^\Q${site}\E(.+)/([^/]+)$") {
+				if ($url =~ qr"^\Q$site\E(.+)/([^/]+)$") {
 					my $subdir = $1;
 					$distfile = $2;
 
-					$master_sites = "\${${master_site}:=${subdir}/}";
+					$master_sites = "\${$master_site:=$subdir/}";
 					if ($master_site eq "MASTER_SITE_SOURCEFORGE") {
-						$homepage = "http://${subdir}.sourceforge.net/";
+						$homepage = "http://$subdir.sourceforge.net/";
 					} elsif ($master_site eq "MASTER_SITE_GNU") {
-						$homepage = "http://www.gnu.org/software/${subdir}/";
+						$homepage = "http://www.gnu.org/software/$subdir/";
 					} else {
 						$homepage = substr($url, 0, -length($distfile));
 					}
 				} else {
-					$master_sites = "\${${master_site}}";
+					$master_sites = "\${$master_site}";
 				}
 			}
 		}
@@ -340,8 +409,8 @@ sub generate_initial_package_Makefile_lines($) {
 	if ($url =~ qr"^https://downloads\.sourceforge\.net/project/([^/?]+)/[^?]+/([^/?]+)(?:[?].*)?$") {
 		my ($project, $filename) = ($1, $2);
 
-		$master_sites = "\${MASTER_SITE_SOURCEFORGE:=${project}/}";
-		$homepage = "https://${project}.sourceforge.net/";
+		$master_sites = "\${MASTER_SITE_SOURCEFORGE:=$project/}";
+		$homepage = "https://$project.sourceforge.net/";
 		$distfile = $filename;
 	}
 
@@ -371,7 +440,7 @@ sub generate_initial_package_Makefile_lines($) {
 			$distfile = "$base$ext";
 
 		} else {
-			print("$0: ERROR: Invalid GitHub URL: ${url}, handling as normal URL\n");
+			print("$0: ERROR: Invalid GitHub URL: $url, handling as normal URL\n");
 		}
 	}
 
@@ -381,7 +450,7 @@ sub generate_initial_package_Makefile_lines($) {
 			$distfile = $2;
 			$homepage = $master_sites;
 		} else {
-			die("$0: ERROR: Invalid URL: ${url}\n");
+			die("$0: ERROR: Invalid URL: $url\n");
 		}
 	}
 
@@ -396,7 +465,7 @@ sub generate_initial_package_Makefile_lines($) {
 	rename("Makefile", "Makefile-url2pkg.bak") or do {};
 
 	`pwd` =~ qr".*/([^/]+)/[^/]+$" or die;
-	$categories = $1;
+	$categories = $1 eq "wip" ? "# TODO" : $1;
 
 	if ($extract_sufx eq ".tar.gz" || $extract_sufx eq ".gem") {
 		$extract_sufx = "";
@@ -451,7 +520,7 @@ sub adjust_package_from_extracted_distfiles()
 {
 	my ($seen_marker);
 
-	chomp($abs_wrkdir = `${make} show-var VARNAME=WRKDIR`);
+	chomp($abs_wrkdir = `$make show-var VARNAME=WRKDIR`);
 
 	#
 	# Determine the value of WRKSRC.
@@ -473,22 +542,23 @@ sub adjust_package_from_extracted_distfiles()
 		if ($files[0] ne $distname) {
 			push(@build_vars, var("WRKSRC", "=", "\${WRKDIR}/$files[0]"));
 		}
-		$abs_wrksrc = "${abs_wrkdir}/$files[0]";
+		$abs_wrksrc = "$abs_wrkdir/$files[0]";
 	} else {
 		push(@build_vars, var("WRKSRC", "=", "\${WRKDIR}" .
 		    ((@files > 1) ? " # More than one possibility -- please check manually." : "")));
 		$abs_wrksrc = $abs_wrkdir;
 	}
 
-	chomp(@wrksrc_files = `cd "${abs_wrksrc}" && find * -type f`);
-	chomp(@wrksrc_dirs = `cd "${abs_wrksrc}" && find * -type d`);
+	chomp(@wrksrc_files = `cd "$abs_wrksrc" && find * -type f`);
+	chomp(@wrksrc_dirs = `cd "$abs_wrksrc" && find * -type d`);
 
 	adjust_configure();
 	adjust_cmake();
 	adjust_meson();
 	adjust_gconf2_schemas();
 	adjust_libtool();
-	adjust_perlmod();
+	adjust_perl_module();
+	adjust_python_module();
 	adjust_cargo();
 	adjust_pkg_config();
 	adjust_po();
@@ -523,20 +593,16 @@ sub adjust_package_from_extracted_distfiles()
 	}
 
 	my @depend_vars;
-	foreach my $dep (@build_depends) {
-		push(@depend_vars, var("BUILD_DEPENDS", "+=", $dep));
-	}
-	foreach my $dep (@depends) {
-		push(@depend_vars, var("DEPENDS", "+=", $dep));
-	}
+	push(@depend_vars, map { var("BUILD_DEPENDS", "+=", $_) } @build_depends);
+	push(@depend_vars, map { var("DEPENDS", "+=", $_) } @depends);
+	push(@depend_vars, map { var("TEST_DEPENDS", "+=", $_) } @test_depends);
 	add_section(\@lines, \@depend_vars);
 
 	add_section(\@lines, \@build_vars);
 	add_section(\@lines, \@extra_vars);
 
-	foreach my $f (@includes) {
-		push(@lines, ".include \"$f\"");
-	}
+	push(@lines, @bl3_lines);
+	push(@lines, map { $_ = ".include \"$_\"" } @includes);
 
 	# Copy the rest of the user-edited part of the Makefile.
 	while (defined(my $line = <MF1>)) {
@@ -578,7 +644,7 @@ sub main() {
 
 		generate_initial_package($url);
 	} else {
-		chomp($distname = `${make} show-var VARNAME=DISTNAME`);
+		chomp($distname = `$make show-var VARNAME=DISTNAME`);
 	}
 
 	adjust_package_from_extracted_distfiles();
