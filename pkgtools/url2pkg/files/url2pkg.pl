@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.54 2019/08/18 07:47:58 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.55 2019/08/18 07:51:40 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -306,7 +306,6 @@ sub generate_initial_package_Makefile_lines($) {
 	my $github_release = "";
 	my $dist_subdir = "";
 
-	my $found = false;
 	open(SITES, "<", "../../mk/fetch/sites.mk") or die;
 	while (defined(my $line = <SITES>)) {
 		chomp($line);
@@ -318,8 +317,6 @@ sub generate_initial_package_Makefile_lines($) {
 			my ($site) = ($1);
 
 			if (index($url, $site) == 0) {
-				$found = true;
-
 				if ($url =~ qr"^\Q${site}\E(.+)/([^/]+)$") {
 					my $subdir = $1;
 					$distfile = $2;
@@ -346,7 +343,6 @@ sub generate_initial_package_Makefile_lines($) {
 		$master_sites = "\${MASTER_SITE_SOURCEFORGE:=${project}/}";
 		$homepage = "https://${project}.sourceforge.net/";
 		$distfile = $filename;
-		$found = true;
 	}
 
 	if ($url =~ qr"^https://github\.com/") {
@@ -361,7 +357,6 @@ sub generate_initial_package_Makefile_lines($) {
 				$dist_subdir = '${GITHUB_PROJECT}';
 			}
 			$distfile = "$tag$ext";
-			$found = true;
 
 		} elsif ($url =~ qr"^https://github\.com/(.*)/(.*)/releases/download/(.*)/(.*)(\.tar\.gz|\.zip)$") {
 			my ($org, $proj, $tag, $base, $ext) = ($1, $2, $3, $4, $5);
@@ -374,15 +369,16 @@ sub generate_initial_package_Makefile_lines($) {
 			}
 			$github_release = $tag eq $base ? '${DISTNAME}' : $tag;
 			$distfile = "$base$ext";
-			$found = true;
+
 		} else {
 			print("$0: ERROR: Invalid GitHub URL: ${url}, handling as normal URL\n");
 		}
 	}
 
-	if (!$found) {
+	if ($master_sites eq "") {
 		if ($url =~ qr"^(.*/)(.*)$") {
-			($master_sites, $distfile) = ($1, $2);
+			$master_sites = $1;
+			$distfile = $2;
 			$homepage = $master_sites;
 		} else {
 			die("$0: ERROR: Invalid URL: ${url}\n");
@@ -390,9 +386,11 @@ sub generate_initial_package_Makefile_lines($) {
 	}
 
 	if ($distfile =~ qr"^(.*?)((?:\.tar)?\.\w+)$") {
-		($distname, $extract_sufx) = ($1, $2);
+		$distname = $1;
+		$extract_sufx = $2;
 	} else {
-		($distname, $extract_sufx) = ($distfile, "# none");
+		$distname = $distfile;
+		$extract_sufx = "# none";
 	}
 
 	rename("Makefile", "Makefile-url2pkg.bak") or do {};
