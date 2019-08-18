@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2012/10/23 19:50:59 asau Exp $
+# $NetBSD: Makefile,v 1.20 2019/08/18 07:19:47 maya Exp $
 
 DISTNAME=	dvdrtools-${VERSION}
 PKGNAME=	${DISTNAME:S/dvdrtools/dvdrecord/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://freesoftware.fsf.org/download/dvdrtools/dvdrtools.pkg/${VERSION}/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,6 +17,7 @@ GNU_CONFIGURE=		yes
 # Override wrong usage of AC_DEFINE_UNQUOTED:
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 LIBS.SunOS+=		-lsocket
+LIBS.Darwin+=		-framework IOKit -framework CoreFoundation
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
