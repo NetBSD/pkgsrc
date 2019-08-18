@@ -1,5 +1,5 @@
 # -*- perl -*-
-# $NetBSD: url2pkg.t,v 1.5 2019/08/18 17:34:13 rillig Exp $
+# $NetBSD: url2pkg.t,v 1.6 2019/08/18 18:02:48 rillig Exp $
 
 require "url2pkg.pl";
 
@@ -83,7 +83,7 @@ sub test_lines_append__value_without_comment() {
 	is_deeply($lines, ["VARNAME+=\tvalue appended"]);
 }
 
-sub test_generate_initial_package_Makefile_lines__GitHub() {
+sub test_generate_initial_package_Makefile_lines__GitHub_archive() {
 	my $url = "https://github.com/org/proj/archive/v1.0.0.tar.gz";
 
 	my @lines = generate_initial_package_Makefile_lines($url);
@@ -107,6 +107,56 @@ sub test_generate_initial_package_Makefile_lines__GitHub() {
 	]);
 }
 
+sub test_generate_initial_package_Makefile_lines__GitHub_release_containing_project_name() {
+	my $url = "https://github.com/org/proj/releases/download/1.0.0/proj.zip";
+
+	my @lines = generate_initial_package_Makefile_lines($url);
+
+	is_deeply(\@lines, [
+		"# \$" . "NetBSD\$",
+		"",
+		"DISTNAME=\tproj",
+		"CATEGORIES=\tpkgtools",
+		"MASTER_SITES=\t\${MASTER_SITE_GITHUB:=org/}",
+		"GITHUB_RELEASE=\t1.0.0",
+		"EXTRACT_SUFX=\t.zip",
+		"",
+		"MAINTAINER=\tINSERT_YOUR_MAIL_ADDRESS_HERE",
+		"HOMEPAGE=\thttps://github.com/org/proj/",
+		"COMMENT=\tTODO: Short description of the package",
+		"#LICENSE=\t# TODO: (see mk/license.mk)",
+		"",
+		"# url2pkg-marker (please do not remove this line.)",
+		".include \"../../mk/bsd.pkg.mk\""
+	]);
+}
+
+sub test_generate_initial_package_Makefile_lines__GitHub_release_not_containing_project_name() {
+	my $url = "https://github.com/org/proj/releases/download/1.0.0/data.zip";
+
+	my @lines = generate_initial_package_Makefile_lines($url);
+
+	is_deeply(\@lines, [
+		"# \$" . "NetBSD\$",
+		"",
+		"GITHUB_PROJECT=\tproj",
+		"DISTNAME=\tdata",
+		"CATEGORIES=\tpkgtools",
+		"MASTER_SITES=\t\${MASTER_SITE_GITHUB:=org/}",
+		"GITHUB_RELEASE=\t1.0.0",
+		"EXTRACT_SUFX=\t.zip",
+		"DIST_SUBDIR=\t\${GITHUB_PROJECT}",
+		"",
+		"MAINTAINER=\tINSERT_YOUR_MAIL_ADDRESS_HERE",
+		"HOMEPAGE=\thttps://github.com/org/proj/",
+		"COMMENT=\tTODO: Short description of the package",
+		"#LICENSE=\t# TODO: (see mk/license.mk)",
+		"",
+		"# url2pkg-marker (please do not remove this line.)",
+		".include \"../../mk/bsd.pkg.mk\""
+	]);
+}
+
 sub test_all() {
 	my $pkgsrcdir = $ENV{"PKGSRCDIR"} or die;
 	chdir("$pkgsrcdir/pkgtools/url2pkg") or die;
@@ -118,7 +168,9 @@ sub test_all() {
 	test_lines_append__only_comment();
 	test_lines_append__value_with_comment();
 	test_lines_append__value_without_comment();
-	test_generate_initial_package_Makefile_lines__GitHub();
+	test_generate_initial_package_Makefile_lines__GitHub_archive();
+	test_generate_initial_package_Makefile_lines__GitHub_release_containing_project_name();
+	test_generate_initial_package_Makefile_lines__GitHub_release_not_containing_project_name();
 
 	done_testing();
 }
