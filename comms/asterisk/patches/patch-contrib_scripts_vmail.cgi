@@ -1,13 +1,7 @@
-$NetBSD: patch-contrib_scripts_vmail.cgi,v 1.1 2012/12/11 08:22:49 jnemeth Exp $
+$NetBSD: patch-contrib_scripts_vmail.cgi,v 1.2 2019/08/18 05:22:17 maya Exp $
 
 --- contrib/scripts/vmail.cgi.orig	2008-09-20 00:52:20.000000000 +0000
 +++ contrib/scripts/vmail.cgi
-@@ -1,4 +1,4 @@
--#!/usr/bin/perl
-+#!/usr/pkg/bin/perl
- #
- # Web based Voicemail for Asterisk
- #
 @@ -145,7 +145,7 @@ sub check_login($$)
  		$context = "default";
  	}
