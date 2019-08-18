@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2019/01/27 02:23:39 tsutsui Exp $
+# $NetBSD: Makefile,v 1.65 2019/08/18 03:13:21 tsutsui Exp $
 #
 
 DISTNAME=		pango-${VERSION}
@@ -12,6 +12,7 @@ CONFLICTS+=		ruby-gnome2-pango-[0-9]*
 
 DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-cairo-gobject>=${VERSION}:../../graphics/ruby-gnome2-cairo-gobject
 
+BUILDLINK_API_DEPENDS.pango+=	pango>=1.44.0
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/ruby-gnome2-glib/buildlink3.mk"
 .include "../../devel/ruby-gnome2-gobject-introspection/buildlink3.mk"
