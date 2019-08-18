@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.49 2019/08/18 06:10:38 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.50 2019/08/18 06:23:19 maya Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -152,6 +152,13 @@ sub magic_cmake() {
 	close(CONF);
 
 	push(@build_vars, ["USE_CMAKE", "yes"]);
+}
+
+sub magic_meson() {
+	open(CONF, "<", "${abs_wrksrc}/meson.build") or return;
+	close(CONF);
+
+	push(@includes, "../../devel/py-meson/build.mk");
 }
 
 sub magic_gconf2_schemas() {
@@ -465,6 +472,7 @@ sub adjust_package_from_extracted_distfiles()
 
 	magic_configure();
 	magic_cmake();
+	magic_meson();
 	magic_gconf2_schemas();
 	magic_libtool();
 	magic_perlmod();
