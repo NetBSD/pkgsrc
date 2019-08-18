@@ -1,0 +1,5 @@
+Wayland is a protocol for a compositor to talk to its clients as
+well as a C library implementation of that protocol.
+
+Wayland is intended to be simpler replacement for the X window
+system, easier to develop and maintain.

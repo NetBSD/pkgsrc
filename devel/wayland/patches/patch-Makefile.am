@@ -1,0 +1,25 @@
+$NetBSD: patch-Makefile.am,v 1.1 2019/08/18 16:05:12 nia Exp $
+
+https://lists.freedesktop.org/archives/wayland-devel/2019-February/040024.html
+
+--- Makefile.am.orig	2019-03-21 00:55:25.000000000 +0000
++++ Makefile.am
+@@ -76,7 +76,8 @@ libwayland_server_la_LDFLAGS = -version-
+ libwayland_server_la_SOURCES =			\
+ 	src/wayland-server.c			\
+ 	src/wayland-shm.c			\
+-	src/event-loop.c
++	src/event-loop.c 			\
++	src/event-loop-kqueue.c 
+ 
+ nodist_libwayland_server_la_SOURCES =		\
+ 	protocol/wayland-server-protocol.h	\
+@@ -227,7 +228,7 @@ libtest_runner_la_LIBADD =			\
+ 	libwayland-client.la			\
+ 	libwayland-server.la			\
+ 	libtest-helpers.la			\
+-	-lrt -ldl $(FFI_LIBS)
++	-lrt $(DL_LIBS) $(FFI_LIBS)
+ 
+ array_test_SOURCES = tests/array-test.c
+ array_test_LDADD = libtest-runner.la
