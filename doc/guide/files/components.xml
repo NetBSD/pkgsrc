@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.56 2018/11/05 20:36:35 rillig Exp $ -->
+<!-- $NetBSD: components.xml,v 1.57 2019/08/18 16:35:16 rillig Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -320,7 +320,7 @@ converters    games         mbone         print         x11
   <varname>PATCHDIR</varname> to the path where the patch files
   can be found, e.g.:</para>
 <programlisting>
-PATCHDIR= ${.CURDIR}/../xemacs/patches
+PATCHDIR=       ../../editors/xemacs/patches
 </programlisting>
 
     <para>Patch files that are distributed by the author or other
@@ -704,7 +704,7 @@ MESSAGE_SUBST+=  SOMEVAR="somevalue"
     to the other package's <filename>files</filename> directory,
     e.g.:</para>
 <programlisting>
-FILESDIR=${.CURDIR}/../xemacs/files
+FILESDIR=       ../../editors/xemacs/files
 </programlisting>
   </sect1>
 </chapter>
