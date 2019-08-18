@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2031 2018/05/28 20:37:47 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2032 2019/08/18 21:58:51 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -573,7 +573,7 @@ all: ${_PKGSRC_BUILD_TARGETS}
 .endif
 
 .PHONY: makedirs
-makedirs: ${WRKDIR} ${FAKEHOMEDIR}
+makedirs: ${WRKDIR} ${FAKEHOMEDIR} _check-wrkdir-canonical
 
 ${WRKDIR}:
 .if !defined(KEEP_WRKDIR)
@@ -583,9 +583,23 @@ ${WRKDIR}:
 .endif
 	${RUN} umask 077 && ${MKDIR} ${WRKDIR}
 
+# If the WRKDIR is not canonical (such as when it contains a symlink),
+# various packages such as databases/mysql57-client will not find their
+# include files. See also checkarg_sane_absolute_path in bootstrap/bootstrap.
+.PHONY: _check-wrkdir-canonical
+_check-wrkdir-canonical: ${WRKDIR}
+	${RUN} cd ${WRKDIR}; d=`exec pwd`; ${TEST} "$$d" = ${WRKDIR}	\
+	|| ${FAIL_MSG} "[bsd.pkg.mk] The path to WRKDIR ${WRKDIR} must be canonical ($$d)."
+
 # Create a symlink from ${WRKDIR} to the package directory if
 # CREATE_WRKDIR_SYMLINK is "yes".
 #
+# This symlink is not used by pkgsrc and is only created for convenience.
+# Most other pkgsrc pathnames must not contain symlinks, to prevent
+# spurious build failures (see checkarg_sane_absolute_path in
+# bootstrap/bootstrap).
+#
+# Keywords: work wrkdir symlink
 CREATE_WRKDIR_SYMLINK?=	no
 
 .if defined(WRKOBJDIR) && !empty(CREATE_WRKDIR_SYMLINK:M[Yy][Ee][Ss])
