@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3502 2019/08/17 20:28:42 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.3503 2019/08/18 03:15:52 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5722,3 +5722,25 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated meta-pkgs/xfce4 to 4.14.0 [gutteridge 2019-08-17]
 	Updated meta-pkgs/xfce4-extras to 4.14.0 [gutteridge 2019-08-17]
 	Updated editors/xfce4-mousepad to 0.4.2 [gutteridge 2019-08-17]
+	Updated devel/ruby-gnome2-atk to 3.3.7 [tsutsui 2019-08-18]
+	Updated devel/ruby-gnome2-gio to 3.3.7 [tsutsui 2019-08-18]
+	Updated devel/ruby-gnome2-glib to 3.3.7 [tsutsui 2019-08-18]
+	Updated devel/ruby-gnome2-gobject-introspection to 3.3.7 [tsutsui 2019-08-18]
+	Updated devel/ruby-gnome2-pango to 3.3.7 [tsutsui 2019-08-18]
+	Updated graphics/ruby-gnome2-cairo-gobject to 3.3.7 [tsutsui 2019-08-18]
+	Updated graphics/ruby-gnome2-clutter to 3.3.7 [tsutsui 2019-08-18]
+	Updated graphics/ruby-gnome2-clutter-gdk to 3.3.7 [tsutsui 2019-08-18]
+	Updated graphics/ruby-gnome2-clutter-gtk to 3.3.7 [tsutsui 2019-08-18]
+	Updated graphics/ruby-gnome2-gdk3 to 3.3.7 [tsutsui 2019-08-18]
+	Updated graphics/ruby-gnome2-gdkpixbuf to 3.3.7 [tsutsui 2019-08-18]
+	Updated graphics/ruby-gnome2-rsvg to 3.3.7 [tsutsui 2019-08-18]
+	Updated multimedia/ruby-gnome2-clutter-gstreamer to 3.3.7 [tsutsui 2019-08-18]
+	Updated multimedia/ruby-gnome2-gstreamer to 3.3.7 [tsutsui 2019-08-18]
+	Updated print/ruby-gnome2-poppler to 3.3.7 [tsutsui 2019-08-18]
+	Updated www/ruby-gnome2-webkit-gtk to 3.3.7 [tsutsui 2019-08-18]
+	Updated www/ruby-gnome2-webkit-gtk2 to 3.3.7 [tsutsui 2019-08-18]
+	Updated x11/ruby-gnome2-gtk to 3.3.7 [tsutsui 2019-08-18]
+	Updated x11/ruby-gnome2-gtk3 to 3.3.7 [tsutsui 2019-08-18]
+	Updated x11/ruby-gnome2-gtksourceview2 to 3.3.7 [tsutsui 2019-08-18]
+	Updated x11/ruby-gnome2-gtksourceview3 to 3.3.7 [tsutsui 2019-08-18]
+	Updated x11/ruby-gnome2-vte to 3.3.7 [tsutsui 2019-08-18]
