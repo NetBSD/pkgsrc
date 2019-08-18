@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2019/07/27 15:29:10 nia Exp $
+# $NetBSD: Makefile,v 1.39 2019/08/18 16:16:24 nia Exp $
 
 DISTNAME=	SDL2-2.0.10
 CATEGORIES=	devel
@@ -6,7 +6,7 @@ MASTER_SITES=	http://www.libsdl.org/release/
 
 MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	http://www.libsdl.org/
-COMMENT=	Simple DirectMedia Layer is a cross-platform multimedia library
+COMMENT=	Simple DirectMedia Layer - cross-platform multimedia library
 LICENSE=	zlib
 
 USE_LANGUAGES=		c c++
@@ -20,8 +20,8 @@ CONFIGURE_ENV+=	SDL_RLD_FLAGS="${COMPILER_RPATH_FLAG}${PREFIX}/lib \
 
 CONFIGURE_ARGS+=	--disable-x11-shared
 
-CHECK_PORTABILITY_SKIP+=build-scripts/androidbuildlibs.sh
-CHECK_PORTABILITY_SKIP+=build-scripts/iosbuild.sh
+CHECK_PORTABILITY_SKIP+=	build-scripts/androidbuildlibs.sh
+CHECK_PORTABILITY_SKIP+=	build-scripts/iosbuild.sh
 
 .include "../../mk/bsd.prefs.mk"
 
