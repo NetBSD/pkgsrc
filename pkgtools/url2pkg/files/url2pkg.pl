@@ -1,5 +1,5 @@
 #! @PERL5@
-# $NetBSD: url2pkg.pl,v 1.58 2019/08/18 13:49:13 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.59 2019/08/18 16:09:01 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -94,14 +94,28 @@ sub add_section($$) {
 	push(@$lines, "");
 }
 
+sub read_lines($) {
+	my ($filename) = @_;
+
+	my @lines;
+	open(F, "<", $filename) or return @lines;
+	while (defined(my $line = <F>)) {
+		chomp($line);
+		push(@lines, $line);
+	}
+	close(F) or die;
+	return @lines;
+}
+
 sub write_lines($@) {
 	my ($filename, @lines) = @_;
 
-	open(F, ">", $filename) or die;
+	open(F, ">", "$filename.tmp") or die;
 	foreach my $line (@lines) {
 		print F "$line\n";
 	}
 	close(F) or die;
+	rename("$filename.tmp", $filename) or die;
 }
 
 sub find_package($) {
@@ -109,6 +123,23 @@ sub find_package($) {
 
 	my @candidates = <../../*/$pkgbase>;
 	return scalar(@candidates) == 1 ? $candidates[0] : "";
+}
+
+sub update_var_set($$$) {
+	my ($lines, $varname, $new_value) = @_;
+
+	my $i = 0;
+	foreach my $line (@$lines) {
+		if ($line =~ qr"^\Q$varname\E(\+?=)([ \t]+)([^#\\]*?)(\s*)(#.*|)$") {
+			my ($op, $indent, $old_value, $space_after_value, $comment) = ($1, $2, $3, $4, $5);
+
+			$lines->[$i] = "$varname$op$indent$new_value$space_after_value$comment";
+			return true;
+		}
+		$i++;
+	}
+
+	return false;
 }
 
 # appends the given value to the variable assignment.
@@ -125,10 +156,52 @@ sub update_var_append($$$) {
 			my $before = $old_value =~ qr"\S$" ? " " : "";
 			my $after = $comment eq "" ? "" : " ";
 			$lines->[$i] = "$varname$op$indent$old_value$before$value$after$comment";
-			return;
+			return true;
 		}
 		$i++;
 	}
+
+	return false;
+}
+
+sub update_var_remove($$) {
+	my ($lines, $varname) = @_;
+
+	my $i = 0;
+	foreach my $line (@$lines) {
+		if ($line =~ qr"^\Q$varname\E(\+?=)") {
+			splice(@$lines, $i, 1);
+			return true;
+		}
+		$i++;
+	}
+
+	return false;
+}
+
+sub update_var_remove_if($$$) {
+	my ($lines, $varname, $expected_value) = @_;
+
+	my $i = 0;
+	foreach my $line (@$lines) {
+		if ($line =~ qr"^\Q$varname\E(\+?=)([ \t]+)([^#\\]*?)(\s*)(#.*|)$") {
+			my ($op, $indent, $old_value, $space_after_value, $comment) = ($1, $2, $3, $4, $5);
+
+			if ($old_value eq $expected_value) {
+				splice(@$lines, $i, 1);
+				return true;
+			}
+		}
+		$i++;
+	}
+
+	return false;
+}
+
+sub make(@) {
+	my @args = @_;
+
+	(system { $make } ($make, @args)) == 0 or die;
 }
 
 # The following adjust_* subroutines are called after the distfiles have
@@ -191,6 +264,8 @@ my @todos;
 
 # the package name, in case it differs from $distname.
 my $pkgname = "";
+
+my $regenerate_distinfo = false;
 
 # Example:
 # add_dependency("DEPENDS", "package", ">=1", "../../category/package");
@@ -337,6 +412,7 @@ sub adjust_python_module() {
 	}
 
 	push(@categories, "python");
+	push(@includes, "../../lang/python/egg.mk");
 }
 
 sub adjust_cargo() {
@@ -530,23 +606,57 @@ sub generate_initial_package($) {
 
 	rename("Makefile", "Makefile-url2pkg.bak") or do {};
 	write_lines("Makefile", generate_initial_package_Makefile_lines($url));
-
 	write_lines("PLIST", "\@comment \$" . "NetBSD\$");
-
 	write_lines("DESCR", ());
-
 	run_editor("Makefile", 5);
 
-	print ("url2pkg> Running \"make distinfo\" ...\n");
-	(system { $make } ($make, "distinfo")) == 0 or die;
-
-	print ("url2pkg> Running \"make extract\" ...\n");
-	(system { $make } ($make, "extract")) == 0 or die;
+	make("distinfo");
+	make("extract");
 }
 
-sub adjust_package_from_extracted_distfiles()
+sub adjust_lines_python_module($$) {
+	my ($lines, $url) = @_;
+
+	my @initial_lines = generate_initial_package_Makefile_lines($url);
+	my @current_lines = read_lines("Makefile");
+
+	# don't risk to overwrite any changes by the package developer.
+	if (join('\n', @current_lines) ne join('\n', @initial_lines)) {
+		splice(@$lines, -2, 0, "# TODO: Migrate MASTER_SITES to PYPI");
+		return;
+	}
+
+	my %old;
+	foreach my $line (@initial_lines) {
+		if ($line =~ qr"^(\w+)(\+?=)([ \t]+)([^#\\]*?)(\s*)(#.*|)$") {
+			my ($varname, $op, $indent, $value, $space_after_value, $comment) = ($1, $2, $3, $4, $5, $6);
+
+			if ($op eq "=") {
+				$old{$varname} = $value;
+			}
+		}
+	}
+
+	my $pkgbase = $old{"GITHUB_PROJECT"};
+	my $pkgbase1 = substr($pkgbase, 0, 1);
+	my $pkgversion_norev = $old{"DISTNAME"} =~ s/^v//r;
+
+	my @tx_lines = @$lines;
+	if (update_var_remove(\@tx_lines, "GITHUB_PROJECT")
+		&& update_var_set(\@tx_lines, "DISTNAME", "$pkgbase-$pkgversion_norev")
+		&& update_var_set(\@tx_lines, "PKGNAME", "\${PYPKGPREFIX}-\${DISTNAME}")
+		&& update_var_set(\@tx_lines, "MASTER_SITES", "\${MASTER_SITE_PYPI:=$pkgbase1/$pkgbase/}")
+		&& update_var_remove(\@tx_lines, "DIST_SUBDIR")
+		&& (update_var_remove_if(\@tx_lines, "EXTRACT_SUFX", ".zip") || true)) {
+
+		@$lines = @tx_lines;
+		$regenerate_distinfo = true
+	}
+}
+
+sub adjust_package_from_extracted_distfiles($)
 {
-	my ($seen_marker);
+	my ($url) = @_;
 
 	chomp($abs_wrkdir = `$make show-var VARNAME=WRKDIR`);
 
@@ -594,6 +704,7 @@ sub adjust_package_from_extracted_distfiles()
 
 	print("url2pkg> Adjusting the Makefile\n");
 
+	my $seen_marker = false;
 	my @lines;
 
 	open(MF1, "<", "Makefile") or die;
@@ -611,6 +722,9 @@ sub adjust_package_from_extracted_distfiles()
 		if ($pkgname ne "" && $line =~ qr"^DISTNAME=(\t+)") {
 			push(@lines, "PKGNAME=$1$pkgname");
 		}
+	}
+	if (!$seen_marker) {
+		die("$0: ERROR: didn't find the url2pkg marker in the file.\n");
 	}
 
 	if (@todos) {
@@ -642,13 +756,12 @@ sub adjust_package_from_extracted_distfiles()
 
 	update_var_append(\@lines, "CATEGORIES", join(" ", @categories));
 
-	write_lines("Makefile-url2pkg.new", @lines);
+	adjust_lines_python_module(\@lines, $url);
 
-	if ($seen_marker) {
-		rename("Makefile-url2pkg.new", "Makefile") or die;
-	} else {
-		unlink("Makefile-url2pkg.new");
-		die("$0: ERROR: didn't find the url2pkg marker in the file.\n");
+	write_lines("Makefile", @lines);
+
+	if ($regenerate_distinfo) {
+		make("distinfo");
 	}
 }
 
@@ -677,7 +790,7 @@ sub main() {
 		chomp($distname = `$make show-var VARNAME=DISTNAME`);
 	}
 
-	adjust_package_from_extracted_distfiles();
+	adjust_package_from_extracted_distfiles($url);
 
 	print("\n");
 	print("Remember to run pkglint when you're done.\n");
