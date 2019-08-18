@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.242 2018/12/16 23:21:52 rillig Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.243 2019/08/18 21:00:10 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -204,6 +204,8 @@ _BLNK_PACKAGES+=	${_pkg_}
 .endfor
 
 _VARGROUPS+=		bl3
+_DEF_VARS.bl3+=		_BLNK_PACKAGES _BLNK_DEPENDS
+_LISTED_VARS.bl3+=	_BLNK_PACKAGES _BLNK_DEPENDS
 .for v in BINDIR CFLAGS CPPFLAGS DEPENDS LDADD LDFLAGS LIBS
 _SYS_VARS.bl3+=		BUILDLINK_${v}
 .endfor
