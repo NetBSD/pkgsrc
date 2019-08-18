@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3514 2019/08/18 16:07:23 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3515 2019/08/18 16:07:34 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5755,3 +5755,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated pkgtools/url2pkg to 2.32 [rillig 2019-08-18]
 	Updated www/tscrape to 0.3 [leot 2019-08-18]
 	Added devel/wayland version 1.17.0 [nia 2019-08-18]
+	Added devel/wayland-protocols version 1.17 [nia 2019-08-18]
