@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/08/14 15:24:58 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/08/18 20:32:59 nils Exp $
 bin/bombardment
 bin/siege
 bin/siege.config
@@ -7,16 +7,11 @@ man/man1/bombardment.1
 man/man1/siege.1
 man/man1/siege.config.1
 man/man1/siege2csv.1
-man/man5/urls_txt.5
-man/man7/layingsiege.7
 share/doc/siege/AUTHORS
 share/doc/siege/COPYING
 share/doc/siege/ChangeLog
 share/doc/siege/INSTALL
-share/doc/siege/KNOWNBUGS
-share/doc/siege/NEWS
 share/doc/siege/PLATFORM
-share/doc/siege/README.https
 share/doc/siege/README.md
 share/examples/siege/siegerc
 share/examples/siege/urls.txt
