@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.48 2019/08/18 05:47:53 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.49 2019/08/18 06:10:38 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -65,26 +65,26 @@ sub get_maintainer() {
 	return $ENV{"PKGMAINTAINER"} || $ENV{"REPLYTO"} || "INSERT_YOUR_MAIL_ADDRESS_HERE";
 }
 
-sub print_section($$) {
-	my ($f, $vars) = @_;
+sub add_section($$) {
+	my ($lines, $vars) = @_;
 
 	return if scalar(@$vars) == 0;
 
 	my $width = 0;
 	foreach my $var (@{$vars}) {
-		next if $var->[1] eq "";
-		my $varname = $var->[0];
-		my $len = (length("$varname= ") + 7) & -8;
+		my ($name, $value) = @$var;
+		next if $value eq "";
+		my $len = (length("$name= ") + 7) & -8;
 		$width = ($len > $width) ? $len : $width;
 	}
 
 	foreach my $var (@{$vars}) {
-		next if $var->[1] eq "";
-		my ($varname, $varvalue) = @$var;
-		my $ntabs = ($width - length("$varname=") + 7) / 8;
-		printf $f ("%s=%s%s\n", $varname, "\t" x $ntabs, $varvalue);
+		my ($name, $value) = @$var;
+		next if $value eq "";
+		my $tabs = "\t" x (($width - length("$name=") + 7) / 8);
+		push(@$lines, "$name=$tabs$value");
 	}
-	printf $f ("\n");
+	push(@$lines, "");
 }
 
 # The following magic_* subroutines are called after the distfiles have
@@ -371,15 +371,15 @@ sub generate_initial_package_Makefile($) {
 	`pwd` =~ qr".*/([^/]+)/[^/]+$" or die;
 	$categories = $1;
 
-	open(MF, ">", "Makefile") or die;
-	print MF ("# \$" . "NetBSD\$\n");
-	print MF ("\n");
-
 	if ($extract_sufx eq ".tar.gz" || $extract_sufx eq ".gem") {
 		$extract_sufx = "";
 	}
 
-	print_section(*MF, [
+	my @lines;
+	push(@lines, "# \$" . "NetBSD\$");
+	push(@lines, "");
+
+	add_section(\@lines, [
 		["GITHUB_PROJECT", $github_project],
 		["DISTNAME", $distname],
 		["CATEGORIES", $categories],
@@ -389,15 +389,20 @@ sub generate_initial_package_Makefile($) {
 		["DIST_SUBDIR", $dist_subdir],
 	]);
 
-	print_section(*MF, [
+	add_section(\@lines, [
 		["MAINTAINER", get_maintainer()],
 		["HOMEPAGE", $homepage],
 		["COMMENT", "TODO: Short description of the package"],
 		["#LICENSE", "# TODO: (see mk/license.mk)"],
 	]);
 
-	print MF ("# url2pkg-marker (please do not remove this line.)\n");
-	print MF (".include \"../../mk/bsd.pkg.mk\"\n");
+	push(@lines, "# url2pkg-marker (please do not remove this line.)");
+	push(@lines, ".include \"../../mk/bsd.pkg.mk\"");
+
+	open(MF, ">", "Makefile") or die;
+	foreach my $line (@lines) {
+		print MF "$line\n";
+	}
 	close(MF) or die;
 }
 
@@ -470,28 +475,30 @@ sub adjust_package_from_extracted_distfiles()
 
 	print("url2pkg> Adjusting the Makefile.\n");
 
+	my @lines;
+
 	open(MF1, "<", "Makefile") or die;
-	open(MF2, ">", "Makefile-url2pkg.new") or die;
 
 	# Copy the user-edited part of the Makefile.
 	while (defined(my $line = <MF1>)) {
+		chomp($line);
+
 		if ($line =~ qr"^# url2pkg-marker\b") {
 			$seen_marker = true;
 			last;
 		}
-		print MF2 ($line);
+		push(@lines, $line);
 
-		# Note: This is not elegant, but works.
 		if (defined($pkgname) && $line =~ qr"^DISTNAME=(\t+)") {
-			print MF2 ("PKGNAME=$1${pkgname}\n");
+			push(@lines, "PKGNAME=$1$pkgname");
 		}
 	}
 
 	if (@todo) {
 		foreach my $todo (@todo) {
-			print MF2 ("# TODO: ${todo}\n");
+			push(@lines, "# TODO: $todo");
 		}
-		print MF2 ("\n");
+		push(@lines, "");
 	}
 
 	my @depend_vars;
@@ -501,22 +508,29 @@ sub adjust_package_from_extracted_distfiles()
 	foreach my $dep (@depends) {
 		push(@depend_vars, ["DEPENDS+", $dep]);
 	}
-	print_section(*MF2, \@depend_vars);
+	add_section(\@lines, \@depend_vars);
 
-	print_section(*MF2, \@build_vars);
-	print_section(*MF2, \@extra_vars);
+	add_section(\@lines, \@build_vars);
+	add_section(\@lines, \@extra_vars);
 
 	foreach my $f (@includes) {
-		print MF2 (".include \"${f}\"\n");
+		push(@lines, ".include \"$f\"");
 	}
 
 	# Copy the rest of the user-edited part of the Makefile.
 	while (defined(my $line = <MF1>)) {
-		print MF2 ($line);
+		chomp($line);
+		push(@lines, $line);
 	}
 
 	close(MF1);
+
+	open(MF2, ">", "Makefile-url2pkg.new") or die;
+	foreach my $line (@lines) {
+		print MF2 "$line\n";
+	}
 	close(MF2) or die;
+
 	if ($seen_marker) {
 		rename("Makefile-url2pkg.new", "Makefile") or die;
 	} else {
