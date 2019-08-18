@@ -1,5 +1,5 @@
 #! @PERL5@
-# $NetBSD: url2pkg.pl,v 1.59 2019/08/18 16:09:01 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.60 2019/08/18 16:18:04 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -125,7 +125,7 @@ sub find_package($) {
 	return scalar(@candidates) == 1 ? $candidates[0] : "";
 }
 
-sub update_var_set($$$) {
+sub lines_set($$$) {
 	my ($lines, $varname, $new_value) = @_;
 
 	my $i = 0;
@@ -143,7 +143,7 @@ sub update_var_set($$$) {
 }
 
 # appends the given value to the variable assignment.
-sub update_var_append($$$) {
+sub lines_append($$$) {
 	my ($lines, $varname, $value) = @_;
 
 	return if $value eq "";
@@ -164,7 +164,7 @@ sub update_var_append($$$) {
 	return false;
 }
 
-sub update_var_remove($$) {
+sub lines_remove($$) {
 	my ($lines, $varname) = @_;
 
 	my $i = 0;
@@ -179,7 +179,7 @@ sub update_var_remove($$) {
 	return false;
 }
 
-sub update_var_remove_if($$$) {
+sub lines_remove_if($$$) {
 	my ($lines, $varname, $expected_value) = @_;
 
 	my $i = 0;
@@ -642,12 +642,12 @@ sub adjust_lines_python_module($$) {
 	my $pkgversion_norev = $old{"DISTNAME"} =~ s/^v//r;
 
 	my @tx_lines = @$lines;
-	if (update_var_remove(\@tx_lines, "GITHUB_PROJECT")
-		&& update_var_set(\@tx_lines, "DISTNAME", "$pkgbase-$pkgversion_norev")
-		&& update_var_set(\@tx_lines, "PKGNAME", "\${PYPKGPREFIX}-\${DISTNAME}")
-		&& update_var_set(\@tx_lines, "MASTER_SITES", "\${MASTER_SITE_PYPI:=$pkgbase1/$pkgbase/}")
-		&& update_var_remove(\@tx_lines, "DIST_SUBDIR")
-		&& (update_var_remove_if(\@tx_lines, "EXTRACT_SUFX", ".zip") || true)) {
+	if (lines_remove(\@tx_lines, "GITHUB_PROJECT")
+		&& lines_set(\@tx_lines, "DISTNAME", "$pkgbase-$pkgversion_norev")
+		&& lines_set(\@tx_lines, "PKGNAME", "\${PYPKGPREFIX}-\${DISTNAME}")
+		&& lines_set(\@tx_lines, "MASTER_SITES", "\${MASTER_SITE_PYPI:=$pkgbase1/$pkgbase/}")
+		&& lines_remove(\@tx_lines, "DIST_SUBDIR")
+		&& (lines_remove_if(\@tx_lines, "EXTRACT_SUFX", ".zip") || true)) {
 
 		@$lines = @tx_lines;
 		$regenerate_distinfo = true
@@ -754,7 +754,7 @@ sub adjust_package_from_extracted_distfiles($)
 
 	close(MF1);
 
-	update_var_append(\@lines, "CATEGORIES", join(" ", @categories));
+	lines_append(\@lines, "CATEGORIES", join(" ", @categories));
 
 	adjust_lines_python_module(\@lines, $url);
 
