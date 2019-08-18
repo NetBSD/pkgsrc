@@ -1,5 +1,5 @@
 #! @PERL5@
-# $NetBSD: url2pkg.pl,v 1.60 2019/08/18 16:18:04 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.61 2019/08/18 17:34:13 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -72,28 +72,6 @@ sub var($$$) {
 	return [$name, $op, $value];
 }
 
-sub add_section($$) {
-	my ($lines, $vars) = @_;
-
-	return if scalar(@$vars) == 0;
-
-	my $width = 0;
-	foreach my $var (@{$vars}) {
-		my ($name, $op, $value) = @$var;
-		next if $value eq "";
-		my $len = (length("$name$op\t") + 7) & -8;
-		$width = ($len > $width) ? $len : $width;
-	}
-
-	foreach my $var (@{$vars}) {
-		my ($name, $op, $value) = @$var;
-		next if $value eq "";
-		my $tabs = "\t" x (($width - length("$name$op") + 7) / 8);
-		push(@$lines, "$name$op$tabs$value");
-	}
-	push(@$lines, "");
-}
-
 sub read_lines($) {
 	my ($filename) = @_;
 
@@ -125,6 +103,31 @@ sub find_package($) {
 	return scalar(@candidates) == 1 ? $candidates[0] : "";
 }
 
+# appends the given variable assignments to the lines, aligning the
+# variable values vertically.
+sub lines_add_vars($$) {
+	my ($lines, $vars) = @_;
+
+	return if scalar(@$vars) == 0;
+
+	my $width = 0;
+	foreach my $var (@$vars) {
+		my ($name, $op, $value) = @$var;
+		next if $value eq "";
+		my $len = (length("$name$op\t") + 7) & -8;
+		$width = ($len > $width) ? $len : $width;
+	}
+
+	foreach my $var (@$vars) {
+		my ($name, $op, $value) = @$var;
+		next if $value eq "";
+		my $tabs = "\t" x (($width - length("$name$op") + 7) / 8);
+		push(@$lines, "$name$op$tabs$value");
+	}
+	push(@$lines, "");
+}
+
+# changes the value of an existing variable in the lines.
 sub lines_set($$$) {
 	my ($lines, $varname, $new_value) = @_;
 
@@ -142,7 +145,7 @@ sub lines_set($$$) {
 	return false;
 }
 
-# appends the given value to the variable assignment.
+# appends to the value of an existing variable in the lines.
 sub lines_append($$$) {
 	my ($lines, $varname, $value) = @_;
 
@@ -164,6 +167,7 @@ sub lines_append($$$) {
 	return false;
 }
 
+# removes a variable assignment from the lines.
 sub lines_remove($$) {
 	my ($lines, $varname) = @_;
 
@@ -179,6 +183,8 @@ sub lines_remove($$) {
 	return false;
 }
 
+# removes a variable assignment from the lines if its value is the
+# expected one.
 sub lines_remove_if($$$) {
 	my ($lines, $varname, $expected_value) = @_;
 
@@ -421,7 +427,7 @@ sub adjust_cargo() {
 	while (defined(my $line = <CONF>)) {
 		# "checksum cargo-package-name cargo-package-version
 		if ($line =~ m/("checksum)\s(\S+)\s(\S+)/) {
-			push(@build_vars, var("CARGO_CRATE_DEPENDS", "=", "$2-$3"));
+			push(@build_vars, var("CARGO_CRATE_DEPENDS", "+=", "$2-$3"));
 		}
 	}
 	close(CONF);
@@ -578,7 +584,7 @@ sub generate_initial_package_Makefile_lines($) {
 	push(@lines, "# \$" . "NetBSD\$");
 	push(@lines, "");
 
-	add_section(\@lines, [
+	lines_add_vars(\@lines, [
 		var("GITHUB_PROJECT", "=", $github_project),
 		var("DISTNAME", "=", $distname),
 		var("CATEGORIES", "=", $categories),
@@ -588,7 +594,7 @@ sub generate_initial_package_Makefile_lines($) {
 		var("DIST_SUBDIR", "=", $dist_subdir),
 	]);
 
-	add_section(\@lines, [
+	lines_add_vars(\@lines, [
 		var("MAINTAINER", "=", get_maintainer()),
 		var("HOMEPAGE", "=", $homepage),
 		var("COMMENT", "=", "TODO: Short description of the package"),
@@ -620,7 +626,7 @@ sub adjust_lines_python_module($$) {
 	my @initial_lines = generate_initial_package_Makefile_lines($url);
 	my @current_lines = read_lines("Makefile");
 
-	# don't risk to overwrite any changes by the package developer.
+	# don't risk to overwrite any changes made by the package developer.
 	if (join('\n', @current_lines) ne join('\n', @initial_lines)) {
 		splice(@$lines, -2, 0, "# TODO: Migrate MASTER_SITES to PYPI");
 		return;
@@ -738,10 +744,10 @@ sub adjust_package_from_extracted_distfiles($)
 	push(@depend_vars, map { var("BUILD_DEPENDS", "+=", $_) } @build_depends);
 	push(@depend_vars, map { var("DEPENDS", "+=", $_) } @depends);
 	push(@depend_vars, map { var("TEST_DEPENDS", "+=", $_) } @test_depends);
-	add_section(\@lines, \@depend_vars);
+	lines_add_vars(\@lines, \@depend_vars);
 
-	add_section(\@lines, \@build_vars);
-	add_section(\@lines, \@extra_vars);
+	lines_add_vars(\@lines, \@build_vars);
+	lines_add_vars(\@lines, \@extra_vars);
 
 	push(@lines, @bl3_lines);
 	push(@lines, map { $_ = ".include \"$_\"" } @includes);
