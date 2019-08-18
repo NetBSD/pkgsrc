@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19199 2019/08/16 14:34:53 wiz Exp $
+$NetBSD: TODO,v 1.19200 2019/08/18 08:47:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -387,6 +387,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
+	o ImageMagick-7.0.8.61
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaLib-19.1.4
@@ -679,6 +680,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ghc-8.2
 	o ghc7-7.10.1
 	o ghdl-0.33
+	o git-base-2.23.0
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-server-2.3.5
@@ -758,7 +760,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gssdp-1.2.1
 	o gst-plugins1-omx-1.10.0
 	o gthumb-3.4.0
-	o gtk-doc-1.31
+	o gtk-doc-1.32
 	o gtk3-3.24.10
 	o gtkglarea-2.1.0
 	o gtklevel9-5.1
@@ -777,6 +779,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o h323plus-1.24.0 [replaces openh323, from http://www.h323plus.org/]
 	o hamster-applet-2.32.1
 	o hanzim-3.5
+	o harfbuzz-2.6.0
 	o harminv-1.4
 	o haskell-mode-13.20
 	o hatari-2.2.0
@@ -953,6 +956,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libtrace-3.0.22
 	o libv4l-0.8.5
 	o libvirt-2.3
+	o libvisio-0.1.7
 	o libxdg-basedir-1.2.0
 	o libykneomgr-0.1.8
 	o libyubikey-1.13
@@ -1160,6 +1164,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-hsm-1.1.1
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
+	o py-mechanize-0.4.3
 	o py-more-itertools-7.2.0
 	o py-musicbrainz-0.7.4
 	o py-newt-0.52.20
@@ -1344,6 +1349,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ufoai-2.3.1
 	o uhttpmock-0.5.0
 	o unicap-0.9.8
+	o unifont-12.1.03
 	o units-2.12
 	o urlgrabber-3.10.1
 	o userppp-030706
@@ -1425,6 +1431,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xpaint-2.9.9
 	o xpdf-4.01.01
 	o xpmroot-2.7.0
+	o xrandr-1.5.1
 	o xrmap-base-2.33.1
 	o xrmap-factbook_html-2008
 	o xrmap-factbook_text-2008
