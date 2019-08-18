@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3512 2019/08/18 11:26:48 rillig Exp $
+$NetBSD: CHANGES-2019,v 1.3513 2019/08/18 16:00:34 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5753,3 +5753,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added editors/le version 1.16.6 [fcambus 2019-08-18]
 	Updated www/ruby-jekyll to 3.8.6 [ryoon 2019-08-18]
 	Updated pkgtools/url2pkg to 2.32 [rillig 2019-08-18]
+	Updated www/tscrape to 0.3 [leot 2019-08-18]
