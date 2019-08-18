@@ -1,5 +1,5 @@
 # -*- perl -*-
-# $NetBSD: url2pkg.t,v 1.4 2019/08/18 16:18:04 rillig Exp $
+# $NetBSD: url2pkg.t,v 1.5 2019/08/18 17:34:13 rillig Exp $
 
 require "url2pkg.pl";
 
@@ -8,10 +8,10 @@ use Test::More;
 use strict;
 use warnings;
 
-sub test_add_section__simple() {
+sub test_lines_add_vars__simple() {
 	my $lines = [];
 
-	add_section($lines, [
+	lines_add_vars($lines, [
 		var("1", "=", "one"),
 		var("6", "=", "six"),
 	]);
@@ -23,10 +23,10 @@ sub test_add_section__simple() {
 	]);
 }
 
-sub test_add_section__alignment() {
+sub test_lines_add_vars__alignment() {
 	my $lines = [];
 
-	add_section($lines, [
+	lines_add_vars($lines, [
 		var("short", "=", "value"),
 		var("long_name", "=", "value # comment"),
 	]);
@@ -38,10 +38,10 @@ sub test_add_section__alignment() {
 	]);
 }
 
-sub test_add_section__operators() {
+sub test_lines_add_vars__operators() {
 	my $lines = [];
 
-	add_section($lines, [
+	lines_add_vars($lines, [
 		var("123456", "+=", "value"),
 	]);
 
@@ -111,9 +111,9 @@ sub test_all() {
 	my $pkgsrcdir = $ENV{"PKGSRCDIR"} or die;
 	chdir("$pkgsrcdir/pkgtools/url2pkg") or die;
 
-	test_add_section__simple();
-	test_add_section__alignment();
-	test_add_section__operators();
+	test_lines_add_vars__simple();
+	test_lines_add_vars__alignment();
+	test_lines_add_vars__operators();
 	test_lines_append__not_found();
 	test_lines_append__only_comment();
 	test_lines_append__value_with_comment();
