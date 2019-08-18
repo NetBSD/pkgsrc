@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3517 2019/08/18 20:48:46 nils Exp $
+$NetBSD: CHANGES-2019,v 1.3518 2019/08/18 21:59:08 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5758,3 +5758,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/wayland-protocols version 1.17 [nia 2019-08-18]
 	Updated graphics/scrot to 1.1.1 [fox 2019-08-18]
 	Updated www/siege to 4.0.4 [nils 2019-08-18]
+	Updated sysutils/xfce4-battery-plugin to 1.1.3 [gutteridge 2019-08-18]
