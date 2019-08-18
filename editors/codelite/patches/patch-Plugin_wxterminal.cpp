@@ -1,10 +1,10 @@
-$NetBSD: patch-Plugin_wxterminal.cpp,v 1.1 2016/06/15 22:04:17 kamil Exp $
+$NetBSD: patch-Plugin_wxterminal.cpp,v 1.2 2019/08/18 03:48:44 maya Exp $
 
 Add switch for NetBSD to not fall under "other OS".
 
---- Plugin/wxterminal.cpp.orig	2016-01-30 10:49:18.000000000 +0000
+--- Plugin/wxterminal.cpp.orig	2019-05-21 17:52:21.000000000 +0300
 +++ Plugin/wxterminal.cpp
-@@ -39,7 +39,7 @@
+@@ -45,7 +45,7 @@
  #define SHELL_WRAPPER wxT("")
  #else
  
@@ -13,14 +13,14 @@ Add switch for NetBSD to not fall under "other OS".
  #include <sys/wait.h>
  #else
  #include <wait.h>
-@@ -55,6 +55,10 @@
+@@ -61,6 +61,10 @@
+ #include <libutil.h>
  #include <sys/ioctl.h>
  #include <termios.h>
- #include <libutil.h>
 +#elif defined(__NetBSD__)
++#include <util.h>
 +#include <sys/ioctl.h>
 +#include <termios.h>
-+#include <util.h>
  #else
  #include <pty.h>
  #endif
