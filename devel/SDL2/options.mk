@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.12 2019/05/27 17:21:01 nia Exp $
+# $NetBSD: options.mk,v 1.13 2019/08/18 16:16:24 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.SDL2
 PKG_OPTIONS_REQUIRED_GROUPS=	gl
-PKG_SUPPORTED_OPTIONS=		alsa dbus esound nas oss jack pulseaudio x11
+PKG_SUPPORTED_OPTIONS=		alsa dbus esound nas oss jack pulseaudio wayland x11
 PKG_OPTIONS_GROUP.gl=		opengl
 PKG_SUGGESTED_OPTIONS+=		oss
 PKG_SUGGESTED_OPTIONS.Linux+=	alsa
@@ -90,4 +90,14 @@ SUBST_MESSAGE.vc=	Fixing path to VideoCore libraries.
 SUBST_FILES.vc=		configure
 SUBST_SED.vc+=		-e "s;/opt/vc;${PREFIX};g"
 .include "../../misc/raspberrypi-userland/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mwayland)
+CONFIGURE_ARGS+=	--enable-video-wayland
+CONFIGURE_ARGS+=	--disable-wayland-shared
+.include "../../devel/wayland/buildlink3.mk"
+.include "../../devel/wayland-protocols/buildlink3.mk"
+.include "../../x11/libxkbcommon/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-video-wayland
 .endif
