@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/08/12 11:09:54 leot Exp $
+# $NetBSD: Makefile,v 1.10 2019/08/18 19:01:58 fcambus Exp $
 
 DISTNAME=	adplug-2.3.1
 CATEGORIES=	audio devel
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=adplug/}
 GITHUB_RELEASE=	${PKGNAME_NOREV}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	fcambus@NetBSD.org
 HOMEPAGE=	https://github.com/adplug/adplug/
 COMMENT=	AdLib emulator library supporting many formats
 LICENSE=	gnu-lgpl-v2.1
