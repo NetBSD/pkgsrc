@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3508 2019/08/18 07:20:03 maya Exp $
+$NetBSD: CHANGES-2019,v 1.3509 2019/08/18 08:13:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5749,3 +5749,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/ristretto to 0.10.0 [gutteridge 2019-08-18]
 	Updated pkgtools/url2pkg to 2.31 [maya 2019-08-18]
 	Updated sysutils/dvdrecord to 0.1.5nb3 [maya 2019-08-18]
+	Updated net/libsoup to 2.66.2nb1 [wiz 2019-08-18]
