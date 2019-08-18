@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.51 2019/08/18 06:41:16 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.52 2019/08/18 06:56:20 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -93,6 +93,16 @@ sub add_section($$) {
 	push(@$lines, "");
 }
 
+sub write_lines($@) {
+	my ($filename, @lines) = @_;
+
+	open(F, ">", $filename) or die;
+	foreach my $line (@lines) {
+		print F "$line\n";
+	}
+	close(F) or die;
+}
+
 # The following magic_* subroutines are called after the distfiles have
 # been downloaded and extracted. They inspect the extracted files
 # to automatically define some variables in the package Makefile.
@@ -155,17 +165,15 @@ sub magic_configure() {
 }
 
 sub magic_cmake() {
-	open(CONF, "<", "${abs_wrksrc}/CMakeLists.txt") or return;
-	close(CONF);
-
-	push(@build_vars, var("USE_CMAKE", "=", "yes"));
+	if (-f "$abs_wrksrc/CMakeLists.txt") {
+		push(@build_vars, var("USE_CMAKE", "=", "yes"));
+	}
 }
 
 sub magic_meson() {
-	open(CONF, "<", "${abs_wrksrc}/meson.build") or return;
-	close(CONF);
-
-	push(@includes, "../../devel/py-meson/build.mk");
+	if (-f "$abs_wrksrc/meson.build") {
+		push(@includes, "../../devel/py-meson/build.mk");
+	}
 }
 
 sub magic_gconf2_schemas() {
@@ -278,7 +286,7 @@ sub magic_use_languages() {
 # the distfiles have been extracted.
 #
 
-sub generate_initial_package_Makefile($) {
+sub generate_initial_package_Makefile_lines($) {
 	my ($url) = @_;
 
 	my $master_site = "";
@@ -413,24 +421,17 @@ sub generate_initial_package_Makefile($) {
 	push(@lines, "# url2pkg-marker (please do not remove this line.)");
 	push(@lines, ".include \"../../mk/bsd.pkg.mk\"");
 
-	open(MF, ">", "Makefile") or die;
-	foreach my $line (@lines) {
-		print MF "$line\n";
-	}
-	close(MF) or die;
+	return @lines;
 }
 
 sub generate_initial_package($) {
 	my ($url) = @_;
 
-	generate_initial_package_Makefile($url);
+	write_lines("Makefile", generate_initial_package_Makefile_lines($url));
 
-	open(PLIST, ">", "PLIST") or die;
-	print PLIST ("\@comment \$" . "NetBSD\$\n");
-	close(PLIST) or die;
+	write_lines("PLIST", "\@comment \$" . "NetBSD\$");
 
-	open(DESCR, ">", "DESCR") or die;
-	close(DESCR) or die;
+	write_lines("DESCR", ());
 
 	run_editor("Makefile", 5);
 
@@ -540,11 +541,7 @@ sub adjust_package_from_extracted_distfiles()
 
 	close(MF1);
 
-	open(MF2, ">", "Makefile-url2pkg.new") or die;
-	foreach my $line (@lines) {
-		print MF2 "$line\n";
-	}
-	close(MF2) or die;
+	write_lines("Makefile-url2pkg.new", @lines);
 
 	if ($seen_marker) {
 		rename("Makefile-url2pkg.new", "Makefile") or die;
@@ -589,4 +586,4 @@ sub main() {
 	print("Good luck! (See pkgsrc/doc/pkgsrc.txt for some more help :-)\n");
 }
 
-main();
+main() unless caller();
