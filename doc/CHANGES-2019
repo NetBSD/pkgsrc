@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3535 2019/08/19 10:14:03 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3536 2019/08/19 10:27:58 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5779,3 +5779,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed graphics/eog-plugins-map [nia 2019-08-19]
 	Updated net/haproxy to 2.0.5 [adam 2019-08-19]
 	Updated devel/ccache to 3.7.3 [adam 2019-08-19]
+	Updated www/gitea to 1.9.1 [nia 2019-08-19]
