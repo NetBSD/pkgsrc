@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/05/04 19:23:45 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/08/19 01:24:14 gutteridge Exp $
 bin/xfce4-popup-places
 lib/xfce4/panel/plugins/libplaces.la
 share/locale/am/LC_MESSAGES/xfce4-places-plugin.mo
@@ -24,6 +24,7 @@ share/locale/he/LC_MESSAGES/xfce4-places-plugin.mo
 share/locale/hr/LC_MESSAGES/xfce4-places-plugin.mo
 share/locale/hu/LC_MESSAGES/xfce4-places-plugin.mo
 share/locale/id/LC_MESSAGES/xfce4-places-plugin.mo
+share/locale/ie/LC_MESSAGES/xfce4-places-plugin.mo
 share/locale/is/LC_MESSAGES/xfce4-places-plugin.mo
 share/locale/it/LC_MESSAGES/xfce4-places-plugin.mo
 share/locale/ja/LC_MESSAGES/xfce4-places-plugin.mo
