@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3521 2019/08/19 00:30:27 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.3522 2019/08/19 01:09:59 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5762,3 +5762,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated time/xfce4-datetime-plugin to 0.8.0 [gutteridge 2019-08-18]
 	Updated sysutils/xfce4-diskperf-plugin to 2.6.2 [gutteridge 2019-08-18]
 	Updated sysutils/xfce4-fsguard-plugin to 1.1.1 [gutteridge 2019-08-19]
+	Updated sysutils/xfce4-genmon-plugin to 4.0.2 [gutteridge 2019-08-19]
