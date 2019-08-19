@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.12 2017/06/20 22:30:56 youri Exp $
+$NetBSD: distinfo,v 1.13 2019/08/19 04:58:11 gutteridge Exp $
 
-SHA1 (xfce4-wavelan-plugin-0.6.0.tar.bz2) = 1f59e309638d40676226dc4ad86991841cca43f1
-RMD160 (xfce4-wavelan-plugin-0.6.0.tar.bz2) = e1392a374a9d40303499fe7e63c2a83e666c91ed
-SHA512 (xfce4-wavelan-plugin-0.6.0.tar.bz2) = 50dd069902d69071f0d4ab7036fa451ae6cdaca9fbeb56255d58a5864d4e4b3749267b1cc4b411e1073daac9678554f3d483d30aba759ef161425ba3cdd0306e
-Size (xfce4-wavelan-plugin-0.6.0.tar.bz2) = 303220 bytes
-SHA1 (patch-panel-plugin_wi__bsd.c) = d54a9cd0aff21461331f87b9e5f0a3acde5a7284
+SHA1 (xfce4-wavelan-plugin-0.6.1.tar.bz2) = a2a703bd073ad39d5c1da270feca06120794e433
+RMD160 (xfce4-wavelan-plugin-0.6.1.tar.bz2) = 14b16d167bc3cd41c8720322489be4edb374c809
+SHA512 (xfce4-wavelan-plugin-0.6.1.tar.bz2) = 530758dec07b404009117038fa6bcac5aaebf9db97710cdeafadece4eb5680318023404276fae8cf1ff38fb5e9eb807f77eea23a30740674a8659404eb17aeec
+Size (xfce4-wavelan-plugin-0.6.1.tar.bz2) = 328287 bytes
