@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3540 2019/08/19 22:09:15 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.3541 2019/08/19 22:11:52 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5784,3 +5784,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/scrot to 1.2 [fox 2019-08-19]
 	Updated net/ucspi-tcp6 to 1.10.7nb1 [schmonz 2019-08-19]
 	Updated net/ucspi-ssl to 0.999.10.11nb2 [schmonz 2019-08-19]
+	Updated sysutils/daemontools-run to 20190819 [schmonz 2019-08-19]
