@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile,v 1.1 2019/08/16 14:07:27 fcambus Exp $
+$NetBSD: patch-Makefile,v 1.2 2019/08/19 12:31:23 fcambus Exp $
 
 Adapt install target for pkgsrc.
 
@@ -12,7 +12,7 @@ Adapt install target for pkgsrc.
  PREFIX?=/usr/local
  INSTALL_DIR=$(PREFIX)/bin
 -MAN_DIR=$(PREFIX)/share/man
-+MAN_DIR=$(PREFIX)/man
++MAN_DIR?=$(PREFIX)/share/man
  
  SRC=	coma.c client.c config.c frame.c wm.c
  OBJS=	$(SRC:%.c=%.o)
