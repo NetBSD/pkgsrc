@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2019/08/11 13:23:20 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2019/08/19 04:49:47 gutteridge Exp $
 
-PKGREVISION= 2
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	1.2.2
+VERSION=	1.2.3
 DISTNAME=	xfce4-systemload-plugin-${VERSION}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://archive.xfce.org/src/panel-plugins/xfce4-systemload-plugin/${VERSION:R}/
