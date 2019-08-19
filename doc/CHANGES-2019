@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3527 2019/08/19 04:49:56 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.3528 2019/08/19 04:56:12 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5768,3 +5768,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/xfce4-places-plugin to 1.8.1 [gutteridge 2019-08-19]
 	Updated misc/xfce4-smartbookmark-plugin to 0.5.1 [gutteridge 2019-08-19]
 	Updated sysutils/xfce4-systemload-plugin to 1.2.3 [gutteridge 2019-08-19]
+	Updated misc/xfce4-time-out-plugin to 1.0.3 [gutteridge 2019-08-19]
