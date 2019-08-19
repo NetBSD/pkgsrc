@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3528 2019/08/19 04:56:12 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.3529 2019/08/19 04:58:19 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5769,3 +5769,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated misc/xfce4-smartbookmark-plugin to 0.5.1 [gutteridge 2019-08-19]
 	Updated sysutils/xfce4-systemload-plugin to 1.2.3 [gutteridge 2019-08-19]
 	Updated misc/xfce4-time-out-plugin to 1.0.3 [gutteridge 2019-08-19]
+	Updated net/xfce4-wavelan-plugin to 0.6.1 [gutteridge 2019-08-19]
