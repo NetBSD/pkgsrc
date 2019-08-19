@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3536 2019/08/19 10:27:58 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3537 2019/08/19 17:00:01 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5780,3 +5780,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/haproxy to 2.0.5 [adam 2019-08-19]
 	Updated devel/ccache to 3.7.3 [adam 2019-08-19]
 	Updated www/gitea to 1.9.1 [nia 2019-08-19]
+	Updated mail/getmail to 5.14 [schmonz 2019-08-19]
