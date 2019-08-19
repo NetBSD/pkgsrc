@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2018/11/01 21:08:28 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2019/08/19 13:35:25 nia Exp $
 
 BUILDLINK_TREE+=	SDL2
 
@@ -29,6 +29,12 @@ pkgbase := SDL2
 
 .if !empty(PKG_BUILD_OPTIONS.SDL2:Moss)
 .include "../../mk/oss.buildlink3.mk"
+.endif
+
+.if !empty(PKG_BUILD_OPTIONS.SDL2:Mwayland)
+.include "../../devel/wayland/buildlink3.mk"
+.include "../../devel/wayland-protocols/buildlink3.mk"
+.include "../../x11/libxkbcommon/buildlink3.mk"
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.SDL2:Mx11)
