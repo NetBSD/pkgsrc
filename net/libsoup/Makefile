@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2019/08/18 08:13:30 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2019/08/19 20:01:52 otis Exp $
 
 DISTNAME=	libsoup-2.66.2
 PKGREVISION=	1
@@ -22,6 +22,8 @@ MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/output/${PKGBASE}
 
 # disable vala detection
 MESON_ARGS+=		-Dvapi=false
+
+LDFLAGS.SunOS+=		-lsocket
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
