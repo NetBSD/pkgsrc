@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.8 2015/04/21 08:56:41 jperkin Exp $
-@comment $NetBSD: PLIST,v 1.8 2015/04/21 08:56:41 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/08/19 01:19:31 gutteridge Exp $
 lib/xfce4/panel/plugins/libnetload.la
 share/icons/hicolor/24x24/apps/xfce4-netload-plugin.png
 share/icons/hicolor/48x48/apps/xfce4-netload-plugin.png
 share/icons/hicolor/scalable/apps/xfce4-netload-plugin.svg
 share/locale/ar/LC_MESSAGES/xfce4-netload-plugin.mo
 share/locale/ast/LC_MESSAGES/xfce4-netload-plugin.mo
+share/locale/be/LC_MESSAGES/xfce4-netload-plugin.mo
 share/locale/bg/LC_MESSAGES/xfce4-netload-plugin.mo
 share/locale/ca/LC_MESSAGES/xfce4-netload-plugin.mo
 share/locale/cs/LC_MESSAGES/xfce4-netload-plugin.mo
