@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3533 2019/08/19 06:01:41 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.3534 2019/08/19 09:58:41 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5774,3 +5774,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/xfce4-whiskermenu-plugin to 2.3.3 [gutteridge 2019-08-19]
 	Updated meta-pkgs/xfce4-extras to 4.14.0nb1 [gutteridge 2019-08-19]
 	Updated sysutils/libgtop to 2.28.4nb16 [gutteridge 2019-08-19]
+	Removed graphics/eog successor graphics/eom [nia 2019-08-19]
+	Removed graphics/eog-plugins [nia 2019-08-19]
+	Removed graphics/eog-plugins-map [nia 2019-08-19]
