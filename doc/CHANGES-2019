@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3538 2019/08/19 17:42:42 fox Exp $
+$NetBSD: CHANGES-2019,v 1.3539 2019/08/19 22:05:47 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5782,3 +5782,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/gitea to 1.9.1 [nia 2019-08-19]
 	Updated mail/getmail to 5.14 [schmonz 2019-08-19]
 	Updated graphics/scrot to 1.2 [fox 2019-08-19]
+	Updated net/ucspi-tcp6 to 1.10.7nb1 [schmonz 2019-08-19]
