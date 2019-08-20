@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.142 2019/08/20 20:17:51 wiz Exp $
+# $NetBSD: Makefile,v 1.143 2019/08/20 21:39:16 gdt Exp $
 
 DISTNAME=	tor-0.4.1.5
 CATEGORIES=	net security
 MASTER_SITES=	https://dist.torproject.org/
 
-MAINTAINER=	reezer@reezer.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.torproject.org/
 COMMENT=	Anonymizing overlay network for TCP
 LICENSE=	modified-bsd
