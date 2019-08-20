@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2019/08/18 16:47:38 nia Exp $
+# $NetBSD: options.mk,v 1.15 2019/08/20 13:55:05 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk3
 PKG_SUPPORTED_OPTIONS+=	gtk3-atk-bridge cups debug
@@ -12,6 +12,7 @@ PKG_SUGGESTED_OPTIONS=	gtk3-atk-bridge x11
 
 PLIST_VARS+=		cups
 .if !empty(PKG_OPTIONS:Mcups)
+BUILDLINK_API_DEPENDS.cups-base+=	cups-base>=1.7
 .include "../../print/cups-base/buildlink3.mk"
 PLIST.cups=		yes
 .else
