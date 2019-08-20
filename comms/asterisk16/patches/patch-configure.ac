@@ -1,0 +1,43 @@
+$NetBSD: patch-configure.ac,v 1.1 2019/08/20 13:47:42 ryoon Exp $
+
+--- configure.ac.orig	2019-07-25 09:38:14.000000000 +0000
++++ configure.ac
+@@ -738,7 +738,7 @@ AC_ARG_ENABLE([permanent-dlopen],
+ 	esac], [PERMANENT_DLOPEN=no])
+ 
+ AC_SUBST([PERMANENT_DLOPEN])
+-if test "${PERMANENT_DLOPEN}" == "yes"; then
++if test "${PERMANENT_DLOPEN}" = "yes"; then
+ 	AC_DEFINE([HAVE_PERMANENT_DLOPEN], 1, [Define to support libc with permanent dlopen.])
+ fi
+ 
+@@ -747,7 +747,7 @@ AC_CHECK_HEADERS([xlocale.h])
+ 
+ AC_CHECK_HEADERS([winsock.h winsock2.h])
+ 
+-AC_CHECK_HEADER([sys/poll.h],
++AC_CHECK_HEADER([poll.h],
+ 	 [],
+      AC_DEFINE([AST_POLL_COMPAT], 1, [Define to 1 if internal poll should be used.]))
+ 
+@@ -799,7 +799,7 @@ AC_FUNC_STRNLEN
+ AC_FUNC_STRTOD
+ AC_FUNC_UTIME_NULL
+ AC_FUNC_VPRINTF
+-AC_CHECK_FUNCS([asprintf atexit closefrom dup2 eaccess endpwent euidaccess ffsll ftruncate getcwd gethostbyname gethostname getloadavg gettimeofday glob ioperm inet_ntoa isascii memchr memmove memset mkdir mkdtemp munmap newlocale pipe2 ppoll putenv re_comp regcomp select setenv socket strcasecmp strcasestr strchr strcspn strdup strerror strlcat strlcpy strncasecmp strndup strnlen strrchr strsep strspn strstr strtod strtol strtold strtoq unsetenv uselocale utime vasprintf getpeereid sysctl swapctl malloc_trim])
++AC_CHECK_FUNCS([asprintf atexit closefrom dup2 eaccess endpwent euidaccess ffsll ftruncate getcwd gethostbyname gethostname getloadavg gettimeofday glob ioperm inet_ntoa isascii memchr memmove memset mkdir mkdtemp munmap newlocale pipe2 ppoll putenv re_comp regcomp select setenv socket strcasecmp strcasestr strchr strcspn strdup strerror strlcat strlcpy strncasecmp strndup strnlen strrchr strsep strspn strstr strtod strtol strtold strtoq unsetenv uselocale utime vasprintf getpeereid sysctl swapctl malloc_trim strftime_l strptime_l])
+ 
+ AC_MSG_CHECKING(for htonll)
+ AC_LINK_IFELSE(
+@@ -868,9 +868,9 @@ AC_SUBST(PBX_DYNAMIC_LIST)
+ LDFLAGS=${old_LDFLAGS}
+ rm -f conftest.dynamics
+ 
+-AC_CHECK_HEADER([sys/poll.h],
++AC_CHECK_HEADER([poll.h],
+    [HAS_POLL=1]
+-   AC_DEFINE([HAVE_SYS_POLL_H], 1, [Define to 1 if your system has working sys/poll.h]),
++   AC_DEFINE([HAVE_SYS_POLL_H], 1, [Define to 1 if your system has working poll.h]),
+    )
+ 
+ AC_ARG_ENABLE([internal-poll],
