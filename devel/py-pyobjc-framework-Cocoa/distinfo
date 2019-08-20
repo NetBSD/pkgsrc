@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2019/01/08 12:08:40 adam Exp $
+$NetBSD: distinfo,v 1.7 2019/08/20 07:15:47 adam Exp $
 
-SHA1 (pyobjc-framework-Cocoa-5.1.2.tar.gz) = 88d29008e8a1432ef916178f570f692099f4ed02
-RMD160 (pyobjc-framework-Cocoa-5.1.2.tar.gz) = 28fd8ad8bb32fd01b618589a5cfb446aaa8c2875
-SHA512 (pyobjc-framework-Cocoa-5.1.2.tar.gz) = 76d71904614927f5dc34beee80beb6d46775f6dfc9144f7aef9e6098a188147f26f6d3d3738ee8572280c0d4aae3486bd7c2f7c1875beceb80ed2b309b39ea57
-Size (pyobjc-framework-Cocoa-5.1.2.tar.gz) = 3787306 bytes
+SHA1 (pyobjc-framework-Cocoa-5.2.tar.gz) = 0c398fc16457c4bd2a9031f4f8d42f19381709cb
+RMD160 (pyobjc-framework-Cocoa-5.2.tar.gz) = 149b539c8b517ee5d5fc6f19f79e4c2ff4981b6c
+SHA512 (pyobjc-framework-Cocoa-5.2.tar.gz) = 2a57b790b9867087b0806dfdca8bd88723a3e1a26da6fca9e99ad78a22aa55c774645a8170c62e7b72808b5da6378896832fa4f990c2386c55d1c5a8c23dc3b0
+Size (pyobjc-framework-Cocoa-5.2.tar.gz) = 3787060 bytes
