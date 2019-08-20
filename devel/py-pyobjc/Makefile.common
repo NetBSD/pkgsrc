@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2019/01/08 20:29:42 adam Exp $
+# $NetBSD: Makefile.common,v 1.7 2019/08/20 07:15:45 adam Exp $
 # used by devel/py-pyobjc-core/Makefile
 # used by devel/py-pyobjc-framework-AVFoundation/Makefile
 # used by devel/py-pyobjc-framework-AVKit/Makefile
@@ -79,7 +79,7 @@
 # used by devel/py-pyobjc-framework-iTunesLibrary/Makefile
 # used by devel/py-pyobjc-framework-libdispatch/Makefile
 
-PYOBJC_VERS=	5.1.2
+PYOBJC_VERS=	5.2
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pyobjc.readthedocs.io/
