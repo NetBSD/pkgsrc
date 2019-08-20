@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2018/11/14 16:43:17 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.22 2019/08/20 02:38:04 schmonz Exp $
 bin/bouncesaying
 bin/condredirect
 bin/datemail
@@ -96,12 +96,12 @@ man/man8/qmail-tcpok.8
 man/man8/qmail-tcpto.8
 man/man8/splogger.8
 share/doc/qmail/FAQ
-share/doc/qmail/INSTALL
 share/doc/qmail/INSTALL.alias
 share/doc/qmail/INSTALL.ctl
 share/doc/qmail/INSTALL.ids
 share/doc/qmail/INSTALL.maildir
 share/doc/qmail/INSTALL.mbox
+share/doc/qmail/INSTALL.md
 share/doc/qmail/INSTALL.vsm
 share/doc/qmail/PIC.local2alias
 share/doc/qmail/PIC.local2ext
@@ -114,9 +114,10 @@ share/doc/qmail/PIC.relaygood
 share/doc/qmail/PIC.rem2local
 share/doc/qmail/README.pkgsrc
 ${PLIST.srs}share/doc/qmail/README.srs
+${PLIST.tls}share/doc/qmail/README.tls
 share/doc/qmail/REMOVE.binmail
 share/doc/qmail/REMOVE.sendmail
-share/doc/qmail/SENDMAIL
+share/doc/qmail/SENDMAIL.md
 share/doc/qmail/TEST.deliver
 share/doc/qmail/TEST.receive
 share/doc/qmail/UPGRADE
@@ -137,6 +138,7 @@ share/qmail/setup/dnsfq
 share/qmail/setup/dnsip
 share/qmail/setup/dnsptr
 share/qmail/setup/hostname
-share/qmail/setup/install-destdir
 share/qmail/setup/instcheck
+share/qmail/setup/instchown
+share/qmail/setup/instpackage
 share/qmail/setup/ipmeprint
