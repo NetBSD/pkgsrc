@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/08/07 17:56:13 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2019/08/20 21:50:56 nils Exp $
 
-DISTNAME=	dehydrated-0.4.0
-PKGREVISION=	1
+DISTNAME=	dehydrated-0.6.5
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lukas2511/}
 
