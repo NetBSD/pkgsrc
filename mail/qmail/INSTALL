@@ -1,44 +1,89 @@
-# $NetBSD: INSTALL,v 1.15 2019/07/15 16:11:58 schmonz Exp $
+# $NetBSD: INSTALL,v 1.16 2019/08/20 02:38:04 schmonz Exp $
 
 DOCDIR=@DOCDIR@
 EGDIR=@EGDIR@
 PKGMANDIR=@PKGMANDIR@
 QMAILDIR=@QMAILDIR@
 QMAIL_QUEUE_DIR=@QMAIL_QUEUE_DIR@
-QMAIL_QUEUE_EXTRA=@QMAIL_QUEUE_EXTRA@
 
 VAR_QMAIL_DIRS="alias bin boot control doc man queue users"
 
-case ${STAGE} in
+error_qmaildir() {
+	local _qmaildir
+	_qmaildir="$1"
 
-PRE-INSTALL)
-	for dir in $VAR_QMAIL_DIRS; do
-		if [ -e ${QMAILDIR}/$dir ]; then
-			${CAT} <<EOF
+	${CAT} <<EOF
 ===========================================================================
 
-ERROR: ${QMAILDIR} exists and is non-empty.
+ERROR: ${_qmaildir} exists and is non-empty.
 
 Please remove or rename it, then try again.
 
 ===========================================================================
 EOF
-		exit 1
-		fi
-	done
+	exit 1
+}
 
-	if ${ECHO} ${QMAIL_QUEUE_DIR} | ${GREP} -q "^${QMAILDIR}/"; then
-		${CAT} <<EOF
+error_instchown() {
+	local _exitcode
+	_exitcode="$1"
+
+	${CAT} <<EOF
 ===========================================================================
 
-ERROR: QMAIL_QUEUE_DIR must not be under ${QMAILDIR}.
+ERROR: instchown exited ${_exitcode}.
 
-Please adjust your definition of QMAIL_QUEUE_DIR, then try again.
+Permissions are likely wrong, and/or the queue may be uninitialized.
 
 ===========================================================================
 EOF
-		exit 1
-	fi
+	exit 1
+}
+
+error_instcheck() {
+	local _output
+	_output="$1"
+
+	${CAT} <<EOF
+===========================================================================
+
+ERROR: instcheck issued warnings:
+
+${_output}
+
+Permissions are likely wrong, and/or the queue may be uninitialized.
+
+===========================================================================
+EOF
+	exit 1
+}
+
+warning_fqdn() {
+	local _command _name
+	_command="$1"
+	_name="$2"
+
+	${CAT} <<EOF
+===========================================================================
+
+WARNING: "${_name}" is not a fully qualified name.
+
+To configure basic qmail control files, please run this command:
+
+# ${_command} ${_name}.YOURDOMAIN.TLD
+
+===========================================================================
+EOF
+}
+
+case "${STAGE}" in
+
+PRE-INSTALL)
+	for dir in $VAR_QMAIL_DIRS; do
+		if [ -e ${QMAILDIR}/$dir ]; then
+			error_qmaildir ${QMAILDIR}
+		fi
+	done
 
 	# keep in sync with Makefile:pre-install
 	${LN} -s ${PKG_SYSCONFDIR}/alias	${QMAILDIR}/alias
@@ -53,57 +98,29 @@ EOF
 	;;
 
 POST-INSTALL)
-	${PREFIX}/share/qmail/setup/install-destdir
+	# create the queue
+	${PREFIX}/share/qmail/setup/instpackage >/dev/null 2>&1
+	${PREFIX}/share/qmail/setup/instchown
 	QMAIL_SETUP_EXITCODE=$?
 	if [ ${QMAIL_SETUP_EXITCODE} -ne 0 ]; then
-		${CAT} <<EOF
-===========================================================================
-
-ERROR: install-destdir exited nonzero (${QMAIL_SETUP_EXITCODE}).
-
-Permissions are likely wrong, and/or the queue may be uninitialized.
-
-===========================================================================
-EOF
-		exit 1
+		error_instchown ${QMAIL_SETUP_EXITCODE}
 	fi
 
 	QMAIL_CHECK_OUTPUT=$(${PREFIX}/share/qmail/setup/instcheck 2>&1)
 	if [ -n "${QMAIL_CHECK_OUTPUT}" ]; then
-		${CAT} <<EOF
-===========================================================================
-
-ERROR: instcheck issued warnings:
-
-${QMAIL_CHECK_OUTPUT}
-
-Permissions are likely wrong, and/or the queue may be uninitialized.
-
-===========================================================================
-EOF
-		exit 1
+		error_instcheck "${QMAIL_CHECK_OUTPUT}"
 	fi
 
-	cd ${PREFIX}/share/qmail/setup && ./config-fast-pkgsrc `./hostname`
-
-	cd ${PKG_SYSCONFDIR}/.pkgsrc-defaults-do-not-edit
-	for i in locals rcpthosts; do
-		${SORT} -u ${i} > ${i}.tmp && ${MV} ${i}.tmp ${i}
-	done
-
-	cd ${PKG_SYSCONFDIR}
-	for i in defaultdomain locals me plusdomain rcpthosts; do
-		[ -f control/${i} ] \
-			|| ${CP} .pkgsrc-defaults-do-not-edit/${i} control
-	done
-
-	cd ${PKG_SYSCONFDIR}/alias
-	for i in mailer-daemon postmaster root ${QMAIL_QUEUE_EXTRA}; do
-		[ -s .qmail-${i} ] \
-			|| ${ECHO} '# pkgsrc says: replace this comment with your config' \
-			> .qmail-${i}
-		${CHMOD} 644 .qmail-${i}
-	done
+	QMAIL_CONFIG_CMD="${PREFIX}/share/qmail/setup/config-fast-pkgsrc"
+	QMAIL_FQDN=$(${PREFIX}/share/qmail/setup/hostname)
+	case "${QMAIL_FQDN}" in
+	*.*)
+		${QMAIL_CONFIG_CMD} "${QMAIL_FQDN}"
+		;;
+	*)
+		warning_fqdn "${QMAIL_CONFIG_CMD}" "${QMAIL_FQDN}"
+		;;
+	esac
 
 	;;
 
