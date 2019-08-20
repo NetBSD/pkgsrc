@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.65 2019/06/28 19:18:25 schmonz Exp $
+# $NetBSD: options.mk,v 1.66 2019/08/20 02:38:04 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=		eai inet6 pam syncdir tai-system-clock tls
@@ -29,6 +29,7 @@ CUSTOMERROR_PATCH=		qmail-queue-custom-error-v2.netqmail-1.05.patch
 PATCHFILES+=			${CUSTOMERROR_PATCH}
 SITES.${CUSTOMERROR_PATCH}=	https://notes.sagredo.eu/files/qmail/patches/
 PATCH_DIST_STRIP.${CUSTOMERROR_PATCH}=-p1
+PATCH_DIST_CAT.${CUSTOMERROR_PATCH}=	${SED} -e 's|vfork|fork|g' < ${CUSTOMERROR_PATCH}
 .endif
 
 PLIST_VARS+=			srs
@@ -36,20 +37,9 @@ PLIST_VARS+=			srs
 PLIST.srs=			yes
 .  include "../../mail/libsrs2/buildlink3.mk"
 QMAILPATCHES+=			srs:${SRS_PATCH}
-SRS_PATCH=			qmail-srs-0.8.patch
+SRS_PATCH=			notqmail-1.07-tls-20190517-qmailremote-20190819-srs-20190819.patch
 PATCHFILES+=			${SRS_PATCH}
-SITES.${SRS_PATCH}=		http://www.mco2.com.br/opensource/download/qmail/
-PATCH_DIST_STRIP.${SRS_PATCH}=	-l
-PATCH_DIST_CAT.${SRS_PATCH}=	${SED} -e 's|binm3 binm3+df|binm3 binm3+df update_tmprsadh|g' < ${SRS_PATCH}
-SUBST_CLASSES+=			srsnetq1 srsnetq2
-SUBST_STAGE.srsnetq1=		pre-patch
-SUBST_STAGE.srsnetq2=		pre-configure
-SUBST_FILES.srsnetq1=		Makefile
-SUBST_FILES.srsnetq2=		Makefile
-SUBST_SED.srsnetq1=		-e 's|^auto_split.o env.a$$|auto_split.o|'
-SUBST_SED.srsnetq2=		-e 's|^auto_split.o$$|auto_split.o env.a|'
-SUBST_SED.srsnetq1+=		-e 's|^	substdio.a error.a str.a fs.a auto_qmail.o auto_split.o env.a$$|	substdio.a error.a str.a fs.a auto_qmail.o auto_split.o|'
-SUBST_SED.srsnetq2+=		-e 's|^	substdio.a error.a str.a fs.a auto_qmail.o auto_split.o \\$$|	substdio.a error.a str.a fs.a auto_qmail.o auto_split.o env.a \\|'
+SITES.${SRS_PATCH}=		https://schmonz.com/qmail/srs/
 SUBST_CLASSES+=			srsinclude
 SUBST_STAGE.srsinclude=		do-configure
 SUBST_FILES.srsinclude=		srs.c
@@ -58,7 +48,6 @@ SUBST_CLASSES+=			srsreadme
 SUBST_STAGE.srsreadme=		do-configure
 SUBST_FILES.srsreadme=		README.srs
 SUBST_VARS.srsreadme=		PKG_SYSCONFDIR
-MESSAGE_SRC+=			${PKGDIR}/MESSAGE.srs
 READMES+=			README.srs
 .endif
 
@@ -103,19 +92,18 @@ SUBST_STAGE.tmprsadh=		do-configure
 SUBST_FILES.tmprsadh=		update_tmprsadh.sh
 SUBST_SED.tmprsadh=		-e 's|^export PATH=.*||'
 SUBST_SED.tmprsadh+=		-e 's|^openssl |${OPENSSL} |'
-MESSAGE_SRC+=			${PKGDIR}/MESSAGE.tls
-MESSAGE_SUBST+=			OPENSSL=${OPENSSL:Q}
-MESSAGE_SUBST+=			SERVERCERT=${PKG_SYSCONFDIR:Q}/control/servercert.pem
-MESSAGE_SUBST+=			CLIENTCERT=${PKG_SYSCONFDIR:Q}/control/clientcert.pem
-MESSAGE_SUBST+=			QMAIL_DAEMON_USER=${QMAIL_DAEMON_USER:Q}
-MESSAGE_SUBST+=			QMAIL_QMAIL_GROUP=${QMAIL_QMAIL_GROUP:Q}
-DEPENDS+=			ucspi-ssl-[0-9]*:../../net/ucspi-ssl
+READMES+=			README.tls
+SUBST_VARS.paths+=		OPENSSL QMAIL_DAEMON_USER QMAIL_QMAIL_GROUP
+SUBST_VARS.paths+=		OPENSSL SERVERCERT CLIENTCERT
+SUBST_SED.paths+=		-e 's|@SERVERCERT@|${PKG_SYSCONFDIR:Q}/control/servercert.pem|g'
+SUBST_SED.paths+=		-e 's|@CLIENTCERT@|${PKG_SYSCONFDIR:Q}/control/clientcert.pem|g'
+DEPENDS+=			ucspi-ssl>=0.999.10.11nb2:../../net/ucspi-ssl
 .else
 BUILDLINK_TRANSFORM+=		rm:-lssl
 BUILDLINK_TRANSFORM+=		rm:-lcrypto
 .  if !empty(PKG_OPTIONS:Minet6)
-DEPENDS+=			ucspi-tcp6-[0-9]*:../../net/ucspi-tcp6
+DEPENDS+=			ucspi-tcp6>=1.10.7nb1:../../net/ucspi-tcp6
 .  else
-DEPENDS+=			{ucspi-tcp6-[0-9]*,ucspi-tcp-[0-9]*}:../../net/ucspi-tcp
+DEPENDS+=			{ucspi-tcp6>=1.10.7nb1,ucspi-tcp-[0-9]*}:../../net/ucspi-tcp
 .  endif
 .endif
