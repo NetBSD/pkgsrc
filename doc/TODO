@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19203 2019/08/20 11:38:47 wiz Exp $
+$NetBSD: TODO,v 1.19204 2019/08/20 12:09:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -777,7 +777,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o h323plus-1.24.0 [replaces openh323, from http://www.h323plus.org/]
 	o hamster-applet-2.32.1
 	o hanzim-3.5
-	o harfbuzz-2.6.0
 	o harminv-1.4
 	o haskell-mode-13.20
 	o hatari-2.2.0
