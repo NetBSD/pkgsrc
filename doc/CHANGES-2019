@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3547 2019/08/20 11:38:47 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.3548 2019/08/20 12:09:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5794,3 +5794,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added net/gssdp12 version 1.2.1 [wiz 2019-08-20]
 	Updated converters/libvisio to 0.1.7 [wiz 2019-08-20]
 	Updated graphics/ImageMagick to 7.0.8.61 [wiz 2019-08-20]
+	Updated fonts/harfbuzz to 2.6.0 [wiz 2019-08-20]
