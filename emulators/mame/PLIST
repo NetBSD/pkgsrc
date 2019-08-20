@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2019/07/21 08:34:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.38 2019/08/20 18:03:54 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -339,6 +339,7 @@ share/mame/hash/megadriv.xml
 share/mame/hash/megaduck.xml
 share/mame/hash/megapc.xml
 share/mame/hash/megatech.xml
+share/mame/hash/mephisto.xml
 share/mame/hash/microvision.xml
 share/mame/hash/mikro80.xml
 share/mame/hash/mikrosha_cart.xml
@@ -364,6 +365,8 @@ share/mame/hash/msx2_cass.xml
 share/mame/hash/msx2_flop.xml
 share/mame/hash/msx2p_flop.xml
 share/mame/hash/msxr_flop.xml
+share/mame/hash/mt65_cass.xml
+share/mame/hash/mt65_rom.xml
 share/mame/hash/mt65_snap.xml
 share/mame/hash/mtx_cart.xml
 share/mame/hash/mtx_cass.xml
@@ -478,6 +481,7 @@ share/mame/hash/rainbow.xml
 share/mame/hash/rwtrntcs.xml
 share/mame/hash/rx78.xml
 share/mame/hash/sage2.xml
+share/mame/hash/saitek_egr.xml
 share/mame/hash/samcoupe_cass.xml
 share/mame/hash/samcoupe_flop.xml
 share/mame/hash/sat_cart.xml
