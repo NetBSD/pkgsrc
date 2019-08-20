@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3549 2019/08/20 12:35:56 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.3550 2019/08/20 12:45:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5796,3 +5796,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/ImageMagick to 7.0.8.61 [wiz 2019-08-20]
 	Updated fonts/harfbuzz to 2.6.0 [wiz 2019-08-20]
 	Updated fonts/unifont to 12.1.03 [wiz 2019-08-20]
+	Updated x11/gtksourceview3 to 3.24.11 [wiz 2019-08-20]
