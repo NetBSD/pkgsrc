@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/01/08 12:08:44 adam Exp $
+$NetBSD: distinfo,v 1.5 2019/08/20 07:15:52 adam Exp $
 
-SHA1 (pyobjc-framework-NotificationCenter-5.1.2.tar.gz) = 8854807d556155920efa094bf924f77c2542cc95
-RMD160 (pyobjc-framework-NotificationCenter-5.1.2.tar.gz) = f8e74a1026f753b549f788faa12f94fdddc7333c
-SHA512 (pyobjc-framework-NotificationCenter-5.1.2.tar.gz) = 99e80292c9b10304331add789d84238243cac2bf114981e5e643fab57fbbf41ebad81e85f0109976d3467a3cfd70f538246e0ea70fab75bd2d2813d9242590e1
-Size (pyobjc-framework-NotificationCenter-5.1.2.tar.gz) = 18029 bytes
+SHA1 (pyobjc-framework-NotificationCenter-5.2.tar.gz) = 787d08c769b642274e110c5cb26f5494a7b8a445
+RMD160 (pyobjc-framework-NotificationCenter-5.2.tar.gz) = 687c3de77c679372a6e9f89ea8a2d8c961666ec0
+SHA512 (pyobjc-framework-NotificationCenter-5.2.tar.gz) = 5ea4a45dce41433a6160a275a5d245afbe5e5ea827813b0282e07567c291fd2eea72495f7790adee59eebd05952df379f67e7974f6f07f6fed3eb2f9b7153027
+Size (pyobjc-framework-NotificationCenter-5.2.tar.gz) = 18087 bytes
