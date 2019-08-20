@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3544 2019/08/20 07:17:28 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3545 2019/08/20 11:26:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5791,3 +5791,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/py-openpyxl to 2.6.3 [adam 2019-08-20]
 	Updated textproc/py-xlsxwriter to 1.1.9 [adam 2019-08-20]
 	Updated devel/py-pyobjc to 5.2 [adam 2019-08-20]
+	Added net/gssdp12 version 1.2.1 [wiz 2019-08-20]
