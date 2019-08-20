@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE service_bundle SYSTEM "/usr/share/lib/xml/dtd/service_bundle.dtd.1">
+<service_bundle type="manifest" name="export">
+  <service name="@SMF_PREFIX@/@SMF_NAME@" type="service" version="1">
+    <create_default_instance enabled="false" />
+    <single_instance />
+    <dependency name='network' grouping='require_all' restart_on='error' type='service'>
+      <service_fmri value='svc:/milestone/network:default' />
+    </dependency>
+    <dependency name='filesystem-local' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/system/filesystem/local:default' />
+    </dependency>
+    <method_context>
+      <method_environment>
+        <envvar name="LD_PRELOAD_32" value="/usr/lib/extendedFILE.so.1" />
+      </method_environment>
+    </method_context>
+    <exec_method type="method" name="start" exec="@PREFIX@/sbin/asterisk" timeout_seconds="60" />
+    <exec_method type="method" name="stop" exec="@PREFIX@/sbin/asterisk -nr -x 'core stop gracefully' >/dev/null" timeout_seconds="60" />
+    <exec_method type="method" name="refresh" exec="@PREFIX@/sbin/asterisk -nr -x 'core reload' >/dev/null" timeout_seconds="60" />
+    <property_group name="startd" type="framework">
+      <propval name="duration" type="astring" value="contract" />
+      <propval name="ignore_error" type="astring" value="core,signal" />
+    </property_group>
+    <property_group name="application" type="application">
+      <propval name="config_file" type="astring" value="@PKG_SYSCONFDIR@/asterisk.conf" />
+    </property_group>
+    <template>
+      <common_name>
+        <loctext xml:lang="C">Asterisk PBX</loctext>
+      </common_name>
+    </template>
+  </service>
+</service_bundle>
