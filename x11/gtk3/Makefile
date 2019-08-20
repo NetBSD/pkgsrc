@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2019/08/20 13:54:55 wiz Exp $
+# $NetBSD: Makefile,v 1.134 2019/08/20 15:18:16 wiz Exp $
 
 DISTNAME=	gtk+-3.24.10
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
@@ -86,6 +86,7 @@ BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=1.39.0
 
 BUILDLINK_API_DEPENDS.pango+=	pango>=1.41
 .include "../../devel/pango/buildlink3.mk"
+BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.11.91
 .include "../../fonts/fontconfig/buildlink3.mk"
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.14.0
 .include "../../graphics/cairo/buildlink3.mk"
