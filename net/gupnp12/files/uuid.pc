@@ -1,0 +1,6 @@
+Name: uuid
+Description: Universally unique id library
+Version: 2
+Requires:
+Cflags:
+Libs:
