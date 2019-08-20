@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3543 2019/08/20 03:01:27 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.3544 2019/08/20 07:17:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5787,3 +5787,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/daemontools-run to 20190819 [schmonz 2019-08-19]
 	Updated mail/qmail to 1.03nb46 [schmonz 2019-08-20]
 	Updated mail/qmail-run to 20190819 [schmonz 2019-08-20]
+	Updated devel/py-dulwich to 0.19.13 [adam 2019-08-20]
+	Updated textproc/py-openpyxl to 2.6.3 [adam 2019-08-20]
+	Updated textproc/py-xlsxwriter to 1.1.9 [adam 2019-08-20]
+	Updated devel/py-pyobjc to 5.2 [adam 2019-08-20]
