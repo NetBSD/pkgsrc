@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3553 2019/08/20 13:17:33 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.3554 2019/08/20 13:49:03 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5801,3 +5801,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/git to 2.23.0 [adam 2019-08-20]
 	Updated archivers/zstd to 1.4.3 [adam 2019-08-20]
 	Added net/gupnp12 version 1.2.1 [wiz 2019-08-20]
+	Added comms/asterisk16 version 16.5.0 [ryoon 2019-08-20]
