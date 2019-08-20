@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3558 2019/08/20 18:04:04 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.3559 2019/08/20 20:18:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5806,3 +5806,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/gobject-introspection to 1.60.2 [wiz 2019-08-20]
 	Updated devel/glib2 to 2.60.6 [wiz 2019-08-20]
 	Updated emulators/mame to 0.212 [wiz 2019-08-20]
+	Updated net/tor to 0.4.1.5 [wiz 2019-08-20]
