@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2017/02/25 08:32:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/08/20 13:00:02 adam Exp $
 bin/gitk
 libexec/git-core/git-citool
 libexec/git-core/git-gui
@@ -23,10 +23,6 @@ share/git-gui/lib/date.tcl
 share/git-gui/lib/diff.tcl
 share/git-gui/lib/encoding.tcl
 share/git-gui/lib/error.tcl
-${PLIST.macosx}share/git-gui/lib/Git Gui.app/Contents/Info.plist
-${PLIST.macosx}share/git-gui/lib/Git Gui.app/Contents/MacOS/${WISH_APP}
-${PLIST.macosx}share/git-gui/lib/Git Gui.app/Contents/Resources/Scripts/AppMain.tcl
-${PLIST.macosx}share/git-gui/lib/Git Gui.app/Contents/Resources/git-gui.icns
 share/git-gui/lib/git-gui.ico
 ${PLIST.macosx}share/git-gui/lib/git-gui.tcl
 share/git-gui/lib/index.tcl
