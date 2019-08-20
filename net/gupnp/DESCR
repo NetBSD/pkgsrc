@@ -1,3 +1,5 @@
 GUPnP implements the UPnP specification: resource announcement and discovery,
 description, control, event notification, and presentation
 (GUPnP includes basic web server functionality through libsoup).
+
+This package contains the outdated 1.0 branch.
