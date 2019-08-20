@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/08/20 11:26:13 wiz Exp $
+
+SHA1 (gssdp-1.2.1.tar.xz) = 4f48e321419a97c4e504a513ce7d82756d016b3f
+RMD160 (gssdp-1.2.1.tar.xz) = c5024db80075ae12da5eadc0c84b9da33a6bfff4
+SHA512 (gssdp-1.2.1.tar.xz) = 1c207d97f2c3926c9880d5b76b2a031e791845af6d777ae5fdbbbc3d7b58e2f6fdc10cdac3135e11f5543a0a9a2cb93a80f615c845a31e865d35f0a28a3df1c1
+Size (gssdp-1.2.1.tar.xz) = 61252 bytes
