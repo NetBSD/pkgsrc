@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/02/08 19:54:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/08/20 07:15:46 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -14,3 +14,9 @@ ${PYSITELIB}/HIServices/__init__.pyo
 ${PYSITELIB}/HIServices/_metadata.py
 ${PYSITELIB}/HIServices/_metadata.pyc
 ${PYSITELIB}/HIServices/_metadata.pyo
+${PYSITELIB}/PrintCore/__init__.py
+${PYSITELIB}/PrintCore/__init__.pyc
+${PYSITELIB}/PrintCore/__init__.pyo
+${PYSITELIB}/PrintCore/_metadata.py
+${PYSITELIB}/PrintCore/_metadata.pyc
+${PYSITELIB}/PrintCore/_metadata.pyo
