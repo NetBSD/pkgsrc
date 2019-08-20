@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/01/08 12:08:42 adam Exp $
+$NetBSD: distinfo,v 1.5 2019/08/20 07:15:50 adam Exp $
 
-SHA1 (pyobjc-framework-GameController-5.1.2.tar.gz) = 3bc452c004c3929fbabfd2d64450bf4d9d530301
-RMD160 (pyobjc-framework-GameController-5.1.2.tar.gz) = 1e8ddf903b5c20740d77575deea824e8dfd3d3bc
-SHA512 (pyobjc-framework-GameController-5.1.2.tar.gz) = a70f4b403446aaad6c095e1d2b6f0fa0b63f409c4e9deb37a3c27ae28f4b71403675675df5935e197b001416e30f799df23e94d6bcfa81444da284f48836e6ae
-Size (pyobjc-framework-GameController-5.1.2.tar.gz) = 14224 bytes
+SHA1 (pyobjc-framework-GameController-5.2.tar.gz) = 33a03e98049dde68290208c025b87c5c5837ac7c
+RMD160 (pyobjc-framework-GameController-5.2.tar.gz) = f3731c9c2877ea07b024b0a7fb72db86e8d24b8a
+SHA512 (pyobjc-framework-GameController-5.2.tar.gz) = 5a0e54ce86b34d0cbd56ddcebcf532589542fab35fe480b6e8d9210cf374609d39b4c788145beac8f30ad1beebeca1c9d4355b300473a21d5c1c2ee0b37a68d5
+Size (pyobjc-framework-GameController-5.2.tar.gz) = 14576 bytes
