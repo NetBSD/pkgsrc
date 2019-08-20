@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2019/08/20 13:47:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.47 2019/08/20 21:16:20 ryoon Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
@@ -139,8 +139,11 @@ PLIST.mgcp=	yes
 .endif
 
 PLIST_VARS+=	unbound
-.if exists(/usr/include/unbound.h)
+# unbound 1.5 or later is required.`
+.if exists(/usr/include/unbound.h) && !empty(OS_VERSION:M9.*)
 PLIST.unbound=	yes
+.else
+CONFIGURE_ARGS+=	--without-unbound
 .endif
 
 .include "options.mk"
