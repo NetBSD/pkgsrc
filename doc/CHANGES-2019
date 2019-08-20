@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3552 2019/08/20 13:06:30 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3553 2019/08/20 13:17:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5800,3 +5800,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/gtksourceview4 to 4.2.0 [wiz 2019-08-20]
 	Updated devel/git to 2.23.0 [adam 2019-08-20]
 	Updated archivers/zstd to 1.4.3 [adam 2019-08-20]
+	Added net/gupnp12 version 1.2.1 [wiz 2019-08-20]
