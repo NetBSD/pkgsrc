@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1261 2019/07/29 18:07:46 wiz Exp $
+# $NetBSD: Makefile,v 1.1262 2019/08/20 11:26:32 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -212,6 +212,7 @@ SUBDIR+=	grive2
 SUBDIR+=	grpc
 SUBDIR+=	gsnmp
 SUBDIR+=	gssdp
+SUBDIR+=	gssdp12
 SUBDIR+=	gst-plugins0.10-mms
 SUBDIR+=	gst-plugins0.10-rtmp
 SUBDIR+=	gst-plugins0.10-soup
