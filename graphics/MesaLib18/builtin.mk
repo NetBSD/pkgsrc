@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2018/10/07 23:49:31 ryoon Exp $
+# $NetBSD: builtin.mk,v 1.2 2019/08/21 12:21:28 nia Exp $
 
 BUILTIN_PKG:=	MesaLib
 
@@ -22,6 +22,7 @@ IS_BUILTIN.MesaLib=	yes
 IS_BUILTIN.MesaLib=	no
 .  endif
 .endif
+
 MAKEVARS+=	IS_BUILTIN.MesaLib
 
 ###
@@ -67,6 +68,7 @@ USE_BUILTIN.MesaLib!=							\
 .    endif
 .  endif  # PREFER.MesaLib
 .endif
+
 MAKEVARS+=	USE_BUILTIN.MesaLib
 
 ###
