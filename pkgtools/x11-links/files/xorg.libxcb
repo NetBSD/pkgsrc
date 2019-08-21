@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libxcb,v 1.20 2019/03/01 17:43:12 youri Exp $
+# $NetBSD: xorg.libxcb,v 1.21 2019/08/21 09:48:41 nia Exp $
 #
 include/xcb/bigreq.h
 include/xcb/composite.h
@@ -318,6 +318,7 @@ lib/pkgconfig/xcb-composite.pc
 lib/pkgconfig/xcb-damage.pc
 lib/pkgconfig/xcb-dpms.pc
 lib/pkgconfig/xcb-dri2.pc
+lib/pkgconfig/xcb-dri3.pc
 lib/pkgconfig/xcb-glx.pc
 lib/pkgconfig/xcb-present.pc
 lib/pkgconfig/xcb-randr.pc
