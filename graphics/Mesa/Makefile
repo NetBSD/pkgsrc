@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2015/04/03 02:29:40 tnn Exp $
+# $NetBSD: Makefile,v 1.72 2019/08/21 16:15:57 nia Exp $
 
 PKGNAME=	Mesa-7.11.2
 MASTER_SITES=	# empty
@@ -6,7 +6,7 @@ DISTFILES=	# empty
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-COMMENT=	Graphics library meta package, similar to SGI's OpenGL
+COMMENT=	Graphics library meta package
 
 META_PACKAGE=	# empty
 
