@@ -1,40 +1,53 @@
-$NetBSD: patch-src_egl_main_eglglobals.c,v 1.1 2016/01/27 07:39:54 wiz Exp $
+$NetBSD: patch-src_egl_main_eglglobals.c,v 1.2 2019/08/21 13:35:28 nia Exp $
 
 atexit() is not a good idea in shared libraries.
 
---- src/egl/main/eglglobals.c.orig	2015-11-28 17:37:59.000000000 +0000
+FreeBSD reported atexit bug for 10.6:
+https://bugs.freedesktop.org/show_bug.cgi?id=91869
+
+--- src/egl/main/eglglobals.c.orig	2018-01-18 21:30:28.000000000 +0000
 +++ src/egl/main/eglglobals.c
-@@ -59,11 +59,16 @@ struct _egl_global _eglGlobal =
-    " EGL_MESA_platform_gbm"
+@@ -85,11 +85,22 @@ struct _egl_global _eglGlobal =
+    .debugTypesEnabled = _EGL_DEBUG_BIT_CRITICAL | _EGL_DEBUG_BIT_ERROR,
  };
  
++#if defined(HAVE_NOATEXIT)
 +static EGLBoolean registered = EGL_FALSE;
  
--static void
 +static void __attribute__((__destructor__))
++#else
+ static void
++#endif
  _eglAtExit(void)
  {
     EGLint i;
 +
++#if defined(HAVE_NOATEXIT)
 +   if (!registered)
-+     return;
++      return;
++#endif
 +
     for (i = _eglGlobal.NumAtExitCalls - 1; i >= 0; i--)
        _eglGlobal.AtExitCalls[i]();
  }
-@@ -73,14 +78,9 @@ void
+@@ -99,14 +110,20 @@ void
  _eglAddAtExitCall(void (*func)(void))
  {
     if (func) {
--      static EGLBoolean registered = EGL_FALSE;
--
++#if !defined(HAVE_NOATEXIT)
+       static EGLBoolean registered = EGL_FALSE;
++#endif
+ 
        mtx_lock(_eglGlobal.Mutex);
  
--      if (!registered) {
--         atexit(_eglAtExit);
--         registered = EGL_TRUE;
--      }
++#if defined(HAVE_NOATEXIT)
 +      registered = EGL_TRUE;
++#else
+       if (!registered) {
+          atexit(_eglAtExit);
+          registered = EGL_TRUE;
+       }
++#endif
  
        assert(_eglGlobal.NumAtExitCalls < ARRAY_SIZE(_eglGlobal.AtExitCalls));
        _eglGlobal.AtExitCalls[_eglGlobal.NumAtExitCalls++] = func;

@@ -1,30 +1,15 @@
-$NetBSD: patch-src_util_u__atomic.h,v 1.1 2015/04/25 11:19:18 tnn Exp $
+$NetBSD: patch-src_util_u__atomic.h,v 1.2 2019/08/21 13:35:28 nia Exp $
 
 Fix SunOS atomic macros.
 
---- src/util/u_atomic.h.orig	2015-03-28 18:20:39.000000000 +0000
+--- src/util/u_atomic.h.orig	2018-09-07 21:18:07.000000000 +0000
 +++ src/util/u_atomic.h
-@@ -175,7 +175,7 @@ char _InterlockedCompareExchange8(char v
-    sizeof(*v) == sizeof(uint16_t) ? atomic_inc_16((uint16_t *)(v)) : \
-    sizeof(*v) == sizeof(uint32_t) ? atomic_inc_32((uint32_t *)(v)) : \
-    sizeof(*v) == sizeof(uint64_t) ? atomic_inc_64((uint64_t *)(v)) : \
--                                    (assert(!"should not get here"), 0))
-+                                    (assert(!"should not get here"), (void)0))
- 
- #define p_atomic_inc_return(v) ((__typeof(*v)) \
-    sizeof(*v) == sizeof(uint8_t)  ? atomic_inc_8_nv ((uint8_t  *)(v)) : \
-@@ -184,12 +184,12 @@ char _InterlockedCompareExchange8(char v
-    sizeof(*v) == sizeof(uint64_t) ? atomic_inc_64_nv((uint64_t *)(v)) : \
-                                     (assert(!"should not get here"), 0))
- 
--#define p_atomic_dec(v) ((void) \
-+#define p_atomic_dec(v) (void) (\
-    sizeof(*v) == sizeof(uint8_t)  ? atomic_dec_8 ((uint8_t  *)(v)) : \
-    sizeof(*v) == sizeof(uint16_t) ? atomic_dec_16((uint16_t *)(v)) : \
-    sizeof(*v) == sizeof(uint32_t) ? atomic_dec_32((uint32_t *)(v)) : \
-    sizeof(*v) == sizeof(uint64_t) ? atomic_dec_64((uint64_t *)(v)) : \
--                                    (assert(!"should not get here"), 0))
-+                                    (assert(!"should not get here"), (void)0))
- 
- #define p_atomic_dec_return(v) ((__typeof(*v)) \
-    sizeof(*v) == sizeof(uint8_t)  ? atomic_dec_8_nv ((uint8_t  *)(v)) : \
+@@ -20,7 +20,7 @@
+  * locally coded assembly, compiler intrinsic or ultimately a
+  * mutex-based implementation.
+  */
+-#if defined(__sun)
++#if defined(__sun) && !defined(__GNUC__)
+ #define PIPE_ATOMIC_OS_SOLARIS
+ #elif defined(_MSC_VER)
+ #define PIPE_ATOMIC_MSVC_INTRINSIC

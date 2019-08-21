@@ -1,11 +1,11 @@
-$NetBSD: patch-src_glx_glxclient.h,v 1.1 2015/09/11 16:27:30 tnn Exp $
+$NetBSD: patch-src_glx_glxclient.h,v 1.2 2019/08/21 13:35:28 nia Exp $
 
 NetBSD only supports zero-initialized initial-exec tls variables in conjuction
 with dlopen(3) at the moment.
 
---- src/glx/glxclient.h.orig	2015-09-02 17:06:23.000000000 +0000
+--- src/glx/glxclient.h.orig	2017-02-13 11:55:49.000000000 +0000
 +++ src/glx/glxclient.h
-@@ -635,7 +635,11 @@ extern void __glXSetCurrentContext(struc
+@@ -661,7 +661,11 @@ extern void __glXSetCurrentContext(struc
  extern __thread void *__glX_tls_Context
     __attribute__ ((tls_model("initial-exec")));
  
