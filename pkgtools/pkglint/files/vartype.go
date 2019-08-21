@@ -264,6 +264,8 @@ func (bt *BasicType) NeedsQ() bool {
 		BtPkgRevision,
 		BtPrefixPathname,
 		BtPythonDependency,
+		BtRPkgName,
+		BtRPkgVer,
 		BtRelativePkgDir,
 		BtRelativePkgPath,
 		BtStage,
@@ -338,6 +340,8 @@ var (
 	BtPkgRevision            = &BasicType{"PkgRevision", (*VartypeCheck).PkgRevision}
 	BtPrefixPathname         = &BasicType{"PrefixPathname", (*VartypeCheck).PrefixPathname}
 	BtPythonDependency       = &BasicType{"PythonDependency", (*VartypeCheck).PythonDependency}
+	BtRPkgName               = &BasicType{"RPkgName", (*VartypeCheck).RPkgName}
+	BtRPkgVer                = &BasicType{"RPkgVer", (*VartypeCheck).RPkgVer}
 	BtRelativePkgDir         = &BasicType{"RelativePkgDir", (*VartypeCheck).RelativePkgDir}
 	BtRelativePkgPath        = &BasicType{"RelativePkgPath", (*VartypeCheck).RelativePkgPath}
 	BtRestricted             = &BasicType{"Restricted", (*VartypeCheck).Restricted}
