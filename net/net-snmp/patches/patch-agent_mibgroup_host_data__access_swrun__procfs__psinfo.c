@@ -1,18 +1,15 @@
-$NetBSD: patch-agent_mibgroup_host_data__access_swrun__procfs__psinfo.c,v 1.1 2017/02/09 09:33:57 maya Exp $
+$NetBSD: patch-agent_mibgroup_host_data__access_swrun__procfs__psinfo.c,v 1.2 2019/08/21 09:30:12 otis Exp $
 
-Fix compilation on Solaris 11.2, from upstream commit:
-https://sourceforge.net/p/net-snmp/code/ci/e2ce8bb37819c9ae24d482ac4108772f7b2c9b8c/
+Fix compilation on Solaris 11 and also on SmartOS.
 
 --- agent/mibgroup/host/data_access/swrun_procfs_psinfo.c.orig	2014-12-08 20:23:22.000000000 +0000
 +++ agent/mibgroup/host/data_access/swrun_procfs_psinfo.c
-@@ -33,6 +33,10 @@
- #include <sys/proc.h>
+@@ -23,6 +23,8 @@
+ #include <fcntl.h>
  #endif
  
-+#include <sys/processor.h>
-+#include <sys/procset.h>
-+#include <thread.h>
++#include <sys/thread.h>
 +
- #include <net-snmp/net-snmp-includes.h>
- #include <net-snmp/agent/net-snmp-agent-includes.h>
- #include <net-snmp/library/container.h>
+ #define HAVE_SYS_PROCFS_H    /* XXX - Needs a configure check! */
+ #ifdef HAVE_SYS_PROCFS_H
+ #define _KERNEL              /* For psinfo_t */
