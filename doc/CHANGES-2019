@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3576 2019/08/21 18:10:08 fox Exp $
+$NetBSD: CHANGES-2019,v 1.3577 2019/08/21 21:26:33 nils Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5839,3 +5839,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed x11/xf86-video-newport [nia 2019-08-21]
 	Removed x11/modular-xorg-server112 successor x11/modular-xorg-server [nia 2019-08-21]
 	Updated www/cliqz to 1.28.2 [fox 2019-08-21]
+	Updated net/pulledpork to 0.7.3 [nils 2019-08-21]
