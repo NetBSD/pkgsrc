@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2019/08/11 13:22:55 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/08/21 10:11:22 adam Exp $
 
-DISTNAME=	CryptX-0.063
+DISTNAME=	CryptX-0.064
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	security perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/M/MI/MIK/
 
