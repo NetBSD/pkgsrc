@@ -11,12 +11,12 @@ func parseShellProgram(line *Line, program string) (*MkShList, error) {
 	lexer := NewShellLexer(tokens, rest)
 	parser := shyyParserImpl{}
 
-	succeeded := parser.Parse(lexer)
+	zeroMeansSuccess := parser.Parse(lexer)
 
 	switch {
-	case succeeded == 0 && lexer.error == "":
+	case zeroMeansSuccess == 0 && lexer.error == "":
 		return lexer.result, nil
-	case succeeded == 0:
+	case zeroMeansSuccess == 0:
 		return nil, fmt.Errorf("splitIntoShellTokens couldn't parse %q", rest)
 	default:
 		return nil, &ParseError{append([]string{lexer.current}, lexer.remaining...)}

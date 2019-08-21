@@ -1063,6 +1063,12 @@ func (s *Suite) Test_VartypeCheck_Pkgname(c *check.C) {
 	vt.Output(
 		"WARN: filename.mk:8: \"pkgbase-z1\" is not a valid package name.")
 
+	vt.Values(
+		"pkgbase-1.0nb17")
+
+	vt.Output(
+		"ERROR: filename.mk:11: The \"nb\" part of the version number belongs in PKGREVISION.")
+
 	vt.Op(opUseMatch)
 	vt.Values(
 		"pkgbase-[0-9]*")
@@ -1124,6 +1130,18 @@ func (s *Suite) Test_VartypeCheck_PkgRevision(c *check.C) {
 	vt.OutputEmpty()
 }
 
+func (s *Suite) Test_VartypeCheck_PrefixPathname(c *check.C) {
+	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).PrefixPathname)
+
+	vt.Varname("PKGMANDIR")
+	vt.Values(
+		"man/man1",
+		"share/locale")
+
+	vt.Output(
+		"WARN: filename.mk:1: Please use \"${PKGMANDIR}/man1\" instead of \"man/man1\".")
+}
+
 func (s *Suite) Test_VartypeCheck_PythonDependency(c *check.C) {
 	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).PythonDependency)
 
@@ -1138,16 +1156,47 @@ func (s *Suite) Test_VartypeCheck_PythonDependency(c *check.C) {
 		"WARN: filename.mk:3: Invalid Python dependency \"cairo,X\".")
 }
 
-func (s *Suite) Test_VartypeCheck_PrefixPathname(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).PrefixPathname)
+func (s *Suite) Test_VartypeCheck_RPkgName(c *check.C) {
+	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).RPkgName)
 
-	vt.Varname("PKGMANDIR")
+	vt.Varname("R_PKGNAME")
 	vt.Values(
-		"man/man1",
-		"share/locale")
+		"package",
+		"${VAR}",
+		"a,b,c",
+		"under_score",
+		"R-package")
 
 	vt.Output(
-		"WARN: filename.mk:1: Please use \"${PKGMANDIR}/man1\" instead of \"man/man1\".")
+		"WARN: filename.mk:2: The R package name should not contain variables.",
+		"WARN: filename.mk:3: The R package name contains the invalid characters \",,\".",
+		"WARN: filename.mk:5: The R_PKGNAME does not need the \"R-\" prefix.")
+
+	vt.Op(opUseMatch)
+	vt.Values(
+		"R-package")
+
+	vt.OutputEmpty()
+}
+
+func (s *Suite) Test_VartypeCheck_RPkgVer(c *check.C) {
+	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).RPkgVer)
+
+	vt.Varname("R_PKGVER")
+	vt.Values(
+		"1.0",
+		"1-2-3",
+		"${VERSION}",
+		"1-:")
+
+	vt.Output(
+		"WARN: filename.mk:4: Invalid R version number \"1-:\".")
+
+	vt.Op(opUseMatch)
+	vt.Values(
+		"1-:")
+
+	vt.OutputEmpty()
 }
 
 func (s *Suite) Test_VartypeCheck_RelativePkgPath(c *check.C) {
@@ -1688,6 +1737,6 @@ func (vt *VartypeCheckTester) OutputEmpty() {
 
 func (vt *VartypeCheckTester) nextSection() {
 	if vt.lineno%10 != 1 {
-		vt.lineno = vt.lineno - vt.lineno%10 + 11
+		vt.lineno += 9 - (vt.lineno+8)%10
 	}
 }
