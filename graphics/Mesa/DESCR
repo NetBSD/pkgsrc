@@ -1,2 +1,2 @@
-Meta-Package that pulls in all the libraries necessary for an OpenGL
-environment that aren't already part of the X Window System/XFree.
+Metapackage that pulls in all the libraries necessary for an OpenGL
+environment.
