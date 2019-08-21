@@ -1,5 +1,6 @@
-# $NetBSD: xorg.libdrm,v 1.16 2019/08/10 19:47:38 maya Exp $
+# $NetBSD: xorg.libdrm,v 1.17 2019/08/21 11:51:46 nia Exp $
 #
+include/X11/libsync.h
 include/X11/xf86drm.h
 include/X11/xf86mm.h
 include/libdrm/amdgpu.h
@@ -39,6 +40,7 @@ include/libdrm/sis_drm.h
 include/libdrm/via_drm.h
 include/libdrm/virtgpu_drm.h
 include/libkms/libkms.h
+include/libsync.h
 include/xf86drm.h
 include/xf86drmMode.h
 lib/libdrm.a
