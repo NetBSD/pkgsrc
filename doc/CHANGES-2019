@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3565 2019/08/21 12:42:23 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3566 2019/08/21 12:51:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5818,3 +5818,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-ipykernel to 5.1.2 [adam 2019-08-21]
 	Added devel/py-pebble version 4.3.10 [adam 2019-08-21]
 	Added www/py-ipywidgets version 7.5.1 [adam 2019-08-21]
+	Updated devel/py-xopen to 0.8.1 [adam 2019-08-21]
+	Updated devel/py-wheel to 0.33.6 [adam 2019-08-21]
+	Updated www/py-soupsieve to 1.9.3 [adam 2019-08-21]
+	Updated devel/py-unittest2pytest to 0.4 [adam 2019-08-21]
