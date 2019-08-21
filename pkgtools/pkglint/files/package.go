@@ -950,6 +950,8 @@ func (pkg *Package) CheckVarorder(mklines *MkLines) {
 		{"GITHUB_TAG", optional},
 		{"DISTNAME", optional},
 		{"PKGNAME", optional},
+		{"R_PKGNAME", optional},
+		{"R_PKGVER", optional},
 		{"PKGREVISION", optional},
 		{"CATEGORIES", once},
 		{"MASTER_SITES", many},
