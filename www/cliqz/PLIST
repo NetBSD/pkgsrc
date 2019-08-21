@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/07/31 01:35:27 fox Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/08/21 18:07:43 fox Exp $
 bin/cliqz
 lib/cliqz/actors/AudioPlaybackChild.jsm
 lib/cliqz/actors/AutoplayChild.jsm
@@ -3346,7 +3346,6 @@ lib/cliqz/browser/features/https-everywhere@cliqz.com.xpi
 lib/cliqz/browser/localization/en-US/branding/brand.ftl
 lib/cliqz/browser/localization/en-US/browser/aboutConfig.ftl
 lib/cliqz/browser/localization/en-US/browser/aboutDialog.ftl
-lib/cliqz/browser/localization/en-US/browser/aboutLogins.ftl
 lib/cliqz/browser/localization/en-US/browser/aboutPolicies.ftl
 lib/cliqz/browser/localization/en-US/browser/aboutPrivateBrowsing.ftl
 lib/cliqz/browser/localization/en-US/browser/aboutRestartRequired.ftl
@@ -3389,6 +3388,7 @@ lib/cliqz/browser/localization/en-US/browser/touchbar/touchbar.ftl
 lib/cliqz/browser/localization/en-US/devtools/aboutdebugging.ftl
 lib/cliqz/browser/localization/en-US/devtools/application.ftl
 lib/cliqz/browser/localization/en-US/devtools/tooltips.ftl
+lib/cliqz/browser/localization/en-US/preview/aboutLogins.ftl
 lib/cliqz/browser/localization/en-US/startup/aboutDevTools.ftl
 lib/cliqz/browser/modules/AboutDebuggingRegistration.jsm
 lib/cliqz/browser/modules/AboutDevToolsRegistration.jsm
