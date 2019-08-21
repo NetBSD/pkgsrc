@@ -1,14 +1,16 @@
-$NetBSD: patch-src_mesa_main_macros.h,v 1.1 2016/01/05 13:02:57 tnn Exp $
+$NetBSD: patch-src_mesa_main_macros.h,v 1.2 2019/08/21 13:35:28 nia Exp $
 
 ALIGN is also defined in sys/param.h on NetBSD.
 
---- src/mesa/main/macros.h.orig	2015-12-09 16:10:13.000000000 +0000
+Extend undefining ALIGN to all other OSes.
+
+--- src/mesa/main/macros.h.orig	2017-11-10 23:18:56.000000000 +0000
 +++ src/mesa/main/macros.h
-@@ -690,6 +690,9 @@ minify(unsigned value, unsigned levels)
+@@ -677,6 +677,9 @@ minify(unsigned value, unsigned levels)
   *
   * \sa ROUND_DOWN_TO()
   */
-+#if defined(__NetBSD__)
++#ifdef ALIGN
 +#undef ALIGN
 +#endif
  static inline uintptr_t
