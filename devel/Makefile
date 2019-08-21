@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2899 2019/08/18 16:07:12 nia Exp $
+# $NetBSD: Makefile,v 1.2900 2019/08/21 12:39:39 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2236,6 +2236,7 @@ SUBDIR+=	py-pathlib
 SUBDIR+=	py-pathlib2
 SUBDIR+=	py-pathspec
 SUBDIR+=	py-pbr
+SUBDIR+=	py-pebble
 SUBDIR+=	py-pep8
 SUBDIR+=	py-pexpect
 SUBDIR+=	py-pip

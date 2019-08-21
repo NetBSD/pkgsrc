@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/08/21 12:39:39 adam Exp $
+
+SHA1 (Pebble-4.3.10.tar.gz) = 5b8f71d6bb57c87dd226d7f1ee36eca38c171d81
+RMD160 (Pebble-4.3.10.tar.gz) = 2a938c6fb97ffe04354a24e37b23ebb93df8d3b1
+SHA512 (Pebble-4.3.10.tar.gz) = de5869110171497d9916aa8820d4ec7c1745c416993dea792ea37a450accd28469abbdd6277b49c41aff3b2498a99581c5b353613dc8e86ab02c17fde8ee2bf0
+Size (Pebble-4.3.10.tar.gz) = 24393 bytes
