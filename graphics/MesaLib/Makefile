@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.148 2019/04/26 13:13:59 maya Exp $
+# $NetBSD: Makefile,v 1.149 2019/08/21 13:35:28 nia Exp $
 
-DISTNAME=	mesa-11.2.2
+DISTNAME=	mesa-18.3.4
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
-PKGREVISION=	11
+PKGREVISION=	1
 CATEGORIES=	graphics x11
-MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/${PKGVERSION_NOREV}/
+MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/
+# MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,21 +14,16 @@ COMMENT=	The Mesa 3D Graphics Library
 LICENSE=	mit
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	bison pkg-config gmake flex
+USE_TOOLS+=	autoconf automake autoreconf bison pkg-config gmake flex
 USE_LANGUAGES=	c99 c++
 USE_LIBTOOL=	yes
 
-#CFLAGS+=	-g -O0
-#CXXFLAGS+=	-g -O0
-
-GCC_REQD+=	4.2
-
 PKGCONFIG_OVERRIDE+=	src/egl/main/egl.pc.in
-PKGCONFIG_OVERRIDE+=	src/egl/wayland/wayland-egl/wayland-egl.pc.in
 PKGCONFIG_OVERRIDE+=	src/gallium/targets/d3dadapter9/d3d.pc.in
 PKGCONFIG_OVERRIDE+=	src/gallium/targets/osmesa/osmesa.pc.in
 PKGCONFIG_OVERRIDE+=	src/gallium/targets/xa/xatracker.pc.in
 PKGCONFIG_OVERRIDE+=	src/gbm/main/gbm.pc.in
+PKGCONFIG_OVERRIDE+=	src/glx/windows/windowsdriproto.pc.in
 PKGCONFIG_OVERRIDE+=	src/mapi/es1api/glesv1_cm.pc.in
 PKGCONFIG_OVERRIDE+=	src/mapi/es2api/glesv2.pc.in
 PKGCONFIG_OVERRIDE+=	src/mesa/drivers/dri/dri.pc.in
@@ -41,24 +37,30 @@ CONFIGURE_ARGS+=		--enable-shared-glapi
 # archives named libglapi.la but in different directories, bad things happen.
 SUBST_CLASSES+=			wrapper-bug
 SUBST_STAGE.wrapper-bug=	pre-configure
-SUBST_MESSAGE.wrapper-bug=	Renaming glapi-shared/libglapi in Makefiles
-SUBST_FILES.wrapper-bug=	src/gbm/Makefile.in
-SUBST_FILES.wrapper-bug+=	src/glx/Makefile.in
-SUBST_FILES.wrapper-bug+=	src/mapi/Makefile.in
-SUBST_FILES.wrapper-bug+=	src/mesa/drivers/x11/Makefile.in
-SUBST_SED.wrapper-bug=		-e 's,shared-glapi/libglapi.la,shared-glapi/libglapi_tmp_rename.la,g'
-SUBST_SED.wrapper-bug+=		-e 's,libglapi.la,libglapi_impl.la,g'
-SUBST_SED.wrapper-bug+=		-e 's,libglapi_tmp_rename.la,libglapi.la,g'
+SUBST_MESSAGE.wrapper-bug=	Renaming non-shared libglapi.la in Makefiles
+SUBST_FILES.wrapper-bug=	src/gallium/targets/libgl-xlib/Makefile.am
+SUBST_FILES.wrapper-bug+=	src/gallium/targets/osmesa/Makefile.am
+SUBST_FILES.wrapper-bug+=	src/glx/Makefile.am
+SUBST_FILES.wrapper-bug+=	src/mapi/Makefile.am
+SUBST_FILES.wrapper-bug+=	src/mesa/drivers/osmesa/Makefile.am
+SUBST_FILES.wrapper-bug+=	src/mesa/drivers/x11/Makefile.am
+SUBST_SED.wrapper-bug=		-e 's,shared-glapi/libglapi\.la,shared-glapi/libglapi_tmp_rename.la,g'
+SUBST_SED.wrapper-bug+=		-e 's,shared_glapi_libglapi_la,shared_glapi_libglapi_tmp_rename_la,g'
+SUBST_SED.wrapper-bug+=		-e 's,libglapi\.la,libglapi_impl.la,g'
+SUBST_SED.wrapper-bug+=		-e 's,libglapi_la,libglapi_impl_la,g'
+SUBST_SED.wrapper-bug+=		-e 's,libglapi_tmp_rename\.la,libglapi.la,g'
+SUBST_SED.wrapper-bug+=		-e 's,libglapi_tmp_rename_la,libglapi_la,g'
 
-# Replace /etc/drirc with ${PREFIX}/etc/drirc
-SUBST_CLASSES+=			drirc
-SUBST_STAGE.drirc=		pre-configure
-SUBST_MESSAGE.drirc=		Fixing hardcoded /etc/drirc references
-SUBST_FILES.drirc+=		src/mesa/drivers/dri/common/xmlconfig.c
-SUBST_SED.drirc+=		 -e 's|/etc/|${PREFIX}/etc/|g'
+# Replace /etc/drirc.d with ${PREFIX}/etc/drirc.d
+SUBST_CLASSES+=		drirc
+SUBST_STAGE.drirc=	pre-configure
+SUBST_MESSAGE.drirc=	Fixing hardcoded /etc/drirc.d references
+SUBST_FILES.drirc+=	src/util/xmlconfig.c
+SUBST_SED.drirc+=	-e 's|/etc|${PREFIX}/etc|g'
 
-# Required due to clang defaulting to strict C standard by default (no strdup).
-CFLAGS.SunOS+=	-D__EXTENSIONS__
+CFLAGS.SunOS+=		-D__EXTENSIONS__ -D_POSIX_PTHREAD_SEMANTICS
+CXXFLAGS.SunOS+=	-Drestrict=__restrict__
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
@@ -68,20 +70,11 @@ CFLAGS.SunOS+=	-D__EXTENSIONS__
 CONFIGURE_ARGS+=	--enable-glx-read-only-text
 .endif
 
-.if !empty(PKGSRC_COMPILER:Mclang)
-SUBST_CLASSES+=		tr1
-SUBST_STAGE.tr1=	pre-configure
-SUBST_MESSAGE.tr1=	Fixing TR1 C++ namespace
-SUBST_FILES.tr1=	src/gallium/drivers/nouveau/codegen/*.h
-SUBST_FILES.tr1+=	src/gallium/drivers/nouveau/codegen/*.cpp
-SUBST_SED.tr1=		-e 's,std::tr1::,std::,g'
-SUBST_SED.tr1+=		-e 's,include <tr1/,include <,g'
-.endif
-
 PYTHON_FOR_BUILD_ONLY=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # as of 11.2.2
 BUILD_DEPENDS+=		${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
-CONFIGURE_ENV+=		ac_cv_prog_PYTHON2=${PYTHONBIN}
+# needed to build vulkan support
+BUILD_DEPENDS+=		${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
+CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
 .include "../../lang/python/tool.mk"
 
 # Handle platforms without exp2
@@ -90,21 +83,29 @@ CPPFLAGS+=	-Dexp2\(x\)=exp\(\(x\)\*M_LN2\)
 CPPFLAGS+=	-Dexp2f\(x\)=expf\(\(x\)\*M_LN2\)
 .endif
 
-# Manual patch for FDO bug 90311. Don't apply if not on Darwin as there could
-# be side effects.
-.if ${OPSYS} == "Darwin"
-pre-configure: ${WRKDIR}/.manual_patch_done
-${WRKDIR}/.manual_patch_done:
-	cd ${WRKSRC} && ${TOOLS_PATCH} -z .manual -p0 < ${FILESDIR}/patch-manual_fdo90311
-	touch ${.TARGET}
-.endif
+# Work around Xorg segfaulting in radeon driver due to wrong alloca being used
+CFLAGS.NetBSD+=		-Dalloca=__builtin_alloca
+CXXFLAGS.NetBSD+=	-Dalloca=__builtin_alloca
 
-INSTALLATION_DIRS+=	share/examples/MesaLib
+pre-configure:
+	touch ${WRKSRC}/src/glx/apple_dummy.cpp
+	cd ${WRKSRC} && autoreconf -vif
+
+DRIRC_DIR=		${PKG_SYSCONFDIR}/drirc.d
+EGDIR=			${PREFIX}/share/examples/mesa
+OWN_DIRS+=		${DRIRC_DIR}
+INSTALLATION_DIRS+=	${EGDIR}
+CONF_FILES+=		${EGDIR}/00-mesa-defaults.conf	\
+			  ${DRIRC_DIR}/00-mesa-defaults.conf
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/src/mesa/drivers/dri/common/drirc ${DESTDIR}${PREFIX}/share/examples/MesaLib
+	${INSTALL_DATA} ${WRKSRC}/src/util/00-mesa-defaults.conf ${DESTDIR}${EGDIR}
 
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
+.include "../../x11/libxshmfence/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

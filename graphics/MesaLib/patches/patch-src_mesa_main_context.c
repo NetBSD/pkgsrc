@@ -1,41 +1,57 @@
-$NetBSD: patch-src_mesa_main_context.c,v 1.3 2015/09/26 08:45:02 tnn Exp $
+$NetBSD: patch-src_mesa_main_context.c,v 1.4 2019/08/21 13:35:28 nia Exp $
 
 * Fix exit time segfault of qt5 application with modular xorg
 
---- src/mesa/main/context.c.orig	2015-09-11 17:41:47.000000000 +0000
+Bug 82246 (atexit) - Libraries should not call atexit()
+
+https://bugs.freedesktop.org/show_bug.cgi?id=82246
+
+FreeBSD reported atexit bug for 10.6:
+https://bugs.freedesktop.org/show_bug.cgi?id=91869
+
+--- src/mesa/main/context.c.orig	2017-11-20 14:25:47.000000000 +0000
 +++ src/mesa/main/context.c
-@@ -350,11 +350,14 @@ mtx_t OneTimeLock = _MTX_INITIALIZER_NP;
+@@ -354,11 +354,23 @@ mtx_t OneTimeLock = _MTX_INITIALIZER_NP;
   * Calls all the various one-time-fini functions in Mesa
   */
  
--static void
++#if defined(HAVE_NOATEXIT)
 +static GLbitfield api_init_mask = 0x0;
 +static void __attribute__((__destructor__))
++#else
+ static void
++#endif
  one_time_fini(void)
  {
--   _mesa_destroy_shader_compiler();
--   _mesa_locale_fini();
++#if defined(HAVE_NOATEXIT)
 +   if (api_init_mask) {
 +      _mesa_destroy_shader_compiler();
 +      _mesa_locale_fini();
 +   }
++#else
+    _mesa_destroy_shader_compiler();
+    _mesa_locale_fini();
++#endif
  }
  
  /**
-@@ -369,7 +372,6 @@ one_time_fini(void)
+@@ -373,7 +385,9 @@ one_time_fini(void)
  static void
  one_time_init( struct gl_context *ctx )
  {
--   static GLbitfield api_init_mask = 0x0;
++#if !defined(HAVE_NOATEXIT)
+    static GLbitfield api_init_mask = 0x0;
++#endif
  
     mtx_lock(&OneTimeLock);
  
-@@ -394,8 +396,6 @@ one_time_init( struct gl_context *ctx )
+@@ -398,7 +412,9 @@ one_time_init( struct gl_context *ctx )
           _mesa_ubyte_to_float_color_tab[i] = (float) i / 255.0F;
        }
  
--      atexit(one_time_fini);
--
- #if defined(DEBUG) && defined(__DATE__) && defined(__TIME__)
++#if !defined(HAVE_NOATEXIT)
+       atexit(one_time_fini);
++#endif
+ 
+ #if defined(DEBUG)
        if (MESA_VERBOSE != 0) {
- 	 _mesa_debug(ctx, "Mesa %s DEBUG build %s %s\n",
