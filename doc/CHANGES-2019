@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3566 2019/08/21 12:51:55 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3567 2019/08/21 13:04:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5822,3 +5822,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-wheel to 0.33.6 [adam 2019-08-21]
 	Updated www/py-soupsieve to 1.9.3 [adam 2019-08-21]
 	Updated devel/py-unittest2pytest to 0.4 [adam 2019-08-21]
+	Updated devel/py-futures to 3.3.0 [adam 2019-08-21]
+	Updated www/py-nbconvert to 5.6.0 [adam 2019-08-21]
+	Updated devel/py-fakefs to 3.6 [adam 2019-08-21]
+	Updated devel/py-pyparsing to 2.4.2 [adam 2019-08-21]
