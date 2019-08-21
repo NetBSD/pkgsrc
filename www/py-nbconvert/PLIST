@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/06/14 14:49:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/08/21 12:59:54 adam Exp $
 bin/jupyter-nbconvert-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
@@ -252,6 +252,7 @@ ${PYSITELIB}/nbconvert/preprocessors/tests/base.pyo
 ${PYSITELIB}/nbconvert/preprocessors/tests/fake_kernelmanager.py
 ${PYSITELIB}/nbconvert/preprocessors/tests/fake_kernelmanager.pyc
 ${PYSITELIB}/nbconvert/preprocessors/tests/fake_kernelmanager.pyo
+${PYSITELIB}/nbconvert/preprocessors/tests/files/Check History in Memory.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/Clear Output.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/Disable Stdin.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/Empty Cell.ipynb
@@ -261,11 +262,14 @@ ${PYSITELIB}/nbconvert/preprocessors/tests/files/Inline Image.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/Interrupt-IPY6.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/Interrupt.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/JupyterWidgets.ipynb
+${PYSITELIB}/nbconvert/preprocessors/tests/files/Parallel Execute A.ipynb
+${PYSITELIB}/nbconvert/preprocessors/tests/files/Parallel Execute B.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/SVG.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/Skip Exceptions with Cell Tags-IPY6.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/Skip Exceptions with Cell Tags.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/Skip Exceptions-IPY6.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/Skip Exceptions.ipynb
+${PYSITELIB}/nbconvert/preprocessors/tests/files/Sleep One.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/Unicode.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/UnicodePy3.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/python.png
