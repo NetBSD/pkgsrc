@@ -457,9 +457,10 @@ func (s *Suite) Test_MkLine__aligned(c *check.C) {
 		"\tvalue",
 		true)
 
-	// In commented multilines, the continuation lines may or may not start
-	// with a comment character. Bmake doesn't care, but for human readers
-	// it is confusing to omit the leading comment character.
+	// In commented multilines, bmake doesn't care whether the
+	// continuation lines does or doesn't start with a comment character.
+	// For human readers though, it is confusing to omit the leading
+	// comment character.
 	//
 	// For determining whether a multiline is aligned, the initial comment
 	// character is ignored.

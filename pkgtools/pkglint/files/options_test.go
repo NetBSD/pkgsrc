@@ -324,3 +324,66 @@ func (s *Suite) Test_CheckLinesOptionsMk__autofix(c *check.C) {
 		".  endif",
 		".endif")
 }
+
+// A few packages (such as www/w3m) define several options that are
+// handled by a single .if block in the lower part.
+func (s *Suite) Test_CheckLinesOptionsMk__combined_option_handling(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpOption("opt-variant1", "")
+	t.SetUpOption("opt-variant2", "")
+	t.SetUpOption("other", "")
+	t.CreateFileLines("mk/bsd.options.mk")
+	t.SetUpPackage("category/package",
+		".include \"options.mk\"")
+	t.CreateFileLines("category/package/options.mk",
+		MkCvsID,
+		"",
+		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.package",
+		"PKG_SUPPORTED_OPTIONS=\topt-variant1 opt-variant2",
+		"",
+		".include \"../../mk/bsd.options.mk\"",
+		"",
+		".if ${PKG_OPTIONS:Mopt-variant*}",
+		".endif")
+	t.FinishSetUp()
+	t.Chdir("category/package")
+
+	G.Check(".")
+
+	// Before 5.7.21 on 2019-08-17, pkglint issued an error about the
+	// "invalid option name opt-variant*" and warnings about the
+	// unhandled options "opt-variant1" and "opt-variant2".
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_CheckLinesOptionsMk__combined_option_handling_coverage(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpOption("opt-variant", "")
+	t.CreateFileLines("mk/bsd.options.mk")
+	t.SetUpPackage("category/package",
+		".include \"options.mk\"")
+	t.CreateFileLines("category/package/options.mk",
+		MkCvsID,
+		"",
+		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.package",
+		"PKG_SUPPORTED_OPTIONS=\topt-variant",
+		"",
+		".include \"../../mk/bsd.options.mk\"",
+		"",
+		".if ${PKG_OPTIONS:Mopt-[}", // intentional syntax error
+		".endif",
+		"",
+		".if ${PKG_OPTIONS:Mother-*}",
+		".endif")
+	t.FinishSetUp()
+	t.Chdir("category/package")
+
+	G.Check(".")
+
+	// The warning appears because the pattern "opt-[" is malformed
+	// and therefore doesn't match the option.
+	t.CheckOutputLines(
+		"WARN: options.mk:4: Option \"opt-variant\" should be handled below in an .if block.")
+}

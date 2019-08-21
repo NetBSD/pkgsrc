@@ -12,6 +12,35 @@ func (s *Suite) Test_VarTypeRegistry_Init(c *check.C) {
 	t.CheckEquals(src.vartypes.Canon("USE_BUILTIN.*").basicType.name, "YesNoIndirectly")
 }
 
+func (s *Suite) Test_VarTypeRegistry_compilerLanguages(c *check.C) {
+	t := s.Init(c)
+
+	G.Testing = false // Just for code coverage
+	t.CreateFileLines("mk/compiler.mk",
+		MkCvsID,
+		"",
+		"_CXX_STD_VERSIONS=      gnu++14",
+		".for _version_ in ${_CXX_STD_VERSIONS}",
+		".  if !empty(USE_LANGUAGES:M${_version_})",
+		"USE_LANGUAGES+=         c++",
+		".  endif",
+		".endfor",
+		"",
+		".if ${USE_LANGUAGES:Mexpr-lang} || !empty(USE_LANGUAGES:Mempty-lang)",
+		".endif",
+		"",
+		// Just for code coverage
+		".if ${OTHER} || ${USE_LANGUAGES} \\",
+		" || ${USE_LANGUAGES:O} || ${USE_LANGUAGES:Mc++-*}",
+		".endif")
+	reg := NewVarTypeRegistry()
+
+	compilerLanguages := reg.compilerLanguages(&G.Pkgsrc)
+
+	enumValues := compilerLanguages.AllowedEnums()
+	t.CheckEquals(enumValues, "empty-lang expr-lang gnu++14")
+}
+
 func (s *Suite) Test_VarTypeRegistry_enumFrom(c *check.C) {
 	t := s.Init(c)
 
@@ -38,7 +67,10 @@ func (s *Suite) Test_VarTypeRegistry_enumFrom(c *check.C) {
 		".  if !empty(USE_LANGUAGES:M${_version_})",
 		"USE_LANGUAGES+=         c++",
 		".  endif",
-		".endfor")
+		".endfor",
+		"",
+		".if ${USE_LANGUAGES:Mexpr-lang} || !empty(USE_LANGUAGES:Mempty-lang)",
+		".endif")
 
 	t.SetUpVartypes()
 
@@ -49,8 +81,8 @@ func (s *Suite) Test_VarTypeRegistry_enumFrom(c *check.C) {
 
 	test("EMACS_VERSIONS_ACCEPTED", "enum: emacs29 emacs31  (list, package-settable)")
 	test("PKG_JVM", "enum: jdk16 openjdk7 openjdk8 oracle-jdk8 sun-jdk7  (system-provided)")
-	test("USE_LANGUAGES", "enum: ada c c++ c++03 c++0x c++11 c++14 c99 "+
-		"fortran fortran77 gnu++03 gnu++0x gnu++11 gnu++14 java obj-c++ objc  (list, package-settable)")
+	test("USE_LANGUAGES", "enum: c++03 c++0x c++11 c++14 empty-lang expr-lang "+
+		"gnu++03 gnu++0x gnu++11 gnu++14  (list, package-settable)")
 	test("PKGSRC_COMPILER", "enum: ccache distcc f2c g95 gcc ido mipspro-ucode sunpro  (list, user-settable)")
 }
 
