@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.104 2019/07/16 11:38:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.105 2019/08/21 14:16:40 ryoon Exp $
 
-DISTNAME=	nsd-4.2.0
+DISTNAME=	nsd-4.2.2
 CATEGORIES=	net
 MASTER_SITES=	http://www.nlnetlabs.nl/downloads/nsd/
 
@@ -22,6 +22,11 @@ PKG_SUGGESTED_OPTIONS=	inet6
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
+
+.if ${OPSYS} == "NetBSD"
+# For reallocarray(3) on NetBSD 9
+CPPFLAGS+=	-D_OPENBSD_SOURCE
+.endif
 
 GNU_CONFIGURE=	yes
 
