@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/04/25 07:32:56 maya Exp $
+# $NetBSD: Makefile,v 1.21 2019/08/21 12:21:28 nia Exp $
 
 DISTNAME=	mesa-18.3.4
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -52,11 +52,11 @@ SUBST_SED.wrapper-bug+=		-e 's,libglapi_tmp_rename\.la,libglapi.la,g'
 SUBST_SED.wrapper-bug+=		-e 's,libglapi_tmp_rename_la,libglapi_la,g'
 
 # Replace /etc/drirc.d with ${PREFIX}/etc/drirc.d
-SUBST_CLASSES+=			drirc
-SUBST_STAGE.drirc=		pre-configure
-SUBST_MESSAGE.drirc=		Fixing hardcoded /etc/drirc.d references
-SUBST_FILES.drirc+=		src/util/xmlconfig.c
-SUBST_SED.drirc+=		 -e 's|/etc|${PREFIX}/etc|g'
+SUBST_CLASSES+=		drirc
+SUBST_STAGE.drirc=	pre-configure
+SUBST_MESSAGE.drirc=	Fixing hardcoded /etc/drirc.d references
+SUBST_FILES.drirc+=	src/util/xmlconfig.c
+SUBST_SED.drirc+=	-e 's|/etc|${PREFIX}/etc|g'
 
 CFLAGS.SunOS+=		-D__EXTENSIONS__ -D_POSIX_PTHREAD_SEMANTICS
 CXXFLAGS.SunOS+=	-Drestrict=__restrict__
@@ -102,9 +102,10 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/src/util/00-mesa-defaults.conf ${DESTDIR}${EGDIR}
 
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
-.include "../../textproc/expat/buildlink3.mk"
+.include "../../x11/libxshmfence/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
