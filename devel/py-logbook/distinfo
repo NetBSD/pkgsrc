@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/01/22 10:36:24 adam Exp $
+$NetBSD: distinfo,v 1.5 2019/08/21 08:58:23 adam Exp $
 
-SHA1 (Logbook-1.4.3.tar.gz) = 950414e1fe38d7570f1756f9c47c0cd15b7a69d2
-RMD160 (Logbook-1.4.3.tar.gz) = c22699437dcc02363652703f5792896138f9a1e8
-SHA512 (Logbook-1.4.3.tar.gz) = e029798635eef8c92557a76d906368295d4a7a74dce4ab5cfb91676479f54f346be09297c1da1a90cb2d50d42363f33ed36854ec32ab56b27e6ef724dee87fc6
-Size (Logbook-1.4.3.tar.gz) = 85559 bytes
+SHA1 (Logbook-1.5.2.tar.gz) = 628093270794b79262281eaf54b153ef6b45d903
+RMD160 (Logbook-1.5.2.tar.gz) = d7a7f1d4d88a17f53d3b3447e86222923de81e6a
+SHA512 (Logbook-1.5.2.tar.gz) = cc576cb30424a8e74a9a6c26b3a974e79782c200cf49fc260a503a5adc237e0cd99985fa8d064f9532134d5da1e608b37eabb679eec5f99bede8f070c5f9be40
+Size (Logbook-1.5.2.tar.gz) = 85748 bytes
