@@ -2184,6 +2184,9 @@ func (s *Suite) Test_MkLineChecker_checkVarUseQuoting(c *check.C) {
 	mklines := t.SetUpFileMkLines("options.mk",
 		MkCvsID,
 		"GOPATH=\t${WRKDIR}",
+		"",
+		"CONFIGURE_ENV+=\tNAME=${R_PKGNAME} VER=${R_PKGVER}",
+		"",
 		"do-build:",
 		"\tcd ${WRKSRC} && GOPATH=${GOPATH} PATH=${PATH} :")
 
@@ -2197,7 +2200,7 @@ func (s *Suite) Test_MkLineChecker_checkVarUseQuoting(c *check.C) {
 	// of pkgsrc, and these may contain special characters.
 
 	t.CheckOutputLines(
-		"WARN: ~/options.mk:4: The variable PATH should be quoted as part of a shell word.")
+		"WARN: ~/options.mk:7: The variable PATH should be quoted as part of a shell word.")
 }
 
 func (s *Suite) Test_MkLineChecker_checkVarUseQuoting__mstar(c *check.C) {

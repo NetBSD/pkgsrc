@@ -92,11 +92,13 @@ func (m MkVarUseModifier) Subst(str string) (string, bool) {
 //  :Mpattern   => true, true, "pattern"
 //  :Npattern   => true, false, "pattern"
 //  :X          => false
-func (m MkVarUseModifier) MatchMatch() (ok bool, positive bool, pattern string) {
+func (m MkVarUseModifier) MatchMatch() (ok bool, positive bool, pattern string, exact bool) {
 	if hasPrefix(m.Text, "M") || hasPrefix(m.Text, "N") {
-		return true, m.Text[0] == 'M', m.Text[1:]
+		// See devel/bmake/files/str.c:^Str_Match
+		exact := !strings.ContainsAny(m.Text[1:], "*?[\\")
+		return true, m.Text[0] == 'M', m.Text[1:], exact
 	}
-	return false, false, ""
+	return false, false, "", false
 }
 
 func (m MkVarUseModifier) IsToLower() bool { return m.Text == "tl" }

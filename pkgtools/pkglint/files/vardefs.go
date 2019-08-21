@@ -311,7 +311,12 @@ func (reg *VarTypeRegistry) infralist(varname string, basicType *BasicType) {
 // compilerLanguages reads the available languages that are typically
 // bundled in a single compiler framework, such as GCC or Clang.
 func (reg *VarTypeRegistry) compilerLanguages(src *Pkgsrc) *BasicType {
-	mklines := LoadMk(src.File("mk/compiler.mk"), NotEmpty)
+	options := NotEmpty
+	if !G.Testing {
+		options = NotEmpty | MustSucceed
+	}
+	mklines := LoadMk(src.File("mk/compiler.mk"), options)
+
 	languages := make(map[string]bool)
 	if mklines != nil {
 		for _, mkline := range mklines.mklines {
@@ -321,15 +326,19 @@ func (reg *VarTypeRegistry) compilerLanguages(src *Pkgsrc) *BasicType {
 					languages[intern(word)] = true
 				}
 			}
+
+			if mkline.IsDirective() && mkline.Cond() != nil {
+				mkline.Cond().Walk(&MkCondCallback{
+					VarUse: func(varuse *MkVarUse) {
+						if varuse.varname == "USE_LANGUAGES" && len(varuse.modifiers) == 1 {
+							ok, _, pattern, exact := varuse.modifiers[0].MatchMatch()
+							if ok && exact && !containsVarRef(pattern) {
+								languages[intern(pattern)] = true
+							}
+						}
+					}})
+			}
 		}
-	}
-
-	alwaysAvailable := [...]string{
-		"ada", "c", "c99", "c++", "c++11", "c++14",
-		"fortran", "fortran77", "java", "objc", "obj-c++"}
-
-	for _, language := range alwaysAvailable {
-		languages[language] = true
 	}
 
 	joined := keysJoined(languages)
@@ -1529,6 +1538,8 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 		"*: use, use-loadtime")
 	reg.sys("RUN", BtShellCommand)
 	reg.sys("RUN_LDCONFIG", BtYesNo)
+	reg.pkg("R_PKGNAME", BtRPkgName)
+	reg.pkg("R_PKGVER", BtRPkgVer)
 	reg.pkglist("SCRIPTS_ENV", BtShellWord)
 	reg.usrlist("SETGID_GAMES_PERMS", BtPerms)
 	reg.usrlist("SETUID_ROOT_PERMS", BtPerms)

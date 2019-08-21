@@ -1639,12 +1639,15 @@ func (s *Suite) Test_Package_checkGnuConfigureUseLanguages__realistic_compiler_m
 		"",
 		".include \"../../mk/compiler.mk\"")
 	t.CreateFileLines("mk/compiler.mk",
-		MkCvsID,
-		".include \"bsd.prefs.mk\"",
+		"_CXX_STD_VERSIONS=\tc++ c++14",
+		".if ${USE_LANGUAGES:Mada} \\",
+		" || ${USE_LANGUAGES:Mc} \\",
+		" || ${USE_LANGUAGES:Mfortran77}",
+		".endif",
 		"",
-		"USE_LANGUAGES?=\tc",
-		"USE_LANGUAGES+=\tc",
-		"USE_LANGUAGES+=\tc++")
+		// This line is ignored since it comes from the pkgsrc infrastructure.
+		"USE_LANGUAGES?=\t\tc")
+
 	t.FinishSetUp()
 
 	G.Check(t.File("category/package"))
@@ -1776,8 +1779,6 @@ func (s *Suite) Test_Package_checkUseLanguagesCompilerMk__too_late(c *check.C) {
 	t.SetUpPackage("category/package",
 		".include \"../../mk/compiler.mk\"",
 		"USE_LANGUAGES=\tc c99 fortran ada c++14")
-	t.CreateFileLines("mk/compiler.mk",
-		MkCvsID)
 	t.FinishSetUp()
 
 	G.Check(t.File("category/package"))
@@ -1798,8 +1799,6 @@ func (s *Suite) Test_Package_checkUseLanguagesCompilerMk__compiler_mk(c *check.C
 	t.CreateFileLines("category/package/compiler.mk",
 		MkCvsID,
 		"USE_LANGUAGES=\tc++")
-	t.CreateFileLines("mk/compiler.mk",
-		MkCvsID)
 	t.FinishSetUp()
 
 	G.Check(t.File("category/package"))

@@ -173,6 +173,10 @@ func (*VaralignBlock) split(textnl string, initial bool) varalignSplitResult {
 	lexer := p.lexer
 
 	parseLeadingComment := func() string {
+		if hasPrefix(lexer.Rest(), "# ") {
+			return ""
+		}
+
 		mark := lexer.Mark()
 
 		if !lexer.SkipByte('#') && initial && lexer.SkipByte(' ') {
@@ -379,7 +383,7 @@ func (va *VaralignBlock) realign(info *varalignLine, newWidth int) {
 	}
 }
 
-func (va *VaralignBlock) realignMultiEmptyInitial(info *varalignLine, newWidth int) {
+func (*VaralignBlock) realignMultiEmptyInitial(info *varalignLine, newWidth int) {
 	leadingComment := info.parts.leadingComment
 	varnameOp := info.parts.varnameOp
 	oldSpace := info.parts.spaceBeforeValue
@@ -400,15 +404,15 @@ func (va *VaralignBlock) realignMultiEmptyInitial(info *varalignLine, newWidth i
 	}
 
 	hasSpace := strings.IndexByte(oldSpace, ' ') != -1
-	oldColumn := tabWidth(leadingComment + varnameOp + oldSpace)
+	oldColumn := info.varnameOpSpaceWidth()
 	column := tabWidth(leadingComment + varnameOp + newSpace)
-
-	assert(column >= oldColumn || column > info.varnameOpWidth())
 
 	// TODO: explicitly mention "single space", "tabs to the newWidth", "tabs to column 72"
 
 	fix := info.mkline.Autofix()
-	if hasSpace && column != oldColumn {
+	if newSpace == " " {
+		fix.Notef("This outlier variable should be aligned with a single space.")
+	} else if hasSpace && column != oldColumn {
 		fix.Notef("This variable value should be aligned with tabs, not spaces, to column %d.", column+1)
 	} else if column != oldColumn {
 		fix.Notef("This variable value should be aligned to column %d.", column+1)
@@ -431,15 +435,7 @@ func (va *VaralignBlock) realignMultiEmptyFollow(info *varalignLine, newWidth in
 		}
 	}
 
-	newWidth = oldWidth + va.indentDiff
-	if newWidth < 8 {
-		newWidth = oldWidth & -8
-		if newWidth < 8 {
-			newWidth = 8
-		}
-	}
-
-	newSpace := indent(newWidth)
+	newSpace := indent(imax(oldWidth+va.indentDiff, 8))
 	if newSpace == oldSpace {
 		return
 	}
@@ -531,12 +527,11 @@ func (va *VaralignBlock) realignSingle(info *varalignLine, newWidth int) {
 	oldColumn := tabWidth(leadingComment + varnameOp + oldSpace)
 	column := tabWidth(leadingComment + varnameOp + newSpace)
 
-	if info.parts.value == "" && info.parts.trailingComment == "" && !info.continuation() {
-		return
-	}
-
 	fix := info.mkline.Autofix()
-	if hasSpace && column != oldColumn {
+	if newSpace == " " {
+		fix.Notef("This outlier variable value should be aligned with a single space.")
+		va.explainWrongColumn(fix)
+	} else if hasSpace && column != oldColumn {
 		fix.Notef("This variable value should be aligned with tabs, not spaces, to column %d.", column+1)
 		va.explainWrongColumn(fix)
 	} else if column != oldColumn {

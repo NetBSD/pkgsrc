@@ -599,7 +599,7 @@ func (ck MkLineChecker) checkVaruseModifiersRange(varuse *MkVarUse) {
 	if len(mods) == 3 {
 		if m, _, from, to, options := mods[0].MatchSubst(); m && from == "^" && matches(to, `^\w+$`) && options == "1" {
 			magic := to
-			if m, positive, pattern := mods[1].MatchMatch(); m && positive && pattern == magic+"*" {
+			if m, positive, pattern, _ := mods[1].MatchMatch(); m && positive && pattern == magic+"*" {
 				if m, _, from, to, options = mods[2].MatchSubst(); m && from == "^"+magic && to == "" && options == "" {
 					fix := ck.MkLine.Autofix()
 					fix.Notef("The modifier %q can be written as %q.", varuse.Mod(), ":[1]")
@@ -1583,7 +1583,8 @@ func (ck MkLineChecker) simplifyCondition(varuse *MkVarUse, fromEmpty bool, notE
 			pattern +
 			condStr(fromEmpty, ")", "}")
 
-		to := "${" + varname + "} " + op + " " + pattern
+		quote := condStr(matches(pattern, `[^\-/0-9@A-Za-z]`), "\"", "")
+		to := "${" + varname + "} " + op + " " + quote + pattern + quote
 
 		// TODO: Check in more cases whether the parentheses are really necessary.
 		//  In a !!${VAR} expression, parentheses are necessary.
@@ -1599,11 +1600,11 @@ func (ck MkLineChecker) simplifyCondition(varuse *MkVarUse, fromEmpty bool, notE
 	modifiers := varuse.modifiers
 
 	for _, modifier := range modifiers {
-		if m, positive, pattern := modifier.MatchMatch(); m && (positive || len(modifiers) == 1) {
+		if m, positive, pattern, exact := modifier.MatchMatch(); m && (positive || len(modifiers) == 1) {
 			ck.checkVartype(varname, opUseMatch, pattern, "")
 
 			vartype := G.Pkgsrc.VariableType(ck.MkLines, varname)
-			if matches(pattern, `^[\w-/]+$`) && vartype != nil && !vartype.List() {
+			if exact && matches(pattern, `^[\w-/]+$`) && vartype != nil && !vartype.List() {
 
 				fix := ck.MkLine.Autofix()
 				fix.Notef("%s should be compared using %s instead of matching against %q.",
@@ -1649,7 +1650,7 @@ func (ck MkLineChecker) checkDirectiveCondCompareVarStr(varuse *MkVarUse, op str
 		ck.checkCompareVarStr(varname, op, str)
 
 	case 1:
-		if m, _, pattern := varmods[0].MatchMatch(); m {
+		if m, _, pattern, _ := varmods[0].MatchMatch(); m {
 			ck.checkVartype(varname, opUseMatch, pattern, "")
 
 			// After applying the :M or :N modifier, every expression may end up empty,

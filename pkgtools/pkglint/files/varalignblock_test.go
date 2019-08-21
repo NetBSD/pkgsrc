@@ -29,6 +29,8 @@ func (vt *VaralignTester) Input(lines ...string) { vt.input = lines }
 
 // Internals remembers the expected internal state of the varalignBlockInfos,
 // to better trace down at which points the decisions are made.
+//
+// Each line has the format "<min-width> <actual-width>".
 func (vt *VaralignTester) Internals(lines ...string) { vt.internals = lines }
 
 // Diagnostics remembers the expected diagnostics.
@@ -1053,7 +1055,7 @@ func (s *Suite) Test_VaralignBlock__outlier_in_follow_continuation(c *check.C) {
 		"38 38",
 		"   24")
 	vt.Diagnostics(
-		"NOTE: ~/Makefile:2: This variable value should be aligned to column 40.")
+		"NOTE: ~/Makefile:2: This outlier variable should be aligned with a single space.")
 	vt.Autofixes(
 		"AUTOFIX: ~/Makefile:2: Replacing \"\" with \" \".")
 	vt.Fixed(
@@ -1800,6 +1802,60 @@ func (s *Suite) Test_VaralignBlock__outlier_14(c *check.C) {
 	vt.Run()
 }
 
+func (s *Suite) Test_VaralignBlock__outlier_with_several_spaces(c *check.C) {
+	vt := NewVaralignTester(s, c)
+	vt.Input(
+		"SHORT=\tvalue",
+		"VERY_VERY_LONG_VARIABLE_NAME=   value")
+	vt.Internals(
+		"06 08",
+		"29 32")
+	vt.Diagnostics(
+		"NOTE: ~/Makefile:2: This outlier variable value should be aligned with a single space.")
+	vt.Autofixes(
+		"AUTOFIX: ~/Makefile:2: Replacing \"   \" with \" \".")
+	vt.Fixed(
+		"SHORT=  value",
+		"VERY_VERY_LONG_VARIABLE_NAME= value")
+	vt.Run()
+}
+
+func (s *Suite) Test_VaralignBlock__single_space_in_short_line(c *check.C) {
+	vt := NewVaralignTester(s, c)
+	vt.Input(
+		"SHORT= value",
+		"LONG_NAME=\tvalue")
+	vt.Internals(
+		"06 07",
+		"10 16")
+	vt.Diagnostics(
+		"NOTE: ~/Makefile:1: This variable value should be aligned with tabs, not spaces, to column 17.")
+	vt.Autofixes(
+		"AUTOFIX: ~/Makefile:1: Replacing \" \" with \"\\t\\t\".")
+	vt.Fixed(
+		"SHORT=          value",
+		"LONG_NAME=      value")
+	vt.Run()
+}
+
+func (s *Suite) Test_VaralignBlock__outlier_without_space(c *check.C) {
+	vt := NewVaralignTester(s, c)
+	vt.Input(
+		"SHORT=\tvalue",
+		"LONG.678901234567890=value")
+	vt.Internals(
+		"06 08",
+		"21 21")
+	vt.Diagnostics(
+		"NOTE: ~/Makefile:2: This outlier variable value should be aligned with a single space.")
+	vt.Autofixes(
+		"AUTOFIX: ~/Makefile:2: Replacing \"\" with \" \".")
+	vt.Fixed(
+		"SHORT=  value",
+		"LONG.678901234567890= value")
+	vt.Run()
+}
+
 // The INSTALLATION_DIRS line is so long that it is considered an outlier,
 // since compared to the DIST line, it is at least two tabs away.
 // Pkglint before 2018-01-26 suggested that it "should be aligned to column 9",
@@ -2224,6 +2280,25 @@ func (s *Suite) Test_VaralignBlock__command_with_arguments(c *check.C) {
 	vt.Run()
 }
 
+// Variables with empty values and no comments are completely ignored,
+// since they have nothing to be aligned with the other lines.
+func (s *Suite) Test_VaralignBlock__empty_value(c *check.C) {
+	vt := NewVaralignTester(s, c)
+	vt.Input(
+		"EMPTY_VALUE=",
+		"VAR=\t\tvalue")
+	vt.Internals(
+		"04 16")
+	vt.Diagnostics(
+		nil...)
+	vt.Autofixes(
+		nil...)
+	vt.Fixed(
+		"EMPTY_VALUE=",
+		"VAR=            value")
+	vt.Run()
+}
+
 func (s *Suite) Test_VaralignBlock_Process__autofix(c *check.C) {
 	t := s.Init(c)
 
@@ -2345,14 +2420,105 @@ func (s *Suite) Test_VaralignBlock_realignMultiEmptyInitial(c *check.C) {
 	mklines := t.NewMkLines("filename.mk",
 		MkCvsID,
 		"VAR=\t${VAR}",
-		// FIXME: It's not possible to align with tabs to column 21.
 		"LONG_VARIABLE_NAME=    \t        \\",
 		"\t${LONG_VARIABLE_NAME}")
 
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"NOTE: filename.mk:3: This variable value should be aligned with tabs, not spaces, to column 21.")
+		"NOTE: filename.mk:3: This outlier variable should be aligned with a single space.")
+}
+
+func (s *Suite) Test_VaralignBlock_realignMultiEmptyInitial__spaces(c *check.C) {
+	vt := NewVaralignTester(s, c)
+	vt.Input(
+		"VAR=    \\",
+		"\tvalue",
+		// This line is necessary to trigger the realignment; see VaralignBlock.Finish.
+		"VAR= value")
+	vt.Internals(
+		"04 08",
+		"   08",
+		"04 05")
+	vt.Diagnostics(
+		"NOTE: ~/Makefile:1: Variable values should be aligned with tabs, not spaces.",
+		"NOTE: ~/Makefile:3: This variable value should be aligned with tabs, not spaces, to column 9.")
+	vt.Autofixes(
+		"AUTOFIX: ~/Makefile:1: Replacing \"    \" with \"\\t\".",
+		"AUTOFIX: ~/Makefile:3: Replacing \" \" with \"\\t\".")
+	vt.Fixed(
+		"VAR=    \\",
+		"        value",
+		"VAR=    value")
+	vt.Run()
+}
+
+func (s *Suite) Test_VaralignBlock_realignMultiInitial__spaces(c *check.C) {
+	vt := NewVaralignTester(s, c)
+	vt.Input(
+		"VAR=    value1 \\",
+		"        value2")
+	vt.Internals(
+		"04 08",
+		"   08")
+	vt.Diagnostics(
+		"NOTE: ~/Makefile:1: Variable values should be aligned with tabs, not spaces.",
+		"NOTE: ~/Makefile:2: This continuation line should be indented with \"\\t\".")
+	vt.Autofixes(
+		"AUTOFIX: ~/Makefile:1: Replacing \"    \" with \"\\t\".",
+		"AUTOFIX: ~/Makefile:2: Replacing \"        \" with \"\\t\".")
+	vt.Fixed(
+		"VAR=    value1 \\",
+		"        value2")
+	vt.Run()
+}
+
+// This example is quite unrealistic since typically the first line is
+// the least indented.
+//
+// All follow-up lines are indented with at least one tab, to make clear
+// they are continuation lines.
+func (s *Suite) Test_VaralignBlock_realignMultiEmptyFollow(c *check.C) {
+	vt := NewVaralignTester(s, c)
+	vt.Input(
+		"VAR= \\",
+		"        value1 \\",
+		"          value2 \\",
+		"      value3 \\",
+		"value4 \\",
+		"\\",
+		"# comment")
+	vt.Internals(
+		"04 05",
+		"   08",
+		"   10",
+		"   06",
+		"   00",
+		"   00",
+		"   00")
+	vt.Diagnostics(
+		"NOTE: ~/Makefile:2: This continuation line should be indented with \"\\t\".",
+		"NOTE: ~/Makefile:3: This continuation line should be indented with \"\\t  \".",
+		"NOTE: ~/Makefile:4: This continuation line should be indented with \"\\t\".",
+		"NOTE: ~/Makefile:5: This continuation line should be indented with \"\\t\".",
+		"NOTE: ~/Makefile:6: This continuation line should be indented with \"\\t\".",
+		"NOTE: ~/Makefile:7: This continuation line should be indented with \"\\t\".")
+	vt.Autofixes(
+		"AUTOFIX: ~/Makefile:2: Replacing \"        \" with \"\\t\".",
+		"AUTOFIX: ~/Makefile:3: Replacing \"          \" with \"\\t  \".",
+		"AUTOFIX: ~/Makefile:4: Replacing \"      \" with \"\\t\".",
+		"AUTOFIX: ~/Makefile:5: Replacing \"\" with \"\\t\".",
+		"AUTOFIX: ~/Makefile:6: Replacing \"\" with \"\\t\".",
+		"AUTOFIX: ~/Makefile:7: Replacing \"\" with \"\\t\".")
+	vt.Fixed(
+		"VAR= \\",
+		"        value1 \\",
+		"          value2 \\",
+		"        value3 \\",
+		"        value4 \\",
+		"        \\",
+		"        # comment")
+	vt.Run()
 }
 
 func (s *Suite) Test_VaralignBlock_split(c *check.C) {
@@ -2546,6 +2712,68 @@ func (s *Suite) Test_VaralignBlock_split(c *check.C) {
 			continuation:      "\\",
 		})
 
+	// A follow-up line may start with a comment character. There are
+	// two possible interpretations:
+	//
+	// 1. It is a leading comment, and the rest of the line is parsed
+	// as usual.
+	//
+	// 2. It is a continuation of the value, and therefore the value ends
+	// here; everything after this line is part of the trailing comment.
+	//
+	// The character that follows the comment character decides which
+	// interpretation is used. A space makes the comment a trailing
+	// comment since that's the way these trailing comments typically look.
+	// Any other character makes it a leading comment.
+
+	test("#\tcomment", false,
+		varalignSplitResult{
+			leadingComment:    "#",
+			varnameOp:         "",
+			spaceBeforeValue:  "\t",
+			value:             "comment",
+			spaceAfterValue:   "",
+			trailingComment:   "",
+			spaceAfterComment: "",
+			continuation:      "",
+		})
+
+	test("#\tcomment \\", false,
+		varalignSplitResult{
+			leadingComment:    "#",
+			varnameOp:         "",
+			spaceBeforeValue:  "\t",
+			value:             "comment",
+			spaceAfterValue:   " ",
+			trailingComment:   "",
+			spaceAfterComment: "",
+			continuation:      "\\",
+		})
+
+	test("# comment", false,
+		varalignSplitResult{
+			leadingComment:    "",
+			varnameOp:         "",
+			spaceBeforeValue:  "",
+			value:             "",
+			spaceAfterValue:   "",
+			trailingComment:   "# comment",
+			spaceAfterComment: "",
+			continuation:      "",
+		})
+
+	test("# comment \\", false,
+		varalignSplitResult{
+			leadingComment:    "",
+			varnameOp:         "",
+			spaceBeforeValue:  "",
+			value:             "",
+			spaceAfterValue:   "",
+			trailingComment:   "# comment",
+			spaceAfterComment: " ",
+			continuation:      "\\",
+		})
+
 	// Commented variable assignments are only valid if they
 	// directly follow the comment sign.
 	//
@@ -2553,6 +2781,26 @@ func (s *Suite) Test_VaralignBlock_split(c *check.C) {
 	// the VaralignBlock.
 	t.ExpectAssert(
 		func() { test("#  VAR=    value", true, varalignSplitResult{}) })
+}
+
+// This test runs canonicalInitial directly since as of August 2019
+// that function is only used in a single place, and from this place
+// varnameOpSpaceWidth is always bigger than width.
+func (s *Suite) Test_varalignLine_canonicalInitial(c *check.C) {
+	t := s.Init(c)
+
+	var v varalignLine
+	v.parts.varnameOp = "LONG.123456789="
+	v.parts.spaceBeforeValue = " "
+	t.CheckEquals(v.canonicalInitial(16), false)
+
+	v.parts.varnameOp = "LONG.1234567890="
+
+	t.CheckEquals(v.canonicalInitial(16), true)
+
+	v.parts.spaceBeforeValue = ""
+
+	t.CheckEquals(v.canonicalInitial(16), false)
 }
 
 func (s *Suite) Test_varalignLine_canonicalFollow(c *check.C) {
