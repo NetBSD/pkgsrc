@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3572 2019/08/21 16:31:18 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3573 2019/08/21 16:58:57 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5832,3 +5832,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/nsd to 4.2.2 [ryoon 2019-08-21]
 	Updated net/knot to 2.8.3 [ryoon 2019-08-21]
 	Removed graphics/MesaLib11 successor graphics/MesaLib [nia 2019-08-21]
+	Updated pkgtools/pkglint to 5.7.21 [rillig 2019-08-21]
