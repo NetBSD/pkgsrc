@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/05/03 10:54:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/08/21 10:25:56 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -147,6 +147,9 @@ ${PYSITELIB}/ipykernel/tests/test_embed_kernel.pyo
 ${PYSITELIB}/ipykernel/tests/test_eventloop.py
 ${PYSITELIB}/ipykernel/tests/test_eventloop.pyc
 ${PYSITELIB}/ipykernel/tests/test_eventloop.pyo
+${PYSITELIB}/ipykernel/tests/test_heartbeat.py
+${PYSITELIB}/ipykernel/tests/test_heartbeat.pyc
+${PYSITELIB}/ipykernel/tests/test_heartbeat.pyo
 ${PYSITELIB}/ipykernel/tests/test_io.py
 ${PYSITELIB}/ipykernel/tests/test_io.pyc
 ${PYSITELIB}/ipykernel/tests/test_io.pyo
