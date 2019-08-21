@@ -1,19 +1,19 @@
-$NetBSD: patch-src_mesa_x86_common__x86.c,v 1.2 2015/09/11 00:03:36 tnn Exp $
+$NetBSD: patch-src_mesa_x86_common__x86.c,v 1.3 2019/08/21 13:35:28 nia Exp $
 
 DragonFly support.
 
---- src/mesa/x86/common_x86.c.orig	2015-07-14 18:10:47.000000000 +0000
+--- src/mesa/x86/common_x86.c.orig	2017-05-10 14:13:58.000000000 +0000
 +++ src/mesa/x86/common_x86.c
-@@ -38,7 +38,7 @@
- #if defined(USE_SSE_ASM) && defined(__linux__)
- #include <linux/version.h>
- #endif
+@@ -35,7 +35,7 @@
+  */
+ 
+ /* XXX these includes should probably go into imports.h or glheader.h */
 -#if defined(USE_SSE_ASM) && defined(__FreeBSD__)
 +#if defined(USE_SSE_ASM) && (defined(__FreeBSD__) || defined(__DragonFly__))
  #include <sys/types.h>
  #include <sys/sysctl.h>
  #endif
-@@ -128,7 +128,7 @@ static LONG WINAPI ExceptionFilter(LPEXC
+@@ -125,7 +125,7 @@ static LONG WINAPI ExceptionFilter(LPEXC
   */
  void _mesa_check_os_sse_support( void )
  {

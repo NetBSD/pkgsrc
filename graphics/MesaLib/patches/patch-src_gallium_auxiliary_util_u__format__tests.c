@@ -1,4 +1,4 @@
-$NetBSD: patch-src_gallium_auxiliary_util_u__format__tests.c,v 1.1 2015/04/25 11:19:18 tnn Exp $
+$NetBSD: patch-src_gallium_auxiliary_util_u__format__tests.c,v 1.2 2019/08/21 13:35:28 nia Exp $
 
 On old NetBSD, NAN in math.h is __nanf.__val. Which is not constant.
 
