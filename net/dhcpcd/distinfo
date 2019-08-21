@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.83 2019/07/30 10:30:22 roy Exp $
+$NetBSD: distinfo,v 1.84 2019/08/21 17:08:33 roy Exp $
 
-SHA1 (dhcpcd-8.0.2.tar.xz) = 2230abeae35c048ecd095e8f1c4614564b4d3ff3
-RMD160 (dhcpcd-8.0.2.tar.xz) = 159e8decddff91920d7737aa1627e08fb10e964c
-SHA512 (dhcpcd-8.0.2.tar.xz) = a6e3aa66800adc8b209324bae02a6e373e2623735bf0695ffec4a7c972d65c3498f55e4da62f93df0bc6cddb4bee8ab667b3743b5b25cd5f4cc9da4d1f8e15c4
-Size (dhcpcd-8.0.2.tar.xz) = 222408 bytes
+SHA1 (dhcpcd-8.0.3.tar.xz) = 039739364dd494c3f49a4a924bc46e58506ea520
+RMD160 (dhcpcd-8.0.3.tar.xz) = aa03ef190208c9d3bc355eab8c619883c69a5d26
+SHA512 (dhcpcd-8.0.3.tar.xz) = 0a740286181e1b24e7ac5157f60727c2a3abd81080235efc8ba86628bb8e2aa877b8d9348055c16cdae1a819f443afbf452907a25152bb936a6dc72f3a179944
+Size (dhcpcd-8.0.3.tar.xz) = 223104 bytes
