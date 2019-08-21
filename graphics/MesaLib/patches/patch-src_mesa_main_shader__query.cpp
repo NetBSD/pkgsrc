@@ -1,4 +1,4 @@
-$NetBSD: patch-src_mesa_main_shader__query.cpp,v 1.1 2015/05/16 16:39:52 tnn Exp $
+$NetBSD: patch-src_mesa_main_shader__query.cpp,v 1.2 2019/08/21 13:35:28 nia Exp $
 
 https://bugs.freedesktop.org/show_bug.cgi?id=66346
 
@@ -15,34 +15,44 @@ https://bugs.freedesktop.org/show_bug.cgi?id=66346
  src/mesa/main/shader_query.cpp | 6 +++---
  1 file changed, 3 insertions(+), 3 deletions(-)
 
-diff --git a/src/mesa/main/shader_query.cpp b/src/mesa/main/shader_query.cpp
-index bc6fec5..22d9e0f 100644
---- src/mesa/main/shader_query.cpp
+--- src/mesa/main/shader_query.cpp.orig	2016-11-10 22:05:17.000000000 +0000
 +++ src/mesa/main/shader_query.cpp
-@@ -68,7 +68,7 @@ _mesa_BindAttribLocation(GLhandleARB program, GLuint index,
+@@ -70,7 +70,12 @@ _mesa_BindAttribLocation(GLuint program,
     GET_CURRENT_CONTEXT(ctx);
  
     struct gl_shader_program *const shProg =
--      _mesa_lookup_shader_program_err(ctx, program, "glBindAttribLocation");
++#if defined(__APPLE__)
 +      _mesa_lookup_shader_program_err(ctx, (GLuint)(uintptr_t)program, "glBindAttribLocation");
++#else
+       _mesa_lookup_shader_program_err(ctx, program, "glBindAttribLocation");
++#endif
++
     if (!shProg)
        return;
  
-@@ -136,7 +136,7 @@ _mesa_GetActiveAttrib(GLhandleARB program, GLuint desired_index,
+@@ -114,7 +119,12 @@ _mesa_GetActiveAttrib(GLuint program, GL
        return;
     }
  
--   shProg = _mesa_lookup_shader_program_err(ctx, program, "glGetActiveAttrib");
++#if defined(__APPLE__)
 +   shProg = _mesa_lookup_shader_program_err(ctx, (GLuint)(uintptr_t)program, "glGetActiveAttrib");
++#else
+    shProg = _mesa_lookup_shader_program_err(ctx, program, "glGetActiveAttrib");
++#endif
++
     if (!shProg)
        return;
  
-@@ -250,7 +250,7 @@ _mesa_GetAttribLocation(GLhandleARB program, const GLcharARB * name)
+@@ -159,7 +169,12 @@ _mesa_GetAttribLocation(GLuint program,
  {
     GET_CURRENT_CONTEXT(ctx);
     struct gl_shader_program *const shProg =
--      _mesa_lookup_shader_program_err(ctx, program, "glGetAttribLocation");
++
++#if defined(__APPLE__)
 +      _mesa_lookup_shader_program_err(ctx, (GLuint)(uintptr_t)program, "glGetAttribLocation");
++#else
+       _mesa_lookup_shader_program_err(ctx, program, "glGetAttribLocation");
++#endif
  
     if (!shProg) {
        return -1;

@@ -1,10 +1,10 @@
-$NetBSD: patch-src_mapi_glapi_gen_gl__gentable.py,v 1.1 2015/09/11 00:03:36 tnn Exp $
+$NetBSD: patch-src_mapi_glapi_gen_gl__gentable.py,v 1.2 2019/08/21 13:35:28 nia Exp $
 
 FreeBSD support.
 
---- src/mapi/glapi/gen/gl_gentable.py.orig	2015-07-29 21:28:50.156039000 +0000
+--- src/mapi/glapi/gen/gl_gentable.py.orig	2017-02-13 11:55:49.000000000 +0000
 +++ src/mapi/glapi/gen/gl_gentable.py
-@@ -42,7 +42,7 @@ header = """/* GLXEXT is the define used
+@@ -44,7 +44,7 @@ header = """/* GLXEXT is the define used
  #endif
  
  #if (defined(GLXEXT) && defined(HAVE_BACKTRACE)) \\

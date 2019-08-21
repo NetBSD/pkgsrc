@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.57 2019/01/19 21:36:21 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.58 2019/08/21 13:35:28 nia Exp $
 
 BUILDLINK_TREE+=	MesaLib
 
@@ -13,8 +13,8 @@ BUILDLINK_PKGSRCDIR.MesaLib?=	../../graphics/MesaLib
 
 .if ${X11_TYPE} == "modular"
 BUILDLINK_ABI_DEPENDS.MesaLib+=	MesaLib>=10.5.3
-# This is needed to avoid linking conflicting libstdc++ versions
 .  if defined(USE_LANGUAGES) && !empty(USE_LANGUAGES:Mc++)
+# This is needed to avoid linking conflicting libstdc++ versions
 GCC_REQD+=			4.2
 .  endif
 .endif
@@ -35,7 +35,7 @@ PKG_BUILD_OPTIONS.MesaLib+=	dri
 .  include "../../graphics/MesaLib/dri.mk"
 .endif
 
-.if	${X11_TYPE} == "modular" && !empty(PKG_BUILD_OPTIONS.MesaLib:Mdri) && ${OPSYS} != "Darwin" ||	\
+.if	${X11_TYPE} == "modular" && !empty(PKG_BUILD_OPTIONS.MesaLib:Mdri) ||	\
 	${X11_TYPE} == "native"  && exists(${X11BASE}/include/EGL/egl.h)
 MESALIB_SUPPORTS_EGL=	yes
 .else
@@ -43,6 +43,7 @@ MESALIB_SUPPORTS_EGL=	no
 .endif
 
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .endif # MESALIB_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-MesaLib

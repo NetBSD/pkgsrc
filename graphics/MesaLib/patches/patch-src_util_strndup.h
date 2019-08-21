@@ -1,15 +1,15 @@
-$NetBSD: patch-src_util_strndup.h,v 1.1 2016/02/23 11:16:55 jperkin Exp $
+$NetBSD: patch-src_util_strndup.h,v 1.2 2019/08/21 13:35:28 nia Exp $
 
 Provide compat strndup for older Darwin.
 
---- src/util/strndup.h.orig	2016-01-22 15:44:31.000000000 +0000
+--- src/util/strndup.h.orig	2017-05-10 14:13:58.000000000 +0000
 +++ src/util/strndup.h
-@@ -25,7 +25,7 @@
- 
- #include <stdlib.h> // size_t
+@@ -24,7 +24,7 @@
+ #ifndef STRNDUP_H
+ #define STRNDUP_H
  
 -#if defined(_WIN32)
 +#if defined(_WIN32) || (defined(__APPLE__) && __ENVIRONMENT_MAC_OS_X_VERSION_MIN_REQUIRED__-0 < 1070)
  
- #ifdef __cplusplus
- extern "C" {
+ #include <stdlib.h> // size_t
+ #include <string.h>

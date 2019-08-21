@@ -1,17 +1,20 @@
-$NetBSD: patch-src_mapi_entry__x86__tls.h,v 1.2 2015/09/26 08:45:02 tnn Exp $
+$NetBSD: patch-src_mapi_entry__x86__tls.h,v 1.3 2019/08/21 13:35:28 nia Exp $
 
 NetBSD only supports zero-initialized initial-exec tls variables in conjuction
 with dlopen(3) at the moment.
 
 Fix --enable-glx-tls with clang. From FreeBSD.
 
---- src/mapi/entry_x86_tls.h.orig	2015-09-02 17:06:23.000000000 +0000
+table_noop_array is only defined for shared-glapi.
+es1api and es2api are not going to be patched for NetBSD.
+
+--- src/mapi/entry_x86_tls.h.orig	2018-01-18 21:30:29.000000000 +0000
 +++ src/mapi/entry_x86_tls.h
-@@ -50,10 +50,27 @@ __asm__(".balign 16\n"
+@@ -56,10 +56,27 @@ __asm__(".balign 16\n"
     ".balign 16\n"                \
     func ":"
  
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) && defined(MAPI_MODE_GLAPI)
 +extern const mapi_func table_noop_array[];
  #define STUB_ASM_CODE(slot)      \
     "call x86_current_tls\n\t"    \
@@ -35,14 +38,3 @@ Fix --enable-glx-tls with clang. From FreeBSD.
  
  #define MAPI_TMP_STUB_ASM_GCC
  #include "mapi_tmp.h"
-@@ -71,8 +88,8 @@ __asm__(".text");
- extern unsigned long
- x86_current_tls();
- 
--static char x86_entry_start[];
--static char x86_entry_end[];
-+extern char x86_entry_start[] __attribute__((visibility("hidden")));
-+extern char x86_entry_end[] __attribute__((visibility("hidden")));
- 
- void
- entry_patch_public(void)
