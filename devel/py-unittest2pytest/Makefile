@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/02/25 00:22:53 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2019/08/21 12:51:18 adam Exp $
 
-DISTNAME=	unittest2pytest-0.3
+DISTNAME=	unittest2pytest-0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/unittest2pytest/}
@@ -12,10 +12,9 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
-
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/unittest2pytest \
-		${DESTDIR}${PREFIX}/bin/unittest2pytest${PYVERSSUFFIX}
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} unittest2pytest unittest2pytest-${PYVERSSUFFIX} || ${TRUE}
 
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
