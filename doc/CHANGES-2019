@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3568 2019/08/21 13:22:54 hauke Exp $
+$NetBSD: CHANGES-2019,v 1.3569 2019/08/21 13:37:24 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5827,3 +5827,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-fakefs to 3.6 [adam 2019-08-21]
 	Updated devel/py-pyparsing to 2.4.2 [adam 2019-08-21]
 	Updated pkgtools/pkgdiff to 1.9 [hauke 2019-08-21]
+	Moved graphics/MesaLib18 to graphics/MesaLib [nia 2019-08-21]
+	Added graphics/MesaLib11 version 11.2.2 [nia 2019-08-21]
