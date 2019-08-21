@@ -1,6 +1,6 @@
 #!@PERL5@
 #
-# $NetBSD: mkpatches.pl,v 1.21 2016/02/10 16:00:10 wiz Exp $
+# $NetBSD: mkpatches.pl,v 1.22 2019/08/21 13:00:06 hauke Exp $
 #
 # mkpatches: creates a set of patches patch-aa, patch-ab, ...
 #   in work/.newpatches by looking for *.orig files in and below
@@ -39,24 +39,29 @@
 # POSSIBILITY OF SUCH DAMAGE.
 #
 
+use warnings;
+
 use Getopt::Std;
 use Cwd;
 use File::Spec;
 
+my $prog;
+my $patchfile;
 my $patchdir;
+my $origpatchdir;
 my $old_patchdir;
 my $wrkdir;
 my $wrksrc;
 my %old_filename;
 my %old_header;
 
-# create patchdir, or empty it if already existing
+# create patchdir, and populate with existing patches
 
 sub create_patchdir {
     if (! -d $patchdir) {
 	mkdir($patchdir, 0755);
-	if (-d $origpatchdir && "$origpatchdir" != "$patchdir") {
-	    system("cp", "$origpatchdir/p*", "$patchdir");
+	if (-d $origpatchdir && "$origpatchdir" ne "$patchdir") {
+	    system("cp $origpatchdir/p* $patchdir");
 	}
     }
 }
@@ -114,7 +119,8 @@ $origpatchdir = get_variable("PATCHDIR");
 if ($opt_D) {
     $patchdir = "$wrkdir/.newpatches";
 } elsif ($opt_d) {
-    if (-d "/$opt_d") {
+    if ($opt_d =~ /^\//) {
+        # Do not prefix an absolute path
 	$patchdir = $opt_d;
     } else {
 	my $pwd = cwd();
@@ -168,6 +174,7 @@ if ($opt_w) {
 # create patches
 
 foreach (sort <HANDLE>) {
+    my $diff;
     my ($path, $complete);
     my ($new, $old);
     chomp();
@@ -231,6 +238,8 @@ sub analyze_old_patches
 
 sub move_away_old_patches
 {
+    my $filename;
+
     open(HANDLE, "ls $patchdir/patch-* 2>/dev/null |");
 
     while ($filename = <HANDLE>) {
