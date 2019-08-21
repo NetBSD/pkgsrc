@@ -1,3 +1,0 @@
-This is a generic modesetting driver. The idea is to piggy-back the X driver on
-top of the DRM and Gallium3D drivers (DRM for modesetting and Gallium3D for Exa
-acceleration).
