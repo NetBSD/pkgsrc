@@ -793,12 +793,30 @@ func (cv *VartypeCheck) Option() {
 		return
 	}
 
-	if m, optname := match1(value, `^-?([a-z][-0-9a-z+]*)$`); m {
-		if !cv.MkLines.once.FirstTimeSlice("option:", optname) {
-			return
-		}
+	validName := regex.Pattern(`^-?([a-z][-0-9a-z_+]*)$`)
+	if cv.Op == opUseMatch {
+		validName = `^-?([a-z][*+\-0-9?\[\]_a-z]*)$`
+	}
 
-		// There's a difference between empty and absent here.
+	// TODO: Distinguish between:
+	//  - a bare option name (must start with a letter),
+	//  - an option selection (may have a leading hyphen).
+	m, optname := match1(value, validName)
+	if !m {
+		cv.Errorf("Invalid option name %q. Option names must start with a lowercase letter and be all-lowercase.", value)
+		return
+	}
+
+	if !cv.MkLines.once.FirstTimeSlice("option:", optname) {
+		return
+	}
+
+	if contains(optname, "_") {
+		cv.Warnf("Use of the underscore character in option names is deprecated.")
+		return
+	}
+
+	if !strings.ContainsAny(optname, "*?[") {
 		if _, found := G.Pkgsrc.PkgOptions[optname]; !found {
 			cv.Warnf("Unknown option %q.", optname)
 			cv.Explain(
@@ -807,15 +825,7 @@ func (cv *VartypeCheck) Option() {
 				"update that file yourself or suggest a description for this option",
 				"on the tech-pkg@NetBSD.org mailing list.")
 		}
-		return
 	}
-
-	if matches(value, `^-?([a-z][-0-9a-z_\+]*)$`) {
-		cv.Warnf("Use of the underscore character in option names is deprecated.")
-		return
-	}
-
-	cv.Errorf("Invalid option name %q. Option names must start with a lowercase letter and be all-lowercase.", value)
 }
 
 // Pathlist checks variables like the PATH environment variable.
@@ -910,6 +920,10 @@ func (cv *VartypeCheck) Pkgname() {
 		cv.Explain(
 			"A valid package name has the form packagename-version, where version",
 			"consists only of digits, letters and dots.")
+	}
+
+	if matches(value, `nb\d+$`) {
+		cv.Errorf("The \"nb\" part of the version number belongs in PKGREVISION.")
 	}
 }
 
@@ -1016,6 +1030,33 @@ func (cv *VartypeCheck) PythonDependency() {
 			"specified in lang/python/versioned_dependencies.mk.",
 			"This identifier may be followed by :build for a build-time only",
 			"dependency, or by :link for a run-time only dependency.")
+	}
+}
+
+func (cv *VartypeCheck) RPkgName() {
+	if cv.Op == opUseMatch {
+		return
+	}
+
+	if cv.Value != cv.ValueNoVar {
+		cv.Warnf("The R package name should not contain variables.")
+		return
+	}
+
+	if hasPrefix(cv.Value, "R-") {
+		cv.Warnf("The %s does not need the %q prefix.", cv.Varname, "R-")
+	}
+
+	invalid := replaceAll(cv.Value, `[\w\-.+]`, "")
+	if invalid != "" {
+		cv.Warnf("The R package name contains the invalid characters %q.", invalid)
+	}
+}
+
+func (cv *VartypeCheck) RPkgVer() {
+	value := cv.Value
+	if cv.Op != opUseMatch && value == cv.ValueNoVar && !matches(value, `^\d[\w-.]*$`) {
+		cv.Warnf("Invalid R version number %q.", value)
 	}
 }
 
