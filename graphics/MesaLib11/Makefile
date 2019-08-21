@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/08/21 13:35:28 nia Exp $
+# $NetBSD: Makefile,v 1.2 2019/08/21 13:44:29 nia Exp $
 
 DISTNAME=	mesa-11.2.2
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mesa3d.org/
-COMMENT=	The Mesa 3D Graphics Library
+COMMENT=	Open source OpenGL implementation (legacy version)
 LICENSE=	mit
 
 GNU_CONFIGURE=	yes
