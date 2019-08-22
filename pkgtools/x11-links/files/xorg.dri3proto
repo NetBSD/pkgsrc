@@ -1,0 +1,5 @@
+# $NetBSD: xorg.dri3proto,v 1.1 2019/08/22 13:01:15 nia Exp $
+#
+include/X11/extensions/dri3proto.h
+lib/pkgconfig/dri3proto.pc
+share/pkgconfig/dri3proto.pc
