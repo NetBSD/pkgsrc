@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/03/02 14:31:51 adam Exp $
+$NetBSD: distinfo,v 1.6 2019/08/22 11:47:04 adam Exp $
 
-SHA1 (jsonschema-3.0.1.tar.gz) = fff9f3dc4c9f28e0008e482d1737723b71705d48
-RMD160 (jsonschema-3.0.1.tar.gz) = 65018b00913131e736d01175fcca690aa1792d08
-SHA512 (jsonschema-3.0.1.tar.gz) = 564e7385728b15387cd44c06cf50c36342fe4c6f497d208ce3d611d1659023e95ff032b2609a786cd9610bd915f878d138eef47913f18cc56eaae0651eb6efe8
-Size (jsonschema-3.0.1.tar.gz) = 120834 bytes
+SHA1 (jsonschema-3.0.2.tar.gz) = 47c75ca8426ca71ba59541b12985d1f7fa644364
+RMD160 (jsonschema-3.0.2.tar.gz) = 938042de1ee392ab855abb2445c57426959a5fd8
+SHA512 (jsonschema-3.0.2.tar.gz) = 13b65f318e1e2dc4a1d61399d517d39e53b0da71fbb5ec116e3b4ee274694300c6e2b3545058cd9f15129633fd093fa2d0c21ef1cce5356ca78e74187e7045c3
+Size (jsonschema-3.0.2.tar.gz) = 143432 bytes
