@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2019/04/26 12:44:43 roy Exp $
+# $NetBSD: Makefile,v 1.5 2019/08/22 18:35:22 adam Exp $
 
-DISTNAME=	fs-uae-arcade-2.8.3
-PKGREVISION=	1
+DISTNAME=	fs-uae-arcade-3.0.0
 CATEGORIES=	emulators
-MASTER_SITES=	http://fs-uae.net/fs-uae/stable/${PKGVERSION_NOREV}/
+MASTER_SITES=	http://fs-uae.net/stable/${PKGVERSION_NOREV}/
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://fs-uae.net/
@@ -24,7 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-Quartz>=3:../../devel/py-pyobjc-framew
 INSTALL_TARGET=		install-data
 USE_TOOLS+=		gmake msgfmt
 
-PYTHON_VERSIONS_ACCEPTED=	37 36 # import urllib.parse
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYSETUPINSTALLARGS=	--install-lib=${PREFIX:Q}/share/fs-uae-arcade
 PYSETUPINSTALLARGS+=	--install-scripts=${PREFIX:Q}/share/fs-uae-arcade
 

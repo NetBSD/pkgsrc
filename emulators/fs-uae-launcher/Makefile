@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2019/04/26 12:44:43 roy Exp $
+# $NetBSD: Makefile,v 1.12 2019/08/22 18:35:22 adam Exp $
 
-DISTNAME=	fs-uae-launcher-2.8.3
-PKGREVISION=	1
+DISTNAME=	fs-uae-launcher-3.0.0
 CATEGORIES=	emulators
-MASTER_SITES=	https://fs-uae.net/fs-uae/stable/${PKGVERSION_NOREV}/
+MASTER_SITES=	https://fs-uae.net/stable/${PKGVERSION_NOREV}/
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://fs-uae.net/
@@ -12,6 +11,7 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	fs-uae>=${PKGVERSION_NOREV}:../../emulators/fs-uae
 DEPENDS+=	${PYPKGPREFIX}-lhafile-[0-9]*:../../archivers/py-lhafile
+DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-qt5>=5.4:../../x11/py-qt5
@@ -24,7 +24,7 @@ DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-Quartz>=3:../../devel/py-pyobjc-framew
 INSTALL_TARGET=		install-data
 USE_TOOLS+=		gmake msgfmt
 
-PYTHON_VERSIONS_ACCEPTED=	37 36 # import urllib.parse
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYSETUPINSTALLARGS=	--install-lib=${PREFIX:Q}/share/fs-uae-launcher
 PYSETUPINSTALLARGS+=	--install-scripts=${PREFIX:Q}/share/fs-uae-launcher
 
