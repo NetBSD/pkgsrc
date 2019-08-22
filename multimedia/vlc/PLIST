@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.62 2019/07/02 20:52:12 nia Exp $
+@comment $NetBSD: PLIST,v 1.63 2019/08/22 16:20:24 nia Exp $
 @pkgdir share/vlc/http/dialogs
 @pkgdir share/vlc/http/images
 @pkgdir share/vlc/http/js
@@ -393,7 +393,6 @@ lib/vlc/plugins/spu/libmosaic_plugin.la
 lib/vlc/plugins/spu/libremoteosd_plugin.la
 lib/vlc/plugins/spu/librss_plugin.la
 lib/vlc/plugins/spu/libsubsdelay_plugin.la
-lib/vlc/plugins/stream_extractor/libarchive_plugin.la
 lib/vlc/plugins/stream_filter/libadf_plugin.la
 lib/vlc/plugins/stream_filter/libcache_block_plugin.la
 lib/vlc/plugins/stream_filter/libcache_read_plugin.la

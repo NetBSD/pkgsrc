@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.222 2019/08/11 13:22:04 wiz Exp $
+# $NetBSD: Makefile,v 1.223 2019/08/22 16:20:24 nia Exp $
 
 DISTNAME=		vlc-${VLC_VERSION}
-PKGREVISION=		3
 CATEGORIES=		multimedia
 MASTER_SITES=		https://download.videolan.org/pub/videolan/vlc/${VLC_VERSION}/
 EXTRACT_SUFX=		.tar.xz
 
-VLC_VERSION=		3.0.7.1
+VLC_VERSION=		3.0.8
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.videolan.org/
@@ -35,6 +34,7 @@ BUILDLINK_API_DEPENDS.vcdimager+=	vcdimager>=0.7.20nb1
 
 LUA_VERSIONS_ACCEPTED=	51 52
 
+CONFIGURE_ARGS+=	--disable-archive
 CONFIGURE_ARGS+=	--disable-aribsub
 CONFIGURE_ARGS+=	--disable-aribb25
 CONFIGURE_ARGS+=	--disable-bluray
@@ -162,7 +162,6 @@ CHECK_WRKREF_SKIP=	lib/libvlccore.a \
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${SH} ./bootstrap
 
-.include "../../archivers/libarchive/buildlink3.mk"
 .include "../../audio/faad2/buildlink3.mk"
 .include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
