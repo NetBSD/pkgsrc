@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.22 2019/07/20 22:46:05 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2019/08/22 12:23:46 ryoon Exp $
 
 BUILDLINK_TREE+=	efreet
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	efreet
 EFREET_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.efreet+=	efreet>=1.7.7
-BUILDLINK_ABI_DEPENDS.efreet?=	efreet>=1.7.7nb14
+BUILDLINK_ABI_DEPENDS.efreet?=	efreet>=1.7.7nb15
 BUILDLINK_PKGSRCDIR.efreet?=	../../sysutils/efreet
 
 .include        "../../devel/ecore/buildlink3.mk"
