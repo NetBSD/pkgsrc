@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/02/16 19:32:12 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/08/22 22:33:15 ast Exp $
 bin/moar
 include/moar/6model/6model.h
 include/moar/6model/bootstrap.h
@@ -123,9 +123,6 @@ include/moar/jit/internal.h
 include/moar/jit/label.h
 include/moar/jit/register.h
 include/moar/jit/tile.h
-include/moar/mast/compiler.h
-include/moar/mast/driver.h
-include/moar/mast/nodes.h
 include/moar/math/bigintops.h
 include/moar/math/grisu.h
 include/moar/math/num.h
@@ -134,6 +131,7 @@ include/moar/moar.h
 include/moar/platform/fork.h
 include/moar/platform/inttypes.h
 include/moar/platform/io.h
+include/moar/platform/malloc_trim.h
 include/moar/platform/memmem.h
 include/moar/platform/memmem32.h
 include/moar/platform/mmap.h
@@ -143,6 +141,7 @@ include/moar/platform/stdint.h
 include/moar/platform/sys.h
 include/moar/platform/threads.h
 include/moar/platform/time.h
+include/moar/profiler/configuration.h
 include/moar/profiler/heapsnapshot.h
 include/moar/profiler/instrument.h
 include/moar/profiler/log.h
@@ -167,6 +166,7 @@ include/moar/spesh/lookup.h
 include/moar/spesh/manipulate.h
 include/moar/spesh/optimize.h
 include/moar/spesh/osr.h
+include/moar/spesh/pea.h
 include/moar/spesh/plan.h
 include/moar/spesh/plugin.h
 include/moar/spesh/stats.h
