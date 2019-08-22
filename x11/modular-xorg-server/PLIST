@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.29 2019/08/22 13:12:31 nia Exp $
+@comment $NetBSD: PLIST,v 1.30 2019/08/22 19:52:29 nia Exp $
 bin/X
 bin/Xnest
 bin/Xorg
 bin/Xvfb
-${PLIST.wayland}bin/Xwayland
 bin/cvt
 bin/gtf
 include/xorg/BT.h
