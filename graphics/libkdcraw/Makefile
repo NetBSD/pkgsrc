@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2019/07/01 04:07:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.67 2019/08/22 12:23:20 ryoon Exp $
 
 DISTNAME=	libkdcraw-15.08.3
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	graphics
 COMMENT=	KDE digital camera raw image library wrapper
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.3/src/}

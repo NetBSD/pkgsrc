@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2019/07/20 22:45:59 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2019/08/22 12:22:57 ryoon Exp $
 
 BUILDLINK_TREE+=	mariadb-connector-c
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	mariadb-connector-c
 MARIADB_CONNECTOR_C_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mariadb-connector-c+=	mariadb-connector-c>=3.0.0
-BUILDLINK_ABI_DEPENDS.mariadb-connector-c?=	mariadb-connector-c>=3.0.6nb3
+BUILDLINK_ABI_DEPENDS.mariadb-connector-c?=	mariadb-connector-c>=3.0.6nb4
 BUILDLINK_PKGSRCDIR.mariadb-connector-c?=	../../databases/mariadb-connector-c
 
 pkgbase := mariadb-connector-c

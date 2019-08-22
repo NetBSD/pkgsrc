@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2019/07/20 22:46:52 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2019/08/22 12:23:48 ryoon Exp $
 #
 
 RSYSLOG_MOD=	mysql
 PKGNAME=	${DISTNAME:S/rsyslog/rsyslog-${RSYSLOG_MOD}/}
-PKGREVISION=	4
+PKGREVISION=	5
 
 DEPENDS+=	rsyslog>=${PKGVERSION_NOREV}:../../sysutils/rsyslog
 
