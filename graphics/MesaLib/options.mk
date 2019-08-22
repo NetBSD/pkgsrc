@@ -1,28 +1,33 @@
-# $NetBSD: options.mk,v 1.65 2019/08/21 13:35:28 nia Exp $
+# $NetBSD: options.mk,v 1.66 2019/08/22 17:24:01 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri wayland
 PKG_SUGGESTED_OPTIONS=
 
-PKG_SUPPORTED_OPTIONS+=		glx-tls xvmc debug
 PKG_SUPPORTED_OPTIONS+=		vdpau vaapi
 PKG_SUPPORTED_OPTIONS+=		osmesa
 PKG_SUPPORTED_OPTIONS+=		glesv1 glesv2
-PKG_SUPPORTED_OPTIONS+=		xa
-PKG_SUPPORTED_OPTIONS+=		noatexit
+PKG_SUPPORTED_OPTIONS+=		gallium-xa
+PKG_SUPPORTED_OPTIONS+=		gallium-xvmc
 PKG_SUPPORTED_OPTIONS+=		vulkan
 
-# PKG_SUGGESTED_OPTIONS+=		xvmc
 PKG_SUGGESTED_OPTIONS+=		vdpau vaapi
 PKG_SUGGESTED_OPTIONS+=		glesv1 glesv2
 
-PKG_SUGGESTED_OPTIONS+=		xa
-PKG_SUGGESTED_OPTIONS+=		noatexit
+PKG_SUGGESTED_OPTIONS+=		gallium-xa
+#PKG_SUGGESTED_OPTIONS+=	gallium-xvmc
+PKG_SUGGESTED_OPTIONS+=		osmesa
+
+PKG_OPTIONS_LEGACY_OPTS+=	xa:gallium-xa
+PKG_OPTIONS_LEGACY_OPTS+=	xvmc:gallium-xvmc
 
 # The LLVM option enables JIT accelerated software rendering and
 # is also required to support the latest RADEON GPUs, so enable it
-# by default on platforms where such GPUs might be encountered.
-.if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") && \
+# by default on platforms where such GPUs might be encountered
+# or accelerated software rendering might be useful.
+.if (${MACHINE_ARCH} == "i386" || \
+     ${MACHINE_ARCH} == "x86_64" || \
+     ${MACHINE_ARCH} == "aarch64") && \
 	${OPSYS} != "SunOS" && ${OPSYS} != "Darwin"
 PKG_SUGGESTED_OPTIONS+=		llvm
 .endif
@@ -34,25 +39,13 @@ PKG_SUGGESTED_OPTIONS+=		llvm
 PKG_SUGGESTED_OPTIONS+=		dri
 .endif
 
-
-# Use Thread Local Storage in GLX where it is supported by Mesa and works.
-.if \
-	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-i386) ||	\
-	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-x86_64) ||	\
-	!empty(MACHINE_PLATFORM:MLinux-*-i386) ||		\
-	!empty(MACHINE_PLATFORM:MLinux-*-x86_64) ||		\
-	!empty(MACHINE_PLATFORM:MFreeBSD-1[0-9].*-x86_64) ||	\
-	!empty(MACHINE_PLATFORM:MDragonFly-*-x86_64)
-PKG_SUGGESTED_OPTIONS+=		glx-tls
-.endif
-
 .include "../../mk/bsd.options.mk"
 
 # gallium
 PLIST_VARS+=	freedreno i915 i965 nouveau r300 r600 radeonsi	\
 		swrast svga vc4 virgl vulkan
 # classic DRI
-PLIST_VARS+=	dri swrast_dri nouveau_dri radeon_dri r200
+PLIST_VARS+=	dri swrast_dri nouveau_dri r100 r200
 # other features
 PLIST_VARS+=	egl gbm vaapi vdpau wayland xatracker
 PLIST_VARS+=	osmesa xvmc
@@ -72,52 +65,39 @@ PLIST.wayland=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mdri)
-CONFIGURE_ARGS+=	--enable-dri
 # Having DRI3 and egl compiled in by default doesn't hurt, the X server
 # will only use it if it is supported at run time.
-CONFIGURE_ARGS+=	--enable-dri3
+MESON_ARGS+=		-Ddri3=true
 .  if ${OPSYS} != "Darwin"
-CONFIGURE_ARGS+=	--enable-egl
-CONFIGURE_ARGS+=	--enable-gbm
+MESON_ARGS+=		-Degl=true
+MESON_ARGS+=		-Dgbm=true
 PLIST.egl=		yes
 PLIST.gbm=		yes
 .  else
-CONFIGURE_ARGS+=	--disable-egl
-CONFIGURE_ARGS+=	--disable-gbm
+MESON_ARGS+=		-Degl=false
+MESON_ARGS+=		-Dgbm=false
 .  endif
 
 .  if !empty(PKG_OPTIONS:Mosmesa)
-CONFIGURE_ARGS+=	--enable-osmesa
+MESON_ARGS+=		-Dosmesa=classic
 PLIST.osmesa=		yes
+.  else
+MESON_ARGS+=		-Dosmesa=none
 .  endif
 
 .  if !empty(PKG_OPTIONS:Mglesv1)
-CONFIGURE_ARGS+=	--enable-gles1
+MESON_ARGS+=		-Dgles1=true
 PLIST.glesv1=		yes
 .  else
-CONFIGURE_ARGS+=	--disable-gles1
+MESON_ARGS+=		-Dgles1=false
 .  endif
 
 .  if !empty(PKG_OPTIONS:Mglesv2)
-CONFIGURE_ARGS+=	--enable-gles2
+MESON_ARGS+=		-Dgles2=true
 PLIST.glesv2=		yes
 .  else
-CONFIGURE_ARGS+=	--disable-gles2
+MESON_ARGS+=		-Dgles2=false
 .  endif
-
-.  if !empty(PKG_OPTIONS:Mglx-tls)
-# Recommended by
-# http://www.freedesktop.org/wiki/Software/Glamor/
-CONFIGURE_ARGS+=	--enable-glx-tls
-.  else
-# (EE) Failed to load /usr/pkg/lib/xorg/modules/extensions/libglx.so:
-# /usr/pkg/lib/libGL.so.1: Use of initialized Thread Local Storage with model
-# initial-exec and dlopen is not supported
-CONFIGURE_ARGS+=	--disable-glx-tls
-.  endif # glx-tls
-
-# DRI on Linux needs either sysfs or udev
-CONFIGURE_ARGS.Linux+=	--enable-sysfs
 
 PLIST.dri=	yes
 
@@ -134,10 +114,6 @@ VULKAN_DRIVERS=		#
 # Software rasterizer
 PLIST.swrast_dri=	yes
 DRI_DRIVERS+=		swrast
-.  if ${OPSYS} != "Darwin"
-PLIST.swrast=		yes
-GALLIUM_DRIVERS+=	swrast
-.  endif
 
 # x86 only drivers
 .  if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") && ${OPSYS} != "Darwin"
@@ -147,7 +123,6 @@ GALLIUM_DRIVERS+=	svga
 
 # Intel chipsets, x86 only
 PLIST.i915=		yes
-GALLIUM_DRIVERS+=	i915
 DRI_DRIVERS+=		i915
 
 PLIST.i965=		yes
@@ -157,8 +132,8 @@ DRI_DRIVERS+=		i965
 
 # Vulkan support
 .  if !empty(PKG_OPTIONS:Mvulkan)
+VULKAN_DRIVERS+=	amd
 VULKAN_DRIVERS+=	intel
-VULKAN_DRIVERS+=	radeon
 PLIST.vulkan=		yes
 .  endif
 
@@ -198,9 +173,9 @@ PLIST.nouveau=		yes
 GALLIUM_DRIVERS+=	nouveau
 .    endif
 
-# classic DRI radeon
-PLIST.radeon_dri=	yes
-DRI_DRIVERS+=		radeon
+# classic DRI r100
+PLIST.r100=		yes
+DRI_DRIVERS+=		r100
 
 # classic DRI r200
 PLIST.r200=		yes
@@ -233,9 +208,11 @@ PLIST.vdpau=	yes
 .    endif # vdpau
 
 # XA is useful for accelerating xf86-video-vmware
-.    if !empty(PKG_OPTIONS:Mxa)
-CONFIGURE_ARGS+=	--enable-xa
+.    if !empty(PKG_OPTIONS:Mgallium-xa)
+MESON_ARGS+=		-Dgallium-xa=true
 PLIST.xatracker=	yes
+.    else
+MESON_ARGS+=		-Dgallium-xa=false
 .    endif
 
 # AMD Radeon r300
@@ -244,56 +221,42 @@ GALLIUM_DRIVERS+=	r300
 # AMD Canary Islands GPUs
 PLIST.radeonsi=		yes
 GALLIUM_DRIVERS+=	radeonsi
-CONFIGURE_ARGS+=	--enable-llvm
-CONFIGURE_ARGS+=	--enable-llvm-shared-libs
-
-.    if !exists(/usr/include/libelf.h)
-.      include "../../devel/libelf/buildlink3.mk"
-.    endif
+MESON_ARGS+=		-Dllvm=true
 
 BUILDLINK_API_DEPENDS.libLLVM+= libLLVM>=7.0
+.    include "../../devel/libelf/buildlink3.mk"
 .    include "../../lang/libLLVM/buildlink3.mk"
-CONFIGURE_ENV+=		ac_cv_path_ac_pt_LLVM_CONFIG=${LLVM_CONFIG_PATH:Q}
 .  else # !llvm
-CONFIGURE_ARGS+=	--disable-xa
-CONFIGURE_ARGS+=	--disable-llvm
-CONFIGURE_ARGS+=	--disable-llvm-shared-libs
+MESON_ARGS+=		-Dgallium-xa=false
+MESON_ARGS+=		-Dllvm=false
+MESON_ARGS+=		-Dllvm-shared=false
 .  endif # llvm
-
-CONFIGURE_ARGS+=	--with-gallium-drivers=${GALLIUM_DRIVERS:ts,}
-CONFIGURE_ARGS+=	--with-dri-drivers=${DRI_DRIVERS:ts,}
-CONFIGURE_ARGS+=	--with-vulkan-drivers=${VULKAN_DRIVERS:ts,}
-CONFIGURE_ARGS+=	--with-platforms=${EGL_PLATFORMS:S/ /,/gW}
-
+PLIST_SUBST+=		GLVER="1.2.0"
+MESON_ARGS+=		-Dgallium-drivers=${GALLIUM_DRIVERS:ts,}
+MESON_ARGS+=		-Ddri-drivers=${DRI_DRIVERS:ts,}
+MESON_ARGS+=		-Dvulkan-drivers=${VULKAN_DRIVERS:ts,}
+MESON_ARGS+=		-Dplatforms=${EGL_PLATFORMS:ts,}
 .else # !dri
-CONFIGURE_ARGS+=	--with-gallium-drivers=
-CONFIGURE_ARGS+=	--with-dri-drivers=
-CONFIGURE_ARGS+=	--with-vulkan-drivers=
-CONFIGURE_ARGS+=	--disable-dri
-CONFIGURE_ARGS+=	--disable-dri3
-CONFIGURE_ARGS+=	--disable-egl
-CONFIGURE_ARGS+=	--disable-gbm
-CONFIGURE_ARGS+=	--disable-gles1
-CONFIGURE_ARGS+=	--disable-gles2
-CONFIGURE_ARGS+=	--enable-xlib-glx
-CONFIGURE_ARGS+=	--with-platforms=x11
+PLIST_SUBST+=		GLVER="1.6.0"
+MESON_ARGS+=		-Dgallium-drivers=
+MESON_ARGS+=		-Ddri-drivers=
+MESON_ARGS+=		-Dvulkan-drivers=
+MESON_ARGS+=		-Ddri3=false
+MESON_ARGS+=		-Degl=false
+MESON_ARGS+=		-Dgbm=false
+MESON_ARGS+=		-Dgles1=false
+MESON_ARGS+=		-Dgles2=false
+MESON_ARGS+=		-Dglx=xlib
+MESON_ARGS+=		-Dplatforms=x11
 .  if !empty(PKG_OPTIONS:Mllvm)
 PKG_FAIL_REASON+=	"The llvm PKG_OPTION must also be disabled when dri is disabled"
 .  endif
 .endif # dri
 
-.if !empty(PKG_OPTIONS:Mdebug)
-CONFIGURE_ARGS+=	--enable-debug
-.endif
-
-.if !empty(PKG_OPTIONS:Mxvmc)
-CONFIGURE_ARGS+=	--enable-xvmc
+.if !empty(PKG_OPTIONS:Mgallium-xvmc)
+MESON_ARGS+=		-Dgallium-xvmc=true
 .include "../../x11/libXvMC/buildlink3.mk"
 PLIST.xvmc=		yes
 .else
-CONFIGURE_ARGS+=	--disable-xvmc
-.endif
-
-.if !empty(PKG_OPTIONS:Mnoatexit)
-CPPFLAGS+=	-DHAVE_NOATEXIT
+MESON_ARGS+=		-Dgallium-xvmc=false
 .endif
