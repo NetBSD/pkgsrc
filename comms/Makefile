@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2019/08/20 13:49:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.113 2019/08/22 20:23:31 fcambus Exp $
 #
 
 COMMENT=	Communication utilities
@@ -74,6 +74,7 @@ SUBDIR+=	py-gammu
 SUBDIR+=	py-nodemcu-uploader
 SUBDIR+=	py-serial
 SUBDIR+=	py-termstyle
+SUBDIR+=	qodem
 SUBDIR+=	qpage
 SUBDIR+=	ruby-termios
 SUBDIR+=	scmxx
