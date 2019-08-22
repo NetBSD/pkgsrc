@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2019/07/20 22:46:46 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2019/08/22 12:23:43 ryoon Exp $
 
 DISTNAME=	modsecurity-apache_2.7.7
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/apache_//}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	www security
 MASTER_SITES=	https://www.modsecurity.org/tarball/${PKGVERSION_NOREV}/
 
