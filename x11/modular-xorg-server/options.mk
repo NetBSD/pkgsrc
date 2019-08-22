@@ -1,16 +1,12 @@
-# $NetBSD: options.mk,v 1.19 2018/05/11 13:47:35 wiz Exp $
+# $NetBSD: options.mk,v 1.20 2019/08/22 13:12:31 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
-PKG_SUPPORTED_OPTIONS=	inet6 debug dtrace
-PKG_SUGGESTED_OPTIONS=	inet6
-.if ${X11_TYPE} == "modular"
-PKG_SUPPORTED_OPTIONS+=	dri
-PKG_SUGGESTED_OPTIONS+=	dri
-.endif
+PKG_SUPPORTED_OPTIONS=	inet6 dri debug dtrace wayland
+PKG_SUGGESTED_OPTIONS=	inet6 dri
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		dri dtrace
+PLIST_VARS+=		dri dtrace wayland
 
 .if !empty(PKG_OPTIONS:Mdri)
 .include "../../graphics/libepoxy/buildlink3.mk"
@@ -58,4 +54,14 @@ PLIST.dtrace=		yes
 CONFIGURE_ARGS+=	--with-dtrace
 .else
 CONFIGURE_ARGS+=	--without-dtrace
+.endif
+
+.if !empty(PKG_OPTIONS:Mwayland)
+PLIST.wayland=		yes
+CONFIGURE_ARGS+=	--enable-xwayland
+CONFIGURE_ARGS+=	--disable-xwayland-eglstream
+.include "../../devel/wayland/buildlink3.mk"
+.include "../../devel/wayland-protocols/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-xwayland
 .endif
