@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/05/24 16:15:02 minskim Exp $
+$NetBSD: distinfo,v 1.2 2019/08/22 12:04:33 adam Exp $
 
-SHA1 (toolz-0.9.0.tar.gz) = 2de8c411a77f73348301c693e7356c48bde37e5b
-RMD160 (toolz-0.9.0.tar.gz) = f8eb9d5dd9568c039c3d9e07c2485f081f153cbc
-SHA512 (toolz-0.9.0.tar.gz) = f55a773d322b4ece104724c58d89bb41a35ec43f45b14fe367865934162ef06cf7da783b53498405552df75d83fba15bb61ce5ee0661b6122c5984352e80de3d
-Size (toolz-0.9.0.tar.gz) = 45544 bytes
+SHA1 (toolz-0.10.0.tar.gz) = be85f79f0f83f7d3f6733e77a02485b96dd1c7a1
+RMD160 (toolz-0.10.0.tar.gz) = b89b240b53ed5ad93cbcbdd43e1331fef7ea0639
+SHA512 (toolz-0.10.0.tar.gz) = 4ed40c165462440c6004974d2515067f211c625bebcb69ea854fd8837e1fe05febc546215355a6bb9de5916c8ba98a4d297f8aa20e40ffbc8a730b2bb3831a71
+Size (toolz-0.10.0.tar.gz) = 49579 bytes
