@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2018/02/08 20:56:22 adam Exp $
+$NetBSD: distinfo,v 1.4 2019/08/22 18:35:22 adam Exp $
 
-SHA1 (fs-uae-2.8.3.tar.gz) = 65e348da76352694552a01cfeda0e8215642c7e7
-RMD160 (fs-uae-2.8.3.tar.gz) = 78e97697a925468761542d3ec1ad62268c7077f2
-SHA512 (fs-uae-2.8.3.tar.gz) = 1ccab4329a6b678a97f336b963bfaf9ea26bccccba31c90f1b7a8c2a6d3a9f343f9095733be744d4357495c808216d32c08a2bd8ce05bba73017147616d5e8cf
-Size (fs-uae-2.8.3.tar.gz) = 5017047 bytes
+SHA1 (fs-uae-3.0.0.tar.gz) = 319b4795da1fe9165d445e3cc6fc4de527c57633
+RMD160 (fs-uae-3.0.0.tar.gz) = b6ac6c4360a4e4d1f2d1021e6d37ac8e95f91d2a
+SHA512 (fs-uae-3.0.0.tar.gz) = 3ceee2434b3aa3f545370a17149b3cda8d2eeb1bd093a45869a897a00b82ae4395efc52c129124e44262b47b7f56337e1adb9f58b0a1562efa73ee3ea3915b68
+Size (fs-uae-3.0.0.tar.gz) = 4841427 bytes
 SHA1 (patch-manymouse_x11__xinput2.c) = 9b2891d1ce62affb694ac11b2386115799ed6fa9
 SHA1 (patch-src_od-fs_bsdsocket__posix.cpp) = 78ecdd2efe903fdebfb0e144a4fc775296b73048
