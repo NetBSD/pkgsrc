@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3580 2019/08/22 11:47:23 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3581 2019/08/22 12:04:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5846,3 +5846,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-test to 4.6.5 [adam 2019-08-22]
 	Updated security/py-josepy to 1.2.0 [adam 2019-08-22]
 	Updated textproc/py-jsonschema to 3.0.2 [adam 2019-08-22]
+	Updated databases/py-redis to 3.3.8 [adam 2019-08-22]
+	Updated devel/py-toolz to 0.10.0 [adam 2019-08-22]
