@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3586 2019/08/22 18:29:29 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3587 2019/08/22 18:37:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5861,3 +5861,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/MesaLib to 19.1.4 [nia 2019-08-22]
 	Updated x11/py-sip to 4.19.18 [adam 2019-08-22]
 	Updated x11/py-qt5 to 5.13.0 [adam 2019-08-22]
+	Updated emulators/fs-uae to 3.0.0 [adam 2019-08-22]
+	Updated emulators/fs-uae-arcade to 3.0.0 [adam 2019-08-22]
+	Updated emulators/fs-uae-launcher to 3.0.0 [adam 2019-08-22]
