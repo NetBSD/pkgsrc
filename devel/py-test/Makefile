@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.84 2019/06/13 07:44:54 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2019/08/22 11:06:28 adam Exp $
 
-DISTNAME=	pytest-4.6.3
+DISTNAME=	pytest-4.6.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest/}
 
@@ -14,13 +13,16 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-atomicwrites>=1.0:../../devel/py-atomicwrites
 DEPENDS+=	${PYPKGPREFIX}-attrs>=17.4.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=0.12:../../devel/py-importlib-metadata
 DEPENDS+=	${PYPKGPREFIX}-more-itertools>=4.0.0:../../devel/py-more-itertools
-DEPENDS+=	${PYPKGPREFIX}-pluggy>=0.11:../../devel/py-pluggy
+DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-pluggy>=0.12:../../devel/py-pluggy
 DEPENDS+=	${PYPKGPREFIX}-py>=1.5.0:../../devel/py-py
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-wcwidth-[0-9]*:../../devel/py-wcwidth
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TEST_DEPENDS+=	${PYPKGPREFIX}-argcomplete-[0-9]*:../../devel/py-argcomplete
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=3.56:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
