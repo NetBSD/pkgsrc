@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.20 2019/08/22 13:12:31 nia Exp $
+# $NetBSD: options.mk,v 1.21 2019/08/22 19:52:29 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
-PKG_SUPPORTED_OPTIONS=	inet6 dri debug dtrace wayland
+PKG_SUPPORTED_OPTIONS=	inet6 dri debug dtrace
 PKG_SUGGESTED_OPTIONS=	inet6 dri
 
 .include "../../mk/bsd.options.mk"
@@ -54,14 +54,4 @@ PLIST.dtrace=		yes
 CONFIGURE_ARGS+=	--with-dtrace
 .else
 CONFIGURE_ARGS+=	--without-dtrace
-.endif
-
-.if !empty(PKG_OPTIONS:Mwayland)
-PLIST.wayland=		yes
-CONFIGURE_ARGS+=	--enable-xwayland
-CONFIGURE_ARGS+=	--disable-xwayland-eglstream
-.include "../../devel/wayland/buildlink3.mk"
-.include "../../devel/wayland-protocols/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-xwayland
 .endif
