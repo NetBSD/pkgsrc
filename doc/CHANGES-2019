@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3588 2019/08/22 19:52:42 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3589 2019/08/22 20:24:01 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5865,3 +5865,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated emulators/fs-uae-arcade to 3.0.0 [adam 2019-08-22]
 	Updated emulators/fs-uae-launcher to 3.0.0 [adam 2019-08-22]
 	Added x11/modular-xorg-xwayland version 1.20.4 [nia 2019-08-22]
+	Added comms/qodem version 1.0.0 [fcambus 2019-08-22]
