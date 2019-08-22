@@ -1,25 +1,22 @@
-# $NetBSD: Makefile,v 1.15 2019/08/22 19:52:29 nia Exp $
+# $NetBSD: Makefile,v 1.1 2019/08/22 19:52:29 nia Exp $
 
 DISTNAME=	xorg-server-${XORG_VERSION}
-PKGNAME=	modular-xorg-xephyr-${XORG_VERSION}
-PKGREVISION=	1
+PKGNAME=	modular-xorg-xwayland-${XORG_VERSION}
 
 DISTINFO_FILE=		${.CURDIR}/../../x11/modular-xorg-server/distinfo
 PATCHDIR=		${.CURDIR}/../../x11/modular-xorg-server/patches
 
-MAINTAINER=	khorben@defora.org
-COMMENT=	Xephyr server based on kdrive from modular X.org
-
-BROKEN_ON_PLATFORM+=	Darwin-*-*
+MAINTAINER=	nia@NetBSD.org
+COMMENT=	Server for running X clients under Wayland from modular X.org
 
 .include "../../x11/modular-xorg-server/Makefile.common"
 
 CONFIGURE_ARGS+=	--disable-xorg
+CONFIGURE_ARGS+=	--disable-xephyr
 CONFIGURE_ARGS+=	--disable-xnest
-CONFIGURE_ARGS+=	--disable-xwayland
-CONFIGURE_ARGS+=	--enable-xephyr
-CONFIGURE_ARGS+=	--enable-kdrive
 CONFIGURE_ARGS+=	--disable-xvfb
+CONFIGURE_ARGS+=	--disable-xwayland-eglstream
+CONFIGURE_ARGS+=	--enable-xwayland
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/lib/xorg/protocol.txt
@@ -29,10 +26,6 @@ post-install:
 	fi
 
 .include "../../x11/modular-xorg-server/options.mk"
-
-.include "../../x11/xcb-util/buildlink3.mk"
-.include "../../x11/xcb-util-image/buildlink3.mk"
-.include "../../x11/xcb-util-renderutil/buildlink3.mk"
-.include "../../x11/xcb-util-wm/buildlink3.mk"
-
+.include "../../devel/wayland/buildlink3.mk"
+.include "../../devel/wayland-protocols/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
