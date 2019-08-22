@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2019/08/22 13:30:31 fcambus Exp $
+bin/kodev
+bin/kore
+include/kore/curl.h
+include/kore/http.h
+include/kore/jsonrpc.h
+include/kore/kore.h
+include/kore/pgsql.h
+include/kore/python_api.h
+include/kore/python_methods.h
+include/kore/tasks.h
+man/man1/kodev.1
+share/kore/features
