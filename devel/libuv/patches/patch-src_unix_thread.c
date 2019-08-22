@@ -1,6 +1,7 @@
-$NetBSD: patch-src_unix_thread.c,v 1.6 2019/04/18 07:47:33 adam Exp $
+$NetBSD: patch-src_unix_thread.c,v 1.7 2019/08/22 10:28:25 wiz Exp $
 
 Use feature test for pthread_condattr_setclock, absent in netbsd-6-0
+https://github.com/libuv/libuv/pull/2436
 
 --- src/unix/thread.c.orig	2019-02-10 16:44:47.000000000 +0000
 +++ src/unix/thread.c
