@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.44 2019/05/23 19:23:23 rillig Exp $
+# $NetBSD: Makefile,v 1.45 2019/08/22 18:29:02 adam Exp $
 
-DISTNAME=	PyQt5_gpl-5.11.3
+DISTNAME=	PyQt5_gpl-5.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt5_gpl/qt5/}
-PKGREVISION=	4
 CATEGORIES=	x11 python
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyqt/}
+MASTER_SITES=	https://www.riverbankcomputing.com/static/Downloads/PyQt5/${PKGVERSION_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Python binding for Qt5
@@ -64,7 +63,7 @@ PLIST.x11=	yes
 .include "../../lang/python/extension.mk"
 .include "../../sysutils/dbus-python-common/buildlink3.mk"
 .include "../../sysutils/py-dbus/buildlink3.mk"
-BUILDLINK_API_DEPENDS.py-sip+=	${PYPKGPREFIX}-sip>=4.19.4
+BUILDLINK_API_DEPENDS.py-sip+=	${PYPKGPREFIX}-sip>=4.19.14
 .include "../../x11/py-sip/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtcharts/buildlink3.mk"
