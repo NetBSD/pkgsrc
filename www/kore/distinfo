@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2019/08/22 13:30:31 fcambus Exp $
+
+SHA1 (kore-3.3.1.tar.gz) = 6f1caa21cbedda8b9757bc3d363bf8389ecb47fc
+RMD160 (kore-3.3.1.tar.gz) = 706efbac47e047427ed50d6e55f709c52626850b
+SHA512 (kore-3.3.1.tar.gz) = a6641632fdd125948379884920e5804f428650644b25c757adaace86a286b69ff62947ba85601f9851abbacd697e6fd9385c37c1b2571e55a3f23b15e33a4750
+Size (kore-3.3.1.tar.gz) = 1009866 bytes
+SHA1 (patch-Makefile) = 585cf7936d69b486391a44c88e10b6db1d8ec0ca
+SHA1 (patch-kodev_Makefile) = a5366d2879f59f27302b08d33f50620698ff5654
