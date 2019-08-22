@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2018/10/07 09:01:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2019/08/22 18:29:02 adam Exp $
 bin/pylupdate5
 bin/pyrcc5
 bin/pyuic5
@@ -165,10 +165,13 @@ share/sip/PyQt5/QtCore/qbitarray.sip
 share/sip/PyQt5/QtCore/qbuffer.sip
 share/sip/PyQt5/QtCore/qbytearray.sip
 share/sip/PyQt5/QtCore/qbytearraymatcher.sip
+share/sip/PyQt5/QtCore/qcborcommon.sip
+share/sip/PyQt5/QtCore/qcborstream.sip
 share/sip/PyQt5/QtCore/qchar.sip
 share/sip/PyQt5/QtCore/qcollator.sip
 share/sip/PyQt5/QtCore/qcommandlineoption.sip
 share/sip/PyQt5/QtCore/qcommandlineparser.sip
+share/sip/PyQt5/QtCore/qconcatenatetablesproxymodel.sip
 share/sip/PyQt5/QtCore/qcoreapplication.sip
 share/sip/PyQt5/QtCore/qcoreevent.sip
 share/sip/PyQt5/QtCore/qcryptographichash.sip
@@ -202,6 +205,7 @@ share/sip/PyQt5/QtCore/qline.sip
 share/sip/PyQt5/QtCore/qlocale.sip
 share/sip/PyQt5/QtCore/qlockfile.sip
 share/sip/PyQt5/QtCore/qlogging.sip
+share/sip/PyQt5/QtCore/qloggingcategory.sip
 share/sip/PyQt5/QtCore/qmargins.sip
 share/sip/PyQt5/QtCore/qmessageauthenticationcode.sip
 share/sip/PyQt5/QtCore/qmetaobject.sip
@@ -267,6 +271,7 @@ share/sip/PyQt5/QtCore/qtimeline.sip
 share/sip/PyQt5/QtCore/qtimer.sip
 share/sip/PyQt5/QtCore/qtimezone.sip
 share/sip/PyQt5/QtCore/qtranslator.sip
+share/sip/PyQt5/QtCore/qtransposeproxymodel.sip
 share/sip/PyQt5/QtCore/qurl.sip
 share/sip/PyQt5/QtCore/qurlquery.sip
 share/sip/PyQt5/QtCore/quuid.sip
@@ -411,9 +416,12 @@ share/sip/PyQt5/QtGui/qvector4d.sip
 share/sip/PyQt5/QtGui/qwindow.sip
 share/sip/PyQt5/QtGui/qwindowdefs.sip
 share/sip/PyQt5/QtHelp/QtHelpmod.sip
+share/sip/PyQt5/QtHelp/qcompressedhelpinfo.sip
 share/sip/PyQt5/QtHelp/qhelpcontentwidget.sip
 share/sip/PyQt5/QtHelp/qhelpengine.sip
 share/sip/PyQt5/QtHelp/qhelpenginecore.sip
+share/sip/PyQt5/QtHelp/qhelpfilterdata.sip
+share/sip/PyQt5/QtHelp/qhelpfilterengine.sip
 share/sip/PyQt5/QtHelp/qhelpindexwidget.sip
 share/sip/PyQt5/QtHelp/qhelpsearchengine.sip
 share/sip/PyQt5/QtHelp/qhelpsearchquerywidget.sip
@@ -531,6 +539,8 @@ share/sip/PyQt5/QtNetwork/qnetworkproxy.sip
 share/sip/PyQt5/QtNetwork/qnetworkreply.sip
 share/sip/PyQt5/QtNetwork/qnetworkrequest.sip
 share/sip/PyQt5/QtNetwork/qnetworksession.sip
+share/sip/PyQt5/QtNetwork/qocspresponse.sip
+share/sip/PyQt5/QtNetwork/qpassworddigestor.sip
 share/sip/PyQt5/QtNetwork/qpynetwork_qhash.sip
 share/sip/PyQt5/QtNetwork/qpynetwork_qmap.sip
 share/sip/PyQt5/QtNetwork/qssl.sip
@@ -649,6 +659,13 @@ share/sip/PyQt5/QtQuick/qsgtextureprovider.sip
 share/sip/PyQt5/QtQuick/qsgvertexcolormaterial.sip
 share/sip/PyQt5/QtQuickWidgets/QtQuickWidgetsmod.sip
 share/sip/PyQt5/QtQuickWidgets/qquickwidget.sip
+share/sip/PyQt5/QtRemoteObjects/QtRemoteObjectsmod.sip
+share/sip/PyQt5/QtRemoteObjects/qremoteobjectabstractitemmodelreplica.sip
+share/sip/PyQt5/QtRemoteObjects/qremoteobjectdynamicreplica.sip
+share/sip/PyQt5/QtRemoteObjects/qremoteobjectnode.sip
+share/sip/PyQt5/QtRemoteObjects/qremoteobjectregistry.sip
+share/sip/PyQt5/QtRemoteObjects/qremoteobjectreplica.sip
+share/sip/PyQt5/QtRemoteObjects/qtremoteobjectglobal.sip
 share/sip/PyQt5/QtSensors/QtSensorsmod.sip
 share/sip/PyQt5/QtSensors/qaccelerometer.sip
 share/sip/PyQt5/QtSensors/qaltimeter.sip
@@ -704,31 +721,6 @@ share/sip/PyQt5/QtTest/qtesttouch.sip
 share/sip/PyQt5/QtWebChannel/QtWebChannelmod.sip
 share/sip/PyQt5/QtWebChannel/qwebchannel.sip
 share/sip/PyQt5/QtWebChannel/qwebchannelabstracttransport.sip
-share/sip/PyQt5/QtWebEngine/QtWebEnginemod.sip
-share/sip/PyQt5/QtWebEngine/qquickwebengineprofile.sip
-share/sip/PyQt5/QtWebEngine/qquickwebenginescript.sip
-share/sip/PyQt5/QtWebEngine/qtwebengineglobal.sip
-share/sip/PyQt5/QtWebEngineCore/QtWebEngineCoremod.sip
-share/sip/PyQt5/QtWebEngineCore/qwebenginecookiestore.sip
-share/sip/PyQt5/QtWebEngineCore/qwebenginehttprequest.sip
-share/sip/PyQt5/QtWebEngineCore/qwebenginequotarequest.sip
-share/sip/PyQt5/QtWebEngineCore/qwebengineregisterprotocolhandlerrequest.sip
-share/sip/PyQt5/QtWebEngineCore/qwebengineurlrequestinfo.sip
-share/sip/PyQt5/QtWebEngineCore/qwebengineurlrequestinterceptor.sip
-share/sip/PyQt5/QtWebEngineCore/qwebengineurlrequestjob.sip
-share/sip/PyQt5/QtWebEngineCore/qwebengineurlschemehandler.sip
-share/sip/PyQt5/QtWebEngineWidgets/QtWebEngineWidgetsmod.sip
-share/sip/PyQt5/QtWebEngineWidgets/qwebenginecertificateerror.sip
-share/sip/PyQt5/QtWebEngineWidgets/qwebenginecontextmenudata.sip
-share/sip/PyQt5/QtWebEngineWidgets/qwebenginedownloaditem.sip
-share/sip/PyQt5/QtWebEngineWidgets/qwebenginefullscreenrequest.sip
-share/sip/PyQt5/QtWebEngineWidgets/qwebenginehistory.sip
-share/sip/PyQt5/QtWebEngineWidgets/qwebenginepage.sip
-share/sip/PyQt5/QtWebEngineWidgets/qwebengineprofile.sip
-share/sip/PyQt5/QtWebEngineWidgets/qwebenginescript.sip
-share/sip/PyQt5/QtWebEngineWidgets/qwebenginescriptcollection.sip
-share/sip/PyQt5/QtWebEngineWidgets/qwebenginesettings.sip
-share/sip/PyQt5/QtWebEngineWidgets/qwebengineview.sip
 share/sip/PyQt5/QtWebKit/QtWebKitmod.sip
 share/sip/PyQt5/QtWebKit/qwebdatabase.sip
 share/sip/PyQt5/QtWebKit/qwebelement.sip
