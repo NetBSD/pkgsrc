@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2019/07/20 22:46:25 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2019/08/22 12:23:21 ryoon Exp $
 
 DISTNAME=		ncview-1.92d
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://cirrus.ucsd.edu/pub/ncview/
 
