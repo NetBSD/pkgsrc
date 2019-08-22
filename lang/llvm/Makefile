@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2019/08/05 19:06:49 adam Exp $
+# $NetBSD: Makefile,v 1.43 2019/08/22 14:49:25 nia Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -24,6 +24,7 @@
 
 DISTNAME=	llvm-8.0.1.src
 PKGNAME=	${DISTNAME:S/.src//}
+PKGREVISION=	1
 CATEGORIES=	lang devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=llvm/}
 GITHUB_PROJECT=	llvm-project
@@ -51,6 +52,7 @@ CMAKE_ARGS+=	-DLLVM_BUILD_LLVM_DYLIB=ON
 CMAKE_ARGS+=	-DLLVM_INCLUDE_BENCHMARKS=OFF
 CMAKE_ARGS+=	-DLLVM_INSTALL_UTILS=ON
 CMAKE_ARGS+=	-DLLVM_LINK_LLVM_DYLIB=ON
+CMAKE_ARGS+=	-DLLVM_ENABLE_RTTI=ON
 
 CMAKE_ARGS.Darwin+=	-DCMAKE_LIBTOOL=/usr/bin/libtool
 
