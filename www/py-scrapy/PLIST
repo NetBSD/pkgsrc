@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/01/31 09:07:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/08/22 08:21:11 adam Exp $
 bin/scrapy-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -65,9 +65,6 @@ ${PYSITELIB}/scrapy/commands/version.pyo
 ${PYSITELIB}/scrapy/commands/view.py
 ${PYSITELIB}/scrapy/commands/view.pyc
 ${PYSITELIB}/scrapy/commands/view.pyo
-${PYSITELIB}/scrapy/conf.py
-${PYSITELIB}/scrapy/conf.pyc
-${PYSITELIB}/scrapy/conf.pyo
 ${PYSITELIB}/scrapy/contracts/__init__.py
 ${PYSITELIB}/scrapy/contracts/__init__.pyc
 ${PYSITELIB}/scrapy/contracts/__init__.pyo
@@ -248,6 +245,9 @@ ${PYSITELIB}/scrapy/http/request/__init__.pyo
 ${PYSITELIB}/scrapy/http/request/form.py
 ${PYSITELIB}/scrapy/http/request/form.pyc
 ${PYSITELIB}/scrapy/http/request/form.pyo
+${PYSITELIB}/scrapy/http/request/json_request.py
+${PYSITELIB}/scrapy/http/request/json_request.pyc
+${PYSITELIB}/scrapy/http/request/json_request.pyo
 ${PYSITELIB}/scrapy/http/request/rpc.py
 ${PYSITELIB}/scrapy/http/request/rpc.pyc
 ${PYSITELIB}/scrapy/http/request/rpc.pyo
@@ -296,9 +296,6 @@ ${PYSITELIB}/scrapy/loader/common.pyo
 ${PYSITELIB}/scrapy/loader/processors.py
 ${PYSITELIB}/scrapy/loader/processors.pyc
 ${PYSITELIB}/scrapy/loader/processors.pyo
-${PYSITELIB}/scrapy/log.py
-${PYSITELIB}/scrapy/log.pyc
-${PYSITELIB}/scrapy/log.pyo
 ${PYSITELIB}/scrapy/logformatter.py
 ${PYSITELIB}/scrapy/logformatter.pyc
 ${PYSITELIB}/scrapy/logformatter.pyo
@@ -321,6 +318,9 @@ ${PYSITELIB}/scrapy/pipelines/images.pyo
 ${PYSITELIB}/scrapy/pipelines/media.py
 ${PYSITELIB}/scrapy/pipelines/media.pyc
 ${PYSITELIB}/scrapy/pipelines/media.pyo
+${PYSITELIB}/scrapy/pqueues.py
+${PYSITELIB}/scrapy/pqueues.pyc
+${PYSITELIB}/scrapy/pqueues.pyo
 ${PYSITELIB}/scrapy/resolver.py
 ${PYSITELIB}/scrapy/resolver.pyc
 ${PYSITELIB}/scrapy/resolver.pyo
@@ -330,12 +330,6 @@ ${PYSITELIB}/scrapy/responsetypes.pyo
 ${PYSITELIB}/scrapy/selector/__init__.py
 ${PYSITELIB}/scrapy/selector/__init__.pyc
 ${PYSITELIB}/scrapy/selector/__init__.pyo
-${PYSITELIB}/scrapy/selector/csstranslator.py
-${PYSITELIB}/scrapy/selector/csstranslator.pyc
-${PYSITELIB}/scrapy/selector/csstranslator.pyo
-${PYSITELIB}/scrapy/selector/lxmlsel.py
-${PYSITELIB}/scrapy/selector/lxmlsel.pyc
-${PYSITELIB}/scrapy/selector/lxmlsel.pyo
 ${PYSITELIB}/scrapy/selector/unified.py
 ${PYSITELIB}/scrapy/selector/unified.pyc
 ${PYSITELIB}/scrapy/selector/unified.pyo
@@ -399,9 +393,6 @@ ${PYSITELIB}/scrapy/squeues.pyo
 ${PYSITELIB}/scrapy/statscollectors.py
 ${PYSITELIB}/scrapy/statscollectors.pyc
 ${PYSITELIB}/scrapy/statscollectors.pyo
-${PYSITELIB}/scrapy/telnet.py
-${PYSITELIB}/scrapy/telnet.pyc
-${PYSITELIB}/scrapy/telnet.pyo
 ${PYSITELIB}/scrapy/templates/project/module/__init__.py
 ${PYSITELIB}/scrapy/templates/project/module/__init__.pyc
 ${PYSITELIB}/scrapy/templates/project/module/__init__.pyo
