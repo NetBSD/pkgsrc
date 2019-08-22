@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2019/01/04 01:18:14 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2019/08/22 09:55:50 nia Exp $
 
 DISTNAME=	mesa-demos-8.4.0
 PKGNAME=	${DISTNAME:S/mesa-demos/glx-utils/}
 CATEGORIES=	x11 graphics
-MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/demos/
+MASTER_SITES=	https://mesa.freedesktop.org/archive/demos/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
