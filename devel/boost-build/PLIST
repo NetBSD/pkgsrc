@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2019/07/01 04:00:09 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.29 2019/08/22 12:17:52 ryoon Exp $
 share/boost-build/__init__.py
 share/boost-build/bootstrap.jam
 share/boost-build/build-system.jam
@@ -130,6 +130,7 @@ share/boost-build/tools/features/os-feature.jam
 share/boost-build/tools/features/relevant-feature.jam
 share/boost-build/tools/features/rtti-feature.jam
 share/boost-build/tools/features/runtime-feature.jam
+share/boost-build/tools/features/sanitizers-feature.jam
 share/boost-build/tools/features/search-feature.jam
 share/boost-build/tools/features/source-feature.jam
 share/boost-build/tools/features/stdlib-feature.jam
@@ -188,12 +189,14 @@ share/boost-build/tools/msvc.jam
 share/boost-build/tools/msvc.py
 share/boost-build/tools/notfile.jam
 share/boost-build/tools/notfile.py
+share/boost-build/tools/openssl.jam
 share/boost-build/tools/package.jam
 share/boost-build/tools/package.py
 share/boost-build/tools/pathscale.jam
 share/boost-build/tools/pch.jam
 share/boost-build/tools/pch.py
 share/boost-build/tools/pgi.jam
+share/boost-build/tools/pkg-config.jam
 share/boost-build/tools/python-config.jam
 share/boost-build/tools/python.jam
 share/boost-build/tools/qcc.jam

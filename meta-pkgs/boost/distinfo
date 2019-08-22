@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.125 2019/07/01 04:00:10 ryoon Exp $
+$NetBSD: distinfo,v 1.126 2019/08/22 12:17:52 ryoon Exp $
 
-SHA1 (boost_1_70_0.tar.bz2) = 5b2e5ccc454503cfbba6c1221f5d495f0de279ea
-RMD160 (boost_1_70_0.tar.bz2) = 83440e32058f68390b979b88b116daa971f19c86
-SHA512 (boost_1_70_0.tar.bz2) = 7f2ea9636baf0210e8ed1d21ee798efb6ce23c0710ff8228b285e2214f82193bcd2d912fd435929c554289a59101c7be2e27ce798f93833f307976f0dd070b49
-Size (boost_1_70_0.tar.bz2) = 97887058 bytes
+SHA1 (boost_1_71_0.tar.bz2) = 5b0a3cef23f0c124dde5bbb64324f615ac843ace
+RMD160 (boost_1_71_0.tar.bz2) = a46b886ca26993610c84615fca4340ad3f955f81
+SHA512 (boost_1_71_0.tar.bz2) = b7937d50c4512cf13cadd0ca829de36cf2cbc6fb788f45b1d4565ad0753e2b206c545125a5862016c2f16016f2e4a6b687928963b466fff17c3e0a4437142c20
+Size (boost_1_71_0.tar.bz2) = 100124647 bytes
 SHA1 (patch-boost_archive_basic__archive.hpp) = 7e7c88cfc00fbf524c70dedd8b9c3c889f8b684f
 SHA1 (patch-boost_asio_detail_config.hpp) = f3ae1fd0a026c21a89d196c74e02c4d3c8ea0808
 SHA1 (patch-boost_atomic_detail_ops_gcc_sparc.hpp) = 53525f876daeec0a23963917c4c6fad154cf67c4
@@ -29,6 +29,4 @@ SHA1 (patch-libs_config_test_boost__no__range__based__for.ipp) = d9936c472fc2c69
 SHA1 (patch-libs_context_src_asm_jump_arm_aapcs_elf_gas.S) = daaa70c31f2ebc2c357e467585e0b5c6f70963cc
 SHA1 (patch-libs_context_src_asm_ontop_arm_aapcs_elf_gas.S) = f4e9912a3101f10a3f7ac0151aac957f80fdc9cc
 SHA1 (patch-libs_fiber_build_Jamfile.v2) = 28c1aba2d074f2db7104e37cd900d33f5fcffb09
-SHA1 (patch-tools_build_src_engine_build.jam) = 4bdf4aee184741a72f25b4cf42980f920be85894
-SHA1 (patch-tools_build_src_engine_build.sh) = ed5e29d049f04e8a1e055844e66c549e5cd4bb01
 SHA1 (patch-tools_build_src_tools_gcc.jam) = 4d895f14965ee29e328dda15e9975ccc1c14673f
