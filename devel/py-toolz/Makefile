@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2018/05/24 16:15:02 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2019/08/22 12:04:33 adam Exp $
 
-DISTNAME=	toolz-0.9.0
+DISTNAME=	toolz-0.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/toolz/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	https://github.com/pytoolz/toolz/
+HOMEPAGE=	https://github.com/pytoolz/toolz
 COMMENT=	List processing tools and functional utilities
 LICENSE=	modified-bsd
 
