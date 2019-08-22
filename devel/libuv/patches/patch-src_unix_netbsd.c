@@ -1,4 +1,7 @@
-$NetBSD: patch-src_unix_netbsd.c,v 1.1 2017/10/06 15:58:15 kamil Exp $
+$NetBSD: patch-src_unix_netbsd.c,v 1.2 2019/08/22 10:28:25 wiz Exp $
+
+Check for KERN_PROC_PATHNAME before using it, or use fallback implementation.
+https://github.com/libuv/libuv/pull/2436
 
 --- src/unix/netbsd.c.orig	2017-10-02 23:30:27.000000000 +0000
 +++ src/unix/netbsd.c
