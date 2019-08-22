@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2017/08/16 20:21:09 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/08/22 09:57:08 nia Exp $
 
 DISTNAME=	glw-8.0.0
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/glw/
+MASTER_SITES=	https://mesa.freedesktop.org/archive/glw/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
