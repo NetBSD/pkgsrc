@@ -1,6 +1,7 @@
-$NetBSD: patch-src_unix_fs.c,v 1.2 2019/08/16 12:06:31 wiz Exp $
+$NetBSD: patch-src_unix_fs.c,v 1.3 2019/08/22 10:28:25 wiz Exp $
 
 * Fix portability on NetBSD.
+https://github.com/libuv/libuv/pull/2436
 
 --- src/unix/fs.c.orig	2019-08-09 14:57:12.000000000 +0000
 +++ src/unix/fs.c
