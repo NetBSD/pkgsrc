@@ -231,6 +231,8 @@ ftp			Enable File Transfer Protocol (FTP) support.
 fts			Enable full-text searching.
 fuse			Enable Filesystem in Userspace support.
 gamin			Enable Gamin file and directory monitoring system support.
+gallium-xa		Enable the Gallium xa state tracker.
+gallium-xvmc		Enable the Gallium xvmc state tracker.
 gcc-ada			Build the gcc Ada frontend and libraries.
 gcc-c++			Build the gcc C++ frontend and libraries.
 gcc-d			Build the gcc D frontend and libraries.
@@ -589,6 +591,7 @@ openmpi-vampirtrace	Build VampirTrace as part of OpenMPI.
 openssl			Enable OpenSSL support.
 opus			Enable opus support.
 oracle			Enable Oracle support.
+osmesa			Enable off-screen rendering.
 oss			Enable support for the Open Sound System audio library.
 osx-addressbook		Enable support for the Mac OS X Address Book.
 otr			Enable Off-the-record encrypted messaging.
