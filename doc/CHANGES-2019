@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3581 2019/08/22 12:04:53 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3582 2019/08/22 12:19:21 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5848,3 +5848,11 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/py-jsonschema to 3.0.2 [adam 2019-08-22]
 	Updated databases/py-redis to 3.3.8 [adam 2019-08-22]
 	Updated devel/py-toolz to 0.10.0 [adam 2019-08-22]
+	Updated devel/boost-build to 1.71.0 [ryoon 2019-08-22]
+	Updated devel/boost-docs to 1.71.0 [ryoon 2019-08-22]
+	Updated devel/boost-headers to 1.71.0 [ryoon 2019-08-22]
+	Updated devel/boost-jam to 1.71.0 [ryoon 2019-08-22]
+	Updated devel/boost-libs to 1.71.0 [ryoon 2019-08-22]
+	Updated devel/boost-mpi to 1.71.0 [ryoon 2019-08-22]
+	Updated devel/py-boost to 1.71.0 [ryoon 2019-08-22]
+	Updated meta-pkgs/boost to 1.71.0 [ryoon 2019-08-22]
