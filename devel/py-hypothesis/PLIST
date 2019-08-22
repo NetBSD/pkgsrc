@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2019/05/09 11:53:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2019/08/22 11:05:27 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -90,6 +90,9 @@ ${PYSITELIB}/hypothesis/internal/compat.pyo
 ${PYSITELIB}/hypothesis/internal/conjecture/__init__.py
 ${PYSITELIB}/hypothesis/internal/conjecture/__init__.pyc
 ${PYSITELIB}/hypothesis/internal/conjecture/__init__.pyo
+${PYSITELIB}/hypothesis/internal/conjecture/choicetree.py
+${PYSITELIB}/hypothesis/internal/conjecture/choicetree.pyc
+${PYSITELIB}/hypothesis/internal/conjecture/choicetree.pyo
 ${PYSITELIB}/hypothesis/internal/conjecture/data.py
 ${PYSITELIB}/hypothesis/internal/conjecture/data.pyc
 ${PYSITELIB}/hypothesis/internal/conjecture/data.pyo
@@ -241,6 +244,7 @@ ${PYSITELIB}/hypothesis/vendor/__init__.pyo
 ${PYSITELIB}/hypothesis/vendor/pretty.py
 ${PYSITELIB}/hypothesis/vendor/pretty.pyc
 ${PYSITELIB}/hypothesis/vendor/pretty.pyo
+${PYSITELIB}/hypothesis/vendor/tlds-alpha-by-domain.txt
 ${PYSITELIB}/hypothesis/version.py
 ${PYSITELIB}/hypothesis/version.pyc
 ${PYSITELIB}/hypothesis/version.pyo
