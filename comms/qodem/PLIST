@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2019/08/22 20:22:32 fcambus Exp $
+bin/qodem
+bin/xqodem
+man/man1/qodem.1
+man/man1/xqodem.1
