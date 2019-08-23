@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2019/08/23 23:00:51 ng0 Exp $
+bin/doas
+man/man1/doas.1
+man/man5/doas.conf.5
