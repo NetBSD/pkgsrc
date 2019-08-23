@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/08/23 11:01:14 nia Exp $
+# $NetBSD: Makefile,v 1.14 2019/08/23 12:04:13 nia Exp $
 
 DISTNAME=	inspircd-3.3.0
 CATEGORIES=	chat
@@ -104,7 +104,7 @@ INSPIRCD_EXTRAS+=	m_sslrehashsignal.cpp
 
 post-configure:
 	cd ${WRKSRC} && ${CONFIGURE_ENV} ${PERL5} ./configure \
-	    --enable-extras=${INSPIRCD_EXTRAS:S/.cpp m_/.cpp,m_/gW}
+	    --enable-extras=${INSPIRCD_EXTRAS:ts,}
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
