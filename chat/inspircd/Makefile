@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2019/08/23 10:51:48 nia Exp $
+# $NetBSD: Makefile,v 1.68 2019/08/23 13:32:30 nia Exp $
 
 DISTNAME=	inspircd-2.0.28
 CATEGORIES=	chat
@@ -7,7 +7,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://www.inspircd.org/
-COMMENT=	Modular Internet Relay Chat (IRC) server
+COMMENT=	Modular Internet Relay Chat (IRC) server (v2 branch)
 LICENSE=	gnu-gpl-v2
 
 EXTRACT_USING=	bsdtar
