@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.152 2019/08/22 17:24:01 nia Exp $
+# $NetBSD: Makefile,v 1.153 2019/08/23 11:37:48 nia Exp $
 
 DISTNAME=	mesa-19.1.4
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -78,6 +78,9 @@ CONF_FILES+=		${EGDIR}/00-mesa-defaults.conf \
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/src/util/00-mesa-defaults.conf ${DESTDIR}${EGDIR}
 
+# LLVM detection
+TOOL_DEPENDS+=	${PYPKGPREFIX}-meson>=0.51.1nb3:../../devel/py-meson
+
 .include "../../devel/py-meson/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
@@ -85,5 +88,4 @@ post-install:
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
-.include "../../x11/libxshmfence/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
