@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2019/08/22 12:17:52 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.45 2019/08/23 01:08:50 schmonz Exp $
 include/boost/accumulators/accumulators.hpp
 include/boost/accumulators/accumulators_fwd.hpp
 include/boost/accumulators/framework/accumulator_base.hpp
@@ -224,7 +224,6 @@ include/boost/aligned_storage.hpp
 include/boost/any.hpp
 include/boost/archive/archive_exception.hpp
 include/boost/archive/basic_archive.hpp
-include/boost/archive/basic_archive.hpp.orig
 include/boost/archive/basic_binary_iarchive.hpp
 include/boost/archive/basic_binary_iprimitive.hpp
 include/boost/archive/basic_binary_oarchive.hpp
@@ -386,7 +385,6 @@ include/boost/asio/detail/concurrency_hint.hpp
 include/boost/asio/detail/conditionally_enabled_event.hpp
 include/boost/asio/detail/conditionally_enabled_mutex.hpp
 include/boost/asio/detail/config.hpp
-include/boost/asio/detail/config.hpp.orig
 include/boost/asio/detail/consuming_buffers.hpp
 include/boost/asio/detail/cstddef.hpp
 include/boost/asio/detail/cstdint.hpp
@@ -883,7 +881,6 @@ include/boost/atomic/detail/ops_gcc_atomic.hpp
 include/boost/atomic/detail/ops_gcc_ppc.hpp
 include/boost/atomic/detail/ops_gcc_ppc_common.hpp
 include/boost/atomic/detail/ops_gcc_sparc.hpp
-include/boost/atomic/detail/ops_gcc_sparc.hpp.orig
 include/boost/atomic/detail/ops_gcc_sync.hpp
 include/boost/atomic/detail/ops_gcc_x86.hpp
 include/boost/atomic/detail/ops_gcc_x86_dcas.hpp
@@ -1776,12 +1773,10 @@ include/boost/config/compiler/visualc.hpp
 include/boost/config/compiler/xlcpp.hpp
 include/boost/config/compiler/xlcpp_zos.hpp
 include/boost/config/detail/posix_features.hpp
-include/boost/config/detail/posix_features.hpp.orig
 include/boost/config/detail/select_compiler_config.hpp
 include/boost/config/detail/select_platform_config.hpp
 include/boost/config/detail/select_stdlib_config.hpp
 include/boost/config/detail/suffix.hpp
-include/boost/config/detail/suffix.hpp.orig
 include/boost/config/header_deprecated.hpp
 include/boost/config/helper_macros.hpp
 include/boost/config/no_tr1/cmath.hpp
@@ -1793,7 +1788,6 @@ include/boost/config/platform/aix.hpp
 include/boost/config/platform/amigaos.hpp
 include/boost/config/platform/beos.hpp
 include/boost/config/platform/bsd.hpp
-include/boost/config/platform/bsd.hpp.orig
 include/boost/config/platform/cloudabi.hpp
 include/boost/config/platform/cray.hpp
 include/boost/config/platform/cygwin.hpp
@@ -1804,7 +1798,6 @@ include/boost/config/platform/linux.hpp
 include/boost/config/platform/macos.hpp
 include/boost/config/platform/qnxnto.hpp
 include/boost/config/platform/solaris.hpp
-include/boost/config/platform/solaris.hpp.orig
 include/boost/config/platform/symbian.hpp
 include/boost/config/platform/vms.hpp
 include/boost/config/platform/vxworks.hpp
@@ -1815,9 +1808,7 @@ include/boost/config/requires_threads.hpp
 include/boost/config/stdlib/dinkumware.hpp
 include/boost/config/stdlib/libcomo.hpp
 include/boost/config/stdlib/libcpp.hpp
-include/boost/config/stdlib/libcpp.hpp.orig
 include/boost/config/stdlib/libstdcpp3.hpp
-include/boost/config/stdlib/libstdcpp3.hpp.orig
 include/boost/config/stdlib/modena.hpp
 include/boost/config/stdlib/msl.hpp
 include/boost/config/stdlib/roguewave.hpp
@@ -2056,7 +2047,6 @@ include/boost/core/lightweight_test_trait.hpp
 include/boost/core/no_exceptions_support.hpp
 include/boost/core/noinit_adaptor.hpp
 include/boost/core/noncopyable.hpp
-include/boost/core/noncopyable.hpp.orig
 include/boost/core/null_deleter.hpp
 include/boost/core/pointer_traits.hpp
 include/boost/core/quick_exit.hpp
@@ -6793,7 +6783,6 @@ include/boost/math/special_functions/ellint_rj.hpp
 include/boost/math/special_functions/erf.hpp
 include/boost/math/special_functions/expint.hpp
 include/boost/math/special_functions/expm1.hpp
-include/boost/math/special_functions/expm1.hpp.orig
 include/boost/math/special_functions/factorials.hpp
 include/boost/math/special_functions/fpclassify.hpp
 include/boost/math/special_functions/gamma.hpp
@@ -6809,7 +6798,6 @@ include/boost/math/special_functions/lanczos.hpp
 include/boost/math/special_functions/legendre.hpp
 include/boost/math/special_functions/legendre_stieltjes.hpp
 include/boost/math/special_functions/log1p.hpp
-include/boost/math/special_functions/log1p.hpp.orig
 include/boost/math/special_functions/math_fwd.hpp
 include/boost/math/special_functions/modf.hpp
 include/boost/math/special_functions/next.hpp
@@ -6837,7 +6825,6 @@ include/boost/math/tools/bivariate_statistics.hpp
 include/boost/math/tools/complex.hpp
 include/boost/math/tools/condition_numbers.hpp
 include/boost/math/tools/config.hpp
-include/boost/math/tools/config.hpp.orig
 include/boost/math/tools/convert_from_string.hpp
 include/boost/math/tools/detail/is_const_iterable.hpp
 include/boost/math/tools/detail/polynomial_horner1_10.hpp
@@ -8983,7 +8970,6 @@ include/boost/numeric/ublas/operation_blocked.hpp
 include/boost/numeric/ublas/operation_sparse.hpp
 include/boost/numeric/ublas/operations.hpp
 include/boost/numeric/ublas/storage.hpp
-include/boost/numeric/ublas/storage.hpp.orig
 include/boost/numeric/ublas/storage_sparse.hpp
 include/boost/numeric/ublas/symmetric.hpp
 include/boost/numeric/ublas/tags.hpp
@@ -10267,7 +10253,6 @@ include/boost/property_tree/detail/rapidxml.hpp
 include/boost/property_tree/detail/xml_parser_error.hpp
 include/boost/property_tree/detail/xml_parser_flags.hpp
 include/boost/property_tree/detail/xml_parser_read_rapidxml.hpp
-include/boost/property_tree/detail/xml_parser_read_rapidxml.hpp.orig
 include/boost/property_tree/detail/xml_parser_utils.hpp
 include/boost/property_tree/detail/xml_parser_write.hpp
 include/boost/property_tree/detail/xml_parser_writer_settings.hpp
@@ -11064,7 +11049,6 @@ include/boost/regex.h
 include/boost/regex.hpp
 include/boost/regex/concepts.hpp
 include/boost/regex/config.hpp
-include/boost/regex/config.hpp.orig
 include/boost/regex/config/borland.hpp
 include/boost/regex/config/cwchar.hpp
 include/boost/regex/icu.hpp
@@ -12477,7 +12461,6 @@ include/boost/stacktrace/detail/addr2line_impls.hpp
 include/boost/stacktrace/detail/collect_msvc.ipp
 include/boost/stacktrace/detail/collect_noop.ipp
 include/boost/stacktrace/detail/collect_unwind.ipp
-include/boost/stacktrace/detail/collect_unwind.ipp.orig
 include/boost/stacktrace/detail/frame_decl.hpp
 include/boost/stacktrace/detail/frame_msvc.ipp
 include/boost/stacktrace/detail/frame_noop.ipp
@@ -12583,7 +12566,6 @@ include/boost/test/impl/cpp_main.ipp
 include/boost/test/impl/debug.ipp
 include/boost/test/impl/decorator.ipp
 include/boost/test/impl/execution_monitor.ipp
-include/boost/test/impl/execution_monitor.ipp.orig
 include/boost/test/impl/framework.ipp
 include/boost/test/impl/junit_log_formatter.ipp
 include/boost/test/impl/plain_report_formatter.ipp
@@ -12823,7 +12805,6 @@ include/boost/thread/pthread/pthread_mutex_scoped_lock.hpp
 include/boost/thread/pthread/recursive_mutex.hpp
 include/boost/thread/pthread/shared_mutex.hpp
 include/boost/thread/pthread/thread_data.hpp
-include/boost/thread/pthread/thread_data.hpp.orig
 include/boost/thread/pthread/thread_heap_alloc.hpp
 include/boost/thread/recursive_mutex.hpp
 include/boost/thread/reverse_lock.hpp
