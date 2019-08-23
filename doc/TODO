@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19216 2019/08/22 22:43:37 sevan Exp $
+$NetBSD: TODO,v 1.19217 2019/08/23 13:07:19 gdt Exp $
 
 Suggested new packages
 ======================
@@ -745,7 +745,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gps-6.1.1
 	o gpsdrive-2.11
 	o gramofile-1.6P
-	o gramps-4.1.0
+	o gramps-5.0.2
 	o grantlee-5.0.0
 	o greed-4.1
 	o grilo-0.2.12
