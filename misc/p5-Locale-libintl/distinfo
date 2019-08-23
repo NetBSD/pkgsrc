@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.11 2018/11/10 09:51:10 wen Exp $
+$NetBSD: distinfo,v 1.12 2019/08/23 11:07:04 adam Exp $
 
-SHA1 (libintl-perl-1.30.tar.gz) = e58d86925350f606cdad0db16346898691bd7c0f
-RMD160 (libintl-perl-1.30.tar.gz) = 1e3471e2b00c503f49eed57af718c1eb165a22f8
-SHA512 (libintl-perl-1.30.tar.gz) = 89c228b617c0da6f5d3f36290b428f1e57d97b08ad757575fe1e4a6abae86487199381ac0f66805d5d1488998b56f6cbea046f10f01c79a2a0ced2458744af3a
-Size (libintl-perl-1.30.tar.gz) = 598122 bytes
+SHA1 (libintl-perl-1.31.tar.gz) = de7b5c21bd95189769c113d34f5b1a1a72c3a71e
+RMD160 (libintl-perl-1.31.tar.gz) = 1871de8ed09bb20e24b3a66204f19af626b9a836
+SHA512 (libintl-perl-1.31.tar.gz) = 9e22af95ecb8ae1c115114ce5d4f80bb8b1a83e4072d274a55f5946267ac29b98e9da4c01e05d0aa0051fef34a41b6297dbb44f51b8d602f3ef3786a59a6a04a
+Size (libintl-perl-1.31.tar.gz) = 598187 bytes
 SHA1 (patch-aa) = 56350d7948fbe342af4df5ebd838c7be080de2cc
