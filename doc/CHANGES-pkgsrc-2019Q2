@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q2,v 1.1.2.8 2019/08/10 13:25:13 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q2,v 1.1.2.9 2019/08/23 10:31:43 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q2 branch:
 
@@ -128,4 +128,7 @@ databases/mysql57-client, databases/mysql57-server: security fix
 
 Pullup ticket #6030 - requested by nia
 devel/SDL2: security fix
+
+Pullup ticket #6031 - requested by leot
+net/youtube-dl: update
 
