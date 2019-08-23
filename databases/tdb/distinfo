@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.20 2019/06/22 12:53:03 jmcneill Exp $
+$NetBSD: distinfo,v 1.21 2019/08/23 10:49:14 adam Exp $
 
-SHA1 (tdb-1.4.0.tar.gz) = 44de73122f1baa3eb3fa8cfbe4d84ef7eda3de19
-RMD160 (tdb-1.4.0.tar.gz) = d71ab4dbdda09e8b25cd8c17a4e2407af79cdb46
-SHA512 (tdb-1.4.0.tar.gz) = 3c5e17f8011e61e855a745dbff18ba9f778534f34e1538a68c8854d8d1022494bcc3bf7a19f2b79c478e091b1b6b183723fe27b935c4cc6d058b6b147b6a325e
-Size (tdb-1.4.0.tar.gz) = 696994 bytes
+SHA1 (tdb-1.4.2.tar.gz) = 9a6e51cde16a2400b76448c4e7de2f87656477a2
+RMD160 (tdb-1.4.2.tar.gz) = 8dac17b4b272a4df61b385b4ba3c297e1bcbb6c7
+SHA512 (tdb-1.4.2.tar.gz) = 1d1f83e1b79cc6ea2b5cbc755de4a370fb95ef0f592f3bd2b6d23b1be18555cd417a9254fdf276dc6bd7f3368af82a4569c1f1cdde13d98405a5d38f1291d832
+Size (tdb-1.4.2.tar.gz) = 706236 bytes
 SHA1 (patch-buildtools_wafsamba_samba__conftests.py) = 50ff76f5b085f770751ca8bb93c8544cfdcd40d9
 SHA1 (patch-buildtools_wafsamba_samba__install.py) = d801340617da325e3bb70a90350e45cc8e383c2d
 SHA1 (patch-buildtools_wafsamba_samba__utils.py) = 0a587421870c1974175fadbb02dde215f35938f2
