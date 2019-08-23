@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: inspircd.sh,v 1.3 2019/01/30 10:16:47 nia Exp $
+# $NetBSD: inspircd.sh,v 1.4 2019/08/23 10:51:48 nia Exp $
 #
 # PROVIDE: inspircd
 # REQUIRE: DAEMON
@@ -10,7 +10,7 @@
 name="inspircd"
 rcvar=${name}
 command="@PREFIX@/bin/inspircd"
-required_files="@PKG_SYSCONFDIR@/inspircd/inspircd.conf"
+required_files="@PKG_SYSCONFDIR@/inspircd.conf"
 pidfile="@PREFIX@/inspircd/${name}.pid"
 
 inspircd_user="@INSPIRCD_USER@"
