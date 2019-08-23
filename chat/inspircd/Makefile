@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2019/08/11 13:18:03 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2019/08/23 10:51:48 nia Exp $
 
-DISTNAME=	inspircd-2.0.27
-PKGREVISION=	4
+DISTNAME=	inspircd-2.0.28
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=inspircd/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -19,10 +18,12 @@ MAKE_FILE=	BSDmakefile
 
 BUILD_DEFS+=	PKG_SYSCONFDIR
 
+PKG_SYSCONFSUBDIR=	inspircd
+
 CONFIGURE_ARGS+=	--with-cc="${CXX} ${CXXFLAGS} ${LDFLAGS}"
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--module-dir=${PREFIX}/lib/inspircd/modules
-CONFIGURE_ARGS+=	--config-dir=${PKG_SYSCONFDIR}/inspircd
+CONFIGURE_ARGS+=	--config-dir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--data-dir=${PREFIX}/inspircd/data
 CONFIGURE_ARGS+=	--log-dir=${PREFIX}/inspircd/logs
 CONFIG_SHELL=		${PERL5}
@@ -47,14 +48,14 @@ RCD_SCRIPTS=		inspircd
 
 EGDIR=			${PREFIX}/share/examples/inspircd
 
-CONF_FILES+=		${EGDIR}/motd.txt ${PKG_SYSCONFDIR}/inspircd/motd.txt
-CONF_FILES+=		${EGDIR}/rules.txt ${PKG_SYSCONFDIR}/inspircd/rules.txt
-CONF_FILES+=		${EGDIR}/inspircd.conf ${PKG_SYSCONFDIR}/inspircd/inspircd.conf
-CONF_FILES+=		${EGDIR}/links.conf ${PKG_SYSCONFDIR}/inspircd/links.conf
-CONF_FILES+=		${EGDIR}/modules.conf ${PKG_SYSCONFDIR}/inspircd/modules.conf
-CONF_FILES+=		${EGDIR}/opers.conf ${PKG_SYSCONFDIR}/inspircd/opers.conf
-CONF_FILES+=		${EGDIR}/motd.txt ${PKG_SYSCONFDIR}/inspircd/motd.txt
-CONF_FILES+=		${EGDIR}/rules.txt ${PKG_SYSCONFDIR}/inspircd/rules.txt
+CONF_FILES+=		${EGDIR}/motd.txt ${PKG_SYSCONFDIR}/motd.txt
+CONF_FILES+=		${EGDIR}/rules.txt ${PKG_SYSCONFDIR}/rules.txt
+CONF_FILES+=		${EGDIR}/inspircd.conf ${PKG_SYSCONFDIR}/inspircd.conf
+CONF_FILES+=		${EGDIR}/links.conf ${PKG_SYSCONFDIR}/links.conf
+CONF_FILES+=		${EGDIR}/modules.conf ${PKG_SYSCONFDIR}/modules.conf
+CONF_FILES+=		${EGDIR}/opers.conf ${PKG_SYSCONFDIR}/opers.conf
+CONF_FILES+=		${EGDIR}/motd.txt ${PKG_SYSCONFDIR}/motd.txt
+CONF_FILES+=		${EGDIR}/rules.txt ${PKG_SYSCONFDIR}/rules.txt
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-configure
@@ -78,9 +79,9 @@ post-extract:
 
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/.gdbargs
-	${INSTALL_DATA} ${DESTDIR}${PKG_SYSCONFDIR}/inspircd/examples/motd.txt.example ${DESTDIR}${EGDIR}/motd.txt
-	${INSTALL_DATA} ${DESTDIR}${PKG_SYSCONFDIR}/inspircd/examples/rules.txt.example ${DESTDIR}${EGDIR}/rules.txt
-	${RM} -rf ${DESTDIR}${PKG_SYSCONFDIR}/inspircd/examples
+	${INSTALL_DATA} ${DESTDIR}${PKG_SYSCONFDIR}/examples/motd.txt.example ${DESTDIR}${EGDIR}/motd.txt
+	${INSTALL_DATA} ${DESTDIR}${PKG_SYSCONFDIR}/examples/rules.txt.example ${DESTDIR}${EGDIR}/rules.txt
+	${RM} -rf ${DESTDIR}${PKG_SYSCONFDIR}/examples
 	${INSTALL_DATA} ${WRKSRC}/conf/*.conf ${DESTDIR}${EGDIR}
 
 .include "../../mk/pthread.buildlink3.mk"
