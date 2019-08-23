@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/08/23 17:14:45 agc Exp $
+
+SHA1 (libcbor.tar.gz) = 1d03ae595a02929861dd2735b2abe20cacaaa707
+RMD160 (libcbor.tar.gz) = 7ccc6309a1757a53ecb7b197c1b3704cd9f38ee3
+SHA512 (libcbor.tar.gz) = 5c2e9610d9fbb0bfc59f89a180f70b58539a1760fd39cad696af372c164a87828a23bb4d3a54d8e9d846be5271204800f0ad63656ef830f06a0ccdd10edfdb2c
+Size (libcbor.tar.gz) = 719348 bytes
