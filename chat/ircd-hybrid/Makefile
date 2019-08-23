@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2019/06/03 12:19:18 fox Exp $
+# $NetBSD: Makefile,v 1.59 2019/08/23 15:18:15 fox Exp $
 
 DISTNAME=	ircd-hybrid-8.2.26
 CATEGORIES=	chat
@@ -11,6 +11,8 @@ COMMENT=	IRC server with many options
 LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=	ircu-[0-9]*
+
+USE_LIBTOOL=	yes
 
 GNU_CONFIGURE=	YES
 BUILD_DEFS+=	VARBASE IRCD_HYBRID_IRC_USER IRCD_HYBRID_IRC_GROUP
