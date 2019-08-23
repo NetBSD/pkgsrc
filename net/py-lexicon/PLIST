@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2019/06/06 21:16:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2019/08/23 09:40:44 adam Exp $
 bin/lexicon-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -30,12 +30,18 @@ ${PYSITELIB}/lexicon/parser.pyo
 ${PYSITELIB}/lexicon/providers/__init__.py
 ${PYSITELIB}/lexicon/providers/__init__.pyc
 ${PYSITELIB}/lexicon/providers/__init__.pyo
+${PYSITELIB}/lexicon/providers/aliyun.py
+${PYSITELIB}/lexicon/providers/aliyun.pyc
+${PYSITELIB}/lexicon/providers/aliyun.pyo
 ${PYSITELIB}/lexicon/providers/aurora.py
 ${PYSITELIB}/lexicon/providers/aurora.pyc
 ${PYSITELIB}/lexicon/providers/aurora.pyo
 ${PYSITELIB}/lexicon/providers/auto.py
 ${PYSITELIB}/lexicon/providers/auto.pyc
 ${PYSITELIB}/lexicon/providers/auto.pyo
+${PYSITELIB}/lexicon/providers/azure.py
+${PYSITELIB}/lexicon/providers/azure.pyc
+${PYSITELIB}/lexicon/providers/azure.pyo
 ${PYSITELIB}/lexicon/providers/base.py
 ${PYSITELIB}/lexicon/providers/base.pyc
 ${PYSITELIB}/lexicon/providers/base.pyo
@@ -57,6 +63,9 @@ ${PYSITELIB}/lexicon/providers/constellix.pyo
 ${PYSITELIB}/lexicon/providers/digitalocean.py
 ${PYSITELIB}/lexicon/providers/digitalocean.pyc
 ${PYSITELIB}/lexicon/providers/digitalocean.pyo
+${PYSITELIB}/lexicon/providers/dinahosting.py
+${PYSITELIB}/lexicon/providers/dinahosting.pyc
+${PYSITELIB}/lexicon/providers/dinahosting.pyo
 ${PYSITELIB}/lexicon/providers/dnsimple.py
 ${PYSITELIB}/lexicon/providers/dnsimple.pyc
 ${PYSITELIB}/lexicon/providers/dnsimple.pyo
@@ -69,6 +78,9 @@ ${PYSITELIB}/lexicon/providers/dnspark.pyo
 ${PYSITELIB}/lexicon/providers/dnspod.py
 ${PYSITELIB}/lexicon/providers/dnspod.pyc
 ${PYSITELIB}/lexicon/providers/dnspod.pyo
+${PYSITELIB}/lexicon/providers/dreamhost.py
+${PYSITELIB}/lexicon/providers/dreamhost.pyc
+${PYSITELIB}/lexicon/providers/dreamhost.pyo
 ${PYSITELIB}/lexicon/providers/easydns.py
 ${PYSITELIB}/lexicon/providers/easydns.pyc
 ${PYSITELIB}/lexicon/providers/easydns.pyo
@@ -171,6 +183,9 @@ ${PYSITELIB}/lexicon/providers/rage4.pyo
 ${PYSITELIB}/lexicon/providers/route53.py
 ${PYSITELIB}/lexicon/providers/route53.pyc
 ${PYSITELIB}/lexicon/providers/route53.pyo
+${PYSITELIB}/lexicon/providers/safedns.py
+${PYSITELIB}/lexicon/providers/safedns.pyc
+${PYSITELIB}/lexicon/providers/safedns.pyo
 ${PYSITELIB}/lexicon/providers/sakuracloud.py
 ${PYSITELIB}/lexicon/providers/sakuracloud.pyc
 ${PYSITELIB}/lexicon/providers/sakuracloud.pyo
@@ -207,12 +222,18 @@ ${PYSITELIB}/lexicon/tests/providers/__init__.pyo
 ${PYSITELIB}/lexicon/tests/providers/integration_tests.py
 ${PYSITELIB}/lexicon/tests/providers/integration_tests.pyc
 ${PYSITELIB}/lexicon/tests/providers/integration_tests.pyo
+${PYSITELIB}/lexicon/tests/providers/test_aliyun.py
+${PYSITELIB}/lexicon/tests/providers/test_aliyun.pyc
+${PYSITELIB}/lexicon/tests/providers/test_aliyun.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_aurora.py
 ${PYSITELIB}/lexicon/tests/providers/test_aurora.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_aurora.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_auto.py
 ${PYSITELIB}/lexicon/tests/providers/test_auto.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_auto.pyo
+${PYSITELIB}/lexicon/tests/providers/test_azure.py
+${PYSITELIB}/lexicon/tests/providers/test_azure.pyc
+${PYSITELIB}/lexicon/tests/providers/test_azure.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_cloudflare.py
 ${PYSITELIB}/lexicon/tests/providers/test_cloudflare.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_cloudflare.pyo
@@ -231,6 +252,9 @@ ${PYSITELIB}/lexicon/tests/providers/test_constellix.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_digitalocean.py
 ${PYSITELIB}/lexicon/tests/providers/test_digitalocean.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_digitalocean.pyo
+${PYSITELIB}/lexicon/tests/providers/test_dinahosting.py
+${PYSITELIB}/lexicon/tests/providers/test_dinahosting.pyc
+${PYSITELIB}/lexicon/tests/providers/test_dinahosting.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_dnsimple.py
 ${PYSITELIB}/lexicon/tests/providers/test_dnsimple.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_dnsimple.pyo
@@ -243,6 +267,9 @@ ${PYSITELIB}/lexicon/tests/providers/test_dnspark.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_dnspod.py
 ${PYSITELIB}/lexicon/tests/providers/test_dnspod.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_dnspod.pyo
+${PYSITELIB}/lexicon/tests/providers/test_dreamhost.py
+${PYSITELIB}/lexicon/tests/providers/test_dreamhost.pyc
+${PYSITELIB}/lexicon/tests/providers/test_dreamhost.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_easydns.py
 ${PYSITELIB}/lexicon/tests/providers/test_easydns.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_easydns.pyo
@@ -345,6 +372,9 @@ ${PYSITELIB}/lexicon/tests/providers/test_rage4.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_route53.py
 ${PYSITELIB}/lexicon/tests/providers/test_route53.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_route53.pyo
+${PYSITELIB}/lexicon/tests/providers/test_safedns.py
+${PYSITELIB}/lexicon/tests/providers/test_safedns.pyc
+${PYSITELIB}/lexicon/tests/providers/test_safedns.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_sakuracloud.py
 ${PYSITELIB}/lexicon/tests/providers/test_sakuracloud.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_sakuracloud.pyo
