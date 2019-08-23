@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2019/07/01 04:00:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.55 2019/08/23 01:08:50 schmonz Exp $
 
 BOOST_PACKAGE=		headers
 BOOST_COMMENT=		(build-time headers)
@@ -15,6 +15,7 @@ INSTALLATION_DIRS+=	include/boost
 .include "../../devel/boost-jam/bjam.mk"
 
 do-install: bjam-build
+	${FIND} ${WRKSRC}/boost -type f -name '*.orig' | ${XARGS} ${RM} -f
 	cd ${WRKSRC}/boost; ${FIND} . -type f -print | \
 		pax -rw ${DESTDIR}${PREFIX}/include/boost
 	${FIND} ${DESTDIR}${PREFIX}/include/boost \
