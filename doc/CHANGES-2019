@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3595 2019/08/23 10:55:43 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3596 2019/08/23 11:01:24 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5893,3 +5893,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated chat/inspircd to 2.0.28 [nia 2019-08-23]
 	Updated databases/tdb to 1.4.2 [adam 2019-08-23]
 	Updated net/samba4 to 4.10.7 [adam 2019-08-23]
+	Updated chat/inspircd3 to 3.3.0 [nia 2019-08-23]
