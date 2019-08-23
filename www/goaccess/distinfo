@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.14 2017/06/10 16:17:07 wiedi Exp $
+$NetBSD: distinfo,v 1.15 2019/08/23 01:48:00 schmonz Exp $
 
-SHA1 (goaccess-1.2.tar.gz) = 4c12796ff5afd14f359b1f638fc51c4007db1e3c
-RMD160 (goaccess-1.2.tar.gz) = 79db6509d6e10a4ecb5199e637b8e1663cd7e599
-SHA512 (goaccess-1.2.tar.gz) = bc31ef1e4c92608635856fa73e69b58267c161a7e3c6f2e3ca8860b862ed1c47575b93943dd975a5f8503774ee90ee0649d380563639e30908d876416638f889
-Size (goaccess-1.2.tar.gz) = 423103 bytes
-SHA1 (patch-Makefile.am) = 780091c644a7d4d6e8311f0cbdef0146796df602
-SHA1 (patch-configure.ac) = e9e6c47f579c11bb03a625b2854c6540f2fb877b
+SHA1 (goaccess-1.3.tar.gz) = 24e889533e8d7a0fc533e7a0ad1bb303b2bb1af4
+RMD160 (goaccess-1.3.tar.gz) = b4744d1500a86ab56c94ce3612a8121b38cb3a37
+SHA512 (goaccess-1.3.tar.gz) = 7ab8a42670c2009459eee6979cb14e32e7e776e89912077882652631d0ce6ff801fba46d91ab5c23af1229f000e220863e9b70336fcd9fe11521d0ae1fd3bde1
+Size (goaccess-1.3.tar.gz) = 541374 bytes
+SHA1 (patch-Makefile.am) = f0fb958f91856fa8996c4e6691207c77a47af6d0
+SHA1 (patch-configure) = 5ecf98e50dbbbb2a435b70fb8194f6a039c5c99e
+SHA1 (patch-configure.ac) = 7cf4b8b57e2f335a81cfd81f929aafe7aa41aa79
