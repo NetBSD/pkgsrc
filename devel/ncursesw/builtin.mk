@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.14 2017/08/25 11:41:43 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.15 2019/08/23 01:17:04 schmonz Exp $
 
 BUILTIN_PKG:=	ncursesw
 
@@ -127,7 +127,7 @@ buildlink-ncursesw-fake-libs:
 	${RUN}								\
 	for f in form panel menu; do					\
 		${ECHO_BUILDLINK_MSG} "Touching fake ncurses library ($$f)"; \
-		${TOUCH} ${TOUCH_FLAGS} "$BUILDLINK_DIR/lib/lib$${f}w.a"; \
+		${TOUCH} ${TOUCH_FLAGS} "${BUILDLINK_DIR}/lib/lib$${f}w.a"; \
 	done
 BUILDLINK_TARGET+=	buildlink-ncursesw-fake-libs
 .  endif
