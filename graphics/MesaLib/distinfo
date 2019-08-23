@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.125 2019/08/22 17:24:01 nia Exp $
+$NetBSD: distinfo,v 1.126 2019/08/23 07:05:18 tnn Exp $
 
 SHA1 (mesa-19.1.4.tar.xz) = 393053bfa41b7fc65add756713004f034c39c3ce
 RMD160 (mesa-19.1.4.tar.xz) = 1d813c4a212710bb6fa8db184b4618788851cd15
@@ -41,8 +41,8 @@ SHA1 (patch-src_mapi_entry__x86-64__tls.h) = 11b7ef1da435fa17fc7025a46a123d447d6
 SHA1 (patch-src_mapi_entry__x86__tls.h) = 11c0f5302d305a77f3a1780d44a2c61f48a66273
 SHA1 (patch-src_mapi_u__current.c) = 38d324fcd1c28d155106ccd248edb5eb1aa9ffac
 SHA1 (patch-src_mapi_u__current.h) = 465a992bd34057e9521f0a33e6f2e25cefc145ca
-SHA1 (patch-src_mesa_drivers_dri_i915_intel__screen.c) = e33f51b3502e8c52ff7283aeb807996717f79f4f
-SHA1 (patch-src_mesa_drivers_dri_i965_intel__screen.c) = 795b17970e95347222514bacc0701aa86fa1ff02
+SHA1 (patch-src_mesa_drivers_dri_i915_intel__screen.c) = 0b2bd5c4c65fce4577cd20fe0d894c4570d9cc14
+SHA1 (patch-src_mesa_drivers_dri_i965_intel__screen.c) = d5d2b9eb0d6719b3446f9d6afb6c535559a01348
 SHA1 (patch-src_mesa_drivers_dri_swrast_swrast.c) = 3106f350e590f62c8bd29cd85f24f977639dccdb
 SHA1 (patch-src_mesa_main_extensions.c) = 2f48bdb1176c2878bb33bcfab7556172b50a987e
 SHA1 (patch-src_mesa_main_macros.h) = c5dceaa8dc02a58e5b2273d82e3fe1cc12e327d3
