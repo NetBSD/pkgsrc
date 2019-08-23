@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.710 2019/08/14 15:52:21 fcambus Exp $
+# $NetBSD: Makefile,v 1.711 2019/08/23 23:00:50 ng0 Exp $
 #
 
 COMMENT=	Security tools
@@ -70,6 +70,7 @@ SUBDIR+=	destroy
 SUBDIR+=	dhbitty
 SUBDIR+=	dirb
 SUBDIR+=	dnssec-tools
+SUBDIR+=	doas
 SUBDIR+=	dropbear
 SUBDIR+=	dsniff
 SUBDIR+=	dsniff-nox11
