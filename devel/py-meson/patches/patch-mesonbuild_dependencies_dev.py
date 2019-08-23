@@ -1,4 +1,4 @@
-$NetBSD: patch-mesonbuild_dependencies_dev.py,v 1.1 2019/08/22 17:45:51 nia Exp $
+$NetBSD: patch-mesonbuild_dependencies_dev.py,v 1.2 2019/08/23 11:07:00 nia Exp $
 
 Allow handling different versions of LLVM in pkgsrc using LLVM_CONFIG_PATH.
 
@@ -23,7 +23,7 @@ Allow handling different versions of LLVM in pkgsrc using LLVM_CONFIG_PATH.
 -            'llvm-config-9',     # Debian development snapshot
 -            'llvm-config-devel', # FreeBSD development snapshot
 -        ]
-+        if os.environ['LLVM_CONFIG_PATH']:
++        if 'LLVM_CONFIG_PATH' in os.environ:
 +            self.tools = [ os.environ['LLVM_CONFIG_PATH'] ]
 +        else:
 +            self.tools = [
