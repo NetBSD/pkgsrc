@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2019/05/02 09:27:09 adam Exp $
+# $NetBSD: Makefile,v 1.64 2019/08/23 13:18:52 ryoon Exp $
 
 DISTNAME=	Sphinx-1.8.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Sphinx/}
 
@@ -10,6 +11,7 @@ HOMEPAGE=	http://sphinx.pocoo.org/
 COMMENT=	Python documentation generator
 LICENSE=	modified-bsd
 
+DEPENDS+=	${PYPKGPREFIX}-attrs>=17.4.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-alabaster>=0.7:../../textproc/py-alabaster
 DEPENDS+=	${PYPKGPREFIX}-babel>=1.3:../../devel/py-babel
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.11:../../textproc/py-docutils
