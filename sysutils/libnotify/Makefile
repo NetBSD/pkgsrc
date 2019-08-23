@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2019/08/18 08:03:17 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2019/08/23 18:24:39 leot Exp $
 
 DISTNAME=	libnotify-0.7.8
 CATEGORIES=	sysutils gnome
@@ -20,8 +20,6 @@ USE_TOOLS+=		gmake pkg-config
 PKGCONFIG_OVERRIDE=	output/meson-private/libnotify.pc
 PKGCONFIG_OVERRIDE_STAGE=pre-install
 MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/output/${PKGBASE}
-
-MESON_ARGS+=	-Ddocbook_docs=disabled
 
 .include "options.mk"
 
