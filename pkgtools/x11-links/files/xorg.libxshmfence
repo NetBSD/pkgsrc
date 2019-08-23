@@ -1,0 +1,8 @@
+# $NetBSD: xorg.libxshmfence,v 1.1 2019/08/23 15:18:39 rjs Exp $
+#
+include/X11/xshmfence.h
+lib/libxshmfence.a
+lib/libxshmfence.so
+lib/libxshmfence.so.1
+lib/libxshmfence.so.1.0
+lib/pkgconfig/xshmfence.pc
