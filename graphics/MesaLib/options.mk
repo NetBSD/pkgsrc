@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.66 2019/08/22 17:24:01 nia Exp $
+# $NetBSD: options.mk,v 1.67 2019/08/23 11:07:37 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri wayland
@@ -229,7 +229,6 @@ BUILDLINK_API_DEPENDS.libLLVM+= libLLVM>=7.0
 .  else # !llvm
 MESON_ARGS+=		-Dgallium-xa=false
 MESON_ARGS+=		-Dllvm=false
-MESON_ARGS+=		-Dllvm-shared=false
 .  endif # llvm
 PLIST_SUBST+=		GLVER="1.2.0"
 MESON_ARGS+=		-Dgallium-drivers=${GALLIUM_DRIVERS:ts,}
@@ -248,9 +247,7 @@ MESON_ARGS+=		-Dgles1=false
 MESON_ARGS+=		-Dgles2=false
 MESON_ARGS+=		-Dglx=xlib
 MESON_ARGS+=		-Dplatforms=x11
-.  if !empty(PKG_OPTIONS:Mllvm)
-PKG_FAIL_REASON+=	"The llvm PKG_OPTION must also be disabled when dri is disabled"
-.  endif
+MESON_ARGS+=		-Dllvm=false
 .endif # dri
 
 .if !empty(PKG_OPTIONS:Mgallium-xvmc)
