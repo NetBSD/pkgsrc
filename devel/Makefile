@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2900 2019/08/21 12:39:39 adam Exp $
+# $NetBSD: Makefile,v 1.2901 2019/08/23 17:14:45 agc Exp $
 #
 
 COMMENT=	Development utilities
@@ -599,6 +599,7 @@ SUBDIR+=	libbinio
 SUBDIR+=	libblkid
 SUBDIR+=	libbonobo
 SUBDIR+=	libbonoboui
+SUBDIR+=	libcbor
 SUBDIR+=	libcerf
 SUBDIR+=	libcfg+
 SUBDIR+=	libcompizconfig
