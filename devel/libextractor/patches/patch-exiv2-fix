@@ -1,3 +1,5 @@
+$NetBSD: patch-exiv2-fix,v 1.2 2019/08/23 11:06:08 ng0 Exp $
+
 Partial pick from upstream commit 1ecee9a47717e36cb8a3925d011d1a6de11d631c:
 importing patch from Gentoo/AS to address exiv2 build issue (#5820)
 
