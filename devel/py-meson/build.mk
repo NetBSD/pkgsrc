@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.11 2019/08/22 17:45:51 nia Exp $
+# $NetBSD: build.mk,v 1.12 2019/08/23 15:42:55 nia Exp $
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-meson-[0-9]*:../../devel/py-meson
 
@@ -15,7 +15,7 @@ meson-configure:
 
 do-build: meson-build
 meson-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ninja -C output
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ninja -j ${MAKE_JOBS:U1} -C output
 
 do-install: meson-install
 meson-install:
