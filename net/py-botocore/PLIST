@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2019/06/14 05:45:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2019/08/23 09:44:47 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -57,6 +57,8 @@ ${PYSITELIB}/botocore/data/apigatewayv2/2018-11-29/service-2.json
 ${PYSITELIB}/botocore/data/application-autoscaling/2016-02-06/examples-1.json
 ${PYSITELIB}/botocore/data/application-autoscaling/2016-02-06/paginators-1.json
 ${PYSITELIB}/botocore/data/application-autoscaling/2016-02-06/service-2.json
+${PYSITELIB}/botocore/data/application-insights/2018-11-25/paginators-1.json
+${PYSITELIB}/botocore/data/application-insights/2018-11-25/service-2.json
 ${PYSITELIB}/botocore/data/appmesh/2018-10-01/paginators-1.json
 ${PYSITELIB}/botocore/data/appmesh/2018-10-01/service-2.json
 ${PYSITELIB}/botocore/data/appmesh/2019-01-25/paginators-1.json
@@ -152,6 +154,10 @@ ${PYSITELIB}/botocore/data/cloudfront/2018-11-05/examples-1.json
 ${PYSITELIB}/botocore/data/cloudfront/2018-11-05/paginators-1.json
 ${PYSITELIB}/botocore/data/cloudfront/2018-11-05/service-2.json
 ${PYSITELIB}/botocore/data/cloudfront/2018-11-05/waiters-2.json
+${PYSITELIB}/botocore/data/cloudfront/2019-03-26/examples-1.json
+${PYSITELIB}/botocore/data/cloudfront/2019-03-26/paginators-1.json
+${PYSITELIB}/botocore/data/cloudfront/2019-03-26/service-2.json
+${PYSITELIB}/botocore/data/cloudfront/2019-03-26/waiters-2.json
 ${PYSITELIB}/botocore/data/cloudhsm/2014-05-30/examples-1.json
 ${PYSITELIB}/botocore/data/cloudhsm/2014-05-30/paginators-1.json
 ${PYSITELIB}/botocore/data/cloudhsm/2014-05-30/service-2.json
@@ -237,6 +243,8 @@ ${PYSITELIB}/botocore/data/dynamodb/2012-08-10/waiters-2.json
 ${PYSITELIB}/botocore/data/dynamodbstreams/2012-08-10/examples-1.json
 ${PYSITELIB}/botocore/data/dynamodbstreams/2012-08-10/paginators-1.json
 ${PYSITELIB}/botocore/data/dynamodbstreams/2012-08-10/service-2.json
+${PYSITELIB}/botocore/data/ec2-instance-connect/2018-04-02/paginators-1.json
+${PYSITELIB}/botocore/data/ec2-instance-connect/2018-04-02/service-2.json
 ${PYSITELIB}/botocore/data/ec2/2014-09-01/paginators-1.json
 ${PYSITELIB}/botocore/data/ec2/2014-09-01/service-2.json
 ${PYSITELIB}/botocore/data/ec2/2014-09-01/waiters-2.json
@@ -314,6 +322,10 @@ ${PYSITELIB}/botocore/data/firehose/2015-08-04/paginators-1.json
 ${PYSITELIB}/botocore/data/firehose/2015-08-04/service-2.json
 ${PYSITELIB}/botocore/data/fms/2018-01-01/paginators-1.json
 ${PYSITELIB}/botocore/data/fms/2018-01-01/service-2.json
+${PYSITELIB}/botocore/data/forecast/2018-06-26/paginators-1.json
+${PYSITELIB}/botocore/data/forecast/2018-06-26/service-2.json
+${PYSITELIB}/botocore/data/forecastquery/2018-06-26/paginators-1.json
+${PYSITELIB}/botocore/data/forecastquery/2018-06-26/service-2.json
 ${PYSITELIB}/botocore/data/fsx/2018-03-01/paginators-1.json
 ${PYSITELIB}/botocore/data/fsx/2018-03-01/service-2.json
 ${PYSITELIB}/botocore/data/gamelift/2015-10-01/examples-1.json
@@ -384,6 +396,8 @@ ${PYSITELIB}/botocore/data/kinesisvideo/2017-09-30/service-2.json
 ${PYSITELIB}/botocore/data/kms/2014-11-01/examples-1.json
 ${PYSITELIB}/botocore/data/kms/2014-11-01/paginators-1.json
 ${PYSITELIB}/botocore/data/kms/2014-11-01/service-2.json
+${PYSITELIB}/botocore/data/lakeformation/2017-03-31/paginators-1.json
+${PYSITELIB}/botocore/data/lakeformation/2017-03-31/service-2.json
 ${PYSITELIB}/botocore/data/lambda/2014-11-11/service-2.json
 ${PYSITELIB}/botocore/data/lambda/2015-03-31/examples-1.json
 ${PYSITELIB}/botocore/data/lambda/2015-03-31/paginators-1.json
@@ -529,6 +543,8 @@ ${PYSITELIB}/botocore/data/securityhub/2018-10-26/paginators-1.json
 ${PYSITELIB}/botocore/data/securityhub/2018-10-26/service-2.json
 ${PYSITELIB}/botocore/data/serverlessrepo/2017-09-08/paginators-1.json
 ${PYSITELIB}/botocore/data/serverlessrepo/2017-09-08/service-2.json
+${PYSITELIB}/botocore/data/service-quotas/2019-06-24/paginators-1.json
+${PYSITELIB}/botocore/data/service-quotas/2019-06-24/service-2.json
 ${PYSITELIB}/botocore/data/servicecatalog/2015-12-10/examples-1.json
 ${PYSITELIB}/botocore/data/servicecatalog/2015-12-10/paginators-1.json
 ${PYSITELIB}/botocore/data/servicecatalog/2015-12-10/service-2.json
