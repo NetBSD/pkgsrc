@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.67 2019/08/23 11:07:37 nia Exp $
+# $NetBSD: options.mk,v 1.68 2019/08/23 11:37:48 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri wayland
@@ -228,6 +228,7 @@ BUILDLINK_API_DEPENDS.libLLVM+= libLLVM>=7.0
 .    include "../../lang/libLLVM/buildlink3.mk"
 .  else # !llvm
 MESON_ARGS+=		-Dgallium-xa=false
+MESON_ARGS+=		-Dgallium-vdpau=false
 MESON_ARGS+=		-Dllvm=false
 .  endif # llvm
 PLIST_SUBST+=		GLVER="1.2.0"
