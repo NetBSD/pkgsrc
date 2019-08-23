@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3598 2019/08/23 12:06:36 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3599 2019/08/23 12:37:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5897,3 +5897,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated misc/p5-Locale-libintl to 1.31 [adam 2019-08-23]
 	Updated textproc/p5-YAML to 1.29 [adam 2019-08-23]
 	Updated devel/p5-Scalar-List-Utils to 1.52 [adam 2019-08-23]
+	Updated www/p5-Template-Toolkit to 2.29 [adam 2019-08-23]
