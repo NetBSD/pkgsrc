@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.76 2019/08/11 13:22:29 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2019/08/23 10:52:41 adam Exp $
 
-DISTNAME=	samba-4.10.6
-PKGREVISION=	1
+DISTNAME=	samba-4.10.7
 CATEGORIES=	net
 MASTER_SITES=	http://download.samba.org/pub/samba/stable/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.samba.org/
+HOMEPAGE=	https://www.samba.org/
 COMMENT=	SMB/CIFS protocol server suite
 LICENSE=	gnu-gpl-v3
 
