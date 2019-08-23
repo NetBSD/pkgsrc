@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.68 2019/08/23 11:37:48 nia Exp $
+# $NetBSD: options.mk,v 1.69 2019/08/23 19:05:15 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri wayland
@@ -223,7 +223,7 @@ PLIST.radeonsi=		yes
 GALLIUM_DRIVERS+=	radeonsi
 MESON_ARGS+=		-Dllvm=true
 
-BUILDLINK_API_DEPENDS.libLLVM+= libLLVM>=7.0
+BUILDLINK_API_DEPENDS.libLLVM+= libLLVM>=7.0.1nb2
 .    include "../../devel/libelf/buildlink3.mk"
 .    include "../../lang/libLLVM/buildlink3.mk"
 .  else # !llvm
