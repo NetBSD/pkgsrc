@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19217 2019/08/23 13:07:19 gdt Exp $
+$NetBSD: TODO,v 1.19218 2019/08/24 10:54:47 jaapb Exp $
 
 Suggested new packages
 ======================
@@ -1047,7 +1047,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nxtvepg-2.8.1
 	o oath-toolkit-2.6.1
 	o objc-3.3.1
-	o ocaml-4.08.1
 	o ocrad-0.25
 	o odbc-postgresql-09.03.0400
 	o olvwm-4.5
