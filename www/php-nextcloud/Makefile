@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2019/08/11 13:25:07 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2019/08/24 02:50:54 ryoon Exp $
 #
 
-DISTNAME=	nextcloud-16.0.3
+DISTNAME=	nextcloud-16.0.4
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://download.nextcloud.com/server/releases/
 EXTRACT_SUFX=	.tar.bz2
