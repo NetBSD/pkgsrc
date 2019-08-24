@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.13 2019/01/29 12:47:02 jaapb Exp $
+$NetBSD: distinfo,v 1.14 2019/08/24 11:13:48 jaapb Exp $
 
-SHA1 (ocsigenserver-2.11.0.tar.gz) = 6c8e5c5bae9fe52e62ef3c7d7333c3196f191ede
-RMD160 (ocsigenserver-2.11.0.tar.gz) = c4d9380cd4f49ebab9e7abfb0ac2dec0881b6810
-SHA512 (ocsigenserver-2.11.0.tar.gz) = 18b9f4dff8214487dc3cd111c8ce2a06835ffec8062fae46ebafde97b1c3267f37f6b1c620d6c07320172c33a75568220c298cc96b789e907e72870a1ae7c70b
-Size (ocsigenserver-2.11.0.tar.gz) = 1265753 bytes
+SHA1 (ocsigenserver-2.15.0.tar.gz) = d0d3de02afa0f4c3f83a015bdad6998428b7c9de
+RMD160 (ocsigenserver-2.15.0.tar.gz) = cc75d34796bad473277f847500cb92991b6a4daa
+SHA512 (ocsigenserver-2.15.0.tar.gz) = 4ba56d41c27243732ce818cf14abe8cc0965fb97453d2fc2fa2eafe6cc6143079ea50294410bcf8a7d677d63c199b085795174a43571a3a6d7a214845b9da95f
+Size (ocsigenserver-2.15.0.tar.gz) = 1241830 bytes
 SHA1 (patch-Makefile) = 637a45aacd7c8afaeb73be624eb7732b21e78b4d
-SHA1 (patch-src_baselib_Makefile) = e2fd5e5bd933d4ec844713c8f574efd5fa8426cf
+SHA1 (patch-src_baselib_dynlink__wrapper.nonatdynlink.ml) = 5653b7ef36efec98e0a48a07c5fe186f2830dc38
 SHA1 (patch-src_extensions_cgimod.ml) = 06630606179f07e1c9ffcec05e8e0f41cf73fc7c
-SHA1 (patch-src_server_Makefile) = 0f315fb0533d3d0b8f8cf1f3a61e11b013571b05

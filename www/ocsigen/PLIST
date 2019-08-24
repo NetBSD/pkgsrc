@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.10 2018/04/13 13:15:00 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.11 2019/08/24 11:13:48 jaapb Exp $
 bin/ocsigenserver
 ${PLIST.ocaml-opt}bin/ocsigenserver.opt
-share/examples/ocsigen/ocsigenserver.conf
-share/examples/ocsigen/ocsigenserver.conf.sample
 ${OCAML_SITELIB}/ocsigenserver/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigenserver/baselib.a
 ${OCAML_SITELIB}/ocsigenserver/baselib.cma
@@ -181,6 +179,8 @@ ${PLIST.dbm}${OCAML_SITELIB}/ocsigenserver/extensions/ocsidbm
 ${PLIST.dbm}${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigenserver/extensions/ocsidbm.opt
 man/man1/ocsigenserver.1
 share/examples/ocsigen/mime.types
+share/examples/ocsigen/ocsigenserver.conf
+share/examples/ocsigen/ocsigenserver.conf.sample
 share/ocsigen/www/index.html
 share/ocsigen/www/ocsigenstuff/back.png
 share/ocsigen/www/ocsigenstuff/cdimage.png
