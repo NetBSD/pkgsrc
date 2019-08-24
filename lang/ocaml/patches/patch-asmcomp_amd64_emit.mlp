@@ -1,5 +1,6 @@
-$NetBSD: patch-asmcomp_amd64_emit.mlp,v 1.3 2018/07/18 00:09:12 joerg Exp $
+$NetBSD: patch-asmcomp_amd64_emit.mlp,v 1.4 2019/08/24 10:54:23 jaapb Exp $
 
+Fix attributes and entry size for the .rodata mergable constant section
 --- asmcomp/amd64/emit.mlp.orig	2018-07-17 21:17:05.536787953 +0000
 +++ asmcomp/amd64/emit.mlp
 @@ -986,7 +986,7 @@ let begin_assembly() =
