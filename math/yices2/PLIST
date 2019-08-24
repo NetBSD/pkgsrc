@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2019/08/24 22:09:16 alnsn Exp $
+bin/yices
+bin/yices-sat
+bin/yices-smt
+bin/yices-smt2
+include/yices.h
+include/yices_exit_codes.h
+include/yices_limits.h
+include/yices_types.h
+lib/libyices.so
+lib/libyices.so.${PKGVERSION}
