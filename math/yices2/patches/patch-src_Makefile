@@ -1,0 +1,42 @@
+$NetBSD: patch-src_Makefile,v 1.1.1.1 2019/08/24 22:09:16 alnsn Exp $
+
+Add NetBSD targets, do not invoke static_libyices_dynamic, pull request https://github.com/SRI-CSL/yices2/pull/134
+
+--- src/Makefile.orig	2018-10-26 21:33:09.000000000 +0000
++++ src/Makefile
+@@ -624,6 +624,18 @@ ifeq ($(POSIXOS),freebsd)
+   static_libyices_dynamic=$(static_libdir)/$(libyices_so)
+ 
+ else
++ifeq ($(POSIXOS),netbsd)
++  PIC=-fPIC
++  STATIC=-static
++  CPPFLAGS := $(CPPFLAGS) -DNETBSD
++  CFLAGS += -fvisibility=hidden
++  BIN_LDFLAGS=
++  libyices_dynamic=$(libdir)/$(libyices_so)
++  # Dynamic library can't be built from .a files because
++  # they aren't normally built with -fPIC.
++  static_libyices_dynamic=
++
++else
+ ifeq ($(POSIXOS),unix)
+   PIC=-fPIC
+   STATIC=-static
+@@ -641,6 +653,7 @@ endif
+ endif
+ endif
+ endif
++endif
+ 
+ #
+ # include dirs: we want -I. first
+@@ -1102,7 +1115,7 @@ static-bin: $(static_binaries)
+ # Libraries
+ lib: $(libyices) $(libyices_dynamic)
+ 
+-static-lib: $(static_libyices) $(static_libyices_dynamic)
++static-lib: $(static_libyices)
+ 
+ 
+ .PHONY: obj static-obj bin static-bin lib static-lib

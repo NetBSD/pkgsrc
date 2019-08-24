@@ -1,0 +1,15 @@
+$NetBSD: patch-autoconf_os,v 1.1.1.1 2019/08/24 22:09:16 alnsn Exp $
+
+Add NetBSD, pull request https://github.com/SRI-CSL/yices2/pull/134
+
+--- autoconf/os.orig	2018-10-26 21:33:09.000000000 +0000
++++ autoconf/os
+@@ -13,6 +13,8 @@ if eval 'uname > /dev/null 2> /dev/null'
+       echo "mingw";;
+     FreeBSD*)
+       echo "freebsd";;
++    NetBSD*)
++      echo "netbsd";;
+     *)
+       echo "unix";;
+   esac
