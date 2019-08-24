@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.126 2019/08/23 07:05:18 tnn Exp $
+$NetBSD: distinfo,v 1.127 2019/08/24 20:11:19 nia Exp $
 
 SHA1 (mesa-19.1.4.tar.xz) = 393053bfa41b7fc65add756713004f034c39c3ce
 RMD160 (mesa-19.1.4.tar.xz) = 1d813c4a212710bb6fa8db184b4618788851cd15
@@ -30,6 +30,7 @@ SHA1 (patch-src_glx_glxcurrent.c) = 8b8e949eded13491c5865601253c6e7d4b06e228
 SHA1 (patch-src_glx_glxext.c) = 15c2c5e0c6b5095ce849fb86ad148aa05d7d907a
 SHA1 (patch-src_intel_compiler_brw__fs__bank__conflicts.cpp) = 6276d2c6846bb4dd08699921bec4e20202a17478
 SHA1 (patch-src_intel_isl_isl__tiled__memcpy.c) = 9b79991648ab4c39ae14df219135cd2b01c1b3c0
+SHA1 (patch-src_intel_perf_gen__perf.c) = 526f36d96bd9d72893764da2b9e78cb9b70de92b
 SHA1 (patch-src_intel_perf_gen__perf.h) = cbc9c8efe6ce127b8dcb9f2c733d3427f114c5c0
 SHA1 (patch-src_intel_tools_aub__mem.c) = 6a21ecb4cfbdf216474b3be16bda441bb1390350
 SHA1 (patch-src_intel_tools_aubinator__error__decode.c) = d8f636e3c3e76763a505a1dce23de0b198ad62fa
