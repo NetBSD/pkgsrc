@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.69 2019/08/23 19:05:15 nia Exp $
+# $NetBSD: options.mk,v 1.70 2019/08/24 20:01:01 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri wayland
@@ -68,7 +68,7 @@ PLIST.wayland=		yes
 # Having DRI3 and egl compiled in by default doesn't hurt, the X server
 # will only use it if it is supported at run time.
 MESON_ARGS+=		-Ddri3=true
-.  if ${OPSYS} != "Darwin"
+.  if ${OPSYS} != "Darwin" && ${OPSYS} != "SunOS"
 MESON_ARGS+=		-Degl=true
 MESON_ARGS+=		-Dgbm=true
 PLIST.egl=		yes
