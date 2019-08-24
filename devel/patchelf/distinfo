@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/10/10 00:05:31 mef Exp $
+$NetBSD: distinfo,v 1.4 2019/08/24 23:44:51 ng0 Exp $
 
-SHA1 (patchelf-0.9.tar.gz) = 1eca0c0d2ef0768915b2e61214988301a7ca8fe8
-RMD160 (patchelf-0.9.tar.gz) = 059e470bf0a452f9ec7cd5c32ee8e2676de2231c
-SHA512 (patchelf-0.9.tar.gz) = 715db21156e6bd91cfa626f5201b32a6619e51532f5635ef52396da8193738ba66113485b61cc1e218b16737e66f72cc2e4bb3a7a33e73061ac2ef2c6330a299
-Size (patchelf-0.9.tar.gz) = 191502 bytes
+SHA1 (patchelf-0.10.tar.gz) = e951ef509955c056ad70b863b51e2ee1f20ca3e1
+RMD160 (patchelf-0.10.tar.gz) = 618f90fc0aabce31b199b501960a43984c84afc8
+SHA512 (patchelf-0.10.tar.gz) = 39745662651cf0a9915685b2767a611ceab4286f8fa57eace342b3f44248431616e8563d4ac6709c97d8534229c73c05470239e462b7e74b36bf629a876dfbad
+Size (patchelf-0.10.tar.gz) = 188702 bytes
