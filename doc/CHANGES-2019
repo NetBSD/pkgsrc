@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3609 2019/08/24 10:54:47 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.3610 2019/08/24 11:09:54 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5908,3 +5908,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/php-nextcloud to 16.0.4 [ryoon 2019-08-24]
 	Updated textproc/py-sphinx to 1.8.5nb2 [ryoon 2019-08-24]
 	Updated lang/ocaml to 4.08.1 [jaapb 2019-08-24]
+	Updated security/ocaml-ssl to 0.5.9 [jaapb 2019-08-24]
