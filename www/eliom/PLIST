@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/12/30 11:57:24 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/08/24 11:07:34 jaapb Exp $
 bin/eliom-distillery
 bin/eliombuild
 bin/eliomc
@@ -182,30 +182,6 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/server/server.a
 ${OCAML_SITELIB}/eliom/server/server.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/server/server.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/server/server.cmxs
-${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/syntax/pa_eliom_client_client.a
-${OCAML_SITELIB}/eliom/syntax/pa_eliom_client_client.cma
-${OCAML_SITELIB}/eliom/syntax/pa_eliom_client_client.cmo
-${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/syntax/pa_eliom_client_client.cmx
-${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/syntax/pa_eliom_client_client.cmxa
-${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/syntax/pa_eliom_client_client.cmxs
-${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/syntax/pa_eliom_client_server.a
-${OCAML_SITELIB}/eliom/syntax/pa_eliom_client_server.cma
-${OCAML_SITELIB}/eliom/syntax/pa_eliom_client_server.cmo
-${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/syntax/pa_eliom_client_server.cmx
-${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/syntax/pa_eliom_client_server.cmxa
-${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/syntax/pa_eliom_client_server.cmxs
-${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/syntax/pa_eliom_seed.a
-${OCAML_SITELIB}/eliom/syntax/pa_eliom_seed.cma
-${OCAML_SITELIB}/eliom/syntax/pa_eliom_seed.cmo
-${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/syntax/pa_eliom_seed.cmx
-${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/syntax/pa_eliom_seed.cmxa
-${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/syntax/pa_eliom_seed.cmxs
-${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/syntax/pa_eliom_type_filter.a
-${OCAML_SITELIB}/eliom/syntax/pa_eliom_type_filter.cma
-${OCAML_SITELIB}/eliom/syntax/pa_eliom_type_filter.cmo
-${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/syntax/pa_eliom_type_filter.cmx
-${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/syntax/pa_eliom_type_filter.cmxa
-${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/syntax/pa_eliom_type_filter.cmxs
 ${OCAML_SITELIB}/eliom/templates/basic.camlp4/.ocp-indent
 ${OCAML_SITELIB}/eliom/templates/basic.camlp4/Makefile
 ${OCAML_SITELIB}/eliom/templates/basic.camlp4/Makefile.options
