@@ -1,24 +1,20 @@
-# $NetBSD: buildlink3.mk,v 1.51 2019/05/15 09:39:21 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.52 2019/08/24 10:54:23 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml
 
 .if !defined(OCAML_BUILDLINK3_MK)
 OCAML_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=4.07.0
-BUILDLINK_ABI_DEPENDS.ocaml+=	ocaml>=4.07.1nb3
+BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=4.08.0
+BUILDLINK_ABI_DEPENDS.ocaml+=	ocaml>=4.08.1
 BUILDLINK_PKGSRCDIR.ocaml?=	../../lang/ocaml
 #BUILDLINK_DEPMETHOD.ocaml?=	build
 
 BUILDLINK_PASSTHRU_DIRS+=	${BUILDLINK_PREFIX.ocaml}/lib/ocaml
 
-.include "../../mk/ocaml.mk"
-
 BUILDLINK_TARGETS+=	ocaml-wrappers
-OCAML_WRAPPERS=		ocamlc ocamlcp ocamlmklib ocamlmktop
-.if ${OCAML_USE_OPT_COMPILER} == "yes"
-OCAML_WRAPPERS+=	ocamlc.opt ocamlopt ocamlopt.opt
-.endif
+OCAML_WRAPPERS=		ocamlc ocamlc.opt ocamlcp ocamlmklib ocamlmktop \
+			ocamlopt ocamlopt.opt
 OCAMLBIN_WRAPPERS=	ocaml ocamldep ocamllex ocamlyacc
 
 .PHONY: ocaml-wrappers

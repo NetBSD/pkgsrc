@@ -1,18 +1,17 @@
-$NetBSD: patch-otherlibs_threads_Makefile,v 1.12 2018/07/19 12:16:38 jaapb Exp $
+$NetBSD: patch-otherlibs_threads_Makefile,v 1.13 2019/08/24 10:54:23 jaapb Exp $
 
 Honor LDFLAGS.
-Use BSD_INSTALL_* instead of mkdir and cp
---- otherlibs/threads/Makefile.orig	2018-04-11 13:22:42.000000000 +0000
+--- otherlibs/threads/Makefile.orig	2019-02-08 14:34:10.000000000 +0000
 +++ otherlibs/threads/Makefile
 @@ -28,6 +28,7 @@ CAMLC=$(CAMLRUN) $(ROOTDIR)/ocamlc -nost
        -I $(ROOTDIR)/stdlib -I $(ROOTDIR)/otherlibs/unix
- MKLIB=$(CAMLRUN) ../../tools/ocamlmklib
+ MKLIB=$(CAMLRUN) $(ROOTDIR)/tools/ocamlmklib
  COMPFLAGS=-w +33..39 -warn-error A -bin-annot -g -safe-string
 +LDOPTS=	-ldopt $(LDFLAGS)
  
  C_OBJS=scheduler.o
  
-@@ -64,7 +65,7 @@ all: libvmthreads.a threads.cma stdlib.c
+@@ -68,7 +69,7 @@ all: libvmthreads.a threads.cma stdlib.c
  allopt:
  
  libvmthreads.a: $(C_OBJS)
@@ -20,8 +19,8 @@ Use BSD_INSTALL_* instead of mkdir and cp
 +	$(MKLIB) -o threads -oc vmthreads $(C_OBJS) $(LDOPTS)
  
  threads.cma: $(CAML_OBJS)
- 	$(MKLIB) -ocamlc '$(CAMLC)' -o threads -oc vmthreads $(CAML_OBJS)
-@@ -117,7 +118,7 @@ install:
+ 	$(MKLIB) -ocamlc '$(CAMLC)' -o threads -oc vmthreads $^
+@@ -121,7 +122,7 @@ install:
  	if test -f dllvmthreads.so; then \
  	  $(INSTALL_PROG) dllvmthreads.so "$(INSTALL_STUBLIBDIR)"; \
  	fi
