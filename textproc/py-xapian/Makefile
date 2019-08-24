@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/07/14 12:55:45 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2019/08/24 18:10:50 schmonz Exp $
 
 PKGNAME=		${PYPKGPREFIX}-${PKGNAME_MODULE}
 COMMENT=		Python bindings for Xapian search engine
@@ -10,19 +10,19 @@ DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
 .if (${PYPKGPREFIX} == py27)
 CONFIGURE_ARGS+=	--with-python
-PYTHON_3_OR_EMPTY=	# empty
+PYTHON_3_OR_PYTHON=	python
 .else
 CONFIGURE_ARGS+=	--with-python3 PYTHON3=${PYTHONBIN}
-PYTHON_3_OR_EMPTY=	3
+PYTHON_3_OR_PYTHON=	python3
 .endif
 
-PLIST_SUBST+=		PYTHON_3_OR_EMPTY=${PYTHON_3_OR_EMPTY:Q}
+PLIST_SUBST+=		PYTHON_3_OR_PYTHON=${PYTHON_3_OR_PYTHON:Q}
 PY_PATCHPLIST=		yes
 
 REPLACE_PYTHON=		python/docs/examples/*.py
 
 post-install:
-	${CHMOD} +x ${DESTDIR}${PREFIX}/share/doc/xapian-bindings/python${PYTHON_3_OR_EMPTY}/examples/*.py
+	${CHMOD} +x ${DESTDIR}${PREFIX}/share/doc/xapian-bindings/${PYTHON_3_OR_PYTHON}/examples/*.py
 .if (${PYPKGPREFIX} != py27)
 	${MKDIR} ${DESTDIR}${PREFIX}/${PYSITELIB}/xapian/__pycache__
 	${MV} ${DESTDIR}${PREFIX}/${PYSITELIB}/xapian/*.cpython* ${DESTDIR}${PREFIX}/${PYSITELIB}/xapian/__pycache__/
