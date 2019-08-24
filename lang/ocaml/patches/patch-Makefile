@@ -1,9 +1,19 @@
-$NetBSD: patch-Makefile,v 1.13 2018/07/19 12:46:04 jaapb Exp $
+$NetBSD: patch-Makefile,v 1.14 2019/08/24 10:54:23 jaapb Exp $
 
 Use BSD_INSTALL_* instead of mkdir
---- Makefile.orig	2018-07-10 14:09:26.000000000 +0000
+Honor LDFLAGS
+--- Makefile.orig	2019-04-18 10:10:54.000000000 +0000
 +++ Makefile
-@@ -597,10 +597,10 @@ endif
+@@ -54,7 +54,7 @@ INCLUDES=-I utils -I parsing -I typing -
+ COMPFLAGS=-strict-sequence -principal -absname -w +a-4-9-40-41-42-44-45-48-66 \
+ 	  -warn-error A \
+           -bin-annot -safe-string -strict-formats $(INCLUDES)
+-LINKFLAGS=
++LINKFLAGS= -cclib "$(LDFLAGS)"
+ 
+ ifeq "$(strip $(NATDYNLINKOPTS))" ""
+ OCAML_NATDYNLINKOPTS=
+@@ -513,10 +513,10 @@ endif
  # Installation
  .PHONY: install
  install:
@@ -18,8 +28,8 @@ Use BSD_INSTALL_* instead of mkdir
  	$(INSTALL_DATA) \
  	  VERSION \
  	  "$(INSTALL_LIBDIR)"
-@@ -630,7 +630,7 @@ install:
- 	   "$(INSTALL_LIBDIR)"
+@@ -564,7 +564,7 @@ ifeq "$(INSTALL_SOURCE_ARTIFACTS)" "true
+ endif
  	$(MAKE) -C tools install
  ifeq "$(UNIX_OR_WIN32)" "unix" # Install manual pages only on Unix
 -	$(MKDIR) "$(INSTALL_MANDIR)/man$(PROGRAMS_MAN_SECTION)"
