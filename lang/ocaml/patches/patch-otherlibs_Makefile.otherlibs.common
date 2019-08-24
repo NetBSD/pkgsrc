@@ -1,0 +1,13 @@
+$NetBSD: patch-otherlibs_Makefile.otherlibs.common,v 1.1 2019/08/24 10:54:23 jaapb Exp $
+
+Honor LDFLAGS.
+--- otherlibs/Makefile.otherlibs.common.orig	2019-02-08 14:34:10.000000000 +0000
++++ otherlibs/Makefile.otherlibs.common
+@@ -48,6 +48,7 @@ MKLIB=$(CAMLRUN) $(ROOTDIR)/tools/ocamlm
+ #LINKOPTS=
+ #LDOPTS=
+ #HEADERS=
++LDOPTS=	-ldopt "$(LDFLAGS)"
+ 
+ CMIFILES ?= $(CAMLOBJS:.cmo=.cmi)
+ CAMLOBJS_NAT ?= $(CAMLOBJS:.cmo=.cmx)
