@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3612 2019/08/24 15:57:29 ng0 Exp $
+$NetBSD: CHANGES-2019,v 1.3613 2019/08/24 22:11:20 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5911,3 +5911,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/ocaml-ssl to 0.5.9 [jaapb 2019-08-24]
 	Updated www/ocsigen to 2.15.0 [jaapb 2019-08-24]
 	Added security/doas version 6.1 [ng0 2019-08-24]
+	Added math/yices2 version 2.6.1 [alnsn 2019-08-24]
