@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1 2019/08/24 11:31:02 mef Exp $
+
+since perl 5.22:
+Can't use 'defined(@array)' (Maybe you should just omit the defined()?) at /usr/pkg/bin/a2ps-j.orig line 59.
+
+--- a2ps.pl-1.45~	2019-08-24 20:18:20.724794175 +0900
++++ a2ps.pl-1.45	2019-08-24 20:18:54.685168725 +0900
+@@ -56,7 +56,7 @@
+ @param_b4 = (10.15, 14.31, 1.40, 1.2, 8.50, 9.5, 0.29, 0.22, 0.08, 'b4');
+ sub paper {
+     local(*param) = 'param_' . $_[0];
+-    die "Unknown paper type: $_[0]\n" unless defined @param;
++    die "Unknown paper type: $_[0]\n" unless @param;
+     ($width, $height, $lmargin, $smargin, $fontsize_l, $fontsize_p,
+      $portrait_header, $landscape_header, $paper_adjust, $paper_tray) = @param;
+ }
