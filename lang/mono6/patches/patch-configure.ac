@@ -1,0 +1,53 @@
+$NetBSD: patch-configure.ac,v 1.1 2019/08/25 16:37:01 maya Exp $
+
+Add netbsd support
+https://github.com/mono/mono/pull/15938
+
+--- configure.ac.orig	2019-07-18 07:52:31.000000000 +0000
++++ configure.ac
+@@ -4066,10 +4066,10 @@ LIBC="libc.so.6"
+ INTL="libc.so.6"
+ SQLITE="libsqlite.so.0"
+ SQLITE3="libsqlite3.so.0"
+-X11="libX11.so"
+-GDKX11="libgdk-x11-2.0.so.0"
+-GTKX11="libgtk-x11-2.0.so.0"
+-XINERAMA="libXinerama.so.1"
++X11="@X11BASE@/lib/libX11.so"
++GDKX11="@PREFIX@/lib/libgdk-x11-2.0.so.0"
++GTKX11="@PREFIX@/lib/libgtk-x11-2.0.so.0"
++XINERAMA="@X11BASE@/lib/libXinerama.so"
+ 
+ sizeof_register="SIZEOF_VOID_P"
+ 
+@@ -6177,6 +6177,22 @@ elif test x$platform_android = xyes; the
+ 	MONO_NATIVE_PLATFORM=android
+ 
+ 	MONO_NATIVE_PLATFORM_TYPE="MONO_NATIVE_PLATFORM_TYPE_ANDROID"
++elif case $host_os in netbsd*) true;; *) false;; esac; then
++	mono_native_text="NetBSD"
++	MONO_NATIVE_CC=$CC
++	MONO_NATIVE_CXX=$CXX
++	MONO_NATIVE_CPPFLAGS=$CPPFLAGS
++	MONO_NATIVE_CXXFLAGS=$CXXFLAGS
++	MONO_NATIVE_CFLAGS=$CFLAGS
++	MONO_NATIVE_LDFLAGS=$LDFLAGS
++
++	mono_native=yes
++	mono_native_compat=no
++	MONO_NATIVE_PLATFORM=netbsd
++	AC_MSG_CHECKING([Mono.Native support])
++	AC_MSG_RESULT(netbsd)
++
++	MONO_NATIVE_PLATFORM_TYPE="MONO_NATIVE_PLATFORM_TYPE_NETBSD"
+ else
+ 	mono_native=no
+ 	mono_native_text="no"
+@@ -6218,6 +6234,7 @@ AM_CONDITIONAL(MONO_NATIVE_PLATFORM_IOS,
+ AM_CONDITIONAL(MONO_NATIVE_PLATFORM_LINUX, test x$MONO_NATIVE_PLATFORM = xlinux)
+ AM_CONDITIONAL(MONO_NATIVE_PLATFORM_AIX, test x$MONO_NATIVE_PLATFORM = xaix)
+ AM_CONDITIONAL(MONO_NATIVE_PLATFORM_ANDROID, test x$MONO_NATIVE_PLATFORM = xandroid)
++AM_CONDITIONAL(MONO_NATIVE_PLATFORM_NETBSD, test x$MONO_NATIVE_PLATFORM = xnetbsd)
+ 
+ MONO_NATIVE_PLATFORM_TYPE_COMPAT="$MONO_NATIVE_PLATFORM_TYPE | MONO_NATIVE_PLATFORM_TYPE_COMPAT"
+ MONO_NATIVE_PLATFORM_TYPE_UNIFIED="$MONO_NATIVE_PLATFORM_TYPE | MONO_NATIVE_PLATFORM_TYPE_UNIFIED"
