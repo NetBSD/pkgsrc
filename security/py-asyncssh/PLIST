@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/03/03 12:32:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/08/25 12:24:06 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -109,9 +109,6 @@ ${PYSITELIB}/asyncssh/kex.pyo
 ${PYSITELIB}/asyncssh/kex_dh.py
 ${PYSITELIB}/asyncssh/kex_dh.pyc
 ${PYSITELIB}/asyncssh/kex_dh.pyo
-${PYSITELIB}/asyncssh/kex_ecdh.py
-${PYSITELIB}/asyncssh/kex_ecdh.pyc
-${PYSITELIB}/asyncssh/kex_ecdh.pyo
 ${PYSITELIB}/asyncssh/kex_rsa.py
 ${PYSITELIB}/asyncssh/kex_rsa.pyc
 ${PYSITELIB}/asyncssh/kex_rsa.pyo
