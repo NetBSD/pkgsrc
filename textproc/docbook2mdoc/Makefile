@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/04/30 13:57:15 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2019/08/25 17:53:58 ng0 Exp $
 
-DISTNAME=	docbook2mdoc-0.0.9
+DISTNAME=	docbook2mdoc-1.1.0
 CATEGORIES=	textproc
 MASTER_SITES=	http://mdocml.bsd.lv/docbook2mdoc/snapshots/
 EXTRACT_SUFX=	.tgz
@@ -13,5 +13,4 @@ LICENSE=	isc
 BUILD_TARGET=	docbook2mdoc
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 
-.include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
