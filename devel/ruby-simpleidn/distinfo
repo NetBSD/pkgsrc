@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/08/25 14:53:03 tsutsui Exp $
+
+SHA1 (simpleidn-0.0.9.gem) = 8f39433e9825783c95866461f8318f206b5d9852
+RMD160 (simpleidn-0.0.9.gem) = dddd6969274279736c5ab77d16a18143db3b6954
+SHA512 (simpleidn-0.0.9.gem) = 176b7ec19c6402ae980e00cb0af5fa53dc8fdae98a9ee2a6cad7fc94e7a4f9c32ec0a20b8e4c1a8a60b6f0e67f1a060b08c64be8ee6b9914bb04350e51bef750
+Size (simpleidn-0.0.9.gem) = 8704 bytes
