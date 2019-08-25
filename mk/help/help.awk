@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.33 2019/04/28 12:10:24 rillig Exp $
+# $NetBSD: help.awk,v 1.34 2019/08/25 20:30:11 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -159,7 +159,7 @@ $1 ~ /:$/ && $2 == ".PHONY" {
 # Everything else is assumed to belong to the explaining text.
 #
 NF >= 1 && !/^[\t.]/ && !/^#*$/ && !/^#\t\t/ {
-	w = ($1 ~ /^\#[A-Z]/) ? substr($1, 2) : ($1 == "#") ? $2 : $1;
+	w = ($1 ~ /^#[A-Z]/) ? substr($1, 2) : ($1 == "#") ? $2 : $1;
 
 	# Reduce VAR.<param>, VAR.${param} and VAR.* to VAR.
 	sub(/\.[<$].*[>}]$/, "", w);
