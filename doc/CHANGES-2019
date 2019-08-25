@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3614 2019/08/24 23:46:47 ng0 Exp $
+$NetBSD: CHANGES-2019,v 1.3615 2019/08/25 12:38:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5899,6 +5899,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-Scalar-List-Utils to 1.52 [adam 2019-08-23]
 	Updated www/p5-Template-Toolkit to 2.29 [adam 2019-08-23]
 	Updated cad/verilator to 4.016 [ryoon 2019-08-23]
+	Updated databases/p5-DBD-postgresql to 3.9.1 [adam 2019-08-23]
 	Updated emulators/gxemul to 0.6.2 [ryoon 2019-08-23]
 	Updated textproc/py-sphinx to 1.8.5nb1 [ryoon 2019-08-23]
 	Updated lang/newlisp to 10.7.5 [ryoon 2019-08-23]
@@ -5913,3 +5914,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Added security/doas version 6.1 [ng0 2019-08-24]
 	Added math/yices2 version 2.6.1 [alnsn 2019-08-24]
 	Updated devel/patchelf to 0.10 [ng0 2019-08-24]
+	Updated security/py-asyncssh to 1.18.0 [adam 2019-08-25]
+	Updated devel/py-typing to 3.7.4.1 [adam 2019-08-25]
+	Updated textproc/py-snowballstemmer to 1.9.0 [adam 2019-08-25]
+	Updated multimedia/mkvtoolnix to 37.0.0 [adam 2019-08-25]
