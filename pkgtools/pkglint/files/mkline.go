@@ -421,12 +421,17 @@ func (mkline *MkLine) MustExist() bool { return mkline.data.(*mkLineInclude).mus
 
 func (mkline *MkLine) IncludedFile() string { return mkline.data.(*mkLineInclude).includedFile }
 
+func (mkline *MkLine) IncludedFileFull() string {
+	return cleanpath(path.Join(path.Dir(mkline.Filename), mkline.IncludedFile()))
+}
+
 func (mkline *MkLine) Targets() string { return mkline.data.(mkLineDependency).targets }
 
 func (mkline *MkLine) Sources() string { return mkline.data.(mkLineDependency).sources }
 
-// ConditionalVars applies to .include lines and is a space-separated
-// list of those variable names on which the inclusion depends.
+// ConditionalVars applies to .include lines and contains the
+// variable names on which the inclusion depends.
+//
 // It is initialized later, step by step, when parsing other lines.
 func (mkline *MkLine) ConditionalVars() []string {
 	return mkline.data.(*mkLineInclude).conditionalVars
@@ -1367,16 +1372,16 @@ func (ind *Indentation) IsConditional() bool {
 //
 // Variables named *_MK are excluded since they are usually not interesting.
 func (ind *Indentation) Varnames() []string {
-	var varnames []string
+	varnames := NewStringSet()
 	for _, level := range ind.levels {
 		for _, levelVarname := range level.conditionalVars {
 			// multiple-inclusion guard must be filtered out earlier.
 			assert(!hasSuffix(levelVarname, "_MK"))
 
-			varnames = append(varnames, levelVarname)
+			varnames.Add(levelVarname)
 		}
 	}
-	return varnames
+	return varnames.Elements
 }
 
 // Args returns the arguments of the innermost .if, .elif or .for.
