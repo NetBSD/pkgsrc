@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.182 2019/08/18 03:42:01 tsutsui Exp $
+# $NetBSD: Makefile,v 1.183 2019/08/25 15:17:19 tsutsui Exp $
 #
 
-DISTNAME=	mikutter.3.9.4
+DISTNAME=	mikutter.3.9.5
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/./-/}
 CATEGORIES=	net
 MASTER_SITES=	https://mikutter.hachune.net/bin/
@@ -26,7 +26,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-delayer-deferred>=2.1.0:../../devel/ruby-delayer-def
 DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri-[0-9]*:../../textproc/ruby-nokogiri
 DEPENDS+=	${RUBY_PKGPREFIX}-httpclient-[0-9]*:../../www/ruby-httpclient
 DEPENDS+=	${RUBY_PKGPREFIX}-moneta>=0.7:../../databases/ruby-moneta
-DEPENDS+=	${RUBY_PKGPREFIX}-twitter-text>=3.0.0:../../net/ruby-twitter-text
+DEPENDS+=	${RUBY_PKGPREFIX}-twitter-text-simpleidn>=3.0.0.0:../../net/ruby-twitter-text-simpleidn
 
 WRKSRC=		${WRKDIR}/mikutter
 USE_LANGUAGES=	# none
