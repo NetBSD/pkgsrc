@@ -1,0 +1,6 @@
+The Mono Project is an open development initiative sponsored by Ximian
+that is working to develop an open source, Unix version of the Microsoft
+.NET development platform.  Its objective is to enable Unix developers to
+build and deploy cross-platform .NET Applications.  The project will
+implement various technologies developed by Microsoft that have now been
+submitted to the ECMA for standardization.
