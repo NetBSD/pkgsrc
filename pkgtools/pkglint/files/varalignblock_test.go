@@ -1055,7 +1055,7 @@ func (s *Suite) Test_VaralignBlock__outlier_in_follow_continuation(c *check.C) {
 		"38 38",
 		"   24")
 	vt.Diagnostics(
-		"NOTE: ~/Makefile:2: This outlier variable should be aligned with a single space.")
+		"NOTE: ~/Makefile:2: This outlier variable value should be aligned with a single space.")
 	vt.Autofixes(
 		"AUTOFIX: ~/Makefile:2: Replacing \"\" with \" \".")
 	vt.Fixed(
@@ -2426,7 +2426,7 @@ func (s *Suite) Test_VaralignBlock_realignMultiEmptyInitial(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"NOTE: filename.mk:3: This outlier variable should be aligned with a single space.")
+		"NOTE: filename.mk:3: This outlier variable value should be aligned with a single space.")
 }
 
 func (s *Suite) Test_VaralignBlock_realignMultiEmptyInitial__spaces(c *check.C) {
