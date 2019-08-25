@@ -90,6 +90,9 @@ func (mklines *MkLines) Check() {
 	mklines.collectVariables()
 	mklines.collectPlistVars()
 	mklines.collectElse()
+	if G.Pkg != nil {
+		G.Pkg.collectConditionalIncludes(mklines)
+	}
 
 	// In the second pass, the actual checks are done.
 	mklines.checkAll()
@@ -237,7 +240,7 @@ func (mklines *MkLines) ForEach(action func(mkline *MkLine)) {
 // ForEachEnd calls the action for each line, until the action returns false.
 // It keeps track of the indentation and all conditional variables.
 // At the end, atEnd is called with the last line as its argument.
-func (mklines *MkLines) ForEachEnd(action func(mkline *MkLine) bool, atEnd func(lastMkline *MkLine)) {
+func (mklines *MkLines) ForEachEnd(action func(mkline *MkLine) bool, atEnd func(lastMkline *MkLine)) bool {
 
 	// XXX: To avoid looping over the lines multiple times, it would
 	// be nice to have an interface LinesChecker that checks a single topic.
@@ -247,9 +250,11 @@ func (mklines *MkLines) ForEachEnd(action func(mkline *MkLine) bool, atEnd func(
 	mklines.indentation = NewIndentation()
 	mklines.Tools.SeenPrefs = false
 
+	result := true
 	for _, mkline := range mklines.mklines {
 		mklines.indentation.TrackBefore(mkline)
 		if !action(mkline) {
+			result = false
 			break
 		}
 		mklines.indentation.TrackAfter(mkline)
@@ -259,6 +264,8 @@ func (mklines *MkLines) ForEachEnd(action func(mkline *MkLine) bool, atEnd func(
 		atEnd(mklines.mklines[len(mklines.mklines)-1])
 	}
 	mklines.indentation = nil
+
+	return result
 }
 
 // ExpandLoopVar searches the surrounding .for loops for the given

@@ -27,6 +27,24 @@ func (s *Suite) Test_Package_checkLinesBuildlink3Inclusion__file_but_not_package
 			"but not by the package.")
 }
 
+// Several files from the pkgsrc infrastructure are named *.buildlink3.mk,
+// even though they don't follow the typical file format for buildlink3.mk
+// files. Therefore they are ignored by this check.
+func (s *Suite) Test_Package_checkLinesBuildlink3Inclusion__infra_buildlink_file(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		".include \"../../mk/motif.buildlink3.mk\"")
+	t.CreateFileDummyBuildlink3("category/package/buildlink3.mk",
+		".include \"../../mk/motif.buildlink3.mk\"")
+	t.CreateFileLines("mk/motif.buildlink3.mk",
+		MkCvsID)
+
+	t.Main("--quiet", "-Wall", "category/package")
+
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_Package_checkLinesBuildlink3Inclusion__package_but_not_file(c *check.C) {
 	t := s.Init(c)
 
@@ -698,6 +716,75 @@ func (s *Suite) Test_Package_determineEffectivePkgVars__ineffective_C_modifier(c
 	t.CheckOutputEmpty()
 }
 
+func (s *Suite) Test_Package_determineEffectivePkgVars__Python_prefix(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"PKGNAME=\tpackage-2.0",
+		".include \"../../lang/python/extension.mk\"")
+	t.CreateFileLines("lang/python/extension.mk",
+		MkCvsID)
+
+	t.Main("-Wall", "category/package")
+
+	t.CheckOutputLines(
+		"Looks fine.")
+	// TODO: Wait for joerg's answer before enabling this check.
+	//t.CheckOutputLines(
+	//	"WARN: ~/category/package/Makefile:4: The PKGNAME of Python extensions should start with ${PYPKGPREFIX}.",
+	//	"1 warning found.")
+}
+
+func (s *Suite) Test_Package_determineEffectivePkgVars__Python_prefix_PKGNAME_variable(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"PKGNAME=\t${VAR}-package-2.0",
+		".include \"../../lang/python/extension.mk\"")
+	t.CreateFileLines("lang/python/extension.mk",
+		MkCvsID,
+		"VAR=\tvalue")
+
+	t.Main("-Wall", "category/package")
+
+	// Since PKGNAME starts with a variable, pkglint doesn't investigate
+	// further what the possible value of this variable could be. If it
+	// did, it would see that the prefix is not PYPKGPREFIX and would
+	// complain.
+	t.CheckOutputLines(
+		"Looks fine.")
+}
+
+// As of August 2019, pkglint loads the package files in alphabetical order.
+// This means that the package Makefile is loaded early, and includes by
+// other files may be invisible yet. This applies to both Makefile.* and to
+// *.mk since both of these appear later.
+//
+// The effects of these files are nevertheless visible at the right time
+// because the package Makefile is loaded including all its included files.
+func (s *Suite) Test_Package_determineEffectivePkgVars__Python_prefix_late(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"PKGNAME=\tpackage-2.0",
+		".include \"common.mk\"")
+	t.CreateFileLines("category/package/common.mk",
+		MkCvsID,
+		".include \"../../lang/python/extension.mk\"")
+	t.CreateFileLines("lang/python/extension.mk",
+		MkCvsID)
+
+	t.Main("-Wall", "category/package")
+
+	// TODO: Wait for joerg's answer before enabling this check.
+	t.CheckOutputLines(
+		"Looks fine.")
+	//t.CheckOutputLines(
+	//	"WARN: ~/category/package/Makefile:4: "+
+	//		"The PKGNAME of Python extensions should start with ${PYPKGPREFIX}.",
+	//	"1 warning found.")
+}
+
 func (s *Suite) Test_Package_checkPossibleDowngrade(c *check.C) {
 	t := s.Init(c)
 
@@ -1195,16 +1282,79 @@ func (s *Suite) Test_Package_checkIncludeConditionally__conditional_and_uncondit
 	G.checkdirPackage(".")
 
 	t.CheckOutputLines(
-		"WARN: options.mk:4: \"../../devel/zlib/buildlink3.mk\" is "+
-			"included conditionally here (depending on PKG_OPTIONS) "+
-			"and unconditionally in Makefile:20.",
-		"WARN: options.mk:6: \"../../sysutils/coreutils/buildlink3.mk\" is "+
-			"included unconditionally here "+
-			"and conditionally in Makefile:22 (depending on OPSYS).",
+		"WARN: Makefile:20: \"../../devel/zlib/buildlink3.mk\" is included "+
+			"unconditionally here "+
+			"and conditionally in options.mk:4 (depending on PKG_OPTIONS).",
+		"WARN: Makefile:22: \"../../sysutils/coreutils/buildlink3.mk\" is included "+
+			"conditionally here (depending on OPSYS) and "+
+			"unconditionally in options.mk:6.",
 		"WARN: options.mk:3: Expected definition of PKG_OPTIONS_VAR.")
 }
 
-func (s *Suite) Test_Package_checkIncludeConditionally__mixed(c *check.C) {
+func (s *Suite) Test_Package_checkIncludeConditionally__unconditionally_first(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.Chdir("category/package")
+	t.CreateFileLines("including.mk",
+		MkCvsID,
+		"",
+		".include \"included.mk\"",
+		".if ${OPSYS} == \"Linux\"",
+		".include \"included.mk\"",
+		".endif")
+	t.CreateFileLines("included.mk",
+		MkCvsID)
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"WARN: including.mk:3: \"included.mk\" is included " +
+			"unconditionally here and conditionally in line 5 (depending on OPSYS).")
+}
+
+func (s *Suite) Test_Package_checkIncludeConditionally__only_conditionally(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		".if ${OPSYS} == \"Linux\"",
+		".include \"included.mk\"",
+		".endif")
+	t.Chdir("category/package")
+	t.CreateFileLines("included.mk",
+		MkCvsID)
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Package_checkIncludeConditionally__conditionally_first(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.Chdir("category/package")
+	t.CreateFileLines("including.mk",
+		MkCvsID,
+		"",
+		".if ${OPSYS} == \"Linux\"",
+		".include \"included.mk\"",
+		".endif",
+		".include \"included.mk\"")
+	t.CreateFileLines("included.mk",
+		MkCvsID)
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"WARN: including.mk:4: \"included.mk\" is included " +
+			"conditionally here (depending on OPSYS) and unconditionally in line 6.")
+}
+
+func (s *Suite) Test_Package_checkIncludeConditionally__included_multiple_times(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPackage("category/package")
@@ -1228,12 +1378,34 @@ func (s *Suite) Test_Package_checkIncludeConditionally__mixed(c *check.C) {
 	G.Check(".")
 
 	t.CheckOutputLines(
+		"WARN: including.mk:3: \"included.mk\" is included "+
+			"unconditionally here and conditionally in line 10 (depending on OPSYS).",
 		"WARN: including.mk:5: \"included.mk\" is included "+
-			"conditionally here (depending on OPSYS) and unconditionally in line 3.",
+			"conditionally here (depending on OPSYS) and unconditionally in line 8.",
 		"WARN: including.mk:8: \"included.mk\" is included "+
-			"unconditionally here and conditionally in line 5 (depending on OPSYS).",
-		"WARN: including.mk:10: \"included.mk\" is included "+
-			"conditionally here (depending on OPSYS) and unconditionally in line 8.")
+			"unconditionally here and conditionally in line 10 (depending on OPSYS).")
+}
+
+// For preferences files, it doesn't matter whether they are included
+// conditionally or unconditionally since at the end they are included
+// anyway by the infrastructure.
+func (s *Suite) Test_Package_checkIncludeConditionally__prefs(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.Chdir("category/package")
+	t.CreateFileLines("including.mk",
+		MkCvsID,
+		"",
+		".include \"../../mk/bsd.prefs.mk\"",
+		".if ${OPSYS} == \"Linux\"",
+		".include \"../../mk/bsd.prefs.mk\"",
+		".endif")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_Package_checkIncludeConditionally__other_directory(c *check.C) {
@@ -2196,6 +2368,7 @@ func (s *Suite) Test_Package_collectSeenInclude__builtin_mk(c *check.C) {
 
 func (s *Suite) Test_Package_diveInto(c *check.C) {
 	t := s.Init(c)
+	t.Chdir(".")
 
 	test := func(including, included string, expected bool) {
 		actual := (*Package)(nil).diveInto(including, included)
@@ -2235,6 +2408,10 @@ func (s *Suite) Test_Package_diveInto(c *check.C) {
 	test("../../mk/one.mk", "two.mk", false)
 	test("../../mk/one.mk", "../../mk/two.mk", false)
 	test("../../mk/one.mk", "../lang/go/version.mk", false)
+
+	// wip/mk doesn't count as infrastructure since it is often used as a
+	// second layer, using the API of the main mk/ infrastructure.
+	test("wip/mk/cargo-binary.mk", "../../lang/rust/cargo.mk", true)
 }
 
 func (s *Suite) Test_Package_collectSeenInclude__multiple(c *check.C) {
@@ -2733,4 +2910,37 @@ func (s *Suite) Test_Package_checkPlist__PERL5_USE_PACKLIST_yes(c *check.C) {
 
 	t.CheckOutputLines(
 		"WARN: ~/category/p5-Packlist/Makefile:20: This package should not have a PLIST file.")
+}
+
+func (s *Suite) Test_Package_Includes(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		".include \"unconditionally.mk\"",
+		".if 0",
+		".include \"never.mk\"",
+		".endif",
+		".if ${OPSYS} == Linux",
+		".include \"conditionally.mk\"",
+		".endif")
+	t.CreateFileLines("category/package/unconditionally.mk",
+		MkCvsID)
+	t.CreateFileLines("category/package/conditionally.mk",
+		MkCvsID)
+	t.CreateFileLines("category/package/never.mk",
+		MkCvsID)
+	t.FinishSetUp()
+
+	pkg := NewPackage(t.File("category/package"))
+
+	pkg.load()
+
+	t.CheckEquals(pkg.Includes("unconditionally.mk"), true)
+	t.CheckEquals(pkg.Includes("conditionally.mk"), true)
+	t.CheckEquals(pkg.Includes("other.mk"), false)
+
+	// TODO: Strictly speaking, never.mk should be in conditionalIncludes.
+	//  This is an edge case though. See collectConditionalIncludes and
+	//  Indentation.IsConditional for the current implementation.
+	t.CheckEquals(pkg.conditionalIncludes["never.mk"], (*MkLine)(nil))
 }

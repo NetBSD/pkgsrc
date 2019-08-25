@@ -350,9 +350,6 @@ func (pkglint *Pkglint) ParseCommandLine(args []string) int {
 //
 // It sets up all the global state (infrastructure, wip) for accurately
 // classifying the entry.
-//
-// During tests, it assumes that Pkgsrc.LoadInfrastructure has been called.
-// It is the most high-level method for testing pkglint.
 func (pkglint *Pkglint) Check(dirent string) {
 	if trace.Tracing {
 		defer trace.Call1(dirent)()

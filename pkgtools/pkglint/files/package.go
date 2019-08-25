@@ -23,7 +23,7 @@ type Package struct {
 	Filesdir             string       // FILESDIR from the package Makefile
 	Patchdir             string       // PATCHDIR from the package Makefile
 	DistinfoFile         string       // DISTINFO_FILE from the package Makefile
-	EffectivePkgname     string       // PKGNAME or DISTNAME from the package Makefile, including nb13
+	EffectivePkgname     string       // PKGNAME or DISTNAME from the package Makefile, including nb13, can be empty
 	EffectivePkgbase     string       // EffectivePkgname without the version
 	EffectivePkgversion  string       // The version part of the effective PKGNAME, excluding nb13
 	EffectivePkgnameLine *MkLine      // The origin of the three Effective* values
@@ -56,6 +56,8 @@ type Package struct {
 	unconditionalIncludes map[string]*MkLine
 
 	IgnoreMissingPatches bool // In distinfo, don't warn about patches that cannot be found.
+
+	Once Once
 }
 
 func NewPackage(dir string) *Package {
@@ -112,6 +114,13 @@ func (pkg *Package) Rel(filename string) string {
 	return relpath(pkg.dir, filename)
 }
 
+// Returns whether the given file (relative to the package directory)
+// is included somewhere in the package, either directly or indirectly.
+func (pkg *Package) Includes(filename string) bool {
+	return pkg.unconditionalIncludes[filename] != nil ||
+		pkg.conditionalIncludes[filename] != nil
+}
+
 func (pkg *Package) checkPossibleDowngrade() {
 	if trace.Tracing {
 		defer trace.Call0()()
@@ -160,9 +169,13 @@ func (pkg *Package) checkPossibleDowngrade() {
 	}
 }
 
-// checkLinesBuildlink3Inclusion checks whether the package Makefile and
-// the corresponding buildlink3.mk agree for all included buildlink3.mk
-// files whether they are included conditionally or unconditionally.
+// checkLinesBuildlink3Inclusion checks whether the package Makefile includes
+// at least those buildlink3.mk files that are included by the buildlink3.mk
+// file of the package.
+//
+// The other direction is not checked since it is perfectly fine for a package
+// to have more dependencies than are needed for buildlink the package.
+// (This might be worth re-checking though.)
 func (pkg *Package) checkLinesBuildlink3Inclusion(mklines *MkLines) {
 	if trace.Tracing {
 		defer trace.Call0()()
@@ -173,7 +186,7 @@ func (pkg *Package) checkLinesBuildlink3Inclusion(mklines *MkLines) {
 	for _, mkline := range mklines.mklines {
 		if mkline.IsInclude() {
 			includedFile := mkline.IncludedFile()
-			if matches(includedFile, `^\.\./\.\./.*/buildlink3\.mk`) {
+			if hasSuffix(includedFile, "/buildlink3.mk") {
 				includedFiles[includedFile] = mkline
 				if pkg.bl3[includedFile] == nil {
 					mkline.Warnf("%s is included by this file but not by the package.", includedFile)
@@ -210,6 +223,7 @@ func (pkg *Package) load() ([]string, *MkLines, *MkLines) {
 
 	// Determine the used variables and PLIST directories before checking any of the Makefile fragments.
 	// TODO: Why is this code necessary? What effect does it have?
+	pkg.collectConditionalIncludes(mklines)
 	for _, filename := range files {
 		basename := path.Base(filename)
 		if (hasPrefix(basename, "Makefile.") || hasSuffix(filename, ".mk")) &&
@@ -218,6 +232,7 @@ func (pkg *Package) load() ([]string, *MkLines, *MkLines) {
 			!contains(filename, pkg.Filesdir+"/") {
 			fragmentMklines := LoadMk(filename, MustSucceed)
 			fragmentMklines.collectUsedVariables()
+			pkg.collectConditionalIncludes(fragmentMklines)
 		}
 		if hasPrefix(basename, "PLIST") {
 			pkg.loadPlistDirs(filename)
@@ -382,21 +397,30 @@ func (pkg *Package) loadPackageMakefile() (*MkLines, *MkLines) {
 	return mainLines, allLines
 }
 
+func (pkg *Package) collectConditionalIncludes(mklines *MkLines) {
+	mklines.ForEach(func(mkline *MkLine) {
+		if mkline.IsInclude() {
+			mkline.SetConditionalVars(mklines.indentation.Varnames())
+
+			key := pkg.Rel(mkline.IncludedFileFull())
+			if mklines.indentation.IsConditional() {
+				pkg.conditionalIncludes[key] = mkline
+			} else {
+				pkg.unconditionalIncludes[key] = mkline
+			}
+		}
+	})
+}
+
 // TODO: What is allLines used for, is it still necessary? Would it be better as a field in Package?
 func (pkg *Package) parse(mklines *MkLines, allLines *MkLines, includingFileForUsedCheck string) bool {
 	if trace.Tracing {
 		defer trace.Call1(mklines.lines.Filename)()
 	}
 
-	result := true
-
-	lineAction := func(mkline *MkLine) bool {
-		result = pkg.parseLine(mklines, mkline, allLines)
-		return result
-	}
-
-	atEnd := func(mkline *MkLine) {}
-	mklines.ForEachEnd(lineAction, atEnd)
+	result := mklines.ForEachEnd(
+		func(mkline *MkLine) bool { return pkg.parseLine(mklines, mkline, allLines) },
+		func(mkline *MkLine) {})
 
 	if includingFileForUsedCheck != "" {
 		mklines.CheckUsedBy(G.Pkgsrc.ToRel(includingFileForUsedCheck))
@@ -540,15 +564,11 @@ func (*Package) diveInto(includingFile string, includedFile string) bool {
 		return false
 	}
 
-	if !contains(includingFile, "/mk/") {
-		return true
+	if contains(includingFile, "/mk/") && !hasPrefix(G.Pkgsrc.ToRel(includingFile), "wip/mk") {
+		return hasSuffix(includingFile, "buildlink3.mk") && hasSuffix(includedFile, "builtin.mk")
 	}
 
-	if hasSuffix(includingFile, "buildlink3.mk") && hasSuffix(includedFile, "builtin.mk") {
-		return true
-	}
-
-	return false
+	return true
 }
 
 func (pkg *Package) collectSeenInclude(mkline *MkLine, includedFile string) {
@@ -588,7 +608,7 @@ func (pkg *Package) resolveIncludedFile(mkline *MkLine, includingFilename string
 	}
 
 	if mkline.Basename != "buildlink3.mk" {
-		if matches(includedFile, `^\.\./\.\./(.*)/buildlink3\.mk$`) {
+		if hasSuffix(includedFile, "/buildlink3.mk") {
 			pkg.bl3[includedFile] = mkline
 			if trace.Tracing {
 				trace.Step1("Buildlink3 file in package: %q", includedFile)
@@ -666,9 +686,18 @@ func (pkg *Package) checkfilePackageMakefile(filename string, mklines *MkLines, 
 
 	pkg.checkUpdate()
 
+	// TODO: Maybe later collect the conditional includes from allLines
+	//  instead of mklines. This will lead to about 6000 new warnings
+	//  though.
+	//  pkg.collectConditionalIncludes(allLines)
+
 	allLines.collectVariables()    // To get the tool definitions
 	mklines.Tools = allLines.Tools // TODO: also copy the other collected data
 	mklines.Check()
+
+	if false && pkg.EffectivePkgname != "" && pkg.Includes("../../lang/python/extension.mk") {
+		pkg.EffectivePkgnameLine.Warnf("The PKGNAME of Python extensions should start with ${PYPKGPREFIX}.")
+	}
 
 	pkg.CheckVarorder(mklines)
 
@@ -1232,27 +1261,34 @@ func (pkg *Package) checkFreeze(filename string) {
 }
 
 func (pkg *Package) checkIncludeConditionally(mkline *MkLine, indentation *Indentation) {
-	mkline.SetConditionalVars(indentation.Varnames())
+	if IsPrefs(mkline.IncludedFile()) {
+		return
+	}
 
-	includedFile := mkline.IncludedFile()
-	key := pkg.Rel(mkline.IncludedFile())
+	key := pkg.Rel(mkline.IncludedFileFull())
 
 	if indentation.IsConditional() {
-		pkg.conditionalIncludes[key] = mkline
 		if other := pkg.unconditionalIncludes[key]; other != nil {
+			if !pkg.Once.FirstTimeSlice("checkIncludeConditionally", mkline.Location.String(), other.Location.String()) {
+				return
+			}
+
 			mkline.Warnf(
 				"%q is included conditionally here (depending on %s) "+
 					"and unconditionally in %s.",
-				cleanpath(includedFile), strings.Join(mkline.ConditionalVars(), ", "), mkline.RefTo(other))
+				cleanpath(mkline.IncludedFile()), strings.Join(mkline.ConditionalVars(), ", "), mkline.RefTo(other))
 		}
 
 	} else {
-		pkg.unconditionalIncludes[key] = mkline
 		if other := pkg.conditionalIncludes[key]; other != nil {
+			if !pkg.Once.FirstTimeSlice("checkIncludeConditionally", other.Location.String(), mkline.Location.String()) {
+				return
+			}
+
 			mkline.Warnf(
 				"%q is included unconditionally here "+
 					"and conditionally in %s (depending on %s).",
-				cleanpath(includedFile), mkline.RefTo(other), strings.Join(other.ConditionalVars(), ", "))
+				cleanpath(mkline.IncludedFile()), mkline.RefTo(other), strings.Join(other.ConditionalVars(), ", "))
 		}
 	}
 
@@ -1322,12 +1358,7 @@ func (pkg *Package) checkUseLanguagesCompilerMk(mklines *MkLines) {
 	}
 
 	handleInclude := func(mkline *MkLine) {
-		dirname, _ := path.Split(mkline.Filename)
-		dirname = cleanpath(dirname)
-		fullIncluded := dirname + "/" + mkline.IncludedFile()
-		relIncludedFile := relpath(pkg.dir, fullIncluded)
-
-		seen.FirstTime(relIncludedFile)
+		_ = seen.FirstTime(pkg.Rel(mkline.IncludedFileFull()))
 	}
 
 	mklines.ForEach(func(mkline *MkLine) {
