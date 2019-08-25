@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3620 2019/08/25 18:53:58 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3621 2019/08/25 21:44:46 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5925,3 +5925,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/grpc to 1.23.0 [adam 2019-08-25]
 	Updated net/py-grpcio to 1.23.0 [adam 2019-08-25]
 	Updated net/py-grpcio-tools to 1.23.0 [adam 2019-08-25]
+	Updated pkgtools/pkglint to 5.7.21 [rillig 2019-08-25]
