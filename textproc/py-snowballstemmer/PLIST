@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/01/17 13:16:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/08/25 12:35:50 adam Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/snowballstemmer/__init__.py
 ${PYSITELIB}/snowballstemmer/__init__.pyc
@@ -6,6 +6,9 @@ ${PYSITELIB}/snowballstemmer/__init__.pyo
 ${PYSITELIB}/snowballstemmer/among.py
 ${PYSITELIB}/snowballstemmer/among.pyc
 ${PYSITELIB}/snowballstemmer/among.pyo
+${PYSITELIB}/snowballstemmer/arabic_stemmer.py
+${PYSITELIB}/snowballstemmer/arabic_stemmer.pyc
+${PYSITELIB}/snowballstemmer/arabic_stemmer.pyo
 ${PYSITELIB}/snowballstemmer/basestemmer.py
 ${PYSITELIB}/snowballstemmer/basestemmer.pyc
 ${PYSITELIB}/snowballstemmer/basestemmer.pyo
@@ -27,12 +30,27 @@ ${PYSITELIB}/snowballstemmer/french_stemmer.pyo
 ${PYSITELIB}/snowballstemmer/german_stemmer.py
 ${PYSITELIB}/snowballstemmer/german_stemmer.pyc
 ${PYSITELIB}/snowballstemmer/german_stemmer.pyo
+${PYSITELIB}/snowballstemmer/greek_stemmer.py
+${PYSITELIB}/snowballstemmer/greek_stemmer.pyc
+${PYSITELIB}/snowballstemmer/greek_stemmer.pyo
 ${PYSITELIB}/snowballstemmer/hungarian_stemmer.py
 ${PYSITELIB}/snowballstemmer/hungarian_stemmer.pyc
 ${PYSITELIB}/snowballstemmer/hungarian_stemmer.pyo
+${PYSITELIB}/snowballstemmer/indonesian_stemmer.py
+${PYSITELIB}/snowballstemmer/indonesian_stemmer.pyc
+${PYSITELIB}/snowballstemmer/indonesian_stemmer.pyo
+${PYSITELIB}/snowballstemmer/irish_stemmer.py
+${PYSITELIB}/snowballstemmer/irish_stemmer.pyc
+${PYSITELIB}/snowballstemmer/irish_stemmer.pyo
 ${PYSITELIB}/snowballstemmer/italian_stemmer.py
 ${PYSITELIB}/snowballstemmer/italian_stemmer.pyc
 ${PYSITELIB}/snowballstemmer/italian_stemmer.pyo
+${PYSITELIB}/snowballstemmer/lithuanian_stemmer.py
+${PYSITELIB}/snowballstemmer/lithuanian_stemmer.pyc
+${PYSITELIB}/snowballstemmer/lithuanian_stemmer.pyo
+${PYSITELIB}/snowballstemmer/nepali_stemmer.py
+${PYSITELIB}/snowballstemmer/nepali_stemmer.pyc
+${PYSITELIB}/snowballstemmer/nepali_stemmer.pyo
 ${PYSITELIB}/snowballstemmer/norwegian_stemmer.py
 ${PYSITELIB}/snowballstemmer/norwegian_stemmer.pyc
 ${PYSITELIB}/snowballstemmer/norwegian_stemmer.pyo
@@ -54,6 +72,9 @@ ${PYSITELIB}/snowballstemmer/spanish_stemmer.pyo
 ${PYSITELIB}/snowballstemmer/swedish_stemmer.py
 ${PYSITELIB}/snowballstemmer/swedish_stemmer.pyc
 ${PYSITELIB}/snowballstemmer/swedish_stemmer.pyo
+${PYSITELIB}/snowballstemmer/tamil_stemmer.py
+${PYSITELIB}/snowballstemmer/tamil_stemmer.pyc
+${PYSITELIB}/snowballstemmer/tamil_stemmer.pyo
 ${PYSITELIB}/snowballstemmer/turkish_stemmer.py
 ${PYSITELIB}/snowballstemmer/turkish_stemmer.pyc
 ${PYSITELIB}/snowballstemmer/turkish_stemmer.pyo
