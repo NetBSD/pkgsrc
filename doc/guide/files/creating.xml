@@ -1,4 +1,4 @@
-<!-- $NetBSD: creating.xml,v 1.30 2019/08/14 17:31:34 brook Exp $ -->
+<!-- $NetBSD: creating.xml,v 1.31 2019/08/25 17:11:00 brook Exp $ -->
 
 <chapter id="creating">
 <title>Creating a new pkgsrc package from scratch</title>
@@ -247,6 +247,19 @@ texlive2pkg foo.tar.xz foo.doc.tar.xz
 <para>This will create two packages, <filename>tex-foo</filename> and
 <filename>tex-foo-doc</filename>.  Be sure to check that both packages
 are correct.</para>
+
+<para>Finally, <ulink url="https://www.ctan.org/">CTAN</ulink>
+currently does not include version information in package filenames
+and changes their contents periodically when updates occur.
+Consequently, pkgsrc avoids downloading distfiles directly from <ulink
+url="https://www.ctan.org/">CTAN</ulink> and instead relies on the
+pkgsrc archives.  For each new or updated TeXlive package, e.g., the
+main one and the corresponding documentation, upload the distfiles
+with the following command in each package directory.</para>
+
+<programlisting>
+make upload-distfiles
+</programlisting>
 
 </sect2>
 
