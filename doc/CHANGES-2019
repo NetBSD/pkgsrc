@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3615 2019/08/25 12:38:32 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3616 2019/08/25 14:55:53 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5918,3 +5918,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-typing to 3.7.4.1 [adam 2019-08-25]
 	Updated textproc/py-snowballstemmer to 1.9.0 [adam 2019-08-25]
 	Updated multimedia/mkvtoolnix to 37.0.0 [adam 2019-08-25]
+	Added devel/ruby-simpleidn version 0.0.9 [tsutsui 2019-08-25]
