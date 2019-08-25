@@ -411,7 +411,7 @@ func (*VaralignBlock) realignMultiEmptyInitial(info *varalignLine, newWidth int)
 
 	fix := info.mkline.Autofix()
 	if newSpace == " " {
-		fix.Notef("This outlier variable should be aligned with a single space.")
+		fix.Notef("This outlier variable value should be aligned with a single space.")
 	} else if hasSpace && column != oldColumn {
 		fix.Notef("This variable value should be aligned with tabs, not spaces, to column %d.", column+1)
 	} else if column != oldColumn {
