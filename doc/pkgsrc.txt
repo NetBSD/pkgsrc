@@ -147,6 +147,8 @@ II. The pkgsrc developer's guide
 
             12.1.1. Perl modules
             12.1.2. Python modules and programs
+            12.1.3. R packages
+            12.1.4. TeXlive packages
 
         12.2. Examples
 
@@ -2372,6 +2374,8 @@ Table of Contents
 
         12.1.1. Perl modules
         12.1.2. Python modules and programs
+        12.1.3. R packages
+        12.1.4. TeXlive packages
 
     12.2. Examples
 
@@ -2620,6 +2624,8 @@ Table of Contents
 
     12.1.1. Perl modules
     12.1.2. Python modules and programs
+    12.1.3. R packages
+    12.1.4. TeXlive packages
 
 12.2. Examples
 
@@ -2759,6 +2765,46 @@ infrastructure will depend on the appropriate package version. For example:
 PYTHON_VERSIONED_DEPENDENCIES=dialog
 
 Look inside versioned_dependencies.mk for a list of supported packages.
+
+12.1.3. R packages
+
+Simple R packages from CRAN are handled automatically by R2pkg, which is
+available in pkgtools/R2pkg. Individual packages (and optionally their
+dependencies) may be created and updated. R packages generally follow the same
+form, and most of the relevant information needed is contained in a DESCRIPTION
+file as part of each R package on CRAN. Consequently, R2pkg downloads that
+information and creates or updates a package in the canonical form. The
+resulting package should be reviewed for correctness.
+
+12.1.4. TeXlive packages
+
+TeXlive packages from CTAN are handled automatically by texlive2pkg, which is
+available in pkgtools/texlive2pkg.
+
+If the TeXlive package name is not known, it may be useful to search CTAN. A "
+Contained in" field on the package page typically identifies the basename of
+the package file in the TeXlive archive.
+
+If the TeXlive package name is known, download the files from the TeXlive
+archive. For package foo, you will need to download foo.tar.xz. Most TeXlive
+packages also have associated documentation packages, so download
+foo.doc.tar.xz at the same time. These files should be placed in the
+appropriate category directory, which is often but not always print. Then run
+the following command in the category directory.
+
+texlive2pkg foo.tar.xz foo.doc.tar.xz
+
+This will create two packages, tex-foo and tex-foo-doc. Be sure to check that
+both packages are correct.
+
+Finally, CTAN currently does not include version information in package
+filenames and changes their contents periodically when updates occur.
+Consequently, pkgsrc avoids downloading distfiles directly from CTAN and
+instead relies on the pkgsrc archives. For each new or updated TeXlive package,
+e.g., the main one and the corresponding documentation, upload the distfiles
+with the following command in each package directory.
+
+make upload-distfiles
 
 12.2. Examples
 
