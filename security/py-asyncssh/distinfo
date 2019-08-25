@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2019/08/03 11:43:47 adam Exp $
+$NetBSD: distinfo,v 1.17 2019/08/25 12:24:06 adam Exp $
 
-SHA1 (asyncssh-1.17.1.tar.gz) = ed8540e897d3f5c0048cf4dab1bb4a66100c84ad
-RMD160 (asyncssh-1.17.1.tar.gz) = 11e514229c7746a11e49ab80613713c3a35ed832
-SHA512 (asyncssh-1.17.1.tar.gz) = d5999ff91f8166d25306448da0f2c7df68a50498cd8b17e3fba31de99db75083fbe5958667a6e25744d27615de5b9759de6fe912b089049d5bea3ed796fdca2b
-Size (asyncssh-1.17.1.tar.gz) = 327718 bytes
+SHA1 (asyncssh-1.18.0.tar.gz) = 2362242158e7e816c62c7b1224d5f11efff8f591
+RMD160 (asyncssh-1.18.0.tar.gz) = 7582f435c7a0ba15e0248e87a4f47c4721fdf577
+SHA512 (asyncssh-1.18.0.tar.gz) = 971d3d9e4ef97e7b6c487b90219f2959c163fd1330f9936fb727b24d626b073cd2ab0d57e741ae875b67d506e2bda8c9371e54d7e98890c1bebe2e1a848aa02e
+Size (asyncssh-1.18.0.tar.gz) = 327950 bytes
