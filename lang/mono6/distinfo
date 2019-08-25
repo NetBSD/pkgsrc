@@ -1,0 +1,26 @@
+$NetBSD: distinfo,v 1.1 2019/08/25 16:37:01 maya Exp $
+
+SHA1 (mono-6.0.0.313.tar.xz) = c5cccad2cb5be936f23e46b95df7628013e29e3c
+RMD160 (mono-6.0.0.313.tar.xz) = 801e5128561d2e95a6736cdfce040d8850be4e2f
+SHA512 (mono-6.0.0.313.tar.xz) = a1de452eb1c6edba503723217a4b5839563d154ff0c01852b551a41b3c98b5b617637e4e435de87bf275cfdce4066e70bfc763b607882f0b42e14196d7d5c156
+Size (mono-6.0.0.313.tar.xz) = 218124872 bytes
+SHA1 (patch-configure.ac) = f932add14f5b54af5cc183cfd30f482f11f7d504
+SHA1 (patch-data_Makefile.am) = 535480855e413750d5b6cab6351b1683ac911246
+SHA1 (patch-data_net__2__0_Browsers_Makefile.am) = 847fa7f5a54e7583a87c40749efe5a99e513c3c9
+SHA1 (patch-data_net__2__0_Makefile.am) = dffb23423381a9031587536ee5de2b34610329ee
+SHA1 (patch-data_net__4__0_Browsers_Makefile.am) = 0ada5af132816efb41dfbd7ce2ba2355d751b883
+SHA1 (patch-data_net__4__0_Makefile.am) = 7c0fa175047f01a556f61503b2fcfabdedd2c606
+SHA1 (patch-data_net__4__5_Browsers_Makefile.am) = 80bd57a2ac3fc95adef18acd9cfd7744ca112b01
+SHA1 (patch-data_net__4__5_Makefile.am) = d7591e835bfdd27fa0fba4b669b778924c811be4
+SHA1 (patch-mcs_class_corlib_Test_Mono_MonoNativePlatformType.cs) = 3368edee232b184879091df3d68daf4900f744c2
+SHA1 (patch-mono_metadata_icall.c) = 292c7bc4c959a3a5c1a982ccf2bc26a5300a0730
+SHA1 (patch-mono_metadata_mono-config.c) = ba690e4790c94e085214d303a9ac71a2a1d08fee
+SHA1 (patch-mono_metadata_threads.c) = e1432cced0dafce1a2712869ce79e12a2ab35973
+SHA1 (patch-mono_mini_Makefile.am.in) = 697b0b56d9b7ddb5f61cd105c2c9c5dfac53ed9b
+SHA1 (patch-mono_native_Makefile.am) = 47e57623ebfce32f13a5fc1c19a0dbcb31dad8d4
+SHA1 (patch-mono_native_mono-native-platform.h) = 845c921b4a84146b78f4f94c9380890892f5ff29
+SHA1 (patch-mono_tests_Makefile.am) = a5bf145619a50c8c256c32ffdb5b51f9e04f874c
+SHA1 (patch-mono_utils_mono-os-semaphore.h) = b850911945c95be804e9462263d558ef702831ca
+SHA1 (patch-mono_utils_mono-state.c) = 6a6d83e1779a5167e8f22ba1dedce9b3203705c4
+SHA1 (patch-mono_utils_mono-utils-debug.c) = 30b0ab55c9227705026a8edd1e4bb693ae4f9953
+SHA1 (patch-runtime_mono-wrapper.in) = 6d396f9ddf92e522111421ce9b8ec26988438f48
