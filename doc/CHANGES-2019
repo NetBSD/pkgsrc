@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3619 2019/08/25 17:54:48 ng0 Exp $
+$NetBSD: CHANGES-2019,v 1.3620 2019/08/25 18:53:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5922,3 +5922,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Added net/ruby-twitter-text-simpleidn version 3.0.0.0 [tsutsui 2019-08-25]
 	Updated net/mikutter to 3.9.5 [tsutsui 2019-08-25]
 	Updated textproc/docbook2mdoc to 1.1.0 [ng0 2019-08-25]
+	Updated net/grpc to 1.23.0 [adam 2019-08-25]
+	Updated net/py-grpcio to 1.23.0 [adam 2019-08-25]
+	Updated net/py-grpcio-tools to 1.23.0 [adam 2019-08-25]
