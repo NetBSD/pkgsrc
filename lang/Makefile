@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.518 2019/07/08 06:47:34 sjmulder Exp $
+# $NetBSD: Makefile,v 1.519 2019/08/25 16:37:28 maya Exp $
 #
 
 COMMENT=	Programming languages
@@ -151,6 +151,7 @@ SUBDIR+=	mit-scheme-bin
 SUBDIR+=	mono
 SUBDIR+=	mono-basic
 SUBDIR+=	mono2
+SUBDIR+=	mono6
 SUBDIR+=	moscow_ml
 SUBDIR+=	mpd
 SUBDIR+=	nawk
