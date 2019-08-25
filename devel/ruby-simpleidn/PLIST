@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2019/08/25 14:53:03 tsutsui Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENCE
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/simpleidn.rb
+${GEM_LIBDIR}/simpleidn.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
