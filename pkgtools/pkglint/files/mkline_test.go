@@ -1931,12 +1931,11 @@ func (s *Suite) Test_Indentation_Varnames__repetition(c *check.C) {
 
 	G.Check(t.File("category/package"))
 
-	// TODO: It feels wrong that OPSYS is mentioned twice here.
-	//  Why only twice and not three times?
 	t.CheckOutputLines(
-		"WARN: ~/category/package/buildlink3.mk:14: " +
-			"\"../../category/other/buildlink3.mk\" is included conditionally here " +
-			"(depending on OPSYS, OPSYS) and unconditionally in Makefile:20.")
+		"WARN: ~/category/package/Makefile:20: " +
+			"\"../../category/other/buildlink3.mk\" is included " +
+			"unconditionally here and " +
+			"conditionally in buildlink3.mk:14 (depending on OPSYS).")
 }
 
 func (s *Suite) Test_MkLine_ForEachUsed(c *check.C) {
