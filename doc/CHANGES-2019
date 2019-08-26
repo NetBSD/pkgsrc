@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3632 2019/08/26 14:29:07 fox Exp $
+$NetBSD: CHANGES-2019,v 1.3633 2019/08/26 14:38:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5944,3 +5944,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-pyutil to 3.3.0 [adam 2019-08-26]
 	Updated graphics/MesaLib to 19.1.5 [nia 2019-08-26]
 	Updated audio/fasttracker2 to 2.167 [fox 2019-08-26]
+	Updated finance/py-stripe to 2.35.1 [adam 2019-08-26]
+	Updated www/py-autobahn to 19.8.1 [adam 2019-08-26]
