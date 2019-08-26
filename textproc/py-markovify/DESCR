@@ -1,0 +1,10 @@
+Markovify is a simple, extensible Markov chain generator. Right now,
+its primary use is for building Markov models of large corpora of
+text and generating random sentences from that.
+
+Its features include:
+* Simplicity. "Batteries included," but it is easy to override key methods.
+* Models can be stored as JSON, allowing you to cache your results
+  and save them for later.
+* Text parsing and sentence generation methods are highly extensible,
+  allowing you to set your own rules.
