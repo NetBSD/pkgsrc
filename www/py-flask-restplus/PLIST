@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/02/01 15:31:02 kleink Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/08/26 13:25:58 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -60,6 +60,9 @@ ${PYSITELIB}/flask_restplus/schemas/__init__.py
 ${PYSITELIB}/flask_restplus/schemas/__init__.pyc
 ${PYSITELIB}/flask_restplus/schemas/__init__.pyo
 ${PYSITELIB}/flask_restplus/schemas/oas-2.0.json
+${PYSITELIB}/flask_restplus/specs.py
+${PYSITELIB}/flask_restplus/specs.pyc
+${PYSITELIB}/flask_restplus/specs.pyo
 ${PYSITELIB}/flask_restplus/static/droid-sans.css
 ${PYSITELIB}/flask_restplus/static/favicon-16x16.png
 ${PYSITELIB}/flask_restplus/static/favicon-32x32.png
@@ -68,6 +71,7 @@ ${PYSITELIB}/flask_restplus/static/files/droid-sans-latin-400.woff
 ${PYSITELIB}/flask_restplus/static/files/droid-sans-latin-400.woff2
 ${PYSITELIB}/flask_restplus/static/files/droid-sans-latin-700.woff
 ${PYSITELIB}/flask_restplus/static/files/droid-sans-latin-700.woff2
+${PYSITELIB}/flask_restplus/static/oauth2-redirect.html
 ${PYSITELIB}/flask_restplus/static/swagger-ui-bundle.js
 ${PYSITELIB}/flask_restplus/static/swagger-ui-bundle.js.map
 ${PYSITELIB}/flask_restplus/static/swagger-ui-standalone-preset.js
