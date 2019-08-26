@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3630 2019/08/26 13:48:48 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3631 2019/08/26 14:01:40 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5942,3 +5942,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-flask-restplus to 0.13.0 [adam 2019-08-26]
 	Updated www/py-meinheld to 1.0.1 [adam 2019-08-26]
 	Updated devel/py-pyutil to 3.3.0 [adam 2019-08-26]
+	Updated graphics/MesaLib to 19.1.5 [nia 2019-08-26]
