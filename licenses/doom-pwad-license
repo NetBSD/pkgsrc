@@ -1,0 +1,16 @@
+================================================================================
+Authors may NOT use the contents of this file as a base for modification or
+reuse [without explicit permission of the original mappers].  Permissions
+have been obtained from original authors for any of their resources modified
+or included in this file.
+
+You MAY distribute this file, provided you include this text file, with no
+modifications.  You may distribute this file in any electronic format (BBS,
+Diskette, CD, etc) as long as you include this file intact.  I have
+received permission from the original authors of any modified or included
+content in this file to allow further distribution.
+================================================================================
+
+Note for pkgsrc:
+The "text file" referenced in the license above is included in the package
+and installed to the ${PREFIX}/share/doom directory.
