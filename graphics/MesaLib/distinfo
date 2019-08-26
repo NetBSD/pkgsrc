@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.127 2019/08/24 20:11:19 nia Exp $
+$NetBSD: distinfo,v 1.128 2019/08/26 14:01:27 nia Exp $
 
-SHA1 (mesa-19.1.4.tar.xz) = 393053bfa41b7fc65add756713004f034c39c3ce
-RMD160 (mesa-19.1.4.tar.xz) = 1d813c4a212710bb6fa8db184b4618788851cd15
-SHA512 (mesa-19.1.4.tar.xz) = 234032d917c9b378c3f6ceb921677b64e549344c3957331810b50fd73e0dccd2f4f62e2bd39e619590f389bc58fdab10fab4b88f7c117557cbeb1dda049b9fc5
-Size (mesa-19.1.4.tar.xz) = 10938008 bytes
+SHA1 (mesa-19.1.5.tar.xz) = 7a80ac32b4da4066dd00b3dc8274682be18b35cb
+RMD160 (mesa-19.1.5.tar.xz) = f626b041b041a6b3c95ba6b62ecf8c4a038d5f87
+SHA512 (mesa-19.1.5.tar.xz) = 4d4b3733c13e5c9b3172127f2565b827dc46aab69bdc86791c457ad137a5571c51e3c3a26d5a99e11fe552829a1220028a3968f3086959e038c615f2d75675a4
+Size (mesa-19.1.5.tar.xz) = 10938452 bytes
 SHA1 (patch-meson.build) = a9fdcaa59aed9b56ff95d4153dd73064e2261c45
 SHA1 (patch-src_amd_common_ac__debug.c) = 8233367c3b5bc344442ea8d19488fdd1e3791ae9
 SHA1 (patch-src_amd_vulkan_winsys_amdgpu_radv__amdgpu__cs.c) = 1fe81a7b16e36dc9125400c20543271216a33a45
@@ -31,13 +31,11 @@ SHA1 (patch-src_glx_glxext.c) = 15c2c5e0c6b5095ce849fb86ad148aa05d7d907a
 SHA1 (patch-src_intel_compiler_brw__fs__bank__conflicts.cpp) = 6276d2c6846bb4dd08699921bec4e20202a17478
 SHA1 (patch-src_intel_isl_isl__tiled__memcpy.c) = 9b79991648ab4c39ae14df219135cd2b01c1b3c0
 SHA1 (patch-src_intel_perf_gen__perf.c) = 526f36d96bd9d72893764da2b9e78cb9b70de92b
-SHA1 (patch-src_intel_perf_gen__perf.h) = cbc9c8efe6ce127b8dcb9f2c733d3427f114c5c0
 SHA1 (patch-src_intel_tools_aub__mem.c) = 6a21ecb4cfbdf216474b3be16bda441bb1390350
 SHA1 (patch-src_intel_tools_aubinator__error__decode.c) = d8f636e3c3e76763a505a1dce23de0b198ad62fa
 SHA1 (patch-src_intel_vulkan_anv__allocator.c) = da5a11c95d17d6476e7141572264a215807b8cd7
 SHA1 (patch-src_intel_vulkan_anv__gem.c) = b8eb487fa704151e7c3c3b1d23973b2b0aa5922e
 SHA1 (patch-src_intel_vulkan_anv__gem__stubs.c) = ad5a4bd9fe521cf73faf2f0cf0f493a0b40f4c20
-SHA1 (patch-src_intel_vulkan_anv__queue.c) = 2dbf7dfd0c77f74f510032bf8d12109f58c50a30
 SHA1 (patch-src_mapi_entry__x86-64__tls.h) = 11b7ef1da435fa17fc7025a46a123d447d6a7d07
 SHA1 (patch-src_mapi_entry__x86__tls.h) = 11c0f5302d305a77f3a1780d44a2c61f48a66273
 SHA1 (patch-src_mapi_u__current.c) = 38d324fcd1c28d155106ccd248edb5eb1aa9ffac
