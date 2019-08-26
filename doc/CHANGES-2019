@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3634 2019/08/26 14:43:05 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3635 2019/08/26 15:13:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5948,3 +5948,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-autobahn to 19.8.1 [adam 2019-08-26]
 	Removed print/py-poppler [adam 2019-08-26]
 	Removed print/pdfshuffler [adam 2019-08-26]
+	Updated www/py-genshi to 0.7.3 [adam 2019-08-26]
+	Updated textproc/py-relatorio to 0.9.0 [adam 2019-08-26]
