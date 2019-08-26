@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.744 2019/08/15 03:36:04 jnemeth Exp $
+# $NetBSD: Makefile,v 1.745 2019/08/26 14:41:52 adam Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -110,7 +110,6 @@ SUBDIR+=	pdfjam
 SUBDIR+=	pdflib
 SUBDIR+=	pdflib-lite
 SUBDIR+=	pdfmod
-SUBDIR+=	pdfshuffler
 SUBDIR+=	pdvipsk
 SUBDIR+=	php-pdflib
 SUBDIR+=	pmw
@@ -135,7 +134,6 @@ SUBDIR+=	py-Pdf
 SUBDIR+=	py-cups
 SUBDIR+=	py-latexcodec
 SUBDIR+=	py-pisa
-SUBDIR+=	py-poppler
 SUBDIR+=	py-pslib
 SUBDIR+=	py-reportlab
 SUBDIR+=	py-weasyprint
