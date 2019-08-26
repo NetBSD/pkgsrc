@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.154 2019/08/24 20:39:37 nia Exp $
+# $NetBSD: Makefile,v 1.155 2019/08/26 14:01:27 nia Exp $
 
-DISTNAME=	mesa-19.1.4
+DISTNAME=	mesa-19.1.5
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
 CATEGORIES=	graphics x11
 MASTER_SITES=	https://mesa.freedesktop.org/archive/
@@ -27,13 +27,6 @@ PKGCONFIG_OVERRIDE+=	src/mesa/drivers/dri/dri.pc.in
 PKGCONFIG_OVERRIDE+=	src/mesa/drivers/osmesa/osmesa.pc.in
 PKGCONFIG_OVERRIDE+=	src/mesa/gl.pc.in
 
-# Replace /etc/drirc.d with ${PREFIX}/etc/drirc.d
-SUBST_CLASSES+=		drirc
-SUBST_STAGE.drirc=	pre-configure
-SUBST_MESSAGE.drirc=	Fixing hardcoded /etc/drirc.d references
-SUBST_FILES.drirc+=	src/util/xmlconfig.c
-SUBST_SED.drirc+=	-e 's|/etc|${PREFIX}/etc|g'
-
 SUBST_CLASSES+=		py
 SUBST_STAGE.py=		pre-configure
 SUBST_MESSAGE.py=	Fixing Python binary name
@@ -55,6 +48,7 @@ MESON_ARGS+=	-Dglx-read-only-text=true
 MESON_ARGS+=	-Dshared-glapi=true
 
 CPPFLAGS+=	-DHAVE_NOATEXIT
+CPPFLAGS+=	-DSYSCONFDIR=${PKG_SYSCONFDIR}
 
 BUILDLINK_TRANSFORM+=	rm:-Werror=return-type
 
@@ -67,21 +61,20 @@ BUILD_DEPENDS+=		${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
 # needed to build vulkan support
 BUILD_DEPENDS+=		${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 
+# LLVM detection
+TOOL_DEPENDS+=		${PYPKGPREFIX}-meson>=0.51.1nb3:../../devel/py-meson
+
+EGDIR=			${PREFIX}/share/examples/mesa
+INSTALLATION_DIRS+=	${EGDIR}
+OWN_DIRS=		${PKG_SYSCONFDIR}/drirc.d
+CONF_FILES+=		${EGDIR}/00-mesa-defaults.conf \
+			${PKG_SYSCONFDIR}/drirc.d/00-mesa-defaults.conf
+
 pre-configure:
 	touch ${WRKSRC}/src/glx/apple_dummy.cpp
 
-DRIRC_DIR=		${PKG_SYSCONFDIR}/drirc.d
-EGDIR=			${PREFIX}/share/examples/mesa
-OWN_DIRS+=		${DRIRC_DIR}
-INSTALLATION_DIRS+=	${EGDIR}
-CONF_FILES+=		${EGDIR}/00-mesa-defaults.conf \
-			${DRIRC_DIR}/00-mesa-defaults.conf
-
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/src/util/00-mesa-defaults.conf ${DESTDIR}${EGDIR}
-
-# LLVM detection
-TOOL_DEPENDS+=	${PYPKGPREFIX}-meson>=0.51.1nb3:../../devel/py-meson
+	${MV} ${DESTDIR}${PREFIX}/share/drirc.d/00-mesa-defaults.conf ${DESTDIR}${EGDIR}
 
 .include "../../devel/py-meson/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
