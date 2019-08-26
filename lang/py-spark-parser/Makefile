@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/09/20 13:46:52 adam Exp $
+# $NetBSD: Makefile,v 1.2 2019/08/26 06:54:28 adam Exp $
 
-DISTNAME=	spark_parser-1.8.7
+DISTNAME=	spark_parser-1.8.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/spark_parser/}
@@ -17,7 +17,7 @@ USE_LANGUAGES=	# none
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} spark-parser-coverage spark-parser-coverage-${PYVERSSUFFIX} || ${TRUE}
+	${MV} spark-parser-coverage spark-parser-coverage-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
