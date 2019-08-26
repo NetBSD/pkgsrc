@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/02/01 15:31:02 kleink Exp $
+$NetBSD: distinfo,v 1.2 2019/08/26 13:25:58 adam Exp $
 
-SHA1 (flask-restplus-0.12.1.tar.gz) = b2ee34393d0f677c350776c6f9009551fbe313f7
-RMD160 (flask-restplus-0.12.1.tar.gz) = 0bce50ae4c31b75b7bebdba1eeb15dd316f9adb9
-SHA512 (flask-restplus-0.12.1.tar.gz) = c4b2cc9d536f1a779b432a608569494bfbf4712e1ab422242d1375467389fa390bc4d7aa32783e565aaa6e3f04c8eb59b4cc8836307694dab93d164ad529c373
-Size (flask-restplus-0.12.1.tar.gz) = 2418801 bytes
+SHA1 (flask-restplus-0.13.0.tar.gz) = 26cec8c7d3dfbc34756888d620cf255977ca3f01
+RMD160 (flask-restplus-0.13.0.tar.gz) = b71a1b0462aa9e120105b242a886744f517d0db2
+SHA512 (flask-restplus-0.13.0.tar.gz) = d44d18af66b7999e3cc6197cc491fac36c4feda39de61155ea1f0bf438ba9a7a8bf89368ac9343313d9399e14876ebd7d169e7e333fb7f7749b9f5e1edb09151
+Size (flask-restplus-0.13.0.tar.gz) = 2422174 bytes
