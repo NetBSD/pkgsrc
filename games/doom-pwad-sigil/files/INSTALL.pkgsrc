@@ -1,0 +1,7 @@
+The PWAD files SIGIL.wad, SIGIL_COMPAT.wad and the description SIGIL.txt have
+been installed to:
+
+   DOOMWADDIR
+
+This is the pkgsrc standard Doom WAD directory location (shared with other Doom
+packages).
