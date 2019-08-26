@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2019/08/26 18:32:43 ng0 Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/markovify/__init__.py
+${PYSITELIB}/markovify/__init__.pyo
+${PYSITELIB}/markovify/__init__.pyc
+${PYSITELIB}/markovify/__version__.pyo
+${PYSITELIB}/markovify/__version__.pyc
+${PYSITELIB}/markovify/chain.pyo
+${PYSITELIB}/markovify/chain.pyc
+${PYSITELIB}/markovify/splitters.pyo
+${PYSITELIB}/markovify/splitters.pyc
+${PYSITELIB}/markovify/text.pyo
+${PYSITELIB}/markovify/text.pyc
+${PYSITELIB}/markovify/utils.pyo
+${PYSITELIB}/markovify/utils.pyc
+${PYSITELIB}/markovify/__version__.py
+${PYSITELIB}/markovify/chain.py
+${PYSITELIB}/markovify/splitters.py
+${PYSITELIB}/markovify/text.py
+${PYSITELIB}/markovify/utils.py
