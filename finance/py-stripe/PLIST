@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/04/25 05:06:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/08/26 14:26:43 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -77,6 +77,9 @@ ${PYSITELIB}/stripe/api_resources/bitcoin_receiver.pyo
 ${PYSITELIB}/stripe/api_resources/bitcoin_transaction.py
 ${PYSITELIB}/stripe/api_resources/bitcoin_transaction.pyc
 ${PYSITELIB}/stripe/api_resources/bitcoin_transaction.pyo
+${PYSITELIB}/stripe/api_resources/capability.py
+${PYSITELIB}/stripe/api_resources/capability.pyc
+${PYSITELIB}/stripe/api_resources/capability.pyo
 ${PYSITELIB}/stripe/api_resources/card.py
 ${PYSITELIB}/stripe/api_resources/card.pyc
 ${PYSITELIB}/stripe/api_resources/card.pyo
@@ -101,6 +104,9 @@ ${PYSITELIB}/stripe/api_resources/credit_note.pyo
 ${PYSITELIB}/stripe/api_resources/customer.py
 ${PYSITELIB}/stripe/api_resources/customer.pyc
 ${PYSITELIB}/stripe/api_resources/customer.pyo
+${PYSITELIB}/stripe/api_resources/customer_balance_transaction.py
+${PYSITELIB}/stripe/api_resources/customer_balance_transaction.pyc
+${PYSITELIB}/stripe/api_resources/customer_balance_transaction.pyo
 ${PYSITELIB}/stripe/api_resources/dispute.py
 ${PYSITELIB}/stripe/api_resources/dispute.pyc
 ${PYSITELIB}/stripe/api_resources/dispute.pyo
@@ -185,6 +191,9 @@ ${PYSITELIB}/stripe/api_resources/product.pyo
 ${PYSITELIB}/stripe/api_resources/radar/__init__.py
 ${PYSITELIB}/stripe/api_resources/radar/__init__.pyc
 ${PYSITELIB}/stripe/api_resources/radar/__init__.pyo
+${PYSITELIB}/stripe/api_resources/radar/early_fraud_warning.py
+${PYSITELIB}/stripe/api_resources/radar/early_fraud_warning.pyc
+${PYSITELIB}/stripe/api_resources/radar/early_fraud_warning.pyo
 ${PYSITELIB}/stripe/api_resources/radar/value_list.py
 ${PYSITELIB}/stripe/api_resources/radar/value_list.pyc
 ${PYSITELIB}/stripe/api_resources/radar/value_list.pyo
@@ -215,6 +224,9 @@ ${PYSITELIB}/stripe/api_resources/reversal.pyo
 ${PYSITELIB}/stripe/api_resources/review.py
 ${PYSITELIB}/stripe/api_resources/review.pyc
 ${PYSITELIB}/stripe/api_resources/review.pyo
+${PYSITELIB}/stripe/api_resources/setup_intent.py
+${PYSITELIB}/stripe/api_resources/setup_intent.pyc
+${PYSITELIB}/stripe/api_resources/setup_intent.pyo
 ${PYSITELIB}/stripe/api_resources/sigma/__init__.py
 ${PYSITELIB}/stripe/api_resources/sigma/__init__.pyc
 ${PYSITELIB}/stripe/api_resources/sigma/__init__.pyo
@@ -239,9 +251,6 @@ ${PYSITELIB}/stripe/api_resources/subscription_item.pyo
 ${PYSITELIB}/stripe/api_resources/subscription_schedule.py
 ${PYSITELIB}/stripe/api_resources/subscription_schedule.pyc
 ${PYSITELIB}/stripe/api_resources/subscription_schedule.pyo
-${PYSITELIB}/stripe/api_resources/subscription_schedule_revision.py
-${PYSITELIB}/stripe/api_resources/subscription_schedule_revision.pyc
-${PYSITELIB}/stripe/api_resources/subscription_schedule_revision.pyo
 ${PYSITELIB}/stripe/api_resources/tax_id.py
 ${PYSITELIB}/stripe/api_resources/tax_id.pyc
 ${PYSITELIB}/stripe/api_resources/tax_id.pyo
@@ -297,6 +306,9 @@ ${PYSITELIB}/stripe/oauth.pyo
 ${PYSITELIB}/stripe/oauth_error.py
 ${PYSITELIB}/stripe/oauth_error.pyc
 ${PYSITELIB}/stripe/oauth_error.pyo
+${PYSITELIB}/stripe/object_classes.py
+${PYSITELIB}/stripe/object_classes.pyc
+${PYSITELIB}/stripe/object_classes.pyo
 ${PYSITELIB}/stripe/request_metrics.py
 ${PYSITELIB}/stripe/request_metrics.pyc
 ${PYSITELIB}/stripe/request_metrics.pyo
