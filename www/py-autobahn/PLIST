@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2019/07/08 07:49:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2019/08/26 14:38:08 adam Exp $
 bin/wamp
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -456,6 +456,9 @@ ${PYSITELIB}/autobahn/xbr/__init__.pyo
 ${PYSITELIB}/autobahn/xbr/_abi.py
 ${PYSITELIB}/autobahn/xbr/_abi.pyc
 ${PYSITELIB}/autobahn/xbr/_abi.pyo
+${PYSITELIB}/autobahn/xbr/_blockchain.py
+${PYSITELIB}/autobahn/xbr/_blockchain.pyc
+${PYSITELIB}/autobahn/xbr/_blockchain.pyo
 ${PYSITELIB}/autobahn/xbr/_buyer.py
 ${PYSITELIB}/autobahn/xbr/_buyer.pyc
 ${PYSITELIB}/autobahn/xbr/_buyer.pyo
@@ -475,10 +478,10 @@ ${PYSITELIB}/autobahn/xbr/contracts/IERC20.json
 ${PYSITELIB}/autobahn/xbr/contracts/Migrations.json
 ${PYSITELIB}/autobahn/xbr/contracts/Roles.json
 ${PYSITELIB}/autobahn/xbr/contracts/SafeMath.json
+${PYSITELIB}/autobahn/xbr/contracts/XBRChannel.json
 ${PYSITELIB}/autobahn/xbr/contracts/XBRMaintained.json
 ${PYSITELIB}/autobahn/xbr/contracts/XBRNetwork.json
 ${PYSITELIB}/autobahn/xbr/contracts/XBRNetworkProxy.json
-${PYSITELIB}/autobahn/xbr/contracts/XBRPaymentChannel.json
 ${PYSITELIB}/autobahn/xbr/contracts/XBRToken.json
 ${PYSITELIB}/twisted/plugins/autobahn_endpoints.py
 ${PYSITELIB}/twisted/plugins/autobahn_endpoints.pyc
