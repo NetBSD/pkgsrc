@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/05/04 07:57:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/08/26 06:55:16 adam Exp $
 bin/pydisassemble-${PYVERSSUFFIX}
 bin/uncompyle6-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -239,6 +239,9 @@ ${PYSITELIB}/uncompyle6/semantics/parser_error.pyo
 ${PYSITELIB}/uncompyle6/semantics/pysource.py
 ${PYSITELIB}/uncompyle6/semantics/pysource.pyc
 ${PYSITELIB}/uncompyle6/semantics/pysource.pyo
+${PYSITELIB}/uncompyle6/semantics/transform.py
+${PYSITELIB}/uncompyle6/semantics/transform.pyc
+${PYSITELIB}/uncompyle6/semantics/transform.pyo
 ${PYSITELIB}/uncompyle6/show.py
 ${PYSITELIB}/uncompyle6/show.pyc
 ${PYSITELIB}/uncompyle6/show.pyo
