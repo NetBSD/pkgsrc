@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3628 2019/08/26 10:43:44 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3629 2019/08/26 13:26:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5938,3 +5938,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/py-sqlalchemy-utils to 0.34.2 [adam 2019-08-26]
 	Updated time/py-arrow to 0.14.5 [adam 2019-08-26]
 	Updated devel/py-deprecation to 2.0.7 [adam 2019-08-26]
+	Updated graphics/py-graphviz to 0.12 [adam 2019-08-26]
+	Updated www/py-flask-restplus to 0.13.0 [adam 2019-08-26]
