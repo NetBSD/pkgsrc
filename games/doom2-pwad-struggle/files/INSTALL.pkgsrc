@@ -1,0 +1,7 @@
+The PWAD files STRG.wad, STRG_M28.wad and the description STRG.txt have been
+installed to:
+
+   DOOMWADDIR
+
+This is the pkgsrc standard Doom WAD directory location (shared with other Doom
+packages).

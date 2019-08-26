@@ -1,0 +1,24 @@
+Attention: This is a mod for Doom II, not a standalone game!
+It has received one of the 2018 Cacowards on Doomworld.
+
+For the look & feel intended by the author, you need the original Doom II
+from id Software as base (doom2.wad as IWAD).
+If you don't have Doom II, you can use Freedoom (freedoom2.wad as IWAD) to
+play, but the Freedoom graphics doesn't match well to the style of this mod.
+
+===========================================================================
+Advanced engine needed  : Limit removing compatibility
+                          This wad uses heavily modified DeHacked patch. So
+                          it is recommended not to use other custom gameplay
+                          patches.
+Primary purpose         : Single player
+===========================================================================
+
+Struggle - Antaresian Legacy
+It features new weapons and monsters replacement with DeHacked patch.
+Some of original monsters are also slightly changed, so it's recommended to
+check out the info [see installed text file], before you play this one.
+
+P.S.: Par time is based on UV-MAX, not UV-Speed
+P.P.S. : Please try STRG_M28.wad file, if you're having a framerate issue
+         with MAP28.
