@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.129 2019/08/11 13:22:11 wiz Exp $
+# $NetBSD: Makefile,v 1.130 2019/08/26 06:41:08 jnemeth Exp $
 
 DISTNAME=	mrtg-2.17.7
-#PKGREVISION=	12
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	https://oss.oetiker.ch/mrtg/pub/
 MASTER_SITES+=	https://oss.oetiker.ch/mrtg/pub/old/
@@ -35,6 +34,8 @@ SUBST_VARS.files=	PREFIX
 SUBST_MESSAGE.files=	Fixing default configuration files.
 
 INSTALLATION_DIRS+=	${EGDIR} libexec
+
+RCD_SCRIPTS=		mrtg
 
 post-extract:
 	cp ${FILESDIR}/mrtg.conf.example ${WRKDIR}
