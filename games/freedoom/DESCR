@@ -1,0 +1,15 @@
+The Freedoom project aims to create a complete free content first
+person shooter game. But Freedoom by itself is just the raw material
+for a game: it must be paired with a compatible game engine to be
+played.
+
+id Software released the source code to their classic game, Doom, under
+the GNU General Public License. This means that the program code that
+powers Doom is free; Freedoom complements this with free levels, artwork,
+sound effects and music to make a completely free game.
+
+Freedoom is actually three games in one, consisting of two single
+player campaigns and one set of levels intended for multiplayer
+deathmatch (FreeDM).
+
+Note: This package contains no game engine, only the data (wad) files.
