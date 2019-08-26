@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/08/21 12:59:54 adam Exp $
+# $NetBSD: Makefile,v 1.8 2019/08/26 06:46:37 adam Exp $
 
 DISTNAME=	nbconvert-5.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -31,6 +31,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-testpath-[0-9]*:../../devel/py-testpath
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-ipykernel
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
