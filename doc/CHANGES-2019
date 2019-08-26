@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3625 2019/08/26 07:11:33 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3626 2019/08/26 07:35:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5932,3 +5932,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/py-uncompyle6 to 3.4.0 [adam 2019-08-26]
 	Updated archivers/lz4 to 1.9.2 [adam 2019-08-26]
 	Updated converters/help2man to 1.47.11 [adam 2019-08-26]
+	Updated textproc/py-acora to 2.2 [adam 2019-08-26]
+	Updated devel/py-pip to 19.2.3 [adam 2019-08-26]
