@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2016/03/29 21:19:56 khorben Exp $
-
-SHA1 (pypoppler-0.12.1.tar.gz) = a8a92039911a7c4bbd995a46f88a1877bf88ab5c
-RMD160 (pypoppler-0.12.1.tar.gz) = d6c196d6bbbaa9ef96c2ea3a38eb6a89308bab15
-SHA512 (pypoppler-0.12.1.tar.gz) = 04055411adc19f6af499a7cba0d6c5abb51e0802dd28962f833da3da1caf6ff274ff67d082f9c47548dac7a4ceb1bccf9860cda71fe48b8b7df74c0132498d20
-Size (pypoppler-0.12.1.tar.gz) = 318142 bytes
-SHA1 (patch-poppler.defs) = efe0c9f5e182f0ae81ef3a82d8afb0fe12f9c267
