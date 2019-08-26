@@ -1,0 +1,6 @@
+The IWAD files freedoom1.wad and freedoom2.wad have been installed to:
+
+   DOOMWADDIR
+
+This is the pkgsrc standard Doom WAD directory location (shared with other Doom
+packages).
