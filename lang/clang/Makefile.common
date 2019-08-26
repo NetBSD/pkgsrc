@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.33 2019/08/05 19:06:49 adam Exp $
+# $NetBSD: Makefile.common,v 1.34 2019/08/26 14:56:21 adam Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-static-analyzer/Makefile
 # used by lang/clang-tools-extra/Makefile
@@ -28,6 +28,8 @@ CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
 # XXX can't disable static-analyzer without also disabling ARCMT
 CMAKE_ARGS+=	-DCLANG_ENABLE_ARCMT=OFF
+
+.include "../../mk/compiler.mk"
 
 CMAKE_ARGS.Darwin+=	-DCMAKE_LIBTOOL=/usr/bin/libtool
 .if defined(OSX_SDK_PATH)
@@ -69,8 +71,6 @@ REPLACE_PYTHON+=	utils/check_cfc/test_check_cfc.py
 REPLACE_PYTHON+=	utils/hmaptool/hmaptool
 REPLACE_PYTHON+=	utils/token-delta.py
 REPLACE_PYTHON+=	www/builtins.py
-
-.include "../../mk/compiler.mk"
 
 .if ${OPSYS} == "NetBSD" && !empty(PKGSRC_COMPILER:Mclang)
 # command to check if clang is using libc++ or libstdc++
