@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3638 2019/08/26 16:45:42 micha Exp $
+$NetBSD: CHANGES-2019,v 1.3639 2019/08/26 16:50:22 micha Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5953,3 +5953,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added games/freedoom version 0.11.3nb1 [baeuerle 2019-08-26]
 	Added games/doom2-pwad-preacher version 20181129nb1 [baeuerle 2019-08-26]
 	Added games/doom2-pwad-struggle version 20180819nb1 [baeuerle 2019-08-26]
+	Added games/doom-pwad-sigil version 1.1 [baeuerle 2019-08-26]
