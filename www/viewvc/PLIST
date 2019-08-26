@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/11/01 21:08:55 scottr Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/08/26 17:06:45 rin Exp $
 share/examples/viewvc/cvsgraph.conf
 share/examples/viewvc/viewvc.conf
 ${VIEWVCDIR}/bin/cgi/query.cgi
@@ -105,12 +105,14 @@ ${VIEWVCDIR}/templates-contrib/newvc/templates/docroot/help_query.html
 ${VIEWVCDIR}/templates-contrib/newvc/templates/docroot/help_rootview.html
 ${VIEWVCDIR}/templates-contrib/newvc/templates/docroot/images/back.png
 ${VIEWVCDIR}/templates-contrib/newvc/templates/docroot/images/back_small.png
+${VIEWVCDIR}/templates-contrib/newvc/templates/docroot/images/binary.png
 ${VIEWVCDIR}/templates-contrib/newvc/templates/docroot/images/broken.png
 ${VIEWVCDIR}/templates-contrib/newvc/templates/docroot/images/cvs-logo.png
 ${VIEWVCDIR}/templates-contrib/newvc/templates/docroot/images/dir.png
 ${VIEWVCDIR}/templates-contrib/newvc/templates/docroot/images/down.png
 ${VIEWVCDIR}/templates-contrib/newvc/templates/docroot/images/feed-icon-16x16.jpg
 ${VIEWVCDIR}/templates-contrib/newvc/templates/docroot/images/forward.png
+${VIEWVCDIR}/templates-contrib/newvc/templates/docroot/images/image.png
 ${VIEWVCDIR}/templates-contrib/newvc/templates/docroot/images/svn-logo.png
 ${VIEWVCDIR}/templates-contrib/newvc/templates/docroot/images/text.png
 ${VIEWVCDIR}/templates-contrib/newvc/templates/docroot/images/up.png
@@ -199,6 +201,7 @@ ${VIEWVCDIR}/templates/docroot/help_rootview.html
 ${VIEWVCDIR}/templates/docroot/images/annotate.png
 ${VIEWVCDIR}/templates/docroot/images/back.png
 ${VIEWVCDIR}/templates/docroot/images/back_small.png
+${VIEWVCDIR}/templates/docroot/images/binary.png
 ${VIEWVCDIR}/templates/docroot/images/broken.png
 ${VIEWVCDIR}/templates/docroot/images/chalk.jpg
 ${VIEWVCDIR}/templates/docroot/images/cvsgraph_16x16.png
@@ -210,6 +213,7 @@ ${VIEWVCDIR}/templates/docroot/images/download.png
 ${VIEWVCDIR}/templates/docroot/images/favicon.ico
 ${VIEWVCDIR}/templates/docroot/images/feed-icon-16x16.jpg
 ${VIEWVCDIR}/templates/docroot/images/forward.png
+${VIEWVCDIR}/templates/docroot/images/image.png
 ${VIEWVCDIR}/templates/docroot/images/list.png
 ${VIEWVCDIR}/templates/docroot/images/lock.png
 ${VIEWVCDIR}/templates/docroot/images/log.png
