@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/04/25 21:17:15 markd Exp $
+$NetBSD: distinfo,v 1.5 2019/08/27 21:27:41 markd Exp $
 
-SHA1 (qqc2-desktop-style-5.57.0.tar.xz) = 41d8b2f71af44fcfd8e948f5d39c9e9d32f5f027
-RMD160 (qqc2-desktop-style-5.57.0.tar.xz) = 137460b2c8df675d63fa28951e409ca3ead1dd48
-SHA512 (qqc2-desktop-style-5.57.0.tar.xz) = eab5daad92b0f24e12c2e821955fbbe19ed22e6cbfdd8ce2cd28e5088cec284f8004c18f7052cd914f91fe37add4f10c9668cc0c569ff2c2e6821da78d2b30fc
-Size (qqc2-desktop-style-5.57.0.tar.xz) = 44560 bytes
+SHA1 (qqc2-desktop-style-5.61.0.tar.xz) = fa91e48033744ab6d2b2d2ba6ebd56cb60da2044
+RMD160 (qqc2-desktop-style-5.61.0.tar.xz) = 5306a0031489619b10eb13d66198eb8d4e952122
+SHA512 (qqc2-desktop-style-5.61.0.tar.xz) = f4418351c2c61bcf982173bd1d47a2547e16e913bd0c31add2b762bfbce92b67cf678275b137e993ffccb49282791f38219eb0b09bea14d96603661a187342f7
+Size (qqc2-desktop-style-5.61.0.tar.xz) = 44684 bytes
