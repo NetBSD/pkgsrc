@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/05/15 09:01:03 jaapb Exp $
+# $NetBSD: Makefile,v 1.19 2019/08/27 16:04:02 schmonz Exp $
 
 VERSION=	1.7.6
 PKGREVISION=	1
@@ -13,6 +13,8 @@ COMMENT=	Alternative standard library for OCaml
 LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	gmake
+
+MAKE_JOBS_SAFE=	no
 
 OCAML_USE_FINDLIB=	yes
 
