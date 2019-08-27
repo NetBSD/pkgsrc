@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/08/18 16:07:12 nia Exp $
+# $NetBSD: Makefile,v 1.2 2019/08/27 11:18:16 nia Exp $
 
 DISTNAME=	wayland-protocols-1.17
 CATEGORIES=	devel
@@ -15,4 +15,5 @@ GNU_CONFIGURE=		YES
 
 PKGCONFIG_OVERRIDE+=	wayland-protocols.pc.in
 
+.include "../../devel/wayland/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
