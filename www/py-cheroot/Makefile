@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2019/05/21 08:36:32 adam Exp $
+# $NetBSD: Makefile,v 1.24 2019/08/27 10:25:06 adam Exp $
 
-DISTNAME=	cheroot-6.5.5
+DISTNAME=	cheroot-6.5.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/Cheroot/}
