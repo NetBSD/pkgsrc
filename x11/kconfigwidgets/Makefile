@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2019/08/11 13:25:13 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2019/08/27 20:18:01 markd Exp $
 
 DISTNAME=	kconfigwidgets-${KF5VER}
-PKGREVISION=	1
 CATEGORIES=	x11
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -15,16 +14,6 @@ BUILD_DEPENDS+= kdoctools>=${KF5VER}:../../devel/kdoctools
 USE_TOOLS+=	perl:run msgmerge
 
 REPLACE_PERL+=	src/preparetips5
-
-SUBST_CLASSES+=		xdg
-SUBST_STAGE.xdg=	pre-configure
-SUBST_MESSAGE.xdg=	Install via examples dir.
-SUBST_FILES.xdg=	CMakeLists.txt
-SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
-
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
-CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kconfigwidgets.categories \
-		${PKG_SYSCONFDIR}/xdg/kconfigwidgets.categories
 
 .include "../../lang/python/tool.mk"
 .include "../../devel/kconfig/buildlink3.mk"
