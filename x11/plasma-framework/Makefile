@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/04/25 21:17:15 markd Exp $
+# $NetBSD: Makefile,v 1.28 2019/08/27 21:24:24 markd Exp $
 
 DISTNAME=	plasma-framework-${KF5VER}
 CATEGORIES=	x11
@@ -20,7 +20,7 @@ SUBST_FILES.fix-moc=	_KDE_build/src/scriptengines/qml/CMakeFiles/plasma_appletsc
 SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
 
 .include "../../devel/kdeclarative/buildlink3.mk"
-#.include "../../wip/kwayland/buildlink3.mk"
+.include "../../devel/kwayland/buildlink3.mk"
 .include "../../x11/kactivities5/buildlink3.mk"
 .include "../../x11/kirigami2/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
