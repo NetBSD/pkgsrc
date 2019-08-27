@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/04/25 21:10:45 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/08/27 20:43:35 markd Exp $
 include/KF5/KHtml/KHTMLPart
 include/KF5/KHtml/KHTMLSettings
 include/KF5/KHtml/KHTMLView
@@ -55,7 +55,6 @@ qt5/plugins/kf5/parts/khtmlimagepart.so
 qt5/plugins/kf5/parts/khtmlpart.so
 qt5/plugins/kf5/parts/kjavaappletviewer.so
 qt5/plugins/kf5/parts/kmultipart.so
-share/examples/kde-xdg/khtml.categories
 share/examples/kde-xdg/khtmlrc
 share/kf5/khtml/css/html4.css
 share/kf5/khtml/css/presentational.css
@@ -168,3 +167,4 @@ share/locale/xh/LC_MESSAGES/khtml5.mo
 share/locale/zh_CN/LC_MESSAGES/khtml5.mo
 share/locale/zh_HK/LC_MESSAGES/khtml5.mo
 share/locale/zh_TW/LC_MESSAGES/khtml5.mo
+share/qlogging-categories5/khtml.categories
