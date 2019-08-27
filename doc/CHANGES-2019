@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3641 2019/08/26 18:36:39 ng0 Exp $
+$NetBSD: CHANGES-2019,v 1.3642 2019/08/27 05:38:43 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5956,3 +5956,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added games/doom-pwad-sigil version 1.1 [baeuerle 2019-08-26]
 	Updated www/viewvc to 1.1.27 [rin 2019-08-26]
 	Added textproc/py-markovify version 0.7.2 [ng0 2019-08-26]
+	Updated lang/ocaml to 4.08.1nb1 [jaapb 2019-08-27]
