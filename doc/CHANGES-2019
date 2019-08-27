@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3651 2019/08/27 19:30:51 gdt Exp $
+$NetBSD: CHANGES-2019,v 1.3652 2019/08/27 20:55:35 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5977,3 +5977,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/grafana to 6.3.3 [adam 2019-08-27]
 	Updated www/py-cheroot to 6.5.6 [adam 2019-08-27]
 	Updated pkgtools/pkg_rolling-replace to 0.24.8 [gdt 2019-08-27]
+	Updated devel/p5-Test-BDD-Cucumber to 0.58 [schmonz 2019-08-27]
