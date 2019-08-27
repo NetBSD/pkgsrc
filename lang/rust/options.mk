@@ -1,6 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2019/08/14 16:00:23 nia Exp $
+# $NetBSD: options.mk,v 1.4 2019/08/27 17:23:48 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.rust
+PKG_SUPPORTED_OPTIONS=		
 
 .include "../../mk/bsd.fast.prefs.mk"
 
