@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/04/25 20:56:31 markd Exp $
+# $NetBSD: Makefile,v 1.20 2019/08/27 20:37:53 markd Exp $
 
 DISTNAME=	kemoticons-${KF5VER}
 CATEGORIES=	misc
@@ -15,16 +15,6 @@ SUBST_FILES.fix-moc+=	_KDE_build/src/providers/kde/CMakeFiles/emoticonstheme_kde
 SUBST_FILES.fix-moc+=	_KDE_build/src/providers/adium/CMakeFiles/emoticonstheme_adium_autogen.dir/AutogenInfo.cmake
 SUBST_FILES.fix-moc+=	_KDE_build/src/providers/pidgin/CMakeFiles/emoticonstheme_pidgin_autogen.dir/AutogenInfo.cmake
 SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
-
-SUBST_CLASSES+=		xdg
-SUBST_STAGE.xdg=	pre-configure
-SUBST_MESSAGE.xdg=	Install via examples dir.
-SUBST_FILES.xdg=	CMakeLists.txt
-SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
-
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
-CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kemoticons.categories \
-		${PKG_SYSCONFDIR}/xdg/kemoticons.categories
 
 .include "../../meta-pkgs/kde/kf5.mk"
 
