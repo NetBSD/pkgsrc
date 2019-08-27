@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.155 2019/08/26 14:01:27 nia Exp $
+# $NetBSD: Makefile,v 1.156 2019/08/27 10:24:47 nia Exp $
 
 DISTNAME=	mesa-19.1.5
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.mesa3d.org/
 COMMENT=	Open source OpenGL implementation
 LICENSE=	mit
 
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	bison pkg-config
 USE_LANGUAGES=	c99 c++
 USE_LIBTOOL=	yes
 
