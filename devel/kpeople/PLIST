@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/04/25 20:50:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/08/27 21:05:59 markd Exp $
 include/KF5/KPeople/KPeople/Global
 include/KF5/KPeople/KPeople/PersonData
 include/KF5/KPeople/KPeople/PersonPluginManager
@@ -47,7 +47,6 @@ qt5/mkspecs/modules/qt_KPeople.pri
 qt5/mkspecs/modules/qt_KPeopleWidgets.pri
 qt5/qml/org/kde/people/libKF5PeopleDeclarative.so
 qt5/qml/org/kde/people/qmldir
-share/examples/kde-xdg/kpeople.categories
 share/kf5/kpeople/dummy_avatar.png
 share/kservicetypes5/kpeople_data_source.desktop
 share/kservicetypes5/kpeople_plugin.desktop
@@ -95,3 +94,4 @@ share/locale/tr/LC_MESSAGES/kpeople5.mo
 share/locale/uk/LC_MESSAGES/kpeople5.mo
 share/locale/zh_CN/LC_MESSAGES/kpeople5.mo
 share/locale/zh_TW/LC_MESSAGES/kpeople5.mo
+share/qlogging-categories5/kpeople.categories
