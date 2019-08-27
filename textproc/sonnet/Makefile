@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/04/25 21:08:10 markd Exp $
+# $NetBSD: Makefile,v 1.33 2019/08/27 21:29:30 markd Exp $
 
 DISTNAME=	sonnet-${KF5VER}
 CATEGORIES=	textproc
@@ -10,16 +10,6 @@ LICENSE=	gnu-lgpl-v2.1
 USE_TOOLS+=	pkg-config
 
 .include "../../meta-pkgs/kde/kf5.mk"
-
-SUBST_CLASSES+=		xdg
-SUBST_STAGE.xdg=	pre-configure
-SUBST_MESSAGE.xdg=	Install via examples dir.
-SUBST_FILES.xdg=	CMakeLists.txt
-SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
-
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
-CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/sonnet.categories \
-		${PKG_SYSCONFDIR}/xdg/sonnet.categories
 
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
