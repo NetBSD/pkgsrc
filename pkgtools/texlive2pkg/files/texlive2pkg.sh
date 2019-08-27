@@ -1,6 +1,6 @@
 #!/bin/sh
 # texlive2pkg
-# $NetBSD: texlive2pkg.sh,v 1.1 2016/01/24 19:34:44 markd Exp $
+# $NetBSD: texlive2pkg.sh,v 1.2 2019/08/27 06:21:18 markd Exp $
 #
 # Copyright (c) 2016
 #       Mark Davies.  All rights reserved.
@@ -37,32 +37,37 @@ TDIR=/tmp/tl.$$
 DISTDIR=@DISTDIR@
 LIBEXECDIR=@PREFIX@/libexec/texlive2pkg
 MAKE=@MAKE@
+FTP=@FTP@
 pkgtarball=""
 doctarball=""
+dodoc=0
+pkgurl=0
+docurl=0
 
-USAGE="${NAME} package-tarball [doc-tarball] -- create a texlive package for pkgsrc"
+USAGE="${NAME} [-d] package-tarball [doc-tarball] -- create a texlive package for pkgsrc"
+
+if [ "$1" = "-d" ]; then
+  dodoc=1
+  shift
+fi
 
 if [ ${#} -eq 1 ]; then
   pkgtarball=$1
+  if [ $dodoc -eq 1 ]; then
+    doctarball=${pkgtarball%%.tar.xz}.doc.tar.xz
+  fi
 elif [ ${#} -eq 2 ]; then
   pkgtarball=$1
   doctarball=$2
-  case $doctarball in
-  /*.doc.tar.xz)
-     break ;;
-  *.doc.tar.xz)
-     doctarball=$PWD/$doctarball
-     break ;;
-  *)
-     echo ${USAGE}
-     exit 1
-  esac
 else
   echo ${USAGE}
   exit 1
 fi
 
 case $pkgtarball in
+file:/*.tar.xz | ftp:/*.tar.xz | http:/*.tar.xz | https:/*.tar.xz )
+   pkgurl=1
+   break ;;
 /*.tar.xz)
    break ;;
 *.tar.xz)
@@ -73,15 +78,42 @@ case $pkgtarball in
    exit 1
 esac
 
+case "$doctarball" in
+"")
+   break ;;
+file:/*.doc.tar.xz | ftp:/*.tar.xz | http:/*.doc.tar.xz | https:/*.doc.tar.xz )
+   docurl=1
+   break ;;
+/*.doc.tar.xz)
+   break ;;  
+*.doc.tar.xz)
+   doctarball=$PWD/$doctarball
+   break ;;
+*)
+   echo ${USAGE}
+   exit 1
+esac
+
+mkdir $TDIR
+
+if [ $pkgurl -eq 1 ]; then
+  (cd $TDIR; $FTP $pkgtarball )
+  pkgtarball=$TDIR/`basename $pkgtarball`
+fi
+if [ $docurl -eq 1 ]; then
+  (cd $TDIR; $FTP $doctarball )
+  doctarball=$TDIR/`basename $doctarball`
+fi
+
 if [ ! -f $pkgtarball ]; then
   echo "File not found - $pkgtarball"
   exit 1
 fi
 
-(mkdir $TDIR; cd $TDIR ; xzcat $pkgtarball | tar xf - tlpkg)
+(cd $TDIR ; xzcat $pkgtarball | tar xf - tlpkg)
 eval `$LIBEXECDIR/texlive.pkg $TDIR/tlpkg/tlpobj/*.tlpobj`
 mkdir -p $DISTDIR/tex-$PKG-$REV
-cp $* $DISTDIR/tex-$PKG-$REV/
+cp $pkgtarball $doctarball $DISTDIR/tex-$PKG-$REV/
 (cd tex-$PKG; $MAKE makesum)
 if [ -f "$doctarball" ]; then
    (cd $TDIR; xzcat $doctarball | tar xf - tlpkg)
