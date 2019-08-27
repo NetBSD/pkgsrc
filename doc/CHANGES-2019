@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3654 2019/08/27 22:24:02 markd Exp $
+$NetBSD: CHANGES-2019,v 1.3655 2019/08/27 22:30:09 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6053,3 +6053,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/kxmlgui to 5.61.0 [markd 2019-08-27]
 	Updated x11/plasma-framework to 5.61.0 [markd 2019-08-27]
 	Updated x11/qqc2-desktop-style to 5.61.0 [markd 2019-08-27]
+	Updated sysutils/qdirstat to 1.6 [markd 2019-08-27]
