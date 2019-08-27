@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2016/04/26 09:04:23 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/08/27 06:56:32 markd Exp $
 
-DISTNAME=	phonon-backend-gstreamer-4.9.0
+DISTNAME=	phonon-backend-gstreamer-4.9.1
 PKGNAME=	${DISTNAME:S/-4/-shared-4/}
 
 COMMENT=	Multimedia API for KF5 - GStreamer backend shared files
