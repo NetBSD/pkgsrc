@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2019/04/25 20:50:23 markd Exp $
+# $NetBSD: Makefile,v 1.29 2019/08/27 20:53:14 markd Exp $
 
 DISTNAME=	kitemmodels-${KF5VER}
 CATEGORIES=	devel
@@ -8,16 +8,6 @@ COMMENT=	Models for Qt Model/View system
 LICENSE=	gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kde/kf5.mk"
-
-SUBST_CLASSES+=		xdg
-SUBST_STAGE.xdg=	pre-configure
-SUBST_MESSAGE.xdg=	Install via examples dir.
-SUBST_FILES.xdg=	CMakeLists.txt
-SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
-
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
-CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kitemmodels.categories \
-		${PKG_SYSCONFDIR}/xdg/kitemmodels.categories
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtscript/buildlink3.mk"
