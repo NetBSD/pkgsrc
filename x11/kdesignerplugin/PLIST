@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/04/25 21:17:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/08/27 20:32:12 markd Exp $
 bin/kgendesignerplugin
 lib/cmake/KF5DesignerPlugin/KF5DesignerPluginConfig.cmake
 lib/cmake/KF5DesignerPlugin/KF5DesignerPluginConfigVersion.cmake
@@ -14,12 +14,12 @@ man/pt/man1/kgendesignerplugin.1
 man/pt_BR/man1/kgendesignerplugin.1
 man/sv/man1/kgendesignerplugin.1
 man/uk/man1/kgendesignerplugin.1
-qt5/plugins/designer/kdewebkit5widgets.so
 qt5/plugins/designer/kf5widgets.so
 share/kf5/widgets/pics/k3iconview.png
 share/kf5/widgets/pics/k3listview.png
 share/kf5/widgets/pics/kactionselector.png
 share/kf5/widgets/pics/kactivelabel.png
+share/kf5/widgets/pics/kbusyindicatorwidget.png
 share/kf5/widgets/pics/kcharselect.png
 share/kf5/widgets/pics/kcmodule.png
 share/kf5/widgets/pics/kcolorbutton.png
