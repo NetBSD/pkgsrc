@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2019/08/11 13:24:20 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2019/08/27 20:43:35 markd Exp $
 
 DISTNAME=	khtml-${KF5VER}
-PKGREVISION=	1
 CATEGORIES=	www
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -31,8 +30,6 @@ SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/khtmlrc \
 		${PKG_SYSCONFDIR}/xdg/khtmlrc
-CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/khtml.categories \
-		${PKG_SYSCONFDIR}/xdg/khtml.categories
 
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
