@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/04/25 20:50:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/08/27 21:04:09 markd Exp $
 bin/kpackagetool5
 include/KF5/KPackage/KPackage/Package
 include/KF5/KPackage/KPackage/PackageLoader
@@ -30,7 +30,6 @@ man/pt/man1/kpackagetool5.1
 man/pt_BR/man1/kpackagetool5.1
 man/sv/man1/kpackagetool5.1
 man/uk/man1/kpackagetool5.1
-share/examples/kde-xdg/kpackage.categories
 share/kservicetypes5/kpackage-generic.desktop
 share/kservicetypes5/kpackage-genericqml.desktop
 share/kservicetypes5/kpackage-packagestructure.desktop
@@ -81,3 +80,4 @@ share/locale/ug/LC_MESSAGES/libkpackage5.mo
 share/locale/uk/LC_MESSAGES/libkpackage5.mo
 share/locale/zh_CN/LC_MESSAGES/libkpackage5.mo
 share/locale/zh_TW/LC_MESSAGES/libkpackage5.mo
+share/qlogging-categories5/kpackage.categories
