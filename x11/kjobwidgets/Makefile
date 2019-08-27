@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/04/25 21:17:14 markd Exp $
+# $NetBSD: Makefile,v 1.28 2019/08/27 20:56:45 markd Exp $
 
 DISTNAME=	kjobwidgets-${KF5VER}
 CATEGORIES=	x11
@@ -8,16 +8,6 @@ COMMENT=	Widgets for tracking KJob instances
 LICENSE=	gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kde/kf5.mk"
-
-SUBST_CLASSES+=		xdg
-SUBST_STAGE.xdg=	pre-configure
-SUBST_MESSAGE.xdg=	Install via examples dir.
-SUBST_FILES.xdg=	CMakeLists.txt
-SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
-
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
-CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kjobwidgets.categories \
-		${PKG_SYSCONFDIR}/xdg/kjobwidgets.categories
 
 .include "../../devel/kcoreaddons/buildlink3.mk"
 .include "../../x11/kwidgetsaddons/buildlink3.mk"
