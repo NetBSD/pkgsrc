@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/04/25 20:50:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/08/27 20:50:32 markd Exp $
 bin/kcookiejar5
 bin/ktelnetservice5
 bin/ktrash5
@@ -132,6 +132,7 @@ include/KF5/KIOFileWidgets/KDirOperator
 include/KF5/KIOFileWidgets/KDirSortFilterProxyModel
 include/KF5/KIOFileWidgets/KEncodingFileDialog
 include/KF5/KIOFileWidgets/KFileCopyToMenu
+include/KF5/KIOFileWidgets/KFileCustomDialog
 include/KF5/KIOFileWidgets/KFileFilterCombo
 include/KF5/KIOFileWidgets/KFilePlaceEditDialog
 include/KF5/KIOFileWidgets/KFilePlacesModel
@@ -150,6 +151,7 @@ include/KF5/KIOFileWidgets/kdiroperator.h
 include/KF5/KIOFileWidgets/kdirsortfilterproxymodel.h
 include/KF5/KIOFileWidgets/kencodingfiledialog.h
 include/KF5/KIOFileWidgets/kfilecopytomenu.h
+include/KF5/KIOFileWidgets/kfilecustomdialog.h
 include/KF5/KIOFileWidgets/kfilefiltercombo.h
 include/KF5/KIOFileWidgets/kfileplaceeditdialog.h
 include/KF5/KIOFileWidgets/kfileplacesmodel.h
@@ -608,6 +610,8 @@ share/doc/HTML/pt_BR/kioslave5/telnet/index.cache.bz2
 share/doc/HTML/pt_BR/kioslave5/telnet/index.docbook
 share/doc/HTML/pt_BR/kioslave5/webdav/index.cache.bz2
 share/doc/HTML/pt_BR/kioslave5/webdav/index.docbook
+share/doc/HTML/ru/kcontrol5/cookies/index.cache.bz2
+share/doc/HTML/ru/kcontrol5/cookies/index.docbook
 share/doc/HTML/ru/kcontrol5/proxy/index.cache.bz2
 share/doc/HTML/ru/kcontrol5/proxy/index.docbook
 share/doc/HTML/ru/kioslave5/data/index.cache.bz2
@@ -757,7 +761,6 @@ share/doc/HTML/uk/kioslave5/telnet/index.docbook
 share/doc/HTML/uk/kioslave5/webdav/index.cache.bz2
 share/doc/HTML/uk/kioslave5/webdav/index.docbook
 share/examples/kde-xdg/accept-languages.codes
-share/examples/kde-xdg/kio.categories
 share/examples/kde-xdg/kshorturifilterrc
 share/kconf_update/filepicker.upd
 share/kf5/kcookiejar/domain_info
@@ -1035,3 +1038,4 @@ share/locale/wa/LC_MESSAGES/kio5.mo
 share/locale/xh/LC_MESSAGES/kio5.mo
 share/locale/zh_CN/LC_MESSAGES/kio5.mo
 share/locale/zh_TW/LC_MESSAGES/kio5.mo
+share/qlogging-categories5/kio.categories
