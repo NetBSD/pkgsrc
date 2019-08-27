@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/04/25 21:17:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/08/27 21:24:24 markd Exp $
 bin/plasmapkg2
 include/KF5/Plasma/Applet
 include/KF5/Plasma/Containment
@@ -122,10 +122,11 @@ qt5/qml/QtQuick/Controls.2/Plasma/TextField.qml
 qt5/qml/QtQuick/Controls.2/Plasma/ToolBar.qml
 qt5/qml/QtQuick/Controls.2/Plasma/ToolButton.qml
 qt5/qml/QtQuick/Controls.2/Plasma/ToolTip.qml
+qt5/qml/QtQuick/Controls.2/Plasma/mobiletextselection/MobileCursor.qml
+qt5/qml/QtQuick/Controls.2/Plasma/mobiletextselection/MobileTextActionsToolBar.qml
+qt5/qml/QtQuick/Controls.2/Plasma/mobiletextselection/qmldir
 qt5/qml/QtQuick/Controls.2/Plasma/private/ButtonShadow.qml
 qt5/qml/QtQuick/Controls.2/Plasma/private/DefaultListItemBackground.qml
-qt5/qml/QtQuick/Controls.2/Plasma/private/MobileCursor.qml
-qt5/qml/QtQuick/Controls.2/Plasma/private/MobileTextActionsToolBar.qml
 qt5/qml/QtQuick/Controls.2/Plasma/private/RoundShadow.qml
 qt5/qml/QtQuick/Controls.2/Plasma/private/TextFieldFocus.qml
 qt5/qml/QtQuick/Controls.2/Plasma/private/qmldir
@@ -194,6 +195,7 @@ qt5/qml/org/kde/plasma/components.3/RadioDelegate.qml
 qt5/qml/org/kde/plasma/components.3/RadioIndicator.qml
 qt5/qml/org/kde/plasma/components.3/RangeSlider.qml
 qt5/qml/org/kde/plasma/components.3/ScrollBar.qml
+qt5/qml/org/kde/plasma/components.3/ScrollView.qml
 qt5/qml/org/kde/plasma/components.3/Slider.qml
 qt5/qml/org/kde/plasma/components.3/SpinBox.qml
 qt5/qml/org/kde/plasma/components.3/Switch.qml
@@ -205,10 +207,12 @@ qt5/qml/org/kde/plasma/components.3/TextArea.qml
 qt5/qml/org/kde/plasma/components.3/TextField.qml
 qt5/qml/org/kde/plasma/components.3/ToolBar.qml
 qt5/qml/org/kde/plasma/components.3/ToolButton.qml
+qt5/qml/org/kde/plasma/components.3/ToolTip.qml
+qt5/qml/org/kde/plasma/components.3/mobiletextselection/MobileCursor.qml
+qt5/qml/org/kde/plasma/components.3/mobiletextselection/MobileTextActionsToolBar.qml
+qt5/qml/org/kde/plasma/components.3/mobiletextselection/qmldir
 qt5/qml/org/kde/plasma/components.3/private/ButtonShadow.qml
 qt5/qml/org/kde/plasma/components.3/private/DefaultListItemBackground.qml
-qt5/qml/org/kde/plasma/components.3/private/MobileCursor.qml
-qt5/qml/org/kde/plasma/components.3/private/MobileTextActionsToolBar.qml
 qt5/qml/org/kde/plasma/components.3/private/RoundShadow.qml
 qt5/qml/org/kde/plasma/components.3/private/TextFieldFocus.qml
 qt5/qml/org/kde/plasma/components.3/private/qmldir
@@ -452,6 +456,7 @@ share/plasma/desktoptheme/default/icons/cantata.svgz
 share/plasma/desktoptheme/default/icons/computer.svgz
 share/plasma/desktoptheme/default/icons/configure.svgz
 share/plasma/desktoptheme/default/icons/device.svgz
+share/plasma/desktoptheme/default/icons/disk.svgz
 share/plasma/desktoptheme/default/icons/distribute.svgz
 share/plasma/desktoptheme/default/icons/document.svgz
 share/plasma/desktoptheme/default/icons/drive.svgz
