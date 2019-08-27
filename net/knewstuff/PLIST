@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/04/25 20:58:00 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/08/27 20:59:20 markd Exp $
 include/KF5/KNewStuff3/KNS3/Button
 include/KF5/KNewStuff3/KNS3/DownloadDialog
 include/KF5/KNewStuff3/KNS3/DownloadManager
@@ -75,7 +75,6 @@ qt5/qml/org/kde/newstuff/libnewstuffqmlplugin.so
 qt5/qml/org/kde/newstuff/qml/NewStuffItem.qml
 qt5/qml/org/kde/newstuff/qml/NewStuffList.qml
 qt5/qml/org/kde/newstuff/qmldir
-share/examples/kde-xdg/knewstuff.categories
 share/kf5/kmoretools/presets-kmoretools/_README.md
 share/kf5/kmoretools/presets-kmoretools/angrysearch.desktop
 share/kf5/kmoretools/presets-kmoretools/catfish.desktop
@@ -124,7 +123,6 @@ share/kf5/kmoretools/presets-kmoretools/simplescreenrecorder.desktop
 share/kf5/kmoretools/presets-kmoretools/vokoscreen.desktop
 share/kf5/kmoretools/presets-kmoretools/vokoscreen.png
 share/kf5/kmoretools/presets-kmoretools/xfce4-taskmanager.desktop
-share/kf5/knewstuff/pics/thumb_frame.png
 share/locale/af/LC_MESSAGES/knewstuff5.mo
 share/locale/ar/LC_MESSAGES/knewstuff5.mo
 share/locale/as/LC_MESSAGES/knewstuff5.mo
@@ -224,3 +222,4 @@ share/locale/xh/LC_MESSAGES/knewstuff5.mo
 share/locale/zh_CN/LC_MESSAGES/knewstuff5.mo
 share/locale/zh_HK/LC_MESSAGES/knewstuff5.mo
 share/locale/zh_TW/LC_MESSAGES/knewstuff5.mo
+share/qlogging-categories5/knewstuff.categories
