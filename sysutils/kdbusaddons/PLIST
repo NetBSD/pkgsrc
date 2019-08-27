@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/04/25 21:05:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/08/27 20:27:24 markd Exp $
 bin/kquitapp5
 include/KF5/KDBusAddons/KDBusConnectionPool
 include/KF5/KDBusAddons/KDBusInterProcessLock
@@ -22,7 +22,6 @@ lib/libKF5DBusAddons.so
 lib/libKF5DBusAddons.so.5
 lib/libKF5DBusAddons.so.${PKGVERSION}
 qt5/mkspecs/modules/qt_KDBusAddons.pri
-share/examples/kde-xdg/kdbusaddons.categories
 share/locale/ar/LC_MESSAGES/kdbusaddons5_qt.qm
 share/locale/bs/LC_MESSAGES/kdbusaddons5_qt.qm
 share/locale/ca/LC_MESSAGES/kdbusaddons5_qt.qm
@@ -68,3 +67,4 @@ share/locale/tr/LC_MESSAGES/kdbusaddons5_qt.qm
 share/locale/uk/LC_MESSAGES/kdbusaddons5_qt.qm
 share/locale/zh_CN/LC_MESSAGES/kdbusaddons5_qt.qm
 share/locale/zh_TW/LC_MESSAGES/kdbusaddons5_qt.qm
+share/qlogging-categories5/kdbusaddons.categories
