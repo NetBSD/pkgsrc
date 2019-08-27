@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/04/25 21:05:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/08/27 19:55:58 markd Exp $
 bin/baloo_file
 bin/baloo_file_extractor
 bin/balooctl
@@ -45,7 +45,6 @@ share/dbus-1/interfaces/org.kde.baloo.fileindexer.xml
 share/dbus-1/interfaces/org.kde.baloo.main.xml
 share/dbus-1/interfaces/org.kde.baloo.scheduler.xml
 share/examples/kde-xdg/autostart/baloo_file.desktop
-share/examples/kde-xdg/baloo.categories
 share/icons/hicolor/128x128/apps/baloo.png
 share/kservices5/baloosearch.protocol
 share/kservices5/tags.protocol
@@ -276,6 +275,7 @@ share/locale/ja/LC_MESSAGES/kio5_baloosearch.mo
 share/locale/ja/LC_MESSAGES/kio5_tags.mo
 share/locale/ja/LC_MESSAGES/kio5_timeline.mo
 share/locale/ko/LC_MESSAGES/baloo_file5.mo
+share/locale/ko/LC_MESSAGES/baloo_file_extractor5.mo
 share/locale/ko/LC_MESSAGES/balooctl5.mo
 share/locale/ko/LC_MESSAGES/baloodb5.mo
 share/locale/ko/LC_MESSAGES/balooengine5.mo
@@ -288,6 +288,9 @@ share/locale/ko/LC_MESSAGES/kio5_timeline.mo
 share/locale/lt/LC_MESSAGES/baloo_file5.mo
 share/locale/lt/LC_MESSAGES/baloo_file_extractor5.mo
 share/locale/lt/LC_MESSAGES/balooctl5.mo
+share/locale/lt/LC_MESSAGES/baloodb5.mo
+share/locale/lt/LC_MESSAGES/balooengine5.mo
+share/locale/lt/LC_MESSAGES/baloomonitorplugin.mo
 share/locale/lt/LC_MESSAGES/baloosearch5.mo
 share/locale/lt/LC_MESSAGES/balooshow5.mo
 share/locale/lt/LC_MESSAGES/kio5_baloosearch.mo
@@ -497,3 +500,4 @@ share/locale/zh_TW/LC_MESSAGES/balooshow5.mo
 share/locale/zh_TW/LC_MESSAGES/kio5_baloosearch.mo
 share/locale/zh_TW/LC_MESSAGES/kio5_tags.mo
 share/locale/zh_TW/LC_MESSAGES/kio5_timeline.mo
+share/qlogging-categories5/baloo.categories
