@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2019/04/03 00:32:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.22 2019/08/27 06:26:19 markd Exp $
 #
 
 DISTNAME=	grantlee-5.1.0
 PKGNAME=	${DISTNAME:S/-/-qt5-/}
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	devel
 MASTER_SITES=	http://downloads.grantlee.org/
 
