@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2019/04/25 21:05:22 markd Exp $
+# $NetBSD: Makefile,v 1.29 2019/08/27 19:55:58 markd Exp $
 
 DISTNAME=	baloo-${KF5VER}
 PKGNAME=	baloo5-${KF5VER}
@@ -20,12 +20,9 @@ SUBST_CLASSES+=		xdg
 SUBST_STAGE.xdg=	pre-configure
 SUBST_MESSAGE.xdg=	Install via examples dir.
 SUBST_FILES.xdg=	CMakeLists.txt src/file/CMakeLists.txt
-SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
-SUBST_SED.xdg+=		-e 's:{AUTOSTART_INSTALL_DIR}:{KDE_INSTALL_AUTOSTARTEXDIR}:'
+SUBST_SED.xdg=		-e 's:{AUTOSTART_INSTALL_DIR}:{KDE_INSTALL_AUTOSTARTEXDIR}:'
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/autostart
-CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/baloo.categories \
-		${PKG_SYSCONFDIR}/xdg/baloo.categories
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/autostart/baloo_file.desktop \
 		${PKG_SYSCONFDIR}/xdg/autostart/baloo_file.desktop
 
