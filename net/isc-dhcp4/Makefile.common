@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.38 2019/06/18 20:02:24 nia Exp $
+# $NetBSD: Makefile.common,v 1.39 2019/08/27 08:12:01 adam Exp $
 #
 # used by net/isc-dhcp4/Makefile
 # used by net/isc-dhcpd4/Makefile
@@ -29,8 +29,8 @@ PKG_SYSCONFSUBDIR=	dhcp
 USE_TOOLS+=		gmake gunzip gzip tar
 USE_LANGUAGES+=		c99 c++
 
-PATCHDIR=		${.CURDIR}/../isc-dhcp4/patches
-DISTINFO_FILE= 		${.CURDIR}/../isc-dhcp4/distinfo
+PATCHDIR=		${.CURDIR}/../../net/isc-dhcp4/patches
+DISTINFO_FILE=		${.CURDIR}/../../net/isc-dhcp4/distinfo
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 BUILD_DEFS+=		VARBASE DHCP_HOME DHCP_PID
 
@@ -63,7 +63,7 @@ SUBST_CLASSES+=		config
 SUBST_STAGE.config=	pre-configure
 SUBST_FILES.config=	includes/dhcpd.h
 SUBST_VARS.config=	PREFIX PKG_SYSCONFDIR
-SUBST_MESSAGE.config=   Fixing configuration files.
+SUBST_MESSAGE.config=	Fixing configuration files.
 
 BUILD_DIRS=	${BUILD_SUBDIR}
 INSTALL_DIRS=	${SUBDIR}
@@ -71,7 +71,7 @@ INSTALL_DIRS=	${SUBDIR}
 # XXX This crap should replaced by a dependency on net/libbind, but
 # that seems to be a different version of libbind.
 post-extract:
-	(cd ${WRKSRC}/bind && gunzip -c bind.tar.gz | tar xf -)
+	cd ${WRKSRC}/bind && ${TAR} -zxf bind.tar.gz
 
 BIND_CONFIGURE_ARGS+=	--disable-kqueue
 BIND_CONFIGURE_ARGS+=	--disable-epoll
