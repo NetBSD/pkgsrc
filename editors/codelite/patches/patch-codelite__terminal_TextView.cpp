@@ -1,4 +1,4 @@
-$NetBSD: patch-codelite__terminal_TextView.cpp,v 1.1 2019/08/18 03:48:44 maya Exp $
+$NetBSD: patch-codelite__terminal_TextView.cpp,v 1.2 2019/08/27 12:07:57 wiz Exp $
 
 --- codelite_terminal/TextView.cpp.orig   2019-05-21 17:52:21.000000000 +0300
 +++ codelite_terminal/TextView.cpp
@@ -39,4 +39,3 @@ $NetBSD: patch-codelite__terminal_TextView.cpp,v 1.1 2019/08/18 03:48:44 maya Ex
 +#endif
 +#endif
 +}
-
