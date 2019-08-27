@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2019/08/27 12:07:57 wiz Exp $
+$NetBSD: distinfo,v 1.6 2019/08/27 14:45:04 wiz Exp $
 
 SHA1 (codelite-13.0.tar.gz) = 011e1ce86f6c9bd88278e3935d7f7cc6d90ef2ce
 RMD160 (codelite-13.0.tar.gz) = af6b08ebca99fa7ac56f50ea415aff71d950af0c
@@ -9,6 +9,6 @@ SHA1 (patch-CodeLite_unixprocess__impl.cpp) = ba497d2dd383f38c0405df45661ce2a29f
 SHA1 (patch-LiteEditor_CMakeLists.txt) = 1b55945779f62bc9e4d0a1ee4ab9ea6e5b44f199
 SHA1 (patch-Plugin_CMakeLists.txt) = 29c4859a6092e6d025220df45199c90a93b6c862
 SHA1 (patch-Plugin_wxterminal.cpp) = 4a86640b6fc532eab93d2f97934b672d87140b06
-SHA1 (patch-codelite__terminal_TextView.cpp) = 9f38ca57596977b07cd2d55426c20baaa758d8ed
+SHA1 (patch-codelite__terminal_TextView.cpp) = 13b5cafa6975c95c74d61f5a355e0c88d0f056cd
 SHA1 (patch-sdk_codelite__indexer_libctags_read.c) = 9c9e166dbf895bb746194547e9b0bea99db14926
-SHA1 (patch-sdk_codelite__indexer_network_np__connections__server.cpp) = 98f8cba3597035c79ebfb60ba5d69a27c02c74e4
+SHA1 (patch-sdk_codelite__indexer_network_np__connections__server.cpp) = 5906e4a1a295b260833ea9d499a3b42d5e8b04c3
