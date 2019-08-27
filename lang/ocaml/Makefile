@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.127 2019/08/24 10:54:23 jaapb Exp $
+# $NetBSD: Makefile,v 1.128 2019/08/27 05:37:38 jaapb Exp $
 
 .include "Makefile.common"
 
-#CONFIGURE_ENV+=		disable_x11=yes
+PKGREVISION=		1
 
 BUILD_TARGET=		world
 MAKE_JOBS_SAFE=		no
@@ -12,8 +12,6 @@ USE_TOOLS+=		bash
 USE_LANGUAGES+=		c
 USE_LIBTOOL=		yes
 USE_GNU_CONFIGURE_HOST=	no
-
-#USE_GCC_RUNTIME=	yes
 
 PLIST_VARS+=	ocaml-stub ocaml-prof ocaml-opt ocaml-nat ocaml-spacetime \
 		instrumented_runtime
