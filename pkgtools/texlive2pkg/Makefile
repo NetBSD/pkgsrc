@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2019/08/12 08:35:14 markd Exp $
+# $NetBSD: Makefile,v 1.11 2019/08/27 06:21:18 markd Exp $
 #
 
-PKGNAME=	texlive2pkg-1.6
+PKGNAME=	texlive2pkg-1.7
 CATEGORIES=	pkgtools
 
 MAINTAINER=	markd@NetBSD.org
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 WRKSRC=			${WRKDIR}
 NO_BUILD=		yes
 USE_LANGUAGES=		# none
-USE_TOOLS+=		perl:run xzcat:run
+USE_TOOLS+=		ftp:run perl:run xzcat:run
 AUTO_MKDIRS=		yes
 
 SUBST_CLASSES+=		tools
@@ -20,6 +20,7 @@ SUBST_STAGE.tools=	pre-configure
 SUBST_MESSAGE.tools=	Substituting tool locations.
 SUBST_FILES.tools=	texlive2pkg.sh
 SUBST_VARS.tools=	DISTDIR MAKE PREFIX
+SUBST_SED.tools=	-e 's,@FTP@,${TOOLS_PATH.ftp},g'
 
 REPLACE_PERL+=		texlive.pkg texlive.pkg.doc
 
