@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2018/11/30 11:28:55 adam Exp $
+$NetBSD: distinfo,v 1.9 2019/08/27 06:01:23 adam Exp $
 
-SHA1 (httpie-1.0.2.tar.gz) = 28b9c57c10f20a38b985d87de856ffc4042deae3
-RMD160 (httpie-1.0.2.tar.gz) = dde8e550fa2083eddb69512310a5ec1f52d9a86a
-SHA512 (httpie-1.0.2.tar.gz) = cc0f2b8928d68bdd0c4eba96f499365d294429e909d91538c48f5028a55ca4a7ba41abdb94ef851459799f437457639b43ba408bb6336702d6042e7e5d5a9cbf
-Size (httpie-1.0.2.tar.gz) = 85245 bytes
+SHA1 (httpie-1.0.3.tar.gz) = 476fde8aa1827f7dd65c3a114e80023450df0bff
+RMD160 (httpie-1.0.3.tar.gz) = ce5d7149dcca76a93c8f4d9a8d19c7560b8463ca
+SHA512 (httpie-1.0.3.tar.gz) = b51779e0ec8f24108ee3f4bf690dc9dfddafff42509d1aa3d13ac12d65a93e02aad9644dc10134ebdbebf949b250cb288650a4dad3d382143e9ad3b9b0ac8c16
+Size (httpie-1.0.3.tar.gz) = 86725 bytes
