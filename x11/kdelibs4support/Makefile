@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2019/08/11 13:25:13 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2019/08/27 20:31:05 markd Exp $
 
 DISTNAME=	kdelibs4support-${KF5VER}
-PKGREVISION=	1
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks
