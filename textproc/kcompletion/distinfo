@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2019/04/25 21:08:10 markd Exp $
+$NetBSD: distinfo,v 1.7 2019/08/27 20:15:45 markd Exp $
 
-SHA1 (kcompletion-5.57.0.tar.xz) = 88859f29259e7ab3afb7be570d8a008559e8843a
-RMD160 (kcompletion-5.57.0.tar.xz) = a333d2160fee9d69cc28b0fa141b09e86ba261a5
-SHA512 (kcompletion-5.57.0.tar.xz) = d4782da892535a07ac904be510f76741c648e0b007f09acc7b0445308f8f9f24d25abb194b8824b8fc2de3be117793ed4fb8c5f40c3743f3e0ad610fb04e0747
-Size (kcompletion-5.57.0.tar.xz) = 115828 bytes
+SHA1 (kcompletion-5.61.0.tar.xz) = de118c2895934f89d32d90dd68d061edc2352b68
+RMD160 (kcompletion-5.61.0.tar.xz) = b6aa166e90b61fad5f012084d00bb046b3401e5c
+SHA512 (kcompletion-5.61.0.tar.xz) = 943c522294ae49ca1525f2365cc54861ee77671dcbf393a07b026c37b09a0772c7b096c499690194558b9e4f931cd52b6132caf93a2660546db8c239d1d42b3b
+Size (kcompletion-5.61.0.tar.xz) = 115600 bytes
