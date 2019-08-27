@@ -1,4 +1,4 @@
-/*	$NetBSD: http.c,v 1.40 2016/10/21 11:51:18 jperkin Exp $	*/
+/*	$NetBSD: http.c,v 1.41 2019/08/27 19:24:04 joerg Exp $	*/
 /*-
  * Copyright (c) 2000-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2003 Thomas Klausner <wiz@NetBSD.org>
@@ -526,14 +526,23 @@ http_next_header(conn_t *conn, const char **p)
 static int
 http_parse_mtime(const char *p, time_t *mtime)
 {
-	char locale[64], *r;
 	struct tm tm;
+	char *r;
 
-	strncpy(locale, setlocale(LC_TIME, NULL), sizeof(locale));
+#ifdef LC_C_LOCALE
+	r = strptime_l(p, "%a, %d %b %Y %H:%M:%S GMT", &tm, LC_C_LOCALE);
+#else
+	char *locale;
+
+	locale = strdup(setlocale(LC_TIME, NULL));
+	if (locale == NULL)
+		return (-1);
 	setlocale(LC_TIME, "C");
 	r = strptime(p, "%a, %d %b %Y %H:%M:%S GMT", &tm);
 	/* XXX should add support for date-2 and date-3 */
 	setlocale(LC_TIME, locale);
+	free(locale);
+#endif
 	if (r == NULL)
 		return (-1);
 	*mtime = timegm(&tm);
