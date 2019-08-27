@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2019/04/25 20:50:23 markd Exp $
+$NetBSD: distinfo,v 1.7 2019/08/27 21:02:02 markd Exp $
 
-SHA1 (knotifications-5.57.0.tar.xz) = f4278789306c10f690bcb99e997c484fe9214ceb
-RMD160 (knotifications-5.57.0.tar.xz) = 120c999614babfae11f42f4cd8cf00f09b9cdd09
-SHA512 (knotifications-5.57.0.tar.xz) = f0c8b805d251c5172fc7e8f0a61e2d9e21ba705287376502695bc50b465c792c43311b96a931b43c5a07042a443ff5f20c47a1274628bdc1b1f94f819136d9b3
-Size (knotifications-5.57.0.tar.xz) = 113180 bytes
+SHA1 (knotifications-5.61.0.tar.xz) = 1a9e8f7aa559a9a5ef434428e551ad449776ead0
+RMD160 (knotifications-5.61.0.tar.xz) = 9a69008277bfcac46811ebd54888b1ff75239f08
+SHA512 (knotifications-5.61.0.tar.xz) = b52078ed25a3eb7606f2e579319cc00c2b3cef335e20134840d71beae91d285b0de9285dfd6d823221d8af7aadb93c19b367086984249e4e6f87581879091851
+Size (knotifications-5.61.0.tar.xz) = 113888 bytes
