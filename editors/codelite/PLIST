@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/08/18 03:48:44 maya Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/08/27 12:07:18 wiz Exp $
 bin/codelite
 bin/codelite-cc
 bin/codelite-echo
@@ -36,8 +36,8 @@ lib/codelite/SmartCompletion.so
 lib/codelite/SnipWiz.so
 lib/codelite/SpellCheck.so
 lib/codelite/Subversion.so
-lib/codelite/UnitTestsPP.so
 lib/codelite/Tail.so
+lib/codelite/UnitTestsPP.so
 lib/codelite/WebTools.so
 lib/codelite/Wizards.so
 lib/codelite/WordCompletion.so
@@ -305,8 +305,8 @@ share/icons/hicolor/32x32@2x/apps/codelite.png
 share/icons/hicolor/64x64/apps/codelite.png
 share/icons/hicolor/64x64@2x/apps/codelite.png
 share/locale/cs/LC_MESSAGES/codelite.mo
-share/locale/zh_CN/LC_MESSAGES/codelite.mo
 share/locale/ru_RU/LC_MESSAGES/codelite.mo
+share/locale/zh_CN/LC_MESSAGES/codelite.mo
 share/man/man1/codelite-make.1
 share/man/man1/codelite.1
 share/man/man1/codelite_fix_files.1
