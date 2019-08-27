@@ -1,4 +1,6 @@
-$NetBSD: patch-sdk_codelite__indexer_network_np__connections__server.cpp,v 1.2 2019/08/18 03:48:44 maya Exp $
+$NetBSD: patch-sdk_codelite__indexer_network_np__connections__server.cpp,v 1.3 2019/08/27 14:45:04 wiz Exp $
+
+Ensure right header for timeval is included.
 
 --- sdk/codelite_indexer/network/np_connections_server.cpp.orig	2019-05-21 17:52:21.000000000 +0300
 +++ sdk/codelite_indexer/network/np_connections_server.cpp
