@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/04/25 21:05:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/08/27 20:39:06 markd Exp $
 include/KF5/KFileMetaData/KFileMetaData/EmbeddedImageData
 include/KF5/KFileMetaData/KFileMetaData/ExtractionResult
 include/KF5/KFileMetaData/KFileMetaData/Extractor
@@ -42,6 +42,7 @@ lib/libKF5FileMetaData.so.${PKGVERSION}
 qt5/mkspecs/modules/qt_KFileMetaData.pri
 qt5/plugins/kf5/kfilemetadata/kfilemetadata_epubextractor.so
 qt5/plugins/kf5/kfilemetadata/kfilemetadata_exiv2extractor.so
+qt5/plugins/kf5/kfilemetadata/kfilemetadata_ffmpegextractor.so
 qt5/plugins/kf5/kfilemetadata/kfilemetadata_odfextractor.so
 qt5/plugins/kf5/kfilemetadata/kfilemetadata_office2007extractor.so
 qt5/plugins/kf5/kfilemetadata/kfilemetadata_officeextractor.so
@@ -52,7 +53,6 @@ qt5/plugins/kf5/kfilemetadata/kfilemetadata_postscriptdscextractor.so
 qt5/plugins/kf5/kfilemetadata/kfilemetadata_taglibextractor.so
 qt5/plugins/kf5/kfilemetadata/kfilemetadata_xmlextractor.so
 qt5/plugins/kf5/kfilemetadata/writers/kfilemetadata_taglibwriter.so
-share/examples/kde-xdg/kfilemetadata.categories
 share/locale/ar/LC_MESSAGES/kfilemetadata5.mo
 share/locale/bg/LC_MESSAGES/kfilemetadata5.mo
 share/locale/bs/LC_MESSAGES/kfilemetadata5.mo
@@ -98,3 +98,4 @@ share/locale/tr/LC_MESSAGES/kfilemetadata5.mo
 share/locale/uk/LC_MESSAGES/kfilemetadata5.mo
 share/locale/zh_CN/LC_MESSAGES/kfilemetadata5.mo
 share/locale/zh_TW/LC_MESSAGES/kfilemetadata5.mo
+share/qlogging-categories5/kfilemetadata.categories
