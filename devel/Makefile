@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2902 2019/08/25 15:08:42 tsutsui Exp $
+# $NetBSD: Makefile,v 1.2903 2019/08/27 21:17:22 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -578,6 +578,7 @@ SUBDIR+=	kpty
 SUBDIR+=	krunner
 SUBDIR+=	kservice
 SUBDIR+=	ktexteditor
+SUBDIR+=	kwayland
 SUBDIR+=	kyua
 SUBDIR+=	lcc
 SUBDIR+=	lcdis
