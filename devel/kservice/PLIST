@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/04/25 20:50:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/08/27 21:10:00 markd Exp $
 bin/kbuildsycoca5
 include/KF5/KService/KAutostart
 include/KF5/KService/KDBusServiceStarter
@@ -61,7 +61,6 @@ man/sv/man8/kbuildsycoca5.8
 man/uk/man8/desktoptojson.8
 man/uk/man8/kbuildsycoca5.8
 qt5/mkspecs/modules/qt_KService.pri
-share/examples/kde-xdg/kservice.categories
 share/examples/kservice/applications.menu
 share/kservicetypes5/application.desktop
 share/kservicetypes5/kplugininfo.desktop
@@ -164,3 +163,5 @@ share/locale/xh/LC_MESSAGES/kservice5.mo
 share/locale/zh_CN/LC_MESSAGES/kservice5.mo
 share/locale/zh_HK/LC_MESSAGES/kservice5.mo
 share/locale/zh_TW/LC_MESSAGES/kservice5.mo
+share/qlogging-categories5/kservice.categories
+
