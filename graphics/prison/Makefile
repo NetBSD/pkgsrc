@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/04/25 20:53:51 markd Exp $
+# $NetBSD: Makefile,v 1.13 2019/08/27 21:25:45 markd Exp $
 
 DISTNAME=	prison-${KF5VER}
 CATEGORIES=	graphics
@@ -12,16 +12,6 @@ LICENSE=	mit
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	pkg-config
-
-SUBST_CLASSES+=		xdg
-SUBST_STAGE.xdg=	pre-configure
-SUBST_MESSAGE.xdg=	Install via examples dir.
-SUBST_FILES.xdg=	CMakeLists.txt
-SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
-
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
-CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/prison.categories \
-		${PKG_SYSCONFDIR}/xdg/prison.categories
 
 .include "../../converters/qrencode/buildlink3.mk"
 .include "../../graphics/libdmtx/buildlink3.mk"
