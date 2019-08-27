@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/04/25 20:50:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/08/27 21:02:02 markd Exp $
 include/KF5/KNotifications/KNotification
 include/KF5/KNotifications/KNotificationPlugin
 include/KF5/KNotifications/KNotificationRestrictions
@@ -23,7 +23,6 @@ lib/libKF5Notifications.so.${PKGVERSION}
 qt5/mkspecs/modules/qt_KNotifications.pri
 share/dbus-1/interfaces/kf5_org.kde.StatusNotifierItem.xml
 share/dbus-1/interfaces/kf5_org.kde.StatusNotifierWatcher.xml
-share/examples/kde-xdg/knotifications.categories
 share/kservicetypes5/knotificationplugin.desktop
 share/locale/af/LC_MESSAGES/knotifications5_qt.qm
 share/locale/ar/LC_MESSAGES/knotifications5_qt.qm
@@ -124,3 +123,4 @@ share/locale/xh/LC_MESSAGES/knotifications5_qt.qm
 share/locale/zh_CN/LC_MESSAGES/knotifications5_qt.qm
 share/locale/zh_HK/LC_MESSAGES/knotifications5_qt.qm
 share/locale/zh_TW/LC_MESSAGES/knotifications5_qt.qm
+share/qlogging-categories5/knotifications.categories
