@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/04/25 21:17:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/08/27 20:40:15 markd Exp $
 bin/kglobalaccel5
 include/KF5/KGlobalAccel/KGlobalAccel
 include/KF5/KGlobalAccel/KGlobalShortcutInfo
@@ -23,7 +23,6 @@ qt5/plugins/org.kde.kglobalaccel5.platforms/KF5GlobalAccelPrivateXcb.so
 share/dbus-1/interfaces/kf5_org.kde.KGlobalAccel.xml
 share/dbus-1/interfaces/kf5_org.kde.kglobalaccel.Component.xml
 share/dbus-1/services/org.kde.kglobalaccel.service
-share/examples/kde-xdg/kglobalaccel.categories
 share/kservices5/kglobalaccel5.desktop
 share/locale/af/LC_MESSAGES/kglobalaccel5_qt.qm
 share/locale/ar/LC_MESSAGES/kglobalaccel5_qt.qm
@@ -124,3 +123,4 @@ share/locale/xh/LC_MESSAGES/kglobalaccel5_qt.qm
 share/locale/zh_CN/LC_MESSAGES/kglobalaccel5_qt.qm
 share/locale/zh_HK/LC_MESSAGES/kglobalaccel5_qt.qm
 share/locale/zh_TW/LC_MESSAGES/kglobalaccel5_qt.qm
+share/qlogging-categories5/kglobalaccel.categories
