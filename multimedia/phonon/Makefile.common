@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.5 2018/06/21 00:12:55 markd Exp $
+# $NetBSD: Makefile.common,v 1.6 2019/08/27 06:39:24 markd Exp $
 
 CATEGORIES=	multimedia
-MASTER_SITES=	${MASTER_SITE_KDE:=phonon/4.10.1/}
+MASTER_SITES=	${MASTER_SITE_KDE:=phonon/4.10.3/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	markd@NetBSD.org
