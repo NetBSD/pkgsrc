@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/04/28 11:09:06 markd Exp $
+# $NetBSD: Makefile,v 1.11 2019/08/27 21:33:55 markd Exp $
 
 DISTNAME=	kf5-${KF5VER}
 CATEGORIES=	meta-pkgs x11 kde
@@ -9,7 +9,7 @@ MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://www.kde.org/
 COMMENT=	"meta-package" for the KDE Frameworks 5
 
-KF5VER=		5.57.0
+KF5VER=		5.61.0
 
 DEPENDS+=	attica-qt5-${KF5VER}{,nb[0-9]*}:../../misc/attica-qt5
 DEPENDS+=	baloo5-${KF5VER}{,nb[0-9]*}:../../sysutils/baloo5
@@ -34,7 +34,6 @@ DEPENDS+=	kdeclarative-${KF5VER}{,nb[0-9]*}:../../devel/kdeclarative
 DEPENDS+=	kded-${KF5VER}{,nb[0-9]*}:../../x11/kded
 DEPENDS+=	kdesignerplugin-${KF5VER}{,nb[0-9]*}:../../x11/kdesignerplugin
 DEPENDS+=	kdesu-${KF5VER}{,nb[0-9]*}:../../security/kdesu
-DEPENDS+=	kdewebkit-${KF5VER}{,nb[0-9]*}:../../www/kdewebkit
 DEPENDS+=	kdnssd-${KF5VER}{,nb[0-9]*}:../../net/kdnssd
 DEPENDS+=	kdoctools-${KF5VER}{,nb[0-9]*}:../../devel/kdoctools
 DEPENDS+=	kemoticons-${KF5VER}{,nb[0-9]*}:../../misc/kemoticons
@@ -66,7 +65,7 @@ DEPENDS+=	ktexteditor-${KF5VER}{,nb[0-9]*}:../../devel/ktexteditor
 DEPENDS+=	ktextwidgets-${KF5VER}{,nb[0-9]*}:../../x11/ktextwidgets
 DEPENDS+=	kunitconversion-${KF5VER}{,nb[0-9]*}:../../misc/kunitconversion
 DEPENDS+=	kwallet-${KF5VER}{,nb[0-9]*}:../../security/kwallet
-# kwayland
+DEPENDS+=	kwayland-${KF5VER}{,nb[0-9]*}:../../devel/kwayland
 DEPENDS+=	kwidgetsaddons-${KF5VER}{,nb[0-9]*}:../../x11/kwidgetsaddons
 DEPENDS+=	kwindowsystem-${KF5VER}{,nb[0-9]*}:../../x11/kwindowsystem
 DEPENDS+=	kxmlgui-${KF5VER}{,nb[0-9]*}:../../x11/kxmlgui
@@ -76,9 +75,11 @@ DEPENDS+=	kxmlrpcclient-${KF5VER}{,nb[0-9]*}:../../net/kxmlrpcclient
 DEPENDS+=	oxygen-icons>=${KF5VER}{,nb[0-9]*}:../../graphics/oxygen-icons
 DEPENDS+=	plasma-framework-${KF5VER}{,nb[0-9]*}:../../x11/plasma-framework
 DEPENDS+=	prison-${KF5VER}{,nb[0-9]*}:../../graphics/prison
+# purpose
 DEPENDS+=	qqc2-desktop-style-${KF5VER}{,nb[0-9]*}:../../x11/qqc2-desktop-style
 DEPENDS+=	solid-${KF5VER}{,nb[0-9]*}:../../sysutils/solid
 DEPENDS+=	sonnet-${KF5VER}{,nb[0-9]*}:../../textproc/sonnet
+DEPENDS+=	syntax-highlighting-${KF5VER}{,nb[0-9]*}:../../textproc/syntax-highlighting
 DEPENDS+=	threadweaver-${KF5VER}{,nb[0-9]*}:../../devel/threadweaver
 
 META_PACKAGE=	yes
