@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3644 2019/08/27 06:42:46 jperkin Exp $
+$NetBSD: CHANGES-2019,v 1.3645 2019/08/27 06:43:00 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5960,3 +5960,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-httpie to 1.0.3 [adam 2019-08-27]
 	Updated math/py-quadprog to 0.1.7 [adam 2019-08-27]
 	Updated lang/gcc7 to 7.4.0nb3 [jperkin 2019-08-27]
+	Updated lang/gcc7-libs to 7.4.0nb4 [jperkin 2019-08-27]
