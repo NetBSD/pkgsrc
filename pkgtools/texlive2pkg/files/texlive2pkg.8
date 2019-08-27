@@ -1,4 +1,4 @@
-.\"	$NetBSD: texlive2pkg.8,v 1.2 2016/01/24 19:45:30 wiz Exp $
+.\"	$NetBSD: texlive2pkg.8,v 1.3 2019/08/27 06:21:18 markd Exp $
 .\"
 .\" Copyright (c) 2016
 .\"	Mark Davies.  All rights reserved.
@@ -36,6 +36,7 @@
 .Nd create a pkgsrc package for a texlive package
 .Sh SYNOPSIS
 .Nm
+.Op Fl d
 .Ar package-tarball
 .Op Ar doc-tarball
 .Sh DESCRIPTION
@@ -57,13 +58,19 @@ has finished its job.
 .Nm
 is intended to help the process of creating a package but is not
 intended to fly on autopilot.
+.Sh OPTIONS
+The following command-line options are supported:
+.Bl -tag -width indent
+.It Fl d
+Derive the doc-tarball path from the package-tarball 
+by replacing the .tar.xz with .doc.tar.xz.
 .Sh EXAMPLES
 Use the following commands to create a
 .Xr pkgsrc 7
 package for the texlive package
 .Ar foo :
 .Dl cd pkgsrc/print
-.Dl texlive2pkg foo.tar.xz foo.doc.tar.xz
+.Dl texlive2pkg -d foo.tar.xz
 Remember to test the resulting package.
 .Sh SEE ALSO
 .Xr pkgsrc 7
