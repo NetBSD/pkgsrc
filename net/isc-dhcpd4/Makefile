@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/10/14 13:53:01 taca Exp $
+# $NetBSD: Makefile,v 1.14 2019/08/27 08:12:01 adam Exp $
 
 PKGNAME=	isc-dhcpd-${DHVER}
 COMMENT=	ISC Dynamic Host Configuration Protocol (DHCP) Server
@@ -14,7 +14,7 @@ SMF_METHODS=	isc-dhcpd
 FILES_SUBST+=	DHCP_HOME=${DHCP_HOME:Q}
 FILES_SUBST+=	DHCP_PID=${DHCP_PID:Q}
 
-.include "${.CURDIR}/../isc-dhcp4/options.mk"
+.include "../../net/isc-dhcp4/options.mk"
 
 INSTALLATION_DIRS+=	${EGDIR}
 
