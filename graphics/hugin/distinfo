@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2019/04/30 09:19:25 adam Exp $
+$NetBSD: distinfo,v 1.22 2019/08/28 01:32:11 markd Exp $
 
 SHA1 (hugin-2019.0.0.tar.bz2) = 269efb3c3785b3b3fe86e73ab2ffcb1bb6e0498f
 RMD160 (hugin-2019.0.0.tar.bz2) = 6d1d7e14a862879e5ac9bc2d9b75c5e9e4d0e15a
@@ -9,9 +9,16 @@ SHA1 (patch-CMakeModules_FindPNG.cmake) = 811fd3cf6f819b31129e1560cd8acd1f7ee6de
 SHA1 (patch-doc_deghosting_mask.pod) = fe5462b10966420b0cf3fab004854d9dab3bfb4f
 SHA1 (patch-src_hugin1_base__wx_wxPanoCommand.cpp) = d5bf8f747ae86338e728c472d3dc04bf4c84f182
 SHA1 (patch-src_hugin1_calibrate__lens_LensCalFrame.cpp) = 9b815a681317cb19880e7bb6ef170bc14d01b28b
+SHA1 (patch-src_hugin1_hugin_AboutDialog.cpp) = 26bf60e2b6ea894e234b7b965444f644c7fc69a2
 SHA1 (patch-src_hugin1_hugin_CPEditorPanel.cpp) = d373c00d4783b3edc1bad5a67339163a0c23d8c5
 SHA1 (patch-src_hugin1_hugin_GLPreviewFrame.cpp) = fda8db4abf3ab10332d4309c90f0ef4f845c76a6
+SHA1 (patch-src_hugin1_hugin_PanoOperation.cpp) = 29ba955377ddd79bd55a206b34cfc1a67c0e6ea8
+SHA1 (patch-src_hugin1_hugin_RawImport.cpp) = 0096072a3aa0fbdddca1f659ec7f6ae297401f3a
+SHA1 (patch-src_hugin1_hugin_TextureManager.cpp) = 169cc0905ce08dc449ff7d9be756bdd6c0238525
 SHA1 (patch-src_hugin1_ptbatcher_BatchFrame.cpp) = 51ce24f1eb99cc5c0151758299eb1ecc34128171
+SHA1 (patch-src_hugin1_ptbatcher_FindPanoDialog.cpp) = 24e44d2e4c2f59e7448205cd4b190db986280d21
+SHA1 (patch-src_hugin__base_panodata_Exiv2Helper.cpp) = 917c80e5b36b320a09e22638050085e0e22c4dd9
+SHA1 (patch-src_hugin__base_panodata_SrcPanoImage.cpp) = 06d100c9c39661c2143b44adb888a9690cbccade
 SHA1 (patch-src_hugin__script__interface_hsi.i) = b11a52579fd12fdf7c51fef63049d285cb2b52e1
 SHA1 (patch-src_tools_align_image_stack.cpp) = fc2759f0722365d4c5339c5c8bc1eda1a6bf7a71
 SHA1 (patch-src_tools_tca__correct.cpp) = 73a86d3086336f168de5fb1cc02378a3ecc43104
