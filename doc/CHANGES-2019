@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3664 2019/08/28 13:56:20 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3665 2019/08/28 14:06:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6067,3 +6067,8 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/ndiff to 7.80 [adam 2019-08-28]
 	Updated net/nmap to 7.80 [adam 2019-08-28]
 	Updated net/zenmap to 7.80 [adam 2019-08-28]
+	Updated lang/ruby24-base to 2.4.7 [taca 2019-08-28]
+	Updated databases/ruby-gdbm to 2.4.7 [taca 2019-08-28]
+	Updated devel/ruby-fiddle to 2.4.7 [taca 2019-08-28]
+	Updated devel/ruby-readline to 2.4.7 [taca 2019-08-28]
+	Updated lang/ruby to 2.4.7 [taca 2019-08-28]
