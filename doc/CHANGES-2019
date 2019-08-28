@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3662 2019/08/28 10:11:24 leot Exp $
+$NetBSD: CHANGES-2019,v 1.3663 2019/08/28 10:34:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6063,3 +6063,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/py-parse to 1.12.1 [adam 2019-08-28]
 	Updated editors/codelite to 13.0nb1 [wiz 2019-08-28]
 	Updated www/webkit-gtk to 2.24.4 [leot 2019-08-28]
+	Updated devel/blosc to 1.17.0 [adam 2019-08-28]
