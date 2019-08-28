@@ -1,6 +1,6 @@
-# $NetBSD: applications.mk,v 1.2 2018/04/14 03:33:19 markd Exp $
+# $NetBSD: applications.mk,v 1.3 2019/08/28 03:10:23 markd Exp $
 
-KAPPSVER?=	18.04.0
+KAPPSVER?=	19.08.0
 CATEGORIES+=	kde
 MASTER_SITES?=	${MASTER_SITE_KDE:=applications/${KAPPSVER}/src/}
 EXTRACT_SUFX?=	.tar.xz
