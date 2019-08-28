@@ -1,4 +1,4 @@
-$NetBSD: patch-src_wayland-os.c,v 1.1 2019/08/18 16:05:12 nia Exp $
+$NetBSD: patch-src_wayland-os.c,v 1.2 2019/08/28 10:35:40 nia Exp $
 
 BSD support from FreeBSD
 
@@ -79,7 +79,7 @@ https://lists.freedesktop.org/archives/wayland-devel/2019-February/040024.html
  
  	newfd = fcntl(fd, F_DUPFD, minfd);
  	return set_cloexec_or_close(newfd);
-@@ -123,17 +153,20 @@ wl_os_recvmsg_cloexec(int sockfd, struct
+@@ -123,15 +153,18 @@ wl_os_recvmsg_cloexec(int sockfd, struct
  {
  	ssize_t len;
  
@@ -96,16 +96,15 @@ https://lists.freedesktop.org/archives/wayland-devel/2019-February/040024.html
  
 +#ifdef HAVE_SYS_EPOLL_H
  int
--wl_os_epoll_create_cloexec(void)
-+wl_os_queue_create_cloexec(void)
+ wl_os_epoll_create_cloexec(void)
  {
- 	int fd;
- 
-@@ -148,6 +181,16 @@ wl_os_epoll_create_cloexec(void)
+@@ -148,6 +181,18 @@ wl_os_epoll_create_cloexec(void)
  	fd = epoll_create(1);
  	return set_cloexec_or_close(fd);
  }
-+#elif defined(HAVE_SYS_EVENT_H)
++#endif
++
++#ifdef HAVE_SYS_EVENT_H
 +int
 +wl_os_queue_create_cloexec(void)
 +{
