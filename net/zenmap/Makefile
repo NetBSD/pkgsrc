@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.3 2019/04/25 07:33:13 maya Exp $
+# $NetBSD: Makefile,v 1.4 2019/08/28 13:55:44 adam Exp $
 
-PKGREVISION= 1
 .include "../../net/nmap/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/nmap/zenmap/}
@@ -10,6 +9,8 @@ COMMENT=	Nmap Security Scanner GUI
 WRKSRC=		${WRKDIR}/${DISTNAME}/zenmap
 
 EXTRACT_ELEMENTS=	${DISTNAME}/zenmap
+
+EGG_NAME=	${PKGNAME:C/-([^0-9])/_\1/g}
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
