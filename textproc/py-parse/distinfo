@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/04/11 08:31:55 adam Exp $
+$NetBSD: distinfo,v 1.5 2019/08/28 08:22:28 adam Exp $
 
-SHA1 (parse-1.12.0.tar.gz) = 31363d34670e228d37d9dd1156278fc04b137eef
-RMD160 (parse-1.12.0.tar.gz) = 927cfbf7f2184eda5b6ca08686e6ab740e9fd5ef
-SHA512 (parse-1.12.0.tar.gz) = 5d27966a5dffe299b601339991fe61d5e51a3c28453c198ac99ae4aec2b24bb94526440b98f8827fb22b68cacaf713aa7c4bcad78ce73011d41daa54c34383da
-Size (parse-1.12.0.tar.gz) = 37213 bytes
+SHA1 (parse-1.12.1.tar.gz) = d79df1270a3524ea2f81c875f16659e17108de61
+RMD160 (parse-1.12.1.tar.gz) = f9cb1f38ce88d26240184aad209ce2fe93de5e13
+SHA512 (parse-1.12.1.tar.gz) = e58c160f1ec7c906f37a8f8de8cc40934cdcca9e923202cb9c09385655e6ea0ff4d085820161fa8774dbab72ef5ab5a0ab12ce20ea53bcb955ed96afab2305aa
+Size (parse-1.12.1.tar.gz) = 28314 bytes
