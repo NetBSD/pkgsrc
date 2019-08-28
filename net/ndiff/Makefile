@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.3 2019/04/25 07:33:11 maya Exp $
+# $NetBSD: Makefile,v 1.4 2019/08/28 13:55:44 adam Exp $
 
-PKGREVISION= 1
 .include "../../net/nmap/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/nmap/ndiff/}
