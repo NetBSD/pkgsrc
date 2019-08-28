@@ -1,4 +1,2 @@
-Overview
---------
-
-A Python **slugify** application that handles **unicode**.
+A Python slugify (replace non-ASCII characters with ASCII characters)
+application that handles unicode.
