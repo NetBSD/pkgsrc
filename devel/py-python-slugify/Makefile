@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/08/28 04:28:15 taca Exp $
+# $NetBSD: Makefile,v 1.6 2019/08/28 05:42:15 wiz Exp $
 
 DISTNAME=	python-slugify-3.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-slugify/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/un33k/python-slugify
-COMMENT=	Slugify application that handles Unicode
+COMMENT=	Slugify (non-ASCII to ASCII) application that handles Unicode
 LICENSE=	mit
 
 USE_LANGUAGES=		# none
