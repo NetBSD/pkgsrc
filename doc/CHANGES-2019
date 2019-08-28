@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3657 2019/08/28 04:28:39 taca Exp $
+$NetBSD: CHANGES-2019,v 1.3658 2019/08/28 04:31:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6056,3 +6056,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/qdirstat to 1.6 [markd 2019-08-27]
 	Updated multimedia/ssr to 0.3.11 [markd 2019-08-27]
 	Updated devel/py-python-slugify to 3.0.3nb2 [taca 2019-08-28]
+	Updated devel/transifex-client to 0.13.6nb1 [taca 2019-08-28]
