@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/04/14 13:04:33 adam Exp $
+$NetBSD: distinfo,v 1.2 2019/08/28 13:55:44 adam Exp $
 
-SHA1 (nmap-7.70.tar.bz2) = 71057361a0953bba5967dc0385de77f3eed792de
-RMD160 (nmap-7.70.tar.bz2) = 39b176e3b515bb5bf95503e3cb431a0dcd9e97ed
-SHA512 (nmap-7.70.tar.bz2) = 084c148b022ff6550e269d976d0077f7932a10e2ef218236fe13aa3a70b4eb6506df03329868fc68cb3ce78e4360b200f5a7a491d3145028fed679ef1c9ecae5
-Size (nmap-7.70.tar.bz2) = 10467371 bytes
+SHA1 (nmap-7.80.tar.bz2) = cfd8162192cfe2623f5770b8ed3c6237791ff6bf
+RMD160 (nmap-7.80.tar.bz2) = f9e2a71733fd25db98681286c9c2bf23d41bdd71
+SHA512 (nmap-7.80.tar.bz2) = d4384d3ebf4f3abf3588eed5433f733874ecdceb9342a718dc36db19634b0cc819d73399974eb0a9a9c9dd9e5c88473e07644ec91db28b0c072552b54430be6b
+Size (nmap-7.80.tar.bz2) = 10550327 bytes
