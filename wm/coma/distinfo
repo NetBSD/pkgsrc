@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2019/08/19 12:31:23 fcambus Exp $
+$NetBSD: distinfo,v 1.3 2019/08/28 07:11:23 fcambus Exp $
 
 SHA1 (coma-1.0.tar.gz) = e830786675e4f8542337363f8835e195e8f58593
 RMD160 (coma-1.0.tar.gz) = 672f1202d92b0ba324f97d28c5c0185d59c1f106
 SHA512 (coma-1.0.tar.gz) = 3df8fd17d269b3888fd931b5126f8e63c9aac63451be14fa8a20be09e945056cd7a45b062a6810a9bba0146fbd4b81791e8c0d9bbad1c18f26d1d3b222251e52
 Size (coma-1.0.tar.gz) = 13487 bytes
-SHA1 (patch-Makefile) = a77d6acfb5965ab6f83b3bc4bd2c558870c91665
+SHA1 (patch-Makefile) = eb554076a3573a63a42169507da2920ea60ee20a
