@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3670 2019/08/29 04:58:51 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3671 2019/08/29 10:04:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6086,3 +6086,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/dovecot2-pigeonhole to 0.5.7.2 [taca 2019-08-29]
 	Updated www/py-flask-jwt-extended to 3.22.0 [adam 2019-08-29]
 	Updated textproc/py-jsbeautifier to 1.10.2 [adam 2019-08-29]
+	Updated textproc/py-rebulk to 1.0.1 [adam 2019-08-29]
+	Updated net/py-ncclient to 0.6.6 [adam 2019-08-29]
