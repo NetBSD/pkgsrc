@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.17 2019/04/20 16:39:13 leot Exp $
+# $NetBSD: options.mk,v 1.18 2019/08/29 10:40:14 nia Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.webkit-gtk
-PKG_SUPPORTED_OPTIONS=	debug enchant introspection opengl webkit-jit
+PKG_SUPPORTED_OPTIONS=	debug enchant introspection opengl webkit-jit wayland
 PKG_SUGGESTED_OPTIONS=	enchant introspection opengl
 
 PLIST_VARS=	introspection
@@ -78,4 +78,14 @@ BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 CMAKE_ARGS+=	-DENABLE_INTROSPECTION=ON
 .else
 CMAKE_ARGS+=	-DENABLE_INTROSPECTION=OFF
+.endif
+
+#
+# Wayland display server support
+#
+.if !empty(PKG_OPTIONS:Mwayland)
+CMAKE_ARGS+=	-DENABLE_WAYLAND_TARGET=ON
+.include "../../devel/wayland/buildlink3.mk"
+.else
+CMAKE_ARGS+=	-DENABLE_WAYLAND_TARGET=OFF
 .endif
