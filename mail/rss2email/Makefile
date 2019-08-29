@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2019/08/28 19:44:48 schmonz Exp $
+# $NetBSD: Makefile,v 1.45 2019/08/29 09:20:25 schmonz Exp $
 
 GITHUB_PROJECT=		rss2email
 DISTNAME=		v3.9
@@ -16,6 +16,8 @@ LICENSE=		gnu-gpl-v2
 DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=		${PYPKGPREFIX}-feedparser>=5.0.1:../../textproc/py-feedparser
 DEPENDS+=		${PYPKGPREFIX}-html2text>=2014.4.5:../../textproc/py-html2text
+
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
