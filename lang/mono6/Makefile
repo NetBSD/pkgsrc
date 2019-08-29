@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/08/25 16:37:01 maya Exp $
+# $NetBSD: Makefile,v 1.2 2019/08/29 12:19:44 nia Exp $
 
 DISTNAME=	mono-6.0.0.313
 CATEGORIES=	lang
@@ -12,7 +12,7 @@ LICENSE=	mit AND gnu-gpl-v2 AND gnu-lgpl-v2 AND apache-2.0
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
-BUILD_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
+TOOL_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 CONFLICTS=	pnet-[0-9]* mcsim-[0-9]* lc-[0-9]*
 ALL_ENV+=	MONO_SHARED_DIR=${WRKDIR} PLATFORM=
 
@@ -24,6 +24,9 @@ EXTRACT_USING=	gtar
 GNU_CONFIGURE=		yes
 PKG_SYSCONFSUBDIR=	mono
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+# The boringtls provider seems Linux-only and requires CMake to build.
+CONFIGURE_ARGS+=	--disable-btls
 
 # Requires a cwrappers change: http://mail-index.netbsd.org/tech-pkg/2019/08/16/msg021791.html
 USE_CWRAPPERS=		no
