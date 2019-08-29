@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3674 2019/08/29 11:09:20 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3675 2019/08/29 13:44:52 he Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6091,3 +6091,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/py-gtk2 to 2.24.0nb28 [wiz 2019-08-29]
 	Updated pkgtools/x11-links to 1.30 [nia 2019-08-29]
 	Updated sysutils/dmg2img to 1.6.7 [nia 2019-08-29]
+	Added devel/go-gox version 1.0.1 [he 2019-08-29]
