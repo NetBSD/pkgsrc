@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.16 2019/08/20 02:38:04 schmonz Exp $
+# $NetBSD: INSTALL,v 1.17 2019/08/29 22:04:21 schmonz Exp $
 
 DOCDIR=@DOCDIR@
 EGDIR=@EGDIR@
@@ -68,9 +68,9 @@ warning_fqdn() {
 
 WARNING: "${_name}" is not a fully qualified name.
 
-To configure basic qmail control files, please run this command:
+To configure basic qmail control files, run this command as root:
 
-# ${_command} ${_name}.YOURDOMAIN.TLD
+# ${_command} ${_name}.yourdomain.tld
 
 ===========================================================================
 EOF
