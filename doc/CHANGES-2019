@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3676 2019/08/29 14:10:28 he Exp $
+$NetBSD: CHANGES-2019,v 1.3677 2019/08/29 15:38:30 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6093,3 +6093,10 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/dmg2img to 1.6.7 [nia 2019-08-29]
 	Added devel/go-gox version 1.0.1 [he 2019-08-29]
 	Updated lang/rust to 1.37.0 [he 2019-08-29]
+	Updated cad/kicad to 5.1.4 [bouyer 2019-08-29]
+	Updated cad/kicad-doc to 5.1.4 [bouyer 2019-08-29]
+	Updated cad/kicad-footprints to 5.1.4 [bouyer 2019-08-29]
+	Updated cad/kicad-i18n to 5.1.4 [bouyer 2019-08-29]
+	Updated cad/kicad-packages3d to 5.1.4 [bouyer 2019-08-29]
+	Updated cad/kicad-symbols to 5.1.4 [bouyer 2019-08-29]
+	Updated cad/kicad-templates to 5.1.4 [bouyer 2019-08-29]
