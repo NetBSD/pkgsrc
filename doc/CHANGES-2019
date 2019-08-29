@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3675 2019/08/29 13:44:52 he Exp $
+$NetBSD: CHANGES-2019,v 1.3676 2019/08/29 14:10:28 he Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6092,3 +6092,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated pkgtools/x11-links to 1.30 [nia 2019-08-29]
 	Updated sysutils/dmg2img to 1.6.7 [nia 2019-08-29]
 	Added devel/go-gox version 1.0.1 [he 2019-08-29]
+	Updated lang/rust to 1.37.0 [he 2019-08-29]
