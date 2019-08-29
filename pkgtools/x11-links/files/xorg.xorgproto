@@ -1,4 +1,4 @@
-# $NetBSD: xorg.xorgproto,v 1.3 2019/08/22 13:01:15 nia Exp $
+# $NetBSD: xorg.xorgproto,v 1.4 2019/08/29 10:59:01 nia Exp $
 include/GL/glxint.h
 include/GL/glxmd.h
 include/GL/glxproto.h
@@ -179,6 +179,7 @@ lib/pkgconfig/xf86vidmode.pc
 lib/pkgconfig/xf86vidmodeproto.pc
 lib/pkgconfig/xineramaproto.pc
 lib/pkgconfig/xproto.pc
+lib/pkgconfig/xproxymngproto.pc
 lib/pkgconfig/xxf86dga.pc
 share/doc/presentproto/presentproto.txt
 share/doc/randrproto/randrproto.txt
@@ -208,6 +209,7 @@ share/pkgconfig/xf86miscproto.pc
 share/pkgconfig/xf86vidmodeproto.pc
 share/pkgconfig/xineramaproto.pc
 share/pkgconfig/xproto.pc
+share/pkgconfig/xproxymngproto.pc
 share/xcb/bigreq.xml
 share/xcb/composite.xml
 share/xcb/damage.xml
