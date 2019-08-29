@@ -1,6 +1,7 @@
-$NetBSD: patch-do,v 1.1 2019/07/20 21:17:11 schmonz Exp $
+$NetBSD: patch-do,v 1.2 2019/08/29 10:14:03 schmonz Exp $
 
 Avoid spurious output.
+Run self-test verbosely, to try to get more info from failing bulk builds.
 
 --- do.orig	2019-01-02 19:49:33.000000000 +0000
 +++ do
@@ -13,3 +14,12 @@ Avoid spurious output.
  die() {
  	echo "$0:" "$@" >&2
  	exit 42
+@@ -50,7 +52,7 @@ fi
+ 
+ build() {
+ 	./minimal/do -c bin/all || die "failed to compile redo."
+-	bin/redo bin/all || die "redo failed self test."
++	bin/redo -vv bin/all || die "redo failed self test."
+ }
+ 
+ clean() {
