@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/08/23 01:48:00 schmonz Exp $
+# $NetBSD: Makefile,v 1.19 2019/08/29 10:04:30 schmonz Exp $
 
 DISTNAME=	goaccess-1.3
 CATEGORIES=	www
@@ -21,10 +21,13 @@ CONF_FILES=	${EGDIR}/goaccess.conf ${PKG_SYSCONFDIR}/goaccess.conf
 LIBS.SunOS+=	-lsocket -lnsl
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 
+BROKEN_GETTEXT_DETECTION=	yes
+
 .include "options.mk"
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fiv
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
