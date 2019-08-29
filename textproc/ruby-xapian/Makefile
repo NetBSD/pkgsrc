@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/08/27 21:54:22 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2019/08/29 16:20:40 schmonz Exp $
 
 PKGNAME=		${RUBY_PKGPREFIX}-${PKGNAME_MODULE}
 PKGREVISION=		1
@@ -13,10 +13,14 @@ REPLACE_RUBY=		ruby/docs/examples/*.rb
 
 RUBY_VERSIONS_ACCEPTED=	22 24 25 26
 
-PLIST_VARS+=		oldruby newruby
+PLIST_VARS+=		jquery oldruby newruby
 PLIST_SUBST+=		XAPIAN_RDOC_PATH=${XAPIAN_RDOC_PATH:Q}
 
 .include "../../lang/ruby/rubyversion.mk"
+
+.if ${RUBY_VER} == 22 || ${RUBY_VER} == 25
+PLIST.jquery=		yes
+.endif
 
 .if ${RUBY_VER} < 25
 PLIST.oldruby=		yes
