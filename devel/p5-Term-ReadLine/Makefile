@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2019/08/11 13:20:25 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2019/08/29 19:45:07 schmonz Exp $
 
 DISTNAME=	Term-ReadLine-Gnu-1.36
 PKGNAME=	p5-${DISTNAME:S/-Gnu//}
@@ -16,6 +16,8 @@ PERL5_PACKLIST=		auto/Term/ReadLine/Gnu/.packlist
 MAKE_PARAMS+=	--prefix=${BUILDLINK_PREFIX.readline}
 
 WRKSRC=		${WRKDIR}/${DISTNAME:C/a$//}
+
+BROKEN_READLINE_DETECTION=	yes
 
 REPLACE_PERL+=	Gnu/XS.pm
 
