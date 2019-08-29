@@ -1,3 +1,14 @@
+ Basic configuration
+ ===================
+
+If your system's hostname is a Fully Qualified Domain Name, basic qmail
+control files have already been configured for you.
+
+Otherwise, run this command as root:
+
+# @PREFIX@/share/qmail/setup/config-fast-pkgsrc yourhostname.yourdomain.tld
+
+
  Getting help
  ============
 
