@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2016/03/07 20:17:33 nros Exp $
+$NetBSD: distinfo,v 1.5 2019/08/29 11:09:10 nia Exp $
 
-SHA1 (dmg2img-1.6.5.tar.gz) = 87db4a19badfde40d007a76092454b0942df2bf4
-RMD160 (dmg2img-1.6.5.tar.gz) = 437048d16e5887c79008f2023256dccd176b3192
-SHA512 (dmg2img-1.6.5.tar.gz) = 31528a23986848a8ab319768a8254db6b0035324cbac8328ef865b98ab2cddfd606da19a27202c4ef53cdc5dda75aca489859f82115a5dde6fe9b1f20cd6bd46
-Size (dmg2img-1.6.5.tar.gz) = 23442 bytes
+SHA1 (dmg2img-1.6.7.tar.gz) = 15dc1bc352c524fb54259c0787551927bb03088f
+RMD160 (dmg2img-1.6.7.tar.gz) = 4b3dfa6b02f39cbe1020605e3c32c06936df6852
+SHA512 (dmg2img-1.6.7.tar.gz) = 4c42841c5cdbf868b6038648a6c83e78d4b7f2010f7065d7b3f4c2c04d13af9489716c1dfa867aff5f3c3b3eef96dc3fc0610eff13fec139265f37f468e339e6
+Size (dmg2img-1.6.7.tar.gz) = 23238 bytes
 SHA1 (patch-aa) = 25f3a28092435b15f0086050bac6e5f9c485bd2f
+SHA1 (patch-vfdecrypt.c) = 109180aadf93c6bc3963b1699f59b0cbaaa4e315
