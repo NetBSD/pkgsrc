@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2019/02/08 14:56:01 nia Exp $
+@comment $NetBSD: PLIST,v 1.17 2019/08/29 21:40:28 nia Exp $
 bin/psi
 bin/psi.debug
 share/doc/psi/COPYING
@@ -93,6 +93,7 @@ share/psi/iconsets/affiliations/default/member.png
 share/psi/iconsets/affiliations/default/noaffiliation.png
 share/psi/iconsets/affiliations/default/outcast.png
 share/psi/iconsets/affiliations/default/owner.png
+share/psi/iconsets/clients/default/.directory
 share/psi/iconsets/clients/default/adium.png
 share/psi/iconsets/clients/default/bitlbee.png
 share/psi/iconsets/clients/default/bot.png
