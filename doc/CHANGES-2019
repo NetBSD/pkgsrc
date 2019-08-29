@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3673 2019/08/29 10:59:17 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3674 2019/08/29 11:09:20 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6090,3 +6090,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/py-ncclient to 0.6.6 [adam 2019-08-29]
 	Updated x11/py-gtk2 to 2.24.0nb28 [wiz 2019-08-29]
 	Updated pkgtools/x11-links to 1.30 [nia 2019-08-29]
+	Updated sysutils/dmg2img to 1.6.7 [nia 2019-08-29]
