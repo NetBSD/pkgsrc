@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/06/14 15:59:33 bouyer Exp $
+$NetBSD: distinfo,v 1.5 2019/08/29 15:36:40 bouyer Exp $
 
-SHA1 (kicad-i18n-5.1.2.tar.gz) = f97a1ad4d1add057b5c4cbc781a31db5c1ec4ade
-RMD160 (kicad-i18n-5.1.2.tar.gz) = 5072cff89a76f5ecddb22cb84c6e1314f67d395e
-SHA512 (kicad-i18n-5.1.2.tar.gz) = 9c7bb6a3d33442c019669f6bfebb6bff0cf49afaaa58772a70eca3dafb8d405d29ec5338e622af9c97c1cb0a9463a548af43b42178dbe6e647cad1d2638652a0
-Size (kicad-i18n-5.1.2.tar.gz) = 4263653 bytes
+SHA1 (kicad-i18n-5.1.4.tar.gz) = c539ba61c57bfdf26fdca6ffba8f2c2f2b43afbc
+RMD160 (kicad-i18n-5.1.4.tar.gz) = de028e5111d9fd4aea5d19b9f4cb650b4b62d11b
+SHA512 (kicad-i18n-5.1.4.tar.gz) = 28993e0021ebd7f3c0e7e21b609f57b85b95c74c33d65d30e707c5194b340dbb46142a6250a19256c927dc2f0600a7e1de723aefa9e74b2761ebc7c380143527
+Size (kicad-i18n-5.1.4.tar.gz) = 4310971 bytes
