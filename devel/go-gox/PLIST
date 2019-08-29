@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2019/08/29 13:43:27 he Exp $
+bin/gox

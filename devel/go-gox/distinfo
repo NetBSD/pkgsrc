@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/08/29 13:43:27 he Exp $
+
+SHA1 (gox-1.0.1.tar.gz) = c78d456bc15a5551d6ce4540664775d954a7e1fe
+RMD160 (gox-1.0.1.tar.gz) = 403fb22b914fb9ef6a5744fc6ee38fe0577e9cdc
+SHA512 (gox-1.0.1.tar.gz) = cfcad670d9b752fe629de26db0a7f02a72f183f1c6acaf232d4908085f27a297453ab35f5c9a3ede209cb9143fd9ed7a8b5d9c182c8796f3fe4d023cb5294497
+Size (gox-1.0.1.tar.gz) = 30819 bytes
