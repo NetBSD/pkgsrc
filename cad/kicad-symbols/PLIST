@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/06/14 15:59:33 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/08/29 15:36:40 bouyer Exp $
 share/kicad/library/4xxx.dcm
 share/kicad/library/4xxx.lib
 share/kicad/library/4xxx_IEEE.dcm
@@ -217,6 +217,8 @@ share/kicad/library/MCU_Nordic.dcm
 share/kicad/library/MCU_Nordic.lib
 share/kicad/library/MCU_Parallax.dcm
 share/kicad/library/MCU_Parallax.lib
+share/kicad/library/MCU_Renesas_Synergy_S1.dcm
+share/kicad/library/MCU_Renesas_Synergy_S1.lib
 share/kicad/library/MCU_STC.dcm
 share/kicad/library/MCU_STC.lib
 share/kicad/library/MCU_ST_STM32F0.dcm
