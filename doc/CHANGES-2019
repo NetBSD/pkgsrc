@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3668 2019/08/28 19:44:55 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.3669 2019/08/29 01:09:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6077,3 +6077,10 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/ruby26-base to 2.6.4 [taca 2019-08-28]
 	Updated lang/ruby26 to 2.6.4 [taca 2019-08-28]
 	Updated mail/rss2email to 3.9nb3 [schmonz 2019-08-28]
+	Updated mail/dovecot2 to 2.3.7.2 [taca 2019-08-29]
+	Updated mail/dovecot2-gssapi to 2.3.7.2 [taca 2019-08-29]
+	Updated mail/dovecot2-ldap to 2.3.7.2 [taca 2019-08-29]
+	Updated mail/dovecot2-mysql to 2.3.7.2 [taca 2019-08-29]
+	Updated mail/dovecot2-pgsql to 2.3.7.2 [taca 2019-08-29]
+	Updated mail/dovecot2-sqlite to 2.3.7.2 [taca 2019-08-29]
+	Updated mail/dovecot2-pigeonhole to 0.5.7.2 [taca 2019-08-29]
