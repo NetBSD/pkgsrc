@@ -1,4 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2009/09/10 19:03:48 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2019/08/29 10:33:59 wiz Exp $
+
+revision 1.1
+date: 2008-03-14 15:20:22 +0100;  author: drochner;  state: Exp;
+fix locking around gtk mainloop, bump PKGREVISION
 
 --- gtk/gtk.override.orig	2009-08-12 22:55:36.000000000 +0000
 +++ gtk/gtk.override

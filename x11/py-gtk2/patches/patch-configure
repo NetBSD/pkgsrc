@@ -1,4 +1,8 @@
-$NetBSD: patch-configure,v 1.1 2016/04/11 07:50:32 dbj Exp $
+$NetBSD: patch-configure,v 1.2 2019/08/29 10:33:59 wiz Exp $
+
+revision 1.1
+date: 2016-04-11 09:50:32 +0200;  author: dbj;  state: Exp;  commitid: fyA5JcCRzWk9jb2z;
+fix support for gtk2 built for quartz instead of x11
 
 --- configure.orig	2011-04-01 10:41:02.000000000 +0000
 +++ configure

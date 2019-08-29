@@ -1,0 +1,42 @@
+$NetBSD: patch-pango.override,v 1.1 2019/08/29 10:33:59 wiz Exp $
+
+pango deprecated some symbols
+
+--- pango.override.orig	2011-04-01 10:37:25.000000000 +0000
++++ pango.override
+@@ -22,8 +22,6 @@
+ %%
+ headers
+ #define NO_IMPORT_PYGOBJECT
+-#define PANGO_ENABLE_BACKEND
+-#define PANGO_ENABLE_ENGINE
+ #include <pygobject.h>
+ #include <pango/pango.h>
+ 
+@@ -540,6 +538,7 @@ ignore
+   pango_layout_get_log_attrs
+ %%
+ ignore
++  pango_engine_get_type
+   pango_glyph_string_index_to_x
+   pango_glyph_string_x_to_index
+   pango_break
+@@ -1325,7 +1324,6 @@ _wrap_pango_parse_markup(PyObject *self,
+     gunichar accel_marker, accel_char = 0;
+     PangoAttrList *attr_list = NULL;
+     GError *error = NULL;
+-    gboolean ret;
+     PyObject *py_ret;
+ 
+     if (!PyArg_ParseTupleAndKeywords(args, kwargs, "s#|u#:pango.parse_markup",
+@@ -1341,8 +1339,8 @@ _wrap_pango_parse_markup(PyObject *self,
+     } else
+ 	accel_marker = 0;
+ 
+-    ret = pango_parse_markup(markup_text, length, accel_marker,
+-			     &attr_list, &text, &accel_char, &error);
++    pango_parse_markup(markup_text, length, accel_marker,
++		       &attr_list, &text, &accel_char, &error);
+     if (pyg_error_check(&error))
+ 	return NULL;
+ 

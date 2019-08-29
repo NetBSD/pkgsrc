@@ -1,0 +1,48 @@
+$NetBSD: patch-pango-types.defs,v 1.1 2019/08/29 10:33:59 wiz Exp $
+
+pango deprecated some symbols
+
+--- pango-types.defs.orig	2011-04-01 10:37:25.000000000 +0000
++++ pango-types.defs
+@@ -120,27 +120,6 @@
+   (gtype-id "PANGO_TYPE_CONTEXT")
+ )
+ 
+-(define-object Engine
+-  (in-module "Pango")
+-  (parent "GObject")
+-  (c-name "PangoEngine")
+-  (gtype-id "PANGO_TYPE_ENGINE")
+-)
+-
+-(define-object EngineLang
+-  (in-module "Pango")
+-  (parent "PangoEngine")
+-  (c-name "PangoEngineLang")
+-  (gtype-id "PANGO_TYPE_ENGINE_LANG")
+-)
+-
+-(define-object EngineShape
+-  (in-module "Pango")
+-  (parent "PangoEngine")
+-  (c-name "PangoEngineShape")
+-  (gtype-id "PANGO_TYPE_ENGINE_SHAPE")
+-)
+-
+ (define-object Font
+   (in-module "Pango")
+   (parent "GObject")
+@@ -176,13 +155,6 @@
+   (gtype-id "PANGO_TYPE_FONTSET")
+ )
+ 
+-(define-object FontsetSimple
+-  (in-module "Pango")
+-  (parent "PangoFontset")
+-  (c-name "PangoFontsetSimple")
+-  (gtype-id "PANGO_TYPE_FONTSET_SIMPLE")
+-)
+-
+ (define-object Layout
+   (in-module "Pango")
+   (parent "GObject")
