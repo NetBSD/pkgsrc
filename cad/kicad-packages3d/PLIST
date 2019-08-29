@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/06/14 15:59:33 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/08/29 15:36:40 bouyer Exp $
 share/kicad/modules/packages3d/Battery.3dshapes/BatteryHolder_Bulgin_BX0036_1xC.step
 share/kicad/modules/packages3d/Battery.3dshapes/BatteryHolder_Bulgin_BX0036_1xC.wrl
 share/kicad/modules/packages3d/Battery.3dshapes/BatteryHolder_Keystone_103_1x20mm.step
@@ -7545,6 +7545,8 @@ share/kicad/modules/packages3d/Crystal.3dshapes/Crystal_SMD_EuroQuartz_MT-4Pin_3
 share/kicad/modules/packages3d/Crystal.3dshapes/Crystal_SMD_EuroQuartz_MT-4Pin_3.2x2.5mm_HandSoldering.wrl
 share/kicad/modules/packages3d/Crystal.3dshapes/Crystal_SMD_HC49-SD.step
 share/kicad/modules/packages3d/Crystal.3dshapes/Crystal_SMD_HC49-SD.wrl
+share/kicad/modules/packages3d/Crystal.3dshapes/Crystal_SMD_MicroCrystal_MS1V-T1K.step
+share/kicad/modules/packages3d/Crystal.3dshapes/Crystal_SMD_MicroCrystal_MS1V-T1K.wrl
 share/kicad/modules/packages3d/Crystal.3dshapes/Crystal_SMD_SeikoEpson_FA238-4Pin_3.2x2.5mm.step
 share/kicad/modules/packages3d/Crystal.3dshapes/Crystal_SMD_SeikoEpson_FA238-4Pin_3.2x2.5mm.wrl
 share/kicad/modules/packages3d/Crystal.3dshapes/Crystal_SMD_SeikoEpson_FA238-4Pin_3.2x2.5mm_HandSoldering.step
@@ -7981,6 +7983,18 @@ share/kicad/modules/packages3d/Filter.3dshapes/Filter_1109-5_1.1x0.9mm.step
 share/kicad/modules/packages3d/Filter.3dshapes/Filter_1109-5_1.1x0.9mm.wrl
 share/kicad/modules/packages3d/Filter.3dshapes/Filter_1411-5_1.4x1.1mm.step
 share/kicad/modules/packages3d/Filter.3dshapes/Filter_1411-5_1.4x1.1mm.wrl
+share/kicad/modules/packages3d/Filter.3dshapes/Filter_Mini-Circuits_FV1206-1.step
+share/kicad/modules/packages3d/Filter.3dshapes/Filter_Mini-Circuits_FV1206-1.wrl
+share/kicad/modules/packages3d/Filter.3dshapes/Filter_Mini-Circuits_FV1206-4.step
+share/kicad/modules/packages3d/Filter.3dshapes/Filter_Mini-Circuits_FV1206-4.wrl
+share/kicad/modules/packages3d/Filter.3dshapes/Filter_Mini-Circuits_FV1206-5.step
+share/kicad/modules/packages3d/Filter.3dshapes/Filter_Mini-Circuits_FV1206-5.wrl
+share/kicad/modules/packages3d/Filter.3dshapes/Filter_Mini-Circuits_FV1206-6.step
+share/kicad/modules/packages3d/Filter.3dshapes/Filter_Mini-Circuits_FV1206-6.wrl
+share/kicad/modules/packages3d/Filter.3dshapes/Filter_Mini-Circuits_FV1206-7.step
+share/kicad/modules/packages3d/Filter.3dshapes/Filter_Mini-Circuits_FV1206-7.wrl
+share/kicad/modules/packages3d/Filter.3dshapes/Filter_Mini-Circuits_FV1206.step
+share/kicad/modules/packages3d/Filter.3dshapes/Filter_Mini-Circuits_FV1206.wrl
 share/kicad/modules/packages3d/Fuse.3dshapes/Fuseholder_Blade_Mini_Keystone_3568.step
 share/kicad/modules/packages3d/Fuse.3dshapes/Fuseholder_Blade_Mini_Keystone_3568.wrl
 share/kicad/modules/packages3d/Fuse.3dshapes/Fuseholder_Cylinder-5x20mm_Bulgin_FX0456_Vertical_Closed.step
@@ -8003,6 +8017,8 @@ share/kicad/modules/packages3d/Heatsink.3dshapes/Heatsink_125x35x50mm_3xFixation
 share/kicad/modules/packages3d/Heatsink.3dshapes/Heatsink_125x35x50mm_3xFixationM3.wrl
 share/kicad/modules/packages3d/Heatsink.3dshapes/Heatsink_AAVID_573300D00010G_TO-263.step
 share/kicad/modules/packages3d/Heatsink.3dshapes/Heatsink_AAVID_573300D00010G_TO-263.wrl
+share/kicad/modules/packages3d/Heatsink.3dshapes/Heatsink_Stonecold_HS-132_32x14mm_2xFixation1.5mm.step
+share/kicad/modules/packages3d/Heatsink.3dshapes/Heatsink_Stonecold_HS-132_32x14mm_2xFixation1.5mm.wrl
 share/kicad/modules/packages3d/Inductor_SMD.3dshapes/L_01005_0402Metric.step
 share/kicad/modules/packages3d/Inductor_SMD.3dshapes/L_01005_0402Metric.wrl
 share/kicad/modules/packages3d/Inductor_SMD.3dshapes/L_0201_0603Metric.step
@@ -8411,8 +8427,12 @@ share/kicad/modules/packages3d/LED_SMD.3dshapes/LED_2816_7142Metric.step
 share/kicad/modules/packages3d/LED_SMD.3dshapes/LED_2816_7142Metric.wrl
 share/kicad/modules/packages3d/LED_SMD.3dshapes/LED_2816_7142Metric_Castellated.step
 share/kicad/modules/packages3d/LED_SMD.3dshapes/LED_2816_7142Metric_Castellated.wrl
+share/kicad/modules/packages3d/LED_SMD.3dshapes/LED_Inolux_IN-PI554FCH_PLCC4_5.0x5.0mm_P3.2mm.step
+share/kicad/modules/packages3d/LED_SMD.3dshapes/LED_Inolux_IN-PI554FCH_PLCC4_5.0x5.0mm_P3.2mm.wrl
 share/kicad/modules/packages3d/LED_SMD.3dshapes/LED_RGB_5050-6.step
 share/kicad/modules/packages3d/LED_SMD.3dshapes/LED_RGB_5050-6.wrl
+share/kicad/modules/packages3d/LED_SMD.3dshapes/LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm.step
+share/kicad/modules/packages3d/LED_SMD.3dshapes/LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm.wrl
 share/kicad/modules/packages3d/LED_THT.3dshapes/LED_D1.8mm_W1.8mm_H2.4mm_Horizontal_O1.27mm_Z1.6mm.step
 share/kicad/modules/packages3d/LED_THT.3dshapes/LED_D1.8mm_W1.8mm_H2.4mm_Horizontal_O1.27mm_Z1.6mm.wrl
 share/kicad/modules/packages3d/LED_THT.3dshapes/LED_D1.8mm_W1.8mm_H2.4mm_Horizontal_O1.27mm_Z4.9mm.step
@@ -8653,6 +8673,8 @@ share/kicad/modules/packages3d/Oscillator.3dshapes/Oscillator_DIP-14.step
 share/kicad/modules/packages3d/Oscillator.3dshapes/Oscillator_DIP-14.wrl
 share/kicad/modules/packages3d/Oscillator.3dshapes/Oscillator_DIP-8.step
 share/kicad/modules/packages3d/Oscillator.3dshapes/Oscillator_DIP-8.wrl
+share/kicad/modules/packages3d/Oscillator.3dshapes/Oscillator_SMD_Abracon_ASV-4Pin_7.0x5.1mm.step
+share/kicad/modules/packages3d/Oscillator.3dshapes/Oscillator_SMD_Abracon_ASV-4Pin_7.0x5.1mm.wrl
 share/kicad/modules/packages3d/Oscillator.3dshapes/Oscillator_SMD_EuroQuartz_XO53-4Pin_5.0x3.2mm.step
 share/kicad/modules/packages3d/Oscillator.3dshapes/Oscillator_SMD_EuroQuartz_XO53-4Pin_5.0x3.2mm.wrl
 share/kicad/modules/packages3d/Oscillator.3dshapes/Oscillator_SeikoEpson_SG-8002DB.step
@@ -9967,6 +9989,8 @@ share/kicad/modules/packages3d/Package_SO.3dshapes/SOIC-8-N7_3.9x4.9mm_P1.27mm.s
 share/kicad/modules/packages3d/Package_SO.3dshapes/SOIC-8-N7_3.9x4.9mm_P1.27mm.wrl
 share/kicad/modules/packages3d/Package_SO.3dshapes/SOIC-8_3.9x4.9mm_P1.27mm.step
 share/kicad/modules/packages3d/Package_SO.3dshapes/SOIC-8_3.9x4.9mm_P1.27mm.wrl
+share/kicad/modules/packages3d/Package_SO.3dshapes/SOIC-8_5.275x5.275mm_P1.27mm.step
+share/kicad/modules/packages3d/Package_SO.3dshapes/SOIC-8_5.275x5.275mm_P1.27mm.wrl
 share/kicad/modules/packages3d/Package_SO.3dshapes/SOIJ-8_5.3x5.3mm_P1.27mm.step
 share/kicad/modules/packages3d/Package_SO.3dshapes/SOIJ-8_5.3x5.3mm_P1.27mm.wrl
 share/kicad/modules/packages3d/Package_SO.3dshapes/SOJ-36_10.16x23.49mm_P1.27mm.step
@@ -10291,8 +10315,8 @@ share/kicad/modules/packages3d/Package_TO_SOT_SMD.3dshapes/TO-277B.step
 share/kicad/modules/packages3d/Package_TO_SOT_SMD.3dshapes/TO-277B.wrl
 share/kicad/modules/packages3d/Package_TO_SOT_SMD.3dshapes/TSOT-23-5.step
 share/kicad/modules/packages3d/Package_TO_SOT_SMD.3dshapes/TSOT-23-5.wrl
-share/kicad/modules/packages3d/Package_TO_SOT_SMD.3dshapes/TSOT-23-6_MK06A.step
-share/kicad/modules/packages3d/Package_TO_SOT_SMD.3dshapes/TSOT-23-6_MK06A.wrl
+share/kicad/modules/packages3d/Package_TO_SOT_SMD.3dshapes/TSOT-23-6.step
+share/kicad/modules/packages3d/Package_TO_SOT_SMD.3dshapes/TSOT-23-6.wrl
 share/kicad/modules/packages3d/Package_TO_SOT_SMD.3dshapes/TSOT-23-8.step
 share/kicad/modules/packages3d/Package_TO_SOT_SMD.3dshapes/TSOT-23-8.wrl
 share/kicad/modules/packages3d/Package_TO_SOT_SMD.3dshapes/TSOT-23.step
