@@ -1,18 +1,18 @@
-$NetBSD: distinfo,v 1.11 2019/06/14 15:59:32 bouyer Exp $
+$NetBSD: distinfo,v 1.12 2019/08/29 15:36:39 bouyer Exp $
 
-SHA1 (kicad-5.1.2.tar.xz) = b5edf4f65f26d4b5677bfdd54c43f721430f7594
-RMD160 (kicad-5.1.2.tar.xz) = d63ecaf4fbb88686603af13674dab6b8031e4ae2
-SHA512 (kicad-5.1.2.tar.xz) = 5280be13d82d675aecab208f6d05ac8ac31a8f4d620c541748a1c519f8587b0250f189d8c5cdc0d7fa19b52780e5c68bb3e1956a3f303bb183bfb4c59062be1b
-Size (kicad-5.1.2.tar.xz) = 14191500 bytes
+SHA1 (kicad-5.1.4.tar.xz) = 5c4a2cf2f99afc67a57433ead0686e0083dd6fb2
+RMD160 (kicad-5.1.4.tar.xz) = ed8e53cebddf76df70e80ec1f221cf5bf69be060
+SHA512 (kicad-5.1.4.tar.xz) = ce0efb740686eafdbbdf8cda68ad800a70c8991302f984be3db4bbdb3bfafe1634871ec6ea26bb6854a417db6336880e5a043dc022ef8126c0e98abc90671337
+Size (kicad-5.1.4.tar.xz) = 14198672 bytes
 SHA1 (patch-3d-viewer_3d_cache_sg_CMakeLists.txt) = 0863d6b03025fb2afd2dcb290bb08809685a0500
 SHA1 (patch-CMakeLists.txt) = 081f986cb9e3cb5aba40c737f49bafde23e66c66
-SHA1 (patch-CMakeModules_Functions.cmake) = ef22da244c8ed43aec6c149ae6b05a8e464cf809
+SHA1 (patch-CMakeModules_Functions.cmake) = 9517d3451fd90eeb7ef6a98f08b08a925757e360
 SHA1 (patch-CMakeModules_WriteVersionHeader.cmake) = 153ad7c4cd21358f613a406016407658090ed390
 SHA1 (patch-CMakeModules_config.h.cmake) = 7d2edb2cf7482724d255b8db0232dd28f6b7e517
 SHA1 (patch-bitmaps_png_CMakeLists.txt) = 1202783b39af4ddf83b9def91eb72b058f2da5bb
 SHA1 (patch-common_CMakeLists.txt) = 29b3dbcbb5f82b3f16881e7c83a8cc11e2d8bd85
 SHA1 (patch-cvpcb_CMakeLists.txt) = 664ad5a5788c7c2b28911b60a71697012ceed260
-SHA1 (patch-eeschema_CMakeLists.txt) = dd847db94b2a289df765c21c15976269ccc9873e
+SHA1 (patch-eeschema_CMakeLists.txt) = 351f684b4a6ff58532634086a7df1e35ea02d792
 SHA1 (patch-gerbview_CMakeLists.txt) = 0a9417eeb432919d57afbfaa07a9651f7df4acb0
 SHA1 (patch-include_hashtables.h) = 4b26adef481406b61c1c9cf660f69847aa76142d
 SHA1 (patch-include_kiway.h) = 7208f474e895ea07ba5e5f56bab46d4d529b9e57
