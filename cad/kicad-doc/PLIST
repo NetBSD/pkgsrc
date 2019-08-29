@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/06/14 15:59:32 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/08/29 15:36:40 bouyer Exp $
 share/doc/kicad/help/ca/getting_started_in_kicad.epub
 share/doc/kicad/help/ca/getting_started_in_kicad.html
 share/doc/kicad/help/ca/getting_started_in_kicad.pdf
@@ -6391,11 +6391,13 @@ share/doc/kicad/help/ru/images/ru/default_hot_key_list.png
 share/doc/kicad/help/ru/images/ru/design_rules.png
 share/doc/kicad/help/ru/images/ru/dev-chain.png
 share/doc/kicad/help/ru/images/ru/dialog_bom.png
+share/doc/kicad/help/ru/images/ru/dialog_bus_definitions.png
 share/doc/kicad/help/ru/images/ru/dialog_choose_component.png
 share/doc/kicad/help/ru/images/ru/dialog_component_properties.png
 share/doc/kicad/help/ru/images/ru/dialog_edit_fields.png
 share/doc/kicad/help/ru/images/ru/dialog_erc.png
 share/doc/kicad/help/ru/images/ru/dialog_erc_opts.png
+share/doc/kicad/help/ru/images/ru/dialog_migrate_buses.png
 share/doc/kicad/help/ru/images/ru/dialog_newline.png
 share/doc/kicad/help/ru/images/ru/dialog_newtext.png
 share/doc/kicad/help/ru/images/ru/dialog_select_element.png
