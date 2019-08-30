@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.17 2017/11/12 15:36:57 khorben Exp $
+# $NetBSD: options.mk,v 1.18 2019/08/30 17:01:32 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wine
 PKG_SUPPORTED_OPTIONS=	cups dbus esound hal ldap opengl sane ssl x11
@@ -66,7 +66,7 @@ CONFIGURE_ARGS+=	--without-x
 .if !empty(PKG_OPTIONS:Mopengl) && !empty(PKG_OPTIONS:Mx11)
 PLIST.opengl=		yes
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../graphics/glut/buildlink3.mk"
+.include "../../graphics/freeglut/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-opengl
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2016/07/16 00:21:20 markd Exp $
+# $NetBSD: options.mk,v 1.7 2019/08/30 17:01:32 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.yabause
 PKG_SUPPORTED_OPTIONS=	openal opengl sdl
@@ -36,7 +36,7 @@ CMAKE_ARGS+=	-DYAB_WANT_OPENAL=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mopengl)
-.include "../../graphics/glut/buildlink3.mk"
+.include "../../graphics/freeglut/buildlink3.mk"
 CMAKE_ARGS+=	-DYAB_WANT_OPENGL=ON
 .else
 CMAKE_ARGS+=	-DYAB_WANT_OPENGL=OFF
