@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/07/16 11:25:43 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2019/08/30 18:07:33 nia Exp $
 
 DISTNAME=	fltk-1.3.5-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -48,9 +48,6 @@ PLIST.cs=		yes
 #.endif
 
 .if !empty(PKG_OPTIONS:Mopengl)
-.if ${OPSYS} != "Darwin"
-.  include "../../graphics/Mesa/buildlink3.mk"
-.endif
 CONFIGURE_ARGS+=	--enable-gl
 PLIST.opengl=	yes
 .else
