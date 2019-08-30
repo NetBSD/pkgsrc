@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/08/30 17:33:25 micha Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/08/30 22:08:36 nia Exp $
 bin/chocolate-doom
 bin/chocolate-doom-setup
 bin/chocolate-heretic
@@ -70,5 +70,6 @@ share/doc/chocolate-strife/PHILOSOPHY.md
 share/doc/chocolate-strife/README.Music.md
 share/doc/chocolate-strife/README.Strife.md
 share/doc/chocolate-strife/README.md
-share/icons/chocolate-doom.png
-share/icons/chocolate-setup.png
+share/icons/hicolor/128x128/apps/chocolate-doom.png
+share/icons/hicolor/128x128/apps/chocolate-setup.png
+share/icons/hicolor/48x48/apps/chocolate-doom.png
