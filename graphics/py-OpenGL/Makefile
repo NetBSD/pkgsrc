@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2016/08/21 01:32:45 kamil Exp $
+# $NetBSD: Makefile,v 1.26 2019/08/30 18:26:32 nia Exp $
 
 DISTNAME=	PyOpenGL-3.1.1a1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^Py//}
@@ -33,7 +33,9 @@ do-test:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
-.include "../../graphics/Mesa/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/freeglut/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
