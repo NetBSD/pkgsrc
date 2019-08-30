@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.59 2019/08/30 13:00:56 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.60 2019/08/30 16:00:47 nia Exp $
 
 BUILDLINK_TREE+=	MesaLib
 
@@ -23,6 +23,13 @@ pkgbase:= MesaLib
 MESALIB_SUPPORTS_EGL=	yes
 .else
 MESALIB_SUPPORTS_EGL=	no
+.endif
+
+.if	${X11_TYPE} == "modular" || \
+	${X11_TYPE} == "native"  && exists(${X11BASE}/lib/libOSMesa.so)
+MESALIB_SUPPORTS_OS=	yes
+.else
+MESALIB_SUPPORTS_OS=	no
 .endif
 
 .include "../../mk/pkg-build-options.mk"
