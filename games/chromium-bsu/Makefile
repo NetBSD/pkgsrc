@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/08/30 17:01:33 nia Exp $
+# $NetBSD: Makefile,v 1.15 2019/08/30 17:27:29 nia Exp $
 
 DISTNAME=		chromium-bsu-0.9.15.1
 PKGREVISION=		2
@@ -25,7 +25,6 @@ LDFLAGS.SunOS=		-lSDL
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../graphics/glpng/buildlink3.mk"
-.include "../../graphics/freeglut/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/quesoglc/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
