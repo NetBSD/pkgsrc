@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2018/01/14 14:58:40 rillig Exp $
+# $NetBSD: Makefile,v 1.36 2019/08/30 18:25:43 nia Exp $
 
 DISTNAME=	ruby-opengl-0.60.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
@@ -19,5 +19,7 @@ pre-configure:
 	${FIND} ${WRKSRC} -type f -exec ${CHMOD} -x {} \;
 
 .include "../../lang/ruby/gem.mk"
-.include "../../graphics/Mesa/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/freeglut/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
