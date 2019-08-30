@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.60 2019/08/30 16:00:47 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.61 2019/08/30 16:30:54 nia Exp $
 
 BUILDLINK_TREE+=	MesaLib
 
@@ -18,18 +18,24 @@ BUILDLINK_LDFLAGS.MesaLib+=	-Wl,-dylib_file,/System/Library/Frameworks/OpenGL.fr
 
 pkgbase:= MesaLib
 
-.if	${X11_TYPE} == "modular" && (${OPSYS} != "Darwin" && ${OPSYS} != "Cygwin") ||	\
-	${X11_TYPE} == "native"  && exists(${X11BASE}/include/EGL/egl.h)
-MESALIB_SUPPORTS_EGL=	yes
-.else
-MESALIB_SUPPORTS_EGL=	no
-.endif
-
-.if	${X11_TYPE} == "modular" || \
-	${X11_TYPE} == "native"  && exists(${X11BASE}/lib/libOSMesa.so)
+.if ${X11_TYPE} == "modular"
 MESALIB_SUPPORTS_OS=	yes
+.  if ${OPSYS} != "Darwin" && ${OPSYS} != "Cygwin" && ${OPSYS} != "SunOS"
+MESALIB_SUPPORTS_EGL=	yes
+.  else
+MESALIB_SUPPORTS_EGL=	no
+.  endif
 .else
+.  if exists(${X11BASE}/include/EGL/egl.h)
+MESALIB_SUPPORTS_EGL=	yes
+.  else
+MESALIB_SUPPORTS_EGL=	no
+.  endif
+.  if exists(${X11BASE}/lib/libOSMesa.so)
+MESALIB_SUPPORTS_OS=	yes
+.  else
 MESALIB_SUPPORTS_OS=	no
+.  endif
 .endif
 
 .include "../../mk/pkg-build-options.mk"
