@@ -1,6 +1,6 @@
-$NetBSD: patch-stubdom_Makefile,v 1.1 2017/03/30 09:15:10 bouyer Exp $
---- stubdom/Makefile.orig	2016-12-05 13:03:27.000000000 +0100
-+++ stubdom/Makefile	2017-03-29 09:58:39.000000000 +0200
+$NetBSD: patch-stubdom_Makefile,v 1.2 2019/08/30 13:23:10 bouyer Exp $
+--- stubdom/Makefile.orig	2018-12-03 10:03:57.000000000 +0100
++++ stubdom/Makefile	2019-08-30 11:47:09.000000000 +0200
 @@ -6,8 +6,6 @@
  
  export stubdom=y
@@ -193,16 +193,16 @@ $NetBSD: patch-stubdom_Makefile,v 1.1 2017/03/30 09:15:10 bouyer Exp $
  	patch -d $@ -p1 < tpmemu-$(TPMEMU_VERSION).patch;
  	patch -d $@ -p1 < vtpm-bufsize.patch
  	patch -d $@ -p1 < vtpm-locality.patch
-@@ -224,7 +195,7 @@
- 	patch -d $@ -p1 < vtpm-deepquote-anyloc.patch
+@@ -225,7 +196,7 @@
  	patch -d $@ -p1 < vtpm-cmake-Wextra.patch
+ 	patch -d $@ -p1 < vtpm_TPM_ChangeAuthAsymFinish.patch
  	mkdir $@/build
 -	cd $@/build; CC=${CC} $(CMAKE) .. -DCMAKE_C_FLAGS:STRING="-std=c99 -DTPM_NO_EXTERN $(TARGET_CPPFLAGS) $(TARGET_CFLAGS) -Wno-declaration-after-statement"
-+	cd $@/build; CC=${TARGET_CC} $(CMAKE) .. -DCMAKE_C_FLAGS:STRING="-std=gnu99 -DTPM_NO_EXTERN $(VTPM_CPPFLAGS) $(TARGET_CFLAGS) -Wno-declaration-after-statement"
++	cd $@/build; CC=${TARGET_CC} $(CMAKE) .. -DCMAKE_C_FLAGS:STRING="-std=c99 -DTPM_NO_EXTERN $(TARGET_CPPFLAGS) $(TARGET_CFLAGS) -Wno-declaration-after-statement"
  	touch $@
  
  TPMEMU_STAMPFILE=$(CROSS_ROOT)/$(GNU_TARGET_ARCH)-xen-elf/lib/libtpm.a
-@@ -243,11 +214,8 @@
+@@ -244,11 +215,8 @@
  CAMLLIB = $(CROSS_PREFIX)/$(GNU_TARGET_ARCH)-xen-elf/lib/ocaml
  OCAML_STAMPFILE=$(CAMLLIB)/.dirstamp
  
@@ -216,7 +216,7 @@ $NetBSD: patch-stubdom_Makefile,v 1.1 2017/03/30 09:15:10 bouyer Exp $
  	cd ocaml-$(OCAML_VERSION) && patch -p0 < ../ocaml.patch
  	rm -rf ocaml-$(XEN_TARGET_ARCH)
  	mv ocaml-$(OCAML_VERSION) ocaml-$(XEN_TARGET_ARCH)
-@@ -260,7 +228,7 @@
+@@ -261,7 +229,7 @@
  $(OCAML_STAMPFILE): ocaml-$(XEN_TARGET_ARCH)/.dirstamp
  	cd ocaml-$(XEN_TARGET_ARCH) &&  ./configure -prefix $(CROSS_PREFIX)/$(GNU_TARGET_ARCH)-xen-elf \
  		-no-pthread -no-shared-libs -no-tk -no-curses \
@@ -225,7 +225,7 @@ $NetBSD: patch-stubdom_Makefile,v 1.1 2017/03/30 09:15:10 bouyer Exp $
  	$(foreach i,$(MINIOS_HASNOT),sed -i 's,^\(#define HAS_$(i)\),//\1,' ocaml-$(XEN_TARGET_ARCH)/config/s.h ; )
  	$(MAKE) DESTDIR= -C ocaml-$(XEN_TARGET_ARCH) world
  	$(MAKE) DESTDIR= -C ocaml-$(XEN_TARGET_ARCH) opt
-@@ -374,7 +342,7 @@
+@@ -375,7 +343,7 @@
  .PHONY: libxentoollog
  libxentoollog: libs-$(XEN_TARGET_ARCH)/toollog/libxentoollog.a
  libs-$(XEN_TARGET_ARCH)/toollog/libxentoollog.a: mk-headers-$(XEN_TARGET_ARCH) $(NEWLIB_STAMPFILE)
@@ -234,7 +234,7 @@ $NetBSD: patch-stubdom_Makefile,v 1.1 2017/03/30 09:15:10 bouyer Exp $
  
  #######
  # libxenevtchn
-@@ -436,11 +404,12 @@
+@@ -437,11 +405,12 @@
  	  ( $(buildmakevars2shellvars); \
  	    cd ioemu ; \
  	    LWIPDIR=$(CURDIR)/lwip-$(XEN_TARGET_ARCH) \
@@ -249,7 +249,7 @@ $NetBSD: patch-stubdom_Makefile,v 1.1 2017/03/30 09:15:10 bouyer Exp $
  
  ######
  # caml
-@@ -473,7 +442,7 @@
+@@ -474,7 +443,7 @@
  
  .PHONY: vtpm
  vtpm: cross-polarssl cross-tpmemu vtpm-minios-config.mk
@@ -258,7 +258,7 @@ $NetBSD: patch-stubdom_Makefile,v 1.1 2017/03/30 09:15:10 bouyer Exp $
  
  ######
  # VTPMMGR
-@@ -484,18 +453,14 @@
+@@ -485,18 +454,14 @@
  
  .PHONY: vtpmmgr
  vtpmmgr: cross-polarssl vtpmmgr-minios-config.mk
@@ -280,7 +280,7 @@ $NetBSD: patch-stubdom_Makefile,v 1.1 2017/03/30 09:15:10 bouyer Exp $
  	for i in grub.patches/* ; do \
  		patch -d $@ -p1 < $$i || exit 1; \
  	done
-@@ -538,11 +503,11 @@
+@@ -539,11 +504,11 @@
  
  .PHONY: vtpm-stubdom
  vtpm-stubdom: mini-os-$(XEN_TARGET_ARCH)-vtpm vtpm
