@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2019/04/03 00:33:16 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2019/08/30 06:38:53 markd Exp $
 
 BUILDLINK_TREE+=	ktextwidgets
 
@@ -14,6 +14,7 @@ BUILDLINK_PKGSRCDIR.ktextwidgets?=	../../x11/ktextwidgets
 .include "../../textproc/kcompletion/buildlink3.mk"
 .include "../../textproc/sonnet/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtspeech/buildlink3.mk"
 .endif	# KTEXTWIDGETS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-ktextwidgets
