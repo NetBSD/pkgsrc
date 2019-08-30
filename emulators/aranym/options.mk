@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2008/07/30 14:08:59 hauke Exp $
+# $NetBSD: options.mk,v 1.2 2019/08/30 17:48:07 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.aranym
 PKG_SUPPORTED_OPTIONS=	opengl
@@ -7,7 +7,7 @@ PKG_SUPPORTED_OPTIONS=	opengl
 
 .if !empty(PKG_OPTIONS:Mopengl)
 CONFIGURE_ARGS+=	--enable-opengl
-.include "../../graphics/Mesa/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-opengl
 .endif
