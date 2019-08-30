@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2017/09/04 18:01:05 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2019/08/30 18:08:59 nia Exp $
 #
 
 DISTNAME=	ssystem-1.6
@@ -28,6 +28,8 @@ do-install:
 	    ${INSTALL_DATA} ${DOC_FILES} ${DESTDIR}${PREFIX}/share/doc/ssystem; \
 	    ${INSTALL_DATA} hires/README ${DESTDIR}${PREFIX}/share/ssystem/hires
 
-.include "../../graphics/Mesa/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/freeglut/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
