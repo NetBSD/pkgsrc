@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2019/04/03 00:32:36 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2019/08/30 06:41:05 markd Exp $
 
 BUILDLINK_TREE+=	knotifications
 
@@ -16,6 +16,7 @@ BUILDLINK_PKGSRCDIR.knotifications?=	../../devel/knotifications
 .include "../../textproc/kcodecs/buildlink3.mk"
 .include "../../x11/kwindowsystem/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtspeech/buildlink3.mk"
 .endif	# KNOTIFICATIONS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-knotifications
