@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2019/08/09 16:00:22 nia Exp $
+# $NetBSD: Makefile,v 1.12 2019/08/30 17:01:32 nia Exp $
 
 DISTNAME=	bullet-2.88
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bulletphysics/}
 GITHUB_PROJECT=	bullet3
@@ -27,5 +28,5 @@ CMAKE_ARGS+=	-DBUILD_UNIT_TESTS:BOOL=off
 
 PKGCONFIG_OVERRIDE+=	bullet.pc.in
 
-.include "../../graphics/glut/buildlink3.mk"
+.include "../../graphics/freeglut/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
