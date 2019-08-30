@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2017/02/12 21:50:17 adam Exp $
+# $NetBSD: options.mk,v 1.6 2019/08/30 17:01:34 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pfstools
 PKG_SUPPORTED_OPTIONS=	fftw imagemagick octave qt opengl
@@ -49,7 +49,7 @@ CMAKE_ARGS+=	-DWITH_QT=NO
 
 .if !empty(PKG_OPTIONS:Mopengl)
 .  if ${OPSYS} != "Darwin"
-.include "../../graphics/glut/buildlink3.mk"
+.include "../../graphics/freeglut/buildlink3.mk"
 .  endif
 # XXX nasty hack
 CXXFLAGS.NetBSD+=	-lpthread

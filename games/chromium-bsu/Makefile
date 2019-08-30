@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2018/07/18 00:06:16 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2019/08/30 17:01:33 nia Exp $
 
 DISTNAME=		chromium-bsu-0.9.15.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=chromium-bsu/}
 
@@ -25,7 +25,7 @@ LDFLAGS.SunOS=		-lSDL
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../graphics/glpng/buildlink3.mk"
-.include "../../graphics/glut/buildlink3.mk"
+.include "../../graphics/freeglut/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/quesoglc/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

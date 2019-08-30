@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2015/04/25 14:20:47 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2019/08/30 17:01:32 nia Exp $
 
 BUILDLINK_TREE+=	wine
 
@@ -15,7 +15,7 @@ pkgbase:= wine
 .include "../../graphics/freetype2/buildlink3.mk"
 .if !empty(PKG_BUILD_OPTIONS.wine:Mopengl)
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../graphics/glut/buildlink3.mk"
+.include "../../graphics/freeglut/buildlink3.mk"
 .endif
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"

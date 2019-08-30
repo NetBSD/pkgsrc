@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.94 2019/08/28 01:32:11 markd Exp $
+# $NetBSD: Makefile,v 1.95 2019/08/30 17:01:34 nia Exp $
 
 DISTNAME=	hugin-2019.0.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hugin/}
 EXTRACT_SUFX=	.tar.bz2
@@ -47,7 +47,7 @@ SUBST_SED.apple=	-e 's,(APPLE),(ELPPA),g'
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
-.include "../../graphics/glut/buildlink3.mk"
+.include "../../graphics/freeglut/buildlink3.mk"
 .endif
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
