@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2019/08/27 21:02:02 markd Exp $
+# $NetBSD: Makefile,v 1.29 2019/08/30 06:41:05 markd Exp $
 
 DISTNAME=	knotifications-${KF5VER}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -17,6 +18,7 @@ LICENSE=	gnu-lgpl-v2.1 AND modified-bsd
 .include "../../textproc/kcodecs/buildlink3.mk"
 .include "../../x11/kwindowsystem/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtspeech/buildlink3.mk"
 BUILDLINK_DEPMETHOD.qt5-qttools= build
 .include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
