@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.157 2019/08/28 09:09:15 nia Exp $
+# $NetBSD: Makefile,v 1.158 2019/08/30 13:00:56 nia Exp $
 
 DISTNAME=	mesa-19.1.5
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
-CATEGORIES=	graphics x11
+PKGREVISION=	1
+CATEGORIES=	graphics
 MASTER_SITES=	https://mesa.freedesktop.org/archive/
 EXTRACT_SUFX=	.tar.xz
 
@@ -37,15 +38,115 @@ CFLAGS.SunOS+=		-D__EXTENSIONS__ -D_POSIX_PTHREAD_SEMANTICS
 CXXFLAGS.SunOS+=	-Drestrict=__restrict__
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
+# Some of these get appended in options.mk.
+DRI_DRIVERS=		#
+GALLIUM_DRIVERS=	swrast
+VULKAN_DRIVERS=		#
+MESA_PLATFORMS=		surfaceless
+
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
 .include "options.mk"
+
+PLIST_SUBST+=	GLVER="1.2.0"
+
+# classic DRI drivers
+PLIST_VARS+=		i915 i965 r100 r200 nouveau_dri
+
+# Gallium drivers
+PLIST_VARS+=		r300 svga nouveau vc4
+
+# other features
+PLIST_VARS+=		egl gbm vaapi xatracker
+
+.if ${OPSYS} != "Darwin" && ${OPSYS} != "Cygwin"
+.include "../../x11/libdrm/buildlink3.mk"
+MESA_PLATFORMS+=	drm
+MESON_ARGS+=		-Ddri3=true
+MESON_ARGS+=		-Dgallium-xa=true
+PLIST.xatracker=	yes
+.  if ${OPSYS} != "SunOS"
+MESON_ARGS+=		-Degl=true
+MESON_ARGS+=		-Dgbm=true
+PLIST.egl=		yes
+PLIST.gbm=		yes
+.  else
+MESON_ARGS+=		-Degl=false
+MESON_ARGS+=		-Dgbm=false
+.  endif
+.  include "../../multimedia/libva/available.mk"
+.  if ${VAAPI_AVAILABLE} == "yes"
+MESON_ARGS+=		-Dgallium-va=true
+PLIST.vaapi=		yes
+.    include "../../multimedia/libva/buildlink3.mk"
+.  else
+MESON_ARGS+=		-Dgallium-va=false
+.  endif
+.  if !empty(MACHINE_PLATFORM:MNetBSD-*-*arm*)
+# ARM Mali Utgard
+#GALLIUM_DRIVERS+=	lima
+#PLIST.lima=		yes
+# ARM Mali Midgard, Bifrost
+#GALLIUM_DRIVERS+=	panfrost
+#PLIST.panfrost=	yes
+# Vivante GCxxx
+#GALLIUM_DRIVERS+=	etnaviv
+#PLIST.etnaviv=		yes
+# Qualcomm Snapdragon
+#GALLIUM_DRIVERS+=	freedreno
+#PLIST.freedreno=	yes
+# Broadcom VideoCore 4
+GALLIUM_DRIVERS+=	vc4
+PLIST.vc4=		yes
+.  endif
+.  if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+GALLIUM_DRIVERS+=	svga
+DRI_DRIVERS+=		i915 i965
+PLIST.svga=		yes
+PLIST.i915=		yes
+PLIST.i965=		yes
+.  endif
+# FreeBSD lacks nouveau support (there are official binaries from Nvidia)
+.  if ${OPSYS} != "FreeBSD"
+PLIST.nouveau=		yes
+PLIST.nouveau_dri=	yes
+GALLIUM_DRIVERS+=	nouveau
+DRI_DRIVERS+=		nouveau
+.  endif
+.  if !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
+# qemu Linux guest driver
+# XXX test this
+#GALLIUM_DRIVERS+=	virgl
+#PLIST.virgl=		yes
+.  endif
+# theoretically cross platform PCI drivers
+.  if empty(MACHINE_PLATFORM:MNetBSD-*-*arm*) && \
+      empty(MACHINE_PLATFORM:MNetBSD-*-mipsel)
+DRI_DRIVERS+=		r100 r200
+GALLIUM_DRIVERS+=	r300
+PLIST.r100=		yes
+PLIST.r200=		yes
+PLIST.r300=		yes
+.  endif
+.else
+MESON_ARGS+=		-Degl=false
+MESON_ARGS+=		-Dgbm=false
+.endif # ${OPSYS} != "Darwin" && ${OPSYS} != "Cygwin"
+
+MESON_ARGS+=	-Dgallium-drivers=${GALLIUM_DRIVERS:ts,}
+MESON_ARGS+=	-Ddri-drivers=${DRI_DRIVERS:ts,}
+MESON_ARGS+=	-Dvulkan-drivers=${VULKAN_DRIVERS:ts,}
+MESON_ARGS+=	-Dplatforms=${MESA_PLATFORMS:ts,}
 
 .if ${MACHINE_ARCH} == "i386"
 MESON_ARGS+=	-Dglx-read-only-text=true
 .endif
 
+MESON_ARGS+=	-Dgles1=true
+MESON_ARGS+=	-Dgles2=true
+MESON_ARGS+=	-Dosmesa=gallium
 MESON_ARGS+=	-Dshared-glapi=true
+MESON_ARGS+=	-Dgallium-xvmc=false
 
 CPPFLAGS+=	-DHAVE_NOATEXIT
 CPPFLAGS+=	-DSYSCONFDIR=${PKG_SYSCONFDIR}
@@ -57,18 +158,22 @@ CFLAGS.NetBSD+=		-Dalloca=__builtin_alloca
 CXXFLAGS.NetBSD+=	-Dalloca=__builtin_alloca
 
 PYTHON_FOR_BUILD_ONLY=	yes
-BUILD_DEPENDS+=		${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
+
+TOOL_DEPENDS+=		${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
+
 # needed to build vulkan support
-BUILD_DEPENDS+=		${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
+TOOL_DEPENDS+=		${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 
 # LLVM detection
 TOOL_DEPENDS+=		${PYPKGPREFIX}-meson>=0.51.1nb3:../../devel/py-meson
 
-EGDIR=			${PREFIX}/share/examples/mesa
+EGDIR=		${PREFIX}/share/examples/mesa
+
+OWN_DIRS=	${PKG_SYSCONFDIR}/drirc.d
+CONF_FILES+=	${EGDIR}/00-mesa-defaults.conf \
+		${PKG_SYSCONFDIR}/drirc.d/00-mesa-defaults.conf
+
 INSTALLATION_DIRS+=	${EGDIR}
-OWN_DIRS=		${PKG_SYSCONFDIR}/drirc.d
-CONF_FILES+=		${EGDIR}/00-mesa-defaults.conf \
-			${PKG_SYSCONFDIR}/drirc.d/00-mesa-defaults.conf
 
 pre-configure:
 	touch ${WRKSRC}/src/glx/apple_dummy.cpp
@@ -79,8 +184,4 @@ post-install:
 .include "../../devel/py-meson/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
-.include "../../x11/libXrandr/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/libxcb/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
