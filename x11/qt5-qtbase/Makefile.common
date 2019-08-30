@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2019/04/28 12:46:31 maya Exp $
+# $NetBSD: Makefile.common,v 1.32 2019/08/30 06:33:38 markd Exp $
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
 # used by x11/qt5-psql/Makefile
@@ -17,6 +17,7 @@
 # used by x11/qt5-qtscript/Makefile
 # used by x11/qt5-qtsensors/Makefile
 # used by x11/qt5-qtserialport/Makefile
+# used by x11/qt5-qtspeech/Makefile
 # used by x11/qt5-qtsvg/Makefile
 # used by x11/qt5-qttools/Makefile
 # used by x11/qt5-qttranslations/Makefile
