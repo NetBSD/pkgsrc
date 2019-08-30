@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.95 2019/08/22 12:23:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.96 2019/08/30 17:01:34 nia Exp $
 
 DISTNAME=	flightgear-2018.3.2
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=flightgear/release-2018.3/}
 EXTRACT_SUFX=	.tar.bz2
@@ -22,8 +22,6 @@ CMAKE_ARG_PATH=		..
 
 CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=		-DFG_BUILD_TYPE=Release
-
-BUILDLINK_TRANSFORM+=	l:glut:freeglut
 
 # The cmake script warns against building in the source directory.
 pre-configure:

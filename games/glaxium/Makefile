@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2016/12/12 06:21:47 dholland Exp $
+# $NetBSD: Makefile,v 1.26 2019/08/30 17:01:33 nia Exp $
 #
 
 DISTNAME=	glaxium_0.5
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	games
 MASTER_SITES=	http://xhosxe.free.fr/glaxium/
 
@@ -48,6 +48,6 @@ X_LDFLAGS=	${X11_LDFLAGS}
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../graphics/glut/buildlink3.mk"
+.include "../../graphics/freeglut/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
