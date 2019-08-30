@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2017/04/25 11:27:00 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/08/30 17:01:33 nia Exp $
 
 DISTNAME=	freeglut-3.0.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freeglut/}
 
@@ -10,10 +11,10 @@ COMMENT=	Alternative to the OpenGL Utility Toolkit (GLUT) library
 LICENSE=	x11
 
 USE_CMAKE=	yes
-CMAKE_ARGS+=	-DFREEGLUT_REPLACE_GLUT:BOOL=OFF
-
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
+
+CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 
 PKGCONFIG_OVERRIDE=	freeglut.pc.in
 
