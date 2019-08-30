@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3683 2019/08/30 12:18:19 rin Exp $
+$NetBSD: CHANGES-2019,v 1.3684 2019/08/30 12:33:35 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6107,3 +6107,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-execnet to 1.7.1 [adam 2019-08-30]
 	Updated www/py-asgiref to 3.2.2 [adam 2019-08-30]
 	Updated graphics/gnuplot to 5.2.7 [rin 2019-08-30]
+	Added graphics/libglvnd version 1.1.1 [nia 2019-08-30]
