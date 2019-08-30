@@ -1,0 +1,18 @@
+Chocolate Doom aims to accurately reproduce the original DOS version of
+Doom and other games based on the Doom engine in a form that can be
+run on modern computers.
+
+Originally, Chocolate Doom was only a Doom source port. The project
+now includes ports of Heretic and Hexen, and Strife.
+
+Chocolate Doom's aims are:
+
+ * To always be 100% Free and Open Source software.
+ * Portability to as many different operating systems as possible.
+ * Accurate reproduction of the original DOS versions of the games,
+   including bugs.
+ * Compatibility with the DOS demo, configuration and savegame files.
+ * To provide an accurate retro "feel" (display and input should
+   behave the same).
+
+This is a game engine - the data files are not included.
