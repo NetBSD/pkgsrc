@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3680 2019/08/30 06:35:59 markd Exp $
+$NetBSD: CHANGES-2019,v 1.3681 2019/08/30 08:09:08 he Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6103,3 +6103,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/xfce4-screenshooter to 1.9.6 [gutteridge 2019-08-30]
 	Updated sysutils/dmidecode to 3.2nb4 [msaitoh 2019-08-30]
 	Added x11/qt5-qtspeech version 5.13.0 [markd 2019-08-30]
+	Updated security/opendnssec to 1.4.14 [he 2019-08-30]
