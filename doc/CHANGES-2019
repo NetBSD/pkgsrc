@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3686 2019/08/30 14:00:23 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3687 2019/08/30 15:31:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6113,3 +6113,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/xenkernel411 to 4.11.2 [bouyer 2019-08-30]
 	Updated sysutils/xentools411 to 4.11.2 [bouyer 2019-03-30]
 	Updated sysutils/monit to 5.26.0 [nia 2019-08-30]
+	Updated devel/boost-jam to 1.71.0nb1 [ryoon 2019-08-30]
