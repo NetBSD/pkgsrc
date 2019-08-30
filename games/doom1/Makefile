@@ -1,25 +1,27 @@
-# $NetBSD: Makefile,v 1.5 2018/01/14 17:33:58 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2019/08/30 17:04:31 micha Exp $
 
-DISTNAME=	doom-1.8.wad
-PKGNAME=	doom1-1.8
+DISTNAME=	shareware_doom_iwad
+PKGNAME=	doom1-1.9
 CATEGORIES=	games
-MASTER_SITES=	ftp://ftp.idsoftware.com/idstuff/doom/
-MASTER_SITES+=	http://www.gamers.org/pub/games/idgames/idstuff/doom/
-EXTRACT_SUFX=	.gz
+MASTER_SITES=	http://www.doomworld.com/3ddownloads/ports/
+DIST_SUBDIR=	${PKGNAME_NOREV}
+EXTRACT_SUFX=	.zip
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-# HOMEPAGE=	https://www.idsoftware.com/archives/doomarc.html
-# AWOL
+MAINTAINER=	micha@NetBSD.org
+# The SHA1 hash listed here was checked while generating pkgsrc distinfo
+HOMEPAGE=	https://doomwiki.org/wiki/DOOM1.WAD
 COMMENT=	Shareware levels for Doom
+LICENSE=	doom1-iwad-shareware-license
 
 CONFLICTS+=	xdoom<1.10nb4
-WRKSRC=		${WRKDIR}
 
+WRKSRC=			${WRKDIR}
 INSTALLATION_DIRS=	share/doom
+
 NO_BUILD=		YES
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/doom-1.8.wad \
+	${INSTALL_DATA} ${WRKSRC}/DOOM1.WAD \
 		${DESTDIR}${PREFIX}/share/doom/doom1.wad
 
 .include "../../mk/bsd.pkg.mk"
