@@ -1,5 +1,0 @@
-Metapackage that pulls in all the libraries necessary for an OpenGL
-environment.
-
-Don't include this when making packages, use MesaLib, glu, and freeglut
-individually instead.
