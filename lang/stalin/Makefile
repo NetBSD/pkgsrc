@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2015/04/25 14:23:26 tnn Exp $
+# $NetBSD: Makefile,v 1.41 2019/08/30 18:12:29 nia Exp $
 
 DISTNAME=		stalin-0.9
 PKGREVISION=		8
@@ -43,5 +43,6 @@ do-install:
 		stalin.el ${DESTDIR}${PREFIX}/share/doc/stalin/
 
 .include "../../devel/boehm-gc/buildlink3.mk"
-.include "../../graphics/Mesa/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
