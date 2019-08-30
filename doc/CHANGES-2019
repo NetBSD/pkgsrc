@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3690 2019/08/30 17:08:54 tnn Exp $
+$NetBSD: CHANGES-2019,v 1.3691 2019/08/30 17:18:42 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6118,3 +6118,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated editors/emacs26-nox11 to 26.3 [ryoon 2019-08-30]
 	Updated games/doom1 to 1.9 [micha 2019-08-30]
 	Updated www/grafana to 6.3.4 [tnn 2019-08-30]
+	Removed graphics/glut successor graphics/freeglut [nia 2019-08-30]
