@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2019/08/30 17:01:33 nia Exp $
+# $NetBSD: Makefile,v 1.74 2019/08/30 17:30:11 nia Exp $
 
 PKGNAME=	Mesa-7.11.2
 MASTER_SITES=	# empty
@@ -6,7 +6,7 @@ DISTFILES=	# empty
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-COMMENT=	Graphics library meta package
+COMMENT=	Graphics library meta package (deprecated)
 
 META_PACKAGE=	# empty
 
