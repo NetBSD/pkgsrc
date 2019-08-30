@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/08/30 12:33:22 nia Exp $
+# $NetBSD: Makefile,v 1.2 2019/08/30 13:22:57 nia Exp $
 
 DISTNAME=	libglvnd-1.1.1
 CATEGORIES=	graphics
@@ -13,6 +13,8 @@ LICENSE=	mit
 USE_TOOLS+=	pkg-config
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../lang/python/tool.mk"
 .include "../../x11/libX11/buildlink3.mk"
