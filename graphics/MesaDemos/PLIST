@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2019/01/04 01:43:20 tnn Exp $
+@comment $NetBSD: PLIST,v 1.19 2019/08/30 17:12:19 nia Exp $
 bin/arbfplight
 bin/arbfslight
 bin/arbocclude
@@ -47,6 +47,10 @@ bin/drawpix
 bin/drawrange
 ${PLIST.egl}bin/eglinfo
 bin/engine
+${PLIST.egl}bin/es2_info
+${PLIST.egl}${PLIST.wayland}bin/es2gears_wayland
+${PLIST.egl}${PLIST.x11}bin/es2gears_x11
+${PLIST.egl}bin/es2tri
 bin/fbo_firecube
 bin/fbobind
 bin/fbotexture
@@ -125,6 +129,9 @@ bin/multitex
 bin/noise
 bin/noise2
 bin/offset
+${PLIST.osmesa}bin/osdemo
+${PLIST.osmesa}bin/osdemo16
+${PLIST.osmesa}bin/osdemo32
 bin/overlay
 bin/paltex
 bin/pbdemo
