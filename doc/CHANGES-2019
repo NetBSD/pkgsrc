@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3677 2019/08/29 15:38:30 bouyer Exp $
+$NetBSD: CHANGES-2019,v 1.3678 2019/08/30 00:34:48 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6100,3 +6100,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated cad/kicad-packages3d to 5.1.4 [bouyer 2019-08-29]
 	Updated cad/kicad-symbols to 5.1.4 [bouyer 2019-08-29]
 	Updated cad/kicad-templates to 5.1.4 [bouyer 2019-08-29]
+	Updated x11/xfce4-screenshooter to 1.9.6 [gutteridge 2019-08-30]
