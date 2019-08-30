@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2017/01/20 11:00:50 fhajny Exp $
+# $NetBSD: options.mk,v 1.2 2019/08/30 18:51:16 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.oce
 PKG_SUPPORTED_OPTIONS=	oce-draw x11
@@ -11,7 +11,8 @@ PLIST_SRC=	${PLIST_SRC_DFLT}
 .if !empty(PKG_OPTIONS:Mx11)
 CMAKE_ARGS+=	-DFREETYPE_INCLUDE_DIRS:PATH=${BUILDLINK_PREFIX.freetype2}/include
 PLIST_SRC+=	${PKGDIR}/PLIST.x11
-.  include "../../graphics/Mesa/buildlink3.mk"
+.  include "../../graphics/MesaLib/buildlink3.mk"
+.  include "../../graphics/glu/buildlink3.mk"
 .  include "../../graphics/freetype2/buildlink3.mk"
 .else
 CMAKE_ARGS+=	-DOCE_DISABLE_X11=ON
