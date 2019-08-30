@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3693 2019/08/30 18:16:49 leot Exp $
+$NetBSD: CHANGES-2019,v 1.3694 2019/08/30 19:08:02 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6121,3 +6121,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed graphics/glut successor graphics/freeglut [nia 2019-08-30]
 	Added games/chocolate-doom version 3.0.0 [micha 2019-08-30]
 	Updated net/gallery-dl to 1.10.3 [leot 2019-08-30]
+	Removed graphics/Mesa [nia 2019-08-30]
