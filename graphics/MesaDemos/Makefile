@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2019/08/22 09:55:50 nia Exp $
+# $NetBSD: Makefile,v 1.46 2019/08/30 17:12:19 nia Exp $
 
 DISTNAME=	mesa-demos-8.4.0
 PKGNAME=	${DISTNAME:S/mesa-demos/MesaDemos/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	https://mesa.freedesktop.org/archive/demos/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://cgit.freedesktop.org/mesa/demos/
 COMMENT=	OpenGL examples and Demos
-#LICENSE=	# Each source file has a different license
+LICENSE=	mit
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -26,10 +26,29 @@ SUBST_SED.bitmap=	-e 's/bitmap$$(EXEEXT)/bitmap_mesademos$$(EXEEXT)/g'
 SUBST_SED.bitmap+=	-e 's/glxgears$$(EXEEXT)/glxgears_mesademos$$(EXEEXT)/g'
 SUBST_SED.bitmap+=	-e 's/glxinfo$$(EXEEXT)/glxinfo_mesademos$$(EXEEXT)/g'
 
-.include "options.mk"
+# Mesa library features.
+PLIST_VARS+=		egl osmesa
 
+.include "../../graphics/MesaLib/buildlink3.mk"
+.if !empty(MESALIB_SUPPORTS_EGL:M[Yy][Ee][Ss])
+PLIST.egl=		yes
+CONFIGURE_ARGS+=	--enable-egl
+# eglfbdev.c:43:10: fatal error: linux/kd.h: No such file or directory
+CONFIGURE_ARGS+=	--disable-gles1
+.else
+CONFIGURE_ARGS+=	--disable-egl
+.endif
+
+.if !empty(MESALIB_SUPPORTS_OSMESA:M[Yy][Ee][Ss])
+PLIST.osmesa=		yes
+CONFIGURE_ARGS+=	--enable-osmesa
+.else
+CONFIGURE_ARGS+=	--disable-osmesa
+.endif
+
+.include "options.mk"
+.include "../../graphics/freeglut/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../graphics/glut/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
