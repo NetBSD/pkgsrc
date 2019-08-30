@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2014/05/12 09:00:54 imil Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/08/30 14:00:14 nia Exp $
 bin/monit
 man/man1/monit.1
 share/docs/monit/CHANGES
 share/docs/monit/COPYING
-share/docs/monit/PLATFORMS
 share/docs/monit/README
 share/examples/monit/monitrc.sample
