@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3684 2019/08/30 12:33:35 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3685 2019/08/30 13:25:41 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6108,3 +6108,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-asgiref to 3.2.2 [adam 2019-08-30]
 	Updated graphics/gnuplot to 5.2.7 [rin 2019-08-30]
 	Added graphics/libglvnd version 1.1.1 [nia 2019-08-30]
+	Updated sysutils/xenkernel48 to 4.8.5 [bouyer 2019-08-30]
+	Updated sysutils/xentools48 to 4.8.5 [bouyer 2019-03-30]
+	Updated sysutils/xenkernel411 to 4.11.2 [bouyer 2019-08-30]
+	Updated sysutils/xentools411 to 4.11.2 [bouyer 2019-03-30]
