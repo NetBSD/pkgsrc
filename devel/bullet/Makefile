@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/08/30 17:01:32 nia Exp $
+# $NetBSD: Makefile,v 1.13 2019/08/30 17:24:35 nia Exp $
 
 DISTNAME=	bullet-2.88
 PKGREVISION=	1
@@ -28,5 +28,6 @@ CMAKE_ARGS+=	-DBUILD_UNIT_TESTS:BOOL=off
 
 PKGCONFIG_OVERRIDE+=	bullet.pc.in
 
-.include "../../graphics/freeglut/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
