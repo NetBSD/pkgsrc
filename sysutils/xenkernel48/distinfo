@@ -1,12 +1,13 @@
-$NetBSD: distinfo,v 1.6 2018/01/24 23:29:32 bouyer Exp $
+$NetBSD: distinfo,v 1.7 2019/08/30 13:23:09 bouyer Exp $
 
-SHA1 (xen48/xen-4.8.3.tar.gz) = ee55e8dc1e79d16d2f85fbe1f8bbd27a2db8422f
-RMD160 (xen48/xen-4.8.3.tar.gz) = 54b7ba828d8198c2a4629eabf7acfba2e9c6561c
-SHA512 (xen48/xen-4.8.3.tar.gz) = 584d8ee6e432e291a70e8f727da6d0a71afff7509fbf2e32eeb9cfe58b8279a80770c2c5f7759dcb5c0b08ed4644039e770e280ab534673215753d598f3f6508
-Size (xen48/xen-4.8.3.tar.gz) = 22529092 bytes
+SHA1 (xen48/xen-4.8.5.tar.gz) = 9f0db2a20a8dd61a2c70143a26b0bb54fa4e8462
+RMD160 (xen48/xen-4.8.5.tar.gz) = 167df32094c37f8e437763d1ab0499b39099ff48
+SHA512 (xen48/xen-4.8.5.tar.gz) = 514ce2b56f22429a4ba792c1d19133898960403e6b31768b4b6111c45f55266d4d0216c582d3bfdd79abca0dc880111e327f9d55e5bd33144312f4fa091e518c
+Size (xen48/xen-4.8.5.tar.gz) = 22578155 bytes
 SHA1 (patch-Config.mk) = abf55aa58792315e758ee3785a763cfa8c2da68f
 SHA1 (patch-xen_Makefile) = be3f4577a205b23187b91319f91c50720919f70b
 SHA1 (patch-xen_Rules.mk) = 5f33a667bae67c85d997a968c0f8b014b707d13c
 SHA1 (patch-xen_arch_x86_Rules.mk) = e2d148fb308c37c047ca41a678471217b6166977
 SHA1 (patch-xen_arch_x86_boot_build32.mk) = 7fa0d64e88e3be0330dac9a2ddc8b0114fd7d4a5
+SHA1 (patch-xen_arch_x86_mm.c) = a7eea6643967c3c600eda074f32fb022be690ddb
 SHA1 (patch-xen_tools_symbols.c) = fdc7e4aa7b8db0854987c9d0e60c254bb9f5af4e
