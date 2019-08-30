@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2015/04/25 14:23:41 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2019/08/30 13:30:58 nia Exp $
 
 BUILDLINK_TREE+=	smpeg
 
@@ -10,7 +10,6 @@ BUILDLINK_ABI_DEPENDS.smpeg+=	smpeg>=0.4.4nb16
 BUILDLINK_PKGSRCDIR.smpeg?=	../../multimedia/smpeg
 
 .include "../../devel/SDL/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
 .endif # SMPEG_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-smpeg
