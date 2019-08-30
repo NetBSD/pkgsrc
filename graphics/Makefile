@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.843 2019/08/30 12:33:22 nia Exp $
+# $NetBSD: Makefile,v 1.844 2019/08/30 17:17:19 nia Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -192,7 +192,6 @@ SUBDIR+=	gliv
 SUBDIR+=	glm
 SUBDIR+=	glpng
 SUBDIR+=	glu
-SUBDIR+=	glut
 SUBDIR+=	glw
 SUBDIR+=	glx-utils
 SUBDIR+=	gmic
