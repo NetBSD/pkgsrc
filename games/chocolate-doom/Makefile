@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/08/30 17:33:25 micha Exp $
+# $NetBSD: Makefile,v 1.2 2019/08/30 22:08:36 nia Exp $
 
 DISTNAME=	chocolate-doom-3.0.0
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://www.chocolate-doom.org/downloads/${PKGVERSION_NOREV}/
 
@@ -26,11 +27,22 @@ REPLACE_PYTHON+=		data/convert-icon
 REPLACE_PYTHON+=		man/docgen
 REPLACE_PYTHON+=		man/simplecpp
 
-.include "../../lang/python/application.mk"
+INSTALLATION_DIRS+=	share/icons/hicolor/48x48/apps
+INSTALLATION_DIRS+=	share/icons/hicolor/128x128/apps
 
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/pkg/osx/Resources/app.png \
+		${DESTDIR}${PREFIX}/share/icons/hicolor/48x48/apps/chocolate-doom.png
+	${MV} ${DESTDIR}${PREFIX}/share/icons/chocolate-doom.png \
+		${DESTDIR}${PREFIX}/share/icons/hicolor/128x128/apps
+	${MV} ${DESTDIR}${PREFIX}/share/icons/chocolate-setup.png \
+		${DESTDIR}${PREFIX}/share/icons/hicolor/128x128/apps
+
+.include "../../lang/python/application.mk"
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../net/SDL2_net/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
