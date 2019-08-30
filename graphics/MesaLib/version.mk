@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.12 2005/06/20 22:13:10 jlam Exp $
+# $NetBSD: version.mk,v 1.1 2019/08/30 19:06:34 nia Exp $
 #
 # This file computes the version number of the Mesa distributed with
 # XFree86 and stores it in ${BUILTIN_VERSION.Mesa}.
@@ -9,7 +9,7 @@
 BUILTIN_FIND_FILES_VAR:=	H_MESA
 BUILTIN_FIND_FILES.H_MESA=	${X11BASE}/include/GL/gl.h
 .include "../../mk/buildlink3/find-files.mk"
-
+.include "../../mk/bsd.fast.prefs.mk"
 .if !defined(BUILTIN_VERSION.Mesa) && exists(${H_MESA})
 #
 # According to the Mesa documentation, for stable releases:
