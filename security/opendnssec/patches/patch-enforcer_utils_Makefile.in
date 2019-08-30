@@ -1,10 +1,10 @@
-$NetBSD: patch-enforcer_utils_Makefile.in,v 1.4 2016/06/08 08:35:10 he Exp $
+$NetBSD: patch-enforcer_utils_Makefile.in,v 1.5 2019/08/30 08:08:21 he Exp $
 
-Regenerate after adding installation of migration scripts to Makefile.am.
+Patch to install migration scripts, mirroring Makefile.am.
 
 --- enforcer/utils/Makefile.in.orig	2015-10-05 14:20:51.000000000 +0000
 +++ enforcer/utils/Makefile.in
-@@ -797,7 +797,8 @@ info: info-am
+@@ -789,7 +789,8 @@ info: info-am
  
  info-am:
  
@@ -14,34 +14,17 @@ Regenerate after adding installation of migration scripts to Makefile.am.
  
  install-dvi: install-dvi-am
  
-@@ -855,20 +856,27 @@ uninstall-man: uninstall-man1
+@@ -847,6 +848,7 @@ uninstall-man: uninstall-man1
  	ctags ctags-am distclean distclean-compile distclean-generic \
  	distclean-libtool distclean-tags distdir dvi dvi-am html \
  	html-am info info-am install install-am install-binPROGRAMS \
--	install-data install-data-am install-dist_opendnssecdataDATA \
--	install-dvi install-dvi-am install-exec install-exec-am \
--	install-html install-html-am install-info install-info-am \
--	install-man install-man1 install-pdf install-pdf-am install-ps \
--	install-ps-am install-strip installcheck installcheck-am \
--	installdirs maintainer-clean maintainer-clean-generic \
--	mostlyclean mostlyclean-compile mostlyclean-generic \
--	mostlyclean-libtool pdf pdf-am ps ps-am tags tags-am uninstall \
--	uninstall-am uninstall-binPROGRAMS \
--	uninstall-dist_opendnssecdataDATA uninstall-man uninstall-man1
-+	install-data install-data-am install-data-local \
-+	install-dist_opendnssecdataDATA install-dvi install-dvi-am \
-+	install-exec install-exec-am install-html install-html-am \
-+	install-info install-info-am install-man install-man1 \
-+	install-pdf install-pdf-am install-ps install-ps-am \
-+	install-strip installcheck installcheck-am installdirs \
-+	maintainer-clean maintainer-clean-generic mostlyclean \
-+	mostlyclean-compile mostlyclean-generic mostlyclean-libtool \
-+	pdf pdf-am ps ps-am tags tags-am uninstall uninstall-am \
-+	uninstall-binPROGRAMS uninstall-dist_opendnssecdataDATA \
-+	uninstall-man uninstall-man1
- 
- .PRECIOUS: Makefile
- 
++	install-data-local \
+ 	install-data install-data-am install-dist_opendnssecdataDATA \
+ 	install-dvi install-dvi-am install-exec install-exec-am \
+ 	install-html install-html-am install-info install-info-am \
+@@ -858,6 +860,12 @@ uninstall-man: uninstall-man1
+ 	uninstall-am uninstall-binPROGRAMS \
+ 	uninstall-dist_opendnssecdataDATA uninstall-man uninstall-man1
  
 +install-data-local: $(EXTRA_DIST)
 +	for f in $(EXTRA_DIST); do \
@@ -49,6 +32,6 @@ Regenerate after adding installation of migration scripts to Makefile.am.
 +			|| exit $$?; \
 +	done
 +
+ 
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
- .NOEXPORT:
