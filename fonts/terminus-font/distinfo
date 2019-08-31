@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2019/06/20 11:41:28 nia Exp $
+$NetBSD: distinfo,v 1.11 2019/08/31 12:31:36 nia Exp $
 
-SHA1 (terminus-font-4.47.tar.gz) = d6f481d4d2189b5237778483c5388cdb96a51ddd
-RMD160 (terminus-font-4.47.tar.gz) = 51dad30b36b9ef2fc20e6daa70df41507f082da2
-SHA512 (terminus-font-4.47.tar.gz) = 09455d107a09c422f4fedfcc70ae1483063c844fb01b0adfa3d2a0e28c9502e9ca922542b5ad735cbebb491d148c453d0213d61ebebf64c79f16cb582964fa47
-Size (terminus-font-4.47.tar.gz) = 620344 bytes
+SHA1 (terminus-font-4.48.tar.gz) = 56d7502ca81998c73a82a6ec36e12631254ae441
+RMD160 (terminus-font-4.48.tar.gz) = 07855292c30db918fb9952a061cb746d9eb1e3da
+SHA512 (terminus-font-4.48.tar.gz) = 5f45f7d0e7396f02158f4751aaafb3f0a3fb68dbe3e5501f86a5138c6d52f5106053e38c368d560e5979e29250074dbde5165702b8905a564d029663a2219af4
+Size (terminus-font-4.48.tar.gz) = 620561 bytes
