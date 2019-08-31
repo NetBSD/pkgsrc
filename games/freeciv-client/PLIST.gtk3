@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.gtk3,v 1.1 2015/04/26 19:19:42 spz Exp $
+@comment $NetBSD: PLIST.gtk3,v 1.2 2019/08/31 14:44:57 nia Exp $
 bin/freeciv-gtk3
 bin/freeciv-mp-gtk3
 share/appdata/freeciv-gtk3.appdata.xml
