@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2019/06/29 09:29:43 nia Exp $
+# $NetBSD: Makefile,v 1.14 2019/08/31 10:04:26 nia Exp $
 #
 
 DISTNAME=	irssi-xmpp-0.53
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	chat
 MASTER_SITES=	http://cybione.org/~irssi-xmpp/files/
 DISTFILES=	${DISTNAME}.tar.gz ${IRSSI_DISTFILE}
