@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/08/29 12:19:44 nia Exp $
+# $NetBSD: Makefile,v 1.3 2019/08/31 10:30:03 nia Exp $
 
 DISTNAME=	mono-6.0.0.313
 CATEGORIES=	lang
@@ -27,6 +27,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 # The boringtls provider seems Linux-only and requires CMake to build.
 CONFIGURE_ARGS+=	--disable-btls
+CONFIGURE_ARGS+=	--disable-btls-lib
 
 # Requires a cwrappers change: http://mail-index.netbsd.org/tech-pkg/2019/08/16/msg021791.html
 USE_CWRAPPERS=		no
