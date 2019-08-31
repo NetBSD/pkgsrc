@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.159 2019/08/31 17:56:09 nia Exp $
+# $NetBSD: Makefile,v 1.160 2019/08/31 20:30:00 nia Exp $
 
 DISTNAME=	mesa-19.1.5
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -12,7 +12,7 @@ HOMEPAGE=	https://www.mesa3d.org/
 COMMENT=	Open source OpenGL implementation
 LICENSE=	mit
 
-USE_TOOLS+=	bison flex pkg-config
+USE_TOOLS+=	bison flex pkg-config xgettext
 USE_LANGUAGES=	c99 c++
 USE_LIBTOOL=	yes
 
@@ -63,13 +63,13 @@ PLIST_VARS+=		egl gbm vaapi xatracker
 .include "../../x11/libdrm/buildlink3.mk"
 MESA_PLATFORMS+=	drm
 MESON_ARGS+=		-Ddri3=true
-MESON_ARGS+=		-Dgallium-xa=true
-PLIST.xatracker=	yes
 .  if ${OPSYS} != "SunOS"
 MESON_ARGS+=		-Degl=true
 MESON_ARGS+=		-Dgbm=true
+MESON_ARGS+=		-Dgallium-xa=true
 PLIST.egl=		yes
 PLIST.gbm=		yes
+PLIST.xatracker=	yes
 .  else
 MESON_ARGS+=		-Degl=false
 MESON_ARGS+=		-Dgbm=false
