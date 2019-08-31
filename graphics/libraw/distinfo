@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.25 2019/08/08 20:38:57 nia Exp $
+$NetBSD: distinfo,v 1.26 2019/08/31 14:20:05 nia Exp $
 
-SHA1 (LibRaw-0.19.4.tar.gz) = 53779dbe74de801a7f21095507d2911847b73574
-RMD160 (LibRaw-0.19.4.tar.gz) = 79c05f525fca9567ece8acd6a287a958fd57662d
-SHA512 (LibRaw-0.19.4.tar.gz) = e9f0b18b8be52119ff504d2645a011eca391a62bf651064dcbec4b6e16b3b09fda49e632453b051d3aae2ac3a8be021e5b71d7202913759ad1d61641d3318c4c
-Size (LibRaw-0.19.4.tar.gz) = 1303047 bytes
+SHA1 (LibRaw-0.19.5.tar.gz) = c151995b6f17a0ccef7fbc1dcb982f0ccb04d934
+RMD160 (LibRaw-0.19.5.tar.gz) = 051642cfdf713e1d981a1790f4d872d89ff6f02a
+SHA512 (LibRaw-0.19.5.tar.gz) = 4560045f75e6d2ab0d1d8686075f3a0e26a5d7ce693b48508110a2c31d19055d58983c24852da0abb64fa90db5e20f24b87aa7537ed04d958c38c8b265a7e826
+Size (LibRaw-0.19.5.tar.gz) = 1303806 bytes
 SHA1 (patch-internal_libraw__x3f.cpp) = ec5d479a45d7fc25c884cc7259ad513857fa2711
 SHA1 (patch-libraw__r.pc.in) = e691f79c69c5530c93262c270fe7e2f5b1c959d9
 SHA1 (patch-src_libraw__cxx.cpp) = cfbb3afbd0b44ce1bbc24e5af212ad5c53d251b7
