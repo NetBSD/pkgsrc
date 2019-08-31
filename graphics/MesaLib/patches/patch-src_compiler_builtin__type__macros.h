@@ -1,6 +1,6 @@
-$NetBSD: patch-src_compiler_builtin__type__macros.h,v 1.1 2019/08/21 13:35:28 nia Exp $
+$NetBSD: patch-src_compiler_builtin__type__macros.h,v 1.2 2019/08/31 17:56:09 nia Exp $
 
-Workaround netbsd headers.
+Workaround netbsd 8 headers.
 
 --- src/compiler/builtin_type_macros.h.orig	2018-09-07 21:18:07.000000000 +0000
 +++ src/compiler/builtin_type_macros.h
