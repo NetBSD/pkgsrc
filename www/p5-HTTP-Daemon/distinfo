@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/06/07 10:44:58 wen Exp $
+$NetBSD: distinfo,v 1.5 2019/08/31 13:32:26 wen Exp $
 
-SHA1 (HTTP-Daemon-6.04.tar.gz) = 47bb34187f910301525c957c401fd0da9656b44a
-RMD160 (HTTP-Daemon-6.04.tar.gz) = ec79397bf59441d836d3c10f72823a152cdf6520
-SHA512 (HTTP-Daemon-6.04.tar.gz) = 4fe21e92367c481e611cf0051134856811bc5e7d99ba2f54e0e8fb8c9c442198769ecc50d108219087c9052a8f51eab19843bc1f83cfb09ca6f1b9272414775c
-Size (HTTP-Daemon-6.04.tar.gz) = 43982 bytes
+SHA1 (HTTP-Daemon-6.06.tar.gz) = 3f19cf7275cf231bc63b3d1bea83b52ffea2f9af
+RMD160 (HTTP-Daemon-6.06.tar.gz) = 55103e89f20ac0b9fd7b8225ec12eee48db77a91
+SHA512 (HTTP-Daemon-6.06.tar.gz) = 8e6dcf4451aaa6bd5f38508a087e5bb9b7f5105e8e243d09bdd3f4be3d7009222b3d9f8e494f049b48f0caebf36f239b8bbc7b8edc805f7d32b1bbeb38431732
+Size (HTTP-Daemon-6.06.tar.gz) = 45576 bytes
