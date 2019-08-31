@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2019/07/30 08:30:06 nia Exp $
+# $NetBSD: Makefile,v 1.7 2019/08/31 14:34:29 nia Exp $
 
-DISTNAME=	speedtest-cli-2.1.1
+DISTNAME=	speedtest-cli-2.1.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sivel/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
