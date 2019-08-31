@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.143 2019/08/20 21:39:16 gdt Exp $
+# $NetBSD: Makefile,v 1.144 2019/08/31 11:16:53 gdt Exp $
 
 DISTNAME=	tor-0.4.1.5
 CATEGORIES=	net security
@@ -12,6 +12,12 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=		c99
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		perl:test pkg-config
+# There are multiple reports of failure to build with BSD make, due to
+# an apparent lack of firing the rule to create micro-revision.i.
+# Work around this by using gmake, which is tiny compared to the
+# existing perl dependency, and unlikely to be needed on any given
+# system just for tor.
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
