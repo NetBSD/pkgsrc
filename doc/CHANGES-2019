@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3708 2019/08/31 14:32:42 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3709 2019/08/31 14:34:37 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6136,3 +6136,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/p5-HTTP-OAI to 4.09 [wen 2019-08-31]
 	Updated audio/mpg123 to 1.25.12 [nia 2019-08-31]
 	Updated x11/sakura to 3.7.0 [nia 2019-08-31]
+	Updated net/speedtest-cli to 2.1.2 [nia 2019-08-31]
