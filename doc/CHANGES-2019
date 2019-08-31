@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3694 2019/08/30 19:08:02 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3695 2019/08/31 10:04:37 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6122,3 +6122,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added games/chocolate-doom version 3.0.0 [micha 2019-08-30]
 	Updated net/gallery-dl to 1.10.3 [leot 2019-08-30]
 	Removed graphics/Mesa [nia 2019-08-30]
+	Updated chat/irssi to 1.2.2 [nia 2019-08-31]
