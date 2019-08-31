@@ -1,8 +1,12 @@
-@comment $NetBSD: PLIST,v 1.7 2019/08/20 13:00:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/08/31 23:51:52 maya Exp $
 bin/gitk
 libexec/git-core/git-citool
 libexec/git-core/git-gui
 libexec/git-core/git-gui--askpass
+${PLIST.macosx}share/git-gui/lib/Git Gui.app/Contents/Info.plist
+${PLIST.macosx}share/git-gui/lib/Git Gui.app/Contents/MacOS/Wish
+${PLIST.macosx}share/git-gui/lib/Git Gui.app/Contents/Resources/Scripts/AppMain.tcl
+${PLIST.macosx}share/git-gui/lib/Git Gui.app/Contents/Resources/git-gui.icns
 share/git-gui/lib/about.tcl
 share/git-gui/lib/blame.tcl
 share/git-gui/lib/branch.tcl
