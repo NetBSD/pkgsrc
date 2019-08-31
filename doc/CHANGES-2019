@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3711 2019/08/31 14:46:26 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3712 2019/08/31 14:46:41 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6139,3 +6139,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/speedtest-cli to 2.1.2 [nia 2019-08-31]
 	Updated games/freeciv-share to 2.6.0 [nia 2019-08-31]
 	Updated games/freeciv-server to 2.6.0 [nia 2019-08-31]
+	Updated games/freeciv-client to 2.6.0 [nia 2019-08-31]
