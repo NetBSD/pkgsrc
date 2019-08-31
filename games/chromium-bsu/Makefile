@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2019/08/30 17:27:29 nia Exp $
+# $NetBSD: Makefile,v 1.16 2019/08/31 12:29:30 nia Exp $
 
-DISTNAME=		chromium-bsu-0.9.15.1
-PKGREVISION=		2
+DISTNAME=		chromium-bsu-0.9.16.1
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=chromium-bsu/}
 
@@ -13,19 +12,33 @@ DEPENDS=		uralic-ttf-[0-9]*:../../fonts/uralic-ttf
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++03
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		msgfmt msgmerge xgettext
 GNU_CONFIGURE=		yes
-LDFLAGS+=		${BUILDLINK_LDADD.gettext}
-LDFLAGS.DragonFly=	-lSDL
-LDFLAGS.SunOS=		-lSDL
 
-.include "../../audio/SDL_mixer/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
+# XXX needs gnu msgfmt for desktop file creation
+_TOOLS_USE_PKGSRC.msgfmt=	yes
+
+LDFLAGS+=		${BUILDLINK_LDADD.gettext}
+LDFLAGS.DragonFly=	-lSDL2
+LDFLAGS.SunOS=		-lSDL2
+
+CONFIGURE_ARGS+=	--disable-ftgl
+CONFIGURE_ARGS+=	--disable-glut
+# detection fails
+CONFIGURE_ARGS+=	--disable-glpng
+# we don't want SDL1.
+CONFIGURE_ARGS+=	--disable-sdl
+CONFIGURE_ARGS+=	--disable-sdlmixer
+CONFIGURE_ARGS+=	--disable-sdlimage
+CONFIGURE_ARGS+=	--disable-openal
+
+.include "../../audio/SDL2_mixer/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../graphics/SDL_image/buildlink3.mk"
-.include "../../graphics/glpng/buildlink3.mk"
+.include "../../graphics/SDL2_image/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/quesoglc/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
