@@ -1,10 +1,19 @@
-$NetBSD: patch-Makefile.PL,v 1.5 2019/08/31 20:19:23 schmonz Exp $
+$NetBSD: patch-Makefile.PL,v 1.6 2019/08/31 21:32:13 schmonz Exp $
 
 Avoid -regex, not available in OpenBSD find(1).
+Set example SYSCONFDIR separately.
 
 --- Makefile.PL.orig	2019-02-26 23:01:54.000000000 +0000
 +++ Makefile.PL
-@@ -140,11 +140,11 @@ underlay_install:
+@@ -20,6 +20,7 @@ SED?=sed
+ # Additional configurable path variables.
+ W3M_CGI_BIN?=$(PREFIX)/lib/w3m/cgi-bin
+ SYSCONFDIR?=/etc/ikiwiki
++SYSCONFDIR_EXAMPLES?=$(PREFIX)/share/examples/ikiwiki
+ MANDIR?=$(PREFIX)/share/man
+ 
+ tflag=$(shell if [ -n "$$NOTAINT" ] && [ "$$NOTAINT" != 1 ]; then printf -- "-T"; fi)
+@@ -140,11 +141,11 @@ underlay_install:
  extra_install: underlay_install
  	# Install example sites.
  	set -e; \
@@ -18,3 +27,18 @@ Avoid -regex, not available in OpenBSD find(1).
  		if ! cp -pRL doc/examples/$$file $(DESTDIR)$(PREFIX)/share/ikiwiki/examples/$$file 2>/dev/null; then \
  			install -m 644 doc/examples/$$file $(DESTDIR)$(PREFIX)/share/ikiwiki/examples/$$file; \
  		fi; \
+@@ -195,10 +196,10 @@ extra_install: underlay_install
+ 	
+ 	# These might fail if a regular user is installing into a home
+ 	# directory.
+-	-install -d $(DESTDIR)$(SYSCONFDIR)
+-	-install -m 0644 wikilist $(DESTDIR)$(SYSCONFDIR)
+-	-install -m 0644 auto.setup $(DESTDIR)$(SYSCONFDIR)
+-	-install -m 0644 auto-blog.setup $(DESTDIR)$(SYSCONFDIR)
++	-install -d $(DESTDIR)$(SYSCONFDIR_EXAMPLES)
++	-install -m 0644 wikilist $(DESTDIR)$(SYSCONFDIR_EXAMPLES)
++	-install -m 0644 auto.setup $(DESTDIR)$(SYSCONFDIR_EXAMPLES)
++	-install -m 0644 auto-blog.setup $(DESTDIR)$(SYSCONFDIR_EXAMPLES)
+ 
+ # The git/hg plugins want to chdir; so does Devel::Cover. Skip those tests
+ # to stop them hurting each other.
