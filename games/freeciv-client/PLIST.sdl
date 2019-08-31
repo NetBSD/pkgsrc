@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.sdl,v 1.1 2015/04/26 19:19:42 spz Exp $
+@comment $NetBSD: PLIST.sdl,v 1.2 2019/08/31 14:44:57 nia Exp $
 bin/freeciv-mp-cli
 bin/freeciv-sdl
 share/appdata/freeciv-sdl.appdata.xml

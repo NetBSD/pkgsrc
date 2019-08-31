@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.101 2019/08/22 12:23:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.102 2019/08/31 14:44:57 nia Exp $
 
 PKGNAME=	${DISTNAME:S/-/-client-/}
-PKGREVISION=	28
 COMMENT=	Freeciv client
 
 DEPENDS+=	freeciv-share>=${FC_VERS}:../../games/freeciv-share
@@ -28,12 +27,16 @@ SUBST_SED.themesonly2+=		-e 's|SUBDIRS = icons.*|SUBDIRS = themes|'
 SUBST_SED.themesonly2+=		-e 's|^	isotrident trident|DONT_SUBDIRS =|'
 SUBST_MESSAGE.themesonly2=	Suppressing installation of non-gui-relevant data
 
-
-.include "../../games/freeciv-share/Makefile.common"
+# conflicts with freeciv-share
+post-install:
+	${RM} -rf ${DESTDIR}${PREFIX}/share/pixmaps
+.for file in Freeciv freeciv.rc-2.0 *.tilespec *.musicspec *.soundspec *.serv *.txt *.xml
+	${RM} -f ${DESTDIR}${PREFIX}/share/freeciv/${file}
+.endfor
 
 .include "options.mk"
-
-.include "../../audio/esound/buildlink3.mk"
+.include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../games/freeciv-share/Makefile.common"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"

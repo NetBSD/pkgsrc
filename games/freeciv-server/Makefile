@@ -1,15 +1,9 @@
-# $NetBSD: Makefile,v 1.56 2019/08/22 12:23:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.57 2019/08/31 14:44:57 nia Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
-PKGREVISION=	11
 COMMENT=	Freeciv game server
 
 DEPENDS+=	freeciv-share>=${FC_VERS}:../../games/freeciv-share
-
-USE_TOOLS+=	automake autoconf
-
-pre-configure:
-	cd ${WRKSRC} && autoreconf -i
 
 CONFIGURE_ARGS+=	--disable-client
 CONFIGURE_ARGS+=	--disable-fcmp
@@ -20,9 +14,7 @@ CONFIGURE_ARGS+=	--with-readline
 BUILDLINK_API_DEPENDS.readline+=	readline>=4.2
 
 .include "../../games/freeciv-share/suppress_installation.mk"
-
 .include "../../games/freeciv-share/Makefile.common"
-
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
