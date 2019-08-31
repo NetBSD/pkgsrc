@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3697 2019/08/31 11:25:39 wen Exp $
+$NetBSD: CHANGES-2019,v 1.3698 2019/08/31 11:57:44 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6125,3 +6125,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated chat/irssi to 1.2.2 [nia 2019-08-31]
 	Updated www/p5-Dancer2 to 0.208001 [wen 2019-08-31]
 	Updated www/p5-HTML-Clean to 0.9 [wen 2019-08-31]
+	Updated security/acmesh to 2.8.2 [nia 2019-08-31]
