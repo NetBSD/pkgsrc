@@ -1,18 +1,23 @@
-# $NetBSD: Makefile,v 1.42 2019/08/11 13:23:21 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2019/08/31 15:47:55 nia Exp $
 
-PKGREVISION= 12
-.include "../../meta-pkgs/xfce4/Makefile.common"
-
-VERSION=	0.5.4
+VERSION=	0.5.4.14
 DISTNAME=	xarchiver-${VERSION}
 PKGNAME=	xfce4-xarchiver-${VERSION}
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xarchiver/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ib/}
+GITHUB_PROJECT=	xarchiver
+GITHUB_TAG=	${VERSION}
 
-HOMEPAGE=	http://xarchiver.sourceforge.net/
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/ib/xarchiver
 COMMENT=	Xfce archiver handler
+LICENSE=	gnu-gpl-v2
 
-.include "../../x11/gtk2/buildlink3.mk"
+USE_TOOLS+=	pkg-config perl gmake
+USE_TOOLS+=	intltool msgfmt msgmerge xgettext
+GNU_CONFIGURE=	yes
+
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
