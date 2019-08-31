@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.129 2019/08/29 14:12:57 nia Exp $
+$NetBSD: distinfo,v 1.130 2019/08/31 17:56:09 nia Exp $
 
 SHA1 (mesa-19.1.5.tar.xz) = 7a80ac32b4da4066dd00b3dc8274682be18b35cb
 RMD160 (mesa-19.1.5.tar.xz) = f626b041b041a6b3c95ba6b62ecf8c4a038d5f87
@@ -7,9 +7,8 @@ Size (mesa-19.1.5.tar.xz) = 10938452 bytes
 SHA1 (patch-meson.build) = a9fdcaa59aed9b56ff95d4153dd73064e2261c45
 SHA1 (patch-src_amd_common_ac__debug.c) = 8233367c3b5bc344442ea8d19488fdd1e3791ae9
 SHA1 (patch-src_amd_vulkan_winsys_amdgpu_radv__amdgpu__cs.c) = 1fe81a7b16e36dc9125400c20543271216a33a45
-SHA1 (patch-src_compiler_builtin__type__macros.h) = 857bca0c0f55ec8d7a20b3807c7a5d7bd06bdfbf
+SHA1 (patch-src_compiler_builtin__type__macros.h) = e4868011711fb89a293580a12eb603b8e7162336
 SHA1 (patch-src_compiler_glsl_glsl__parser__extras.cpp) = ef114d6e288e6d212fce9d1c0606f7d454a171c4
-SHA1 (patch-src_egl_drivers_dri2_platform__drm.c) = e18e7b1ffbc74b8acf3d9095a92c750f9d005479
 SHA1 (patch-src_egl_drivers_dri2_platform__x11.c) = 49e48c31eacb79d1da357fe70eaffd2926b5280e
 SHA1 (patch-src_egl_main_eglglobals.c) = 0d52014f52e62fc5fa6650336ddb0011ecf331e6
 SHA1 (patch-src_gallium_auxiliary_drivers_trace_tr__dump.c) = 360e1608508a7bbb41acecd58930781038e2309e
@@ -41,9 +40,6 @@ SHA1 (patch-src_mapi_entry__x86-64__tls.h) = 11b7ef1da435fa17fc7025a46a123d447d6
 SHA1 (patch-src_mapi_entry__x86__tls.h) = 11c0f5302d305a77f3a1780d44a2c61f48a66273
 SHA1 (patch-src_mapi_u__current.c) = 38d324fcd1c28d155106ccd248edb5eb1aa9ffac
 SHA1 (patch-src_mapi_u__current.h) = 465a992bd34057e9521f0a33e6f2e25cefc145ca
-SHA1 (patch-src_mesa_drivers_dri_i915_intel__screen.c) = 0b2bd5c4c65fce4577cd20fe0d894c4570d9cc14
-SHA1 (patch-src_mesa_drivers_dri_i965_intel__screen.c) = d5d2b9eb0d6719b3446f9d6afb6c535559a01348
-SHA1 (patch-src_mesa_drivers_dri_swrast_swrast.c) = 3106f350e590f62c8bd29cd85f24f977639dccdb
 SHA1 (patch-src_mesa_main_extensions.c) = 2f48bdb1176c2878bb33bcfab7556172b50a987e
 SHA1 (patch-src_mesa_main_macros.h) = c5dceaa8dc02a58e5b2273d82e3fe1cc12e327d3
 SHA1 (patch-src_mesa_main_shader__query.cpp) = 3f9c31645d87855759def11344dee16af23c7be3
