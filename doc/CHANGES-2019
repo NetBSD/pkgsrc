@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3699 2019/08/31 12:29:38 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3700 2019/08/31 12:31:46 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6127,3 +6127,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/p5-HTML-Clean to 0.9 [wen 2019-08-31]
 	Updated security/acmesh to 2.8.2 [nia 2019-08-31]
 	Updated games/chromium-bsu to 0.9.16.1 [nia 2019-08-31]
+	Updated fonts/terminus-font to 4.48 [nia 2019-08-31]
