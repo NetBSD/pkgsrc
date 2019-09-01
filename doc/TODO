@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19232 2019/09/01 11:14:54 nia Exp $
+$NetBSD: TODO,v 1.19233 2019/09/01 11:34:12 nia Exp $
 
 Suggested new packages
 ======================
@@ -1411,7 +1411,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xfs-1.1.1 [wip]
 	o xfsprogs-4.3.0
 	o xhippo-3.5
-	o xine-1.2.3
 	o xinput-1.6.3
 	o xjman-0.7
 	o xkeyboard-config-2.27
