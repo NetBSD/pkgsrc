@@ -1,18 +1,15 @@
-$NetBSD: distinfo,v 1.21 2015/11/04 03:28:28 agc Exp $
+$NetBSD: distinfo,v 1.22 2019/09/01 12:08:17 nia Exp $
 
-SHA1 (Eterm-0.9.5.tar.gz) = f2d75354a48734f63f018f7173cebee81f2358c7
-RMD160 (Eterm-0.9.5.tar.gz) = 19e006f0fe2bdd6a95818f11b96bb978b9cb6762
-SHA512 (Eterm-0.9.5.tar.gz) = ef16ec5ddf0dd91ed4c40eff2289f7a61aa5c0fbf3b95bd14afe38557572f586f1dcd459c258cdfadb1dfbc1c50874492c9cc69ee4152a569b097e86c0d7cc44
-Size (Eterm-0.9.5.tar.gz) = 796872 bytes
+SHA1 (Eterm-0.9.6.tar.gz) = b4cb00f898ffd2de9bf7ae0ecde1cc3a5fee9f02
+RMD160 (Eterm-0.9.6.tar.gz) = 96e2ebf7ee7464ffab8bbecec2976a1e5935712e
+SHA512 (Eterm-0.9.6.tar.gz) = 07ef5587b7c8444d49ffd6f20f09c98bd248ccee9b3de311f5705961579f707c4a8e2b69a2193500b75cc1e4bdeabb711a1dd23637d6b94433508d8a93d377fe
+Size (Eterm-0.9.6.tar.gz) = 831756 bytes
 SHA1 (Eterm-bg-0.9.5.tar.gz) = 26e81a1e91228c971c70ba06e006ef69490ef208
 RMD160 (Eterm-bg-0.9.5.tar.gz) = acbab70cf5a22f1c45a16f5a8a92ed1e057a59a0
 SHA512 (Eterm-bg-0.9.5.tar.gz) = 2d58d1342c7750f8dde93451b732cff3a0580d76635054632728cf2d8e5c5298732c855672981810cf21a8d1f5d46626abe1f35fbf33e2b713cc5d6bc82d10f8
 Size (Eterm-bg-0.9.5.tar.gz) = 1883627 bytes
 SHA1 (patch-aa) = 19da5e05392994a60fdf47e9d52c82fc41cefa4c
 SHA1 (patch-ab) = d019a18bb32f890d6de7c5bb0cdb43e7715a7d4d
-SHA1 (patch-ad) = f70a92e4eb84466e379653cbd3a9188db6d408c8
-SHA1 (patch-ah) = 9d2a995fa118e30be20aa3fdc18ffee1eeec1192
-SHA1 (patch-ai) = 94d684a490752831de2fb2aba92c0b9f461ddb5a
+SHA1 (patch-ai) = 1f1a050c27b042c5cccff91aae4ced7b887b68b1
 SHA1 (patch-src_Makefile.in) = 3000a407bed7d7c23bfc127fd09b0723d9c0b395
-SHA1 (patch-src_command.c) = 4e7bce478c5532f1cf7d9c5f0bcb4415d1c380fe
 SHA1 (patch-src_screen.c) = f820501e3a67cfc59dedd1dd5e3eb6f06ae2be23
