@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3717 2019/08/31 22:39:41 markd Exp $
+$NetBSD: CHANGES-2019,v 1.3718 2019/09/01 00:48:42 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6144,4 +6144,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added textproc/p5-Text-MultiMarkdown version 1.000035 [schmonz 2019-08-31]
 	Added devel/go-iochan version 1.0.0 [he 2019-08-31]
 	Updated www/ikiwiki to 3.20190228nb4 [schmonz 2019-08-31]
-	Updated fonts/mftrace to 1.2.19 [markd 2019-08-31]
+	Updated lang/camlp5 to 7.08 [markd 2019-08-31]
