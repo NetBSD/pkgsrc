@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3723 2019/09/01 12:08:28 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3724 2019/09/01 13:05:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6149,3 +6149,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/links to 2.20 [leot 2019-09-01]
 	Updated www/links-gui to 2.20 [leot 2019-09-01]
 	Updated x11/eterm to 0.9.6 [nia 2019-09-01]
+	Updated lang/php72 to 7.2.22 [taca 2019-09-01]
+	Updated lang/php73 to 7.3.9 [taca 2019-09-01]
+	Updated lang/php71 to 7.1.32 [taca 2019-09-01]
