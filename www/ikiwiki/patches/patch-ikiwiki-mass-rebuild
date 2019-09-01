@@ -1,15 +1,15 @@
-$NetBSD: patch-ikiwiki-mass-rebuild,v 1.1 2018/03/22 17:08:31 schmonz Exp $
+$NetBSD: patch-ikiwiki-mass-rebuild,v 1.2 2019/09/01 02:19:38 schmonz Exp $
 
-Attempt to make su(1) usage more portable.
+Replace unportable su(1) usage with sudo(8).
 
---- ikiwiki-mass-rebuild.orig	2018-03-11 15:54:34.000000000 +0000
+--- ikiwiki-mass-rebuild.orig	2019-02-26 23:01:54.000000000 +0000
 +++ ikiwiki-mass-rebuild
 @@ -32,7 +32,7 @@ sub processuser {
  	my $user=shift;
  	return if $user=~/^-/ || $users{$user};
  	$users{$user}=1;
 -	my $ret=system("su", $user, "-s", "/bin/sh", "-c", "--", "$0 --nonglobal @ARGV");
-+	my $ret=system("su", "-", $user, "-c", "/bin/sh -c -- '$0 --nonglobal @ARGV'");
++	my $ret=system("sudo", "-n", "-s", "-u", $user, "/bin/sh", "-c", "--", "$0", "--nonglobal", @ARGV);
  	if ($ret != 0) {
  		print STDERR "warning: processing for $user failed with code $ret\n";
  	}
