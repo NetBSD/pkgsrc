@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2019/08/31 05:07:35 markd Exp $
+# $NetBSD: options.mk,v 1.8 2019/09/01 00:42:54 markd Exp $
 
 ### Set options
 PKG_OPTIONS_VAR=			PKG_OPTIONS.emacs
@@ -151,7 +151,6 @@ CONFIGURE_ARGS+=	--with-x-toolkit=motif
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
-.include "../../x11/libXdamage/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 
