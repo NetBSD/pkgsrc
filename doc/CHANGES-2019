@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3719 2019/09/01 06:00:36 kre Exp $
+$NetBSD: CHANGES-2019,v 1.3720 2019/09/01 11:08:34 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6146,3 +6146,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/ikiwiki to 3.20190228nb4 [schmonz 2019-08-31]
 	Updated lang/camlp5 to 7.08 [markd 2019-08-31]
 	Updated shells/bash to 5.0.11 [kre 2019-09-01]
+	Updated www/links to 2.20 [leot 2019-09-01]
