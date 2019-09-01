@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/09/21 07:29:30 obache Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/09/01 12:08:17 nia Exp $
 bin/Esetroot
 bin/Etbg
 bin/Etbg_update_list
