@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.166 2019/08/31 21:32:13 schmonz Exp $
+# $NetBSD: Makefile,v 1.167 2019/09/01 02:19:37 schmonz Exp $
 #
 
 DISTNAME=		ikiwiki_3.20190228.orig
 PKGNAME=		${DISTNAME:S/_/-/:S/.orig//}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		www textproc
 MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/i/ikiwiki/}
 EXTRACT_SUFX=		.tar.xz
@@ -38,7 +38,8 @@ PERL5_PACKLIST=		auto/IkiWiki/.packlist
 USE_TOOLS+=		gmake msgfmt perl:run xgettext
 
 REPLACE_PYTHON+=	plugins/proxy.py plugins/pythondemo plugins/rst
-REPLACE_PERL+=		pm_filter
+REPLACE_PERL+=		pm_filter ikiwiki.in ikiwiki-comment.in
+REPLACE_PERL+=		ikiwiki-transition.in ikiwiki-calendar.in
 
 MAKE_FLAGS+=		W3M_CGI_BIN=${PREFIX:Q}/libexec/w3m/cgi-bin
 MAKE_FLAGS+=		SYSCONFDIR=${PKG_SYSCONFDIR:Q}
