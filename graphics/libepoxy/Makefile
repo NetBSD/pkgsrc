@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/08/31 13:50:09 nia Exp $
+# $NetBSD: Makefile,v 1.27 2019/09/01 20:38:34 dholland Exp $
 
 DISTNAME=	libepoxy-1.5.3
 CATEGORIES=	graphics
@@ -27,6 +27,8 @@ pre-configure:
 .include "../../graphics/MesaLib/buildlink3.mk"
 .if !empty(MESALIB_SUPPORTS_EGL:M[Yy][Ee][Ss])
 PLIST.egl=		yes
+.else
+CONFIGURE_ARGS+=	--disable-egl
 .endif
 
 .include "options.mk"
