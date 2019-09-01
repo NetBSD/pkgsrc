@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2019/08/22 12:23:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2019/09/01 11:44:19 nia Exp $
 
 VERSION=	1.0
 DISTNAME=	supertuxkart-${VERSION}-src
@@ -13,13 +13,16 @@ HOMEPAGE=	https://supertuxkart.net/Main_Page
 COMMENT=	Free 3D kart racing game
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=			${WRKDIR}/supertuxkart-${VERSION}
-USE_CMAKE=		yes
-USE_LANGUAGES=		c c++
-USE_TOOLS+=		cmake pkg-config
+WRKSRC=		${WRKDIR}/supertuxkart-${VERSION}
+USE_CMAKE=	yes
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	cmake pkg-config
 
 CMAKE_ARGS+=	-DUSE_WIIUSE=OFF
 CMAKE_ARGS+=	-DBUILD_RECORDER=OFF
+
+# Needs linux joystick support.
+CMAKE_ARGS+=	-DENABLE_WAYLAND_DEVICE=OFF
 
 .include "../../mk/bsd.prefs.mk"
 
