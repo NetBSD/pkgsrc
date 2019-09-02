@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/04/26 14:12:33 maya Exp $
+# $NetBSD: Makefile,v 1.14 2019/09/02 13:19:47 adam Exp $
 
 DISTNAME=	python-cdb-0.35
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://pilcrow.madison.wi.us/
 COMMENT=	Python extension module for cdb
 LICENSE=	gnu-gpl-v2
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 0.35
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.35
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
