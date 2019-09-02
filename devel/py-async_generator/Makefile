@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/04/26 12:44:43 roy Exp $
+# $NetBSD: Makefile,v 1.5 2019/09/02 13:33:23 adam Exp $
 
 DISTNAME=	async_generator-1.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED=	37 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/04/26 12:44:43 roy Exp $
+# $NetBSD: Makefile,v 1.5 2019/09/02 13:33:23 adam Exp $
 
 DISTNAME=	flufl.i18n-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-atpublic-[0-9]*:../../devel/py-atpublic
 
-PYTHON_VERSIONS_ACCEPTED=	37 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
