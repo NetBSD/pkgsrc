@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2019/08/25 16:37:01 maya Exp $
+$NetBSD: distinfo,v 1.2 2019/09/02 16:41:01 nia Exp $
 
 SHA1 (mono-6.0.0.313.tar.xz) = c5cccad2cb5be936f23e46b95df7628013e29e3c
 RMD160 (mono-6.0.0.313.tar.xz) = 801e5128561d2e95a6736cdfce040d8850be4e2f
@@ -23,4 +23,4 @@ SHA1 (patch-mono_tests_Makefile.am) = a5bf145619a50c8c256c32ffdb5b51f9e04f874c
 SHA1 (patch-mono_utils_mono-os-semaphore.h) = b850911945c95be804e9462263d558ef702831ca
 SHA1 (patch-mono_utils_mono-state.c) = 6a6d83e1779a5167e8f22ba1dedce9b3203705c4
 SHA1 (patch-mono_utils_mono-utils-debug.c) = 30b0ab55c9227705026a8edd1e4bb693ae4f9953
-SHA1 (patch-runtime_mono-wrapper.in) = 6d396f9ddf92e522111421ce9b8ec26988438f48
+SHA1 (patch-runtime_mono-wrapper.in) = ea40d2f2e8b67de0ae42c6e608e3c085dc2b040e

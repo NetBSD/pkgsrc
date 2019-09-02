@@ -1,4 +1,4 @@
-$NetBSD: patch-runtime_mono-wrapper.in,v 1.1 2019/08/25 16:37:01 maya Exp $
+$NetBSD: patch-runtime_mono-wrapper.in,v 1.2 2019/09/02 16:41:01 nia Exp $
 
 Mark the mono executable as not MPROTECT safe during the build.
 
@@ -8,5 +8,5 @@ Mark the mono executable as not MPROTECT safe during the build.
  fi
  MONO_EXECUTABLE=${MONO_EXECUTABLE:-"$r/@mono_runtime@"}
  export MONO_CFG_DIR PATH
-+paxctl +m $(readlink -f "$MONO_EXECUTABLE") | true 2>/dev/null
++$PAXCTL +m $(readlink -f "$MONO_EXECUTABLE") 2>/dev/null | true
  exec "$r/libtool" --mode=execute "${MONO_EXECUTABLE_WRAPPER}" --config "@mono_cfg_dir@/mono/config" "$@"
