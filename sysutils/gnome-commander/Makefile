@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2019/08/11 13:23:07 wiz Exp $
+# $NetBSD: Makefile,v 1.120 2019/09/02 13:20:08 adam Exp $
 
 DISTNAME=		gnome-commander-1.2.8.15
 PKGREVISION=		83
@@ -16,7 +16,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config perl
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 1.2.8.15
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 1.2.8.15
 
 #Problem with heimdal, on which this package depends via another packages.
 #Simple solution is delete link to fnmatch.h from work directory of package

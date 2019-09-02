@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/04/26 13:14:04 maya Exp $
+# $NetBSD: Makefile,v 1.9 2019/09/02 13:20:00 adam Exp $
 
 DISTNAME=	PyFFTW3-0.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//S/FFTW/fftw/S/3//}
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c
 
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # as of 0.2.1
+PYTHON_VERSIONS_ACCEPTED=	 27 # as of 0.2.1
 
 MAKE_ENV+=	FFTW_PATH=${PREFIX}/lib
 

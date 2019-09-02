@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2019/07/21 22:24:06 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2019/09/02 13:20:17 adam Exp $
 
 DISTNAME=	libscigraphica-2.1.1
 PKGREVISION=	36
@@ -16,7 +16,7 @@ USE_TOOLS+=		pkg-config gmake intltool
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	libscigraphica-2.0.pc.in
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-numarray
+PYTHON_VERSIONS_ACCEPTED=	 27 # py-numarray
 
 pre-configure:
 	ln -s ${PYTHONBIN} ${TOOLS_DIR}/bin/python

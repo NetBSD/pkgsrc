@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2019/07/03 07:19:03 nia Exp $
+# $NetBSD: Makefile,v 1.58 2019/09/02 13:19:46 adam Exp $
 
 DISTNAME=	pysqlite-2.8.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pysqlite/sqlite2/}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/ghaering/pysqlite
 COMMENT=	SQLite database adapter for Python
 LICENSE=	mit
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 2.6.3
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 2.6.3
 
 .PHONY: do-postinstall-test
 do-postinstall-test:

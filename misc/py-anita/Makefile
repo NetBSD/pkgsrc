@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2019/06/11 17:12:19 gson Exp $
+# $NetBSD: Makefile,v 1.56 2019/09/02 13:19:44 adam Exp $
 
 DISTNAME=	anita-1.49
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-pexpect>=2.1:../../devel/py-pexpect
 
 USE_LANGUAGES=	#none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 1.48
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 1.48
 
 SUBST_CLASSES+=		manpath
 SUBST_STAGE.manpath=	pre-configure

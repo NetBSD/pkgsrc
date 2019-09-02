@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2019/07/21 22:24:39 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2019/09/02 13:19:43 adam Exp $
 
 PKGVER=			0.8.4
 DISTNAME=		compizconfig-python-${PKGVER}
@@ -19,7 +19,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config gmake
 
 PY_PATCHPLIST=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-pyrex
+PYTHON_VERSIONS_ACCEPTED=	 27 # py-pyrex
 
 .include "../../wm/compiz/buildlink3.mk"
 .include "../../devel/libcompizconfig/buildlink3.mk"

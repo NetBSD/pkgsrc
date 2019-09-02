@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/04/26 14:12:45 maya Exp $
+# $NetBSD: Makefile,v 1.23 2019/09/02 13:19:57 adam Exp $
 
 DISTNAME=	lshell-0.9.16
 PKGREVISION=	1
@@ -18,7 +18,7 @@ PKG_SHELL=	bin/lshell
 USE_LANGUAGES=		# none
 
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 0.9.16
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.9.16
 
 EGDIR=			share/examples/lshell
 

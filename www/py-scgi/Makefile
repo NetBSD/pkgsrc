@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/04/26 13:14:22 maya Exp $
+# $NetBSD: Makefile,v 1.17 2019/09/02 13:20:01 adam Exp $
 
 DISTNAME=	scgi-1.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	cnri-license
 
 DEPENDS+=	${PYPKGPREFIX}-quixote-[0-9]*:../../devel/py-quixote
 
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-quixote
+PYTHON_VERSIONS_ACCEPTED=	 27 # py-quixote
 
 CFLAGS.SunOS+=	-D_XOPEN_SOURCE -D_XOPEN_SOURCE_EXTENDED=1
 

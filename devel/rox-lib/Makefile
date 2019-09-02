@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2019/04/26 13:13:55 maya Exp $
+# $NetBSD: Makefile,v 1.29 2019/09/02 13:19:37 adam Exp $
 
 DISTNAME=	rox-lib-2.0.2
 PKGREVISION=	15
@@ -24,7 +24,7 @@ USE_TOOLS+=	pax
 REPLACE_PYTHON=	AppRun MakeDist
 REPLACE_PYTHON+=	python/make_docs.py
 REPLACE_PYTHON+=	tests/python/*.py
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-gtk2
+PYTHON_VERSIONS_ACCEPTED=	 27 # py-gtk2
 
 INSTALLATION_DIRS=	share/rox/ROX-Lib2
 

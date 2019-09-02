@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2019/07/21 22:25:27 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2019/09/02 13:20:10 adam Exp $
 
 DISTNAME=	pitivi-0.15.2
 PKGREVISION=	16
@@ -18,7 +18,7 @@ USE_TOOLS+=	pkg-config intltool gmake msgfmt
 
 CONFIGURE_ENV+=	ac_cv_path_PYTHON=${PYTHONBIN}
 REPLACE_PYTHON=	bin/pitivi.in
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-gtk2, py-gstreamer0.10
+PYTHON_VERSIONS_ACCEPTED=	 27 # py-gtk2, py-gstreamer0.10
 
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../lang/python/application.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/05/23 19:23:16 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2019/09/02 13:20:09 adam Exp $
 
 DISTNAME=	ansible-1.9.4
 PKGREVISION=	2
@@ -47,7 +47,7 @@ SUBST_FILES.pythonbin=  Makefile
 SUBST_MESSAGE.pythonbin=        Fixing path to PYTHONBIN.
 SUBST_SED.pythonbin=    -e "s,PYTHON=python,PYTHON=${PYTHONBIN},"
 
-PYTHON_VERSIONS_INCOMPATIBLE=    36 37 # py-paramiko
+PYTHON_VERSIONS_ACCEPTED=    27 # py-paramiko
 
 REPLACE_PYTHON=         lib/ansible/runner/action_plugins/synchronize.py
 REPLACE_PYTHON+=        lib/ansible/utils/module_docs.py

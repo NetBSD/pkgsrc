@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/05/10 15:49:39 mef Exp $
+# $NetBSD: Makefile,v 1.30 2019/09/02 13:19:39 adam Exp $
 
 DISTNAME=	ExmanIDE-0.9.4
 PKGREVISION=	8
@@ -16,7 +16,7 @@ USE_TOOLS+=	pax
 WRKSRC=		${WRKDIR}/${PKGBASE}
 NO_BUILD=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-wxWidgets
+PYTHON_VERSIONS_ACCEPTED=	 27 # py-wxWidgets
 
 SUBST_CLASSES+=		mod
 SUBST_MESSAGE.mod=	Fixing deprecated module names.
