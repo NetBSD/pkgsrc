@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3739 2019/09/02 12:59:04 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3740 2019/09/02 13:40:18 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6179,3 +6179,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/libgcrypt to 1.8.5 [nia 2019-09-02]
 	Updated devel/p5-Test-BDD-Cucumber to 0.60 [schmonz 2019-09-02]
 	Updated net/libupnp to 1.8.4 [nia 2019-09-02]
+	Added textproc/libuninameslist version 20190701 [nia 2019-09-02]
