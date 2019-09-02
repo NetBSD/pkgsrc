@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.63 2019/08/22 16:20:24 nia Exp $
+@comment $NetBSD: PLIST,v 1.64 2019/09/02 12:54:15 nia Exp $
 @pkgdir share/vlc/http/dialogs
 @pkgdir share/vlc/http/images
 @pkgdir share/vlc/http/js
@@ -204,7 +204,6 @@ lib/vlc/plugins/audio_filter/libequalizer_plugin.la
 lib/vlc/plugins/audio_filter/libgain_plugin.la
 lib/vlc/plugins/audio_filter/libheadphone_channel_mixer_plugin.la
 lib/vlc/plugins/audio_filter/libkaraoke_plugin.la
-lib/vlc/plugins/audio_filter/libmad_plugin.la
 lib/vlc/plugins/audio_filter/libmono_plugin.la
 lib/vlc/plugins/audio_filter/libnormvol_plugin.la
 lib/vlc/plugins/audio_filter/libparam_eq_plugin.la
@@ -241,7 +240,6 @@ ${PLIST.dts}lib/vlc/plugins/codec/libdca_plugin.la
 lib/vlc/plugins/codec/libddummy_plugin.la
 lib/vlc/plugins/codec/libdvbsub_plugin.la
 lib/vlc/plugins/codec/libedummy_plugin.la
-lib/vlc/plugins/codec/libfaad_plugin.la
 lib/vlc/plugins/codec/libflac_plugin.la
 lib/vlc/plugins/codec/libfluidsynth_plugin.la
 lib/vlc/plugins/codec/libg711_plugin.la
