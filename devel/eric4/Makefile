@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2019/04/26 14:12:35 maya Exp $
+# $NetBSD: Makefile,v 1.54 2019/09/02 13:19:40 adam Exp $
 
 VERS=			4.5.24
 DISTNAME=		eric4-${VERS}
@@ -15,7 +15,7 @@ NO_BUILD=		yes
 EXTRACT_USING=		bsdtar
 
 PY_PATCHPLIST=			yes
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 4.5.18
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 4.5.18
 
 CONFIGURE_ARGS+=		-b ${PREFIX}/bin
 CONFIGURE_ARGS+=		-d ${PREFIX}/${PYSITELIB}

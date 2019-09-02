@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2019/07/21 22:25:25 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2019/09/02 13:20:10 adam Exp $
 
 DISTNAME=	farsight2-0.0.31
 PKGREVISION=	39
@@ -20,7 +20,7 @@ PKGCONFIG_OVERRIDE+=	farsight2.pc.in
 # gstreamer-check-0.10 >= 0.10.23 (GStreamer Check unittest Library)
 
 PY_PATCHPLIST=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-gtk2, py-gstreamer0.10
+PYTHON_VERSIONS_ACCEPTED=	 27 # py-gtk2, py-gstreamer0.10
 
 .include "../../lang/python/pyversion.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/08/22 12:23:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2019/09/02 13:19:57 adam Exp $
 
 DISTNAME=		gr-osmosdr-0.1.4
 PKGREVISION=		15
@@ -23,7 +23,7 @@ CMAKE_ARGS+=	-DGNURADIO_BLOCKS_INCLUDE_DIRS=${PREFIX}/include
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 
 # Python 36 and 37 result in build errors; 27 builds ok.
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37
+PYTHON_VERSIONS_ACCEPTED=	27
 REPLACE_PYTHON+=	apps/osmocom_siggen_base.py
 
 .include	"../../devel/boost-headers/buildlink3.mk"

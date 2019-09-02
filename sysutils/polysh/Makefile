@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/04/26 13:14:15 maya Exp $
+# $NetBSD: Makefile,v 1.12 2019/09/02 13:20:08 adam Exp $
 
 DISTNAME=	polysh-0.4
 PKGREVISION=	2
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # not yet ported as of 0.4
+PYTHON_VERSIONS_ACCEPTED=	 27 # not yet ported as of 0.4
 REPLACE_PYTHON=	polysh/rb_tree.py
 
 SUBST_CLASSES+=		setup

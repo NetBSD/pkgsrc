@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2019/07/21 22:25:55 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2019/09/02 13:20:14 adam Exp $
 
 DISTNAME=	avant-window-navigator-0.4.0
 PKGREVISION=	35
@@ -44,7 +44,7 @@ SUBST_SED.pathfix=	-e "s,/usr/share,${PREFIX}/share,"
 PY_PATCHPLIST=		yes
 REPLACE_PYTHON+=	awn-settings/awnSettings.py.in
 REPLACE_PYTHON+=	awn-settings/awnSettingsHelper.py
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-gtk2
+PYTHON_VERSIONS_ACCEPTED=	 27 # py-gtk2
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../lang/vala/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/04/26 13:14:07 maya Exp $
+# $NetBSD: Makefile,v 1.19 2019/09/02 13:19:52 adam Exp $
 
 DISTNAME=	calypso-1.3
 PKGREVISION=	2
@@ -16,7 +16,7 @@ DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 INSTALLATION_DIRS=	share/examples/calypso
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # as of 1.3
+PYTHON_VERSIONS_ACCEPTED=	 27 # as of 1.3
 REPLACE_PYTHON=	calypso.py
 
 post-install:

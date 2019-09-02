@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/04/26 13:13:57 maya Exp $
+# $NetBSD: Makefile,v 1.9 2019/09/02 13:20:16 adam Exp $
 TRYTON_MODULE_NAME=	trytond_account_payment_sepa
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	finance python
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-lxml>=2.0:../../textproc/py-lxml
 
 REPLACE_PYTHON+=	tests/test_account_payment_sepa.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-simplesoap via py-stdnum and py-trytond-bank
+PYTHON_VERSIONS_ACCEPTED=	 27 # py-simplesoap via py-stdnum and py-trytond-bank
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
