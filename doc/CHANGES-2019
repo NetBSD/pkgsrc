@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3731 2019/09/02 08:33:47 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3732 2019/09/02 08:57:57 christos Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6166,3 +6166,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-ipython to 7.8.0 [adam 2019-09-02]
 	Updated archivers/py-zipp to 0.6.0 [adam 2019-09-02]
 	Updated misc/py-tqdm to 4.35.0 [adam 2019-09-02]
+	Updated editors/jove to 4.16.0.74 [christos 2019-09-02]
