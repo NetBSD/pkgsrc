@@ -1,38 +1,43 @@
-# $NetBSD: Makefile,v 1.108 2019/04/25 07:32:54 maya Exp $
+# $NetBSD: Makefile,v 1.109 2019/09/02 14:45:37 nia Exp $
 
-DISTNAME=	fontforge-dist-20170731
-PKGNAME=	${DISTNAME:S/-dist-/-/}
-PKGREVISION=	5
+DISTNAME=	fontforge-20190801
 CATEGORIES=	fonts editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fontforge/}
-EXTRACT_SUFX=	.tar.xz
+GITHUB_PROJECT=	fontforge
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://fontforge.github.io/
+HOMEPAGE=	https://fontforge.github.io/
 COMMENT=	Postscript font editor
 LICENSE=	modified-bsd
 
-GITHUB_PROJECT=	fontforge
-GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_USING=	bsdtar
-WRKSRC=		${WRKDIR}/fontforge-2.0.${PKGVERSION_NOREV}
 
-USE_LANGUAGES=		c
-USE_LIBTOOL=		yes
+USE_TOOLS+=	gmake msgfmt pkg-config xgettext
+USE_LANGUAGES=	c c++11
+USE_LIBTOOL=	yes
+GNU_CONFIGURE=	yes
+
+# C++11
+GCC_REQD+=	4.8
+
+# Make the build reproducable.
+CONFIGURE_ENV+=		SOURCE_DATE_EPOCH=${PKGVERSION_NOREV}0000
+
+CONFIGURE_ARGS+=	--enable-gdk
+CONFIGURE_ARGS+=	--enable-woff2
+
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake msgfmt pkg-config
-GNU_CONFIGURE=		yes
+PY_PATCHPLIST=		yes
 
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
 PKGCONFIG_OVERRIDE+=		libfontforge.pc
 PKGCONFIG_OVERRIDE+=		libfontforgeexe.pc
 
-CHECK_PORTABILITY_SKIP+=osx/FontForge.app/Contents/MacOS/*
-CHECK_INTERPRETER_SKIP+=share/fontforge/python/collab/*
-CHECK_INTERPRETER_SKIP+=share/fontforge/python/gdraw/*
-CHECK_INTERPRETER_SKIP+=share/fontforge/python/simple/*
-
-PY_PATCHPLIST=		yes
+CHECK_PORTABILITY_SKIP+=	osx/FontForge.app/Contents/MacOS/*
+CHECK_INTERPRETER_SKIP+=	share/fontforge/python/collab/*
+CHECK_INTERPRETER_SKIP+=	share/fontforge/python/gdraw/*
+CHECK_INTERPRETER_SKIP+=	share/fontforge/python/simple/*
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -41,13 +46,14 @@ PY_PATCHPLIST=		yes
 _TOOLS_USE_PKGSRC.date=	yes
 .endif
 
-.include "options.mk"
-
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../fonts/woff2/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
@@ -59,6 +65,8 @@ _TOOLS_USE_PKGSRC.date=	yes
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../textproc/libuninameslist/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
