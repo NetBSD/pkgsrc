@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/09/01 12:04:38 nia Exp $
+# $NetBSD: Makefile,v 1.5 2019/09/02 16:41:01 nia Exp $
 
 DISTNAME=	mono-6.0.0.313
 CATEGORIES=	lang
@@ -15,6 +15,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 TOOL_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 CONFLICTS=	pnet-[0-9]* mcsim-[0-9]* lc-[0-9]*
 ALL_ENV+=	MONO_SHARED_DIR=${WRKDIR} PLATFORM=
+ALL_ENV+=	PAXCTL=${PAXCTL}
 
 USE_TOOLS+=	bash:run cmake gmake gtar msgfmt perl:run pkg-config
 USE_TOOLS+=	bison autoconf automake
@@ -25,6 +26,8 @@ EXTRACT_USING=	gtar
 GNU_CONFIGURE=		yes
 PKG_SYSCONFSUBDIR=	mono
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--disable-btls
+CONFIGURE_ARGS+=	--disable-btls-lib
 
 # Requires a cwrappers change: http://mail-index.netbsd.org/tech-pkg/2019/08/16/msg021791.html
 USE_CWRAPPERS=		no
