@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2017/11/23 15:49:42 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2019/09/02 08:58:57 adam Exp $
 
-DISTNAME=	libogg-1.3.3
+DISTNAME=	libogg-1.3.4
 CATEGORIES=	multimedia devel
 MASTER_SITES=	http://downloads.xiph.org/releases/ogg/
 EXTRACT_SUFX=	.tar.xz
@@ -10,21 +10,12 @@ HOMEPAGE=	https://www.xiph.org/ogg/
 COMMENT=	Ogg project codecs library
 LICENSE=	modified-bsd
 
-USE_TOOLS+=	pkg-config
-USE_LIBTOOL=	yes
-GNU_CONFIGURE=	yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
+GNU_CONFIGURE=		yes
+PKGCONFIG_OVERRIDE+=	ogg.pc.in
+TEST_TARGET=		check
 
 GCC_REQD+=	2.95.3
-
-PKGCONFIG_OVERRIDE+=	ogg.pc.in
-
-TEST_TARGET=	check
-
-.include "../../mk/bsd.prefs.mk"
-
-# Aggressive optimisation causes configure tests to fail.
-.if ${OPSYS} == "Darwin" && ${PKGSRC_COMPILER} == "gcc"
-BUILDLINK_TRANSFORM+=	opt:-O4:-O2
-.endif
 
 .include "../../mk/bsd.pkg.mk"

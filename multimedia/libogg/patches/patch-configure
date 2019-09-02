@@ -1,0 +1,54 @@
+$NetBSD: patch-configure,v 1.1 2019/09/02 08:58:57 adam Exp $
+
+Do not force compiler optimization flags.
+
+--- configure.orig	2019-09-02 08:48:15.000000000 +0000
++++ configure
+@@ -12781,17 +12781,17 @@ if test -z "$GCC"; then
+         case $host in
+         *-*-irix*)
+                 DEBUG="-g -signed"
+-                CFLAGS="-O2 -w -signed"
++                CFLAGS="-w -signed"
+                 PROFILE="-p -g3 -O2 -signed"
+ 		;;
+         sparc-sun-solaris*)
+                 DEBUG="-v -g"
+-                CFLAGS="-xO4 -fast -w -fsimple -native -xcg92"
++                CFLAGS="-fast -w -fsimple -native -xcg92"
+                 PROFILE="-v -xpg -g -xO4 -fast -native -fsimple -xcg92 -Dsuncc"
+ 		;;
+         *)
+                 DEBUG="-g"
+-                CFLAGS="-O"
++                CFLAGS=""
+                 PROFILE="-g -p"
+ 		;;
+         esac
+@@ -12799,22 +12799,22 @@ else
+         case $host in
+         *-*-linux*)
+                 DEBUG="-g -Wall -fsigned-char"
+-                CFLAGS="-O20 -Wall -ffast-math -fsigned-char"
++                CFLAGS="-Wall -ffast-math -fsigned-char"
+                 PROFILE="-Wall -W -pg -g -O20 -ffast-math -fsigned-char"
+ 		;;
+         sparc-sun-*)
+                 DEBUG="-g -Wall -fsigned-char"
+-                CFLAGS="-O20 -ffast-math -fsigned-char"
++                CFLAGS="-ffast-math -fsigned-char"
+                 PROFILE="-pg -g -O20 -fsigned-char"
+ 		;;
+ 	*-*-darwin*)
+ 		DEBUG="-fno-common -g -Wall -fsigned-char"
+-		CFLAGS="-fno-common -O4 -Wall -fsigned-char -ffast-math"
++		CFLAGS="-fno-common -Wall -fsigned-char -ffast-math"
+ 		PROFILE="-fno-common -O4 -Wall -pg -g -fsigned-char -ffast-math"
+ 		;;
+         *)
+                 DEBUG="-g -Wall -fsigned-char"
+-                CFLAGS="-O20 -fsigned-char"
++                CFLAGS="-fsigned-char"
+                 PROFILE="-O20 -g -pg -fsigned-char"
+ 		;;
+         esac
