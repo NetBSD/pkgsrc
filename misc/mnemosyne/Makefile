@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2019/06/18 05:54:02 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2019/09/02 13:19:44 adam Exp $
 
 DISTNAME=	Mnemosyne-2.3.1
 PKGNAME=	${DISTNAME:S/M/m/}
@@ -22,7 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-WebOb-[0-9]*:../../www/py-WebOb
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 2.3.1
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 2.3.1
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

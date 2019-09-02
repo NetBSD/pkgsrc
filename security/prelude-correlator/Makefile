@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/05/23 19:23:15 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2019/09/02 13:19:54 adam Exp $
 
 DISTNAME=	prelude-correlator-0.9.0-beta8
 PKGNAME=	prelude-correlator-${DISTNAME:S/-beta/beta/:C/.*-//}
@@ -50,7 +50,7 @@ REQD_DIRS+=		${PRELUDE_HOME}
 REQD_DIRS_PERMS+=	${PRELUDE_HOME} ${PRELUDE_USER} ${PRELUDE_GROUP} 0700
 
 REPLACE_PYTHON=		PreludeCorrelator/main.py
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 0.9.0beta8
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.9.0beta8
 EGG_NAME=		prelude_correlator-0.9.0b8
 
 pre-patch:

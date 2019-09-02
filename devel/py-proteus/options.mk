@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2019/04/26 14:12:36 maya Exp $
+# $NetBSD: options.mk,v 1.9 2019/09/02 13:19:42 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-proteus
 PKG_SUPPORTED_OPTIONS+=	cdecimal simplejson
@@ -12,7 +12,7 @@ PKG_SUGGESTED_OPTIONS+=	simplejson
 # XXX python-Levenshtein (http://github.com/miohtama/python-Levenshtein) options
 
 .if !empty(PKG_OPTIONS:Mcdecimal)
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-cdecimal is obsolete for that version and thus not available
+PYTHON_VERSIONS_ACCEPTED=	27 # py-cdecimal is obsolete for that version and thus not available
 DEPENDS+=		${PYPKGPREFIX}-cdecimal-[0-9]*:../../math/py-cdecimal
 .endif
 
