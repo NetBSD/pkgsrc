@@ -1,4 +1,4 @@
-# $NetBSD: libusb.buildlink3.mk,v 1.1 2018/02/10 13:45:45 khorben Exp $
+# $NetBSD: libusb.buildlink3.mk,v 1.2 2019/09/02 02:23:02 rillig Exp $
 #
 # This Makefile is meant to be included by packages that require an
 # implementation of the former libusb (still found in devel/libusb). The
@@ -9,7 +9,7 @@
 # LIBUSB_TYPE to "compat". On NetBSD, it has the advantage of not requiring root
 # privileges to locate and use USB devices without a kernel driver.
 #
-# === User-settable variables ===
+# User-settable variables:
 #
 # LIBUSB_TYPE
 #	The name of the libusb implementation to default to, native or compat.
