@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2015/04/26 14:38:10 mef Exp $
+# $NetBSD: Makefile,v 1.28 2019/09/02 16:10:47 nia Exp $
 
 DISTNAME=	tits-1.3.0
 CATEGORIES=	sysutils
@@ -17,6 +17,8 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man8 ${PKGMANDIR}/cat8 sbin \
 			share/examples/rc.d
 
 INSTALL_MAKE_FLAGS+=	BINDIR=${PREFIX}/sbin
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 post-patch:
 	${MV} ${WRKSRC}/tits.8 ${WRKSRC}/tits.8.in
