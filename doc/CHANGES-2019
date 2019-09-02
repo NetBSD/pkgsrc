@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3730 2019/09/02 07:56:45 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3731 2019/09/02 08:33:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6164,3 +6164,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-requests-mock to 1.7.0 [adam 2019-09-02]
 	Updated www/py-furl to 2.0.0 [adam 2019-09-02]
 	Updated devel/py-ipython to 7.8.0 [adam 2019-09-02]
+	Updated archivers/py-zipp to 0.6.0 [adam 2019-09-02]
+	Updated misc/py-tqdm to 4.35.0 [adam 2019-09-02]
