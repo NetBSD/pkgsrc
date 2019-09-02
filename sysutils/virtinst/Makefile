@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/04/26 14:12:46 maya Exp $
+# $NetBSD: Makefile,v 1.15 2019/09/02 13:20:09 adam Exp $
 
 DISTNAME=	virtinst-0.600.3
 PKGREVISION=	2
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	msgfmt xgettext
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 0.600.3
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.600.3
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure

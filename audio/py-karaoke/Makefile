@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2019/04/26 13:13:42 maya Exp $
+# $NetBSD: Makefile,v 1.36 2019/09/02 13:20:07 adam Exp $
 
 DISTNAME=	pykaraoke-0.7.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-wxWidgets>=2.6:../../x11/py-wxWidgets
 DEPENDS+=	${PYPKGPREFIX}-mutagen-[0-9]*:../../audio/py-mutagen
 DEPENDS+=	${PYPKGPREFIX}-Numeric-[0-9]*:../../math/py-Numeric
 
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-Numeric, py-wxWidgets
+PYTHON_VERSIONS_ACCEPTED=	 27 # py-Numeric, py-wxWidgets
 
 REPLACE_PYTHON+=	performer_prompt.py
 REPLACE_PYTHON+=	pycdg.py

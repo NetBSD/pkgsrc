@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2019/08/31 22:38:16 markd Exp $
+# $NetBSD: Makefile,v 1.36 2019/09/02 13:20:19 adam Exp $
 
 DISTNAME=	mftrace-1.2.19
 CATEGORIES=	fonts
@@ -21,7 +21,7 @@ CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 MAKE_FILE=		GNUmakefile
 
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB:Q}
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 1.2.19
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 1.2.19
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PYSITELIB}
 

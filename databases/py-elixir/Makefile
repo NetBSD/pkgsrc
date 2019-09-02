@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/04/26 13:13:47 maya Exp $
+# $NetBSD: Makefile,v 1.16 2019/09/02 13:19:47 adam Exp $
 
 DISTNAME=	Elixir-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-crypto-[0-9]*:../../security/py-crypto
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-sqlite2
+PYTHON_VERSIONS_ACCEPTED=	 27 # py-sqlite2
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

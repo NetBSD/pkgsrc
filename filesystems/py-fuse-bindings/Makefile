@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/04/26 14:12:38 maya Exp $
+# $NetBSD: Makefile,v 1.19 2019/09/02 13:20:22 adam Exp $
 
 VERSION=		0.2.1
 DISTNAME=		fuse-python-${VERSION}
@@ -15,7 +15,7 @@ PYDISTUTILSPKG=		yes
 PY_PATCHLIST=		yes
 USE_TOOLS+=		pkg-config
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 0.2.1
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.2.1
 
 INSTALLATION_DIRS=	share/examples/fuse-python
 

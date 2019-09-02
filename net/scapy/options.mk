@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2019/04/26 13:14:10 maya Exp $
+# $NetBSD: options.mk,v 1.10 2019/09/02 13:19:50 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.scapy
 
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-amkCrypto-[0-9]*:../../security/py-amkCrypto
 ###
 .if !empty(PKG_OPTIONS:Mgnuplot)
 DEPENDS+=	${PYPKGPREFIX}-gnuplot-[0-9]*:../../graphics/py-gnuplot
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-gnuplot
+PYTHON_VERSIONS_ACCEPTED=	 27 # py-gnuplot
 .endif
 
 ###
