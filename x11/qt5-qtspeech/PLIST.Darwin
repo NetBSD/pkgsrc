@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2019/09/02 09:38:59 adam Exp $
+qt5/lib/cmake/Qt5TextToSpeech/Qt5TextToSpeech_QTextToSpeechPluginOsx.cmake
+qt5/plugins/texttospeech/libqtexttospeech_speechosx.so
