@@ -1,7 +1,7 @@
-$NetBSD: patch-ap,v 1.1 2006/06/30 15:59:58 tron Exp $
+$NetBSD: patch-ap,v 1.2 2019/09/02 21:41:40 nia Exp $
 
---- extend.c.orig	1988-07-03 18:48:52.000000000 +0100
-+++ extend.c	2006-06-30 16:56:09.000000000 +0100
+--- extend.c.orig	1988-07-03 17:48:52.000000000 +0000
++++ extend.c
 @@ -18,7 +18,9 @@
  #endif
  #endif
@@ -13,7 +13,7 @@ $NetBSD: patch-ap,v 1.1 2006/06/30 15:59:58 tron Exp $
  extern	int rescan();
  
  /* insert a string, mainly for use from macros (created by selfinsert) */
-@@ -68,6 +70,8 @@
+@@ -68,6 +70,8 @@ int f, n;
   * don't have them.  Care is taken so running out of memory will leave
   * the keymap in a usable state.
   */
@@ -22,7 +22,7 @@ $NetBSD: patch-ap,v 1.1 2006/06/30 15:59:58 tron Exp $
  static int remap(curmap, c, funct, pref_map)
  register KEYMAP	*curmap;/* pointer to the map being changed */
  int	c;		/* character being changed */
-@@ -80,7 +84,6 @@
+@@ -80,7 +84,6 @@ KEYMAP	*pref_map;	/* if funct==prefix, m
  	KEYMAP	*mp;
  	PF	*pfp;
  	MAP_ELEMENT *mep;
@@ -30,7 +30,7 @@ $NetBSD: patch-ap,v 1.1 2006/06/30 15:59:58 tron Exp $
  
  	if(ele >= &curmap->map_element[curmap->map_num] || c < ele->k_base) {
  	    if(ele > &curmap->map_element[0] && (funct!=prefix ||
-@@ -225,13 +228,14 @@
+@@ -225,13 +228,14 @@ KEYMAP	*pref_map;	/* if funct==prefix, m
  	return TRUE;
  }
  
@@ -46,7 +46,15 @@ $NetBSD: patch-ap,v 1.1 2006/06/30 15:59:58 tron Exp $
      extern int nmaps;
  
      if((mp = (KEYMAP *)malloc((unsigned)(sizeof(KEYMAP)+
-@@ -550,6 +554,8 @@
+@@ -402,7 +406,6 @@ define_key(f, n)
+ {
+     static char buf[48] = "Define key map: ";
+     MAPS *mp;
+-    char *strncat();
+ 
+     buf[16] = '\0';
+     if(eread(buf, &buf[16], 48 - 16, EFNEW) != TRUE) return FALSE;
+@@ -550,6 +553,8 @@ load(fname) char *fname; {
  	return TRUE;
  }
  
@@ -55,7 +63,7 @@ $NetBSD: patch-ap,v 1.1 2006/06/30 15:59:58 tron Exp $
  /*
   * excline - run a line from a load file or eval-expression.
   * if FKEYS is defined, duplicate functionallity of dobind so function
-@@ -578,7 +584,6 @@
+@@ -578,7 +583,6 @@ register char *line;
  #endif
  	PF	name_function();
  	LINE	*lalloc();
