@@ -1,4 +1,4 @@
-# $NetBSD: ccache.mk,v 1.38 2018/08/22 20:48:37 maya Exp $
+# $NetBSD: ccache.mk,v 1.39 2019/09/02 02:23:02 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -28,7 +28,7 @@
 # POSSIBILITY OF SUCH DAMAGE.
 #
 
-# === User-settable variables ===
+# User-settable variables:
 #
 # CCACHE_BASE
 #	The directory where ccache is installed. The build dependency on
@@ -46,7 +46,7 @@
 #       doing to the specified file. This is useful for tracking down
 #       problems.
 #
-# === Package-settable variables ===
+# Package-settable variables:
 #
 # IGNORE_CCACHE
 #	Can be set to "yes" for packages that have problems with ccache.

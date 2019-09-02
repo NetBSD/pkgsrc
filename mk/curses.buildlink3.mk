@@ -1,4 +1,4 @@
-# $NetBSD: curses.buildlink3.mk,v 1.29 2018/12/16 23:21:52 rillig Exp $
+# $NetBSD: curses.buildlink3.mk,v 1.30 2019/09/02 02:23:02 rillig Exp $
 #
 # This Makefile fragment is meant to be included by packages that require
 # any curses implementation instead of one particular one.  The available
@@ -9,7 +9,7 @@
 # directly include the appropriate buildlink3.mk instead of this file in
 # the package Makefile.
 #
-# === User-settable variables ===
+# User-settable variables:
 #
 # CURSES_DEFAULT
 #	This value represents the type of curses we wish to use on the
@@ -19,7 +19,7 @@
 #	Possible: curses, ncurses, ncursesw, pdcurses
 #	Default: (depends)
 #
-# === Package-settable variables ===
+# Package-settable variables:
 #
 # USE_CURSES
 #	This value represents the features the package needs from curses.
@@ -47,7 +47,7 @@
 #
 #	Default: (unset)
 #
-# === Variables set by this file ===
+# System-defined variables:
 #
 # CURSES_TYPE
 #	The name of the selected curses implementation.

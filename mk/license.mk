@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.101 2019/08/14 18:12:00 brook Exp $
+# $NetBSD: license.mk,v 1.102 2019/09/02 02:23:02 rillig Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -10,7 +10,7 @@
 # XXX: Some of this content arguably belongs in the pkgsrc guide
 # instead.
 #
-# === User-settable variables ===
+# User-settable variables:
 #
 # ACCEPTABLE_LICENSES
 #
@@ -25,7 +25,7 @@
 #
 #	Default value: ${DEFAULT_ACCEPTABLE_LICENSES}
 #
-# === Package-settable variables ===
+# Package-settable variables:
 #
 # LICENSE
 #

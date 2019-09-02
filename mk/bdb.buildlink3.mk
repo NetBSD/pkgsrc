@@ -1,4 +1,4 @@
-# $NetBSD: bdb.buildlink3.mk,v 1.26 2016/04/11 04:22:34 dbj Exp $
+# $NetBSD: bdb.buildlink3.mk,v 1.27 2019/09/02 02:23:02 rillig Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a Berkeley DB (BDB) implementation and that are not restricted
@@ -8,7 +8,7 @@
 # FIXME: This Makefile cannot handle packages that can use only a
 # subset of { db2 db3 db4 }.
 #
-# === User-settable variables ===
+# User-settable variables:
 #
 # BDB_DEFAULT
 #	This value represents the package we use when either a db-1.85
@@ -26,7 +26,7 @@
 #	It defaults to "db1" if it's built-in, or to ${BDB_DEFAULT}
 #	otherwise.
 #
-# === Package-settable variables ===
+# Package-settable variables:
 #
 # BDB_ACCEPTED
 #	The list of Berkeley DB implementations that can be used by the
@@ -35,7 +35,7 @@
 #	FIXME: If the list does not include db1 and does not include
 #	BDB_DEFAULT, the package will not build at the moment.
 #
-# === Variables set by this file ===
+# System-defined variables:
 #
 # BDB_TYPE
 #	The name of the selected BDB implementation.
