@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.10 2019/08/11 13:19:39 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/09/02 12:41:14 adam Exp $
 
 DISTNAME=	IPC-Cache-0.02
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	7
-CATEGORIES=	devel
+CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IPC/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://metacpan.org/pod/release/DCLINTON/IPC-Cache-0.02/Cache.pm
+HOMEPAGE=	https://metacpan.org/release/IPC-Cache
 COMMENT=	Perl module that implements an object storage space
 LICENSE=	gnu-gpl-v1
 
