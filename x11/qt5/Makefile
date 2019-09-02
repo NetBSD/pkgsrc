@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/03/26 11:14:16 adam Exp $
+# $NetBSD: Makefile,v 1.17 2019/09/02 09:40:15 adam Exp $
 
 DISTNAME=	qt5-${QTVERSION}
 
@@ -23,6 +23,7 @@ DEPENDS+=	qt5-qtquickcontrols2-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtquickcont
 DEPENDS+=	qt5-qtscript-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtscript
 DEPENDS+=	qt5-qtsensors-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtsensors
 DEPENDS+=	qt5-qtserialport-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtserialport
+DEPENDS+=	qt5-qtspeech-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtspeech
 DEPENDS+=	qt5-qtsvg-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtsvg
 DEPENDS+=	qt5-qttools-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qttools
 DEPENDS+=	qt5-qttranslations-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qttranslations
