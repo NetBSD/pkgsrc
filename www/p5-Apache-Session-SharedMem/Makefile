@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2019/08/11 13:24:24 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.10 2019/09/02 12:22:15 adam Exp $
 
 DISTNAME=	Apache-Session-SharedMem-0.6
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	6
-CATEGORIES=	www
+CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Apache/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
