@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3735 2019/09/02 09:59:37 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3736 2019/09/02 10:24:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6174,3 +6174,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/py-test-rerunfailures version 7.0 [adam 2019-09-02]
 	Updated net/py-amqp to 2.5.1 [adam 2019-09-02]
 	Updated net/py-kombu to 4.6.4 [adam 2019-09-02]
+	Updated security/py-keyring to 19.1.0 [adam 2019-09-02]
+	Updated mail/py-authres to 1.2.0 [adam 2019-09-02]
