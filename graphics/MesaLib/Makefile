@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.160 2019/08/31 20:30:00 nia Exp $
+# $NetBSD: Makefile,v 1.161 2019/09/02 19:43:06 nia Exp $
 
 DISTNAME=	mesa-19.1.5
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -151,7 +151,8 @@ MESON_ARGS+=	-Dgallium-xvmc=false
 CPPFLAGS+=	-DHAVE_NOATEXIT
 CPPFLAGS+=	-DSYSCONFDIR=${PKG_SYSCONFDIR}
 
-BUILDLINK_TRANSFORM+=	rm:-Werror=return-type
+BUILDLINK_TRANSFORM+=		rm:-Werror=return-type
+BUILDLINK_TRANSFORM.SunOS+=	rm:--build-id=sha1
 
 # Work around Xorg segfaulting in radeon driver due to wrong alloca being used
 CFLAGS.NetBSD+=		-Dalloca=__builtin_alloca
