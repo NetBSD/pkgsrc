@@ -1,4 +1,4 @@
-# $NetBSD: bin-install.mk,v 1.28 2018/11/15 01:40:52 sevan Exp $
+# $NetBSD: bin-install.mk,v 1.29 2019/09/02 02:23:03 rillig Exp $
 #
 
 # This file provides the following targets:
@@ -7,7 +7,7 @@
 #	Tries to install a package from a prebuilt binary package, and
 #	if that doesn't work, builds the package from source.
 #
-# === User-settable variables ===
+# User-settable variables:
 #
 # PACKAGES
 #	This directory is searched before BINPKG_SITES when trying to

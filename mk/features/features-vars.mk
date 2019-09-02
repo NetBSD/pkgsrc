@@ -1,4 +1,4 @@
-# $NetBSD: features-vars.mk,v 1.26 2019/07/10 17:15:27 sevan Exp $
+# $NetBSD: features-vars.mk,v 1.27 2019/09/02 02:23:03 rillig Exp $
 #
 # The platforms that are supported by pkgsrc differ in the amount of
 # functions they provide in the C library (libc). Functions that are
@@ -29,7 +29,7 @@
 #	#include <err.h>
 #	#endif
 #
-# === Package-settable variables ===
+# Package-settable variables:
 #
 # USE_FEATURES
 #	Lists the system features required by the package.
@@ -52,7 +52,7 @@
 #
 #	Default value: undefined
 #
-# === Variables defined by this file ===
+# System-defined variables:
 #
 # MISSING_FEATURES
 #	The features listed in USE_FEATURES that are missing on the
