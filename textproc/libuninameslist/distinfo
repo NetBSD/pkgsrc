@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/09/02 13:40:05 nia Exp $
+
+SHA1 (libuninameslist-dist-20190701.tar.gz) = 7844cd47088f215d351f269b7c4475024be0f504
+RMD160 (libuninameslist-dist-20190701.tar.gz) = 48380bdb32cc25a014d0ef452440116ce2652d18
+SHA512 (libuninameslist-dist-20190701.tar.gz) = 05cd3cbba195e270e1cb23886d0fa666d47fbe5eb23b89388025683ae7e2380de43ac4137056ec8f386e53fc869218e7417566f29ccfd86f26168bcfe472ee52
+Size (libuninameslist-dist-20190701.tar.gz) = 1158026 bytes
