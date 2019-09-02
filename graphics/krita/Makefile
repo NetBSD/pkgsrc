@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2019/08/22 12:23:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.32 2019/09/02 13:26:40 adam Exp $
 
 DISTNAME=		krita-4.1.3
 PKGREVISION=		15
@@ -33,7 +33,7 @@ BUILDLINK_TRANSFORM+=		rm:-Werror=implicit-function-declaration
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kritarc \
 		${PKG_SYSCONFDIR}/xdg/kritarc
 
-PYTHON_VERSIONS_INCOMPATIBLE=	26 27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/application.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
