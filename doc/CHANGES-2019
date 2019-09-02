@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3734 2019/09/02 09:46:40 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3735 2019/09/02 09:59:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6171,3 +6171,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/slony1 to 2.2.8 [adam 2019-09-02]
 	Updated devel/py-test-testmon to 0.9.18 [adam 2019-09-02]
 	Updated security/py-cryptodome to 3.9.0 [adam 2019-09-02]
+	Added devel/py-test-rerunfailures version 7.0 [adam 2019-09-02]
+	Updated net/py-amqp to 2.5.1 [adam 2019-09-02]
+	Updated net/py-kombu to 4.6.4 [adam 2019-09-02]
