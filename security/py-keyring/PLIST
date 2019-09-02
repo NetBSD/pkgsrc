@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/02/27 13:27:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/09/02 10:20:57 adam Exp $
 bin/keyring-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -60,15 +60,6 @@ ${PYSITELIB}/keyring/errors.pyo
 ${PYSITELIB}/keyring/http.py
 ${PYSITELIB}/keyring/http.pyc
 ${PYSITELIB}/keyring/http.pyo
-${PYSITELIB}/keyring/py27compat.py
-${PYSITELIB}/keyring/py27compat.pyc
-${PYSITELIB}/keyring/py27compat.pyo
-${PYSITELIB}/keyring/py32compat.py
-${PYSITELIB}/keyring/py32compat.pyc
-${PYSITELIB}/keyring/py32compat.pyo
-${PYSITELIB}/keyring/py33compat.py
-${PYSITELIB}/keyring/py33compat.pyc
-${PYSITELIB}/keyring/py33compat.pyo
 ${PYSITELIB}/keyring/tests/__init__.py
 ${PYSITELIB}/keyring/tests/__init__.pyc
 ${PYSITELIB}/keyring/tests/__init__.pyo
@@ -93,6 +84,9 @@ ${PYSITELIB}/keyring/tests/backends/test_kwallet.pyo
 ${PYSITELIB}/keyring/tests/test_backend.py
 ${PYSITELIB}/keyring/tests/test_backend.pyc
 ${PYSITELIB}/keyring/tests/test_backend.pyo
+${PYSITELIB}/keyring/tests/test_errors.py
+${PYSITELIB}/keyring/tests/test_errors.pyc
+${PYSITELIB}/keyring/tests/test_errors.pyo
 ${PYSITELIB}/keyring/tests/util.py
 ${PYSITELIB}/keyring/tests/util.pyc
 ${PYSITELIB}/keyring/tests/util.pyo
