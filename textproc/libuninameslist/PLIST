@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2019/09/02 13:40:05 nia Exp $
+include/uninameslist.h
+lib/libuninameslist.la
+lib/pkgconfig/libuninameslist.pc
+man/man3/libuninameslist.3
