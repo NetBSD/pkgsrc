@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2019/04/05 09:18:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2019/09/02 09:46:19 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -53,6 +53,10 @@ ${PYSITELIB}/Crypto/Cipher/Salsa20.pyc
 ${PYSITELIB}/Crypto/Cipher/Salsa20.pyi
 ${PYSITELIB}/Crypto/Cipher/Salsa20.pyo
 ${PYSITELIB}/Crypto/Cipher/_ARC4.so
+${PYSITELIB}/Crypto/Cipher/_EKSBlowfish.py
+${PYSITELIB}/Crypto/Cipher/_EKSBlowfish.pyc
+${PYSITELIB}/Crypto/Cipher/_EKSBlowfish.pyi
+${PYSITELIB}/Crypto/Cipher/_EKSBlowfish.pyo
 ${PYSITELIB}/Crypto/Cipher/_Salsa20.so
 ${PYSITELIB}/Crypto/Cipher/__init__.py
 ${PYSITELIB}/Crypto/Cipher/__init__.pyc
@@ -113,6 +117,7 @@ ${PYSITELIB}/Crypto/Cipher/_raw_ctr.so
 ${PYSITELIB}/Crypto/Cipher/_raw_des.so
 ${PYSITELIB}/Crypto/Cipher/_raw_des3.so
 ${PYSITELIB}/Crypto/Cipher/_raw_ecb.so
+${PYSITELIB}/Crypto/Cipher/_raw_eksblowfish.so
 ${PYSITELIB}/Crypto/Cipher/_raw_ocb.so
 ${PYSITELIB}/Crypto/Cipher/_raw_ofb.so
 ${PYSITELIB}/Crypto/Hash/BLAKE2b.py
@@ -302,6 +307,10 @@ ${PYSITELIB}/Crypto/PublicKey/__init__.pyc
 ${PYSITELIB}/Crypto/PublicKey/__init__.pyi
 ${PYSITELIB}/Crypto/PublicKey/__init__.pyo
 ${PYSITELIB}/Crypto/PublicKey/_ec_ws.so
+${PYSITELIB}/Crypto/PublicKey/_openssh.py
+${PYSITELIB}/Crypto/PublicKey/_openssh.pyc
+${PYSITELIB}/Crypto/PublicKey/_openssh.pyi
+${PYSITELIB}/Crypto/PublicKey/_openssh.pyo
 ${PYSITELIB}/Crypto/Random/__init__.py
 ${PYSITELIB}/Crypto/Random/__init__.pyc
 ${PYSITELIB}/Crypto/Random/__init__.pyi
@@ -648,8 +657,13 @@ ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_private.pem
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_private_ecparams.pem
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_private_enc_aes128.pem
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_private_enc_aes192.pem
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_private_enc_aes256.pem
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_private_enc_aes256_gcm.pem
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_private_enc_des3.pem
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_private_openssh.pem
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_private_openssh_old.pem
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_private_openssh_pwd.pem
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_private_openssh_pwd_old.pem
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_private_p8.der
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_private_p8.pem
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_private_p8_clear.der
@@ -666,8 +680,13 @@ ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p384_private.der
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p384_private.pem
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p384_private_enc_aes128.pem
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p384_private_enc_aes192.pem
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p384_private_enc_aes256.pem
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p384_private_enc_aes256_gcm.pem
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p384_private_enc_des3.pem
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p384_private_openssh.pem
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p384_private_openssh_old.pem
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p384_private_openssh_pwd.pem
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p384_private_openssh_pwd_old.pem
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p384_private_p8.der
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p384_private_p8.pem
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p384_private_p8_clear.der
@@ -684,8 +703,13 @@ ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p521_private.der
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p521_private.pem
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p521_private_enc_aes128.pem
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p521_private_enc_aes192.pem
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p521_private_enc_aes256.pem
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p521_private_enc_aes256_gcm.pem
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p521_private_enc_des3.pem
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p521_private_openssh.pem
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p521_private_openssh_old.pem
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p521_private_openssh_pwd.pem
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p521_private_openssh_pwd_old.pem
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p521_private_p8.der
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p521_private_p8.pem
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p521_private_p8_clear.der
@@ -706,6 +730,14 @@ ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/openssl_version_p521.txt
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/point-at-infinity.org-P256.txt
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/point-at-infinity.org-P384.txt
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/point-at-infinity.org-P521.txt
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/RSA/gen_rsa_2048.sh
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/RSA/openssl_version.txt
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/RSA/rsa2048_private.pem
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/RSA/rsa2048_private_openssh.pem
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/RSA/rsa2048_private_openssh_old.pem
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/RSA/rsa2048_private_openssh_pwd.pem
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/RSA/rsa2048_private_openssh_pwd_old.pem
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/RSA/rsa2048_public_openssh.txt
 ${PYSITELIB}/Crypto/SelfTest/Random/__init__.py
 ${PYSITELIB}/Crypto/SelfTest/Random/__init__.pyc
 ${PYSITELIB}/Crypto/SelfTest/Random/__init__.pyo
