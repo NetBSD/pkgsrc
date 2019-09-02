@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/04/26 13:13:56 maya Exp $
+# $NetBSD: Makefile,v 1.16 2019/09/02 13:19:59 adam Exp $
 
 DISTNAME=	GNS3-0.8.3.1-src
 PKGNAME=	gns3-0.8.3.1
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	dynamips>=0.2.8rc1:../../emulators/dynamips
 
-PYTHON_VERSIONS_INCOMPATIBLE=    36 37 # not yet ported as of 0.8.3.1
+PYTHON_VERSIONS_ACCEPTED=    27 # not yet ported as of 0.8.3.1
 EGG_NAME=	${DISTNAME:S/-src//}
 REPLACE_PYTHON+= src/GNS3/Dynagen/dynagen.py src/GNS3/Dynagen/confConsole.py
 REPLACE_PYTHON+= src/GNS3/Dynagen/console.py src/GNS3/Dynagen/dynamips_lib.py

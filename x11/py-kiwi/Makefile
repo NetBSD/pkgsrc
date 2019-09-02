@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2019/07/21 22:26:03 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2019/09/02 13:20:16 adam Exp $
 
 DISTNAME=	kiwi-1.9.29
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ LICENSE=	gnu-lgpl-v2.1 # or later
 USE_LANGUAGES=		#none
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-gtk2
+PYTHON_VERSIONS_ACCEPTED=	 27 # py-gtk2
 
 SUBST_CLASSES+=		localedir
 SUBST_STAGE.localedir=	pre-configure

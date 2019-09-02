@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2019/04/26 14:12:47 maya Exp $
+# $NetBSD: Makefile,v 1.44 2019/09/02 13:20:05 adam Exp $
 
 VERSION=	3.2.9
 DISTNAME=	egenix-mx-base-${VERSION}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.egenix.com/files/python/mxDateTime.html
 COMMENT=	Python extension that provides types and conversions for dates
 LICENSE=	egenix-public-license
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37	# not yet ported as of 3.2.9
+PYTHON_VERSIONS_ACCEPTED=	27	# not yet ported as of 3.2.9
 
 REPLACE_PYTHON+=	egenix_mx_base.py
 REPLACE_PYTHON+=	mx/BeeBase/FileLock.py
