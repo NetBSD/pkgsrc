@@ -1,4 +1,4 @@
-# $NetBSD: mysql.buildlink3.mk,v 1.22 2018/02/20 13:21:45 wiz Exp $
+# $NetBSD: mysql.buildlink3.mk,v 1.23 2019/09/02 02:14:58 rillig Exp $
 #
 # This file is included by packages that require some version of the
 # MySQL database client.
@@ -22,6 +22,9 @@
 
 .if !defined(MYSQL_VERSION_MK)
 MYSQL_VERSION_MK=	# defined
+
+BUILD_DEFS+=		MYSQL_VERSION_DEFAULT
+BUILD_DEFS_EFFECTS+=	MYSQL_PKGSRCDIR
 
 _VARGROUPS+=		mysql
 _USER_VARS.mysql=	MYSQL_VERSION_DEFAULT
