@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/04/26 14:12:43 maya Exp $
+# $NetBSD: Makefile,v 1.20 2019/09/02 13:25:49 adam Exp $
 
 DISTNAME=	eventlib-0.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-django>=1.4.1:../../www/py-django
 USE_LANGUAGES=	# none
 
 PY_PATCHPLIST=	yes
-PYTHON_VERSIONS_INCOMPATIBLE+=	36 37	# not yet ported as of 0.1.5
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.1.5
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/eventlib \
