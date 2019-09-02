@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2019/04/26 14:12:40 maya Exp $
+# $NetBSD: Makefile,v 1.51 2019/09/02 13:20:17 adam Exp $
 
 DISTNAME=	gdchart-py-0.6
 PKGNAME=	${PYPKGPREFIX}-gdchart-0.6
@@ -21,7 +21,7 @@ MODULE_FILES=	chart.py gdchart.so
 EXAMPLE_FILES=	test.html test.py CHANGES
 EXAMPLE_DIR=	${PREFIX}/share/examples/${PYPKGPREFIX}-gdchart
 PY_PATCHPLIST=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 0.6
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.6
 
 INSTALLATION_DIRS=	${PYSITELIB:S/^${PREFIX}\///}
 

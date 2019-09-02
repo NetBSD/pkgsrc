@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2019/08/26 17:06:45 rin Exp $
+# $NetBSD: Makefile,v 1.35 2019/09/02 13:20:04 adam Exp $
 
 DISTNAME=	viewvc-1.1.27
 CATEGORIES=	devel www
@@ -11,7 +11,7 @@ LICENSE=	2-clause-bsd
 
 REPLACE_PYTHON=	viewvc-install bin/* bin/cgi/*.cgi lib/*.py
 # https://github.com/viewvc/viewvc/issues/138
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 1.1.27
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 1.1.27
 
 .if !exists(/usr/bin/rlog)
 DEPENDS+=	rcs-[0-9]*:../../devel/rcs
