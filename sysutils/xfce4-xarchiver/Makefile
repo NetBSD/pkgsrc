@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2019/08/31 15:47:55 nia Exp $
+# $NetBSD: Makefile,v 1.44 2019/09/02 16:08:33 nia Exp $
 
 VERSION=	0.5.4.14
 DISTNAME=	xarchiver-${VERSION}
@@ -16,6 +16,8 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	pkg-config perl gmake
 USE_TOOLS+=	intltool msgfmt msgmerge xgettext
 GNU_CONFIGURE=	yes
+
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
