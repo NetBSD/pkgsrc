@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2019/07/09 11:35:14 nia Exp $
+# $NetBSD: Makefile,v 1.23 2019/09/02 09:55:50 adam Exp $
 
-DISTNAME=	amqp-2.5.0
+DISTNAME=	amqp-2.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/amqp/}
@@ -13,6 +13,7 @@ LICENSE=	gnu-lgpl-v2.1
 DEPENDS+=	${PYPKGPREFIX}-vine>=1.1.3:../../devel/py-vine
 TEST_DEPENDS+=	${PYPKGPREFIX}-case>=1.3.1:../../devel/py-case
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.0:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-rerunfailures>=6.0:../../devel/py-test-rerunfailures
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-sugar>=0.9.1:../../devel/py-test-sugar
 
 USE_LANGUAGES=	# none
