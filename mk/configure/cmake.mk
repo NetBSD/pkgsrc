@@ -1,9 +1,9 @@
-# $NetBSD: cmake.mk,v 1.16 2018/04/08 19:11:27 chuck Exp $
+# $NetBSD: cmake.mk,v 1.17 2019/09/02 02:23:03 rillig Exp $
 #
 # This file handles packages that use CMake as their primary build
 # system. For more information about CMake, see http://www.cmake.org/.
 #
-# === Package-settable variables ===
+# Package-settable variables:
 #
 # CMAKE_DEPENDENCIES_REWRITE
 #	A list of files (XXX: variable name) relative to WRKSRC in
