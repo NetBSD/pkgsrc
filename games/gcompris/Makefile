@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2019/07/21 22:24:50 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2019/09/02 13:20:20 adam Exp $
 
 DISTNAME=	gcompris-12.11
 PKGREVISION=	41
@@ -23,7 +23,7 @@ INFO_FILES=		yes
 
 PTHREAD_AUTO_VARS=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-sqlite2, py-gtk2
+PYTHON_VERSIONS_ACCEPTED=	 27 # py-sqlite2, py-gtk2
 
 PKG_SUPPORTED_OPTIONS=	gnet
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcompris

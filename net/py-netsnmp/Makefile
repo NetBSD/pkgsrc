@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/04/26 13:14:09 maya Exp $
+# $NetBSD: Makefile,v 1.8 2019/09/02 13:19:48 adam Exp $
 
 .include "../../net/net-snmp/Makefile.common"
 
@@ -8,7 +8,7 @@ CATEGORIES=     net python
 MAINTAINER=     pkgsrc-users@NetBSD.org
 COMMENT=        Python bindings to extensible SNMP implementation
 
-PYTHON_VERSIONS_INCOMPATIBLE=    36 37
+PYTHON_VERSIONS_ACCEPTED=    27
 
 USE_LANGUAGES=  	c
 EGG_NAME=		netsnmp_python-1.0a1

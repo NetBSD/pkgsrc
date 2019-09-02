@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/04/26 13:14:02 maya Exp $
+# $NetBSD: Makefile,v 1.14 2019/09/02 13:19:45 adam Exp $
 
 DISTNAME=	tegaki-pygtk-0.3.1
 PKGREVISION=	3
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.10:../../x11/py-gtk2
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-gtk2
+PYTHON_VERSIONS_ACCEPTED=	 27 # py-gtk2
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

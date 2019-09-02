@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/04/26 13:13:56 maya Exp $
+# $NetBSD: Makefile,v 1.10 2019/09/02 13:19:59 adam Exp $
 
 PKGREVISION= 1
 .include "Makefile.common"
@@ -9,7 +9,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake pkg-config
 
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # as of 1.0.1
+PYTHON_VERSIONS_ACCEPTED=	 27 # as of 1.0.1
 
 .include "../../lang/python/application.mk"
 

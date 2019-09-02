@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2019/07/21 22:24:32 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2019/09/02 13:19:53 adam Exp $
 
 DISTNAME=	telepathy-farsight-0.0.19
 PKGREVISION=	9
@@ -19,7 +19,7 @@ CFLAGS.SunOS+=	-std=c99 -D_XOPEN_SOURCE=600
 PKGCONFIG_OVERRIDE+=	telepathy-farsight/telepathy-farsight.pc.in
 
 PY_PATCHPLIST=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-gtk2, py-gstreamer0.10
+PYTHON_VERSIONS_ACCEPTED=	 27 # py-gtk2, py-gstreamer0.10
 
 .include "../../lang/python/extension.mk"
 

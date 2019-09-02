@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2019/08/29 10:33:59 wiz Exp $
+# $NetBSD: Makefile,v 1.120 2019/09/02 13:20:14 adam Exp $
 
 DISTNAME=	pygtk-2.24.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pygtk/gtk2/}
@@ -24,7 +24,7 @@ CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
 USE_TOOLS+=	gmake pkg-config
 
 PY_PATCHPLIST=	YES
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 2.24.0
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 2.24.0
 
 REPLACE_PYTHON+=	examples/atk/atk-demo.py
 REPLACE_PYTHON+=	examples/glade/autoconnect.py

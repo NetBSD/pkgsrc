@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/04/26 13:13:51 maya Exp $
+# $NetBSD: Makefile,v 1.10 2019/09/02 13:19:39 adam Exp $
 
 DISTNAME=	danielj7-hg-fastimport-d41a42894dfa
 PKGNAME=	${PYPKGPREFIX}-hg-fastimport-20170211
@@ -19,7 +19,7 @@ USE_LANGUAGES=	# none
 
 INSTALLATION_DIRS+=	${PYSITELIB}/hgfastimport share/doc/py-hg-fastimport
 
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-mercurial
+PYTHON_VERSIONS_ACCEPTED=	 27 # py-mercurial
 PY_PATCHPLIST=			yes
 
 do-build:
