@@ -1,10 +1,10 @@
-# $NetBSD: mpi.buildlink3.mk,v 1.4 2019/04/20 16:32:42 rillig Exp $
+# $NetBSD: mpi.buildlink3.mk,v 1.5 2019/09/02 02:23:02 rillig Exp $
 #
 # This Makefile fragment is meant to be included by packages
 # that use any MPI implementation instead of one particular one.
 # The available MPI implementations are "mpich" and "openmpi".
 #
-# === User-settable variables ===
+# User-settable variables:
 #
 # MPI_TYPE
 #	This value represents the type of MPI we wish to use on the system.

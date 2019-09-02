@@ -1,4 +1,4 @@
-# $NetBSD: terminfo.buildlink3.mk,v 1.7 2016/04/11 04:22:34 dbj Exp $
+# $NetBSD: terminfo.buildlink3.mk,v 1.8 2019/09/02 02:23:02 rillig Exp $
 #
 # This Makefile fragment is meant to be included by packages that require
 # any terminfo implementation instead of one particular one.  The available
@@ -9,7 +9,7 @@
 # directly include the appropriate buildlink3.mk instead of this file in
 # the package Makefile.
 #
-# === User-settable variables ===
+# User-settable variables:
 #
 # TERMINFO_DEFAULT
 #	This value represents the type of terminfo we wish to use on the
@@ -19,7 +19,7 @@
 #	Possible: terminfo, ncurses, pdcurses
 #	Default: (depends)
 #
-# === Variables set by this file ===
+# System-defined variables:
 #
 # TERMINFO_TYPE
 #	The name of the selected terminfo implementation.
