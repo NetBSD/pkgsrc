@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2019/07/21 22:24:45 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2019/09/02 13:19:57 adam Exp $
 
 DISTNAME=	zim-0.59
 PKGREVISION=	17
@@ -19,7 +19,7 @@ DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 USE_LANGUAGES=	# none
 
 REPLACE_PYTHON=	${WRKSRC}/zim.py
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # py-gtk2
+PYTHON_VERSIONS_ACCEPTED=	 27 # py-gtk2
 
 SUBST_CLASSES+=		data-path
 SUBST_STAGE.data-path=	pre-configure

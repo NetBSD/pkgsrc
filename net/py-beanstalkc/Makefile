@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/04/26 13:14:08 maya Exp $
+# $NetBSD: Makefile,v 1.10 2019/09/02 13:19:51 adam Exp $
 
 DISTNAME=	beanstalkc-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	apache-2.0
 USE_LANGUAGES=	# none
 
 REPLACE_PYTHON+=		beanstalkc.py
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37
+PYTHON_VERSIONS_ACCEPTED=	 27
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

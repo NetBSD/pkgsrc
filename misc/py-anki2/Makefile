@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2019/04/26 14:12:42 maya Exp $
+# $NetBSD: Makefile,v 1.48 2019/09/02 13:19:44 adam Exp $
 
 DISTNAME=	anki-2.0.52-source
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:C/anki/anki2/:C/-source//}
@@ -22,7 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-source//}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 2.0.21
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 2.0.21
 
 .include "options.mk"
 

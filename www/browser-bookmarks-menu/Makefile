@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2019/07/21 22:25:53 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2019/09/02 13:20:02 adam Exp $
 
 DISTNAME=	browser-bookmarks-menu-0.6
 PKGREVISION=	43
@@ -11,7 +11,7 @@ COMMENT=	Easy access to web bookmarks through a GNOME Panel Applet
 
 NO_BUILD=	yes
 REPLACE_PYTHON=	browser-bookmarks-menu.py
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-ORBit via py-gnome2
+PYTHON_VERSIONS_ACCEPTED=	27 # py-ORBit via py-gnome2
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure

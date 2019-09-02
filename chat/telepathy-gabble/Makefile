@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2019/07/20 22:46:11 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2019/09/02 13:19:53 adam Exp $
 
 DISTNAME=	telepathy-gabble-0.18.3
 PKGREVISION=	16
@@ -18,7 +18,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 CONFIGURE_ENV+=	UUID_CFLAGS=" " UUID_LIBS=" "
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 0.11.10
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.11.10
 REPLACE_PYTHON+=	plugins/telepathy-gabble-xmpp-console
 
 .include "../../mk/compiler.mk"

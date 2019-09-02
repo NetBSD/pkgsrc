@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/04/26 13:13:49 maya Exp $
+# $NetBSD: Makefile,v 1.20 2019/09/02 13:19:40 adam Exp $
 
 GIT_VERSION=	20161117.940a15ee3f1c89f193cb4c19373b3f6e9ad15b95
 DIST_VERSION=	0.1
@@ -12,7 +12,7 @@ HOMEPAGE=	https://gyp.gsrc.io/
 COMMENT=	GYP can Generate Your Projects
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_INCOMPATIBLE=   36 37 # not yet ported as of 0.1pre20161117.940a15ee3f1c89f193cb4c19373b3f6e9ad15b95
+PYTHON_VERSIONS_ACCEPTED=   27 # not yet ported as of 0.1pre20161117.940a15ee3f1c89f193cb4c19373b3f6e9ad15b95
 EGG_NAME=	gyp-${DIST_VERSION}
 
 WRKSRC=		${WRKDIR}/gyp
