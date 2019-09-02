@@ -1,18 +1,22 @@
-$NetBSD: patch-ac,v 1.2 2000/07/10 18:26:54 tron Exp $
+$NetBSD: patch-ac,v 1.3 2019/09/02 21:41:40 nia Exp $
 
---- sys/bsd/fileio.c.orig	Sun Jul  3 10:50:24 1988
-+++ sys/bsd/fileio.c	Wed May 31 16:38:11 2000
-@@ -2,6 +2,9 @@
+--- sys/bsd/fileio.c.orig	1988-07-03 17:50:24.000000000 +0000
++++ sys/bsd/fileio.c
+@@ -2,15 +2,25 @@
   *		bsd (4.2, others?), Sun (3.2, ?) and Ultrix-32 (?) file I/O.
   */
  #include	"def.h"
 +#include <unistd.h>    /* refling added this per compiler */
++#include <stdlib.h>
++#include <string.h>
 +#include <sys/types.h>
 +#include <sys/stat.h>
  
  static	FILE	*ffp;
- extern	char	*getenv(), *strncpy();
-@@ -11,6 +14,12 @@
+-extern	char	*getenv(), *strncpy();
+ char	*adjustname();
+ 
+ /*
   * Open a file for reading.
   */
  ffropen(fn) char *fn; {
@@ -25,7 +29,7 @@ $NetBSD: patch-ac,v 1.2 2000/07/10 18:26:54 tron Exp $
  	if ((ffp=fopen(fn, "r")) == NULL)
  		return (FIOFNF);
  	return (FIOSUC);
-@@ -22,6 +31,12 @@
+@@ -22,6 +32,12 @@ ffropen(fn) char *fn; {
   * FALSE on error (cannot create).
   */
  ffwopen(fn) char *fn; {
@@ -38,7 +42,7 @@ $NetBSD: patch-ac,v 1.2 2000/07/10 18:26:54 tron Exp $
  	if ((ffp=fopen(fn, "w")) == NULL) {
  		ewprintf("Cannot open file for writing");
  		return (FIOERR);
-@@ -276,7 +291,7 @@
+@@ -276,7 +292,7 @@ char *suffix;
  	if ((file = getenv("HOME")) == NULL) goto notfound;
  	if (strlen(file)+7 >= NFILEN - 1) goto notfound;
  	(VOID) strcpy(home, file);
@@ -47,7 +51,7 @@ $NetBSD: patch-ac,v 1.2 2000/07/10 18:26:54 tron Exp $
  	if (suffix != NULL) {
  		(VOID) strcat(home, "-");
  		(VOID) strcat(home, suffix);
-@@ -295,6 +310,18 @@
+@@ -295,6 +311,18 @@ notfound:
  	if (access(file, F_OK ) == 0) return file;
  #endif
  
@@ -66,7 +70,7 @@ $NetBSD: patch-ac,v 1.2 2000/07/10 18:26:54 tron Exp $
  	return NULL;
  }
  #endif
-@@ -318,7 +345,8 @@
+@@ -318,7 +346,8 @@ char *frname, *toname;
  	execve("cp", eargv, (char **)NULL);
  	_exit(1);	/* shouldn't happen */
      }
