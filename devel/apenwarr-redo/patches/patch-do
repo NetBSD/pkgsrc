@@ -1,4 +1,4 @@
-$NetBSD: patch-do,v 1.2 2019/08/29 10:14:03 schmonz Exp $
+$NetBSD: patch-do,v 1.3 2019/09/02 18:20:50 schmonz Exp $
 
 Avoid spurious output.
 Run self-test verbosely, to try to get more info from failing bulk builds.
@@ -19,7 +19,7 @@ Run self-test verbosely, to try to get more info from failing bulk builds.
  build() {
  	./minimal/do -c bin/all || die "failed to compile redo."
 -	bin/redo bin/all || die "redo failed self test."
-+	bin/redo -vv bin/all || die "redo failed self test."
++	bin/redo -vv -x bin/all || die "redo failed self test."
  }
  
  clean() {
