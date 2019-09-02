@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2019/06/08 10:40:55 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2019/09/02 08:55:08 christos Exp $
 #
 
-DISTNAME=	jove4.16.0.70
+DISTNAME=	jove4.16.0.74
 PKGNAME=	${DISTNAME:S/jove/jove-/}
 CATEGORIES=	editors
-MASTER_SITES=	ftp://ftp.cs.toronto.edu/pub/hugh/jove-dev/
+MASTER_SITES=	ftp://ftp.cs.toronto.edu/pub/hugh/jove-dev/experimental/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
