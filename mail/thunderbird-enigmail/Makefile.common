@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2019/07/20 22:52:49 wiz Exp $
+# $NetBSD: Makefile.common,v 1.26 2019/09/02 13:19:57 adam Exp $
 #
 # used by mail/thunderbird-enigmail/Makefile
 # used by mail/seamonkey-enigmail/Makefile
@@ -25,7 +25,7 @@ DISTINFO_FILE=	${.CURDIR}/../../mail/thunderbird-enigmail/distinfo
 REPLACE_PERL+=	util/fixlang.pl
 REPLACE_PERL+=	util/make-lang-xpi.pl
 
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37 # as of 1.8.2
+PYTHON_VERSIONS_ACCEPTED=	 27 # as of 1.8.2
 REPLACE_PYTHON+=	util/checkFiles.py
 REPLACE_PYTHON+=	util/header.py
 REPLACE_PYTHON+=	util/typelib.py

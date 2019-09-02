@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2019/08/11 13:22:35 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2019/09/02 13:20:21 adam Exp $
 
 DISTNAME=	gnome-packagekit-0.4.0
 PKGREVISION=	61
@@ -18,7 +18,7 @@ USE_PKGLOCALEDIR=	yes
 GCONF_SCHEMAS+=	gnome-packagekit.schemas
 
 PY_PATCHPLIST=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 0.4.0
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.4.0
 
 # needed for gnome-packagekit-0.4 and gtk2-2.20 -- remove on next update
 BUILDLINK_TRANSFORM+=		rm:-DG_DISABLE_DEPRECATED

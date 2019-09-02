@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2019/04/26 13:13:49 maya Exp $
+# $NetBSD: options.mk,v 1.4 2019/09/02 13:19:41 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gdb
 PKG_SUPPORTED_OPTIONS=	python
@@ -8,6 +8,6 @@ PKG_SUGGESTED_OPTIONS=	python
 
 .if !empty(PKG_OPTIONS:Mpython)
 CONFIGURE_ARGS+=	--with-python=${PYTHONBIN}
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37
+PYTHON_VERSIONS_ACCEPTED=	 27
 .include "../../lang/python/application.mk"
 .endif
