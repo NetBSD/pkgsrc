@@ -1,10 +1,10 @@
-# $NetBSD: unprivileged.mk,v 1.22 2012/04/21 19:29:47 cheusov Exp $
+# $NetBSD: unprivileged.mk,v 1.23 2019/09/02 02:23:02 rillig Exp $
 #
 # This file collects definitions that are useful when using pkgsrc as an
 # unprivileged (non-root) user. It is included automatically by the
 # pkgsrc infrastructure.
 #
-# === User-settable variables ===
+# User-settable variables:
 #
 # UNPRIVILEGED
 #	Whether to build packages as unprivileged user.
@@ -34,7 +34,7 @@
 #       Default: The complete group membership of the user building
 #       the package
 #
-# === Package-settable variables ===
+# Package-settable variables:
 #
 # PKG_USERS_VARS
 #	A list of variables that hold bare user names, e.g APACHE_USER, etc.

@@ -1,11 +1,11 @@
-# $NetBSD: termcap.buildlink3.mk,v 1.12 2018/12/20 17:08:27 rillig Exp $
+# $NetBSD: termcap.buildlink3.mk,v 1.13 2019/09/02 02:23:02 rillig Exp $
 #
 # This Makefile fragment is meant to be included by packages that require
 # a termcap implementation that supports the basic termcap functions:
 #
 #	tgetent, tgetstr, tgetflag, tgetnum, tgoto, tputs
 #
-# === Variables set by this file ===
+# System-defined variables:
 #
 # TERMCAP_TYPE
 #	The name of the selected termcap implementation.
