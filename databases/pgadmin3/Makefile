@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2019/07/21 22:24:35 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2019/09/03 13:19:12 nia Exp $
 
 DISTNAME=	pgadmin3-1.22.2
 PKGREVISION=	3
@@ -10,7 +10,7 @@ HOMEPAGE=	https://www.pgadmin.org/
 COMMENT=	Graphical PostgreSQL client and administration tool
 LICENSE=	postgresql-license
 
-USE_LANGUAGES=		c99 c++03
+USE_LANGUAGES=		c99 c++11
 USE_TOOLS+=		echo gmake sed
 GNU_CONFIGURE=		yes
 
