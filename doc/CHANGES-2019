@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3741 2019/09/02 14:45:49 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3742 2019/09/03 12:11:47 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6181,3 +6181,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/libupnp to 1.8.4 [nia 2019-09-02]
 	Added textproc/libuninameslist version 20190701 [nia 2019-09-02]
 	Updated fonts/fontforge to 20190801 [nia 2019-09-02]
+	Updated fonts/spleen to 1.1.0 [fcambus 2019-09-03]
