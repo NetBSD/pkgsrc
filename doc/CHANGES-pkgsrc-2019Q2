@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q2,v 1.1.2.9 2019/08/23 10:31:43 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q2,v 1.1.2.10 2019/09/03 10:37:57 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q2 branch:
 
@@ -131,4 +131,13 @@ devel/SDL2: security fix
 
 Pullup ticket #6031 - requested by leot
 net/youtube-dl: update
+
+Pullup ticket #6033 - requested by nia
+chat/irssi: security fix
+
+Pullup ticket #6034 - requested by nia
+audio/mpg123: security fix
+
+Pullup ticket #6035 - requested by nia
+security/libgcrypt: security fix
 
