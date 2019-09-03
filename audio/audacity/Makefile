@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2019/07/21 22:24:22 wiz Exp $
+# $NetBSD: Makefile,v 1.123 2019/09/03 01:26:07 mrg Exp $
 
 DISTNAME=		audacity-2.3.2
 PKGREVISION=		1
@@ -101,7 +101,9 @@ post-install:
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.if ${OPSYS} == "Linux"
 .include "../../audio/alsa-lib/buildlink3.mk"
+.endif
 .include "../../audio/lilv/buildlink3.mk"
 .include "../../audio/lv2/buildlink3.mk"
 .include "../../audio/soundtouch/buildlink3.mk"
