@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2019/09/02 02:36:22 fox Exp $
+$NetBSD: distinfo,v 1.3 2019/09/03 15:12:22 fox Exp $
 
 SHA1 (bat/adler32-1.0.3.crate) = d72a6705a1b94eb48c0fc7bd8ab357d4eb9c6ee6
 RMD160 (bat/adler32-1.0.3.crate) = 2860e381b2c52325b1b8befb3b6db0727f0eb66b
@@ -16,10 +16,10 @@ SHA1 (bat/ansi_term-0.11.0.crate) = 0c6f984f171ee890100780e038def5db2a8b7ab8
 RMD160 (bat/ansi_term-0.11.0.crate) = 0bc10d826fc7a658ac1026dac333cc54f26f7c5b
 SHA512 (bat/ansi_term-0.11.0.crate) = a637466a380748f939b3af090b8c0333f35581925bc03f4dda9b3f95d338836403cf5487ae3af9ff68f8245a837f8ab061aabe57a126a6a2c20f2e972c77d1fa
 Size (bat/ansi_term-0.11.0.crate) = 17087 bytes
-SHA1 (bat/ansi_term-0.12.0.crate) = 1d2e4133b6cae1fa9beef22fe88ee837f26fd059
-RMD160 (bat/ansi_term-0.12.0.crate) = 1aa8900ccdcc9164a690dad0d330f9fad771cf7d
-SHA512 (bat/ansi_term-0.12.0.crate) = ca41f0a8ff75fdd5a1033589d95a52e89bbc7bc8a23aba161cb8f7d32f85d909171483917dfcfe7db2b65b00221e026380286fbd2baa735666b6793a1ecb5d7f
-Size (bat/ansi_term-0.12.0.crate) = 22762 bytes
+SHA1 (bat/ansi_term-0.12.1.crate) = fa6af8a593898105594dfb8b057dcbfdf30648a2
+RMD160 (bat/ansi_term-0.12.1.crate) = 747f8ed27409243576d586c9957d9e06837f27bf
+SHA512 (bat/ansi_term-0.12.1.crate) = b840e28b3e7700689a69a39659b1e066560078dd4a58326b91a028915819e7af883399ee53e920db68fd974c58d35bb1ddf8d427af5937d5f696f57c4376b671
+Size (bat/ansi_term-0.12.1.crate) = 24838 bytes
 SHA1 (bat/arrayref-0.3.5.crate) = 490c293ae3caefade4c64142385475427492cb45
 RMD160 (bat/arrayref-0.3.5.crate) = 744c86c6630480925e1437e59930b81ebea62e77
 SHA512 (bat/arrayref-0.3.5.crate) = 6417e092a896e118a69e219f4e40f94756748986769e24ac233ea33a3a0a6e15fbebec5f4d6dc3592da7eb5b2e572cb28ad330838875323c6e925275b5a3f5b8
@@ -52,10 +52,10 @@ SHA1 (bat/base64-0.10.1.crate) = f4e4454a55395a4dd85f08e054dbe8a943f334df
 RMD160 (bat/base64-0.10.1.crate) = d026e10544f0490980d7007105ac5e4d6da1f6f9
 SHA512 (bat/base64-0.10.1.crate) = 674a8cbee95a41f755499a4e3bb93ebd3f80140c3e8e2d44a0b73890ee423754e7ba8abcd92132683cd54501ff5d14438d023a202eaf12776aecbe36df9e5535
 Size (bat/base64-0.10.1.crate) = 41988 bytes
-SHA1 (bat/bat-0.12.0.tar.gz) = fa40799cd269ddb9834beed60aabf0ce429a6b0f
-RMD160 (bat/bat-0.12.0.tar.gz) = f79eb54efba42baeb8310a628a4f041aa9ecf6c5
-SHA512 (bat/bat-0.12.0.tar.gz) = 94726f51675d513a3fa7e36f87f2e5bed3040960f53b0d6e316afd4e2014c96b27c93956fb092d69f35bb7f676886a939d61feb26810d4c57218501e7795e256
-Size (bat/bat-0.12.0.tar.gz) = 874081 bytes
+SHA1 (bat/bat-0.12.1.tar.gz) = 06f504456f3ac8e29c982d044cdbd1d8b614e9f1
+RMD160 (bat/bat-0.12.1.tar.gz) = e1bf80945494850a22bc0cbedb10e2a771a49767
+SHA512 (bat/bat-0.12.1.tar.gz) = 74ec162065f1b6f4b1363f107600a7364ba509b5338601b89bf1cd77d6f8290028d87fbf5e2938c6d26f782b0cc55da4161b69183e6748a46bf3644e5e2524b0
+Size (bat/bat-0.12.1.tar.gz) = 874135 bytes
 SHA1 (bat/bincode-1.1.4.crate) = 078c98225314b25fa4f84ead99266e43fd253960
 RMD160 (bat/bincode-1.1.4.crate) = 448ccb93f5f10eb8dff14738c5a04dd89c6fe94e
 SHA512 (bat/bincode-1.1.4.crate) = 31f32a3dfcb76f113b2e993938b4c708d98d3c75efa9414d74168b2ef8af544bfe64fe39dbc4ea556842ec11100c56f14bbad15aaab919c67a7c5be1aa584f28

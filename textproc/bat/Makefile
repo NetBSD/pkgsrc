@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2019/09/02 02:36:22 fox Exp $
+# $NetBSD: Makefile,v 1.3 2019/09/03 15:12:22 fox Exp $
 
-DISTNAME=	bat-0.12.0
+DISTNAME=	bat-0.12.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sharkdp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -18,7 +18,7 @@ CARGO_CRATE_DEPENDS+=	adler32-1.0.3
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.6
 CARGO_CRATE_DEPENDS+=	ansi_colours-1.0.1
 CARGO_CRATE_DEPENDS+=	ansi_term-0.11.0
-CARGO_CRATE_DEPENDS+=	ansi_term-0.12.0
+CARGO_CRATE_DEPENDS+=	ansi_term-0.12.1
 CARGO_CRATE_DEPENDS+=	arrayref-0.3.5
 CARGO_CRATE_DEPENDS+=	arrayvec-0.4.11
 CARGO_CRATE_DEPENDS+=	assert_cmd-0.11.1
