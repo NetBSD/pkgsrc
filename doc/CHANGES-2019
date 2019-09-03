@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3743 2019/09/03 13:21:04 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.3744 2019/09/03 15:13:09 fox Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6183,3 +6183,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated fonts/fontforge to 20190801 [nia 2019-09-02]
 	Updated fonts/spleen to 1.1.0 [fcambus 2019-09-03]
 	Updated lang/guile22 to 2.2.6nb1 [gutteridge 2019-09-03]
+	Updated textproc/bat to 0.12.1 [fox 2019-09-03]
