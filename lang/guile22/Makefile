@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2019/07/20 21:01:19 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2019/09/03 13:20:06 gutteridge Exp $
 
+PKGREVISION=	1
 DISTNAME=	guile-2.2.6
 PKGNAME=	${DISTNAME:S/guile/guile22/}
 CATEGORIES=	lang
@@ -60,6 +61,14 @@ GUILE_LIBNAME.*=	so.22.8.1
 
 PLIST_SUBST+=		GUILE_LIBNAME=${GUILE_LIBNAME}
 PRINT_PLIST_AWK+=	{gsub(/${GUILE_LIBNAME}/, "$${GUILE_LIBNAME}");}
+
+.include "../../mk/bsd.prefs.mk"
+
+# If not Linux+glibc or Darwin, an extra charset.alias file is installed
+PLIST_VARS+=	charset
+.if (${OPSYS} != "Linux" || !defined(GLIBC_VERSION)) && ${OPSYS} != "Darwin"
+PLIST.charset=	yes
+.endif
 
 # https://debbugs.gnu.org/cgi/bugreport.cgi?bug=24002
 post-configure:
