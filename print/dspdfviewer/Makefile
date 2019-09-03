@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/08/22 12:23:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2019/09/03 13:29:53 nia Exp $
 
 DISTNAME=	dspdfviewer-1.15.1
 PKGREVISION=	11
@@ -21,11 +21,7 @@ CONFIGURE_DIRS=		build
 CMAKE_ARG_PATH=		..
 BUILD_MAKE_FLAGS+=	VERBOSE=1
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "FreeBSD"
-CFLAGS+=		-Wno-error=undefined-func-template
-.endif
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 pre-configure:
 	mkdir -p ${WRKSRC}/build
