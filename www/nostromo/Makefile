@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/02/11 13:56:21 ast Exp $
+# $NetBSD: Makefile,v 1.2 2019/09/03 12:02:48 nia Exp $
 
 DISTNAME=	nostromo-1.9.6
 PKGREVISION=	1
@@ -39,5 +39,7 @@ SUBST_SED.nostromo+=	-e 's,install -c -o root -g bin -m 644,${INSTALL_DATA},g'
 SUBST_SED.nostromo+=	-e 's,/usr/local,${DESTDIR}${PREFIX},g'
 SUBST_SED.nostromo+=	-e 's,/usr/share/man,${DESTDIR}${PREFIX}/${PKGMANDIR},g'
 SUBST_SED.nostromo+=	-e 's,/var/nostromo,${DESTDIR}${PREFIX}/${EGDIR},g'
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../mk/bsd.pkg.mk"
