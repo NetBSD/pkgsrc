@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/08/22 12:23:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2019/09/03 20:27:02 adam Exp $
 
 DISTNAME=	widelands-build20
 PKGNAME=	widelands-20
@@ -35,8 +35,15 @@ PYTHON_FOR_BUILD_ONLY=	yes
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/doc/widelands
 
+.include "../../mk/bsd.prefs.mk"
+
+# XXX: The following trick might not work everywhere!
+#      Some systems, like Darwin, do not provide pgettext(),
+#      and devel/gettext-lib does not provide it either.
 pre-configure:
+.if ${OPSYS} != "Darwin"
 	${PRINTF} '#include <libintl.h>\n' > ${WRKSRC}/src/third_party/gettext/gettext.h
+.endif
 	${MKDIR} ${WRKSRC}/build
 
 post-install:
@@ -57,7 +64,6 @@ post-install:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/SDL2_ttf/buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
