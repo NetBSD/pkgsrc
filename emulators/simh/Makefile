@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2019/06/06 13:02:29 maya Exp $
+# $NetBSD: Makefile,v 1.52 2019/09/03 09:35:18 maya Exp $
 
 DISTNAME=	simh-4.0.0
 PKGNAME=	simh-4.0.0.20180919
@@ -34,7 +34,7 @@ CFLAGS+=	-fforce-addr
 CFLAGS.SunOS+=	-DBSD_COMP
 LDFLAGS.SunOS+=	-lm
 
-LDFLAGS.Linux+=	-lm -pthread
+LDFLAGS.Linux+=	-lm -pthread -lrt
 
 INSTALLATION_DIRS=	bin share/simh share/doc/simh
 
