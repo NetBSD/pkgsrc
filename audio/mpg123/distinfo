@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.48.10.1 2019/08/09 13:11:04 bsiegert Exp $
+$NetBSD: distinfo,v 1.48.10.2 2019/09/03 09:33:05 bsiegert Exp $
 
-SHA1 (mpg123-1.25.11.tar.bz2) = 25f3e8f8599d3ffc480858799ea6f8620f48543d
-RMD160 (mpg123-1.25.11.tar.bz2) = b41bf43a4773b07286c5622df53f8f15610eb9e6
-SHA512 (mpg123-1.25.11.tar.bz2) = 986338d0f4829ec9e40990cb384746c7abfa80d3b3d5656b6dda73d03e2441c1f28ffbe7f3f82b0008a1c4ebcfa07aeffb493e95f13f7d04cbc818a09f1008ed
-Size (mpg123-1.25.11.tar.bz2) = 909478 bytes
+SHA1 (mpg123-1.25.12.tar.bz2) = 4ece1ec124a6ca085e1d68f7ede6d5619fc587ff
+RMD160 (mpg123-1.25.12.tar.bz2) = d6bb641bc56c7e5f83e7658c044b231b94f4886c
+SHA512 (mpg123-1.25.12.tar.bz2) = fa3c719c68dbe45b265fd7677d0932b07f6a14e7ffe365ede965ff1637e655c4b57c86f7e4cd60cace7df5fcc93d48e0d44f082931394b7c6ef19f5d11638eff
+Size (mpg123-1.25.12.tar.bz2) = 910149 bytes
 SHA1 (patch-Makefile.in) = e1b529e9468994e25c2567df7e64a2905b0cf529
 SHA1 (patch-aa) = 4b2761219dd8fb92079d7f96872e56beb702696a
 SHA1 (patch-ad) = f07b637c3fc1d3ea0426013fc25bca8e3aecba56
