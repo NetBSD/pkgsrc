@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.81 2019/01/09 14:19:26 martin Exp $
+$NetBSD: distinfo,v 1.81.4.1 2019/09/03 10:37:15 bsiegert Exp $
 
-SHA1 (libgcrypt-1.8.4.tar.bz2) = 4a8ef9db6922f3a31992aca5640b4198a69b58fc
-RMD160 (libgcrypt-1.8.4.tar.bz2) = 57a23952989b6a852d0654218206876c4a878087
-SHA512 (libgcrypt-1.8.4.tar.bz2) = b831fc337eb14806897e224b0d1e78d1f8e9db91dffa818a015a4aa104144e2d971e5a855904907ee2bb9990a9d526de32d6787e1cae98e28a65c3258b2b1ea1
-Size (libgcrypt-1.8.4.tar.bz2) = 2990108 bytes
+SHA1 (libgcrypt-1.8.5.tar.bz2) = 2d8781e92f88706707a1e76fb628b499ad538a30
+RMD160 (libgcrypt-1.8.5.tar.bz2) = e41614adce71ef149855b3ae97110f24c0ab4bfe
+SHA512 (libgcrypt-1.8.5.tar.bz2) = b55e16e838d1b1208e7673366971ae7c0f9c1c79e042f41c03d14ed74c5e387fa69ea81d5414ffda3d2b4f82ea5467fe13b00115727e257db22808cf351bde89
+Size (libgcrypt-1.8.5.tar.bz2) = 2991291 bytes
 SHA1 (patch-aa) = 60b3f4453b217ed8879a2ffd8d485c0195ffb5f8
 SHA1 (patch-cipher_camellia-aarch64.S) = 3175085651b737e1339e34241b6107898e2cf4a7
 SHA1 (patch-cipher_rijndael-arm.S) = ef3cb7f481022440780eb48ae31cbfad0a3ec115
