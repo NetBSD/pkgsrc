@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.78 2019/09/03 19:11:58 adam Exp $
+# $NetBSD: Makefile,v 1.79 2019/09/04 08:15:32 taca Exp $
 
 DISTNAME=	samba-4.10.8
 CATEGORIES=	net
-MASTER_SITES=	http://download.samba.org/pub/samba/stable/
-
+MASTER_SITES=	https://download.samba.org/pub/samba/stable/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.samba.org/
 COMMENT=	SMB/CIFS protocol server suite
