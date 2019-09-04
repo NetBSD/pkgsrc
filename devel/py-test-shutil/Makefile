@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2019/01/28 08:41:12 adam Exp $
+# $NetBSD: Makefile,v 1.4 2019/09/04 07:57:08 adam Exp $
 
-DISTNAME=	pytest-shutil-1.4.0
-PKGREVISION=	1
+DISTNAME=	pytest-shutil-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-shutil/}
