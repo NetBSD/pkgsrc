@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.59 2018/11/14 23:12:51 kleink Exp $
+# $NetBSD: buildlink3.mk,v 1.60 2019/09/04 13:19:33 nia Exp $
 
 BUILDLINK_TREE+=	cairo
 
@@ -21,7 +21,6 @@ pkgbase := cairo
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.cairo:Mx11)
-.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .endif
