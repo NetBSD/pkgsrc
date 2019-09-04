@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3752 2019/09/04 17:43:26 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3753 2019/09/04 20:08:03 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6194,3 +6194,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/get_iplayer to 3.22 [nia 2019-09-04]
 	Updated sysutils/gentoo to 0.20.7 [nia 2019-09-04]
 	Updated games/lbreakout2 to 2.6.5 [nia 2019-09-04]
+	Updated www/seamonkey to 2.49.5 [nia 2019-09-04]
