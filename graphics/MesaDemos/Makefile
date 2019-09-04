@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2019/08/30 17:12:19 nia Exp $
+# $NetBSD: Makefile,v 1.47 2019/09/04 11:31:34 nia Exp $
 
 DISTNAME=	mesa-demos-8.4.0
 PKGNAME=	${DISTNAME:S/mesa-demos/MesaDemos/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	https://mesa.freedesktop.org/archive/demos/
 EXTRACT_SUFX=	.tar.bz2
@@ -27,14 +27,22 @@ SUBST_SED.bitmap+=	-e 's/glxgears$$(EXEEXT)/glxgears_mesademos$$(EXEEXT)/g'
 SUBST_SED.bitmap+=	-e 's/glxinfo$$(EXEEXT)/glxinfo_mesademos$$(EXEEXT)/g'
 
 # Mesa library features.
-PLIST_VARS+=		egl osmesa
+PLIST_VARS+=		egl glesv2 osmesa
+
+# Appended in options.mk.
+EGL_PROGS+=		eglkms peglgears
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .if !empty(MESALIB_SUPPORTS_EGL:M[Yy][Ee][Ss])
 PLIST.egl=		yes
-CONFIGURE_ARGS+=	--enable-egl
+.  if !empty(MESALIB_SUPPORTS_GLESv2:M[Yy][Ee][Ss])
+PLIST.glesv2=		yes
+.  else
+CONFIGURE_ARGS+=	--disable-gles2
+.  endif
 # eglfbdev.c:43:10: fatal error: linux/kd.h: No such file or directory
 CONFIGURE_ARGS+=	--disable-gles1
+CONFIGURE_ARGS+=	--enable-egl
 .else
 CONFIGURE_ARGS+=	--disable-egl
 .endif
@@ -47,6 +55,14 @@ CONFIGURE_ARGS+=	--disable-osmesa
 .endif
 
 .include "options.mk"
+
+post-install:
+.if !empty(MESALIB_SUPPORTS_EGL:M[Yy][Ee][Ss])
+.  for prog in ${EGL_PROGS}
+	${INSTALL_PROGRAM} ${WRKSRC}/src/egl/opengl/${prog} ${DESTDIR}${PREFIX}/bin
+.  endfor
+.endif
+
 .include "../../graphics/freeglut/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
