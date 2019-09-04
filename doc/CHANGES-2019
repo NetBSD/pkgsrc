@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3746 2019/09/04 07:57:48 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3747 2019/09/04 08:32:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6187,3 +6187,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/samba4 to 4.10.8 [adam 2019-09-03]
 	Updated devel/py-setuptools to 41.2.0 [adam 2019-09-04]
 	Updated devel/py-test-shutil to 1.7.0 [adam 2019-09-04]
+	Updated www/py-django to 1.11.24 [adam 2019-09-04]
+	Updated www/py-django2 to 2.2.5 [adam 2019-09-04]
