@@ -1,10 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2019/07/18 16:04:43 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2019/09/04 11:58:54 tnn Exp $
 
 Don't use hardcoded paths for finding libcrypto and libssl.
 
---- CMakeLists.txt.orig	2019-05-09 16:52:59.000000000 +0000
+--- CMakeLists.txt.orig	2019-09-03 08:41:49.000000000 +0000
 +++ CMakeLists.txt
-@@ -279,32 +279,7 @@ endif()
+@@ -279,36 +279,7 @@ endif()
  #
  # OpenSSL
  #
@@ -18,12 +18,16 @@ Don't use hardcoded paths for finding libcrypto and libssl.
 -
 -    include_directories (BEFORE SYSTEM ${OPENSSL_ROOT}/include)
 -    set (OPENSSL_LIBS
--        ${OPENSSL_ROOT}/lib/libeay32.lib
--        ${OPENSSL_ROOT}/lib/ssleay32.lib
+-        ${OPENSSL_ROOT}/lib/libssl.lib
+-        ${OPENSSL_ROOT}/lib/libcrypto.lib
 -    )
 -elseif (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
--    set (OPENSSL_ROOT /usr/local/opt/openssl)
--
+-    #Try use 1.1 for the latest features. otherwise use the default
+-    IF(EXISTS /usr/local/opt/openssl@1.1)
+-        set (OPENSSL_ROOT /usr/local/opt/openssl@1.1)
+-    else()
+-        set (OPENSSL_ROOT /usr/local/opt/openssl)
+-    endif()
 -    include_directories (BEFORE SYSTEM ${OPENSSL_ROOT}/include)
 -    set (OPENSSL_LIBS
 -        ${OPENSSL_ROOT}/lib/libssl.a
