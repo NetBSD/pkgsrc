@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.62 2019/08/30 17:07:59 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.63 2019/09/04 10:56:50 nia Exp $
 
 BUILDLINK_TREE+=	MesaLib
 
@@ -20,6 +20,7 @@ pkgbase:= MesaLib
 
 .if ${X11_TYPE} == "modular"
 MESALIB_SUPPORTS_OSMESA=	yes
+MESALIB_SUPPORTS_GLESv2=	yes
 .  if ${OPSYS} != "Darwin" && ${OPSYS} != "Cygwin" && ${OPSYS} != "SunOS"
 MESALIB_SUPPORTS_EGL=		yes
 .  else
@@ -35,6 +36,11 @@ MESALIB_SUPPORTS_EGL=		no
 MESALIB_SUPPORTS_OSMESA=	yes
 .  else
 MESALIB_SUPPORTS_OSMESA=	no
+.  endif
+.  if exists(${X11BASE}/include/GLES2/gl2.h)
+MESALIB_SUPPORTS_GLESv2=	yes
+.  else
+MESALIB_SUPPORTS_GLESv2=	no
 .  endif
 .endif
 
