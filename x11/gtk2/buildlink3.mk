@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.73 2019/07/21 22:24:16 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.74 2019/09/04 15:14:04 ryoon Exp $
 
 BUILDLINK_TREE+=	gtk2
 
@@ -24,6 +24,7 @@ pkgbase := gtk2
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .if !empty(PKG_BUILD_OPTIONS.gtk2:Mx11)
 .include "../../x11/libXcursor/buildlink3.mk"
+.include "../../x11/libXdamage/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
