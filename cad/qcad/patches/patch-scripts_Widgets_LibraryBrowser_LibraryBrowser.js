@@ -1,12 +1,12 @@
-$NetBSD: patch-scripts_Widgets_LibraryBrowser_LibraryBrowser.js,v 1.1 2016/08/30 10:56:04 plunky Exp $
+$NetBSD: patch-scripts_Widgets_LibraryBrowser_LibraryBrowser.js,v 1.2 2019/09/05 13:39:10 nia Exp $
 
 fix path to libraries
 
---- scripts/Widgets/LibraryBrowser/LibraryBrowser.js.orig	2016-07-01 07:13:14.000000000 +0000
+--- scripts/Widgets/LibraryBrowser/LibraryBrowser.js.orig	2019-07-18 15:47:56.000000000 +0000
 +++ scripts/Widgets/LibraryBrowser/LibraryBrowser.js
-@@ -173,12 +173,12 @@ LibraryBrowser.getSourceList = function(
+@@ -174,12 +174,12 @@ LibraryBrowser.getSourceList = function(
      var libs;
-
+ 
      // no configuration: add all libraries available in libraries subdir:
 -    librariesDir = new QDir("libraries");
 +    librariesDir = new QDir("@PREFIX@/share/qcad/libraries");
@@ -18,3 +18,4 @@ fix path to libraries
 +            sourceList.push(QDir.fromNativeSeparators(new QDir("%1/%2".arg(librariesDir.absolutePath()).arg(libs[i])).absolutePath()));
          }
      }
+ 
