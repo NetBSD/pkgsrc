@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/09/26 17:32:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/09/05 10:39:50 adam Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/ephem/__init__.py
 ${PYSITELIB}/ephem/__init__.pyc
@@ -13,7 +13,6 @@ ${PYSITELIB}/ephem/doc/catalogs.rst
 ${PYSITELIB}/ephem/doc/coordinates.rst
 ${PYSITELIB}/ephem/doc/date.rst
 ${PYSITELIB}/ephem/doc/examples.rst
-${PYSITELIB}/ephem/doc/faq.rst
 ${PYSITELIB}/ephem/doc/index.rst
 ${PYSITELIB}/ephem/doc/newton.rst
 ${PYSITELIB}/ephem/doc/quick.rst
