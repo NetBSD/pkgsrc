@@ -1,6 +1,19 @@
-$NetBSD: distinfo,v 1.13 2015/11/17 20:07:39 nros Exp $
+$NetBSD: distinfo,v 1.14 2019/09/05 08:07:25 nros Exp $
 
-SHA1 (texmaker-4.5.tar.bz2) = ffa4c08a9fe2dde61eb18c6105f231e3c0ebd2ea
-RMD160 (texmaker-4.5.tar.bz2) = e1ebbe1212d6eb7b1346eadfbfad05bda53c32ce
-SHA512 (texmaker-4.5.tar.bz2) = 623ae1496f11e5cd1328b997dbb29ec7188d6c1b256b6370c6fdd4fcda4bfc4b301d29cfa3b2ce529391b8f9913ea4678a6895abfb4fa6f9820e7177c676ab11
-Size (texmaker-4.5.tar.bz2) = 11287724 bytes
+SHA1 (texmaker-5.0.3.tar.bz2) = 61900975f1d4cf420a6d2c309f9de875789f6089
+RMD160 (texmaker-5.0.3.tar.bz2) = 2e5c1eaccec0f461aa66e80a6bd8cce0b9a8ccc4
+SHA512 (texmaker-5.0.3.tar.bz2) = fed09b1ac628f4a8cab24257f2ca35093f20a82d1a3b8c38d12878ff94f0933b7449e5ba651831612b62417426396327ea8ba64e830fe0537757abe65bcd5284
+Size (texmaker-5.0.3.tar.bz2) = 15783226 bytes
+SHA1 (patch-latexeditor.h) = 5da42462462e0ec8022f0d49e749d39f8bf9d5b4
+SHA1 (patch-latexeditorview.h) = 1057f9c540b150e89935d563c5f31e0e5f32a56a
+SHA1 (patch-latexhighlighter.h) = 7170f4001a8d383430ecf8bb1f95a6d1f262e6cc
+SHA1 (patch-pdfium_core_fxcodec_codec_fx__codec__png.cpp) = 0bac4d8e6a887af2b13e27fa4649f9e9c0996c81
+SHA1 (patch-pdfium_core_fxcrt_include_fx__system.h) = 6f435b5df9754c3f0056751ec17d9ac0a726d953
+SHA1 (patch-pdfium_core_fxge_apple_fx__mac__imp.cpp) = 32f75b09e3336206ccc317df2d2ae6448808b996
+SHA1 (patch-pdfium_core_fxge_ge_fx__ge__linux.cpp) = 12678056ff0d05e06eb42a13dc0a5b069f378874
+SHA1 (patch-pdfium_third__party_libopenjpeg20_opj__malloc.h) = aef984a63025c8d386f2230fbc8d438dc6e1a03e
+SHA1 (patch-pdfium_xfa_fgas_font_fgas__stdfontmgr.cpp) = e1c75bc0cfb3a606ca9ce826fc3cd5032abe334c
+SHA1 (patch-spellerdialog.h) = f98ca3305e8dd8ba1c65bb32e21d965f536094ed
+SHA1 (patch-texmaker.h) = b418f9b515acbe3960e78bf984ca9c7f8549359a
+SHA1 (patch-texmaker.pro) = 7f20deec767057ad4d3e6a0cda6fab483b6656c0
+SHA1 (patch-versiondialog.cpp) = 0f6fbea229f688bbac27a406652466a171ce6738
