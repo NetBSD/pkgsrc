@@ -1,8 +1,8 @@
-$NetBSD: patch-src_core_RSPlatform.cpp,v 1.1 2016/08/30 10:56:04 plunky Exp $
+$NetBSD: patch-src_core_RSPlatform.cpp,v 1.2 2019/09/05 13:39:10 nia Exp $
 
 enhance getSystemId for some common platforms
 
---- src/core/RSPlatform.cpp.orig	2016-07-01 07:13:14.000000000 +0000
+--- src/core/RSPlatform.cpp.orig	2019-07-18 15:47:56.000000000 +0000
 +++ src/core/RSPlatform.cpp
 @@ -43,7 +43,7 @@
  QString RS::getHostId() {
@@ -15,7 +15,7 @@ enhance getSystemId for some common platforms
      // environment variable HOSTNAME not exported on OS X by default:
 @@ -56,7 +56,7 @@ QString RS::getHostId() {
  }
-
+ 
  /**
 - * \return Unique system ID ("linux", "osx", "win").
 + * \return Unique system ID ("linux", "osx", "win", "netbsd", "freebsd", "solaris").

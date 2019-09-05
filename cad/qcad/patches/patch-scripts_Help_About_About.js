@@ -1,10 +1,10 @@
-$NetBSD: patch-scripts_Help_About_About.js,v 1.1 2016/08/30 10:56:04 plunky Exp $
+$NetBSD: patch-scripts_Help_About_About.js,v 1.2 2019/09/05 13:39:10 nia Exp $
 
 add some system information to About window
 
---- scripts/Help/About/About.js.orig	2016-08-04 12:53:50.087339591 +0000
+--- scripts/Help/About/About.js.orig	2019-07-18 15:47:56.000000000 +0000
 +++ scripts/Help/About/About.js
-@@ -425,6 +425,16 @@ About.prototype.initAboutSystem = functi
+@@ -451,6 +451,16 @@ About.prototype.initAboutSystem = functi
      if (RS.getSystemId()==="linux") {
          text += "Linux";
      }
@@ -19,5 +19,5 @@ add some system information to About window
 +    }
 +    text += " [via pkgsrc]";
      text += "\nOS version: " + RSettings.getOSVersion();
-
+ 
      text += "\n";
