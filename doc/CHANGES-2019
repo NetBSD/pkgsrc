@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3756 2019/09/05 08:08:21 nros Exp $
+$NetBSD: CHANGES-2019,v 1.3757 2019/09/05 09:02:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6198,3 +6198,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed chat/ircservice successor chat/anope [nia 2019-09-04]
 	Updated archivers/unrar to 5.8.1 [adam 2019-09-05]
 	Updated editors/texmaker to 5.0.3 [nros 2019-09-05]
+	Updated devel/cmake to 3.15.3 [adam 2019-09-05]
+	Updated devel/talloc to 2.3.0 [adam 2019-09-05]
