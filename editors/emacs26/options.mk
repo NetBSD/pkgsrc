@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2019/09/04 15:14:03 ryoon Exp $
+# $NetBSD: options.mk,v 1.12 2019/09/05 13:04:55 ryoon Exp $
 
 ### Set options
 PKG_OPTIONS_VAR=			PKG_OPTIONS.emacs
@@ -127,7 +127,6 @@ CONFIGURE_ARGS+=	--without-xft --without-libotf --without-m17n-flt
        empty(PKG_OPTIONS:Mmotif))
 # defaults to gtk3
 USE_TOOLS+=		pkg-config
-.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-x-toolkit=gtk3
 .  elif !empty(PKG_OPTIONS:Mgtk2) || !empty(PKG_OPTIONS:Mgtk)
