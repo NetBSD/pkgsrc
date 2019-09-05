@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2018/11/20 17:26:20 maya Exp $
+# $NetBSD: Makefile,v 1.2 2019/09/05 18:54:37 maya Exp $
 
 DISTNAME=		bitlib-5.3.0
 PKGNAME=		${LUA_PKGPREFIX}-${DISTNAME}
+PKGREVISION=		1
 GITHUB_PROJECT=		lua-compat-5.2
 GITHUB_TAG=		${DISTNAME}
 MASTER_SITES=		${MASTER_SITE_GITHUB:=keplerproject/}
@@ -16,17 +17,16 @@ LICENSE=		mit
 LUA_VERSIONS_ACCEPTED=	51
 
 NO_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 
-INSTALLATION_DIRS+=	${LUA_CDIR}/bit32
-
-.include "../../lang/lua/module.mk"
+INSTALLATION_DIRS+=	${LUA_CDIR}
 
 do-build:
-	${CC} ${CFLAGS} -fPIC -c -I ${WRKSRC}/c-api ${WRKSRC}/lbitlib.c -o ${WRKSRC}/bit32.o
-	${LD} ${LDFLAGS} -fPIC -shared ${WRKSRC}/bit32.o -o ${WRKSRC}/bit32.so
+	${LIBTOOL} --tag=CC --mode=compile ${CC} ${CFLAGS} -fPIC -I ${WRKSRC}/c-api -c -o ${WRKSRC}/bit32.lo ${WRKSRC}/lbitlib.c
+	${LIBTOOL} --tag=CC --mode=link ${CC} ${LDFLAGS} -rpath ${PREFIX}/${LUA_CDIR} -shared -module -avoid-version -export-dynamic -o ${WRKSRC}/bit32.la ${WRKSRC}/bit32.lo
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/bit32.so \
-	                ${DESTDIR}${PREFIX}/${LUA_CDIR}
+	${LIBTOOL} --mode=install ${INSTALL_DATA} ${WRKSRC}/bit32.la ${DESTDIR}${PREFIX}/${LUA_CDIR}
 
+.include "../../lang/lua/module.mk"
 .include "../../mk/bsd.pkg.mk"
