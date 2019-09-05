@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.450 2019/08/26 16:49:49 micha Exp $
+# $NetBSD: Makefile,v 1.451 2019/09/05 06:46:46 jnemeth Exp $
 #
 
 COMMENT=	Games
@@ -59,6 +59,7 @@ SUBDIR+=	ccgo
 SUBDIR+=	cgoban
 SUBDIR+=	cgoban-java
 SUBDIR+=	chest
+SUBDIR+=	chocolate-doom
 SUBDIR+=	chromium-bsu
 SUBDIR+=	circuslinux
 SUBDIR+=	civctp-demo
