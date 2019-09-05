@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.80 2019/06/07 11:26:20 tm Exp $
+# $NetBSD: Makefile,v 1.80.2.1 2019/09/05 10:21:28 bsiegert Exp $
 #
 # When updating this package, make sure that no strings like
 # "PR 12345" are in the commit message. Upstream likes
 # to reference their own PRs this way, but this ends up
 # in NetBSD GNATS.
 
-DISTNAME=	httpd-2.4.39
+DISTNAME=	httpd-2.4.41
 PKGNAME=	${DISTNAME:S/httpd/apache/}
-PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=httpd/}
 MASTER_SITES+=	http://archive.apache.org/dist/httpd/
@@ -37,7 +36,7 @@ CONFIGURE_ENV+=		ac_cv_path_RSYNC=/nonexistent
 .include "../../mk/compiler.mk"
 
 CFLAGS.SunOS+=	-D__EXTENSIONS__
-.if !empty(CC_VERSION:Mgcc-[6-9]*) || !empty(PKGSRC_COMPILER:Mclang)
+.if !empty(CC_VERSION:Mgcc-[5-9]*) || !empty(PKGSRC_COMPILER:Mclang)
 CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
 .else
 CFLAGS.SunOS+=	-D_XOPEN_SOURCE -D_XOPEN_SOURCE_EXTENDED=1
@@ -62,7 +61,7 @@ APACHE_MODULES?=	${DFLT_APACHE_MODULES}
 
 # LDAP support
 PLIST_VARS+=		ldap
-.if exists(${LOCALBASE}/lib/apr-util-1/apr_ldap.la)
+.if exists(${PREFIX}/lib/apr-util-1/apr_ldap.la)
 DFLT_APACHE_MODULES+=	ldap authnz_ldap
 PLIST.ldap=		yes
 .endif
@@ -122,8 +121,7 @@ SUBST_FILES.paths=	config.layout Makefile.in support/apxs.in
 SUBST_VARS.paths=	PREFIX
 SUBST_VARS.paths+=	VARBASE
 SUBST_SED.paths+=	-e "s|@SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
-SUBST_VARS.paths+=	PAX
-SUBST_SED.paths+=	-e "s|@LOCALBASE@|${PREFIX}|g"
+SUBST_VARS.paths+=	PAX PREFIX
 
 SUBST_CLASSES+=		apr-lt
 SUBST_STAGE.apr-lt=	post-configure
