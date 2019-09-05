@@ -1,11 +1,13 @@
-$NetBSD: patch-configs_A20-OLinuXino-Lime2-eMMC_defconfig,v 1.1 2019/07/18 19:18:33 bouyer Exp $
+$NetBSD: patch-configs_A20-OLinuXino-Lime2-eMMC_defconfig,v 1.2 2019/09/05 16:09:09 bouyer Exp $
 
 CONFIG_GMAC_TX_DELAY=4 required for lime2 boards with a Micrel PHY,
 doesn't hurt for older ones (with the realtek PHY)
 
---- configs/A20-OLinuXino-Lime2-eMMC_defconfig.orig	2019-07-17 18:57:03.912432611 +0200
-+++ configs/A20-OLinuXino-Lime2-eMMC_defconfig	2019-07-17 18:59:35.091714198 +0200
-@@ -9,6 +9,7 @@
+Add SPI flash support (for newer Lime2-eMMC boards)
+
+--- configs/A20-OLinuXino-Lime2-eMMC_defconfig.orig	2018-11-14 17:10:06.000000000 +0100
++++ configs/A20-OLinuXino-Lime2-eMMC_defconfig	2019-09-05 16:38:07.781366370 +0200
+@@ -10,9 +10,11 @@
  CONFIG_I2C1_ENABLE=y
  CONFIG_SATAPWR="PC3"
  CONFIG_AHCI=y
@@ -13,3 +15,7 @@ doesn't hurt for older ones (with the realtek PHY)
  CONFIG_NR_DRAM_BANKS=1
  # CONFIG_SYS_MALLOC_CLEAR_ON_INIT is not set
  CONFIG_SPL_I2C_SUPPORT=y
++CONFIG_SPL_SPI_SUNXI=y
+ CONFIG_CMD_DFU=y
+ # CONFIG_CMD_FLASH is not set
+ CONFIG_CMD_USB_MASS_STORAGE=y
