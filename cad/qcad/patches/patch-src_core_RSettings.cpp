@@ -1,10 +1,10 @@
-$NetBSD: patch-src_core_RSettings.cpp,v 1.1 2016/08/30 10:56:04 plunky Exp $
+$NetBSD: patch-src_core_RSettings.cpp,v 1.2 2019/09/05 13:39:10 nia Exp $
 
 fix hardcoded paths
 
---- src/core/RSettings.cpp.orig	2016-08-29 06:49:22.000000000 +0000
+--- src/core/RSettings.cpp.orig	2019-07-18 15:47:56.000000000 +0000
 +++ src/core/RSettings.cpp
-@@ -148,27 +148,7 @@ bool RSettings::isDeployed() {
+@@ -345,27 +345,7 @@ bool RSettings::isDeployed() {
   * \return Path where all application resources are stored ('scripts', 'patterns', 'ts', 'doc', 'linetypes', ...)
   */
  QString RSettings::getApplicationPath() {
@@ -32,3 +32,4 @@ fix hardcoded paths
 +    QDir ret("@PREFIX@/lib/qcad");
      return ret.path();
  }
+ 
