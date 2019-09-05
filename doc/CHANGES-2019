@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3758 2019/09/05 09:35:11 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3759 2019/09/05 10:43:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6202,3 +6202,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/talloc to 2.3.0 [adam 2019-09-05]
 	Updated devel/tevent to 0.10.1 [adam 2019-09-05]
 	Updated devel/memcached to 1.5.17 [adam 2019-09-05]
+	Updated math/py-ephem to 3.7.7.0 [adam 2019-09-05]
+	Updated textproc/py-precis-i18n to 1.0.1 [adam 2019-09-05]
