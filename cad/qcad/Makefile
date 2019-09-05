@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.74 2019/07/31 19:30:20 plunky Exp $
+# $NetBSD: Makefile,v 1.75 2019/09/05 13:39:10 nia Exp $
 #
 
 DISTNAME=		qcad-3.23.0.0
+PKGREVISION=		1
 CATEGORIES=		cad
 MASTER_SITES=		${MASTER_SITE_GITHUB:=qcad/}
 EXTRACT_USING=		bsdtar
@@ -14,8 +15,6 @@ LICENSE=		gnu-gpl-v3
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 DEPENDS+=		bash-[0-9]*:../../shells/bash
-DEPENDS+=		qt4-tiff-[0-9]*:../../x11/qt4-tiff
-DEPENDS+=		qt4-sqlite3-[0-9]*:../../x11/qt4-sqlite3
 
 USE_TOOLS+=		chmod find make pax
 USE_LANGUAGES=		c c++
@@ -62,9 +61,9 @@ do-install:
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../x11/qt4-libs/buildlink3.mk"
-BUILDLINK_API_DEPENDS.qt4-libs+=	qt4-libs>=4.7
-.include "../../x11/qt4-tools/buildlink3.mk"
-BUILDLINK_API_DEPENDS.qt4-tools+=	qt4-tools>=4.7
-BUILDLINK_DEPMETHOD.qt4-tools=		full
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtscript/buildlink3.mk"
+.include "../../x11/qt5-qtsvg/buildlink3.mk"
+.include "../../x11/qt5-qttools/buildlink3.mk"
+.include "../../x11/qt5-qtxmlpatterns/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

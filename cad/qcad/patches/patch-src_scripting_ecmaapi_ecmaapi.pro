@@ -1,19 +1,24 @@
-$NetBSD: patch-src_scripting_ecmaapi_ecmaapi.pro,v 1.2 2019/07/31 19:30:21 plunky Exp $
+$NetBSD: patch-src_scripting_ecmaapi_ecmaapi.pro,v 1.3 2019/09/05 13:39:10 nia Exp $
 
 fix build for pkgsrc, by allowing qmake to link binaries in situ
 and create an install target
 
---- src/scripting/ecmaapi/ecmaapi.pro.orig	2019-02-27 15:06:55.000000000 +0000
+"error: one or more PCH files were found, but they were invalid"
+
+--- src/scripting/ecmaapi/ecmaapi.pro.orig	2019-07-18 15:47:56.000000000 +0000
 +++ src/scripting/ecmaapi/ecmaapi.pro
-@@ -2,6 +2,7 @@ include( ../../../shared.pri )
+@@ -2,9 +2,9 @@ include( ../../../shared.pri )
  TEMPLATE = lib
  CONFIG += plugin
  TARGET = $${RLIBNAME}ecmaapi
 +INSTALLS += target
  CONFIG -= warn_on
  CONFIG += warn_off
- CONFIG += precompile_header
-@@ -20,11 +21,11 @@ SOURCES += \
+-CONFIG += precompile_header
+ PRECOMPILED_HEADER = stable.h
+ OTHER_FILES += ecmaapi.dox
+ DEFINES += QCADECMAAPI_LIBRARY
+@@ -20,11 +20,11 @@ SOURCES += \
  include(adapters/adapters.pri)
  include(generated/generated.pri)
  LIBS += \
