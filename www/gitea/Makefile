@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2019/08/19 10:27:42 nia Exp $
+# $NetBSD: Makefile,v 1.10 2019/09/05 13:43:33 nia Exp $
 
-DISTNAME=	gitea-1.9.1
+DISTNAME=	gitea-1.9.2
 MASTER_SITES=	${MASTER_SITE_GITHUB:=go-gitea/}
 CATEGORIES=	www
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -89,6 +89,5 @@ do-install:
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/app.ini.sample ${DESTDIR}${EGDIR}
 
-.include "../../www/go-gohtml/buildlink3.mk"
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
