@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.104 2019/07/23 17:19:57 wiz Exp $
+# $NetBSD: Makefile,v 1.105 2019/09/05 08:07:25 nros Exp $
 
-DISTNAME=	texmaker-4.5
-PKGREVISION=	47
+DISTNAME=	texmaker-5.0.3
 CATEGORIES=	editors
 MASTER_SITES=	http://www.xm1math.net/texmaker/
 EXTRACT_SUFX=	.tar.bz2
@@ -20,10 +19,21 @@ INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
 
 do-configure:
 	cd ${WRKSRC} && env ${CONFIGURE_ENV} \
-	${QTDIR}/bin/qmake PREFIX=${PREFIX} texmaker.pro DESKTOPDIR=${PREFIX}/share/applications ICONDIR=${PREFIX}/share/pixmaps
+	${QTDIR}/bin/qmake PREFIX=${PREFIX} texmaker.pro \
+		DESKTOPDIR=${PREFIX}/share/applications \
+		ICONDIR=${PREFIX}/share/pixmaps \
+		METAINFODIR=${PREFIX}/share/appdata
+
+pre-configure:
+	${CP} ${FILESDIR}/fxge_pkgsrcfonts.inc ${WRKSRC}/pdfium/core/fxge
+	${CP} ${FILESDIR}/fgas_stdfontmgr_pkgsrcfonts.inc \
+		${WRKSRC}/pdfium/xfa/fgas/font
 
 .include "options.mk"
 
-.include "../../print/poppler-includes/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../textproc/hunspell/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
