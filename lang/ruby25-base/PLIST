@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/02/14 06:03:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.2.4.1 2019/09/05 10:32:49 bsiegert Exp $
 bin/erb${RUBY_SUFFIX}
 bin/gem${RUBY_SUFFIX}
 bin/irb${RUBY_SUFFIX}
@@ -313,7 +313,6 @@ ${RUBY_LIB}/rdoc/generator/template/darkfish/images/wrench_orange.png
 ${RUBY_LIB}/rdoc/generator/template/darkfish/images/zoom.png
 ${RUBY_LIB}/rdoc/generator/template/darkfish/index.rhtml
 ${RUBY_LIB}/rdoc/generator/template/darkfish/js/darkfish.js
-${RUBY_LIB}/rdoc/generator/template/darkfish/js/jquery.js
 ${RUBY_LIB}/rdoc/generator/template/darkfish/js/search.js
 ${RUBY_LIB}/rdoc/generator/template/darkfish/page.rhtml
 ${RUBY_LIB}/rdoc/generator/template/darkfish/servlet_not_found.rhtml
