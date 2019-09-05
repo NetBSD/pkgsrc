@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3754 2019/09/04 22:39:40 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3755 2019/09/05 06:45:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6196,3 +6196,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated games/lbreakout2 to 2.6.5 [nia 2019-09-04]
 	Updated www/seamonkey to 2.49.5 [nia 2019-09-04]
 	Removed chat/ircservice successor chat/anope [nia 2019-09-04]
+	Updated archivers/unrar to 5.8.1 [adam 2019-09-05]
