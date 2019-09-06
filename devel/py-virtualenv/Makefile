@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2019/07/18 11:24:53 adam Exp $
+# $NetBSD: Makefile,v 1.47 2019/09/06 13:42:25 adam Exp $
 
-DISTNAME=	virtualenv-16.6.2
+DISTNAME=	virtualenv-16.7.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/virtualenv/}
@@ -10,8 +10,9 @@ HOMEPAGE=	https://virtualenv.pypa.io/
 COMMENT=	Virtual Python Environment builder
 LICENSE=	mit
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-pypiserver-[0-9]*:../../net/py-pypiserver
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=4.5.0:../../devel/py-coverage
+TEST_DEPENDS+=	${PYPKGPREFIX}-pypiserver-[0-9]*:../../net/py-pypiserver
+TEST_DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=4.0.0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-localserver-[0-9]*:../../devel/py-test-localserver
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=1.3.0:../../devel/py-test-timeout
