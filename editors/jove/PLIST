@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:50:23 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/09/06 14:52:39 christos Exp $
 bin/jove
 bin/teachjove
 lib/jove/recover
@@ -15,6 +15,7 @@ share/jove/jove.rc.sun-cmd
 share/jove/jove.rc.vt100
 share/jove/jove.rc.wyse
 share/jove/jove.rc.xterm
+share/jove/jove.rc.xterm-256color
 share/jove/jove.rc.z29
 share/jove/keychart.
 share/jove/keychart.3022
@@ -23,5 +24,6 @@ share/jove/keychart.sun-cmd
 share/jove/keychart.vt100
 share/jove/keychart.wyse
 share/jove/keychart.xterm
+share/jove/keychart.xterm-256color
 share/jove/keychart.z29
 share/jove/teach-jove
