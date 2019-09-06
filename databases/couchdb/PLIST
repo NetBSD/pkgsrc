@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/11/07 15:33:27 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/09/06 09:10:47 jperkin Exp $
 bin/couchdb
 bin/couchjs
 couchdb/releases/${PKGVERSION}/couchdb.boot
@@ -13,7 +13,7 @@ couchdb/releases/RELEASES
 couchdb/releases/start_erl.data
 couchdb/share/server/main-coffee.js
 couchdb/share/server/main.js
-couchdb/share/www/dashboard.assets/css/styles.25bdeac6d2ce92b30461.css
+couchdb/share/www/dashboard.assets/css/styles.89dbadd64e69e0df7653.css
 couchdb/share/www/dashboard.assets/fonts/fauxtonicon5.eot
 couchdb/share/www/dashboard.assets/fonts/fauxtonicon5.ttf
 couchdb/share/www/dashboard.assets/fonts/fauxtonicon5.woff
@@ -31,9 +31,9 @@ couchdb/share/www/dashboard.assets/img/googleplus.png
 couchdb/share/www/dashboard.assets/img/linkedin.png
 couchdb/share/www/dashboard.assets/img/loader.gif
 couchdb/share/www/dashboard.assets/img/twitter.png
-couchdb/share/www/dashboard.assets/js/bundle.25bdeac6d2ce92b30461.js
-couchdb/share/www/dashboard.assets/js/manifest.9900c5a8eb329caf2817.js
-couchdb/share/www/dashboard.assets/js/vendor.884175873da25bb4e526.js
+couchdb/share/www/dashboard.assets/js/bundle.89dbadd64e69e0df7653.js
+couchdb/share/www/dashboard.assets/js/manifest.a154524a560e5f6f431b.js
+couchdb/share/www/dashboard.assets/js/vendor.9993972098ce728e0fc2.js
 couchdb/share/www/docs/_images/intro-consistency-01.png
 couchdb/share/www/docs/_images/intro-consistency-02.png
 couchdb/share/www/docs/_images/intro-consistency-03.png
@@ -44,7 +44,11 @@ couchdb/share/www/docs/_images/intro-consistency-07.png
 couchdb/share/www/docs/_images/intro-why-01.png
 couchdb/share/www/docs/_images/intro-why-02.png
 couchdb/share/www/docs/_images/intro-why-03.png
+couchdb/share/www/docs/_images/purge-checkpoint-docs.png
 couchdb/share/www/docs/_images/replication-state-diagram.svg
+couchdb/share/www/docs/_images/rev-tree1.png
+couchdb/share/www/docs/_images/rev-tree2.png
+couchdb/share/www/docs/_images/rev-tree3.png
 couchdb/share/www/docs/_images/views-intro-01.png
 couchdb/share/www/docs/_images/views-intro-02.png
 couchdb/share/www/docs/_images/views-intro-03.png
@@ -59,6 +63,7 @@ couchdb/share/www/docs/_sources/api/database/find.rst.txt
 couchdb/share/www/docs/_sources/api/database/index.rst.txt
 couchdb/share/www/docs/_sources/api/database/misc.rst.txt
 couchdb/share/www/docs/_sources/api/database/security.rst.txt
+couchdb/share/www/docs/_sources/api/database/shard.rst.txt
 couchdb/share/www/docs/_sources/api/ddoc/common.rst.txt
 couchdb/share/www/docs/_sources/api/ddoc/index.rst.txt
 couchdb/share/www/docs/_sources/api/ddoc/render.rst.txt
@@ -73,10 +78,17 @@ couchdb/share/www/docs/_sources/api/server/authn.rst.txt
 couchdb/share/www/docs/_sources/api/server/common.rst.txt
 couchdb/share/www/docs/_sources/api/server/configuration.rst.txt
 couchdb/share/www/docs/_sources/api/server/index.rst.txt
+couchdb/share/www/docs/_sources/best-practices/documents.rst.txt
+couchdb/share/www/docs/_sources/best-practices/forms.rst.txt
+couchdb/share/www/docs/_sources/best-practices/index.rst.txt
+couchdb/share/www/docs/_sources/best-practices/iso-date.rst.txt
+couchdb/share/www/docs/_sources/best-practices/jsdevel.rst.txt
+couchdb/share/www/docs/_sources/best-practices/reverse-proxies.rst.txt
+couchdb/share/www/docs/_sources/best-practices/views.rst.txt
 couchdb/share/www/docs/_sources/cluster/databases.rst.txt
 couchdb/share/www/docs/_sources/cluster/index.rst.txt
 couchdb/share/www/docs/_sources/cluster/nodes.rst.txt
-couchdb/share/www/docs/_sources/cluster/setup.rst.txt
+couchdb/share/www/docs/_sources/cluster/purging.rst.txt
 couchdb/share/www/docs/_sources/cluster/sharding.rst.txt
 couchdb/share/www/docs/_sources/cluster/theory.rst.txt
 couchdb/share/www/docs/_sources/config/auth.rst.txt
@@ -84,14 +96,11 @@ couchdb/share/www/docs/_sources/config/cluster.rst.txt
 couchdb/share/www/docs/_sources/config/compaction.rst.txt
 couchdb/share/www/docs/_sources/config/couch-peruser.rst.txt
 couchdb/share/www/docs/_sources/config/couchdb.rst.txt
-couchdb/share/www/docs/_sources/config/externals.rst.txt
-couchdb/share/www/docs/_sources/config/http-handlers.rst.txt
 couchdb/share/www/docs/_sources/config/http.rst.txt
 couchdb/share/www/docs/_sources/config/index.rst.txt
 couchdb/share/www/docs/_sources/config/intro.rst.txt
 couchdb/share/www/docs/_sources/config/logging.rst.txt
 couchdb/share/www/docs/_sources/config/misc.rst.txt
-couchdb/share/www/docs/_sources/config/proxying.rst.txt
 couchdb/share/www/docs/_sources/config/query-servers.rst.txt
 couchdb/share/www/docs/_sources/config/replicator.rst.txt
 couchdb/share/www/docs/_sources/config/services.rst.txt
@@ -103,6 +112,11 @@ couchdb/share/www/docs/_sources/cve/2012-5641.rst.txt
 couchdb/share/www/docs/_sources/cve/2012-5649.rst.txt
 couchdb/share/www/docs/_sources/cve/2012-5650.rst.txt
 couchdb/share/www/docs/_sources/cve/2014-2668.rst.txt
+couchdb/share/www/docs/_sources/cve/2017-12635.rst.txt
+couchdb/share/www/docs/_sources/cve/2017-12636.rst.txt
+couchdb/share/www/docs/_sources/cve/2018-11769.rst.txt
+couchdb/share/www/docs/_sources/cve/2018-17188.rst.txt
+couchdb/share/www/docs/_sources/cve/2018-8007.rst.txt
 couchdb/share/www/docs/_sources/cve/index.rst.txt
 couchdb/share/www/docs/_sources/ddocs/ddocs.rst.txt
 couchdb/share/www/docs/_sources/ddocs/index.rst.txt
@@ -113,7 +127,6 @@ couchdb/share/www/docs/_sources/ddocs/views/joins.rst.txt
 couchdb/share/www/docs/_sources/ddocs/views/nosql.rst.txt
 couchdb/share/www/docs/_sources/ddocs/views/pagination.rst.txt
 couchdb/share/www/docs/_sources/experimental.rst.txt
-couchdb/share/www/docs/_sources/externals.rst.txt
 couchdb/share/www/docs/_sources/fauxton/index.rst.txt
 couchdb/share/www/docs/_sources/fauxton/install.rst.txt
 couchdb/share/www/docs/_sources/index.rst.txt
@@ -121,7 +134,6 @@ couchdb/share/www/docs/_sources/install/docker.rst.txt
 couchdb/share/www/docs/_sources/install/freebsd.rst.txt
 couchdb/share/www/docs/_sources/install/index.rst.txt
 couchdb/share/www/docs/_sources/install/mac.rst.txt
-couchdb/share/www/docs/_sources/install/setup.rst.txt
 couchdb/share/www/docs/_sources/install/snap.rst.txt
 couchdb/share/www/docs/_sources/install/troubleshooting.rst.txt
 couchdb/share/www/docs/_sources/install/unix.rst.txt
@@ -136,6 +148,7 @@ couchdb/share/www/docs/_sources/intro/security.rst.txt
 couchdb/share/www/docs/_sources/intro/tour.rst.txt
 couchdb/share/www/docs/_sources/intro/why.rst.txt
 couchdb/share/www/docs/_sources/json-structure.rst.txt
+couchdb/share/www/docs/_sources/maintenance/backups.rst.txt
 couchdb/share/www/docs/_sources/maintenance/compaction.rst.txt
 couchdb/share/www/docs/_sources/maintenance/index.rst.txt
 couchdb/share/www/docs/_sources/maintenance/performance.rst.txt
@@ -148,6 +161,9 @@ couchdb/share/www/docs/_sources/replication/index.rst.txt
 couchdb/share/www/docs/_sources/replication/intro.rst.txt
 couchdb/share/www/docs/_sources/replication/protocol.rst.txt
 couchdb/share/www/docs/_sources/replication/replicator.rst.txt
+couchdb/share/www/docs/_sources/setup/cluster.rst.txt
+couchdb/share/www/docs/_sources/setup/index.rst.txt
+couchdb/share/www/docs/_sources/setup/single-node.rst.txt
 couchdb/share/www/docs/_sources/whatsnew/0.10.rst.txt
 couchdb/share/www/docs/_sources/whatsnew/0.11.rst.txt
 couchdb/share/www/docs/_sources/whatsnew/0.8.rst.txt
@@ -159,8 +175,11 @@ couchdb/share/www/docs/_sources/whatsnew/1.3.rst.txt
 couchdb/share/www/docs/_sources/whatsnew/1.4.rst.txt
 couchdb/share/www/docs/_sources/whatsnew/1.5.rst.txt
 couchdb/share/www/docs/_sources/whatsnew/1.6.rst.txt
+couchdb/share/www/docs/_sources/whatsnew/1.7.rst.txt
 couchdb/share/www/docs/_sources/whatsnew/2.0.rst.txt
 couchdb/share/www/docs/_sources/whatsnew/2.1.rst.txt
+couchdb/share/www/docs/_sources/whatsnew/2.2.rst.txt
+couchdb/share/www/docs/_sources/whatsnew/2.3.rst.txt
 couchdb/share/www/docs/_sources/whatsnew/index.rst.txt
 couchdb/share/www/docs/_static/ajax-loader.gif
 couchdb/share/www/docs/_static/basic.css
@@ -209,6 +228,7 @@ couchdb/share/www/docs/api/database/find.html
 couchdb/share/www/docs/api/database/index.html
 couchdb/share/www/docs/api/database/misc.html
 couchdb/share/www/docs/api/database/security.html
+couchdb/share/www/docs/api/database/shard.html
 couchdb/share/www/docs/api/ddoc/common.html
 couchdb/share/www/docs/api/ddoc/index.html
 couchdb/share/www/docs/api/ddoc/render.html
@@ -223,10 +243,17 @@ couchdb/share/www/docs/api/server/authn.html
 couchdb/share/www/docs/api/server/common.html
 couchdb/share/www/docs/api/server/configuration.html
 couchdb/share/www/docs/api/server/index.html
+couchdb/share/www/docs/best-practices/documents.html
+couchdb/share/www/docs/best-practices/forms.html
+couchdb/share/www/docs/best-practices/index.html
+couchdb/share/www/docs/best-practices/iso-date.html
+couchdb/share/www/docs/best-practices/jsdevel.html
+couchdb/share/www/docs/best-practices/reverse-proxies.html
+couchdb/share/www/docs/best-practices/views.html
 couchdb/share/www/docs/cluster/databases.html
 couchdb/share/www/docs/cluster/index.html
 couchdb/share/www/docs/cluster/nodes.html
-couchdb/share/www/docs/cluster/setup.html
+couchdb/share/www/docs/cluster/purging.html
 couchdb/share/www/docs/cluster/sharding.html
 couchdb/share/www/docs/cluster/theory.html
 couchdb/share/www/docs/config-ref.html
@@ -235,14 +262,11 @@ couchdb/share/www/docs/config/cluster.html
 couchdb/share/www/docs/config/compaction.html
 couchdb/share/www/docs/config/couch-peruser.html
 couchdb/share/www/docs/config/couchdb.html
-couchdb/share/www/docs/config/externals.html
-couchdb/share/www/docs/config/http-handlers.html
 couchdb/share/www/docs/config/http.html
 couchdb/share/www/docs/config/index.html
 couchdb/share/www/docs/config/intro.html
 couchdb/share/www/docs/config/logging.html
 couchdb/share/www/docs/config/misc.html
-couchdb/share/www/docs/config/proxying.html
 couchdb/share/www/docs/config/query-servers.html
 couchdb/share/www/docs/config/replicator.html
 couchdb/share/www/docs/config/services.html
@@ -254,6 +278,11 @@ couchdb/share/www/docs/cve/2012-5641.html
 couchdb/share/www/docs/cve/2012-5649.html
 couchdb/share/www/docs/cve/2012-5650.html
 couchdb/share/www/docs/cve/2014-2668.html
+couchdb/share/www/docs/cve/2017-12635.html
+couchdb/share/www/docs/cve/2017-12636.html
+couchdb/share/www/docs/cve/2018-11769.html
+couchdb/share/www/docs/cve/2018-17188.html
+couchdb/share/www/docs/cve/2018-8007.html
 couchdb/share/www/docs/cve/index.html
 couchdb/share/www/docs/ddocs/ddocs.html
 couchdb/share/www/docs/ddocs/index.html
@@ -265,7 +294,6 @@ couchdb/share/www/docs/ddocs/views/nosql.html
 couchdb/share/www/docs/ddocs/views/pagination.html
 couchdb/share/www/docs/download.html
 couchdb/share/www/docs/experimental.html
-couchdb/share/www/docs/externals.html
 couchdb/share/www/docs/fauxton/index.html
 couchdb/share/www/docs/fauxton/install.html
 couchdb/share/www/docs/http-api.html
@@ -274,7 +302,6 @@ couchdb/share/www/docs/install/docker.html
 couchdb/share/www/docs/install/freebsd.html
 couchdb/share/www/docs/install/index.html
 couchdb/share/www/docs/install/mac.html
-couchdb/share/www/docs/install/setup.html
 couchdb/share/www/docs/install/snap.html
 couchdb/share/www/docs/install/troubleshooting.html
 couchdb/share/www/docs/install/unix.html
@@ -289,6 +316,7 @@ couchdb/share/www/docs/intro/security.html
 couchdb/share/www/docs/intro/tour.html
 couchdb/share/www/docs/intro/why.html
 couchdb/share/www/docs/json-structure.html
+couchdb/share/www/docs/maintenance/backups.html
 couchdb/share/www/docs/maintenance/compaction.html
 couchdb/share/www/docs/maintenance/index.html
 couchdb/share/www/docs/maintenance/performance.html
@@ -304,6 +332,9 @@ couchdb/share/www/docs/replication/protocol.html
 couchdb/share/www/docs/replication/replicator.html
 couchdb/share/www/docs/search.html
 couchdb/share/www/docs/searchindex.js
+couchdb/share/www/docs/setup/cluster.html
+couchdb/share/www/docs/setup/index.html
+couchdb/share/www/docs/setup/single-node.html
 couchdb/share/www/docs/whatsnew/0.10.html
 couchdb/share/www/docs/whatsnew/0.11.html
 couchdb/share/www/docs/whatsnew/0.8.html
@@ -315,8 +346,11 @@ couchdb/share/www/docs/whatsnew/1.3.html
 couchdb/share/www/docs/whatsnew/1.4.html
 couchdb/share/www/docs/whatsnew/1.5.html
 couchdb/share/www/docs/whatsnew/1.6.html
+couchdb/share/www/docs/whatsnew/1.7.html
 couchdb/share/www/docs/whatsnew/2.0.html
 couchdb/share/www/docs/whatsnew/2.1.html
+couchdb/share/www/docs/whatsnew/2.2.html
+couchdb/share/www/docs/whatsnew/2.3.html
 couchdb/share/www/docs/whatsnew/index.html
 couchdb/share/www/index.html
 man/man1/couchdb.1
@@ -324,3 +358,4 @@ share/examples/couchdb/default.ini
 share/examples/couchdb/local.ini
 share/examples/couchdb/vm.args
 @pkgdir couchdb/erts-${VERSION.erts}/man
+@pkgdir couchdb/erts-${VERSION.erts}/doc
