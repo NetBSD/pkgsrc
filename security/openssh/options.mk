@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.36 2019/04/25 14:55:04 tron Exp $
+# $NetBSD: options.mk,v 1.37 2019/09/06 09:03:00 manu Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openssh
-PKG_SUPPORTED_OPTIONS=	editline kerberos openssl pam
+PKG_SUPPORTED_OPTIONS=	editline kerberos openssl pam legacymodsz
 PKG_SUGGESTED_OPTIONS=	editline openssl
 
 .include "../../mk/bsd.prefs.mk"
@@ -25,6 +25,10 @@ CONFIGURE_ARGS+=	--with-kerberos5=${KRB5BASE}
 .  if ${KRB5_TYPE} == "mit-krb5"
 CONFIGURE_ENV+=		ac_cv_search_k_hasafs=no
 .  endif
+.endif
+
+.if !empty(PKG_OPTIONS:Mlegacymodsz)
+CONFIGURE_ARGS+=   CPPFLAGS="${CPPFLAGS} -DSSH_RSA_INSECURE_LEGACY_MIN_MOD_SZ=768"
 .endif
 
 #.if !empty(PKG_OPTIONS:Mhpn-patch)

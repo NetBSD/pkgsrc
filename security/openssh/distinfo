@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.108 2019/06/04 09:08:06 he Exp $
+$NetBSD: distinfo,v 1.109 2019/09/06 09:03:00 manu Exp $
 
 SHA1 (openssh-8.0p1.tar.gz) = 756dbb99193f9541c9206a667eaa27b0fa184a4f
 RMD160 (openssh-8.0p1.tar.gz) = 9c0d0d97a5f9f97329bf334725dfbad53576d612
@@ -16,3 +16,4 @@ SHA1 (patch-openbsd-compat_port-tun.c) = 4b1b55b7fdc319e011d249ee336301b17a58922
 SHA1 (patch-sandbox-darwin.c) = c9a1fe2e4dbf98e929d983b4206a244e0e354b75
 SHA1 (patch-sshd.8) = 5bf48cd27cef8e8810b9dc7115f5180102a345d1
 SHA1 (patch-sshd.c) = 825eeec13608859852f4cfdeaceedce21bd2f164
+SHA1 (patch-sshkey.h) = 8e6758a5f78eb48fae2df6efe8ddb9f5d4a71f7b
