@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3774 2019/09/06 13:46:03 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3775 2019/09/06 16:13:11 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6222,3 +6222,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated time/py-arrow to 0.14.7 [adam 2019-09-06]
 	Updated devel/py-virtualenv to 16.7.5 [adam 2019-09-06]
 	Updated devel/py-libmc to 1.6.1 [adam 2019-09-06]
+	Updated misc/libreoffice to 6.3.1.2 [ryoon 2019-09-06]
