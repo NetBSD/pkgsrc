@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.58 2019/08/22 12:22:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.59 2019/09/06 09:10:47 jperkin Exp $
 #
 
-DISTNAME=		apache-couchdb-2.1.1
+DISTNAME=		apache-couchdb-2.3.1
 PKGNAME=		${DISTNAME:S/apache-//}
-PKGREVISION=		12
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_APACHE:=couchdb/source/${PKGVERSION_NOREV}/}
 
-MAINTAINER=		fhajny@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://couchdb.apache.org/
 COMMENT=		Document database server, accessible via a RESTful JSON API
 LICENSE=		apache-2.0
@@ -80,6 +79,10 @@ INSTALLATION_DIRS+=	couchdb/share/server couchdb/share/www/docs
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	share/examples/couchdb
 
+CTF_FILES_SKIP+=	couchdb/erts*/bin/*
+CTF_FILES_SKIP+=	couchdb/lib/*/priv/bin/*
+CTF_FILES_SKIP+=	couchdb/lib/*/priv/lib/*.so
+
 RCD_SCRIPTS+=		couchdb
 
 # This is silly, but the rebar release target embeds the Erlang VM
@@ -116,7 +119,6 @@ do-install:
 BUILDLINK_DEPMETHOD.erlang=	build
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../lang/erlang/buildlink3.mk"
-
 .include "../../lang/spidermonkey185/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
