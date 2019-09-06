@@ -1,13 +1,12 @@
-$NetBSD: patch-aa,v 1.6 2019/09/02 08:51:29 christos Exp $
+$NetBSD: patch-aa,v 1.7 2019/09/06 14:52:39 christos Exp $
 
 - configure for pkgsrc
 - honor PKGMANDIR
 - honor pkgsrc CFLAGS and LDFLAGS
-- add -DUSE_OPENPTY -lutil
 
---- Makefile.orig	2015-10-16 15:29:50.000000000 -0400
-+++ Makefile	2019-09-02 04:47:15.636767739 -0400
-@@ -21,12 +21,12 @@
+--- Makefile.orig	2005-09-30 22:14:41.000000000 +0000
++++ Makefile
+@@ -21,12 +21,12 @@ SHELL = /bin/sh
  # If they don't exist, this makefile will try to create the directories
  # LIBDIR and SHAREDIR.  All others must already exist.
  
@@ -23,7 +22,7 @@ $NetBSD: patch-aa,v 1.6 2019/09/02 08:51:29 christos Exp $
  MANEXT = 1
  
  # TMPDIR is where the tmp files get stored, usually /tmp, /var/tmp, or
-@@ -38,11 +38,11 @@
+@@ -38,11 +38,11 @@ MANEXT = 1
  # (in case the system startup salvages tempfiles by moving them,
  # which is probably a good idea).
  
@@ -37,7 +36,7 @@ $NetBSD: patch-aa,v 1.6 2019/09/02 08:51:29 christos Exp $
  
  # The install commands of BSD and System V differ in unpleasant ways:
  # -c: copy (BSD); -c dir: destination directory (SysV)
-@@ -53,15 +53,15 @@
+@@ -53,15 +53,15 @@ DFLTSHELL = /bin/csh
  # "cp" will work reasonably well, but be aware that any links continue
  # referencing the old file with new contents.
  
@@ -56,34 +55,16 @@ $NetBSD: patch-aa,v 1.6 2019/09/02 08:51:29 christos Exp $
  #TINSTALL=/usr/ucb/install $(INSTALLFLAGS) -c -m 644
  #CYGWIN32: TINSTALL=install $(INSTALLFLAGS) -c -m 644
  
-@@ -137,7 +137,7 @@
- # Add -DUSE_EXIT if you're profiling or using purify (this causes Jove
- # to exit using exit(), instead of _exit()).
- 
--SYSDEFS = -DBSDPOSIX_STDC
-+SYSDEFS = -DBSDPOSIX_STDC -DUSE_OPENPTY
- 
- # Select optimization level (flags passed to compiling and linking steps).
- # On most systems: -g for debugging, -O for optimization.
-@@ -146,7 +146,7 @@
+@@ -146,7 +146,7 @@ SYSDEFS = -DBSDPOSIX_STDC
  # On DEC OSF/1 and Digital UNIX VV4.0, add -std1 to enable ANSI C features
  # and perhaps -g3 for more debugging info with optimization.
  
 -OPTFLAGS = -O
-+OPTFLAGS += -O2
++OPTFLAGS += -O2 -g
  
  # For making dependencies under BSD systems
  DEPENDFLAG = -M
-@@ -169,7 +169,7 @@
- #	FreeBSD 4.2: EXTRALIBS = -lutil
- #	FreeBSD 4.2, NetBSD 1.5, OpenBSD 2.x:  EXTRALIBS = -lutil
- 
--EXTRALIBS =
-+EXTRALIBS = -lutil
- 
- # Flags of linker (LDFLAGS)
- # Most systems do not need any flags.
-@@ -182,13 +182,13 @@
+@@ -181,13 +181,13 @@ EXTRALIBS =
  #	PDP-11 with separate I&D: -i
  #	PDP-11 without separate I&D: -n
  
