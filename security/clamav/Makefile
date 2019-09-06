@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2019/08/22 12:23:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.53 2019/09/06 09:22:49 jperkin Exp $
 
 PKGREVISION= 1
 .include "Makefile.common"
@@ -30,6 +30,8 @@ CONFIGURE_ARGS+=	--enable-readdir_r
 CONFIGURE_ARGS+=	--disable-zlib-vcheck
 # Work around build failure PR pkg/54420
 CONFIGURE_ARGS+=	--disable-unrar
+
+CONFIGURE_ENV.SunOS+=	ac_cv_ld_version_script=no
 
 CHECK_PORTABILITY_SKIP=	contrib/* unit_tests/* win32/*
 
