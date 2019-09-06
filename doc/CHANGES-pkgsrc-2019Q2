@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q2,v 1.1.2.10 2019/09/03 10:37:57 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q2,v 1.1.2.11 2019/09/06 18:44:27 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q2 branch:
 
@@ -140,4 +140,7 @@ audio/mpg123: security fix
 
 Pullup ticket #6035 - requested by nia
 security/libgcrypt: security fix
+
+Pullup ticket #6049 - requested by wiedi
+mail/exim: security fix (remote root)
 
