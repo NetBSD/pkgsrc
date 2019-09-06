@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.84 2019/08/10 11:41:29 ryoon Exp $
+$NetBSD: distinfo,v 1.85 2019/09/06 16:12:34 ryoon Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -172,22 +172,22 @@ SHA1 (libreoffice/libre-hebrew-1.0.tar.gz) = 88bc96881b7f5dc161ef8994cb499f13f6f
 RMD160 (libreoffice/libre-hebrew-1.0.tar.gz) = e44c35266105eb06023bd75d16f8f297c63e886d
 SHA512 (libreoffice/libre-hebrew-1.0.tar.gz) = 609c8ef29a1eab9b027ea04abf14949e9a204cf826fb0a792dadd8a83fc49ac9610a0b3a2bd4b8988e615688c63d0ec08a89436134980b2a9667e8966a75a795
 Size (libreoffice/libre-hebrew-1.0.tar.gz) = 531276 bytes
-SHA1 (libreoffice/libreoffice-6.3.0.4.tar.xz) = d694b6fc8055252731f076135b0fe5eab710c6f3
-RMD160 (libreoffice/libreoffice-6.3.0.4.tar.xz) = d47837cbee1e2fe18a07039e58c186b4044f7d18
-SHA512 (libreoffice/libreoffice-6.3.0.4.tar.xz) = 508beebf1e687e9ff668a82682561b639bd98ab85406178855b4301c7060147e1b5bea330e88d3bd7ef8de8f065d6a15d658eb436af0b03208c75d83a4deae40
-Size (libreoffice/libreoffice-6.3.0.4.tar.xz) = 224504440 bytes
-SHA1 (libreoffice/libreoffice-dictionaries-6.3.0.4.tar.xz) = da87bd5cd94de13e0916cafe5ae08d22a3e26bb7
-RMD160 (libreoffice/libreoffice-dictionaries-6.3.0.4.tar.xz) = 15928a87ce1618604f7c70e308ecc41affdef1f6
-SHA512 (libreoffice/libreoffice-dictionaries-6.3.0.4.tar.xz) = a84f6f543b5cb5861c02321034d82467ba038d3d81ec6bdc9a78aaa3aa22b913a60d880bec16213763b0ac41e0a6ca8bda7083d6b94f643ea258e05043939723
-Size (libreoffice/libreoffice-dictionaries-6.3.0.4.tar.xz) = 45890248 bytes
-SHA1 (libreoffice/libreoffice-help-6.3.0.4.tar.xz) = b54c01a235f36072edb9a626cfff9dd70128619e
-RMD160 (libreoffice/libreoffice-help-6.3.0.4.tar.xz) = 22c7ccfcfc1a5bf4762118528b6a7d4bf7fbeebc
-SHA512 (libreoffice/libreoffice-help-6.3.0.4.tar.xz) = 1f197abb10d140037f10eb43b571b9e8f7b74b502f5bb91f4a3b4b388cd31aa81175df410321b9b401432c5ac02f9d08c7d681f07d68dd1733fb0536a1551ce8
-Size (libreoffice/libreoffice-help-6.3.0.4.tar.xz) = 13191436 bytes
-SHA1 (libreoffice/libreoffice-translations-6.3.0.4.tar.xz) = 56f2bcdf2762ff1108832a403266c863e9406ea2
-RMD160 (libreoffice/libreoffice-translations-6.3.0.4.tar.xz) = a2eb0166fa9739d0b889b35f4d14ff9319c9da69
-SHA512 (libreoffice/libreoffice-translations-6.3.0.4.tar.xz) = e45957a35a325fb1314196e780c4eaa0465cef8cbdb279813f1a1b648594570cade1a3f18c5c555f821fd6043b2c900ff4dfb353eef963af494876449e1af469
-Size (libreoffice/libreoffice-translations-6.3.0.4.tar.xz) = 146252828 bytes
+SHA1 (libreoffice/libreoffice-6.3.1.2.tar.xz) = 9888504facdd13bbdd5fd78a5a2cc4768f8b885a
+RMD160 (libreoffice/libreoffice-6.3.1.2.tar.xz) = c39ed4fb13df27ec57a18d9cda6ed94e66a428b4
+SHA512 (libreoffice/libreoffice-6.3.1.2.tar.xz) = f2fee3bb8f4470119fa77387733fb01a1fb05ecdc4b6339a27539101f0b317e5beaadba0de0b4b053f7b7d8eacbed85f0d3e21400c743b02c69cd30260bb7f2b
+Size (libreoffice/libreoffice-6.3.1.2.tar.xz) = 224614340 bytes
+SHA1 (libreoffice/libreoffice-dictionaries-6.3.1.2.tar.xz) = dda835cb0e8ab7f6ff2716992c014f73787aa6ec
+RMD160 (libreoffice/libreoffice-dictionaries-6.3.1.2.tar.xz) = a1ca01eaaa1083704476b13fa3cdbeba899e9c48
+SHA512 (libreoffice/libreoffice-dictionaries-6.3.1.2.tar.xz) = 01971430a898228bcc7cf0d5d73a0667c56fbb619ee6d4e320dc1ece6c2526449e3d96d5576220a0313ab6fefc6a4ef2cf8b5f4493a9de606ae15907fd48b6c1
+Size (libreoffice/libreoffice-dictionaries-6.3.1.2.tar.xz) = 45896640 bytes
+SHA1 (libreoffice/libreoffice-help-6.3.1.2.tar.xz) = f343152a4e9971b3062dae000b1e34955360bc5c
+RMD160 (libreoffice/libreoffice-help-6.3.1.2.tar.xz) = 0c6ad441721dc3fad34f2e5f35e5affc94ef109c
+SHA512 (libreoffice/libreoffice-help-6.3.1.2.tar.xz) = 05576a225f038f16a491bbd436096e51906b9f81b2cb8e856fe94fee67c1f830473b90421f6962fccf8ef6a0877610249dd18c1874b4c812582648adc5801452
+Size (libreoffice/libreoffice-help-6.3.1.2.tar.xz) = 13191520 bytes
+SHA1 (libreoffice/libreoffice-translations-6.3.1.2.tar.xz) = 68b3059d886b9876d85f4a91494d73a9b0c8805e
+RMD160 (libreoffice/libreoffice-translations-6.3.1.2.tar.xz) = c3f00986abd54767b8bdfa483a954a918fee021a
+SHA512 (libreoffice/libreoffice-translations-6.3.1.2.tar.xz) = 3c34182752eca4b0128c1a52ca88e5a273297a717b38276cf1fd2bbabe471d3a66c187f1f896234e51150ed5e48ee2a6fab10ee543956133a63186bd81cf8f92
+Size (libreoffice/libreoffice-translations-6.3.1.2.tar.xz) = 146358272 bytes
 SHA1 (libreoffice/lxml-4.1.1.tgz) = 154279bc5939d7099697887ea15c5ca921abeaeb
 RMD160 (libreoffice/lxml-4.1.1.tgz) = 9d093324e4dd188f9885f2e4d3c19988e709dbbc
 SHA512 (libreoffice/lxml-4.1.1.tgz) = 9542e5206f9b2f9e072c52ef8e6cf44d1aaae8ae3e7ca7e820c1fac12e716503308ccb3cebc52155b4c93799f3ebca247781fc491524d004378bd26f5cddb9d1
