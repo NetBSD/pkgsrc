@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2019/09/05 09:02:11 adam Exp $
+# $NetBSD: Makefile,v 1.38 2019/09/06 14:04:37 tnn Exp $
 
 DISTNAME=	talloc-2.3.0
 CATEGORIES=	devel
-MASTER_SITES=	http://www.samba.org/ftp/talloc/
+MASTER_SITES=	https://www.samba.org/ftp/talloc/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://talloc.samba.org/talloc/doc/html/index.html
