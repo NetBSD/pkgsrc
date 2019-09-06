@@ -1,26 +1,42 @@
-$NetBSD: patch-ad,v 1.5 2009/09/08 19:20:49 joerg Exp $
-
---- lib/Makefile.orig	Thu Feb  4 00:43:26 1999
+$NetBSD: patch-ad,v 1.6 2019/09/06 08:46:26 nros Exp $
+* use libtool
+--- lib/Makefile.orig	2015-10-26 10:22:55.000000000 +0000
 +++ lib/Makefile
-@@ -25,7 +25,7 @@
+@@ -25,18 +25,18 @@
  # Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.         #
  ##############################################################################
  #
 -LIBRARY=libXmHTML.a
 +LIBRARY=libXmHTML.la
+ SHAREDLIB=libXmHTML.so.$(ARCHIVE)
  
- # Target to make
- TARGET=$(LIBRARY)
-@@ -44,9 +44,9 @@
+ # Targets to make
+-TARGET_STATIC=$(LIBRARY)
++TARGET=$(LIBRARY)
+ TARGET_SHARED=$(SHAREDLIB)
+ 
+ # Subdirectories to visit
+ SUBDIRS= common $(TOOLKIT)
+ 
+ # Target rules
+-all:: $(TARGET_STATIC) $(TARGET_SHARED)
++all:: $(TARGET)
+ 
+ # Separate rules for all targets 
+ $(TOOLKIT):: 
+@@ -45,10 +45,11 @@ $(TOOLKIT):: 
+ common::
  	@(set -x; cd common; $(MAKE) all $(pass_flags) )
  
- $(TARGET):: common $(PLATFORM) 
+-$(TARGET_STATIC):: common $(TOOLKIT) 
 -	$(RM) $@ \ 
--	$(AR) $@ common/*.o $(PLATFORM)/*.o
+-	$(AR) $@ common/*.o $(TOOLKIT)/*.o
 -	$(RANLIB) $@
++$(TARGET):: common $(TOOLKIT) 
 +	$(RM) $@
-+	${LIBTOOL} --mode=link $(CC) -o $@ common/*.lo $(PLATFORM)/*.lo \
-+		-rpath ${PREFIX}/lib -version-info 1:2
- 	
- depend:: 
- 	@( for dir in $(SUBDIRS) ; do \
++	${LIBTOOL} --mode=link $(CC) -o $@ $(sort $(wildcard common/*.lo)) \
++		$(sort  $(wildcard $(TOOLKIT)/*.lo)) \
++		-rpath $(PREFIX)/lib -version-info 2:0:1
+ 
+ $(TARGET_SHARED):: common $(TOOLKIT) 
+ 	$(RM) $@ ; \
