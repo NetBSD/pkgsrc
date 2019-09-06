@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2019/08/10 11:41:29 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.33 2019/09/06 16:12:34 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -3463,6 +3463,38 @@ ${PKGNAME}/lib/libreoffice/program/resource/sw_TZ/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sw_TZ/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sw_TZ/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sw_TZ/LC_MESSAGES/xsc.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/acc.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/avmedia.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/basctl.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/chart.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/cnr.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/cui.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/dba.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/dkt.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/editeng.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/flt.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/for.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/fps.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/frm.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/fwk.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/pcr.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/rpt.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/sb.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/sc.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/sca.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/scc.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/sd.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/sfx.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/sm.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/svl.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/svt.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/svx.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/sw.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/uui.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/vcl.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/wiz.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/wpt.mo
+${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/xsc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ta/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ta/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ta/LC_MESSAGES/basctl.mo
@@ -4243,6 +4275,7 @@ ${PKGNAME}/lib/libreoffice/readmes/README_ss
 ${PKGNAME}/lib/libreoffice/readmes/README_st
 ${PKGNAME}/lib/libreoffice/readmes/README_sv
 ${PKGNAME}/lib/libreoffice/readmes/README_sw-TZ
+${PKGNAME}/lib/libreoffice/readmes/README_szl
 ${PKGNAME}/lib/libreoffice/readmes/README_ta
 ${PKGNAME}/lib/libreoffice/readmes/README_te
 ${PKGNAME}/lib/libreoffice/readmes/README_tg
@@ -4362,6 +4395,7 @@ ${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_ss.propertie
 ${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_st.properties
 ${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_sv.properties
 ${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_sw_TZ.properties
+${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_szl.properties
 ${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_ta.properties
 ${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_te.properties
 ${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_tg.properties
@@ -6647,6 +6681,7 @@ ${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_ss.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_st.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_sv.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_sw_TZ.properties
+${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_szl.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_ta.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_te.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_tg.properties
@@ -6885,6 +6920,7 @@ ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_ss.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_st.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_sv.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_sw_TZ.properties
+${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_szl.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_ta.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_te.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_tg.properties
@@ -7192,6 +7228,7 @@ ${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_ss.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_st.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_sv.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_sw_TZ.properties
+${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_szl.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_ta.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_te.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_tg.properties
@@ -8452,6 +8489,7 @@ ${PKGNAME}/lib/libreoffice/share/registry/Langpack-ss.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/Langpack-st.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/Langpack-sv.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/Langpack-sw-TZ.xcd
+${PKGNAME}/lib/libreoffice/share/registry/Langpack-szl.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/Langpack-ta.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/Langpack-te.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/Langpack-tg.xcd
@@ -8605,6 +8643,7 @@ ${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_ss.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_st.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_sv.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_sw-TZ.xcd
+${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_szl.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_ta.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_te.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_tg.xcd
@@ -8720,6 +8759,7 @@ ${PKGNAME}/lib/libreoffice/share/registry/res/registry_ss.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/registry_st.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/registry_sv.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/registry_sw-TZ.xcd
+${PKGNAME}/lib/libreoffice/share/registry/res/registry_szl.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/registry_ta.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/registry_te.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/registry_tg.xcd
@@ -9022,6 +9062,7 @@ ${PKGNAME}/lib/libreoffice/share/wizards/resources_ss.properties
 ${PKGNAME}/lib/libreoffice/share/wizards/resources_st.properties
 ${PKGNAME}/lib/libreoffice/share/wizards/resources_sv.properties
 ${PKGNAME}/lib/libreoffice/share/wizards/resources_sw_TZ.properties
+${PKGNAME}/lib/libreoffice/share/wizards/resources_szl.properties
 ${PKGNAME}/lib/libreoffice/share/wizards/resources_ta.properties
 ${PKGNAME}/lib/libreoffice/share/wizards/resources_te.properties
 ${PKGNAME}/lib/libreoffice/share/wizards/resources_tg.properties
@@ -10222,6 +10263,7 @@ share/mime/packages/libreoffice.xml
 @pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/tg
 @pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/te
 @pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ta
+@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/szl
 @pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/sw-TZ
 @pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/st
 @pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ss
