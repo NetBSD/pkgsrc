@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3771 2019/09/06 12:58:11 wiedi Exp $
+$NetBSD: CHANGES-2019,v 1.3772 2019/09/06 13:21:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6217,3 +6217,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/couchdb to 2.3.1 [jperkin 2019-09-06]
 	Updated mail/postgrey to 1.36nb5 [jperkin 2019-09-06]
 	Updated mail/exim to 4.92.2 [wiedi 2019-09-06]
+	Updated mail/exim-html to 4.92.2 [adam 2019-09-06]
