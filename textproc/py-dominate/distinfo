@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/02/18 09:13:34 adam Exp $
+$NetBSD: distinfo,v 1.3 2019/09/06 13:34:21 adam Exp $
 
-SHA1 (dominate-2.3.5.tar.gz) = 7b98c4851cfd395b24312beb3e8fdabe14a8911a
-RMD160 (dominate-2.3.5.tar.gz) = fd49681e881a49849c2926354036d60f5ec4602d
-SHA512 (dominate-2.3.5.tar.gz) = a48fff16fc3430201d757a5947c08397f821acdc07a2bd13bb77d65b0d71919726cf4f4792d591cf84ca05912223f439e9cb63e9d18b9a743b217e21ec97d3c2
-Size (dominate-2.3.5.tar.gz) = 27875 bytes
+SHA1 (dominate-2.4.0.tar.gz) = 32ab77c1faa634d34578816d6d8721584c835ba8
+RMD160 (dominate-2.4.0.tar.gz) = 351b72cfbbfba68f8aaaf274597488268ae4554e
+SHA512 (dominate-2.4.0.tar.gz) = a14f5dead31364543839c54a6ea4e16d796c9c99277a8fe2cb29edfb2f8259f45befcb33923fe6932cc7da25d9c09cc54d1ea1bd12cc11c52fe6ba52f4f9ef8f
+Size (dominate-2.4.0.tar.gz) = 32810 bytes

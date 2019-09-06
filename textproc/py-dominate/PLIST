@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/10/23 15:22:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/09/06 13:34:21 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -18,6 +18,9 @@ ${PYSITELIB}/dominate/dom1core.pyo
 ${PYSITELIB}/dominate/dom_tag.py
 ${PYSITELIB}/dominate/dom_tag.pyc
 ${PYSITELIB}/dominate/dom_tag.pyo
+${PYSITELIB}/dominate/svg.py
+${PYSITELIB}/dominate/svg.pyc
+${PYSITELIB}/dominate/svg.pyo
 ${PYSITELIB}/dominate/tags.py
 ${PYSITELIB}/dominate/tags.pyc
 ${PYSITELIB}/dominate/tags.pyo
