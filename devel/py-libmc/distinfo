@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/12/05 16:20:45 adam Exp $
+$NetBSD: distinfo,v 1.6 2019/09/06 13:45:36 adam Exp $
 
-SHA1 (pylibmc-1.6.0.tar.gz) = 00de3115aacdf294112f93f0f1beb10a7ac35e7b
-RMD160 (pylibmc-1.6.0.tar.gz) = d427f286e6a8ea7c9daacce0f2b16b01f5314293
-SHA512 (pylibmc-1.6.0.tar.gz) = d9cfe7cbda4464ead2faf74c3cb423f2bd929b5451e99888b28deb4cc5ac6653baefde18e4ed8e1a463ad01ed271074a62e5f3fa735ede5ec1d925d44fb254fb
-Size (pylibmc-1.6.0.tar.gz) = 65925 bytes
+SHA1 (pylibmc-1.6.1.tar.gz) = cb0d78283bac2b6253003aaa70faafea6bf77bcb
+RMD160 (pylibmc-1.6.1.tar.gz) = c12e997e5ed700434b47a01a0001e753a5ab9470
+SHA512 (pylibmc-1.6.1.tar.gz) = 270b0ede87a84c335c628c049de99c803c9e6f15914c1254f363dfbecc16d96446f08963473d58d6f734493830a4306a770bf846d036baffa500fdb782733016
+Size (pylibmc-1.6.1.tar.gz) = 64227 bytes
