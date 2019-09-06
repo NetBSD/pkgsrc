@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.46 2019/06/09 03:44:50 gutteridge Exp $
+# $NetBSD: options.mk,v 1.47 2019/09/06 03:00:23 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
@@ -10,7 +10,7 @@ PLIST_VARS+=		gnome jemalloc debug
 .if ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS+=	pulseaudio mozilla-jemalloc dbus
 .else
-PKG_SUGGESTED_OPTIONS+=	oss dbus
+PKG_SUGGESTED_OPTIONS+=	dbus
 .endif
 
 PKG_SUGGESTED_OPTIONS.Linux+=	webrtc
