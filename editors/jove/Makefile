@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/09/02 08:55:08 christos Exp $
+# $NetBSD: Makefile,v 1.20 2019/09/06 14:52:39 christos Exp $
 #
 
 DISTNAME=	jove4.16.0.74
@@ -19,6 +19,8 @@ MAKE_FLAGS+=	NROFF=${NROFF:Q}
 
 INSTALL_MAKE_FLAGS+=	JOVEHOME=${DESTDIR}${PREFIX}
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
+CFLAGS.NetBSD+=-DUSE_OPENPTY -DNO_TIOCREMOTE
+LDFLAGS.NetBSD+=-lutil
 
 SUBST_CLASSES+=		getline
 SUBST_STAGE.getline=	pre-build # no pre-configure with NO_CONFIGURE...
