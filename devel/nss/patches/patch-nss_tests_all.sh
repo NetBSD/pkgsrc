@@ -1,10 +1,10 @@
-$NetBSD: patch-nss_tests_all.sh,v 1.1 2018/02/24 11:35:48 ryoon Exp $
+$NetBSD: patch-nss_tests_all.sh,v 1.2 2019/09/06 02:54:47 ryoon Exp $
 
 Revert Bug 1377940 to fix misc/libreoffice
 
---- nss/tests/all.sh.orig	2018-01-18 14:19:59.000000000 +0000
+--- nss/tests/all.sh.orig	2019-08-30 15:46:32.000000000 +0000
 +++ nss/tests/all.sh
-@@ -111,8 +111,6 @@ RUN_FIPS=""
+@@ -114,8 +114,6 @@ RUN_FIPS=""
  ########################################################################
  run_tests()
  {
@@ -13,8 +13,8 @@ Revert Bug 1377940 to fix misc/libreoffice
      for TEST in ${TESTS}
      do
          # NOTE: the spaces are important. If you don't include
-@@ -174,9 +172,8 @@ run_cycle_pkix()
-     NSS_SSL_TESTS=`echo "${NSS_SSL_TESTS}" | sed -e "s/normal//g" -e "s/fips//g" -e "s/_//g"`
+@@ -173,9 +171,8 @@ run_cycle_pkix()
+ 
      export -n NSS_SSL_RUN
  
 -    # use the default format. (unset for the shell, export -n for binaries)
