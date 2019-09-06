@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2019/09/06 14:52:39 christos Exp $
+$NetBSD: distinfo,v 1.11 2019/09/06 15:53:42 christos Exp $
 
 SHA1 (jove4.16.0.74.tgz) = a9a9fbb07e314eae5427b5be93ca985fd3c29699
 RMD160 (jove4.16.0.74.tgz) = 5eb3eb4c0c4fe13b3296a37344e33c1c21abf931
@@ -6,5 +6,5 @@ SHA512 (jove4.16.0.74.tgz) = 53d94fb4044efbac990efd8a2056bc60039cbbaf0b62fcbfc37
 Size (jove4.16.0.74.tgz) = 468165 bytes
 SHA1 (patch-aa) = 5431a846a159f3805d505260ae4b797d7bb0561f
 SHA1 (patch-ac) = 98329cfcbbec9d56cbef7e1bee6685b6dd25e8ac
-SHA1 (patch-jove.h) = 38e85de80c772d90e90355e386f1eba243bd3191
+SHA1 (patch-jove.h) = aeb15f4b9e6535ab2b8b72a67ed4e2919cd25268
 SHA1 (patch-proc.c) = 3d8f65a7977bbd8e5ebb4920e5efc07b2c98f1de
