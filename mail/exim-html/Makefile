@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2019/02/24 20:31:00 adam Exp $
+# $NetBSD: Makefile,v 1.39 2019/09/06 13:21:35 adam Exp $
 
-DISTNAME=	exim-html-4.92
+DISTNAME=	exim-html-4.92.2
 CATEGORIES=	mail net
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/
 MASTER_SITES+=	ftp://ftp.csx.cam.ac.uk/pub/software/email/exim/exim4/
@@ -16,6 +16,7 @@ INSTALLATION_DIRS=	share/doc/exim/html
 USE_TOOLS+=	pax
 
 do-install:
-	cd ${WRKSRC}/${DISTNAME}/doc && pax -rw html ${DESTDIR}${PREFIX}/share/doc/exim
+	cd ${WRKSRC}/${DISTNAME}/doc && \
+	${PAX} -rw html ${DESTDIR}${PREFIX}/share/doc/exim
 
 .include "../../mk/bsd.pkg.mk"
