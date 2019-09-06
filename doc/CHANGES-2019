@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3773 2019/09/06 13:37:35 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3774 2019/09/06 13:46:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6220,3 +6220,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/exim-html to 4.92.2 [adam 2019-09-06]
 	Updated textproc/py-dominate to 2.4.0 [adam 2019-09-06]
 	Updated time/py-arrow to 0.14.7 [adam 2019-09-06]
+	Updated devel/py-virtualenv to 16.7.5 [adam 2019-09-06]
+	Updated devel/py-libmc to 1.6.1 [adam 2019-09-06]
