@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2019/05/29 20:16:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.38 2019/09/06 13:42:25 adam Exp $
 bin/virtualenv-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -14,5 +14,6 @@ ${PYSITELIB}/virtualenv_support/__init__.py
 ${PYSITELIB}/virtualenv_support/__init__.pyc
 ${PYSITELIB}/virtualenv_support/__init__.pyo
 ${PYSITELIB}/virtualenv_support/pip-19.1.1-py2.py3-none-any.whl
-${PYSITELIB}/virtualenv_support/setuptools-41.0.1-py2.py3-none-any.whl
-${PYSITELIB}/virtualenv_support/wheel-0.33.4-py2.py3-none-any.whl
+${PYSITELIB}/virtualenv_support/pip-19.2.3-py2.py3-none-any.whl
+${PYSITELIB}/virtualenv_support/setuptools-41.2.0-py2.py3-none-any.whl
+${PYSITELIB}/virtualenv_support/wheel-0.33.6-py2.py3-none-any.whl
