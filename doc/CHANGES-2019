@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3762 2019/09/05 18:55:19 maya Exp $
+$NetBSD: CHANGES-2019,v 1.3763 2019/09/06 02:53:54 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6207,3 +6207,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/fasttracker2 to 2.168 [fox 2019-09-05]
 	Updated www/gitea to 1.9.2 [nia 2019-09-05]
 	Updated devel/lua-bitlib to 5.3.0nb1 [maya 2019-09-05]
+	Updated devel/cbindgen to 0.9.1 [ryoon 2019-09-06]
