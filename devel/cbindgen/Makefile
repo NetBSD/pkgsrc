@@ -1,6 +1,6 @@
-e $NetBSD: Makefile,v 1.7 2019/07/04 13:16:07 ryoon Exp $
+e $NetBSD: Makefile,v 1.8 2019/09/06 02:53:19 ryoon Exp $
 
-DISTNAME=	cbindgen-0.9.0
+DISTNAME=	cbindgen-0.9.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=eqrion/}
 GITHUB_PROJECT=	cbindgen
@@ -26,8 +26,8 @@ CARGO_CRATE_DEPENDS+=	\
 	libc-0.2.58 \
 	log-0.4.6 \
 	numtoa-0.1.0 \
-	proc-macro2-0.4.30 \
-	quote-0.6.12 \
+	proc-macro2-1.0.0 \
+	quote-1.0.0 \
 	rand-0.6.5 \
 	rand_chacha-0.1.1 \
 	rand_core-0.3.1 \
@@ -47,16 +47,16 @@ CARGO_CRATE_DEPENDS+=	\
 	semver-0.9.0 \
 	semver-parser-0.7.0 \
 	serde-1.0.93 \
-	serde_derive-1.0.93 \
+	serde_derive-1.0.99 \
 	serde_json-1.0.39 \
 	strsim-0.8.0 \
-	syn-0.15.38 \
+	syn-1.0.1 \
 	tempfile-3.0.8 \
 	termion-1.5.3 \
 	textwrap-0.11.0 \
 	toml-0.5.1 \
 	unicode-width-0.1.5 \
-	unicode-xid-0.1.0 \
+	unicode-xid-0.2.0 \
 	vec_map-0.8.1 \
 	winapi-0.3.7 \
 	winapi-i686-pc-windows-gnu-0.4.0 \
