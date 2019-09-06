@@ -1,16 +1,11 @@
-$NetBSD: distinfo,v 1.11 2015/11/04 03:28:25 agc Exp $
+$NetBSD: distinfo,v 1.12 2019/09/06 08:46:26 nros Exp $
 
-SHA1 (XmHTML-1.1.7.tar.gz) = 4d8c82f88cf0700f6fc8898323d865b83d2a1ff1
-RMD160 (XmHTML-1.1.7.tar.gz) = 0e5cf4a0d24fc73277186a726a3997dea4ea82db
-SHA512 (XmHTML-1.1.7.tar.gz) = a8d46a27ab69f840f944d0d826d81f642fde804e7c3c62dc01899890b9f1a6108c55073e331aec8fd4c4cb47d768d7f4e0208a950f2e8b68f397076330673e1b
-Size (XmHTML-1.1.7.tar.gz) = 1289780 bytes
-SHA1 (patch-aa) = 3d4f8b8cbb825b91da3bae64ef2b6572406189d9
-SHA1 (patch-ab) = 2f9e88b74913c735caf139646c2637a77a1232cd
-SHA1 (patch-ac) = a253e613c9f8752bbef42d5d9db180506edf0940
-SHA1 (patch-ad) = 69f9244f3a567e4d2d15f3af448476167454c4c9
-SHA1 (patch-ae) = f4d0a993d383e97ff06a29151316d57bcd21c25d
-SHA1 (patch-af) = de3658ddbe191deb3d838f500d985c950ab4a967
-SHA1 (patch-ag) = acac76543e8fe98d79064bbec7830f285e9c50cd
-SHA1 (patch-ah) = 78ad8dc486da8aad6911f79eb8bd22d8417aec1f
-SHA1 (patch-ai) = 300b35e24698d6e717f0b1bdfd577df91244fba4
-SHA1 (patch-aj) = 7dbd41eb4c07f094f614a0ad91fbda242d167c31
+SHA1 (XmHTML-1.1.10.tgz) = 88b7b53d70903c79adf3629db76d803d3af6312b
+RMD160 (XmHTML-1.1.10.tgz) = 0f4914be68d051e1a9b2b797ddfaf4490f51330b
+SHA512 (XmHTML-1.1.10.tgz) = 6b92df188011478b4ab36ff57c04490acdb8eb1070caff48c31dde7006ac2ce54ea6cc7a990363569d7ebee531bba06d0d9e848f9397f156403c26974d2cb962
+Size (XmHTML-1.1.10.tgz) = 1348388 bytes
+SHA1 (patch-aa) = 6d3eb8a40fd2beb847614b1c9484573dfe02d1eb
+SHA1 (patch-ad) = d71fe01b604def5c00213a0d2fb249208ffa098e
+SHA1 (patch-af) = e88b0bee324aae547d0b2e694b63342491cc2fcd
+SHA1 (patch-ag) = c99a18184d573608021ca2084394691bcea60c66
+SHA1 (patch-ah) = 698299e9d1ec6b7f454cddd7cb6ba364fc1d4e4c

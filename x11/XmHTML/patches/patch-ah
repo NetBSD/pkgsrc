@@ -1,5 +1,5 @@
-$NetBSD: patch-ah,v 1.1 2005/09/18 16:03:47 dmcmahill Exp $
-
+$NetBSD: patch-ah,v 1.2 2019/09/06 08:46:26 nros Exp $
+* fix build with pkgsrc zlib
 --- include/XmHTML/XmHTMLP.h.orig	1999-01-19 21:08:39.000000000 -0500
 +++ include/XmHTML/XmHTMLP.h
 @@ -136,7 +136,7 @@
