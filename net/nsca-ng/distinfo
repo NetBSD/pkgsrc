@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2019/09/07 16:25:53 maya Exp $
+
+SHA1 (nsca-ng-1.4.tar.gz) = 5b8423d14d1bab2dc87605694f828363a1e671e4
+RMD160 (nsca-ng-1.4.tar.gz) = 17fa9aaff47f1790aaae090a9fdea4955b85c4e2
+SHA512 (nsca-ng-1.4.tar.gz) = 79b52fb2e5a7f1523958a24846ac15826738a28454e6e2c9e20dda2202b99fce042d0733ac8dfc98619210312af8eff748c22f82208528f54243061054273c41
+Size (nsca-ng-1.4.tar.gz) = 354012 bytes
+SHA1 (patch-etc_nsca-ng.cfg) = 54e67b420d4905c3c7a8d1fe2268bc787b5ed6f3
+SHA1 (patch-src_common_tls.c) = 30d5a28225bd8f0c1b8222c977490410fd1531a0
