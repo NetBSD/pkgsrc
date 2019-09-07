@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3779 2019/09/07 07:16:23 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3780 2019/09/07 07:25:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6230,3 +6230,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-aiohttp to 3.6.0 [adam 2019-09-07]
 	Updated devel/py-whichcraft to 0.6.1 [adam 2019-09-07]
 	Updated www/py-mechanize to 0.4.3 [adam 2019-09-07]
+	Updated textproc/py-snowballstemmer to 1.9.1 [adam 2019-09-07]
+	Updated www/py-werkzeug to 0.15.6 [adam 2019-09-07]
