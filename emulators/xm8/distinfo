@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1 2019/09/07 00:36:34 tsutsui Exp $
+
+SHA1 (xm8_170.zip) = 2992590d22f20007fcc5c739be071e39eef5e342
+RMD160 (xm8_170.zip) = 0860b40bdb74bb53ad84b600edaa58b1c994d391
+SHA512 (xm8_170.zip) = c1e49aefec3c4d08cc21f284960d63af2c126883bfc0119d7cf6babe5e14405fae91ea1123eabaaeb41bce8f6ec2e80257b7db8645ce762487ce5ebc94d0d65b
+Size (xm8_170.zip) = 6186595 bytes
+SHA1 (patch-Source_UI_app.cpp) = ca4de2687454c483a153a83d03c5c4b1f1d9b7a7
+SHA1 (patch-Source_UI_emu.cpp) = 9c7c8357ebdaa41a317319d46e24fbcabe283418
+SHA1 (patch-Source_UI_emu__sdl.cpp) = 2fee35253b04ef95375d91258faffdf92386ebba
+SHA1 (patch-Source_UI_emu__sdl.h) = 2ce15da0e3ab68ff21498bd14832b6a632d14efa
+SHA1 (patch-Source_UI_os.h) = b2aba38179a12cc34fbb368e7dfb77241fe51c72
+SHA1 (patch-Source_UI_platform.cpp) = 124872390589a6a952e865d81b9e0bcd8e0b2228
+SHA1 (patch-Source_UI_platform.h) = 7f34ae8d8e2e88ffae86a52fdde54262b6052de3
+SHA1 (patch-Source_ePC-8801MA_common.h) = 64382225e0a92ab55e8e75564ac449f8c33c8b2e
