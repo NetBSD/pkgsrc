@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2019/08/12 07:26:49 adam Exp $
+# $NetBSD: Makefile,v 1.6 2019/09/07 07:11:07 adam Exp $
 
-DISTNAME=	whichcraft-0.6.0
+DISTNAME=	whichcraft-0.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/whichcraft/}
