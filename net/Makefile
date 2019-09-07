@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1264 2019/08/25 15:09:22 tsutsui Exp $
+# $NetBSD: Makefile,v 1.1265 2019/09/07 16:27:32 maya Exp $
 #
 
 COMMENT=	Networking tools
@@ -431,6 +431,7 @@ SUBDIR+=	nmap
 SUBDIR+=	nocol
 SUBDIR+=	nprobe
 SUBDIR+=	ns
+SUBDIR+=	nsca-ng
 SUBDIR+=	nsd
 SUBDIR+=	nslint
 SUBDIR+=	nstx
