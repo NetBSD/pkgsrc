@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/08/09 20:24:22 brook Exp $
+# $NetBSD: Makefile,v 1.2 2019/09/07 08:38:27 maya Exp $
 
 R_PKGNAME=	later
 R_PKGVER=	0.8.0
@@ -14,5 +14,6 @@ USE_LANGUAGES=	c c++
 
 .include "../../math/R/Makefile.extension"
 .include "../../devel/R-Rcpp/buildlink3.mk"
+.include "../../devel/R-BH/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
