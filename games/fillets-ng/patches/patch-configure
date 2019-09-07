@@ -1,0 +1,48 @@
+$NetBSD: patch-configure,v 1.1 2019/09/07 14:50:29 nia Exp $
+
+Fix lua detection.
+
+--- configure.orig	2011-09-08 18:28:11.000000000 +0000
++++ configure
+@@ -4249,7 +4249,7 @@ fi
+ 
+ if test "x$LUAPFX" != x ; then
+     LUA_CFLAGS="-I$LUAPFX"
+-    LUA_LIBS="-L$LUAPFX -llua -llualib"
++    LUA_LIBS="-L$LUAPFX -llua"
+ else
+     for ac_prog in lua-config lua-config50 lua-config5.0
+ do
+@@ -4483,7 +4483,6 @@ fi
+ 
+ fi
+ 
+-
+             { $as_echo "$as_me:${as_lineno-$LINENO}: checking for luaopen_base in -llualib" >&5
+ $as_echo_n "checking for luaopen_base in -llualib... " >&6; }
+ if test "${ac_cv_lib_lualib_luaopen_base+set}" = set; then :
+@@ -4604,7 +4603,6 @@ else
+   as_fn_error $? "*** Lualib5 is required.
+                  You can download lua from http://www.lua.org" "$LINENO" 5
+ fi
+-
+ fi
+ 
+ fi
+@@ -4743,6 +4741,7 @@ fi
+ fi
+ 
+ 
++if false; then :
+             { $as_echo "$as_me:${as_lineno-$LINENO}: checking for luaopen_base in -llualib" >&5
+ $as_echo_n "checking for luaopen_base in -llualib... " >&6; }
+ if test "${ac_cv_lib_lualib_luaopen_base+set}" = set; then :
+@@ -4863,7 +4862,7 @@ else
+   as_fn_error $? "*** Lualib5 is required.
+                  You can download lua from http://www.lua.org" "$LINENO" 5
+ fi
+-
++fi
+ fi
+ 
+ fi
