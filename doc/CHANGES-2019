@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3794 2019/09/07 19:30:29 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.3795 2019/09/07 23:52:38 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6246,3 +6246,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added sysutils/u-boot-tinker version 2018.11 [tnn 2019-09-07]
 	Updated mail/rss2email to 3.10 [schmonz 2019-09-07]
 	Updated net/openconnect to 8.04 [schmonz 2019-09-07]
+	Removed multimedia/gecko-mediaplayer [nia 2019-09-08]
