@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3778 2019/09/07 04:32:33 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.3779 2019/09/07 07:16:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6226,3 +6226,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Added emulators/xm8 version 1.70 [tsutsui 2019-09-07]
 	Updated www/firefox to 69.0nb1 [gutteridge 2019-09-07]
 	Updated x11/py-gtk2 to 2.24.0nb29 [gutteridge 2019-09-07]
+	Updated multimedia/ffmpeg4 to 4.2.1 [adam 2019-09-07]
+	Updated www/py-aiohttp to 3.6.0 [adam 2019-09-07]
+	Updated devel/py-whichcraft to 0.6.1 [adam 2019-09-07]
+	Updated www/py-mechanize to 0.4.3 [adam 2019-09-07]
