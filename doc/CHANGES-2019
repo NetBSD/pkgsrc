@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3791 2019/09/07 16:27:08 maya Exp $
+$NetBSD: CHANGES-2019,v 1.3792 2019/09/07 18:29:02 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6243,3 +6243,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated games/fillets-ng-data to 1.0.1 [nia 2019-09-07]
 	Updated misc/libreoffice6-bin to 6.2.7 [tsutsui 2019-09-07]
 	Added net/nsca-ng version 1.4 [maya 2019-09-07]
+	Added sysutils/u-boot-tinker version 2018.11 [tnn 2019-09-07]
