@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/08/09 20:25:29 brook Exp $
+# $NetBSD: Makefile,v 1.2 2019/09/07 13:16:27 maya Exp $
 
 R_PKGNAME=	promises
 R_PKGVER=	1.0.1
@@ -10,6 +10,7 @@ LICENSE=	mit
 
 DEPENDS+=	R-magrittr>=1.5:../../devel/R-magrittr
 DEPENDS+=	R-rlang>=0.4.0:../../devel/R-rlang
+DEPENDS+=	R-R6-[0-9]*:../../devel/R-R6
 
 USE_LANGUAGES=	c c++
 
