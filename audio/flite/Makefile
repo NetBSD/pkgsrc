@@ -1,22 +1,31 @@
-# $NetBSD: Makefile,v 1.9 2014/01/06 22:11:01 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2019/09/07 11:42:49 nia Exp $
 #
 
-DISTNAME=	flite-1.3-release
+DISTNAME=	flite-2.1-release
 PKGNAME=	${DISTNAME:S/-release//}
-PKGREVISION=	3
 CATEGORIES=	audio
-MASTER_SITES=	http://www.speech.cs.cmu.edu/flite/packed/flite-1.3/
+MASTER_SITES=	http://www.festvox.org/flite/packed/flite-2.1/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.speech.cs.cmu.edu/flite/
-COMMENT=	Small and fast run-time synthesis engine
+HOMEPAGE=	http://www.festvox.org/flite/
+COMMENT=	Lightweight text to speech synthesis engine
 
 # Error opening output file '[...]/cmu_us_kal_diphone.o': No such file or directory
 MAKE_JOBS_SAFE=	no
 
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config
-GNU_CONFIGURE=		yes
+USE_TOOLS+=	gmake
+GNU_CONFIGURE=	yes
+
+INSTALLATION_DIRS+=	bin include/flite lib share/doc/flite
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/flite ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/flite_cmu* ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/flite_time ${DESTDIR}${PREFIX}/bin
+	${INSTALL_LIB} ${WRKSRC}/build/platform/lib/libflite* ${DESTDIR}${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/include/*.h ${DESTDIR}${PREFIX}/include/flite
+	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/flite
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

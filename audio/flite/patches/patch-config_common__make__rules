@@ -1,4 +1,11 @@
-$NetBSD: patch-config_common__make__rules,v 1.2 2013/11/18 02:22:30 dholland Exp $
+$NetBSD: patch-config_common__make__rules,v 1.3 2019/09/07 11:42:49 nia Exp $
+
+hunk 1:
+
+Don't use a platform-specific build directory to make installation
+easier.
+
+hunk 2:
 
 Work around PR 48385, a tmpfs bug that combined with this package's
 build system causes gmake 4.0 to loop forever making depend.
@@ -11,14 +18,24 @@ It is, in any event, almost never a good idea to depend on directories
 in makefiles. The workaround is to not do that and explicitly run a
 sub-make to create the object directory.
 
---- config/common_make_rules.orig	2004-12-19 22:20:43.000000000 +0000
+--- config/common_make_rules.orig	2017-10-21 14:01:07.000000000 +0000
 +++ config/common_make_rules
-@@ -188,7 +188,10 @@ ifdef ALL_DIRS
+@@ -55,7 +55,7 @@ CFLAGS += $(EXTRA_CC_FLAGS) $(OPT) $(DBG
+ TARGET_PLATFORM=$(TARGET_CPU)-$(TARGET_OS)
+ HOST_PLATFORM=$(HOST_CPU)-$(HOST_OS)
+ ifndef BUILDDIR
+-BUILDDIR=$(TOP)/build/$(TARGET_PLATFORM)
++BUILDDIR=$(TOP)/build/platform
+ endif
+ OBJDIR=$(BUILDDIR)/obj/$(DIRNAME)
+ BINDIR=$(BUILDDIR)/bin
+@@ -172,8 +172,11 @@ ifdef ALL_DIRS
  	done
  endif
  
 -$(DEPEND): $(SRCS) $(OBJDIR)
 +$(DEPEND): $(SRCS)
+ ifdef BUILD_DIRS
 +	@ echo Doing implicit make depend.
 +	@ touch $(DEPEND)
 +	@ $(MAKE) $(OBJDIR)
