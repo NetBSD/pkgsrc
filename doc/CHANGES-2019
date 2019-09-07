@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3792 2019/09/07 18:29:02 tnn Exp $
+$NetBSD: CHANGES-2019,v 1.3793 2019/09/07 18:58:13 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6244,3 +6244,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated misc/libreoffice6-bin to 6.2.7 [tsutsui 2019-09-07]
 	Added net/nsca-ng version 1.4 [maya 2019-09-07]
 	Added sysutils/u-boot-tinker version 2018.11 [tnn 2019-09-07]
+	Updated mail/rss2email to 3.10 [schmonz 2019-09-07]
