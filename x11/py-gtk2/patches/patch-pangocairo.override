@@ -1,0 +1,27 @@
+$NetBSD: patch-pangocairo.override,v 1.1 2019/09/07 04:32:14 gutteridge Exp $
+
+Fix object leaks. Committed by upstream, but never branched for release.
+https://bugzilla.gnome.org/show_bug.cgi?id=660216
+
+--- pangocairo.override.orig	2011-04-01 10:37:25.000000000 +0000
++++ pangocairo.override
+@@ -118,11 +118,16 @@ _wrap_pango_cairo_update_context(PyGObje
+ static PyObject *
+ _wrap_pango_cairo_create_layout(PyGObject *self)
+ {
+-    PangoLayout *ret;
++    PangoLayout *layout;
++    PyObject *ret;
+ 
+-    ret = pango_cairo_create_layout(PycairoContext_GET(self));
++    layout = pango_cairo_create_layout(PycairoContext_GET(self));
+     /* pygobject_new handles NULL checking */
+-    return pygobject_new((GObject *)ret);
++    ret = pygobject_new((GObject *)layout);
++    if (layout)
++	g_object_unref(layout);
++
++    return ret;
+ }
+ 
+ static PyObject *
