@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3787 2019/09/07 14:22:05 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3788 2019/09/07 15:01:53 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6239,3 +6239,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/bftpd to 5.2 [nia 2019-09-07]
 	Updated fonts/spleen to 1.2.0 [fcambus 2019-09-07]
 	Updated audio/exaile to 4.0.0 [nia 2019-09-07]
+	Updated games/fillets-ng to 1.0.1 [nia 2019-09-07]
