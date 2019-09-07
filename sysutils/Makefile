@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.829 2019/08/15 08:45:07 fcambus Exp $
+# $NetBSD: Makefile,v 1.830 2019/09/07 18:29:03 tnn Exp $
 #
 
 COMMENT=	System utilities
@@ -670,6 +670,7 @@ SUBDIR+=	u-boot-pocketchip
 SUBDIR+=	u-boot-rock64
 SUBDIR+=	u-boot-rockpro64
 SUBDIR+=	u-boot-sopine-baseboard
+SUBDIR+=	u-boot-tinker
 SUBDIR+=	u-boot-zynq-zybo-z7
 SUBDIR+=	upower
 SUBDIR+=	ups-nut
