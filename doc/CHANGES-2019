@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3776 2019/09/07 00:39:12 tsutsui Exp $
+$NetBSD: CHANGES-2019,v 1.3777 2019/09/07 03:41:55 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6224,3 +6224,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-libmc to 1.6.1 [adam 2019-09-06]
 	Updated misc/libreoffice to 6.3.1.2 [ryoon 2019-09-06]
 	Added emulators/xm8 version 1.70 [tsutsui 2019-09-07]
+	Updated www/firefox to 69.0nb1 [gutteridge 2019-09-07]
