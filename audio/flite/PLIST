@@ -1,15 +1,23 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:32:08 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/09/07 11:42:49 nia Exp $
 bin/flite
+bin/flite_cmu_time_awb
+bin/flite_cmu_us_awb
+bin/flite_cmu_us_kal
+bin/flite_cmu_us_kal16
+bin/flite_cmu_us_rms
+bin/flite_cmu_us_slt
 bin/flite_time
 include/flite/cst_alloc.h
 include/flite/cst_args.h
 include/flite/cst_audio.h
 include/flite/cst_cart.h
+include/flite/cst_cg.h
 include/flite/cst_clunits.h
 include/flite/cst_diphone.h
 include/flite/cst_endian.h
 include/flite/cst_error.h
 include/flite/cst_features.h
+include/flite/cst_ffeatures.h
 include/flite/cst_file.h
 include/flite/cst_hrg.h
 include/flite/cst_item.h
@@ -37,12 +45,20 @@ include/flite/cst_val_defs.h
 include/flite/cst_viterbi.h
 include/flite/cst_voice.h
 include/flite/cst_wave.h
+include/flite/cst_wchar.h
 include/flite/flite.h
 include/flite/flite_version.h
 lib/libflite.a
+lib/libflite_cmu_grapheme_lang.a
+lib/libflite_cmu_grapheme_lex.a
+lib/libflite_cmu_indic_lang.a
+lib/libflite_cmu_indic_lex.a
 lib/libflite_cmu_time_awb.a
+lib/libflite_cmu_us_awb.a
 lib/libflite_cmu_us_kal.a
 lib/libflite_cmu_us_kal16.a
+lib/libflite_cmu_us_rms.a
+lib/libflite_cmu_us_slt.a
 lib/libflite_cmulex.a
 lib/libflite_usenglish.a
-share/doc/flite/README
+share/doc/flite/README.md

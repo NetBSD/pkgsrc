@@ -1,4 +1,5 @@
-Flite (festival-lite) is a small, fast run-time synthesis engine developed
-at CMU and primarily designed for small embedded machines and/or large
-servers. Flite is designed as an alternative synthesis engine to Festival
-for voices built using the FestVox suite of voice building tools.
+CMU Flite (festival-lite) is a small, fast run-time open source text to
+speech synthesis engine developed at CMU and primarily designed for small
+embedded machines and/or large servers. Flite is designed as an alternative
+text to speech synthesis engine to Festival for voices built using the
+FestVox suite of voice building tools.
