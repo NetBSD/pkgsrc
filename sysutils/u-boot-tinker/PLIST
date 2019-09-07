@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2019/09/07 18:27:46 tnn Exp $
+share/u-boot/tinker/u-boot-tinker-sd.bin
