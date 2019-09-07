@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3781 2019/09/07 10:47:31 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3782 2019/09/07 11:42:58 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6233,3 +6233,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/py-snowballstemmer to 1.9.1 [adam 2019-09-07]
 	Updated www/py-werkzeug to 0.15.6 [adam 2019-09-07]
 	Updated sysutils/file to 5.37 [nia 2019-09-07]
+	Updated audio/flite to 2.1 [nia 2019-09-07]
