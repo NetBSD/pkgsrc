@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19244 2019/09/07 11:42:58 nia Exp $
+$NetBSD: TODO,v 1.19245 2019/09/07 13:00:59 nia Exp $
 
 Suggested new packages
 ======================
@@ -625,7 +625,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fakeroot-1.6.5
 	o felt-3.07 [wip]
 	o fengoffice-3.4.0.17
-	o festival-2.4
 	o fet-5.28.6
 	o fetchyahoo-2.14.0
 	o filerunner-14.06.18.10
