@@ -1,0 +1,20 @@
+$NetBSD: patch-exaile,v 1.1 2019/09/07 14:21:54 nia Exp $
+
+Replace python executable name.
+
+--- exaile.orig	2019-06-05 03:18:52.000000000 +0000
++++ exaile
+@@ -12,12 +12,4 @@ if [ -z "${PROGRAM_DIR}" ]; then
+     PROGRAM_DIR=`dirname "$0"`
+ fi
+ 
+-if [ -z "${PYTHON2}" ]; then
+-    if [ "`which python2 2> /dev/null`" ]; then
+-        PYTHON2=python2
+-    else
+-        PYTHON2=python
+-    fi
+-fi
+-
+-exec ${PYTHON2} -O ${PROGRAM_DIR}/exaile.py --startgui "$@"
++exec @PYTHONBIN@ -O ${PROGRAM_DIR}/exaile.py --startgui "$@"
