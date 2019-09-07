@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/06/22 11:52:31 nia Exp $
+# $NetBSD: Makefile,v 1.4 2019/09/07 07:11:46 rillig Exp $
 
 PKGNAME=	ini_file_manager-${IFM_VERSION}
 CATEGORIES=	misc
@@ -13,7 +13,7 @@ LICENSE=	mit
 IFM_VERSION=	03
 SFPATH=		ini-files/files/ini-files/ini-files-${IFM_VERSION}
 
-USE_LANGUAGES=	C ada
+USE_LANGUAGES=	ada
 
 post-extract:
 	@${MKDIR} ${WRKSRC}/src
