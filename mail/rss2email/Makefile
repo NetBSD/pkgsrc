@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.45 2019/08/29 09:20:25 schmonz Exp $
+# $NetBSD: Makefile,v 1.46 2019/09/07 18:58:02 schmonz Exp $
 
-GITHUB_PROJECT=		rss2email
-DISTNAME=		v3.9
-PKGNAME=		${GITHUB_PROJECT}-${DISTNAME:S/^v//}
-PKGREVISION=		3
+DISTNAME=		rss2email-3.10
 CATEGORIES=		mail python
 MASTER_SITES=		${MASTER_SITE_GITHUB:=rss2email/}
-DIST_SUBDIR=		${GITHUB_PROJECT}
+GITHUB_TAG=		v${PKGVERSION_NOREV}
+DIST_SUBDIR=		${PKGNAME_NOREV}
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://github.com/rss2email/rss2email/
@@ -17,12 +15,8 @@ DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=		${PYPKGPREFIX}-feedparser>=5.0.1:../../textproc/py-feedparser
 DEPENDS+=		${PYPKGPREFIX}-html2text>=2014.4.5:../../textproc/py-html2text
 
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-PYDISTUTILSPKG=		yes
-PY_PATCHPLIST=		yes
 REPLACE_PYTHON=		test/test.py
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
@@ -35,5 +29,5 @@ post-install:
 	${INSTALL_MAN} r2e.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
