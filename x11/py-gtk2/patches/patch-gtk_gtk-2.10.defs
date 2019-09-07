@@ -1,0 +1,22 @@
+$NetBSD: patch-gtk_gtk-2.10.defs,v 1.1 2019/09/07 04:32:14 gutteridge Exp $
+
+Fix object leaks. Committed by upstream, but never branched for release.
+https://bugzilla.gnome.org/show_bug.cgi?id=660216
+
+--- gtk/gtk-2.10.defs.orig	2011-04-01 10:37:25.000000000 +0000
++++ gtk/gtk-2.10.defs
+@@ -1388,12 +1388,14 @@
+ (define-method create_pango_context
+   (of-object "GtkPrintContext")
+   (c-name "gtk_print_context_create_pango_context")
++  (caller-owns-return #t)
+   (return-type "PangoContext*")
+ )
+ 
+ (define-method create_pango_layout
+   (of-object "GtkPrintContext")
+   (c-name "gtk_print_context_create_pango_layout")
++  (caller-owns-return #t)
+   (return-type "PangoLayout*")
+ )
+ 
