@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.223 2019/08/17 04:36:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.224 2019/09/07 21:13:34 nia Exp $
 
 DISTNAME=	pango-1.44.5
 CATEGORIES=	devel fonts
@@ -29,7 +29,7 @@ CHECK_FILES_SKIP+=	${PREFIX}/libdata/pango/pango.modules
 CHECK_PORTABILITY_SKIP+= docs/check.docs
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/share/man/man1/pango-view.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/pango-view.1
+	${MV} ${DESTDIR}${PREFIX}/share/man/man1/pango-view.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/pango-view.1 || ${TRUE}
 
 .include "options.mk"
 .include "../../graphics/librsvg/available.mk"
