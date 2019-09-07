@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.300 2019/07/18 10:44:57 nia Exp $
+# $NetBSD: Makefile,v 1.301 2019/09/07 00:38:00 tsutsui Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -395,6 +395,7 @@ SUBDIR+=	xbeeb
 SUBDIR+=	xcopilot
 SUBDIR+=	xhomer
 SUBDIR+=	xm7
+SUBDIR+=	xm8
 SUBDIR+=	xnp2
 SUBDIR+=	xtrs
 SUBDIR+=	xyame
