@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.275 2019/09/01 14:02:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.276 2019/09/07 23:51:06 nia Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -45,7 +45,6 @@ SUBDIR+=	flvstreamer
 SUBDIR+=	frei0r
 SUBDIR+=	fuppes
 SUBDIR+=	fxtv
-SUBDIR+=	gecko-mediaplayer
 SUBDIR+=	ggrab
 SUBDIR+=	gmediaserver
 SUBDIR+=	gmencoder
