@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/08/25 12:35:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/09/07 07:22:14 adam Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/snowballstemmer/__init__.py
 ${PYSITELIB}/snowballstemmer/__init__.pyc
@@ -12,6 +12,12 @@ ${PYSITELIB}/snowballstemmer/arabic_stemmer.pyo
 ${PYSITELIB}/snowballstemmer/basestemmer.py
 ${PYSITELIB}/snowballstemmer/basestemmer.pyc
 ${PYSITELIB}/snowballstemmer/basestemmer.pyo
+${PYSITELIB}/snowballstemmer/basque_stemmer.py
+${PYSITELIB}/snowballstemmer/basque_stemmer.pyc
+${PYSITELIB}/snowballstemmer/basque_stemmer.pyo
+${PYSITELIB}/snowballstemmer/catalan_stemmer.py
+${PYSITELIB}/snowballstemmer/catalan_stemmer.pyc
+${PYSITELIB}/snowballstemmer/catalan_stemmer.pyo
 ${PYSITELIB}/snowballstemmer/danish_stemmer.py
 ${PYSITELIB}/snowballstemmer/danish_stemmer.pyc
 ${PYSITELIB}/snowballstemmer/danish_stemmer.pyo
@@ -33,6 +39,9 @@ ${PYSITELIB}/snowballstemmer/german_stemmer.pyo
 ${PYSITELIB}/snowballstemmer/greek_stemmer.py
 ${PYSITELIB}/snowballstemmer/greek_stemmer.pyc
 ${PYSITELIB}/snowballstemmer/greek_stemmer.pyo
+${PYSITELIB}/snowballstemmer/hindi_stemmer.py
+${PYSITELIB}/snowballstemmer/hindi_stemmer.pyc
+${PYSITELIB}/snowballstemmer/hindi_stemmer.pyo
 ${PYSITELIB}/snowballstemmer/hungarian_stemmer.py
 ${PYSITELIB}/snowballstemmer/hungarian_stemmer.pyc
 ${PYSITELIB}/snowballstemmer/hungarian_stemmer.pyo
