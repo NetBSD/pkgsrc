@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2017/12/29 17:55:13 maya Exp $
+# $NetBSD: Makefile,v 1.27 2019/09/07 23:18:57 nia Exp $
 #
 
 DISTNAME=	pkg_select-20090308
@@ -22,9 +22,9 @@ CONF_FILES=	${EXAMPLEDIR}/${PKGBASE}.conf.example	\
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 BUILDLINK_TRANSFORM+=	rm:-Wno-traditional
-.elif !empty(PKGSRC_COMPILER:Mgcc)
-CFLAGS+=		-Wno-error=unused-but-set-variable
 .endif
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
