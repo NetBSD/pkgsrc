@@ -1,36 +1,45 @@
-# $NetBSD: Makefile,v 1.65 2019/07/21 22:24:24 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2019/09/07 14:21:54 nia Exp $
 
-DISTNAME=	exaile_0.2.14
-PKGNAME=	${DISTNAME:S/_/-/1}
-PKGREVISION=	40
+DISTNAME=	exaile-4.0.0
 CATEGORIES=	audio
-MASTER_SITES=	http://www.exaile.org/files/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=exaile/}
+GITHUB_PROJECT=	exaile
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.exaile.org/
-COMMENT=	Music player
+COMMENT=	Music Player for GTK+
 LICENSE=	gnu-gpl-v2 # or later
 
+USE_TOOLS+=	pkg-config gmake
+USE_TOOLS+=	msgfmt msgmerge xgettext
+
+MAKE_FLAGS+=	PYTHON2_CMD=${PYTHONBIN}
+
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
+DEPENDS+=	${PYPKGPREFIX}-gstreamer1-[0-9]*:../../multimedia/py-gstreamer1
 DEPENDS+=	${PYPKGPREFIX}-mutagen-[0-9]*:../../audio/py-mutagen
-DEPENDS+=	${PYPKGPREFIX}-notify-python-[0-9]*:../../sysutils/py-notify-python
 
-WRKSRC=		${WRKDIR}/exaile-0.2.14
+TOOL_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
 
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		pkg-config gmake intltool msgfmt
+EGDIR=		${PREFIX}/share/examples/xdg/exaile
 
-REPLACE_PYTHON=	exaile.py
-PYTHON_VERSIONS_ACCEPTED=	 27 # py-sqlite2, py-gtk2, py-gstreamer0.10
+OWN_DIRS+=	${PKG_SYSCONFDIR}/xdg/exaile
+CONF_FILES+=	${EGDIR}/settings.ini ${PKG_SYSCONFDIR}/xdg/exaile/settings.ini
 
-MAKE_ENV+=	PYTHONBIN=${PYTHONBIN}
-MAKE_FLAGS+=	PKGLOCALEDIR=${PKGLOCALEDIR}
+# https://github.com/exaile/exaile/issues/246
+PYTHON_VERSIONS_ACCEPTED=	27
 
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../lang/python/application.mk"
-.include "../../x11/py-gtk2/buildlink3.mk"
+
+SUBST_CLASSES+=		py
+SUBST_STAGE.py=		pre-configure
+SUBST_MESSAGE.py=	Set path to python interpreter.
+SUBST_FILES.py+=	exaile
+SUBST_VARS.py+=		PYTHONBIN
+
+.include "../../databases/py-bsddb3/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-good/buildlink3.mk"
 .include "../../sysutils/py-dbus/buildlink3.mk"
-.include "../../multimedia/py-gstreamer0.10/buildlink3.mk"
 .include "../../textproc/py-elementtree/buildlink3.mk"
-.include "../../databases/py-sqlite2/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
