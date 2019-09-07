@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2019/09/07 16:25:53 maya Exp $
+man/man5/nsca-ng.cfg.5
+man/man5/send_nsca.cfg.5
+man/man8/nsca-ng.8
+man/man8/send_nsca.8
+sbin/nsca-ng
+sbin/send_nsca
+share/examples/nsca-ng/nsca-ng.cfg
+share/examples/nsca-ng/send_nsca.cfg
