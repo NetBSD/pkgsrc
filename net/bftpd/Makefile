@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2019/06/22 12:53:47 nia Exp $
+# $NetBSD: Makefile,v 1.20 2019/09/07 13:12:53 nia Exp $
 #
 
-DISTNAME=	bftpd-5.1
+DISTNAME=	bftpd-5.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bftpd/}
 
@@ -13,10 +13,10 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	YES
 WRKSRC=		${WRKDIR}/bftpd
 
-CONFIGURE_ARGS+=--enable-libz
-
 CONF_FILES=	${PREFIX}/share/examples/bftpd/bftpd.conf \
 		${PKG_SYSCONFDIR}/bftpd.conf
+
+CONFIGURE_ARGS+=	--enable-libz
 
 SUBST_CLASSES+=		varbase
 SUBST_STAGE.varbase=	post-configure
@@ -31,6 +31,11 @@ SUBST_SED.sysconf=	-e 's|PREFIX"/etc/|"${PKG_SYSCONFDIR}/|g'
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8 share/examples/bftpd
 
 BUILD_DEFS+=		VARBASE
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/bftpd ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_MAN} ${WRKSRC}/bftpd.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_DATA} ${WRKSRC}/bftpd.conf ${DESTDIR}${PREFIX}/share/examples/bftpd
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
