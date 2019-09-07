@@ -1,19 +1,22 @@
-# $NetBSD: Makefile,v 1.36 2018/07/04 13:40:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.37 2019/09/07 14:49:58 nia Exp $
 #
 
-DISTNAME=	fillets-ng-0.7.3
-PKGREVISION=	14
+DISTNAME=	fillets-ng-1.0.1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fillets/}
 
 MAINTAINER=	salo@NetBSD.org
 HOMEPAGE=	http://fillets.sourceforge.net/
 COMMENT=	Puzzle game about witty fish saving the world sokoban style
+LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	fillets-ng-data-0.7.1{,nb*}:../../games/fillets-ng-data
+DEPENDS+=	fillets-ng-data>=1.0.1:../../games/fillets-ng-data
 
-GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config
+GNU_CONFIGURE=	yes
+
+CONFIGURE_ARGS+=	--disable-sdltest
 
 LDFLAGS.DragonFly=	-lX11
 LDFLAGS.SunOS+=		-lX11
@@ -27,9 +30,10 @@ SUBST_SED.man=		"s,/usr/share/doc/fillets-ng/html/manual.html,${PREFIX}/share/do
 LUA_VERSIONS_ACCEPTED=	51
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/SDL_ttf/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
+.include "../../multimedia/smpeg/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
