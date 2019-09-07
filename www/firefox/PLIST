@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.143 2019/09/06 03:00:23 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.144 2019/09/07 03:41:42 gutteridge Exp $
 bin/firefox
 lib/firefox/actors/AudioPlaybackChild.jsm
 lib/firefox/actors/AutoplayChild.jsm
@@ -5241,7 +5241,7 @@ lib/firefox/modules/lz4.js
 lib/firefox/modules/lz4_internal.js
 lib/firefox/modules/media/IdpSandbox.jsm
 ${PLIST.webrtc}lib/firefox/modules/media/PeerConnection.jsm
-${PLIST.webrtc}lib/firefox/modules/media/PeerConnectionIdp.jsm
+lib/firefox/modules/media/PeerConnectionIdp.jsm
 lib/firefox/modules/media/RTCStatsReport.jsm
 lib/firefox/modules/mozIntl.jsm
 lib/firefox/modules/narrate/NarrateControls.jsm
