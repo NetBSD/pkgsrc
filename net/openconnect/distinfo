@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2019/05/20 14:16:21 schmonz Exp $
+$NetBSD: distinfo,v 1.9 2019/09/07 19:30:21 schmonz Exp $
 
-SHA1 (openconnect-8.03.tar.gz) = 9808b2bc25ceee69d853c8b14f72e7139d4d8843
-RMD160 (openconnect-8.03.tar.gz) = f6d41626b5f0687dc1345a9c8c8b03a740850764
-SHA512 (openconnect-8.03.tar.gz) = e5cae7aacc5684c585992c8199d47c1318a710d2f3638e0b71f5ab3ee7f35406306462e19ba55b32351a3894c83c256569e2e096da0bc8f6404f2740168e73da
-Size (openconnect-8.03.tar.gz) = 1885587 bytes
+SHA1 (openconnect-8.04.tar.gz) = f643b782aaa2a66540517743898ba50e063cf9ce
+RMD160 (openconnect-8.04.tar.gz) = 1a30e71264cf1f8870df391ef9b3bc62cdde166d
+SHA512 (openconnect-8.04.tar.gz) = 3d1f335c5ac62cdcf874b0371e9ed939e5e44060d422b35120d0a6bb87f1a7cc4ffc783e6c65d11a9d5ef974c99e56107da837ee61a03f70d9397e077185050a
+Size (openconnect-8.04.tar.gz) = 1914479 bytes
