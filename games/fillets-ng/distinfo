@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 20:56:48 agc Exp $
+$NetBSD: distinfo,v 1.7 2019/09/07 14:49:58 nia Exp $
 
-SHA1 (fillets-ng-0.7.3.tar.gz) = 58937e59c3108e0ed4d2a5e542f3d9b813655287
-RMD160 (fillets-ng-0.7.3.tar.gz) = 6c8f41feab9df2b6dee3942c18848d61ab2f2c7d
-SHA512 (fillets-ng-0.7.3.tar.gz) = a5aad4cdd15ff0a847beb3ff99ee9b14205affc672ff6b6b559716c754939fd8741019eea5d063ce9a4941a50e9ed3373892d118f952bb10708c9b9bc5032cc2
-Size (fillets-ng-0.7.3.tar.gz) = 311799 bytes
-SHA1 (patch-aa) = 355c8fd1a47335f41114786d65256293a9ca4968
-SHA1 (patch-src_gengine_OptionAgent.cpp) = 9e49a989877e5f55f40f2a25d1dd9801ca65fbfe
-SHA1 (patch-src_gengine_StringTool.cpp) = 6813f4a61fb13226d2aeb35ded376de7c19c36b8
-SHA1 (patch-src_level_Landslip.cpp) = 8629bdde28947598cb09c12b30147f545d3ee525
+SHA1 (fillets-ng-1.0.1.tar.gz) = 181e4727a6482687b64e85a0d247b7d11bc6584e
+RMD160 (fillets-ng-1.0.1.tar.gz) = a964a03875761a78770e291b2df886ef687c474d
+SHA512 (fillets-ng-1.0.1.tar.gz) = fe4a5186f94e953cbc85fe8b0ce804c881c96feda385cfc36e1840e448cf094c3d815fdbe32976a6697a855038951f97a384c277a1c52a048520e8da71136718
+Size (fillets-ng-1.0.1.tar.gz) = 380290 bytes
+SHA1 (patch-configure) = b9fed2f77dfdaafe8f9374b1ff45d7c733910076
