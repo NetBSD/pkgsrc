@@ -1,0 +1,6 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2019/09/07 00:36:34 tsutsui Exp $
+
+Note ROM files captured from a real PC-8801 machine are required in
+~/.local/share/retro_pc_pi/xm8/rom dir to use xm8.
+===========================================================================
