@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3786 2019/09/07 14:03:42 fcambus Exp $
+$NetBSD: CHANGES-2019,v 1.3787 2019/09/07 14:22:05 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6238,3 +6238,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/materia-gtk-theme to 20190831 [nia 2019-09-07]
 	Updated net/bftpd to 5.2 [nia 2019-09-07]
 	Updated fonts/spleen to 1.2.0 [fcambus 2019-09-07]
+	Updated audio/exaile to 4.0.0 [nia 2019-09-07]
