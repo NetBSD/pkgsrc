@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2019/08/22 12:23:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.55 2019/09/08 16:31:33 nia Exp $
 #
 
 DISTNAME=		rudiments-1.0.2
@@ -18,6 +18,7 @@ USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 PTHREAD_AUTO_VARS=	YES
 
+BUILDLINK_TRANSFORM+=	rm:-Werror
 BUILDLINK_TRANSFORM+=	rm:-Wno-long-double
 
 .include "../../mk/compiler.mk"
