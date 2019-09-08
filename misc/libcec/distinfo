@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 23:49:42 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/09/08 12:30:53 nia Exp $
 
-SHA1 (libcec-2.2.0-repack.tar.gz) = 42e19328c5b05b5fff27bcdf80e7acc329201913
-RMD160 (libcec-2.2.0-repack.tar.gz) = a4620c45d78a8e0305fdc15e35e8b964b57f3eef
-SHA512 (libcec-2.2.0-repack.tar.gz) = 2ff91288fab50c4963a265757c41132ad7647a1d95780e0ccc23bbe9dd0a7f3c4f1b1332e7d992e41ecfd27601c4b1a091343d2df518fd06a5a3f0956ed40a2b
-Size (libcec-2.2.0-repack.tar.gz) = 1099286 bytes
-SHA1 (patch-configure.ac) = 6a873fd774c4c31db81c627ce009d9dec0c03c82
-SHA1 (patch-src_lib_platform_posix_os-types.h) = a7f0c9726d5a48d4706258c3edcbb41c96e90601
-SHA1 (patch-src_lib_platform_posix_serialport.cpp) = 2b47f04bf1849ed310ac29ebe9ae10bad0ded8a4
+SHA1 (libcec-4.0.4.tar.gz) = 3755d183d1504b90b26325ab7f95280bc64247c1
+RMD160 (libcec-4.0.4.tar.gz) = 32311f0d1908916f169582153fdad727e2b03838
+SHA512 (libcec-4.0.4.tar.gz) = 8991ba96fe9a87e5e1f63ff87f77fc0fc3b735c537e2ee6cb004fdc264d75cecd043e39b49cf9e64aeadd24bb1fb57911d9c4bd6c494d9ba4035d7320c268116
+Size (libcec-4.0.4.tar.gz) = 344976 bytes
+SHA1 (patch-src_libcec_cmake_SetBuildInfo.cmake) = 04d1fb4c2017bd5050b29cd8686ea4e51a1a8e96
+SHA1 (patch-src_libcec_platform_posix_serialport.cpp) = 7256a4f79df6a6f0c60ed3206a50e1c57c51a90e
