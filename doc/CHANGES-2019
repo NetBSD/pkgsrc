@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3804 2019/09/08 15:44:23 maya Exp $
+$NetBSD: CHANGES-2019,v 1.3805 2019/09/08 15:55:48 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6256,3 +6256,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated misc/libcec to 4.0.4 [nia 2019-09-08]
 	Updated emulators/emulationstation to 2.7.6 [nia 2019-09-08]
 	Updated x11/libdrm to 2.4.98nb1 [maya 2019-09-08]
+	Updated x11/libdrm to 2.4.98nb2 [maya 2019-09-08]
