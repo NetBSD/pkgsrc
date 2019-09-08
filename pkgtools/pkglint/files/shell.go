@@ -422,6 +422,7 @@ func (ck *ShellLineChecker) checkHiddenAndSuppress(hiddenAndSuppress, rest strin
 				"${DO_NADA}",
 				"${ECHO}", "${ECHO_MSG}", "${ECHO_N}", "${ERROR_CAT}", "${ERROR_MSG}",
 				"${FAIL_MSG}",
+				"${INFO_MSG}",
 				"${PHASE_MSG}", "${PRINTF}",
 				"${SHCOMMENT}", "${STEP_MSG}",
 				"${WARNING_CAT}", "${WARNING_MSG}":
