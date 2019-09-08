@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/09/08 12:30:53 nia Exp $
+# $NetBSD: Makefile,v 1.4 2019/09/08 12:31:35 nia Exp $
 
 DISTNAME=	libcec-4.0.4
 CATEGORIES=	misc
@@ -15,6 +15,7 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++11
 
+# C++11
 GCC_REQD+=	4.8
 
 CMAKE_ARGS+=	-DSKIP_PYTHON_WRAPPER=ON
