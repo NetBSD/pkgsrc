@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.60 2019/04/28 12:31:15 rillig Exp $
+# $NetBSD: subst.mk,v 1.61 2019/09/08 09:06:06 rillig Exp $
 #
 # The subst framework replaces text in one or more files in the WRKSRC
 # directory. Packages can define several ``classes'' of replacements.
@@ -73,19 +73,17 @@ _PKG_VARS.subst=	SUBST_CLASSES
 _PKG_VARS.subst+=	${pv}.${c}
 .  endfor
 .endfor
+_DEF_VARS.subst=	ECHO_SUBST_MSG
+_USE_VARS.subst=	WRKDIR WRKSRC
+_IGN_VARS.subst=	_SUBST_IS_TEXT_FILE_CMD
 _SORTED_VARS.subst=	SUBST_CLASSES SUBST_FILES.* SUBST_VARS.*
 _LISTED_VARS.subst=	SUBST_SED.* SUBST_FILTER_CMD.*
 
 ECHO_SUBST_MSG?=	${STEP_MSG}
 
-# _SUBST_IS_TEXT_FILE returns 0 if $${file} is a text file.
-_SUBST_IS_TEXT_FILE?= \
-	{ nchars=`${WC} -c < "$$file"`;					\
-	  notnull=`LC_ALL=C ${TR} -d '\\0' < "$$file" | ${WC} -c`;	\
-	  [ "$$nchars" = "$$notnull" ] || ${FALSE} ;			\
-	}
-
-_SUBST_BACKUP_SUFFIX=	.subst.sav
+# _SUBST_IS_TEXT_FILE_CMD returns 0 if $$file is a text file.
+_SUBST_IS_TEXT_FILE_CMD?= \
+	[ -z "`${TR} -cd '\\0' < "$$file" | ${TR} '\\0' 'x'`" ]
 
 .for _class_ in ${SUBST_CLASSES}
 _SUBST_COOKIE.${_class_}=	${WRKDIR}/.subst_${_class_}_done
@@ -103,12 +101,10 @@ _SUBST_KEEP.${_class_}?=	${DO_NADA}
 SUBST_SKIP_TEXT_CHECK.${_class_}?=	no
 
 .if !empty(SUBST_SKIP_TEXT_CHECK.${_class_}:M[Yy][Ee][Ss])
-_SUBST_IS_TEXT_FILE.${_class_}=	${TRUE}
+_SUBST_IS_TEXT_FILE_CMD.${_class_}=	${TRUE}
 .else
-_SUBST_IS_TEXT_FILE.${_class_}=	${_SUBST_IS_TEXT_FILE}
+_SUBST_IS_TEXT_FILE_CMD.${_class_}=	${_SUBST_IS_TEXT_FILE_CMD}
 .endif
-
-SUBST_TARGETS+=			subst-${_class_}
 
 .  if defined(SUBST_STAGE.${_class_})
 ${SUBST_STAGE.${_class_}}: subst-${_class_}
@@ -128,10 +124,10 @@ ${_SUBST_COOKIE.${_class_}}:
 	files=${SUBST_FILES.${_class_}:Q};				\
 	for file in $$files; do						\
 		case $$file in /*) ;; *) file="./$$file";; esac;	\
-		tmpfile="$$file"${_SUBST_BACKUP_SUFFIX:Q};		\
+		tmpfile="$$file.subst.sav";				\
 		if [ ! -f "$$file" ]; then				\
 			${WARNING_MSG} "[subst.mk:${_class_}] Ignoring non-existent file \"$$file\"."; \
-		elif ${_SUBST_IS_TEXT_FILE.${_class_}}; then		\
+		elif ${_SUBST_IS_TEXT_FILE_CMD.${_class_}}; then	\
 			${SUBST_FILTER_CMD.${_class_}}			\
 			< "$$file"					\
 			> "$$tmpfile";					\
