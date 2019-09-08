@@ -206,9 +206,107 @@ func (s *Suite) Test_Logger__show_source_separator(c *check.C) {
 		"",
 		">\tThe third line",
 		"WARN: ~/DESCR:3: Dummy warning.",
+		"WARN: ~/DESCR:3: Using \"third\" is deprecated.")
+}
+
+func (s *Suite) Test_Logger__show_source_with_explanation(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("--source", "--explain")
+	lines := t.SetUpFileLines("DESCR",
+		"The first line",
+		"The second line",
+		"The third line")
+
+	fix := lines.Lines[1].Autofix()
+	fix.Warnf("Using \"second\" is deprecated.")
+	fix.Explain("Explanation 1.")
+	fix.Replace("second", "silver medal")
+	fix.Apply()
+
+	lines.Lines[2].Warnf("Dummy warning.")
+
+	fix = lines.Lines[2].Autofix()
+	fix.Warnf("Using \"third\" is deprecated.")
+	fix.Explain("Explanation 2.")
+	fix.Replace("third", "bronze medal")
+	fix.Apply()
+
+	t.CheckOutputLines(
+		">\tThe second line",
+		"WARN: ~/DESCR:2: Using \"second\" is deprecated.",
+		"",
+		"\tExplanation 1.",
 		"",
 		">\tThe third line",
-		"WARN: ~/DESCR:3: Using \"third\" is deprecated.")
+		"WARN: ~/DESCR:3: Dummy warning.",
+		"WARN: ~/DESCR:3: Using \"third\" is deprecated.",
+		"",
+		"\tExplanation 2.",
+		"")
+}
+
+// In general, it is not necessary to repeat the source code for a line
+// if there are several diagnostics for the same line. In this case though,
+// there is an explanation between the diagnostics, and because it may get
+// quite long, it's better to repeat the source code once again.
+func (s *Suite) Test_Logger__show_source_with_explanation_in_same_line(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("--source", "--explain")
+	lines := t.SetUpFileLines("DESCR",
+		"The first line")
+
+	fix := lines.Lines[0].Autofix()
+	fix.Warnf("Using \"The\" is deprecated.")
+	fix.Explain("Explanation 1.")
+	fix.Replace("The", "A")
+	fix.Apply()
+
+	fix.Warnf("Using \"first\" is deprecated.")
+	fix.Explain("Explanation 2.")
+	fix.Replace("first", "1st")
+	fix.Apply()
+
+	t.CheckOutputLines(
+		">\tThe first line",
+		"WARN: ~/DESCR:1: Using \"The\" is deprecated.",
+		"",
+		"\tExplanation 1.",
+		"",
+		">\tThe first line",
+		"WARN: ~/DESCR:1: Using \"first\" is deprecated.",
+		"",
+		"\tExplanation 2.",
+		"")
+}
+
+// When there is no explanation after the first diagnostic, it is not
+// necessary to repeat the source code again for the second diagnostic.
+func (s *Suite) Test_Logger__show_source_without_explanation_in_same_line(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("--source", "--explain")
+	lines := t.SetUpFileLines("DESCR",
+		"The first line")
+
+	fix := lines.Lines[0].Autofix()
+	fix.Warnf("Using \"The\" is deprecated.")
+	fix.Replace("The", "A")
+	fix.Apply()
+
+	fix.Warnf("Using \"first\" is deprecated.")
+	fix.Explain("Explanation 2.")
+	fix.Replace("first", "1st")
+	fix.Apply()
+
+	t.CheckOutputLines(
+		">\tThe first line",
+		"WARN: ~/DESCR:1: Using \"The\" is deprecated.",
+		"WARN: ~/DESCR:1: Using \"first\" is deprecated.",
+		"",
+		"\tExplanation 2.",
+		"")
 }
 
 // When the --show-autofix option is given, the warning is shown first,
@@ -248,6 +346,46 @@ func (s *Suite) Test__show_source_separator_show_autofix(c *check.C) {
 		"AUTOFIX: ~/DESCR:3: Replacing \"third\" with \"bronze medal\".",
 		"-\tThe third line",
 		"+\tThe bronze medal line")
+}
+
+func (s *Suite) Test__show_source_separator_show_autofix_with_explanation(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("--source", "--show-autofix", "--explain")
+	lines := t.SetUpFileLines("DESCR",
+		"The first line",
+		"The second line",
+		"The third line")
+
+	fix := lines.Lines[1].Autofix()
+	fix.Warnf("Using \"second\" is deprecated.")
+	fix.Explain("Explanation 1.")
+	fix.Replace("second", "silver medal")
+	fix.Apply()
+
+	lines.Lines[2].Warnf("Dummy warning.")
+
+	fix = lines.Lines[2].Autofix()
+	fix.Warnf("Using \"third\" is deprecated.")
+	fix.Explain("Explanation 2.")
+	fix.Replace("third", "bronze medal")
+	fix.Apply()
+
+	t.CheckOutputLines(
+		"WARN: ~/DESCR:2: Using \"second\" is deprecated.",
+		"AUTOFIX: ~/DESCR:2: Replacing \"second\" with \"silver medal\".",
+		"-\tThe second line",
+		"+\tThe silver medal line",
+		"",
+		"\tExplanation 1.",
+		"",
+		"WARN: ~/DESCR:3: Using \"third\" is deprecated.",
+		"AUTOFIX: ~/DESCR:3: Replacing \"third\" with \"bronze medal\".",
+		"-\tThe third line",
+		"+\tThe bronze medal line",
+		"",
+		"\tExplanation 2.",
+		"")
 }
 
 // See Test__show_source_separator_show_autofix for the ordering of the
@@ -891,6 +1029,10 @@ func (s *Suite) Test_SeparatorWriter_Flush(c *check.C) {
 	wr.Flush()
 
 	t.CheckEquals(sb.String(), "ab")
+
+	t.ExpectAssert(wr.Separate) // Must not be called in the middle of a line.
+
+	wr.WriteLine("")
 
 	wr.Separate()
 
