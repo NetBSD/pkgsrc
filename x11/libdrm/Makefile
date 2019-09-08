@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.93 2019/09/08 15:43:37 maya Exp $
+# $NetBSD: Makefile,v 1.94 2019/09/08 15:55:04 maya Exp $
 
 DISTNAME=		libdrm-2.4.98
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		x11 graphics
 MASTER_SITES=		http://dri.freedesktop.org/libdrm/
 EXTRACT_SUFX=		.tar.bz2
