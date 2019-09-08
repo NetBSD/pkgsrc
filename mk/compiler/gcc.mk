@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.203 2019/09/07 22:20:32 rillig Exp $
+# $NetBSD: gcc.mk,v 1.204 2019/09/08 09:24:52 rillig Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -463,7 +463,7 @@ CFLAGS+=	${_GCC_CFLAGS}
 # We require gcc-2.x in the lang/gcc2 directory.
 #
 _GCC_PKGBASE=		gcc2
-.  if !empty(PKGPATH:Mlang/gcc2)
+.  if ${PKGPATH} == lang/gcc2
 _IGNORE_GCC=		yes
 MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
@@ -481,7 +481,7 @@ _USE_GCC_SHLIB?=	yes
 # We require gcc-3.x in the lang/gcc3-* directories.
 #
 _GCC_PKGBASE=		gcc3-c
-.  if !empty(PKGPATH:Mlang/gcc3-c)
+.  if ${PKGPATH} == lang/gcc3-c
 _IGNORE_GCC=		yes
 MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
@@ -494,7 +494,7 @@ _GCC_DEPENDENCY=	gcc3-c>=${_GCC_REQD}:../../lang/gcc3-c
 # We require gcc-3.4.x in the lang/gcc34 directory.
 #
 _GCC_PKGBASE=		gcc34
-.  if !empty(PKGPATH:Mlang/gcc34)
+.  if ${PKGPATH} == lang/gcc34
 _IGNORE_GCC=		yes
 MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
@@ -512,7 +512,7 @@ _USE_GCC_SHLIB?=	yes
 # We require gcc-4.4.x in the lang/gcc44 directory.
 #
 _GCC_PKGBASE=		gcc44
-.  if !empty(PKGPATH:Mlang/gcc44)
+.  if ${PKGPATH} == lang/gcc44
 _IGNORE_GCC=		yes
 MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
@@ -531,7 +531,7 @@ _USE_GCC_SHLIB?=	yes
 # We require gcc-4.8.x in the lang/gcc48 directory.
 #
 _GCC_PKGBASE=		gcc48
-.  if !empty(PKGPATH:Mlang/gcc48)
+.  if ${PKGPATH} == lang/gcc48
 _IGNORE_GCC=		yes
 MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
@@ -552,7 +552,7 @@ _USE_GCC_SHLIB?=	yes
 # We require gcc-4.9.x in the lang/gcc49-* directory.
 #
 _GCC_PKGBASE=		gcc49
-.  if !empty(PKGPATH:Mlang/gcc49)
+.  if ${PKGPATH} == lang/gcc49
 _IGNORE_GCC=		yes
 MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
@@ -573,7 +573,7 @@ _USE_GCC_SHLIB?=	yes
 # We require gcc-5.x in the lang/gcc5-* directory.
 #
 _GCC_PKGBASE=		gcc5
-.  if !empty(PKGPATH:Mlang/gcc5)
+.  if ${PKGPATH} == lang/gcc5
 _IGNORE_GCC=		yes
 MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
@@ -594,7 +594,7 @@ _USE_GCC_SHLIB?=	yes
 # We require gcc-6.x in the lang/gcc6-* directory.
 #
 _GCC_PKGBASE=		gcc6
-.  if !empty(PKGPATH:Mlang/gcc6)
+.  if ${PKGPATH} == lang/gcc6
 _IGNORE_GCC=		yes
 MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
@@ -615,7 +615,7 @@ _USE_GCC_SHLIB?=	yes
 # We require gcc-7.x in the lang/gcc7-* directory.
 #
 _GCC_PKGBASE=		gcc7
-.  if !empty(PKGPATH:Mlang/gcc7)
+.  if ${PKGPATH} == lang/gcc7
 _IGNORE_GCC=		yes
 MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
@@ -636,7 +636,7 @@ _USE_GCC_SHLIB?=	yes
 # We require gcc-8.x in the lang/gcc8-* directory.
 #
 _GCC_PKGBASE=		gcc8
-.  if !empty(PKGPATH:Mlang/gcc8)
+.  if ${PKGPATH} == lang/gcc8
 _IGNORE_GCC=		yes
 MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
@@ -657,7 +657,7 @@ _USE_GCC_SHLIB?=	yes
 # We require Ada-capable compiler in the lang/gcc5-aux directory.
 #
 _GCC_PKGBASE=		gcc5-aux
-.  if !empty(PKGPATH:Mlang/gcc5-aux)
+.  if ${PKGPATH} == lang/gcc5-aux
 _IGNORE_GCC=		yes
 MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
@@ -676,7 +676,7 @@ _USE_GCC_SHLIB?=	yes
 _GCC_DEPENDS=		${_GCC_PKGBASE}>=${_GCC_REQD}
 
 .if !empty(_NEED_GCC3:M[yY][eE][sS])
-.  if !empty(PKGPATH:Mlang/gcc3-c++)
+.  if ${PKGPATH} == "lang/gcc3-c++"
 _IGNORE_GCC3CXX=	yes
 MAKEFLAGS+=		_IGNORE_GCC3CXX=yes
 .  endif
@@ -685,7 +685,7 @@ _GCC_PKGSRCDIR+=	../../lang/gcc3-c++
 _GCC_DEPENDENCY+=	gcc3-c++>=${_GCC_REQD}:../../lang/gcc3-c++
 _USE_GCC_SHLIB?=	yes
 .  endif
-.  if !empty(PKGPATH:Mlang/gcc3-f77)
+.  if ${PKGPATH} == lang/gcc3-f77
 _IGNORE_GCC3F77=	yes
 MAKEFLAGS+=		_IGNORE_GCC3F77=yes
 .  endif
@@ -694,7 +694,7 @@ _GCC_PKGSRCDIR+=	../../lang/gcc3-f77
 _GCC_DEPENDENCY+=	gcc3-f77>=${_GCC_REQD}:../../lang/gcc3-f77
 _USE_GCC_SHLIB?=	yes
 .  endif
-.  if !empty(PKGPATH:Mlang/gcc3-objc)
+.  if ${PKGPATH} == lang/gcc3-objc
 _IGNORE_GCC3OBJC=	yes
 MAKEFLAGS+=		_IGNORE_GCC3OBJC=yes
 .  endif
@@ -991,7 +991,7 @@ PREPEND_PATH+=	${_GCC_DIR}/bin
 # Add dependency on GCC libraries if requested.
 .if (defined(_USE_GCC_SHLIB) && !empty(_USE_GCC_SHLIB:M[Yy][Ee][Ss])) && !empty(USE_PKGSRC_GCC_RUNTIME:M[Yy][Ee][Ss])
 #  Special case packages which are themselves a dependency of gcc runtime.
-.  if empty(PKGPATH:Mdevel/libtool-base) && empty(PKGPATH:Mdevel/binutils) && \
+.  if ${PKGPATH} != devel/libtool-base && ${PKGPATH} != devel/binutils && \
       empty(PKGPATH:Mlang/gcc4?) && empty(PKGPATH:Mlang/gcc[5-9])
 .    if !empty(_GCC_PKGBASE:Mgcc48)
 .      include "../../lang/gcc48-libs/buildlink3.mk"
