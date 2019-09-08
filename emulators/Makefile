@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.301 2019/09/07 00:38:00 tsutsui Exp $
+# $NetBSD: Makefile,v 1.302 2019/09/08 11:04:04 nia Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -68,7 +68,6 @@ SUBDIR+=	fuse-emulator
 SUBDIR+=	fuse-emulator-utils
 SUBDIR+=	gambatte
 SUBDIR+=	gcube
-SUBDIR+=	generator
 SUBDIR+=	generator-cbiere
 SUBDIR+=	gens
 SUBDIR+=	gns3
