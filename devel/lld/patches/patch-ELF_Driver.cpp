@@ -1,4 +1,4 @@
-$NetBSD: patch-ELF_Driver.cpp,v 1.2 2019/06/02 08:37:39 adam Exp $
+$NetBSD: patch-ELF_Driver.cpp,v 1.3 2019/09/08 20:49:11 rjs Exp $
 
 Add support for customizing LLD behavior on target triple.
 https://reviews.llvm.org/D56650
@@ -101,7 +101,7 @@ Alter defaults for NetBSD targets:
      return;
    }
  
-+  appendDefaultSearchPaths();
++  setTargetTriple(ArgsArr[0], Args);
 +
    // Handle -v or -version.
    //
@@ -118,7 +118,15 @@ Alter defaults for NetBSD targets:
  
    if (const char *Path = getReproduceOption(Args)) {
      // Note that --reproduce is a debug option so you can ignore it
-@@ -746,6 +805,34 @@ static void parseClangOption(StringRef O
+@@ -412,6 +471,7 @@ void LinkerDriver::main(ArrayRef<const c
+ 
+   readConfigs(Args);
+   checkZOptions(Args);
++  appendDefaultSearchPaths();
+ 
+   // The behavior of -v or --version is a bit strange, but this is
+   // needed for compatibility with GNU linkers.
+@@ -746,6 +806,34 @@ static void parseClangOption(StringRef O
    error(Msg + ": " + StringRef(Err).trim());
  }
  
@@ -153,7 +161,7 @@ Alter defaults for NetBSD targets:
  // Initializes Config members by the command line options.
  void LinkerDriver::readConfigs(opt::InputArgList &Args) {
    errorHandler().Verbose = Args.hasArg(OPT_verbose);
-@@ -779,7 +866,8 @@ void LinkerDriver::readConfigs(opt::Inpu
+@@ -779,7 +867,8 @@ void LinkerDriver::readConfigs(opt::Inpu
    Config->CallGraphProfileSort = Args.hasFlag(
        OPT_call_graph_profile_sort, OPT_no_call_graph_profile_sort, true);
    Config->EnableNewDtags =
@@ -163,7 +171,7 @@ Alter defaults for NetBSD targets:
    Config->Entry = Args.getLastArgValue(OPT_entry);
    Config->ExecuteOnly =
        Args.hasFlag(OPT_execute_only, OPT_no_execute_only, false);
-@@ -869,6 +957,8 @@ void LinkerDriver::readConfigs(opt::Inpu
+@@ -869,6 +958,8 @@ void LinkerDriver::readConfigs(opt::Inpu
    Config->ZCombreloc = getZFlag(Args, "combreloc", "nocombreloc", true);
    Config->ZCopyreloc = getZFlag(Args, "copyreloc", "nocopyreloc", true);
    Config->ZExecstack = getZFlag(Args, "execstack", "noexecstack", false);
@@ -172,7 +180,7 @@ Alter defaults for NetBSD targets:
    Config->ZGlobal = hasZOption(Args, "global");
    Config->ZHazardplt = hasZOption(Args, "hazardplt");
    Config->ZInitfirst = hasZOption(Args, "initfirst");
-@@ -1173,7 +1263,7 @@ void LinkerDriver::inferMachineType() {
+@@ -1173,7 +1264,7 @@ void LinkerDriver::inferMachineType() {
  // each target.
  static uint64_t getMaxPageSize(opt::InputArgList &Args) {
    uint64_t Val = args::getZOptionValue(Args, OPT_z, "max-page-size",
