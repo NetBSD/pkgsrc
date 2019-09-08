@@ -966,8 +966,6 @@ func (s *Suite) Test_Autofix_Apply__explanation_followed_by_note(c *check.C) {
 	t.CheckOutputLines(
 		">\ttext",
 		"WARN: README.txt:123: A warning with autofix.",
-		"",
-		">\ttext",
 		"NOTE: README.txt:123: A note without fix.")
 }
 

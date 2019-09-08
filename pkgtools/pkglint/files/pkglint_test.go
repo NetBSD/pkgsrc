@@ -726,7 +726,7 @@ func (s *Suite) Test_Pkglint_Tool__lookup_by_name_fallback(c *check.C) {
 	loadTimeTool, loadTimeUsable := G.Tool(mklines, "tool", LoadTime)
 	runTimeTool, runTimeUsable := G.Tool(mklines, "tool", RunTime)
 
-	// The tool is returned even though it may not be used at the moment.
+	// The tool is returned even though it cannot be used at the moment.
 	// The calling code must explicitly check for usability.
 
 	t.CheckEquals(loadTimeTool.String(), "tool:::Nowhere")

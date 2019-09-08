@@ -5,6 +5,26 @@ import (
 	"runtime"
 )
 
+func (s *Suite) Test_MkLineChecker_checkEmptyContinuation(c *check.C) {
+	t := s.Init(c)
+
+	mklines := t.SetUpFileMkLines("filename.mk",
+		MkCvsID,
+		"# line 1 \\",
+		"",
+		"# line 2")
+
+	// Don't check this when loading a file, since otherwise the infrastructure
+	// files could possibly get this warning. Sure, they should be fixed, but
+	// it's not in the focus of the package maintainer.
+	t.CheckOutputEmpty()
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"WARN: ~/filename.mk:3: This line looks empty but continues the previous line.")
+}
+
 func (s *Suite) Test_MkLineChecker_checkVarassignLeft(c *check.C) {
 	t := s.Init(c)
 
