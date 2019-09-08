@@ -30,6 +30,7 @@ func (s *Suite) Test_Lines_CheckCvsID(c *check.C) {
 func (s *Suite) Test_Lines_CheckCvsID__wip(c *check.C) {
 	t := s.Init(c)
 
+	G.Experimental = true
 	t.SetUpPkgsrc()
 	t.SetUpPackage("wip/package")
 	t.CreateFileLines("wip/package/file1.mk",

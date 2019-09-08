@@ -2,6 +2,7 @@ package pkglint
 
 import (
 	"netbsd.org/pkglint/regex"
+	"netbsd.org/pkglint/textproc"
 	"os"
 	"path"
 	"path/filepath"
@@ -20,6 +21,7 @@ func (ck MkLineChecker) Check() {
 
 	LineChecker{mkline.Line}.CheckTrailingWhitespace()
 	LineChecker{mkline.Line}.CheckValidCharacters()
+	ck.checkEmptyContinuation()
 
 	switch {
 	case mkline.IsVarassign():
@@ -33,6 +35,21 @@ func (ck MkLineChecker) Check() {
 
 	case mkline.IsInclude():
 		ck.checkInclude()
+	}
+}
+
+func (ck MkLineChecker) checkEmptyContinuation() {
+	if !ck.MkLine.IsMultiline() {
+		return
+	}
+
+	line := ck.MkLine.Line
+	if line.raw[len(line.raw)-1].orignl == "\n" {
+		lastLine := NewLine(line.Filename, int(line.lastLine), "", line.raw[len(line.raw)-1])
+		lastLine.Warnf("This line looks empty but continues the previous line.")
+		lastLine.Explain(
+			"This line should be indented like other continuation lines,",
+			"and to make things clear, should be a comment line.")
 	}
 }
 
@@ -529,37 +546,22 @@ func (ck MkLineChecker) checkVarUseBuildDefs(varname string) {
 
 func (ck MkLineChecker) checkVaruseUndefined(vartype *Vartype, varname string) {
 	switch {
-
-	case !G.Opts.WarnExtra:
-		return
-
-	case vartype != nil && !vartype.Guessed():
+	case !G.Opts.WarnExtra,
 		// Well-known variables are probably defined by the infrastructure.
-		return
-
-	case ck.MkLines.vars.DefinedSimilar(varname):
-		return
-
-	case ck.MkLines.forVars[varname]:
-		return
-
-	case ck.MkLines.vars.Mentioned(varname) != nil:
-		return
-
-	case G.Pkg != nil && G.Pkg.vars.DefinedSimilar(varname):
-		return
-
-	case containsVarRef(varname):
-		return
-
-	case G.Pkgsrc.vartypes.DefinedCanon(varname):
-		return
-
-	case !ck.MkLines.once.FirstTimeSlice("used but not defined: ", varname):
+		vartype != nil && !vartype.Guessed(),
+		ck.MkLines.vars.DefinedSimilar(varname),
+		ck.MkLines.forVars[varname],
+		ck.MkLines.vars.Mentioned(varname) != nil,
+		G.Pkg != nil && G.Pkg.vars.DefinedSimilar(varname),
+		containsVarRef(varname),
+		G.Pkgsrc.vartypes.DefinedCanon(varname),
+		varname == "":
 		return
 	}
 
-	ck.MkLine.Warnf("%s is used but not defined.", varname)
+	if ck.MkLines.once.FirstTimeSlice("used but not defined", varname) {
+		ck.MkLine.Warnf("%s is used but not defined.", varname)
+	}
 }
 
 func (ck MkLineChecker) checkVaruseModifiers(varuse *MkVarUse, vartype *Vartype) {
@@ -1600,27 +1602,35 @@ func (ck MkLineChecker) simplifyCondition(varuse *MkVarUse, fromEmpty bool, notE
 	modifiers := varuse.modifiers
 
 	for _, modifier := range modifiers {
-		if m, positive, pattern, exact := modifier.MatchMatch(); m && (positive || len(modifiers) == 1) {
-			ck.checkVartype(varname, opUseMatch, pattern, "")
-
-			vartype := G.Pkgsrc.VariableType(ck.MkLines, varname)
-			if exact && matches(pattern, `^[\w-/]+$`) && vartype != nil && !vartype.List() {
-
-				fix := ck.MkLine.Autofix()
-				fix.Notef("%s should be compared using %s instead of matching against %q.",
-					varname, condStr(positive == notEmpty, "==", "!="), ":"+modifier.Text)
-				fix.Explain(
-					"This variable has a single value, not a list of values.",
-					"Therefore it feels strange to apply list operators like :M and :N onto it.",
-					"A more direct approach is to use the == and != operators.",
-					"",
-					"An entirely different case is when the pattern contains wildcards like ^, *, $.",
-					"In such a case, using the :M or :N modifiers is useful and preferred.")
-				fix.Replace(replace(varname, positive, pattern))
-				fix.Anyway()
-				fix.Apply()
-			}
+		m, positive, pattern, exact := modifier.MatchMatch()
+		if !m || !positive && len(modifiers) != 1 {
+			continue
 		}
+
+		ck.checkVartype(varname, opUseMatch, pattern, "")
+
+		vartype := G.Pkgsrc.VariableType(ck.MkLines, varname)
+		switch {
+		case !exact,
+			vartype == nil,
+			vartype.List(),
+			textproc.NewLexer(pattern).NextBytesSet(mkCondLiteralChars) != pattern:
+			continue
+		}
+
+		fix := ck.MkLine.Autofix()
+		fix.Notef("%s should be compared using %s instead of matching against %q.",
+			varname, condStr(positive == notEmpty, "==", "!="), ":"+modifier.Text)
+		fix.Explain(
+			"This variable has a single value, not a list of values.",
+			"Therefore it feels strange to apply list operators like :M and :N onto it.",
+			"A more direct approach is to use the == and != operators.",
+			"",
+			"An entirely different case is when the pattern contains wildcards like ^, *, $.",
+			"In such a case, using the :M or :N modifiers is useful and preferred.")
+		fix.Replace(replace(varname, positive, pattern))
+		fix.Anyway()
+		fix.Apply()
 	}
 }
 

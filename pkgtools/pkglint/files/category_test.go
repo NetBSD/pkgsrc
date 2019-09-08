@@ -343,3 +343,28 @@ func (s *Suite) Test_CheckdirCategory__no_Makefile(c *check.C) {
 	t.CheckOutputLines(
 		"ERROR: ~/category/Makefile: Cannot be read.")
 }
+
+func (s *Suite) Test_CheckdirCategory__case_mismatch(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPkgsrc()
+	t.CreateFileLines("mk/misc/category.mk")
+	t.CreateFileLines("category/p5-Net-DNS/Makefile")
+	t.CreateFileLines("category/Makefile",
+		MkCvsID,
+		"",
+		"COMMENT=\tCategory comment",
+		"",
+		"SUBDIR+=\tp5-net-dns",
+		"",
+		".include \"../mk/misc/category.mk\"")
+	t.FinishSetUp()
+
+	G.Check(t.File("category"))
+
+	t.CheckOutputLines(
+		"ERROR: ~/category/Makefile:5: \"p5-Net-DNS\" "+
+			"exists in the file system but not in the Makefile.",
+		"ERROR: ~/category/Makefile:5: \"p5-net-dns\" "+
+			"exists in the Makefile but not in the file system.")
+}

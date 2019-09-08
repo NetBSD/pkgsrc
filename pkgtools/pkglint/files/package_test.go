@@ -719,6 +719,7 @@ func (s *Suite) Test_Package_determineEffectivePkgVars__ineffective_C_modifier(c
 func (s *Suite) Test_Package_determineEffectivePkgVars__Python_prefix(c *check.C) {
 	t := s.Init(c)
 
+	G.Experimental = true
 	t.SetUpPackage("category/package",
 		"PKGNAME=\tpackage-2.0",
 		".include \"../../lang/python/extension.mk\"")
@@ -728,16 +729,14 @@ func (s *Suite) Test_Package_determineEffectivePkgVars__Python_prefix(c *check.C
 	t.Main("-Wall", "category/package")
 
 	t.CheckOutputLines(
-		"Looks fine.")
-	// TODO: Wait for joerg's answer before enabling this check.
-	//t.CheckOutputLines(
-	//	"WARN: ~/category/package/Makefile:4: The PKGNAME of Python extensions should start with ${PYPKGPREFIX}.",
-	//	"1 warning found.")
+		"WARN: ~/category/package/Makefile:4: The PKGNAME of Python extensions should start with ${PYPKGPREFIX}.",
+		"1 warning found.")
 }
 
 func (s *Suite) Test_Package_determineEffectivePkgVars__Python_prefix_PKGNAME_variable(c *check.C) {
 	t := s.Init(c)
 
+	G.Experimental = true
 	t.SetUpPackage("category/package",
 		"PKGNAME=\t${VAR}-package-2.0",
 		".include \"../../lang/python/extension.mk\"")
@@ -765,6 +764,7 @@ func (s *Suite) Test_Package_determineEffectivePkgVars__Python_prefix_PKGNAME_va
 func (s *Suite) Test_Package_determineEffectivePkgVars__Python_prefix_late(c *check.C) {
 	t := s.Init(c)
 
+	G.Experimental = true
 	t.SetUpPackage("category/package",
 		"PKGNAME=\tpackage-2.0",
 		".include \"common.mk\"")
@@ -776,13 +776,10 @@ func (s *Suite) Test_Package_determineEffectivePkgVars__Python_prefix_late(c *ch
 
 	t.Main("-Wall", "category/package")
 
-	// TODO: Wait for joerg's answer before enabling this check.
 	t.CheckOutputLines(
-		"Looks fine.")
-	//t.CheckOutputLines(
-	//	"WARN: ~/category/package/Makefile:4: "+
-	//		"The PKGNAME of Python extensions should start with ${PYPKGPREFIX}.",
-	//	"1 warning found.")
+		"WARN: ~/category/package/Makefile:4: "+
+			"The PKGNAME of Python extensions should start with ${PYPKGPREFIX}.",
+		"1 warning found.")
 }
 
 func (s *Suite) Test_Package_checkPossibleDowngrade(c *check.C) {
@@ -2943,4 +2940,24 @@ func (s *Suite) Test_Package_Includes(c *check.C) {
 	//  This is an edge case though. See collectConditionalIncludes and
 	//  Indentation.IsConditional for the current implementation.
 	t.CheckEquals(pkg.conditionalIncludes["never.mk"], (*MkLine)(nil))
+}
+
+func (s *Suite) Test_Package__case_insensitive(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPkgsrc()
+	t.SetUpPackage("net/p5-Net-DNS")
+	t.SetUpPackage("category/package",
+		"DEPENDS+=\tp5-Net-DNS>=0:../../net/p5-net-dns")
+	t.FinishSetUp()
+
+	// this test is only interesting on a case-insensitive filesystem
+	if !fileExists(t.File("mk/BSD.PKG.MK")) {
+		return
+	}
+
+	G.Check(t.File("category/package"))
+
+	// FIXME: On a case-sensitive filesystem, p5-net-dns would not be found.
+	t.CheckOutputEmpty()
 }

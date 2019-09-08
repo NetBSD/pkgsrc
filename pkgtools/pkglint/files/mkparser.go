@@ -458,6 +458,10 @@ func (p *MkParser) mkCondAnd() *MkCond {
 	return &MkCond{And: atoms}
 }
 
+// mkCondLiteralChars contains the characters that may be used outside
+// quotes in a comparison condition such as ${PKGPATH} == category/package.
+var mkCondLiteralChars = textproc.NewByteSet("+---./0-9A-Z_a-z")
+
 func (p *MkParser) mkCondCompare() *MkCond {
 	if trace.Tracing {
 		defer trace.Call1(p.Rest())()
@@ -522,7 +526,7 @@ func (p *MkParser) mkCondCompare() *MkCond {
 			return &MkCond{Compare: &MkCondCompare{*lhs, op, *rhs}}
 		}
 
-		if str := lexer.NextBytesSet(textproc.AlnumU); str != "" {
+		if str := lexer.NextBytesSet(mkCondLiteralChars); str != "" {
 			return &MkCond{Compare: &MkCondCompare{*lhs, op, MkCondTerm{Str: str}}}
 		}
 	}

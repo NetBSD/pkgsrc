@@ -695,7 +695,10 @@ func (pkg *Package) checkfilePackageMakefile(filename string, mklines *MkLines, 
 	mklines.Tools = allLines.Tools // TODO: also copy the other collected data
 	mklines.Check()
 
-	if false && pkg.EffectivePkgname != "" && pkg.Includes("../../lang/python/extension.mk") {
+	// This check is experimental because it's not yet clear how to
+	// classify the various Python packages and whether all Python
+	// packages really need the prefix.
+	if G.Experimental && pkg.EffectivePkgname != "" && pkg.Includes("../../lang/python/extension.mk") {
 		pkg.EffectivePkgnameLine.Warnf("The PKGNAME of Python extensions should start with ${PYPKGPREFIX}.")
 	}
 
