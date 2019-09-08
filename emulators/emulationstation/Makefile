@@ -1,23 +1,23 @@
-# $NetBSD: Makefile,v 1.20 2019/08/22 12:23:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.21 2019/09/08 12:34:38 nia Exp $
 
-DISTNAME=	abba19584636c28cd98e3810e857f493cb63d06c
-PKGNAME=	emulationstation-2.0.0_rc1_20150210
-PKGREVISION=	14
+DISTNAME=	emulationstation-2.7.6
 CATEGORIES=	emulators games
-MASTER_SITES=	https://github.com/Aloshi/EmulationStation/archive/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	${MASTER_SITE_GITHUB:=RetroPie/}
+GITHUB_PROJECT=	EmulationStation
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.emulationstation.org/
+HOMEPAGE=	https://github.com/RetroPie/EmulationStation
 COMMENT=	Themeable multi-system emulator frontend
-
 LICENSE=	mit
 
+EXTRACT_USING=	bsdtar
 USE_CMAKE=	yes
+USE_TOOLS+=	pkg-config
 USE_LANGUAGES+=	c c++11
 GCC_REQD+=	4.7 # C++11
 
-WRKSRC=		${WRKDIR}/EmulationStation-${DISTNAME}
+WRKSRC=		${WRKDIR}/EmulationStation-${PKGVERSION_NOREV}
 
 INSTALLATION_DIRS=	bin share/doc/emulationstation
 
@@ -48,6 +48,12 @@ SUBST_SED.vc+=		-e 's;/opt/vc;${PREFIX};g'
 
 .include "options.mk"
 
+post-configure:
+	cd ${BUILDLINK_DIR} && ${MKDIR} -p include/pugixml/src
+	cd ${BUILDLINK_DIR} && ${CP} include/pugixml.hpp include/pugixml/src/pugixml.hpp
+
+# Deal with emulationstation's expectations for the location of the
+# pugixml header.
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/GAMELISTS.md ${WRKSRC}/README.md \
 	    ${WRKSRC}/SYSTEMS.md ${WRKSRC}/THEMES.md \
@@ -57,10 +63,9 @@ post-install:
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../graphics/freeimage/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../math/eigen3/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../multimedia/vlc/buildlink3.mk"
+.include "../../textproc/pugixml/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../x11/libICE/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
-
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
