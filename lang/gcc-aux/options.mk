@@ -1,11 +1,18 @@
-# $NetBSD: options.mk,v 1.6 2017/07/10 00:21:31 maya Exp $
+# $NetBSD: options.mk,v 1.7 2019/09/08 14:05:38 maya Exp $
 
 # NLS is failing, might be linking with wrong iconv lib.
 # Disable option until further notice
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc-aux
-PKG_SUPPORTED_OPTIONS=  fortran objc testsuite static bootstrap #nls
+PKG_SUPPORTED_OPTIONS=  fortran objc testsuite static bootstrap always-libgcc #nls
 PKG_SUGGESTED_OPTIONS=  fortran objc #nls
+
+.include "../../mk/compiler.mk"
+.if empty(PKGSRC_COMPILER:Mgcc)
+PKG_SUGGESTED_OPTIONS+=		always-libgcc
+.endif
+
+PKG_SUGGESTED_OPTIONS.SunOS+=	always-libgcc
 
 .include "../../mk/bsd.options.mk"
 
@@ -30,6 +37,17 @@ EXTRA_CONFARGS+= --enable-libquadmath
 .endif
 .endif
 
+#############################
+##  Don't install libgcc   ##
+#############################
+
+.if empty(PKG_OPTIONS:Malways-libgcc)
+post-install:	delete-installed-libgcc
+
+delete-installed-libgcc:
+	${FIND} ${DESTDIR} -name 'libgcc_s.so*' -delete
+
+.endif
 
 #################################
 ##  ADD LANGUAGE: Objective-C  ##
