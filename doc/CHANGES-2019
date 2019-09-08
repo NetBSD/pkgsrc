@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3800 2019/09/08 11:55:25 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.3801 2019/09/08 12:27:23 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6252,3 +6252,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/MesaLib to 19.1.6 [nia 2019-09-08]
 	Removed emulators/generator [nia 2019-09-08]
 	Updated devel/p5-Test-BDD-Cucumber to 0.61 [schmonz 2019-09-08]
+	Added devel/p8-platform version 2.1.0.1 [nia 2019-09-08]
