@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2019/09/08 20:54:16 nia Exp $
+bin/megaglest
+bin/megaglest_editor
+bin/megaglest_g3dviewer
+man/man6/megaglest.6
+man/man6/megaglest_editor.6
+man/man6/megaglest_g3dviewer.6
+share/megaglest/editor.ico
+share/megaglest/g3dviewer.ico
+share/megaglest/glest.ini
+share/megaglest/glestkeys.ini
+share/megaglest/megaglest.ico
+share/megaglest/servers.ini
+share/megaglest/start_megaglest_gameserver
