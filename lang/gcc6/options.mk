@@ -1,8 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2016/09/12 22:13:54 maya Exp $
+# $NetBSD: options.mk,v 1.2 2019/09/08 14:47:52 maya Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${GCC_PKGNAME}
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran \
-			gcc-go gcc-objc gcc-objc++ gcc-graphite gcc-java
+			gcc-go gcc-objc gcc-objc++ gcc-graphite gcc-java \
+			always-libgcc
 PKG_SUGGESTED_OPTIONS=	gcc-c++ gcc-fortran gcc-objc gcc-objc++ \
 			gcc-graphite gcc-inplace-math
 
@@ -13,8 +14,13 @@ PKG_SUGGESTED_OPTIONS+=	nls
 .elif ${OPSYS} == "DragonFly"
 PKG_SUGGESTED_OPTIONS+= nls
 .elif ${OPSYS} == "SunOS"
-PKG_SUGGESTED_OPTIONS+=	gcc-inplace-math
+PKG_SUGGESTED_OPTIONS+=	gcc-inplace-math always-libgcc
 .else
+.endif
+
+.include "../../mk/compiler.mk"
+.if empty(PKGSRC_COMPILER:Mgcc)
+PKG_SUGGESTED_OPTIONS+=			always-libgcc
 .endif
 
 ###
@@ -57,6 +63,32 @@ CONFIGURE_ARGS+=	--disable-nls
       empty(PKG_OPTIONS:Mgcc-multilib) ) || \
     !empty(MULTILIB_SUPPORTED:M[Nn][Oo])
 CONFIGURE_ARGS+=	--disable-multilib
+.endif
+
+###
+### Don't install libgcc if it's older than the system one
+###
+.if empty(PKG_OPTIONS:Malways-libgcc)
+
+.for _libdir_ in ${_OPSYS_LIB_DIRS}
+.  if exists(${_libdir_})
+BASE_LIBGCC!=			find ${_libdir_} -name libgcc_s.so
+BASE_LIBGCC_MATCH_STRING!=	${ECHO} ${BASE_LIBGCC} ${GCC6_DIST_VERSION} | \
+				${AWK} -f ../../mk/scripts/larger_symbol_version.awk
+.    if ${BASE_LIBGCC_MATCH_STRING:Mnewer}
+DELETE_INSTALLED_LIBGCC=	yes
+.    endif
+.  endif
+.endfor
+
+.if ${DELETE_INSTALLED_LIBGCC:Uno}
+post-install:	delete-installed-libgcc
+
+delete-installed-libgcc:
+	${FIND} ${DESTDIR} -name 'libgcc_s.so*' -delete
+
+.endif
+
 .endif
 
 ###
