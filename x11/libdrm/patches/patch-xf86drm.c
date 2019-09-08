@@ -1,4 +1,4 @@
-$NetBSD: patch-xf86drm.c,v 1.5 2019/09/08 15:43:37 maya Exp $
+$NetBSD: patch-xf86drm.c,v 1.6 2019/09/08 15:55:04 maya Exp $
 
 Implement drmParseSubsystemType, drmParsePciBusInfo for NetBSD
 
@@ -16,10 +16,10 @@ Implement drmParseSubsystemType, drmParsePciBusInfo for NetBSD
  #endif
  
  #ifdef __OpenBSD__
-@@ -3031,6 +3034,65 @@ static int drmParseSubsystemType(int maj
-             return bus_types[i].bus_type;
+@@ -3032,6 +3035,65 @@ static int drmParseSubsystemType(int maj
      }
  
+     return -EINVAL;
 +#elif defined(__NetBSD__)
 +    int type, fd;
 +    drmSetVersion sv;
@@ -79,9 +79,9 @@ Implement drmParseSubsystemType, drmParsePciBusInfo for NetBSD
 +
 +    /* Success or not, we're done.  */
 +    return ret;
-     return -EINVAL;
  #elif defined(__OpenBSD__) || defined(__DragonFly__)
      return DRM_BUS_PCI;
+ #else
 @@ -3081,6 +3143,73 @@ static int drmParsePciBusInfo(int maj, i
      info->func = func;
  
