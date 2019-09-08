@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/07/14 21:25:47 rillig Exp $
+@comment $NetBSD: PLIST,v 1.14 2019/09/08 22:47:47 rillig Exp $
 bin/pkglint
 gopkg/pkg/${GO_PLATFORM}/netbsd.org/pkglint.a
 gopkg/pkg/${GO_PLATFORM}/netbsd.org/pkglint/getopt.a
@@ -116,6 +116,8 @@ gopkg/src/netbsd.org/pkglint/varalignblock.go
 gopkg/src/netbsd.org/pkglint/varalignblock_test.go
 gopkg/src/netbsd.org/pkglint/vardefs.go
 gopkg/src/netbsd.org/pkglint/vardefs_test.go
+gopkg/src/netbsd.org/pkglint/vargroups.go
+gopkg/src/netbsd.org/pkglint/vargroups_test.go
 gopkg/src/netbsd.org/pkglint/vartype.go
 gopkg/src/netbsd.org/pkglint/vartype_test.go
 gopkg/src/netbsd.org/pkglint/vartypecheck.go
