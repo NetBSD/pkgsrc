@@ -42,7 +42,11 @@ func (ls *Lines) CheckCvsID(index int, prefixRe regex.Pattern, suggestedPrefix s
 	line := ls.Lines[index]
 	if m, expanded := line.IsCvsID(prefixRe); m {
 
-		if G.Testing && G.Wip && expanded {
+		// This check is considered experimental because it produces a few
+		// thousand notes and doesn't really affect the functionality of
+		// the packages. The worst thing that might happen is that a file
+		// looks older than it really is.
+		if G.Experimental && G.Wip && expanded {
 			fix := line.Autofix()
 			fix.Notef("Expected exactly %q.", suggestedPrefix+"$"+"NetBSD$")
 			fix.Explain(

@@ -118,6 +118,7 @@ func (mklines *MkLines) checkAll() {
 
 	substContext := NewSubstContext()
 	var varalign VaralignBlock
+	vargroupsChecker := NewVargroupsChecker(mklines)
 	isHacksMk := mklines.lines.BaseName == "hacks.mk"
 
 	lineAction := func(mkline *MkLine) bool {
@@ -128,6 +129,7 @@ func (mklines *MkLines) checkAll() {
 
 		ck := MkLineChecker{mklines, mkline}
 		ck.Check()
+		vargroupsChecker.Check(mkline)
 
 		varalign.Process(mkline)
 		mklines.Tools.ParseToolLine(mklines, mkline, false, false)
@@ -163,6 +165,7 @@ func (mklines *MkLines) checkAll() {
 
 	atEnd := func(mkline *MkLine) {
 		mklines.indentation.CheckFinish(mklines.lines.Filename)
+		vargroupsChecker.Finish(mkline)
 	}
 
 	if trace.Tracing {

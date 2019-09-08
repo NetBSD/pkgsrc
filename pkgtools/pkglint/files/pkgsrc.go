@@ -819,6 +819,15 @@ func (src *Pkgsrc) LoadMk(filename string, options LoadOptions) *MkLines {
 	return LoadMk(src.File(filename), options)
 }
 
+func (src *Pkgsrc) LoadMkInfra(filename string, options LoadOptions) *MkLines {
+	if G.Testing {
+		// During testing, the infrastructure files don't have to exist.
+		// They are often emulated by setting their data structures manually.
+		options &^= MustSucceed
+	}
+	return src.LoadMk(filename, options)
+}
+
 // ReadDir lists the files and subdirectories from the given directory
 // (relative to the pkgsrc root), filtering out any ignored files (CVS/*)
 // and empty directories.

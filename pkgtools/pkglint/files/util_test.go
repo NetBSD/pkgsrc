@@ -105,6 +105,15 @@ func (s *Suite) Test_tabWidth(c *check.C) {
 	t.CheckEquals(tabWidth("12345678\t"), 16)
 }
 
+// Since tabWidthAppend is used with logical lines (Line.Text) as well as with
+// raw lines (RawLine.textnl or RawLine.orignl), and since the width only
+// makes sense for a single line, better panic.
+func (s *Suite) Test_tabWidthAppend__panic(c *check.C) {
+	t := s.Init(c)
+
+	t.ExpectAssert(func() { tabWidthAppend(0, "\n") })
+}
+
 func (s *Suite) Test_cleanpath(c *check.C) {
 	t := s.Init(c)
 

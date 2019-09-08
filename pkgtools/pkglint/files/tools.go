@@ -415,6 +415,8 @@ func (tr *Tools) adjustValidity(tool *Tool) {
 	}
 }
 
+func (tr *Tools) ExistsVar(varname string) bool { return tr.byVarname[varname] != nil }
+
 type Validity uint8
 
 const (

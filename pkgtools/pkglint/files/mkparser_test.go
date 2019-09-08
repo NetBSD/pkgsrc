@@ -548,7 +548,7 @@ func (s *Suite) Test_MkParser_MkCond(c *check.C) {
 
 	testRest := func(input string, expectedTree *MkCond, expectedRest string) {
 		// As of July 2019 p.MkCond does not emit warnings;
-		// this is left to MkLineChecker) checkDirectiveCond.
+		// this is left to MkLineChecker.checkDirectiveCond.
 		line := t.NewLine("filename.mk", 1, ".if "+input)
 		p := NewMkParser(line, input)
 		actualTree := p.MkCond()
@@ -784,6 +784,25 @@ func (s *Suite) Test_MkParser_MkCond(c *check.C) {
 	testRest("!empty{USE_CROSS_COMPILE:M[yY][eE][sS]}",
 		nil,
 		"empty{USE_CROSS_COMPILE:M[yY][eE][sS]}")
+}
+
+func (s *Suite) Test_MkParser_mkCondCompare(c *check.C) {
+	t := s.Init(c)
+
+	mkline := t.NewMkLine("Makefile", 123, ".if ${PKGPATH} == category/pack.age-3+")
+	p := NewMkParser(mkline.Line, mkline.Args())
+	cond := p.MkCond()
+
+	t.CheckEquals(p.Rest(), "")
+	t.CheckDeepEquals(
+		cond,
+		&MkCond{
+			Compare: &MkCondCompare{
+				Left:  MkCondTerm{Var: NewMkVarUse("PKGPATH")},
+				Op:    "==",
+				Right: MkCondTerm{Str: "category/pack.age-3+"}}})
+
+	t.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_MkParser_Varname(c *check.C) {

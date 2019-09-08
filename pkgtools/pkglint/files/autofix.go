@@ -127,7 +127,7 @@ func (fix *Autofix) ReplaceAfter(prefix, from string, to string) {
 
 // ReplaceAt replaces the text "from" with "to", a single time.
 // But only if the text at the given position is indeed "from".
-func (fix *Autofix) ReplaceAt(rawIndex int, column int, from string, to string) {
+func (fix *Autofix) ReplaceAt(rawIndex int, textIndex int, from string, to string) {
 	assert(from != to)
 	fix.assertRealLine()
 
@@ -136,11 +136,11 @@ func (fix *Autofix) ReplaceAt(rawIndex int, column int, from string, to string) 
 	}
 
 	rawLine := fix.line.raw[rawIndex]
-	if column >= len(rawLine.textnl) || !hasPrefix(rawLine.textnl[column:], from) {
+	if textIndex >= len(rawLine.textnl) || !hasPrefix(rawLine.textnl[textIndex:], from) {
 		return
 	}
 
-	replaced := rawLine.textnl[:column] + to + rawLine.textnl[column+len(from):]
+	replaced := rawLine.textnl[:textIndex] + to + rawLine.textnl[textIndex+len(from):]
 
 	if G.Logger.IsAutofix() {
 		rawLine.textnl = replaced
@@ -328,7 +328,6 @@ func (fix *Autofix) Apply() {
 			fix.modified = true
 		}
 
-		// Reduce number of calls to runtime.writeBarrier.
 		fix.autofixShortTerm = autofixShortTerm{}
 	}
 
@@ -364,20 +363,11 @@ func (fix *Autofix) Apply() {
 			}
 			G.Logger.Logf(AutofixLogLevel, line.Filename, lineno, AutofixFormat, action.description)
 		}
+		G.Logger.showSource(line)
 	}
 
-	if logDiagnostic || logFix {
-		if logFix {
-			G.Logger.showSource(line)
-		}
-		if logDiagnostic && len(fix.explanation) > 0 {
-			line.Explain(fix.explanation...)
-		}
-		if G.Logger.Opts.ShowSource {
-			if !(G.Logger.Opts.Explain && logDiagnostic && len(fix.explanation) > 0) {
-				G.Logger.out.Separate()
-			}
-		}
+	if logDiagnostic && len(fix.explanation) > 0 {
+		line.Explain(fix.explanation...)
 	}
 
 	reset()
