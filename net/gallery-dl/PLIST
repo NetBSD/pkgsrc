@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2019/08/01 21:40:15 leot Exp $
+@comment $NetBSD: PLIST,v 1.33 2019/09/08 20:16:13 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -120,6 +120,9 @@ ${PYSITELIB}/gallery_dl/extractor/foolfuuka.pyo
 ${PYSITELIB}/gallery_dl/extractor/foolslide.py
 ${PYSITELIB}/gallery_dl/extractor/foolslide.pyc
 ${PYSITELIB}/gallery_dl/extractor/foolslide.pyo
+${PYSITELIB}/gallery_dl/extractor/fuskator.py
+${PYSITELIB}/gallery_dl/extractor/fuskator.pyc
+${PYSITELIB}/gallery_dl/extractor/fuskator.pyo
 ${PYSITELIB}/gallery_dl/extractor/gelbooru.py
 ${PYSITELIB}/gallery_dl/extractor/gelbooru.pyc
 ${PYSITELIB}/gallery_dl/extractor/gelbooru.pyo
@@ -195,6 +198,9 @@ ${PYSITELIB}/gallery_dl/extractor/komikcast.pyo
 ${PYSITELIB}/gallery_dl/extractor/konachan.py
 ${PYSITELIB}/gallery_dl/extractor/konachan.pyc
 ${PYSITELIB}/gallery_dl/extractor/konachan.pyo
+${PYSITELIB}/gallery_dl/extractor/lineblog.py
+${PYSITELIB}/gallery_dl/extractor/lineblog.pyc
+${PYSITELIB}/gallery_dl/extractor/lineblog.pyo
 ${PYSITELIB}/gallery_dl/extractor/livedoor.py
 ${PYSITELIB}/gallery_dl/extractor/livedoor.pyc
 ${PYSITELIB}/gallery_dl/extractor/livedoor.pyo
