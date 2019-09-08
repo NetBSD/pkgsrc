@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2019/08/05 19:06:50 adam Exp $
+# $NetBSD: Makefile,v 1.6 2019/09/08 20:49:11 rjs Exp $
 
 DISTNAME=	lld-8.0.1.src
 PKGNAME=	${DISTNAME:S/.src//}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=llvm/}
 GITHUB_PROJECT=	llvm-project
