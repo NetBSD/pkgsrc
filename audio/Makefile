@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.561 2019/09/08 00:00:06 nia Exp $
+# $NetBSD: Makefile,v 1.562 2019/09/08 10:20:07 nia Exp $
 #
 
 COMMENT=	Audio tools
@@ -191,6 +191,7 @@ SUBDIR+=	gst-plugins1-dts
 SUBDIR+=	gst-plugins1-faac
 SUBDIR+=	gst-plugins1-faad
 SUBDIR+=	gst-plugins1-flac
+SUBDIR+=	gst-plugins1-gme
 SUBDIR+=	gst-plugins1-jack
 SUBDIR+=	gst-plugins1-lame
 SUBDIR+=	gst-plugins1-libvisual
