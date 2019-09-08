@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2906 2019/09/02 09:53:56 adam Exp $
+# $NetBSD: Makefile,v 1.2907 2019/09/08 12:27:08 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -1929,6 +1929,7 @@ SUBDIR+=	p5-strictures
 SUBDIR+=	p5-subversion
 SUBDIR+=	p5-syntax
 SUBDIR+=	p5-version
+SUBDIR+=	p8-platform
 SUBDIR+=	palmpower
 SUBDIR+=	pango
 SUBDIR+=	pangomm
