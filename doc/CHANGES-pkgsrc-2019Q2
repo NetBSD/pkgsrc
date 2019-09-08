@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q2,v 1.1.2.11 2019/09/06 18:44:27 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q2,v 1.1.2.12 2019/09/08 19:25:11 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q2 branch:
 
@@ -143,4 +143,19 @@ security/libgcrypt: security fix
 
 Pullup ticket #6049 - requested by wiedi
 mail/exim: security fix (remote root)
+
+Pullup ticket #6050 - requested by taca
+www/apache24: build fix after previous pull-up
+
+Pullup ticket #6028 - requested by taca
+databases/mysql56-client: security fix
+
+Pullup ticket #6041 - requested by taca
+mail/dovecot2: security fix
+
+Pullup ticket #6042 - requested by taca
+mail/dovecot2-pigeonhole: security fix
+
+Pullup ticket #6043 - requested by taca
+lang/php72: security fix
 
