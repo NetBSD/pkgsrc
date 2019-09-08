@@ -1,4 +1,4 @@
-# $NetBSD: show.mk,v 1.17 2018/11/30 18:38:20 rillig Exp $
+# $NetBSD: show.mk,v 1.18 2019/09/08 09:01:04 rillig Exp $
 #
 # This file contains some targets that print information gathered from
 # variables. They do not modify any variables.
@@ -123,6 +123,11 @@ show-build-defs: .PHONY
 # _USE_VARS.*
 #	All variables that are used by this file, whether internal or
 #	not, primary or not.
+#
+# _IGN_VARS.*
+#	All variables that are used or defined by this file, but which
+#	are not worth being documented. These are listed to enable pkglint
+#	to check whether all variables are covered properly.
 #
 # Variables that control the presentation of individual variables:
 #
