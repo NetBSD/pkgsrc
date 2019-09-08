@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/08/11 13:21:19 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2019/09/08 09:24:04 maya Exp $
 
 PKGNAME=	gcc-aux-${SNAPSHOT}
 PKGREVISION=	4
@@ -238,6 +238,10 @@ post-extract:
 	${PERL5} -pi -e 's|new Long_Integer|new Integer|' \
 		${WRKSRC}/gcc/ada/s-osprim-posix.adb
 .  endif
+	# GCC < 9's fixincludes is broken for NetBSD >= 9.0 (PR pkg/54362)
+	# This affects the bootstrap GCC used, too.
+	# Fixed in https://github.com/gcc-mirror/gcc/commit/c7af124dca795b835d7fda24192b9e4849f1bb08
+	${FIND} ${WRKDIR} -name stddef.h -exec ${SED} -i -e 's|defined(_ANSI_H_)|1|' {} \;
 .endif
 .if defined(STATIC_BUILD) || !empty(PKG_OPTIONS:Mbootstrap)
 .  if ${OPSYS} != SunOS
