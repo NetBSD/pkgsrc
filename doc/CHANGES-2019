@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3797 2019/09/08 10:20:22 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3798 2019/09/08 10:21:49 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6249,3 +6249,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed multimedia/gecko-mediaplayer [nia 2019-09-08]
 	Removed audio/gst-plugins1-spc [nia 2019-09-08]
 	Added audio/gst-plugins1-gme version 1.16.0 [nia 2019-09-08]
+	Updated graphics/MesaLib to 19.1.6 [nia 2019-09-08]
