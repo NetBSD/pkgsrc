@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19251 2019/09/08 10:21:49 nia Exp $
+$NetBSD: TODO,v 1.19252 2019/09/08 11:50:38 nia Exp $
 
 Suggested new packages
 ======================
@@ -527,7 +527,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o courier-imap-4.16.1
 	o courier-mta-0.74.2
 	o cpmtools-2.20
-	o crack-attack-1.1.15
 	o crafty-25.0.1
 	o crimsonfields-0.5.3
 	o cross-h8300-hms-binutils-2.17
