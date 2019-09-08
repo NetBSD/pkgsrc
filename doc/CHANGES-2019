@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3802 2019/09/08 12:31:03 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3803 2019/09/08 12:34:48 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6254,3 +6254,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-Test-BDD-Cucumber to 0.61 [schmonz 2019-09-08]
 	Added devel/p8-platform version 2.1.0.1 [nia 2019-09-08]
 	Updated misc/libcec to 4.0.4 [nia 2019-09-08]
+	Updated emulators/emulationstation to 2.7.6 [nia 2019-09-08]
