@@ -30,6 +30,7 @@ type Pkglint struct {
 	Wip            bool     // Is the currently checked file or package from pkgsrc-wip?
 	Infrastructure bool     // Is the currently checked file from the pkgsrc infrastructure?
 	Testing        bool     // Is pkglint in self-testing mode (only during development)?
+	Experimental   bool     // For experimental features, only enabled individually in tests
 	Username       string   // For checking against OWNER and MAINTAINER
 
 	cvsEntriesDir string // Cached to avoid I/O
