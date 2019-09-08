@@ -1,0 +1,11 @@
+$NetBSD: patch-external_CMakeLists.txt,v 1.1 2019/09/08 12:34:38 nia Exp $
+
+Using pugixml from pkgsrc.
+
+--- external/CMakeLists.txt.orig	2018-07-11 17:16:47.000000000 +0000
++++ external/CMakeLists.txt
+@@ -2,4 +2,3 @@
+ # package managers are included with the project (in the 'external' folder)
+ 
+ add_subdirectory("nanosvg")
+-add_subdirectory("pugixml")
