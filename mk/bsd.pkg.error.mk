@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.error.mk,v 1.4 2008/02/07 21:36:13 rillig Exp $
+# $NetBSD: bsd.pkg.error.mk,v 1.5 2019/09/08 09:15:01 rillig Exp $
 
 ERROR_DIR=		${WRKDIR}/.error
 WARNING_DIR=		${WRKDIR}/.warning
@@ -28,7 +28,7 @@ ${ERROR_DIR} ${WARNING_DIR} ${_ERROR_DONE_DIR} ${_WARNING_DONE_DIR}:
 ### directory, then the target will fail.
 ###
 error-check: .USE
-	${RUN}					\
+	${RUN}								\
 	${RM} -f ${WARNING_DIR}/*.tmp;					\
 	${TEST} -d ${WARNING_DIR} || exit 0;				\
 	cd ${WARNING_DIR};						\
@@ -39,7 +39,7 @@ error-check: .USE
 	${CAT} ./* | ${WARNING_CAT};					\
 	${MV} -f ./* ${_WARNING_DONE_DIR}
 
-	${RUN}					\
+	${RUN}								\
 	${RM} -f ${ERROR_DIR}/*.tmp;					\
 	${TEST} -d ${ERROR_DIR} || exit 0;				\
 	cd ${ERROR_DIR};						\
