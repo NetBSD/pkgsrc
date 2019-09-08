@@ -16,6 +16,7 @@ type Logger struct {
 
 	suppressDiag bool
 	suppressExpl bool
+	prevLine     *Line
 
 	logged    Once
 	explained Once
@@ -98,8 +99,16 @@ func (l *Logger) Explain(explanation ...string) {
 		return
 	}
 
+	// The explanation should fit nicely on a screen that is 80
+	// characters wide. The explanation is indented using a tab, and
+	// there should be a little margin at the right. The resulting
+	// number comes remarkably close to the line width recommended
+	// by typographers, which is 66.
+	const explanationWidth = 80 - 8 - 4
+
+	l.prevLine = nil
 	l.out.Separate()
-	wrapped := wrap(68, explanation...)
+	wrapped := wrap(explanationWidth, explanation...)
 	for _, explanationLine := range wrapped {
 		if explanationLine != "" {
 			l.out.Write("\t")
@@ -112,6 +121,10 @@ func (l *Logger) Explain(explanation ...string) {
 func (l *Logger) ShowSummary() {
 	if l.Opts.Quiet || l.Opts.Autofix {
 		return
+	}
+
+	if l.Opts.ShowSource {
+		l.out.Separate()
 	}
 
 	if l.errors != 0 || l.warnings != 0 {
@@ -187,17 +200,25 @@ func (l *Logger) Diag(line *Line, level *LogLevel, format string, args ...interf
 	}
 
 	if l.Opts.ShowSource {
+		if !l.IsAutofix() && line != l.prevLine && level != Fatal {
+			l.out.Separate()
+		}
 		l.showSource(line)
-		l.Logf(level, filename, linenos, format, msg)
-		l.out.Separate()
-	} else {
-		l.Logf(level, filename, linenos, format, msg)
 	}
+
+	l.Logf(level, filename, linenos, format, msg)
 }
 
 func (l *Logger) showSource(line *Line) {
 	if !G.Logger.Opts.ShowSource {
 		return
+	}
+
+	if !l.IsAutofix() {
+		if line == l.prevLine {
+			return
+		}
+		l.prevLine = line
 	}
 
 	out := l.out
@@ -229,6 +250,9 @@ func (l *Logger) showSource(line *Line) {
 		}
 	}
 
+	if !l.IsAutofix() {
+		l.out.Separate()
+	}
 	if line.autofix != nil {
 		for _, before := range line.autofix.linesBefore {
 			writeLine("+\t", before)
@@ -239,6 +263,9 @@ func (l *Logger) showSource(line *Line) {
 		}
 	} else {
 		printDiff(line.raw)
+	}
+	if l.IsAutofix() {
+		l.out.Separate()
 	}
 }
 
@@ -324,7 +351,7 @@ type SeparatorWriter struct {
 }
 
 func NewSeparatorWriter(out io.Writer) *SeparatorWriter {
-	return &SeparatorWriter{out: out}
+	return &SeparatorWriter{out: out, state: 3}
 }
 
 func (wr *SeparatorWriter) WriteLine(text string) {
@@ -339,11 +366,10 @@ func (wr *SeparatorWriter) Write(text string) {
 }
 
 // Separate remembers to output an empty line before the next character.
-// If the writer is currently in the middle of a line, that line is terminated immediately.
+//
+// The writer must not be in the middle of a line.
 func (wr *SeparatorWriter) Separate() {
-	if wr.state == 1 {
-		wr.write('\n')
-	}
+	assert(wr.state != 1)
 	if wr.state < 2 {
 		wr.state = 2
 	}

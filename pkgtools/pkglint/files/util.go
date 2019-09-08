@@ -149,6 +149,25 @@ func keysJoined(m map[string]bool) string {
 	return strings.Join(keys, " ")
 }
 
+func copyStringMkLine(m map[string]*MkLine) map[string]*MkLine {
+	c := make(map[string]*MkLine, len(m))
+	for k, v := range m {
+		c[k] = v
+	}
+	return c
+}
+
+func forEachStringMkLine(m map[string]*MkLine, action func(s string, mkline *MkLine)) {
+	var keys []string
+	for key := range m {
+		keys = append(keys, key)
+	}
+	sort.Strings(keys)
+	for _, key := range keys {
+		action(key, m[key])
+	}
+}
+
 func imax(a, b int) int {
 	if a > b {
 		return a
@@ -245,7 +264,7 @@ func getSubdirs(filename string) []string {
 
 func isIgnoredFilename(filename string) bool {
 	switch filename {
-	case ".", "..", "CVS", ".svn", ".git", ".hg":
+	case ".", "..", "CVS", ".svn", ".git", ".hg", ".idea":
 		return true
 	}
 	return false
@@ -312,16 +331,18 @@ type CvsEntry struct {
 
 // Returns the number of columns that a string occupies when printed with
 // a tabulator size of 8.
-func tabWidth(s string) int {
-	length := 0
+func tabWidth(s string) int { return tabWidthAppend(0, s) }
+
+func tabWidthAppend(width int, s string) int {
 	for _, r := range s {
+		assert(r != '\n')
 		if r == '\t' {
-			length = length&-8 + 8
+			width = width&-8 + 8
 		} else {
-			length++
+			width++
 		}
 	}
-	return length
+	return width
 }
 
 func detab(s string) string {
@@ -1330,4 +1351,9 @@ func (s *StringSet) AddAll(elements []string) {
 	for _, element := range elements {
 		s.Add(element)
 	}
+}
+
+func (s *StringSet) Contains(needle string) bool {
+	_, found := s.seen[needle]
+	return found
 }
