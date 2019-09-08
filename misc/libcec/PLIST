@@ -1,8 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/13 11:12:23 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/09/08 12:30:53 nia Exp $
 bin/cec-client
+bin/cec-client-${PKGVERSION}
+bin/cecc-client
+bin/cecc-client-${PKGVERSION}
+bin/pyCecClient
 include/libcec/cec.h
 include/libcec/cecc.h
+include/libcec/ceccloader.h
 include/libcec/cecloader.h
 include/libcec/cectypes.h
-lib/libcec.la
+include/libcec/version.h
+lib/libcec.so
+lib/libcec.so.4
+lib/libcec.so.${PKGVERSION}
 lib/pkgconfig/libcec.pc
