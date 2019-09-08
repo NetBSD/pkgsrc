@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3806 2019/09/08 20:16:52 leot Exp $
+$NetBSD: CHANGES-2019,v 1.3807 2019/09/08 20:41:22 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6258,3 +6258,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/libdrm to 2.4.98nb1 [maya 2019-09-08]
 	Updated x11/libdrm to 2.4.98nb2 [maya 2019-09-08]
 	Updated net/gallery-dl to 1.10.4 [leot 2019-09-08]
+	Added graphics/ftgl version 2.1.3rc5 [nia 2019-09-08]
