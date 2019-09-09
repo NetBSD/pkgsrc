@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.85 2019/08/29 14:09:56 he Exp $
+$NetBSD: distinfo,v 1.86 2019/09/09 16:19:49 adam Exp $
 
 SHA1 (rust-1.35.0-armv7-unknown-netbsd-eabihf.tar.gz) = 91517fa95f954427c627cf63eb7c518abd068f3e
 RMD160 (rust-1.35.0-armv7-unknown-netbsd-eabihf.tar.gz) = 06a3d922b27aac2deb570301542897a131b47cd0
@@ -108,6 +108,8 @@ SHA1 (patch-src_bootstrap_bin_rustc.rs) = 5e6b0cb25401db4fef6e74f73764e69f3c0956
 SHA1 (patch-src_bootstrap_bootstrap.py) = 5b886b95857bf019c2e37cb380e6905cb444b756
 SHA1 (patch-src_bootstrap_builder.rs) = 7e23348dc5555fdb3833a7f8734cfe687c6e533c
 SHA1 (patch-src_bootstrap_lib.rs) = bc23743f1b9c4ad3d7557b4fdf8a55976ca7f417
+SHA1 (patch-src_build__helper_lib.rs) = ef0b522e303f0490b86e64f40733c2ecb498da5b
+SHA1 (patch-src_librustc__codegen__ssa_back_linker.rs) = e7c592f78b9ee317521cf0258686173a31f1d2e0
 SHA1 (patch-src_librustc__llvm_build.rs) = d6e71891eb8d42a9c4175505ba7ed98338153860
 SHA1 (patch-src_librustc__target_spec_solaris__base.rs) = 21db8af802edecb5e35ce78ee9af7c4935b4040f
 SHA1 (patch-src_librustc__target_spec_x86__64__sun__solaris.rs) = f6ad33b41906bbf83a1cbd0e2fe13a4da37266fa
