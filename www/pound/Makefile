@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2018/08/26 22:35:45 schmonz Exp $
+# $NetBSD: Makefile,v 1.14 2019/09/09 09:08:07 nia Exp $
 
 DISTNAME=	Pound-2.8
 PKGNAME=	${DISTNAME:S/Pound/pound/}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.apsis.ch/pound/
 EXTRACT_SUFX=	.tgz
@@ -12,7 +13,7 @@ COMMENT=	Reverse proxy, load balancer and HTTPS front-end
 LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 USE_FEATURES.openssl=	threads
 
 RCD_SCRIPTS=		pound
@@ -21,7 +22,19 @@ SUBST_CLASSES=		config
 SUBST_MESSAGE.config=	Fixing path to default config file.
 SUBST_STAGE.config=	post-build
 SUBST_FILES.config=	pound.8
-SUBST_SED.config=	-e "s,/usr/local/etc/,"${PKG_SYSCONFDIR:Q}"/,g"
+SUBST_SED.config=	-e "s,/usr/local/etc/,"${PKG_SYSCONFDIR}"/,g"
+
+INSTALLATION_DIRS+=	sbin ${PKGMANDIR}/man8
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/pound \
+		${DESTDIR}${PREFIX}/sbin/pound
+	${INSTALL_PROGRAM} ${WRKSRC}/poundctl \
+		${DESTDIR}${PREFIX}/sbin/poundctl
+	${INSTALL_MAN} ${WRKSRC}/pound.8 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/pound.8
+	${INSTALL_MAN} ${WRKSRC}/poundctl.8 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/poundctl.8
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
