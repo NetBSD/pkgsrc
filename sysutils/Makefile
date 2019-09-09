@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.830 2019/09/07 18:29:03 tnn Exp $
+# $NetBSD: Makefile,v 1.831 2019/09/09 12:21:44 tm Exp $
 #
 
 COMMENT=	System utilities
@@ -391,9 +391,9 @@ SUBDIR+=	mtools
 SUBDIR+=	mtoolsfm
 SUBDIR+=	mtscan
 SUBDIR+=	mtx
-SUBDIR+=	munin-doc
+SUBDIR+=	munin-common
+SUBDIR+=	munin-master
 SUBDIR+=	munin-node
-SUBDIR+=	munin-server
 SUBDIR+=	nautilus
 SUBDIR+=	nautilus-sendto
 SUBDIR+=	nbase
