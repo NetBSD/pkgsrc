@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2019/08/29 14:09:56 he Exp $
+# $NetBSD: Makefile,v 1.114 2019/09/09 16:19:49 adam Exp $
 
 DISTNAME=	rustc-1.37.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -277,6 +277,8 @@ TOOLS_PATH.md5sum=	${PREFIX}/bin/gmd5sum
 SUBST_CLASSES+=		rpath
 SUBST_STAGE.rpath=	pre-configure
 SUBST_FILES.rpath=	src/bootstrap/bin/rustc.rs
+SUBST_FILES.rpath+=	src/build_helper/lib.rs
+SUBST_FILES.rpath+=	src/librustc_codegen_ssa/back/linker.rs
 SUBST_VARS.rpath=	PREFIX
 
 post-extract:
@@ -339,34 +341,6 @@ do-install:
 GENERATE_PLIST+=find ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
 		sed 's,${DESTDIR}${PREFIX}/,,' | ${SORT} ;
 
-.if ${OPSYS} == "Darwin"
-LDFLAGS+=		-headerpad_max_install_names
-
-.PHONY: fix-darwin-install-name
-post-install: fix-darwin-install-name
-fix-darwin-install-name:
-.  for bin in cargo-miri clippy-driver miri rls rustc rustdoc
-	otool -XL ${DESTDIR}${PREFIX}/bin/${bin}			\
-	    | ${GREP} '@rpath' | while read rpath rest; do		\
-		install_name_tool -change $$rpath			\
-		    `${ECHO} $$rpath | ${SED} -e 's,@rpath,${PREFIX}/lib,g'` \
-		    ${DESTDIR}${PREFIX}/bin/${bin};			\
-	done
-.  endfor
-.  for libdir in lib lib/rustlib/${RUST_ARCH}/lib lib/rustlib/${RUST_ARCH}/codegen-backends
-	for f in ${DESTDIR}${PREFIX}/${libdir}/lib*.dylib; do		\
-		[ ! -f $$f ] && continue;				\
-		install_name_tool -id `${ECHO} $$f | ${SED} -e 's,${DESTDIR},,g'` $$f; \
-		otool -XL $$f | grep '@rpath' | while read rpath rest; do \
-			install_name_tool -change $$rpath \
-			    `${ECHO} $$rpath | ${SED} -e 's,@rpath,${PREFIX}/lib,g'` \
-			    $$f;					\
-		done;							\
-	done
-.  endfor
-.endif
-
-#
 # Create a relocatable stage2 bootstrap from the bits we just built that can be
 # used to build the next version of rust.  Currently only tested on SmartOS.
 #
