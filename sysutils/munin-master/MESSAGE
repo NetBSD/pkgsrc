@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2019/09/09 12:21:44 tm Exp $
+
+You can start the collection of statistics and production of graphs by
+installing a Cron for the ${MUNIN_USER} user that executes the following
+command every 5 minutes:
+
+  ${PREFIX}/bin/munin-cron
+
+===========================================================================
