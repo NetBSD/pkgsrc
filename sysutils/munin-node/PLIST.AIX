@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.AIX,v 1.1 2019/09/09 12:21:44 tm Exp $
+lib/munin/plugins/swap
