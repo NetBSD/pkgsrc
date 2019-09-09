@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2019/08/23 15:18:15 fox Exp $
+# $NetBSD: Makefile,v 1.60 2019/09/09 10:03:51 nia Exp $
 
 DISTNAME=	ircd-hybrid-8.2.26
 CATEGORIES=	chat
@@ -16,6 +16,8 @@ USE_LIBTOOL=	yes
 
 GNU_CONFIGURE=	YES
 BUILD_DEFS+=	VARBASE IRCD_HYBRID_IRC_USER IRCD_HYBRID_IRC_GROUP
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "../../mk/bsd.prefs.mk"
 
