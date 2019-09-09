@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2019/08/30 13:00:56 nia Exp $
+@comment $NetBSD: PLIST,v 1.43 2019/09/09 01:00:49 nia Exp $
 ${PLIST.egl}include/EGL/egl.h
 ${PLIST.egl}include/EGL/eglext.h
 ${PLIST.egl}include/EGL/eglextchromium.h
@@ -33,9 +33,11 @@ ${PLIST.xatracker}include/xa_tracker.h
 ${PLIST.i915}lib/dri/i915_dri.so
 ${PLIST.i965}lib/dri/i965_dri.so
 lib/dri/kms_swrast_dri.so
+${PLIST.lima}lib/dri/lima_dri.so
 ${PLIST.nouveau}lib/dri/nouveau_dri.so
 ${PLIST.nouveau}${PLIST.vaapi}lib/dri/nouveau_drv_video.so
 ${PLIST.nouveau_dri}lib/dri/nouveau_vieux_dri.so
+${PLIST.panfrost}lib/dri/panfrost_dri.so
 ${PLIST.r200}lib/dri/r200_dri.so
 ${PLIST.r300}lib/dri/r300_dri.so
 ${PLIST.r600}lib/dri/r600_dri.so
