@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.7 2018/08/26 22:35:45 schmonz Exp $
+$NetBSD: distinfo,v 1.8 2019/09/09 09:08:07 nia Exp $
 
 SHA1 (Pound-2.8.tgz) = a3371b596d86cedea1678fd329ee6dc8a307c907
 RMD160 (Pound-2.8.tgz) = 71b2c4c633ef5dd0b566e30b2f511d618483b74f
 SHA512 (Pound-2.8.tgz) = cf0b865b17d3628e273626e07733f1320e4768702c0f64c8ef0f78d46667f770b223bdc7dca88016a95e5ebd23ae646f95a9b2f4a54a5a80001a10047f07eacc
 Size (Pound-2.8.tgz) = 186124 bytes
-SHA1 (patch-aa) = 613b1a9dd8666b393d6cb78f99bfbdf9f16acf32
+SHA1 (patch-config.c) = 68a617a0e2cc940055763cb710e89e390ebd3953
+SHA1 (patch-http.c) = 95143b688d0320306638b0770c4667ea21bac478
+SHA1 (patch-pound.h) = 6a47d93321016ebc3609eb2b561b3d4ba16b71df
+SHA1 (patch-svc.c) = 52532b316ab96b9b93f5b2c02367e2355675eb86
