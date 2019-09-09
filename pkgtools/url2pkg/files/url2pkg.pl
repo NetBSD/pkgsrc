@@ -1,5 +1,5 @@
 #! @PERL5@
-# $NetBSD: url2pkg.pl,v 1.63 2019/08/18 21:04:37 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.64 2019/09/09 08:08:02 maya Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -427,7 +427,7 @@ sub adjust_cargo() {
 	while (defined(my $line = <CONF>)) {
 		# "checksum cargo-package-name cargo-package-version
 		if ($line =~ qr"^\"checksum\s(\S+)\s(\S+)") {
-			push(@build_vars, var("CARGO_CRATE_DEPENDS", "+=", "$2-$3"));
+			push(@build_vars, var("CARGO_CRATE_DEPENDS", "+=", "$1-$2"));
 		}
 	}
 	close(CONF);
