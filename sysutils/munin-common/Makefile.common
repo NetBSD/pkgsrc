@@ -1,0 +1,79 @@
+# $NetBSD: Makefile.common,v 1.1 2019/09/09 12:21:44 tm Exp $
+#
+# used by sysutils/munin-common/Makefile
+# used by sysutils/munin-master/Makefile
+# used by sysutils/munin-node/Makefile
+
+VERSION=	2.0.49
+DISTNAME=	munin-${VERSION}
+CATEGORIES=	sysutils
+MASTER_SITES=	http://downloads.munin-monitoring.org/munin/stable/${VERSION}/
+
+MAINTAINER=	tm@NetBSD.org
+HOMEPAGE=	http://munin-monitoring.org/
+LICENSE=	gnu-gpl-v2
+
+BUILD_DEPENDS+=	p5-CPAN-Meta>=2.141170:../../devel/p5-CPAN-Meta
+BUILD_DEPENDS+=	p5-Module-Build>=0.42050:../../devel/p5-Module-Build
+BUILD_DEPENDS+=	p5-Time-HiRes>=0:../../time/p5-Time-HiRes
+DEPENDS=	p5-Net-SSLeay>=0:../../security/p5-Net-SSLeay
+
+DISTINFO_FILE=	${.CURDIR}/../../sysutils/munin-common/distinfo
+PATCHDIR=	${.CURDIR}/../../sysutils/munin-common/patches
+
+.include "../../mk/bsd.prefs.mk"
+
+USE_LANGUAGES=		# none
+USE_TOOLS+=		gmake bash:run perl:run
+
+BUILD_DEFS+=		VARBASE
+
+MUNIN_GROUP?=		munin
+MUNIN_USER?=		munin
+
+MUNIN_DBDIR?=		${VARBASE}/munin
+MUNIN_LIBDIR=		${PREFIX}/lib/munin
+MUNIN_LOGDIR?=		${VARBASE}/log/munin
+MUNIN_PLUGSTATE?=	${MUNIN_DBDIR}/plugin-state
+MUNIN_SPOOLDIR?=	${VARBASE}/spool/munin
+MUNIN_STATEDIR?=	${VARBASE}/run/munin
+MUNIN_WWWDIR?=		${PREFIX}/www
+
+PKG_GROUPS_VARS+=		MUNIN_GROUP
+PKG_USERS_VARS+=		MUNIN_USER
+PKG_GROUPS=			${MUNIN_GROUP}
+PKG_USERS=			${MUNIN_USER}:${MUNIN_GROUP}
+PKG_GECOS.${MUNIN_USER}=	Munin user
+PKG_HOME.${MUNIN_USER}=		${MUNIN_DBDIR}
+PKG_SHELL.${MUNIN_USER}=	${BASH}
+
+PKG_SYSCONFSUBDIR?=	munin
+
+EGDIR=			${PREFIX}/share/examples/munin
+
+REPLACE_PERL=		master/_bin/munin-update.in
+
+FILES_SUBST+=		MUNIN_GROUP=${MUNIN_GROUP}
+FILES_SUBST+=		MUNIN_RUN=${MUNIN_RUN:Q}
+FILES_SUBST+=		MUNIN_USER=${MUNIN_USER}
+FILES_SUBST+=		PERL=${PERL5:Q}
+FILES_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+FILES_SUBST+=		STATEDIR=${STATEDIR}
+
+MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
+MAKE_ENV+=		BASH=${BASH:Q}
+MAKE_ENV+=		CONFDIR=${PKG_SYSCONFDIR}
+MAKE_ENV+=		MUNIN_DBDIR=${MUNIN_DBDIR}
+MAKE_ENV+=		MUNIN_GROUP=${MUNIN_GROUP}
+MAKE_ENV+=		MUNIN_LOGDIR=${MUNIN_LOGDIR}
+MAKE_ENV+=		MUNIN_PLUGSTATE=${MUNIN_PLUGSTATE}
+MAKE_ENV+=		MUNIN_SPOOLDIR=${MUNIN_SPOOLDIR}
+MAKE_ENV+=		MUNIN_STATEDIR=${MUNIN_STATEDIR}
+MAKE_ENV+=		MUNIN_USER=${MUNIN_USER}
+MAKE_ENV+=		MUNIN_WWWDIR=${MUNIN_WWWDIR}
+MAKE_ENV+=		PERL5=${PERL5:Q}
+MAKE_ENV+=		PREFIX=${PREFIX}
+MAKE_ENV+=		PYTHONBIN=${PYTHONBIN:Q}
+MAKE_ENV+=		RUBY=${RUBY:Q}
+
+MESSAGE_SUBST+=		MUNIN_USER=${MUNIN_USER}
