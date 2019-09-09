@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/09/09 12:59:06 nia Exp $
+# $NetBSD: Makefile,v 1.16 2019/09/09 13:01:55 nia Exp $
 
 DISTNAME=	libappindicator-12.10.0
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	https://launchpad.net/libappindicator/12.10/12.10.0/+download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://launchpad.net/libappindicator/
-COMMENT=	GTK+3 Allow applications to export a menu into the panel
+COMMENT=	Allow applications to export a menu into the panel
 LICENSE=	gnu-lgpl-v3 AND gnu-lgpl-v2.1
 
 EXTRACT_USING=	gtar
