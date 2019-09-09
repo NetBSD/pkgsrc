@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2019/09/09 13:01:55 nia Exp $
+# $NetBSD: Makefile,v 1.17 2019/09/09 13:25:47 nia Exp $
 
 DISTNAME=	libappindicator-12.10.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://launchpad.net/libappindicator/12.10/12.10.0/+download/
 
@@ -27,7 +27,7 @@ DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
 PYTHON_VERSIONS_ACCEPTED=	27 # py-gtk2
 
-.include "../../devel/libindicator3/buildlink3.mk"
+.include "../../devel/libindicator/buildlink3.mk"
 .include "../../devel/libdbusmenu-gtk3/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../lang/python/extension.mk"
