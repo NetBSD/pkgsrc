@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/09/07 23:18:57 nia Exp $
+# $NetBSD: Makefile,v 1.28 2019/09/09 10:03:21 nia Exp $
 #
 
 DISTNAME=	pkg_select-20090308
@@ -37,6 +37,8 @@ SUBST_SED.path+=	-e "s|/var/db/pkg|${PKG_DBDIR}|g"
 SUBST_SED.path+=	-e "s|/usr/bin/make|${MAKE}|g"
 
 CFLAGS+=		-DPKGTOOLS_PATH=\"${PKG_TOOLS_BIN}\"
+
+LDFLAGS.SunOS+=		-lresolv -lsocket -lnsl
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pkg_select ${DESTDIR}${PREFIX}/bin
