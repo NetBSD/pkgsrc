@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2016/03/05 11:29:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.51 2019/09/09 08:39:15 nia Exp $
 
 DISTNAME=		sitecopy-0.16.6
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		www
 MASTER_SITES=		http://www.manyfish.co.uk/sitecopy/
 
@@ -14,7 +14,6 @@ USE_TOOLS+=		gmake msgfmt
 USE_PKGLOCALEDIR=	yes
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-ssl
 #CONFIGURE_ARGS+=	--with-included-neon
 CONFIGURE_ARGS+=	--with-libxml2
 
