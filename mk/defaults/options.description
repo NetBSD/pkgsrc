@@ -436,7 +436,7 @@ lcms			Enable Light Color Management System support.
 ldap			Enable LDAP support.
 lensfun			Enable lensfun (camera lens distortion rectifyer) support.
 libao			Enable the platform-independent 'ao' audio library.
-libappindicator3	Enable libappindicator3 support.
+libappindicator		Enable libappindicator support.
 libchamplain		Enable libchamplain support (map widget).
 libdbi			Enable libdbi support (similar p5-DBI but for C).
 libdrm			Enable libdrm support.
