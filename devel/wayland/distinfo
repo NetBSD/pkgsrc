@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2019/08/29 12:22:13 nia Exp $
+$NetBSD: distinfo,v 1.5 2019/09/09 20:08:29 nia Exp $
 
 SHA1 (wayland-1.17.0.tar.xz) = 4d9e08a7a4a07fa37a25d7aa3ef83f08edec0600
 RMD160 (wayland-1.17.0.tar.xz) = 635494fb0f5d9eb1e782f98e08c3e0e26ff44268
@@ -7,6 +7,7 @@ Size (wayland-1.17.0.tar.xz) = 437680 bytes
 SHA1 (patch-Makefile.am) = af2c47eb2e1a4924ea842aeea1d0f00832762ec0
 SHA1 (patch-configure.ac) = df15013a1639d673e5f0a86433a074f6201dbbc4
 SHA1 (patch-cursor_os-compatibility.c) = 9aac1c734199bc7e33e7735356bc8dbc80fba89d
+SHA1 (patch-cursor_wayland-cursor.c) = 81c6896b3a541e662db440d8557c6b3e70fcb580
 SHA1 (patch-src_event-loop.c) = 04d0eed4ba0708518201ec630dab97d52735fb0c
 SHA1 (patch-src_wayland-os.c) = 7297f8259aea9603a7ba20fe58f79e3fd0042990
 SHA1 (patch-src_wayland-os.h) = 1e01dfadb5ed5889d76e024d30537935f33631a3
