@@ -1,19 +1,36 @@
-# $NetBSD: Makefile,v 1.14 2019/09/02 13:19:36 adam Exp $
+# $NetBSD: Makefile,v 1.15 2019/09/09 12:59:06 nia Exp $
 
-USE_GTK_VERSION=		2
-PYTHON_VERSIONS_ACCEPTED=	 27 # py-gtk2
-
-PKGREVISION= 8
-.include "Makefile.common"
+DISTNAME=	libappindicator-12.10.0
+PKGREVISION=	1
+CATEGORIES=	devel
+MASTER_SITES=	https://launchpad.net/libappindicator/12.10/12.10.0/+download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-COMMENT=	Allow applications to export a menu into the panel
+HOMEPAGE=	https://launchpad.net/libappindicator/
+COMMENT=	GTK+3 Allow applications to export a menu into the panel
+LICENSE=	gnu-lgpl-v3 AND gnu-lgpl-v2.1
 
-.include "../../devel/libindicator/buildlink3.mk"
-.include "../../devel/libdbusmenu-gtk/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/py-gobject/buildlink3.mk"
+EXTRACT_USING=	gtar
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	gmake pkg-config
+
+PKGCONFIG_OVERRIDE+=	bindings/mono/appindicator-sharp-0.1.pc.in
+PKGCONFIG_OVERRIDE+=	src/appindicator3-0.1.pc.in
+PKGCONFIG_OVERRIDE+=	src/appindicator-0.1.pc.in
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
+
+CONFIGURE_ARGS+=	--with-gtk=3
+
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
+
+PYTHON_VERSIONS_ACCEPTED=	27 # py-gtk2
+
+.include "../../devel/libindicator3/buildlink3.mk"
+.include "../../devel/libdbusmenu-gtk3/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../lang/python/extension.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
