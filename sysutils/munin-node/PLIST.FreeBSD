@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST.FreeBSD,v 1.1 2019/09/09 12:21:44 tm Exp $
+lib/munin/plugins/coretemp
+lib/munin/plugins/cpu
+lib/munin/plugins/dev_cpu_
+lib/munin/plugins/if_
+lib/munin/plugins/if_errcoll_
+lib/munin/plugins/iostat
+lib/munin/plugins/load
+lib/munin/plugins/memory
+lib/munin/plugins/open_files
+lib/munin/plugins/swap
+lib/munin/plugins/systat
+lib/munin/plugins/uptime
