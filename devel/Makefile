@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2907 2019/09/08 12:27:08 nia Exp $
+# $NetBSD: Makefile,v 1.2908 2019/09/09 12:59:06 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -592,7 +592,6 @@ SUBDIR+=	lettuce
 SUBDIR+=	libFoundation
 SUBDIR+=	libFoundation-examples
 SUBDIR+=	libappindicator
-SUBDIR+=	libappindicator3
 SUBDIR+=	libarena
 SUBDIR+=	libargparse
 SUBDIR+=	libast
