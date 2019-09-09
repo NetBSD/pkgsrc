@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/09/07 11:42:49 nia Exp $
+# $NetBSD: Makefile,v 1.11 2019/09/09 09:46:38 nia Exp $
 #
 
 DISTNAME=	flite-2.1-release
@@ -16,6 +16,8 @@ MAKE_JOBS_SAFE=	no
 
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 INSTALLATION_DIRS+=	bin include/flite lib share/doc/flite
 
