@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2019/09/01 12:08:17 nia Exp $
+# $NetBSD: Makefile,v 1.84 2019/09/09 09:58:40 nia Exp $
 
 DISTNAME=	Eterm-0.9.6
 PKGNAME=	${DISTNAME:S/^E/e/}
@@ -34,6 +34,7 @@ EXTRACT_DIR.${PIXMAP_FILES}=	${WRKSRC}
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXres/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.prefs.mk"
 BUILDLINK_DEPMETHOD.iconv?=	build
