@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3813 2019/09/08 22:47:58 rillig Exp $
+$NetBSD: CHANGES-2019,v 1.3814 2019/09/09 07:15:38 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6265,3 +6265,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added games/megaglest-data version 3.13.0 [nia 2019-09-08]
 	Updated net/openresolv to 3.9.2 [roy 2019-09-08]
 	Updated pkgtools/pkglint to 5.7.23 [rillig 2019-09-08]
+	Updated devel/py-sysctl to 0.1nb2 [maya 2019-09-09]
