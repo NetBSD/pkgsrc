@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/11 06:48:41 cherry Exp $
-${PYSITELIB}/sysctlmodule.so
+@comment $NetBSD: PLIST,v 1.2 2019/09/09 07:09:47 maya Exp $
+${PYSITELIB}/sysctl.so
