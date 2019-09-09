@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: munin-node.sh,v 1.4 2006/12/29 06:37:03 obache Exp $
+# $NetBSD: munin-node.sh,v 1.5 2019/09/09 12:21:44 tm Exp $
 #
 # PROVIDE: munin-node
 # REQUIRE: DAEMON
