@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2017/12/30 17:12:51 gdt Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2019/09/09 11:40:16 maya Exp $
 
 BUILDLINK_TREE+=	glibmm
 
@@ -8,6 +8,8 @@ GLIBMM_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.glibmm+=	glibmm>=2.24.2
 BUILDLINK_ABI_DEPENDS.glibmm+=	glibmm>=2.32.1nb1
 BUILDLINK_PKGSRCDIR.glibmm?=	../../devel/glibmm
+
+GCC_REQD+=	4.9
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libsigc++/buildlink3.mk"
