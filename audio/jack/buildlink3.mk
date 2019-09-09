@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2019/07/26 11:47:00 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2019/09/09 08:12:09 nia Exp $
 
 BUILDLINK_TREE+=	jack
 
@@ -11,7 +11,6 @@ BUILDLINK_PKGSRCDIR.jack?=	../../audio/jack
 BDB_ACCEPTED=	db4 db5
 
 .include "../../audio/libsamplerate/buildlink3.mk"
-.include "../../devel/libuuid/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
 # for DLOPEN_REQUIRE_PTHREADS
 .include "../../mk/dlopen.buildlink3.mk"
