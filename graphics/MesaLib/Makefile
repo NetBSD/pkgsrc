@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.165 2019/09/08 10:21:40 nia Exp $
+# $NetBSD: Makefile,v 1.166 2019/09/09 01:00:49 nia Exp $
 
 DISTNAME=	mesa-19.1.6
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://mesa.freedesktop.org/archive/
 EXTRACT_SUFX=	.tar.xz
@@ -53,7 +54,7 @@ PLIST_SUBST+=	GLVER="1.2.0"
 PLIST_VARS+=		i915 i965 r100 r200 nouveau_dri
 
 # Gallium drivers
-PLIST_VARS+=		r300 svga nouveau vc4
+PLIST_VARS+=		r300 svga nouveau vc4 lima panfrost
 
 # other features
 PLIST_VARS+=		egl gbm vaapi xatracker
@@ -81,13 +82,14 @@ PLIST.vaapi=		yes
 .  else
 MESON_ARGS+=		-Dgallium-va=false
 .  endif
-.  if !empty(MACHINE_PLATFORM:MNetBSD-*-*arm*)
+.  if !empty(MACHINE_ARCH:M*arm*) || \
+      ${MACHINE_ARCH} == "aarch64"
 # ARM Mali Utgard
-#GALLIUM_DRIVERS+=	lima
-#PLIST.lima=		yes
+GALLIUM_DRIVERS+=	lima
+PLIST.lima=		yes
 # ARM Mali Midgard, Bifrost
-#GALLIUM_DRIVERS+=	panfrost
-#PLIST.panfrost=	yes
+GALLIUM_DRIVERS+=	panfrost
+PLIST.panfrost=		yes
 # Vivante GCxxx
 #GALLIUM_DRIVERS+=	etnaviv
 #PLIST.etnaviv=		yes
