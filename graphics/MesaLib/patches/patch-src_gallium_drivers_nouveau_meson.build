@@ -1,0 +1,15 @@
+$NetBSD: patch-src_gallium_drivers_nouveau_meson.build,v 1.1 2019/09/09 14:04:13 tnn Exp $
+
+libnouveau needs nir_intrinsics.h
+
+--- src/gallium/drivers/nouveau/meson.build.orig	2019-09-03 10:54:49.000000000 +0000
++++ src/gallium/drivers/nouveau/meson.build
+@@ -211,7 +211,7 @@ files_libnouveau = files(
+ 
+ libnouveau = static_library(
+   'nouveau',
+-  [files_libnouveau, nir_opcodes_h],
++  [files_libnouveau, nir_opcodes_h, nir_intrinsics_h],
+   include_directories : [
+     inc_src, inc_include, inc_gallium, inc_gallium_aux, inc_common,
+   ],
