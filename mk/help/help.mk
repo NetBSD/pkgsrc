@@ -1,4 +1,4 @@
-# $NetBSD: help.mk,v 1.16 2018/12/20 16:57:04 rillig Exp $
+# $NetBSD: help.mk,v 1.17 2019/09/09 09:38:36 maya Exp $
 #
 
 # This is the integrated pkgsrc online help system. To query for the
@@ -37,7 +37,8 @@ help:
 	@${ECHO} "	For convenience, all-uppercase topics such as variable"
 	@${ECHO} "	names may also be given in all-lowercase."
 	@${ECHO} ""
-	@${ECHO} "	The special topic :index lists all available topics."
+	@${ECHO} "	To see all available topics, use:"
+	@${ECHO} "	    make help topic=:index"
 	@${ECHO} ""
 .  else
 	${RUN} env TOPIC=${TOPIC:Q} ${AWK} -f ${PKGSRCDIR}/mk/help/help.awk \
