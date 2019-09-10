@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/04/30 03:58:45 taca Exp $
+# $NetBSD: Makefile,v 1.5.2.1 2019/09/10 18:10:55 bsiegert Exp $
 
 PLUGIN=		enigma
 
@@ -7,10 +7,8 @@ COMMENT=	Enigma Plugin for Roundcube
 LICENSE=	gnu-gpl-v3
 
 # JavaScript dependencies from bin/install-jsdeps.sh
-SITES.openpgp.min.js=	"https://raw.githubusercontent.com/openpgpjs/openpgpjs/v2.6.2/dist/"
+SITES.openpgp.min.js=	https://raw.githubusercontent.com/openpgpjs/openpgpjs/v2.6.2/dist/
 DISTFILES+=	openpgp.min.js
-
-PLUGIN=		enigma
 
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Crypt_GPG>=1.4.3:../../security/pear-Crypt_GPG
 
