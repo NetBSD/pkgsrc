@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.562 2019/09/08 10:20:07 nia Exp $
+# $NetBSD: Makefile,v 1.563 2019/09/10 12:36:06 fcambus Exp $
 #
 
 COMMENT=	Audio tools
@@ -8,6 +8,7 @@ SUBDIR+=	SDL_mixer
 SUBDIR+=	SDL_sound
 SUBDIR+=	abcde
 SUBDIR+=	abcmidi
+SUBDIR+=	adplay
 SUBDIR+=	adplug
 SUBDIR+=	aeneas
 SUBDIR+=	akode
