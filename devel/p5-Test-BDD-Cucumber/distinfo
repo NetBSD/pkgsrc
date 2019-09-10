@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.28 2019/09/08 11:54:35 schmonz Exp $
+$NetBSD: distinfo,v 1.29 2019/09/10 22:40:03 schmonz Exp $
 
-SHA1 (Test-BDD-Cucumber-0.61.tar.gz) = 6c96257a6b1ff3a5e3576cd5a730b1d9ab3692c0
-RMD160 (Test-BDD-Cucumber-0.61.tar.gz) = 0693effa716287695544b0c4756cbd8c6e349eab
-SHA512 (Test-BDD-Cucumber-0.61.tar.gz) = 3af17787c304d81a5fdba652a4377d836218c17fa2114bdddd3fd52aa87aa974e6873c15dbe01946c2e8c154467801eab805e7ee08a4256288349f6869542416
-Size (Test-BDD-Cucumber-0.61.tar.gz) = 97534 bytes
+SHA1 (Test-BDD-Cucumber-0.62.tar.gz) = 6f11b0955c68d7e935f8130583c27a67f74e966a
+RMD160 (Test-BDD-Cucumber-0.62.tar.gz) = ab2c0f96b91ca1479e51159ab57019c410d63e93
+SHA512 (Test-BDD-Cucumber-0.62.tar.gz) = 7fb85023b6ecd3af4a70edb873df0c9fd336e7bb6e3612fa74950a60dfe7915fc79aad6d50d2c336e43e9513e0132df3fefe0b3b20b3ecf0dce4b66f515c660c
+Size (Test-BDD-Cucumber-0.62.tar.gz) = 97388 bytes
