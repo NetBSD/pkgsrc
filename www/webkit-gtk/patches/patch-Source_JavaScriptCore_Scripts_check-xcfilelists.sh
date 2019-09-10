@@ -1,8 +1,8 @@
-$NetBSD: patch-Source_JavaScriptCore_Scripts_check-xcfilelists.sh,v 1.1 2019/03/13 20:49:40 leot Exp $
+$NetBSD: patch-Source_JavaScriptCore_Scripts_check-xcfilelists.sh,v 1.2 2019/09/10 22:10:04 leot Exp $
 
 Avoid unportable `==' test(1) operator.
 
---- Source/JavaScriptCore/Scripts/check-xcfilelists.sh.orig	2019-02-12 11:21:03.000000000 +0000
+--- Source/JavaScriptCore/Scripts/check-xcfilelists.sh.orig	2019-08-28 11:46:27.000000000 +0000
 +++ Source/JavaScriptCore/Scripts/check-xcfilelists.sh
 @@ -1,8 +1,8 @@
  #!/bin/sh
@@ -15,4 +15,4 @@ Avoid unportable `==' test(1) operator.
 +[ "${USE_INTERNAL_SDK}" = "YES" ] || { echo "### Not running because USE_INTERNAL_SDK is not YES"; exit 0; }
  
  SCRIPT="${BUILD_SCRIPTS_DIR}/generate-xcfilelists"
- [ -f "${SCRIPT}" ] || SCRIPT="${PROJECT_DIR}/../../Tools/Scripts/generate-xcfilelists"
+ [ -f "${SCRIPT}" ] || SCRIPT="${PROJECT_DIR}/../../../${WK_ADDITIONAL_SCRIPTS_DIR}/generate-xcfilelists"

@@ -1,6 +1,6 @@
-$NetBSD: patch-Source_WebKit_Platform_IPC_unix_ConnectionUnix.cpp,v 1.1 2018/04/09 08:33:48 wiz Exp $
+$NetBSD: patch-Source_WebKit_Platform_IPC_unix_ConnectionUnix.cpp,v 1.2 2019/09/10 22:10:04 leot Exp $
 
-On NetBSD we see ""Error sending IPC message: Message too long" due to
+On NetBSD we see "Error sending IPC message: Message too long" due to
 the use of sendmsg with a large message body (EMSGSIZE).
 
 WebKit already uses shared memory to communicate the message body when
