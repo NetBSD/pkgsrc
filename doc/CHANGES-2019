@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3825 2019/09/10 12:28:37 fcambus Exp $
+$NetBSD: CHANGES-2019,v 1.3826 2019/09/10 12:36:35 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6278,3 +6278,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/dnscrypt-proxy2 to 2.0.27 [nia 2019-09-10]
 	Updated devel/libuv to 1.32.0 [adam 2019-09-10]
 	Added www/motyl version 1.0.2 [fcambus 2019-09-10]
+	Added audio/adplay version 1.8 [fcambus 2019-09-10]
