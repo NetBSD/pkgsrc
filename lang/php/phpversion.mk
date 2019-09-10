@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.260.2.5 2019/09/10 17:56:00 bsiegert Exp $
+# $NetBSD: phpversion.mk,v 1.260.2.6 2019/09/10 17:59:33 bsiegert Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -88,7 +88,7 @@ PHPVERSION_MK=	defined
 
 # Define each PHP's version.
 PHP56_VERSION=	5.6.40
-PHP71_VERSION=	7.1.31
+PHP71_VERSION=	7.1.32
 PHP72_VERSION=	7.2.22
 PHP73_VERSION=	7.3.9
 
