@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.171 2019/08/28 10:11:09 leot Exp $
+# $NetBSD: Makefile,v 1.172 2019/09/10 22:10:04 leot Exp $
 
-DISTNAME=	webkitgtk-2.24.4
+DISTNAME=	webkitgtk-2.26.0
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
 CATEGORIES=	www
 MASTER_SITES=	https://www.webkitgtk.org/releases/
@@ -23,8 +23,8 @@ USE_TOOLS+=	automake bash bison flex gmake perl pkg-config msgfmt
 # Enabling -gdwarf-2 hits GNU ar limits on file size.
 CTF_SUPPORTED=	no
 
-# GCC >= 6.0.0 is required, checked via CMakeLists.txt
-GCC_REQD+=		6
+# GCC >= 7.3.0 is required, checked via CMakeLists.txt
+GCC_REQD+=		7
 USE_GCC_RUNTIME=	yes
 
 # Using ld.gold subverts Pkgsrc wrappers, and this package also crashes buggy
@@ -146,8 +146,6 @@ BUILDLINK_API_DEPENDS.libsoup+= libsoup>=2.42.2nb3
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.24.17nb3
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"

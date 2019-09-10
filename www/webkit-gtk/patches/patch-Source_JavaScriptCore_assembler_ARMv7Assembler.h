@@ -1,8 +1,8 @@
-$NetBSD: patch-Source_JavaScriptCore_assembler_ARMv7Assembler.h,v 1.1 2019/03/13 20:49:40 leot Exp $
+$NetBSD: patch-Source_JavaScriptCore_assembler_ARMv7Assembler.h,v 1.2 2019/09/10 22:10:04 leot Exp $
 
 Add support for NetBSD.
 
---- Source/JavaScriptCore/assembler/ARMv7Assembler.h.orig	2019-02-12 11:21:03.000000000 +0000
+--- Source/JavaScriptCore/assembler/ARMv7Assembler.h.orig	2019-08-28 11:46:27.000000000 +0000
 +++ Source/JavaScriptCore/assembler/ARMv7Assembler.h
 @@ -28,6 +28,11 @@
  
@@ -15,8 +15,8 @@ Add support for NetBSD.
 +
  #include "AssemblerBuffer.h"
  #include "AssemblerCommon.h"
- #include <limits.h>
-@@ -2488,6 +2493,11 @@ public:
+ #include "RegisterInfo.h"
+@@ -2394,6 +2399,11 @@ public:
              linuxPageFlush(current, current + page);
  
          linuxPageFlush(current, end);
