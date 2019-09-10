@@ -1,8 +1,8 @@
-$NetBSD: patch-xf86drm.c,v 1.4 2019/01/22 21:50:47 wiz Exp $
+$NetBSD: patch-xf86drm.c,v 1.4.4.1 2019/09/10 18:14:18 bsiegert Exp $
 
 Implement drmParseSubsystemType, drmParsePciBusInfo for NetBSD
 
---- xf86drm.c.orig	2019-01-22 16:32:41.000000000 +0000
+--- xf86drm.c.orig	2019-04-19 15:52:29.000000000 +0000
 +++ xf86drm.c
 @@ -86,7 +86,10 @@
  #endif
@@ -16,10 +16,10 @@ Implement drmParseSubsystemType, drmParsePciBusInfo for NetBSD
  #endif
  
  #ifdef __OpenBSD__
-@@ -3013,6 +3016,65 @@ static int drmParseSubsystemType(int maj
-             return bus_types[i].bus_type;
+@@ -3032,6 +3035,65 @@ static int drmParseSubsystemType(int maj
      }
  
+     return -EINVAL;
 +#elif defined(__NetBSD__)
 +    int type, fd;
 +    drmSetVersion sv;
@@ -79,13 +79,13 @@ Implement drmParseSubsystemType, drmParsePciBusInfo for NetBSD
 +
 +    /* Success or not, we're done.  */
 +    return ret;
-     return -EINVAL;
  #elif defined(__OpenBSD__) || defined(__DragonFly__)
      return DRM_BUS_PCI;
-@@ -3062,6 +3124,73 @@ static int drmParsePciBusInfo(int maj, i
-     info->dev = dev;
+ #else
+@@ -3081,6 +3143,73 @@ static int drmParsePciBusInfo(int maj, i
      info->func = func;
  
+     return 0;
 +#elif defined(__NetBSD__)
 +    int type, fd;
 +    drmSetVersion sv;
@@ -153,10 +153,10 @@ Implement drmParseSubsystemType, drmParsePciBusInfo for NetBSD
 +
 +    /* Success!  */
 +    return 0;
-     return 0;
  #elif defined(__OpenBSD__) || defined(__DragonFly__)
      struct drm_pciinfo pinfo;
-@@ -3229,6 +3358,48 @@ static int drmParsePciDeviceInfo(int maj
+     int fd, type;
+@@ -3247,6 +3376,48 @@ static int drmParsePciDeviceInfo(int maj
          return parse_config_sysfs_file(maj, min, device);
  
      return 0;
