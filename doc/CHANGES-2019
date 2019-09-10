@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3821 2019/09/10 03:47:52 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.3822 2019/09/10 08:46:46 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6274,3 +6274,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated editors/nano to 4.4 [wiedi 2019-09-09]
 	Updated geography/gama to 2.07 [gdt 2019-09-10]
 	Updated lang/guile22 to 2.2.6nb2 [gutteridge 2019-09-10]
+	Updated www/gitea to 1.9.3 [nia 2019-09-10]
