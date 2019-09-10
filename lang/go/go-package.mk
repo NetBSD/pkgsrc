@@ -1,11 +1,11 @@
-# $NetBSD: go-package.mk,v 1.22 2019/05/15 18:00:03 jperkin Exp $
+# $NetBSD: go-package.mk,v 1.23 2019/09/10 20:19:54 rillig Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 #
 # === Package-settable variables ===
 #
 # GO_SRCPATH (required)
-#	The patch that can be used with "go get" to import the current
+#	The path that can be used with "go get" to import the current
 #	package. This is usually the URL without the leading protocol.
 #
 #	Examples:
@@ -50,8 +50,7 @@
 
 .include "../../lang/go/version.mk"
 
-_GO_DIST_BASE!=		basename ${GO_SRCPATH}
-GO_DIST_BASE?=		${_GO_DIST_BASE}
+GO_DIST_BASE?=		${GO_SRCPATH:T}
 GO_BUILD_PATTERN?=	${GO_SRCPATH}/...
 
 WRKSRC=			${WRKDIR}/src/${GO_SRCPATH}
@@ -67,7 +66,7 @@ GOTOOLDIR=		go${GOVERSSUFFIX}/pkg/tool/${GO_PLATFORM}
 PRINT_PLIST_AWK+=	/^@pkgdir bin$$/ { next; }
 PRINT_PLIST_AWK+=	/^@pkgdir gopkg$$/ { next; }
 
-MAKE_ENV+=	GOPATH=${WRKDIR}:${BUILDLINK_DIR}/gopkg 
+MAKE_ENV+=	GOPATH=${WRKDIR}:${BUILDLINK_DIR}/gopkg
 MAKE_ENV+=	GOCACHE=${WRKDIR}/.cache/go-build
 
 .if !target(post-extract)
@@ -99,13 +98,14 @@ do-install:
 .endif
 
 _VARGROUPS+=		go
-_PKG_VARS.go=		GO_SRCPATH GO_DIST_BASE GO_BUILD_PATTERN
+_PKG_VARS.go=		GO_SRCPATH GO_DIST_BASE GO_DEPS GO_BUILD_PATTERN
 _USER_VARS.go=		GO_VERSION_DEFAULT
 _SYS_VARS.go=		GO GO_VERSION GOVERSSUFFIX GOARCH GOCHAR \
 			GOOPT GOTOOLDIR GO_PLATFORM
-_DEF_VARS.go=		GO14_VERSION GO19_VERSION GO110_VERSION \
-			GO111_VERSION INSTALLATION_DIRS MAKE_JOBS_SAFE \
-			NOT_FOR_PLATFORM ONLY_FOR_PLATFORM SSP_SUPPORTED \
-			WRKSRC
-_USE_VARS.go=		GO_PACKAGE_DEP
-_SORTED_VARS.go=	INSTALLATION_DIRS *_FOR_PLATFORM
+_USE_VARS.go=		GO_PACKAGE_DEP \
+			WRKDIR BUILDLINK_DIR DESTDIR PREFIX \
+			TEST_ENV
+_DEF_VARS.go=		INSTALLATION_DIRS MAKE_JOBS_SAFE \
+			WRKSRC \
+			USE_TOOLS BUILD_DEPENDS PRINT_PLIST_AWK MAKE_ENV
+_SORTED_VARS.go=	INSTALLATION_DIRS *_FOR_PLATFORM *_ENV
