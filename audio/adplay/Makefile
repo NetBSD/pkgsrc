@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/09/10 12:34:55 fcambus Exp $
+# $NetBSD: Makefile,v 1.2 2019/09/10 13:49:14 nia Exp $
 
 DISTNAME=	adplay-1.8
 CATEGORIES=	audio
@@ -28,15 +28,14 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
 CONFIGURE_ARGS+=	--disable-output-ao \
-			--disable-output-esound \
-			--disable-output-alsa \
-			--disable-output-sdl
+			--disable-output-esound
 
 .if ${OSS_TYPE} != "none"
-LDFLAGS+=		-lossaudio
+LDFLAGS+=		${LIBOSSAUDIO}
 .else
 CONFIGURE_ARGS+=	--disable-output-oss
 .endif
 
+.include "options.mk"
 .include "../../audio/adplug/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
