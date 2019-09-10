@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q2,v 1.1.2.12 2019/09/08 19:25:11 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q2,v 1.1.2.13 2019/09/10 18:48:24 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q2 branch:
 
@@ -158,4 +158,22 @@ mail/dovecot2-pigeonhole: security fix
 
 Pullup ticket #6043 - requested by taca
 lang/php72: security fix
+
+Pullup ticket #6044 - requested by taca
+lang/php73: security fix
+
+Pullup ticket #6045 - requested by taca
+lang/php71: security fix
+
+Pullup ticket #6046 - requested by taca
+mail/roundcube, mail/roundcube-plugin-*: security fix
+
+Pullup ticket #6051 - requested by maya
+x11/libdrm: Linux build fix
+
+Pullup ticket #6053 - requested by maya
+lang/llvm: build fix
+
+Pullup ticket #6054 - requested by maya
+print/poppler: build fix
 
