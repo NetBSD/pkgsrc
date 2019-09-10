@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2019/09/10 12:26:43 fcambus Exp $
+bin/motyl
+share/doc/motyl/README.md

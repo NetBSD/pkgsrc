@@ -1,0 +1,2 @@
+Motyl is an opinionated blog-aware static site generator written in Ruby. It
+uses Mustache as templating system, and all content is written in Markdown.
