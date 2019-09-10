@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2019/06/17 16:35:44 adam Exp $
+# $NetBSD: Makefile,v 1.41.2.1 2019/09/10 18:19:28 bsiegert Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -35,7 +35,7 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=		c c++11
 USE_CMAKE=		yes
-GCC_REQD+=		4.8
+GCC_REQD+=		5.1
 PYTHON_FOR_BUILD_ONLY=	yes
 
 CONFIGURE_DIRS=		${WRKDIR}/build
