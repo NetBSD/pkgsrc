@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1402 2019/09/02 07:33:23 adam Exp $
+# $NetBSD: Makefile,v 1.1403 2019/09/10 12:28:03 fcambus Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -204,6 +204,7 @@ SUBDIR+=	mongrel-console
 SUBDIR+=	mongrel-upload-progress
 SUBDIR+=	mono-xsp
 SUBDIR+=	moodle
+SUBDIR+=	motyl
 SUBDIR+=	mserv-php
 SUBDIR+=	nanoblogger
 SUBDIR+=	nanoblogger-extra
