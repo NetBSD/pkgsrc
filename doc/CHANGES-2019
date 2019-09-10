@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3830 2019/09/10 22:18:39 leot Exp $
+$NetBSD: CHANGES-2019,v 1.3831 2019/09/10 22:40:09 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6282,3 +6282,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/php-redis3 to 3.1.6 [otis 2019-09-10]
 	Added textproc/p5-sdf version 2.001beta1 [schmonz 2019-09-10]
 	Updated www/webkit-gtk to 2.26.0 [leot 2019-09-10]
+	Updated devel/p5-Test-BDD-Cucumber to 0.62 [schmonz 2019-09-10]
