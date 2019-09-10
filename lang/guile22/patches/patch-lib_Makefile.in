@@ -1,0 +1,35 @@
+$NetBSD: patch-lib_Makefile.in,v 1.1 2019/09/10 03:47:28 gutteridge Exp $
+
+Install a (stub) charset.alias file unconditionally on Linux, to work
+around mismatches between pkgsrc's means of identifying glibc vs. this
+package's tools. This is the simplest fix for PLIST issues, for now...
+
+--- lib/Makefile.in.orig	2019-06-30 20:06:43.000000000 +0000
++++ lib/Makefile.in
+@@ -2969,18 +2969,14 @@ langinfo.h: langinfo.in.h $(top_builddir
+ all-local: charset.alias ref-add.sed ref-del.sed
+ install-exec-local: install-exec-localcharset
+ install-exec-localcharset: all-local
+-	if test $(GLIBC21) = no; then \
+-	  case '$(host_os)' in \
+-	    darwin[56]*) \
+-	      need_charset_alias=true ;; \
+-	    darwin* | cygwin* | mingw* | pw32* | cegcc*) \
+-	      need_charset_alias=false ;; \
+-	    *) \
+-	      need_charset_alias=true ;; \
+-	  esac ; \
+-	else \
+-	  need_charset_alias=false ; \
+-	fi ; \
++	case '$(host_os)' in \
++	  darwin[56]*) \
++	    need_charset_alias=true ;; \
++	  darwin* | cygwin* | mingw* | pw32* | cegcc*) \
++	    need_charset_alias=false ;; \
++	  *) \
++	    need_charset_alias=true ;; \
++	esac ; \
+ 	if $$need_charset_alias; then \
+ 	  $(mkinstalldirs) $(DESTDIR)$(libdir) ; \
+ 	fi ; \
