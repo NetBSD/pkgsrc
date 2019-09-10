@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1048 2019/09/02 13:40:04 nia Exp $
+# $NetBSD: Makefile,v 1.1049 2019/09/10 21:21:20 schmonz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -724,6 +724,7 @@ SUBDIR+=	p5-mecab
 SUBDIR+=	p5-mobiperl
 SUBDIR+=	p5-native-hyperestraier
 SUBDIR+=	p5-podlators
+SUBDIR+=	p5-sdf
 SUBDIR+=	p5-yamcha
 SUBDIR+=	par
 SUBDIR+=	pdfgrep
