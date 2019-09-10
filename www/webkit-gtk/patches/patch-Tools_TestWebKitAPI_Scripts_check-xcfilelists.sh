@@ -1,9 +1,9 @@
-$NetBSD: patch-Source_WebKit_Scripts_check-xcfilelists.sh,v 1.2 2019/09/10 22:10:04 leot Exp $
+$NetBSD: patch-Tools_TestWebKitAPI_Scripts_check-xcfilelists.sh,v 1.1 2019/09/10 22:10:04 leot Exp $
 
 Avoid unportable `==' test(1) operator.
 
---- Source/WebKit/Scripts/check-xcfilelists.sh.orig	2019-08-28 11:46:32.000000000 +0000
-+++ Source/WebKit/Scripts/check-xcfilelists.sh
+--- Tools/TestWebKitAPI/Scripts/check-xcfilelists.sh.orig	2019-08-28 11:46:33.000000000 +0000
++++ Tools/TestWebKitAPI/Scripts/check-xcfilelists.sh
 @@ -1,8 +1,8 @@
  #!/bin/sh
  
