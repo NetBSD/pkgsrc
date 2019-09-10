@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.105 2019/09/05 08:07:25 nros Exp $
+# $NetBSD: Makefile,v 1.106 2019/09/10 16:17:13 nros Exp $
 
 DISTNAME=	texmaker-5.0.3
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://www.xm1math.net/texmaker/
 EXTRACT_SUFX=	.tar.bz2
@@ -26,7 +27,10 @@ do-configure:
 
 pre-configure:
 	${CP} ${FILESDIR}/fxge_pkgsrcfonts.inc ${WRKSRC}/pdfium/core/fxge
+	${CP} ${FILESDIR}/fxge_x11fonts.inc ${WRKSRC}/pdfium/core/fxge
 	${CP} ${FILESDIR}/fgas_stdfontmgr_pkgsrcfonts.inc \
+		${WRKSRC}/pdfium/xfa/fgas/font
+	${CP} ${FILESDIR}/fgas_stdfontmgr_x11fonts.inc \
 		${WRKSRC}/pdfium/xfa/fgas/font
 
 .include "options.mk"
