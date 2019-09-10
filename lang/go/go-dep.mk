@@ -1,4 +1,4 @@
-# $NetBSD: go-dep.mk,v 1.1 2019/05/15 18:00:03 jperkin Exp $
+# $NetBSD: go-dep.mk,v 1.2 2019/09/10 20:01:06 rillig Exp $
 #
 # This file implements dep (https://github.com/golang/dep) support in pkgsrc.
 #
@@ -39,6 +39,18 @@
 
 _VARGROUPS+=		godeps
 _PKG_VARS.godeps=	GO_DEPS GODEP_REDIRECTS
+_USE_VARS.godeps=	PKGNAME_NOREV \
+			MASTER_SITE_GITHUB DEFAULT_DISTFILES \
+			WRKDIR BUILDLINK_DIR DESTDIR PREFIX \
+			TEST_ENV
+_DEF_VARS.godeps=	DISTFILES DIST_SUBDIR MAKE_ENV \
+			${GO_DEPS:@dep@ \
+				${:U GODEP_URL GODEP_SHA GODEP_DIR GODEP_TGZ \
+					:@var@${var}.${dep} @} \
+				SITES.${GODEP_TGZ.${dep}} @} \
+			PRINT_PLIST_AWK
+_IGN_VARS.godeps=	_GODEP_AWK _GO_DIST_BASE
+_LISTED_VARS.godeps=	GO_DEPS GODEP_REDIRECTS DISTFILES *_ENV
 
 #
 # When using GO_DEPS a lot of additional distfiles will be added with just SHAs
