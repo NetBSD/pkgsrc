@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3819 2019/09/09 16:05:01 wiedi Exp $
+$NetBSD: CHANGES-2019,v 1.3820 2019/09/10 01:11:31 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6272,3 +6272,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed devel/libappindicator3 successor devel/libappindicator [nia 2019-09-09]
 	Removed devel/libindicator3 successor devel/libindicator [nia 2019-09-09]
 	Updated editors/nano to 4.4 [wiedi 2019-09-09]
+	Updated geography/gama to 2.07 [gdt 2019-09-10]
