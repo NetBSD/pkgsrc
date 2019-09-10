@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3828 2019/09/10 13:30:35 otis Exp $
+$NetBSD: CHANGES-2019,v 1.3829 2019/09/10 21:21:47 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6280,3 +6280,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added www/motyl version 1.0.2 [fcambus 2019-09-10]
 	Added audio/adplay version 1.8 [fcambus 2019-09-10]
 	Updated databases/php-redis3 to 3.1.6 [otis 2019-09-10]
+	Added textproc/p5-sdf version 2.001beta1 [schmonz 2019-09-10]
