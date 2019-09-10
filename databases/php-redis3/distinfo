@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/08/18 10:14:21 taca Exp $
+$NetBSD: distinfo,v 1.4 2019/09/10 13:26:15 otis Exp $
 
-SHA1 (php-redis3/3.1.3.tar.gz) = bb3439bf26bf9e526678b0c36624023516e43f7c
-RMD160 (php-redis3/3.1.3.tar.gz) = cd4d070e503e2acf57aee9914afc5b19794083d8
-SHA512 (php-redis3/3.1.3.tar.gz) = dfbd18c80666ce11ecdb21f1e39e95b1970617a5574aab52b7faa7ae51b77b7591330cef00efdc140af1e412041bc96cc37702102138ccb48209160b66ea7a88
-Size (php-redis3/3.1.3.tar.gz) = 203030 bytes
+SHA1 (php-redis3/3.1.6.tar.gz) = eb2dbeed64b3994195cffce83b481bc459dbcc97
+RMD160 (php-redis3/3.1.6.tar.gz) = 8f01e695c78ca325f4f4e4c6f0e5627e8cc45009
+SHA512 (php-redis3/3.1.6.tar.gz) = 7cd286391e907ce588dad6bc9e8b618857537ecbb4b143c0bca0b15b2cc25748e1d9342d8e81b91cf5b183794e0bc2988719f42794fc4b50f402a480349f7755
+Size (php-redis3/3.1.6.tar.gz) = 206904 bytes
