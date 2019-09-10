@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3822 2019/09/10 08:46:46 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3823 2019/09/10 09:30:56 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6275,3 +6275,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated geography/gama to 2.07 [gdt 2019-09-10]
 	Updated lang/guile22 to 2.2.6nb2 [gutteridge 2019-09-10]
 	Updated www/gitea to 1.9.3 [nia 2019-09-10]
+	Updated net/dnscrypt-proxy2 to 2.0.27 [nia 2019-09-10]
