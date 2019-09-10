@@ -1,0 +1,12 @@
+SDF (Simple Document Format) is a freely available document development
+system which generates high quality outputs in a variety of formats from
+a single source. The output formats supported include PostScript, HTML,
+POD, plain text, man pages, LaTeX, SGML, Windows help, MIF and RTF. If
+the idea of specifying documents in a logical manner via a simple markup
+language sounds appealing, SDF may be useful to you.
+
+SDF documents are simple to create and maintain, minimising the time
+spent on documentation. In particular, SDF directly supports the
+creation and maintenance of large, on-line documentation systems
+(including intranets) via centralised hypertext management and
+rule-based hypertext generation.
