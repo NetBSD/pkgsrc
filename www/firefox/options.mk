@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.48 2019/09/11 14:19:08 ryoon Exp $
+# $NetBSD: options.mk,v 1.49 2019/09/11 16:30:05 gutteridge Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
@@ -38,7 +38,7 @@ CONFIGURE_ARGS+=	--disable-jemalloc
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
-CONFIGURE_ARGS+=	--enable-debug="-g -O0 ${O0TRACKING}"
+CONFIGURE_ARGS+=	--enable-debug="-g -O0"
 CONFIGURE_ARGS+=	--disable-optimize
 CONFIGURE_ARGS+=	--enable-debug-js-modules
 CONFIGURE_ARGS+=	--disable-install-strip
