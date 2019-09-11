@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3831 2019/09/10 22:40:09 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.3832 2019/09/11 05:26:06 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6283,3 +6283,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added textproc/p5-sdf version 2.001beta1 [schmonz 2019-09-10]
 	Updated www/webkit-gtk to 2.26.0 [leot 2019-09-10]
 	Updated devel/p5-Test-BDD-Cucumber to 0.62 [schmonz 2019-09-10]
+	Updated pkgtools/url2pkg to 2.34 [rillig 2019-09-11]
