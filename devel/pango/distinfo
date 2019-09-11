@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.121 2019/08/17 04:36:27 ryoon Exp $
+$NetBSD: distinfo,v 1.122 2019/09/11 23:37:44 gutteridge Exp $
 
-SHA1 (pango-1.44.5.tar.xz) = 63c39ea5ec428d2a58a6b38ee3fd9fb6196996b0
-RMD160 (pango-1.44.5.tar.xz) = e3daf5310f7a0c7964e211282e049d990b2cfd9b
-SHA512 (pango-1.44.5.tar.xz) = f337a87ae519a03e1074b46f096674f40247373f4f463fee4884f368fdd4e3c8f3cace8e1d12acca2db59c1ff973179655289a574f70be08746d99831e7e2486
-Size (pango-1.44.5.tar.xz) = 574376 bytes
+SHA1 (pango-1.44.6.tar.xz) = 6d1067d29b314bc41fe34c9bd83867eac6df5bad
+RMD160 (pango-1.44.6.tar.xz) = ec6e791baaba57e81465a339e8ccee28bc0f45d2
+SHA512 (pango-1.44.6.tar.xz) = 141babfae7c6c762afc8c829303baac1c29d62760503b0dd1da70cc3b5f2e514436626ad6af43d02e316dcf2baff840ad92b47a86df75b1fc8e8169d90ad2e50
+Size (pango-1.44.6.tar.xz) = 521672 bytes
 SHA1 (patch-pango_pangocairo-coretextfont.c) = cfef0e1372d5770d5988af411d435ee87fdfd0bd
 SHA1 (patch-pango_pangocairo-coretextfontmap.c) = 395cb1f8472a319c4b1c58ea137e36452bc44cc6
 SHA1 (patch-pango_pangocoretext-fontmap.c) = 643dfdb0e9672382d4d5259c90e451a829b9875e
