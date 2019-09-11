@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/05/29 19:51:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/09/11 09:52:30 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -33,6 +33,9 @@ ${PYSITELIB}/importlib_metadata/tests/fixtures.pyo
 ${PYSITELIB}/importlib_metadata/tests/test_api.py
 ${PYSITELIB}/importlib_metadata/tests/test_api.pyc
 ${PYSITELIB}/importlib_metadata/tests/test_api.pyo
+${PYSITELIB}/importlib_metadata/tests/test_integration.py
+${PYSITELIB}/importlib_metadata/tests/test_integration.pyc
+${PYSITELIB}/importlib_metadata/tests/test_integration.pyo
 ${PYSITELIB}/importlib_metadata/tests/test_main.py
 ${PYSITELIB}/importlib_metadata/tests/test_main.pyc
 ${PYSITELIB}/importlib_metadata/tests/test_main.pyo
