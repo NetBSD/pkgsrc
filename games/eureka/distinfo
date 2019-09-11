@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1 2019/09/11 16:26:17 micha Exp $
+
+SHA1 (eureka-124-source.tar.gz) = 78754c63bda8296627b185f62a6ec57e5c618a15
+RMD160 (eureka-124-source.tar.gz) = 9e6ea0f207d9445c64fca31531112adad6d0299d
+SHA512 (eureka-124-source.tar.gz) = 27f858ac0ea366932777830dca289db456ba68a90bbfa507dcf734f4aa0b0b72fd5654ab8cb0305c9a51793e97fb7b686a5860cc00d37304eab5db1cecbb3c05
+Size (eureka-124-source.tar.gz) = 1111598 bytes
+SHA1 (patch-Makefile) = c5e36dd8c41b745ab7c3197077937967f9263ecd
+SHA1 (patch-src_e__commands.cc) = 7b5c9bcd4db15462335ac988acc42609ee3c4c07
+SHA1 (patch-src_m__files.cc) = de29f214c96a26e906ec35c63a692ab00898157d
+SHA1 (patch-src_main.cc) = 7e3a1db40d055f04622ac7cd6ae3997ed77e66ea
+SHA1 (patch-src_ui__menu.cc) = 0ba9a84b25db2543e5ede793ad9a5405e63b4281
+SHA1 (patch-src_ui__window.cc) = c058e793e57b8208d3287c658ec2e2c7457380f9
