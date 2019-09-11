@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3832 2019/09/11 05:26:06 rillig Exp $
+$NetBSD: CHANGES-2019,v 1.3833 2019/09/11 08:32:16 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6284,3 +6284,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/webkit-gtk to 2.26.0 [leot 2019-09-10]
 	Updated devel/p5-Test-BDD-Cucumber to 0.62 [schmonz 2019-09-10]
 	Updated pkgtools/url2pkg to 2.34 [rillig 2019-09-11]
+	Updated www/curl to 7.66.0 [leot 2019-09-11]
