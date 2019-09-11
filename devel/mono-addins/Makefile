@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.39 2019/04/03 00:32:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.40 2019/09/11 11:53:39 nia Exp $
 
 DISTNAME=	mono-addins-1.1
 PKGREVISION=	10
 CATEGORIES=	devel
-MASTER_SITES=	http://download.mono-project.com/sources/mono-addins/
+MASTER_SITES=	https://download.mono-project.com/sources/mono-addins/
 
 MAINTAINER=	kefren@NetBSD.org
-HOMEPAGE=	http://www.mono-project.com/Mono.Addins
+HOMEPAGE=	https://www.mono-project.com/Mono.Addins
 COMMENT=	Framework for creating extensible applications
 LICENSE=	mit
 

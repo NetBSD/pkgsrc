@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.99 2019/07/21 22:24:38 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2019/09/11 11:53:39 nia Exp $
 
 DISTNAME=	mono-tools-3.10
 PKGREVISION=	27
 CATEGORIES=	devel
-MASTER_SITES=	http://download.mono-project.com/sources/mono-tools/
+MASTER_SITES=	https://download.mono-project.com/sources/mono-tools/
 
 MAINTAINER=	kefren@NetBSD.org
-HOMEPAGE=	http://www.mono-project.com/
+HOMEPAGE=	https://www.mono-project.com/
 COMMENT=	Tools for use with the Mono runtime
 
 PKGCONFIG_OVERRIDE+=	create-native-map/lib/pkgconfig/create-native-map.pc.in

@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.47 2019/04/03 00:33:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.48 2019/09/11 11:53:40 nia Exp $
 
 DISTNAME=	xsp-3.8
 PKGNAME=	mono-${DISTNAME}
 PKGREVISION=	10
 CATEGORIES=	www
-MASTER_SITES=	http://download.mono-project.com/sources/xsp/
+MASTER_SITES=	https://download.mono-project.com/sources/xsp/
 
 MAINTAINER=	kefren@NetBSD.org
-HOMEPAGE=	http://www.mono-project.com/ASP.NET
+HOMEPAGE=	https://www.mono-project.com/ASP.NET
 COMMENT=	Standalone web server written in C\#
 
 GNU_CONFIGURE=	yes

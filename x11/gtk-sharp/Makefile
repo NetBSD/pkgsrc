@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.74 2019/08/11 13:25:11 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2019/09/11 11:53:40 nia Exp $
 #
 
 DISTNAME=		gtk-sharp-2.12.26
 PKGREVISION=		22
 CATEGORIES=		x11
-MASTER_SITES=		http://download.mono-project.com/sources/gtk-sharp212/
+MASTER_SITES=		https://download.mono-project.com/sources/gtk-sharp212/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.mono-project.com/GtkSharp
+HOMEPAGE=		https://www.mono-project.com/GtkSharp
 COMMENT=		C\# bindings for GTK
 LICENSE=		gnu-lgpl-v2.1
 

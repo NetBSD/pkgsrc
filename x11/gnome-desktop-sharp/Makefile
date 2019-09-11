@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2019/07/21 22:24:15 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2019/09/11 11:53:40 nia Exp $
 #
 
 DISTNAME=	gnome-desktop-sharp-2.26.0
@@ -7,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-desktop-sharp/2.26/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mono-project.com/GtkSharp
+HOMEPAGE=	https://www.mono-project.com/GtkSharp
 COMMENT=	C\# bindings for the GNOME platform, Desktop part
 
 GNU_CONFIGURE=		yes
