@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=REminiscence
+GenericName=reminiscence
+Comment=A port of Flashback game engine
+Icon=
+Exec=reminiscence
+Terminal=false
+Categories=Game;ActionGame;
+Keywords=flashback,platform
