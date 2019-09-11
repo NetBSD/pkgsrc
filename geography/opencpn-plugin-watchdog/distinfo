@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.12 2019/03/25 11:46:50 bouyer Exp $
+$NetBSD: distinfo,v 1.13 2019/09/11 15:50:11 bouyer Exp $
 
-SHA1 (watchdog_pi-20190228-71085bdc4cc90116799c820410fa5d020c8386ee.tar.gz) = d57a3ee68d542f3224e6158bebe50c58cf5ef91c
-RMD160 (watchdog_pi-20190228-71085bdc4cc90116799c820410fa5d020c8386ee.tar.gz) = e42ef867ffcff0b1403b86979cc3d08d93bc1da6
-SHA512 (watchdog_pi-20190228-71085bdc4cc90116799c820410fa5d020c8386ee.tar.gz) = c7ad143616f8425388a85a7cf37d8f6ad63d92d538a51c9b7932aaa8f07f58744c2d5ab8e68d217c4eb7d4a2257de7c50adda894eee765e0af10e8fc0cbac6b4
-Size (watchdog_pi-20190228-71085bdc4cc90116799c820410fa5d020c8386ee.tar.gz) = 480528 bytes
+SHA1 (watchdog_pi-2.4.6.tar.gz) = c166ce31e5f494f5d44fbf3c2cf28914af4cccb2
+RMD160 (watchdog_pi-2.4.6.tar.gz) = a3102e59d1138b777c7db1fa77b54686ca345cb2
+SHA512 (watchdog_pi-2.4.6.tar.gz) = fb4346f2e50d931fe00a6391c9ab95c5a26babe9eeb015788bb32a836527504f2f16d47f72fe972eaf3ccd1a216dee523b7108e525606afb51fc0c54fcf37ce8
+Size (watchdog_pi-2.4.6.tar.gz) = 480546 bytes
 SHA1 (patch-cmake_PluginConfigure.cmake) = bc2d6409f95cffee145173280c33f9e7fe439864
-SHA1 (patch-src_Alarm.cpp) = 04bb807d6c0ea076abbbbad854b29f1d8b5eccc3
-SHA1 (patch-src_watchdog_pi.cpp) = b47afde07f9861d9290989ada590bbb0e82cf7a3
 SHA1 (patch-src_wddc.cpp) = 3c43974da65dfe9a18a77f4b84595a4ab602cfd9
