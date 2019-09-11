@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.36 2019/08/11 13:21:22 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2019/09/11 11:53:39 nia Exp $
 
 DISTNAME=	mono-2.10.9
 PKGREVISION=	29
 CATEGORIES=	lang
-MASTER_SITES=	http://download.mono-project.com/sources/mono/
+MASTER_SITES=	https://download.mono-project.com/sources/mono/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kefren@NetBSD.org
-HOMEPAGE=	http://www.mono-project.com/
+HOMEPAGE=	https://www.mono-project.com/
 COMMENT=	Open source implementation of the .NET Development Framework (v2)
 
 LICENSE=	mit AND gnu-gpl-v2 AND gnu-lgpl-v2 AND x11
