@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.96 2019/09/09 08:08:02 maya Exp $
+# $NetBSD: Makefile,v 1.97 2019/09/11 05:25:55 rillig Exp $
 
-PKGNAME=	url2pkg-2.33
+PKGNAME=	url2pkg-2.34
 CATEGORIES=	pkgtools
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -29,11 +29,7 @@ SUBST_MESSAGE.up=	Replacing variable placeholders
 SUBST_FILES.up=		url2pkg.pl MakeMaker.pm
 SUBST_VARS.up=		MAKE PERL5 PYTHONBIN
 SUBST_SED.up+=		-e 's,@LIBDIR@,${PREFIX}/lib/url2pkg,g'
-.if defined(BATCH)
-SUBST_SED.up+=		-e 's,@PKGSRCDIR@,/usr/pkgsrc,g'
-.else
-SUBST_VARS.up+=		PKGSRCDIR
-.endif
+SUBST_SED.up+=		-e 's,@PKGSRCDIR@,${BATCH:D/usr/pkgsrc:U${PKGSRCDIR}},g'
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/url2pkg.pl ${DESTDIR}${PREFIX}/bin/url2pkg
