@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3836 2019/09/11 10:55:06 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3837 2019/09/11 11:36:44 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6271,6 +6271,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/munin-node to 2.0.49 [tm 2019-09-09]
 	Removed devel/libappindicator3 successor devel/libappindicator [nia 2019-09-09]
 	Removed devel/libindicator3 successor devel/libindicator [nia 2019-09-09]
+	Removed devel/libindicator-tools [nia 2019-09-09]
 	Updated editors/nano to 4.4 [wiedi 2019-09-09]
 	Updated geography/gama to 2.07 [gdt 2019-09-10]
 	Updated lang/guile22 to 2.2.6nb2 [gutteridge 2019-09-10]
@@ -6290,3 +6291,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-configparser to 4.0.1 [adam 2019-09-11]
 	Updated devel/py-importlib-metadata to 0.21 [adam 2019-09-11]
 	Removed devel/py-expect [adam 2019-09-11]
+	Updated security/KeePass to 2.43 [nia 2019-09-11]
