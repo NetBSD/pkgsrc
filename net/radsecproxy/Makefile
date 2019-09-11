@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.5 2017/08/03 11:30:45 he Exp $
+# $NetBSD: Makefile,v 1.6 2019/09/11 11:51:22 he Exp $
 
-DISTNAME=	radsecproxy-1.6.9
+VERSION=	1.8.0
+DISTNAME=	radsecproxy-${VERSION}
 CATEGORIES=	net
-MASTER_SITES=	https://software.nordu.net/radsecproxy/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=radsecproxy/}
 
-MAINTAINER=	he@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Secure radius proxy
-HOMEPAGE=	https://software.nordu.net/radsecproxy/download/
-EXTRACT_SUFX=	.tar.xz
-LICENSE=	gnu-gpl-v2 OR modified-bsd
+HOMEPAGE=	https://radsecproxy.github.io/
+GITHUB_RELEASE=	${VERSION}
+LICENSE=	modified-bsd
+
+USE_TOOLS+=	gmake
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
@@ -25,4 +28,5 @@ post-install:
 		${DESTDIR}${EGDIR}/${CONF}
 
 .include "../../security/openssl/buildlink3.mk"
+.include "../../security/nettle/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
