@@ -39,7 +39,7 @@ require 5.013002;
 use strict;
 use warnings;
 
-use constant conf_pkgsrcdir	=> '@PKGSRCDIR@';
+my $url2pkg_pkgsrcdir = '@PKGSRCDIR@';
 
 BEGIN {
 	use Exporter;
@@ -55,51 +55,50 @@ our @EXPORT	= qw(&WriteMakefile &prompt $Verbose $version);
 our @EXPORT_OK	= qw(&neatvalue &_sprintf562);
 
 # Finds and returns the category a given package lies in.
-# If the package does not exist, C<undef> is returned.
+# If the package does not exist, an empty string is returned.
 # If the package exists more than once, it is unspecified which
 # of the categories is returned.
-sub find_category($) {
+sub url2pkg_find_category($) {
 	my ($pkg) = @_;
-	my ($retval, $pkgsrcdir);
 
-	opendir(D, conf_pkgsrcdir) or die;
-	foreach my $cat (readdir(D)) {
-		next if ($cat =~ qr"^\.");
+	opendir(D, $url2pkg_pkgsrcdir) or die;
+	my @categories = readdir(D);
+	closedir(D) or die;
 
-		if (-f (conf_pkgsrcdir."/${cat}/${pkg}/Makefile")) {
-			$retval = $cat;
+	foreach my $cat (@categories) {
+		next if $cat =~ qr"^\.";
+
+		if (-f "$url2pkg_pkgsrcdir/$cat/$pkg/Makefile") {
+			return $cat;
 		}
 	}
-	closedir(D) or die;
-	return $retval;
+	return "";
 }
 
-sub writeDependency($$) {
+sub url2pkg_write_dependency($$) {
 	my ($dep, $ver) = @_;
 
-	my $pkgbase = "p5-" . ($dep =~ s/::/-/gr);
-	my $category = find_category($pkgbase);
+	my $pkgbase = "p5-$dep" =~ s/::/-/gr;
+	my $category = url2pkg_find_category($pkgbase);
 
-	if (defined($category)) {
+	if ($category ne "") {
 		printf("DEPENDS\t%s>=%s:../../%s/%s\n", $pkgbase, $ver, $category, $pkgbase);
 		return;
 	}
 
-	# If the package does not exist but the Perl module can be
-	# loaded, assume that no extra dependency is needed.
+	# If the package does not exist but the Perl module can be loaded, assume
+	# that it is a built-in module and no dependency declaration is needed.
 	return if eval("use $dep $ver; 1;");
 
-	die("$0: ERROR: No pkgsrc package found for dependency ${dep}>=${ver}.\n$@\n");
+	die("$0: ERROR: No pkgsrc package found for dependency $dep>=$ver.\n$@\n");
 }
 
 sub WriteMakefile(%) {
 	my (%options) = @_;
 
-	if (exists($options{"PREREQ_PM"})) {
-		my $deps = $options{"PREREQ_PM"};
-		foreach my $dep (sort(keys(%{$deps}))) {
-			writeDependency($dep, $deps->{$dep});
-		}
+	my $deps = $options{"PREREQ_PM"} || {};
+	foreach my $dep (sort(keys(%$deps))) {
+		url2pkg_write_dependency($dep, $deps->{$dep});
 	}
 }
 
