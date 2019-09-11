@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.47 2019/09/06 03:00:23 ryoon Exp $
+# $NetBSD: options.mk,v 1.48 2019/09/11 14:19:08 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
@@ -35,16 +35,6 @@ CONFIGURE_ARGS+=	--enable-jemalloc
 CONFIGURE_ARGS+=	--enable-replace-malloc
 .else
 CONFIGURE_ARGS+=	--disable-jemalloc
-.endif
-
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mgcc)
-.if ${CC_VERSION:S/gcc-//:S/.//g} >= 480
-# Modern gcc does not run any "tracking" passes when compiling with -O0,
-# which makes the generated debug info mostly useless. So explicitly
-# request them.
-O0TRACKING=-fvar-tracking-assignments -fvar-tracking
-.endif
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
