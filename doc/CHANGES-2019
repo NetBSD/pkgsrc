@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3844 2019/09/11 16:23:00 micha Exp $
+$NetBSD: CHANGES-2019,v 1.3845 2019/09/11 18:13:36 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6299,3 +6299,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated parallel/hwloc to 1.11.13 [adam 2019-09-11]
 	Updated geography/opencpn-plugin-watchdog to 2.4.6 [bouyer 2019-09-11]
 	Added games/eureka version 1.24 [baeuerle 2019-09-11]
+	Updated graphics/libgdiplus to 6.0.2 [nia 2019-09-11]
