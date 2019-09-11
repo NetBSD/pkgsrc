@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2018/11/14 22:22:20 kleink Exp $
+# $NetBSD: Makefile,v 1.18 2019/09/11 11:36:31 nia Exp $
 
-DISTNAME=	KeePass-2.23
-PKGREVISION=	6
+DISTNAME=	KeePass-2.43
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=keepass/}
 EXTRACT_SUFX=	.zip
@@ -11,12 +10,12 @@ HOMEPAGE=	https://keepass.info/
 COMMENT=	Free, open source, light-weight and easy-to-use password manager
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	mono>=2.6<3:../../lang/mono2
-
-WRKSRC=		${WRKDIR}
+WRKSRC=		${WRKDIR}/keepass
+EXTRACT_DIR=	${WRKDIR}/keepass
 USE_LANGUAGES=	# none
 
 INSTALLATION_DIRS=	bin libexec/KeePass/XSL
+INSTALLATION_DIRS+=	share/applications
 
 do-build:
 	${ECHO} '#!/bin/sh' > ${WRKSRC}/KeePass
@@ -26,6 +25,8 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/KeePass ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/*.* ${DESTDIR}${PREFIX}/libexec/KeePass
 	${INSTALL_DATA} ${WRKSRC}/XSL/* ${DESTDIR}${PREFIX}/libexec/KeePass/XSL
+	${INSTALL_DATA} ${FILESDIR}/keepass.desktop ${DESTDIR}${PREFIX}/share/applications
 
 .include "../../graphics/libgdiplus/buildlink3.mk"
+.include "../../lang/mono/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
