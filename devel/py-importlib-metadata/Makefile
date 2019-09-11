@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2019/08/13 16:52:58 gdt Exp $
+# $NetBSD: Makefile,v 1.5 2019/09/11 09:52:30 adam Exp $
 
-DISTNAME=	importlib_metadata-0.19
+DISTNAME=	importlib_metadata-0.21
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/importlib-metadata/}
@@ -14,7 +14,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_s
 DEPENDS+=	${PYPKGPREFIX}-zipp>=0.5:../../archivers/py-zipp
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} == 27
-DEPENDS+=	${PYPKGPREFIX}-configparser-[0-9]*:../../devel/py-configparser
+DEPENDS+=	${PYPKGPREFIX}-configparser>=3.5:../../devel/py-configparser
 DEPENDS+=	${PYPKGPREFIX}-contextlib2-[0-9]*:../../devel/py-contextlib2
 DEPENDS+=	${PYPKGPREFIX}-pathlib2-[0-9]*:../../devel/py-pathlib2
 .endif
