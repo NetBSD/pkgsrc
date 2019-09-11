@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/07/20 21:51:11 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2019/09/11 21:35:50 wiedi Exp $
 
 DISTNAME=	libev-4.27
 CATEGORIES=	devel
@@ -15,5 +15,6 @@ GNU_CONFIGURE_LIBSUBDIR=ev
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/ev
 # Explicitly disable inotify on SunOS, assumes Linux statfs.
 CONFIGURE_ENV.SunOS+=	ac_cv_header_sys_inotify_h=no
+CONFIGURE_ENV.SunOS+=	ac_cv_header_sys_epoll_h=no
 
 .include "../../mk/bsd.pkg.mk"
