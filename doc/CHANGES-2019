@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3845 2019/09/11 18:13:36 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3846 2019/09/11 19:02:24 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6300,3 +6300,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated geography/opencpn-plugin-watchdog to 2.4.6 [bouyer 2019-09-11]
 	Added games/eureka version 1.24 [baeuerle 2019-09-11]
 	Updated graphics/libgdiplus to 6.0.2 [nia 2019-09-11]
+	Updated games/REminiscence to 0.3.7 [nia 2019-09-11]
