@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3837 2019/09/11 11:36:44 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3838 2019/09/11 11:41:53 tm Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6292,3 +6292,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-importlib-metadata to 0.21 [adam 2019-09-11]
 	Removed devel/py-expect [adam 2019-09-11]
 	Updated security/KeePass to 2.43 [nia 2019-09-11]
+	Added devel/SOPE4 version 4.0.8 [tm 2019-09-11]
