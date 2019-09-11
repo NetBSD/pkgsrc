@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/08/16 19:31:42 fcambus Exp $
+# $NetBSD: Makefile,v 1.2 2019/09/11 10:11:04 nia Exp $
 
 DISTNAME=	console-setup_1.193
 PKGNAME=	bdf2psf-1.193
@@ -12,6 +12,8 @@ COMMENT=	Convert a BDF font to PSF format for the Linux console
 LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/console-setup-${PKGVERSION_NOREV}
+
+USE_TOOLS+=	perl:run
 
 NO_BUILD=	yes
 
