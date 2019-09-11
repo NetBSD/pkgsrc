@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3840 2019/09/11 12:05:45 tm Exp $
+$NetBSD: CHANGES-2019,v 1.3841 2019/09/11 13:14:04 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6295,3 +6295,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/SOPE4 version 4.0.8 [tm 2019-09-11]
 	Updated net/radsecproxy to 1.8.0 [he 2019-09-11]
 	Updated www/SOGo4 to 4.0.8 [tm 2019-09-11]
+	Updated net/youtube-dl to 20190901 [leot 2019-09-11]
