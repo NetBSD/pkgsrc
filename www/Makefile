@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1403 2019/09/10 12:28:03 fcambus Exp $
+# $NetBSD: Makefile,v 1.1404 2019/09/11 12:01:53 tm Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -12,7 +12,7 @@ SUBDIR+=	R-miniUI
 SUBDIR+=	R-shiny
 SUBDIR+=	R-shinyjs
 SUBDIR+=	SOGo
-SUBDIR+=	SOGo3
+SUBDIR+=	SOGo4
 SUBDIR+=	SpeedyCGI
 SUBDIR+=	adzap
 SUBDIR+=	aipo

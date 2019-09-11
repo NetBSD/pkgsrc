@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: sogod.sh,v 1.1 2017/01/19 23:45:33 wiedi Exp $
+# $NetBSD: sogod.sh,v 1.1 2019/09/11 12:01:54 tm Exp $
 #
 
 # PROVIDE: sogod
@@ -35,10 +35,10 @@ sogod_precmd()
 }
 
 sogod_start()
-{ 
+{
     echo "Starting $name: "
     su -m ${sogouser} -c "${command} ${command_args}"
-} 
+}
 
 load_rc_config $name
 run_rc_command "$1"
