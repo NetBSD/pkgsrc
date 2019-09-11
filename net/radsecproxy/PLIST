@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2015/01/20 08:17:09 he Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/09/11 11:51:22 he Exp $
 bin/radsecproxy-conf
+bin/radsecproxy-hash
 man/man1/radsecproxy-hash.1
 man/man1/radsecproxy.1
 man/man5/radsecproxy.conf.5
