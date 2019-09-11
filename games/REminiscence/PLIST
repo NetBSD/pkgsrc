@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:39 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/09/11 19:02:14 nia Exp $
 bin/rs
-share/doc/REminiscence/README
+share/applications/reminiscence.desktop
+share/doc/REminiscence/README.txt
