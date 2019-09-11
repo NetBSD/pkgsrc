@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2910 2019/09/11 11:32:26 tm Exp $
+# $NetBSD: Makefile,v 1.2911 2019/09/11 14:28:13 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -660,8 +660,6 @@ SUBDIR+=	libiberty
 SUBDIR+=	libidn
 SUBDIR+=	libidn2
 SUBDIR+=	libindicator
-SUBDIR+=	libindicator-tools
-SUBDIR+=	libindicator3
 SUBDIR+=	libinotify
 SUBDIR+=	libite
 SUBDIR+=	libixp
