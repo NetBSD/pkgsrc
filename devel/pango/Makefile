@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.224 2019/09/07 21:13:34 nia Exp $
+# $NetBSD: Makefile,v 1.225 2019/09/11 21:20:48 kamil Exp $
 
 DISTNAME=	pango-1.44.5
 CATEGORIES=	devel fonts
@@ -27,6 +27,8 @@ MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/output/${PKGBASE}
 
 CHECK_FILES_SKIP+=	${PREFIX}/libdata/pango/pango.modules
 CHECK_PORTABILITY_SKIP+= docs/check.docs
+
+BUILDLINK_TRANSFORM+=	rm:-Werror=implicit-fallthrough # clang10svn
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/pango-view.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/pango-view.1 || ${TRUE}
