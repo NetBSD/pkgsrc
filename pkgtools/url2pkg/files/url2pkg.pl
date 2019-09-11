@@ -1,5 +1,5 @@
 #! @PERL5@
-# $NetBSD: url2pkg.pl,v 1.64 2019/09/09 08:08:02 maya Exp $
+# $NetBSD: url2pkg.pl,v 1.65 2019/09/11 05:25:55 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -353,14 +353,23 @@ sub adjust_libtool() {
 sub adjust_perl_module() {
 
 	if (-f "$abs_wrksrc/Build.PL") {
+		# Example packages:
+		# devel/p5-Algorithm-CheckDigits
 
 		# It's a Module::Build module. Dependencies cannot yet be
 		# extracted automatically.
+		#
+		# TODO: Implement this similarly to the Makefile.PL mock below.
+
 		push(@todos, "Look for the dependencies in Build.PL.");
 
 		push(@build_vars, var("PERL5_MODULE_TYPE", "=", "Module::Build"));
 
 	} elsif (-f "$abs_wrksrc/Makefile.PL") {
+		# Example packages:
+		# devel/p5-Algorithm-Diff (no dependencies)
+		# devel/p5-Carp-Assert-More (dependencies without version numbers)
+		# www/p5-HTML-Quoted (dependency with version number)
 
 		# To avoid fix_up_makefile error for p5-HTML-Quoted, generate Makefile first.
 		system("cd '$abs_wrksrc' && perl -I. Makefile.PL < /dev/null") or do {};
@@ -384,8 +393,12 @@ sub adjust_perl_module() {
 	push(@includes, "../../lang/perl5/module.mk");
 	$pkgname = "p5-\${DISTNAME}";
 	push(@categories, "perl5");
+	unlink("PLIST") or do {};
 }
 
+# Example packages:
+#
+# devel/py-ZopeComponent (dependencies, test dependencies)
 sub adjust_python_module() {
 
 	return unless -f "$abs_wrksrc/setup.py";
@@ -626,12 +639,6 @@ sub adjust_lines_python_module($$) {
 	my @initial_lines = generate_initial_package_Makefile_lines($url);
 	my @current_lines = read_lines("Makefile");
 
-	# don't risk to overwrite any changes made by the package developer.
-	if (join('\n', @current_lines) ne join('\n', @initial_lines)) {
-		splice(@$lines, -2, 0, "# TODO: Migrate MASTER_SITES to PYPI");
-		return;
-	}
-
 	my %old;
 	foreach my $line (@initial_lines) {
 		if ($line =~ qr"^(\w+)(\+?=)([ \t]+)([^#\\]*?)(\s*)(#.*|)$") {
@@ -643,9 +650,17 @@ sub adjust_lines_python_module($$) {
 		}
 	}
 
+	return unless $old{"CATEGORIES"} =~ qr"python";
 	my $pkgbase = $old{"GITHUB_PROJECT"};
+	return unless defined($pkgbase);
 	my $pkgbase1 = substr($pkgbase, 0, 1);
 	my $pkgversion_norev = $old{"DISTNAME"} =~ s/^v//r;
+
+	# don't risk to overwrite any changes made by the package developer.
+	if (join('\n', @current_lines) ne join('\n', @initial_lines)) {
+		splice(@$lines, -2, 0, "# TODO: Migrate MASTER_SITES to PYPI");
+		return;
+	}
 
 	my @lines = @$lines;
 	if (lines_remove(\@lines, "GITHUB_PROJECT")
