@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3861 2019/09/12 18:08:05 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3862 2019/09/12 18:31:17 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6332,3 +6332,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated geography/opencpn-plugin-draw to 1.6.8 [bouyer 2019-09-12]
 	Added games/astromenace version 1.4.1 [ryoon 2019-09-12]
 	Updated devel/p5-Compress-Raw-Zlib to 2.087 [nia 2019-09-12]
+	Updated pkgtools/url2pkg to 2.36 [rillig 2019-09-12]
