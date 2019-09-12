@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2018/01/07 13:04:31 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2019/09/12 20:46:03 rillig Exp $
 
 BUILDLINK_TREE+=	desktop-file-utils
 
@@ -13,8 +13,8 @@ BUILDLINK_TARGETS+=	desktop-file-utils-buildlink-fake
 
 _DFU_FAKE_UPDATEDB=	${BUILDLINK_DIR}/bin/update-desktop-database
 
-desktop-file-utils-buildlink-fake:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+desktop-file-utils-buildlink-fake: .PHONY
+	${RUN}								\
 	if [ ! -f ${_DFU_FAKE_UPDATEDB} ]; then				\
 		${ECHO_BUILDLINK_MSG} "Creating ${_DFU_FAKE_UPDATEDB}";	\
 		${MKDIR} ${_DFU_FAKE_UPDATEDB:H};			\
