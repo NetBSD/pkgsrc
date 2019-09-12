@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3848 2019/09/12 00:28:55 gdt Exp $
+$NetBSD: CHANGES-2019,v 1.3849 2019/09/12 04:18:40 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6303,3 +6303,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated games/REminiscence to 0.3.7 [nia 2019-09-11]
 	Updated devel/pango to 1.44.6 [gutteridge 2019-09-11]
 	Updated sysutils/bup to 0.29.3 [gdt 2019-09-12]
+	Updated pkgtools/url2pkg to 2.35 [rillig 2019-09-12]
