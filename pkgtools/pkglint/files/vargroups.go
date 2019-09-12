@@ -1,6 +1,9 @@
 package pkglint
 
-import "strings"
+import (
+	"path"
+	"strings"
+)
 
 // VargroupsChecker checks that the _VARGROUPS section of an infrastructure
 // file matches the rest of the file content:
@@ -147,26 +150,13 @@ func (ck *VargroupsChecker) checkDef(mkline *MkLine) {
 
 	varname := mkline.Varname()
 	delete(ck.undefinedVars, varname)
-	if ck.ignoreDef(varname) {
+	if ck.ignore(varname) {
 		return
 	}
 
 	if ck.mklines.once.FirstTimeSlice("_VARGROUPS", "def", varname) {
 		mkline.Warnf("Variable %s is defined but not mentioned in the _VARGROUPS section.", varname)
 	}
-}
-
-func (ck *VargroupsChecker) ignoreDef(varname string) bool {
-	switch {
-	case containsVarRef(varname),
-		ck.registered[varname] != nil,
-		hasSuffix(varname, "_MK"),
-		ck.isVargroups(varname),
-		varname == "PKG_FAIL_REASON":
-		return true
-	}
-
-	return false
 }
 
 func (ck *VargroupsChecker) checkUse(mkline *MkLine) {
@@ -177,7 +167,7 @@ func (ck *VargroupsChecker) checkUseVar(mkline *MkLine, varUse *MkVarUse) {
 	varname := varUse.varname
 	delete(ck.unusedVars, varname)
 
-	if ck.ignoreUse(varname) {
+	if ck.ignore(varname) {
 		return
 	}
 
@@ -186,19 +176,28 @@ func (ck *VargroupsChecker) checkUseVar(mkline *MkLine, varUse *MkVarUse) {
 	}
 }
 
-func (ck *VargroupsChecker) ignoreUse(varname string) bool {
+func (ck *VargroupsChecker) ignore(varname string) bool {
 	switch {
 	case containsVarRef(varname),
 		hasSuffix(varname, "_MK"),
-		varname == ".TARGET",
-		varname == "TOOLS_SHELL",
-		varname == "TOUCH_FLAGS",
-		varname == strings.ToLower(varname),
-		G.Pkgsrc.Tools.ExistsVar(varname),
-		ck.isShellCommand(varname),
 		ck.registered[varname] != nil,
-		ck.isVargroups(varname):
+		G.Pkgsrc.Tools.ExistsVar(varname),
+		ck.isVargroups(varname),
+		varname == strings.ToLower(varname),
+		ck.isShellCommand(varname),
+		varname == ".TARGET",
+		varname == "BUILD_DEFS",
+		varname == "BUILD_DEFS_EFFECTS",
+		varname == "PKG_FAIL_REASON",
+		varname == "TOUCH_FLAGS":
 		return true
+	}
+
+	for pattern := range ck.ignVars {
+		matched, err := path.Match(pattern, varname)
+		if err == nil && matched {
+			return true
+		}
 	}
 
 	return false
@@ -206,10 +205,7 @@ func (ck *VargroupsChecker) ignoreUse(varname string) bool {
 
 func (ck *VargroupsChecker) isShellCommand(varname string) bool {
 	vartype := G.Pkgsrc.VariableType(ck.mklines, varname)
-	if vartype != nil && vartype.basicType == BtShellCommand {
-		return true
-	}
-	return false
+	return vartype != nil && vartype.basicType == BtShellCommand
 }
 
 func (ck *VargroupsChecker) isVargroups(varname string) bool {
