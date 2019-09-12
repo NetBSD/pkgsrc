@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3862 2019/09/12 18:31:17 rillig Exp $
+$NetBSD: CHANGES-2019,v 1.3863 2019/09/12 19:23:18 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6333,3 +6333,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added games/astromenace version 1.4.1 [ryoon 2019-09-12]
 	Updated devel/p5-Compress-Raw-Zlib to 2.087 [nia 2019-09-12]
 	Updated pkgtools/url2pkg to 2.36 [rillig 2019-09-12]
+	Updated net/openconnect to 8.05 [schmonz 2019-09-12]
