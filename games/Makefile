@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.453 2019/09/11 16:22:09 micha Exp $
+# $NetBSD: Makefile,v 1.454 2019/09/12 17:10:47 ryoon Exp $
 #
 
 COMMENT=	Games
@@ -33,6 +33,7 @@ SUBDIR+=	arx-libertatis
 SUBDIR+=	asc
 SUBDIR+=	asciiquarium
 SUBDIR+=	assaultcube
+SUBDIR+=	astromenace
 SUBDIR+=	atomix
 SUBDIR+=	atque
 SUBDIR+=	barrage
