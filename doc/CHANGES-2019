@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3864 2019/09/12 21:15:58 rillig Exp $
+$NetBSD: CHANGES-2019,v 1.3865 2019/09/12 23:01:48 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6335,3 +6335,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated pkgtools/url2pkg to 2.36 [rillig 2019-09-12]
 	Updated net/openconnect to 8.05 [schmonz 2019-09-12]
 	Updated pkgtools/pkglint to 5.7.24 [rillig 2019-09-12]
+	Updated security/libyubikey to 1.13 [tnn 2019-09-12]
+	Updated security/ykpers to 1.20.0 [tnn 2019-09-12]
+	Updated security/ykclient to 2.15 [tnn 2019-09-12]
