@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3860 2019/09/12 17:11:13 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.3861 2019/09/12 18:08:05 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6331,3 +6331,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/netsurf to 3.9 [nros 2019-09-12]
 	Updated geography/opencpn-plugin-draw to 1.6.8 [bouyer 2019-09-12]
 	Added games/astromenace version 1.4.1 [ryoon 2019-09-12]
+	Updated devel/p5-Compress-Raw-Zlib to 2.087 [nia 2019-09-12]
