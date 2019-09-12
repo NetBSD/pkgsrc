@@ -1,5 +1,5 @@
 #! @PERL5@
-# $NetBSD: url2pkg.pl,v 1.67 2019/09/12 04:18:28 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.68 2019/09/12 05:45:34 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -206,6 +206,15 @@ sub lines_remove_if($$$) {
 	return false;
 }
 
+sub lines_index($$) {
+	my ($lines, $re) = @_;
+
+	foreach my $i (0..$#$lines) {
+		return $i if $lines->[$i] =~ $re;
+	}
+	return -1;
+}
+
 sub make(@) {
 	my @args = @_;
 
@@ -221,18 +230,18 @@ sub make(@) {
 #
 
 # the package name, including the version number.
-my $distname;
+our $distname;
 
 # the absolute pathname to the working directory, containing
 # the extracted distfiles.
-my $abs_wrkdir;
+our $abs_wrkdir;
 
 # the absolute pathname to a subdirectory of $abs_wrkdir, typically
 # containing package-provided Makefiles or configure scripts.
-my $abs_wrksrc;
+our $abs_wrksrc;
 
-my @wrksrc_files;
-my @wrksrc_dirs;
+our @wrksrc_files;
+our @wrksrc_dirs;
 # the regular files and directories relative to abs_wrksrc.
 
 #
@@ -242,7 +251,7 @@ my @wrksrc_dirs;
 
 # categories for the package, in addition to the usual
 # parent directory.
-my @categories;
+our @categories;
 
 # the dependencies of the package, in the form
 # "package>=version:../../category/package".
@@ -256,24 +265,25 @@ our @bl3_lines;
 
 # a list of pathnames relative to the package path.
 # All these files will be included at the bottom of the Makefile.
-my @includes;
+our @includes;
 
 # a list of variable assignments that will make up the fourth
 # paragraph of the package Makefile, where the build configuration
 # takes place.
-my @build_vars;
+our @build_vars;
 
 # similar to the @build_vars, but separated by an empty line in
 # the Makefile, thereby forming the fifth paragraph.
-my @extra_vars;
+our @extra_vars;
 
 # these are inserted below the second paragraph in the Makefile.
-my @todos;
+our @todos;
 
-# the package name, in case it differs from $distname.
-my $pkgname = "";
+# the package name is $pkgname_prefix${DISTNAME$pkgname_transform}.
+our $pkgname_prefix = "";  # example: ${PYPKGPREFIX}-
+our $pkgname_transform = "";  # example: :S,-v,-,
 
-my $regenerate_distinfo = false;
+our $regenerate_distinfo = false;
 
 # Example:
 # add_dependency("DEPENDS", "package", ">=1", "../../category/package");
@@ -420,10 +430,10 @@ sub adjust_perl_module() {
 		return;
 	}
 
-	my $packlist = $distname =~ s/-[0-9].*//r =~ s/-/\//gr;
+	my $packlist = $distname =~ s/-v?[0-9].*//r =~ s/-/\//gr;
 	push(@build_vars, var("PERL5_PACKLIST", "=", "auto/$packlist/.packlist"));
 	push(@includes, "../../lang/perl5/module.mk");
-	$pkgname = "p5-\${DISTNAME}";
+	$pkgname_prefix = "p5-";
 	push(@categories, "perl5");
 
 	unlink("PLIST") or do {};
@@ -443,7 +453,7 @@ sub adjust_python_module() {
 	};
 	read_dependencies($cmd, $env, "py-");
 
-	$pkgname = "\${PYPKGPREFIX}-\${DISTNAME}";
+	$pkgname_prefix = "\${PYPKGPREFIX}-";
 	push(@categories, "python");
 	push(@includes, "../../lang/python/egg.mk");
 }
@@ -553,21 +563,22 @@ sub generate_initial_package_Makefile_lines($) {
 	}
 
 	if ($url =~ qr"^https://github\.com/") {
-		if ($url =~ qr"^https://github\.com/(.*)/(.*)/archive/(.*)(\.tar\.gz|\.zip)$") {
+		if ($url =~ qr"^https://github\.com/(.+)/(.+)/archive/(.+)(\.tar\.gz|\.zip)$") {
 			my ($org, $proj, $tag, $ext) = ($1, $2, $3, $4);
 
+			$github_project = $proj;
 			$master_sites = "\${MASTER_SITE_GITHUB:=$org/}";
 			$homepage = "https://github.com/$org/$proj/";
-			$github_project = $proj;
 			if (index($tag, $github_project) == -1) {
-				$pkgname = "\${GITHUB_PROJECT}-\${DISTNAME}";
+				$pkgname_prefix = "\${GITHUB_PROJECT}-";
 				$dist_subdir = "\${GITHUB_PROJECT}";
 			}
 			$distfile = "$tag$ext";
 
-		} elsif ($url =~ qr"^https://github\.com/(.*)/(.*)/releases/download/(.*)/(.*)(\.tar\.gz|\.zip)$") {
+		} elsif ($url =~ qr"^https://github\.com/(.+)/(.+)/releases/download/(.+)/(.+)(\.tar\.gz|\.zip)$") {
 			my ($org, $proj, $tag, $base, $ext) = ($1, $2, $3, $4, $5);
 
+			$github_project = $proj;
 			$master_sites = "\${MASTER_SITE_GITHUB:=$org/}";
 			$homepage = "https://github.com/$org/$proj/";
 			if (index($base, $proj) == -1) {
@@ -600,12 +611,21 @@ sub generate_initial_package_Makefile_lines($) {
 		$extract_sufx = "# none";
 	}
 
+	if ($distname =~ qr"^v\d") {
+		$pkgname_transform = ":S,^v,,";
+	} elsif ($distname =~ qr"-v\d" && $distname !~ qr"-v.*-v\d") {
+		$pkgname_transform = ":S,-v,-,";
+	}
+
 	`pwd` =~ qr".*/([^/]+)/[^/]+$" or die;
 	$categories = $1 eq "wip" ? "# TODO: add primary category" : $1;
 
 	if ($extract_sufx eq ".tar.gz" || $extract_sufx eq ".gem") {
 		$extract_sufx = "";
 	}
+
+	my $pkgname = "$pkgname_prefix\${DISTNAME$pkgname_transform}";
+	$pkgname = "" if $pkgname eq "\${DISTNAME}";
 
 	my @lines;
 	push(@lines, "# \$" . "NetBSD\$");
@@ -614,6 +634,7 @@ sub generate_initial_package_Makefile_lines($) {
 	lines_add_vars(\@lines, [
 		var("GITHUB_PROJECT", "=", $github_project),
 		var("DISTNAME", "=", $distname),
+		var("PKGNAME", "=", $pkgname),
 		var("CATEGORIES", "=", $categories),
 		var("MASTER_SITES", "=", $master_sites),
 		var("GITHUB_RELEASE", "=", $github_release),
@@ -740,26 +761,21 @@ sub adjust_package_from_extracted_distfiles($)
 	print("url2pkg> Adjusting the Makefile\n");
 
 	my $seen_marker = false;
-	my @lines;
 
-	open(MF1, "<", "Makefile") or die;
-
-	# Copy the user-edited part of the Makefile.
-	while (defined(my $line = <MF1>)) {
-		chomp($line);
-
-		if ($line =~ qr"^# url2pkg-marker\b") {
-			$seen_marker = true;
-			last;
-		}
-		push(@lines, $line);
-
-		if ($pkgname ne "" && $line =~ qr"^DISTNAME=(\t+)") {
-			push(@lines, "PKGNAME=$1$pkgname");
-		}
+	my @prev_lines = read_lines("Makefile");
+	my $marker_index = lines_index(\@prev_lines, qr"^# url2pkg-marker");
+	if ($marker_index == -1) {
+		die("$0: ERROR: didn't find the url2pkg marker in the Makefile.\n");
 	}
-	if (!$seen_marker) {
-		die("$0: ERROR: didn't find the url2pkg marker in the file.\n");
+
+	my @lines = @prev_lines[0 .. $marker_index - 1];
+
+	if (lines_index(\@lines, qr"^PKGNAME=") == -1) {
+		my $distname_index = lines_index(\@lines, qr"^DISTNAME=(\t+)");
+		if ($distname_index != -1) {
+			my $pkgname_line = "PKGNAME=\t$pkgname_prefix\${DISTNAME$pkgname_transform}";
+			splice(@lines, $distname_index + 1, 0, $pkgname_line);
+		}
 	}
 
 	if (@todos) {
@@ -781,13 +797,7 @@ sub adjust_package_from_extracted_distfiles($)
 	push(@lines, @bl3_lines);
 	push(@lines, map { $_ = ".include \"$_\"" } @includes);
 
-	# Copy the rest of the user-edited part of the Makefile.
-	while (defined(my $line = <MF1>)) {
-		chomp($line);
-		push(@lines, $line);
-	}
-
-	close(MF1);
+	push(@lines, @prev_lines[$marker_index + 1 .. $#prev_lines]);
 
 	lines_append(\@lines, "CATEGORIES", join(" ", @categories));
 
