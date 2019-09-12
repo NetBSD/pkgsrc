@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2019/08/31 12:29:30 nia Exp $
+# $NetBSD: Makefile,v 1.17 2019/09/12 15:23:22 ryoon Exp $
 
 DISTNAME=		chromium-bsu-0.9.16.1
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=chromium-bsu/}
 
@@ -32,6 +33,8 @@ CONFIGURE_ARGS+=	--disable-sdl
 CONFIGURE_ARGS+=	--disable-sdlmixer
 CONFIGURE_ARGS+=	--disable-sdlimage
 CONFIGURE_ARGS+=	--disable-openal
+
+CFLAGS+=		-DWITH_JOYSTICK
 
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
