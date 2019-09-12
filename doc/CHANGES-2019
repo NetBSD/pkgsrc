@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3847 2019/09/11 23:38:07 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.3848 2019/09/12 00:28:55 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6302,3 +6302,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/libgdiplus to 6.0.2 [nia 2019-09-11]
 	Updated games/REminiscence to 0.3.7 [nia 2019-09-11]
 	Updated devel/pango to 1.44.6 [gutteridge 2019-09-11]
+	Updated sysutils/bup to 0.29.3 [gdt 2019-09-12]
