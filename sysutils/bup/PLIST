@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/09/18 23:02:48 gdt Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/09/12 00:28:47 gdt Exp $
 bin/bup
 lib/bup/bup/__init__.py
 lib/bup/bup/_helpers.so
@@ -7,6 +7,7 @@ lib/bup/bup/bloom.py
 lib/bup/bup/client.py
 lib/bup/bup/csetup.py
 lib/bup/bup/drecurse.py
+lib/bup/bup/gc.py
 lib/bup/bup/git.py
 lib/bup/bup/hashsplit.py
 lib/bup/bup/helpers.py
@@ -17,6 +18,7 @@ lib/bup/bup/metadata.py
 lib/bup/bup/midx.py
 lib/bup/bup/options.py
 lib/bup/bup/path.py
+lib/bup/bup/rm.py
 lib/bup/bup/shquote.py
 lib/bup/bup/ssh.py
 lib/bup/bup/version.py
@@ -49,6 +51,7 @@ lib/bup/cmd/bup-mux
 lib/bup/cmd/bup-newliner
 lib/bup/cmd/bup-on
 lib/bup/cmd/bup-on--server
+lib/bup/cmd/bup-prune-older
 lib/bup/cmd/bup-random
 lib/bup/cmd/bup-restore
 lib/bup/cmd/bup-rm
