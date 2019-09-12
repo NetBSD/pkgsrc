@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.80 2019/09/12 15:53:02 nros Exp $
+# $NetBSD: Makefile,v 1.81 2019/09/12 17:27:16 nros Exp $
 
 DISTNAME=	netsurf-all-3.9
 PKGNAME=	${DISTNAME:S/-all//}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://download.netsurf-browser.org/netsurf/releases/source-full/
 
@@ -43,6 +44,7 @@ TOOL_DEPENDS+=		vim-share-[0-9]*:../../editors/vim-share
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
