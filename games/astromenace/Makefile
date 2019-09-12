@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/09/12 17:09:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2019/09/12 20:48:19 nia Exp $
 
 DISTNAME=	astromenace-1.4.1
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=viewizard/}
 GITHUB_PROJECT=	astromenace
@@ -20,7 +21,14 @@ CMAKE_ARG_PATH=		${WRKSRC}
 
 CMAKE_ARGS+=		-DDATADIR=${PREFIX}/share/astromenace
 
-INSTALLATION_DIRS+=	bin share/astromenace
+ICON_SIZES=		64 128
+
+INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	share/applications
+INSTALLATION_DIRS+=	share/astromenace
+.for s in ${ICON_SIZES}
+INSTALLATION_DIRS+=	share/icons/hicolor/${s}x${s}/apps
+.endfor
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/${OBJDIR}
@@ -30,10 +38,17 @@ do-install:
 		${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/${OBJDIR}/gamedata.vfs \
 		${DESTDIR}${PREFIX}/share/astromenace
+	${INSTALL_DATA} ${WRKSRC}/share/astromenace.desktop \
+		${DESTDIR}${PREFIX}/share/applications
+.for s in ${ICON_SIZES}
+	${INSTALL_DATA} ${WRKSRC}/share/astromenace_${s}.png \
+		${DESTDIR}${PREFIX}/share/icons/hicolor/${s}x${s}/apps
+.endfor
 
 .include "../../audio/freealut/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
