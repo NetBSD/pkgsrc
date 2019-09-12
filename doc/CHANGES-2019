@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3856 2019/09/12 15:24:51 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.3857 2019/09/12 15:56:43 nros Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6327,3 +6327,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/py-certifi to 2019.9.11 [adam 2019-09-12]
 	Updated textproc/py-cssselect2 to 0.2.2 [adam 2019-09-12]
 	Updated games/chromium-bsu to 0.9.16.1nb1 [ryoon 2019-09-12]
+	Updated www/netsurf to 3.9 [nros 2019-09-12]
