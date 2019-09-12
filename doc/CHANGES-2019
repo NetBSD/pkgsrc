@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3854 2019/09/12 15:10:30 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3855 2019/09/12 15:23:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6324,3 +6324,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/py-certbot-dns-route53 to 0.38.0 [adam 2019-09-12]
 	Updated security/py-certbot-dns-sakuracloud to 0.38.0 [adam 2019-09-12]
 	Updated security/py-certbot-nginx to 0.38.0 [adam 2019-09-12]
+	Updated security/py-certifi to 2019.9.11 [adam 2019-09-12]
+	Updated textproc/py-cssselect2 to 0.2.2 [adam 2019-09-12]
