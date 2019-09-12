@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2019/09/12 18:41:41 nia Exp $
+# $NetBSD: Makefile,v 1.83 2019/09/12 18:57:09 nia Exp $
 
 DISTNAME=	netsurf-all-3.9
 PKGNAME=	${DISTNAME:S/-all//}
@@ -60,6 +60,7 @@ post-install:
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
