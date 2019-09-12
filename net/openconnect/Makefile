@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2019/09/07 19:30:21 schmonz Exp $
+# $NetBSD: Makefile,v 1.12 2019/09/12 19:23:13 schmonz Exp $
 
-DISTNAME=	openconnect-8.04
+DISTNAME=	openconnect-8.05
 CATEGORIES=	net security
 MASTER_SITES=	ftp://ftp.infradead.org/pub/openconnect/
 
@@ -11,7 +11,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	gmake pkg-config bash
 
 DEPENDS+=	vpnc-script-[0-9]*:../../net/vpnc-script
 
