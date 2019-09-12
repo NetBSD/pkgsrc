@@ -267,7 +267,7 @@ func isIgnoredFilename(filename string) bool {
 	case ".", "..", "CVS", ".svn", ".git", ".hg", ".idea":
 		return true
 	}
-	return false
+	return hasPrefix(filename, ".#")
 }
 
 func dirglob(dirname string) []string {
