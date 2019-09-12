@@ -180,7 +180,7 @@ func (s *Suite) Test_ShellLineChecker_CheckShellCommandLine(c *check.C) {
 			"before using a semicolon (after \"uname=`uname`\") to separate commands.")
 
 	test("echo ${PKGNAME:Q}", // VucQuotPlain
-		"NOTE: filename.mk:1: The :Q operator isn't necessary for ${PKGNAME} here.")
+		"NOTE: filename.mk:1: The :Q modifier isn't necessary for ${PKGNAME} here.")
 
 	test("echo \"${CFLAGS:Q}\"", // VucQuotDquot
 		"WARN: filename.mk:1: The :Q modifier should not be used inside double quotes.",
@@ -316,7 +316,7 @@ func (s *Suite) Test_ShellLineChecker_CheckShellCommandLine__nofix(c *check.C) {
 	ck.CheckShellCommandLine("echo ${PKGNAME:Q}")
 
 	t.CheckOutputLines(
-		"NOTE: Makefile:1: The :Q operator isn't necessary for ${PKGNAME} here.")
+		"NOTE: Makefile:1: The :Q modifier isn't necessary for ${PKGNAME} here.")
 }
 
 func (s *Suite) Test_ShellLineChecker_CheckShellCommandLine__show_autofix(c *check.C) {
@@ -332,7 +332,7 @@ func (s *Suite) Test_ShellLineChecker_CheckShellCommandLine__show_autofix(c *che
 	ck.CheckShellCommandLine("echo ${PKGNAME:Q}")
 
 	t.CheckOutputLines(
-		"NOTE: Makefile:1: The :Q operator isn't necessary for ${PKGNAME} here.",
+		"NOTE: Makefile:1: The :Q modifier isn't necessary for ${PKGNAME} here.",
 		"AUTOFIX: Makefile:1: Replacing \"${PKGNAME:Q}\" with \"${PKGNAME}\".")
 }
 
@@ -479,10 +479,10 @@ func (s *Suite) Test_ShellLineChecker_CheckWord(c *check.C) {
 		nil...)
 
 	test("\"${DISTINFO_FILE:Q}\"", true,
-		"NOTE: filename.mk:1: The :Q operator isn't necessary for ${DISTINFO_FILE} here.")
+		"NOTE: filename.mk:1: The :Q modifier isn't necessary for ${DISTINFO_FILE} here.")
 
 	test("embed${DISTINFO_FILE:Q}ded", true,
-		"NOTE: filename.mk:1: The :Q operator isn't necessary for ${DISTINFO_FILE} here.")
+		"NOTE: filename.mk:1: The :Q modifier isn't necessary for ${DISTINFO_FILE} here.")
 
 	test("s,\\.,,", true,
 		nil...)
