@@ -1,5 +1,5 @@
 #! @PERL5@
-# $NetBSD: url2pkg.pl,v 1.69 2019/09/12 05:56:59 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.70 2019/09/12 18:23:00 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -134,10 +134,10 @@ sub lines_set($$$) {
 
 	my $i = 0;
 	foreach my $line (@$lines) {
-		if ($line =~ qr"^\Q$varname\E(\+?=)([ \t]+)([^#\\]*?)(\s*)(#.*|)$") {
+		if ($line =~ qr"^#?\Q$varname\E(\+?=)([ \t]+)([^#\\]*?)(\s*)(#.*|)$") {
 			my ($op, $indent, $old_value, $space_after_value, $comment) = ($1, $2, $3, $4, $5);
 
-			$lines->[$i] = "$varname$op$indent$new_value$space_after_value$comment";
+			$lines->[$i] = "$varname$op$indent$new_value";
 			return true;
 		}
 		$i++;
@@ -208,7 +208,7 @@ sub lines_remove_if($$$) {
 sub lines_index($$) {
 	my ($lines, $re) = @_;
 
-	foreach my $i (0..$#$lines) {
+	foreach my $i (0 .. $#$lines) {
 		return $i if $lines->[$i] =~ $re;
 	}
 	return -1;
@@ -275,11 +275,14 @@ our @build_vars;
 # the Makefile, thereby forming the fifth paragraph.
 our @extra_vars;
 
+# variables from the initial Makefile whose values are replaced
+our %update_vars;
+
 # these are inserted below the second paragraph in the Makefile.
 our @todos;
 
 # the package name is $pkgname_prefix${DISTNAME$pkgname_transform}.
-our $pkgname_prefix = "";  # example: ${PYPKGPREFIX}-
+our $pkgname_prefix = "";     # example: ${PYPKGPREFIX}-
 our $pkgname_transform = "";  # example: :S,-v,-,
 
 our $regenerate_distinfo = false;
@@ -326,9 +329,15 @@ sub read_dependencies($$$) {
 	while (defined (my $line = <DEPS>)) {
 		chomp($line);
 
-		next unless $line =~ qr"^(\w+)\t([^\s:>]+)(>[^\s:]+|)(?::(\.\./\.\./\S+))?$";
-		push(@dep_lines, [$1, $2, $3 || ">=0", $4 || ""]);
+		if ($line =~ qr"^(\w+)\t([^\s:>]+)(>[^\s:]+|)(?::(\.\./\.\./\S+))?$") {
+			push(@dep_lines, [ $1, $2, $3 || ">=0", $4 || "" ]);
+		} elsif ($line =~ qr"^var\t(\S+)\t(.+)$") {
+			$main::update_vars{$1} = $2;
+		} else {
+			printf STDERR "url2pkg: unknown dependency line: %s\n", $line;
+		}
 	}
+
 	close(DEPS) or die;
 
 	foreach my $dep_line (@dep_lines) {
@@ -401,9 +410,7 @@ sub adjust_libtool() {
 # devel/p5-Algorithm-CheckDigits
 sub adjust_perl_module_Build_PL() {
 
-	# TODO: Implement this similarly to the Makefile.PL mock below.
-
-	push(@todos, "Look for the dependencies in Build.PL.");
+	read_dependencies("cd '$abs_wrksrc' && perl -I$libdir -I. Build.PL", {}, "");
 
 	push(@build_vars, var("PERL5_MODULE_TYPE", "=", "Module::Build"));
 }
@@ -448,7 +455,7 @@ sub adjust_python_module() {
 	my $cmd = "cd '$abs_wrksrc' && $pythonbin setup.py build";
 	my $env = {
 		"PYTHONDONTWRITEBYTECODE" => "x",
-		"PYTHONPATH" => $libdir
+		"PYTHONPATH"              => $libdir
 	};
 	read_dependencies($cmd, $env, "py-");
 
@@ -709,8 +716,7 @@ sub adjust_lines_python_module($$) {
 	}
 }
 
-sub adjust_package_from_extracted_distfiles($)
-{
+sub adjust_package_from_extracted_distfiles($) {
 	my ($url) = @_;
 
 	chomp($abs_wrkdir = `$make show-var VARNAME=WRKDIR`);
@@ -758,8 +764,6 @@ sub adjust_package_from_extracted_distfiles($)
 
 	print("url2pkg> Adjusting the Makefile\n");
 
-	my $seen_marker = false;
-
 	my @prev_lines = read_lines("Makefile");
 	my $marker_index = lines_index(\@prev_lines, qr"^# url2pkg-marker");
 	if ($marker_index == -1) {
@@ -800,6 +804,10 @@ sub adjust_package_from_extracted_distfiles($)
 	lines_append(\@lines, "CATEGORIES", join(" ", @categories));
 
 	adjust_lines_python_module(\@lines, $url);
+
+	foreach my $varname (keys %update_vars) {
+		lines_set(\@lines, $varname, $update_vars{$varname});
+	}
 
 	write_lines("Makefile", @lines);
 

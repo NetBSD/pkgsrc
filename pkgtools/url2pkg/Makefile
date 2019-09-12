@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.99 2019/09/12 05:49:03 rillig Exp $
+# $NetBSD: Makefile,v 1.100 2019/09/12 18:23:00 rillig Exp $
 
-PKGNAME=	url2pkg-2.35
+PKGNAME=	url2pkg-2.36
 CATEGORIES=	pkgtools
 
 MAINTAINER=	rillig@NetBSD.org
@@ -34,6 +34,7 @@ SUBST_SED.up+=		-e 's,@PKGSRCDIR@,${BATCH:D/usr/pkgsrc:U${PKGSRCDIR}},g'
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/url2pkg.pl ${DESTDIR}${PREFIX}/bin/url2pkg
 	${INSTALL_MAN} ${FILESDIR}/url2pkg.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_DATA} ${WRKSRC}/Build.pm ${DESTDIR}${PREFIX}/lib/url2pkg/Module/
 	${INSTALL_DATA} ${WRKSRC}/MakeMaker.pm ${DESTDIR}${PREFIX}/lib/url2pkg/ExtUtils/
 	${INSTALL_DATA} ${WRKSRC}/setuptools.py ${DESTDIR}${PREFIX}/lib/url2pkg/
 
