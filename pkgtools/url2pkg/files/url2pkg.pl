@@ -1,5 +1,5 @@
 #! @PERL5@
-# $NetBSD: url2pkg.pl,v 1.65 2019/09/11 05:25:55 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.66 2019/09/12 02:49:33 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -350,40 +350,42 @@ sub adjust_libtool() {
 	}
 }
 
-sub adjust_perl_module() {
+# Example packages:
+# devel/p5-Algorithm-CheckDigits
+sub adjust_perl_module_Build_PL() {
 
-	if (-f "$abs_wrksrc/Build.PL") {
-		# Example packages:
-		# devel/p5-Algorithm-CheckDigits
+	# TODO: Implement this similarly to the Makefile.PL mock below.
 
-		# It's a Module::Build module. Dependencies cannot yet be
-		# extracted automatically.
-		#
-		# TODO: Implement this similarly to the Makefile.PL mock below.
+	push(@todos, "Look for the dependencies in Build.PL.");
 
-		push(@todos, "Look for the dependencies in Build.PL.");
+	push(@build_vars, var("PERL5_MODULE_TYPE", "=", "Module::Build"));
+}
 
-		push(@build_vars, var("PERL5_MODULE_TYPE", "=", "Module::Build"));
+# Example packages:
+# devel/p5-Algorithm-Diff (no dependencies)
+# devel/p5-Carp-Assert-More (dependencies without version numbers)
+# www/p5-HTML-Quoted (dependency with version number)
+sub adjust_perl_module_Makefile_PL() {
 
-	} elsif (-f "$abs_wrksrc/Makefile.PL") {
-		# Example packages:
-		# devel/p5-Algorithm-Diff (no dependencies)
-		# devel/p5-Carp-Assert-More (dependencies without version numbers)
-		# www/p5-HTML-Quoted (dependency with version number)
+	# To avoid fix_up_makefile error for p5-HTML-Quoted, generate Makefile first.
+	system("cd '$abs_wrksrc' && perl -I. Makefile.PL < /dev/null") or do {};
 
-		# To avoid fix_up_makefile error for p5-HTML-Quoted, generate Makefile first.
-		system("cd '$abs_wrksrc' && perl -I. Makefile.PL < /dev/null") or do {};
+	open(DEPS, "cd '$abs_wrksrc' && perl -I$libdir -I. Makefile.PL |") or die;
+	while (defined(my $dep = <DEPS>)) {
+		chomp($dep);
 
-		open(DEPS, "cd '$abs_wrksrc' && perl -I$libdir -I. Makefile.PL |") or die;
-		while (defined(my $dep = <DEPS>)) {
-			chomp($dep);
-
-			if ($dep =~ qr"^(\w+)\t(\S+)(>\S+|):(\.\./\.\./\S+)$") {
-				add_dependency($1, $2, $3, $4);
-			}
+		if ($dep =~ qr"^(\w+)\t(\S+)(>\S+|):(\.\./\.\./\S+)$") {
+			add_dependency($1, $2, $3, $4);
 		}
-		close(DEPS) or die;
+	}
+	close(DEPS) or die;
+}
 
+sub adjust_perl_module() {
+	if (-f "$abs_wrksrc/Build.PL") {
+		adjust_perl_module_Build_PL();
+	} elsif (-f "$abs_wrksrc/Makefile.PL") {
+		adjust_perl_module_Makefile_PL();
 	} else {
 		return;
 	}
@@ -393,6 +395,7 @@ sub adjust_perl_module() {
 	push(@includes, "../../lang/perl5/module.mk");
 	$pkgname = "p5-\${DISTNAME}";
 	push(@categories, "perl5");
+
 	unlink("PLIST") or do {};
 }
 
