@@ -1,5 +1,5 @@
 #! @PERL5@
-# $NetBSD: url2pkg.pl,v 1.66 2019/09/12 02:49:33 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.67 2019/09/12 04:18:28 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -37,9 +37,10 @@ use warnings;
 # Build-time Configuration.
 #
 
-my $make		= "@MAKE@";
-my $libdir		= "@LIBDIR@";
-my $pythonbin		= "@PYTHONBIN@";
+my $make		= '@MAKE@';
+my $libdir		= '@LIBDIR@';
+my $pythonbin		= '@PYTHONBIN@';
+my $pkgsrcdir		= '@PKGSRCDIR@';
 
 use constant true	=> 1;
 use constant false	=> 0;
@@ -99,8 +100,9 @@ sub write_lines($@) {
 sub find_package($) {
 	my ($pkgbase) = @_;
 
-	my @candidates = <../../*/$pkgbase>;
-	return scalar(@candidates) == 1 ? $candidates[0] : "";
+	my @candidates = <$pkgsrcdir/*/$pkgbase>;
+	return "" unless @candidates == 1;
+	return $candidates[0] =~ s/\Q$pkgsrcdir\E/..\/../r;
 }
 
 # appends the given variable assignments to the lines, aligning the
@@ -244,13 +246,13 @@ my @categories;
 
 # the dependencies of the package, in the form
 # "package>=version:../../category/package".
-my @depends;
-my @build_depends;
-my @test_depends;
+our @depends;
+our @build_depends;
+our @test_depends;
 
 # .include, interleaved with BUILDLINK3_API_DEPENDS.
 # These lines are added at the bottom of the Makefile.
-my @bl3_lines;
+our @bl3_lines;
 
 # a list of pathnames relative to the package path.
 # All these files will be included at the bottom of the Makefile.
@@ -298,6 +300,42 @@ sub add_dependency($$$$) {
 		push(@test_depends, $value);
 	} else {
 		push(@todos, "dependency $type $value");
+	}
+}
+
+sub read_dependencies($$$) {
+	my ($cmd, $env, $pkgnameprefix) = @_;
+	my @dep_lines;
+
+	my %prev_ENV = %ENV;
+	foreach my $name (keys %$env) {
+		$ENV{$name} = $env->{$name};
+	}
+	open(DEPS, "$cmd |") or die;
+	%ENV = %prev_ENV;
+
+	while (defined (my $line = <DEPS>)) {
+		chomp($line);
+
+		next unless $line =~ qr"^(\w+)\t([^\s:>]+)(>[^\s:]+|)(?::(\.\./\.\./\S+))?$";
+		push(@dep_lines, [$1, $2, $3 || ">=0", $4 || ""]);
+	}
+	close(DEPS) or die;
+
+	foreach my $dep_line (@dep_lines) {
+		my ($type, $pkgbase, $constraint, $dir) = @$dep_line;
+
+		if ($dir eq "" && $pkgnameprefix ne "") {
+			$dir = find_package("$pkgnameprefix$pkgbase");
+			if ($dir ne "") {
+				$pkgbase = "$pkgnameprefix$pkgbase";
+			}
+		}
+		if ($dir eq "") {
+			$dir = find_package($pkgbase);
+		}
+
+		add_dependency($type, $pkgbase, $constraint, $dir);
 	}
 }
 
@@ -368,17 +406,9 @@ sub adjust_perl_module_Build_PL() {
 sub adjust_perl_module_Makefile_PL() {
 
 	# To avoid fix_up_makefile error for p5-HTML-Quoted, generate Makefile first.
-	system("cd '$abs_wrksrc' && perl -I. Makefile.PL < /dev/null") or do {};
+	system("cd '$abs_wrksrc' && perl -I. Makefile.PL < /dev/null") == 0 or do {};
 
-	open(DEPS, "cd '$abs_wrksrc' && perl -I$libdir -I. Makefile.PL |") or die;
-	while (defined(my $dep = <DEPS>)) {
-		chomp($dep);
-
-		if ($dep =~ qr"^(\w+)\t(\S+)(>\S+|):(\.\./\.\./\S+)$") {
-			add_dependency($1, $2, $3, $4);
-		}
-	}
-	close(DEPS) or die;
+	read_dependencies("cd '$abs_wrksrc' && perl -I$libdir -I. Makefile.PL", {}, "");
 }
 
 sub adjust_perl_module() {
@@ -406,33 +436,14 @@ sub adjust_python_module() {
 
 	return unless -f "$abs_wrksrc/setup.py";
 
-	my %old_env = %ENV;
-	$ENV{"PYTHONDONTWRITEBYTECODE"} = "x";
-	$ENV{"PYTHONPATH"} = $libdir;
+	my $cmd = "cd '$abs_wrksrc' && $pythonbin setup.py build";
+	my $env = {
+		"PYTHONDONTWRITEBYTECODE" => "x",
+		"PYTHONPATH" => $libdir
+	};
+	read_dependencies($cmd, $env, "py-");
 
-	my @dep_lines;
-	open(DEPS, "cd '$abs_wrksrc' && $pythonbin setup.py build |") or die;
-	%ENV = %old_env;
-	while (defined(my $line = <DEPS>)) {
-		chomp($line);
-		if ($line =~ qr"^(\w+)\t(\S+?)(>=.*|)$") {
-			push(@dep_lines, [$1, $2, $3]);
-		}
-	}
-	close(DEPS) or die;
-
-	foreach my $dep_line (@dep_lines) {
-		my ($type, $pkgbase, $constraint) = @$dep_line;
-		my $dep_dir = find_package("py-$pkgbase");
-		if ($dep_dir ne "") {
-			$pkgbase = "py-$pkgbase";
-		} else {
-			$dep_dir = find_package($pkgbase);
-		}
-
-		add_dependency($type, $pkgbase, $constraint, $dep_dir);
-	}
-
+	$pkgname = "\${PYPKGPREFIX}-\${DISTNAME}";
 	push(@categories, "python");
 	push(@includes, "../../lang/python/egg.mk");
 }
