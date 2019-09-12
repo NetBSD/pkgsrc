@@ -1,5 +1,5 @@
 # -*- perl -*-
-# $NetBSD: url2pkg.t,v 1.8 2019/09/12 04:18:28 rillig Exp $
+# $NetBSD: url2pkg.t,v 1.9 2019/09/12 05:45:34 rillig Exp $
 
 require "url2pkg.pl";
 
@@ -83,6 +83,20 @@ sub test_lines_append__value_without_comment() {
 	is_deeply($lines, ["VARNAME+=\tvalue appended"]);
 }
 
+sub test_lines_index() {
+	my $lines = ["1", "2", "345"];
+
+	is(lines_index($lines, "1"), 0);
+	is(lines_index($lines, "2"), 1);
+	is(lines_index($lines, "345"), 2);
+	is(lines_index($lines, "4"), 2);
+
+	is(lines_index($lines, qr"^(\d\d)\d$"), 2);
+	is(lines_index($lines, qr"^\d\s\d$"), -1);
+	is(lines_index($lines, qr"(\d)"), 0);
+	is($1, undef);  # capturing groups do not work here
+}
+
 sub test_generate_initial_package_Makefile_lines__GitHub_archive() {
 	my $url = "https://github.com/org/proj/archive/v1.0.0.tar.gz";
 
@@ -93,6 +107,7 @@ sub test_generate_initial_package_Makefile_lines__GitHub_archive() {
 		"",
 		"GITHUB_PROJECT=\tproj",
 		"DISTNAME=\tv1.0.0",
+		"PKGNAME=\t\${GITHUB_PROJECT}-\${DISTNAME:S,^v,,}",
 		"CATEGORIES=\tpkgtools",
 		"MASTER_SITES=\t\${MASTER_SITE_GITHUB:=org/}",
 		"DIST_SUBDIR=\t\${GITHUB_PROJECT}",
@@ -115,6 +130,7 @@ sub test_generate_initial_package_Makefile_lines__GitHub_release_containing_proj
 	is_deeply(\@lines, [
 		"# \$" . "NetBSD\$",
 		"",
+		"GITHUB_PROJECT=\tproj",
 		"DISTNAME=\tproj",
 		"CATEGORIES=\tpkgtools",
 		"MASTER_SITES=\t\${MASTER_SITE_GITHUB:=org/}",
@@ -157,6 +173,29 @@ sub test_generate_initial_package_Makefile_lines__GitHub_release_not_containing_
 	]);
 }
 
+sub test_generate_initial_package_Makefile_lines__distname_version_with_v() {
+	my $url = "https://cpan.example.org/Algorithm-CheckDigits-v1.3.2.tar.gz";
+
+	my @lines = generate_initial_package_Makefile_lines($url);
+
+	is_deeply(\@lines, [
+		"# \$" . "NetBSD\$",
+		"",
+		"DISTNAME=\tAlgorithm-CheckDigits-v1.3.2",
+		"PKGNAME=\t\${DISTNAME:S,-v,-,}",
+		"CATEGORIES=\tpkgtools",
+		"MASTER_SITES=\thttps://cpan.example.org/",
+		"",
+		"MAINTAINER=\tINSERT_YOUR_MAIL_ADDRESS_HERE",
+		"HOMEPAGE=\thttps://cpan.example.org/",
+		"COMMENT=\tTODO: Short description of the package",
+		"#LICENSE=\t# TODO: (see mk/license.mk)",
+		"",
+		"# url2pkg-marker (please do not remove this line.)",
+		".include \"../../mk/bsd.pkg.mk\""
+	]);
+}
+
 sub test_read_dependencies() {
 	my $cmd = "printf '%s\n' \"\$URL2PKG_DEPENDENCIES\"";
 	my @dep_lines = (
@@ -187,10 +226,28 @@ sub test_read_dependencies() {
 }
 
 sub set_up_test() {
+	no warnings 'once';
+
+	$main::distname = "";
+	$main::abs_wrkdir = "";
+	$main::abs_wrksrc = "";
+
+	@main::wrksrc_files = ();
+	@main::wrksrc_dirs = ();
+	@main::categories = ();
+
 	@main::depends = ();
 	@main::build_depends = ();
 	@main::test_depends = ();
 	@main::bl3_lines = ();
+	@main::includes = ();
+	@main::build_vars = ();
+	@main::extra_vars = ();
+	@main::todos = ();
+
+	$main::pkgname_prefix = "";
+	$main::pkgname_transform = "";
+	$main::regenerate_distinfo = 0;
 }
 
 sub t_main() {
