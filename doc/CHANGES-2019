@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3858 2019/09/12 16:55:30 bouyer Exp $
+$NetBSD: CHANGES-2019,v 1.3859 2019/09/12 17:02:07 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6294,7 +6294,8 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/KeePass to 2.43 [nia 2019-09-11]
 	Added devel/SOPE4 version 4.0.8 [tm 2019-09-11]
 	Updated net/radsecproxy to 1.8.0 [he 2019-09-11]
-	Updated www/SOGo4 to 4.0.8 [tm 2019-09-11]
+	Removed www/SOGo3 [tm 2019-09-11]
+	Added www/SOGo4 version 4.0.8 [tm 2019-09-11]
 	Updated net/youtube-dl to 20190901 [leot 2019-09-11]
 	Updated parallel/hwloc to 1.11.13 [adam 2019-09-11]
 	Updated geography/opencpn-plugin-watchdog to 2.4.6 [bouyer 2019-09-11]
