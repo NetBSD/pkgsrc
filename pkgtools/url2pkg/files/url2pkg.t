@@ -1,5 +1,5 @@
 # -*- perl -*-
-# $NetBSD: url2pkg.t,v 1.9 2019/09/12 05:45:34 rillig Exp $
+# $NetBSD: url2pkg.t,v 1.10 2019/09/12 18:23:00 rillig Exp $
 
 require "url2pkg.pl";
 
@@ -81,6 +81,22 @@ sub test_lines_append__value_without_comment() {
 	lines_append($lines, "VARNAME", "appended");
 
 	is_deeply($lines, ["VARNAME+=\tvalue appended"]);
+}
+
+sub test_lines_set__previously_with_comment() {
+	my $lines = ["LICENSE=\t# TODO: see mk/license.mk"];
+
+	lines_set($lines, "LICENSE", "\${PERL5_LICENSE}");
+
+	is_deeply($lines, ["LICENSE=\t\${PERL5_LICENSE}"]);
+}
+
+sub test_lines_set__not_found() {
+	my $lines = ["OLD_VAR=\told value # old comment"];
+
+	lines_set($lines, "NEW_VAR", "new value");
+
+	is_deeply($lines, ["OLD_VAR=\told value # old comment"]);
 }
 
 sub test_lines_index() {
@@ -243,6 +259,7 @@ sub set_up_test() {
 	@main::includes = ();
 	@main::build_vars = ();
 	@main::extra_vars = ();
+	%main::update_vars = ();
 	@main::todos = ();
 
 	$main::pkgname_prefix = "";

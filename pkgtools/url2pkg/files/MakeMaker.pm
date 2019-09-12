@@ -1,6 +1,6 @@
 # -*-perl-*-
 
-# Copyright (c) 2010 The NetBSD Foundation, Inc.
+# Copyright (c) 2010, 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
 #
 # This code is derived from software contributed to The NetBSD Foundation
@@ -37,7 +37,7 @@ package ExtUtils::MakeMaker;
 require 5.013002;
 
 use strict;
-use warnings;
+use warnings FATAL => 'all';
 
 my $url2pkg_pkgsrcdir = '@PKGSRCDIR@';
 
