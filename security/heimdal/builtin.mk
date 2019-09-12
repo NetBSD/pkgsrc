@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.15 2014/02/22 09:50:47 obache Exp $
+# $NetBSD: builtin.mk,v 1.16 2019/09/12 21:07:01 rillig Exp $
 
 BUILTIN_PKG:=	heimdal
 
@@ -118,7 +118,7 @@ MAKE_ENV+=	KRB5_CONFIG=${KRB5_CONFIG:Q}
 BUILDLINK_TARGETS+=	fake-krb5-config
 
 fake-krb5-config:
-	${_PKG_SILENT}${_PKG_DEBUG} \
+	${RUN} \
 	src=../../security/heimdal/files/krb5-config \
         dst=${BUILDLINK_DIR}/bin/krb5-config; \
 	${SED} -e s/@HEIMDAL_VERSION@/${BUILTIN_VERSION.heimdal}/ \
