@@ -1,5 +1,5 @@
 # -*- perl -*-
-# $NetBSD: url2pkg.t,v 1.6 2019/08/18 18:02:48 rillig Exp $
+# $NetBSD: url2pkg.t,v 1.7 2019/09/12 02:35:07 rillig Exp $
 
 require "url2pkg.pl";
 
@@ -157,22 +157,17 @@ sub test_generate_initial_package_Makefile_lines__GitHub_release_not_containing_
 	]);
 }
 
-sub test_all() {
+sub t_main() {
 	my $pkgsrcdir = $ENV{"PKGSRCDIR"} or die;
 	chdir("$pkgsrcdir/pkgtools/url2pkg") or die;
 
-	test_lines_add_vars__simple();
-	test_lines_add_vars__alignment();
-	test_lines_add_vars__operators();
-	test_lines_append__not_found();
-	test_lines_append__only_comment();
-	test_lines_append__value_with_comment();
-	test_lines_append__value_without_comment();
-	test_generate_initial_package_Makefile_lines__GitHub_archive();
-	test_generate_initial_package_Makefile_lines__GitHub_release_containing_project_name();
-	test_generate_initial_package_Makefile_lines__GitHub_release_not_containing_project_name();
+	no strict 'refs';
+	foreach my $testname (sort grep { $_ =~ qr"^test_" } keys %{"main::"}) {
+		my $testfunc = \&{"main::$testname"};
+		$testfunc->() if defined($testfunc);
+	}
 
 	done_testing();
 }
 
-test_all();
+t_main();
