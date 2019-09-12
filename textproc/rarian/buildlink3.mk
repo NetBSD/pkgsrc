@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:25:32 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2019/09/12 20:52:58 rillig Exp $
 
 BUILDLINK_TREE+=	rarian
 
@@ -10,8 +10,8 @@ BUILDLINK_PKGSRCDIR.rarian?=	../../textproc/rarian
 
 BUILDLINK_TARGETS+=	rarian-buildlink-fake
 
-rarian-buildlink-fake:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+rarian-buildlink-fake: .PHONY
+	${RUN}								\
 	for fake in scrollkeeper-update	scrollkeeper-rebuilddb		\
 	    rarian-sk-update rarian-sk-rebuild;				\
 	do								\
