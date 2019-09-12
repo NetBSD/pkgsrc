@@ -1,5 +1,5 @@
 # -*- perl -*-
-# $NetBSD: url2pkg.t,v 1.7 2019/09/12 02:35:07 rillig Exp $
+# $NetBSD: url2pkg.t,v 1.8 2019/09/12 04:18:28 rillig Exp $
 
 require "url2pkg.pl";
 
@@ -157,14 +157,51 @@ sub test_generate_initial_package_Makefile_lines__GitHub_release_not_containing_
 	]);
 }
 
+sub test_read_dependencies() {
+	my $cmd = "printf '%s\n' \"\$URL2PKG_DEPENDENCIES\"";
+	my @dep_lines = (
+		"DEPENDS\tpackage>=version:../../pkgtools/pkglint",
+		"DEPENDS\tpackage>=version:../../pkgtools/x11-links",
+		"BUILD_DEPENDS\turl2pkg>=1.0",
+		"TEST_DEPENDS\tpkglint",
+		"A line that is not a dependency at all",
+		""
+	);
+	my $env = { "URL2PKG_DEPENDENCIES" => join("\n", @dep_lines) };
+
+	read_dependencies($cmd, $env, "");
+
+	is($ENV{"URL2PKG_DEPENDENCIES"}, undef);
+	is_deeply(\@main::depends, [
+		"package>=version:../../pkgtools/pkglint"
+	]);
+	is_deeply(\@main::bl3_lines, [
+		".include \"../../pkgtools/x11-links/buildlink3.mk\""
+	]);
+	is_deeply(\@main::build_depends, [
+		"url2pkg>=1.0:../../pkgtools/url2pkg"
+	]);
+	is_deeply(\@main::test_depends, [
+		"pkglint>=0:../../pkgtools/pkglint"
+	]);
+}
+
+sub set_up_test() {
+	@main::depends = ();
+	@main::build_depends = ();
+	@main::test_depends = ();
+	@main::bl3_lines = ();
+}
+
 sub t_main() {
 	my $pkgsrcdir = $ENV{"PKGSRCDIR"} or die;
 	chdir("$pkgsrcdir/pkgtools/url2pkg") or die;
 
 	no strict 'refs';
 	foreach my $testname (sort grep { $_ =~ qr"^test_" } keys %{"main::"}) {
-		my $testfunc = \&{"main::$testname"};
-		$testfunc->() if defined($testfunc);
+		next if $testname eq "test_depends";  # it's an array
+		set_up_test();
+		&{"main::$testname"}();
 	}
 
 	done_testing();
