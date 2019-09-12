@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.98 2019/09/12 04:18:28 rillig Exp $
+# $NetBSD: Makefile,v 1.99 2019/09/12 05:49:03 rillig Exp $
 
 PKGNAME=	url2pkg-2.35
 CATEGORIES=	pkgtools
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	rillig@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/docs/pkgsrc/creating.html
 COMMENT=	Tool to automate initial steps in building a package
 LICENSE=	2-clause-bsd
