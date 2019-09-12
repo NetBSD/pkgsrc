@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.40 2019/02/03 14:03:54 taca Exp $
+# $NetBSD: Makefile.common,v 1.41 2019/09/12 21:01:07 rillig Exp $
 #
 # Ruby base distribution common definition
 # used by databases/ruby-gdbm/Makefile
@@ -63,8 +63,8 @@ PKGNAME?=		${RUBY_PKGPREFIX}-${RUBY_EXTNAME}-${RUBY_VERSION}
 DISTINFO_FILE=		${.CURDIR}/${RUBY_SRCDIR}/distinfo
 PATCHDIR=		${.CURDIR}/${RUBY_SRCDIR}/patches
 do-patch:
-	${_PKG_SILENT}${_PKG_DEBUG}	\
-	cd ${WRKSRC};			\
+	${RUN} \
+	cd ${WRKSRC}; \
 	for p in `${EGREP} -l '^\+\+\+ ext/${RUBY_EXTNAME}/' ${PATCHDIR}/patch-*`;do \
 		${SED} -e 's,^+++ ext/${RUBY_EXTNAME}/,+++ ,' $$p | \
 		${PATCH} ${PATCH_ARGS}; \
