@@ -180,7 +180,7 @@ func (l *Logger) shallBeLogged(format string) bool {
 //
 // See Logf for logging arbitrary messages.
 func (l *Logger) Diag(line *Line, level *LogLevel, format string, args ...interface{}) {
-	if l.Opts.ShowAutofix || l.Opts.Autofix {
+	if l.IsAutofix() {
 		// In these two cases, the only interesting diagnostics are those that can
 		// be fixed automatically. These are logged by Autofix.Apply.
 		l.suppressExpl = true
@@ -200,7 +200,7 @@ func (l *Logger) Diag(line *Line, level *LogLevel, format string, args ...interf
 	}
 
 	if l.Opts.ShowSource {
-		if !l.IsAutofix() && line != l.prevLine && level != Fatal {
+		if line != l.prevLine {
 			l.out.Separate()
 		}
 		l.showSource(line)

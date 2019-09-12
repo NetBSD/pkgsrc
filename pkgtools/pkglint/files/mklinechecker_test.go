@@ -1191,7 +1191,7 @@ func (s *Suite) Test_MkLineChecker_checkVarassignRightVaruse(c *check.C) {
 
 	t.CheckOutputLines(
 		"WARN: module.mk:2: Please use PREFIX instead of LOCALBASE.",
-		"NOTE: module.mk:2: The :Q operator isn't necessary for ${LOCALBASE} here.")
+		"NOTE: module.mk:2: The :Q modifier isn't necessary for ${LOCALBASE} here.")
 }
 
 func (s *Suite) Test_MkLineChecker_checkVarusePermissions(c *check.C) {
@@ -2275,7 +2275,7 @@ func (s *Suite) Test_MkLineChecker_checkVarUseQuoting__q_not_needed(c *check.C) 
 	G.Check(pkg)
 
 	t.CheckOutputLines(
-		"NOTE: ~/category/package/Makefile:6: The :Q operator isn't necessary for ${HOMEPAGE} here.")
+		"NOTE: ~/category/package/Makefile:6: The :Q modifier isn't necessary for ${HOMEPAGE} here.")
 }
 
 func (s *Suite) Test_MkLineChecker_checkVarUseQuoting__undefined_list_in_word_in_shell_command(c *check.C) {
