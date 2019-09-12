@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.7 2013/11/23 12:10:13 obache Exp $
+# $NetBSD: builtin.mk,v 1.8 2019/09/12 20:35:55 rillig Exp $
 
 BUILTIN_PKG:=	libdes
 
@@ -17,7 +17,7 @@ IS_BUILTIN.libdes=	no
 IS_BUILTIN.libdes=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.libdes
+MAKEVARS+=		IS_BUILTIN.libdes
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -31,10 +31,10 @@ USE_BUILTIN.libdes=	${IS_BUILTIN.libdes}
 .    if defined(BUILTIN_PKG.libdes) && \
         !empty(IS_BUILTIN.libdes:M[yY][eE][sS])
 USE_BUILTIN.libdes=	yes
-.      for _dep_ in ${BUILDLINK_API_DEPENDS.libdes}
+.      for dep in ${BUILDLINK_API_DEPENDS.libdes}
 .        if !empty(USE_BUILTIN.libdes:M[yY][eE][sS])
 USE_BUILTIN.libdes!=							\
-	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.libdes:Q}; then	\
+	if ${PKG_ADMIN} pmatch ${dep:Q} ${BUILTIN_PKG.libdes}; then	\
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\
@@ -44,7 +44,7 @@ USE_BUILTIN.libdes!=							\
 .    endif
 .  endif  # PREFER.libdes
 .endif
-MAKEVARS+=	USE_BUILTIN.libdes
+MAKEVARS+=		USE_BUILTIN.libdes
 
 ###
 ### The section below only applies if we are not including this file
@@ -60,9 +60,9 @@ BUILDLINK_TARGETS+=	buildlink-libdes-libdes-h
 .  if !target(buildlink-libdes-libdes-h)
 .PHONY: buildlink-libdes-libdes-h
 buildlink-libdes-libdes-h:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	src="/usr/include/des.h";					\
-	dest=${BUILDLINK_DIR:Q}"/include/libdes.h";			\
+	dest=${BUILDLINK_DIR}"/include/libdes.h";			\
 	if ${TEST} ! -f "$$dest" -a -f "$$src"; then			\
 		${MKDIR} -p `${DIRNAME} "$$dest"`;			\
 		${LN} -fs "$$src" "$$dest";				\
