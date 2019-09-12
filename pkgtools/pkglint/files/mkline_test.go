@@ -648,7 +648,7 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__eval_shell(c *check.C) {
 	MkLineChecker{mklines, mklines.mklines[1]}.checkVarassign()
 
 	t.CheckOutputLines(
-		"NOTE: builtin.mk:2: The :Q operator isn't necessary for ${BUILTIN_PKG.Xfixes} here.")
+		"NOTE: builtin.mk:2: The :Q modifier isn't necessary for ${BUILTIN_PKG.Xfixes} here.")
 }
 
 func (s *Suite) Test_MkLine_VariableNeedsQuoting__command_in_single_quotes(c *check.C) {
@@ -930,7 +930,7 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__tool_in_CONFIGURE_ENV(c *check
 	// for invoking the tool properly (e.g. touch -t).
 	// Therefore, no quoting is necessary.
 	t.CheckOutputLines(
-		"NOTE: Makefile:3: The :Q operator isn't necessary for ${TOOLS_TAR} here.")
+		"NOTE: Makefile:3: The :Q modifier isn't necessary for ${TOOLS_TAR} here.")
 }
 
 func (s *Suite) Test_MkLine_VariableNeedsQuoting__backticks(c *check.C) {
@@ -1023,6 +1023,28 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__tool_in_shell_command(c *check
 
 	mklines.Check()
 
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_MkLine_VariableNeedsQuoting__D_and_U_modifiers(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+
+	mklines := t.SetUpFileMkLines("Makefile",
+		MkCvsID,
+		"",
+		"SUBST_CLASSES+=\t\turl2pkg",
+		"SUBST_STAGE.url2pkg=\tpost-configure",
+		"SUBST_FILES.url2pkg=\t*.in",
+		"SUBST_SED.url2pkg=\t-e 's,@PKGSRCDIR@,${BATCH:D/usr/pkg:U${PKGSRCDIR}},'")
+
+	mklines.Check()
+
+	// Since the value of the BATCH variable does not appear in the output,
+	// there should be no warning saying that "BATCH should be quoted".
+	// If any, the variable PKGSRCDIR should be quoted, but that is a safe
+	// variable since it is a pkgsrc-specific directory.
 	t.CheckOutputEmpty()
 }
 
