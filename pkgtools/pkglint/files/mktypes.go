@@ -159,3 +159,12 @@ func (vu *MkVarUse) IsQ() bool {
 	mlen := len(vu.modifiers)
 	return mlen > 0 && vu.modifiers[mlen-1].IsQ()
 }
+
+func (vu *MkVarUse) HasModifier(prefix string) bool {
+	for _, mod := range vu.modifiers {
+		if hasPrefix(mod.Text, prefix) {
+			return true
+		}
+	}
+	return false
+}

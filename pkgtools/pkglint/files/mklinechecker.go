@@ -847,11 +847,11 @@ func (ck MkLineChecker) checkVarUseQuoting(varUse *MkVarUse, vartype *Vartype, v
 	mod := varUse.Mod()
 
 	// In GNU configure scripts, a few variables need to be passed through
-	// the :M* operator before they reach the configure scripts. Otherwise
+	// the :M* modifier before they reach the configure scripts. Otherwise
 	// the leading or trailing spaces will lead to strange caching errors
 	// since the GNU configure scripts cannot handle these space characters.
 	//
-	// When doing checks outside a package, the :M* operator is needed for safety.
+	// When doing checks outside a package, the :M* modifier is needed for safety.
 	needMstar := (G.Pkg == nil || G.Pkg.vars.Defined("GNU_CONFIGURE")) &&
 		matches(varname, `^(?:.*_)?(?:CFLAGS|CPPFLAGS|CXXFLAGS|FFLAGS|LDFLAGS|LIBS)$`)
 
@@ -958,9 +958,9 @@ func (ck MkLineChecker) checkVarUseQuoting(varUse *MkVarUse, vartype *Vartype, v
 		good := "${" + varname + strings.TrimSuffix(mod, ":Q") + "}"
 
 		fix := mkline.Line.Autofix()
-		fix.Notef("The :Q operator isn't necessary for ${%s} here.", varname)
+		fix.Notef("The :Q modifier isn't necessary for ${%s} here.", varname)
 		fix.Explain(
-			"Many variables in pkgsrc do not need the :Q operator since they",
+			"Many variables in pkgsrc do not need the :Q modifier since they",
 			"are not expected to contain whitespace or other special characters.",
 			"Examples for these \"safe\" variables are:",
 			"",

@@ -1071,3 +1071,15 @@ func (s *Suite) Test_SeparatorWriter_Separate(c *check.C) {
 
 	t.CheckEquals(sb.String(), "a\n\nc\n")
 }
+
+func (s *Suite) Test_SeparatorWriter_Separate__at_the_beginning(c *check.C) {
+	t := s.Init(c)
+
+	var sb strings.Builder
+	wr := NewSeparatorWriter(&sb)
+
+	wr.Separate()
+	wr.WriteLine("a")
+
+	t.CheckEquals(sb.String(), "a\n")
+}
