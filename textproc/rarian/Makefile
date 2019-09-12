@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/09/04 18:08:29 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/09/12 20:52:58 rillig Exp $
 #
 
 DISTNAME=	rarian-0.8.1
@@ -20,7 +20,7 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash:run
 
-CONFIGURE_ENV+=	ac_cv_path_have_bash=${TOOLS_BASH:Q}
+CONFIGURE_ENV+=	ac_cv_path_have_bash=${TOOLS_BASH}
 
 PKGCONFIG_OVERRIDE+=	rarian.pc.in
 
