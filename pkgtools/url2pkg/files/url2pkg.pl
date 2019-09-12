@@ -1,5 +1,5 @@
 #! @PERL5@
-# $NetBSD: url2pkg.pl,v 1.68 2019/09/12 05:45:34 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.69 2019/09/12 05:56:59 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -29,7 +29,6 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-use feature qw{ switch };
 use strict;
 use warnings;
 
@@ -719,19 +718,18 @@ sub adjust_package_from_extracted_distfiles($)
 	#
 	# Determine the value of WRKSRC.
 	#
+
 	my @files = ();
 	opendir(WRKDIR, $abs_wrkdir) or die;
 	while (defined(my $f = readdir(WRKDIR))) {
-		no if $] >= 5.018, warnings => "experimental::smartmatch";
-		given ($f) {
-			next when qr"^\.";
-			next when "pax_global_header";
-			next when "package.xml";
-			next when qr".*\.gemspec";
-			default { push(@files, $f) }
-		}
+		next if $f =~ qr"^\."
+			|| $f eq "pax_global_header"
+			|| $f eq "package.xml"
+			|| $f =~ qr"\.gemspec$";
+		push(@files, $f);
 	}
 	closedir(WRKDIR);
+
 	if (@files == 1) {
 		if ($files[0] ne $distname) {
 			push(@build_vars, var("WRKSRC", "=", "\${WRKDIR}/$files[0]"));
@@ -743,8 +741,8 @@ sub adjust_package_from_extracted_distfiles($)
 		$abs_wrksrc = $abs_wrkdir;
 	}
 
-	chomp(@wrksrc_files = `cd "$abs_wrksrc" && find * -type f`);
-	chomp(@wrksrc_dirs = `cd "$abs_wrksrc" && find * -type d`);
+	chomp(@wrksrc_files = `cd "$abs_wrksrc" && find * -type f -print`);
+	chomp(@wrksrc_dirs = `cd "$abs_wrksrc" && find * -type d -print`);
 
 	adjust_configure();
 	adjust_cmake();
