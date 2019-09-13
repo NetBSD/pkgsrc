@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3888 2019/09/13 13:43:49 rillig Exp $
+$NetBSD: CHANGES-2019,v 1.3889 2019/09/13 14:12:30 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6362,3 +6362,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/dhcpcd to 8.0.6 [roy 2019-09-13]
 	Removed mail/seamonkey-enigmail [nia 2019-09-13]
 	Updated pkgtools/texlive2pkg to 1.8 [rillig 2019-09-13]
+	Updated time/p5-DateTime-Calendar-Julian to 0.101 [wen 2019-09-13]
