@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3883 2019/09/13 10:47:53 roy Exp $
+$NetBSD: CHANGES-2019,v 1.3884 2019/09/13 11:03:11 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6357,3 +6357,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed chat/gnomeicu [nia 2019-09-13]
 	Updated net/uftp to 4.10 [nia 2019-09-13]
 	Updated net/dhcpcd to 8.0.5 [roy 2019-09-13]
+	Updated net/mosquitto to 1.6.5 [gdt 2019-09-13]
