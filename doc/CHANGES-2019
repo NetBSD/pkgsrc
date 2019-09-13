@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3873 2019/09/13 08:33:12 wen Exp $
+$NetBSD: CHANGES-2019,v 1.3874 2019/09/13 08:36:47 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6347,3 +6347,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ccache to 3.7.4 [adam 2019-09-13]
 	Updated databases/p5-DBIx-Class-Helpers to 2.034000 [wen 2019-09-13]
 	Updated databases/p5-SQL-Translator to 1.60 [wen 2019-09-13]
+	Updated devel/p5-Array-Compare to 3.0.3 [wen 2019-09-13]
