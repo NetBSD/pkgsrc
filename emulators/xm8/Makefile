@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/09/07 00:36:34 tsutsui Exp $
+# $NetBSD: Makefile,v 1.2 2019/09/13 13:13:31 nia Exp $
 
 VERSION=		1.70
 DISTNAME=		xm8_${VERSION:S/.//}
@@ -17,7 +17,7 @@ EXTRACT_DIR=		${WRKDIR}/${DISTNAME}
 WRKSRC=			${EXTRACT_DIR}
 
 USE_TOOLS+=		gmake unzip
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 NO_CONFIGURE=		YES
 
 INSTALLATION_DIRS+=	bin share/doc/xm8
