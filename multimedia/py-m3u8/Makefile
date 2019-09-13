@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2019/08/21 10:17:15 adam Exp $
+# $NetBSD: Makefile,v 1.14 2019/09/13 08:05:46 adam Exp $
 
-DISTNAME=	m3u8-0.3.12
+DISTNAME=	m3u8-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	multimedia python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/m3u8/}
