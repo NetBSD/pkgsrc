@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.269 2019/07/21 20:14:06 rillig Exp $
+# $NetBSD: bootstrap,v 1.270 2019/09/13 19:53:03 rillig Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -380,8 +380,8 @@ checkarg_no_symlink_path()
 	Given path   : $1
 	Resolved path: $_realdir${1##${_dir}}
 
-	Several packages assume that the given path of $2 stays the same when
-	symlinks are resolved. When that assumption fails, they will:
+	Several packages assume that the given path of $2 stays the same
+	when symlinks are resolved. When that assumption fails, they will:
 
 	* not find some include files or libraries during the build phase
 	  since the files from dependencies are not installed in
