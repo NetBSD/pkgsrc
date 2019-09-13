@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 00:35:42 agc Exp $
+$NetBSD: distinfo,v 1.4 2019/09/13 10:42:05 nia Exp $
 
-SHA1 (uftp-4.1.2.tar) = 11191127cc3716599a2554cfcc18329487757067
-RMD160 (uftp-4.1.2.tar) = eb8fdae3648de86976177fbf805099a43cff37ec
-SHA512 (uftp-4.1.2.tar) = eaa8a27a6deec81e8f4ca96e75c59b86df52c649225f789eeba9da32bd6743fbbdb8c39475f945d55405cd8a39b3b6bbbee297cd06fd91ad4f8f5ecd95f3b7c3
-Size (uftp-4.1.2.tar) = 1198080 bytes
-SHA1 (patch-makefile) = 116a202412b40076734caf3500566c60d31f33d0
-SHA1 (patch-uftp_common.c) = 87d3a6e4b1216d3cd81a55441412811152f0de3d
+SHA1 (uftp-4.10.tar.gz) = 535617c3c8e9ec87bfe67bf49ee728b70dc0b3e8
+RMD160 (uftp-4.10.tar.gz) = 1f4060bb04e2fcceb3d1d610883f26612aaead26
+SHA512 (uftp-4.10.tar.gz) = 204d1fa6134ca7481d2594cd0353cb53e84c5f25c28541a3b1f079ad86caea5cba056bf2a95a146c79df340bdc9c953c9333f8660991ae452c7fca4d7388bf7a
+Size (uftp-4.10.tar.gz) = 245436 bytes
+SHA1 (patch-makefile) = 407fe785876d34900e74c29583f0dce241eebcce
