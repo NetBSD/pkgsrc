@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3885 2019/09/13 11:56:32 tsutsui Exp $
+$NetBSD: CHANGES-2019,v 1.3886 2019/09/13 12:02:06 roy Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6359,3 +6359,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/dhcpcd to 8.0.5 [roy 2019-09-13]
 	Updated net/mosquitto to 1.6.5 [gdt 2019-09-13]
 	Updated multimedia/adobe-flash-player to 32.0.0.255 [tsutsui 2019-09-13]
+	Updated net/dhcpcd to 8.0.6 [roy 2019-09-13]
