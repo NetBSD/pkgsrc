@@ -1,5 +1,5 @@
 # -*- perl -*-
-# $NetBSD: url2pkg.t,v 1.11 2019/09/13 06:22:33 rillig Exp $
+# $NetBSD: url2pkg.t,v 1.12 2019/09/13 13:31:39 rillig Exp $
 
 require "url2pkg.pl";
 
@@ -8,13 +8,13 @@ use Test::More;
 use strict;
 use warnings;
 
-sub test_lines_add_vars__simple() {
-	my $lines = [];
+sub test_Lines_add_vars__simple() {
+	my $lines = Lines->new();
 
-	lines_add_vars($lines, [
+	$lines->add_vars(
 		var("1", "=", "one"),
 		var("6", "=", "six"),
-	]);
+	);
 
 	is_deeply($lines, [
 		"1=\tone",
@@ -23,13 +23,13 @@ sub test_lines_add_vars__simple() {
 	]);
 }
 
-sub test_lines_add_vars__alignment() {
-	my $lines = [];
+sub test_Lines_add_vars__alignment() {
+	my $lines = Lines->new();
 
-	lines_add_vars($lines, [
+	$lines->add_vars(
 		var("short", "=", "value"),
 		var("long_name", "=", "value # comment"),
-	]);
+	);
 
 	is_deeply($lines, [
 		"short=\t\tvalue",
@@ -38,12 +38,12 @@ sub test_lines_add_vars__alignment() {
 	]);
 }
 
-sub test_lines_add_vars__operators() {
-	my $lines = [];
+sub test_Lines_add_vars__operators() {
+	my $lines = Lines->new();
 
-	lines_add_vars($lines, [
+	$lines->add_vars(
 		var("123456", "+=", "value"),
-	]);
+	);
 
 	is_deeply($lines, [
 		"123456+=\tvalue",
@@ -51,86 +51,97 @@ sub test_lines_add_vars__operators() {
 	]);
 }
 
-sub test_lines_append__not_found() {
-	my $lines = [];
+sub test_Lines_add_vars__empty() {
+	my $lines = Lines->new("# initial");
 
-	lines_append($lines, "VARNAME", "value");
+	$lines->add_vars();
+
+	# No empty line is added.
+	is_deeply($lines, [
+		"# initial"
+	]);
+}
+
+sub test_Lines_append__not_found() {
+	my $lines = Lines->new();
+
+	$lines->append("VARNAME", "value");
 
 	is_deeply($lines, []);
 }
 
-sub test_lines_append__only_comment() {
-	my $lines = ["VARNAME=\t\t\t# none"];
+sub test_Lines_append__only_comment() {
+	my $lines = Lines->new("VARNAME=\t\t\t# none");
 
-	lines_append($lines, "VARNAME", "value");
+	$lines->append("VARNAME", "value");
 
 	is_deeply($lines, ["VARNAME=\t\t\tvalue # none"]);
 }
 
-sub test_lines_append__value_with_comment() {
-	my $lines = ["VARNAME=\tvalue # comment"];
+sub test_Lines_append__value_with_comment() {
+	my $lines = Lines->new("VARNAME=\tvalue # comment");
 
-	lines_append($lines, "VARNAME", "appended");
+	$lines->append("VARNAME", "appended");
 
 	is_deeply($lines, ["VARNAME=\tvalue appended # comment"]);
 }
 
-sub test_lines_append__value_without_comment() {
-	my $lines = ["VARNAME+=\tvalue"];
+sub test_Lines_append__value_without_comment() {
+	my $lines = Lines->new("VARNAME+=\tvalue");
 
-	lines_append($lines, "VARNAME", "appended");
+	$lines->append("VARNAME", "appended");
 
 	is_deeply($lines, ["VARNAME+=\tvalue appended"]);
 }
 
-sub test_lines_set__previously_with_comment() {
-	my $lines = ["LICENSE=\t# TODO: see mk/license.mk"];
+sub test_Lines_set__previously_with_comment() {
+	my $lines = Lines->new("LICENSE=\t# TODO: see mk/license.mk");
 
-	lines_set($lines, "LICENSE", "\${PERL5_LICENSE}");
+	$lines->set("LICENSE", "\${PERL5_LICENSE}");
 
 	is_deeply($lines, ["LICENSE=\t\${PERL5_LICENSE}"]);
 }
 
-sub test_lines_set__not_found() {
-	my $lines = ["OLD_VAR=\told value # old comment"];
+sub test_Lines_set__not_found() {
+	my $lines = Lines->new("OLD_VAR=\told value # old comment");
 
-	lines_set($lines, "NEW_VAR", "new value");
+	$lines->set("NEW_VAR", "new value");
 
 	is_deeply($lines, ["OLD_VAR=\told value # old comment"]);
 }
 
-sub test_lines_index() {
-	my $lines = ["1", "2", "345"];
+sub test_Lines_index() {
+	my $lines = Lines->new("1", "2", "345");
 
-	is(lines_index($lines, "1"), 0);
-	is(lines_index($lines, "2"), 1);
-	is(lines_index($lines, "345"), 2);
-	is(lines_index($lines, "4"), 2);
+	is($lines->index("1"), 0);
+	is($lines->index("2"), 1);
+	is($lines->index("345"), 2);
+	is($lines->index("4"), 2);
 
-	is(lines_index($lines, qr"^(\d\d)\d$"), 2);
-	is(lines_index($lines, qr"^\d\s\d$"), -1);
-	is(lines_index($lines, qr"(\d)"), 0);
+	is($lines->index(qr"^(\d\d)\d$"), 2);
+	is($lines->index(qr"^\d\s\d$"), -1);
+	is($lines->index(qr"(\d)"), 0);
 	is($1, undef);  # capturing groups do not work here
 }
 
-sub test_lines_get() {
-	my $lines = [
+sub test_Lines_get() {
+	my $lines = Lines->new(
 		"VAR=value",
 		"VAR=\tvalue # comment",
 		"UNIQUE=\tunique"
-	];
+	);
 
-	is(lines_get($lines, "VAR"), "");     # too many values
-	is(lines_get($lines, "ENOENT"), "");  # no value at all
-	is(lines_get($lines, "UNIQUE"), "unique");
+	is($lines->get("VAR"), "");     # too many values
+	is($lines->get("ENOENT"), "");  # no value at all
+	is($lines->get("UNIQUE"), "unique");
 }
 
 sub test_generate_initial_package_Makefile_lines__GitHub_archive() {
 	my $url = "https://github.com/org/proj/archive/v1.0.0.tar.gz";
 
-	my @lines = generate_initial_package_Makefile_lines($url);
+	my $lines = generate_initial_package_Makefile_lines($url);
 
-	is_deeply(\@lines, [
+	is_deeply($lines, [
 		"# \$" . "NetBSD\$",
 		"",
 		"GITHUB_PROJECT=\tproj",
@@ -153,9 +164,9 @@ sub test_generate_initial_package_Makefile_lines__GitHub_archive() {
 sub test_generate_initial_package_Makefile_lines__GitHub_release_containing_project_name() {
 	my $url = "https://github.com/org/proj/releases/download/1.0.0/proj.zip";
 
-	my @lines = generate_initial_package_Makefile_lines($url);
+	my $lines = generate_initial_package_Makefile_lines($url);
 
-	is_deeply(\@lines, [
+	is_deeply($lines, [
 		"# \$" . "NetBSD\$",
 		"",
 		"GITHUB_PROJECT=\tproj",
@@ -178,9 +189,9 @@ sub test_generate_initial_package_Makefile_lines__GitHub_release_containing_proj
 sub test_generate_initial_package_Makefile_lines__GitHub_release_not_containing_project_name() {
 	my $url = "https://github.com/org/proj/releases/download/1.0.0/data.zip";
 
-	my @lines = generate_initial_package_Makefile_lines($url);
+	my $lines = generate_initial_package_Makefile_lines($url);
 
-	is_deeply(\@lines, [
+	is_deeply($lines, [
 		"# \$" . "NetBSD\$",
 		"",
 		"GITHUB_PROJECT=\tproj",
@@ -204,9 +215,9 @@ sub test_generate_initial_package_Makefile_lines__GitHub_release_not_containing_
 sub test_generate_initial_package_Makefile_lines__distname_version_with_v() {
 	my $url = "https://cpan.example.org/Algorithm-CheckDigits-v1.3.2.tar.gz";
 
-	my @lines = generate_initial_package_Makefile_lines($url);
+	my $lines = generate_initial_package_Makefile_lines($url);
 
-	is_deeply(\@lines, [
+	is_deeply($lines, [
 		"# \$" . "NetBSD\$",
 		"",
 		"DISTNAME=\tAlgorithm-CheckDigits-v1.3.2",
