@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/01/20 13:20:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/09/13 09:53:30 adam Exp $
 bin/waitress-serve-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -28,6 +28,9 @@ ${PYSITELIB}/waitress/compat.pyo
 ${PYSITELIB}/waitress/parser.py
 ${PYSITELIB}/waitress/parser.pyc
 ${PYSITELIB}/waitress/parser.pyo
+${PYSITELIB}/waitress/proxy_headers.py
+${PYSITELIB}/waitress/proxy_headers.pyc
+${PYSITELIB}/waitress/proxy_headers.pyo
 ${PYSITELIB}/waitress/receiver.py
 ${PYSITELIB}/waitress/receiver.pyc
 ${PYSITELIB}/waitress/receiver.pyo
@@ -98,6 +101,9 @@ ${PYSITELIB}/waitress/tests/test_init.pyo
 ${PYSITELIB}/waitress/tests/test_parser.py
 ${PYSITELIB}/waitress/tests/test_parser.pyc
 ${PYSITELIB}/waitress/tests/test_parser.pyo
+${PYSITELIB}/waitress/tests/test_proxy_headers.py
+${PYSITELIB}/waitress/tests/test_proxy_headers.pyc
+${PYSITELIB}/waitress/tests/test_proxy_headers.pyo
 ${PYSITELIB}/waitress/tests/test_receiver.py
 ${PYSITELIB}/waitress/tests/test_receiver.pyc
 ${PYSITELIB}/waitress/tests/test_receiver.pyo
