@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2017/06/07 14:42:23 ryoon Exp $
+$NetBSD: distinfo,v 1.6 2019/09/13 08:44:18 wen Exp $
 
-SHA1 (Array-Diff-0.07.tar.gz) = 04d5f087941816367c8f9ceb446a18ce6cf41f21
-RMD160 (Array-Diff-0.07.tar.gz) = 7d127b259814e97f34cc1d71810bef603795af21
-SHA512 (Array-Diff-0.07.tar.gz) = a918c17538599899ed5651804117de080918941727e21f752f435a0e0222a25ac7f653e9affce76ccafb8c3eb4d4e73666eeae20542adf5664fb6341b2745f6e
-Size (Array-Diff-0.07.tar.gz) = 52126 bytes
+SHA1 (Array-Diff-0.09.tar.gz) = 2c76a2e9caea3ba780236182b8c33531a343706d
+RMD160 (Array-Diff-0.09.tar.gz) = 4336d21ef2ba127fcb0bac8a2c09097e44bf78f1
+SHA512 (Array-Diff-0.09.tar.gz) = acfa2e47f39f2af5a04b59c3c708349e603295cf12c699ecbd9184c975e2cdb5edacbafc15c61c976c73ce459e3d2d5ea99fc50c2e4e2e56132dd1c3794e5e6c
+Size (Array-Diff-0.09.tar.gz) = 11335 bytes
 SHA1 (patch-Makefile.PL) = 2941300f4fc383f48d846acdc6f4dfe75f78c5af
