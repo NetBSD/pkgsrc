@@ -1,12 +1,12 @@
-$NetBSD: patch-lib_Munin_Common_Defaults.pm,v 1.1 2019/09/09 12:21:44 tm Exp $
+$NetBSD: patch-lib_Munin_Common_Defaults.pm,v 1.2 2019/09/13 08:21:08 jperkin Exp $
 
 Initialize default paths for all Munin components.
 
---- common/lib/Munin/Common/Defaults.pm.orig	2014-11-24 21:46:24.000000000 +0000
+--- common/lib/Munin/Common/Defaults.pm.orig	2019-05-09 03:45:43.000000000 +0000
 +++ common/lib/Munin/Common/Defaults.pm
 @@ -18,25 +18,25 @@ my $COMPONENT_ROOT = dirname(__FILE__) .
  our $DROPDOWNLIMIT     = 1;
-
+ 
  our $MUNIN_PREFIX     = '';
 -our $MUNIN_CONFDIR    = "$COMPONENT_ROOT/t/config/";
 +our $MUNIN_CONFDIR    = '@PKG_SYSCONFDIR@/';
@@ -21,13 +21,13 @@ Initialize default paths for all Munin components.
 +our $MUNIN_CGIDIR     = '@MUNIN_WWWDIR@/cgi-bin';
  our $MUNIN_CGITMPDIR     = '';
 -our $MUNIN_DBDIR      = '';
--our $MUNIN_PLUGSTATE  = '';
+-our $MUNIN_PLUGSTATE  = ''; 
 +our $MUNIN_DBDIR      = '@MUNIN_DBDIR@';
 +our $MUNIN_PLUGSTATE  = '@MUNIN_PLUGSTATE@';
  our $MUNIN_SPOOLDIR   = '';
  our $MUNIN_MANDIR     = '';
 -our $MUNIN_LOGDIR     = "$COMPONENT_ROOT/log/";
--our $MUNIN_STATEDIR   = '';
+-our $MUNIN_STATEDIR   = ''; 
 +our $MUNIN_LOGDIR     = '@MUNIN_LOGDIR@/';
 +our $MUNIN_STATEDIR   = '@MUNIN_STATEDIR@';
  our $MUNIN_USER       = getpwuid $UID;
