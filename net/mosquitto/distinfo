@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.2 2019/08/01 23:40:40 gdt Exp $
+$NetBSD: distinfo,v 1.3 2019/09/13 00:27:31 gdt Exp $
 
-SHA1 (mosquitto-1.6.4.tar.gz) = b0e9db2d382f51aa34bef3867605049648205f6b
-RMD160 (mosquitto-1.6.4.tar.gz) = 07cacc90642ba16e4dd03207f85312ebdaab622e
-SHA512 (mosquitto-1.6.4.tar.gz) = 9faf035660965769f687eb85f9672f891d6ecf1069f665c039b3c25f0e1cc64653909b16d94101d31f81d016a2b3ff85585d66dad1f48afb8003cffbf67c52b6
-Size (mosquitto-1.6.4.tar.gz) = 576040 bytes
+SHA1 (mosquitto-1.6.5.tar.gz) = c93776837e2234cd4392514168323567e4cec4bd
+RMD160 (mosquitto-1.6.5.tar.gz) = 7712eb217141e320b0c4e7efce70fd5d0b95cc2c
+SHA512 (mosquitto-1.6.5.tar.gz) = 01235616c0f90e999a696fa45dc51bea295b638d4304dd8ad9a83200d3d7a21b15ad48da4bb0b6d119a7f4ba2310bed7db7e3d9d52b883c5d42f0b230b165009
+Size (mosquitto-1.6.5.tar.gz) = 588828 bytes
 SHA1 (patch-CMakeLists.txt) = fb04da93970ccca17657021597b8311875473242
 SHA1 (patch-lib_CMakeLists.txt) = cddb8803a759820c8059028f924b56c22689ee54
 SHA1 (patch-lib_net__mosq.c) = a38294cdfea98f2da0879ea93373c5f04aebdb20
