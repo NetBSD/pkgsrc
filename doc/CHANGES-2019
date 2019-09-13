@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3868 2019/09/13 00:19:07 pgoyette Exp $
+$NetBSD: CHANGES-2019,v 1.3869 2019/09/13 03:06:25 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6341,3 +6341,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/p5-DBD-Mock to 1.49 [wen 2019-09-12]
 	Updated databases/p5-DBD-SQLite to 1.64 [wen 2019-09-12]
 	Updated sysutils/decode-dimms to 2019-09-03 [pgoyette 2019-09-13]
+	Updated www/moodle to 3.7.2 [wen 2019-09-13]
