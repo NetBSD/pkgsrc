@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3889 2019/09/13 14:12:30 wen Exp $
+$NetBSD: CHANGES-2019,v 1.3890 2019/09/13 14:17:27 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6363,3 +6363,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed mail/seamonkey-enigmail [nia 2019-09-13]
 	Updated pkgtools/texlive2pkg to 1.8 [rillig 2019-09-13]
 	Updated time/p5-DateTime-Calendar-Julian to 0.101 [wen 2019-09-13]
+	Updated textproc/p5-YAML-LibYAML to 0.80 [wen 2019-09-13]
