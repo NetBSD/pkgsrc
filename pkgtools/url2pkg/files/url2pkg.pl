@@ -1,5 +1,5 @@
 #! @PERL5@
-# $NetBSD: url2pkg.pl,v 1.72 2019/09/13 06:22:33 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.73 2019/09/13 13:31:39 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -64,30 +64,6 @@ sub var($$$) {
 	return [$name, $op, $value];
 }
 
-sub read_lines($) {
-	my ($filename) = @_;
-
-	my @lines;
-	open(F, "<", $filename) or return @lines;
-	while (defined(my $line = <F>)) {
-		chomp($line);
-		push(@lines, $line);
-	}
-	close(F) or die;
-	return @lines;
-}
-
-sub write_lines($@) {
-	my ($filename, @lines) = @_;
-
-	open(F, ">", "$filename.tmp") or die;
-	foreach my $line (@lines) {
-		print F "$line\n";
-	}
-	close(F) or die;
-	rename("$filename.tmp", $filename) or die;
-}
-
 sub find_package($) {
 	my ($pkgbase) = @_;
 
@@ -96,32 +72,81 @@ sub find_package($) {
 	return $candidates[0] =~ s/\Q$pkgsrcdir\E/..\/../r;
 }
 
+sub make(@) {
+	my @args = @_;
+
+	(system { $make } ($make, @args)) == 0 or die;
+}
+
+package Lines;
+
+use constant false => 0;
+use constant true => 1;
+
+sub new($@) {
+	my ($class, @lines) = @_;
+	my $lines = \@lines;
+	bless($lines, $class);
+	return $lines;
+}
+
+sub read_from($$) {
+	my ($class, $filename) = @_;
+
+	my $lines = Lines->new();
+	open(F, "<", $filename) or die;
+	while (defined(my $line = <F>)) {
+		chomp($line);
+		$lines->add($line);
+	}
+	close(F) or die;
+	return $lines;
+}
+
+sub write_to($@) {
+	my ($lines, $filename) = @_;
+
+	open(F, ">", "$filename.tmp") or die;
+	foreach my $line (@$lines) {
+		print F "$line\n";
+	}
+	close(F) or die;
+	rename("$filename.tmp", $filename) or die;
+}
+
+sub add($@) {
+	my ($lines, @lines) = @_;
+
+	push(@$lines, @lines);
+}
+
 # appends the given variable assignments to the lines, aligning the
 # variable values vertically.
-sub lines_add_vars($$) {
-	my ($lines, $vars) = @_;
+sub add_vars($@) {
+	my ($lines, @vars) = @_;
 
-	return if scalar(@$vars) == 0;
+	return if @vars == 0;
 
 	my $width = 0;
-	foreach my $var (@$vars) {
+	foreach my $var (@vars) {
 		my ($name, $op, $value) = @$var;
 		next if $value eq "";
 		my $len = (length("$name$op\t") + 7) & -8;
-		$width = ($len > $width) ? $len : $width;
+		$width = $len if $len > $width;
 	}
 
-	foreach my $var (@$vars) {
+	foreach my $var (@vars) {
 		my ($name, $op, $value) = @$var;
 		next if $value eq "";
 		my $tabs = "\t" x (($width - length("$name$op") + 7) / 8);
-		push(@$lines, "$name$op$tabs$value");
+		$lines->add("$name$op$tabs$value");
 	}
-	push(@$lines, "");
+
+	$lines->add("");
 }
 
 # changes the value of an existing variable in the lines.
-sub lines_set($$$) {
+sub set($$$) {
 	my ($lines, $varname, $new_value) = @_;
 
 	my $i = 0;
@@ -139,7 +164,7 @@ sub lines_set($$$) {
 }
 
 # appends to the value of an existing variable in the lines.
-sub lines_append($$$) {
+sub append($$$) {
 	my ($lines, $varname, $value) = @_;
 
 	return if $value eq "";
@@ -161,7 +186,7 @@ sub lines_append($$$) {
 }
 
 # removes a variable assignment from the lines.
-sub lines_remove($$) {
+sub remove($$) {
 	my ($lines, $varname) = @_;
 
 	my $i = 0;
@@ -178,7 +203,7 @@ sub lines_remove($$) {
 
 # returns the variable value from the only variable assignment, or an empty
 # string.
-sub lines_get($$) {
+sub get($$) {
 	my ($lines, $varname) = @_;
 
 	my $only_value = "";
@@ -193,10 +218,9 @@ sub lines_get($$) {
 	return $only_value;
 }
 
-
 # removes a variable assignment from the lines if its value is the
 # expected one.
-sub lines_remove_if($$$) {
+sub remove_if($$$) {
 	my ($lines, $varname, $expected_value) = @_;
 
 	my $i = 0;
@@ -215,7 +239,7 @@ sub lines_remove_if($$$) {
 	return false;
 }
 
-sub lines_index($$) {
+sub index($$) {
 	my ($lines, $re) = @_;
 
 	foreach my $i (0 .. $#$lines) {
@@ -224,11 +248,9 @@ sub lines_index($$) {
 	return -1;
 }
 
-sub make(@) {
-	my @args = @_;
+1;
 
-	(system { $make } ($make, @args)) == 0 or die;
-}
+package main;
 
 # The following adjust_* subroutines are called after the distfiles have
 # been downloaded and extracted. They inspect the extracted files
@@ -443,11 +465,11 @@ sub adjust_perl_module_Makefile_PL() {
 sub adjust_perl_module_homepage($) {
 	my ($url) = @_;
 
-	if (lines_get($makefile_lines, "MASTER_SITES") =~ qr"\$\{MASTER_SITE_PERL_CPAN:") {
-		my $homepage = lines_get($makefile_lines, "HOMEPAGE");
+	if ($makefile_lines->get("MASTER_SITES") =~ qr"\$\{MASTER_SITE_PERL_CPAN:") {
+		my $homepage = $makefile_lines->get("HOMEPAGE");
 		if ($homepage ne "" && index($url, $homepage) == 0) {
 			my $module_name = $distname =~ s/-v?[0-9].*//r =~ s/-/::/gr;
-			lines_set($makefile_lines, "HOMEPAGE", "https://metacpan.org/pod/$module_name");
+			$makefile_lines->set("HOMEPAGE", "https://metacpan.org/pod/$module_name");
 		}
 	}
 }
@@ -661,11 +683,11 @@ sub generate_initial_package_Makefile_lines($) {
 	my $pkgname = "$pkgname_prefix\${DISTNAME$pkgname_transform}";
 	$pkgname = "" if $pkgname eq "\${DISTNAME}";
 
-	my @lines;
-	push(@lines, "# \$" . "NetBSD\$");
-	push(@lines, "");
+	my $lines = Lines->new();
+	$lines->add("# \$" . "NetBSD\$");
+	$lines->add("");
 
-	lines_add_vars(\@lines, [
+	$lines->add_vars(
 		var("GITHUB_PROJECT", "=", $github_project),
 		var("DISTNAME", "=", $distname),
 		var("PKGNAME", "=", $pkgname),
@@ -674,28 +696,28 @@ sub generate_initial_package_Makefile_lines($) {
 		var("GITHUB_RELEASE", "=", $github_release),
 		var("EXTRACT_SUFX", "=", $extract_sufx),
 		var("DIST_SUBDIR", "=", $dist_subdir),
-	]);
+	);
 
-	lines_add_vars(\@lines, [
+	$lines->add_vars(
 		var("MAINTAINER", "=", get_maintainer()),
 		var("HOMEPAGE", "=", $homepage),
 		var("COMMENT", "=", "TODO: Short description of the package"),
 		var("#LICENSE", "=", "# TODO: (see mk/license.mk)"),
-	]);
+	);
 
-	push(@lines, "# url2pkg-marker (please do not remove this line.)");
-	push(@lines, ".include \"../../mk/bsd.pkg.mk\"");
+	$lines->add("# url2pkg-marker (please do not remove this line.)");
+	$lines->add(".include \"../../mk/bsd.pkg.mk\"");
 
-	return @lines;
+	return $lines;
 }
 
 sub generate_initial_package($) {
 	my ($url) = @_;
 
 	rename("Makefile", "Makefile-url2pkg.bak") or do {};
-	write_lines("Makefile", generate_initial_package_Makefile_lines($url));
-	write_lines("PLIST", "\@comment \$" . "NetBSD\$");
-	write_lines("DESCR", ());
+	generate_initial_package_Makefile_lines($url)->write_to("Makefile");
+	Lines->new("\@comment \$" . "NetBSD\$")->write_to("PLIST");
+	Lines->new()->write_to("DESCR");
 	run_editor("Makefile", 5);
 
 	make("distinfo");
@@ -705,41 +727,30 @@ sub generate_initial_package($) {
 sub adjust_lines_python_module($$) {
 	my ($lines, $url) = @_;
 
-	my @initial_lines = generate_initial_package_Makefile_lines($url);
-	my @current_lines = read_lines("Makefile");
+	my $initial_lines = generate_initial_package_Makefile_lines($url);
+	my $current_lines = Lines->read_from("Makefile");
 
-	my %old;
-	foreach my $line (@initial_lines) {
-		if ($line =~ qr"^(\w+)(\+?=)([ \t]+)([^#\\]*?)(\s*)(#.*|)$") {
-			my ($varname, $op, $indent, $value, $space_after_value, $comment) = ($1, $2, $3, $4, $5, $6);
-
-			if ($op eq "=") {
-				$old{$varname} = $value;
-			}
-		}
-	}
-
-	return unless $old{"CATEGORIES"} =~ qr"python";
-	my $pkgbase = $old{"GITHUB_PROJECT"};
-	return unless defined($pkgbase);
+	return unless $initial_lines->get("CATEGORIES") =~ qr"python";
+	my $pkgbase = $initial_lines->get("GITHUB_PROJECT");
+	return if $pkgbase eq "";
 	my $pkgbase1 = substr($pkgbase, 0, 1);
-	my $pkgversion_norev = $old{"DISTNAME"} =~ s/^v//r;
+	my $pkgversion_norev = $initial_lines->get("DISTNAME") =~ s/^v//r;
 
 	# don't risk to overwrite any changes made by the package developer.
-	if (join('\n', @current_lines) ne join('\n', @initial_lines)) {
+	if (join('\n', @$current_lines) ne join('\n', @$initial_lines)) {
 		splice(@$lines, -2, 0, "# TODO: Migrate MASTER_SITES to PYPI");
 		return;
 	}
 
-	my @lines = @$lines;
-	if (lines_remove(\@lines, "GITHUB_PROJECT")
-		&& lines_set(\@lines, "DISTNAME", "$pkgbase-$pkgversion_norev")
-		&& lines_set(\@lines, "PKGNAME", "\${PYPKGPREFIX}-\${DISTNAME}")
-		&& lines_set(\@lines, "MASTER_SITES", "\${MASTER_SITE_PYPI:=$pkgbase1/$pkgbase/}")
-		&& lines_remove(\@lines, "DIST_SUBDIR")
-		&& (lines_remove_if(\@lines, "EXTRACT_SUFX", ".zip") || true)) {
+	my $tx_lines = Lines->new(@$makefile_lines);
+	if ($tx_lines->remove("GITHUB_PROJECT")
+		&& $tx_lines->set("DISTNAME", "$pkgbase-$pkgversion_norev")
+		&& $tx_lines->set("PKGNAME", "\${PYPKGPREFIX}-\${DISTNAME}")
+		&& $tx_lines->set("MASTER_SITES", "\${MASTER_SITE_PYPI:=$pkgbase1/$pkgbase/}")
+		&& $tx_lines->remove("DIST_SUBDIR")
+		&& ($tx_lines->remove_if("EXTRACT_SUFX", ".zip") || true)) {
 
-		@$lines = @lines;
+		@$makefile_lines = @$tx_lines;
 		$regenerate_distinfo = true
 	}
 }
@@ -779,8 +790,7 @@ sub adjust_package_from_extracted_distfiles($) {
 	chomp(@wrksrc_files = `cd "$abs_wrksrc" && find * -type f -print`);
 	chomp(@wrksrc_dirs = `cd "$abs_wrksrc" && find * -type d -print`);
 
-	my @makefile_lines = read_lines("Makefile");
-	$makefile_lines = \@makefile_lines;
+	$makefile_lines = Lines->read_from("Makefile");
 
 	adjust_configure();
 	adjust_cmake();
@@ -794,51 +804,51 @@ sub adjust_package_from_extracted_distfiles($) {
 	adjust_po();
 	adjust_use_languages();
 
-	my $marker_index = lines_index($makefile_lines, qr"^# url2pkg-marker");
+	my $marker_index = $makefile_lines->index(qr"^# url2pkg-marker");
 	if ($marker_index == -1) {
 		die("$0: ERROR: didn't find the url2pkg marker in the Makefile.\n");
 	}
 
-	my @lines = @$makefile_lines[0 .. $marker_index - 1];
+	my $lines = Lines->new(@$makefile_lines[0 .. $marker_index - 1]);
 
-	if (lines_index(\@lines, qr"^PKGNAME=") == -1) {
-		my $distname_index = lines_index(\@lines, qr"^DISTNAME=(\t+)");
+	if ($lines->index(qr"^PKGNAME=") == -1) {
+		my $distname_index = $lines->index(qr"^DISTNAME=(\t+)");
 		if ($distname_index != -1) {
 			my $pkgname_line = "PKGNAME=\t$pkgname_prefix\${DISTNAME$pkgname_transform}";
-			splice(@lines, $distname_index + 1, 0, $pkgname_line);
+			splice(@$lines, $distname_index + 1, 0, $pkgname_line);
 		}
 	}
 
 	if (@todos) {
 		foreach my $todo (@todos) {
-			push(@lines, "# TODO: $todo");
+			$lines->add("# TODO: $todo");
 		}
-		push(@lines, "");
+		$lines->add("");
 	}
 
 	my @depend_vars;
 	push(@depend_vars, map { var("BUILD_DEPENDS", "+=", $_) } @build_depends);
 	push(@depend_vars, map { var("DEPENDS", "+=", $_) } @depends);
 	push(@depend_vars, map { var("TEST_DEPENDS", "+=", $_) } @test_depends);
-	lines_add_vars(\@lines, \@depend_vars);
+	$lines->add_vars(@depend_vars);
 
-	lines_add_vars(\@lines, \@build_vars);
-	lines_add_vars(\@lines, \@extra_vars);
+	$lines->add_vars(@build_vars);
+	$lines->add_vars(@extra_vars);
 
-	push(@lines, @bl3_lines);
-	push(@lines, map { $_ = ".include \"$_\"" } @includes);
+	$lines->add(@bl3_lines);
+	$lines->add(map { $_ = ".include \"$_\"" } @includes);
 
-	push(@lines, $makefile_lines->[$marker_index + 1 .. $#$makefile_lines]);
+	$lines->add($makefile_lines->[$marker_index + 1 .. $#$makefile_lines]);
 
-	lines_append(\@lines, "CATEGORIES", join(" ", @categories));
+	$lines->append("CATEGORIES", join(" ", @categories));
 
-	adjust_lines_python_module(\@lines, $url);
+	adjust_lines_python_module($lines, $url);
 
 	foreach my $varname (keys %update_vars) {
-		lines_set(\@lines, $varname, $update_vars{$varname});
+		$lines->set($varname, $update_vars{$varname});
 	}
 
-	write_lines("Makefile", @lines);
+	$lines->write_to("Makefile");
 
 	if ($regenerate_distinfo) {
 		make("distinfo");
