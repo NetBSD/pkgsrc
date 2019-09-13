@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2019/09/13 10:12:07 nia Exp $
+bin/melonDS
+share/applications/net.kuribo64.melonds.desktop
+share/icons/hicolor/128x128/apps/net.kuribo64.melonds.png
+share/icons/hicolor/16x16/apps/net.kuribo64.melonds.png
+share/icons/hicolor/256x256/apps/net.kuribo64.melonds.png
+share/icons/hicolor/32x32/apps/net.kuribo64.melonds.png
+share/icons/hicolor/48x48/apps/net.kuribo64.melonds.png
+share/icons/hicolor/64x64/apps/net.kuribo64.melonds.png
