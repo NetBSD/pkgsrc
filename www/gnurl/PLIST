@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/08/15 17:19:09 ng0 Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/09/13 15:48:50 ng0 Exp $
 bin/gnurl
 bin/gnurl-config
 include/gnurl/curl.h
@@ -56,6 +56,7 @@ man/man3/GNURLINFO_REDIRECT_TIME_T.3
 man/man3/GNURLINFO_REDIRECT_URL.3
 man/man3/GNURLINFO_REQUEST_SIZE.3
 man/man3/GNURLINFO_RESPONSE_CODE.3
+man/man3/GNURLINFO_RETRY_AFTER.3
 man/man3/GNURLINFO_RTSP_CLIENT_CSEQ.3
 man/man3/GNURLINFO_RTSP_CSEQ_RECV.3
 man/man3/GNURLINFO_RTSP_SERVER_CSEQ.3
@@ -282,6 +283,7 @@ man/man3/GNURLOPT_RTSP_SERVER_CSEQ.3
 man/man3/GNURLOPT_RTSP_SESSION_ID.3
 man/man3/GNURLOPT_RTSP_STREAM_URI.3
 man/man3/GNURLOPT_RTSP_TRANSPORT.3
+man/man3/GNURLOPT_SASL_AUTHZID.3
 man/man3/GNURLOPT_SASL_IR.3
 man/man3/GNURLOPT_SEEKDATA.3
 man/man3/GNURLOPT_SEEKFUNCTION.3
@@ -406,6 +408,7 @@ man/man3/gnurl_multi_fdset.3
 man/man3/gnurl_multi_info_read.3
 man/man3/gnurl_multi_init.3
 man/man3/gnurl_multi_perform.3
+man/man3/gnurl_multi_poll.3
 man/man3/gnurl_multi_remove_handle.3
 man/man3/gnurl_multi_setopt.3
 man/man3/gnurl_multi_socket.3
