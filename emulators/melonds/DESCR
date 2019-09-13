@@ -1,0 +1,11 @@
+melonDS aims at providing fast and accurate Nintendo DS emulation. While it
+is still a work in progress, it has a pretty solid set of features:
+
+* Nearly complete core (CPU, video, audio, ...)
+* OpenGL renderer, 3D upscaling
+* RTC, microphone, lid close/open
+* Joystick support
+* Savestates
+* Various display position/sizing/rotation modes
+* (WIP) Wifi: local multiplayer, online connectivity
+* and more are planned!
