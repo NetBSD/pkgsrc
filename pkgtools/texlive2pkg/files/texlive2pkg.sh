@@ -1,6 +1,6 @@
 #!/bin/sh
 # texlive2pkg
-# $NetBSD: texlive2pkg.sh,v 1.2 2019/08/27 06:21:18 markd Exp $
+# $NetBSD: texlive2pkg.sh,v 1.3 2019/09/13 13:43:30 rillig Exp $
 #
 # Copyright (c) 2016
 #       Mark Davies.  All rights reserved.
@@ -44,7 +44,7 @@ dodoc=0
 pkgurl=0
 docurl=0
 
-USAGE="${NAME} [-d] package-tarball [doc-tarball] -- create a texlive package for pkgsrc"
+usage="${NAME} [-d] package-tarball [doc-tarball] -- create a texlive package for pkgsrc"
 
 if [ "$1" = "-d" ]; then
   dodoc=1
@@ -60,7 +60,7 @@ elif [ ${#} -eq 2 ]; then
   pkgtarball=$1
   doctarball=$2
 else
-  echo ${USAGE}
+  echo "${usage}" 1>&2
   exit 1
 fi
 
@@ -74,7 +74,7 @@ file:/*.tar.xz | ftp:/*.tar.xz | http:/*.tar.xz | https:/*.tar.xz )
    pkgtarball=$PWD/$pkgtarball
    break ;;
 *)
-   echo ${USAGE}
+   echo "${usage}" 1>&2
    exit 1
 esac
 
@@ -90,7 +90,7 @@ file:/*.doc.tar.xz | ftp:/*.tar.xz | http:/*.doc.tar.xz | https:/*.doc.tar.xz )
    doctarball=$PWD/$doctarball
    break ;;
 *)
-   echo ${USAGE}
+   echo "${usage}" 1>&2
    exit 1
 esac
 
