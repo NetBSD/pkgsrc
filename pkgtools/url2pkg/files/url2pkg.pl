@@ -1,5 +1,5 @@
 #! @PERL5@
-# $NetBSD: url2pkg.pl,v 1.70 2019/09/12 18:23:00 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.71 2019/09/13 05:38:27 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -333,8 +333,8 @@ sub read_dependencies($$$) {
 			push(@dep_lines, [ $1, $2, $3 || ">=0", $4 || "" ]);
 		} elsif ($line =~ qr"^var\t(\S+)\t(.+)$") {
 			$main::update_vars{$1} = $2;
-		} else {
-			printf STDERR "url2pkg: unknown dependency line: %s\n", $line;
+		} elsif ($line ne "") {
+			printf STDERR "url2pkg: info: unknown dependency line: %s\n", $line;
 		}
 	}
 
@@ -716,15 +716,8 @@ sub adjust_lines_python_module($$) {
 	}
 }
 
-sub adjust_package_from_extracted_distfiles($) {
-	my ($url) = @_;
-
-	chomp($abs_wrkdir = `$make show-var VARNAME=WRKDIR`);
-
-	#
-	# Determine the value of WRKSRC.
-	#
-
+# sets $abs_wrksrc depending on $abs_wrkdir and the files found there.
+sub determine_wrksrc() {
 	my @files = ();
 	opendir(WRKDIR, $abs_wrkdir) or die;
 	while (defined(my $f = readdir(WRKDIR))) {
@@ -746,7 +739,13 @@ sub adjust_package_from_extracted_distfiles($) {
 		    ((@files > 1) ? " # More than one possibility -- please check manually." : "")));
 		$abs_wrksrc = $abs_wrkdir;
 	}
+}
 
+sub adjust_package_from_extracted_distfiles($) {
+	my ($url) = @_;
+
+	chomp($abs_wrkdir = `$make show-var VARNAME=WRKDIR`);
+	determine_wrksrc();
 	chomp(@wrksrc_files = `cd "$abs_wrksrc" && find * -type f -print`);
 	chomp(@wrksrc_dirs = `cd "$abs_wrksrc" && find * -type d -print`);
 
