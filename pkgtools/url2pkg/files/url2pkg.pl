@@ -1,5 +1,5 @@
 #! @PERL5@
-# $NetBSD: url2pkg.pl,v 1.71 2019/09/13 05:38:27 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.72 2019/09/13 06:22:33 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -32,10 +32,6 @@
 use strict;
 use warnings;
 
-#
-# Build-time Configuration.
-#
-
 my $make		= '@MAKE@';
 my $libdir		= '@LIBDIR@';
 my $pythonbin		= '@PYTHONBIN@';
@@ -43,10 +39,6 @@ my $pkgsrcdir		= '@PKGSRCDIR@';
 
 use constant true	=> 1;
 use constant false	=> 0;
-
-#
-# Some helper subroutines.
-#
 
 sub run_editor($$) {
 	my ($fname, $lineno) = @_;
@@ -134,7 +126,7 @@ sub lines_set($$$) {
 
 	my $i = 0;
 	foreach my $line (@$lines) {
-		if ($line =~ qr"^#?\Q$varname\E(\+?=)([ \t]+)([^#\\]*?)(\s*)(#.*|)$") {
+		if ($line =~ qr"^#?\Q$varname\E(\+?=)([ \t]*)([^#\\]*?)(\s*)(#.*|)$") {
 			my ($op, $indent, $old_value, $space_after_value, $comment) = ($1, $2, $3, $4, $5);
 
 			$lines->[$i] = "$varname$op$indent$new_value";
@@ -154,8 +146,8 @@ sub lines_append($$$) {
 
 	my $i = 0;
 	foreach my $line (@$lines) {
-		if ($line =~ qr"^\Q$varname\E(\+?=)([ \t]+)([^#\\]*)(#.*|)$") {
-			my ($op, $indent, $old_value, $comment) = ($1, $2, $3, $4);
+		if ($line =~ qr"^\Q$varname\E(\+?=)([ \t]*)([^#\\]*?)(\s*)(#.*|)$") {
+			my ($op, $indent, $old_value, $space_after_value, $comment) = ($1, $2, $3, $4, $5);
 
 			my $before = $old_value =~ qr"\S$" ? " " : "";
 			my $after = $comment eq "" ? "" : " ";
@@ -184,6 +176,24 @@ sub lines_remove($$) {
 	return false;
 }
 
+# returns the variable value from the only variable assignment, or an empty
+# string.
+sub lines_get($$) {
+	my ($lines, $varname) = @_;
+
+	my $only_value = "";
+	foreach my $line (@$lines) {
+		if ($line =~ qr"^\Q$varname\E(\+?=)([ \t]*)([^#\\]*?)(\s*)(#.*|)$") {
+			my ($op, $indent, $value, $space_after_value, $comment) = ($1, $2, $3, $4, $5);
+
+			return "" if $only_value ne "";
+			$only_value = $value;
+		}
+	}
+	return $only_value;
+}
+
+
 # removes a variable assignment from the lines if its value is the
 # expected one.
 sub lines_remove_if($$$) {
@@ -191,7 +201,7 @@ sub lines_remove_if($$$) {
 
 	my $i = 0;
 	foreach my $line (@$lines) {
-		if ($line =~ qr"^\Q$varname\E(\+?=)([ \t]+)([^#\\]*?)(\s*)(#.*|)$") {
+		if ($line =~ qr"^\Q$varname\E(\+?=)([ \t]*)([^#\\]*?)(\s*)(#.*|)$") {
 			my ($op, $indent, $old_value, $space_after_value, $comment) = ($1, $2, $3, $4, $5);
 
 			if ($old_value eq $expected_value) {
@@ -284,6 +294,9 @@ our @todos;
 # the package name is $pkgname_prefix${DISTNAME$pkgname_transform}.
 our $pkgname_prefix = "";     # example: ${PYPKGPREFIX}-
 our $pkgname_transform = "";  # example: :S,-v,-,
+
+# all lines of the package Makefile, for direct modification.
+our $makefile_lines;
 
 our $regenerate_distinfo = false;
 
@@ -427,7 +440,21 @@ sub adjust_perl_module_Makefile_PL() {
 	read_dependencies("cd '$abs_wrksrc' && perl -I$libdir -I. Makefile.PL", {}, "");
 }
 
-sub adjust_perl_module() {
+sub adjust_perl_module_homepage($) {
+	my ($url) = @_;
+
+	if (lines_get($makefile_lines, "MASTER_SITES") =~ qr"\$\{MASTER_SITE_PERL_CPAN:") {
+		my $homepage = lines_get($makefile_lines, "HOMEPAGE");
+		if ($homepage ne "" && index($url, $homepage) == 0) {
+			my $module_name = $distname =~ s/-v?[0-9].*//r =~ s/-/::/gr;
+			lines_set($makefile_lines, "HOMEPAGE", "https://metacpan.org/pod/$module_name");
+		}
+	}
+}
+
+sub adjust_perl_module($) {
+	my ($url) = @_;
+
 	if (-f "$abs_wrksrc/Build.PL") {
 		adjust_perl_module_Build_PL();
 	} elsif (-f "$abs_wrksrc/Makefile.PL") {
@@ -441,6 +468,7 @@ sub adjust_perl_module() {
 	push(@includes, "../../lang/perl5/module.mk");
 	$pkgname_prefix = "p5-";
 	push(@categories, "perl5");
+	adjust_perl_module_homepage($url);
 
 	unlink("PLIST") or do {};
 }
@@ -744,32 +772,34 @@ sub determine_wrksrc() {
 sub adjust_package_from_extracted_distfiles($) {
 	my ($url) = @_;
 
+	print("url2pkg> Adjusting the Makefile\n");
+
 	chomp($abs_wrkdir = `$make show-var VARNAME=WRKDIR`);
 	determine_wrksrc();
 	chomp(@wrksrc_files = `cd "$abs_wrksrc" && find * -type f -print`);
 	chomp(@wrksrc_dirs = `cd "$abs_wrksrc" && find * -type d -print`);
+
+	my @makefile_lines = read_lines("Makefile");
+	$makefile_lines = \@makefile_lines;
 
 	adjust_configure();
 	adjust_cmake();
 	adjust_meson();
 	adjust_gconf2_schemas();
 	adjust_libtool();
-	adjust_perl_module();
+	adjust_perl_module($url);
 	adjust_python_module();
 	adjust_cargo();
 	adjust_pkg_config();
 	adjust_po();
 	adjust_use_languages();
 
-	print("url2pkg> Adjusting the Makefile\n");
-
-	my @prev_lines = read_lines("Makefile");
-	my $marker_index = lines_index(\@prev_lines, qr"^# url2pkg-marker");
+	my $marker_index = lines_index($makefile_lines, qr"^# url2pkg-marker");
 	if ($marker_index == -1) {
 		die("$0: ERROR: didn't find the url2pkg marker in the Makefile.\n");
 	}
 
-	my @lines = @prev_lines[0 .. $marker_index - 1];
+	my @lines = @$makefile_lines[0 .. $marker_index - 1];
 
 	if (lines_index(\@lines, qr"^PKGNAME=") == -1) {
 		my $distname_index = lines_index(\@lines, qr"^DISTNAME=(\t+)");
@@ -798,7 +828,7 @@ sub adjust_package_from_extracted_distfiles($) {
 	push(@lines, @bl3_lines);
 	push(@lines, map { $_ = ".include \"$_\"" } @includes);
 
-	push(@lines, @prev_lines[$marker_index + 1 .. $#prev_lines]);
+	push(@lines, $makefile_lines->[$marker_index + 1 .. $#$makefile_lines]);
 
 	lines_append(\@lines, "CATEGORIES", join(" ", @categories));
 
