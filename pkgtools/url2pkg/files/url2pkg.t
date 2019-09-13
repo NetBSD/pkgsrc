@@ -1,5 +1,5 @@
 # -*- perl -*-
-# $NetBSD: url2pkg.t,v 1.10 2019/09/12 18:23:00 rillig Exp $
+# $NetBSD: url2pkg.t,v 1.11 2019/09/13 06:22:33 rillig Exp $
 
 require "url2pkg.pl";
 
@@ -111,6 +111,18 @@ sub test_lines_index() {
 	is(lines_index($lines, qr"^\d\s\d$"), -1);
 	is(lines_index($lines, qr"(\d)"), 0);
 	is($1, undef);  # capturing groups do not work here
+}
+
+sub test_lines_get() {
+	my $lines = [
+		"VAR=value",
+		"VAR=\tvalue # comment",
+		"UNIQUE=\tunique"
+	];
+
+	is(lines_get($lines, "VAR"), "");     # too many values
+	is(lines_get($lines, "ENOENT"), "");  # no value at all
+	is(lines_get($lines, "UNIQUE"), "unique");
 }
 
 sub test_generate_initial_package_Makefile_lines__GitHub_archive() {
@@ -264,6 +276,7 @@ sub set_up_test() {
 
 	$main::pkgname_prefix = "";
 	$main::pkgname_transform = "";
+	$main::makefile_lines = [];
 	$main::regenerate_distinfo = 0;
 }
 
