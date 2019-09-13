@@ -1,7 +1,6 @@
-# $NetBSD: Makefile.common,v 1.26 2019/09/02 13:19:57 adam Exp $
+# $NetBSD: Makefile.common,v 1.27 2019/09/13 12:57:54 nia Exp $
 #
 # used by mail/thunderbird-enigmail/Makefile
-# used by mail/seamonkey-enigmail/Makefile
 
 DISTNAME=	enigmail-2.0.12
 CATEGORIES=	mail security
