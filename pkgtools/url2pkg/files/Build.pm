@@ -79,7 +79,7 @@ sub create_build_script($) {
 
 	$self->url2pkg_write_var("COMMENT", $self->{"dist_abstract"});
 	my $license = $self->{"license"} || "";
-	if ($license eq "perxl") {
+	if ($license eq "perl") {
 		$self->url2pkg_write_var("LICENSE", "\${PERL5_LICENSE}");
 	} elsif ($license ne "") {
 		$self->url2pkg_write_var("#LICENSE", "# TODO: $license (from Build.PL)")
