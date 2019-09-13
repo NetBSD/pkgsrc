@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2019/09/09 09:55:29 nia Exp $
+# $NetBSD: Makefile,v 1.80 2019/09/13 10:54:47 nia Exp $
 
 DISTNAME=	festival-2.5.0-release
 PKGNAME=	${DISTNAME:S/-release//}
@@ -116,9 +116,9 @@ do-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/festival_client.1
 
 .include "../../mk/termcap.buildlink3.mk"
-.if ${TERMCAP_TYPE} != "curses"
-BUILDLINK_TRANSFORM+=	rm:-lcurses
-BUILDLINK_TRANSFORM+=	rm:-lncurses
+.if ${OPSYS} == "Linux"
+# See DebianGNULinux.mak
+.include "../../mk/curses.buildlink3.mk"
 .endif
 MAKE_ENV+=		BUILDLINK_CPPFLAGS=${BUILDLINK_CPPFLAGS:Q}
 MAKE_ENV+=		BUILDLINK_LDFLAGS=${BUILDLINK_LDADD.termcap:Q}
