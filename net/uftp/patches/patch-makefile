@@ -1,45 +1,13 @@
-$NetBSD: patch-makefile,v 1.2 2014/07/25 14:18:18 jperkin Exp $
+$NetBSD: patch-makefile,v 1.3 2019/09/13 10:42:05 nia Exp $
 
-Fixup install and add NetBSD
-
---- makefile.orig	2013-08-19 01:10:13.000000000 +0000
+--- makefile.orig	2017-12-16 21:03:16.000000000 +0000
 +++ makefile
-@@ -53,6 +53,11 @@ ifeq ("FreeBSD", "$(UNAME_S)")
- OPTIONS=-g -Wall -DHAS_GETIFADDRS -DNO_DUAL -DNO_MCAST_JOIN $(ENC_OPTS)
- endif
- 
-+# NetBSD
-+ifeq ("NetBSD", "$(UNAME_S)")
-+OPTIONS=-g -Wall -DHAS_GETIFADDRS -DNO_DUAL -DNO_MCAST_JOIN -DNOSIOCGIFINDEX $(ENC_OPTS)
-+endif
-+
- # OSX, aka Darwin
- ifeq ("Darwin", "$(UNAME_S)")
- OPTIONS=-g -Wall -DHAS_GETIFADDRS $(ENC_OPTS)
-@@ -64,7 +69,7 @@ CC = cc
- OPTIONS=-g -DBSD_COMP -DNO_DUAL $(ENC_OPTS)
+@@ -59,7 +59,7 @@ CC = cc
+ OPTIONS=-g -DBSD_COMP -DNO_DUAL -DNO_RECVMSG $(ENC_OPTS)
  LDLIBS=-lnsl -lsocket -lm $(CRYPT_LIB)
- CFLAGS=`getconf LFS_CFLAGS`
+ CFLAGS+=`getconf LFS_CFLAGS`
 -OPENSSL=/usr/sfw
 +#OPENSSL=/usr/sfw
  MTFLAGS=-mt
  endif
- 
-@@ -197,12 +202,9 @@ uftp_keymgt: $(UFTP_KEYMGT_OBJS)
- 	$(CC) $(OPTIONS) $(INCLUDE) $(CFLAGS) $(MTFLAGS) -c $<
- 
- install: all
--	install -m 755 -d $(DESTDIR)/bin
--	install -m 755 -d $(DESTDIR)/usr/sbin
--	install -m 755 -d $(DESTDIR)/usr/share/man/man1
--	/bin/cp -p uftp $(DESTDIR)/bin
--	/bin/cp -p uftpd $(DESTDIR)/usr/sbin
--	/bin/cp -p uftpproxyd $(DESTDIR)/usr/sbin
--	/bin/cp -p uftp_keymgt $(DESTDIR)/bin
--	/bin/cp -p uftp.1 uftpd.1 uftpproxyd.1 uftp_keymgt.1 $(DESTDIR)/usr/share/man/man1
-+	${BSD_INSTALL_PROGRAM} uftp $(DESTDIR)$(PREFIX)/bin
-+	${BSD_INSTALL_PROGRAM} uftpd $(DESTDIR)$(PREFIX)/sbin
-+	${BSD_INSTALL_PROGRAM} uftpproxyd $(DESTDIR)$(PREFIX)/sbin
-+	${BSD_INSTALL_PROGRAM} uftp_keymgt $(DESTDIR)$(PREFIX)/bin
-+	${BSD_INSTALL_MAN} uftp.1 uftpd.1 uftpproxyd.1 uftp_keymgt.1 $(DESTDIR)$(PREFIX)/$(PKGMANDIR)/man1
  
