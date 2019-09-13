@@ -2,14 +2,14 @@ BEGIN { process = 1 }
 
 /NBCOMPAT template section follows\./ { process = 0 }
 
-/^\#[ 	]*define[ 	]+PACKAGE_.*/ {
+/^#[ 	]*define[ 	]+PACKAGE_.*/ {
 	if (process == 1) {
 		print "/* " $0 " */";
 		next;
 	}
 }
 
-/^\#[ 	]*define[ 	]+/ {
+/^#[ 	]*define[ 	]+/ {
 	if (process == 1) {
 		guard = $0;
 		sub("^#[ 	]*define[ 	]+", "", guard);
