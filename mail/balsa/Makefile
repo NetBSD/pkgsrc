@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.148 2019/09/14 18:57:10 nia Exp $
+# $NetBSD: Makefile,v 1.149 2019/09/14 19:01:58 nia Exp $
 
 DISTNAME=	balsa-2.5.7
 CATEGORIES=	mail
@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pawsa.fedorapeople.org/balsa/
-COMMENT=	Email client for GNOME
+COMMENT=	Email client using GTK3
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	gmake intltool perl pkg-config
