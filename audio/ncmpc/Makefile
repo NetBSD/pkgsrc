@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2019/09/14 12:19:40 nia Exp $
+# $NetBSD: Makefile,v 1.32 2019/09/14 14:02:32 nia Exp $
 
 DISTNAME=	ncmpc-0.34
 CATEGORIES=	audio
@@ -30,6 +30,8 @@ LDFLAGS+=	${BUILDLINK_LDADD.curses}
 
 LDFLAGS.SunOS+=		-lintl
 LDFLAGS.NetBSD+=	-lintl
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 SUBST_CLASSES+=		py
 SUBST_STAGE.py=		pre-configure
