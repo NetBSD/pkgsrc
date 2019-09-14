@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19263 2019/09/14 12:35:01 nia Exp $
+$NetBSD: TODO,v 1.19264 2019/09/14 19:27:46 nia Exp $
 
 Suggested new packages
 ======================
@@ -1322,7 +1322,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.6
 	o ts-0.7.5
-	o tsclient-0.140
 	o turba-4.2.12
 	o uae-0.8.29
 	o ubs-0.20
@@ -1540,7 +1539,6 @@ Suggested cleanups in pkgsrc
 
 	o Fix packages installing manual pages under share/man to install
 	  them under PKGMANDIR.
-	  Affects: net/tsclient
 
 	o Convert packages to use generic install scripts where possible
 	  (for example, mail/majordomo).
