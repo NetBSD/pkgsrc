@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3912 2019/09/14 19:34:14 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3913 2019/09/14 21:47:22 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6431,3 +6431,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed net/bug-buddy [nia 2019-09-14]
 	Removed net/tsclient successor net/remmina [nia 2019-09-14]
 	Removed editors/conglomerate [nia 2019-09-14]
+	Removed archivers/file-roller successor archivers/engrampa [nia 2019-09-14]
