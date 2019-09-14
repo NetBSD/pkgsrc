@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2911 2019/09/11 14:28:13 wiz Exp $
+# $NetBSD: Makefile,v 1.2912 2019/09/14 18:11:40 tsutsui Exp $
 #
 
 COMMENT=	Development utilities
@@ -2523,6 +2523,7 @@ SUBDIR+=	ruby-activesupport52
 SUBDIR+=	ruby-algorithms
 SUBDIR+=	ruby-amstd
 SUBDIR+=	ruby-assistance
+SUBDIR+=	ruby-atk
 SUBDIR+=	ruby-backports
 SUBDIR+=	ruby-bindata
 SUBDIR+=	ruby-bit-struct
@@ -2573,12 +2574,9 @@ SUBDIR+=	ruby-gettext-activerecord
 SUBDIR+=	ruby-gettext-rails
 SUBDIR+=	ruby-gettext-setup
 SUBDIR+=	ruby-gettext_i18n_rails
+SUBDIR+=	ruby-gio2
 SUBDIR+=	ruby-globalid
-SUBDIR+=	ruby-gnome2-atk
-SUBDIR+=	ruby-gnome2-gio
-SUBDIR+=	ruby-gnome2-glib
-SUBDIR+=	ruby-gnome2-gobject-introspection
-SUBDIR+=	ruby-gnome2-pango
+SUBDIR+=	ruby-gobject-introspection
 SUBDIR+=	ruby-google-protobuf
 SUBDIR+=	ruby-hashery
 SUBDIR+=	ruby-heckle
@@ -2630,6 +2628,7 @@ SUBDIR+=	ruby-nenv
 SUBDIR+=	ruby-octokit
 SUBDIR+=	ruby-ole
 SUBDIR+=	ruby-open4
+SUBDIR+=	ruby-pango
 SUBDIR+=	ruby-parseconfig
 SUBDIR+=	ruby-parser
 SUBDIR+=	ruby-parsetree
