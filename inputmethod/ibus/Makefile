@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.65 2019/07/21 22:25:09 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2019/09/14 04:26:39 tsutsui Exp $
 
-PKGREVISION= 3
 .include "Makefile.common"
 
 COMMENT=	Intelligent Input Bus
 
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
-BUILD_DEPENDS+=	cldr-emoji-annotation>=34.0.0.0:../../textproc/cldr-emoji-annotation
-BUILD_DEPENDS+=	unicode-character-database-[0-9]*:../../textproc/unicode-character-database
-BUILD_DEPENDS+=	unicode-emoji-[0-9]*:../../textproc/unicode-emoji
+BUILD_DEPENDS+=	cldr-emoji-annotation>=35.12.14971.0:../../textproc/cldr-emoji-annotation
+BUILD_DEPENDS+=	unicode-character-database>=12.0.0:../../textproc/unicode-character-database
+BUILD_DEPENDS+=	unicode-emoji>=12.0:../../textproc/unicode-emoji
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -24,7 +23,6 @@ PKGCONFIG_OVERRIDE+=	ibus-1.0.pc.in
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ARGS+=	--localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 CONFIGURE_ARGS+=	--enable-dconf
-CONFIGURE_ARGS+=	--enable-gconf
 CONFIGURE_ARGS+=	--enable-gtk2
 CONFIGURE_ARGS+=	--enable-gtk3
 CONFIGURE_ARGS+=	--enable-surrounding-text
