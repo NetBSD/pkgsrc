@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/07/12 12:49:26 adam Exp $
+# $NetBSD: Makefile,v 1.7 2019/09/14 16:31:26 adam Exp $
 
 DISTNAME=	repmgr-4.4.0
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
@@ -29,13 +29,18 @@ CONF_FILES_PERMS+=	${EGDIR}/repmgr.conf.sample \
 			${PKG_SYSCONFDIR}/repmgr.conf \
 			${REAL_ROOT_USER} ${PGGROUP} 0640
 
+PLIST_VARS+=	llvm
+.include "../../mk/pgsql.buildlink3.mk"
+.if !empty(PKG_OPTIONS.postgresql${PGSQL_VERSION}:Mllvm)
+PLIST.llvm=	yes
+.endif
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.md \
 		${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/repmgr.conf.sample \
 		${DESTDIR}${PREFIX}/${EGDIR}
 
-.include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
