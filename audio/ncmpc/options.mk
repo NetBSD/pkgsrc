@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2017/01/04 16:54:33 roy Exp $
+# $NetBSD: options.mk,v 1.4 2019/09/14 12:19:40 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ncmpc
 PKG_SUPPORTED_OPTIONS=	wide-curses
@@ -10,6 +10,8 @@ PKG_SUGGESTED_OPTIONS=	wide-curses
 ###
 ### Wide curses support; otherwise, default to using narrow curses.
 ###
-.if empty(PKG_OPTIONS:Mwide-curses)
-CONFIGURE_ARGS+= --disable-wide
+.if !empty(PKG_OPTIONS:Mwide-curses)
+MESON_ARGS+=	-Dcurses=ncursesw
+.else
+MESON_ARGS+=	-Dcurses=ncurses
 .endif
