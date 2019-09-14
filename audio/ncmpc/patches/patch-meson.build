@@ -1,0 +1,19 @@
+$NetBSD: patch-meson.build,v 1.1 2019/09/14 12:19:40 nia Exp $
+
+NetBSD with FAKE_NCURSES does not currently create pkgconfig files.
+Work around this for now.
+
+--- meson.build.orig	2019-04-10 09:08:34.000000000 +0000
++++ meson.build
+@@ -56,9 +56,9 @@ conf.set('ENABLE_MULTIBYTE', get_option(
+ 
+ curses = get_option('curses')
+ if curses == 'ncursesw'
+-  curses_dep = dependency('ncursesw')
++  curses_dep = dependency('ncursesw', required: false)
+ elif curses == 'ncurses'
+-  curses_dep = dependency('ncurses')
++  curses_dep = dependency('ncurses', required: false)
+ else
+   curses_dep = dependency('ncursesw', required: false)
+   if curses_dep.found()
