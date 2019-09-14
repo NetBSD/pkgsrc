@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2019/09/14 11:03:22 nia Exp $
+${PYSITELIB}/mpd/__init__.py
+${PYSITELIB}/mpd/__init__.pyo
+${PYSITELIB}/mpd/__init__.pyc
+${PYSITELIB}/mpd/asyncio.pyo
+${PYSITELIB}/mpd/asyncio.pyc
+${PYSITELIB}/mpd/base.pyo
+${PYSITELIB}/mpd/base.pyc
+${PYSITELIB}/mpd/tests.pyo
+${PYSITELIB}/mpd/tests.pyc
+${PYSITELIB}/mpd/twisted.pyo
+${PYSITELIB}/mpd/twisted.pyc
+${PYSITELIB}/mpd/asyncio.py
+${PYSITELIB}/mpd/base.py
+${PYSITELIB}/mpd/tests.py
+${PYSITELIB}/mpd/twisted.py
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
