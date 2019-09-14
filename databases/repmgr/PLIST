@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2019/07/12 12:49:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/09/14 16:31:26 adam Exp $
 bin/repmgr
 bin/repmgrd
-lib/postgresql/bitcode/repmgr.index.bc
-lib/postgresql/bitcode/repmgr/repmgr.bc
+${PLIST.llvm}lib/postgresql/bitcode/repmgr.index.bc
+${PLIST.llvm}lib/postgresql/bitcode/repmgr/repmgr.bc
 lib/postgresql/repmgr.so
 share/doc/repmgr/README.md
 share/examples/repmgr/repmgr.conf.sample
