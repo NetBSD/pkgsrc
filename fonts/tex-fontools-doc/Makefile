@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/08/11 04:50:53 markd Exp $
+# $NetBSD: Makefile,v 1.10 2019/09/14 13:22:56 mef Exp $
 
 DISTNAME=	fontools.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2019.51625
@@ -9,6 +9,7 @@ HOMEPAGE=	https://ctan.org/pkg/fontools
 COMMENT=	Documentation for tex-fontools
 LICENSE=	gnu-gpl-v2
 
+USE_TOOLS+=	perl
 REPLACE_PERL+=	texmf-dist/doc/support/fontools/splitttc
 
 .include "../../print/texlive/package.mk"
