@@ -1,0 +1,5 @@
+An MPD (Music Player Daemon) client library written in pure Python.
+
+python-mpd2 is a fork of python-mpd. While 0.4.x was backwards compatible
+with python-mpd, starting with 0.5 provides enhanced features which are NOT
+backward compatibles with the original python-mpd package.
