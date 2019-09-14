@@ -1,0 +1,31 @@
+# $NetBSD: Makefile.common,v 1.1 2019/09/14 18:11:38 tsutsui Exp $
+#
+# used by devel/ruby-atk/Makefile
+# used by devel/ruby-gio2/Makefile
+# used by devel/ruby-glib2/Makefile
+# used by devel/ruby-gobject-introspection/Makefile
+# used by devel/ruby-pango/Makefile
+# used by graphics/ruby-cairo-gobject/Makefile
+# used by graphics/ruby-clutter/Makefile
+# used by graphics/ruby-clutter-gdk/Makefile
+# used by graphics/ruby-clutter-gtk/Makefile
+# used by graphics/ruby-gdk3/Makefile
+# used by graphics/ruby-gdk_pixbuf2/Makefile
+# used by graphics/ruby-rsvg2/Makefile
+# used by multimedia/ruby-clutter-gstreamer/Makefile
+# used by multimedia/ruby-gstreamer/Makefile
+# used by print/ruby-poppler/Makefile
+# used by www/ruby-webkit-gtk/Makefile
+# used by www/ruby-webkit-gtk2/Makefile
+# used by x11/ruby-gtk2/Makefile
+# used by x11/ruby-gtk3/Makefile
+# used by x11/ruby-gtksourceview2/Makefile
+# used by x11/ruby-gtksourceview3/Makefile
+# used by x11/ruby-vte/Makefile
+
+CATEGORIES+=		ruby
+
+HOMEPAGE=		http://ruby-gnome2.osdn.jp/
+LICENSE=		gnu-lgpl-v2.1
+
+VERSION=		3.3.8

@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2019/09/14 18:11:38 tsutsui Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/gem.build_complete
+${GEM_LIBDIR}/COPYING.LIB
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/dependency-check/Rakefile
+${GEM_LIBDIR}/lib/rsvg2.rb
+${GEM_LIBDIR}/lib/rsvg2/cairo.rb
+${GEM_LIBDIR}/lib/rsvg2/dimension-data.rb
+${GEM_LIBDIR}/lib/rsvg2/handle.rb
+${GEM_LIBDIR}/lib/rsvg2/loader.rb
+${GEM_LIBDIR}/lib/rsvg2/version.rb
+${GEM_LIBDIR}/rsvg2.gemspec
+${GEM_LIBDIR}/sample/svg-viewer.rb
+${GEM_LIBDIR}/sample/svg2.rb
+${GEM_LIBDIR}/test/rsvg2-test-utils.rb
+${GEM_LIBDIR}/test/run-test.rb
+${GEM_LIBDIR}/test/test-handle.rb
+${GEM_LIBDIR}/test/test-version.rb
+${GEM_LIBDIR}/test/tmp/empty.svg
+${GEM_LIBDIR}/test/tmp/large-file.svg
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec

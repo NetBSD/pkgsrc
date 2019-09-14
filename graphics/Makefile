@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.846 2019/09/08 20:41:10 nia Exp $
+# $NetBSD: Makefile,v 1.847 2019/09/14 18:11:40 tsutsui Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -502,23 +502,23 @@ SUBDIR+=	resize_image
 SUBDIR+=	ristretto
 SUBDIR+=	ruby-RMagick
 SUBDIR+=	ruby-cairo
+SUBDIR+=	ruby-cairo-gobject
 SUBDIR+=	ruby-chunky_png
+SUBDIR+=	ruby-clutter
+SUBDIR+=	ruby-clutter-gdk
+SUBDIR+=	ruby-clutter-gtk
 SUBDIR+=	ruby-color
 SUBDIR+=	ruby-color-japanese
 SUBDIR+=	ruby-color-tools
 SUBDIR+=	ruby-gd
-SUBDIR+=	ruby-gnome2-cairo-gobject
-SUBDIR+=	ruby-gnome2-clutter
-SUBDIR+=	ruby-gnome2-clutter-gdk
-SUBDIR+=	ruby-gnome2-clutter-gtk
-SUBDIR+=	ruby-gnome2-gdk3
-SUBDIR+=	ruby-gnome2-gdkpixbuf
-SUBDIR+=	ruby-gnome2-rsvg
+SUBDIR+=	ruby-gdk3
+SUBDIR+=	ruby-gdk_pixbuf2
 SUBDIR+=	ruby-gnuplot
 SUBDIR+=	ruby-imlib2
 SUBDIR+=	ruby-mini-magick
 SUBDIR+=	ruby-oily_png
 SUBDIR+=	ruby-opengl
+SUBDIR+=	ruby-rsvg2
 SUBDIR+=	ruby-screengif
 SUBDIR+=	s10sh
 SUBDIR+=	sane-backends
