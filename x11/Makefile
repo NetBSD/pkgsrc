@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.844 2019/08/30 06:30:57 markd Exp $
+# $NetBSD: Makefile,v 1.845 2019/09/14 18:11:41 tsutsui Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -400,13 +400,13 @@ SUBDIR+=	rgb
 SUBDIR+=	rofi
 SUBDIR+=	rox-session
 SUBDIR+=	rox-wallpaper
-SUBDIR+=	ruby-gnome2-gtk
-SUBDIR+=	ruby-gnome2-gtk3
-SUBDIR+=	ruby-gnome2-gtksourceview2
-SUBDIR+=	ruby-gnome2-gtksourceview3
-SUBDIR+=	ruby-gnome2-vte
+SUBDIR+=	ruby-gtk2
+SUBDIR+=	ruby-gtk3
+SUBDIR+=	ruby-gtksourceview2
+SUBDIR+=	ruby-gtksourceview3
 SUBDIR+=	ruby-tk
 SUBDIR+=	ruby-tk-gem
+SUBDIR+=	ruby-vte
 SUBDIR+=	ruby-wxruby
 SUBDIR+=	rxvt
 SUBDIR+=	rxvt-unicode
