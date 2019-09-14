@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3901 2019/09/14 11:05:19 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3902 2019/09/14 12:19:49 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6376,3 +6376,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/ario to 1.6 [nia 2019-09-14]
 	Added audio/py-mpd2 version 1.0.0 [nia 2019-09-14]
 	Updated audio/sonata to 1.7b1 [nia 2019-09-14]
+	Updated audio/ncmpc to 0.34 [nia 2019-09-14]
