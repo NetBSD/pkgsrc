@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.190 2019/08/18 08:24:35 fcambus Exp $
+# $NetBSD: Makefile,v 1.191 2019/09/14 19:33:32 nia Exp $
 #
 
 COMMENT=	Editors
@@ -17,7 +17,6 @@ SUBDIR+=	ce-doc
 SUBDIR+=	ce-x11
 SUBDIR+=	codeblocks
 SUBDIR+=	codelite
-SUBDIR+=	conglomerate
 SUBDIR+=	cooledit
 SUBDIR+=	dasher
 SUBDIR+=	deforaos-editor
