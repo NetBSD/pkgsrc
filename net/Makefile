@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1266 2019/09/14 19:21:58 nia Exp $
+# $NetBSD: Makefile,v 1.1267 2019/09/14 19:26:47 nia Exp $
 #
 
 COMMENT=	Networking tools
@@ -881,7 +881,6 @@ SUBDIR+=	transmission
 SUBDIR+=	transmission-gtk
 SUBDIR+=	transmission-qt
 SUBDIR+=	trickle
-SUBDIR+=	tsclient
 SUBDIR+=	tsocks
 SUBDIR+=	tspc
 SUBDIR+=	ttt
