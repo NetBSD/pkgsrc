@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3897 2019/09/14 03:47:17 tsutsui Exp $
+$NetBSD: CHANGES-2019,v 1.3898 2019/09/14 04:29:30 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6371,3 +6371,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/unicode-character-database to 12.1.0 [tsutsui 2019-09-14]
 	Updated textproc/unicode-emoji to 12.0 [tsutsui 2019-09-14]
 	Updated textproc/cldr-emoji-annotation to 35.12.14971.0 [tsutsui 2019-09-14]
+	Updated inputmethod/ibus to 1.5.21 [tsutsui 2019-09-14]
+	Updated inputmethod/ibus-python to 1.5.21 [tsutsui 2019-09-14]
