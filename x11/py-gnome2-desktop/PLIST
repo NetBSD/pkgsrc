@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.9 2012/09/19 22:59:17 gdt Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/09/14 19:14:23 nia Exp $
 lib/pkgconfig/gnome-python-desktop-2.0.pc
 ${PYSITELIB}/gtk-2.0/bugbuddy.py
 ${PYSITELIB}/gtk-2.0/bugbuddy.pyc
 ${PYSITELIB}/gtk-2.0/bugbuddy.pyo
-${PYSITELIB}/gtk-2.0/evince.la
 ${PLIST.evolution}${PYSITELIB}/gtk-2.0/evolution/__init__.py
 ${PLIST.evolution}${PYSITELIB}/gtk-2.0/evolution/ebook.la
 ${PLIST.evolution}${PYSITELIB}/gtk-2.0/evolution/ecal.la
@@ -69,7 +68,6 @@ share/pygtk/2.0/defs/_gnomedesktop.defs
 share/pygtk/2.0/defs/applet.defs
 share/pygtk/2.0/defs/art.defs
 ${PLIST.evolution}share/pygtk/2.0/defs/ebook.defs
-share/pygtk/2.0/defs/evince.defs
 share/pygtk/2.0/defs/gnomekeyring.defs
 share/pygtk/2.0/defs/gtksourceview.defs
 share/pygtk/2.0/defs/mediaprofiles.defs
