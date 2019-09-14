@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1265 2019/09/07 16:27:32 maya Exp $
+# $NetBSD: Makefile,v 1.1266 2019/09/14 19:21:58 nia Exp $
 #
 
 COMMENT=	Networking tools
@@ -56,7 +56,6 @@ SUBDIR+=	bridged
 SUBDIR+=	bsddip
 SUBDIR+=	btget
 SUBDIR+=	btpd
-SUBDIR+=	bug-buddy
 SUBDIR+=	bwm-ng
 SUBDIR+=	bwping
 SUBDIR+=	cacti
