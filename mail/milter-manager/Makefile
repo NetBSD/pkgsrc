@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2018/02/25 12:25:48 taca Exp $
+# $NetBSD: Makefile,v 1.44 2019/09/14 18:13:50 tsutsui Exp $
 #
 
 DISTNAME=	milter-manager-2.0.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=milter-manager/}
 
@@ -90,9 +90,8 @@ REPLACE_RUBY+=		tool/milter-performance-check
 REPLACE_RUBY+=		tool/milter-report-statistics
 .include "../../lang/ruby/replace.mk"
 
+.include "../../devel/ruby-glib2/buildlink3.mk"
 .include "../../lang/ruby/buildlink3.mk"
-BUILDLINK_API_DEPENDS.ruby-gnome2-glib+=	${RUBY_PKGPREFIX}-gnome2-glib>=0.90.5
-.include "../../devel/ruby-gnome2-glib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.12.3
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libev+=	libev>=4.01
