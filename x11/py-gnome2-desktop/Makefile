@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.132 2019/09/02 13:20:14 adam Exp $
+# $NetBSD: Makefile,v 1.133 2019/09/14 19:14:23 nia Exp $
 
 DISTNAME=	gnome-python-desktop-2.32.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python/2/}
-PKGREVISION=	67
+PKGREVISION=	68
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python-desktop/2.32/}
 EXTRACT_SUFX=	.tar.bz2
@@ -40,8 +40,6 @@ PYTHON_VERSIONS_ACCEPTED=	${PYTHON_VERSION_DEFAULT:M27}
 .include "../../multimedia/totem-pl-parser/buildlink3.mk"
 # works, but should better be in its own pkg to limit dependencies
 #.include "../../sysutils/brasero/buildlink3.mk"
-BUILDLINK_API_DEPENDS.evince+=	evince>=2.32<2.33
-.include "../../print/evince/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../security/libgnome-keyring/buildlink3.mk"
