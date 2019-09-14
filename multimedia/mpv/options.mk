@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2019/08/18 17:57:55 nia Exp $
+# $NetBSD: options.mk,v 1.19 2019/09/14 16:39:26 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
 
@@ -135,7 +135,7 @@ WAF_CONFIGURE_ARGS+=	--disable-vdpau
 WAF_CONFIGURE_ARGS+=	--enable-drm
 .include "../../x11/libdrm/buildlink3.mk"
 .else
-WAF_CONFIGURE_ARGS+=	--disable-libdrm
+WAF_CONFIGURE_ARGS+=	--disable-drm
 .endif
 
 ###
