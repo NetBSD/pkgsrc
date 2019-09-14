@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3906 2019/09/14 18:27:28 tsutsui Exp $
+$NetBSD: CHANGES-2019,v 1.3907 2019/09/14 18:56:14 ng0 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6424,3 +6424,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed x11/ruby-gnome2-gtksourceview2 successor x11/ruby-gtksourceview2 [tsutsui 2019-09-14]
 	Removed x11/ruby-gnome2-gtksourceview3 successor x11/ruby-gtksourceview3 [tsutsui 2019-09-14]
 	Removed x11/ruby-gnome2-vte successor x11/ruby-vte [tsutsui 2019-09-14]
+	Updated security/doas to 6.2p1 [ng0 2019-09-14]
