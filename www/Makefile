@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1404 2019/09/11 12:01:53 tm Exp $
+# $NetBSD: Makefile,v 1.1405 2019/09/14 18:11:41 tsutsui Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -842,8 +842,6 @@ SUBDIR+=	ruby-faraday
 SUBDIR+=	ruby-faraday_middleware
 SUBDIR+=	ruby-faye-websocket
 SUBDIR+=	ruby-fcgi
-SUBDIR+=	ruby-gnome2-webkit-gtk
-SUBDIR+=	ruby-gnome2-webkit-gtk2
 SUBDIR+=	ruby-htmlsplit
 SUBDIR+=	ruby-http
 SUBDIR+=	ruby-http-cookie
@@ -915,6 +913,8 @@ SUBDIR+=	ruby-staticmatic
 SUBDIR+=	ruby-tag
 SUBDIR+=	ruby-unicorn
 SUBDIR+=	ruby-url_mount
+SUBDIR+=	ruby-webkit-gtk
+SUBDIR+=	ruby-webkit-gtk2
 SUBDIR+=	ruby-webrobots
 SUBDIR+=	ruby-websocket
 SUBDIR+=	ruby-websocket-driver
