@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.21 2019/08/18 03:13:21 tsutsui Exp $
-
-SHA1 (clutter-3.3.7.gem) = da03a94d374ce967341405420baed1a308d6efb9
-RMD160 (clutter-3.3.7.gem) = 896c75ebfc2ee74fbab5d2001e968d913ebcea51
-SHA512 (clutter-3.3.7.gem) = 55493607136d4b79835dea0244b2e148eb61ae87aeed1ad817867c89065b45c771fb3c03b113c21c6f0315fb8074a0156fb42a7da638801fde3f9da81643b304
-Size (clutter-3.3.7.gem) = 43008 bytes
