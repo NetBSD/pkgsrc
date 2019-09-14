@@ -1,0 +1,12 @@
+$NetBSD: patch-doc_meson.build,v 1.1 2019/09/14 12:19:40 nia Exp $
+
+Work around our weird sphinx binary name.
+
+--- doc/meson.build.orig	2019-04-10 09:08:34.000000000 +0000
++++ doc/meson.build
+@@ -1,4 +1,4 @@
+-sphinx = find_program('sphinx-build', required: get_option('documentation'))
++sphinx = find_program('sphinx-build@PYVERSSUFFIX@', required: get_option('documentation'))
+ if not sphinx.found()
+   subdir_done()
+ endif
