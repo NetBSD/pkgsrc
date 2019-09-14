@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/08/12 11:43:44 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/09/14 03:12:15 tsutsui Exp $
 share/unicode/ucd/ArabicShaping.txt
 share/unicode/ucd/BidiBrackets.txt
 share/unicode/ucd/BidiCharacterTest.txt
@@ -40,6 +40,7 @@ share/unicode/ucd/TangutSources.txt
 share/unicode/ucd/UCD.zip
 share/unicode/ucd/USourceData.txt
 share/unicode/ucd/USourceGlyphs.pdf
+share/unicode/ucd/USourceRSChart.pdf
 share/unicode/ucd/UnicodeData.txt
 share/unicode/ucd/Unihan.zip
 share/unicode/ucd/Unihan_DictionaryIndices.txt
