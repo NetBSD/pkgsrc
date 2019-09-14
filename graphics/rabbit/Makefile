@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2019/09/14 18:13:22 tsutsui Exp $
+# $NetBSD: Makefile,v 1.59 2019/09/14 18:37:04 tsutsui Exp $
 #
 
 DISTNAME=	rabbit-2.2.1
@@ -11,7 +11,7 @@ HOMEPAGE=	http://rabbit-shocker.org/
 COMMENT=	RD-document-based presentation application
 LICENSE=	gnu-gpl-v2 # or later
 
-DEPENDS+=	${RUBY_PKGPREFIX}-gtk2>=0.90.3:../../x11/ruby-gtk2
+DEPENDS+=	${RUBY_PKGPREFIX}-gtk2>=3.3.8:../../x11/ruby-gtk2
 DEPENDS+=	${RUBY_PKGPREFIX}-rsvg2>=3.3.8:../../graphics/ruby-rsvg2
 DEPENDS+=	${RUBY_PKGPREFIX}-poppler>=3.3.8:../../print/ruby-poppler
 DEPENDS+=	${RUBY_PKGPREFIX}-hikidoc-[0-9]*:../../textproc/ruby-hikidoc
