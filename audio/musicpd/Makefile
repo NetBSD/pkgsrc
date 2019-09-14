@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.192 2019/08/22 12:22:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.193 2019/09/14 12:34:50 nia Exp $
 
-DISTNAME=		mpd-0.21.13
+DISTNAME=		mpd-0.21.14
 PKGNAME=		${DISTNAME:S/mpd/musicpd/}
-PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		https://www.musicpd.org/download/mpd/0.21/
 EXTRACT_SUFX=		.tar.xz
@@ -17,7 +16,7 @@ TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 CONFLICTS=		mpd-[0-9]*
 
 USE_TOOLS+=		pkg-config
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c99 c++14
 MESON_ARGS+=		-Ddocumentation=true
 
 # worrying libraries with limited maintainance:
