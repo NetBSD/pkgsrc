@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3904 2019/09/14 13:34:15 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3905 2019/09/14 16:09:52 fox Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6379,3 +6379,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/ncmpc to 0.34 [nia 2019-09-14]
 	Updated audio/musicpd to 0.21.14 [nia 2019-09-14]
 	Updated audio/faad2 to 2.9.0 [nia 2019-09-14]
+	Updated audio/din to 43 [fox 2019-09-14]
