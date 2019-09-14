@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.163 2019/07/30 22:26:11 brook Exp $
+# $NetBSD: Makefile,v 1.164 2019/09/14 21:46:15 nia Exp $
 #
 
 COMMENT=	Archivers
@@ -24,7 +24,6 @@ SUBDIR+=	dar
 SUBDIR+=	engrampa
 SUBDIR+=	fastjar
 SUBDIR+=	fcrackzip
-SUBDIR+=	file-roller
 SUBDIR+=	freeze
 SUBDIR+=	gcpio
 SUBDIR+=	go-xz
