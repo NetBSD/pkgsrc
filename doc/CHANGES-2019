@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3911 2019/09/14 19:27:47 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3912 2019/09/14 19:34:14 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6430,3 +6430,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed print/evince-nautilus [nia 2019-09-14]
 	Removed net/bug-buddy [nia 2019-09-14]
 	Removed net/tsclient successor net/remmina [nia 2019-09-14]
+	Removed editors/conglomerate [nia 2019-09-14]
