@@ -1,4 +1,4 @@
-$NetBSD: patch-prog_aspell.cpp,v 1.1 2013/08/17 11:19:03 joerg Exp $
+$NetBSD: patch-prog_aspell.cpp,v 1.2 2019/09/15 06:53:36 maya Exp $
 
 --- prog/aspell.cpp.orig	2013-08-16 12:16:40.000000000 +0000
 +++ prog/aspell.cpp
@@ -9,8 +9,8 @@ $NetBSD: patch-prog_aspell.cpp,v 1.1 2013/08/17 11:19:03 joerg Exp $
 +#include "errors.hpp"
  #include "aspell.h"
  
- #ifdef USE_FILE_INO
-@@ -40,7 +41,6 @@
+ #include <sys/types.h>
+@@ -41,7 +42,6 @@
  #include "convert.hpp"
  #include "document_checker.hpp"
  #include "enumeration.hpp"
