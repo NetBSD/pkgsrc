@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3920 2019/09/15 12:51:46 mef Exp $
+$NetBSD: CHANGES-2019,v 1.3921 2019/09/15 12:55:28 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6439,3 +6439,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/pugixml to 1.10 [adam 2019-09-15]
 	Updated net/haproxy to 2.0.6 [nia 2019-09-15]
 	Updated www/htmllint to 20111128 [mef 2019-09-15]
+	Added net/freerdp2 version 2.0.0rc4 [nia 2019-09-15]
