@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2010/11/29 12:56:20 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/09/15 13:33:10 nia Exp $
 bin/seahorse-agent
 bin/seahorse-preferences
 bin/seahorse-tool
 lib/bonobo/servers/GNOME_SeahorseApplet.server
-lib/gedit-2/plugins/libseahorse-pgp.la
-lib/gedit-2/plugins/seahorse-pgp.gedit-plugin
 lib/nautilus/extensions-2.0/libnautilus-seahorse.la
 lib/seahorse/seahorse-applet
 man/man1/seahorse-agent.1
@@ -13,7 +11,6 @@ share/applications/seahorse-pgp-encrypted.desktop
 share/applications/seahorse-pgp-keys.desktop
 share/applications/seahorse-pgp-preferences.desktop
 share/applications/seahorse-pgp-signature.desktop
-share/gconf/schemas/seahorse-gedit.schemas
 share/gconf/schemas/seahorse-plugins.schemas
 share/gnome-2.0/ui/GNOME_SeahorseApplet.xml
 share/gnome/help/seahorse-applet/C/legal.xml

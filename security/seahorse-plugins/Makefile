@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.85 2019/07/21 22:25:41 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2019/09/15 13:33:10 nia Exp $
 
 DISTNAME=	seahorse-plugins-2.30.1
-PKGREVISION=	66
+PKGREVISION=	67
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse-plugins/2.30/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,13 +17,14 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 CONFIGURE_ENV+=		GNUPG=${GPGME_GPG}
 
+CONFIGURE_ARGS+=	--disable-gedit
+
 GCONF_SCHEMAS=		seahorse-gedit.schemas
 GCONF_SCHEMAS+=		seahorse-plugins.schemas
 
 .include "../../databases/gnome-mime-data/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/GConf/schemas.mk"
-.include "../../editors/gedit/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
