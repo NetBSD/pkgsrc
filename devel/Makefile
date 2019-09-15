@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2912 2019/09/14 18:11:40 tsutsui Exp $
+# $NetBSD: Makefile,v 1.2913 2019/09/15 09:33:37 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -2725,8 +2725,6 @@ SUBDIR+=	semi
 SUBDIR+=	sfio
 SUBDIR+=	sfslite
 SUBDIR+=	sgb
-SUBDIR+=	sgi-stl
-SUBDIR+=	sgi-stl-docs
 SUBDIR+=	shtk
 SUBDIR+=	shunit2
 SUBDIR+=	silc-toolkit
