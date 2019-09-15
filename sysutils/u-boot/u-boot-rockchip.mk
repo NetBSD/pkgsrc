@@ -1,6 +1,8 @@
-#	$NetBSD: u-boot-rockchip.mk,v 1.4 2019/08/13 21:28:47 tnn Exp $
-
+#	$NetBSD: u-boot-rockchip.mk,v 1.5 2019/09/15 15:50:21 tnn Exp $
 #
+# used by sysutils/u-boot-rock64/Makefile
+# used by sysutils/u-boot-rockpro64/Makefile
+
 # Common makefile fragment for rockchip based u-boot targets.
 #
 # Set these variables:
@@ -8,7 +10,6 @@
 #	U_BOOT_IMAGE_TYPE	("rk3399", "rk3328")
 #
 
-PKGREVISION=	5
 UBOOT_VERSION=	${GITHUB_TAG:C/-.*$//}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ayufan-rock64/}
 GITHUB_PROJECT=	linux-u-boot
