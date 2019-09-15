@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2019/09/15 00:11:45 nia Exp $
+# $NetBSD: Makefile,v 1.43 2019/09/15 20:34:49 gutteridge Exp $
 
 DISTNAME=	bulk-large-20190915
 CATEGORIES=	meta-pkgs
@@ -83,7 +83,7 @@ BUILD_DEPENDS+=	zyGrib-[0-9]*:../../misc/zyGrib
 BUILD_DEPENDS+=	mplayer-[0-9]*:../../multimedia/mplayer
 BUILD_DEPENDS+=	xine-ui-[0-9]*:../../multimedia/xine-ui
 BUILD_DEPENDS+=	cups>=1.5<2.0:../../print/cups15
-BUILD_DEPENDS+=	atril-[0-9]:../../print/atril
+BUILD_DEPENDS+=	atril-[0-9]*:../../print/atril
 BUILD_DEPENDS+=	lilypond-[0-9]*:../../print/lilypond
 BUILD_DEPENDS+=	mit-krb5-appl-[0-9]*:../../security/mit-krb5-appl
 BUILD_DEPENDS+=	FlightCrew-[0-9]*:../../textproc/FlightCrew
