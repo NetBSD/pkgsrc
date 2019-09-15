@@ -1,7 +1,9 @@
-$NetBSD: patch-ak,v 1.1 2003/03/05 10:03:47 wiz Exp $
+$NetBSD: patch-ak,v 1.2 2019/09/15 12:51:29 mef Exp $
 
---- htmllint.orig	Sun Mar  2 02:51:02 2003
-+++ htmllint
+Convert lib location
+
+--- htmllint.orig	2002-10-29 19:26:26.000000000 +0900
++++ htmllint	2019-09-15 21:06:16.921954329 +0900
 @@ -2,8 +2,9 @@
  
  # Another HTML-lint ###########################################

@@ -1,9 +1,12 @@
-$NetBSD: patch-ai,v 1.1.1.1 2001/03/14 05:13:05 kei Exp $
+$NetBSD: patch-ai,v 1.2 2019/09/15 12:51:29 mef Exp $
 
---- htmllintl.html.orig	Mon Jan 29 10:57:18 2001
-+++ htmllintl.html	Mon Jan 29 10:58:12 2001
-@@ -72,7 +72,7 @@
- $B$3$N%Z!<%8$O!"4pK\E*$J@_Dj$@$1$N7Z$$%2!<%H%&%'%$$G$9(B ($B7Z$$$N$O$3$N(BHTML$B$N$3$H$G!"%A%'%C%/<+BN$O$I$l$G$bF1$8$G$9(B)$B!#:Y$+$J%*%W%7%g%s$r;XDj$7$?$$$H$-$O!"(B<a href="./htmllint.html">$B$3$A$i$N%2!<%H%&%'%$(B</a>$B$rMxMQ$7$F$/$@$5$$!#(B
+-*- coding: utf-8 -*-
+Fix path 
+
+--- htmllintl.html.orig	2011-11-28 16:15:44.000000000 +0900
++++ htmllintl.html	2019-09-15 21:09:30.157236024 +0900
+@@ -70,7 +70,7 @@ function ClearButton(name)
+ このページは、基本的な設定だけの軽いゲートウェイです (軽いのはこのHTMLのことで、チェック自体はどれでも同じです)。細かなオプションを指定したいときは、<a href="./htmllint.html">こちらのゲートウェイ</a>を利用してください。
  </p>
  
 -<form action="./htmllint.cgi" method="post" enctype="multipart/form-data">
