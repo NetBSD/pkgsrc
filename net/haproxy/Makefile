@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2019/09/15 12:22:33 nia Exp $
+# $NetBSD: Makefile,v 1.52 2019/09/15 14:53:13 nia Exp $
 
 DISTNAME=	haproxy-2.0.6
 CATEGORIES=	net www
@@ -42,17 +42,7 @@ TARGET=	osx
 .elif ${OPSYS} == "SunOS"
 TARGET=	solaris
 .elif ${OPSYS} == "Linux"
-.  if !empty(OS_VERSION:M2.6.*)
-TARGET=	linux26
-.  elif !empty(OS_VERSION:M2.4.*)
-.    if exists(/usr/include/linux/eventpoll.h)
-TARGET=	linux24e
-.    else
-TARGET=	linux24
-.    endif
-.  else
-TARGET=	linux2628
-.  endif
+TARGET=	linux-glibc
 .else
 TARGET=	generic
 .endif
