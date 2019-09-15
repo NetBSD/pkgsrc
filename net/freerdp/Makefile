@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/07/21 22:25:30 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2019/09/15 12:55:14 nia Exp $
 
 DISTNAME=	freerdp-1.0.2
 PKGREVISION=	35
@@ -7,7 +7,7 @@ MASTER_SITES=	http://pub.freerdp.com/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freerdp.com/
-COMMENT=	Free implementation of the Remote Desktop Protocol
+COMMENT=	Free implementation of the Remote Desktop Protocol (major version 1)
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
