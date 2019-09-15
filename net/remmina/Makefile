@@ -1,33 +1,38 @@
-# $NetBSD: Makefile,v 1.45 2019/08/11 13:22:29 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2019/09/15 12:59:01 nia Exp $
 
-DISTNAME=	remmina-0.9.3
-PKGREVISION=	40
+DISTNAME=	Remmina-v1.3.6
+PKGNAME=	${DISTNAME:S/^R/r/1:S/-v/-/1}
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=remmina/}
+MASTER_SITES=	https://gitlab.com/Remmina/Remmina/-/archive/v${PKGVERSION_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://remmina.sourceforge.net/
-COMMENT=	Remmina is a remote desktop client based on GTK+
+HOMEPAGE=	https://www.remmina.org/
+COMMENT=	Remote desktop client based on GTK+
+LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	rdesktop>=1.6.0:../../net/rdesktop
+USE_CMAKE=	yes
+USE_LANGUAGES=	c99 c++
 
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c99
-USE_TOOLS+=	intltool perl pkg-config gmake msgfmt
+USE_TOOLS+=	pkg-config msgmerge
 
-LDFLAGS.SunOS+=	-lsocket -lnsl
+CMAKE_ARGS+=	-DWITH_WWW=OFF
 
-.include "../../devel/glib2/buildlink3.mk"
+LDFLAGS.SunOS+=		-lsocket -lnsl
+LDFLAGS.NetBSD+=	-rdynamic
+
+.include "options.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libvncserver=		libvncserver>=0.9.1
+.include "../../net/freerdp2/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../net/libvncserver/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
-BUILDLINK_API_DEPENDS.libgcrypt=		libgcrypt>=1.4.4
 .include "../../security/libgcrypt/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libssh=		libssh>=0.54
+.include "../../security/libsodium/buildlink3.mk"
 .include "../../security/libssh/buildlink3.mk"
-.include "../../x11/libunique/buildlink3.mk" # ???
-.include "../../x11/vte/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../sysutils/spice-protocol/buildlink3.mk"
+.include "../../textproc/json-glib/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
+.include "../../x11/libxkbfile/buildlink3.mk"
+.include "../../x11/vte3/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
