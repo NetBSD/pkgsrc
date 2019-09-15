@@ -1,17 +1,16 @@
-$NetBSD: distinfo,v 1.28 2016/05/07 09:55:21 joerg Exp $
+$NetBSD: distinfo,v 1.29 2019/09/15 17:55:09 nia Exp $
 
-SHA1 (anjuta-3.10.0.tar.xz) = bfa975641b3e25818b7eda34905c4d65eeb01152
-RMD160 (anjuta-3.10.0.tar.xz) = 871dbb7e6174296729eeefae6b8766591fff2ad0
-SHA512 (anjuta-3.10.0.tar.xz) = 32c3dd4e04f1efedf57b755775fc94293ec3d6eac2f2753bc16418c974cb9b35908179e22b4922b78257087e44b0b0aaacc5d7aa496ec433823c82b209edb174
-Size (anjuta-3.10.0.tar.xz) = 6468032 bytes
+SHA1 (anjuta-3.34.0.tar.xz) = a2feeb1a1c5582dbee56ad62b3ad6435cc022ebd
+RMD160 (anjuta-3.34.0.tar.xz) = 113e01eee1675d08ff2fc4f56e755d6e01b8ce07
+SHA512 (anjuta-3.34.0.tar.xz) = 9d5a4c23751893ff7e21cd55c1f112f27b53fe2ea5ac645c63e2da627efce202b88696e3e5d860ad75a5c13c88a9082775d74f4482208161b5e63d56c4004d57
+Size (anjuta-3.34.0.tar.xz) = 6420472 bytes
 SHA1 (patch-libanjuta_anjuta-plugin-manager.c) = cf8ec97d221ca9e091b4addd9ada24e3427bb025
 SHA1 (patch-libanjuta_anjuta-status.c) = 7541533e061a588ea9b6c404c8a7dd78710905f9
 SHA1 (patch-libanjuta_anjuta-status.h) = 4fc61d652a3877bf2ebbe39024af3fadd11805c3
 SHA1 (patch-libanjuta_anjuta-utils.c) = 6659d7a9bf6912f4fd96045cb326d4619f635fb6
 SHA1 (patch-libanjuta_anjuta-utils.h) = bc42909f3ea4afd2ca426fc614742e4063d9ba6c
-SHA1 (patch-libanjuta_tests_Makefile.in) = 7ad52876516f3a07a59fc21e12b94caf54b51146
 SHA1 (patch-plugins_am-project_projectparser.c) = 7502510bc4c6d564aecca76c4f7b68779b34aecd
-SHA1 (patch-plugins_build-basic-autotools_build.c) = 39387934df248c281e5ea2e25213b1db9b3e8cb6
+SHA1 (patch-plugins_build-basic-autotools_build.c) = 6aab2cfaea34784dd69ac6fa8812f0916afa2d6e
 SHA1 (patch-plugins_build-basic-autotools_executer.c) = 4e89ea52eaaf41aa8804681cfc9bb6f407526748
 SHA1 (patch-plugins_build-basic-autotools_program.h) = 72247949ddbfa0b41acd934f566ffd80d7841db7
 SHA1 (patch-plugins_cvs-plugin_cvs-callbacks.c) = daef25e5f07c47affba5621e631b1f7ebaa19f21
@@ -29,17 +28,5 @@ SHA1 (patch-plugins_project-wizard_druid.c) = 697ad749d408526bda9aff4360f8e5223d
 SHA1 (patch-plugins_project-wizard_parser.c) = a63a5d05bbce9f21e6fd546b67d7f6c655771c85
 SHA1 (patch-plugins_run-program_execute.c) = 672adc09332674899fa2678a63262859856a6bcd
 SHA1 (patch-plugins_run-program_plugin.c) = 4eb47b9f8a968bc6b7e0e660489c8f5408c97676
-SHA1 (patch-plugins_symbol-db_anjuta-tags_c.c) = 578bae121b3099eaba7fdc2e8fa6c1a080e4b73c
-SHA1 (patch-plugins_symbol-db_anjuta-tags_eiffel.c) = 3638ed97cae8c49f88af6ded96a0d71e0c652238
-SHA1 (patch-plugins_symbol-db_anjuta-tags_general.h) = 32da0cb074fd3f915d08ae7aaf6ca82884ae0d64
-SHA1 (patch-plugins_symbol-db_anjuta-tags_lregex.c) = dd887045097f3b954d58b2b7f4bfdbf4e8db93b8
-SHA1 (patch-plugins_symbol-db_anjuta-tags_lua.c) = b193af32edc435d7dbccfc8a535f97c369ffec0a
-SHA1 (patch-plugins_symbol-db_anjuta-tags_main.c) = c229db262599365be7b8a78dfb3728f61922f405
-SHA1 (patch-plugins_symbol-db_anjuta-tags_options.c) = 4225de8373e4eae867665b6315ff3e1e67bb1909
-SHA1 (patch-plugins_symbol-db_anjuta-tags_parse.c) = c01ecb67cefd1c764633ed20133623b9b50d4249
-SHA1 (patch-plugins_symbol-db_anjuta-tags_python.c) = 9caa6deac993cb3a9d98e6e1444806db0eda424f
-SHA1 (patch-plugins_symbol-db_anjuta-tags_routines.c) = baa1cb690d7b617bd2eba10a932bc8c608ab3281
-SHA1 (patch-plugins_symbol-db_symbol-db-engine-core.c) = 66be6b57691e3dfb37acfdada8a85254fcd6d7d9
-SHA1 (patch-plugins_symbol-db_symbol-db-engine-utils.c) = aa3a0d25e52d57733e392e1e576c93c7fad52a3e
 SHA1 (patch-plugins_tools_execute.c) = 60edf300449182875164ff3ac441f1dfe5a5f7cf
 SHA1 (patch-plugins_tools_fileop.c) = 37a8a17335ec37b8dcfd29406b5428e8f6bd7163
