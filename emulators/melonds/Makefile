@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/09/13 10:12:07 nia Exp $
+# $NetBSD: Makefile,v 1.2 2019/09/15 14:47:43 nia Exp $
 
 DISTNAME=	melonDS-0.8.3
 PKGNAME=	${DISTNAME:S/DS/ds/}
@@ -37,5 +37,6 @@ post-install:
 
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
