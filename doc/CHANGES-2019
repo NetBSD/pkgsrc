@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3914 2019/09/15 00:11:56 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.3915 2019/09/15 06:54:16 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6433,3 +6433,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed editors/conglomerate [nia 2019-09-14]
 	Removed archivers/file-roller successor archivers/engrampa [nia 2019-09-14]
 	Updated print/qpdf to 9.0.0 [ryoon 2019-09-15]
+	Updated textproc/aspell to 0.60.7 [maya 2019-09-15]
