@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2019/09/13 08:32:07 wen Exp $
+# $NetBSD: Makefile,v 1.37 2019/09/15 06:27:08 mef Exp $
 
 DISTNAME=	SQL-Translator-1.60
 PKGNAME=	p5-${DISTNAME}
@@ -24,6 +24,7 @@ DEPENDS+=	p5-Moo>=1.000003:../../devel/p5-Moo
 DEPENDS+=	p5-Package-Variant>=1.001001:../../devel/p5-Package-Variant
 DEPENDS+=	p5-Parse-RecDescent>=1.967.9:../../devel/p5-Parse-RecDescent
 DEPENDS+=	p5-XML-Writer>=0.500:../../textproc/p5-XML-Writer
+DEPENDS+=	p5-File-ShareDir-Install-[0-9]*:../../devel/p5-File-ShareDir-Install
 
 # Recommended
 DEPENDS+=	p5-GD-[0-9]*:../../graphics/p5-GD
