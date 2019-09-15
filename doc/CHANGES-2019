@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3929 2019/09/15 18:03:25 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3930 2019/09/15 18:53:41 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6448,3 +6448,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated chat/irssi-xmpp to 0.54 [nia 2019-09-15]
 	Updated devel/anjuta to 3.34.0 [nia 2019-09-15]
 	Removed x11/gnome-terminal successor x11/mate-terminal [nia 2019-09-15]
+	Updated devel/p5-Test-BDD-Cucumber to 0.64 [schmonz 2019-09-15]
