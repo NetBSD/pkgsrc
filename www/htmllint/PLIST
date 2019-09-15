@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 22:00:23 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/09/15 12:51:29 mef Exp $
 bin/htmllint
 libexec/cgi-bin/htmllint.cgi
 libexec/cgi-bin/htmllint.env
@@ -12,7 +12,7 @@ share/httpd/htdocs/htmllint/15445.rul
 share/httpd/htdocs/htmllint/HTMLlat1.ent
 share/httpd/htdocs/htmllint/HTMLspecial.ent
 share/httpd/htdocs/htmllint/HTMLsymbol.ent
-share/httpd/htdocs/htmllint/ISOlat1.ent
+share/httpd/htdocs/htmllint/ISOlat1HTML.ent
 share/httpd/htdocs/htmllint/RFC2396.pm
 share/httpd/htdocs/htmllint/arena.dtd
 share/httpd/htdocs/htmllint/arena.rul
@@ -54,9 +54,10 @@ share/httpd/htdocs/htmllint/htmllint.css
 share/httpd/htdocs/htmllint/htmllint.history.txt
 share/httpd/htdocs/htmllint/htmllint.html
 share/httpd/htdocs/htmllint/htmllint.pm
-share/httpd/htdocs/htmllint/htmllint2.css
 share/httpd/htdocs/htmllint/htmllinte.html
 share/httpd/htdocs/htmllint/htmllintl.html
+share/httpd/htdocs/htmllint/htmlplus-old.dtd
+share/httpd/htdocs/htmllint/htmlplus-old.rul
 share/httpd/htdocs/htmllint/htmlplus.dtd
 share/httpd/htdocs/htmllint/htmlplus.rul
 share/httpd/htdocs/htmllint/httpreq.pl
@@ -95,6 +96,10 @@ share/httpd/htdocs/htmllint/imode50.dtd
 share/httpd/htdocs/htmllint/imode50.rul
 share/httpd/htdocs/htmllint/index.html
 share/httpd/htdocs/htmllint/introduction.html
+share/httpd/htdocs/htmllint/isodia.ent
+share/httpd/htdocs/htmllint/isolat1.ent
+share/httpd/htdocs/htmllint/isolat2.ent
+share/httpd/htdocs/htmllint/isonum.ent
 share/httpd/htdocs/htmllint/jpo.dtd
 share/httpd/htdocs/htmllint/jpo.rul
 share/httpd/htdocs/htmllint/jskystation.dtd
@@ -123,6 +128,7 @@ share/httpd/htdocs/htmllint/wilbur.dtd
 share/httpd/htdocs/htmllint/wilbur.rul
 share/httpd/htdocs/htmllint/xhtml-basic.rul
 share/httpd/htdocs/htmllint/xhtml-mp.rul
+share/httpd/htdocs/htmllint/xhtml-rdfa-1.rul
 share/httpd/htdocs/htmllint/xhtml1-frameset.rul
 share/httpd/htdocs/htmllint/xhtml1-strict.rul
 share/httpd/htdocs/htmllint/xhtml1-transitional.rul

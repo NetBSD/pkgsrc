@@ -1,15 +1,14 @@
-$NetBSD: distinfo,v 1.16 2016/08/16 00:11:35 maya Exp $
+$NetBSD: distinfo,v 1.17 2019/09/15 12:51:29 mef Exp $
 
-SHA1 (htmllint-20051019/htmllint.zip) = 9906763f2b59830d3199cacd9992c67ea74a11ab
-RMD160 (htmllint-20051019/htmllint.zip) = c0ab6f063435d4f0f420bad66ae48df90aef2943
-SHA512 (htmllint-20051019/htmllint.zip) = 3d30238176f5aa407190acebd9f07538b4ea2cc0f6d6699a02242df74e971d6447aca53e4b8a330d048e93e4648f47c8859bf1eb8a42c45a1ae3938d01d8f9fc
-Size (htmllint-20051019/htmllint.zip) = 705521 bytes
-SHA1 (patch-aa) = bdaeb7be2fbf2a1295f4840d52a2e0f5f1cc31bc
-SHA1 (patch-ab) = ed444b7472e4d9d3205fe258d479495411467687
-SHA1 (patch-ad) = 3759e9a01e8697e4db4012c91acb6429b8ef0e1e
-SHA1 (patch-ag) = 2feed2790b4c501c2df6f96efdb84ca39faf0fb7
-SHA1 (patch-ah) = 26ba26f155a05d8bd0e7bfa1d494a246e1bf2ab8
-SHA1 (patch-ai) = 27068dafb150f20e30898ec546d07af54e487fce
-SHA1 (patch-aj) = cb95bd5bbce00979ea29574f55e001c8df32436f
-SHA1 (patch-ak) = af542b90c1992e9fbf57d1b09a0fc1c0fafbcc25
-SHA1 (patch-htmllint.pm) = 13edfb6deb7a5e2f6b09c4205489bc37676d61b1
+SHA1 (htmllint-20111128/htmllint.zip) = cb7172ff749a417449e3953decf0871f3a866154
+RMD160 (htmllint-20111128/htmllint.zip) = 0f29b7854b784c9e26fd8a41f81df2d732fed89e
+SHA512 (htmllint-20111128/htmllint.zip) = 1e9102c10061186e4304283d590aac283408962633358114f6e2007d1430dba2f940452a6819693606c366eff9a66fe5612c5ba789c3ec3476e5edded0c74fd4
+Size (htmllint-20111128/htmllint.zip) = 775997 bytes
+SHA1 (patch-aa) = bc28a6e0c2d988f559a56bb697c093a24831715b
+SHA1 (patch-ab) = 76927629328d20e67e592a9245e0b68dca0b7ddf
+SHA1 (patch-ad) = 931760c764de6508b80e7e1cd661d902f405608b
+SHA1 (patch-ag) = 044ff51968293160cf42129b708ad0e5250b8808
+SHA1 (patch-ah) = 5d19b0b7f0d1c5d406a06a2598f50918616834d6
+SHA1 (patch-ai) = 367e893b17db831151998c1e9de3fbf7edc1d499
+SHA1 (patch-aj) = 06e97ed15b0e0c3abc63c38b212cff1b71f3ba83
+SHA1 (patch-ak) = 955c0cd6deaca2ac3fe8084ba38925cdcb8d19bd

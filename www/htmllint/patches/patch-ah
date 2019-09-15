@@ -1,8 +1,11 @@
-$NetBSD: patch-ah,v 1.1.1.1 2001/03/14 05:13:05 kei Exp $
+$NetBSD: patch-ah,v 1.2 2019/09/15 12:51:29 mef Exp $
 
---- htmllinte.html.orig	Mon Jan 29 10:57:18 2001
-+++ htmllinte.html	Mon Jan 29 10:58:04 2001
-@@ -459,7 +459,7 @@
+-*- coding: utf-8 -*-
+Fix path
+
+--- htmllinte.html.orig	2011-11-28 16:15:44.000000000 +0900
++++ htmllinte.html	2019-09-15 21:09:15.390660706 +0900
+@@ -494,7 +494,7 @@ function DispCtrl(id, img)
  </p>
  
  <hr>
@@ -10,4 +13,4 @@ $NetBSD: patch-ah,v 1.1.1.1 2001/03/14 05:13:05 kei Exp $
 +<form action="/cgi-bin/htmllint.cgi" method="post" enctype="multipart/form-data">
  <input type="hidden" name="Stat" value="on">
  <p>
- $B%A%'%C%/$7$?$$(BHTML$B$N(BURL$B$r;XDj$9$k$+!"(BHTML$B$r2<$N%F%-%9%HNN0h$KD>@\5-=R$7$F!"(B[$B%A%'%C%/(B] $B%\%?%s$r2!$7$F$/$@$5$$!#5pBg$J(BHTML$B$OESCf$G$A$g$s@Z$i$l$F$7$^$&$3$H$,$"$j$^$9!#(B
+ チェックしたいHTMLのURLを指定するか、HTMLを下のテキスト領域に直接記述して、[チェック] ボタンを押してください。巨大なHTMLは途中でちょん切られてしまうことがあります。
