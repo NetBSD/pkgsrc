@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3926 2019/09/15 13:40:16 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3927 2019/09/15 13:58:41 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6445,3 +6445,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/expat to 2.2.8 [nia 2019-09-15]
 	Removed editors/gedit successor editors/pluma [nia 2019-09-15]
 	Removed editors/gedit-python [nia 2019-09-15]
+	Updated chat/irssi-xmpp to 0.54 [nia 2019-09-15]
