@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2019/09/02 13:20:21 adam Exp $
+# $NetBSD: Makefile,v 1.42 2019/09/15 00:11:45 nia Exp $
 
-DISTNAME=	bulk-large-20190318
+DISTNAME=	bulk-large-20190915
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -13,8 +13,6 @@ META_PACKAGE=	yes
 RESTRICTED=		Just for test build purpose
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
-
-PYTHON_VERSIONS_ACCEPTED=	 27 # py-gtk2
 
 #
 # Note: the primary purpose of this package is to build the most
@@ -39,16 +37,15 @@ BUILD_DEPENDS+=	gmp-[0-9]*:../../devel/gmp
 BUILD_DEPENDS+=	heirloom-libcommon-[0-9]*:../../devel/heirloom-libcommon
 BUILD_DEPENDS+=	libgetopt-[0-9]*:../../devel/libgetopt
 BUILD_DEPENDS+=	ocaml-[0-9]*:../../lang/ocaml
-BUILD_DEPENDS+=	gst-plugins0.10-base-[0-9]*:../../multimedia/gst-plugins0.10-base
-BUILD_DEPENDS+=	gstreamer0.10-[0-9]*:../../multimedia/gstreamer0.10
+BUILD_DEPENDS+=	gst-plugins1-base-[0-9]*:../../multimedia/gst-plugins1-base
+BUILD_DEPENDS+=	gstreamer1-[0-9]*:../../multimedia/gstreamer1
 BUILD_DEPENDS+=	libsoup-[0-9]*:../../net/libsoup
 BUILD_DEPENDS+=	dbus-[0-9]*:../../sysutils/dbus
 BUILD_DEPENDS+=	dbus-glib-[0-9]*:../../sysutils/dbus-glib
 BUILD_DEPENDS+=	aspell-[0-9]*:../../textproc/aspell
-BUILD_DEPENDS+=	kdelibs4-[0-9]*:../../x11/kdelibs4
-BUILD_DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
-BUILD_DEPENDS+=	qt4-libs-[0-9]*:../../x11/qt4-libs
-BUILD_DEPENDS+=	qt4-tools-[0-9]*:../../x11/qt4-tools
+BUILD_DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
+BUILD_DEPENDS+=	qt5-qtbase-[0-9]*:../../x11/qt5-qtbase
+BUILD_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
 #
 # 2. Applications
@@ -85,9 +82,8 @@ BUILD_DEPENDS+=	octave-[0-9]*:../../math/octave
 BUILD_DEPENDS+=	zyGrib-[0-9]*:../../misc/zyGrib
 BUILD_DEPENDS+=	mplayer-[0-9]*:../../multimedia/mplayer
 BUILD_DEPENDS+=	xine-ui-[0-9]*:../../multimedia/xine-ui
-BUILD_DEPENDS+=	gstreamer0.10-plugins-[0-9]*:../../meta-pkgs/gstreamer0.10-plugins
 BUILD_DEPENDS+=	cups>=1.5<2.0:../../print/cups15
-BUILD_DEPENDS+=	evince>=2<3:../../print/evince
+BUILD_DEPENDS+=	atril-[0-9]:../../print/atril
 BUILD_DEPENDS+=	lilypond-[0-9]*:../../print/lilypond
 BUILD_DEPENDS+=	mit-krb5-appl-[0-9]*:../../security/mit-krb5-appl
 BUILD_DEPENDS+=	FlightCrew-[0-9]*:../../textproc/FlightCrew
