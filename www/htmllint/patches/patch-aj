@@ -1,13 +1,16 @@
-$NetBSD: patch-aj,v 1.1.1.1 2001/03/14 05:13:05 kei Exp $
+$NetBSD: patch-aj,v 1.2 2019/09/15 12:51:29 mef Exp $
 
---- use-htmllintcgi.html.orig	Mon Jan 29 10:57:18 2001
-+++ use-htmllintcgi.html	Mon Jan 29 10:58:51 2001
-@@ -53,7 +53,7 @@
+-*- coding: utf-8 -*-
+Fix path
+
+--- use-htmllintcgi.html.orig	2011-11-28 16:15:44.000000000 +0900
++++ use-htmllintcgi.html	2019-09-15 21:10:03.044114993 +0900
+@@ -54,7 +54,7 @@
  	&lt;/FORM&gt;
  </code></blockquote>
- <p>$B<!$N%\%?%s$O$3$N(BHTML$B$r%A%'%C%/$7$^$9!#(B</p>
+ <p>次のボタンはこのHTMLをチェックします。</p>
 -<form action="./htmllint.cgi">
-+<form action="/cgi-bin/htmllint.cgi">
++<form action="/cgi-bin/tmllint.cgi">
  <input type="hidden" name="ViewSource" value="on">
- <input type="submit" value="$B$3$N(BHTML$B$OK~E@$8$c$J$$$+$bCN$l$^$;$s(B">
+ <input type="submit" value="このHTMLは満点じゃないかも知れません">
  </form>
