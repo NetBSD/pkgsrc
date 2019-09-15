@@ -1,13 +1,16 @@
-$NetBSD: patch-aa,v 1.2 2001/03/18 14:05:12 kei Exp $
+$NetBSD: patch-aa,v 1.3 2019/09/15 12:51:29 mef Exp $
 
---- faq.html.orig	Wed Mar 14 16:36:18 2001
-+++ faq.html	Sun Mar 18 08:42:50 2001
-@@ -153,7 +153,7 @@
+-*- coding: utf-8 -*-
+fix path 
+
+--- faq.html.orig	2011-11-28 16:15:44.000000000 +0900
++++ faq.html	2019-09-15 21:06:42.316912606 +0900
+@@ -184,7 +184,7 @@ 
  <dl compact class="faq">
- <dt>Q<dd>$B%5!<%P$K(B <a href="http://ei5nazha.yz.yamagata-u.ac.jp/~aito/w3m/">w3m</a> $B$r%$%s%9%H!<%k$7$^$7$?$,(B Another HTML-lint $B$G7k2L$,I=<($5$l$^$;$s!#(B
- <dt>A<dd>$B%G%U%)%k%H$G!"(B-M$B%*%W%7%g%s$rIU$1$F(Bw3m$B$r8F$S=P$9$?$a!"%+%i!<5!G=$rL58z$K$7$F%3%s%Q%$%k$5$l$?(Bw3m$B$G$&$^$/F0:n$7$J$$$h$&$G$9!#%+%i!<5!G=$rM-8z$K$9$k$+!"(Bhtmllint.env $B$G(B
+ <dt>Q<dd>サーバに <a href="http://ei5nazha.yz.yamagata-u.ac.jp/~aito/w3m/">w3m</a> をインストールしましたが Another HTML-lint で結果が表示されません。
+ <dt>A<dd>デフォルトで、-Mオプションを付けてw3mを呼び出すため、カラー機能を無効にしてコンパイルされたw3mでうまく動作しないようです。カラー機能を有効にするか、htmllint.env で
 -<pre class="pre-sample">    $W3M = '/usr/local/bin/w3m -dump -T text/html -e';</pre>
-+<pre class="pre-sample">    $W3M = '@PREFIX@/bin/w3m -dump -T text/html -j';</pre>
- $B$J$I$H(B -M $B$N$J$$%*%W%7%g%s$r;XDj$7$F$/$@$5$$(B($B%*%W%7%g%s$N>\:Y$O(Bw3m$B$r;2>H$N$3$H(B)$B!#(B
++<pre class="pre-sample">    $W3M = '@PREFIX@/bin/w3m -dump -T text/html -e';</pre>
+ などと -M のないオプションを指定してください(オプションの詳細はw3mを参照のこと)。
  </dl>
  

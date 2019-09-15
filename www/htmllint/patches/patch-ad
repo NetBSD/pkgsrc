@@ -1,7 +1,10 @@
-$NetBSD: patch-ad,v 1.2 2001/03/18 14:05:12 kei Exp $
+$NetBSD: patch-ad,v 1.3 2019/09/15 12:51:29 mef Exp $
 
---- htmllintenv.orig	Thu Feb  1 21:16:08 2001
-+++ htmllintenv	Sun Mar 18 08:38:21 2001
+-*- coding: euc-japan -*-
+Fix path
+
+--- htmllintenv.orig	2007-05-19 17:36:51.000000000 +0900
++++ htmllintenv	2019-09-15 21:07:55.796595775 +0900
 @@ -5,7 +5,7 @@
  #   アクセス権をうまく工夫して、他人から見えないようにしてください。
  
@@ -26,7 +29,7 @@ $NetBSD: patch-ad,v 1.2 2001/03/18 14:05:12 kei Exp $
  
  # インクルードパスの追加
  unshift @INC, '.', $RULEDIR;
-@@ -74,15 +74,15 @@
+@@ -77,15 +77,15 @@ $MAXHTMLSIZE = 512;
  #$GETLOCALFILE = 1;
  
  # CGI が出力する HTML の漢字コードの既定値 (コメントアウトしても可)
@@ -46,7 +49,7 @@ $NetBSD: patch-ad,v 1.2 2001/03/18 14:05:12 kei Exp $
  
  # 得点記録用ログファイル (不要ならコメントアウト)
  #   # の部分は年月に置き換わります
-@@ -97,7 +97,7 @@
+@@ -100,7 +100,7 @@ $MAXHTMLSIZE = 512;
  #@EXCEPTSCORES = qw(uso800.ac.jp);
  
  # Muquit's Access Counter CGI (不要あるいは未実装ならコメントアウト)
@@ -54,4 +57,4 @@ $NetBSD: patch-ad,v 1.2 2001/03/18 14:05:12 kei Exp $
 +#$COUNTER = '@PREFIX@/libexec/cgi-bin/Count.cgi';
  
  # ビジーチェック関数
- # sub BusyCheck() {
+ # sub BusyCheck {
