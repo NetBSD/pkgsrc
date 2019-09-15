@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1268 2019/09/15 12:55:14 nia Exp $
+# $NetBSD: Makefile,v 1.1269 2019/09/15 13:00:33 nia Exp $
 #
 
 COMMENT=	Networking tools
@@ -754,7 +754,6 @@ SUBDIR+=	rbldnsd
 SUBDIR+=	rdesktop
 SUBDIR+=	rdist6
 SUBDIR+=	remmina
-SUBDIR+=	remmina-plugins
 SUBDIR+=	restclient-ui
 SUBDIR+=	rinetd
 SUBDIR+=	rootprobe
