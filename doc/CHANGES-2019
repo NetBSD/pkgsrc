@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3916 2019/09/15 09:33:37 mef Exp $
+$NetBSD: CHANGES-2019,v 1.3917 2019/09/15 10:38:01 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6435,3 +6435,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/qpdf to 9.0.0 [ryoon 2019-09-15]
 	Updated textproc/aspell to 0.60.7 [maya 2019-09-15]
 	Deleted devel/sgi-stl{,-docs}-3.3 [mef 2019-09-15]
+	Updated security/libssh to 0.90 [nia 2019-09-15]
