@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3913 2019/09/14 21:47:22 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3914 2019/09/15 00:11:56 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6432,3 +6432,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed net/tsclient successor net/remmina [nia 2019-09-14]
 	Removed editors/conglomerate [nia 2019-09-14]
 	Removed archivers/file-roller successor archivers/engrampa [nia 2019-09-14]
+	Updated print/qpdf to 9.0.0 [ryoon 2019-09-15]
