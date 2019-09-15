@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19265 2019/09/15 13:39:11 nia Exp $
+$NetBSD: TODO,v 1.19266 2019/09/15 17:55:20 nia Exp $
 
 Suggested new packages
 ======================
@@ -423,7 +423,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o amavis-perl-0.3.12 [called just amavis]
 	o ampache-3.8.2
 	o angband-3.2
-	o anjuta-3.16.0
 	o ansifilter-2.9
 	o ant-contrib-1.0b3
 	o antiright-8.6
