@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.3 2019/09/09 07:09:47 maya Exp $
+$NetBSD: distinfo,v 1.4 2019/09/15 15:17:06 fox Exp $
 
 SHA1 (py-sysctl-0.1.tar.gz) = 120483a57fc85790702223317b1e29ece62f5bb0
 RMD160 (py-sysctl-0.1.tar.gz) = 053144711e41f5518efc418795eec5e6e06750a1
 SHA512 (py-sysctl-0.1.tar.gz) = 4b6123625a212364ef5a2a367f13ec32194503b8881248e3909f5958adac05149ed2c22aa49b67468c3d1fc23386c16d97af747b8045b322c749f37d1a086005
 Size (py-sysctl-0.1.tar.gz) = 6746 bytes
 SHA1 (patch-setup.py) = eef1ae1e7a6d60f332514670ebcd1ee08dece131
-SHA1 (patch-sysctlmodule.c) = 55c7cec28080a936022e17f6e599f00b6825011c
+SHA1 (patch-sysctlmodule.c) = fd357f6205341ba7c9585f2788828a6e78ad7cb2
 SHA1 (patch-test.py) = ff610e1eb2371147454861dd80e4d31878ec0ae7
