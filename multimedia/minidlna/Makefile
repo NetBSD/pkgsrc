@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2019/04/03 00:32:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.36 2019/09/15 22:08:33 maya Exp $
 
 PKGNAME=	minidlna-1.2.1.20180601
-PKGREVISION=	4
+PKGREVISION=	5
 DISTNAME=	minidlna-git-799e6cf505ec470b2bf0ae4118143380aa16b837
 CATEGORIES=	multimedia
 #MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=minidlna/}
@@ -34,7 +34,7 @@ pre-install:
 
 BUILD_DEPENDS+=	gettext-tools-[0-9]*:../../devel/gettext-tools
 
-.include "../../multimedia/ffmpeg3/buildlink3.mk"
+.include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
