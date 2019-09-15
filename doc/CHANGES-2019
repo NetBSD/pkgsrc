@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3919 2019/09/15 12:22:41 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3920 2019/09/15 12:51:46 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6438,3 +6438,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/libssh to 0.90 [nia 2019-09-15]
 	Updated textproc/pugixml to 1.10 [adam 2019-09-15]
 	Updated net/haproxy to 2.0.6 [nia 2019-09-15]
+	Updated www/htmllint to 20111128 [mef 2019-09-15]
