@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3928 2019/09/15 17:55:20 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3929 2019/09/15 18:03:25 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6447,3 +6447,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed editors/gedit-python [nia 2019-09-15]
 	Updated chat/irssi-xmpp to 0.54 [nia 2019-09-15]
 	Updated devel/anjuta to 3.34.0 [nia 2019-09-15]
+	Removed x11/gnome-terminal successor x11/mate-terminal [nia 2019-09-15]
