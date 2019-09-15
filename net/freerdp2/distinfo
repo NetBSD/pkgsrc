@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2019/09/15 12:55:14 nia Exp $
+
+SHA1 (freerdp-2.0.0rc4.tar.gz) = bd50ce9d8807499e14884a3019e9f42b40f3480b
+RMD160 (freerdp-2.0.0rc4.tar.gz) = 45a49be0aafda484aa3b44e5c32ceaeed23fb2b1
+SHA512 (freerdp-2.0.0rc4.tar.gz) = b4a4d4a58d09010bc45fb90cca148dc4421a4cf0cd5caf288aa702212ef081f14fc418b91f1b79ec8631f582c9ebcdd3031d3333b6a892adb29c402492abb649
+Size (freerdp-2.0.0rc4.tar.gz) = 6615213 bytes
+SHA1 (patch-winpr_libwinpr_sysinfo_sysinfo.c) = 858cfba03a902e1e6900a2d1ee2bcf7429227d3d
