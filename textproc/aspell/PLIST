@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2011/07/12 14:06:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2019/09/15 06:53:36 maya Exp $
 bin/aspell
 bin/aspell-import
 bin/precat
@@ -108,16 +108,21 @@ share/locale/cs/LC_MESSAGES/aspell.mo
 share/locale/da/LC_MESSAGES/aspell.mo
 share/locale/de/LC_MESSAGES/aspell.mo
 share/locale/en_GB/LC_MESSAGES/aspell.mo
+share/locale/eo/LC_MESSAGES/aspell.mo
 share/locale/es/LC_MESSAGES/aspell.mo
 share/locale/fi/LC_MESSAGES/aspell.mo
 share/locale/fr/LC_MESSAGES/aspell.mo
+share/locale/fur/LC_MESSAGES/aspell.mo
 share/locale/ga/LC_MESSAGES/aspell.mo
+share/locale/hr/LC_MESSAGES/aspell.mo
 share/locale/id/LC_MESSAGES/aspell.mo
 share/locale/it/LC_MESSAGES/aspell.mo
 share/locale/ja/LC_MESSAGES/aspell.mo
 share/locale/mn/LC_MESSAGES/aspell.mo
 share/locale/ms/LC_MESSAGES/aspell.mo
 share/locale/nl/LC_MESSAGES/aspell.mo
+share/locale/pl/LC_MESSAGES/aspell.mo
+share/locale/pt/LC_MESSAGES/aspell.mo
 share/locale/pt_BR/LC_MESSAGES/aspell.mo
 share/locale/ro/LC_MESSAGES/aspell.mo
 share/locale/ru/LC_MESSAGES/aspell.mo

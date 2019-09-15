@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.7 2017/05/24 09:13:09 jperkin Exp $
+$NetBSD: patch-ac,v 1.8 2019/09/15 06:53:36 maya Exp $
 
 --- prog/check_funs.cpp.orig	2011-07-04 09:17:27.000000000 +0000
 +++ prog/check_funs.cpp
@@ -67,12 +67,3 @@ $NetBSD: patch-ac,v 1.7 2017/05/24 09:13:09 jperkin Exp $
    }
  #endif
    if (use_curses) {
-@@ -647,7 +654,7 @@ static void print_truncate(FILE * out, c
-     }
-   }
-   if (i == width-1) {
--    if (word == '\0')
-+    if (*word == '\0')
-       put(out,' ');
-     else if (word[len] == '\0')
-       put(out, word, len);
