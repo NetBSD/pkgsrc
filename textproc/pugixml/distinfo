@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2018/04/16 21:27:54 wiz Exp $
+$NetBSD: distinfo,v 1.4 2019/09/15 11:38:28 adam Exp $
 
-SHA1 (pugixml-1.9.tar.gz) = b0e36910da92a743d6dadfb1c0e90a622640b96b
-RMD160 (pugixml-1.9.tar.gz) = 073bf2db4ed701dc511c03185ff3abcce1d928cc
-SHA512 (pugixml-1.9.tar.gz) = f97941941d98a1a056087edc0dde6376bf2cc12ce4523b67a2f2ec5ae0895c2a2e55da32fcca6a997f1a0d918c5f39564167da0a07ce0d7da92880ad8631c31e
-Size (pugixml-1.9.tar.gz) = 555480 bytes
+SHA1 (pugixml-1.10.tar.gz) = f69c6cdf8ad9d986f1844b21f83d00bbafc614dd
+RMD160 (pugixml-1.10.tar.gz) = 280e296e53cf548493628e84fb43fa51332d0c53
+SHA512 (pugixml-1.10.tar.gz) = 0634053d4f757b9293997763bb2e51595197c192f3974e954975d6d6ff91e4a6cb7c194efa530e0eef1a2a93db16592c5630010b6482430dff5ffc6879e84b6a
+Size (pugixml-1.10.tar.gz) = 562718 bytes
