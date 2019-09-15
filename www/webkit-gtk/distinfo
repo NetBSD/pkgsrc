@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.126 2019/09/10 22:10:04 leot Exp $
+$NetBSD: distinfo,v 1.127 2019/09/15 10:58:52 leot Exp $
 
 SHA1 (webkitgtk-2.26.0.tar.xz) = e0c6f707bdf9edf3d444117736cb3c040eca78e7
 RMD160 (webkitgtk-2.26.0.tar.xz) = b1edf5799ca58bf1b449b510d97515b36fa1a965
@@ -14,6 +14,7 @@ SHA1 (patch-Source_JavaScriptCore_jit_ExecutableAllocator.cpp) = d600887955128ce
 SHA1 (patch-Source_JavaScriptCore_offlineasm_arm64.rb) = 8c05dafa317667bbf55504d05eeb8ae06fba4e93
 SHA1 (patch-Source_JavaScriptCore_runtime_MachineContext.h) = 23bc86a389f8009ec829c3ee0fe3effe3f20b012
 SHA1 (patch-Source_ThirdParty_ANGLE_adjust-angle-include-paths.sh) = b536bcbe0ac4ff158b5bc35dfa363d00120ed2f0
+SHA1 (patch-Source_ThirdParty_ANGLE_src_compiler_translator_SymbolTable.h) = 00ee667591627b104135862658f8182895b51003
 SHA1 (patch-Source_ThirdParty_gtest_include_gtest_internal_gtest-port.h) = a5454eb891ad1f9d8285c28af2e9efb4ff439e6b
 SHA1 (patch-Source_WTF_wtf_FileSystem.cpp) = 53a8e65970f15202b3cdf1f4149d35b431c32a46
 SHA1 (patch-Source_WTF_wtf_Platform.h) = 584720f4e248ff7e51166c267d08954786c28ab7
