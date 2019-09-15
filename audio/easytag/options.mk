@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2019/06/21 06:25:58 triaxx Exp $
+# $NetBSD: options.mk,v 1.10 2019/09/15 22:15:02 maya Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.easytag
 PKG_SUPPORTED_OPTIONS=	doc flac manual ogg opus speex wavpack
@@ -23,6 +23,7 @@ BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 CONFIGURE_ARGS+=	--with-xml-catalog=${PKG_SYSCONFDIR}/xml/catalog
 CONFIGURE_ARGS+=	--enable-man
+PLIST.man=		yes
 .else
 CONFIGURE_ARGS+=	--disable-man
 .endif
