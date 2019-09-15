@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.24 2019/06/21 06:25:58 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.25 2019/09/15 22:15:02 maya Exp $
 bin/easytag
-man/man1/easytag.1
+${PLIST.man}man/man1/easytag.1
 share/appdata/easytag.appdata.xml
 share/applications/easytag.desktop
 share/glib-2.0/schemas/org.gnome.EasyTAG.enums.xml
