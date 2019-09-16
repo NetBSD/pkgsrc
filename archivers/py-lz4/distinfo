@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.23 2019/06/10 07:45:44 adam Exp $
+$NetBSD: distinfo,v 1.24 2019/09/16 08:53:00 adam Exp $
 
-SHA1 (lz4-2.1.10.tar.gz) = 7edf1ce8f4c9ba7dfd52a00a28663b89cb248f7e
-RMD160 (lz4-2.1.10.tar.gz) = a6ddd1802d49062603ecbaa8cef8ea30ac1a650b
-SHA512 (lz4-2.1.10.tar.gz) = 2bee74fba190329f99bef231bc7460f213077c1ae8ced37ff507fef3f01a4e14748f525b2d478b179c4f5d00497c286c931458b2349273dfc3446e6e638d4228
-Size (lz4-2.1.10.tar.gz) = 138372 bytes
+SHA1 (lz4-2.2.1.tar.gz) = 053b9e22f32913d13664f0a85ab2dc9af2d91397
+RMD160 (lz4-2.2.1.tar.gz) = 5c5e3e2087e99cbbcbf925b0e724204333893090
+SHA512 (lz4-2.2.1.tar.gz) = 3f6400c0ac02182306fcb0e76fc78fdcec604bd89baa288c71261cce05350de244eb0d4263e4c1c1d647a529426beac409b3ff20c170c3ea19c7dd82cfae834b
+Size (lz4-2.2.1.tar.gz) = 141841 bytes
 SHA1 (patch-setup.py) = 316572cdcc0672197cb46663a96386271c6bcad6
