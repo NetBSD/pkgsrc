@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2019/09/16 22:46:20 nia Exp $
+# $NetBSD: Makefile,v 1.8 2019/09/16 23:17:07 nia Exp $
 
 DISTNAME=	mumble-1.3.0
+PKGREVISION=	1
 CATEGORIES=	chat audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mumble-voip/}
 GITHUB_PROJECT=	mumble
@@ -17,7 +18,12 @@ USE_LIBTOOL=	yes
 
 BUILD_TARGET=	release
 
+# C++11
+GCC_REQD+=	4.8
+
 CONFIG_OPTIONS+=	DEFINES+="PLUGIN_PATH=${PREFIX}/lib/mumble"
+
+CONFIG_OPTIONS+=	CONFIG+=c++11
 
 CONFIG_OPTIONS+=	CONFIG+=no-bundled-opus
 CONFIG_OPTIONS+=	CONFIG+=no-bundled-speex
@@ -71,6 +77,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/scripts/mumble.desktop \
 		${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/man/mumble.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/man/murmurd.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/icons/mumble.svg \
 		${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps
