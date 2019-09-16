@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.1 2019/09/10 21:20:35 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2019/09/16 06:50:28 schmonz Exp $
 
-SHA1 (sdf-2.001beta1.tar.gz) = 01bf3f7e36ae139f68018e1561586da451bc5c8e
-RMD160 (sdf-2.001beta1.tar.gz) = 013680e244550cdd86c54c8f0eabb420fcd8a885
-SHA512 (sdf-2.001beta1.tar.gz) = 8230b90e4c425a18f79305856cea4f7a3f0c1994d93b74a67debe0740f454d7fa81e68c4d818fd4c14d8d690f7af40449c10520c219495b3854ef17747b72ce5
-Size (sdf-2.001beta1.tar.gz) = 788018 bytes
+SHA1 (sdf-2.001.tar.gz) = ed969c0c89544f9ca1569d121edfa36d1ea038a5
+RMD160 (sdf-2.001.tar.gz) = 668694af7c5aaf6d0331e84044874125dfa21633
+SHA512 (sdf-2.001.tar.gz) = ddcba86f20e3a9bc0b36b27a3a91899de46f7d192b2053fd4b982fd17ff6f9264ba0b9bd5dd1430fec4b8867c71b179405845c3cc8bc465295e216fa438952e6
+Size (sdf-2.001.tar.gz) = 818230 bytes
 SHA1 (patch-perllib_sdf_subs.pl) = 0e975864b1268e816b0a5ef4097eaa0396bed49c
 SHA1 (patch-perllib_sdf_tohtml.pl) = 0c0d1baafc75c0780a56d33cd45200dbd322254d
 SHA1 (patch-perllib_sdf_tomif.pl) = 649a2b16b1365ddc7fec69799264ab625f80e454
