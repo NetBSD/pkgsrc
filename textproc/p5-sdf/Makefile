@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2019/09/10 22:28:37 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2019/09/16 06:50:28 schmonz Exp $
 
-DISTNAME=	sdf-2.001beta1
+DISTNAME=	sdf-2.001
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${HOMEPAGE}
