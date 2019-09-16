@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.2 2019/08/31 04:16:45 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2019/09/16 19:24:55 adam Exp $
 
 BUILDLINK_TREE+=	qt5-qtspeech
 
 .if !defined(QT5_QTSPEECH_BUILDLINK3_MK)
 QT5_QTSPEECH_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.qt5-qtspeech+=	qt5-qtspeech>=5.13.0
+BUILDLINK_API_DEPENDS.qt5-qtspeech+=	qt5-qtspeech>=5.13.1
 BUILDLINK_PKGSRCDIR.qt5-qtspeech?=	../../x11/qt5-qtspeech
 
 BUILDLINK_INCDIRS.qt5-qtspeech+=  qt5/include
