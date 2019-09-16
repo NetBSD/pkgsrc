@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2019/09/16 11:42:50 nia Exp $
+
+Let pkgsrc take care of libcurses.
+
+--- configure.orig	2018-07-30 11:06:03.000000000 +0000
++++ configure
+@@ -36,7 +36,7 @@ seds=[s/^#undef \(USE_UNSUPPORTED_AND_BR
+ PROGS="CC=gcc CC=clang INSTALL=install MSGFMT=msgfmt"
+ 
+ # Libs found using pkg-config
+-LIBS="libxml-2.0 ncurses zlib"
++LIBS="libxml-2.0 zlib"
+ # Defaults to substitute with pkg-config --libs output
+ DEFLIBS="-lxml2 -lncursesw -lz"
+ # Defaults to substitute with pkg-config --cflags output
