@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.848 2019/09/16 10:36:59 nia Exp $
+# $NetBSD: Makefile,v 1.849 2019/09/16 10:38:26 nia Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -68,7 +68,6 @@ SUBDIR+=	fvwm-wharf
 SUBDIR+=	gcolor2
 SUBDIR+=	gdm
 SUBDIR+=	ggiterm
-SUBDIR+=	gnome-applets
 SUBDIR+=	gnome-control-center
 SUBDIR+=	gnome-desktop
 SUBDIR+=	gnome-desktop-sharp
