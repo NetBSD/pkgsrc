@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/06/15 09:51:59 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2019/09/16 10:50:47 nia Exp $
 
 DISTNAME=	compiz-fusion-0.6
 CATEGORIES=	meta-pkgs x11 gnome
@@ -15,6 +15,5 @@ DEPENDS+=	compiz>=0.6.2:../../wm/compiz
 DEPENDS+=	compiz-fusion-plugins-main>=0.6.0nb1:../../wm/compiz-fusion-plugins-main
 DEPENDS+=	compiz-fusion-plugins-extra>=0.6.0:../../wm/compiz-fusion-plugins-extra
 DEPENDS+=	ccsm>=0.6.0:../../wm/ccsm
-DEPENDS+=	gnome-session>=2.22.1.1nb2:../../x11/gnome-session
 
 .include "../../mk/bsd.pkg.mk"
