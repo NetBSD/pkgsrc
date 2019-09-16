@@ -1,12 +1,10 @@
-$NetBSD: distinfo,v 1.14 2019/07/30 13:03:18 ryoon Exp $
+$NetBSD: distinfo,v 1.15 2019/09/16 21:55:46 nia Exp $
 
-SHA1 (geeqie-1.5.tar.xz) = c7dd9372a497714e8aa52b42e1caad8a96fad030
-RMD160 (geeqie-1.5.tar.xz) = 663e2c3510ca2e79e44daa5ecf8ef72869633c59
-SHA512 (geeqie-1.5.tar.xz) = 2b87d543d8d77a4fec331fd1b73ca2038912362fc1f94c9b0f163dcc7c2dd58118e175c5540aecafb0581708ea5c2a5a321dde09f644e2322bd4ca5c0284b722
-Size (geeqie-1.5.tar.xz) = 1585780 bytes
-SHA1 (patch-Makefile.am) = 49aba28dcb6a3671550ddab5c80d93f3a094d47f
+SHA1 (geeqie-1.5.1.tar.xz) = fe14b122744a4297e9e98a9cfc5821f2b5e6e1ce
+RMD160 (geeqie-1.5.1.tar.xz) = 90627c49e53d9389bcbb8feec5315cd02a5ea616
+SHA512 (geeqie-1.5.1.tar.xz) = 265eade90afe45856855e856c5f640786ca2e3add57c3ade8ca380d075297f96bf44c6e0c4fd6eabbc2666a37f898b50d37dd2e01d77875b8a622d72d8a0e6ac
+Size (geeqie-1.5.1.tar.xz) = 1587116 bytes
+SHA1 (patch-Makefile.am) = 74aa2631b468d7984a4a02ad827d839cfe2155b9
 SHA1 (patch-ac) = e551d5e733354902254c1a392be5738da6c88170
 SHA1 (patch-doc_Makefile.am) = 9ffbcd6f8e5bc5710b61dfbfb020e92497d3414f
 SHA1 (patch-src_layout__util.c) = c7ee3ea2e9874e32df21ebecad22758d9ccc17c3
-SHA1 (patch-src_misc.c) = ce18eb36b6bd31b99b190f4d4377cd50db67abba
-SHA1 (patch-src_pan-view_pan-util.c) = ac965257003cd9da5dbd0c2f2452ed50a5889021
