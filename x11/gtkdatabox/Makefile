@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/07/21 22:24:17 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/09/16 00:09:11 nia Exp $
 
 DISTNAME=	gtkdatabox-0.9.2.0
 PKGREVISION=	10
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkdatabox/}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://sourceforge.net/projects/gtkdatabox/
-COMMENT=	TODO: Short description of the package
+COMMENT=	GTK2 widget for live display of fluctuating numerical data
 LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes
