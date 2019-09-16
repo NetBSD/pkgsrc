@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2019/04/28 19:37:36 rillig Exp $
+# $NetBSD: Makefile,v 1.56 2019/09/16 13:25:21 nia Exp $
 
-DISTNAME=	libcroco-0.6.8
+DISTNAME=	libcroco-0.6.13
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libcroco/0.6/}
 EXTRACT_SUFX=	.tar.xz
@@ -10,9 +10,9 @@ HOMEPAGE=	https://github.com/GNOME/libcroco
 COMMENT=	Toolkit to parse and manipulate CSS (Cascading Style Sheets)
 LICENSE=	gnu-lgpl-v2
 
-USE_TOOLS+=		gmake pkg-config
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
+USE_TOOLS+=	gmake pkg-config
+USE_LIBTOOL=	yes
+GNU_CONFIGURE=	yes
 
 PKGCONFIG_OVERRIDE+=	libcroco-0.6.pc
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2012/02/09 20:29:20 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/09/16 13:25:21 nia Exp $
 bin/croco-0.6-config
 bin/csslint-0.6
 include/libcroco-0.6/libcroco/cr-additional-sel.h
@@ -34,7 +34,7 @@ lib/pkgconfig/libcroco-0.6.pc
 share/gtk-doc/html/libcroco/ch01.html
 share/gtk-doc/html/libcroco/home.png
 share/gtk-doc/html/libcroco/index.html
-share/gtk-doc/html/libcroco/index.sgml
+share/gtk-doc/html/libcroco/left-insensitive.png
 share/gtk-doc/html/libcroco/left.png
 share/gtk-doc/html/libcroco/libcroco-cr-additional-sel.html
 share/gtk-doc/html/libcroco/libcroco-cr-attr-sel.html
@@ -64,6 +64,8 @@ share/gtk-doc/html/libcroco/libcroco-cr-token.html
 share/gtk-doc/html/libcroco/libcroco-cr-utils.html
 share/gtk-doc/html/libcroco/libcroco-libcroco-config.html
 share/gtk-doc/html/libcroco/libcroco.devhelp2
+share/gtk-doc/html/libcroco/right-insensitive.png
 share/gtk-doc/html/libcroco/right.png
 share/gtk-doc/html/libcroco/style.css
+share/gtk-doc/html/libcroco/up-insensitive.png
 share/gtk-doc/html/libcroco/up.png
