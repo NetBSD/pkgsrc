@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2019/08/11 13:25:16 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2019/09/16 19:24:54 adam Exp $
 
 DISTNAME=	qtquickcontrols-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtquickcontrols-${QTVERSION}
-PKGREVISION=	1
 COMMENT=	Qt5 module for QuickControls
 
 BUILD_TARGET=		sub-src
