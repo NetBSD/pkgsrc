@@ -1,14 +1,14 @@
-$NetBSD: patch-os-support_c,v 1.1 2012/06/23 23:14:24 dholland Exp $
+$NetBSD: patch-os-support_c,v 1.2 2019/09/16 11:42:50 nia Exp $
 
 Use standard headers. (Required on Solaris for time_t.)
 
---- os-support.c~	2009-09-17 06:44:27.000000000 +0000
+--- os-support.c.orig	2018-07-30 11:06:03.000000000 +0000
 +++ os-support.c
-@@ -28,6 +28,7 @@
- #include <errno.h>
- #include <string.h>
+@@ -16,6 +16,7 @@
+ 
+ #include "os-support.h"
  #include <ctype.h>
 +#include <time.h>
  
- #include "main.h"
- 
+ //-----------------------------------------------------------------------------
+ // This is a replacement for strsep which is not portable (missing on Solaris).

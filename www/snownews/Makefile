@@ -1,38 +1,33 @@
-# $NetBSD: Makefile,v 1.54 2019/08/11 13:25:08 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2019/09/16 11:42:50 nia Exp $
 
-DISTNAME=	snownews-1.5.12
-PKGREVISION=	16
+DISTNAME=	snownews-1.6.10
 CATEGORIES=	www
-MASTER_SITES=	http://kiza.kcore.de/software/snownews/download/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=kouya/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://kiza.kcore.de/software/snownews/
+HOMEPAGE=	https://github.com/kouya/snownews
 COMMENT=	Small, curses based RSS feed reader
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v3
 
-DEPENDS+=		p5-XML-LibXML>=1.58:../../textproc/p5-XML-LibXML
+DEPENDS+=	p5-XML-LibXML>=1.58:../../textproc/p5-XML-LibXML
 
-HAS_CONFIGURE=		yes
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		msgfmt perl
+USE_TOOLS+=	gmake msgfmt perl
+HAS_CONFIGURE=	yes
+FAKE_NCURSES=	yes
 
-REPLACE_PERL+=		configure opml2snow
+REPLACE_PERL+=	opml2snow
 
-CONFIG_SHELL=		perl
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
-MAKE_ENV+=		EXTRA_CFLAGS=${CFLAGS:Q}
+AUTO_MKDIRS=	yes
 
-INCOMPAT_CURSES=	NetBSD-[0-4].*-*	#WA_BOLD, WA_REVERSE, KEY_RESIZE
-FAKE_NCURSES=		yes
+CONFIGURE_ARGS+=	--prefix=${DESTDIR}${PREFIX}
+CONFIGURE_ARGS+=	--mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
+
+# AUTO_MKDIRS can't handle this one.
+INSTALLATION_DIRS+=	share/locale/be@latin/LC_MESSAGES
 
 .include "options.mk"
-
-post-configure:
-	${ECHO} LOCALEPATH=${PREFIX}/${PKGLOCALEDIR}/locale >> ${WRKSRC}/platform_settings
-	${ECHO} MANPATH=${PREFIX}/${PKGMANDIR} >> ${WRKSRC}/platform_settings
-
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
