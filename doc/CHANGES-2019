@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3941 2019/09/16 15:04:21 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3942 2019/09/16 19:25:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6469,3 +6469,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/snownews to 1.6.10 [nia 2019-09-16]
 	Updated textproc/libcroco to 0.6.13 [nia 2019-09-16]
 	Updated games/xcowsay to 1.4 [nia 2019-09-16]
+	Updated x11/qt5 to 5.13.1 [adam 2019-09-16]
