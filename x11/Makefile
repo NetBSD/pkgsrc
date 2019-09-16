@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.846 2019/09/15 18:02:13 nia Exp $
+# $NetBSD: Makefile,v 1.847 2019/09/16 10:26:03 nia Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -76,7 +76,6 @@ SUBDIR+=	gnome-desktop-sharp
 SUBDIR+=	gnome-desktop3
 SUBDIR+=	gnome-mag
 SUBDIR+=	gnome-panel
-SUBDIR+=	gnome-screensaver
 SUBDIR+=	gnome-session
 SUBDIR+=	gnome-sharp
 SUBDIR+=	gnome-themes
