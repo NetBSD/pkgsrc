@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19269 2019/09/16 10:59:50 nia Exp $
+$NetBSD: TODO,v 1.19270 2019/09/16 11:42:59 nia Exp $
 
 Suggested new packages
 ======================
@@ -1254,7 +1254,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o smproxy-1.0.3
 	o snobol-2.0
 	o snow-20130616
-	o snownews-1.6.10
 	o softhsm-2.0.0
 	o sope-4.6
 	o sound-juicer-3.16.1
