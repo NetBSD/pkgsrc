@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/08/11 13:19:45 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2019/09/16 00:10:25 nia Exp $
 #
 
 DISTNAME=	Log-Dispatch-Perl-0.04
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Log/}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/Log-Dispatch-Perl
-COMMENT=	TODO: Short description of the package
+COMMENT=	Logging alternative using standard Perl core functions
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Log-Dispatch>=1.16:../../devel/p5-Log-Dispatch
