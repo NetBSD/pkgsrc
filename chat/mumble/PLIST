@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/09/16 22:46:20 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/09/16 23:17:07 nia Exp $
 bin/mumble
 bin/murmurd
 lib/mumble/libcelt0.so
@@ -14,6 +14,7 @@ lib/mumble/libmumble.so.1.3
 lib/mumble/libmumble.so.${PKGVERSION}
 lib/mumble/libmumble_proto.a
 man/man1/mumble.1
+man/man1/murmurd.1
 share/applications/mumble.desktop
 share/icons/hicolor/128x128/apps/mumble.png
 share/icons/hicolor/512x512/apps/mumble.png
