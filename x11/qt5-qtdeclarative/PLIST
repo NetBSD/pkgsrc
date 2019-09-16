@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/08/09 17:41:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2019/09/16 19:24:53 adam Exp $
 lib/pkgconfig/Qt5Qml.pc
 lib/pkgconfig/Qt5Quick.pc
 lib/pkgconfig/Qt5QuickTest.pc
@@ -690,6 +690,8 @@ qt5/include/QtQuickWidgets/QtQuickWidgetsVersion
 qt5/include/QtQuickWidgets/qquickwidget.h
 qt5/include/QtQuickWidgets/qtquickwidgetsglobal.h
 qt5/include/QtQuickWidgets/qtquickwidgetsversion.h
+qt5/lib/cmake/Qt5PacketProtocol/Qt5PacketProtocolConfig.cmake
+qt5/lib/cmake/Qt5PacketProtocol/Qt5PacketProtocolConfigVersion.cmake
 qt5/lib/cmake/Qt5Qml/Qt5QmlConfig.cmake
 qt5/lib/cmake/Qt5Qml/Qt5QmlConfigExtras.cmake
 qt5/lib/cmake/Qt5Qml/Qt5QmlConfigVersion.cmake
@@ -704,9 +706,17 @@ qt5/lib/cmake/Qt5Qml/Qt5Qml_QQmlPreviewServiceFactory.cmake
 qt5/lib/cmake/Qt5Qml/Qt5Qml_QQmlProfilerServiceFactory.cmake
 qt5/lib/cmake/Qt5Qml/Qt5Qml_QQuickProfilerAdapterFactory.cmake
 qt5/lib/cmake/Qt5Qml/Qt5Qml_QTcpServerConnectionFactory.cmake
+qt5/lib/cmake/Qt5QmlDebug/Qt5QmlDebugConfig.cmake
+qt5/lib/cmake/Qt5QmlDebug/Qt5QmlDebugConfigVersion.cmake
+qt5/lib/cmake/Qt5QmlDevTools/Qt5QmlDevToolsConfig.cmake
+qt5/lib/cmake/Qt5QmlDevTools/Qt5QmlDevToolsConfigVersion.cmake
 qt5/lib/cmake/Qt5Quick/Qt5QuickConfig.cmake
 qt5/lib/cmake/Qt5Quick/Qt5QuickConfigVersion.cmake
 qt5/lib/cmake/Qt5QuickCompiler/Qt5QuickCompilerConfig.cmake
+qt5/lib/cmake/Qt5QuickParticles/Qt5QuickParticlesConfig.cmake
+qt5/lib/cmake/Qt5QuickParticles/Qt5QuickParticlesConfigVersion.cmake
+qt5/lib/cmake/Qt5QuickShapes/Qt5QuickShapesConfig.cmake
+qt5/lib/cmake/Qt5QuickShapes/Qt5QuickShapesConfigVersion.cmake
 qt5/lib/cmake/Qt5QuickTest/Qt5QuickTestConfig.cmake
 qt5/lib/cmake/Qt5QuickTest/Qt5QuickTestConfigVersion.cmake
 qt5/lib/cmake/Qt5QuickWidgets/Qt5QuickWidgetsConfig.cmake
