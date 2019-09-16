@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.80 2019/07/30 13:03:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.81 2019/09/16 21:55:46 nia Exp $
 
-DISTNAME=	geeqie-1.5
+DISTNAME=	geeqie-1.5.1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.geeqie.org/
 EXTRACT_SUFX=	.tar.xz
