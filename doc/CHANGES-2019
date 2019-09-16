@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3937 2019/09/16 10:44:33 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3938 2019/09/16 10:59:50 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6463,3 +6463,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed x11/alacarte successor x11/mozo [nia 2019-09-16]
 	Removed x11/gnome-applets successor x11/mate-applets [nia 2019-09-16]
 	Removed x11/gnome-screensaver successor sysutils/mate-screensaver [nia 2019-09-16]
+	Removed x11/gnome-control-center successor x11/mate-control-center [nia 2019-09-16]
+	Removed x11/gnome-session successor x11/mate-session-manager [nia 2019-09-16]
+	Removed sysutils/gnome-settings-daemon successor x11/mate-settings-daemon [nia 2019-09-16]
