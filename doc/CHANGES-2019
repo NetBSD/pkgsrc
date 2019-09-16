@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3936 2019/09/16 08:56:40 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3937 2019/09/16 10:44:33 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6457,3 +6457,9 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/p5-sdf to 2.001 [schmonz 2019-09-16]
 	Updated archivers/py-lz4 to 2.2.1 [adam 2019-09-16]
 	Updated archivers/py-rarfile to 3.1 [adam 2019-09-16]
+	Removed misc/gnome-user-docs [nia 2019-09-16]
+	Removed sysutils/gnome-power-manager successor sysutils/mate-power-manager [nia 2019-09-16]
+	Removed sysutils/gnome-system-monitor successor sysutils/mate-system-monitor [nia 2019-09-16]
+	Removed x11/alacarte successor x11/mozo [nia 2019-09-16]
+	Removed x11/gnome-applets successor x11/mate-applets [nia 2019-09-16]
+	Removed x11/gnome-screensaver successor sysutils/mate-screensaver [nia 2019-09-16]
