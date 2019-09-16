@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2913 2019/09/15 09:33:37 mef Exp $
+# $NetBSD: Makefile,v 1.2914 2019/09/16 11:08:33 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -2575,6 +2575,7 @@ SUBDIR+=	ruby-gettext-rails
 SUBDIR+=	ruby-gettext-setup
 SUBDIR+=	ruby-gettext_i18n_rails
 SUBDIR+=	ruby-gio2
+SUBDIR+=	ruby-glib2
 SUBDIR+=	ruby-globalid
 SUBDIR+=	ruby-gobject-introspection
 SUBDIR+=	ruby-google-protobuf
