@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/08/11 13:24:57 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/09/16 00:11:10 nia Exp $
 
 DISTNAME=	Plack-Middleware-Test-StashWarnings-0.08
 PKGNAME=	p5-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Plack/}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/Plack
-COMMENT=	TODO: Short description of the package
+COMMENT=	Plack middleware component to record warnings
 LICENSE=	${PERL5_LICENSE}
 
 #DEPENDS+=	p5-Storable-[0-9]*:../../devel/p5-Storable
