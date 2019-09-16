@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Darwin,v 1.2 2018/03/01 20:09:49 adam Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.3 2019/09/16 19:24:53 adam Exp $
 qt5/include/QtClipboardSupport/${PKGVERSION}/QtClipboardSupport/private/qmacmime_p.h
 qt5/include/QtClipboardSupport/QtClipboardSupport
 qt5/include/QtClipboardSupport/QtClipboardSupportDepends
@@ -9,6 +9,10 @@ qt5/include/QtGraphicsSupport/QtGraphicsSupport
 qt5/include/QtGraphicsSupport/QtGraphicsSupportDepends
 qt5/include/QtGraphicsSupport/QtGraphicsSupportVersion
 qt5/include/QtGraphicsSupport/qtgraphicssupportversion.h
+qt5/lib/cmake/Qt5ClipboardSupport/Qt5ClipboardSupportConfig.cmake
+qt5/lib/cmake/Qt5ClipboardSupport/Qt5ClipboardSupportConfigVersion.cmake
+qt5/lib/cmake/Qt5GraphicsSupport/Qt5GraphicsSupportConfig.cmake
+qt5/lib/cmake/Qt5GraphicsSupport/Qt5GraphicsSupportConfigVersion.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QCocoaIntegrationPlugin.cmake
 qt5/lib/cmake/Qt5PrintSupport/Qt5PrintSupport_QCocoaPrinterSupportPlugin.cmake
 qt5/lib/cmake/Qt5Widgets/Qt5Widgets_QMacStylePlugin.cmake

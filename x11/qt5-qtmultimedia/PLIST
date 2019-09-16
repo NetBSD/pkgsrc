@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2019/08/09 17:41:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2019/09/16 19:24:54 adam Exp $
 lib/pkgconfig/Qt5Multimedia.pc
 lib/pkgconfig/Qt5MultimediaWidgets.pc
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qabstractvideobuffer_p.h
@@ -294,6 +294,10 @@ ${PLIST.unix}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QGstreamerCaptureServiceP
 ${PLIST.unix}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QGstreamerPlayerServicePlugin.cmake
 qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QM3uPlaylistPlugin.cmake
 ${PLIST.unix}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QPulseAudioPlugin.cmake
+${PLIST.unix}qt5/lib/cmake/Qt5MultimediaGstTools/Qt5MultimediaGstToolsConfig.cmake
+${PLIST.unix}qt5/lib/cmake/Qt5MultimediaGstTools/Qt5MultimediaGstToolsConfigVersion.cmake
+qt5/lib/cmake/Qt5MultimediaQuick/Qt5MultimediaQuickConfig.cmake
+qt5/lib/cmake/Qt5MultimediaQuick/Qt5MultimediaQuickConfigVersion.cmake
 qt5/lib/cmake/Qt5MultimediaWidgets/Qt5MultimediaWidgetsConfig.cmake
 qt5/lib/cmake/Qt5MultimediaWidgets/Qt5MultimediaWidgetsConfigVersion.cmake
 qt5/lib/libQt5Multimedia.prl

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2019/08/09 17:41:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2019/09/16 19:24:54 adam Exp $
 qt5/doc/qtdoc.qch
 qt5/doc/qtdoc/accelerators.html
 qt5/doc/qtdoc/accessibility.html
@@ -10,6 +10,7 @@ qt5/doc/qtdoc/activeqt-testcon.html
 qt5/doc/qtdoc/activeqt.html
 qt5/doc/qtdoc/all-examples.html
 qt5/doc/qtdoc/android-3rdparty-libs.html
+qt5/doc/qtdoc/android-building.html
 qt5/doc/qtdoc/android-getting-started.html
 qt5/doc/qtdoc/android-openssl-support.html
 qt5/doc/qtdoc/android-platform-notes.html
@@ -25,8 +26,11 @@ qt5/doc/qtdoc/bughowto.html
 qt5/doc/qtdoc/build-sources.html
 qt5/doc/qtdoc/classes.html
 qt5/doc/qtdoc/classesandfunctions.html
+qt5/doc/qtdoc/cmake-command-reference.html
 qt5/doc/qtdoc/cmake-manual.html
+qt5/doc/qtdoc/cmake-variable-reference.html
 qt5/doc/qtdoc/commerciallicense.html
+qt5/doc/qtdoc/configure-linux-device.html
 qt5/doc/qtdoc/configure-options.html
 qt5/doc/qtdoc/debug.html
 qt5/doc/qtdoc/demos-manifest.xml
@@ -158,6 +162,7 @@ qt5/doc/qtdoc/images/thread-examples.png
 qt5/doc/qtdoc/images/threadsandobjects.png
 qt5/doc/qtdoc/images/threadvisual-example.png
 qt5/doc/qtdoc/images/tool-examples.png
+@pkgdir qt5/doc/qtdoc/images/used-in-examples
 qt5/doc/qtdoc/images/used-in-examples/demos/calqlatr/content/images/paper-edge-left.png
 qt5/doc/qtdoc/images/used-in-examples/demos/calqlatr/content/images/paper-edge-right.png
 qt5/doc/qtdoc/images/used-in-examples/demos/calqlatr/content/images/paper-grip.png
@@ -578,6 +583,7 @@ qt5/doc/qtdoc/rcc.html
 qt5/doc/qtdoc/reference-overview.html
 qt5/doc/qtdoc/restoring-geometry.html
 qt5/doc/qtdoc/scalability.html
+@pkgdir qt5/doc/qtdoc/scripts
 qt5/doc/qtdoc/session.html
 qt5/doc/qtdoc/sharedlibrary.html
 qt5/doc/qtdoc/signalsandslots-syntaxes.html
@@ -637,5 +643,3 @@ qt5/doc/qtdoc/windows-requirements.html
 qt5/doc/qtdoc/windows.html
 qt5/doc/qtdoc/winrt-support.html
 qt5/doc/qtdoc/xml-examples.html
-@pkgdir qt5/doc/qtdoc/scripts
-@pkgdir qt5/doc/qtdoc/images/used-in-examples
