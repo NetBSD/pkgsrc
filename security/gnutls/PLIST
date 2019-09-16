@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.64 2019/07/11 14:53:36 sevan Exp $
+@comment $NetBSD: PLIST,v 1.65 2019/09/16 00:28:48 nia Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
@@ -263,6 +263,7 @@ man/man3/gnutls_ext_set_data.3
 man/man3/gnutls_fingerprint.3
 man/man3/gnutls_fips140_mode_enabled.3
 man/man3/gnutls_fips140_set_mode.3
+man/man3/gnutls_get_system_config_file.3
 man/man3/gnutls_global_deinit.3
 man/man3/gnutls_global_init.3
 man/man3/gnutls_global_set_audit_log_function.3
@@ -288,6 +289,7 @@ man/man3/gnutls_handshake_set_private_extensions.3
 man/man3/gnutls_handshake_set_random.3
 man/man3/gnutls_handshake_set_timeout.3
 man/man3/gnutls_hash.3
+man/man3/gnutls_hash_copy.3
 man/man3/gnutls_hash_deinit.3
 man/man3/gnutls_hash_fast.3
 man/man3/gnutls_hash_get_len.3
@@ -305,6 +307,7 @@ man/man3/gnutls_hex_decode2.3
 man/man3/gnutls_hex_encode.3
 man/man3/gnutls_hex_encode2.3
 man/man3/gnutls_hmac.3
+man/man3/gnutls_hmac_copy.3
 man/man3/gnutls_hmac_deinit.3
 man/man3/gnutls_hmac_fast.3
 man/man3/gnutls_hmac_get_len.3
