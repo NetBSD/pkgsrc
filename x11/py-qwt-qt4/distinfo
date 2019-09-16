@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 03:28:51 agc Exp $
+$NetBSD: distinfo,v 1.4 2019/09/16 01:51:42 mef Exp $
 
 SHA1 (PyQwt-5.2.0.tar.gz) = 797f37c63dec660272f6a8ccfd16a017df0ad640
 RMD160 (PyQwt-5.2.0.tar.gz) = e4c8a63d623d974cd500e29fbc62255746ca7feb
 SHA512 (PyQwt-5.2.0.tar.gz) = 8c409ee228d91d625bf9bd8a5704c3d41f70613b420bc8f1527312dd1ebb686b8482bd68c4b3d1a72edd80673533a4f5a39378221967bea70f389c9dde14f265
 Size (PyQwt-5.2.0.tar.gz) = 2670893 bytes
-SHA1 (patch-configure_configure.py) = 4fbae449cd80b7cf8ed3893ba1333b6fbbca17fc
+SHA1 (patch-configure_configure.py) = 5336923286bf11e8ed65c74954d590432df848f2
+SHA1 (patch-sip_qwt5qt4_QwtTypes.sip) = 29a2a2e01a4d7332ec4a891b65634baaa9fbbe58
