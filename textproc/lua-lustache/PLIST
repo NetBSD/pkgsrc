@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2019/09/17 23:36:54 nia Exp $
+${LUA_LDIR}/lustache.lua
+${LUA_LDIR}/lustache/context.lua
+${LUA_LDIR}/lustache/renderer.lua
+${LUA_LDIR}/lustache/scanner.lua
