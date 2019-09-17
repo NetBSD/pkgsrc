@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2019/09/13 09:04:15 prlw1 Exp $
+# $NetBSD: Makefile,v 1.24 2019/09/17 09:39:53 prlw1 Exp $
 
-DISTNAME=	drupal-8.6.17
+DISTNAME=	drupal-8.7.7
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.drupal.org/files/projects/
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://drupal.org/
 COMMENT=	Open source content management system
 LICENSE=	gnu-gpl-v2
+
+PHP_VERSIONS_INCOMPATIBLE=	56
 
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.4.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.4.0:../../textproc/php-json
@@ -41,6 +43,7 @@ REPLACE.php.new=	${PREFIX}/bin/php
 REPLACE_FILES.php=	core/scripts/drupal.sh core/scripts/password-hash.sh
 REPLACE_FILES.php+=	core/scripts/update-countries.sh
 REPLACE_FILES.php+=	core/scripts/rebuild_token_calculator.sh
+REPLACE_FILES.php+=	vendor/pear/archive_tar/scripts/phptar.in
 
 SUBST_CLASSES+=		sh
 SUBST_STAGE.sh=		pre-configure
@@ -64,6 +67,7 @@ INSTALLATION_DIRS+=	${DRUPAL}/${i}
 
 post-extract:
 	${CP} ${FILESDIR}/drupal.conf ${WRKSRC}
+	${CHMOD} 0644 ${WRKSRC}/core/scripts/run-tests.sh
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/robots.txt ${DESTDIR}${PREFIX}/${DRUPAL}
@@ -74,9 +78,6 @@ do-install:
 
 	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${PREFIX}/${DRUPAL}
 
-post-install:
-	${FIND} ${DESTDIR}${PREFIX}/${DRUPAL} \
-		\( -name '*.jpg' -o -name '*.png' \) | ${XARGS} ${CHMOD} 0644
 
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
