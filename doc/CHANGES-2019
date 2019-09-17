@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3947 2019/09/17 08:35:01 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3948 2019/09/17 08:43:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6479,3 +6479,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/scons to 3.1.1 [adam 2019-09-17]
 	Updated devel/py-importlib-metadata to 0.23 [adam 2019-09-17]
 	Updated www/py-cfscrape to 2.0.8 [adam 2019-09-17]
+	Updated textproc/py-xlsxwriter to 1.2.1 [adam 2019-09-17]
+	Updated www/py-autobahn to 19.9.3 [adam 2019-09-17]
