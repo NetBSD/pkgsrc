@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.5 2019/03/01 17:13:32 youri Exp $
+$NetBSD: distinfo,v 1.6 2019/09/17 11:43:29 tnn Exp $
 
-SHA1 (compton-5.1.tar.gz) = 323904b6305dbf32c1bb7355d75ba4f8f50e9fd1
-RMD160 (compton-5.1.tar.gz) = b1d05080aaa7db33d3500620c77ea41377ee2816
-SHA512 (compton-5.1.tar.gz) = 61f88019b2b4ef06e5c6a155f913b0b1c0ab7d077be5af14104596cebe0428ba6d0d98399e3c450c494945a1d4727446b2f3631989dc766439112527a9d0a888
-Size (compton-5.1.tar.gz) = 199770 bytes
-SHA1 (patch-src_compiler.h) = 7072c1d176ab624241043dd8cedd4690fdc6834d
+SHA1 (compton-7.3.tar.gz) = c899bb76dd5e2eecce3e99ea5386e07f52448491
+RMD160 (compton-7.3.tar.gz) = c8c0a608e2327f2fda773ee18f1e629150fb1555
+SHA512 (compton-7.3.tar.gz) = 5a8fd294a8f39fd926029e872f0c8c998ccc105cb408b058539659f74446ea94862fb6b8d88b370576c73d8b18d846a12d9c0240348c6b758eec4e8550945aac
+Size (compton-7.3.tar.gz) = 218892 bytes
+SHA1 (patch-meson.build) = c39a4e0da8b7e6e5d3af38ea005e7915cd5e10ab
+SHA1 (patch-src_compiler.h) = 0b853c6d864a3e5ad78e1b494725aa5b19d331b8
+SHA1 (patch-src_utils.h) = 386a7fea89e12b966b9ac38df428b689ad2b63f3
