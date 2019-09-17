@@ -1,9 +1,9 @@
-$NetBSD: patch-vendor_src_github.com_spacemonkeygo_spacelog_capture__other.go,v 1.1 2017/05/03 16:49:54 fhajny Exp $
+$NetBSD: patch-vendor_github.com_spacemonkeygo_spacelog_capture__other.go,v 1.1 2019/09/17 08:21:01 adam Exp $
 
 Use unix.Dup2 instead of syscall.Dup2.
 
---- vendor/src/github.com/spacemonkeygo/spacelog/capture_other.go.orig	2016-12-29 22:33:41.000000000 +0000
-+++ vendor/src/github.com/spacemonkeygo/spacelog/capture_other.go
+--- vendor/github.com/spacemonkeygo/spacelog/capture_other.go.orig	2016-12-29 22:33:41.000000000 +0000
++++ vendor/github.com/spacemonkeygo/spacelog/capture_other.go
 @@ -17,17 +17,18 @@
  package spacelog
  
