@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3953 2019/09/17 16:43:12 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3954 2019/09/17 20:16:42 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6486,3 +6486,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated chat/weechat to 2.6 [nia 2019-09-17]
 	Updated x11/compton to 7.3 [tnn 2019-09-17]
 	Updated converters/fribidi to 1.0.5 [nia 2019-09-17]
+	Updated www/lua-curl to 0.3.11 [nia 2019-09-17]
