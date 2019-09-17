@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3951 2019/09/17 11:30:39 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3952 2019/09/17 11:44:33 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6484,3 +6484,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/drupal8 to 8.7.7 [prlw1 2019-09-17]
 	Removed audio/xmms-faad [nia 2019-09-17]
 	Updated chat/weechat to 2.6 [nia 2019-09-17]
+	Updated x11/compton to 7.3 [tnn 2019-09-17]
