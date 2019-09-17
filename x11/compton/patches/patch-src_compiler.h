@@ -1,20 +1,10 @@
-$NetBSD: patch-src_compiler.h,v 1.1 2019/03/01 17:13:32 youri Exp $
+$NetBSD: patch-src_compiler.h,v 1.2 2019/09/17 11:43:29 tnn Exp $
 
 Fix build for NetBSD
 
---- src/compiler.h.orig	2019-02-06 21:29:32.000000000 +0000
+--- src/compiler.h.orig	2019-08-18 21:40:33.000000000 +0000
 +++ src/compiler.h
-@@ -2,7 +2,9 @@
- // Copyright (c) 2018 Yuxuan Shui <yshuiv7@gmail.com>
- #pragma once
- 
-+#ifndef __NetBSD__
- #include <stdc-predef.h>
-+#endif
- 
- #define auto         __auto_type
- #define likely(x)    __builtin_expect(!!(x), 1)
-@@ -82,6 +84,7 @@
+@@ -94,6 +94,7 @@
  # define unreachable do {} while(0)
  #endif
  
@@ -22,10 +12,13 @@ Fix build for NetBSD
  #ifndef __STDC_NO_THREADS__
  # include <threads.h>
  #elif __STDC_VERSION__ >= 201112L
-@@ -91,3 +94,6 @@
+@@ -103,6 +104,9 @@
  #else
  # define thread_local _Pragma("GCC error \"No thread local storage support\"") __error__
  #endif
 +#else
 +# define thread_local __thread
 +#endif
+ 
+ typedef unsigned long ulong;
+ typedef unsigned int uint;
