@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2019/09/12 12:09:01 adam Exp $
+# $NetBSD: Makefile,v 1.7 2019/09/17 08:30:51 adam Exp $
 
-DISTNAME=	importlib_metadata-0.22
+DISTNAME=	importlib_metadata-0.23
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/importlib-metadata/}
