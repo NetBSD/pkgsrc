@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.67 2019/08/14 15:42:52 bsiegert Exp $
+# $NetBSD: version.mk,v 1.68 2019/09/17 04:39:20 dbj Exp $
 
 CTF_SUPPORTED=		no
 SSP_SUPPORTED=		no
@@ -16,6 +16,11 @@ GO_VERSION=	${GO110_VERSION}
 .if ${OPSYS} == "NetBSD" && ${OS_VERSION:M6.*}
 # 1.9 is the last Go version to support NetBSD 6
 GO_VERSION_DEFAULT?=	19
+.elif ${OPSYS} == "Darwin" && ${OS_VERSION:R} < 14
+# go 1.11 removed support for osx 10.8 and 10.9
+# https://github.com/golang/go/issues/23122
+# darwin version 13.4 is osx 10.9.5
+GO_VERSION_DEFAULT?=	110
 .else
 GO_VERSION_DEFAULT?=	112
 .endif
