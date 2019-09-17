@@ -1,0 +1,5 @@
+lustache allows you to use the Mustache templating standard in Lua by
+passing in a string, data, and partial templates. It precompiles and
+caches templates for speed, and allows you to build complex strings such
+as html pages by iterating through a table and inserting values. Find out
+more about Mustache at https://mustache.github.io.
