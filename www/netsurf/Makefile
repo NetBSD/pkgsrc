@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.83 2019/09/12 18:57:09 nia Exp $
+# $NetBSD: Makefile,v 1.84 2019/09/17 11:00:23 nros Exp $
 
 DISTNAME=	netsurf-all-3.9
 PKGNAME=	${DISTNAME:S/-all//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	https://download.netsurf-browser.org/netsurf/releases/source-full/
 
@@ -60,7 +60,7 @@ post-install:
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/adwaita-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
