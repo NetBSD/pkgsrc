@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2019/03/05 19:30:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2019/09/17 08:23:42 adam Exp $
 bin/scons
 bin/scons-${PKGVERSION}
 bin/scons-${PKGVERSION}.bat
@@ -574,6 +574,9 @@ lib/scons/SCons/Warnings.pyo
 lib/scons/SCons/__init__.py
 lib/scons/SCons/__init__.pyc
 lib/scons/SCons/__init__.pyo
+lib/scons/SCons/__main__.py
+lib/scons/SCons/__main__.pyc
+lib/scons/SCons/__main__.pyo
 lib/scons/SCons/compat/__init__.py
 lib/scons/SCons/compat/__init__.pyc
 lib/scons/SCons/compat/__init__.pyo
