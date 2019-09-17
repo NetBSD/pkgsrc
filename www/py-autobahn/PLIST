@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2019/08/26 14:38:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2019/09/17 08:43:21 adam Exp $
 bin/wamp
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -34,6 +34,9 @@ ${PYSITELIB}/autobahn/asyncio/wamp.pyo
 ${PYSITELIB}/autobahn/asyncio/websocket.py
 ${PYSITELIB}/autobahn/asyncio/websocket.pyc
 ${PYSITELIB}/autobahn/asyncio/websocket.pyo
+${PYSITELIB}/autobahn/asyncio/xbr.py
+${PYSITELIB}/autobahn/asyncio/xbr.pyc
+${PYSITELIB}/autobahn/asyncio/xbr.pyo
 ${PYSITELIB}/autobahn/exception.py
 ${PYSITELIB}/autobahn/exception.pyc
 ${PYSITELIB}/autobahn/exception.pyo
@@ -101,6 +104,9 @@ ${PYSITELIB}/autobahn/twisted/wamp.pyo
 ${PYSITELIB}/autobahn/twisted/websocket.py
 ${PYSITELIB}/autobahn/twisted/websocket.pyc
 ${PYSITELIB}/autobahn/twisted/websocket.pyo
+${PYSITELIB}/autobahn/twisted/xbr.py
+${PYSITELIB}/autobahn/twisted/xbr.pyc
+${PYSITELIB}/autobahn/twisted/xbr.pyo
 ${PYSITELIB}/autobahn/util.py
 ${PYSITELIB}/autobahn/util.pyc
 ${PYSITELIB}/autobahn/util.pyo
