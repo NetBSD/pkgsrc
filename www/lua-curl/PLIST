@@ -1,2 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2013/09/17 12:03:42 joerg Exp $
-${LUA_CDIR}/cURL.la
+@comment $NetBSD: PLIST,v 1.3 2019/09/17 20:16:32 nia Exp $
+${LUA_CDIR}/lcurl.so
+${LUA_LDIR}/cURL.lua
+${LUA_LDIR}/cURL/impl/cURL.lua
+${LUA_LDIR}/cURL/safe.lua
+${LUA_LDIR}/cURL/utils.lua
