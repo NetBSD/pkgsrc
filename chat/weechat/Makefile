@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.102 2019/08/22 12:22:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.103 2019/09/17 11:30:27 nia Exp $
 
-DISTNAME=	weechat-2.5
-PKGREVISION=	6
+DISTNAME=	weechat-2.6
 CATEGORIES=	chat
 MASTER_SITES=	https://www.weechat.org/files/src/
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	tonio@NetBSD.org
 HOMEPAGE=	https://www.weechat.org/
@@ -13,23 +12,21 @@ LICENSE=	gnu-gpl-v3
 
 BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		msgfmt pkg-config
-USE_LANGUAGES=		c99
-USE_LIBTOOL=		yes
-USE_CMAKE=		yes
-FAKE_NCURSES=		yes
+USE_TOOLS+=	msgfmt pkg-config
+USE_LANGUAGES=	c99
+USE_LIBTOOL=	yes
+USE_CMAKE=	yes
+FAKE_NCURSES=	yes
 
-CMAKE_ARGS+=		-DCA_FILE:STRING=${PREFIX}/share/mozilla-rootcerts/cacert.pem
-CMAKE_ARGS+=		-DENABLE_GUILE:BOOL=OFF
-CMAKE_ARGS+=		-DENABLE_TCL:BOOL=OFF
-CMAKE_ARGS+=		-DENABLE_MAN:BOOL=OFF # Requires ascii-doctor
-CMAKE_ARGS+=		-DENABLE_JAVASCRIPT:BOOL=OFF
-CMAKE_ARGS+=		-DENABLE_PHP:BOOL=OFF
-CMAKE_ARGS+=		-DENABLE_SPELL:BOOL=OFF
-CMAKE_ARGS+=		-DMANDIR:STRING=${PKGMANDIR}
-CMAKE_ARGS+=		-DLOCALEDIR:STRING=${PKGLOCALEDIR}/locale
-CMAKE_ARGS+=		-DENABLE_CHARSET:BOOL=ON
+CMAKE_ARGS+=	-DCA_FILE=${PREFIX}/share/mozilla-rootcerts/cacert.pem
+CMAKE_ARGS+=	-DENABLE_GUILE=OFF
+CMAKE_ARGS+=	-DENABLE_TCL=OFF
+CMAKE_ARGS+=	-DENABLE_MAN=OFF # Requires ascii-doctor
+CMAKE_ARGS+=	-DENABLE_JAVASCRIPT=OFF
+CMAKE_ARGS+=	-DENABLE_PHP=OFF
+CMAKE_ARGS+=	-DENABLE_SPELL=OFF
+CMAKE_ARGS+=	-DLOCALEDIR=${PKGLOCALEDIR}/locale
+CMAKE_ARGS+=	-DENABLE_CHARSET=ON
 
 LDFLAGS+=		${BUILDLINK_LDADD.gettext}
 LDFLAGS.Darwin+=	-lresolv
@@ -37,11 +34,14 @@ LDFLAGS.SunOS+=		-lresolv
 
 BUILDLINK_TRANSFORM+=	rm:-Werror-implicit-function-declaration
 
-.include "options.mk"
+# use standard cmake mechanisms for detecting python
+# works better with pkgsrc.
+pre-configure:
+	${RM} -f ${WRKSRC}/cmake/FindPython.cmake
 
+.include "options.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-#.include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
