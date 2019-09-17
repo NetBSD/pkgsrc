@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.28 2019/08/14 00:17:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2019/09/17 23:09:42 perseant Exp $
 #
 
-DISTNAME=	ccid-1.4.26
-PKGREVISION=	3
+DISTNAME=	ccid-1.4.27
 CATEGORIES=	security
 # Note that the MASTER_SITES URL is not stable with version changes,
 # and one can end up with an old version if DISTNAME is changed but
 # not the magic number in MASTER_SITES.
 # https://alioth.debian.org/frs/?group_id=30105#title_ccid
-MASTER_SITES=	https://alioth.debian.org/frs/download.php/file/4205/
+MASTER_SITES=	https://alioth-archive.debian.org/releases/pcsclite/ccid/1.4.27/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	gdt@NetBSD.org
