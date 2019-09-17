@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2019/03/29 07:27:49 pho Exp $
+# $NetBSD: Makefile,v 1.9 2019/09/17 11:43:29 tnn Exp $
 
-DISTNAME=	compton-5.1
+DISTNAME=	compton-7.3
 CATEGORIES=	x11 wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yshui/}
-GITHUB_TAG=	v5.1
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://github.com/yshui/compton
@@ -32,6 +32,7 @@ post-install:
 .include "../../devel/py-meson/build.mk"
 .include "../../devel/libconfig/buildlink3.mk"
 .include "../../devel/libev/buildlink3.mk"
+.include "../../devel/uthash/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libxcb/buildlink3.mk"
