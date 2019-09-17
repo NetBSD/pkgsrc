@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2019/09/14 13:34:06 nia Exp $
-# IMPORTANT: Do not forget to update audio/xmms-faad
+# $NetBSD: Makefile,v 1.55 2019/09/17 10:39:08 nia Exp $
 
 DISTNAME=	faad2-2.9.0
 CATEGORIES=	audio
