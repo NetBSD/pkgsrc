@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.38 2019/08/22 12:23:21 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.39 2019/09/18 20:56:54 nia Exp $
 
 BUILDLINK_TREE+=	openimageio
 
@@ -16,7 +16,7 @@ BUILDLINK_PKGSRCDIR.openimageio?=	../../graphics/openimageio
 .include "../../graphics/ilmbase/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/opencv/buildlink3.mk"
-.include "../../graphics/openjpeg15/buildlink3.mk"
+.include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
