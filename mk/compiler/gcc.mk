@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.205 2019/09/18 06:15:13 rillig Exp $
+# $NetBSD: gcc.mk,v 1.206 2019/09/18 06:35:12 rillig Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -184,6 +184,11 @@ _GCC8_PATTERNS= 8 8.*
 
 # _GCC_AUX_PATTERNS matches 8-digit date YYYYMMDD*
 _GCC_AUX_PATTERNS= 20[1-2][0-9][0-1][0-9][0-3][0-9]*
+
+# Override the default from sys.mk if necessary.
+.if ${CC} == cc && ${GCCBASE:U} && !exists(${GCCBASE}/bin/${CC}) && exists(${GCCBASE}/bin/gcc)
+CC=	gcc
+.endif
 
 # _CC is the full path to the compiler named by ${CC} if it can be found.
 .if !defined(_CC)
