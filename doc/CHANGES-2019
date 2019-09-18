@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3970 2019/09/18 15:19:51 taca Exp $
+$NetBSD: CHANGES-2019,v 1.3971 2019/09/18 15:31:35 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6512,3 +6512,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/bind911 to 9.11.10 [taca 2019-09-18]
 	Updated textproc/p5-PDF-Table to 0.11.0 [wen 2019-09-18]
 	Updated net/bind914 to 9.14.5 [taca 2019-09-18]
+	Updated cross/mingw-w64-i686-gcc-bootstrap to 9.2.0 [ryoon 2019-09-18]
+	Updated cross/mingw-w64-i686-gcc to 9.2.0 [ryoon 2019-09-18]
+	Updated cross/mingw-w64-x86_64-gcc-bootstrap to 9.2.0 [ryoon 2019-09-18]
+	Updated cross/mingw-w64-x86_64-gcc to 9.2.0 [ryoon 2019-09-18]
