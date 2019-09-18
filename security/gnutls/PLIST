@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.65 2019/09/16 00:28:48 nia Exp $
+@comment $NetBSD: PLIST,v 1.66 2019/09/18 15:27:05 ng0 Exp $
 bin/certtool
+${PLIST.unbound}bin/danetool
 bin/gnutls-cli
 bin/gnutls-cli-debug
 bin/gnutls-serv
@@ -10,6 +11,7 @@ bin/srptool
 include/gnutls/abstract.h
 include/gnutls/compat.h
 include/gnutls/crypto.h
+${PLIST.dane}include/gnutls/dane.h
 include/gnutls/dtls.h
 include/gnutls/gnutls.h
 include/gnutls/gnutlsxx.h
@@ -36,10 +38,13 @@ info/gnutls-modauth.png
 info/gnutls-x509.png
 info/gnutls.info
 info/pkcs11-vision.png
+${PLIST.dane}lib/libgnutls-dane.la
 lib/libgnutls.la
 lib/libgnutlsxx.la
+${PLIST.dane}lib/pkgconfig/gnutls-dane.pc
 lib/pkgconfig/gnutls.pc
 man/man1/certtool.1
+${PLIST.dane}man/man1/danetool.1
 man/man1/gnutls-cli-debug.1
 man/man1/gnutls-cli.1
 man/man1/gnutls-serv.1
