@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2019/09/18 13:15:36 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/pbr.json
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/requests_unixsocket/__init__.py
+${PYSITELIB}/requests_unixsocket/__init__.pyc
+${PYSITELIB}/requests_unixsocket/__init__.pyo
+${PYSITELIB}/requests_unixsocket/adapters.py
+${PYSITELIB}/requests_unixsocket/adapters.pyc
+${PYSITELIB}/requests_unixsocket/adapters.pyo
+${PYSITELIB}/requests_unixsocket/tests/test_requests_unixsocket.py
+${PYSITELIB}/requests_unixsocket/tests/test_requests_unixsocket.pyc
+${PYSITELIB}/requests_unixsocket/tests/test_requests_unixsocket.pyo
+${PYSITELIB}/requests_unixsocket/testutils.py
+${PYSITELIB}/requests_unixsocket/testutils.pyc
+${PYSITELIB}/requests_unixsocket/testutils.pyo
