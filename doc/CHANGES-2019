@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3962 2019/09/18 13:16:55 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3963 2019/09/18 13:50:49 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6424,6 +6424,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed x11/ruby-gnome2-gtksourceview2 successor x11/ruby-gtksourceview2 [tsutsui 2019-09-14]
 	Removed x11/ruby-gnome2-gtksourceview3 successor x11/ruby-gtksourceview3 [tsutsui 2019-09-14]
 	Removed x11/ruby-gnome2-vte successor x11/ruby-vte [tsutsui 2019-09-14]
+	Removed meta-pkgs/ruby-gnome2 successor meta-pkgs/ruby-gnome [tsutsui 2019-09-14]
 	Updated security/doas to 6.2p1 [ng0 2019-09-14]
 	Updated mail/balsa to 2.5.7 [nia 2019-09-14]
 	Removed print/evince successor print/atril [nia 2019-09-14]
@@ -6434,7 +6435,8 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed archivers/file-roller successor archivers/engrampa [nia 2019-09-14]
 	Updated print/qpdf to 9.0.0 [ryoon 2019-09-15]
 	Updated textproc/aspell to 0.60.7 [maya 2019-09-15]
-	Deleted devel/sgi-stl{,-docs}-3.3 [mef 2019-09-15]
+	Removed devel/sgi-stl-3.3 [mef 2019-09-15]
+	Removed devel/sgi-stl-docs-3.3 [mef 2019-09-15]
 	Updated security/libssh to 0.90 [nia 2019-09-15]
 	Updated textproc/pugixml to 1.10 [adam 2019-09-15]
 	Updated net/haproxy to 2.0.6 [nia 2019-09-15]
