@@ -1,4 +1,6 @@
-$NetBSD: patch-extern_glog_src_base_mutex.h,v 1.1 2016/08/15 19:26:18 ryoon Exp $
+$NetBSD: patch-extern_glog_src_base_mutex.h,v 1.2 2019/09/18 23:40:17 nia Exp $
+
+Support NetBSD.
 
 --- extern/glog/src/base/mutex.h.orig	2016-03-23 08:49:49.000000000 +0000
 +++ extern/glog/src/base/mutex.h
