@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2019/07/15 06:01:06 maya Exp $
+# $NetBSD: Makefile,v 1.85 2019/09/18 15:33:37 ryoon Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -49,6 +49,7 @@ SUBDIR+=	mingw-w64-i686-crt
 SUBDIR+=	mingw-w64-i686-gcc
 SUBDIR+=	mingw-w64-i686-gcc-bootstrap
 SUBDIR+=	mingw-w64-i686-headers
+SUBDIR+=	mingw-w64-i686-winpthreads
 SUBDIR+=	mingw-w64-x86_64-binutils
 SUBDIR+=	mingw-w64-x86_64-crt
 SUBDIR+=	mingw-w64-x86_64-gcc
