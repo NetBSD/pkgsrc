@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2019/09/16 19:24:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2019/09/18 19:53:11 nia Exp $
 lib/pkgconfig/Qt5Concurrent.pc
 lib/pkgconfig/Qt5Core.pc
 lib/pkgconfig/Qt5DBus.pc
@@ -2682,6 +2682,8 @@ ${PLIST.unix}qt5/lib/cmake/Qt5InputSupport/Qt5InputSupportConfig.cmake
 ${PLIST.unix}qt5/lib/cmake/Qt5InputSupport/Qt5InputSupportConfigVersion.cmake
 ${PLIST.unix}qt5/lib/cmake/Qt5KmsSupport/Qt5KmsSupportConfig.cmake
 ${PLIST.unix}qt5/lib/cmake/Qt5KmsSupport/Qt5KmsSupportConfigVersion.cmake
+${PLIST.gtk3}qt5/lib/cmake/Qt5LinuxAccessibilitySupport/Qt5LinuxAccessibilitySupportConfig.cmake
+${PLIST.gtk3}qt5/lib/cmake/Qt5LinuxAccessibilitySupport/Qt5LinuxAccessibilitySupportConfigVersion.cmake
 qt5/lib/cmake/Qt5Network/Qt5NetworkConfig.cmake
 qt5/lib/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake
 qt5/lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake
