@@ -1,0 +1,52 @@
+# $NetBSD: Makefile.common,v 1.1 2019/09/18 15:38:40 ryoon Exp $
+#
+# used by cross/mingw-w64-i686-gcc-winpthreads/Makefile
+# used by cross/mingw-w64-x86_64-gcc-winpthreads/Makefile
+
+DISTNAME=		gcc-9.2.0
+CATEGORIES=		cross
+MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${PKGVERSION_NOREV}/}
+EXTRACT_SUFX=		.tar.xz
+
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		https://mingw-w64.org/
+
+PATCHDIR=		${.CURDIR}/../../cross/mingw-w64-x86_64-gcc/patches
+DISTINFO_FILE=		${.CURDIR}/../../cross/mingw-w64-x86_64-gcc/distinfo
+
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake perl:build
+
+GNU_CONFIGURE=		yes
+OBJDIR=			../build
+CONFIGURE_DIRS=		${OBJDIR}
+CONFIGURE_SCRIPT=	../${DISTNAME}/configure
+GNU_CONFIGURE_PREFIX=	${PREFIX}/cross/${MINGW_TARGET}-winpthreads
+CONFIGURE_ARGS+=	--target=${MINGW_TARGET}
+CONFIGURE_ARGS+=	--with-sysroot=${PREFIX}/cross/${MINGW_TARGET}-winpthreads
+CONFIGURE_ARGS+=	--with-ld=${PREFIX}/cross/${MINGW_TARGET}/${MINGW_TARGET}/bin/ld
+CONFIGURE_ARGS+=	--with-as=${PREFIX}/cross/${MINGW_TARGET}/${MINGW_TARGET}/bin/as
+CONFIGURE_ARGS+=	--disable-nls
+CONFIGURE_ARGS+=	--enable-languages=c,lto,c++,objc,obj-c++,fortran
+CONFIGURE_ARGS+=	--enable-shared
+CONFIGURE_ARGS+=	--enable-static
+# Use winpthreads
+CONFIGURE_ARGS+=	--enable-threads=posix
+CONFIGURE_ARGS+=	--enable-lto
+CONFIGURE_ARGS+=	--enable-fully-dynamic-string
+CONFIGURE_ARGS+=	--enable-libstdcxx-time=yes
+CONFIGURE_ARGS+=	--disable-dw2-exceptions
+CONFIGURE_ARGS+=	--disable-multilib
+
+PREPEND_PATH+=		${PREFIX}/cross/${MINGW_TARGET}/bin
+PREPEND_PATH+=		${PREFIX}/cross/${MINGW_TARGET}-bootstrap/bin
+
+INFO_FILES=		yes
+
+pre-configure:
+	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
+
+.include "../../cross/mingw-w64/Makefile.common"
+.include "../../devel/gmp/buildlink3.mk"
+.include "../../math/mpfr/buildlink3.mk"
+.include "../../math/mpcomplex/buildlink3.mk"
