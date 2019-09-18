@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3968 2019/09/18 14:32:34 taca Exp $
+$NetBSD: CHANGES-2019,v 1.3969 2019/09/18 14:35:47 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6510,3 +6510,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated misc/ruby-bundler1 to 1.17.3nb1 [taca 2019-09-18]
 	Updated misc/ruby-bundler to 2.0.2 [taca 2019-09-18]
 	Updated net/bind911 to 9.11.10 [taca 2019-09-18]
+	Updated textproc/p5-PDF-Table to 0.11.0 [wen 2019-09-18]
