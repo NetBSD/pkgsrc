@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2019/08/11 13:20:26 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/09/18 13:13:29 wen Exp $
 
-DISTNAME=	Term-Shell-0.10
+DISTNAME=	Term-Shell-0.11
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SH/SHLOMIF/}
 LICENSE=	gnu-gpl-v2
