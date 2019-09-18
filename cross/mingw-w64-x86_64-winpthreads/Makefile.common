@@ -1,0 +1,39 @@
+# $NetBSD: Makefile.common,v 1.1 2019/09/18 15:36:43 ryoon Exp $
+#
+# used by cross/mingw-w64-i686-winpthreads/Makefile
+# used by cross/mingw-w64-x86_64-winpthreads/Makefile
+
+DISTNAME=		mingw-w64-v6.0.0
+CATEGORIES=		cross
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mingw-w64/}
+EXTRACT_SUFX=		.tar.bz2
+
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		https://mingw-w64.org/
+
+PATCHDIR=		${.CURDIR}/../../cross/mingw-w64-x86_64-headers/patches
+DISTINFO_FILE=		${.CURDIR}/../../cross/mingw-w64-x86_64-headers/distinfo
+
+WRKSRC=			${WRKDIR}/${DISTNAME}/mingw-w64-libraries/winpthreads
+
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake perl:build
+
+USE_GNU_CONFIGURE_HOST=	no
+
+GNU_CONFIGURE=		yes
+GNU_CONFIGURE_PREFIX=	${PREFIX}/cross/${MINGW_TARGET}-winpthreads/mingw
+CONFIGURE_ARGS+=	--host=${MINGW_TARGET}
+CONFIGURE_ARGS+=	--with-sysroot=${PREFIX}/cross/${MINGW_TARGET}
+CONFIGURE_ENV+=		ac_cv_prog_CC=${MINGW_TARGET}-gcc
+
+PREPEND_PATH+=		${PREFIX}/cross/${MINGW_TARGET}/bin
+PREPEND_PATH+=		${PREFIX}/cross/${MINGW_TARGET}-bootstrap/bin
+
+pre-install:
+	${MKDIR} ${DESTDIR}/${GNU_CONFIGURE_PREFIX}
+	cd ${PREFIX}/cross/${MINGW_TARGET}/mingw && \
+		${FIND} include lib -type f \! -name '*.orig' -print | \
+                pax -rw -pmp ${DESTDIR}${GNU_CONFIGURE_PREFIX}
+
+.include "../../cross/mingw-w64/Makefile.common"
