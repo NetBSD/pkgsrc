@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3963 2019/09/18 13:50:49 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.3964 2019/09/18 14:12:48 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6505,3 +6505,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-Term-Shell to 0.11 [wen 2019-09-18]
 	Added devel/py-test-watch version 4.2.0 [adam 2019-09-18]
 	Added devel/py-requests-unixsocket version 0.2.0 [adam 2019-09-18]
+	Updated audio/pulseaudio to 13.0 [ryoon 2019-09-18]
