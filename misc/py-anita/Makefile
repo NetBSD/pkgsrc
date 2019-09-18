@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2019/09/02 13:19:44 adam Exp $
+# $NetBSD: Makefile,v 1.57 2019/09/18 08:37:09 gson Exp $
 
-DISTNAME=	anita-1.49
+DISTNAME=	anita-2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc
 MASTER_SITES=	http://www.gson.org/netbsd/anita/download/
@@ -15,15 +15,13 @@ DEPENDS+=	${PYPKGPREFIX}-pexpect>=2.1:../../devel/py-pexpect
 
 USE_LANGUAGES=	#none
 
-PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 1.48
-
 SUBST_CLASSES+=		manpath
 SUBST_STAGE.manpath=	pre-configure
 SUBST_FILES.manpath=	setup.py
 SUBST_SED.manpath=	-e 's,man/,${PKGMANDIR}/,g'
 
 do-test:
-	${TRUE}		# There are no unit tests
+	${TRUE}		# Tests not integrated into pkgsrc
 
 .include "options.mk"
 .include "../../lang/python/distutils.mk"
