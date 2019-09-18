@@ -1,10 +1,12 @@
-# $NetBSD: Makefile.common,v 1.1 2018/06/07 19:09:24 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.2 2019/09/18 15:40:56 ryoon Exp $
 #
 # used by cross/mingw-w64-x86_64-binutils/Makefile.common
 # used by cross/mingw-w64-x86_64-headers/Makefile.common
 # used by cross/mingw-w64-x86_64-gcc-bootstrap/Makefile.common
+# used by cross/mingw-w64-x86_64-gcc-winpthreads/Makefile.common
 # used by cross/mingw-w64-x86_64-gcc/Makefile.common
 # used by cross/mingw-w64-x86_64-crt/Makefile.common
+# used by cross/mingw-w64-x86_64-winpthreads/Makefile.common
 
 .if !defined(MINGW_MAKEFILECOMMON)
 MINGW_MAKEFILECOMMON=	# defined
