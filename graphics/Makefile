@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.847 2019/09/14 18:11:40 tsutsui Exp $
+# $NetBSD: Makefile,v 1.848 2019/09/18 15:53:45 taca Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -514,6 +514,7 @@ SUBDIR+=	ruby-gd
 SUBDIR+=	ruby-gdk3
 SUBDIR+=	ruby-gdk_pixbuf2
 SUBDIR+=	ruby-gnuplot
+SUBDIR+=	ruby-image_size
 SUBDIR+=	ruby-imlib2
 SUBDIR+=	ruby-mini-magick
 SUBDIR+=	ruby-oily_png
