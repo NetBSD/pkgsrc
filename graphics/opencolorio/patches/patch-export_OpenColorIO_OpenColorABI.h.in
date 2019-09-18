@@ -1,27 +1,35 @@
-$NetBSD: patch-export_OpenColorIO_OpenColorABI.h.in,v 1.1 2018/06/02 19:06:55 joerg Exp $
+$NetBSD: patch-export_OpenColorIO_OpenColorABI.h.in,v 1.2 2019/09/18 22:30:49 nia Exp $
 
---- export/OpenColorIO/OpenColorABI.h.in.orig	2018-06-02 18:44:34.294762599 +0000
+--- export/OpenColorIO/OpenColorABI.h.in.orig	2019-03-28 05:12:57.000000000 +0000
 +++ export/OpenColorIO/OpenColorABI.h.in
-@@ -50,17 +50,17 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE
- #define OCIO_NAMESPACE_EXIT using namespace OCIO_VERSION_NS; }
- #define OCIO_NAMESPACE_USING using namespace OCIO_NAMESPACE;
+@@ -29,6 +29,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ #ifndef INCLUDED_OCIO_OPENCOLORABI_H
+ #define INCLUDED_OCIO_OPENCOLORABI_H
  
 +#include <cstddef>
 +
- // shared_ptr / dynamic_pointer_cast
- #if OCIO_USE_BOOST_PTR
+ // Makefile configuration options
+ #define OCIO_NAMESPACE @OCIO_NAMESPACE@
+ #define OCIO_USE_BOOST_PTR @OCIO_USE_BOOST_PTR@
+@@ -55,20 +57,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  #include <boost/shared_ptr.hpp>
  #define OCIO_SHARED_PTR boost::shared_ptr
  #define OCIO_DYNAMIC_POINTER_CAST boost::dynamic_pointer_cast
+-#elif defined(_LIBCPP_VERSION)
+-#include <memory>
+-#define OCIO_SHARED_PTR std::shared_ptr
+-#define OCIO_DYNAMIC_POINTER_CAST std::dynamic_pointer_cast
 -#elif __GNUC__ >= 4
 -#include <tr1/memory>
 -#define OCIO_SHARED_PTR std::tr1::shared_ptr
 -#define OCIO_DYNAMIC_POINTER_CAST std::tr1::dynamic_pointer_cast
- #else
+-#elif (_MSC_VER > 1600)
++#else
+ #include <memory>
+ #define OCIO_SHARED_PTR std::shared_ptr
+ #define OCIO_DYNAMIC_POINTER_CAST std::dynamic_pointer_cast
+-#else
 -#error OCIO needs gcc 4 or later to get access to <tr1/memory> (or specify USE_BOOST_PTR instead)
-+#include <memory>
-+#define OCIO_SHARED_PTR std::shared_ptr
-+#define OCIO_DYNAMIC_POINTER_CAST std::dynamic_pointer_cast
  #endif
  
  // If supported, define OCIOEXPORT, OCIOHIDDEN
