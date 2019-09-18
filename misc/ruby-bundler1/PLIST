@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/05 07:46:47 taca Exp $
-bin/bundle1${RUBY_SUFFIX}
-bin/bundler1${RUBY_SUFFIX}
+@comment $NetBSD: PLIST,v 1.2 2019/09/18 14:27:45 taca Exp $
+bin/bundle1-${RUBY_SUFFIX}
+bin/bundler1-${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.md
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/bundler.gemspec
-${GEM_LIBDIR}/exe/bundle1
+${GEM_LIBDIR}/exe/bundle
 ${GEM_LIBDIR}/exe/bundle_ruby
-${GEM_LIBDIR}/exe/bundler1
+${GEM_LIBDIR}/exe/bundler
 ${GEM_LIBDIR}/lib/bundler.rb
 ${GEM_LIBDIR}/lib/bundler/build_metadata.rb
 ${GEM_LIBDIR}/lib/bundler/capistrano.rb
