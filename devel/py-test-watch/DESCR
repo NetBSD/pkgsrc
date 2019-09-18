@@ -1,0 +1,3 @@
+pytest-watch a zero-config CLI tool that runs pytest, and re-runs it when
+a file in your project changes. It beeps on failures and can run arbitrary
+commands on each passing and failing test run.
