@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2019/09/16 19:50:47 adam Exp $
+# $NetBSD: Makefile,v 1.47 2019/09/18 14:17:21 ryoon Exp $
 
 DISTNAME=	PyQt5_gpl-5.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt5_gpl/qt5/}
+PKGREVISION=	1
 CATEGORIES=	x11 python
 MASTER_SITES=	https://www.riverbankcomputing.com/static/Downloads/PyQt5/${PKGVERSION_NOREV}/
 

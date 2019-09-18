@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2019/04/25 20:50:23 markd Exp $
+# $NetBSD: Makefile,v 1.29 2019/09/18 14:17:08 ryoon Exp $
 
 DISTNAME=	kdeclarative-${KF5VER}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks
