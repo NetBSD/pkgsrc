@@ -1,17 +1,11 @@
-$NetBSD: distinfo,v 1.52 2019/07/03 10:21:08 markd Exp $
+$NetBSD: distinfo,v 1.53 2019/09/18 23:40:17 nia Exp $
 
-SHA1 (blender-2.79b.tar.gz) = 4fd307ccfd1d6df5cc1898009712d4b1ae35430f
-RMD160 (blender-2.79b.tar.gz) = 787fc2ee718157aa95ffcced4935355d3086ca0d
-SHA512 (blender-2.79b.tar.gz) = 2db21ace446168dd683cdb5aad9dec001f8888ae4e9603a04ddb44fb78489ded827deb07e83712b0f1118a0e7bf66f2a5d935dc4ebb3a6703d72672ff414367f
-Size (blender-2.79b.tar.gz) = 50204270 bytes
-SHA1 (patch-doc_python__api_sphinx__doc__gen.sh) = 5300936c1f675346dbcd76bbd640dd3266065297
-SHA1 (patch-extern_glog_src_base_mutex.h) = 34a20264581a093a1686f1d13a6fccbd5cd9e674
-SHA1 (patch-extern_glog_src_config.h) = 9666c5d925cfeebeef2f178418c9fc2403831da1
-SHA1 (patch-extern_glog_src_config__netbsd.h) = be4727135b8fe1ddbcb5ad52f8230aec51a1a909
-SHA1 (patch-extern_glog_src_utilities.h) = c78ef191ab6ec7e65837b88468a7e1b8eaf325d3
-SHA1 (patch-intern_cycles_util_util_sseb.h) = 5d5bf8d71a443b63959ec79072e458f1a43cde94
-SHA1 (patch-intern_elbeem_intern_solver_main.cpp) = 2dca2892e5f71742785fc34c20738c6b61dbfa8b
-SHA1 (patch-intern_guardedalloc_intern_mallocn__intern.h) = c7bc89af1c03b50ae0bd8af5aacc25cd82dfcbfc
-SHA1 (patch-intern_itasc_kdl_tree.hpp) = b0c6640853ace08c07b443ff8f18290367f1d8da
-SHA1 (patch-source_blender_imbuf_intern_dds_DirectDrawSurface.cpp) = b38f61900aa30b02479c7397062d71d295932847
-SHA1 (patch-source_blender_python_intern_bpy_rna.c) = e287c41e0196bfa3650bfaa5d4263f5862467b80
+SHA1 (blender-2.80.tar.gz) = 91f9f52863cef408e60f1272e95d84316253234a
+RMD160 (blender-2.80.tar.gz) = 7496e357ca5476127970b524dd0b8d1c29c96321
+SHA512 (blender-2.80.tar.gz) = b70bbfc81b56ac9570e057e259681029416caf5c7279513d9b8d9f47507348c9ca90e2972b9dc77da85aa242afe07bb8dff2eee94ea4582cc5209dfdce38310e
+Size (blender-2.80.tar.gz) = 54216321 bytes
+SHA1 (patch-extern_glog_src_base_mutex.h) = 5fceceefe83400967a59080eeb930d0f3a4b8e88
+SHA1 (patch-extern_glog_src_config.h) = e445c911d4ebb1f7e378c3c46911b55f77ba5608
+SHA1 (patch-extern_glog_src_config__netbsd.h) = f96dd9d6afed38466e5765c604efebcd78537a54
+SHA1 (patch-intern_guardedalloc_intern_mallocn__intern.h) = 81fb0fd1b34d550168a4bdf63f28b4e199717921
+SHA1 (patch-source_blender_blenloader_intern_readfile.h) = 4d4e27da291300d32d79dcd7adeaefff6e14929d
