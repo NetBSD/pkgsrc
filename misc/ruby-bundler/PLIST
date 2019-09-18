@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.25 2018/12/17 15:00:41 taca Exp $
-bin/bundle${RUBY_SUFFIX}
-bin/bundler${RUBY_SUFFIX}
+@comment $NetBSD: PLIST,v 1.26 2019/09/18 14:30:43 taca Exp $
+bin/bundle2-${RUBY_SUFFIX}
+bin/bundler2-${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.md
@@ -161,6 +161,7 @@ ${GEM_LIBDIR}/lib/bundler/ui/shell.rb
 ${GEM_LIBDIR}/lib/bundler/ui/silent.rb
 ${GEM_LIBDIR}/lib/bundler/uri_credentials_filter.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/fileutils/lib/fileutils.rb
+${GEM_LIBDIR}/lib/bundler/vendor/fileutils/lib/fileutils/version.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/molinillo/lib/molinillo.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/molinillo/lib/molinillo/compatibility.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/molinillo/lib/molinillo/delegates/resolution_state.rb
