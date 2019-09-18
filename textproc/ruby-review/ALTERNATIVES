@@ -1,0 +1,16 @@
+bin/review-catalog-converter @PREFIX@/bin/review-catalog-converter@RUBY_SUFFIX@
+bin/review-check @PREFIX@/bin/review-check@RUBY_SUFFIX@
+bin/review-checkdep @PREFIX@/bin/review-checkdep@RUBY_SUFFIX@
+bin/review-compile @PREFIX@/bin/review-compile@RUBY_SUFFIX@
+bin/review-epub2html @PREFIX@/bin/review-epub2html@RUBY_SUFFIX@
+bin/review-epubmaker @PREFIX@/bin/review-epubmaker@RUBY_SUFFIX@
+bin/review-index @PREFIX@/bin/review-index@RUBY_SUFFIX@
+bin/review-init @PREFIX@/bin/review-init@RUBY_SUFFIX@
+bin/review-pdfmaker @PREFIX@/bin/review-pdfmaker@RUBY_SUFFIX@
+bin/review-preproc @PREFIX@/bin/review-preproc@RUBY_SUFFIX@
+bin/review-textmaker @PREFIX@/bin/review-textmaker@RUBY_SUFFIX@
+bin/review-update @PREFIX@/bin/review-update@RUBY_SUFFIX@
+bin/review-validate @PREFIX@/bin/review-validate@RUBY_SUFFIX@
+bin/review-vol @PREFIX@/bin/review-vol@RUBY_SUFFIX@
+bin/review-webmaker @PREFIX@/bin/review-webmaker@RUBY_SUFFIX@
+bin/review @PREFIX@/bin/review@RUBY_SUFFIX@
