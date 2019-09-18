@@ -1,10 +1,7 @@
-Thrift is a software library and set of code-generation tools developed
-at Facebook to expedite development and implementation of efficient and
-scalable backend services. Its primary goal is to enable efficient and
-reliable communication across programming languages by abstracting the
-portions of each language that tend to require the most customization
-into a common library that is implemented in each language.
+The Apache Thrift software framework, for scalable cross-language services
+development, combines a software stack with a code generation engine to build
+services that work efficiently and seamlessly between C++, Java, Python, PHP,
+Ruby, Erlang, Perl, Haskell, C#, Cocoa, JavaScript, Node.js, Smalltalk, OCaml
+and Delphi and other languages.
 
-Specifically, Thrift allows developers to define datatypes and service
-interfaces in a single language-neutral file and generate all the
-necessary code to build RPC clients and servers.
+This package provides Python bindings for the Apache Thrift RPC system.

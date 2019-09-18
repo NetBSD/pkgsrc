@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.13 2017/04/19 11:24:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2019/09/18 11:27:52 adam Exp $
 
-DISTNAME=	thrift-0.7.0
-PKGREVISION=	4
-CATEGORIES=	devel
+.include "../../devel/thrift/Makefile.version"
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://thrift.apache.org/
-COMMENT=	Ruby libraries for Thrift (a language-agnostic RPC system)
-LICENSE=	apache-2.0
+COMMENT=	Ruby bindings for the Apache Thrift RPC system
+EXTRACT_SUFX=	.tar.gz
 
-.include "../../devel/libthrift/buildlink3.mk"
+EXTRACT_ELEMENTS=	${DISTNAME}/lib/rb
+
+WRKSRC=		${WRKDIR}/${DISTNAME}/lib/rb
+GEM_SPECFILE=	${WRKSRC}/thrift.gemspec
+
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

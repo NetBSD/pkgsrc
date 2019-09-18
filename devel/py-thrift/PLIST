@@ -1,11 +1,16 @@
-@comment $NetBSD: PLIST,v 1.2 2016/03/29 22:49:34 khorben Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/09/18 11:27:52 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/thrift/TMultiplexedProcessor.py
 ${PYSITELIB}/thrift/TMultiplexedProcessor.pyc
 ${PYSITELIB}/thrift/TMultiplexedProcessor.pyo
+${PYSITELIB}/thrift/TRecursive.py
+${PYSITELIB}/thrift/TRecursive.pyc
+${PYSITELIB}/thrift/TRecursive.pyo
 ${PYSITELIB}/thrift/TSCons.py
 ${PYSITELIB}/thrift/TSCons.pyc
 ${PYSITELIB}/thrift/TSCons.pyo
@@ -21,6 +26,9 @@ ${PYSITELIB}/thrift/Thrift.pyo
 ${PYSITELIB}/thrift/__init__.py
 ${PYSITELIB}/thrift/__init__.pyc
 ${PYSITELIB}/thrift/__init__.pyo
+${PYSITELIB}/thrift/compat.py
+${PYSITELIB}/thrift/compat.pyc
+${PYSITELIB}/thrift/compat.pyo
 ${PYSITELIB}/thrift/protocol/TBase.py
 ${PYSITELIB}/thrift/protocol/TBase.pyc
 ${PYSITELIB}/thrift/protocol/TBase.pyo
@@ -30,6 +38,9 @@ ${PYSITELIB}/thrift/protocol/TBinaryProtocol.pyo
 ${PYSITELIB}/thrift/protocol/TCompactProtocol.py
 ${PYSITELIB}/thrift/protocol/TCompactProtocol.pyc
 ${PYSITELIB}/thrift/protocol/TCompactProtocol.pyo
+${PYSITELIB}/thrift/protocol/THeaderProtocol.py
+${PYSITELIB}/thrift/protocol/THeaderProtocol.pyc
+${PYSITELIB}/thrift/protocol/THeaderProtocol.pyo
 ${PYSITELIB}/thrift/protocol/TJSONProtocol.py
 ${PYSITELIB}/thrift/protocol/TJSONProtocol.pyc
 ${PYSITELIB}/thrift/protocol/TJSONProtocol.pyo
@@ -61,6 +72,9 @@ ${PYSITELIB}/thrift/server/TServer.pyo
 ${PYSITELIB}/thrift/server/__init__.py
 ${PYSITELIB}/thrift/server/__init__.pyc
 ${PYSITELIB}/thrift/server/__init__.pyo
+${PYSITELIB}/thrift/transport/THeaderTransport.py
+${PYSITELIB}/thrift/transport/THeaderTransport.pyc
+${PYSITELIB}/thrift/transport/THeaderTransport.pyo
 ${PYSITELIB}/thrift/transport/THttpClient.py
 ${PYSITELIB}/thrift/transport/THttpClient.pyc
 ${PYSITELIB}/thrift/transport/THttpClient.pyo
@@ -82,3 +96,6 @@ ${PYSITELIB}/thrift/transport/TZlibTransport.pyo
 ${PYSITELIB}/thrift/transport/__init__.py
 ${PYSITELIB}/thrift/transport/__init__.pyc
 ${PYSITELIB}/thrift/transport/__init__.pyo
+${PYSITELIB}/thrift/transport/sslcompat.py
+${PYSITELIB}/thrift/transport/sslcompat.pyc
+${PYSITELIB}/thrift/transport/sslcompat.pyo
