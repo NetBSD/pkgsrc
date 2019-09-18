@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3956 2019/09/18 08:38:22 gson Exp $
+$NetBSD: CHANGES-2019,v 1.3957 2019/09/18 09:41:00 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6489,3 +6489,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/lua-curl to 0.3.11 [nia 2019-09-17]
 	Added textproc/lua-lustache version 1.3.1 [nia 2019-09-17]
 	Updated misc/py-anita to 2.0 [gson 2019-09-18]
+	Removed misc/gnome-devel-docs [nia 2019-09-18]
