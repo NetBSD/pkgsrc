@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3973 2019/09/18 15:41:16 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.3974 2019/09/18 15:54:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6521,3 +6521,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added cross/mingw-w64-x86_64-winpthreads version 6.0.0 [ryoon 2019-09-18]
 	Added cross/mingw-w64-x86_64-gcc-winpthreads version 9.2.0 [ryoon 2019-09-18]
 	Updated cross/mingw-w64 to 6.0.0nb1 [ryoon 2019-09-18]
+	Added graphics/ruby-image_size version 2.0.2 [taca 2019-09-18]
