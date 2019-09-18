@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3976 2019/09/18 18:27:31 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3977 2019/09/18 20:31:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6524,3 +6524,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Added graphics/ruby-image_size version 2.0.2 [taca 2019-09-18]
 	Added textproc/ruby-review version 3.2.0 [taca 2019-09-18]
 	Updated games/openttd to 1.9.3 [nia 2019-09-18]
+	Updated www/py-cheroot to 6.5.8 [adam 2019-09-18]
+	Updated www/py-cherrypy to 18.2.0 [adam 2019-09-18]
+	Updated devel/py-jupyter_client to 5.3.3 [adam 2019-09-18]
+	Updated devel/py-semantic_version to 2.8.2 [adam 2019-09-18]
