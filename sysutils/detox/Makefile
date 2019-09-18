@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/09/18 12:16:22 maya Exp $
+# $NetBSD: Makefile,v 1.9 2019/09/18 12:17:53 maya Exp $
 #
 
 DISTNAME=		detox-1.2.0
@@ -16,8 +16,6 @@ INSTALL_TARGET=		install-base install-unsafe-config
 
 EGDIR=			${PREFIX}/share/examples/detox
 CONF_FILES=		${EGDIR}/detoxrc ${PKG_SYSCONFDIR}/detoxrc
-
-MAKE_ENV+=		L_OPT=-L${PREFIX}/lib
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
