@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3957 2019/09/18 09:41:00 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3958 2019/09/18 11:31:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6490,3 +6490,11 @@ Changes to the packages collection and infrastructure in 2019:
 	Added textproc/lua-lustache version 1.3.1 [nia 2019-09-17]
 	Updated misc/py-anita to 2.0 [gson 2019-09-18]
 	Removed misc/gnome-devel-docs [nia 2019-09-18]
+	Updated devel/libthrift to 0.12.0 [adam 2019-09-18]
+	Updated devel/py-thrift to 0.12.0 [adam 2019-09-18]
+	Updated devel/ruby-thrift to 0.12.0 [adam 2019-09-18]
+	Added devel/go-thrift version 0.12.0 [adam 2019-09-18]
+	Added devel/libthrift_c_glib version 0.12.0 [adam 2019-09-18]
+	Added devel/lua-thrift version 0.12.0 [adam 2019-09-18]
+	Added devel/p5-thrift version 0.12.0 [adam 2019-09-18]
+	Added devel/thrift version 0.12.0 [adam 2019-09-18]
