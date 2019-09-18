@@ -1,37 +1,14 @@
-# $NetBSD: options.mk,v 1.7 2019/07/01 12:08:51 nia Exp $
+# $NetBSD: options.mk,v 1.8 2019/09/18 23:40:17 nia Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.blender
-PKG_SUPPORTED_OPTIONS=
-# disabled these options; they ought to be re-instantiated one day
-.if 0
-PKG_SUPPORTED_OPTIONS+=	blender-exppython ogg openal vorbis
-.endif
+PKG_OPTIONS_VAR=		PKG_OPTIONS.blender
+PKG_SUPPORTED_OPTIONS=		jack
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mexppython)
-CONFIGURE_ARGS+=	--enable-exppython
+.if !empty(PKG_OPTIONS:Mjack)
+CMAKE_ARGS+=	-DWITH_JACK=ON
+CMAKE_ARGS+=	-DWITH_JACK_DYNLOAD=OFF
+.include "../../audio/jack/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	--disable-exppython
-.endif
-
-.if !empty(PKG_OPTIONS:Mogg)
-CONFIGURE_ARGS+=	--with-ogg=${PREFIX}
-.include "../../multimedia/libogg/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-ogg --disable-oggtest
-.endif
-
-.if !empty(PKG_OPTIONS:Mopenal)
-CONFIGURE_ARGS+=	--enable-openal
-.include "../../audio/openal-soft/buildlink3.mk"
-.else
-CMAKE_OPTS+=	-DWITH_OPENAL:BOOL=OFF
-.endif
-
-.if !empty(PKG_OPTIONS:Mvorbis)
-CONFIGURE_ARGS+=	--with-vorbis=${PREFIX}
-.include "../../audio/libvorbis/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-vorbis --disable-vorbistest
+CMAKE_ARGS+=	-DWITH_JACK=OFF
 .endif

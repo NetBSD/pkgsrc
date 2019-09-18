@@ -1,4 +1,6 @@
-$NetBSD: patch-extern_glog_src_config__netbsd.h,v 1.1 2016/08/15 19:26:18 ryoon Exp $
+$NetBSD: patch-extern_glog_src_config__netbsd.h,v 1.2 2019/09/18 23:40:17 nia Exp $
+
+Support NetBSD.
 
 --- extern/glog/src/config_netbsd.h.orig	2016-07-28 08:46:50.262373648 +0000
 +++ extern/glog/src/config_netbsd.h
