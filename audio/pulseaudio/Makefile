@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.137 2019/07/21 22:24:27 wiz Exp $
+# $NetBSD: Makefile,v 1.138 2019/09/18 14:12:20 ryoon Exp $
 
-DISTNAME=	pulseaudio-12.2
-PKGREVISION=	6
+DISTNAME=	pulseaudio-13.0
 CATEGORIES=	audio
 MASTER_SITES=	https://freedesktop.org/software/pulseaudio/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -13,13 +12,17 @@ LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
 NOT_FOR_PLATFORM=	DragonFly-*-*
 
+# Requires --desktop in msgfmt.
+_TOOLS_USE_PKGSRC.msgfmt=	yes
+
 LIBTOOL_REQD=	2.4
 GCC_REQD+=	4.8
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		aclocal autoheader autoconf automake gmake gm4 intltool msgfmt pkg-config
+USE_TOOLS+=		aclocal autoheader autoconf automake bash:run gmake gm4
+USE_TOOLS+=		msgfmt perl:build pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-tcpwrap
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
@@ -30,6 +33,7 @@ PKGCONFIG_OVERRIDE+=	libpulse-simple.pc.in
 PKGCONFIG_OVERRIDE+=	libpulse.pc.in
 
 REPLACE_BASH=	shell-completion/bash/pulseaudio git-version-gen
+REPLACE_BASH=	src/utils/pa-info
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -62,7 +66,7 @@ CONFIGURE_ARGS+=	--disable-neon-opt
 .include "../../devel/libatomic_ops/buildlink3.mk"
 .endif
 
-PLIST_SUBST+=		PULSELIBVER=12.0
+PLIST_SUBST+=		PULSELIBVER=13.0
 PLIST_VARS+=		alsa bonjour coreaudio evdev oss sun
 
 # Build module-mmkbd-evdev.so under Linux
