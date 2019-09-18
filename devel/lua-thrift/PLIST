@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2019/09/18 11:27:52 adam Exp $
+include/src/socket.h
+lib/libluabitwise.la
+lib/libluabpack.la
+lib/liblualongnumber.la
+lib/libluasocket.la
