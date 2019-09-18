@@ -1,0 +1,4 @@
+Measure image size using pure Ruby.
+
+formats: apng, bmp, cur, gif, jpeg, ico, mng, pbm, pcx, pgm, png, ppm, psd,
+swf, tiff, xbm, xpm, webp.
