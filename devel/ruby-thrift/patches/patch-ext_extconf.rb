@@ -1,15 +1,15 @@
-$NetBSD: patch-ext_extconf.rb,v 1.1 2015/03/08 16:07:28 taca Exp $
+$NetBSD: patch-ext_extconf.rb,v 1.2 2019/09/18 11:27:52 adam Exp $
 
-* Don't treat warning as error.
+Don't treat warnings as errors.
 
---- ext/extconf.rb.orig	2015-01-18 12:03:28.000000000 +0000
+--- ext/extconf.rb.orig	2019-09-17 13:49:26.000000000 +0000
 +++ ext/extconf.rb
-@@ -22,7 +22,7 @@ if defined?(RUBY_ENGINE) && RUBY_ENGINE 
- else
-   require 'mkmf'
+@@ -26,7 +26,7 @@ else
+   $ARCH_FLAGS = RbConfig::CONFIG['CFLAGS'].scan( /(-arch )(\S+)/ ).map{|x,y| x + y + ' ' }.join('')
  
--  $CFLAGS = "-g -O2 -Wall -Werror"
-+  $CFLAGS = "-g -O2 -Wall"
+ 
+-  $CFLAGS = "-fsigned-char -g -O2 -Wall -Werror " + $ARCH_FLAGS
++  $CFLAGS = "-fsigned-char -Wall " + $ARCH_FLAGS
  
    have_func("strlcpy", "string.h")
  
