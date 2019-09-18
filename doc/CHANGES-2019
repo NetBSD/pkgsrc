@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3965 2019/09/18 14:27:08 wen Exp $
+$NetBSD: CHANGES-2019,v 1.3966 2019/09/18 14:28:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6507,3 +6507,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/py-requests-unixsocket version 0.2.0 [adam 2019-09-18]
 	Updated audio/pulseaudio to 13.0 [ryoon 2019-09-18]
 	Updated textproc/p5-PDF-API2 to 2.036 [wen 2019-09-18]
+	Updated misc/ruby-bundler1 to 1.17.3nb1 [taca 2019-09-18]
