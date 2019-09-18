@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.66 2019/09/18 15:27:05 ng0 Exp $
+@comment $NetBSD: PLIST,v 1.67 2019/09/18 19:00:13 tnn Exp $
 bin/certtool
-${PLIST.unbound}bin/danetool
+${PLIST.dane}bin/danetool
 bin/gnutls-cli
 bin/gnutls-cli-debug
 bin/gnutls-serv
