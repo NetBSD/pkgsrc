@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.30 2019/07/01 10:25:24 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.31 2019/09/18 14:12:20 ryoon Exp $
 bin/esdcompat
+bin/pa-info
 bin/pacat
 bin/pacmd
 bin/pactl
@@ -277,11 +278,13 @@ share/examples/pulseaudio/pulseaudio-system.conf
 ${PLIST.x11}share/examples/pulseaudio/pulseaudio.desktop
 share/examples/pulseaudio/system.pa
 ${PLIST.gsettings}share/glib-2.0/schemas/org.freedesktop.pulseaudio.gschema.xml
+share/locale/af/LC_MESSAGES/pulseaudio.mo
 share/locale/as/LC_MESSAGES/pulseaudio.mo
 share/locale/be/LC_MESSAGES/pulseaudio.mo
 share/locale/bn_IN/LC_MESSAGES/pulseaudio.mo
 share/locale/ca/LC_MESSAGES/pulseaudio.mo
 share/locale/cs/LC_MESSAGES/pulseaudio.mo
+share/locale/da/LC_MESSAGES/pulseaudio.mo
 share/locale/de/LC_MESSAGES/pulseaudio.mo
 share/locale/de_CH/LC_MESSAGES/pulseaudio.mo
 share/locale/el/LC_MESSAGES/pulseaudio.mo
