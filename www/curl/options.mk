@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.17 2019/05/22 08:56:25 leot Exp $
+# $NetBSD: options.mk,v 1.18 2019/09/18 07:21:08 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.curl
 PKG_SUPPORTED_OPTIONS=		inet6 libssh2 gssapi ldap rtmp idn http2
-PKG_SUGGESTED_OPTIONS=		inet6 idn
+PKG_SUGGESTED_OPTIONS=		http2 inet6 idn
 PKG_OPTIONS_LEGACY_OPTS=	libidn:idn
 
 # Kerberos is built in - no additional dependency
