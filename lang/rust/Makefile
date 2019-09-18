@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2019/09/17 08:03:27 he Exp $
+# $NetBSD: Makefile,v 1.116 2019/09/18 07:25:00 adam Exp $
 
 DISTNAME=	rustc-1.37.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -421,11 +421,11 @@ stage0-bootstrap: install
 #
 #.include "../../devel/libgit2/buildlink3.mk"
 #.include "../../security/libssh2/buildlink3.mk"
-#.include "../../www/curl/buildlink3.mk"
 #.include "../../www/http-parser/buildlink3.mk"
 
 #.include "../../devel/jemalloc/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
