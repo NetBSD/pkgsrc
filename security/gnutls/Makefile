@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.199 2019/09/16 00:28:48 nia Exp $
+# $NetBSD: Makefile,v 1.200 2019/09/18 15:27:05 ng0 Exp $
 
 DISTNAME=	gnutls-3.6.9
+PKGREVISION=	1
 CATEGORIES=	security devel
 MASTER_SITES=	https://www.gnupg.org/ftp/gcrypt/gnutls/v3.6/
 EXTRACT_SUFX=	.tar.xz
@@ -30,6 +31,8 @@ CONFIGURE_ARGS+=		--enable-local-libopts
 # Assembler support is broken for SunOS in 3.2.9.
 CONFIGURE_ARGS.SunOS+=		--disable-hardware-acceleration
 CONFIGURE_ARGS.FreeBSD+=	ac_cv_type_max_align_t=yes
+
+.include "options.mk"
 
 TEST_TARGET=		check
 
