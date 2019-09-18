@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2914 2019/09/16 11:08:33 nia Exp $
+# $NetBSD: Makefile,v 1.2915 2019/09/18 11:27:51 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -429,6 +429,7 @@ SUBDIR+=	go-sync
 SUBDIR+=	go-sys
 SUBDIR+=	go-termbox
 SUBDIR+=	go-testify
+SUBDIR+=	go-thrift
 SUBDIR+=	go-tools
 SUBDIR+=	go-try
 SUBDIR+=	go-viper
@@ -718,6 +719,7 @@ SUBDIR+=	libtar
 SUBDIR+=	libtecla
 SUBDIR+=	libthai
 SUBDIR+=	libthrift
+SUBDIR+=	libthrift_c_glib
 SUBDIR+=	libtool
 SUBDIR+=	libtool-base
 SUBDIR+=	libtool-fortran
@@ -767,6 +769,7 @@ SUBDIR+=	lua-rocks
 SUBDIR+=	lua-std-_debug
 SUBDIR+=	lua-std-normalize
 SUBDIR+=	lua-stdlib
+SUBDIR+=	lua-thrift
 SUBDIR+=	lutok
 SUBDIR+=	lwp
 SUBDIR+=	m17n-lib
@@ -1926,6 +1929,7 @@ SUBDIR+=	p5-signatures
 SUBDIR+=	p5-strictures
 SUBDIR+=	p5-subversion
 SUBDIR+=	p5-syntax
+SUBDIR+=	p5-thrift
 SUBDIR+=	p5-version
 SUBDIR+=	p8-platform
 SUBDIR+=	palmpower
@@ -2795,6 +2799,7 @@ SUBDIR+=	tex-tlshell-doc
 SUBDIR+=	tex-xifthen
 SUBDIR+=	tex-xifthen-doc
 SUBDIR+=	threadweaver
+SUBDIR+=	thrift
 SUBDIR+=	tig
 SUBDIR+=	tinycthread
 SUBDIR+=	tkcvs
