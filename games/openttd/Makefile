@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.81 2019/07/31 10:55:13 nia Exp $
+# $NetBSD: Makefile,v 1.82 2019/09/18 18:27:11 nia Exp $
 
-DISTNAME=	openttd-1.9.2-source
+DISTNAME=	openttd-1.9.3-source
 PKGNAME=	${DISTNAME:S/-source//}
-CATEGORIES=	games x11
+CATEGORIES=	games
 MASTER_SITES=	https://proxy.binaries.openttd.org/openttd-releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
 
@@ -11,13 +11,16 @@ HOMEPAGE=	https://www.openttd.org/
 COMMENT=	Open source clone of Transport Tycoon Deluxe
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-USE_LANGUAGES=		c c++0x
-USE_TOOLS+=		gmake pkg-config
-BUILD_DEFS+=		VARBASE
-BUILD_TARGET=		bundle
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+HAS_CONFIGURE=	yes
+USE_LANGUAGES=	c c++11
+USE_TOOLS+=	gmake pkg-config
+BUILD_DEFS+=	VARBASE
+BUILD_TARGET=	bundle
 
-HAS_CONFIGURE=		yes
+# C++11
+GCC_REQD+=	4.8
+
 CONFIGURE_ARGS+=	--prefix-dir=${PREFIX}
 CONFIGURE_ARGS+=	--binary-dir=bin
 CONFIGURE_ARGS+=	--data-dir=share/openttd
