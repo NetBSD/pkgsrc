@@ -1,0 +1,9 @@
+Re:VIEW is an easy-to-use digital publishing system for paper books and
+ebooks.
+
+Output formats Re:VIEW supports are:
+
+ * EPUB
+ * LaTeX(ptexlive)
+ * InDesign(IDGXML)
+ * plain text(TOPBuilder Text Markup Language)
