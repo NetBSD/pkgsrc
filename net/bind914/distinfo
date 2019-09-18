@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2019/07/18 03:02:02 taca Exp $
+$NetBSD: distinfo,v 1.8 2019/09/18 15:19:31 taca Exp $
 
-SHA1 (bind-9.14.4.tar.gz) = 4b6fdb95b96786556befdedd1f0f3f93409672ad
-RMD160 (bind-9.14.4.tar.gz) = d5b732b9c344d84885b3928ece88731e723185ff
-SHA512 (bind-9.14.4.tar.gz) = f5f4dc9b6a1d60838b59ce57ad37dc1e51fa26719aa203405a73850780f06bdc6ecea71c762efd464f946bdcce5a7c324de98caea36d2fe2781cce116fcd4932
-Size (bind-9.14.4.tar.gz) = 6295768 bytes
+SHA1 (bind-9.14.5.tar.gz) = aef9038cca034705b118168a1d1d83b3dffd83e4
+RMD160 (bind-9.14.5.tar.gz) = cabe4e43fcc1c193832dc6c9b3a7b8c13f46ceeb
+SHA512 (bind-9.14.5.tar.gz) = 1b18eda5dea639f9b34e1c41b534704b0d5f64c036b766c9cfccf9bbeb586ce4ea7f0d098a5b2747e88aa403e48ad8ae0b6e560e93348f0dc7616f914671d084
+Size (bind-9.14.5.tar.gz) = 6313555 bytes
 SHA1 (patch-bin_named_Makefile.in) = 741e3708c670baaec45446f6bb364ada448ae330
 SHA1 (patch-bin_named_main.c) = 51c8ab464a009575b6513c7ed4b79f89446eb7d0
 SHA1 (patch-bin_named_pfilter.c) = b54f872c883c8fbc2d9c04df65c185dc057cc36b
@@ -34,7 +34,6 @@ SHA1 (patch-lib_dns_spnego.c) = 2867212608ebdb949c65d1d6a3db21742c1128f6
 SHA1 (patch-lib_dns_validator.c) = 7d7471efe5109f5b2d6f9e99fe15fa314fdd217d
 SHA1 (patch-lib_dns_view.c) = 25095827adbc75dc629b0f435dbd711b599c86c9
 SHA1 (patch-lib_isc_backtrace.c) = 5fa1dd0f18ae757233d9cc21e36a5f6a84990db1
-SHA1 (patch-lib_isc_rwlock.c) = ca4d71a6437078f0facb32731d2742dc6e4be7c5
 SHA1 (patch-lib_isc_stats.c) = 9857f640fb0becfab1a7f347f835610230bd3279
 SHA1 (patch-lib_isc_unix_socket.c) = 4f7be1616bac7263069292f909896373f0e6fab8
 SHA1 (patch-lib_isc_unix_time.c) = 04312e043601688aa2b0a09dad1bcb51d9273e9d
