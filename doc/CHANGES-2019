@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3959 2019/09/18 13:03:10 gdt Exp $
+$NetBSD: CHANGES-2019,v 1.3960 2019/09/18 13:11:17 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6499,3 +6499,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/p5-thrift version 0.12.0 [adam 2019-09-18]
 	Added devel/thrift version 0.12.0 [adam 2019-09-18]
 	Updated net/mosquitto to 1.6.6 [gdt 2019-09-18]
+	Updated devel/p5-SUPER to 1.20190531 [wen 2019-09-18]
