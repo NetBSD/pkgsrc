@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/09/16 23:17:07 nia Exp $
+# $NetBSD: Makefile,v 1.9 2019/09/18 09:47:56 nia Exp $
 
 DISTNAME=	mumble-1.3.0
 PKGREVISION=	1
@@ -104,6 +104,7 @@ do-install:
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
+.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
