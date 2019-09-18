@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.848 2019/09/18 15:53:45 taca Exp $
+# $NetBSD: Makefile,v 1.849 2019/09/18 23:41:50 nia Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -374,7 +374,6 @@ SUBDIR+=	opendis
 SUBDIR+=	openexr
 SUBDIR+=	openimageio
 SUBDIR+=	openjpeg
-SUBDIR+=	openjpeg15
 SUBDIR+=	optipng
 SUBDIR+=	osg
 SUBDIR+=	oxygen-icons
