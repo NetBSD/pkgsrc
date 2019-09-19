@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3984 2019/09/19 14:28:49 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3985 2019/09/19 16:51:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6535,3 +6535,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed graphics/blender-doc [nia 2019-09-18]
 	Added devel/mustach version 0.99 [sjmulder 2019-09-19]
 	Added multimedia/olive-editor version 0.1.1 [nia 2019-09-19]
+	Updated archivers/py-zstandard to 0.12.0 [adam 2019-09-19]
+	Updated devel/py-packaging to 19.2 [adam 2019-09-19]
