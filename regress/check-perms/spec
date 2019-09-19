@@ -1,0 +1,58 @@
+#! /bin/sh
+# $NetBSD: spec,v 1.1 2019/09/19 23:53:36 rillig Exp $
+set -eu
+
+do_cleanup() {
+	$TEST_MAKE deinstall clean
+}
+
+do_make() {
+	echo "Running test case $*"
+
+	#$TEST_MAKE "$@" show-all-check-perms
+
+	$TEST_MAKE "$@" deinstall clean install 1>"$TEST_OUTFILE" 2>&1 \
+	&& TEST_EXITSTATUS=0 || TEST_EXITSTATUS=$?
+}
+
+test_no_developer_no_autofix() {
+	do_make PKG_DEVELOPER=no CHECK_PERMS_AUTOFIX=no
+
+	exit_status 0
+}
+
+test_no_developer_autofix() {
+	do_make PKG_DEVELOPER=no CHECK_PERMS_AUTOFIX=yes
+
+	# FIXME: The permissions must be fixed even though PKG_DEVELOPER=no.
+	exit_status 0
+	output_prohibit "^error: .*: world-writable file"
+}
+
+test_developer_no_autofix() {
+	do_make PKG_DEVELOPER=yes CHECK_PERMS_AUTOFIX=no
+
+	exit_status 1
+	output_require "^warning: .*/demo-file: too small to be a valid executable file"
+	output_require "^warning: .*/demo-file: group-writable file"
+	output_require "^error: .*/demo-file: world-writable file"
+}
+
+test_developer_autofix() {
+	do_make PKG_DEVELOPER=yes CHECK_PERMS_AUTOFIX=yes
+
+	# FIXME: Since all permission problems have been fixed, the exit status must be 0.
+	# This needs to be fixed in checkperms upstream.
+	exit_status 1
+	output_require "^warning: .*/demo-file: too small to be a valid executable file"
+	output_require "^warning: .*/demo-file: group-writable file"
+	output_require "^error: .*/demo-file: world-writable file"
+	output_require "^note: .*/demo-file: fixed permissions from 0777 to 0644"
+}
+
+do_test() {
+	test_no_developer_no_autofix
+	test_no_developer_autofix
+	test_developer_no_autofix
+	test_developer_autofix
+}

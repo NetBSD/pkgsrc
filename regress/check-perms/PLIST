@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2019/09/19 23:53:36 rillig Exp $
+share/regress-check-perms/demo-file
