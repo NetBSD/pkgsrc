@@ -1,0 +1,2 @@
+C implementation of the mustache template library. Provides a library
+and a command-line tool. Support for json-c is built in.
