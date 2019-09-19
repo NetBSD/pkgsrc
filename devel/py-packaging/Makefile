@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2019/08/14 07:16:53 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/09/19 16:49:32 adam Exp $
 
-DISTNAME=	packaging-19.1
+DISTNAME=	packaging-19.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/packaging/}
 
@@ -11,7 +10,6 @@ HOMEPAGE=	https://github.com/pypa/packaging
 COMMENT=	Core utilities for Python packages
 LICENSE=	modified-bsd OR apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-attrs-[0-9]*:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.0.2:../../devel/py-pyparsing
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-pretend-[0-9]*:../../devel/py-pretend
