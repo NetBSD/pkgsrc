@@ -1,13 +1,13 @@
-$NetBSD: patch-src_run_run.pri,v 1.2 2016/12/16 11:16:32 plunky Exp $
+$NetBSD: patch-src_run_run.pri,v 1.3 2019/09/19 21:59:36 nia Exp $
 
 fix build for pkgsrc, by allowing qmake to link binaries in situ
 and create an install target
 
 only link to the Qt plugins, no need to copy them over
 
---- src/run/run.pri.orig	2016-07-01 07:13:14.000000000 +0000
+--- src/run/run.pri.orig	2019-07-18 15:47:56.000000000 +0000
 +++ src/run/run.pri
-@@ -39,6 +39,9 @@ else {
+@@ -45,6 +45,9 @@ else {
          TARGET = $${RLIBNAME}-bin
      }
  }
@@ -17,7 +17,7 @@ only link to the Qt plugins, no need to copy them over
  
  # copy Qt plugins to QCAD plugin folder:
  !build_pass {
-@@ -102,7 +105,7 @@ else {
+@@ -109,7 +112,7 @@ else {
  
          for(FILE,FILES) {
              !exists("$${DESTDIR}/../plugins/$${FILE}") {
@@ -26,3 +26,11 @@ only link to the Qt plugins, no need to copy them over
              }
          }
  
+@@ -117,7 +120,6 @@ else {
+             system(cp "$$[QT_INSTALL_PLUGINS]/platforms/libqxcb.so" "$${DESTDIR}/../platforms")
+             system(cp "$$[QT_INSTALL_PLUGINS]/platforms/libqoffscreen.so" "$${DESTDIR}/../platforms")
+             system(cp "$$[QT_INSTALL_PLUGINS]/platforms/libqminimal.so" "$${DESTDIR}/../platforms")
+-            system(cp "$$[QT_INSTALL_PLUGINS]/platforms/libqlinuxfb.so" "$${DESTDIR}/../platforms")
+             system(cp "$$[QT_INSTALL_PLUGINS]/platforminputcontexts/*.so" "$${DESTDIR}/../platforminputcontexts")
+             system(cp "$$[QT_INSTALL_PLUGINS]/xcbglintegrations/*.so" "$${DESTDIR}/../xcbglintegrations")
+         }
