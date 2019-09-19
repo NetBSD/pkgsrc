@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2019/09/05 13:39:10 nia Exp $
+$NetBSD: distinfo,v 1.33 2019/09/19 21:59:36 nia Exp $
 
 SHA1 (qcad-3.23.0.0.tar.gz) = 4d54082ae447f8bd388708ffaa845fb4b0b5b572
 RMD160 (qcad-3.23.0.0.tar.gz) = 277073e7ceaf713aa8c8e7a99dab95dd278da7ad
@@ -11,13 +11,13 @@ SHA1 (patch-scripts_Widgets_CommandLine_CommandLine.js) = 3e8313d04f43a0115949d8
 SHA1 (patch-scripts_Widgets_LibraryBrowser_LibraryBrowser.js) = 65f988e553259eb93217ea12e9cb429fe52f05be
 SHA1 (patch-shared.pri) = f0b3ca615636c7fc2edc1af3b25b7aef2d9393ac
 SHA1 (patch-shared__app.pri) = a3957987228dcadb6eb8a8bb282d6d8baee643c2
+SHA1 (patch-src_3rdparty_3rdparty.pro) = e0954d186ef57d26fe9af5e29160e25ad6aea2ab
 SHA1 (patch-src_3rdparty_dxflib_dxflib.pro) = 7229800bfa5f04a475111f68cf26581e6ea41e83
 SHA1 (patch-src_3rdparty_dxflib_src_dl__writer.h) = 7009daf3a87ca82f3299f5b22b936e149c0ed036
 SHA1 (patch-src_3rdparty_opennurbs_opennurbs.pro) = d96e1ce129d32703fc474aea71afdae1d4b537ed
 SHA1 (patch-src_3rdparty_opennurbs_opennurbs__zlib.cpp) = 26385c45b2132909470aba79181c242c785614a7
 SHA1 (patch-src_3rdparty_opennurbs_opennurbs__zlib.h) = 333fe1510cc5ea2457eefd7d07ccaf034ee5d22f
 SHA1 (patch-src_3rdparty_opennurbs_opennurbs_opennurbs.pro) = 7120c49027d4a50c23b1e9e60c44a1e0a239d6ac
-SHA1 (patch-src_3rdparty_qtscript.pro) = c4ea2ca8884a24e0abc4e7231b4a474d21035280
 SHA1 (patch-src_3rdparty_spatialindexnavel_spatialindexnavel.pro) = d3af7c7c8da0d3bc297fb8cd19d0c91125bfcdfe
 SHA1 (patch-src_3rdparty_stemmer_stemmer.pro) = 22e2e937f6a19277608bad11676b156e87cf1826
 SHA1 (patch-src_core_RMetaTypes.h) = 8e3a2c7c7fc08a8608dcb64c9521c5449dd13fe8
@@ -31,7 +31,7 @@ SHA1 (patch-src_grid_grid.pro) = 65f5f47cce612b31181a0ac3e153214d29f08767
 SHA1 (patch-src_gui_gui.pro) = 938fdcb8715ec78550ebff80400ab66be551584d
 SHA1 (patch-src_io_dxf_dxf.pro) = d386b09c217fcebd7fae68807950aa7b80c3a6c8
 SHA1 (patch-src_operations_operations.pro) = d10b38594f29ae07febdb52339049646926c2252
-SHA1 (patch-src_run_run.pri) = 856f798e7dcefbe53a46b5a6b524b10bf0782d6c
+SHA1 (patch-src_run_run.pri) = c5d8b641649ba1689558b82c5ac25a617c9d62b7
 SHA1 (patch-src_scripting_ecmaapi_ecmaapi.pro) = 8105fd89a8b52962f9e0c1ff80cf154ceb09145e
 SHA1 (patch-src_snap_snap.pro) = 9464576805a1d2baa81c91f759e59a8cc3989b6a
 SHA1 (patch-src_spatialindex_spatialindex.pro) = 3afcdcd036b0ee183220cc5406accbf0756841e7
