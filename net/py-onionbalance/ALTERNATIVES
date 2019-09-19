@@ -1,0 +1,2 @@
+bin/onionbalance @PREFIX@/bin/onionbalance-@PYVERSSUFFIX@
+bin/onionbalance-config @PREFIX@/bin/onionbalance-config-@PYVERSSUFFIX@
