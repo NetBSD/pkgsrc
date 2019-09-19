@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3985 2019/09/19 16:51:22 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3986 2019/09/19 19:40:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6537,3 +6537,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added multimedia/olive-editor version 0.1.1 [nia 2019-09-19]
 	Updated archivers/py-zstandard to 0.12.0 [adam 2019-09-19]
 	Updated devel/py-packaging to 19.2 [adam 2019-09-19]
+	Updated time/py-dateparser to 0.7.2 [adam 2019-09-19]
