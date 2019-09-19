@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3983 2019/09/19 11:47:49 sjmulder Exp $
+$NetBSD: CHANGES-2019,v 1.3984 2019/09/19 14:28:49 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6534,3 +6534,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed graphics/openjpeg15 successor graphics/openjpeg [nia 2019-09-18]
 	Removed graphics/blender-doc [nia 2019-09-18]
 	Added devel/mustach version 0.99 [sjmulder 2019-09-19]
+	Added multimedia/olive-editor version 0.1.1 [nia 2019-09-19]
