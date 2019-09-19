@@ -1,4 +1,4 @@
-<!-- $NetBSD: installboot.plist,v 1.1 2019/07/12 05:08:38 thorpej Exp $ -->
+<!-- $NetBSD: installboot.plist,v 1.2 2019/09/19 04:47:03 thorpej Exp $ -->
 <!--
   Copyright (c) 2019 The NetBSD Foundation, Inc.
   All rights reserved.
@@ -33,13 +33,26 @@
 	<dict>
 		<key>description</key>
 		<string>Olimex A20-OLinuXino-LIME2-eMMC</string>
-		<key>u-boot-install</key>
+		<key>u-boot-install-sdmmc</key>
 		<array>
 			<dict>
 				<key>file-name</key>
 				<string>u-boot-sunxi-with-spl.bin</string>
 				<key>image-offset</key>
 				<integer>8192</integer>
+			</dict>
+		</array>
+		<key>u-boot-install-emmc</key>
+		<string>u-boot-install-sdmmc</string>
+		<key>u-boot-install-spi</key>
+		<array>
+			<dict>
+				<key>file-name</key>
+				<string>u-boot-sunxi-with-spl.bin</string>
+				<key>output-size</key>
+				<integer>2097152</integer>
+				<key>output-block-size</key>
+				<integer>65536</integer>
 			</dict>
 		</array>
 	</dict>
