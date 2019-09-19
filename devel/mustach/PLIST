@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2019/09/19 11:46:30 sjmulder Exp $
+bin/mustach
+include/mustach/mustach-json-c.h
+include/mustach/mustach.h
+lib/libmustach.so
