@@ -1,0 +1,48 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2019/09/19 14:28:15 nia Exp $
+
+Don't try to find the git hash.
+
+ts/olive_tr.ts's format is invalid.
+
+--- CMakeLists.txt.orig	2019-07-09 15:16:17.000000000 +0000
++++ CMakeLists.txt
+@@ -54,31 +54,6 @@ if(WIN32)
+   endif()
+ endif()
+ 
+-if(EXISTS "${CMAKE_SOURCE_DIR}/.git")
+-  find_package(Git)
+-  if(GIT_FOUND)
+-    execute_process(COMMAND ${GIT_EXECUTABLE} log -1 --format=%h
+-      WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+-      OUTPUT_VARIABLE GIT_HASH
+-      OUTPUT_STRIP_TRAILING_WHITESPACE
+-    )
+-  endif()
+-elseif(UNIX AND NOT APPLE)
+-  # Fallback for Ubuntu/Launchpad (extracts Git hash from debian/changelog rather than Git repo)
+-  # (see https://answers.launchpad.net/launchpad/+question/678556)
+-  execute_process(COMMAND sh -c "grep -Po '(?<=-)(([a-z0-9])\\w+)(?=\\+)' -m 1 changelog"
+-    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/debian
+-    OUTPUT_VARIABLE GIT_HASH
+-    OUTPUT_STRIP_TRAILING_WHITESPACE
+-  )
+-endif()
+-if(DEFINED GIT_HASH)
+-  message("Olive: git hash = " "${GIT_HASH}")
+-  list(APPEND OLIVE_DEFINITIONS -DGITHASH="${GIT_HASH}")
+-else()
+-  message("Olive: No git hash defined!")
+-endif()
+-
+ find_package(Doxygen)
+ 
+ set(OLIVE_SOURCES
+@@ -428,7 +403,6 @@ qt5_add_translation(OLIVE_QM_FILES
+   ts/olive_ru.ts
+   ts/olive_sr.ts
+   ts/olive_id.ts
+-  ts/olive_tr.ts
+   ts/olive_pt-BR.ts
+   ts/olive_zh-CN.ts
+   ts/olive_zh-TW.ts
