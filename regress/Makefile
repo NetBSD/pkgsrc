@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/07/17 18:34:16 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2019/09/19 23:53:36 rillig Exp $
 #
 # See https://www.netbsd.org/docs/pkgsrc/regression.html for more
 # information about these tests.
@@ -11,6 +11,7 @@ SUBDIR+=	bootstrap-install-sh
 SUBDIR+=	buildlink-libtool
 SUBDIR+=	buildlink-transform
 SUBDIR+=	buildlink-unwrap
+SUBDIR+=	check-perms
 SUBDIR+=	check-portability
 SUBDIR+=	compiler
 SUBDIR+=	env-vars
