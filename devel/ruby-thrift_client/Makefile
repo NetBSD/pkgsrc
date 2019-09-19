@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/04/19 11:24:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2019/09/19 05:22:47 wiz Exp $
 
 DISTNAME=	thrift_client-0.7.1
 PKGREVISION=	3
@@ -9,7 +9,7 @@ HOMEPAGE=	http://thrift.apache.org/
 COMMENT=	Thrift client wrapper for Ruby
 LICENSE=	apache-2.0
 
-DEPENDS+=	${RUBY_PKGPREFIX}-thrift>=0.7.0<0.8:../../devel/ruby-thrift
+DEPENDS+=	${RUBY_PKGPREFIX}-thrift>=0.7.0:../../devel/ruby-thrift
 
 .include "../../devel/libthrift/buildlink3.mk"
 .include "../../lang/ruby/gem.mk"
