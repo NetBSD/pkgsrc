@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3986 2019/09/19 19:40:15 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3987 2019/09/19 21:26:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6538,3 +6538,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated archivers/py-zstandard to 0.12.0 [adam 2019-09-19]
 	Updated devel/py-packaging to 19.2 [adam 2019-09-19]
 	Updated time/py-dateparser to 0.7.2 [adam 2019-09-19]
+	Updated net/py-onionbalance to 0.1.8nb1 [adam 2019-09-19]
