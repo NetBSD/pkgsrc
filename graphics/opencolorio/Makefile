@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2019/09/18 22:30:49 nia Exp $
+# $NetBSD: Makefile,v 1.5 2019/09/19 14:44:23 nia Exp $
 
 DISTNAME=	OpenColorIO-1.1.1
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=imageworks/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -27,8 +28,12 @@ PKGCONFIG_OVERRIDE+=	export/pkgconfig/OpenColorIO.pc.in
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
+INSTALLATION_DIRS+=	lib/cmake/OpenColorIO
+
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/lib/static/*.a ${DESTDIR}${PREFIX}/lib
+	${MV} ${DESTDIR}${PREFIX}/*.cmake ${DESTDIR}${PREFIX}/lib/cmake/OpenColorIO
+	${MV} ${DESTDIR}${PREFIX}/cmake/*.cmake ${DESTDIR}${PREFIX}/lib/cmake/OpenColorIO
 
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../textproc/tinyxml/buildlink3.mk"
