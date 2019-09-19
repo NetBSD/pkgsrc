@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3982 2019/09/19 09:31:00 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3983 2019/09/19 11:47:49 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6533,3 +6533,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/blender to 2.80 [nia 2019-09-18]
 	Removed graphics/openjpeg15 successor graphics/openjpeg [nia 2019-09-18]
 	Removed graphics/blender-doc [nia 2019-09-18]
+	Added devel/mustach version 0.99 [sjmulder 2019-09-19]
