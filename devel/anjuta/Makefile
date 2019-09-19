@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.145 2019/09/15 17:55:09 nia Exp $
+# $NetBSD: Makefile,v 1.146 2019/09/19 16:02:08 nia Exp $
 
 DISTNAME=	anjuta-3.34.0
 CATEGORIES=	devel
@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.anjuta.org/
-COMMENT=	Gnome based IDE for C and C++
+COMMENT=	GTK+ based IDE for C and C++
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	autogen-[0-9]*:../../devel/autogen
