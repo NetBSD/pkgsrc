@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2019/09/18 22:30:49 nia Exp $
-OpenColorIOConfig.cmake
-cmake/OpenColorIO-relwithdebinfo.cmake
-cmake/OpenColorIO.cmake
+@comment $NetBSD: PLIST,v 1.3 2019/09/19 14:44:23 nia Exp $
 include/OpenColorIO/OpenColorABI.h
 include/OpenColorIO/OpenColorIO.h
 include/OpenColorIO/OpenColorTransforms.h
 include/OpenColorIO/OpenColorTypes.h
+lib/cmake/OpenColorIO/OpenColorIO-relwithdebinfo.cmake
+lib/cmake/OpenColorIO/OpenColorIO.cmake
+lib/cmake/OpenColorIO/OpenColorIOConfig.cmake
 lib/libOpenColorIO.a
 lib/libOpenColorIO.so
 lib/libOpenColorIO.so.1
