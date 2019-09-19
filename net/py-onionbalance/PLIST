@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2018/10/24 11:52:33 adam Exp $
-bin/onionbalance
-bin/onionbalance-config
+@comment $NetBSD: PLIST,v 1.3 2019/09/19 21:25:52 adam Exp $
+bin/onionbalance-${PYVERSSUFFIX}
+bin/onionbalance-config-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
