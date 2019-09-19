@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.76 2019/09/18 14:17:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.77 2019/09/19 21:59:36 nia Exp $
 #
 
 DISTNAME=		qcad-3.23.0.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		cad
 MASTER_SITES=		${MASTER_SITE_GITHUB:=qcad/}
 EXTRACT_USING=		bsdtar
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.qcad.org/
 COMMENT=		2D CAD system
 LICENSE=		gnu-gpl-v3
-
-GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 DEPENDS+=		bash-[0-9]*:../../shells/bash
 
@@ -36,29 +35,40 @@ AUTO_MKDIRS=	yes
 # the libs are linked from the source dirs and add an install target to
 # allow pkgsrc to use DESTDIR
 #
-# The Qt script bindings are built in Qt version specific subdirectory
-# which we can't patch directly, so we create a fake qtscript.pro file
-# and use it to overwrite Makefiles. Makefile.qtscript is ignored
-#
 do-configure:
+	cd ${WRKSRC} && ${MKDIR} release
 	cd ${WRKSRC} && ${QTDIR}/bin/qmake -r -after DESTDIR=
-	cd ${WRKSRC}/src/3rdparty && ${QTDIR}/bin/qmake -r -after DESTDIR= \
-	    INSTALLS+=target target.path=${PREFIX}/lib/${PKGBASE}/plugins/script \
-	    qtscript.pro -o Makefile.qtscript
 
 do-install:
 	cd ${WRKSRC} && make INSTALL_ROOT=${DESTDIR} install
 	${INSTALL_DATA} ${WRKSRC}/qcad.desktop \
 	    ${DESTDIR}${PREFIX}/share/applications
+	${INSTALL_DATA} ${WRKSRC}/support/logo/logo_512.svg \
+	    ${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/qcad_icon.svg
+	${INSTALL_DATA} ${WRKSRC}/support/logo/logo_512.svg \
+	    ${DESTDIR}${PREFIX}/share/icons/hicolor/512x512/apps/qcad_icon.svg
+	${INSTALL_DATA} ${WRKSRC}/support/logo/logo_512.png \
+	    ${DESTDIR}${PREFIX}/share/icons/hicolor/512x512/apps/qcad_icon.png
+	${INSTALL_DATA} ${WRKSRC}/scripts/qcad_icon.png \
+	    ${DESTDIR}${PREFIX}/share/icons/hicolor/256x256/apps/qcad_icon.png
+	${INSTALL_DATA} ${WRKSRC}/support/doc/api/qcad_icon.png \
+	    ${DESTDIR}${PREFIX}/share/icons/hicolor/64x64/apps/qcad_icon.png
+	${INSTALL_LIB} ${WRKSRC}/src/3rdparty/qt-labs-qtscriptgenerator-*/qtbindings/qtscript_*/libqtscript_*.so* \
+	    ${DESTDIR}${PREFIX}/lib/qcad/plugins/script
 	${INSTALL_MAN} ${WRKSRC}/qcad.1 \
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${FIND} ${WRKSRC}/scripts -name \*.orig -delete
-	cd ${WRKSRC} && ${PAX} -rwpm fonts linetypes patterns \
-	    plugins scripts themes ts ${DESTDIR}${PREFIX}/lib/${PKGBASE}
-	cd ${WRKSRC} && ${PAX} -rwpm readme.txt examples libraries \
+	${FIND} ${WRKSRC} -name \*.gitignore -delete
+	cd ${WRKSRC} && ${PAX} -rwpm \
+	    fonts linetypes patterns plugins platforminputcontexts platforms \
+	    xcbglintegrations scripts themes ts \
+	    ${DESTDIR}${PREFIX}/lib/${PKGBASE}
+	cd ${WRKSRC} && ${PAX} -rwpm \
+	    readme.txt examples libraries \
 	    ${DESTDIR}${PREFIX}/share/${PKGBASE}
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
