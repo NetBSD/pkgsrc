@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1269 2019/09/15 13:00:33 nia Exp $
+# $NetBSD: Makefile,v 1.1270 2019/09/19 21:25:51 adam Exp $
 #
 
 COMMENT=	Networking tools
@@ -450,7 +450,6 @@ SUBDIR+=	oidentd
 SUBDIR+=	oinkmaster
 SUBDIR+=	omniNotify
 SUBDIR+=	omniORB
-SUBDIR+=	onionbalance
 SUBDIR+=	openag
 SUBDIR+=	openconnect
 SUBDIR+=	openh323
