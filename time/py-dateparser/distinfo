@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/02/13 12:54:27 adam Exp $
+$NetBSD: distinfo,v 1.4 2019/09/19 19:36:12 adam Exp $
 
-SHA1 (dateparser-0.7.1.tar.gz) = 0ee13686726ed280a941787626548f274d4ccde1
-RMD160 (dateparser-0.7.1.tar.gz) = 9ad6595015e8a2f6b9e5df6a724e9ed90e88e09b
-SHA512 (dateparser-0.7.1.tar.gz) = afe5be78e156defbd8b8a917afd9b89909c46b9b680e1c300a8e50cfaea84b481ede5eb96185a9ad25ef48066a4b749612d2bcba48b505760ac9ae631d02b1ad
-Size (dateparser-0.7.1.tar.gz) = 309095 bytes
+SHA1 (dateparser-0.7.2.tar.gz) = ae9288eed0212e9c01019478f415a6fe079306f8
+RMD160 (dateparser-0.7.2.tar.gz) = 146b23769d014a182c870c15c3be612d82f6bd05
+SHA512 (dateparser-0.7.2.tar.gz) = 3b015a4cca9cdb2d6541c4eb3150e392ed7fc2701a3b233a0deb5405d7255d68049bcea60a5ce734865835b37354d6d1ed569cd71dee1b808a2685df502310c1
+Size (dateparser-0.7.2.tar.gz) = 308405 bytes
