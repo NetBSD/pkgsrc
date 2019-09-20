@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3998 2019/09/20 17:14:35 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3999 2019/09/20 22:32:18 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6557,3 +6557,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated time/py-jrnl to 1.9.8nb1 [adam 2019-09-20]
 	Updated finance/bitcoin to 0.18.1 [adam 2019-09-20]
 	Updated security/py-hsm to 1.2.1 [adam 2019-09-20]
+	Updated sysutils/sandboxctl to 1.1nb1 [maya 2019-09-20]
