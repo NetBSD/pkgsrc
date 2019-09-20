@@ -1,0 +1,29 @@
+$NetBSD: patch-sandbox.subr.in,v 1.1 2019/09/20 22:31:30 maya Exp $
+
+Don't use tar -e on netbsd. It's not supported by libarchive tar,
+the default since NetBSD 9.x.
+
+--- sandbox.subr.in.orig	2019-01-14 02:17:11.000000000 +0000
++++ sandbox.subr.in
+@@ -366,19 +366,12 @@ sandbox_extract() {
+         *) shtk_cli_error "Cannot determine compression format for ${file}"
+     esac
+ 
+-    local tar_extra_flags=
+-    case "$(uname -s)" in
+-        NetBSD)
+-            tar_extra_flags=e  # Stop on first error.
+-            ;;
+-    esac
+-
+     if shtk_cli_log_level debug && which progress >/dev/null 2>&1 \
+         && [ "${format}" = z ]; then
+-        progress -zf "${file}" tar "-${tar_extra_flags}xp" -C "${dir}" \
++        progress -zf "${file}" tar "-xp" -C "${dir}" \
+             -f - "${@}"  || shtk_cli_error "Extraction of ${file} failed"
+     else
+-        tar "-${tar_extra_flags}x${format}p" -f "${file}" -C "${dir}" "${@}" \
++        tar "-x${format}p" -f "${file}" -C "${dir}" "${@}" \
+             || shtk_cli_error "Extraction of ${file} failed"
+     fi
+ }
