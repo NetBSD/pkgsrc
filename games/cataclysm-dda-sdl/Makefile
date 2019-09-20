@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/09/20 15:05:01 nia Exp $
+# $NetBSD: Makefile,v 1.3 2019/09/20 16:15:23 nia Exp $
 
 .include "../../games/cataclysm-dda/Makefile.common"
 
@@ -7,7 +7,7 @@ PKGNAME=	${DISTNAME:S/-dda/-dda-sdl/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Post-apocalyptic turn-based survival game (tileset version)
 
-CONFLICTS+=	cataclysm-dda-sdl-[0-9]*
+CONFLICTS+=	cataclysm-dda-[0-9]*
 
 BUILD_TARGET=	cataclysm-tiles localization
 
