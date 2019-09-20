@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.454 2019/09/12 17:10:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.455 2019/09/20 14:56:00 nia Exp $
 #
 
 COMMENT=	Games
@@ -23,8 +23,8 @@ SUBDIR+=	alephone
 SUBDIR+=	amaze
 SUBDIR+=	amor
 SUBDIR+=	an
-SUBDIR+=	angband-tty
-SUBDIR+=	angband-x11
+SUBDIR+=	angband
+SUBDIR+=	angband-sdl
 SUBDIR+=	anise
 SUBDIR+=	aop
 SUBDIR+=	armagetronad

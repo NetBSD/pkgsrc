@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2019/09/20 14:56:00 nia Exp $
+
+SHA1 (angband-4.2.0.tar.gz) = 9dd14018a26a72f921c5106cdfa5a58c6f6d811d
+RMD160 (angband-4.2.0.tar.gz) = 24373dd121b6ecb7bb22a53c6cabe0e346fa0fc6
+SHA512 (angband-4.2.0.tar.gz) = b5c4884ce765bc45d7c21b8be06bc29c7d84c16e48341967b5d6a847f250db104ef509fc28e8887d4f1cd9ed545e504781186936a1f38931d5113e2fb58b32c3
+Size (angband-4.2.0.tar.gz) = 24727127 bytes
+SHA1 (patch-lib_icons_angband-sdl.desktop) = d1dffae7e39adc447eb1542434dca08ce0a7c6b0
