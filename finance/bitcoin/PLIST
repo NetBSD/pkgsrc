@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2018/07/08 11:13:45 khorben Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/09/20 16:57:28 adam Exp $
 bin/bench_bitcoin
 bin/bitcoin-cli
 ${PLIST.qt}bin/bitcoin-qt
 bin/bitcoin-tx
+bin/bitcoin-wallet
 bin/bitcoind
 bin/test_bitcoin
 ${PLIST.qt}bin/test_bitcoin-qt
@@ -19,5 +20,5 @@ lib/pkgconfig/libunivalue.pc
 man/man1/bitcoin-cli.1
 ${PLIST.qt}man/man1/bitcoin-qt.1
 man/man1/bitcoin-tx.1
+man/man1/bitcoin-wallet.1
 man/man1/bitcoind.1
-share/examples/bitcoin/bitcoin.conf
