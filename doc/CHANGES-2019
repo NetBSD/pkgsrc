@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3989 2019/09/20 10:56:45 nros Exp $
+$NetBSD: CHANGES-2019,v 1.3990 2019/09/20 11:23:18 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6541,3 +6541,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/py-onionbalance to 0.1.8nb1 [adam 2019-09-19]
 	Updated sysutils/intel-microcode-netbsd to 20190918 [msaitoh 2019-09-20]
 	Updated devel/py-tortoisehg to 5.0.2 [nros 2019-09-20]
+	Updated audio/schismtracker to 20190805 [nia 2019-09-20]
