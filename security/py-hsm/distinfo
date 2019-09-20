@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:18:04 agc Exp $
+$NetBSD: distinfo,v 1.5 2019/09/20 17:13:26 adam Exp $
 
-SHA1 (pyhsm-1.0.4k.tar.gz) = ccfee42a4b952390f7fe9ccd6c40f8d4d2749241
-RMD160 (pyhsm-1.0.4k.tar.gz) = 4c7229de4b7dd2e048eb98e485195b4eed5089c7
-SHA512 (pyhsm-1.0.4k.tar.gz) = 3952ce4fd0eb11e2766745893c6fb0aca71eab3e6fcf026c3cac37e2a1c98ff166a9ba1d7c8ccb1af495ae4158d83cb989826ddc9ee0ac9c14459b29972b2c4a
-Size (pyhsm-1.0.4k.tar.gz) = 158900 bytes
+SHA1 (pyhsm-1.2.1.tar.gz) = d9236ef6d2cdc52e7f798ce38cfbbab85a57f016
+RMD160 (pyhsm-1.2.1.tar.gz) = 2f80edf92de99f4a64ae786516ffe120960a17a1
+SHA512 (pyhsm-1.2.1.tar.gz) = 4ae7e627a1f62fc4412dc62572a7f7550f3cc9bf75a3cf1d92b2f9aa31bc98041474d1c574ddc2dd1a97f3419c6a3bae4a265039605ddd33d4f616728a2735d5
+Size (pyhsm-1.2.1.tar.gz) = 100911 bytes
+SHA1 (patch-setup.py) = 8c826bf9cd210ad8492a8184158af854faab680e
