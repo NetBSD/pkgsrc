@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2019/09/02 10:20:57 adam Exp $
+$NetBSD: distinfo,v 1.14 2019/09/20 16:39:31 adam Exp $
 
-SHA1 (keyring-19.1.0.tar.gz) = 5ab26112d832cd23d44c123ad41038bf6ac07007
-RMD160 (keyring-19.1.0.tar.gz) = b87aa96dad48cf771b487047c5eb97b3ac337869
-SHA512 (keyring-19.1.0.tar.gz) = eef359e20e9e2d0109db6d3144f6499206fbbde58bde70330428f1c4b6d193f025902cef24e5bbc09471a16808911a046affd559e9f54096eba1f0c300793a24
-Size (keyring-19.1.0.tar.gz) = 48646 bytes
+SHA1 (keyring-19.2.0.tar.gz) = 575a4fc319b94e737fc3c430fbe9f79470ff5f73
+RMD160 (keyring-19.2.0.tar.gz) = 3ffc8eb335afd04c4fe65466770a44a5075a0094
+SHA512 (keyring-19.2.0.tar.gz) = 1fe423f2a7e5331a9d1b37624f4d88b60f77c2cb2c8f8b0808a2f90f43eb9533faa533068e0d8f75b4bdddba2d160f5fac2500c93760fde64fbdb269f8668b0f
+Size (keyring-19.2.0.tar.gz) = 48616 bytes
