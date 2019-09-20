@@ -1,0 +1,37 @@
+# $NetBSD: Makefile.common,v 1.1 2019/09/20 14:56:00 nia Exp $
+# used by games/angband-sdl/Makefile
+# used by games/angband/Makefile
+
+DISTNAME=	angband-4.2.0
+CATEGORIES=	games
+MASTER_SITES=	https://rephial.org/downloads/4.2/
+
+HOMEPAGE=	https://rephial.org/
+LICENSE=	gnu-gpl-v2
+
+USE_TOOLS+=	autoconf automake aclocal autoheader
+USE_TOOLS+=	gmake
+
+GNU_CONFIGURE=	yes
+
+DISTINFO_FILE=	${.CURDIR}/../../games/angband/distinfo
+PATCHDIR=	${.CURDIR}/../../games/angband/patches
+
+# Installs executables to /games by default.
+CONFIGURE_ARGS+=	--bindir=${PREFIX}/bin
+
+# Mostly game data...
+CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/share
+
+CONFIGURE_ARGS+=	--without-x
+
+SUBST_CLASSES+=		nc
+SUBST_STAGE.nc=		pre-configure
+SUBST_MESSAGE.nc=	Fixing the ncursesw version number.
+SUBST_FILES.nc+=	acinclude.m4
+SUBST_SED.nc+=		-e 's|ncursesw5|ncursesw6|g'
+
+pre-configure:
+	cd ${WRKSRC} && ./autogen.sh
+
+.include "../../devel/ncursesw/buildlink3.mk"
