@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2019/05/23 19:23:14 rillig Exp $
+# $NetBSD: Makefile,v 1.93.2.1 2019/09/20 19:23:17 bsiegert Exp $
 
 DISTNAME=	gpgme-1.13.0
 CATEGORIES=	security
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.gnupg.org/related_software/gpgme/
 COMMENT=	GnuPG Made Easy
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES+=		c c++
+USE_LANGUAGES+=		c99 c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
@@ -25,6 +25,8 @@ SUBST_STAGE.pthread=	pre-configure
 
 CPPFLAGS.Darwin=	-D_POSIX_C_SOURCE=200809L
 LIBS.SunOS+=		-lnsl -lsocket
+
+BUILDLINK_TRANSFORM+=	rm:-Wsuggest-override
 
 TEST_TARGET=		check
 
