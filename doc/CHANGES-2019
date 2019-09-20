@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3991 2019/09/20 11:31:17 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.3992 2019/09/20 11:39:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6543,3 +6543,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/intel-microcode-netbsd to 20190918 [msaitoh 2019-09-20]
 	Updated devel/py-tortoisehg to 5.0.2 [nros 2019-09-20]
 	Updated audio/schismtracker to 20190805 [nia 2019-09-20]
+	Updated devel/libevent to 2.1.11 [adam 2019-09-20]
+	Updated devel/memcached to 1.5.18 [adam 2019-09-20]
