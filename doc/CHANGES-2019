@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3988 2019/09/20 02:24:27 msaitoh Exp $
+$NetBSD: CHANGES-2019,v 1.3989 2019/09/20 10:56:45 nros Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6540,3 +6540,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated time/py-dateparser to 0.7.2 [adam 2019-09-19]
 	Updated net/py-onionbalance to 0.1.8nb1 [adam 2019-09-19]
 	Updated sysutils/intel-microcode-netbsd to 20190918 [msaitoh 2019-09-20]
+	Updated devel/py-tortoisehg to 5.0.2 [nros 2019-09-20]
