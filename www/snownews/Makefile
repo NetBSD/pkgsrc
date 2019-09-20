@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2019/09/16 11:42:50 nia Exp $
+# $NetBSD: Makefile,v 1.56 2019/09/20 09:22:06 nia Exp $
 
 DISTNAME=	snownews-1.6.10
 CATEGORIES=	www
@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	p5-XML-LibXML>=1.58:../../textproc/p5-XML-LibXML
 
-USE_TOOLS+=	gmake msgfmt perl
+USE_TOOLS+=	gmake msgfmt perl pkg-config
 HAS_CONFIGURE=	yes
 FAKE_NCURSES=	yes
 
