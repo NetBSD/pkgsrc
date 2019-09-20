@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3993 2019/09/20 14:58:35 nia Exp $
+$NetBSD: CHANGES-2019,v 1.3994 2019/09/20 15:22:20 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6549,3 +6549,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Added games/angband-sdl version 4.2.0 [nia 2019-09-20]
 	Removed games/angband-tty successor games/angband [nia 2019-09-20]
 	Removed games/angband-x11 successor games/angband-sdl [nia 2019-09-20]
+	Added cross/xtensa-lx106-elf-binutils version 2.31_20190405 [bouyer 2019-09-20]
+	Added cross/xtensa-lx106-elf-gcc version 4.8.2 [bouyer 2019-09-20]
