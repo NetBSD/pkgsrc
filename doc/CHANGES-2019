@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3997 2019/09/20 16:59:40 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3998 2019/09/20 17:14:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6556,3 +6556,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/py-keyrings.alt to 3.1.1 [adam 2019-09-20]
 	Updated time/py-jrnl to 1.9.8nb1 [adam 2019-09-20]
 	Updated finance/bitcoin to 0.18.1 [adam 2019-09-20]
+	Updated security/py-hsm to 1.2.1 [adam 2019-09-20]
