@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.2 2017/12/20 11:08:06 leot Exp $
+# $NetBSD: Makefile,v 1.3 2019/09/20 16:52:46 adam Exp $
 
 DISTNAME=	jrnl-1.9.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	time python
 GITHUB_PROJECT=	jrnl
 MASTER_SITES=	${MASTER_SITE_GITHUB:=maebert/}
 
 MAINTAINER=	leot@NetBSD.org
-HOMEPAGE=	http://jrnl.sh/
+HOMEPAGE=	https://jrnl.sh/
 COMMENT=	Command line journal application
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-crypto>=2.6:../../security/py-crypto
+DEPENDS+=	${PYPKGPREFIX}-cryptodome-[0-9]*:../../security/py-cryptodome
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.2:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-keyring>=3.3:../../security/py-keyring
 DEPENDS+=	${PYPKGPREFIX}-keyrings.alt>=1.3:../../security/py-keyrings.alt
@@ -26,6 +27,5 @@ USE_LANGUAGES=	# none
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/jrnl ${DESTDIR}${PREFIX}/bin/jrnl-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
