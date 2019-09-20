@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2018/04/22 22:21:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2019/09/20 10:55:55 nros Exp $
 bin/thg
 ${PYSITELIB}/hgext3rd/thg.py
 ${PYSITELIB}/hgext3rd/thg.pyc
@@ -151,6 +151,12 @@ ${PYSITELIB}/tortoisehg/hgqt/p4pending.pyo
 ${PYSITELIB}/tortoisehg/hgqt/pbranch.py
 ${PYSITELIB}/tortoisehg/hgqt/pbranch.pyc
 ${PYSITELIB}/tortoisehg/hgqt/pbranch.pyo
+${PYSITELIB}/tortoisehg/hgqt/phabreview.py
+${PYSITELIB}/tortoisehg/hgqt/phabreview.pyc
+${PYSITELIB}/tortoisehg/hgqt/phabreview.pyo
+${PYSITELIB}/tortoisehg/hgqt/phabreview_ui.py
+${PYSITELIB}/tortoisehg/hgqt/phabreview_ui.pyc
+${PYSITELIB}/tortoisehg/hgqt/phabreview_ui.pyo
 ${PYSITELIB}/tortoisehg/hgqt/postreview.py
 ${PYSITELIB}/tortoisehg/hgqt/postreview.pyc
 ${PYSITELIB}/tortoisehg/hgqt/postreview.pyo
@@ -169,9 +175,6 @@ ${PYSITELIB}/tortoisehg/hgqt/qdelete.pyo
 ${PYSITELIB}/tortoisehg/hgqt/qfold.py
 ${PYSITELIB}/tortoisehg/hgqt/qfold.pyc
 ${PYSITELIB}/tortoisehg/hgqt/qfold.pyo
-${PYSITELIB}/tortoisehg/hgqt/qrename.py
-${PYSITELIB}/tortoisehg/hgqt/qrename.pyc
-${PYSITELIB}/tortoisehg/hgqt/qrename.pyo
 ${PYSITELIB}/tortoisehg/hgqt/qsci.py
 ${PYSITELIB}/tortoisehg/hgqt/qsci.pyc
 ${PYSITELIB}/tortoisehg/hgqt/qsci.pyo
@@ -286,6 +289,9 @@ ${PYSITELIB}/tortoisehg/hgqt/thgrepo.pyo
 ${PYSITELIB}/tortoisehg/hgqt/thgstrip.py
 ${PYSITELIB}/tortoisehg/hgqt/thgstrip.pyc
 ${PYSITELIB}/tortoisehg/hgqt/thgstrip.pyo
+${PYSITELIB}/tortoisehg/hgqt/topics.py
+${PYSITELIB}/tortoisehg/hgqt/topics.pyc
+${PYSITELIB}/tortoisehg/hgqt/topics.pyo
 ${PYSITELIB}/tortoisehg/hgqt/update.py
 ${PYSITELIB}/tortoisehg/hgqt/update.pyc
 ${PYSITELIB}/tortoisehg/hgqt/update.pyo
@@ -464,6 +470,7 @@ share/doc/tortoisehg/html/_static/down.png
 share/doc/tortoisehg/html/_static/file.png
 share/doc/tortoisehg/html/_static/jquery-3.2.1.js
 share/doc/tortoisehg/html/_static/jquery.js
+share/doc/tortoisehg/html/_static/language_data.js
 share/doc/tortoisehg/html/_static/minus.png
 share/doc/tortoisehg/html/_static/plus.png
 share/doc/tortoisehg/html/_static/pygments.css
@@ -516,6 +523,7 @@ share/locale/en_GB/LC_MESSAGES/tortoisehg.mo
 share/locale/es/LC_MESSAGES/tortoisehg.mo
 share/locale/et/LC_MESSAGES/tortoisehg.mo
 share/locale/fa/LC_MESSAGES/tortoisehg.mo
+share/locale/fi/LC_MESSAGES/tortoisehg.mo
 share/locale/fr/LC_MESSAGES/tortoisehg.mo
 share/locale/he/LC_MESSAGES/tortoisehg.mo
 share/locale/hr/LC_MESSAGES/tortoisehg.mo
@@ -643,6 +651,7 @@ share/pixmaps/tortoisehg/icons/scalable/actions/hg-shelve.svg
 share/pixmaps/tortoisehg/icons/scalable/actions/hg-status.svg
 share/pixmaps/tortoisehg/icons/scalable/actions/hg-strip.svg
 share/pixmaps/tortoisehg/icons/scalable/actions/hg-tag.svg
+share/pixmaps/tortoisehg/icons/scalable/actions/hg-topics.svg
 share/pixmaps/tortoisehg/icons/scalable/actions/hg-transplant.svg
 share/pixmaps/tortoisehg/icons/scalable/actions/hg-unbundle.svg
 share/pixmaps/tortoisehg/icons/scalable/actions/hg-undo.svg
@@ -689,6 +698,7 @@ share/pixmaps/tortoisehg/icons/scalable/actions/visualdiff.svg
 share/pixmaps/tortoisehg/icons/scalable/apps/help-browser.svg
 share/pixmaps/tortoisehg/icons/scalable/apps/help-readme.svg
 share/pixmaps/tortoisehg/icons/scalable/apps/hg.svg
+share/pixmaps/tortoisehg/icons/scalable/apps/phabricator.svg
 share/pixmaps/tortoisehg/icons/scalable/apps/preferences-desktop-font.svg
 share/pixmaps/tortoisehg/icons/scalable/apps/system-file-manager.svg
 share/pixmaps/tortoisehg/icons/scalable/apps/thg.svg
