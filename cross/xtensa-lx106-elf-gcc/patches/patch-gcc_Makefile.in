@@ -1,0 +1,149 @@
+$NetBSD: patch-gcc_Makefile.in,v 1.1 2019/09/20 15:20:20 bouyer Exp $
+
+Don't install the gcc limits.h; the newlib one is good and has mode defines
+
+--- gcc/Makefile.in.orig	2019-06-19 06:25:14.000000000 +0200
++++ gcc/Makefile.in	2019-09-20 12:57:38.306679270 +0200
+@@ -4074,7 +4074,6 @@
+ # the time stamp when we regenerate, to prevent pointless rebuilds during
+ # e.g. install-no-fixedincludes.
+ 	-if [ -d include ] ; then true; else mkdir include; chmod a+rx include; fi
+-	-if [ -d include-fixed ] ; then true; else mkdir include-fixed; chmod a+rx include-fixed; fi
+ 	for file in .. $(USER_H); do \
+ 	  if [ X$$file != X.. ]; then \
+ 	    realfile=`echo $$file | sed -e 's|.*/\([^/]*\)$$|\1|'`; \
+@@ -4110,27 +4109,6 @@
+ 	  cp $(srcdir)/ginclude/stdint-gcc.h include/stdint.h; \
+ 	  chmod a+r include/stdint.h; \
+ 	fi
+-	set -e; for ml in `cat fixinc_list`; do \
+-	  sysroot_headers_suffix=`echo $${ml} | sed -e 's/;.*$$//'`; \
+-	  multi_dir=`echo $${ml} | sed -e 's/^[^;]*;//'`; \
+-	  fix_dir=include-fixed$${multi_dir}; \
+-	  if $(LIMITS_H_TEST) ; then \
+-	    cat $(srcdir)/limitx.h $(srcdir)/glimits.h $(srcdir)/limity.h > tmp-xlimits.h; \
+-	  else \
+-	    cat $(srcdir)/glimits.h > tmp-xlimits.h; \
+-	  fi; \
+-	  $(mkinstalldirs) $${fix_dir}; \
+-	  chmod a+rx $${fix_dir} || true; \
+-	  $(SHELL) $(srcdir)/../move-if-change \
+-	    tmp-xlimits.h  tmp-limits.h; \
+-	  rm -f $${fix_dir}/limits.h; \
+-	  cp -p tmp-limits.h $${fix_dir}/limits.h; \
+-	  chmod a+r $${fix_dir}/limits.h; \
+-	done
+-# Install the README
+-	rm -f include-fixed/README
+-	cp $(srcdir)/../fixincludes/README-fixinc include-fixed/README
+-	chmod a+r include-fixed/README
+ 	$(STAMP) $@
+ 
+ .PHONY: install-gcc-tooldir
+@@ -4188,42 +4166,6 @@
+ stmp-fixinc: gsyslimits.h macro_list fixinc_list \
+   $(build_objdir)/fixincludes/fixincl \
+   $(build_objdir)/fixincludes/fixinc.sh
+-	rm -rf include-fixed; mkdir include-fixed
+-	-chmod a+rx include-fixed
+-	if [ -d ../prev-gcc ]; then \
+-	  cd ../prev-gcc && \
+-	  $(MAKE) real-$(INSTALL_HEADERS_DIR) DESTDIR=`pwd`/../gcc/ \
+-	    libsubdir=. ; \
+-	else \
+-	  set -e; for ml in `cat fixinc_list`; do \
+-	    sysroot_headers_suffix=`echo $${ml} | sed -e 's/;.*$$//'`; \
+-	    multi_dir=`echo $${ml} | sed -e 's/^[^;]*;//'`; \
+-	    fix_dir=include-fixed$${multi_dir}; \
+-	    if ! $(inhibit_libc) && test ! -d ${SYSTEM_HEADER_DIR}; then \
+-	      echo The directory that should contain system headers does not exist: >&2 ; \
+-	      echo "  ${SYSTEM_HEADER_DIR}" >&2 ; \
+-	      tooldir_sysinc=`echo "${gcc_tooldir}/sys-include" | sed -e :a -e "s,[^/]*/\.\.\/,," -e ta`; \
+-	      if test "x${SYSTEM_HEADER_DIR}" = "x$${tooldir_sysinc}"; \
+-	      then sleep 1; else exit 1; fi; \
+-	    fi; \
+-	    $(mkinstalldirs) $${fix_dir}; \
+-	    chmod a+rx $${fix_dir} || true; \
+-	    (TARGET_MACHINE='$(target)'; srcdir=`cd $(srcdir); ${PWD_COMMAND}`; \
+-	      SHELL='$(SHELL)'; MACRO_LIST=`${PWD_COMMAND}`/macro_list ; \
+-	      gcc_dir=`${PWD_COMMAND}` ; \
+-	      export TARGET_MACHINE srcdir SHELL MACRO_LIST && \
+-	      cd $(build_objdir)/fixincludes && \
+-	      $(SHELL) ./fixinc.sh "$${gcc_dir}/$${fix_dir}" \
+-	        $(SYSTEM_HEADER_DIR) $(OTHER_FIXINCLUDES_DIRS) ); \
+-	    rm -f $${fix_dir}/syslimits.h; \
+-	    if [ -f $${fix_dir}/limits.h ]; then \
+-	      mv $${fix_dir}/limits.h $${fix_dir}/syslimits.h; \
+-	    else \
+-	      cp $(srcdir)/gsyslimits.h $${fix_dir}/syslimits.h; \
+-	    fi; \
+-	    chmod a+r $${fix_dir}/syslimits.h; \
+-	  done; \
+-	fi
+ 	$(STAMP) stmp-fixinc
+ #
+ 
+@@ -4785,20 +4727,6 @@
+ 
+ # Install all the header files built in the include subdirectory.
+ install-headers: $(INSTALL_HEADERS_DIR)
+-# Fix symlinks to absolute paths in the installed include directory to
+-# point to the installed directory, not the build directory.
+-# Don't need to use LN_S here since we really do need ln -s and no substitutes.
+-	-files=`cd $(DESTDIR)$(libsubdir)/include-fixed; find . -type l -print 2>/dev/null`; \
+-	if [ $$? -eq 0 ]; then \
+-	  dir=`cd include-fixed; ${PWD_COMMAND}`; \
+-	  for i in $$files; do \
+-	    dest=`ls -ld $(DESTDIR)$(libsubdir)/include-fixed/$$i | sed -n 's/.*-> //p'`; \
+-	    if expr "$$dest" : "$$dir.*" > /dev/null; then \
+-	      rm -f $(DESTDIR)$(libsubdir)/include-fixed/$$i; \
+-	      ln -s `echo $$i | sed "s|/[^/]*|/..|g" | sed 's|/..$$||'``echo "$$dest" | sed "s|$$dir||"` $(DESTDIR)$(libsubdir)/include-fixed/$$i; \
+-	    fi; \
+-	  done; \
+-	fi
+ 
+ # Create or recreate the gcc private include file directory.
+ install-include-dir: installdirs
+@@ -4822,8 +4750,6 @@
+ # output of `cd', but some shells lose on redirection within `()'s
+ 	(cd `${PWD_COMMAND}`/include ; \
+ 	 tar -cf - .; exit 0) | (cd $(DESTDIR)$(libsubdir)/include; tar xpf - )
+-	(cd `${PWD_COMMAND}`/include-fixed ; \
+-	 tar -cf - .; exit 0) | (cd $(DESTDIR)$(libsubdir)/include-fixed; tar xpf - )
+ # /bin/sh on some systems returns the status of the first tar,
+ # and that can lose with GNU tar which always writes a full block.
+ # So use `exit 0' to ignore its exit status.
+@@ -4833,25 +4759,17 @@
+ # See discussion about the use of `pwd` above
+ 	cd `${PWD_COMMAND}`/include ; \
+ 	find . -print | cpio -pdum $(DESTDIR)$(libsubdir)/include
+-	cd `${PWD_COMMAND}`/include-fixed ; \
+-	find . -print | cpio -pdum $(DESTDIR)$(libsubdir)/include-fixed
+ 
+ # Install the include directory using cp.
+ install-headers-cp: stmp-int-hdrs install-include-dir
+ 	cp -p -r include $(DESTDIR)$(libsubdir)
+-	cp -p -r include-fixed $(DESTDIR)$(libsubdir)
+ 
+ # Targets without dependencies, for use in prev-gcc during bootstrap.
+ real-install-headers-tar:
+-	(cd `${PWD_COMMAND}`/include-fixed ; \
+-	 tar -cf - .; exit 0) | (cd $(DESTDIR)$(libsubdir)/include-fixed; tar xpf - )
+ 
+ real-install-headers-cpio:
+-	cd `${PWD_COMMAND}`/include-fixed ; \
+-	find . -print | cpio -pdum $(DESTDIR)$(libsubdir)/include-fixed
+ 
+ real-install-headers-cp:
+-	cp -p -r include-fixed $(DESTDIR)$(libsubdir)
+ 
+ # Install supporting files for fixincludes to be run later.
+ install-mkheaders: stmp-int-hdrs install-itoolsdirs \
+@@ -4863,7 +4781,6 @@
+ 	set -e; for ml in `cat fixinc_list`; do \
+ 	  multi_dir=`echo $${ml} | sed -e 's/^[^;]*;//'`; \
+ 	  $(mkinstalldirs) $(DESTDIR)$(itoolsdatadir)/include$${multi_dir}; \
+-	  $(INSTALL_DATA) include-fixed$${multidir}/limits.h $(DESTDIR)$(itoolsdatadir)/include$${multi_dir}/limits.h; \
+ 	done
+ 	$(INSTALL_SCRIPT) $(srcdir)/../mkinstalldirs \
+ 		$(DESTDIR)$(itoolsdir)/mkinstalldirs ; \
