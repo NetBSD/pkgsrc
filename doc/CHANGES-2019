@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3994 2019/09/20 15:22:20 bouyer Exp $
+$NetBSD: CHANGES-2019,v 1.3995 2019/09/20 16:39:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6551,3 +6551,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed games/angband-x11 successor games/angband-sdl [nia 2019-09-20]
 	Added cross/xtensa-lx106-elf-binutils version 2.31_20190405 [bouyer 2019-09-20]
 	Added cross/xtensa-lx106-elf-gcc version 4.8.2 [bouyer 2019-09-20]
+	Updated devel/py-rauth to 0.7.3nb1 [adam 2019-09-20]
+	Updated security/py-keyring to 19.2.0 [adam 2019-09-20]
