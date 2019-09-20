@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.54 2019/09/02 13:19:35 adam Exp $
+# $NetBSD: Makefile,v 1.55 2019/09/20 10:55:55 nros Exp $
 
-DISTNAME=		tortoisehg-4.5.3
+DISTNAME=		tortoisehg-5.0.2
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		devel python
 MASTER_SITES=		http://bitbucket.org/tortoisehg/targz/downloads/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://bitbucket.org/tortoisehg/thg/wiki/Home
+HOMEPAGE=		https://tortoisehg.bitbucket.io/
 COMMENT=		GUI for Mercurial
 LICENSE=		gnu-gpl-v2
 
@@ -15,7 +15,7 @@ REPLACE_PYTHON+=	thg
 BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.3.4nb1:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-iniparse>=0.4:../../textproc/py-iniparse
 DEPENDS+=	${PYPKGPREFIX}-pygments>=1.6:../../textproc/py-pygments
-DEPENDS+=	${PYPKGPREFIX}-mercurial>=2.8.1:../../devel/py-mercurial
+DEPENDS+=	${PYPKGPREFIX}-mercurial>=5.0.0:../../devel/py-mercurial
 
 PYTHON_VERSIONS_ACCEPTED=	 27 # py-iniparse, py-mercurial
 
