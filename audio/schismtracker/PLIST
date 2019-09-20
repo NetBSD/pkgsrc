@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2015/09/11 12:35:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/09/20 11:22:55 nia Exp $
 bin/schismtracker
 man/man1/schismtracker.1
+share/applications/schism.desktop
+share/pixmaps/schism-icon-128.png
