@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3992 2019/09/20 11:39:25 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3993 2019/09/20 14:58:35 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6545,3 +6545,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/schismtracker to 20190805 [nia 2019-09-20]
 	Updated devel/libevent to 2.1.11 [adam 2019-09-20]
 	Updated devel/memcached to 1.5.18 [adam 2019-09-20]
+	Added games/angband version 4.2.0 [nia 2019-09-20]
+	Added games/angband-sdl version 4.2.0 [nia 2019-09-20]
+	Removed games/angband-tty successor games/angband [nia 2019-09-20]
+	Removed games/angband-x11 successor games/angband-sdl [nia 2019-09-20]
