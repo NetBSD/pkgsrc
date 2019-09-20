@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3995 2019/09/20 16:39:51 adam Exp $
+$NetBSD: CHANGES-2019,v 1.3996 2019/09/20 16:53:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6553,3 +6553,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Added cross/xtensa-lx106-elf-gcc version 4.8.2 [bouyer 2019-09-20]
 	Updated devel/py-rauth to 0.7.3nb1 [adam 2019-09-20]
 	Updated security/py-keyring to 19.2.0 [adam 2019-09-20]
+	Updated security/py-keyrings.alt to 3.1.1 [adam 2019-09-20]
+	Updated time/py-jrnl to 1.9.8nb1 [adam 2019-09-20]
