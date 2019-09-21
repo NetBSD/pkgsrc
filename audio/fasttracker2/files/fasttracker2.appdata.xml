@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+	<id>fasttracker2</id>
+	<metadata_license>BSD-3-clause</metadata_license>
+	<project_license>BSD-3-clause</project_license>
+	<name>Fasttracker II</name>
+	<summary>Fasttracker II clone</summary>
+	<description>
+		<p>Multi-platform clone of the classic music making software  FastTracker II.</p>
+	</description>
+	<launchable type="desktop-id">fasttracker2.desktop</launchable>
+	<url type="homepage">https://16-bits.org/ft2.php</url>
+	<screenshots>
+		<screenshot type="default">
+			<image>https://upload.wikimedia.org/wikipedia/commons/1/1d/Fasttracker_II_clone_screenshot.png</image>
+		</screenshot>
+	</screenshots>
+	<provides>
+		<id>fasttracker2.desktop</id>
+	</provides>
+</component>

@@ -1,3 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2018/12/01 18:20:09 fox Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/09/21 12:23:43 nia Exp $
 bin/ft2-clone
-share/pixmaps/ft2-clone.ico
+share/appdata/fasttracker2.appdata.xml
+share/applications/fasttracker2.desktop
+share/icons/hicolor/128x128/apps/fasttracker2.png
+share/icons/hicolor/16x16/apps/fasttracker2.png
+share/icons/hicolor/24x24/apps/fasttracker2.png
+share/icons/hicolor/256x256/apps/fasttracker2.png
+share/icons/hicolor/32x32/apps/fasttracker2.png
+share/icons/hicolor/48x48/apps/fasttracker2.png
+share/icons/hicolor/64x64/apps/fasttracker2.png
