@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2019/08/11 13:21:11 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/09/21 12:14:05 nia Exp $
 
-DISTNAME=	icoutils-0.32.2
-PKGREVISION=	4
+DISTNAME=	icoutils-0.32.3
 CATEGORIES=	graphics
-MASTER_SITES=	http://savannah.nongnu.org/download/icoutils/
+MASTER_SITES=	https://savannah.nongnu.org/download/icoutils/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://www.nongnu.org/icoutils/
+HOMEPAGE=	https://www.nongnu.org/icoutils/
 COMMENT=	Tools for Microsoft Windows icon and cursor files
 LICENSE=	gnu-gpl-v3
 
