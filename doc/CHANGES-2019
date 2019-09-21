@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.3999 2019/09/20 22:32:18 maya Exp $
+$NetBSD: CHANGES-2019,v 1.4000 2019/09/21 07:26:28 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6558,3 +6558,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated finance/bitcoin to 0.18.1 [adam 2019-09-20]
 	Updated security/py-hsm to 1.2.1 [adam 2019-09-20]
 	Updated sysutils/sandboxctl to 1.1nb1 [maya 2019-09-20]
+	Updated www/firefox to 69.0.1 [ryoon 2019-09-21]
