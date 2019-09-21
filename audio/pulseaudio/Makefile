@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2019/09/18 14:12:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.139 2019/09/21 10:02:30 nia Exp $
 
 DISTNAME=	pulseaudio-13.0
 CATEGORIES=	audio
@@ -31,6 +31,8 @@ CONFIGURE_ENV+=		DATADIRNAME=${PKGLOCALEDIR}
 PKGCONFIG_OVERRIDE+=	libpulse-mainloop-glib.pc.in
 PKGCONFIG_OVERRIDE+=	libpulse-simple.pc.in
 PKGCONFIG_OVERRIDE+=	libpulse.pc.in
+
+TOOL_DEPENDS+=	p5-XML-Parser>=2.31nb1:../../textproc/p5-XML-Parser
 
 REPLACE_BASH=	shell-completion/bash/pulseaudio git-version-gen
 REPLACE_BASH=	src/utils/pa-info
