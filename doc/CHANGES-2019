@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4008 2019/09/21 11:28:00 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.4009 2019/09/21 11:32:28 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6567,3 +6567,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/thunderbird-l10n to 68.1.0 [ryoon 2019-09-21]
 	Added mail/thunderbird60 version 60.9.0 [ryoon 2019-09-21]
 	Added mail/thunderbird60-l10n version 60.9.0 [ryoon 2019-09-21]
+	Updated audio/milkytracker to 1.02.00 [nia 2019-09-21]
