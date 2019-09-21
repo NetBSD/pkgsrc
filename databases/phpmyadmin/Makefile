@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.159 2019/06/16 09:13:11 tm Exp $
+# $NetBSD: Makefile,v 1.160 2019/09/21 12:38:25 tm Exp $
 
-DISTNAME=	phpMyAdmin-4.9.0.1-all-languages
+DISTNAME=	phpMyAdmin-4.9.1-all-languages
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/-all-languages//:tl}
 CATEGORIES=	databases www
 MASTER_SITES=	https://files.phpmyadmin.net/phpMyAdmin/${PKGVERSION_NOREV}/
@@ -87,6 +87,7 @@ post-extract:
 	${CP} ${FILESDIR}/phpmyadmin.conf ${WRKDIR}
 
 do-install:
+	${RM} -f ${WRKSRC}/libraries/vendor_config.php.orig
 	cd ${WRKSRC} && pax -rw ${SRCS} ${DESTDIR}${PMDIR}
 	${INSTALL_DATA} ${WRKSRC}/config.sample.inc.php ${DESTDIR}${EXDIR}
 	${INSTALL_DATA} ${WRKSRC}/examples/* ${DESTDIR}${EXDIR}
