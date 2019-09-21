@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4001 2019/09/21 07:27:34 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.4002 2019/09/21 07:33:07 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6560,3 +6560,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/sandboxctl to 1.1nb1 [maya 2019-09-20]
 	Updated www/firefox to 69.0.1 [ryoon 2019-09-21]
 	Updated www/firefox-l10n to 69.0.1 [ryoon 2019-09-21]
+	Added www/firefox68 version 68.1.0 [ryoon 2019-09-21]
