@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2016/12/03 09:06:37 maya Exp $
+$NetBSD: distinfo,v 1.12.24.1 2019/09/21 18:40:05 bsiegert Exp $
 
 SHA1 (fbreader-sources-0.99.4.tgz) = 7e6f0acbac5d8111fcda14a576ae4fdc93eef292
 RMD160 (fbreader-sources-0.99.4.tgz) = 90825fcb6b026785dd3a7329899b54a02b08e4ed
@@ -10,6 +10,7 @@ SHA1 (patch-ai) = a8f5a4e181fd34840d18d39fc9f7bf17a9e053d0
 SHA1 (patch-fbreader_Makefile) = b34214a6a725527f312969c12f3c79fcda193233
 SHA1 (patch-fbreader_src_fbreader_FBReaderActions.cpp) = ac2d5937d3628abd6db2e4b2fe869d95262d2689
 SHA1 (patch-fbreader_src_fbreader_FBView.cpp) = f9018b813b92d31c67e13eb68d6e50c8a7637a5c
+SHA1 (patch-fbreader_src_formats_doc_OleStorage.cpp) = 177d42ebe721a2de1e3342fd35a8e4b4c0c93677
 SHA1 (patch-fbreader_src_formats_html_HtmlReader.cpp) = fe0ebe4dff97a11581a6d7b079f8f19f4e3be019
 SHA1 (patch-makefiles_qsubdir.mk) = a139410def61e793b193cb54716b9ffb339b5692
 SHA1 (patch-makefiles_subdir.mk) = b9c7d0339e86b9cd6010d4156f35233320a14436
