@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.12 2018/10/02 12:05:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2019/09/21 21:34:44 nia Exp $
+bin/exr2aces
 bin/exrenvmap
 bin/exrheader
 bin/exrmakepreview
@@ -37,6 +38,7 @@ include/OpenEXR/ImfEnvmap.h
 include/OpenEXR/ImfEnvmapAttribute.h
 include/OpenEXR/ImfExport.h
 include/OpenEXR/ImfFloatAttribute.h
+include/OpenEXR/ImfFloatVectorAttribute.h
 include/OpenEXR/ImfForward.h
 include/OpenEXR/ImfFrameBuffer.h
 include/OpenEXR/ImfFramesPerSecond.h
@@ -94,6 +96,7 @@ include/OpenEXR/ImfVersion.h
 include/OpenEXR/ImfWav.h
 include/OpenEXR/ImfXdr.h
 include/OpenEXR/OpenEXRConfig.h
+include/OpenEXR/OpenEXRConfigInternal.h
 lib/libIlmImf.la
 lib/libIlmImfUtil.la
 lib/pkgconfig/OpenEXR.pc
