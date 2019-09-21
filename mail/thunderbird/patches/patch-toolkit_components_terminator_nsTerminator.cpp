@@ -1,17 +1,17 @@
-$NetBSD: patch-toolkit_components_terminator_nsTerminator.cpp,v 1.1 2018/12/16 08:12:16 ryoon Exp $
+$NetBSD: patch-toolkit_components_terminator_nsTerminator.cpp,v 1.2 2019/09/21 10:55:17 ryoon Exp $
 
---- toolkit/components/terminator/nsTerminator.cpp.orig	2018-12-04 23:12:02.000000000 +0000
+--- toolkit/components/terminator/nsTerminator.cpp.orig	2019-09-09 23:43:45.000000000 +0000
 +++ toolkit/components/terminator/nsTerminator.cpp
 @@ -36,7 +36,7 @@
  #if defined(XP_WIN)
- #include <windows.h>
+ #  include <windows.h>
  #else
--#include <unistd.h>
-+#include <time.h>
+-#  include <unistd.h>
++#  include <time.h>
  #endif
  
  #include "mozilla/ArrayUtils.h"
-@@ -178,7 +178,10 @@ RunWatchdog(void* arg)
+@@ -170,7 +170,10 @@ void RunWatchdog(void* arg) {
  #if defined(XP_WIN)
      Sleep(1000 /* ms */);
  #else
