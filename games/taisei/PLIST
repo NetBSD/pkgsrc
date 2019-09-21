@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2019/09/21 15:19:17 nia Exp $
+bin/taisei
+share/applications/taisei-replay-viewer.desktop
+share/applications/taisei.desktop
+share/icons/hicolor/128x128/apps/taisei.png
+share/icons/hicolor/256x256/mimetypes/taisei-replay.png
+share/mime/packages/taisei.xml
+share/taisei/00-taisei.zip
+share/taisei/gamecontrollerdb.txt
