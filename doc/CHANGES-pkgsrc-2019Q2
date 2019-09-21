@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q2,v 1.1.2.14 2019/09/15 09:26:46 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q2,v 1.1.2.15 2019/09/21 18:40:27 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q2 branch:
 
@@ -183,4 +183,13 @@ net/samba4: security fix
 
 Pullup ticket #6052 - requested by maya
 devel/SDL: NetBSD build fix (follow up to #6008)
+
+Pullup ticket #6055 - requested by maya
+security/gpgme: build fix
+
+Pullup ticket #6056 - requested by maya
+devel/glibmm: build fix
+
+Pullup ticket #6057 - requested by maya
+misc/fbreader: build fix
 
