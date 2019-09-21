@@ -1,0 +1,26 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2019/09/21 12:34:24 nia Exp $
+
+The following PAK-files from the original Dune 2 are needed to play
+Dune Legacy:
+
+	HARK.PAK
+	ATRE.PAK
+	ORDOS.PAK
+	ENGLISH.PAK
+	DUNE.PAK
+	SCENARIO.PAK
+	MENTAT.PAK
+	VOC.PAK
+	MERC.PAK
+	FINALE.PAK
+	INTRO.PAK
+	INTROVOC.PAK
+	SOUND.PAK
+	GERMAN.PAK (for playing in German)
+	FRENCH.PAK (for playing in French)
+
+You should place these files in ${PREFIX}/share/dunelegacy
+or ~/.config/dunelegacy/data
+
+===========================================================================
