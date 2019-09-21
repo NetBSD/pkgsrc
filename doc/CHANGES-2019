@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4013 2019/09/21 13:10:12 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4014 2019/09/21 13:56:57 ng0 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6572,3 +6572,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added games/dunelegacy version 0.96.4 [nia 2019-09-21]
 	Updated databases/phpmyadmin to 4.9.1 [tm 2019-09-21]
 	Updated www/py-furl to 2.1.0 [adam 2019-09-21]
+	Updated wm/fvwm to 2.6.9 [ng0 2019-09-21]
