@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2013/01/20 07:09:29 mef Exp $
+$NetBSD: patch-ab,v 1.5 2019/09/21 13:56:15 ng0 Exp $
 
 (1) 
 Convert install path from fvwm to fvwm2
@@ -14,23 +14,21 @@ Avoid following problem on NetBSD/amd64 6.99.16 with clang
 |   ^
 +-----------------
 
---- configure.orig	2013-01-06 10:03:11.000000000 +0900
-+++ configure	2013-01-06 10:08:01.000000000 +0900
-@@ -3179,7 +3179,7 @@ fi
+--- configure~       2019-09-01 18:13:40.757285726 +0000
++++ configure   2019-09-01 18:18:08.056139617 +0000
+@@ -578,7 +578,7 @@
+ MAKEFLAGS=
+ 
+ # Identity of this package.
+-PACKAGE_NAME='fvwm'
++PACKAGE_NAME='fvwm2'
+ PACKAGE_TARNAME='fvwm'
+ PACKAGE_VERSION='2.6.9'
+ PACKAGE_STRING='fvwm 2.6.9'
+@@ -3320,5 +3320,5 @@
  
  
  # Define the identity of the package.
-- PACKAGE=fvwm
-+ PACKAGE=fvwm2
-  VERSION=${version}
- 
- 
-@@ -6492,7 +6492,7 @@ int i; static j; int *p; char *c;
-   switch (*p = p = *c) { case 0: printf("%Q", c, p); }
-   *c = &i; c = p;
-   while (1 || (unsigned int)3 >= 0 || ((int)-1) == ((unsigned int)1));
--  return;
-+  return -1;
-   ;
-   return 0;
- }
+- PACKAGE='fvwm'
++ PACKAGE='fvwm2'
+  VERSION='2.6.9'
