@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/12/09 11:39:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/09/21 21:34:44 nia Exp $
 include/OpenEXR/Iex.h
 include/OpenEXR/IexBaseExc.h
 include/OpenEXR/IexErrnoExc.h
@@ -12,6 +12,7 @@ include/OpenEXR/IexMathIeeeExc.h
 include/OpenEXR/IexNamespace.h
 include/OpenEXR/IexThrowErrnoExc.h
 include/OpenEXR/IlmBaseConfig.h
+include/OpenEXR/IlmBaseConfigInternal.h
 include/OpenEXR/IlmThread.h
 include/OpenEXR/IlmThreadExport.h
 include/OpenEXR/IlmThreadForward.h
