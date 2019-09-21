@@ -1,8 +1,8 @@
-$NetBSD: patch-media_libcubeb_src_moz.build,v 1.1 2018/12/16 08:12:16 ryoon Exp $
+$NetBSD: patch-media_libcubeb_src_moz.build,v 1.2 2019/09/21 10:55:17 ryoon Exp $
 
---- media/libcubeb/src/moz.build.orig	2018-12-04 23:11:54.000000000 +0000
+--- media/libcubeb/src/moz.build.orig	2019-09-09 23:43:34.000000000 +0000
 +++ media/libcubeb/src/moz.build
-@@ -22,6 +22,12 @@ if CONFIG['MOZ_ALSA']:
+@@ -23,6 +23,18 @@ if CONFIG['MOZ_ALSA']:
      ]
      DEFINES['USE_ALSA'] = True
  
@@ -12,13 +12,19 @@ $NetBSD: patch-media_libcubeb_src_moz.build,v 1.1 2018/12/16 08:12:16 ryoon Exp 
 +    ]
 +    DEFINES['USE_OSS'] = True
 +
++if CONFIG['MOZ_SUNAUDIO']:
++    SOURCES += [
++        'cubeb_sun.c',
++    ]
++    DEFINES['USE_SUN'] = True
++
  if CONFIG['MOZ_PULSEAUDIO'] or CONFIG['MOZ_JACK']:
      SOURCES += [
          'cubeb_resampler.cpp',
-@@ -87,6 +93,7 @@ if CONFIG['OS_TARGET'] == 'Android':
- FINAL_LIBRARY = 'gkmedias'
+@@ -89,6 +101,7 @@ FINAL_LIBRARY = 'gkmedias'
  
  CFLAGS += CONFIG['MOZ_ALSA_CFLAGS']
+ CFLAGS += CONFIG['MOZ_JACK_CFLAGS']
 +CFLAGS += CONFIG['MOZ_OSS_CFLAGS']
  CFLAGS += CONFIG['MOZ_PULSEAUDIO_CFLAGS']
  
