@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Fasttracker II
+Comment=Fasttracker II clone for modern computers
+Comment[fr]=Clone de Fasttracker II pour les ordinateurs modernes
+Exec=ft2-clone %f
+Icon=fasttracker2
+Terminal=false
+Type=Application
+Categories=AudioVideo;AudioVideoEditing;
+Keywords=tracker;music;
+MimeType=audio/xm;audio/mod;audio/s3m;
