@@ -1,6 +1,6 @@
-$NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.2 2019/02/26 11:32:13 ryoon Exp $
+$NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.3 2019/09/21 10:55:17 ryoon Exp $
 
---- ipc/glue/CrossProcessSemaphore_posix.cpp.orig	2019-02-13 14:19:38.000000000 +0000
+--- ipc/glue/CrossProcessSemaphore_posix.cpp.orig	2019-09-09 23:43:28.000000000 +0000
 +++ ipc/glue/CrossProcessSemaphore_posix.cpp
 @@ -9,6 +9,11 @@
  #include "nsDebug.h"
@@ -28,7 +28,7 @@ $NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.2 2019/02/26 11:32:
    mozilla::Atomic<int32_t> mRefCount;
    uint32_t mInitialValue;
  };
-@@ -42,13 +53,27 @@ namespace mozilla {
+@@ -43,13 +54,27 @@ CrossProcessSemaphore* CrossProcessSemap
      return nullptr;
    }
  
@@ -56,7 +56,7 @@ $NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.2 2019/02/26 11:32:
    sem->mRefCount = &data->mRefCount;
    *sem->mRefCount = 1;
  
-@@ -83,23 +108,44 @@ namespace mozilla {
+@@ -85,23 +110,44 @@ CrossProcessSemaphore* CrossProcessSemap
  
    int32_t oldCount = data->mRefCount++;
    if (oldCount == 0) {
@@ -92,9 +92,9 @@ $NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.2 2019/02/26 11:32:
  CrossProcessSemaphore::CrossProcessSemaphore()
 -    : mSemaphore(nullptr), mRefCount(nullptr) {
 +#if defined(__NetBSD__)
-+    : mMutex (nullptr)
-+    , mNotZero (nullptr)
-+    , mValue (nullptr)
++  : mMutex (nullptr)
++  , mNotZero (nullptr)
++  , mValue (nullptr)
 +#else
 +    : mSemaphore(nullptr)
 +#endif
@@ -102,7 +102,7 @@ $NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.2 2019/02/26 11:32:
    MOZ_COUNT_CTOR(CrossProcessSemaphore);
  }
  
-@@ -108,16 +154,57 @@ CrossProcessSemaphore::~CrossProcessSema
+@@ -110,16 +156,57 @@ CrossProcessSemaphore::~CrossProcessSema
  
    if (oldCount == 0) {
      // Nothing can be done if the destroy fails so ignore return code.
@@ -160,7 +160,7 @@ $NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.2 2019/02/26 11:32:
    if (aWaitTime.isSome()) {
      struct timespec ts;
      if (clock_gettime(CLOCK_REALTIME, &ts) == -1) {
-@@ -134,13 +221,24 @@ bool CrossProcessSemaphore::Wait(const M
+@@ -136,13 +223,24 @@ bool CrossProcessSemaphore::Wait(const M
      while ((ret = sem_wait(mSemaphore)) == -1 && errno == EINTR) {
      }
    }
