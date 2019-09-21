@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4004 2019/09/21 09:53:10 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4005 2019/09/21 10:56:56 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6563,3 +6563,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added www/firefox68 version 68.1.0 [ryoon 2019-09-21]
 	Added www/firefox68-l10n version 68.1.0 [ryoon 2019-09-21]
 	Updated devel/libmtp to 1.1.16 [adam 2019-09-21]
+	Updated mail/thunderbird to 68.1.0 [ryoon 2019-09-21]
