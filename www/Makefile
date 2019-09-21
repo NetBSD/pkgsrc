@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1406 2019/09/21 07:32:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.1407 2019/09/21 07:34:13 ryoon Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -111,6 +111,7 @@ SUBDIR+=	firefox52-l10n
 SUBDIR+=	firefox60
 SUBDIR+=	firefox60-l10n
 SUBDIR+=	firefox68
+SUBDIR+=	firefox68-l10n
 SUBDIR+=	gallery
 SUBDIR+=	gallery2
 SUBDIR+=	ganglia-webfrontend
