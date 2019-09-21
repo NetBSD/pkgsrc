@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4011 2019/09/21 12:34:43 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4012 2019/09/21 12:42:08 tm Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6570,3 +6570,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/milkytracker to 1.02.00 [nia 2019-09-21]
 	Updated graphics/icoutils to 0.32.3 [nia 2019-09-21]
 	Added games/dunelegacy version 0.96.4 [nia 2019-09-21]
+	Updated databases/phpmyadmin to 4.9.1 [tm 2019-09-21]
