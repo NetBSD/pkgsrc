@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.144 2019/09/07 03:41:42 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.145 2019/09/21 07:25:50 ryoon Exp $
 bin/firefox
 lib/firefox/actors/AudioPlaybackChild.jsm
 lib/firefox/actors/AutoplayChild.jsm
@@ -3594,6 +3594,7 @@ lib/firefox/browser/defaults/settings/main/hijack-blocklists.json
 lib/firefox/browser/defaults/settings/main/language-dictionaries.json
 lib/firefox/browser/defaults/settings/main/onboarding.json
 lib/firefox/browser/defaults/settings/main/sites-classification.json
+lib/firefox/browser/defaults/settings/main/url-classifier-skip-urls.json
 lib/firefox/browser/defaults/settings/pinning/pins.json
 lib/firefox/browser/defaults/settings/security-state/intermediates.json
 lib/firefox/browser/defaults/settings/security-state/onecrl.json
