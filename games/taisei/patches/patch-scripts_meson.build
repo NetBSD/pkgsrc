@@ -1,0 +1,25 @@
+$NetBSD: patch-scripts_meson.build,v 1.1 2019/09/21 15:19:17 nia Exp $
+
+Don't depend on git for version checking.
+
+--- scripts/meson.build.orig	2019-04-27 08:01:35.000000000 +0000
++++ scripts/meson.build
+@@ -16,17 +16,7 @@ common_taiseilib_defs = [
+ # Workaround for Meson bug: https://github.com/mesonbuild/meson/issues/4947
+ python_thunk = find_program(files('thunk.py'))
+ 
+-version_script = files('version.py')
+-version_command = [python_thunk, version_script, common_taiseilib_args]
+-
+-taisei_version_result = run_command(version_command, '{string}')
+-assert(taisei_version_result.returncode() == 0, 'Version script failed')
+-
+-if taisei_version_result.stderr() != ''
+-    warning(taisei_version_result.stderr().strip())
+-endif
+-
+-taisei_version_string = taisei_version_result.stdout().strip()
++taisei_version_string = '@PKGVERSION@'
+ 
+ preprocess_script = files('configure-file.py')
+ # generators are string supremacists apparently...
