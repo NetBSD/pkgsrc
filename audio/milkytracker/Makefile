@@ -1,32 +1,41 @@
-# $NetBSD: Makefile,v 1.11 2018/09/28 06:34:32 tnn Exp $
-#
+# $NetBSD: Makefile,v 1.12 2019/09/21 11:32:08 nia Exp $
 
-DISTNAME=	milkytracker-0.90.86
-PKGREVISION=	1
+DISTNAME=	milkytracker-1.02.00
 CATEGORIES=	audio
-MASTER_SITES=	http://milkytracker.org/files/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=milkytracker/}
+GITHUB_PROJECT=	MilkyTracker
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	jkuittinen@users.sourceforge.net
-HOMEPAGE=	http://milkytracker.org/
+HOMEPAGE=	https://milkytracker.titandemo.org/
 COMMENT=	Music tracker inspired by Fast Tracker 2
 LICENSE=	gnu-gpl-v3
 
-GNU_CONFIGURE=	yes
+USE_CMAKE=	yes
+USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++03
-USE_TOOLS+=	gawk
 
-.include "options.mk"
-
-INSTALLATION_DIRS+=	share/doc/milkytracker
-INSTALLATION_DIRS+=	share/examples/milkytracker
-
-DOCDIR=			${DESTDIR}${PREFIX}/share/doc/milkytracker
+INSTALLATION_DIRS+=	share/appdata
+INSTALLATION_DIRS+=	share/applications
+INSTALLATION_DIRS+=	share/pixmaps
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/docs/* ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/resources/pictures/carton.png \
+		${DESTDIR}${PREFIX}/share/pixmaps/milkytracker.png
+	${INSTALL_DATA} ${WRKSRC}/resources/milkytracker.appdata \
+		${DESTDIR}${PREFIX}/share/appdata/milkytracker.appdata.xml
+	${INSTALL_DATA} ${WRKSRC}/resources/milkytracker.desktop \
+		${DESTDIR}${PREFIX}/share/applications
 
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} != "Darwin"
+.include "../../archivers/lhasa/buildlink3.mk"
+.include "../../archivers/zziplib/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
+.endif
+.if ${OPSYS} == "Linux"
+.include "../../audio/alsa-lib/buildlink3.mk"
+.include "../../audio/jack/buildlink3.mk"
+.endif
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
