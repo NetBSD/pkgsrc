@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2016/04/09 10:09:14 richard Exp $
+$NetBSD: patch-hotplug.sh.in,v 1.1 2019/09/21 09:52:42 adam Exp $
 
-use '=' instead of '=='
+Portability fix.
 
 --- hotplug.sh.in.orig	2008-09-07 01:18:04.000000000 +0200
 +++ hotplug.sh.in
