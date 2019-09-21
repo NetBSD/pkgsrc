@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.455 2019/09/20 14:56:00 nia Exp $
+# $NetBSD: Makefile,v 1.456 2019/09/21 12:34:24 nia Exp $
 #
 
 COMMENT=	Games
@@ -96,6 +96,7 @@ SUBDIR+=	doom2-pwad-struggle
 SUBDIR+=	doomlegacy
 SUBDIR+=	dopewars
 SUBDIR+=	duckmaze
+SUBDIR+=	dunelegacy
 SUBDIR+=	dungeon
 SUBDIR+=	easyrpg-player
 SUBDIR+=	eboard
