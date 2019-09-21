@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.228 2019/09/18 14:17:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.229 2019/09/21 10:55:16 ryoon Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER}
-PKGREVISION=	1
-TB_VER=		60.8.0
+TB_VER=		68.1.0
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
@@ -25,11 +24,10 @@ CONFIGURE_ARGS+=	--enable-application=comm/mail
 # Disable WebRTC support for Thunderbird unconditionally.
 CONFIGURE_ARGS+=	--disable-webrtc
 
-NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/thunderbird
-NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/thunderbird-bin
+NOT_PAX_MPROTECT_SAFE+=	lib/${MOZILLA}/${MOZILLA}
+NOT_PAX_MPROTECT_SAFE+=	lib/${MOZILLA}/${MOZILLA}-bin
 
-ALL_ENV+=		MOZILLA_PKG_NAME=${PKGBASE}
-LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${PKGBASE}
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${MOZILLA}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -41,9 +39,10 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${PKGBASE}
 #SUBST_FILES.ext-compat+=	calendar/*/*/install.rdf
 #SUBST_SED.ext-compat=		-e 's,\(<em:maxVersion>\).*<,\19.0<,g'
 
-CHECK_WRKREF_SKIP+=lib/${PKGBASE}/chrome/toolkit/content/global/buildconfig.html
+CHECK_WRKREF_SKIP+=lib/${MOZILLA}/chrome/toolkit/content/global/buildconfig.html
 
 post-extract:
+	${CP} ${FILESDIR}/cubeb_sun.c ${WRKSRC}/media/libcubeb/src/cubeb_sun.c
 	mv ${WRKSRC}${MOZILLA_DIR}/gfx/ycbcr/yuv_row_arm.s \
 		${WRKSRC}${MOZILLA_DIR}/gfx/ycbcr/yuv_row_arm.S
 
@@ -67,19 +66,19 @@ post-build:
 	  < ${FILESDIR}/desktop.in					\
 	  > ${WRKDIR}/desktop
 
-INSTALLATION_DIRS+=	lib/${PKGBASE}/extensions
+INSTALLATION_DIRS+=	lib/${MOZILLA}/extensions
 INSTALLATION_DIRS+=	share/applications share/pixmaps
 post-install:
 	${ECHO} '#! /bin/sh' > ${DESTDIR}${PREFIX}/bin/${MOZILLA}
-	${ECHO} '${PREFIX}/lib/${MOZILLA}/thunderbird "$$@"' >> \
+	${ECHO} '${PREFIX}/lib/${MOZILLA}/${MOZILLA} "$$@"' >> \
 		${DESTDIR}${PREFIX}/bin/${MOZILLA}
 	${CHMOD} 755 ${DESTDIR}${PREFIX}/bin/${MOZILLA}
 	${INSTALL_DATA} ${WRKDIR}/desktop				\
 	  ${DESTDIR}${PREFIX}/share/applications/${MOZILLA}.desktop
-	${INSTALL_DATA} ${WRKSRC}/${OBJDIR}/dist/thunderbird/chrome/icons/default/default48.png	\
+	${INSTALL_DATA} ${WRKSRC}/${OBJDIR}/dist/${MOZILLA}/chrome/icons/default/default48.png	\
 	  ${DESTDIR}${PREFIX}/share/pixmaps/${MOZILLA}.png
 
-.include "../../www/firefox60/mozilla-common.mk"
+.include "../../www/firefox68/mozilla-common.mk"
 .include "options.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
