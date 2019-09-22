@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4031 2019/09/22 15:09:33 leot Exp $
+$NetBSD: CHANGES-2019,v 1.4032 2019/09/22 17:53:42 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6591,3 +6591,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated emulators/mgba to 0.7.3 [nia 2019-09-22]
 	Updated emulators/libretro-mgba to 0.7.3 [nia 2019-09-22]
 	Updated net/hub to 2.12.6 [leot 2019-09-22]
+	Updated devel/py-gobject3 to 3.34.0 [prlw1 2019-09-22]
