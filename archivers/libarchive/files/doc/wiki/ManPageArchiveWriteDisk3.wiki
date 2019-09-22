@@ -202,10 +202,10 @@ and
 More information about the 
 ''struct'' archive 
 object and the overall design of the library can be found in the 
-[[ManPageibarchive3]] 
+[[ManPageLibarchive3]] 
 overview. 
 Many of these functions are also documented under 
-[[ManPagerchiverite3]]. 
+[[ManPageArchiveWrite3]]. 
 == RETURN VALUES == 
 Most functions return 
 '''ARCHIVE_OK''' 
@@ -238,10 +238,10 @@ and
 '''archive_error_string'''() 
 functions. 
 == SEE ALSO == 
-[[ManPagerchiveead3]], 
-[[ManPagerchiverite3]], 
+[[ManPageArchiveRead3]], 
+[[ManPageArchiveWrite3]], 
 [[ManPageBsdtar1]], 
-[[ManPageibarchive3]] 
+[[ManPageLibarchive3]] 
 == HISTORY == 
 The 
 '''libarchive''' 
