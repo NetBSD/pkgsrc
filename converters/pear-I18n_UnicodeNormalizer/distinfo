@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 01:43:53 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/09/22 22:38:00 mef Exp $
 
-SHA1 (pear/I18N_UnicodeNormalizer-1.0.0.tgz) = 9386143d6d89505d2c43c33a67d18cd363fafd09
-RMD160 (pear/I18N_UnicodeNormalizer-1.0.0.tgz) = e998497670f415fdc5a395403e53614a71ad057d
-SHA512 (pear/I18N_UnicodeNormalizer-1.0.0.tgz) = 0720aca6af9baa5a228473db2b727d12d26e344db78276c3976e398666c413ea4a88855b1cc82101564bd2214348fadce2675f617fb4e14e5efe1b1db7690afd
-Size (pear/I18N_UnicodeNormalizer-1.0.0.tgz) = 2154776 bytes
+SHA1 (pear/I18N_UnicodeNormalizer-dir/I18N_UnicodeNormalizer-1.0.0.tgz) = fbcebfee6c4080066897bea1f8babaae6db1a87c
+RMD160 (pear/I18N_UnicodeNormalizer-dir/I18N_UnicodeNormalizer-1.0.0.tgz) = d1f43e7822565f32355aec57fdeb7d4eeba57b57
+SHA512 (pear/I18N_UnicodeNormalizer-dir/I18N_UnicodeNormalizer-1.0.0.tgz) = 555596e1af66929a8424a5ef60773dd0c7be0ea7d94d88ed38005141a3304326388689aa7a9b3db9123f26d8ec6cc77687cc072d260efb9ed8efef4870317673
+Size (pear/I18N_UnicodeNormalizer-dir/I18N_UnicodeNormalizer-1.0.0.tgz) = 2265011 bytes
