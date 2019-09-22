@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.55 2019/08/31 14:44:58 nia Exp $
+# $NetBSD: Makefile.common,v 1.56 2019/09/22 18:03:53 prlw1 Exp $
 
 # used by games/freeciv-share/Makefile
 # used by games/freeciv-client/Makefile
@@ -21,10 +21,10 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 
-DISTINFO_FILE=		${.CURDIR}/../../games/freeciv-share/distinfo
-PATCHDIR=		${.CURDIR}/../../games/freeciv-share/patches
+DISTINFO_FILE=		../../games/freeciv-share/distinfo
+#PATCHDIR=		../../games/freeciv-share/patches
 
-REPLACE_PYTHON=			${WRKSRC}/common/generate_packets.py
+REPLACE_PYTHON=		${WRKSRC}/common/generate_packets.py
 
 SUBST_CLASSES+=		data
 SUBST_STAGE.data=	pre-configure
@@ -33,8 +33,8 @@ SUBST_SED.data+=	-e "s|@CLIENT_FALSE@|@MAKE_DATA_FALSE@|g"
 SUBST_SED.data+=	-e "s|@CLIENT_TRUE@|@MAKE_DATA_TRUE@|g"
 SUBST_SED.data+=	-e "s|@SERVER_FALSE@|@MAKE_DATA_FALSE@|g"
 SUBST_SED.data+=	-e "s|@SERVER_TRUE@|@MAKE_DATA_TRUE@|g"
-SUBST_SED.data+=	-e "s|@CLIENT_GUI_XAW_TRUE@||g"
-SUBST_SED.data+=	-e "s|@CLIENT_GUI_GTK_2_0_TRUE@||g"
+SUBST_SED.data+=	-e "s|@CLIENT_GUI_SDL_TRUE@||g"
+SUBST_SED.data+=	-e "s|@CLIENT_GUI_GTK_3_22_TRUE@||g"
 SUBST_MESSAGE.data=	Fixing installation of data files.
 
 .include "../../www/curl/buildlink3.mk"
