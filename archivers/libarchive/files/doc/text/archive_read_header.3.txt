@@ -30,8 +30,8 @@ RETURN VALUES
      These functions return ARCHIVE_OK (the operation succeeded), ARCHIVE_WARN
      (the operation succeeded but a non-critical error was encountered),
      ARCHIVE_EOF (end-of-archive was encountered), ARCHIVE_RETRY (the opera‐
-     tion failed but can be retried), and ARCHIVE_FATAL (there was a fatal
-     error; the archive should be closed immediately).
+     tion failed but can be retried), and ARCHIVE_FATAL (there was a fatal er‐
+     ror; the archive should be closed immediately).
 
 ERRORS
      Detailed error codes and textual descriptions are available from the
