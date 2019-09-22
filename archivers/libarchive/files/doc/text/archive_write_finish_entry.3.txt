@@ -13,9 +13,9 @@ SYNOPSIS
      archive_write_finish_entry(struct archive *);
 
 DESCRIPTION
-     Close out the entry just written.	In particular, this writes out the
-     final padding required by some formats.  Ordinarily, clients never need
-     to call this, as it is called automatically by archive_write_header() and
+     Close out the entry just written.	In particular, this writes out the fi‐
+     nal padding required by some formats.  Ordinarily, clients never need to
+     call this, as it is called automatically by archive_write_header() and
      archive_write_close() as needed.  For archive_write_disk handles, this
      flushes pending file attribute changes like modification time.
 

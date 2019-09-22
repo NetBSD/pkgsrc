@@ -19,8 +19,8 @@ CHANGES IN LIBARCHIVE 3
      Libarchive2 assumed that the local platform uses Unicode as the native
      wchar_t encoding, which is true on Windows, modern Linux, and a few other
      systems, but is certainly not universal.  As a result, pax format ar‐
-     chives were written incorrectly on some systems, since pax format
-     requires UTF-8 and libarchive 2 incorrectly assumed that wchar_t strings
+     chives were written incorrectly on some systems, since pax format re‐
+     quires UTF-8 and libarchive 2 incorrectly assumed that wchar_t strings
      can be easily converted to UTF-8.
 
      Libarchive3 uses the standard iconv library to convert between character
@@ -28,11 +28,11 @@ CHANGES IN LIBARCHIVE 3
      archive”.	To support this, archive_entry objects can now be bound to a
      particular archive when they are created.	The automatic character set
      conversions performed by archive_entry objects when reading and writing
-     filenames, usernames, and other strings will now use an appropriate
-     default character set:
+     filenames, usernames, and other strings will now use an appropriate de‐
+     fault character set:
 
-     If the archive_entry object is bound to an archive, it will use the
-     default character set for that archive.
+     If the archive_entry object is bound to an archive, it will use the de‐
+     fault character set for that archive.
 
      The platform default character encoding (as returned by
      nl_langinfo(CHARSET)) will be used if nothing else is specified.
@@ -54,12 +54,12 @@ CHANGES IN LIBARCHIVE 3
 
      There are a few cases where these changes will affect your source code:
 
-     ·	  In some cases, libarchive's wider types will introduce the possibil‐
+     •	  In some cases, libarchive's wider types will introduce the possibil‐
 	  ity of truncation: for example, on a system with a 16-bit uid_t, you
 	  risk having uid 65536 be truncated to uid 0, which can cause serious
 	  security problems.
 
-     ·	  Typedef function pointer types will be incompatible.	For example,
+     •	  Typedef function pointer types will be incompatible.	For example,
 	  if you define custom skip callbacks, you may have to use code simi‐
 	  lar to the following if you want to support building against
 	  libarchive2 and libarchive3:
@@ -78,19 +78,19 @@ CHANGES IN LIBARCHIVE 3
 
      Affected functions:
 
-     ·	 archive_entry_gid(), archive_entry_set_gid()
-     ·	 archive_entry_uid(), archive_entry_set_uid()
-     ·	 archive_entry_ino(), archive_entry_set_ino()
-     ·	 archive_read_data_block(), archive_write_data_block()
-     ·	 archive_read_disk_gname(), archive_read_disk_uname()
-     ·	 archive_read_disk_set_gname_lookup(),
+     •	 archive_entry_gid(), archive_entry_set_gid()
+     •	 archive_entry_uid(), archive_entry_set_uid()
+     •	 archive_entry_ino(), archive_entry_set_ino()
+     •	 archive_read_data_block(), archive_write_data_block()
+     •	 archive_read_disk_gname(), archive_read_disk_uname()
+     •	 archive_read_disk_set_gname_lookup(),
 	 archive_read_disk_set_group_lookup(),
 	 archive_read_disk_set_uname_lookup(),
 	 archive_read_disk_set_user_lookup()
-     ·	 archive_skip_callback()
-     ·	 archive_read_extract_set_skip_file(),
+     •	 archive_skip_callback()
+     •	 archive_read_extract_set_skip_file(),
 	 archive_write_disk_set_skip_file(), archive_write_set_skip_file()
-     ·	 archive_write_disk_set_group_lookup(),
+     •	 archive_write_disk_set_group_lookup(),
 	 archive_write_disk_set_user_lookup()
 
      Where these functions or their arguments took or returned gid_t, ino_t,

@@ -13,9 +13,9 @@ DESCRIPTION
      basic numeric metadata followed by the full pathname of the entry and the
      file data.  The header record stores a series of integer values that gen‐
      erally follow the fields in struct stat.  (See stat(2) for details.)  The
-     variants differ primarily in how they store those integers (binary,
-     octal, or hexadecimal).  The header is followed by the pathname of the
-     entry (the length of the pathname is stored in the header) and any file
+     variants differ primarily in how they store those integers (binary, oc‐
+     tal, or hexadecimal).  The header is followed by the pathname of the en‐
+     try (the length of the pathname is stored in the header) and any file
      data.  The end of the archive is indicated by a special record with the
      pathname “TRAILER!!!”.
 
@@ -184,8 +184,8 @@ DESCRIPTION
      numbers differently XXX.
 
    Other Extensions and Variants
-     Sun Solaris uses additional file types to store extended file data,
-     including ACLs and extended attributes, as special entries in cpio ar‐
+     Sun Solaris uses additional file types to store extended file data, in‐
+     cluding ACLs and extended attributes, as special entries in cpio ar‐
      chives.
 
      XXX Others? XXX
@@ -215,11 +215,11 @@ BUGS
      The “CRC” format is mis-named, as it uses a simple checksum and not a
      cyclic redundancy check.
 
-     The old binary format is limited to 16 bits for user id, group id,
-     device, and inode numbers.  It is limited to 4 gigabyte file sizes.
+     The old binary format is limited to 16 bits for user id, group id, de‐
+     vice, and inode numbers.  It is limited to 4 gigabyte file sizes.
 
-     The old ASCII format is limited to 18 bits for the user id, group id,
-     device, and inode numbers.  It is limited to 8 gigabyte file sizes.
+     The old ASCII format is limited to 18 bits for the user id, group id, de‐
+     vice, and inode numbers.  It is limited to 8 gigabyte file sizes.
 
      The new ASCII format is limited to 4 gigabyte file sizes.
 

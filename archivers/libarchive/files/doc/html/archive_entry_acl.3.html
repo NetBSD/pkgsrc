@@ -1,5 +1,5 @@
-<!-- Creator     : groff version 1.22.3 -->
-<!-- CreationDate: Mon Sep  3 22:55:07 2018 -->
+<!-- Creator     : groff version 1.22.4 -->
+<!-- CreationDate: Wed Jun 12 21:10:14 2019 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -137,12 +137,12 @@ descriptions</p>
 
 <p style="margin-top: 1em"><b>DESCRIPTION</b></p>
 
-<p style="margin-left:6%;">The &rsquo;&rsquo;Access Control
-Lists (ACLs)&rsquo;&rsquo; extend the standard Unix perssion
-model. The ACL interface of <b>libarchive</b> supports both
-POSIX.1e and NFSv4 style ACLs. Use of ACLs is restricted by
-various levels of ACL support in operating systems, file
-systems and archive formats.</p>
+<p style="margin-left:6%;">The &ldquo;Access Control Lists
+(ACLs)&rdquo; extend the standard Unix perssion model. The
+ACL interface of <b>libarchive</b> supports both POSIX.1e
+and NFSv4 style ACLs. Use of ACLs is restricted by various
+levels of ACL support in operating systems, file systems and
+archive formats.</p>
 
 <p style="margin-left:6%; margin-top: 1em"><b>POSIX.1e
 Access Control Lists</b> <br>
@@ -440,11 +440,11 @@ formats that can be created with
 <b>archive_entry_acl_to_text_w</b>(). Existing ACL entries
 are preserved. To get a clean new ACL from text
 <b>archive_entry_acl_clear</b>() must be called first.
-Entries prefixed with &rsquo;&rsquo;default:&rsquo;&rsquo;
-are treated as ARCHIVE_ENTRY_ACL_TYPE_DEFAULT unless
-<i>type</i> is ARCHIVE_ENTRY_ACL_TYPE_NFS4. Invalid entries,
-non-parseable ACL entries and entries beginning with the
-&rsquo;#&rsquo; character (comments) are skipped.</p>
+Entries prefixed with &ldquo;default:&rdquo; are treated as
+ARCHIVE_ENTRY_ACL_TYPE_DEFAULT unless <i>type</i> is
+ARCHIVE_ENTRY_ACL_TYPE_NFS4. Invalid entries, non-parseable
+ACL entries and entries beginning with the &rsquo;#&rsquo;
+character (comments) are skipped.</p>
 
 
 <p style="margin-left:6%; margin-top: 1em"><b>archive_entry_acl_next</b>()
@@ -489,7 +489,7 @@ ACLs.</p>
 <p>ARCHIVE_ENTRY_ACL_STYLE_MARK_DEFAULT</p>
 
 <p style="margin-left:24%;">Prefix each default ACL entry
-with the word &rsquo;&rsquo;default:&rsquo;&rsquo;.</p>
+with the word &ldquo;default:&rdquo;.</p>
 
 <p>ARCHIVE_ENTRY_ACL_STYLE_SOLARIS</p>
 
@@ -524,7 +524,7 @@ returned. It the entry contains POSIX.1e ACLs and none of
 the flags ARCHIVE_ENTRY_ACL_TYPE_ACCESS or
 ARCHIVE_ENTRY_ACL_TYPE_DEFAULT are specified, both access
 and default entries are returned and default entries are
-prefixed with &rsquo;&rsquo;default:&rsquo;&rsquo;.</p>
+prefixed with &ldquo;default:&rdquo;.</p>
 
 
 <p style="margin-left:6%; margin-top: 1em"><b>archive_entry_acl_types</b>()
