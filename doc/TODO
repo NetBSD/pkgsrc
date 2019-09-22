@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19289 2019/09/22 09:56:47 joerg Exp $
+$NetBSD: TODO,v 1.19290 2019/09/22 17:53:42 prlw1 Exp $
 
 Suggested new packages
 ======================
@@ -1152,7 +1152,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-dbus-1.2.12
 	o py-ephem3-3.7.6.0
 	o py-gnome-menus-3.8.0
-	o py-gobject3-3.34.0
 	o py-gobject3-common-3.32.2
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
