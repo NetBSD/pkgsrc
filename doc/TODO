@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19288 2019/09/22 08:54:57 tm Exp $
+$NetBSD: TODO,v 1.19289 2019/09/22 09:56:47 joerg Exp $
 
 Suggested new packages
 ======================
@@ -911,7 +911,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libX11-1.6.8
 	o libXfont2-2.0.4
 	o libXt-1.2.0 [https://lists.x.org/archives/xorg/2019-June/059825.html]
-	o libarchive-3.4.0
 	o libbpg-0.9.6
 	o libcaca-0.99.19
 	o libcarddav-14.0.4
