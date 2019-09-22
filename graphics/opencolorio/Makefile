@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/09/19 14:44:23 nia Exp $
+# $NetBSD: Makefile,v 1.6 2019/09/22 23:40:29 nia Exp $
 
 DISTNAME=	OpenColorIO-1.1.1
 PKGREVISION=	1
@@ -35,6 +35,7 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/*.cmake ${DESTDIR}${PREFIX}/lib/cmake/OpenColorIO
 	${MV} ${DESTDIR}${PREFIX}/cmake/*.cmake ${DESTDIR}${PREFIX}/lib/cmake/OpenColorIO
 
+.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../textproc/tinyxml/buildlink3.mk"
 .include "../../textproc/yaml-cpp/buildlink3.mk"
