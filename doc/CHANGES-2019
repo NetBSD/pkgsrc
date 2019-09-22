@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4035 2019/09/22 18:37:14 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.4036 2019/09/22 19:51:10 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6595,3 +6595,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/accerciser3 to 3.34.0 [prlw1 2019-09-22]
 	Updated games/freeciv-client to 2.6.0nb1 [prlw1 2019-09-22]
 	Updated devel/p5-Test-BDD-Cucumber to 0.660001 [schmonz 2019-09-22]
+	Removed comms/asterisk [jnemeth 2019-09-22]
