@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.22 2019/09/22 15:05:06 tnn Exp $
+# $NetBSD: bootstrap.mk,v 1.23 2019/09/22 15:16:26 tnn Exp $
 #
 # This file contains a map of available binary bootstrap toolchains
 # and which kit to use for each supported platform.
@@ -43,42 +43,22 @@ BOOT.fbsd10-amd64=	bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz
 BOOT.dfly3.6-amd64=	bootstrap-jdk7u60-bin-dragonfly-3.6-amd64-20140719.tar.bz2
 BOOT.dfly3.8-amd64=	bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-5.[0-8]*-i386) || make(distinfo)
-DISTFILES+=		${BOOT.nb5-i386}
-EXTRACT_ONLY+=		${BOOT.nb5-i386}
-.endif
-
-.if !empty(MACHINE_PLATFORM:MNetBSD-5.[0-8]*-x86_64) || make(distinfo)
-DISTFILES+=		${BOOT.nb5-amd64}
-EXTRACT_ONLY+=		${BOOT.nb5-amd64}
-.endif
-
-.if !empty(MACHINE_PLATFORM:MNetBSD-6.[0-8]*-i386) || make(distinfo)
-DISTFILES+=		${BOOT.nb6-i386}
-EXTRACT_ONLY+=		${BOOT.nb6-i386}
-.endif
-
-.if !empty(MACHINE_PLATFORM:MNetBSD-6.[0-8]*-x86_64) || make(distinfo)
-DISTFILES+=		${BOOT.nb6-amd64}
-EXTRACT_ONLY+=		${BOOT.nb6-amd64}
-.endif
-
-.if !empty(MACHINE_PLATFORM:MNetBSD-6.99*-i386) || !empty(MACHINE_PLATFORM:MNetBSD-[78].*-i386) || make(distinfo)
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || make(distinfo)
 DISTFILES+=		${BOOT.nb7-i386}
 EXTRACT_ONLY+=		${BOOT.nb7-i386}
 .endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-6.99*-x86_64) || !empty(MACHINE_PLATFORM:MNetBSD-[78].*-x86_64) || make(distinfo)
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || make(distinfo)
 DISTFILES+=		${BOOT.nb7-amd64}
 EXTRACT_ONLY+=		${BOOT.nb7-amd64}
 .endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-[78].*-sparc64) || make(distinfo)
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64) || make(distinfo)
 DISTFILES+=		${BOOT.nb7-sparc64}
 EXTRACT_ONLY+=		${BOOT.nb7-sparc64}
 .endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-[78].*-earmv[67]hf) || make(distinfo)
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv[67]hf) || make(distinfo)
 DISTFILES+=		${BOOT.nb7-earmv6hf}
 EXTRACT_ONLY+=		${BOOT.nb7-earmv6hf}
 .endif
