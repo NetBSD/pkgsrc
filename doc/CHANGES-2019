@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4025 2019/09/22 09:56:47 joerg Exp $
+$NetBSD: CHANGES-2019,v 1.4026 2019/09/22 12:11:06 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6585,3 +6585,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added emulators/dosbox-x version 0.82.21 [nia 2019-09-22]
 	Updated archivers/libarchive to 3.4.0 [joerg 2019-09-22]
 	Updated archivers/bsdtar to 3.4.0 [joerg 2019-09-22]
+	Added games/fallingtime version 1.0.1 [nia 2019-09-22]
