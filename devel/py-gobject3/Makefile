@@ -1,23 +1,27 @@
-# $NetBSD: Makefile,v 1.35 2018/11/14 22:21:20 kleink Exp $
+# $NetBSD: Makefile,v 1.36 2019/09/22 17:52:41 prlw1 Exp $
 
-PY_PATCHPLIST=	yes
-EGG_NAME?=	${DISTNAME:C/-([^0-9])/_\1/g}
-PLIST_SUBST+=	EGG_FILE=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
-
-PKGREVISION= 1
 .include "Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//:S/-/3-/}
+EGG_NAME=	${DISTNAME:S/pygobject/PyGObject/}
 
 COMMENT=	Python bindings for glib2 gobject
 
-CONFIGURE_ARGS+=	--without-common
-TEST_TARGET=		check
+MESON_ARGS+=	-Dpython=${PYTHONBIN:Q}
+MESON_ARGS+=	-Dtests=false
+TEST_TARGET=	check
+
+# XXX shouldn't be necessary with -Dinstall-common=false
+post-install:
+	${RM} \
+	${DESTDIR}${PREFIX}/include/pygobject-3.0/pygobject.h \
+	${DESTDIR}${PREFIX}/lib/pkgconfig/pygobject-3.0.pc
 
 .include "../../devel/py-gobject3-common/buildlink3.mk"
+.include "../../devel/py-meson/build.mk"
 # https://bugzilla.gnome.org/show_bug.cgi?id=685094
 # https://bugzilla.gnome.org/show_bug.cgi?id=707196
 .include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../graphics/cairo-gobject/buildlink3.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
