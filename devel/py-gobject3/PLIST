@@ -1,16 +1,28 @@
-@comment $NetBSD: PLIST,v 1.11 2018/04/14 12:27:35 adam Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.12 2019/09/22 17:52:41 prlw1 Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/PyGObject-${PKGVERSION}.egg-info
 ${PYSITELIB}/gi/__init__.py
 ${PYSITELIB}/gi/__init__.pyc
 ${PYSITELIB}/gi/__init__.pyo
+${PYSITELIB}/gi/_compat.py
+${PYSITELIB}/gi/_compat.pyc
+${PYSITELIB}/gi/_compat.pyo
 ${PYSITELIB}/gi/_constants.py
 ${PYSITELIB}/gi/_constants.pyc
 ${PYSITELIB}/gi/_constants.pyo
 ${PYSITELIB}/gi/_error.py
 ${PYSITELIB}/gi/_error.pyc
 ${PYSITELIB}/gi/_error.pyo
-${PYSITELIB}/gi/_gi.la
-${PYSITELIB}/gi/_gi_cairo.la
+${PYSITELIB}/gi/_gi.so
+${PYSITELIB}/gi/_gi_cairo.so
+${PYSITELIB}/gi/_gtktemplate.py
+${PYSITELIB}/gi/_gtktemplate.pyc
+${PYSITELIB}/gi/_gtktemplate.pyo
 ${PYSITELIB}/gi/_option.py
 ${PYSITELIB}/gi/_option.pyc
 ${PYSITELIB}/gi/_option.pyo
@@ -44,6 +56,9 @@ ${PYSITELIB}/gi/overrides/GObject.pyo
 ${PYSITELIB}/gi/overrides/Gdk.py
 ${PYSITELIB}/gi/overrides/Gdk.pyc
 ${PYSITELIB}/gi/overrides/Gdk.pyo
+${PYSITELIB}/gi/overrides/GdkPixbuf.py
+${PYSITELIB}/gi/overrides/GdkPixbuf.pyc
+${PYSITELIB}/gi/overrides/GdkPixbuf.pyo
 ${PYSITELIB}/gi/overrides/Gio.py
 ${PYSITELIB}/gi/overrides/Gio.pyc
 ${PYSITELIB}/gi/overrides/Gio.pyo
