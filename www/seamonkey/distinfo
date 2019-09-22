@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.158 2019/06/13 10:53:11 nia Exp $
+$NetBSD: distinfo,v 1.158.2.1 2019/09/22 09:25:00 bsiegert Exp $
 
-SHA1 (seamonkey-2.49.4.source.tar.xz) = e9fa6d1c57e9141a299f6ec093683fb105ea6657
-RMD160 (seamonkey-2.49.4.source.tar.xz) = 072caadf376b7726356d6121abff87cc1fb62144
-SHA512 (seamonkey-2.49.4.source.tar.xz) = f67dfb269c946da3d8dd6091daf51b80edac0f9e1fe88d860018c8628e5aaaaf17c91d086b6d7502465ccbfe6485fabdf072bb088af5c59520e77f12a5812625
-Size (seamonkey-2.49.4.source.tar.xz) = 231795176 bytes
-SHA1 (patch-ao) = e466058ed1899a64a9ab5b57290ff2baad1ea03c
+SHA1 (seamonkey-2.49.5.source.tar.xz) = 366953dee336185102d9a17028d49834cdb897d2
+RMD160 (seamonkey-2.49.5.source.tar.xz) = 6423a548286a166e88695060713afefd7365f389
+SHA512 (seamonkey-2.49.5.source.tar.xz) = 31309def1ad4276f13ecb343e936c7cade4b6850db88d9d84700f86bff7024b2b217b9e50fc3756b1d1beea483ceaa2a5a3afd053da00f6ac06e3795e9116789
+Size (seamonkey-2.49.5.source.tar.xz) = 231748204 bytes
 SHA1 (patch-ldap_c-sdk_include_portable.h) = ce0b643fa031b74bf7d74eedc4f3729807aef799
 SHA1 (patch-mail_app_Makefile.in) = da6ac87ffdcff733f11218cb11f8ef316bb1bc18
 SHA1 (patch-mailnews_base_search_src_nsMsgSearchTerm.cpp) = 0cbabcf5b188e86404e3ded8452c73a7f498efe3
@@ -54,7 +53,6 @@ SHA1 (patch-mozilla_ipc_chromium_src_base_process__util.h) = 738e1306fbadebd20b5
 SHA1 (patch-mozilla_ipc_chromium_src_base_process__util__posix.cc) = d67e126dfb26e2394a9c21aab5e3b6cc3ab238f1
 SHA1 (patch-mozilla_ipc_chromium_src_base_sys__info__posix.cc) = ad8d2843316ec1dd0b1309afe4f3eaaa711db6df
 SHA1 (patch-mozilla_ipc_chromium_src_base_time__posix.cc) = 2662bf55bf5276d06c4754cdce125a0bfbac17a0
-SHA1 (patch-mozilla_ipc_chromium_src_build_build__config.h) = 86e88aa90bd4d573fd59d47f5a3e45c5c52c7e45
 SHA1 (patch-mozilla_ipc_chromium_src_chrome_common_transport__dib.h) = 53c37dedaf5f0b302627be5dddebcb39decfa5e3
 SHA1 (patch-mozilla_ipc_glue_GeckoChildProcessHost.cpp) = 7a52fef553345a46171aeb3c93db30e6b3998c2c
 SHA1 (patch-mozilla_js_src_jit_arm_Architecture-arm.cpp) = 315d98f471d0c17434b8d1b94e06c792c3ec110f
@@ -89,6 +87,7 @@ SHA1 (patch-mozilla_mozglue_build_arm.cpp) = 592ae5ce1a404227cc2ab6a06418cc813c5
 SHA1 (patch-mozilla_mozglue_build_arm.h) = 94e2b1a1a9ebf20bfa8a542066aa0dad475db320
 SHA1 (patch-mozilla_netwerk_dns_moz.build) = d87c07ebfa01d32ca826932af733b37ce586e9f7
 SHA1 (patch-mozilla_old-configure.in) = e98e393a90c8283259d7c6fe2a2fff03f2747e4d
+SHA1 (patch-mozilla_security_manager_ssl_moz.build) = 70b36809c96e586c93af4ea54a383a74835b2192
 SHA1 (patch-mozilla_toolkit_components_osfile_modules_osfile__unix__back.jsm) = db4084f6a7dba2fc5d35cd256c6f149fabbf7bc7
 SHA1 (patch-mozilla_toolkit_components_osfile_modules_osfile__unix__front.jsm) = 1e8d0883d3cc12541020c7df0b1d67f60e7391f5
 SHA1 (patch-mozilla_toolkit_components_protobuf_src_google_protobuf_stubs_atomicops.h) = 0b5cad33bc9a90f4ae2d6346065707b642aba3a9
@@ -97,7 +96,7 @@ SHA1 (patch-mozilla_toolkit_components_protobuf_src_google_protobuf_stubs_platfo
 SHA1 (patch-mozilla_toolkit_components_terminator_nsTerminator.cpp) = c54660b4699925c49bd2a98ef8915d49960fbd13
 SHA1 (patch-mozilla_toolkit_library_moz.build) = fa16eaf09857a8db6df5d09c2af42e06dbeb604f
 SHA1 (patch-mozilla_toolkit_modules_GMPUtils.jsm) = 4cfec16c0ec538ac80d590291db1eebd378e0b1a
-SHA1 (patch-mozilla_toolkit_moz.configure) = 001013666d1f59c271010a11c64634bb2012948b
+SHA1 (patch-mozilla_toolkit_moz.configure) = 2adee84691022b12513dc6b9483b06626efdbaa7
 SHA1 (patch-mozilla_toolkit_mozapps_extensions_test_browser_browser__gmpProvider.js) = 85f482aecaf5bd971775c6fbf35d3d6bfd04a296
 SHA1 (patch-mozilla_toolkit_xre_glxtest.cpp) = a8f6653760e33014c5e6f104b19fce8a0f331d24
 SHA1 (patch-mozilla_toolkit_xre_nsEmbedFunctions.cpp) = 70030e59b2ed09b9bc9827d35e17b12be7f0cd71

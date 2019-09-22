@@ -1,10 +1,10 @@
-$NetBSD: patch-mozilla_toolkit_moz.configure,v 1.2 2017/11/10 22:45:27 ryoon Exp $
+$NetBSD: patch-mozilla_toolkit_moz.configure,v 1.2.14.1 2019/09/22 09:25:00 bsiegert Exp $
 
---- mozilla/toolkit/moz.configure.orig	2017-10-16 07:20:55.000000000 +0000
+--- mozilla/toolkit/moz.configure.orig	2019-05-06 17:31:10.000000000 +0000
 +++ mozilla/toolkit/moz.configure
-@@ -338,6 +338,26 @@ add_old_configure_assignment('FT2_LIBS',
+@@ -338,6 +338,27 @@ add_old_configure_assignment('FT2_LIBS',
  add_old_configure_assignment('FT2_CFLAGS',
-                              delayed_getattr(ft2_info, 'cflags'))
+                              ft2_info.cflags)
  
 +# Graphite2
 +# ==============================================================
@@ -25,6 +25,7 @@ $NetBSD: patch-mozilla_toolkit_moz.configure,v 1.2 2017/11/10 22:45:27 ryoon Exp
 +                                    when='--with-system-harfbuzz')
 +
 +set_config('MOZ_SYSTEM_HARFBUZZ', depends_if(system_harfbuzz)(lambda _: True))
++
 +
  # Apple platform decoder support
  # ==============================================================
