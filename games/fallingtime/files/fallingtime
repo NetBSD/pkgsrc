@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# $NetBSD: fallingtime,v 1.1 2019/09/22 12:10:45 nia Exp $
+# Launcher script for fallingtime.
+
+cd /usr/pkg/share/fallingtime && /usr/pkg/libexec/falling_time
