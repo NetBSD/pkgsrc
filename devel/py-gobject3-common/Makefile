@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/04/14 12:27:35 adam Exp $
+# $NetBSD: Makefile,v 1.5 2019/09/22 17:52:41 prlw1 Exp $
 
 PYTHON_FOR_BUILD_ONLY=	yes
 
@@ -8,16 +8,25 @@ PKGNAME=	py-${DISTNAME:S/^py//:S/-/3-common-/}
 
 COMMENT=	Python version independent files for glib2 gobject bindings
 
-CONFIGURE_ARGS+=	--disable-cairo
-
-do-build:
+SUBST_CLASSES+=			configurepc
+SUBST_STAGE.configurepc=	do-configure
+SUBST_MESSAGE.configurepc=	Create .pc file
+SUBST_FILES.configurepc=	pygobject-3.0.pc.in
+SUBST_SED.configurepc=		-e 's,@prefix@,${PREFIX},'
+SUBST_SED.configurepc+=		-e 's,@exec_prefix@,$${prefix},'
+SUBST_SED.configurepc+=		-e 's,@includedir@,$${prefix}/include,'
+SUBST_SED.configurepc+=		-e 's,@datarootdir@,$${prefix}/share,'
+SUBST_SED.configurepc+=		-e 's,@datadir@,$${datarootdir},'
+SUBST_SED.configurepc+=		-e 's,@VERSION@,${PKGVERSION},'
 
 INSTALLATION_DIRS+=	include/pygobject-3.0 lib/pkgconfig
 
+do-build:
+
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/gi/pygobject.h \
+	${INSTALL_DATA} ${WRKSRC}/gi/pygobject.h \
 		${DESTDIR}${PREFIX}/include/pygobject-3.0/pygobject.h
-	${INSTALL_SCRIPT} ${WRKSRC}/pygobject-3.0.pc \
+	${INSTALL_DATA} ${WRKSRC}/pygobject-3.0.pc.in \
 		${DESTDIR}${PREFIX}/lib/pkgconfig/pygobject-3.0.pc
 
 .include "../../mk/bsd.pkg.mk"
