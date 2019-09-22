@@ -7,7 +7,7 @@ Reported upstream:
 https://bitbucket.org/arakiken/mlterm/pull-requests/5/fix-for-wscons-framebuffer/diff
 
 --- uitoolkit/fb/ui_display_wscons.c.orig	2019-03-31 22:10:47.000000000 +0900
-+++ uitoolkit/fb/ui_display_wscons.c	2019-07-26 21:54:53.421920873 +0900
++++ uitoolkit/fb/ui_display_wscons.c	2019-09-22 15:10:00.573589888 +0900
 @@ -260,6 +260,7 @@ static int open_display(u_int depth /* u
  #ifdef WSDISPLAYIO_GET_FBINFO
    struct wsdisplayio_fbinfo vinfo2;
@@ -52,7 +52,7 @@ https://bitbucket.org/arakiken/mlterm/pull-requests/5/fix-for-wscons-framebuffer
      u_int plane;
  
 -    _display.smem_len = 0x40000 * _disp.depth;
-+    _display.smem_len = (fboffset + 0x40000) * _disp.depth;
++    _display.smem_len = fboffset + 0x40000 * _disp.depth;
  
      for (plane = 0; plane < _disp.depth; plane++) {
        _display.plane_offset[plane] = 0x40000 * plane;
