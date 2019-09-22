@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2019/08/31 14:44:58 nia Exp $
+@comment $NetBSD: PLIST,v 1.16 2019/09/22 18:03:53 prlw1 Exp $
 lib/libfreeciv.la
 man/man6/freeciv-client.6
 man/man6/freeciv-gtk2.6
@@ -48,7 +48,6 @@ share/doc/freeciv/README.scorelog
 share/doc/freeciv/README.sound
 share/doc/freeciv/README.tilesets
 share/doc/freeciv/TODO
-share/freeciv/Freeciv
 share/freeciv/amplio2.tilespec
 share/freeciv/amplio2/activities.png
 share/freeciv/amplio2/activities.spec
@@ -2466,8 +2465,7 @@ share/freeciv/flags/zulu-large.png
 share/freeciv/flags/zulu-shield-large.png
 share/freeciv/flags/zulu-shield.png
 share/freeciv/flags/zulu.png
-share/freeciv/freeciv.rc-2.0
-share/freeciv/gtk2_menus.xml
+share/freeciv/gtk3.22_menus.xml
 share/freeciv/helpdata.txt
 share/freeciv/hex2t.tilespec
 share/freeciv/hex2t/grid.png
