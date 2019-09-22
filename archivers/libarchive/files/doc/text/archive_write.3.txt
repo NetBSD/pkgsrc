@@ -38,8 +38,8 @@ DESCRIPTION
 
      Once you have prepared the struct archive object, you call
      archive_write_open() to actually open the archive and prepare it for
-     writing.  There are several variants of this function; the most basic
-     expects you to provide pointers to several functions that can provide
+     writing.  There are several variants of this function; the most basic ex‐
+     pects you to provide pointers to several functions that can provide
      blocks of bytes from the archive.	There are convenience forms that allow
      you to specify a filename, file descriptor, FILE * object, or a block of
      memory from which to write the archive data.
@@ -61,8 +61,8 @@ DESCRIPTION
      tion to release all resources.
 
 EXAMPLE
-     The following sketch illustrates basic usage of the library.  In this
-     example, the callback functions are simply wrappers around the standard
+     The following sketch illustrates basic usage of the library.  In this ex‐
+     ample, the callback functions are simply wrappers around the standard
      open(2), write(2), and close(2) system calls.
 
 	   #ifdef __linux__
@@ -173,8 +173,8 @@ AUTHORS
 BUGS
      There are many peculiar bugs in historic tar implementations that may
      cause certain programs to reject archives written by this library.  For
-     example, several historic implementations calculated header checksums
-     incorrectly and will thus reject valid archives; GNU tar does not fully
+     example, several historic implementations calculated header checksums in‐
+     correctly and will thus reject valid archives; GNU tar does not fully
      support pax interchange format; some old tar implementations required
      specific field terminations.
 

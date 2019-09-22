@@ -124,8 +124,8 @@ OPTIONS
 		     fier in the ISO9660 metadata.  It is limited to 32 bytes.
 		     Default: none.
      Format iso9660 - boot support
-	     These options are used to make an ISO9660 image that can be
-	     directly booted on various systems.
+	     These options are used to make an ISO9660 image that can be di‐
+	     rectly booted on various systems.
 	     boot=filename
 		     The file matching this name will be used as the El Torito
 		     boot image file.
@@ -151,16 +151,16 @@ OPTIONS
 		     Specifies the boot semantics used by the El Torito boot
 		     image: If the value is fd, then the boot image is assumed
 		     to be a bootable floppy image.  If the value is hd, then
-		     the boot image is assumed to be a bootable hard disk
-		     image.  If the value is no-emulation, the boot image is
+		     the boot image is assumed to be a bootable hard disk im‐
+		     age.  If the value is no-emulation, the boot image is
 		     used without floppy or hard disk emulation.  If the boot
-		     image is exactly 1.2MB, 1.44MB, or 2.88MB, then the
-		     default is fd, otherwise the default is no-emulation.
+		     image is exactly 1.2MB, 1.44MB, or 2.88MB, then the de‐
+		     fault is fd, otherwise the default is no-emulation.
      Format iso9660 - filename and size extensions
 	     Various extensions to the base ISO9660 format.
 	     allow-ldots
-		     If enabled, allows filenames to begin with a leading
-		     period.  If disabled, filenames that begin with a leading
+		     If enabled, allows filenames to begin with a leading pe‐
+		     riod.  If disabled, filenames that begin with a leading
 		     period will have that period replaced by an underscore
 		     character in the standard ISO9660 namespace.  This does
 		     not impact names stored in the Rockridge or Joliet exten‐
@@ -173,8 +173,8 @@ OPTIONS
 	     allow-multidot
 		     If enabled, allows filenames to contain multiple period
 		     characters, in violation of the ISO9660 specification.
-		     If disabled, additional periods will be converted to
-		     underscore characters.  This does not impact names stored
+		     If disabled, additional periods will be converted to un‐
+		     derscore characters.  This does not impact names stored
 		     in the Rockridge or Joliet extension area.  Default: dis‐
 		     abled.
 	     allow-period
@@ -260,8 +260,8 @@ OPTIONS
 	     default.
 	     compression-level=number
 		     The compression level used by the deflate compressor.
-		     Ranges from 0 (least effort) to 9 (most effort).
-		     Default: 6
+		     Ranges from 0 (least effort) to 9 (most effort).  De‐
+		     fault: 6
 	     zisofs  Synonym for zisofs=direct.
 	     zisofs=direct
 		     Compress each file in the archive.  Unlike
@@ -298,9 +298,9 @@ OPTIONS
 	     hdrcharset
 		     This sets the character set used for filenames.
 	     zip64   Zip64 extensions provide additional file size information
-		     for entries larger than 4 GiB.  They also provide
-		     extended file offset and archive size information when
-		     archives exceed 4 GiB.  By default, the Zip writer selec‐
+		     for entries larger than 4 GiB.  They also provide ex‐
+		     tended file offset and archive size information when ar‐
+		     chives exceed 4 GiB.  By default, the Zip writer selec‐
 		     tively enables these extensions only as needed.  In par‐
 		     ticular, if the file size is unknown, the Zip writer will
 		     include Zip64 extensions to guard against the possibility
@@ -313,8 +313,8 @@ OPTIONS
 
 		     Disabling this option with !zip64 will force the Zip
 		     writer to avoid Zip64 extensions: It will reject files
-		     with size greater than 4 GiB, it will reject any new
-		     entries once the total archive size reaches 4 GiB, and it
+		     with size greater than 4 GiB, it will reject any new en‐
+		     tries once the total archive size reaches 4 GiB, and it
 		     will not use Zip64 extensions for files with unknown
 		     size.  In particular, this can improve compatibility when
 		     generating archives where the entry sizes are not known

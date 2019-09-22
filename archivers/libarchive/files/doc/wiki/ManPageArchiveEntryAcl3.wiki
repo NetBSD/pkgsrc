@@ -345,7 +345,7 @@ or
 '''archive_entry_acl_next_w'''(). 
 The function returns either 0, if no non-extended ACLs are found. 
 In this case, the access permissions should be obtained by 
-[[ManPagerchiventryode3]] 
+[[ManPageArchiveEntryMode3]] 
 or set using 
 [[chmod(2)|http://www.freebsd.org/cgi/man.cgi?query=chmod&sektion=2]]. 
 Otherwise, the function returns the same value as 
@@ -456,5 +456,5 @@ and flags on success or NULL on error.
 '''archive_entry_acl_types'''() 
 returns a bitmask of ACL entry types or 0 if archive entry has no ACL entries. 
 == SEE ALSO == 
-[[ManPagerchiventry3]], 
-[[ManPageibarchive3]] 
+[[ManPageArchiveEntry3]], 
+[[ManPageLibarchive3]] 

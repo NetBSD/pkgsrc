@@ -132,6 +132,8 @@ libarchive_la_SOURCES= \
 	libarchive/archive_ppmd_private.h \
 	libarchive/archive_ppmd7.c \
 	libarchive/archive_ppmd7_private.h \
+	libarchive/archive_ppmd8.c \
+	libarchive/archive_ppmd8_private.h \
 	libarchive/archive_private.h \
 	libarchive/archive_random.c \
 	libarchive/archive_random_private.h \
@@ -179,6 +181,7 @@ libarchive_la_SOURCES= \
 	libarchive/archive_read_support_format_lha.c \
 	libarchive/archive_read_support_format_mtree.c \
 	libarchive/archive_read_support_format_rar.c \
+	libarchive/archive_read_support_format_rar5.c \
 	libarchive/archive_read_support_format_raw.c \
 	libarchive/archive_read_support_format_tar.c \
 	libarchive/archive_read_support_format_warc.c \
@@ -251,6 +254,14 @@ libarchive_la_SOURCES+= \
 	libarchive/filter_fork_windows.c
 endif
 
+if INC_BLAKE2
+libarchive_la_SOURCES+= \
+	libarchive/archive_blake2.h \
+	libarchive/archive_blake2_impl.h \
+	libarchive/archive_blake2s_ref.c \
+	libarchive/archive_blake2sp_ref.c
+endif
+
 if INC_LINUX_ACL
 libarchive_la_SOURCES+= libarchive/archive_disk_acl_linux.c
 else
@@ -277,6 +288,7 @@ libarchive_man_MANS= \
 	libarchive/archive_entry.3 \
 	libarchive/archive_entry_acl.3 \
 	libarchive/archive_entry_linkify.3 \
+	libarchive/archive_entry_misc.3 \
 	libarchive/archive_entry_paths.3 \
 	libarchive/archive_entry_perms.3 \
 	libarchive/archive_entry_stat.3 \
@@ -393,7 +405,6 @@ libarchive_test_SOURCES= \
 	libarchive/test/test_compat_lzma.c \
 	libarchive/test/test_compat_lzop.c \
 	libarchive/test/test_compat_mac.c \
-	libarchive/test/test_compat_pax_libarchive_2x.c \
 	libarchive/test/test_compat_perl_archive_tar.c \
 	libarchive/test/test_compat_plexus_archiver_tar.c \
 	libarchive/test/test_compat_solaris_tar_acl.c \
@@ -485,11 +496,13 @@ libarchive_test_SOURCES= \
 	libarchive/test/test_read_format_rar_encryption_partially.c \
 	libarchive/test/test_read_format_rar_encryption_header.c \
 	libarchive/test/test_read_format_rar_invalid1.c \
+	libarchive/test/test_read_format_rar5.c \
 	libarchive/test/test_read_format_raw.c \
 	libarchive/test/test_read_format_tar.c \
 	libarchive/test/test_read_format_tar_concatenated.c \
 	libarchive/test/test_read_format_tar_empty_pax.c \
 	libarchive/test/test_read_format_tar_empty_filename.c \
+	libarchive/test/test_read_format_tar_empty_with_gnulabel.c \
 	libarchive/test/test_read_format_tar_filename.c \
 	libarchive/test/test_read_format_tbz.c \
 	libarchive/test/test_read_format_tgz.c \
@@ -500,10 +513,12 @@ libarchive_test_SOURCES= \
 	libarchive/test/test_read_format_warc.c \
 	libarchive/test/test_read_format_xar.c \
 	libarchive/test/test_read_format_zip.c \
+	libarchive/test/test_read_format_zip_7075_utf8_paths.c \
 	libarchive/test/test_read_format_zip_comment_stored.c \
 	libarchive/test/test_read_format_zip_encryption_data.c \
 	libarchive/test/test_read_format_zip_encryption_partially.c \
 	libarchive/test/test_read_format_zip_encryption_header.c \
+	libarchive/test/test_read_format_zip_extra_padding.c \
 	libarchive/test/test_read_format_zip_filename.c \
 	libarchive/test/test_read_format_zip_high_compression.c \
 	libarchive/test/test_read_format_zip_jar.c \
@@ -663,7 +678,6 @@ libarchive_test_EXTRA_DIST=\
 	libarchive/test/test_compat_lzop_3.tar.lzo.uu \
 	libarchive/test/test_compat_mac-1.tar.Z.uu \
 	libarchive/test/test_compat_mac-2.tar.Z.uu \
-	libarchive/test/test_compat_pax_libarchive_2x.tar.Z.uu \
 	libarchive/test/test_compat_perl_archive_tar.tar.uu \
 	libarchive/test/test_compat_plexus_archiver_tar.tar.uu \
 	libarchive/test/test_compat_solaris_pax_sparse_1.pax.Z.uu \
@@ -711,6 +725,7 @@ libarchive_test_EXTRA_DIST=\
 	libarchive/test/test_read_filter_lzop.tar.lzo.uu \
 	libarchive/test/test_read_filter_lzop_multiple_parts.tar.lzo.uu \
 	libarchive/test/test_read_format_mtree_crash747.mtree.bz2.uu \
+	libarchive/test/test_read_format_mtree_noprint.mtree.uu \
 	libarchive/test/test_read_format_7zip_bcj2_bzip2.7z.uu \
 	libarchive/test/test_read_format_7zip_bcj2_copy_1.7z.uu \
 	libarchive/test/test_read_format_7zip_bcj2_copy_2.7z.uu \
@@ -810,15 +825,51 @@ libarchive_test_EXTRA_DIST=\
 	libarchive/test/test_read_format_rar_multivolume.part0004.rar.uu \
 	libarchive/test/test_read_format_rar_noeof.rar.uu \
 	libarchive/test/test_read_format_rar_ppmd_lzss_conversion.rar.uu \
+	libarchive/test/test_read_format_rar_ppmd_use_after_free.rar.uu \
 	libarchive/test/test_read_format_rar_sfx.exe.uu \
 	libarchive/test/test_read_format_rar_subblock.rar.uu \
 	libarchive/test/test_read_format_rar_unicode.rar.uu \
 	libarchive/test/test_read_format_rar_windows.rar.uu \
+	libarchive/test/test_read_format_rar5_arm.rar.uu \
+	libarchive/test/test_read_format_rar5_blake2.rar.uu \
+	libarchive/test/test_read_format_rar5_compressed.rar.uu \
+	libarchive/test/test_read_format_rar5_distance_overflow.rar.uu \
+	libarchive/test/test_read_format_rar5_extra_field_version.rar.uu \
+	libarchive/test/test_read_format_rar5_fileattr.rar.uu \
+	libarchive/test/test_read_format_rar5_hardlink.rar.uu \
+	libarchive/test/test_read_format_rar5_invalid_dict_reference.rar.uu \
+	libarchive/test/test_read_format_rar5_leftshift1.rar.uu \
+	libarchive/test/test_read_format_rar5_leftshift2.rar.uu \
+	libarchive/test/test_read_format_rar5_multiarchive.part01.rar.uu \
+	libarchive/test/test_read_format_rar5_multiarchive.part02.rar.uu \
+	libarchive/test/test_read_format_rar5_multiarchive.part03.rar.uu \
+	libarchive/test/test_read_format_rar5_multiarchive.part04.rar.uu \
+	libarchive/test/test_read_format_rar5_multiarchive.part05.rar.uu \
+	libarchive/test/test_read_format_rar5_multiarchive.part06.rar.uu \
+	libarchive/test/test_read_format_rar5_multiarchive.part07.rar.uu \
+	libarchive/test/test_read_format_rar5_multiarchive.part08.rar.uu \
+	libarchive/test/test_read_format_rar5_multiarchive_solid.part01.rar.uu \
+	libarchive/test/test_read_format_rar5_multiarchive_solid.part02.rar.uu \
+	libarchive/test/test_read_format_rar5_multiarchive_solid.part03.rar.uu \
+	libarchive/test/test_read_format_rar5_multiarchive_solid.part04.rar.uu \
+	libarchive/test/test_read_format_rar5_multiple_files.rar.uu \
+	libarchive/test/test_read_format_rar5_multiple_files_solid.rar.uu \
+	libarchive/test/test_read_format_rar5_nonempty_dir_stream.rar.uu \
+	libarchive/test/test_read_format_rar5_owner.rar.uu \
+	libarchive/test/test_read_format_rar5_readtables_overflow.rar.uu \
+	libarchive/test/test_read_format_rar5_solid.rar.uu \
+	libarchive/test/test_read_format_rar5_stored.rar.uu \
+	libarchive/test/test_read_format_rar5_stored_manyfiles.rar.uu \
+	libarchive/test/test_read_format_rar5_symlink.rar.uu \
+	libarchive/test/test_read_format_rar5_truncated_huff.rar.uu \
+	libarchive/test/test_read_format_rar5_win32.rar.uu \
 	libarchive/test/test_read_format_raw.bufr.uu \
+	libarchive/test/test_read_format_raw.data.gz.uu \
 	libarchive/test/test_read_format_raw.data.Z.uu \
 	libarchive/test/test_read_format_raw.data.uu \
 	libarchive/test/test_read_format_tar_concatenated.tar.uu \
 	libarchive/test/test_read_format_tar_empty_filename.tar.uu \
+	libarchive/test/test_read_format_tar_empty_with_gnulabel.tar.uu \
 	libarchive/test/test_read_format_tar_empty_pax.tar.Z.uu \
 	libarchive/test/test_read_format_tar_filename_koi8r.tar.Z.uu \
 	libarchive/test/test_read_format_ustar_filename_cp866.tar.Z.uu \
@@ -826,11 +877,16 @@ libarchive_test_EXTRA_DIST=\
 	libarchive/test/test_read_format_ustar_filename_koi8r.tar.Z.uu \
 	libarchive/test/test_read_format_warc.warc.uu \
 	libarchive/test/test_read_format_zip.zip.uu \
+	libarchive/test/test_read_format_zip_7075_utf8_paths.zip.uu \
+	libarchive/test/test_read_format_zip_bz2_hang.zip.uu \
+	libarchive/test/test_read_format_zip_bzip2.zipx.uu \
+	libarchive/test/test_read_format_zip_bzip2_multi.zipx.uu \
 	libarchive/test/test_read_format_zip_comment_stored_1.zip.uu \
 	libarchive/test/test_read_format_zip_comment_stored_2.zip.uu \
 	libarchive/test/test_read_format_zip_encryption_data.zip.uu \
 	libarchive/test/test_read_format_zip_encryption_header.zip.uu \
 	libarchive/test/test_read_format_zip_encryption_partially.zip.uu \
+	libarchive/test/test_read_format_zip_extra_padding.zip.uu \
 	libarchive/test/test_read_format_zip_filename_cp866.zip.uu \
 	libarchive/test/test_read_format_zip_filename_cp932.zip.uu \
 	libarchive/test/test_read_format_zip_filename_koi8r.zip.uu \
@@ -839,6 +895,9 @@ libarchive_test_EXTRA_DIST=\
 	libarchive/test/test_read_format_zip_filename_utf8_ru2.zip.uu \
 	libarchive/test/test_read_format_zip_high_compression.zip.uu \
 	libarchive/test/test_read_format_zip_length_at_end.zip.uu \
+	libarchive/test/test_read_format_zip_lzma.zipx.uu \
+	libarchive/test/test_read_format_zip_lzma_alone_leak.zipx.uu \
+	libarchive/test/test_read_format_zip_lzma_multi.zipx.uu \
 	libarchive/test/test_read_format_zip_jar.jar.uu \
 	libarchive/test/test_read_format_zip_mac_metadata.zip.uu \
 	libarchive/test/test_read_format_zip_malformed1.zip.uu \
@@ -848,6 +907,10 @@ libarchive_test_EXTRA_DIST=\
 	libarchive/test/test_read_format_zip_padded1.zip.uu \
 	libarchive/test/test_read_format_zip_padded2.zip.uu \
 	libarchive/test/test_read_format_zip_padded3.zip.uu \
+	libarchive/test/test_read_format_zip_ppmd8.zipx.uu \
+	libarchive/test/test_read_format_zip_ppmd8_crash_1.zipx.uu \
+	libarchive/test/test_read_format_zip_ppmd8_crash_2.zipx.uu \
+	libarchive/test/test_read_format_zip_ppmd8_multi.zipx.uu \
 	libarchive/test/test_read_format_zip_sfx.uu \
 	libarchive/test/test_read_format_zip_symlink.zip.uu \
 	libarchive/test/test_read_format_zip_traditional_encryption_data.zip.uu \
@@ -857,6 +920,7 @@ libarchive_test_EXTRA_DIST=\
 	libarchive/test/test_read_format_zip_winzip_aes256_large.zip.uu \
 	libarchive/test/test_read_format_zip_winzip_aes256_stored.zip.uu \
 	libarchive/test/test_read_format_zip_with_invalid_traditional_eocd.zip.uu \
+	libarchive/test/test_read_format_zip_xz_multi.zipx.uu \
 	libarchive/test/test_read_format_zip_zip64a.zip.uu \
 	libarchive/test/test_read_format_zip_zip64b.zip.uu \
 	libarchive/test/test_read_large_splitted_rar_aa.uu \
@@ -985,6 +1049,7 @@ bsdtar_test_SOURCES= \
 	tar/test/test_option_b.c \
 	tar/test/test_option_b64encode.c \
 	tar/test/test_option_exclude.c \
+	tar/test/test_option_exclude_vcs.c \
 	tar/test/test_option_fflags.c \
 	tar/test/test_option_gid_gname.c \
 	tar/test/test_option_grzip.c \

@@ -38,8 +38,8 @@ DESCRIPTION
 	     This is a deprecated synonym for archive_write_free().
 
      archive_write_free()
-	     Invokes archive_write_close() if necessary, then releases all
-	     resources.  If you need detailed information about
+	     Invokes archive_write_close() if necessary, then releases all re‐
+	     sources.  If you need detailed information about
 	     archive_write_close() failures, you should be careful to call it
 	     separately, as you cannot obtain error information after
 	     archive_write_free() returns.

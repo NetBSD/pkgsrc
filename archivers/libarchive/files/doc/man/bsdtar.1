@@ -1,4 +1,4 @@
-.TH TAR 1 "October 1, 2017" ""
+.TH TAR 1 "June 3, 2019" ""
 .SH NAME
 .ad l
 \fB\%tar\fP
@@ -206,7 +206,7 @@ options and before extracting any files.
 \fB\-Fl\fP clear-nochange-fflags
 (x mode only)
 Before removing file system objects to replace them, clear platform-specific
-file flags that might prevent removal.
+file attributes or file flags that might prevent removal.
 .TP
 \fB\-Fl\fP exclude \fIpattern\fP
 Do not process files or directories that match the
@@ -214,9 +214,23 @@ specified pattern.
 Note that exclusions take precedence over patterns or filenames
 specified on the command line.
 .TP
+\fB\-Fl\fP exclude-vcs
+Do not process files or directories internally used by the
+version control systems
+Sq CVS,
+Sq RCS,
+Sq SCCS,
+Sq SVN,
+Sq Arch,
+Sq Bazaar,
+Sq Mercurial
+and
+Sq Darcs.
+.TP
 \fB\-Fl\fP fflags
 (c, r, u, x modes only)
-Archive or extract file flags. This is the reverse of
+Archive or extract platform-specific file attributes or file flags.
+This is the reverse of
 \fB\-Fl\fP no-fflags
 and the default behavior in c, r, and u modes or if
 \fB\%tar\fP
@@ -413,8 +427,8 @@ By default, the modification time is set to the time stored in the archive.
 .TP
 \fB\-Fl\fP mac-metadata
 (c, r, u and x mode only)
-Mac OS X specific. Archive or extract extended ACLs and extended attributes
-using
+Mac OS X specific. Archive or extract extended ACLs and extended file
+attributes using
 \fBcopyfile\fP(3)
 in AppleDouble format. This is the reverse of
 \fB\-Fl\fP no-mac-metadata.
@@ -423,8 +437,7 @@ and the default behavior in c, r, and u modes or if
 is run in x mode as root.
 .TP
 \fB\-n\fP, \fB\-Fl\fP norecurse, \fB\-Fl\fP no-recursion
-(c, r, u modes only)
-Do not recursively archive the contents of directories.
+Do not operate recursively on the content of directories.
 .TP
 \fB\-Fl\fP newer \fIdate\fP
 (c, r, u modes only)
@@ -480,7 +493,7 @@ is run as non-root in x mode (on Mac OS X as any user in c, r, u and x modes).
 .TP
 \fB\-Fl\fP no-fflags
 (c, r, u, x modes only)
-Do not archive or extract file flags. This is the reverse of
+Do not archive or extract file attributes or file flags. This is the reverse of
 \fB\-Fl\fP fflags
 and the default behavior if
 \fB\%tar\fP
@@ -488,15 +501,14 @@ is run as non-root in x mode.
 .TP
 \fB\-Fl\fP no-mac-metadata
 (x mode only)
-Mac OS X specific. Do not archive or extract ACLs and extended attributes using
+Mac OS X specific. Do not archive or extract ACLs and extended file attributes
+using
 \fBcopyfile\fP(3)
 in AppleDouble format. This is the reverse of
 \fB\-Fl\fP mac-metadata.
 and the default behavior if
 \fB\%tar\fP
 is run as non-root in x mode.
-.TP
-\fB\-n\fP, \fB\-Fl\fP norecurse, \fB\-Fl\fP no-recursion
 .TP
 \fB\-Fl\fP no-same-owner
 (x mode only)
@@ -509,8 +521,8 @@ is run as non-root.
 .TP
 \fB\-Fl\fP no-same-permissions
 (x mode only)
-Do not extract full permissions (SGID, SUID, sticky bit, ACLs,
-extended attributes or extended file flags).
+Do not extract full permissions (SGID, SUID, sticky bit,
+file attributes or file flags, extended file attributes and ACLs).
 This is the reverse of
 \fB\-p\fP
 and the default behavior if
@@ -519,7 +531,7 @@ is run as non-root.
 .TP
 \fB\-Fl\fP no-xattrs
 (c, r, u, x modes only)
-Do not archive or extract extended attributes. This is the reverse of
+Do not archive or extract extended file attributes. This is the reverse of
 \fB\-Fl\fP xattrs
 and the default behavior if
 \fB\%tar\fP
@@ -745,13 +757,13 @@ This option suppresses these behaviors.
 \fB\-p\fP, \fB\-Fl\fP insecure, \fB\-Fl\fP preserve-permissions
 (x mode only)
 Preserve file permissions.
-Attempt to restore the full permissions, including owner, file modes, ACLs,
-extended attributes and extended file flags, if available, for each item
-extracted from the archive. This is te reverse of
+Attempt to restore the full permissions, including file modes, file attributes
+or file flags, extended file attributes and ACLs, if available, for each item
+extracted from the archive. This is the reverse of
 \fB\-Fl\fP no-same-permissions
 and the default if
 \fB\%tar\fP
-is being run by root and can be partially overridden by also specifying
+is being run as root. It can be partially overridden by also specifying
 \fB\-Fl\fP no-acls,
 \fB\-Fl\fP no-fflags,
 \fB\-Fl\fP no-mac-metadata
@@ -940,7 +952,7 @@ for more information about the handling of exclusions.
 .TP
 \fB\-Fl\fP xattrs
 (c, r, u, x modes only)
-Archive or extract extended attributes. This is the reverse of
+Archive or extract extended file attributes. This is the reverse of
 \fB\-Fl\fP no-xattrs
 and the default behavior in c, r, and u modes or if
 \fB\%tar\fP

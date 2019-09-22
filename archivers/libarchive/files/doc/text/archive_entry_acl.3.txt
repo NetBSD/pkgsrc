@@ -6,8 +6,8 @@ NAME
      archive_entry_acl_from_text, archive_entry_acl_from_text_w,
      archive_entry_acl_next, archive_entry_acl_next_w,
      archive_entry_acl_reset, archive_entry_acl_to_text,
-     archive_entry_acl_to_text_w, archive_entry_acl_types — functions for
-     manipulating Access Control Lists in archive entry descriptions
+     archive_entry_acl_to_text_w, archive_entry_acl_types — functions for ma‐
+     nipulating Access Control Lists in archive entry descriptions
 
 LIBRARY
      Streaming Archive Library (libarchive, -larchive)
@@ -101,14 +101,14 @@ DESCRIPTION
      Entries (ACEs).
 
      There are four possible types of a NFSv4 ACE:
-	   ARCHIVE_ENTRY_ACL_TYPE_ALLOW Allow principal to perform actions
-					requiring given permissions.
-	   ARCHIVE_ENTRY_ACL_TYPE_DENY	Prevent principal from performing
-					actions requiring given permissions.
+	   ARCHIVE_ENTRY_ACL_TYPE_ALLOW Allow principal to perform actions re‐
+					quiring given permissions.
+	   ARCHIVE_ENTRY_ACL_TYPE_DENY	Prevent principal from performing ac‐
+					tions requiring given permissions.
 	   ARCHIVE_ENTRY_ACL_TYPE_AUDIT Log access attempts by principal which
 					require given permissions.
-	   ARCHIVE_ENTRY_ACL_TYPE_ALARM Trigger a system alarm on access
-					attempts by principal which require
+	   ARCHIVE_ENTRY_ACL_TYPE_ALARM Trigger a system alarm on access at‐
+					tempts by principal which require
 					given permissions.
 
      The tag specifies the principal to which the permission applies.  Valid
@@ -199,9 +199,9 @@ DESCRIPTION
 	   ARCHIVE_ENTRY_ACL_TYPE_DENY
 	   ARCHIVE_ENTRY_ACL_TYPE_AUDIT
 	   ARCHIVE_ENTRY_ACL_TYPE_ALARM
-     for NFSv4 ACLs. For POSIX.1e ACLs if ARCHIVE_ENTRY_ACL_TYPE_ACCESS is
-     included and at least one extended ACL entry is found, the three non-
-     extended ACLs are added.
+     for NFSv4 ACLs. For POSIX.1e ACLs if ARCHIVE_ENTRY_ACL_TYPE_ACCESS is in‐
+     cluded and at least one extended ACL entry is found, the three non-ex‐
+     tended ACLs are added.
 
      archive_entry_acl_from_text() and archive_entry_acl_from_text_w() add new
      (or merge with existing) ACL entries from (wide) text. The argument type
@@ -219,14 +219,14 @@ DESCRIPTION
 
      archive_entry_acl_next() and archive_entry_acl_next_w() return the next
      entry of the ACL list.  This functions may only be called after
-     archive_entry_acl_reset() has indicated the presence of extended ACL
-     entries.
+     archive_entry_acl_reset() has indicated the presence of extended ACL en‐
+     tries.
 
      archive_entry_acl_reset() prepare reading the list of ACL entries with
-     archive_entry_acl_next() or archive_entry_acl_next_w().  The function
-     returns either 0, if no non-extended ACLs are found.  In this case, the
-     access permissions should be obtained by archive_entry_mode(3) or set
-     using chmod(2).  Otherwise, the function returns the same value as
+     archive_entry_acl_next() or archive_entry_acl_next_w().  The function re‐
+     turns either 0, if no non-extended ACLs are found.  In this case, the ac‐
+     cess permissions should be obtained by archive_entry_mode(3) or set using
+     chmod(2).	Otherwise, the function returns the same value as
      archive_entry_acl_count().
 
      archive_entry_acl_to_text() and archive_entry_acl_to_text_w() convert the
@@ -257,23 +257,22 @@ DESCRIPTION
 	   ARCHIVE_ENTRY_ACL_STYLE_SEPARATOR_COMMA
 		   Separate ACL entries with comma instead of newline.
 
-     If the archive entry contains NFSv4 ACLs, all types of NFSv4 ACLs are
-     returned.	It the entry contains POSIX.1e ACLs and none of the flags
+     If the archive entry contains NFSv4 ACLs, all types of NFSv4 ACLs are re‐
+     turned.  It the entry contains POSIX.1e ACLs and none of the flags
      ARCHIVE_ENTRY_ACL_TYPE_ACCESS or ARCHIVE_ENTRY_ACL_TYPE_DEFAULT are spec‐
      ified, both access and default entries are returned and default entries
      are prefixed with “default:”.
 
-     archive_entry_acl_types() get ACL entry types contained in an archive
-     entry's ACL. As POSIX.1e and NFSv4 ACL entries cannot be mixed, this
-     function is a very efficient way to detect if an ACL already contains
+     archive_entry_acl_types() get ACL entry types contained in an archive en‐
+     try's ACL. As POSIX.1e and NFSv4 ACL entries cannot be mixed, this func‐
+     tion is a very efficient way to detect if an ACL already contains
      POSIX.1e or NFSv4 ACL entries.
 
 RETURN VALUES
      archive_entry_acl_count() and archive_entry_acl_reset() returns the num‐
      ber of ACL entries that match the given type mask.  For POSIX.1e ACLS if
-     the type mask includes ARCHIVE_ENTRY_ACL_TYPE_ACCESS and at least one
-     extended ACL entry exists, the three classic Unix permissions are
-     counted.
+     the type mask includes ARCHIVE_ENTRY_ACL_TYPE_ACCESS and at least one ex‐
+     tended ACL entry exists, the three classic Unix permissions are counted.
 
      archive_entry_acl_from_text() and archive_entry_acl_from_text_w() return
      ARCHIVE_OK if all entries were successfully parsed and ARCHIVE_WARN if

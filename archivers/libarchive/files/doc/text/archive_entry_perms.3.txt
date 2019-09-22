@@ -11,8 +11,8 @@ NAME
      archive_entry_update_gname_utf8, archive_entry_fflags,
      archive_entry_fflags_text, archive_entry_set_fflags,
      archive_entry_copy_fflags_text, archive_entry_copy_fflags_text_w — func‐
-     tions for manipulating ownership and permissions in archive entry
-     descriptions
+     tions for manipulating ownership and permissions in archive entry de‐
+     scriptions
 
 LIBRARY
      Streaming Archive Library (libarchive, -larchive)

@@ -11,9 +11,9 @@ SYNOPSIS
 
 DESCRIPTION
      These functions provide a complete API for reading streaming archives.
-     The general process is to first create the struct archive object, set
-     options, initialize the reader, iterate over the archive headers and
-     associated data, then close the archive and release all resources.
+     The general process is to first create the struct archive object, set op‐
+     tions, initialize the reader, iterate over the archive headers and asso‐
+     ciated data, then close the archive and release all resources.
 
    Create archive object
      See archive_read_new(3).

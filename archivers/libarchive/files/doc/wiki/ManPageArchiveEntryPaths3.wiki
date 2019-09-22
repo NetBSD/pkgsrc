@@ -127,7 +127,7 @@ Streaming Archive Library (libarchive, -larchive)
 '''archive_entry_update_symlink_utf8'''(''struct archive_entry *a'', ''const char *path''); 
 == DESCRIPTION == 
 Path names supported by 
-[[ManPagerchiventry3]]: 
+[[ManPageArchiveEntry3]]: 
 <dl> 
 <dt>hardlink</dt><dd> 
 Destination of the hardlink. 
@@ -140,7 +140,7 @@ the destination for that.
 Path in the archive 
 </dd><dt>sourcepath</dt><dd> 
 Path on the disk for use by 
-[[ManPagerchiveeadisk3]]. 
+[[ManPageArchiveReadDisk3]]. 
 </dd><dt>symlink</dt><dd> 
 Destination of the symbolic link. 
 </dd></dl> 
@@ -171,5 +171,5 @@ It doesn't have a corresponding get accessor function.
 is an alias for  
 '''archive_entry_copy_XXX'''(). 
 == SEE ALSO == 
-[[ManPagerchiventry3]] 
-[[ManPageibarchive3]], 
+[[ManPageArchiveEntry3]] 
+[[ManPageLibarchive3]], 

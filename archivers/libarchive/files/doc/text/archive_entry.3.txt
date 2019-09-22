@@ -65,8 +65,8 @@ DESCRIPTION
 	     Stores the provided data in the object.  In particular, for
 	     strings, the pointer is stored, not the referenced string.
      archive_entry_copy_XXXX()
-	     As above, except that the referenced data is copied into the
-	     object.
+	     As above, except that the referenced data is copied into the ob‐
+	     ject.
      archive_entry_XXXX()
 	     Returns the specified data.  In the case of strings, a const-
 	     qualified pointer to the string is returned.

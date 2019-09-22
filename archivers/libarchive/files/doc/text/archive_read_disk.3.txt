@@ -70,9 +70,9 @@ DESCRIPTION
 		     (file flag) set.  By default, the nodump file atrribute
 		     is ignored.
 	     ARCHIVE_READDISK_MAC_COPYFILE
-		     Mac OS X specific. Read metadata (ACLs and extended
-		     attributes) with copyfile(3).  By default, metadata is
-		     read using copyfile(3).
+		     Mac OS X specific. Read metadata (ACLs and extended at‐
+		     tributes) with copyfile(3).  By default, metadata is read
+		     using copyfile(3).
 	     ARCHIVE_READDISK_NO_ACL
 		     Do not read Access Control Lists.	By default, ACLs are
 		     read from disk.
@@ -85,14 +85,14 @@ DESCRIPTION
 		     Do not traverse mount points.  By defaut, moint points
 		     are traversed.
 	     ARCHIVE_READDISK_NO_XATTR
-		     Do not read extended file attributes (xattrs).  By
-		     default, extended file attributes are read from disk.
-		     See xattr(7) (Linux), xattr(2) (Mac OS X), or
-		     getextattr(8) (FreeBSD) for more information on extended
-		     file attributes.
+		     Do not read extended file attributes (xattrs).  By de‐
+		     fault, extended file attributes are read from disk.  See
+		     xattr(7) (Linux), xattr(2) (Mac OS X), or getextattr(8)
+		     (FreeBSD) for more information on extended file at‐
+		     tributes.
 	     ARCHIVE_READDISK_RESTORE_ATIME
-		     Restore access time of traversed files.  By default,
-		     access time of traversed files is not restored.
+		     Restore access time of traversed files.  By default, ac‐
+		     cess time of traversed files is not restored.
 
      archive_read_disk_set_symlink_logical(),
 	     archive_read_disk_set_symlink_physical(),
@@ -103,16 +103,16 @@ DESCRIPTION
 	     behaves identically to the “logical” mode.
 
      archive_read_disk_gname(), archive_read_disk_uname()
-	     Returns a user or group name given a gid or uid value.  By
-	     default, these always return a NULL string.
+	     Returns a user or group name given a gid or uid value.  By de‐
+	     fault, these always return a NULL string.
 
      archive_read_disk_set_gname_lookup(),
 	     archive_read_disk_set_uname_lookup()
 	     These allow you to override the functions used for user and group
 	     name lookups.  You may also provide a void * pointer to a private
 	     data structure and a cleanup function for that data.  The cleanup
-	     function will be invoked when the struct archive object is
-	     destroyed or when new lookup functions are registered.
+	     function will be invoked when the struct archive object is de‐
+	     stroyed or when new lookup functions are registered.
 
      archive_read_disk_set_standard_lookup()
 	     This convenience function installs a standard set of user and
@@ -130,13 +130,13 @@ DESCRIPTION
 	     source path will be used.)
 
 	     Information is read from disk using the path name from the struct
-	     archive_entry object.  If a file descriptor is provided, some
-	     information will be obtained using that file descriptor, on plat‐
+	     archive_entry object.  If a file descriptor is provided, some in‐
+	     formation will be obtained using that file descriptor, on plat‐
 	     forms that support the appropriate system calls.
 
 	     If a pointer to a struct stat is provided, information from that
-	     structure will be used instead of reading from the disk where
-	     appropriate.  This can provide performance benefits in scenarios
+	     structure will be used instead of reading from the disk where ap‐
+	     propriate.  This can provide performance benefits in scenarios
 	     where struct stat information has already been read from the disk
 	     as a side effect of some other operation.	(For example, direc‐
 	     tory traversal libraries often provide this information.)
@@ -204,18 +204,18 @@ SEE ALSO
 
 HISTORY
      The libarchive library first appeared in FreeBSD 5.3.  The
-     archive_read_disk interface was added to libarchive 2.6 and first
-     appeared in FreeBSD 8.0.
+     archive_read_disk interface was added to libarchive 2.6 and first ap‐
+     peared in FreeBSD 8.0.
 
 AUTHORS
      The libarchive library was written by Tim Kientzle
      <kientzle@FreeBSD.org>.
 
 BUGS
-     The “standard” user name and group name lookup functions are not the
-     defaults because getgrgid(3) and getpwuid(3) are sometimes too large for
-     particular applications.  The current design allows the application
-     author to use a more compact implementation when appropriate.
+     The “standard” user name and group name lookup functions are not the de‐
+     faults because getgrgid(3) and getpwuid(3) are sometimes too large for
+     particular applications.  The current design allows the application au‐
+     thor to use a more compact implementation when appropriate.
 
      The full list of metadata read from disk by
      archive_read_disk_entry_from_file() is necessarily system-dependent.
