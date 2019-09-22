@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.28 2015/08/18 07:31:04 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2019/09/22 08:54:00 tm Exp $
 #
 
-DISTNAME=	abook-0.6.0pre2
-PKGNAME=	abook-0.6.0rc2
-PKGREVISION=	3
+DISTNAME=	abook-0.6.1
 CATEGORIES=	databases
 MASTER_SITES=	http://abook.sourceforge.net/devel/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://abook.sourceforge.net/
 COMMENT=	Text-based addressbook program
+LICENSE=	gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt
