@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.20 2019/09/21 14:57:46 nia Exp $
+# $NetBSD: options.mk,v 1.21 2019/09/22 17:13:24 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.weechat
 # mk/curses will handle wide-curses
@@ -20,7 +20,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 CMAKE_ARGS+=	-DENABLE_PYTHON=ON
 CMAKE_ARGS+=	-DPYTHON_EXECUTABLE=${PYTHONBIN}
 .if ${OPSYS} == "Darwin"
-CMAKE_ARGS+=	-DPYTHON_LIBRARIES=${PREFIX}/lib/libpython${PYVERSSUFFIX}.dylib                                                                
+CMAKE_ARGS+=	-DPYTHON_LIBRARIES=${PREFIX}/lib/libpython${PYVERSSUFFIX}.dylib
 .else
 CMAKE_ARGS+=	-DPYTHON_LIBRARIES=${PREFIX}/lib/libpython${PYVERSSUFFIX}.so
 .endif
