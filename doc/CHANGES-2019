@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4030 2019/09/22 13:07:18 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4031 2019/09/22 15:09:33 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6590,3 +6590,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated emulators/libretro-sameboy to 0.12.2 [nia 2019-09-22]
 	Updated emulators/mgba to 0.7.3 [nia 2019-09-22]
 	Updated emulators/libretro-mgba to 0.7.3 [nia 2019-09-22]
+	Updated net/hub to 2.12.6 [leot 2019-09-22]
