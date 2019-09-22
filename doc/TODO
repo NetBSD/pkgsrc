@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19290 2019/09/22 17:53:42 prlw1 Exp $
+$NetBSD: TODO,v 1.19291 2019/09/22 19:00:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -484,7 +484,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bzr-svn-1.2.2
 	o bzrtools-2.6.0
 	o c4-1.10
-	o cairo-1.17.2
 	o cal3d-0.11.0
 	o calc-2.11.10.1
 	o calcoo-2.1.0
@@ -1152,7 +1151,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-dbus-1.2.12
 	o py-ephem3-3.7.6.0
 	o py-gnome-menus-3.8.0
-	o py-gobject3-common-3.32.2
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
@@ -1310,7 +1308,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tetrinetx-1.40c
 	o tex2page-20130325
 	o tfmxplay-1.1.6
-	o thunderbird-enigmail-2.1.2 [needs thunderbird-68.0]
+	o thunderbird-enigmail-2.1.2
 	o tig-2.2
 	o tightvnc-2.7.10
 	o tile-0.7.4
