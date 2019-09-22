@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.5 2019/06/08 22:49:39 nia Exp $
+$NetBSD: distinfo,v 1.6 2019/09/22 13:06:39 nia Exp $
 
-SHA1 (libretro-mgba-0.7.2.tar.gz) = 342b40efa743f9966ad0e9d3448a8d3f4314c008
-RMD160 (libretro-mgba-0.7.2.tar.gz) = 0ad8a97d1307bad71b13d12ee0d8c7bbb2599117
-SHA512 (libretro-mgba-0.7.2.tar.gz) = e63519299358ef73939d07012cd6880478d4e5b1e6161c42bcbe36e5207af3dcbe4c147fd1a94432ddbe5fbdf5d2c9755d90984ea800bf9d9860d7f806f996cd
-Size (libretro-mgba-0.7.2.tar.gz) = 11255680 bytes
+SHA1 (libretro-mgba-0.7.3.tar.gz) = 4e265b8332d9ddf0bffc800a3727ce406eaa984a
+RMD160 (libretro-mgba-0.7.3.tar.gz) = 4f9869af512e2621d4b403ac875e62edc1010adc
+SHA512 (libretro-mgba-0.7.3.tar.gz) = 131f850699f17a7496f7428b85b50f38b99acec4c87d5d28ba4e3af94f095a1b6d177ea731838b2971362b46c52accef9cbec98433ecfaccc080371092c7d789
+Size (libretro-mgba-0.7.3.tar.gz) = 11228977 bytes
 SHA1 (patch-CMakeLists.txt) = c248f6efc67327667c409264b4e4a00720043a0e
 SHA1 (patch-include_mgba-util_math.h) = 448ca1bb3bbe2812e7d9482917c488ddcf3b48f0
 SHA1 (patch-version.cmake) = 7d6d44febe7bb0ff2231452f037def7cb3782e21

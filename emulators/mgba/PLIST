@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/06/08 22:46:03 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/09/22 13:06:39 nia Exp $
 bin/mgba
 ${PLIST.qt}bin/mgba-qt
 include/mgba/flags.h
@@ -9,7 +9,9 @@ man/man6/mgba.6
 ${PLIST.qt}share/applications/mgba-qt.desktop
 share/doc/mGBA/CHANGES
 share/doc/mGBA/LICENSE
+share/doc/mGBA/README.html
 share/doc/mGBA/README.md
+share/doc/mGBA/README_DE.html
 share/doc/mGBA/README_DE.md
 share/doc/mGBA/licenses/blip_buf.txt
 share/doc/mGBA/licenses/inih.txt
