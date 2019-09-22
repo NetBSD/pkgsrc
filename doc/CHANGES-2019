@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4021 2019/09/22 06:19:26 rin Exp $
+$NetBSD: CHANGES-2019,v 1.4022 2019/09/22 08:54:57 tm Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6580,3 +6580,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/mutt to 1.12.2 [tron 2019-09-21]
 	Updated net/tor to 0.4.1.6 [alnsn 2019-09-22]
 	Updated x11/mlterm to 3.8.8nb5 [rin 2019-09-22]
+	Updated databases/abook to 0.6.1 [tm 2019-09-22]
