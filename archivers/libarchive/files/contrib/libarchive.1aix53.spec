@@ -127,8 +127,14 @@ rm -fr %buildroot
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
 $Log: libarchive.1aix53.spec,v $
-Revision 1.10  2019/09/22 09:50:54  joerg
-Properly merge libarchive-3.3.3
+Revision 1.11  2019/09/22 09:55:06  joerg
+Update for libarchive-3.4.0:
+- improvements for Android APK and JAR archives
+- better support for non-recursive list and extract
+- tar --exclude-vcs support
+- fixes for file attributes and flags handling
+- zipx support
+- rar 5.0 reader
 
 Release 1aix53  2006/12/12 rm1023@dcx.com
 - tweak for aix-5.3
