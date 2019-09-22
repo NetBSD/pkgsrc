@@ -70,8 +70,8 @@ DESCRIPTION
 	     Copies error information from one archive to another.
      archive_errno()
 	     Returns a numeric error code (see errno(2)) indicating the reason
-	     for the most recent error return.	Note that this can not be
-	     reliably used to detect whether an error has occurred.  It should
+	     for the most recent error return.	Note that this can not be re‐
+	     liably used to detect whether an error has occurred.  It should
 	     be used only after another libarchive function has returned an
 	     error status.
      archive_error_string()
@@ -87,9 +87,9 @@ DESCRIPTION
 	     archive_filter_count() for details of the numbering.
      archive_filter_count()
 	     Returns the number of filters in the current pipeline.  For read
-	     archive handles, these filters are added automatically by the
-	     automatic format detection.  For write archive handles, these
-	     filters are added by calls to the various
+	     archive handles, these filters are added automatically by the au‐
+	     tomatic format detection.	For write archive handles, these fil‐
+	     ters are added by calls to the various
 	     archive_write_add_filter_XXX() functions.	Filters in the result‐
 	     ing pipeline are numbered so that filter 0 is the filter closest
 	     to the format handler.  As a convenience, functions that expect a
