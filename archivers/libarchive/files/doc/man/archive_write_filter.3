@@ -15,7 +15,8 @@
 \fB\%archive_write_add_filter_none\fP,
 \fB\%archive_write_add_filter_program\fP,
 \fB\%archive_write_add_filter_uuencode\fP,
-\fB\%archive_write_add_filter_xz\fP
+\fB\%archive_write_add_filter_xz\fP,
+\fB\%archive_write_add_filter_zstd\fP,
 \- functions enabling output filters
 .SH LIBRARY
 .ad l
@@ -79,6 +80,10 @@ Streaming Archive Library (libarchive, -larchive)
 \fIint\fP
 .br
 \fB\%archive_write_add_filter_xz\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_write_add_filter_zstd\fP(\fI\%struct\ archive\ *\fP);
 .SH DESCRIPTION
 .ad l
 .RS 5
@@ -93,6 +98,7 @@ Streaming Archive Library (libarchive, -larchive)
 \fB\%archive_write_add_filter_lzma\fP(),
 \fB\%archive_write_add_filter_lzop\fP(),
 \fB\%archive_write_add_filter_xz\fP(),
+\fB\%archive_write_add_filter_zstd\fP(),
 The resulting archive will be compressed as specified.
 Note that the compressed output is always properly blocked.
 .TP

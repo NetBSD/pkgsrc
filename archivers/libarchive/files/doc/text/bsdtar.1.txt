@@ -184,15 +184,15 @@ OPTIONS
 
      -J, --xz
 	     (c mode only) Compress the resulting archive with xz(1).  In
-	     extract or list modes, this option is ignored.  Note that, unlike
-	     other tar implementations, this implementation recognizes XZ com‐
-	     pression automatically when reading archives.
+	     extract or list modes, this option is ignored.  Note that this
+	     tar implementation recognizes XZ compression automatically when
+	     reading archives.
 
      -j, --bzip, --bzip2, --bunzip2
 	     (c mode only) Compress the resulting archive with bzip2(1).  In
-	     extract or list modes, this option is ignored.  Note that, unlike
-	     other tar implementations, this implementation recognizes bzip2
-	     compression automatically when reading archives.
+	     extract or list modes, this option is ignored.  Note that this
+	     tar implementation recognizes bzip2 compression automatically
+	     when reading archives.
 
      -k, --keep-old-files
 	     (x mode only) Do not overwrite existing files.  In particular, if
@@ -214,20 +214,31 @@ OPTIONS
 
      --lrzip
 	     (c mode only) Compress the resulting archive with lrzip(1).  In
-	     extract or list modes, this option is ignored.
+	     extract or list modes, this option is ignored.  Note that this
+	     tar implementation recognizes lrzip compression automatically
+	     when reading archives.
 
      --lz4   (c mode only) Compress the archive with lz4-compatible compres‐
-	     sion before writing it.  In input mode, this option is ignored;
-	     lz4 compression is recognized automatically on input.
+	     sion before writing it.  In extract or list modes, this option is
+	     ignored.  Note that this tar implementation recognizes lz4 com‐
+	     pression automatically when reading archives.
+
+     --zstd  (c mode only) Compress the archive with zstd-compatible compres‐
+	     sion before writing it.  In extract or list modes, this option is
+	     ignored.  Note that this tar implementation recognizes zstd com‐
+	     pression automatically when reading archives.
 
      --lzma  (c mode only) Compress the resulting archive with the original
-	     LZMA algorithm.  Use of this option is discouraged and new ar‐
-	     chives should be created with --xz instead.  Note that, unlike
-	     other tar implementations, this implementation recognizes LZMA
-	     compression automatically when reading archives.
+	     LZMA algorithm.  In extract or list modes, this option is
+	     ignored.  Use of this option is discouraged and new archives
+	     should be created with --xz instead.  Note that this tar imple‐
+	     mentation recognizes LZMA compression automatically when reading
+	     archives.
 
      --lzop  (c mode only) Compress the resulting archive with lzop(1).  In
-	     extract or list modes, this option is ignored.
+	     extract or list modes, this option is ignored.  Note that this
+	     tar implementation recognizes LZO compression automatically when
+	     reading archives.
 
      -m, --modification-time
 	     (x mode only) Do not extract modification time.  By default, the
@@ -400,6 +411,9 @@ OPTIONS
 	     lz4:block-dependence
 		     Use the previous block of the block being compressed for
 		     a compression dictionary to improve compression ratio.
+	     zstd:compression-level
+		     A decimal integer from 1 to 22 specifying the zstd com‐
+		     pression level.
 	     lzop:compression-level
 		     A decimal integer from 1 to 9 specifying the lzop com‐
 		     pression level.
@@ -575,21 +589,21 @@ OPTIONS
 	     r, and u modes or if tar is run in x mode as root.
 
      -y      (c mode only) Compress the resulting archive with bzip2(1).  In
-	     extract or list modes, this option is ignored.  Note that, unlike
-	     other tar implementations, this implementation recognizes bzip2
-	     compression automatically when reading archives.
+	     extract or list modes, this option is ignored.  Note that this
+	     tar implementation recognizes bzip2 compression automatically
+	     when reading archives.
 
      -Z, --compress, --uncompress
 	     (c mode only) Compress the resulting archive with compress(1).
-	     In extract or list modes, this option is ignored.	Note that,
-	     unlike other tar implementations, this implementation recognizes
-	     compress compression automatically when reading archives.
+	     In extract or list modes, this option is ignored.	Note that this
+	     tar implementation recognizes compress compression automatically
+	     when reading archives.
 
      -z, --gunzip, --gzip
 	     (c mode only) Compress the resulting archive with gzip(1).  In
-	     extract or list modes, this option is ignored.  Note that, unlike
-	     other tar implementations, this implementation recognizes gzip
-	     compression automatically when reading archives.
+	     extract or list modes, this option is ignored.  Note that this
+	     tar implementation recognizes gzip compression automatically when
+	     reading archives.
 
 ENVIRONMENT
      The following environment variables affect the execution of tar:
@@ -798,4 +812,4 @@ BUGS
      (This is a consequence of the incompatible ways that different archive
      formats store hardlink information.)
 
-BSD			       February 25, 2017			   BSD
+BSD				October 1, 2017 			   BSD

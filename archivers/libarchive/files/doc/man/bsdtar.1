@@ -1,4 +1,4 @@
-.TH TAR 1 "February 25, 2017" ""
+.TH TAR 1 "October 1, 2017" ""
 .SH NAME
 .ad l
 \fB\%tar\fP
@@ -326,20 +326,19 @@ Sq foo.
 Compress the resulting archive with
 \fBxz\fP(1).
 In extract or list modes, this option is ignored.
-Note that, unlike other
+Note that this
 \fB\%tar\fP
-implementations, this implementation recognizes XZ compression
-automatically when reading archives.
+implementation recognizes XZ compression automatically when reading archives.
 .TP
 \fB\-j\fP, \fB\-Fl\fP bzip, \fB\-Fl\fP bzip2, \fB\-Fl\fP bunzip2
 (c mode only)
 Compress the resulting archive with
 \fBbzip2\fP(1).
 In extract or list modes, this option is ignored.
-Note that, unlike other
+Note that this
 \fB\%tar\fP
-implementations, this implementation recognizes bzip2 compression
-automatically when reading archives.
+implementation recognizes bzip2 compression automatically when reading
+archives.
 .TP
 \fB\-k\fP, \fB\-Fl\fP keep-old-files
 (x mode only)
@@ -367,28 +366,45 @@ Issue a warning message unless all links to each file are archived.
 Compress the resulting archive with
 \fBlrzip\fP(1).
 In extract or list modes, this option is ignored.
+Note that this
+\fB\%tar\fP
+implementation recognizes lrzip compression automatically when reading
+archives.
 .TP
 \fB\-Fl\fP lz4
 (c mode only)
 Compress the archive with lz4-compatible compression before writing it.
-In input mode, this option is ignored; lz4 compression is recognized
-automatically on input.
+In extract or list modes, this option is ignored.
+Note that this
+\fB\%tar\fP
+implementation recognizes lz4 compression automatically when reading archives.
+.TP
+\fB\-Fl\fP zstd
+(c mode only)
+Compress the archive with zstd-compatible compression before writing it.
+In extract or list modes, this option is ignored.
+Note that this
+\fB\%tar\fP
+implementation recognizes zstd compression automatically when reading archives.
 .TP
 \fB\-Fl\fP lzma
 (c mode only) Compress the resulting archive with the original LZMA algorithm.
+In extract or list modes, this option is ignored.
 Use of this option is discouraged and new archives should be created with
 \fB\-Fl\fP xz
 instead.
-Note that, unlike other
+Note that this
 \fB\%tar\fP
-implementations, this implementation recognizes LZMA compression
-automatically when reading archives.
+implementation recognizes LZMA compression automatically when reading archives.
 .TP
 \fB\-Fl\fP lzop
 (c mode only)
 Compress the resulting archive with
 \fBlzop\fP(1).
 In extract or list modes, this option is ignored.
+Note that this
+\fB\%tar\fP
+implementation recognizes LZO compression automatically when reading archives.
 .TP
 \fB\-m\fP, \fB\-Fl\fP modification-time
 (x mode only)
@@ -652,6 +668,9 @@ A decimal integer from 4 to 7 specifying the lz4 compression block size
 \fBlz4:block-dependence\fP
 Use the previous block of the block being compressed for
 a compression dictionary to improve compression ratio.
+.TP
+\fBzstd:compression-level\fP
+A decimal integer from 1 to 22 specifying the zstd compression level.
 .TP
 \fBlzop:compression-level\fP
 A decimal integer from 1 to 9 specifying the lzop compression level.
@@ -932,30 +951,30 @@ is run in x mode as root.
 Compress the resulting archive with
 \fBbzip2\fP(1).
 In extract or list modes, this option is ignored.
-Note that, unlike other
+Note that this
 \fB\%tar\fP
-implementations, this implementation recognizes bzip2 compression
-automatically when reading archives.
+implementation recognizes bzip2 compression automatically when reading
+archives.
 .TP
 \fB\-Z\fP, \fB\-Fl\fP compress, \fB\-Fl\fP uncompress
 (c mode only)
 Compress the resulting archive with
 \fBcompress\fP(1).
 In extract or list modes, this option is ignored.
-Note that, unlike other
+Note that this
 \fB\%tar\fP
-implementations, this implementation recognizes compress compression
-automatically when reading archives.
+implementation recognizes compress compression automatically when reading
+archives.
 .TP
 \fB\-z\fP, \fB\-Fl\fP gunzip, \fB\-Fl\fP gzip
 (c mode only)
 Compress the resulting archive with
 \fBgzip\fP(1).
 In extract or list modes, this option is ignored.
-Note that, unlike other
+Note that this
 \fB\%tar\fP
-implementations, this implementation recognizes gzip compression
-automatically when reading archives.
+implementation recognizes gzip compression automatically when reading
+archives.
 .RE
 .SH ENVIRONMENT
 .ad l

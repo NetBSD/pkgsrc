@@ -4,8 +4,8 @@ dnl First, define all of the version numbers up front.
 dnl In particular, this allows the version macro to be used in AC_INIT
 
 dnl These first two version numbers are updated automatically on each release.
-m4_define([LIBARCHIVE_VERSION_S],[3.3.2])
-m4_define([LIBARCHIVE_VERSION_N],[3003002])
+m4_define([LIBARCHIVE_VERSION_S],[3.3.3])
+m4_define([LIBARCHIVE_VERSION_N],[3003003])
 
 dnl bsdtar and bsdcpio versioning tracks libarchive
 m4_define([BSDTAR_VERSION_S],LIBARCHIVE_VERSION_S())
@@ -290,7 +290,7 @@ AC_CHECK_HEADERS([stdarg.h stdint.h stdlib.h string.h])
 AC_CHECK_HEADERS([sys/acl.h sys/cdefs.h sys/ea.h sys/extattr.h])
 AC_CHECK_HEADERS([sys/ioctl.h sys/mkdev.h sys/mount.h])
 AC_CHECK_HEADERS([sys/param.h sys/poll.h sys/richacl.h])
-AC_CHECK_HEADERS([sys/select.h sys/statfs.h sys/statvfs.h])
+AC_CHECK_HEADERS([sys/select.h sys/statfs.h sys/statvfs.h sys/sysmacros.h])
 AC_CHECK_HEADERS([sys/time.h sys/utime.h sys/utsname.h sys/vfs.h sys/xattr.h])
 AC_CHECK_HEADERS([time.h unistd.h utime.h wchar.h wctype.h])
 AC_CHECK_HEADERS([windows.h])
@@ -365,6 +365,14 @@ AC_ARG_WITH([lz4],
 if test "x$with_lz4" != "xno"; then
   AC_CHECK_HEADERS([lz4.h lz4hc.h])
   AC_CHECK_LIB(lz4,LZ4_decompress_safe)
+fi
+
+AC_ARG_WITH([zstd],
+  AS_HELP_STRING([--without-zstd], [Don't build support for zstd through libzstd]))
+
+if test "x$with_zstd" != "xno"; then
+  AC_CHECK_HEADERS([zstd.h])
+  AC_CHECK_LIB(zstd,ZSTD_compressStream)
 fi
 
 AC_ARG_WITH([lzma],
@@ -682,7 +690,7 @@ AC_ARG_ENABLE([xattr],
 		[Disable Extended Attributes support (default: check)]))
 
 if test "x$enable_xattr" != "xno"; then
-    AC_SEARCH_LIBS([setxattr], [attr])
+    AC_SEARCH_LIBS([setxattr], [attr gnu])
     AC_CHECK_DECLS([EXTATTR_NAMESPACE_USER], [], [], [#include <sys/types.h>
 #include <sys/extattr.h>
 ])

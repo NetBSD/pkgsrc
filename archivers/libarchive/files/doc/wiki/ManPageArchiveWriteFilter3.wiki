@@ -14,7 +14,8 @@ ARCHIVE_WRITE_FILTER(3) manual page
 '''archive_write_add_filter_none''', 
 '''archive_write_add_filter_program''', 
 '''archive_write_add_filter_uuencode''', 
-'''archive_write_add_filter_xz''' 
+'''archive_write_add_filter_xz''', 
+'''archive_write_add_filter_zstd''', 
 - functions enabling output filters 
 == LIBRARY == 
 Streaming Archive Library (libarchive, -larchive) 
@@ -76,6 +77,10 @@ Streaming Archive Library (libarchive, -larchive)
 ''int'' 
 <br> 
 '''archive_write_add_filter_xz'''(''struct archive *''); 
+<br> 
+''int'' 
+<br> 
+'''archive_write_add_filter_zstd'''(''struct archive *''); 
 == DESCRIPTION == 
 <dl> 
 <dt> 
@@ -89,6 +94,7 @@ Streaming Archive Library (libarchive, -larchive)
 '''archive_write_add_filter_lzma'''(), 
 '''archive_write_add_filter_lzop'''(), 
 '''archive_write_add_filter_xz'''(), 
+'''archive_write_add_filter_zstd'''(), 
 </dt> <dd> 
 The resulting archive will be compressed as specified. 
 Note that the compressed output is always properly blocked. 
