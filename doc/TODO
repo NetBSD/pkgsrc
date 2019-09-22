@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19287 2019/09/22 08:49:57 wiz Exp $
+$NetBSD: TODO,v 1.19288 2019/09/22 08:54:57 tm Exp $
 
 Suggested new packages
 ======================
@@ -402,7 +402,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o TiffIO-140a
 	o YoSucker-81
 	o abcmidi-20170416
-	o abook-0.6.1
 	o admesh-0.98.2
 	o adms-2.3.5
 	o adocman-0.13
