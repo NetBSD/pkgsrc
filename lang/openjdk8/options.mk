@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2019/03/20 11:10:25 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2019/09/22 14:42:47 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openjdk8
 PKG_OPTIONS_OPTIONAL_GROUPS=	variant
@@ -73,7 +73,6 @@ remove-x11-classes:
 BUILD_DEBUG_LEVEL=	fastdebug
 CONFIGURE_ARGS+=	--enable-debug-symbols
 CONFIGURE_ARGS+=	--disable-zip-debug-info
-CONFIGURE_ARGS+=	--disable-precompiled-headers
 PLIST_SRC+=		PLIST.debug
 .else
 BUILD_DEBUG_LEVEL=	release
