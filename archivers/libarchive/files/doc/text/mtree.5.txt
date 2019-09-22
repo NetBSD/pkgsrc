@@ -14,8 +14,8 @@ DESCRIPTION
 
      When encoding file or pathnames, any backslash character or character
      outside of the 95 printable ASCII characters must be encoded as a back‐
-     slash followed by three octal digits.  When reading mtree files, any
-     appearance of a backslash followed by three octal digits should be con‐
+     slash followed by three octal digits.  When reading mtree files, any ap‐
+     pearance of a backslash followed by three octal digits should be con‐
      verted into the corresponding character.
 
      Each line is interpreted independently as one of the following types:
@@ -29,22 +29,22 @@ DESCRIPTION
 
      Relative	 If the first whitespace-delimited word has no / characters,
 		 it is the name of a file in the current directory.  Any rela‐
-		 tive entry that describes a directory changes the current
-		 directory.
+		 tive entry that describes a directory changes the current di‐
+		 rectory.
 
      dot-dot	 As a special case, a relative entry with the filename ..
-		 changes the current directory to the parent directory.
-		 Options on dot-dot entries are always ignored.
+		 changes the current directory to the parent directory.  Op‐
+		 tions on dot-dot entries are always ignored.
 
-     Full	 If the first whitespace-delimited word has a / character
-		 after the first character, it is the pathname of a file rela‐
+     Full	 If the first whitespace-delimited word has a / character af‐
+		 ter the first character, it is the pathname of a file rela‐
 		 tive to the starting directory.  There can be multiple full
 		 entries describing the same file.
 
-     Some tools that process mtree files may require that multiple lines
-     describing the same file occur consecutively.  It is not permitted for
-     the same file to be mentioned using both a relative and a full file spec‐
-     ification.
+     Some tools that process mtree files may require that multiple lines de‐
+     scribing the same file occur consecutively.  It is not permitted for the
+     same file to be mentioned using both a relative and a full file specifi‐
+     cation.
 
    Special commands
      Two special commands are currently defined:

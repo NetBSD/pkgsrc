@@ -24,34 +24,34 @@ Streaming Archive Library (libarchive, -larchive)
 <dl> 
 <dt>'''archive_read_extract'''(), '''archive_read_extract_set_skip_file'''()</dt><dd> 
 A convenience function that wraps the corresponding 
-[[ManPagerchiveriteisk3]] 
+[[ManPageArchiveWriteDisk3]] 
 interfaces. 
 The first call to 
 '''archive_read_extract'''() 
 creates a restore object using 
-[[ManPagerchiveriteiskew3]] 
+[[ManPageArchiveWriteDiskNew3]] 
 and 
-[[ManPagerchiveriteiskettandardookup3]], 
+[[ManPageArchiveWriteDiskSetStandardLookup3]], 
 then transparently invokes 
-[[ManPagerchiveriteisketptions3]], 
-[[ManPagerchiveriteeader3]], 
-[[ManPagerchiveriteata3]], 
+[[ManPageArchiveWriteDiskSetOptions3]], 
+[[ManPageArchiveWriteHeader3]], 
+[[ManPageArchiveWriteData3]], 
 and 
-[[ManPagerchiveriteinishntry3]] 
+[[ManPageArchiveWriteFinishEntry3]] 
 to create the entry on disk and copy data into it. 
 The 
 ''flags'' 
 argument is passed unmodified to 
-[[ManPagerchiveriteisketptions3]]. 
+[[ManPageArchiveWriteDiskSetOptions3]]. 
 </dd><dt>'''archive_read_extract2'''()</dt><dd> 
 This is another version of 
 '''archive_read_extract'''() 
 that allows you to provide your own restore object. 
 In particular, this allows you to override the standard lookup functions 
 using 
-[[ManPagerchiveriteisketroupookup3]], 
+[[ManPageArchiveWriteDiskSetGroupLookup3]], 
 and 
-[[ManPagerchiveriteisketserookup3]]. 
+[[ManPageArchiveWriteDiskSetUserLookup3]]. 
 Note that 
 '''archive_read_extract2'''() 
 does not accept a 
@@ -91,12 +91,12 @@ and
 functions. 
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPageibarchive3]], 
-[[ManPagerchiveead3]], 
-[[ManPagerchiveeadata3]], 
-[[ManPagerchiveeadilter3]], 
-[[ManPagerchiveeadormat3]], 
-[[ManPagerchiveeadpen3]], 
-[[ManPagerchiveeadetptions3]], 
-[[ManPagerchivetil3]], 
+[[ManPageLibarchive3]], 
+[[ManPageArchiveRead3]], 
+[[ManPageArchiveReadData3]], 
+[[ManPageArchiveReadFilter3]], 
+[[ManPageArchiveReadFormat3]], 
+[[ManPageArchiveReadOpen3]], 
+[[ManPageArchiveReadSetOptions3]], 
+[[ManPageArchiveUtil3]], 
 [[ManPageTar5]] 

@@ -4,8 +4,8 @@ dnl First, define all of the version numbers up front.
 dnl In particular, this allows the version macro to be used in AC_INIT
 
 dnl These first two version numbers are updated automatically on each release.
-m4_define([LIBARCHIVE_VERSION_S],[3.3.3])
-m4_define([LIBARCHIVE_VERSION_N],[3003003])
+m4_define([LIBARCHIVE_VERSION_S],[3.4.0])
+m4_define([LIBARCHIVE_VERSION_N],[3004000])
 
 dnl bsdtar and bsdcpio versioning tracks libarchive
 m4_define([BSDTAR_VERSION_S],LIBARCHIVE_VERSION_S())
@@ -340,6 +340,16 @@ if test "x$with_bz2lib" != "xno"; then
   esac
 fi
 
+AC_ARG_WITH([libb2],
+  AS_HELP_STRING([--without-libb2], [Don't build support for BLAKE2 through libb2]))
+
+if test "x$with_libb2" != "xno"; then
+  AC_CHECK_HEADERS([blake2.h])
+  AC_CHECK_LIB(b2,blake2sp_init)
+fi
+
+AM_CONDITIONAL([INC_BLAKE2], [test "x$ac_cv_lib_b2_blake2sp_init" != "xyes"])
+
 AC_ARG_WITH([iconv],
   AS_HELP_STRING([--without-iconv], [Don't try to link against iconv]))
 
@@ -626,7 +636,7 @@ AC_CHECK_FUNCS([nl_langinfo openat pipe poll posix_spawnp readlink readlinkat])
 AC_CHECK_FUNCS([readpassphrase])
 AC_CHECK_FUNCS([select setenv setlocale sigaction statfs statvfs])
 AC_CHECK_FUNCS([strchr strdup strerror strncpy_s strrchr symlink timegm])
-AC_CHECK_FUNCS([tzset unsetenv utime utimensat utimes vfork])
+AC_CHECK_FUNCS([tzset unlinkat unsetenv utime utimensat utimes vfork])
 AC_CHECK_FUNCS([wcrtomb wcscmp wcscpy wcslen wctomb wmemcmp wmemcpy wmemmove])
 AC_CHECK_FUNCS([_ctime64_s _fseeki64])
 AC_CHECK_FUNCS([_get_timezone _localtime64_s _mkgmtime64])
@@ -1153,12 +1163,7 @@ if test "x$with_openssl" != "xno"; then
     CRYPTO_CHECK(SHA256, OPENSSL, sha256)
     CRYPTO_CHECK(SHA384, OPENSSL, sha384)
     CRYPTO_CHECK(SHA512, OPENSSL, sha512)
-    if test "x$found_OPENSSL" != "xyes"; then
-      LIBS=$saved_LIBS
-    else
-      AC_CHECK_FUNCS([PKCS5_PBKDF2_HMAC_SHA1])
-    fi
-    AC_CHECK_LIB(crypto,EVP_CIPHER_CTX_init)
+    AC_CHECK_FUNCS([PKCS5_PBKDF2_HMAC_SHA1])
 fi
 
 # Probe libmd AFTER OpenSSL/libcrypto.

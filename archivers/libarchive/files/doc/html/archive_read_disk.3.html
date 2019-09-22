@@ -1,5 +1,5 @@
-<!-- Creator     : groff version 1.22.3 -->
-<!-- CreationDate: Mon Sep  3 22:55:07 2018 -->
+<!-- Creator     : groff version 1.22.4 -->
+<!-- CreationDate: Wed Jun 12 21:10:16 2019 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -188,13 +188,11 @@ is not restored.</p>
 <b>archive_read_disk_set_symlink_hybrid</b>()</p>
 
 <p style="margin-left:17%;">This sets the mode used for
-handling symbolic links. The
-&rsquo;&rsquo;logical&rsquo;&rsquo; mode follows all
-symbolic links. The &rsquo;&rsquo;physical&rsquo;&rsquo;
-mode does not follow any symbolic links. The
-&rsquo;&rsquo;hybrid&rsquo;&rsquo; mode currently behaves
-identically to the &rsquo;&rsquo;logical&rsquo;&rsquo;
-mode.</p>
+handling symbolic links. The &ldquo;logical&rdquo; mode
+follows all symbolic links. The &ldquo;physical&rdquo; mode
+does not follow any symbolic links. The &ldquo;hybrid&rdquo;
+mode currently behaves identically to the
+&ldquo;logical&rdquo; mode.</p>
 
 
 <p style="margin-top: 1em"><b>archive_read_disk_gname</b>(),
@@ -348,11 +346,10 @@ was written by Tim Kientzle
 
 <p style="margin-top: 1em"><b>BUGS</b></p>
 
-<p style="margin-left:6%;">The
-&rsquo;&rsquo;standard&rsquo;&rsquo; user name and group
-name lookup functions are not the defaults because
-getgrgid(3) and getpwuid(3) are sometimes too large for
-particular applications. The current design allows the
+<p style="margin-left:6%;">The &ldquo;standard&rdquo; user
+name and group name lookup functions are not the defaults
+because getgrgid(3) and getpwuid(3) are sometimes too large
+for particular applications. The current design allows the
 application author to use a more compact implementation when
 appropriate.</p>
 
@@ -371,9 +368,8 @@ such information.</p>
 <p style="margin-left:6%; margin-top: 1em">This API should
 provide a set of methods for walking a directory tree. That
 would make it a direct parallel of the archive_read(3) API.
-When such methods are implemented, the
-&rsquo;&rsquo;hybrid&rsquo;&rsquo; symbolic link mode will
-make sense.</p>
+When such methods are implemented, the &ldquo;hybrid&rdquo;
+symbolic link mode will make sense.</p>
 
 <p style="margin-left:6%; margin-top: 1em">BSD
 April&nbsp;3, 2017 BSD</p>
