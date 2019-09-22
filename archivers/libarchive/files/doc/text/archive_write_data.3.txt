@@ -39,11 +39,11 @@ ERRORS
      archive_errno() and archive_error_string() functions.
 
 BUGS
-     In libarchive 3.x, this function sometimes returns zero on success
-     instead of returning the number of bytes written.	Specifically, this
-     occurs when writing to an archive_write_disk handle.  Clients should
-     treat any value less than zero as an error and consider any non-negative
-     value as success.
+     In libarchive 3.x, this function sometimes returns zero on success in‐
+     stead of returning the number of bytes written.  Specifically, this oc‐
+     curs when writing to an archive_write_disk handle.  Clients should treat
+     any value less than zero as an error and consider any non-negative value
+     as success.
 
 SEE ALSO
      tar(1), libarchive(3), archive_write_finish_entry(3),

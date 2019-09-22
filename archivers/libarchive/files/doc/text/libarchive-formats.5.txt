@@ -27,8 +27,8 @@ DESCRIPTION
      and mode information, and the file data is stored in subsequent records.
      Later variants have extended this by either appropriating undefined areas
      of the header record, extending the header to multiple records, or by
-     storing special entries that modify the interpretation of subsequent
-     entries.
+     storing special entries that modify the interpretation of subsequent en‐
+     tries.
 
      gnutar  The libarchive(3) library can read most GNU-format tar archives.
 	     It currently supports the most popular GNU extensions, including
@@ -45,12 +45,12 @@ DESCRIPTION
 	     interchange format archives.  Pax interchange format archives are
 	     an extension of the older ustar format that adds a separate entry
 	     with additional attributes stored as key/value pairs immediately
-	     before each regular entry.  The presence of these additional
-	     entries is the only difference between pax interchange format and
+	     before each regular entry.  The presence of these additional en‐
+	     tries is the only difference between pax interchange format and
 	     the older ustar format.  The extended attributes are of unlimited
 	     length and are stored as UTF-8 Unicode strings.  Keywords defined
-	     in the standard are in all lowercase; vendors are allowed to
-	     define custom keys by preceding them with the vendor name in all
+	     in the standard are in all lowercase; vendors are allowed to de‐
+	     fine custom keys by preceding them with the vendor name in all
 	     uppercase.  When writing pax archives, libarchive uses many of
 	     the SCHILY keys defined by Joerg Schilling's “star” archiver and
 	     a few LIBARCHIVE keys.  The libarchive library can read most of
@@ -61,8 +61,8 @@ DESCRIPTION
 	     stores them using the UTF-8 encoding.  Prior to libarchive 3.0,
 	     libarchive erroneously assumed that the system wide-character
 	     routines natively supported Unicode.  This caused it to mis-han‐
-	     dle non-ASCII filenames on systems that did not satisfy this
-	     assumption.
+	     dle non-ASCII filenames on systems that did not satisfy this as‐
+	     sumption.
 
      restricted pax
 	     The libarchive library can also write pax archives in which it
@@ -71,43 +71,43 @@ DESCRIPTION
 	     the extended attributes entry is required to store a long file
 	     name, long linkname, extended ACL, file flags, or if any of the
 	     standard ustar data (user name, group name, UID, GID, etc) cannot
-	     be fully represented in the ustar header.	In all cases, the
-	     result can be dearchived by any program that can read POSIX-com‐
-	     pliant pax interchange format archives.  Programs that correctly
+	     be fully represented in the ustar header.	In all cases, the re‐
+	     sult can be dearchived by any program that can read POSIX-compli‐
+	     ant pax interchange format archives.  Programs that correctly
 	     read ustar format (see below) will also be able to read this for‐
 	     mat; any extended attributes will be extracted as separate files
 	     stored in PaxHeader directories.
 
      ustar   The libarchive library can both read and write this format.  This
 	     format has the following limitations:
-	     ·	 Device major and minor numbers are limited to 21 bits.  Nodes
+	     •	 Device major and minor numbers are limited to 21 bits.  Nodes
 		 with larger numbers will not be added to the archive.
-	     ·	 Path names in the archive are limited to 255 bytes.  (Shorter
+	     •	 Path names in the archive are limited to 255 bytes.  (Shorter
 		 if there is no / character in exactly the right place.)
-	     ·	 Symbolic links and hard links are stored in the archive with
+	     •	 Symbolic links and hard links are stored in the archive with
 		 the name of the referenced file.  This name is limited to 100
 		 bytes.
-	     ·	 Extended attributes, file flags, and other extended security
+	     •	 Extended attributes, file flags, and other extended security
 		 information cannot be stored.
-	     ·	 Archive entries are limited to 8 gigabytes in size.
+	     •	 Archive entries are limited to 8 gigabytes in size.
 	     Note that the pax interchange format has none of these restric‐
 	     tions.  The ustar format is old and widely supported.  It is rec‐
 	     ommended when compatibility is the primary concern.
 
      v7      The libarchive library can read and write the legacy v7 tar for‐
 	     mat.  This format has the following limitations:
-	     ·	 Only regular files, directories, and symbolic links can be
+	     •	 Only regular files, directories, and symbolic links can be
 		 archived.  Block and character device nodes, FIFOs, and sock‐
 		 ets cannot be archived.
-	     ·	 Path names in the archive are limited to 100 bytes.
-	     ·	 Symbolic links and hard links are stored in the archive with
+	     •	 Path names in the archive are limited to 100 bytes.
+	     •	 Symbolic links and hard links are stored in the archive with
 		 the name of the referenced file.  This name is limited to 100
 		 bytes.
-	     ·	 User and group information are stored as numeric IDs; there
+	     •	 User and group information are stored as numeric IDs; there
 		 is no provision for storing user or group names.
-	     ·	 Extended attributes, file flags, and other extended security
+	     •	 Extended attributes, file flags, and other extended security
 		 information cannot be stored.
-	     ·	 Archive entries are limited to 8 gigabytes in size.
+	     •	 Archive entries are limited to 8 gigabytes in size.
 	     Generally, users should prefer the ustar format for portability
 	     as the v7 tar format is both less useful and less portable.
 
@@ -119,9 +119,9 @@ DESCRIPTION
 	     The POSIX standards require fixed-length numeric fields to be
 	     written with some character position reserved for terminators.
 	     Libarchive allows these fields to be written without terminator
-	     characters.  This extends the allowable range; in particular,
-	     ustar archives with this extension can support entries up to 64
-	     gigabytes in size.  Libarchive also recognizes base-256 values in
+	     characters.  This extends the allowable range; in particular, us‐
+	     tar archives with this extension can support entries up to 64 gi‐
+	     gabytes in size.  Libarchive also recognizes base-256 values in
 	     most numeric fields.  This essentially removes all limitations on
 	     file size, modification time, and device numbers.
 
@@ -206,16 +206,16 @@ DESCRIPTION
      CDROM images.  In many cases, this can remove the need to burn a physical
      CDROM just in order to read the files contained in an ISO9660 image.  It
      also avoids security and complexity issues that come with virtual mounts
-     and loopback devices.  Libarchive supports the most common Rockridge
-     extensions and has partial support for Joliet extensions.	If both exten‐
+     and loopback devices.  Libarchive supports the most common Rockridge ex‐
+     tensions and has partial support for Joliet extensions.  If both exten‐
      sions are present, the Joliet extensions will be used and the Rockridge
      extensions will be ignored.  In particular, this can create problems with
      hardlinks and symlinks, which are supported by Rockridge but not by
      Joliet.
 
      Libarchive reads ISO9660 images using a streaming strategy.  This allows
-     it to read compressed images directly (decompressing on the fly) and
-     allows it to read images directly from network sockets, pipes, and other
+     it to read compressed images directly (decompressing on the fly) and al‐
+     lows it to read images directly from network sockets, pipes, and other
      non-seekable data sources.  This strategy works well for optimized
      ISO9660 images created by many popular programs.  Such programs collect
      all directory information at the beginning of the ISO9660 image so it can
@@ -237,20 +237,19 @@ DESCRIPTION
      archives that use Zip64 extensions and self-extracting zip archives.
      Libarchive can use either of two different strategies for reading Zip ar‐
      chives: a streaming strategy which is fast and can handle extremely large
-     archives, and a seeking strategy which can correctly process self-
-     extracting Zip archives and archives with deleted members or other in-
-     place modifications.
+     archives, and a seeking strategy which can correctly process self-ex‐
+     tracting Zip archives and archives with deleted members or other in-place
+     modifications.
 
      The streaming reader processes Zip archives as they are read.  It can
-     read archives of arbitrary size from tape or network sockets, and can
-     decode Zip archives that have been separately compressed or encoded.
-     However, self-extracting Zip archives and archives with certain types of
+     read archives of arbitrary size from tape or network sockets, and can de‐
+     code Zip archives that have been separately compressed or encoded.  How‐
+     ever, self-extracting Zip archives and archives with certain types of
      modifications cannot be correctly handled.  Such archives require that
-     the reader first process the Central Directory, which is ordinarily
-     located at the end of a Zip archive and is thus inaccessible to the
-     streaming reader.	If the program using libarchive has enabled seek sup‐
-     port, then libarchive will use this to processes the central directory
-     first.
+     the reader first process the Central Directory, which is ordinarily lo‐
+     cated at the end of a Zip archive and is thus inaccessible to the stream‐
+     ing reader.  If the program using libarchive has enabled seek support,
+     then libarchive will use this to processes the central directory first.
 
      In particular, the seeking reader must be used to correctly handle self-
      extracting archives.  Such archives consist of a program followed by a
@@ -273,18 +272,18 @@ DESCRIPTION
      may include both types of long filenames.	Programs using libarchive can
      write GNU/SVR4 format if they provide an entry called // containing a
      filename table to be written into the archive before any of the entries.
-     Any entries whose names are not in the filename table will be written
-     using BSD-style long filenames.  This can cause problems for programs
-     such as GNU ld that do not support the BSD-style long filenames.
+     Any entries whose names are not in the filename table will be written us‐
+     ing BSD-style long filenames.  This can cause problems for programs such
+     as GNU ld that do not support the BSD-style long filenames.
 
    mtree
      Libarchive can read and write files in mtree(5) format.  This format is
-     not a true archive format, but rather a textual description of a file
-     hierarchy in which each line specifies the name of a file and provides
-     specific metadata about that file.  Libarchive can read all of the key‐
-     words supported by both the NetBSD and FreeBSD versions of mtree(8),
-     although many of the keywords cannot currently be stored in an
-     archive_entry object.  When writing, libarchive supports use of the
+     not a true archive format, but rather a textual description of a file hi‐
+     erarchy in which each line specifies the name of a file and provides spe‐
+     cific metadata about that file.  Libarchive can read all of the keywords
+     supported by both the NetBSD and FreeBSD versions of mtree(8), although
+     many of the keywords cannot currently be stored in an archive_entry ob‐
+     ject.  When writing, libarchive supports use of the
      archive_write_set_options(3) interface to specify which keywords should
      be included in the output.  If libarchive was compiled with access to
      suitable cryptographic libraries (such as the OpenSSL libraries), it can
@@ -296,12 +295,12 @@ DESCRIPTION
      name.  If it can locate and open the file on disk, it will use that to
      fill in any metadata that is missing from the mtree file and will read
      the file contents and return those to the program using libarchive.  If
-     it cannot locate and open the file on disk, libarchive will return an
-     error for any attempt to read the entry body.
+     it cannot locate and open the file on disk, libarchive will return an er‐
+     ror for any attempt to read the entry body.
 
    7-Zip
-     Libarchive can read and write 7-Zip format archives.  TODO: Need more
-     information
+     Libarchive can read and write 7-Zip format archives.  TODO: Need more in‐
+     formation
 
    CAB
      Libarchive can read Microsoft Cabinet ( “CAB”) format archives.  TODO:
