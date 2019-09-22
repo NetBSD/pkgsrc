@@ -202,8 +202,8 @@ OPTIONS
 	     bzip2 compression is recognized automatically on input.
 
      -Z      (o mode only) Compress the archive with compress-compatible com‐
-	     pression before writing it.  In input mode, this option is
-	     ignored; compression is recognized automatically on input.
+	     pression before writing it.  In input mode, this option is ig‐
+	     nored; compression is recognized automatically on input.
 
      -z      (o mode only) Compress the archive with gzip-compatible compres‐
 	     sion before writing it.  In input mode, this option is ignored;

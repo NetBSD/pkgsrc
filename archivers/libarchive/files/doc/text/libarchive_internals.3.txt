@@ -108,12 +108,12 @@ READ ARCHITECTURE
 	     The value returned by the bid function indicates its suitability
 	     for handling this data stream.  A bid of zero will ensure that
 	     this decompressor is never invoked.  Return zero if magic number
-	     checks fail.  Otherwise, your initial implementation should
-	     return the number of bits actually checked.  For example, if you
+	     checks fail.  Otherwise, your initial implementation should re‐
+	     turn the number of bits actually checked.	For example, if you
 	     verify two full bytes and three bits of another byte, bid 19.
 	     Note that the initial block may be very short; be careful to only
-	     inspect the data you are given.  (The current decompressors
-	     require two bytes for correct bidding.)
+	     inspect the data you are given.  (The current decompressors re‐
+	     quire two bytes for correct bidding.)
      Initialize
 	     The winning bidder will have its init function called.  This
 	     function should initialize the remaining slots of the struct
@@ -139,9 +139,9 @@ READ ARCHITECTURE
      Bid     Formats bid by invoking the read_ahead() decompression method but
 	     not calling the consume() method.	This allows each bidder to
 	     look ahead in the input stream.  Bidders should not look further
-	     ahead than necessary, as long look aheads put pressure on the
-	     decompression layer to buffer lots of data.  Most formats only
-	     require a few hundred bytes of look ahead; look aheads of a few
+	     ahead than necessary, as long look aheads put pressure on the de‐
+	     compression layer to buffer lots of data.	Most formats only re‐
+	     quire a few hundred bytes of look ahead; look aheads of a few
 	     kilobytes are reasonable.	(The ISO9660 reader sometimes looks
 	     ahead by 48k, which should be considered an upper limit.)
      Read header
@@ -166,8 +166,8 @@ READ ARCHITECTURE
 	     block just before you return it.
      Skip All Data
 	     The skip data call should skip over all file data and trailing
-	     padding.  This is called automatically by the API layer just
-	     before each header read.  It is also called in response to the
+	     padding.  This is called automatically by the API layer just be‐
+	     fore each header read.  It is also called in response to the
 	     client calling the public data_skip() function.
      Cleanup
 	     On cleanup, the format should release all of its allocated mem‐
@@ -205,8 +205,8 @@ GENERAL SERVICES
      standard services.  (Recall that ANSI/ISO C90 guarantees that you can
      cast freely between a pointer to a structure and a pointer to the first
      element of that structure.)  The archive object has a magic value that
-     indicates which API this object is associated with, slots for storing
-     error information, and function pointers for virtualized API functions.
+     indicates which API this object is associated with, slots for storing er‐
+     ror information, and function pointers for virtualized API functions.
 
 MISCELLANEOUS NOTES
      Connecting existing archiving libraries into libarchive is generally
@@ -217,8 +217,8 @@ MISCELLANEOUS NOTES
      very different approaches.
 
      For example, libarchive's ISO9660 support operates very differently from
-     most ISO9660 readers.  The libarchive support utilizes a work-queue
-     design that keeps a list of known entries sorted by their location in the
+     most ISO9660 readers.  The libarchive support utilizes a work-queue de‐
+     sign that keeps a list of known entries sorted by their location in the
      input.  Whenever libarchive's ISO9660 implementation is asked for the
      next header, checks this list to find the next item on the disk.  Direc‐
      tories are parsed when they are encountered and new items are added to
