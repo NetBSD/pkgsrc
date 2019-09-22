@@ -1,0 +1,10 @@
+As a fork of DOSBox, DOSBox-X retains compatibility with the wide base of
+DOS games DOSBox was designed for.
+
+It also goes further, with a focus on accurate emulation of the hardware,
+and many more ways to tweak and configure the DOS virtual machine.
+
+The DOSBox-X team believes that a better way to emulate the legacy PC platform
+is to give the user all the options they need to emulate everything from
+original IBM PC hardware with 64KB of RAM all the way up to late 90's
+hardware, whatever it takes to get that game or software package to run.
