@@ -1,0 +1,33 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2019/09/22 12:10:45 nia Exp $
+
+Set the correct install prefix.
+
+--- CMakeLists.txt.orig	2015-10-21 09:55:38.000000000 +0000
++++ CMakeLists.txt
+@@ -126,13 +126,11 @@ set_target_properties(falling_time PROPE
+ ################
+ 
+ # Executables
+-set(INSTALL_PREFIX ".")
+ if(WIN32)
+ 	set(EXE_EXTENSION ".exe")
+ 	set(LIB_EXTENSION ".dll")
+ elseif(APPLE)
+ 	set(LIB_EXTENSION ".dylib")
+-	set(INSTALL_PREFIX "falling_time")
+ else()
+ 	set(EXE_EXTENSION "")
+ 	set(LIB_EXTENSION ".so")
+@@ -151,11 +149,7 @@ endif()
+ SET(SOURCE_DIRECTORY ".")
+ INSTALL(DIRECTORY
+ 	${SOURCE_DIRECTORY}/data
+-	DESTINATION ${INSTALL_PREFIX})
+-INSTALL(FILES
+-	${SOURCE_DIRECTORY}/COPYRIGHT
+-	${SOURCE_DIRECTORY}/README.md
+-	DESTINATION ${INSTALL_PREFIX})
++	DESTINATION ${INSTALL_DATA_PREFIX})
+ IF(UNIX AND NOT APPLE AND NOT BEOS AND NOT HAIKU)
+ 	# TODO: .desktop file and png icon
+ elseif(WIN32)
