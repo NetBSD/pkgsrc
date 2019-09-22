@@ -1,0 +1,15 @@
+$NetBSD: patch-mozilla_security_manager_ssl_moz.build,v 1.1.2.2 2019/09/22 09:25:00 bsiegert Exp $
+
+--- mozilla/security/manager/ssl/moz.build.orig	2019-05-06 17:30:52.000000000 +0000
++++ mozilla/security/manager/ssl/moz.build
+@@ -184,10 +184,6 @@ for var in ('DLL_PREFIX', 'DLL_SUFFIX'):
+ 
+ DEFINES['CERT_AddTempCertToPerm'] = '__CERT_AddTempCertToPerm'
+ 
+-USE_LIBS += [
+-    'crmf',
+-]
+-
+ include('/ipc/chromium/chromium-config.mozbuild')
+ 
+ if CONFIG['GNU_CXX']:
