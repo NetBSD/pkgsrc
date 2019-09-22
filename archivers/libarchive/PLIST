@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2016/06/20 17:28:33 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/09/22 19:17:21 prlw1 Exp $
 include/archive.h
 include/archive_entry.h
 lib/libarchive.la
@@ -6,6 +6,7 @@ lib/pkgconfig/libarchive.pc
 man/man3/archive_entry.3
 man/man3/archive_entry_acl.3
 man/man3/archive_entry_linkify.3
+man/man3/archive_entry_misc.3
 man/man3/archive_entry_paths.3
 man/man3/archive_entry_perms.3
 man/man3/archive_entry_stat.3
