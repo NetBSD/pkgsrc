@@ -1,8 +1,10 @@
-# $NetBSD: Makefile.common,v 1.1 2019/09/21 21:34:44 nia Exp $
+# $NetBSD: Makefile.common,v 1.2 2019/09/22 05:43:45 wiz Exp $
 # used by graphics/ilmbase/Makefile
 # used by graphics/opencv/Makefile
 
 DISTNAME=	openexr-2.4.0
+# needed for ilmbase
+GITHUB_PROJECT=	openexr
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openexr/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
