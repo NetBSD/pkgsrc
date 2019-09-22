@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4028 2019/09/22 12:39:05 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4029 2019/09/22 13:06:56 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6588,3 +6588,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added games/fallingtime version 1.0.1 [nia 2019-09-22]
 	Updated emulators/sameboy to 0.12.2 [nia 2019-09-22]
 	Updated emulators/libretro-sameboy to 0.12.2 [nia 2019-09-22]
+	Updated emulators/mgba to 0.7.3 [nia 2019-09-22]
