@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2019/08/31 14:44:57 nia Exp $
+# $NetBSD: options.mk,v 1.11 2019/09/22 18:03:53 prlw1 Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.freeciv-client
 PKG_OPTIONS_REQUIRED_GROUPS=	backend
@@ -8,7 +8,7 @@ PKG_SUGGESTED_OPTIONS=		gtk3
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mgtk3)
-CONFIGURE_ARGS+=	--enable-client=gtk3
+CONFIGURE_ARGS+=	--enable-client=gtk3.22
 CONFIGURE_ARGS+=	--enable-fcmp=gtk3
 .include "../../x11/gtk3/buildlink3.mk"
 PLIST_SRC=		${PKGDIR}/PLIST.gtk3
