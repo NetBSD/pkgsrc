@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.13 2018/11/12 10:42:07 tnn Exp $
+# $NetBSD: bootstrap.mk,v 1.14 2019/09/22 15:05:06 tnn Exp $
 #
 # This file contains a map of available binary bootstrap toolchains
 # and which kit to use for each supported platform.
@@ -23,8 +23,8 @@
 # All binary kits from now on MUST have an accompanying PGP signature from
 # the person who prepared the kit. Unsigned binaries on ftp will be purged.
 
-ONLY_FOR_PLATFORM=	NetBSD-[5-9].*-i386 NetBSD-[5-9].*-x86_64
-ONLY_FOR_PLATFORM+=	NetBSD-[7-9].*-sparc64 NetBSD-[7-9].*-earmv[67]hf
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64
+ONLY_FOR_PLATFORM+=	NetBSD-*-sparc64 NetBSD-*-earmv[67]hf
 ONLY_FOR_PLATFORM+=	NetBSD-*-aarch64
 ONLY_FOR_PLATFORM+=	DragonFly-[34].*-* SunOS-*-* FreeBSD-10.*-x86_64
 ONLY_FOR_PLATFORM+=	Linux-*-x86_64
