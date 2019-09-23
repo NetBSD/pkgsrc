@@ -1,10 +1,20 @@
-$NetBSD: patch-sip_kdecore_typedefs.sip,v 1.3 2018/01/17 19:21:20 markd Exp $
+$NetBSD: patch-sip_kdecore_typedefs.sip,v 1.4 2019/09/23 21:55:43 mef Exp $
 
 build with sip 4.19 
+build with sip 4.19.18 (size_t issue) 
 
---- sip/kdecore/typedefs.sip.orig	2014-08-14 20:17:11.000000000 +0000
-+++ sip/kdecore/typedefs.sip
-@@ -397,8 +397,8 @@ template <TYPE1,TYPE2>
+--- sip/kdecore/typedefs.sip.orig	2014-08-15 05:17:11.000000000 +0900
++++ sip/kdecore/typedefs.sip	2019-09-16 10:32:45.923750123 +0900
+@@ -23,8 +23,6 @@ typedef uint mode_t;
+ 
+ typedef long time_t;
+ 
+-typedef ulong size_t;
+-
+ typedef int ssize_t;
+ 
+ typedef int pid_t;
+@@ -397,8 +395,8 @@ template <TYPE1,TYPE2>
          TYPE1 *t1 = new TYPE1(i.key());
          TYPE2 *t2 = new TYPE2(i.value());
  
@@ -98,3 +108,10 @@ build with sip 4.19
      }
   
      *sipCppPtr = qv;
+@@ -1028,4 +1026,4 @@ template <TYPE1>
+     return sipGetState(sipTransferObj);
+ %End
+ };
+-%End
+\ No newline at end of file
++%End
