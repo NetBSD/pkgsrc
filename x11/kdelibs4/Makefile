@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2019/09/23 04:50:10 mef Exp $
+# $NetBSD: Makefile,v 1.103 2019/09/23 14:01:32 mef Exp $
 
 DISTNAME=	kdelibs-4.14.38
 PKGNAME=	${DISTNAME:S/-4/4-4/}
@@ -39,7 +39,7 @@ CONF_FILES+=	${PREFIX}/share/examples/kde4-dbus/org.kde.auth.conf \
 DEPENDS+=	docbook-xml>=4.2:../../textproc/docbook-xml
 DEPENDS+=	docbook-xsl>=1.75:../../textproc/docbook-xsl
 
-INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man7 ${PKGMANDIR}/man8
+USE_LANGUAGES+=	c++11
 
 REPLACE_PERL+= \
 	kio/proxytype.pl \
@@ -87,7 +87,6 @@ PLIST.kgrantpty=	yes
 .endif
 
 CFLAGS.SunOS+=		-D__EXTENSIONS__
-CFLAGS+=	 	-std=c++11
 
 LDFLAGS.Darwin+=	-lintl
 LDFLAGS.SunOS+=		-lintl
