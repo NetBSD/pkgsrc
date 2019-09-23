@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2019/09/22 22:38:00 mef Exp $
+# $NetBSD: Makefile,v 1.4 2019/09/23 00:22:03 mef Exp $
 
 DISTNAME=	I18N_UnicodeNormalizer-1.0.0
+PKGREVISION=	1
 CATEGORIES+=	converters
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
