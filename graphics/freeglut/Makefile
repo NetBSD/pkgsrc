@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2019/08/30 17:01:33 nia Exp $
+# $NetBSD: Makefile,v 1.23 2019/09/23 12:28:49 nia Exp $
 
 DISTNAME=	freeglut-3.0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freeglut/}
 
@@ -17,6 +17,11 @@ USE_LIBTOOL=	yes
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 
 PKGCONFIG_OVERRIDE=	freeglut.pc.in
+
+# Install glut.pc for compatibility.
+post-install:
+	${INSTALL_DATA} ${DESTDIR}${PREFIX}/lib/pkgconfig/freeglut.pc \
+	    ${DESTDIR}${PREFIX}/lib/pkgconfig/glut.pc
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
