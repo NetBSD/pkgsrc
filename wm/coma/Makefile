@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/08/28 07:11:23 fcambus Exp $
+# $NetBSD: Makefile,v 1.4 2019/09/23 14:57:12 fcambus Exp $
 
 DISTNAME=	coma-1.0
 CATEGORIES=	wm
@@ -10,6 +10,7 @@ COMMENT=	Keyboard driven tiling window manager
 LICENSE=	isc
 
 USE_LANGUAGES=	c99
+USE_TOOLS+=	pkg-config
 
 MAKE_FLAGS+=	MAN_DIR="${PREFIX}/${PKGMANDIR}"
 
