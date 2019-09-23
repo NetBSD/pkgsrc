@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2018/01/17 19:21:20 markd Exp $
+$NetBSD: distinfo,v 1.15 2019/09/23 21:55:43 mef Exp $
 
 SHA1 (pykde4-4.14.3.tar.xz) = 9cc8e70d3b107a876cf579beab1f582861cd2c48
 RMD160 (pykde4-4.14.3.tar.xz) = 3ea2492cd31704e559456cb78dd85660fae7e74c
@@ -10,7 +10,7 @@ SHA1 (patch-sip_dnssd_remoteservice.sip) = ba00fdf234585686bb11f04b7e0fd5b322739
 SHA1 (patch-sip_kdecore_kmimetype.sip) = 50c2df2246b9f4263e307933e5b532db895b30aa
 SHA1 (patch-sip_kdecore_ksharedconfig.sip) = 748d6e014b31586ff6824065579bcbcfe2ec4cd2
 SHA1 (patch-sip_kdecore_ksycocaentry.sip) = 174773d04ebcfeb5b0730590e7d7e12011ee2107
-SHA1 (patch-sip_kdecore_typedefs.sip) = 3357640a33d07fb6c4c8e02e6a95149a773de0c9
+SHA1 (patch-sip_kdecore_typedefs.sip) = 24cb6b9c84171597f513e7100cefaaa7e4a4f932
 SHA1 (patch-sip_kdeui_kcompletion.sip) = ce3547028efb1f997117114d2189241bc03f6276
 SHA1 (patch-sip_kdeui_kfontchooser.sip) = 988d5207b5db4fd9a6dab46d6e5264ba6a00eaf4
 SHA1 (patch-sip_kdeui_kfontdialog.sip) = af921a11d407645dc50a591e34ffd93b3a0ccf16
@@ -21,4 +21,3 @@ SHA1 (patch-sip_ktexteditor_markinterface.sip) = f60d8f3fd905e36136434883b0456ed
 SHA1 (patch-sip_phonon_objectdescription.sip) = 29ef03ba93faefcfa3df915f5ca9947343ea2b1c
 SHA1 (patch-sip_solid_powermanagement.sip) = a0b961cca434b1998bcd86bf781af72b92cbf0ca
 SHA1 (patch-sip_solid_predicate.sip) = 0304cbd05eb6f1b878db2a2411e218158ba366fa
-SHA1 (patch-sip_soprano_pluginmanager.sip) = 2d9131583273bb47daffd55a2bc470ed1bbfda09
