@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2017/10/08 09:10:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/09/24 09:45:32 adam Exp $
 bin/gends_extract_simple_types
 bin/gends_extract_simple_types.py
 bin/gends_generate_django
@@ -23,6 +23,8 @@ ${PYSITELIB}/libgenerateDS/gui/generateds_gui_session.py
 ${PYSITELIB}/libgenerateDS/gui/generateds_gui_session.pyc
 ${PYSITELIB}/libgenerateDS/gui/generateds_gui_session.pyo
 ${PYSITELIB}/libgenerateDS/process_includes.py
+${PLIST.py2x}${PYSITELIB}/libgenerateDS/process_includes.pyc
+${PLIST.py2x}${PYSITELIB}/libgenerateDS/process_includes.pyo
 ${PYSITELIB}/process_includes.py
 ${PYSITELIB}/process_includes.pyc
 ${PYSITELIB}/process_includes.pyo
