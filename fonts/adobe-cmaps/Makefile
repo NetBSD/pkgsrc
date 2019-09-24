@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2019/09/24 13:49:30 mef Exp $
+# $NetBSD: Makefile,v 1.25 2019/09/24 13:54:15 mef Exp $
 
 DISTNAME=	adobe-cmaps-20060615
 CATEGORIES=	fonts print
-MASTER_SITES=	htttp://cdn.netbsd.org/pub/pkgsrc/distfiles/adobe-cmaps-20060615
+MASTER_SITES=	# empty
 
 CMAP_FILES=	ac15 ag15 ai0 aj16 aj20 ak12
 RKSJ_FILES=	rksj-cmaps
