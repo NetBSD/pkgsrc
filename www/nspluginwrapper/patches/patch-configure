@@ -1,0 +1,17 @@
+$NetBSD: patch-configure,v 1.1 2019/09/24 17:33:50 kamil Exp $
+
+Fix missing linking with -lgthread-2.0.
+
+--- configure.orig	2011-07-01 03:18:57.000000000 +0000
++++ configure
+@@ -499,8 +499,8 @@ fi
+ 
+ # check for Glib 2.0 compile CFLAGS
+ if $pkgconfig --exists glib-2.0; then
+-    GLIB_CFLAGS=`$pkgconfig --cflags glib-2.0`
+-    GLIB_LIBS=`$pkgconfig --libs glib-2.0`
++    GLIB_CFLAGS=`$pkgconfig --cflags glib-2.0 gthread-2.0`
++    GLIB_LIBS=`$pkgconfig --libs glib-2.0 gthread-2.0`
+     GLIB_VERSION=`$pkgconfig --modversion glib-2.0`
+ else
+     echo "GLIB 2.0 environment not found"
