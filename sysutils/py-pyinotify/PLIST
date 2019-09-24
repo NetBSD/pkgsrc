@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2018/06/12 01:00:56 youri Exp $
-${PYSITELIB}/pyinotify.pyo
-${PYSITELIB}/pyinotify.pyc
-${PYSITELIB}/inotify_syscalls.so
+@comment $NetBSD: PLIST,v 1.2 2019/09/24 09:04:08 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/inotify_syscalls.so
 ${PYSITELIB}/pyinotify.py
+${PYSITELIB}/pyinotify.pyc
+${PYSITELIB}/pyinotify.pyo
