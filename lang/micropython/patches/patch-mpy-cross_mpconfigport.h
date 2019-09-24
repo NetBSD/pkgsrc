@@ -1,6 +1,6 @@
-$NetBSD: patch-mpy-cross_mpconfigport.h,v 1.1 2017/11/29 15:13:32 hauke Exp $
+$NetBSD: patch-mpy-cross_mpconfigport.h,v 1.2 2019/09/24 12:17:40 sevan Exp $
 
-Modern *BSDs heclare  alloca() in <stdlib.h>
+Modern *BSDs declare alloca() in <stdlib.h>
 
 --- mpy-cross/mpconfigport.h.orig	2017-08-23 01:50:10.000000000 +0000
 +++ mpy-cross/mpconfigport.h
