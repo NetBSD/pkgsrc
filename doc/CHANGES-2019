@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4038 2019/09/23 20:00:49 triaxx Exp $
+$NetBSD: CHANGES-2019,v 1.4039 2019/09/24 12:57:31 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6598,3 +6598,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed comms/asterisk [jnemeth 2019-09-22]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2019Q3 branch [wiz 2019-09-22]
 	Updated mail/postfix to 3.4.7 [triaxx 2019-09-23]
+	Updated pkgtools/pkgin to 0.13.0 [jperkin 2019-09-24]
