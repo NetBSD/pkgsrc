@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/08/04 09:53:05 adam Exp $
+# $NetBSD: Makefile,v 1.14 2019/09/24 16:08:29 kamil Exp $
 
 DISTNAME=	json-c-0.13.1
 CATEGORIES=	textproc
@@ -16,6 +16,8 @@ PKGCONFIG_OVERRIDE+=	json-c.pc.in
 TEST_TARGET=		check
 
 .include "../../mk/compiler.mk"
+
+BUILDLINK_TRANSFORM+=	rm:-Werror # -Werror,-Wimplicit-int-float-conversion fixed in https://github.com/json-c/json-c/commit/d0b87ee87b282e9b91a1af924050e217b0b2ae8b.patch
 
 # gcc < 4.2 does not have -Wno-error= option.
 .if !empty(CC_VERSION:Mgcc-3*) || !empty(CC_VERSION:Mgcc-4.[01]*)
