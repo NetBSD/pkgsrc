@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/06/12 01:00:56 youri Exp $
+# $NetBSD: Makefile,v 1.2 2019/09/24 09:04:08 adam Exp $
 
 DISTNAME=	Pyinotify-0.9.6
 PKGNAME=	${PYPKGPREFIX}-pyinotify-0.9.6
@@ -12,8 +12,8 @@ HOMEPAGE=	https://github.com/seb-m/pyinotify
 COMMENT=	Python inotify library
 LICENSE=	mit
 
-EGG_NAME=	pyinotify-${PKGVERSION_NOREV}
+EGG_NAME=	${DISTNAME:tl}
 
-.include "../../lang/python/egg.mk"
 .include "../../devel/libinotify/buildlink3.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
