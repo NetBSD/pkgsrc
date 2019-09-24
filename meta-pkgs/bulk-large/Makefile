@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2019/09/15 20:34:49 gutteridge Exp $
+# $NetBSD: Makefile,v 1.44 2019/09/24 12:22:46 sevan Exp $
 
-DISTNAME=	bulk-large-20190915
+DISTNAME=	bulk-large-20190924
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -51,7 +51,7 @@ BUILD_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 # 2. Applications
 #
 BUILD_DEPENDS+=	konversation>=1.4:../../chat/konversation
-BUILD_DEPENDS+=	asterisk>=11:../../comms/asterisk
+BUILD_DEPENDS+=	asterisk>=16:../../comms/asterisk16
 BUILD_DEPENDS+=	avr-gcc-[0-9]*:../../cross/avr-gcc
 BUILD_DEPENDS+=	avr-libc-[0-9]*:../../cross/avr-libc
 BUILD_DEPENDS+=	avr-gdb-[0-9]*:../../cross/avr-gdb
