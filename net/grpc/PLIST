@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2019/08/25 18:52:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/09/24 07:24:42 adam Exp $
 bin/grpc_cpp_plugin
 bin/grpc_csharp_plugin
 bin/grpc_node_plugin
@@ -289,9 +289,6 @@ lib/libgpr.so.1
 lib/libgrpc++.so
 lib/libgrpc++.so.${PKGVERSION}
 lib/libgrpc++.so.1
-lib/libgrpc++_cronet.so
-lib/libgrpc++_cronet.so.${PKGVERSION}
-lib/libgrpc++_cronet.so.1
 lib/libgrpc++_error_details.so
 lib/libgrpc++_error_details.so.${PKGVERSION}
 lib/libgrpc++_error_details.so.1
