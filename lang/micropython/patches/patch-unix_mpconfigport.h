@@ -1,6 +1,6 @@
-$NetBSD: patch-unix_mpconfigport.h,v 1.2 2017/11/29 15:13:32 hauke Exp $
+$NetBSD: patch-unix_mpconfigport.h,v 1.3 2019/09/24 12:29:36 sevan Exp $
 
-Modern *BSDs heclare  alloca() in <stdlib.h>
+Modern *BSDs declare alloca() in <stdlib.h>
 
 --- unix/mpconfigport.h.orig	2017-08-23 01:50:11.000000000 +0000
 +++ unix/mpconfigport.h
