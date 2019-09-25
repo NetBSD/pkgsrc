@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/09/27 13:30:03 adam Exp $
+# $NetBSD: Makefile,v 1.7 2019/09/25 07:27:45 adam Exp $
 
 DISTNAME=	rdflib-4.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +16,8 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 BUILD_DEPENDS+=	${PYPKGPREFIX}-networkx-[0-9]*:../../math/py-networkx
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-networkx
 
 REPLACE_PYTHON+=	rdflib/extras/describer.py rdflib/extras/infixowl.py
 REPLACE_PYTHON+=	rdflib/plugins/parsers/notation3.py
