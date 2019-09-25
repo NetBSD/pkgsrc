@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.3 2019/09/22 13:06:39 nia Exp $
+$NetBSD: distinfo,v 1.4 2019/09/25 08:48:43 nia Exp $
 
 SHA1 (mgba-0.7.3.tar.gz) = 4e265b8332d9ddf0bffc800a3727ce406eaa984a
 RMD160 (mgba-0.7.3.tar.gz) = 4f9869af512e2621d4b403ac875e62edc1010adc
 SHA512 (mgba-0.7.3.tar.gz) = 131f850699f17a7496f7428b85b50f38b99acec4c87d5d28ba4e3af94f095a1b6d177ea731838b2971362b46c52accef9cbec98433ecfaccc080371092c7d789
 Size (mgba-0.7.3.tar.gz) = 11228977 bytes
-SHA1 (patch-CMakeLists.txt) = f0b106e75cd2697fe81c7b962159cfa5ed4c6681
+SHA1 (patch-CMakeLists.txt) = 025f67fa8cabfcbb7a2e1761e3352f23df5068f8
 SHA1 (patch-include_mgba-util_math.h) = 448ca1bb3bbe2812e7d9482917c488ddcf3b48f0
 SHA1 (patch-include_mgba-util_platform_posix_threading.h) = c5c737be68340e3571934d43bf0c6eab8bc34978
 SHA1 (patch-src_platform_qt_CMakeLists.txt) = e8adb538c1319d6a5c380aa091aa3b10e3ed29e7
