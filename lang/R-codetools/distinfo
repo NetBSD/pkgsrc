@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2019/07/31 16:15:36 brook Exp $
-
-SHA1 (R/codetools_0.2-16.tar.gz) = e2ae50515912665c2b3fb35d39b758cdef4e6aff
-RMD160 (R/codetools_0.2-16.tar.gz) = 9a71041aef3f89affe7f34759564a5d25612c291
-SHA512 (R/codetools_0.2-16.tar.gz) = 19c2eb1281f4ff99556b9cf2e7bd06fed3a261af3e6d21c49f9bb8804550152bf9fc7a152d6836816a2ea801a766547a2650a0aa8e85b3139f224cbee651cb39
-Size (R/codetools_0.2-16.tar.gz) = 12996 bytes
