@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/08/09 19:03:18 brook Exp $
+# $NetBSD: Makefile,v 1.2 2019/09/25 17:32:57 brook Exp $
 
 R_PKGNAME=	processx
 R_PKGVER=	3.4.1
@@ -8,6 +8,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Execute and control system processes
 LICENSE=	mit
 
+DEPENDS+=	R-R6>=2.4.0:../../devel/R-R6
 DEPENDS+=	R-ps>=1.2.0:../../sysutils/R-ps
 
 USE_LANGUAGES=	c
