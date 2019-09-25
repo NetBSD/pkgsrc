@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2019/04/25 07:33:10 maya Exp $
+# $NetBSD: Makefile,v 1.3 2019/09/25 13:09:41 adam Exp $
 
 DISTNAME=	coursera-dl-0.8.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coursera-dl/}
 GITHUB_TAG=	0.8.0
 PKGREVISION=	1
-CATEGORIES=	net
+CATEGORIES=	net python
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	https://github.com/coursera-dl/coursera-dl
@@ -19,6 +19,10 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.5.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.10:../../www/py-urllib3
 DEPENDS+=	${PYPKGPREFIX}-asn1>=0.1.7:../../security/py-asn1
 DEPENDS+=	${PYPKGPREFIX}-keyring>=4.0:../../security/py-keyring
+
+PYTHON_SELF_CONFLICT=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-keyring
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
