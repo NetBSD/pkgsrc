@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.519 2019/08/25 16:37:28 maya Exp $
+# $NetBSD: Makefile,v 1.520 2019/09/25 23:28:32 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -6,7 +6,6 @@ COMMENT=	Programming languages
 SUBDIR+=	Cg-compiler
 SUBDIR+=	LuaJIT
 SUBDIR+=	LuaJIT2
-SUBDIR+=	R-codetools
 SUBDIR+=	R-sourcetools
 SUBDIR+=	STk
 SUBDIR+=	a60
