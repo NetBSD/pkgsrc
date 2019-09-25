@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2019/05/29 19:52:48 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2019/09/25 13:22:09 nia Exp $
 
 BUILDLINK_TREE+=	glew
 
@@ -12,6 +12,7 @@ BUILDLINK_PKGSRCDIR.glew?=	../../graphics/glew
 .include "../../mk/bsd.fast.prefs.mk"
 .if ${OPSYS} != "Darwin"
 .include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .endif
 .endif # GLEW_BUILDLINK3_MK
 
