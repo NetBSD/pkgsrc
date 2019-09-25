@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:02:32 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/09/25 01:45:47 mef Exp $
 
-SHA1 (tex-ntheorem.doc-27609/ntheorem.doc.tar.xz) = 80c2552cf55883bccfc3b8ac2ef6c4953f6c2720
-RMD160 (tex-ntheorem.doc-27609/ntheorem.doc.tar.xz) = ea8ecda5ac823fb3316ec7c10b60105aa444dc31
-SHA512 (tex-ntheorem.doc-27609/ntheorem.doc.tar.xz) = a8aed303ce4f5cd5605fa788bfa6476a4d080b18ec153bd5b3da97c29d704f0438cb37e5f23ce9e11bcede7102c2b4a57ba8888839104b1b7ae5202684c59590
-Size (tex-ntheorem.doc-27609/ntheorem.doc.tar.xz) = 420704 bytes
+SHA1 (tex-ntheorem.doc-1.31/ntheorem.doc.tar.xz) = 796d2922e01d12586a3d61ebd406e84c71be44aa
+RMD160 (tex-ntheorem.doc-1.31/ntheorem.doc.tar.xz) = 0309f13041e82314cb9521688d2eca1f8fc5b89a
+SHA512 (tex-ntheorem.doc-1.31/ntheorem.doc.tar.xz) = fdea81cedc9ceca6ee29ee006867a05f018f210db2cb59c763adc4bc15db65a7e96ffc93bcd576a4c1a50e7e55d4b199132371686538216eba6fed65dce77ba1
+Size (tex-ntheorem.doc-1.31/ntheorem.doc.tar.xz) = 420704 bytes
