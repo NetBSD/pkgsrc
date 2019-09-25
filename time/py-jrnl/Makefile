@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/09/20 16:52:46 adam Exp $
+# $NetBSD: Makefile,v 1.4 2019/09/25 13:11:03 adam Exp $
 
 DISTNAME=	jrnl-1.9.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,6 +23,8 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.6.1:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-tzlocal>=1.1:../../time/py-tzlocal
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-keyring
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/jrnl ${DESTDIR}${PREFIX}/bin/jrnl-${PYVERSSUFFIX} || ${TRUE}
