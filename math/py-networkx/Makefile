@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2019/06/17 14:58:26 adam Exp $
+# $NetBSD: Makefile,v 1.29 2019/09/25 07:24:12 adam Exp $
 
 DISTNAME=	networkx-2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-decorator>=4.3.0:../../devel/py-decorator
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose>=1.3.7:../../devel/py-nose
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
