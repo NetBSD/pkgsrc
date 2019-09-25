@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/08/09 18:39:07 brook Exp $
+# $NetBSD: Makefile,v 1.2 2019/09/25 17:21:08 brook Exp $
 
 R_PKGNAME=	testthat
 R_PKGVER=	2.2.1
@@ -8,6 +8,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Unit testing for R
 LICENSE=	mit
 
+DEPENDS+=	R-R6>=2.4.0:../../devel/R-R6
 DEPENDS+=	R-cli>=1.1.0:../../devel/R-cli
 DEPENDS+=	R-crayon>=1.3.4:../../devel/R-crayon
 DEPENDS+=	R-evaluate>=0.14:../../devel/R-evaluate
