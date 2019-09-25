@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/09/18 14:17:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2019/09/25 00:58:19 nia Exp $
 
 DISTNAME=	mumble-1.3.0
 PKGREVISION=	2
@@ -20,6 +20,8 @@ BUILD_TARGET=	release
 
 # C++11
 GCC_REQD+=	4.8
+
+LDFLAGS.NetBSD+=	-lrt
 
 CONFIG_OPTIONS+=	DEFINES+="PLUGIN_PATH=${PREFIX}/lib/mumble"
 
@@ -61,7 +63,9 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 do-configure:
 	cd ${WRKSRC} && ${QTDIR}/bin/qmake -unix -recursive main.pro \
 	    ${CONFIG_OPTIONS} ${MAKE_ENV} \
-	    QMAKE_CFLAGS=${CFLAGS:Q} QMAKE_CXXFLAGS=${CXXFLAGS:Q}
+	    QMAKE_CFLAGS=${CFLAGS:Q} \
+	    QMAKE_CXXFLAGS=${CXXFLAGS:Q} \
+	    QMAKE_LFLAGS=${LDFLAGS:Q}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/release/mumble \
