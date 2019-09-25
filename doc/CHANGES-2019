@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4040 2019/09/24 17:08:34 leot Exp $
+$NetBSD: CHANGES-2019,v 1.4041 2019/09/25 23:28:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6600,3 +6600,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/postfix to 3.4.7 [triaxx 2019-09-23]
 	Updated pkgtools/pkgin to 0.13.0 [jperkin 2019-09-24]
 	Updated www/webkit-gtk to 2.26.1 [leot 2019-09-24]
+	Removed lang/R-codetools [wiz 2019-09-25]
