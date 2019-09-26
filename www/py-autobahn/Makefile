@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/09/17 08:43:21 adam Exp $
+# $NetBSD: Makefile,v 1.28 2019/09/26 10:05:57 wiz Exp $
 
 DISTNAME=	autobahn-19.9.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,6 +17,9 @@ DEPENDS+=	${PYPKGPREFIX}-txaio>=18.8.1:../../devel/py-txaio
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=1.3.0:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=2.8.6:../../devel/py-test
 TEST_ENV+=	USE_ASYNCIO=1
+
+# some problems with python-2.7
+# https://github.com/crossbario/autobahn-python/issues/1249
 
 USE_LANGUAGES=	# none
 
