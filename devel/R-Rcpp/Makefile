@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/08/08 19:53:37 brook Exp $
+# $NetBSD: Makefile,v 1.15 2019/09/26 00:57:29 wiz Exp $
 
 R_PKGNAME=	Rcpp
 R_PKGVER=	1.0.2
@@ -30,6 +30,7 @@ REPLACE.Rscript.new=	${PREFIX}/bin/Rscript
 REPLACE_FILES.Rscript=	${REPLACE_RSCRIPT}
 
 CHECK_SSP_SKIP+=	lib/R/library/Rcpp/unitTests/bin/*/*.deb
+CHECK_RELRO_SKIP+=	${CHECK_SSP_SKIP}
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
