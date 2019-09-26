@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.36 2019/09/22 17:52:41 prlw1 Exp $
+# $NetBSD: Makefile,v 1.37 2019/09/26 10:36:33 prlw1 Exp $
 
 .include "Makefile.common"
 
+
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//:S/-/3-/}
+PKGREVISION=	1
 EGG_NAME=	${DISTNAME:S/pygobject/PyGObject/}
 
 COMMENT=	Python bindings for glib2 gobject
@@ -11,12 +13,17 @@ MESON_ARGS+=	-Dpython=${PYTHONBIN:Q}
 MESON_ARGS+=	-Dtests=false
 TEST_TARGET=	check
 
-# XXX shouldn't be necessary with -Dinstall-common=false
+# Leave for py-gobject3-common:
 post-install:
 	${RM} \
 	${DESTDIR}${PREFIX}/include/pygobject-3.0/pygobject.h \
 	${DESTDIR}${PREFIX}/lib/pkgconfig/pygobject-3.0.pc
 
+BUILDLINK_API_DEPENDS.glib2=	glib2>=2.48.0
+.include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gobject-introspection=	gobject-introspection>=1.46.0
+.include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/py-gobject3-common/buildlink3.mk"
 .include "../../devel/py-meson/build.mk"
 # https://bugzilla.gnome.org/show_bug.cgi?id=685094
