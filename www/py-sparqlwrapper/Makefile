@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/10/07 11:14:42 adam Exp $
+# $NetBSD: Makefile,v 1.5 2019/09/26 07:48:32 wiz Exp $
 
 DISTNAME=	SPARQLWrapper-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,6 +11,8 @@ COMMENT=	SPARQL endpoint interface to Python
 LICENSE=	w3c
 
 DEPENDS+=	${PYPKGPREFIX}-rdflib>=4.0:../../textproc/py-rdflib
+
+PYTHON_VERSIONS_INCOMPATIBLE=   27	# py-networkx via py-rdflib
 
 USE_LANGUAGES=	# none
 
