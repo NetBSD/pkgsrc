@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q2,v 1.1.2.15 2019/09/21 18:40:27 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q2,v 1.1.2.16 2019/09/26 08:16:38 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q2 branch:
 
@@ -140,6 +140,21 @@ audio/mpg123: security fix
 
 Pullup ticket #6035 - requested by nia
 security/libgcrypt: security fix
+
+Pullup ticket #6036 - requested by taca
+security/clamav: security fix
+
+Pullup ticket #6037 - requested by taca
+www/apache24: SunOS build fix, security fix
+
+Pullup ticket #6038 - requested by taca
+lang/ruby24-base: security fix
+
+Pullup ticket #6039 - requested by taca
+lang/ruby25-base: security fix
+
+Pullup ticket #6040 - requested by taca
+lang/ruby26-base: security fix
 
 Pullup ticket #6049 - requested by wiedi
 mail/exim: security fix (remote root)
