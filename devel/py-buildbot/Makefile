@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/05/03 10:54:38 adam Exp $
+# $NetBSD: Makefile,v 1.22 2019/09/26 10:30:33 wiz Exp $
 
 DISTNAME=	buildbot-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -30,10 +30,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-treq-[0-9]*:../../devel/py-treq
 TEST_DEPENDS+=	${PYPKGPREFIX}-txgithub-[0-9]*:../../devel/py-txgithub
 TEST_DEPENDS+=	${PYPKGPREFIX}-txrequests-[0-9]*:../../devel/py-txrequests
 
-.include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} == 27
-TEST_DEPENDS+=	${PYPKGPREFIX}-scandir-[0-9]*:../../devel/py-scandir
-.endif
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-autobahn
 
 USE_LANGUAGES=	# none
 
