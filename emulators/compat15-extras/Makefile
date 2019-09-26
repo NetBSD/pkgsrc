@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/06/07 21:20:46 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2019/09/26 09:43:50 wiz Exp $
 
 COMPAT_PKG=		compat15	# for compat_netbsd/Makefile.common
 NETBSD_VERSION=		1.5
@@ -26,5 +26,7 @@ NOT_FOR_PLATFORM=	NetBSD-*-${MACHINE_ARCH}
 post-extract:
 	cd ${WRKSRC}/usr/lib && mv libtermlib.so.0.0 libtermlib.so.0.4
 .endif
+
+CHECK_RELRO_SKIP+=	*
 
 .include "../../mk/bsd.pkg.mk"
