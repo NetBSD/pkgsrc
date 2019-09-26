@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4046 2019/09/26 09:39:24 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4047 2019/09/26 10:16:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6608,3 +6608,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed devel/RTFM [wiz 2019-09-26]
 	Removed devel/RTx-RightsMatrix [wiz 2019-09-26]
 	Removed security/base [wiz 2019-09-26]
+	Updated mail/libesmtp to 1.0.6nb4 [wiz 2019-09-26]
