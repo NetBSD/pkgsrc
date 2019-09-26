@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2918 2019/09/26 03:36:00 jnemeth Exp $
+# $NetBSD: Makefile,v 1.2919 2019/09/26 08:34:02 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2512,7 +2512,6 @@ SUBDIR+=	rscode
 SUBDIR+=	rsltc
 SUBDIR+=	rt-mysql
 SUBDIR+=	rt-pgsql
-SUBDIR+=	rt3
 SUBDIR+=	rt4
 SUBDIR+=	rubigen
 SUBDIR+=	ruby-SDL
