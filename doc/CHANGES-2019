@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4043 2019/09/26 00:55:15 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4044 2019/09/26 08:34:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6603,3 +6603,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed lang/R-codetools [wiz 2019-09-25]
 	Updated net/mosquitto to 1.6.7 [gdt 2019-09-25]
 	Updated devel/R-tcltk2 to 1.2.11nb1 [wiz 2019-09-26]
+	Removed devel/rt3 successor devel/rt4 [wiz 2019-09-26]
+	Removed www/p5-libapreq successor www/p5-libapreq2 [wiz 2019-09-26]
