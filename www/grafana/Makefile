@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2019/08/30 17:05:22 tnn Exp $
+# $NetBSD: Makefile,v 1.18 2019/09/26 20:10:55 bsiegert Exp $
 
 DISTNAME=	grafana-6.3.4
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grafana/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
