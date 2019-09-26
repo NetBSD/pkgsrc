@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2013/04/21 13:59:34 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2019/09/26 08:33:31 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.rt4
 PKG_OPTIONS_REQUIRED_GROUPS=	backend frontend
 PKG_OPTIONS_GROUP.backend=	mysql oracle pgsql sqlite
-PKG_OPTIONS_GROUP.frontend=	fastcgi modperl1 modperl2
+PKG_OPTIONS_GROUP.frontend=	fastcgi modperl2
 PKG_SUGGESTED_OPTIONS=		mysql fastcgi
 
 .include "../../mk/bsd.options.mk"
@@ -12,9 +12,6 @@ PKG_SUGGESTED_OPTIONS=		mysql fastcgi
 .if !empty(PKG_OPTIONS:Mfastcgi)
 DEPENDS+=	p5-FCGI>=0.74:../../www/p5-FCGI
 DEPENDS+=	p5-FCGI-ProcManager-[0-9]*:../../www/p5-FCGI-ProcManager
-.elif !empty(PKG_OPTIONS:Mmodperl1)
-DEPENDS+=	p5-libapreq-[0-9]*:../../www/p5-libapreq
-DEPENDS+=	p5-Apache-DBI>=0.92:../../databases/p5-Apache-DBI
 .elif !empty(PKG_OPTIONS:Mmodperl2)
 DEPENDS+=	p5-Apache-DBI>=0.92:../../databases/p5-Apache-DBI
 DEPENDS+=	p5-HTML-Mason>=1.36:../../www/p5-HTML-Mason
