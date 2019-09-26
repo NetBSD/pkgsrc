@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19292 2019/09/22 19:01:47 wiz Exp $
+$NetBSD: TODO,v 1.19293 2019/09/26 08:28:41 nia Exp $
 
 Suggested new packages
 ======================
@@ -634,6 +634,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fortunes-calvin-0.3
 	o freeciv-2.6.0
 	o freedv-1.2.2
+	o freeglut-3.2.0
 	o freenet-0.7
 	o freesci-0.6.4
 	o freeswitch-1.2.3
