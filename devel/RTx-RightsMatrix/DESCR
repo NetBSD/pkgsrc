@@ -1,3 +1,0 @@
-Managing access rights in RT can be cumbersome, and RTx::RightsMatrix aims at
-making the RT administrator's life easier by providing an efficient GUI to
-manage rights.
