@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4049 2019/09/26 11:37:13 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4050 2019/09/26 14:52:49 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6611,3 +6611,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/libesmtp to 1.0.6nb4 [wiz 2019-09-26]
 	Updated devel/deforaos-cpp to 0.0.3nb2 [wiz 2019-09-26]
 	Updated net/couriertcpd to 0.68.1nb9 [wiz 2019-09-26]
+	Updated www/php-glpi to 9.4.4 [hauke 2019-09-26]
