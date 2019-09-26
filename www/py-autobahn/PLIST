@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2019/09/26 10:05:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2019/09/26 10:30:01 wiz Exp $
 bin/wamp
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -35,8 +35,8 @@ ${PYSITELIB}/autobahn/asyncio/websocket.py
 ${PYSITELIB}/autobahn/asyncio/websocket.pyc
 ${PYSITELIB}/autobahn/asyncio/websocket.pyo
 ${PYSITELIB}/autobahn/asyncio/xbr.py
-${PLIST.py3x}${PYSITELIB}/autobahn/asyncio/xbr.pyc
-${PLIST.py3x}${PYSITELIB}/autobahn/asyncio/xbr.pyo
+${PYSITELIB}/autobahn/asyncio/xbr.pyc
+${PYSITELIB}/autobahn/asyncio/xbr.pyo
 ${PYSITELIB}/autobahn/exception.py
 ${PYSITELIB}/autobahn/exception.pyc
 ${PYSITELIB}/autobahn/exception.pyo
@@ -105,8 +105,8 @@ ${PYSITELIB}/autobahn/twisted/websocket.py
 ${PYSITELIB}/autobahn/twisted/websocket.pyc
 ${PYSITELIB}/autobahn/twisted/websocket.pyo
 ${PYSITELIB}/autobahn/twisted/xbr.py
-${PLIST.py3x}${PYSITELIB}/autobahn/twisted/xbr.pyc
-${PLIST.py3x}${PYSITELIB}/autobahn/twisted/xbr.pyo
+${PYSITELIB}/autobahn/twisted/xbr.pyc
+${PYSITELIB}/autobahn/twisted/xbr.pyo
 ${PYSITELIB}/autobahn/util.py
 ${PYSITELIB}/autobahn/util.pyc
 ${PYSITELIB}/autobahn/util.pyo
@@ -463,17 +463,17 @@ ${PYSITELIB}/autobahn/xbr/_abi.py
 ${PYSITELIB}/autobahn/xbr/_abi.pyc
 ${PYSITELIB}/autobahn/xbr/_abi.pyo
 ${PYSITELIB}/autobahn/xbr/_blockchain.py
-${PLIST.py3x}${PYSITELIB}/autobahn/xbr/_blockchain.pyc
-${PLIST.py3x}${PYSITELIB}/autobahn/xbr/_blockchain.pyo
+${PYSITELIB}/autobahn/xbr/_blockchain.pyc
+${PYSITELIB}/autobahn/xbr/_blockchain.pyo
 ${PYSITELIB}/autobahn/xbr/_buyer.py
-${PLIST.py3x}${PYSITELIB}/autobahn/xbr/_buyer.pyc
-${PLIST.py3x}${PYSITELIB}/autobahn/xbr/_buyer.pyo
+${PYSITELIB}/autobahn/xbr/_buyer.pyc
+${PYSITELIB}/autobahn/xbr/_buyer.pyo
 ${PYSITELIB}/autobahn/xbr/_interfaces.py
-${PLIST.py3x}${PYSITELIB}/autobahn/xbr/_interfaces.pyc
-${PLIST.py3x}${PYSITELIB}/autobahn/xbr/_interfaces.pyo
+${PYSITELIB}/autobahn/xbr/_interfaces.pyc
+${PYSITELIB}/autobahn/xbr/_interfaces.pyo
 ${PYSITELIB}/autobahn/xbr/_seller.py
-${PLIST.py3x}${PYSITELIB}/autobahn/xbr/_seller.pyc
-${PLIST.py3x}${PYSITELIB}/autobahn/xbr/_seller.pyo
+${PYSITELIB}/autobahn/xbr/_seller.pyc
+${PYSITELIB}/autobahn/xbr/_seller.pyo
 ${PYSITELIB}/autobahn/xbr/_util.py
 ${PYSITELIB}/autobahn/xbr/_util.pyc
 ${PYSITELIB}/autobahn/xbr/_util.pyo
