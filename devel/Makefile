@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2919 2019/09/26 08:34:02 wiz Exp $
+# $NetBSD: Makefile,v 1.2920 2019/09/26 08:35:24 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -63,8 +63,6 @@ SUBDIR+=	R-whisker
 SUBDIR+=	R-withr
 SUBDIR+=	R-xfun
 SUBDIR+=	RBTools
-SUBDIR+=	RTFM
-SUBDIR+=	RTx-RightsMatrix
 SUBDIR+=	Renaissance
 SUBDIR+=	SDL
 SUBDIR+=	SDL-intro-en
