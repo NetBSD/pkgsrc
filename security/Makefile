@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.711 2019/08/23 23:00:50 ng0 Exp $
+# $NetBSD: Makefile,v 1.712 2019/09/26 09:39:24 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -27,7 +27,6 @@ SUBDIR+=	argon2
 SUBDIR+=	arirang
 SUBDIR+=	asignify
 SUBDIR+=	avcheck
-SUBDIR+=	base
 SUBDIR+=	bcrypt
 SUBDIR+=	bearssl
 SUBDIR+=	beecrypt
