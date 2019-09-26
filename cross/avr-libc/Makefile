@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2019/08/11 13:18:17 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2019/09/26 14:33:52 mef Exp $
 
 DISTNAME=		avr-libc-2.0.0
 PKGREVISION=		2
@@ -22,6 +22,10 @@ CONFIGURE_ARGS+=	CC=${PREFIX}/bin/avr-gcc
 CONFIGURE_ARGS+=	CPPFLAGS="-I${PREFIX}/include -I${PREFIX}/avr/include"
 
 BUILD_DEPENDS+=		doxygen>=1.8.12:../../devel/doxygen
+BUILD_DEPENDS+=		tex-hanging-[0-9]*:../../print/tex-hanging
+BUILD_DEPENDS+=		tex-stackengine-[0-9]*:../../print/tex-stackengine
+BUILD_DEPENDS+=		tex-newunicodechar-[0-9]*:../../print/tex-newunicodechar
+BUILD_DEPENDS+=		tex-etoc-[0-9]*:../../print/tex-etoc
 
 #   In doc/examples/demo directory, we have sample Makefile both for
 #   generating *.hex file at pkg installation time, and for installing
