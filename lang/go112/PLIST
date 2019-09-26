@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/07/14 15:19:55 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/09/26 18:36:46 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go112/AUTHORS
@@ -549,6 +549,8 @@ go112/misc/cgo/testshared/src/iface_i/i.go
 go112/misc/cgo/testshared/src/implicit/implicit.go
 go112/misc/cgo/testshared/src/implicitcmd/implicitcmd.go
 go112/misc/cgo/testshared/src/issue25065/a.go
+go112/misc/cgo/testshared/src/issue30768/issue30768lib/lib.go
+go112/misc/cgo/testshared/src/issue30768/x_test.go
 go112/misc/cgo/testshared/src/trivial/trivial.go
 go112/misc/cgo/testsigfwd/main.go
 go112/misc/cgo/testso/cgoso.c
@@ -8356,6 +8358,7 @@ go112/test/fixedbugs/issue32477.go
 go112/test/fixedbugs/issue32560.go
 go112/test/fixedbugs/issue32680.go
 go112/test/fixedbugs/issue32680.out
+go112/test/fixedbugs/issue33555.go
 go112/test/fixedbugs/issue3552.dir/one.go
 go112/test/fixedbugs/issue3552.dir/two.go
 go112/test/fixedbugs/issue3552.go

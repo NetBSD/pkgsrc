@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.68 2019/09/17 04:39:20 dbj Exp $
+# $NetBSD: version.mk,v 1.69 2019/09/26 18:36:46 bsiegert Exp $
 
 CTF_SUPPORTED=		no
 SSP_SUPPORTED=		no
@@ -6,7 +6,7 @@ STRIP_DEBUG_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
 
-GO112_VERSION=	1.12.8
+GO112_VERSION=	1.12.10
 GO111_VERSION=	1.11.13
 GO110_VERSION=	1.10.8
 GO19_VERSION=	1.9.7
