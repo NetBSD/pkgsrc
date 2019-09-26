@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/07/02 12:23:41 hauke Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/09/26 14:52:24 hauke Exp $
 share/examples/glpi/crontab.sample
 share/examples/glpi/httpd-glpi.conf
 share/examples/glpi/local_define.php
@@ -7,6 +7,7 @@ share/glpi/CHANGELOG.md
 share/glpi/CONTRIBUTING.md
 share/glpi/COPYING.txt
 share/glpi/README.md
+share/glpi/SECURITY.md
 share/glpi/SUPPORT.md
 share/glpi/ajax/autocompletion.php
 share/glpi/ajax/comments.php
