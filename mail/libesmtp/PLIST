@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:04:36 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/09/26 10:16:23 wiz Exp $
 bin/libesmtp-config
 include/auth-client.h
 include/auth-plugin.h
 include/libesmtp.h
 lib/esmtp-plugins/sasl-cram-md5.la
 lib/esmtp-plugins/sasl-login.la
-lib/esmtp-plugins/sasl-ntlm.la
 lib/esmtp-plugins/sasl-plain.la
 lib/libesmtp.la
