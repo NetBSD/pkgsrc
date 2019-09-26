@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/11/27 19:20:42 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2019/09/26 09:44:48 wiz Exp $
 
 COMPAT_PKG=		compat15	# for compat_netbsd/Makefile.common
 NETBSD_VERSION=		1.5
@@ -61,5 +61,7 @@ DEPENDS+=	netbsd32_compat16>=1.6:../../emulators/netbsd32_compat16
       empty(OS_VERSION:M1.6) && empty(OS_VERSION:M1.6.*)
 DEPENDS+=	compat16>=1.6:../../emulators/compat16
 .endif
+
+CHECK_RELRO_SKIP=	*
 
 .include "../../mk/bsd.pkg.mk"
