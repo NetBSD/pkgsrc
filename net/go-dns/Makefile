@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2019/08/14 15:45:45 bsiegert Exp $
+# $NetBSD: Makefile,v 1.20 2019/09/26 20:10:50 bsiegert Exp $
 
 DISTNAME=	go-dns-1.1.3
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=miekg/}
 GITHUB_PROJECT=	dns
