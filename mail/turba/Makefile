@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2019/08/11 13:21:43 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2019/09/26 07:51:27 wiz Exp $
 
 DISTNAME=	turba-h3-${TURBAVER}
 PKGNAME=	turba-${TURBAVER}
@@ -13,6 +13,8 @@ COMMENT=	Horde contact management application
 LICENSE=	apache-1.1
 
 DEPENDS+=	horde>=3.3.7:../../www/horde
+
+PHP_VERSIONS_ACCEPTED=	56 # due to php-mysql via horde
 
 PKG_DESTDIR_SUPPORT=	destdir
 
