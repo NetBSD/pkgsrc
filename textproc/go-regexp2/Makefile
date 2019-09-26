@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2019/08/14 15:45:49 bsiegert Exp $
+# $NetBSD: Makefile,v 1.9 2019/09/26 20:10:54 bsiegert Exp $
 
 DISTNAME=	regexp2-1.1.6
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	7
+PKGREVISION=	8
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dlclark/}
 CATEGORIES=	textproc
 GITHUB_PROJECT=	regexp2

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2019/08/14 15:45:39 bsiegert Exp $
+# $NetBSD: Makefile,v 1.17 2019/09/26 20:10:45 bsiegert Exp $
 
 DISTNAME=	pflag-1.0.1
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	8
+PKGREVISION=	9
 MASTER_SITES=	${MASTER_SITE_GITHUB:=spf13/}
 CATEGORIES=	devel
 GITHUB_TAG=     v${PKGVERSION_NOREV}
