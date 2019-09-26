@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/08/08 19:53:55 brook Exp $
+# $NetBSD: Makefile,v 1.3 2019/09/26 22:14:05 brook Exp $
 
 R_PKGNAME=	Hmisc
 R_PKGVER=	4.2-0
@@ -10,6 +10,7 @@ LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 DEPENDS+=	R-base64enc>=0.1.3:../../converters/R-base64enc
 DEPENDS+=	R-ggplot2>=2.2:../../graphics/R-ggplot2
+DEPENDS+=	R-latticeExtra>=0.6.28:../../graphics/R-latticeExtra
 DEPENDS+=	R-viridis>=0.5.1:../../graphics/R-viridis
 DEPENDS+=	R-Formula>=1.2.3:../../math/R-Formula
 DEPENDS+=	R-acepack>=1.4.1:../../math/R-acepack
