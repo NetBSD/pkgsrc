@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2017/06/28 09:11:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.53 2019/09/27 07:14:02 triaxx Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 COMMENT=	Lightweight Directory Access Protocol server suite
@@ -51,8 +51,6 @@ CNFS_SCHEMAS_cmd=	${SED} -ne "/\.ldif$$/p;/\.schema$$/p" ${PKGDIR}/PLIST | ${SED
 
 CNFS_PERMS=		slapd.conf
 
-DB_CONFIG=		DB_CONFIG
-
 RCD_SCRIPTS=		slapd
 
 FILES_SUBST+=		OPENLDAP_ETCDIR=${OPENLDAP_ETCDIR}
@@ -71,7 +69,9 @@ MESSAGE_SUBST+=		CHMOD=${CHMOD:Q}
 
 .include "../../databases/openldap/Makefile.common"
 
+.if !empty(PKG_OPTIONS:Mbdb)
 CONF_FILES_PERMS+=	${EGDIR}/DB_CONFIG ${OPENLDAP_VARDIR}/openldap-data/DB_CONFIG ${OPENLDAP_FILEPERMS}
+.endif
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
