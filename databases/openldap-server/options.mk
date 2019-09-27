@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.20 2018/12/20 17:54:09 adam Exp $
+# $NetBSD: options.mk,v 1.21 2019/09/27 07:14:02 triaxx Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openldap-server
 PKG_SUPPORTED_OPTIONS=	bdb dso inet6 sasl slapi slp smbk5pwd
@@ -8,7 +8,7 @@ PKG_SUGGESTED_OPTIONS=	bdb inet6
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	slapi
+PLIST_VARS+=	slapi bdb
 
 ###
 ### Whether to build with the Berkeley DB based slapd backends.
@@ -18,7 +18,9 @@ PLIST_VARS+=	slapi
 ###
 .if !empty(PKG_OPTIONS:Mbdb)
 BDB_ACCEPTED=		db4 db5
+DB_CONFIG=		DB_CONFIG
 CONFIGURE_ARGS+=	--enable-bdb --enable-hdb
+PLIST.bdb=		yes
 TEST_TARGET=		test
 .  include "../../mk/bdb.buildlink3.mk"
 .else
