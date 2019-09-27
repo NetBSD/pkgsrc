@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/11/15 14:14:14 adam Exp $
+# $NetBSD: Makefile,v 1.7 2019/09/27 06:57:11 wiz Exp $
 
 DISTNAME=	buildbot-waterfall-view-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +14,8 @@ DEPENDS+=	${PYPKGPREFIX}-buildbot-[0-9]*:../../devel/py-buildbot
 BUILD_DEPENDS+=	${PYPKGPREFIX}-buildbot-pkg-[0-9]*:../../devel/py-buildbot-pkg
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-autobahn via py-buildbot
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
