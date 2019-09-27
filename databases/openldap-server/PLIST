@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2014/03/11 14:05:00 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.13 2019/09/27 07:14:02 triaxx Exp $
 ${PLIST.slapi}lib/libslapi.la
 libexec/slapd
 sbin/slapacl
@@ -10,7 +10,7 @@ sbin/slapindex
 sbin/slappasswd
 sbin/slapschema
 sbin/slaptest
-share/examples/openldap/DB_CONFIG
+${PLIST.bdb}share/examples/openldap/DB_CONFIG
 share/examples/openldap/schema/README
 share/examples/openldap/schema/collective.ldif
 share/examples/openldap/schema/collective.schema
