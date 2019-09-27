@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/07/05 13:09:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/09/27 09:00:38 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -2003,25 +2003,13 @@ ${PYSITELIB}/statsmodels/tsa/statespace/__init__.pyo
 ${PYSITELIB}/statsmodels/tsa/statespace/_filters/__init__.py
 ${PYSITELIB}/statsmodels/tsa/statespace/_filters/__init__.pyc
 ${PYSITELIB}/statsmodels/tsa/statespace/_filters/__init__.pyo
-${PYSITELIB}/statsmodels/tsa/statespace/_filters/_conventional.so
-${PYSITELIB}/statsmodels/tsa/statespace/_filters/_inversions.so
-${PYSITELIB}/statsmodels/tsa/statespace/_filters/_univariate.so
-${PYSITELIB}/statsmodels/tsa/statespace/_kalman_filter.so
-${PYSITELIB}/statsmodels/tsa/statespace/_kalman_smoother.so
 ${PYSITELIB}/statsmodels/tsa/statespace/_pykalman_smoother.py
 ${PYSITELIB}/statsmodels/tsa/statespace/_pykalman_smoother.pyc
 ${PYSITELIB}/statsmodels/tsa/statespace/_pykalman_smoother.pyo
-${PYSITELIB}/statsmodels/tsa/statespace/_representation.so
-${PYSITELIB}/statsmodels/tsa/statespace/_simulation_smoother.so
 ${PYSITELIB}/statsmodels/tsa/statespace/_smoothers/__init__.py
 ${PYSITELIB}/statsmodels/tsa/statespace/_smoothers/__init__.pyc
 ${PYSITELIB}/statsmodels/tsa/statespace/_smoothers/__init__.pyo
-${PYSITELIB}/statsmodels/tsa/statespace/_smoothers/_alternative.so
-${PYSITELIB}/statsmodels/tsa/statespace/_smoothers/_classical.so
-${PYSITELIB}/statsmodels/tsa/statespace/_smoothers/_conventional.so
-${PYSITELIB}/statsmodels/tsa/statespace/_smoothers/_univariate.so
 ${PYSITELIB}/statsmodels/tsa/statespace/_statespace.so
-${PYSITELIB}/statsmodels/tsa/statespace/_tools.so
 ${PYSITELIB}/statsmodels/tsa/statespace/api.py
 ${PYSITELIB}/statsmodels/tsa/statespace/api.pyc
 ${PYSITELIB}/statsmodels/tsa/statespace/api.pyo
