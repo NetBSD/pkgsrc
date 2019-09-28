@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2019/09/28 01:16:17 mef Exp $
+# $NetBSD: Makefile,v 1.104 2019/09/28 13:01:37 mef Exp $
 
 DISTNAME=	kde-runtime-15.12.0
 PKGNAME=	${DISTNAME:S/-1/4-1/}
@@ -23,11 +23,7 @@ DEPENDS+=	htdig>=3.2.0:../../www/htdig
 DEPENDS+=	oxygen-icons-[0-9]*:../../graphics/oxygen-icons
 
 USE_TOOLS+=		gmake
-USE_LANGUAGES+=		c++
-CXXFLAGS=	-Wno-unused-but-set-variable
-CXXFLAGS+=	-Wno-implicit-fallthrough
-CXXFLAGS+=	-Wno-deprecated-declarations
-CXXFLAGS+=	-std=c++11 
+USE_LANGUAGES+=		c++11
 
 CFLAGS.SunOS+=	-DPORTMAP
 LDFLAGS.SunOS+=	-lsocket -lnsl
