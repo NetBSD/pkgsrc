@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2019/09/27 07:14:02 triaxx Exp $
+# $NetBSD: Makefile,v 1.54 2019/09/28 08:07:51 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 COMMENT=	Lightweight Directory Access Protocol server suite
@@ -71,6 +71,7 @@ MESSAGE_SUBST+=		CHMOD=${CHMOD:Q}
 
 .if !empty(PKG_OPTIONS:Mbdb)
 CONF_FILES_PERMS+=	${EGDIR}/DB_CONFIG ${OPENLDAP_VARDIR}/openldap-data/DB_CONFIG ${OPENLDAP_FILEPERMS}
+DB_CONFIG=		DB_CONFIG
 .endif
 
 .include "../../mk/bsd.prefs.mk"
