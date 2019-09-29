@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/09/18 14:17:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2019/09/29 09:37:18 nia Exp $
 
 DISTNAME=	freerdp-2.0.0rc4
 PKGNAME=	${DISTNAME:S/freerdp-/freerdp2-/1}
@@ -12,6 +12,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freerdp.com/
 COMMENT=	Free implementation of the Remote Desktop Protocol (major version 2)
 LICENSE=	apache-2.0
+
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
