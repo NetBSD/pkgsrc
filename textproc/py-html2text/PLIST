@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2019/08/17 15:12:14 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.12 2019/09/29 12:18:42 schmonz Exp $
 bin/html2text-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -14,9 +14,6 @@ ${PYSITELIB}/html2text/__main__.pyo
 ${PYSITELIB}/html2text/cli.py
 ${PYSITELIB}/html2text/cli.pyc
 ${PYSITELIB}/html2text/cli.pyo
-${PYSITELIB}/html2text/compat.py
-${PYSITELIB}/html2text/compat.pyc
-${PYSITELIB}/html2text/compat.pyo
 ${PYSITELIB}/html2text/config.py
 ${PYSITELIB}/html2text/config.pyc
 ${PYSITELIB}/html2text/config.pyo
