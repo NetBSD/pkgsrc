@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.3 2019/07/31 01:35:27 fox Exp $
+# $NetBSD: mozilla-common.mk,v 1.4 2019/09/29 11:28:05 fox Exp $
 #
 # Common Makefile fragment for mozilla packages based on gecko 2.0.
 # derived from www/firefox
@@ -8,16 +8,6 @@
 UNLIMIT_RESOURCES+=	datasize
 
 .include "../../mk/bsd.prefs.mk"
-
-# for lang/gcc6
-GCC_REQD+=	6
-
-# XXX: USE_PKGSRC_GCC_RUNTIME should not be used there and USE_GCC_RUNTIME
-# should be used instead to pick up gcc*-libs package if needed
-.if !empty(MACHINE_PLATFORM:MNetBSD-[0-7].*-*) || \
-	!empty(MACHINE_PLATFORM:MNetBSD-8.[0-8].*-*)
-USE_PKGSRC_GCC_RUNTIME=	yes
-.endif
 
 # For rustc/cargo detection
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --target=${MACHINE_GNU_PLATFORM}"
@@ -63,13 +53,13 @@ MOZ_CONFIGURE_ARGS+=	"ac_add_options --with-system-libevent=${BUILDLINK_PREFIX.l
 
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-default-toolkit=cairo-gtk3"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-system-pixman"
-MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-webrender=build"
 # Disable Rust SIMD option to fix build with lang/rust-1.33.0
 # This should be enabled later again.
 #MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-rust-simd"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-system-ffi"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-chrome-format=flat"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-gconf"
+MOZ_CONFIGURE_ARGS+=	"ac_add_options --with-libclang-path=${PREFIX}/lib"
 
 # Fix binary path
 SUBST_CLASSES+=			prefix
@@ -86,7 +76,7 @@ BUILDLINK_API_DEPENDS.libevent+=       libevent>=1.1
 BUILDLINK_API_DEPENDS.nspr+=   nspr>=4.21
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nss+=     nss>=3.44.1
+BUILDLINK_API_DEPENDS.nss+=     nss>=3.45
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"

@@ -1,11 +1,11 @@
-$NetBSD: patch-mozilla-release_config_rules.mk,v 1.1 2019/04/19 14:02:03 fox Exp $
+$NetBSD: patch-mozilla-release_config_rules.mk,v 1.2 2019/09/29 11:28:05 fox Exp $
 
 Commented out the various wget(1) to prevent http traffic during build
 phase.
 
---- mozilla-release/config/rules.mk.orig	2018-11-16 08:40:07.000000000 +0000
+--- mozilla-release/config/rules.mk.orig	2019-09-19 13:25:24.000000000 +0000
 +++ mozilla-release/config/rules.mk
-@@ -1302,20 +1302,20 @@ $(EXTENSIONS_PATH):
+@@ -989,20 +989,20 @@ $(EXTENSIONS_PATH):
  CLIQZ_XPI_PATH = $(EXTENSIONS_PATH)/cliqz@cliqz.com.xpi
  $(CLIQZ_XPI_PATH): $(EXTENSIONS_PATH)
  	echo CLIQZ_XPI_PATH in `pwd`
@@ -28,4 +28,4 @@ phase.
 +#	wget --output-document $(CONSENTRICK_XPI_PATH) $(CONSENTRICK_EXT_URL)
  endif
  
- CLIQZ_ONIONMODE_XPI_PATH = $(EXTENSIONS_PATH)/onionmode@cliqz.com.xpi
+ DAT_XPI_PATH = $(EXTENSIONS_PATH)/dat@cliqz.com.xpi
