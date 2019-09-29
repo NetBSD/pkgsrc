@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4055 2019/09/29 11:40:26 fox Exp $
+$NetBSD: CHANGES-2019,v 1.4056 2019/09/29 12:11:15 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6617,3 +6617,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated math/py-statsmodels to 0.9.0nb2 [wiz 2019-09-27]
 	Updated devel/deforaos-asm to 0.2.3nb1 [wiz 2019-09-27]
 	Updated www/cliqz to 1.29.0 [fox 2019-09-29]
+	Updated devel/p5-Test-BDD-Cucumber to 0.67 [schmonz 2019-09-29]
