@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.31 2012/10/23 10:24:04 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2019/09/30 10:05:19 maya Exp $
 #
 
 DISTNAME=		xm71020s
 PKGNAME=		xm7-1020s
 CATEGORIES=		emulators
 MASTER_SITES=		http://yohkai.no-ip.info/fm7/
+MASTER_SITES+=		http://www.mirrorservice.org/pub/minix/distfiles/backup/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		tech-pkg-ja@jp.NetBSD.org
