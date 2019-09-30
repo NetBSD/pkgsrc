@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2019/09/18 14:12:20 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.32 2019/09/30 11:20:03 maya Exp $
 bin/esdcompat
 bin/pa-info
 bin/pacat
@@ -359,9 +359,12 @@ ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/hdmi-output-6.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/hdmi-output-7.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/iec958-stereo-input.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/iec958-stereo-output.conf
-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/steelseries-arctis-input.conf
-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/steelseries-arctis-output-mono.conf
-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/steelseries-arctis-output-stereo.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/steelseries-arctis-5-output-chat.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/steelseries-arctis-5-output-game.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/steelseries-arctis-7-input.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/steelseries-arctis-7-output-mono.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/steelseries-arctis-7-output-stereo.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/cmedia-high-speed-true-hdaudio.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/default.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/dell-dock-tb16-usb-audio.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/force-speaker-and-int-mic.conf
@@ -376,7 +379,8 @@ ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/native-instruments-traktor
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/native-instruments-traktor-audio6.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/native-instruments-traktorkontrol-s4.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/sb-omni-surround-5.1.conf
-${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/steelseries-arctis-usb-audio.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/steelseries-arctis-5-usb-audio.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/steelseries-arctis-7-usb-audio.conf
 share/vala/vapi/libpulse-mainloop-glib.deps
 share/vala/vapi/libpulse-mainloop-glib.vapi
 share/vala/vapi/libpulse-simple.deps
