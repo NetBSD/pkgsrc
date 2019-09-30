@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/09/29 11:28:05 fox Exp $
+# $NetBSD: Makefile,v 1.22 2019/09/30 09:33:34 maya Exp $
 
 DISTNAME=	cliqz-1.29.0
 CATEGORIES=	www
@@ -10,7 +10,7 @@ DISTFILES=	adult-domains.bin \
 		https-everywhere@cliqz.com.xpi \
 		gdprtool@cliqz.com.xpi \
 		${DISTNAME}${EXTRACT_SUFX}
-DIST_SUBDIR=	${PKGBASE}
+DIST_SUBDIR=	${PKGNAME}
 
 CLIQZ_CHANNEL=		release
 # If the PKGVERSION_NOREV is updated, make sure to update the last build id from
