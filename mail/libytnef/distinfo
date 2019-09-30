@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2017/08/17 09:49:47 nros Exp $
+$NetBSD: distinfo,v 1.5 2019/09/30 15:27:05 mef Exp $
 
-SHA1 (ytnef-1.9.2.tar.gz) = f1814a7838dc65ff076fc28379bc1d09cc57b257
-RMD160 (ytnef-1.9.2.tar.gz) = 5134cb2fb104bd180d18444dfd6639726b2a8c25
-SHA512 (ytnef-1.9.2.tar.gz) = 125727a8afac959ac9c60fa977913da743b1ace05ea6af6cd75fff3a786ecf7cb54b49006c8c5249eb48d9aefe0ffcdc24af2944a8611f54a03eb4c24a78506e
-Size (ytnef-1.9.2.tar.gz) = 300945 bytes
+SHA1 (ytnef-1.9.3/ytnef-1.9.3.tar.gz) = 83d320ef862b0e1d1a9c6d5e717594e9360cc67e
+RMD160 (ytnef-1.9.3/ytnef-1.9.3.tar.gz) = b0f1ddd4c1d894ae5ba3cf5e1242812f40210351
+SHA512 (ytnef-1.9.3/ytnef-1.9.3.tar.gz) = be0a46e79561a5ff34f812b892a781809606cc7e38c6bfed15bae7773f952b4b55aed0fa784922e72839121672c540496db1bac602630c5a83141f8517a4a543
+Size (ytnef-1.9.3/ytnef-1.9.3.tar.gz) = 301338 bytes
 SHA1 (patch-ytnef_Makefile.am) = 1a93de2ec27b3230f52e9bb7de279fd1584e0e6a
 SHA1 (patch-ytnefprint_Makefile.am) = f9e02624df257b07f1a095aeb65e5c24d8f0ee37
