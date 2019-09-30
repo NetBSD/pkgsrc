@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2019/09/16 00:05:20 nia Exp $
+# $NetBSD: Makefile.common,v 1.5 2019/09/30 15:27:05 mef Exp $
 # used by mail/libytnef/Makefile
 # used by mail/ytnef/Makefile
 
@@ -12,6 +12,8 @@ EXTRACT_USING=	bsdtar
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Yeraze/ytnef
 LICENSE=	gnu-gpl-v2
+
+DIST_SUBDIR=	ytnef-1.9.3
 
 DISTINFO_FILE=	${.CURDIR}/../../mail/libytnef/distinfo
 PATCHDIR=	${.CURDIR}/../../mail/libytnef/patches
