@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.200 2019/09/18 15:27:05 ng0 Exp $
+# $NetBSD: Makefile,v 1.201 2019/09/30 09:51:16 maya Exp $
 
 DISTNAME=	gnutls-3.6.9
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security devel
 MASTER_SITES=	https://www.gnupg.org/ftp/gcrypt/gnutls/v3.6/
 EXTRACT_SUFX=	.tar.xz
