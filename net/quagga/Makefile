@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2019/08/11 13:22:28 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2019/09/30 08:59:47 kardel Exp $
 #
 
 DISTNAME=	quagga-1.2.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	http://download.savannah.gnu.org/releases/quagga/
 
