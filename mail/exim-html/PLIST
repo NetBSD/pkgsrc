@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2019/09/06 13:21:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2019/09/30 19:25:58 wiedi Exp $
 share/doc/exim/html/spec_html/ch-access_control_lists.html
 share/doc/exim/html/spec_html/ch-adding_a_local_scan_function_to_exim.html
 share/doc/exim/html/spec_html/ch-adding_new_drivers_or_lookup_types.html
@@ -153,4 +153,6 @@ share/doc/exim/html/static/doc/security/CVE-2016-9963.txt
 share/doc/exim/html/static/doc/security/CVE-2018-6789.txt
 share/doc/exim/html/static/doc/security/CVE-2019-10149.txt
 share/doc/exim/html/static/doc/security/CVE-2019-13917.txt
+share/doc/exim/html/static/doc/security/CVE-2019-15846.txt
+share/doc/exim/html/static/doc/security/CVE-2019-16928.txt
 share/doc/exim/html/static/js/common.js
