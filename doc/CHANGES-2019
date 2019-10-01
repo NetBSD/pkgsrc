@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4064 2019/10/01 11:47:41 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4065 2019/10/01 12:06:48 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6629,3 +6629,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-pylint to 2.4.2 [adam 2019-10-01]
 	Updated multimedia/x265 to 3.2 [adam 2019-10-01]
 	Updated net/wireshark to 3.0.5 [adam 2019-10-01]
+	Added lang/mono6 version 6.0.0.313 [maya 2019-10-01]
