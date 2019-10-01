@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/12/16 02:05:23 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/10/01 13:49:58 nia Exp $
 bin/znc
 bin/znc-buildmod
 include/znc/Buffer.h
@@ -33,6 +33,7 @@ include/znc/defines.h
 include/znc/main.h
 include/znc/version.h
 include/znc/znc.h
+include/znc/znc_export_lib_export.h
 include/znc/zncconfig.h
 lib/pkgconfig/znc.pc
 lib/znc/admindebug.so
@@ -92,6 +93,11 @@ lib/znc/watch.so
 lib/znc/webadmin.so
 man/man1/znc-buildmod.1
 man/man1/znc.1
+share/znc/cmake/ZNCConfig.cmake
+share/znc/cmake/ZNCConfigVersion.cmake
+share/znc/cmake/znc_internal-noconfig.cmake
+share/znc/cmake/znc_internal.cmake
+share/znc/cmake/znc_public.cmake
 share/znc/modules/blockuser/tmpl/blockuser_WebadminUser.tmpl
 share/znc/modules/cert/tmpl/index.tmpl
 share/znc/modules/certauth/tmpl/index.tmpl
@@ -120,6 +126,14 @@ share/znc/modules/webadmin/tmpl/index.tmpl
 share/znc/modules/webadmin/tmpl/listusers.tmpl
 share/znc/modules/webadmin/tmpl/settings.tmpl
 share/znc/modules/webadmin/tmpl/traffic.tmpl
+share/znc/translations/bg-BG
+share/znc/translations/de-DE
+share/znc/translations/es-ES
+share/znc/translations/fr-FR
+share/znc/translations/id-ID
+share/znc/translations/it-IT
+share/znc/translations/nl-NL
+share/znc/translations/ru-RU
 share/znc/webskins/_default_/pub/External.png
 share/znc/webskins/_default_/pub/_default_.css
 share/znc/webskins/_default_/pub/favicon.ico
