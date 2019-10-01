@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.6 2019/10/01 22:44:48 yhardy Exp $
+$NetBSD: distinfo,v 1.7 2019/10/01 22:59:01 yhardy Exp $
 
 SHA1 (xournal-0.4.8.2016.tar.gz) = a08d0fde395ea95570e560295df5f97be3c3a6e2
 RMD160 (xournal-0.4.8.2016.tar.gz) = 36a0b2bb848d4801e2b00cf2cd58c8f847488c5d
 SHA512 (xournal-0.4.8.2016.tar.gz) = 1426d5c9ba3486fbe342d49fc19fcc162965cd6a7b7754f79665e43fe0e60e6f42f61969405ace78fdaa7b99cbb3d4b07b7fb5df246d68a329b52084b6eec76e
 Size (xournal-0.4.8.2016.tar.gz) = 646082 bytes
-SHA1 (patch-src_xo-paint.c) = 2a46e9fb2d0b06e1431e30ae186d01b2d30ec6a8
 SHA1 (patch-src_xo-shapes.c) = ab5a56780dd6fa37a3b51f89468c6100137454f3
