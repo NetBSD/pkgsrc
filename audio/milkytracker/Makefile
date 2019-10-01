@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/09/21 11:32:08 nia Exp $
+# $NetBSD: Makefile,v 1.13 2019/10/01 19:37:50 nia Exp $
 
 DISTNAME=	milkytracker-1.02.00
 CATEGORIES=	audio
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=milkytracker/}
 GITHUB_PROJECT=	MilkyTracker
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	jkuittinen@users.sourceforge.net
+MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://milkytracker.titandemo.org/
 COMMENT=	Music tracker inspired by Fast Tracker 2
 LICENSE=	gnu-gpl-v3
