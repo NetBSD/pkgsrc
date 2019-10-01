@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19297 2019/10/01 13:56:11 nia Exp $
+$NetBSD: TODO,v 1.19298 2019/10/01 15:09:04 nia Exp $
 
 Suggested new packages
 ======================
@@ -738,7 +738,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o golem-0.0.6
 	o goocanvas-2.0.2
 	o gossip-0.31
-	o gource-0.44
 	o gourmet-0.13.3
 	o gperiodic-3.0.2
 	o gps-6.1.1
