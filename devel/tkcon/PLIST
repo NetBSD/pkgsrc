@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2019/10/01 23:40:40 kamil Exp $
+bin/tkcon
