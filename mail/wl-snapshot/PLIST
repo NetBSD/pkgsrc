@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/05 22:23:57 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/10/01 13:18:20 mef Exp $
 info/wl-ja.info
 info/wl.info
 share/doc/wl/en/BUGS
 share/doc/wl/en/NEWS
-share/doc/wl/en/README
+share/doc/wl/en/README.md
 share/doc/wl/ja/BUGS.ja
 share/doc/wl/ja/NEWS.ja
 share/doc/wl/ja/README.ja
@@ -51,10 +51,14 @@ ${EMACS_LISPPREFIX}/wl/elmo-nntp.el
 ${EMACS_LISPPREFIX}/wl/elmo-nntp.elc
 ${EMACS_LISPPREFIX}/wl/elmo-null.el
 ${EMACS_LISPPREFIX}/wl/elmo-null.elc
+${EMACS_LISPPREFIX}/wl/elmo-passwd.el
+${EMACS_LISPPREFIX}/wl/elmo-passwd.elc
 ${EMACS_LISPPREFIX}/wl/elmo-pipe.el
 ${EMACS_LISPPREFIX}/wl/elmo-pipe.elc
 ${EMACS_LISPPREFIX}/wl/elmo-pop3.el
 ${EMACS_LISPPREFIX}/wl/elmo-pop3.elc
+${EMACS_LISPPREFIX}/wl/elmo-rss.el
+${EMACS_LISPPREFIX}/wl/elmo-rss.elc
 ${EMACS_LISPPREFIX}/wl/elmo-search.el
 ${EMACS_LISPPREFIX}/wl/elmo-search.elc
 ${EMACS_LISPPREFIX}/wl/elmo-sendlog.el
@@ -103,8 +107,6 @@ ${EMACS_LISPPREFIX}/wl/slp.el
 ${EMACS_LISPPREFIX}/wl/slp.elc
 ${EMACS_LISPPREFIX}/wl/ssl.el
 ${EMACS_LISPPREFIX}/wl/ssl.elc
-${EMACS_LISPPREFIX}/wl/utf7.el
-${EMACS_LISPPREFIX}/wl/utf7.elc
 ${EMACS_LISPPREFIX}/wl/wl-acap.el
 ${EMACS_LISPPREFIX}/wl/wl-acap.elc
 ${EMACS_LISPPREFIX}/wl/wl-action.el
@@ -140,6 +142,8 @@ ${EMACS_LISPPREFIX}/wl/wl-message.elc
 ${EMACS_LISPPREFIX}/wl/wl-mime.el
 ${EMACS_LISPPREFIX}/wl/wl-mime.elc
 ${EMACS_LISPPREFIX}/wl/wl-news.el
+${EMACS_LISPPREFIX}/wl/wl-qs.el
+${EMACS_LISPPREFIX}/wl/wl-qs.elc
 ${EMACS_LISPPREFIX}/wl/wl-refile.el
 ${EMACS_LISPPREFIX}/wl/wl-refile.elc
 ${EMACS_LISPPREFIX}/wl/wl-score.el
