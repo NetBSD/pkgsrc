@@ -1,6 +1,10 @@
-$NetBSD: patch-ad,v 1.1 2008/08/07 16:19:34 hauke Exp $
+$NetBSD: patch-ad,v 1.2 2019/10/01 14:54:59 nia Exp $
 
---- doc/config.orig	2008-01-26 12:01:41.000000000 +0100
+Preconfigure some reasonable defaults.
+
+48000 Hz is a reasonable value for modern (~last 20 years) sound devices.
+
+--- doc/config.orig	2019-04-14 14:11:29.000000000 +0000
 +++ doc/config
 @@ -5,13 +5,13 @@
  FastRAM = 0
@@ -9,12 +13,21 @@ $NetBSD: patch-ad,v 1.1 2008/08/07 16:19:34 hauke Exp $
 -Floppy = /dev/fd0
 +Floppy = /dev/fd0a
  
- # location of TOS 4.04 ROM image (full path)
- TOS = /usr/local/share/aranym/ROM
+ # location of TOS 4.04 ROM image (can be full path, relative to config file or relative to HOME directory)
+ TOS = ROM
  
- # location of EmuTOS (full path)
--EmuTOS = 
-+EmuTOS = /usr/local/share/aranym/etos512k.img
+ # location of EmuTOS (can be full path, relative to config file or relative to HOME directory)
+-EmuTOS = emutos-aranym.img
++EmuTOS = @PREFIX@/share/aranym/etos512k.img
  
  # location of FreeMiNT kernel (full path)
  Bootstrap =
+@@ -271,7 +271,7 @@ UseHostMouseCursor = No
+ [AUDIO]
+ # Host audio device settings
+ #  Frequency
+-Frequency = 22050
++Frequency = 48000
+ #  Number of channels (2 for stereo, 1 for mono)
+ Channels = 2
+ #  Bits per channel (8 or 16)
