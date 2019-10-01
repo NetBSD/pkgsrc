@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4061 2019/09/30 19:27:05 wiedi Exp $
+$NetBSD: CHANGES-2019,v 1.4062 2019/10/01 11:11:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6624,3 +6624,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/fasttracker2 to 1.00 [fox 2019-09-30]
 	Updated mail/exim to 4.92.3 [wiedi 2019-09-30]
 	Updated mail/exim-html to 4.92.3 [wiedi 2019-09-30]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2019Q3 branch [wiz 2019-10-01]
