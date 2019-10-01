@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.566 2019/10/01 12:42:12 nia Exp $
+# $NetBSD: Makefile,v 1.567 2019/10/01 12:43:04 nia Exp $
 #
 
 COMMENT=	Audio tools
@@ -406,6 +406,7 @@ SUBDIR+=	py-mutagen
 SUBDIR+=	py-ogg
 SUBDIR+=	py-vorbis
 SUBDIR+=	qjackctl
+SUBDIR+=	qmmp
 SUBDIR+=	qsynth
 SUBDIR+=	qtplay
 SUBDIR+=	quodlibet
