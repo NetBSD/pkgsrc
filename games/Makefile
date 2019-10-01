@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.458 2019/09/22 12:10:45 nia Exp $
+# $NetBSD: Makefile,v 1.459 2019/10/01 12:34:19 nia Exp $
 #
 
 COMMENT=	Games
@@ -277,6 +277,7 @@ SUBDIR+=	moon-buggy
 SUBDIR+=	moria
 SUBDIR+=	mrrescue
 SUBDIR+=	nagi
+SUBDIR+=	naev
 SUBDIR+=	nethack
 SUBDIR+=	nethack-lib
 SUBDIR+=	nethack-tty
@@ -355,6 +356,7 @@ SUBDIR+=	solarus
 SUBDIR+=	spaceracer
 SUBDIR+=	spellcast
 SUBDIR+=	spider
+SUBDIR+=	srb2
 SUBDIR+=	stegavorto
 SUBDIR+=	stockfish
 SUBDIR+=	stone-soup
@@ -419,6 +421,7 @@ SUBDIR+=	xlennart
 SUBDIR+=	xmahjongg
 SUBDIR+=	xmris
 SUBDIR+=	xnibbles
+SUBDIR+=	xonotic
 SUBDIR+=	xpat2
 SUBDIR+=	xpilot
 SUBDIR+=	xpipeman
@@ -441,6 +444,7 @@ SUBDIR+=	xvier
 SUBDIR+=	xworm
 SUBDIR+=	xye
 SUBDIR+=	xzip
+SUBDIR+=	yquake2
 SUBDIR+=	zombies
 SUBDIR+=	zoom
 SUBDIR+=	ztrack
