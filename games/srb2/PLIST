@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2019/10/01 12:30:31 nia Exp $
+bin/srb2
+share/applications/srb2.desktop
+share/pixmaps/srb2.png
+share/srb2/music.dta
+share/srb2/patch.dta
+share/srb2/player.dta
+share/srb2/rings.dta
+share/srb2/srb2.srb
+share/srb2/zones.dta
