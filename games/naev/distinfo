@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2019/10/01 12:25:37 nia Exp $
+
+SHA1 (naev-0.7.0.tar.gz) = 5c5c5dc98052ef78248b8bd28fb07b23a1f8691c
+RMD160 (naev-0.7.0.tar.gz) = b689366541732392feda2991a2d38f28cb1c517f
+SHA512 (naev-0.7.0.tar.gz) = 21984eb9108cc8d656968817090c3d2067086f66d77177780c9c2764514b98bb1044e3af1fbcabddd4eb7a356145ea709748d540e1aa6e15efd1c3c7b3972723
+Size (naev-0.7.0.tar.gz) = 313689725 bytes
+SHA1 (patch-build_shave.in) = e548c7547bc81a16a7cfbf3e7a97e4e3e23787fc
+SHA1 (patch-configure.ac) = 5b725e9b9c128c6350fec1a2310d25e4f5c28f75
+SHA1 (patch-src_ndata.c) = 2dff16576a38076561b4776e842abaa20806e856
