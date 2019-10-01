@@ -1,5 +1,5 @@
 # -*- perl -*-
-# $NetBSD: url2pkg.t,v 1.12 2019/09/13 13:31:39 rillig Exp $
+# $NetBSD: url2pkg.t,v 1.13 2019/10/01 19:41:23 rillig Exp $
 
 require "url2pkg.pl";
 
@@ -100,6 +100,14 @@ sub test_Lines_set__previously_with_comment() {
 	$lines->set("LICENSE", "\${PERL5_LICENSE}");
 
 	is_deeply($lines, ["LICENSE=\t\${PERL5_LICENSE}"]);
+}
+
+sub test_Lines_set__overwrite_comment_with_comment() {
+	my $lines = Lines->new("#LICENSE=\t# TODO: see mk/license.mk");
+
+	$lines->set("#LICENSE", "\${PERL5_LICENSE}");
+
+	is_deeply($lines, ["#LICENSE=\t\${PERL5_LICENSE}"]);
 }
 
 sub test_Lines_set__not_found() {
@@ -261,6 +269,60 @@ sub test_read_dependencies() {
 	]);
 	is_deeply(\@main::test_depends, [
 		"pkglint>=0:../../pkgtools/pkglint"
+	]);
+}
+
+sub test_generate_adjusted_Makefile_lines() {
+	$main::makefile_lines = Lines->new(
+		"# before 1",
+		"# before 2",
+		"# url2pkg-marker",
+		"# after 1",
+		"# after 2"
+	);
+
+	my $lines = generate_adjusted_Makefile_lines("https://example.org/pkgname-1.0.tar.gz");
+
+	is_deeply($lines, [
+		"# before 1",
+		"# before 2",
+		"# after 1",
+		"# after 2"
+	]);
+}
+
+sub test_generate_adjusted_Makefile_lines__dependencies() {
+	$main::makefile_lines = Lines->new(
+		"# \$NetBSD\$",
+		"",
+		"# url2pkg-marker",
+		".include \"../../mk/bsd.pkg.mk\""
+	);
+	# some dependencies whose directory will not be found
+	add_dependency("DEPENDS", "depends", ">=5.0", "../../devel/depends");
+	add_dependency("TOOL_DEPENDS", "tool-depends", ">=6.0", "../../devel/tool-depends");
+	add_dependency("BUILD_DEPENDS", "build-depends", ">=7.0", "../../devel/build-depends");
+	add_dependency("TEST_DEPENDS", "test-depends", ">=8.0", "../../devel/test-depends");
+	# some dependencies whose directory is explicitly given
+	push(@main::depends, "depends>=11.0:../../devel/depends");
+	push(@main::build_depends, "build-depends>=12.0:../../devel/build-depends");
+	push(@main::test_depends, "test-depends>=13.0:../../devel/test-depends");
+
+	my $lines = generate_adjusted_Makefile_lines("https://example.org/pkgname-1.0.tar.gz");
+
+	is_deeply($lines, [
+		"# \$NetBSD\$",
+		"",
+		"# TODO: dependency TOOL_DEPENDS # TODO: tool-depends>=6.0",
+		"",
+		"BUILD_DEPENDS+=\t# TODO: build-depends>=7.0",
+		"BUILD_DEPENDS+=\tbuild-depends>=12.0:../../devel/build-depends",
+		"DEPENDS+=\t# TODO: depends>=5.0",
+		"DEPENDS+=\tdepends>=11.0:../../devel/depends",
+		"TEST_DEPENDS+=\t# TODO: test-depends>=8.0",
+		"TEST_DEPENDS+=\ttest-depends>=13.0:../../devel/test-depends",
+		"",
+		".include \"../../mk/bsd.pkg.mk\""
 	]);
 }
 
