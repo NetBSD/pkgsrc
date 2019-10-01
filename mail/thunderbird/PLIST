@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.70 2019/09/21 10:55:16 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.71 2019/10/01 15:15:33 ryoon Exp $
 bin/thunderbird
 lib/thunderbird/actors/AudioPlaybackChild.jsm
 lib/thunderbird/actors/AutoplayChild.jsm
@@ -4340,6 +4340,7 @@ lib/thunderbird/components/nsMsgTraitService.js
 lib/thunderbird/components/nsNewsAutoCompleteSearch.js
 lib/thunderbird/components/nsSMTPProtocolHandler.js
 lib/thunderbird/components/nsSetDefaultMail.js
+lib/thunderbird/components/odnoklassniki.js
 lib/thunderbird/components/offlineStartup.js
 lib/thunderbird/components/skype.js
 lib/thunderbird/components/smileProtocolHandler.js
