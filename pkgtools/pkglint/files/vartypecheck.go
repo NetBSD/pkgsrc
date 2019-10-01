@@ -2,6 +2,7 @@ package pkglint
 
 import (
 	"netbsd.org/pkglint/regex"
+	"netbsd.org/pkglint/textproc"
 	"path"
 	"sort"
 	"strings"
@@ -159,9 +160,69 @@ func (cv *VartypeCheck) AwkCommand() {
 	}
 }
 
+// BasicRegularExpression checks for a basic regular expression, as
+// defined by POSIX.
+//
+// When they are used in a list variable (as for CHECK_FILES_SKIP), they
+// cannot include spaces. Instead, a dot or [[:space:]] must be used.
+// The regular expressions do not need any quotation for the shell; all
+// quoting issues are handled by the pkgsrc infrastructure.
+//
+// The opposite situation is when the regular expression is part of a sed
+// command. In such a case the shell quoting is undone before checking the
+// regular expression, and this is where spaces and tabs can appear.
+//
+// TODO: Add check for EREs as well.
+//
+// See https://pubs.opengroup.org/onlinepubs/009695399/basedefs/xbd_chap09.html#tag_09_03.
+// See https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap09.html#tag_09_03.
 func (cv *VartypeCheck) BasicRegularExpression() {
-	if trace.Tracing {
-		trace.Step1("Unchecked basic regular expression: %q", cv.Value)
+
+	// same order as in the OpenGroup spec
+	allowedAfterBackslash := textproc.NewByteSet(")({}1-9.[\\*^$")
+
+	lexer := textproc.NewLexer(cv.ValueNoVar)
+
+	parseCharacterClass := func() {
+		for !lexer.EOF() {
+			if lexer.SkipByte('\\') {
+				if !lexer.EOF() {
+					lexer.Skip(1)
+				}
+			} else if lexer.SkipByte(']') {
+				return
+			} else {
+				lexer.Skip(1)
+			}
+		}
+	}
+
+	parseBackslash := func() {
+		if lexer.EOF() {
+			return
+		}
+
+		if !lexer.TestByteSet(allowedAfterBackslash) {
+			cv.Warnf("In a basic regular expression, a backslash followed by %q is undefined.", lexer.Rest()[:1])
+			cv.Explain(
+				"Only the characters . [ \\ * ^ $ may be escaped using a backslash.",
+				"Except when the escaped character appears in a character class like [\\.a-z].",
+				"",
+				"To fix this, remove the backslash before the character.")
+		}
+		lexer.Skip(1)
+	}
+
+	for !lexer.EOF() {
+		switch {
+		case lexer.SkipByte('['):
+			parseCharacterClass()
+
+		case lexer.SkipByte('\\'):
+			parseBackslash()
+
+		case lexer.Skip(1):
+		}
 	}
 }
 
@@ -492,26 +553,28 @@ func (cv *VartypeCheck) Enum(allowedValues map[string]bool, basicType *BasicType
 }
 
 func (cv *VartypeCheck) FetchURL() {
+	fetchURL := cv.Value
+	url := strings.TrimPrefix(fetchURL, "-")
+	hyphen := condStr(len(fetchURL) > len(url), "-", "")
+	hyphenSubst := condStr(hyphen != "", ":S,^,-,", "")
 
-	// TODO: Handle leading "-".
-
-	cv.URL()
+	cv.WithValue(url).URL()
 
 	for siteURL, siteName := range G.Pkgsrc.MasterSiteURLToVar {
-		if hasPrefix(cv.Value, siteURL) {
-			subdir := cv.Value[len(siteURL):]
-			if hasPrefix(cv.Value, "https://github.com/") {
+		if hasPrefix(url, siteURL) {
+			subdir := url[len(siteURL):]
+			if hasPrefix(url, "https://github.com/") {
 				subdir = strings.SplitAfter(subdir, "/")[0]
-				cv.Warnf("Please use ${%s:=%s} instead of %q and run %q for further instructions.",
-					siteName, subdir, cv.Value[:len(siteURL)+len(subdir)], makeHelp("github"))
+				cv.Warnf("Please use ${%s%s:=%s} instead of %q and run %q for further instructions.",
+					siteName, hyphenSubst, subdir, hyphen+url[:len(siteURL)+len(subdir)], bmakeHelp("github"))
 			} else {
-				cv.Warnf("Please use ${%s:=%s} instead of %q.", siteName, subdir, cv.Value)
+				cv.Warnf("Please use ${%s%s:=%s} instead of %q.", siteName, hyphenSubst, subdir, hyphen+url)
 			}
 			return
 		}
 	}
 
-	tokens := cv.MkLine.Tokenize(cv.Value, false)
+	tokens := cv.MkLine.Tokenize(url, false)
 	for _, token := range tokens {
 		varUse := token.Varuse
 		if varUse == nil {
@@ -538,6 +601,26 @@ func (cv *VartypeCheck) FetchURL() {
 			cv.Errorf("The subdirectory in %s must end with a slash.", name)
 		}
 	}
+
+	switch {
+	case cv.Op == opUseMatch,
+		hasSuffix(fetchURL, "/"),
+		hasSuffix(fetchURL, "="),
+		hasSuffix(fetchURL, ":"),
+		hasPrefix(fetchURL, "-"),
+		len(tokens) == 0 || tokens[len(tokens)-1].Varuse != nil:
+		break
+
+	default:
+		cv.Warnf("The fetch URL %q should end with a slash.", fetchURL)
+		cv.Explain(
+			"The filename from DISTFILES is appended directly to this base URL.",
+			"Therefore it should typically end with a slash, or sometimes with",
+			"an equals sign or a colon.",
+			"",
+			"To specify a full URL directly, prefix it with a hyphen, such as in",
+			"-https://example.org/distfile-1.0.tar.gz.")
+	}
 }
 
 // Filename checks that filenames use only limited special characters.
@@ -563,7 +646,7 @@ func (cv *VartypeCheck) Filename() {
 		invalid)
 }
 
-func (cv *VartypeCheck) FileMask() {
+func (cv *VartypeCheck) FilePattern() {
 
 	// TODO: Decide whether to call this a "mask" or a "pattern", and use only that word everywhere.
 
@@ -857,10 +940,10 @@ func (cv *VartypeCheck) Pathlist() {
 	}
 }
 
-// PathMask is a shell pattern for pathnames, possibly including slashes.
+// PathPattern is a shell pattern for pathnames, possibly including slashes.
 //
-// See FileMask.
-func (cv *VartypeCheck) PathMask() {
+// See FilePattern.
+func (cv *VartypeCheck) PathPattern() {
 	invalid := replaceAll(cv.ValueNoVar, `[%*+,\-./0-9?@A-Z\[\]_a-z~]`, "")
 	if invalid == "" {
 		return
@@ -945,15 +1028,36 @@ func (cv *VartypeCheck) PkgOptionsVar() {
 	}
 }
 
-// PkgPath checks a directory name relative to the top-level pkgsrc directory.
+// Pkgpath checks a directory name relative to the top-level pkgsrc directory.
 //
 // Despite its name, it is more similar to RelativePkgDir than to RelativePkgPath.
-func (cv *VartypeCheck) PkgPath() {
-	pkgsrcdir := cv.MkLine.PathToFile(G.Pkgsrc.File("."))
-	MkLineChecker{cv.MkLines, cv.MkLine}.CheckRelativePkgdir(pkgsrcdir + "/" + cv.Value)
+func (cv *VartypeCheck) Pkgpath() {
+	cv.Pathname()
+
+	pkgpath := cv.Value
+	if pkgpath != cv.ValueNoVar || cv.Op == opUseMatch {
+		return
+	}
+
+	if !G.Wip && hasPrefix(pkgpath, "wip/") {
+		cv.MkLine.Errorf("A main pkgsrc package must not depend on a pkgsrc-wip package.")
+	}
+
+	if !fileExists(G.Pkgsrc.File(joinPath(pkgpath, "Makefile"))) {
+		cv.MkLine.Errorf("There is no package in %q.",
+			relpath(path.Dir(cv.MkLine.Filename), G.Pkgsrc.File(pkgpath)))
+		return
+	}
+
+	if !matches(pkgpath, `^([^./][^/]*/[^./][^/]*)$`) {
+		cv.MkLine.Errorf("%q is not a valid path to a package.", pkgpath)
+		cv.MkLine.Explain(
+			"A path to a package has the form \"category/pkgbase\".",
+			"It is relative to the pkgsrc root.")
+	}
 }
 
-func (cv *VartypeCheck) PkgRevision() {
+func (cv *VartypeCheck) Pkgrevision() {
 	if !matches(cv.Value, `^[1-9]\d*$`) {
 		cv.Warnf("%s must be a positive integer number.", cv.Varname)
 	}
@@ -1099,38 +1203,65 @@ func (cv *VartypeCheck) SedCommands() {
 
 	ntokens := len(tokens)
 	ncommands := 0
+	extended := false
+
+	checkSedCommand := func(quotedCommand string) {
+		// TODO: Remember the extended flag for the whole file, especially
+		//  for SUBST_SED.* variables.
+		if !extended {
+			command := cv.MkLine.UnquoteShell(quotedCommand, true)
+			if !hasPrefix(command, "s") {
+				return
+			}
+
+			// The :C modifier is similar enough for parsing.
+			ok, _, from, _, _ := MkVarUseModifier{"C" + command[1:]}.MatchSubst()
+			if !ok {
+				return
+			}
+
+			cv.WithValue(from).BasicRegularExpression()
+		}
+	}
 
 	for i := 0; i < ntokens; i++ {
 		token := tokens[i]
 
 		switch {
 		case token == "-e":
-			if i+1 < ntokens {
-				// Check the real sed command here.
-				i++
-				ncommands++
-				if ncommands > 1 {
-					cv.Notef("Each sed command should appear in an assignment of its own.")
-					cv.Explain(
-						"For example, instead of",
-						"    SUBST_SED.foo+=        -e s,command1,, -e s,command2,,",
-						"use",
-						"    SUBST_SED.foo+=        -e s,command1,,",
-						"    SUBST_SED.foo+=        -e s,command2,,",
-						"",
-						"This way, short sed commands cannot be hidden at the end of a line.")
-				}
-			} else {
+			if i+1 >= ntokens {
 				cv.Errorf("The -e option to sed requires an argument.")
+				break
 			}
+
+			// Check the real sed command here.
+			i++
+			ncommands++
+			if ncommands > 1 {
+				cv.Notef("Each sed command should appear in an assignment of its own.")
+				cv.Explain(
+					"For example, instead of",
+					"    SUBST_SED.foo+=        -e s,command1,, -e s,command2,,",
+					"use",
+					"    SUBST_SED.foo+=        -e s,command1,,",
+					"    SUBST_SED.foo+=        -e s,command2,,",
+					"",
+					"This way, short sed commands cannot be hidden at the end of a line.")
+			}
+
+			checkSedCommand(tokens[i])
+
 		case token == "-E":
 			// Switch to extended regular expressions mode.
+			extended = true
 
 		case token == "-n":
 			// Don't print lines per default.
 
 		case matches(token, `^["']?(\d+|/.*/)?s`):
+			// TODO: "prefix with" instead of "use".
 			cv.Notef("Please always use \"-e\" in sed commands, even if there is only one substitution.")
+			checkSedCommand(token)
 
 		default:
 			cv.Warnf("Unknown sed command %q.", token)
