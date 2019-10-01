@@ -1,11 +1,11 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2018/04/02 19:37:36 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2019/10/01 17:47:01 adam Exp $
 
 Do not use ccache.
 Do not use application bundle on Darwin.
 
---- CMakeLists.txt.orig	2018-03-25 08:19:33.000000000 +0000
+--- CMakeLists.txt.orig	2019-09-29 09:29:34.000000000 +0000
 +++ CMakeLists.txt
-@@ -76,12 +76,6 @@ IF(OPENGL_DEBUG_LOGGING)
+@@ -89,12 +89,6 @@ IF(OPENGL_DEBUG_LOGGING)
       ADD_DEFINITIONS(-DQ_ENABLE_OPENGL_FUNCTIONS_DEBUG)
  ENDIF()
  
@@ -18,38 +18,39 @@ Do not use application bundle on Darwin.
  
  # Add gprof build options if necessary.  Note gmon.out will be created in working directory when Stellarium is executed
  IF(${CMAKE_BUILD_TYPE} MATCHES "GProf")
-@@ -97,7 +91,6 @@ IF(${CMAKE_BUILD_TYPE} MATCHES "Valgrind
+@@ -109,7 +103,7 @@ IF(${CMAKE_BUILD_TYPE} MATCHES "Valgrind
+      SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0 -g")
  ENDIF()
  
- IF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
--     SET(APPLE 1)
+-IF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
++IF(FALSE)
+      SET(APPLE 1)
       SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
- ENDIF()
- 
-@@ -183,7 +176,7 @@ IF(${CMAKE_SYSTEM_NAME} STREQUAL "FreeBS
+      # share data location:
+@@ -224,7 +218,7 @@ IF(${CMAKE_SYSTEM_NAME} STREQUAL "FreeBS
  ENDIF()
  
  # best way to get to APPLE?
 -IF(APPLE)
-+IF(ELPPA)
++IF(FALSE)
       SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-common -Wall -Wextra")
       # using regular Clang or AppleClang
       IF("${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang")
-@@ -505,7 +498,7 @@ ENDIF()
+@@ -542,7 +536,7 @@ ENDIF()
  
  ########### Set some global variables ###########
  IF(UNIX AND NOT WIN32)
 -     IF(APPLE)
-+     IF(ELPPA)
++     IF(FALSE)
            SET(CMAKE_INSTALL_PREFIX "${PROJECT_BINARY_DIR}/Stellarium.app/Contents")
       ELSE()
-           ADD_DEFINITIONS(-DINSTALL_DATADIR="${CMAKE_INSTALL_PREFIX}/share/${PACKAGE}")
-@@ -671,7 +664,7 @@ IF(GENERATE_PACKAGE_TARGET)
+           ADD_DEFINITIONS(-DINSTALL_DATADIR="${CMAKE_INSTALL_PREFIX}/${SDATALOC}")          
+@@ -707,7 +701,7 @@ IF(GENERATE_PACKAGE_TARGET)
  ENDIF()
  
  ########### OS X Bundling ###############
 -IF(APPLE)
-+IF(ELPPA)
-      IF(CMAKE_OSX_DEPLOYMENT_TARGET)
-           SET(PACKAGE_OSX_TARGET ${CMAKE_OSX_DEPLOYMENT_TARGET})
-      ELSE()
++IF(FALSE)
+      GET_FILENAME_COMPONENT(_qt_bin_dir "${QMAKE_LOCATION}" DIRECTORY)
+      FIND_PROGRAM(MACDEPLOYQT_COMMAND macdeployqt HINTS "${_qt_bin_dir}")
+ 
