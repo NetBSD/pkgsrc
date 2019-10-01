@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4097 2019/10/01 18:17:54 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4098 2019/10/01 18:44:15 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6663,3 +6663,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-django2 to 2.2.6 [adam 2019-10-01]
 	Updated devel/memcached to 1.5.19 [adam 2019-10-01]
 	Updated games/wesnoth to 1.14.9 [adam 2019-10-01]
+	Updated pkgtools/url2pkg to 2.37 [rillig 2019-10-01]
