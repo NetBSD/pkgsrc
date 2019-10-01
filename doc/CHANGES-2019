@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4063 2019/10/01 11:39:00 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4064 2019/10/01 11:47:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6627,3 +6627,5 @@ Changes to the packages collection and infrastructure in 2019:
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2019Q3 branch [wiz 2019-10-01]
 	Updated devel/py-astroid to 2.3.1 [adam 2019-10-01]
 	Updated devel/py-pylint to 2.4.2 [adam 2019-10-01]
+	Updated multimedia/x265 to 3.2 [adam 2019-10-01]
+	Updated net/wireshark to 3.0.5 [adam 2019-10-01]
