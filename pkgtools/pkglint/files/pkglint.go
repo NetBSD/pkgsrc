@@ -198,7 +198,7 @@ func (pkglint *Pkglint) Main(stdout io.Writer, stderr io.Writer, args []string) 
 
 	pkglint.Pkgsrc.checkToplevelUnusedLicenses()
 
-	pkglint.Logger.ShowSummary()
+	pkglint.Logger.ShowSummary(args)
 	if pkglint.Logger.errors != 0 {
 		return 1
 	}
@@ -272,7 +272,7 @@ func (pkglint *Pkglint) prepareMainLoop() {
 		dummyLine.Fatalf("%q must be inside a pkgsrc tree.", firstDir)
 	}
 
-	pkglint.Pkgsrc = NewPkgsrc(firstDir + "/" + relTopdir)
+	pkglint.Pkgsrc = NewPkgsrc(joinPath(firstDir, relTopdir))
 	pkglint.Wip = matches(pkglint.Pkgsrc.ToRel(firstDir), `^wip(/|$)`) // Same as in Pkglint.Check.
 	pkglint.Pkgsrc.LoadInfrastructure()
 
@@ -431,7 +431,7 @@ func (pkglint *Pkglint) checkdirPackage(dir string) {
 // Returns the pkgsrc top-level directory, relative to the given directory.
 func findPkgsrcTopdir(dirname string) string {
 	for _, dir := range [...]string{".", "..", "../..", "../../.."} {
-		if fileExists(dirname + "/" + dir + "/mk/bsd.pkg.mk") {
+		if fileExists(joinPath(dirname, dir, "mk/bsd.pkg.mk")) {
 			return dir
 		}
 	}

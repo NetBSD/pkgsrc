@@ -238,7 +238,7 @@ func isEmptyDir(filename string) bool {
 		if isIgnoredFilename(name) {
 			continue
 		}
-		if dirent.IsDir() && isEmptyDir(filename+"/"+name) {
+		if dirent.IsDir() && isEmptyDir(joinPath(filename, name)) {
 			continue
 		}
 		return false
@@ -255,7 +255,7 @@ func getSubdirs(filename string) []string {
 	var subdirs []string
 	for _, dirent := range dirents {
 		name := dirent.Name()
-		if dirent.IsDir() && !isIgnoredFilename(name) && !isEmptyDir(filename+"/"+name) {
+		if dirent.IsDir() && !isIgnoredFilename(name) && !isEmptyDir(joinPath(filename, name)) {
 			subdirs = append(subdirs, name)
 		}
 	}
@@ -278,7 +278,7 @@ func dirglob(dirname string) []string {
 	var filenames []string
 	for _, info := range infos {
 		if !(isIgnoredFilename(info.Name())) {
-			filenames = append(filenames, cleanpath(dirname+"/"+info.Name()))
+			filenames = append(filenames, cleanpath(joinPath(dirname, info.Name())))
 		}
 	}
 	return filenames
@@ -444,6 +444,13 @@ func mkopSubst(s string, left bool, from string, right bool, to string, flags st
 	})
 }
 
+func joinPath(a, b string, others ...string) string {
+	if len(others) == 0 {
+		return a + "/" + b
+	}
+	return a + "/" + b + "/" + strings.Join(others, "/")
+}
+
 // relpath returns the relative path from the directory "from"
 // to the filesystem entry "to".
 //
@@ -502,7 +509,7 @@ func relpath(from, to string) (result string) {
 	fromTop, err := filepath.Rel(absTopdir, absTo)
 	assertNil(err, "relpath from topdir %q to %q", absTopdir, absTo)
 
-	result = cleanpath(filepath.ToSlash(toTop) + "/" + filepath.ToSlash(fromTop))
+	result = cleanpath(joinPath(filepath.ToSlash(toTop), filepath.ToSlash(fromTop)))
 
 	if trace.Tracing {
 		trace.Stepf("relpath from %q to %q = %q", cfrom, cto, result)
@@ -513,7 +520,7 @@ func relpath(from, to string) (result string) {
 func abspath(filename string) string {
 	abs := filename
 	if !filepath.IsAbs(filename) {
-		abs = G.cwd + "/" + abs
+		abs = joinPath(G.cwd, abs)
 	}
 	return path.Clean(abs)
 }
@@ -1108,7 +1115,7 @@ func (c *FileCache) key(filename string) string {
 	return path.Clean(filename)
 }
 
-func makeHelp(topic string) string { return bmake("help topic=" + topic) }
+func bmakeHelp(topic string) string { return bmake("help topic=" + topic) }
 
 func bmake(target string) string { return sprintf("%s %s", confMake, target) }
 
@@ -1353,7 +1360,10 @@ func (s *StringSet) AddAll(elements []string) {
 	}
 }
 
-func (s *StringSet) Contains(needle string) bool {
-	_, found := s.seen[needle]
-	return found
+// See mk/tools/shquote.sh.
+func shquote(s string) string {
+	if matches(s, `^[!%+,\-./0-9:=@A-Z_a-z]+$`) {
+		return s
+	}
+	return "'" + strings.Replace(s, "'", "'\\''", -1) + "'"
 }
