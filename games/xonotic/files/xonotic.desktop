@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Xonotic
+Comment=Fast arena-style FPS
+Icon=xonotic
+Exec=xonotic-sdl
+Terminal=false
+Categories=Game;Shooter;
