@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/10/01 12:36:34 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2019/10/01 14:39:07 tnn Exp $
 
 DISTNAME=	openjdk-jdk11u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk11-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
@@ -77,12 +77,6 @@ BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/java/${JAVA_NAME}/lib/server
 WRKSRC=	${WRKDIR}/${DISTNAME}
 
 .include "../../mk/compiler.mk"
-
-# Fix segfault under NetBSD/amd64 8.99 with GCC 6.4.0
-.if !empty(CC_VERSION:Mgcc-[67].*)
-CFLAGS+=	-fno-lifetime-dse
-CFLAGS+=	-fno-delete-null-pointer-checks
-.endif
 
 .if !empty(PKGSRC_COMPILER:Mclang)
 CONFIGURE_ARGS+=	--with-toolchain-type=clang
