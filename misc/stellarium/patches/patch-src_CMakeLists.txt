@@ -1,0 +1,15 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2019/10/01 17:47:01 adam Exp $
+
+Do not use application bundle on Darwin.
+
+--- src/CMakeLists.txt.orig	2019-10-01 15:36:42.000000000 +0000
++++ src/CMakeLists.txt
+@@ -493,7 +493,7 @@ IF(MSVC)
+      )
+ ENDIF(MSVC)
+ 
+-IF(APPLE)
++IF(FALSE)
+      INSTALL(TARGETS stellarium DESTINATION MacOS)
+      INSTALL(CODE
+         "
