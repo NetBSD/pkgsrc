@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4076 2019/10/01 13:14:27 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4077 2019/10/01 13:19:31 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6640,3 +6640,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed audio/quodlibet2 successor audio/quodlibet [nia 2019-10-01]
 	Updated textproc/yaml-cpp to 0.6.3 [nia 2019-10-01]
 	Updated converters/fribidi to 1.0.7 [nia 2019-10-01]
+	Updated mail/wl-snapshot to 2.15.9.20190623 [mef 2019-10-01]
