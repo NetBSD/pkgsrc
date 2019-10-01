@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4067 2019/10/01 12:35:22 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4068 2019/10/01 12:35:53 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6631,3 +6631,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated multimedia/x265 to 3.2 [adam 2019-10-01]
 	Updated net/wireshark to 3.0.5 [adam 2019-10-01]
 	Added games/naev version 0.7.0 [nia 2019-10-01]
+	Added games/srb2 version 2.1.25 [nia 2019-10-01]
