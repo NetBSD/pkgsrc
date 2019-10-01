@@ -143,6 +143,16 @@ func (s *Suite) Test_Lexer_SkipByte(c *check.C) {
 	c.Check(lexer.SkipByte(0), equals, false) // This is not a C string.
 }
 
+func (s *Suite) Test_Lexer_NextByte(c *check.C) {
+	lexer := NewLexer("byte")
+
+	c.Check(lexer.NextByte(), equals, byte('b'))
+	c.Check(lexer.NextByte(), equals, byte('y'))
+	c.Check(lexer.NextByte(), equals, byte('t'))
+	c.Check(lexer.NextByte(), equals, byte('e'))
+	c.Check(lexer.NextByte, check.PanicMatches, "^runtime error: index out of range.*")
+}
+
 func (s *Suite) Test_Lexer_NextBytesFunc(c *check.C) {
 	lexer := NewLexer("an alphanumerical string")
 

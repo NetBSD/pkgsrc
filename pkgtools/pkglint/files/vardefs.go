@@ -510,7 +510,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 
 	reg.usr("MOTIFBASE", BtPathname)
 	reg.usr("PKGINFODIR", BtPathname)
-	reg.usr("PKGMANDIR", BtPathname)
+	reg.usr("PKGMANDIR", BtPrefixPathname)
 	reg.usr("PKGGNUDIR", BtPathname)
 	reg.usr("BSDSRCDIR", BtPathname)
 	reg.usr("BSDXSRCDIR", BtPathname)
@@ -529,10 +529,10 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.usr("PATCH_FUZZ_FACTOR", enum("none -F0 -F1 -F2 -F3"))
 	reg.usrlist("ACCEPTABLE_LICENSES", BtIdentifier)
 	reg.usr("SPECIFIC_PKGS", BtYes)
-	reg.usrlist("SITE_SPECIFIC_PKGS", BtPkgPath)
-	reg.usrlist("HOST_SPECIFIC_PKGS", BtPkgPath)
-	reg.usrlist("GROUP_SPECIFIC_PKGS", BtPkgPath)
-	reg.usrlist("USER_SPECIFIC_PKGS", BtPkgPath)
+	reg.usrlist("SITE_SPECIFIC_PKGS", BtPkgpath)
+	reg.usrlist("HOST_SPECIFIC_PKGS", BtPkgpath)
+	reg.usrlist("GROUP_SPECIFIC_PKGS", BtPkgpath)
+	reg.usrlist("USER_SPECIFIC_PKGS", BtPkgpath)
 	reg.usr("FAILOVER_FETCH", BtYes)
 	reg.usrlist("MASTER_SORT", BtUnknown)
 	reg.usrlist("MASTER_SORT_REGEX", BtUnknown)
@@ -629,7 +629,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.usr("ICECAST_SOURCE_BUFFSIZE", BtInteger)
 	reg.usr("IMAP_UW_CCLIENT_MBOX_FMT",
 		enum("mbox mbx mh mmdf mtx mx news phile tenex unix"))
-	reg.usr("IMAP_UW_MAILSPOOLHOME", BtFileName)
+	reg.usr("IMAP_UW_MAILSPOOLHOME", BtFilename)
 	reg.usr("IMDICTDIR", BtPathname)
 	reg.usr("INN_DATA_DIR", BtPathname)
 	reg.usr("INN_USER", BtUserGroupName)
@@ -711,7 +711,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.usr("PILRC_USE_GTK", BtYesNo)
 	reg.usr("PKG_JVM_DEFAULT", jvms)
 	reg.usr("POPTOP_USE_MPPE", BtYes)
-	reg.usr("PROCMAIL_MAILSPOOLHOME", BtFileName)
+	reg.usr("PROCMAIL_MAILSPOOLHOME", BtFilename)
 	// Comma-separated list of string or integer literals.
 	reg.usr("PROCMAIL_TRUSTED_IDS", BtUnknown)
 	reg.usr("PVM_SSH", BtPathname)
@@ -740,7 +740,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.usr("RSSH_CVS_PATH", BtPathname)
 	reg.usr("RSSH_RDIST_PATH", BtPathname)
 	reg.usr("RSSH_RSYNC_PATH", BtPathname)
-	reg.usrlist("SAWFISH_THEMES", BtFileName)
+	reg.usrlist("SAWFISH_THEMES", BtFilename)
 	reg.usr("SCREWS_GROUP", BtUserGroupName)
 	reg.usr("SCREWS_USER", BtUserGroupName)
 	reg.usr("SDIST_PAWD", enum("pawd pwd"))
@@ -783,13 +783,13 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.sys(".TARGET", BtPathname)
 	reg.sys("@", BtPathname)
 	reg.pkglistbl3("ALL_ENV", BtShellWord)
-	reg.pkg("ALTERNATIVES_FILE", BtFileName)
+	reg.pkg("ALTERNATIVES_FILE", BtFilename)
 	reg.pkglist("ALTERNATIVES_SRC", BtPathname)
 	reg.pkg("APACHE_MODULE", BtYes)
 	reg.sys("AR", BtShellCommand)
 	reg.sys("AS", BtShellCommand)
 	reg.pkglist("AUTOCONF_REQD", BtVersion)
-	reg.pkglist("AUTOMAKE_OVERRIDE", BtPathmask)
+	reg.pkglist("AUTOMAKE_OVERRIDE", BtPathPattern)
 	reg.pkglist("AUTOMAKE_REQD", BtVersion)
 	reg.pkg("AUTO_MKDIRS", BtYesNo)
 	reg.usr("BATCH", BtYes)
@@ -841,7 +841,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.acl("BUILDLINK_DIR", BtPathname,
 		PackageSettable,
 		"*: use")
-	reg.bl3list("BUILDLINK_FILES.*", BtPathmask)
+	reg.bl3list("BUILDLINK_FILES.*", BtPathPattern)
 	reg.pkgbl3("BUILDLINK_FILES_CMD.*", BtShellCommand)
 	reg.acllist("BUILDLINK_INCDIRS.*", BtPathname,
 		PackageSettable,
@@ -917,7 +917,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 		PackageSettable,
 		"builtin.mk: set, use, use-loadtime",
 		"Makefile, Makefile.*, *.mk: use, use-loadtime")
-	reg.acl("BUILTIN_PKG.*", BtPkgName,
+	reg.acl("BUILTIN_PKG.*", BtPkgname,
 		PackageSettable,
 		"builtin.mk: set, use, use-loadtime")
 	reg.pkglistbl3("BUILTIN_FIND_FILES_VAR", BtVariableName)
@@ -953,27 +953,27 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.pkglist("CHECK_FILES_SKIP", BtBasicRegularExpression)
 	reg.pkg("CHECK_FILES_SUPPORTED", BtYesNo)
 	reg.usr("CHECK_HEADERS", BtYesNo)
-	reg.pkglist("CHECK_HEADERS_SKIP", BtPathmask)
+	reg.pkglist("CHECK_HEADERS_SKIP", BtPathPattern)
 	reg.usr("CHECK_INTERPRETER", BtYesNo)
-	reg.pkglist("CHECK_INTERPRETER_SKIP", BtPathmask)
+	reg.pkglist("CHECK_INTERPRETER_SKIP", BtPathPattern)
 	reg.usr("CHECK_PERMS", BtYesNo)
-	reg.pkglist("CHECK_PERMS_SKIP", BtPathmask)
+	reg.pkglist("CHECK_PERMS_SKIP", BtPathPattern)
 	reg.usr("CHECK_PORTABILITY", BtYesNo)
-	reg.pkglist("CHECK_PORTABILITY_SKIP", BtPathmask)
+	reg.pkglist("CHECK_PORTABILITY_SKIP", BtPathPattern)
 	reg.usr("CHECK_RELRO", BtYesNo)
-	reg.pkglist("CHECK_RELRO_SKIP", BtPathmask)
+	reg.pkglist("CHECK_RELRO_SKIP", BtPathPattern)
 	reg.pkg("CHECK_RELRO_SUPPORTED", BtYesNo)
 	reg.pkg("CHECK_SHLIBS", BtYesNo)
-	reg.pkglist("CHECK_SHLIBS_SKIP", BtPathmask)
+	reg.pkglist("CHECK_SHLIBS_SKIP", BtPathPattern)
 	reg.pkg("CHECK_SHLIBS_SUPPORTED", BtYesNo)
-	reg.pkglist("CHECK_WRKREF_SKIP", BtPathmask)
+	reg.pkglist("CHECK_WRKREF_SKIP", BtPathPattern)
 	reg.pkg("CMAKE_ARG_PATH", BtPathname)
 	reg.pkglist("CMAKE_ARGS", BtShellWord)
 	reg.pkglist("CMAKE_ARGS.*", BtShellWord)
-	reg.pkglist("CMAKE_DEPENDENCIES_REWRITE", BtPathmask) // Relative to WRKSRC
-	reg.pkglist("CMAKE_MODULE_PATH_OVERRIDE", BtPathmask) // Relative to WRKSRC
+	reg.pkglist("CMAKE_DEPENDENCIES_REWRITE", BtPathPattern) // Relative to WRKSRC
+	reg.pkglist("CMAKE_MODULE_PATH_OVERRIDE", BtPathPattern) // Relative to WRKSRC
 	reg.pkg("CMAKE_PKGSRC_BUILD_FLAGS", BtYesNo)
-	reg.pkglist("CMAKE_PREFIX_PATH", BtPathmask)
+	reg.pkglist("CMAKE_PREFIX_PATH", BtPathPattern)
 	reg.pkg("CMAKE_USE_GNU_INSTALL_DIRS", BtYesNo)
 	reg.pkg("CMAKE_INSTALL_PREFIX", BtPathname) // The default is ${PREFIX}.
 	reg.pkgappend("COMMENT", BtComment)
@@ -988,10 +988,10 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.pkg("CONFIGURE_HAS_LIBDIR", BtYesNo)
 	reg.pkg("CONFIGURE_HAS_MANDIR", BtYesNo)
 	reg.pkg("CONFIGURE_SCRIPT", BtPathname)
-	reg.pkglist("CONFIG_GUESS_OVERRIDE", BtPathmask)
-	reg.pkglist("CONFIG_STATUS_OVERRIDE", BtPathmask)
+	reg.pkglist("CONFIG_GUESS_OVERRIDE", BtPathPattern)
+	reg.pkglist("CONFIG_STATUS_OVERRIDE", BtPathPattern)
 	reg.pkg("CONFIG_SHELL", BtPathname)
-	reg.pkglist("CONFIG_SUB_OVERRIDE", BtPathmask)
+	reg.pkglist("CONFIG_SUB_OVERRIDE", BtPathPattern)
 	reg.pkglist("CONFLICTS", BtDependency)
 	reg.pkgappend("CONF_FILES", BtConfFiles)
 	reg.pkg("CONF_FILES_MODE", enum("0644 0640 0600 0400"))
@@ -1016,15 +1016,15 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.pkg("DESTDIR_VARNAME", BtVariableName)
 	reg.sys("DEVOSSAUDIO", BtPathname)
 	reg.sys("DEVOSSSOUND", BtPathname)
-	reg.pkglist("DISTFILES", BtFileName)
+	reg.pkglist("DISTFILES", BtFilename)
 	reg.pkg("DISTINFO_FILE", BtRelativePkgPath)
-	reg.pkg("DISTNAME", BtFileName)
+	reg.pkg("DISTNAME", BtFilename)
 	reg.pkg("DIST_SUBDIR", BtPathname)
 	reg.pkglist("DJB_BUILD_ARGS", BtShellWord)
 	reg.pkglist("DJB_BUILD_TARGETS", BtIdentifier)
 	reg.pkgappend("DJB_CONFIG_CMDS", BtShellCommands)
 	reg.pkglist("DJB_CONFIG_DIRS", BtWrksrcSubdirectory)
-	reg.pkg("DJB_CONFIG_HOME", BtFileName)
+	reg.pkg("DJB_CONFIG_HOME", BtFilename)
 	reg.pkg("DJB_CONFIG_PREFIX", BtPathname)
 	reg.pkglist("DJB_INSTALL_TARGETS", BtIdentifier)
 	reg.pkg("DJB_MAKE_TARGETS", BtYesNo)
@@ -1079,7 +1079,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.sys("EXTRACT_CMD", BtShellCommand)
 	reg.pkg("EXTRACT_DIR", BtPathname)
 	reg.pkg("EXTRACT_DIR.*", BtPathname)
-	reg.pkglist("EXTRACT_ELEMENTS", BtPathmask)
+	reg.pkglist("EXTRACT_ELEMENTS", BtPathPattern)
 	reg.pkglist("EXTRACT_ENV", BtShellWord)
 	reg.pkglist("EXTRACT_ONLY", BtPathname)
 	reg.pkglist("EXTRACT_OPTS", BtShellWord)
@@ -1109,7 +1109,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.pkgappend("GENERATE_PLIST", BtShellCommands)
 	reg.pkg("GITHUB_PROJECT", BtIdentifier)
 	reg.pkg("GITHUB_TAG", BtIdentifier)
-	reg.pkg("GITHUB_RELEASE", BtFileName)
+	reg.pkg("GITHUB_RELEASE", BtFilename)
 	reg.pkg("GITHUB_TYPE", enum("tag release"))
 	reg.pkgrat("GMAKE_REQD", BtVersion)
 	// Some packages need to set GNU_ARCH.i386 to either i486 or i586.
@@ -1175,9 +1175,9 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.sys("JAVA_BINPREFIX", BtPathname)
 	reg.pkg("JAVA_CLASSPATH", BtShellWord)
 	reg.pkg("JAVA_HOME", BtPathname)
-	reg.pkg("JAVA_NAME", BtFileName)
+	reg.pkg("JAVA_NAME", BtFilename)
 	reg.pkglist("JAVA_UNLIMIT", enum("cmdsize datasize stacksize"))
-	reg.pkglist("JAVA_WRAPPERS", BtFileName)
+	reg.pkglist("JAVA_WRAPPERS", BtFilename)
 	reg.pkg("JAVA_WRAPPER_BIN.*", BtPathname)
 	reg.sys("KRB5BASE", BtPathname)
 	reg.pkglist("KRB5_ACCEPTED", enum("heimdal mit-krb5"))
@@ -1194,7 +1194,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.pkglist("LIBS", BtLdFlag)
 	reg.pkglist("LIBS.*", BtLdFlag)
 	reg.sys("LIBTOOL", BtShellCommand)
-	reg.pkglist("LIBTOOL_OVERRIDE", BtPathmask)
+	reg.pkglist("LIBTOOL_OVERRIDE", BtPathPattern)
 	reg.pkglistrat("LIBTOOL_REQD", BtVersion)
 	reg.pkgappend("LICENCE", BtLicense)
 	reg.pkgappend("LICENSE", BtLicense)
@@ -1205,7 +1205,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.sys("LOWER_OPSYS", BtIdentifier)
 	reg.sys("LOWER_VENDOR", BtIdentifier)
 	reg.syslist("LP64PLATFORMS", BtMachinePlatformPattern)
-	reg.pkglist("LTCONFIG_OVERRIDE", BtPathmask)
+	reg.pkglist("LTCONFIG_OVERRIDE", BtPathPattern)
 	reg.sysload("MACHINE_ARCH", enumMachineArch)
 	reg.sysload("MACHINE_GNU_ARCH", enumMachineGnuArch)
 	reg.sysload("MACHINE_GNU_PLATFORM", BtMachineGnuPlatform)
@@ -1256,8 +1256,8 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.pkglistrat("NOT_FOR_BULK_PLATFORM", BtMachinePlatformPattern)
 	reg.pkglistrat("NOT_FOR_PLATFORM", BtMachinePlatformPattern)
 	reg.pkgrat("NOT_FOR_UNPRIVILEGED", BtYesNo)
-	reg.pkglistrat("NOT_PAX_ASLR_SAFE", BtPathmask)
-	reg.pkglistrat("NOT_PAX_MPROTECT_SAFE", BtPathmask)
+	reg.pkglistrat("NOT_PAX_ASLR_SAFE", BtPathPattern)
+	reg.pkglistrat("NOT_PAX_MPROTECT_SAFE", BtPathPattern)
 	reg.pkg("NO_BIN_ON_CDROM", BtRestricted)
 	reg.pkg("NO_BIN_ON_FTP", BtRestricted)
 	reg.pkgload("NO_BUILD", BtYes)
@@ -1282,12 +1282,12 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.pkg("OVERRIDE_DIRDEPTH*", BtInteger)
 	reg.pkg("OVERRIDE_GNU_CONFIG_SCRIPTS", BtYes)
 	reg.pkg("OWNER", BtMailAddress)
-	reg.pkglist("OWN_DIRS", BtPathmask)
+	reg.pkglist("OWN_DIRS", BtPathPattern)
 	reg.pkglist("OWN_DIRS_PERMS", BtPerms)
 	reg.sys("PAMBASE", BtPathname)
 	reg.usr("PAM_DEFAULT", enum("linux-pam openpam solaris-pam"))
 	reg.pkgload("PATCHDIR", BtRelativePkgPath)
-	reg.pkglist("PATCHFILES", BtFileName)
+	reg.pkglist("PATCHFILES", BtFilename)
 	reg.pkglist("PATCH_ARGS", BtShellWord)
 	reg.pkglist("PATCH_DIST_ARGS", BtShellWord)
 	reg.pkg("PATCH_DIST_CAT", BtShellCommand)
@@ -1339,19 +1339,19 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 		PackageSettable,
 		"builtin.mk: set, append",
 		"special:pkgconfig-builtin.mk: use-loadtime")
-	reg.pkglist("PKGCONFIG_OVERRIDE", BtPathmask)
+	reg.pkglist("PKGCONFIG_OVERRIDE", BtPathPattern)
 	reg.pkg("PKGCONFIG_OVERRIDE_STAGE", BtStage)
 	reg.pkg("PKGDIR", BtRelativePkgDir)
 	reg.sys("PKGDIRMODE", BtFileMode)
 	reg.sys("PKGLOCALEDIR", BtPathname)
-	reg.pkg("PKGNAME", BtPkgName)
-	reg.sys("PKGNAME_NOREV", BtPkgName)
-	reg.sysload("PKGPATH", BtPathname)
+	reg.pkg("PKGNAME", BtPkgname)
+	reg.sys("PKGNAME_NOREV", BtPkgname)
+	reg.sysload("PKGPATH", BtPkgpath)
 	reg.sys("PKGREPOSITORY", BtUnknown)
 	// This variable is special in that it really only makes sense to
 	// be set in a package Makefile.
-	// See VartypeCheck.PkgRevision for details.
-	reg.acl("PKGREVISION", BtPkgRevision,
+	// See VartypeCheck.Pkgrevision for details.
+	reg.acl("PKGREVISION", BtPkgrevision,
 		PackageSettable,
 		"Makefile: set")
 	reg.sys("PKGSRCDIR", BtPathname)
@@ -1364,7 +1364,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.syslist("PKGTOOLS_ENV", BtShellWord)
 	reg.sys("PKGVERSION", BtVersion)
 	reg.sys("PKGVERSION_NOREV", BtVersion) // Without the nb* part.
-	reg.sys("PKGWILDCARD", BtFileMask)
+	reg.sys("PKGWILDCARD", BtFilePattern)
 	reg.sysload("PKG_ADMIN", BtShellCommand)
 	reg.sys("PKG_APACHE", enum("apache24"))
 	reg.pkglistrat("PKG_APACHE_ACCEPTED", enum("apache24"))
@@ -1456,8 +1456,8 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.acl("PREFIX", BtPathname,
 		UserSettable,
 		"*: use")
-	// BtPathname instead of BtPkgPath since the original package doesn't exist anymore.
-	// It would be more precise to check for a PkgPath that doesn't exist anymore.
+	// BtPathname instead of BtPkgpath since the original package doesn't exist anymore.
+	// It would be more precise to check for a Pkgpath that doesn't exist anymore.
 	reg.pkg("PREV_PKGPATH", BtPathname)
 	reg.acl("PRINT_PLIST_AWK", BtAwkCommand,
 		PackageSettable,
@@ -1483,7 +1483,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.usr("PYTHON_VERSION_REQD", BtVersion)
 	reg.pkglist("PYTHON_VERSIONED_DEPENDENCIES", BtPythonDependency)
 	reg.sys("RANLIB", BtShellCommand)
-	reg.pkglist("RCD_SCRIPTS", BtFileName)
+	reg.pkglist("RCD_SCRIPTS", BtFilename)
 	// TODO: Is the definition in www/squid3/Makefile detected as being redundant?
 	//  No, but it could if the RedundancyScope were able to resolve ${FILESDIR}
 	//  to "files".
@@ -1499,17 +1499,17 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	// is a plain string.
 	reg.pkg("REPLACE.*", BtUnknown)
 
-	reg.pkglist("REPLACE_AWK", BtPathmask)
-	reg.pkglist("REPLACE_BASH", BtPathmask)
-	reg.pkglist("REPLACE_CSH", BtPathmask)
-	reg.pkglist("REPLACE_FILES.*", BtPathmask)
+	reg.pkglist("REPLACE_AWK", BtPathPattern)
+	reg.pkglist("REPLACE_BASH", BtPathPattern)
+	reg.pkglist("REPLACE_CSH", BtPathPattern)
+	reg.pkglist("REPLACE_FILES.*", BtPathPattern)
 	reg.pkglist("REPLACE_INTERPRETER", BtIdentifier)
-	reg.pkglist("REPLACE_KSH", BtPathmask)
-	reg.pkglist("REPLACE_LOCALEDIR_PATTERNS", BtFileMask)
-	reg.pkglist("REPLACE_LUA", BtPathmask)
-	reg.pkglist("REPLACE_PERL", BtPathmask)
-	reg.pkglist("REPLACE_PYTHON", BtPathmask)
-	reg.pkglist("REPLACE_SH", BtPathmask)
+	reg.pkglist("REPLACE_KSH", BtPathPattern)
+	reg.pkglist("REPLACE_LOCALEDIR_PATTERNS", BtFilePattern)
+	reg.pkglist("REPLACE_LUA", BtPathPattern)
+	reg.pkglist("REPLACE_PERL", BtPathPattern)
+	reg.pkglist("REPLACE_PYTHON", BtPathPattern)
+	reg.pkglist("REPLACE_SH", BtPathPattern)
 	reg.pkglist("REQD_DIRS", BtPathname)
 	reg.pkglist("REQD_DIRS_PERMS", BtPerms)
 	reg.pkglist("REQD_FILES", BtPathname)
@@ -1518,7 +1518,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.pkg("RESTRICTED", BtMessage)
 	reg.usr("ROOT_USER", BtUserGroupName)
 	reg.usr("ROOT_GROUP", BtUserGroupName)
-	reg.pkglist("RPMIGNOREPATH", BtPathmask)
+	reg.pkglist("RPMIGNOREPATH", BtPathPattern)
 	reg.acl("RUBY_BASE",
 		reg.enumFromDirs(src, "lang", `^ruby(\d+)$`, "ruby$1", "ruby22 ruby23 ruby24 ruby25"),
 		SystemProvided,
@@ -1543,16 +1543,16 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.sys("SHAREOWN", BtUserGroupName)
 	reg.sys("SHCOMMENT", BtShellCommand)
 	reg.sys("SHLIBTOOL", BtShellCommand)
-	reg.pkglist("SHLIBTOOL_OVERRIDE", BtPathmask)
+	reg.pkglist("SHLIBTOOL_OVERRIDE", BtPathPattern)
 	reg.sysload("SHLIB_TYPE",
 		enum("COFF ECOFF ELF SOM XCOFF Mach-O PE PEwin a.out aixlib dylib none"))
 	reg.pkglist("SITES.*", BtFetchURL)
 	reg.usr("SMF_PREFIS", BtPathname)
 	reg.pkg("SMF_SRCDIR", BtPathname)
-	reg.pkg("SMF_NAME", BtFileName)
+	reg.pkg("SMF_NAME", BtFilename)
 	reg.pkg("SMF_MANIFEST", BtPathname)
 	reg.pkglist("SMF_INSTANCES", BtIdentifier)
-	reg.pkglist("SMF_METHODS", BtFileName)
+	reg.pkglist("SMF_METHODS", BtFilename)
 	reg.pkg("SMF_METHOD_SRC.*", BtPathname)
 	reg.pkg("SMF_METHOD_SHELL", BtShellCommand)
 	reg.pkglist("SPECIAL_PERMS", BtPerms)
@@ -1560,13 +1560,13 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.sys("STRIP", BtShellCommand) // see mk/tools/strip.mk
 
 	// Only valid in the top-level and the category Makefiles.
-	reg.acllist("SUBDIR", BtFileName,
+	reg.acllist("SUBDIR", BtFilename,
 		PackageSettable,
 		"Makefile: append")
 
 	reg.pkglistbl3("SUBST_CLASSES", BtIdentifier)
 	reg.pkglistbl3("SUBST_CLASSES.*", BtIdentifier) // OPSYS-specific
-	reg.pkglistbl3("SUBST_FILES.*", BtPathmask)
+	reg.pkglistbl3("SUBST_FILES.*", BtPathPattern)
 	reg.pkgbl3("SUBST_FILTER_CMD.*", BtShellCommand)
 	reg.pkgbl3("SUBST_MESSAGE.*", BtMessage)
 	reg.pkgappendbl3("SUBST_SED.*", BtSedCommands)
@@ -1580,7 +1580,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.pkglist("TEST_TARGET", BtIdentifier)
 	reg.pkglistrat("TEXINFO_REQD", BtVersion)
 	reg.pkglistbl3("TOOL_DEPENDS", BtDependencyWithPath)
-	reg.syslist("TOOLS_ALIASES", BtFileName)
+	reg.syslist("TOOLS_ALIASES", BtFilename)
 	reg.syslist("TOOLS_BROKEN", BtTool)
 	reg.sys("TOOLS_CMD.*", BtPathname)
 	reg.pkglist("TOOLS_CREATE", BtTool)
@@ -1596,10 +1596,10 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 		enum("cputime datasize memorysize stacksize"))
 	reg.usr("UNPRIVILEGED_USER", BtUserGroupName)
 	reg.usr("UNPRIVILEGED_GROUP", BtUserGroupName)
-	reg.pkglist("UNWRAP_FILES", BtPathmask)
+	reg.pkglist("UNWRAP_FILES", BtPathPattern)
 	reg.usrlist("UPDATE_TARGET", BtIdentifier)
 	reg.pkg("USERGROUP_PHASE", enum("configure build pre-install"))
-	reg.usrlist("USER_ADDITIONAL_PKGS", BtPkgPath)
+	reg.usrlist("USER_ADDITIONAL_PKGS", BtPkgpath)
 	reg.pkg("USE_BSD_MAKEFILE", BtYes)
 
 	// USE_BUILTIN.* is usually set by the builtin.mk file, after checking
