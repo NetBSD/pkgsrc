@@ -1551,7 +1551,7 @@ func (s *Suite) Test_Package_checkUpdate(c *check.C) {
 		"WARN: category/pkg2/Makefile:4: This package should be updated to 2.0 ([nice new features]).",
 		"NOTE: category/pkg3/Makefile:4: This package is newer than the update request to 3.0 ([security update]).",
 		"4 warnings and 2 notes found.",
-		"(Run \"pkglint -e\" to show explanations.)")
+		"(Run \"pkglint -e -Wall,no-space category/pkg1 category/pkg2 category/pkg3\" to show explanations.)")
 }
 
 func (s *Suite) Test_NewPackage(c *check.C) {
@@ -2625,10 +2625,28 @@ func (s *Suite) Test_Package_checkOwnerMaintainer__directory(c *check.C) {
 
 	G.Check(pkg)
 
+	// No warning for the patches directory, only for regular files.
 	t.CheckOutputLines(
 		"NOTE: ~/category/package/Makefile: " +
 			"Please only commit changes that " +
 			"maintainer@example.org would approve.")
+}
+
+func (s *Suite) Test_Package_checkOwnerMaintainer__url2pkg(c *check.C) {
+	t := s.Init(c)
+
+	G.Username = "example-user"
+	pkg := t.SetUpPackage("category/package",
+		"MAINTAINER=\tINSERT_YOUR_MAIL_ADDRESS_HERE")
+	t.CreateFileLines("category/package/CVS/Entries",
+		"/Makefile//modified//")
+	t.FinishSetUp()
+
+	G.Check(pkg)
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/Makefile:8: " +
+			"\"INSERT_YOUR_MAIL_ADDRESS_HERE\" is not a valid mail address.")
 }
 
 func (s *Suite) Test_Package_checkFreeze(c *check.C) {
@@ -2648,7 +2666,7 @@ func (s *Suite) Test_Package_checkFreeze(c *check.C) {
 		"NOTE: ~/category/package/Makefile: Pkgsrc is frozen since 2018-03-20.",
 		"",
 		"\tDuring a pkgsrc freeze, changes to pkgsrc should only be made very",
-		"\tcarefully. See https://www.netbsd.org/developers/pkgsrc/ for the",
+		"\tcarefully. See https://www.NetBSD.org/developers/pkgsrc/ for the",
 		"\texact rules.",
 		"")
 }

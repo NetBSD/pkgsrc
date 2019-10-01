@@ -54,6 +54,11 @@ func (ck *VargroupsChecker) init() {
 	ck.ignVars = make(map[string]*MkLine)
 	ck.sortedVars = make(map[string]*MkLine)
 	ck.listedVars = make(map[string]*MkLine)
+	userPrivate := ""
+	pkgPrivate := ""
+	sysPrivate := ""
+	defPrivate := ""
+	usePrivate := ""
 
 	group := ""
 
@@ -65,7 +70,7 @@ func (ck *VargroupsChecker) init() {
 		}
 	}
 
-	appendTo := func(vars map[string]*MkLine, mkline *MkLine, public bool) {
+	appendTo := func(vars map[string]*MkLine, mkline *MkLine, publicGroup bool, firstPrivate *string) {
 		checkGroupName(mkline)
 
 		for _, varname := range mkline.ValueFields(mkline.Value()) {
@@ -73,9 +78,20 @@ func (ck *VargroupsChecker) init() {
 				continue
 			}
 
-			if public && hasPrefix(varname, "_") {
+			private := hasPrefix(varname, "_")
+			if publicGroup && private {
 				mkline.Warnf("%s should list only variables that start with a letter, not %q.",
 					mkline.Varname(), varname)
+			}
+
+			if firstPrivate != nil {
+				if *firstPrivate != "" && !private {
+					mkline.Warnf("The public variable %s should be listed before the private variable %s.",
+						varname, *firstPrivate)
+				}
+				if private && *firstPrivate == "" {
+					*firstPrivate = varname
+				}
 			}
 
 			if ck.registered[varname] != nil {
@@ -105,17 +121,17 @@ func (ck *VargroupsChecker) init() {
 			case "_VARGROUPS":
 				group = mkline.Value()
 			case "_USER_VARS.*":
-				appendTo(ck.userVars, mkline, true)
+				appendTo(ck.userVars, mkline, true, &userPrivate)
 			case "_PKG_VARS.*":
-				appendTo(ck.pkgVars, mkline, true)
+				appendTo(ck.pkgVars, mkline, true, &pkgPrivate)
 			case "_SYS_VARS.*":
-				appendTo(ck.sysVars, mkline, true)
+				appendTo(ck.sysVars, mkline, true, &sysPrivate)
 			case "_DEF_VARS.*":
-				appendTo(ck.defVars, mkline, false)
+				appendTo(ck.defVars, mkline, false, &defPrivate)
 			case "_USE_VARS.*":
-				appendTo(ck.useVars, mkline, false)
+				appendTo(ck.useVars, mkline, false, &usePrivate)
 			case "_IGN_VARS.*":
-				appendTo(ck.ignVars, mkline, false)
+				appendTo(ck.ignVars, mkline, false, nil)
 			case "_SORTED_VARS.*":
 				appendToStyle(ck.sortedVars, mkline)
 			case "_LISTED_VARS.*":
