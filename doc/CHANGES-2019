@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4100 2019/10/01 21:38:09 rillig Exp $
+$NetBSD: CHANGES-2019,v 1.4101 2019/10/01 22:17:57 rjs Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6666,3 +6666,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated pkgtools/url2pkg to 2.37 [rillig 2019-10-01]
 	Updated pkgtools/url2pkg to 19.3.0 [rillig 2019-10-01]
 	Updated pkgtools/pkglint to 19.3.0 [rillig 2019-10-01]
+	Updated lang/sbcl to 1.5.7 [rjs 2019-10-01]
