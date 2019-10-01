@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2019/09/21 15:19:17 nia Exp $
+$NetBSD: distinfo,v 1.2 2019/10/01 14:25:08 nia Exp $
 
-SHA1 (taisei-v1.3.tar.xz) = 2ee9ed045e60297f5b75254b4e8e39c20f108ad5
-RMD160 (taisei-v1.3.tar.xz) = 4fbb0eaafeb1ed3c819935cd0efaf84f4e50ec39
-SHA512 (taisei-v1.3.tar.xz) = 1387d7936bcd1e7d827be94698cb649d91e7c06ba642b3c897e3c3548f58a4933667cb8ced380eb4df9d2127b5a1a101a9f8ddd1301935ae14a5dbbebf4f2bde
-Size (taisei-v1.3.tar.xz) = 104340220 bytes
+SHA1 (taisei-v1.3.1.tar.xz) = f9d46c54e34927f59ec4bea8db5b7d086bd2742d
+RMD160 (taisei-v1.3.1.tar.xz) = 8bbf66979c08c036422f2defa2ce49d798717494
+SHA512 (taisei-v1.3.1.tar.xz) = 5e6f364e67717091041a30103bf117bb5d7a6be76d3d9499b13e36fc190be8c2a0e7ceb582e1d106aa0c1acbb6e39b99a4873a0885af1ec2117ff6ff08e14e3c
+Size (taisei-v1.3.1.tar.xz) = 70763196 bytes
 SHA1 (patch-scripts_meson.build) = 2f646ae68b933cde3763ec16be01fb7bb722dbff
+SHA1 (patch-src_stages_stage2__events.c) = 89c67616a1603d37455e75fc2fb84a2b462a40bb
