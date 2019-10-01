@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2921 2019/10/01 13:24:35 triaxx Exp $
+# $NetBSD: Makefile,v 1.2922 2019/10/01 23:41:45 kamil Exp $
 #
 
 COMMENT=	Development utilities
@@ -2803,6 +2803,7 @@ SUBDIR+=	threadweaver
 SUBDIR+=	thrift
 SUBDIR+=	tig
 SUBDIR+=	tinycthread
+SUBDIR+=	tkcon
 SUBDIR+=	tkcvs
 SUBDIR+=	tkdiff
 SUBDIR+=	tla
