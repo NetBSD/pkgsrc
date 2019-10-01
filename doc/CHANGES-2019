@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4081 2019/10/01 13:56:11 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4082 2019/10/01 14:07:31 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6645,3 +6645,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated chat/znc to 1.7.5 [nia 2019-10-01]
 	Updated security/py-certbot to 0.38.0nb1 [wiz 2019-10-01]
 	Updated audio/musicpd to 0.21.15 [nia 2019-10-01]
+	Updated net/youtube-dl to 20190928 [leot 2019-10-01]
