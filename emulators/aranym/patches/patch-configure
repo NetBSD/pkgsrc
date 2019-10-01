@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2019/10/01 14:55:22 nia Exp $
+
+Shell portability.
+
+--- configure.orig	2019-04-14 14:11:32.000000000 +0000
++++ configure
+@@ -13005,7 +13005,7 @@ SDL_CFLAGS=
+ SDL_LIBS=
+ no_sdl=yes
+ no_sdl2=yes
+-if test "$OS_TYPE" == darwin -a "$WITH_FINK" = no; then
++if test "$OS_TYPE" = darwin -a "$WITH_FINK" = no; then
+ 
+     { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether compiler supports framework SDL" >&5
+ $as_echo_n "checking whether compiler supports framework SDL... " >&6; }
+@@ -13971,7 +13971,7 @@ fi
+ 
+ #
+ # SDL2 on macOS needs 10.6 or above
+-if test "$enable_sdl2" = yes -a "$OS_TYPE" == darwin; then
++if test "$enable_sdl2" = yes -a "$OS_TYPE" = darwin; then
+ 	export MACOSX_DEPLOYMENT_TARGET=10.6
+ fi
+ 
