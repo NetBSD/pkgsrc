@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Sonic Robo Blast 2
+Comment=Sonic the Hedgehog fan game using the Doom Legacy engine
+Icon=srb2
+Exec=srb2
+Categories=Game;ActionGame;
+Terminal=false
+StartupNotify=false
