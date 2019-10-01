@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4070 2019/10/01 12:36:39 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4071 2019/10/01 12:41:15 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6634,3 +6634,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added games/srb2 version 2.1.25 [nia 2019-10-01]
 	Added games/xonotic version 0.8.2 [nia 2019-10-01]
 	Added games/yquake2 version 7.41 [nia 2019-10-01]
+	Added lang/openjdk11 version 1.11.0.5.8 [tnn 2019-10-01]
