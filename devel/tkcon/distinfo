@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/10/01 23:40:40 kamil Exp $
+
+SHA1 (tkcon-2.7.2.tar.gz) = 2ea7443ffbd426468850f814980b27d259f9aecc
+RMD160 (tkcon-2.7.2.tar.gz) = c9b9e61357c8334eef53a20eb64d7712cf48aa06
+SHA512 (tkcon-2.7.2.tar.gz) = be5ba11094e681ec3845c692758ffb2cb7892cdb04bc304eea991cca14a2f9459154a0162fea06c793e64e05bdae12c72357f84f9a6f86e3e12e3df8f63e2b3d
+Size (tkcon-2.7.2.tar.gz) = 278407 bytes
