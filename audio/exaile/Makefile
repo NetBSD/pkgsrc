@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2019/09/07 14:21:54 nia Exp $
+# $NetBSD: Makefile,v 1.67 2019/10/01 19:37:50 nia Exp $
 
 DISTNAME=	exaile-4.0.0
 CATEGORIES=	audio
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=exaile/}
 GITHUB_PROJECT=	exaile
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://www.exaile.org/
 COMMENT=	Music Player for GTK+
 LICENSE=	gnu-gpl-v2 # or later

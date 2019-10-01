@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/10/01 14:23:22 nia Exp $
+# $NetBSD: Makefile,v 1.3 2019/10/01 19:37:50 nia Exp $
 
 DISTNAME=	dosbox-x-0.82.22
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=joncampbell123/}
 GITHUB_TAG=	dosbox-x-v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://dosbox-x.com/
 COMMENT=	DOSBox fork with enhancements
 LICENSE=	gnu-gpl-v2
