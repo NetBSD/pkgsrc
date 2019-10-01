@@ -1,0 +1,36 @@
+# $NetBSD: Makefile,v 1.1 2019/10/01 12:42:13 nia Exp $
+
+DISTNAME=	quodlibet-4.2.1
+CATEGORIES=	audio
+MASTER_SITES=	${MASTER_SITE_GITHUB:=quodlibet/}
+GITHUB_PROJECT=	quodlibet
+GITHUB_RELEASE=	release-${PKGVERSION_NOREV}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://quodlibet.readthedocs.io/
+COMMENT=	Ex Falso / Quod Libet - Music Library / Editor / Player
+LICENSE=	gnu-gpl-v2
+
+DEPENDS+=	${PYPKGPREFIX}-feedparser-[0-9]*:../../textproc/py-feedparser
+DEPENDS+=	${PYPKGPREFIX}-gstreamer1-[0-9]*:../../multimedia/py-gstreamer1
+DEPENDS+=	${PYPKGPREFIX}-mutagen-[0-9]*:../../audio/py-mutagen
+
+USE_TOOLS+=	msgfmt
+
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+
+# Needs --desktop
+_TOOLS_USE_PKGSRC.msgfmt=	yes
+
+# Requires Python 3.5 or higher
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/share/man/man1/* ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 || ${TRUE}
+
+.include "../../lang/python/distutils.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-good/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../mk/bsd.pkg.mk"
