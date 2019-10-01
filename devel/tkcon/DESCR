@@ -1,0 +1,6 @@
+tkcon is a replacement for the standard console that comes with Tk (on
+Windows/Mac, but also works on Unix).  tkcon provides many more features
+than the standard console and works on all platforms where Tcl/Tk is
+available.  It is meant primarily to aid one when working with the little
+details inside tcl and tk and to give Unix users the GUI console provided
+by default in the Mac and Windows Tk.
