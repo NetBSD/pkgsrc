@@ -1,0 +1,15 @@
+$NetBSD: patch-source_gmqcc_Makefile,v 1.1 2019/10/01 12:32:26 nia Exp $
+
+Allow pkgsrc to set CXXFLAGS.
+
+--- source/gmqcc/Makefile.orig	2017-04-01 13:28:34.000000000 +0000
++++ source/gmqcc/Makefile
+@@ -10,7 +10,7 @@ WINDOWS=1
+ endif
+ 
+ CXX ?= clang++
+-CXXFLAGS = \
++CXXFLAGS += \
+ 	-std=c++11 \
+ 	-Wall \
+ 	-Wextra \
