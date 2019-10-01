@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2019/08/01 13:42:54 nia Exp $
+# $NetBSD: Makefile,v 1.18 2019/10/01 21:48:26 nia Exp $
 
 DISTNAME=	aubio-0.4.9
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://aubio.org/pub/
 EXTRACT_SUFX=	.tar.bz2
@@ -28,6 +29,9 @@ PYTHON_FOR_BUILD_ONLY=	yes
 
 do-configure:
 	cd ${WRKSRC} && ${MAKE_ENV} ${MAKE} configure ${MAKE_FLAGS}
+
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/share/man ${DESTDIR}${PREFIX}/${PKGMANDIR} || ${TRUE}
 
 .include "options.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
