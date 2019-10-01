@@ -9,39 +9,38 @@ func (s *Suite) Test_LicenseChecker_Check(c *check.C) {
 
 	t.CreateFileLines("licenses/gnu-gpl-v2",
 		"The licenses for most software are designed to take away ...")
-	mkline := t.NewMkLine("Makefile", 7, "LICENSE=dummy")
 
-	licenseChecker := LicenseChecker{nil, mkline}
-	licenseChecker.Check("gpl-v2", opAssign)
+	test := func(licenseValue string, diagnostics ...string) {
+		mklines := t.NewMkLines("Makefile",
+			"LICENSE=\t"+licenseValue)
 
-	t.CheckOutputLines(
-		"WARN: Makefile:7: License file ~/licenses/gpl-v2 does not exist.")
+		mklines.ForEach(func(mkline *MkLine) {
+			(&LicenseChecker{mklines, mkline}).Check(mkline.Value(), opAssign)
+		})
 
-	licenseChecker.Check("no-profit shareware", opAssign)
+		t.CheckOutput(diagnostics)
+	}
 
-	t.CheckOutputLines(
-		"ERROR: Makefile:7: Parse error for license condition \"no-profit shareware\".")
+	test("gpl-v2",
+		"WARN: Makefile:1: License file ~/licenses/gpl-v2 does not exist.")
 
-	licenseChecker.Check("no-profit AND shareware", opAssign)
+	test("no-profit shareware",
+		"ERROR: Makefile:1: Parse error for license condition \"no-profit shareware\".")
 
-	t.CheckOutputLines(
-		"WARN: Makefile:7: License file ~/licenses/no-profit does not exist.",
-		"ERROR: Makefile:7: License \"no-profit\" must not be used.",
-		"WARN: Makefile:7: License file ~/licenses/shareware does not exist.",
-		"ERROR: Makefile:7: License \"shareware\" must not be used.")
+	test("no-profit AND shareware",
+		"WARN: Makefile:1: License file ~/licenses/no-profit does not exist.",
+		"ERROR: Makefile:1: License \"no-profit\" must not be used.",
+		"WARN: Makefile:1: License file ~/licenses/shareware does not exist.",
+		"ERROR: Makefile:1: License \"shareware\" must not be used.")
 
-	licenseChecker.Check("gnu-gpl-v2", opAssign)
+	test("gnu-gpl-v2",
+		nil...)
 
-	t.CheckOutputEmpty()
+	test("gnu-gpl-v2 AND gnu-gpl-v2 OR gnu-gpl-v2",
+		"ERROR: Makefile:1: AND and OR operators in license conditions can only be combined using parentheses.")
 
-	licenseChecker.Check("gnu-gpl-v2 AND gnu-gpl-v2 OR gnu-gpl-v2", opAssign)
-
-	t.CheckOutputLines(
-		"ERROR: Makefile:7: AND and OR operators in license conditions can only be combined using parentheses.")
-
-	licenseChecker.Check("(gnu-gpl-v2 OR gnu-gpl-v2) AND gnu-gpl-v2", opAssign)
-
-	t.CheckOutputEmpty()
+	test("(gnu-gpl-v2 OR gnu-gpl-v2) AND gnu-gpl-v2",
+		nil...)
 }
 
 func (s *Suite) Test_LicenseChecker_checkName__LICENSE_FILE(c *check.C) {

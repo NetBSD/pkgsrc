@@ -125,6 +125,7 @@ func Test(t *testing.T) { check.TestingT(t) }
 type Tester struct {
 	c        *check.C // Only usable during the test method itself
 	testName string
+	argv     []string // from the last invocation of Tester.SetUpCommandLine
 
 	stdout  bytes.Buffer
 	stderr  bytes.Buffer
@@ -149,7 +150,9 @@ func (t *Tester) SetUpCommandLine(args ...string) {
 	prevTracing := trace.Tracing
 	defer func() { trace.Tracing = prevTracing }()
 
-	exitcode := G.ParseCommandLine(append([]string{"pkglint"}, args...))
+	argv := append([]string{"pkglint"}, args...)
+	t.argv = argv
+	exitcode := G.ParseCommandLine(argv)
 	if exitcode != -1 && exitcode != 0 {
 		t.CheckOutputEmpty()
 		t.c.Fatalf("Cannot parse command line: %#v", args)
@@ -516,7 +519,7 @@ func (t *Tester) File(relativeFileName string) string {
 	if t.relCwd != "" {
 		return path.Clean(relativeFileName)
 	}
-	return path.Clean(t.tmpdir + "/" + relativeFileName)
+	return path.Clean(joinPath(t.tmpdir, relativeFileName))
 }
 
 // Copy copies a file inside the temporary directory.
@@ -1154,4 +1157,13 @@ func (t *Tester) CheckFileLinesDetab(relativeFileName string, lines ...string) {
 // and this in turn allows uninteresting test cases to be deleted during
 // development.
 func (t *Tester) Use(functions ...interface{}) {
+}
+
+func (t *Tester) Shquote(format string, rels ...string) string {
+	var subs []interface{}
+	for _, rel := range rels {
+		quoted := shquote(path.Join(t.tmpdir, rel))
+		subs = append(subs, strings.Replace(quoted, t.tmpdir, "~", -1))
+	}
+	return sprintf(format, subs...)
 }

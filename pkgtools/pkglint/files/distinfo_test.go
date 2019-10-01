@@ -177,7 +177,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkGlobalDistfileMismatch(c *check.C
 		"",
 		".include \"../mk/misc/category.mk\"")
 
-	t.Main("-r", "-Wall", "-Call", t.File("."))
+	t.Main("-r", "-Wall", "-Call", ".")
 
 	t.CheckOutputLines(
 		"ERROR: ~/category/package1/distinfo:3: "+
@@ -201,7 +201,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkGlobalDistfileMismatch(c *check.C
 
 		"WARN: ~/licenses/gnu-gpl-v2: This license seems to be unused.",
 		"8 errors and 1 warning found.",
-		"(Run \"pkglint -e\" to show explanations.)")
+		t.Shquote("(Run \"pkglint -e -r -Wall -Call %s\" to show explanations.)", "."))
 
 	// Ensure that hex.DecodeString does not waste memory here.
 	t.CheckEquals(len(G.InterPackage.hashes["SHA512:distfile-1.0.tar.gz"].hash), 8)

@@ -250,7 +250,7 @@ func (bt *BasicType) NeedsQ() bool {
 		BtDistSuffix,
 		BtEmulPlatform,
 		BtFileMode,
-		BtFileName,
+		BtFilename,
 		BtIdentifier,
 		BtInteger,
 		BtMachineGnuPlatform,
@@ -258,10 +258,10 @@ func (bt *BasicType) NeedsQ() bool {
 		BtOption,
 		BtPathname,
 		BtPerl5Packlist,
-		BtPkgName,
+		BtPkgname,
 		BtPkgOptionsVar,
-		BtPkgPath,
-		BtPkgRevision,
+		BtPkgpath,
+		BtPkgrevision,
 		BtPrefixPathname,
 		BtPythonDependency,
 		BtRPkgName,
@@ -314,8 +314,8 @@ var (
 	BtDistSuffix             = &BasicType{"DistSuffix", (*VartypeCheck).DistSuffix}
 	BtEmulPlatform           = &BasicType{"EmulPlatform", (*VartypeCheck).EmulPlatform}
 	BtFetchURL               = &BasicType{"FetchURL", (*VartypeCheck).FetchURL}
-	BtFileName               = &BasicType{"Filename", (*VartypeCheck).Filename}
-	BtFileMask               = &BasicType{"FileMask", (*VartypeCheck).FileMask}
+	BtFilename               = &BasicType{"Filename", (*VartypeCheck).Filename}
+	BtFilePattern            = &BasicType{"FilePattern", (*VartypeCheck).FilePattern}
 	BtFileMode               = &BasicType{"FileMode", (*VartypeCheck).FileMode}
 	BtGccReqd                = &BasicType{"GccReqd", (*VartypeCheck).GccReqd}
 	BtHomepage               = &BasicType{"Homepage", (*VartypeCheck).Homepage}
@@ -330,14 +330,14 @@ var (
 	BtMessage                = &BasicType{"Message", (*VartypeCheck).Message}
 	BtOption                 = &BasicType{"Option", (*VartypeCheck).Option}
 	BtPathlist               = &BasicType{"Pathlist", (*VartypeCheck).Pathlist}
-	BtPathmask               = &BasicType{"PathMask", (*VartypeCheck).PathMask}
+	BtPathPattern            = &BasicType{"PathPattern", (*VartypeCheck).PathPattern}
 	BtPathname               = &BasicType{"Pathname", (*VartypeCheck).Pathname}
 	BtPerl5Packlist          = &BasicType{"Perl5Packlist", (*VartypeCheck).Perl5Packlist}
 	BtPerms                  = &BasicType{"Perms", (*VartypeCheck).Perms}
-	BtPkgName                = &BasicType{"Pkgname", (*VartypeCheck).Pkgname}
-	BtPkgPath                = &BasicType{"PkgPath", (*VartypeCheck).PkgPath}
+	BtPkgname                = &BasicType{"Pkgname", (*VartypeCheck).Pkgname}
+	BtPkgpath                = &BasicType{"Pkgpath", (*VartypeCheck).Pkgpath}
 	BtPkgOptionsVar          = &BasicType{"PkgOptionsVar", (*VartypeCheck).PkgOptionsVar}
-	BtPkgRevision            = &BasicType{"PkgRevision", (*VartypeCheck).PkgRevision}
+	BtPkgrevision            = &BasicType{"Pkgrevision", (*VartypeCheck).Pkgrevision}
 	BtPrefixPathname         = &BasicType{"PrefixPathname", (*VartypeCheck).PrefixPathname}
 	BtPythonDependency       = &BasicType{"PythonDependency", (*VartypeCheck).PythonDependency}
 	BtRPkgName               = &BasicType{"RPkgName", (*VartypeCheck).RPkgName}
