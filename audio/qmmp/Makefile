@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/10/01 12:43:04 nia Exp $
+# $NetBSD: Makefile,v 1.2 2019/10/01 15:17:23 nia Exp $
 
 DISTNAME=	qmmp-1.3.4
 CATEGORIES=	audio
@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://qmmp.ylsoftware.com/
-COMMENT=	Audio player similar to Winamp using Qt
+COMMENT=	Audio player similar to Winamp/XMMS using Qt
 LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
