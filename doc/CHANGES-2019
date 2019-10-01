@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4090 2019/10/01 15:20:56 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.4091 2019/10/01 15:23:59 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6654,3 +6654,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/gource to 0.49 [nia 2019-10-01]
 	Updated mail/thunderbird to 68.1.1 [ryoon 2019-10-01]
 	Updated mail/thunderbird-l10n to 68.1.1 [ryoon 2019-10-01]
+	Updated security/putty to 0.73 [ryoon 2019-10-01]
