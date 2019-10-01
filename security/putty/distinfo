@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.26 2019/07/25 12:50:06 ryoon Exp $
+$NetBSD: distinfo,v 1.27 2019/10/01 15:22:41 ryoon Exp $
 
-SHA1 (putty-0.72.tar.gz) = 9940e226e5b9f2da9b15109c0deabb168c92d850
-RMD160 (putty-0.72.tar.gz) = 4c3432e935a8ebc31b5c3f4770be542877f51942
-SHA512 (putty-0.72.tar.gz) = a963985e55dcd589c08ef51085808a6364629edd8ce6708ebdf516e0339a41b7f186f91d7d7f26b1fec03d60767f365246e6fa06e9ef042898355c2f90f355dd
-Size (putty-0.72.tar.gz) = 2449516 bytes
-SHA1 (patch-ldisc.c) = 9a12a0b96bdf57ae219651b38d695fa5440da354
+SHA1 (putty-0.73.tar.gz) = 17daebb82e476adfd578f6934c28f4d2c209b7d8
+RMD160 (putty-0.73.tar.gz) = 9e7c0084464963581bc47ce1b87e25ba51d27743
+SHA512 (putty-0.73.tar.gz) = 4ada4b8c6d68be44afede2676bc661fedfd1ea0b574b8232ad9aaa6f3a48baa9f4f0ded2955b3f2677a14db85a508f53c965cb00fcd7538a1ed9844031f0c5e5
+Size (putty-0.73.tar.gz) = 2459115 bytes
+SHA1 (patch-ldisc.c) = cf31a65f920a3ea9b4a70602e4b2fd4d5df8d3e8
 SHA1 (patch-misc.c) = fa1c2db8eb20ceaadb4b57b6aefa57f22d2ae26f
 SHA1 (patch-terminal.c) = 9e57f754bb2071c8c6b6a92ae63772eb10790121
-SHA1 (patch-timing.c) = 9dd79fde390878960e97c456628bbd5dcbcd07f9
+SHA1 (patch-timing.c) = a6a492fc8b22c58e2973c854bffa4c8bf71eb6a7
 SHA1 (patch-unix_Makefile.gtk) = 7fe7859ad91afb57ef3ba31194ffd2ef784f638d
 SHA1 (patch-unix_uxnet.c) = 2d1c2939721993fe5616c2fe3f1935c03a31bb35
 SHA1 (patch-unix_uxpgnt.c) = b5625b33b940ea2870d3e91d38e2303a80d6887b
-SHA1 (patch-unix_uxucs.c) = a2a5021b515c3bade1126ed062bdc1eece1ca0f9
+SHA1 (patch-unix_uxucs.c) = 47791025e5375e9e8649ce24bc9efff3c7d29ab4
