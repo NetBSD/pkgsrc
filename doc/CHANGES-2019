@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4065 2019/10/01 12:06:48 maya Exp $
+$NetBSD: CHANGES-2019,v 1.4066 2019/10/01 12:20:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -5926,6 +5926,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/py-grpcio to 1.23.0 [adam 2019-08-25]
 	Updated net/py-grpcio-tools to 1.23.0 [adam 2019-08-25]
 	Updated pkgtools/pkglint to 5.7.22 [rillig 2019-08-25]
+	Added lang/mono6 version 6.0.0.313 [maya 2019-08-25]
 	Updated net/mrtg to 2.17.7nb2 [jnemeth 2019-08-26]
 	Updated textproc/py-xlsxwriter to 1.2.0 [adam 2019-08-26]
 	Updated lang/py-spark-parser to 1.8.9 [adam 2019-08-26]
@@ -6629,4 +6630,3 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-pylint to 2.4.2 [adam 2019-10-01]
 	Updated multimedia/x265 to 3.2 [adam 2019-10-01]
 	Updated net/wireshark to 3.0.5 [adam 2019-10-01]
-	Added lang/mono6 version 6.0.0.313 [maya 2019-10-01]
