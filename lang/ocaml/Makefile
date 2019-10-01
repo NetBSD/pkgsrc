@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2019/08/27 05:37:38 jaapb Exp $
+# $NetBSD: Makefile,v 1.129 2019/10/01 09:07:33 maya Exp $
 
 .include "Makefile.common"
 
@@ -38,7 +38,7 @@ PLIST.ocaml-stub=	yes
 BUILD_TARGET+=		opt opt.opt
 PLIST.ocaml-opt=	yes
 .  if empty(MACHINE_PLATFORM:MDarwin-*-powerpc) && \
-      empty(MACHINE_PLATFORM:MSunOS-*-i386) && \
+      empty(MACHINE_PLATFORM:MSunOS-*-*) && \
       (${MACHINE_ARCH} != "aarch64")
 PLIST.ocaml-prof=	yes
 .  endif
@@ -52,8 +52,7 @@ PLIST.ocaml-prof=	yes
       !empty(MACHINE_PLATFORM:MFreeBSD-*-*) || \
       !empty(MACHINE_PLATFORM:MDragonFly-*-*) || \
       (!empty(MACHINE_PLATFORM:MNetBSD-*-*) && empty(MACHINE_PLATFORM:MNetBSD-*-powerpc)) || \
-      !empty(MACHINE_PLATFORM:MDarwin-*-*) || \
-      !empty(MACHINE_PLATFORM:MSunOS-*-*)
+      !empty(MACHINE_PLATFORM:MDarwin-*-*)
 PLIST.ocaml-nat=	yes
 .  endif
 .endif
