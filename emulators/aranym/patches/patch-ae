@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.1 2010/07/08 11:28:05 obache Exp $
+$NetBSD: patch-ae,v 1.2 2019/10/01 14:54:59 nia Exp $
+
+Shell portability.
 
 --- src/Unix/darwin/aratapif.sh.orig	2008-02-05 21:37:06.000000000 +0000
 +++ src/Unix/darwin/aratapif.sh
