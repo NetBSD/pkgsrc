@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2019/10/01 12:32:26 nia Exp $
+bin/xonotic-dedicated
+bin/xonotic-glx
+bin/xonotic-sdl
+share/applications/xonotic.desktop
+share/icons/hicolor/128x128/apps/xonotic.png
+share/icons/hicolor/16x16/apps/xonotic.png
+share/icons/hicolor/24x24/apps/xonotic.png
+share/icons/hicolor/256x256/apps/xonotic.png
+share/icons/hicolor/32x32/apps/xonotic.png
+share/icons/hicolor/512x512/apps/xonotic.png
+share/icons/hicolor/64x64/apps/xonotic.png
+share/xonotic/data/font-unifont-20170401.pk3
+share/xonotic/data/font-xolonium-20170401.pk3
+share/xonotic/data/xonotic-20170401-data.pk3
+share/xonotic/data/xonotic-20170401-maps.pk3
+share/xonotic/data/xonotic-20170401-music.pk3
+share/xonotic/data/xonotic-20170401-nexcompat.pk3
+share/xonotic/xonotic-linux-dedicated.sh
+share/xonotic/xonotic-linux-glx.sh
+share/xonotic/xonotic-linux-sdl.sh
+share/xonotic/xonotic-linux32-dedicated
+share/xonotic/xonotic-linux32-glx
+share/xonotic/xonotic-linux32-sdl
