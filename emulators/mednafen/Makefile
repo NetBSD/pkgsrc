@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2019/04/30 21:54:41 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2019/10/01 19:37:50 nia Exp $
 
 DISTNAME=	mednafen-1.22.2
 CATEGORIES=	emulators
 MASTER_SITES=	https://mednafen.github.io/releases/files/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://mednafen.github.io/
 COMMENT=	Portable multi-system emulator
 LICENSE=	gnu-gpl-v2
