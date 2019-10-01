@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2019/04/03 00:32:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.105 2019/10/01 19:17:08 rillig Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
@@ -18,6 +18,7 @@ WRKSRC=			${WRKDIR}/tcl${TCL_VERSION}
 USE_GCC_RUNTIME=	yes
 
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # because of the nested itcl4.1.2
 CONFIGURE_DIRS=		unix
 BUILD_DIRS=		${CONFIGURE_DIRS}
 INSTALL_TARGET=		install
