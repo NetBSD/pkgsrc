@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Yamagi Quake II
+Comment=Alternative client for id Software's Quake II
+Icon=quake2
+Exec=quake2
+Categories=Game;ActionGame;
+Terminal=false
+StartupNotify=false
