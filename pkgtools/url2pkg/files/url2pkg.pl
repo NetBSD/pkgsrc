@@ -1,5 +1,5 @@
 #! @PERL5@
-# $NetBSD: url2pkg.pl,v 1.74 2019/10/01 18:43:46 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.75 2019/10/01 19:41:23 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -457,7 +457,7 @@ sub adjust_perl_module_Build_PL() {
 sub adjust_perl_module_Makefile_PL() {
 
 	# To avoid fix_up_makefile error for p5-HTML-Quoted, generate Makefile first.
-	system("cd '$abs_wrksrc' && perl -I. Makefile.PL < /dev/null") == 0 or do {};
+	system("cd '$abs_wrksrc' && perl -I. Makefile.PL < /dev/null 1>&0 2>&0") == 0 or do {};
 
 	read_dependencies("cd '$abs_wrksrc' && perl -I$libdir -I. Makefile.PL", {}, "");
 }
@@ -498,6 +498,8 @@ sub adjust_perl_module($) {
 # Example packages:
 #
 # devel/py-ZopeComponent (dependencies, test dependencies)
+# devel/py-gflags (uses distutils.core instead of setuptools; BSD license)
+# devel/py-gcovr (uses setuptools; BSD license)
 sub adjust_python_module() {
 
 	return unless -f "$abs_wrksrc/setup.py";
@@ -804,6 +806,16 @@ sub adjust_package_from_extracted_distfiles($) {
 	adjust_po();
 	adjust_use_languages();
 
+	generate_adjusted_Makefile_lines($url)->write_to("Makefile");
+
+	if ($regenerate_distinfo) {
+		make("distinfo");
+	}
+}
+
+sub generate_adjusted_Makefile_lines($) {
+	my ($url) = @_;
+
 	my $marker_index = $makefile_lines->index(qr"^# url2pkg-marker");
 	if ($marker_index == -1) {
 		die("$0: ERROR: didn't find the url2pkg marker in the Makefile.\n");
@@ -848,32 +860,28 @@ sub adjust_package_from_extracted_distfiles($) {
 		$lines->set($varname, $update_vars{$varname});
 	}
 
-	$lines->write_to("Makefile");
-
-	if ($regenerate_distinfo) {
-		make("distinfo");
-	}
+	return $lines;
 }
 
 sub main() {
-	my $url;
-
 	if (!-f "../../mk/bsd.pkg.mk") {
 		die("ERROR: $0 must be run from a package directory (.../pkgsrc/category/package).\n");
 	}
 
-	my @extract_cookie = <w*/.extract_done>;
-	if (scalar(@extract_cookie) == 0) {
-		if (scalar(@ARGV) == 0) {
-			print("URL: ");
-			if (!defined($url = <STDIN>)) {
-				print("\n");
-				exit(0);
-			}
-			chomp($url);
-		} else {
-			$url = shift(@ARGV);
+	my $url;
+	if (scalar(@ARGV) == 0) {
+		print("URL: ");
+		if (!defined($url = <STDIN>)) {
+			print("\n");
+			exit(0);
 		}
+		chomp($url);
+	} else {
+		$url = shift(@ARGV);
+	}
+
+	my @extract_cookie = <w*/.extract_done>;
+	if (scalar(@extract_cookie) == 0 || !-f "Makefile") {
 
 		generate_initial_package($url);
 	} else {

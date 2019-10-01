@@ -75,14 +75,14 @@ sub url2pkg_find_category($) {
 	return "";
 }
 
-sub url2pkg_write_dependency($$) {
-	my ($dep, $ver) = @_;
+sub url2pkg_write_dependency($$$) {
+	my ($type, $dep, $ver) = @_;
 
 	my $pkgbase = "p5-$dep" =~ s/::/-/gr;
 	my $category = url2pkg_find_category($pkgbase);
 
 	if ($category ne "") {
-		printf("DEPENDS\t%s>=%s:../../%s/%s\n", $pkgbase, $ver, $category, $pkgbase);
+		printf("%s\t%s>=%s:../../%s/%s\n", $type, $pkgbase, $ver, $category, $pkgbase);
 		return;
 	}
 
@@ -90,15 +90,35 @@ sub url2pkg_write_dependency($$) {
 	# that it is a built-in module and no dependency declaration is needed.
 	return if eval("use $dep $ver; 1;");
 
-	die("$0: ERROR: No pkgsrc package found for dependency $dep>=$ver.\n$@\n");
+	printf("%s\t%s>=%s\n", $type, $pkgbase, $ver);
+}
+
+sub url2pkg_write_var($$) {
+	my ($varname, $value) = @_;
+	return unless defined($value) && $value ne "";
+	printf("var\t%s\t%s\n", $varname, $value);
+}
+
+sub url2pkg_write_depends($$) {
+	my ($type, $deps) = @_;
+
+	return unless $deps;
+	foreach my $dep (sort(keys(%$deps))) {
+		url2pkg_write_dependency($type, $dep, $deps->{$dep});
+	}
 }
 
 sub WriteMakefile(%) {
 	my (%options) = @_;
 
-	my $deps = $options{"PREREQ_PM"} || {};
-	foreach my $dep (sort(keys(%$deps))) {
-		url2pkg_write_dependency($dep, $deps->{$dep});
+	url2pkg_write_depends("DEPENDS", $options{"PREREQ_PM"});
+	url2pkg_write_depends("TEST_DEPENDS", $options{"TEST_DEPENDS"});
+
+	my $license = $options{"LICENSE"} || "";
+	if ($license eq "perl") {
+		url2pkg_write_var("LICENSE", "\${PERL5_LICENSE}");
+	} elsif ($license ne "") {
+		url2pkg_write_var("#LICENSE", "# TODO: $license (from Build.PL)")
 	}
 }
 
