@@ -6,6 +6,7 @@ import (
 	"netbsd.org/pkglint/histogram"
 	"netbsd.org/pkglint/textproc"
 	"path"
+	"strings"
 )
 
 type Logger struct {
@@ -118,7 +119,7 @@ func (l *Logger) Explain(explanation ...string) {
 	l.out.WriteLine("")
 }
 
-func (l *Logger) ShowSummary() {
+func (l *Logger) ShowSummary(args []string) {
 	if l.Opts.Quiet || l.Opts.Autofix {
 		return
 	}
@@ -147,14 +148,22 @@ func (l *Logger) ShowSummary() {
 		l.out.WriteLine("Looks fine.")
 	}
 
+	commandLine := func(arg string) string {
+		argv := append([]string{args[0], arg}, args[1:]...)
+		for i := range argv {
+			argv[i] = shquote(argv[i])
+		}
+		return strings.Join(argv, " ")
+	}
+
 	if l.explanationsAvailable && !l.Opts.Explain {
-		l.out.WriteLine("(Run \"pkglint -e\" to show explanations.)")
+		l.out.WriteLine(sprintf("(Run \"%s\" to show explanations.)", commandLine("-e")))
 	}
 	if l.autofixAvailable {
 		if !l.Opts.ShowAutofix {
-			l.out.WriteLine("(Run \"pkglint -fs\" to show what can be fixed automatically.)")
+			l.out.WriteLine(sprintf("(Run \"%s\" to show what can be fixed automatically.)", commandLine("-fs")))
 		}
-		l.out.WriteLine("(Run \"pkglint -F\" to automatically fix some issues.)")
+		l.out.WriteLine(sprintf("(Run \"%s\" to automatically fix some issues.)", commandLine("-F")))
 	}
 }
 

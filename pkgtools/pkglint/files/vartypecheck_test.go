@@ -6,9 +6,9 @@ import (
 
 func (s *Suite) Test_VartypeCheck_AwkCommand(c *check.C) {
 	t := s.Init(c)
-	vt := NewVartypeCheckTester(t, (*VartypeCheck).AwkCommand)
+	vt := NewVartypeCheckTester(t, BtAwkCommand)
 
-	vt.Varname("PLIST_AWK")
+	vt.Varname("PRINT_PLIST_AWK")
 	vt.Op(opAssignAppend)
 	vt.Values(
 		"{print $0}",
@@ -30,25 +30,65 @@ func (s *Suite) Test_VartypeCheck_AwkCommand(c *check.C) {
 
 func (s *Suite) Test_VartypeCheck_BasicRegularExpression(c *check.C) {
 	t := s.Init(c)
-	vt := NewVartypeCheckTester(t, (*VartypeCheck).BasicRegularExpression)
+	vt := NewVartypeCheckTester(t, BtBasicRegularExpression)
 
-	vt.Varname("REPLACE_FILES.pl")
+	vt.Varname("CHECK_FILES_SKIP")
 	vt.Values(
 		".*\\.pl$",
-		".*\\.pl$$")
-	t.DisableTracing()
-	vt.Values(
-		".*\\.pl$",
-		".*\\.pl$$")
+		".*\\.pl$$",
+		"\u1E9E",
+		"\\(capture\\)\\1",
+		"\\+")
 
 	vt.Output(
 		"WARN: filename.mk:1: Internal pkglint error in MkLine.Tokenize at \"$\".",
-		"WARN: filename.mk:3: Internal pkglint error in MkLine.Tokenize at \"$\".")
+		"WARN: filename.mk:5: In a basic regular expression, a backslash followed by \"+\" is undefined.")
 
+	// Check for special characters that appear outside of character classes.
+	vt.Values(
+		"\u0007",
+		" !\"\"\\#$$%&''()*+,-./09:;<=>?",
+		"@AZ[\\\\]^_``az{|}~",
+		"\t")
+
+	vt.OutputEmpty()
+
+	vt.Values(
+		"?",
+		"\\?",
+		"\\\\?",
+		"\\\\\\?")
+
+	vt.Output(
+		"WARN: filename.mk:22: In a basic regular expression, a backslash followed by \"?\" is undefined.",
+		"WARN: filename.mk:24: In a basic regular expression, a backslash followed by \"?\" is undefined.")
+
+	vt.Values(
+		"package-[0-9][0-9.]*",
+		"unclosed-[",
+		// TODO: Warn about the unclosed character class.
+		"backslash-[\\")
+
+	vt.OutputEmpty()
+
+	vt.Values(
+		// TODO: Warn about incomplete regular expression escape
+		"\\",
+		"\\\\")
+
+	vt.OutputEmpty()
+
+	vt.Values(
+		"${VAR}*",
+		"\\?${VAR}\\/")
+
+	vt.Output(
+		"WARN: filename.mk:52: In a basic regular expression, a backslash followed by \"?\" is undefined.",
+		"WARN: filename.mk:52: In a basic regular expression, a backslash followed by \"/\" is undefined.")
 }
 
 func (s *Suite) Test_VartypeCheck_BuildlinkDepmethod(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).BuildlinkDepmethod)
+	vt := NewVartypeCheckTester(s.Init(c), BtBuildlinkDepmethod)
 
 	vt.Varname("BUILDLINK_DEPMETHOD.libc")
 	vt.Op(opAssignDefault)
@@ -63,7 +103,7 @@ func (s *Suite) Test_VartypeCheck_BuildlinkDepmethod(c *check.C) {
 
 func (s *Suite) Test_VartypeCheck_Category(c *check.C) {
 	t := s.Init(c)
-	vt := NewVartypeCheckTester(t, (*VartypeCheck).Category)
+	vt := NewVartypeCheckTester(t, BtCategory)
 
 	t.CreateFileLines("filesyscategory/Makefile",
 		"# empty")
@@ -83,7 +123,7 @@ func (s *Suite) Test_VartypeCheck_Category(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_CFlag(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).CFlag)
+	vt := NewVartypeCheckTester(s.Init(c), BtCFlag)
 
 	vt.tester.SetUpTool("pkg-config", "", AtRunTime)
 
@@ -131,7 +171,7 @@ func (s *Suite) Test_VartypeCheck_CFlag(c *check.C) {
 
 func (s *Suite) Test_VartypeCheck_Comment(c *check.C) {
 	t := s.Init(c)
-	vt := NewVartypeCheckTester(t, (*VartypeCheck).Comment)
+	vt := NewVartypeCheckTester(t, BtComment)
 
 	G.Pkg = NewPackage(t.File("category/converter"))
 	G.Pkg.EffectivePkgbase = "converter"
@@ -169,7 +209,7 @@ func (s *Suite) Test_VartypeCheck_Comment(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_ConfFiles(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).ConfFiles)
+	vt := NewVartypeCheckTester(s.Init(c), BtConfFiles)
 
 	vt.Varname("CONF_FILES")
 	vt.Op(opAssignAppend)
@@ -188,7 +228,7 @@ func (s *Suite) Test_VartypeCheck_ConfFiles(c *check.C) {
 
 // See Test_MkParser_Dependency.
 func (s *Suite) Test_VartypeCheck_Dependency(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).Dependency)
+	vt := NewVartypeCheckTester(s.Init(c), BtDependency)
 
 	vt.Varname("CONFLICTS")
 	vt.Op(opAssignAppend)
@@ -298,7 +338,7 @@ func (s *Suite) Test_VartypeCheck_Dependency(c *check.C) {
 
 func (s *Suite) Test_VartypeCheck_DependencyWithPath(c *check.C) {
 	t := s.Init(c)
-	vt := NewVartypeCheckTester(t, (*VartypeCheck).DependencyWithPath)
+	vt := NewVartypeCheckTester(t, BtDependencyWithPath)
 
 	t.CreateFileLines("category/package/Makefile")
 	t.CreateFileLines("databases/py-sqlite3/Makefile")
@@ -367,7 +407,7 @@ func (s *Suite) Test_VartypeCheck_DependencyWithPath(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_DistSuffix(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).DistSuffix)
+	vt := NewVartypeCheckTester(s.Init(c), BtDistSuffix)
 
 	vt.Varname("EXTRACT_SUFX")
 	vt.Values(
@@ -380,7 +420,7 @@ func (s *Suite) Test_VartypeCheck_DistSuffix(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_EmulPlatform(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).EmulPlatform)
+	vt := NewVartypeCheckTester(s.Init(c), BtEmulPlatform)
 
 	vt.Varname("EMUL_PLATFORM")
 	vt.Values(
@@ -411,7 +451,9 @@ func (s *Suite) Test_VartypeCheck_EmulPlatform(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_Enum(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), enum("jdk1 jdk2 jdk4").checker)
+	basicType := enum("jdk1 jdk2 jdk4")
+	G.Pkgsrc.vartypes.Define("JDK", basicType, UserSettable)
+	vt := NewVartypeCheckTester(s.Init(c), basicType)
 
 	vt.Varname("JDK")
 	vt.Op(opUseMatch)
@@ -471,7 +513,7 @@ func (s *Suite) Test_VartypeCheck_FetchURL(c *check.C) {
 		"MASTER_SITE_OWN=\thttps://example.org/")
 	t.FinishSetUp()
 
-	vt := NewVartypeCheckTester(t, (*VartypeCheck).FetchURL)
+	vt := NewVartypeCheckTester(t, BtFetchURL)
 
 	t.SetUpMasterSite("MASTER_SITE_GNU", "http://ftp.gnu.org/pub/gnu/")
 	t.SetUpMasterSite("MASTER_SITE_GITHUB", "https://github.com/")
@@ -501,7 +543,9 @@ func (s *Suite) Test_VartypeCheck_FetchURL(c *check.C) {
 	vt.Values(
 		"https://example.org/download.cgi?filename=filename&sha1=12341234")
 
-	vt.OutputEmpty()
+	vt.Output(
+		"WARN: filename.mk:11: The fetch URL \"https://example.org/download.cgi" +
+			"?filename=filename&sha1=12341234\" should end with a slash.")
 
 	vt.Values(
 		"http://example.org/distfiles/",
@@ -509,7 +553,12 @@ func (s *Suite) Test_VartypeCheck_FetchURL(c *check.C) {
 		"http://example.org/download?filename=<distfile>;version=<version>")
 
 	vt.Output(
-		"WARN: filename.mk:23: \"http://example.org/download?filename=<distfile>;version=<version>\" is not a valid URL.")
+		"WARN: filename.mk:22: The fetch URL \"http://example.org/download"+
+			"?filename=distfile;version=1.0\" should end with a slash.",
+		"WARN: filename.mk:23: \"http://example.org/download"+
+			"?filename=<distfile>;version=<version>\" is not a valid URL.",
+		"WARN: filename.mk:23: The fetch URL \"http://example.org/download"+
+			"?filename=<distfile>;version=<version>\" should end with a slash.")
 
 	vt.Values(
 		"${MASTER_SITE_GITHUB:S,^,-,:=project/archive/${DISTFILE}}")
@@ -523,6 +572,7 @@ func (s *Suite) Test_VartypeCheck_FetchURL(c *check.C) {
 
 	// As of June 2019, the :S modifier is not analyzed since it is unusual.
 	vt.Values(
+		"${MASTER_SITE_GNU:S,$,subdir,}",
 		"${MASTER_SITE_GNU:S,$,subdir/,}")
 	vt.OutputEmpty()
 
@@ -532,12 +582,35 @@ func (s *Suite) Test_VartypeCheck_FetchURL(c *check.C) {
 		"WARN: filename.mk:51: Please use ${MASTER_SITE_GITHUB:=transmission/} " +
 			"instead of \"https://github.com/transmission/\" " +
 			"and run \"" + confMake + " help topic=github\" for further instructions.")
+
+	vt.Values(
+		"-https://example.org/distfile.tar.gz",
+		"-http://ftp.gnu.org/pub/gnu/bash-5.0.tar.gz",
+		"-http://ftp.gnu.org/pub/gnu/bash/bash-5.0.tar.gz")
+
+	vt.Output(
+		"WARN: filename.mk:62: Please use ${MASTER_SITE_GNU:S,^,-,:=bash-5.0.tar.gz} "+
+			"instead of \"-http://ftp.gnu.org/pub/gnu/bash-5.0.tar.gz\".",
+		"WARN: filename.mk:63: Please use ${MASTER_SITE_GNU:S,^,-,:=bash/bash-5.0.tar.gz} "+
+			"instead of \"-http://ftp.gnu.org/pub/gnu/bash/bash-5.0.tar.gz\".")
+
+	vt.Values(
+		"https://example.org/pub",
+		"https://example.org/$@", // Doesn't make sense at all.
+		"https://example.org/?f=",
+		"https://example.org/download:",
+		"https://example.org/download?")
+
+	vt.Output(
+		"WARN: filename.mk:71: The fetch URL \"https://example.org/pub\" should end with a slash.",
+		"WARN: filename.mk:72: \"https://example.org/$@\" is not a valid URL.",
+		"WARN: filename.mk:75: The fetch URL \"https://example.org/download?\" should end with a slash.")
 }
 
 func (s *Suite) Test_VartypeCheck_FetchURL__without_package(c *check.C) {
 	t := s.Init(c)
 
-	vt := NewVartypeCheckTester(t, (*VartypeCheck).FetchURL)
+	vt := NewVartypeCheckTester(t, BtFetchURL)
 
 	vt.Varname("MASTER_SITES")
 	vt.Values(
@@ -549,9 +622,9 @@ func (s *Suite) Test_VartypeCheck_FetchURL__without_package(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_Filename(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).Filename)
+	vt := NewVartypeCheckTester(s.Init(c), BtFilename)
 
-	vt.Varname("FNAME")
+	vt.Varname("JAVA_NAME")
 	vt.Values(
 		"Filename with spaces.docx",
 		"OS/2-manual.txt")
@@ -571,41 +644,41 @@ func (s *Suite) Test_VartypeCheck_Filename(c *check.C) {
 			"contains the invalid characters \"  \".")
 }
 
-func (s *Suite) Test_VartypeCheck_FileMask(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).FileMask)
+func (s *Suite) Test_VartypeCheck_FilePattern(c *check.C) {
+	vt := NewVartypeCheckTester(s.Init(c), BtFilePattern)
 
-	vt.Varname("FNAME")
+	vt.Varname("PKGWILDCARD")
 	vt.Values(
 		"filename.txt",
 		"*.txt",
 		"[12345].txt",
 		"[0-9].txt",
 		"???.txt",
-		"FileMask with spaces.docx",
+		"FilePattern with spaces.docx",
 		"OS/2-manual.txt")
 
 	vt.Output(
-		"WARN: filename.mk:6: The filename pattern \"FileMask with spaces.docx\" "+
+		"WARN: filename.mk:6: The filename pattern \"FilePattern with spaces.docx\" "+
 			"contains the invalid characters \"  \".",
 		"WARN: filename.mk:7: The filename pattern \"OS/2-manual.txt\" "+
 			"contains the invalid character \"/\".")
 
 	vt.Op(opUseMatch)
 	vt.Values(
-		"FileMask with spaces.docx")
+		"FilePattern with spaces.docx")
 
 	// There's no guarantee that a filename only contains [A-Za-z0-9.].
 	// Therefore it might be necessary to allow all characters here.
 	// TODO: Investigate whether this restriction is useful in practice.
 	vt.Output(
-		"WARN: filename.mk:11: The filename pattern \"FileMask with spaces.docx\" " +
+		"WARN: filename.mk:11: The filename pattern \"FilePattern with spaces.docx\" " +
 			"contains the invalid characters \"  \".")
 }
 
 func (s *Suite) Test_VartypeCheck_FileMode(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).FileMode)
+	vt := NewVartypeCheckTester(s.Init(c), BtFileMode)
 
-	vt.Varname("HIGHSCORE_PERMS")
+	vt.Varname("GAMEMODE")
 	vt.Values(
 		"u+rwx",
 		"0600",
@@ -630,7 +703,7 @@ func (s *Suite) Test_VartypeCheck_FileMode(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_GccReqd(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).GccReqd)
+	vt := NewVartypeCheckTester(s.Init(c), BtGccReqd)
 
 	vt.Varname("GCC_REQD")
 	vt.Op(opAssignAppend)
@@ -649,7 +722,7 @@ func (s *Suite) Test_VartypeCheck_GccReqd(c *check.C) {
 
 func (s *Suite) Test_VartypeCheck_Homepage(c *check.C) {
 	t := s.Init(c)
-	vt := NewVartypeCheckTester(t, (*VartypeCheck).Homepage)
+	vt := NewVartypeCheckTester(t, BtHomepage)
 
 	vt.Varname("HOMEPAGE")
 	vt.Values(
@@ -712,7 +785,7 @@ func (s *Suite) Test_VartypeCheck_Homepage(c *check.C) {
 
 func (s *Suite) Test_VartypeCheck_Identifier(c *check.C) {
 	t := s.Init(c)
-	vt := NewVartypeCheckTester(t, (*VartypeCheck).Identifier)
+	vt := NewVartypeCheckTester(t, BtIdentifier)
 
 	vt.Varname("MYSQL_CHARSET")
 	vt.Values(
@@ -740,9 +813,9 @@ func (s *Suite) Test_VartypeCheck_Identifier(c *check.C) {
 
 func (s *Suite) Test_VartypeCheck_Integer(c *check.C) {
 	t := s.Init(c)
-	vt := NewVartypeCheckTester(t, (*VartypeCheck).Integer)
+	vt := NewVartypeCheckTester(t, BtInteger)
 
-	vt.Varname("NUMBER")
+	vt.Varname("MAKE_JOBS")
 	vt.Values(
 		"${OTHER_VAR}",
 		"123",
@@ -755,7 +828,7 @@ func (s *Suite) Test_VartypeCheck_Integer(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_LdFlag(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).LdFlag)
+	vt := NewVartypeCheckTester(s.Init(c), BtLdFlag)
 
 	vt.tester.SetUpTool("pkg-config", "", AtRunTime)
 
@@ -812,7 +885,7 @@ func (s *Suite) Test_VartypeCheck_License(c *check.C) {
 	// Also registers the PERL5_LICENSE variable in the package.
 	mklines.collectVariables()
 
-	vt := NewVartypeCheckTester(t, (*VartypeCheck).License)
+	vt := NewVartypeCheckTester(t, BtLicense)
 
 	vt.Varname("LICENSE")
 	vt.Values(
@@ -837,7 +910,7 @@ func (s *Suite) Test_VartypeCheck_License(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_MachineGnuPlatform(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).MachineGnuPlatform)
+	vt := NewVartypeCheckTester(s.Init(c), BtMachineGnuPlatform)
 
 	vt.Varname("MACHINE_GNU_PLATFORM")
 	vt.Op(opUseMatch)
@@ -865,7 +938,7 @@ func (s *Suite) Test_VartypeCheck_MachineGnuPlatform(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_MachinePlatformPattern(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).MachinePlatformPattern)
+	vt := NewVartypeCheckTester(s.Init(c), BtMachinePlatformPattern)
 
 	vt.Varname("ONLY_FOR_PLATFORM")
 	vt.Op(opUseMatch)
@@ -916,7 +989,7 @@ func (s *Suite) Test_VartypeCheck_MachinePlatformPattern(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_MailAddress(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).MailAddress)
+	vt := NewVartypeCheckTester(s.Init(c), BtMailAddress)
 
 	vt.Varname("MAINTAINER")
 	vt.Values(
@@ -933,7 +1006,7 @@ func (s *Suite) Test_VartypeCheck_MailAddress(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_Message(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).Message)
+	vt := NewVartypeCheckTester(s.Init(c), BtMessage)
 
 	vt.Varname("SUBST_MESSAGE.id")
 	vt.Values(
@@ -945,7 +1018,7 @@ func (s *Suite) Test_VartypeCheck_Message(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_Option(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).Option)
+	vt := NewVartypeCheckTester(s.Init(c), BtOption)
 
 	G.Pkgsrc.PkgOptions["documented"] = "Option description"
 	G.Pkgsrc.PkgOptions["undocumented"] = ""
@@ -966,7 +1039,7 @@ func (s *Suite) Test_VartypeCheck_Option(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_Pathlist(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).Pathlist)
+	vt := NewVartypeCheckTester(s.Init(c), BtPathlist)
 
 	vt.Varname("PATH")
 	vt.Values(
@@ -980,8 +1053,8 @@ func (s *Suite) Test_VartypeCheck_Pathlist(c *check.C) {
 		"WARN: filename.mk:2: \"/directory with spaces\" is not a valid pathname.")
 }
 
-func (s *Suite) Test_VartypeCheck_PathMask(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).PathMask)
+func (s *Suite) Test_VartypeCheck_PathPattern(c *check.C) {
+	vt := NewVartypeCheckTester(s.Init(c), BtPathPattern)
 
 	vt.Varname("DISTDIRS")
 	vt.Values(
@@ -999,7 +1072,7 @@ func (s *Suite) Test_VartypeCheck_PathMask(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_Pathname(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).Pathname)
+	vt := NewVartypeCheckTester(s.Init(c), BtPathname)
 
 	vt.Varname("EGDIR")
 	vt.Values(
@@ -1016,7 +1089,7 @@ func (s *Suite) Test_VartypeCheck_Pathname(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_Perl5Packlist(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).Perl5Packlist)
+	vt := NewVartypeCheckTester(s.Init(c), BtPerl5Packlist)
 
 	vt.Varname("PERL5_PACKLIST")
 	vt.Values(
@@ -1028,7 +1101,7 @@ func (s *Suite) Test_VartypeCheck_Perl5Packlist(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_Perms(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).Perms)
+	vt := NewVartypeCheckTester(s.Init(c), BtPerms)
 
 	vt.Varname("CONF_FILES_PERMS")
 	vt.Op(opAssignAppend)
@@ -1046,7 +1119,7 @@ func (s *Suite) Test_VartypeCheck_Perms(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_Pkgname(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).Pkgname)
+	vt := NewVartypeCheckTester(s.Init(c), BtPkgname)
 
 	vt.Varname("PKGNAME")
 	vt.Values(
@@ -1077,9 +1150,9 @@ func (s *Suite) Test_VartypeCheck_Pkgname(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_PkgOptionsVar(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).PkgOptionsVar)
+	vt := NewVartypeCheckTester(s.Init(c), BtPkgOptionsVar)
 
-	vt.Varname("PKG_OPTIONS_VAR.screen")
+	vt.Varname("PKG_OPTIONS_VAR")
 	vt.Values(
 		"PKG_OPTIONS.${PKGBASE}",
 		"PKG_OPTIONS.anypkgbase",
@@ -1091,11 +1164,13 @@ func (s *Suite) Test_VartypeCheck_PkgOptionsVar(c *check.C) {
 			"of the form \"PKG_OPTIONS.*\", not \"PKG_OPTS.mc\".")
 }
 
-func (s *Suite) Test_VartypeCheck_PkgPath(c *check.C) {
+func (s *Suite) Test_VartypeCheck_Pkgpath(c *check.C) {
 	t := s.Init(c)
-	vt := NewVartypeCheckTester(t, (*VartypeCheck).PkgPath)
+	vt := NewVartypeCheckTester(t, BtPkgpath)
 
+	t.CreateFileLines("category/Makefile")
 	t.CreateFileLines("category/other-package/Makefile")
+	t.CreateFileLines("wip/package/Makefile")
 	t.Chdir("category/package")
 
 	vt.Varname("PKGPATH")
@@ -1103,17 +1178,38 @@ func (s *Suite) Test_VartypeCheck_PkgPath(c *check.C) {
 		"category/other-package",
 		"${OTHER_VAR}",
 		"invalid",
-		"../../invalid/relative")
+		"../../invalid/relative",
+		"wip/package",
+		"category",
+		"&&")
 
 	vt.Output(
-		"ERROR: filename.mk:3: Relative path \"../../invalid/Makefile\" does not exist.",
-		"WARN: filename.mk:3: \"../../invalid\" is not a valid relative package directory.",
-		"ERROR: filename.mk:4: Relative path \"../../../../invalid/relative/Makefile\" does not exist.",
-		"WARN: filename.mk:4: \"../../../../invalid/relative\" is not a valid relative package directory.")
+		"ERROR: filename.mk:3: There is no package in \"../../invalid\".",
+		"ERROR: filename.mk:4: There is no package in \"../../../../invalid/relative\".",
+		"ERROR: filename.mk:5: A main pkgsrc package must not depend on a pkgsrc-wip package.",
+		"ERROR: filename.mk:6: \"category\" is not a valid path to a package.",
+		"WARN: filename.mk:7: The pathname \"&&\" contains the invalid characters \"&&\".",
+		"ERROR: filename.mk:7: There is no package in \"../../&&\".")
+
+	G.Wip = true
+
+	vt.Values(
+		"wip/package")
+
+	vt.OutputEmpty()
+
+	vt.Op(opUseMatch)
+
+	vt.Values(
+		"pattern",
+		"&special&")
+
+	vt.Output(
+		"WARN: filename.mk:22: The pathname pattern \"&special&\" contains the invalid characters \"&&\".")
 }
 
-func (s *Suite) Test_VartypeCheck_PkgRevision(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).PkgRevision)
+func (s *Suite) Test_VartypeCheck_Pkgrevision(c *check.C) {
+	vt := NewVartypeCheckTester(s.Init(c), BtPkgrevision)
 
 	vt.Varname("PKGREVISION")
 	vt.Values(
@@ -1131,7 +1227,7 @@ func (s *Suite) Test_VartypeCheck_PkgRevision(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_PrefixPathname(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).PrefixPathname)
+	vt := NewVartypeCheckTester(s.Init(c), BtPrefixPathname)
 
 	vt.Varname("PKGMANDIR")
 	vt.Values(
@@ -1143,7 +1239,7 @@ func (s *Suite) Test_VartypeCheck_PrefixPathname(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_PythonDependency(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).PythonDependency)
+	vt := NewVartypeCheckTester(s.Init(c), BtPythonDependency)
 
 	vt.Varname("PYTHON_VERSIONED_DEPENDENCIES")
 	vt.Values(
@@ -1157,7 +1253,7 @@ func (s *Suite) Test_VartypeCheck_PythonDependency(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_RPkgName(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).RPkgName)
+	vt := NewVartypeCheckTester(s.Init(c), BtRPkgName)
 
 	vt.Varname("R_PKGNAME")
 	vt.Values(
@@ -1180,7 +1276,7 @@ func (s *Suite) Test_VartypeCheck_RPkgName(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_RPkgVer(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).RPkgVer)
+	vt := NewVartypeCheckTester(s.Init(c), BtRPkgVer)
 
 	vt.Varname("R_PKGVER")
 	vt.Values(
@@ -1201,7 +1297,7 @@ func (s *Suite) Test_VartypeCheck_RPkgVer(c *check.C) {
 
 func (s *Suite) Test_VartypeCheck_RelativePkgPath(c *check.C) {
 	t := s.Init(c)
-	vt := NewVartypeCheckTester(t, (*VartypeCheck).RelativePkgPath)
+	vt := NewVartypeCheckTester(t, BtRelativePkgPath)
 
 	t.CreateFileLines("category/other-package/Makefile")
 	t.Chdir("category/package")
@@ -1221,7 +1317,7 @@ func (s *Suite) Test_VartypeCheck_RelativePkgPath(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_Restricted(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).Restricted)
+	vt := NewVartypeCheckTester(s.Init(c), BtRestricted)
 
 	vt.Varname("NO_BIN_ON_CDROM")
 	vt.Values(
@@ -1232,7 +1328,7 @@ func (s *Suite) Test_VartypeCheck_Restricted(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_SedCommands(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).SedCommands)
+	vt := NewVartypeCheckTester(s.Init(c), BtSedCommands)
 
 	vt.Varname("SUBST_SED.dummy")
 	vt.Values(
@@ -1262,10 +1358,49 @@ func (s *Suite) Test_VartypeCheck_SedCommands(c *check.C) {
 		"WARN: filename.mk:11: Unclosed shell variable starting at \"$${unclosedShellVar\".")
 }
 
+func (s *Suite) Test_VartypeCheck_SedCommands__experimental(c *check.C) {
+	vt := NewVartypeCheckTester(s.Init(c), BtSedCommands)
+	G.Experimental = true
+
+	vt.Varname("SUBST_SED.dummy")
+
+	vt.Values(
+		"-e s,???,questions,",
+		"-e 's?from?to?g'",
+		"-E -e 's,from,to,g'")
+
+	vt.Output(
+		"WARN: filename.mk:1: The \"?\" in the word \"s,???,questions,\" may lead to unintended file globbing.")
+
+	vt.Values(
+		"-e s,?,replacement,",
+		"-e s,\\?,replacement,",
+		"-e s,\\\\?,replacement,",
+		"-e s,\\\\\\?,replacement,")
+
+	vt.Output(
+		"WARN: filename.mk:11: The \"?\" in the word \"s,?,replacement,\" may lead to unintended file globbing.",
+		"WARN: filename.mk:13: The \"?\" in the word \"s,\\\\\\\\?,replacement,\" may lead to unintended file globbing.",
+		"WARN: filename.mk:13: In a basic regular expression, a backslash followed by \"?\" is undefined.",
+		"WARN: filename.mk:14: In a basic regular expression, a backslash followed by \"?\" is undefined.")
+
+	vt.Values(
+		"-e s/dir\\\\/file/other-file/")
+
+	// No warning about backslash followed by "/" being undefined.
+	vt.OutputEmpty()
+
+	vt.Values(
+		"-e 's, ,space,g'",
+		"-e 's,\t,tab,g'")
+
+	vt.OutputEmpty()
+}
+
 func (s *Suite) Test_VartypeCheck_ShellCommand(c *check.C) {
 	t := s.Init(c)
 	t.SetUpVartypes()
-	vt := NewVartypeCheckTester(t, (*VartypeCheck).ShellCommand)
+	vt := NewVartypeCheckTester(t, BtShellCommand)
 
 	vt.Varname("INSTALL_CMD")
 	vt.Values(
@@ -1287,7 +1422,7 @@ func (s *Suite) Test_VartypeCheck_ShellCommands(c *check.C) {
 	t := s.Init(c)
 	t.SetUpVartypes()
 	t.SetUpTool("echo", "ECHO", AtRunTime)
-	vt := NewVartypeCheckTester(t, (*VartypeCheck).ShellCommands)
+	vt := NewVartypeCheckTester(t, BtShellCommands)
 
 	vt.Varname("GENERATE_PLIST")
 	vt.Values(
@@ -1299,7 +1434,7 @@ func (s *Suite) Test_VartypeCheck_ShellCommands(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_Stage(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).Stage)
+	vt := NewVartypeCheckTester(s.Init(c), BtStage)
 
 	vt.Varname("SUBST_STAGE.dummy")
 	vt.Values(
@@ -1314,7 +1449,7 @@ func (s *Suite) Test_VartypeCheck_Stage(c *check.C) {
 
 func (s *Suite) Test_VartypeCheck_Tool(c *check.C) {
 	t := s.Init(c)
-	vt := NewVartypeCheckTester(t, (*VartypeCheck).Tool)
+	vt := NewVartypeCheckTester(t, BtTool)
 
 	t.SetUpTool("tool1", "", AtRunTime)
 	t.SetUpTool("tool2", "", AtRunTime)
@@ -1371,9 +1506,9 @@ func (s *Suite) Test_VartypeCheck_Tool(c *check.C) {
 
 func (s *Suite) Test_VartypeCheck_URL(c *check.C) {
 	t := s.Init(c)
-	vt := NewVartypeCheckTester(t, (*VartypeCheck).URL)
+	vt := NewVartypeCheckTester(t, BtURL)
 
-	vt.Varname("HOMEPAGE")
+	vt.Varname("LATEX2HTML_ICONPATH")
 	vt.Values(
 		"# none",
 		"${OTHER_VAR}",
@@ -1417,7 +1552,7 @@ func (s *Suite) Test_VartypeCheck_URL(c *check.C) {
 
 func (s *Suite) Test_VartypeCheck_UserGroupName(c *check.C) {
 	t := s.Init(c)
-	vt := NewVartypeCheckTester(t, (*VartypeCheck).UserGroupName)
+	vt := NewVartypeCheckTester(t, BtUserGroupName)
 
 	vt.Varname("APACHE_USER")
 	vt.Values(
@@ -1433,7 +1568,7 @@ func (s *Suite) Test_VartypeCheck_UserGroupName(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_VariableName(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).VariableName)
+	vt := NewVartypeCheckTester(s.Init(c), BtVariableName)
 
 	vt.Varname("BUILD_DEFS")
 	vt.Values(
@@ -1447,7 +1582,7 @@ func (s *Suite) Test_VartypeCheck_VariableName(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_VariableNamePattern(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).VariableNamePattern)
+	vt := NewVartypeCheckTester(s.Init(c), BtVariableNamePattern)
 
 	vt.Varname("_SORTED_VARS.group")
 	vt.Values(
@@ -1464,7 +1599,7 @@ func (s *Suite) Test_VartypeCheck_VariableNamePattern(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_Version(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).Version)
+	vt := NewVartypeCheckTester(s.Init(c), BtVersion)
 
 	vt.Varname("PERL5_REQD")
 	vt.Op(opAssignAppend)
@@ -1495,9 +1630,9 @@ func (s *Suite) Test_VartypeCheck_Version(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_WrapperReorder(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).WrapperReorder)
+	vt := NewVartypeCheckTester(s.Init(c), BtWrapperReorder)
 
-	vt.Varname("WRAPPER_REORDER")
+	vt.Varname("WRAPPER_REORDER_CMDS")
 	vt.Op(opAssignAppend)
 	vt.Values(
 		"reorder:l:first:second",
@@ -1509,7 +1644,7 @@ func (s *Suite) Test_VartypeCheck_WrapperReorder(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_WrapperTransform(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).WrapperTransform)
+	vt := NewVartypeCheckTester(s.Init(c), BtWrapperTransform)
 
 	vt.Varname("WRAPPER_TRANSFORM_CMDS")
 	vt.Op(opAssignAppend)
@@ -1529,7 +1664,7 @@ func (s *Suite) Test_VartypeCheck_WrapperTransform(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_WrksrcSubdirectory(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).WrksrcSubdirectory)
+	vt := NewVartypeCheckTester(s.Init(c), BtWrksrcSubdirectory)
 
 	vt.Varname("BUILD_DIRS")
 	vt.Op(opAssignAppend)
@@ -1556,7 +1691,7 @@ func (s *Suite) Test_VartypeCheck_WrksrcSubdirectory(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_Yes(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).Yes)
+	vt := NewVartypeCheckTester(s.Init(c), BtYes)
 
 	vt.Varname("APACHE_MODULE")
 	vt.Values(
@@ -1568,7 +1703,7 @@ func (s *Suite) Test_VartypeCheck_Yes(c *check.C) {
 		"WARN: filename.mk:2: APACHE_MODULE should be set to YES or yes.",
 		"WARN: filename.mk:3: APACHE_MODULE should be set to YES or yes.")
 
-	vt.Varname("PKG_DEVELOPER")
+	vt.Varname("BUILD_USES_MSGFMT")
 	vt.Op(opUseMatch)
 	vt.Values(
 		"yes",
@@ -1576,15 +1711,15 @@ func (s *Suite) Test_VartypeCheck_Yes(c *check.C) {
 		"${YESVAR}")
 
 	vt.Output(
-		"WARN: filename.mk:11: PKG_DEVELOPER should only be used in a \".if defined(...)\" condition.",
-		"WARN: filename.mk:12: PKG_DEVELOPER should only be used in a \".if defined(...)\" condition.",
-		"WARN: filename.mk:13: PKG_DEVELOPER should only be used in a \".if defined(...)\" condition.")
+		"WARN: filename.mk:11: BUILD_USES_MSGFMT should only be used in a \".if defined(...)\" condition.",
+		"WARN: filename.mk:12: BUILD_USES_MSGFMT should only be used in a \".if defined(...)\" condition.",
+		"WARN: filename.mk:13: BUILD_USES_MSGFMT should only be used in a \".if defined(...)\" condition.")
 }
 
 func (s *Suite) Test_VartypeCheck_YesNo(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).YesNo)
+	vt := NewVartypeCheckTester(s.Init(c), BtYesNo)
 
-	vt.Varname("GNU_CONFIGURE")
+	vt.Varname("PKG_DEVELOPER")
 	vt.Values(
 		"yes",
 		"no",
@@ -1592,14 +1727,14 @@ func (s *Suite) Test_VartypeCheck_YesNo(c *check.C) {
 		"${YESVAR}")
 
 	vt.Output(
-		"WARN: filename.mk:3: GNU_CONFIGURE should be set to YES, yes, NO, or no.",
-		"WARN: filename.mk:4: GNU_CONFIGURE should be set to YES, yes, NO, or no.")
+		"WARN: filename.mk:3: PKG_DEVELOPER should be set to YES, yes, NO, or no.",
+		"WARN: filename.mk:4: PKG_DEVELOPER should be set to YES, yes, NO, or no.")
 }
 
 func (s *Suite) Test_VartypeCheck_YesNoIndirectly(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).YesNoIndirectly)
+	vt := NewVartypeCheckTester(s.Init(c), BtYesNoIndirectly)
 
-	vt.Varname("GNU_CONFIGURE")
+	vt.Varname("IS_BUILTIN.pkgbase")
 	vt.Values(
 		"yes",
 		"no",
@@ -1607,24 +1742,24 @@ func (s *Suite) Test_VartypeCheck_YesNoIndirectly(c *check.C) {
 		"${YESVAR}")
 
 	vt.Output(
-		"WARN: filename.mk:3: GNU_CONFIGURE should be set to YES, yes, NO, or no.")
+		"WARN: filename.mk:3: IS_BUILTIN.pkgbase should be set to YES, yes, NO, or no.")
 }
 
 // VartypeCheckTester helps to test the many different checks in VartypeCheck.
 // It keeps track of the current variable, operator, filename, line number,
 // so that the test can focus on the interesting details.
 type VartypeCheckTester struct {
-	tester   *Tester
-	checker  func(cv *VartypeCheck)
-	filename string
-	lineno   int
-	varname  string
-	op       MkOperator
+	tester    *Tester
+	basicType *BasicType
+	filename  string
+	lineno    int
+	varname   string
+	op        MkOperator
 }
 
 // NewVartypeCheckTester starts the test with a filename of "filename", at line 1,
 // with "=" as the operator. The variable has to be initialized explicitly.
-func NewVartypeCheckTester(t *Tester, checker func(cv *VartypeCheck)) *VartypeCheckTester {
+func NewVartypeCheckTester(t *Tester, basicType *BasicType) *VartypeCheckTester {
 
 	// This is necessary to know whether the variable name is a list type
 	// since in such a case each value is split into the list elements.
@@ -1632,16 +1767,14 @@ func NewVartypeCheckTester(t *Tester, checker func(cv *VartypeCheck)) *VartypeCh
 		t.SetUpVartypes()
 	}
 
-	return &VartypeCheckTester{
-		t,
-		checker,
-		"filename.mk",
-		1,
-		"",
-		opAssign}
+	return &VartypeCheckTester{t, basicType, "filename.mk", 1, "", opAssign}
 }
 
 func (vt *VartypeCheckTester) Varname(varname string) {
+	vartype := G.Pkgsrc.VariableType(nil, varname)
+	assertNotNil(vartype)
+	assert(vartype.basicType == vt.basicType)
+
 	vt.varname = varname
 	vt.nextSection()
 }
@@ -1708,7 +1841,7 @@ func (vt *VartypeCheckTester) Values(values ...string) {
 		for _, lineValue := range lineValues {
 			valueNovar := mkline.WithoutMakeVariables(lineValue)
 			vc := VartypeCheck{mklines, mkline, varname, vt.op, lineValue, valueNovar, comment, false}
-			vt.checker(&vc)
+			vt.basicType.checker(&vc)
 		}
 	}
 

@@ -101,7 +101,7 @@ func (s *Suite) Test_CheckdirToplevel__recursive(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: ~/category/package/Makefile:20: UNKNOWN is defined but not used.",
 		"1 warning found.",
-		"(Run \"pkglint -e\" to show explanations.)")
+		t.Shquote("(Run \"pkglint -e -Wall -r %s\" to show explanations.)", "."))
 }
 
 func (s *Suite) Test_CheckdirToplevel__recursive_inter_package(c *check.C) {
@@ -130,7 +130,7 @@ func (s *Suite) Test_CheckdirToplevel__recursive_inter_package(c *check.C) {
 		"WARN: ~/category/package/Makefile:20: UNKNOWN is defined but not used.",
 		"WARN: ~/licenses/gnu-gpl-v2: This license seems to be unused.",
 		"2 warnings found.",
-		"(Run \"pkglint -e\" to show explanations.)")
+		t.Shquote("(Run \"pkglint -e -Wall -Call -r %s\" to show explanations.)", "."))
 }
 
 func (s *Suite) Test_CheckdirToplevel__indentation(c *check.C) {
@@ -150,7 +150,7 @@ func (s *Suite) Test_CheckdirToplevel__indentation(c *check.C) {
 	t.CheckOutputLines(
 		"NOTE: ~/Makefile:4: This variable value should be aligned to column 17.",
 		"Looks fine.",
-		"(Run \"pkglint -e\" to show explanations.)",
-		"(Run \"pkglint -fs\" to show what can be fixed automatically.)",
-		"(Run \"pkglint -F\" to automatically fix some issues.)")
+		t.Shquote("(Run \"pkglint -e -Wall %s\" to show explanations.)", "."),
+		t.Shquote("(Run \"pkglint -fs -Wall %s\" to show what can be fixed automatically.)", "."),
+		t.Shquote("(Run \"pkglint -F -Wall %s\" to automatically fix some issues.)", "."))
 }

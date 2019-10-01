@@ -264,7 +264,7 @@ func (src *Pkgsrc) checkToplevelUnusedLicenses() {
 	for _, licenseFile := range src.ReadDir("licenses") {
 		licenseName := licenseFile.Name()
 		if !G.InterPackage.LicenseUsed(licenseName) {
-			licensePath := licensesDir + "/" + licenseName
+			licensePath := joinPath(licensesDir, licenseName)
 			NewLineWhole(licensePath).Warnf("This license seems to be unused.")
 		}
 	}
@@ -597,7 +597,7 @@ func (src *Pkgsrc) loadDocChanges() {
 
 	src.LastChange = make(map[string]*Change)
 	for _, filename := range filenames {
-		changes := src.loadDocChangesFromFile(docDir + "/" + filename)
+		changes := src.loadDocChangesFromFile(joinPath(docDir, filename))
 		for _, change := range changes {
 			src.LastChange[change.Pkgpath] = change
 			if change.Action == Renamed || change.Action == Moved {
@@ -841,7 +841,7 @@ func (src *Pkgsrc) ReadDir(dirName string) []os.FileInfo {
 	var relevantFiles []os.FileInfo
 	for _, dirent := range files {
 		name := dirent.Name()
-		if !dirent.IsDir() || !isIgnoredFilename(name) && !isEmptyDir(dir+"/"+name) {
+		if !dirent.IsDir() || !isIgnoredFilename(name) && !isEmptyDir(joinPath(dir, name)) {
 			relevantFiles = append(relevantFiles, dirent)
 		}
 	}
@@ -855,7 +855,7 @@ func (src *Pkgsrc) ReadDir(dirName string) []os.FileInfo {
 //  NewPkgsrc("/usr/pkgsrc").File("distfiles") => "/usr/pkgsrc/distfiles"
 func (src *Pkgsrc) File(relativeName string) string {
 	// TODO: Package.File resolves variables, Pkgsrc.File doesn't. They should behave the same.
-	return cleanpath(src.topdir + "/" + relativeName)
+	return cleanpath(joinPath(src.topdir, relativeName))
 }
 
 // ToRel returns the path of `filename`, relative to the pkgsrc top directory.
@@ -988,12 +988,12 @@ func (src *Pkgsrc) guessVariableType(varname string) (vartype *Vartype) {
 	varbase := varnameBase(varname)
 	switch {
 	case hasSuffix(varbase, "DIRS"):
-		return listType(BtPathmask, aclpAllRuntime)
+		return listType(BtPathPattern, aclpAllRuntime)
 	case hasSuffix(varbase, "DIR") && !hasSuffix(varbase, "DESTDIR"), hasSuffix(varname, "_HOME"):
 		// TODO: hasSuffix(varbase, "BASE")
 		return plainType(BtPathname, aclpAllRuntime)
 	case hasSuffix(varbase, "FILES"):
-		return listType(BtPathmask, aclpAllRuntime)
+		return listType(BtPathPattern, aclpAllRuntime)
 	case hasSuffix(varbase, "FILE"):
 		return plainType(BtPathname, aclpAllRuntime)
 	case hasSuffix(varbase, "PATH"):
@@ -1020,7 +1020,7 @@ func (src *Pkgsrc) guessVariableType(varname string) (vartype *Vartype) {
 		// TODO: Add BtGuard for inclusion guards, since these variables may only be checked using defined().
 		return plainType(BtUnknown, aclpAll)
 	case hasSuffix(varbase, "_SKIP"):
-		return listType(BtPathmask, aclpAllRuntime)
+		return listType(BtPathPattern, aclpAllRuntime)
 	}
 
 	// Variables whose name doesn't match the above patterns may be

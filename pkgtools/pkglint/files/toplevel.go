@@ -45,7 +45,7 @@ func (ctx *Toplevel) checkSubdir(mkline *MkLine) {
 		}
 	}
 
-	if containsVarRef(subdir) || !fileExists(ctx.dir+"/"+subdir+"/Makefile") {
+	if containsVarRef(subdir) || !fileExists(joinPath(ctx.dir, subdir, "Makefile")) {
 		return
 	}
 
@@ -63,6 +63,6 @@ func (ctx *Toplevel) checkSubdir(mkline *MkLine) {
 	ctx.previousSubdir = subdir
 
 	if !mkline.IsCommentedVarassign() {
-		ctx.subdirs = append(ctx.subdirs, ctx.dir+"/"+subdir)
+		ctx.subdirs = append(ctx.subdirs, joinPath(ctx.dir, subdir))
 	}
 }

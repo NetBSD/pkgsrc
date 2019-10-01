@@ -67,7 +67,7 @@ func (ck *distinfoLinesChecker) parse() {
 			return no
 		case ck.pkg == nil:
 			return unknown
-		case fileExists(ck.pkg.File(ck.patchdir + "/" + prevFilename)):
+		case fileExists(ck.pkg.File(joinPath(ck.patchdir, prevFilename))):
 			return yes
 		default:
 			return no
@@ -195,7 +195,7 @@ func (ck *distinfoLinesChecker) checkAlgorithmsDistfile(info distinfoFileInfo) {
 
 	distdir := G.Pkgsrc.File("distfiles")
 
-	distfile := cleanpath(distdir + "/" + info.filename())
+	distfile := cleanpath(joinPath(distdir, info.filename()))
 	if !fileExists(distfile) {
 
 		// It's a rare situation that the explanation is generated
@@ -315,7 +315,7 @@ func (ck *distinfoLinesChecker) checkUnrecordedPatches() {
 		if file.Mode().IsRegular() && ck.infos[patchName].isPatch != yes && hasPrefix(patchName, "patch-") {
 			line := NewLineWhole(ck.lines.Filename)
 			line.Errorf("Patch %q is not recorded. Run %q.",
-				line.PathToFile(ck.pkg.File(ck.patchdir+"/"+patchName)),
+				line.PathToFile(ck.pkg.File(joinPath(ck.patchdir, patchName))),
 				bmake("makepatchsum"))
 		}
 	}
@@ -371,7 +371,7 @@ func (ck *distinfoLinesChecker) checkUncommittedPatch(info distinfoHash) {
 	hash := info.hash
 	line := info.line
 
-	patchFileName := ck.patchdir + "/" + patchName
+	patchFileName := joinPath(ck.patchdir, patchName)
 	resolvedPatchFileName := ck.pkg.File(patchFileName)
 	if ck.distinfoIsCommitted && !isCommitted(resolvedPatchFileName) {
 		line.Warnf("%s is registered in distinfo but not added to CVS.", line.PathToFile(resolvedPatchFileName))

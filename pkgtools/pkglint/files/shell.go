@@ -189,8 +189,8 @@ func (ck *ShellLineChecker) checkVaruseToken(atoms *[]*ShAtom, quoting ShQuoting
 	case (quoting == shqSquot || quoting == shqDquot) && matches(varname, `^(?:.*DIR|.*FILE|.*PATH|.*_VAR|PREFIX|.*BASE|PKGNAME)$`):
 		// This is ok as long as these variables don't have embedded [$\\"'`].
 
-	case quoting == shqDquot && varuse.IsQ():
-		ck.Warnf("The :Q modifier should not be used inside double quotes.")
+	case quoting != shqPlain && varuse.IsQ():
+		ck.Warnf("The :Q modifier should not be used inside quotes.")
 		ck.Explain(
 			"The :Q modifier is intended for embedding a string into a shell program.",
 			"It escapes all characters that have a special meaning in shell programs.",
@@ -312,7 +312,7 @@ func (ck *ShellLineChecker) CheckShellCommandLine(shelltext string) {
 			"hidden behind the scenes.",
 			"",
 			// TODO: Provide a copy-and-paste example.
-			sprintf("Run %q for more information.", makeHelp("subst")))
+			sprintf("Run %q for more information.", bmakeHelp("subst")))
 		if contains(shelltext, "#") {
 			line.Explain(
 				"When migrating to the SUBST framework, pay attention to \"#\" characters.",
@@ -375,7 +375,7 @@ func (ck *ShellLineChecker) CheckShellCommand(shellcmd string, pSetE *bool, time
 	}
 	walker.Callback.AndOr = func(andor *MkShAndOr) {
 		if G.Opts.WarnExtra && !*pSetE && walker.Current().Index != 0 {
-			spc.checkSetE(walker.Parent(1).(*MkShList), walker.Current().Index, andor)
+			spc.checkSetE(walker.Parent(1).(*MkShList), walker.Current().Index)
 		}
 	}
 	walker.Callback.Pipeline = func(pipeline *MkShPipeline) {
@@ -976,7 +976,7 @@ func (spc *ShellProgramChecker) canFail(cmd *MkShCommand) bool {
 	return true
 }
 
-func (spc *ShellProgramChecker) checkSetE(list *MkShList, index int, andor *MkShAndOr) {
+func (spc *ShellProgramChecker) checkSetE(list *MkShList, index int) {
 	if trace.Tracing {
 		defer trace.Call0()()
 	}

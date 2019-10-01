@@ -936,10 +936,10 @@ func (s *Suite) Test_FileCache_Evict__sort(c *check.C) {
 	t.Check(cache.Get("filename6.mk", 0), check.NotNil)
 }
 
-func (s *Suite) Test_makeHelp(c *check.C) {
+func (s *Suite) Test_bmakeHelp(c *check.C) {
 	t := s.Init(c)
 
-	t.CheckEquals(makeHelp("subst"), confMake+" help topic=subst")
+	t.CheckEquals(bmakeHelp("subst"), confMake+" help topic=subst")
 }
 
 func (s *Suite) Test_hasAlnumPrefix(c *check.C) {
@@ -1168,4 +1168,17 @@ func (s *Suite) Test_StringInterner(c *check.C) {
 	t.CheckEquals(si.Intern("Hello"), "Hello")
 	t.CheckEquals(si.Intern("Hello, world"), "Hello, world")
 	t.CheckEquals(si.Intern("Hello, world"[0:5]), "Hello")
+}
+
+func (s *Suite) Test_shquote(c *check.C) {
+	t := s.Init(c)
+
+	test := func(in, out string) {
+		t.CheckEquals(shquote(in), out)
+	}
+
+	test("", "''")
+	test("'", "''\\'''")
+	test("simple", "simple")
+	test("~", "'~'")
 }

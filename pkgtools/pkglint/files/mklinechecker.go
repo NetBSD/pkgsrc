@@ -1285,6 +1285,29 @@ func (ck MkLineChecker) checkVarassignMisc() {
 		mkline.Notef("Consider setting NOT_FOR_PLATFORM instead of " +
 			"PKG_SKIP_REASON depending on ${OPSYS}.")
 	}
+
+	ck.checkVarassignMiscRedundantInstallationDirs()
+}
+
+func (ck MkLineChecker) checkVarassignMiscRedundantInstallationDirs() {
+	mkline := ck.MkLine
+	varname := mkline.Varname()
+
+	switch {
+	case G.Pkg == nil,
+		varname != "INSTALLATION_DIRS",
+		!matches(G.Pkg.vars.LastValue("AUTO_MKDIRS"), `^[Yy][Ee][Ss]$`):
+		return
+	}
+
+	for _, dir := range mkline.ValueFields(mkline.Value()) {
+		if G.Pkg.Plist.Dirs[dir] != nil {
+			mkline.Notef("The directory %q is redundant in %s.", dir, varname)
+			mkline.Explain(
+				"This package defines AUTO_MKDIR, and the directory is contained in the PLIST.",
+				"Therefore it will be created anyways.")
+		}
+	}
 }
 
 func (ck MkLineChecker) checkVarassignLeftBsdPrefs() {
@@ -1587,14 +1610,6 @@ func (ck MkLineChecker) simplifyCondition(varuse *MkVarUse, fromEmpty bool, notE
 
 		quote := condStr(matches(pattern, `[^\-/0-9@A-Za-z]`), "\"", "")
 		to := "${" + varname + "} " + op + " " + quote + pattern + quote
-
-		// TODO: Check in more cases whether the parentheses are really necessary.
-		//  In a !!${VAR} expression, parentheses are necessary.
-		needParen := !toplevel
-		if needParen {
-			to = "(" + to + ")"
-		}
-
 		return from, to
 	}
 
@@ -1618,6 +1633,8 @@ func (ck MkLineChecker) simplifyCondition(varuse *MkVarUse, fromEmpty bool, notE
 			continue
 		}
 
+		// FIXME: This transformation is only valid if the variable is guaranteed to
+		//  be defined. If that's not the case, the :U modifier must be added.
 		fix := ck.MkLine.Autofix()
 		fix.Notef("%s should be compared using %s instead of matching against %q.",
 			varname, condStr(positive == notEmpty, "==", "!="), ":"+modifier.Text)
@@ -1735,7 +1752,7 @@ func (ck MkLineChecker) CheckRelativePath(relativePath string, mustExist bool) {
 		return
 	}
 
-	abs := path.Dir(mkline.Filename) + "/" + resolvedPath
+	abs := joinPath(path.Dir(mkline.Filename), resolvedPath)
 	if _, err := os.Stat(abs); err != nil {
 		if mustExist && !ck.MkLines.indentation.HasExists(resolvedPath) {
 			mkline.Errorf("Relative path %q does not exist.", resolvedPath)

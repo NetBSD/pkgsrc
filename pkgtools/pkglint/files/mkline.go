@@ -549,40 +549,81 @@ var notSpace = textproc.Space.Inverse()
 //
 // Compare devel/bmake/files/str.c, function brk_string.
 //
-// TODO: Compare with brk_string from devel/bmake, especially for backticks.
+// See UnquoteShell.
 func (mkline *MkLine) ValueFields(value string) []string {
-	if trace.Tracing {
-		defer trace.Call(mkline, value)()
-	}
+	var fields []string
+	var field strings.Builder
 
-	p := NewShTokenizer(mkline.Line, value, false)
-	atoms := p.ShAtoms()
+	lexer := NewMkTokensLexer(mkline.Tokenize(value, false))
+	lexer.SkipHspace()
 
-	if len(atoms) > 0 && atoms[0].Type == shtSpace {
-		atoms = atoms[1:]
-	}
-
-	var word strings.Builder
-	var words []string
-	for _, atom := range atoms {
-		if atom.Type == shtSpace && atom.Quoting == shqPlain {
-			words = append(words, word.String())
-			word.Reset()
-		} else {
-			word.WriteString(atom.MkText)
+	emit := func() {
+		if field.Len() > 0 {
+			fields = append(fields, field.String())
+			field.Reset()
 		}
 	}
-	if word.Len() > 0 && atoms[len(atoms)-1].Quoting == shqPlain {
-		words = append(words, word.String())
-		word.Reset()
+
+	plain := func() {
+		varUse := lexer.NextVarUse()
+		if varUse != nil {
+			field.WriteString(varUse.Text)
+		} else {
+			field.WriteByte(lexer.NextByte())
+		}
 	}
 
-	// TODO: Handle parse errors
-	word.WriteString(p.parser.Rest())
-	rest := word.String()
-	_ = rest
+	for !lexer.EOF() {
+		switch {
+		case lexer.SkipByte('\''):
+			// Note: bmake's brk_string treats single quotes and double
+			// quotes in the same way regarding backslash escape sequences.
+			// It seems this is a mistake, and until this is confirmed to
+			// not be a bug, pkglint parses single quotes like in the shell.
+			field.WriteByte('\'')
+			for {
+				if lexer.EOF() {
+					return fields // without the incomplete last field
+				} else if lexer.SkipByte('\'') {
+					field.WriteByte('\'')
+					break
+				} else {
+					plain()
+				}
+			}
 
-	return words
+		case lexer.SkipByte('"'):
+			field.WriteByte('"')
+			for {
+				if lexer.EOF() {
+					return fields // without the incomplete last field
+				} else if lexer.SkipByte('"') {
+					field.WriteByte('"')
+					break
+				} else if lexer.SkipByte('\\') {
+					field.WriteByte('\\')
+					plain()
+				} else {
+					plain()
+				}
+			}
+
+		case lexer.SkipByte(' '), lexer.SkipByte('\t'), lexer.SkipByte('\n'):
+			emit()
+
+		case lexer.SkipByte('\\'):
+			field.WriteByte('\\')
+			if !lexer.EOF() {
+				plain()
+			}
+
+		default:
+			plain()
+		}
+	}
+	emit()
+
+	return fields
 }
 
 func (mkline *MkLine) ValueTokens() ([]*MkToken, string) {
@@ -1093,45 +1134,73 @@ func (mkline *MkLine) ForEachUsed(action func(varUse *MkVarUse, time VucTime)) {
 	}
 }
 
-func (*MkLine) UnquoteShell(str string) string {
+// UnquoteShell removes one level of double and single quotes,
+// like in the shell.
+//
+// See ValueFields.
+func (mkline *MkLine) UnquoteShell(str string, warn bool) string {
 	var sb strings.Builder
-	n := len(str)
+	lexer := NewMkTokensLexer(mkline.Tokenize(str, false))
+
+	plain := func() {
+		varUse := lexer.NextVarUse()
+		if varUse != nil {
+			sb.WriteString(varUse.Text)
+		} else {
+			sb.WriteByte(lexer.NextByte())
+		}
+	}
 
 outer:
-	for i := 0; i < n; i++ {
-		switch str[i] {
-		case '"':
-			for i++; i < n; i++ {
-				switch str[i] {
-				case '"':
+	for !lexer.EOF() {
+		switch {
+		case lexer.SkipByte('"'):
+			for !lexer.EOF() {
+				if lexer.SkipByte('"') {
 					continue outer
-				case '\\':
-					i++
-					if i < n {
-						sb.WriteByte(str[i])
+				} else if lexer.SkipByte('\\') {
+					if !lexer.EOF() {
+						plain()
 					}
-				default:
-					sb.WriteByte(str[i])
+				} else {
+					plain()
 				}
 			}
 
-		case '\'':
-			for i++; i < n && str[i] != '\''; i++ {
-				sb.WriteByte(str[i])
+		case lexer.SkipByte('\''):
+			for !lexer.EOF() && !lexer.SkipByte('\'') {
+				plain()
 			}
 
-		case '\\':
-			i++
-			if i < n {
-				sb.WriteByte(str[i])
+		case lexer.SkipByte('\\'):
+			if !lexer.EOF() {
+				plain()
 			}
 
 		default:
-			sb.WriteByte(str[i])
+			if warn {
+				mkline.checkFileGlobbing(lexer.PeekByte(), str)
+			}
+			plain()
 		}
 	}
 
 	return sb.String()
+}
+
+func (mkline *MkLine) checkFileGlobbing(ch int, str string) {
+	if !(ch == '*' || ch == '?' || ch == '[') {
+		return
+	}
+
+	if !mkline.once.FirstTimeSlice("unintended file globbing", string(ch)) {
+		return
+	}
+
+	mkline.Warnf("The %q in the word %q may lead to unintended file globbing.",
+		string(ch), str)
+	mkline.Explain(
+		"To fix this, enclose the word in \"double\" or 'single' quotes.")
 }
 
 type MkOperator uint8

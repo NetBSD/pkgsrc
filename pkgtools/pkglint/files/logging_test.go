@@ -591,7 +591,7 @@ func (s *Suite) Test_Logger_ShowSummary__explanations_with_only(c *check.C) {
 	// Neither the warning nor the corresponding explanation are logged.
 	line.Warnf("Filtered warning.")
 	line.Explain("Explanation for the above warning.")
-	G.Logger.ShowSummary()
+	G.Logger.ShowSummary(t.argv)
 
 	// Since the above warning is filtered out by the --only option,
 	// adding --explain to the options would not show any explanation.
@@ -603,13 +603,13 @@ func (s *Suite) Test_Logger_ShowSummary__explanations_with_only(c *check.C) {
 
 	line.Warnf("This warning is interesting.")
 	line.Explain("This explanation is available.")
-	G.Logger.ShowSummary()
+	G.Logger.ShowSummary(t.argv)
 
 	t.CheckEquals(G.Logger.explanationsAvailable, true)
 	t.CheckOutputLines(
 		"WARN: Makefile:27: This warning is interesting.",
 		"1 warning found.",
-		"(Run \"pkglint -e\" to show explanations.)")
+		"(Run \"pkglint -e --only interesting\" to show explanations.)")
 }
 
 func (s *Suite) Test_Logger_ShowSummary__looks_fine(c *check.C) {
@@ -617,7 +617,7 @@ func (s *Suite) Test_Logger_ShowSummary__looks_fine(c *check.C) {
 
 	logger := Logger{out: NewSeparatorWriter(&t.stdout)}
 
-	logger.ShowSummary()
+	logger.ShowSummary([]string{"pkglint"})
 
 	t.CheckOutputLines(
 		"Looks fine.")
@@ -630,7 +630,7 @@ func (s *Suite) Test_Logger_ShowSummary__1_error_1_warning(c *check.C) {
 	logger.Logf(Error, "", "", ".", ".")
 	logger.Logf(Warn, "", "", ".", ".")
 
-	logger.ShowSummary()
+	logger.ShowSummary([]string{"pkglint"})
 
 	t.CheckOutputLines(
 		"ERROR: .",
@@ -648,7 +648,7 @@ func (s *Suite) Test_Logger_ShowSummary__2_errors_3_warnings(c *check.C) {
 	logger.Logf(Warn, "", "", "4.", "4.")
 	logger.Logf(Warn, "", "", "5.", "5.")
 
-	logger.ShowSummary()
+	logger.ShowSummary([]string{"pkglint"})
 
 	t.CheckOutputLines(
 		"ERROR: 1.",
@@ -665,7 +665,7 @@ func (s *Suite) Test_Logger_ShowSummary__looks_fine_quiet(c *check.C) {
 	logger := Logger{out: NewSeparatorWriter(&t.stdout)}
 	logger.Opts.Quiet = true
 
-	logger.ShowSummary()
+	logger.ShowSummary([]string{"pkglint"})
 
 	t.CheckOutputEmpty()
 }
@@ -678,7 +678,7 @@ func (s *Suite) Test_Logger_ShowSummary__1_error_1_warning_quiet(c *check.C) {
 	logger.Logf(Error, "", "", ".", ".")
 	logger.Logf(Warn, "", "", ".", ".")
 
-	logger.ShowSummary()
+	logger.ShowSummary([]string{"pkglint"})
 
 	t.CheckOutputLines(
 		"ERROR: .",
@@ -693,7 +693,7 @@ func (s *Suite) Test_Logger_ShowSummary__explanations_available(c *check.C) {
 	logger.Explain(
 		"Explanation.")
 
-	logger.ShowSummary()
+	logger.ShowSummary([]string{"pkglint"})
 
 	t.CheckOutputLines(
 		"ERROR: .",
@@ -712,7 +712,7 @@ func (s *Suite) Test_Logger_ShowSummary__explanations_available_in_explain_mode(
 	// Since the --explain option is already given, it need not be advertised.
 	logger.Opts.Explain = true
 
-	logger.ShowSummary()
+	logger.ShowSummary([]string{"pkglint"})
 
 	t.CheckOutputLines(
 		"ERROR: .",
@@ -725,7 +725,7 @@ func (s *Suite) Test_Logger_ShowSummary__autofix_available(c *check.C) {
 	logger := Logger{out: NewSeparatorWriter(&t.stdout)}
 	logger.autofixAvailable = true // See SaveAutofixChanges
 
-	logger.ShowSummary()
+	logger.ShowSummary([]string{"pkglint"})
 
 	t.CheckOutputLines(
 		"Looks fine.",
@@ -740,7 +740,7 @@ func (s *Suite) Test_Logger_ShowSummary__autofix_available_with_show_autofix_opt
 	logger.autofixAvailable = true // See SaveAutofixChanges
 	logger.Opts.ShowAutofix = true
 
-	logger.ShowSummary()
+	logger.ShowSummary([]string{"pkglint"})
 
 	// Since the --show-autofix option is already given, it need not be advertised.
 	// But the --autofix option is not given, therefore mention it.
@@ -756,7 +756,7 @@ func (s *Suite) Test_Logger_ShowSummary__autofix_available_with_autofix_option(c
 	logger.autofixAvailable = true // See SaveAutofixChanges
 	logger.Opts.Autofix = true
 
-	logger.ShowSummary()
+	logger.ShowSummary([]string{"pkglint"})
 
 	// Since the --autofix option is already given, it need not be advertised.
 	// Mentioning the --show-autofix option would be pointless here since the
@@ -764,6 +764,20 @@ func (s *Suite) Test_Logger_ShowSummary__autofix_available_with_autofix_option(c
 	// The usual "x warnings" would also be misleading since the warnings have just
 	// been fixed by the autofix feature. Therefore the output is completely empty.
 	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Logger_ShowSummary__quoting(c *check.C) {
+	t := s.Init(c)
+
+	logger := Logger{out: NewSeparatorWriter(&t.stdout)}
+	logger.errors = 1
+	logger.explanationsAvailable = true
+
+	logger.ShowSummary([]string{"pkglint", "--only", "string with 'quotes'"})
+
+	t.CheckOutputLines(
+		"1 error found.",
+		"(Run \"pkglint -e --only 'string with '\\''quotes'\\'''\" to show explanations.)")
 }
 
 // In rare cases, the explanations for the same warning may differ
@@ -931,7 +945,7 @@ func (s *Suite) Test_Logger_Diag__source_duplicates(c *check.C) {
 	t.SetUpPackage("category/package2",
 		"PATCHDIR=\t../../category/dependency/patches")
 
-	t.Main("--source", "-Wall", t.File("category/package1"), t.File("category/package2"))
+	t.Main("--source", "-Wall", "category/package1", "category/package2")
 
 	t.CheckOutputLines(
 		"ERROR: ~/category/package1/distinfo: "+
@@ -947,7 +961,8 @@ func (s *Suite) Test_Logger_Diag__source_duplicates(c *check.C) {
 			"Run \""+confMake+" makepatchsum\".",
 		"",
 		"3 errors found.",
-		"(Run \"pkglint -e\" to show explanations.)")
+		t.Shquote("(Run \"pkglint -e --source -Wall %s %s\" to show explanations.)",
+			"category/package1", "category/package2"))
 }
 
 func (s *Suite) Test_Logger_shallBeLogged(c *check.C) {

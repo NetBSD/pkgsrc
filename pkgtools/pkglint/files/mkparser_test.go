@@ -378,6 +378,24 @@ func (s *Suite) Test_MkParser_VarUse(c *check.C) {
 		varuseText("${${", "${"),
 		"WARN: Test_MkParser_VarUse.mk:1: Missing closing \"}\" for \"\".",
 		"WARN: Test_MkParser_VarUse.mk:1: Missing closing \"}\" for \"${\".")
+
+	test("${arbitrary :Mpattern:---:Q}",
+		varuseText("${arbitrary :Mpattern:---:Q}", "arbitrary ", "Mpattern", "Q"),
+		// TODO: Swap the order of these message
+		"WARN: Test_MkParser_VarUse.mk:1: Invalid variable modifier \"---\" for \"arbitrary \".",
+		"WARN: Test_MkParser_VarUse.mk:1: Invalid part \" \" after variable name \"arbitrary\".")
+
+	// Variable names containing spaces do not occur in pkgsrc.
+	// Technically they are possible:
+	//
+	//  VARNAME=        name with spaces
+	//  ${VARNAME}=     value
+	//
+	//  all:
+	//         @echo ${name with spaces:Q}''
+	test("${arbitrary text}",
+		varuse("arbitrary text"),
+		"WARN: Test_MkParser_VarUse.mk:1: Invalid part \" text\" after variable name \"arbitrary\".")
 }
 
 func (s *Suite) Test_MkParser_varUseModifier__invalid_ts_modifier_with_warning(c *check.C) {
