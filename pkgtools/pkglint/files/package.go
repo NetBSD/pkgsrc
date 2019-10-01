@@ -101,7 +101,7 @@ func NewPackage(dir string) *Package {
 // as resolved from the package's directory.
 // Variables that are known in the package are resolved, e.g. ${PKGDIR}.
 func (pkg *Package) File(relativeFileName string) string {
-	return cleanpath(resolveVariableRefs(nil, pkg.dir+"/"+relativeFileName))
+	return cleanpath(resolveVariableRefs(nil /* XXX: or maybe some mklines? */, joinPath(pkg.dir, relativeFileName)))
 }
 
 // Rel returns the path by which the given filename (as seen from the
@@ -497,7 +497,7 @@ func (pkg *Package) loadIncluded(mkline *MkLine, includingFile string) (included
 
 	dirname, _ := path.Split(includingFile)
 	dirname = cleanpath(dirname)
-	fullIncluded := dirname + "/" + includedFile
+	fullIncluded := joinPath(dirname, includedFile)
 	relIncludedFile := relpath(pkg.dir, fullIncluded)
 
 	if !pkg.diveInto(includingFile, includedFile) {
@@ -535,7 +535,7 @@ func (pkg *Package) loadIncluded(mkline *MkLine, includingFile string) (included
 
 	dirname = pkgBasedir
 
-	fullIncludedFallback := dirname + "/" + includedFile
+	fullIncludedFallback := joinPath(dirname, includedFile)
 	includedMklines = LoadMk(fullIncludedFallback, 0)
 	if includedMklines == nil {
 		return nil, false
@@ -598,7 +598,7 @@ func (pkg *Package) resolveIncludedFile(mkline *MkLine, includingFilename string
 
 	// TODO: resolveVariableRefs uses G.Pkg implicitly. It should be made explicit.
 	// TODO: Try to combine resolveVariableRefs and ResolveVarsInRelativePath.
-	includedFile := resolveVariableRefs(nil, mkline.ResolveVarsInRelativePath(mkline.IncludedFile()))
+	includedFile := resolveVariableRefs(nil /* XXX: or maybe some mklines? */, mkline.ResolveVarsInRelativePath(mkline.IncludedFile()))
 	if containsVarRef(includedFile) {
 		if trace.Tracing && !contains(includingFilename, "/mk/") {
 			trace.Stepf("%s:%s: Skipping unresolvable include file %q.",
@@ -1195,7 +1195,7 @@ func (pkg *Package) checkFileMakefileExt(filename string) {
 		"are extension.mk, module.mk, version.mk.",
 		"",
 		"These topic files should be documented properly so that their",
-		sprintf("content can be queried using %q.", makeHelp("help")))
+		sprintf("content can be queried using %q.", bmakeHelp("help")))
 }
 
 // checkOwnerMaintainer checks files that are about to be committed.
@@ -1211,7 +1211,7 @@ func (pkg *Package) checkOwnerMaintainer(filename string) {
 
 	owner := pkg.vars.LastValue("OWNER")
 	maintainer := pkg.vars.LastValue("MAINTAINER")
-	if maintainer == "pkgsrc-users@NetBSD.org" {
+	if maintainer == "pkgsrc-users@NetBSD.org" || maintainer == "INSERT_YOUR_MAIL_ADDRESS_HERE" {
 		maintainer = ""
 	}
 	if owner == "" && maintainer == "" {
@@ -1260,7 +1260,7 @@ func (pkg *Package) checkFreeze(filename string) {
 	line.Notef("Pkgsrc is frozen since %s.", freezeStart)
 	line.Explain(
 		"During a pkgsrc freeze, changes to pkgsrc should only be made very carefully.",
-		"See https://www.netbsd.org/developers/pkgsrc/ for the exact rules.")
+		"See https://www.NetBSD.org/developers/pkgsrc/ for the exact rules.")
 }
 
 func (pkg *Package) checkIncludeConditionally(mkline *MkLine, indentation *Indentation) {

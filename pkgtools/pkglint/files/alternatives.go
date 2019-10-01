@@ -49,7 +49,7 @@ func CheckFileAlternatives(filename string) {
 		if !m {
 			line.Errorf("Invalid line %q.", line.Text)
 			line.Explain(
-				sprintf("Run %q for more information.", makeHelp("alternatives")))
+				sprintf("Run %q for more information.", bmakeHelp("alternatives")))
 			continue
 		}
 

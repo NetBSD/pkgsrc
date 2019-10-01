@@ -251,7 +251,7 @@ func (ctx *SubstContext) suggestSubstVars(mkline *MkLine) {
 
 	tokens, _ := splitIntoShellTokens(mkline.Line, mkline.Value())
 	for _, token := range tokens {
-		varname := ctx.extractVarname(mkline.UnquoteShell(token))
+		varname := ctx.extractVarname(mkline.UnquoteShell(token, false))
 		if varname == "" {
 			continue
 		}
