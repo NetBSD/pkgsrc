@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4079 2019/10/01 13:50:28 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4080 2019/10/01 13:53:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6011,9 +6011,9 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/kplotting to 5.61.0 [markd 2019-08-27]
 	Updated graphics/oxygen-icons to 5.61.0 [markd 2019-08-27]
 	Updated graphics/prison to 5.61.0 [markd 2019-08-27]
-	Updated meta-pkgs/kf5 to 5.61.0 [markd 2019-08-27]Y
+	Updated meta-pkgs/kf5 to 5.61.0 [markd 2019-08-27]
 	Updated misc/attica-qt5 to 5.61.0 [markd 2019-08-27]
-	Updated misc/kemoticons to 5.61.0 [markd 2019-08-27]Y
+	Updated misc/kemoticons to 5.61.0 [markd 2019-08-27]
 	Updated misc/kunitconversion to 5.61.0 [markd 2019-08-27]
 	Updated net/kdnssd to 5.61.0 [markd 2019-08-27]
 	Updated net/knewstuff to 5.61.0 [markd 2019-08-27]
@@ -6643,3 +6643,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/wl-snapshot to 2.15.9.20190623 [mef 2019-10-01]
 	Updated devel/py-distro to 1.4.0 [triaxx 2019-10-01]
 	Updated chat/znc to 1.7.5 [nia 2019-10-01]
+	Updated security/py-certbot to 0.38.0nb1 [wiz 2019-10-01]
