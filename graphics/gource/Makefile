@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.34 2019/08/22 12:23:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.35 2019/10/01 15:08:46 nia Exp $
 
-DISTNAME=	gource-0.40
-PKGREVISION=	17
+DISTNAME=	gource-0.49
 CATEGORIES=	graphics
-MASTER_SITES=	http://gource.googlecode.com/files/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=acaudwell/}
+GITHUB_PROJECT=	Gource
+GITHUB_RELEASE=	${DISTNAME}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://gource.io/
+HOMEPAGE=	https://gource.io/
 COMMENT=	Software version control visualization
 LICENSE=	gnu-gpl-v3
 
@@ -16,12 +17,13 @@ USE_TOOLS+=	pkg-config
 
 CONFIGURE_ARGS=	--with-boost=${BUILDLINK_PREFIX.boost-libs}
 
-.include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
-.include "../../graphics/SDL_image/buildlink3.mk"
+.include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/glm/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
