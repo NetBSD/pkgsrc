@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2019/10/01 12:25:37 nia Exp $
+bin/naev
+man/man6/naev.6
+share/appdata/naev.appdata.xml
+share/applications/naev.desktop
+share/doc/naev/AUTHORS
+share/doc/naev/LICENSE
+share/doc/naev/README
+share/doc/naev/TODO
+share/naev/naev-confupdate.sh
+share/naev/ndata
+share/pixmaps/naev.png
