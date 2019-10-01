@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4099 2019/10/01 19:41:37 rillig Exp $
+$NetBSD: CHANGES-2019,v 1.4100 2019/10/01 21:38:09 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6665,3 +6665,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated games/wesnoth to 1.14.9 [adam 2019-10-01]
 	Updated pkgtools/url2pkg to 2.37 [rillig 2019-10-01]
 	Updated pkgtools/url2pkg to 19.3.0 [rillig 2019-10-01]
+	Updated pkgtools/pkglint to 19.3.0 [rillig 2019-10-01]
