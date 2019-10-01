@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4080 2019/10/01 13:53:54 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4081 2019/10/01 13:56:11 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6644,3 +6644,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-distro to 1.4.0 [triaxx 2019-10-01]
 	Updated chat/znc to 1.7.5 [nia 2019-10-01]
 	Updated security/py-certbot to 0.38.0nb1 [wiz 2019-10-01]
+	Updated audio/musicpd to 0.21.15 [nia 2019-10-01]
