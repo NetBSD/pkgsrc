@@ -1,0 +1,3 @@
+#!/bin/sh
+BIN=$(basename "$0")
+cd "@PREFIX@/share/yquake2" && exec "@PREFIX@/libexec/$BIN" "$@"
