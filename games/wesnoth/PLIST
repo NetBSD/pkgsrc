@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2019/04/25 20:09:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.50 2019/10/01 18:15:42 adam Exp $
 bin/wesnoth
 bin/wesnothd
 man/cs/man6/wesnothd.6
@@ -6,6 +6,7 @@ man/de/man6/wesnoth.6
 man/de/man6/wesnothd.6
 man/en_GB/man6/wesnoth.6
 man/en_GB/man6/wesnothd.6
+man/es/man6/wesnoth.6
 man/es/man6/wesnothd.6
 man/et/man6/wesnothd.6
 man/fi/man6/wesnothd.6
@@ -29,13 +30,22 @@ man/sr/man6/wesnothd.6
 man/sr@ijekavian/man6/wesnothd.6
 man/sr@ijekavianlatin/man6/wesnothd.6
 man/sr@latin/man6/wesnothd.6
+man/tr/man6/wesnoth.6
+man/tr/man6/wesnothd.6
 man/uk/man6/wesnothd.6
 man/vi/man6/wesnothd.6
 man/zh_CN/man6/wesnoth.6
 man/zh_CN/man6/wesnothd.6
+man/zh_TW/man6/wesnoth.6
 man/zh_TW/man6/wesnothd.6
 ${PLIST.icons}share/applications/wesnoth.desktop
 share/doc/wesnoth/html/images/README.md
+share/doc/wesnoth/html/images/de/game-screen-1.14.8+dev.jpg
+share/doc/wesnoth/html/images/de/main-menu-1.14.8+dev.jpg
+share/doc/wesnoth/html/images/de/multiplayer-1.14.8+dev.png
+share/doc/wesnoth/html/images/de/recruit-1.14.8+dev.png
+share/doc/wesnoth/html/images/de/right-pane-1.14.8+dev.png
+share/doc/wesnoth/html/images/de/top-pane-1.14.8+dev.png
 share/doc/wesnoth/html/images/fr/game-screen-1.11.11.jpg
 share/doc/wesnoth/html/images/fr/main-menu-1.11.11.jpg
 share/doc/wesnoth/html/images/fr/multiplayer-1.11.11.jpg
@@ -78,6 +88,12 @@ share/doc/wesnoth/html/images/schedule-morning.png
 share/doc/wesnoth/html/images/schedule-secondwatch.png
 share/doc/wesnoth/html/images/schedule-underground.png
 share/doc/wesnoth/html/images/top_pane-1.13.11+dev.png
+share/doc/wesnoth/html/images/tr/game-screen-1.14.7.jpg
+share/doc/wesnoth/html/images/tr/main-menu-1.14.7.jpg
+share/doc/wesnoth/html/images/tr/multiplayer-1.14.7.jpg
+share/doc/wesnoth/html/images/tr/recruit-1.14.7.jpg
+share/doc/wesnoth/html/images/tr/right_pane-1.14.7.jpg
+share/doc/wesnoth/html/images/tr/top_pane-1.14.7.jpg
 share/doc/wesnoth/html/manual.cs.html
 share/doc/wesnoth/html/manual.de.html
 share/doc/wesnoth/html/manual.en.html
@@ -100,6 +116,7 @@ share/doc/wesnoth/html/manual.sr.html
 share/doc/wesnoth/html/manual.sr@ijekavian.html
 share/doc/wesnoth/html/manual.sr@ijekavianlatin.html
 share/doc/wesnoth/html/manual.sr@latin.html
+share/doc/wesnoth/html/manual.tr.html
 share/doc/wesnoth/html/manual.uk.html
 share/doc/wesnoth/html/manual.vi.html
 share/doc/wesnoth/html/manual.zh_CN.html
@@ -2144,7 +2161,6 @@ share/wesnoth/data/campaigns/The_South_Guard/units/Mounted_General.cfg
 share/wesnoth/data/campaigns/The_South_Guard/utils/bigmap.cfg
 share/wesnoth/data/campaigns/The_South_Guard/utils/sg_deaths.cfg
 share/wesnoth/data/campaigns/The_South_Guard/utils/sg_help.cfg
-share/wesnoth/data/campaigns/The_South_Guard/utils/sg_help_NEW.cfg
 share/wesnoth/data/campaigns/The_South_Guard/utils/sg_story.cfg
 share/wesnoth/data/campaigns/The_South_Guard/utils/sg_utils.cfg
 share/wesnoth/data/campaigns/Two_Brothers/_main.cfg
@@ -3078,8 +3094,11 @@ share/wesnoth/data/core/images/halo/undead/idle-flash-6.png
 share/wesnoth/data/core/images/halo/undead/idle-flash-7.png
 share/wesnoth/data/core/images/halo/undead/idle-flash-8.png
 share/wesnoth/data/core/images/halo/undead/idle-flash-9.png
+share/wesnoth/data/core/images/help/combat1.png
 share/wesnoth/data/core/images/help/hp-bars.png
 share/wesnoth/data/core/images/help/hpxp.png
+share/wesnoth/data/core/images/help/income-upkeep1.png
+share/wesnoth/data/core/images/help/income-upkeep2.png
 share/wesnoth/data/core/images/help/l10n/cs/hpxp.png
 share/wesnoth/data/core/images/help/l10n/cs/recruit.png
 share/wesnoth/data/core/images/help/l10n/cs/tooltip.png
@@ -3485,15 +3504,20 @@ share/wesnoth/data/core/images/portraits/merfolk/netcaster.png
 share/wesnoth/data/core/images/portraits/merfolk/priestess.png
 share/wesnoth/data/core/images/portraits/merfolk/spearman.png
 share/wesnoth/data/core/images/portraits/merfolk/triton.png
+share/wesnoth/data/core/images/portraits/monsters/bat-dread.png
+share/wesnoth/data/core/images/portraits/monsters/bat-red.png
 share/wesnoth/data/core/images/portraits/monsters/bat.png
+share/wesnoth/data/core/images/portraits/monsters/cuttlefish.png
 share/wesnoth/data/core/images/portraits/monsters/deep-tentacle.png
 share/wesnoth/data/core/images/portraits/monsters/giant-mudcrawler.png
 share/wesnoth/data/core/images/portraits/monsters/giant-rat.png
 share/wesnoth/data/core/images/portraits/monsters/giant-spider.png
 share/wesnoth/data/core/images/portraits/monsters/gryphon.png
+share/wesnoth/data/core/images/portraits/monsters/mudcrawler.png
 share/wesnoth/data/core/images/portraits/monsters/ogre.png
 share/wesnoth/data/core/images/portraits/monsters/scorpion.png
 share/wesnoth/data/core/images/portraits/monsters/sea-serpent.png
+share/wesnoth/data/core/images/portraits/monsters/water-serpent.png
 share/wesnoth/data/core/images/portraits/monsters/yeti.png
 share/wesnoth/data/core/images/portraits/monsters/young-ogre.png
 share/wesnoth/data/core/images/portraits/nagas/fighter.png
@@ -3548,11 +3572,16 @@ share/wesnoth/data/core/images/portraits/undead/zombie-drake.png
 share/wesnoth/data/core/images/portraits/undead/zombie-dwarf.png
 share/wesnoth/data/core/images/portraits/undead/zombie-goblin.png
 share/wesnoth/data/core/images/portraits/undead/zombie-gryphon.png
+share/wesnoth/data/core/images/portraits/undead/zombie-rider.png
 share/wesnoth/data/core/images/portraits/undead/zombie-saurian.png
 share/wesnoth/data/core/images/portraits/undead/zombie-swimmer.png
 share/wesnoth/data/core/images/portraits/undead/zombie-troll.png
 share/wesnoth/data/core/images/portraits/undead/zombie-wolf.png
 share/wesnoth/data/core/images/portraits/undead/zombie-wose.png
+share/wesnoth/data/core/images/portraits/wolves/wolf-chewing.png
+share/wesnoth/data/core/images/portraits/wolves/wolf-dark.png
+share/wesnoth/data/core/images/portraits/wolves/wolf-great.png
+share/wesnoth/data/core/images/portraits/wolves/wolf-red.png
 share/wesnoth/data/core/images/portraits/woses/ancient-wose.png
 share/wesnoth/data/core/images/portraits/woses/wose.png
 share/wesnoth/data/core/images/projectiles/bolas-n.png
@@ -14342,6 +14371,7 @@ share/wesnoth/data/multiplayer/scenarios/ANL_utils/ANL_auto_working.cfg
 share/wesnoth/data/multiplayer/scenarios/ANL_utils/ANL_general_macros.cfg
 share/wesnoth/data/multiplayer/scenarios/ANL_utils/ANL_help.cfg
 share/wesnoth/data/multiplayer/scenarios/ANL_utils/ANL_leader_options.cfg
+share/wesnoth/data/multiplayer/scenarios/ANL_utils/ANL_objectives.cfg
 share/wesnoth/data/multiplayer/scenarios/ANL_utils/ANL_research_options.cfg
 share/wesnoth/data/multiplayer/scenarios/ANL_utils/ANL_special_macros.cfg
 share/wesnoth/data/multiplayer/scenarios/ANL_utils/ANL_worker_options.cfg
@@ -14370,6 +14400,7 @@ share/wesnoth/data/test/maps/move_skip_sighted.map
 share/wesnoth/data/test/maps/pathfind_1.cfg
 share/wesnoth/data/test/maps/sighted_events.map
 share/wesnoth/data/test/maps/test_grunt_tod_damage.map
+share/wesnoth/data/test/maps/test_movetype.map
 share/wesnoth/data/test/multiplayer/_main.cfg
 share/wesnoth/data/test/multiplayer/macros/mp_unit_test_macros.cfg
 share/wesnoth/data/test/multiplayer/scenarios/test1.cfg
@@ -14417,6 +14448,7 @@ share/wesnoth/data/test/scenarios/test_max_menu_items.cfg
 share/wesnoth/data/test/scenarios/test_menu_items.cfg
 share/wesnoth/data/test/scenarios/test_move.cfg
 share/wesnoth/data/test/scenarios/test_move_unit.cfg
+share/wesnoth/data/test/scenarios/test_movetype.cfg
 share/wesnoth/data/test/scenarios/test_relative_dir.cfg
 share/wesnoth/data/test/scenarios/test_require.cfg
 share/wesnoth/data/test/scenarios/test_return.cfg
