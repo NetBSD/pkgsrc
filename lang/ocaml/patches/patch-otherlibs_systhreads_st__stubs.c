@@ -1,4 +1,4 @@
-$NetBSD: patch-otherlibs_systhreads_st__stubs.c,v 1.1 2019/10/01 09:07:33 maya Exp $
+$NetBSD: patch-otherlibs_systhreads_st__stubs.c,v 1.2 2019/10/01 09:52:51 maya Exp $
 
 Make the POSIX sigwait visible on SmartOS
 
@@ -9,7 +9,7 @@ Make the POSIX sigwait visible on SmartOS
  #define CAML_INTERNALS
  
 +/* Needed for sigwait */
-+#define _XOPEN_SOURCE 500
++#define _POSIX_PTHREAD_SEMANTICS
 +
  #include "caml/alloc.h"
  #include "caml/backtrace.h"
