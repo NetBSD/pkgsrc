@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/08/01 13:42:54 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/10/01 21:48:26 nia Exp $
 bin/aubiomfcc
 bin/aubionotes
 bin/aubioonset
@@ -63,11 +63,11 @@ lib/libaubio.so
 lib/libaubio.so.5
 lib/libaubio.so.5.4.8
 lib/pkgconfig/aubio.pc
-share/man/man1/aubio.1
-share/man/man1/aubiocut.1
-share/man/man1/aubiomfcc.1
-share/man/man1/aubionotes.1
-share/man/man1/aubioonset.1
-share/man/man1/aubiopitch.1
-share/man/man1/aubioquiet.1
-share/man/man1/aubiotrack.1
+man/man1/aubio.1
+man/man1/aubiocut.1
+man/man1/aubiomfcc.1
+man/man1/aubionotes.1
+man/man1/aubioonset.1
+man/man1/aubiopitch.1
+man/man1/aubioquiet.1
+man/man1/aubiotrack.1
