@@ -1,0 +1,24 @@
+$NetBSD: patch-data_CMakeLists.txt,v 1.1 2019/10/01 17:47:01 adam Exp $
+
+Do not use application bundle on Darwin.
+
+--- data/CMakeLists.txt.orig	2019-10-01 15:30:10.000000000 +0000
++++ data/CMakeLists.txt
+@@ -24,7 +24,7 @@ SET_TARGET_PROPERTIES(splash PROPERTIES 
+ 
+ ########### icon target ###############
+ ADD_CUSTOM_TARGET(icon ALL)
+-IF(APPLE)
++IF(FALSE)
+ 	SET(_iconFile Icon.icns)
+ 	IF(NOT STELLARIUM_RELEASE_BUILD)
+ 		GET_FILENAME_COMPONENT(_iconSrcFile IconGray.icns ABSOLUTE)
+@@ -48,7 +48,7 @@ ADD_CUSTOM_COMMAND(
+ SET_TARGET_PROPERTIES(icon PROPERTIES FOLDER "data")
+ 
+ # install splash and icon
+-IF(APPLE)
++IF(FALSE)
+         INSTALL(FILES ${_iconDstFile} DESTINATION ${SDATALOC} RENAME ${_iconFile})
+         INSTALL(FILES ${_splashDstFile} DESTINATION ${SDATALOC}/data RENAME ${_splashFile})
+ 	INSTALL(FILES Info.plist PkgInfo DESTINATION .)
