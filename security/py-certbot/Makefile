@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2019/10/01 13:29:58 triaxx Exp $
+# $NetBSD: Makefile,v 1.18 2019/10/01 13:53:45 wiz Exp $
 
 DISTNAME=	certbot-${CERTBOT_VERSION}
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/certbot/}
 
 MAINTAINER=	fhajny@NetBSD.org
