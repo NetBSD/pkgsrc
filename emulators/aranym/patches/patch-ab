@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.2 2008/07/30 14:08:59 hauke Exp $
+$NetBSD: patch-ab,v 1.3 2019/10/01 14:54:59 nia Exp $
+
+This script works in standard sh.
 
 --- tools/arabridge.orig	2006-02-11 10:46:41.000000000 +0100
 +++ tools/arabridge

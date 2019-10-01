@@ -1,16 +1,14 @@
-$NetBSD: distinfo,v 1.15 2015/11/03 20:30:55 agc Exp $
+$NetBSD: distinfo,v 1.16 2019/10/01 14:54:59 nia Exp $
 
-SHA1 (aranym_1.0.2.orig.tar.gz) = ac46a8c8d5c572e07e30458444f68b2dcbb7df2a
-RMD160 (aranym_1.0.2.orig.tar.gz) = 68c6813ce38f495916156cb39ab216e9d67a50e4
-SHA512 (aranym_1.0.2.orig.tar.gz) = 5fb88b77df33e46c0000977ed256b795f6cf040079cfbbb9af91ce8578f2ea385c2ffeeba7cf90ae53b0c4341458639b5643d07edc7bbd3f7e772a0e9659a01d
-Size (aranym_1.0.2.orig.tar.gz) = 2100463 bytes
-SHA1 (emutos-512k-0.9.4.zip) = b46f81dec4574afdc670da14b3bf92452a278a7d
-RMD160 (emutos-512k-0.9.4.zip) = b6e9411090474f8d4eb060d97d1d5a91ccd60f79
-SHA512 (emutos-512k-0.9.4.zip) = 00c8718f364712f5d346859dc40ed83c1792521c9600520aacf199f7d6b24d5cf7a3e2533e1e343d6aa9e77ed3056f8636713bb7c3e9739254e0658c921a78a8
-Size (emutos-512k-0.9.4.zip) = 314877 bytes
-SHA1 (patch-ab) = 8796751780cc559acd089298f3e8a0918d36db3a
-SHA1 (patch-ac) = 8899894456b01c84efd9f96f553750c87df7c21a
-SHA1 (patch-ad) = bb8d6b2ecd0c0066f3032a0ef196a1adb51d1786
-SHA1 (patch-ae) = 6c7ab7cf17bb9da5944c9a09474079bcfe7e7f43
-SHA1 (patch-configure.ac) = 47da314e86b00c9779fc82250de1f6d7a5d65fcd
-SHA1 (patch-src_uae__cpu_fpu_fpu__mpfr.cpp) = c492c198a746d62470112b7a7367692d47e16b61
+SHA1 (aranym_1.1.0.orig.tar.gz) = 88901bba4c727896f32cd0fc3529babe54d35dd2
+RMD160 (aranym_1.1.0.orig.tar.gz) = 16a6ddc730e3d3847b01cf07a5b516377e080fca
+SHA512 (aranym_1.1.0.orig.tar.gz) = 723b1a7c80532734e1dea288dbffd66746d9c7d1302ccb0259248a26aac5dedc7f66a134929de7064686af6c676d10918d90e2cf58cb010fd445979945177b51
+Size (aranym_1.1.0.orig.tar.gz) = 3785612 bytes
+SHA1 (emutos-512k-0.9.11.zip) = 4ee620306af2b37f97f0e619370cf86841649112
+RMD160 (emutos-512k-0.9.11.zip) = 01ba1677f7dbf1c224830d3092ce2695344fc23c
+SHA512 (emutos-512k-0.9.11.zip) = b4f8e401dc3263b9040ed17bc0270aa1090519fa4b49802b9d7812a5e4e646b83bf9c459e24880aa6b85e6c0b66c4c69438303f0b8e4085b6a310a461956645e
+Size (emutos-512k-0.9.11.zip) = 284126 bytes
+SHA1 (patch-ab) = 471cd0af0571eb63142c7933911e70500afeba6d
+SHA1 (patch-ad) = 3f715630ead6f0cb10d0bf71751c07d12e58e0f3
+SHA1 (patch-ae) = 21fecc68e1b2a3548d57f2908264122ed950dfdb
+SHA1 (patch-configure) = 1520c311d534e3aae1d257279cecc5ff39be6a4b

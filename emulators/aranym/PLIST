@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2015/03/24 14:34:57 ryoon Exp $
-bin/aranym
-${PLIST.aratapif}bin/aratapif
-man/man1/aranym-jit.1
+@comment $NetBSD: PLIST,v 1.8 2019/10/01 14:54:59 nia Exp $
+bin/aranym-mmu
 man/man1/aranym-mmu.1
 man/man1/aranym.1
-${PLIST.aratapif}man/man1/aratapif.1
+share/applications/aranym-mmu.desktop
 share/aranym/arabridge
 share/aranym/atari/hostfs/README
 share/aranym/atari/hostfs/bdconfig.sys
@@ -18,7 +16,7 @@ share/aranym/atari/tools/README
 share/aranym/atari/tools/pc101us.kbd.bz2
 share/aranym/etos512k.img
 share/aranym/floppy.sh
-share/aranym/logo.png
+share/aranym/logo.bmp
 share/aranym/wm_icon.bmp
 share/doc/aranym/AUTHORS
 share/doc/aranym/BUGS
@@ -36,6 +34,14 @@ share/doc/aranym/emutos/changelog.txt
 share/doc/aranym/emutos/license.txt
 share/doc/aranym/emutos/readme.txt
 share/doc/aranym/emutos/status.txt
-@pkgdir share/aranym/atari/nfosmesa
+share/icons/hicolor/32x32/apps/aranym-jit.png
+share/icons/hicolor/32x32/apps/aranym-mmu.png
+share/icons/hicolor/32x32/apps/aranym.png
+share/icons/hicolor/48x48/apps/aranym-jit.png
+share/icons/hicolor/48x48/apps/aranym-mmu.png
+share/icons/hicolor/48x48/apps/aranym.png
+share/pixmaps/aranym-jit.png
+share/pixmaps/aranym-mmu.png
+share/pixmaps/aranym.png
 @pkgdir share/aranym/atari/nfjpeg
 @pkgdir share/aranym/atari/nfcdrom
