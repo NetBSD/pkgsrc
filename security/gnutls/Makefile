@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.201 2019/09/30 09:51:16 maya Exp $
+# $NetBSD: Makefile,v 1.202 2019/10/01 14:34:08 nia Exp $
 
 DISTNAME=	gnutls-3.6.9
 PKGREVISION=	2
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnutls.org/
-COMMENT=	GNU Transport Layer Security library
+COMMENT=	Transport Layer Security library
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2.1
 
 DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
