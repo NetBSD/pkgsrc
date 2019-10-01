@@ -99,7 +99,7 @@ func (s *Suite) Test_MkVarUseModifier_MatchSubst__backslash(c *check.C) {
 
 	t.CheckEquals(ok, true)
 	t.CheckEquals(regex, false)
-	t.CheckEquals(from, "\\/")
+	t.CheckEquals(from, "/")
 	t.CheckEquals(to, "\\:")
 	t.CheckEquals(options, "")
 }
