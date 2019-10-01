@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.1 2019/10/01 12:30:31 nia Exp $
+
+SHA1 (srb2-2.1.25/srb2-assets-opt.7z) = f09f5efee621fe1bc1a7068896b510b694ab8a9b
+RMD160 (srb2-2.1.25/srb2-assets-opt.7z) = 1cbe9232e14160c3e12b385aea4532b4f76469cc
+SHA512 (srb2-2.1.25/srb2-assets-opt.7z) = 3731da769a0c252978491bb870dbc9543cb128436a1378deaf8998ae4df49d1e4f2ecb15460f0c84589b41642e78d5f40b9397aa81c404ad92409b986632924f
+Size (srb2-2.1.25/srb2-assets-opt.7z) = 62331891 bytes
+SHA1 (srb2-2.1.25/srb2-assets.7z) = 2bf6accbcb5c3da98ed3cb9941206cb6c443de11
+RMD160 (srb2-2.1.25/srb2-assets.7z) = 222b720ef90c48cbf1986e5369ca7937bb7e9723
+SHA512 (srb2-2.1.25/srb2-assets.7z) = 35d4a9c37471a0bae02ee02b5fa219c58267dd302abf9db192bdb7caa04480827dabcff563ded1cc5d2a835d5d5b2f565471d433bd223701885e96d4267b5e74
+Size (srb2-2.1.25/srb2-assets.7z) = 30548941 bytes
+SHA1 (srb2-2.1.25/srb2.tar.gz) = 95b2b6dee5e12a461186aa77bef59fa06f045cbc
+RMD160 (srb2-2.1.25/srb2.tar.gz) = 9ad85067c1fe60afa6fa94ac21dfd96cf3b65419
+SHA512 (srb2-2.1.25/srb2.tar.gz) = 4f31bd3423aac00950b3ef148f9c27e6065b67630743d8ffcba452f4f75e5c62cc01955d621317ce765b9347545a96e3b087680d9b75577e94d86440c49636d8
+Size (srb2-2.1.25/srb2.tar.gz) = 50635514 bytes
+SHA1 (patch-src_sdl_i__system.c) = 6b57a1b61acff2db54869b610f1bca5d5b2d7126
