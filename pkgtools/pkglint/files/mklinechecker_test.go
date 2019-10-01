@@ -1323,9 +1323,9 @@ func (s *Suite) Test_MkLineChecker_checkVarusePermissions__load_time(c *check.C)
 func (s *Suite) Test_MkLineChecker_checkVarusePermissions__load_time_in_condition(c *check.C) {
 	t := s.Init(c)
 
-	G.Pkgsrc.vartypes.DefineParse("LOAD_TIME", BtPathmask, List,
+	G.Pkgsrc.vartypes.DefineParse("LOAD_TIME", BtPathPattern, List,
 		"special:filename.mk: use-loadtime")
-	G.Pkgsrc.vartypes.DefineParse("RUN_TIME", BtPathmask, List,
+	G.Pkgsrc.vartypes.DefineParse("RUN_TIME", BtPathPattern, List,
 		"special:filename.mk: use")
 
 	mklines := t.NewMkLines("filename.mk",
@@ -1342,9 +1342,9 @@ func (s *Suite) Test_MkLineChecker_checkVarusePermissions__load_time_in_conditio
 func (s *Suite) Test_MkLineChecker_checkVarusePermissions__load_time_in_for_loop(c *check.C) {
 	t := s.Init(c)
 
-	G.Pkgsrc.vartypes.DefineParse("LOAD_TIME", BtPathmask, List,
+	G.Pkgsrc.vartypes.DefineParse("LOAD_TIME", BtPathPattern, List,
 		"special:filename.mk: use-loadtime")
-	G.Pkgsrc.vartypes.DefineParse("RUN_TIME", BtPathmask, List,
+	G.Pkgsrc.vartypes.DefineParse("RUN_TIME", BtPathPattern, List,
 		"special:filename.mk: use")
 
 	mklines := t.NewMkLines("filename.mk",
@@ -1491,7 +1491,7 @@ func (s *Suite) Test_MkLineChecker_checkVarusePermissions__write_only_usable_in_
 func (s *Suite) Test_MkLineChecker_checkVarusePermissions__usable_only_at_loadtime_in_other_file(c *check.C) {
 	t := s.Init(c)
 
-	G.Pkgsrc.vartypes.DefineParse("VAR", BtFileName, NoVartypeOptions,
+	G.Pkgsrc.vartypes.DefineParse("VAR", BtFilename, NoVartypeOptions,
 		"*: set, use-loadtime")
 	mklines := t.NewMkLines("Makefile",
 		MkCvsID,
@@ -1754,6 +1754,9 @@ func (s *Suite) Test_MkLineChecker_CheckRelativePkgdir(c *check.C) {
 
 	test("../../other/does-not-exist",
 		"ERROR: ~/category/package/Makefile:1: Relative path \"../../other/does-not-exist/Makefile\" does not exist.")
+
+	test("${OTHER_PACKAGE}",
+		nil...)
 }
 
 // PR pkg/46570, item 2
@@ -1782,24 +1785,24 @@ func (s *Suite) Test_MkLineChecker_Check__varuse_modifier_L(c *check.C) {
 
 	t.SetUpVartypes()
 	mklines := t.NewMkLines("x11/xkeyboard-config/Makefile",
-		"FILES_SUBST+=XKBCOMP_SYMLINK=${${XKBBASE}/xkbcomp:L:Q}",
-		"FILES_SUBST+=XKBCOMP_SYMLINK=${${XKBBASE}/xkbcomp:Q}")
+		MkCvsID,
+		"FILES_SUBST+=\tXKBCOMP_SYMLINK=${${XKBBASE}/xkbcomp:L:Q}",
+		"FILES_SUBST+=\tXKBCOMP_SYMLINK=${${XKBBASE}/xkbcomp:Q}")
 
-	MkLineChecker{mklines, mklines.mklines[0]}.Check()
-	MkLineChecker{mklines, mklines.mklines[1]}.Check()
+	mklines.Check()
 
-	// In line 1, don't warn that ${XKBBASE}/xkbcomp is used but not defined.
+	// In line 2, don't warn that ${XKBBASE}/xkbcomp is used but not defined.
 	// This is because the :L modifier interprets everything before as an expression
 	// instead of a variable name.
 	//
-	// In line 2 the :L modifier is missing, therefore ${XKBBASE}/xkbcomp is the
+	// In line 3 the :L modifier is missing, therefore ${XKBBASE}/xkbcomp is the
 	// name of another variable, and that variable is not known. Only XKBBASE is known.
 	//
-	// In line 2, warn about the invalid "/" as part of the variable name.
+	// In line 3, warn about the invalid "/" as part of the variable name.
 	t.CheckOutputLines(
-		"WARN: x11/xkeyboard-config/Makefile:2: "+
+		"WARN: x11/xkeyboard-config/Makefile:3: "+
 			"Invalid part \"/xkbcomp\" after variable name \"${XKBBASE}\".",
-		"WARN: x11/xkeyboard-config/Makefile:2: XKBBASE is used but not defined.")
+		"WARN: x11/xkeyboard-config/Makefile:3: XKBBASE is used but not defined.")
 }
 
 func (s *Suite) Test_MkLineChecker_checkDirectiveCond__comparison_with_shell_command(c *check.C) {
@@ -1860,10 +1863,18 @@ func (s *Suite) Test_MkLineChecker_checkDirectiveCondEmpty(c *check.C) {
 		ck := MkLineChecker{mklines, mklines.mklines[1]}
 
 		t.SetUpCommandLine("-Wall")
-		ck.checkDirectiveCond()
+		mklines.ForEach(func(mkline *MkLine) {
+			if mkline == mklines.mklines[1] {
+				ck.checkDirectiveCond()
+			}
+		})
 
 		t.SetUpCommandLine("-Wall", "--autofix")
-		ck.checkDirectiveCond()
+		mklines.ForEach(func(mkline *MkLine) {
+			if mkline == mklines.mklines[1] {
+				ck.checkDirectiveCond()
+			}
+		})
 
 		mklines.SaveAutofixChanges()
 		afterMklines := t.LoadMkInclude("module.mk")
@@ -1944,18 +1955,18 @@ func (s *Suite) Test_MkLineChecker_checkDirectiveCondEmpty(c *check.C) {
 		//  test for emptiness, therefore the diagnostics should suggest
 		//  the != operator instead of ==.
 		"NOTE: module.mk:2: PKGPATH should be compared using == instead of matching against \":Mpattern\".",
-		"AUTOFIX: module.mk:2: Replacing \"!empty(PKGPATH:Mpattern)\" with \"(${PKGPATH} == pattern)\".",
+		"AUTOFIX: module.mk:2: Replacing \"!empty(PKGPATH:Mpattern)\" with \"${PKGPATH} == pattern\".",
 
-		// TODO: This condition could be simplified even more.
+		// TODO: The ! and == could be combined into a !=.
 		//  Luckily the !! pattern doesn't occur in practice.
-		".if !(${PKGPATH} == pattern)")
+		".if !${PKGPATH} == pattern")
 
 	test(".if empty(PKGPATH:Mpattern) || 0",
 
 		"NOTE: module.mk:2: PKGPATH should be compared using != instead of matching against \":Mpattern\".",
-		"AUTOFIX: module.mk:2: Replacing \"empty(PKGPATH:Mpattern)\" with \"(${PKGPATH} != pattern)\".",
+		"AUTOFIX: module.mk:2: Replacing \"empty(PKGPATH:Mpattern)\" with \"${PKGPATH} != pattern\".",
 
-		".if (${PKGPATH} != pattern) || 0")
+		".if ${PKGPATH} != pattern || 0")
 
 	// No note in this case since there is no implicit !empty around the varUse.
 	test(".if ${PKGPATH:Mpattern} != ${OTHER}",
@@ -1984,9 +1995,9 @@ func (s *Suite) Test_MkLineChecker_checkDirectiveCondEmpty(c *check.C) {
 		".if !!${PKGPATH:Mpattern}",
 
 		"NOTE: module.mk:2: PKGPATH should be compared using != instead of matching against \":Mpattern\".",
-		"AUTOFIX: module.mk:2: Replacing \"!${PKGPATH:Mpattern}\" with \"(${PKGPATH} != pattern)\".",
+		"AUTOFIX: module.mk:2: Replacing \"!${PKGPATH:Mpattern}\" with \"${PKGPATH} != pattern\".",
 
-		".if !(${PKGPATH} != pattern)")
+		".if !${PKGPATH} != pattern")
 
 	// This pattern with spaces doesn't make sense at all in the :M
 	// modifier since it can never match.
@@ -1995,7 +2006,8 @@ func (s *Suite) Test_MkLineChecker_checkDirectiveCondEmpty(c *check.C) {
 	test(
 		".if ${PKGPATH:Mpattern with spaces}",
 
-		"WARN: module.mk:2: The pathname pattern \"pattern with spaces\" contains the invalid characters \"  \".",
+		"WARN: module.mk:2: The pathname pattern \"pattern with spaces\" "+
+			"contains the invalid characters \"  \".",
 
 		".if ${PKGPATH:Mpattern with spaces}")
 	// TODO: ".if ${PKGPATH} == \"pattern with spaces\"")
@@ -2003,7 +2015,8 @@ func (s *Suite) Test_MkLineChecker_checkDirectiveCondEmpty(c *check.C) {
 	test(
 		".if ${PKGPATH:M'pattern with spaces'}",
 
-		"WARN: module.mk:2: The pathname pattern \"'pattern with spaces'\" contains the invalid characters \"'  '\".",
+		"WARN: module.mk:2: The pathname pattern \"'pattern with spaces'\" "+
+			"contains the invalid characters \"'  '\".",
 
 		".if ${PKGPATH:M'pattern with spaces'}")
 	// TODO: ".if ${PKGPATH} == 'pattern with spaces'")
@@ -2011,7 +2024,8 @@ func (s *Suite) Test_MkLineChecker_checkDirectiveCondEmpty(c *check.C) {
 	test(
 		".if ${PKGPATH:M&&}",
 
-		"WARN: module.mk:2: The pathname pattern \"&&\" contains the invalid characters \"&&\".",
+		"WARN: module.mk:2: The pathname pattern \"&&\" "+
+			"contains the invalid characters \"&&\".",
 
 		".if ${PKGPATH:M&&}")
 	// TODO: ".if ${PKGPATH} == '&&'")
@@ -2051,11 +2065,10 @@ func (s *Suite) Test_MkLineChecker_checkDirectiveCondEmpty(c *check.C) {
 
 		"NOTE: module.mk:2: PKGPATH should be compared using == instead of matching against \":Mpath1\".",
 		"NOTE: module.mk:2: PKGPATH should be compared using == instead of matching against \":Mpath2\".",
-		"AUTOFIX: module.mk:2: Replacing \"${PKGPATH:Mpath1}\" with \"(${PKGPATH} == path1)\".",
-		"AUTOFIX: module.mk:2: Replacing \"${PKGPATH:Mpath2}\" with \"(${PKGPATH} == path2)\".",
+		"AUTOFIX: module.mk:2: Replacing \"${PKGPATH:Mpath1}\" with \"${PKGPATH} == path1\".",
+		"AUTOFIX: module.mk:2: Replacing \"${PKGPATH:Mpath2}\" with \"${PKGPATH} == path2\".",
 
-		// TODO: remove the redundant parentheses
-		".if (${PKGPATH} == path1) || (${PKGPATH} == path2)")
+		".if ${PKGPATH} == path1 || ${PKGPATH} == path2")
 
 	test(
 		".if (((((${PKGPATH:Mpath})))))",
@@ -2064,6 +2077,15 @@ func (s *Suite) Test_MkLineChecker_checkDirectiveCondEmpty(c *check.C) {
 		"AUTOFIX: module.mk:2: Replacing \"${PKGPATH:Mpath}\" with \"${PKGPATH} == path\".",
 
 		".if (((((${PKGPATH} == path)))))")
+
+	// Note: this combination doesn't make sense since the patterns "one" and "two" don't overlap.
+	test(
+		".if ${PKGPATH:Mone:Mtwo}",
+
+		"NOTE: module.mk:2: PKGPATH should be compared using == instead of matching against \":Mone\".",
+		"NOTE: module.mk:2: PKGPATH should be compared using == instead of matching against \":Mtwo\".",
+
+		".if ${PKGPATH:Mone:Mtwo}")
 }
 
 func (s *Suite) Test_MkLineChecker_checkDirectiveCond__comparing_PKGSRC_COMPILER_with_eqeq(c *check.C) {
@@ -2109,12 +2131,14 @@ func (s *Suite) Test_MkLineChecker_checkVartype__CFLAGS_with_backticks(c *check.
 
 	words := mkline.Fields()
 
-	t.CheckDeepEquals(words, []string{"`pkg-config pidgin --cflags`"})
+	// bmake handles backticks in the same way, treating them as ordinary characters
+	t.CheckDeepEquals(words, []string{"`pkg-config", "pidgin", "--cflags`"})
 
 	ck := MkLineChecker{mklines, mklines.mklines[1]}
 	ck.checkVartype("CFLAGS", opAssignAppend, "`pkg-config pidgin --cflags`", "")
 
 	// No warning about "`pkg-config" being an unknown CFlag.
+	// As of September 2019, there is no such check anymore in pkglint.
 	t.CheckOutputEmpty()
 }
 

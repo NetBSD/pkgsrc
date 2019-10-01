@@ -183,11 +183,18 @@ func (s *Suite) Test_ShellLineChecker_CheckShellCommandLine(c *check.C) {
 		"NOTE: filename.mk:1: The :Q modifier isn't necessary for ${PKGNAME} here.")
 
 	test("echo \"${CFLAGS:Q}\"", // VucQuotDquot
-		"WARN: filename.mk:1: The :Q modifier should not be used inside double quotes.",
+
+		// ShellLineChecker.checkVaruseToken
+		"WARN: filename.mk:1: The :Q modifier should not be used inside quotes.",
+
+		// ShellLineChecker.checkVaruseToken
+		//     MkLineChecker.CheckVaruse
+		//         MkLineChecker.checkVarUseQuoting
 		"WARN: filename.mk:1: Please use ${CFLAGS:M*:Q} instead of ${CFLAGS:Q} "+
 			"and make sure the variable appears outside of any quoting characters.")
 
 	test("echo '${COMMENT:Q}'", // VucQuotSquot
+		"WARN: filename.mk:1: The :Q modifier should not be used inside quotes.",
 		"WARN: filename.mk:1: Please move ${COMMENT:Q} outside of any quoting characters.")
 
 	test("echo target=$@ exitcode=$$? '$$' \"\\$$\"",
@@ -1461,6 +1468,33 @@ func (s *Suite) Test_SimpleCommandChecker_checkAutoMkdirs(c *check.C) {
 	// therefore only INSTALLATION_DIRS is suggested.
 	test("${RUN} ${INSTALL_DATA_DIR} ${PREFIX}/share/other",
 		"NOTE: filename.mk:1: You can use \"INSTALLATION_DIRS+= share/other\" instead of \"${INSTALL_DATA_DIR}\".")
+}
+
+func (s *Suite) Test_SimpleCommandChecker_checkAutoMkdirs__redundant(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"AUTO_MKDIRS=\tyes",
+		"INSTALLATION_DIRS+=\tshare/redundant",
+		"INSTALLATION_DIRS+=\tnot/redundant ${EGDIR}")
+	t.CreateFileLines("category/package/PLIST",
+		PlistCvsID,
+		"share/redundant/file",
+		"${EGDIR}/file")
+
+	t.Main("-Wall", "-q", "category/package")
+
+	t.CheckOutputLines(
+		"NOTE: ~/category/package/Makefile:21: The directory \"share/redundant\" "+
+			"is redundant in INSTALLATION_DIRS.",
+		// The below is not proven to be always correct. It assumes that a
+		// variable in the Makefile has the same value as the corresponding
+		// variable from PLIST_SUBST. Violating this assumption would be
+		// confusing to the pkgsrc developers, therefore it's a safe bet.
+		// A notable counterexample is PKGNAME in PLIST, which corresponds
+		// to PKGNAME_NOREV in the package Makefile.
+		"NOTE: ~/category/package/Makefile:22: The directory \"${EGDIR}\" "+
+			"is redundant in INSTALLATION_DIRS.")
 }
 
 // The AUTO_MKDIRS code in mk/install/install.mk (install-dirs-from-PLIST)

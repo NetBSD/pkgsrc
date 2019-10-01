@@ -464,7 +464,7 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__default(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: ~/category/package/Makefile:3: The package is being downgraded from 2.0 (see ../../doc/CHANGES-2018:9) to 1.0.",
 		"1 warning found.",
-		"(Run \"pkglint -e\" to show explanations.)")
+		t.Shquote("(Run \"pkglint -e %s\" to show explanations.)", "category/package"))
 
 	// Only when the global checks are enabled, the errors from doc/CHANGES are shown.
 	t.Main("-Cglobal", "-Wall", ".")
@@ -475,7 +475,7 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__default(c *check.C) {
 		"WARN: ~/doc/CHANGES-2018:8: Unknown doc/CHANGES line: \tInvalid pkgpath to 1.16 [rillig 2019-06-16]",
 		"WARN: ~/doc/CHANGES-2018:9: Year \"2019\" for category/package does not match the filename ~/doc/CHANGES-2018.",
 		"4 warnings found.",
-		"(Run \"pkglint -e\" to show explanations.)")
+		t.Shquote("(Run \"pkglint -e -Cglobal -Wall %s\" to show explanations.)", "."))
 }
 
 func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__wrong_indentation(c *check.C) {
@@ -496,7 +496,7 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__wrong_indentation(c *check.C
 		"WARN: ~/doc/CHANGES-2018:5: Package changes should be indented using a single tab, not \"        \".",
 		"WARN: ~/doc/CHANGES-2018:6: Package changes should be indented using a single tab, not \"    \\t\".",
 		"2 warnings found.",
-		"(Run \"pkglint -e\" to show explanations.)")
+		t.Shquote("(Run \"pkglint -e -Cglobal -Wall %s\" to show explanations.)", "category/package"))
 }
 
 // Once or twice in a decade, changes to the pkgsrc infrastructure are also
@@ -967,12 +967,12 @@ func (s *Suite) Test_Pkgsrc_VariableType__varparam(c *check.C) {
 	t1 := G.Pkgsrc.VariableType(nil, "FONT_DIRS")
 
 	c.Assert(t1, check.NotNil)
-	t.CheckEquals(t1.String(), "PathMask (list, guessed)")
+	t.CheckEquals(t1.String(), "PathPattern (list, guessed)")
 
 	t2 := G.Pkgsrc.VariableType(nil, "FONT_DIRS.ttf")
 
 	c.Assert(t2, check.NotNil)
-	t.CheckEquals(t2.String(), "PathMask (list, guessed)")
+	t.CheckEquals(t2.String(), "PathPattern (list, guessed)")
 }
 
 // Guessing the variable type also works for variables that are
@@ -1019,7 +1019,7 @@ func (s *Suite) Test_Pkgsrc_VariableType__from_mk(c *check.C) {
 		"WARN: ~/category/package/Makefile:21: PKGSRC_UNKNOWN_ENV is defined but not used.",
 		"WARN: ~/category/package/Makefile:21: ABCPATH is used but not defined.",
 		"2 warnings found.",
-		"(Run \"pkglint -e\" to show explanations.)")
+		t.Shquote("(Run \"pkglint -e -Wall %s\" to show explanations.)", "category/package"))
 }
 
 func (s *Suite) Test_Pkgsrc_guessVariableType__SKIP(c *check.C) {

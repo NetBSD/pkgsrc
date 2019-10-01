@@ -1048,6 +1048,31 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__D_and_U_modifiers(c *check.C) 
 	t.CheckOutputEmpty()
 }
 
+func (s *Suite) Test_MkLine_VariableNeedsQuoting__only_D_modifier(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+
+	mklines := t.SetUpFileMkLines("Makefile",
+		MkCvsID,
+		"",
+		"SUBST_CLASSES+=\t\turl2pkg",
+		"SUBST_STAGE.url2pkg=\tpost-configure",
+		"SUBST_FILES.url2pkg=\t*.in",
+		"SUBST_SED.url2pkg=\t-e 's,@PKGSRCDIR@,${BATCH:D${PKGSRCDIR}},'")
+
+	mklines.Check()
+
+	// Since the value of the BATCH variable does not appear in the output,
+	// there should be no warning saying that "BATCH should be quoted".
+	// If any, the variable PKGSRCDIR should be quoted, but that is a safe
+	// variable since it is a pkgsrc-specific directory and it appears as
+	// part of a word, therefore it cannot result in an empty string.
+	// FIXME: Don't warn in this situation.
+	t.CheckOutputLines(
+		"WARN: ~/Makefile:6: The variable BATCH should be quoted as part of a shell word.")
+}
+
 // As of October 2018, these examples from real pkgsrc end up in the
 // final "unknown" case.
 func (s *Suite) Test_MkLine_VariableNeedsQuoting__uncovered_cases(c *check.C) {
@@ -1338,6 +1363,56 @@ func (s *Suite) Test_MkLine_ValueFields(c *check.C) {
 		"${VAR2}two",
 		"words;;;",
 		"'word three'")
+
+	test("\"double quotes\" group words",
+		"\"double quotes\"",
+		"group",
+		"words")
+
+	test("\"unfinished",
+		nil...) // the rest is silently discarded
+
+	test("'single quotes' group words",
+		"'single quotes'",
+		"group",
+		"words")
+
+	test("'unfinished",
+		nil...) // the rest is silently discarded
+
+	// This is how it works in bmake.
+	test("'\\' ' end",
+		"'\\'") // the "' end" is silently discarded
+
+	// This is how it works in pkglint.
+	test("'\\' end",
+		"'\\'",
+		"end")
+
+	test("`backticks do not group words`",
+		"`backticks",
+		"do",
+		"not",
+		"group",
+		"words`")
+
+	test("plain${VAR}plain",
+		"plain${VAR}plain")
+
+	test("\"${DOUBLE}\" \"\\${DOUBLE}\"",
+		"\"${DOUBLE}\"",
+		"\"\\${DOUBLE}\"")
+
+	test("'${SINGLE}' '\\${SINGLE}'",
+		"'${SINGLE}'",
+		"'\\${SINGLE}'")
+
+	test("\"\"''\"\"",
+		"\"\"''\"\"")
+
+	test("$@ $<",
+		"$@",
+		"$<")
 }
 
 // Before 2018-11-26, this test panicked.
@@ -2024,9 +2099,11 @@ func (s *Suite) Test_MkLine_ForEachUsed(c *check.C) {
 func (s *Suite) Test_MkLine_UnquoteShell(c *check.C) {
 	t := s.Init(c)
 
-	test := func(input, output string) {
-		unquoted := (*MkLine).UnquoteShell(nil, input)
+	test := func(input, output string, diagnostics ...string) {
+		mkline := t.NewMkLine("filename.mk", 1, "")
+		unquoted := mkline.UnquoteShell(input, true)
 		t.CheckEquals(unquoted, output)
+		t.CheckOutput(diagnostics)
 	}
 
 	test("", "")
@@ -2046,8 +2123,28 @@ func (s *Suite) Test_MkLine_UnquoteShell(c *check.C) {
 	test("\\", "")
 	test("\"\\", "")
 	test("'", "")
-	test("\"$(\"", "$(")
+
+	test("\"$(\"", "$(\"",
+		"WARN: filename.mk:1: Missing closing \")\" for \"\\\"\".",
+		"WARN: filename.mk:1: Invalid part \"\\\"\" after variable name \"\".")
+
 	test("`", "`")
+
+	// Quotes inside a varuse are not unquoted.
+	test("${VAR}", "${VAR}")
+	test("${VAR:S,',',g}", "${VAR:S,',',g}")
+
+	test("\"*?[\"", "*?[")
+	test("'*?['", "*?[")
+
+	test("*?[", "*?[",
+		"WARN: filename.mk:1: The \"*\" in the word \"*?[\" may lead to unintended file globbing.",
+		"WARN: filename.mk:1: The \"?\" in the word \"*?[\" may lead to unintended file globbing.",
+		"WARN: filename.mk:1: The \"[\" in the word \"*?[\" may lead to unintended file globbing.")
+
+	test("'single'*\"double\"", "single*double",
+		"WARN: filename.mk:1: The \"*\" in the word \"'single'*\\\"double\\\"\" "+
+			"may lead to unintended file globbing.")
 }
 
 func (s *Suite) Test_MkLineParser_unescapeComment(c *check.C) {
