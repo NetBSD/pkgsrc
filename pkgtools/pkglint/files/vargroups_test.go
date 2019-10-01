@@ -202,7 +202,8 @@ func (s *Suite) Test_VargroupsChecker__used_in_BUILD_DEFS(c *check.C) {
 		"",
 		".if ${USER_VAR:U}",
 		".endif",
-		"BUILD_DEFS+=\t${_USER_VARS.group}")
+		"BUILD_DEFS+=\t\t${_USER_VARS.group}",
+		"BUILD_DEFS_EFFECTS+=\t${_SYS_VARS.group}")
 
 	mklines.Check()
 
@@ -220,6 +221,8 @@ func (s *Suite) Test_VargroupsChecker__ignore(c *check.C) {
 		"",
 		"_VARGROUPS+=\t\tgroup",
 		"_IGN_VARS.group=\tPREFER_*",
+		"_IGN_VARS.group+=\t[",
+		"_UNDERSCORE=\t\t_", // This is not an isVargroups name.
 		"",
 		".if ${PREFER_PKGSRC:U} || ${WRKOBJDIR:U}",
 		".endif")
@@ -227,5 +230,38 @@ func (s *Suite) Test_VargroupsChecker__ignore(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"WARN: Makefile:6: Variable WRKOBJDIR is used but not mentioned in the _VARGROUPS section.")
+		"WARN: Makefile:5: \"[\" is not a valid variable name pattern.",
+		"WARN: Makefile:6: Variable names starting with an underscore (_UNDERSCORE) "+
+			"are reserved for internal pkgsrc use.",
+		"WARN: Makefile:6: _UNDERSCORE is defined but not used.",
+		"WARN: Makefile:6: Variable _UNDERSCORE is defined but not mentioned in the _VARGROUPS section.",
+		"WARN: Makefile:8: Variable WRKOBJDIR is used but not mentioned in the _VARGROUPS section.")
+}
+
+func (s *Suite) Test_VargroupsChecker__private_before_public(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+
+	mklines := t.NewMkLines("Makefile",
+		MkCvsID,
+		"",
+		"_VARGROUPS+=\t\tgroup",
+		"_DEF_VARS.group=\t_PRIVATE1 _PRIVATE2 PUBLIC",
+		"_PRIVATE1=\t\tprivate",
+		"_PRIVATE2=\t\tprivate",
+		"PUBLIC=\t\t\tpublic")
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"WARN: Makefile:4: The public variable PUBLIC should be listed "+
+			"before the private variable _PRIVATE1.",
+		"WARN: Makefile:5: Variable names starting with an underscore (_PRIVATE1) "+
+			"are reserved for internal pkgsrc use.",
+		"WARN: Makefile:5: _PRIVATE1 is defined but not used.",
+		"WARN: Makefile:6: Variable names starting with an underscore (_PRIVATE2) "+
+			"are reserved for internal pkgsrc use.",
+		"WARN: Makefile:6: _PRIVATE2 is defined but not used.",
+		"WARN: Makefile:7: PUBLIC is defined but not used.")
 }
