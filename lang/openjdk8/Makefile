@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2019/09/22 14:47:00 tnn Exp $
+# $NetBSD: Makefile,v 1.85 2019/10/01 14:43:32 tnn Exp $
 
 DISTNAME=	openjdk-jdk8u-${GITHUB_TAG}
 PKGNAME=	openjdk8-1.8.${GITHUB_TAG:C/.*u([0-9]+).*/\1/}
@@ -103,12 +103,6 @@ CXXFLAGS+=	-D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
 
 CONFIGURE_ENV+=	CFLAGS_JDK=${CFLAGS:Q}
 CONFIGURE_ENV+=	CXXFLAGS_JDK=${CXXFLAGS:Q}
-
-# Fix segfault under NetBSD/amd64 8.99 with GCC 6.4.0
-.if !empty(CC_VERSION:Mgcc-[67].*)
-CFLAGS+=	-fno-lifetime-dse
-CFLAGS+=	-fno-delete-null-pointer-checks
-.endif
 
 .if ${OPSYS} == "SunOS" && !empty(PKGSRC_COMPILER:Mgcc)
 MAKE_ENV+=	USE_GCC=1
