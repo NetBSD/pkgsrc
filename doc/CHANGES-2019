@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4069 2019/10/01 12:36:13 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4070 2019/10/01 12:36:39 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6633,3 +6633,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added games/naev version 0.7.0 [nia 2019-10-01]
 	Added games/srb2 version 2.1.25 [nia 2019-10-01]
 	Added games/xonotic version 0.8.2 [nia 2019-10-01]
+	Added games/yquake2 version 7.41 [nia 2019-10-01]
