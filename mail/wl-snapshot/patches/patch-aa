@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/08/05 22:23:57 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2019/10/01 13:18:20 mef Exp $
+
+Set to install utils
 
 --- WL-CFG.orig	Tue Oct 23 20:44:04 2001
 +++ WL-CFG
