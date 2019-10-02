@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4106 2019/10/02 09:12:55 rin Exp $
+$NetBSD: CHANGES-2019,v 1.4107 2019/10/02 10:21:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6673,3 +6673,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/py-Pillow to 6.2.0 [adam 2019-10-02]
 	Updated net/gallery-dl to 1.10.5 [leot 2019-10-02]
 	Updated misc/screen to 4.7.0 [rin 2019-10-02]
+	Updated devel/py-test-xdist to 1.30.0 [adam 2019-10-02]
+	Updated devel/py-test-mock to 1.11.0 [adam 2019-10-02]
