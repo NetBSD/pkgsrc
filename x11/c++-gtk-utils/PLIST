@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/02/27 12:17:06 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/10/02 14:00:17 ryoon Exp $
 include/c++-gtk-utils-3-2.2/c++-gtk-utils/application.h
 include/c++-gtk-utils-3-2.2/c++-gtk-utils/async_channel.h
 include/c++-gtk-utils-3-2.2/c++-gtk-utils/async_queue.h
@@ -59,8 +59,6 @@ share/doc/c++-gtk-utils/2.2/html/Variants.html
 share/doc/c++-gtk-utils/2.2/html/annotated.html
 share/doc/c++-gtk-utils/2.2/html/application_8h.html
 share/doc/c++-gtk-utils/2.2/html/application_8h_source.html
-share/doc/c++-gtk-utils/2.2/html/arrowdown.png
-share/doc/c++-gtk-utils/2.2/html/arrowright.png
 share/doc/c++-gtk-utils/2.2/html/async__channel_8h.html
 share/doc/c++-gtk-utils/2.2/html/async__channel_8h_source.html
 share/doc/c++-gtk-utils/2.2/html/async__queue_8h.html
@@ -75,14 +73,12 @@ share/doc/c++-gtk-utils/2.2/html/cgu__config_8h.html
 share/doc/c++-gtk-utils/2.2/html/cgu__config_8h_source.html
 share/doc/c++-gtk-utils/2.2/html/classCgu_1_1Application-members.html
 share/doc/c++-gtk-utils/2.2/html/classCgu_1_1Application.html
-share/doc/c++-gtk-utils/2.2/html/classCgu_1_1ApplicationNameError-members.html
 share/doc/c++-gtk-utils/2.2/html/classCgu_1_1AsyncChannel-members.html
 share/doc/c++-gtk-utils/2.2/html/classCgu_1_1AsyncChannel.html
 share/doc/c++-gtk-utils/2.2/html/classCgu_1_1AsyncQueue-members.html
 share/doc/c++-gtk-utils/2.2/html/classCgu_1_1AsyncQueue.html
 share/doc/c++-gtk-utils/2.2/html/classCgu_1_1AsyncQueueDispatch-members.html
 share/doc/c++-gtk-utils/2.2/html/classCgu_1_1AsyncQueueDispatch.html
-share/doc/c++-gtk-utils/2.2/html/classCgu_1_1AsyncQueuePopError-members.html
 share/doc/c++-gtk-utils/2.2/html/classCgu_1_1AsyncResult-members.html
 share/doc/c++-gtk-utils/2.2/html/classCgu_1_1AsyncResult.html
 share/doc/c++-gtk-utils/2.2/html/classCgu_1_1CFree-members.html
@@ -165,7 +161,6 @@ share/doc/c++-gtk-utils/2.2/html/classCgu_1_1MemFun_1_1Functor2__const.html
 share/doc/c++-gtk-utils/2.2/html/classCgu_1_1MemFun_1_1Functor2__const.png
 share/doc/c++-gtk-utils/2.2/html/classCgu_1_1Notifier-members.html
 share/doc/c++-gtk-utils/2.2/html/classCgu_1_1Notifier.html
-share/doc/c++-gtk-utils/2.2/html/classCgu_1_1Param-members.html
 share/doc/c++-gtk-utils/2.2/html/classCgu_1_1PipeFifo-members.html
 share/doc/c++-gtk-utils/2.2/html/classCgu_1_1PipeFifo.html
 share/doc/c++-gtk-utils/2.2/html/classCgu_1_1Releaser-members.html
@@ -176,14 +171,12 @@ share/doc/c++-gtk-utils/2.2/html/classCgu_1_1ScopedHandle-members.html
 share/doc/c++-gtk-utils/2.2/html/classCgu_1_1ScopedHandle.html
 share/doc/c++-gtk-utils/2.2/html/classCgu_1_1SharedHandle-members.html
 share/doc/c++-gtk-utils/2.2/html/classCgu_1_1SharedHandle.html
-share/doc/c++-gtk-utils/2.2/html/classCgu_1_1SharedHandleError-members.html
 share/doc/c++-gtk-utils/2.2/html/classCgu_1_1SharedLockHandle-members.html
 share/doc/c++-gtk-utils/2.2/html/classCgu_1_1SharedLockHandle.html
 share/doc/c++-gtk-utils/2.2/html/classCgu_1_1SharedLockPtr-members.html
 share/doc/c++-gtk-utils/2.2/html/classCgu_1_1SharedLockPtr.html
 share/doc/c++-gtk-utils/2.2/html/classCgu_1_1SharedPtr-members.html
 share/doc/c++-gtk-utils/2.2/html/classCgu_1_1SharedPtr.html
-share/doc/c++-gtk-utils/2.2/html/classCgu_1_1SharedPtrError-members.html
 share/doc/c++-gtk-utils/2.2/html/classCgu_1_1StandardArrayDelete-members.html
 share/doc/c++-gtk-utils/2.2/html/classCgu_1_1StandardArrayDelete.html
 share/doc/c++-gtk-utils/2.2/html/classCgu_1_1SyncPipe-members.html
@@ -280,6 +273,7 @@ share/doc/c++-gtk-utils/2.2/html/doc.png
 share/doc/c++-gtk-utils/2.2/html/doxygen.css
 share/doc/c++-gtk-utils/2.2/html/doxygen.png
 share/doc/c++-gtk-utils/2.2/html/doxygen_8main.html
+share/doc/c++-gtk-utils/2.2/html/dynsections.js
 share/doc/c++-gtk-utils/2.2/html/emitter_8h.html
 share/doc/c++-gtk-utils/2.2/html/emitter_8h_source.html
 share/doc/c++-gtk-utils/2.2/html/extension_8h.html
@@ -292,6 +286,7 @@ share/doc/c++-gtk-utils/2.2/html/files.html
 share/doc/c++-gtk-utils/2.2/html/folderclosed.png
 share/doc/c++-gtk-utils/2.2/html/folderopen.png
 share/doc/c++-gtk-utils/2.2/html/functions.html
+share/doc/c++-gtk-utils/2.2/html/functions_0x7e.html
 share/doc/c++-gtk-utils/2.2/html/functions_b.html
 share/doc/c++-gtk-utils/2.2/html/functions_c.html
 share/doc/c++-gtk-utils/2.2/html/functions_d.html
@@ -300,6 +295,7 @@ share/doc/c++-gtk-utils/2.2/html/functions_enum.html
 share/doc/c++-gtk-utils/2.2/html/functions_eval.html
 share/doc/c++-gtk-utils/2.2/html/functions_f.html
 share/doc/c++-gtk-utils/2.2/html/functions_func.html
+share/doc/c++-gtk-utils/2.2/html/functions_func_0x7e.html
 share/doc/c++-gtk-utils/2.2/html/functions_func_b.html
 share/doc/c++-gtk-utils/2.2/html/functions_func_c.html
 share/doc/c++-gtk-utils/2.2/html/functions_func_d.html
@@ -321,7 +317,6 @@ share/doc/c++-gtk-utils/2.2/html/functions_func_u.html
 share/doc/c++-gtk-utils/2.2/html/functions_func_v.html
 share/doc/c++-gtk-utils/2.2/html/functions_func_w.html
 share/doc/c++-gtk-utils/2.2/html/functions_func_x.html
-share/doc/c++-gtk-utils/2.2/html/functions_func_~.html
 share/doc/c++-gtk-utils/2.2/html/functions_g.html
 share/doc/c++-gtk-utils/2.2/html/functions_h.html
 share/doc/c++-gtk-utils/2.2/html/functions_i.html
@@ -341,7 +336,6 @@ share/doc/c++-gtk-utils/2.2/html/functions_v.html
 share/doc/c++-gtk-utils/2.2/html/functions_vars.html
 share/doc/c++-gtk-utils/2.2/html/functions_w.html
 share/doc/c++-gtk-utils/2.2/html/functions_x.html
-share/doc/c++-gtk-utils/2.2/html/functions_~.html
 share/doc/c++-gtk-utils/2.2/html/future_8h.html
 share/doc/c++-gtk-utils/2.2/html/future_8h_source.html
 share/doc/c++-gtk-utils/2.2/html/gerror__handle_8h.html
@@ -368,8 +362,10 @@ share/doc/c++-gtk-utils/2.2/html/intrusive__ptr_8h.html
 share/doc/c++-gtk-utils/2.2/html/intrusive__ptr_8h_source.html
 share/doc/c++-gtk-utils/2.2/html/io__watch_8h.html
 share/doc/c++-gtk-utils/2.2/html/io__watch_8h_source.html
+share/doc/c++-gtk-utils/2.2/html/jquery.js
 share/doc/c++-gtk-utils/2.2/html/mem__fun_8h.html
 share/doc/c++-gtk-utils/2.2/html/mem__fun_8h_source.html
+share/doc/c++-gtk-utils/2.2/html/menudata.js
 share/doc/c++-gtk-utils/2.2/html/modules.html
 share/doc/c++-gtk-utils/2.2/html/mutex_8h.html
 share/doc/c++-gtk-utils/2.2/html/mutex_8h_source.html
@@ -442,13 +438,16 @@ share/doc/c++-gtk-utils/2.2/html/shared__handle_8h_source.html
 share/doc/c++-gtk-utils/2.2/html/shared__ptr_8h.html
 share/doc/c++-gtk-utils/2.2/html/shared__ptr_8h_source.html
 share/doc/c++-gtk-utils/2.2/html/splitbar.png
+share/doc/c++-gtk-utils/2.2/html/structCgu_1_1ApplicationNameError-members.html
 share/doc/c++-gtk-utils/2.2/html/structCgu_1_1ApplicationNameError.html
 share/doc/c++-gtk-utils/2.2/html/structCgu_1_1ApplicationNameError.png
+share/doc/c++-gtk-utils/2.2/html/structCgu_1_1AsyncQueuePopError-members.html
 share/doc/c++-gtk-utils/2.2/html/structCgu_1_1AsyncQueuePopError.html
 share/doc/c++-gtk-utils/2.2/html/structCgu_1_1AsyncQueuePopError.png
 share/doc/c++-gtk-utils/2.2/html/structCgu_1_1GobjWeakHandleError-members.html
 share/doc/c++-gtk-utils/2.2/html/structCgu_1_1GobjWeakHandleError.html
 share/doc/c++-gtk-utils/2.2/html/structCgu_1_1GobjWeakHandleError.png
+share/doc/c++-gtk-utils/2.2/html/structCgu_1_1Param-members.html
 share/doc/c++-gtk-utils/2.2/html/structCgu_1_1Param.html
 share/doc/c++-gtk-utils/2.2/html/structCgu_1_1Param_3_01T_01_5_01_4-members.html
 share/doc/c++-gtk-utils/2.2/html/structCgu_1_1Param_3_01T_01_5_01_4.html
@@ -466,8 +465,10 @@ share/doc/c++-gtk-utils/2.2/html/structCgu_1_1RemoveRefCond_3_01T_01_6_00_01fals
 share/doc/c++-gtk-utils/2.2/html/structCgu_1_1RemoveRefCond_3_01T_01_6_00_01false_01_4.html
 share/doc/c++-gtk-utils/2.2/html/structCgu_1_1RemoveRefCond_3_01T_01_6_00_01true_01_4-members.html
 share/doc/c++-gtk-utils/2.2/html/structCgu_1_1RemoveRefCond_3_01T_01_6_00_01true_01_4.html
+share/doc/c++-gtk-utils/2.2/html/structCgu_1_1SharedHandleError-members.html
 share/doc/c++-gtk-utils/2.2/html/structCgu_1_1SharedHandleError.html
 share/doc/c++-gtk-utils/2.2/html/structCgu_1_1SharedHandleError.png
+share/doc/c++-gtk-utils/2.2/html/structCgu_1_1SharedPtrError-members.html
 share/doc/c++-gtk-utils/2.2/html/structCgu_1_1SharedPtrError.html
 share/doc/c++-gtk-utils/2.2/html/structCgu_1_1SharedPtrError.png
 share/doc/c++-gtk-utils/2.2/html/structCgu_1_1Thread_1_1CondError-members.html
