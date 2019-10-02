@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_rand_src_rngs_os.rs,v 1.2 2019/06/13 19:06:30 tnn Exp $
+$NetBSD: patch-src_vendor_rand-0.6.1_src_rngs_os.rs,v 1.1 2019/10/02 12:51:43 he Exp $
 
 -Explicitly disable getrandom support on SunOS, the test fails.
 -https://github.com/rust-random/rand/issues/637
@@ -14,8 +14,8 @@ FreeBSD implementation which relies on the kern.arandom sysctl instead of
 The bootstrap compiler of course has the same issue so I will raise a PR
 with upstream authors to address this.
 
---- vendor/rand/src/rngs/os.rs.orig	2019-05-20 13:47:25.000000000 +0000
-+++ vendor/rand/src/rngs/os.rs
+--- vendor/rand-0.6.1/src/rngs/os.rs.orig	2019-09-23 23:15:03.000000000 +0000
++++ vendor/rand-0.6.1/src/rngs/os.rs
 @@ -246,7 +246,7 @@ trait OsRngImpl where Self: Sized {
  // All instances use a single internal file handle, to prevent possible
  // exhaustion of file descriptors.
