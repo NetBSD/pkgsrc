@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19301 2019/10/02 13:44:59 wiz Exp $
+$NetBSD: TODO,v 1.19302 2019/10/02 21:27:18 kamil Exp $
 
 Suggested new packages
 ======================
@@ -954,7 +954,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libsigc++-3.0.0
 	o libsoup-2.68.1
 	o libstree-0.4.2
-	o libtcl-nothread-8.5.1
 	o libtecla-1.6.3
 	o libtrace-3.0.22
 	o libv4l-0.8.5
