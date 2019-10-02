@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/07/15 14:28:24 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/10/02 07:46:52 zafer Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -48,10 +48,13 @@ share/tomcat/lib/servlet-api.jar
 share/tomcat/lib/tomcat-api.jar
 share/tomcat/lib/tomcat-coyote.jar
 share/tomcat/lib/tomcat-dbcp.jar
+share/tomcat/lib/tomcat-i18n-de.jar
 share/tomcat/lib/tomcat-i18n-es.jar
 share/tomcat/lib/tomcat-i18n-fr.jar
 share/tomcat/lib/tomcat-i18n-ja.jar
+share/tomcat/lib/tomcat-i18n-ko.jar
 share/tomcat/lib/tomcat-i18n-ru.jar
+share/tomcat/lib/tomcat-i18n-zh-CN.jar
 share/tomcat/lib/tomcat-jdbc.jar
 share/tomcat/lib/tomcat-jni.jar
 share/tomcat/lib/tomcat-util-scan.jar
@@ -187,6 +190,7 @@ share/tomcat/webapps/docs/images/void.gif
 share/tomcat/webapps/docs/index.html
 share/tomcat/webapps/docs/introduction.html
 share/tomcat/webapps/docs/jasper-howto.html
+share/tomcat/webapps/docs/jaspicapi/index.html
 share/tomcat/webapps/docs/jdbc-pool.html
 share/tomcat/webapps/docs/jndi-datasource-examples-howto.html
 share/tomcat/webapps/docs/jndi-resources-howto.html
@@ -224,9 +228,14 @@ share/tomcat/webapps/examples/WEB-INF/classes/CookieExample.java
 share/tomcat/webapps/examples/WEB-INF/classes/HelloWorldExample.class
 share/tomcat/webapps/examples/WEB-INF/classes/HelloWorldExample.java
 share/tomcat/webapps/examples/WEB-INF/classes/LocalStrings.properties
+share/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_de.properties
 share/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_es.properties
 share/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_fr.properties
+share/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_ja.properties
+share/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_ko.properties
 share/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_pt.properties
+share/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_ru.properties
+share/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_zh_CN.properties
 share/tomcat/webapps/examples/WEB-INF/classes/RequestHeaderExample.class
 share/tomcat/webapps/examples/WEB-INF/classes/RequestHeaderExample.java
 share/tomcat/webapps/examples/WEB-INF/classes/RequestInfoExample.class
