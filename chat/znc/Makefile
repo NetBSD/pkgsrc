@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/10/01 13:49:58 nia Exp $
+# $NetBSD: Makefile,v 1.11 2019/10/02 11:14:42 nia Exp $
 
 DISTNAME=	znc-1.7.5
 CATEGORIES=	net
@@ -16,6 +16,8 @@ MANCOMPRESSED=	yes
 
 # C++11
 GCC_REQD+=	4.7
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 PLIST_SRC=	PLIST
 PLIST_SUBST+=	ZNC_USER="${ZNC_USER}"
