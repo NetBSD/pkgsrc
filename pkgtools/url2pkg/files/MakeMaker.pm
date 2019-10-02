@@ -118,7 +118,7 @@ sub WriteMakefile(%) {
 	if ($license eq "perl") {
 		url2pkg_write_var("LICENSE", "\${PERL5_LICENSE}");
 	} elsif ($license ne "") {
-		url2pkg_write_var("#LICENSE", "# TODO: $license (from Build.PL)")
+		url2pkg_write_var("#LICENSE", "# TODO: $license (from Makefile.PL)")
 	}
 }
 
