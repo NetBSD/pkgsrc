@@ -1,5 +1,5 @@
 #! @PERL5@
-# $NetBSD: url2pkg.pl,v 1.75 2019/10/01 19:41:23 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.76 2019/10/02 15:57:37 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -32,6 +32,8 @@
 use strict;
 use warnings;
 
+use Getopt::Long;
+
 my $make		= '@MAKE@';
 my $libdir		= '@LIBDIR@';
 my $pythonbin		= '@PYTHONBIN@';
@@ -39,6 +41,8 @@ my $pkgsrcdir		= '@PKGSRCDIR@';
 
 use constant true	=> 1;
 use constant false	=> 0;
+
+our $verbose = false;
 
 sub run_editor($$) {
 	my ($fname, $lineno) = @_;
@@ -364,12 +368,12 @@ sub read_dependencies($$$) {
 	while (defined (my $line = <DEPS>)) {
 		chomp($line);
 
-		if ($line =~ qr"^(\w+)\t([^\s:>]+)(>[^\s:]+|)(?::(\.\./\.\./\S+))?$") {
-			push(@dep_lines, [ $1, $2, $3 || ">=0", $4 || "" ]);
-		} elsif ($line =~ qr"^var\t(\S+)\t(.+)$") {
+		if ($line =~ qr"^var\t(\S+)\t(.+)$") {
 			$main::update_vars{$1} = $2;
+		} elsif ($line =~ qr"^(\w+)\t([^\s:>]+)(>[^\s:]+|)(?::(\.\./\.\./\S+))?$") {
+			push(@dep_lines, [ $1, $2, $3 || ">=0", $4 || "" ]);
 		} elsif ($line ne "") {
-			printf STDERR "url2pkg: info: unknown dependency line: %s\n", $line;
+			$verbose and printf STDERR "url2pkg: info: unknown dependency line: %s\n", $line;
 		}
 	}
 
@@ -785,7 +789,7 @@ sub determine_wrksrc() {
 sub adjust_package_from_extracted_distfiles($) {
 	my ($url) = @_;
 
-	print("url2pkg> Adjusting the Makefile\n");
+	$verbose and print("url2pkg> Adjusting the Makefile\n");
 
 	chomp($abs_wrkdir = `$make show-var VARNAME=WRKDIR`);
 	determine_wrksrc();
@@ -867,6 +871,10 @@ sub main() {
 	if (!-f "../../mk/bsd.pkg.mk") {
 		die("ERROR: $0 must be run from a package directory (.../pkgsrc/category/package).\n");
 	}
+
+	GetOptions(
+		"verbose=v" => \$verbose
+	);
 
 	my $url;
 	if (scalar(@ARGV) == 0) {
