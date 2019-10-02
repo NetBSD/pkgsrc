@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/11/06 19:55:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/10/02 16:37:48 kamil Exp $
 bin/dtplite
 bin/nns
 bin/nnsd
@@ -75,6 +75,8 @@ lib/tcllib${PKGVERSION}/debug/debug.tcl
 lib/tcllib${PKGVERSION}/debug/heartbeat.tcl
 lib/tcllib${PKGVERSION}/debug/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/debug/timestamp.tcl
+lib/tcllib${PKGVERSION}/defer/defer.tcl
+lib/tcllib${PKGVERSION}/defer/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/des/des.tcl
 lib/tcllib${PKGVERSION}/des/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/des/tcldes.tcl
@@ -197,7 +199,6 @@ lib/tcllib${PKGVERSION}/ftpd/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/fumagic/cfront.tcl
 lib/tcllib${PKGVERSION}/fumagic/cgen.tcl
 lib/tcllib${PKGVERSION}/fumagic/filetypes.tcl
-lib/tcllib${PKGVERSION}/fumagic/mimetypes.tcl
 lib/tcllib${PKGVERSION}/fumagic/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/fumagic/rtcore.tcl
 lib/tcllib${PKGVERSION}/generator/generator.tcl
@@ -230,11 +231,9 @@ lib/tcllib${PKGVERSION}/htmlparse/htmlparse.tcl
 lib/tcllib${PKGVERSION}/htmlparse/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/http/autoproxy.tcl
 lib/tcllib${PKGVERSION}/http/pkgIndex.tcl
-lib/tcllib${PKGVERSION}/httpd/content.tcl
-lib/tcllib${PKGVERSION}/httpd/dispatch.tcl
+lib/tcllib${PKGVERSION}/httpd/build.tcl
 lib/tcllib${PKGVERSION}/httpd/httpd.tcl
 lib/tcllib${PKGVERSION}/httpd/pkgIndex.tcl
-lib/tcllib${PKGVERSION}/httpd/scgi-app.tcl
 lib/tcllib${PKGVERSION}/httpwget/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/httpwget/wget.tcl
 lib/tcllib${PKGVERSION}/ident/ident.tcl
@@ -304,10 +303,12 @@ lib/tcllib${PKGVERSION}/math/misc.tcl
 lib/tcllib${PKGVERSION}/math/mvlinreg.tcl
 lib/tcllib${PKGVERSION}/math/numtheory.tcl
 lib/tcllib${PKGVERSION}/math/optimize.tcl
+lib/tcllib${PKGVERSION}/math/pca.tcl
 lib/tcllib${PKGVERSION}/math/pdf_stat.tcl
 lib/tcllib${PKGVERSION}/math/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/math/plotstat.tcl
 lib/tcllib${PKGVERSION}/math/polynomials.tcl
+lib/tcllib${PKGVERSION}/math/primes.tcl
 lib/tcllib${PKGVERSION}/math/qcomplex.tcl
 lib/tcllib${PKGVERSION}/math/rational_funcs.tcl
 lib/tcllib${PKGVERSION}/math/romannumerals.tcl
@@ -336,21 +337,14 @@ lib/tcllib${PKGVERSION}/namespacex/namespacex.tcl
 lib/tcllib${PKGVERSION}/namespacex/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/ncgi/ncgi.tcl
 lib/tcllib${PKGVERSION}/ncgi/pkgIndex.tcl
-lib/tcllib${PKGVERSION}/nettool/available_ports.tcl
-lib/tcllib${PKGVERSION}/nettool/generic.tcl
-lib/tcllib${PKGVERSION}/nettool/locateport.tcl
+lib/tcllib${PKGVERSION}/nettool/build.tcl
 lib/tcllib${PKGVERSION}/nettool/nettool.tcl
 lib/tcllib${PKGVERSION}/nettool/pkgIndex.tcl
-lib/tcllib${PKGVERSION}/nettool/platform_unix.tcl
-lib/tcllib${PKGVERSION}/nettool/platform_unix_linux.tcl
-lib/tcllib${PKGVERSION}/nettool/platform_unix_macosx.tcl
-lib/tcllib${PKGVERSION}/nettool/platform_windows.tcl
 lib/tcllib${PKGVERSION}/nmea/nmea.tcl
 lib/tcllib${PKGVERSION}/nmea/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/nns/common.tcl
 lib/tcllib${PKGVERSION}/nns/nns.tcl
 lib/tcllib${PKGVERSION}/nns/nns_auto.tcl
-lib/tcllib${PKGVERSION}/nns/nns_cluster.tcl
 lib/tcllib${PKGVERSION}/nns/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/nns/server.tcl
 lib/tcllib${PKGVERSION}/nntp/nntp.tcl
@@ -426,6 +420,9 @@ lib/tcllib${PKGVERSION}/pop3d/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/pop3d/pop3d.tcl
 lib/tcllib${PKGVERSION}/pop3d/pop3d_dbox.tcl
 lib/tcllib${PKGVERSION}/pop3d/pop3d_udb.tcl
+lib/tcllib${PKGVERSION}/practcl/build.tcl
+lib/tcllib${PKGVERSION}/practcl/pkgIndex.tcl
+lib/tcllib${PKGVERSION}/practcl/practcl.tcl
 lib/tcllib${PKGVERSION}/processman/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/processman/processman.tcl
 lib/tcllib${PKGVERSION}/profiler/pkgIndex.tcl
@@ -465,8 +462,10 @@ lib/tcllib${PKGVERSION}/pt/pt_pexpression.tcl
 lib/tcllib${PKGVERSION}/pt/pt_pgen.tcl
 lib/tcllib${PKGVERSION}/pt/pt_rdengine.tcl
 lib/tcllib${PKGVERSION}/pt/pt_rdengine_c.tcl
+lib/tcllib${PKGVERSION}/pt/pt_rdengine_nx.tcl
 lib/tcllib${PKGVERSION}/pt/pt_rdengine_oo.tcl
 lib/tcllib${PKGVERSION}/pt/pt_rdengine_tcl.tcl
+lib/tcllib${PKGVERSION}/pt/pt_tclparam_config_nx.tcl
 lib/tcllib${PKGVERSION}/pt/pt_tclparam_config_snit.tcl
 lib/tcllib${PKGVERSION}/pt/pt_tclparam_config_tcloo.tcl
 lib/tcllib${PKGVERSION}/pt/pt_util.tcl
@@ -611,16 +610,12 @@ lib/tcllib${PKGVERSION}/tie/tie_log.tcl
 lib/tcllib${PKGVERSION}/tie/tie_rarray.tcl
 lib/tcllib${PKGVERSION}/tiff/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/tiff/tiff.tcl
-lib/tcllib${PKGVERSION}/tool/ensemble.tcl
-lib/tcllib${PKGVERSION}/tool/event.tcl
-lib/tcllib${PKGVERSION}/tool/index.tcl
-lib/tcllib${PKGVERSION}/tool/metaclass.tcl
-lib/tcllib${PKGVERSION}/tool/option.tcl
-lib/tcllib${PKGVERSION}/tool/organ.tcl
-lib/tcllib${PKGVERSION}/tool/pipeline.tcl
+lib/tcllib${PKGVERSION}/tool-ui/build.tcl
+lib/tcllib${PKGVERSION}/tool-ui/pkgIndex.tcl
+lib/tcllib${PKGVERSION}/tool-ui/tool-ui.tcl
+lib/tcllib${PKGVERSION}/tool/build.tcl
 lib/tcllib${PKGVERSION}/tool/pkgIndex.tcl
-lib/tcllib${PKGVERSION}/tool/script.tcl
-lib/tcllib${PKGVERSION}/tool/uuid.tcl
+lib/tcllib${PKGVERSION}/tool/tool.tcl
 lib/tcllib${PKGVERSION}/tool_datatype/datatype.tcl
 lib/tcllib${PKGVERSION}/tool_datatype/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/transfer/connect.tcl
@@ -638,6 +633,8 @@ lib/tcllib${PKGVERSION}/treeql/treeql85.tcl
 lib/tcllib${PKGVERSION}/try/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/try/throw.tcl
 lib/tcllib${PKGVERSION}/try/try.tcl
+lib/tcllib${PKGVERSION}/udpcluster/pkgIndex.tcl
+lib/tcllib${PKGVERSION}/udpcluster/udpcluster.tcl
 lib/tcllib${PKGVERSION}/uev/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/uev/uevent.tcl
 lib/tcllib${PKGVERSION}/uev/uevent_onidle.tcl
@@ -775,6 +772,7 @@ man/mann/debug_heartbeat.n
 man/mann/debug_timestamp.n
 man/mann/decimal.n
 man/mann/decode.n
+man/mann/defer.n
 man/mann/deleg_method.n
 man/mann/deleg_proc.n
 man/mann/des.n
@@ -836,6 +834,7 @@ man/mann/hook.n
 man/mann/html.n
 man/mann/html_cssdefaults.n
 man/mann/htmlparse.n
+man/mann/httpd.n
 man/mann/huddle.n
 man/mann/iban.n
 man/mann/ident.n
@@ -888,6 +887,7 @@ man/mann/map_slippy.n
 man/mann/map_slippy_cache.n
 man/mann/map_slippy_fetcher.n
 man/mann/mapproj.n
+man/mann/markdown.n
 man/mann/math.n
 man/mann/math_geometry.n
 man/mann/matrix.n
@@ -904,7 +904,6 @@ man/mann/me_util.n
 man/mann/me_vm.n
 man/mann/meta.n
 man/mann/mime.n
-man/mann/mimetypes.n
 man/mann/mkzip.n
 man/mann/montecarlo.n
 man/mann/mpexpand.n
@@ -932,6 +931,7 @@ man/mann/nullzero.n
 man/mann/numtheory.n
 man/mann/oauth.n
 man/mann/observe.n
+man/mann/oometa.n
 man/mann/ooutil.n
 man/mann/optimize.n
 man/mann/otp.n
@@ -943,6 +943,7 @@ man/mann/page_util_norm_lemon.n
 man/mann/page_util_norm_peg.n
 man/mann/page_util_peg.n
 man/mann/page_util_quote.n
+man/mann/pca.n
 man/mann/peg.n
 man/mann/peg_interp.n
 man/mann/picoirc.n
@@ -956,6 +957,7 @@ man/mann/pop3.n
 man/mann/pop3d.n
 man/mann/pop3d_dbox.n
 man/mann/pop3d_udb.n
+man/mann/practcl.n
 man/mann/prioqueue.n
 man/mann/processman.n
 man/mann/profiler.n
@@ -997,6 +999,7 @@ man/mann/pt_pexpr_op.n
 man/mann/pt_pexpression.n
 man/mann/pt_pgen.n
 man/mann/pt_rdengine.n
+man/mann/pt_tclparam_config_nx.n
 man/mann/pt_tclparam_config_snit.n
 man/mann/pt_tclparam_config_tcloo.n
 man/mann/pt_to_api.n
@@ -1100,6 +1103,7 @@ man/mann/toc_parse.n
 man/mann/toc_structure.n
 man/mann/token.n
 man/mann/token_shell.n
+man/mann/tool-ui.n
 man/mann/tool.n
 man/mann/tool_dict_ensemble.n
 man/mann/tqueue.n
@@ -1108,6 +1112,7 @@ man/mann/transmitter.n
 man/mann/traverse.n
 man/mann/treeql.n
 man/mann/trim.n
+man/mann/udpcluster.n
 man/mann/uevent.n
 man/mann/uevent_onidle.n
 man/mann/unicode.n
