@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.435 2019/09/21 18:15:55 minskim Exp $
+# $NetBSD: Makefile,v 1.436 2019/10/02 23:24:29 minskim Exp $
 
 COMMENT=	Mathematics
 
@@ -324,6 +324,7 @@ SUBDIR+=	py-kiwisolver
 SUBDIR+=	py-lmfit
 SUBDIR+=	py-mpmath
 SUBDIR+=	py-munkres
+SUBDIR+=	py-netCDF4
 SUBDIR+=	py-networkx
 SUBDIR+=	py-noise
 SUBDIR+=	py-numarray
