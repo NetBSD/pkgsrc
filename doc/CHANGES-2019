@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4111 2019/10/02 13:41:42 taca Exp $
+$NetBSD: CHANGES-2019,v 1.4112 2019/10/02 13:45:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6685,3 +6685,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/ruby25-base to 2.5.7 [taca 2019-10-02]
 	Updated lang/ruby25 to 2.5.7 [taca 2019-10-02]
 	Updated devel/ruby-mode to 2.5.7 [taca 2019-10-02]
+	Updated lang/ruby26-base to 2.6.5 [taca 2019-10-02]
+	Updated lang/ruby26 to 2.6.5 [taca 2019-10-02]
