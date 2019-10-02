@@ -1,58 +1,50 @@
-# $NetBSD: Makefile,v 1.25 2019/08/11 13:21:29 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.26 2019/10/02 14:30:31 triaxx Exp $
 
 DISTNAME=	mailgraph-1.14
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	mail
-MASTER_SITES=	http://mailgraph.schweikert.ch/pub/
-MASTER_SITES+=	http://mailgraph.schweikert.ch/pub/old
+MASTER_SITES=	https://mailgraph.schweikert.ch/pub/
+MASTER_SITES+=	https://mailgraph.schweikert.ch/pub/old/
 
-MAINTAINER=	kim@tac.nyc.ny.us
+MAINTAINER=	triaxx@NetBSD.org
 HOMEPAGE=	http://mailgraph.schweikert.ch/
 COMMENT=	RRDtool frontend for mail statistics
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	rrdtool>=1:../../databases/rrdtool
 DEPENDS+=	p5-File-Tail-[0-9]*:../../misc/p5-File-Tail
 
 USE_TOOLS+=	perl:run
+NO_BUILD=	yes
 
-.include "../../mk/bsd.prefs.mk"
+REPLACE_PERL+=	mailgraph.cgi mailgraph.pl
 
-DBDIR?=		${VARBASE}/db/${PKGBASE}
+BUILD_DEFS+=	VARBASE
 
-MG_SCRIPTS=	mailgraph.cgi mailgraph.pl
-
-REPLACE_PERL+=	${MG_SCRIPTS}
+OWN_DIRS+=	${VARBASE}/db/mailgraph
 
 RCD_SCRIPTS=	mailgraph
 
-SUBST_CLASSES+=		defs
-SUBST_STAGE.defs=	pre-build
-SUBST_FILES.defs=	${MG_SCRIPTS}
-# Database
-SUBST_SED.defs+=	-e 's,/var/log\([^/]\),${DBDIR}\1,g'
-SUBST_SED.defs+=	-e 's,/var/log$$,${DBDIR},g'
-# Logfile
-SUBST_SED.defs+=	-e 's,/var/log/syslog,${VARBASE}/log/maillog,g'
-#
-SUBST_MESSAGE.defs=	Fixing defaults.
+SUBST_CLASSES+=		var
+SUBST_STAGE.var=	pre-configure
+SUBST_MESSAGE.var=	Fixing hardcoded /var.
+SUBST_FILES.var=	mailgraph.cgi mailgraph.pl
+SUBST_VARS.var=		VARBASE
 
-INSTALLATION_DIRS=	sbin
-
-do-build:
-
-do-configure:
+AUTO_MKDIRS=		yes
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/libexec/cgi-bin
 	${INSTALL_SCRIPT} ${WRKSRC}/mailgraph.cgi \
 		${DESTDIR}${PREFIX}/libexec/cgi-bin/mailgraph.cgi
 	${INSTALL_SCRIPT} ${WRKSRC}/mailgraph.pl \
 		${DESTDIR}${PREFIX}/sbin/mailgraph
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/mailgraph
-.for i in CHANGES COPYING README
-	${INSTALL_DATA} ${WRKSRC}/${i} \
-		${DESTDIR}${PREFIX}/share/doc/mailgraph/${i}
-.endfor
+	${INSTALL_DATA} ${WRKSRC}/mailgraph.css \
+	  	${DESTDIR}${PREFIX}/share/mailgraph/mailgraph.css
+	${INSTALL_DATA} ${WRKSRC}/CHANGES \
+		${DESTDIR}${PREFIX}/share/doc/mailgraph/CHANGES
+	${INSTALL_DATA} ${WRKSRC}/COPYING \
+		${DESTDIR}${PREFIX}/share/doc/mailgraph/COPYING
+	${INSTALL_DATA} ${WRKSRC}/README \
+		${DESTDIR}${PREFIX}/share/doc/mailgraph/README
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 23:27:08 agc Exp $
+$NetBSD: distinfo,v 1.7 2019/10/02 14:30:31 triaxx Exp $
 
 SHA1 (mailgraph-1.14.tar.gz) = 6a2ead01ffd8fe49e520057daf97072e106b6c69
 RMD160 (mailgraph-1.14.tar.gz) = 928969a4bdc3b9ff39a7fe16b98789f07b02e5f8
 SHA512 (mailgraph-1.14.tar.gz) = 3df0dae010ad166a157eb34a8b1fcf837ab42445d417855ea58937a75b74ca55c06044eefb6077a6117073c39a087bcdf5f58fe35c0e4d9c7d6b18bded7a0193
 Size (mailgraph-1.14.tar.gz) = 22014 bytes
+SHA1 (patch-mailgraph.cgi) = 835d3537dc95f91f860857f45c542ca01bc12082
+SHA1 (patch-mailgraph.pl) = 80cc08394f66903c6414b25094899399b464460f
