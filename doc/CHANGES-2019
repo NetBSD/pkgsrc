@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4122 2019/10/02 18:15:13 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.4123 2019/10/02 21:15:36 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6690,25 +6690,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/c++-gtk-utils to 2.2.18 [ryoon 2019-10-02]
 	Updated lang/php72 to 7.2.23 [taca 2019-10-02]
 	Updated lang/php73 to 7.3.10 [taca 2019-10-02]
-	Updated mail/mailgraph to 1.14nb6 [triaxx 2019-10-02]
-	Updated lang/tcl to 8.6.9nb2 [kamil 2019-10-02]
-	Updated lang/tcl85 to 8.5.19nb1 [kamil 2019-10-02]
-	Updated net/py-lexicon to 3.3.3 [adam 2019-10-02]
-	Updated multimedia/py-m3u8 to 0.5.0 [adam 2019-10-02]
-	Updated devel/tcllib to 1.19 [kamil 2019-10-02]
-	Updated security/py-acme to 0.39.0 [adam 2019-10-02]
-	Updated security/py-certbot to 0.39.0 [adam 2019-10-02]
-	Updated security/py-certbot-apache to 0.39.0 [adam 2019-10-02]
-	Updated security/py-certbot-dns-dnsimple to 0.39.0 [adam 2019-10-02]
-	Updated security/py-certbot-dns-dnsmadeeasy to 0.39.0 [adam 2019-10-02]
-	Updated security/py-certbot-dns-gehirn to 0.39.0 [adam 2019-10-02]
-	Updated security/py-certbot-dns-google to 0.39.0 [adam 2019-10-02]
-	Updated security/py-certbot-dns-linode to 0.39.0 [adam 2019-10-02]
-	Updated security/py-certbot-dns-luadns to 0.39.0 [adam 2019-10-02]
-	Updated security/py-certbot-dns-nsone to 0.39.0 [adam 2019-10-02]
-	Updated security/py-certbot-dns-ovh to 0.39.0 [adam 2019-10-02]
-	Updated security/py-certbot-dns-rfc2136 to 0.39.0 [adam 2019-10-02]
-	Updated security/py-certbot-dns-route53 to 0.39.0 [adam 2019-10-02]
-	Updated security/py-certbot-dns-sakuracloud to 0.39.0 [adam 2019-10-02]
-	Updated security/py-certbot-nginx to 0.39.0 [adam 2019-10-02]
-	Removed lang/libtcl-nothread [kamil 2019-10-02]
+	Updated math/py-netCDF4 to 1.5.2 [minskim 2019-10-02]
