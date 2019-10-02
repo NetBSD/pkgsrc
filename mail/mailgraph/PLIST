@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2014/03/11 14:05:03 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/10/02 14:30:31 triaxx Exp $
 libexec/cgi-bin/mailgraph.cgi
 sbin/mailgraph
 share/doc/mailgraph/CHANGES
 share/doc/mailgraph/COPYING
 share/doc/mailgraph/README
+share/mailgraph/mailgraph.css
