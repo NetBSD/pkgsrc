@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4123 2019/10/02 21:15:36 minskim Exp $
+$NetBSD: CHANGES-2019,v 1.4124 2019/10/02 21:16:23 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6690,4 +6690,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/c++-gtk-utils to 2.2.18 [ryoon 2019-10-02]
 	Updated lang/php72 to 7.2.23 [taca 2019-10-02]
 	Updated lang/php73 to 7.3.10 [taca 2019-10-02]
-	Updated math/py-netCDF4 to 1.5.2 [minskim 2019-10-02]
+	Added math/py-netCDF4 version 1.5.2 [minskim 2019-10-02]
