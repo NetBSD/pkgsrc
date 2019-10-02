@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4117 2019/10/02 14:50:47 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.4118 2019/10/02 14:54:02 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6692,3 +6692,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/php73 to 7.3.10 [taca 2019-10-02]
 	Updated mail/mailgraph to 1.14nb6 [triaxx 2019-10-02]
 	Updated lang/tcl to 8.6.9nb2 [kamil 2019-10-02]
+	Updated lang/tcl85 to 8.5.19nb1 [kamil 2019-10-02]
