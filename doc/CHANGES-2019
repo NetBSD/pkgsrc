@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4120 2019/10/02 16:38:10 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.4121 2019/10/02 17:39:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6696,3 +6696,18 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/py-lexicon to 3.3.3 [adam 2019-10-02]
 	Updated multimedia/py-m3u8 to 0.5.0 [adam 2019-10-02]
 	Updated devel/tcllib to 1.19 [kamil 2019-10-02]
+	Updated security/py-acme to 0.39.0 [adam 2019-10-02]
+	Updated security/py-certbot to 0.39.0 [adam 2019-10-02]
+	Updated security/py-certbot-apache to 0.39.0 [adam 2019-10-02]
+	Updated security/py-certbot-dns-dnsimple to 0.39.0 [adam 2019-10-02]
+	Updated security/py-certbot-dns-dnsmadeeasy to 0.39.0 [adam 2019-10-02]
+	Updated security/py-certbot-dns-gehirn to 0.39.0 [adam 2019-10-02]
+	Updated security/py-certbot-dns-google to 0.39.0 [adam 2019-10-02]
+	Updated security/py-certbot-dns-linode to 0.39.0 [adam 2019-10-02]
+	Updated security/py-certbot-dns-luadns to 0.39.0 [adam 2019-10-02]
+	Updated security/py-certbot-dns-nsone to 0.39.0 [adam 2019-10-02]
+	Updated security/py-certbot-dns-ovh to 0.39.0 [adam 2019-10-02]
+	Updated security/py-certbot-dns-rfc2136 to 0.39.0 [adam 2019-10-02]
+	Updated security/py-certbot-dns-route53 to 0.39.0 [adam 2019-10-02]
+	Updated security/py-certbot-dns-sakuracloud to 0.39.0 [adam 2019-10-02]
+	Updated security/py-certbot-nginx to 0.39.0 [adam 2019-10-02]
