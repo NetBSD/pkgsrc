@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2019/08/23 09:40:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2019/10/02 15:33:43 adam Exp $
 bin/lexicon-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -66,6 +66,9 @@ ${PYSITELIB}/lexicon/providers/digitalocean.pyo
 ${PYSITELIB}/lexicon/providers/dinahosting.py
 ${PYSITELIB}/lexicon/providers/dinahosting.pyc
 ${PYSITELIB}/lexicon/providers/dinahosting.pyo
+${PYSITELIB}/lexicon/providers/directadmin.py
+${PYSITELIB}/lexicon/providers/directadmin.pyc
+${PYSITELIB}/lexicon/providers/directadmin.pyo
 ${PYSITELIB}/lexicon/providers/dnsimple.py
 ${PYSITELIB}/lexicon/providers/dnsimple.pyc
 ${PYSITELIB}/lexicon/providers/dnsimple.pyo
@@ -255,6 +258,9 @@ ${PYSITELIB}/lexicon/tests/providers/test_digitalocean.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_dinahosting.py
 ${PYSITELIB}/lexicon/tests/providers/test_dinahosting.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_dinahosting.pyo
+${PYSITELIB}/lexicon/tests/providers/test_directadmin.py
+${PYSITELIB}/lexicon/tests/providers/test_directadmin.pyc
+${PYSITELIB}/lexicon/tests/providers/test_directadmin.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_dnsimple.py
 ${PYSITELIB}/lexicon/tests/providers/test_dnsimple.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_dnsimple.pyo
