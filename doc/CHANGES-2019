@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4114 2019/10/02 14:05:54 taca Exp $
+$NetBSD: CHANGES-2019,v 1.4115 2019/10/02 14:08:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6689,3 +6689,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/ruby26 to 2.6.5 [taca 2019-10-02]
 	Updated x11/c++-gtk-utils to 2.2.18 [ryoon 2019-10-02]
 	Updated lang/php72 to 7.2.23 [taca 2019-10-02]
+	Updated lang/php73 to 7.3.10 [taca 2019-10-02]
