@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/10/02 21:14:42 minskim Exp $
+
+SHA1 (netCDF4-1.5.2.tar.gz) = 30a5fed1e3fbcb8e29924ace96977604550d7e74
+RMD160 (netCDF4-1.5.2.tar.gz) = c2bf3efa8cba996f1cbd52d6a096e578ecd1a68f
+SHA512 (netCDF4-1.5.2.tar.gz) = 35a69737da25a641f84f1c730826d4e5c548c633a700601d734a56ff8c1c1b157e4914bb5f9ac0c08bf58bd8a8d5a00dbb43f23d429ba98e30d666c9d1edf498
+Size (netCDF4-1.5.2.tar.gz) = 801015 bytes
