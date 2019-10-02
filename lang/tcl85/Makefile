@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2016/03/03 21:16:46 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3 2019/10/02 14:53:41 kamil Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
@@ -32,6 +33,9 @@ TEST_TARGET=		test
 .if defined(ABI) && ${ABI} == "64"
 CONFIGURE_ARGS+=	--enable-64bit
 .endif
+
+CONFIGURE_ARGS.NetBSD+=	ac_cv_func_gethostbyname_r=no
+CONFIGURE_ARGS.NetBSD+=	ac_cv_func_gethostbyaddr_r=no
 
 SUBST_CLASSES+=		tcl-config
 SUBST_STAGE.tcl-config=	post-build
