@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4109 2019/10/02 13:19:38 he Exp $
+$NetBSD: CHANGES-2019,v 1.4110 2019/10/02 13:34:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6677,3 +6677,8 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-test-mock to 1.11.0 [adam 2019-10-02]
 	Updated security/py-certbot to 0.38.0nb3 [triaxx 2019-10-02]
 	Updated lang/rust to 1.38.0 [he 2019-10-02]
+	Updated lang/ruby24-base to 2.4.9 [taca 2019-10-02]
+	Updated lang/ruby24 to 2.4.9 [taca 2019-10-02]
+	Updated databases/ruby-gdbm to 2.4.9 [taca 2019-10-02]
+	Updated devel/ruby-fiddle to 2.4.9 [taca 2019-10-02]
+	Updated devel/ruby-readline to 2.4.9 [taca 2019-10-02]
