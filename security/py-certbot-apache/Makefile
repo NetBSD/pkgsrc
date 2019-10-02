@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.8 2019/08/23 09:57:49 adam Exp $
+# $NetBSD: Makefile,v 1.9 2019/10/02 17:36:43 adam Exp $
+
+.include "../../security/py-certbot/Makefile.common"
 
 DISTNAME=	certbot-apache-${CERTBOT_VERSION}
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/certbot-apache/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Apache plugin for Certbot
-
-.include "../../security/py-certbot/Makefile.common"
 
 DEPENDS+=	${PYPKGPREFIX}-acme>=0.29.0:../../security/py-acme
 DEPENDS+=	${PYPKGPREFIX}-augeas-[0-9]*:../../sysutils/py-augeas
-DEPENDS+=	${PYPKGPREFIX}-certbot>=0.37.0:../../security/py-certbot
+DEPENDS+=	${PYPKGPREFIX}-certbot>=0.39.0:../../security/py-certbot
 DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 DEPENDS+=	${PYPKGPREFIX}-pyparsing>=1.5.5:../../devel/py-pyparsing
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
