@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.116 2019/05/02 08:36:10 wiz Exp $
+# $NetBSD: java-vm.mk,v 1.117 2019/10/02 13:16:29 ryoon Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -11,7 +11,7 @@
 #
 #	Possible values: kaffe openjdk7 openjdk8
 #		sun-jdk7 oracle-jdk8
-#		openjdk-bin
+#		openjdk-bin openjdk11
 #	Default value: (platform-dependent)
 #
 # Package-settable variables:
@@ -72,7 +72,7 @@ PKG_JVMS_ACCEPTED?=	${_PKG_JVMS}
 
 # This is a list of all of the JDKs that may be used.
 #
-_PKG_JVMS.9=		openjdk-bin
+_PKG_JVMS.9=		openjdk-bin openjdk11
 _PKG_JVMS.8=		${_PKG_JVMS.9} openjdk8 oracle-jdk8
 _PKG_JVMS.7=		${_PKG_JVMS.8} openjdk7 sun-jdk7
 _PKG_JVMS.6=		${_PKG_JVMS.7} jdk16
@@ -97,9 +97,12 @@ _PKG_JVM_DEFAULT:=	${PKG_JVM}
 _PKG_JVM_DEFAULT=	${PKG_JVM_DEFAULT}
 .endif
 .if !defined(_PKG_JVM_DEFAULT)
-.  if   !empty(MACHINE_PLATFORM:MNetBSD-[56789].*-i386) || \
-        !empty(MACHINE_PLATFORM:MNetBSD-[56789].*-x86_64)
+.  if   !empty(MACHINE_PLATFORM:MNetBSD-[56].*-i386) || \
+        !empty(MACHINE_PLATFORM:MNetBSD-[56].*-x86_64)
 _PKG_JVM_DEFAULT?=	openjdk8
+.  elif !empty(MACHINE_PLATFORM:MNetBSD-[789].*-i386) || \
+	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-x86_64)
+_PKG_JVM_DEFAULT?=	openjdk11
 .  elif !empty(MACHINE_PLATFORM:MNetBSD-[789].*-sparc64) || \
 	!empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || \
 	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-earmv[67]hf)
@@ -168,6 +171,9 @@ _ONLY_FOR_PLATFORMS.oracle-jdk8= \
 _ONLY_FOR_PLATFORMS.openjdk-bin= \
 	Linux-*-x86_64 \
 	NetBSD-[6-9]*-x86_64
+_ONLY_FOR_PLATFORMS.openjdk11= \
+	NetBSD-[7-9]*-x86_64 \
+	NetBSD-[7-9]*-i386
 
 # Set ONLY_FOR_PLATFORM based on accepted JVMs
 .for _jvm_ in ${PKG_JVMS_ACCEPTED}
@@ -189,6 +195,7 @@ _JAVA_PKGBASE.openjdk8=		openjdk8
 _JAVA_PKGBASE.sun-jdk7=		sun-jre7
 _JAVA_PKGBASE.oracle-jdk8=	oracle-jre8
 _JAVA_PKGBASE.openjdk-bin=	openjdk-bin
+_JAVA_PKGBASE.openjdk11=	openjdk11
 
 # The following is copied from the respective JVM Makefiles.
 _JAVA_NAME.kaffe=		kaffe
@@ -197,6 +204,7 @@ _JAVA_NAME.openjdk8=		openjdk8
 _JAVA_NAME.sun-jdk7=		sun7
 _JAVA_NAME.oracle-jdk8=		oracle8
 _JAVA_NAME.openjdk-bin=		openjdk-bin
+_JAVA_NAME.openjdk11=		openjdk11
 
 # Mark the acceptable JVMs and check which JVM packages are installed.
 .for _jvm_ in ${_PKG_JVMS_ACCEPTED}
@@ -252,6 +260,7 @@ BUILDLINK_API_DEPENDS.sun-jre7?=	sun-jre7-[0-9]*
 BUILDLINK_API_DEPENDS.oracle-jdk8?=	oracle-jdk8-[0-9]*
 BUILDLINK_API_DEPENDS.oracle-jre8?=	oracle-jre8-[0-9]*
 BUILDLINK_API_DEPENDS.openjdk-bin?=	openjdk-bin-[0-9]*
+BUILDLINK_API_DEPENDS.openjdk11?=	openjdk11-[0-9]*
 
 _JRE.kaffe=		kaffe
 _JRE.openjdk7=		openjdk7
@@ -259,6 +268,7 @@ _JRE.openjdk8=		openjdk8
 _JRE.sun-jdk7=		sun-jre7
 _JRE.oracle-jdk8=	oracle-jre8
 _JRE.openjdk-bin=	openjdk-bin
+_JRE.openjdk11=		openjdk11
 
 _JAVA_BASE_CLASSES=	classes.zip
 
@@ -288,6 +298,11 @@ UNLIMIT_RESOURCES+=	datasize
 _JDK_PKGSRCDIR=		../../lang/openjdk-bin
 _JRE_PKGSRCDIR=		../../lang/openjdk-bin
 _JAVA_HOME=		${LOCALBASE}/java/openjdk-bin
+UNLIMIT_RESOURCES+=	datasize
+.elif ${_PKG_JVM} == "openjdk11"
+_JDK_PKGSRCDIR=		../../lang/openjdk11
+_JRE_PKGSRCDIR=		../../lang/openjdk11
+_JAVA_HOME=		${LOCALBASE}/java/openjdk11
 UNLIMIT_RESOURCES+=	datasize
 .endif
 
