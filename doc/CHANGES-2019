@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4108 2019/10/02 10:41:38 triaxx Exp $
+$NetBSD: CHANGES-2019,v 1.4109 2019/10/02 13:19:38 he Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6676,3 +6676,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-test-xdist to 1.30.0 [adam 2019-10-02]
 	Updated devel/py-test-mock to 1.11.0 [adam 2019-10-02]
 	Updated security/py-certbot to 0.38.0nb3 [triaxx 2019-10-02]
+	Updated lang/rust to 1.38.0 [he 2019-10-02]
