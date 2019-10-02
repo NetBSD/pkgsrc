@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2019/10/02 21:14:42 minskim Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/netCDF4/__init__.py
+${PYSITELIB}/netCDF4/__init__.pyc
+${PYSITELIB}/netCDF4/__init__.pyo
+${PYSITELIB}/netCDF4/_netCDF4.so
+${PYSITELIB}/netCDF4/utils.py
+${PYSITELIB}/netCDF4/utils.pyc
+${PYSITELIB}/netCDF4/utils.pyo
+bin/nc3tonc4
+bin/nc4tonc3
+bin/ncinfo
