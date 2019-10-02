@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2019/09/12 15:08:55 adam Exp $
+$NetBSD: distinfo,v 1.11 2019/10/02 17:36:44 adam Exp $
 
-SHA1 (certbot-dns-sakuracloud-0.38.0.tar.gz) = 3709c3bced59e240e5d95ae873f44820cc18362f
-RMD160 (certbot-dns-sakuracloud-0.38.0.tar.gz) = 4d9e48cbf988853db7720edfd71d5503fe637842
-SHA512 (certbot-dns-sakuracloud-0.38.0.tar.gz) = 58e1b23162d8cfc2d0fe54c6913f28c11439721ed75ee7aee7a6f1cff90fe73c9d2d6ecbe5561403fce04a8ee07e89a00e50c6d64b95d02ecccc800888ef60e9
-Size (certbot-dns-sakuracloud-0.38.0.tar.gz) = 11607 bytes
+SHA1 (certbot-dns-sakuracloud-0.39.0.tar.gz) = 8613427c2a6fdc7b9c94c8f5b19c8b81bf0d278b
+RMD160 (certbot-dns-sakuracloud-0.39.0.tar.gz) = c24aadd599b0db9c9876001e273262c01413817a
+SHA512 (certbot-dns-sakuracloud-0.39.0.tar.gz) = e3ee6160b10f1c63ee8c0212b458f9d61a844a3125b6edc4b56b2783d1dbe7688770824dcb2e7eb1c85013807573671297d5364b2d8dc691e87d5d46e9273735
+Size (certbot-dns-sakuracloud-0.39.0.tar.gz) = 11335 bytes
