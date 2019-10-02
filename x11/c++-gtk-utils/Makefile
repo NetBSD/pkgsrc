@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2019/07/21 22:24:14 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/10/02 14:00:17 ryoon Exp $
 
-DISTNAME=	c++-gtk-utils-2.2.15
-PKGREVISION=	5
+DISTNAME=	c++-gtk-utils-2.2.18
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cxx-gtk-utils/}
 
