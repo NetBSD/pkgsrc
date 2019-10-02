@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.11 2019/09/01 13:03:17 taca Exp $
+$NetBSD: distinfo,v 1.12 2019/10/02 14:08:05 taca Exp $
 
-SHA1 (php-7.3.9.tar.bz2) = d8d75fee3bed961f26e1beb8144ebb064fdc2ca4
-RMD160 (php-7.3.9.tar.bz2) = 1dff6e84af9cad3d505aee87e562416f57b26d55
-SHA512 (php-7.3.9.tar.bz2) = a46beb28a91f7ee99f37215ddf5f65ab1743373ba98a703ed45615625ee6b4cbda1be8495901da54089f7cb285a6ac21773a29d32871e0a9540c43b57ea41b97
-Size (php-7.3.9.tar.bz2) = 14947152 bytes
+SHA1 (php-7.3.10.tar.bz2) = 234d9e828362d4ab24efff82c1c666e8543701ac
+RMD160 (php-7.3.10.tar.bz2) = bc6a3adf5ec52bcb46ecd45383174f873576530a
+SHA512 (php-7.3.10.tar.bz2) = ce961f169e26791fbdaa7bc64de92a0b9d5dd2d7ff1dc5ae39e59882d75ae266b88243fe3ec0f43235a4dc6fde1b03ce8624ecc7c470f5579b745fc9c8b1276e
+Size (php-7.3.10.tar.bz2) = 14975040 bytes
 SHA1 (patch-configure) = 08b80528ba90c705398e8841c232382663479a3b
 SHA1 (patch-disable-filter-url) = d7e450380b584e01e2f01e9c91c864d01991cdbf
 SHA1 (patch-ext_gd_config.m4) = eaecfb31b18700dd642c067ed82748d4f6be2335
