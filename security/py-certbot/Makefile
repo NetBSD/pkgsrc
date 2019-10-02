@@ -1,24 +1,20 @@
-# $NetBSD: Makefile,v 1.20 2019/10/02 10:40:56 triaxx Exp $
-
-DISTNAME=	certbot-${CERTBOT_VERSION}
-PKGREVISION=	3
-MASTER_SITES=	${MASTER_SITE_PYPI:=c/certbot/}
-
-MAINTAINER=	fhajny@NetBSD.org
-COMMENT=	Client for the Let's Encrypt CA
+# $NetBSD: Makefile,v 1.21 2019/10/02 17:36:43 adam Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
-#EGG_NAME=	${DISTNAME}
+DISTNAME=	certbot-${CERTBOT_VERSION}
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/certbot/}
+
+COMMENT=	Client for the Let's Encrypt CA
 
 DEPENDS+=	${PYPKGPREFIX}-acme>=0.29.0:../../security/py-acme
 DEPENDS+=	${PYPKGPREFIX}-configargparse>=0.9.3:../../devel/py-configargparse
 DEPENDS+=	${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=1.2.3:../../security/py-cryptography
-DEPENDS+=	${PYPKGPREFIX}-distro>=1.2.0:../../devel/py-distro
+DEPENDS+=	${PYPKGPREFIX}-distro>=1.0.1:../../devel/py-distro
 DEPENDS+=	${PYPKGPREFIX}-josepy>=1.1.0:../../security/py-josepy
 DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-DEPENDS+=	${PYPKGPREFIX}-parsedatetime>=2.0:../../time/py-parsedatetime
+DEPENDS+=	${PYPKGPREFIX}-parsedatetime>=1.3:../../time/py-parsedatetime
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-rfc3339-[0-9]*:../../time/py-rfc3339
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools

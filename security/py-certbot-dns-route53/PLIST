@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/01/15 09:38:10 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/10/02 17:36:44 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -6,14 +6,14 @@ ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/certbot_dns_route53/__init__.py
-${PYSITELIB}/certbot_dns_route53/__init__.pyo
 ${PYSITELIB}/certbot_dns_route53/__init__.pyc
-${PYSITELIB}/certbot_dns_route53/authenticator.pyo
-${PYSITELIB}/certbot_dns_route53/authenticator.pyc
-${PYSITELIB}/certbot_dns_route53/dns_route53.pyo
-${PYSITELIB}/certbot_dns_route53/dns_route53.pyc
-${PYSITELIB}/certbot_dns_route53/dns_route53_test.pyo
-${PYSITELIB}/certbot_dns_route53/dns_route53_test.pyc
+${PYSITELIB}/certbot_dns_route53/__init__.pyo
 ${PYSITELIB}/certbot_dns_route53/authenticator.py
+${PYSITELIB}/certbot_dns_route53/authenticator.pyc
+${PYSITELIB}/certbot_dns_route53/authenticator.pyo
 ${PYSITELIB}/certbot_dns_route53/dns_route53.py
+${PYSITELIB}/certbot_dns_route53/dns_route53.pyc
+${PYSITELIB}/certbot_dns_route53/dns_route53.pyo
 ${PYSITELIB}/certbot_dns_route53/dns_route53_test.py
+${PYSITELIB}/certbot_dns_route53/dns_route53_test.pyc
+${PYSITELIB}/certbot_dns_route53/dns_route53_test.pyo
