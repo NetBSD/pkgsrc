@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.2 2019/10/03 12:52:54 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.3 2019/10/03 16:32:47 rillig Exp $
 
 from url2pkg import *
 
@@ -124,6 +124,14 @@ def test_Lines_append__value_without_comment():
     assert lines.append("VARNAME", "appended")
 
     assert lines.lines == ["VARNAME+=\tvalue appended"]
+
+
+def test_Lines_append__multiple_assignments():
+    lines = Lines("VARNAME+=\tvalue1", "VARNAME+=\tvalue2")
+
+    assert not lines.append("VARNAME", "appended")
+
+    assert lines.lines == ["VARNAME+=\tvalue1", "VARNAME+=\tvalue2"]
 
 
 def test_Lines_set__previously_with_comment():
@@ -351,8 +359,8 @@ def test_generate_initial_package_Makefile_lines__distname_version_with_v():
 
 def test_Adjuster_read_dependencies():
     dep_lines = [
-        "DEPENDS\tpackage>=version:../../pkgtools/pkglint",
-        "DEPENDS\tpackage>=version:../../pkgtools/x11-links",
+        "DEPENDS\tpackage>=80.0:../../pkgtools/pkglint",
+        "DEPENDS\tpackage>=120.0:../../pkgtools/x11-links",
         "BUILD_DEPENDS\turl2pkg>=1.0",
         "TEST_DEPENDS\tpkglint",
         "A line that is not a dependency at all",
@@ -369,9 +377,10 @@ def test_Adjuster_read_dependencies():
     assert os.getenv('URL2PKG_DEPENDENCIES') is None
 
     assert adjuster.depends == [
-        "package>=version:../../pkgtools/pkglint"
+        "package>=80.0:../../pkgtools/pkglint"
     ]
     assert adjuster.bl3_lines == [
+        'BUILDLINK_API_DEPENDS.x11-links+=\tx11-links>=120.0',
         ".include \"../../pkgtools/x11-links/buildlink3.mk\""
     ]
     assert adjuster.build_depends == [
@@ -439,6 +448,21 @@ def test_Adjuster_generate_adjusted_Makefile_lines__dependencies():
         "TEST_DEPENDS+=\ttest-depends>=13.0:../../devel/test-depends",
         "",
         ".include \"../../mk/bsd.pkg.mk\""
+    ]
+
+
+def test_Adjuster_add_dependency__buildlink():
+    adjuster = Adjuster()
+    adjuster.makefile_lines.add('# url2pkg-marker')
+
+    adjuster.add_dependency('BUILD_DEPENDS', 'libusb', '>=2019', '../../devel/libusb')
+
+    lines = adjuster.generate_adjusted_Makefile_lines('https://example.org/distfile-1.0.zip')
+
+    assert lines.lines == [
+        'BUILDLINK_DEPENDS.libusb+=\tbuild',
+        'BUILDLINK_API_DEPENDS.libusb+=\tlibusb>=2019',
+        '.include "../../devel/libusb/buildlink3.mk"',
     ]
 
 
