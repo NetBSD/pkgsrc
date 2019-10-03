@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4141 2019/10/03 20:20:12 agc Exp $
+$NetBSD: CHANGES-2019,v 1.4142 2019/10/03 20:33:34 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6716,3 +6716,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/decode-dimms to 4.1.20191002 [pgoyette 2019-10-03]
 	Updated security/libnetpgpverify to 20191003 [agc 2019-10-03]
 	Updated security/netpgpverify to 20191003 [agc 2019-10-03]
+	Updated multimedia/obs-studio to 24.0.1 [nia 2019-10-03]
