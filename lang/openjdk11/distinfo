@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2019/10/01 12:36:34 tnn Exp $
+$NetBSD: distinfo,v 1.2 2019/10/03 16:57:20 tnn Exp $
 
 SHA1 (bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz) = d76599619b8bea879b8202b3efc38a82335d2e8c
 RMD160 (bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz) = a1b998e4e7edfb73ec35b0cc94895d9af16a8cd8
@@ -20,6 +20,7 @@ SHA1 (patch-make_autoconf_lib-freetype.m4) = 3dbdfea4011dc69593ab302626b9ec4dfc7
 SHA1 (patch-make_autoconf_lib-x11.m4) = f609a726f2d795f1d05cc933df587d3440c09b9f
 SHA1 (patch-make_common_NativeCompilation.gmk) = fc97a952ba87efb450f59e87f19fb4c47558ae1d
 SHA1 (patch-make_data_fontconfig_bsd.fontconfig.properties) = 9fd9f6ef4af0eece0b4ca0acbb44331566f17e07
+SHA1 (patch-make_lib_Awt2dLibraries.gmk) = ab77cfd0f07425b694688ffa98c2c661d1ac017d
 SHA1 (patch-src_hotspot_os_bsd_os__bsd.cpp) = ee20027e4323ebf63874cedd9e4549ebb702d335
 SHA1 (patch-src_hotspot_os_bsd_os__perf__bsd.cpp) = 93a7098cb13adf5d28b16c123a390e5e13d626bf
 SHA1 (patch-src_hotspot_os_posix_os__posix.cpp) = e70e8c1e59f0be184a7a1d6e9d11ac7b934ce4b2
