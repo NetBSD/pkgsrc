@@ -1,5 +1,5 @@
 #! @PERL5@
-# $NetBSD: url2pkg.pl,v 1.76 2019/10/02 15:57:37 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.77 2019/10/03 09:31:36 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -873,7 +873,7 @@ sub main() {
 	}
 
 	GetOptions(
-		"verbose=v" => \$verbose
+		"verbose|v" => \$verbose
 	);
 
 	my $url;
