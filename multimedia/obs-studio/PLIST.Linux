@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST.Linux,v 1.3 2019/07/06 14:43:41 nia Exp $
+@comment $NetBSD: PLIST.Linux,v 1.4 2019/10/03 20:33:15 nia Exp $
 lib/obs-plugins/linux-alsa.so
 lib/obs-plugins/linux-decklink.so
 lib/obs-plugins/linux-v4l2.so
 share/obs/obs-plugins/linux-alsa/locale/ar-SA.ini
+share/obs/obs-plugins/linux-alsa/locale/bg-BG.ini
 share/obs/obs-plugins/linux-alsa/locale/bn-BD.ini
 share/obs/obs-plugins/linux-alsa/locale/ca-ES.ini
 share/obs/obs-plugins/linux-alsa/locale/cs-CZ.ini
@@ -34,6 +35,7 @@ share/obs/obs-plugins/linux-alsa/locale/pt-PT.ini
 share/obs/obs-plugins/linux-alsa/locale/ro-RO.ini
 share/obs/obs-plugins/linux-alsa/locale/ru-RU.ini
 share/obs/obs-plugins/linux-alsa/locale/sk-SK.ini
+share/obs/obs-plugins/linux-alsa/locale/sl-SI.ini
 share/obs/obs-plugins/linux-alsa/locale/sr-CS.ini
 share/obs/obs-plugins/linux-alsa/locale/sr-SP.ini
 share/obs/obs-plugins/linux-alsa/locale/sv-SE.ini
