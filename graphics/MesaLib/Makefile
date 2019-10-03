@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.166 2019/09/09 01:00:49 nia Exp $
+# $NetBSD: Makefile,v 1.167 2019/10/03 15:50:06 nia Exp $
 
 DISTNAME=	mesa-19.1.6
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -62,7 +62,6 @@ PLIST_VARS+=		egl gbm vaapi xatracker
 .if ${OPSYS} != "Darwin" && ${OPSYS} != "Cygwin"
 .include "../../x11/libdrm/buildlink3.mk"
 MESA_PLATFORMS+=	drm
-MESON_ARGS+=		-Ddri3=true
 .  if ${OPSYS} != "SunOS"
 MESON_ARGS+=		-Degl=true
 MESON_ARGS+=		-Dgbm=true
