@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2019/07/09 16:33:30 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/10/03 15:53:21 nia Exp $
 bin/lightspark
-bin/tightspark
 lib/PepperFlash/libpepflashplayer.so
 lib/PepperFlash/manifest.json
 lib/liblightspark.so
