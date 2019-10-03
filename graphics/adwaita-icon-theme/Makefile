@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2019/06/08 19:56:23 leot Exp $
+# $NetBSD: Makefile,v 1.17 2019/10/03 23:44:31 nia Exp $
 
 DISTNAME=		adwaita-icon-theme-3.30.1
+PKGREVISION=		1
 CATEGORIES=		graphics gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/adwaita-icon-theme/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=		.tar.xz
@@ -27,14 +28,16 @@ INSTALLATION_DIRS+=	share/icons/Adwaita/96x96/places
 
 ICON_THEMES=		yes
 
+.include "../../mk/bsd.prefs.mk"
+
 post-install:
-.for s in 16 22 24 32 48 96 256
-	 ${LOCALBASE}/bin/rsvg-convert ${FILESDIR}/distributor-logo.svg \
-	 -w ${s} -h ${s} -o \
-	 ${DESTDIR}${PREFIX}/share/icons/Adwaita/${s}x${s}/places/start-here.png
-.endfor
+.if ${OPSYS} == "NetBSD"
+.  for s in 16 22 24 32 48 96 256
+	${INSTALL_DATA} ${FILESDIR}/netbsd-${s}.png \
+	    ${DESTDIR}${PREFIX}/share/icons/Adwaita/${s}x${s}/places/start-here.png
+.  endfor
+.endif
 
 BUILDLINK_DEPMETHOD.gettext-lib=        build
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../graphics/librsvg/tool.mk"
 .include "../../mk/bsd.pkg.mk"
