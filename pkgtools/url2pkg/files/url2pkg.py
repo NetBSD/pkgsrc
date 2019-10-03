@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.4 2019/10/03 16:32:47 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.5 2019/10/03 16:43:58 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -812,12 +812,16 @@ class Adjuster:
 
     def adjust_package_from_extracted_distfiles(self, url: str):
 
+        def scan(basedir: str, pattern: str) -> List[str]:
+            full_paths = glob.glob(f'{basedir}/{pattern}', recursive=True)
+            return list(f[len(basedir) + 1:] for f in full_paths)
+
         debug('Adjusting the Makefile')
 
         self.abs_wrkdir = show_var('WRKDIR')
         self.determine_wrksrc()
-        self.wrksrc_files = glob.glob(f'{self.abs_wrksrc}/**', recursive=True)
-        self.wrksrc_dirs = glob.glob(f'{self.abs_wrksrc}/**/', recursive=True)
+        self.wrksrc_files = scan(self.abs_wrksrc, '**')
+        self.wrksrc_dirs = scan(self.abs_wrksrc, '**/')
 
         self.makefile_lines = Lines.read_from(config.pkgdir + '/Makefile')
 

@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.3 2019/10/03 16:32:47 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.4 2019/10/03 16:43:58 rillig Exp $
 
 from url2pkg import *
 
