@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.278 2019/09/19 14:28:14 nia Exp $
+# $NetBSD: Makefile,v 1.279 2019/10/03 14:30:41 nia Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -84,6 +84,7 @@ SUBDIR+=	gst-plugins1-ogg
 SUBDIR+=	gst-plugins1-omx
 SUBDIR+=	gst-plugins1-resindvd
 SUBDIR+=	gst-plugins1-theora
+SUBDIR+=	gst-plugins1-transcoder
 SUBDIR+=	gst-plugins1-ugly
 SUBDIR+=	gst-plugins1-v4l2
 SUBDIR+=	gst-plugins1-vpx
