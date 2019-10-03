@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2019/10/03 14:53:38 nia Exp $
+lib/gstreamer-1.0/libgstgtk.la
