@@ -9,5 +9,3 @@ Support hardware includes the following chipsets:
   - i915
   - i945
   - i965
-
-An older version of the Intel driver is available in x11/xf86-video-i810.
