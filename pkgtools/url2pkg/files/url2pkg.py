@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.2 2019/10/03 12:52:54 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.3 2019/10/03 14:48:48 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -773,16 +773,16 @@ class Adjuster:
             lines.add('')
 
         depend_vars = []
-        depend_vars.extend(map(lambda d: Var('BUILD_DEPENDS', '+=', d), self.build_depends))
-        depend_vars.extend(map(lambda d: Var('DEPENDS', '+=', d), self.depends))
-        depend_vars.extend(map(lambda d: Var('TEST_DEPENDS', '+=', d), self.test_depends))
+        depend_vars.extend(Var('BUILD_DEPENDS', '+=', d) for d in self.build_depends)
+        depend_vars.extend(Var('DEPENDS', '+=', d) for d in self.depends)
+        depend_vars.extend(Var('TEST_DEPENDS', '+=', d) for d in self.test_depends)
         lines.add_vars(*depend_vars)
 
         lines.add_vars(*self.build_vars)
         lines.add_vars(*self.extra_vars)
 
         lines.add(*self.bl3_lines)
-        lines.add(*map(lambda include: '.include "%s"' % include, self.includes))
+        lines.add(*(f'.include "{include}"' for include in self.includes))
 
         lines.add(*self.makefile_lines.lines[marker_index + 1:])
 
@@ -833,8 +833,7 @@ def main():
 
     try:
         opts, args = getopt.getopt(sys.argv[1:], 'v', ['verbose'])
-        for (opt, optarg) in opts:
-            print('opt', repr(opt))
+        for (opt, _) in opts:
             if opt in ('-v', '--verbose'):
                 config.verbose = True
     except getopt.GetoptError:
