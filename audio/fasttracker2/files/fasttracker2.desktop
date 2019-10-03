@@ -2,7 +2,7 @@
 Name=Fasttracker II
 Comment=Fasttracker II clone for modern computers
 Comment[fr]=Clone de Fasttracker II pour les ordinateurs modernes
-Exec=ft2-clone %f
+Exec=fasttracker2 %f
 Icon=fasttracker2
 Terminal=false
 Type=Application
