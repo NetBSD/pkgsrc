@@ -1,4 +1,13 @@
-$NetBSD: CHANGES-pkgsrc-2019Q3,v 1.1.2.1 2019/10/01 11:10:22 wiz Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q3,v 1.1.2.2 2019/10/03 15:37:35 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q3 branch:
+
+Pullup ticket #6061 - requested by rillig
+pkgtools/url2pkg: bugfix
+
+Pullup ticket #6062 - requested by he
+net/unbound: security fix
+
+Pullup ticket #6063 - requested by tron
+net/mtr: Solaris build fix
 
