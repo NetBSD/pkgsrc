@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/10/01 12:28:18 nia Exp $
+# $NetBSD: Makefile,v 1.2 2019/10/03 22:31:17 nia Exp $
 
 DISTNAME=	quake2-7.41
 PKGNAME=	y${DISTNAME}
@@ -27,9 +27,9 @@ pre-configure:
 	${SED} -e 's,@PREFIX@,${PREFIX},g' < ${FILESDIR}/quake2.sh.in > ${WRKDIR}/quake2.sh
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/quake2.sh \
+	${INSTALL_SCRIPT} ${WRKDIR}/quake2.sh \
 	    ${DESTDIR}${PREFIX}/bin/quake2
-	${INSTALL_PROGRAM} ${WRKDIR}/quake2.sh \
+	${INSTALL_SCRIPT} ${WRKDIR}/quake2.sh \
 	    ${DESTDIR}${PREFIX}/bin/q2ded
 	${INSTALL_PROGRAM} ${WRKSRC}/release/quake2 \
 	    ${DESTDIR}${PREFIX}/libexec/quake2
