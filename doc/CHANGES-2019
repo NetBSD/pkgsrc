@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4132 2019/10/03 12:18:21 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.4133 2019/10/03 14:31:08 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6705,3 +6705,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/unbound to 1.9.4 [he 2019-10-03]
 	Updated graphics/freeglut to 3.2.0 [nia 2019-10-03]
 	Updated print/qpdf to 9.0.1 [ryoon 2019-10-03]
+	Added multimedia/gst-plugins1-transcoder version 1.16.0 [nia 2019-10-03]
