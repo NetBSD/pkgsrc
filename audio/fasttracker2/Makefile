@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.41 2019/09/30 12:35:24 fox Exp $
+# $NetBSD: Makefile,v 1.42 2019/10/03 01:44:00 fox Exp $
 
 DISTNAME=	ft2-clone-v${PKGVERSION_NOREV}-code
 PKGNAME=	fasttracker2-${DISTVERSION}
 DISTVERSION=	1.00
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://16-bits.org/
 EXTRACT_SUFX=	.zip
@@ -43,7 +44,7 @@ pre-configure:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/release/other/ft2-clone \
-		${DESTDIR}${PREFIX}/bin
+		${DESTDIR}${PREFIX}/bin/${PKGBASE}
 	${INSTALL_DATA} ${FILESDIR}/fasttracker2.desktop \
 		${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${FILESDIR}/fasttracker2.appdata.xml \
