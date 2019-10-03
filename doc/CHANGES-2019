@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4124 2019/10/02 21:16:23 minskim Exp $
+$NetBSD: CHANGES-2019,v 1.4125 2019/10/03 00:43:48 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6691,3 +6691,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/php72 to 7.2.23 [taca 2019-10-02]
 	Updated lang/php73 to 7.3.10 [taca 2019-10-02]
 	Added math/py-netCDF4 version 1.5.2 [minskim 2019-10-02]
+	Updated lang/ruby24-base to 2.4.9nb1 [ryoon 2019-10-03]
+	Updated lang/ruby25-base to 2.5.7nb1 [ryoon 2019-10-03]
+	Updated lang/ruby26-base to 2.6.5nb1 [ryoon 2019-10-03]
