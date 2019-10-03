@@ -1,16 +1,16 @@
-$NetBSD: patch-services_url_check_Makefile.in,v 1.5 2017/02/06 14:15:18 adam Exp $
+$NetBSD: patch-services_url_check_Makefile.in,v 1.6 2019/10/03 16:36:54 sborrill Exp $
 
-Handle configuration files
+Handle configuration files.
 
---- services/url_check/Makefile.in.orig	2013-12-27 15:35:48.000000000 +0000
-+++ services/url_check/Makefile.in
-@@ -842,8 +842,7 @@ uninstall-man: uninstall-man8
+--- services/url_check/Makefile.in.orig	2019-01-17 10:57:18.000000000 +0000
++++ services/url_check/Makefile.in	2019-10-03 17:21:21.000000000 +0100
+@@ -854,8 +854,7 @@
  	$(do_subst) < $< > $@
  
  install-data-local:
--	$(INSTALL) srv_url_check.conf $(DESTDIR)$(CONFIGDIR)/srv_url_check.conf.default
+-	$(INSTALL) $(srcdir)/srv_url_check.conf $(DESTDIR)$(CONFIGDIR)/srv_url_check.conf.default
 -	if test ! -f $(DESTDIR)$(CONFIGDIR)/srv_url_check.conf; then $(INSTALL) srv_url_check.conf $(DESTDIR)$(CONFIGDIR)/srv_url_check.conf; fi
 +	$(INSTALL) -m 0444 srv_url_check.conf $(DESTDIR)$(datadir)/c-icap/srv_url_check.conf.default
  	$(mkinstalldirs) $(DESTDIR)$(cicapdatadir)/templates/srv_url_check/en
- 	$(INSTALL) $(TMPLS) $(DESTDIR)$(cicapdatadir)/templates/srv_url_check/en/
+ 	for f in $(TMPLS); do  $(INSTALL) $(srcdir)/$$f $(DESTDIR)$(cicapdatadir)/templates/srv_url_check/en/; done
  
