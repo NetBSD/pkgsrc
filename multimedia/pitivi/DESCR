@@ -1,1 +1,3 @@
-Nonlinear video editor.
+Pitivi is a non-linear video editor. Built upon the GStreamer multimedia
+framework and GTK, Pitivi aims to be an intuitive and flexible video editor
+that can appeal to newbies and professionals alike.
