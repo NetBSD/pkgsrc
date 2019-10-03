@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.5 2019/10/03 16:43:58 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.6 2019/10/03 18:28:29 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -386,7 +386,7 @@ class Lines:
         string.
         """
         varassign = self.unique_varassign(varname)
-        return varassign.value if varassign is not None else ''
+        return varassign.value if varassign is not None and varassign.varname == varname else ''
 
     def remove_if(self, varname: str, expected_value: str) -> bool:
         """ Removes a variable assignment if its value is the expected one. """
@@ -775,7 +775,7 @@ class Adjuster:
 
         lines = Lines(*self.makefile_lines.lines[: marker_index])
 
-        if lines.index(r'^PKGNAME=') == -1:
+        if lines.get('PKGNAME=') == '':
             distname_index = lines.index(r'^DISTNAME=(\t+)')
             if distname_index != -1:
                 pkgname_line = 'PKGNAME=\t%s${DISTNAME%s}' % (self.pkgname_prefix, self.pkgname_transform)
