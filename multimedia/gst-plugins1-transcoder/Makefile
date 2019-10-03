@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/10/03 14:30:41 nia Exp $
+# $NetBSD: Makefile,v 1.2 2019/10/03 22:40:12 nia Exp $
 
 DISTNAME=	gst-transcoder-1.16.0
 PKGNAME=	${DISTNAME:S/^gst/gst-plugins1/1}
@@ -18,6 +18,12 @@ SUBST_STAGE.py=		pre-configure
 SUBST_MESSAGE.py=	Setting the Python executable name.
 SUBST_FILES.py+=	meson.build
 SUBST_VARS.py+=		PYVERSSUFFIX
+
+# workaround for build failure
+# https://gitlab.gnome.org/GNOME/json-glib/issues/35
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output
+
+MESON_ARGS+=	-Ddisable_doc=true
 
 .include "../../devel/py-meson/build.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
