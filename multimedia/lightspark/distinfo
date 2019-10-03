@@ -1,13 +1,12 @@
-$NetBSD: distinfo,v 1.1 2019/07/09 16:33:30 nia Exp $
+$NetBSD: distinfo,v 1.2 2019/10/03 15:53:21 nia Exp $
 
-SHA1 (lightspark-0.8.1.tar.gz) = dd19eb4584b9ffe838f0966a72fadb90c4fbeb73
-RMD160 (lightspark-0.8.1.tar.gz) = e6193626e2733b971da1fee97091340eb1dc2eef
-SHA512 (lightspark-0.8.1.tar.gz) = ee9f02e4aa160d8e68cab743eddce5f4f5de0bb78f5daaaf69890b442701dc42094a59433cef136f6dc85e6fbce989bc8ff7ce8ad1ed1929c8501b13e24f2646
-Size (lightspark-0.8.1.tar.gz) = 1899466 bytes
-SHA1 (patch-CMakeLists.txt) = 5522aed1f23043cfe9b11f3fe72c2dcba5492076
-SHA1 (patch-conf_FindLLVM.cmake) = d9c067e353d65f9995ef94f75a49bd82dddffc82
+SHA1 (lightspark-0.8.2.tar.gz) = d1194130aeadc144ef90065782cd8f9bf893d7e8
+RMD160 (lightspark-0.8.2.tar.gz) = 26dd4ff4fdb991c1159f964dd5bee1ab6efafee1
+SHA512 (lightspark-0.8.2.tar.gz) = 0ff636ad59523726232d9c2105843dc9ea835526c300bca7833e6d1a0ebf7630c1d10109143baabc16f95c1c954094603c945b705a6c9fb02f369e94fead034e
+Size (lightspark-0.8.2.tar.gz) = 1996482 bytes
+SHA1 (patch-CMakeLists.txt) = ca9f200bf92ecbdd5d60738ccbad85581ee3d979
 SHA1 (patch-src_backends_urlutils.cpp) = bd1e7584703a1045609b13b7379cf3eddcd13ef0
 SHA1 (patch-src_main.cpp) = 3da1e6f80e07ae3ef9485c006fe7fee23d7f0c82
 SHA1 (patch-src_parsing_tags.cpp) = 951f2757ed68f6e0f5964df3fa944aeace4cbda3
 SHA1 (patch-src_platforms_engineutils.cpp) = 884e37623cf8203d86fcb27e479b41af08a509c4
-SHA1 (patch-src_plugin__ppapi_plugin.cpp) = e0e1be7012c2c75b746b36b8d3801c0aa4d81c95
+SHA1 (patch-src_plugin__ppapi_plugin.cpp) = 52d76189aded5687ba5671623bdc919ebaffd5dd
