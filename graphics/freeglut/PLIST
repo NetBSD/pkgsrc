@@ -1,8 +1,13 @@
-@comment $NetBSD: PLIST,v 1.7 2019/09/23 12:28:49 nia Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/10/03 11:17:51 nia Exp $
 include/GL/freeglut.h
 include/GL/freeglut_ext.h
 include/GL/freeglut_std.h
+include/GL/freeglut_ucall.h
 include/GL/glut.h
+lib/cmake/FreeGLUT/FreeGLUTConfig.cmake
+lib/cmake/FreeGLUT/FreeGLUTConfigVersion.cmake
+lib/cmake/FreeGLUT/FreeGLUTTargets-release.cmake
+lib/cmake/FreeGLUT/FreeGLUTTargets.cmake
 lib/libglut.a
 lib/libglut.so
 lib/libglut.so.3
