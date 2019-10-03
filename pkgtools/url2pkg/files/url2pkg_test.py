@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.4 2019/10/03 16:43:58 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.5 2019/10/03 18:28:29 rillig Exp $
 
 from url2pkg import *
 
@@ -250,12 +250,14 @@ def test_Lines_get():
     lines = Lines(
         "VAR=value",
         "VAR=\tvalue # comment",
-        "UNIQUE=\tunique"
+        "UNIQUE=\tunique",
+        "#COMMENTED=\tvalue",
     )
 
     assert lines.get("VAR") == ""  # too many values
     assert lines.get("ENOENT") == ""  # no value at all
     assert lines.get("UNIQUE") == "unique"
+    assert lines.get("COMMENTED") == ""  # commented out
 
 
 def test_generate_initial_package_Makefile_lines__GitHub_archive():
