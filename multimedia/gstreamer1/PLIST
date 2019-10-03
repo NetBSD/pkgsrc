@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2019/05/29 20:51:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2019/10/03 13:38:57 nia Exp $
 bin/gst-inspect-1.0
 bin/gst-launch-1.0
 bin/gst-stats-1.0
@@ -22,6 +22,7 @@ include/gstreamer-1.0/gst/base/gstpushsrc.h
 include/gstreamer-1.0/gst/base/gstqueuearray.h
 include/gstreamer-1.0/gst/base/gsttypefindhelper.h
 ${PLIST.gstcheck}include/gstreamer-1.0/gst/check/check.h
+${PLIST.gstcheck}include/gstreamer-1.0/gst/check/check-prelude.h
 ${PLIST.gstcheck}include/gstreamer-1.0/gst/check/gstbufferstraw.h
 ${PLIST.gstcheck}include/gstreamer-1.0/gst/check/gstcheck.h
 ${PLIST.gstcheck}include/gstreamer-1.0/gst/check/gstconsistencychecker.h
