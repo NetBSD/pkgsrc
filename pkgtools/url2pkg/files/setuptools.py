@@ -1,4 +1,4 @@
-# $NetBSD: setuptools.py,v 1.3 2019/10/01 19:41:23 rillig Exp $
+# $NetBSD: setuptools.py,v 1.4 2019/10/03 16:32:47 rillig Exp $
 
 # This is a drop-in replacement for the setuptools Python module. Instead
 # of actually searching for the dependencies, it extracts the dependency
@@ -7,8 +7,8 @@
 url2pkg_license_mapping = {
     'Apache 2': 'apache-2.0',
     'Apache 2.0': 'apache-2.0',
-    'Apache Software License': '', # too unspecific; needs a version number
-    'BSD': '', # too unspecific
+    'Apache Software License': '',  # too unspecific; needs a version number
+    'BSD': '',  # too unspecific
     'GNU Lesser General Public License (LGPL), Version 3': 'gnu-lgpl-v3',
     'LGPL': 'gnu-lgpl-v2',
     'MIT': 'mit',
@@ -19,13 +19,16 @@ url2pkg_license_mapping = {
     'ZPL 2.1': 'zpl-2.1',
 }
 
+
 def url2pkg_print_depends(keyword, depends):
     for dep in depends:
         print('%s\t%s%s' % (keyword, dep.replace(' ', ''), '' if '>' in dep else '>=0'))
 
+
 def url2pkg_print_var(varname, value):
     if value != '':
         print('var\t%s\t%s' % (varname, value))
+
 
 def url2pkg_print_license(license):
     if license == '':
@@ -35,6 +38,7 @@ def url2pkg_print_license(license):
         url2pkg_print_var('#LICENSE', '%s # TODO: from setup.py; needs to be adjusted' % license)
     else:
         url2pkg_print_var('LICENSE', pkgsrc_license)
+
 
 def setup(**kwargs):
     url2pkg_print_depends('DEPENDS', kwargs.get('install_requires', []))
@@ -47,6 +51,7 @@ def setup(**kwargs):
 
     # TODO: python_requires (see devel/py-futures)
     #       example: '>=2.6, <3, >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*')
+
 
 def find_packages(where='.', exclude=(), include=('*',)):
     return []
