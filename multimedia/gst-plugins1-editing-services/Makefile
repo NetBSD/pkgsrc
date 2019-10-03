@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/10/03 14:32:55 nia Exp $
+# $NetBSD: Makefile,v 1.2 2019/10/03 22:29:53 nia Exp $
 
 DISTNAME=	gstreamer-editing-services-1.16.0
 PKGNAME=	${DISTNAME:S/gstreamer-/gst-plugins1-/1}
@@ -18,6 +18,8 @@ PY_PATCHPLIST=	yes
 # workaround for build failure
 # https://gitlab.gnome.org/GNOME/json-glib/issues/35
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/ges
+
+MESON_ARGS+=	-Dgtk_doc=false
 
 .include "../../devel/py-meson/build.mk"
 .include "../../lang/python/extension.mk"
