@@ -1,36 +1,11 @@
-$NetBSD: patch-configure,v 1.9 2017/05/08 09:18:31 sborrill Exp $
+$NetBSD: patch-configure,v 1.10 2019/10/03 16:34:59 sborrill Exp $
 
-Detect Berkeley DB.
 Link against librt on NetBSD, too.
 Link-test for shm_* functions.
 
---- configure.orig	2016-09-21 12:09:36.000000000 +0000
-+++ configure	2017-04-24 14:23:58.000000000 +0000
-@@ -13210,12 +13210,11 @@
-      OLDCFLAGS=$CFLAGS
-      OLDLDFLAGS=$LDFLAGS
-      OLDLIBS=$LIBS
--     LIBS="-ldb $OLDLIBS"
--     for DBVER in 54 53 52 51 50 49 48 47 46 45 44 43 42; do
-+     for DBVER in 4 5 6; do
-         if test -d $libdbpath/include/db$DBVER; then
-            echo -n "checking for Berleley DB under $libdbpath/include/db$DBVER and $libdbpath/lib/db$DBVER... "
-            CFLAGS="-I$libdbpath/include/db$DBVER $OLDCFLAGS"
--           LDFLAGS="-L$libdbpath/lib/db$DBVER $OLDLDFLAGS"
-+           LDFLAGS="-L$libdbpath/lib -ldb$DBVER $OLDLDFLAGS"
-            cat confdefs.h - <<_ACEOF >conftest.$ac_ext
- /* end confdefs.h.  */
- 
-@@ -13229,7 +13228,7 @@
- 
- _ACEOF
- if ac_fn_c_try_link "$LINENO"; then :
--  echo yes;BDB_ADD_LDADD="-L$libdbpath/lib/db$DBVER -ldb"; BDB_ADD_FLAG="-I$libdbpath/include/db$DBVER";libdb="yes";
-+  echo yes;BDB_ADD_LDADD="-L$libdbpath/lib -ldb$DBVER"; BDB_ADD_FLAG="-I$libdbpath/include/db$DBVER";libdb="yes";
- else
-   libdb="no"; echo "no";
- 
-@@ -14546,6 +14545,11 @@
+--- configure.orig	2018-09-19 13:43:03.000000000 +0100
++++ configure	2019-10-03 13:29:48.000000000 +0100
+@@ -16264,6 +16264,11 @@
  
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking if posix shared mem works" >&5
  $as_echo_n "checking if posix shared mem works... " >&6; }
@@ -42,7 +17,7 @@ Link-test for shm_* functions.
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-@@ -14566,7 +14570,7 @@
+@@ -16284,7 +16289,7 @@
    return 0;
  }
  _ACEOF
@@ -51,12 +26,13 @@ Link-test for shm_* functions.
  
  $as_echo "#define HAVE_POSIX_SHARED_MEM 1" >>confdefs.h
  
-@@ -14585,7 +14589,7 @@
+@@ -16303,7 +16308,7 @@
  # Linux and solaris define the shm_open in -rt library.
  # This library already included in LIBS for solaris
- case "$target_os" in
+ case "$host_os" in
 -     linux*)
 +     linux*|netbsd*)
          EXTRALIBS="$EXTRALIBS -lrt"
       ;;
       *)
+v
