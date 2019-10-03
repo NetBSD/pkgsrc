@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5387 2019/09/19 21:26:37 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5388 2019/10/03 12:17:39 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2461,6 +2461,8 @@ Changes to the packages collection and infrastructure in 2018:
 	Added www/py-wstools version 0.4.8 [adam 2018-04-12]
 	Updated net/py-soappy to 0.12.22 [adam 2018-04-12]
 	Updated cad/py-MyHDL to 0.10 [mef 2018-04-12]
+	Updated cad/MyHDL-iverilog to 0.10 [mef 2018-04-12]
+	Updated cad/MyHDL-gplcver to 0.10 [mef 2018-04-12]
 	Added www/ruby-robots version 0.10.1 [minskim 2018-04-12]
 	Updated devel/py-cython to 0.28.2 [adam 2018-04-13]
 	Updated textproc/py-text-unidecode to 1.2 [adam 2018-04-13]
