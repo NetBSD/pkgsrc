@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4138 2019/10/03 15:53:39 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4139 2019/10/03 16:38:04 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6711,3 +6711,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Added multimedia/gst-plugins1-gtk version 1.16.0 [nia 2019-10-03]
 	Updated multimedia/pitivi to 0.999 [nia 2019-10-03]
 	Updated multimedia/lightspark to 0.8.2 [nia 2019-10-03]
+	Updated www/c-icap to 0.5.5 [sborrill 2019-10-03]
+	Updated www/c-icap-modules to 0.5.3 [sborrill 2019-10-03]
