@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2019/08/11 13:23:08 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2019/10/03 21:28:45 rillig Exp $
 
 DISTNAME=		hal-0.5.14
 PKGREVISION=		22
@@ -122,7 +122,6 @@ post-extract:
 pre-configure:
 	cd ${WRKSRC} && autoreconf -vi ${AUTORECONF_ARGS}
 
-.include "../../devel/GConf/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../misc/usbids/buildlink3.mk"
 .include "../../security/policykit/buildlink3.mk"
