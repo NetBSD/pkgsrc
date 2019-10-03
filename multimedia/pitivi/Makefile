@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2019/10/03 20:36:53 nia Exp $
+# $NetBSD: Makefile,v 1.53 2019/10/03 22:45:22 nia Exp $
 
 DISTNAME=	pitivi-0.999
 CATEGORIES=	multimedia
@@ -17,6 +17,7 @@ TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 DEPENDS+=	${PYPKGPREFIX}-gstreamer1-[0-9]*:../../multimedia/py-gstreamer1
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
+DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 # For some reason creating projects fails without these.
 DEPENDS+=	gst-plugins1-ogg-[0-9]*:../../multimedia/gst-plugins1-ogg
