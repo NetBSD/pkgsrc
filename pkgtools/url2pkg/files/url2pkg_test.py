@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.5 2019/10/03 18:28:29 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.6 2019/10/03 23:02:59 rillig Exp $
 
 from url2pkg import *
 
@@ -40,6 +40,24 @@ def test_aligned__variables():
         ''
     ]
     assert aligned(vars) == lines
+
+
+def test_Lines__write_and_read(tmp_path):
+    example = tmp_path / 'example'
+
+    lines = Lines('1', '2', '3')
+
+    lines.write_to(str(example))
+
+    assert example.read_text() == '1\n2\n3\n'
+
+    back = Lines.read_from(str(example))
+
+    assert back.lines == [
+        '1',
+        '2',
+        '3'
+    ]
 
 
 def test_Lines_add_vars__simple():
@@ -519,6 +537,26 @@ def test_Adjuster_adjust_cargo__found(tmp_path):
 
     assert str_vars(adjuster.build_vars) == [
         'CARGO_CRATE_DEPENDS+=cargo-package-name-cargo-package-version',
+    ]
+
+
+def test_Adjuster_adjust_gconf2():
+    adjuster = Adjuster()
+    adjuster.wrksrc_files = [
+        'file1.schemas',
+        'file2.schemas.in',
+        'file6.schemas.in.in.in.in.in.in',  # realistic maximum is 2 times
+    ]
+
+    adjuster.adjust_gconf2_schemas()
+
+    assert adjuster.includes == [
+        '../../devel/GConf/schemas.mk',
+    ]
+    assert str_vars(adjuster.extra_vars) == [
+        'GCONF_SCHEMAS+=file1.schemas',
+        'GCONF_SCHEMAS+=file2.schemas',
+        'GCONF_SCHEMAS+=file6.schemas',
     ]
 
 

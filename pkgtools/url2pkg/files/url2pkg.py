@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.6 2019/10/03 18:28:29 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.7 2019/10/03 23:02:59 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -38,10 +38,6 @@ from os.path import isfile
 from typing import Callable, Dict, Iterator, List, Optional, Sequence, Union
 
 
-def cvsid(fmt: str) -> str:
-    return fmt % ('$' + 'NetBSD$')
-
-
 class Config:
 
     def __init__(self):
@@ -61,7 +57,7 @@ distname = ''
 def debug(fmt: str, *args):
     if config.verbose:
         msg = fmt.format(*map(repr, args)) if len(args) else fmt
-        sys.stderr.write('url2pkg: %s\n' % msg)
+        sys.stderr.write(f'url2pkg: {msg}\n')
 
 
 def run_editor(fname: str, lineno: int):
@@ -108,12 +104,12 @@ def generate_initial_package_Makefile_lines(url):
             rest = url[len(site):]
             m = re.search(r'^(.+)/([^/]+)$', rest)
             if not m:
-                master_sites = "${%s}" % master_site
+                master_sites = f"${{{master_site}}}"
                 continue
 
             subdir, distfile = m.groups()
 
-            master_sites = '${%s:=%s/}' % (master_site, subdir)
+            master_sites = f'${{{master_site}:={subdir}/}}'
             if master_site == 'MASTER_SITE_SOURCEFORGE':
                 homepage = f'https://{subdir}.sourceforge.net/'
             elif master_site == 'MASTER_SITE_GNU':
@@ -125,8 +121,8 @@ def generate_initial_package_Makefile_lines(url):
     if m:
         project, filename = m.groups()
 
-        master_sites = '${MASTER_SITE_SOURCEFORGE:=%s/}' % project
-        homepage = 'https://%s.sourceforge.net/' % project
+        master_sites = f'${{MASTER_SITE_SOURCEFORGE:={project}/}}'
+        homepage = f'https://{project}.sourceforge.net/'
         distfile = filename
 
     m = re.search(r'^https://github\.com/(.+)/(.+)/archive/(.+)(\.tar\.gz|\.zip)$', url)
@@ -134,8 +130,8 @@ def generate_initial_package_Makefile_lines(url):
         org, proj, tag, ext = m.groups()
 
         github_project = proj
-        master_sites = '${MASTER_SITE_GITHUB:=%s/}' % org
-        homepage = 'https://github.com/%s/%s/' % (org, proj)
+        master_sites = f'${{MASTER_SITE_GITHUB:={org}/}}'
+        homepage = f'https://github.com/{org}/{proj}/'
         if github_project not in tag:
             pkgname_prefix = '${GITHUB_PROJECT}-'
             dist_subdir = '${GITHUB_PROJECT}'
@@ -146,8 +142,8 @@ def generate_initial_package_Makefile_lines(url):
         org, proj, tag, base, ext = m.groups()
 
         github_project = proj
-        master_sites = '${MASTER_SITE_GITHUB:=%s/}' % org
-        homepage = 'https://github.com/%s/%s/' % (org, proj)
+        master_sites = f'${{MASTER_SITE_GITHUB:={org}/}}'
+        homepage = f'https://github.com/{org}/{proj}/'
         if proj not in base:
             github_project = proj
             dist_subdir = '${GITHUB_PROJECT}'
@@ -156,6 +152,8 @@ def generate_initial_package_Makefile_lines(url):
 
     if master_sites == '':
         m = re.search(r'^(.*/)(.*)$', url)
+        if not m:
+            sys.exit(f'error: URL "{url}" must have at least one slash')
         master_sites = m[1]
         distfile = m[2]
         homepage = master_sites
@@ -173,22 +171,20 @@ def generate_initial_package_Makefile_lines(url):
         pkgname_transform = ':S,-v,-,'
 
     main_category = re.search(r'.*/([^/]+)/[^/]+$', os.getcwd())[1]
-
     categories = main_category if main_category != 'wip' else '# TODO: add primary category'
 
     if extract_sufx == '.tar.gz' or extract_sufx == '.gem':
         extract_sufx = ''
 
-    pkgname = '%s${DISTNAME%s}' % (pkgname_prefix, pkgname_transform)
-    if pkgname == '${DISTNAME}':
-        pkgname = ''
+    pkgname = '' if pkgname_prefix == '' and pkgname_transform == '' \
+        else f'{pkgname_prefix}${"{"}DISTNAME{pkgname_transform}{"}"}'
 
     maintainer = \
         os.getenv('PKGMAINTAINER') or os.getenv('REPLYTO') \
         or 'INSERT_YOUR_MAIL_ADDRESS_HERE'
 
     lines = Lines()
-    lines.add(cvsid('# %s'))
+    lines.add('# $''NetBSD$')
     lines.add('')
 
     lines.add_vars(
@@ -216,14 +212,23 @@ def generate_initial_package_Makefile_lines(url):
 
 
 def generate_initial_package(url):
+    pkgdir = config.pkgdir
+    makefile = f'{pkgdir}/Makefile'
+    descr = f'{pkgdir}/DESCR'
+    plist = f'{pkgdir}/PLIST'
+
     try:
-        os.rename('Makefile', 'Makefile-url2pkg.bak')
+        os.rename(makefile, f'{makefile}.url2pkg~')
     except OSError:
         pass
-    generate_initial_package_Makefile_lines(url).write_to(config.pkgdir + '/Makefile')
-    Lines(cvsid('@comment %s')).write_to(config.pkgdir + '/PLIST')
-    Lines().write_to(config.pkgdir + '/DESCR')
-    run_editor(config.pkgdir + '/Makefile', 5)
+
+    generate_initial_package_Makefile_lines(url).write_to(makefile)
+    if not isfile(plist):
+        Lines('@comment $''NetBSD$').write_to(plist)
+    if not isfile(descr):
+        Lines().write_to(descr)
+
+    run_editor(makefile, 5)
 
     bmake('distinfo')
     bmake('extract')
@@ -324,19 +329,19 @@ class Lines:
         Appends the given variable assignments to the lines, aligning the
         variable values vertically.
         """
-        width = 0
-        for var in vars:
-            if var.value != '':
-                name_op_len = (len(var.name) + len(var.op) + len('\t') + 7) // 8 * 8
-                width = max(width, name_op_len)
 
-        if width == 0:
+        relevant_vars = [var for var in vars if var.value != '']
+        if not relevant_vars:
             return
 
-        for var in vars:
-            if var.value != '':
-                tabs = (width - len(var.name) - len(var.op) + 7) // 8
-                self.add(var.name + var.op + '\t' * tabs + var.value)
+        width = 0
+        for var in relevant_vars:
+            name_op_len = (len(var.name) + len(var.op) + len('\t') + 7) // 8 * 8
+            width = max(width, name_op_len)
+
+        for var in relevant_vars:
+            tabs = (width - len(var.name) - len(var.op) + 7) // 8
+            self.add(var.name + var.op + '\t' * tabs + var.value)
         self.add('')
 
     def unique_varassign(self, varname: str) -> Optional[Varassign]:
@@ -359,19 +364,21 @@ class Lines:
             self.lines[varassign.index] = varname + varassign.op + varassign.indent + new_value
         return varassign is not None
 
-    def append(self, varname: str, value: str) -> None:
+    def append(self, varname: str, value: str) -> bool:
         """ Appends to the value of an existing variable in the lines. """
         if value == '':
-            return
+            return False
+
         varassign = self.unique_varassign(varname)
-        if varassign is not None:
-            before = ' ' if re.search(r'\S$', varassign.value) else ''
-            after = '' if varassign.comment == '' else ' '
-            self.lines[varassign.index] = \
-                varassign.varname + varassign.op + varassign.indent \
-                + varassign.value + before + value + after \
-                + varassign.comment
-        return varassign is not None
+        if varassign is None:
+            return False
+
+        before = ' ' if re.search(r'\S$', varassign.value) else ''
+        after = '' if varassign.comment == '' else ' '
+        self.lines[varassign.index] = \
+            f'{varassign.varname}{varassign.op}{varassign.indent}' \
+            f'{varassign.value}{before}{value}{after}{varassign.comment}'
+        return True
 
     def remove(self, varname: str) -> bool:
         """ Removes the unique variable assignment. """
@@ -478,6 +485,8 @@ class Adjuster:
     def add_dependency(self, kind: str, pkgbase: str, constraint: str, dep_dir: str) -> None:
         """ add_dependency('DEPENDS', 'package', '>=1', '../../category/package') """
 
+        debug('add_dependency: {0} {1} {2} {3}', kind, pkgbase, constraint, dep_dir)
+
         def bl3_identifier():
             try:
                 with open(dep_dir + '/buildlink3.mk') as f:
@@ -498,9 +507,9 @@ class Adjuster:
                 self.bl3_lines.append(f'.include "{dep_dir}/buildlink3.mk"')
                 return
 
-        value = pkgbase + constraint + ':' + dep_dir \
-            if dep_dir != '' and isfile(dep_dir + '/Makefile') \
-            else '# TODO: {0}{1}'.format(pkgbase, constraint)
+        value = f'{pkgbase}{constraint}:{dep_dir}' \
+            if dep_dir != '' and isfile(f'{dep_dir}/Makefile') \
+            else f'# TODO: {pkgbase}{constraint}'
 
         if kind == 'DEPENDS':
             self.depends.append(value)
@@ -509,31 +518,29 @@ class Adjuster:
         elif kind == 'TEST_DEPENDS':
             self.test_depends.append(value)
         else:
-            self.todos.append('dependency {0} {1}'.format(kind, value))
+            self.todos.append(f'dependency {kind} {value}')
 
     def read_dependencies(self, cmd: str, env: Dict[str, str], cwd: str, pkgname_prefix: str) -> None:
-        dep_lines = []
-
         effective_env = dict(os.environ)
         effective_env.update(env)
 
         debug('reading dependencies: cd {0} && env {1} {2}', cwd, env, cmd)
-        output = subprocess.check_output(
-            args=cmd,
-            shell=True,
-            env=effective_env,
-            cwd=cwd
-        )
+        output = subprocess.check_output(args=cmd, shell=True, env=effective_env, cwd=cwd)
 
+        dep_lines = []
         for line in output.decode('utf-8').split('\n'):
+            # DEPENDS   pkgbase>=1.2.3:../../category/pkgbase
             m = re.search(r'^(\w+)\t([^\s:>]+)(>[^\s:]+|)(?::(\.\./\.\./\S+))?$', line)
             if m:
                 dep_lines.append([m[1], m[2], m[3] or '>=0', m[4] or ''])
                 continue
+
+            # var   VARNAME   value # possibly with comment
             m = re.search(r'^var\t(\S+)\t(.+)$', line)
             if m:
                 self.update_vars[m[1]] = m[2]
                 continue
+
             if line != '':
                 debug('unknown dependency line: {0}', line)
 
@@ -547,7 +554,6 @@ class Adjuster:
             if dir == '':
                 dir = find_package(pkgbase)
 
-            debug('add_dependency: {0} {1} {2} {3}', type, pkgbase, constraint, dir)
             self.add_dependency(type, pkgbase, constraint, dir)
 
     def wrksrc_find(self, what: Union[str, Callable]) -> Iterator[str]:
@@ -556,7 +562,7 @@ class Adjuster:
                 return re.search(what, f)
             return what(f)
 
-        return list(filter(search, self.wrksrc_files))
+        return list(sorted(filter(search, self.wrksrc_files)))
 
     def wrksrc_isdir(self, relative_pathname: str) -> bool:
         return isfile(self.abs_wrksrc + '/' + relative_pathname)
@@ -588,49 +594,51 @@ class Adjuster:
             self.includes.append('../../devel/py-meson/build.mk')
 
     def adjust_gconf2_schemas(self):
-        gconf2_files = self.wrksrc_find(r'schemas(?:\.in.*)$')
-        if not gconf2_files:
-            return
-        for f in gconf2_files:
-            m = re.search(r'(.*schemas)', f)
-            if m:
-                self.extra_vars.append(Var('GCONF_SCHEMAS', '+=', m[1]))
+        gconf2_files = self.wrksrc_find(r'\.schemas(\.in)*$')
+        if gconf2_files:
             self.includes.append('../../devel/GConf/schemas.mk')
+
+        for f in gconf2_files:
+            self.extra_vars.append(Var('GCONF_SCHEMAS', '+=', re.sub(r'(\.in)+$', '', f)))
 
     def adjust_libtool(self):
         if self.wrksrc_isfile('ltconfig') or self.wrksrc_isfile('ltmain.sh'):
             self.build_vars.append(Var('USE_LIBTOOL', '=', 'yes'))
+
         if self.wrksrc_isdir('libltdl'):
             self.includes.append('../../devel/libltdl/convenience.mk')
 
     def adjust_perl_module_Build_PL(self):
-        """
-        Example packages:
-        devel/p5-Algorithm-CheckDigits
-        """
-        cmd = '%s -I%s -I. Build.PL' % (config.perl5, config.libdir)
+        # Example packages:
+        # devel/p5-Algorithm-CheckDigits
+
+        cmd = f'{config.perl5} -I{config.libdir} -I. Build.PL'
         self.read_dependencies(cmd, {}, self.abs_wrksrc, '')
         self.build_vars.append(Var('PERL5_MODULE_TYPE', '=', 'Module::Build'))
 
     def adjust_perl_module_Makefile_PL(self):
-        """
-        Example packages:
-        devel/p5-Algorithm-Diff (no dependencies)
-        devel/p5-Carp-Assert-More (dependencies without version numbers)
-        www/p5-HTML-Quoted (dependency with version number)
-        """
+        # Example packages:
+        # devel/p5-Algorithm-Diff (no dependencies)
+        # devel/p5-Carp-Assert-More (dependencies without version numbers)
+        # www/p5-HTML-Quoted (dependency with version number)
+
         # To avoid fix_up_makefile error for p5-HTML-Quoted, generate Makefile first.
-        cmd1 = '%s -I. Makefile.PL < /dev/null 1>&0 2>&0' % config.perl5
-        cmd2 = '%s -I%s -I. Makefile.PL' % (config.perl5, config.libdir)
+        cmd1 = f'{config.perl5} -I. Makefile.PL </dev/null 1>&0 2>&0'
         subprocess.call(cmd1, shell=True, cwd=self.abs_wrksrc)
+
+        cmd2 = f'{config.perl5} -I{config.libdir} -I. Makefile.PL'
         self.read_dependencies(cmd2, {}, self.abs_wrksrc, '')
 
-    def adjust_perl_module_homepage(self, url: str) -> None:
-        if '${MASTER_SITE_PERL_CPAN:' in self.makefile_lines.get('MASTER_SITES'):
-            homepage = self.makefile_lines.get('HOMEPAGE')
-            if homepage != '' and url.startswith(homepage):
-                module_name = re.sub(r'-v?[0-9].*', '', self.distname).replace('-', '::')
-                self.makefile_lines.set('HOMEPAGE', f'https://metacpan.org/pod/{module_name}')
+    def adjust_perl_module_homepage(self, url: str):
+        if '${MASTER_SITE_PERL_CPAN:' not in self.makefile_lines.get('MASTER_SITES'):
+            return
+
+        homepage = self.makefile_lines.get('HOMEPAGE')
+        if homepage == '' or not url.startswith(homepage):
+            return
+
+        module_name = re.sub(r'-v?[0-9].*', '', self.distname).replace('-', '::')
+        self.makefile_lines.set('HOMEPAGE', f'https://metacpan.org/pod/{module_name}')
 
     def adjust_perl_module(self, url: str):
         if self.wrksrc_isfile('Build.PL'):
@@ -647,20 +655,21 @@ class Adjuster:
         self.categories.append('perl5')
         self.adjust_perl_module_homepage(url)
 
-        os.unlink('PLIST')
+        try:
+            os.unlink('PLIST')
+        except OSError:
+            pass
 
     def adjust_python_module(self):
-        """
-        Example packages:
-        devel/py-ZopeComponent (dependencies, test dependencies)
-        devel/py-gflags (uses distutils.core instead of setuptools; BSD license)
-        devel/py-gcovr (uses setuptools; BSD license)
-        """
+        # Example packages:
+        # devel/py-ZopeComponent (dependencies, test dependencies)
+        # devel/py-gflags (uses distutils.core instead of setuptools; BSD license)
+        # devel/py-gcovr (uses setuptools; BSD license)
 
         if not self.wrksrc_isfile('setup.py'):
             return
 
-        cmd = '%s setup.py build' % config.pythonbin
+        cmd = f'{config.pythonbin} setup.py build'
         env = {
             'PYTHONDONTWRITEBYTECODE': 'x',
             'PYTHONPATH': config.libdir
@@ -760,11 +769,11 @@ class Adjuster:
 
         tx_lines = Lines(*self.makefile_lines.lines)
         if (tx_lines.remove('GITHUB_PROJECT')
-                and tx_lines.set('DISTNAME', '%s-%s' % (pkgbase, pkgversion_norev))
+                and tx_lines.set('DISTNAME', f'{pkgbase}-{pkgversion_norev}')
                 and tx_lines.set('PKGNAME', '${PYPKGPREFIX}-${DISTNAME}')
-                and tx_lines.set('MASTER_SITES', '${MASTER_SITE_PYPI:=%s/%s/}' % (pkgbase1, pkgbase))
-                and tx_lines.remove('DIST_SUBDIR')
-                and (tx_lines.remove_if('EXTRACT_SUFX', '.zip') or True)):
+                and tx_lines.set('MASTER_SITES', f'${{MASTER_SITE_PYPI:={pkgbase1}/{pkgbase}/}}')
+                and tx_lines.remove('DIST_SUBDIR')):
+            tx_lines.remove_if('EXTRACT_SUFX', '.zip')
             self.makefile_lines = tx_lines
             self.regenerate_distinfo = True
 
@@ -778,7 +787,7 @@ class Adjuster:
         if lines.get('PKGNAME=') == '':
             distname_index = lines.index(r'^DISTNAME=(\t+)')
             if distname_index != -1:
-                pkgname_line = 'PKGNAME=\t%s${DISTNAME%s}' % (self.pkgname_prefix, self.pkgname_transform)
+                pkgname_line = f'PKGNAME=\t{self.pkgname_prefix}${{DISTNAME{self.pkgname_transform}}}'
                 lines.lines.insert(distname_index + 1, pkgname_line)
 
         if self.todos:
