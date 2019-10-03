@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.459 2019/10/01 12:34:19 nia Exp $
+# $NetBSD: Makefile,v 1.460 2019/10/03 06:22:44 jnemeth Exp $
 #
 
 COMMENT=	Games
@@ -276,8 +276,8 @@ SUBDIR+=	monsterz
 SUBDIR+=	moon-buggy
 SUBDIR+=	moria
 SUBDIR+=	mrrescue
-SUBDIR+=	nagi
 SUBDIR+=	naev
+SUBDIR+=	nagi
 SUBDIR+=	nethack
 SUBDIR+=	nethack-lib
 SUBDIR+=	nethack-tty
