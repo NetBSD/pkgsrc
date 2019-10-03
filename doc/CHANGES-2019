@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4126 2019/10/03 03:00:21 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.4127 2019/10/03 08:11:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6695,3 +6695,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/ruby25-base to 2.5.7nb1 [ryoon 2019-10-03]
 	Updated lang/ruby26-base to 2.6.5nb1 [ryoon 2019-10-03]
 	Updated x11/xfce4-panel to 4.14.1 [gutteridge 2019-10-03]
+	Updated devel/cmake to 3.15.4 [adam 2019-10-03]
+	Updated net/grpc to 1.23.1 [adam 2019-10-03]
+	Updated net/py-grpcio to 1.23.1 [adam 2019-10-03]
+	Updated net/py-grpcio-tools to 1.23.1 [adam 2019-10-03]
