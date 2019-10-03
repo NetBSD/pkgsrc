@@ -1,23 +1,23 @@
-$NetBSD: patch-decode-dimms,v 1.15 2019/09/13 00:17:50 pgoyette Exp $
+$NetBSD: patch-decode-dimms,v 1.16 2019/10/03 18:42:26 pgoyette Exp $
 
 Add NetBSD-specific ability to use spdmem(4)'s sysctl values as
 input.  Remove attempts to use linux-specific data sources.
 
---- eeprom/decode-dimms.orig	2019-06-17 13:50:38.126887013 -0700
-+++ eeprom/decode-dimms	2019-06-17 13:51:53.574600812 -0700
-@@ -42,8 +42,9 @@
+--- eeprom/decode-dimms.orig	2019-10-03 10:53:17.810726776 -0700
++++ eeprom/decode-dimms	2019-10-03 11:02:03.877954987 -0700
+@@ -45,8 +45,9 @@
  use Fcntl qw(:DEFAULT :seek);
  use File::Basename;
  use vars qw($opt_html $opt_bodyonly $opt_side_by_side $opt_merge
 -	    $opt_igncheck $use_sysfs $use_hexdump $sbs_col_width
--	    @vendors %decode_callback $revision @dimm $current %hexdump_cache);
-+	    $opt_igncheck $use_sysfs $use_hexdump $use_sysctl $sbs_col_width
-+	    @vendors %decode_callback $revision @dimm $current %hexdump_cache
+-	    @vendors %decode_callback @dimm $current %hexdump_cache);
++	    $opt_igncheck $use_sysctl $use_sysfs $use_hexdump $sbs_col_width
++	    @vendors %decode_callback @dimm $current %hexdump_cache
 +	    %sysctl_cache);
  
  use constant LITTLEENDIAN	=> "little-endian";
  use constant BIGENDIAN		=> "big-endian";
-@@ -417,6 +418,7 @@
+@@ -419,6 +420,7 @@
  );
  
  $use_sysfs = -d '/sys/bus';
@@ -25,7 +25,7 @@ input.  Remove attempts to use linux-specific data sources.
  
  # We consider that no data was written to this area of the SPD EEPROM if
  # all bytes read 0x00 or all bytes read 0xff
-@@ -2355,6 +2357,26 @@
+@@ -2357,6 +2359,26 @@
  	}
  }
  
@@ -52,17 +52,21 @@ input.  Remove attempts to use linux-specific data sources.
  # Read bytes from SPD-EEPROM
  # Note: offset must be a multiple of 16!
  sub readspd($$$)
-@@ -2364,6 +2386,9 @@
- 	if ($use_hexdump) {
- 		@bytes = read_hexdump($dimm_i);
+@@ -2370,6 +2392,13 @@
+ 			$size = @bytes - $offset;
+ 		}
  		return @bytes[$offset..($offset + $size - 1)];
 +	} elsif ($use_sysctl) {
 +		@bytes = read_sysctl($dimm_i);
-+		return @bytes[$offset..($offset + $size - 1)];
++		if (@bytes < $offset + $size) {
++			print STDERR "WARNING: sysctl for $dimm_i is truncated\n";
++			$size = @bytes - $offset;
++		}
++		return return @bytes[$offset..($offset + $size - 1)];
  	} elsif ($use_sysfs) {
  		# Kernel 2.6 with sysfs
  		sysopen(HANDLE, "$dimm_i/eeprom", O_RDONLY)
-@@ -2440,7 +2465,7 @@
+@@ -2449,7 +2478,7 @@
  # Parse command-line
  foreach (@ARGV) {
  	if ($_ eq '-h' || $_ eq '--help') {
@@ -71,7 +75,7 @@ input.  Remove attempts to use linux-specific data sources.
  			"       $0 -h\n\n",
  			"  -f, --format            Print nice html output\n",
  			"  -b, --bodyonly          Don't print html header\n",
-@@ -2454,6 +2479,8 @@
+@@ -2463,6 +2492,8 @@
  			"  -x,                     Read data from hexdump files\n",
  			"  -X,                     Same as -x except treat multibyte hex\n",
  			"                          data as little endian\n",
@@ -80,7 +84,7 @@ input.  Remove attempts to use linux-specific data sources.
  			"  -h, --help              Display this usage summary\n";
  		print <<"EOF";
  
-@@ -2498,13 +2525,20 @@
+@@ -2507,13 +2538,20 @@
  		$use_hexdump = LITTLEENDIAN;
  		next;
  	}
@@ -102,7 +106,7 @@ input.  Remove attempts to use linux-specific data sources.
  }
  
  # Default values
-@@ -2582,7 +2616,6 @@
+@@ -2598,7 +2636,6 @@
  #  * chk_spd: The checksum or CRC value found in the EEPROM
  #  * chk_calc: The checksum or CRC computed from the EEPROM data
  # Keys are added over time.
@@ -110,7 +114,7 @@ input.  Remove attempts to use linux-specific data sources.
  
  for my $i (0 .. $#dimm) {
  	my @bytes = readspd(0, 128, $dimm[$i]->{file});
-@@ -2634,7 +2667,7 @@
+@@ -2650,7 +2687,7 @@
  		printl("Decoding EEPROM", $dimm[$current]->{eeprom});
  	}
  
