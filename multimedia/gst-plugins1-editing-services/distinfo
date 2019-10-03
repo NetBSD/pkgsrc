@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/10/03 14:32:55 nia Exp $
+
+SHA1 (gstreamer-editing-services-1.16.0.tar.xz) = 7abe8a2bddd804cffb606b37e6b2b04973755207
+RMD160 (gstreamer-editing-services-1.16.0.tar.xz) = 7740c2ae663367ac8cc144269886a2c476b7a0cf
+SHA512 (gstreamer-editing-services-1.16.0.tar.xz) = 6935fe25e4224c844b094dc03fc3c0fa16ebc56236d165d8eebf5575db226637ca420ccca05962cb5de54756d46f1d73a9d588b5c30ea9944c6e8dd548884968
+Size (gstreamer-editing-services-1.16.0.tar.xz) = 1078924 bytes
