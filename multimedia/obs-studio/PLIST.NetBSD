@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST.NetBSD,v 1.1 2019/06/30 21:01:24 nia Exp $
+@comment $NetBSD: PLIST.NetBSD,v 1.2 2019/10/03 20:33:15 nia Exp $
 lib/obs-plugins/linux-alsa.so
 share/obs/obs-plugins/linux-alsa/locale/ar-SA.ini
+share/obs/obs-plugins/linux-alsa/locale/bg-BG.ini
 share/obs/obs-plugins/linux-alsa/locale/bn-BD.ini
 share/obs/obs-plugins/linux-alsa/locale/ca-ES.ini
 share/obs/obs-plugins/linux-alsa/locale/cs-CZ.ini
@@ -32,6 +33,7 @@ share/obs/obs-plugins/linux-alsa/locale/pt-PT.ini
 share/obs/obs-plugins/linux-alsa/locale/ro-RO.ini
 share/obs/obs-plugins/linux-alsa/locale/ru-RU.ini
 share/obs/obs-plugins/linux-alsa/locale/sk-SK.ini
+share/obs/obs-plugins/linux-alsa/locale/sl-SI.ini
 share/obs/obs-plugins/linux-alsa/locale/sr-CS.ini
 share/obs/obs-plugins/linux-alsa/locale/sr-SP.ini
 share/obs/obs-plugins/linux-alsa/locale/sv-SE.ini
