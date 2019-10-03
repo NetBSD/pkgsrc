@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.10 2019/08/30 17:01:33 nia Exp $
+$NetBSD: distinfo,v 1.11 2019/10/03 11:17:51 nia Exp $
 
-SHA1 (freeglut-3.0.0.tar.gz) = fca52242f9344627a30f11487ee42002e6b0dacd
-RMD160 (freeglut-3.0.0.tar.gz) = ce4129a22199516ecf24491f0ed026f40c3f5dae
-SHA512 (freeglut-3.0.0.tar.gz) = 9c45d5b203b26a7ff92331b3e080a48e806c92fbbe7c65d9262dd18c39cd6efdad8a795a80f499a2d23df84b4909dbd7c1bab20d7dd3555d3d88782ce9dd15b0
-Size (freeglut-3.0.0.tar.gz) = 419095 bytes
-SHA1 (patch-src_freeglut__joystick.c) = fe4eda46e5aacbd81ba2946079131c7020a1fcd8
-SHA1 (patch-src_x11_fg__joystick__x11.c) = ae536397bfb000b0acb78c84b48c920c8774c4ba
+SHA1 (freeglut-3.2.0.tar.gz) = cc88845a3bfce41bbaa345d10038a1bcc6782af2
+RMD160 (freeglut-3.2.0.tar.gz) = 596644e5733aa7981643565bf1b49e7a8ee47b04
+SHA512 (freeglut-3.2.0.tar.gz) = 78da1eaa845607ddd97a6744f3a97ff26cdb562fdf990695c8ac97a60d9d692496e4bf3672acfc522add60823c2f3bc7435e19e8041fbbb5d95851c0b641a818
+Size (freeglut-3.2.0.tar.gz) = 443147 bytes
+SHA1 (patch-CMakeLists.txt) = 3e9d66bc13758777461e4bf7c6ccbe7eb0fb908d
