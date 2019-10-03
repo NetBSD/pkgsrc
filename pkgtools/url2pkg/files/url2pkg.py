@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.1 2019/10/03 09:37:41 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.2 2019/10/03 12:52:54 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -50,6 +50,7 @@ class Config:
         self.perl5 = '@PERL5@'
         self.pkgsrcdir = '@PKGSRCDIR@'
         self.pythonbin = '@PYTHONBIN@'
+        self.pkgdir = '.'  # only overridable for tests
         self.verbose = False
 
 
@@ -59,7 +60,7 @@ distname = ''
 
 def debug(fmt: str, *args):
     if config.verbose:
-        msg = fmt % map(repr, args)
+        msg = fmt.format(*map(repr, args)) if len(args) else fmt
         sys.stderr.write('url2pkg: %s\n' % msg)
 
 
@@ -219,10 +220,10 @@ def generate_initial_package(url):
         os.rename('Makefile', 'Makefile-url2pkg.bak')
     except OSError:
         pass
-    generate_initial_package_Makefile_lines(url).write_to('Makefile')
-    Lines(cvsid('@comment %s')).write_to('PLIST')
-    Lines().write_to('DESCR')
-    run_editor('Makefile', 5)
+    generate_initial_package_Makefile_lines(url).write_to(config.pkgdir + '/Makefile')
+    Lines(cvsid('@comment %s')).write_to(config.pkgdir + '/PLIST')
+    Lines().write_to(config.pkgdir + '/DESCR')
+    run_editor(config.pkgdir + '/Makefile', 5)
 
     bmake('distinfo')
     bmake('extract')
@@ -271,15 +272,15 @@ class Varassign:
 
 def find_package(pkgbase: str) -> str:
     candidates = glob.glob(config.pkgsrcdir + '/*/' + pkgbase)
-    debug('candidates for package %s are %s', pkgbase, candidates)
+    debug('candidates for package {0} are {1}', pkgbase, candidates)
     if len(candidates) != 1:
         return ''
     return candidates[0].replace(config.pkgsrcdir, '../..')
 
 
 def bmake(*args: str) -> None:
-    debug('running bmake %s', args)
-    subprocess.check_call([config.make] + list(args))
+    debug('running bmake {0}', args)
+    subprocess.check_call([config.make] + list(args), cwd=config.pkgdir)
 
 
 def show_var(varname: str) -> str:
@@ -346,7 +347,7 @@ class Lines:
         varassigns = []
         for (i, line) in enumerate(self.lines):
             m = re.search(r'^(#?[\w+\-]+?)([!+:?]?=)([ \t]*)([^#\\]*?)(\s*)(#.*|)$', line)
-            if m and m[1] == varname:
+            if m and m[1].lstrip('#') == varname:
                 varassigns.append(Varassign(i, m[1], m[2], m[3], m[4], m[5], m[6]))
         return varassigns
 
@@ -355,7 +356,7 @@ class Lines:
 
         varassign = self.unique_varassign(varname)
         if varassign is not None:
-            self.lines[varassign.index] = varassign.varname + varassign.op + varassign.indent + new_value
+            self.lines[varassign.index] = varname + varassign.op + varassign.indent + new_value
         return varassign is not None
 
     def append(self, varname: str, value: str) -> None:
@@ -502,6 +503,7 @@ class Adjuster:
         effective_env = dict(os.environ)
         effective_env.update(env)
 
+        debug('reading dependencies: cd {0} && env {1} {2}', cwd, env, cmd)
         output = subprocess.check_output(
             args=cmd,
             shell=True,
@@ -519,7 +521,7 @@ class Adjuster:
                 self.update_vars[m[1]] = m[2]
                 continue
             if line != '':
-                debug('unknown dependency line: %s', line)
+                debug('unknown dependency line: {0}', line)
 
         for dep_line in dep_lines:
             type, pkgbase, constraint, dir = dep_line
@@ -531,7 +533,7 @@ class Adjuster:
             if dir == '':
                 dir = find_package(pkgbase)
 
-            debug('add_dependency: %s %s %s %s', type, pkgbase, constraint, dir)
+            debug('add_dependency: {0} {1} {2} {3}', type, pkgbase, constraint, dir)
             self.add_dependency(type, pkgbase, constraint, dir)
 
     def wrksrc_find(self, what: Union[str, Callable]) -> Iterator[str]:
@@ -727,7 +729,7 @@ class Adjuster:
     def adjust_lines_python_module(self, lines: Lines, url: str):
 
         initial_lines = generate_initial_package_Makefile_lines(url)
-        current_lines = Lines.read_from('Makefile')
+        current_lines = self.makefile_lines
 
         if 'python' not in initial_lines.get('CATEGORIES'):
             return
@@ -752,7 +754,7 @@ class Adjuster:
             self.makefile_lines = tx_lines
             self.regenerate_distinfo = True
 
-    def generate_adjusted_Makefile_lines(self, url):
+    def generate_adjusted_Makefile_lines(self, url) -> Lines:
         marker_index = self.makefile_lines.index(r'^# url2pkg-marker')
         if marker_index == -1:
             raise Exception('ERROR: didn\'t find the url2pkg marker in the Makefile.')
@@ -789,6 +791,7 @@ class Adjuster:
         self.adjust_lines_python_module(lines, url)
 
         for varname in self.update_vars:
+            debug('update_var {0} {1}', varname, self.update_vars[varname])
             lines.set(varname, self.update_vars[varname])
 
         return lines
@@ -802,7 +805,7 @@ class Adjuster:
         self.wrksrc_files = glob.glob(f'{self.abs_wrksrc}/**', recursive=True)
         self.wrksrc_dirs = glob.glob(f'{self.abs_wrksrc}/**/', recursive=True)
 
-        self.makefile_lines = Lines.read_from('Makefile')
+        self.makefile_lines = Lines.read_from(config.pkgdir + '/Makefile')
 
         self.adjust_configure()
         self.adjust_cmake()
@@ -816,7 +819,7 @@ class Adjuster:
         self.adjust_po()
         self.adjust_use_languages()
 
-        self.generate_adjusted_Makefile_lines(url).write_to('Makefile')
+        self.generate_adjusted_Makefile_lines(url).write_to(config.pkgdir + '/Makefile')
 
         if self.regenerate_distinfo:
             bmake('distinfo')
@@ -830,8 +833,9 @@ def main():
 
     try:
         opts, args = getopt.getopt(sys.argv[1:], 'v', ['verbose'])
-        for opt in opts:
-            if opt in ('v', 'verbose'):
+        for (opt, optarg) in opts:
+            print('opt', repr(opt))
+            if opt in ('-v', '--verbose'):
                 config.verbose = True
     except getopt.GetoptError:
         sys.exit(f'usage: {sys.argv[0]} [-v|--verbose] [URL]')
