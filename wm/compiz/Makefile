@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2019/08/22 12:23:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.121 2019/10/03 21:54:41 rillig Exp $
 #
 
 PKGVER=		0.8.8
@@ -82,6 +82,7 @@ BUILDLINK_DEPMETHOD.pango=	build
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 
+.include "../../x11/libxshmfence/buildlink3.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../graphics/png/buildlink3.mk"
