@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2019/08/11 13:24:17 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/10/03 16:34:59 sborrill Exp $
 
-DISTNAME=	c_icap-0.4.4
+DISTNAME=	c_icap-0.5.5
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=c-icap/}
 
@@ -23,12 +22,16 @@ CONF_FILES+=	${EGDIR}/c-icap.magic.default ${PKG_SYSCONFDIR}/c-icap.magic
 
 BUILD_DEFS+=		VARBASE
 
-SUBST_CLASSES+=		fix-path
+SUBST_CLASSES+=		fix-path fix-ldap
 SUBST_STAGE.fix-path=	pre-configure
 SUBST_MESSAGE.fix-path=	Fixing paths.
 SUBST_FILES.fix-path=	c-icap.conf.in
 SUBST_SED.fix-path=	-e 's, @prefix@/var, ${VARBASE},g'
 SUBST_SED.fix-path+=	-e 's, /var, ${VARBASE},g'
+SUBST_STAGE.fix-ldap=	post-configure
+SUBST_MESSAGE.fix-ldap=	Fixing LDAP.
+SUBST_FILES.fix-ldap=	modules/Makefile
+SUBST_SED.fix-ldap=	-e 's,-DLDAP_DEPRECATED,,g'
 
 .include "options.mk"
 
