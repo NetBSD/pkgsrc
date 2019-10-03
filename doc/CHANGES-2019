@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4131 2019/10/03 11:37:19 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4132 2019/10/03 12:18:21 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6704,3 +6704,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated pkgtools/url2pkg to 19.3.1 [rillig 2019-10-03]
 	Updated net/unbound to 1.9.4 [he 2019-10-03]
 	Updated graphics/freeglut to 3.2.0 [nia 2019-10-03]
+	Updated print/qpdf to 9.0.1 [ryoon 2019-10-03]
