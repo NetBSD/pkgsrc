@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4135 2019/10/03 14:43:25 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4136 2019/10/03 14:53:57 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6708,3 +6708,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added multimedia/gst-plugins1-transcoder version 1.16.0 [nia 2019-10-03]
 	Added multimedia/gst-plugins1-editing-services version 1.16.0 [nia 2019-10-03]
 	Added graphics/gst-plugins1-gdk_pixbuf version 1.16.0 [nia 2019-10-03]
+	Added multimedia/gst-plugins1-gtk version 1.16.0 [nia 2019-10-03]
