@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.102 2019/10/01 19:41:23 rillig Exp $
+# $NetBSD: Makefile,v 1.103 2019/10/03 09:37:40 rillig Exp $
 
-PKGNAME=	url2pkg-19.3.0
+PKGNAME=	url2pkg-19.3.1
 CATEGORIES=	pkgtools
 
 MAINTAINER=	rillig@NetBSD.org
@@ -15,24 +15,27 @@ USE_LANGUAGES=	# none
 USE_TOOLS+=	perl:run
 AUTO_MKDIRS=	yes
 
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
+
 do-extract:
 	${RUN} cd ${FILESDIR} && cp *.* ${WRKSRC}/
 
 do-test:
 	${RUN} cd ${WRKSRC} && env PKGSRCDIR=${PKGSRCDIR} perl -I. url2pkg.t
+	${RUN} cd ${WRKSRC} && env PKGSRCDIR=${PKGSRCDIR} ${PREFIX}/bin/pytest-${PYVERSSUFFIX}
 
 .include "../../mk/bsd.prefs.mk"
 
 SUBST_CLASSES+=		up
 SUBST_STAGE.up=		do-configure
 SUBST_MESSAGE.up=	Replacing variable placeholders
-SUBST_FILES.up=		url2pkg.pl MakeMaker.pm
-SUBST_VARS.up=		MAKE PERL5 PYTHONBIN
-SUBST_SED.up+=		-e 's,@LIBDIR@,${PREFIX}/lib/url2pkg,g'
-SUBST_SED.up+=		-e 's,@PKGSRCDIR@,${BATCH:D/usr/pkgsrc:U${PKGSRCDIR}},g'
+SUBST_FILES.up=		url2pkg.pl MakeMaker.pm url2pkg.py
+SUBST_VARS.up=		MAKE PERL5 PKGSRCDIR PYTHONBIN
+SUBST_SED.up=		-e 's,@LIBDIR@,${PREFIX}/lib/url2pkg,g'
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/url2pkg.pl ${DESTDIR}${PREFIX}/bin/url2pkg
+	${INSTALL_SCRIPT} ${WRKSRC}/url2pkg.py ${DESTDIR}${PREFIX}/bin/url2pkg-py
 	${INSTALL_MAN} ${FILESDIR}/url2pkg.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA} ${WRKSRC}/Build.pm ${DESTDIR}${PREFIX}/lib/url2pkg/Module/
 	${INSTALL_DATA} ${WRKSRC}/MakeMaker.pm ${DESTDIR}${PREFIX}/lib/url2pkg/ExtUtils/
