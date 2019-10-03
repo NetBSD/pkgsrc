@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/10/03 18:42:26 pgoyette Exp $
+# $NetBSD: Makefile,v 1.22 2019/10/03 18:50:24 pgoyette Exp $
 
 # no Release yet
 PKG_DATE=	20191002
@@ -19,7 +19,7 @@ REPLACE_PERL=	eeprom/decode-dimms
 SUBST_CLASSES+=		rev
 SUBST_STAGE.rev=	post-extract
 SUBST_FILES.rev=	eeprom/decode-dimms
-SUBST_SED.rev=		-e '/I2C_TOOLS_VER/s/4.1/4.1-${PKG_DATE}-${GIT_COMMIT}/'
+SUBST_SED.rev=		-e '/I2C_TOOLS_VER/s/4.1/4.1-${PKG_DATE}/'
 
 NO_BUILD=	yes
 
