@@ -1,21 +1,21 @@
-$NetBSD: patch-Makefile.in,v 1.4 2017/02/06 14:14:48 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.5 2019/10/03 16:34:59 sborrill Exp $
 
 Handle configuration files.
 
---- Makefile.in.orig	2016-09-21 12:09:38.000000000 +0000
-+++ Makefile.in
-@@ -1748,11 +1748,9 @@ doc:
- 	$(DOXYGEN) c-icap.dox
+--- Makefile.in.orig	2018-09-19 13:43:05.000000000 +0100
++++ Makefile.in	2019-10-03 13:23:37.000000000 +0100
+@@ -1829,11 +1829,9 @@
+ 	$(DOXYGEN) $(srcdir)/c-icap.dox
  
  install-data-local: c-icap.conf
 -	$(mkinstalldirs) $(DESTDIR)$(CONFIGDIR);
 -	$(INSTALL) c-icap.conf $(DESTDIR)$(CONFIGDIR)/c-icap.conf.default
--	$(INSTALL) c-icap.magic $(DESTDIR)$(CONFIGDIR)/c-icap.magic.default
+-	$(INSTALL) $(srcdir)/c-icap.magic $(DESTDIR)$(CONFIGDIR)/c-icap.magic.default
 -	if test ! -f $(DESTDIR)$(CONFIGDIR)/c-icap.conf; then  $(INSTALL) c-icap.conf $(DESTDIR)$(CONFIGDIR)/c-icap.conf; fi
--	if test ! -f $(DESTDIR)$(CONFIGDIR)/c-icap.magic; then $(INSTALL) c-icap.magic $(DESTDIR)$(CONFIGDIR)/c-icap.magic; fi
+-	if test ! -f $(DESTDIR)$(CONFIGDIR)/c-icap.magic; then $(INSTALL) $(srcdir)/c-icap.magic $(DESTDIR)$(CONFIGDIR)/c-icap.magic; fi
 +	$(mkinstalldirs) $(DESTDIR)$(datadir)/c-icap;
 +	$(INSTALL) c-icap.conf $(DESTDIR)$(datadir)/c-icap/c-icap.conf.default
 +	$(INSTALL) c-icap.magic $(DESTDIR)$(datadir)/c-icap/c-icap.magic.default
- 	$(mkinstalldirs)  $(DESTDIR)$(LOGDIR); 
+ 	$(mkinstalldirs)  $(DESTDIR)$(LOGDIR);
  	$(mkinstalldirs)  $(DESTDIR)$(SOCKDIR);
  	chgrp nogroup $(DESTDIR)$(LOGDIR) || echo -e "*********\nWARNING! Can not set group for the log dir $(DESTDIR)$(LOGDIR)\n*********\n"
