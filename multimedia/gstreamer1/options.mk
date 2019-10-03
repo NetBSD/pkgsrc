@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.8 2019/05/29 20:51:47 adam Exp $
+# $NetBSD: options.mk,v 1.9 2019/10/03 20:45:19 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gstreamer
 PKG_SUPPORTED_OPTIONS=	gstreamer-gstcheck introspection gstreamer-ptp-suid
-PKG_SUGGESTED_OPTIONS=	introspection
+PKG_SUGGESTED_OPTIONS=	gstreamer-gstcheck introspection
 
 .include "../../mk/bsd.options.mk"
 
