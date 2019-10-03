@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2012/01/19 19:15:18 drochner Exp $
-At runtime, the following packages are needed:
--pkgsrc/graphics/py-goocanvas
--pkgsrc/devel/py-ZopeInterface
--pkgsrc/devel/py-xdg
--pkgsrc/graphics/gst-plugins0.10-png for thumbnail display
--more gstreamer plugins, depending on the file formats to read / write
-===========================================================================

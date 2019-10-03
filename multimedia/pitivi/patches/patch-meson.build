@@ -1,0 +1,20 @@
+$NetBSD: patch-meson.build,v 1.1 2019/10/03 14:59:48 nia Exp $
+
+Allow use of pkgsrc's weird names for python.
+
+--- meson.build.orig	2018-08-29 14:05:21.000000000 +0000
++++ meson.build
+@@ -1,11 +1,11 @@
+ project('pitivi', 'c', version : '0.999', meson_version : '>= 0.41.0')
+ 
+-python = find_program('python3')
++python = find_program('python@PYVERSSUFFIX@')
+ intltool_merge = find_program('intltool-merge')
+ itstool = find_program('itstool')
+ msgfmt = find_program('msgfmt')
+ 
+-python_dep = dependency('python3', version : '>= 3.3')
++python_dep = dependency('python-@PYVERSSUFFIX@', version : '>= 3.3')
+ 
+ if get_option('build-gst')
+     subproject('gst-build', default_options: ['enable_python=true',
