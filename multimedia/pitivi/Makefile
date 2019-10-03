@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2019/10/03 20:09:52 nia Exp $
+# $NetBSD: Makefile,v 1.52 2019/10/03 20:36:53 nia Exp $
 
 DISTNAME=	pitivi-0.999
 CATEGORIES=	multimedia
@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pitivi.org/
-COMMENT=	Video editor
+COMMENT=	Video editor using GStreamer/GTK
 LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	pkg-config intltool msgfmt xgettext
