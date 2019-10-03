@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2019/09/07 18:50:19 kim Exp $
+# $NetBSD: Makefile,v 1.110 2019/10/03 11:01:39 tron Exp $
 
 DISTNAME=	mtr-0.93
 PKGREVISION=	1
@@ -20,6 +20,8 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		pkg-config
 INSTALLATION_DIRS=	share/doc/mtr
+
+CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600 -D__EXTENSIONS__=1
 
 .include "options.mk"
 
