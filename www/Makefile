@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1407 2019/09/21 07:34:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.1408 2019/10/03 06:49:18 jnemeth Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -564,7 +564,6 @@ SUBDIR+=	p5-WWW-RobotRules
 SUBDIR+=	p5-WWW-Shorten
 SUBDIR+=	p5-Web-Scraper
 SUBDIR+=	p5-WordPress-XMLRPC
-SUBDIR+=	p5-libapreq
 SUBDIR+=	p5-libapreq2
 SUBDIR+=	p5-libwww
 SUBDIR+=	paros
