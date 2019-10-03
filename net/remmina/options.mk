@@ -1,8 +1,10 @@
-# $NetBSD: options.mk,v 1.1 2019/09/15 12:59:20 nia Exp $
+# $NetBSD: options.mk,v 1.2 2019/10/03 00:07:07 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.remmina
+
+# XXX needs avahi with gtk3
 PKG_SUPPORTED_OPTIONS=		avahi libappindicator
-PKG_SUGGESTED_OPTIONS=		avahi libappindicator
+PKG_SUGGESTED_OPTIONS=		libappindicator
 
 .include "../../mk/bsd.options.mk"
 
