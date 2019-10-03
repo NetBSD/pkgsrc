@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.3 2019/10/03 14:48:48 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.4 2019/10/03 16:32:47 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -72,7 +72,7 @@ def run_editor(fname: str, lineno: int):
         args.append(f'+{lineno}')
     args.append(fname)
 
-    code = subprocess.check_call(args)
+    subprocess.check_call(args)
 
 
 def generate_initial_package_Makefile_lines(url):
@@ -82,8 +82,8 @@ def generate_initial_package_Makefile_lines(url):
     master_sites = ''
     distfile = ''
     homepage = ''
-    extract_sufx = ''
-    categories = ''
+    extract_sufx: str
+    categories: str
     github_project = ''
     github_release = ''
     dist_subdir = ''
@@ -364,7 +364,6 @@ class Lines:
         if value == '':
             return
         varassign = self.unique_varassign(varname)
-        # TODO: add a test for multiple assignments
         if varassign is not None:
             before = ' ' if re.search(r'\S$', varassign.value) else ''
             after = '' if varassign.comment == '' else ' '
@@ -478,11 +477,26 @@ class Adjuster:
 
     def add_dependency(self, kind: str, pkgbase: str, constraint: str, dep_dir: str) -> None:
         """ add_dependency('DEPENDS', 'package', '>=1', '../../category/package') """
-        if dep_dir != '' and isfile(dep_dir + '/buildlink3.mk'):
-            # TODO: add kind to bl3_lines (BUILDLINK_DEPENDS)
-            # TODO: add constraint to bl3_lines (BUILDLINK_API_DEPENDS)
-            self.bl3_lines.append('.include "%s/buildlink3.mk"' % dep_dir)
-            return
+
+        def bl3_identifier():
+            try:
+                with open(dep_dir + '/buildlink3.mk') as f:
+                    for line in f:
+                        m = re.search(r'^BUILDLINK_TREE\+=\s*(\S+)$', line)
+                        if m:
+                            return m[1]
+            except OSError:
+                pass
+            return ''
+
+        if dep_dir != '':
+            pkgid = bl3_identifier()
+            if pkgid != '':
+                if kind == 'BUILD_DEPENDS':
+                    self.bl3_lines.append(f'BUILDLINK_DEPENDS.{pkgid}+=\tbuild')
+                self.bl3_lines.append(f'BUILDLINK_API_DEPENDS.{pkgid}+=\t{pkgid}{constraint}')
+                self.bl3_lines.append(f'.include "{dep_dir}/buildlink3.mk"')
+                return
 
         value = pkgbase + constraint + ':' + dep_dir \
             if dep_dir != '' and isfile(dep_dir + '/Makefile') \
