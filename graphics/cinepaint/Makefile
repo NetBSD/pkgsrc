@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.65 2019/07/21 22:24:55 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2019/10/03 23:32:27 maya Exp $
 
 DISTNAME=	cinepaint-1.0-4
 PKGNAME=	cinepaint-1.0.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cinepaint/}
 
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND mit AND modified-bsd
 
 MAKE_JOBS_SAFE=		no
 
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config msgfmt gmake
 GNU_CONFIGURE=		yes
