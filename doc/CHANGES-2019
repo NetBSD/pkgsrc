@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4139 2019/10/03 16:38:04 sborrill Exp $
+$NetBSD: CHANGES-2019,v 1.4140 2019/10/03 18:44:07 pgoyette Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6713,3 +6713,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated multimedia/lightspark to 0.8.2 [nia 2019-10-03]
 	Updated www/c-icap to 0.5.5 [sborrill 2019-10-03]
 	Updated www/c-icap-modules to 0.5.3 [sborrill 2019-10-03]
+	Updated sysutils/decode-dimms to 4.1.20191002 [pgoyette 2019-10-03]
