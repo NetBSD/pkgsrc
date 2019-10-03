@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.12 2017/05/08 09:18:31 sborrill Exp $
+$NetBSD: distinfo,v 1.13 2019/10/03 16:34:59 sborrill Exp $
 
-SHA1 (c_icap-0.4.4.tar.gz) = c2cf919215812a40053652f9501c1b8d3c40c684
-RMD160 (c_icap-0.4.4.tar.gz) = a69c5832951db9c424a3ea748d4512ec1ce313a2
-SHA512 (c_icap-0.4.4.tar.gz) = b98ddbe6da24d3a21d98e1acb72b34f65e115cf98c34a01a1ce5591975c8a8b9f59d04dd168f5111f3694ab9ff1ce303dd70e0ae5c67e90f01744146feb47f17
-Size (c_icap-0.4.4.tar.gz) = 636947 bytes
-SHA1 (patch-Makefile.in) = 103129c1bd438885290c3712c53b8e9d3cc3b1ab
-SHA1 (patch-cfg__param.c) = 005d22a2d0cc0f64b38a14477b1d21c28e361018
-SHA1 (patch-configure) = 6e2c2d8ae4204895c878e11ae7b023d6685fd66c
+SHA1 (c_icap-0.5.5.tar.gz) = 5757186185fe110fca8bd709e14633712225cfc8
+RMD160 (c_icap-0.5.5.tar.gz) = 36200e8a8ea390e38cc9006540124e2f4fca59db
+SHA512 (c_icap-0.5.5.tar.gz) = 7a24c90116df40c5a8dc29785efacba65f16557f44f6b26de7bb1bb4890e8bf017db582ccac7d82a1be4efe41d3a7f420ad27c3f012d9c1741c3fd69abd9e571
+Size (c_icap-0.5.5.tar.gz) = 690954 bytes
+SHA1 (patch-Makefile.in) = e8f3b47030f06051f392d4c343bc0c3f523320cc
+SHA1 (patch-cfg__param.c) = e25b0c8145e7bbe6eddc1f8eafbd2fa5304fdda6
+SHA1 (patch-configure) = be2393bfd2c99c92c3519c1f9492e2326f664e76
 SHA1 (patch-os_unix_shared_mem.c) = 2510558df7be6cdb6169b45b0271dc47fc463095
