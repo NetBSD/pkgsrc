@@ -1,5 +1,5 @@
 #! @PERL5@
-# $NetBSD: url2pkg.pl,v 1.73 2019/09/13 13:31:39 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.73.2.1 2019/10/03 15:23:02 bsiegert Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -838,7 +838,7 @@ sub adjust_package_from_extracted_distfiles($) {
 	$lines->add(@bl3_lines);
 	$lines->add(map { $_ = ".include \"$_\"" } @includes);
 
-	$lines->add($makefile_lines->[$marker_index + 1 .. $#$makefile_lines]);
+	$lines->add(@$makefile_lines[$marker_index + 1 .. $#$makefile_lines]);
 
 	$lines->append("CATEGORIES", join(" ", @categories));
 
