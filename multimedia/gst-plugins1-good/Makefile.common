@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.33 2019/05/29 20:51:47 adam Exp $
+# $NetBSD: Makefile.common,v 1.34 2019/10/03 14:54:53 nia Exp $
 #
 # used by audio/gst-plugins1-flac/Makefile
 # used by audio/gst-plugins1-jack/Makefile
@@ -7,8 +7,10 @@
 # used by audio/gst-plugins1-speex/Makefile
 # used by audio/gst-plugins1-wavpack/Makefile
 # used by graphics/gst-plugins1-cairo/Makefile
+# used by graphics/gst-plugins1-gdk_pixbuf/Makefile
 # used by graphics/gst-plugins1-jpeg/Makefile
 # used by graphics/gst-plugins1-png/Makefile
+# used by multimedia/gst-plugins1-gtk/Makefile
 # used by multimedia/gst-plugins1-v4l2/Makefile
 # used by multimedia/gst-plugins1-vpx/Makefile
 # used by net/gst-plugins1-soup/Makefile
