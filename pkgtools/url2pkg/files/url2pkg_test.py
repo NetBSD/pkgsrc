@@ -1,12 +1,17 @@
-# $NetBSD: url2pkg_test.py,v 1.6 2019/10/03 23:02:59 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.7 2019/10/04 22:26:34 rillig Exp $
 
 from url2pkg import *
 
+up: Url2Pkg
+
 
 def setup_function(_):
-    config.pkgsrcdir = os.getenv('PKGSRCDIR')
-    assert config.pkgsrcdir is not None
-    os.chdir(config.pkgsrcdir + '/pkgtools/url2pkg')
+    global up
+
+    up = Url2Pkg()
+    up.pkgsrcdir = os.getenv('PKGSRCDIR')
+    assert up.pkgsrcdir is not None
+    os.chdir(up.pkgsrcdir + '/pkgtools/url2pkg')
 
 
 def str_vars(vars: List[Var]) -> List[str]:
@@ -15,31 +20,10 @@ def str_vars(vars: List[Var]) -> List[str]:
 
 def test_debug():
     """ Just ensure that the debug calls do not crash. """
-    config.verbose = True
-    try:
-        debug('plain message')
-        debug('list {0}', [1, 2, 3])
-        debug('tuple {0}', (1, 2, 3))
-        debug('cwd {0} env {1} cmd {2}', 'directory', {'VAR': 'value'}, 'command')
-    finally:
-        config.verbose = False
-
-
-def test_aligned__empty():
-    assert aligned([]) == []
-
-
-def test_aligned__variables():
-    vars = [
-        Var('V', '=', 'value'),
-        Var('LONG_NAME', '=', 'value # comment')
-    ]
-    lines = [
-        'V=\t\tvalue',
-        'LONG_NAME=\tvalue # comment',
-        ''
-    ]
-    assert aligned(vars) == lines
+    up.debug('plain message')
+    up.debug('list {0}', [1, 2, 3])
+    up.debug('tuple {0}', (1, 2, 3))
+    up.debug('cwd {0} env {1} cmd {2}', 'directory', {'VAR': 'value'}, 'command')
 
 
 def test_Lines__write_and_read(tmp_path):
@@ -281,7 +265,7 @@ def test_Lines_get():
 def test_generate_initial_package_Makefile_lines__GitHub_archive():
     url = "https://github.com/org/proj/archive/v1.0.0.tar.gz"
 
-    lines = generate_initial_package_Makefile_lines(url)
+    lines = Generator(url).generate_Makefile()
 
     assert lines.lines == [
         "# $" + "NetBSD$",
@@ -293,7 +277,7 @@ def test_generate_initial_package_Makefile_lines__GitHub_archive():
         "MASTER_SITES=\t${MASTER_SITE_GITHUB:=org/}",
         "DIST_SUBDIR=\t${GITHUB_PROJECT}",
         "",
-        "MAINTAINER=\tINSERT_YOUR_MAIL_ADDRESS_HERE",
+        "MAINTAINER=\tINSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org",
         "HOMEPAGE=\thttps://github.com/org/proj/",
         "COMMENT=\tTODO: Short description of the package",
         "#LICENSE=\t# TODO: (see mk/license.mk)",
@@ -306,7 +290,7 @@ def test_generate_initial_package_Makefile_lines__GitHub_archive():
 def test_generate_initial_package_Makefile_lines__GitHub_release_containing_project_name():
     url = "https://github.com/org/proj/releases/download/1.0.0/proj.zip"
 
-    lines = generate_initial_package_Makefile_lines(url)
+    lines = Generator(url).generate_Makefile()
 
     assert lines.lines == [
         "# $" + "NetBSD$",
@@ -318,7 +302,7 @@ def test_generate_initial_package_Makefile_lines__GitHub_release_containing_proj
         "GITHUB_RELEASE=\t1.0.0",
         "EXTRACT_SUFX=\t.zip",
         "",
-        "MAINTAINER=\tINSERT_YOUR_MAIL_ADDRESS_HERE",
+        "MAINTAINER=\tINSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org",
         "HOMEPAGE=\thttps://github.com/org/proj/",
         "COMMENT=\tTODO: Short description of the package",
         "#LICENSE=\t# TODO: (see mk/license.mk)",
@@ -331,7 +315,7 @@ def test_generate_initial_package_Makefile_lines__GitHub_release_containing_proj
 def test_generate_initial_package_Makefile_lines__GitHub_release_not_containing_project_name():
     url = "https://github.com/org/proj/releases/download/1.0.0/data.zip"
 
-    lines = generate_initial_package_Makefile_lines(url)
+    lines = Generator(url).generate_Makefile()
 
     assert lines.lines == [
         "# $" + "NetBSD$",
@@ -344,7 +328,7 @@ def test_generate_initial_package_Makefile_lines__GitHub_release_not_containing_
         "EXTRACT_SUFX=\t.zip",
         "DIST_SUBDIR=\t${GITHUB_PROJECT}",
         "",
-        "MAINTAINER=\tINSERT_YOUR_MAIL_ADDRESS_HERE",
+        "MAINTAINER=\tINSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org",
         "HOMEPAGE=\thttps://github.com/org/proj/",
         "COMMENT=\tTODO: Short description of the package",
         "#LICENSE=\t# TODO: (see mk/license.mk)",
@@ -357,7 +341,7 @@ def test_generate_initial_package_Makefile_lines__GitHub_release_not_containing_
 def test_generate_initial_package_Makefile_lines__distname_version_with_v():
     url = "https://cpan.example.org/Algorithm-CheckDigits-v1.3.2.tar.gz"
 
-    lines = generate_initial_package_Makefile_lines(url)
+    lines = Generator(url).generate_Makefile()
 
     assert lines.lines == [
         "# $" + "NetBSD$",
@@ -367,13 +351,61 @@ def test_generate_initial_package_Makefile_lines__distname_version_with_v():
         "CATEGORIES=\tpkgtools",
         "MASTER_SITES=\thttps://cpan.example.org/",
         "",
-        "MAINTAINER=\tINSERT_YOUR_MAIL_ADDRESS_HERE",
+        "MAINTAINER=\tINSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org",
         "HOMEPAGE=\thttps://cpan.example.org/",
         "COMMENT=\tTODO: Short description of the package",
         "#LICENSE=\t# TODO: (see mk/license.mk)",
         "",
         "# url2pkg-marker (please do not remove this line.)",
         ".include \"../../mk/bsd.pkg.mk\""
+    ]
+
+
+def test_Generator_adjust_site():
+    url = 'https://files.pythonhosted.org/packages/source/i/irc/irc-11.1.1.zip'
+    generator = Generator(url)
+
+    lines = generator.generate_Makefile()
+
+    assert lines.lines == [
+        '# $NetBSD: url2pkg_test.py,v 1.7 2019/10/04 22:26:34 rillig Exp $',
+        '',
+        'DISTNAME=\tirc-11.1.1',
+        'CATEGORIES=\tpkgtools',
+        'MASTER_SITES=\t${MASTER_SITE_PYPI:=i/irc/}',
+        'EXTRACT_SUFX=\t.zip',
+        '',
+        'MAINTAINER=\tINSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org',
+        'HOMEPAGE=\thttps://files.pythonhosted.org/pa',
+        'COMMENT=\tTODO: Short description of the package',
+        '#LICENSE=\t# TODO: (see mk/license.mk)',
+        '',
+        '# url2pkg-marker (please do not remove this line.)',
+        '.include "../../mk/bsd.pkg.mk"'
+    ]
+
+
+def test_Generator_determine_distname__v8():
+    generator = Generator('https://example.org/v8-1.0.zip')
+
+    lines = generator.generate_Makefile()
+
+    assert lines.lines == [
+        '# $NetBSD: url2pkg_test.py,v 1.7 2019/10/04 22:26:34 rillig Exp $',
+        '',
+        'DISTNAME=\tv8-1.0',
+        'PKGNAME=\t${DISTNAME:S,^v,,}',  # FIXME: v8 is part of the PKGBASE
+        'CATEGORIES=\tpkgtools',
+        'MASTER_SITES=\thttps://example.org/',
+        'EXTRACT_SUFX=\t.zip',
+        '',
+        'MAINTAINER=\tINSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org',
+        'HOMEPAGE=\thttps://example.org/',
+        'COMMENT=\tTODO: Short description of the package',
+        '#LICENSE=\t# TODO: (see mk/license.mk)',
+        '',
+        '# url2pkg-marker (please do not remove this line.)',
+        '.include "../../mk/bsd.pkg.mk"'
     ]
 
 
@@ -391,7 +423,7 @@ def test_Adjuster_read_dependencies():
     env = {"URL2PKG_DEPENDENCIES": '\n'.join(dep_lines)}
     cmd = "printf '%s\n' \"$URL2PKG_DEPENDENCIES\""
 
-    adjuster = Adjuster()
+    adjuster = Adjuster(up, '', Lines())
     adjuster.read_dependencies(cmd, env, '.', '')
 
     assert os.getenv('URL2PKG_DEPENDENCIES') is None
@@ -415,7 +447,7 @@ def test_Adjuster_read_dependencies():
 
 
 def test_Adjuster_generate_adjusted_Makefile_lines():
-    adjuster = Adjuster()
+    adjuster = Adjuster(up, "https://example.org/pkgname-1.0.tar.gz", Lines())
     adjuster.makefile_lines = Lines(
         "# before 1",
         "# before 2",
@@ -424,7 +456,7 @@ def test_Adjuster_generate_adjusted_Makefile_lines():
         "# after 2"
     )
 
-    lines = adjuster.generate_adjusted_Makefile_lines("https://example.org/pkgname-1.0.tar.gz")
+    lines = adjuster.generate_adjusted_Makefile_lines()
 
     assert lines.lines == [
         "# before 1",
@@ -435,7 +467,7 @@ def test_Adjuster_generate_adjusted_Makefile_lines():
 
 
 def test_Adjuster_generate_adjusted_Makefile_lines__dependencies():
-    adjuster = Adjuster()
+    adjuster = Adjuster(up, "https://example.org/pkgname-1.0.tar.gz", Lines())
     adjuster.makefile_lines.add(
         "# $" + "NetBSD$",
         "",
@@ -453,7 +485,7 @@ def test_Adjuster_generate_adjusted_Makefile_lines__dependencies():
     adjuster.build_depends.append("build-depends>=12.0:../../devel/build-depends")
     adjuster.test_depends.append("test-depends>=13.0:../../devel/test-depends")
 
-    lines = adjuster.generate_adjusted_Makefile_lines("https://example.org/pkgname-1.0.tar.gz")
+    lines = adjuster.generate_adjusted_Makefile_lines()
 
     assert lines.lines == [
         "# $" + "NetBSD$",
@@ -471,13 +503,76 @@ def test_Adjuster_generate_adjusted_Makefile_lines__dependencies():
     ]
 
 
+def test_Adjuster_generate_adjusted_Makefile_lines__dont_overwrite_PKGNAME():
+    adjuster = Adjuster(up, "https://example.org/pkgname-1.0.tar.gz", Lines())
+    adjuster.makefile_lines.add(
+        "# $" + "NetBSD$",
+        "DISTNAME=\tdistname-1.0",
+        "PKGNAME=\tmanually-edited-pkgname-1.0"
+        "",
+        "# url2pkg-marker",
+        ".include \"../../mk/bsd.pkg.mk\""
+    )
+
+    lines = adjuster.generate_adjusted_Makefile_lines()
+
+    assert lines.lines == [
+        "# $" + "NetBSD$",
+        "DISTNAME=\tdistname-1.0",
+        'PKGNAME=\tmanually-edited-pkgname-1.0',
+        ".include \"../../mk/bsd.pkg.mk\""
+    ]
+
+
+def test_Adjuster_generate_adjusted_Makefile_lines__add_PKGNAME():
+    adjuster = Adjuster(up, "https://example.org/pkgname-1.0.tar.gz", Lines())
+    adjuster.makefile_lines.add(
+        "# $" + "NetBSD$",
+        "DISTNAME=\tdistname-1.0",
+        "",
+        "# url2pkg-marker",
+        ".include \"../../mk/bsd.pkg.mk\""
+    )
+
+    lines = adjuster.generate_adjusted_Makefile_lines()
+
+    assert lines.lines == [
+        "# $" + "NetBSD$",
+        "DISTNAME=\tdistname-1.0",
+        '',
+        ".include \"../../mk/bsd.pkg.mk\""
+    ]
+
+
+def test_Adjuster_generate_adjusted_Makefile_lines__add_PKGNAME_with_prefix():
+    adjuster = Adjuster(up, "https://example.org/pkgname-1.0.tar.gz", Lines())
+    adjuster.makefile_lines.add(
+        "# $" + "NetBSD$",
+        "DISTNAME=\tdistname-1.0",
+        "",
+        "# url2pkg-marker",
+        ".include \"../../mk/bsd.pkg.mk\""
+    )
+    adjuster.pkgname_prefix = '${PYPKGPREFIX}-'
+
+    lines = adjuster.generate_adjusted_Makefile_lines()
+
+    assert lines.lines == [
+        "# $" + "NetBSD$",
+        "DISTNAME=\tdistname-1.0",
+        'PKGNAME=\t${PYPKGPREFIX}-${DISTNAME}',
+        '',
+        ".include \"../../mk/bsd.pkg.mk\""
+    ]
+
+
 def test_Adjuster_add_dependency__buildlink():
-    adjuster = Adjuster()
+    adjuster = Adjuster(up, 'https://example.org/distfile-1.0.zip', Lines())
     adjuster.makefile_lines.add('# url2pkg-marker')
 
     adjuster.add_dependency('BUILD_DEPENDS', 'libusb', '>=2019', '../../devel/libusb')
 
-    lines = adjuster.generate_adjusted_Makefile_lines('https://example.org/distfile-1.0.zip')
+    lines = adjuster.generate_adjusted_Makefile_lines()
 
     assert lines.lines == [
         'BUILDLINK_DEPENDS.libusb+=\tbuild',
@@ -487,7 +582,7 @@ def test_Adjuster_add_dependency__buildlink():
 
 
 def test_Adjuster_adjust_configure__not_found(tmp_path):
-    adjuster = Adjuster()
+    adjuster = Adjuster(up, '', Lines())
     adjuster.abs_wrksrc = str(tmp_path)
 
     adjuster.adjust_configure()
@@ -496,8 +591,9 @@ def test_Adjuster_adjust_configure__not_found(tmp_path):
 
 
 def test_Adjuster_adjust_configure__GNU_configure(tmp_path):
-    adjuster = Adjuster()
+    adjuster = Adjuster(up, '', Lines())
     adjuster.abs_wrksrc = str(tmp_path)
+    adjuster.wrksrc_files.append('configure')
     (tmp_path / 'configure').write_text('# Free Software Foundation\n')
 
     adjuster.adjust_configure()
@@ -508,8 +604,9 @@ def test_Adjuster_adjust_configure__GNU_configure(tmp_path):
 
 
 def test_Adjuster_adjust_configure__other_configure(tmp_path):
-    adjuster = Adjuster()
+    adjuster = Adjuster(up, '', Lines())
     adjuster.abs_wrksrc = str(tmp_path)
+    adjuster.wrksrc_files.append('configure')
     (tmp_path / 'configure').write_text('# A generic configure script\n')
 
     adjuster.adjust_configure()
@@ -520,7 +617,7 @@ def test_Adjuster_adjust_configure__other_configure(tmp_path):
 
 
 def test_Adjuster_adjust_cargo__not_found(tmp_path):
-    adjuster = Adjuster()
+    adjuster = Adjuster(up, '', Lines())
     adjuster.abs_wrksrc = str(tmp_path)
 
     adjuster.adjust_cargo()
@@ -529,7 +626,7 @@ def test_Adjuster_adjust_cargo__not_found(tmp_path):
 
 
 def test_Adjuster_adjust_cargo__found(tmp_path):
-    adjuster = Adjuster()
+    adjuster = Adjuster(up, '', Lines())
     adjuster.abs_wrksrc = str(tmp_path)
     (tmp_path / 'Cargo.lock').write_text('"checksum cargo-package-name cargo-package-version 1234"')
 
@@ -541,7 +638,7 @@ def test_Adjuster_adjust_cargo__found(tmp_path):
 
 
 def test_Adjuster_adjust_gconf2():
-    adjuster = Adjuster()
+    adjuster = Adjuster(up, '', Lines())
     adjuster.wrksrc_files = [
         'file1.schemas',
         'file2.schemas.in',
@@ -560,16 +657,40 @@ def test_Adjuster_adjust_gconf2():
     ]
 
 
+def test_Adjuster_adjust_libtool__ltconfig(tmp_path):
+    adjuster = Adjuster(up, '', Lines())
+    adjuster.abs_wrksrc = str(tmp_path)
+    (tmp_path / 'ltconfig').write_text('')
+
+    adjuster.adjust_libtool()
+
+    assert str_vars(adjuster.build_vars) == [
+        'USE_LIBTOOL=yes'
+    ]
+
+
+def test_Adjuster_adjust_libtool__libltdl(tmp_path):
+    adjuster = Adjuster(up, '', Lines())
+    adjuster.abs_wrksrc = str(tmp_path)
+    (tmp_path / 'libltdl').mkdir()
+
+    adjuster.adjust_libtool()
+
+    assert adjuster.includes == [
+        '../../devel/libltdl/convenience.mk',
+    ]
+
+
 def test_Adjuster_adjust_po__not_found():
-    adjuster = Adjuster()
+    adjuster = Adjuster(up, '', Lines())
 
     adjuster.adjust_po()
 
     assert adjuster.build_vars == []
 
 
-def test_Adjuster_adjust_po__found():
-    adjuster = Adjuster()
+def test_Adjuster_adjust_po__mo_found():
+    adjuster = Adjuster(up, '', Lines())
     adjuster.wrksrc_files = ['share/locale/de.mo']
 
     adjuster.adjust_po()
@@ -579,8 +700,19 @@ def test_Adjuster_adjust_po__found():
     ]
 
 
+def test_Adjuster_adjust_po__po_found():
+    adjuster = Adjuster(up, '', Lines())
+    adjuster.wrksrc_files = ['po/de.po']
+
+    adjuster.adjust_po()
+
+    assert str_vars(adjuster.build_vars) == [
+        'USE_PKGLOCALEDIR=yes'
+    ]
+
+
 def test_Adjuster_adjust_use_languages__none():
-    adjuster = Adjuster()
+    adjuster = Adjuster(up, '', Lines())
 
     adjuster.adjust_use_languages()
 
@@ -590,7 +722,7 @@ def test_Adjuster_adjust_use_languages__none():
 
 
 def test_Adjuster_adjust_use_languages__c():
-    adjuster = Adjuster()
+    adjuster = Adjuster(up, '', Lines())
     adjuster.wrksrc_files = ['main.c']
 
     adjuster.adjust_use_languages()
@@ -599,7 +731,7 @@ def test_Adjuster_adjust_use_languages__c():
 
 
 def test_Adjuster_adjust_use_languages__c_in_subdir():
-    adjuster = Adjuster()
+    adjuster = Adjuster(up, '', Lines())
     adjuster.wrksrc_files = ['subdir/main.c']
 
     adjuster.adjust_use_languages()
@@ -608,7 +740,7 @@ def test_Adjuster_adjust_use_languages__c_in_subdir():
 
 
 def test_Adjuster_adjust_use_languages__cplusplus_in_subdir():
-    adjuster = Adjuster()
+    adjuster = Adjuster(up, '', Lines())
     adjuster.wrksrc_files = ['subdir/main.cpp']
 
     adjuster.adjust_use_languages()
@@ -619,7 +751,7 @@ def test_Adjuster_adjust_use_languages__cplusplus_in_subdir():
 
 
 def test_Adjuster_adjust_use_languages__cplusplus_and_fortran():
-    adjuster = Adjuster()
+    adjuster = Adjuster(up, '', Lines())
     adjuster.wrksrc_files = ['subdir/main.cpp', 'main.f']
 
     adjuster.adjust_use_languages()
@@ -630,7 +762,7 @@ def test_Adjuster_adjust_use_languages__cplusplus_and_fortran():
 
 
 def test_Adjuster_adjust_pkg_config__none():
-    adjuster = Adjuster()
+    adjuster = Adjuster(up, '', Lines())
 
     adjuster.adjust_pkg_config()
 
@@ -639,7 +771,7 @@ def test_Adjuster_adjust_pkg_config__none():
 
 
 def test_Adjuster_adjust_pkg_config__pc_in():
-    adjuster = Adjuster()
+    adjuster = Adjuster(up, '', Lines())
     adjuster.wrksrc_files = ['library.pc.in']
 
     adjuster.adjust_pkg_config()
@@ -649,7 +781,7 @@ def test_Adjuster_adjust_pkg_config__pc_in():
 
 
 def test_Adjuster_adjust_pkg_config__uninstalled_pc_in():
-    adjuster = Adjuster()
+    adjuster = Adjuster(up, '', Lines())
     adjuster.wrksrc_files = ['library-uninstalled.pc.in']
 
     adjuster.adjust_pkg_config()
@@ -659,7 +791,7 @@ def test_Adjuster_adjust_pkg_config__uninstalled_pc_in():
 
 
 def test_Adjuster_adjust_pkg_config__both():
-    adjuster = Adjuster()
+    adjuster = Adjuster(up, '', Lines())
     adjuster.wrksrc_files = [
         'library.pc.in',
         'library-uninstalled.pc.in'
@@ -673,23 +805,22 @@ def test_Adjuster_adjust_pkg_config__both():
 
 def test_Adjuster__adjust_homepage():
     url = 'https://dummy.example.org/package-1.0.tar.gz'
-    adjuster = Adjuster()
-    adjuster.makefile_lines = generate_initial_package_Makefile_lines(url)
+    adjuster = Adjuster(up, url, Lines())
+    adjuster.makefile_lines = Generator(url).generate_Makefile()
     adjuster.update_vars['HOMEPAGE'] = 'https://example.org/'
     adjuster.depends.append('dependency>=0:../../category/dependency')
     adjuster.todos.append('Run pkglint')
 
-    lines = adjuster.generate_adjusted_Makefile_lines(url)
+    lines = adjuster.generate_adjusted_Makefile_lines()
 
     assert lines.lines == [
         '# $' + 'NetBSD$',
         '',
         'DISTNAME=\tpackage-1.0',
-        'PKGNAME=\t${DISTNAME}',
         'CATEGORIES=\tpkgtools',
         'MASTER_SITES=\thttps://dummy.example.org/',
         '',
-        'MAINTAINER=\tINSERT_YOUR_MAIL_ADDRESS_HERE',
+        'MAINTAINER=\tINSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org',
         'HOMEPAGE=\thttps://example.org/',
         'COMMENT=\tTODO: Short description of the package',
         '#LICENSE=\t# TODO: (see mk/license.mk)',
@@ -703,7 +834,7 @@ def test_Adjuster__adjust_homepage():
 
 
 def test_Adjuster_determine_wrksrc__no_files(tmp_path):
-    adjuster = Adjuster()
+    adjuster = Adjuster(up, '', Lines())
     adjuster.abs_wrkdir = str(tmp_path)
 
     adjuster.determine_wrksrc()
@@ -712,7 +843,7 @@ def test_Adjuster_determine_wrksrc__no_files(tmp_path):
 
 
 def test_Adjuster_determine_wrksrc__single_dir(tmp_path):
-    adjuster = Adjuster()
+    adjuster = Adjuster(up, '', Lines())
     adjuster.abs_wrkdir = str(tmp_path)
     (tmp_path / 'subdir').mkdir()
 
@@ -722,7 +853,7 @@ def test_Adjuster_determine_wrksrc__single_dir(tmp_path):
 
 
 def test_Adjuster_determine_wrksrc__several_dirs(tmp_path):
-    adjuster = Adjuster()
+    adjuster = Adjuster(up, '', Lines())
     adjuster.abs_wrkdir = str(tmp_path)
     (tmp_path / 'subdir1').mkdir()
     (tmp_path / 'subdir2').mkdir()
@@ -745,25 +876,75 @@ case $* in
 (*) "unknown: $*" ;;
 esac
 ''' % str(wrkdir)
-    config.pkgdir = str(tmp_path)
+    up.pkgdir = str(tmp_path)
     wrkdir.mkdir()
     url = 'https://example.org/distfile-1.0.zip'
-    adjuster = Adjuster()
+    adjuster = Adjuster(up, url, Lines())
     adjuster.abs_wrkdir = str(wrkdir)
     (pkgdir / 'Makefile').write_text('# url2pkg-marker\n')
     fake_path = (tmp_path / "fake")
     fake_path.write_text(fake)
     fake_path.chmod(0o755)
 
-    prev_make = config.make
-    config.make = fake_path
+    prev_make = up.make
+    up.make = fake_path
     try:
-        adjuster.adjust_package_from_extracted_distfiles(url)
+        adjuster.adjust_package_from_extracted_distfiles()
     finally:
-        config.make = prev_make
+        up.make = prev_make
 
-    assert adjuster.generate_adjusted_Makefile_lines(url).lines == [
+    assert adjuster.generate_adjusted_Makefile_lines().lines == [
         'WRKSRC=\t\t${WRKDIR}',
         'USE_LANGUAGES=\t# none',
         '',
+    ]
+
+
+def test_Adjuster_adjust_lines_python_module():
+    url = 'https://github.com/espressif/esptool/archive/v2.7.tar.gz'
+    initial_lines = Generator(url).generate_Makefile()
+    initial_lines.append('CATEGORIES', 'python')
+    adjuster = Adjuster(up, url, initial_lines)
+    adjuster.makefile_lines = Lines(*initial_lines.lines)
+
+    assert adjuster.makefile_lines.lines == [
+        '# $NetBSD: url2pkg_test.py,v 1.7 2019/10/04 22:26:34 rillig Exp $',
+        '',
+        'GITHUB_PROJECT=\tesptool',
+        'DISTNAME=\tv2.7',
+        'PKGNAME=\t${GITHUB_PROJECT}-${DISTNAME:S,^v,,}',
+        'CATEGORIES=\tpkgtools python',
+        'MASTER_SITES=\t${MASTER_SITE_GITHUB:=espressif/}',
+        'DIST_SUBDIR=\t${GITHUB_PROJECT}',
+        '',
+        'MAINTAINER=\tINSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org',
+        'HOMEPAGE=\thttps://github.com/espressif/esptool/',
+        'COMMENT=\tTODO: Short description of the package',
+        '#LICENSE=\t# TODO: (see mk/license.mk)',
+        '',
+        '# url2pkg-marker (please do not remove this line.)',
+        '.include "../../mk/bsd.pkg.mk"'
+    ]
+
+    adjuster.adjust_lines_python_module(initial_lines)
+
+    # FIXME: Currently url2pkg assumes that all Python modules that are on
+    #  GitHub are also available from PyPI. That is wrong. Probably url2pkg
+    #  should try to fetch the file from PyPI, and only switch to PyPI if
+    #  they are the same.
+    assert adjuster.makefile_lines.lines == [
+        '# $NetBSD: url2pkg_test.py,v 1.7 2019/10/04 22:26:34 rillig Exp $',
+        '',
+        'DISTNAME=\tesptool-2.7',
+        'PKGNAME=\t${PYPKGPREFIX}-${DISTNAME}',
+        'CATEGORIES=\tpkgtools python',
+        'MASTER_SITES=\t${MASTER_SITE_PYPI:=e/esptool/}',
+        '',
+        'MAINTAINER=\tINSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org',
+        'HOMEPAGE=\thttps://github.com/espressif/esptool/',
+        'COMMENT=\tTODO: Short description of the package',
+        '#LICENSE=\t# TODO: (see mk/license.mk)',
+        '',
+        '# url2pkg-marker (please do not remove this line.)',
+        '.include "../../mk/bsd.pkg.mk"'
     ]
