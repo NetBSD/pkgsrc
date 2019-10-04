@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4166 2019/10/04 14:09:29 micha Exp $
+$NetBSD: CHANGES-2019,v 1.4167 2019/10/04 14:21:59 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6743,3 +6743,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated shells/bosh to 20190922 [micha 2019-10-04]
 	Updated shells/pbosh to 20190922 [micha 2019-10-04]
 	Added devel/meson version 0.51.2 [prlw1 2019-10-03]
+	Updated graphics/freeglut to 3.2.1 [nia 2019-10-04]
