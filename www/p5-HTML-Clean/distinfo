@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/08/31 11:24:54 wen Exp $
+$NetBSD: distinfo,v 1.5 2019/10/04 00:02:53 wen Exp $
 
-SHA1 (HTML-Clean-0.9.tar.gz) = f4c0601fd63dfe2157df0b09e07d1f6a176a9c41
-RMD160 (HTML-Clean-0.9.tar.gz) = 0d654638ebb76a01332dd2b05cac4a52277014d4
-SHA512 (HTML-Clean-0.9.tar.gz) = 47c228802900059072540e0b747c86fddbd6a3625cb14088ed19fef2a2ae6ce2fb502a8befd7afd03fefc3bd9d5d4f21985bea11635d7a6d4fae683713a28a75
-Size (HTML-Clean-0.9.tar.gz) = 48592 bytes
+SHA1 (HTML-Clean-1.4.tar.gz) = f8e407cf4453a8dea33b55a9d8020a1c6b86030c
+RMD160 (HTML-Clean-1.4.tar.gz) = 57c5d580ab6c9c6c8cddc429ed01ef9ba179aecc
+SHA512 (HTML-Clean-1.4.tar.gz) = a675b2ae0f7472d4fe44d3402687c4a7d87d33b30894e2c1d9639552fa5f58a89b35b52be17f95058a5ce690a996451c877d1c723b9b6f3919f437da8d458004
+Size (HTML-Clean-1.4.tar.gz) = 48598 bytes
