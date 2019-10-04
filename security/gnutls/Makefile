@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.202 2019/10/01 14:34:08 nia Exp $
+# $NetBSD: Makefile,v 1.203 2019/10/04 17:25:53 nia Exp $
 
-DISTNAME=	gnutls-3.6.9
-PKGREVISION=	2
+DISTNAME=	gnutls-3.6.10
 CATEGORIES=	security devel
 MASTER_SITES=	https://www.gnupg.org/ftp/gcrypt/gnutls/v3.6/
 EXTRACT_SUFX=	.tar.xz
@@ -12,6 +11,8 @@ COMMENT=	Transport Layer Security library
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2.1
 
 DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
+
+PLIST_SRC=	PLIST
 
 USE_LANGUAGES=			c c++
 USE_LIBTOOL=			yes
