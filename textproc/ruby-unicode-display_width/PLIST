@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2019/10/04 23:41:47 ryoon Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/MIT-LICENSE.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/data/display_width.marshal.gz
+${GEM_LIBDIR}/lib/unicode/display_width.rb
+${GEM_LIBDIR}/lib/unicode/display_width/constants.rb
+${GEM_LIBDIR}/lib/unicode/display_width/index.rb
+${GEM_LIBDIR}/lib/unicode/display_width/no_string_ext.rb
+${GEM_LIBDIR}/lib/unicode/display_width/string_ext.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
