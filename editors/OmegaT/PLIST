@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2019/07/24 14:01:09 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.17 2019/10/04 13:04:10 ryoon Exp $
 bin/OmegaT
 share/OmegaT/OmegaT.jar
 share/OmegaT/lib/ANTLR_3_License.txt
@@ -32,7 +32,7 @@ share/OmegaT/lib/commons-logging-1.2.jar
 share/OmegaT/lib/desktopsupport-0.3.0.jar
 share/OmegaT/lib/dictzip-lib-0.8.2.jar
 share/OmegaT/lib/diffutils-1.2.1.jar
-share/OmegaT/lib/fontbox-2.0.15.jar
+share/OmegaT/lib/fontbox-2.0.16.jar
 share/OmegaT/lib/gnudiff4j-1.15.jar
 share/OmegaT/lib/gpl-1.txt
 share/OmegaT/lib/gpl-2.0.txt
@@ -68,7 +68,7 @@ share/OmegaT/lib/httpcore-4.4.4.jar
 share/OmegaT/lib/hunspell-native-libs-2.9.jar
 share/OmegaT/lib/ictclas4j-1.0.1.jar
 share/OmegaT/lib/ivy-2.4.0.jar
-share/OmegaT/lib/jasypt-1.9.2.jar
+share/OmegaT/lib/jasypt-1.9.3.jar
 share/OmegaT/lib/javax.activation-api-1.2.0.jar
 share/OmegaT/lib/jaxb-api-2.3.1.jar
 share/OmegaT/lib/jaxb-core-2.3.0.1.jar
@@ -143,7 +143,7 @@ share/OmegaT/lib/lucene-analyzers-smartcn-5.2.1.jar
 share/OmegaT/lib/lucene-analyzers-stempel-5.2.1.jar
 share/OmegaT/lib/lucene-backward-codecs-5.2.1.jar
 share/OmegaT/lib/lucene-core-5.2.1-1.jar
-share/OmegaT/lib/lucene-gosen-5.0.0-ipadic.jar
+share/OmegaT/lib/lucene-gosen-${PKGVERSION}-ipadic.jar
 share/OmegaT/lib/mALIGNa_LICENSE.txt
 share/OmegaT/lib/maligna-3.0.0.jar
 share/OmegaT/lib/morfologik-fsa-2.1.0.jar
@@ -159,7 +159,7 @@ share/OmegaT/lib/opennlp-tools-1.6.0.jar
 share/OmegaT/lib/openregex-1.1.1.jar
 share/OmegaT/lib/opentest4j-1.1.1.jar
 share/OmegaT/lib/org.eclipse.jgit-4.11.8.201904181247-r.jar
-share/OmegaT/lib/pdfbox-2.0.15.jar
+share/OmegaT/lib/pdfbox-2.0.16.jar
 share/OmegaT/lib/picocli-3.9.2.jar
 share/OmegaT/lib/qdox-1.12.1.jar
 share/OmegaT/lib/regex-weburl.js-license.txt
@@ -1191,10 +1191,14 @@ share/doc/OmegaT/it/appendix.Scripts.inOmegaT.html
 share/doc/OmegaT/it/appendix.TeamProjects.html
 share/doc/OmegaT/it/appendix.Tokenizers.inOmegaT.html
 share/doc/OmegaT/it/appendix.acknowledgements.html
+share/doc/OmegaT/it/appendix.dictionaries.html
+share/doc/OmegaT/it/appendix.glossaries.html
 share/doc/OmegaT/it/appendix.keyboard.html
 share/doc/OmegaT/it/appendix.languages.html
 share/doc/OmegaT/it/appendix.legal.notices.html
+share/doc/OmegaT/it/appendix.regexp.html
 share/doc/OmegaT/it/appendix.shortcut.custom.html
+share/doc/OmegaT/it/appendix.spellchecker.html
 share/doc/OmegaT/it/appendix.website.html
 share/doc/OmegaT/it/chapter.TaaS.html
 share/doc/OmegaT/it/chapter.about.OmegaT.html
@@ -1219,10 +1223,12 @@ share/doc/OmegaT/it/chapter.spellchecker.html
 share/doc/OmegaT/it/chapter.translation.editing.html
 share/doc/OmegaT/it/chapter.translation.memories.html
 share/doc/OmegaT/it/chapter.user.interface.html
+share/doc/OmegaT/it/howtos.html
 share/doc/OmegaT/it/images/AppleKey.gif
 share/doc/OmegaT/it/images/Comments_25.png
 share/doc/OmegaT/it/images/DictMerriamWebster.png
 share/doc/OmegaT/it/images/Dock.gif
+share/doc/OmegaT/it/images/Dock.png
 share/doc/OmegaT/it/images/EditingBehaviourOptions.png
 share/doc/OmegaT/it/images/EditingBehaviourOptions25.png
 share/doc/OmegaT/it/images/GlossaryEntry_25.png
@@ -1234,7 +1240,9 @@ share/doc/OmegaT/it/images/MatchStatistics.png
 share/doc/OmegaT/it/images/MatchesPaneSetup.png
 share/doc/OmegaT/it/images/MatchesPane_25.png
 share/doc/OmegaT/it/images/Maximize.gif
+share/doc/OmegaT/it/images/Maximize.png
 share/doc/OmegaT/it/images/Minimize.gif
+share/doc/OmegaT/it/images/Minimize.png
 share/doc/OmegaT/it/images/MobyDick.png
 share/doc/OmegaT/it/images/MultiTerm_Glossary_25.png
 share/doc/OmegaT/it/images/OmT_Cyrillic.png
@@ -1246,6 +1254,7 @@ share/doc/OmegaT/it/images/Omegatproject.png
 share/doc/OmegaT/it/images/OptionsTagValidation_25.png
 share/doc/OmegaT/it/images/RegexTester.png
 share/doc/OmegaT/it/images/Restore.gif
+share/doc/OmegaT/it/images/Restore.png
 share/doc/OmegaT/it/images/ScriptingDialog.png
 share/doc/OmegaT/it/images/SpellcheckerSetup_25.png
 share/doc/OmegaT/it/images/SpellcheckingText.png
@@ -1260,12 +1269,17 @@ share/doc/OmegaT/it/images/Team_projects_inSync.png
 share/doc/OmegaT/it/images/Team_projects_initialCommit.png
 share/doc/OmegaT/it/images/TortoiseExplorerExtension.png
 share/doc/OmegaT/it/images/Undock.gif
+share/doc/OmegaT/it/images/Undock.png
 share/doc/OmegaT/it/images/saveglossary.png
 share/doc/OmegaT/it/index.html
 share/doc/OmegaT/it/instantStartGuideNoTOC.html
 share/doc/OmegaT/it/ix01.html
 share/doc/OmegaT/it/license.txt
+share/doc/OmegaT/it/menus.html
+share/doc/OmegaT/it/panes.html
+share/doc/OmegaT/it/project.folder.html
 share/doc/OmegaT/it/version_it.properties
+share/doc/OmegaT/it/windows.and.dialogs.html
 share/doc/OmegaT/ja/OmegaT.css
 share/doc/OmegaT/ja/appendix.LanguageToolPlugin.inOmegaT.html
 share/doc/OmegaT/ja/appendix.ScriptingPlugin.inOmegaT.html
