@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2019/09/07 07:09:27 adam Exp $
+# $NetBSD: Makefile,v 1.40 2019/10/04 11:17:57 adam Exp $
 
-DISTNAME=	aiohttp-3.6.0
+DISTNAME=	aiohttp-3.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiohttp/}
@@ -13,7 +13,7 @@ LICENSE=	apache-2.0
 DEPENDS+=	${PYPKGPREFIX}-async-timeout>=3.0:../../devel/py-async-timeout
 DEPENDS+=	${PYPKGPREFIX}-attrs>=17.4.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-chardet>=2.0:../../converters/py-chardet
-DEPENDS+=	${PYPKGPREFIX}-multidict>=4.0:../../databases/py-multidict
+DEPENDS+=	${PYPKGPREFIX}-multidict>=4.5:../../databases/py-multidict
 DEPENDS+=	${PYPKGPREFIX}-yarl>=1.0:../../www/py-yarl
 TEST_DEPENDS+=	${PYPKGPREFIX}-async_generator-[0-9]*:../../devel/py-async_generator
 TEST_DEPENDS+=	${PYPKGPREFIX}-gunicorn-[0-9]*:../../www/py-gunicorn
