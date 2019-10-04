@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.11 2019/10/03 11:17:51 nia Exp $
+$NetBSD: distinfo,v 1.12 2019/10/04 14:21:40 nia Exp $
 
-SHA1 (freeglut-3.2.0.tar.gz) = cc88845a3bfce41bbaa345d10038a1bcc6782af2
-RMD160 (freeglut-3.2.0.tar.gz) = 596644e5733aa7981643565bf1b49e7a8ee47b04
-SHA512 (freeglut-3.2.0.tar.gz) = 78da1eaa845607ddd97a6744f3a97ff26cdb562fdf990695c8ac97a60d9d692496e4bf3672acfc522add60823c2f3bc7435e19e8041fbbb5d95851c0b641a818
-Size (freeglut-3.2.0.tar.gz) = 443147 bytes
-SHA1 (patch-CMakeLists.txt) = 3e9d66bc13758777461e4bf7c6ccbe7eb0fb908d
+SHA1 (freeglut-3.2.1.tar.gz) = 7a62e0d2caad92ff745bc5037592b2753f0b2f20
+RMD160 (freeglut-3.2.1.tar.gz) = c9b9d76f61ff56b153367817cfbc1fb5c0816c54
+SHA512 (freeglut-3.2.1.tar.gz) = aced4bbcd36269ce6f4ee1982e0f9e3fffbf18c94f785d3215ac9f4809b992e166c7ada496ed6174e13d77c0f7ef3ca4c57d8a282e96cbbe6ff086339ade3b08
+Size (freeglut-3.2.1.tar.gz) = 440228 bytes
