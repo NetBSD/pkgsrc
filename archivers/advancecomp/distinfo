@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2019/10/04 18:02:48 nia Exp $
+$NetBSD: distinfo,v 1.11 2019/10/04 18:08:07 nia Exp $
 
 SHA1 (advancecomp-2.1.tar.gz) = 2699fd24c2175bece1f8fb68d40f13db86480048
 RMD160 (advancecomp-2.1.tar.gz) = 9a67286906113a26b5e8f2e155c408c1b0b935c8
@@ -7,4 +7,4 @@ Size (advancecomp-2.1.tar.gz) = 1292135 bytes
 SHA1 (patch-aa) = ddc8b6981e1e0b46ac6291aee65d56cdae9f0998
 SHA1 (patch-ab) = 1e6e10943bd2a414d4f704bd94b1de3d1036dd90
 SHA1 (patch-ac) = d08d44224c4351c66c920b26bacc3f749a54d31a
-SHA1 (patch-libdeflate_compiler__gcc.h) = e7d0c01f7fae2ea53e74edd0e849e9243b132661
+SHA1 (patch-libdeflate_compiler__gcc.h) = 5e8fe8d3a7d45097cbc04523c2085ef38c7d0de0
