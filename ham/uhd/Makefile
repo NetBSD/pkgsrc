@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2019/08/22 12:23:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.51 2019/10/04 10:41:44 adam Exp $
 
-DISTNAME=	uhd-3.14.1.0
-PKGREVISION=	1
+DISTNAME=	uhd-3.14.1.1
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=EttusResearch/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,6 +13,7 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 
+CMAKE_ARGS+=	-DPKG_MAN_DIR=${PKGMANDIR}/man1
 CMAKE_ARGS+=	-DRST2HTML_EXECUTABLE=${PREFIX}/bin/rst2html-${PYVERSSUFFIX}.py
 CMAKE_ARGS+=	-Wno-dev
 .include "../../lang/python/pyversion.mk"
@@ -62,13 +62,6 @@ INSTALLATION_DIRS+=	share/uhd
 INSTALLATION_DIRS+=	share/uhd/firmware
 INSTALLATION_DIRS+=	share/uhd/fpga
 INSTALLATION_DIRS+=	share/uhd/images
-
-SUBST_CLASSES+=		man
-SUBST_MESSAGE.man=	Convert share/man to man
-SUBST_STAGE.man=	pre-configure
-SUBST_FILES.man=	docs/CMakeLists.txt
-SUBST_SED.man=		-e '/UHD_INSTALL/s,$${PKG_MAN_DIR},${PREFIX}/${PKGMANDIR}/man1,'
-# UHD_INSTALL(FILES ${gzfile} DESTINATION ${PKG_MAN_DIR} COMPONENT manpages)
 
 .include "options.mk"
 
