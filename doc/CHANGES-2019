@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4172 2019/10/04 17:26:12 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4173 2019/10/04 17:29:10 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6748,3 +6748,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed cross/nios2-gcc3 successor cross/nios2-gcc [maya 2019-10-04]
 	Updated net/syncthing to 1.3.0 [nia 2019-10-04]
 	Updated security/gnutls to 3.6.10 [nia 2019-10-04]
+	Updated graphics/gdk-pixbuf2 to 2.38.2 [nia 2019-10-04]
