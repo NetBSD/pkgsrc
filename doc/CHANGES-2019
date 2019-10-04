@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4150 2019/10/04 07:07:28 wen Exp $
+$NetBSD: CHANGES-2019,v 1.4151 2019/10/04 09:34:58 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6725,3 +6725,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/p5-Catalyst-View-JSON to 0.37 [wen 2019-10-04]
 	Updated www/p5-Catalyst-Manual to 5.9010 [wen 2019-10-04]
 	Updated devel/p5-Perl-PrereqScanner-NotQuiteLite to 0.9908 [wen 2019-10-04]
+	Updated net/gopher to 3.0.17 [leot 2019-10-04]
