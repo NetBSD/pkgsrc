@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/07/17 21:56:37 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/10/04 13:25:23 ryoon Exp $
 bin/nim
 nim/bin/nim
 nim/compiler.nimble
@@ -159,17 +159,18 @@ nim/lib/core/hotcodereloading.nim
 nim/lib/core/locks.nim
 nim/lib/core/macrocache.nim
 nim/lib/core/macros.nim
-nim/lib/core/refs.nim
 nim/lib/core/rlocks.nim
 nim/lib/core/runtime_v2.nim
 nim/lib/core/seqs.nim
 nim/lib/core/strs.nim
 nim/lib/core/typeinfo.nim
-nim/lib/core/typelayouts.nim
 nim/lib/cycle.h
+nim/lib/deprecated/pure/LockFreeHash.nim
+nim/lib/deprecated/pure/events.nim
 nim/lib/deprecated/pure/ospaths.nim
 nim/lib/deprecated/pure/parseopt2.nim
 nim/lib/deprecated/pure/securehash.nim
+nim/lib/deprecated/pure/sharedstrings.nim
 nim/lib/experimental/diff.nim
 nim/lib/genode/alloc.nim
 nim/lib/genode/env.nim
@@ -231,7 +232,6 @@ nim/lib/pure/base64.nim
 nim/lib/pure/bitops.nim
 nim/lib/pure/browsers.nim
 nim/lib/pure/cgi.nim
-nim/lib/pure/collections/LockFreeHash.nim
 nim/lib/pure/collections/chains.nim
 nim/lib/pure/collections/critbits.nim
 nim/lib/pure/collections/deques.nim
@@ -244,7 +244,6 @@ nim/lib/pure/collections/sequtils.nim
 nim/lib/pure/collections/setimpl.nim
 nim/lib/pure/collections/sets.nim
 nim/lib/pure/collections/sharedlist.nim
-nim/lib/pure/collections/sharedstrings.nim
 nim/lib/pure/collections/sharedtables.nim
 nim/lib/pure/collections/tableimpl.nim
 nim/lib/pure/collections/tables.nim
@@ -264,7 +263,6 @@ nim/lib/pure/distros.nim
 nim/lib/pure/dynlib.nim
 nim/lib/pure/encodings.nim
 nim/lib/pure/endians.nim
-nim/lib/pure/events.nim
 nim/lib/pure/fenv.nim
 nim/lib/pure/future.nim
 nim/lib/pure/hashes.nim
@@ -339,6 +337,7 @@ nim/lib/pure/volatile.nim
 nim/lib/pure/xmlparser.nim
 nim/lib/pure/xmltree.nim
 nim/lib/std/editdistance.nim
+nim/lib/std/monotimes.nim
 nim/lib/std/sha1.nim
 nim/lib/std/sums.nim
 nim/lib/std/time_t.nim
@@ -357,17 +356,17 @@ nim/lib/system/cellsets.nim
 nim/lib/system/cgprocs.nim
 nim/lib/system/channels.nim
 nim/lib/system/chcks.nim
-nim/lib/system/debugger.nim
 nim/lib/system/deepcopy.nim
 nim/lib/system/dollars.nim
 nim/lib/system/dyncalls.nim
 nim/lib/system/embedded.nim
-nim/lib/system/endb.nim
 nim/lib/system/excpt.nim
 nim/lib/system/fatal.nim
+nim/lib/system/formatfloat.nim
 nim/lib/system/gc.nim
 nim/lib/system/gc2.nim
 nim/lib/system/gc_common.nim
+nim/lib/system/gc_hooks.nim
 nim/lib/system/gc_ms.nim
 nim/lib/system/gc_regions.nim
 nim/lib/system/hti.nim
