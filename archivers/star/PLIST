@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/03/19 14:21:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/10/04 14:27:51 micha Exp $
 bin/gnutar
 bin/scpio
 bin/spax
@@ -13,6 +13,7 @@ man/man1/star.1
 man/man1/suntar.1
 man/man1/ustar.1
 man/man5/star.5
+share/doc/star/INSTALL.pkgsrc
 share/doc/star/README
 share/doc/star/README.ACL
 share/doc/star/README.crash
@@ -32,6 +33,11 @@ share/doc/star/testscripts/README.largefiles
 share/doc/star/testscripts/README.longnames
 share/doc/star/testscripts/README.paxbug
 share/doc/star/testscripts/README.quicktest
+share/doc/star/testscripts/acl-nfsv4-compact-test.tar.gz
+share/doc/star/testscripts/acl-nfsv4-compact-test2.tar.gz
+share/doc/star/testscripts/acl-nfsv4-compact-test3.tar.gz
+share/doc/star/testscripts/acl-nfsv4-compact-test4.tar.gz
+share/doc/star/testscripts/acl-nfsv4-compact-test5.tar.gz
 share/doc/star/testscripts/acl-nfsv4-test.tar.gz
 share/doc/star/testscripts/acl-nfsv4-test2.tar.gz
 share/doc/star/testscripts/acl-nfsv4-test3.tar.gz
@@ -50,6 +56,7 @@ share/doc/star/testscripts/gnu-multi-fail-volume2.gtar
 share/doc/star/testscripts/gtarfail.tar
 share/doc/star/testscripts/gtarfail2.tar
 share/doc/star/testscripts/long.ustar.gz
+share/doc/star/testscripts/longpath.tar.bz2
 share/doc/star/testscripts/mk
 share/doc/star/testscripts/mk2
 share/doc/star/testscripts/not_a_tar_file
