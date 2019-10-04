@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.39 2019/07/27 19:31:00 tnn Exp $
+$NetBSD: distinfo,v 1.40 2019/10/04 01:45:42 tnn Exp $
 
 SHA1 (aho-corasick-0.6.8.crate) = e39bb67748289a94512db5c32c599c37e6bb0317
 RMD160 (aho-corasick-0.6.8.crate) = adc1808fb3ec73db2643b6ad3754029e2e495e5f
@@ -563,3 +563,4 @@ Size (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 2947998 bytes
 SHA1 (patch-Cargo.lock) = 6767f39a384c89d5ee449bde02ae79d321c229d2
 SHA1 (patch-Makefile.am) = fd57625bed8e908a6b56f78cb75283d1d566cdd6
 SHA1 (patch-configure.ac) = bdad8c486f552dbd301abb49cef3f73aaeb81165
+SHA1 (patch-vendor-cssparser_src_parser.rs) = 69f2f8c1722816e225763550a23379ae1965d33f
