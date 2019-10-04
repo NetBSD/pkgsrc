@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4165 2019/10/04 14:07:12 prlw1 Exp $
+$NetBSD: CHANGES-2019,v 1.4166 2019/10/04 14:09:29 micha Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6741,4 +6741,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/librsvg to 2.46.0 [ryoon 2019-10-04]
 	Updated www/apache-tomcat9 to 9.0.26 [ryoon 2019-10-04]
 	Updated shells/bosh to 20190922 [micha 2019-10-04]
+	Updated shells/pbosh to 20190922 [micha 2019-10-04]
 	Added devel/meson version 0.51.2 [prlw1 2019-10-03]
