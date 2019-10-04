@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2008/06/20 01:09:31 joerg Exp $
+$NetBSD: patch-ab,v 1.3 2019/10/04 09:34:41 leot Exp $
 
 --- gopher/Makefile.in.orig	2005-07-20 17:28:52.000000000 +0200
 +++ gopher/Makefile.in	2005-08-05 14:01:36.000000000 +0200
@@ -14,8 +14,8 @@ $NetBSD: patch-ab,v 1.2 2008/06/20 01:09:31 joerg Exp $
 -	@INSTALL@ gopher.rc $(CLIENTLIB)
 -	@INSTALL@ gopherremote.rc $(CLIENTLIB)
 -	@INSTALL@ gopher.hlp $(CLIENTLIB)
-+	$(BSD_INSTALL_PROGRAM_DIR) ${DESTDIR}$(CLIENTDIR)
-+	$(BSD_INSTALL_PROGRAM) $(TARGET) ${DESTDIR}$(CLIENTDIR)/
++	$(BSD_INSTALL_PROGRAM_DIR) $(CLIENTDIR)
++	$(BSD_INSTALL_PROGRAM) $(TARGET) $(CLIENTDIR)/
 +	$(BSD_INSTALL_DATA_DIR) ${DESTDIR}$(EGDIR)/
 +	$(BSD_INSTALL_DATA) gopher.rc ${DESTDIR}$(EGDIR)/
 +	$(BSD_INSTALL_DATA) gopherremote.rc ${DESTDIR}$(EGDIR)/
