@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2019/03/19 14:21:20 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2019/10/04 14:27:51 micha Exp $
 
-DISTNAME=	schily-2019-03-11
-PKGNAME=	star-1.6
+DISTNAME=	schily-2019-09-22
+PKGNAME=	star-1.6.1
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=schilytools/}
 EXTRACT_SUFX=	.tar.bz2
@@ -23,19 +24,14 @@ MAKE_FLAGS+=	CPPOPTX=${CPPFLAGS:Q} COPTX=${CFLAGS:Q} LDOPTX=${LDFLAGS:Q}
 .include "../../mk/bsd.prefs.mk"
 
 # The default location is /etc/default/star
-# We patch the documentation appropriately. Additionally, we also provide a
-# MESSAGE stating the reasons we do this, as required by the license.
+# We patch the documentation appropriately. Additionally, we also install
+# INSTALL.pkgsrc stating the reasons we do this, as required by the license.
 STAR_CONF?=	${PKG_SYSCONFDIR}/star
-
-.if ${STAR_CONF} != "/etc/default/star"
-MESSAGE_SRC+=	MESSAGE.star
-MESSAGE_SUBST+=	PKGNAME_NOREV=${PKGNAME_NOREV}
-MESSAGE_SUBST+=	STAR_CONF=${STAR_CONF:Q}
-.endif
 
 CONF_FILES=	${PREFIX}/share/examples/star/star ${STAR_CONF}
 AUTO_MKDIRS=	yes
 
+# Configure config file location
 SUBST_CLASSES+=		fix
 SUBST_STAGE.fix=	pre-configure
 SUBST_FILES.fix+=	star/star.1
@@ -44,10 +40,19 @@ SUBST_FILES.fix+=	star/defaults.c
 SUBST_SED.fix=		-e "s,/etc/default/star,${STAR_CONF},g"
 SUBST_MESSAGE.fix=	Replace defaults file paths.
 
+# Configure INSTALL.pkgsrc (formerly displayed as MESSAGE)
+SUBST_CLASSES+=		install
+SUBST_STAGE.install=	post-configure
+SUBST_MESSAGE.install=	Preparing INSTALL.pkgsrc file ...
+SUBST_FILES.install=	${WRKDIR}/INSTALL.pkgsrc
+SUBST_SED.install=	-e 's,PKGNAME_NOREV,${PKGNAME_NOREV},'
+SUBST_SED.install+=	-e 's,STAR_CONF,${STAR_CONF:Q},'
+
 # Shared platform specific code for schilytools (provided by smake package)
 .include "../../devel/smake/Makefile.common"
 
 do-configure:
+	${CP} ${FILESDIR}/INSTALL.pkgsrc ${WRKDIR}
 	cd ${WRKSRC}/inc && ${SMAKE} ${MAKE_FLAGS}
 
 do-build:
@@ -76,5 +81,7 @@ do-install:
 	cd ${WRKSRC}/star && ${SMAKE} ${MAKE_FLAGS} install
 	${INSTALL_DATA} ${WRKSRC}/star/star.dfl				\
 		${DESTDIR}${PREFIX}/share/examples/star/star
+	${INSTALL_DATA} ${WRKDIR}/INSTALL.pkgsrc			\
+		${DESTDIR}${PREFIX}/share/doc/star/INSTALL.pkgsrc
 
 .include "../../mk/bsd.pkg.mk"
