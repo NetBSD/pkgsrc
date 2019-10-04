@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2019/05/29 14:48:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2019/10/04 10:37:49 adam Exp $
 bin/protoc
 include/google/protobuf/any.h
 include/google/protobuf/any.pb.h
@@ -50,6 +50,7 @@ include/google/protobuf/implicit_weak_message.h
 include/google/protobuf/inlined_string_field.h
 include/google/protobuf/io/coded_stream.h
 include/google/protobuf/io/gzip_stream.h
+include/google/protobuf/io/io_win32.h
 include/google/protobuf/io/printer.h
 include/google/protobuf/io/strtod.h
 include/google/protobuf/io/tokenizer.h
