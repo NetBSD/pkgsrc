@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2019/09/20 15:20:58 bouyer Exp $
+# $NetBSD: Makefile,v 1.90 2019/10/04 16:05:09 maya Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -61,7 +61,6 @@ SUBDIR+=	mingw-w64-x86_64-winpthreads
 #SUBDIR+=	nios2			# just contains makefile fragments
 SUBDIR+=	nios2-binutils
 SUBDIR+=	nios2-gcc
-SUBDIR+=	nios2-gcc3
 SUBDIR+=	nios2-gcc41
 SUBDIR+=	objconv
 SUBDIR+=	or1k-none-elf-binutils
