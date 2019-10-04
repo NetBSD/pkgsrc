@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2011/12/17 10:16:25 sbd Exp $
+$NetBSD: patch-aa,v 1.3 2019/10/04 09:34:41 leot Exp $
 
---- Makefile.config.in.orig	2005-07-20 15:28:53.000000000 +0000
+--- Makefile.config.in.orig	2019-10-04 04:17:14.000000000 +0000
 +++ Makefile.config.in
 @@ -157,7 +157,7 @@
  # Your favorite C compiler..
@@ -25,12 +25,12 @@ $NetBSD: patch-aa,v 1.2 2011/12/17 10:16:25 sbd Exp $
  
  #------------------------------------------------
  # The install command on your system.  cp works in most cases...
-@@ -181,7 +181,7 @@ PREFIX          = @prefix@
- prefix		= @prefix@
- SYSCONFDIR	= @sysconfdir@
+@@ -181,7 +181,7 @@ PREFIX          = $(DESTDIR)@prefix@
+ prefix		= $(DESTDIR)@prefix@
+ SYSCONFDIR	= $(DESTDIR)@sysconfdir@
  CLIENTDIR	= $(PREFIX)/bin
--CLIENTLIB       = $(DESTDIR)/$(SYSCONFDIR)/gopher
-+CLIENTLIB       = $(DESTDIR)/$(SYSCONFDIR)
+-CLIENTLIB       = $(SYSCONFDIR)
++CLIENTLIB       = $(DESTDIR)$(SYSCONFDIR)
  SERVERDIR	= $(PREFIX)/sbin
  
  # On SCO manuals are in /usr/man but its easiest to do a 
