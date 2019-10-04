@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4153 2019/10/04 10:42:16 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4154 2019/10/04 11:18:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6729,3 +6729,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/ocaml to 4.08.1nb2 [maya 2019-10-04]
 	Updated devel/protobuf to 3.10.0 [adam 2019-10-04]
 	Updated ham/uhd to 3.14.1.1 [adam 2019-10-04]
+	Updated devel/py-protobuf to 3.10.0 [adam 2019-10-04]
+	Updated www/py-aiohttp to 3.6.1 [adam 2019-10-04]
