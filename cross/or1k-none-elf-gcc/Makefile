@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/08/11 13:18:18 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/10/04 15:46:24 maya Exp $
 
 DISTNAME=		gcc-9.1.0
 PKGNAME=		cross-or1k-none-elf-${DISTNAME}
@@ -24,6 +24,8 @@ _TOOLS_USE_PKGSRC.makeinfo= yes
 DEPENDS+=	cross-or1k-none-elf-binutils-[0-9]*:../../cross/or1k-none-elf-binutils
 
 USE_LANGUAGES+=		c c++
+
+CHECK_PORTABILITY_SKIP+=	libgo/mksysinfo.sh
 
 OR1KELF_PREFIX=	${PREFIX}/cross-or1k-none-elf
 OBJDIR=			../build
