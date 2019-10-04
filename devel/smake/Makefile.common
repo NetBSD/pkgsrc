@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2019/03/19 14:19:45 wiz Exp $
+# $NetBSD: Makefile.common,v 1.3 2019/10/04 13:32:05 micha Exp $
 # used by archivers/star/Makefile
 # used by devel/smake/Makefile
 # used by shells/bosh/Makefile
