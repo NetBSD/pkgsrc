@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.7 2019/10/03 23:02:59 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.8 2019/10/04 22:26:34 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -28,214 +28,30 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
+
+# Overview
+#
+# The url2pkg program gets a URL and produces a pkgsrc package from it,
+# filling in several defaults in order to reduce the amount of manual work.
+#
+# This happens in two phases. Phase 1 is done by the Generator and generates
+# an initial Makefile, just enough to download the distfile. Phase 2 then
+# takes the generated Makefile and applies various adjustments for different
+# types of packages, such as Perl or Python modules. This is done by the
+# Adjuster class.
+
+
 import getopt
 import glob
 import os
 import re
 import subprocess
 import sys
-from os.path import isfile
-from typing import Callable, Dict, Iterator, List, Optional, Sequence, Union
-
-
-class Config:
-
-    def __init__(self):
-        self.make = '@MAKE@'
-        self.libdir = '@LIBDIR@'
-        self.perl5 = '@PERL5@'
-        self.pkgsrcdir = '@PKGSRCDIR@'
-        self.pythonbin = '@PYTHONBIN@'
-        self.pkgdir = '.'  # only overridable for tests
-        self.verbose = False
-
-
-config = Config()
-distname = ''
-
-
-def debug(fmt: str, *args):
-    if config.verbose:
-        msg = fmt.format(*map(repr, args)) if len(args) else fmt
-        sys.stderr.write(f'url2pkg: {msg}\n')
-
-
-def run_editor(fname: str, lineno: int):
-    editor = os.getenv('PKGEDITOR') or os.getenv('EDITOR') or 'vi'
-
-    args: List[str] = [editor]
-    if re.search(editor, r'(^|/)(mcedit|nano|pico|vi|vim)$'):
-        args.append(f'+{lineno}')
-    args.append(fname)
-
-    subprocess.check_call(args)
-
-
-def generate_initial_package_Makefile_lines(url):
-    global distname
-
-    master_site = ''
-    master_sites = ''
-    distfile = ''
-    homepage = ''
-    extract_sufx: str
-    categories: str
-    github_project = ''
-    github_release = ''
-    dist_subdir = ''
-    pkgname_prefix = ''
-    pkgname_transform = ''
-
-    with open('../../mk/fetch/sites.mk') as sites_mk:
-        for line in sites_mk:
-            m = re.search(r'^(MASTER_SITE_.*)\+=', line)
-            if m:
-                master_site = m[1]
-                continue
-
-            m = re.search(r'^\t(.*?)(?:\s+\\)?$', line)
-            if not m:
-                continue
-
-            site = m[1]
-            if not url.startswith(site):
-                continue
-
-            rest = url[len(site):]
-            m = re.search(r'^(.+)/([^/]+)$', rest)
-            if not m:
-                master_sites = f"${{{master_site}}}"
-                continue
-
-            subdir, distfile = m.groups()
-
-            master_sites = f'${{{master_site}:={subdir}/}}'
-            if master_site == 'MASTER_SITE_SOURCEFORGE':
-                homepage = f'https://{subdir}.sourceforge.net/'
-            elif master_site == 'MASTER_SITE_GNU':
-                homepage = f'https://www.gnu.org/software/{subdir}/'
-            else:
-                homepage = url[:-len(distfile)]
-
-    m = re.search(r'^https://downloads\.sourceforge\.net/project/([^/?]+)/[^?]+/([^/?]+)(?:[?].*)?$', url)
-    if m:
-        project, filename = m.groups()
-
-        master_sites = f'${{MASTER_SITE_SOURCEFORGE:={project}/}}'
-        homepage = f'https://{project}.sourceforge.net/'
-        distfile = filename
-
-    m = re.search(r'^https://github\.com/(.+)/(.+)/archive/(.+)(\.tar\.gz|\.zip)$', url)
-    if m:
-        org, proj, tag, ext = m.groups()
-
-        github_project = proj
-        master_sites = f'${{MASTER_SITE_GITHUB:={org}/}}'
-        homepage = f'https://github.com/{org}/{proj}/'
-        if github_project not in tag:
-            pkgname_prefix = '${GITHUB_PROJECT}-'
-            dist_subdir = '${GITHUB_PROJECT}'
-        distfile = tag + ext
-
-    m = re.search(r'^https://github\.com/(.+)/(.+)/releases/download/(.+)/(.+)(\.tar\.gz|\.zip)$', url)
-    if m:
-        org, proj, tag, base, ext = m.groups()
-
-        github_project = proj
-        master_sites = f'${{MASTER_SITE_GITHUB:={org}/}}'
-        homepage = f'https://github.com/{org}/{proj}/'
-        if proj not in base:
-            github_project = proj
-            dist_subdir = '${GITHUB_PROJECT}'
-        github_release = '${DISTNAME}' if tag == base else tag
-        distfile = base + ext
-
-    if master_sites == '':
-        m = re.search(r'^(.*/)(.*)$', url)
-        if not m:
-            sys.exit(f'error: URL "{url}" must have at least one slash')
-        master_sites = m[1]
-        distfile = m[2]
-        homepage = master_sites
-
-    m = re.search(r'^(.*?)((?:\.tar)?\.\w+)$', distfile)
-    if m:
-        distname, extract_sufx = m.groups()
-    else:
-        distname, extract_sufx = distfile, '# none'
-
-    m = re.search(r'^v\d', distname)
-    if m:
-        pkgname_transform = ':S,^v,,'
-    elif re.search(r'-v\d', distname) and not re.search(r'-v.*-v\d', distname):
-        pkgname_transform = ':S,-v,-,'
-
-    main_category = re.search(r'.*/([^/]+)/[^/]+$', os.getcwd())[1]
-    categories = main_category if main_category != 'wip' else '# TODO: add primary category'
-
-    if extract_sufx == '.tar.gz' or extract_sufx == '.gem':
-        extract_sufx = ''
-
-    pkgname = '' if pkgname_prefix == '' and pkgname_transform == '' \
-        else f'{pkgname_prefix}${"{"}DISTNAME{pkgname_transform}{"}"}'
-
-    maintainer = \
-        os.getenv('PKGMAINTAINER') or os.getenv('REPLYTO') \
-        or 'INSERT_YOUR_MAIL_ADDRESS_HERE'
-
-    lines = Lines()
-    lines.add('# $''NetBSD$')
-    lines.add('')
-
-    lines.add_vars(
-        Var('GITHUB_PROJECT', '=', github_project),
-        Var('DISTNAME', '=', distname),
-        Var('PKGNAME', '=', pkgname),
-        Var('CATEGORIES', '=', categories),
-        Var('MASTER_SITES', '=', master_sites),
-        Var('GITHUB_RELEASE', '=', github_release),
-        Var('EXTRACT_SUFX', '=', extract_sufx),
-        Var('DIST_SUBDIR', '=', dist_subdir),
-    )
-
-    lines.add_vars(
-        Var('MAINTAINER', '=', maintainer),
-        Var('HOMEPAGE', '=', homepage),
-        Var('COMMENT', '=', 'TODO: Short description of the package'),
-        Var('#LICENSE', '=', '# TODO: (see mk/license.mk)'),
-    )
-
-    lines.add('# url2pkg-marker (please do not remove this line.)')
-    lines.add('.include "../../mk/bsd.pkg.mk"')
-
-    return lines
-
-
-def generate_initial_package(url):
-    pkgdir = config.pkgdir
-    makefile = f'{pkgdir}/Makefile'
-    descr = f'{pkgdir}/DESCR'
-    plist = f'{pkgdir}/PLIST'
-
-    try:
-        os.rename(makefile, f'{makefile}.url2pkg~')
-    except OSError:
-        pass
-
-    generate_initial_package_Makefile_lines(url).write_to(makefile)
-    if not isfile(plist):
-        Lines('@comment $''NetBSD$').write_to(plist)
-    if not isfile(descr):
-        Lines().write_to(descr)
-
-    run_editor(makefile, 5)
-
-    bmake('distinfo')
-    bmake('extract')
+from typing import Callable, Dict, Iterator, List, Optional, Sequence, Union, Tuple
 
 
 class Var:
-    """ A variable assignment for the package Makefile """
+    """ An abstract variable assignment for the package Makefile. """
 
     def __init__(self, name: str, op: str, value: str):
         self.name = name
@@ -243,26 +59,8 @@ class Var:
         self.value = value
 
 
-def aligned(vars: List[Var]) -> List[str]:
-    relevant = list(filter(lambda v: v.value != '', vars))
-    if not relevant:
-        return []
-
-    def tabwidth(var: Var) -> int:
-        return (len(var.name) + len(var.op) + len('\t') + 7) // 8 * 8
-
-    width = max(map(tabwidth, relevant), default=0)
-
-    aligned_lines = []
-    for var in relevant:
-        tabs = '\t' * ((width - len(var.name) - len(var.op) + 7) // 8)
-        aligned_lines.append(var.name + var.op + tabs + var.value)
-
-    aligned_lines.append('')
-    return aligned_lines
-
-
 class Varassign:
+    """ A variable assignment including layout information. """
 
     def __init__(self, index: int, varname: str, op: str, indent: str,
                  value: str, space_after_value: str, comment: str):
@@ -275,25 +73,45 @@ class Varassign:
         self.comment = comment
 
 
-def find_package(pkgbase: str) -> str:
-    candidates = glob.glob(config.pkgsrcdir + '/*/' + pkgbase)
-    debug('candidates for package {0} are {1}', pkgbase, candidates)
-    if len(candidates) != 1:
-        return ''
-    return candidates[0].replace(config.pkgsrcdir, '../..')
+class Url2Pkg:
 
+    def __init__(self):
+        self.make = '@MAKE@'
+        self.libdir = '@LIBDIR@'
+        self.perl5 = '@PERL5@'
+        self.pkgsrcdir = '@PKGSRCDIR@'
+        self.pythonbin = '@PYTHONBIN@'
+        self.pkgdir = '.'  # only overridable for tests
+        self.verbose = False
+        self.out = sys.stdout
+        self.err = sys.stderr
 
-def bmake(*args: str) -> None:
-    debug('running bmake {0}', args)
-    subprocess.check_call([config.make] + list(args), cwd=config.pkgdir)
+    def debug(self, fmt: str, *args):
+        if self.verbose:
+            msg = fmt.format(*map(repr, args)) if len(args) else fmt
+            self.err.write(f'url2pkg: {msg}\n')
 
+    def find_package(self, pkgbase: str) -> str:
+        candidates = glob.glob(f'{self.pkgsrcdir}/*/{pkgbase}')
+        self.debug('candidates for package {0} are {1}', pkgbase, candidates)
+        if len(candidates) != 1:
+            return ''
+        return candidates[0].replace(self.pkgsrcdir, '../..')
 
-def show_var(varname: str) -> str:
-    output = subprocess.check_output((config.make, 'show-var', 'VARNAME=' + varname))
-    return output.decode('utf-8').strip()
+    def bmake(self, *args: str) -> None:
+        self.debug('running bmake {0}', args)
+        subprocess.check_call([self.make, *args], cwd=self.pkgdir)
+
+    def show_var(self, varname: str) -> str:
+        output = subprocess.check_output((self.make, 'show-var', 'VARNAME=' + varname))
+        return output.decode('utf-8').strip()
 
 
 class Lines:
+    """
+    A list of lines with high-level methods for manipulating variable
+    assignments.
+    """
 
     def __init__(self, *lines: str) -> None:
         self.lines = []
@@ -357,7 +175,7 @@ class Lines:
         return varassigns
 
     def set(self, varname: str, new_value: str) -> bool:
-        """ Changes the value of an existing variable in the lines. """
+        """ Updates the value of an existing variable in the lines. """
 
         varassign = self.unique_varassign(varname)
         if varassign is not None:
@@ -366,11 +184,8 @@ class Lines:
 
     def append(self, varname: str, value: str) -> bool:
         """ Appends to the value of an existing variable in the lines. """
-        if value == '':
-            return False
-
         varassign = self.unique_varassign(varname)
-        if varassign is None:
+        if varassign is None or value == '':
             return False
 
         before = ' ' if re.search(r'\S$', varassign.value) else ''
@@ -411,6 +226,209 @@ class Lines:
         return -1
 
 
+class Generator:
+    """ Generates the initial package Makefile. """
+
+    def __init__(self, url: str) -> None:
+        self.url = url
+        self.master_sites = ''
+        self.distfile = ''
+        self.homepage = ''
+        self.extract_sufx = ''
+        self.categories = ''
+        self.github_project = ''
+        self.github_release = ''
+        self.dist_subdir = ''
+        self.pkgname_prefix = ''
+        self.pkgname_transform = ''
+        self.maintainer = ''
+        self.distname = ''
+        self.pkgname = ''
+
+    @staticmethod
+    def foreach_site(action: Callable[[str, str], None]):
+        varname = ''
+        with open('../../mk/fetch/sites.mk') as sites_mk:
+            for line in sites_mk:
+                m = re.search(r'^(MASTER_SITE_.*)\+=', line)
+                if m:
+                    varname = m[1]
+                    continue
+
+                m = re.search(r'^\t(.*?)(?:\s+\\)?$', line)
+                if not m:
+                    continue
+
+                site_url = m[1]
+                action(varname, site_url)
+
+    def adjust_site(self, varname: str, site_url: str):
+        if not self.url.startswith(site_url):
+            return
+
+        rest = self.url[len(site_url):]
+        m = re.search(r'^(.+)/([^/]+)$', rest)
+        if not m:
+            self.master_sites = f'${{{varname}}}'
+            return
+
+        subdir, self.distfile = m.groups()
+
+        self.master_sites = f'${{{varname}:={subdir}/}}'
+        if varname == 'MASTER_SITE_SOURCEFORGE':
+            self.homepage = f'https://{subdir}.sourceforge.net/'
+        elif varname == 'MASTER_SITE_GNU':
+            self.homepage = f'https://www.gnu.org/software/{subdir}/'
+        else:
+            self.homepage = site_url[:-len(self.distfile)]
+
+    def adjust_site_sourceforge(self):
+        m = re.search(r'^https://downloads\.sourceforge\.net/project/([^/?]+)/[^?]+/([^/?]+)(?:[?].*)?$', self.url)
+        if not m:
+            return
+
+        project, filename = m.groups()
+        self.master_sites = f'${{MASTER_SITE_SOURCEFORGE:={project}/}}'
+        self.homepage = f'https://{project}.sourceforge.net/'
+        self.distfile = filename
+
+    def adjust_site_GitHub_archive(self):
+        m = re.search(r'^https://github\.com/(.+)/(.+)/archive/(.+)(\.tar\.gz|\.zip)$', self.url)
+        if not m:
+            return
+
+        org, proj, tag, ext = m.groups()
+
+        self.github_project = proj
+        self.master_sites = f'${{MASTER_SITE_GITHUB:={org}/}}'
+        self.homepage = f'https://github.com/{org}/{proj}/'
+        if proj not in tag:
+            self.pkgname_prefix = '${GITHUB_PROJECT}-'
+            self.dist_subdir = '${GITHUB_PROJECT}'
+        self.distfile = tag + ext
+
+    def adjust_site_GitHub_release(self):
+        m = re.search(r'^https://github\.com/(.+)/(.+)/releases/download/(.+)/(.+)(\.tar\.gz|\.zip)$', self.url)
+        if not m:
+            return
+
+        org, proj, tag, base, ext = m.groups()
+
+        self.github_project = proj
+        self.master_sites = f'${{MASTER_SITE_GITHUB:={org}/}}'
+        self.homepage = f'https://github.com/{org}/{proj}/'
+        if proj not in base:
+            self.github_project = proj
+            self.dist_subdir = '${GITHUB_PROJECT}'
+        self.github_release = '${DISTNAME}' if tag == base else tag
+        self.distfile = base + ext
+
+    def adjust_site_other(self):
+        if self.master_sites != '':
+            return
+
+        m = re.search(r'^(.*/)(.*)$', self.url)
+        if not m:
+            sys.exit(f'error: URL "{self.url}" must have at least one slash')
+
+        self.master_sites = m[1]
+        self.distfile = m[2]
+        self.homepage = self.master_sites
+
+    def determine_distname(self):
+        m = re.search(r'^(.*?)((?:\.tar)?\.\w+)$', self.distfile)
+        if m:
+            distname, extract_sufx = m.groups()
+        else:
+            distname, extract_sufx = self.distfile, '# none'
+
+        m = re.search(r'^v\d', distname)
+        if m:
+            self.pkgname_transform = ':S,^v,,'
+        elif re.search(r'-v\d', distname) and not re.search(r'-v.*-v\d', distname):
+            self.pkgname_transform = ':S,-v,-,'
+        self.distname = distname
+
+        main_category = re.search(r'.*/([^/]+)/[^/]+$', os.getcwd())[1]
+        self.categories = main_category \
+            if main_category not in ('local', 'wip') \
+            else '# TODO: add primary category'
+
+        if extract_sufx in ('.tar.gz', '.gem'):
+            extract_sufx = ''
+        self.extract_sufx = extract_sufx
+
+        self.pkgname = '' if self.pkgname_prefix == '' and self.pkgname_transform == '' \
+            else f'{self.pkgname_prefix}${{DISTNAME{self.pkgname_transform}}}'
+
+        self.maintainer = \
+            os.getenv('PKGMAINTAINER') or os.getenv('REPLYTO') \
+            or 'INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org'
+
+    def generate_lines(self) -> Lines:
+        lines = Lines()
+        lines.add('# $''NetBSD$')
+        lines.add('')
+
+        lines.add_vars(
+            Var('GITHUB_PROJECT', '=', self.github_project),
+            Var('DISTNAME', '=', self.distname),
+            Var('PKGNAME', '=', self.pkgname),
+            Var('CATEGORIES', '=', self.categories),
+            Var('MASTER_SITES', '=', self.master_sites),
+            Var('GITHUB_RELEASE', '=', self.github_release),
+            Var('EXTRACT_SUFX', '=', self.extract_sufx),
+            Var('DIST_SUBDIR', '=', self.dist_subdir),
+        )
+
+        lines.add_vars(
+            Var('MAINTAINER', '=', self.maintainer),
+            Var('HOMEPAGE', '=', self.homepage),
+            Var('COMMENT', '=', 'TODO: Short description of the package'),
+            Var('#LICENSE', '=', '# TODO: (see mk/license.mk)'),
+        )
+
+        lines.add('# url2pkg-marker (please do not remove this line.)')
+        lines.add('.include "../../mk/bsd.pkg.mk"')
+
+        return lines
+
+    def generate_Makefile(self):
+        self.foreach_site(self.adjust_site)
+        self.adjust_site_sourceforge()
+        self.adjust_site_GitHub_archive()
+        self.adjust_site_GitHub_release()
+        self.adjust_site_other()
+        self.determine_distname()
+        return self.generate_lines()
+
+    def generate_package(self, up: Url2Pkg) -> Lines:
+        pkgdir = up.pkgdir
+        makefile = f'{pkgdir}/Makefile'
+        descr = f'{pkgdir}/DESCR'
+        plist = f'{pkgdir}/PLIST'
+
+        initial_lines = self.generate_Makefile()
+
+        try:
+            os.rename(makefile, f'{makefile}.url2pkg~')
+        except OSError:
+            pass
+        initial_lines.write_to(makefile)
+        if not os.path.isfile(plist):
+            Lines('@comment $''NetBSD$').write_to(plist)
+        if not os.path.isfile(descr):
+            Lines().write_to(descr)
+
+        editor = os.getenv('PKGEDITOR') or os.getenv('EDITOR') or 'vi'
+        subprocess.check_call([editor, makefile])
+
+        up.bmake('distinfo')
+        up.bmake('extract')
+
+        return initial_lines
+
+
 class Adjuster:
     """
     The following adjust_* functions are called after the distfiles have
@@ -418,9 +436,11 @@ class Adjuster:
     and adjust the variable definitions in the package Makefile.
     """
 
-    def __init__(self):
-        # the package name, including the version number.
-        self.distname = distname
+    def __init__(self, up: Url2Pkg, url: str, initial_lines: Lines):
+
+        self.up = up
+        self.url = url
+        self.initial_lines = initial_lines
 
         # the absolute pathname to the working directory, containing
         # the extracted distfiles.
@@ -431,8 +451,8 @@ class Adjuster:
         self.abs_wrksrc = ''
 
         # the regular files and directories relative to abs_wrksrc.
-        self.wrksrc_files = []
-        self.wrksrc_dirs = []
+        self.wrksrc_files: List[str] = []
+        self.wrksrc_dirs: List[str] = []
 
         """
         The following variables may be set by the adjust_* subroutines and
@@ -445,32 +465,32 @@ class Adjuster:
 
         # the dependencies of the package, in the form
         # "package>=version:../../category/package".
-        self.depends = []
-        self.build_depends = []
-        self.test_depends = []
+        self.depends: List[str] = []
+        self.build_depends: List[str] = []
+        self.test_depends: List[str] = []
 
         # .include, interleaved with BUILDLINK3_API_DEPENDS.
         # These lines are added at the bottom of the Makefile.
-        self.bl3_lines = []
+        self.bl3_lines: List[str] = []
 
-        # a list of pathnames relative to the package path.
+        # a list of pathnames relative to the package directory.
         # All these files will be included at the bottom of the Makefile.
-        self.includes = []
+        self.includes: List[str] = []
 
         # a list of variable assignments that will make up the fourth
         # paragraph of the package Makefile, where the build configuration
         # takes place.
-        self.build_vars = []
+        self.build_vars: List[Var] = []
 
         # similar to the @build_vars, but separated by an empty line in
         # the Makefile, thereby forming the fifth paragraph.
-        self.extra_vars = []
+        self.extra_vars: List[Var] = []
 
         # variables from the initial Makefile whose values are replaced
         self.update_vars: Dict[str, str] = {}
 
         # these are inserted below the second paragraph in the Makefile.
-        self.todos = []
+        self.todos: List[str] = []
 
         # the package name is based on DISTNAME and modified by
         # pkgname_prefix and pkgname_transform.
@@ -485,7 +505,7 @@ class Adjuster:
     def add_dependency(self, kind: str, pkgbase: str, constraint: str, dep_dir: str) -> None:
         """ add_dependency('DEPENDS', 'package', '>=1', '../../category/package') """
 
-        debug('add_dependency: {0} {1} {2} {3}', kind, pkgbase, constraint, dep_dir)
+        self.up.debug('add_dependency: {0} {1} {2} {3}', kind, pkgbase, constraint, dep_dir)
 
         def bl3_identifier():
             try:
@@ -508,7 +528,7 @@ class Adjuster:
                 return
 
         value = f'{pkgbase}{constraint}:{dep_dir}' \
-            if dep_dir != '' and isfile(f'{dep_dir}/Makefile') \
+            if dep_dir != '' and os.path.isfile(f'{dep_dir}/Makefile') \
             else f'# TODO: {pkgbase}{constraint}'
 
         if kind == 'DEPENDS':
@@ -524,66 +544,71 @@ class Adjuster:
         effective_env = dict(os.environ)
         effective_env.update(env)
 
-        debug('reading dependencies: cd {0} && env {1} {2}', cwd, env, cmd)
+        self.up.debug('reading dependencies: cd {0} && env {1} {2}', cwd, env, cmd)
         output = subprocess.check_output(args=cmd, shell=True, env=effective_env, cwd=cwd)
 
-        dep_lines = []
+        dep_lines: List[Tuple[str, str, str, str]] = []
         for line in output.decode('utf-8').split('\n'):
-            # DEPENDS   pkgbase>=1.2.3:../../category/pkgbase
+            # example: DEPENDS   pkgbase>=1.2.3:../../category/pkgbase
             m = re.search(r'^(\w+)\t([^\s:>]+)(>[^\s:]+|)(?::(\.\./\.\./\S+))?$', line)
             if m:
-                dep_lines.append([m[1], m[2], m[3] or '>=0', m[4] or ''])
+                dep_lines.append((m[1], m[2], m[3] or '>=0', m[4] or ''))
                 continue
 
-            # var   VARNAME   value # possibly with comment
+            # example: var   VARNAME   value # possibly with comment
             m = re.search(r'^var\t(\S+)\t(.+)$', line)
             if m:
                 self.update_vars[m[1]] = m[2]
                 continue
 
             if line != '':
-                debug('unknown dependency line: {0}', line)
+                self.up.debug('unknown dependency line: {0}', line)
 
         for dep_line in dep_lines:
-            type, pkgbase, constraint, dir = dep_line
+            kind, pkgbase, constraint, dep_dir = dep_line
 
-            if dir == '' and pkgname_prefix != '':
-                dir = find_package(pkgname_prefix + pkgbase)
-                if dir != '':
+            if dep_dir == '' and pkgname_prefix != '':
+                dep_dir = self.up.find_package(pkgname_prefix + pkgbase)
+                if dep_dir != '':
                     pkgbase = pkgname_prefix + pkgbase
-            if dir == '':
-                dir = find_package(pkgbase)
+            if dep_dir == '':
+                dep_dir = self.up.find_package(pkgbase)
 
-            self.add_dependency(type, pkgbase, constraint, dir)
-
-    def wrksrc_find(self, what: Union[str, Callable]) -> Iterator[str]:
-        def search(f):
-            if type(what) == str:
-                return re.search(what, f)
-            return what(f)
-
-        return list(sorted(filter(search, self.wrksrc_files)))
-
-    def wrksrc_isdir(self, relative_pathname: str) -> bool:
-        return isfile(self.abs_wrksrc + '/' + relative_pathname)
-
-    def wrksrc_isfile(self, relative_pathname: str) -> bool:
-        return isfile(self.abs_wrksrc + '/' + relative_pathname)
+            self.add_dependency(kind, pkgbase, constraint, dep_dir)
 
     def wrksrc_open(self, relative_pathname: str):
         return open(self.abs_wrksrc + '/' + relative_pathname)
+
+    def wrksrc_find(self, what: Union[str, Callable[[str], bool]]) -> Iterator[str]:
+        def search(f):
+            print('search', f)
+            return re.search(what, f) if type(what) == str else what(f)
+
+        return list(sorted(filter(search, self.wrksrc_files)))
+
+    def wrksrc_grep(self, filename: str, pattern: str) -> List[str]:
+        with self.wrksrc_open(filename) as f:
+            return [line for line in f if re.search(pattern, line)]
+
+    def wrksrc_isdir(self, relative_pathname: str) -> bool:
+        return os.path.isdir(self.abs_wrksrc + '/' + relative_pathname)
+
+    def wrksrc_isfile(self, relative_pathname: str) -> bool:
+        return os.path.isfile(self.abs_wrksrc + '/' + relative_pathname)
 
     def adjust_configure(self):
         if not self.wrksrc_isfile('configure'):
             return
 
-        with self.wrksrc_open('configure') as f:
-            for line in f:
-                if 'autoconf' in line or 'Free Software Foundation' in line:
-                    self.build_vars.append(Var('GNU_CONFIGURE', '=', 'yes'))
-                    return
-
-        self.build_vars.append(Var('HAS_CONFIGURE', '=', 'yes'))
+        gnu = False
+        some = False
+        for configure in self.wrksrc_find(r'(^|/)configure$'):
+            some = True
+            if self.wrksrc_grep(configure, r'\b(Free Software Foundation|autoconf)\b'):
+                gnu = True
+        if some:
+            varname = 'GNU_CONFIGURE' if gnu else 'HAS_CONFIGURE'
+            self.build_vars.append(Var(varname, '=', 'yes'))
 
     def adjust_cmake(self):
         if self.wrksrc_isfile('CMakeLists.txt'):
@@ -612,7 +637,7 @@ class Adjuster:
         # Example packages:
         # devel/p5-Algorithm-CheckDigits
 
-        cmd = f'{config.perl5} -I{config.libdir} -I. Build.PL'
+        cmd = f'{self.up.perl5} -I{self.up.libdir} -I. Build.PL'
         self.read_dependencies(cmd, {}, self.abs_wrksrc, '')
         self.build_vars.append(Var('PERL5_MODULE_TYPE', '=', 'Module::Build'))
 
@@ -623,24 +648,25 @@ class Adjuster:
         # www/p5-HTML-Quoted (dependency with version number)
 
         # To avoid fix_up_makefile error for p5-HTML-Quoted, generate Makefile first.
-        cmd1 = f'{config.perl5} -I. Makefile.PL </dev/null 1>&0 2>&0'
+        cmd1 = f'{self.up.perl5} -I. Makefile.PL </dev/null 1>&0 2>&0'
         subprocess.call(cmd1, shell=True, cwd=self.abs_wrksrc)
 
-        cmd2 = f'{config.perl5} -I{config.libdir} -I. Makefile.PL'
+        cmd2 = f'{self.up.perl5} -I{self.up.libdir} -I. Makefile.PL'
         self.read_dependencies(cmd2, {}, self.abs_wrksrc, '')
 
-    def adjust_perl_module_homepage(self, url: str):
+    def adjust_perl_module_homepage(self):
         if '${MASTER_SITE_PERL_CPAN:' not in self.makefile_lines.get('MASTER_SITES'):
             return
 
         homepage = self.makefile_lines.get('HOMEPAGE')
-        if homepage == '' or not url.startswith(homepage):
+        if homepage == '' or not self.url.startswith(homepage):
             return
 
-        module_name = re.sub(r'-v?[0-9].*', '', self.distname).replace('-', '::')
+        distname = self.makefile_lines.get('DISTNAME')
+        module_name = re.sub(r'-v?[0-9].*', '', distname).replace('-', '::')
         self.makefile_lines.set('HOMEPAGE', f'https://metacpan.org/pod/{module_name}')
 
-    def adjust_perl_module(self, url: str):
+    def adjust_perl_module(self):
         if self.wrksrc_isfile('Build.PL'):
             self.adjust_perl_module_Build_PL()
         elif self.wrksrc_isfile('Makefile.PL'):
@@ -648,12 +674,13 @@ class Adjuster:
         else:
             return
 
-        packlist = re.sub(r'-v?[0-9].*', '', self.distname).replace('-', '/')
+        distname = self.makefile_lines.get('DISTNAME')
+        packlist = re.sub(r'-v?[0-9].*', '', distname).replace('-', '/')
         self.build_vars.append(Var('PERL5_PACKLIST', '=', f'auto/{packlist}/.packlist'))
         self.includes.append('../../lang/perl5/module.mk')
         self.pkgname_prefix = 'p5-'
         self.categories.append('perl5')
-        self.adjust_perl_module_homepage(url)
+        self.adjust_perl_module_homepage()
 
         try:
             os.unlink('PLIST')
@@ -669,10 +696,10 @@ class Adjuster:
         if not self.wrksrc_isfile('setup.py'):
             return
 
-        cmd = f'{config.pythonbin} setup.py build'
+        cmd = f'{self.up.pythonbin} setup.py build'
         env = {
             'PYTHONDONTWRITEBYTECODE': 'x',
-            'PYTHONPATH': config.libdir
+            'PYTHONPATH': self.up.libdir
         }
         self.read_dependencies(cmd, env, self.abs_wrksrc, 'py-')
 
@@ -694,8 +721,8 @@ class Adjuster:
         self.includes.append('../../lang/rust/cargo.mk')
 
     def adjust_pkg_config(self):
-        def relevant(f: str) -> bool:
-            return f.endswith('.pc.in') and not f.endswith('-uninstalled.pc.in')
+        def relevant(filename: str) -> bool:
+            return filename.endswith('.pc.in') and not filename.endswith('-uninstalled.pc.in')
 
         pkg_config_files = self.wrksrc_find(relevant)
 
@@ -705,7 +732,7 @@ class Adjuster:
             self.extra_vars.append(Var('PKGCONFIG_OVERRIDE', '+=', f))
 
     def adjust_po(self):
-        if self.wrksrc_find(r'\.g?mo$'):
+        if self.wrksrc_find(r'\.(g?mo|po)$'):
             self.build_vars.append(Var('USE_PKGLOCALEDIR', '=', 'yes'))
 
     def adjust_use_languages(self):
@@ -738,7 +765,7 @@ class Adjuster:
         files = list(filter(lambda x: not ignore(x), os.listdir(self.abs_wrkdir)))
 
         if len(files) == 1:
-            if files[0] != self.distname:
+            if files[0] != self.makefile_lines.get('DISTNAME'):
                 self.build_vars.append(Var('WRKSRC', '=', '${WRKDIR}/' + files[0]))
             self.abs_wrksrc = self.abs_wrkdir + '/' + files[0]
         elif len(files) == 0:
@@ -749,9 +776,9 @@ class Adjuster:
             self.build_vars.append(Var('WRKSRC', '=', wrksrc))
             self.abs_wrksrc = self.abs_wrkdir
 
-    def adjust_lines_python_module(self, lines: Lines, url: str):
+    def adjust_lines_python_module(self, lines: Lines):
 
-        initial_lines = generate_initial_package_Makefile_lines(url)
+        initial_lines = self.initial_lines
         current_lines = self.makefile_lines
 
         if 'python' not in initial_lines.get('CATEGORIES'):
@@ -777,14 +804,15 @@ class Adjuster:
             self.makefile_lines = tx_lines
             self.regenerate_distinfo = True
 
-    def generate_adjusted_Makefile_lines(self, url) -> Lines:
+    def generate_adjusted_Makefile_lines(self) -> Lines:
         marker_index = self.makefile_lines.index(r'^# url2pkg-marker')
         if marker_index == -1:
             raise Exception('ERROR: didn\'t find the url2pkg marker in the Makefile.')
 
         lines = Lines(*self.makefile_lines.lines[: marker_index])
 
-        if lines.get('PKGNAME=') == '':
+        if lines.get('PKGNAME') == '' and \
+                (self.pkgname_prefix != '' or self.pkgname_transform != ''):
             distname_index = lines.index(r'^DISTNAME=(\t+)')
             if distname_index != -1:
                 pkgname_line = f'PKGNAME=\t{self.pkgname_prefix}${{DISTNAME{self.pkgname_transform}}}'
@@ -811,73 +839,67 @@ class Adjuster:
 
         lines.append('CATEGORIES', ' '.join(self.categories))
 
-        self.adjust_lines_python_module(lines, url)
+        self.adjust_lines_python_module(lines)
 
         for varname in self.update_vars:
-            debug('update_var {0} {1}', varname, self.update_vars[varname])
+            self.up.debug('update_var {0} {1}', varname, self.update_vars[varname])
             lines.set(varname, self.update_vars[varname])
 
         return lines
 
-    def adjust_package_from_extracted_distfiles(self, url: str):
+    def adjust_package_from_extracted_distfiles(self):
 
         def scan(basedir: str, pattern: str) -> List[str]:
             full_paths = glob.glob(f'{basedir}/{pattern}', recursive=True)
             return list(f[len(basedir) + 1:] for f in full_paths)
 
-        debug('Adjusting the Makefile')
+        self.up.debug('Adjusting the Makefile')
+        self.makefile_lines = Lines.read_from(self.up.pkgdir + '/Makefile')
 
-        self.abs_wrkdir = show_var('WRKDIR')
+        self.abs_wrkdir = self.up.show_var('WRKDIR')
         self.determine_wrksrc()
         self.wrksrc_files = scan(self.abs_wrksrc, '**')
         self.wrksrc_dirs = scan(self.abs_wrksrc, '**/')
-
-        self.makefile_lines = Lines.read_from(config.pkgdir + '/Makefile')
 
         self.adjust_configure()
         self.adjust_cmake()
         self.adjust_meson()
         self.adjust_gconf2_schemas()
         self.adjust_libtool()
-        self.adjust_perl_module(url)
+        self.adjust_perl_module()
         self.adjust_python_module()
         self.adjust_cargo()
         self.adjust_pkg_config()
         self.adjust_po()
         self.adjust_use_languages()
 
-        self.generate_adjusted_Makefile_lines(url).write_to(config.pkgdir + '/Makefile')
+        self.generate_adjusted_Makefile_lines().write_to(self.up.pkgdir + '/Makefile')
 
         if self.regenerate_distinfo:
-            bmake('distinfo')
+            self.up.bmake('distinfo')
 
 
 def main():
-    global distname
-
-    if not isfile('../../mk/bsd.pkg.mk'):
+    if not os.path.isfile('../../mk/bsd.pkg.mk'):
         sys.exit(f'ERROR: {sys.argv[0]} must be run from a package directory (.../pkgsrc/category/package).')
 
+    up = Url2Pkg()
     try:
         opts, args = getopt.getopt(sys.argv[1:], 'v', ['verbose'])
         for (opt, _) in opts:
             if opt in ('-v', '--verbose'):
-                config.verbose = True
+                up.verbose = True
     except getopt.GetoptError:
         sys.exit(f'usage: {sys.argv[0]} [-v|--verbose] [URL]')
 
-    if len(args) == 0:
-        url = input('URL: ')
-    else:
-        url = args[0]
+    url = args[0] if args else input('URL: ')
 
-    extract_cookie = glob.glob('w*/.extract_done')
-    if not extract_cookie or not isfile('Makefile'):
-        generate_initial_package(url)
+    if not glob.glob('w*/.extract_done') or not os.path.isfile('Makefile'):
+        initial_lines = Generator(url).generate_package(up)
     else:
-        distname = show_var('DISTNAME')
+        initial_lines = Generator(url).generate_lines()
 
-    Adjuster().adjust_package_from_extracted_distfiles(url)
+    Adjuster(up, url, initial_lines).adjust_package_from_extracted_distfiles()
 
     print('')
     print('Remember to run pkglint when you\'re done.')
