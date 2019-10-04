@@ -1,0 +1,5 @@
+Determines the monospace display width of a string in Ruby.
+Implementation based on EastAsianWidth.txt and other data, 100% in
+Ruby. Other than wcwidth(), which fulfills a similar purpose, it
+does not rely on the OS vendor to provide an up-to-date method for
+measuring string width.
