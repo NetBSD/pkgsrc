@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.17 2017/04/11 13:47:08 mef Exp $
+# $NetBSD: Makefile,v 1.18 2019/10/04 18:02:48 nia Exp $
 
-DISTNAME=	advancecomp-1.23
+DISTNAME=	advancecomp-2.1
 CATEGORIES=	archivers
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=advancemame/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=amadvance/}
+GITHUB_PROJECT=	advancecomp
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://advancemame.sourceforge.net/
+HOMEPAGE=	https://www.advancemame.it/comp-readme
 COMMENT=	Recompression utilities for .zip, .png, .mng and .gz files
 LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=		yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 
 .include "../../mk/compiler.mk"
 
