@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.38 2019/10/01 09:07:33 maya Exp $
+$NetBSD: patch-configure,v 1.39 2019/10/04 10:33:21 maya Exp $
 
 All kinds of OS-specific changes to configure
 Honor LDFLAGS.
@@ -7,7 +7,7 @@ Add SunOS -lnsl -lsocket
 Recognise SunOS/amd64 as amd64
 Recognise SunOS as having shared libraries
 
---- configure.orig	2019-03-01 15:13:45.000000000 +0000
+--- configure.orig	2019-08-05 17:32:44.000000000 +0000
 +++ configure
 @@ -13311,7 +13311,7 @@ sharedlib_cflags=''
  mksharedlib='shared-libs-not-available'
@@ -18,7 +18,7 @@ Recognise SunOS as having shared libraries
  
  if test x"$enable_shared" != "xno"; then :
    case $host in #(
-@@ -13347,9 +13335,14 @@ esac ;; #(
+@@ -13347,9 +13347,14 @@ esac ;; #(
        rpath="-Wl,-rpath,"
        mksharedlibrpath="-Wl,-rpath,"
        natdynlinkopts="-Wl,-E"
@@ -35,7 +35,16 @@ Recognise SunOS as having shared libraries
  esac
  fi
  
-@@ -13415,6 +13415,8 @@ fi ;; #(
+@@ -13403,6 +13408,8 @@ fi ;; #(
+     natdynlink=true ;; #(
+   x86_64-*-netbsd*) :
+     natdynlink=true ;; #(
++  x86_64-*-solaris*) :
++    natdynlink=true ;; #(
+   i386-*-gnu0.3) :
+     natdynlink=true ;; #(
+   i[3456]86-*-haiku*) :
+@@ -13415,6 +13422,8 @@ fi ;; #(
      natdynlink=true ;; #(
    aarch64-*-linux*) :
      natdynlink=true ;; #(
@@ -44,7 +53,7 @@ Recognise SunOS as having shared libraries
    *) :
       ;;
  esac
-@@ -13466,6 +13468,8 @@ case $host in #(
+@@ -13466,6 +13475,8 @@ case $host in #(
      arch=i386; system=beos ;; #(
    i[3456]86-*-cygwin) :
      arch=i386; system=cygwin ;; #(
@@ -53,7 +62,7 @@ Recognise SunOS as having shared libraries
    i[3456]86-*-darwin*) :
      if $arch64; then :
    arch=amd64
-@@ -13510,6 +13514,10 @@ fi; system=elf ;; #(
+@@ -13510,6 +13521,10 @@ fi; system=elf ;; #(
      arch=arm; model=armv6; system=linux_eabi ;; #(
    armv6*-*-freebsd*) :
      arch=arm; model=armv6; system=freebsd ;; #(
@@ -64,7 +73,7 @@ Recognise SunOS as having shared libraries
    earmv6*-*-netbsd*) :
      arch=arm; model=armv6; system=netbsd ;; #(
    earmv7*-*-netbsd*) :
-@@ -13544,8 +13552,12 @@ fi; system=elf ;; #(
+@@ -13544,8 +13559,12 @@ fi; system=elf ;; #(
      arch=amd64; system=mingw64 ;; #(
    aarch64-*-linux*) :
      arch=arm64; system=linux ;; #(
@@ -78,7 +87,7 @@ Recognise SunOS as having shared libraries
   ;; #(
    *) :
       ;;
-@@ -13884,7 +13896,7 @@ fi
+@@ -13884,7 +13903,7 @@ fi
  # for the moment, to be backward-compatible
  
  case $host in #(
@@ -87,7 +96,7 @@ Recognise SunOS as having shared libraries
       ;; #(
    *) :
      has_c99_float_ops=true
-@@ -14085,6 +14097,9 @@ case $host in #(
+@@ -14085,6 +14104,9 @@ case $host in #(
    *-*-mingw32|*-pc-windows) :
      cclibs="$cclibs -lws2_32"
      sockets=true ;; #(
