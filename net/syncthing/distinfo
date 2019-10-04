@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.70 2019/07/14 20:48:39 triaxx Exp $
+$NetBSD: distinfo,v 1.71 2019/10/04 17:01:56 nia Exp $
 
-SHA1 (syncthing-source-v1.2.0.tar.gz) = dc26b834c4ca1d6176ec98964ac7a8411d522f3f
-RMD160 (syncthing-source-v1.2.0.tar.gz) = ba62576bb14556ef892c5355da59d24a1b80d19b
-SHA512 (syncthing-source-v1.2.0.tar.gz) = bbaaf99f6295686a36b11cf35f36bb0d08b10d4ecdc0282274cd0a16715d1acd2cd3f90b79d17d932b779d7a8aac7d562385497f4ed7cadad90d31dad3ccb2e0
-Size (syncthing-source-v1.2.0.tar.gz) = 10167610 bytes
+SHA1 (syncthing-source-v1.3.0.tar.gz) = 3034b64191fc6fca6ad407551ca5ce6c1a50d579
+RMD160 (syncthing-source-v1.3.0.tar.gz) = c0499c47c97f3f8986a3a035d963285b4b0c4889
+SHA512 (syncthing-source-v1.3.0.tar.gz) = 34723b744918c896440b38f7b8ea4d32a5c418a5a967f3c2ada5ea7ad58e3fcd4143f2b38d340fdd22fd2d1f2c7dca6c8cc87c99ad673ec0ac706bba443202a4
+Size (syncthing-source-v1.3.0.tar.gz) = 10250741 bytes
