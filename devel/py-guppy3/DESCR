@@ -1,0 +1,14 @@
+Guppy3 is a programming environment providing object and heap memory sizing,
+profiling and analysis. It includes a prototypical specification language that
+can be used to formally specify aspects of Python programs and generate tests
+and documentation from a common source.
+
+Modules which constitute the environment:
+
+- Heapy: debugging and optimization regarding memory related issues in Python
+  programs
+- GSL (Guppy Specification Language): describes aspects of a system, especially
+  its API, in a way that can be automatically converted to tests as well as to
+  documents
+- Guppy: umbrella package combining Heapy and GSL with support utilities such as
+  the Glue module that keeps things together
