@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4174 2019/10/04 18:03:06 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4175 2019/10/04 22:19:17 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6750,3 +6750,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/gnutls to 3.6.10 [nia 2019-10-04]
 	Updated graphics/gdk-pixbuf2 to 2.38.2 [nia 2019-10-04]
 	Updated archivers/advancecomp to 2.1 [nia 2019-10-04]
+	Added devel/py-guppy3 version 3.0.6 [gutteridge 2019-10-04]
