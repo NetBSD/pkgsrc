@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.23 2015/08/18 07:31:15 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2019/10/04 09:34:41 leot Exp $
 #
 
-DISTNAME=		gopher_3.0.11
+DISTNAME=		gopher_3.0.17
 PKGNAME=		${DISTNAME:S/_/-/}
-PKGREVISION=		3
 CATEGORIES=		net
 MASTER_SITES=		http://gopher.quux.org:70/devel/gopher/Downloads/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		gopher://quux.org/1/devel/gopher/
 COMMENT=		Distributed document delivery client
+LICENSE=		gnu-gpl-v2
 
-WRKSRC=			${WRKDIR}/gopher
+WRKSRC=			${WRKDIR}/gopher-release-${PKGVERSION_NOREV}
 PKG_SYSCONFSUBDIR?=	${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/gopher
 MAKE_ENV+=		EGDIR=${EGDIR:Q}
