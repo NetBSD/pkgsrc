@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.131 2019/10/01 09:52:51 maya Exp $
+$NetBSD: distinfo,v 1.132 2019/10/04 10:33:21 maya Exp $
 
 SHA1 (ocaml-4.08.1.tar.gz) = f89ae7513ee4f064c7db92066f9dd4ac085634e2
 RMD160 (ocaml-4.08.1.tar.gz) = a8c0b80d9b6ff52c9a5725eec3ce64adffd81ca6
@@ -9,7 +9,7 @@ SHA1 (patch-Makefile.common.in) = bc44846bfa941520b43538189dbc5637c342ef0a
 SHA1 (patch-asmcomp_amd64_emit.mlp) = 1bc44434fbe1821d3aa2eed1a6b0938258586851
 SHA1 (patch-asmcomp_asmlink.ml) = db2b387ea17f41a62c2bce53b91f945d5e29a82f
 SHA1 (patch-asmrun_amd64.S) = 68d8f3ba1c1ad951e688539b4659aee71a527222
-SHA1 (patch-configure) = 3b43429065b093174bb89329a8f5ed16ac46fc6d
+SHA1 (patch-configure) = 28243f1cf36cd26281e620617d2fe1937fd59372
 SHA1 (patch-driver_compenv.ml) = 27c68072bd73c9c00d2b3093d8c6498f192ca3d3
 SHA1 (patch-driver_main.ml) = 69a6f761ded38e0721a7aed1416a9f19a288d991
 SHA1 (patch-driver_main_args.ml) = 4c6a6ec25f433974f9aab99b4f2ac9c884bb3b04

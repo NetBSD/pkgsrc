@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.129 2019/10/01 09:07:33 maya Exp $
+# $NetBSD: Makefile,v 1.130 2019/10/04 10:33:21 maya Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=		1
+PKGREVISION=		2
 
 BUILD_TARGET=		world
 MAKE_JOBS_SAFE=		no
@@ -52,7 +52,8 @@ PLIST.ocaml-prof=	yes
       !empty(MACHINE_PLATFORM:MFreeBSD-*-*) || \
       !empty(MACHINE_PLATFORM:MDragonFly-*-*) || \
       (!empty(MACHINE_PLATFORM:MNetBSD-*-*) && empty(MACHINE_PLATFORM:MNetBSD-*-powerpc)) || \
-      !empty(MACHINE_PLATFORM:MDarwin-*-*)
+      !empty(MACHINE_PLATFORM:MDarwin-*-*) || \
+      !empty(MACHINE_PLATFORM:MSunOS-*-*)
 PLIST.ocaml-nat=	yes
 .  endif
 .endif
