@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2019/05/29 12:38:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2019/10/04 13:40:08 ryoon Exp $
 bin/rsvg-convert
 include/librsvg-2.0/librsvg/librsvg-features.h
 include/librsvg-2.0/librsvg/rsvg-cairo.h
@@ -13,19 +13,21 @@ share/doc/librsvg/CONTRIBUTING.md
 share/doc/librsvg/README.md
 share/doc/librsvg/code-of-conduct.md
 share/gir-1.0/Rsvg-2.0.gir
+share/gtk-doc/html/rsvg-2.0/RsvgHandle.html
 share/gtk-doc/html/rsvg-2.0/annotation-glossary.html
 share/gtk-doc/html/rsvg-2.0/api-index-full.html
 share/gtk-doc/html/rsvg-2.0/ch01.html
+share/gtk-doc/html/rsvg-2.0/ch02.html
 share/gtk-doc/html/rsvg-2.0/home.png
 share/gtk-doc/html/rsvg-2.0/index.html
 share/gtk-doc/html/rsvg-2.0/left-insensitive.png
 share/gtk-doc/html/rsvg-2.0/left.png
 share/gtk-doc/html/rsvg-2.0/licence.html
 share/gtk-doc/html/rsvg-2.0/object-tree.html
+share/gtk-doc/html/rsvg-2.0/recommendations-assets.html
 share/gtk-doc/html/rsvg-2.0/right-insensitive.png
 share/gtk-doc/html/rsvg-2.0/right.png
 share/gtk-doc/html/rsvg-2.0/rsvg-2.0.devhelp2
-share/gtk-doc/html/rsvg-2.0/rsvg-RsvgHandle.html
 share/gtk-doc/html/rsvg-2.0/rsvg-Using-RSVG-with-GIO.html
 share/gtk-doc/html/rsvg-2.0/rsvg-Using-RSVG-with-GdkPixbuf.html
 share/gtk-doc/html/rsvg-2.0/rsvg-Using-RSVG-with-cairo.html
@@ -34,4 +36,5 @@ share/gtk-doc/html/rsvg-2.0/rsvg.html
 share/gtk-doc/html/rsvg-2.0/style.css
 share/gtk-doc/html/rsvg-2.0/up-insensitive.png
 share/gtk-doc/html/rsvg-2.0/up.png
+share/locale/es/LC_MESSAGES/librsvg.mo
 share/thumbnailers/librsvg.thumbnailer
