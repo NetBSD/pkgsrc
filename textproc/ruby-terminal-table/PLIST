@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2019/10/05 04:11:43 ryoon Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/History.rdoc
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/Manifest
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/Todo.rdoc
+${GEM_LIBDIR}/examples/examples.rb
+${GEM_LIBDIR}/lib/terminal-table.rb
+${GEM_LIBDIR}/lib/terminal-table/cell.rb
+${GEM_LIBDIR}/lib/terminal-table/import.rb
+${GEM_LIBDIR}/lib/terminal-table/row.rb
+${GEM_LIBDIR}/lib/terminal-table/separator.rb
+${GEM_LIBDIR}/lib/terminal-table/style.rb
+${GEM_LIBDIR}/lib/terminal-table/table.rb
+${GEM_LIBDIR}/lib/terminal-table/table_helper.rb
+${GEM_LIBDIR}/lib/terminal-table/version.rb
+${GEM_LIBDIR}/terminal-table.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
