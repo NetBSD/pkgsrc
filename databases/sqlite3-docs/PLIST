@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.86 2019/07/12 10:04:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.87 2019/10/05 08:03:55 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -101,6 +101,7 @@ share/doc/sqlite3/c3ref/db_release_memory.html
 share/doc/sqlite3/c3ref/db_status.html
 share/doc/sqlite3/c3ref/declare_vtab.html
 share/doc/sqlite3/c3ref/deserialize.html
+share/doc/sqlite3/c3ref/drop_modules.html
 share/doc/sqlite3/c3ref/enable_load_extension.html
 share/doc/sqlite3/c3ref/enable_shared_cache.html
 share/doc/sqlite3/c3ref/errcode.html
@@ -454,6 +455,7 @@ share/doc/sqlite3/images/sqlitepie.jpg
 share/doc/sqlite3/images/src_logo.gif
 share/doc/sqlite3/images/sw.gif
 share/doc/sqlite3/images/sw.png
+share/doc/sqlite3/images/syntax/aggregate-function-invocation.gif
 share/doc/sqlite3/images/syntax/alter-table-stmt.gif
 share/doc/sqlite3/images/syntax/analyze-stmt.gif
 share/doc/sqlite3/images/syntax/attach-stmt.gif
@@ -482,6 +484,7 @@ share/doc/sqlite3/images/syntax/drop-trigger-stmt.gif
 share/doc/sqlite3/images/syntax/drop-view-stmt.gif
 share/doc/sqlite3/images/syntax/expr.gif
 share/doc/sqlite3/images/syntax/factored-select-stmt.gif
+share/doc/sqlite3/images/syntax/filter-clause.gif
 share/doc/sqlite3/images/syntax/filter.gif
 share/doc/sqlite3/images/syntax/foreign-key-clause.gif
 share/doc/sqlite3/images/syntax/frame-spec.gif
@@ -494,6 +497,7 @@ share/doc/sqlite3/images/syntax/join-operator.gif
 share/doc/sqlite3/images/syntax/literal-value.gif
 share/doc/sqlite3/images/syntax/numeric-literal.gif
 share/doc/sqlite3/images/syntax/ordering-term.gif
+share/doc/sqlite3/images/syntax/over-clause.gif
 share/doc/sqlite3/images/syntax/pragma-stmt.gif
 share/doc/sqlite3/images/syntax/pragma-value.gif
 share/doc/sqlite3/images/syntax/qualified-table-name.gif
@@ -507,6 +511,7 @@ share/doc/sqlite3/images/syntax/savepoint-stmt.gif
 share/doc/sqlite3/images/syntax/select-core.gif
 share/doc/sqlite3/images/syntax/select-stmt.gif
 share/doc/sqlite3/images/syntax/signed-number.gif
+share/doc/sqlite3/images/syntax/simple-function-invocation.gif
 share/doc/sqlite3/images/syntax/simple-select-stmt.gif
 share/doc/sqlite3/images/syntax/sql-stmt-list.gif
 share/doc/sqlite3/images/syntax/sql-stmt.gif
@@ -666,6 +671,7 @@ share/doc/sqlite3/releaselog/3_2_5.html
 share/doc/sqlite3/releaselog/3_2_6.html
 share/doc/sqlite3/releaselog/3_2_7.html
 share/doc/sqlite3/releaselog/3_2_8.html
+share/doc/sqlite3/releaselog/3_30_0.html
 share/doc/sqlite3/releaselog/3_3_0.html
 share/doc/sqlite3/releaselog/3_3_1.html
 share/doc/sqlite3/releaselog/3_3_10.html
@@ -864,6 +870,7 @@ share/doc/sqlite3/stmt.html
 share/doc/sqlite3/support.html
 share/doc/sqlite3/swarmvtab.html
 share/doc/sqlite3/syntax.html
+share/doc/sqlite3/syntax/aggregate-function-invocation.html
 share/doc/sqlite3/syntax/alter-table-stmt.html
 share/doc/sqlite3/syntax/analyze-stmt.html
 share/doc/sqlite3/syntax/attach-stmt.html
@@ -892,10 +899,9 @@ share/doc/sqlite3/syntax/drop-trigger-stmt.html
 share/doc/sqlite3/syntax/drop-view-stmt.html
 share/doc/sqlite3/syntax/expr.html
 share/doc/sqlite3/syntax/factored-select-stmt.html
-share/doc/sqlite3/syntax/filter.html
+share/doc/sqlite3/syntax/filter-clause.html
 share/doc/sqlite3/syntax/foreign-key-clause.html
 share/doc/sqlite3/syntax/frame-spec.html
-share/doc/sqlite3/syntax/function-invocation.html
 share/doc/sqlite3/syntax/indexed-column.html
 share/doc/sqlite3/syntax/insert-stmt.html
 share/doc/sqlite3/syntax/join-clause.html
@@ -904,6 +910,7 @@ share/doc/sqlite3/syntax/join-operator.html
 share/doc/sqlite3/syntax/literal-value.html
 share/doc/sqlite3/syntax/numeric-literal.html
 share/doc/sqlite3/syntax/ordering-term.html
+share/doc/sqlite3/syntax/over-clause.html
 share/doc/sqlite3/syntax/pragma-stmt.html
 share/doc/sqlite3/syntax/pragma-value.html
 share/doc/sqlite3/syntax/qualified-table-name.html
@@ -917,6 +924,7 @@ share/doc/sqlite3/syntax/savepoint-stmt.html
 share/doc/sqlite3/syntax/select-core.html
 share/doc/sqlite3/syntax/select-stmt.html
 share/doc/sqlite3/syntax/signed-number.html
+share/doc/sqlite3/syntax/simple-function-invocation.html
 share/doc/sqlite3/syntax/simple-select-stmt.html
 share/doc/sqlite3/syntax/sql-stmt-list.html
 share/doc/sqlite3/syntax/sql-stmt.html
