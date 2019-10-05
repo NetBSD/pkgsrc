@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2018/03/13 17:10:48 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/10/05 04:55:09 ryoon Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/.rubocop.yml
+${GEM_LIBDIR}/.rubocop_todo.yml
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/History.markdown
