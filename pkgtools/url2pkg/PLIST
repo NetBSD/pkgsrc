@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2019/10/03 09:37:40 rillig Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/10/05 22:02:32 rillig Exp $
 bin/url2pkg
 bin/url2pkg-py
 lib/url2pkg/ExtUtils/MakeMaker.pm
 lib/url2pkg/Module/Build.pm
+lib/url2pkg/distutils/__init__.py
+lib/url2pkg/distutils/core.py
 lib/url2pkg/setuptools.py
 man/man8/url2pkg.8
