@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.8 2019/10/04 22:26:34 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.9 2019/10/05 11:02:30 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -47,7 +47,7 @@ import os
 import re
 import subprocess
 import sys
-from typing import Callable, Dict, Iterator, List, Optional, Sequence, Union, Tuple
+from typing import Callable, Dict, Iterator, List, Optional, Sequence, Tuple, Union
 
 
 class Var:
@@ -81,10 +81,12 @@ class Url2Pkg:
         self.perl5 = '@PERL5@'
         self.pkgsrcdir = '@PKGSRCDIR@'
         self.pythonbin = '@PYTHONBIN@'
-        self.pkgdir = '.'  # only overridable for tests
+
         self.verbose = False
-        self.out = sys.stdout
-        self.err = sys.stderr
+
+        self.pkgdir = '.'  # only overridable for tests
+        self.out = sys.stdout  # only overridable for tests
+        self.err = sys.stderr  # only overridable for tests
 
     def debug(self, fmt: str, *args):
         if self.verbose:
@@ -137,6 +139,33 @@ class Lines:
             pass
         os.rename(f'{filename}.tmp', filename)
 
+    def all_varassigns(self, varname: str) -> Sequence[Varassign]:
+        varassigns = []
+        for (i, line) in enumerate(self.lines):
+            m = re.search(r'^(#?[\w+\-]+?)([!+:?]?=)([ \t]*)([^#\\]*?)(\s*)(#.*|)$', line)
+            if m and m[1].lstrip('#') == varname:
+                varassigns.append(Varassign(i, m[1], m[2], m[3], m[4], m[5], m[6]))
+        return varassigns
+
+    def unique_varassign(self, varname: str) -> Optional[Varassign]:
+        varassigns = self.all_varassigns(varname)
+        return varassigns[0] if len(varassigns) == 1 else None
+
+    def get(self, varname: str) -> str:
+        """
+        Returns the value from the only variable assignment, or an empty
+        string.
+        """
+        varassign = self.unique_varassign(varname)
+        return varassign.value if varassign is not None and varassign.varname == varname else ''
+
+    def index(self, pattern: str) -> int:
+        """ Returns the first index where the pattern is found, or -1. """
+        for (i, line) in enumerate(self.lines):
+            if re.search(pattern, line):
+                return i
+        return -1
+
     def add(self, *lines: Sequence[str]):
         for line in lines:
             assert type(line) == str, type(line)
@@ -161,18 +190,6 @@ class Lines:
             tabs = (width - len(var.name) - len(var.op) + 7) // 8
             self.add(var.name + var.op + '\t' * tabs + var.value)
         self.add('')
-
-    def unique_varassign(self, varname: str) -> Optional[Varassign]:
-        varassigns = self.all_varassigns(varname)
-        return varassigns[0] if len(varassigns) == 1 else None
-
-    def all_varassigns(self, varname: str) -> Sequence[Varassign]:
-        varassigns = []
-        for (i, line) in enumerate(self.lines):
-            m = re.search(r'^(#?[\w+\-]+?)([!+:?]?=)([ \t]*)([^#\\]*?)(\s*)(#.*|)$', line)
-            if m and m[1].lstrip('#') == varname:
-                varassigns.append(Varassign(i, m[1], m[2], m[3], m[4], m[5], m[6]))
-        return varassigns
 
     def set(self, varname: str, new_value: str) -> bool:
         """ Updates the value of an existing variable in the lines. """
@@ -202,14 +219,6 @@ class Lines:
             self.lines.pop(varassign.index)
         return varassign is not None
 
-    def get(self, varname: str) -> str:
-        """
-        Returns the value from the only variable assignment, or an empty
-        string.
-        """
-        varassign = self.unique_varassign(varname)
-        return varassign.value if varassign is not None and varassign.varname == varname else ''
-
     def remove_if(self, varname: str, expected_value: str) -> bool:
         """ Removes a variable assignment if its value is the expected one. """
         for varassign in self.all_varassigns(varname):
@@ -217,13 +226,6 @@ class Lines:
                 self.lines.pop(varassign.index)
                 return True
         return False
-
-    def index(self, pattern: str) -> int:
-        """ Returns the first index where the pattern is found, or -1. """
-        for (i, line) in enumerate(self.lines):
-            if re.search(pattern, line):
-                return i
-        return -1
 
 
 class Generator:
@@ -245,8 +247,10 @@ class Generator:
         self.distname = ''
         self.pkgname = ''
 
-    @staticmethod
-    def foreach_site(action: Callable[[str, str], None]):
+    def foreach_site_from_sites_mk(self, action: Callable[[str, str], None]):
+        if self.master_sites != '':
+            return
+
         varname = ''
         with open('../../mk/fetch/sites.mk') as sites_mk:
             for line in sites_mk:
@@ -262,38 +266,51 @@ class Generator:
                 site_url = m[1]
                 action(varname, site_url)
 
-    def adjust_site(self, varname: str, site_url: str):
+    def adjust_site_from_sites_mk(self, varname: str, site_url: str):
         if not self.url.startswith(site_url):
             return
 
         rest = self.url[len(site_url):]
-        m = re.search(r'^(.+)/([^/]+)$', rest)
-        if not m:
+        if '/' not in rest:
             self.master_sites = f'${{{varname}}}'
+            self.distfile = rest
+            self.homepage = '# TODO'
             return
 
-        subdir, self.distfile = m.groups()
+        subdir, self.distfile = re.search(r'^(.*/)(.*)$', rest).groups()
 
-        self.master_sites = f'${{{varname}:={subdir}/}}'
-        if varname == 'MASTER_SITE_SOURCEFORGE':
-            self.homepage = f'https://{subdir}.sourceforge.net/'
-        elif varname == 'MASTER_SITE_GNU':
-            self.homepage = f'https://www.gnu.org/software/{subdir}/'
+        self.master_sites = f'${{{varname}:={subdir}}}'
+        if varname == 'MASTER_SITE_GNU':
+            self.homepage = f'https://www.gnu.org/software/{subdir}'
         else:
-            self.homepage = site_url[:-len(self.distfile)]
+            print('site_url', site_url)
+            print('distfile', self.distfile)
+            self.homepage = self.url[:-len(self.distfile)] + ' # TODO: check'
+            print('homepage', self.homepage)
 
-    def adjust_site_sourceforge(self):
-        m = re.search(r'^https://downloads\.sourceforge\.net/project/([^/?]+)/[^?]+/([^/?]+)(?:[?].*)?$', self.url)
+    def adjust_site_SourceForge(self):
+        pattern = r'^https?://downloads\.sourceforge\.net/' \
+                  r'(?:project|sourceforge)/' \
+                  r'([^/?]+)/' \
+                  r'((?:[^/?]+/)*)' \
+                  r'([^/?]+)' \
+                  r'(?:\?.*)?$'
+        m = re.search(pattern, self.url)
         if not m:
             return
 
-        project, filename = m.groups()
-        self.master_sites = f'${{MASTER_SITE_SOURCEFORGE:={project}/}}'
+        project, subdir, filename = m.groups()
+        self.master_sites = f'${{MASTER_SITE_SOURCEFORGE:={project}/{subdir}}}'
         self.homepage = f'https://{project}.sourceforge.net/'
         self.distfile = filename
 
     def adjust_site_GitHub_archive(self):
-        m = re.search(r'^https://github\.com/(.+)/(.+)/archive/(.+)(\.tar\.gz|\.zip)$', self.url)
+        pattern = r'^https://github\.com/' \
+                  r'(.+)/' \
+                  r'(.+)/archive/' \
+                  r'(.+)' \
+                  r'(\.tar\.gz|\.zip)$'
+        m = re.search(pattern, self.url)
         if not m:
             return
 
@@ -308,7 +325,13 @@ class Generator:
         self.distfile = tag + ext
 
     def adjust_site_GitHub_release(self):
-        m = re.search(r'^https://github\.com/(.+)/(.+)/releases/download/(.+)/(.+)(\.tar\.gz|\.zip)$', self.url)
+        pattern = r'^https://github\.com/' \
+                  r'(.+)/' \
+                  r'(.+)/releases/download/' \
+                  r'(.+)/' \
+                  r'(.+)' \
+                  r'(\.tar\.gz|\.zip)$'
+        m = re.search(pattern, self.url)
         if not m:
             return
 
@@ -327,15 +350,14 @@ class Generator:
         if self.master_sites != '':
             return
 
-        m = re.search(r'^(.*/)(.*)$', self.url)
-        if not m:
+        if '/' not in self.url:
             sys.exit(f'error: URL "{self.url}" must have at least one slash')
+        base_url, self.distfile = re.search(r'^(.*/)(.*)$', self.url).groups()
 
-        self.master_sites = m[1]
-        self.distfile = m[2]
-        self.homepage = self.master_sites
+        self.master_sites = base_url
+        self.homepage = base_url
 
-    def determine_distname(self):
+    def adjust_everything_else(self):
         m = re.search(r'^(.*?)((?:\.tar)?\.\w+)$', self.distfile)
         if m:
             distname, extract_sufx = m.groups()
@@ -394,12 +416,12 @@ class Generator:
         return lines
 
     def generate_Makefile(self):
-        self.foreach_site(self.adjust_site)
-        self.adjust_site_sourceforge()
+        self.adjust_site_SourceForge()
         self.adjust_site_GitHub_archive()
         self.adjust_site_GitHub_release()
+        self.foreach_site_from_sites_mk(self.adjust_site_from_sites_mk)
         self.adjust_site_other()
-        self.determine_distname()
+        self.adjust_everything_else()
         return self.generate_lines()
 
     def generate_package(self, up: Url2Pkg) -> Lines:
@@ -804,7 +826,7 @@ class Adjuster:
             self.makefile_lines = tx_lines
             self.regenerate_distinfo = True
 
-    def generate_adjusted_Makefile_lines(self) -> Lines:
+    def generate_lines(self) -> Lines:
         marker_index = self.makefile_lines.index(r'^# url2pkg-marker')
         if marker_index == -1:
             raise Exception('ERROR: didn\'t find the url2pkg marker in the Makefile.')
@@ -847,7 +869,7 @@ class Adjuster:
 
         return lines
 
-    def adjust_package_from_extracted_distfiles(self):
+    def adjust(self):
 
         def scan(basedir: str, pattern: str) -> List[str]:
             full_paths = glob.glob(f'{basedir}/{pattern}', recursive=True)
@@ -873,7 +895,7 @@ class Adjuster:
         self.adjust_po()
         self.adjust_use_languages()
 
-        self.generate_adjusted_Makefile_lines().write_to(self.up.pkgdir + '/Makefile')
+        self.generate_lines().write_to(self.up.pkgdir + '/Makefile')
 
         if self.regenerate_distinfo:
             self.up.bmake('distinfo')
@@ -899,7 +921,7 @@ def main():
     else:
         initial_lines = Generator(url).generate_lines()
 
-    Adjuster(up, url, initial_lines).adjust_package_from_extracted_distfiles()
+    Adjuster(up, url, initial_lines).adjust()
 
     print('')
     print('Remember to run pkglint when you\'re done.')
