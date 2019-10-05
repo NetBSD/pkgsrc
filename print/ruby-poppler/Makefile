@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2019/09/14 18:11:39 tsutsui Exp $
+# $NetBSD: Makefile,v 1.2 2019/10/05 06:07:50 ryoon Exp $
 #
 
 DISTNAME=		poppler-${VERSION}
+PKGREVISION=		1
 COMMENT=		Ruby binding of poppler-glib
 CATEGORIES=		print
 
@@ -13,7 +14,7 @@ SUPERSEDES+=		ruby-gnome2-poppler-[0-9]*
 DEPENDS+=		${RUBY_PKGPREFIX}-gio2>=${VERSION}:../../devel/ruby-gio2
 DEPENDS+=		${RUBY_PKGPREFIX}-cairo-gobject>=${VERSION}:../../graphics/ruby-cairo-gobject
 
-BUILDLINK_API_DEPENDS.poppler-glib+=     poppler-glib>=0.8.0
+BUILDLINK_API_DEPENDS.poppler-glib+=     poppler-glib>=0.79.0nb1
 .include "../../print/poppler-glib/buildlink3.mk"
 .include "../../meta-pkgs/ruby-gnome/Makefile.common"
 .include "../../lang/ruby/gem.mk"
