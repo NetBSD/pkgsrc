@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4192 2019/10/05 12:09:45 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4193 2019/10/05 13:12:05 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6771,3 +6771,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/sqlite3-tcl to 3.30.0 [adam 2019-10-05]
 	Updated devel/lemon to 1.0.3.30.0 [adam 2019-10-05]
 	Updated audio/terminatorx to 4.0.1 [nia 2019-10-05]
+	Updated www/php-nextcloud to 17.0.0 [ryoon 2019-10-05]
