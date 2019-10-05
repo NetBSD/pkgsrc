@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2019/09/18 14:17:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.70 2019/10/05 20:10:19 nia Exp $
 
 PKGREVISION= 3
 .include "../../emulators/snes9x/Makefile.common"
@@ -9,14 +9,15 @@ MAINTAINER=	nia@NetBSD.org
 COMMENT=	Super Nintendo Entertainment System (SNES) emulator (GUI version)
 
 USE_TOOLS+=	pkg-config
-USE_TOOLS+=	msgfmt xgettext msgmerge
+USE_TOOLS+=	msgfmt xgettext
 USE_TOOLS+=	gawk
+
+CONFIGURE_DIRS=	gtk
 
 MESON_ARGS+=	-Dsystem-zip=false
 MESON_ARGS+=	-Dportaudio=false
 
 BUILD_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
-BUILD_DEPENDS+=	${PYPKGPREFIX}-meson-[0-9]*:../../devel/py-meson
 
 .include "../../mk/oss.buildlink3.mk"
 
@@ -30,18 +31,8 @@ SUBST_SED.oss=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
-do-configure:
-	cd ${WRKSRC}/gtk && ${SETENV} ${MAKE_ENV} meson --prefix ${PREFIX} --libdir lib --mandir ${PKGMANDIR} --buildtype=plain ${MESON_ARGS} . output
-
-do-build:
-	cd ${WRKSRC}/gtk && ${SETENV} ${MAKE_ENV} ninja -C output
-
-do-install:
-	cd ${WRKSRC}/gtk && ${SETENV} ${INSTALL_ENV} ninja -C output install
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 .include "options.mk"
+.include "../../devel/py-meson/build.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
