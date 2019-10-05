@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1055 2019/10/05 04:12:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.1056 2019/10/05 04:45:57 ryoon Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -940,6 +940,7 @@ SUBDIR+=	ruby-itex2MML
 SUBDIR+=	ruby-json
 SUBDIR+=	ruby-json-pure
 SUBDIR+=	ruby-kramdown
+SUBDIR+=	ruby-kramdown-parser-gfm
 SUBDIR+=	ruby-levenshtein
 SUBDIR+=	ruby-libxml
 SUBDIR+=	ruby-mab
