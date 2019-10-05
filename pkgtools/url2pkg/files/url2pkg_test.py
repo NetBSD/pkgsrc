@@ -1,19 +1,18 @@
-# $NetBSD: url2pkg_test.py,v 1.10 2019/10/05 18:00:09 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.11 2019/10/05 19:24:35 rillig Exp $
 
 import pytest
 from url2pkg import *
 
 mkcvsid = '# $''NetBSD$'
 up: Url2Pkg
+prev_dir = pathlib.Path.cwd()
 
 
 def setup_function(_):
     global up
 
     up = Url2Pkg()
-    up.pkgsrcdir = os.getenv('PKGSRCDIR')
-    assert up.pkgsrcdir is not None
-    os.chdir(up.pkgsrcdir + '/pkgtools/url2pkg')
+    os.chdir(up.pkgsrcdir / 'pkgtools' / 'url2pkg')
 
     class Wr:
         def __init__(self) -> None:
@@ -22,18 +21,19 @@ def setup_function(_):
         def write(self, s: str):
             self.buf += s
 
-        def output(self):
+        def written(self) -> List[str]:
             result = self.buf
             self.buf = ''
-            return result
+            return result.splitlines()
 
     up.out = Wr()
     up.err = Wr()
 
 
 def teardown_function(_):
-    assert up.out.output() == ''
-    assert up.err.output() == ''
+    os.chdir(str(prev_dir))
+    assert up.out.written() == []
+    assert up.err.written() == []
 
 
 def str_vars(vars: List[Var]) -> List[str]:
@@ -74,7 +74,7 @@ def test_Url2Pkg_debug():
     up.debug('tuple {0}', (1, 2, 3))
     up.debug('cwd {0} env {1} cmd {2}', 'directory', {'VAR': 'value'}, 'command')
 
-    assert up.err.output().splitlines() == [
+    assert up.err.written() == [
         'url2pkg: plain message',
         'url2pkg: list [1, 2, 3]',
         'url2pkg: tuple (1, 2, 3)',
@@ -88,7 +88,9 @@ def test_Url2Pkg_bmake():
 
     up.bmake('hello', 'world')
 
-    assert up.err.output() == 'url2pkg: running bmake (\'hello\', \'world\')\n'
+    assert up.err.written() == [
+        'url2pkg: running bmake (\'hello\', \'world\') in \'.\'',
+    ]
 
 
 def test_Lines__write_and_read(tmp_path: pathlib.Path):
@@ -532,8 +534,10 @@ def test_Generator_adjust_site_from_sites_mk__GNU():
 
 
 def test_Generator_adjust_site_other__malformed_URL():
-    error = 'error: URL "localhost" must have at least one slash'
-    with pytest.raises(SystemExit, match=error):
+    # This error is supposed to be handled by the URL check in main.
+
+    error = "'NoneType' object has no attribute 'groups'"
+    with pytest.raises(AttributeError, match=error):
         Generator('localhost').generate_Makefile()
 
 
@@ -939,7 +943,7 @@ def test_Adjuster_adjust_perl_module_Build_PL(tmp_path: pathlib.Path):
     adjuster.adjust_perl_module_Build_PL()
 
     assert str_vars(adjuster.build_vars) == ['PERL5_MODULE_TYPE=Module::Build']
-    assert up.err.output().splitlines() == [
+    assert up.err.written() == [
         f'url2pkg: reading dependencies: cd \'{tmp_path}\' && env {{}} \'echo perl5 -I/libdir -I. Build.PL\'',
         'url2pkg: unknown dependency line: \'perl5 -I/libdir -I. Build.PL\''
     ]
@@ -955,7 +959,7 @@ def test_Adjuster_adjust_perl_module_Makefile_PL(tmp_path: pathlib.Path):
     adjuster.adjust_perl_module_Makefile_PL()
 
     assert str_vars(adjuster.build_vars) == []
-    assert up.err.output().splitlines() == [
+    assert up.err.written() == [
         f'url2pkg: reading dependencies: cd \'{tmp_path}\' && env {{}} \'echo perl5 -I/libdir -I. Makefile.PL\'',
         'url2pkg: unknown dependency line: \'perl5 -I/libdir -I. Makefile.PL\''
     ]
@@ -1315,9 +1319,11 @@ def test_Adjuster_adjust_lines_python_module(tmp_path: pathlib.Path):
         '# url2pkg-marker (please do not remove this line.)',
         '.include "../../mk/bsd.pkg.mk"',
     ]
-    assert up.err.output() == (f"url2pkg: running ['true', "
-                               f"'-f', '{tmp_path / 'try-pypi.mk'}', "
-                               f"'distinfo'] to try PyPI\n")
+
+    try_mk = tmp_path / 'try-pypi.mk'
+    assert up.err.written() == [
+        f"url2pkg: running ['true', '-f', '{try_mk}', 'distinfo'] to try PyPI",
+    ]
 
 
 def test_Adjuster_adjust_lines_python_module__edited():
@@ -1340,3 +1346,52 @@ def test_Adjuster_adjust_lines_python_module__edited():
 
     assert lines.get('GITHUB_PROJECT') == 'esptool'
     assert lines.index('TODO: Migrate MASTER_SITES to MASTER_SITE_PYPI') == 14
+
+
+def test_main__wrong_dir(tmp_path):
+    os.chdir(tmp_path)
+    error = r'url2pkg: must be run from a package directory'
+
+    with pytest.raises(SystemExit, match=error):
+        main(['url2pkg'], up)
+
+
+def test_main__unknown_option():
+    with pytest.raises(SystemExit, match=r'usage:'):
+        main(['url2pkg', '--unknown'], up)
+
+
+def test_main__verbose():
+    with pytest.raises(SystemExit, match=r'url2pkg: invalid URL: broken URL'):
+        main(['url2pkg', '--verbose', 'broken URL'], up)
+
+
+def test_main__valid_URL():
+    import shutil
+
+    up.editor = 'true'
+    up.make = os.getenv('MAKE') or sys.exit('MAKE must be set')
+    up.pkgdir = up.pkgsrcdir / 'pkgtools' / 'url2pkg-test-main'
+    up.pkgdir.is_dir() and shutil.rmtree(up.pkgdir)
+    try:
+        up.pkgdir.mkdir()
+    except OSError:
+        return  # skip if the directory is not writable
+    os.chdir(up.pkgdir)
+
+    main(['url2pkg', '-v', 'https://github.com/rillig/checkperms/archive/v1.12.tar.gz'], up)
+
+    assert up.out.written() == [
+        '',
+        'Remember to run pkglint when you\'re done.',
+        'See ../../doc/pkgsrc.txt to get some help.',
+        '',
+    ]
+    assert up.err.written() == [
+        f'url2pkg: running bmake (\'distinfo\', \'extract\') in \'{up.pkgdir}\'',
+        'url2pkg: Adjusting the Makefile',
+    ]
+    expected_files = ['DESCR', 'Makefile', 'PLIST', 'distinfo']
+    assert sorted([f.name for f in up.pkgdir.glob("*")]) == expected_files
+
+    shutil.rmtree(up.pkgdir)
