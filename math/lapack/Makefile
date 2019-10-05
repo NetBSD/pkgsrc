@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.38 2016/10/18 14:08:14 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2019/10/05 06:14:05 ryoon Exp $
 
 .include "Makefile.common"
 
 COMMENT=	Linear Algebra PACKage
 
 BUILD_TARGET=	lapacklib
+
+# -j8 fails with some .o file not-found errors.
+MAKE_JOBS_SAFE=	no
 
 #FFLAGS+=		-ffloat-store
 
