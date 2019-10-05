@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/10/01 14:25:08 nia Exp $
+# $NetBSD: Makefile,v 1.3 2019/10/05 02:28:49 ryoon Exp $
 
 DISTNAME=	taisei-v1.3.1
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -18,7 +18,7 @@ MESON_ARGS+=	-Db_pch=false
 MESON_ARGS+=	-Db_lto=false
 MESON_ARGS+=	-Dstrip=false
 MESON_ARGS+=	-Ddefault_library=shared
-MESON_ARGS+=	-Dversion_fallback=${PKGVERSION}
+MESON_ARGS+=	-Dversion_fallback=${PKGVERSION_NOREV}
 MESON_ARGS+=	-Ddocs=false
 MESON_ARGS+=	-Ddeveloper=false
 MESON_ARGS+=	-Ddebug_opengl=false
