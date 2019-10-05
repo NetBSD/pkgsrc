@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2019/10/05 12:13:25 nia Exp $
+# $NetBSD: Makefile,v 1.57 2019/10/05 15:52:43 nia Exp $
 
 DISTNAME=	terminatorX-4.0.1
 PKGNAME=	${DISTNAME:S/X/x/1}
@@ -42,6 +42,7 @@ SUBST_FILES.prefix+=	src/tX_ladspa.cc
 SUBST_SED.prefix+=	-e "s|/usr/lib/ladspa|${PREFIX}/lib/ladspa|g"
 SUBST_SED.prefix+=	-e "s|/usr/share/ladspa|${PREFIX}/share/ladspa|g"
 
+.include "options.mk"
 .include "../../audio/ladspa/buildlink3.mk"
 .include "../../audio/libaudiofile/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
