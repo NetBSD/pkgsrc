@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.13 2019/10/05 21:05:50 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.14 2019/10/05 22:02:32 rillig Exp $
 
 import pytest
 from url2pkg import *
@@ -640,6 +640,7 @@ def test_Adjuster_read_dependencies():
         'A line that is not a dependency at all',
         '',
         'var\tHOMEPAGE\thttps://homepage.example.org/',
+        'var\t#LICENSE\tBSD # TODO: too unspecific',
         ''
     ]
     env = {'URL2PKG_DEPENDENCIES': '\n'.join(child_process_output)}
@@ -659,7 +660,10 @@ def test_Adjuster_read_dependencies():
         '# TODO: does-not-exist>=1.0',
     ]
     assert adjuster.test_depends == ['pkglint>=0:../../pkgtools/pkglint']
-    assert adjuster.update_vars == {'HOMEPAGE': 'https://homepage.example.org/'}
+    assert adjuster.update_vars == {
+        'HOMEPAGE': 'https://homepage.example.org/',
+        '#LICENSE': 'BSD # TODO: too unspecific',
+    }
 
 
 def test_Adjuster_read_dependencies__lookup_with_prefix():
@@ -1184,11 +1188,12 @@ def test_Adjuster_adjust_pkg_config__both():
     assert str_vars(adjuster.extra_vars) == ['PKGCONFIG_OVERRIDE+=library.pc.in']
 
 
-def test_Adjuster__adjust_homepage():
+def test_Adjuster_generate_lines():
     url = 'https://dummy.example.org/package-1.0.tar.gz'
     adjuster = Adjuster(up, url, Lines())
     adjuster.makefile_lines = Generator(url).generate_Makefile()
     adjuster.update_vars['HOMEPAGE'] = 'https://example.org/'
+    adjuster.update_vars['#LICENSE'] = 'BSD # TODO: too unspecific'
     adjuster.depends.append('dependency>=0:../../category/dependency')
     adjuster.todos.append('Run pkglint')
 
@@ -1204,7 +1209,7 @@ def test_Adjuster__adjust_homepage():
         'MAINTAINER=     INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org',
         'HOMEPAGE=       https://example.org/',
         'COMMENT=        TODO: Short description of the package',
-        '#LICENSE=       # TODO: (see mk/license.mk)',
+        '#LICENSE=       BSD # TODO: too unspecific',
         '',
         '# TODO: Run pkglint',
         '',
@@ -1395,7 +1400,7 @@ def test_main__valid_URL():
         '',
     ]
     assert up.err.written() == [
-        f'url2pkg: running bmake (\'distinfo\', \'extract\') in \'{up.pkgdir}\'',
+        f'url2pkg: running bmake (\'clean\', \'distinfo\', \'extract\') in \'{up.pkgdir}\'',
         'url2pkg: Adjusting the Makefile',
     ]
 
