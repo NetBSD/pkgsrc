@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.9 2019/10/05 12:22:51 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.10 2019/10/05 18:00:09 rillig Exp $
 
 import pytest
 from url2pkg import *
@@ -91,7 +91,7 @@ def test_Url2Pkg_bmake():
     assert up.err.output() == 'url2pkg: running bmake (\'hello\', \'world\')\n'
 
 
-def test_Lines__write_and_read(tmp_path):
+def test_Lines__write_and_read(tmp_path: pathlib.Path):
     example = tmp_path / 'example'
 
     lines = Lines('1', '2', '3')
@@ -392,6 +392,7 @@ def test_Generator_adjust_site_GitHub_archive():
         mkcvsid,
         '',
         'GITHUB_PROJECT= proj',
+        'GITHUB_TAG=     v1.0.0',
         'DISTNAME=       v1.0.0',
         'PKGNAME=        ${GITHUB_PROJECT}-${DISTNAME:S,^v,,}',
         'CATEGORIES=     pkgtools',
@@ -530,6 +531,12 @@ def test_Generator_adjust_site_from_sites_mk__GNU():
     ]
 
 
+def test_Generator_adjust_site_other__malformed_URL():
+    error = 'error: URL "localhost" must have at least one slash'
+    with pytest.raises(SystemExit, match=error):
+        Generator('localhost').generate_Makefile()
+
+
 def test_Generator_adjust_everything_else__distname_version_with_v():
     # Some version numbers have a leading 'v', derived from the Git tag name.
 
@@ -547,6 +554,29 @@ def test_Generator_adjust_everything_else__distname_version_with_v():
         '',
         'MAINTAINER=     INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org',
         'HOMEPAGE=       https://cpan.example.org/',
+        'COMMENT=        TODO: Short description of the package',
+        '#LICENSE=       # TODO: (see mk/license.mk)',
+        '',
+        '# url2pkg-marker (please do not remove this line.)',
+        '.include "../../mk/bsd.pkg.mk"'
+    ]
+
+
+def test_Generator_adjust_everything_else__distfile_without_extension():
+    url = 'https://example.org/app-2019-10-05'
+
+    lines = Generator(url).generate_Makefile()
+
+    assert detab(lines) == [
+        mkcvsid,
+        '',
+        'DISTNAME=       app-2019-10-05',
+        'CATEGORIES=     pkgtools',
+        'MASTER_SITES=   https://example.org/',
+        'EXTRACT_SUFX=   # none',
+        '',
+        'MAINTAINER=     INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org',
+        'HOMEPAGE=       https://example.org/',
         'COMMENT=        TODO: Short description of the package',
         '#LICENSE=       # TODO: (see mk/license.mk)',
         '',
@@ -579,6 +609,23 @@ def test_Generator_determine_distname__v8():
     ]
 
 
+def test_Generator_generate_package(tmp_path: pathlib.Path):
+    url = 'https://ftp.gnu.org/pub/gnu/cflow/cflow-1.6.tar.gz'
+    up.editor = 'true'  # the shell command
+    up.make = 'true'  # the shell command
+    up.pkgdir = tmp_path
+
+    Generator(url).generate_package(up)
+
+    assert (tmp_path / 'DESCR').read_text() == ''
+    assert len((tmp_path / 'Makefile').read_text().splitlines()) == 13
+    assert (tmp_path / 'PLIST').read_text() == '@comment $''NetBSD$\n'
+
+    # Since bmake is only fake in this test, the distinfo file is not created.
+    expected_files = ['DESCR', 'Makefile', 'PLIST']
+    assert sorted([f.name for f in tmp_path.glob("*")]) == expected_files
+
+
 def test_Adjuster_read_dependencies():
     child_process_output = [
         'DEPENDS\tpackage>=112.0:../../pkgtools/pkglint',
@@ -609,6 +656,22 @@ def test_Adjuster_read_dependencies():
     ]
     assert adjuster.test_depends == ['pkglint>=0:../../pkgtools/pkglint']
     assert adjuster.update_vars == {'HOMEPAGE': 'https://homepage.example.org/'}
+
+
+def test_Adjuster_read_dependencies__lookup_with_prefix():
+    child_process_output = [
+        'DEPENDS\tpyobjc-framework-Quartz>=0',
+        ''
+    ]
+    env = {'URL2PKG_DEPENDENCIES': '\n'.join(child_process_output)}
+    cmd = "printf '%s\n' \"$URL2PKG_DEPENDENCIES\""
+
+    adjuster = Adjuster(up, '', Lines())
+    adjuster.read_dependencies(cmd, env, '.', 'py-')
+
+    assert adjuster.depends == [
+        'py-pyobjc-framework-Quartz>=0:../../devel/py-pyobjc-framework-Quartz',
+    ]
 
 
 def test_Adjuster_generate_adjusted_Makefile_lines():
@@ -748,7 +811,17 @@ def test_Adjuster_add_dependency__buildlink():
     ]
 
 
-def test_Adjuster_adjust_configure__none(tmp_path):
+def test_Adjuster_adjust_cmake(tmp_path: pathlib.Path):
+    adjuster = Adjuster(up, '', Lines())
+    adjuster.abs_wrksrc = str(tmp_path)
+    (tmp_path / 'CMakeLists.txt').touch()
+
+    adjuster.adjust_cmake()
+
+    assert str_vars(adjuster.build_vars) == ['USE_CMAKE=yes']
+
+
+def test_Adjuster_adjust_configure__none(tmp_path: pathlib.Path):
     adjuster = Adjuster(up, '', Lines())
     adjuster.abs_wrksrc = str(tmp_path)
 
@@ -757,7 +830,7 @@ def test_Adjuster_adjust_configure__none(tmp_path):
     assert adjuster.build_vars == []
 
 
-def test_Adjuster_adjust_configure__GNU(tmp_path):
+def test_Adjuster_adjust_configure__GNU(tmp_path: pathlib.Path):
     adjuster = Adjuster(up, '', Lines())
     adjuster.abs_wrksrc = str(tmp_path)
     adjuster.wrksrc_files.append('configure')
@@ -770,7 +843,7 @@ def test_Adjuster_adjust_configure__GNU(tmp_path):
     ]
 
 
-def test_Adjuster_adjust_configure__other(tmp_path):
+def test_Adjuster_adjust_configure__other(tmp_path: pathlib.Path):
     adjuster = Adjuster(up, '', Lines())
     adjuster.abs_wrksrc = str(tmp_path)
     adjuster.wrksrc_files.append('configure')
@@ -783,7 +856,7 @@ def test_Adjuster_adjust_configure__other(tmp_path):
     ]
 
 
-def test_Adjuster_adjust_cargo__not_found(tmp_path):
+def test_Adjuster_adjust_cargo__not_found(tmp_path: pathlib.Path):
     adjuster = Adjuster(up, '', Lines())
     adjuster.abs_wrksrc = str(tmp_path)
 
@@ -792,7 +865,7 @@ def test_Adjuster_adjust_cargo__not_found(tmp_path):
     assert str_vars(adjuster.build_vars) == []
 
 
-def test_Adjuster_adjust_cargo__found(tmp_path):
+def test_Adjuster_adjust_cargo__found(tmp_path: pathlib.Path):
     adjuster = Adjuster(up, '', Lines())
     adjuster.abs_wrksrc = str(tmp_path)
     (tmp_path / 'Cargo.lock').write_text('"checksum cargo-pkg 1.2.3 1234"')
@@ -824,7 +897,7 @@ def test_Adjuster_adjust_gconf2():
     ]
 
 
-def test_Adjuster_adjust_libtool__ltconfig(tmp_path):
+def test_Adjuster_adjust_libtool__ltconfig(tmp_path: pathlib.Path):
     adjuster = Adjuster(up, '', Lines())
     adjuster.abs_wrksrc = str(tmp_path)
     (tmp_path / 'ltconfig').write_text('')
@@ -834,7 +907,7 @@ def test_Adjuster_adjust_libtool__ltconfig(tmp_path):
     assert str_vars(adjuster.build_vars) == ['USE_LIBTOOL=yes']
 
 
-def test_Adjuster_adjust_libtool__libltdl(tmp_path):
+def test_Adjuster_adjust_libtool__libltdl(tmp_path: pathlib.Path):
     adjuster = Adjuster(up, '', Lines())
     adjuster.abs_wrksrc = str(tmp_path)
     (tmp_path / 'libltdl').mkdir()
@@ -843,6 +916,140 @@ def test_Adjuster_adjust_libtool__libltdl(tmp_path):
 
     assert adjuster.includes == [
         '../../devel/libltdl/convenience.mk',
+    ]
+
+
+def test_Adjuster_adjust_meson(tmp_path: pathlib.Path):
+    adjuster = Adjuster(up, '', Lines())
+    adjuster.abs_wrksrc = str(tmp_path)
+    (tmp_path / 'meson.build').touch()
+
+    adjuster.adjust_meson()
+
+    assert adjuster.includes == ['../../devel/py-meson/build.mk']
+
+
+def test_Adjuster_adjust_perl_module_Build_PL(tmp_path: pathlib.Path):
+    up.perl5 = 'echo perl5'
+    up.libdir = '/libdir'
+    up.verbose = True
+    adjuster = Adjuster(up, '', Lines())
+    adjuster.abs_wrksrc = str(tmp_path)
+
+    adjuster.adjust_perl_module_Build_PL()
+
+    assert str_vars(adjuster.build_vars) == ['PERL5_MODULE_TYPE=Module::Build']
+    assert up.err.output().splitlines() == [
+        f'url2pkg: reading dependencies: cd \'{tmp_path}\' && env {{}} \'echo perl5 -I/libdir -I. Build.PL\'',
+        'url2pkg: unknown dependency line: \'perl5 -I/libdir -I. Build.PL\''
+    ]
+
+
+def test_Adjuster_adjust_perl_module_Makefile_PL(tmp_path: pathlib.Path):
+    up.perl5 = 'echo perl5'
+    up.libdir = '/libdir'
+    up.verbose = True
+    adjuster = Adjuster(up, '', Lines())
+    adjuster.abs_wrksrc = str(tmp_path)
+
+    adjuster.adjust_perl_module_Makefile_PL()
+
+    assert str_vars(adjuster.build_vars) == []
+    assert up.err.output().splitlines() == [
+        f'url2pkg: reading dependencies: cd \'{tmp_path}\' && env {{}} \'echo perl5 -I/libdir -I. Makefile.PL\'',
+        'url2pkg: unknown dependency line: \'perl5 -I/libdir -I. Makefile.PL\''
+    ]
+
+
+def test_Adjuster_adjust_perl_module_homepage():
+    adjuster = Adjuster(up, 'https://example.org/Perl-Module-1.0.tar.gz', Lines())
+    adjuster.makefile_lines.add_vars(
+        Var('DISTNAME', '=', 'Perl-Module-1.0.tar.gz'),
+        Var('MASTER_SITES', '=', '${MASTER_SITE_PERL_CPAN:=subdir/}'),
+        Var('HOMEPAGE', '=', 'https://example.org/'),
+    )
+
+    adjuster.adjust_perl_module_homepage()
+
+    assert adjuster.makefile_lines.get('HOMEPAGE') == 'https://metacpan.org/pod/Perl::Module'
+
+
+def test_Adjuster_adjust_perl_module__Build_PL(tmp_path: pathlib.Path):
+    up.perl5 = 'echo perl5'
+    up.pkgdir = tmp_path  # for removing the PLIST
+    adjuster = Adjuster(up, 'https://example.org/Perl-Module-1.0.tar.gz', Lines())
+    adjuster.abs_wrksrc = str(tmp_path)
+    adjuster.makefile_lines.add_vars(
+        Var('DISTNAME', '=', 'Perl-Module-1.0.tar.gz'),
+        Var('MASTER_SITES', '=', '${MASTER_SITE_PERL_CPAN:=subdir/}'),
+        Var('HOMEPAGE', '=', 'https://example.org/'),
+    )
+    adjuster.makefile_lines.add('# url2pkg-marker')
+    (tmp_path / 'Build.PL').touch()
+    (tmp_path / 'PLIST').touch()
+
+    adjuster.adjust_perl_module()
+
+    assert detab(adjuster.generate_lines()) == [
+        'DISTNAME=       Perl-Module-1.0.tar.gz',
+        'PKGNAME=        p5-${DISTNAME}',
+        'MASTER_SITES=   ${MASTER_SITE_PERL_CPAN:=subdir/}',
+        'HOMEPAGE=       https://metacpan.org/pod/Perl::Module',
+        '',
+        'PERL5_MODULE_TYPE=      Module::Build',
+        'PERL5_PACKLIST=         auto/Perl/Module/.packlist',
+        '',
+        '.include "../../lang/perl5/module.mk"',
+    ]
+    assert not (tmp_path / 'PLIST').exists()
+
+
+def test_Adjuster_adjust_perl_module__Makefile_PL_without_PLIST(tmp_path: pathlib.Path):
+    # For code coverage, when PLIST cannot be unlinked.
+
+    up.perl5 = 'echo perl5'
+    up.pkgdir = tmp_path
+    adjuster = Adjuster(up, 'https://example.org/Mod-1.0.tar.gz', Lines())
+    adjuster.abs_wrksrc = str(tmp_path)
+    adjuster.makefile_lines.add_vars(
+        Var('DISTNAME', '=', 'Mod-1.0.tar.gz'),
+        Var('MASTER_SITES', '=', '${MASTER_SITE_PERL_CPAN:=subdir/}'),
+        Var('HOMEPAGE', '=', 'https://example.org/'),
+    )
+    adjuster.makefile_lines.add('# url2pkg-marker')
+    (tmp_path / 'Makefile.PL').touch()
+
+    adjuster.adjust_perl_module()
+
+    assert not (tmp_path / 'PLIST').exists()
+
+
+def test_Adjuster_adjust_python_module(tmp_path: pathlib.Path):
+    url = 'https://example.org/Mod-1.0.tar.gz'
+    up.pythonbin = 'echo python'
+    up.pkgdir = tmp_path
+    adjuster = Adjuster(up, url, Lines())
+    adjuster.abs_wrksrc = str(tmp_path)
+    adjuster.makefile_lines = Generator(url).generate_Makefile()
+    (tmp_path / 'setup.py').touch()
+
+    adjuster.adjust_python_module()
+
+    assert detab(adjuster.generate_lines()) == [
+        mkcvsid,
+        '',
+        'DISTNAME=       Mod-1.0',
+        'PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}',
+        'CATEGORIES=     pkgtools python',
+        'MASTER_SITES=   https://example.org/',
+        '',
+        'MAINTAINER=     INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org',
+        'HOMEPAGE=       https://example.org/',
+        'COMMENT=        TODO: Short description of the package',
+        '#LICENSE=       # TODO: (see mk/license.mk)',
+        '',
+        '.include "../../lang/python/egg.mk"',
+        '.include "../../mk/bsd.pkg.mk"',
     ]
 
 
@@ -988,7 +1195,7 @@ def test_Adjuster__adjust_homepage():
     ]
 
 
-def test_Adjuster_determine_wrksrc__no_files(tmp_path):
+def test_Adjuster_determine_wrksrc__no_files(tmp_path: pathlib.Path):
     adjuster = Adjuster(up, '', Lines())
     adjuster.abs_wrkdir = str(tmp_path)
 
@@ -997,7 +1204,7 @@ def test_Adjuster_determine_wrksrc__no_files(tmp_path):
     assert adjuster.abs_wrksrc == adjuster.abs_wrkdir
 
 
-def test_Adjuster_determine_wrksrc__single_dir(tmp_path):
+def test_Adjuster_determine_wrksrc__single_dir(tmp_path: pathlib.Path):
     adjuster = Adjuster(up, '', Lines())
     adjuster.abs_wrkdir = str(tmp_path)
     (tmp_path / 'subdir').mkdir()
@@ -1007,7 +1214,7 @@ def test_Adjuster_determine_wrksrc__single_dir(tmp_path):
     assert adjuster.abs_wrksrc == adjuster.abs_wrkdir + '/subdir'
 
 
-def test_Adjuster_determine_wrksrc__several_dirs(tmp_path):
+def test_Adjuster_determine_wrksrc__several_dirs(tmp_path: pathlib.Path):
     adjuster = Adjuster(up, '', Lines())
     adjuster.abs_wrkdir = str(tmp_path)
     (tmp_path / 'subdir1').mkdir()
@@ -1021,7 +1228,7 @@ def test_Adjuster_determine_wrksrc__several_dirs(tmp_path):
     ]
 
 
-def test_Adjuster_adjust_package_from_extracted_distfiles__empty_wrkdir(tmp_path):
+def test_Adjuster_adjust_package_from_extracted_distfiles__empty_wrkdir(tmp_path: pathlib.Path):
     pkgdir = tmp_path
     wrkdir = tmp_path / 'wrkdir'
     fake = '''\
@@ -1031,13 +1238,13 @@ case $* in
 (*) "unknown: $*" ;;
 esac
 ''' % str(wrkdir)
-    up.pkgdir = str(tmp_path)
+    up.pkgdir = tmp_path
     wrkdir.mkdir()
     url = 'https://example.org/distfile-1.0.zip'
     adjuster = Adjuster(up, url, Lines())
     adjuster.abs_wrkdir = str(wrkdir)
     (pkgdir / 'Makefile').write_text('# url2pkg-marker\n')
-    fake_path = (tmp_path / 'fake')
+    fake_path = tmp_path / 'fake'
     fake_path.write_text(fake)
     fake_path.chmod(0o755)
 
@@ -1055,17 +1262,22 @@ esac
     ]
 
 
-def test_Adjuster_adjust_lines_python_module():
+def test_Adjuster_adjust_lines_python_module(tmp_path: pathlib.Path):
     url = 'https://github.com/espressif/esptool/archive/v2.7.tar.gz'
+    up.pkgdir = tmp_path
+    up.make = 'true'  # the shell command
+    up.verbose = True
     initial_lines = Generator(url).generate_Makefile()
     initial_lines.append('CATEGORIES', 'python')
     adjuster = Adjuster(up, url, initial_lines)
     adjuster.makefile_lines = Lines(*initial_lines.lines)
+    (up.pkgdir / 'Makefile').touch()
 
     assert detab(adjuster.makefile_lines) == [
         mkcvsid,
         '',
         'GITHUB_PROJECT= esptool',
+        'GITHUB_TAG=     v2.7',
         'DISTNAME=       v2.7',
         'PKGNAME=        ${GITHUB_PROJECT}-${DISTNAME:S,^v,,}',
         'CATEGORIES=     pkgtools python',
@@ -1081,13 +1293,13 @@ def test_Adjuster_adjust_lines_python_module():
         '.include "../../mk/bsd.pkg.mk"',
     ]
 
-    adjuster.adjust_lines_python_module(initial_lines)
+    lines = adjuster.generate_lines()
 
     # FIXME: Currently url2pkg assumes that all Python modules that are on
     #  GitHub are also available from PyPI. That is wrong. Probably url2pkg
     #  should try to fetch the file from PyPI, and only switch to PyPI if
     #  they are the same.
-    assert detab(adjuster.makefile_lines) == [
+    assert detab(lines) == [
         mkcvsid,
         '',
         'DISTNAME=       esptool-2.7',
@@ -1103,3 +1315,28 @@ def test_Adjuster_adjust_lines_python_module():
         '# url2pkg-marker (please do not remove this line.)',
         '.include "../../mk/bsd.pkg.mk"',
     ]
+    assert up.err.output() == (f"url2pkg: running ['true', "
+                               f"'-f', '{tmp_path / 'try-pypi.mk'}', "
+                               f"'distinfo'] to try PyPI\n")
+
+
+def test_Adjuster_adjust_lines_python_module__edited():
+    # When the package developer has edited the Makefile, it's unclear
+    # what has changed. To not damage anything, let the package
+    # developer migrate manually.
+
+    url = 'https://github.com/espressif/esptool/archive/v2.7.tar.gz'
+    initial_lines = Generator(url).generate_Makefile()
+    initial_lines.append('CATEGORIES', 'python')
+    adjuster = Adjuster(up, url, initial_lines)
+    adjuster.makefile_lines = Lines(*initial_lines.lines)
+    initial_lines.add('')  # to make the lines different
+
+    lines = adjuster.generate_lines()
+
+    assert lines.get('GITHUB_PROJECT') == 'esptool'
+
+    adjuster.adjust_lines_python_module(lines)
+
+    assert lines.get('GITHUB_PROJECT') == 'esptool'
+    assert lines.index('TODO: Migrate MASTER_SITES to MASTER_SITE_PYPI') == 14
