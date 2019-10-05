@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:29:01 agc Exp $
+$NetBSD: distinfo,v 1.5 2019/10/05 12:38:28 maya Exp $
 
 SHA1 (pangox-compat-0.0.2.tar.xz) = e02daa573769ddd41b2231f731525e5f8f26621b
 RMD160 (pangox-compat-0.0.2.tar.xz) = 4c1f8f0b23037bdba0eef9a905aa234a7dff78a4
 SHA512 (pangox-compat-0.0.2.tar.xz) = fd3e257157d78c3d86c948e7909226fdebe52408d02a52432de8a295443b64b80b37cb795fe646d581515e6072bd278f2dcab0e43cf27b63b03a82c01eb6b9b3
 Size (pangox-compat-0.0.2.tar.xz) = 267396 bytes
+SHA1 (patch-pangox.c) = 95185dec98b493b5e3e2b14fbb6f9b9abbdbf4d1
