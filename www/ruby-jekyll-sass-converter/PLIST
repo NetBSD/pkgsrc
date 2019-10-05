@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2015/03/13 16:47:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/10/05 04:58:42 ryoon Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/lib/jekyll-sass-converter.rb
 ${GEM_LIBDIR}/lib/jekyll-sass-converter/version.rb
 ${GEM_LIBDIR}/lib/jekyll/converters/sass.rb
 ${GEM_LIBDIR}/lib/jekyll/converters/scss.rb
+${GEM_LIBDIR}/lib/jekyll/source_map_page.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
