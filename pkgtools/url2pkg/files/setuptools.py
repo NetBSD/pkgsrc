@@ -1,4 +1,4 @@
-# $NetBSD: setuptools.py,v 1.4 2019/10/03 16:32:47 rillig Exp $
+# $NetBSD: setuptools.py,v 1.5 2019/10/05 22:02:32 rillig Exp $
 
 # This is a drop-in replacement for the setuptools Python module. Instead
 # of actually searching for the dependencies, it extracts the dependency
@@ -41,6 +41,7 @@ def url2pkg_print_license(license):
 
 
 def setup(**kwargs):
+    url2pkg_print_depends('DEPENDS', kwargs.get('requires', []))  # for distutils.core
     url2pkg_print_depends('DEPENDS', kwargs.get('install_requires', []))
     url2pkg_print_depends('TEST_DEPENDS', kwargs.get('tests_require', []))
     url2pkg_print_depends('BUILD_DEPENDS', kwargs.get('extras_require', {}).get('dev', []))
