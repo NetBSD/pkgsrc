@@ -1,17 +1,14 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 01:12:52 agc Exp $
+$NetBSD: distinfo,v 1.10 2019/10/05 12:09:26 nia Exp $
 
-SHA1 (terminatorX-3.82.tar.bz2) = 8d492fc759ffb77c2549190081077e12f765233f
-RMD160 (terminatorX-3.82.tar.bz2) = b70c688101844a07eddcd3e090cd6e805e93f066
-SHA512 (terminatorX-3.82.tar.bz2) = 9fbb297ecffc50d5bf39daff9dcdc619879b255673072af2d843f97b26e4fb667a8a4cf831a6debbfe95631acd938dad1edfc988db7c02421ece3170ffc1b1f0
-Size (terminatorX-3.82.tar.bz2) = 395755 bytes
-SHA1 (patch-aa) = 12100a880e86430acec603721b0e3110731225e3
-SHA1 (patch-ab) = 16e264ac60c0ec65c525baddc5c3e71d039cc0c3
-SHA1 (patch-ac) = 4a86d5f59ecf6c072589bf5e57d7ab0ef4d7d7eb
-SHA1 (patch-ad) = e3125815472b334882bc190405a2ff217a018fb3
-SHA1 (patch-ae) = 5412826df902f180d93de078ec1a5bcc8a6b1bfa
-SHA1 (patch-af) = 7129f695f1c7e79800d123b4a3d5db7a8f6c3f5d
-SHA1 (patch-ag) = 53094ee9beb48478ee4ea3c375422c858fc2fc81
-SHA1 (patch-ah) = f2d7ca4631b177840b88d82d614e11ba779b4ef5
-SHA1 (patch-ai) = 7fe25f7b29fcb807b00bee363337f163f0171813
-SHA1 (patch-src_tX__midiin.cc) = 4e5b34e5c99ecc6a5c750cc2e5c9fe700b1871fb
-SHA1 (patch-src_tx__dial_c) = b2c6824b1c103d3f86943d6040e741aab6158cb9
+SHA1 (terminatorX-4.0.1.tar.gz) = a51b51471698bb954592877f1c2495c00a39c374
+RMD160 (terminatorX-4.0.1.tar.gz) = 75a1d0d86152d95a956ee652e056b1f1479d1b63
+SHA512 (terminatorX-4.0.1.tar.gz) = dae7d401870db39692d57e1fe5df47be7b50179a8cd739b60bdfda211cbe29e8abdc116bda23a286ddf49533e76175ac2a5811e0516b1a7d50b7873f7db4715b
+Size (terminatorX-4.0.1.tar.gz) = 1928137 bytes
+SHA1 (patch-configure) = ab0e0f7b49c854bffab957a460ff4602ca6ad519
+SHA1 (patch-src_main.cc) = 327a9067e571236d47a5ba7448c71c6460f01701
+SHA1 (patch-src_tX__audiofile.cc) = 37c2ce405a8740705bf9811ddc782cedf57f5f1a
+SHA1 (patch-src_tX__dialog.cc) = 1ba42dffc0bfe5fe786f2ca8f27b0e582dba02c3
+SHA1 (patch-src_tX__flash.c) = dbcbac5742b90915d953702c45083c8cbec2589a
+SHA1 (patch-src_tX__seqpar.cc) = e2db0feaa01fbbd3b4f84b93abfdc409fcd1ca7d
+SHA1 (patch-src_tX__vtt.cc) = 9947e84f1b0067935f750989d37919b88587149f
+SHA1 (patch-src_tX__widget.c) = eed43a8a4143035074645cfe33d4d14990f35494
