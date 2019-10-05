@@ -1,11 +1,11 @@
-# $NetBSD: url2pkg_test.py,v 1.12 2019/10/05 19:59:04 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.13 2019/10/05 21:05:50 rillig Exp $
 
 import pytest
 from url2pkg import *
 
 mkcvsid = '# $''NetBSD$'
 up: Url2Pkg
-prev_dir = pathlib.Path.cwd()
+prev_dir = Path.cwd()
 
 
 def setup_function(_):
@@ -31,7 +31,7 @@ def setup_function(_):
 
 
 def teardown_function(_):
-    os.chdir(str(prev_dir))
+    os.chdir(prev_dir)
     assert up.out.written() == []
     assert up.err.written() == []
 
@@ -93,16 +93,16 @@ def test_Url2Pkg_bmake():
     ]
 
 
-def test_Lines__write_and_read(tmp_path: pathlib.Path):
+def test_Lines__write_and_read(tmp_path: Path):
     example = tmp_path / 'example'
 
     lines = Lines('1', '2', '3')
 
-    lines.write_to(str(example))
+    lines.write_to(example)
 
     assert example.read_text() == '1\n2\n3\n'
 
-    back = Lines.read_from(str(example))
+    back = Lines.read_from(example)
 
     assert back.lines == ['1', '2', '3']
 
@@ -613,7 +613,7 @@ def test_Generator_determine_distname__v8():
     ]
 
 
-def test_Generator_generate_package(tmp_path: pathlib.Path):
+def test_Generator_generate_package(tmp_path: Path):
     url = 'https://ftp.gnu.org/pub/gnu/cflow/cflow-1.6.tar.gz'
     up.editor = 'true'  # the shell command
     up.make = 'true'  # the shell command
@@ -675,6 +675,21 @@ def test_Adjuster_read_dependencies__lookup_with_prefix():
 
     assert adjuster.depends == [
         'py-pyobjc-framework-Quartz>=0:../../devel/py-pyobjc-framework-Quartz',
+    ]
+
+
+def test_Adjuster_wrksrc_grep(tmp_path: Path):
+    adjuster = Adjuster(up, '', Lines())
+    adjuster.abs_wrksrc = tmp_path
+    (tmp_path / 'file').write_text('\n'.join(
+        ('a', 'b', 'c', 'd', 'e', 'abc', 'def', 'ghi')
+    ))
+
+    assert adjuster.wrksrc_grep('file', r'e') == ['e', 'def']
+    assert adjuster.wrksrc_grep('file', r'(.)(.)(.)') == [
+        ['a', 'b', 'c'],
+        ['d', 'e', 'f'],
+        ['g', 'h', 'i'],
     ]
 
 
@@ -815,9 +830,9 @@ def test_Adjuster_add_dependency__buildlink():
     ]
 
 
-def test_Adjuster_adjust_cmake(tmp_path: pathlib.Path):
+def test_Adjuster_adjust_cmake(tmp_path: Path):
     adjuster = Adjuster(up, '', Lines())
-    adjuster.abs_wrksrc = str(tmp_path)
+    adjuster.abs_wrksrc = tmp_path
     (tmp_path / 'CMakeLists.txt').touch()
 
     adjuster.adjust_cmake()
@@ -825,18 +840,18 @@ def test_Adjuster_adjust_cmake(tmp_path: pathlib.Path):
     assert str_vars(adjuster.build_vars) == ['USE_CMAKE=yes']
 
 
-def test_Adjuster_adjust_configure__none(tmp_path: pathlib.Path):
+def test_Adjuster_adjust_configure__none(tmp_path: Path):
     adjuster = Adjuster(up, '', Lines())
-    adjuster.abs_wrksrc = str(tmp_path)
+    adjuster.abs_wrksrc = tmp_path
 
     adjuster.adjust_configure()
 
     assert adjuster.build_vars == []
 
 
-def test_Adjuster_adjust_configure__GNU(tmp_path: pathlib.Path):
+def test_Adjuster_adjust_configure__GNU(tmp_path: Path):
     adjuster = Adjuster(up, '', Lines())
-    adjuster.abs_wrksrc = str(tmp_path)
+    adjuster.abs_wrksrc = tmp_path
     adjuster.wrksrc_files.append('configure')
     (tmp_path / 'configure').write_text('# Free Software Foundation\n')
 
@@ -847,9 +862,9 @@ def test_Adjuster_adjust_configure__GNU(tmp_path: pathlib.Path):
     ]
 
 
-def test_Adjuster_adjust_configure__other(tmp_path: pathlib.Path):
+def test_Adjuster_adjust_configure__other(tmp_path: Path):
     adjuster = Adjuster(up, '', Lines())
-    adjuster.abs_wrksrc = str(tmp_path)
+    adjuster.abs_wrksrc = tmp_path
     adjuster.wrksrc_files.append('configure')
     (tmp_path / 'configure').write_text('# A generic configure script\n')
 
@@ -860,18 +875,18 @@ def test_Adjuster_adjust_configure__other(tmp_path: pathlib.Path):
     ]
 
 
-def test_Adjuster_adjust_cargo__not_found(tmp_path: pathlib.Path):
+def test_Adjuster_adjust_cargo__not_found(tmp_path: Path):
     adjuster = Adjuster(up, '', Lines())
-    adjuster.abs_wrksrc = str(tmp_path)
+    adjuster.abs_wrksrc = tmp_path
 
     adjuster.adjust_cargo()
 
     assert str_vars(adjuster.build_vars) == []
 
 
-def test_Adjuster_adjust_cargo__found(tmp_path: pathlib.Path):
+def test_Adjuster_adjust_cargo__found(tmp_path: Path):
     adjuster = Adjuster(up, '', Lines())
-    adjuster.abs_wrksrc = str(tmp_path)
+    adjuster.abs_wrksrc = tmp_path
     (tmp_path / 'Cargo.lock').write_text('"checksum cargo-pkg 1.2.3 1234"')
 
     adjuster.adjust_cargo()
@@ -901,9 +916,9 @@ def test_Adjuster_adjust_gconf2():
     ]
 
 
-def test_Adjuster_adjust_libtool__ltconfig(tmp_path: pathlib.Path):
+def test_Adjuster_adjust_libtool__ltconfig(tmp_path: Path):
     adjuster = Adjuster(up, '', Lines())
-    adjuster.abs_wrksrc = str(tmp_path)
+    adjuster.abs_wrksrc = tmp_path
     (tmp_path / 'ltconfig').write_text('')
 
     adjuster.adjust_libtool()
@@ -911,9 +926,9 @@ def test_Adjuster_adjust_libtool__ltconfig(tmp_path: pathlib.Path):
     assert str_vars(adjuster.build_vars) == ['USE_LIBTOOL=yes']
 
 
-def test_Adjuster_adjust_libtool__libltdl(tmp_path: pathlib.Path):
+def test_Adjuster_adjust_libtool__libltdl(tmp_path: Path):
     adjuster = Adjuster(up, '', Lines())
-    adjuster.abs_wrksrc = str(tmp_path)
+    adjuster.abs_wrksrc = tmp_path
     (tmp_path / 'libltdl').mkdir()
 
     adjuster.adjust_libtool()
@@ -923,9 +938,9 @@ def test_Adjuster_adjust_libtool__libltdl(tmp_path: pathlib.Path):
     ]
 
 
-def test_Adjuster_adjust_meson(tmp_path: pathlib.Path):
+def test_Adjuster_adjust_meson(tmp_path: Path):
     adjuster = Adjuster(up, '', Lines())
-    adjuster.abs_wrksrc = str(tmp_path)
+    adjuster.abs_wrksrc = tmp_path
     (tmp_path / 'meson.build').touch()
 
     adjuster.adjust_meson()
@@ -933,12 +948,12 @@ def test_Adjuster_adjust_meson(tmp_path: pathlib.Path):
     assert adjuster.includes == ['../../devel/py-meson/build.mk']
 
 
-def test_Adjuster_adjust_perl_module_Build_PL(tmp_path: pathlib.Path):
+def test_Adjuster_adjust_perl_module_Build_PL(tmp_path: Path):
     up.perl5 = 'echo perl5'
     up.libdir = '/libdir'
     up.verbose = True
     adjuster = Adjuster(up, '', Lines())
-    adjuster.abs_wrksrc = str(tmp_path)
+    adjuster.abs_wrksrc = tmp_path
 
     adjuster.adjust_perl_module_Build_PL()
 
@@ -949,12 +964,12 @@ def test_Adjuster_adjust_perl_module_Build_PL(tmp_path: pathlib.Path):
     ]
 
 
-def test_Adjuster_adjust_perl_module_Makefile_PL(tmp_path: pathlib.Path):
+def test_Adjuster_adjust_perl_module_Makefile_PL(tmp_path: Path):
     up.perl5 = 'echo perl5'
     up.libdir = '/libdir'
     up.verbose = True
     adjuster = Adjuster(up, '', Lines())
-    adjuster.abs_wrksrc = str(tmp_path)
+    adjuster.abs_wrksrc = tmp_path
 
     adjuster.adjust_perl_module_Makefile_PL()
 
@@ -978,11 +993,11 @@ def test_Adjuster_adjust_perl_module_homepage():
     assert adjuster.makefile_lines.get('HOMEPAGE') == 'https://metacpan.org/pod/Perl::Module'
 
 
-def test_Adjuster_adjust_perl_module__Build_PL(tmp_path: pathlib.Path):
+def test_Adjuster_adjust_perl_module__Build_PL(tmp_path: Path):
     up.perl5 = 'echo perl5'
     up.pkgdir = tmp_path  # for removing the PLIST
     adjuster = Adjuster(up, 'https://example.org/Perl-Module-1.0.tar.gz', Lines())
-    adjuster.abs_wrksrc = str(tmp_path)
+    adjuster.abs_wrksrc = tmp_path
     adjuster.makefile_lines.add_vars(
         Var('DISTNAME', '=', 'Perl-Module-1.0.tar.gz'),
         Var('MASTER_SITES', '=', '${MASTER_SITE_PERL_CPAN:=subdir/}'),
@@ -1008,13 +1023,13 @@ def test_Adjuster_adjust_perl_module__Build_PL(tmp_path: pathlib.Path):
     assert not (tmp_path / 'PLIST').exists()
 
 
-def test_Adjuster_adjust_perl_module__Makefile_PL_without_PLIST(tmp_path: pathlib.Path):
+def test_Adjuster_adjust_perl_module__Makefile_PL_without_PLIST(tmp_path: Path):
     # For code coverage, when PLIST cannot be unlinked.
 
     up.perl5 = 'echo perl5'
     up.pkgdir = tmp_path
     adjuster = Adjuster(up, 'https://example.org/Mod-1.0.tar.gz', Lines())
-    adjuster.abs_wrksrc = str(tmp_path)
+    adjuster.abs_wrksrc = tmp_path
     adjuster.makefile_lines.add_vars(
         Var('DISTNAME', '=', 'Mod-1.0.tar.gz'),
         Var('MASTER_SITES', '=', '${MASTER_SITE_PERL_CPAN:=subdir/}'),
@@ -1028,12 +1043,12 @@ def test_Adjuster_adjust_perl_module__Makefile_PL_without_PLIST(tmp_path: pathli
     assert not (tmp_path / 'PLIST').exists()
 
 
-def test_Adjuster_adjust_python_module(tmp_path: pathlib.Path):
+def test_Adjuster_adjust_python_module(tmp_path: Path):
     url = 'https://example.org/Mod-1.0.tar.gz'
     up.pythonbin = 'echo python'
     up.pkgdir = tmp_path
     adjuster = Adjuster(up, url, Lines())
-    adjuster.abs_wrksrc = str(tmp_path)
+    adjuster.abs_wrksrc = tmp_path
     adjuster.makefile_lines = Generator(url).generate_Makefile()
     (tmp_path / 'setup.py').touch()
 
@@ -1199,28 +1214,28 @@ def test_Adjuster__adjust_homepage():
     ]
 
 
-def test_Adjuster_determine_wrksrc__no_files(tmp_path: pathlib.Path):
+def test_Adjuster_determine_wrksrc__no_files(tmp_path: Path):
     adjuster = Adjuster(up, '', Lines())
-    adjuster.abs_wrkdir = str(tmp_path)
+    adjuster.abs_wrkdir = tmp_path
 
     adjuster.determine_wrksrc()
 
     assert adjuster.abs_wrksrc == adjuster.abs_wrkdir
 
 
-def test_Adjuster_determine_wrksrc__single_dir(tmp_path: pathlib.Path):
+def test_Adjuster_determine_wrksrc__single_dir(tmp_path: Path):
     adjuster = Adjuster(up, '', Lines())
-    adjuster.abs_wrkdir = str(tmp_path)
+    adjuster.abs_wrkdir = tmp_path
     (tmp_path / 'subdir').mkdir()
 
     adjuster.determine_wrksrc()
 
-    assert adjuster.abs_wrksrc == adjuster.abs_wrkdir + '/subdir'
+    assert adjuster.abs_wrksrc == adjuster.abs_wrkdir / 'subdir'
 
 
-def test_Adjuster_determine_wrksrc__several_dirs(tmp_path: pathlib.Path):
+def test_Adjuster_determine_wrksrc__several_dirs(tmp_path: Path):
     adjuster = Adjuster(up, '', Lines())
-    adjuster.abs_wrkdir = str(tmp_path)
+    adjuster.abs_wrkdir = tmp_path
     (tmp_path / 'subdir1').mkdir()
     (tmp_path / 'subdir2').mkdir()
 
@@ -1232,32 +1247,24 @@ def test_Adjuster_determine_wrksrc__several_dirs(tmp_path: pathlib.Path):
     ]
 
 
-def test_Adjuster_adjust_package_from_extracted_distfiles__empty_wrkdir(tmp_path: pathlib.Path):
-    pkgdir = tmp_path
+def test_Adjuster_adjust__empty_wrkdir(tmp_path: Path):
     wrkdir = tmp_path / 'wrkdir'
-    fake = '''\
-#! /bin/sh
-case $* in
-("show-var VARNAME=WRKDIR") echo '%s' ;;
-(*) "unknown: $*" ;;
-esac
-''' % str(wrkdir)
     up.pkgdir = tmp_path
     wrkdir.mkdir()
-    url = 'https://example.org/distfile-1.0.zip'
-    adjuster = Adjuster(up, url, Lines())
-    adjuster.abs_wrkdir = str(wrkdir)
-    (pkgdir / 'Makefile').write_text('# url2pkg-marker\n')
+    adjuster = Adjuster(up, 'https://example.org/distfile-1.0.zip', Lines())
+    adjuster.abs_wrkdir = wrkdir
+    (tmp_path / 'Makefile').write_text('# url2pkg-marker\n')
     fake_path = tmp_path / 'fake'
-    fake_path.write_text(fake)
+    fake_path.write_text(
+        '#! /bin/sh\n'
+        'case $* in\n'
+        f'("show-var VARNAME=WRKDIR") echo "{wrkdir}" ;;\n'
+        '(*) "unknown: $*" ;;\n'
+        'esac\n')
     fake_path.chmod(0o755)
-
-    prev_make = up.make
     up.make = fake_path
-    try:
-        adjuster.adjust()
-    finally:
-        up.make = prev_make
+
+    adjuster.adjust()
 
     assert detab(adjuster.generate_lines()) == [
         'WRKSRC=         ${WRKDIR}',
@@ -1266,7 +1273,7 @@ esac
     ]
 
 
-def test_Adjuster_adjust_lines_python_module(tmp_path: pathlib.Path):
+def test_Adjuster_adjust_lines_python_module(tmp_path: Path):
     url = 'https://github.com/espressif/esptool/archive/v2.7.tar.gz'
     up.pkgdir = tmp_path
     up.make = 'true'  # the shell command
