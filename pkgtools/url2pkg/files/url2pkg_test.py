@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.8 2019/10/05 11:02:30 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.9 2019/10/05 12:22:51 rillig Exp $
 
 import pytest
 from url2pkg import *
@@ -14,6 +14,26 @@ def setup_function(_):
     up.pkgsrcdir = os.getenv('PKGSRCDIR')
     assert up.pkgsrcdir is not None
     os.chdir(up.pkgsrcdir + '/pkgtools/url2pkg')
+
+    class Wr:
+        def __init__(self) -> None:
+            self.buf = ''
+
+        def write(self, s: str):
+            self.buf += s
+
+        def output(self):
+            result = self.buf
+            self.buf = ''
+            return result
+
+    up.out = Wr()
+    up.err = Wr()
+
+
+def teardown_function(_):
+    assert up.out.output() == ''
+    assert up.err.output() == ''
 
 
 def str_vars(vars: List[Var]) -> List[str]:
@@ -33,6 +53,7 @@ def str_varassigns(varassigns: Sequence[Varassign]) -> List[str]:
 
 def detab(lines: Lines) -> List[str]:
     """ Replaces tabs with the appropriate amount of spaces. """
+
     def detab_line(line: str) -> str:
         detabbed = []
         for ch in line:
@@ -45,28 +66,29 @@ def detab(lines: Lines) -> List[str]:
     return list(map(detab_line, lines.lines))
 
 
-def test_debug():
-    class Wr:
-        def __init__(self) -> None:
-            self.output = ''
-
-        def write(self, s: str):
-            self.output += s
-
+def test_Url2Pkg_debug():
     up.verbose = True
-    up.err = Wr()
 
     up.debug('plain message')
     up.debug('list {0}', [1, 2, 3])
     up.debug('tuple {0}', (1, 2, 3))
     up.debug('cwd {0} env {1} cmd {2}', 'directory', {'VAR': 'value'}, 'command')
 
-    assert up.err.output.splitlines() == [
+    assert up.err.output().splitlines() == [
         'url2pkg: plain message',
         'url2pkg: list [1, 2, 3]',
         'url2pkg: tuple (1, 2, 3)',
         'url2pkg: cwd \'directory\' env {\'VAR\': \'value\'} cmd \'command\'',
     ]
+
+
+def test_Url2Pkg_bmake():
+    up.verbose = True
+    up.make = 'echo'
+
+    up.bmake('hello', 'world')
+
+    assert up.err.output() == 'url2pkg: running bmake (\'hello\', \'world\')\n'
 
 
 def test_Lines__write_and_read(tmp_path):
@@ -485,6 +507,29 @@ def test_Generator_adjust_site_from_sites_mk__without_subdir():
     ]
 
 
+def test_Generator_adjust_site_from_sites_mk__GNU():
+    url = 'https://ftp.gnu.org/pub/gnu/cflow/cflow-1.6.tar.gz'
+    generator = Generator(url)
+
+    lines = generator.generate_Makefile()
+
+    assert detab(lines) == [
+        mkcvsid,
+        '',
+        'DISTNAME=       cflow-1.6',
+        'CATEGORIES=     pkgtools',
+        'MASTER_SITES=   ${MASTER_SITE_GNU:=cflow/}',
+        '',
+        'MAINTAINER=     INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org',
+        'HOMEPAGE=       https://www.gnu.org/software/cflow/',
+        'COMMENT=        TODO: Short description of the package',
+        '#LICENSE=       # TODO: (see mk/license.mk)',
+        '',
+        '# url2pkg-marker (please do not remove this line.)',
+        '.include "../../mk/bsd.pkg.mk"',
+    ]
+
+
 def test_Generator_adjust_everything_else__distname_version_with_v():
     # Some version numbers have a leading 'v', derived from the Git tag name.
 
@@ -539,6 +584,7 @@ def test_Adjuster_read_dependencies():
         'DEPENDS\tpackage>=112.0:../../pkgtools/pkglint',
         'DEPENDS\tpackage>=120.0:../../pkgtools/x11-links',
         'BUILD_DEPENDS\turl2pkg>=1.0',
+        'BUILD_DEPENDS\tdoes-not-exist>=1.0',
         'TEST_DEPENDS\tpkglint',
         'A line that is not a dependency at all',
         '',
@@ -557,7 +603,10 @@ def test_Adjuster_read_dependencies():
         'BUILDLINK_API_DEPENDS.x11-links+=\tx11-links>=120.0',
         ".include \"../../pkgtools/x11-links/buildlink3.mk\"",
     ]
-    assert adjuster.build_depends == ['url2pkg>=1.0:../../pkgtools/url2pkg']
+    assert adjuster.build_depends == [
+        'url2pkg>=1.0:../../pkgtools/url2pkg',
+        '# TODO: does-not-exist>=1.0',
+    ]
     assert adjuster.test_depends == ['pkglint>=0:../../pkgtools/pkglint']
     assert adjuster.update_vars == {'HOMEPAGE': 'https://homepage.example.org/'}
 
