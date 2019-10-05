@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.30 2017/09/18 05:31:02 taca Exp $
+@comment $NetBSD: PLIST,v 1.31 2019/10/05 06:11:25 ryoon Exp $
 bin/rabbirc${RUBY_SUFFIX}
-bin/rabbit${RUBY_SUFFIX}
 bin/rabbit-command${RUBY_SUFFIX}
 bin/rabbit-slide${RUBY_SUFFIX}
 bin/rabbit-theme${RUBY_SUFFIX}
+bin/rabbit${RUBY_SUFFIX}
 ${RUBY_VENDORLIB}/rabbit/action.rb
 ${RUBY_VENDORLIB}/rabbit/action/basic.rb
 ${RUBY_VENDORLIB}/rabbit/action/radio.rb
@@ -11,6 +11,7 @@ ${RUBY_VENDORLIB}/rabbit/action/toggle.rb
 ${RUBY_VENDORLIB}/rabbit/author-configuration.rb
 ${RUBY_VENDORLIB}/rabbit/canvas.rb
 ${RUBY_VENDORLIB}/rabbit/command/rabbit-slide.rb
+${RUBY_VENDORLIB}/rabbit/command/rabbit-slide.ui
 ${RUBY_VENDORLIB}/rabbit/command/rabbit-theme.rb
 ${RUBY_VENDORLIB}/rabbit/command/rabbit.rb
 ${RUBY_VENDORLIB}/rabbit/config.rb
@@ -49,6 +50,7 @@ ${RUBY_VENDORLIB}/rabbit/element/text.rb
 ${RUBY_VENDORLIB}/rabbit/element/title-slide.rb
 ${RUBY_VENDORLIB}/rabbit/element/video.rb
 ${RUBY_VENDORLIB}/rabbit/error.rb
+${RUBY_VENDORLIB}/rabbit/filename.rb
 ${RUBY_VENDORLIB}/rabbit/formatter.rb
 ${RUBY_VENDORLIB}/rabbit/frame.rb
 ${RUBY_VENDORLIB}/rabbit/front.rb
@@ -79,6 +81,7 @@ ${RUBY_VENDORLIB}/rabbit/logger/base.rb
 ${RUBY_VENDORLIB}/rabbit/logger/gui.rb
 ${RUBY_VENDORLIB}/rabbit/logger/stderr.rb
 ${RUBY_VENDORLIB}/rabbit/menu.rb
+${RUBY_VENDORLIB}/rabbit/pango-markup.rb
 ${RUBY_VENDORLIB}/rabbit/parser.rb
 ${RUBY_VENDORLIB}/rabbit/parser/base.rb
 ${RUBY_VENDORLIB}/rabbit/parser/ext/aafigure.rb
@@ -146,11 +149,10 @@ ${RUBY_VENDORLIB}/rabbit/renderer/engine/cairo.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/gl.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/kernel.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/offscreen.rb
-${RUBY_VENDORLIB}/rabbit/renderer/print.rb
-${RUBY_VENDORLIB}/rabbit/renderer/print/base.rb
-${RUBY_VENDORLIB}/rabbit/renderer/print/cairo.rb
-${RUBY_VENDORLIB}/rabbit/renderer/print/layout.rb
-${RUBY_VENDORLIB}/rabbit/renderer/print/multiple.rb
+${RUBY_VENDORLIB}/rabbit/renderer/print-layout.rb
+${RUBY_VENDORLIB}/rabbit/renderer/printer.rb
+${RUBY_VENDORLIB}/rabbit/renderer/screen.rb
+${RUBY_VENDORLIB}/rabbit/renderer/widget/drawing-area.rb
 ${RUBY_VENDORLIB}/rabbit/search-window.rb
 ${RUBY_VENDORLIB}/rabbit/searcher.rb
 ${RUBY_VENDORLIB}/rabbit/size.rb
@@ -168,9 +170,7 @@ ${RUBY_VENDORLIB}/rabbit/source.rb
 ${RUBY_VENDORLIB}/rabbit/source/argf.rb
 ${RUBY_VENDORLIB}/rabbit/source/base.rb
 ${RUBY_VENDORLIB}/rabbit/source/file.rb
-${RUBY_VENDORLIB}/rabbit/source/hiki.rb
 ${RUBY_VENDORLIB}/rabbit/source/memory.rb
-${RUBY_VENDORLIB}/rabbit/source/slide-share.rb
 ${RUBY_VENDORLIB}/rabbit/source/uri.rb
 ${RUBY_VENDORLIB}/rabbit/stock.rb
 ${RUBY_VENDORLIB}/rabbit/task.rb
