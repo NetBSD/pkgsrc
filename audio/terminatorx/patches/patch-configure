@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2019/10/05 12:09:26 nia Exp $
+
+Fix shell portability.
+
+--- configure.orig	2016-07-24 14:24:22.000000000 +0000
++++ configure
+@@ -5177,7 +5177,7 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-if test "$GLIB_COMPILE_RESOURCES" == ""; then :
++if test "$GLIB_COMPILE_RESOURCES" = ""; then :
+ 
+        	as_fn_error $? "glib-compile-resources not found" "$LINENO" 5
+ 
