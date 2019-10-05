@@ -1,13 +1,8 @@
-$NetBSD: distinfo,v 1.15 2019/07/20 19:45:57 nia Exp $
+$NetBSD: distinfo,v 1.16 2019/10/05 17:39:38 nia Exp $
 
-SHA1 (ladspa_sdk_1.13.tgz) = 2b69e28afb62c0d97943124f48ed82de796f83ed
-RMD160 (ladspa_sdk_1.13.tgz) = e9eeae8edd24a6890fac3e34c4b55f844f44f8a0
-SHA512 (ladspa_sdk_1.13.tgz) = a1dab807fda58e08869d3f519be5fa91c394690eb13006fbe7f20b332548e4676b32b01273f5695bf36c8da72190c07618662a76d50f991b3f05068ac2b346ef
-Size (ladspa_sdk_1.13.tgz) = 70540 bytes
-SHA1 (patch-aa) = c233427fd90b701841f113bd980e7538cb4b2b62
-SHA1 (patch-ab) = 1357f25ef53c24c737a4888ba7d01fb724a3f315
-SHA1 (patch-ac) = 40108e5e4fdba9b2be322d0de532a97322d22325
-SHA1 (patch-plugins_amp.c) = e0336ff7fe078aa6b4e6b3d25b21b70ac6dc127d
-SHA1 (patch-plugins_delay.c) = ee551be35938b69d7b535640858d67ceeb261ee0
-SHA1 (patch-plugins_filter.c) = 79b050f99a68ebd87e76f552054592331c31828e
-SHA1 (patch-plugins_noise.c) = 9e996f5f9ad4e39974cafea52af143e9db4603f7
+SHA1 (ladspa_sdk_1.15.tgz) = b7bbbf47e00b6c5248b35796a362644393457878
+RMD160 (ladspa_sdk_1.15.tgz) = 94ade7b6286d0536a80d748e33ed94162beef9cf
+SHA512 (ladspa_sdk_1.15.tgz) = a521622e23d988284244003e4ccfc3b42f6ddc7944cb00e7949b87e09d7f39a0cbb64b6d8b5a5af0a5ccf7179f88815416a88f02d3912957167e54b74accfc65
+Size (ladspa_sdk_1.15.tgz) = 71179 bytes
+SHA1 (patch-src_Makefile) = 9b5f12cdb32b88e9d0354ddc4f7539ca8da95eb0
+SHA1 (patch-src_applyplugin.c) = 88127403707150d8646f85a7a5d6a146c812b34e

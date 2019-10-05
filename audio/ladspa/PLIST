@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/07/15 22:58:50 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/10/05 17:39:38 nia Exp $
 bin/analyseplugin
 bin/applyplugin
 bin/listplugins
@@ -8,3 +8,15 @@ lib/ladspa/delay.la
 lib/ladspa/filter.la
 lib/ladspa/noise.la
 lib/ladspa/sine.la
+share/doc/ladspa/COPYING
+share/doc/ladspa/background.html
+share/doc/ladspa/changes.html
+share/doc/ladspa/download.html
+share/doc/ladspa/example_plugins.html
+share/doc/ladspa/index.html
+share/doc/ladspa/installation.html
+share/doc/ladspa/ladspa.h.txt
+share/doc/ladspa/license.html
+share/doc/ladspa/overview.html
+share/doc/ladspa/shared_plugins.html
+share/doc/ladspa/unique_ids.html
