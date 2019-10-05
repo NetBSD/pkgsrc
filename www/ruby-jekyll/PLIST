@@ -1,11 +1,17 @@
-@comment $NetBSD: PLIST,v 1.13 2018/09/23 17:15:17 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2019/10/05 05:10:12 ryoon Exp $
 bin/jekyll${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.rubocop.yml
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.markdown
 ${GEM_LIBDIR}/exe/jekyll
+${GEM_LIBDIR}/lib/blank_template/_config.yml
+${GEM_LIBDIR}/lib/blank_template/_layouts/default.html
+${GEM_LIBDIR}/lib/blank_template/_sass/main.scss
+${GEM_LIBDIR}/lib/blank_template/assets/css/main.scss
+${GEM_LIBDIR}/lib/blank_template/index.md
 ${GEM_LIBDIR}/lib/jekyll.rb
+${GEM_LIBDIR}/lib/jekyll/cache.rb
 ${GEM_LIBDIR}/lib/jekyll/cleaner.rb
 ${GEM_LIBDIR}/lib/jekyll/collection.rb
 ${GEM_LIBDIR}/lib/jekyll/command.rb
@@ -25,8 +31,6 @@ ${GEM_LIBDIR}/lib/jekyll/converter.rb
 ${GEM_LIBDIR}/lib/jekyll/converters/identity.rb
 ${GEM_LIBDIR}/lib/jekyll/converters/markdown.rb
 ${GEM_LIBDIR}/lib/jekyll/converters/markdown/kramdown_parser.rb
-${GEM_LIBDIR}/lib/jekyll/converters/markdown/rdiscount_parser.rb
-${GEM_LIBDIR}/lib/jekyll/converters/markdown/redcarpet_parser.rb
 ${GEM_LIBDIR}/lib/jekyll/converters/smartypants.rb
 ${GEM_LIBDIR}/lib/jekyll/convertible.rb
 ${GEM_LIBDIR}/lib/jekyll/deprecator.rb
@@ -60,6 +64,7 @@ ${GEM_LIBDIR}/lib/jekyll/log_adapter.rb
 ${GEM_LIBDIR}/lib/jekyll/mime.types
 ${GEM_LIBDIR}/lib/jekyll/page.rb
 ${GEM_LIBDIR}/lib/jekyll/page_without_a_file.rb
+${GEM_LIBDIR}/lib/jekyll/path_manager.rb
 ${GEM_LIBDIR}/lib/jekyll/plugin.rb
 ${GEM_LIBDIR}/lib/jekyll/plugin_manager.rb
 ${GEM_LIBDIR}/lib/jekyll/publisher.rb
@@ -89,7 +94,6 @@ ${GEM_LIBDIR}/lib/jekyll/utils/ansi.rb
 ${GEM_LIBDIR}/lib/jekyll/utils/exec.rb
 ${GEM_LIBDIR}/lib/jekyll/utils/internet.rb
 ${GEM_LIBDIR}/lib/jekyll/utils/platforms.rb
-${GEM_LIBDIR}/lib/jekyll/utils/rouge.rb
 ${GEM_LIBDIR}/lib/jekyll/utils/thread_event.rb
 ${GEM_LIBDIR}/lib/jekyll/utils/win_tz.rb
 ${GEM_LIBDIR}/lib/jekyll/version.rb
@@ -97,8 +101,8 @@ ${GEM_LIBDIR}/lib/site_template/.gitignore
 ${GEM_LIBDIR}/lib/site_template/404.html
 ${GEM_LIBDIR}/lib/site_template/_config.yml
 ${GEM_LIBDIR}/lib/site_template/_posts/0000-00-00-welcome-to-jekyll.markdown.erb
-${GEM_LIBDIR}/lib/site_template/about.md
-${GEM_LIBDIR}/lib/site_template/index.md
+${GEM_LIBDIR}/lib/site_template/about.markdown
+${GEM_LIBDIR}/lib/site_template/index.markdown
 ${GEM_LIBDIR}/lib/theme_template/CODE_OF_CONDUCT.md.erb
 ${GEM_LIBDIR}/lib/theme_template/Gemfile
 ${GEM_LIBDIR}/lib/theme_template/LICENSE.txt.erb
@@ -113,6 +117,7 @@ ${GEM_LIBDIR}/lib/theme_template/example/style.scss
 ${GEM_LIBDIR}/lib/theme_template/gitignore.erb
 ${GEM_LIBDIR}/lib/theme_template/theme.gemspec.erb
 ${GEM_LIBDIR}/rubocop/jekyll.rb
+${GEM_LIBDIR}/rubocop/jekyll/assert_equal_literal_actual.rb
 ${GEM_LIBDIR}/rubocop/jekyll/no_p_allowed.rb
 ${GEM_LIBDIR}/rubocop/jekyll/no_puts_allowed.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
