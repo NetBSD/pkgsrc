@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/10/03 23:44:31 nia Exp $
+# $NetBSD: Makefile,v 1.18 2019/10/05 14:34:59 nia Exp $
 
 DISTNAME=		adwaita-icon-theme-3.30.1
 PKGREVISION=		1
@@ -40,4 +40,5 @@ post-install:
 
 BUILDLINK_DEPMETHOD.gettext-lib=        build
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/librsvg/tool.mk"
 .include "../../mk/bsd.pkg.mk"
