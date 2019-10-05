@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2019/04/15 06:11:33 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/10/05 04:55:09 ryoon Exp $
 
-DISTNAME=	jekyll-seo-tag-2.5.0
+DISTNAME=	jekyll-seo-tag-2.6.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
