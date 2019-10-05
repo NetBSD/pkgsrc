@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/10/05 04:11:43 ryoon Exp $
+
+SHA1 (terminal-table-1.8.0.gem) = e5d8ae048471029bd8991152c7e8c20aafb8b935
+RMD160 (terminal-table-1.8.0.gem) = 8f96590f03437b45f00c4c01857fe4bed736e5b3
+SHA512 (terminal-table-1.8.0.gem) = 489b2f9edf84e69a4e458da64feb7135f86689bdad07d4252e10c82bfa79b5a49f3f74abf9d3a78c48a3ceaf13bf539b01b1dd85016d11ef66346eda50b1d72f
+Size (terminal-table-1.8.0.gem) = 13824 bytes
