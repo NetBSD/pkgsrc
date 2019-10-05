@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2014/11/03 04:27:20 obache Exp $
+@comment $NetBSD: PLIST,v 1.39 2019/10/05 21:39:25 nia Exp $
 share/icons/gnome/16x16/actions/add.png
 share/icons/gnome/16x16/actions/address-book-new.png
 share/icons/gnome/16x16/actions/application-exit.png
@@ -3709,7 +3709,6 @@ share/icons/gnome/256x256/places/network.png
 share/icons/gnome/256x256/places/network_local.png
 share/icons/gnome/256x256/places/redhat-network-server.png
 share/icons/gnome/256x256/places/server.png
-share/icons/gnome/256x256/places/start-here.png
 share/icons/gnome/256x256/places/stock_folder.png
 share/icons/gnome/256x256/places/trashcan_empty.png
 share/icons/gnome/256x256/places/user-bookmarks.png
