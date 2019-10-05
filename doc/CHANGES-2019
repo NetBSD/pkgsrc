@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4187 2019/10/05 05:10:38 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.4188 2019/10/05 06:07:09 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6763,3 +6763,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/ruby-jekyll-sass-converter to 2.0.1 [ryoon 2019-10-05]
 	Updated www/ruby-jekyll-minima to 2.5.1 [ryoon 2019-10-05]
 	Updated www/ruby-jekyll to 4.0.0 [ryoon 2019-10-05]
+	Updated print/poppler-glib to 0.79.0nb1 [ryoon 2019-10-05]
