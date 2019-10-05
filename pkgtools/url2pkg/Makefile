@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2019/10/03 09:37:40 rillig Exp $
+# $NetBSD: Makefile,v 1.104 2019/10/05 19:24:35 rillig Exp $
 
 PKGNAME=	url2pkg-19.3.1
 CATEGORIES=	pkgtools
@@ -22,7 +22,8 @@ do-extract:
 
 do-test:
 	${RUN} cd ${WRKSRC} && env PKGSRCDIR=${PKGSRCDIR} perl -I. url2pkg.t
-	${RUN} cd ${WRKSRC} && env PKGSRCDIR=${PKGSRCDIR} ${PREFIX}/bin/pytest-${PYVERSSUFFIX}
+	${RUN} cd ${WRKSRC} && env PKGSRCDIR=${PKGSRCDIR} MAKE=${MAKE:Q} \
+		${PREFIX}/bin/pytest-${PYVERSSUFFIX}
 
 .include "../../mk/bsd.prefs.mk"
 

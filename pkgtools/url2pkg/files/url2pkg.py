@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.11 2019/10/05 18:00:09 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.12 2019/10/05 19:24:35 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -77,18 +77,19 @@ class Varassign:
 class Url2Pkg:
 
     def __init__(self):
-        self.make = '@MAKE@'
+        self.make = os.getenv('MAKE') or '@MAKE@'
         self.libdir = '@LIBDIR@'
         self.perl5 = '@PERL5@'
-        self.pkgsrcdir = '@PKGSRCDIR@'
+        self.pkgsrcdir = pathlib.Path(os.getenv('PKGSRCDIR') or '@PKGSRCDIR@')
         self.pythonbin = '@PYTHONBIN@'
         self.editor = os.getenv('PKGEDITOR') or os.getenv('EDITOR') or 'vi'
 
-        self.verbose = False
+        # the following are overridden in tests
+        self.pkgdir = pathlib.Path('.')
+        self.out = sys.stdout
+        self.err = sys.stderr
 
-        self.pkgdir = pathlib.Path('.')  # only overridable for tests
-        self.out = sys.stdout  # only overridable for tests
-        self.err = sys.stderr  # only overridable for tests
+        self.verbose = False
 
     def debug(self, fmt: str, *args):
         if self.verbose:
@@ -96,14 +97,14 @@ class Url2Pkg:
             self.err.write(f'url2pkg: {msg}\n')
 
     def find_package(self, pkgbase: str) -> str:
-        candidates = glob.glob(f'{self.pkgsrcdir}/*/{pkgbase}')
+        candidates = list(self.pkgsrcdir.glob(f'*/{pkgbase}'))
         self.debug('candidates for package {0} are {1}', pkgbase, candidates)
         if len(candidates) != 1:
             return ''
-        return candidates[0].replace(self.pkgsrcdir, '../..')
+        return str(candidates[0]).replace(str(self.pkgsrcdir), '../..')
 
     def bmake(self, *args: str) -> None:
-        self.debug('running bmake {0}', args)
+        self.debug('running bmake {0} in {1}', args, str(self.pkgdir))
         subprocess.check_call([self.make, *args], cwd=self.pkgdir)
 
     def show_var(self, varname: str) -> str:
@@ -367,8 +368,6 @@ class Generator:
         if self.master_sites != '':
             return
 
-        if '/' not in self.url:
-            sys.exit(f'error: URL "{self.url}" must have at least one slash')
         base_url, self.distfile = re.search(r'^(.*/)(.*)$', self.url).groups()
 
         self.master_sites = base_url
@@ -931,20 +930,21 @@ class Adjuster:
             self.up.bmake('distinfo')
 
 
-def main():
+def main(argv: List[str], up: Url2Pkg):
     if not os.path.isfile('../../mk/bsd.pkg.mk'):
-        sys.exit(f'ERROR: {sys.argv[0]} must be run from a package directory (.../pkgsrc/category/package).')
+        sys.exit(f'{argv[0]}: must be run from a package directory (.../pkgsrc/category/package)')
 
-    up = Url2Pkg()
     try:
-        opts, args = getopt.getopt(sys.argv[1:], 'v', ['verbose'])
+        opts, args = getopt.getopt(argv[1:], 'v', ['verbose'])
         for (opt, _) in opts:
             if opt in ('-v', '--verbose'):
                 up.verbose = True
     except getopt.GetoptError:
-        sys.exit(f'usage: {sys.argv[0]} [-v|--verbose] [URL]')
+        sys.exit(f'usage: {argv[0]} [-v|--verbose] [URL]')
 
     url = args[0] if args else input('URL: ')
+    if not re.fullmatch(r'\w+://[!-~]+?/[!-~]+', url):
+        sys.exit(f'url2pkg: invalid URL: {url}')
 
     if not up.pkgdir.glob('w*/.extract_done') or not (up.pkgdir / 'Makefile').is_file():
         initial_lines = Generator(url).generate_package(up)
@@ -953,11 +953,11 @@ def main():
 
     Adjuster(up, url, initial_lines).adjust()
 
-    print('')
-    print('Remember to run pkglint when you\'re done.')
-    print('See ../../doc/pkgsrc.txt to get some help.')
-    print('')
+    up.out.write('\n')
+    up.out.write('Remember to run pkglint when you\'re done.\n')
+    up.out.write('See ../../doc/pkgsrc.txt to get some help.\n')
+    up.out.write('\n')
 
 
 if __name__ == '__main__':
-    main()
+    main(sys.argv, Url2Pkg())
