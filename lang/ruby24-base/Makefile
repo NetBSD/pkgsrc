@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/04/07 16:17:39 taca Exp $
+# $NetBSD: Makefile,v 1.12.4.1 2019/10/05 10:13:20 bsiegert Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION}
@@ -12,7 +12,6 @@ COMMENT=	Ruby ${RUBY_VERSION} release minimum base package
 RUBY_VERSIONS_ACCEPTED=	24
 
 USE_GCC_RUNTIME=	yes
-USE_LANGUAGES=		c
 USE_TOOLS+=		pax yacc pkg-config
 GNU_CONFIGURE=		yes
 TEST_TARGET=		test
