@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4181 2019/10/05 04:34:36 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.4182 2019/10/05 04:46:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6757,3 +6757,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added textproc/ruby-unicode-display_width version 1.6.0 [ryoon 2019-10-04]
 	Added textproc/ruby-terminal-table version 1.8.0 [ryoon 2019-10-05]
 	Updated textproc/ruby-kramdown to 2.1.0 [ryoon 2019-10-05]
+	Updated textproc/ruby-kramdown-parser-gfm to 1.0.1 [ryoon 2019-10-05]
