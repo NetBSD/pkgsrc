@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.12 2019/10/05 19:24:35 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.13 2019/10/05 19:59:04 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -266,11 +266,8 @@ class Generator:
                     continue
 
                 m = re.search(r'^\t(.*?)(?:\s+\\)?$', line)
-                if not m:
-                    continue
-
-                site_url = m[1]
-                action(varname, site_url)
+                if m:
+                    action(varname, m[1])
 
     def adjust_site_from_sites_mk(self, varname: str, site_url: str):
 
@@ -379,15 +376,15 @@ class Generator:
             distname, extract_sufx = m.groups()
         else:
             distname, extract_sufx = self.distfile, '# none'
+        self.distname = distname
 
         m = re.search(r'^v\d', distname)
         if m:
             self.pkgname_transform = ':S,^v,,'
         elif re.search(r'-v\d', distname) and not re.search(r'-v.*-v\d', distname):
             self.pkgname_transform = ':S,-v,-,'
-        self.distname = distname
 
-        main_category = re.search(r'.*/([^/]+)/[^/]+$', os.getcwd())[1]
+        main_category = pathlib.Path.cwd().parts[-2]
         self.categories = main_category \
             if main_category not in ('local', 'wip') \
             else '# TODO: add primary category'
@@ -454,10 +451,8 @@ class Generator:
         except OSError:
             pass
         initial_lines.write_to(makefile)
-        if not os.path.isfile(plist):
-            Lines('@comment $''NetBSD$').write_to(plist)
-        if not os.path.isfile(descr):
-            Lines().write_to(descr)
+        plist.is_file() or Lines('@comment $''NetBSD$').write_to(plist)
+        descr.is_file() or Lines().write_to(descr)
 
         subprocess.check_call([up.editor, makefile])
 
@@ -468,8 +463,8 @@ class Generator:
 
 class Adjuster:
     """
-    The following adjust_* functions are called after the distfiles have
-    been downloaded and extracted. They inspect the extracted files
+    After the distfile has been downloaded and extracted, the
+    adjust_* methods of this class inspect the extracted files
     and adjust the variable definitions in the package Makefile.
     """
 
