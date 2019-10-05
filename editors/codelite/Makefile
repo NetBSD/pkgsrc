@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/09/30 15:36:43 nia Exp $
+# $NetBSD: Makefile,v 1.25 2019/10/05 14:23:05 nia Exp $
 
 DISTNAME=	codelite-13.0
 PKGREVISION=	1
@@ -69,6 +69,7 @@ REPLACE_PYTHON+=	codelite_open_helper.py
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/codelite
 
 .include "../../lang/nodejs/application.mk"
+.include "../../lang/nodejs/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
