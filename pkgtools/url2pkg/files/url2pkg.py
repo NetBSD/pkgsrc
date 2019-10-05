@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.9 2019/10/05 11:02:30 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.10 2019/10/05 12:22:51 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -267,10 +267,14 @@ class Generator:
                 action(varname, site_url)
 
     def adjust_site_from_sites_mk(self, varname: str, site_url: str):
-        if not self.url.startswith(site_url):
+
+        url_noproto = re.sub(r'^\w+://', '', self.url)
+        site_url_noproto = re.sub(r'^\w+://', '', site_url)
+
+        if not url_noproto.startswith(site_url_noproto):
             return
 
-        rest = self.url[len(site_url):]
+        rest = url_noproto[len(site_url_noproto):]
         if '/' not in rest:
             self.master_sites = f'${{{varname}}}'
             self.distfile = rest
@@ -283,10 +287,7 @@ class Generator:
         if varname == 'MASTER_SITE_GNU':
             self.homepage = f'https://www.gnu.org/software/{subdir}'
         else:
-            print('site_url', site_url)
-            print('distfile', self.distfile)
             self.homepage = self.url[:-len(self.distfile)] + ' # TODO: check'
-            print('homepage', self.homepage)
 
     def adjust_site_SourceForge(self):
         pattern = r'^https?://downloads\.sourceforge\.net/' \
