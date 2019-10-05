@@ -1,45 +1,58 @@
-# $NetBSD: Makefile,v 1.54 2019/07/21 22:24:29 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2019/10/05 12:09:26 nia Exp $
 
-DISTNAME=	terminatorX-3.82
-PKGNAME=	${DISTNAME:S/X/x/}
-PKGREVISION=	36
+DISTNAME=	terminatorX-4.0.1
+PKGNAME=	${DISTNAME:S/X/x/1}
 CATEGORIES=	audio
-MASTER_SITES=	http://terminatorx.org/dist/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	https://terminatorx.org/dist/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://terminatorx.org/
+HOMEPAGE=	https://terminatorx.org/
 COMMENT=	Realtime audio synthesizer
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	mpg123-[0-9]*:../../audio/mpg123
-DEPENDS+=	sox-[0-9]*:../../audio/sox
 DEPENDS+=	vorbis-tools-[0-9]*:../../audio/vorbis-tools
 
-USE_LANGUAGES=		c c++03
-USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
-GNU_CONFIGURE=		yes
+GNU_CONFIGURE=	yes
+USE_TOOLS+=	pkg-config
+USE_LIBTOOL=	yes
+USE_LANGUAGES=	c c++03
 
+CONFIGURE_ARGS+=	--disable-gtktest
+CONFIGURE_ARGS+=	--disable-scheduler
+
+.include "../../mk/oss.buildlink3.mk"
+
+.if ${OSS_TYPE} == "none"
+CONFIGURE_ARGS+=	--disable-oss
+.else
+CONFIGURE_ARGS+=	--enable-oss
 LIBS+=			${LIBOSSAUDIO}
-CONFIGURE_ARGS+=	--disable-alsa
-
 SUBST_CLASSES+=		oss
 SUBST_STAGE.oss=	pre-configure
 SUBST_FILES.oss=	src/tX_global.c
 SUBST_SED.oss=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 SUBST_MESSAGE.oss=	Fixing hardcoded audio device.
+.endif
+
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	pre-configure
+SUBST_MESSAGE.prefix=	Setting path to PREFIX in source files.
+SUBST_FILES.prefix+=	src/tX_global.c
+SUBST_FILES.prefix+=	src/tX_ladspa.cc
+SUBST_SED.prefix+=	-e "s|/usr/lib/ladspa|${PREFIX}/lib/ladspa|g"
+SUBST_SED.prefix+=	-e "s|/usr/share/ladspa|${PREFIX}/share/ladspa|g"
 
 .include "../../audio/ladspa/buildlink3.mk"
 .include "../../audio/libaudiofile/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
+.include "../../audio/mpg123/buildlink3.mk"
+.include "../../audio/sox/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
+.include "../../textproc/liblrdf/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../mk/omf-scrollkeeper.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/libXxf86dga/buildlink3.mk"
-.include "../../x11/xorgproto/buildlink3.mk"
-
-.include "../../mk/oss.buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
