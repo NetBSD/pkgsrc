@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.14 2019/10/05 21:05:50 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.15 2019/10/05 22:02:32 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -146,7 +146,7 @@ class Lines:
                 $
                 '''
             m = re.search(pattern, line)
-            if m and m[1].lstrip('#') == varname:
+            if m and m[1].lstrip('#') == varname.lstrip('#'):
                 varassigns.append(Varassign(i, *m.groups()))
         return varassigns
 
@@ -454,7 +454,7 @@ class Generator:
 
         subprocess.check_call([up.editor, makefile])
 
-        up.bmake('distinfo', 'extract')
+        up.bmake('clean', 'distinfo', 'extract')
 
         return initial_lines
 
