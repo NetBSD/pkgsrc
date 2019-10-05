@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:23 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/10/05 12:09:26 nia Exp $
 bin/terminatorX
 man/man1/terminatorX.1
-share/omf/terminatorX/terminatorX-manual-C.omf
-share/terminatorX/doc/terminatorX-manual/C/figures/signalflow.png
-share/terminatorX/doc/terminatorX-manual/C/terminatorX-manual.xml
+share/appdata/terminatorX.appdata.xml
+share/applications/terminatorX.desktop
+share/icons/hicolor/512x512/apps/terminatorX.png
+share/icons/hicolor/512x512/mimetypes/terminatorX-mime.png
+share/mime-info/terminatorX.keys
+share/mime-info/terminatorX.mime
+share/pixmaps/terminatorX.xpm
