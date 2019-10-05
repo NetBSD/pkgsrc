@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.13 2019/10/05 19:59:04 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.14 2019/10/05 21:05:50 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -42,13 +42,12 @@
 
 
 import getopt
-import glob
 import os
-import pathlib
 import re
 import subprocess
 import sys
-from typing import Callable, Dict, Iterator, List, Optional, Sequence, Tuple, Union
+from pathlib import Path
+from typing import Callable, Dict, List, Optional, Sequence, Tuple, Union
 
 
 class Var:
@@ -80,12 +79,12 @@ class Url2Pkg:
         self.make = os.getenv('MAKE') or '@MAKE@'
         self.libdir = '@LIBDIR@'
         self.perl5 = '@PERL5@'
-        self.pkgsrcdir = pathlib.Path(os.getenv('PKGSRCDIR') or '@PKGSRCDIR@')
+        self.pkgsrcdir = Path(os.getenv('PKGSRCDIR') or '@PKGSRCDIR@')
         self.pythonbin = '@PYTHONBIN@'
         self.editor = os.getenv('PKGEDITOR') or os.getenv('EDITOR') or 'vi'
 
         # the following are overridden in tests
-        self.pkgdir = pathlib.Path('.')
+        self.pkgdir = Path('.')
         self.out = sys.stdout
         self.err = sys.stderr
 
@@ -124,17 +123,16 @@ class Lines:
             self.add(line)
 
     @classmethod
-    def read_from(cls, filename: Union[str, pathlib.Path]) -> 'Lines':
-        return Lines(*pathlib.Path(filename).read_text().splitlines())
+    def read_from(cls, src: Path) -> 'Lines':
+        return Lines(*src.read_text().splitlines())
 
-    def write_to(self, filename: Union[str, pathlib.Path]):
-        target = pathlib.Path(filename)
-        tmp = target.with_name(f'{target.name}.tmp')
+    def write_to(self, dst: Path):
+        tmp = dst.with_name(f'{dst.name}.tmp')
         with tmp.open('w') as f:
             f.writelines(line + '\n' for line in self.lines)
-        tmp.replace(target)
+        tmp.replace(dst)
 
-    def all_varassigns(self, varname: str) -> Sequence[Varassign]:
+    def all_varassigns(self, varname: str) -> List[Varassign]:
         varassigns = []
         for (i, line) in enumerate(self.lines):
             pattern = r'''(?x)
@@ -384,7 +382,7 @@ class Generator:
         elif re.search(r'-v\d', distname) and not re.search(r'-v.*-v\d', distname):
             self.pkgname_transform = ':S,-v,-,'
 
-        main_category = pathlib.Path.cwd().parts[-2]
+        main_category = Path.cwd().parts[-2]
         self.categories = main_category \
             if main_category not in ('local', 'wip') \
             else '# TODO: add primary category'
@@ -476,11 +474,11 @@ class Adjuster:
 
         # the absolute pathname to the working directory, containing
         # the extracted distfiles.
-        self.abs_wrkdir = ''
+        self.abs_wrkdir = Path('')
 
         # the absolute pathname to a subdirectory of abs_wrkdir, typically
         # containing package-provided Makefiles or configure scripts.
-        self.abs_wrksrc = ''
+        self.abs_wrksrc = Path('')
 
         # the regular files and directories relative to abs_wrksrc.
         self.wrksrc_files: List[str] = []
@@ -576,7 +574,7 @@ class Adjuster:
         effective_env = dict(os.environ)
         effective_env.update(env)
 
-        self.up.debug('reading dependencies: cd {0} && env {1} {2}', cwd, env, cmd)
+        self.up.debug('reading dependencies: cd {0} && env {1} {2}', str(cwd), env, cmd)
         output: bytes = subprocess.check_output(args=cmd, shell=True, env=effective_env, cwd=cwd)
 
         dep_lines: List[Tuple[str, str, str, str]] = []
@@ -609,35 +607,39 @@ class Adjuster:
             self.add_dependency(kind, pkgbase, constraint, dep_dir)
 
     def wrksrc_open(self, relative_pathname: str):
-        return open(self.abs_wrksrc + '/' + relative_pathname)
+        return (self.abs_wrksrc / relative_pathname).open()
 
-    def wrksrc_find(self, what: Union[str, Callable[[str], bool]]) -> Iterator[str]:
+    def wrksrc_find(self, what: Union[str, Callable[[str], bool]]) -> List[str]:
         def search(f):
             return re.search(what, f) if type(what) == str else what(f)
 
         return list(sorted(filter(search, self.wrksrc_files)))
 
-    def wrksrc_grep(self, filename: str, pattern: str) -> List[str]:
+    def wrksrc_grep(self, filename: str, pattern: str) -> List[Union[str, List[str]]]:
         with self.wrksrc_open(filename) as f:
-            return [line for line in f if re.search(pattern, line)]
+            matches = []
+            for line in f:
+                line = line.rstrip('\n')
+                m = re.search(pattern, line)
+                if m:
+                    groups = list(m.groups())
+                    matches.append(groups if groups else line)
+            return matches
 
     def wrksrc_isdir(self, relative_pathname: str) -> bool:
-        return os.path.isdir(self.abs_wrksrc + '/' + relative_pathname)
+        return (self.abs_wrksrc / relative_pathname).is_dir()
 
     def wrksrc_isfile(self, relative_pathname: str) -> bool:
-        return os.path.isfile(self.abs_wrksrc + '/' + relative_pathname)
+        return (self.abs_wrksrc / relative_pathname).is_file()
 
     def adjust_configure(self):
         if not self.wrksrc_isfile('configure'):
             return
 
-        gnu = False
-        some = False
-        for configure in self.wrksrc_find(r'(^|/)configure$'):
-            some = True
-            if self.wrksrc_grep(configure, r'\b(Free Software Foundation|autoconf)\b'):
-                gnu = True
-        if some:
+        configures = self.wrksrc_find(r'(^|/)configure$')
+        if configures:
+            gnu = any(self.wrksrc_grep(configure, r'\b(Free Software Foundation|autoconf)\b')
+                      for configure in configures)
             varname = 'GNU_CONFIGURE' if gnu else 'HAS_CONFIGURE'
             self.build_vars.append(Var(varname, '=', 'yes'))
 
@@ -742,12 +744,9 @@ class Adjuster:
         if not self.wrksrc_isfile('Cargo.lock'):
             return
 
-        with self.wrksrc_open('Cargo.lock') as f:
-            for line in f:
-                # "checksum cargo-package-name cargo-package-version
-                m = re.search(r'^"checksum\s(\S+)\s(\S+)', line)
-                if m:
-                    self.build_vars.append(Var('CARGO_CRATE_DEPENDS', '+=', m[1] + '-' + m[2]))
+        # "checksum cargo-package-name cargo-package-version
+        for (name, version) in self.wrksrc_grep('Cargo.lock', r'^"checksum\s(\S+)\s(\S+)'):
+            self.build_vars.append(Var('CARGO_CRATE_DEPENDS', '+=', f'{name}-{version}'))
 
         self.includes.append('../../lang/rust/cargo.mk')
 
@@ -798,7 +797,7 @@ class Adjuster:
         if len(files) == 1:
             if files[0] != self.makefile_lines.get('DISTNAME'):
                 self.build_vars.append(Var('WRKSRC', '=', '${WRKDIR}/' + files[0]))
-            self.abs_wrksrc = self.abs_wrkdir + '/' + files[0]
+            self.abs_wrksrc = self.abs_wrkdir / files[0]
         elif len(files) == 0:
             self.build_vars.append(Var('WRKSRC', '=', '${WRKDIR}'))
             self.abs_wrksrc = self.abs_wrkdir
@@ -895,14 +894,14 @@ class Adjuster:
 
     def adjust(self):
 
-        def scan(basedir: str, pattern: str) -> List[str]:
-            full_paths = glob.glob(f'{basedir}/{pattern}', recursive=True)
-            return list(f[len(basedir) + 1:] for f in full_paths)
+        def scan(basedir: Path, pattern: str) -> List[str]:
+            full_paths = basedir.rglob(pattern)
+            return [str(f.relative_to(basedir)) for f in full_paths]
 
         self.up.debug('Adjusting the Makefile')
         self.makefile_lines = Lines.read_from(self.up.pkgdir / 'Makefile')
 
-        self.abs_wrkdir = self.up.show_var('WRKDIR')
+        self.abs_wrkdir = Path(self.up.show_var('WRKDIR'))
         self.determine_wrksrc()
         self.wrksrc_files = scan(self.abs_wrksrc, '**')
         self.wrksrc_dirs = scan(self.abs_wrksrc, '**/')
