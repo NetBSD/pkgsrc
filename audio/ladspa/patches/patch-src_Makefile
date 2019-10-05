@@ -1,0 +1,161 @@
+$NetBSD: patch-src_Makefile,v 1.1 2019/10/05 17:39:38 nia Exp $
+
+Libtool support.
+
+--- src/Makefile.orig	2019-01-06 12:27:52.000000000 +0000
++++ src/Makefile
+@@ -4,9 +4,9 @@
+ #
+ # Change these if you want to install somewhere else.
+ 
+-INSTALL_PLUGINS_DIR	=	/usr/lib/ladspa/
+-INSTALL_INCLUDE_DIR	=	/usr/include/
+-INSTALL_BINARY_DIR	=	/usr/bin/
++INSTALL_PLUGINS_DIR	=	${PREFIX}/lib/ladspa/
++INSTALL_INCLUDE_DIR	=	${PREFIX}/include/
++INSTALL_BINARY_DIR	=	${PREFIX}/bin/
+ 
+ ###############################################################################
+ #
+@@ -14,11 +14,12 @@ INSTALL_BINARY_DIR	=	/usr/bin/
+ #
+ 
+ INCLUDES	=	-I.
+-LIBRARIES	=	-ldl -lm
+-CFLAGS		=	$(INCLUDES) -Wall -Werror -O2 -fPIC 		\
++LIBRARIES	+=	-lm
++CFLAGS		+=	$(INCLUDES) -Wall -fPIC 			\
++			-DDEFAULT_LADSPA_PATH=$(INSTALL_PLUGINS_DIR)
++CXXFLAGS	+=	$(INCLUDES) -Wall -fPIC 			\
+ 			-DDEFAULT_LADSPA_PATH=$(INSTALL_PLUGINS_DIR)
+ BINFLAGS	=	-fPIE -pie
+-CXXFLAGS	=	$(CFLAGS)
+ PLUGINS		=	../plugins/amp.so				\
+ 			../plugins/delay.so				\
+ 			../plugins/filter.so				\
+@@ -27,35 +28,19 @@ PLUGINS		=	../plugins/amp.so				\
+ PROGRAMS	=	../bin/analyseplugin				\
+ 			../bin/applyplugin 				\
+ 			../bin/listplugins
+-CC		=	cc
+-CPP		=	c++
+ 
+ ###############################################################################
+ #
+ # RULES TO BUILD PLUGINS FROM C OR C++ CODE
+ #
+ 
+-../plugins/%.so:	plugins/%.c ladspa.h gcc_exports.map
+-	$(CC) $(CFLAGS) -o plugins/$*.o -c plugins/$*.c
+-	$(CC)	-o ../plugins/$*.so					\
+-		plugins/$*.o						\
+-		-shared							\
+-		$(CFLAGS)						\
+-		-fvisibility=hidden					\
+-		-fvisibility-inlines-hidden				\
+-		-s							\
+-		-Wl,--version-script=gcc_exports.map			
+-
+-../plugins/%.so:	plugins/%.cpp ladspa.h gcc_exports.map
+-	$(CPP) $(CXXFLAGS) -o plugins/$*.o -c plugins/$*.cpp
+-	$(CPP)	-o ../plugins/$*.so					\
+-		plugins/$*.o						\
+-		-shared							\
+-		$(CXXFLAGS)						\
+-		-fvisibility=hidden					\
+-		-fvisibility-inlines-hidden				\
+-		-s							\
+-		-Wl,--version-script=gcc_exports.map			
++../plugins/%.so: plugins/%.c ladspa.h gcc_exports.map
++	${LIBTOOL} --tag=CC --mode=compile $(CC) $(CPPFLAGS) $(CFLAGS) -o plugins/$*.lo -c plugins/$*.c
++	${LIBTOOL} --tag=CC --mode=link $(CC) $(LDFLAGS) -o ../plugins/$*.la plugins/$*.lo -rpath $(INSTALL_PLUGINS_DIR) -module -avoid-version
++ 
++../plugins/%.so: plugins/%.cpp ladspa.h
++	${LIBTOOL} --tag=CXX --mode=compile $(CXX) $(CPPFLAGS) $(CXXFLAGS) -o plugins/$*.lo -c plugins/$*.cpp
++	${LIBTOOL} --tag=CXX --mode=link $(CXX) $(LDFLAGS) -o ../plugins/$*.la plugins/$*.lo -rpath $(INSTALL_PLUGINS_DIR) -module -avoid-version
+ 
+ ###############################################################################
+ #
+@@ -84,19 +69,19 @@ install:	targets
+ 
+ /tmp/test.wav:	targets ../snd/noise.wav
+ 	../bin/listplugins
+-	../bin/analyseplugin ../plugins/filter.so
+-	../bin/analyseplugin ../plugins/delay.so
+-	../bin/analyseplugin ../plugins/sine.so
+-	echo ; ../bin/analyseplugin -l ../plugins/sine.so ; echo
+-	../bin/analyseplugin ../plugins/amp.so
+-	../bin/analyseplugin ../plugins/noise.so
+-	../bin/applyplugin	-s 1					\
+-				../snd/noise.wav /tmp/test.wav		\
+-				../plugins/filter.so lpf 500		\
+-				../plugins/filter.so lpf 500		\
+-				../plugins/sine.so sine_fcaa 6000	\
+-				../plugins/delay.so delay_5s 1 0.1	\
+-				../plugins/amp.so amp_mono 4		\
++	../bin/analyseplugin ../plugins/.libs/filter.so
++	../bin/analyseplugin ../plugins/.libs/delay.so
++	../bin/analyseplugin ../plugins/.libs/sine.so
++	echo ; ../bin/analyseplugin -l ../plugins/.libs/sine.so ; echo
++	../bin/analyseplugin ../plugins/.libs/amp.so
++	../bin/analyseplugin ../plugins/.libs/noise.so
++	../bin/applyplugin	-s 1						\
++				../snd/noise.wav /tmp/test.wav			\
++				../plugins/.libs/filter.so lpf 500		\
++				../plugins/.libs/filter.so lpf 500		\
++				../plugins/.libs/sine.so sine_fcaa 6000		\
++				../plugins/.libs/delay.so delay_5s 1 0.1	\
++				../plugins/.libs/amp.so amp_mono 4		\
+ 
+ targets:	$(PLUGINS) $(PROGRAMS)
+ 
+@@ -105,23 +90,32 @@ targets:	$(PLUGINS) $(PROGRAMS)
+ # PROGRAMS
+ #
+ 
+-../bin/applyplugin:	applyplugin.o load.o default.o
+-	$(CC) $(CFLAGS) $(BINFLAGS)					\
+-		-o ../bin/applyplugin					\
+-		applyplugin.o load.o default.o				\
+-		$(LIBRARIES)
+-
+-../bin/analyseplugin:	analyseplugin.o load.o default.o
+-	$(CC) $(CFLAGS) $(BINFLAGS)					\
+-		-o ../bin/analyseplugin 				\
+-		analyseplugin.o load.o default.o			\
+-		$(LIBRARIES)
+-
+-../bin/listplugins:	listplugins.o search.o
+-	$(CC) $(CFLAGS) $(BINFLAGS)					\
+-		-o ../bin/listplugins	 				\
+-		listplugins.o search.o					\
+-		$(LIBRARIES)
++default.o:
++	${LIBTOOL} --tag=CC --mode=compile $(CC) $(CPPFLAGS) $(CFLAGS) -c default.c
++
++load.o:
++	${LIBTOOL} --tag=CC --mode=compile $(CC) $(CPPFLAGS) $(CFLAGS) -c load.c
++
++applyplugin.o:
++	${LIBTOOL} --tag=CC --mode=compile $(CC) $(CPPFLAGS) $(CFLAGS) -c applyplugin.c
++
++analyseplugin.o:
++	${LIBTOOL} --tag=CC --mode=compile $(CC) $(CPPFLAGS) $(CFLAGS) -c analyseplugin.c
++
++listplugins.o:
++	${LIBTOOL} --tag=CC --mode=compile $(CC) $(CPPFLAGS) $(CFLAGS) -c listplugins.c
++
++search.o:
++	${LIBTOOL} --tag=CC --mode=compile $(CC) $(CPPFLAGS) $(CFLAGS) -c search.c
++
++../bin/applyplugin: applyplugin.o load.o default.o
++	${LIBTOOL} --tag=CC --mode=link $(CC) $(LDFLAGS) -o $@ $(^:.o=.lo) $(LIBRARIES)                                   \
++
++../bin/analyseplugin: analyseplugin.o load.o default.o
++	${LIBTOOL} --tag=CC --mode=link $(CC) $(LDFLAGS) -o $@ $(^:.o=.lo) $(LIBRARIES)
++
++../bin/listplugins: listplugins.o search.o
++	${LIBTOOL} --tag=CC --mode=link $(CC) $(LDFLAGS) -o $@ $(^:.o=.lo) $(LIBRARIES)
+ 
+ ###############################################################################
+ #
