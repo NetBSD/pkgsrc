@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.5 2019/07/15 22:58:50 nia Exp $
+$NetBSD: patch-src_applyplugin.c,v 1.1 2019/10/05 17:39:38 nia Exp $
 
-Add endian.h header for macosx
+Endian support for SunOS and macOS.
 
---- applyplugin.c.orig	2007-11-06 10:52:56.000000000 +0000
-+++ applyplugin.c
+--- src/applyplugin.c.orig	2019-01-06 12:27:52.000000000 +0000
++++ src/applyplugin.c
 @@ -6,7 +6,19 @@
  /*****************************************************************************/
  
