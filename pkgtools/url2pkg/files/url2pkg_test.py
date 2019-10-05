@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.11 2019/10/05 19:24:35 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.12 2019/10/05 19:59:04 rillig Exp $
 
 import pytest
 from url2pkg import *
@@ -1391,6 +1391,10 @@ def test_main__valid_URL():
         f'url2pkg: running bmake (\'distinfo\', \'extract\') in \'{up.pkgdir}\'',
         'url2pkg: Adjusting the Makefile',
     ]
+
+    up.verbose = False
+    up.bmake('clean')  # remove the work directory
+
     expected_files = ['DESCR', 'Makefile', 'PLIST', 'distinfo']
     assert sorted([f.name for f in up.pkgdir.glob("*")]) == expected_files
 
