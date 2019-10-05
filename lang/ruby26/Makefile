@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/02/03 13:42:36 taca Exp $
+# $NetBSD: Makefile,v 1.1.6.1 2019/10/05 19:53:04 bsiegert Exp $
 #
 
 DISTNAME=	# empty
@@ -10,7 +10,6 @@ DISTFILES=	# empty
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.ruby-lang.org/en/
 COMMENT=	Ruby programming language ${RUBY_VERSION} meta package
-LICENSE=	2-clause-bsd OR ruby-license
 
 META_PACKAGE=		yes
 
