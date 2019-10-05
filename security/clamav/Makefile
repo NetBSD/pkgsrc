@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2019/09/06 09:22:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.54 2019/10/05 20:52:52 nros Exp $
 
 PKGREVISION= 1
 .include "Makefile.common"
@@ -78,7 +78,7 @@ INSTALLATION_DIRS+=	${EGDIR}
 
 post-install:
 .for i in ${CONF_SAMPLES}
-	${MV} ${DESTDIR}${PREFIX}/etc/${i}.sample ${DESTDIR}${EGDIR}/${i}
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/${i}.sample ${DESTDIR}${EGDIR}/${i}
 .endfor
 
 .include "../../archivers/bzip2/buildlink3.mk"
