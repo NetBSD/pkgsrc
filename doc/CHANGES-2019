@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4195 2019/10/05 20:53:23 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.4196 2019/10/05 22:03:00 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6774,3 +6774,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/php-nextcloud to 17.0.0 [ryoon 2019-10-05]
 	Updated audio/ladspa to 1.15 [nia 2019-10-05]
 	Updated devel/fossil to 2.10nb1 [gutteridge 2019-10-05]
+	Updated pkgtools/url2pkg to 19.3.2 [rillig 2019-10-05]
