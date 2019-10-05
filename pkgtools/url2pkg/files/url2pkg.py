@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.10 2019/10/05 12:22:51 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.11 2019/10/05 18:00:09 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -44,6 +44,7 @@
 import getopt
 import glob
 import os
+import pathlib
 import re
 import subprocess
 import sys
@@ -81,10 +82,11 @@ class Url2Pkg:
         self.perl5 = '@PERL5@'
         self.pkgsrcdir = '@PKGSRCDIR@'
         self.pythonbin = '@PYTHONBIN@'
+        self.editor = os.getenv('PKGEDITOR') or os.getenv('EDITOR') or 'vi'
 
         self.verbose = False
 
-        self.pkgdir = '.'  # only overridable for tests
+        self.pkgdir = pathlib.Path('.')  # only overridable for tests
         self.out = sys.stdout  # only overridable for tests
         self.err = sys.stderr  # only overridable for tests
 
@@ -121,30 +123,32 @@ class Lines:
             self.add(line)
 
     @classmethod
-    def read_from(cls, filename: str) -> 'Lines':
-        pass
+    def read_from(cls, filename: Union[str, pathlib.Path]) -> 'Lines':
+        return Lines(*pathlib.Path(filename).read_text().splitlines())
 
-        lines = Lines()
-        with open(filename) as f:
-            for line in f:
-                lines.add(line.rstrip('\n'))
-        return lines
-
-    def write_to(self, filename: str):
-        with open(f'{filename}.tmp', 'w') as f:
+    def write_to(self, filename: Union[str, pathlib.Path]):
+        target = pathlib.Path(filename)
+        tmp = target.with_name(f'{target.name}.tmp')
+        with tmp.open('w') as f:
             f.writelines(line + '\n' for line in self.lines)
-        try:
-            os.remove(filename)
-        except OSError:
-            pass
-        os.rename(f'{filename}.tmp', filename)
+        tmp.replace(target)
 
     def all_varassigns(self, varname: str) -> Sequence[Varassign]:
         varassigns = []
         for (i, line) in enumerate(self.lines):
-            m = re.search(r'^(#?[\w+\-]+?)([!+:?]?=)([ \t]*)([^#\\]*?)(\s*)(#.*|)$', line)
+            pattern = r'''(?x)
+                ^
+                ([#]?[\w+\-]+?)  # varname
+                ([!+:?]?=)       # op
+                ([ \t]*)         # indent
+                ([^#\\]*?)       # value
+                (\s*)            # space_after_value
+                ([#].*|)         # comment
+                $
+                '''
+            m = re.search(pattern, line)
             if m and m[1].lstrip('#') == varname:
-                varassigns.append(Varassign(i, m[1], m[2], m[3], m[4], m[5], m[6]))
+                varassigns.append(Varassign(i, *m.groups()))
         return varassigns
 
     def unique_varassign(self, varname: str) -> Optional[Varassign]:
@@ -239,6 +243,7 @@ class Generator:
         self.extract_sufx = ''
         self.categories = ''
         self.github_project = ''
+        self.github_tag = ''
         self.github_release = ''
         self.dist_subdir = ''
         self.pkgname_prefix = ''
@@ -290,12 +295,15 @@ class Generator:
             self.homepage = self.url[:-len(self.distfile)] + ' # TODO: check'
 
     def adjust_site_SourceForge(self):
-        pattern = r'^https?://downloads\.sourceforge\.net/' \
-                  r'(?:project|sourceforge)/' \
-                  r'([^/?]+)/' \
-                  r'((?:[^/?]+/)*)' \
-                  r'([^/?]+)' \
-                  r'(?:\?.*)?$'
+        pattern = r'''(?x)
+            ^
+            https?://downloads\.sourceforge\.net/(?:project|sourceforge)/
+            ([^/?]+)/       # project name
+            ((?:[^/?]+/)*)  # subdirectories
+            ([^/?]+)        # filename
+            (?:\?.*)?       # query parameters
+            $
+            '''
         m = re.search(pattern, self.url)
         if not m:
             return
@@ -306,11 +314,15 @@ class Generator:
         self.distfile = filename
 
     def adjust_site_GitHub_archive(self):
-        pattern = r'^https://github\.com/' \
-                  r'(.+)/' \
-                  r'(.+)/archive/' \
-                  r'(.+)' \
-                  r'(\.tar\.gz|\.zip)$'
+        pattern = r'''(?x)
+            ^
+            https://github\.com/
+            (.+)/               # org
+            (.+)/archive/       # proj
+            (.+)                # tag
+            (\.tar\.gz|\.zip)   # ext
+            $
+            '''
         m = re.search(pattern, self.url)
         if not m:
             return
@@ -318,6 +330,7 @@ class Generator:
         org, proj, tag, ext = m.groups()
 
         self.github_project = proj
+        self.github_tag = tag
         self.master_sites = f'${{MASTER_SITE_GITHUB:={org}/}}'
         self.homepage = f'https://github.com/{org}/{proj}/'
         if proj not in tag:
@@ -326,12 +339,15 @@ class Generator:
         self.distfile = tag + ext
 
     def adjust_site_GitHub_release(self):
-        pattern = r'^https://github\.com/' \
-                  r'(.+)/' \
-                  r'(.+)/releases/download/' \
-                  r'(.+)/' \
-                  r'(.+)' \
-                  r'(\.tar\.gz|\.zip)$'
+        pattern = r'''(?x)
+            ^https://github\.com/
+            (.+)/               # org
+            (.+)/               # proj   
+            releases/download/
+            (.+)/               # tag
+            (.+)                # base
+            (\.tar\.gz|\.zip)$  # ext
+            '''
         m = re.search(pattern, self.url)
         if not m:
             return
@@ -395,6 +411,7 @@ class Generator:
 
         lines.add_vars(
             Var('GITHUB_PROJECT', '=', self.github_project),
+            Var('GITHUB_TAG', '=', self.github_tag),
             Var('DISTNAME', '=', self.distname),
             Var('PKGNAME', '=', self.pkgname),
             Var('CATEGORIES', '=', self.categories),
@@ -416,7 +433,7 @@ class Generator:
 
         return lines
 
-    def generate_Makefile(self):
+    def generate_Makefile(self) -> Lines:
         self.adjust_site_SourceForge()
         self.adjust_site_GitHub_archive()
         self.adjust_site_GitHub_release()
@@ -427,14 +444,14 @@ class Generator:
 
     def generate_package(self, up: Url2Pkg) -> Lines:
         pkgdir = up.pkgdir
-        makefile = f'{pkgdir}/Makefile'
-        descr = f'{pkgdir}/DESCR'
-        plist = f'{pkgdir}/PLIST'
+        makefile = pkgdir / 'Makefile'
+        descr = pkgdir / 'DESCR'
+        plist = pkgdir / 'PLIST'
 
         initial_lines = self.generate_Makefile()
 
         try:
-            os.rename(makefile, f'{makefile}.url2pkg~')
+            makefile.replace(f'{makefile}.url2pkg~')
         except OSError:
             pass
         initial_lines.write_to(makefile)
@@ -443,11 +460,9 @@ class Generator:
         if not os.path.isfile(descr):
             Lines().write_to(descr)
 
-        editor = os.getenv('PKGEDITOR') or os.getenv('EDITOR') or 'vi'
-        subprocess.check_call([editor, makefile])
+        subprocess.check_call([up.editor, makefile])
 
-        up.bmake('distinfo')
-        up.bmake('extract')
+        up.bmake('distinfo', 'extract')
 
         return initial_lines
 
@@ -568,10 +583,10 @@ class Adjuster:
         effective_env.update(env)
 
         self.up.debug('reading dependencies: cd {0} && env {1} {2}', cwd, env, cmd)
-        output = subprocess.check_output(args=cmd, shell=True, env=effective_env, cwd=cwd)
+        output: bytes = subprocess.check_output(args=cmd, shell=True, env=effective_env, cwd=cwd)
 
         dep_lines: List[Tuple[str, str, str, str]] = []
-        for line in output.decode('utf-8').split('\n'):
+        for line in output.decode('utf-8').splitlines():
             # example: DEPENDS   pkgbase>=1.2.3:../../category/pkgbase
             m = re.search(r'^(\w+)\t([^\s:>]+)(>[^\s:]+|)(?::(\.\./\.\./\S+))?$', line)
             if m:
@@ -604,7 +619,6 @@ class Adjuster:
 
     def wrksrc_find(self, what: Union[str, Callable[[str], bool]]) -> Iterator[str]:
         def search(f):
-            print('search', f)
             return re.search(what, f) if type(what) == str else what(f)
 
         return list(sorted(filter(search, self.wrksrc_files)))
@@ -706,7 +720,7 @@ class Adjuster:
         self.adjust_perl_module_homepage()
 
         try:
-            os.unlink('PLIST')
+            (self.up.pkgdir / 'PLIST').unlink()
         except OSError:
             pass
 
@@ -801,36 +815,51 @@ class Adjuster:
 
     def adjust_lines_python_module(self, lines: Lines):
 
-        initial_lines = self.initial_lines
-        current_lines = self.makefile_lines
+        initial_lines = self.initial_lines  # as generated by url2pkg
+        edited_lines = self.makefile_lines  # as edited by the package developer
 
-        if 'python' not in initial_lines.get('CATEGORIES'):
+        if 'python' not in lines.get('CATEGORIES'):
             return
-        pkgbase = initial_lines.get('GITHUB_PROJECT')
-        if pkgbase == '':
+        if lines.get('GITHUB_PROJECT') == '':
             return
-        pkgbase1 = pkgbase[:1]
-        pkgversion_norev = re.sub(r'^v', '', initial_lines.get('DISTNAME'))
 
         # don't risk to overwrite any changes made by the package developer.
-        if '\n'.join(current_lines.lines) != '\n'.join(initial_lines.lines):
-            lines.lines.insert(-2, '# TODO: Migrate MASTER_SITES to PYPI')
+        if edited_lines.lines != initial_lines.lines:
+            lines.lines.insert(-2, '# TODO: Migrate MASTER_SITES to MASTER_SITE_PYPI')
             return
 
+        pkgbase = initial_lines.get('GITHUB_PROJECT')
+        pkgbase1 = pkgbase[:1] if pkgbase != '' else ''
+        pkgversion_norev = re.sub(r'^v', '', initial_lines.get('DISTNAME'))
+
         tx_lines = Lines(*self.makefile_lines.lines)
-        if (tx_lines.remove('GITHUB_PROJECT')
+        if not (tx_lines.remove('GITHUB_PROJECT')
                 and tx_lines.set('DISTNAME', f'{pkgbase}-{pkgversion_norev}')
                 and tx_lines.set('PKGNAME', '${PYPKGPREFIX}-${DISTNAME}')
                 and tx_lines.set('MASTER_SITES', f'${{MASTER_SITE_PYPI:={pkgbase1}/{pkgbase}/}}')
                 and tx_lines.remove('DIST_SUBDIR')):
-            tx_lines.remove_if('EXTRACT_SUFX', '.zip')
-            self.makefile_lines = tx_lines
-            self.regenerate_distinfo = True
+            return
+
+        tx_lines.remove_if('GITHUB_TAG', initial_lines.get('DISTNAME'))
+        tx_lines.remove_if('EXTRACT_SUFX', '.zip')
+
+        up = self.up
+        try_mk = up.pkgdir / 'try-pypi.mk'
+        tx_lines.write_to(try_mk)
+        args = [up.make, '-f', str(try_mk), 'distinfo']
+        up.debug('running {0} to try PyPI', args)
+        fetch_ok = subprocess.call(args, cwd=up.pkgdir) == 0
+        try_mk.unlink()
+        if not fetch_ok:
+            return
+
+        lines.lines = tx_lines.lines
+        self.regenerate_distinfo = True
 
     def generate_lines(self) -> Lines:
         marker_index = self.makefile_lines.index(r'^# url2pkg-marker')
         if marker_index == -1:
-            raise Exception('ERROR: didn\'t find the url2pkg marker in the Makefile.')
+            sys.exit('error: didn\'t find the url2pkg marker in the Makefile.')
 
         lines = Lines(*self.makefile_lines.lines[: marker_index])
 
@@ -877,7 +906,7 @@ class Adjuster:
             return list(f[len(basedir) + 1:] for f in full_paths)
 
         self.up.debug('Adjusting the Makefile')
-        self.makefile_lines = Lines.read_from(self.up.pkgdir + '/Makefile')
+        self.makefile_lines = Lines.read_from(self.up.pkgdir / 'Makefile')
 
         self.abs_wrkdir = self.up.show_var('WRKDIR')
         self.determine_wrksrc()
@@ -896,7 +925,7 @@ class Adjuster:
         self.adjust_po()
         self.adjust_use_languages()
 
-        self.generate_lines().write_to(self.up.pkgdir + '/Makefile')
+        self.generate_lines().write_to(self.up.pkgdir / 'Makefile')
 
         if self.regenerate_distinfo:
             self.up.bmake('distinfo')
@@ -917,7 +946,7 @@ def main():
 
     url = args[0] if args else input('URL: ')
 
-    if not glob.glob('w*/.extract_done') or not os.path.isfile('Makefile'):
+    if not up.pkgdir.glob('w*/.extract_done') or not (up.pkgdir / 'Makefile').is_file():
         initial_lines = Generator(url).generate_package(up)
     else:
         initial_lines = Generator(url).generate_lines()
