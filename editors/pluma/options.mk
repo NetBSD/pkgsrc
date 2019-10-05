@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2019/09/02 13:19:57 adam Exp $
+# $NetBSD: options.mk,v 1.12 2019/10/05 21:32:12 gutteridge Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pluma
 PKG_SUPPORTED_OPTIONS=	enchant
@@ -22,9 +22,6 @@ CONFIGURE_ARGS+=	--disable-spell
 # as being incompatible, leaving us with no remaining choices.
 .if !empty(PKG_OPTIONS:Mpython)
 CONFIGURE_ARGS+=	--enable-python
-USE_TOOLS+=	bash:run
-REPLACE_PYTHON+=	plugins/externaltools/data/switch-c.tool.in
-REPLACE_BASH+=	plugins/externaltools/data/search-recursive.tool.in
 PLIST.python=	yes
 PYTHON_VERSIONS_ACCEPTED=	 27 # py-gtk2, also via py-gtksourceview
 .include "../../devel/py-gobject/buildlink3.mk"
