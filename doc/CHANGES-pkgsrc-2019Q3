@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q3,v 1.1.2.2 2019/10/03 15:37:35 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q3,v 1.1.2.3 2019/10/05 19:53:25 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q3 branch:
 
@@ -10,4 +10,13 @@ net/unbound: security fix
 
 Pullup ticket #6063 - requested by tron
 net/mtr: Solaris build fix
+
+Pullup ticket #6064 - requested by taca
+lang/ruby24-base: security fix
+
+Pullup ticket #6065 - requested by taca
+lang/ruby25-base: security fix
+
+Pullup ticket #6066 - requested by taca
+lang/ruby26-base: security fix
 
