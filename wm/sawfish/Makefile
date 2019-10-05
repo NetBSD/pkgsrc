@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2019/07/21 22:25:52 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2019/10/05 13:21:09 maya Exp $
 
 DISTNAME=		sawfish_1.12.0
 PKGNAME=		${DISTNAME:S/_/-/}
@@ -42,7 +42,6 @@ REP_ENV_PKGSRC=
 .include "../../graphics/gdk-pixbuf2-xlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pangox-compat/buildlink3.mk"
 .include "../../lang/librep/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk2/buildlink3.mk"
