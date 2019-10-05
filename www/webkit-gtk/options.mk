@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2019/08/29 10:40:14 nia Exp $
+# $NetBSD: options.mk,v 1.19 2019/10/05 14:59:47 nia Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.webkit-gtk
@@ -85,6 +85,7 @@ CMAKE_ARGS+=	-DENABLE_INTROSPECTION=OFF
 #
 .if !empty(PKG_OPTIONS:Mwayland)
 CMAKE_ARGS+=	-DENABLE_WAYLAND_TARGET=ON
+CMAKE_ARGS+=	-DUSE_WPE_RENDERER=OFF # TODO
 .include "../../devel/wayland/buildlink3.mk"
 .else
 CMAKE_ARGS+=	-DENABLE_WAYLAND_TARGET=OFF
