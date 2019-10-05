@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.18 2019/08/18 09:18:39 ryoon Exp $
+$NetBSD: distinfo,v 1.19 2019/10/05 05:10:12 ryoon Exp $
 
-SHA1 (jekyll-3.8.6.gem) = 1aa3d32f96cc7ab87897cdc9e517d2260ab5f704
-RMD160 (jekyll-3.8.6.gem) = c5244d290728356b92420232e0342f9935271f98
-SHA512 (jekyll-3.8.6.gem) = 9b54f3c06373ff515c3f190645a231538b3045a5d39b568defc4977434a52812a1cfa1f9ec836b0b7376d1d0290ca17a55b69b3039203aa8f99df8e9b66c56e3
-Size (jekyll-3.8.6.gem) = 113152 bytes
+SHA1 (jekyll-4.0.0.gem) = 52e202e75b0d8abeeab2da31e0e97765148b5603
+RMD160 (jekyll-4.0.0.gem) = 855207891ecd3972f4fcc381e307ac45462fcd28
+SHA512 (jekyll-4.0.0.gem) = eef8d1a5d7aa019394dff8ac5a4a6133a046afedb3605b480e6c699155274cd2a9deaff72e26984ee1dd4a5bfd6f0c81a39e468eb1566dbf57245fdbf6bc0c97
+Size (jekyll-4.0.0.gem) = 119808 bytes
 SHA1 (patch-lib_jekyll_commands_new.rb) = 928f4542aae30671efeaa99f59d61034aa5e38a7
