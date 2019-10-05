@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.1 2017/06/18 13:45:11 taca Exp $
+# $NetBSD: INSTALL,v 1.1.22.1 2019/10/05 10:13:20 bsiegert Exp $
 
 DATE="@DATE@"
 RUBY_SITERIDIR="${PREFIX}/@RUBY_SITERIDIR@"
@@ -11,4 +11,3 @@ POST-INSTALL)
 	fi
 	;;
 esac
-
