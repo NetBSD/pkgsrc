@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2019/10/05 12:09:26 nia Exp $
+# $NetBSD: Makefile,v 1.56 2019/10/05 12:13:25 nia Exp $
 
 DISTNAME=	terminatorX-4.0.1
 PKGNAME=	${DISTNAME:S/X/x/1}
@@ -52,6 +52,7 @@ SUBST_SED.prefix+=	-e "s|/usr/share/ladspa|${PREFIX}/share/ladspa|g"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/liblrdf/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
