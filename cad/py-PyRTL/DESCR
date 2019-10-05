@@ -1,0 +1,4 @@
+PyRTL provides a collection of classes for pythonic register-transfer
+level design, simulation, tracing, and testing suitable for teaching
+and research. Simplicity, usability, clarity, and extensibility
+rather than performance or optimization is the overarching goal.
