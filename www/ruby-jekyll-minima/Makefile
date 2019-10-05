@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2019/04/15 06:11:33 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/10/05 05:05:54 ryoon Exp $
 
-DISTNAME=	minima-2.5.0
+DISTNAME=	minima-2.5.1
 PKGNAME=	${RUBY_PKGPREFIX}-jekyll-${DISTNAME}
 CATEGORIES=	www
 
