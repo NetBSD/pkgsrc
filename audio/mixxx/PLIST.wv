@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.wv,v 1.1 2019/10/06 13:45:42 nia Exp $
+lib/mixxx/plugins/soundsourceqt5/libsoundsourcewv.so
