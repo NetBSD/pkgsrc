@@ -1,10 +1,10 @@
-.\"	$NetBSD: url2pkg.8,v 1.13 2019/10/03 09:37:41 rillig Exp $
+.\"	$NetBSD: url2pkg.8,v 1.14 2019/10/06 12:50:41 rillig Exp $
 .\"
 .\" Copyright (c) 2001, 2019 The NetBSD Foundation, Inc.
 .\" All rights reserved.
 .\"
 .\" This code is derived from software contributed to The NetBSD Foundation
-.\" by Emmanuel Dreyfus.
+.\" by Emmanuel Dreyfus and Roland Illig.
 .\"
 .\" Redistribution and use in source and binary forms, with or without
 .\" modification, are permitted provided that the following conditions
@@ -42,45 +42,18 @@
 takes the
 .Ar URL
 to a package's distfile that should be turned into a package.
-The generated package includes a
-.Pa Makefile
-and a basic set of files to get the package going.
-Any customisations to get the package going need to be adjusted manually after
-.Nm
-has finished its job.
-.Pp
-.Nm
-is intended to help starting to create a package;
-it is not intended to fly on autopilot, though.
-.Pp
-The
-.Pa Makefile
-contains all the required variables, such as DISTNAME or MASTER_SITES,
-but some of them cannot be automatically set.
-Hence, the user's usual editor is invoked to edit the
+It fetches the distfile, extracts it, and by looking at the extracted files,
+fills in some variables in the package
 .Pa Makefile .
 .Pp
-After the
-.Pa Makefile
-is completed,
 .Nm
-fetches the archive, and computes its checksum via the
-.Ic make makesum
-target.
-Then, archive extraction is done, via the
-.Ic make extract
-target, and finally,
-.Nm
-attempts to detect if the software uses a
-.Ic configure
-script, and if it's from GNU
-.Ic autoconf .
+helps creating a package;
+it is not intended to fly on autopilot, though.
+Hence, after creating the package, the user's usual editor is invoked
+to edit the
+.Pa Makefile ,
+since in almost all cases the package needs manual work.
 .Pp
-If the user does not supply the
-.Ar URL
-on the command line, then
-.Nm
-will prompt for it.
 .Sh ENVIRONMENT
 .Bl -tag -width indent
 .It PKGEDITOR, EDITOR
@@ -94,17 +67,16 @@ Name used for the MAINTAINER field in the package
 .Sh EXAMPLES
 The following command will generate a template pkgsrc package
 for the software that can be found at
-.Lk http://www.example.com/bar/buz.tgz :
+.Lk https://www.example.org/download/buz-19.3.tar.gz :
 .Bd -literal
-url2pkg http://www.example.com/bar/buz.tgz
+url2pkg https://www.example.org/download/buz-19.3.tar.gz
 .Ed
 .Sh SEE ALSO
 .Xr pkgsrc 7
 .Sh AUTHORS
-.Nm
-was written by
-.An Roland Illig Aq Mt rillig@NetBSD.org ,
-enhancing the previous version by
-.An Hubert Feyrer Aq Mt hubertf@NetBSD.org .
-This man page was written by
-.An Emmanuel Dreyfus Aq Mt manu@NetBSD.org .
+.An Roland Illig Aq Mt rillig@NetBSD.org
+wrote the current version.
+.An Hubert Feyrer Aq Mt hubertf@NetBSD.org
+wrote the initial version.
+.An Emmanuel Dreyfus Aq Mt manu@NetBSD.org
+initially wrote this man page.
