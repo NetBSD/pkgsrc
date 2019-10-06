@@ -1,4 +1,4 @@
-# $NetBSD: gnu-configure.mk,v 1.21 2019/05/04 15:16:50 rillig Exp $
+# $NetBSD: gnu-configure.mk,v 1.22 2019/10/06 09:44:41 rillig Exp $
 #
 # Package-settable variables:
 #
@@ -27,7 +27,7 @@
 #	Default: no
 #	See also: configure-help show-unknown-configure-options
 #
-# Keywords: configure configure_args gnu
+# Keywords: configure configure_args gnu strict enable disable
 
 _VARGROUPS+=			gnu-configure
 _USER_VARS.gnu-configure=	# none
