@@ -1,0 +1,16 @@
+$NetBSD: patch-Makefile.am,v 1.1 2019/10/06 15:50:31 fox Exp $
+
+Disable tests, they pull in a lot more dependencies.
+
+--- Makefile.am.orig	2019-10-05 08:36:21.151106816 +0000
++++ Makefile.am
+@@ -161,9 +161,6 @@ gjs_console_SOURCES = $(gjs_console_srcs
+ install-exec-hook:
+ 	(cd $(DESTDIR)$(bindir) && $(LN_S) -f gjs-console$(EXEEXT) gjs$(EXEEXT))
+ 
+-include Makefile-test.am
+-include Makefile-insttest.am
+-
+ EXTRA_DIST +=					\
+ 	autogen.sh				\
+ 	COPYING.LGPL				\
