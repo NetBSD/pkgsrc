@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4222 2019/10/06 18:22:43 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4223 2019/10/06 23:01:58 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6801,3 +6801,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated multimedia/mkvtoolnix to 38.0.0 [adam 2019-10-06]
 	Updated audio/fluidsynth to 2.0.7 [nia 2019-10-06]
 	Updated games/fallingtime to 1.0.2 [nia 2019-10-06]
+	Added games/tcl-theo version 0.0.1 [kamil 2019-10-06]
