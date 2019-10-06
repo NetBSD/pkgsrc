@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/10/03 22:28:26 nia Exp $
+# $NetBSD: Makefile,v 1.3 2019/10/06 12:43:53 nia Exp $
 
 DISTNAME=	xonotic-0.8.2
 CATEGORIES=	games
@@ -10,7 +10,7 @@ HOMEPAGE=	https://xonotic.org/
 COMMENT=	Fast arena-style FPS
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	gmake gsed 7za bash
+USE_TOOLS+=	gmake gsed 7za bash zip
 USE_LANGUAGES=	c c++11
 
 # C++11
