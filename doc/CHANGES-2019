@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4219 2019/10/06 16:16:08 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4220 2019/10/06 16:38:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6797,3 +6797,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Added lang/gjs version 1.53.4 [fox 2019-10-06]
 	Updated editors/tea to 48.0.1 [nia 2019-10-06]
 	Updated audio/ncmpc to 0.35 [nia 2019-10-06]
+	Updated textproc/fmtlib to 6.0.0 [adam 2019-10-06]
+	Updated multimedia/mkvtoolnix to 38.0.0 [adam 2019-10-06]
