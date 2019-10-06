@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/08/26 12:12:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/10/06 03:25:17 kamil Exp $
 include/tdom.h
 lib/tdom${PKGVERSION}/libtdom${PKGVERSION}.so
 lib/tdom${PKGVERSION}/libtdomstub${PKGVERSION}.a
@@ -10,5 +10,7 @@ man/mann/domDoc.n
 man/mann/domNode.n
 man/mann/expat.n
 man/mann/expatapi.n
+man/mann/pullparser.n
 man/mann/tdomcmd.n
 man/mann/tnc.n
+@pkgdir bin
