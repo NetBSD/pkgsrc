@@ -1,0 +1,26 @@
+$NetBSD: patch-scripts_dtc_pylibfdt_Makefile,v 1.1 2019/10/06 14:01:20 bad Exp $
+
+--- scripts/dtc/pylibfdt/Makefile.orig	2018-11-14 16:10:06.000000000 +0000
++++ scripts/dtc/pylibfdt/Makefile
+@@ -13,6 +13,12 @@ include $(LIBFDT_srcdir)/Makefile.libfdt
+ PYLIBFDT_srcs = $(addprefix $(LIBFDT_srcdir)/,$(LIBFDT_SRCS)) \
+ 		$(obj)/libfdt.i
+ 
++ifeq ($(KBUILD_VERBOSE),0)
++  pymod_quiet_flag = --quiet
++else
++  pymod_quiet_flag =
++endif
++
+ quiet_cmd_pymod = PYMOD   $@
+       cmd_pymod = unset CROSS_COMPILE; unset CFLAGS; \
+ 		CC="$(HOSTCC)" LDSHARED="$(HOSTCC) -shared " \
+@@ -21,7 +27,7 @@ quiet_cmd_pymod = PYMOD   $@
+ 		CPPFLAGS="$(HOSTCFLAGS) -I$(LIBFDT_srcdir)" OBJDIR=$(obj) \
+ 		SOURCES="$(PYLIBFDT_srcs)" \
+ 		SWIG_OPTS="-I$(LIBFDT_srcdir) -I$(LIBFDT_srcdir)/.." \
+-		$(PYTHON) $< --quiet build_ext --inplace
++		$(PYTHON) $< $(pymod_quiet_flag) build_ext --inplace
+ 
+ $(obj)/_libfdt.so: $(src)/setup.py $(PYLIBFDT_srcs) FORCE
+ 	$(call if_changed,pymod)
