@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.14 2019/10/05 22:02:32 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.15 2019/10/06 05:53:00 rillig Exp $
 
 import pytest
 from url2pkg import *
@@ -589,7 +589,7 @@ def test_Generator_adjust_everything_else__distfile_without_extension():
     ]
 
 
-def test_Generator_determine_distname__v8():
+def test_Generator_adjust_everything_else__v8():
     generator = Generator('https://example.org/v8-1.0.zip')
 
     lines = generator.generate_Makefile()
@@ -598,7 +598,6 @@ def test_Generator_determine_distname__v8():
         mkcvsid,
         '',
         'DISTNAME=       v8-1.0',
-        'PKGNAME=        ${DISTNAME:S,^v,,}',  # FIXME: v8 is part of the PKGBASE
         'CATEGORIES=     pkgtools',
         'MASTER_SITES=   https://example.org/',
         'EXTRACT_SUFX=   .zip',
@@ -1311,10 +1310,6 @@ def test_Adjuster_adjust_lines_python_module(tmp_path: Path):
 
     lines = adjuster.generate_lines()
 
-    # FIXME: Currently url2pkg assumes that all Python modules that are on
-    #  GitHub are also available from PyPI. That is wrong. Probably url2pkg
-    #  should try to fetch the file from PyPI, and only switch to PyPI if
-    #  they are the same.
     assert detab(lines) == [
         mkcvsid,
         '',
