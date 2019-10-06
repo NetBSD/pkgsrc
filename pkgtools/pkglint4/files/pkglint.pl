@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.9 2019/10/06 11:06:42 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.10 2019/10/06 11:45:05 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -98,7 +98,6 @@ BEGIN {
 	);
 	import PkgLint::FileUtil qw(
 		load_file load_lines
-		save_autofix_changes
 	);
 	import PkgLint::Type qw(
 		LK_NONE LK_INTERNAL LK_EXTERNAL
@@ -190,34 +189,27 @@ my (%debug) = (
 	"varuse"	=> [\$opt_debug_varuse, "contexts where variables are used"],
 );
 
-my $opt_warn_absname	= true;
 my $opt_warn_directcmd	= true;
 our $opt_warn_extra	= false;	# used by PkgLint::SubstContext
 my $opt_warn_order	= true;
-my $opt_warn_perm	= false;
 my $opt_warn_plist_depr	= false;
 my $opt_warn_plist_sort	= false;
 my $opt_warn_quoting	= false;
 my $opt_warn_space	= false;
 my $opt_warn_style	= false;
 my $opt_warn_types	= true;
-my $opt_warn_varorder	= false;
 my (%warnings) = (
-	"absname"	=> [\$opt_warn_absname, "warn about use of absolute file names"],
 	"directcmd"	=> [\$opt_warn_directcmd, "warn about use of direct command names instead of Make variables"],
 	"extra"		=> [\$opt_warn_extra, "enable some extra warnings"],
 	"order"		=> [\$opt_warn_order, "warn if Makefile entries are unordered"],
-	"perm"		=> [\$opt_warn_perm, "warn about unforeseen variable definition and use"],
 	"plist-depr"	=> [\$opt_warn_plist_depr, "warn about deprecated paths in PLISTs"],
 	"plist-sort"	=> [\$opt_warn_plist_sort, "warn about unsorted entries in PLISTs"],
 	"quoting"	=> [\$opt_warn_quoting, "warn about quoting issues"],
 	"space"		=> [\$opt_warn_space, "warn about inconsistent use of white-space"],
 	"style"		=> [\$opt_warn_style, "warn about stylistic issues"],
 	"types"		=> [\$opt_warn_types, "do some simple type checking in Makefiles"],
-	"varorder"	=> [\$opt_warn_varorder, "warn about the ordering of variables"],
 );
 
-my $opt_autofix		= false;
 my $opt_dumpmakefile	= false;
 my $opt_import		= false;
 my $opt_quiet		= false;
@@ -237,8 +229,6 @@ my (@options) = (
 		my ($opt, $val) = @_;
 		parse_multioption($val, \%debug);
 	  } ],
-	[ "-F|--autofix", "Try to automatically fix some errors (experimental)",
-	  "autofix|F", \$opt_autofix ],
 	[ "-I|--dumpmakefile", "Dump the Makefile after parsing",
 	  "dumpmakefile|I", \$opt_dumpmakefile ],
 	[ "-R|--rcsidstring", "Set the allowed RCS Id strings",
@@ -500,93 +490,6 @@ sub parse_command_line() {
 }
 
 #
-# Caching subroutines.
-#
-
-# The get_regex_plurals() function returns a regular expression that
-# matches for all make(1) variable names that are considered lists
-# of something.
-#
-# Rationale:
-#
-# The pkglint author thinks that variables containing lists of things
-# should have a name indicating some plural form. Sadly, there are other
-# reasons like backwards compatibility and other developer's
-# expectations that make changes to most of the following variables
-# highly unlikely.
-sub get_regex_plurals() {
-	state $result = undef;
-	return $result if defined($result);
-
-	my @plurals_ok = qw(
-		.*S
-		.*LIST
-		.*_AWK
-		.*_ENV
-		.*_REQD
-		.*_SED
-		.*_SKIP
-		BUILDLINK_LDADD
-		COMMENT
-		EXTRACT_ONLY
-		FETCH_MESSAGE
-		GENERATE_PLIST
-		PLIST_CAT
-		PLIST_PRE
-		PREPEND_PATH
-	);
-	my @plurals_missing_an_s = qw(
-		.*_OVERRIDE
-		.*_PREREQ
-		.*_SRC
-		.*_SUBST
-		.*_TARGET
-		.*_TMPL
-		BROKEN_EXCEPT_ON_PLATFORM
-		BROKEN_ON_PLATFORM
-		BUILDLINK_DEPMETHOD
-		BUILDLINK_TRANSFORM
-		EVAL_PREFIX
-		INTERACTIVE_STAGE
-		LICENSE
-		MASTER_SITE_.*
-		MASTER_SORT_REGEX
-		NOT_FOR_COMPILER
-		NOT_FOR_PLATFORM
-		ONLY_FOR_COMPILER
-		ONLY_FOR_PLATFORM
-		PERL5_PACKLIST
-		PKG_FAIL_REASON
-		PKG_SKIP_REASON
-	);
-	my @plurals_reluctantly_accepted = qw(
-		CRYPTO
-		DEINSTALL_TEMPLATE
-		FIX_RPATH
-		INSTALL_TEMPLATE
-		PYTHON_VERSIONS_INCOMPATIBLE
-		REPLACE_INTERPRETER
-		REPLACE_PERL
-		REPLACE_RUBY
-		RESTRICTED
-		SITES_.*
-		TOOLS_ALIASES\.*
-		TOOLS_BROKEN
-		TOOLS_CREATE
-		TOOLS_GNU_MISSING
-		TOOLS_NOOP
-	);
-	my $plurals = join("|",
-		@plurals_ok,
-		@plurals_missing_an_s,
-		@plurals_reluctantly_accepted
-	);
-
-	$result = qr"^(?:${plurals})$";
-	return $result;
-}
-
-#
 # Loading pkglint-specific data from files.
 #
 
@@ -729,25 +632,6 @@ sub get_vartypes_map() {
 			$line->log_fatal("Unknown line format.");
 		}
 	}
-
-# TODO: Enable when the time is ripe.
-if (false) {
-	# Additionally, scan mk/defaults/mk.conf for variable
-	# definitions. All these variables are reserved for the user and
-	# must not be set within packages.
-	$fname = "${cwd_pkgsrcdir}/mk/defaults/mk.conf";
-	if ((my $lines = load_file($fname))) {
-		foreach my $line (@{$lines}) {
-			if ($line->text =~ m"^#?([\w_]+)\?=") {
-				my ($varname) = ($1);
-				$opt_debug_misc and $line->log_debug("Found user-definable variable ${varname}.");
-				$vartypes->{$varname} = "Userdefined"; # FIXME: type error
-			}
-		}
-	} else {
-		log_fatal($fname, NO_LINE_NUMBER, "Cannot be read.");
-	}
-}
 
 	return ($result = $vartypes);
 }
@@ -1235,14 +1119,6 @@ sub match_all($$) {
 		push(@{$mm}, PkgLint::SimpleMatch->new($text, \@starts, \@ends));
 	}
 	return ($mm, substr($rest, $lastpos));
-}
-
-sub autofix($) {
-	my ($lines) = @_;
-
-	if ($opt_autofix) {
-		save_autofix_changes($lines);
-	}
 }
 
 # Checks whether a file is already committed to the CVS repository or not.
@@ -2105,34 +1981,6 @@ sub readmakefile($$$$) {
 					$opt_debug_include and $line->log_debug("Including \"$dirname/$includefile\".");
 					my $last_lineno = $#{$all_lines};
 					readmakefile("$dirname/$includefile", $main_lines, $all_lines, $seen_Makefile_include) or return false;
-
-					# Check that there is a comment in each
-					# Makefile.common that says which files
-					# include it.
-					if ($includefile =~ m"/Makefile\.common$") {
-						my @mc_lines = @{$all_lines}[$last_lineno+1 .. $#{$all_lines}];
-						my $expected = "# used by " . relative_path($cwd_pkgsrcdir, $fname);
-
-						if (!(grep { $_->text eq $expected } @mc_lines)) {
-							my $lineno = 0;
-							while ($lineno < $#mc_lines && $mc_lines[$lineno]->has("is_comment")) {
-								$lineno++;
-							}
-							my $iline = $mc_lines[$lineno];
-							$iline->log_warning("Please add a line \"$expected\" here.");
-							$iline->explain_warning(
-"Since Makefile.common files usually don't have any comments and",
-"therefore not a clearly defined interface, they should at least contain",
-"references to all files that include them, so that it is easier to see",
-"what effects future changes may have.",
-"",
-"If there are more than five packages that use a Makefile.common,",
-"you should think about giving it a proper name (maybe plugin.mk) and",
-"documenting its interface.");
-							$iline->append_before($expected);
-							autofix(\@mc_lines);
-						}
-					}
 				}
 			}
 
@@ -2711,42 +2559,6 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 			}
 		},
 
-		CFlag => sub {
-			if ($value =~ m"^-D([0-9A-Z_a-z]+)=(.*)") {
-				my ($macname, $macval) = ($1, $2);
-
-				# No checks needed, since the macro definitions
-				# are usually directory names, which don't need
-				# any quoting.
-
-			} elsif ($value =~ m"^-[DU]([0-9A-Z_a-z]+)") {
-				my ($macname) = ($1);
-
-				$opt_debug_unchecked and $line->log_debug("Unchecked macro ${macname} in ${varname}.");
-
-			} elsif ($value =~ m"^-I(.*)") {
-				my ($dirname) = ($1);
-
-				$opt_debug_unchecked and $line->log_debug("Unchecked directory ${dirname} in ${varname}.");
-
-			} elsif ($value eq "-c99") {
-				# Only works on IRIX, but is usually enclosed with
-				# the proper preprocessor conditional.
-
-			} elsif ($value =~ m"^-[OWfgm]|^-std=.*") {
-				$opt_debug_unchecked and $line->log_debug("Unchecked compiler flag ${value} in ${varname}.");
-
-			} elsif ($value =~ m"^-.*") {
-				$line->log_warning("Unknown compiler flag \"${value}\".");
-
-			} elsif ($value =~ regex_unresolved) {
-				$opt_debug_unchecked and $line->log_debug("Unchecked CFLAG: ${value}");
-
-			} else {
-				$line->log_warning("Compiler flag \"${value}\" does not start with a dash.");
-			}
-		},
-
 		Comment => sub {
 			if ($value eq "SHORT_DESCRIPTION_OF_THE_PACKAGE") {
 				$line->log_error("COMMENT must be set.");
@@ -2932,35 +2744,6 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 		Integer => sub {
 			if ($value !~ m"^\d+$") {
 				$line->log_warning("${varname} must be a valid integer.");
-			}
-		},
-
-		LdFlag => sub {
-			if ($value =~ m"^-L(.*)") {
-				my ($dirname) = ($1);
-
-				$opt_debug_unchecked and $line->log_debug("Unchecked directory ${dirname} in ${varname}.");
-
-			} elsif ($value =~ m"^-l(.*)") {
-				my ($libname) = ($1);
-
-				$opt_debug_unchecked and $line->log_debug("Unchecked library name ${libname} in ${varname}.");
-
-			} elsif ($value =~ m"^(?:-static)$") {
-				# Assume that the wrapper framework catches these.
-
-			} elsif ($value =~ m"^(-Wl,(?:-R|-rpath|--rpath))") {
-				my ($rpath_flag) = ($1);
-				$line->log_warning("Please use \${COMPILER_RPATH_FLAG} instead of ${rpath_flag}.");
-
-			} elsif ($value =~ m"^-.*") {
-				$line->log_warning("Unknown linker flag \"${value}\".");
-
-			} elsif ($value =~ regex_unresolved) {
-				$opt_debug_unchecked and $line->log_debug("Unchecked LDFLAG: ${value}");
-
-			} else {
-				$line->log_warning("Linker flag \"${value}\" does not start with a dash.");
 			}
 		},
 
@@ -4343,7 +4126,6 @@ sub checkfile_DESCR($) {
 "fit on one screen. It is also intended to give a _brief_ summary",
 "about the package's contents.");
 	}
-	autofix($lines);
 }
 
 sub checkfile_distinfo($) {
@@ -4536,7 +4318,6 @@ sub checkfile_mk($) {
 
 	parselines_mk($lines);
 	checklines_mk($lines);
-	autofix($lines);
 }
 
 sub checkfile_package_Makefile($$) {
@@ -4673,7 +4454,6 @@ sub checkfile_package_Makefile($$) {
 	}
 
 	checklines_mk($lines);
-	autofix($lines);
 }
 
 #include PkgLint/Patches.pm
@@ -4925,9 +4705,6 @@ sub checkfile_PLIST($) {
 				}
 
 			} elsif ($text =~ m"^share/icons/[^/]+/.+$") {
-				if (defined($pkgctx_vardef) && !exists($pkgctx_vardef->{"ICON_THEMES"})) {
-					$line->log_warning("Packages that install icon theme files should set ICON_THEMES.");
-				}
 
 			} elsif ($pkgpath ne "graphics/hicolor-icon-theme" && $text =~ m"^share/icons/hicolor(?:$|/)") {
 				my $f = "../../graphics/hicolor-icon-theme/buildlink3.mk";
@@ -5005,7 +4782,6 @@ sub checkfile_PLIST($) {
 		}
 	}
 	checklines_trailing_empty_lines($lines);
-	autofix($lines);
 }
 
 sub checkfile($) {
@@ -5358,8 +5134,6 @@ sub checkdir_category() {
 	}
 
 	checklines_mk($lines);
-
-	autofix($lines);
 
 	if ($opt_recursive) {
 		unshift(@todo_items, @subdirs);

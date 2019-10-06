@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.t,v 1.3 2019/10/06 10:33:34 rillig Exp $
+# $NetBSD: pkglint.t,v 1.4 2019/10/06 11:45:05 rillig Exp $
 #
 
 require 'pkglint.pl';			# so we can test its internals
@@ -28,10 +28,10 @@ sub test_unit {
 	if (defined $exitcode) {
 		is($trap->exit, $exitcode, qq{exits $exitcode});
 	} else {
-		is($trap->exit, undef, q{doesn't exit});
+		is($trap->exit, undef, q{doesn't exit}); #'
 	}
-	like($trap->stdout, qr/$stdout_re/sm, qq{stdout matches $stdout_re});
-	like($trap->stderr, qr/$stderr_re/sm, qq{stderr matches $stderr_re});
+	like($trap->stdout, qr/$stdout_re/sm, sprintf(qq{stdout '%s' matches '%s'}, $trap->stdout, $stdout_re));
+	like($trap->stderr, qr/$stderr_re/sm, sprintf(qq{stderr '%s' matches '%s'}, $trap->stderr, $stderr_re));
 
 	return @results;
 }
@@ -73,11 +73,11 @@ sub test_get_vartypes_basictypes {
 	my @all_vartypes_basictypes = qw(
 		AwkCommand BrokenIn
 		BuildlinkDepmethod BuildlinkDepth BuildlinkPackages
-		CFlag Category Comment
+		Category Comment
 		Dependency DependencyWithPath
 		DistSuffix EmulPlatform
 		FetchURL FileMode Filemask Filename
-		Identifier Integer LdFlag License Mail_Address Message Option
+		Identifier Integer License Mail_Address Message Option
 		Pathlist Pathmask Pathname
 		Perl5Packlist
 		PkgName PkgOptionsVar PkgPath PkgRevision
