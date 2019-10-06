@@ -1,4 +1,4 @@
-# $NetBSD: Line.pm,v 1.1 2015/11/25 16:42:21 rillig Exp $
+# $NetBSD: Line.pm,v 1.2 2019/10/06 11:45:05 rillig Exp $
 #
 # When files are read in by pkglint, they are interpreted in terms of
 # lines. For Makefiles, line continuations are handled properly, allowing
@@ -12,10 +12,6 @@
 # A logical line is a class having the read-only fields C<file>,
 # C<lines>, C<text>, C<physlines> and C<is_changed>, as well as some
 # methods for printing diagnostics easily.
-#
-# Some other methods allow modification of the physical lines, but leave
-# the logical line (the C<text>) untouched. These methods are used in the
-# --autofix mode.
 #
 # A line can have some "extra" fields that allow the results of parsing to
 # be saved under a name.
