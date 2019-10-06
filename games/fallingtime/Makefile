@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2019/09/22 12:10:45 nia Exp $
+# $NetBSD: Makefile,v 1.2 2019/10/06 18:22:22 nia Exp $
 
-DISTNAME=	fallingtime-1.0.1
+DISTNAME=	fallingtime-1.0.2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cxong/}
 GITHUB_PROJECT=	FallingTime
-GITHUB_TAG=	1.0.1
 
 MAINTAINER=	cfkoch@edgebsd.org
 HOMEPAGE=	https://github.com/cxong/FallingTime
@@ -31,9 +30,9 @@ pre-configure:
 post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/fallingtime \
 	    ${DESTDIR}${PREFIX}/bin/fallingtime
-	${INSTALL_DATA} ${WRKSRC}/pkg/default.gcw0.desktop \
+	${INSTALL_DATA} ${WRKSRC}/pkg/linux/io.github.cxong.fallingtime.desktop \
 	    ${DESTDIR}${PREFIX}/share/applications/fallingtime.desktop
-	${INSTALL_DATA} ${WRKSRC}/data/graphics/icon.png \
+	${INSTALL_DATA} ${WRKSRC}/pkg/linux/fallingtime.png \
 	    ${DESTDIR}${PREFIX}/share/pixmaps/fallingtime.png
 
 .include "../../devel/SDL2/buildlink3.mk"
