@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.41 2016/04/29 12:18:28 mef Exp $
+# $NetBSD: Makefile,v 1.42 2019/10/06 13:02:08 nia Exp $
 
-DISTNAME=	SDL_gfx-2.0.25
+DISTNAME=	SDL_gfx-2.0.26
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sdlgfx/}
+MASTER_SITES=	http://www.ferzkopp.net/Software/SDL_gfx-2.0/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.ferzkopp.net/joomla/content/view/19/14/
+HOMEPAGE=	https://www.ferzkopp.net/wordpress/2016/01/02/sdl_gfx-sdl2_gfx/
 COMMENT=	Basic drawing routines for SDL
 LICENSE=	zlib
 
@@ -14,7 +14,9 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	SDL_gfx.pc.in
 
-.if (${MACHINE_ARCH} != "i386")
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} != "i386"
 CONFIGURE_ARGS+=	--disable-mmx
 .endif
 
