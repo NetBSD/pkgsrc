@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2019/02/26 10:58:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/10/06 16:36:27 adam Exp $
 include/fmt/chrono.h
 include/fmt/color.h
+include/fmt/compile.h
 include/fmt/core.h
 include/fmt/format-inl.h
 include/fmt/format.h
@@ -9,12 +10,12 @@ include/fmt/ostream.h
 include/fmt/posix.h
 include/fmt/printf.h
 include/fmt/ranges.h
-include/fmt/time.h
+include/fmt/safe-duration-cast.h
 lib/cmake/fmt/fmt-config-version.cmake
 lib/cmake/fmt/fmt-config.cmake
 lib/cmake/fmt/fmt-targets-release.cmake
 lib/cmake/fmt/fmt-targets.cmake
 lib/libfmt.so
 lib/libfmt.so.${PKGVERSION}
-lib/libfmt.so.5
+lib/libfmt.so.6
 lib/pkgconfig/fmt.pc
