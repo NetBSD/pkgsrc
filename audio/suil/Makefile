@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2019/07/21 22:23:58 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/10/06 13:19:50 nia Exp $
 
-DISTNAME=	suil-0.10.2
-PKGREVISION=	2
+DISTNAME=	suil-0.10.4
 CATEGORIES=	audio
-MASTER_SITES=	http://download.drobilla.net/
+MASTER_SITES=	https://download.drobilla.net/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -45,8 +44,11 @@ do-build:
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${WAF_ENV} ./waf ${WAF_ARGS} install
 
+PYTHON_FOR_BUILD_ONLY=	tool
+
 BUILDLINK_API_DEPENDS.lv2+=	lv2>=1.12.0
 .include "../../audio/lv2/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
