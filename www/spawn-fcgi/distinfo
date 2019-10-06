@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 02:47:39 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/10/06 13:10:39 nia Exp $
 
-SHA1 (spawn-fcgi-1.6.3.tar.gz) = 2b97ea57d9d79745fe8d6051d830fa507b421169
-RMD160 (spawn-fcgi-1.6.3.tar.gz) = 4c09fb3d8b03e17b491c733469570d538d3ff5ce
-SHA512 (spawn-fcgi-1.6.3.tar.gz) = 4f9ad8691562e95f3df6ec5f733db7dc774b2e1c5bbacf77bbb954791dbeca506134d5794efb06b342bc149e7cff2f8173c05070ed214de3634cf1484c08f85f
-Size (spawn-fcgi-1.6.3.tar.gz) = 97921 bytes
+SHA1 (spawn-fcgi-1.6.4.tar.gz) = 0b10126be40431b00591a28f155efdb77a460161
+RMD160 (spawn-fcgi-1.6.4.tar.gz) = 6f0c9da33b75fa21f2272005a6a408a1d6a04242
+SHA512 (spawn-fcgi-1.6.4.tar.gz) = 4e24b026c5322f762f000a223642c46a808c6a4f7d4b83b6a2131022ab557dd618cf64ce73119af00c97b935e5245dc20e0c1e769a3a8f3361ae2bb63616c119
+Size (spawn-fcgi-1.6.4.tar.gz) = 110455 bytes
