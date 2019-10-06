@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4199 2019/10/06 10:33:45 rillig Exp $
+$NetBSD: CHANGES-2019,v 1.4200 2019/10/06 11:19:30 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6778,3 +6778,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/tcl-tDOM to 0.9.1 [kamil 2019-10-06]
 	Updated converters/dos2unix to 7.4.1 [ryoon 2019-10-06]
 	Updated pkgtools/pkglint4 to 4.193.0 [rillig 2019-10-06]
+	Updated net/mikutter to 3.9.6 [tsutsui 2019-10-06]
