@@ -1,13 +1,12 @@
-# $NetBSD: options.mk,v 1.1 2019/07/20 10:39:18 nia Exp $
+# $NetBSD: options.mk,v 1.2 2019/10/06 13:45:42 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.mixxx
 PKG_SUPPORTED_OPTIONS=		wavpack
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	wavpack
 .if !empty(PKG_OPTIONS:Mwavpack)
-PLIST.wavpack=	yes
+PLIST_SRCS+=	PLIST.wv
 SCONS_ARGS+=	wv=1
 .include "../../audio/wavpack/buildlink3.mk"
 .else

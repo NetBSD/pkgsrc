@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2019/07/26 23:35:09 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/10/06 13:45:42 nia Exp $
 bin/mixxx
 lib/mixxx/plugins/soundsourceqt5/libsoundsourcem4a.so
-${PLIST.wavpack}lib/mixxx/plugins/soundsourceqt5/libsoundsourcewv.so
 lib/mixxx/plugins/vampqt5/libmixxxminimal.so
 share/appdata/mixxx.appdata.xml
 share/applications/mixxx.desktop
@@ -1371,7 +1370,7 @@ share/mixxx/skins/Shade/vinyl_spinny_foreground.png
 share/mixxx/skins/Shade/vinyl_spinny_foreground_ghost.png
 share/mixxx/skins/Shade/vinylcontrol.xml
 share/mixxx/skins/Tango (64 Samplers)/preferences_preview_screenshot.png
-share/mixxx/skins/Tango (64 Samplers)/sample_decks.xml
+share/mixxx/skins/Tango (64 Samplers)/sampler_rack.xml
 share/mixxx/skins/Tango (64 Samplers)/skin.xml
 share/mixxx/skins/Tango (64 Samplers)/skin_settings.xml
 share/mixxx/skins/Tango (64 Samplers)/skin_settings_sampler_rows_64.xml
@@ -1772,6 +1771,7 @@ share/mixxx/translations/mixxx_ceb.qm
 share/mixxx/translations/mixxx_cs.qm
 share/mixxx/translations/mixxx_da.qm
 share/mixxx/translations/mixxx_de.qm
+share/mixxx/translations/mixxx_el-GR.qm
 share/mixxx/translations/mixxx_el.qm
 share/mixxx/translations/mixxx_en.qm
 share/mixxx/translations/mixxx_en_GB.qm
@@ -1787,6 +1787,7 @@ share/mixxx/translations/mixxx_fr-FR.qm
 share/mixxx/translations/mixxx_fr.qm
 share/mixxx/translations/mixxx_ga.qm
 share/mixxx/translations/mixxx_gl.qm
+share/mixxx/translations/mixxx_he-IL.qm
 share/mixxx/translations/mixxx_he.qm
 share/mixxx/translations/mixxx_hr.qm
 share/mixxx/translations/mixxx_hu.qm
@@ -1808,6 +1809,8 @@ share/mixxx/translations/mixxx_mr.qm
 share/mixxx/translations/mixxx_ms.qm
 share/mixxx/translations/mixxx_my.qm
 share/mixxx/translations/mixxx_nb.qm
+share/mixxx/translations/mixxx_nl-BE.qm
+share/mixxx/translations/mixxx_nl-NL.qm
 share/mixxx/translations/mixxx_nl.qm
 share/mixxx/translations/mixxx_nn.qm
 share/mixxx/translations/mixxx_oc.qm
@@ -1830,6 +1833,7 @@ share/mixxx/translations/mixxx_tr.qm
 share/mixxx/translations/mixxx_uk.qm
 share/mixxx/translations/mixxx_uz.qm
 share/mixxx/translations/mixxx_vi.qm
+share/mixxx/translations/mixxx_zh-HK.qm
 share/mixxx/translations/mixxx_zh_CN.qm
 share/mixxx/translations/mixxx_zh_TW.Big5.qm
 share/mixxx/translations/mixxx_zh_TW.qm
