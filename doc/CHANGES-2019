@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4206 2019/10/06 12:12:24 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4207 2019/10/06 12:18:50 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6785,3 +6785,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/hdf5 to 1.10.5 [nia 2019-10-06]
 	Updated devel/hdf5-c++ to 1.10.5 [nia 2019-10-06]
 	Updated wm/i3 to 4.17.1 [nia 2019-10-06]
+	Updated devel/libgit2 to 0.28.3 [nia 2019-10-06]
