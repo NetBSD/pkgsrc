@@ -1,0 +1,28 @@
+$NetBSD: patch-estd.1,v 1.1 2019/10/06 11:35:16 jmcneill Exp $
+
+Document Generic Multi-domain Mode.
+
+--- estd.1.orig	2015-02-18 21:38:03.000000000 +0000
++++ estd.1
+@@ -1,9 +1,9 @@
+-.TH estd 1 "February 18, 2015" "release 11" "USER COMMANDS"
++.TH estd 1 "October 6, 2019" "release 11" "USER COMMANDS"
+ .SH NAME
+ estd \- Enhanced SpeedStep & PowerNow management daemon
+ .SH SYNOPSIS
+ .B estd
+-[\-d] [\-o] [\-A] [\-C] [\-E] [\-I] [\-L] [\-R] [\-P] [\-G] [\-a] [\-s] [\-b] [\-p interval] [\-g period] [\-l low] [\-h high] [\-m minimum] [\-M maximum]
++[\-d] [\-o] [\-A] [\-C] [\-D] [\-E] [\-I] [\-L] [\-R] [\-P] [\-G] [\-a] [\-s] [\-b] [\-p interval] [\-g period] [\-l low] [\-h high] [\-m minimum] [\-M maximum]
+ .PP
+ .B estd
+ -f
+@@ -51,6 +51,9 @@ clock modulation feature will be turned 
+ speed mode is chosen by estd, in which case the lowest clock duty cycle
+ is used (this feature is not available on Dragonfly BSD)
+ .TP
++\-D
++Force Generic Multi-domain Mode.
++.TP
+ \-E
+ Force Enhanced Speedstep-Mode.
+ .TP

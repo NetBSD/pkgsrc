@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.23 2017/10/25 21:38:52 khorben Exp $
+$NetBSD: distinfo,v 1.24 2019/10/06 11:35:16 jmcneill Exp $
 
 SHA1 (estd-r11.tar.gz) = 6c1148d66ff93b2e45af0411f1234fcccd1a2407
 RMD160 (estd-r11.tar.gz) = 261a6a79e54f2502a50aad79e336259604376f3c
 SHA512 (estd-r11.tar.gz) = 37b005ab451f7a26248064cee5736ca43c6345b419e00050186158d5830fe96035fa78d2651a908899e6c61d44b1aaeb8b3cac0fbde19fb4c82976f709b011dc
 Size (estd-r11.tar.gz) = 9361 bytes
 SHA1 (patch-aa) = 6671d042e8b593b33e8633d657b14acaf3f115eb
-SHA1 (patch-estd.c) = e813e795a18fa16ced0070fe7485dff3f3de61ac
+SHA1 (patch-estd.1) = 9e58f33fc722681728306c92678e1cfe6d5b373e
+SHA1 (patch-estd.c) = 1cfdf7b8f90152c1b420ada3f22c297f1256f98e
