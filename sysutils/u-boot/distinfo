@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2019/10/06 13:25:24 bad Exp $
+$NetBSD: distinfo,v 1.27 2019/10/06 14:01:20 bad Exp $
 
 SHA1 (u-boot-2018.11.tar.bz2) = e58e86c633ad3e2613196e0c0b0a7760ae5966d6
 RMD160 (u-boot-2018.11.tar.bz2) = f63c67750951d0e2883935a5d4cc3252f51a5453
@@ -22,4 +22,5 @@ SHA1 (patch-include_image.h) = c9b134b2b5624a1e6c9f091a2192185b8d0f85fe
 SHA1 (patch-lib_bch.c) = b1f1c7418f1004c151b9e5e06ab7047a1736ae47
 SHA1 (patch-lib_efi__loader_efi__boottime.c) = 66aa3b95470a737154e6e082447aed0078092047
 SHA1 (patch-lib_efi__loader_efi__variable.c) = 1955870b22e358a4bded9e85fd89c74419aeed0d
+SHA1 (patch-scripts_dtc_pylibfdt_Makefile) = e312a372e393332191e715934279eb5e049ba008
 SHA1 (patch-tools_imx__cntr__image.sh) = 715647e3b77b505513ae79b4fe673f4f7f9bf042
