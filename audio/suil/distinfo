@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/01/03 09:44:45 bsiegert Exp $
+$NetBSD: distinfo,v 1.3 2019/10/06 13:19:50 nia Exp $
 
-SHA1 (suil-0.10.2.tar.bz2) = be650896bedd0c29e4155a304e192e305b1ca9b5
-RMD160 (suil-0.10.2.tar.bz2) = b66d9373da7e0f03f5e650509ee3d5c4b79fefbe
-SHA512 (suil-0.10.2.tar.bz2) = 8f5b4d772e58dfc4563a5102d189d886218fdc56e74c9d8c118f7bbbcc5d056904c2c8d132f993187416145383d3d8cb4787e2f8c113e57ad47e5d4def7f2fba
-Size (suil-0.10.2.tar.bz2) = 334948 bytes
+SHA1 (suil-0.10.4.tar.bz2) = ec8080e79585f6ddba37ac6f07b484e0f3ea85fe
+RMD160 (suil-0.10.4.tar.bz2) = 99b8bf841bacfb2a51f57b1ab334024ce62893bc
+SHA512 (suil-0.10.4.tar.bz2) = 1f5627541b86cbd8417c0b35b04b73340a3b2dbdd7b04314fdfa82baa8a7b0813c9c9914f805fcf233bcc8011b37efe99a06b6c47a3dda9606d6493edcba434f
+Size (suil-0.10.4.tar.bz2) = 339234 bytes
