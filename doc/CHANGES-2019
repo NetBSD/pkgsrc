@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4218 2019/10/06 15:54:56 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4219 2019/10/06 16:16:08 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6796,3 +6796,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated games/xbomb to 2.2nb1 [jakllsch 2019-10-06]
 	Added lang/gjs version 1.53.4 [fox 2019-10-06]
 	Updated editors/tea to 48.0.1 [nia 2019-10-06]
+	Updated audio/ncmpc to 0.35 [nia 2019-10-06]
