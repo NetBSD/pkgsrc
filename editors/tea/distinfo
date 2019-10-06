@@ -1,11 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 03:32:21 agc Exp $
+$NetBSD: distinfo,v 1.4 2019/10/06 15:54:38 nia Exp $
 
-SHA1 (tea-16.0.5.tar.bz2) = d1c38a7dec406a5a935373fea35b650f04a0331c
-RMD160 (tea-16.0.5.tar.bz2) = 16ee63c77486b000d322704607af1e8354bc5015
-SHA512 (tea-16.0.5.tar.bz2) = 18cae1e8d85fde356645aa760e3a4c8c295f7930ffbf3c1117c59ee542c10330e0507221e8d2be5b1771a522a494d758ac670feca255dd8cd676aba0846086f7
-Size (tea-16.0.5.tar.bz2) = 443526 bytes
-SHA1 (patch-aa) = 6d92c32956d46304703d0267c99b97075b1a349c
-SHA1 (patch-ab) = d9643f3fc1469744406a4c6de6aeb96f4709cbbb
-SHA1 (patch-src_image__browser.c) = a31f4e1d9cfaa691c5c1f7a86c81cc8b8cef4e84
-SHA1 (patch-src_rox__strings.c) = 7f50cf35d66b2529a2a19ca9628824f70c9c0ffa
-SHA1 (patch-src_tea__text__document.c) = 8c4cf064f10a1fa87ac2b0fb1ac9dbf0a609b410
+SHA1 (tea-48.0.1.tar.gz) = d30e1a742ad3de5c6184d81ada6a53a6e1fdb550
+RMD160 (tea-48.0.1.tar.gz) = 3a3b5f009b9d9e3e63da4faecef69ca5e410f9f2
+SHA512 (tea-48.0.1.tar.gz) = e6cf67214f075b4a6c6e91ce4ae07779be75752f58c1b88603f1e23748b15c6c20c48dcecdba6115ef4a891a3094008e4de110f2d925514e0537dbbd63ea94d3
+Size (tea-48.0.1.tar.gz) = 502561 bytes
