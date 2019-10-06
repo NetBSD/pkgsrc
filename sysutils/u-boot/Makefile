@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2019/07/13 17:42:01 jmcneill Exp $
+# $NetBSD: Makefile,v 1.20 2019/10/06 17:02:10 bad Exp $
 #
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
 DISTNAME=	u-boot-${UBOOT_VERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	meta-pkgs sysutils u-boot
 MASTER_SITES=	# empty
 
