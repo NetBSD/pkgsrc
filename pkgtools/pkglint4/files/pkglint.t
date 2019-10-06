@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.t,v 1.2 2017/10/02 14:41:21 wiz Exp $
+# $NetBSD: pkglint.t,v 1.3 2019/10/06 10:33:34 rillig Exp $
 #
 
 require 'pkglint.pl';			# so we can test its internals
@@ -58,8 +58,8 @@ sub test_program {
 	if (defined $exitcode) {
 		is($ret, $exitcode, qq{exits $exitcode});
 	}
-	like($stdout, qr/$stdout_re/sm, qq{stdout matches $stdout_re});
-	like($stderr, qr/$stderr_re/sm, qq{stderr matches $stderr_re});
+	like($stdout, qr/$stdout_re/sm, qq{stdout $stdout matches $stdout_re});
+	like($stderr, qr/$stderr_re/sm, qq{stderr $stderr matches $stderr_re});
 
 	# return @results;
 }
@@ -130,40 +130,40 @@ sub test_pkglint_main {
 	@ARGV = ('-h');
 	test_unit($unit, undef, 0, '^usage: pkglint ', '^$');
 
-	@ARGV = ('..');
+	@ARGV = ('@PKGSRCDIR@/pkgtools/pkglint4');
 	test_unit($unit, undef, 0, '^Looks fine', '^$');
 
 	@ARGV = ('.');
-	test_unit($unit, undef, 1, '^ERROR:.+how to check', '^$');
+	test_unit($unit, undef, 1, '^ERROR:.+outside a pkgsrc tree', '^$');
 
 	@ARGV = ();
-	test_unit($unit, undef, 1, '^ERROR:.+how to check', '^$');
+	test_unit($unit, undef, 1, '^ERROR:.+outside a pkgsrc tree', '^$');
 
 	@ARGV = ('/does/not/exist');
 	test_unit($unit, undef, 1, '^ERROR:.+not exist', '^$');
 
 	@ARGV = ($ENV{HOME});
-	test_unit($unit, undef, 1, '^ERROR:.+outside a pkgsrc', '^$');
+	test_unit($unit, undef, 1, '^ERROR:.+outside a pkgsrc tree', '^$');
 }
 
 sub test_lint_some_reference_packages {
 	my %reference_packages = (
 		'devel/syncdir' => {
 			stdout_re => <<EOT,
-^ERROR: .*Makefile: Each package must define its LICENSE\.
-ERROR: .*patches/patch-aa:[0-9]+: Comment expected\.
-2 errors and 0 warnings found\..*\$
-EOT
-			stderr_re => undef,
-			exitcode => 1,
-		},
-		'mail/qmail' => {
-			stdout_re => <<EOT,
-^WARN: .*Makefile:[0-9]+: USERGROUP_PHASE is defined but not used\. Spelling mistake\\?
-0 errors and 1 warnings found\..*\$
+Looks fine\..*\$
 EOT
 			stderr_re => undef,
 			exitcode => 0,
+		},
+		'mail/qmail' => {
+			stdout_re => <<EOT,
+^WARN: .*Makefile:[0-9]+: QMAILPATCHES is defined but not used\..*
+.*
+ERROR: .*/options.mk:\\d+: Unknown dependency pattern.*
+.*\$
+EOT
+			stderr_re => undef,
+			exitcode => 1,
 		},
 		'mail/getmail' => {
 			stdout_re => <<EOT,

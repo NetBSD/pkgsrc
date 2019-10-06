@@ -1,59 +1,10 @@
-# $NetBSD: Patches.pm,v 1.1 2015/11/25 16:42:21 rillig Exp $
+# $NetBSD: Patches.pm,v 1.2 2019/10/06 10:33:34 rillig Exp $
 #
 # Everything concerning checks for patch files.
 #
 
 use strict;
 use warnings;
-
-# Guess the type of file based on the filename. This is used to select
-# the proper subroutine for detecting absolute pathnames.
-#
-# Returns one of "source", "shell", "make", "text", "configure",
-# "ignore", "unknown".
-#
-sub get_filetype($$) {
-	my ($line, $fname) = @_;
-	my $basename = basename($fname);
-
-	# The trailig .in part is not needed, since it does not
-	# influence the type of contents.
-	$basename =~ s,\.in$,,;
-
-	# Let's assume that everything else that looks like a Makefile
-	# is indeed a Makefile.
-	if ($basename =~ m"^I?[Mm]akefile(?:\..*|)?|.*\.ma?k$") {
-		return "make";
-	}
-
-	# Too many false positives for shell scripts, so configure
-	# scripts get their own category.
-	if ($basename =~ m"^configure(?:|\.ac)$") {
-		$opt_debug_unchecked and $line->log_debug("Skipped check for absolute pathnames.");
-		return "configure";
-	}
-
-	if ($basename =~ m"\.(?:sh|m4)$"i) {
-		return "shell";
-	}
-
-	if ($basename =~ m"\.(?:cc?|cpp|cxx|el|hh?|hpp|l|pl|pm|py|s|t|y)$"i) {
-		return "source";
-	}
-
-	if ($basename =~ m"^.+\.(?:\d+|conf|html|info|man|po|tex|texi|texinfo|txt|xml)$"i) {
-		return "text";
-	}
-
-	# Filenames without extension are hard to guess right. :(
-	if ($basename !~ m"\.") {
-		return "unknown";
-	}
-
-	$opt_debug_misc and $line->log_debug("Don't know the file type of ${fname}.");
-
-	return "unknown";
-}
 
 sub checkline_cpp_macro_names($$) {
 	my ($line, $text) = @_;
@@ -120,85 +71,11 @@ sub checkline_cpp_macro_names($$) {
 	}
 }
 
-# Checks whether the line contains text that looks like absolute
-# pathnames, assuming that the file uses the common syntax with
-# single or double quotes to represent strings.
-#
-sub checkline_source_absolute_pathname($$) {
-	my ($line, $text) = @_;
-	my ($abspath);
-
-	$opt_debug_trace and $line->log_debug("checkline_source_absolute_pathname(${text})");
-
-	if ($text =~ m"(.*)([\"'])(/[^\"']*)\2") {
-		my ($before, $delim, $string) = ($1, $2, $3);
-
-		$opt_debug_misc and $line->log_debug("checkline_source_absolute_pathname(before=${before}, string=${string})");
-		if ($before =~ m"[A-Z_]+\s*$") {
-			# allowed: PREFIX "/bin/foo"
-
-		} elsif ($string =~ m"^/[*/]") {
-			# This is more likely to be a C or C++ comment.
-
-		} elsif ($string !~ m"^/\w") {
-			# Assume that pathnames start with a letter or digit.
-
-		} elsif ($before =~ m"\+\s*$") {
-			# Something like foodir + '/lib'
-
-		} else {
-			$abspath = $string;
-		}
-	}
-
-	if (defined($abspath)) {
-		checkword_absolute_pathname($line, $abspath);
-	}
-}
-
-# Last resort if the file does not look like a Makefile or typical
-# source code. All strings that look like pathnames and start with
-# one of the typical Unix prefixes are found.
-#
-sub checkline_other_absolute_pathname($$) {
-	my ($line, $text) = @_;
-
-	$opt_debug_trace and $line->log_debug("checkline_other_absolute_pathname(\"${text}\")");
-
-	if ($text =~ m"^#[^!]") {
-		# Don't warn for absolute pathnames in comments,
-		# except for shell interpreters.
-
-	} elsif ($text =~ m"^(.*?)((?:/[\w.]+)*/(?:bin|dev|etc|home|lib|mnt|opt|proc|sbin|tmp|usr|var)\b[\w./\-]*)(.*)$") {
-		my ($before, $path, $after) = ($1, $2, $3);
-
-		if ($before =~ m"\@$") {
-			# Something like @PREFIX@/bin
-
-		} elsif ($before =~ m"[)}]$") {
-			# Something like ${prefix}/bin or $(PREFIX)/bin
-
-		} elsif ($before =~ m"\+\s*[\"']$") {
-			# Something like foodir + '/lib'
-
-		} elsif ($before =~ m"\w$") {
-			# Something like $dir/lib
-
-		} elsif ($before =~ m"\.$") {
-			# ../foo is not an absolute pathname.
-
-		} else {
-			$opt_debug_misc and $line->log_debug("before=${before}");
-			checkword_absolute_pathname($line, $path);
-		}
-	}
-}
-
 sub checkfile_patch($) {
 	my ($fname) = @_;
 	my ($lines);
 	my ($state, $redostate, $nextstate, $dellines, $addlines, $hunks);
-	my ($seen_comment, $current_fname, $current_ftype, $patched_files);
+	my ($seen_comment, $current_fname, $patched_files);
 	my ($leading_context_lines, $trailing_context_lines, $context_scanning_leading);
 
 	# Abbreviations used:
@@ -271,42 +148,6 @@ sub checkfile_patch($) {
 		return unless $m->has(1);
 		$text = $m->text(1);
 		checkline_cpp_macro_names($line, $text);
-
-		# XXX: This check is not as accurate as the similar one in
-		# checkline_mk_shelltext().
-		if (defined($current_fname)) {
-			if ($current_ftype eq "shell" || $current_ftype eq "make") {
-				my ($mm, $rest) = match_all($text, $regex_shellword);
-
-				foreach my $m (@{$mm}) {
-					my $shellword = $m->text(1);
-
-					if ($shellword =~ m"^#") {
-						last;
-					}
-					checkline_mk_absolute_pathname($line, $shellword);
-				}
-
-			} elsif ($current_ftype eq "source") {
-				checkline_source_absolute_pathname($line, $text);
-
-			} elsif ($current_ftype eq "configure") {
-				if ($text =~ m": Avoid regenerating within pkgsrc$") {
-					$line->log_error("This code must not be included in patches.");
-					$line->explain_error(
-"It is generated automatically by pkgsrc after the patch phase.",
-"",
-"For more details, look for \"configure-scripts-override\" in",
-"mk/configure/gnu-configure.mk.");
-				}
-
-			} elsif ($current_ftype eq "ignore") {
-				# Ignore it.
-
-			} else {
-				checkline_other_absolute_pathname($line, $text);
-			}
-		}
 	};
 
 	my $check_hunk_end = sub($$$) {
@@ -431,8 +272,6 @@ sub checkfile_patch($) {
 		PST_CFA() =>
 		[   [re_patch_cfa, PST_CH, sub() {
 			$current_fname = $m->text(1);
-			$current_ftype = get_filetype($line, $current_fname);
-			$opt_debug_patches and $line->log_debug("fname=$current_fname ftype=$current_ftype");
 			$patched_files++;
 			$hunks = 0;
 		}]],
@@ -500,8 +339,6 @@ sub checkfile_patch($) {
 		PST_UFA() =>
 		[   [re_patch_ufa, PST_UH, sub() {
 			$current_fname = $m->text(1);
-			$current_ftype = get_filetype($line, $current_fname);
-			$opt_debug_patches and $line->log_debug("fname=$current_fname ftype=$current_ftype");
 			$patched_files++;
 			$hunks = 0;
 		}]],
@@ -558,7 +395,6 @@ sub checkfile_patch($) {
 	$patched_files = 0;
 	$seen_comment = false;
 	$current_fname = undef;
-	$current_ftype = undef;
 	$hunks = undef;
 
 	for (my $lineno = 0; $lineno <= $#{$lines}; ) {
