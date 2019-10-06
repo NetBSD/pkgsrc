@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.15 2019/10/05 22:02:32 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.16 2019/10/06 05:53:00 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -376,10 +376,9 @@ class Generator:
             distname, extract_sufx = self.distfile, '# none'
         self.distname = distname
 
-        m = re.search(r'^v\d', distname)
-        if m:
+        if re.search(r'^v\d+\.', distname):
             self.pkgname_transform = ':S,^v,,'
-        elif re.search(r'-v\d', distname) and not re.search(r'-v.*-v\d', distname):
+        elif re.search(r'-v\d+\.', distname) and not re.search(r'-v.*-v\d+\.', distname):
             self.pkgname_transform = ':S,-v,-,'
 
         main_category = Path.cwd().parts[-2]
