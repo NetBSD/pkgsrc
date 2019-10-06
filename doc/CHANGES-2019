@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4202 2019/10/06 11:36:15 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4203 2019/10/06 11:51:46 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6781,3 +6781,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/mikutter to 3.9.6 [tsutsui 2019-10-06]
 	Updated graphics/glfw to 3.3 [nia 2019-10-06]
 	Updated net/haproxy to 2.0.7 [nia 2019-10-06]
+	Updated emulators/hercules to 3.13 [nia 2019-10-06]
