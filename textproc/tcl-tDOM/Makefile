@@ -1,22 +1,26 @@
-# $NetBSD: Makefile,v 1.5 2015/09/12 20:03:01 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2019/10/06 03:25:17 kamil Exp $
 #
 
-DISTNAME=	tDOM-0.8.3
-PKGNAME=	tcl-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	tdom-${VERSION}-src
+PKGNAME=	tcl-tDOM-${VERSION}
 CATEGORIES=	textproc
-MASTER_SITES=	https://cloud.github.com/downloads/tDOM/tdom/
+MASTER_SITES=	http://tdom.org/downloads/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://tdom.github.com/
+HOMEPAGE=	http://tdom.org/
 COMMENT=	High performance XML data handling library for Tcl using Expat
-LICENSE=	mpl-1.1
+LICENSE=	mpl-1.1 AND mit # builtin expat is mit
+
+EXTRACT_USING=	bsdtar
+
+VERSION=	0.9.1
+
+USE_TOOLS+=		gmake
 
 GNU_CONFIGURE=		yes
-USE_LANGUAGES=		c
 
-CPPFLAGS+=	-DUSE_INTERP_ERRORLINE
+WRKSRC=		${WRKDIR}/tdom-${VERSION}
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
