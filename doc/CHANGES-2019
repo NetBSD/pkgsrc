@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4208 2019/10/06 12:23:25 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4209 2019/10/06 12:52:38 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6787,3 +6787,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated wm/i3 to 4.17.1 [nia 2019-10-06]
 	Updated devel/libgit2 to 0.28.3 [nia 2019-10-06]
 	Updated graphics/libmypaint to 1.4.0 [nia 2019-10-06]
+	Updated net/maradns to 2.0.17 [nia 2019-10-06]
