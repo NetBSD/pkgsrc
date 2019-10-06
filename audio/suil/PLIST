@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/01/03 09:44:45 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/10/06 13:19:50 nia Exp $
 include/suil-0/suil/suil.h
 lib/libsuil-0.so
 lib/libsuil-0.so.0
@@ -6,3 +6,4 @@ lib/libsuil-0.so.${PKGVERSION}
 lib/pkgconfig/suil-0.pc
 lib/suil-0/libsuil_x11.so
 lib/suil-0/libsuil_x11_in_gtk2.so
+lib/suil-0/libsuil_x11_in_gtk3.so
