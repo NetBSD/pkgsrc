@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2019/07/30 18:28:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.42 2019/10/06 11:07:44 nia Exp $
 
 DISTNAME=	gdk-pixbuf-${PIXBUF2_VERSION}
 PKGNAME=	${DISTNAME:S/pixbuf/pixbuf2/}
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://developer.gnome.org/gdk-pixbuf
-COMMENT=	Image loaders for gtk2
+COMMENT=	Library for image loading and manipulation
 LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=	gtk2+<2.22
