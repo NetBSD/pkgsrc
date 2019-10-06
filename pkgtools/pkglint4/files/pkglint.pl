@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.8 2019/10/06 10:46:18 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.9 2019/10/06 11:06:42 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2404,57 +2404,6 @@ sub checkline_mk_varuse($$$$) {
 		$opt_warn_extra and $line->log_warning("${varname} is used but not defined. Spelling mistake?");
 	}
 
-	if ($opt_warn_perm) {
-		my $perms = get_variable_perms($line, $varname);
-		my $is_load_time;	# Will the variable be used at load time?
-		my $is_indirect;	# Might the variable be used indirectly at load time,
-					# for example by assigning it to another variable
-					# which then gets evaluated?
-
-		# Don't warn about variables that are not recorded in the
-		# pkglint variable definition.
-		if (defined($context->type) && $context->type->is_guessed()) {
-			$is_load_time = false;
-
-		} elsif ($context->time == VUC_TIME_LOAD && $perms !~ m"p") {
-			$is_load_time = true;
-			$is_indirect = false;
-
-		} elsif (defined($context->type) && $context->type->perms_union() =~ m"p" && $perms !~ m"p") {
-			$is_load_time = true;
-			$is_indirect = true;
-
-		} else {
-			$is_load_time = false;
-		}
-
-		if ($is_load_time && !$is_indirect) {
-			$line->log_warning("${varname} should not be evaluated at load time.");
-			$line->explain_warning(
-"Many variables, especially lists of something, get their values",
-"incrementally. Therefore it is generally unsafe to rely on their value",
-"until it is clear that it will never change again. This point is",
-"reached when the whole package Makefile is loaded and execution of the",
-"shell commands starts, in some cases earlier.",
-"",
-"Additionally, when using the \":=\" operator, each \$\$ is replaced",
-"with a single \$, so variables that have references to shell variables",
-"or regular expressions are modified in a subtle way.");
-		}
-		if ($is_load_time && $is_indirect) {
-			$line->log_warning("${varname} should not be evaluated indirectly at load time.");
-			$line->explain_warning(
-"The variable on the left-hand side may be evaluated at load time, but",
-"the variable on the right-hand side may not. Due to this assignment, it",
-"might be used indirectly at load-time, when it is not guaranteed to be",
-"properly defined.");
-		}
-
-		if ($perms !~ m"p" && $perms !~ m"u") {
-			$line->log_warning("${varname} may not be used in this file.");
-		}
-	}
-
 	if ($varname eq "LOCALBASE" && !$is_internal) {
 		$line->log_warning("The LOCALBASE variable should not be used by packages.");
 		$line->explain_warning(
@@ -2655,24 +2604,6 @@ sub checkline_mk_vardef($$$) {
 	if (!exists($mkctx_vardef->{$varname})) {
 		$mkctx_vardef->{$varname} = $line;
 	}
-
-	return unless $opt_warn_perm;
-
-	my $perms = get_variable_perms($line, $varname);
-	my $needed = { "=" => "s", "!=" => "s", "?=" => "d", "+=" => "a", ":=" => "s" }->{$op};
-	if (index($perms, $needed) == -1) {
-		$line->log_warning("Permission [" . expand_permission($needed) . "] requested for ${varname}, but only [" . expand_permission($perms) . "] is allowed.");
-		$line->explain_warning(
-"The available permissions are:",
-"\tappend\t\tappend something using +=",
-"\tdefault\t\tset a default value using ?=",
-"\tpreprocess\tuse a variable during preprocessing",
-"\truntime\t\tuse a variable at runtime",
-"\tset\t\tset a variable using :=, =, !=",
-"",
-"A \"?\" means that it is not yet clear which permissions are allowed",
-"and which aren't.");
-	}
 }
 
 # @param $op
@@ -2867,20 +2798,6 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 				} else {
 					$line->log_error("Unknown dependency pattern \"${value}\".");
 				}
-
-			} elsif ($value =~ m"\{") {
-				# Dependency patterns containing alternatives
-				# are just too hard to check.
-				$opt_debug_unchecked and $line->log_debug("Unchecked dependency pattern: ${value}");
-
-			} elsif ($value ne $value_novar) {
-				$opt_debug_unchecked and $line->log_debug("Unchecked dependency: ${value}");
-
-			} else {
-				$line->log_warning("Unknown dependency format: ${value}");
-				$line->explain_warning(
-"Typical dependencies have the form \"package>=2.5\", \"package-[0-9]*\"",
-"or \"package-3.141\".");
 			}
 		},
 
@@ -3574,8 +3491,6 @@ sub checkline_mk_vartype($$$$$) {
 			if (!$type->may_use_plus_eq()) {
 				$line->log_warning("The \"+=\" operator should only be used with lists.");
 			}
-		} elsif ($varbase !~ m"^_" && $varbase !~ get_regex_plurals()) {
-			$line->log_warning("As ${varname} is modified using \"+=\", its name should indicate plural.");
 		}
 	}
 
@@ -3831,171 +3746,6 @@ sub checklines_trailing_empty_lines($) {
 	}
 	if ($last != $max) {
 		$lines->[$last]->log_note("Trailing empty lines.");
-	}
-}
-
-sub checklines_package_Makefile_varorder($) {
-	my ($lines) = @_;
-
-	return unless $opt_warn_varorder;
-
-	use enum qw(once optional many);
-	my (@sections) = (
-		[ "Initial comments", once,
-			[
-			]
-		],
-		[ "Unsorted stuff, part 1", once,
-			[
-				[ "DISTNAME", optional ],
-				[ "PKGNAME",  optional ],
-				[ "PKGREVISION", optional ],
-				[ "CATEGORIES", once ],
-				[ "MASTER_SITES", optional ],
-				[ "DIST_SUBDIR", optional ],
-				[ "EXTRACT_SUFX", optional ],
-				[ "DISTFILES", many ],
-				[ "SITES.*", many ],
-			]
-		],
-		[ "Distribution patches", optional,
-			[
-				[ "PATCH_SITES", optional ], # or once?
-				[ "PATCH_SITE_SUBDIR", optional ],
-				[ "PATCHFILES", optional ], # or once?
-				[ "PATCH_DIST_ARGS", optional ],
-				[ "PATCH_DIST_STRIP", optional ],
-				[ "PATCH_DIST_CAT", optional ],
-			]
-		],
-		[ "Unsorted stuff, part 2", once,
-			[
-				[ "MAINTAINER", optional ],
-				[ "OWNER", optional ],
-				[ "HOMEPAGE", optional ],
-				[ "COMMENT", once ],
-				[ "LICENSE", once ],
-			]
-		],
-		[ "Legal issues", optional,
-			[
-				[ "LICENSE_FILE", optional ],
-				[ "RESTRICTED", optional ],
-				[ "NO_BIN_ON_CDROM", optional ],
-				[ "NO_BIN_ON_FTP", optional ],
-				[ "NO_SRC_ON_CDROM", optional ],
-				[ "NO_SRC_ON_FTP", optional ],
-			]
-		],
-		[ "Technical restrictions", optional,
-			[
-				[ "BROKEN_EXCEPT_ON_PLATFORM", many ],
-				[ "BROKEN_ON_PLATFORM", many ],
-				[ "NOT_FOR_PLATFORM", many ],
-				[ "ONLY_FOR_PLATFORM", many ],
-				[ "NOT_FOR_COMPILER", many ],
-				[ "ONLY_FOR_COMPILER", many ],
-				[ "NOT_FOR_UNPRIVILEGED", optional ],
-				[ "ONLY_FOR_UNPRIVILEGED", optional ],
-			]
-		],
-		[ "Dependencies", optional,
-			[
-				[ "BUILD_DEPENDS", many ],
-				[ "TOOL_DEPENDS", many ],
-				[ "DEPENDS", many ],
-			]
-		]
-	);
-
-	if (!defined($seen_Makefile_common) || $seen_Makefile_common) {
-		return;
-	}
-
-	my ($lineno, $sectindex, $varindex) = (0, -1, 0);
-	my ($next_section, $vars, $below, $below_what) = (true, undef, {}, undef);
-
-	# If the current section is optional but contains non-optional
-	# fields, the complete section may be skipped as long as there
-	# has not been a non-optional variable.
-	my $may_skip_section = false;
-
-	# In each iteration, one of the following becomes true:
-	# - new.lineno > old.lineno
-	# - new.sectindex > old.sectindex
-	# - new.sectindex == old.sectindex && new.varindex > old.varindex
-	# - new.next_section == true && old.next_section == false
-	while ($lineno <= $#{$lines}) {
-		my $line = $lines->[$lineno];
-		my $text = $line->text;
-
-		$opt_debug_misc and $line->log_debug("[varorder] section ${sectindex} variable ${varindex}.");
-
-		if ($next_section) {
-			$next_section = false;
-			$sectindex++;
-			last if ($sectindex > $#sections);
-			$vars = $sections[$sectindex]->[2];
-			$may_skip_section = ($sections[$sectindex]->[1] == optional);
-			$varindex = 0;
-		}
-
-		if ($text =~ m"^#") {
-			$lineno++;
-
-		} elsif ($line->has("varcanon")) {
-			my $varcanon = $line->get("varcanon");
-
-			if (exists($below->{$varcanon})) {
-				if (defined($below->{$varcanon})) {
-					$line->log_warning("${varcanon} appears too late. Please put it below $below->{$varcanon}.");
-				} else {
-					$line->log_warning("${varcanon} appears too late. It should be the very first definition.");
-				}
-				$lineno++;
-				next;
-			}
-
-			while ($varindex <= $#{$vars} && $varcanon ne $vars->[$varindex]->[0] && ($vars->[$varindex]->[1] != once || $may_skip_section)) {
-				if ($vars->[$varindex]->[1] == once) {
-					$may_skip_section = false;
-				}
-				$below->{$vars->[$varindex]->[0]} = $below_what;
-				$varindex++;
-			}
-			if ($varindex > $#{$vars}) {
-				if ($sections[$sectindex]->[1] != optional) {
-					$line->log_warning("Empty line expected.");
-				}
-				$next_section = true;
-
-			} elsif ($varcanon ne $vars->[$varindex]->[0]) {
-				$line->log_warning("Expected " . $vars->[$varindex]->[0] . ", but found " . $varcanon . ".");
-				$lineno++;
-
-			} else {
-				if ($vars->[$varindex]->[1] != many) {
-					$below->{$vars->[$varindex]->[0]} = $below_what;
-					$varindex++;
-				}
-				$lineno++;
-			}
-			$below_what = $varcanon;
-
-		} else {
-			while ($varindex <= $#{$vars}) {
-				if ($vars->[$varindex]->[1] == once && !$may_skip_section) {
-					$line->log_warning($vars->[$varindex]->[0] . " should be set here.");
-				}
-				$below->{$vars->[$varindex]->[0]} = $below_what;
-				$varindex++;
-			}
-			$next_section = true;
-			if ($text eq "") {
-				$below_what = "the previous empty line";
-				$lineno++;
-			}
-		}
 	}
 }
 
@@ -4923,7 +4673,6 @@ sub checkfile_package_Makefile($$) {
 	}
 
 	checklines_mk($lines);
-	checklines_package_Makefile_varorder($lines);
 	autofix($lines);
 }
 
@@ -5075,21 +4824,6 @@ sub checkfile_PLIST($) {
 				$line->log_warning("The bin/ directory should not have subdirectories.");
 
 			} elsif ($dirname eq "bin") {
-
-				if (exists($all_files->{"man/man1/${basename}.1"})) {
-					# Fine.
-				} elsif (exists($all_files->{"man/man6/${basename}.6"})) {
-					# Fine.
-				} elsif (exists($all_files->{"\${IMAKE_MAN_DIR}/${basename}.\${IMAKE_MANNEWSUFFIX}"})) {
-					# Fine.
-				} else {
-					$opt_warn_extra and $line->log_warning("Manual page missing for bin/${basename}.");
-					$opt_warn_extra and $line->explain_warning(
-"All programs that can be run directly by the user should have a manual",
-"page for quick reference. The programs in the bin/ directory should have",
-"corresponding manual pages in section 1 (filename program.1), not in",
-"section 8.");
-				}
 
 			} elsif (substr($text, 0, 4) eq "doc/") {
 				$line->log_error("Documentation must be installed under share/doc, not doc.");
