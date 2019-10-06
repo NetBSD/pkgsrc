@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.16 2019/10/06 08:24:18 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.17 2019/10/06 12:50:23 rillig Exp $
 
 import pytest
 from url2pkg import *
@@ -531,6 +531,17 @@ def test_Generator_adjust_site_from_sites_mk__GNU():
         '# url2pkg-marker (please do not remove this line.)',
         '.include "../../mk/bsd.pkg.mk"',
     ]
+
+
+def test_Generator_adjust_site_from_sites_mk__R(tmp_path: Path):
+    up.pkgdir = tmp_path
+    url = 'http://cran.r-project.org/src/contrib/forecast_8.7.tar.gz'
+    generator = Generator(url)
+
+    with pytest.raises(SystemExit, match='^url2pkg: to create R packages, use pkgtools/R2pkg instead$'):
+        generator.generate_Makefile()
+
+    assert list(tmp_path.glob('*')) == []
 
 
 def test_Generator_adjust_site_other__malformed_URL():
