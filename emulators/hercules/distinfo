@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.20 2017/12/13 21:15:12 maya Exp $
+$NetBSD: distinfo,v 1.21 2019/10/06 11:51:25 nia Exp $
 
-SHA1 (hercules-3.11.tar.gz) = f846995600e1be3f851790afa1e3e0f47e59f21a
-RMD160 (hercules-3.11.tar.gz) = 759799fb17e344fd3db7ad9e55473ce0580ea415
-SHA512 (hercules-3.11.tar.gz) = 593594cdf7ce3ffbbcf2355f66a44d3944a2155cd5392967bc07c2ab77a78b796afe276113748c9d028e43f46c1b29b8d61eaa313c1075c62b168391e012b19a
-Size (hercules-3.11.tar.gz) = 2623956 bytes
+SHA1 (hercules-3.13.tar.gz) = 7e84f64bc75801cbf4c06ac6695c212cd6fd1395
+RMD160 (hercules-3.13.tar.gz) = d3b1069a2c05013937c76916da63d80011807a87
+SHA512 (hercules-3.13.tar.gz) = 76f75ef3f1eb10c0fac0d6fa1ab9809b8d1dfe3deccbcd69366b05ee58f1ecb8ea0f387f7201ab4722b121478676f00e707ad27b6ecf1980fb09e900de63d718
+Size (hercules-3.13.tar.gz) = 2640742 bytes
 SHA1 (patch-Makefile.in) = 16a9b4e47456b789a906f03c942d4e683f18b87a
 SHA1 (patch-autoconf_libtool.m4) = 713bc12bfd176e908fc01b401ee0163660f20da8
 SHA1 (patch-configure.ac) = 038dde8c7f0ff16b7a7661104c5e7fa613261045
