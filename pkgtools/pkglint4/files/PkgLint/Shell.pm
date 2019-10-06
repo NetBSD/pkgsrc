@@ -1,4 +1,4 @@
-# $NetBSD: Shell.pm,v 1.2 2019/10/06 10:33:34 rillig Exp $
+# $NetBSD: Shell.pm,v 1.3 2019/10/06 11:06:42 rillig Exp $
 #
 # Parsing and checking shell commands embedded in Makefiles
 #
@@ -595,13 +595,6 @@ sub checkline_mk_shelltext($$) {
 
 		if ($state == SCST_ECHO && $shellword eq "-n") {
 			$line->log_warning("Please use \${ECHO_N} instead of \"echo -n\".");
-		}
-
-		if ($opt_warn_extra && $state != SCST_CASE_LABEL_CONT && $shellword eq "|") {
-			$line->log_warning("The exitcode of the left-hand-side command of the pipe operator is ignored.");
-			$line->explain_warning(
-"If you need to detect the failure of the left-hand-side command, use",
-"temporary files to save the output of the command.");
 		}
 
 		if ($opt_warn_extra && $shellword eq ";" && $state != SCST_COND_CONT && $state != SCST_FOR_CONT && !$set_e_mode) {
