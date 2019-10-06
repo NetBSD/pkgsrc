@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.6 2017/10/08 23:25:06 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.7 2019/10/06 10:33:34 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2247,36 +2247,6 @@ sub warn_about_PLIST_imake_mannewsuffix($) {
 # Subroutines to check part of a single line.
 #
 
-sub checkword_absolute_pathname($$) {
-	my ($line, $word) = @_;
-
-	$opt_debug_trace and $line->log_debug("checkword_absolute_pathname(\"${word}\")");
-
-	if ($word =~ m"^/dev/(?:null|tty|zero)$") {
-		# These are defined by POSIX.
-
-	} elsif ($word eq "/bin/sh") {
-		# This is usually correct, although on Solaris, it's pretty
-		# feature-crippled.
-
-	} elsif ($word !~ m"/(?:[a-z]|\$[({])") {
-		# Assume that all pathnames start with a lowercase letter.
-
-	} else {
-		$line->log_warning("Found absolute pathname: ${word}");
-		$line->explain_warning(
-"Absolute pathnames are often an indicator for unportable code. As",
-"pkgsrc aims to be a portable system, absolute pathnames should be",
-"avoided whenever possible.",
-"",
-"A special variable in this context is \${DESTDIR}, which is used in GNU",
-"projects to specify a different directory for installation than what",
-"the programs see later when they are executed. Usually it is empty, so",
-"if anything after that variable starts with a slash, it is considered",
-"an absolute pathname.");
-	}
-}
-
 sub check_unused_licenses() {
 
 	for my $licensefile (glob("${cwd_pkgsrcdir}/licenses/*")) {
@@ -2395,31 +2365,6 @@ sub checkline_rcsid($$) {
 	my ($line, $prefix) = @_;
 
 	checkline_rcsid_regex($line, quotemeta($prefix), $prefix);
-}
-
-sub checkline_mk_absolute_pathname($$) {
-	my ($line, $text) = @_;
-	my $abspath;
-
-	$opt_debug_trace and $line->log_debug("checkline_mk_absolute_pathname(${text})");
-
-	# In the GNU coding standards, DESTDIR is defined as a (usually
-	# empty) prefix that can be used to install files to a different
-	# location from what they have been built for. Therefore
-	# everything following it is considered an absolute pathname.
-	# Another commonly used context is in assignments like
-	# "bindir=/bin".
-	if ($text =~ m"(?:^|\$\{DESTDIR\}|\$\(DESTDIR\)|[\w_]+\s*=\s*)(/(?:[^\"'\`\s]|\"[^\"*]\"|'[^']*'|\`[^\`]*\`)*)") {
-		my $path = $1;
-
-		if ($path =~ m"^/\w") {
-			$abspath = $path;
-		}
-	}
-
-	if (defined($abspath)) {
-		checkword_absolute_pathname($line, $abspath);
-	}
 }
 
 sub checkline_relative_path($$$) {
@@ -3242,14 +3187,12 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 			if ($value_novar !~ m"^[#\-0-9A-Za-z._~+%*?/\[\]]*$") {
 				$line->log_warning("\"${value}\" is not a valid pathname mask.");
 			}
-			checkline_mk_absolute_pathname($line, $value);
 		},
 
 		Pathname => sub {
 			if ($value_novar !~ m"^[#\-0-9A-Za-z._~+%/]*$") {
 				$line->log_warning("\"${value}\" is not a valid pathname.");
 			}
-			checkline_mk_absolute_pathname($line, $value);
 		},
 
 		Perl5Packlist => sub {
