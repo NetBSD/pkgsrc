@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/05/02 14:39:32 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2019/10/06 12:23:03 nia Exp $
 
-DISTNAME=	libmypaint-1.3.0
+DISTNAME=	libmypaint-1.4.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mypaint/}
 GITHUB_PROJECT=	libmypaint
