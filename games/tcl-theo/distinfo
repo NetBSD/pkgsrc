@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/10/06 23:00:09 kamil Exp $
+
+SHA1 (tcl-theo-0.0.1.tar.gz) = a3bbee24b4035cad029deb2d4ad3b2726003379c
+RMD160 (tcl-theo-0.0.1.tar.gz) = b8287104287f0a2b6131fd84f4703e4095f6b0f6
+SHA512 (tcl-theo-0.0.1.tar.gz) = 9abe3210c2be9151f199a4e04d9c0633d3ec4866826f7daabf1d4159132d70e7fdb78fd515338aef50126dbc9799f19de153f6133a6d7697f697d5b6e33b9086
+Size (tcl-theo-0.0.1.tar.gz) = 60674 bytes
