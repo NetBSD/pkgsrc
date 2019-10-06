@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.19 2019/10/02 13:46:49 ryoon Exp $
+$NetBSD: distinfo,v 1.20 2019/10/06 09:59:33 ryoon Exp $
 
-SHA1 (dos2unix-7.4.0.tar.gz) = fec41c9ea7b87db597bd20abf79b053b82689974
-RMD160 (dos2unix-7.4.0.tar.gz) = 5714e652b3549ed3cedd9237c68bda95ff9e2962
-SHA512 (dos2unix-7.4.0.tar.gz) = 41be6b0c747f4a8e316eccecd468c8250aa6791962485569eb9496def60818ae434d619b5cfb5f80f15f8d17800314f5aefe229dc5d37faaa34e1270575175e9
-Size (dos2unix-7.4.0.tar.gz) = 710339 bytes
+SHA1 (dos2unix-7.4.1.tar.gz) = 1fb98337cbbd2f88627f1367dc34ab274c61ebd9
+RMD160 (dos2unix-7.4.1.tar.gz) = 61cd3171d5d1aab4d1806dd29ac9aa916ea59e3b
+SHA512 (dos2unix-7.4.1.tar.gz) = 81e7cff82d95b298fb218b073f54d17fa851a7507fbd54b3cd9af7c1efa6a7bd3cf59f7a84ffbaf395403bf458650763e1755944451b24f708878a9c62316dc4
+Size (dos2unix-7.4.1.tar.gz) = 711570 bytes
 SHA1 (patch-Makefile) = fd36034eedc1bb15b01c24d5c73df1cd1175af25
