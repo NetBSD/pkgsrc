@@ -1,24 +1,31 @@
-# $NetBSD: Makefile,v 1.51 2019/07/21 22:24:44 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2019/10/06 15:54:38 nia Exp $
 
-DISTNAME=		tea-16.0.5
-PKGREVISION=		43
-CATEGORIES=		editors
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tea-editor/}
-#https://github.com/psemiletov/tea-qt
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	tea-48.0.1
+CATEGORIES=	editors
+MASTER_SITES=	${MASTER_SITE_GITHUB:=psemiletov/}
+GITHUB_PROJECT=	tea-qt
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://semiletov.org/tea/
-COMMENT=		Powerful, easy-to-use text editor for Gtk2
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://semiletov.org/tea/
+COMMENT=	Powerful, easy-to-use text editor
+LICENSE=	gnu-gpl-v3
 
-USE_PKGLOCALEDIR=	yes
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config msgfmt
-LDFLAGS.DragonFly=	-lX11 -lm
-LDFLAGS.SunOS=		-lX11 -lm
+WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
+USE_CMAKE=	yes
+USE_TOOLS+=	pkg-config
+USE_LANGUAGES=	c c++
 
-.include "options.mk"
+# XXX should not be needed but we have weird paths with spaces
+# which break bmake
+USE_TOOLS+=	gmake
 
-.include "../../x11/gtk2/buildlink3.mk"
-
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/djvulibre-lib/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../print/poppler-qt5/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../textproc/aspell/buildlink3.mk"
+.include "../../textproc/hunspell/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtdeclarative/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
