@@ -1,4 +1,4 @@
-# $NetBSD: Shell.pm,v 1.1 2015/11/25 16:42:21 rillig Exp $
+# $NetBSD: Shell.pm,v 1.2 2019/10/06 10:33:34 rillig Exp $
 #
 # Parsing and checking shell commands embedded in Makefiles
 #
@@ -539,10 +539,6 @@ sub checkline_mk_shelltext($$) {
 "When the Solaris shell is in \"set -e\" mode and \"cd\" fails, the",
 "shell will exit, no matter if it is protected by an \"if\" or the",
 "\"||\" operator.");
-		}
-
-		if (($state != SCST_PAX_S && $state != SCST_SED_E && $state != SCST_CASE_LABEL)) {
-			checkline_mk_absolute_pathname($line, $shellword);
 		}
 
 		if (($state == SCST_INSTALL_D || $state == SCST_MKDIR) && $shellword =~ m"^(?:\$\{DESTDIR\})?\$\{PREFIX(?:|:Q)\}/") {
