@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4214 2019/10/06 13:46:01 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4215 2019/10/06 14:41:45 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6793,3 +6793,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/spawn-fcgi to 1.6.4 [nia 2019-10-06]
 	Updated audio/suil to 0.10.4 [nia 2019-10-06]
 	Updated audio/mixxx to 2.2.2 [nia 2019-10-06]
+	Updated games/xbomb to 2.2 [jakllsch 2019-10-06]
