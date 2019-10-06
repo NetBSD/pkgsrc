@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.460 2019/10/03 06:22:44 jnemeth Exp $
+# $NetBSD: Makefile,v 1.461 2019/10/06 23:01:03 kamil Exp $
 #
 
 COMMENT=	Games
@@ -369,6 +369,7 @@ SUBDIR+=	svb
 SUBDIR+=	tads
 SUBDIR+=	taisei
 SUBDIR+=	tanked
+SUBDIR+=	tcl-theo
 SUBDIR+=	teeworlds
 SUBDIR+=	teg
 SUBDIR+=	tetrinetx
