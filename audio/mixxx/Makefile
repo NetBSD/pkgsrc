@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2019/09/18 14:17:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2019/10/06 13:45:42 nia Exp $
 
-DISTNAME=	mixxx-2.2.1
-PKGREVISION=	3
+DISTNAME=	mixxx-2.2.2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mixxxdj/}
 GITHUB_TAG=	release-${PKGVERSION_NOREV}
@@ -18,6 +17,8 @@ USE_TOOLS+=	pkg-config
 
 # c++11
 GCC_REQD+=	4.9
+
+PLIST_SRCS+=	PLIST
 
 SCONS_ARGS+=	-j${MAKE_JOBS:U1}
 
