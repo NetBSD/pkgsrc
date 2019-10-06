@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.28 2019/01/18 22:14:14 bsiegert Exp $
+# $NetBSD: Makefile,v 1.29 2019/10/06 12:52:20 nia Exp $
 
-DISTNAME=	maradns-2.0.16
+DISTNAME=	maradns-2.0.17
 CATEGORIES=	net
-MASTER_SITES=	http://www.maradns.org/download/2.0/${PKGVERSION_NOREV}/
+MASTER_SITES=	https://maradns.samiam.org/download/2.0/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ddeus.pkgsrc@mailnull.com
-HOMEPAGE=	http://www.maradns.org/
+HOMEPAGE=	https://maradns.samiam.org/
 COMMENT=	Secure DNS server for *NIX systems
 LICENSE=	2-clause-bsd
 
@@ -26,7 +26,7 @@ LDFLAGS+=	${PTHREAD_LIBS}
 SUBST_CLASSES+=		sysconf
 SUBST_STAGE.sysconf=	pre-configure
 SUBST_VARS.sysconf=	PKG_SYSCONFDIR
-SUBST_FILES.sysconf=	parse/ParseMaraRc.c MaraDns.h deadwood-3.2.09/src/DwMain.c
+SUBST_FILES.sysconf=	parse/ParseMaraRc.c MaraDns.h deadwood-3.2.14/src/DwMain.c
 
 .include "options.mk"
 
