@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4211 2019/10/06 13:02:25 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4212 2019/10/06 13:12:54 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6790,3 +6790,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/maradns to 2.0.17 [nia 2019-10-06]
 	Updated pkgtools/url2pkg to 19.3.3 [rillig 2019-10-06]
 	Updated devel/SDL_gfx to 2.0.26 [nia 2019-10-06]
+	Updated www/spawn-fcgi to 1.6.4 [nia 2019-10-06]
