@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2019/10/06 23:00:09 kamil Exp $
+lib/theo${PKGVERSION}/pkgIndex.tcl
+lib/theo${PKGVERSION}/theo.tcl
+man/mann/theo.n
+@pkgdir include
+@pkgdir bin

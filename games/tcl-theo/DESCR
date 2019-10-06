@@ -1,0 +1,5 @@
+theo - theo.c implementation for Tcl
+
+This package provides quotes from OpenBSD's src/usr.bin/mg/theo.c.  The
+quotes were originally spoken by Theo de Raadt, the OpenBSD project
+founder.
