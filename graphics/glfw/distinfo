@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/04/12 12:56:46 leot Exp $
+$NetBSD: distinfo,v 1.3 2019/10/06 11:32:18 nia Exp $
 
-SHA1 (glfw-3.2.1.tar.gz) = bee9cd9a8b4925184070ade5bc287c5635830eb0
-RMD160 (glfw-3.2.1.tar.gz) = d574e36a59888c67e277e6c206ad1312c6076fd6
-SHA512 (glfw-3.2.1.tar.gz) = c7921f993b9a99b3b9421fefadb039cd475c42d85f5b5a35d7c5401c70491349bb885a02fd31e527de06a8b40d9d49a1fdb92c964e13c04ae092c6b98eb491dc
-Size (glfw-3.2.1.tar.gz) = 472450 bytes
+SHA1 (glfw-3.3.tar.gz) = 0ac684c93a675c4b59ea53589709e186990e700d
+RMD160 (glfw-3.3.tar.gz) = fcd42ec35756bf37e2416e0cabe0caceed568fa8
+SHA512 (glfw-3.3.tar.gz) = e74bb7ba0c1c3a524a193c4fb5a2d13ba0e75f8e309612ea19cdcc944859d6e2fe29d8b2e3db76236e1011b637564ddd5f4a176dcccfeb84d09bda060f08f774
+Size (glfw-3.3.tar.gz) = 758352 bytes
