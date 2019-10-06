@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4216 2019/10/06 14:44:35 jakllsch Exp $
+$NetBSD: CHANGES-2019,v 1.4217 2019/10/06 15:54:24 fox Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6794,3 +6794,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/suil to 0.10.4 [nia 2019-10-06]
 	Updated audio/mixxx to 2.2.2 [nia 2019-10-06]
 	Updated games/xbomb to 2.2nb1 [jakllsch 2019-10-06]
+	Added lang/gjs version 1.53.4 [fox 2019-10-06]
