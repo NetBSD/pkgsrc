@@ -1,10 +1,11 @@
-# $NetBSD: check-portability.mk,v 1.8 2014/10/12 23:39:17 joerg Exp $
+# $NetBSD: check-portability.mk,v 1.9 2019/10/06 13:38:22 rillig Exp $
 #
 # This file contains some checks that are applied to the configure
 # scripts to check for certain constructs that are known to cause
-# problems on some platforms.
+# problems on some platforms. The detailed checks are in
+# check-portability.sh.
 #
-# The following variables may be set by the pkgsrc user in mk.conf:
+# User-settable variables:
 #
 # CHECK_PORTABILITY
 #	Whether to enable some portability checks for the configure
@@ -12,15 +13,7 @@
 #
 #	Default value: yes for PKG_DEVELOPERs, no otherwise.
 #
-# The following variables may be set by the package:
-#
-# SKIP_PORTABILITY_CHECK
-#	Whether the above checks should be skipped for the current
-#	package.
-#
-#	Default value: no
-#	Deprecated: Use CHECK_PORTABILITY_SKIP instead.
-#	Obsolete since 2008-02-20.
+# Package-settable variables:
 #
 # CHECK_PORTABILITY_SKIP
 #	The list of files that should be skipped in the portability
