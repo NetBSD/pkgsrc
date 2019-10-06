@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4209 2019/10/06 12:52:38 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4210 2019/10/06 12:55:41 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6788,3 +6788,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/libgit2 to 0.28.3 [nia 2019-10-06]
 	Updated graphics/libmypaint to 1.4.0 [nia 2019-10-06]
 	Updated net/maradns to 2.0.17 [nia 2019-10-06]
+	Updated pkgtools/url2pkg to 19.3.3 [rillig 2019-10-06]
