@@ -1,11 +1,30 @@
-$NetBSD: patch-ar,v 1.3 2007/04/27 19:45:02 christos Exp $
+$NetBSD: patch-sock.c,v 1.1 2019/10/06 17:45:50 christos Exp $
 
 --- sock.c.orig	2005-06-01 15:02:37.000000000 -0400
-+++ sock.c	2007-04-27 11:31:51.000000000 -0400
-@@ -60,15 +60,23 @@
++++ sock.c	2019-10-06 13:24:24.592475134 -0400
+@@ -55,20 +55,42 @@
+ 	{ IFF_DEBUG,		"IFF_DEBUG"		},
+ 	{ IFF_LOOPBACK,		"IFF_LOOPBACK"		},
+ 	{ IFF_POINTOPOINT,	"IFF_POINTOPOINT"	},
++#ifdef IFF_NOTRAILERS
+ 	{ IFF_NOTRAILERS,	"IFF_NOTRAILERS"	},
++#endif
+ 	{ IFF_RUNNING,		"IFF_RUNNING"		},
  	{ IFF_NOARP,		"IFF_NOARP"		},
  	{ IFF_PROMISC,		"IFF_PROMISC"		},
  	{ IFF_ALLMULTI,		"IFF_ALLMULTI"		},
++#ifdef IFF_SIMPLEX
++	{ IFF_SIMPLEX,		"IFF_SIMPLEX"		},
++#endif
++#ifdef IFF_LINK0
++	{ IFF_LINK0,		"IFF_LINK0"		},
++#endif
++#ifdef IFF_LINK1
++	{ IFF_LINK1,		"IFF_LINK1"		},
++#endif
++#ifdef IFF_LINK2
++	{ IFF_LINK2,		"IFF_LINK2"		},
++#endif
 +#ifdef IFF_MASTER
  	{ IFF_MASTER,		"IFF_MASTER"		},
 +#endif
@@ -27,7 +46,7 @@ $NetBSD: patch-ar,v 1.3 2007/04/27 19:45:02 christos Exp $
  static void
  print_addr(tcp, addr, ifr)
  struct tcb *tcp;
-@@ -82,16 +90,19 @@
+@@ -82,16 +104,19 @@
  	} else
  		printstr(tcp, addr, sizeof(ifr->ifr_addr.sa_data));
  }
