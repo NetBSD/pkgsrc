@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.16 2019/10/06 05:53:00 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.17 2019/10/06 08:24:18 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -785,23 +785,21 @@ class Adjuster:
         Sets abs_wrksrc depending on abs_wrkdir and the files found there.
         """
 
-        def ignore(f: str) -> bool:
-            return f.startswith('.') \
-                   or f == 'pax_global_header' \
-                   or f == 'package.xml' \
-                   or f.endswith('.gemspec')
+        def relevant(f: Path) -> bool:
+            return f.is_dir() and not f.name.startswith('.')
 
-        files = list(filter(lambda x: not ignore(x), os.listdir(self.abs_wrkdir)))
+        subdirs = [f.name for f in self.abs_wrkdir.glob('*') if relevant(f)]
 
-        if len(files) == 1:
-            if files[0] != self.makefile_lines.get('DISTNAME'):
-                self.build_vars.append(Var('WRKSRC', '=', '${WRKDIR}/' + files[0]))
-            self.abs_wrksrc = self.abs_wrkdir / files[0]
-        elif len(files) == 0:
+        if len(subdirs) == 1:
+            if subdirs[0] != self.makefile_lines.get('DISTNAME'):
+                self.build_vars.append(Var('WRKSRC', '=', '${WRKDIR}/' + subdirs[0]))
+            self.abs_wrksrc = self.abs_wrkdir / subdirs[0]
+        elif len(subdirs) == 0:
             self.build_vars.append(Var('WRKSRC', '=', '${WRKDIR}'))
             self.abs_wrksrc = self.abs_wrkdir
         else:
-            wrksrc = '${WRKDIR} # More than one possibility -- please check manually.'
+            choices = ' '.join(subdirs)
+            wrksrc = f'${{WRKDIR}} # TODO: one of {choices}, or leave it as-is'
             self.build_vars.append(Var('WRKSRC', '=', wrksrc))
             self.abs_wrksrc = self.abs_wrkdir
 
@@ -893,17 +891,18 @@ class Adjuster:
 
     def adjust(self):
 
-        def scan(basedir: Path, pattern: str) -> List[str]:
-            full_paths = basedir.rglob(pattern)
-            return [str(f.relative_to(basedir)) for f in full_paths]
+        def scan(basedir: Path, only: Callable[[Path], bool]) -> List[str]:
+            relevant = (f for f in basedir.rglob('*') if only(f))
+            relative = (str(f.relative_to(basedir)) for f in relevant)
+            return list(sorted((f for f in relative if not f.startswith('.'))))
 
         self.up.debug('Adjusting the Makefile')
         self.makefile_lines = Lines.read_from(self.up.pkgdir / 'Makefile')
 
         self.abs_wrkdir = Path(self.up.show_var('WRKDIR'))
         self.determine_wrksrc()
-        self.wrksrc_files = scan(self.abs_wrksrc, '**')
-        self.wrksrc_dirs = scan(self.abs_wrksrc, '**/')
+        self.wrksrc_dirs = scan(self.abs_wrksrc, Path.is_dir)
+        self.wrksrc_files = scan(self.abs_wrksrc, Path.is_file)
 
         self.adjust_configure()
         self.adjust_cmake()
@@ -939,11 +938,7 @@ def main(argv: List[str], up: Url2Pkg):
     if not re.fullmatch(r'\w+://[!-~]+?/[!-~]+', url):
         sys.exit(f'url2pkg: invalid URL: {url}')
 
-    if not up.pkgdir.glob('w*/.extract_done') or not (up.pkgdir / 'Makefile').is_file():
-        initial_lines = Generator(url).generate_package(up)
-    else:
-        initial_lines = Generator(url).generate_lines()
-
+    initial_lines = Generator(url).generate_package(up)
     Adjuster(up, url, initial_lines).adjust()
 
     up.out.write('\n')

@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.15 2019/10/06 05:53:00 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.16 2019/10/06 08:24:18 rillig Exp $
 
 import pytest
 from url2pkg import *
@@ -1237,6 +1237,18 @@ def test_Adjuster_determine_wrksrc__single_dir(tmp_path: Path):
     assert adjuster.abs_wrksrc == adjuster.abs_wrkdir / 'subdir'
 
 
+def test_Adjuster_determine_wrksrc__distname_dir(tmp_path: Path):
+    adjuster = Adjuster(up, '', Lines())
+    adjuster.abs_wrkdir = tmp_path
+    adjuster.makefile_lines.add_vars(Var('DISTNAME', '=', 'distname-1.0'))
+    (tmp_path / 'distname-1.0').mkdir()
+
+    adjuster.determine_wrksrc()
+
+    assert adjuster.abs_wrksrc == adjuster.abs_wrkdir / 'distname-1.0'
+    assert str_vars(adjuster.build_vars) == []
+
+
 def test_Adjuster_determine_wrksrc__several_dirs(tmp_path: Path):
     adjuster = Adjuster(up, '', Lines())
     adjuster.abs_wrkdir = tmp_path
@@ -1247,26 +1259,15 @@ def test_Adjuster_determine_wrksrc__several_dirs(tmp_path: Path):
 
     assert adjuster.abs_wrksrc == adjuster.abs_wrkdir
     assert str_vars(adjuster.build_vars) == [
-        'WRKSRC=${WRKDIR} # More than one possibility -- please check manually.',
+        'WRKSRC=${WRKDIR} # TODO: one of subdir1 subdir2, or leave it as-is',
     ]
 
 
 def test_Adjuster_adjust__empty_wrkdir(tmp_path: Path):
-    wrkdir = tmp_path / 'wrkdir'
     up.pkgdir = tmp_path
-    wrkdir.mkdir()
+    up.show_var = lambda varname: {'WRKDIR': str(tmp_path)}[varname]
     adjuster = Adjuster(up, 'https://example.org/distfile-1.0.zip', Lines())
-    adjuster.abs_wrkdir = wrkdir
     (tmp_path / 'Makefile').write_text('# url2pkg-marker\n')
-    fake_path = tmp_path / 'fake'
-    fake_path.write_text(
-        '#! /bin/sh\n'
-        'case $* in\n'
-        f'("show-var VARNAME=WRKDIR") echo "{wrkdir}" ;;\n'
-        '(*) "unknown: $*" ;;\n'
-        'esac\n')
-    fake_path.chmod(0o755)
-    up.make = fake_path
 
     adjuster.adjust()
 
@@ -1274,6 +1275,37 @@ def test_Adjuster_adjust__empty_wrkdir(tmp_path: Path):
         'WRKSRC=         ${WRKDIR}',
         'USE_LANGUAGES=  # none',
         '',
+    ]
+
+
+def test_Adjuster_adjust__files_in_wrksrc(tmp_path: Path):
+    wrkdir = tmp_path / 'work'
+    wrkdir.mkdir()
+    (wrkdir / '.hidden').touch()
+    (wrkdir / 'file').touch()
+    (wrkdir / 'dir').mkdir()
+    (wrkdir / 'dir' / '.hidden-dir').mkdir()
+    (wrkdir / 'dir' / 'subdir').mkdir()
+    (wrkdir / 'dir' / 'subdir' / '.hidden').touch()
+    (wrkdir / 'dir' / 'subdir' / 'file').touch()
+    (wrkdir / 'dir2').mkdir()  # to make WRKSRC = WRKDIR
+    up.show_var = lambda varname: {'WRKDIR': str(wrkdir)}[varname]
+    up.pkgdir = tmp_path
+    (tmp_path / 'Makefile').write_text('# url2pkg-marker\n')
+    adjuster = Adjuster(up, 'https://example.org/distfile-1.0.zip', Lines())
+
+    adjuster.adjust()
+
+    assert adjuster.wrksrc_dirs == [
+        'dir',
+        'dir/.hidden-dir',
+        'dir/subdir',
+        'dir2',
+    ]
+    assert adjuster.wrksrc_files == [
+        'dir/subdir/.hidden',
+        'dir/subdir/file',
+        'file',
     ]
 
 
