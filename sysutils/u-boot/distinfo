@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.25 2019/09/05 16:09:09 bouyer Exp $
+$NetBSD: distinfo,v 1.26 2019/10/06 13:25:24 bad Exp $
 
 SHA1 (u-boot-2018.11.tar.bz2) = e58e86c633ad3e2613196e0c0b0a7760ae5966d6
 RMD160 (u-boot-2018.11.tar.bz2) = f63c67750951d0e2883935a5d4cc3252f51a5453
 SHA512 (u-boot-2018.11.tar.bz2) = 1ea0bbb5f5e6d4c60b3a6bd345d1fa6e9da025daf36f47e8392bab34cb432c2e3633d903efb260f71fff87dffd6f2bf09ac900e96b3d4247073958d83b89ceff
 Size (u-boot-2018.11.tar.bz2) = 13045125 bytes
-SHA1 (patch-Makefile) = 45f505041a586b75953c34c1ab6fffaa56b43601
+SHA1 (patch-Makefile) = 068765a3e73fc0747d080cc7a5e2ff0b79e8fd9a
 SHA1 (patch-arch_arm_cpu_armv8_Kconfig) = 63cbbf2e3cebd46793fc03cc8e62297f6dc01aa9
 SHA1 (patch-arch_arm_dts_Makefile) = 184fdb8b04b25c0c827823779874306ce1bc746d
 SHA1 (patch-arch_arm_dts_sun8i-h2-plus-bananapi-m2-zero.dts) = aaa530a5f520eea0cb5dcece0b730e23db59eb40
