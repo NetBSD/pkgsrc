@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4204 2019/10/06 12:05:53 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4205 2019/10/06 12:06:41 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6783,3 +6783,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/haproxy to 2.0.7 [nia 2019-10-06]
 	Updated emulators/hercules to 3.13 [nia 2019-10-06]
 	Updated devel/hdf5 to 1.10.5 [nia 2019-10-06]
+	Updated devel/hdf5-c++ to 1.10.5 [nia 2019-10-06]
