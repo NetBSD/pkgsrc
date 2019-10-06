@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.17 2019/10/06 08:24:18 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.18 2019/10/06 12:50:23 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -289,6 +289,9 @@ class Generator:
             self.homepage = f'https://www.gnu.org/software/{subdir}'
         else:
             self.homepage = self.url[:-len(self.distfile)] + ' # TODO: check'
+
+        if varname == 'MASTER_SITE_R_CRAN':
+            sys.exit('url2pkg: to create R packages, use pkgtools/R2pkg instead')
 
     def adjust_site_SourceForge(self):
         pattern = r'''(?x)
