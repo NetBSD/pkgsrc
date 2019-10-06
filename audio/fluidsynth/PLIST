@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:08 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/10/06 17:29:33 nia Exp $
 bin/fluidsynth
 include/fluidsynth.h
 include/fluidsynth/audio.h
 include/fluidsynth/event.h
 include/fluidsynth/gen.h
+include/fluidsynth/ladspa.h
 include/fluidsynth/log.h
 include/fluidsynth/midi.h
 include/fluidsynth/misc.h
 include/fluidsynth/mod.h
-include/fluidsynth/ramsfont.h
 include/fluidsynth/seq.h
 include/fluidsynth/seqbind.h
 include/fluidsynth/settings.h
@@ -18,6 +18,8 @@ include/fluidsynth/synth.h
 include/fluidsynth/types.h
 include/fluidsynth/version.h
 include/fluidsynth/voice.h
-lib/libfluidsynth.la
+lib/libfluidsynth.so
+lib/libfluidsynth.so.2
+lib/libfluidsynth.so.2.2.0
 lib/pkgconfig/fluidsynth.pc
 man/man1/fluidsynth.1
