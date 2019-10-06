@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19309 2019/10/06 12:12:24 nia Exp $
+$NetBSD: TODO,v 1.19310 2019/10/06 12:18:50 nia Exp $
 
 Suggested new packages
 ======================
@@ -921,7 +921,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libfolks-0.10.1 [wip]
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
-	o libgit2-0.28.3
 	o libgnomedb-3.1.2
 	o libgnomekbd-3.4.0.2
 	o libgphoto2-2.5.16
