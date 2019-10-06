@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkglint.1,v 1.1 2015/11/25 16:42:21 rillig Exp $
+.\"	$NetBSD: pkglint.1,v 1.2 2019/10/06 11:45:05 rillig Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
@@ -7,7 +7,7 @@
 .\" Roland Illig <roland.illig@gmx.de>, 2004, 2005.
 .\" Thomas Klausner <wiz@NetBSD.org>, 2012.
 .\"
-.Dd July 14, 2012
+.Dd October 6, 2019
 .Dt PKGLINT 1
 .Os
 .Sh NAME
@@ -31,8 +31,6 @@ For a list of checks, see below.
 .It Fl D{[no-]debug,...}
 Enable or disable debugging categories.
 For a list of categories, see below.
-.It Fl F Ns | Ns Fl -autofix
-Repair trivial things automatically.
 .It Fl I
 Show the
 .Pa Makefile
@@ -145,8 +143,6 @@ Information about the contexts in which variables are used.
 Enable all warnings.
 .It Cm none
 Disable all warnings.
-.It Cm [no-]absname
-Warn if a file contains an absolute pathname.
 .It Cm [no-]directcmd
 Warn if a system command name is used instead of a variable (e.g. sed
 instead of ${SED}).
@@ -155,26 +151,6 @@ Emit some additional warnings that are not enabled by default,
 for whatever reason.
 .It Cm [no-]order
 Warn if Makefile variables are not in the preferred order.
-.It Cm [no-]perm
-Warn if a variable is used or defined outside its specified scope.
-The available permissions are:
-.Bl -tag -width 3n -compact
-.It append
-append something using +=
-.It default
-set a default value using ?=
-.It preprocess
-use a variable during preprocessing
-.It runtime
-use a variable at runtime
-.It set
-set a variable using :=, =, !=
-.It unknown
-permissions for this variable currently not known
-.El
-A
-.Sq \&?
-means that it is not yet clear which permissions are allowed and which aren't.
 .It Cm [no-]plist-depr
 Warn if deprecated pathnames are used in
 .Pa PLIST

@@ -1,12 +1,10 @@
-# $NetBSD: FileUtil.pm,v 1.1 2015/11/25 16:42:21 rillig Exp $
+# $NetBSD: FileUtil.pm,v 1.2 2019/10/06 11:45:05 rillig Exp $
 #
 # Subroutines for loading and saving line-oriented files.
 # The load_file() subroutine loads a file completely into memory,
 # optionally handling continuation line folding. The load_lines() subrou-
 # tine is an abbreviation for the common case of loading files without
-# continuation lines. The save_autofix_changes() subroutine examines an
-# array of lines if some of them have changed. It then saves the modified
-# files.
+# continuation lines.
 #
 package PkgLint::FileUtil;
 
@@ -19,7 +17,6 @@ BEGIN {
 	@ISA = qw(Exporter);
 	@EXPORT_OK = qw(
 		load_file load_lines
-		save_autofix_changes
 	);
 
 	import PkgLint::Util qw(
@@ -127,40 +124,4 @@ sub load_file($) {
 	my ($fname) = @_;
 
 	return load_lines($fname, false);
-}
-
-sub save_autofix_changes($) {
-	my ($lines) = @_;
-
-	my (%changed, %physlines);
-
-	foreach my $line (@{$lines}) {
-		if ($line->is_changed) {
-			$changed{$line->fname}++;
-		}
-		push(@{$physlines{$line->fname}}, @{$line->physlines});
-	}
-
-	foreach my $fname (sort(keys(%changed))) {
-		my $new = "${fname}.pkglint.tmp";
-		my $f;
-
-		if (!open($f, ">", $new)) {
-			log_error($new, NO_LINE_NUMBER, "$!");
-			next;
-		}
-		foreach my $physline (@{$physlines{$fname}}) {
-			print $f ($physline->[1]);
-		}
-		if (!close($f)) {
-			log_error($new, NO_LINE_NUMBER, "$!");
-			next;
-		}
-
-		if (!rename($new, $fname)) {
-			log_error($fname, NO_LINE_NUMBER, "$!");
-			next;
-		}
-		log_note($fname, NO_LINE_NUMBER, "Has been autofixed. Please re-run pkglint.");
-	}
 }
