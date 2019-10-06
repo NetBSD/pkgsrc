@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 02:00:12 agc Exp $
+$NetBSD: distinfo,v 1.5 2019/10/06 03:25:17 kamil Exp $
 
-SHA1 (tDOM-0.8.3.tgz) = 1b7db0357ffb96c0a6c879c385168491380a8ca5
-RMD160 (tDOM-0.8.3.tgz) = df52d8b7c3ac9134dae20a3bcaa21e0e512e3289
-SHA512 (tDOM-0.8.3.tgz) = aa5352bc9b67c45d115e52dbf2cf153a3db89f851b51c1cd574af69b02c466f643df0b5448f7d105245246d20a92f80605f16bd927cd7925c1f2007827f2dc20
-Size (tDOM-0.8.3.tgz) = 990367 bytes
-SHA1 (patch-aa) = 18be9e77a22311cf2029386d88e2050e57657e2b
+SHA1 (tdom-0.9.1-src.tgz) = 9d6ec473221b80506ba0a142cf4e9661d498ca6a
+RMD160 (tdom-0.9.1-src.tgz) = b65898bcc97fe69ba92c8edaf8e1eb156abfd0c5
+SHA512 (tdom-0.9.1-src.tgz) = 40dd5ec942ac4cce2fd78f53caf3a2b5e2fae9fbc5617923d94f07c9f530fa936696d79abe080ade2edbc4f4a86c35898b000180f20d9320edd8bfa3fa19d863
+Size (tdom-0.9.1-src.tgz) = 1100163 bytes
