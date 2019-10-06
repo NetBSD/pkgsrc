@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2019/10/06 15:50:31 fox Exp $
+
+SHA1 (gjs-1.53.4.tar.xz) = 7193dffbc30e08fec94bc315feeb41bfdaa67c64
+RMD160 (gjs-1.53.4.tar.xz) = 1263754399afd24e0522d67241685192574d4e35
+SHA512 (gjs-1.53.4.tar.xz) = 5876a8912699fcb22bdfe678a5c9d9893be9dc5b2242160985dd6491c1b4c6148fd4d57d62a9be9c98186176440cf9f99239f8be6b57126cb077c3f90aeb8e2e
+Size (gjs-1.53.4.tar.xz) = 635936 bytes
+SHA1 (patch-Makefile.am) = 5b8f2c6468b557c54541172ca0ceba5b77601f8c
+SHA1 (patch-configure.ac) = acd8d6e1546c14a636478da2a557cef4bdbc146a
