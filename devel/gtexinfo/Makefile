@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2019/08/11 13:18:44 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2019/10/06 08:58:22 rillig Exp $
 
 DISTNAME=		texinfo-6.5
 PKGNAME=		g${DISTNAME}
@@ -18,6 +18,7 @@ DEPENDS+=		p5-Text-Unidecode-[0-9]*:../../textproc/p5-Text-Unidecode
 DEPENDS+=		p5-Unicode-EastAsianWidth-[0-9]*:../../converters/p5-Unicode-EastAsianWidth
 
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # otherwise MiscXS.pm won't be installed
 CONFIGURE_ARGS+=	--with-external-libintl-perl
 CONFIGURE_ARGS+=	--with-external-Text-Unidecode
 CONFIGURE_ARGS+=	--with-external-Unicode-EastAsianWidth
