@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.7 2019/10/06 10:33:34 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.8 2019/10/06 10:46:18 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1592,35 +1592,6 @@ sub get_nbpart() {
 	return "" unless $pkgrevision =~ m"^\d+$";
 	return "" unless $pkgrevision + 0 != 0;
 	return "nb$pkgrevision";
-}
-
-sub check_pkglint_version() {
-	state $done = false;
-	return if $done;
-	$done = true;
-
-	my $lines = load_lines("${cwd_pkgsrcdir}/pkgtools/pkglint4/Makefile", true);
-	return unless $lines;
-
-	my $pkglint_version = undef;
-	foreach my $line (@{$lines}) {
-		if ($line->text =~ regex_varassign) {
-			my ($varname, undef, $value, undef) = ($1, $2, $3, $4);
-
-			if ($varname eq "DISTNAME" || $varname eq "PKGNAME") {
-				if ($value =~ regex_pkgname) {
-					$pkglint_version = $2;
-				}
-			}
-		}
-	}
-	return unless defined($pkglint_version);
-
-	if (dewey_cmp($pkglint_version, ">", conf_distver)) {
-		log_note(NO_FILE, NO_LINE_NUMBER, "A newer version of pkglint is available.");
-	} elsif (dewey_cmp($pkglint_version, "<", conf_distver)) {
-		log_error(NO_FILE, NO_LINE_NUMBER, "The pkglint version is newer than the tree to check.");
-	}
 }
 
 # When processing a file using the expect* subroutines below, it may
@@ -5802,8 +5773,6 @@ sub checkitem($) {
 		log_error($item, NO_LINE_NUMBER, "Cannot determine the pkgsrc root directory.");
 		return;
 	}
-
-	check_pkglint_version();	# (needs $cwd_pkgsrcdir)
 
 	return if $is_dir && is_emptydir($item);
 
