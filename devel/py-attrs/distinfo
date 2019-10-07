@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2019/03/03 12:17:05 adam Exp $
+$NetBSD: distinfo,v 1.10 2019/10/07 20:25:01 adam Exp $
 
-SHA1 (attrs-19.1.0.tar.gz) = 638b04fda29463067296a2a330b53856f40a32cb
-RMD160 (attrs-19.1.0.tar.gz) = af44a046cf42ff74c5c66a99849c977f8c97ff03
-SHA512 (attrs-19.1.0.tar.gz) = 22ee45e8b10a7abe10e720788c5cfab424d0bfe70e595dfb116928b8ebea497a747e8234d96549da00f0967de750fb943db0cd3669354253a27be2ca30fe413a
-Size (attrs-19.1.0.tar.gz) = 124220 bytes
+SHA1 (attrs-19.2.0.tar.gz) = f0ee52eca7c0a27b44a32dca001f920f0f76c7f7
+RMD160 (attrs-19.2.0.tar.gz) = b7a5eb4f333dd7b48bf10843ca3bca35b171c367
+SHA512 (attrs-19.2.0.tar.gz) = c6239f5553d99f324a36193d9f6e684fdce26efcf4da866d1b995cd644909ec4b58ac6ef6c20a0fda4b8a16d00ec0aacfd3970a52b68997fd10804d5286b41c6
+Size (attrs-19.2.0.tar.gz) = 134333 bytes
