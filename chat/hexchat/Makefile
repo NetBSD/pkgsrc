@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/08/11 13:18:03 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2019/10/07 09:28:09 prlw1 Exp $
 
 DISTNAME=	hexchat-2.14.2
 PKGREVISION=	2
@@ -42,7 +42,7 @@ PLIST_SUBST+=		SOEXT=${SOEXT}
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

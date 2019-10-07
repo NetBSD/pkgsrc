@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/10/05 02:28:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2019/10/07 09:28:11 prlw1 Exp $
 
 DISTNAME=	taisei-v1.3.1
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -40,7 +40,7 @@ BUILDLINK_TRANSFORM+=	rm:-Werror=implicit-function-declaration
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../audio/opusfile/buildlink3.mk"
 .include "../../audio/SDL2_mixer/buildlink3.mk"

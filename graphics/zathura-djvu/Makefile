@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/07/21 22:25:07 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/10/07 09:28:12 prlw1 Exp $
 #
 
 DISTNAME=	zathura-djvu-0.2.8
@@ -14,7 +14,7 @@ LICENSE=	zlib
 
 USE_TOOLS+=	pkg-config
 
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/djvulibre-lib/buildlink3.mk"
 .include "../../print/zathura/buildlink3.mk"

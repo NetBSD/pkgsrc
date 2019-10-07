@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2923 2019/10/04 22:15:04 gutteridge Exp $
+# $NetBSD: Makefile,v 1.2924 2019/10/07 09:28:09 prlw1 Exp $
 #
 
 COMMENT=	Development utilities
@@ -789,6 +789,7 @@ SUBDIR+=	mell
 SUBDIR+=	memcached
 SUBDIR+=	menhir
 SUBDIR+=	mercurial
+SUBDIR+=	meson
 SUBDIR+=	mico
 SUBDIR+=	mk-configure
 SUBDIR+=	mkcmd
@@ -2216,7 +2217,6 @@ SUBDIR+=	py-mccabe
 SUBDIR+=	py-memcached
 SUBDIR+=	py-memory-profiler
 SUBDIR+=	py-mercurial
-SUBDIR+=	py-meson
 SUBDIR+=	py-minimock
 SUBDIR+=	py-mixbox
 SUBDIR+=	py-mmh3

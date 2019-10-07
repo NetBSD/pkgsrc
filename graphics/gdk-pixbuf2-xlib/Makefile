@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/10/04 23:37:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2019/10/07 09:28:11 prlw1 Exp $
 
 DISTNAME=	gdk-pixbuf-${PIXBUF2_VERSION}
 PKGNAME=	gdk-pixbuf2-xlib-${PIXBUF2_VERSION}
@@ -38,7 +38,7 @@ post-install:
 	${INSTALL_LIB} ${WRKSRC}/output/contrib/gdk-pixbuf-xlib/*.so* ${DESTDIR}${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/output/meson-private/gdk-pixbuf-xlib-2.0.pc ${DESTDIR}${PREFIX}/lib/pkgconfig
 
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"

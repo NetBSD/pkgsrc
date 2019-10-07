@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2019/10/06 11:07:44 nia Exp $
+# $NetBSD: Makefile,v 1.43 2019/10/07 09:28:11 prlw1 Exp $
 
 DISTNAME=	gdk-pixbuf-${PIXBUF2_VERSION}
 PKGNAME=	${DISTNAME:S/pixbuf/pixbuf2/}
@@ -41,7 +41,7 @@ _BUILDING_GTK2= yes
 pre-build:
 	${CHMOD} +x ${WRKSRC}/build-aux/*.py ${WRKSRC}/build-aux/*.sh
 
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+= glib2>=2.37.2
 .include "../../devel/glib2/buildlink3.mk"

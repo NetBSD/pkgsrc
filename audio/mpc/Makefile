@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/06/23 08:38:08 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2019/10/07 09:28:09 prlw1 Exp $
 
 DISTNAME=		mpc-0.32
 CATEGORIES=		audio
@@ -22,7 +22,7 @@ LIBS+=			${BUILDLINK_LDADD.iconv}
 # is installed, causing our PLIST check to fail.
 MESON_ARGS+=		-Ddocumentation=disabled
 
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 BUILDLINK_API_DEPENDS.libmpdclient+=	libmpdclient>=2.9
 .include "../../audio/libmpdclient/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"

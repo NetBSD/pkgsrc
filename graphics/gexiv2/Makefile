@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/08/02 08:21:05 nia Exp $
+# $NetBSD: Makefile,v 1.7 2019/10/07 09:28:11 prlw1 Exp $
 
 DISTNAME=	gexiv2-0.12.0
 CATEGORIES=	graphics devel
@@ -25,7 +25,7 @@ PKGCONFIG_OVERRIDE=	gexiv2.pc.in
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=./gexiv2/gexiv2.map
 
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"

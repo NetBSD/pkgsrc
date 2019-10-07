@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.258 2019/08/20 14:06:46 wiz Exp $
+# $NetBSD: Makefile,v 1.259 2019/10/07 09:28:10 prlw1 Exp $
 
 .include "Makefile.common"
 
@@ -69,7 +69,7 @@ PLIST.nococoa=	yes
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
