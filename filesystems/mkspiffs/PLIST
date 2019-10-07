@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2019/10/07 10:13:16 bouyer Exp $
+bin/mkspiffs-arduino-esp32
+bin/mkspiffs-arduino-esp8266
+bin/mkspiffs-esp-idf
+bin/mkspiffs-generic

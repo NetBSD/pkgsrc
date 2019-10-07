@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2019/04/05 19:33:53 maya Exp $
+# $NetBSD: Makefile,v 1.48 2019/10/07 10:13:16 bouyer Exp $
 #
 
 COMMENT=	File systems, and file system related packages
@@ -40,6 +40,7 @@ SUBDIR+=	glusterfs
 SUBDIR+=	libntfs
 SUBDIR+=	ltfs
 SUBDIR+=	ltfs-ltotape
+SUBDIR+=	mkspiffs
 SUBDIR+=	openafs
 SUBDIR+=	openafs-devel
 SUBDIR+=	ori
