@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/01/28 14:13:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/10/07 20:17:10 adam Exp $
 bin/tqdm-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -36,10 +36,25 @@ ${PYSITELIB}/tqdm/_utils.pyo
 ${PYSITELIB}/tqdm/_version.py
 ${PYSITELIB}/tqdm/_version.pyc
 ${PYSITELIB}/tqdm/_version.pyo
-${PYSITELIB}/tqdm/auto/__init__.py
-${PYSITELIB}/tqdm/auto/__init__.pyc
-${PYSITELIB}/tqdm/auto/__init__.pyo
-${PYSITELIB}/tqdm/autonotebook/__init__.py
-${PYSITELIB}/tqdm/autonotebook/__init__.pyc
-${PYSITELIB}/tqdm/autonotebook/__init__.pyo
+${PYSITELIB}/tqdm/auto.py
+${PYSITELIB}/tqdm/auto.pyc
+${PYSITELIB}/tqdm/auto.pyo
+${PYSITELIB}/tqdm/autonotebook.py
+${PYSITELIB}/tqdm/autonotebook.pyc
+${PYSITELIB}/tqdm/autonotebook.pyo
+${PYSITELIB}/tqdm/cli.py
+${PYSITELIB}/tqdm/cli.pyc
+${PYSITELIB}/tqdm/cli.pyo
+${PYSITELIB}/tqdm/gui.py
+${PYSITELIB}/tqdm/gui.pyc
+${PYSITELIB}/tqdm/gui.pyo
+${PYSITELIB}/tqdm/notebook.py
+${PYSITELIB}/tqdm/notebook.pyc
+${PYSITELIB}/tqdm/notebook.pyo
+${PYSITELIB}/tqdm/std.py
+${PYSITELIB}/tqdm/std.pyc
+${PYSITELIB}/tqdm/std.pyo
+${PYSITELIB}/tqdm/utils.py
+${PYSITELIB}/tqdm/utils.pyc
+${PYSITELIB}/tqdm/utils.pyo
 man/man1/tqdm-${PYVERSSUFFIX}.1
