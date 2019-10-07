@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2019/10/07 19:21:49 adam Exp $
+include/postgresql/server/plperl.h
+include/postgresql/server/plperl_helpers.h
+include/postgresql/server/ppport.h
+lib/postgresql/plperl.so
+share/locale/cs/LC_MESSAGES/plperl-12.mo
+share/locale/de/LC_MESSAGES/plperl-12.mo
+share/locale/es/LC_MESSAGES/plperl-12.mo
+share/locale/fr/LC_MESSAGES/plperl-12.mo
+share/locale/it/LC_MESSAGES/plperl-12.mo
+share/locale/ja/LC_MESSAGES/plperl-12.mo
+share/locale/ko/LC_MESSAGES/plperl-12.mo
+share/locale/pl/LC_MESSAGES/plperl-12.mo
+share/locale/pt_BR/LC_MESSAGES/plperl-12.mo
+share/locale/ro/LC_MESSAGES/plperl-12.mo
+share/locale/ru/LC_MESSAGES/plperl-12.mo
+share/locale/sv/LC_MESSAGES/plperl-12.mo
+share/locale/tr/LC_MESSAGES/plperl-12.mo
+share/locale/vi/LC_MESSAGES/plperl-12.mo
+share/locale/zh_CN/LC_MESSAGES/plperl-12.mo
+share/postgresql/extension/plperl--1.0.sql
+share/postgresql/extension/plperl--unpackaged--1.0.sql
+share/postgresql/extension/plperl.control
+share/postgresql/extension/plperlu--1.0.sql
+share/postgresql/extension/plperlu--unpackaged--1.0.sql
+share/postgresql/extension/plperlu.control
