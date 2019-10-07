@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2019/08/22 12:23:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.36 2019/10/07 09:28:13 prlw1 Exp $
 #
 
 DISTNAME=	zathura-pdf-mupdf-0.3.5
@@ -19,7 +19,7 @@ MESON_ARGS+=	-D link-external=true
 
 CPPFLAGS+=	-D_XOPEN_SOURCE=600
 
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 BUILDLINK_API_DEPENDS.mupdf+=	mupdf>=1.16.0
 .include "../../print/mupdf/buildlink3.mk"

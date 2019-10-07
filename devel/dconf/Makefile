@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2019/08/16 10:54:51 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2019/10/07 09:28:10 prlw1 Exp $
 
 DISTNAME=	dconf-0.32.0
 CATEGORIES=	devel gnome
@@ -58,7 +58,7 @@ BUILDLINK_DEPMETHOD.vala=	build
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.44.0
 #.include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../devel/glib2/modules.mk"
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

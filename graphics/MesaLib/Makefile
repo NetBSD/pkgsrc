@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.167 2019/10/03 15:50:06 nia Exp $
+# $NetBSD: Makefile,v 1.168 2019/10/07 09:28:11 prlw1 Exp $
 
 DISTNAME=	mesa-19.1.6
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -168,9 +168,6 @@ TOOL_DEPENDS+=		${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
 # needed to build vulkan support
 TOOL_DEPENDS+=		${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 
-# LLVM detection
-TOOL_DEPENDS+=		${PYPKGPREFIX}-meson>=0.51.1nb3:../../devel/py-meson
-
 EGDIR=		${PREFIX}/share/examples/mesa
 
 OWN_DIRS=	${PKG_SYSCONFDIR}/drirc.d
@@ -185,7 +182,7 @@ pre-configure:
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/drirc.d/00-mesa-defaults.conf ${DESTDIR}${EGDIR}
 
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
