@@ -1,0 +1,28 @@
+$NetBSD: patch-src_Makefile.global.in,v 1.1 2019/10/07 19:21:48 adam Exp $
+
+Do not store CONFIGURE_ARGS, as these may contain working directory references.
+Fix building on Cygwin.
+
+--- src/Makefile.global.in.orig	2017-10-02 21:09:15.000000000 +0000
++++ src/Makefile.global.in
+@@ -74,8 +74,6 @@ endif # not PGXS
+ 
+ vpathsearch = `for f in $(addsuffix /$(1),$(subst :, ,. $(VPATH))); do test -r $$f && echo $$f && break; done`
+ 
+-# Saved arguments from configure
+-configure_args = @configure_args@
+ 
+ 
+ ##########################################################################
+@@ -641,6 +639,11 @@ ifeq ($(PORTNAME),win32)
+ LIBS += -lws2_32
+ endif
+ 
++# missing for link on cygwin ? 
++ifeq ($(PORTNAME),cygwin)
++LIBS +=  $(LDAP_LIBS_BE)
++endif
++
+ # Not really standard libc functions, used by the backend.
+ TAS         = @TAS@
+ 
