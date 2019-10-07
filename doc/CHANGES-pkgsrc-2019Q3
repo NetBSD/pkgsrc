@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q3,v 1.1.2.3 2019/10/05 19:53:25 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q3,v 1.1.2.4 2019/10/07 09:15:18 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q3 branch:
 
@@ -19,4 +19,10 @@ lang/ruby25-base: security fix
 
 Pullup ticket #6066 - requested by taca
 lang/ruby26-base: security fix
+
+Pullup ticket #6067 - requested by agc
+security/netpgpverify: build fix
+
+Pullup ticket #6068 - requested by nia
+devel/libgit2: security fix
 
