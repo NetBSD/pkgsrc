@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2019/10/07 09:28:12 prlw1 Exp $
+# $NetBSD: Makefile,v 1.5 2019/10/07 14:52:33 wiz Exp $
 
 DISTNAME=	gstreamer-editing-services-1.16.0
 PKGNAME=	${DISTNAME:S/gstreamer-/gst-plugins1-/1}
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-editing-services/
 EXTRACT_SUFX=	.tar.xz
@@ -23,6 +24,7 @@ MESON_ARGS+=	-Dgtk_doc=disabled
 
 .include "../../devel/meson/build.mk"
 .include "../../lang/python/extension.mk"
+BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.16.0nb2
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-good/buildlink3.mk"
