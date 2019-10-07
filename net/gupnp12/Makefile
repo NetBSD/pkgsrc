@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/08/20 13:16:43 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/10/07 09:28:12 prlw1 Exp $
 
 DISTNAME=	gupnp-1.2.1
 PKGNAME=	${DISTNAME:S/gupnp/gupnp12/}
@@ -41,5 +41,5 @@ BUILDLINK_API_DEPENDS.libsoup+=	libsoup>=2.48.0
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../net/gssdp12/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"

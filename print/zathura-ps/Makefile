@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/07/21 22:25:39 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/10/07 09:28:13 prlw1 Exp $
 
 DISTNAME=	zathura-ps-0.2.6
 PKGREVISION=	5
@@ -13,7 +13,7 @@ LICENSE=	zlib
 
 USE_TOOLS+=	pkg-config
 
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../print/libspectre/buildlink3.mk"
 .include "../../print/zathura/buildlink3.mk"
