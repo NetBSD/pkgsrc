@@ -1,0 +1,7 @@
+This is a package designed to teach the Tcl programming language in a
+quick and easy manner.  The goal is to teach the minimal amount of Tcl
+syntax, commands and options that are necessary to write useful
+programs.
+
+You are encouraged to use the man pages and books to augment this
+tutorial.
