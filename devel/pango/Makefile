@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.226 2019/09/11 23:37:44 gutteridge Exp $
+# $NetBSD: Makefile,v 1.227 2019/10/07 09:28:10 prlw1 Exp $
 
 DISTNAME=	pango-1.44.6
 CATEGORIES=	devel fonts
@@ -58,5 +58,5 @@ BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.12.10
 # which corresponds to release version 2.8.1
 BUILDLINK_API_DEPENDS.freetype2+= freetype2>=2.8.1
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"

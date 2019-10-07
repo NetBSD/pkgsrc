@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/07/18 15:03:51 prlw1 Exp $
+# $NetBSD: Makefile,v 1.23 2019/10/07 09:28:10 prlw1 Exp $
 
 DISTNAME=	at-spi2-atk-2.33.2
 CATEGORIES=	devel gnome
@@ -25,5 +25,5 @@ BUILDLINK_API_DEPENDS.dbus+=	dbus>=1.5
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"

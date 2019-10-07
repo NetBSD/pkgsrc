@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.17 2019/10/06 12:50:23 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.18 2019/10/07 09:28:13 prlw1 Exp $
 
 import pytest
 from url2pkg import *
@@ -959,7 +959,7 @@ def test_Adjuster_adjust_meson(tmp_path: Path):
 
     adjuster.adjust_meson()
 
-    assert adjuster.includes == ['../../devel/py-meson/build.mk']
+    assert adjuster.includes == ['../../devel/meson/build.mk']
 
 
 def test_Adjuster_adjust_perl_module_Build_PL(tmp_path: Path):
