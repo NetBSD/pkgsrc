@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4229 2019/10/07 14:52:52 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4230 2019/10/07 18:34:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6811,3 +6811,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Added filesystems/mkspiffs version 0.2.3 [bouyer 2019-10-07]
 	Added lang/tcltutor version 30b7 [kamil 2019-10-07]
 	Updated multimedia/gst-plugins1-editing-services to 1.16.0nb1 [wiz 2019-10-07]
+	Updated www/py-soupsieve to 1.9.4 [adam 2019-10-07]
+	Updated www/py-beautifulsoup to 3.2.2 [adam 2019-10-07]
