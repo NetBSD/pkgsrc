@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2019/07/21 22:24:43 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2019/10/07 09:28:11 prlw1 Exp $
 
 DISTNAME=	gtranslator-3.32.1
 PKGREVISION=	1
@@ -35,6 +35,6 @@ REPLACE_PYTHON+=	build-aux/meson/meson_post_install.py
 .include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

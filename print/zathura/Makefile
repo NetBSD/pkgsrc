@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2019/07/21 22:24:10 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2019/10/07 09:28:13 prlw1 Exp $
 
 DISTNAME=	zathura-0.4.3
 PKGREVISION=	2
@@ -23,7 +23,7 @@ MESON_ARGS+=	-D convert-icon=disabled
 CFLAGS.SunOS+=	-D__EXTENSIONS__
 
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/girara/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

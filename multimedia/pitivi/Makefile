@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2019/10/03 22:45:22 nia Exp $
+# $NetBSD: Makefile,v 1.54 2019/10/07 09:28:12 prlw1 Exp $
 
 DISTNAME=	pitivi-0.999
 CATEGORIES=	multimedia
@@ -35,7 +35,7 @@ REPLACE_PYTHON+=	bin/pitivi.in
 # Python 3 only
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../graphics/gst-plugins1-gdk_pixbuf/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/py-cairo/buildlink3.mk"
