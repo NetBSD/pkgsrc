@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4231 2019/10/07 19:23:34 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4232 2019/10/07 19:31:37 christos Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6821,3 +6821,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added databases/postgresql12-plpython to 12.0 [adam 2019-10-07]
 	Added databases/postgresql12-pltcl to 12.0 [adam 2019-10-07]
 	Added databases/postgresql12-server to 12.0 [adam 2019-10-07]
+	Updated net/proftpd to 1.3.6 +blacklistd [christos 2019-10-07]
