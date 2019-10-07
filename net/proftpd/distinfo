@@ -1,13 +1,14 @@
-$NetBSD: distinfo,v 1.46 2017/04/05 17:36:00 kim Exp $
+$NetBSD: distinfo,v 1.47 2019/10/07 19:29:47 christos Exp $
 
-SHA1 (ecff21e0d0e84f35c299ef91d7fda088e516d4ed.patch) = a508c2b37482b178d8ff7b06e45d36044818b5f8
-RMD160 (ecff21e0d0e84f35c299ef91d7fda088e516d4ed.patch) = 5cc12fd67e6c722151f0d0c2a22365aff16f7219
-SHA512 (ecff21e0d0e84f35c299ef91d7fda088e516d4ed.patch) = 7cfadcdb33eff71925d61c78d9d54fe171df3c161d43a940485bd70965046da4ad82d2381d94452dee80548b3131be6801d4f85bbfb2fc3afc7b9a872a00d707
-Size (ecff21e0d0e84f35c299ef91d7fda088e516d4ed.patch) = 3851 bytes
-SHA1 (proftpd-1.3.5d.tar.gz) = e7271c9f6df331eda393a834ad66ff60eff134ca
-RMD160 (proftpd-1.3.5d.tar.gz) = 2052a7c41824c8ce9558fd11c78843b1b07ab6e7
-SHA512 (proftpd-1.3.5d.tar.gz) = 3297ddd1f11d46123bbe46488d75fa7a6dcdf2c2d6e7e880a78a427f9f1e9901878dab179e41092e0b9864a615d8ba0b0bf444d4f829870e993e3169c7141c37
-Size (proftpd-1.3.5d.tar.gz) = 29966560 bytes
+SHA1 (proftpd-1.3.6.tar.gz) = 7e9269f9448c37f82e6faa9edaa3186ff5ba82d2
+RMD160 (proftpd-1.3.6.tar.gz) = 5da3934e46ea517ee6652382e5e3a9f87e591dd6
+SHA512 (proftpd-1.3.6.tar.gz) = 2a3ca76a0c35ba31e9d79f7f652f4f35768262f5039c5dc04ef83ac9218f624645ac6cee445af4ec6a8c59a9bdad1e7b48e0e90cd13934cbe7c3e77a2f6013c0
+Size (proftpd-1.3.6.tar.gz) = 20251898 bytes
+SHA1 (patch-Make.rules.in) = 6ce8ab0f65270f701b455a3fd3f008c9f24511c3
 SHA1 (patch-Makefile.in) = 332dcd9d773770c10d876dc9da1dc7f6b1c15421
 SHA1 (patch-contrib_mod__sftp_Makefile.in) = 8a805d777597b4fb06a45b484373880e535a0cee
 SHA1 (patch-contrib_mod_tls.c) = e36dfa9427804b41eb2ad49378b62890325d50ed
+SHA1 (patch-include_pfilter.h) = 399ba8873e6a58db89c3be44b4f09a1f4ab04e60
+SHA1 (patch-modules_mod__auth.c) = b1ff5c3236edabce5016da3230e0bd30ec92db48
+SHA1 (patch-src_main.c) = c00e1b1830d36d17bea5a10d8e13ec2328d3df88
+SHA1 (patch-src_pfilter.c) = 0f83e751072586f2b6359952b09328d820accc8f
