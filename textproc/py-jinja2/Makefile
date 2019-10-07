@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2019/04/07 16:05:38 adam Exp $
+# $NetBSD: Makefile,v 1.26 2019/10/07 05:34:29 adam Exp $
 
-DISTNAME=	Jinja2-2.10.1
+DISTNAME=	Jinja2-2.10.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=J/Jinja2/}
@@ -27,7 +27,7 @@ SUBST_SED.unicode+=	-e 's,u",",g'
 # async byte-compilation fails for Python < 3.6
 # see https://github.com/pallets/jinja/issues/643
 PLIST_VARS+=	async
-.if ${_PYTHON_VERSION} == 36 || ${_PYTHON_VERSION} == 37
+.if ${_PYTHON_VERSION} != 27
 PLIST.async=	yes
 .endif
 
