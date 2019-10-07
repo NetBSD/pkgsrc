@@ -1,0 +1,9 @@
+Tool to build and unpack SPIFFS images.
+This package provides binaries built with the following configuration:
+mkspiffs-arduino-esp32: configuration compatible with the Espressif ESP32
+    arduino developpement environnement
+mkspiffs-arduino-esp8266: configuration compatible with the Espressif ESP8266
+    arduino developpement environnement
+mkspiffs-esp-idf: configuration compatible with the Espressif IoT Development
+    Framework
+mkspiffs-generic: configuration using the default SPIFFS parameters
