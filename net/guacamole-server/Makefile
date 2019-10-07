@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/09/18 14:17:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.21 2019/10/07 11:12:32 jperkin Exp $
 
 DISTNAME=	guacamole-server-1.0.0
 PKGREVISION=	2
@@ -13,7 +13,7 @@ LICENSE=	apache-2.0
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c99
 USE_LIBTOOL=	yes
-USE_TOOLS=	pkg-config
+USE_TOOLS=	perl pkg-config
 
 EGDIR=			${PREFIX}/share/examples/guacamole
 PKG_SYSCONFSUBDIR=	guacamole
@@ -37,6 +37,8 @@ SUBST_CLASSES+=		manpath
 SUBST_STAGE.manpath=	pre-configure
 SUBST_FILES.manpath=	src/guacd/man/guacd.conf.5
 SUBST_SED.manpath=	-e 's,/etc/guacamole,${PKG_SYSCONFDIR},g'
+
+REPLACE_PERL+=		src/protocols/rdp/keymaps/generate.pl
 
 INSTALLATION_DIRS=	share/examples/guacamole
 
