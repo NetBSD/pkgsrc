@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2019/08/11 11:40:10 adam Exp $
+# $NetBSD: Makefile.common,v 1.7 2019/10/07 19:28:28 adam Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -120,19 +120,19 @@ CONFIGURE_ARGS+=	--with-libedit-preferred
 .if !defined(META_PACKAGE)
 post-extract:
 .  if !empty(USE_LIBLTDL:M[yY][eE][sS])
-	cp -f ${COMMON_FILESDIR}/dynloader-ltdl.h \
+	${CP} -f ${COMMON_FILESDIR}/dynloader-ltdl.h \
 		${WRKSRC}/src/backend/port/dynloader/${PG_TEMPLATE.${OPSYS}:Q}.h
 	${ECHO} "static int dummy = 0;" \
 		> ${WRKSRC}/src/backend/port/dynloader/${PG_TEMPLATE.${OPSYS}:Q}.c
 .  endif
-	touch ${WRKSRC}/src/template/dragonfly
-	cp ${WRKSRC}/src/backend/port/dynloader/freebsd.c \
+	${TOUCH} ${WRKSRC}/src/template/dragonfly
+	${CP} ${WRKSRC}/src/backend/port/dynloader/freebsd.c \
 		${WRKSRC}/src/backend/port/dynloader/dragonfly.c
-	cp ${WRKSRC}/src/backend/port/dynloader/freebsd.h \
+	${CP} ${WRKSRC}/src/backend/port/dynloader/freebsd.h \
 		${WRKSRC}/src/backend/port/dynloader/dragonfly.h
-	cp ${WRKSRC}/src/include/port/freebsd.h \
+	${CP} ${WRKSRC}/src/include/port/freebsd.h \
 		${WRKSRC}/src/include/port/dragonfly.h
-	cp ${WRKSRC}/src/makefiles/Makefile.freebsd \
+	${CP} ${WRKSRC}/src/makefiles/Makefile.freebsd \
 		${WRKSRC}/src/makefiles/Makefile.dragonfly
 .endif
 
