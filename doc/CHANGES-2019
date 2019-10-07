@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4233 2019/10/07 20:19:39 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4234 2019/10/07 20:30:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6826,3 +6826,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-httplib2 to 0.14.0 [adam 2019-10-07]
 	Updated misc/py-tqdm to 4.36.1 [adam 2019-10-07]
 	Updated textproc/py-tabulate to 0.8.5 [adam 2019-10-07]
+	Updated devel/py-attrs to 19.2.0 [adam 2019-10-07]
+	Updated lang/py-asttokens to 1.1.15 [adam 2019-10-07]
+	Updated www/py-channels to 2.3.0 [adam 2019-10-07]
+	Updated devel/py-pathlib2 to 2.3.5 [adam 2019-10-07]
