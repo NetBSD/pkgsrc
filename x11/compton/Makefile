@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/09/17 11:43:29 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2019/10/07 09:28:13 prlw1 Exp $
 
 DISTNAME=	compton-7.3
 CATEGORIES=	x11 wm
@@ -29,7 +29,7 @@ post-install:
 		${DESTDIR}${PREFIX}/share/examples/compton
 
 .include "options.mk"
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../devel/libconfig/buildlink3.mk"
 .include "../../devel/libev/buildlink3.mk"
 .include "../../devel/uthash/buildlink3.mk"

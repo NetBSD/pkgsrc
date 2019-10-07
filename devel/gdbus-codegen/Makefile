@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/06/03 09:53:50 prlw1 Exp $
+# $NetBSD: Makefile,v 1.21 2019/10/07 09:28:10 prlw1 Exp $
 
 .include "../../devel/glib2/Makefile.common"
 
@@ -22,6 +22,6 @@ REPLACE_PYTHON+=	gdbus-codegen.in
 
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

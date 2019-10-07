@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/12/01 11:33:08 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/10/07 09:28:09 prlw1 Exp $
 
 DISTNAME=	libmpdclient-2.16
 CATEGORIES=	audio
@@ -12,5 +12,5 @@ LICENSE=	modified-bsd
 
 LDFLAGS.SunOS+=	-lsocket
 
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"

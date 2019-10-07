@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.18 2019/10/06 12:50:23 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.19 2019/10/07 09:28:13 prlw1 Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -651,7 +651,7 @@ class Adjuster:
 
     def adjust_meson(self):
         if self.wrksrc_isfile('meson.build'):
-            self.includes.append('../../devel/py-meson/build.mk')
+            self.includes.append('../../devel/meson/build.mk')
 
     def adjust_gconf2_schemas(self):
         gconf2_files = self.wrksrc_find(r'\.schemas(\.in)*$')

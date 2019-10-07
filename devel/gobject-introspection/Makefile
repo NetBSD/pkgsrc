@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2019/08/20 13:56:40 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2019/10/07 09:28:10 prlw1 Exp $
 
 DISTNAME=	gobject-introspection-1.60.2
 CATEGORIES=	devel gnome
@@ -39,7 +39,7 @@ BUILDLINK_API_DEPENDS.glib2+= glib2>=2.58.0
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libffi+= libffi>=3.0.0
 .include "../../devel/libffi/buildlink3.mk"
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
