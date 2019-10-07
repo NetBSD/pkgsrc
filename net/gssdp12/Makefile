@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/08/20 11:26:13 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/10/07 09:28:12 prlw1 Exp $
 
 DISTNAME=	gssdp-1.2.1
 PKGNAME=	${DISTNAME:S/gssdp/gssdp12/}
@@ -27,5 +27,5 @@ BUILDLINK_DEPMETHOD.gobject-introspection=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../lang/vala/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"

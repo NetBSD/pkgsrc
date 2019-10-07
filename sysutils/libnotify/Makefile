@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2019/08/25 11:54:34 leot Exp $
+# $NetBSD: Makefile,v 1.56 2019/10/07 09:28:13 prlw1 Exp $
 
 DISTNAME=	libnotify-0.7.8
 PKGREVISION=	1
@@ -27,5 +27,5 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.26.0
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.gtk3=	build
 .include "../../x11/gtk3/buildlink3.mk"
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
