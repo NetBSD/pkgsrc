@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2019/07/22 15:11:00 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2019/10/07 09:28:10 prlw1 Exp $
 
 DISTNAME=	at-spi2-core-2.33.2
 PKGREVISION=	1
@@ -48,5 +48,5 @@ post-install:
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
