@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4228 2019/10/07 14:39:17 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.4229 2019/10/07 14:52:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6810,3 +6810,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated fonts/spleen to 1.5.0 [fcambus 2019-10-07]
 	Added filesystems/mkspiffs version 0.2.3 [bouyer 2019-10-07]
 	Added lang/tcltutor version 30b7 [kamil 2019-10-07]
+	Updated multimedia/gst-plugins1-editing-services to 1.16.0nb1 [wiz 2019-10-07]
