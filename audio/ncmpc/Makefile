@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/10/06 16:15:51 nia Exp $
+# $NetBSD: Makefile,v 1.34 2019/10/07 09:28:09 prlw1 Exp $
 
 DISTNAME=	ncmpc-0.35
 CATEGORIES=	audio
@@ -40,7 +40,7 @@ SUBST_FILES.py+=	doc/meson.build
 SUBST_VARS.py+=		PYVERSSUFFIX
 
 .include "options.mk"
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../audio/libmpdclient/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"

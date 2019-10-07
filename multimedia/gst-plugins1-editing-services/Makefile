@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/10/03 22:33:20 nia Exp $
+# $NetBSD: Makefile,v 1.4 2019/10/07 09:28:12 prlw1 Exp $
 
 DISTNAME=	gstreamer-editing-services-1.16.0
 PKGNAME=	${DISTNAME:S/gstreamer-/gst-plugins1-/1}
@@ -21,7 +21,7 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/ges
 
 MESON_ARGS+=	-Dgtk_doc=disabled
 
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../lang/python/extension.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"

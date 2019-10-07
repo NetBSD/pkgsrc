@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/07/21 22:24:05 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2019/10/07 09:28:11 prlw1 Exp $
 
 DISTNAME=	girara-0.3.2
 PKGREVISION=	1
@@ -15,6 +15,6 @@ USE_TOOLS+=	gettext pkg-config
 
 CFLAGS.SunOS+=	-D__EXTENSIONS__
 
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
