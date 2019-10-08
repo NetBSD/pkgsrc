@@ -1,7 +1,15 @@
-$NetBSD: distinfo,v 1.45 2019/03/20 05:43:20 adam Exp $
+$NetBSD: distinfo,v 1.46 2019/10/08 06:36:13 triaxx Exp $
 
 SHA1 (libgpg-error-1.36.tar.bz2) = 5245ce38b198cecd57775fb3c7b7328ec1a2a615
 RMD160 (libgpg-error-1.36.tar.bz2) = 13a9405bcb8ef179fff58e72f47a54889ddd287f
 SHA512 (libgpg-error-1.36.tar.bz2) = 6e5f853f77dc04f0091d94b224cab8e669042450f271b78d0ea0219658d059c9cab1ab0eaa020a4227f451520b417fc340b85971a6f5e144fa69be57e15df346
 Size (libgpg-error-1.36.tar.bz2) = 920542 bytes
+SHA1 (patch-lang_cl_mkerrcodes.awk) = 766a3a548932069a05954297641fa3d93149faa0
+SHA1 (patch-src_Makefile.am) = 97842d55345ebf8c3846a8986568c4399c984e52
+SHA1 (patch-src_Makefile.in) = 0ab0b6b7e157e7d8d55ebc3818f9790dfb16ebe2
 SHA1 (patch-src_estream.c) = 0502a55403062abeab22c83a6d919c57ff1c5d82
+SHA1 (patch-src_mkerrcodes.awk) = c10fc74db4553a51f9a42902cc2b704c5b3ce70e
+SHA1 (patch-src_mkerrcodes1.awk) = e199d83906354d80057b768f95fb8a99c484e128
+SHA1 (patch-src_mkerrcodes2.awk) = 2ef123f3a131ac6cfbc413b71d8834070a37ebe9
+SHA1 (patch-src_mkerrnos.awk) = a033048eafec0a2d4bf29a580fcffb7298b56751
+SHA1 (patch-src_mkstrtable.awk) = 3b7c8d5406594ba24d934f1c7c5ef495df6c6fbe
