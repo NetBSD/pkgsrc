@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2019/06/08 10:41:00 rillig Exp $
+# $NetBSD: Makefile.common,v 1.14 2019/10/08 12:40:55 hauke Exp $
 #
 # used by editors/xemacs-current/Makefile
 # used by editors/xemacs-current-nox11/Makefile
@@ -19,7 +19,7 @@ PATCHDIR=	${.CURDIR}/../../editors/xemacs-current/patches
 DISTINFO_FILE=	${.CURDIR}/../../editors/xemacs-current/distinfo
 PLIST_SRC=	${.CURDIR}/../../editors/xemacs-current/PLIST
 
-USE_TOOLS+=		makeinfo
+USE_TOOLS+=		makeinfo perl
 
 # The portable dumper creates a dump file with a build ID in its name
 GENERATE_PLIST+=	${ECHO} bin/${EMACS_DISTNAME}-`${WRKSRC}/src/xemacs -sd`.dmp ;
