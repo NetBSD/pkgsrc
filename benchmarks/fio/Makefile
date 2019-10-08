@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2019/04/25 07:32:37 maya Exp $
+# $NetBSD: Makefile,v 1.5 2019/10/08 18:13:32 maya Exp $
 
-DISTNAME=	fio-2.19
-PKGREVISION=	1
+DISTNAME=	fio-3.16
 CATEGORIES=	benchmarks
 MASTER_SITES=	http://brick.kernel.dk/snaps/
 
@@ -19,6 +18,7 @@ EGDIR=		${PREFIX}/share/examples/fio
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
 REPLACE_BASH+=		tools/genfio
+REPLACE_PYTHON+=	tools/fio_jsonplus_clat2csv
 REPLACE_PYTHON+=	tools/fio_latency2csv.py
 REPLACE_PYTHON+=	tools/fiologparser.py
 REPLACE_PYTHON+=	tools/hist/fiologparser_hist.py
