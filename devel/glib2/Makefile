@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.259 2019/10/07 09:28:10 prlw1 Exp $
+# $NetBSD: Makefile,v 1.260 2019/10/08 08:48:15 prlw1 Exp $
 
 .include "Makefile.common"
 
@@ -11,7 +11,8 @@ MESON_ARGS+=	-Dinstalled_tests=false
 # Avoid linux dependency on libmount-dev
 MESON_ARGS+=	-Dlibmount=false
 
-LDFLAGS.SunOS+=	-lintl -lnsl
+CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=1 -D_XOPEN_SOURCE_EXTENDED=1
+LDFLAGS.SunOS+=		-lintl -lnsl
 
 REPLACE_PYTHON+=	gio/gio-querymodules-wrapper.py
 REPLACE_PYTHON+=	gio/tests/gengiotypefuncs.py
