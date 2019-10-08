@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.224 2019/07/23 17:19:58 wiz Exp $
+# $NetBSD: Makefile,v 1.225 2019/10/08 18:42:04 rhialto Exp $
 
 DISTNAME=	calibre-3.40.1
 PKGREVISION=	6
@@ -22,7 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-dateutil>=1.4.1:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-dns>=1.6.0:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-elementtree-[0-9]*:../../textproc/py-elementtree
 DEPENDS+=	${PYPKGPREFIX}-feedparser-[0-9]*:../../textproc/py-feedparser
-DEPENDS+=	${PYPKGPREFIX}-html2text-[0-9]*:../../textproc/py-html2text
+DEPENDS+=	${PYPKGPREFIX}-html2text-[0-9]*:../../textproc/py-html2text-2019.8.11
 DEPENDS+=	${PYPKGPREFIX}-html5-parser-[0-9]*:../../textproc/py-html5-parser
 DEPENDS+=	${PYPKGPREFIX}-markdown-[0-9]*:../../textproc/py-markdown
 DEPENDS+=	${PYPKGPREFIX}-mechanize>=0.1.11nb1:../../www/py-mechanize
