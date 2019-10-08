@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4236 2019/10/08 03:01:50 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.4237 2019/10/08 06:38:05 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6831,3 +6831,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-channels to 2.3.0 [adam 2019-10-07]
 	Updated devel/py-pathlib2 to 2.3.5 [adam 2019-10-07]
 	Updated wm/blackbox70 to 0.75 [gutteridge 2019-10-08]
+	Updated security/libgpg-error to 1.36nb1 [triaxx 2019-10-08]
