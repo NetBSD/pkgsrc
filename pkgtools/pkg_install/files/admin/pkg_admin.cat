@@ -123,6 +123,10 @@ OOPPTTIIOONNSS
              pattern.  If a pattern is not matched, it is skipped and the
              command will return a failure.
 
+     ggppgg--ssiiggnn--ppaacckkaaggee ppkkgg ssppkkgg
+             Sign the binary package _p_k_g using GPG and write the result to
+             _s_p_k_g.
+
      llssaallll _/_d_i_r_/_p_k_g_p_a_t_t_e_r_n
 
      llssbbeesstt _/_d_i_r_/_p_k_g_p_a_t_t_e_r_n
@@ -176,10 +180,6 @@ OOPPTTIIOONNSS
 
              Packages that are not installed directly by the user but pulled
              in as dependencies are marked by setting "automatic=YES".
-
-     ggppgg--ssiiggnn--ppaacckkaaggee ppkkgg ssppkkgg
-             Sign the binary package _p_k_g using GPG and write the result to
-             _s_p_k_g.
 
      xx550099--ssiiggnn--ppaacckkaaggee ppkkgg ssppkkgg kkeeyy cceerrtt
              Sign the binary package _p_k_g using the key _k_e_y and the certificate
