@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2019/04/16 11:43:29 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.27 2019/10/08 14:19:42 ryoon Exp $
 bin/${PKGNAME}
 bin/gawk
 gnu/bin/awk
@@ -73,6 +73,7 @@ share/locale/ko/LC_MESSAGES/gawk.mo
 share/locale/ms/LC_MESSAGES/gawk.mo
 share/locale/nl/LC_MESSAGES/gawk.mo
 share/locale/pl/LC_MESSAGES/gawk.mo
+share/locale/pt/LC_MESSAGES/gawk.mo
 share/locale/pt_BR/LC_MESSAGES/gawk.mo
 share/locale/sv/LC_MESSAGES/gawk.mo
 share/locale/vi/LC_MESSAGES/gawk.mo
