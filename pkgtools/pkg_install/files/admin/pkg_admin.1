@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_admin.1,v 1.36 2018/08/22 20:48:38 maya Exp $
+.\"	$NetBSD: pkg_admin.1,v 1.37 2019/10/08 21:33:35 joerg Exp $
 .\"
 .\" Copyright (c) 1999-2010 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -204,6 +204,11 @@ for packages matching
 Print the URL of the best matching package to stdout for each pattern.
 If a pattern is not matched, it is skipped and the command will return
 a failure.
+.It Cm gpg-sign-package pkg spkg
+Sign the binary package
+.Ar pkg
+using GPG and write the result to
+.Ar spkg .
 .It Cm lsall Ar /dir/pkgpattern
 .It Cm lsbest Ar /dir/pkgpattern
 List all/best package matching pattern in the given directory
@@ -268,11 +273,6 @@ to remove a variable.
 Packages that are not installed directly by the user but pulled in as
 dependencies are marked by setting
 .Dq automatic=YES .
-.It Cm gpg-sign-package pkg spkg
-Sign the binary package
-.Ar pkg
-using GPG and write the result to
-.Ar spkg .
 .It Cm x509-sign-package pkg spkg key cert
 Sign the binary package
 .Ar pkg
