@@ -1,55 +1,50 @@
-# $NetBSD: Makefile,v 1.7 2019/07/23 20:33:51 sevan Exp $
+# $NetBSD: Makefile,v 1.8 2019/10/08 23:40:37 fox Exp $
 
-DISTNAME=	clojure-1.8.0
+DISTNAME=	clojure-tools-1.10.1.469
+PKGNAME=	clojure-1.10.1.469
 CATEGORIES=	lang
-MASTER_SITES=	http://repo1.maven.org/maven2/org/clojure/clojure/${PKGVERSION_NOREV}/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	https://download.clojure.org/install/
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://clojure.org/
 COMMENT=	Dynamic programming language that targets the Java VM
 LICENSE=	epl-v1.0
 
+DEPENDS+=	rlwrap-[0-9]*:../../misc/rlwrap
+
 NO_BUILD=	yes
 USE_JAVA=	run
-USE_JAVA2=	1.5
-USE_LANGUAGES=	# none
-USE_TOOLS+=	pax
+USE_JAVA2=	8
+USE_TOOLS+=	bash
+
+REPLACE_BASH+=	clj
+REPLACE_BASH+=	clojure
 
 INSTALLATION_DIRS=	bin \
-			share/doc/${PKGNAME_NOREV} \
-			lib/java/clojure \
-			share/examples/${PKGNAME_NOREV}
+			clojure \
+			clojure/libexec \
+			${PKGMANDIR}/man1
 
-CLOJURE_DOCS=	changes.md epl-v10.html readme.txt \
-		doc/clojure/pprint/CommonLispFormat.markdown \
-		doc/clojure/pprint/PrettyPrinting.markdown
+WRKSRC=	${WRKDIR}/clojure-tools
 
-SUBST_CLASSES+=		java
-SUBST_STAGE.java=	pre-install
-SUBST_MESSAGE.java=	Set Java
-SUBST_FILES.java=	clj.sh
-SUBST_SED.java=		-e 's,@JAVA_HOME@,${PKG_JAVA_HOME},g'
-SUBST_VARS.java=	SH
+SUBST_CLASSES+=		set-java
+SUBST_STAGE.set-java=	pre-configure
+SUBST_MESSAGE.set-java=	Setting JAVA_HOME path.
+SUBST_FILES.set-java=	clojure
+SUBST_SED.set-java=	-e '/^JAVA_CMD=/s,java,${PKG_JAVA_HOME}/bin/java,'
 
-pre-patch:
-	${INSTALL_DATA} ${FILESDIR}/clj.sh ${WRKSRC}
+SUBST_CLASSES+=		set-base
+SUBST_STAGE.set-base=	pre-configure
+SUBST_MESSAGE.set-base=	Setting package base path.
+SUBST_FILES.set-base=	clojure
+SUBST_SED.set-base=	-e 's,PREFIX,${PREFIX}/clojure,g'
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/${PKGNAME_NOREV}.jar \
-		${DESTDIR}${PREFIX}/lib/java/clojure/clojure.jar
-
-	cd ${WRKSRC}/test/clojure && pax -rw -pmp test_clojure \
-		${DESTDIR}${PREFIX}/share/examples/${PKGNAME_NOREV}/
-	${INSTALL_DATA} ${WRKSRC}/test/clojure/test_helper.clj \
-		${DESTDIR}${PREFIX}/share/examples/${PKGNAME_NOREV}
-
-.for f in ${CLOJURE_DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} \
-		${DESTDIR}${PREFIX}/share/doc/${PKGNAME_NOREV}
-.endfor
-
-	${INSTALL_SCRIPT} ${WRKSRC}/clj.sh ${DESTDIR}${PREFIX}/bin/clj
+	${INSTALL_DATA} ${WRKSRC}/*.edn ${DESTDIR}${PREFIX}/clojure
+	${INSTALL_DATA} ${WRKSRC}/*.jar ${DESTDIR}${PREFIX}/clojure/libexec
+	${INSTALL_MAN} ${WRKSRC}/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/clj ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/clojure ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/java-env.mk"
 .include "../../mk/java-vm.mk"
