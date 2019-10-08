@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2017/09/28 12:53:59 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.23 2019/10/08 14:30:09 ryoon Exp $
 bin/info
 bin/install-info
 bin/makeinfo
@@ -11,6 +11,7 @@ bin/texindex
 info/info-stnd.info
 info/texinfo.info
 lib/texinfo/MiscXS.la
+lib/texinfo/Parsetexi.la
 lib/texinfo/XSParagraph.la
 man/man1/info.1
 man/man1/install-info.1
@@ -45,15 +46,16 @@ share/texinfo/Texinfo/Convert/Text.pm
 share/texinfo/Texinfo/Convert/TextContent.pm
 share/texinfo/Texinfo/Convert/UnFilled.pm
 share/texinfo/Texinfo/Convert/Unicode.pm
-share/texinfo/Texinfo/Convert/XSParagraph/TestXS.pm
 share/texinfo/Texinfo/Documentlanguages.pm
 share/texinfo/Texinfo/Encoding.pm
 share/texinfo/Texinfo/MiscXS.pm
 share/texinfo/Texinfo/ModulePath.pm
 share/texinfo/Texinfo/Parser.pm
+share/texinfo/Texinfo/ParserNonXS.pm
 share/texinfo/Texinfo/Report.pm
 share/texinfo/Texinfo/Structuring.pm
 share/texinfo/Texinfo/Transformations.pm
+share/texinfo/Texinfo/XS/parsetexi/Parsetexi.pm
 share/texinfo/Texinfo/XSLoader.pm
 share/texinfo/htmlxref.cnf
 share/texinfo/init/book.pm
