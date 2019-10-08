@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2019/07/03 10:06:50 hauke Exp $
+# $NetBSD: Makefile.common,v 1.31 2019/10/08 12:40:54 hauke Exp $
 #
 # used by editors/xemacs-nox11/Makefile
 # used by editors/xemacs/Makefile
@@ -18,7 +18,7 @@ PATCHDIR=		${.CURDIR}/../../editors/xemacs/patches
 DISTINFO_FILE=		${.CURDIR}/../../editors/xemacs/distinfo
 PLIST_SRC=		${.CURDIR}/../../editors/xemacs/PLIST
 
-USE_TOOLS+=	makeinfo
+USE_TOOLS+=	makeinfo perl
 
 HAS_CONFIGURE=		yes
 
