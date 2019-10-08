@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.835 2019/10/08 21:03:51 bad Exp $
+# $NetBSD: Makefile,v 1.836 2019/10/08 21:38:55 bad Exp $
 #
 
 COMMENT=	System utilities
@@ -650,6 +650,7 @@ SUBDIR+=	u-boot-jetson-tx2
 SUBDIR+=	u-boot-lamobo-r1
 SUBDIR+=	u-boot-libretech-cc
 SUBDIR+=	u-boot-nanopi-m1
+SUBDIR+=	u-boot-nanopi-duo2
 SUBDIR+=	u-boot-nanopi-neo
 SUBDIR+=	u-boot-nanopi-neo-plus2
 SUBDIR+=	u-boot-nanopi-neo2
