@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4244 2019/10/08 20:11:09 pgoyette Exp $
+$NetBSD: CHANGES-2019,v 1.4245 2019/10/08 22:17:47 bad Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6838,3 +6838,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/decode-dimms to 4.1.20191002nb1 [pgoyette 2019-10-08]
 	Updated benchmarks/fio to 3.16 [maya 2019-10-08]
 	Added textproc/py-html2text-2019.8.11 version 2019.8.11 [rhialto 2019-10-08]
+	Updated sysutils/u-boot to 2018.11nb6 [bad 2019-10-08]
+	Added sysutils/u-boot-nanopi-r1 version 2018.11 [bad 2019-10-08]
+	Added sysutils/u-boot-nanopi-duo2 version 2018.11 [bad 2019-10-08]
