@@ -1,4 +1,4 @@
-$NetBSD: patch-python_mozbuild_mozbuild_configure_constants.py,v 1.1 2018/05/11 19:18:35 jperkin Exp $
+$NetBSD: patch-python_mozbuild_mozbuild_configure_constants.py,v 1.2 2019/10/08 21:16:06 jklos Exp $
 
 Support SunOS.
 
@@ -12,7 +12,7 @@ Support SunOS.
      'WINNT',
  )
  
-@@ -35,6 +36,7 @@ Kernel = EnumString.subclass(
+@@ -35,12 +36,13 @@ Kernel = EnumString.subclass(
      'Linux',
      'NetBSD',
      'OpenBSD',
@@ -20,6 +20,13 @@ Support SunOS.
      'WINNT',
  )
  
+ CPU_bitness = {
+     'aarch64': 64,
+-    'Alpha': 32,
++    'Alpha': 64,
+     'arm': 32,
+     'hppa': 32,
+     'ia64': 64,
 @@ -97,6 +99,7 @@ kernel_preprocessor_checks = {
      'Linux': '__linux__',
      'NetBSD': '__NetBSD__',
