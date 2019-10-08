@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2019/10/08 21:37:28 bad Exp $
+share/u-boot/nanopi-duo2/installboot.plist
+share/u-boot/nanopi-duo2/u-boot-sunxi-with-spl.bin
