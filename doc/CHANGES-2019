@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4238 2019/10/08 14:12:50 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.4239 2019/10/08 14:20:11 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6832,3 +6832,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-pathlib2 to 2.3.5 [adam 2019-10-07]
 	Updated wm/blackbox70 to 0.75 [gutteridge 2019-10-08]
 	Updated security/libgpg-error to 1.36nb1 [triaxx 2019-10-08]
+	Updated lang/gawk to 5.0.1 [ryoon 2019-10-08]
