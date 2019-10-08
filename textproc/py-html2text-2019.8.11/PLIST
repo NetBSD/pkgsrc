@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2019/10/08 18:37:47 rhialto Exp $
+bin/html2text-${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/html2text/__init__.py
+${PYSITELIB}/html2text/__init__.pyc
+${PYSITELIB}/html2text/__init__.pyo
+${PYSITELIB}/html2text/__main__.py
+${PYSITELIB}/html2text/__main__.pyc
+${PYSITELIB}/html2text/__main__.pyo
+${PYSITELIB}/html2text/cli.py
+${PYSITELIB}/html2text/cli.pyc
+${PYSITELIB}/html2text/cli.pyo
+${PYSITELIB}/html2text/compat.py
+${PYSITELIB}/html2text/compat.pyc
+${PYSITELIB}/html2text/compat.pyo
+${PYSITELIB}/html2text/config.py
+${PYSITELIB}/html2text/config.pyc
+${PYSITELIB}/html2text/config.pyo
+${PYSITELIB}/html2text/utils.py
+${PYSITELIB}/html2text/utils.pyc
+${PYSITELIB}/html2text/utils.pyo
