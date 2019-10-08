@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.15 2016/02/13 07:02:08 ryoon Exp $
+$NetBSD: patch-ab,v 1.16 2019/10/08 14:30:09 ryoon Exp $
 
---- info/Makefile.in.orig	2016-02-06 12:24:05.000000000 +0000
+--- info/Makefile.in.orig	2019-09-23 18:32:12.000000000 +0000
 +++ info/Makefile.in
-@@ -1262,7 +1262,8 @@ AM_CPPFLAGS = \
+@@ -1323,7 +1323,8 @@ AM_CPPFLAGS = \
    -I$(top_builddir)/gnulib/lib                  \
    -DLOCALEDIR=\"$(datadir)/locale\"             \
    -DINFODIR=\"$(infodir)\"                      \
@@ -10,5 +10,5 @@ $NetBSD: patch-ab,v 1.15 2016/02/13 07:02:08 ryoon Exp $
 +  -DINFODIR2=\"$(datadir)/info\"		\
 +  -DPKGSRC_INFOPATH=\"$(PKGSRC_INFOPATH)\"
  
- LDADD = $(top_builddir)/gnulib/lib/libgnu.a $(TERMLIBS) $(LIBINTL) $(LIBICONV)
+ LDADD = $(top_builddir)/gnulib/lib/libgnu.a $(TERMLIBS) $(LIBINTL) $(LIBICONV) $(LIBTHREAD)
  EXTRA_DIST = pcterm.c $(TESTS) $(XFAIL_TESTS) t/README t/infodir \

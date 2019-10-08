@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.103 2019/10/06 08:58:22 rillig Exp $
+# $NetBSD: Makefile,v 1.104 2019/10/08 14:30:09 ryoon Exp $
 
-DISTNAME=		texinfo-6.5
+DISTNAME=		texinfo-6.7
 PKGNAME=		g${DISTNAME}
-PKGREVISION=		4
 CATEGORIES=		devel sysutils
 MASTER_SITES=		${MASTER_SITE_GNU:=texinfo/}
 
