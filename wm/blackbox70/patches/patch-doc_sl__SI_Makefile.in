@@ -1,0 +1,15 @@
+$NetBSD: patch-doc_sl__SI_Makefile.in,v 1.1 2019/10/08 02:59:59 gutteridge Exp $
+
+Avoid a variable specific to GNU make.
+
+--- doc/sl_SI/Makefile.in.orig	2019-09-06 09:55:04.000000000 +0000
++++ doc/sl_SI/Makefile.in
+@@ -587,7 +587,7 @@ blackbox.1: blackbox.1.in
+ 	$(SED) -e "s,@defaultmenu@,$(DEFAULT_MENU)," \
+ 		-e "s,@pkgdatadir@,$(pkgdatadir)," \
+ 		-e "s,@version@,$(VERSION)," \
+-		$< > $@
++		blackbox.1.in > $@
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
