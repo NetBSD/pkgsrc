@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4245 2019/10/08 22:17:47 bad Exp $
+$NetBSD: CHANGES-2019,v 1.4246 2019/10/08 23:42:08 fox Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6841,3 +6841,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/u-boot to 2018.11nb6 [bad 2019-10-08]
 	Added sysutils/u-boot-nanopi-r1 version 2018.11 [bad 2019-10-08]
 	Added sysutils/u-boot-nanopi-duo2 version 2018.11 [bad 2019-10-08]
+	Updated lang/clojure to 1.10.1.469 [fox 2019-10-08]
