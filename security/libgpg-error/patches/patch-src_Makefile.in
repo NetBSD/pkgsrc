@@ -1,0 +1,17 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2019/10/08 06:36:13 triaxx Exp $
+
+Prepare for Gawk 5.0.
+Use pkg_namespace (instead of namespace).
+https://github.com/gpg/libgpg-error/commit/7865041
+
+--- src/Makefile.in.orig	2019-03-19 08:58:04.000000000 +0000
++++ src/Makefile.in
+@@ -1615,7 +1615,7 @@ code-from-errno.h: mkerrcodes$(EXEEXT_FO
+ 
+ errnos-sym.h: Makefile mkstrtable.awk errnos.in
+ 	$(AWK) -f $(srcdir)/mkstrtable.awk -v textidx=2 -v nogettext=1 \
+-		-v prefix=GPG_ERR_ -v namespace=errnos_ \
++		-v prefix=GPG_ERR_ -v pkg_namespace=errnos_ \
+ 		$(srcdir)/errnos.in >$@
+ 
+ mkheader$(EXEEXT_FOR_BUILD): mkheader.c Makefile
