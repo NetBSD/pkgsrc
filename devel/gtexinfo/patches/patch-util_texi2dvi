@@ -1,12 +1,14 @@
-$NetBSD: patch-util_texi2dvi,v 1.6 2017/07/12 11:04:59 wiz Exp $
+$NetBSD: patch-util_texi2dvi,v 1.7 2019/10/08 14:30:09 ryoon Exp $
 
 As indicated in pkg/48075, pdksh doesn't support double-parens
 if not containing an arithmetic expression of a particular form.
 Older bash and ast-ksh apparently also had problems with this.
 
---- util/texi2dvi.orig	2016-09-10 19:25:16.000000000 +0000
+--- util/texi2dvi.orig	2019-09-23 18:28:10.000000000 +0000
 +++ util/texi2dvi
-@@ -27,6 +27,6 @@
+@@ -22,10 +22,10 @@
+ # If possible, please send a copy of the output of the script called with
+ # the `--debug' option when making a bug report.
  
 -test -f /bin/ksh && test -z "$RUNNING_KSH" \
 -  && { UNAMES=`uname -s`; test "x$UNAMES" = xULTRIX; } 2>/dev/null \
@@ -17,3 +19,5 @@ Older bash and ast-ksh apparently also had problems with this.
 +#  && { RUNNING_KSH=true; export RUNNING_KSH; exec /bin/ksh $0 ${1+"$@"}; }
 +#unset RUNNING_KSH
  
+ # No failure shall remain unpunished.
+ set -e
