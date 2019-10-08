@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1056 2019/10/05 04:45:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.1057 2019/10/08 18:39:43 rhialto Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -797,6 +797,7 @@ SUBDIR+=	py-gnosis-utils
 SUBDIR+=	py-guessit
 SUBDIR+=	py-html-sanitizer
 SUBDIR+=	py-html2text
+SUBDIR+=	py-html2text-2019.8.11
 SUBDIR+=	py-html5-parser
 SUBDIR+=	py-html5lib
 SUBDIR+=	py-humanize
