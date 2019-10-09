@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/12/28 13:45:24 dholland Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/10/09 01:58:55 khorben Exp $
 bin/configctl
 include/System.h
 include/System/array.h
@@ -24,28 +24,3 @@ lib/pkgconfig/libSystem.pc
 man/html1/configctl.html
 man/man1/configctl.1
 share/doc/libSystem/README.md
-share/gtk-doc/html/libSystem/api-index-full.html
-share/gtk-doc/html/libSystem/ch01.html
-share/gtk-doc/html/libSystem/deprecated-api-index.html
-share/gtk-doc/html/libSystem/home.png
-share/gtk-doc/html/libSystem/index.html
-share/gtk-doc/html/libSystem/left-insensitive.png
-share/gtk-doc/html/libSystem/left.png
-share/gtk-doc/html/libSystem/libSystem-array.html
-share/gtk-doc/html/libSystem/libSystem-buffer.html
-share/gtk-doc/html/libSystem/libSystem-config.html
-share/gtk-doc/html/libSystem/libSystem-error.html
-share/gtk-doc/html/libSystem/libSystem-event.html
-share/gtk-doc/html/libSystem/libSystem-file.html
-share/gtk-doc/html/libSystem/libSystem-hash.html
-share/gtk-doc/html/libSystem/libSystem-object.html
-share/gtk-doc/html/libSystem/libSystem-parser.html
-share/gtk-doc/html/libSystem/libSystem-plugin.html
-share/gtk-doc/html/libSystem/libSystem-string.html
-share/gtk-doc/html/libSystem/libSystem-token.html
-share/gtk-doc/html/libSystem/libSystem.devhelp2
-share/gtk-doc/html/libSystem/right-insensitive.png
-share/gtk-doc/html/libSystem/right.png
-share/gtk-doc/html/libSystem/style.css
-share/gtk-doc/html/libSystem/up-insensitive.png
-share/gtk-doc/html/libSystem/up.png
