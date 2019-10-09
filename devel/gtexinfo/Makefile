@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.104 2019/10/08 14:30:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.105 2019/10/09 11:01:18 hauke Exp $
 
 DISTNAME=		texinfo-6.7
+PKGREVISION=		1
 PKGNAME=		g${DISTNAME}
 CATEGORIES=		devel sysutils
 MASTER_SITES=		${MASTER_SITE_GNU:=texinfo/}
@@ -39,6 +40,9 @@ REPLACE_SH+=		util/texi2dvi
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
+.if ${OPSYS} == "FreeBSD"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.endif
 .include "../../lang/perl5/buildlink3.mk"	 # for EXTERN.h in XSParagraph
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
