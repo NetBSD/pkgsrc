@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.2 2019/09/02 16:41:01 nia Exp $
+$NetBSD: distinfo,v 1.3 2019/10/09 22:46:04 maya Exp $
 
-SHA1 (mono-6.0.0.313.tar.xz) = c5cccad2cb5be936f23e46b95df7628013e29e3c
-RMD160 (mono-6.0.0.313.tar.xz) = 801e5128561d2e95a6736cdfce040d8850be4e2f
-SHA512 (mono-6.0.0.313.tar.xz) = a1de452eb1c6edba503723217a4b5839563d154ff0c01852b551a41b3c98b5b617637e4e435de87bf275cfdce4066e70bfc763b607882f0b42e14196d7d5c156
-Size (mono-6.0.0.313.tar.xz) = 218124872 bytes
-SHA1 (patch-configure.ac) = f932add14f5b54af5cc183cfd30f482f11f7d504
+SHA1 (mono-6.4.0.198.tar.xz) = ad1beb048e34f5b4a958b25cd339d54ac837e480
+RMD160 (mono-6.4.0.198.tar.xz) = 8045bcbe15ee51f3c12b2b99844ad697927d22fc
+SHA512 (mono-6.4.0.198.tar.xz) = 2804f1a2e10de683230fc77684b9f795259e4d494e819afd3c9cf247bed20cac2b7f80612eccc8af619158d077447989784e9f2e56fc741bf601894b1969600d
+Size (mono-6.4.0.198.tar.xz) = 230056560 bytes
+SHA1 (patch-configure.ac) = 380f05b07018bb7b04ae5ebf7628b53f320adde8
 SHA1 (patch-data_Makefile.am) = 535480855e413750d5b6cab6351b1683ac911246
 SHA1 (patch-data_net__2__0_Browsers_Makefile.am) = 847fa7f5a54e7583a87c40749efe5a99e513c3c9
 SHA1 (patch-data_net__2__0_Makefile.am) = dffb23423381a9031587536ee5de2b34610329ee
@@ -12,15 +12,12 @@ SHA1 (patch-data_net__4__0_Browsers_Makefile.am) = 0ada5af132816efb41dfbd7ce2ba2
 SHA1 (patch-data_net__4__0_Makefile.am) = 7c0fa175047f01a556f61503b2fcfabdedd2c606
 SHA1 (patch-data_net__4__5_Browsers_Makefile.am) = 80bd57a2ac3fc95adef18acd9cfd7744ca112b01
 SHA1 (patch-data_net__4__5_Makefile.am) = d7591e835bfdd27fa0fba4b669b778924c811be4
-SHA1 (patch-mcs_class_corlib_Test_Mono_MonoNativePlatformType.cs) = 3368edee232b184879091df3d68daf4900f744c2
-SHA1 (patch-mono_metadata_icall.c) = 292c7bc4c959a3a5c1a982ccf2bc26a5300a0730
-SHA1 (patch-mono_metadata_mono-config.c) = ba690e4790c94e085214d303a9ac71a2a1d08fee
+SHA1 (patch-mcs_class_corlib_Test_Mono_MonoNativePlatformType.cs) = 1cc7df8238439e9c641b27dd94172bdb25185df7
+SHA1 (patch-mono_metadata_icall.c) = b326c16e9aa8f9ee154d937128e5e09fd31b235a
+SHA1 (patch-mono_metadata_mono-config.c) = c80a489bc00e3b5f368f95bd5f63ed2e93552c07
 SHA1 (patch-mono_metadata_threads.c) = e1432cced0dafce1a2712869ce79e12a2ab35973
-SHA1 (patch-mono_mini_Makefile.am.in) = 697b0b56d9b7ddb5f61cd105c2c9c5dfac53ed9b
-SHA1 (patch-mono_native_Makefile.am) = 47e57623ebfce32f13a5fc1c19a0dbcb31dad8d4
-SHA1 (patch-mono_native_mono-native-platform.h) = 845c921b4a84146b78f4f94c9380890892f5ff29
-SHA1 (patch-mono_tests_Makefile.am) = a5bf145619a50c8c256c32ffdb5b51f9e04f874c
+SHA1 (patch-mono_native_Makefile.am) = 5cb2caa4b00327459864eecbe0ea26d9ed4b03e1
+SHA1 (patch-mono_native_mono-native-platform.h) = 9247cf9429d829242ea7dfede8e3b39f89a92850
 SHA1 (patch-mono_utils_mono-os-semaphore.h) = b850911945c95be804e9462263d558ef702831ca
-SHA1 (patch-mono_utils_mono-state.c) = 6a6d83e1779a5167e8f22ba1dedce9b3203705c4
 SHA1 (patch-mono_utils_mono-utils-debug.c) = 30b0ab55c9227705026a8edd1e4bb693ae4f9953
 SHA1 (patch-runtime_mono-wrapper.in) = ea40d2f2e8b67de0ae42c6e608e3c085dc2b040e
