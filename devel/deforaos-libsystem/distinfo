@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.12 2017/04/13 00:41:02 khorben Exp $
+$NetBSD: distinfo,v 1.13 2019/10/09 01:58:55 khorben Exp $
 
-SHA1 (libSystem-0.3.1.tar.gz) = e527a54f24d2f1ab350c1e5610ba83cf00c67cdc
-RMD160 (libSystem-0.3.1.tar.gz) = 9b73f5849325fc656763f770e6c516101cd1007e
-SHA512 (libSystem-0.3.1.tar.gz) = 667b6b2bf27be420fea2718b04aa4ce86a87f388a626b21371ec3c39b7e7d8ea4600b340d81b2a51c7317306dce7d4cd0f8a1281f07091ad1ad7b2cc3e28b4e4
-Size (libSystem-0.3.1.tar.gz) = 70735 bytes
-SHA1 (patch-tests_tests.sh) = a8904b992794dea31fb29cef858e17d761f2293f
+SHA1 (libSystem-0.4.2.tar.gz) = a934719e3c564d3823368125f2586577122ed032
+RMD160 (libSystem-0.4.2.tar.gz) = d059436d3d8314e92647f6e4b74fb87eb53fa0df
+SHA512 (libSystem-0.4.2.tar.gz) = 0b67bee0287b5af7ed37342012fa489dcabe06af8d6f393862733b013c2e021c0b990937a14fbf920a69192eb28dcc72eeb469889db2c610c8fba65d419f952c
+Size (libSystem-0.4.2.tar.gz) = 49555 bytes
+SHA1 (patch-doc_Makefile) = 43348660bc1057c2e06f13bb5face9103a64ca30
+SHA1 (patch-tests_tests.sh) = a75251c9b9ae3cf3b54fb8afa6f152ca9601ac31
