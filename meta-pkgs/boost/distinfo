@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.127 2019/08/22 21:05:27 tnn Exp $
+$NetBSD: distinfo,v 1.128 2019/10/09 19:17:45 ryoon Exp $
 
 SHA1 (boost_1_71_0.tar.bz2) = 5b0a3cef23f0c124dde5bbb64324f615ac843ace
 RMD160 (boost_1_71_0.tar.bz2) = a46b886ca26993610c84615fca4340ad3f955f81
@@ -6,6 +6,7 @@ SHA512 (boost_1_71_0.tar.bz2) = b7937d50c4512cf13cadd0ca829de36cf2cbc6fb788f45b1
 Size (boost_1_71_0.tar.bz2) = 100124647 bytes
 SHA1 (patch-boost_archive_basic__archive.hpp) = 7e7c88cfc00fbf524c70dedd8b9c3c889f8b684f
 SHA1 (patch-boost_asio_detail_config.hpp) = f3ae1fd0a026c21a89d196c74e02c4d3c8ea0808
+SHA1 (patch-boost_asio_detail_impl_kqueue__reactor.ipp) = ce16c7c875e6361f952513e700a14761312650fa
 SHA1 (patch-boost_atomic_detail_ops_gcc_sparc.hpp) = 53525f876daeec0a23963917c4c6fad154cf67c4
 SHA1 (patch-boost_config_detail_posix__features.hpp) = 7d310574e7020c79c8bfa87cff4db0a2edc5b0bc
 SHA1 (patch-boost_config_detail_suffix.hpp) = 12e22085e7c292b2451ea8bc581beaddcb936252
