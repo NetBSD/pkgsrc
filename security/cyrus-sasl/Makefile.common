@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2019/06/09 22:12:16 nia Exp $
+# $NetBSD: Makefile.common,v 1.29 2019/10/09 09:38:10 nros Exp $
 #
 # used by security/cyrus-sasl/Makefile
 # used by security/cy2-anonymous/Makefile
@@ -20,7 +20,8 @@
 DISTNAME=	cyrus-sasl-2.1.27
 DISTFILES=	${DISTNAME}-rc7${EXTRACT_SUFX}
 CATEGORIES=	security
-MASTER_SITES=	ftp://ftp.cyrusimap.org/cyrus-sasl/
+MASTER_SITES=	https://www.cyrusimap.org/releases/
+MASTER_SITES+=	ftp://ftp.cyrusimap.org/cyrus-sasl/
 #MASTER_SITES+=	ftp://ftp.cyrusimap.org/cyrus-sasl/OLD-VERSIONS/
 #PATCHFILES+=	cyrus-sasl-dedad73e5e7a75d01a5f3d5a6702ab8ccd2ff40d.patch.v2
 #SITES.cyrus-sasl-dedad73e5e7a75d01a5f3d5a6702ab8ccd2ff40d.patch.v2= \
