@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4249 2019/10/09 02:23:58 khorben Exp $
+$NetBSD: CHANGES-2019,v 1.4250 2019/10/09 09:01:01 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6845,3 +6845,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated geography/geos to 3.7.3 [gdt 2019-10-08]
 	Updated devel/deforaos-libsystem to 0.4.2 [khorben 2019-10-09]
 	Updated devel/deforaos-configure to 0.4.1 [khorben 2019-10-09]
+	Updated lang/camlp4 to 4.08+1 [msaitoh 2019-10-09]
