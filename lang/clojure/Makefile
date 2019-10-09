@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2019/10/08 23:40:37 fox Exp $
+# $NetBSD: Makefile,v 1.9 2019/10/09 12:41:13 fox Exp $
 
 DISTNAME=	clojure-tools-1.10.1.469
-PKGNAME=	clojure-1.10.1.469
+PKGNAME=	${DISTNAME:S/-tools//}
 CATEGORIES=	lang
 MASTER_SITES=	https://download.clojure.org/install/
 
