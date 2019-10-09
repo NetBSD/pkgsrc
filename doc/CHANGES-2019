@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4250 2019/10/09 09:01:01 msaitoh Exp $
+$NetBSD: CHANGES-2019,v 1.4251 2019/10/09 10:41:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6846,3 +6846,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/deforaos-libsystem to 0.4.2 [khorben 2019-10-09]
 	Updated devel/deforaos-configure to 0.4.1 [khorben 2019-10-09]
 	Updated lang/camlp4 to 4.08+1 [msaitoh 2019-10-09]
+	Updated devel/py-jupyter_core to 4.6.0 [adam 2019-10-09]
+	Updated devel/py-jupyter_client to 5.3.4 [adam 2019-10-09]
