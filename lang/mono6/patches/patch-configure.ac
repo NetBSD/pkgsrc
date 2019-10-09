@@ -1,11 +1,35 @@
-$NetBSD: patch-configure.ac,v 1.1 2019/08/25 16:37:01 maya Exp $
+$NetBSD: patch-configure.ac,v 1.2 2019/10/09 22:46:04 maya Exp $
 
 Add netbsd support
 https://github.com/mono/mono/pull/15938
 
---- configure.ac.orig	2019-07-18 07:52:31.000000000 +0000
+Disable libgc in cases it has build issues (netbsd/aarch64, solaris)
+
+--- configure.ac.orig	2019-09-19 07:53:55.000000000 +0000
 +++ configure.ac
-@@ -4066,10 +4066,10 @@ LIBC="libc.so.6"
+@@ -202,6 +202,12 @@ case "$host" in
+ 		libgc_threads=pthreads
+ 		with_sigaltstack=no
+ 		use_sigposix=yes
++		case "$host" in
++		aarch64-*)
++			support_boehm=no
++			with_gc=sgen
++			;;
++		esac
+ 		with_sgen_default_concurrent=yes
+ 		;;
+ 	*-*-kfreebsd*-gnu)
+@@ -394,6 +400,8 @@ case "$host" in
+ 		has_dtrace=yes
+ 		use_sigposix=yes
+ 		enable_solaris_tar_check=yes
++		support_boehm=no
++		with_gc=sgen
+ 		;;
+ 	*-*-darwin*)
+ 		parallel_mark="Disabled_Currently_Hangs_On_MacOSX"
+@@ -4155,10 +4163,10 @@ LIBC="libc.so.6"
  INTL="libc.so.6"
  SQLITE="libsqlite.so.0"
  SQLITE3="libsqlite3.so.0"
@@ -19,8 +43,8 @@ https://github.com/mono/mono/pull/15938
 +XINERAMA="@X11BASE@/lib/libXinerama.so"
  
  sizeof_register="SIZEOF_VOID_P"
- 
-@@ -6177,6 +6177,22 @@ elif test x$platform_android = xyes; the
+
+@@ -6309,6 +6317,22 @@ elif test x$platform_android = xyes; the
  	MONO_NATIVE_PLATFORM=android
  
  	MONO_NATIVE_PLATFORM_TYPE="MONO_NATIVE_PLATFORM_TYPE_ANDROID"
@@ -43,10 +67,10 @@ https://github.com/mono/mono/pull/15938
  else
  	mono_native=no
  	mono_native_text="no"
-@@ -6218,6 +6234,7 @@ AM_CONDITIONAL(MONO_NATIVE_PLATFORM_IOS,
- AM_CONDITIONAL(MONO_NATIVE_PLATFORM_LINUX, test x$MONO_NATIVE_PLATFORM = xlinux)
+@@ -6351,6 +6375,7 @@ AM_CONDITIONAL(MONO_NATIVE_PLATFORM_LINU
  AM_CONDITIONAL(MONO_NATIVE_PLATFORM_AIX, test x$MONO_NATIVE_PLATFORM = xaix)
  AM_CONDITIONAL(MONO_NATIVE_PLATFORM_ANDROID, test x$MONO_NATIVE_PLATFORM = xandroid)
+ AM_CONDITIONAL(MONO_NATIVE_PLATFORM_FREEBSD, test x$MONO_NATIVE_PLATFORM = xfreebsd)
 +AM_CONDITIONAL(MONO_NATIVE_PLATFORM_NETBSD, test x$MONO_NATIVE_PLATFORM = xnetbsd)
  
  MONO_NATIVE_PLATFORM_TYPE_COMPAT="$MONO_NATIVE_PLATFORM_TYPE | MONO_NATIVE_PLATFORM_TYPE_COMPAT"

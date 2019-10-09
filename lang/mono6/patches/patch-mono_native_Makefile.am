@@ -1,32 +1,32 @@
-$NetBSD: patch-mono_native_Makefile.am,v 1.1 2019/08/25 16:37:01 maya Exp $
+$NetBSD: patch-mono_native_Makefile.am,v 1.2 2019/10/09 22:46:04 maya Exp $
 
 Add netbsd support
 https://github.com/mono/mono/pull/15938
 
---- mono/native/Makefile.am.orig	2019-07-18 07:46:08.000000000 +0000
+--- mono/native/Makefile.am.orig	2019-09-19 07:46:07.000000000 +0000
 +++ mono/native/Makefile.am
-@@ -49,6 +49,8 @@ linux_sources = $(unix_sources)
+@@ -73,6 +73,8 @@ aix_sources = $(unix_sources)
  
- aix_sources = $(unix_sources)
+ freebsd_sources = $(unix_sources)
  
 +netbsd_sources = $(unix_sources)
 +
  android_sources = \
  	pal-android.h \
  	pal-android.c \
-@@ -86,7 +88,7 @@ macos_sources += $(gss_sources)
+@@ -110,7 +112,7 @@ macos_sources += $(gss_sources)
  ios_sources += $(gss_sources)
  endif
  
--EXTRA_libmono_native_la_SOURCES = $(common_sources) $(macos_sources) $(ios_sources) $(linux_sources) $(aix_sources) $(unix_sources) $(gss_sources)
-+EXTRA_libmono_native_la_SOURCES = $(common_sources) $(macos_sources) $(ios_sources) $(linux_sources) $(aix_sources) $(netbsd_sources) $(unix_sources) $(gss_sources)
+-EXTRA_libmono_native_la_SOURCES = $(common_sources) $(macos_sources) $(ios_sources) $(linux_sources) $(aix_sources) $(freebsd) $(unix_sources) $(gss_sources)
++EXTRA_libmono_native_la_SOURCES = $(common_sources) $(macos_sources) $(ios_sources) $(linux_sources) $(aix_sources) $(freebsd) $(netbsd_sources) $(unix_sources) $(gss_sources)
  
  if MONO_NATIVE_PLATFORM_MACOS
  platform_sources = $(macos_sources)
-@@ -102,6 +104,10 @@ platform_sources = $(aix_sources)
+@@ -129,6 +131,10 @@ platform_sources = $(android_sources)
  else
- if MONO_NATIVE_PLATFORM_ANDROID
- platform_sources = $(android_sources)
+ if MONO_NATIVE_PLATFORM_FREEBSD
+ platform_sources = $(freebsd_sources)
 +else
 +if MONO_NATIVE_PLATFORM_NETBSD
 +platform_sources = $(netbsd_sources)
