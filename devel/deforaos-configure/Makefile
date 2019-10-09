@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/10/09 02:23:17 khorben Exp $
+# $NetBSD: Makefile,v 1.10 2019/10/09 02:31:16 khorben Exp $
 #
 
 DISTNAME=	configure-0.4.1
@@ -22,6 +22,8 @@ MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 AUTO_MKDIRS=	yes
+
+#TEST_TARGET=	tests
 
 .include "../../mk/bsd.prefs.mk"
 
