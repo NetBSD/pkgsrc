@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/11/14 18:17:26 kleink Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/10/09 12:33:31 wiedi Exp $
 bin/weasyprint${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -22,6 +22,9 @@ ${PYSITELIB}/weasyprint/css/computed_values.pyc
 ${PYSITELIB}/weasyprint/css/computed_values.pyo
 ${PYSITELIB}/weasyprint/css/html5_ph.css
 ${PYSITELIB}/weasyprint/css/html5_ua.css
+${PYSITELIB}/weasyprint/css/media_queries.py
+${PYSITELIB}/weasyprint/css/media_queries.pyc
+${PYSITELIB}/weasyprint/css/media_queries.pyo
 ${PYSITELIB}/weasyprint/css/properties.py
 ${PYSITELIB}/weasyprint/css/properties.pyc
 ${PYSITELIB}/weasyprint/css/properties.pyo
@@ -95,9 +98,6 @@ ${PYSITELIB}/weasyprint/layout/float.pyo
 ${PYSITELIB}/weasyprint/layout/inlines.py
 ${PYSITELIB}/weasyprint/layout/inlines.pyc
 ${PYSITELIB}/weasyprint/layout/inlines.pyo
-${PYSITELIB}/weasyprint/layout/markers.py
-${PYSITELIB}/weasyprint/layout/markers.pyc
-${PYSITELIB}/weasyprint/layout/markers.pyo
 ${PYSITELIB}/weasyprint/layout/min_max.py
 ${PYSITELIB}/weasyprint/layout/min_max.pyc
 ${PYSITELIB}/weasyprint/layout/min_max.pyo
@@ -203,6 +203,9 @@ ${PYSITELIB}/weasyprint/tests/test_draw/test_overflow.pyo
 ${PYSITELIB}/weasyprint/tests/test_draw/test_table.py
 ${PYSITELIB}/weasyprint/tests/test_draw/test_table.pyc
 ${PYSITELIB}/weasyprint/tests/test_draw/test_table.pyo
+${PYSITELIB}/weasyprint/tests/test_draw/test_text.py
+${PYSITELIB}/weasyprint/tests/test_draw/test_text.pyc
+${PYSITELIB}/weasyprint/tests/test_draw/test_text.pyo
 ${PYSITELIB}/weasyprint/tests/test_draw/test_transform.py
 ${PYSITELIB}/weasyprint/tests/test_draw/test_transform.pyc
 ${PYSITELIB}/weasyprint/tests/test_draw/test_transform.pyo
@@ -272,6 +275,9 @@ ${PYSITELIB}/weasyprint/tests/test_tools.pyo
 ${PYSITELIB}/weasyprint/tests/test_unicode.py
 ${PYSITELIB}/weasyprint/tests/test_unicode.pyc
 ${PYSITELIB}/weasyprint/tests/test_unicode.pyo
+${PYSITELIB}/weasyprint/tests/test_variables.py
+${PYSITELIB}/weasyprint/tests/test_variables.pyc
+${PYSITELIB}/weasyprint/tests/test_variables.pyo
 ${PYSITELIB}/weasyprint/tests/testing_utils.py
 ${PYSITELIB}/weasyprint/tests/testing_utils.pyc
 ${PYSITELIB}/weasyprint/tests/testing_utils.pyo
