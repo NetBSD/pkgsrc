@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2019/09/18 20:26:09 adam Exp $
+# $NetBSD: Makefile,v 1.13 2019/10/09 10:41:02 adam Exp $
 
-DISTNAME=	jupyter_client-5.3.3
+DISTNAME=	jupyter_client-5.3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter_client/}
