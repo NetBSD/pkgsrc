@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/08/25 16:37:01 maya Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/10/09 22:46:04 maya Exp $
 bin/al
 bin/al2
 bin/caspol
@@ -2667,8 +2667,8 @@ lib/mono/gac/Mono.CSharp/4.0.0.0__0738eb9f132ed756/Mono.CSharp.dll
 lib/mono/gac/Mono.CSharp/4.0.0.0__0738eb9f132ed756/Mono.CSharp.pdb
 lib/mono/gac/Mono.Cairo/4.0.0.0__0738eb9f132ed756/Mono.Cairo.dll
 lib/mono/gac/Mono.Cairo/4.0.0.0__0738eb9f132ed756/Mono.Cairo.pdb
-lib/mono/gac/Mono.Cecil/0.10.3.0__0738eb9f132ed756/Mono.Cecil.dll
-lib/mono/gac/Mono.Cecil/0.10.3.0__0738eb9f132ed756/Mono.Cecil.pdb
+lib/mono/gac/Mono.Cecil/0.11.0.0__0738eb9f132ed756/Mono.Cecil.dll
+lib/mono/gac/Mono.Cecil/0.11.0.0__0738eb9f132ed756/Mono.Cecil.pdb
 lib/mono/gac/Mono.Cecil/0.9.5.0__0738eb9f132ed756/Mono.Cecil.dll
 lib/mono/gac/Mono.Cecil/0.9.5.0__0738eb9f132ed756/Mono.Cecil.pdb
 lib/mono/gac/Mono.CodeContracts/4.0.0.0__0738eb9f132ed756/Mono.CodeContracts.dll
@@ -2922,6 +2922,7 @@ lib/mono/msbuild/Current/bin/Roslyn/Microsoft.CodeAnalysis.Scripting.dll
 lib/mono/msbuild/Current/bin/Roslyn/Microsoft.CodeAnalysis.VisualBasic.dll
 lib/mono/msbuild/Current/bin/Roslyn/Microsoft.CodeAnalysis.dll
 lib/mono/msbuild/Current/bin/Roslyn/Microsoft.Managed.Core.targets
+lib/mono/msbuild/Current/bin/Roslyn/Microsoft.Managed.EditorConfig.targets
 lib/mono/msbuild/Current/bin/Roslyn/Microsoft.VisualBasic.Core.targets
 lib/mono/msbuild/Current/bin/Roslyn/System.Collections.Immutable.dll
 lib/mono/msbuild/Current/bin/Roslyn/System.Memory.dll
