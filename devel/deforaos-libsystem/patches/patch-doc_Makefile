@@ -1,0 +1,21 @@
+$NetBSD: patch-doc_Makefile,v 1.1 2019/10/09 01:58:56 khorben Exp $
+
+Do not generate the API documentation by default.
+
+--- doc/Makefile.orig	2019-09-28 01:45:41.000000000 +0000
++++ doc/Makefile
+@@ -1,5 +1,5 @@
+ SUBDIRS	= gtkdoc
+-TARGETS	= $(OBJDIR)configctl.1 $(OBJDIR)configctl.html $(OBJDIR)configctl.xml $(OBJDIR)gtkdoc/libSystem.types $(OBJDIR)gtkdoc/tmpl.stamp $(OBJDIR)gtkdoc/sgml.stamp $(OBJDIR)gtkdoc/html.stamp
++TARGETS	= $(OBJDIR)configctl.1 $(OBJDIR)configctl.html $(OBJDIR)configctl.xml
+ OBJDIR	=
+ PREFIX	= /usr/local
+ DESTDIR	=
+@@ -73,7 +73,6 @@ install: all
+ 		else $(MAKE) install; fi) || exit; done
+ 	./docbook.sh -P "$(DESTDIR)$(PREFIX)" -i -- "$(OBJDIR)configctl.1"
+ 	./docbook.sh -P "$(DESTDIR)$(PREFIX)" -i -- "$(OBJDIR)configctl.html"
+-	./gtkdoc.sh -P "$(DESTDIR)$(PREFIX)" -i -- "$(OBJDIR)gtkdoc/html.stamp"
+ 
+ uninstall:
+ 	@for i in $(SUBDIRS); do (cd "$$i" && \

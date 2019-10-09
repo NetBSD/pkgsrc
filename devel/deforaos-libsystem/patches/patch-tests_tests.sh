@@ -1,18 +1,28 @@
-$NetBSD: patch-tests_tests.sh,v 1.5 2017/04/13 00:41:02 khorben Exp $
+$NetBSD: patch-tests_tests.sh,v 1.6 2019/10/09 01:58:56 khorben Exp $
 
 Avoid building the (experimental) Python binding.
-Use LD_LIBRARY_PATH to find pre-installed libraries.
 
---- tests/tests.sh.orig	2017-04-13 00:29:45.000000000 +0000
+--- tests/tests.sh.orig	2019-08-29 00:00:20.000000000 +0000
 +++ tests/tests.sh
-@@ -114,8 +114,8 @@ failures=
+@@ -119,21 +119,6 @@ fi
  
- if $PKGCONFIG --exists python-2.7; then
- 	tests="$tests python.sh"
--else
--	failures="$failures python.sh"
-+#else
-+#	failures="$failures python.sh"
- fi
+ tests="array buffer config error event includes parser string variable"
+ failures=
+-$PKGCONFIG --exists "python-2.7"
+-case $? in
+-	127)
+-		failures="pkgconfig.sh python.sh"
+-		;;
+-	0)
+-		if [ -n "$PKG_CONFIG_SYSROOT_DIR" ]; then
+-			#XXX cross-compiling
+-			tests="pkgconfig.sh python.sh"
+-		fi
+-		;;
+-	*)
+-		failures="$failures python.sh"
+-		;;
+-esac
  
- $DATE > "$target"
+ while [ $# -ne 0 ]; do
+ 	target="$1"
