@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4271 2019/10/10 12:24:48 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4272 2019/10/10 12:27:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6870,3 +6870,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/filezilla to 3.45.1 [wiz 2019-10-10]
 	Updated devel/p5-CPAN to 2.2700 [mef 2019-10-10]
 	Updated misc/todoman to 3.6.0 [wiz 2019-10-10]
+	Updated devel/liblangtag to 0.6.3 [wiz 2019-10-10]
