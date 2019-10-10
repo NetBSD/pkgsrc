@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.stub,v 1.2 2009/06/14 22:06:40 joerg Exp $
-lib/ocaml/stublibs/dlllablgtk.so
