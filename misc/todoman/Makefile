@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2019/10/10 12:24:28 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/10/10 13:23:14 wiz Exp $
 
-DISTNAME=	todoman-3.6.0
+DISTNAME=	todoman-3.7.0
 CATEGORIES=	misc
-#MASTER_SITES=	${MASTER_SITE_PYPI:=t/todoman/}
-MASTER_SITES=	${MASTER_SITE_GITHUB:=pimutils/}
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_PYPI:=t/todoman/}
+#MASTER_SITES=	${MASTER_SITE_GITHUB:=pimutils/}
+#GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/pimutils/todoman
