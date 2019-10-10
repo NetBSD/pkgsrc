@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2018/11/18 13:08:19 bsiegert Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2019/10/10 11:44:38 wiz Exp $
 
 BUILDLINK_TREE+=	enchant2
 
@@ -14,6 +14,7 @@ ${BUILDLINK_DIR}/lib/pkgconfig/enchant.pc:
 	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig
 	cd ${BUILDLINK_DIR}/lib/pkgconfig && ${LN} -sf enchant-2.pc enchant.pc
 
+.PHONY: buildlink-enchant2-cookie
 buildlink-enchant2-cookie: ${BUILDLINK_DIR}/lib/pkgconfig/enchant.pc
 
 # spelling libraries are loaded dynamically and do not need
