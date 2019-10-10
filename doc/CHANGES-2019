@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4275 2019/10/10 12:52:49 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4276 2019/10/10 13:00:16 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6874,3 +6874,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added sysutils/py-Glances version 3.1.2 [fox 2019-10-10]
 	Updated net/libsoup to 2.68.1 [wiz 2019-10-10]
 	Updated sysutils/py-dbus to 1.2.12 [wiz 2019-10-10]
+	Updated devel/ncurses to 6.1nb6 [triaxx 2019-10-10]
