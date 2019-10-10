@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4260 2019/10/10 11:15:03 mef Exp $
+$NetBSD: CHANGES-2019,v 1.4261 2019/10/10 11:25:19 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6859,3 +6859,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/py-asyncpg to 0.19.0 [adam 2019-10-10]
 	Removed multimedia/gnash successor multimedia/lightspark [nia 2019-10-10]
 	Updated devel/p5-Alien-Build to 1.89 [mef 2019-10-10]
+	Updated devel/p5-AnyEvent to 7.17 [mef 2019-10-10]
