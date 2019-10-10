@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/08/16 13:08:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2019/10/10 12:43:28 wiz Exp $
 include/libsoup-2.4/libsoup/soup-address.h
 include/libsoup-2.4/libsoup/soup-auth-domain-basic.h
 include/libsoup-2.4/libsoup/soup-auth-domain-digest.h
@@ -17,6 +17,9 @@ include/libsoup-2.4/libsoup/soup-date.h
 include/libsoup-2.4/libsoup/soup-enum-types.h
 include/libsoup-2.4/libsoup/soup-form.h
 include/libsoup-2.4/libsoup/soup-headers.h
+include/libsoup-2.4/libsoup/soup-hsts-enforcer-db.h
+include/libsoup-2.4/libsoup/soup-hsts-enforcer.h
+include/libsoup-2.4/libsoup/soup-hsts-policy.h
 include/libsoup-2.4/libsoup/soup-logger.h
 include/libsoup-2.4/libsoup/soup-message-body.h
 include/libsoup-2.4/libsoup/soup-message-headers.h
@@ -48,6 +51,9 @@ include/libsoup-2.4/libsoup/soup-uri.h
 include/libsoup-2.4/libsoup/soup-value-utils.h
 include/libsoup-2.4/libsoup/soup-version.h
 include/libsoup-2.4/libsoup/soup-websocket-connection.h
+include/libsoup-2.4/libsoup/soup-websocket-extension-deflate.h
+include/libsoup-2.4/libsoup/soup-websocket-extension-manager.h
+include/libsoup-2.4/libsoup/soup-websocket-extension.h
 include/libsoup-2.4/libsoup/soup-websocket.h
 include/libsoup-2.4/libsoup/soup-xmlrpc-old.h
 include/libsoup-2.4/libsoup/soup-xmlrpc.h
@@ -85,6 +91,7 @@ share/locale/es/LC_MESSAGES/libsoup.mo
 share/locale/et/LC_MESSAGES/libsoup.mo
 share/locale/eu/LC_MESSAGES/libsoup.mo
 share/locale/fa/LC_MESSAGES/libsoup.mo
+share/locale/fi/LC_MESSAGES/libsoup.mo
 share/locale/fr/LC_MESSAGES/libsoup.mo
 share/locale/fur/LC_MESSAGES/libsoup.mo
 share/locale/gd/LC_MESSAGES/libsoup.mo
