@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.837 2019/10/08 21:40:05 bad Exp $
+# $NetBSD: Makefile,v 1.838 2019/10/10 12:41:40 fox Exp $
 #
 
 COMMENT=	System utilities
@@ -473,6 +473,7 @@ SUBDIR+=	pstree
 SUBDIR+=	puppet
 SUBDIR+=	pv
 SUBDIR+=	pwgen
+SUBDIR+=	py-Glances
 SUBDIR+=	py-Send2Trash
 SUBDIR+=	py-attic
 SUBDIR+=	py-augeas
