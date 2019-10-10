@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.851 2019/09/16 10:54:39 nia Exp $
+# $NetBSD: Makefile,v 1.852 2019/10/10 14:17:50 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -203,7 +203,6 @@ SUBDIR+=	ktextwidgets
 SUBDIR+=	kwidgetsaddons
 SUBDIR+=	kwindowsystem
 SUBDIR+=	kxmlgui
-SUBDIR+=	lablgtk1
 SUBDIR+=	labltk
 SUBDIR+=	lesstif
 SUBDIR+=	libFS
