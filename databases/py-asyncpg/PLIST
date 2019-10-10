@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/11/02 11:51:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/10/10 07:58:41 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -116,6 +116,8 @@ ${PYSITELIB}/asyncpg/protocol/protocol.so
 ${PYSITELIB}/asyncpg/protocol/record/__init__.pxd
 ${PYSITELIB}/asyncpg/protocol/record/recordobj.c
 ${PYSITELIB}/asyncpg/protocol/record/recordobj.h
+${PYSITELIB}/asyncpg/protocol/scram.pxd
+${PYSITELIB}/asyncpg/protocol/scram.pyx
 ${PYSITELIB}/asyncpg/protocol/settings.pxd
 ${PYSITELIB}/asyncpg/protocol/settings.pyx
 ${PYSITELIB}/asyncpg/serverversion.py
