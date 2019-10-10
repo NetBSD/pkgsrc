@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4261 2019/10/10 11:25:19 mef Exp $
+$NetBSD: CHANGES-2019,v 1.4262 2019/10/10 11:27:57 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6860,3 +6860,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed multimedia/gnash successor multimedia/lightspark [nia 2019-10-10]
 	Updated devel/p5-Alien-Build to 1.89 [mef 2019-10-10]
 	Updated devel/p5-AnyEvent to 7.17 [mef 2019-10-10]
+	Updated devel/p5-App-FatPacker to 0.010008 [mef 2019-10-10]
