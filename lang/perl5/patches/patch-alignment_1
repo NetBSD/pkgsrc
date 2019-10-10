@@ -1,0 +1,273 @@
+$NetBSD: patch-alignment_1,v 1.1 2019/10/10 17:59:57 maya Exp $
+
+Apply upstream commit (not needed in perl >= 5.32.x)
+
+From ee9ac1cd8eb988fea70841eae211b11355711416 Mon Sep 17 00:00:00 2001
+From: Matt Turner <mattst88@gmail.com>
+Date: Wed, 4 Sep 2019 21:04:47 -0700
+Subject: [PATCH] Digest-MD5: Consolidate byte-swapping paths
+
+The code guarded by #ifndef U32_ALIGNMENT_REQUIRED attempts to optimize
+byte-swapping by doing unaligned loads, but accessing data through
+unaligned pointers is undefined behavior in C. Moreover, compilers are
+more than capable of recognizing these open-coded byte-swap patterns and
+emitting a bswap instruction, or an unaligned load instruction, or a
+combined load, etc. There's no need for multiple paths to attain the
+desired result.
+
+See https://rt.perl.org/Ticket/Display.html?id=133495
+---
+ cpan/Digest-MD5/MD5.xs      |  44 +----------------
+ cpan/Digest-MD5/Makefile.PL | 114 --------------------------------------------
+ cpan/Digest-MD5/t/files.t   |   2 +-
+ 3 files changed, 3 insertions(+), 157 deletions(-)
+
+diff --git a/cpan/Digest-MD5/MD5.xs b/cpan/Digest-MD5/MD5.xs
+index a48d951056..964d37fb0e 100644
+--- cpan/Digest-MD5/MD5.xs.orig
++++ cpan/Digest-MD5/MD5.xs
+@@ -106,20 +106,6 @@ static MAGIC *THX_sv_magicext(pTHX_ SV *sv, SV *obj, int type,
+  * values.  The following macros (and functions) allow us to convert
+  * between native integers and such values.
+  */
+-#undef BYTESWAP
+-#ifndef U32_ALIGNMENT_REQUIRED
+- #if BYTEORDER == 0x1234      /* 32-bit little endian */
+-  #define BYTESWAP(x) (x)     /* no-op */
+-
+- #elif BYTEORDER == 0x4321    /* 32-bit big endian */
+-  #define BYTESWAP(x) 	((((x)&0xFF)<<24)	\
+-			|(((x)>>24)&0xFF)	\
+-			|(((x)&0x0000FF00)<<8)	\
+-			|(((x)&0x00FF0000)>>8)	)
+- #endif
+-#endif
+-
+-#ifndef BYTESWAP
+ static void u2s(U32 u, U8* s)
+ {
+     *s++ = (U8)(u         & 0xFF);
+@@ -132,7 +118,6 @@ static void u2s(U32 u, U8* s)
+                         ((U32)(*(s+1)) << 8)  |  \
+                         ((U32)(*(s+2)) << 16) |  \
+                         ((U32)(*(s+3)) << 24))
+-#endif
+ 
+ /* This structure keeps the current state of algorithm.
+  */
+@@ -279,29 +264,16 @@ MD5Transform(MD5_CTX* ctx, const U8* buf, STRLEN blocks)
+     U32 C = ctx->C;
+     U32 D = ctx->D;
+ 
+-#ifndef U32_ALIGNMENT_REQUIRED
+-    const U32 *x = (U32*)buf;  /* really just type casting */
+-#endif
+-
+     do {
+ 	U32 a = A;
+ 	U32 b = B;
+ 	U32 c = C;
+ 	U32 d = D;
+ 
+-#if BYTEORDER == 0x1234 && !defined(U32_ALIGNMENT_REQUIRED)
+-	const U32 *X = x;
+-        #define NEXTx  (*x++)
+-#else
+-	U32 X[16];      /* converted values, used in round 2-4 */
++	U32 X[16];      /* little-endian values, used in round 2-4 */
+ 	U32 *uptr = X;
+ 	U32 tmp;
+- #ifdef BYTESWAP
+-        #define NEXTx  (tmp=*x++, *uptr++ = BYTESWAP(tmp))
+- #else
+         #define NEXTx  (s2u(buf,tmp), buf += 4, *uptr++ = tmp)
+- #endif
+-#endif
+ 
+ #ifdef MD5_DEBUG
+ 	if (buf == ctx->buffer)
+@@ -313,7 +285,7 @@ MD5Transform(MD5_CTX* ctx, const U8* buf, STRLEN blocks)
+ 	    int i;
+ 	    fprintf(stderr,"[");
+ 	    for (i = 0; i < 16; i++) {
+-		fprintf(stderr,"%x,", x[i]);
++		fprintf(stderr,"%x,", x[i]); /* FIXME */
+ 	    }
+ 	    fprintf(stderr,"]\n");
+ 	}
+@@ -468,30 +440,18 @@ MD5Final(U8* digest, MD5_CTX *ctx)
+ 
+     bits_low = ctx->bytes_low << 3;
+     bits_high = (ctx->bytes_high << 3) | (ctx->bytes_low  >> 29);
+-#ifdef BYTESWAP
+-    *(U32*)(ctx->buffer + fill) = BYTESWAP(bits_low);    fill += 4;
+-    *(U32*)(ctx->buffer + fill) = BYTESWAP(bits_high);   fill += 4;
+-#else
+     u2s(bits_low,  ctx->buffer + fill);   fill += 4;
+     u2s(bits_high, ctx->buffer + fill);   fill += 4;
+-#endif
+ 
+     MD5Transform(ctx, ctx->buffer, fill >> 6);
+ #ifdef MD5_DEBUG
+     fprintf(stderr,"       Result: %s\n", ctx_dump(ctx));
+ #endif
+ 
+-#ifdef BYTESWAP
+-    *(U32*)digest = BYTESWAP(ctx->A);  digest += 4;
+-    *(U32*)digest = BYTESWAP(ctx->B);  digest += 4;
+-    *(U32*)digest = BYTESWAP(ctx->C);  digest += 4;
+-    *(U32*)digest = BYTESWAP(ctx->D);
+-#else
+     u2s(ctx->A, digest);
+     u2s(ctx->B, digest+4);
+     u2s(ctx->C, digest+8);
+     u2s(ctx->D, digest+12);
+-#endif
+ }
+ 
+ #ifndef INT2PTR
+diff --git a/cpan/Digest-MD5/Makefile.PL b/cpan/Digest-MD5/Makefile.PL
+index 1015058bac..76906d1046 100644
+--- cpan/Digest-MD5/Makefile.PL.orig
++++ cpan/Digest-MD5/Makefile.PL
+@@ -5,7 +5,6 @@ use Config qw(%Config);
+ use ExtUtils::MakeMaker;
+ 
+ my @extra;
+-push(@extra, DEFINE => "-DU32_ALIGNMENT_REQUIRED") unless free_u32_alignment();
+ push(@extra, INSTALLDIRS => 'perl') if $] >= 5.008 && $] < 5.012;
+ 
+ if ($^O eq 'VMS') {
+@@ -39,119 +38,6 @@ WriteMakefile(
+ 
+ 
+ 
+-sub free_u32_alignment
+-{
+-    $|=1;
+-    if (exists $Config{d_u32align}) {
+-       print "Perl's config says that U32 access must ";
+-       print "not " unless $Config{d_u32align};
+-       print "be aligned.\n";
+-       return !$Config{d_u32align};
+-    }
+-    
+-    if ($^O eq 'VMS' || $^O eq 'MSWin32') {
+-       print "Assumes that $^O implies free alignment for U32 access.\n";
+-       return 1;
+-    }
+-    
+-    if ($^O eq 'hpux' && $Config{osvers} < 11.0) {
+-       print "Will not test for free alignment on older HP-UX.\n";
+-       return 0;
+-    }
+-    
+-    print "Testing alignment requirements for U32... ";
+-    open(ALIGN_TEST, ">u32align.c") or die "$!";
+-    print ALIGN_TEST <<'EOT'; close(ALIGN_TEST);
+-/*--------------------------------------------------------------*/
+-/*  This program allocates a buffer of U8 (char) and then tries */
+-/*  to access it through a U32 pointer at every offset.  The    */
+-/*  program  is expected to die with a bus error/seg fault for  */
+-/*  machines that do not support unaligned integer read/write   */
+-/*--------------------------------------------------------------*/
+-
+-#include <stdio.h>
+-#include "EXTERN.h"
+-#include "perl.h"
+-
+-#ifdef printf
+- #undef printf
+-#endif
+-
+-int main(int argc, char** argv, char** env)
+-{
+-#if BYTEORDER == 0x1234 || BYTEORDER == 0x4321
+-    volatile U8 buf[] = "\0\0\0\1\0\0\0\0";
+-    volatile U32 *up;
+-    int i;
+-
+-    if (sizeof(U32) != 4) {
+-	printf("sizeof(U32) is not 4, but %d\n", sizeof(U32));
+-	exit(1);
+-    }
+-
+-    fflush(stdout);
+-
+-    for (i = 0; i < 4; i++) {
+-	up = (U32*)(buf + i);
+-	if (! ((*up == 1 << (8*i)) ||   /* big-endian */
+-	       (*up == 1 << (8*(3-i)))  /* little-endian */
+-	      )
+-	   )
+-	{
+-	    printf("read failed (%x)\n", *up);
+-	    exit(2);
+-	}
+-    }
+-
+-    /* write test */
+-    for (i = 0; i < 4; i++) {
+-	up = (U32*)(buf + i);
+-	*up = 0xBeef;
+-	if (*up != 0xBeef) {
+-	    printf("write failed (%x)\n", *up);
+-	    exit(3);
+-	}
+-    }
+-
+-    printf("no restrictions\n");
+-    exit(0);
+-#else
+-    printf("unusual byteorder, playing safe\n");
+-    exit(1);
+-#endif
+-    return 0;
+-}
+-/*--------------------------------------------------------------*/
+-EOT
+-
+-    my $cc_cmd = "$Config{cc} $Config{ccflags} -I$Config{archlibexp}/CORE";
+-    my $exe = "u32align$Config{exe_ext}";
+-    $cc_cmd .= " -o $exe";
+-    my $rc;
+-    $rc = system("$cc_cmd $Config{ldflags} u32align.c $Config{libs}");
+-    if ($rc) {
+-	print "Can't compile test program.  Will ensure alignment to play safe.\n\n";
+-	unlink("u32align.c", $exe, "u32align$Config{obj_ext}");
+-	return 0;
+-    }
+-
+-    $rc = system("./$exe");
+-    unlink("u32align.c", $exe, "u32align$Config{obj_ext}");
+-
+-    return 1 unless $rc;
+-
+-    if ($rc > 0x80) {
+-	(my $cp = $rc) >>= 8;
+-	print "Test program exit status was $cp\n";
+-    }
+-    if ($rc & 0x80) {
+-	$rc &= ~0x80;
+-	unlink("core") && print "Core dump deleted\n";
+-    }
+-    print "signal $rc\n" if $rc && $rc < 0x80;
+-    return 0;
+-}
+-
+ BEGIN {
+     # compatibility with older versions of MakeMaker
+     my $developer = -d ".git";
+diff --git a/cpan/Digest-MD5/t/files.t b/cpan/Digest-MD5/t/files.t
+index 63479c24a3..ef64088c8c 100644
+--- cpan/Digest-MD5/t/files.t.orig
++++ cpan/Digest-MD5/t/files.t
+@@ -21,7 +21,7 @@ EOT
+     # This is the output of: 'md5sum README MD5.xs rfc1321.txt'
+     $EXPECT = <<EOT;
+ 2f93400875dbb56f36691d5f69f3eba5  README
+-9572832f3628e3bebcdd54f47c43dc5a  MD5.xs
++5b8b4f96bc27a425501307c5461970db  MD5.xs
+ 754b9db19f79dbc4992f7166eb0f37ce  rfc1321.txt
+ EOT
+ }
