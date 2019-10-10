@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19333 2019/10/10 13:54:57 ryoon Exp $
+$NetBSD: TODO,v 1.19334 2019/10/10 14:15:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1143,7 +1143,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
-	o py-mercurial-5.1.2
 	o py-more-itertools-7.2.0
 	o py-musicbrainz-0.7.4
 	o py-newt-0.52.20
