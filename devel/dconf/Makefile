@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2019/10/07 09:28:10 prlw1 Exp $
+# $NetBSD: Makefile,v 1.53 2019/10/10 13:19:57 wiz Exp $
 
-DISTNAME=	dconf-0.32.0
+DISTNAME=	dconf-0.34.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dconf/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -15,7 +15,7 @@ BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 USE_LANGUAGES=	c99
-USE_TOOLS+=	pkg-config gmake
+USE_TOOLS+=	pkg-config
 
 REPLACE_PYTHON+=	*.py
 
