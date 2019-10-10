@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2019/10/05 06:06:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.77 2019/10/10 13:19:28 ryoon Exp $
 
 .include "../../print/poppler/Makefile.common"
 
@@ -31,6 +31,9 @@ CMAKE_ARGS+=	-DENABLE_QT5=OFF
 CMAKE_ARGS+=	-DENABLE_LIBCURL=OFF
 
 CFLAGS.FreeBSD+=	-DLLONG_MAX=__LLONG_MAX
+
+# The result binary of g-ir-scanner cannot find libpoppler-glib.so.
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/glib
 
 BUILDLINK_API_DEPENDS.poppler+=     poppler-${POPPLER_VERS}{,nb*}
 .include "../../print/poppler/buildlink3.mk"
