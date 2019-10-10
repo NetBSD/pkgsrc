@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4291 2019/10/10 15:44:58 prlw1 Exp $
+$NetBSD: CHANGES-2019,v 1.4292 2019/10/10 18:00:45 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6889,3 +6889,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed x11/lablgtk1 successor x11/ocaml-lablgtk [wiz 2019-10-10]
 	Updated net/libsoup to 2.68.2 [wiz 2019-10-10]
 	Updated security/clamav to 0.102.0 [prlw1 2019-10-10]
+	Updated lang/perl5 to 5.30.0nb1 [maya 2019-10-10]
