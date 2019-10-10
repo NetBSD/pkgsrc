@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2019/06/22 11:37:14 nia Exp $
+# $NetBSD: Makefile.common,v 1.42 2019/10/10 12:29:11 triaxx Exp $
 #
 # used by devel/ncurses/Makefile
 # used by devel/ncursesw/Makefile
@@ -53,10 +53,12 @@ CONFIGURE_ENV+=		ac_cv_path_TIC_PATH=${LOCALBASE}/bin/tic
 # We can only build groff if there is a builtin implementation of curses,
 # otherwise we get a circular dependency problem.
 # Additionally, Interix is special, see ../../mk/curses.buildlink3.mk
+# Additionally, Arch Linux boostrap comes without curses package.
 .  if !(exists(/usr/include/curses.h) || exists(/usr/include/ncurses.h)) || \
 	${OPSYS} == "Interix" || \
 	(${OPSYS} == "FreeBSD" && empty(OS_VERSION:M[0-9].*) && \
-		empty(OS_VERSION:M1[01].*))
+		empty(OS_VERSION:M1[01].*)) || \
+	(${OPSYS} == "Linux" && exists(/etc/arch-release))
 # None was available, so disable use of tbl(1)
 USE_TOOLS:=		${USE_TOOLS:Ntbl}
 CONFIGURE_ARGS+=	--without-manpage-tbl
