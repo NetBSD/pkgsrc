@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19322 2019/10/10 12:18:23 wiz Exp $
+$NetBSD: TODO,v 1.19323 2019/10/10 12:27:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -925,7 +925,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libkface-4.14.0
 	o libkgeomap-4.14.0
 	o libkvkontakte-4.14.0
-	o liblangtag-0.6.3
 	o liblzo-2.09
 	o libmcs-0.7.2
 	o libmediawiki-4.14.0
