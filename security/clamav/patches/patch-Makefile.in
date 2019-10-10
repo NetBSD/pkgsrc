@@ -1,15 +1,15 @@
-$NetBSD: patch-Makefile.in,v 1.5 2019/08/05 14:44:20 prlw1 Exp $
+$NetBSD: patch-Makefile.in,v 1.6 2019/10/10 15:41:30 prlw1 Exp $
 
 Install etc files manually.
 
---- Makefile.in.orig	2018-09-19 19:29:07.000000000 +0000
+--- Makefile.in.orig	2019-10-01 17:24:08.000000000 +0000
 +++ Makefile.in
-@@ -303,7 +303,7 @@ ETAGS = etags
+@@ -300,7 +300,7 @@ ETAGS = etags
  CTAGS = ctags
  CSCOPE = cscope
- DIST_SUBDIRS = libltdl libclamav clamscan clamd clamdscan freshclam \
--	sigtool clamconf database docs etc clamav-milter test clamdtop \
-+	sigtool clamconf database docs clamav-milter test clamdtop \
- 	clambc unit_tests clamsubmit libfreshclam fuzz
- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
- distdir = $(PACKAGE)-$(VERSION)
+ DIST_SUBDIRS = libltdl libclamav libfreshclam clamscan clamd clamdscan \
+-	freshclam sigtool clamconf database docs etc clamav-milter \
++	freshclam sigtool clamconf database docs clamav-milter \
+ 	test clamdtop clambc unit_tests clamonacc clamsubmit fuzz
+ am__DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/clamav-config.h.in \
+ 	$(srcdir)/clamav-config.in $(srcdir)/clamav-types.h.in \
