@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4269 2019/10/10 12:18:23 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4270 2019/10/10 12:24:23 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6868,3 +6868,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/gtk3 to 3.24.11 [wiz 2019-10-10]
 	Updated net/libfilezilla to 0.18.2 [wiz 2019-10-10]
 	Updated net/filezilla to 3.45.1 [wiz 2019-10-10]
+	Updated devel/p5-CPAN to 2.2700 [mef 2019-10-10]
