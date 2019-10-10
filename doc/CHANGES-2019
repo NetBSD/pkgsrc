@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4264 2019/10/10 11:34:25 mef Exp $
+$NetBSD: CHANGES-2019,v 1.4265 2019/10/10 11:44:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6863,3 +6863,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-App-FatPacker to 0.010008 [mef 2019-10-10]
 	Updated devel/p5-Async-Interrupt to 1.25 [mef 2019-10-10]
 	Updated devel/p5-Canary-Stability to 2013 [mef 2019-10-10]
+	Updated textproc/enchant2 to 2.2.7 [wiz 2019-10-10]
