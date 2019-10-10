@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2019/10/07 09:28:13 prlw1 Exp $
+# $NetBSD: Makefile,v 1.56 2019/10/10 12:43:28 wiz Exp $
 
-DISTNAME=	libsoup-2.66.2
-PKGREVISION=	1
+DISTNAME=	libsoup-2.68.1
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsoup/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -21,9 +20,7 @@ PKGCONFIG_OVERRIDE_STAGE=pre-install
 MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/output/${PKGBASE}
 
 # disable vala detection
-MESON_ARGS+=		-Dvapi=false
-
-LDFLAGS.SunOS+=		-lsocket
+MESON_ARGS+=		-Dvapi=disabled
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
@@ -34,6 +31,7 @@ CWRAPPERS_APPEND.cc+=	-Wno-error=format-nonliteral
 
 .include "options.mk"
 
+.include "../../archivers/brotli/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.38.0
 .include "../../devel/glib2/buildlink3.mk"
