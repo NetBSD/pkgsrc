@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4289 2019/10/10 14:24:13 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4290 2019/10/10 15:41:55 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6888,3 +6888,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-mercurial to 5.1.2 [wiz 2019-10-10]
 	Removed x11/lablgtk1 successor x11/ocaml-lablgtk [wiz 2019-10-10]
 	Updated net/libsoup to 2.68.2 [wiz 2019-10-10]
+	Updated security/clamav to 0.102.0nb1 [prlw1 2019-10-10]
