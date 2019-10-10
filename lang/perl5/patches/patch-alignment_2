@@ -1,0 +1,187 @@
+$NetBSD: patch-alignment_2,v 1.1 2019/10/10 17:59:57 maya Exp $
+
+Apply upstream commit (not needed in perl >= 5.32.x)
+
+From e8864dba80952684bf3afe83438d4eee0c3939a9 Mon Sep 17 00:00:00 2001
+From: Matt Turner <mattst88@gmail.com>
+Date: Wed, 4 Sep 2019 21:48:56 -0700
+Subject: [PATCH 1/1] Clean up U8TO*_LE macro implementations
+
+The code guarded by #ifndef U32_ALIGNMENT_REQUIRED attempts to optimize
+byte-swapping by doing unaligned loads, but accessing data through
+unaligned pointers is undefined behavior in C. Moreover, compilers are
+more than capable of recognizing these open-coded byte-swap patterns and
+emitting a bswap instruction, or an unaligned load instruction, or a
+combined load, etc. There's no need for multiple paths to attain the
+desired result.
+
+See https://rt.perl.org/Ticket/Display.html?id=133495
+---
+ hv_macro.h      | 31 ++++++++++++-------------------
+ stadtx_hash.h   | 52 ----------------------------------------------------
+ zaphod32_hash.h | 35 -----------------------------------
+ 3 files changed, 12 insertions(+), 106 deletions(-)
+
+diff --git a/hv_macro.h b/hv_macro.h
+index 77a4c84896..02c0baad08 100644
+--- hv_macro.h.orig
++++ hv_macro.h
+@@ -6,7 +6,7 @@
+ #endif
+ 
+ /*-----------------------------------------------------------------------------
+- * Endianess, misalignment capabilities and util macros
++ * Endianess and util macros
+  *
+  * The following 3 macros are defined in this section. The other macros defined
+  * are only needed to help derive these 3.
+@@ -20,29 +20,22 @@
+  * ROTR64(x,r)      Rotate x right by r bits
+  */
+ 
+-#ifndef U32_ALIGNMENT_REQUIRED
++#ifndef U8TO16_LE
+   #if (BYTEORDER == 0x1234 || BYTEORDER == 0x12345678)
+-    #define U8TO16_LE(ptr)   (*((const U16*)(ptr)))
+-    #define U8TO32_LE(ptr)   (*((const U32*)(ptr)))
+-    #define U8TO64_LE(ptr)   (*((const U64*)(ptr)))
++    #define U8TO16_LE(ptr)   ((U32)(ptr)[1]|(U32)(ptr)[0]<<8)
++    #define U8TO32_LE(ptr)   ((U32)(ptr)[3]|(U32)(ptr)[2]<<8|(U32)(ptr)[1]<<16|(U32)(ptr)[0]<<24)
++    #define U8TO64_LE(ptr)   ((U64)(ptr)[7]|(U64)(ptr)[6]<<8|(U64)(ptr)[5]<<16|(U64)(ptr)[4]<<24|\
++                              (U64)(ptr)[3]<<32|(U64)(ptr)[4]<<40|\
++                              (U64)(ptr)[1]<<48|(U64)(ptr)[0]<<56)
+   #elif (BYTEORDER == 0x4321 || BYTEORDER == 0x87654321)
+-    #if defined(__GNUC__) && (__GNUC__>4 || (__GNUC__==4 && __GNUC_MINOR__>=3))
+-      #define U8TO16_LE(ptr)   (__builtin_bswap16(*((U16*)(ptr))))
+-      #define U8TO32_LE(ptr)   (__builtin_bswap32(*((U32*)(ptr))))
+-      #define U8TO64_LE(ptr)   (__builtin_bswap64(*((U64*)(ptr))))
+-    #endif
++    #define U8TO16_LE(ptr)   ((U32)(ptr)[0]|(U32)(ptr)[1]<<8)
++    #define U8TO32_LE(ptr)   ((U32)(ptr)[0]|(U32)(ptr)[1]<<8|(U32)(ptr)[2]<<16|(U32)(ptr)[3]<<24)
++    #define U8TO64_LE(ptr)   ((U64)(ptr)[0]|(U64)(ptr)[1]<<8|(U64)(ptr)[2]<<16|(U64)(ptr)[3]<<24|\
++                              (U64)(ptr)[4]<<32|(U64)(ptr)[5]<<40|\
++                              (U64)(ptr)[6]<<48|(U64)(ptr)[7]<<56)
+   #endif
+ #endif
+ 
+-#ifndef U8TO16_LE
+-    /* Without a known fast bswap32 we're just as well off doing this */
+-  #define U8TO16_LE(ptr)   ((U32)(ptr)[0]|(U32)(ptr)[1]<<8)
+-  #define U8TO32_LE(ptr)   ((U32)(ptr)[0]|(U32)(ptr)[1]<<8|(U32)(ptr)[2]<<16|(U32)(ptr)[3]<<24)
+-  #define U8TO64_LE(ptr)   ((U64)(ptr)[0]|(U64)(ptr)[1]<<8|(U64)(ptr)[2]<<16|(U64)(ptr)[3]<<24|\
+-                            (U64)(ptr)[4]<<32|(U64)(ptr)[5]<<40|\
+-                            (U64)(ptr)[6]<<48|(U64)(ptr)[7]<<56)
+-#endif
+-
+ #ifdef CAN64BITHASH
+   #ifndef U64TYPE
+   /* This probably isn't going to work, but failing with a compiler error due to
+diff --git a/stadtx_hash.h b/stadtx_hash.h
+index bd09c2f938..5ee879485d 100644
+--- stadtx_hash.h.orig
++++ stadtx_hash.h
+@@ -43,58 +43,6 @@
+ #define STMT_END while(0)
+ #endif
+ 
+-#ifndef STADTX_ALLOW_UNALIGNED_AND_LITTLE_ENDIAN
+-/* STADTX_ALLOW_UNALIGNED_AND_LITTLE_ENDIAN only matters if nothing has defined U8TO64_LE etc,
+- * and when built with Perl these should be defined before this file is loaded.
+- */
+-#ifdef U32_ALIGNMENT_REQUIRED
+-#define STADTX_ALLOW_UNALIGNED_AND_LITTLE_ENDIAN 0
+-#else
+-#define STADTX_ALLOW_UNALIGNED_AND_LITTLE_ENDIAN 1
+-#endif
+-#endif
+-
+-#ifndef U8TO64_LE
+-#if STADTX_ALLOW_UNALIGNED_AND_LITTLE_ENDIAN
+-#define U8TO64_LE(ptr)  (*((const U64 *)(ptr)))
+-#else
+-#define U8TO64_LE(ptr)  (\
+-    (U64)(ptr)[7] << 56 | \
+-    (U64)(ptr)[6] << 48 | \
+-    (U64)(ptr)[5] << 40 | \
+-    (U64)(ptr)[4] << 32 | \
+-    (U64)(ptr)[3] << 24 | \
+-    (U64)(ptr)[2] << 16 | \
+-    (U64)(ptr)[1] << 8  | \
+-    (U64)(ptr)[0]         \
+-)
+-#endif
+-#endif
+-
+-#ifndef U8TO32_LE
+-#if STADTX_ALLOW_UNALIGNED_AND_LITTLE_ENDIAN
+-#define U8TO32_LE(ptr)  (*((const U32 *)(ptr)))
+-#else
+-#define U8TO32_LE(ptr)  (\
+-    (U32)(ptr)[3] << 24 | \
+-    (U32)(ptr)[2] << 16 | \
+-    (U32)(ptr)[1] << 8  | \
+-    (U32)(ptr)[0]         \
+-)
+-#endif
+-#endif
+-
+-#ifndef U8TO16_LE
+-#if STADTX_ALLOW_UNALIGNED_AND_LITTLE_ENDIAN
+-#define U8TO16_LE(ptr)  (*((const U16 *)(ptr)))
+-#else
+-#define U8TO16_LE(ptr)  (\
+-    (U16)(ptr)[1] << 8  | \
+-    (U16)(ptr)[0]         \
+-)
+-#endif
+-#endif
+-
+ /* Find best way to ROTL32/ROTL64 */
+ #if defined(_MSC_VER)
+   #include <stdlib.h>  /* Microsoft put _rotl declaration in here */
+diff --git a/zaphod32_hash.h b/zaphod32_hash.h
+index c9b60ccb32..2fb391a233 100644
+--- zaphod32_hash.h.orig
++++ zaphod32_hash.h
+@@ -74,41 +74,6 @@
+ #define STMT_END while(0)
+ #endif
+ 
+-#ifndef ZAPHOD32_ALLOW_UNALIGNED_AND_LITTLE_ENDIAN
+-/* ZAPHOD32_ALLOW_UNALIGNED_AND_LITTLE_ENDIAN only matters if nothing has defined U8TO64_LE etc,
+- * and when built with Perl these should be defined before this file is loaded.
+- */
+-#ifdef U32_ALIGNMENT_REQUIRED
+-#define ZAPHOD32_ALLOW_UNALIGNED_AND_LITTLE_ENDIAN 0
+-#else
+-#define ZAPHOD32_ALLOW_UNALIGNED_AND_LITTLE_ENDIAN 1
+-#endif
+-#endif
+-
+-#ifndef U8TO32_LE
+-#if ZAPHOD32_ALLOW_UNALIGNED_AND_LITTLE_ENDIAN
+-#define U8TO32_LE(ptr)  (*((const U32 *)(ptr)))
+-#else
+-#define U8TO32_LE(ptr)  (\
+-    (U32)(ptr)[3] << 24 | \
+-    (U32)(ptr)[2] << 16 | \
+-    (U32)(ptr)[1] << 8  | \
+-    (U32)(ptr)[0]         \
+-)
+-#endif
+-#endif
+-
+-#ifndef U8TO16_LE
+-#if ZAPHOD32_ALLOW_UNALIGNED_AND_LITTLE_ENDIAN
+-#define U8TO16_LE(ptr)  (*((const U16 *)(ptr)))
+-#else
+-#define U8TO16_LE(ptr)  (\
+-    (U16)(ptr)[1] << 8  | \
+-    (U16)(ptr)[0]         \
+-)
+-#endif
+-#endif
+-
+ /* This is two marsaglia xor-shift permutes, with a prime-multiple
+  * sandwiched inside. The end result of doing this twice with different
+  * primes is a completely avalanched v.  */
