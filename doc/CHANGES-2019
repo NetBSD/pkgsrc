@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4286 2019/10/10 13:54:57 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.4287 2019/10/10 14:15:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6885,3 +6885,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/thunderbird-enigmail to 2.1.2 [wiz 2019-10-10]
 	Updated finance/gnucash to 3.7 [wiz 2019-10-10]
 	Updated emulators/minivmac to 36.04 [ryoon 2019-10-10]
+	Updated devel/py-mercurial to 5.1.2 [wiz 2019-10-10]
