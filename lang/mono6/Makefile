@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/10/09 22:46:04 maya Exp $
+# $NetBSD: Makefile,v 1.8 2019/10/10 00:06:12 maya Exp $
 
 DISTNAME=	mono-6.4.0.198
 CATEGORIES=	lang
@@ -151,7 +151,7 @@ CFLAGS+=		-D_XOPEN_SOURCE=600
 # Conflicts with the above settings
 CONFIGURE_ENV+=		ac_cv_func_madvise=no
 CONFIGURE_ARGS+=	--with-mcs-docs=no
-CONFIGURE_ARGS+=	--with-sgen=no
+CONFIGURE_ARGS+=	--enable-dtrace=no
 CONFIGURE_ARGS+=	--with-sigaltstack=no
 CONFIGURE_ENV+=		ac_cv_func_getdomainname=no
 CONFIGURE_ENV+=		ac_cv_func_setdomainname=no
