@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19321 2019/10/10 12:08:35 wiz Exp $
+$NetBSD: TODO,v 1.19322 2019/10/10 12:18:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -624,7 +624,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fet-5.28.6
 	o fetchyahoo-2.14.0
 	o filerunner-14.06.18.10
-	o filezilla-3.45.1
 	o flashplayer-0.4.13
 	o flow-tools-0.411
 	o flpsed-0.7.3
@@ -1377,8 +1376,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wmx-8
 	o wmx-gnome-8
 	o worker-3.12.0
-	o wxGTK-3.1.2
-	o wxGTK30-3.1.1
 	o wxRemind-101
 	o x2vnc-1.31
 	o xa65-2.3.7
