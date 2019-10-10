@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4257 2019/10/10 04:57:42 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4258 2019/10/10 07:59:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6854,3 +6854,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/boost-headers to 1.71.0nb2 [ryoon 2019-10-09]
 	Updated lang/mono6 to 6.4.0.198 [maya 2019-10-09]
 	Removed devel/py-meson successor devel/meson [wiz 2019-10-10]
+	Updated security/py-asn1-modules to 0.2.7 [adam 2019-10-10]
+	Updated www/py-aiohttp to 3.6.2 [adam 2019-10-10]
+	Updated databases/py-asyncpg to 0.19.0 [adam 2019-10-10]
