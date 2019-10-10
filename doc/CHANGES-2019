@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4285 2019/10/10 13:48:01 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4286 2019/10/10 13:54:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6884,3 +6884,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/drupal8 to 8.7.8 [prlw1 2019-10-10]
 	Updated mail/thunderbird-enigmail to 2.1.2 [wiz 2019-10-10]
 	Updated finance/gnucash to 3.7 [wiz 2019-10-10]
+	Updated emulators/minivmac to 36.04 [ryoon 2019-10-10]
