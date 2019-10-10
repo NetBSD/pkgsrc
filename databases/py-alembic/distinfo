@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2019/08/28 06:37:38 adam Exp $
+$NetBSD: distinfo,v 1.18 2019/10/10 18:26:53 adam Exp $
 
-SHA1 (alembic-1.1.0.tar.gz) = 1639ccf471adced412acd9ce916f188d7bf41fee
-RMD160 (alembic-1.1.0.tar.gz) = 01e8079da01ea524cecea563361d4b04d8584526
-SHA512 (alembic-1.1.0.tar.gz) = 9ddd5b64048aba67c03effa8839eec2ba486295f86223f281c345ef95077c3dc205773a2a4367c5204ca7789e3f05235de9ed6bc0d200f51515bf3ce5ed8e447
-Size (alembic-1.1.0.tar.gz) = 1028979 bytes
+SHA1 (alembic-1.2.1.tar.gz) = efb4bc29740da44697c99e668ae6edc07d70e9c1
+RMD160 (alembic-1.2.1.tar.gz) = 30306893e3ec3faa1f0293c70b04da8348b3067f
+SHA512 (alembic-1.2.1.tar.gz) = 13e0d3bce34dc54fa1f5ce6a734e89884f76438fbfb14cfe343280803f12424e37052bf3ade911c69170d308b2446bbce7bd92b83696fb02ed9a98231fdb05b2
+Size (alembic-1.2.1.tar.gz) = 1053595 bytes
