@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.134 2019/08/20 15:18:16 wiz Exp $
+# $NetBSD: Makefile,v 1.135 2019/10/10 12:04:13 wiz Exp $
 
-DISTNAME=	gtk+-3.24.10
+DISTNAME=	gtk+-3.24.11
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk+/${PKGVERSION_NOREV:R}/}
@@ -72,7 +72,7 @@ _BUILDING_GTK3=	yes
 BUILDLINK_API_DEPENDS.atk+=	atk>=2.15.1
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.49.4
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.57.2
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gdk-pixbuf2+=	gdk-pixbuf2>=2.30.0
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
