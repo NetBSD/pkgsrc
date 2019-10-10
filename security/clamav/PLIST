@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/08/05 14:44:20 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/10/10 15:41:29 prlw1 Exp $
 bin/clamav-config
 bin/clambc
 bin/clamconf
@@ -9,9 +9,12 @@ bin/clamsubmit
 bin/freshclam
 bin/sigtool
 include/clamav-types.h
+include/clamav-version.h
 include/clamav.h
+include/libfreshclam.h
 lib/libclamav.la
 lib/libclammspack.la
+lib/libfreshclam.la
 lib/pkgconfig/libclamav.pc
 man/man1/clambc.1
 man/man1/clamconf.1
