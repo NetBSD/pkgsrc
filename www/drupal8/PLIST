@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2019/09/17 09:39:53 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.22 2019/10/10 13:28:35 prlw1 Exp $
 share/drupal/.csslintrc
 share/drupal/.editorconfig
 share/drupal/.eslintignore
@@ -2375,6 +2375,7 @@ share/drupal/core/lib/Drupal/Core/Test/FunctionalTestSetupTrait.php
 share/drupal/core/lib/Drupal/Core/Test/HttpClientMiddleware/TestHttpClientMiddleware.php
 share/drupal/core/lib/Drupal/Core/Test/ObjectSerialization.php
 share/drupal/core/lib/Drupal/Core/Test/RefreshVariablesTrait.php
+share/drupal/core/lib/Drupal/Core/Test/RunTests/TestFileParser.php
 share/drupal/core/lib/Drupal/Core/Test/TestDatabase.php
 share/drupal/core/lib/Drupal/Core/Test/TestKernel.php
 share/drupal/core/lib/Drupal/Core/Test/TestRunnerKernel.php
@@ -6407,6 +6408,8 @@ share/drupal/core/modules/media/tests/fixtures/oembed/providers.json
 share/drupal/core/modules/media/tests/fixtures/oembed/rich_twitter.json
 share/drupal/core/modules/media/tests/fixtures/oembed/video_collegehumor.html
 share/drupal/core/modules/media/tests/fixtures/oembed/video_collegehumor.xml
+share/drupal/core/modules/media/tests/fixtures/oembed/video_vimeo-no-title.html
+share/drupal/core/modules/media/tests/fixtures/oembed/video_vimeo-no-title.json
 share/drupal/core/modules/media/tests/fixtures/oembed/video_vimeo.html
 share/drupal/core/modules/media/tests/fixtures/oembed/video_vimeo.json
 share/drupal/core/modules/media/tests/fixtures/oembed/video_youtube.html
@@ -12430,6 +12433,7 @@ share/drupal/core/tests/Drupal/FunctionalTests/Installer/InstallerExistingSettin
 share/drupal/core/tests/Drupal/FunctionalTests/Installer/InstallerExistingSettingsTest.php
 share/drupal/core/tests/Drupal/FunctionalTests/Installer/InstallerLanguageDirectionTest.php
 share/drupal/core/tests/Drupal/FunctionalTests/Installer/InstallerLanguagePageTest.php
+share/drupal/core/tests/Drupal/FunctionalTests/Installer/InstallerNonEnglishProfileWithoutLocaleModuleTest.php
 share/drupal/core/tests/Drupal/FunctionalTests/Installer/InstallerProfileRequirementsTest.php
 share/drupal/core/tests/Drupal/FunctionalTests/Installer/InstallerSiteConfigProfileTest.php
 share/drupal/core/tests/Drupal/FunctionalTests/Installer/InstallerSkipPermissionHardeningTest.php
@@ -13345,6 +13349,7 @@ share/drupal/core/tests/Drupal/Tests/Core/Test/KernelTestBaseTest.php
 share/drupal/core/tests/Drupal/Tests/Core/Test/PhpUnitAutoloaderTest.php
 share/drupal/core/tests/Drupal/Tests/Core/Test/PhpUnitBridgeIsolatedTest.php
 share/drupal/core/tests/Drupal/Tests/Core/Test/PhpUnitBridgeTest.php
+share/drupal/core/tests/Drupal/Tests/Core/Test/RunTests/TestFileParserTest.php
 share/drupal/core/tests/Drupal/Tests/Core/Test/TestDatabaseTest.php
 share/drupal/core/tests/Drupal/Tests/Core/Test/TestSetupTraitTest.php
 share/drupal/core/tests/Drupal/Tests/Core/Test/TestSuiteBaseTest.php
