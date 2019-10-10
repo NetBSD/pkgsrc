@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.72 2019/07/22 13:39:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.73 2019/10/10 13:47:40 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -23,7 +23,6 @@ include/gnucash/Transaction.h
 include/gnucash/account-quickfill.h
 include/gnucash/assistant-xml-encoding.h
 include/gnucash/basiccell.h
-include/gnucash/business-helpers.h
 include/gnucash/business-options.h
 include/gnucash/cap-gains.h
 include/gnucash/cashobjects.h
@@ -680,6 +679,22 @@ share/gnucash/accounts/fr_FR/acctchrt_renter.gnucash-xea
 share/gnucash/accounts/fr_FR/acctchrt_retiremt.gnucash-xea
 share/gnucash/accounts/fr_FR/acctchrt_spouseinc.gnucash-xea
 share/gnucash/accounts/fr_FR/acctchrt_spouseretire.gnucash-xea
+share/gnucash/accounts/he/acctchrt_brokerage.gnucash-xea
+share/gnucash/accounts/he/acctchrt_business.gnucash-xea
+share/gnucash/accounts/he/acctchrt_carloan.gnucash-xea
+share/gnucash/accounts/he/acctchrt_cdmoneymkt.gnucash-xea
+share/gnucash/accounts/he/acctchrt_checkbook.gnucash-xea
+share/gnucash/accounts/he/acctchrt_childcare.gnucash-xea
+share/gnucash/accounts/he/acctchrt_common.gnucash-xea
+share/gnucash/accounts/he/acctchrt_eduloan.gnucash-xea
+share/gnucash/accounts/he/acctchrt_fixedassets.gnucash-xea
+share/gnucash/accounts/he/acctchrt_homeloan.gnucash-xea
+share/gnucash/accounts/he/acctchrt_homeown.gnucash-xea
+share/gnucash/accounts/he/acctchrt_otherloan.gnucash-xea
+share/gnucash/accounts/he/acctchrt_renter.gnucash-xea
+share/gnucash/accounts/he/acctchrt_retiremt.gnucash-xea
+share/gnucash/accounts/he/acctchrt_spouseinc.gnucash-xea
+share/gnucash/accounts/he/acctchrt_spouseretire.gnucash-xea
 share/gnucash/accounts/hr/acctchrt_car.gnucash-xea
 share/gnucash/accounts/hr/acctchrt_cdmoneymkt.gnucash-xea
 share/gnucash/accounts/hr/acctchrt_checkbook.gnucash-xea
