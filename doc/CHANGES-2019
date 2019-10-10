@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4282 2019/10/10 13:28:30 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4283 2019/10/10 13:29:11 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6881,3 +6881,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated misc/todoman to 3.7.0 [wiz 2019-10-10]
 	Updated security/acmesh to 2.8.3 [ryoon 2019-10-10]
 	Updated graphics/ImageMagick to 7.0.8.68 [wiz 2019-10-10]
+	Updated www/drupal8 to 8.7.8 [prlw1 2019-10-10]
