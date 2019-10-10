@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4278 2019/10/10 13:18:25 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4279 2019/10/10 13:20:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6877,3 +6877,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ncurses to 6.1nb6 [triaxx 2019-10-10]
 	Updated devel/orc to 0.4.30 [wiz 2019-10-10]
 	Updated graphics/adwaita-icon-theme to 3.34.0 [wiz 2019-10-10]
+	Updated devel/dconf to 0.34.0 [wiz 2019-10-10]
