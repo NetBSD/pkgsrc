@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2019/08/16 09:40:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2019/10/10 12:18:01 wiz Exp $
 bin/filezilla
 bin/fzputtygen
 bin/fzsftp
@@ -686,7 +686,6 @@ share/filezilla/resources/xrc/dialogs.xrc
 share/filezilla/resources/xrc/netconfwizard.xrc
 share/filezilla/resources/xrc/settings.xrc
 share/filezilla/resources/xrc/storj.xrc
-share/filezilla/resources/xrc/update.xrc
 share/icons/hicolor/16x16/apps/filezilla.png
 share/icons/hicolor/32x32/apps/filezilla.png
 share/icons/hicolor/480x480/apps/filezilla.png
