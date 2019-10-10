@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2019/04/27 18:22:39 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/10/10 13:04:22 wiz Exp $
 
-DISTNAME=	orc-0.4.29
+DISTNAME=	orc-0.4.30
 CATEGORIES=	devel
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/orc/
 EXTRACT_SUFX=	.tar.xz
@@ -10,21 +10,14 @@ HOMEPAGE=	https://gstreamer.freedesktop.org/modules/orc.html
 COMMENT=	Compiler for vector operations
 LICENSE=	modified-bsd
 
-USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake
-GNU_CONFIGURE=		yes
-PKGCONFIG_OVERRIDE+=	orc.pc.in
-PKGCONFIG_OVERRIDE+=	orc-test.pc.in
+PKGCONFIG_OVERRIDE+=		output/orc-0.4.pc
+PKGCONFIG_OVERRIDE+=		output/meson-private/orc-test-0.4.pc
+PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
-# XXX: Kludge to avoid uncoditionally pick up some gtkdoc-* tools if gtk-doc
-# XXX: package is installed and then fails in the installation phase.
-CONFIGURE_ENV+=		ac_cv_prog_GTKDOC_CHECK= \
-			ac_cv_path_GTKDOC_CHECK_PATH= \
-			ac_cv_path_GTKDOC_REBASE= \
-			ac_cv_path_GTKDOC_MKPDF=
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/${PKGBASE}
 
-TEST_TARGET=		check
+MESON_ARGS+=	-Dgtk_doc=disabled
 
-
+.include "../../devel/meson/build.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
