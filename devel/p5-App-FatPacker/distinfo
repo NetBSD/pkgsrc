@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2017/01/26 13:43:23 mef Exp $
+$NetBSD: distinfo,v 1.12 2019/10/10 11:27:45 mef Exp $
 
-SHA1 (App-FatPacker-0.010007.tar.gz) = e00953fb9bfe606e672dd6101436991f8cb76b3d
-RMD160 (App-FatPacker-0.010007.tar.gz) = c5543706c5c20f884897589e48d41d776a62b136
-SHA512 (App-FatPacker-0.010007.tar.gz) = ac98051a37eae568601c574c14611197f2334fa8d8a9fa67dc20b99bdc68a83ef6f0ce491bf970bdeb1c795be04659703417a42b98ae30a5e37c89fc232fd454
-Size (App-FatPacker-0.010007.tar.gz) = 11682 bytes
+SHA1 (App-FatPacker-0.010008.tar.gz) = fcb29504c6a0795f633f3773b884eb0c162ed43d
+RMD160 (App-FatPacker-0.010008.tar.gz) = 699713ead1d82e8b455e7c233e5d2875f42e40bb
+SHA512 (App-FatPacker-0.010008.tar.gz) = ba95bfdd495f91b665dd05f66988f5524c125dc05e716fdf6d4a01e7ceb59a185007d3f254556950654554821720fab8e3b21e12338341909569a1a39d97c6b6
+Size (App-FatPacker-0.010008.tar.gz) = 12182 bytes
