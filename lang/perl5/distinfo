@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.158 2019/08/11 10:14:17 adam Exp $
+$NetBSD: distinfo,v 1.159 2019/10/10 17:59:57 maya Exp $
 
 SHA1 (perl-5.30.0.tar.xz) = cc8d1e08ffe4624c197a44d02855632725d39f8e
 RMD160 (perl-5.30.0.tar.xz) = 64ff4c65823122c337e18278585d71def1de9c5d
@@ -6,6 +6,8 @@ SHA512 (perl-5.30.0.tar.xz) = 68a295eccd64debd9d6a10f0d5577f872a19ad8c2d702798f6
 Size (perl-5.30.0.tar.xz) = 12419868 bytes
 SHA1 (patch-Configure) = 6000aafeb993fd096c9b1327302b510aa0d386bb
 SHA1 (patch-Makefile.SH) = 93cae9736ef94cdd9e5748f7e0a0183332c2f3b3
+SHA1 (patch-alignment_1) = b68c0916b271523922caa7f89edb165284e7b5f4
+SHA1 (patch-alignment_2) = cae8495c4a092e31da422bf5684481091ee2adf3
 SHA1 (patch-caretx.c) = b76b4175a58123fa4dfd2adf36b2207dcb6cf65a
 SHA1 (patch-cflags.SH) = 7ad64e5a17b876bff4bbe238abc4a57354acf4fe
 SHA1 (patch-cpan_ExtUtils-MakeMaker_lib_ExtUtils_MM__Unix.pm) = 3a2b39c9eb903e68ef7d03ae448c51c147c19aa1
