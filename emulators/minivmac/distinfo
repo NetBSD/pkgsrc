@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 20:31:00 agc Exp $
+$NetBSD: distinfo,v 1.4 2019/10/10 13:54:17 ryoon Exp $
 
-SHA1 (minivmac-0.1.7.src.tgz) = 761b56ec9d4dbc2a3b200dd40a9c44b93913e308
-RMD160 (minivmac-0.1.7.src.tgz) = 132ddc014d74f0c60be5357f69f4528f0c86db97
-SHA512 (minivmac-0.1.7.src.tgz) = 6bb743bd3076c3191f291c2298f898c705bc88264abfa58fa7aa1ca59611034bc7794adb4b77df33abc64c8ab7d4366ab90093d199e9788c1a4052b2b14e2f82
-Size (minivmac-0.1.7.src.tgz) = 93155 bytes
-SHA1 (patch-aa) = c1f992d7277edb53c88d6b973cfe1046c5633434
+SHA1 (minivmac-36.04.src.tgz) = 6b5c1e00689683313a8b2c2047669939544003cf
+RMD160 (minivmac-36.04.src.tgz) = 613534f9aa4fd779d245f5511731617df4da3bb6
+SHA512 (minivmac-36.04.src.tgz) = 4de672b4a7127466e30676868cf1f49b155a1231eb7d124fd5b4236f628db8351f45db5f24564932745fa7840f6ea40707bfc46d95f3a403165f05b443367a3f
+Size (minivmac-36.04.src.tgz) = 500742 bytes
+SHA1 (patch-setup_WRBGCFLS.i) = 670784065ef5d58b74a20022eec91ff2be42fd42
