@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2019/10/03 07:38:40 wiz Exp $
+$NetBSD: distinfo,v 1.4 2019/10/10 04:56:05 wiz Exp $
 
 SHA1 (odroidc2-v2015.01-aml_encrypt_gxb) = 95c9565c64088ad56a10bac79b173c41a574e48e
 RMD160 (odroidc2-v2015.01-aml_encrypt_gxb) = 5cb9ffcb6e8486de42796a448c2e42ed86c5c1bc
@@ -32,22 +32,27 @@ SHA1 (u-boot-2018.11.tar.bz2) = e58e86c633ad3e2613196e0c0b0a7760ae5966d6
 RMD160 (u-boot-2018.11.tar.bz2) = f63c67750951d0e2883935a5d4cc3252f51a5453
 SHA512 (u-boot-2018.11.tar.bz2) = 1ea0bbb5f5e6d4c60b3a6bd345d1fa6e9da025daf36f47e8392bab34cb432c2e3633d903efb260f71fff87dffd6f2bf09ac900e96b3d4247073958d83b89ceff
 Size (u-boot-2018.11.tar.bz2) = 13045125 bytes
-SHA1 (patch-Makefile) = 45f505041a586b75953c34c1ab6fffaa56b43601
+SHA1 (patch-Makefile) = 5b86d70e05620cc3133faf508e983e2fe6ca6603
 SHA1 (patch-arch_arm_cpu_armv8_Kconfig) = 63cbbf2e3cebd46793fc03cc8e62297f6dc01aa9
-SHA1 (patch-arch_arm_dts_Makefile) = 184fdb8b04b25c0c827823779874306ce1bc746d
+SHA1 (patch-arch_arm_dts_Makefile) = a64a01255af3d2a744fe7b923c66fd8ce0f9d489
 SHA1 (patch-arch_arm_dts_sun8i-h2-plus-bananapi-m2-zero.dts) = aaa530a5f520eea0cb5dcece0b730e23db59eb40
 SHA1 (patch-arch_arm_dts_sun8i-h2-plus-bananapi-p2-zero.dts) = 8c78d0e0877aa9784fa209af2e16e80cb1110364
+SHA1 (patch-arch_arm_dts_sun8i-h3-nanopi-duo2.dts) = ec4927bb5f024f9aca6f71890c4bc14dc53e8ba7
+SHA1 (patch-arch_arm_dts_sun8i-h3-nanopi-r1.dts) = 6f3ac4f787b503beecbd5c63c40dce355e0a7ebe
 SHA1 (patch-configs_A20-OLinuXino-Lime2-eMMC_defconfig) = 425ae3a82ce9006dbd734f41f7d49bb3587b1493
 SHA1 (patch-configs_A20-OLinuXino-Lime2_defconfig) = 9eecb0a44ec9ddda2425b042c219f59ba546a494
 SHA1 (patch-configs_bananapi_m2_zero_defconfig) = 5e4baef63f0e51cb8c94a1dc0c0e50ecb016807d
 SHA1 (patch-configs_bananapi_p2_zero_defconfig) = 6468b3246cbf35d10320c8a974fc06b794ae68dc
 SHA1 (patch-configs_jetson-tk1_defconfig) = e25d89b9440f9bb4486ac22fc47083ed24abdd95
+SHA1 (patch-configs_nanopi__duo2__defconfig) = 1464c4eb5d31779caa5714386891ae60b25c1825
+SHA1 (patch-configs_nanopi__r1__defconfig) = deb0edece928cd0a761451b034757a31cb17760f
 SHA1 (patch-configs_p2371-2180_defconfig) = 2a3f1ad4f9963af403c2c9f2f01b892bbe55188c
 SHA1 (patch-drivers_video_sunxi_sunxi__display.c) = 8e6a6a781cce25af5cba289fc2ca76e30b62aff6
 SHA1 (patch-include_configs_tegra-common-post.h) = dfc081d2a3f7cd32e340b03f6c77c629bffd29b4
 SHA1 (patch-include_configs_tegra-common.h) = 4cda8f9df2c7fc2b9cd9d4139ec679a42648e4f8
 SHA1 (patch-include_image.h) = c9b134b2b5624a1e6c9f091a2192185b8d0f85fe
-SHA1 (patch-lib_bch.c) = b1f1c7418f1004c151b9e5e06ab7047a1736ae47
+SHA1 (patch-lib_bch.c) = 90ed120d00218ae79e317bc3c3019a04e68dbaeb
 SHA1 (patch-lib_efi__loader_efi__boottime.c) = 66aa3b95470a737154e6e082447aed0078092047
 SHA1 (patch-lib_efi__loader_efi__variable.c) = 1955870b22e358a4bded9e85fd89c74419aeed0d
+SHA1 (patch-scripts_dtc_pylibfdt_Makefile) = 539a77db792bbd479b5c7cf81c0a8e114c859d9d
 SHA1 (patch-tools_imx__cntr__image.sh) = 715647e3b77b505513ae79b4fe673f4f7f9bf042
