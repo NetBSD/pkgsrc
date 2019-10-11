@@ -164,6 +164,71 @@ func (s *Suite) Test_CheckLinesBuildlink3Mk__name_mismatch__Perl(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
+func (s *Suite) Test_CheckLinesBuildlink3Mk__name_mismatch__lib(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("converters/libiconv")
+	t.CreateFileLines("converters/libiconv/buildlink3.mk",
+		MkCvsID,
+		"",
+		"BUILDLINK_TREE+=\ticonv",
+		"",
+		".if !defined(ICONV_BUILDLINK3_MK)",
+		"ICONV_BUILDLINK3_MK:=",
+		"",
+		"BUILDLINK_API_DEPENDS.iconv+=\tlibiconv>=1.0",
+		"BUILDLINK_ABI_DEPENDS.iconv+=\tlibiconv>=1.0",
+		"",
+		".endif\t# ICONV_BUILDLINK3_MK",
+		"",
+		"BUILDLINK_TREE+=\t-iconv")
+	t.FinishSetUp()
+
+	G.Check(t.File("converters/libiconv"))
+
+	// Up to 2019-10-12, pkglint complained about a mismatch
+	// between the package name from buildlink3.mk (iconv) and the
+	// one from the package Makefile (libiconv).
+	//
+	// This mismatch is not important enough to warrant a global
+	// renaming of the buildlink3 identifier, therefore the warning
+	// is suppressed in cases like this.
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_CheckLinesBuildlink3Mk__name_mismatch__version(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("editors/emacs22",
+		"PKGNAME=\temacs22-22.0")
+	t.CreateFileLines("editors/emacs22/buildlink3.mk",
+		MkCvsID,
+		"",
+		"BUILDLINK_TREE+=\temacs",
+		"",
+		".if !defined(EMACS_BUILDLINK3_MK)",
+		"EMACS_BUILDLINK3_MK:=",
+		"",
+		"BUILDLINK_API_DEPENDS.emacs+=\temacs22>=1.0",
+		"BUILDLINK_ABI_DEPENDS.emacs+=\temacs22>=1.0",
+		"",
+		".endif\t# EMACS_BUILDLINK3_MK",
+		"",
+		"BUILDLINK_TREE+=\t-emacs")
+	t.FinishSetUp()
+
+	G.Check(t.File("editors/emacs22"))
+
+	// Up to 2019-10-12, pkglint complained about a mismatch
+	// between the package name from buildlink3.mk (emacs) and the
+	// one from the package Makefile (emacs22).
+	//
+	// This mismatch is not important enough to warrant a global
+	// renaming of the buildlink3 identifier, therefore the warning
+	// is suppressed in cases like this.
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_CheckLinesBuildlink3Mk__name_mismatch_multiple_inclusion(c *check.C) {
 	t := s.Init(c)
 

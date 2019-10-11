@@ -980,6 +980,7 @@ func (pkg *Package) CheckVarorder(mklines *MkLines) {
 	var variables = []Variable{
 		{"GITHUB_PROJECT", optional}, // either here or below MASTER_SITES
 		{"GITHUB_TAG", optional},
+		{"GITHUB_RELEASE", optional},
 		{"DISTNAME", optional},
 		{"PKGNAME", optional},
 		{"R_PKGNAME", optional},
@@ -989,6 +990,7 @@ func (pkg *Package) CheckVarorder(mklines *MkLines) {
 		{"MASTER_SITES", many},
 		{"GITHUB_PROJECT", optional}, // either here or at the very top
 		{"GITHUB_TAG", optional},
+		{"GITHUB_RELEASE", optional},
 		{"DIST_SUBDIR", optional},
 		{"EXTRACT_SUFX", optional},
 		{"DISTFILES", many},

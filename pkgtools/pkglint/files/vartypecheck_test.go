@@ -605,6 +605,30 @@ func (s *Suite) Test_VartypeCheck_FetchURL(c *check.C) {
 		"WARN: filename.mk:71: The fetch URL \"https://example.org/pub\" should end with a slash.",
 		"WARN: filename.mk:72: \"https://example.org/$@\" is not a valid URL.",
 		"WARN: filename.mk:75: The fetch URL \"https://example.org/download?\" should end with a slash.")
+
+	// The transport protocol doesn't matter for matching the MASTER_SITEs.
+	// See url2pkg.py, function adjust_site_from_sites_mk.
+	vt.Values(
+		"http://ftp.gnu.org/pub/gnu/bash/",
+		"ftp://ftp.gnu.org/pub/gnu/bash/",
+		"https://ftp.gnu.org/pub/gnu/bash/",
+		"-http://ftp.gnu.org/pub/gnu/bash/bash-5.0.tar.gz",
+		"-ftp://ftp.gnu.org/pub/gnu/bash/bash-5.0.tar.gz",
+		"-https://ftp.gnu.org/pub/gnu/bash/bash-5.0.tar.gz")
+
+	vt.Output(
+		"WARN: filename.mk:81: Please use ${MASTER_SITE_GNU:=bash/} "+
+			"instead of \"http://ftp.gnu.org/pub/gnu/bash/\".",
+		"WARN: filename.mk:82: Please use ${MASTER_SITE_GNU:=bash/} "+
+			"instead of \"ftp://ftp.gnu.org/pub/gnu/bash/\".",
+		"WARN: filename.mk:83: Please use ${MASTER_SITE_GNU:=bash/} "+
+			"instead of \"https://ftp.gnu.org/pub/gnu/bash/\".",
+		"WARN: filename.mk:84: Please use ${MASTER_SITE_GNU:S,^,-,:=bash/bash-5.0.tar.gz} "+
+			"instead of \"-http://ftp.gnu.org/pub/gnu/bash/bash-5.0.tar.gz\".",
+		"WARN: filename.mk:85: Please use ${MASTER_SITE_GNU:S,^,-,:=bash/bash-5.0.tar.gz} "+
+			"instead of \"-ftp://ftp.gnu.org/pub/gnu/bash/bash-5.0.tar.gz\".",
+		"WARN: filename.mk:86: Please use ${MASTER_SITE_GNU:S,^,-,:=bash/bash-5.0.tar.gz} "+
+			"instead of \"-https://ftp.gnu.org/pub/gnu/bash/bash-5.0.tar.gz\".")
 }
 
 func (s *Suite) Test_VartypeCheck_FetchURL__without_package(c *check.C) {
