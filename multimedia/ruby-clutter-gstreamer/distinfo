@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2019/09/14 18:11:38 tsutsui Exp $
+$NetBSD: distinfo,v 1.2 2019/10/11 16:20:24 tsutsui Exp $
 
-SHA1 (clutter-gstreamer-3.3.8.gem) = a8ea50f2de8a467ab560d7a1c5b4a374b3d51da1
-RMD160 (clutter-gstreamer-3.3.8.gem) = abad573099da792de3b5354e92ffac9f41ee4220
-SHA512 (clutter-gstreamer-3.3.8.gem) = e1e2b17a506cd8a1c63f315d366312b2def6f9df04a3cee3865c896d8efdb86d3e4d41073b9d4b4fc7a6b21d2775389f7307a82714a31e833840543a77f9a84f
-Size (clutter-gstreamer-3.3.8.gem) = 125440 bytes
-SHA1 (patch-dependency-check_Rakefile) = e6763eed8ba21f9e1c50d198b5c5fac1ba965984
+SHA1 (clutter-gstreamer-3.4.0.gem) = 6f152cee75ce245ac18c010525c6b228019eb81a
+RMD160 (clutter-gstreamer-3.4.0.gem) = ba75031770957640b7d9d2460900068ee19bac6c
+SHA512 (clutter-gstreamer-3.4.0.gem) = af1c95358ca0440be8bf172f17a9867bcde241ab7a755a58e6db70d442703cc095915034c44e35e2c4780c95f384960bf1911c95a5537bb77ceff20fd7ba648c
+Size (clutter-gstreamer-3.4.0.gem) = 125440 bytes
+SHA1 (patch-dependency-check_Rakefile) = 5f2bd1faec546f57fb9c53466ffa74087627b290
