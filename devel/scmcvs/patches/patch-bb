@@ -1,17 +1,23 @@
-$NetBSD: patch-bb,v 1.1 2014/08/13 18:30:03 cheusov Exp $
+$NetBSD: patch-bb,v 1.2 2019/10/11 09:08:35 jperkin Exp $
 
 Do use non-standard getcwd(NULL, 0); This unbreaks cvs on Interix.
---- lib/xgetcwd.c.orig	Mon Sep 19 21:12:25 2005
-+++ lib/xgetcwd.c	Wed Aug 13 17:58:42 2014
-@@ -25,6 +25,7 @@
+Disable broken custom getcwd() on Apple, it breaks on Catalina.
+
+--- lib/xgetcwd.c.orig	2005-09-19 21:12:25.000000000 +0000
++++ lib/xgetcwd.c
+@@ -25,8 +25,11 @@
  #include "xgetcwd.h"
  
  #include <errno.h>
 +#include <limits.h>
  
++#ifndef __APPLE__
  #include "getcwd.h"
++#endif
  #include "xalloc.h"
-@@ -36,8 +37,8 @@
+ 
+ /* Return the current directory, newly allocated.
+@@ -36,8 +39,8 @@
  char *
  xgetcwd (void)
  {
