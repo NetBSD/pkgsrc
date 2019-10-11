@@ -1,0 +1,15 @@
+$NetBSD: patch-man_lispref_ldap.texi,v 1.1 2019/10/11 14:42:48 hauke Exp $
+
+GC non-ascii gremlins that devel/gtexinfo v6.7 objects to.
+
+--- man/lispref/ldap.texi.orig	2015-03-25 11:25:33.000000000 +0000
++++ man/lispref/ldap.texi
+@@ -105,7 +105,7 @@ The authentication method to use, possib
+ library XEmacs was compiled with, they may include @code{simple},
+ @code{krbv41} and @code{krbv42}.
+ @item base
+-The base for the search. This may look like @samp{cÿ, o¬me}, see
++The base for the search. This may look like @samp{c@"y, o@!me}, see
+ RFC 1779 for syntax details.
+ @item scope
+ One of the symbols @code{base}, @code{onelevel} or @code{subtree}
