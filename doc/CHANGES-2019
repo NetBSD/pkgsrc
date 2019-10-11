@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4300 2019/10/11 14:46:24 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4301 2019/10/11 14:56:19 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6899,3 +6899,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/cliqz to 1.29.2 [fox 2019-10-11]
 	Updated devel/p5-CPANPLUS to 0.9178 [makoto 2019-10-11]
 	Removed net/p5-FusionInventory-Agent-Task-Network [wiz 2019-10-11]
+	Updated devel/p5-Cache-FastMmap to 1.48 [makoto 2019-10-11]
