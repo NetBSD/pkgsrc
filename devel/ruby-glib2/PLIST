@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/09/14 18:11:37 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/10/11 16:20:22 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/glib-enum-types.h
@@ -111,6 +111,7 @@ ${GEM_LIBDIR}/lib/gnome2/rake/package.rb
 ${GEM_LIBDIR}/lib/gnome2/rake/source-download-task.rb
 ${GEM_LIBDIR}/lib/gnome2/rake/windows-binary-build-task.rb
 ${GEM_LIBDIR}/lib/gnome2/rake/windows-binary-download-task.rb
+${GEM_LIBDIR}/lib/mkmf-gnome.rb
 ${GEM_LIBDIR}/lib/mkmf-gnome2.rb
 ${GEM_LIBDIR}/lib/rbgcompat.h
 ${GEM_LIBDIR}/lib/rbglib.h
