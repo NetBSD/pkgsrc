@@ -1,0 +1,26 @@
+$NetBSD: patch-configure,v 1.1 2019/10/11 23:47:42 gdt Exp $
+
+Remediate bashism.
+
+Not yet filed upstream.
+
+--- configure.orig	2019-08-25 15:14:21.000000000 +0000
++++ configure
+@@ -12747,7 +12747,7 @@ if test "${with_cups+set}" = set; then :
+   withval=$with_cups; case "${withval}" in
+ 
+     yes)
+-         if test "$FOUND_CUPS_CONFIG" == "yes" ; then
++         if test "$FOUND_CUPS_CONFIG" = "yes" ; then
+ 	   BUILD_CUPS="yes"
+ 	   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
+@@ -12776,7 +12776,7 @@ else
+              fi
+              { $as_echo "$as_me:${as_lineno-$LINENO}: result: ${BUILD_CUPS}" >&5
+ $as_echo "${BUILD_CUPS}" >&6; } ;
+-     if test "$FOUND_CUPS_CONFIG" == "yes" ; then
++     if test "$FOUND_CUPS_CONFIG" = "yes" ; then
+        cups_prefix="${prefix}"
+        BUILD_CUPS="yes"
+      else
