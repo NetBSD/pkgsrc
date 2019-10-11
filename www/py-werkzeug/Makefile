@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2019/05/23 12:00:48 adam Exp $
+# $NetBSD: Makefile,v 1.16 2019/10/11 16:29:17 adam Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 
 COMMENT=	Python WSGI Utility Library
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 REPLACE_PYTHON=		examples/cookieauth.py
 REPLACE_PYTHON+=	examples/manage-coolmagic.py
@@ -18,6 +19,8 @@ REPLACE_PYTHON+=	examples/manage-webpylike.py
 REPLACE_PYTHON+=	examples/upload.py
 REPLACE_PYTHON+=	examples/contrib/sessions.py
 REPLACE_PYTHON+=	tests/multipart/test_collect.py
+
+PYSETUPTESTTARGET=	pytest
 
 EGDIR=		share/examples/${PKGBASE}
 
@@ -39,9 +42,6 @@ post-install:
 .for i in down.png up.png
 	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/${EGDIR}/cupoftee/shared/${i}
 .endfor
-
-do-test:
-	cd ${WRKSRC}/tests && pytest-${PYVERSSUFFIX}
 
 .include "../../www/py-werkzeug/Makefile.common"
 
