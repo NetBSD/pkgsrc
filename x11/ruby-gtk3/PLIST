@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/09/14 18:11:40 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/10/11 16:20:24 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/gtk3.${RUBY_DLEXT}
@@ -87,6 +87,7 @@ ${GEM_LIBDIR}/lib/gtk3/toggle-button.rb
 ${GEM_LIBDIR}/lib/gtk3/tool-button.rb
 ${GEM_LIBDIR}/lib/gtk3/tree-iter.rb
 ${GEM_LIBDIR}/lib/gtk3/tree-model-filter.rb
+${GEM_LIBDIR}/lib/gtk3/tree-model-sort.rb
 ${GEM_LIBDIR}/lib/gtk3/tree-model.rb
 ${GEM_LIBDIR}/lib/gtk3/tree-path.rb
 ${GEM_LIBDIR}/lib/gtk3/tree-selection.rb
@@ -538,6 +539,7 @@ ${GEM_LIBDIR}/test/test-gtk-toggle-button.rb
 ${GEM_LIBDIR}/test/test-gtk-tool-button.rb
 ${GEM_LIBDIR}/test/test-gtk-tree-iter.rb
 ${GEM_LIBDIR}/test/test-gtk-tree-model-filter.rb
+${GEM_LIBDIR}/test/test-gtk-tree-model-sort.rb
 ${GEM_LIBDIR}/test/test-gtk-tree-path.rb
 ${GEM_LIBDIR}/test/test-gtk-tree-selection.rb
 ${GEM_LIBDIR}/test/test-gtk-tree-sortable.rb
