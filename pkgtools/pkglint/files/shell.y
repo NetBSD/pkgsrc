@@ -61,7 +61,7 @@ start : program {
 }
 
 program : compound_list {
-	$$ = $1
+	/* empty */
 }
 program : /* empty */ {
 	$$ = &MkShList{}
