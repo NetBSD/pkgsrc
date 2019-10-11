@@ -24,16 +24,16 @@ func (s *Suite) Test_Pkgsrc_loadMasterSites(c *check.C) {
 
 	G.Pkgsrc.loadMasterSites()
 
-	t.CheckEquals(G.Pkgsrc.MasterSiteURLToVar["https://example.org/distfiles/"], "MASTER_SITE_A")
-	t.CheckEquals(G.Pkgsrc.MasterSiteURLToVar["https://b.example.org/distfiles/"], "MASTER_SITE_B")
-	t.CheckEquals(G.Pkgsrc.MasterSiteURLToVar["https://b2.example.org/distfiles/"], "MASTER_SITE_B")
-	t.CheckEquals(G.Pkgsrc.MasterSiteURLToVar["https://a.example.org/distfiles/"], "MASTER_SITE_A")
+	t.CheckEquals(G.Pkgsrc.MasterSiteURLToVar["example.org/distfiles/"], "MASTER_SITE_A")
+	t.CheckEquals(G.Pkgsrc.MasterSiteURLToVar["b.example.org/distfiles/"], "MASTER_SITE_B")
+	t.CheckEquals(G.Pkgsrc.MasterSiteURLToVar["b2.example.org/distfiles/"], "MASTER_SITE_B")
+	t.CheckEquals(G.Pkgsrc.MasterSiteURLToVar["a.example.org/distfiles/"], "MASTER_SITE_A")
 	t.CheckEquals(G.Pkgsrc.MasterSiteVarToURL["MASTER_SITE_A"], "https://example.org/distfiles/")
 	t.CheckEquals(G.Pkgsrc.MasterSiteVarToURL["MASTER_SITE_B"], "https://b.example.org/distfiles/")
 
 	// Ignored entries:
 	t.CheckEquals(G.Pkgsrc.MasterSiteURLToVar["${other}"], "")
-	t.CheckEquals(G.Pkgsrc.MasterSiteURLToVar["https://backup.example.org/"], "")
+	t.CheckEquals(G.Pkgsrc.MasterSiteURLToVar["backup.example.org/"], "")
 	t.CheckEquals(G.Pkgsrc.MasterSiteVarToURL["MASTER_SITE_BACKUP"], "")
 }
 
