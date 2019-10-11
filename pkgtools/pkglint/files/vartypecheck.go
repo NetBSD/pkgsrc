@@ -560,18 +560,24 @@ func (cv *VartypeCheck) FetchURL() {
 
 	cv.WithValue(url).URL()
 
-	for siteURL, siteName := range G.Pkgsrc.MasterSiteURLToVar {
-		if hasPrefix(url, siteURL) {
-			subdir := url[len(siteURL):]
-			if hasPrefix(url, "https://github.com/") {
-				subdir = strings.SplitAfter(subdir, "/")[0]
-				cv.Warnf("Please use ${%s%s:=%s} instead of %q and run %q for further instructions.",
-					siteName, hyphenSubst, subdir, hyphen+url[:len(siteURL)+len(subdir)], bmakeHelp("github"))
-			} else {
-				cv.Warnf("Please use ${%s%s:=%s} instead of %q.", siteName, hyphenSubst, subdir, hyphen+url)
-			}
-			return
+	trimURL := url[len(url)-len(replaceAll(url, `^\w+://`, "")):]
+	protoLen := len(url) - len(trimURL)
+
+	for trimSiteURL, siteName := range G.Pkgsrc.MasterSiteURLToVar {
+		if !hasPrefix(trimURL, trimSiteURL) {
+			continue
 		}
+
+		subdir := trimURL[len(trimSiteURL):]
+		if hasPrefix(trimURL, "github.com/") {
+			subdir = strings.SplitAfter(subdir, "/")[0]
+			commonPrefix := hyphen + url[:protoLen+len(trimSiteURL)+len(subdir)]
+			cv.Warnf("Please use ${%s%s:=%s} instead of %q and run %q for further instructions.",
+				siteName, hyphenSubst, subdir, commonPrefix, bmakeHelp("github"))
+		} else {
+			cv.Warnf("Please use ${%s%s:=%s} instead of %q.", siteName, hyphenSubst, subdir, hyphen+url)
+		}
+		return
 	}
 
 	tokens := cv.MkLine.Tokenize(url, false)
