@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.214 2019/10/01 15:15:33 ryoon Exp $
+$NetBSD: distinfo,v 1.215 2019/10/11 02:02:04 kamil Exp $
 
-SHA1 (thunderbird-68.1.1.source.tar.xz) = 35199e68ee6ed073148781eec5a9333d36310641
-RMD160 (thunderbird-68.1.1.source.tar.xz) = 5cfe7536b0c96c250dad616d19ff9668214d585f
-SHA512 (thunderbird-68.1.1.source.tar.xz) = 946b9694c93bcd416fb2fe1f2448c7304d97a9b8dada9921ea5790cac019b0a53da2666eb974eb416bffd9f7874a51650563daa4dee97fef1091ac3b8df3f2ac
-Size (thunderbird-68.1.1.source.tar.xz) = 330615656 bytes
+SHA1 (thunderbird-68.1.2.source.tar.xz) = a750207dbc4bec2c0024283c21104b2c4adcc045
+RMD160 (thunderbird-68.1.2.source.tar.xz) = 85072fd1d520d84972110394f2f0fb81efb7f4ff
+SHA512 (thunderbird-68.1.2.source.tar.xz) = c6c3cd674e4732f9e98e53dfab5c2dd1ea79bf3595fa4299178e5e4649102fda5c0290858d2962316f2ab1362f8b3494806ab8a0221861ff92088a0248446d76
+Size (thunderbird-68.1.2.source.tar.xz) = 332126436 bytes
 SHA1 (patch-browser_app_profile_firefox.js) = d3ade5620370965e397ba494ff0495aeef5af0d0
 SHA1 (patch-build_moz.configure_old.configure) = edd810f8d607697898ae315453719fe6c8c09bcc
 SHA1 (patch-comm_calendar_lightning_Makefile.in) = d74b7e5c25c76c23350737b2cef689e02d7965f3
@@ -32,6 +32,8 @@ SHA1 (patch-media_libcubeb_src_moz.build) = fd3b036b3ba4105949c6b0f46bf72c89184e
 SHA1 (patch-media_libcubeb_update.sh) = f8d0f674987519a1a1738be158e8cd4296f6def0
 SHA1 (patch-media_libpng_pngpriv.h) = dfd4d345e10f6f74d3a3546732a868481c1d5818
 SHA1 (patch-old-configure.in) = 24c2f64250160c9e4c4cdc3b5ff2e6d33a5d6aad
+SHA1 (patch-third__party_rust_cssparser_.cargo-checksum.json) = aaa0ecb193a2e2f7ce9d86f23dae3266da63dc00
+SHA1 (patch-third__party_rust_cssparser_src_parser.rs) = 0081abcab1cfeccf8ba4f37a906a61277a82c769
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = cd4d65d6e6358b5b77b6b63441a8550f2d1e97c7
 SHA1 (patch-toolkit_library_moz.build) = 429745ec028ce71d8ba2457679b715ac14b6e2d3
 SHA1 (patch-toolkit_modules_subprocess_subprocess__shared__unix.js) = bc5293f7bf4885443a131958e4099bbf0f2c4a2c
