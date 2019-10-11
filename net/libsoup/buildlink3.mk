@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.31 2019/04/03 00:32:59 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.32 2019/10/11 16:38:50 kamil Exp $
 
 BUILDLINK_TREE+=	libsoup
 
@@ -13,6 +13,7 @@ BUILDLINK_PKGSRCDIR.libsoup?=	../../net/libsoup
 pkgbase := libsoup
 .include "../../mk/pkg-build-options.mk"
 
+.include "../../archivers/brotli/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
