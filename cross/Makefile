@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2019/10/04 16:05:09 maya Exp $
+# $NetBSD: Makefile,v 1.91 2019/10/11 18:53:02 maya Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -35,8 +35,6 @@ SUBDIR+=	freemint-pml
 SUBDIR+=	gcc-mips-current
 SUBDIR+=	h8300-elf-binutils
 SUBDIR+=	h8300-elf-gcc
-SUBDIR+=	h8300-hms-binutils
-SUBDIR+=	h8300-hms-gcc
 SUBDIR+=	icdprog
 SUBDIR+=	mingw
 SUBDIR+=	mingw-binutils
