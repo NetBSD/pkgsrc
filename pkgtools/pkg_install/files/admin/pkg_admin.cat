@@ -105,6 +105,9 @@ OOPPTTIIOONNSS
              Print the current value of _v_a_r_i_a_b_l_e as used after parsing the
              configuration file.
 
+     ddiiggeesstt _f_i_l_e _._._.
+             Compute a SHA256 message digest of _f_i_l_e.
+
      dduummpp    Dump the contents of the package database, similar to ppkkgg__iinnffoo
              --FF.  Columns are printed for the key field used in the pkgdb -
              the filename -, and the data field - the package the file belongs
@@ -206,4 +209,4 @@ HHIISSTTOORRYY
 AAUUTTHHOORRSS
      The ppkkgg__aaddmmiinn command was written by Hubert Feyrer.
 
-pkgsrc                         February 25, 2018                        pkgsrc
+pkgsrc                         October 8, 2019                          pkgsrc
