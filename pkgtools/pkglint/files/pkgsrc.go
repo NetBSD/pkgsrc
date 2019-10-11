@@ -28,7 +28,7 @@ type Pkgsrc struct {
 
 	Tools *Tools
 
-	MasterSiteURLToVar map[string]string // "https://github.com/" => "MASTER_SITE_GITHUB"
+	MasterSiteURLToVar map[string]string // "github.com/" => "MASTER_SITE_GITHUB"
 	MasterSiteVarToURL map[string]string // "MASTER_SITE_GITHUB" => "https://github.com/"
 
 	PkgOptions map[string]string // "x11" => "Provides X11 support"
@@ -921,7 +921,7 @@ func (src *Pkgsrc) registerMasterSite(varname, url string) {
 	if nameToURL[varname] == "" {
 		nameToURL[varname] = url
 	}
-	urlToName[url] = varname
+	urlToName[replaceAll(url, `^\w+://`, "")] = varname
 }
 
 func (src *Pkgsrc) loadPkgOptions() {
