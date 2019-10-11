@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2019/04/24 15:52:31 adam Exp $
+# $NetBSD: Makefile,v 1.2 2019/10/11 16:28:39 adam Exp $
 
-DISTNAME=	Pallets-Sphinx-Themes-1.1.4
+DISTNAME=	Pallets-Sphinx-Themes-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pallets-Sphinx-Themes/}

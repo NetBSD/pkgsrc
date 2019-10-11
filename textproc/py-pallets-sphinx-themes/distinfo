@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/04/24 15:52:31 adam Exp $
+$NetBSD: distinfo,v 1.2 2019/10/11 16:28:39 adam Exp $
 
-SHA1 (Pallets-Sphinx-Themes-1.1.4.tar.gz) = e8ff5e3c94d5250223140fc1452ece9889776062
-RMD160 (Pallets-Sphinx-Themes-1.1.4.tar.gz) = 8fc63392b05c082a02b67a6ecdb0a0d130d35db9
-SHA512 (Pallets-Sphinx-Themes-1.1.4.tar.gz) = f651b5c15faff8758776773dfb1603480f29ed534f69480a4b3d7bcc538f0361c3e7098a2b57fef3ac3953b7994abb21d86df9a9b583e4ad52356e1ea070e4d2
-Size (Pallets-Sphinx-Themes-1.1.4.tar.gz) = 17291 bytes
+SHA1 (Pallets-Sphinx-Themes-1.2.2.tar.gz) = 5a9ed4d6133573105679091dff8cc7085898a7e5
+RMD160 (Pallets-Sphinx-Themes-1.2.2.tar.gz) = d79a4b8dfb08a77ebd5bcbcf06444ff64f403549
+SHA512 (Pallets-Sphinx-Themes-1.2.2.tar.gz) = a99ffb45df57f2624062d9d8425961cbe8579c53eba75f95f2097dcdeb2fc5bafc1e70b9fcf75eb13b320296cd8621e8b2d381b853586e1efa5a01de48d91056
+Size (Pallets-Sphinx-Themes-1.2.2.tar.gz) = 19717 bytes

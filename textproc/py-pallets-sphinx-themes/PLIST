@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2019/04/24 15:52:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/10/11 16:28:39 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pallets_sphinx_themes/__init__.py
@@ -15,8 +14,6 @@ ${PYSITELIB}/pallets_sphinx_themes/theme_check.pyo
 ${PYSITELIB}/pallets_sphinx_themes/themes/__init__.py
 ${PYSITELIB}/pallets_sphinx_themes/themes/__init__.pyc
 ${PYSITELIB}/pallets_sphinx_themes/themes/__init__.pyo
-${PYSITELIB}/pallets_sphinx_themes/themes/babel/sidebarintro.html
-${PYSITELIB}/pallets_sphinx_themes/themes/babel/sidebarlogo.html
 ${PYSITELIB}/pallets_sphinx_themes/themes/babel/static/babel.css
 ${PYSITELIB}/pallets_sphinx_themes/themes/babel/theme.conf
 ${PYSITELIB}/pallets_sphinx_themes/themes/click/__init__.py
@@ -32,10 +29,11 @@ ${PYSITELIB}/pallets_sphinx_themes/themes/flask/theme.conf
 ${PYSITELIB}/pallets_sphinx_themes/themes/jinja/__init__.py
 ${PYSITELIB}/pallets_sphinx_themes/themes/jinja/__init__.pyc
 ${PYSITELIB}/pallets_sphinx_themes/themes/jinja/__init__.pyo
+${PYSITELIB}/pallets_sphinx_themes/themes/jinja/domain.py
+${PYSITELIB}/pallets_sphinx_themes/themes/jinja/domain.pyc
+${PYSITELIB}/pallets_sphinx_themes/themes/jinja/domain.pyo
 ${PYSITELIB}/pallets_sphinx_themes/themes/jinja/static/jinja.css
 ${PYSITELIB}/pallets_sphinx_themes/themes/jinja/theme.conf
-${PYSITELIB}/pallets_sphinx_themes/themes/platter/sidebarintro.html
-${PYSITELIB}/pallets_sphinx_themes/themes/platter/sidebarlogo.html
 ${PYSITELIB}/pallets_sphinx_themes/themes/platter/static/platter.css
 ${PYSITELIB}/pallets_sphinx_themes/themes/platter/theme.conf
 ${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/404.html
@@ -47,6 +45,7 @@ ${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/localtoc.html
 ${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/project.html
 ${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/relations.html
 ${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/static/pocoo.css
+${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/static/version_warning_offset.js
 ${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/theme.conf
 ${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/versions.html
 ${PYSITELIB}/pallets_sphinx_themes/themes/werkzeug/static/werkzeug.css
