@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2017/03/13 09:39:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/10/11 16:16:45 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/LICENSE
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -6,15 +7,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/asn1crypto/__init__.py
 ${PYSITELIB}/asn1crypto/__init__.pyc
 ${PYSITELIB}/asn1crypto/__init__.pyo
-${PYSITELIB}/asn1crypto/_elliptic_curve.py
-${PYSITELIB}/asn1crypto/_elliptic_curve.pyc
-${PYSITELIB}/asn1crypto/_elliptic_curve.pyo
 ${PYSITELIB}/asn1crypto/_errors.py
 ${PYSITELIB}/asn1crypto/_errors.pyc
 ${PYSITELIB}/asn1crypto/_errors.pyo
-${PYSITELIB}/asn1crypto/_ffi.py
-${PYSITELIB}/asn1crypto/_ffi.pyc
-${PYSITELIB}/asn1crypto/_ffi.pyo
 ${PYSITELIB}/asn1crypto/_inet.py
 ${PYSITELIB}/asn1crypto/_inet.pyc
 ${PYSITELIB}/asn1crypto/_inet.pyo
@@ -27,12 +22,6 @@ ${PYSITELIB}/asn1crypto/_iri.pyo
 ${PYSITELIB}/asn1crypto/_ordereddict.py
 ${PYSITELIB}/asn1crypto/_ordereddict.pyc
 ${PYSITELIB}/asn1crypto/_ordereddict.pyo
-${PYSITELIB}/asn1crypto/_perf/__init__.py
-${PYSITELIB}/asn1crypto/_perf/__init__.pyc
-${PYSITELIB}/asn1crypto/_perf/__init__.pyo
-${PYSITELIB}/asn1crypto/_perf/_big_num_ctypes.py
-${PYSITELIB}/asn1crypto/_perf/_big_num_ctypes.pyc
-${PYSITELIB}/asn1crypto/_perf/_big_num_ctypes.pyo
 ${PYSITELIB}/asn1crypto/_teletex_codec.py
 ${PYSITELIB}/asn1crypto/_teletex_codec.pyc
 ${PYSITELIB}/asn1crypto/_teletex_codec.pyo
