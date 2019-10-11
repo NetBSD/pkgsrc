@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4302 2019/10/11 14:57:47 mef Exp $
+$NetBSD: CHANGES-2019,v 1.4303 2019/10/11 15:37:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6900,3 +6900,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-CPANPLUS to 0.9178 [mef 2019-10-11]
 	Removed net/p5-FusionInventory-Agent-Task-Network [wiz 2019-10-11]
 	Updated devel/p5-Cache-FastMmap to 1.48 [mef 2019-10-11]
+	Updated databases/sqlite3 to 3.30.1 [adam 2019-10-11]
+	Updated databases/sqlite3-docs to 3.30.1 [adam 2019-10-11]
+	Updated databases/sqlite3-tcl to 3.30.1 [adam 2019-10-11]
+	Updated devel/lemon to 1.0.3.30.1 [adam 2019-10-11]
