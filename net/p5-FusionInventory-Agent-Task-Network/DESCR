@@ -1,7 +1,0 @@
-This plugin for the agent provides two tasks that were previously distributed
-separatly:
-
-* the NetDiscovery task allows the agent to scan the network to find remote
-  devices, through nmap, NetBios or SNMP, and to identify them
-* the NetInventory task allows the agent to extract various informations from
-  a remote device through SNMP protocol
