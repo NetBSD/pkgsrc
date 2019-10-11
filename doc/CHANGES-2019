@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4310 2019/10/11 16:40:58 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.4311 2019/10/11 18:53:49 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6934,3 +6934,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-werkzeug-docs to 0.16.0 [adam 2019-10-11]
 	Updated net/gssdp to 1.0.3nb3 [kamil 2019-10-11]
 	Updated net/gssdp to 1.0.3nb4 [kamil 2019-10-11]
+	Removed cross/h8300-hms-gcc [maya 2019-10-11]
