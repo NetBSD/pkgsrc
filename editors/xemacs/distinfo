@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2019/10/11 12:36:44 hauke Exp $
+$NetBSD: distinfo,v 1.30 2019/10/11 14:42:48 hauke Exp $
 
 SHA1 (xemacs/xemacs-21.4.24.tar.gz) = e9ff7693adbef333b78f51b4dfdddd296bad0fcc
 RMD160 (xemacs/xemacs-21.4.24.tar.gz) = 0e01971c0dd47d9dd401d02e508edf241208969b
@@ -9,6 +9,11 @@ SHA1 (patch-configure) = 10ae7a19ada6321996d9f57b8129ee91c326ac72
 SHA1 (patch-lib-src_Makefile.in.in) = 5e11bf2904145804f521fed0ef956da94e5f21bd
 SHA1 (patch-lisp_gui.el) = 686bc5a7c4bf6e3c4f010dba22aee109d94f6cb3
 SHA1 (patch-lwlib_Makefile.in.in) = 97fcf6de4299dfd5ba7a9827ee88bc037df0491e
+SHA1 (patch-man_lispref_debugging.texi) = 4d6f99c17bc8e25e700a663f7eff147b72fd9a14
+SHA1 (patch-man_lispref_intro.texi) = 5837f8a0e8057649921cdbddd8e8329165ec1104
+SHA1 (patch-man_lispref_ldap.texi) = e66dd13905ab8b34e2346865d529a99bed35a23b
+SHA1 (patch-man_xemacs-faq.texi) = 4229ea06a7f9a9361639fb50af1a58c51211eb49
+SHA1 (patch-man_xemacs_custom.texi) = e564906bced48b0a7c788c217c02eafe167fee59
 SHA1 (patch-src_Makefile.in.in) = 8d2c262983ff16197c99429e7d4cc80cd8371775
 SHA1 (patch-src_config.h.in) = 25ac897560abad51d83b58818e1dc2e77a8519e4
 SHA1 (patch-src_emacs.c) = 19bbba8b9a777388060bab637b2bdc5e9027e11f
