@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4313 2019/10/11 20:02:10 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.4314 2019/10/11 23:31:20 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6937,3 +6937,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed cross/h8300-hms-gcc [maya 2019-10-11]
 	Removed cross/h8300-hms-binutils [maya 2019-10-11]
 	Updated sysutils/py-psutil to 5.6.3nb2 [kamil 2019-10-11]
+	Updated pkgtools/pkglint to 19.3.1 [rillig 2019-10-11]
