@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4296 2019/10/11 10:57:33 roy Exp $
+$NetBSD: CHANGES-2019,v 1.4297 2019/10/11 14:33:25 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6895,3 +6895,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/thunderbird to 68.1.2 [kamil 2019-10-11]
 	Updated devel/scmcvs to 1.12.13nb7 [jperkin 2019-10-11]
 	Updated net/dhcpcd to 8.1.0 [roy 2019-10-11]
+	Updated devel/p5-CPAN-Perl-Releases to 4.14 [makoto 2019-10-11]
