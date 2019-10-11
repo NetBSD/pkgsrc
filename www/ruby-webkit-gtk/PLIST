@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/09/14 18:11:39 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/10/11 16:20:24 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_LIBDIR}/COPYING.LIB
@@ -7,7 +7,7 @@ ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/dependency-check/Rakefile
 ${GEM_LIBDIR}/lib/webkit-gtk.rb
 ${GEM_LIBDIR}/lib/webkit-gtk/version.rb
-${GEM_LIBDIR}/sample/brower.rb
+${GEM_LIBDIR}/sample/browser.rb
 ${GEM_LIBDIR}/test/run-test.rb
 ${GEM_LIBDIR}/test/test-version.rb
 ${GEM_LIBDIR}/test/test_webkit_gtk_webview.rb
