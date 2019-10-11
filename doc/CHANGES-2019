@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4308 2019/10/11 16:30:19 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4309 2019/10/11 16:32:48 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6932,3 +6932,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/py-pallets-sphinx-themes to 1.2.2 [adam 2019-10-11]
 	Updated www/py-werkzeug to 0.16.0 [adam 2019-10-11]
 	Updated www/py-werkzeug-docs to 0.16.0 [adam 2019-10-11]
+	Updated net/gssdp to 1.0.3nb3 [kamil 2019-10-11]
