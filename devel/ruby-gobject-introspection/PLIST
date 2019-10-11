@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/09/14 18:11:37 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/10/11 16:20:22 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/gobject_introspection.${RUBY_DLEXT}
@@ -13,13 +13,19 @@ ${GEM_LIBDIR}/ext/gobject-introspection/gobject-introspection-enum-types.h
 ${GEM_LIBDIR}/ext/gobject-introspection/gobject_introspection.def
 ${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-arg-info.c
 ${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-argument.c
+${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-arguments-in.c
+${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-arguments-out.c
+${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-arguments.c
+${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-array-type.c
 ${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-base-info.c
 ${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-boxed-info.c
 ${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-callable-info.c
 ${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-callback-info.c
+${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-callback.c
 ${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-constant-info.c
 ${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-constructor-info.c
 ${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-conversions.h
+${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-direction.c
 ${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-enum-info.c
 ${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-field-info.c
 ${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-flags-info.c
@@ -28,12 +34,21 @@ ${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-interface-info.c
 ${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-loader.c
 ${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-method-info.c
 ${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-object-info.c
+${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-private-arg-info.h
+${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-private-arguments-in.h
+${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-private-arguments-out.h
+${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-private-arguments.h
+${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-private-array-type.h
+${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-private-callback.h
+${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-private-direction.h
+${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-private-transfer.h
 ${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-private.h
 ${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-property-info.c
 ${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-registered-type-info.c
 ${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-repository.c
 ${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-signal-info.c
 ${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-struct-info.c
+${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-transfer.c
 ${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-type-info.c
 ${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-type-tag.c
 ${GEM_LIBDIR}/ext/gobject-introspection/rb-gi-types.h
