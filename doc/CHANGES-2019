@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4298 2019/10/11 14:41:54 fox Exp $
+$NetBSD: CHANGES-2019,v 1.4299 2019/10/11 14:44:31 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6897,3 +6897,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/dhcpcd to 8.1.0 [roy 2019-10-11]
 	Updated devel/p5-CPAN-Perl-Releases to 4.14 [makoto 2019-10-11]
 	Updated www/cliqz to 1.29.2 [fox 2019-10-11]
+	Updated devel/p5-CPANPLUS to 0.9178 [makoto 2019-10-11]
