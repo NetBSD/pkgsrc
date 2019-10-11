@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2019/10/11 12:36:44 hauke Exp $
+# $NetBSD: Makefile.common,v 1.33 2019/10/11 14:42:48 hauke Exp $
 #
 # used by editors/xemacs-nox11/Makefile
 # used by editors/xemacs/Makefile
@@ -27,11 +27,6 @@ PLIST_SUBST+=		DISTNAME=${DISTNAME}
 FILES_SUBST+=		DISTNAME=${DISTNAME}
 MESSAGE_SUBST+=		DISTNAME=${DISTNAME}
 INFO_FILES=		yes
-
-# NetBSD ships with makeinfo v4 in base, and v6 format is not compatible
-MAKEINFO_4_PATCHES=	patch-man_lispref_debugging.texi \
-			patch-man_xemacs_custom.texi \
-			patch-man_lispref_intro.texi
 
 .if defined(MANZ)
 PLIST_SUBST+=		ELSUFX='.gz'
@@ -100,13 +95,6 @@ INSTALL_MAKE_FLAGS+=	sitemoduledir=${DESTDIR}${PREFIX}/lib/xemacs/site-modules
 
 post-extract:
 	cp ${FILESDIR}/dragonfly.h ${WRKSRC}/src/s/
-
-.if (${OPSYS} == "NetBSD")
-post-patch:
-.for xpatch in ${MAKEINFO_4_PATCHES}
-	cd ${WRKSRC} && ${PATCH} ${PATCH_ARGS} < ${FILESDIR}/${xpatch}
-.endfor
-.endif
 
 pre-build:
 	rm -f ${WRKSRC}/etc/ctags.1.orig

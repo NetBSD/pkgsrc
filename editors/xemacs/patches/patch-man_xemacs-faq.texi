@@ -1,0 +1,50 @@
+$NetBSD: patch-man_xemacs-faq.texi,v 1.1 2019/10/11 14:42:48 hauke Exp $
+
+GC non-ascii gremlins that devel/gtexinfo v6.7 objects to.
+
+--- man/xemacs-faq.texi.orig	2015-03-25 11:25:33.000000000 +0000
++++ man/xemacs-faq.texi
+@@ -2831,7 +2831,7 @@ methods for almost all the character set
+ all of the ISO 8859 family, the Indic languages, Thai, and so on), and
+ SKK, for Japanese.  (SKK also supports an interface to an external
+ "dictionary server" process.)  Quail supports both typical "dead-key"
+-methods (eg, in the "latin-1-prefix" method, @kbd{" a} produces ä, LATIN
++methods (eg, in the "latin-1-prefix" method, @kbd{" a} produces @"a, LATIN
+ SMALL LETTER A WITH DIAERESIS), and the complex dictionary-based phonetic
+ methods used for Asian ideographic languages like Chinese.
+ 
+@@ -2877,7 +2877,7 @@ patches available (no URL, sorry) to sup
+ Wnn and SJ3 use the @code{egg} user interface.  The interface for Canna
+ is specialized to Canna.
+ 
+-Wnn supports Japanese, Chinese and Korean. It is made by OMRON and Kyôto
++Wnn supports Japanese, Chinese and Korean. It is made by OMRON and Kyoto
+ University. It is a powerful and complex system.  Wnn4 is free and Wnn6
+ is not.  Wnn uses grammatical hints and probability of word association,
+ so in principle Wnn can be cleverer than other methods.
+@@ -4800,10 +4800,10 @@ the null binding @code{OpenWindows.Keybo
+ @node Q3.0.6, Q3.0.7, Q3.0.5, Editing
+ @unnumberedsubsec Q3.0.6: How can you type in special characters in XEmacs?
+ One way is to use the package @code{x-compose}.  Then you can use
+-sequences like @kbd{Compose " a} to get ä, etc.
++sequences like @kbd{Compose " a} to get @"a, etc.
+ 
+ Another way is to use the @code{iso-insert} package. Then you can use
+-sequences like @kbd{C-x 8 " a} to get ä, etc.
++sequences like @kbd{C-x 8 " a} to get @"a, etc.
+ 
+ @email{glynn@@sensei.co.uk, Glynn Clements} writes:
+ 
+@@ -4826,9 +4826,9 @@ define the right `Windows' key as Multi_
+ 
+ Once you have Multi_key defined, you can use e.g.
+ @example
+-        Multi a '       => á
+-        Multi e "       => ë
+-        Multi c ,       => ç
++        Multi a '       => @'a
++        Multi e "       => @"e
++        Multi c ,       => @,{c}
+ @end example
+ 
+ etc.
