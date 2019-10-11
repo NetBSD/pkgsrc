@@ -331,11 +331,23 @@ func (s *ShSuite) Test_ShellParser__for_clause(c *check.C) {
 			b.Words("a", "b", "c"),
 			b.List().AddCommand(b.SimpleCommand("echo", "$var")).AddSemicolon())))
 
+	s.test("for var \n in ; do echo $var ; done",
+		b.List().AddCommand(b.For(
+			"var",
+			nil,
+			b.List().AddCommand(b.SimpleCommand("echo", "$var")).AddSemicolon())))
+
 	s.test("for var in in esac ; do echo $var ; done",
 		b.List().AddCommand(b.For(
 			"var",
 			b.Words("in", "esac"),
 			b.List().AddCommand(b.SimpleCommand("echo", "$var")).AddSemicolon())))
+
+	s.test("for var in \n do : ; done",
+		b.List().AddCommand(b.For(
+			"var",
+			nil,
+			b.List().AddCommand(b.SimpleCommand(":")).AddSemicolon())))
 
 	// No semicolon necessary between the two "done".
 	s.test("for i in 1; do for j in 1; do echo $$i$$j; done done",
@@ -385,6 +397,20 @@ func (s *ShSuite) Test_ShellParser__case_clause(c *check.C) {
 				b.Words("pattern"),
 				b.List().AddCommand(b.SimpleCommand("case-item-action")), sepNone))))
 
+	s.test("case selector in pattern) \n case-item-action ; esac",
+		b.List().AddCommand(b.Case(
+			b.Token("selector"),
+			b.CaseItem(
+				b.Words("pattern"),
+				b.List().AddCommand(b.SimpleCommand("case-item-action")), sepSemicolon))))
+
+	s.test("case selector in pattern) action \n esac",
+		b.List().AddCommand(b.Case(
+			b.Token("selector"),
+			b.CaseItem(
+				b.Words("pattern"),
+				b.List().AddCommand(b.SimpleCommand("action")), sepNone))))
+
 	s.test("case $$expr in (if|then|else) ;; esac",
 		b.List().AddCommand(b.Case(
 			b.Token("$$expr"),
@@ -433,6 +459,14 @@ func (s *ShSuite) Test_ShellParser__if_clause(c *check.C) {
 			b.List().AddCommand(b.If(
 				b.List().AddCommand(b.SimpleCommand("cond2")).AddSemicolon(),
 				b.List().AddCommand(b.SimpleCommand("action")).AddSemicolon())))))
+
+	s.test("if cond1; then action1; elif cond2; then action2; else action3; fi",
+		b.List().AddCommand(b.If(
+			b.List().AddCommand(b.SimpleCommand("cond1")).AddSemicolon(),
+			b.List().AddCommand(b.SimpleCommand("action1")).AddSemicolon(),
+			b.List().AddCommand(b.SimpleCommand("cond2")).AddSemicolon(),
+			b.List().AddCommand(b.SimpleCommand("action2")).AddSemicolon(),
+			b.List().AddCommand(b.SimpleCommand("action3")).AddSemicolon())))
 }
 
 func (s *ShSuite) Test_ShellParser__while_clause(c *check.C) {
@@ -526,7 +560,7 @@ func (s *ShSuite) Test_ShellParser__io_redirect(c *check.C) {
 	s.test("echo >> ${PLIST_SRC}",
 		b.List().AddCommand(b.SimpleCommand("echo", ">>${PLIST_SRC}")))
 
-	s.test("echo 1>output 2>>append 3>|clobber 4>&5 6<input >>append",
+	s.test("echo 1>output 2>>append 3>|clobber 4>&5 6<input >>append <&input <>diamond <<-here",
 		b.List().AddCommand(&MkShCommand{Simple: &MkShSimpleCommand{
 			Assignments: nil,
 			Name:        b.Token("echo"),
@@ -537,9 +571,12 @@ func (s *ShSuite) Test_ShellParser__io_redirect(c *check.C) {
 				{3, ">|", b.Token("clobber")},
 				{4, ">&", b.Token("5")},
 				{6, "<", b.Token("input")},
-				{-1, ">>", b.Token("append")}}}}))
+				{-1, ">>", b.Token("append")},
+				{-1, "<&", b.Token("input")},
+				{-1, "<>", b.Token("diamond")},
+				{-1, "<<-", b.Token("here")}}}}))
 
-	s.test("echo 1> output 2>> append 3>| clobber 4>& 5 6< input >> append",
+	s.test("echo 1> output 2>> append 3>| clobber 4>& 5 6< input >> append <& input <> diamond <<- here",
 		b.List().AddCommand(&MkShCommand{Simple: &MkShSimpleCommand{
 			Assignments: nil,
 			Name:        b.Token("echo"),
@@ -550,7 +587,10 @@ func (s *ShSuite) Test_ShellParser__io_redirect(c *check.C) {
 				{3, ">|", b.Token("clobber")},
 				{4, ">&", b.Token("5")},
 				{6, "<", b.Token("input")},
-				{-1, ">>", b.Token("append")}}}}))
+				{-1, ">>", b.Token("append")},
+				{-1, "<&", b.Token("input")},
+				{-1, "<>", b.Token("diamond")},
+				{-1, "<<-", b.Token("here")}}}}))
 
 	s.test("${MAKE} print-summary-data  2>&1 > /dev/stderr",
 		b.List().AddCommand(&MkShCommand{Simple: &MkShSimpleCommand{
@@ -560,11 +600,60 @@ func (s *ShSuite) Test_ShellParser__io_redirect(c *check.C) {
 			Redirections: []*MkShRedirection{
 				{2, ">&", b.Token("1")},
 				{-1, ">", b.Token("/dev/stderr")}}}}))
+
+	s.test("1> output command",
+		b.List().AddCommand(&MkShCommand{Simple: &MkShSimpleCommand{
+			Name: b.Token("command"),
+			Redirections: []*MkShRedirection{
+				{1, ">", b.Token("output")}}}}))
+
+	s.test("ENV=value 1> output command",
+		b.List().AddCommand(&MkShCommand{Simple: &MkShSimpleCommand{
+			Assignments: []*ShToken{b.Token("ENV=value")},
+			Name:        b.Token("command"),
+			Redirections: []*MkShRedirection{
+				{1, ">", b.Token("output")}}}}))
+}
+
+func (s *ShSuite) Test_ShellParser__redirect_list(c *check.C) {
+	b := s.init(c)
+
+	s.test("(:) 1>out",
+		b.List().AddCommand(
+			b.Redirected(
+				b.Subshell(b.List().AddCommand(b.SimpleCommand(":"))),
+				b.Redirection(1, ">", "out"))))
+
+	s.test("(:) 1>out 2>out",
+		b.List().AddCommand(
+			b.Redirected(
+				b.Subshell(b.List().AddCommand(b.SimpleCommand(":"))),
+				b.Redirection(1, ">", "out"),
+				b.Redirection(2, ">", "out"))))
 }
 
 func (s *ShSuite) Test_ShellParser__io_here(c *check.C) {
-	// In pkgsrc Makefiles, the IO here-documents cannot be used since all the text
-	// is joined into a single line. Therefore there are no tests here.
+	// In pkgsrc Makefiles, the IO here-documents cannot be used since
+	// all the text is joined into a single line. Therefore these test
+	// cases only show that pkglint can indeed not parse <<EOF
+	// redirections.
+	b := s.init(c)
+
+	s.test("<<EOF\ntext\nEOF",
+		b.List().
+			AddCommand(b.SimpleCommand("<<EOF")).
+			AddNewline().
+			AddCommand(b.SimpleCommand("text")). // This is wrong.
+			AddNewline().
+			AddCommand(b.SimpleCommand("EOF"))) // This is wrong.
+
+	s.test("1<<EOF\ntext\nEOF",
+		b.List().
+			AddCommand(b.SimpleCommand("1<<EOF")).
+			AddNewline().
+			AddCommand(b.SimpleCommand("text")). // This is wrong.
+			AddNewline().
+			AddCommand(b.SimpleCommand("EOF"))) // This is wrong.
 }
 
 func (s *ShSuite) init(c *check.C) *MkShBuilder {
@@ -766,6 +855,9 @@ func (b *MkShBuilder) Pipeline(negated bool, cmds ...*MkShCommand) *MkShPipeline
 	return NewMkShPipeline(negated, cmds)
 }
 
+// SimpleCommand classifies the given arguments into variable assignments
+// (only at the beginning of the command), the command name, arguments and
+// redirections. It is not intended to cover any edge cases.
 func (b *MkShBuilder) SimpleCommand(words ...string) *MkShCommand {
 	cmd := MkShSimpleCommand{}
 	assignments := true
@@ -787,6 +879,9 @@ func (b *MkShBuilder) SimpleCommand(words ...string) *MkShCommand {
 	return &MkShCommand{Simple: &cmd}
 }
 
+// If creates an if-then-elif-then-else sequence.
+// The first arguments are pairs of conditions and actions.
+// The remaining argument, if any, is the else action.
 func (b *MkShBuilder) If(condActionElse ...*MkShList) *MkShCommand {
 	ifClause := MkShIf{}
 	for i, part := range condActionElse {
@@ -844,6 +939,11 @@ func (b *MkShBuilder) Brace(list *MkShList) *MkShCommand {
 
 func (b *MkShBuilder) Subshell(list *MkShList) *MkShCommand {
 	return &MkShCommand{Compound: &MkShCompoundCommand{Subshell: list}}
+}
+
+func (b *MkShBuilder) Redirected(cmd *MkShCommand, redirects ...*MkShRedirection) *MkShCommand {
+	cmd.Redirects = redirects
+	return cmd
 }
 
 func (b *MkShBuilder) Token(mktext string) *ShToken {
