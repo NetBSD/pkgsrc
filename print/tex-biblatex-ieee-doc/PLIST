@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/01/12 20:15:10 markd Exp $
-share/texmf-dist/doc/latex/biblatex-ieee/LICENSE.md
+@comment $NetBSD: PLIST,v 1.2 2019/10/12 08:58:51 wiz Exp $
 share/texmf-dist/doc/latex/biblatex-ieee/README.md
 share/texmf-dist/doc/latex/biblatex-ieee/biblatex-ieee-alphabetic.pdf
 share/texmf-dist/doc/latex/biblatex-ieee/biblatex-ieee-alphabetic.tex
