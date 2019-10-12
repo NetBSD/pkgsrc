@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.112 2019/08/11 13:21:26 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2019/10/12 20:07:40 rillig Exp $
 
 DISTNAME=	cyrus-imapd-2.2.13p1
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/
 MASTER_SITES+=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/imap/
@@ -119,7 +119,7 @@ PLIST.idled=		yes
 
 MAKE_ENV+=		PERL=${PERL5:Q}
 
-HTMLDIR=		${PREFIX}/share/doc/html/cyrus-imapd
+HTMLDIR=		${PREFIX}/share/doc/cyrus-imapd
 EGDIR=			${PREFIX}/share/examples/cyrus-imapd
 CONF_FILES=		${EGDIR}/imapd.conf ${PKG_SYSCONFDIR}/imapd.conf
 CONF_FILES+=		${EGDIR}/normal.conf ${PKG_SYSCONFDIR}/cyrus.conf
