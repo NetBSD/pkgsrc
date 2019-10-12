@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/01/17 06:20:10 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/10/12 10:51:02 gutteridge Exp $
 bin/xfce4-dict
 lib/xfce4/panel/plugins/libxfce4dict.la
 man/man1/xfce4-dict.1
@@ -23,6 +23,7 @@ share/locale/gl/LC_MESSAGES/xfce4-dict.mo
 share/locale/he/LC_MESSAGES/xfce4-dict.mo
 share/locale/hr/LC_MESSAGES/xfce4-dict.mo
 share/locale/hu/LC_MESSAGES/xfce4-dict.mo
+share/locale/hy_AM/LC_MESSAGES/xfce4-dict.mo
 share/locale/id/LC_MESSAGES/xfce4-dict.mo
 share/locale/is/LC_MESSAGES/xfce4-dict.mo
 share/locale/it/LC_MESSAGES/xfce4-dict.mo
