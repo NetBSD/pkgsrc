@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2011/04/19 10:03:37 roy Exp $
-share/xsl/docbook/epub/README
-share/xsl/docbook/epub/bin/dbtoepub
-share/xsl/docbook/epub/bin/lib/docbook.rb
-share/xsl/docbook/epub/bin/xslt/obfuscate.xsl
-share/xsl/docbook/epub/docbook.xsl

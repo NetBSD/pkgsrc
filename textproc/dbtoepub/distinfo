@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2016/03/05 01:12:13 ryoon Exp $
-
-SHA1 (docbook-xsl-1.79.1.tar.bz2) = 7487b2acc7106253bb77fcddc7e1a9788601ad23
-RMD160 (docbook-xsl-1.79.1.tar.bz2) = 3859fa52e38e4719037a213034c6f19cb6331968
-SHA512 (docbook-xsl-1.79.1.tar.bz2) = 83325cbaf1545da6b9b8b77f5f0e6fdece26e3c455164b300a1aa3d19e3bd29ae71fd563553a714a5394968d1a65684c6c7987c77524469358d18b8c227025c7
-Size (docbook-xsl-1.79.1.tar.bz2) = 21967928 bytes
