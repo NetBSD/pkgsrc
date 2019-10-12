@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2019/04/25 07:33:04 maya Exp $
+# $NetBSD: Makefile,v 1.20 2019/10/12 20:12:47 rillig Exp $
 #
 
 DISTNAME=		pymsgauth-2.1.0
-PKGREVISION=		11
+PKGREVISION=		13
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 
@@ -16,13 +16,11 @@ PATCHFILES+=		${FILTER3_PATCH}
 SITES.${FILTER3_PATCH}=	https://schmonz.com/qmail/pymsgauthfilter/
 
 PYMSGAUTH_PROGRAMS=	pymsgauth-*
-DOCS=			BUGS CHANGELOG COPYING pymsgauth.txt
-HTMLDOCS=		pymsgauth.html
+DOCS=			BUGS CHANGELOG COPYING pymsgauth.html pymsgauth.txt
 EXAMPLES=		pymsgauthrc-example
 
 SHAREDIR=		share/pymsgauth
 DOCDIR=			share/doc/pymsgauth
-HTMLDOCDIR=		share/doc/html/pymsgauth
 EGDIR=			share/examples/pymsgauth
 
 NO_BUILD=		yes
@@ -30,7 +28,7 @@ REPLACE_PYTHON=		${PYMSGAUTH_PROGRAMS} *.py
 
 FILES_SUBST+=		SHAREDIR=${SHAREDIR:Q}
 
-INSTALLATION_DIRS=	${SHAREDIR} ${DOCDIR} ${HTMLDOCDIR} ${EGDIR} bin
+INSTALLATION_DIRS=	${SHAREDIR} ${DOCDIR} ${EGDIR} bin
 
 pre-install:
 	cd ${WRKSRC} && ${RM} -f *.orig *.orig_dist
@@ -42,10 +40,6 @@ do-install:
 
 	for f in ${DOCS}; do \
 		${INSTALL_DATA} ${WRKSRC}/$${f} ${DESTDIR}${PREFIX}/${DOCDIR}; \
-	done
-
-	for f in ${HTMLDOCS}; do \
-		${INSTALL_DATA} ${WRKSRC}/$${f} ${DESTDIR}${PREFIX}/${HTMLDOCDIR}; \
 	done
 
 	for f in ${EXAMPLES}; do \
