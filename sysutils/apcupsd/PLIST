@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2018/01/01 22:29:55 rillig Exp $
+@comment $NetBSD: PLIST,v 1.19 2019/10/12 21:06:48 rillig Exp $
 ${PLIST.cgi}libexec/cgi-bin/apcupsimage.cgi
 ${PLIST.cgi}libexec/cgi-bin/multimon.cgi
 ${PLIST.cgi}libexec/cgi-bin/upsfstats.cgi
@@ -11,17 +11,17 @@ man/man8/apcupsd.8
 sbin/apcaccess
 sbin/apctest
 sbin/apcupsd
-share/doc/html/apcupsd/apcupsd.png
-share/doc/html/apcupsd/charging.png
-share/doc/html/apcupsd/commlost.png
-share/doc/html/apcupsd/main_configs.png
-share/doc/html/apcupsd/manual.html
-share/doc/html/apcupsd/multimon.png
-share/doc/html/apcupsd/onbatt.png
-share/doc/html/apcupsd/online.png
-share/doc/html/apcupsd/status.png
-share/doc/html/apcupsd/thanks.png
-share/doc/html/apcupsd/wininstall6.png
+share/doc/apcupsd/apcupsd.png
+share/doc/apcupsd/charging.png
+share/doc/apcupsd/commlost.png
+share/doc/apcupsd/main_configs.png
+share/doc/apcupsd/manual.html
+share/doc/apcupsd/multimon.png
+share/doc/apcupsd/onbatt.png
+share/doc/apcupsd/online.png
+share/doc/apcupsd/status.png
+share/doc/apcupsd/thanks.png
+share/doc/apcupsd/wininstall6.png
 share/examples/apcupsd/apccontrol
 share/examples/apcupsd/apcupsd.conf
 share/examples/apcupsd/apcupsd.css
