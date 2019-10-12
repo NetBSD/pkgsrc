@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4319 2019/10/12 09:48:27 he Exp $
+$NetBSD: CHANGES-2019,v 1.4320 2019/10/12 10:51:18 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6943,3 +6943,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/tex-biblatex-ieee-doc to 1.3anb1 [wiz 2019-10-12]
 	Removed textproc/dbtoepub successor textproc/docbook-xsl [wiz 2019-10-12]
 	Updated lang/sbcl to 1.5.7nb1 [he 2019-10-12]
+	Updated textproc/xfce4-dict to 0.8.3 [gutteridge 2019-10-12]
