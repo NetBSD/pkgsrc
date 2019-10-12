@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2012/01/22 09:07:50 shattered Exp $
+$NetBSD: MESSAGE,v 1.5 2019/10/12 21:06:48 rillig Exp $
 
 NOTE:  You may use the (undocumented) NISIP configuration file option to
        determine what interfaces the NIS server will listen on; use
@@ -15,6 +15,6 @@ NOTE:  With most APC cables you must put a "local" flag in /etc/ttys for
        on the first time.
 
 For complete documentation, see the HTML docs in
-file://${PREFIX}/share/doc/html/apcupsd/index.html
+file://${PREFIX}/share/doc/apcupsd/index.html
 
 ===========================================================================
