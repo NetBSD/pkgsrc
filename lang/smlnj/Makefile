@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2016/07/03 19:38:27 dholland Exp $
+# $NetBSD: Makefile,v 1.35 2019/10/12 20:52:53 he Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
@@ -31,7 +31,7 @@ HOMEPAGE=	http://www.smlnj.org/index.html
 COMMENT=	Popular functional language from Bell Labs
 
 SML_VERSION=	110.73
-PKGREVISION=	2
+PKGREVISION=	3
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	smlnj-${SML_VERSION}
@@ -56,6 +56,14 @@ BUILD_ENV+=	PATCH=${PATCH:Q} PATCH_ARGS=${PATCH_ARGS:Q}
 
 # note that this includes bsd.prefs.mk
 .include "../../lang/smlnj/Makefile.common"
+
+BOXES= x86 ppc sparc
+
+.if make(distinfo) || make(makesum) || make(mdi)
+.for B in ${BOXES}
+DISTFILES+=    boot.${B}-unix.tgz
+.endfor
+.endif
 
 #
 # For smlnj reasons the runtime system needs to be unpacked twice, once
