@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2016/07/03 19:35:36 dholland Exp $
+# $NetBSD: Makefile,v 1.10 2019/10/12 20:00:06 he Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
 PKGNAME=	smlnj-${SML_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://smlnj.cs.uchicago.edu/dist/working/${SML_VERSION}/
 DISTFILES=	MLRISC.tgz			\
@@ -55,6 +56,14 @@ BUILD_ENV+=	PATCH=${PATCH:Q} PATCH_ARGS=${PATCH_ARGS:Q}
 
 # note that this includes bsd.prefs.mk
 .include "../../lang/smlnj/Makefile.common"
+
+BOXES= x86 ppc sparc
+
+.if make(distinfo) || make(makesum) || make(mdi)
+.for B in ${BOXES}
+DISTFILES+=	boot.${B}-unix.tgz
+.endfor
+.endif
 
 #
 # For smlnj reasons the runtime system needs to be unpacked twice, once
