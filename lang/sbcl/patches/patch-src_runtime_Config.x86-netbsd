@@ -1,0 +1,19 @@
+$NetBSD: patch-src_runtime_Config.x86-netbsd,v 1.1 2019/10/12 09:47:40 he Exp $
+
+Use Config.generic-netbsd.
+
+--- src/runtime/Config.x86-netbsd.orig	2019-09-28 09:49:01.000000000 +0000
++++ src/runtime/Config.x86-netbsd
+@@ -9,10 +9,11 @@
+ # provided with absolutely no warranty. See the COPYING and CREDITS
+ # files for more information.
+ 
++include Config.generic-netbsd
+ include Config.x86-bsd
+ 
+-ASSEM_SRC += ldso-stubs.S
+ OS_SRC += undefineds.c
++
+ LINKFLAGS += -dynamic -export-dynamic
+ 
+ CFLAGS = -g -Wall -O2 -fno-omit-frame-pointer
