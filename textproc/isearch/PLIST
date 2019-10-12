@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:29:59 rillig Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/10/12 21:14:22 rillig Exp $
 bin/Iget
 bin/Iindex
 bin/Isearch
 bin/Iutil
 bin/zpresent
 bin/zsearch
-share/doc/html/isearch/Isearch-cgi-tutorial.html
-share/doc/html/isearch/IsearchFeatures.html
-share/doc/html/isearch/IsearchTutorial.html
-share/doc/html/isearch/QuickStart.html
 share/doc/isearch/DebugFirewall.doc
+share/doc/isearch/Isearch-cgi-tutorial.html
+share/doc/isearch/IsearchFeatures.html
+share/doc/isearch/IsearchTutorial.html
+share/doc/isearch/QuickStart.html
 share/doc/isearch/TUTORIAL
