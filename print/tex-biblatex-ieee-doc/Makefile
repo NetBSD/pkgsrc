@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2019/08/06 10:25:59 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/10/12 08:58:51 wiz Exp $
 
 DISTNAME=	biblatex-ieee.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.3a
+PKGREVISION=	1
 TEXLIVE_REV=	51402
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
