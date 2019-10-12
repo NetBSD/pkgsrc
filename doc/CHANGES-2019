@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4323 2019/10/12 20:01:09 he Exp $
+$NetBSD: CHANGES-2019,v 1.4324 2019/10/12 20:53:56 he Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6946,3 +6946,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/xfce4-dict to 0.8.3 [gutteridge 2019-10-12]
 	Added print/foliate version 1.5.3 [fox 2019-10-12]
 	Updated lang/smlnj11072 to 110.72nb1 [he 2019-10-12]
+	Updated lang/smlnj to 110.73nb3 [he 2019-10-12]
