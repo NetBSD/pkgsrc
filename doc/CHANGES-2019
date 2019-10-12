@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4320 2019/10/12 10:51:18 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.4321 2019/10/12 14:07:06 fox Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6944,3 +6944,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed textproc/dbtoepub successor textproc/docbook-xsl [wiz 2019-10-12]
 	Updated lang/sbcl to 1.5.7nb1 [he 2019-10-12]
 	Updated textproc/xfce4-dict to 0.8.3 [gutteridge 2019-10-12]
+	Added print/foliate version 1.5.3 [fox 2019-10-12]
