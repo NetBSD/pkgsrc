@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2018/07/04 12:45:57 wen Exp $
+# $NetBSD: Makefile,v 1.24 2019/10/12 20:05:59 rillig Exp $
 
 DISTNAME=		yabasic-2.79.2
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		http://www.yabasic.de/download/
 
@@ -9,16 +10,15 @@ HOMEPAGE=		http://www.yabasic.de/
 COMMENT=		Yet another Basic for Unix and Windows
 LICENSE=		artistic OR gnu-gpl-v2
 
-GNU_CONFIGURE=		YES
-USE_NCURSES=		YES
-
-INSTALLATION_DIRS+=	share/doc/html/yabasic
+GNU_CONFIGURE=		yes
+USE_NCURSES=		yes
+AUTO_MKDIRS=		yes
 
 TEST_TARGET=		check
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/yabasic.htm \
-		${DESTDIR}${PREFIX}/share/doc/html/yabasic
+		${DESTDIR}${PREFIX}/share/doc/yabasic
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
