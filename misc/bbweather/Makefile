@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2019/08/11 13:21:54 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2019/10/12 20:23:07 rillig Exp $
 #
 
 DISTNAME=	bbweather-0.6.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	misc
 MASTER_SITES=	http://www.netmeister.org/apps/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,6 +17,7 @@ GNU_CONFIGURE=		YES
 REPLACE_PERL=		GrabWeather
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gunzip perl:run
+MAKE_FLAGS+=		docdir=${PREFIX}/share/doc/${PKGBASE}
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 && ${GUNZIP_CMD} GrabWeather.1.gz
