@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.19 2019/10/07 09:28:13 prlw1 Exp $
+# $NetBSD: url2pkg.py,v 1.20 2019/10/12 17:28:44 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -47,33 +47,38 @@ import re
 import subprocess
 import sys
 from pathlib import Path
-from typing import Callable, Dict, List, Optional, Sequence, Tuple, Union
+from typing import Any, Callable, Dict, List, NamedTuple, Optional, Tuple, Union
 
 
-class Var:
+class Var(NamedTuple):
     """ An abstract variable assignment for the package Makefile. """
-
-    def __init__(self, name: str, op: str, value: str):
-        self.name = name
-        self.op = op
-        self.value = value
+    name: str
+    op: str
+    value: str
 
 
-class Varassign:
+class Varassign(NamedTuple):
     """ A variable assignment including layout information. """
-
-    def __init__(self, index: int, varname: str, op: str, indent: str,
-                 value: str, space_after_value: str, comment: str):
-        self.index = index
-        self.varname = varname
-        self.op = op
-        self.indent = indent
-        self.value = value
-        self.space_after_value = space_after_value
-        self.comment = comment
+    index: int
+    varname: str
+    op: str
+    indent: str
+    value: str
+    space_after_value: str
+    comment: str
 
 
 class Url2Pkg:
+    make: str
+    libdir: str
+    perl5: str
+    pkgsrcdir: Union[Path, Any]
+    pythonbin: str
+    editor: str
+    pkgdir: Union[Path, Any]
+    out: Any
+    err: Any
+    verbose: bool
 
     def __init__(self):
         self.make = os.getenv('MAKE') or '@MAKE@'
@@ -116,6 +121,7 @@ class Lines:
     A list of lines with high-level methods for manipulating variable
     assignments.
     """
+    lines: List[str]
 
     def __init__(self, *lines: str) -> None:
         self.lines = []
@@ -123,10 +129,10 @@ class Lines:
             self.add(line)
 
     @classmethod
-    def read_from(cls, src: Path) -> 'Lines':
+    def read_from(cls, src: Union[Path, Any]) -> 'Lines':
         return Lines(*src.read_text().splitlines())
 
-    def write_to(self, dst: Path):
+    def write_to(self, dst: Union[Path, Any]):
         tmp = dst.with_name(f'{dst.name}.tmp')
         with tmp.open('w') as f:
             f.writelines(line + '\n' for line in self.lines)
@@ -169,7 +175,7 @@ class Lines:
                 return i
         return -1
 
-    def add(self, *lines: Sequence[str]):
+    def add(self, *lines: str):
         for line in lines:
             assert type(line) == str, type(line)
             self.lines.append(line)
@@ -233,6 +239,21 @@ class Lines:
 
 class Generator:
     """ Generates the initial package Makefile. """
+    url: str
+    master_sites: str
+    distfile: str
+    homepage: str
+    extract_sufx: str
+    categories: str
+    github_project: str
+    github_tag: str
+    github_release: str
+    dist_subdir: str
+    pkgname_prefix: str
+    pkgname_transform: str
+    maintainer: str
+    distname: str
+    pkgname: str
 
     def __init__(self, url: str) -> None:
         self.url = url
@@ -467,71 +488,91 @@ class Adjuster:
     adjust_* methods of this class inspect the extracted files
     and adjust the variable definitions in the package Makefile.
     """
+    up: Url2Pkg
+    url: str
+    initial_lines: Lines
+
+    # the absolute pathname to the working directory, containing
+    # the extracted distfiles.
+    abs_wrkdir: Union[Path, Any]
+
+    # the absolute pathname to a subdirectory of abs_wrkdir, typically
+    # containing package-provided Makefiles or configure scripts.
+    abs_wrksrc: Union[Path, Any]
+
+    # the regular files and directories relative to abs_wrksrc.
+    wrksrc_files: List[str]
+    wrksrc_dirs: List[str]
+
+    """
+    The following variables may be set by the adjust_* subroutines and
+    will later appear in the package Makefile:
+    """
+
+    # categories for the package, in addition to the usual
+    # parent directory.
+    categories: List[str]
+
+    # the dependencies of the package, in the form
+    # "package>=version:../../category/package".
+    depends: List[str]
+    build_depends: List[str]
+    test_depends: List[str]
+
+    # .include, interleaved with BUILDLINK3_API_DEPENDS.
+    # These lines are added at the bottom of the Makefile.
+    bl3_lines: List[str]
+
+    # a list of pathnames relative to the package directory.
+    # All these files will be included at the bottom of the Makefile.
+    includes: List[str]
+
+    # a list of variable assignments that will make up the fourth
+    # paragraph of the package Makefile, where the build configuration
+    # takes place.
+    build_vars: List[Var]
+
+    # similar to the @build_vars, but separated by an empty line in
+    # the Makefile, thereby forming the fifth paragraph.
+    extra_vars: List[Var]
+
+    # variables from the initial Makefile whose values are replaced
+    update_vars: Dict[str, str]
+
+    # these are inserted below the second paragraph in the Makefile.
+    todos: List[str]
+
+    # the package name is based on DISTNAME and modified by
+    # pkgname_prefix and pkgname_transform.
+    pkgname_prefix: str  # example: ${PYPKGPREFIX}-
+    pkgname_transform: str  # example: :S,-v,-,
+
+    # all lines of the package Makefile, for direct modification.
+    makefile_lines: Lines
+
+    regenerate_distinfo: bool
 
     def __init__(self, up: Url2Pkg, url: str, initial_lines: Lines):
-
         self.up = up
         self.url = url
         self.initial_lines = initial_lines
-
-        # the absolute pathname to the working directory, containing
-        # the extracted distfiles.
         self.abs_wrkdir = Path('')
-
-        # the absolute pathname to a subdirectory of abs_wrkdir, typically
-        # containing package-provided Makefiles or configure scripts.
         self.abs_wrksrc = Path('')
-
-        # the regular files and directories relative to abs_wrksrc.
-        self.wrksrc_files: List[str] = []
-        self.wrksrc_dirs: List[str] = []
-
-        """
-        The following variables may be set by the adjust_* subroutines and
-        will later appear in the package Makefile:
-        """
-
-        # categories for the package, in addition to the usual
-        # parent directory.
-        self.categories: List[str] = []
-
-        # the dependencies of the package, in the form
-        # "package>=version:../../category/package".
-        self.depends: List[str] = []
-        self.build_depends: List[str] = []
-        self.test_depends: List[str] = []
-
-        # .include, interleaved with BUILDLINK3_API_DEPENDS.
-        # These lines are added at the bottom of the Makefile.
-        self.bl3_lines: List[str] = []
-
-        # a list of pathnames relative to the package directory.
-        # All these files will be included at the bottom of the Makefile.
-        self.includes: List[str] = []
-
-        # a list of variable assignments that will make up the fourth
-        # paragraph of the package Makefile, where the build configuration
-        # takes place.
-        self.build_vars: List[Var] = []
-
-        # similar to the @build_vars, but separated by an empty line in
-        # the Makefile, thereby forming the fifth paragraph.
-        self.extra_vars: List[Var] = []
-
-        # variables from the initial Makefile whose values are replaced
-        self.update_vars: Dict[str, str] = {}
-
-        # these are inserted below the second paragraph in the Makefile.
-        self.todos: List[str] = []
-
-        # the package name is based on DISTNAME and modified by
-        # pkgname_prefix and pkgname_transform.
-        self.pkgname_prefix = ''  # example: ${PYPKGPREFIX}-
-        self.pkgname_transform = ''  # example: :S,-v,-,
-
-        # all lines of the package Makefile, for direct modification.
+        self.wrksrc_files = []
+        self.wrksrc_dirs = []
+        self.categories = []
+        self.depends = []
+        self.build_depends = []
+        self.test_depends = []
+        self.bl3_lines = []
+        self.includes = []
+        self.build_vars = []
+        self.extra_vars = []
+        self.update_vars = {}
+        self.todos = []
+        self.pkgname_prefix = ''
+        self.pkgname_transform = ''
         self.makefile_lines = Lines()
-
         self.regenerate_distinfo = False
 
     def add_dependency(self, kind: str, pkgbase: str, constraint: str, dep_dir: str) -> None:
@@ -572,7 +613,7 @@ class Adjuster:
         else:
             self.todos.append(f'dependency {kind} {value}')
 
-    def read_dependencies(self, cmd: str, env: Dict[str, str], cwd: str, pkgname_prefix: str) -> None:
+    def read_dependencies(self, cmd: str, env: Dict[str, str], cwd: Union[Path, Any], pkgname_prefix: str) -> None:
         effective_env = dict(os.environ)
         effective_env.update(env)
 
@@ -788,7 +829,7 @@ class Adjuster:
         Sets abs_wrksrc depending on abs_wrkdir and the files found there.
         """
 
-        def relevant(f: Path) -> bool:
+        def relevant(f: Union[Path, Any]) -> bool:
             return f.is_dir() and not f.name.startswith('.')
 
         subdirs = [f.name for f in self.abs_wrkdir.glob('*') if relevant(f)]
@@ -894,7 +935,7 @@ class Adjuster:
 
     def adjust(self):
 
-        def scan(basedir: Path, only: Callable[[Path], bool]) -> List[str]:
+        def scan(basedir: Union[Path, Any], only: Callable[[Path], bool]) -> List[str]:
             relevant = (f for f in basedir.rglob('*') if only(f))
             relative = (str(f.relative_to(basedir)) for f in relevant)
             return list(sorted((f for f in relative if not f.startswith('.'))))
