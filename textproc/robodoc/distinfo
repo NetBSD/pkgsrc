@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/10/12 21:17:09 rillig Exp $
+$NetBSD: distinfo,v 1.6 2019/10/12 21:25:02 rillig Exp $
 
-SHA1 (robodoc-3.2.3.tar.gz) = e082883583ba9f8e4cbe82233caa3c9cdd3bb530
-RMD160 (robodoc-3.2.3.tar.gz) = a1304bd94d069aac603679ed053662dec10d4139
-SHA512 (robodoc-3.2.3.tar.gz) = 0c7bef1d06b5ee12d8e256e5c9b37dbaa8092fe3e25f6111545e0f25080463b20b167d78b67e75f398e8b09e7d870a16a6e1afd12f41dcfbd95f6edaf91d8579
-Size (robodoc-3.2.3.tar.gz) = 105278 bytes
-SHA1 (patch-aa) = d9a26a78b8df348b965a15f88024dcdcd41d65a8
-SHA1 (patch-ab) = 90f3848a15b3edda2dfa2a9ad915cbd99fc5ed3b
-SHA1 (patch-ac) = e995ca907d59c1c1eb5273a5374da7c65de63c32
-SHA1 (patch-ad) = 49587e2c14bf31368b175f849a3aa3009d55c242
+SHA1 (robodoc-4.99.6.tar.gz) = 34bc4a2971374d940e25ce914954d59675f44107
+RMD160 (robodoc-4.99.6.tar.gz) = 8d08cfcdfd7983550b19d8a785bbd0cd6443be63
+SHA512 (robodoc-4.99.6.tar.gz) = e6f619cc091c614ae9531bc8ea991d2184bf72d0f31e503281afc3114cd1c3f423ecb3d9dab780564cc832cbf1484e32e04d0ea9d137afdd9cd57f26903835b2
+Size (robodoc-4.99.6.tar.gz) = 210861 bytes
