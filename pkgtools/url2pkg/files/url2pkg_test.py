@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.18 2019/10/07 09:28:13 prlw1 Exp $
+# $NetBSD: url2pkg_test.py,v 1.19 2019/10/12 17:28:44 rillig Exp $
 
 import pytest
 from url2pkg import *
@@ -43,7 +43,7 @@ def str_vars(vars: List[Var]) -> List[str]:
     return list(map(to_string, vars))
 
 
-def str_varassigns(varassigns: Sequence[Varassign]) -> List[str]:
+def str_varassigns(varassigns: List[Varassign]) -> List[str]:
     def to_string(v: Varassign) -> str:
         return f'{v.varname}{v.op}{v.indent}' \
                f'{v.value}{v.space_after_value}{v.comment}'
