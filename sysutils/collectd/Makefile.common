@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2018/12/15 21:12:23 wiz Exp $
+# $NetBSD: Makefile.common,v 1.19 2019/10/12 12:14:37 maya Exp $
 #
 # used by sysutils/collectd/Makefile
 # used by sysutils/collectd-amqp/Makefile
@@ -70,6 +70,8 @@ CONFIGURE_ARGS+=	--with-ltdl-lib=${BUILDLINK_PREFIX.libltdl}/lib
 CONFIGURE_ARGS+=	--with-ltdl-include=${BUILDLINK_PREFIX.libltdl}/include
 
 CONFIGURE_ARGS.NetBSD+=	ac_cv_func_getfsstat=no
+# aarch64 accidentally had this function for a bit.
+CONFIGURE_ARGS.NetBSD+=	c_cv_have_htonll=no
 
 CPPFLAGS.SunOS+=	-DSOLARIS2=${OS_VERSION:C/5.//}
 
