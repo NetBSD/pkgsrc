@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2018/08/28 21:25:15 manu Exp $
+# $NetBSD: Makefile,v 1.22 2019/10/12 20:09:24 rillig Exp $
 #
 
 DISTNAME=	hypermail-2.3.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail www
 MASTER_SITES=	${HOMEPAGE}
 MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=hypermail/}
@@ -21,7 +21,7 @@ FORTIFY_SUPPORTED=	no
 LDFLAGS+=		-liconv
 
 CONFIGURE_ARGS+=	--with-gdbm=${BUILDLINK_PREFIX.gdbm}
-CONFIGURE_ARGS+=	--with-htmldir=${DESTDIR}${PREFIX}/share/doc/html/hypermail
+CONFIGURE_ARGS+=	--with-htmldir=${DESTDIR}${PREFIX}/share/doc/hypermail
 
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \
 			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
