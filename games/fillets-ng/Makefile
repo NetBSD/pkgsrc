@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2019/09/07 14:49:58 nia Exp $
+# $NetBSD: Makefile,v 1.38 2019/10/12 20:00:30 rillig Exp $
 #
 
 DISTNAME=	fillets-ng-1.0.1
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fillets/}
 
@@ -25,7 +26,7 @@ SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure
 SUBST_FILES.man=	fillets.6
 SUBST_MESSAGE.man=	Fixing documentation path in the manual page.
-SUBST_SED.man=		"s,/usr/share/doc/fillets-ng/html/manual.html,${PREFIX}/share/doc/html/fillets-ng/manual.html,"
+SUBST_SED.man=		-e "s,/usr/share/doc/fillets-ng/html/manual.html,${PREFIX}/share/doc/fillets-ng/manual.html,"
 
 LUA_VERSIONS_ACCEPTED=	51
 
