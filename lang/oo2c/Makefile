@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2019/08/11 13:21:22 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2019/10/12 20:03:36 rillig Exp $
 
 DISTNAME=		oo2c_${BITS}-2.0.11
 PKGNAME=		oo2c-2.0.11
-PKGREVISION=		17
+PKGREVISION=		18
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ooc/}
 EXTRACT_SUFX=		.tar.bz2
@@ -44,7 +44,7 @@ BITS=64
 .endfor
 
 post-install:
-	${LN} -sf ${PREFIX}/lib/oo2c/oocdoc/html ${DESTDIR}${PREFIX}/share/doc/html/oo2c
+	${LN} -sf ${PREFIX}/lib/oo2c/oocdoc/html ${DESTDIR}${PREFIX}/share/doc/oo2c
 	${LN} -sf ${PREFIX}/lib/oo2c/emacs ${DESTDIR}${PREFIX}/share/emacs/site-lisp/oo2c
 
 .include "../../devel/boehm-gc/buildlink3.mk"
