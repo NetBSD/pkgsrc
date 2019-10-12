@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19335 2019/10/10 14:27:39 wiz Exp $
+$NetBSD: TODO,v 1.19336 2019/10/12 21:26:09 rillig Exp $
 
 Suggested new packages
 ======================
@@ -1184,7 +1184,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rexx-regina-3.9.0
 	o rio500-0.8.1
 	o ripgrep-11.0.1
-	o robodoc-4.99.6
 	o robotfindskitten-2.7182818.701
 	o root-6.08.02
 	o root-tail-1.2
