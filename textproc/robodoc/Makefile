@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2019/10/12 21:17:09 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2019/10/12 21:25:02 rillig Exp $
 #
 
-DISTNAME=	robodoc-3.2.3
-PKGREVISION=	2
+DISTNAME=	robodoc-4.99.6
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=robodoc/}
 
@@ -19,5 +18,6 @@ SUBST_SED.gm4+=		-e 's,@M4@,${TOOLS_M4},g'
 SUBST_STAGE.gm4=	pre-configure
 
 MAKE_FILE=	makefile
+MAKE_FLAGS+=	docdir=${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../mk/bsd.pkg.mk"
