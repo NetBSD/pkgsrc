@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:14:20 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/10/12 20:51:48 rillig Exp $
 share/doc/bash/article.ps.gz
 share/doc/bash/article.txt
+share/doc/bash/bash.html
+share/doc/bash/bashref.html
 share/doc/bash/bashref.ps.gz
-share/doc/html/bash/bash.html
-share/doc/html/bash/bashref.html
