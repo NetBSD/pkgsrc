@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2018/05/19 16:26:16 schmonz Exp $
-share/doc/html/pymsgauth/pymsgauth.html
+@comment $NetBSD: PLIST,v 1.5 2019/10/12 20:12:47 rillig Exp $
 share/doc/pymsgauth/BUGS
 share/doc/pymsgauth/CHANGELOG
 share/doc/pymsgauth/COPYING
+share/doc/pymsgauth/pymsgauth.html
 share/doc/pymsgauth/pymsgauth.txt
 share/examples/pymsgauth/pymsgauthrc-example
 share/pymsgauth/ConfParser.py
