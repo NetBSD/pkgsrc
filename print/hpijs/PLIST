@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:11:56 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/10/12 20:41:11 rillig Exp $
 bin/hpijs
-share/doc/html/hpijs/gs_hpijs.png
-share/doc/html/hpijs/hpijs_readme.html
+share/doc/hpijs/gs_hpijs.png
+share/doc/hpijs/hpijs_readme.html
 share/ppd/HP-2000C-hpijs.ppd.gz
 share/ppd/HP-2500C-hpijs.ppd.gz
 share/ppd/HP-2500CM-hpijs.ppd.gz
