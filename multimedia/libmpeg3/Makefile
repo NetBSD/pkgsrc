@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2018/12/09 21:05:33 adam Exp $
+# $NetBSD: Makefile,v 1.22 2019/10/12 20:26:43 rillig Exp $
 #
 
 DISTNAME=	libmpeg3-1.8-src
 PKGNAME=	${DISTNAME:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	devel audio graphics multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=heroines/}
 EXTRACT_SUFX=	.tar.bz2
@@ -42,7 +43,7 @@ VINSTHDRS=	idct.h mpeg3video.h slice.h
 INSTBINS=	mpeg3cat mpeg3peek mpeg3toc mpeg3dump
 
 INSTALLATION_DIRS=	bin include/mpeg3/audio include/mpeg3/video lib \
-			share/doc/html/libmpeg3
+			share/doc/libmpeg3
 
 do-install:
 	for f in ${INSTBINS}; do \
@@ -61,7 +62,7 @@ do-install:
 	done
 	${INSTALL_LIB} ${WRKSRC}/work/libmpeg3.a ${DESTDIR}${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/docs/index.html \
-		${DESTDIR}${PREFIX}/share/doc/html/libmpeg3
+		${DESTDIR}${PREFIX}/share/doc/libmpeg3
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
