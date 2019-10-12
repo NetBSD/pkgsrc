@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1057 2019/10/08 18:39:43 rhialto Exp $
+# $NetBSD: Makefile,v 1.1058 2019/10/12 08:57:12 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -878,7 +878,6 @@ SUBDIR+=	py-tablib
 SUBDIR+=	py-tabulate
 SUBDIR+=	py-text-unidecode
 SUBDIR+=	py-textile
-SUBDIR+=	py-tinycss
 SUBDIR+=	py-tinycss2
 SUBDIR+=	py-toml
 SUBDIR+=	py-ujson
