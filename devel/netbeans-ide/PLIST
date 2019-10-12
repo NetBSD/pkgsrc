@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2017/09/15 15:39:26 asau Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/10/12 19:37:47 rillig Exp $
 bin/netbeans
-share/doc/html/netbeans-ide/CREDITS.html
-share/doc/html/netbeans-ide/README.html
-share/doc/html/netbeans-ide/netbeans.css
+share/doc/netbeans-ide/CREDITS.html
+share/doc/netbeans-ide/README.html
+share/doc/netbeans-ide/netbeans.css
 share/netbeans-ide/CREDITS.html
 share/netbeans-ide/LICENSE.txt
 share/netbeans-ide/README.html
