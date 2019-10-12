@@ -1,5 +1,0 @@
-dbtoepub is an alpha-quality reference implementation to convert DocBook
-documents into the .epub format, an open standard for reflowable digital books
-and publications (e-books).
-
-The .pub format is defined by the IDPF at http://ww.idpf.org
