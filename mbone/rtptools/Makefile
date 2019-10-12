@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2017/05/06 08:22:23 mef Exp $
+# $NetBSD: Makefile,v 1.12 2019/10/12 20:14:08 rillig Exp $
 #
 
 DISTNAME=		rtptools-1.21
+PKGREVISION=		1
 CATEGORIES=		mbone
 MASTER_SITES=		http://www.cs.columbia.edu/IRT/software/rtptools/download/
 
@@ -13,7 +14,7 @@ COMMENT=		Tools for processing RTP data
 GNU_CONFIGURE=		yes
 CPPFLAGS+=		-Dunix
 
-HTMLDIR=	${PREFIX}/share/doc/html/rtptools
+HTMLDIR=	${PREFIX}/share/doc/rtptools
 EGDIR=		${PREFIX}/share/examples/rtptools
 
 post-install:
