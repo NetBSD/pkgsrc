@@ -1,0 +1,29 @@
+$NetBSD: patch-src_runtime_Config.ppc-netbsd,v 1.1 2019/10/12 09:47:40 he Exp $
+
+Use Config.generic-netbsd, don't override OS_LIBS, but add to it.
+
+--- src/runtime/Config.ppc-netbsd.orig	2019-09-28 09:49:01.000000000 +0000
++++ src/runtime/Config.ppc-netbsd
+@@ -9,17 +9,15 @@
+ # provided with absolutely no warranty. See the COPYING and CREDITS
+ # files for more information.
+ 
++include Config.generic-netbsd
++
+ LINKFLAGS += -dynamic -export-dynamic
+ CFLAGS =  -g -Wall -O2
+ 
+-ASSEM_SRC = ppc-assem.S ldso-stubs.S
+-ARCH_SRC = ppc-arch.c
++ASSEM_SRC += ppc-assem.S
++ARCH_SRC += ppc-arch.c
+ 
+-OS_SRC = bsd-os.c undefineds.c ppc-bsd-os.c
+-OS_LIBS = # -ldl
+-ifdef LISP_FEATURE_SB_CORE_COMPRESSION
+-  OS_LIBS += -lz
+-endif
++OS_SRC += undefineds.c ppc-bsd-os.c
+ 
+ GC_SRC = fullcgc.c gencgc.c traceroot.c
+ 

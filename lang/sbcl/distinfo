@@ -1,8 +1,20 @@
-$NetBSD: distinfo,v 1.60 2019/10/01 22:15:57 rjs Exp $
+$NetBSD: distinfo,v 1.61 2019/10/12 09:47:39 he Exp $
 
 SHA1 (sbcl-1.5.7-source.tar.bz2) = b16ff3a0c0638bb685ff5f93106553c03a68d978
 RMD160 (sbcl-1.5.7-source.tar.bz2) = 850176b451d83daf52e7b0d2f6095015c5122494
 SHA512 (sbcl-1.5.7-source.tar.bz2) = 8dde1b0d400f93fed085f6b6c33b057c3dec4dfa83afb7431384add6628cb2f910cba006b2579cea547685aeb79fade5ad576b0a42e4f7e1f6c0c3f26acf226e
 Size (sbcl-1.5.7-source.tar.bz2) = 6438048 bytes
 SHA1 (patch-ab) = b087921f7317523fd78396518dfd2cb1c8e6d5f9
+SHA1 (patch-make-genesis-2.sh) = 5d61f2662795c93aabfaa18ef686725d2ed9384a
+SHA1 (patch-make-host-1.sh) = 7ecb23bf3cd4ee091a279503668a539a533b1196
+SHA1 (patch-make-host-2.sh) = c0ac2f16a670a6db2ff69b863d1f990f7ba0bef0
+SHA1 (patch-make-target-1.sh) = 9064623b0cba2fc6869f3d29ea090d55b7bdaf17
+SHA1 (patch-make-target-2.sh) = 7b288c3c320adb89cefa78a2fc93223ea4b3b66f
 SHA1 (patch-slam.sh) = 3edb599272f8f4827b0f5edc5a67d134856ca269
+SHA1 (patch-src_runtime_Config.arm-netbsd) = 4282033c32b3ed533cd64e480827e865deaaa2a2
+SHA1 (patch-src_runtime_Config.generic-netbsd) = 2720f0a9417395751278caa2df7ef9c9c8c9e3e0
+SHA1 (patch-src_runtime_Config.ppc-netbsd) = 39851e2682d9bc4f7770769529dfc3b00664292f
+SHA1 (patch-src_runtime_Config.sparc-netbsd) = 73397cb6e064250f99e91bcd94d84db5d19a523d
+SHA1 (patch-src_runtime_Config.x86-64-netbsd) = 79d14015db51f61226b9e848d27f90e2538a84af
+SHA1 (patch-src_runtime_Config.x86-netbsd) = 019c69d928d5ed80a2b4862a82008f50465eeda7
+SHA1 (patch-src_runtime_run-program.c) = cc07799e5bbee2f827190e3b62fbca2f1d4528a3

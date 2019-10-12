@@ -1,0 +1,19 @@
+$NetBSD: patch-src_runtime_Config.arm-netbsd,v 1.1 2019/10/12 09:47:40 he Exp $
+
+Use Config.generic-netbsd, don't override OS_LIBS, but add to it.
+
+--- src/runtime/Config.arm-netbsd.orig	2019-09-28 09:49:01.000000000 +0000
++++ src/runtime/Config.arm-netbsd
+@@ -9,10 +9,10 @@
+ # provided with absolutely no warranty. See the COPYING and CREDITS
+ # files for more information.
+ 
++include Config.generic-netbsd
+ include Config.arm-bsd
+ 
+-ASSEM_SRC += ldso-stubs.S
+-OS_LIBS = -lutil -larm
++OS_LIBS += -larm
+ 
+ ifdef LISP_FEATURE_SB_THREAD
+   OS_LIBS += -lpthread -lrt
