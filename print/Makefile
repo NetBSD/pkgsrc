@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.747 2019/09/14 19:14:22 nia Exp $
+# $NetBSD: Makefile,v 1.748 2019/10/12 13:46:16 fox Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -50,6 +50,7 @@ SUBDIR+=	foomatic-ppds-cups
 SUBDIR+=	foomatic4-db
 SUBDIR+=	foomatic4-db-engine
 SUBDIR+=	foomatic4-filters
+SUBDIR+=	foliate
 SUBDIR+=	ghostscript
 SUBDIR+=	ghostscript-agpl
 SUBDIR+=	ghostscript-gpl
