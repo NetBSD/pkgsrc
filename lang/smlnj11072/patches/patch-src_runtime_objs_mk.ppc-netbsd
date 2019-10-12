@@ -1,0 +1,12 @@
+$NetBSD: patch-src_runtime_objs_mk.ppc-netbsd,v 1.1 2019/10/12 20:00:06 he Exp $
+
+Don't pass an empty RANLIB.
+
+--- ./src/runtime/objs/mk.ppc-netbsd.orig	2019-10-12 12:50:38.396269900 +0000
++++ ./src/runtime/objs/mk.ppc-netbsd
+@@ -22,4 +22,4 @@ VERSION =	v-ppc-netbsd
+ RUNTIME =	run.ppc-netbsd
+ 
+ all:
+-	($(MAKE) RUNTIME="$(RUNTIME)" MAKE="$(MAKE)" VERSION="$(VERSION)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" AS="$(AS)" AR="$(AR)" RANLIB="$(RANLIB)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" $(RUNTIME))
++	($(MAKE) RUNTIME="$(RUNTIME)" MAKE="$(MAKE)" VERSION="$(VERSION)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" AS="$(AS)" AR="$(AR)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" $(RUNTIME))

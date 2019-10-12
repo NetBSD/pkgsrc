@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2016/07/03 19:00:24 dholland Exp $
+# $NetBSD: Makefile.common,v 1.5 2019/10/12 20:00:06 he Exp $
 #
 # used by lang/smlnj/Makefile
 
@@ -40,6 +40,7 @@ BOX=		x86
 PLIST.nlffi=	yes
 .elif ${MACHINE_ARCH} == "powerpc"
 BOX=		ppc
+PLIST.nlffi=	yes
 .elif ${MACHINE_ARCH} == "sparc"
 BOX=		${MACHINE_ARCH}
 PLIST.nlffi=	yes
