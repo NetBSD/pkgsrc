@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2015/11/04 01:59:35 agc Exp $
+$NetBSD: distinfo,v 1.11 2019/10/12 21:14:22 rillig Exp $
 
 SHA1 (Isearch-1.47.01.tar.gz) = 86761d6055fdd7b954b7ac9d9fd3d0084d758e3f
 RMD160 (Isearch-1.47.01.tar.gz) = 2e7f4c21d8a2d3cb194823a881ee7315f88de66c
@@ -13,7 +13,7 @@ SHA1 (patch-Isearch-cgi_search__form.cxx) = 3a982ba916cb18519bcca9c2bcc32c0fdd56
 SHA1 (patch-aa) = 256004c217dfa107583784f7f7f1ab75280db4e1
 SHA1 (patch-ab) = 2c03c3a208021d9a935c568f4062615d485aa260
 SHA1 (patch-ac) = 57451c09eda372d70fae7ad7f9db8b31926e369b
-SHA1 (patch-ad) = 7f53e7dfb6c5e37d2c4f6cb12e087c678d07df25
+SHA1 (patch-ad) = ea37eccec52ae6d62f55625a12805998c8e1fe40
 SHA1 (patch-ae) = c74006de168ef0a653ae6a407ee8ee99b0c9f236
 SHA1 (patch-doctype_anzlic.cxx) = d9ee2469a5870245238f525794bd6b4ca0f7c166
 SHA1 (patch-doctype_anzmeta.cxx) = 673e181aebdd8cb1f207c04cfdd89ea040f7b418
