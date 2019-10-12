@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2019/10/10 12:38:40 fox Exp $
-bin/glances${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.2 2019/10/12 05:35:03 fox Exp $
+bin/glances-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -423,11 +423,10 @@ ${PYSITELIB}/glances/web_list.pyo
 ${PYSITELIB}/glances/webserver.py
 ${PYSITELIB}/glances/webserver.pyc
 ${PYSITELIB}/glances/webserver.pyo
-man/man1/glances${PYVERSSUFFIX}.1
-share/doc/glances${PYVERSSUFFIX}/AUTHORS
-share/doc/glances${PYVERSSUFFIX}/CONTRIBUTING.md
-share/doc/glances${PYVERSSUFFIX}/COPYING
-share/doc/glances${PYVERSSUFFIX}/NEWS.rst
-share/doc/glances${PYVERSSUFFIX}/README.rst
-share/doc/glances${PYVERSSUFFIX}/glances.conf
-share/examples/glances${PYVERSSUFFIX}/glances.conf
+man/man1/glances-${PYVERSSUFFIX}.1
+share/doc/glances-${PYVERSSUFFIX}/AUTHORS
+share/doc/glances-${PYVERSSUFFIX}/CONTRIBUTING.md
+share/doc/glances-${PYVERSSUFFIX}/COPYING
+share/doc/glances-${PYVERSSUFFIX}/NEWS.rst
+share/doc/glances-${PYVERSSUFFIX}/README.rst
+share/doc/glances-${PYVERSSUFFIX}/glances.conf

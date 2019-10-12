@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/10/10 12:38:40 fox Exp $
+$NetBSD: distinfo,v 1.2 2019/10/12 05:35:03 fox Exp $
 
 SHA1 (Glances-3.1.2.tar.gz) = 173a5553336a91ae84c9017988ad3713a13cec08
 RMD160 (Glances-3.1.2.tar.gz) = ecf801eee82a575b06edfaf08a4ba48d77a8d092
 SHA512 (Glances-3.1.2.tar.gz) = 3ccf82b0b5742c07a044112cedf10b56a6e615a4e01e18c7b18fa426f922119d7623e4c0c6cd92fb6c54f82ef79718eb16a187a9e4c2d4484ad8e41a89eccfc6
 Size (Glances-3.1.2.tar.gz) = 6713025 bytes
-SHA1 (patch-setup.py) = d3b2da65fac43a4ef2471d0d5bde42a2852a1457
