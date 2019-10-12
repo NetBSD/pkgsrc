@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/01/24 07:27:46 mef Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/10/12 21:54:19 rillig Exp $
 bin/advi
 bin/advi.byt
 lib/ocaml/stublibs/dlladvi.so
@@ -111,18 +111,6 @@ share/doc/advi/scratch_draw_splash.dvi
 share/doc/advi/scratch_write_splash.dvi
 share/doc/advi/screen-shots.html
 share/doc/advi/splash.dvi
-share/doc/html/advi/advilogo.anim.gif
-share/doc/html/advi/advilogo.gif
-share/doc/html/advi/bar.gif
-share/doc/html/advi/faq.html
-share/doc/html/advi/index.html
-share/doc/html/advi/inria.gif
-share/doc/html/advi/manual.dvi
-share/doc/html/advi/manual.html
-share/doc/html/advi/manual.pdf
-share/doc/html/advi/manual.ps
-share/doc/html/advi/manualxxx.html
-share/doc/html/advi/screen-shots.html
 share/texmf-dist/tex/latex/advi/advi-annot.sty
 share/texmf-dist/tex/latex/advi/advi-graphicx.sty
 share/texmf-dist/tex/latex/advi/advi-slides.sty
