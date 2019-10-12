@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:03:37 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/10/12 20:03:36 rillig Exp $
 bin/oo2c
 bin/oob
 bin/oobacktrace
@@ -608,5 +608,5 @@ man/man1/oo2c.1
 man/man1/oob.1
 man/man1/ooef.1
 man/man1/oowhereis.1
-share/doc/html/oo2c
+share/doc/oo2c
 share/emacs/site-lisp/oo2c
