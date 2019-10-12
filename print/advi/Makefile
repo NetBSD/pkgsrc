@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.124 2019/07/21 22:25:36 wiz Exp $
+# $NetBSD: Makefile,v 1.125 2019/10/12 21:54:19 rillig Exp $
 
 DISTNAME=		advi-1.10.2
-PKGREVISION=		40
+PKGREVISION=		41
 CATEGORIES=		print
 MASTER_SITES=		http://gallium.inria.fr/advi/
 
@@ -38,7 +38,7 @@ SUBST_FILES.gs=		src/config.ml.in
 SUBST_SED.gs=		-e 's,@GS@,gs,'
 SUBST_MESSAGE.gs=	Fixing hard-coded path to gs
 
-INSTALLATION_DIRS=	share/doc/advi share/doc/html/advi
+INSTALLATION_DIRS=	share/doc/advi
 
 post-extract:
 	${CP} ${WRKSRC}/tex/*.eps ${WRKSRC}/doc
@@ -51,8 +51,7 @@ post-install:
 	cd ${WRKSRC}/doc.orig && ${INSTALL_DATA} *.dvi \
 		${DESTDIR}${PREFIX}/share/doc/advi
 	cd ${WRKSRC}/doc && ${INSTALL_DATA} *.html *.gif \
-		${DESTDIR}${PREFIX}/share/doc/html/advi
-	cd ${DESTDIR}${PREFIX}/share/doc/html/advi && ${LN} -sf ../../advi/manual.* .
+		${DESTDIR}${PREFIX}/share/doc/advi
 
 .include "../../print/kpathsea/texmf.mk"
 .include "../../lang/ocaml/buildlink3.mk"
