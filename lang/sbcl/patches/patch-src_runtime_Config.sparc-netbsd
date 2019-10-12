@@ -1,0 +1,31 @@
+$NetBSD: patch-src_runtime_Config.sparc-netbsd,v 1.1 2019/10/12 09:47:40 he Exp $
+
+Use Config.generic-netbsd, don't override OS_LIBS, but add to it.
+
+--- src/runtime/Config.sparc-netbsd.orig	2019-09-28 09:49:01.000000000 +0000
++++ src/runtime/Config.sparc-netbsd
+@@ -9,19 +9,17 @@
+ # provided with absolutely no warranty. See the COPYING and CREDITS
+ # files for more information.
+ 
++include Config.generic-netbsd
++
+ CC = gcc
+ CFLAGS += -g -Wall -O2
+ LINKFLAGS += -v
+ NM = nm -t x -p
+ 
+-ASSEM_SRC = sparc-assem.S ldso-stubs.S
+-ARCH_SRC = sparc-arch.c undefineds.c
++ASSEM_SRC += sparc-assem.S
++ARCH_SRC += sparc-arch.c undefineds.c
+ 
+-OS_SRC = bsd-os.c sparc-bsd-os.c
+-OS_LIBS = # -ldl
+-ifdef LISP_FEATURE_SB_CORE_COMPRESSION
+-  OS_LIBS += -lz
+-endif
++OS_SRC += sparc-bsd-os.c
+ 
+ ifdef LISP_FEATURE_GENCGC
+   GC_SRC = fullcgc.c gencgc.c traceroot.c
