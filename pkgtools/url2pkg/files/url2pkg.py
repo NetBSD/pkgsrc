@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.20 2019/10/12 17:28:44 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.21 2019/10/12 17:38:16 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -68,7 +68,7 @@ class Varassign(NamedTuple):
     comment: str
 
 
-class Url2Pkg:
+class Globals:
     make: str
     libdir: str
     perl5: str
@@ -459,8 +459,8 @@ class Generator:
         self.adjust_everything_else()
         return self.generate_lines()
 
-    def generate_package(self, up: Url2Pkg) -> Lines:
-        pkgdir = up.pkgdir
+    def generate_package(self, g: Globals) -> Lines:
+        pkgdir = g.pkgdir
         makefile = pkgdir / 'Makefile'
         descr = pkgdir / 'DESCR'
         plist = pkgdir / 'PLIST'
@@ -475,9 +475,9 @@ class Generator:
         plist.is_file() or Lines('@comment $''NetBSD$').write_to(plist)
         descr.is_file() or Lines().write_to(descr)
 
-        subprocess.check_call([up.editor, makefile])
+        subprocess.check_call([g.editor, makefile])
 
-        up.bmake('clean', 'distinfo', 'extract')
+        g.bmake('clean', 'distinfo', 'extract')
 
         return initial_lines
 
@@ -488,7 +488,7 @@ class Adjuster:
     adjust_* methods of this class inspect the extracted files
     and adjust the variable definitions in the package Makefile.
     """
-    up: Url2Pkg
+    g: Globals
     url: str
     initial_lines: Lines
 
@@ -552,8 +552,8 @@ class Adjuster:
 
     regenerate_distinfo: bool
 
-    def __init__(self, up: Url2Pkg, url: str, initial_lines: Lines):
-        self.up = up
+    def __init__(self, g: Globals, url: str, initial_lines: Lines):
+        self.g = g
         self.url = url
         self.initial_lines = initial_lines
         self.abs_wrkdir = Path('')
@@ -578,7 +578,7 @@ class Adjuster:
     def add_dependency(self, kind: str, pkgbase: str, constraint: str, dep_dir: str) -> None:
         """ add_dependency('DEPENDS', 'package', '>=1', '../../category/package') """
 
-        self.up.debug('add_dependency: {0} {1} {2} {3}', kind, pkgbase, constraint, dep_dir)
+        self.g.debug('add_dependency: {0} {1} {2} {3}', kind, pkgbase, constraint, dep_dir)
 
         def bl3_identifier():
             try:
@@ -617,7 +617,7 @@ class Adjuster:
         effective_env = dict(os.environ)
         effective_env.update(env)
 
-        self.up.debug('reading dependencies: cd {0} && env {1} {2}', str(cwd), env, cmd)
+        self.g.debug('reading dependencies: cd {0} && env {1} {2}', str(cwd), env, cmd)
         output: bytes = subprocess.check_output(args=cmd, shell=True, env=effective_env, cwd=cwd)
 
         dep_lines: List[Tuple[str, str, str, str]] = []
@@ -635,17 +635,17 @@ class Adjuster:
                 continue
 
             if line != '':
-                self.up.debug('unknown dependency line: {0}', line)
+                self.g.debug('unknown dependency line: {0}', line)
 
         for dep_line in dep_lines:
             kind, pkgbase, constraint, dep_dir = dep_line
 
             if dep_dir == '' and pkgname_prefix != '':
-                dep_dir = self.up.find_package(pkgname_prefix + pkgbase)
+                dep_dir = self.g.find_package(pkgname_prefix + pkgbase)
                 if dep_dir != '':
                     pkgbase = pkgname_prefix + pkgbase
             if dep_dir == '':
-                dep_dir = self.up.find_package(pkgbase)
+                dep_dir = self.g.find_package(pkgbase)
 
             self.add_dependency(kind, pkgbase, constraint, dep_dir)
 
@@ -713,7 +713,7 @@ class Adjuster:
         # Example packages:
         # devel/p5-Algorithm-CheckDigits
 
-        cmd = f'{self.up.perl5} -I{self.up.libdir} -I. Build.PL'
+        cmd = f'{self.g.perl5} -I{self.g.libdir} -I. Build.PL'
         self.read_dependencies(cmd, {}, self.abs_wrksrc, '')
         self.build_vars.append(Var('PERL5_MODULE_TYPE', '=', 'Module::Build'))
 
@@ -724,10 +724,10 @@ class Adjuster:
         # www/p5-HTML-Quoted (dependency with version number)
 
         # To avoid fix_up_makefile error for p5-HTML-Quoted, generate Makefile first.
-        cmd1 = f'{self.up.perl5} -I. Makefile.PL </dev/null 1>&0 2>&0'
+        cmd1 = f'{self.g.perl5} -I. Makefile.PL </dev/null 1>&0 2>&0'
         subprocess.call(cmd1, shell=True, cwd=self.abs_wrksrc)
 
-        cmd2 = f'{self.up.perl5} -I{self.up.libdir} -I. Makefile.PL'
+        cmd2 = f'{self.g.perl5} -I{self.g.libdir} -I. Makefile.PL'
         self.read_dependencies(cmd2, {}, self.abs_wrksrc, '')
 
     def adjust_perl_module_homepage(self):
@@ -759,7 +759,7 @@ class Adjuster:
         self.adjust_perl_module_homepage()
 
         try:
-            (self.up.pkgdir / 'PLIST').unlink()
+            (self.g.pkgdir / 'PLIST').unlink()
         except OSError:
             pass
 
@@ -772,10 +772,10 @@ class Adjuster:
         if not self.wrksrc_isfile('setup.py'):
             return
 
-        cmd = f'{self.up.pythonbin} setup.py build'
+        cmd = f'{self.g.pythonbin} setup.py build'
         env = {
             'PYTHONDONTWRITEBYTECODE': 'x',
-            'PYTHONPATH': self.up.libdir
+            'PYTHONPATH': self.g.libdir
         }
         self.read_dependencies(cmd, env, self.abs_wrksrc, 'py-')
 
@@ -877,12 +877,12 @@ class Adjuster:
         tx_lines.remove_if('GITHUB_TAG', initial_lines.get('DISTNAME'))
         tx_lines.remove_if('EXTRACT_SUFX', '.zip')
 
-        up = self.up
-        try_mk = up.pkgdir / 'try-pypi.mk'
+        g = self.g
+        try_mk = g.pkgdir / 'try-pypi.mk'
         tx_lines.write_to(try_mk)
-        args = [up.make, '-f', str(try_mk), 'distinfo']
-        up.debug('running {0} to try PyPI', args)
-        fetch_ok = subprocess.call(args, cwd=up.pkgdir) == 0
+        args = [g.make, '-f', str(try_mk), 'distinfo']
+        g.debug('running {0} to try PyPI', args)
+        fetch_ok = subprocess.call(args, cwd=g.pkgdir) == 0
         try_mk.unlink()
         if not fetch_ok:
             return
@@ -928,7 +928,7 @@ class Adjuster:
         self.adjust_lines_python_module(lines)
 
         for varname in self.update_vars:
-            self.up.debug('update_var {0} {1}', varname, self.update_vars[varname])
+            self.g.debug('update_var {0} {1}', varname, self.update_vars[varname])
             lines.set(varname, self.update_vars[varname])
 
         return lines
@@ -940,10 +940,10 @@ class Adjuster:
             relative = (str(f.relative_to(basedir)) for f in relevant)
             return list(sorted((f for f in relative if not f.startswith('.'))))
 
-        self.up.debug('Adjusting the Makefile')
-        self.makefile_lines = Lines.read_from(self.up.pkgdir / 'Makefile')
+        self.g.debug('Adjusting the Makefile')
+        self.makefile_lines = Lines.read_from(self.g.pkgdir / 'Makefile')
 
-        self.abs_wrkdir = Path(self.up.show_var('WRKDIR'))
+        self.abs_wrkdir = Path(self.g.show_var('WRKDIR'))
         self.determine_wrksrc()
         self.wrksrc_dirs = scan(self.abs_wrksrc, Path.is_dir)
         self.wrksrc_files = scan(self.abs_wrksrc, Path.is_file)
@@ -960,13 +960,13 @@ class Adjuster:
         self.adjust_po()
         self.adjust_use_languages()
 
-        self.generate_lines().write_to(self.up.pkgdir / 'Makefile')
+        self.generate_lines().write_to(self.g.pkgdir / 'Makefile')
 
         if self.regenerate_distinfo:
-            self.up.bmake('distinfo')
+            self.g.bmake('distinfo')
 
 
-def main(argv: List[str], up: Url2Pkg):
+def main(argv: List[str], g: Globals):
     if not os.path.isfile('../../mk/bsd.pkg.mk'):
         sys.exit(f'{argv[0]}: must be run from a package directory (.../pkgsrc/category/package)')
 
@@ -974,7 +974,7 @@ def main(argv: List[str], up: Url2Pkg):
         opts, args = getopt.getopt(argv[1:], 'v', ['verbose'])
         for (opt, _) in opts:
             if opt in ('-v', '--verbose'):
-                up.verbose = True
+                g.verbose = True
     except getopt.GetoptError:
         sys.exit(f'usage: {argv[0]} [-v|--verbose] [URL]')
 
@@ -982,14 +982,14 @@ def main(argv: List[str], up: Url2Pkg):
     if not re.fullmatch(r'\w+://[!-~]+?/[!-~]+', url):
         sys.exit(f'url2pkg: invalid URL: {url}')
 
-    initial_lines = Generator(url).generate_package(up)
-    Adjuster(up, url, initial_lines).adjust()
+    initial_lines = Generator(url).generate_package(g)
+    Adjuster(g, url, initial_lines).adjust()
 
-    up.out.write('\n')
-    up.out.write('Remember to run pkglint when you\'re done.\n')
-    up.out.write('See ../../doc/pkgsrc.txt to get some help.\n')
-    up.out.write('\n')
+    g.out.write('\n')
+    g.out.write('Remember to run pkglint when you\'re done.\n')
+    g.out.write('See ../../doc/pkgsrc.txt to get some help.\n')
+    g.out.write('\n')
 
 
 if __name__ == '__main__':
-    main(sys.argv, Url2Pkg())
+    main(sys.argv, Globals())
