@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.86 2018/11/12 14:40:22 jperkin Exp $
+# $NetBSD: Makefile,v 1.87 2019/10/12 21:06:48 rillig Exp $
 
 DISTNAME=		apcupsd-3.14.13r2365
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		sysutils
 #MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=apcupsd/}
 MASTER_SITES=		${MASTER_SITE_LOCAL}
@@ -82,7 +82,7 @@ EGFILES= ${PLATFORM_SUBDIR}/apccontrol etc/changeme etc/commfailure etc/commok \
     etc/offbattery etc/onbattery etc/multimon.conf etc/hosts.conf
 
 INSTALLATION_DIRS=	share/examples/apcupsd share/examples/rc.d \
-			share/doc/html/apcupsd share/doc/html/apcupsd/manual
+			share/doc/apcupsd share/doc/apcupsd/manual
 
 SUBST_CLASSES+=		strip
 SUBST_STAGE.strip=	pre-configure
@@ -110,7 +110,7 @@ post-install:
 .endfor
 .for file in ${HTMLDOCS}
 	${INSTALL_DATA} ${WRKSRC}/doc/manual/${file} \
-		${DESTDIR}${PREFIX}/share/doc/html/apcupsd
+		${DESTDIR}${PREFIX}/share/doc/apcupsd
 .endfor
 
 .include "../../devel/gettext-lib/buildlink3.mk"
