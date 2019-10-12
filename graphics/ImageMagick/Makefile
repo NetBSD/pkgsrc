@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.261 2019/08/16 11:58:17 wiz Exp $
+# $NetBSD: Makefile,v 1.262 2019/10/12 20:55:58 rillig Exp $
 
 .include "Makefile.common"
 
@@ -14,8 +14,6 @@ USE_TOOLS+=		gmake pkg-config:run
 CONFIGURE_ARGS+=	--disable-assert
 CONFIGURE_ARGS+=	--with-fontconfig
 CONFIGURE_ARGS+=	--with-jpeg
-CONFIGURE_ARGS+=	--with-ltdl-include=${BUILDLINK_PREFIX.libltdl}/include
-CONFIGURE_ARGS+=	--with-ltdl-lib=${BUILDLINK_PREFIX.libltdl}/lib
 CONFIGURE_ARGS+=	--with-xml=yes
 CONFIGURE_ARGS+=	--without-perl
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
