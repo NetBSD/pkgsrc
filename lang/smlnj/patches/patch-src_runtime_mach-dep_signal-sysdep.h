@@ -1,10 +1,10 @@
-$NetBSD: patch-af,v 1.6 2016/04/14 22:04:47 dholland Exp $
+$NetBSD: patch-src_runtime_mach-dep_signal-sysdep.h,v 1.1 2019/10/12 20:52:54 he Exp $
 
 Support for NetBSD, and for NetBSD on PPC.
 
---- src/runtime/mach-dep/signal-sysdep.h.orig	2006-02-27 17:47:32.000000000 +0000
-+++ src/runtime/mach-dep/signal-sysdep.h	2006-03-09 19:15:48.000000000 +0000
-@@ -171,7 +171,7 @@
+--- src/runtime/mach-dep/signal-sysdep.h.orig	2009-09-13 17:50:53.000000000 +0000
++++ src/runtime/mach-dep/signal-sysdep.h
+@@ -175,7 +175,7 @@ extern void SetFSR(int);
    /* disable all FP exceptions */
  #  define SIG_InitFPE()    SetFSR(0)
  
@@ -13,7 +13,7 @@ Support for NetBSD, and for NetBSD on PPC.
      /** SPARC, SUNOS **/
  #    define USE_ZERO_LIMIT_PTR_FN
  #    define SIG_FAULT1		SIGFPE
-@@ -340,6 +340,19 @@
+@@ -344,6 +344,21 @@ extern void SetFSR();
  #    define SIG_ResetFPE(scp)           { (scp)->regs->gpr[PT_FPSCR] = 0x0; }
       typedef void SigReturn_t;
  
@@ -24,10 +24,12 @@ Support for NetBSD, and for NetBSD on PPC.
 +
 +#    define INT_DIVZERO(s, c)           ((s) == SIGTRAP)
 +#    define INT_OVFLW(s, c)             ((s) == SIGTRAP)
-+#    define SIG_GetPC(scp)              ((scp)->sc_frame.srr0)
-+#    define SIG_SetPC(scp, addr)        { (scp)->sc_frame.srr0 = (long)(addr); }
-+#    define SIG_ZeroLimitPtr(scp)       { ((scp)->sc_frame.fixreg[15] = 0); } /* limitptr = 15 (see src/runtime/mach-dep/PPC.prim.asm) */
-+#    define SIG_GetCode(info,scp)       (info)
++#    define SIG_GetPC(scp)		(_UC_MACHINE_PC(scp))
++#    define SIG_SetPC(scp, addr)	{ _UC_MACHINE_SET_PC(scp, ((long) (addr))); }
++#    define SIG_ZeroLimitPtr(scp)       { \
++	(scp)->uc_mcontext.__gregs[_REG_R15] = 0; \
++	} /* limitptr = 15 (see src/runtime/mach-dep/PPC.prim.asm) */
++#    define SIG_GetCode(info,scp)       ((info)->si_code)
 +     typedef void SigReturn_t;
 +
  #  endif /* HOST_RS6000/HOST_PPC */

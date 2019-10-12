@@ -1,9 +1,17 @@
-$NetBSD: distinfo,v 1.24 2016/07/03 19:35:13 dholland Exp $
+$NetBSD: distinfo,v 1.25 2019/10/12 20:52:53 he Exp $
 
 SHA1 (smlnj-110.73/MLRISC.tgz) = 59a38a4a1c63cecf97764a99577b3f929b5ccbc9
 RMD160 (smlnj-110.73/MLRISC.tgz) = dd951776482f37421a17701d67c051741691c6cb
 SHA512 (smlnj-110.73/MLRISC.tgz) = e16a213face6dbc128fc117a6ea30042ee49aa3aa985b3b6a9ea4f3ebd8392e2fc9db96451f49eddeab8f35a36665c1dc3dc77b6c615eae1b277192f16805d6b
 Size (smlnj-110.73/MLRISC.tgz) = 1422538 bytes
+SHA1 (smlnj-110.73/boot.ppc-unix.tgz) = 2bad7f83e6171df410d7199d366bed61df762ce0
+RMD160 (smlnj-110.73/boot.ppc-unix.tgz) = b2cc43cbbd1ef812f5114a54304ff2c251f7c22e
+SHA512 (smlnj-110.73/boot.ppc-unix.tgz) = f8d32496c955ebf58af66f68a497b187e95300e21630db2fe46473251cf441fd03a15a486fb44a13a0dc2a14059e2fac76efd795ad2976e21a61b111f3aa31b1
+Size (smlnj-110.73/boot.ppc-unix.tgz) = 5765627 bytes
+SHA1 (smlnj-110.73/boot.sparc-unix.tgz) = 4db4998afd8280ced65fa190f55ea3ecb3ca7463
+RMD160 (smlnj-110.73/boot.sparc-unix.tgz) = 6f5781e3059434e7a3514259299f35b1ef498f69
+SHA512 (smlnj-110.73/boot.sparc-unix.tgz) = 0fe9d813db53171db401f6b6e6a8417a50d4218904f0f8fc922de9c0e86446f6f4f09550639d109efefe411b08e43e5b50601148aa938a419144e1ba4b55979e
+Size (smlnj-110.73/boot.sparc-unix.tgz) = 5890769 bytes
 SHA1 (smlnj-110.73/boot.x86-unix.tgz) = f2a6b89708d41d5968bf6f2e2ee713704f3664fd
 RMD160 (smlnj-110.73/boot.x86-unix.tgz) = c6fa71d7a14e79d095159ebd877b7562e88eeeb5
 SHA512 (smlnj-110.73/boot.x86-unix.tgz) = 389f18bf989ff70aa4b4e174547bfc1ac00e5b3d0a57d60c96fc105252b94c8233fce0bdc868670386853bad9cc2a8643e9a1d3881bed1e0367d62a6451d6b78
@@ -83,7 +91,6 @@ Size (smlnj-110.73/trace-debug-profile.tgz) = 3899 bytes
 SHA1 (patch-aa) = f738a6284236158b6b95928768fe1213cc77fc20
 SHA1 (patch-ad) = 67802bbdf42408c60bbce4087f20d000a3445677
 SHA1 (patch-ae) = 0ba98fb2b012daf75dcc4ac416cbf0fd3182114b
-SHA1 (patch-af) = 3a1c1cadd26eb246adafff823d49b4ab7161793b
 SHA1 (patch-ah) = 93d7453dc82d91d29662cc02dd8ab9e8b8987393
 SHA1 (patch-ai) = 6a15a5415bd73e6618bc45b9a7eb021543e9cecd
 SHA1 (patch-aj) = 6318548da4c943c60fe63d41529803ea3fa2c96e
@@ -107,6 +114,7 @@ SHA1 (patch-src_runtime_gc_init-gc.c) = 5d1d5a13a51d732590dd4f375824bbc389a0525d
 SHA1 (patch-src_runtime_gc_mem-writer.c) = d43974ff5e8e576490656f9d24daf66fecab4849
 SHA1 (patch-src_runtime_kernel_main.c) = db26470b16f56e93ebecc62f34aa6b7a474089ec
 SHA1 (patch-src_runtime_kernel_unix-timers.c) = 1c1db5bce0ec1e72adafb9380027884cf746c75c
+SHA1 (patch-src_runtime_mach-dep_signal-sysdep.h) = bcfeba1575b811afd2f81f88893fef6ba4a97cd1
 SHA1 (patch-src_runtime_mach-dep_unix-prof.c) = 90a4b81e2a8532e4e06f29bfe42c55423a0f4154
 SHA1 (patch-src_runtime_objs_mk.alpha32-dunix) = 9e3a36f4663cd685459f2fbde41b8c5f154bd9c2
 SHA1 (patch-src_runtime_objs_mk.alpha32x-osf1) = 6e91f672aadb77bd1d1ab65bfa66e3d7f745846c
@@ -117,6 +125,7 @@ SHA1 (patch-src_runtime_objs_mk.ppc-aix) = 509ffc0152b2cdfa4e0f6621bed026fe0f1ed
 SHA1 (patch-src_runtime_objs_mk.ppc-darwin) = 6ae822c7b39255b5204e358e3c21aa23b93883ec
 SHA1 (patch-src_runtime_objs_mk.ppc-darwin5) = 35ddd1f10a907ebbe6b4a3310c3bded83bda8ca0
 SHA1 (patch-src_runtime_objs_mk.ppc-linux) = 171ec491a536aa782880d3b3392cf0d728fd9c03
+SHA1 (patch-src_runtime_objs_mk.ppc-netbsd) = dd532b009e08825fe7765772f93312202defabfc
 SHA1 (patch-src_runtime_objs_mk.x86-cygwin) = b9e1174a956a63b1023eaf70322776fe93717782
 SHA1 (patch-src_runtime_objs_mk.x86-darwin) = 7770986d2805f66f1c4d4faff2fb66b2fb4b7b8d
 SHA1 (patch-src_runtime_objs_mk.x86-freebsd) = 2420f6a04ae78ca306daeb94a312f0e4fdcd0410
