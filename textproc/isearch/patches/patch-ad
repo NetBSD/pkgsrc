@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2007/12/01 16:42:27 rillig Exp $
+$NetBSD: patch-ad,v 1.2 2019/10/12 21:14:22 rillig Exp $
+
+Fix build with GCC 4.
 
 --- src/mergeunit.hxx.orig	1998-05-12 16:49:13.000000000 +0000
 +++ src/mergeunit.hxx	2007-12-01 16:40:09.000000000 +0000
