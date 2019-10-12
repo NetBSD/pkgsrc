@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/09/26 19:29:13 wrstuden Exp $
+$NetBSD: patch-ad,v 1.2 2019/10/12 21:17:09 rillig Exp $
 
 --- Docs/makefile.am.orig	Tue Sep 25 18:33:52 2001
 +++ Docs/makefile.am	Tue Sep 25 18:34:11 2001
@@ -7,7 +7,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2001/09/26 19:29:13 wrstuden Exp $
  MAINTAINERCLEANFILES = robodoc.html stoc.html stoc.m4
  
 -docdir = $(prefix)/doc/$(PACKAGE)-$(VERSION)
-+docdir = $(datadir)/doc/html/$(PACKAGE)-$(VERSION)
++docdir = $(datadir)/doc/$(PACKAGE)-$(VERSION)
  doc_DATA = main.css robodoc.html
  
  #

@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:26 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/10/12 21:17:09 rillig Exp $
 bin/robodoc
 man/man1/robodoc.1
-share/doc/html/robodoc-3.2.3/main.css
-share/doc/html/robodoc-3.2.3/robodoc.html
 share/doc/robodoc-3.2.3/AUTHORS
 share/doc/robodoc-3.2.3/COPYING
 share/doc/robodoc-3.2.3/ChangeLog
 share/doc/robodoc-3.2.3/INSTALL
 share/doc/robodoc-3.2.3/NEWS
 share/doc/robodoc-3.2.3/README
+share/doc/robodoc-3.2.3/main.css
+share/doc/robodoc-3.2.3/robodoc.html
