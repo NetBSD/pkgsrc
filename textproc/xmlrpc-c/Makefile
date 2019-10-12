@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.51 2019/08/22 12:23:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.52 2019/10/12 22:57:08 he Exp $
 
 DISTNAME=	xmlrpc-c-1.25.26
 # the "super stable" branch
 PKGNAME=	${DISTNAME:S/-c-/-c-ss-/}
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmlrpc-c/}
 EXTRACT_SUFX=	.tgz
@@ -61,5 +61,6 @@ LDFLAGS.MirBSD+=	${PTHREAD_LINKFLAGS}
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../www/libwww/buildlink3.mk"
+.include "../../devel/libidn2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
