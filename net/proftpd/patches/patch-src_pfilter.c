@@ -1,5 +1,7 @@
 --- /dev/null	2016-01-22 17:30:55.000000000 -0500
 +++ src/pfilter.c	2016-01-22 16:37:55.000000000 -0500
+--- src/pfilter.c.orig	2019-10-13 19:47:58.437871822 +0000
++++ src/pfilter.c
 @@ -0,0 +1,41 @@
 +#include "pfilter.h"
 +#include "conf.h"
