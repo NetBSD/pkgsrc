@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg_test.R,v 1.1 2019/10/13 18:13:03 rillig Exp $
+# $NetBSD: R2pkg_test.R,v 1.2 2019/10/13 19:13:47 rillig Exp $
 #
 # Copyright (c) 2019
 #	Roland Illig.  All rights reserved.
@@ -32,6 +32,14 @@ source('R2pkg.R')
 library(testthat)
 library(withr)
 
+package.dir <- file.path(Sys.getenv('PKGSRCDIR'), 'pkgtools', 'R2pkg')
+
+expect_printed <- function(obj, expected) {
+    out <- ''
+    with_output_sink(textConnection('out', 'w', local = TRUE), print(obj))
+    expect_equal(out, expected)
+}
+
 test_that('make.imports', {
     imports <- make.imports('first (>= 1.0)', 'second')
 
@@ -45,23 +53,23 @@ test_that('make.dependency', {
 })
 
 test_that('buildlink3.file with matching version number', {
-    local_dir('..')
-    dependency <- make.dependency('ellipsis(>=0.1)')
+    local_dir(package.dir)
+    dependency <- make.dependency('bitops(>=0.1)')
 
     bl3 <- buildlink3.file(dependency)
 
-    expect_equal(bl3, '../../math/R-ellipsis/buildlink3.mk')
+    expect_equal(bl3, '../../math/R-bitops/buildlink3.mk')
 })
 
 # The version number of the dependency is not checked against
 # the resolved buildlink3 file.
 test_that('buildlink3.file with too high version number', {
-    local_dir('..')
-    dependency <- make.dependency('ellipsis(>=1000.0)')
+    local_dir(package.dir)
+    dependency <- make.dependency('bitops(>=1000.0)')
 
     bl3 <- buildlink3.file(dependency)
 
-    expect_equal(bl3, '../../math/R-ellipsis/buildlink3.mk')
+    expect_equal(bl3, '../../math/R-bitops/buildlink3.mk')
 })
 
 test_that('level.warning', {
@@ -74,6 +82,47 @@ test_that('level.warning', {
     })
 
     expect_equal(output, '[ 123 ] WARNING: message text\n')
+})
+
+test_that('read.file.as.value, exactly 1 variable assignment, no space', {
+    filename <- ''
+    local_tempfile('filename')
+    writeLines(c('VAR=value'), filename)
+
+    str <- read.file.as.value(filename)
+
+    expect_equal(str, NA_character_)
+})
+
+test_that('read.file.as.value, exactly 1 variable assignment', {
+    filename <- ''
+    local_tempfile('filename')
+    writeLines(c('VAR=\tvalue'), filename)
+
+    str <- read.file.as.value(filename)
+
+    expect_equal(str, 'value')
+})
+
+test_that('read.file.as.value, commented variable assignment', {
+    filename <- ''
+    local_tempfile('filename')
+    writeLines(c('#VAR=\tvalue'), filename)
+
+    str <- read.file.as.value(filename)
+
+    # TODO: Check whether commented variables should really be considered.
+    expect_equal(str, 'value')
+})
+
+test_that('read.file.as.value, multiple variable assignments', {
+    filename <- ''
+    local_tempfile('filename')
+    writeLines(c('VAR=\tvalue', 'VAR=\tvalue2'), filename)
+
+    str <- read.file.as.value(filename)
+
+    expect_equal(str, '')
 })
 
 test_that('read.file.as.dataframe', {
@@ -101,12 +150,7 @@ test_that('read.Makefile.as.dataframe', {
 
     df <- read.Makefile.as.dataframe(textConnection(content))
 
-    out <- ''
-    with_output_sink(textConnection('out', 'w', local = TRUE), {
-        print(df)
-    })
-
-    expected.out <- c(
+    expect_printed(df, c(
         '                 line order category key_value  key depends buildlink3.mk',
         '1           # comment     1       NA     FALSE <NA>   FALSE         FALSE',
         '2          VAR= value     2       NA      TRUE  VAR   FALSE         FALSE',
@@ -123,6 +167,57 @@ test_that('read.Makefile.as.dataframe', {
         '5     <NA>      <NA>      <NA>     <NA>',
         '6     <NA>      <NA>      <NA>     <NA>',
         '7     <NA>      <NA>      <NA>     <NA>'
-    )
-    expect_equal(out, expected.out)
+    ))
+})
+
+test_that('update.Makefile.with.metadata', {
+    df <- read.Makefile.as.dataframe(textConnection(paste0(
+        'CATEGORIES=\n',
+        'MAINTAINER=\n',
+        'COMMENT=\n',
+        'R_PKGVER=\n'
+    )))
+    metadata = list(Title = 'Package comment', Version = '19.3', License = 'license')
+
+    updated <- update.Makefile.with.metadata(df, metadata)
+
+    expect_printed(updated, c(
+        '         line order category key_value        key depends buildlink3.mk',
+        '1 CATEGORIES=     1       NA      TRUE CATEGORIES   FALSE         FALSE',
+        '2 MAINTAINER=     2       NA      TRUE MAINTAINER   FALSE         FALSE',
+        '3    COMMENT=     3       NA      TRUE    COMMENT   FALSE         FALSE',
+        '4   R_PKGVER=     4       NA      TRUE   R_PKGVER   FALSE         FALSE',
+        '5                 5       NA     FALSE       <NA>   FALSE         FALSE',
+        '  operator delimiter old_value old_todo       new_value',
+        '1        =                                        R2pkg',
+        '2        =                                             ',
+        '3        =                              Package comment',
+        '4        =                                         19.3',
+        '5     <NA>      <NA>      <NA>     <NA>            <NA>'
+    ))
+})
+
+# If the variable has been removed from the Makefile, it is not updated.
+test_that('update.Makefile.with.metadata without CATEGORIES', {
+    df <- read.Makefile.as.dataframe(textConnection(paste0(
+        'MAINTAINER=\n',
+        'COMMENT=\n',
+        'R_PKGVER=\n'
+    )))
+    metadata = list(Title = 'Package comment', Version = '19.3', License = 'license')
+
+    updated <- update.Makefile.with.metadata(df, metadata)
+
+    expect_printed(updated, c(
+        '         line order category key_value        key depends buildlink3.mk',
+        '1 MAINTAINER=     1       NA      TRUE MAINTAINER   FALSE         FALSE',
+        '2    COMMENT=     2       NA      TRUE    COMMENT   FALSE         FALSE',
+        '3   R_PKGVER=     3       NA      TRUE   R_PKGVER   FALSE         FALSE',
+        '4                 4       NA     FALSE       <NA>   FALSE         FALSE',
+        '  operator delimiter old_value old_todo       new_value',
+        '1        =                                             ',
+        '2        =                              Package comment',
+        '3        =                                         19.3',
+        '4     <NA>      <NA>      <NA>     <NA>            <NA>'
+    ))
 })
