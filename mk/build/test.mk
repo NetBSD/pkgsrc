@@ -1,4 +1,4 @@
-# $NetBSD: test.mk,v 1.21 2019/05/07 19:36:43 rillig Exp $
+# $NetBSD: test.mk,v 1.22 2019/10/13 10:34:37 rillig Exp $
 #
 # After the "build" phase, many packages provide some sort of self-test
 # that can be run on the not-yet installed package. To enable these
@@ -145,10 +145,9 @@ test-check-interactive:
 .if !target(do-test)
 .  if defined(TEST_TARGET) && !empty(TEST_TARGET)
 do-test:
-.    for _dir_ in ${TEST_DIRS}
-	${RUN}${_ULIMIT_CMD}			\
-	cd ${WRKSRC} && cd ${_dir_} &&					\
-	${TEST_MAKE_CMD} ${TEST_TARGET}
+.    for dir in ${TEST_DIRS}
+	${RUN}${_ULIMIT_CMD} cd ${WRKSRC} && cd ${dir} \
+	&& ${TEST_MAKE_CMD} ${TEST_TARGET}
 .    endfor
 .  else
 do-test:
