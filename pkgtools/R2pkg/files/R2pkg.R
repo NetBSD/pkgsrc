@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg.R,v 1.1 2019/10/13 13:26:22 rillig Exp $
+# $NetBSD: R2pkg.R,v 1.2 2019/10/13 13:28:45 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -46,7 +46,7 @@ arg.quiet_curl           <- as.logical(Sys.getenv('QUIET_CURL'))
 level.message <- function(...)
   message('[ ', arg.level, ' ] ', ...)
 
-warning.message <- function(...)
+level.warning <- function(...)
   level.message('WARNING: ', ...)
 
 R_version <- function()
