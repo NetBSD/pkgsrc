@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2019/10/07 19:29:47 christos Exp $
+# $NetBSD: Makefile.common,v 1.9 2019/10/13 19:52:47 maya Exp $
 
 # used by net/proftpd/Makefile
 # used by net/proftpd/Makefile.module
@@ -21,7 +21,7 @@ LICENSE=	gnu-gpl-v2
 DISTINFO_FILE=		${.CURDIR}/../../net/proftpd/distinfo
 PATCHDIR=		${.CURDIR}/../../net/proftpd/patches
 
-USE_TOOLS+=		gmake intltool msgfmt perl:run
+USE_TOOLS+=		gmake intltool msgfmt perl:run autoconf
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
@@ -39,6 +39,9 @@ BUILD_DEFS+=		VARBASE
 
 CHECK_SHLIBS_SKIP=	libexec/proftpd/*.a
 CHECK_SSP_SKIP=		${CHECK_SHLIBS_SKIP}
+
+pre-configure:
+	cd ${WRKSRC} && ${TOOLS_CMD.autoconf}
 
 .include "options.mk"
 
