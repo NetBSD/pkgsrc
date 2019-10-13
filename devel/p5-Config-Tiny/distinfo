@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2015/11/04 17:41:17 agc Exp $
+$NetBSD: distinfo,v 1.13 2019/10/13 11:27:06 mef Exp $
 
-SHA1 (Config-Tiny-2.23.tgz) = 8fca9f846cd16cfd3f2a7e0599a9dc6df6f3a92f
-RMD160 (Config-Tiny-2.23.tgz) = 1619bca052069f207041ff04d7f8d244fc81a0dc
-SHA512 (Config-Tiny-2.23.tgz) = c5c77aa18a387f181ba9bb2df8859c328073521e14163fe04fd7a104928bd68cf654eab88d24bd23e556e6ecc139dfed716fb7b8119e98cd2ab6f6915c976f01
-Size (Config-Tiny-2.23.tgz) = 20487 bytes
+SHA1 (Config-Tiny-2.24.tgz) = 2eb0489d23257b714258dd08a08d769c16b765a4
+RMD160 (Config-Tiny-2.24.tgz) = 39bc7cb9010f5a64d19c4088c8c5e484907463a0
+SHA512 (Config-Tiny-2.24.tgz) = 7ce660f947351c346f553a1f0424e6c5710c9334090791525a5ab3d7462f6754315602028de4da7f2aeb72303df68d7419e15bea73c8f161830216b26fdfcb40
+Size (Config-Tiny-2.24.tgz) = 24329 bytes
