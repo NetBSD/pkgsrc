@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg.R,v 1.6 2019/10/13 18:13:03 rillig Exp $
+# $NetBSD: R2pkg.R,v 1.7 2019/10/13 19:34:13 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -283,43 +283,16 @@ read.Makefile.as.dataframe <- function(filename = 'Makefile.orig')
   re.operator <- '[+=]+'
   re.delimiter <- re.skip_blank
   re.value <- re.anything
-  re.optional_TODO <- '(#[[:blank:]]*TODO[[:blank:]]*:[[:blank:]]*)*'
+  re.optional_TODO <- '(?:#[[:blank:]]*TODO[[:blank:]]*:[[:blank:]]*)*'
 
-  re.match_operator <- paste0('^',
-    re.skip_blank,
-    re.optional_TODO,
-    re.key,
-    re.skip_blank,
-    '(',re.operator,')',
-    re.delimiter,
-    re.value,
-    '$')
-  re.match_delimiter <- paste0('^',
-    re.skip_blank,
-    re.optional_TODO,
-    re.key,
-    re.skip_blank,
-    re.operator,
-    '(',re.delimiter,')',
-    re.value,
-    '$')
-  re.match_value <- paste0('^',
-    re.skip_blank,
-    re.optional_TODO,
-    re.key,
-    re.skip_blank,
-    re.operator,
-    re.delimiter,
-    '(',re.value,')',
-    '$')
-  re.match_optional_TODO <- paste0('^',
+  re.match <- paste0('^',
     re.skip_blank,
     '(',re.optional_TODO,')',
     re.key,
     re.skip_blank,
-    re.operator,
-    re.delimiter,
-    re.value,
+    '(',re.operator,')',
+    '(',re.delimiter,')',
+    '(',re.value,')',
     '$')
 
   df <- read.file.as.dataframe(filename)
@@ -332,10 +305,10 @@ read.Makefile.as.dataframe <- function(filename = 'Makefile.orig')
   df <- categorize.depends(df)
   df <- categorize.buildlink(df)
 
-  df$operator <- sub(re.match_operator,'\\2',df$line)
-  df$delimiter <- sub(re.match_delimiter,'\\2',df$line)
-  df$old_value <- sub(re.match_value,'\\2',df$line)
-  df$old_todo <- sub(re.match_optional_TODO,'\\1',df$line)
+  df$operator <- sub(re.match, '\\2', df$line)
+  df$delimiter <- sub(re.match, '\\3', df$line)
+  df$old_value <- sub(re.match, '\\4', df$line)
+  df$old_todo <- sub(re.match, '\\1', df$line)
 
   df$operator[!df$key_value] <- NA
   df$delimiter[!df$key_value] <- NA
