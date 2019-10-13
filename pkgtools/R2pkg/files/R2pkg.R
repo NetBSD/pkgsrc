@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg.R,v 1.3 2019/10/13 15:35:48 rillig Exp $
+# $NetBSD: R2pkg.R,v 1.4 2019/10/13 17:20:00 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -810,13 +810,13 @@ write.Makefile <- function(metadata)
   RCSID             <- paste0('# $','NetBSD$')
   CATEGORIES        <- makefile.field('CATEGORIES',categories())
   MAINTAINER        <- makefile.field('MAINTAINER',maintainer(arg.maintainer_email))
-  COMMENT           <- makefile.field('COMMENT',comment(metadata[3]))
-  LICENSE           <- makefile.field('LICENSE',license(metadata[5]))
-  R_PKGNAME         <- makefile.field('R_PKGNAME',package(metadata[1]))
-  R_PKGVER          <- makefile.field('R_PKGVER',version(metadata[2]))
-  USE_LANGUAGES     <- makefile.fields('USE_LANGUAGES',use.languages(metadata[6],metadata[7]))
-  DEPENDENCIES      <- make.depends(metadata[6],metadata[7])
-  DEPENDS	    <- DEPENDENCIES[1]
+  COMMENT           <- makefile.field('COMMENT',comment(metadata$Title))
+  LICENSE           <- makefile.field('LICENSE',license(metadata$License))
+  R_PKGNAME         <- makefile.field('R_PKGNAME',package(metadata$Package))
+  R_PKGVER          <- makefile.field('R_PKGVER',version(metadata$Version))
+  USE_LANGUAGES     <- makefile.fields('USE_LANGUAGES',use.languages(metadata$Imports,metadata$Depends))
+  DEPENDENCIES      <- make.depends(metadata$Imports,metadata$Depends)
+  DEPENDS           <- DEPENDENCIES[1]
   BUILDLINK3.MK     <- DEPENDENCIES[2]
   INCLUDE.R         <- '.include "../../math/R/Makefile.extension"'
   INCLUDE.PKG       <- '.include "../../mk/bsd.pkg.mk"'
@@ -977,12 +977,12 @@ update.Makefile.with.metadata <- function(df,metadata)
 
   df$new_value <- NA
 
-  df <- make.new_license(df,metadata[5])
+  df <- make.new_license(df,metadata$License)
 
   df$new_value[df$key == 'CATEGORIES'] <- categories()
   df$new_value[df$key == 'MAINTAINER'] <- arg.maintainer_email
-  df$new_value[df$key == 'COMMENT'] <- one.line(metadata[3])
-  df$new_value[df$key == 'R_PKGVER'] <- version(metadata[2])
+  df$new_value[df$key == 'COMMENT'] <- one.line(metadata$Title)
+  df$new_value[df$key == 'R_PKGVER'] <- version(metadata$Version)
 
   # str(df)
   # print(df)
@@ -1127,7 +1127,7 @@ make.df.conflicts <- function(df,metadata)
   conflicts.exist <- element(df,'CONFLICTS','old_value',quiet=TRUE) != '???'
   if (!conflicts.exist)
     {
-      c <- conflicts(metadata[1])
+      c <- conflicts(metadata$Package)
       order <- conflicts.order(df)
       order <- order + 2.5
       i <- 0
@@ -1208,7 +1208,7 @@ make.df.makefile <- function(df,df.conflicts,df.depends,df.buildlink3.mk)
 
 update.Makefile <- function(metadata)
 {
-  DEPENDENCIES  <- make.depends(metadata[6],metadata[7])
+  DEPENDENCIES  <- make.depends(metadata$Imports,metadata$Depends)
   DEPENDS       <- DEPENDENCIES[[1]]
   BUILDLINK3.MK <- DEPENDENCIES[[2]]
   # message('===> DEPENDS:')
@@ -1245,8 +1245,16 @@ create.Makefile <- function(metadata)
 
 create.DESCR <- function(metadata)
 {
-  DESCR <- description(metadata[4])
+  DESCR <- description(metadata$Description)
   write(DESCR,'DESCR')
+}
+
+make.metadata <- function(description.filename)
+{
+  fields <- c('Package', 'Version', 'Title', 'Description', 'License', 'Imports', 'Depends')
+  metadata <- as.list(read.dcf(description.filename, fields))
+  names(metadata) <- fields
+  metadata
 }
 
 main <- function()
@@ -1261,8 +1269,7 @@ main <- function()
       quit(save='no',status=error)
     }
 
-  metadata <- read.dcf(file='DESCRIPTION', fields=c('Package','Version','Title','Description','License','Imports','Depends'))
-
+  metadata <- make.metadata('DESCRIPTION')
   create.Makefile(metadata)
   create.DESCR(metadata)
 }
