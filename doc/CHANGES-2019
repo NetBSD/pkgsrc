@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4332 2019/10/13 13:52:11 leot Exp $
+$NetBSD: CHANGES-2019,v 1.4333 2019/10/13 13:55:59 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6960,3 +6960,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/R-rex version 1.1.2 [rillig 2019-10-13]
 	Added devel/R-covr version 3.3.1 [rillig 2019-10-13]
 	Updated news/sfeed to 0.9.14 [leot 2019-10-13]
+	Updated net/gallery-dl to 1.10.6 [leot 2019-10-13]
