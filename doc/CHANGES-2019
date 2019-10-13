@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4327 2019/10/13 09:43:49 rillig Exp $
+$NetBSD: CHANGES-2019,v 1.4328 2019/10/13 11:04:43 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6950,3 +6950,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/xmlrpc-c to 1.25.26nb14 [he 2019-10-12]
 	Updated graphics/p5-Image-ExifTool to 11.70 [adam 2019-10-13]
 	Updated pkgtools/R2pkg to 0.6.1 [rillig 2019-10-13]
+	Updated devel/p5-Carp-Assert-More to 1.20 [mef 2019-10-13]
+	Updated devel/p5-Carp-Clan to 6.08 [mef 2019-10-13]
+	Updated devel/p5-Class-Inspector to 1.36 [mef 2019-10-13]
+	Updated devel/p5-Class-Method-Modifiers to 2.13 [mef 2019-10-13]
