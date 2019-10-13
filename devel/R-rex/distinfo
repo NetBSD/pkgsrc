@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/10/13 11:47:21 rillig Exp $
+
+SHA1 (R/rex_1.1.2.tar.gz) = 84b90705fda29bbee4b59cc00b1dcaa3fc28d64e
+RMD160 (R/rex_1.1.2.tar.gz) = 7f4f94583b8cefc1856b92b343083bf5030b7c48
+SHA512 (R/rex_1.1.2.tar.gz) = bbb7d0d42e98ac77707f42022dacf86b4dfd8f31c0763883d1db53da4ea1cf7c63772b3d61b0d43eef9bd8f4ace0e3771ce12f21e4ce9169a874c60f9241e9a5
+Size (R/rex_1.1.2.tar.gz) = 89430 bytes
