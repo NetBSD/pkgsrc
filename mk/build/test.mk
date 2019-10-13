@@ -1,4 +1,4 @@
-# $NetBSD: test.mk,v 1.22 2019/10/13 10:34:37 rillig Exp $
+# $NetBSD: test.mk,v 1.23 2019/10/13 11:08:10 rillig Exp $
 #
 # After the "build" phase, many packages provide some sort of self-test
 # that can be run on the not-yet installed package. To enable these
@@ -40,7 +40,10 @@
 
 _VARGROUPS+=		test
 _USER_VARS.test=	PKGSRC_RUN_TEST
-_PKG_VARS.test=		TEST_DIRS TEST_ENV TEST_MAKE_FLAGS MAKE_FILE TEST_TARGET
+_PKG_VARS.test=		TEST_TARGET TEST_DIRS TEST_ENV TEST_MAKE_FLAGS
+_USE_VARS.test=		BUILD_DIRS MAKE_ENV MAKE_FLAGS MAKEFLAGS MAKE_FILE \
+			RECURSIVE_MAKE INTERACTIVE_STAGE BATCH WRKSRC
+_IGN_VARS.test=		_* PKGNAME .CURDIR
 _SORTED_VARS.test=	*_ENV
 _LISTED_VARS.test=	*_DIRS *_FLAGS
 
@@ -124,7 +127,7 @@ test-message:
 ### test-check-interactive checks whether we must do an interactive
 ### test or not.
 ###
-test-check-interactive:
+test-check-interactive: .PHONY
 .if !empty(INTERACTIVE_STAGE:Mtest) && defined(BATCH)
 	@${ERROR_MSG} "The test stage of this package requires user interaction"
 	@${ERROR_MSG} "Please test manually with:"
