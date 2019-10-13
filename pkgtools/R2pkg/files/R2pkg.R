@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg.R,v 1.5 2019/10/13 17:23:29 rillig Exp $
+# $NetBSD: R2pkg.R,v 1.6 2019/10/13 18:13:03 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -271,7 +271,7 @@ fix.continued.lines <- function(df,line='line')
   df
 }
 
-read.Makefile.as.dataframe <- function()
+read.Makefile.as.dataframe <- function(filename = 'Makefile.orig')
 {
   # message('===> read.Makefile.as.dataframe():')
 
@@ -322,7 +322,7 @@ read.Makefile.as.dataframe <- function()
     re.value,
     '$')
 
-  df <- read.file.as.dataframe('Makefile.orig')
+  df <- read.file.as.dataframe(filename)
 
   df$order <- 1:nrow(df)
   df$category <- NA
@@ -498,9 +498,9 @@ sed.license <- function(license)
 }
 sed.r_pkgver <- function(r_pkgver) make.sed.command('R_PKGVER',r_pkgver)
 
-find.Rcpp <- function(s1, s2) grepl('Rcpp', paste(s1, s2))
+find.Rcpp <- function(imps, deps) grepl('Rcpp', paste(imps, deps))
 
-buildlink3.mk <- function(s1,s2)
+buildlink3.mk <- function(imps,deps)
 {
   BUILDLINK3.MK <- data.frame()
   buildlink3.mk.list <- read.file.as.list('BUILDLINK3.MK')
@@ -511,7 +511,7 @@ buildlink3.mk <- function(s1,s2)
       value <- line
       BUILDLINK3.MK <- rbind(BUILDLINK3.MK,data.frame(key=key,value=value))
     }
-  if (find.Rcpp(s1,s2))
+  if (find.Rcpp(imps,deps))
     {
       buildlink3.line <- '.include "../../devel/R-Rcpp/buildlink3.mk"'
       key <- 'devel'
@@ -696,13 +696,13 @@ update.dependency <- function(dependency,index=1)
     level.warning('error updating dependency for ',depends(dependency))
 }
 
-make.depends <- function(s1,s2)
+make.depends <- function(imps,deps)
 {
-  imports <- make.imports(s1,s2)
+  imports <- make.imports(imps,deps)
   # XXX  message('===> imports:')
   # XXX print(imports)
   DEPENDS <- data.frame()
-  BUILDLINK3.MK <- buildlink3.mk(s1,s2)
+  BUILDLINK3.MK <- buildlink3.mk(imps,deps)
   if (length(imports) > 0)
     {
       for (i in 1:length(imports))
