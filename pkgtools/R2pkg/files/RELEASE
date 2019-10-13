@@ -1,4 +1,4 @@
-$NetBSD: RELEASE,v 1.3 2019/08/08 20:14:27 brook Exp $
+$NetBSD: RELEASE,v 1.4 2019/10/13 09:43:26 rillig Exp $
 
 RELEASE
 =======
@@ -53,3 +53,11 @@ R2pkg v.0.6 (2019-08-08)
 
 * Annotate generated comments with [R2pkg] to make them easier to find.
 
+R2pkg v.0.6.1 (2019-10-13)
+------------------------
+
+* Run properly even if TMPDIR is not set.
+
+* Quote variables to prevent unintended interpolation.
+
+* Write error messages to stderr instead of stdout.
