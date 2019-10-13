@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.20 2019/10/12 17:38:16 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.21 2019/10/13 08:48:23 rillig Exp $
 
 import pytest
 from url2pkg import *
@@ -116,6 +116,9 @@ def test_Lines_all_varassigns():
         '#VAR=\t# commented variable assignment',
         '#VAR=',
         '# VAR=',  # This is a regular comment
+        'VAR= \\',
+        '\tmulti-first \\',
+        '\tmulti-last'
     )
 
     assert str_varassigns(lines.all_varassigns('VAR')) == [
@@ -124,6 +127,7 @@ def test_Lines_all_varassigns():
         'VAR=\t# only comment',
         '#VAR=\t# commented variable assignment',
         '#VAR=',
+        # TODO: Add support for multi-line variable assignments.
     ]
 
 
@@ -657,6 +661,7 @@ def test_Adjuster_read_dependencies():
     cmd = "printf '%s\n' \"$URL2PKG_DEPENDENCIES\""
 
     adjuster = Adjuster(g, '', Lines())
+    adjuster.makefile_lines.add('# url2pkg-marker')
     adjuster.read_dependencies(cmd, env, '.', '')
 
     assert os.getenv('URL2PKG_DEPENDENCIES') is None
@@ -670,10 +675,18 @@ def test_Adjuster_read_dependencies():
         '# TODO: does-not-exist>=1.0',
     ]
     assert adjuster.test_depends == ['pkglint>=0:../../pkgtools/pkglint']
-    assert adjuster.update_vars == {
-        'HOMEPAGE': 'https://homepage.example.org/',
-        '#LICENSE': 'BSD # TODO: too unspecific',
-    }
+    assert detab(adjuster.generate_lines()) == [
+        'BUILD_DEPENDS+= url2pkg>=1.0:../../pkgtools/url2pkg',
+        'BUILD_DEPENDS+= # TODO: does-not-exist>=1.0',
+        'DEPENDS+=       package>=112.0:../../pkgtools/pkglint',
+        'TEST_DEPENDS+=  pkglint>=0:../../pkgtools/pkglint',
+        '',
+        'HOMEPAGE=       https://homepage.example.org/',
+        '#LICENSE=       BSD # TODO: too unspecific',
+        '',
+        'BUILDLINK_API_DEPENDS.x11-links+=       x11-links>=120.0',
+        '.include "../../pkgtools/x11-links/buildlink3.mk"'
+    ]
 
 
 def test_Adjuster_read_dependencies__lookup_with_prefix():
@@ -1202,8 +1215,8 @@ def test_Adjuster_generate_lines():
     url = 'https://dummy.example.org/package-1.0.tar.gz'
     adjuster = Adjuster(g, url, Lines())
     adjuster.makefile_lines = Generator(url).generate_Makefile()
-    adjuster.update_vars['HOMEPAGE'] = 'https://example.org/'
-    adjuster.update_vars['#LICENSE'] = 'BSD # TODO: too unspecific'
+    assert adjuster.makefile_lines.set('HOMEPAGE', 'https://example.org/')
+    assert adjuster.makefile_lines.set('#LICENSE', 'BSD # TODO: too unspecific')
     adjuster.depends.append('dependency>=0:../../category/dependency')
     adjuster.todos.append('Run pkglint')
 
