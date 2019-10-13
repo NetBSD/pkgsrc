@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg.R,v 1.4 2019/10/13 17:20:00 rillig Exp $
+# $NetBSD: R2pkg.R,v 1.5 2019/10/13 17:23:29 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -31,7 +31,7 @@
 # Create an R package in the current directory
 #
 
-arg.level                <- Sys.getenv('LEVEL')
+arg.level                <- as.integer(Sys.getenv('LEVEL'))
 arg.rpkg                 <- Sys.getenv('RPKG')
 arg.packages_list        <- Sys.getenv('PACKAGES_LIST')
 arg.r2pkg                <- Sys.getenv('R2PKG')
@@ -55,8 +55,6 @@ R_version <- function()
   version <- paste0(info[['major']],'.',info[['minor']])
   version
 }
-
-set.locale <- function() { invisible(Sys.setlocale('LC_ALL','C')) }
 
 trim.space <- function(s) gsub('[[:space:]]','',s)
 trim.blank <- function(s) gsub('[[:blank:]]','',s)
@@ -500,6 +498,8 @@ sed.license <- function(license)
 }
 sed.r_pkgver <- function(r_pkgver) make.sed.command('R_PKGVER',r_pkgver)
 
+find.Rcpp <- function(s1, s2) grepl('Rcpp', paste(s1, s2))
+
 buildlink3.mk <- function(s1,s2)
 {
   BUILDLINK3.MK <- data.frame()
@@ -559,13 +559,6 @@ filter.imports <- function(s)
       s <- s[!grepl(re.pkg,s)]
     }
   s
-}
-
-find.Rcpp <- function(s1,s2)
-{
-  s <- paste(s1,s2)
-  Rcpp <- grepl('Rcpp',s)
-  Rcpp
 }
 
 make.imports <- function(s1,s2)
@@ -746,7 +739,7 @@ make.depends <- function(s1,s2)
 	      # message('===> depends(dependency): ',depends(dependency))
 	      # message('===> depends.pkg(dependency):',paste(' ',d))
 	      # message('===> index: ',index)
-	      # message('===> buildlinke.line(): ',buildlink3.line(dependency,index))
+	      # message('===> buildlink3.line(): ',buildlink3.line(dependency,index))
 	      if (length(index) == 1) # a unique, non-wip, dependency found
 	        {
 		  level.message('choosing unique non-wip dependency for ',dependency,': ',depends.pkg(dependency)[index])
@@ -1259,7 +1252,7 @@ make.metadata <- function(description.filename)
 
 main <- function()
 {
-  set.locale()
+  Sys.setlocale('LC_ALL', 'C')
 
   error <- download.file(url=arg.rpkg_description_url,destfile='DESCRIPTION',quiet=arg.quiet_curl,method='curl')
   if (error)
