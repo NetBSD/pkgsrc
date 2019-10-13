@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4326 2019/10/13 08:22:07 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4327 2019/10/13 09:43:49 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6949,3 +6949,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/smlnj to 110.73nb3 [he 2019-10-12]
 	Updated textproc/xmlrpc-c to 1.25.26nb14 [he 2019-10-12]
 	Updated graphics/p5-Image-ExifTool to 11.70 [adam 2019-10-13]
+	Updated pkgtools/R2pkg to 0.6.1 [rillig 2019-10-13]
