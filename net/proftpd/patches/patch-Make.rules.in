@@ -1,11 +1,11 @@
 --- Make.rules.in.orig	2015-05-27 20:25:54.000000000 -0400
 +++ Make.rules.in	2016-01-25 21:48:47.000000000 -0500
-@@ -110,3 +110,8 @@
+--- Make.rules.in.orig	2017-04-10 02:31:02.000000000 +0000
++++ Make.rules.in
+@@ -113,3 +113,6 @@ BUILD_FTPTOP_OBJS=utils/ftptop.o utils/s
  
  FTPWHO_OBJS=ftpwho.o scoreboard.o misc.o
  BUILD_FTPWHO_OBJS=utils/ftpwho.o utils/scoreboard.o utils/misc.o
 +
-+CPPFLAGS+=-DHAVE_BLACKLIST
-+LIBS+=-lblacklist
 +OBJS+= pfilter.o
 +BUILD_OBJS+= src/pfilter.o
