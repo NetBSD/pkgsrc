@@ -1,0 +1,15 @@
+$NetBSD: patch-tools_xml-rpc-api2cpp_Makefile,v 1.1 2019/10/13 21:48:58 he Exp $
+
+Use libtool when linking.
+
+--- tools/xml-rpc-api2cpp/Makefile.orig	2019-03-29 03:33:33.000000000 +0000
++++ tools/xml-rpc-api2cpp/Makefile
+@@ -44,7 +44,7 @@ xml-rpc-api2cpp: \
+   $(LIBXMLRPC) \
+   $(LIBXMLRPC_XML) \
+   $(LIBXMLRPC_UTIL)
+-	$(CXXLD) -o $@ $(LDFLAGS_ALL) $(OBJECTS) $(LDLIBS)
++	libtool --mode=link $(CXXLD) -o $@ $(LDFLAGS_ALL) $(OBJECTS) $(LDLIBS)
+ 
+ %.o:%.cpp
+ 	$(CXX) -c $(CXXFLAGS_ALL) $<

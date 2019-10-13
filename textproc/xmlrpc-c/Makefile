@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.52 2019/10/12 22:57:08 he Exp $
+# $NetBSD: Makefile,v 1.53 2019/10/13 21:48:57 he Exp $
 
-DISTNAME=	xmlrpc-c-1.25.26
+DISTNAME=	xmlrpc-c-1.51.04
 # the "super stable" branch
 PKGNAME=	${DISTNAME:S/-c-/-c-ss-/}
-PKGREVISION=	14
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmlrpc-c/}
 EXTRACT_SUFX=	.tgz
+# It's actually not a compressed tar file
+EXTRACT_OPTS+= -c none
 
 #/usr/bin/ld: ./libxmlrpc_server++.a(registry.o): relocation R_X86_64_32S against `_ZTVN8xmlrpc_c8callInfoE' can not be used when making a shared object; recompile with -fPIC
 #./libxmlrpc_server++.a: could not read symbols: Bad value
@@ -61,6 +62,7 @@ LDFLAGS.MirBSD+=	${PTHREAD_LINKFLAGS}
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../www/libwww/buildlink3.mk"
+.include "../../devel/libidn2/buildlink3.mk"
 .include "../../devel/libidn2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
