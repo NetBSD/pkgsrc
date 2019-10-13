@@ -1,0 +1,15 @@
+$NetBSD: patch-tools_xmlrpc__transport_Makefile,v 1.1 2019/10/13 21:48:58 he Exp $
+
+Use libtool when linking.
+
+--- tools/xmlrpc_transport/Makefile.orig	2019-03-29 03:33:33.000000000 +0000
++++ tools/xmlrpc_transport/Makefile
+@@ -34,7 +34,7 @@ UTIL_OBJS = \
+ UTILS = $(UTIL_OBJS:%=$(UTIL_DIR)/%)
+ 
+ xmlrpc_transport:%:%.o $(CLIENT_LIBS_DEP) $(UTILS)
+-	$(CCLD) -o $@ $(LDFLAGS_ALL) $< $(CLIENT_LDLIBS) $(UTILS)
++	libtool --mode=link $(CCLD) -o $@ $(LDFLAGS_ALL) $< $(CLIENT_LDLIBS) $(UTILS)
+ 
+ %.o:%.c
+ 	$(CC) -c $(CFLAGS_ALL) $<
