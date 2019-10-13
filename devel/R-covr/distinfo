@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/10/13 11:50:49 rillig Exp $
+
+SHA1 (R/covr_3.3.1.tar.gz) = 10460890b70a1584c6bbec7971128d6c94f07aa2
+RMD160 (R/covr_3.3.1.tar.gz) = d2e65cb0380e62dfd74595f19fe4bbf774263de2
+SHA512 (R/covr_3.3.1.tar.gz) = e199400a5dad9c0038429f151f77b0837203ab23d4a993ae86784e6017650f4769598ce7a11e2bc6635f1e41fb2181885f0cb96ca1fc55bd60180b57f8936cda
+Size (R/covr_3.3.1.tar.gz) = 143868 bytes
