@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2018/10/31 11:56:22 wen Exp $
+$NetBSD: distinfo,v 1.17 2019/10/13 11:20:05 mef Exp $
 
-SHA1 (Clone-0.41.tar.gz) = e7a47d0243fa658d1654967327fbd6d1c7ccfe47
-RMD160 (Clone-0.41.tar.gz) = 8d70f26e72bbac3822bfea6218c5bb5f34f3fae6
-SHA512 (Clone-0.41.tar.gz) = fa370fbede205449687b00a255f71295b2056c7897a343758564f80810d2534b8a8eff248f3adf8e96e1a7eded22a2237edb22fb610d0cd84d2fab1352b40dcb
-Size (Clone-0.41.tar.gz) = 14441 bytes
+SHA1 (Clone-0.43.tar.gz) = a05278e9647ff7eda96040e36d5b4de4732b71ed
+RMD160 (Clone-0.43.tar.gz) = 0b2df808d4079322bc51feff2db3958f688d3ad6
+SHA512 (Clone-0.43.tar.gz) = 1a973fb5bde9e722e8d5bd11cf70005454f8e797687a145e5eb563629200cb6535168e458d312d57741ec4caf9c333dab588223e2368402aafd712b375846cd5
+Size (Clone-0.43.tar.gz) = 15953 bytes
