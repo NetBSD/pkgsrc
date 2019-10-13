@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/10/13 18:13:03 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2019/10/13 19:13:47 rillig Exp $
 #
 
 VERS=		0.6.2
@@ -29,7 +29,7 @@ do-extract:
 	cd ${FILESDIR} && ${CP} R2pkg*.* ${WRKSRC}
 
 do-test:
-	cd ${WRKSRC} && LC_ALL=C ${PREFIX}/bin/Rscript R2pkg_test.R
+	cd ${WRKSRC} && LC_ALL=C PKGSRCDIR=${PKGSRCDIR} ${PREFIX}/bin/Rscript R2pkg_test.R
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/R2pkg.sh ${DESTDIR}${PREFIX}/sbin/R2pkg
