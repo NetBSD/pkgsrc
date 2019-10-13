@@ -1,15 +1,14 @@
-$NetBSD: distinfo,v 1.33 2019/10/12 22:57:08 he Exp $
+$NetBSD: distinfo,v 1.34 2019/10/13 21:48:57 he Exp $
 
-SHA1 (xmlrpc-c-1.25.26.tgz) = 62b8b7b76b2937b2f3d51be045cbf17476302d39
-RMD160 (xmlrpc-c-1.25.26.tgz) = 86096117f8e26321c38539eff83cdf0f64055e47
-SHA512 (xmlrpc-c-1.25.26.tgz) = 664ecf5099a109f90130d8794c41d21cc8adfc3e990b63a658b04ccfd73278437c13c54f24336442ea1d8d9f38f248471474912b8647754a15e9eeb3a6ab5e96
-Size (xmlrpc-c-1.25.26.tgz) = 779351 bytes
-SHA1 (patch-GNUmakefile) = e4c6b18adaec74257ae174f64ac680aaf63d31a5
-SHA1 (patch-aa) = 96ca1b0f8550b04e7292d07b4204b5bed841a417
-SHA1 (patch-ae) = 52f826d292869be44886881c48aa7707a4af2df3
-SHA1 (patch-ai) = 8d7ddc541779129de1e03a3cee81505ffbfb4171
-SHA1 (patch-aj) = e65acd3d49be3486f70cda935a8b2aae3f8af3e8
-SHA1 (patch-ak) = 4525977b51a25f115c1266dccf0e2cc754dc80d3
-SHA1 (patch-config.mk.in) = e3eef60ab28b92d1e903ac84997617dfafe1689c
+SHA1 (xmlrpc-c-1.51.04.tgz) = 0c085e210d07b2e2d8ce877e24c370a7b3df2074
+RMD160 (xmlrpc-c-1.51.04.tgz) = c85a1ec7bdf5bb4a49b8d0445b7ab1a94b53bd66
+SHA512 (xmlrpc-c-1.51.04.tgz) = 93ba49606b651d69ba5cc85a62a96fad550e98fb38efcaf6aed316933d875921e0a0885261aa9f417311d35797e8d0a0e5a6281359d28026fc2ff5712563a274
+Size (xmlrpc-c-1.51.04.tgz) = 6656000 bytes
+SHA1 (patch-GNUmakefile) = eb669cc4d9290afe095dedb92faf3064929ecdda
+SHA1 (patch-common.mk) = c11a9a69b45d28d79b2baac681a6e3c077664683
+SHA1 (patch-config.mk.in) = 0456837827c71824aa39914086e466a494038dc8
 SHA1 (patch-src_cpp_base64.cpp) = a51ad8cc8f41d724310eaaea86ebaaa8de610498
-SHA1 (patch-src_cpp_server_pstream.cpp) = 2a6b2f30ab5f9df1953f874ede41b91bd60a005a
+SHA1 (patch-src_cpp_server__pstream.cpp) = 0b28182c56bb326bf24ac031874521b1bb6d5ef5
+SHA1 (patch-tools_xml-rpc-api2cpp_Makefile) = 6b6b3f24a247856d61284cdbb4ecc21eb436d3a0
+SHA1 (patch-tools_xmlrpc_Makefile) = 92428282885a2b66ce89d629a0a7a9167715a334
+SHA1 (patch-tools_xmlrpc__transport_Makefile) = a5fd2fd98acceae4832d0dbfc9849f16401975e4
