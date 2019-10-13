@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: R2pkg.sh,v 1.6 2019/08/08 20:14:27 brook Exp $
+# $NetBSD: R2pkg.sh,v 1.7 2019/10/13 09:43:26 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -31,6 +31,9 @@
 #
 # Create an R package in the current directory
 #
+
+set -u
+
 NAME="R2pkg"
 VERS="@VERS@"
 
@@ -40,6 +43,7 @@ USAGE="${NAME} [-cDehqruVv] [-E editor] [-M maintainer] [package] -- create an R
 
 : ${CRAN_URL:=ftp://cran.r-project.org}
 : ${PKGEDITOR:=${EDITOR:=vi}}
+: ${TMPDIR:=/tmp}
 
 # Substituted by pkgsrc at pre-configure time.
 MAKE=@MAKE@
@@ -52,8 +56,10 @@ RECURSIVE=0
 UPDATE=0
 VERBOSE=0
 
+DESCRIPTION=no
 DESCRIPTION_CONNECTION=connection
 
+ARGS=""
 while getopts cDehqruVvE:M:L:P: f
 do
     case ${f} in
@@ -61,7 +67,7 @@ do
 	c) UPDATE=0; ARGS="${ARGS} -c";;
 	D) DESCRIPTION=yes; DESCRIPTION_CONNECTION="'DESCRIPTION'"; ARGS="${ARGS} -D";;
 	e) EDIT=0; ARGS="${ARGS} -e";;
-	h) echo ${USAGE}; exit 0;;
+	h) echo "${USAGE}"; exit 0;;
 	q) QUIET=1; ARGS="${ARGS} -q";;
 	r) RECURSIVE=1; RECURSIVE_MESSAGE=1; ARGS="${ARGS} -r";;
 	u) UPDATE=1; ARGS="${ARGS} -u";;
@@ -74,7 +80,7 @@ do
 	L) LEVEL=${OPTARG};;
 	P) PID=${OPTARG};;
 	# unknown options
-        \?) echo ${USAGE}; exit 1;;
+        \?) echo "${USAGE}" 1>&2; exit 1;;
     esac
 done
 shift `expr ${OPTIND} - 1`
@@ -83,12 +89,12 @@ shift `expr ${OPTIND} - 1`
 ARGS="${ARGS} -L $((${LEVEL}+1)) -P ${PID}"
 
 if [ ${#} -eq 0 ]; then
-    RPKG=$(echo $(basename $(pwd)) | sed -e 's/^R-//');
+    RPKG=$(basename $(pwd) | sed -e 's/^R-//')
 elif [ ${#} -eq 1 ]; then
     RPKG=${1}
 else
-    echo "Error: multiple package names given."
-    echo "${USAGE}"
+    echo "Error: multiple package names given." 1>&2
+    echo "${USAGE}" 1>&2
     exit 1
 fi
 
@@ -148,7 +154,7 @@ check_for_R ()
     R_CMD="Rscript --no-save /dev/null"
     eval ${R_CMD}
     if [ ${?} -ne 0 ]; then
-	echo "ERROR: math/R package is not installed."
+	echo "ERROR: math/R package is not installed." 1>&2
 	exit 1
     fi
 }
@@ -157,7 +163,7 @@ check_for_no_recursion ()
 {
     touch ${PACKAGES_LIST}
     grep -E -q -e "${RPKG}" ${PACKAGES_LIST} \
-	&& echo "ERROR: circular dependency"
+	&& echo "ERROR: circular dependency" 1>&2
     echo "${RPKG}" >> ${PACKAGES_LIST}
 }
 
@@ -1400,7 +1406,7 @@ EOF
     eval ${R_CMD}
     retval=${?}
     if [ ${retval} -ne 0 ]; then
-	echo "ERROR: making ${RPKG} package failed."
+	echo "ERROR: making ${RPKG} package failed." 1>&2
     fi
     return ${retval}
 }
@@ -1535,7 +1541,7 @@ cleanup_distinfo ()
 
 cleanup_misc_files ()
 {
-    [ "X${DESCRIPTION}" != "X" ] || rm -f DESCRIPTION
+    [ "${DESCRIPTION}" = "yes" ] || rm -f DESCRIPTION
     rm -f ${R_FILE}
     rm -f CATEGORIES
     rm -f COMMENT
@@ -1571,7 +1577,7 @@ Please do not forget the following:
 EOF
 	[ -f buildlink3.mk ] && echo "- check buildlink3.mk"
 
-	[ "X${DESCRIPTION}" != "X" ] && echo "- remove DESCRIPTION."
+	[ "${DESCRIPTION}" = "yes" ] && echo "- remove DESCRIPTION."
 	if [ ${RECURSIVE} -ne 0 ]; then
 	    cat << EOF
 
