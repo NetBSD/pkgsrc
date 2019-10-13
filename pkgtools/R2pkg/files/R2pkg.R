@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg.R,v 1.2 2019/10/13 13:28:45 rillig Exp $
+# $NetBSD: R2pkg.R,v 1.3 2019/10/13 15:35:48 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -1249,17 +1249,20 @@ create.DESCR <- function(metadata)
   write(DESCR,'DESCR')
 }
 
-set.locale()
+main <- function()
+{
+  set.locale()
 
-error <- download.file(url=arg.rpkg_description_url,destfile='DESCRIPTION',quiet=arg.quiet_curl,method='curl')
-if (error)
-  {
-    message('ERROR: Downloading the DESCRIPTION file for ',arg.rpkg,' failed;')
-    message('       perhaps the package no longer exists?')
-    quit(save='no',status=error)
-  }
+  error <- download.file(url=arg.rpkg_description_url,destfile='DESCRIPTION',quiet=arg.quiet_curl,method='curl')
+  if (error)
+    {
+      message('ERROR: Downloading the DESCRIPTION file for ',arg.rpkg,' failed;')
+      message('       perhaps the package no longer exists?')
+      quit(save='no',status=error)
+    }
 
-metadata <- read.dcf(file='DESCRIPTION', fields=c('Package','Version','Title','Description','License','Imports','Depends'))
+  metadata <- read.dcf(file='DESCRIPTION', fields=c('Package','Version','Title','Description','License','Imports','Depends'))
 
-create.Makefile(metadata)
-create.DESCR(metadata)
+  create.Makefile(metadata)
+  create.DESCR(metadata)
+}
