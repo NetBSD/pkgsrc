@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2925 2019/10/13 11:47:21 rillig Exp $
+# $NetBSD: Makefile,v 1.2926 2019/10/13 11:50:49 rillig Exp $
 #
 
 COMMENT=	Development utilities
@@ -25,6 +25,7 @@ SUBDIR+=	R-callr
 SUBDIR+=	R-checkmate
 SUBDIR+=	R-cli
 SUBDIR+=	R-clipr
+SUBDIR+=	R-covr
 SUBDIR+=	R-crayon
 SUBDIR+=	R-desc
 SUBDIR+=	R-devtools
