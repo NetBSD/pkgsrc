@@ -1,9 +1,9 @@
-$NetBSD: patch-GNUmakefile,v 1.2 2013/09/12 18:52:54 adam Exp $
+$NetBSD: patch-GNUmakefile,v 1.3 2019/10/13 21:48:57 he Exp $
 
 Make this build with symlinked pkgsrc directory.
 Don't build examples: they are not installed, and give error with libc++.
 
---- GNUmakefile.orig	2011-03-25 16:27:18.000000000 +0000
+--- GNUmakefile.orig	2019-03-29 03:33:33.000000000 +0000
 +++ GNUmakefile
 @@ -1,6 +1,6 @@
  include srcdir.mk
@@ -17,8 +17,8 @@ Don't build examples: they are not installed, and give error with libc++.
  
  include $(BLDDIR)/config.mk
  
--SUBDIRS = include lib src tools examples
-+SUBDIRS = include lib src tools
+-SUBDIRS = include lib src test examples
++SUBDIRS = include lib src test
  
- # The reason we don't build tools and examples by default is that they
- # contain executables, which require significantly more from the
+ ifeq ($(BUILD_TOOLS),yes)
+   SUBDIRS += tools
