@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2018/12/31 09:18:44 wen Exp $
+$NetBSD: distinfo,v 1.10 2019/10/13 10:59:44 mef Exp $
 
-SHA1 (Carp-Clan-6.07.tar.gz) = 55247ca5e0db1b3458495c852cb43388be3432af
-RMD160 (Carp-Clan-6.07.tar.gz) = d4b66b7251d8348dca2f8905c207fc015c795338
-SHA512 (Carp-Clan-6.07.tar.gz) = 0180c2bd2ffe9f2b6c23d7e76bf3dd8ceeacfc842b09c2dab2f81d002ff7235ce2d145e53c55e375cb889291577cfcd4cb9be34b5445ae532cb9768979c57e41
-Size (Carp-Clan-6.07.tar.gz) = 33805 bytes
+SHA1 (Carp-Clan-6.08.tar.gz) = b5d8ab497cc3a22ec7c5bc61bd6f0034dfa43827
+RMD160 (Carp-Clan-6.08.tar.gz) = 58aece12b67685ec316980c92b4e0c481eb1d1f9
+SHA512 (Carp-Clan-6.08.tar.gz) = bc7f74d75e1eae0f528d530b47f1841493aae7eecdeeb58f85f5d8ef7a5b4d92c479b45468d0e7175f228056295d3d7159a7b404fecd542cf04c75ddc3a9886f
+Size (Carp-Clan-6.08.tar.gz) = 34173 bytes
