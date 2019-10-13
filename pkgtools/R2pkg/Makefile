@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/10/13 13:26:22 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2019/10/13 18:13:03 rillig Exp $
 #
 
 VERS=		0.6.2
@@ -16,6 +16,8 @@ USE_LANGUAGES=	# none
 AUTO_MKDIRS=	yes
 
 DEPENDS+=	curl>=7.52.1:../../www/curl
+TEST_DEPENDS+=	R-testthat>=2.2.1:../../devel/R-testthat
+TEST_DEPENDS+=	R-withr>=2.1.2:../../devel/R-withr
 
 SUBST_CLASSES+=	R
 SUBST_STAGE.R=	pre-configure
@@ -24,7 +26,10 @@ SUBST_VARS.R=	VERS MAKE LIBDIR
 LIBDIR=		${PREFIX}/lib/R2pkg
 
 do-extract:
-	cd ${FILESDIR} && ${CP} R2pkg.* ${WRKSRC}
+	cd ${FILESDIR} && ${CP} R2pkg*.* ${WRKSRC}
+
+do-test:
+	cd ${WRKSRC} && LC_ALL=C ${PREFIX}/bin/Rscript R2pkg_test.R
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/R2pkg.sh ${DESTDIR}${PREFIX}/sbin/R2pkg
