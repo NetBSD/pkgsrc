@@ -1,4 +1,4 @@
-$NetBSD: RELEASE,v 1.4 2019/10/13 09:43:26 rillig Exp $
+$NetBSD: RELEASE,v 1.5 2019/10/13 13:26:22 rillig Exp $
 
 RELEASE
 =======
@@ -61,3 +61,5 @@ R2pkg v.0.6.1 (2019-10-13)
 * Quote variables to prevent unintended interpolation.
 
 * Write error messages to stderr instead of stdout.
+
+* Separate R source code from shell code.

@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/25 22:06:34 brook Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/10/13 13:26:22 rillig Exp $
+lib/R2pkg/R2pkg.R
 man/man8/R2pkg.8
 sbin/R2pkg
