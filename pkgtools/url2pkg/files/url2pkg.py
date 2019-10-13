@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.21 2019/10/12 17:38:16 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.22 2019/10/13 08:48:23 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -536,9 +536,6 @@ class Adjuster:
     # the Makefile, thereby forming the fifth paragraph.
     extra_vars: List[Var]
 
-    # variables from the initial Makefile whose values are replaced
-    update_vars: Dict[str, str]
-
     # these are inserted below the second paragraph in the Makefile.
     todos: List[str]
 
@@ -568,7 +565,6 @@ class Adjuster:
         self.includes = []
         self.build_vars = []
         self.extra_vars = []
-        self.update_vars = {}
         self.todos = []
         self.pkgname_prefix = ''
         self.pkgname_transform = ''
@@ -631,7 +627,8 @@ class Adjuster:
             # example: var   VARNAME   value # possibly with comment
             m = re.search(r'^var\t(\S+)\t(.+)$', line)
             if m:
-                self.update_vars[m[1]] = m[2]
+                if not self.makefile_lines.set(m[1], m[2]):
+                    self.extra_vars.append(Var(m[1], '=', m[2]))
                 continue
 
             if line != '':
@@ -926,10 +923,6 @@ class Adjuster:
         lines.append('CATEGORIES', ' '.join(self.categories))
 
         self.adjust_lines_python_module(lines)
-
-        for varname in self.update_vars:
-            self.g.debug('update_var {0} {1}', varname, self.update_vars[varname])
-            lines.set(varname, self.update_vars[varname])
 
         return lines
 
