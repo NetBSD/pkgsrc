@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4329 2019/10/13 11:31:23 mef Exp $
+$NetBSD: CHANGES-2019,v 1.4330 2019/10/13 11:48:10 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6957,3 +6957,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-Clone to 0.43 [mef 2019-10-13]
 	Updated devel/p5-Compress-Raw-Bzip2 to 2.087 [mef 2019-10-13]
 	Updated devel/p5-Config-Tiny to 2.24 [mef 2019-10-13]
+	Added devel/R-rex version 1.1.2 [rillig 2019-10-13]
