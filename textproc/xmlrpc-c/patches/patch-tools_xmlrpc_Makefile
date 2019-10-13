@@ -1,0 +1,15 @@
+$NetBSD: patch-tools_xmlrpc_Makefile,v 1.1 2019/10/13 21:48:58 he Exp $
+
+Use libtool when linking.
+
+--- tools/xmlrpc/Makefile.orig	2019-03-29 03:33:33.000000000 +0000
++++ tools/xmlrpc/Makefile
+@@ -39,7 +39,7 @@ XMLRPC_OBJS = xmlrpc.o $(DUMPVALUE)
+ CLIENT_LDLIBS += $(SOCKETLIBOPT) $(THREAD_LIBS)
+ 
+ xmlrpc: $(XMLRPC_OBJS) $(CLIENT_LIBS_DEP) $(UTILS)
+-	$(CCLD) -o $@ $(LDFLAGS_ALL) $(XMLRPC_OBJS) $(UTILS) $(CLIENT_LDLIBS)
++	libtool --mode=link $(CCLD) -o $@ $(LDFLAGS_ALL) $(XMLRPC_OBJS) $(UTILS) $(CLIENT_LDLIBS)
+ 
+ %.o:%.c $(BLDDIR)/include/xmlrpc-c/config.h
+ 	$(CC) -c $(CFLAGS_ALL) $<
