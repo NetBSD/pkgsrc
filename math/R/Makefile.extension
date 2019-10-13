@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.extension,v 1.24 2019/08/07 21:54:34 brook Exp $
+# $NetBSD: Makefile.extension,v 1.25 2019/10/13 12:21:23 rillig Exp $
 #
 # This Makefile fragment is included by packages for R library packages.
 #
@@ -6,7 +6,17 @@
 #
 # (1) define R_PKGNAME and R_PKGVER to the R package name and version
 #     for the package desired.
-# (2) Include this Makefile fragment in the package Makefile,
+# (2) Include this Makefile fragment in the package Makefile
+
+_VARGROUPS+=	R
+_PKG_VARS.R=	R_PKGNAME R_PKGVER R_INST_DIRS
+_USE_VARS.R=	DISTNAME
+_DEF_VARS.R=	PKGNAME DIST_SUBDIR CATEGORIES HOMEPAGE \
+		INSTALL_TEMPLATES DEINSTALL_TEMPLATES
+_IGN_VARS.R=	INSTALLATION_DIRS MAKE_ENV INSTALL_ENV MASTER_SITES \
+		MASTER_SITE_R_CRAN WRKDIR R_LIB DESTDIR PREFIX WRKSRC \
+		R_PKG_INSTALL_ARGS R_HOMEPAGE_BASE CONFIGURE_ARGS \
+		GENERATE_PLIST OPSYS CHECK_FILES_SKIP
 
 .if defined(DISTNAME)
 R_PKGNAME?=	${DISTNAME:C/_.*//}
@@ -29,9 +39,13 @@ INSTALL_ENV+=	R_LIBS=
 
 do-build:
 
+do-test:
+	${RUN} cd ${WRKDIR} && ${PKGSRC_SETENV} ${MAKE_ENV} ${TEST_ENV} \
+		${PREFIX}/bin/R CMD check ${R_PKGNAME}
+
 do-install:
-	${PKGSRC_SETENV} ${INSTALL_ENV} ${MAKE_ENV} ${LOCALBASE}/bin/R \
-		CMD INSTALL ${R_PKG_INSTALL_ARGS} ${WRKDIR}/${R_PKGNAME}
+	${RUN} ${PKGSRC_SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
+		${PREFIX}/bin/R CMD INSTALL ${R_PKG_INSTALL_ARGS} ${WRKSRC}
 
 .include "../../mk/bsd.fast.prefs.mk"
 
