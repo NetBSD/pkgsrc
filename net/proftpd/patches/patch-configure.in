@@ -1,0 +1,17 @@
+$NetBSD: patch-configure.in,v 1.1 2019/10/13 19:52:47 maya Exp $
+
+--- configure.in.orig	2017-04-10 02:31:02.000000000 +0000
++++ configure.in
+@@ -2836,6 +2836,12 @@ AC_TRY_RUN(
+   AC_MSG_RESULT(cross-compiling); AC_DEFINE(HAVE_LU, 1, [Define if you have %lu support])
+ )
+ 
++dnl Test for blacklistd support
++AC_CHECK_LIB(blacklist, blacklist,
++  [AC_DEFINE(HAVE_BLACKLIST, 1, [Define if you have blacklistd support.])
++  ac_build_addl_libs="$ac_build_addl_libs -lblacklist"
++  ])
++
+ dnl Add the proftpd support library
+ LIBS="-lsupp $LIBS"
+ 
