@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: R2pkg.sh,v 1.8 2019/10/13 13:26:22 rillig Exp $
+# $NetBSD: R2pkg.sh,v 1.9 2019/10/13 15:35:48 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -192,7 +192,8 @@ make_package ()
 	MAINTAINER_EMAIL="${MAINTAINER_EMAIL}" \
 	RPKG_DESCRIPTION_URL="${RPKG_DESCRIPTION_URL}" \
 	QUIET_CURL="${QUIET_CURL}" \
-	Rscript --no-save "@LIBDIR@/R2pkg.R"
+	LC_ALL="C" \
+	Rscript --no-save -e "source('@LIBDIR@/R2pkg.R'); main()"
     retval=${?}
     if [ ${retval} -ne 0 ]; then
 	echo "ERROR: making ${RPKG} package failed." 1>&2
