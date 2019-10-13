@@ -1,11 +1,11 @@
-$NetBSD: patch-src_cpp_server_pstream.cpp,v 1.1 2013/12/01 23:25:31 bsiegert Exp $
+$NetBSD: patch-src_cpp_server__pstream.cpp,v 1.1 2019/10/13 21:48:58 he Exp $
 
 Socket functions need sys/types.h on MirBSD.
 
---- src/cpp/server_pstream.cpp.orig	Thu Sep 19 12:47:06 2013
+--- src/cpp/server_pstream.cpp.orig	2014-12-28 18:55:09.000000000 +0000
 +++ src/cpp/server_pstream.cpp
 @@ -22,6 +22,7 @@
- #include <winsock.h>
+ #include <winsock2.h>
  typedef int socklen_t;
  #else
 +#include <sys/types.h>
