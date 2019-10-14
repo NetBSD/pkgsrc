@@ -1,11 +1,37 @@
-$NetBSD: patch-configure,v 1.1 2012/08/18 07:42:29 marino Exp $
+$NetBSD: patch-configure,v 1.2 2019/10/14 19:18:15 adam Exp $
 
-Add DragonFly support
+Fix wx detection.
+Add DragonFly support.
 
---- configure.orig	2011-11-03 18:13:41.000000000 +0000
+--- configure.orig	2019-10-04 21:44:09.000000000 +0000
 +++ configure
-@@ -886,6 +886,9 @@ case $_host_os in
- 	android | beos* | bsd* | darwin* | freebsd* | gph-linux | haiku* | hpux* | iphone | irix* | linux* | mint* | netbsd* | openbsd* | solaris* | sunos* | uclinux* | webos)
+@@ -365,6 +365,7 @@ Optional Libraries:
+   --disable-png            disable libpng (compression) support [autodetect]
+ 
+   --with-wx-prefix=DIR     Prefix where wxwidgets is installed (optional)
++  --with-wx-config=DIR     Prefix where wx-config is installed (optional)
+   --disable-wxwidgets      disable wxwidgets (GUI) support [autodetect]
+ 
+   --disable-iconv          disable iconv (Japanese font) support [autodetect]
+@@ -447,7 +448,15 @@ for ac_option in $@; do
+ 		;;
+ 	--with-wx-prefix=*)
+ 		arg=`echo $ac_option | cut -d '=' -f 2`
+-		_wxpath="$arg:$arg/bin"
++		_wxpath="$arg"
++		;;
++	--with-wx-config=*)
++		arg=`echo $ac_option | cut -d '=' -f 2`
++		_wxconfig="$arg"
++		;;
++	--with-wx-version=*)
++		arg=`echo $ac_option | cut -d '=' -f 2`
++		# ignore
+ 		;;
+ 	--with-boost-prefix=*)
+ 		arg=`echo $ac_option | cut -d '=' -f 2`
+@@ -1326,6 +1335,9 @@ case $_host_os in
+ 	android | beos* | bsd* | darwin* | freebsd* | gph-linux | haiku* | hpux* | iphone | irix* | linux* | mint* | netbsd* | openbsd* | riscos | solaris* | sunos* | uclinux* | webos)
  		_posix=yes
  		;;
 +	dragonfly*)
@@ -14,3 +40,14 @@ Add DragonFly support
  	os2-emx*)
  		_posix=yes	# FIXME: Really???
  		;;
+@@ -1665,7 +1677,9 @@ echo "$_iconv"
+ #
+ if test "$_wxwidgets" = auto ; then
+ 	_wxwidgets=no
+-	find_wxconfig
++	if test -z "$_wxconfig"; then
++		find_wxconfig
++	fi
+ 	if test -n "$_wxconfig"; then
+ 		_wxwidgets=yes
+ 	fi

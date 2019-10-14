@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.8 2016/12/15 23:53:38 joerg Exp $
+$NetBSD: distinfo,v 1.9 2019/10/14 19:18:15 adam Exp $
 
-SHA1 (scummvm-tools-1.4.0.tar.bz2) = 44a422872180f8aea3eb57e0462d930e22c533ba
-RMD160 (scummvm-tools-1.4.0.tar.bz2) = baabb1d8fb99be72c5eafb186aa132b797edc58d
-SHA512 (scummvm-tools-1.4.0.tar.bz2) = 0997bf4f7cea27af6fd8821303fc08029cb6c57d4291eede9b7e2bcddff3512c101f886b1b776217b231efd12a6828593a592915690ea724f33348345bdff0a4
-Size (scummvm-tools-1.4.0.tar.bz2) = 943697 bytes
-SHA1 (patch-Makefile.common) = d296c951793facfc35835a250b652cedc25b949b
-SHA1 (patch-configure) = cf5da2584ec2fa05fb81faa115f8de0616dd04f7
-SHA1 (patch-decompiler_refcounted.h) = 509b95e42fa52a1f2c1892dbcfae829a9b7c92f6
-SHA1 (patch-engines_gob_degob__script.cpp) = 6bd377ea818076bc12da69b4d1c2588fa5ead449
+SHA1 (scummvm-tools-2.1.0.tar.xz) = 8ce9007d7fe6797339c85958cdb6e76048688005
+RMD160 (scummvm-tools-2.1.0.tar.xz) = d87c8ed99cc87fa312ce5c6ddad3456b7b8f54a5
+SHA512 (scummvm-tools-2.1.0.tar.xz) = 40e0b1a545257922dd1846d520ef0c18ef7a2682a3d7bb1709bcd49b1338ed7cefea438958941586329271d84e01bf189a14e31f5758e500df607d162ee9cc15
+Size (scummvm-tools-2.1.0.tar.xz) = 710124 bytes
+SHA1 (patch-configure) = 5e6054f9a998d7cdf8522e449199b91f6e58392b
