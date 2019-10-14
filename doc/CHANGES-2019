@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4335 2019/10/14 03:28:08 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.4336 2019/10/14 13:35:53 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6963,3 +6963,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/gallery-dl to 1.10.6 [leot 2019-10-13]
 	Updated textproc/xmlrpc-c to 1.51.04 [he 2019-10-13]
 	Updated devel/gobject-introspection to 1.62.0 [gutteridge 2019-10-14]
+	Updated databases/p5-DBIx-Class-EncodedColumn to 0.00020 [wen 2019-10-14]
