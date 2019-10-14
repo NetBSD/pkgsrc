@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2019/10/14 19:18:45 adam Exp $
+bin/pegasus_save_types
