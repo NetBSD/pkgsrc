@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19339 2019/10/14 03:31:48 gutteridge Exp $
+$NetBSD: TODO,v 1.19340 2019/10/14 03:44:29 gutteridge Exp $
 
 Suggested new packages
 ======================
@@ -943,6 +943,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libtrace-3.0.22
 	o libv4l-0.8.5
 	o libvirt-2.3
+	o libwnck3-3.32.0
 	o libxdg-basedir-1.2.0
 	o libykneomgr-0.1.8
 	o lincvs-2.1.4 [now called CrossVC]
