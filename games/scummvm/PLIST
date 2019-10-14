@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2017/12/30 09:06:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2019/10/14 19:16:54 adam Exp $
 bin/scummvm
 man/man6/scummvm.6
 share/appdata/scummvm.appdata.xml
@@ -8,13 +8,16 @@ share/doc/scummvm/COPYING
 share/doc/scummvm/COPYING.BSD
 share/doc/scummvm/COPYING.FREEFONT
 share/doc/scummvm/COPYING.LGPL
+share/doc/scummvm/COPYING.OFL
 share/doc/scummvm/COPYRIGHT
-share/doc/scummvm/NEWS
-share/doc/scummvm/README
+share/doc/scummvm/NEWS.md
+share/doc/scummvm/README.md
 share/icons/hicolor/scalable/apps/scummvm.svg
 share/pixmaps/scummvm.xpm
 share/scummvm/access.dat
+share/scummvm/cryomni3d.dat
 share/scummvm/drascula.dat
+share/scummvm/fonts.dat
 share/scummvm/hugo.dat
 share/scummvm/kyra.dat
 share/scummvm/lure.dat
@@ -24,10 +27,14 @@ share/scummvm/pred.dic
 share/scummvm/queen.tbl
 share/scummvm/scummclassic.zip
 share/scummvm/scummmodern.zip
+share/scummvm/scummremastered.zip
 share/scummvm/sky.cpt
+share/scummvm/supernova.dat
 share/scummvm/teenagent.dat
 share/scummvm/titanic.dat
 share/scummvm/tony.dat
 share/scummvm/toon.dat
 share/scummvm/translations.dat
 share/scummvm/wintermute.zip
+share/scummvm/wwwroot.zip
+share/scummvm/xeen.ccs
