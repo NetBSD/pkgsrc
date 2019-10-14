@@ -1,13 +1,13 @@
-$NetBSD: patch-mysys__ssl_CMakeLists.txt,v 1.2 2014/08/10 15:11:57 adam Exp $
+$NetBSD: patch-mysys__ssl_CMakeLists.txt,v 1.3 2019/10/14 19:44:47 adam Exp $
 
 Build with newer DTrace.
 
---- mysys_ssl/CMakeLists.txt.orig	2014-07-18 15:48:39.000000000 +0000
+--- mysys_ssl/CMakeLists.txt.orig	2019-09-27 07:04:56.000000000 +0000
 +++ mysys_ssl/CMakeLists.txt
-@@ -60,7 +60,6 @@ SET(MYSYS_SSL_SOURCES
- 
- ADD_CONVENIENCE_LIBRARY(mysys_ssl ${MYSYS_SSL_SOURCES})
- TARGET_LINK_LIBRARIES(mysys_ssl dbug strings ${SSL_LIBRARIES} ${ZLIB_LIBRARY})
+@@ -48,7 +48,6 @@ TARGET_LINK_LIBRARIES(mysys_ssl ${CMAKE_
+ IF(WIN32)
+   TARGET_LINK_LIBRARIES(mysys_ssl crypt32)
+ ENDIF()
 -DTRACE_INSTRUMENT(mysys_ssl)
  
  IF(MSVC)
