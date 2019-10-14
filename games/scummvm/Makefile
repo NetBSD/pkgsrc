@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.81 2017/12/30 09:06:42 adam Exp $
+# $NetBSD: Makefile,v 1.82 2019/10/14 19:16:54 adam Exp $
 
-DISTNAME=	scummvm-2.0.0
+DISTNAME=	scummvm-2.1.0
 CATEGORIES=	games
 MASTER_SITES=	https://www.scummvm.org/frs/scummvm/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -11,7 +11,7 @@ COMMENT=	LucasArts Script Creation Utility for Maniac Mansion
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		bsdtar gmake
+USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--disable-optimizations
@@ -35,5 +35,7 @@ BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.1
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/libmpeg2/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
+.include "../../net/SDL2_net/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
