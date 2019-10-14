@@ -1,9 +1,9 @@
-$NetBSD: patch-Makefile.in,v 1.1 2019/07/04 07:17:25 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2019/10/14 20:10:19 triaxx Exp $
 
 Add libtoolization.
 Fix manpage installation.
 
---- Makefile.in.orig	2018-07-22 17:08:39.000000000 +0000
+--- Makefile.in.orig	2019-09-30 14:39:22.000000000 +0000
 +++ Makefile.in
 @@ -45,7 +45,7 @@ VPATH = @srcdir@
  #
@@ -40,7 +40,7 @@ Fix manpage installation.
  PUBHDR = \
  	pcap.h \
  	pcap-bpf.h \
-@@ -379,12 +380,10 @@ EXTRA_DIST = \
+@@ -385,12 +386,10 @@ EXTRA_DIST = \
  	Win32/Prj/wpcap.vcxproj \
  	Win32/Prj/wpcap.vcxproj.filters
  
@@ -56,7 +56,7 @@ Fix manpage installation.
  
  shared: libpcap.$(DYEXT)
  
-@@ -471,7 +470,7 @@ scanner.h: scanner.c
+@@ -477,7 +476,7 @@ scanner.h: scanner.c
  		$(MAKE) $(MAKEFLAGS) scanner.c; \
  	fi
  
@@ -65,7 +65,7 @@ Fix manpage installation.
  	$(CC) $(FULL_CFLAGS) -c scanner.c
  
  grammar.c: $(srcdir)/grammar.y
-@@ -483,16 +482,16 @@ grammar.h: grammar.c
+@@ -489,25 +488,25 @@ grammar.h: grammar.c
  		$(MAKE) $(MAKEFLAGS) grammar.c; \
  	fi
  
@@ -77,16 +77,28 @@ Fix manpage installation.
 +gencode.lo: $(srcdir)/gencode.c grammar.h scanner.h
  	$(CC) $(FULL_CFLAGS) -c $(srcdir)/gencode.c
  
+-asprintf.o: $(srcdir)/missing/asprintf.c
++asprintf.lo: $(srcdir)/missing/asprintf.c
+ 	$(CC) $(FULL_CFLAGS) -o $@ -c $(srcdir)/missing/asprintf.c
+ 
 -snprintf.o: $(srcdir)/missing/snprintf.c
 +snprintf.lo: $(srcdir)/missing/snprintf.c
  	$(CC) $(FULL_CFLAGS) -o $@ -c $(srcdir)/missing/snprintf.c
+ 
+-strlcat.o: $(srcdir)/missing/strlcat.c
++strlcat.lo: $(srcdir)/missing/strlcat.c
+ 	$(CC) $(FULL_CFLAGS) -o $@ -c $(srcdir)/missing/strlcat.c
+ 
+-strlcpy.o: $(srcdir)/missing/strlcpy.c
++strlcpy.lo: $(srcdir)/missing/strlcpy.c
+ 	$(CC) $(FULL_CFLAGS) -o $@ -c $(srcdir)/missing/strlcpy.c
  
 -strtok_r.o: $(srcdir)/missing/strtok_r.c
 +strtok_r.lo: $(srcdir)/missing/strtok_r.c
  	$(CC) $(FULL_CFLAGS) -o $@ -c $(srcdir)/missing/strtok_r.c
  
  #
-@@ -538,7 +537,7 @@ testprogs: FORCE
+@@ -553,7 +552,7 @@ testprogs: FORCE
  
  FORCE:
  
@@ -95,7 +107,7 @@ Fix manpage installation.
  	[ -d $(DESTDIR)$(libdir) ] || \
  	    (mkdir -p $(DESTDIR)$(libdir); chmod 755 $(DESTDIR)$(libdir))
  	[ -d $(DESTDIR)$(includedir) ] || \
-@@ -553,59 +552,60 @@ install: install-shared install-archive 
+@@ -568,62 +567,60 @@ install: install-shared install-archive 
  	    (mkdir -p $(DESTDIR)$(mandir)/man@MAN_FILE_FORMATS@; chmod 755 $(DESTDIR)$(mandir)/man@MAN_FILE_FORMATS@)
  	[ -d $(DESTDIR)$(mandir)/man@MAN_MISC_INFO@ ] || \
  	    (mkdir -p $(DESTDIR)$(mandir)/man@MAN_MISC_INFO@; chmod 755 $(DESTDIR)$(mandir)/man@MAN_MISC_INFO@)
@@ -127,6 +139,9 @@ Fix manpage installation.
 -	rm -f pcap_datalink_val_to_description.3pcap && \
 -	$(LN_S) pcap_datalink_val_to_name.3pcap \
 -		 pcap_datalink_val_to_description.3pcap && \
+-	rm -f pcap_datalink_val_to_description_or_dlt.3pcap && \
+-	$(LN_S) pcap_datalink_val_to_name.3pcap \
+-		 pcap_datalink_val_to_description_or_dlt.3pcap && \
 -	rm -f pcap_dump_fopen.3pcap && \
 -	$(LN_S) pcap_dump_open.3pcap pcap_dump_fopen.3pcap && \
 -	rm -f pcap_freealldevs.3pcap && \
@@ -195,7 +210,7 @@ Fix manpage installation.
  	for i in $(MANFILE); do \
  		$(INSTALL_DATA) `echo $$i | sed 's/.manfile.in/.manfile/'` \
  		    $(DESTDIR)$(mandir)/man@MAN_FILE_FORMATS@/`echo $$i | sed 's/.manfile.in/.@MAN_FILE_FORMATS@/'`; done
-@@ -647,15 +647,15 @@ install-shared-shareda: libpcap.shareda
+@@ -665,15 +662,15 @@ install-shared-shareda: libpcap.shareda
  install-shared-none:
  
  install-archive: install-archive-$(DYEXT)
