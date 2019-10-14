@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4340 2019/10/14 20:09:10 maya Exp $
+$NetBSD: CHANGES-2019,v 1.4341 2019/10/14 20:12:00 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6970,3 +6970,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/mysql56-client to 5.6.46 [adam 2019-10-14]
 	Updated databases/mysql56-server to 5.6.46 [adam 2019-10-14]
 	Updated security/sudo to 1.8.28 [maya 2019-10-14]
+	Updated net/libpcap to 1.9.1 [triaxx 2019-10-14]
