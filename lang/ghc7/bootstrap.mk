@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.24 2018/09/10 01:04:41 rillig Exp $
+# $NetBSD: bootstrap.mk,v 1.25 2019/10/14 02:36:30 gutteridge Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis.
 #
@@ -121,7 +121,7 @@ pre-configure:
 # An unusual target "bootstrap"
 #
 # Build a bootstrapping compiler using an already installed GHC. This
-# can certainly impossible if you don't have one. It's absolutely
+# can certainly be impossible if you don't have one. It's absolutely
 # important to build it with the fewest possible run-time
 # dependencies, otherwise the resulting binary can easily get
 # unusable.
