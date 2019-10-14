@@ -1,21 +1,20 @@
-# $NetBSD: Makefile,v 1.52 2019/08/22 12:23:14 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.53 2019/10/14 19:18:15 adam Exp $
 
-DISTNAME=		scummvm-tools-1.4.0
-PKGREVISION=		38
-CATEGORIES=		games
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scummvm/}
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	scummvm-tools-2.1.0
+CATEGORIES=	games
+MASTER_SITES=	https://www.scummvm.org/frs/scummvm-tools/${PKGVERSION_NOREV}/
+EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://scummvm.sourceforge.net/
-COMMENT=		Conversion and compression tools for ScummVM
-LICENSE=		gnu-gpl-v2
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://scummvm.sourceforge.net/
+COMMENT=	Conversion and compression tools for ScummVM
+LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS=		--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--with-wx-prefix=${PREFIX}
 
 INSTALLATION_DIRS=	bin
 
@@ -27,5 +26,5 @@ INSTALLATION_DIRS=	bin
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../x11/wxGTK28/buildlink3.mk"
+.include "../../x11/wxGTK30/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
