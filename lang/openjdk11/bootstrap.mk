@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.1 2019/10/01 12:36:34 tnn Exp $
+# $NetBSD: bootstrap.mk,v 1.2 2019/10/14 07:58:50 tnn Exp $
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64
 BOOT.nb7-i386=		bootstrap-jdk-1.11.0.5.8-netbsd-7-i386-20190928.tar.xz
@@ -17,6 +17,5 @@ EXTRACT_ONLY+=		${BOOT.nb7-amd64}
 .endif
 
 CONFIGURE_ENV+=		LD_LIBRARY_PATH=${ALT_BOOTDIR}/lib
-PKGSRC_MAKE_ENV+=	LD_LIBRARY_PATH=${ALT_BOOTDIR}/lib
 
 ALT_BOOTDIR=		${WRKDIR}/bootstrap
