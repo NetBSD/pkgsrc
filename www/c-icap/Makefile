@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/10/14 11:00:56 sborrill Exp $
+# $NetBSD: Makefile,v 1.25 2019/10/14 11:43:19 wiz Exp $
 
 DISTNAME=	c_icap-0.5.5
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -23,12 +23,13 @@ CONF_FILES+=	${EGDIR}/c-icap.magic.default ${PKG_SYSCONFDIR}/c-icap.magic
 BUILD_DEFS+=		VARBASE
 
 SUBST_CLASSES+=		fix-path
-SUBST_CLASSES+=		fix-ldap
 SUBST_STAGE.fix-path=	pre-configure
 SUBST_MESSAGE.fix-path=	Fixing paths.
 SUBST_FILES.fix-path=	c-icap.conf.in
 SUBST_SED.fix-path=	-e 's, @prefix@/var, ${VARBASE},g'
 SUBST_SED.fix-path+=	-e 's, /var, ${VARBASE},g'
+
+SUBST_CLASSES+=		fix-ldap
 SUBST_STAGE.fix-ldap=	post-configure
 SUBST_MESSAGE.fix-ldap=	Fixing LDAP.
 SUBST_FILES.fix-ldap=	modules/Makefile
