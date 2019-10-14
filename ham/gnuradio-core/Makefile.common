@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2019/09/02 13:19:57 adam Exp $
+# $NetBSD: Makefile.common,v 1.20 2019/10/14 12:40:27 mef Exp $
 # This Makefile fragment is included in the package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
@@ -43,6 +43,8 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	c c++
 USE_TOOLS=	perl gmake cmake pkg-config
 USE_CMAKE=	yes
+LDFLAGS.NetBSD+= -lrt
+
 
 DEPENDS+=	${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah
 DEPENDS+=	${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
@@ -96,7 +98,7 @@ CMAKE_ARGS+=	-DCMAKE_INSTALL_RPATH=${PREFIX}/lib:${PREFIX}/lib/portaudio2
 CMAKE_ARGS+=	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=TRUE
 CMAKE_ARGS+=	-DLIBUSB_INCLUDE_DIR=${PREFIX}/include/libusb-1.0
 
-CMAKE_ARGS+=	-DGR_LIBRARY_DIR=${PREFIX}/lib
+CMAKE_ARGS+=	-DGR_LIBRARY_DIR=${PREFIX}/lib -lrt
 CMAKE_ARGS+=	-DGR_PREFSDIR=${PREFIX}/share/gnuradio/examples/
 
 # adhoc setup not to pick non default version (say python3.6)
