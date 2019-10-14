@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2019/08/06 06:56:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2019/10/14 20:19:29 adam Exp $
 bin/mysql
 bin/mysql_client_test
 bin/mysql_config
@@ -122,7 +122,7 @@ include/mysql/typelib.h
 lib/libmysqlclient.a
 lib/libmysqlclient.so
 lib/libmysqlclient.so.20
-lib/libmysqlclient.so.20.3.14
+lib/libmysqlclient.so.20.3.15
 lib/pkgconfig/mysqlclient.pc
 man/man1/comp_err.1
 man/man1/innochecksum.1

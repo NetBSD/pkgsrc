@@ -1,13 +1,13 @@
-$NetBSD: patch-libmysql_CMakeLists.txt,v 1.3 2018/01/16 16:29:42 adam Exp $
+$NetBSD: patch-libmysql_CMakeLists.txt,v 1.4 2019/10/14 20:19:29 adam Exp $
 
 Do not install libmysqlclient with the server.
 Generate versioned lib symlinks on FreeBSD to supress PLIST divergence.
 authentication_ldap and libmysql_api_test require libmysqld.
 
---- libmysql/CMakeLists.txt.orig	2017-12-28 03:46:26.000000000 +0000
+--- libmysql/CMakeLists.txt.orig	2019-09-27 07:00:15.000000000 +0000
 +++ libmysql/CMakeLists.txt
-@@ -230,12 +230,13 @@ IF(WIN32)
-   LIST(APPEND LIBS auth_win_client)
+@@ -261,12 +261,13 @@ IF(WIN32)
+   LIST(APPEND LIBS_TO_MERGE auth_win_client)
  ENDIF()
  
 -# LDAP authentication SASL client plugin
@@ -16,26 +16,27 @@ authentication_ldap and libmysql_api_test require libmysqld.
    
  # Merge several convenience libraries into one big mysqlclient
 +IF(WITHOUT_SERVER)
- MERGE_CONVENIENCE_LIBRARIES(mysqlclient ${LIBS} COMPONENT Development)
+ MERGE_CONVENIENCE_LIBRARIES(mysqlclient ${LIBS_TO_MERGE} COMPONENT Development)
 +ELSE()
-+MERGE_CONVENIENCE_LIBRARIES(mysqlclient SKIP_INSTALL ${LIBS} COMPONENT Development)
++MERGE_CONVENIENCE_LIBRARIES(mysqlclient SKIP_INSTALL ${LIBS_TO_MERGE} COMPONENT Development)
 +ENDIF()
+ TARGET_LINK_LIBRARIES(mysqlclient ${LIBS_TO_LINK})
  
  # Visual Studio users need debug  static library for debug projects
- IF(MSVC)
-@@ -269,12 +270,18 @@ ENDIF()
+@@ -310,13 +311,19 @@ ENDIF()
  IF(NOT DISABLE_SHARED)
    # Merge several convenience libraries into one big mysqlclient
    # and link them together into shared library.
 +  IF(WITHOUT_SERVER)
-   MERGE_LIBRARIES_SHARED(libmysql ${LIBS}
+   MERGE_LIBRARIES_SHARED(libmysql ${LIBS_TO_MERGE}
      EXPORTS ${CLIENT_API_FUNCTIONS} ${CLIENT_API_FUNCTIONS_UNDOCUMENTED}
      COMPONENT SharedLibraries)
 +  ELSE()
-+  MERGE_LIBRARIES_SHARED(libmysql SKIP_INSTALL ${LIBS}
++  MERGE_LIBRARIES_SHARED(libmysql SKIP_INSTALL ${LIBS_TO_MERGE}
 +    EXPORTS ${CLIENT_API_FUNCTIONS} ${CLIENT_API_FUNCTIONS_UNDOCUMENTED}
 +    COMPONENT SharedLibraries)
 +  ENDIF()
+   TARGET_LINK_LIBRARIES(libmysql ${LIBS_TO_LINK})
    IF(UNIX)
      # libtool compatability
 -    IF(CMAKE_SYSTEM_NAME MATCHES "FreeBSD" OR APPLE)
@@ -43,7 +44,7 @@ authentication_ldap and libmysql_api_test require libmysqld.
        SET(OS_SHARED_LIB_VERSION "${SHARED_LIB_MAJOR_VERSION}")
      ELSE()
        SET(OS_SHARED_LIB_VERSION
-@@ -342,6 +349,7 @@ CONFIGURE_FILE(api_test.c.in ${CMAKE_CUR
+@@ -384,6 +391,7 @@ CONFIGURE_FILE(api_test.c.in ${CMAKE_CUR
  # from @CLIENT_API_FUNCTIONS@ are declared by <mysql.h>. It will fail
  # to run if not all of these symbols are exported by the library.
  #
@@ -51,7 +52,7 @@ authentication_ldap and libmysql_api_test require libmysqld.
  ADD_EXECUTABLE(libmysql_api_test ${CMAKE_CURRENT_BINARY_DIR}/api_test.c)
  SET_TARGET_PROPERTIES(libmysql_api_test PROPERTIES LINKER_LANGUAGE CXX)
  IF(LIBRT)
-@@ -353,6 +361,7 @@ IF(DISABLE_SHARED)
+@@ -395,6 +403,7 @@ IF(DISABLE_SHARED)
  ELSE()
    TARGET_LINK_LIBRARIES(libmysql_api_test libmysql)
  ENDIF()
