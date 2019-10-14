@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4336 2019/10/14 13:35:53 wen Exp $
+$NetBSD: CHANGES-2019,v 1.4337 2019/10/14 17:47:58 he Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6964,3 +6964,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/xmlrpc-c to 1.51.04 [he 2019-10-13]
 	Updated devel/gobject-introspection to 1.62.0 [gutteridge 2019-10-14]
 	Updated databases/p5-DBIx-Class-EncodedColumn to 0.00020 [wen 2019-10-14]
+	Updated net/fstrm to 0.6.0 [he 2019-10-14]
