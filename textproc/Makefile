@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1058 2019/10/12 08:57:12 wiz Exp $
+# $NetBSD: Makefile,v 1.1059 2019/10/14 13:30:20 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -164,7 +164,6 @@ SUBDIR+=	cwdiff
 SUBDIR+=	dadadodo
 SUBDIR+=	db2latex
 SUBDIR+=	dblatex
-SUBDIR+=	dbtoepub
 SUBDIR+=	detex
 SUBDIR+=	dict-client
 SUBDIR+=	dict-dictionaries
