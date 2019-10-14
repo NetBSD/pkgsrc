@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/10/04 14:06:18 prlw1 Exp $
+# $NetBSD: Makefile,v 1.2 2019/10/14 03:05:31 gutteridge Exp $
 
 DISTNAME=	meson-0.51.2
 CATEGORIES=	devel python
@@ -8,6 +8,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mesonbuild.com/
 COMMENT=	Open source build system meant to be fast and user friendly
 LICENSE=	apache-2.0
+
+CONFLICTS=	${PYPKGPREFIX}-meson-[0-9]*
+SUPERSEDES=	${PYPKGPREFIX}-meson-[0-9]*
 
 DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 
