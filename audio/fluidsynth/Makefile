@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/10/06 17:29:33 nia Exp $
+# $NetBSD: Makefile,v 1.28 2019/10/14 15:20:18 adam Exp $
 
 DISTNAME=	fluidsynth-2.0.7
 CATEGORIES=	audio
@@ -15,6 +15,7 @@ USE_TOOLS+=	pkg-config
 
 CMAKE_ARGS+=	-DMAN_INSTALL_DIR=${PREFIX}/${PKGMANDIR}/man1
 CMAKE_ARGS+=	-DLIB_SUFFIX=""
+CMAKE_ARGS+=	-Denable-framework=OFF
 
 PKGCONFIG_OVERRIDE=	fluidsynth.pc.in
 
