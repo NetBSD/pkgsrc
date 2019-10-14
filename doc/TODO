@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19341 2019/10/14 15:34:59 wiz Exp $
+$NetBSD: TODO,v 1.19342 2019/10/14 20:09:11 maya Exp $
 
 Suggested new packages
 ======================
@@ -1272,7 +1272,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o streamtuner-2.2.0
 	o subtitleeditor-0.54.0 [https://github.com/kitone/subtitleeditor]
 	o subversion-base-1.12.2
-	o sudo-1.8.28
 	o superlu-5.1.1
 	o swapd-1.0.5
 	o swath-0.5.2
