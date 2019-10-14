@@ -1,10 +1,10 @@
-$NetBSD: patch-configure,v 1.10 2019/10/03 16:34:59 sborrill Exp $
+$NetBSD: patch-configure,v 1.11 2019/10/14 11:00:56 sborrill Exp $
 
 Link against librt on NetBSD, too.
 Link-test for shm_* functions.
 
 --- configure.orig	2018-09-19 13:43:03.000000000 +0100
-+++ configure	2019-10-03 13:29:48.000000000 +0100
++++ configure	2019-10-14 11:48:42.000000000 +0100
 @@ -16264,6 +16264,11 @@
  
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking if posix shared mem works" >&5
@@ -35,4 +35,3 @@ Link-test for shm_* functions.
          EXTRALIBS="$EXTRALIBS -lrt"
       ;;
       *)
-v
