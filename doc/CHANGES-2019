@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4339 2019/10/14 19:46:29 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4340 2019/10/14 20:09:10 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6969,3 +6969,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated games/scummvm-tools to 2.1.0 [adam 2019-10-14]
 	Updated databases/mysql56-client to 5.6.46 [adam 2019-10-14]
 	Updated databases/mysql56-server to 5.6.46 [adam 2019-10-14]
+	Updated security/sudo to 1.8.28 [maya 2019-10-14]
