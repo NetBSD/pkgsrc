@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/08/06 06:56:43 adam Exp $
-@pkgdir lib/mysql/plugin/debug
+@comment $NetBSD: PLIST,v 1.14 2019/10/14 20:19:29 adam Exp $
 bin/innochecksum
 bin/lz4_decompress
 bin/my_print_defaults
@@ -36,6 +35,7 @@ ${PLIST.auth_socket}lib/mysql/plugin/auth_socket.so
 lib/mysql/plugin/auth_test_plugin.so
 lib/mysql/plugin/connection_control.so
 lib/mysql/plugin/daemon_example.ini
+@pkgdir lib/mysql/plugin/debug
 lib/mysql/plugin/group_replication.so
 lib/mysql/plugin/ha_example.so
 ${PLIST.memcached}lib/mysql/plugin/innodb_engine.so
@@ -83,11 +83,10 @@ lib/mysql/plugin/validate_password.so
 lib/mysql/plugin/version_token.so
 sbin/mysqld
 share/aclocal/mysql.m4
-share/doc/mysql/COPYING
-share/doc/mysql/COPYING-test
 share/doc/mysql/ChangeLog
 share/doc/mysql/INFO_BIN
 share/doc/mysql/INFO_SRC
+share/doc/mysql/LICENSE
 share/doc/mysql/README
 share/doc/mysql/README-test
 share/mysql/bulgarian/errmsg.sys
@@ -263,6 +262,8 @@ share/mysql/test/extra/rpl_tests/rpl_filters.test
 share/mysql/test/extra/rpl_tests/rpl_flsh_tbls.test
 share/mysql/test/extra/rpl_tests/rpl_foreign_key.test
 share/mysql/test/extra/rpl_tests/rpl_generate_mts_gap.test
+share/mysql/test/extra/rpl_tests/rpl_generate_mts_gap_with_missing_relaylog_begin.inc
+share/mysql/test/extra/rpl_tests/rpl_generate_mts_gap_with_missing_relaylog_end.inc
 share/mysql/test/extra/rpl_tests/rpl_get_master_version_and_clock.test
 share/mysql/test/extra/rpl_tests/rpl_gtid_drop_table.inc
 share/mysql/test/extra/rpl_tests/rpl_gtid_mixed_rows_and_stmts_tx_isolation_error.inc
@@ -365,6 +366,7 @@ share/mysql/test/extra/rpl_tests/type_conversions.test
 share/mysql/test/include/Load_data.inc
 share/mysql/test/include/add_anonymous_users.inc
 share/mysql/test/include/add_debug_point.inc
+share/mysql/test/include/allowed_ciphers.inc
 share/mysql/test/include/analyze-sync_with_master.test
 share/mysql/test/include/analyze-timeout.test
 share/mysql/test/include/assert.inc
@@ -602,7 +604,6 @@ share/mysql/test/include/have_ngram.inc
 share/mysql/test/include/have_no_undo_tablespaces.inc
 share/mysql/test/include/have_nodebug.inc
 share/mysql/test/include/have_not_innodb_plugin.inc
-share/mysql/test/include/have_not_yassl.inc
 share/mysql/test/include/have_null_audit_plugin.inc
 share/mysql/test/include/have_numa.inc
 share/mysql/test/include/have_openssl.inc
@@ -647,7 +648,6 @@ share/mysql/test/include/have_util_nc.inc
 share/mysql/test/include/have_util_unzip.inc
 share/mysql/test/include/have_valgrind.inc
 share/mysql/test/include/have_validate_password_plugin.inc
-share/mysql/test/include/have_yassl.inc
 share/mysql/test/include/ib_logfile_size_check.inc
 share/mysql/test/include/icp_tests.inc
 share/mysql/test/include/implicit_commit_helper.inc
@@ -749,6 +749,7 @@ share/mysql/test/include/not_gtid_enabled.inc
 share/mysql/test/include/not_log_bin.inc
 share/mysql/test/include/not_lowercase1.inc
 share/mysql/test/include/not_master_info_table.inc
+share/mysql/test/include/not_min_protocol_tlsv12.inc
 share/mysql/test/include/not_mts_slave_parallel_workers.inc
 share/mysql/test/include/not_ndb.inc
 share/mysql/test/include/not_ndb_default.inc
@@ -756,7 +757,6 @@ share/mysql/test/include/not_ndb_is.inc
 share/mysql/test/include/not_openssl.inc
 share/mysql/test/include/not_parallel.inc
 share/mysql/test/include/not_relay_log_info_table.inc
-share/mysql/test/include/not_sha256_rsa_auth.inc
 share/mysql/test/include/not_ssl.inc
 share/mysql/test/include/not_threadpool.inc
 share/mysql/test/include/not_valgrind.inc
@@ -1408,7 +1408,6 @@ share/mysql/test/r/initialize-errors.result
 share/mysql/test/r/initialize-ignore-db.result
 share/mysql/test/r/initialize-init-acls.result
 share/mysql/test/r/initialize-sha256.result
-share/mysql/test/r/initialize-yassl-warning.result
 share/mysql/test/r/initialize.result
 share/mysql/test/r/initialize_gtid.result
 share/mysql/test/r/innodb_deadlock.result
@@ -2143,7 +2142,7 @@ share/mysql/test/std_data/crl-client-revoked-key.pem
 share/mysql/test/std_data/crl-client-revoked.crl
 share/mysql/test/std_data/crl-server-cert.pem
 share/mysql/test/std_data/crl-server-key.pem
-share/mysql/test/std_data/crldir/ab8a3803.r0
+share/mysql/test/std_data/crldir/b23bb52f.r0
 share/mysql/test/std_data/data_50722.zip
 share/mysql/test/std_data/des_key_file
 share/mysql/test/std_data/dtrace.d
@@ -2291,7 +2290,6 @@ share/mysql/test/suite/auth_sec/include/multiple_plugins.inc
 share/mysql/test/suite/auth_sec/include/mysql_upgrade_preparation.inc
 share/mysql/test/suite/auth_sec/include/not_embedded.inc
 share/mysql/test/suite/auth_sec/include/not_openssl.inc
-share/mysql/test/suite/auth_sec/include/not_sha256_rsa_auth.inc
 share/mysql/test/suite/auth_sec/include/not_ssl.inc
 share/mysql/test/suite/auth_sec/r/access_credential_control.result
 share/mysql/test/suite/auth_sec/r/cert_verify.result
@@ -2341,6 +2339,7 @@ share/mysql/test/suite/auth_sec/r/ssl_auto_detect.result
 share/mysql/test/suite/auth_sec/r/ssl_auto_detect_openssl.result
 share/mysql/test/suite/auth_sec/r/ssl_mode.result
 share/mysql/test/suite/auth_sec/r/tls.result
+share/mysql/test/suite/auth_sec/r/tls12_tls1.result
 share/mysql/test/suite/auth_sec/r/wrong_keyring_file.result
 share/mysql/test/suite/auth_sec/r/wrong_keyring_file_data.result
 share/mysql/test/suite/auth_sec/t/access_credential_control-master.opt
@@ -2409,6 +2408,7 @@ share/mysql/test/suite/auth_sec/t/ssl_auto_detect_openssl-master.opt
 share/mysql/test/suite/auth_sec/t/ssl_auto_detect_openssl.test
 share/mysql/test/suite/auth_sec/t/ssl_mode.test
 share/mysql/test/suite/auth_sec/t/tls.test
+share/mysql/test/suite/auth_sec/t/tls12_tls1.test
 share/mysql/test/suite/auth_sec/t/wrong_keyring_file_data-master.opt
 share/mysql/test/suite/auth_sec/t/wrong_keyring_file_data.test
 share/mysql/test/suite/binlog/combinations
@@ -7749,8 +7749,6 @@ share/mysql/test/suite/ndb_rpl/t/ndb_rpl_bank.test
 share/mysql/test/suite/ndb_rpl/t/ndb_rpl_basic.test
 share/mysql/test/suite/ndb_rpl/t/ndb_rpl_batch.test
 share/mysql/test/suite/ndb_rpl/t/ndb_rpl_batch_handling.test
-share/mysql/test/suite/ndb_rpl/t/ndb_rpl_binlog_format_errors-master.opt
-share/mysql/test/suite/ndb_rpl/t/ndb_rpl_binlog_format_errors-slave.opt
 share/mysql/test/suite/ndb_rpl/t/ndb_rpl_binlog_format_errors.test
 share/mysql/test/suite/ndb_rpl/t/ndb_rpl_binlog_row_image_minimal-master.opt
 share/mysql/test/suite/ndb_rpl/t/ndb_rpl_binlog_row_image_minimal.test
@@ -13127,7 +13125,6 @@ share/mysql/test/suite/x/r/connection_unixsocket_rpl.result
 share/mysql/test/suite/x/r/connection_user_authentication.result
 share/mysql/test/suite/x/r/connection_user_authentication_win.result
 share/mysql/test/suite/x/r/connection_without_session.result
-share/mysql/test/suite/x/r/connection_yassl.result
 share/mysql/test/suite/x/r/create_alter_sql.result
 share/mysql/test/suite/x/r/create_drop_collection_crud.result
 share/mysql/test/suite/x/r/create_index_crud.result
@@ -13309,7 +13306,6 @@ share/mysql/test/suite/x/t/connection_user_authentication.test
 share/mysql/test/suite/x/t/connection_user_authentication_win.test
 share/mysql/test/suite/x/t/connection_without_session.test
 share/mysql/test/suite/x/t/connection_yassl-master.opt
-share/mysql/test/suite/x/t/connection_yassl.test
 share/mysql/test/suite/x/t/create_alter_sql.test
 share/mysql/test/suite/x/t/create_drop_collection_crud.test
 share/mysql/test/suite/x/t/create_index_crud.test
@@ -13833,7 +13829,6 @@ share/mysql/test/t/initialize-errors.test
 share/mysql/test/t/initialize-ignore-db.test
 share/mysql/test/t/initialize-init-acls.test
 share/mysql/test/t/initialize-sha256.test
-share/mysql/test/t/initialize-yassl-warning.test
 share/mysql/test/t/initialize.test
 share/mysql/test/t/initialize_gtid.test
 share/mysql/test/t/innodb_deadlock-master.opt

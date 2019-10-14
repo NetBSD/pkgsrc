@@ -1,11 +1,11 @@
-$NetBSD: patch-rapid_plugin_x_CMakeLists.txt,v 1.5 2019/04/25 10:13:04 adam Exp $
+$NetBSD: patch-rapid_plugin_x_CMakeLists.txt,v 1.6 2019/10/14 20:19:29 adam Exp $
 
 Use system OpenSSL.
 Fix mysqlxtest binary linking.
 
---- rapid/plugin/x/CMakeLists.txt.orig	2019-04-13 13:32:15.000000000 +0000
+--- rapid/plugin/x/CMakeLists.txt.orig	2019-09-27 07:00:15.000000000 +0000
 +++ rapid/plugin/x/CMakeLists.txt
-@@ -92,13 +92,13 @@ ELSE()
+@@ -99,13 +99,13 @@ ELSE()
      ${CMAKE_SOURCE_DIR}/include #temporary
      ${CMAKE_CURRENT_SOURCE_DIR}/include/mysql
      ${CMAKE_CURRENT_BINARY_DIR}/generated
@@ -20,10 +20,10 @@ Fix mysqlxtest binary linking.
    )
  
    IF(XPLUGIN_NO_LITE_PROTOBUF)
-@@ -214,7 +214,10 @@ ELSE()
+@@ -221,7 +221,10 @@ ELSE()
    ENDIF()
  
-   TARGET_LINK_LIBRARIES(mysqlxtest mysys strings mysqlclient)
+   TARGET_LINK_LIBRARIES(mysqlxtest mysys strings ${FORCE_SSL_SOLARIS} mysqlclient)
 -  TARGET_LINK_LIBRARIES(mysqlxtest ${PROTOBUF_LIBRARY})
 +  TARGET_LINK_LIBRARIES(mysqlxtest ${PROTOBUF_LIBRARY} ${CRYPTO_LIBRARY})
 +  IF(CMAKE_SYSTEM_NAME STREQUAL "SunOS")
