@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4345 2019/10/15 12:26:00 ng0 Exp $
+$NetBSD: CHANGES-2019,v 1.4346 2019/10/15 13:28:21 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6977,3 +6977,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-lazy-object-proxy to 1.4.2 [adam 2019-10-15]
 	Added emulators/compat80 version 8.0 [he 2019-10-15]
 	Updated security/doas to 6.2p2 [ng0 2019-10-15]
+	Updated print/qpdf to 9.0.2 [ryoon 2019-10-15]
