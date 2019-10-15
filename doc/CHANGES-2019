@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4351 2019/10/15 17:02:08 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4352 2019/10/15 17:17:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6988,3 +6988,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Added lang/python38 version 3.8.0 [adam 2019-10-15]
 	Updated devel/py-xdis to 4.1.0 [adam 2019-10-15]
 	Updated lang/py-uncompyle6 to 3.5.0 [adam 2019-10-15]
+	Updated www/py-flask-jwt-extended to 3.24.0 [adam 2019-10-15]
+	Updated time/py-pytz to 2019.3 [adam 2019-10-15]
+	Updated time/py-tzdata to 2019.3 [adam 2019-10-15]
+	Updated devel/py-pip to 19.3 [adam 2019-10-15]
