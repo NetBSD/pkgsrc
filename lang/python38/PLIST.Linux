@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2019/10/15 16:50:11 adam Exp $
+lib/python${PY_VER_SUFFIX}/lib-dynload/ossaudiodev.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/spwd.so

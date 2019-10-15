@@ -1,0 +1,38 @@
+$NetBSD: patch-configure,v 1.1 2019/10/15 16:50:11 adam Exp $
+
+Fix linking on Darwin; don't use -stack_size.
+Changes for consistency across pkgsrc platforms.
+Simplify _sysconfigdata to include only platform name.
+
+--- configure.orig	2019-09-06 08:21:57.000000000 +0000
++++ configure
+@@ -9547,7 +9547,6 @@ then
+ 		# to ensure that tests don't crash
+ 		# Note: This matches the value of THREAD_STACK_SIZE in
+ 		# thread_pthread.h
+-		LINKFORSHARED="-Wl,-stack_size,1000000 $LINKFORSHARED"
+ 
+ 		if test "$enable_framework"
+ 		then
+@@ -15178,8 +15177,6 @@ fi
+ 
+ 
+ case $ac_sys_system in
+-    Linux*|GNU*|Darwin|VxWorks)
+-	EXT_SUFFIX=.${SOABI}${SHLIB_SUFFIX};;
+     *)
+ 	EXT_SUFFIX=${SHLIB_SUFFIX};;
+ esac
+@@ -15199,11 +15196,7 @@ else
+ fi
+ 
+ 
+-if test x$PLATFORM_TRIPLET = x; then
+-  LIBPL='$(prefix)'"/lib/python${VERSION}/config-${LDVERSION}"
+-else
+-  LIBPL='$(prefix)'"/lib/python${VERSION}/config-${LDVERSION}-${PLATFORM_TRIPLET}"
+-fi
++LIBPL='$(prefix)'"/lib/python${VERSION}/config-${LDVERSION}"
+ 
+ 
+ # Check whether right shifting a negative integer extends the sign bit
