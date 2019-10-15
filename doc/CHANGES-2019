@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4352 2019/10/15 17:17:25 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4353 2019/10/15 17:28:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6992,3 +6992,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated time/py-pytz to 2019.3 [adam 2019-10-15]
 	Updated time/py-tzdata to 2019.3 [adam 2019-10-15]
 	Updated devel/py-pip to 19.3 [adam 2019-10-15]
+	Updated www/py-beautifulsoup4 to 4.8.1 [adam 2019-10-15]
+	Updated devel/py-pylint-plugin-utils to 0.6 [adam 2019-10-15]
+	Updated databases/py-redis to 3.3.11 [adam 2019-10-15]
+	Updated textproc/py-textile to 3.0.4 [adam 2019-10-15]
