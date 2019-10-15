@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2019/06/02 03:04:49 wen Exp $
+$NetBSD: distinfo,v 1.24 2019/10/15 14:34:16 mef Exp $
 
-SHA1 (Devel-PPPort-3.52.tar.gz) = 2f0e31ec0fcdf179cd5786840874ac11e5eb43c1
-RMD160 (Devel-PPPort-3.52.tar.gz) = a73ff3bf624c5cdbbc8c0f91646e8a432fa44c15
-SHA512 (Devel-PPPort-3.52.tar.gz) = d6b4fb8a050afb97b4e102dcb36fce2de0b16abdcf765304e68c61af5c61d5fbe0c5aa0687e7339171d3508de5534d5cf8c144d236dc92f942781e8307b42780
-Size (Devel-PPPort-3.52.tar.gz) = 181377 bytes
+SHA1 (Devel-PPPort-3.54.tar.gz) = e1c88c9b0d5711ba39250cf1af2850c063a311e8
+RMD160 (Devel-PPPort-3.54.tar.gz) = 50ad9f05199ba413ccf31e9054aa103ab8b03bc5
+SHA512 (Devel-PPPort-3.54.tar.gz) = f3183f9277c5ca04a2b43e2afc181bb091c9033f8c1d089a40fa234aff7e7bfb6fa58350eda63d76ec1df5fa519335fe48ce2fb01fa031025c6505bfdbf7fc4a
+Size (Devel-PPPort-3.54.tar.gz) = 248709 bytes
