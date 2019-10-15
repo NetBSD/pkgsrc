@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/10/15 14:23:00 mef Exp $
+
+SHA1 (B-Debug-1.26.tar.gz) = 5d86e033d2fd6d5763334311b18a186092bd9aac
+RMD160 (B-Debug-1.26.tar.gz) = 4fd2669c0186fa191d2cd30a7c2652aeae361c3b
+SHA512 (B-Debug-1.26.tar.gz) = d15a1b8283a9c9582cebf9d5fdc38289160c601603498eb79d120154c8643a81e256c4afe2ee938c9db04989af0544bdf312d2d0fe5b898b1dcee756d084db6e
+Size (B-Debug-1.26.tar.gz) = 17725 bytes
