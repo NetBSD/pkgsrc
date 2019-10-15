@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4343 2019/10/15 07:58:56 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4344 2019/10/15 12:02:51 he Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6975,3 +6975,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/mysql57-server to 5.7.28 [adam 2019-10-14]
 	Updated devel/py-attrs to 19.3.0 [adam 2019-10-15]
 	Updated devel/py-lazy-object-proxy to 1.4.2 [adam 2019-10-15]
+	Added emulators/compat80 version 8.0 [he 2019-10-15]
