@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/02/28 09:23:36 adam Exp $
+$NetBSD: distinfo,v 1.5 2019/10/15 17:24:01 adam Exp $
 
-SHA1 (pylint-plugin-utils-0.5.tar.gz) = 6aa72e21b3f94ecd75290b811e67a3ec5a07ea9a
-RMD160 (pylint-plugin-utils-0.5.tar.gz) = bf996d48e479952cac579b09363b526fad52c994
-SHA512 (pylint-plugin-utils-0.5.tar.gz) = 9f1c1e21c7a9d42d4bc3ce722d844741f3d090af338b76d704c8ae5a8869f488796b6f1e256e456f0bef3306e43d2fc665c175790e16a37fd4a369f5e8c844ab
-Size (pylint-plugin-utils-0.5.tar.gz) = 10212 bytes
+SHA1 (pylint-plugin-utils-0.6.tar.gz) = b8ffb83ece5c3b7eda526535bff9aedd6583e3bd
+RMD160 (pylint-plugin-utils-0.6.tar.gz) = 6b107ec913f98029716ff1bd1d00de80cd5bd67f
+SHA512 (pylint-plugin-utils-0.6.tar.gz) = 3bcebf90c1d75ca65ca8265e375a6d878ea3705388934ea32afc701f0aeb4f456a929037d0cf3be90181a0c23f4f8f339fe1e5e34f8f1090b095da686f42c893
+Size (pylint-plugin-utils-0.6.tar.gz) = 10203 bytes
