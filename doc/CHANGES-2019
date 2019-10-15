@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4347 2019/10/15 14:03:40 mef Exp $
+$NetBSD: CHANGES-2019,v 1.4348 2019/10/15 14:25:21 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6981,3 +6981,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-Data-Compare to 1.26 [mef 2019-10-15]
 	Updated devel/p5-Data-ObjectDriver to 0.18 [mef 2019-10-15]
 	Updated devel/p5-Date-Manip to 6.78 [mef 2019-10-15]
+	Added devel/p5-B-Debug version 1.26 [mef 2019-10-15]
