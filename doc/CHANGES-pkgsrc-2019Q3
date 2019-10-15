@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q3,v 1.1.2.4 2019/10/07 09:15:18 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q3,v 1.1.2.5 2019/10/15 18:14:38 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q3 branch:
 
@@ -25,4 +25,7 @@ security/netpgpverify: build fix
 
 Pullup ticket #6068 - requested by nia
 devel/libgit2: security fix
+
+Pullup ticket #6069 - requested by maya
+security/sudo: security fix
 
