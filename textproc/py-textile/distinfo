@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2019/05/21 12:53:47 adam Exp $
+$NetBSD: distinfo,v 1.9 2019/10/15 17:28:16 adam Exp $
 
-SHA1 (textile-3.0.3.tar.gz) = be1cda3f31cf6345af7419e9dda3ea48b3684a60
-RMD160 (textile-3.0.3.tar.gz) = a2442da48382646d14e3b57649d045b2db329b08
-SHA512 (textile-3.0.3.tar.gz) = 91254e31ba1d531decc8c87170728aee7498ef6ba67e63c663e45882028938ffd2a34362cd4edd82fd98e940f4a2effe791f886965793c902498dd92acb8fb67
-Size (textile-3.0.3.tar.gz) = 48961 bytes
+SHA1 (textile-3.0.4.tar.gz) = 5d13861336c05a62ccdd18a1b742247fd8560bc5
+RMD160 (textile-3.0.4.tar.gz) = 72ea615bc87a17273a68b504a82990f45b757dbd
+SHA512 (textile-3.0.4.tar.gz) = db56bd1cce52cc87a2bed1f8e0229fc6e0232fe95c46172fd8daf00b79a96e6e246adee057d5d0540283c322a87cc9c3990cfa5dfacc2468c5e2c907ffa17a03
+Size (textile-3.0.4.tar.gz) = 49890 bytes
