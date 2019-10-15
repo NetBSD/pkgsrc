@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2019/03/02 13:23:36 adam Exp $
+# $NetBSD: options.mk,v 1.4 2019/10/15 16:52:41 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.python36
-PKG_SUPPORTED_OPTIONS=	dtrace x11
+PKG_SUPPORTED_OPTIONS=	dtrace pymalloc x11
 PKG_SUGGESTED_OPTIONS=	x11
 
 .include "../../mk/bsd.prefs.mk"
@@ -32,4 +32,10 @@ SUBST_MESSAGE.cdlopen=	Handle X11BASE paths in dlopen(3) calls of _ctypes.so
 SUBST_STAGE.cdlopen=	pre-configure
 SUBST_FILES.cdlopen=	setup.py
 SUBST_SED.cdlopen=	-e "s!\(libraries=\[\],\)!\1 runtime_library_dirs=\['${X11BASE}/lib'\],!"
+.endif
+
+.if !empty(PKG_OPTIONS:Mpymalloc)
+CONFIGURE_ARGS+=	--with-pymalloc
+.else
+CONFIGURE_ARGS+=	--without-pymalloc
 .endif
