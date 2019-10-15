@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/08/26 06:55:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/10/15 17:01:48 adam Exp $
 bin/pydisassemble-${PYVERSSUFFIX}
 bin/uncompyle6-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -35,6 +35,15 @@ ${PYSITELIB}/uncompyle6/parser.pyo
 ${PYSITELIB}/uncompyle6/parsers/__init__.py
 ${PYSITELIB}/uncompyle6/parsers/__init__.pyc
 ${PYSITELIB}/uncompyle6/parsers/__init__.pyo
+${PYSITELIB}/uncompyle6/parsers/parse10.py
+${PYSITELIB}/uncompyle6/parsers/parse10.pyc
+${PYSITELIB}/uncompyle6/parsers/parse10.pyo
+${PYSITELIB}/uncompyle6/parsers/parse11.py
+${PYSITELIB}/uncompyle6/parsers/parse11.pyc
+${PYSITELIB}/uncompyle6/parsers/parse11.pyo
+${PYSITELIB}/uncompyle6/parsers/parse12.py
+${PYSITELIB}/uncompyle6/parsers/parse12.pyc
+${PYSITELIB}/uncompyle6/parsers/parse12.pyo
 ${PYSITELIB}/uncompyle6/parsers/parse13.py
 ${PYSITELIB}/uncompyle6/parsers/parse13.pyc
 ${PYSITELIB}/uncompyle6/parsers/parse13.pyo
@@ -44,6 +53,9 @@ ${PYSITELIB}/uncompyle6/parsers/parse14.pyo
 ${PYSITELIB}/uncompyle6/parsers/parse15.py
 ${PYSITELIB}/uncompyle6/parsers/parse15.pyc
 ${PYSITELIB}/uncompyle6/parsers/parse15.pyo
+${PYSITELIB}/uncompyle6/parsers/parse16.py
+${PYSITELIB}/uncompyle6/parsers/parse16.pyc
+${PYSITELIB}/uncompyle6/parsers/parse16.pyo
 ${PYSITELIB}/uncompyle6/parsers/parse2.py
 ${PYSITELIB}/uncompyle6/parsers/parse2.pyc
 ${PYSITELIB}/uncompyle6/parsers/parse2.pyo
@@ -119,6 +131,15 @@ ${PYSITELIB}/uncompyle6/scanners/pypy35.pyo
 ${PYSITELIB}/uncompyle6/scanners/pypy36.py
 ${PYSITELIB}/uncompyle6/scanners/pypy36.pyc
 ${PYSITELIB}/uncompyle6/scanners/pypy36.pyo
+${PYSITELIB}/uncompyle6/scanners/scanner10.py
+${PYSITELIB}/uncompyle6/scanners/scanner10.pyc
+${PYSITELIB}/uncompyle6/scanners/scanner10.pyo
+${PYSITELIB}/uncompyle6/scanners/scanner11.py
+${PYSITELIB}/uncompyle6/scanners/scanner11.pyc
+${PYSITELIB}/uncompyle6/scanners/scanner11.pyo
+${PYSITELIB}/uncompyle6/scanners/scanner12.py
+${PYSITELIB}/uncompyle6/scanners/scanner12.pyc
+${PYSITELIB}/uncompyle6/scanners/scanner12.pyo
 ${PYSITELIB}/uncompyle6/scanners/scanner13.py
 ${PYSITELIB}/uncompyle6/scanners/scanner13.pyc
 ${PYSITELIB}/uncompyle6/scanners/scanner13.pyo
@@ -128,6 +149,9 @@ ${PYSITELIB}/uncompyle6/scanners/scanner14.pyo
 ${PYSITELIB}/uncompyle6/scanners/scanner15.py
 ${PYSITELIB}/uncompyle6/scanners/scanner15.pyc
 ${PYSITELIB}/uncompyle6/scanners/scanner15.pyo
+${PYSITELIB}/uncompyle6/scanners/scanner16.py
+${PYSITELIB}/uncompyle6/scanners/scanner16.pyc
+${PYSITELIB}/uncompyle6/scanners/scanner16.pyo
 ${PYSITELIB}/uncompyle6/scanners/scanner2.py
 ${PYSITELIB}/uncompyle6/scanners/scanner2.pyc
 ${PYSITELIB}/uncompyle6/scanners/scanner2.pyo
