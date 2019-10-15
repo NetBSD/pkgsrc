@@ -1,0 +1,15 @@
+$NetBSD: patch-Modules_makesetup,v 1.1 2019/10/15 16:50:11 adam Exp $
+
+Support -pthread compiler flag.
+http://bugs.python.org/issue21461
+
+--- Modules/makesetup.orig	2008-06-11 05:26:20.000000000 +0000
++++ Modules/makesetup
+@@ -166,6 +166,7 @@ sed -e 's/[ 	]*#.*//' -e '/^[ 	]*$/d' |
+ 			-rpath)		libs="$libs $arg"; skip=libs;;
+ 			--rpath)	libs="$libs $arg"; skip=libs;;
+ 			-[A-Zl]*)	libs="$libs $arg";;
++			-pthread)	libs="$libs $arg";;
+ 			*.a)		libs="$libs $arg";;
+ 			*.so)		libs="$libs $arg";;
+ 			*.sl)		libs="$libs $arg";;
