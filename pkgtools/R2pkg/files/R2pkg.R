@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg.R,v 1.7 2019/10/13 19:34:13 rillig Exp $
+# $NetBSD: R2pkg.R,v 1.8 2019/10/15 18:44:21 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -443,33 +443,6 @@ maintainer <- function(email)
     MAINTAINER <- email
   MAINTAINER
 }
-
-make.sed.command <- function(key,value)
-{
-  address <- paste0('/^[[:blank:]]*',key,'/')
-  match <- paste0('(',key,'[[:blank:]]*=[[:blank:]]*).*$')
-  replacement <- paste0('\\1',value)
-  command <- paste0(' -e "',address,'s/',match,'/',replacement,'/"')
-  command
-}
-
-sed.categories <- function(categories) make.sed.command('CATEGORIES',categories)
-sed.comment <- function(comment)
-{
-  old.comment <- read.file.as.value('COMMENT')
-  if (weakly.equals(old.comment,comment))
-    comment <- old.comment
-  make.sed.command('COMMENT',comment)
-}
-sed.maintainer <- function(email)
-{
-  make.sed.command('MAINTAINER',maintainer(email))
-}
-sed.license <- function(license)
-{
-  make.sed.command('LICENSE',license)
-}
-sed.r_pkgver <- function(r_pkgver) make.sed.command('R_PKGVER',r_pkgver)
 
 find.Rcpp <- function(imps, deps) grepl('Rcpp', paste(imps, deps))
 
