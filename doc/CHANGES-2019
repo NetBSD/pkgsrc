@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4342 2019/10/14 20:20:14 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4343 2019/10/15 07:58:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6973,3 +6973,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/libpcap to 1.9.1 [triaxx 2019-10-14]
 	Updated databases/mysql57-client to 5.7.28 [adam 2019-10-14]
 	Updated databases/mysql57-server to 5.7.28 [adam 2019-10-14]
+	Updated devel/py-attrs to 19.3.0 [adam 2019-10-15]
+	Updated devel/py-lazy-object-proxy to 1.4.2 [adam 2019-10-15]
