@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/10/15 12:01:22 he Exp $
+# $NetBSD: Makefile,v 1.2 2019/10/15 12:01:55 he Exp $
 
 COMPAT_PKG=		compat80	# for compat_netbsd/Makefile.common
 NETBSD_VERSION=		8.0
@@ -38,7 +38,5 @@ COMPAT_VERSION=		8.0
 #.if empty(OS_VERSION:M[0-7].*) && empty(OS_VERSION:M8.[0-1]*)
 #DEPENDS+=	compat81>=8.1:../../emulators/compat81
 #.endif
-
-.include "options.mk"
 
 .include "../../mk/bsd.pkg.mk"
