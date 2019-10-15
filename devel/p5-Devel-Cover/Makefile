@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2019/08/11 13:19:15 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2019/10/15 14:30:52 mef Exp $
 
-DISTNAME=	Devel-Cover-1.31
+DISTNAME=	Devel-Cover-1.33
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Devel/}
 
@@ -17,7 +16,9 @@ DEPENDS+=	p5-Sereal-[0-9]*:../../converters/p5-Sereal
 DEPENDS+=	p5-Pod-Coverage>=0.06:../../textproc/p5-Pod-Coverage
 DEPENDS+=	p5-Template-Toolkit>=2.0:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
-BUILD_DEPENDS+=	p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
+
+TEST_DEPENDS+=	p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
+TEST_DEPENDS+=	p5-B-Debug-[0-9]*:../../devel/p5-B-Debug
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/Devel/Cover/.packlist
