@@ -1,0 +1,16 @@
+$NetBSD: patch-pyconfig.h.in,v 1.1 2019/10/15 16:50:11 adam Exp $
+
+detect netcan/can.h on NetBSD
+
+--- pyconfig.h.in.orig	2019-09-06 08:21:57.000000000 +0000
++++ pyconfig.h.in
+@@ -631,6 +631,9 @@
+ /* Define to 1 if you have the <linux/memfd.h> header file. */
+ #undef HAVE_LINUX_MEMFD_H
+ 
++/* Define to 1 if you have the <netcan/can.h> header file. */
++#undef HAVE_NETCAN_CAN_H
++
+ /* Define to 1 if you have the <linux/netlink.h> header file. */
+ #undef HAVE_LINUX_NETLINK_H
+ 
