@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2019/10/15 12:01:22 he Exp $
+
+The COMPAT_80 option must be included in the kernel configuration (and
+possibly others; see options(4) for more information) to make use of
+NetBSD 8.0 binaries.
+===========================================================================
