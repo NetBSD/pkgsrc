@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2926 2019/10/13 11:50:49 rillig Exp $
+# $NetBSD: Makefile,v 1.2927 2019/10/15 14:25:21 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -994,6 +994,7 @@ SUBDIR+=	p5-AutoLoader
 SUBDIR+=	p5-AutoXS-Header
 SUBDIR+=	p5-Autodia
 SUBDIR+=	p5-B-Compiling
+SUBDIR+=	p5-B-Debug
 SUBDIR+=	p5-B-Hooks-EndOfScope
 SUBDIR+=	p5-B-Hooks-OP-Annotation
 SUBDIR+=	p5-B-Hooks-OP-Check
