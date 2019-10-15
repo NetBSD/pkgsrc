@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4350 2019/10/15 16:51:39 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4351 2019/10/15 17:02:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6986,3 +6986,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-Devel-PPPort to 3.54 [mef 2019-10-15]
 	Updated devel/p5-Devel-PatchPerl to 1.64 [mef 2019-10-15]
 	Added lang/python38 version 3.8.0 [adam 2019-10-15]
+	Updated devel/py-xdis to 4.1.0 [adam 2019-10-15]
+	Updated lang/py-uncompyle6 to 3.5.0 [adam 2019-10-15]
