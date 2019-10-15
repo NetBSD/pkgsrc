@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2019/03/02 13:23:36 adam Exp $
+# $NetBSD: options.mk,v 1.4 2019/10/15 16:55:00 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.python37
 PKG_SUPPORTED_OPTIONS=	dtrace pymalloc x11
@@ -7,7 +7,7 @@ PKG_SUGGESTED_OPTIONS=	x11
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		dtrace pymalloc
+PLIST_VARS+=		dtrace
 
 .if !empty(PKG_OPTIONS:Mdtrace)
 CONFIGURE_ARGS+=	--with-dtrace
@@ -35,11 +35,7 @@ SUBST_SED.cdlopen=	-e "s!\(libraries=\[\],\)!\1 runtime_library_dirs=\['${X11BAS
 .endif
 
 .if !empty(PKG_OPTIONS:Mpymalloc)
-PLIST_SUBST+=		M=m
-PLIST.pymalloc=		yes
-PRINT_PLIST_AWK+=	{ gsub(/PY_VER_SUFFIX}m/, "PY_VER_SUFFIX}$${M}") }
-PRINT_PLIST_AWK+=	{ gsub(/config-${PY_VER_SUFFIX}m/, "config-$${PY_VER_SUFFIX}$${M}") }
+CONFIGURE_ARGS+=	--with-pymalloc
 .else
 CONFIGURE_ARGS+=	--without-pymalloc
-PLIST_SUBST+=		M=
 .endif
