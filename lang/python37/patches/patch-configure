@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.2 2019/03/02 13:23:36 adam Exp $
+$NetBSD: patch-configure,v 1.3 2019/10/15 16:55:00 adam Exp $
 
 Simplify _sysconfigdata to include only platform name.
 
@@ -13,7 +13,9 @@ Use gnu99 instead of c99 to avoid "alloca() undefined" problems on macppc.
 
 detect netcan/can.h on NetBSD
 
---- configure.orig	2018-12-23 21:37:36.000000000 +0000
+Do not change ABIFLAGS for --with-pymalloc (as in Python 3.8).
+
+--- configure.orig	2019-07-08 18:03:50.000000000 +0000
 +++ configure
 @@ -2937,7 +2937,7 @@ $as_echo_n "checking for python interpre
  	fi
@@ -120,7 +122,15 @@ detect netcan/can.h on NetBSD
  		if [ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]
  		then
  			LINKFORSHARED="-Wl,--export-dynamic"
-@@ -11403,7 +11405,7 @@ if ${ac_cv_dtrace_link+:} false; then :
+@@ -11263,7 +11265,6 @@ then
+ 
+ $as_echo "#define WITH_PYMALLOC 1" >>confdefs.h
+ 
+-    ABIFLAGS="${ABIFLAGS}m"
+ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $with_pymalloc" >&5
+ $as_echo "$with_pymalloc" >&6; }
+@@ -11403,7 +11404,7 @@ if ${ac_cv_dtrace_link+:} false; then :
    $as_echo_n "(cached) " >&6
  else
                ac_cv_dtrace_link=no
@@ -129,7 +139,7 @@ detect netcan/can.h on NetBSD
              "$DTRACE" -G -s conftest.d -o conftest.o > /dev/null 2>&1 && \
                  ac_cv_dtrace_link=yes
  
-@@ -15135,8 +15137,6 @@ $as_echo "$SOABI" >&6; }
+@@ -15279,8 +15280,6 @@ $as_echo "$SOABI" >&6; }
  
  
  case $ac_sys_system in
@@ -138,7 +148,7 @@ detect netcan/can.h on NetBSD
      *)
  	EXT_SUFFIX=${SHLIB_SUFFIX};;
  esac
-@@ -15148,11 +15148,7 @@ LDVERSION='$(VERSION)$(ABIFLAGS)'
+@@ -15292,11 +15291,7 @@ LDVERSION='$(VERSION)$(ABIFLAGS)'
  $as_echo "$LDVERSION" >&6; }
  
  
