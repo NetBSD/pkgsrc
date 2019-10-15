@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4346 2019/10/15 13:28:21 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.4347 2019/10/15 14:03:40 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6978,3 +6978,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Added emulators/compat80 version 8.0 [he 2019-10-15]
 	Updated security/doas to 6.2p2 [ng0 2019-10-15]
 	Updated print/qpdf to 9.0.2 [ryoon 2019-10-15]
+	Updated devel/p5-Data-Compare to 1.26 [mef 2019-10-15]
+	Updated devel/p5-Data-ObjectDriver to 0.18 [mef 2019-10-15]
+	Updated devel/p5-Date-Manip to 6.78 [mef 2019-10-15]
