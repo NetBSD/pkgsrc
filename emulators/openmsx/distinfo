@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.16 2019/06/17 15:16:28 nia Exp $
+$NetBSD: distinfo,v 1.17 2019/10/16 16:50:51 nia Exp $
 
 SHA1 (openmsx-0.15.0.tar.gz) = 401ba6fba73fa1527017f7d481727a4e58c69e2e
 RMD160 (openmsx-0.15.0.tar.gz) = 6a10d44d9e2f6f8ddf02fe43152cf6dfdc8d51ec
 SHA512 (openmsx-0.15.0.tar.gz) = b9647b740054090657b96084296b023fb21e2b8e365a167ddcfe1778469f52b0e223a00652343a9eb78df52d0c92f58942e2889d906b1c8b463dc424dbd721f3
 Size (openmsx-0.15.0.tar.gz) = 3748998 bytes
 SHA1 (patch-build_detectsys.py) = 597225fb5488cee98115659de726c828c5afdc4c
+SHA1 (patch-build_main.mk) = b523a4165413eaceaff18cf4ac096375e59ec902
