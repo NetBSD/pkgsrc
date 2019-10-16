@@ -1,4 +1,26 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:32:20 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/10/16 12:50:27 nia Exp $
+${PLIST.alsa}include/portaudio2/pa_linux_alsa.h
 include/portaudio2/portaudio.h
+include/portaudio2/portaudiocpp/AutoSystem.hxx
+include/portaudio2/portaudiocpp/BlockingStream.hxx
+include/portaudio2/portaudiocpp/CFunCallbackStream.hxx
+include/portaudio2/portaudiocpp/CallbackInterface.hxx
+include/portaudio2/portaudiocpp/CallbackStream.hxx
+include/portaudio2/portaudiocpp/CppFunCallbackStream.hxx
+include/portaudio2/portaudiocpp/Device.hxx
+include/portaudio2/portaudiocpp/DirectionSpecificStreamParameters.hxx
+include/portaudio2/portaudiocpp/Exception.hxx
+include/portaudio2/portaudiocpp/HostApi.hxx
+include/portaudio2/portaudiocpp/InterfaceCallbackStream.hxx
+include/portaudio2/portaudiocpp/MemFunCallbackStream.hxx
+include/portaudio2/portaudiocpp/PortAudioCpp.hxx
+include/portaudio2/portaudiocpp/SampleDataFormat.hxx
+include/portaudio2/portaudiocpp/Stream.hxx
+include/portaudio2/portaudiocpp/StreamParameters.hxx
+include/portaudio2/portaudiocpp/System.hxx
+include/portaudio2/portaudiocpp/SystemDeviceIterator.hxx
+include/portaudio2/portaudiocpp/SystemHostApiIterator.hxx
 lib/pkgconfig/portaudio-2.0.pc
+lib/pkgconfig/portaudiocpp.pc
 lib/portaudio2/libportaudio.la
+lib/portaudio2/libportaudiocpp.la
