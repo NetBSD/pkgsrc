@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19343 2019/10/14 20:12:00 triaxx Exp $
+$NetBSD: TODO,v 1.19344 2019/10/16 07:24:32 adam Exp $
 
 Suggested new packages
 ======================
@@ -1153,9 +1153,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-pendrell-0.3.7
 	o py-ptt-1.10.2
 	o py-pycountry-1.20
-	o py-setuptools-41.4.0
 	o py-simpletal-5.1
-	o py-snowballstemmer-2.0.0
 	o py-spf-2.0.12t
 	o py-sybase-0.37
 	o py-test-cov-2.8.1
