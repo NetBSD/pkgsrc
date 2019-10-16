@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2927 2019/10/15 14:25:21 mef Exp $
+# $NetBSD: Makefile,v 1.2928 2019/10/16 21:30:59 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1996,7 +1996,6 @@ SUBDIR+=	prcs
 SUBDIR+=	protobuf
 SUBDIR+=	protobuf-c
 SUBDIR+=	pstreams
-SUBDIR+=	psvn
 SUBDIR+=	pth
 SUBDIR+=	pthread-sem
 SUBDIR+=	ptlib
