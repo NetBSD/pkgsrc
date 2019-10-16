@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4372 2019/10/16 13:34:21 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4373 2019/10/16 13:44:31 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7021,3 +7021,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/dnscrypt-proxy2 to 2.0.28 [nia 2019-10-16]
 	Updated www/gitea to 1.9.4 [nia 2019-10-16]
 	Added editors/xournalpp version 1.0.15 [nia 2019-10-16]
+	Updated x11/gtk-sharp to 2.12.45 [nia 2019-10-16]
