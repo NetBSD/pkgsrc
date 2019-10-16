@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/10/16 11:18:11 nia Exp $
+# $NetBSD: Makefile,v 1.2 2019/10/16 11:19:30 nia Exp $
 
 DISTNAME=	buzztrax-0.10.2
 CATEGORIES=	audio
@@ -10,6 +10,9 @@ COMMENT=	Modular, free, open source music studio
 LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=	gsettings-desktop-schemas-[0-9]*:../../sysutils/gsettings-desktop-schemas
+
+CONFLICTS+=	buzztard-[0-9]*
+SUPERSEDES+=	buzztard-[0-9]*
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
