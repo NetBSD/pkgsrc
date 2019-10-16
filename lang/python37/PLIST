@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2019/10/15 16:55:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/10/16 07:04:04 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1374,8 +1374,8 @@ lib/python${PY_VER_SUFFIX}/ensurepip/__init__.pyo
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.py
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyo
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-19.0.3-py2.py3-none-any.whl
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-40.8.0-py2.py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-19.2.3-py2.py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-41.2.0-py2.py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyo
@@ -1543,6 +1543,9 @@ lib/python${PY_VER_SUFFIX}/idlelib/extend.txt
 lib/python${PY_VER_SUFFIX}/idlelib/filelist.py
 lib/python${PY_VER_SUFFIX}/idlelib/filelist.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/filelist.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/format.py
+lib/python${PY_VER_SUFFIX}/idlelib/format.pyc
+lib/python${PY_VER_SUFFIX}/idlelib/format.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/grep.py
 lib/python${PY_VER_SUFFIX}/idlelib/grep.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/grep.pyo
@@ -1637,6 +1640,9 @@ lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_editor.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_filelist.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_filelist.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_filelist.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_format.py
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_format.pyc
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_format.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_grep.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_grep.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_grep.pyo
@@ -1667,9 +1673,6 @@ lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_multicall.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_outwin.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_outwin.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_outwin.pyo
-lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_paragraph.py
-lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_paragraph.pyc
-lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_paragraph.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_parenmatch.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_parenmatch.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_parenmatch.pyo
@@ -1697,9 +1700,6 @@ lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_replace.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_rpc.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_rpc.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_rpc.pyo
-lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_rstrip.py
-lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_rstrip.pyc
-lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_rstrip.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_run.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_run.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_run.pyo
@@ -1718,6 +1718,9 @@ lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_searchbase.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_searchengine.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_searchengine.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_searchengine.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_sidebar.py
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_sidebar.pyc
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_sidebar.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_squeezer.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_squeezer.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_squeezer.pyo
@@ -1766,9 +1769,6 @@ lib/python${PY_VER_SUFFIX}/idlelib/multicall.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/outwin.py
 lib/python${PY_VER_SUFFIX}/idlelib/outwin.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/outwin.pyo
-lib/python${PY_VER_SUFFIX}/idlelib/paragraph.py
-lib/python${PY_VER_SUFFIX}/idlelib/paragraph.pyc
-lib/python${PY_VER_SUFFIX}/idlelib/paragraph.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/parenmatch.py
 lib/python${PY_VER_SUFFIX}/idlelib/parenmatch.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/parenmatch.pyo
@@ -1796,9 +1796,6 @@ lib/python${PY_VER_SUFFIX}/idlelib/replace.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/rpc.py
 lib/python${PY_VER_SUFFIX}/idlelib/rpc.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/rpc.pyo
-lib/python${PY_VER_SUFFIX}/idlelib/rstrip.py
-lib/python${PY_VER_SUFFIX}/idlelib/rstrip.pyc
-lib/python${PY_VER_SUFFIX}/idlelib/rstrip.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/run.py
 lib/python${PY_VER_SUFFIX}/idlelib/run.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/run.pyo
@@ -1817,6 +1814,9 @@ lib/python${PY_VER_SUFFIX}/idlelib/searchbase.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/searchengine.py
 lib/python${PY_VER_SUFFIX}/idlelib/searchengine.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/searchengine.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/sidebar.py
+lib/python${PY_VER_SUFFIX}/idlelib/sidebar.pyc
+lib/python${PY_VER_SUFFIX}/idlelib/sidebar.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/squeezer.py
 lib/python${PY_VER_SUFFIX}/idlelib/squeezer.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/squeezer.pyo
