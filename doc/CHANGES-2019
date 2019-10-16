@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4360 2019/10/16 08:56:30 maya Exp $
+$NetBSD: CHANGES-2019,v 1.4361 2019/10/16 09:38:54 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7006,3 +7006,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/prometheus to 2.13.0 [adam 2019-10-16]
 	Updated devel/py-cffi to 1.13.0 [adam 2019-10-16]
 	Removed net/bind912 successor net/bind914 [maya 2019-10-16]
+	Updated benchmarks/dnsperf to 2.1.0.0nb2 [maya 2019-10-16]
+	Updated security/zkt to 1.1.2nb2 [maya 2019-10-16]
