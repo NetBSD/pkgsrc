@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2018/09/27 04:23:12 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2019/10/16 09:37:27 maya Exp $
 
 DISTNAME=	zkt-1.1.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://www.hznet.de/dns/zkt/
 
@@ -30,7 +30,7 @@ CONFIGURE_ARGS+=	--enable-bind_util_path=/usr/sbin
 
 .if ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	--enable-bind_util_path=${BUILDLINK_PREFIX.bind}/sbin
-.include "../../net/bind912/buildlink3.mk"
+.include "../../net/bind914/buildlink3.mk"
 .endif
 
 do-install:
