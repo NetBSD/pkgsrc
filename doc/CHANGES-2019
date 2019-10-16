@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4377 2019/10/16 16:13:50 sjmulder Exp $
+$NetBSD: CHANGES-2019,v 1.4378 2019/10/16 16:33:00 micha Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7028,3 +7028,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-pebble to 4.4.0 [adam 2019-10-16]
 	Updated net/dhcpcd to 8.1.1 [roy 2019-10-16]
 	Updated sysutils/nnn to 2.7 [sjmulder 2019-10-16]
+	Updated textproc/rman to 3.2nb1 [micha 2019-10-16]
