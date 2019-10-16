@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/07/09 07:46:37 adam Exp $
+# $NetBSD: Makefile,v 1.11 2019/10/16 07:04:04 adam Exp $
 
 .include "dist.mk"
 
@@ -37,7 +37,7 @@ PTHREAD_OPTS+=	require
 
 # http://bugs.python.org/issue13241
 .if !empty(MACHINE_PLATFORM:MDarwin-10.*)
-PKGSRC_COMPILER=	clang
+PKGSRC_COMPILER?=	clang
 PKG_CC=			clang
 PKG_CXX=		clang++
 .endif
