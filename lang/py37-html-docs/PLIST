@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2019/07/09 07:46:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/10/16 10:51:42 leot Exp $
 share/doc/python3.7/.buildinfo
-share/doc/python3.7/_downloads/388d705f24bc7799f766c5de6df669c1/tzinfo_examples.py
+share/doc/python3.7/_downloads/ea30e20b445b6d99d2ade2884125d9e7/tzinfo_examples.py
 share/doc/python3.7/_images/hashlib-blake2-tree.png
 share/doc/python3.7/_images/logging_flow.png
 share/doc/python3.7/_images/pathlib-inheritance.png
@@ -458,6 +458,7 @@ share/doc/python3.7/_sources/tutorial/stdlib2.rst.txt
 share/doc/python3.7/_sources/tutorial/venv.rst.txt
 share/doc/python3.7/_sources/tutorial/whatnow.rst.txt
 share/doc/python3.7/_sources/using/cmdline.rst.txt
+share/doc/python3.7/_sources/using/editors.rst.txt
 share/doc/python3.7/_sources/using/index.rst.txt
 share/doc/python3.7/_sources/using/mac.rst.txt
 share/doc/python3.7/_sources/using/unix.rst.txt
@@ -989,6 +990,7 @@ share/doc/python3.7/tutorial/stdlib2.html
 share/doc/python3.7/tutorial/venv.html
 share/doc/python3.7/tutorial/whatnow.html
 share/doc/python3.7/using/cmdline.html
+share/doc/python3.7/using/editors.html
 share/doc/python3.7/using/index.html
 share/doc/python3.7/using/mac.html
 share/doc/python3.7/using/unix.html
