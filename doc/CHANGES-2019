@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4374 2019/10/16 14:31:45 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4375 2019/10/16 14:43:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7024,3 +7024,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/gtk-sharp to 2.12.45 [nia 2019-10-16]
 	Updated www/libsass to 3.6.2 [adam 2019-10-16]
 	Updated finance/py-braintree to 3.57.1 [adam 2019-10-16]
+	Updated security/py-asn1crypto to 1.2.0 [adam 2019-10-16]
+	Updated devel/py-pebble to 4.4.0 [adam 2019-10-16]
