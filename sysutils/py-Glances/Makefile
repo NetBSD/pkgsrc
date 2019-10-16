@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2019/10/12 05:35:03 fox Exp $
+# $NetBSD: Makefile,v 1.3 2019/10/16 11:07:57 fox Exp $
 
-DISTNAME=	Glances-3.1.2
+DISTNAME=	Glances-3.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=G/Glances/}
 
@@ -23,6 +22,10 @@ SUBST_STAGE.prefix=	pre-configure
 SUBST_MESSAGE.prefix=	Set correct prefix in setup.py
 SUBST_FILES.prefix=	${WRKSRC}/setup.py
 SUBST_SED.prefix=	-e 's,share/man,${PKGMANDIR},'
+
+post-extract:
+	# Removes the nodejs component which is not required.
+	${RM} -fR ${WRKSRC}/glances/outputs/static
 
 post-install:
 	cd ${DESTDIR}${PREFIX} && \
