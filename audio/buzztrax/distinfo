@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2019/10/16 11:18:11 nia Exp $
+
+SHA1 (buzztrax-0.10.2.tar.gz) = ee70b76eeea42445e7172a2d2dd2d86051428fa6
+RMD160 (buzztrax-0.10.2.tar.gz) = ff03dc597bf77a78afd2656488e7e598d159a7d4
+SHA512 (buzztrax-0.10.2.tar.gz) = ba767df2484d0a9663072d4f9892daea631e013ddc120c8e1534a903c9937aad3c1db0d1dd401e92ea6a6ae1be867b32d91cd3e77a693dde189252468eb483e3
+Size (buzztrax-0.10.2.tar.gz) = 4121943 bytes
+SHA1 (patch-configure) = 6e5e6efaa6f4847b1a5648f18343ee546fbca065
+SHA1 (patch-src_gst_dec_bt-dec.c) = ee651defd4ff51622786b13d35cf783c9986386e
