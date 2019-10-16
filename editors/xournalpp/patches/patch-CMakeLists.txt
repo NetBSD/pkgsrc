@@ -1,0 +1,26 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2019/10/16 13:34:08 nia Exp $
+
+Find pkgsrc lua with pkg-config.
+
+Unconditionally install desktop files.
+
+--- CMakeLists.txt.orig	2019-10-15 17:47:34.000000000 +0000
++++ CMakeLists.txt
+@@ -130,7 +130,7 @@ if (MacIntegration_FOUND)
+ endif ()
+ 
+ # Plugins / scripting
+-pkg_check_modules (Lua "lua5.3")
++pkg_check_modules (Lua "lua-5.3")
+ if (NOT Lua_FOUND)
+ 	pkg_check_modules (Lua "lua >= 5.3")
+ endif()
+@@ -238,7 +238,7 @@ install (DIRECTORY plugins
+ )
+ 
+ # Install desktop shortcuts for Linux
+-if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
++if (TRUE)
+ 	message ("Installing desktop files")
+ 
+ 	# Install icons

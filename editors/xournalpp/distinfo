@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2019/10/16 13:34:08 nia Exp $
+
+SHA1 (xournalpp-1.0.15.tar.gz) = 6934c8de1260ca580988c421c55c2a44999a235c
+RMD160 (xournalpp-1.0.15.tar.gz) = 8f53fd4b74507e28e28a4fffa9fe4d8c5f434c45
+SHA512 (xournalpp-1.0.15.tar.gz) = 7a015c1d48e26eed313f994aa293f6d2ab711ac6970568edef4ba10dcf1551c87279daa2b361731ac58ef236e1dd59e0eebf41e4739fba9db954a718450d5b79
+Size (xournalpp-1.0.15.tar.gz) = 14938798 bytes
+SHA1 (patch-CMakeLists.txt) = 52b9a70a3242b618f8092b94a21c276c522e749d
