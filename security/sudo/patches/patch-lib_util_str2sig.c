@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_util_str2sig.c,v 1.1 2019/10/14 20:05:58 maya Exp $
+$NetBSD: patch-lib_util_str2sig.c,v 1.2 2019/10/16 20:25:21 maya Exp $
 
 Handle sysconf(_SC_RTSIG_MAX) not existing (netbsd):
 just assume the static limits is good enough.
@@ -12,7 +12,7 @@ just assume the static limits is good enough.
 +#ifdef _SC_RTSIG_MAX
  		const long rtmax = sysconf(_SC_RTSIG_MAX);
 +#else
-+		const long rtmax = SIGRTMAX;
++		const long rtmax = SIGRTMAX - SIGRTMIN;
 +#endif
  		const int off = signame[6] - '0';
  
@@ -24,7 +24,7 @@ just assume the static limits is good enough.
 +#ifdef _SC_RTSIG_MAX
  		const long rtmax = sysconf(_SC_RTSIG_MAX);
 +#else
-+		const long rtmax = SIGRTMAX;
++		const long rtmax = SIGRTMAX - SIGRTMIN;
 +#endif
  		const int off = signame[6] - '0';
  
