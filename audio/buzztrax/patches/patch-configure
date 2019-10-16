@@ -1,0 +1,78 @@
+$NetBSD: patch-configure,v 1.1 2019/10/16 11:18:11 nia Exp $
+
+test(1) portability
+
+--- configure.orig	2015-12-29 21:24:28.000000000 +0000
++++ configure
+@@ -20156,7 +20156,7 @@ $as_echo "#define USE_ALSA 1" >>confdefs
+     ALSA_DOC_SECTIONS=
+ 
+ fi
+- if test "x$use_alsa" == "xyes"; then
++ if test "x$use_alsa" = "xyes"; then
+   USE_ALSA_TRUE=
+   USE_ALSA_FALSE='#'
+ else
+@@ -20257,7 +20257,7 @@ $as_echo "#define USE_GUDEV 1" >>confdef
+     GUDEV_DOC_SECTIONS=
+ 
+ fi
+- if test "x$use_gudev" == "xyes"; then
++ if test "x$use_gudev" = "xyes"; then
+   USE_GUDEV_TRUE=
+   USE_GUDEV_FALSE='#'
+ else
+@@ -20352,7 +20352,7 @@ $as_echo "#define USE_GSF 1" >>confdefs.
+     use_gsf=yes
+ 
+ fi
+- if test "x$use_gsf" == "xyes"; then
++ if test "x$use_gsf" = "xyes"; then
+   USE_GSF_TRUE=
+   USE_GSF_FALSE='#'
+ else
+@@ -20699,7 +20699,7 @@ fi
+     enable_gir="no"
+     ;;
+ esac
+- if test "x$enable_gir" == "xyes"; then
++ if test "x$enable_gir" = "xyes"; then
+   USE_GIR_TRUE=
+   USE_GIR_FALSE='#'
+ else
+@@ -20775,7 +20775,7 @@ $as_echo "#define HAVE_GST_CONTROL_BINDI
+ 
+ fi
+ 
+- if test "x$ac_cv_lib_gstcontroller_1_0_gst_direct_control_binding_new_absolute" == "xno"; then
++ if test "x$ac_cv_lib_gstcontroller_1_0_gst_direct_control_binding_new_absolute" = "xno"; then
+   BUILD_GST_CONTROL_BINDING_ABS_TRUE=
+   BUILD_GST_CONTROL_BINDING_ABS_FALSE='#'
+ else
+@@ -20866,7 +20866,7 @@ $as_echo "yes" >&6; }
+     have_check=yes
+ 
+ fi
+- if test "x$have_check" == "xyes"; then
++ if test "x$have_check" = "xyes"; then
+   BUILD_CHECK_TESTS_TRUE=
+   BUILD_CHECK_TESTS_FALSE='#'
+ else
+@@ -21805,7 +21805,7 @@ done
+ 
+ 
+ 
+- if test x$have_linux_input_h == xyes; then
++ if test x$have_linux_input_h = xyes; then
+   USE_LINUX_INPUT_TRUE=
+   USE_LINUX_INPUT_FALSE='#'
+ else
+@@ -22677,7 +22677,7 @@ BT_CFLAGS="$ARCH_CFLAGS $ARCH_CPPFLAGS $
+ BT_LIBDIR='-L${libdir}'
+ BT_LIBS="$COVERAGE_LIBS"
+ BT_LDFLAGS="$DEBUG_LDFLAGS"
+-if test "x${enable_Bsymbolic}" == "xyes"; then
++if test "x${enable_Bsymbolic}" = "xyes"; then
+   BT_LDFLAGS="$BT_LDFLAGS -Wl,-Bsymbolic-functions"
+ fi
+ 
