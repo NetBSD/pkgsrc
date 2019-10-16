@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2017/04/27 07:14:01 nat Exp $
+$NetBSD: distinfo,v 1.11 2019/10/16 12:50:27 nia Exp $
 
 SHA1 (pa_stable_v190600_20161030.tgz) = 56c596bba820d90df7d057d8f6a0ec6bf9ab82e8
 RMD160 (pa_stable_v190600_20161030.tgz) = e6e5cd3f3cb7469aa17549c189e445d573567e13
 SHA512 (pa_stable_v190600_20161030.tgz) = 7ec692cbd8c23878b029fad9d9fd63a021f57e60c4921f602995a2fca070c29f17a280c7f2da5966c4aad29d28434538452f4c822eacf3a60af59a6dc8e9704c
 Size (pa_stable_v190600_20161030.tgz) = 1450572 bytes
+SHA1 (patch-src_hostapi_alsa_pa__linux__alsa.c) = b83c77d1dd23ab16f940dc11228bee3460d2a58b
 SHA1 (patch-src_hostapi_oss_pa__unix__oss.c) = 81b6633bdb1cac8d3397bd7ebb6da1e28b68e3df
