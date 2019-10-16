@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4383 2019/10/16 21:30:59 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4384 2019/10/16 23:22:23 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7037,3 +7037,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/bind914 to 9.14.7 [maya 2019-10-16]
 	Removed games/pytraffic [wiz 2019-10-16]
 	Removed devel/psvn [wiz 2019-10-16]
+	Added audio/musescore version 3.2.3 [nia 2019-10-16]
