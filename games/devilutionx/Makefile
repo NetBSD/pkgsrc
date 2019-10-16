@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2019/07/29 09:34:31 nia Exp $
+# $NetBSD: Makefile,v 1.8 2019/10/16 12:00:51 nia Exp $
 
-DISTNAME=	devilutionx-0.4.0
-PKGREVISION=	2
+DISTNAME=	devilutionx-0.5.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=diasurgical/}
 GITHUB_PROJECT=	devilutionX
@@ -33,31 +32,32 @@ CXXFLAGS+=	-DO_LARGEFILE=0 -Dstat64=stat -Dlstat64=lstat -Dlseek64=lseek -Doff64
 
 CXXFLAGS+=	-DASIO_DISABLE_STD_EXPERIMENTAL_STRING_VIEW=1
 
-ICON_SIZES=	1024 512 256 128 64 32 16
+# /usr/include/g++/cstdio:176:11: error: '::vfscanf' has not been declared
+# No idea.
+CXXFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/applications
-.for i in ${ICON_SIZES}
-INSTALLATION_DIRS+=	share/icons/hicolor/${i}x${i}/apps
-.endfor
-
-post-extract:
-	${MV} ${WRKSRC}/Xcode/AppIcon.xcassets/AppIcon.appiconset/appicon-1.png \
-	    ${WRKSRC}/Xcode/AppIcon.xcassets/AppIcon.appiconset/32.png
+INSTALLATION_DIRS+=	share/icons/hicolor/16x16/apps
+INSTALLATION_DIRS+=	share/icons/hicolor/32x32/apps
+INSTALLATION_DIRS+=	share/icons/hicolor/48x48/apps
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/devilutionx ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${FILESDIR}/devilutionx.desktop \
 	    ${DESTDIR}${PREFIX}/share/applications
-.for i in ${ICON_SIZES}
-	${INSTALL_DATA} ${WRKSRC}/Xcode/AppIcon.xcassets/AppIcon.appiconset/${i}.png \
-	    ${DESTDIR}${PREFIX}/share/icons/hicolor/${i}x${i}/apps/devilutionx.png
-.endfor
+	${INSTALL_DATA} ${WRKSRC}/Packaging/resources/16.png \
+	    ${DESTDIR}${PREFIX}/share/icons/hicolor/16x16/apps/devilutionx.png
+	${INSTALL_DATA} ${WRKSRC}/Packaging/resources/Diablo_32.png \
+	    ${DESTDIR}${PREFIX}/share/icons/hicolor/32x32/apps/devilutionx.png
+	${INSTALL_DATA} ${WRKSRC}/Packaging/resources/Diablo_48.png \
+	    ${DESTDIR}${PREFIX}/share/icons/hicolor/48x48/apps/devilutionx.png
 
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../fonts/SDL2_ttf/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/libsodium/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
