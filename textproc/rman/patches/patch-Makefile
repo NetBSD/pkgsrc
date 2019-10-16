@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2019/10/16 16:30:18 micha Exp $
+
+Honor CPPFLAGS and LDFLAGS.
+
+--- Makefile.orig	2003-07-26 19:15:00.000000000 +0000
++++ Makefile
+@@ -102,7 +102,7 @@ all:  rman
+ 
+ # everyone but me zaps assertions with the -DNDEBUG flag
+ rman: rman.c Makefile
+-	$(CC) -DNDEBUG $(defs) -DPOLYGLOTMANVERSION=\"$(version)\" $(CFLAGS) -o rman rman.c
++	$(CC) -DNDEBUG $(defs) -DPOLYGLOTMANVERSION=\"$(version)\" $(CPPFLAGS) $(CFLAGS) $(LDFLAGS) -o rman rman.c
+ 
+ 
+ debug:
