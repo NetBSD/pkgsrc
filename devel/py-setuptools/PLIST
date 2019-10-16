@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2019/01/28 08:38:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.47 2019/10/16 07:21:46 adam Exp $
 bin/easy_install-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
@@ -67,6 +67,9 @@ ${PYSITELIB}/setuptools/_deprecation_warning.pyo
 ${PYSITELIB}/setuptools/_vendor/__init__.py
 ${PYSITELIB}/setuptools/_vendor/__init__.pyc
 ${PYSITELIB}/setuptools/_vendor/__init__.pyo
+${PYSITELIB}/setuptools/_vendor/ordered_set.py
+${PYSITELIB}/setuptools/_vendor/ordered_set.pyc
+${PYSITELIB}/setuptools/_vendor/ordered_set.pyo
 ${PYSITELIB}/setuptools/_vendor/packaging/__about__.py
 ${PYSITELIB}/setuptools/_vendor/packaging/__about__.pyc
 ${PYSITELIB}/setuptools/_vendor/packaging/__about__.pyo
