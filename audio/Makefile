@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.571 2019/10/16 11:24:16 nia Exp $
+# $NetBSD: Makefile,v 1.572 2019/10/16 23:22:08 nia Exp $
 #
 
 COMMENT=	Audio tools
@@ -342,6 +342,7 @@ SUBDIR+=	mstream
 SUBDIR+=	mt-daapd
 SUBDIR+=	muse
 SUBDIR+=	musepack
+SUBDIR+=	musescore
 SUBDIR+=	musicbrainz
 SUBDIR+=	musicpd
 SUBDIR+=	nas

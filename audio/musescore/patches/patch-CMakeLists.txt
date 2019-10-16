@@ -1,0 +1,47 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2019/10/16 23:22:08 nia Exp $
+
+Never compress man pages.
+
+Use CMAKE_INSTALL_MANDIR.
+
+--- CMakeLists.txt.orig	2019-07-06 09:44:00.000000000 +0000
++++ CMakeLists.txt
+@@ -663,7 +663,7 @@ if (NOT MINGW AND NOT MSVC AND NOT APPLE
+     # Compress man pages if gzip is installed (don't on OpenBSD)
+     # Note: Compressing man pages is normal on Linux but not OpenBSD
+     find_program( GZIP_EXECUTABLE gzip DOC "A tool for compressing manpages (optional)." )
+-    if (GZIP_EXECUTABLE AND NOT CMAKE_SYSTEM_NAME MATCHES "OpenBSD")
++    if (FALSE)
+         message(STATUS "Found 'gzip'. Man pages will be compressed.")
+         set(MAN_TARGET ${MAN_BUILD})
+         set(MAN_EXTENSION ${MAN_EXTENSION}.gz)
+@@ -680,7 +680,7 @@ if (NOT MINGW AND NOT MSVC AND NOT APPLE
+             COMMAND echo "Man pages have been compressed ready for installation."
+             VERBATIM
+             )
+-    else (GZIP_EXECUTABLE AND NOT CMAKE_SYSTEM_NAME MATCHES "OpenBSD")
++    else (FALSE)
+         if (CMAKE_SYSTEM_NAME MATCHES "OpenBSD")
+             message(STATUS "System is OpenBSD: Man pages will not be compressed.")
+         else (CMAKE_SYSTEM_NAME MATCHES "OpenBSD")
+@@ -690,9 +690,9 @@ if (NOT MINGW AND NOT MSVC AND NOT APPLE
+             COMMAND echo "Man pages will be installed uncompressed."
+             VERBATIM
+             )
+-    endif (GZIP_EXECUTABLE AND NOT CMAKE_SYSTEM_NAME MATCHES "OpenBSD")
++    endif (FALSE)
+     # Install man pages in either compressed or uncompressed form
+-    install( FILES ${MAN_BUILD} DESTINATION share/man/man1 COMPONENT doc)
++    install( FILES ${MAN_BUILD} DESTINATION ${CMAKE_INSTALL_MANDIR}/man1 COMPONENT doc)
+     # Create symlink alias for man pages so `man musescore` = `man mscore`
+     find_program( LN_EXECUTABLE ln DOC "A tool for creating symbolic link aliases (optional)." )
+     if (LN_EXECUTABLE)
+@@ -703,7 +703,7 @@ if (NOT MINGW AND NOT MSVC AND NOT APPLE
+             COMMAND ${LN_EXECUTABLE} -sf "${MAN_FULL_NAME}" "${MAN_FULL_ALIAS}"
+             COMMAND echo 'Symlink alias: ${MAN_FULL_ALIAS} -> ${MAN_FULL_NAME}'
+             )
+-        install( FILES ${PROJECT_BINARY_DIR}/${MAN_FULL_ALIAS} DESTINATION share/man/man1 COMPONENT doc)
++        install( FILES ${PROJECT_BINARY_DIR}/${MAN_FULL_ALIAS} DESTINATION ${CMAKE_INSTALL_MANDIR}/man1 COMPONENT doc)
+      else (LN_EXECUTABLE)
+          message(STATUS "'ln' not found (it is optional). No symlink aliases will be created.")
+      endif (LN_EXECUTABLE)
