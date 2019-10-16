@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.568 2019/10/01 12:45:13 nia Exp $
+# $NetBSD: Makefile,v 1.569 2019/10/16 11:19:24 nia Exp $
 #
 
 COMMENT=	Audio tools
@@ -56,6 +56,7 @@ SUBDIR+=	bmp-scrobbler
 SUBDIR+=	bmpx
 SUBDIR+=	bsl
 SUBDIR+=	buzztard
+SUBDIR+=	buzztrax
 SUBDIR+=	cam
 SUBDIR+=	cantata
 SUBDIR+=	cd-discid
