@@ -1,10 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2019/07/03 10:58:12 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/10/16 12:00:51 nia Exp $
 bin/devilutionx
 share/applications/devilutionx.desktop
-share/icons/hicolor/1024x1024/apps/devilutionx.png
-share/icons/hicolor/128x128/apps/devilutionx.png
 share/icons/hicolor/16x16/apps/devilutionx.png
-share/icons/hicolor/256x256/apps/devilutionx.png
 share/icons/hicolor/32x32/apps/devilutionx.png
-share/icons/hicolor/512x512/apps/devilutionx.png
-share/icons/hicolor/64x64/apps/devilutionx.png
+share/icons/hicolor/48x48/apps/devilutionx.png

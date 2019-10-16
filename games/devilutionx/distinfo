@@ -1,11 +1,7 @@
-$NetBSD: distinfo,v 1.4 2019/07/29 09:34:31 nia Exp $
+$NetBSD: distinfo,v 1.5 2019/10/16 12:00:51 nia Exp $
 
-SHA1 (devilutionx-0.4.0.tar.gz) = d5d71cf752dc0b5c89f9827b52f1567cb5cfb8f4
-RMD160 (devilutionx-0.4.0.tar.gz) = 0b647b8ee4641d9af000d4d54e1008a506a9fc66
-SHA512 (devilutionx-0.4.0.tar.gz) = ba8f650f8dd00e3b08f6ac082566351c8f3b6162d7bfa2fdf3464b38c201b08677d2f6151f2272e1d73eb972b8babc49b38364523d10763eb179f6b682641443
-Size (devilutionx-0.4.0.tar.gz) = 1351201 bytes
-SHA1 (patch-Source_inv.cpp) = 788414c9141da13391cd4f540e364a034fd87b41
-SHA1 (patch-Source_list.h) = 1dd4dbe80c2d99ef127462de0b8cfc35e1b861de
-SHA1 (patch-Source_loadsave.cpp) = ea0d7f41ddec197f7b8002fba8a8479c3f49c415
-SHA1 (patch-Source_loadsave.h) = 6d7e7cc9e188e5a406c10caceb0aa80139c6e301
-SHA1 (patch-structs.h) = d9cba47b2ca876529aef33d4190f082d134cdcb6
+SHA1 (devilutionx-0.5.0.tar.gz) = f4dabf51605ac211d314830af797a0fa0114a059
+RMD160 (devilutionx-0.5.0.tar.gz) = 7a66413fa3c352136465b9ae373654e68f30c6fa
+SHA512 (devilutionx-0.5.0.tar.gz) = 36ad803b5b71d0ec98c3284716ed92067af742234306e723eba536404111b63efab869e5cce540f8acb1369992ba1c0c9cf0425cfb1ad37a6c970037abc54522
+Size (devilutionx-0.5.0.tar.gz) = 1767600 bytes
+SHA1 (patch-3rdParty_StormLib_src_StormPort.h) = a59ea9c29a86067b908aab7e8d3e344711407e0a
