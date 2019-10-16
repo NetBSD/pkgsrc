@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2019/10/16 23:22:08 nia Exp $
+
+SHA1 (musescore-3.2.3.tar.gz) = b802c9d78ea53277fddd22f033c284b90e6b037b
+RMD160 (musescore-3.2.3.tar.gz) = a447ed0929b43fbb66699e4889854b45b1cf61ba
+SHA512 (musescore-3.2.3.tar.gz) = 3245cb14b2230703e63689df0021813be9fb234aa03433defd0de22640468daa9b3c4f5c7e276faac993ebb80e4431e56cd915eab983ba7dd3e85c822b4573d2
+Size (musescore-3.2.3.tar.gz) = 63932000 bytes
+SHA1 (patch-CMakeLists.txt) = 220fa5d8b68fbead76d8bed41e03b9133f59f3cc

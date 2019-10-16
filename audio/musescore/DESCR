@@ -1,0 +1,15 @@
+MuseScore is an open source and free music notation software.
+
+Features:
+
+* WYSIWYG design, notes are entered on a "virtual notepaper"
+* TrueType font(s) for printing & display allows for high quality scaling
+  to all sizes
+* Easy & fast note entry
+* Many editing functions
+* MusicXML import/export
+* MIDI (SMF) import/export
+* MuseData import
+* MIDI input for note entry
+* Integrated sequencer and software synthesizer to play the score
+* Print or create pdf files
