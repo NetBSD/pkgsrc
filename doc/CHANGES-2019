@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4361 2019/10/16 09:38:54 maya Exp $
+$NetBSD: CHANGES-2019,v 1.4362 2019/10/16 10:06:25 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7008,3 +7008,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed net/bind912 successor net/bind914 [maya 2019-10-16]
 	Updated benchmarks/dnsperf to 2.1.0.0nb2 [maya 2019-10-16]
 	Updated security/zkt to 1.1.2nb2 [maya 2019-10-16]
+	Updated benchmarks/dnsperf to 2.3.2 [maya 2019-10-16]
