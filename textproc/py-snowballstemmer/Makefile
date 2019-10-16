@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2019/09/07 07:22:14 adam Exp $
+# $NetBSD: Makefile,v 1.4 2019/10/16 07:24:13 adam Exp $
 
-DISTNAME=	snowballstemmer-1.9.1
+DISTNAME=	snowballstemmer-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/snowballstemmer/}
@@ -12,5 +12,5 @@ LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
