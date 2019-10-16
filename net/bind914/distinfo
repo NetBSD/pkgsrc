@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.8 2019/09/18 15:19:31 taca Exp $
+$NetBSD: distinfo,v 1.9 2019/10/16 20:51:59 maya Exp $
 
-SHA1 (bind-9.14.5.tar.gz) = aef9038cca034705b118168a1d1d83b3dffd83e4
-RMD160 (bind-9.14.5.tar.gz) = cabe4e43fcc1c193832dc6c9b3a7b8c13f46ceeb
-SHA512 (bind-9.14.5.tar.gz) = 1b18eda5dea639f9b34e1c41b534704b0d5f64c036b766c9cfccf9bbeb586ce4ea7f0d098a5b2747e88aa403e48ad8ae0b6e560e93348f0dc7616f914671d084
-Size (bind-9.14.5.tar.gz) = 6313555 bytes
+SHA1 (bind-9.14.7.tar.gz) = ab0b14f4fe6a818fb15673ea9cef3eead8f6a94b
+RMD160 (bind-9.14.7.tar.gz) = 6caf6e1a7ea03e311c6bcdd1cca63547e230f86b
+SHA512 (bind-9.14.7.tar.gz) = e1837ebfbbc60487f5f0e67fb9e935588fd6e5ffe55cdc9dc77e3ce63cd6fc4f076f4eb282cc4f51701ddda3e51e8f15255db5a3841f9fe92a4fb4207d806740
+Size (bind-9.14.7.tar.gz) = 6320994 bytes
 SHA1 (patch-bin_named_Makefile.in) = 741e3708c670baaec45446f6bb364ada448ae330
 SHA1 (patch-bin_named_main.c) = 51c8ab464a009575b6513c7ed4b79f89446eb7d0
 SHA1 (patch-bin_named_pfilter.c) = b54f872c883c8fbc2d9c04df65c185dc057cc36b
