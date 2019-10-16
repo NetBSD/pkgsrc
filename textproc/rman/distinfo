@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 02:00:07 agc Exp $
+$NetBSD: distinfo,v 1.6 2019/10/16 16:30:17 micha Exp $
 
 SHA1 (rman-3.2.tar.gz) = d3b2889b5feabb78a0422a1f5d3ae9fdf0333b79
 RMD160 (rman-3.2.tar.gz) = 5ec8830466ec478e4470fbda8635d06b8cf967b7
 SHA512 (rman-3.2.tar.gz) = a70aea0af1510088fd88a736e63a6dab9200040be5eb89912ede4f50e3de97d423574841bbb66e90fb12934f3834dac0acefe78ff1c73a78a79c95c3dd6fa5ae
 Size (rman-3.2.tar.gz) = 79397 bytes
+SHA1 (patch-Makefile) = 37828f90affb7e5b270adfb3c6cfba236ea18db3
