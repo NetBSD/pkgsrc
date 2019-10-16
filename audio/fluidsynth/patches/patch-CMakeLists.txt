@@ -1,0 +1,19 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2019/10/16 19:25:44 nia Exp $
+
+Allow building ALSA support on more systems.
+
+--- CMakeLists.txt.orig	2019-09-27 14:53:27.000000000 +0000
++++ CMakeLists.txt
+@@ -75,10 +75,10 @@ option ( enable-readline "compile readli
+ option ( enable-threads "enable multi-threading support (such as parallel voice synthesis)" on )
+ 
+ # Platform specific options
+-if ( CMAKE_SYSTEM MATCHES "Linux|FreeBSD|DragonFly" )
++if ( TRUE )
+     option ( enable-lash "compile LASH support (if it is available)" on )
+     option ( enable-alsa "compile ALSA support (if it is available)" on )
+-endif ( CMAKE_SYSTEM MATCHES "Linux|FreeBSD|DragonFly" )
++endif ( TRUE )
+ 
+ if ( CMAKE_SYSTEM MATCHES "Linux" )
+     option ( enable-systemd "compile systemd support (if it is available)" on )
