@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2019/10/14 15:20:18 adam Exp $
+# $NetBSD: Makefile,v 1.29 2019/10/16 19:25:44 nia Exp $
 
 DISTNAME=	fluidsynth-2.0.7
 CATEGORIES=	audio
@@ -39,6 +39,7 @@ SUBST_SED.oss+=		-e "s,/dev/midi,/dev/rmidi0,g"
 .  endif
 .endif
 
+.include "options.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
