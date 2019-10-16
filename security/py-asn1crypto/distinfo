@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/10/11 16:16:45 adam Exp $
+$NetBSD: distinfo,v 1.6 2019/10/16 14:38:58 adam Exp $
 
-SHA1 (asn1crypto-1.0.1.tar.gz) = 66c033d7c8e2e2cd1f5903543c032eaaa8c496cf
-RMD160 (asn1crypto-1.0.1.tar.gz) = 7a38312c55b3ffe33daee80ca3797a1a4b007243
-SHA512 (asn1crypto-1.0.1.tar.gz) = f7bb10b1fafb9f7fc3cba89a76c09b1641a955f221e4dc7742754ec098e3ddfdb09dc25b0660f5c6caf4f1899a2bfe3ed54f2423c6b38f43150614b3d0268e8c
-Size (asn1crypto-1.0.1.tar.gz) = 115877 bytes
+SHA1 (asn1crypto-1.2.0.tar.gz) = 4728437cb22d427346f874474d4cdf54b78ba00e
+RMD160 (asn1crypto-1.2.0.tar.gz) = ce80628746096e1d62e81cf86e3bcb072634fde8
+SHA512 (asn1crypto-1.2.0.tar.gz) = 0b1a6f35a5e87d08d8d09b5c2e3bd894ac51cb196f28968d620ce21a7f3a9a304862d6cfb9ae0723216c7917803ea542c3382856923e3d302e9da706555209d7
+Size (asn1crypto-1.2.0.tar.gz) = 116457 bytes
