@@ -1,13 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2017/04/04 14:02:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/10/16 16:37:52 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/_pytest_mock_version.py
-${PYSITELIB}/_pytest_mock_version.pyc
-${PYSITELIB}/_pytest_mock_version.pyo
-${PYSITELIB}/pytest_mock.py
-${PYSITELIB}/pytest_mock.pyc
-${PYSITELIB}/pytest_mock.pyo
+${PYSITELIB}/pytest_mock/__init__.py
+${PYSITELIB}/pytest_mock/__init__.pyc
+${PYSITELIB}/pytest_mock/__init__.pyo
+${PYSITELIB}/pytest_mock/_version.py
+${PYSITELIB}/pytest_mock/_version.pyc
+${PYSITELIB}/pytest_mock/_version.pyo
+${PYSITELIB}/pytest_mock/plugin.py
+${PYSITELIB}/pytest_mock/plugin.pyc
+${PYSITELIB}/pytest_mock/plugin.pyo
