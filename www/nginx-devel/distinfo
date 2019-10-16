@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.46 2019/08/15 08:07:46 adam Exp $
+$NetBSD: distinfo,v 1.47 2019/10/16 06:29:08 adam Exp $
 
 SHA1 (array-var-nginx-module-0.05.tar.gz) = c69fac77814947009ab783a471783b3c95a63a26
 RMD160 (array-var-nginx-module-0.05.tar.gz) = 89bd4efc04864e3e90781588a337338951ec8733
@@ -28,10 +28,10 @@ SHA1 (naxsi-0.56.tar.gz) = 42ce137bd3e52a612793bcea43f3ffbb8376910a
 RMD160 (naxsi-0.56.tar.gz) = a5c97194ef3db415a4bab07c44f9e9f2860b9e1a
 SHA512 (naxsi-0.56.tar.gz) = 4660751849bce303af6010b7257532404710106a94817e78d4bc4b566f8019620f24f30207f1d4366b88132a5124e34b164dc67ed80b6710f4bad66115564cbd
 Size (naxsi-0.56.tar.gz) = 192120 bytes
-SHA1 (nginx-1.17.3.tar.gz) = ce306bc116159f2050f442f35da96ccde93c464d
-RMD160 (nginx-1.17.3.tar.gz) = b9c1c38d18bc040ff3daafe82ab1d07716b6078a
-SHA512 (nginx-1.17.3.tar.gz) = b81e75c4c8c03ca2f0b40b9c2a1812cf168cb2319d7246b9b0cce838ef7dba81f3cd57a213ec8d58e457a0fa6b912adff2e5597e5ada7258cfe27f55b05205e2
-Size (nginx-1.17.3.tar.gz) = 1034586 bytes
+SHA1 (nginx-1.17.4.tar.gz) = f33179726d2adbcc7805be14272ba4fd74aef9a0
+RMD160 (nginx-1.17.4.tar.gz) = 935aa22ee4e62b31f5c4731c31363b338bc132dc
+SHA512 (nginx-1.17.4.tar.gz) = fb7275c47d2416b597415f736771f8f4f3cdbba33728d9ca8ddb56b8266076a5ec5e63c735215a8d022f685b67d663fdaaac0c95db465a82f79f01d502feaa82
+Size (nginx-1.17.4.tar.gz) = 1034845 bytes
 SHA1 (nginx-rtmp-module-1.2.1.tar.gz) = 7c6ae1afc117e3bf946b0d81f99d41fe538a7245
 RMD160 (nginx-rtmp-module-1.2.1.tar.gz) = 5fc0b4ac0b2c0a6d70957a5256754db8a9e934cf
 SHA512 (nginx-rtmp-module-1.2.1.tar.gz) = 4a0af5e9afa4deb0b53de8de7ddb2cfa6430d372e1ef9e421f01b509548bd134d427345442ac1ce667338cc2a1484dc2ab732e316e878ac7d3537dc527d5f922
