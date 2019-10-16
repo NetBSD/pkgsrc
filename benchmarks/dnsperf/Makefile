@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2018/09/25 18:12:09 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2019/10/16 09:37:27 maya Exp $
 
 DISTNAME=	dnsperf-src-2.1.0.0-1
 PKGNAME=	dnsperf-2.1.0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	benchmarks net
 MASTER_SITES=	ftp://ftp.nominum.com/pub/nominum/${PKGBASE}/${PKGVERSION_NOREV}/
 
@@ -24,7 +24,7 @@ REPLACE_SH+=	resperf-report
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/GeoIP/buildlink3.mk"
-.include "../../net/bind912/buildlink3.mk"
+.include "../../net/bind914/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
