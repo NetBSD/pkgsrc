@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2013/11/30 20:31:18 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/10/16 10:05:28 maya Exp $
 bin/dnsperf
 bin/resperf
 bin/resperf-report
 man/man1/dnsperf.1
 man/man1/resperf.1
+share/doc/dnsperf/CHANGES
+share/doc/dnsperf/LICENSE
+share/doc/dnsperf/README.md
