@@ -1,8 +1,8 @@
-$NetBSD: patch-arch_arm_dts_sun8i-h3-nanopi-r1.dts,v 1.1 2019/10/08 20:48:49 bad Exp $
+$NetBSD: patch-arch_arm_dts_sun8i-h3-nanopi-r1.dts,v 1.2 2019/10/16 23:36:32 bad Exp $
 
 --- arch/arm/dts/sun8i-h3-nanopi-r1.dts.orig	2019-10-05 00:04:53.000000000 +0000
 +++ arch/arm/dts/sun8i-h3-nanopi-r1.dts
-@@ -0,0 +1,102 @@
+@@ -0,0 +1,106 @@
 +/*
 + * Copyright (C) 2019 Igor Pecovnik <igor@armbian.com>
 + *
@@ -50,6 +50,10 @@ $NetBSD: patch-arch_arm_dts_sun8i-h3-nanopi-r1.dts,v 1.1 2019/10/08 20:48:49 bad
 +/ {
 +	model = "FriendlyARM NanoPi R1";
 +	compatible = "friendlyarm,nanopi-neo", "allwinner,sun8i-h3";
++
++	aliases {
++		ethernet0 = &emac;
++	};
 +
 +	reg_gmac_3v3: gmac-3v3 {
 +		compatible = "regulator-fixed";
