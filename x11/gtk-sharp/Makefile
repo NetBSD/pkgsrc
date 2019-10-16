@@ -1,24 +1,23 @@
-# $NetBSD: Makefile,v 1.75 2019/09/11 11:53:40 nia Exp $
-#
+# $NetBSD: Makefile,v 1.76 2019/10/16 13:44:20 nia Exp $
 
-DISTNAME=		gtk-sharp-2.12.26
-PKGREVISION=		22
-CATEGORIES=		x11
-MASTER_SITES=		https://download.mono-project.com/sources/gtk-sharp212/
+DISTNAME=	gtk-sharp-2.12.45
+CATEGORIES=	x11
+MASTER_SITES=	https://download.mono-project.com/sources/gtk-sharp212/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://www.mono-project.com/GtkSharp
-COMMENT=		C\# bindings for GTK
-LICENSE=		gnu-lgpl-v2.1
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://www.mono-project.com/GtkSharp
+COMMENT=	C\# bindings for GTK
+LICENSE=	gnu-lgpl-v2.1
 
-PREV_PKGPATH=		x11/gtk2-sharp
+PREV_PKGPATH=	x11/gtk2-sharp
+
+USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config gmake perl:run
+GNU_CONFIGURE=	yes
+
+MAKE_JOBS_SAFE=	no
 
 USE_PKGLOCALEDIR=	yes
-USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config gmake perl:run
-GNU_CONFIGURE=		yes
-
-MAKE_JOBS_SAFE=		no
 
 REPLACE_PERL+=		parser/*.pl
 PKGCONFIG_OVERRIDE+=	gtk/gtk-sharp-2.0.pc.in
