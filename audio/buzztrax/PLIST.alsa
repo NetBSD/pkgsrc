@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.alsa,v 1.1 2019/10/16 12:47:20 nia Exp $
+include/libbuzztrax-ic/aseq-device.h
+include/libbuzztrax-ic/aseq-discoverer.h
