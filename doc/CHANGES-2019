@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4358 2019/10/16 07:24:32 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4359 2019/10/16 08:12:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7003,3 +7003,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/python37 to 3.7.5 [adam 2019-10-16]
 	Updated devel/py-setuptools to 41.4.0 [adam 2019-10-16]
 	Updated textproc/py-snowballstemmer to 2.0.0 [adam 2019-10-16]
+	Updated databases/prometheus to 2.13.0 [adam 2019-10-16]
+	Updated devel/py-cffi to 1.13.0 [adam 2019-10-16]
