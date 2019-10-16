@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2019/08/21 12:39:39 adam Exp $
+# $NetBSD: Makefile,v 1.2 2019/10/16 14:43:24 adam Exp $
 
-DISTNAME=	Pebble-4.3.10
+DISTNAME=	Pebble-4.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pebble/}
