@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4370 2019/10/16 12:02:57 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4371 2019/10/16 12:13:32 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7019,3 +7019,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed audio/bsl successor audio/buzztrax [nia 2019-10-16]
 	Updated games/devilutionx to 0.5.0 [nia 2019-10-16]
 	Updated net/dnscrypt-proxy2 to 2.0.28 [nia 2019-10-16]
+	Updated www/gitea to 1.9.4 [nia 2019-10-16]
