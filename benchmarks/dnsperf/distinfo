@@ -1,11 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/10/27 12:04:33 tron Exp $
+$NetBSD: distinfo,v 1.5 2019/10/16 10:05:28 maya Exp $
 
-SHA1 (dnsperf-src-2.1.0.0-1.tar.gz) = 1a5d32feb41dd174f82f57ba62389d3480619c91
-RMD160 (dnsperf-src-2.1.0.0-1.tar.gz) = 0392903f300750ca53785f342a547eee5eb9db6d
-SHA512 (dnsperf-src-2.1.0.0-1.tar.gz) = 5571bd0855aba4affcdf81724919e60ab6762d646f8d9a6abf177a2a588675c636842f2fb708bf648004b9c411e9c9b68789f7c6bbbd87afc24c8299a21aa6c9
-Size (dnsperf-src-2.1.0.0-1.tar.gz) = 561502 bytes
-SHA1 (patch-Makefile.in) = 9f5377a75d9674a3aeb12f933f0a552564534d91
-SHA1 (patch-datafile.h) = d05f41b5d02048ffe5ca7261cd0164202fb9821a
-SHA1 (patch-dns.h) = 1c78fc5dd05c4eb32563c2cfacdabadfa9937c1b
-SHA1 (patch-os.h) = 53b573fddee3495a8b8e73088b1a4742a6b1b9ae
-SHA1 (patch-util.h) = 94893a9d867aabd43650e66ffbbb0995ceb9becd
+SHA1 (dnsperf-2.3.2.tar.gz) = e533ac288de7e52d7b09b4e2fc059b380b1a9164
+RMD160 (dnsperf-2.3.2.tar.gz) = 3b7ebde9379fcdb268765ff934879c913c90ac5b
+SHA512 (dnsperf-2.3.2.tar.gz) = b4fbfa40811174a0613ba333a57278262af2c424118c55ad3f0fe7bf4df07ae4ca4c5fb528ff659d98db61393399308b652bc9887c48ed24427c70343307f06d
+Size (dnsperf-2.3.2.tar.gz) = 402223 bytes
