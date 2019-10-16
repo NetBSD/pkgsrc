@@ -1,1 +1,1 @@
-bin/glances @PREFIX@/bin/glances@PYVERSSUFFIX@
+bin/glances @PREFIX@/bin/glances-@PYVERSSUFFIX@
