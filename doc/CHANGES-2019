@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4382 2019/10/16 21:25:20 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4383 2019/10/16 21:30:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7036,3 +7036,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/sudo to 1.8.28nb1 [maya 2019-10-16]
 	Updated net/bind914 to 9.14.7 [maya 2019-10-16]
 	Removed games/pytraffic [wiz 2019-10-16]
+	Removed devel/psvn [wiz 2019-10-16]
