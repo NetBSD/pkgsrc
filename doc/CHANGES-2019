@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4362 2019/10/16 10:06:25 maya Exp $
+$NetBSD: CHANGES-2019,v 1.4363 2019/10/16 10:14:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7009,3 +7009,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated benchmarks/dnsperf to 2.1.0.0nb2 [maya 2019-10-16]
 	Updated security/zkt to 1.1.2nb2 [maya 2019-10-16]
 	Updated benchmarks/dnsperf to 2.3.2 [maya 2019-10-16]
+	Updated devel/py-pathspec to 0.6.0 [adam 2019-10-16]
+	Updated www/py-paste to 3.2.2 [adam 2019-10-16]
