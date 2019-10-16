@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/10 20:16:44 wiz Exp $
-lib/buzztard-songio/libbtbsl.la
-share/applications/buzztard-songio-buzz.desktop
-share/locale/de/LC_MESSAGES/bsl-0.5.mo
-share/mime/packages/buzztard-songio-buzz.xml
