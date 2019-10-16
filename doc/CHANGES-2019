@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4356 2019/10/15 18:12:53 rhialto Exp $
+$NetBSD: CHANGES-2019,v 1.4357 2019/10/16 07:04:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6999,3 +6999,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/firefox to 69.0.3 [ryoon 2019-10-15]
 	Updated www/firefox-l10n to 69.0.3 [ryoon 2019-10-15]
 	Updated news/pan to 0.146 [rhialto 2019-10-15]
+	Updated www/nginx-devel to 1.17.4 [adam 2019-10-16]
+	Updated lang/python37 to 3.7.5 [adam 2019-10-16]
