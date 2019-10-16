@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2019/06/16 19:25:10 adam Exp $
+# $NetBSD: Makefile,v 1.61 2019/10/16 09:37:27 maya Exp $
 
 DISTNAME=	bulk-medium-20190518
 CATEGORIES=	meta-pkgs
@@ -95,7 +95,6 @@ BUILD_DEPENDS+=	mutt-[0-9]*:../../mail/mutt
 BUILD_DEPENDS+=	re-alpine-[0-9]*:../../mail/re-alpine
 BUILD_DEPENDS+=	spamassassin-[0-9]*:../../mail/spamassassin
 BUILD_DEPENDS+=	bind>=9.11<9.12:../../net/bind911
-BUILD_DEPENDS+=	bind>=9.12<9.13:../../net/bind912
 BUILD_DEPENDS+=	bind>=9.14<9.15:../../net/bind914
 BUILD_DEPENDS+=	clive-[0-9]*:../../net/clive
 BUILD_DEPENDS+=	nmap-[0-9]*:../../net/nmap
