@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/10/16 11:19:30 nia Exp $
+# $NetBSD: Makefile,v 1.3 2019/10/16 12:47:20 nia Exp $
 
 DISTNAME=	buzztrax-0.10.2
 CATEGORIES=	audio
@@ -25,10 +25,13 @@ USE_TOOLS+=	gmake
 # GLib-GIO-ERROR **: Settings schema 'org.buzztrax' is not installed
 MAKE_ENV+=	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
 
+PLIST_SRC+=	PLIST
+
 USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+=	--disable-schemas-compile
 
+.include "options.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../graphics/clutter-gtk/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
