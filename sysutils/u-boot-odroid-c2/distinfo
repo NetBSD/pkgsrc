@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.4 2019/10/10 04:56:05 wiz Exp $
+$NetBSD: distinfo,v 1.5 2019/10/16 23:41:33 bad Exp $
 
-SHA1 (odroidc2-v2015.01-aml_encrypt_gxb) = 95c9565c64088ad56a10bac79b173c41a574e48e
-RMD160 (odroidc2-v2015.01-aml_encrypt_gxb) = 5cb9ffcb6e8486de42796a448c2e42ed86c5c1bc
-SHA512 (odroidc2-v2015.01-aml_encrypt_gxb) = 195957f44d93f523f9492b4b305b20a18384995001391466ccbcd152147fae132e612e09dd79987fe745f835ef4324ae2f5bc3c3c1f0824acdaf651bcf16c10b
-Size (odroidc2-v2015.01-aml_encrypt_gxb) = 1011765 bytes
 SHA1 (odroidc2-v2015.01-bl1.bin.hardkernel) = 40d92af372797dc3e24de62feab117206dae6718
 RMD160 (odroidc2-v2015.01-bl1.bin.hardkernel) = 356c7ec0fada96ff8371c5286990fd31212174f9
 SHA512 (odroidc2-v2015.01-bl1.bin.hardkernel) = 2fae07297d62ff211b5d8645b3b41e76b045edaeb6997d972736d7544276dfd70d220a836d6399c47b233eb266e0c3a4f4972b2879fec863fbbfb47f4510a84f
@@ -24,10 +20,6 @@ SHA1 (odroidc2-v2015.01-bl31.bin) = 3b8fa827eafe109abb94de3a2eb4a83ceb7c3f85
 RMD160 (odroidc2-v2015.01-bl31.bin) = 1f19dba80270fac22acc07d2f8c60d21000e3b4e
 SHA512 (odroidc2-v2015.01-bl31.bin) = 8df2ce62ce2af72cfc25a164481864aba0e0791014f80d9ce262cb248b23c1c5ebbc20842b835b20b9a4ed388ee5b7cffd69d483c8921446a6ba118ed1878f4f
 Size (odroidc2-v2015.01-bl31.bin) = 69840 bytes
-SHA1 (odroidc2-v2015.01-fip_create) = b6d2edd8a72fa1822f6432982d04bbee1798ad4b
-RMD160 (odroidc2-v2015.01-fip_create) = ade537dd04484331ff050d1d41f562f700c9808e
-SHA512 (odroidc2-v2015.01-fip_create) = 1d8a4dd5e23b191b2f2bc1737936a4549251c105eee47abd74db73d6695c912ecbd167489eb2b3ede323d0942b30a4eb75b8e673a7502472ece8e3777be3a9a7
-Size (odroidc2-v2015.01-fip_create) = 14176 bytes
 SHA1 (u-boot-2018.11.tar.bz2) = e58e86c633ad3e2613196e0c0b0a7760ae5966d6
 RMD160 (u-boot-2018.11.tar.bz2) = f63c67750951d0e2883935a5d4cc3252f51a5453
 SHA512 (u-boot-2018.11.tar.bz2) = 1ea0bbb5f5e6d4c60b3a6bd345d1fa6e9da025daf36f47e8392bab34cb432c2e3633d903efb260f71fff87dffd6f2bf09ac900e96b3d4247073958d83b89ceff
@@ -38,7 +30,7 @@ SHA1 (patch-arch_arm_dts_Makefile) = a64a01255af3d2a744fe7b923c66fd8ce0f9d489
 SHA1 (patch-arch_arm_dts_sun8i-h2-plus-bananapi-m2-zero.dts) = aaa530a5f520eea0cb5dcece0b730e23db59eb40
 SHA1 (patch-arch_arm_dts_sun8i-h2-plus-bananapi-p2-zero.dts) = 8c78d0e0877aa9784fa209af2e16e80cb1110364
 SHA1 (patch-arch_arm_dts_sun8i-h3-nanopi-duo2.dts) = ec4927bb5f024f9aca6f71890c4bc14dc53e8ba7
-SHA1 (patch-arch_arm_dts_sun8i-h3-nanopi-r1.dts) = 6f3ac4f787b503beecbd5c63c40dce355e0a7ebe
+SHA1 (patch-arch_arm_dts_sun8i-h3-nanopi-r1.dts) = a192c05c31038cf11354dd4a32d94b5b62945661
 SHA1 (patch-configs_A20-OLinuXino-Lime2-eMMC_defconfig) = 425ae3a82ce9006dbd734f41f7d49bb3587b1493
 SHA1 (patch-configs_A20-OLinuXino-Lime2_defconfig) = 9eecb0a44ec9ddda2425b042c219f59ba546a494
 SHA1 (patch-configs_bananapi_m2_zero_defconfig) = 5e4baef63f0e51cb8c94a1dc0c0e50ecb016807d
