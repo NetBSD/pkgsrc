@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4363 2019/10/16 10:14:53 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4364 2019/10/16 10:51:58 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7011,3 +7011,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated benchmarks/dnsperf to 2.3.2 [maya 2019-10-16]
 	Updated devel/py-pathspec to 0.6.0 [adam 2019-10-16]
 	Updated www/py-paste to 3.2.2 [adam 2019-10-16]
+	Updated lang/py37-html-docs to 3.7.5 [leot 2019-10-16]
