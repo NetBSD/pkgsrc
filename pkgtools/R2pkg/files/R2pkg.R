@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg.R,v 1.9 2019/10/17 01:21:12 rillig Exp $
+# $NetBSD: R2pkg.R,v 1.10 2019/10/17 17:14:34 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -49,19 +49,12 @@ level.message <- function(...)
 level.warning <- function(...)
   level.message('WARNING: ', ...)
 
-R_version <- function()
-{
-  info <- R.Version()
-  version <- paste0(info[['major']],'.',info[['minor']])
-  version
-}
-
 trim.space <- function(s) gsub('[[:space:]]','',s)
 trim.blank <- function(s) gsub('[[:blank:]]','',s)
 one.space <- function(s) gsub('[[:blank:]]+',' ',s)
 one.line <- function(s) gsub('\n',' ',s)
 pkg.vers <- function(s) gsub('_','.',s)
-field <- function(key,value) paste(key,'=\t',value,sep='')
+varassign <- function(varname, value) paste0(varname, '=\t', value)
 
 # The list of "recommended packages which are to be included in all
 # binary distributions of R." (R FAQ 5.1.2 2018-10-18)
@@ -96,7 +89,7 @@ base.packages.other <- c(
   'stats',
   'tools',
   'utils')
-base.packages <- c('R',base.packages.FAQ.5.1.2,base.packages.other)
+base.packages <- c('R', base.packages.FAQ.5.1.2, base.packages.other)
 
 licenses <- list()
 licenses[['ACM']]                                    <- 'acm-license'
@@ -160,12 +153,8 @@ paste2 <- function(s1,s2)
   if (!is.na(s1) && !is.na(s2)) return (paste(s1,s2))
 }
 
-end.paragraph <- function(l,l1=l,l2=list())
-{
-  if (length(l1) > 0 || length(l2) > 0)
-    l <- append(l,'')
-  l
-}
+end.paragraph <- function(lines)
+  if (length(lines) > 0) append(lines, '') else lines
 
 as.sorted.list <- function(df)
 {
@@ -392,34 +381,23 @@ weakly.equals <- function(s1,s2)
   result
 }
 
-new.field.if.different <- function(filename,s)
+new.field.if.different <- function(filename, s)
 {
-  field <- field(filename,one.line(s))
+  field <- varassign(filename, one.line(s))
   field.list <- read.file.as.list(filename)
   if (length(field.list) == 1)
     {
       f <- field.list[[1]]
-      if (case.insensitive.equals(f,field))
+      if (case.insensitive.equals(f, field))
         field <- f
     }
   field
 }
 
-todo.license <- function(s)
-{
-  if (is.null(licenses[[s]]))
-    todo <- '# TODO: LICENSE'
-  else
-    todo <- 'LICENSE'
-  todo
-}
-
 pkgsrc.license <- function(s)
 {
   license <- licenses[[s]]
-  if (is.null(license))
-    license <- s
-  license
+  if (is.null(license)) license <- s else license
 }
 
 package <- function(s) one.line(s)
@@ -444,7 +422,8 @@ maintainer <- function(email)
   MAINTAINER
 }
 
-find.Rcpp <- function(imps, deps) grepl('Rcpp', paste(imps, deps))
+find.Rcpp <- function(imps, deps)
+  any(grepl('Rcpp', paste(imps, deps)))
 
 buildlink3.mk <- function(imps,deps)
 {
@@ -467,30 +446,17 @@ buildlink3.mk <- function(imps,deps)
   BUILDLINK3.MK
 }
 
-makefile.field <- function(key,value)
+varassigns <- function(key, values)
 {
-  # message('===> makefile.field(',key,',',value,'):')
-  field <- paste0(key,'=\t',value)
-  # print(field)
-  field
-}
-
-makefile.fields <- function(key,values)
-{
-  # message('===> makefile.fields():')
   fields <- list()
   for (l in values)
     {
       value <- unlist(l)
-      # message('===> value=',value,' ',length(value),' ',value == '')
-      # print(value)
       if (value != '')
-        fields <- append(fields,makefile.field(key,list(value)))
+        fields <- append(fields, varassign(key, list(value)))
       else
-        fields <- append(fields,list(''))
-      # print(fields)
+        fields <- append(fields, list(''))
     }
-  # print(fields)
   fields
 }
 
@@ -720,18 +686,11 @@ make.depends <- function(imps,deps)
   result
 }
 
-use.languages <- function(s1,s2)
+use.languages <- function(imps, deps)
 {
-#  message('===> use.languages(',s1,',',s2,'):')
-#  USE_LANGUAGES <- read.file.as.values('USE_LANGUAGES')
-#  if (length(USE_LANGUAGES) == 0)
-#    {
-#      if (find.Rcpp(s1,s2))
-#        USE_LANGUAGES <- append(USE_LANGUAGES,list('USE_LANGUAGES+=\tc c++'))
-#    }
   USE_LANGUAGES <- list()
-  if (find.Rcpp(s1,s2))
-    USE_LANGUAGES <- append(USE_LANGUAGES,list('c c++'))
+  if (find.Rcpp(imps, deps))
+    USE_LANGUAGES <- append(USE_LANGUAGES, list('c c++'))
   if (length(USE_LANGUAGES) == 0)
     USE_LANGUAGES <- '# none'
   USE_LANGUAGES <- end.paragraph(USE_LANGUAGES)
@@ -747,13 +706,13 @@ copy.description <- function(connection)
 write.Makefile <- function(metadata)
 {
   RCSID             <- paste0('# $','NetBSD$')
-  CATEGORIES        <- makefile.field('CATEGORIES',categories())
-  MAINTAINER        <- makefile.field('MAINTAINER',maintainer(arg.maintainer_email))
-  COMMENT           <- makefile.field('COMMENT',comment(metadata$Title))
-  LICENSE           <- makefile.field('LICENSE',license(metadata$License))
-  R_PKGNAME         <- makefile.field('R_PKGNAME',package(metadata$Package))
-  R_PKGVER          <- makefile.field('R_PKGVER',version(metadata$Version))
-  USE_LANGUAGES     <- makefile.fields('USE_LANGUAGES',use.languages(metadata$Imports,metadata$Depends))
+  CATEGORIES        <- varassign('CATEGORIES',categories())
+  MAINTAINER        <- varassign('MAINTAINER',maintainer(arg.maintainer_email))
+  COMMENT           <- varassign('COMMENT',comment(metadata$Title))
+  LICENSE           <- varassign('LICENSE',license(metadata$License))
+  R_PKGNAME         <- varassign('R_PKGNAME',package(metadata$Package))
+  R_PKGVER          <- varassign('R_PKGVER',version(metadata$Version))
+  USE_LANGUAGES     <- varassigns('USE_LANGUAGES',use.languages(metadata$Imports,metadata$Depends))
   DEPENDENCIES      <- make.depends(metadata$Imports,metadata$Depends)
   DEPENDS           <- DEPENDENCIES[1]
   BUILDLINK3.MK     <- DEPENDENCIES[2]
@@ -1044,11 +1003,11 @@ reassign.order <- function(df)
 
 conflicts <- function(pkg)
 {
-  conflict <- paste0('R>=',R_version())
+  conflict <- sprintf('R>=%s.%s', R.version$major, R.version$minor)
   conflicts <- list()
   if (pkg %in% base.packages)
     {
-      conflicts <- append(conflicts,makefile.field('CONFLICTS',conflict))
+      conflicts <- append(conflicts, varassign('CONFLICTS', conflict))
       conflicts <- end.paragraph(conflicts)
     }
   conflicts
