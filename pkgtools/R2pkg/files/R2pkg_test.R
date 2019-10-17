@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg_test.R,v 1.3 2019/10/17 17:14:34 rillig Exp $
+# $NetBSD: R2pkg_test.R,v 1.4 2019/10/17 17:50:54 rillig Exp $
 #
 # Copyright (c) 2019
 #	Roland Illig.  All rights reserved.
@@ -73,17 +73,35 @@ test_that('level.warning', {
 # test_that('varassign', {
 # })
 
-# test_that('adjacent.duplicates', {
-# })
+test_that('adjacent.duplicates', {
+    expect_equal(
+    adjacent.duplicates(c(1, 2, 2, 2, 3, 3, 4)),
+    c(FALSE, FALSE, TRUE, TRUE, FALSE, TRUE, FALSE)
+    )
+})
 
-# test_that('paste2', {
-# })
+test_that('paste2', {
+    expect_equal(paste2(NA, NA), '')
+    expect_equal(paste2('', NA), '')
+    expect_equal(paste2(NA, ''), '')
+    expect_equal(paste2('', ''), ' ')
+    expect_equal(paste2('one', 'two'), 'one two')
+})
 
-# test_that('end.paragraph', {
-# })
+test_that('end.paragraph', {
+    expect_equal(end.paragraph(list()), list())
+    expect_equal(end.paragraph(list('line')), list('line', ''))
+})
 
-# test_that('as.sorted.list', {
-# })
+test_that('as.sorted.list', {
+    expect_equal(as.sorted.list(data.frame()), list())
+
+    expect_equal(
+    as.sorted.list(data.frame(
+    varnames = c('A', 'B', 'B', 'B', 'A'),
+    values = c('1', '3', '2', '1', '1'))),
+    list('1', '1', '2', '3'))
+})
 
 test_that('read.file.as.dataframe', {
     content <- textConnection('VAR=value\nVAR2=value2\n')
@@ -268,9 +286,11 @@ test_that('make.imports', {
 })
 
 test_that('make.dependency', {
-    imports <- make.dependency('first(>=1.0)')
+    expect_equal(make.dependency('pkgname'), c('pkgname'))
+    expect_equal(make.dependency('pkgname(>=1.0)'), c('pkgname', '>=1.0'))
 
-    expect_equal(imports, c('first', '>=1.0'))
+    # undefined behavior
+    expect_equal(make.dependency('pkgname (>= 1.0)'), c('pkgname ', '>= 1.0'))
 })
 
 # test_that('depends', {
@@ -344,8 +364,18 @@ test_that('buildlink3.file with too high version number', {
 # test_that('make.depends', {
 # })
 
-# test_that('use.languages', {
-# })
+test_that('use.languages', {
+    languages <- use.languages(list(), list())
+
+    expect_equal(languages, c('# none', ''))
+})
+
+test_that('use.languages with Rcpp as dependency', {
+    languages <- use.languages(list('Rcpp(>=0)'), list())
+    expected <- list('c cpp', '')
+
+    #expect_equal(languages, expected)
+})
 
 # test_that('copy.description', {
 # })
