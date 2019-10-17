@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg.R,v 1.8 2019/10/15 18:44:21 rillig Exp $
+# $NetBSD: R2pkg.R,v 1.9 2019/10/17 01:21:12 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -100,47 +100,47 @@ base.packages <- c('R',base.packages.FAQ.5.1.2,base.packages.other)
 
 licenses <- list()
 licenses[['ACM']]                                    <- 'acm-license'
-licenses[['ACM | file LICENSE']]                     <- 'acm-license	# OR file LICENSE'
+licenses[['ACM | file LICENSE']]                     <- 'acm-license\t# OR file LICENSE'
 licenses[['APACHE']]                                 <- 'apache-1.1 OR apache-2.0'
 licenses[['Apache License 2.0']]                     <- 'apache-2.0'
 licenses[['Apache License (== 2.0)']]                <- 'apache-2.0'
-licenses[['Apache License (== 2.0) | file LICENSE']] <- 'apache-2.0	# OR file LICENSE'
+licenses[['Apache License (== 2.0) | file LICENSE']] <- 'apache-2.0\t# OR file LICENSE'
 licenses[['ARTISTIC']]                               <- 'artistic OR artistic-2.0'
 licenses[['Artistic-2.0']]                           <- 'artistic-2.0'
 licenses[['BSD']]                                    <- '2-clause-bsd OR modified-bsd OR original-bsd'
 licenses[['BSD-2']]                                  <- '2-clause-bsd'
-licenses[['BSD_2_clause + file LICENSE']]            <- '2-clause-bsd	# + file LICENSE'
+licenses[['BSD_2_clause + file LICENSE']]            <- '2-clause-bsd\t# + file LICENSE'
 licenses[['BSD 3 clause']]                           <- 'modified-bsd'
-licenses[['BSD 3 clause + file LICENSE']]            <- 'modified-bsd	# + file LICENSE'
-licenses[['BSD_3_clause + file LICENSE']]            <- 'modified-bsd	# + file LICENSE'
+licenses[['BSD 3 clause + file LICENSE']]            <- 'modified-bsd\t# + file LICENSE'
+licenses[['BSD_3_clause + file LICENSE']]            <- 'modified-bsd\t# + file LICENSE'
 licenses[['BSL-1.0']]                                <- 'boost-license'
-licenses[['CC0']]				     <- 'cc0-1.0-universal'
+licenses[['CC0']]                                    <- 'cc0-1.0-universal'
 licenses[['GPL']]                                    <- 'gnu-gpl-v1 OR gnu-gpl-v2 OR gnu-gpl-v3'
 licenses[['GPL-1']]                                  <- 'gnu-gpl-v1'
 licenses[['GPL-2']]                                  <- 'gnu-gpl-v2'
-licenses[['GPL-2 | file LICENSE']]                   <- 'gnu-gpl-v2	# OR file LICENSE'
+licenses[['GPL-2 | file LICENSE']]                   <- 'gnu-gpl-v2\t# OR file LICENSE'
 licenses[['GPL-3']]                                  <- 'gnu-gpl-v3'
 licenses[['GPL-2 | GPL-3']]                          <- 'gnu-gpl-v2 OR gnu-gpl-v3'
 licenses[['GPL (>= 2)']]                             <- 'gnu-gpl-v2 OR gnu-gpl-v3'
 licenses[['GPL (>= 2.0)']]                           <- 'gnu-gpl-v2 OR gnu-gpl-v3'
-licenses[['GPL (>= 2) | file LICENSE']]              <- 'gnu-gpl-v2 OR gnu-gpl-v3	# OR file LICENSE'
+licenses[['GPL (>= 2) | file LICENSE']]              <- 'gnu-gpl-v2 OR gnu-gpl-v3\t# OR file LICENSE'
 licenses[['GPL (>= 3)']]                             <- 'gnu-gpl-v3'
 licenses[['LGPL']]                                   <- 'gnu-lgpl-v2 OR gnu-lgpl-v2.1 OR gnu-lgpl-v3'
 licenses[['LGPL-2']]                                 <- 'gnu-lgpl-v2'
 licenses[['LGPL-2.1']]                               <- 'gnu-lgpl-v2.1'
 licenses[['LGPL-3']]                                 <- 'gnu-lgpl-v3'
-licenses[['LGPL-3 + file LICENSE']]                  <- 'gnu-lgpl-v3	# + file LICENSE'
+licenses[['LGPL-3 + file LICENSE']]                  <- 'gnu-lgpl-v3\t# + file LICENSE'
 licenses[['LGPL-2 | LGPL-3']]                        <- 'gnu-lgpl-v2 OR gnu-lgpl-v3'
 licenses[['LGPL (>= 2)']]                            <- 'gnu-lgpl-v2 OR gnu-lgpl-v2.1 OR gnu-lgpl-v3'
 licenses[['LUCENT']]                                 <- 'lucent'
 licenses[['Lucent Public License']]                  <- 'lucent'
 licenses[['MIT']]                                    <- 'mit'
-licenses[['MIT + file LICENSE']]                     <- 'mit	# + file LICENSE'
-licenses[['MIT + file LICENSE | Unlimited']]         <- 'mit	# + file LICENSE OR unlimited'
+licenses[['MIT + file LICENSE']]                     <- 'mit\t# + file LICENSE'
+licenses[['MIT + file LICENSE | Unlimited']]         <- 'mit\t# + file LICENSE OR unlimited'
 licenses[['MPL-1.0']]                                <- 'mpl-1.0'
 licenses[['MPL-1.1']]                                <- 'mpl-1.1'
 licenses[['MPL-2.0']]                                <- 'mpl-2.0'
-licenses[['MPL-2.0 | file LICENSE']]                 <- 'mpl-2.0	# OR file LICENSE'
+licenses[['MPL-2.0 | file LICENSE']]                 <- 'mpl-2.0\t# OR file LICENSE'
 licenses[['POSTGRESQL']]                             <- 'postgresql-license'
 
 adjacent.duplicates <- function(x)
@@ -254,19 +254,19 @@ fix.continued.lines <- function(df,line='line')
       continued_key_value <- df$key_value & continued
       if (FALSE %in% df[continued,'key_value'])
         {
-	  level.warning('unhandled continued line(s)')
-	}
+          level.warning('unhandled continued line(s)')
+        }
       for (i in 1:(length(continued_key_value)-1))
         {
-	  next_line <- i + 1
-	  if (continued_key_value[i])
-	    {
-	      df[i,line] <- sub('[[:blank:]]*\\\\$','',df[i,line])
-	      df$key_value[next_line] <- TRUE
-	      df$key[next_line] <- df$key[i]
-	      df[next_line,line] <- paste0(df$key[next_line],'+=',df[next_line,line])
-	    }
-	}
+          next_line <- i + 1
+          if (continued_key_value[i])
+            {
+              df[i,line] <- sub('[[:blank:]]*\\\\$','',df[i,line])
+              df$key_value[next_line] <- TRUE
+              df$key[next_line] <- df$key[i]
+              df[next_line,line] <- paste0(df$key[next_line],'+=',df[next_line,line])
+            }
+        }
     }
   df
 }
@@ -432,7 +432,7 @@ license <- function(s)
   license <- pkgsrc.license(s)
   old.license <- read.file.as.value('LICENSE')
   if (old.license != '' && old.license != license)
-    license <- paste0(license,'	# [R2pkg] previously: ',old.license)
+    license <- paste0(license,'\t# [R2pkg] previously: ',old.license)
   license
 }
 
@@ -470,7 +470,7 @@ buildlink3.mk <- function(imps,deps)
 makefile.field <- function(key,value)
 {
   # message('===> makefile.field(',key,',',value,'):')
-  field <- paste0(key,'=	',value)
+  field <- paste0(key,'=\t',value)
   # print(field)
   field
 }
@@ -591,7 +591,7 @@ depends.line <- function(dependency,index=1)
 depends.line.2 <- function(dependency)
 {
   result <- paste0('DEPENDS+=\tR-',depends,depends.vers.2(dependency),':../../???/R-',depends)
-  result <- paste0(result,'	# XXX - found')
+  result <- paste0(result,'\t# XXX - found')
   for (pkg in depends.pkg(dependency))
     result <- paste(result,pkg)
   result
@@ -654,59 +654,59 @@ make.depends <- function(imps,deps)
       for (i in 1:length(imports))
         {
           dependency <- make.dependency(imports[i])
-	  # XXX message('[ ',${LEVEL},' ] ===> ',i,' / ',length(imports),': ',depends(dependency))
+          # XXX message('[ ',${LEVEL},' ] ===> ',i,' / ',length(imports),': ',depends(dependency))
           if (length(depends.pkg(dependency)) == 0) # a dependency cannot be found
             {
-	      level.message('0 dependencies match ',dependency)
+              level.message('0 dependencies match ',dependency)
               if (arg.recursive)
-	        {
+                {
                   dir.create(path=dependency.dir(dependency),recursive=TRUE)
- 		  update.dependency(dependency)
- 		}
+          update.dependency(dependency)
+        }
               else
                 level.warning('dependency needed for ',depends(dependency))
             }
-	  else if (length(depends.pkg(dependency)) == 1) # a unique dependency found
+          else if (length(depends.pkg(dependency)) == 1) # a unique dependency found
             {
-	      level.message('1 dependency matches ',dependency,': ',depends.pkg(dependency))
-	      message.wip.dependency(dependency)
+              level.message('1 dependency matches ',dependency,': ',depends.pkg(dependency))
+              message.wip.dependency(dependency)
               if (arg.recursive && arg.update)
-	        update.dependency(dependency)
-	      if (file.exists(buildlink3.file(dependency)))
+                update.dependency(dependency)
+              if (file.exists(buildlink3.file(dependency)))
                 BUILDLINK3.MK <- rbind(BUILDLINK3.MK,data.frame(key=depends.dir(dependency),value=buildlink3.line(dependency)))
-	      else
+              else
                 DEPENDS <- rbind(DEPENDS,data.frame(key=depends.dir(dependency),value=depends.line(dependency)))
             }
-	  else if (length(depends.pkg(dependency)) == 2) # two dependencies found
-	    {
-	      d <- depends.pkg(dependency)
-	      index <- grep('/wip/',d,invert=TRUE)
-	      level.message('2 dependencies match ',dependency,':',paste(' ',depends.pkg(dependency)))
-	      # message('===> depends(dependency): ',depends(dependency))
-	      # message('===> depends.pkg(dependency):',paste(' ',d))
-	      # message('===> index: ',index)
-	      # message('===> buildlink3.line(): ',buildlink3.line(dependency,index))
-	      if (length(index) == 1) # a unique, non-wip, dependency found
-	        {
-		  level.message('choosing unique non-wip dependency for ',dependency,': ',depends.pkg(dependency)[index])
-		  if (arg.recursive && arg.update)
-	            update.dependency(dependency,index)
-	      	  if (file.exists(buildlink3.file(dependency,index)))
-                    BUILDLINK3.MK <- rbind(BUILDLINK3.MK,data.frame(key=depends.dir(dependency,index),value=buildlink3.line(dependency,index)))
-		  else
-                    DEPENDS <- rbind(DEPENDS,data.frame(key=depends.dir(dependency,index),value=depends.line(dependency,index)))
-		}
-	      else
-	        {
-		  level.message('no unique non-wip dependency matches')
-		  message(message.too.many.dependencies(dependency))
-              	  DEPENDS <- rbind(DEPENDS,data.frame(key='???',value=depends.line.2(dependency)))
-		}
-	    }
-          else			# more than 2 dependencies found
+          else if (length(depends.pkg(dependency)) == 2) # two dependencies found
             {
-	      level.message(length(depends.pkg(dependency)),' dependencies match ',dependency,':',paste(' ',depends.pkg(dependency)))
- 	      message(message.too.many.dependencies(dependency))
+              d <- depends.pkg(dependency)
+              index <- grep('/wip/',d,invert=TRUE)
+              level.message('2 dependencies match ',dependency,':',paste(' ',depends.pkg(dependency)))
+              # message('===> depends(dependency): ',depends(dependency))
+              # message('===> depends.pkg(dependency):',paste(' ',d))
+              # message('===> index: ',index)
+              # message('===> buildlink3.line(): ',buildlink3.line(dependency,index))
+              if (length(index) == 1) # a unique, non-wip, dependency found
+                {
+                  level.message('choosing unique non-wip dependency for ',dependency,': ',depends.pkg(dependency)[index])
+                  if (arg.recursive && arg.update)
+                    update.dependency(dependency,index)
+                  if (file.exists(buildlink3.file(dependency,index)))
+                    BUILDLINK3.MK <- rbind(BUILDLINK3.MK,data.frame(key=depends.dir(dependency,index),value=buildlink3.line(dependency,index)))
+                  else
+                    DEPENDS <- rbind(DEPENDS,data.frame(key=depends.dir(dependency,index),value=depends.line(dependency,index)))
+                }
+              else
+                {
+                  level.message('no unique non-wip dependency matches')
+                  message(message.too.many.dependencies(dependency))
+                  DEPENDS <- rbind(DEPENDS,data.frame(key='???',value=depends.line.2(dependency)))
+                }
+            }
+          else  # more than 2 dependencies found
+            {
+              level.message(length(depends.pkg(dependency)),' dependencies match ',dependency,':',paste(' ',depends.pkg(dependency)))
+             message(message.too.many.dependencies(dependency))
               DEPENDS <- rbind(DEPENDS,data.frame(key='???',value=depends.line.2(dependency)))
             }
           if (length(new.depends.pkg(dependency)) > 0)
@@ -727,7 +727,7 @@ use.languages <- function(s1,s2)
 #  if (length(USE_LANGUAGES) == 0)
 #    {
 #      if (find.Rcpp(s1,s2))
-#        USE_LANGUAGES <- append(USE_LANGUAGES,list('USE_LANGUAGES+=	c c++'))
+#        USE_LANGUAGES <- append(USE_LANGUAGES,list('USE_LANGUAGES+=\tc c++'))
 #    }
   USE_LANGUAGES <- list()
   if (find.Rcpp(s1,s2))
@@ -805,7 +805,7 @@ element <- function(df,key,value,quiet=FALSE)
             level.warning(key,' not found')
           else
             level.warning(key,' is not a key-value field')
-	}
+        }
     }
   result
 }
@@ -839,7 +839,7 @@ make.comment <- function(df)
   new.comment <- element(df,'COMMENT','new_value')
   comment <- old.comment
   if (!weakly.equals(old.comment,new.comment))
-    comment <- paste0(comment,'	# [R2pkg] updated to: ',new.comment)
+    comment <- paste0(comment,'\t# [R2pkg] updated to: ',new.comment)
   comment
 }
 
@@ -871,23 +871,23 @@ make.license <- function(df)
         }
       else
         {
-          license <- paste0(new_license,'	# [R2pkg] previously: ',old_license)
+          license <- paste0(new_license,'\t# [R2pkg] previously: ',old_license)
           todo <- old_todo
         }
     }
   else if (license.in.pkgsrc(old_license) && !license.in.pkgsrc(new_license))
     {
-      license <- paste0(old_license,'	# [R2pkg] updated to: ',new_license)
+      license <- paste0(old_license,'\t# [R2pkg] updated to: ',new_license)
       todo <- '# TODO: '
     }
   else if (!license.in.pkgsrc(old_license) && license.in.pkgsrc(new_license))
     {
-      license <- paste0(new_license,'	# [R2pkg] previously: ',old_license)
+      license <- paste0(new_license,'\t# [R2pkg] previously: ',old_license)
       todo <- ''
     }
   else if (!license.in.pkgsrc(old_license) && !license.in.pkgsrc(new_license))
     {
-      license <- paste0(new_license,'	# [R2pkg] previously: ',old_license)
+      license <- paste0(new_license,'\t# [R2pkg] previously: ',old_license)
       todo <- '# TODO: '
     }
 
@@ -974,7 +974,7 @@ annotate.distname.in.Makefile <- function(df)
   pkgver <- sub('^.+_','',value)
   PKGNAME <- paste0('R_PKGNAME=',pkgname)
   PKGVER <- paste0('R_PKGVER=',pkgver)
-  comment <- paste0('	# [R2pkg] replace this line with ',PKGNAME,' and ',PKGVER,' as first stanza')
+  comment <- paste0('\t# [R2pkg] replace this line with ',PKGNAME,' and ',PKGVER,' as first stanza')
   df$new_line[match] <- paste0(line,comment)
   df
 }
