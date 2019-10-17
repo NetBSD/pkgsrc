@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.10 2017/08/16 20:45:42 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/10/17 14:05:49 he Exp $
 
-VERSION=		5.0.1
+VERSION=		5.1.2
 DISTNAME=		irrtoolset-${VERSION}
 CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.isc.org/isc/IRRToolSet/IRRToolSet-${VERSION}/
+MASTER_SITES=		${MASTER_SITE_GITHUB:=irrtoolset/}
 
 OWNER=			spz@NetBSD.org
-#HOMEPAGE=		http://irrtoolset.isc.org/
+HOMEPAGE=		https://github.com/irrtoolset/irrtoolset/
 COMMENT=		The Internet Routing Registry Toolset - client to IRRd
+GITHUB_TAG=		release-${VERSION}
 LICENSE=		gnu-gpl-v2 AND mit AND modified-bsd
 
 CONFLICTS=		IRRToolSet-4.*
@@ -21,16 +22,16 @@ MAKE_JOBS_SAFE=		NO
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		bison flex
-GCC_REQD+=		3.0
+USE_TOOLS+=		aclocal automake autoconf bison flex
 
 CONFIG_GUESS_OVERRIDE=	config.guess
 CONFIG_SUB_OVERRIDE=	config.sub
 
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ENV+=		LEX="${PREFIX}/bin/flex"
-.include "../../devel/flex/buildlink3.mk"
-.endif
+pre-configure:
+	cd ${WRKSRC} && aclocal
+	cd ${WRKSRC} && autoreconf --install
+	cd ${WRKSRC} && automake --add-missing
+	cd ${WRKSRC} && autoconf -v -i -f
 
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/01/30 16:14:16 spz Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/10/17 14:05:49 he Exp $
 bin/peval
 bin/rpslcheck
 bin/rtconfig
@@ -6,3 +6,7 @@ man/man1/irrtoolset-errors.1
 man/man1/peval.1
 man/man1/rpslcheck.1
 man/man1/rtconfig.1
+share/doc/irrtoolset/AUTHORS
+share/doc/irrtoolset/COPYING
+share/doc/irrtoolset/NEWS
+share/doc/irrtoolset/README.md
