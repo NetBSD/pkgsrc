@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.65 2019/01/31 14:15:55 wiz Exp $
+$NetBSD: distinfo,v 1.66 2019/10/17 20:35:58 adam Exp $
 
-SHA1 (doxygen-1.8.15.src.tar.gz) = bb5d7456a7ff63768e8755762860d64debd3a4ff
-RMD160 (doxygen-1.8.15.src.tar.gz) = c9f14928c77410d2f71568d4602a489d8ab889d9
-SHA512 (doxygen-1.8.15.src.tar.gz) = a5512e78be66c1591d8ec7e284d5d25c92a97218c79e6fed3c538c723a8dfef4ff7085970bf271a6b639e907157cd4df9fb55d3c975f8d3302fb1012a4d92079
-Size (doxygen-1.8.15.src.tar.gz) = 5097791 bytes
-SHA1 (patch-ac) = 87c68a2ce598c10d90d775764f4c05739eb51435
-SHA1 (patch-ah) = c1a7f35fe2adcfd094c3ba0f81fee47a027bcf82
+SHA1 (doxygen-1.8.16.src.tar.gz) = 912a36bad9b81ef27a0ff0208b459c500412c6b2
+RMD160 (doxygen-1.8.16.src.tar.gz) = 10d26e3ea9c63d7a01e9e8ecc8dd8b5ee111cc9a
+SHA512 (doxygen-1.8.16.src.tar.gz) = 46a0189aa82d5a687bdd99a904f0c061fccca407d15867d14c8c4d13e8b21a8989e7ccd6af30840803b589ed20dd86084a4db880fba0d3bfa1fdcdd8d23e12de
+Size (doxygen-1.8.16.src.tar.gz) = 5497317 bytes
+SHA1 (patch-qtools_qglobal.h) = 6d89627ac032d95450ea878e81c027d81345952c
+SHA1 (patch-src_dirdef.cpp) = cd51a1745e828467feeeb5b89c37c5b2a4834583
