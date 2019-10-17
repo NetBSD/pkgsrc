@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4391 2019/10/17 14:35:42 mef Exp $
+$NetBSD: CHANGES-2019,v 1.4392 2019/10/17 14:40:23 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7048,3 +7048,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-ExtUtils-CBuilder to 0.28.02.31 [mef 2019-10-17]
 	Updated net/irrtoolset5 to 5.1.2 [he 2019-10-17]
 	Updated devel/p5-ExtUtils-CppGuess to 0.20 [mef 2019-10-17]
+	Updated devel/p5-ExtUtils-MakeMaker to 7.38 [mef 2019-10-17]
+	Updated devel/p5-ExtUtils-Depends to 0.8000 [mef 2019-10-17]
