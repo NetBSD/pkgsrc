@@ -1,8 +1,0 @@
-FLTK (pronounced "fulltick") is a LGPL'd C++ graphical user interface
-toolkit for X (UNIX), OpenGL, and Win32.  FLTK was designed to be small and
-modular enough to be statically linked, but also works fine as a shared
-library.  FLTK also includes FLUID, an interactive user interface builder
-program.
-
-FLTK 2.0 is an experimental branch and has been declared inactive,
-superceded by 3.0.
