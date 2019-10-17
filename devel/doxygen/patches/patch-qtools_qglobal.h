@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.10 2019/01/31 14:15:55 wiz Exp $
+$NetBSD: patch-qtools_qglobal.h,v 1.1 2019/10/17 20:35:58 adam Exp $
 
-Add DragonFly
+Add DragonFly support.
 
---- qtools/qglobal.h.orig	2009-10-25 15:44:29.000000000 +0000
+--- qtools/qglobal.h.orig	2019-03-16 19:19:44.000000000 +0000
 +++ qtools/qglobal.h
-@@ -118,7 +121,7 @@
+@@ -102,7 +102,7 @@
  #define _OS_RELIANTUNIX_
  #elif defined(linux) || defined(__linux) || defined(__linux__) || defined(__GNU__) || defined(__GLIBC__)
  #define _OS_LINUX_
