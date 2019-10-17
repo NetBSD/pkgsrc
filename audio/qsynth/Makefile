@@ -1,27 +1,19 @@
-# $NetBSD: Makefile,v 1.51 2019/09/18 14:17:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.52 2019/10/17 08:20:43 nia Exp $
 
-DISTNAME=	qsynth-0.4.1
-PKGREVISION=	20
-CATEGORIES=	audio
+DISTNAME=	qsynth-0.5.7
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qsynth/}
-EXTRACT_USING=	bsdtar
+CATEGORIES=	audio
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://qsynth.sourceforge.net/
+HOMEPAGE=	https://qsynth.sourceforge.io/qsynth-index.html
 COMMENT=	Qt GUI Interface to FluidSynth
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake
-GNU_CONFIGURE=		yes
-
-PTHREAD_AUTO_VARS=	yes
-
-.include "options.mk"
+USE_CMAKE=	yes
+USE_TOOLS+=	pkg-config
+USE_LANGUAGES=	c c++
 
 .include "../../audio/fluidsynth/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../mk/pthread.buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

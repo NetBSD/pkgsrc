@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2016/04/23 12:32:47 nros Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/10/17 08:20:43 nia Exp $
 bin/qsynth
+man/fr/man1/qsynth.1
 man/man1/qsynth.1
-share/appdata/qsynth.appdata.xml
 share/applications/qsynth.desktop
-share/icons/hicolor/32x32/apps/qsynth.png
+share/metainfo/qsynth.appdata.xml
+share/pixmaps/qsynth.png
 share/qsynth/translations/qsynth_cs.qm
 share/qsynth/translations/qsynth_de.qm
+share/qsynth/translations/qsynth_es.qm
 share/qsynth/translations/qsynth_fr.qm
 share/qsynth/translations/qsynth_ru.qm
 share/qsynth/translations/qsynth_sr.qm
