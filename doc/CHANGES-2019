@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4386 2019/10/17 00:48:59 taca Exp $
+$NetBSD: CHANGES-2019,v 1.4387 2019/10/17 08:20:55 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7040,3 +7040,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added audio/musescore version 3.2.3 [nia 2019-10-16]
 	Updated www/cliqz to 1.29.3 [fox 2019-10-17]
 	Updated net/bind911 to 9.11.12 [taca 2019-10-17]
+	Updated audio/qsynth to 0.5.7 [nia 2019-10-17]
