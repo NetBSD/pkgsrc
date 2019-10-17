@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4390 2019/10/17 14:06:41 he Exp $
+$NetBSD: CHANGES-2019,v 1.4391 2019/10/17 14:35:42 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7043,4 +7043,8 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/qsynth to 0.5.7 [nia 2019-10-17]
 	Updated print/flpsed to 0.7.3 [micha 2019-10-17]
 	Removed x11/fltk2 [micha 2019-10-17]
+	Updated devel/p5-EV to 4.27 [mef 2019-10-17]
+	Updated devel/p5-Error to 0.17028 [mef 2019-10-17]
+	Updated devel/p5-ExtUtils-CBuilder to 0.28.02.31 [mef 2019-10-17]
 	Updated net/irrtoolset5 to 5.1.2 [he 2019-10-17]
+	Updated devel/p5-ExtUtils-CppGuess to 0.20 [mef 2019-10-17]
