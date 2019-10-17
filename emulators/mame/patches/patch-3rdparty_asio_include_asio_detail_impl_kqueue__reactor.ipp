@@ -1,6 +1,7 @@
-$NetBSD: patch-3rdparty_asio_include_asio_detail_impl_kqueue__reactor.ipp,v 1.1 2019/10/17 10:18:37 wiz Exp $
+$NetBSD: patch-3rdparty_asio_include_asio_detail_impl_kqueue__reactor.ipp,v 1.2 2019/10/17 13:52:08 wiz Exp $
 
 NetBSD 9.99.14 changed the type to be more compatible to other operating systems.
+https://github.com/chriskohlhoff/asio/pull/433
 
 --- 3rdparty/asio/include/asio/detail/impl/kqueue_reactor.ipp.orig	2019-08-02 19:05:18.000000000 +0000
 +++ 3rdparty/asio/include/asio/detail/impl/kqueue_reactor.ipp
