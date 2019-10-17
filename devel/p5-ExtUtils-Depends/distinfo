@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2016/04/10 05:25:19 mef Exp $
+$NetBSD: distinfo,v 1.13 2019/10/17 14:24:33 mef Exp $
 
-SHA1 (ExtUtils-Depends-0.405.tar.gz) = ed10e15aa36c4ae71c95b4222da5014ff6df3dba
-RMD160 (ExtUtils-Depends-0.405.tar.gz) = 8c7fe60b79d6a443dd0e9639675e4bf1ad675f67
-SHA512 (ExtUtils-Depends-0.405.tar.gz) = b9983ad763ff0cb81c899bc24f3152f13c69e608304b6e4446bd07b9b13d039650f3f87544c0bdd29c67246ea2973f04a1ce0fccbffb566fe89fdbe0bb03f11b
-Size (ExtUtils-Depends-0.405.tar.gz) = 18122 bytes
+SHA1 (ExtUtils-Depends-0.8000.tar.gz) = 0561e114df3861dcde0073418513eff1209bd419
+RMD160 (ExtUtils-Depends-0.8000.tar.gz) = 629b07a37f37b2e5607aac7fbddf602263652cd2
+SHA512 (ExtUtils-Depends-0.8000.tar.gz) = c2823e48fc6ae42677da958d8cbeb561a29839cc387224ecd545e1d81979cd963377210f9c5a9bf314e2fc6e0907190f0b867ed59e91f8eab6df91f8d0c91e5d
+Size (ExtUtils-Depends-0.8000.tar.gz) = 17923 bytes
