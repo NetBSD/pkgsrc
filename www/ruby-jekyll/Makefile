@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2019/10/05 05:10:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.37 2019/10/17 16:13:17 taca Exp $
 
 DISTNAME=	jekyll-4.0.0
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -20,14 +21,13 @@ DEPENDS+=	${RUBY_PKGPREFIX}-liquid>=4.0<5:../../www/ruby-liquid
 DEPENDS+=	${RUBY_PKGPREFIX}-mercenary>=0.3.3<0.4:../../devel/ruby-mercenary
 DEPENDS+=	${RUBY_PKGPREFIX}-pathutil>=0.9<1:../../devel/ruby-pathutil
 DEPENDS+=	${RUBY_PKGPREFIX}-rouge>=3.0<4:../../www/ruby-rouge
-
 DEPENDS+=	${RUBY_PKGPREFIX}-safe_yaml>=1.0<2:../../textproc/ruby-safe_yaml
 DEPENDS+=	${RUBY_PKGPREFIX}-terminal-table>=1.8<2:../../textproc/ruby-terminal-table
 # below packages are not listed in gemspec
 DEPENDS+=	${RUBY_PKGPREFIX}-jekyll-minima>=2.5<3:../../www/ruby-jekyll-minima
 DEPENDS+=	${RUBY_PKGPREFIX}-jekyll-feed>=0.12<1:../../www/ruby-jekyll-feed
 
-RUBY_VERSIONS_ACCEPTED=	24 25 26
+USE_LANGUAGES=	# empty
 
 RUBYGEM_OPTIONS+=	--format-executable
 
