@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4389 2019/10/17 13:28:15 micha Exp $
+$NetBSD: CHANGES-2019,v 1.4390 2019/10/17 14:06:41 he Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7043,3 +7043,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/qsynth to 0.5.7 [nia 2019-10-17]
 	Updated print/flpsed to 0.7.3 [micha 2019-10-17]
 	Removed x11/fltk2 [micha 2019-10-17]
+	Updated net/irrtoolset5 to 5.1.2 [he 2019-10-17]
