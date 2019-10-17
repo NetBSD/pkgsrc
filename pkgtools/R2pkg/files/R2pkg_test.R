@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg_test.R,v 1.2 2019/10/13 19:13:47 rillig Exp $
+# $NetBSD: R2pkg_test.R,v 1.3 2019/10/17 17:14:34 rillig Exp $
 #
 # Copyright (c) 2019
 #	Roland Illig.  All rights reserved.
@@ -40,37 +40,8 @@ expect_printed <- function(obj, expected) {
     expect_equal(out, expected)
 }
 
-test_that('make.imports', {
-    imports <- make.imports('first (>= 1.0)', 'second')
-
-    expect_equal(imports, c('first(>=1.0)', 'second'))
-})
-
-test_that('make.dependency', {
-    imports <- make.dependency('first(>=1.0)')
-
-    expect_equal(imports, c('first', '>=1.0'))
-})
-
-test_that('buildlink3.file with matching version number', {
-    local_dir(package.dir)
-    dependency <- make.dependency('bitops(>=0.1)')
-
-    bl3 <- buildlink3.file(dependency)
-
-    expect_equal(bl3, '../../math/R-bitops/buildlink3.mk')
-})
-
-# The version number of the dependency is not checked against
-# the resolved buildlink3 file.
-test_that('buildlink3.file with too high version number', {
-    local_dir(package.dir)
-    dependency <- make.dependency('bitops(>=1000.0)')
-
-    bl3 <- buildlink3.file(dependency)
-
-    expect_equal(bl3, '../../math/R-bitops/buildlink3.mk')
-})
+# test_that('level.message', {
+# })
 
 test_that('level.warning', {
     output <- ''
@@ -83,6 +54,96 @@ test_that('level.warning', {
 
     expect_equal(output, '[ 123 ] WARNING: message text\n')
 })
+
+# test_that('trim.space', {
+# })
+
+# test_that('trim.blank', {
+# })
+
+# test_that('one.space', {
+# })
+
+# test_that('one.line', {
+# })
+
+# test_that('pkg.vers', {
+# })
+
+# test_that('varassign', {
+# })
+
+# test_that('adjacent.duplicates', {
+# })
+
+# test_that('paste2', {
+# })
+
+# test_that('end.paragraph', {
+# })
+
+# test_that('as.sorted.list', {
+# })
+
+test_that('read.file.as.dataframe', {
+    content <- textConnection('VAR=value\nVAR2=value2\n')
+
+    df <- read.file.as.dataframe(content)
+
+    expect_equal(length(df$line), 3)
+    expect_equal(df$line[[1]], 'VAR=value')
+    expect_equal(df$line[[2]], 'VAR2=value2')
+    expect_equal(df$line[[3]], '')
+})
+
+# test_that('categorize.key_value', {
+# })
+
+# test_that('categorize.depends', {
+# })
+
+# test_that('categorize.buildlink', {
+# })
+
+# test_that('fix.continued.lines', {
+# })
+
+test_that('read.Makefile.as.dataframe', {
+    lines <- c(
+    '# comment',
+    'VAR= value',
+    '',
+    '.include "other.mk"',
+    '.if 0',
+    '.endif'
+    )
+    content <- paste0(paste(lines, collapse = '\n'), '\n')
+    expect_equal(content, '# comment\nVAR= value\n\n.include "other.mk"\n.if 0\n.endif\n')
+
+    df <- read.Makefile.as.dataframe(textConnection(content))
+
+    expect_printed(df, c(
+    '                 line order category key_value  key depends buildlink3.mk',
+    '1           # comment     1       NA     FALSE <NA>   FALSE         FALSE',
+    '2          VAR= value     2       NA      TRUE  VAR   FALSE         FALSE',
+    '3                         3       NA     FALSE <NA>   FALSE         FALSE',
+    '4 .include "other.mk"     4       NA     FALSE <NA>   FALSE         FALSE',
+    '5               .if 0     5       NA     FALSE <NA>   FALSE         FALSE',
+    '6              .endif     6       NA     FALSE <NA>   FALSE         FALSE',
+    '7                         7       NA     FALSE <NA>   FALSE         FALSE',
+    '  operator delimiter old_value old_todo',
+    '1     <NA>      <NA>      <NA>     <NA>',
+    '2        =               value         ',
+    '3     <NA>      <NA>      <NA>     <NA>',
+    '4     <NA>      <NA>      <NA>     <NA>',
+    '5     <NA>      <NA>      <NA>     <NA>',
+    '6     <NA>      <NA>      <NA>     <NA>',
+    '7     <NA>      <NA>      <NA>     <NA>'
+    ))
+})
+
+# test_that('read.file.as.list', {
+# })
 
 test_that('read.file.as.value, exactly 1 variable assignment, no space', {
     filename <- ''
@@ -125,99 +186,329 @@ test_that('read.file.as.value, multiple variable assignments', {
     expect_equal(str, '')
 })
 
-test_that('read.file.as.dataframe', {
-    content <- textConnection('VAR=value\nVAR2=value2\n')
+# test_that('read.file.as.values', {
+# })
 
-    df <- read.file.as.dataframe(content)
+# test_that('simplify.whitespace', {
+# })
 
-    expect_equal(length(df$line), 3)
-    expect_equal(df$line[[1]], 'VAR=value')
-    expect_equal(df$line[[2]], 'VAR2=value2')
-    expect_equal(df$line[[3]], '')
+# test_that('remove.punctuation', {
+# })
+
+# test_that('remove.quotes', {
+# })
+
+# test_that('remove.articles', {
+# })
+
+# test_that('case.insensitive.equals', {
+# })
+
+# test_that('weakly.equals', {
+# })
+
+# test_that('new.field.if.different', {
+# })
+
+# test_that('pkgsrc.license', {
+# })
+
+# test_that('package', {
+# })
+
+# test_that('version', {
+# })
+
+# test_that('comment', {
+# })
+
+# test_that('use.tools', {
+# })
+
+# test_that('license', {
+# })
+
+# test_that('maintainer', {
+# })
+
+test_that('find.Rcpp', {
+    expect_equal(find.Rcpp(list(), list()), FALSE)
+    expect_equal(find.Rcpp(list('Other'), list('Other')), FALSE)
+
+    expect_equal(find.Rcpp(list('Rcpp'), list()), TRUE)
+    expect_equal(find.Rcpp(list(), list('Rcpp')), TRUE)
 })
 
-test_that('read.Makefile.as.dataframe', {
-    lines <- c(
-        '# comment',
-        'VAR= value',
-        '',
-        '.include "other.mk"',
-        '.if 0',
-        '.endif'
-    )
-    content <- paste0(paste(lines, collapse = '\n'), '\n')
-    expect_equal(content, '# comment\nVAR= value\n\n.include "other.mk"\n.if 0\n.endif\n')
+# test_that('buildlink3.mk', {
+# })
 
-    df <- read.Makefile.as.dataframe(textConnection(content))
-
-    expect_printed(df, c(
-        '                 line order category key_value  key depends buildlink3.mk',
-        '1           # comment     1       NA     FALSE <NA>   FALSE         FALSE',
-        '2          VAR= value     2       NA      TRUE  VAR   FALSE         FALSE',
-        '3                         3       NA     FALSE <NA>   FALSE         FALSE',
-        '4 .include "other.mk"     4       NA     FALSE <NA>   FALSE         FALSE',
-        '5               .if 0     5       NA     FALSE <NA>   FALSE         FALSE',
-        '6              .endif     6       NA     FALSE <NA>   FALSE         FALSE',
-        '7                         7       NA     FALSE <NA>   FALSE         FALSE',
-        '  operator delimiter old_value old_todo',
-        '1     <NA>      <NA>      <NA>     <NA>',
-        '2        =               value         ',
-        '3     <NA>      <NA>      <NA>     <NA>',
-        '4     <NA>      <NA>      <NA>     <NA>',
-        '5     <NA>      <NA>      <NA>     <NA>',
-        '6     <NA>      <NA>      <NA>     <NA>',
-        '7     <NA>      <NA>      <NA>     <NA>'
-    ))
+test_that('varassigns', {
+    expect_equal(
+    varassigns('VARNAME', c('value1', 'value2', '', 'value3')),
+    list(
+    'VARNAME=\tvalue1',
+    'VARNAME=\tvalue2',  # FIXME: This doesn't make sense.
+    '',
+    'VARNAME=\tvalue3'))
 })
+
+# test_that('categories', {
+# })
+
+# test_that('description', {
+# })
+
+# test_that('filter.imports', {
+# })
+
+test_that('make.imports', {
+    imports <- make.imports('first (>= 1.0)', 'second')
+
+    expect_equal(imports, c('first(>=1.0)', 'second'))
+})
+
+test_that('make.dependency', {
+    imports <- make.dependency('first(>=1.0)')
+
+    expect_equal(imports, c('first', '>=1.0'))
+})
+
+# test_that('depends', {
+# })
+
+# test_that('depends.pkg', {
+# })
+
+# test_that('new.depends.pkg', {
+# })
+
+# test_that('depends.pkg.fullname', {
+# })
+
+# test_that('depends.pkg.name', {
+# })
+
+# test_that('depends.pkg.vers', {
+# })
+
+# test_that('depends.vers', {
+# })
+
+# test_that('depends.vers.2', {
+# })
+
+# test_that('depends.dir', {
+# })
+
+# test_that('depends.line', {
+# })
+
+# test_that('depends.line.2', {
+# })
+
+test_that('buildlink3.file with matching version number', {
+    local_dir(package.dir)
+    dependency <- make.dependency('bitops(>=0.1)')
+
+    bl3 <- buildlink3.file(dependency)
+
+    expect_equal(bl3, '../../math/R-bitops/buildlink3.mk')
+})
+
+# The version number of the dependency is not checked against
+# the resolved buildlink3 file.
+test_that('buildlink3.file with too high version number', {
+    local_dir(package.dir)
+    dependency <- make.dependency('bitops(>=1000.0)')
+
+    bl3 <- buildlink3.file(dependency)
+
+    expect_equal(bl3, '../../math/R-bitops/buildlink3.mk')
+})
+
+# test_that('buildlink3.line', {
+# })
+
+# test_that('dependency.dir', {
+# })
+
+# test_that('message.wip.dependency', {
+# })
+
+# test_that('message.too.many.dependencies', {
+# })
+
+# test_that('update.dependency', {
+# })
+
+# test_that('make.depends', {
+# })
+
+# test_that('use.languages', {
+# })
+
+# test_that('copy.description', {
+# })
+
+# test_that('write.Makefile', {
+# })
+
+# test_that('construct.line', {
+# })
+
+# test_that('element', {
+# })
+
+# test_that('make.categories', {
+# })
+
+# test_that('make.maintainer', {
+# })
+
+# test_that('make.comment', {
+# })
+
+# test_that('make.new_license', {
+# })
+
+# test_that('license.marked.todo', {
+# })
+
+# test_that('license.in.pkgsrc', {
+# })
+
+# test_that('make.license', {
+# })
+
+# test_that('make.r_pkgver', {
+# })
+
+# test_that('find.order', {
+# })
+
+# test_that('write.makefile', {
+# })
 
 test_that('update.Makefile.with.metadata', {
     df <- read.Makefile.as.dataframe(textConnection(paste0(
-        'CATEGORIES=\n',
-        'MAINTAINER=\n',
-        'COMMENT=\n',
-        'R_PKGVER=\n'
+    'CATEGORIES=\n',
+    'MAINTAINER=\n',
+    'COMMENT=\n',
+    'R_PKGVER=\n'
     )))
     metadata = list(Title = 'Package comment', Version = '19.3', License = 'license')
 
     updated <- update.Makefile.with.metadata(df, metadata)
 
     expect_printed(updated, c(
-        '         line order category key_value        key depends buildlink3.mk',
-        '1 CATEGORIES=     1       NA      TRUE CATEGORIES   FALSE         FALSE',
-        '2 MAINTAINER=     2       NA      TRUE MAINTAINER   FALSE         FALSE',
-        '3    COMMENT=     3       NA      TRUE    COMMENT   FALSE         FALSE',
-        '4   R_PKGVER=     4       NA      TRUE   R_PKGVER   FALSE         FALSE',
-        '5                 5       NA     FALSE       <NA>   FALSE         FALSE',
-        '  operator delimiter old_value old_todo       new_value',
-        '1        =                                        R2pkg',
-        '2        =                                             ',
-        '3        =                              Package comment',
-        '4        =                                         19.3',
-        '5     <NA>      <NA>      <NA>     <NA>            <NA>'
+    '         line order category key_value        key depends buildlink3.mk',
+    '1 CATEGORIES=     1       NA      TRUE CATEGORIES   FALSE         FALSE',
+    '2 MAINTAINER=     2       NA      TRUE MAINTAINER   FALSE         FALSE',
+    '3    COMMENT=     3       NA      TRUE    COMMENT   FALSE         FALSE',
+    '4   R_PKGVER=     4       NA      TRUE   R_PKGVER   FALSE         FALSE',
+    '5                 5       NA     FALSE       <NA>   FALSE         FALSE',
+    '  operator delimiter old_value old_todo       new_value',
+    '1        =                                        R2pkg',
+    '2        =                                             ',
+    '3        =                              Package comment',
+    '4        =                                         19.3',
+    '5     <NA>      <NA>      <NA>     <NA>            <NA>'
     ))
 })
 
 # If the variable has been removed from the Makefile, it is not updated.
 test_that('update.Makefile.with.metadata without CATEGORIES', {
     df <- read.Makefile.as.dataframe(textConnection(paste0(
-        'MAINTAINER=\n',
-        'COMMENT=\n',
-        'R_PKGVER=\n'
+    'MAINTAINER=\n',
+    'COMMENT=\n',
+    'R_PKGVER=\n'
     )))
     metadata = list(Title = 'Package comment', Version = '19.3', License = 'license')
 
     updated <- update.Makefile.with.metadata(df, metadata)
 
     expect_printed(updated, c(
-        '         line order category key_value        key depends buildlink3.mk',
-        '1 MAINTAINER=     1       NA      TRUE MAINTAINER   FALSE         FALSE',
-        '2    COMMENT=     2       NA      TRUE    COMMENT   FALSE         FALSE',
-        '3   R_PKGVER=     3       NA      TRUE   R_PKGVER   FALSE         FALSE',
-        '4                 4       NA     FALSE       <NA>   FALSE         FALSE',
-        '  operator delimiter old_value old_todo       new_value',
-        '1        =                                             ',
-        '2        =                              Package comment',
-        '3        =                                         19.3',
-        '4     <NA>      <NA>      <NA>     <NA>            <NA>'
+    '         line order category key_value        key depends buildlink3.mk',
+    '1 MAINTAINER=     1       NA      TRUE MAINTAINER   FALSE         FALSE',
+    '2    COMMENT=     2       NA      TRUE    COMMENT   FALSE         FALSE',
+    '3   R_PKGVER=     3       NA      TRUE   R_PKGVER   FALSE         FALSE',
+    '4                 4       NA     FALSE       <NA>   FALSE         FALSE',
+    '  operator delimiter old_value old_todo       new_value',
+    '1        =                                             ',
+    '2        =                              Package comment',
+    '3        =                                         19.3',
+    '4     <NA>      <NA>      <NA>     <NA>            <NA>'
     ))
 })
+
+# test_that('update.Makefile.with.new.values', {
+# })
+
+# test_that('update.Makefile.with.new.line', {
+# })
+
+# test_that('annotate.distname.in.Makefile', {
+# })
+
+# test_that('annotate.Makefile', {
+# })
+
+# test_that('remove.master.sites.from.Makefile', {
+# })
+
+# test_that('remove.homepage.from.Makefile', {
+# })
+
+# test_that('remove.buildlink.abi.depends.from.Makefile', {
+# })
+
+# test_that('remove.buildlink.api.depends.from.Makefile', {
+# })
+
+# test_that('remove.lines.from.Makefile', {
+# })
+
+# test_that('reassign.order', {
+# })
+
+test_that('conflicts', {
+    expect_equal(conflicts('UnknownPackage'), list())
+
+    expect_equal(
+        conflicts('lattice'),
+        list('CONFLICTS=\tR>=3.6.1', ''))
+
+    expect_equal(
+        conflicts(c('lattice', 'methods', 'general', 'UnknownPackage')),
+        list('CONFLICTS=\tR>=3.6.1', ''))
+})
+
+# test_that('conflicts.order', {
+# })
+
+# test_that('make.df.conflicts', {
+# })
+
+# test_that('make.df.depends', {
+# })
+
+# test_that('make.df.buildlink3', {
+# })
+
+# test_that('make.df.makefile', {
+# })
+
+# test_that('update.Makefile', {
+# })
+
+# test_that('create.Makefile', {
+# })
+
+# test_that('create.DESCR', {
+# })
+
+# test_that('make.metadata', {
+# })
+
+# test_that('main', {
+# })
