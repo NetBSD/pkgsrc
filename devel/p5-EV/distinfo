@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.14 2016/04/10 03:12:51 mef Exp $
+$NetBSD: distinfo,v 1.15 2019/10/17 13:59:08 mef Exp $
 
-SHA1 (EV-4.22.tar.gz) = f645385c9b372efa37c3786b4f2edb04bd7e1b68
-RMD160 (EV-4.22.tar.gz) = 5a30987078c6c12f8498607d1d69f0d94c65dcd0
-SHA512 (EV-4.22.tar.gz) = 0d30d1388a75ed3af24c3b854d8c2a54bfc62c274591f13205c35748f3652122bae85f46aae174ce5963395233536222c8fae35e8118cbd5af2f7ed0c45b70de
-Size (EV-4.22.tar.gz) = 193418 bytes
-SHA1 (patch-libev_ev.h) = d408e13260b6893147e0ce7b66355ee3ca90aa2f
+SHA1 (EV-4.27.tar.gz) = 1222776a668586d16ca8e2f59aac3a5464e2ee0d
+RMD160 (EV-4.27.tar.gz) = 4dcc9dc2a96f63ecf5ea00a369e10fc16e78e2b6
+SHA512 (EV-4.27.tar.gz) = 076dde2a2e4c7d325f3c09b4fb3f04440f96e0ec79dcf86e16ec446471d2d0dc35d357fcdf5209a74271536461dc278f1a3ca698582374322bcd36a62ec28f51
+Size (EV-4.27.tar.gz) = 205272 bytes
+SHA1 (patch-libev_ev.h) = 4a64abdc7d4d936623ad7a6a68195bf65218e1ed
