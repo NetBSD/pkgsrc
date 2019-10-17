@@ -1,18 +1,16 @@
-# $NetBSD: options.mk,v 1.13 2019/02/22 14:08:56 wiz Exp $
+# $NetBSD: options.mk,v 1.14 2019/10/17 20:35:58 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.doxygen
-PKG_SUPPORTED_OPTIONS=	latex
-#PKG_SUGGESTED_OPTIONS=	latex
+PKG_SUPPORTED_OPTIONS=	latex qt
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		latex
+PLIST_VARS+=		latex qt
 
 .if !empty(PKG_OPTIONS:Mlatex)
-PLIST.latex=		yes
-
-CMAKE_ARGS+=		-Dbuild_doc:BOOL=YES
-BUILD_TARGET=		all docs
+CMAKE_ARGS+=	-Dbuild_doc=ON
+BUILD_TARGET=	all docs
+PLIST.latex=	yes
 
 # XXX Clearly separate what is build time vs runtime, and move
 # build-time dependencies into USE_TOOLS framework.
@@ -62,5 +60,11 @@ DEPENDS+=	tex-ulem-[0-9]*:../../print/tex-ulem
 DEPENDS+=	tex-wasysym-[0-9]*:../../fonts/tex-wasysym
 DEPENDS+=	tex-xcolor-[0-9]*:../../print/tex-xcolor
 DEPENDS+=	tex-xtab-[0-9]*:../../print/tex-xtab
+.endif
 
+
+.if !empty(PKG_OPTIONS:Mqt)
+CMAKE_ARGS+=	-Dbuild_wizard=ON
+PLIST.qt=	yes
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .endif

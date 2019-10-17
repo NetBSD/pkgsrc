@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.139 2019/08/11 13:18:41 wiz Exp $
+# $NetBSD: Makefile,v 1.140 2019/10/17 20:35:58 adam Exp $
 
-DISTNAME=	doxygen-1.8.15.src
+DISTNAME=	doxygen-1.8.16.src
 PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://doxygen.nl/files/
 
@@ -17,23 +16,18 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 UNLIMIT_RESOURCES+=	datasize
 # doxygen upstream uses this version of flex
 FLEX_REQD=		2.5.35
-USE_TOOLS+=		gmake gs:run perl:run bison flex
 USE_CMAKE=		yes
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c c++14
+USE_TOOLS+=		gmake gs:run perl:run bison flex
 MAKE_ENV+=		PKGSRC_CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=		MAN1DIR=${PKGMANDIR}/man1
 
-CMAKE_ARGS+=		-DDOC_INSTALL_DIR:STRING=share/doc/doxygen
+CMAKE_ARGS+=		-DDOC_INSTALL_DIR=share/doc/doxygen
+CMAKE_ARGS+=		-DGIT_EXECUTABLE=git # avoid searching for git executable
 TEST_TARGET=		tests
 
 # Case Insensitive or Case Sensitive File System
 PLIST_VARS+=		ci cs
-
-SUBST_CLASSES+=		perlbin
-SUBST_STAGE.perlbin=	pre-configure
-SUBST_MESSAGE.perlbin=	Fixing hardcoded path to the Perl interpreter
-SUBST_FILES.perlbin=	examples/tag.cfg
-SUBST_SED.perlbin=	-e 's,^PERL_PATH.*,PERL_PATH = ${PERL5},'
 
 SUBST_CLASSES+=		epstopdf
 SUBST_STAGE.epstopdf=	pre-configure
@@ -64,12 +58,14 @@ CONFIGURE_ARGS.DragonFly+=	-platform freebsd-g++
 
 LDFLAGS+=		${BUILDLINK_LDADD.iconv}
 
+.include "options.mk"
+
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/doxyindexer.1
 	${RM} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/doxysearch.1
+.if empty(PKG_OPTIONS:Mqt)
 	${RM} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/doxywizard.1
-
-.include "options.mk"
+.endif
 
 .include "../../converters/libiconv/buildlink3.mk"
 BUILDLINK_API_DEPENDS.graphviz+=	graphviz>=2.12nb1
