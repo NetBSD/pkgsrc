@@ -1,0 +1,14 @@
+$NetBSD: patch-src_rpsl_Makefile.am,v 1.1 2019/10/17 14:05:49 he Exp $
+
+Add an extra dependency on the yacc output.
+
+--- src/rpsl/Makefile.am.orig	2019-10-14 10:07:11.000000000 +0000
++++ src/rpsl/Makefile.am
+@@ -38,6 +38,7 @@ MAINTAINERCLEANFILES = $(nodist_librpsl_
+ CLEANFILES = *~ *.bak *.y.cc *.l.cc *.y.hh
+ 
+ schema_rpsl.cc: rpsl.y.cc
++object.cc: rpsl.y.cc
+ 
+ # FIXME: dependency on lex / yacc sources
+ object_log.l.cc:
