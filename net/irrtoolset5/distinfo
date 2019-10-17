@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 00:35:05 agc Exp $
+$NetBSD: distinfo,v 1.6 2019/10/17 14:05:49 he Exp $
 
-SHA1 (irrtoolset-5.0.1.tar.gz) = 19510275f5f64608e4a683c744c14f8e900ea19e
-RMD160 (irrtoolset-5.0.1.tar.gz) = 667c22e0658bdc4b544031e7fe33dffc7cc1a2c8
-SHA512 (irrtoolset-5.0.1.tar.gz) = 03cdcadb31c029175a7015b7d6cc52237f8625a57a8ebb0a65a9690e552b8055825d78501864bb2852416229beb2bcbf39b14ce9db256b0cbd39fd3d4bc8b493
-Size (irrtoolset-5.0.1.tar.gz) = 639889 bytes
-SHA1 (patch-src_rpsl_Makefile.in) = b3c03bf83c351009526805d48777345e513ebff0
-SHA1 (patch-src_rpsl_object.cc) = 596ca9266151fd0bbbc161ba594f93dc236a9678
+SHA1 (irrtoolset-5.1.2.tar.gz) = bca3cee298279448e837cc6f9b8a38896504228a
+RMD160 (irrtoolset-5.1.2.tar.gz) = 0fbe9a948f0b03eb0dd393cf4ec0308e095ed0d8
+SHA512 (irrtoolset-5.1.2.tar.gz) = 4d9c8d6b1ec924b74693409c7bd9ed960daccfe32f8b4293430d729c47b860617cb8ee937aa970e762f61db5087f0f6780877f8f4c3a4ab148859f41ce7fa9c9
+Size (irrtoolset-5.1.2.tar.gz) = 274599 bytes
+SHA1 (patch-src_rpsl_Makefile.am) = c18913d05e82be1e10f981b7d6001748d9859203
