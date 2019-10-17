@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4384 2019/10/16 23:22:23 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4385 2019/10/17 00:27:45 fox Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7038,3 +7038,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed games/pytraffic [wiz 2019-10-16]
 	Removed devel/psvn [wiz 2019-10-16]
 	Added audio/musescore version 3.2.3 [nia 2019-10-16]
+	Updated www/cliqz to 1.29.3 [fox 2019-10-17]
