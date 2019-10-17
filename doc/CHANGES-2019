@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4395 2019/10/17 17:26:17 ng0 Exp $
+$NetBSD: CHANGES-2019,v 1.4396 2019/10/17 20:38:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7053,3 +7053,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated cad/gtkwave to 3.3.101 [mef 2019-10-17]
 	Updated www/ruby-jekyll to 4.0.0nb1 [taca 2019-10-17]
 	Updated www/libmicrohttpd to 0.9.67 [ng0 2019-10-17]
+	Updated devel/doxygen to 1.8.16 [adam 2019-10-17]
