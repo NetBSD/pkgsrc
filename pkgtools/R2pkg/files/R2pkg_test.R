@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg_test.R,v 1.4 2019/10/17 17:50:54 rillig Exp $
+# $NetBSD: R2pkg_test.R,v 1.5 2019/10/17 22:08:13 rillig Exp $
 #
 # Copyright (c) 2019
 #	Roland Illig.  All rights reserved.
@@ -32,46 +32,71 @@ source('R2pkg.R')
 library(testthat)
 library(withr)
 
+mkcvsid = paste0('# $', 'NetBSD$')
+
+# TODO: use a test fixture for setting these
+arg.recursive <- FALSE
+arg.update <- FALSE
+
 package.dir <- file.path(Sys.getenv('PKGSRCDIR'), 'pkgtools', 'R2pkg')
 
 expect_printed <- function(obj, expected) {
     out <- ''
     with_output_sink(textConnection('out', 'w', local = TRUE), print(obj))
-    expect_equal(out, expected)
+    expect_equal(!!out, !!expected)
 }
 
-# test_that('level.message', {
-# })
-
-test_that('level.warning', {
+test_that('level.message', {
     output <- ''
     mock_message <- function(...) output <<- paste0(output, ..., '\n')
 
     arg.level <<- 123  # XXX: should use with_environment instead
     with_mock(message = mock_message, {
+        level.message('mess', 'age', ' text')
+    })
+
+    expect_equal(output, '[ 123 ] message text\n')
+})
+
+test_that('level.warning', {
+    output <- ''
+    mock_message <- function(...) output <<- paste0(output, ..., '\n')
+
+    arg.level <<- 321  # XXX: should use with_environment instead
+    with_mock(message = mock_message, {
         level.warning('mess', 'age', ' text')
     })
 
-    expect_equal(output, '[ 123 ] WARNING: message text\n')
+    expect_equal(output, '[ 321 ] WARNING: message text\n')
 })
 
-# test_that('trim.space', {
-# })
+test_that('trim.space', {
+    expect_equal(trim.space(' hello, \t\nworld '), 'hello,world')
+})
 
-# test_that('trim.blank', {
-# })
+test_that('trim.blank', {
+    expect_equal(trim.blank(' hello, \t\nworld '), 'hello,\nworld')
+})
 
-# test_that('one.space', {
-# })
+test_that('one.space', {
+    expect_equal(
+        one.space(' \t\nhello, \t\nworld \t\n'),
+        ' \nhello, \nworld \n')
+})
 
-# test_that('one.line', {
-# })
+test_that('one.line', {
+    expect_equal(
+        one.line(' \t\nhello, \t\nworld \t\n'),
+        ' \t hello, \t world \t ')
+})
 
-# test_that('pkg.vers', {
-# })
+test_that('pkg.vers', {
+    expect_equal(pkg.vers('1_0-2.3'), '1.0-2.3')
+})
 
-# test_that('varassign', {
-# })
+test_that('varassign', {
+    expect_equal(varassign('VAR', 'value'), 'VAR=\tvalue')
+})
 
 test_that('adjacent.duplicates', {
     expect_equal(
@@ -160,8 +185,25 @@ test_that('read.Makefile.as.dataframe', {
     ))
 })
 
-# test_that('read.file.as.list', {
-# })
+test_that('read.file.as.list can read an empty file', {
+    filename <- ''
+    local_tempfile('filename')
+    file.create(filename)
+
+    lines <- read.file.as.list(filename)
+
+    expect_equal(lines, list())
+})
+
+test_that('read.file.as.list can read lines from a file', {
+    filename <- ''
+    local_tempfile('filename')
+    writeLines(c('first', 'second \\', 'third'), filename)
+
+    lines <- read.file.as.list(filename)
+
+    expect_equal(lines, list('first', 'second \\', 'third'))
+})
 
 test_that('read.file.as.value, exactly 1 variable assignment, no space', {
     filename <- ''
@@ -170,7 +212,7 @@ test_that('read.file.as.value, exactly 1 variable assignment, no space', {
 
     str <- read.file.as.value(filename)
 
-    expect_equal(str, NA_character_)
+    expect_equal(str, NA_character_)  # FIXME
 })
 
 test_that('read.file.as.value, exactly 1 variable assignment', {
@@ -280,9 +322,21 @@ test_that('varassigns', {
 # })
 
 test_that('make.imports', {
-    imports <- make.imports('first (>= 1.0)', 'second')
+    expect_equal(
+        make.imports(NA_character_, NA_character_),
+        character(0))
 
-    expect_equal(imports, c('first(>=1.0)', 'second'))
+    expect_equal(
+        make.imports('first (>= 1.0)', 'second'),
+        c('first(>=1.0)', 'second'))
+
+    expect_equal(
+        make.imports('first(>=1)', 'second(>=1)'),
+        c('first(>=1)second(>=1)'))
+
+    expect_equal(
+        make.imports('first(>=1) second(>=1)', NA_character_),
+        c('first(>=1)second(>=1)'))
 })
 
 test_that('make.dependency', {
@@ -528,17 +582,87 @@ test_that('conflicts', {
 # test_that('make.df.makefile', {
 # })
 
-# test_that('update.Makefile', {
-# })
+test_that('update.Makefile', {
+    local_dir(tempdir())
+    local_mock('system', function(...) {
+        expect_printed(list(...), c('asdf'))
+        ''
+    })
+    writeLines(
+        c(
+            mkcvsid,
+            '',
+            '.include "../../mk/bsd.pkg.mk"'),
+        'Makefile.orig')
+    writeLines(
+        c(
+            'Package: pkgname',
+            'Version: 1.0',
+            'Depends: dep1 dep2(>=2.0)'),
+        'DESCRIPTION')
+    metadata <- make.metadata('DESCRIPTION')
+    expect_printed(
+        as.data.frame(metadata),
+        c(
+            '  Package Version Title Description License Imports          Depends',
+            '1 pkgname     1.0  <NA>        <NA>    <NA>    <NA> dep1 dep2(>=2.0)'))
+    expect_printed(metadata$Imports, c('[1] NA'))
+    expect_printed(metadata$Depends, c('[1] "dep1 dep2(>=2.0)"'))
+    expect_printed(
+        paste2(metadata$Imports, metadata$Depends),
+        c('[1] "dep1 dep2(>=2.0)"'))
+    expect_printed(
+        make.imports(metadata$Imports, metadata$Depends),
+        c('[1] "dep1"        "dep2(>=2.0)"'))
+    FALSE && expect_printed(
+        make.depends(metadata$Imports, metadata$Depends),
+        c('[1] "dep1"        "dep2(>=2.0)"'))
+
+    FALSE && update.Makefile(metadata)
+
+    FALSE && expect_equal(
+        c(
+            mkcvsid,
+            '',
+            'asdf'),
+        readLines('Makefile'))
+})
 
 # test_that('create.Makefile', {
 # })
 
-# test_that('create.DESCR', {
-# })
+test_that('create.DESCR', {
+    local_dir(tempdir())
+    metadata <- list(
+        Description = 'First line\n\nSecond paragraph\nhas 2 lines'
+    )
 
-# test_that('make.metadata', {
-# })
+    create.DESCR(metadata)
+
+    lines <- readLines('DESCR', encoding = 'UTF-8')
+    expect_equal(lines, c(
+        'First line',
+        '',
+        'Second paragraph has 2 lines'
+    ))
+})
+
+test_that('make.metadata', {
+    description <- paste(
+        c(
+            'Package: pkgname',
+            'Version: 1.0',
+            'Imports: dep1 other'
+        ),
+        collapse = '\n')
+
+    metadata <- make.metadata(textConnection(description))
+
+    expect_equal(metadata$Package, 'pkgname')
+    expect_equal(metadata$Version, '1.0')
+    expect_equal(metadata$Imports, 'dep1 other')
+    expect_equal(metadata$Depends, NA_character_)
+})
 
 # test_that('main', {
 # })
