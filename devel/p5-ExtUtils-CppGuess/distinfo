@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/03/25 07:01:53 wiz Exp $
+$NetBSD: distinfo,v 1.8 2019/10/17 14:20:17 mef Exp $
 
-SHA1 (ExtUtils-CppGuess-0.13.tar.gz) = 68224616b74be1532c823ad0e6502bcb26a04e5a
-RMD160 (ExtUtils-CppGuess-0.13.tar.gz) = 5c6cfe0d0ccd3072abd51359b820986b6a8d1432
-SHA512 (ExtUtils-CppGuess-0.13.tar.gz) = 7ce7bdcf43ffa0ed6945993b986bd8f1513c1f610865d5e4142fffbede6be6649ba0692e2db6fa2cd9573953e7e774af68a6ad0adbeae9e05f3f14b211df5059
-Size (ExtUtils-CppGuess-0.13.tar.gz) = 9212 bytes
+SHA1 (ExtUtils-CppGuess-0.20.tar.gz) = 8c9f7a780b0019e6772554d735371b9e601eadce
+RMD160 (ExtUtils-CppGuess-0.20.tar.gz) = 892c59ea77d7dcfadae7a66cd6c82dddec940691
+SHA512 (ExtUtils-CppGuess-0.20.tar.gz) = 5e00cc8e81aaf968832e171229d7ab973e903be1302680df8dfce2ddaaf94e8b291c342702abd58c080cefb52374955bbb4217aa5b969c4f2d4ab18f66e3f5e4
+Size (ExtUtils-CppGuess-0.20.tar.gz) = 13940 bytes
