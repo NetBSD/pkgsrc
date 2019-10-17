@@ -1,4 +1,7 @@
-$NetBSD: patch-3rdparty_bx_src_mutex.cpp,v 1.1 2018/03/18 00:40:20 ryoon Exp $
+$NetBSD: patch-3rdparty_bx_src_mutex.cpp,v 1.2 2019/10/17 14:01:03 wiz Exp $
+
+Improve NetBSD support.
+https://github.com/bkaradzic/bx/pull/219
 
 --- 3rdparty/bx/src/mutex.cpp.orig	2018-02-27 15:59:06.000000000 +0000
 +++ 3rdparty/bx/src/mutex.cpp
