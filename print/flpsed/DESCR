@@ -1,18 +1,7 @@
-flpsed is a WYSIWYG PostScript2 annotator.  You can't remove or modify
-existing elements of a document, but flpsed lets you add arbitrary
-text lines to existing PostScript 2 documents.  Added lines can later
-be re-edited with flpsed.  Using pdftops, which is part of xpdf one can
-convert PDF documents to PostScript and also add text to them.  flpsed
-is useful for filling in forms, adding notes etc.  GsWidget is now
-part of flpsed.  flpsed is released under the GPL.
-
-Features:
-    * Add arbitrary text to existing PostScript documents.
-    * Reedit text, that has been added with flpsed.
-    * The overall structure of the PostScript document is not
-      modified.  flpsed only adds the additional text.
-    * Batch processing (no X11 required) to modify tagged text lines
-      that have been entered interactively with flpsed before.  This
-      is very useful for repeatedly filling in forms.
-    * Text lines can be imported from other flpsed-modified documents.
-    * Import and export PDF. Therefore it can be used as a PDF editor as well.
+flpsed is a WYSIWYG PostScript annotator. You can't remove or modify existing
+elements of a document, but flpsed lets you add arbitrary text lines to existing
+PostScript documents (PostScript is a registered trademark of Adobe Systems
+Incorporated). Added lines can later be reedited with flpsed. Using pdftops,
+which is part of xpdf one can convert PDF documents to PostScript and also add
+text to them. flpsed is useful for filling in forms, adding notes etc. GsWidget
+is now part of flpsed.
