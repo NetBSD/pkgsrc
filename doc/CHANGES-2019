@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4388 2019/10/17 11:09:04 micha Exp $
+$NetBSD: CHANGES-2019,v 1.4389 2019/10/17 13:28:15 micha Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7042,3 +7042,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/bind911 to 9.11.12 [taca 2019-10-17]
 	Updated audio/qsynth to 0.5.7 [nia 2019-10-17]
 	Updated print/flpsed to 0.7.3 [micha 2019-10-17]
+	Removed x11/fltk2 [micha 2019-10-17]
