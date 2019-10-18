@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg.R,v 1.13 2019/10/18 21:42:20 rillig Exp $
+# $NetBSD: R2pkg.R,v 1.14 2019/10/18 22:10:46 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -42,6 +42,8 @@ arg.dependency_list      <- Sys.getenv('DEPENDENCY_LIST')
 arg.maintainer_email     <- Sys.getenv('MAINTAINER_EMAIL')
 arg.rpkg_description_url <- Sys.getenv('RPKG_DESCRIPTION_URL')
 arg.quiet_curl           <- as.logical(Sys.getenv('QUIET_CURL'))
+
+mkcvsid <- paste0('# $', 'NetBSD$')
 
 level.message <- function(...)
   message('[ ', arg.level, ' ] ', ...)
@@ -648,39 +650,36 @@ copy.description <- function(connection)
 
 write.Makefile <- function(metadata)
 {
-  RCSID             <- paste0('# $', 'NetBSD$')
-  CATEGORIES        <- varassign('CATEGORIES', categories())
-  MAINTAINER        <- varassign('MAINTAINER', maintainer(arg.maintainer_email))
-  COMMENT           <- varassign('COMMENT', one.line(metadata$Title))
-  LICENSE           <- varassign('LICENSE', license(metadata$License))
-  R_PKGNAME         <- varassign('R_PKGNAME', one.line(metadata$Package))
-  R_PKGVER          <- varassign('R_PKGVER', one.line(metadata$Version))
-  USE_LANGUAGES     <- varassigns('USE_LANGUAGES', use.languages(metadata$Imports, metadata$Depends))
-  DEPENDENCIES      <- make.depends(metadata$Imports, metadata$Depends)
-  DEPENDS           <- DEPENDENCIES[1]
-  BUILDLINK3.MK     <- DEPENDENCIES[2]
-  INCLUDE.R         <- '.include "../../math/R/Makefile.extension"'
-  INCLUDE.PKG       <- '.include "../../mk/bsd.pkg.mk"'
+  CATEGORIES    <- varassign('CATEGORIES', categories())
+  MAINTAINER    <- varassign('MAINTAINER', maintainer(arg.maintainer_email))
+  COMMENT       <- varassign('COMMENT', one.line(metadata$Title))
+  LICENSE       <- varassign('LICENSE', license(metadata$License))
+  R_PKGNAME     <- varassign('R_PKGNAME', one.line(metadata$Package))
+  R_PKGVER      <- varassign('R_PKGVER', one.line(metadata$Version))
+  USE_LANGUAGES <- varassigns('USE_LANGUAGES', use.languages(metadata$Imports, metadata$Depends))
+  dependencies  <- make.depends(metadata$Imports, metadata$Depends)
+  depends       <- dependencies[1]
+  buildlink3    <- dependencies[2]
 
-  Makefile <- list()
-  Makefile <- append(Makefile,RCSID)
-  Makefile <- append(Makefile,'')
-  Makefile <- append(Makefile,R_PKGNAME)
-  Makefile <- append(Makefile,R_PKGVER)
-  Makefile <- append(Makefile,CATEGORIES)
-  Makefile <- append(Makefile,'')
-  Makefile <- append(Makefile,MAINTAINER)
-  Makefile <- append(Makefile,COMMENT)
-  Makefile <- append(Makefile,LICENSE)
-  Makefile <- append(Makefile,'')
-  Makefile <- append(Makefile,DEPENDS)
-  Makefile <- append(Makefile,USE_LANGUAGES)
-  Makefile <- append(Makefile,INCLUDE.R)
-  Makefile <- append(Makefile,BUILDLINK3.MK)
-  Makefile <- append(Makefile,INCLUDE.PKG)
-  Makefile <- paste(unlist(Makefile),collapse='\n')
+  lines <- c(
+    mkcvsid,
+    '',
+    R_PKGNAME,
+    R_PKGVER,
+    CATEGORIES,
+    '',
+    MAINTAINER,
+    COMMENT,
+    LICENSE,
+    '',
+    depends,
+    USE_LANGUAGES,
+    '.include "../../math/R/Makefile.extension"',
+    buildlink3,
+    '.include "../../mk/bsd.pkg.mk"',
+    recursive = TRUE)
 
-  write(Makefile,'Makefile')
+  writeLines(lines, 'Makefile')
 }
 
 construct.line <- function(df,key,value)
