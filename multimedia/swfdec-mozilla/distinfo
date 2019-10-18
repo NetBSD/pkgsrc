@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 23:54:32 agc Exp $
-
-SHA1 (swfdec-mozilla-0.8.2.tar.gz) = 330fc304acc8ee63f4e9af993cbf87c25d82cebf
-RMD160 (swfdec-mozilla-0.8.2.tar.gz) = c6aef5170a06477d5bb7720c8814b34d7711b8b9
-SHA512 (swfdec-mozilla-0.8.2.tar.gz) = 47e70610722be17b2dfe81180a28c8dd8dd454009cc301ddd9caa650b530e2c452276f5cbfab9c7194167a54a3ef3a27f76254e725c4b7aa7fa38e8f3b703411
-Size (swfdec-mozilla-0.8.2.tar.gz) = 381148 bytes
-SHA1 (patch-src_swfmoz_dialog.c) = 36aed2e9d9baf906a0306814a710fb0fa281f203
-SHA1 (patch-src_swfmoz_player.c) = caeab5a4ae963897a27d8bb29a5750ba506678c1

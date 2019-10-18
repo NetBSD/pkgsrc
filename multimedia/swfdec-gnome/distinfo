@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 23:54:32 agc Exp $
-
-SHA1 (swfdec-gnome-2.28.0.tar.bz2) = 7f06daf86a56a7ae15f50a8bb7fdc5713542ce04
-RMD160 (swfdec-gnome-2.28.0.tar.bz2) = b6dad5d915812ccf78417ada0b447a2270593ae6
-SHA512 (swfdec-gnome-2.28.0.tar.bz2) = a9b6ddeb331b2fcd9ad45297cdccef414abd30232516f7c6da7735725dc20c6e4e8bda8884d114ef56df3c438d029f888892ff3641cc13a707b10846731801fd
-Size (swfdec-gnome-2.28.0.tar.bz2) = 170434 bytes
