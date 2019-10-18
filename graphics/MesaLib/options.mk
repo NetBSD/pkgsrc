@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.73 2019/09/01 09:36:16 nia Exp $
+# $NetBSD: options.mk,v 1.74 2019/10/18 09:57:07 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 
-PKG_SUPPORTED_OPTIONS+=		llvm x11
+PKG_SUPPORTED_OPTIONS+=		llvm vulkan x11
 
 .if ${OPSYS} != "Darwin" && ${OPSYS} != "Cygwin"
 PKG_SUPPORTED_OPTIONS+=		wayland
@@ -40,11 +40,14 @@ PLIST_VARS+=	vdpau
 #
 .if !empty(PKG_OPTIONS:Mllvm)
 MESON_ARGS+=		-Dllvm=true
-BUILDLINK_API_DEPENDS.libLLVM+= libLLVM>=7.0.1nb2
+BUILDLINK_API_DEPENDS.libLLVM+=	libLLVM>=7.0.1nb2
 .  include "../../devel/libelf/buildlink3.mk"
 .  include "../../lang/libLLVM/buildlink3.mk"
 
 .  if ${OPSYS} != "Darwin" && ${OPSYS} != "Cygwin"
+# This is the latest libdrm requirement for amdgpu.
+BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.99
+
 PLIST.r600=		yes
 GALLIUM_DRIVERS+=	r600
 PLIST.radeonsi=		yes
@@ -52,6 +55,15 @@ GALLIUM_DRIVERS+=	radeonsi
 .  endif
 .else
 MESON_ARGS+=		-Dllvm=false
+.endif
+
+#
+# Vulkan support - experimental
+#
+.if !empty(PKG_OPTIONS:Mvulkan)
+MESON_ARGS+=		-Dvulkan-drivers="auto"
+.else
+MESON_ARGS+=		-Dvulkan-drivers=""
 .endif
 
 #
