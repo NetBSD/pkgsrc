@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4414 2019/10/18 15:57:12 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4415 2019/10/18 15:58:30 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7073,3 +7073,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/go112 to 1.12.12 [bsiegert 2019-10-18]
 	Updated graphics/clutter-gtk to 1.8.4 [nia 2019-10-18]
 	Removed multimedia/swfdec [nia 2019-10-18]
+	Removed multimedia/swfdec-gnome [nia 2019-10-18]
+	Removed multimedia/swfdec-mozilla [nia 2019-10-18]
