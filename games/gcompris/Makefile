@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.94 2019/09/02 13:20:20 adam Exp $
+# $NetBSD: Makefile,v 1.95 2019/10/18 13:41:34 nia Exp $
 
-DISTNAME=	gcompris-12.11
-PKGREVISION=	41
+DISTNAME=	gcompris-17.05
 CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gcompris/}
+MASTER_SITES=	https://gcompris.net/download/gtk/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	reed@reedmedia.net
@@ -11,54 +10,47 @@ HOMEPAGE=	https://gcompris.net/
 COMMENT=	Educational games for children
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	gnuchess-[0-9]*:../../games/gnuchess
+TOOL_DEPENDS+=	p5-XML-LibXML>=1.58:../../textproc/p5-XML-LibXML
 
-USE_TOOLS+=		gmake intltool gtar pkg-config msgfmt texi2html
-GNU_CONFIGURE=		YES
-USE_PKGLOCALEDIR=	YES
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
-CHECK_PORTABILITY_SKIP+= macosx/build-gtk.sh
-INFO_FILES=		yes
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
 
-PTHREAD_AUTO_VARS=	yes
-
-PYTHON_VERSIONS_ACCEPTED=	 27 # py-sqlite2, py-gtk2
-
-PKG_SUPPORTED_OPTIONS=	gnet
-PKG_OPTIONS_VAR=	PKG_OPTIONS.gcompris
-.include "../../mk/bsd.options.mk"
-.if empty(PKG_OPTIONS:Mgnet)
-CONFIGURE_ARGS+=	--disable-gnet
-.else
-.include "../../net/gnet/buildlink3.mk"
-.endif
+USE_TOOLS+=	pkg-config perl bash:run
+USE_TOOLS+=	intltool msgfmt msgmerge xgettext
+USE_TOOLS+=	texi2html
+USE_TOOLS+=	gmake
 
 CONFIGURE_ARGS+=	--enable-sdlmixer
 
-post-extract:
-	${CHMOD} -R go-w ${WRKSRC}
+REPLACE_PYTHON+=	boards/voices/check_voices.py
+
+REPLACE_BASH+=		boards/voices/generate_voices_rcc.sh
+REPLACE_BASH+=		boards/voices/updateVoices.sh
+
+# Junk to clean up in post-install.
+TO_REMOVE+=		share/gcompris/boards/anim/Makefile
+TO_REMOVE+=		share/gcompris/boards/anim/Makefile.am
+TO_REMOVE+=		share/gcompris/boards/anim/Makefile.in
+TO_REMOVE+=		share/gcompris/boards/explore_world_animals/Makefile.am
+TO_REMOVE+=		share/gcompris/boards/geo_country/usa/Makefile.am
+TO_REMOVE+=		share/gcompris/boards/gnumch/Makefile.am
+
+# Basically not going to get ported to Python 3 ever
+# Current development is focused on the Qt version
+PYTHON_VERSIONS_ACCEPTED=	27
 
 post-install:
-	rm ${DESTDIR}${PREFIX}/share/gcompris/boards/anim/Makefile
-	rm ${DESTDIR}${PREFIX}/share/gcompris/boards/anim/Makefile.am
-	rm ${DESTDIR}${PREFIX}/share/gcompris/boards/anim/Makefile.in
-	rm ${DESTDIR}${PREFIX}/share/gcompris/boards/geo_country/usa/Makefile.am
-	rm ${DESTDIR}${PREFIX}/share/gcompris/boards/gnumch/Makefile.am
+.for file in ${TO_REMOVE}
+	${RM} -f ${DESTDIR}${PREFIX}/${file}
+.endfor
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
-.include "../../converters/libiconv/buildlink3.mk"
-.include "../../databases/py-sqlite2/buildlink3.mk"
-.include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
+.include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
