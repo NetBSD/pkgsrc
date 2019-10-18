@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg.R,v 1.12 2019/10/18 17:18:03 rillig Exp $
+# $NetBSD: R2pkg.R,v 1.13 2019/10/18 21:42:20 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -693,55 +693,50 @@ construct.line <- function(df,key,value)
   df
 }
 
-element <- function(df,key,value,quiet=FALSE)
+element <- function(mklines, varname, field, quiet=FALSE)
 {
-  key.index <- match(key,df$key,0)
-  if (key.index != 0 && df$key_value[key.index])
-    result <- df[key.index,value]
-  else
+  i <- match(varname, mklines$key, 0)
+  if (i != 0 && mklines$key_value[i])
+    return(mklines[i, field])
+
+  if (!quiet)
     {
-      result <- '???'
-      if (!quiet)
-        {
-          if (key.index == 0)
-            level.warning(key,' not found')
-          else
-            level.warning(key,' is not a key-value field')
-        }
+      if (i == 0)
+        level.warning(varname, ' not found')
+      else
+        level.warning(varname, ' is not a key-value field')
     }
-  result
+  '???'
 }
 
-make.categories <- function(df)
+make.categories <- function(mklines)
 {
-  # message('===> make.categories():')
   directory <- basename(dirname(getwd()))
-  categories <- unlist(element(df,'CATEGORIES','old_value'))
-  categories <- unlist(strsplit(categories,'[[:blank:]]+'))
-  categories <- c(directory,categories)
-  categories <- categories[ categories != 'R' ]
+  categories <- unlist(element(mklines, 'CATEGORIES', 'old_value'))
+  categories <- unlist(strsplit(categories, '[[:blank:]]+'))
+  categories <- c(directory, categories)
+  categories <- categories[categories != 'R']
   if (directory != 'wip')
-    categories <- categories[ categories != 'wip' ]
+    categories <- categories[categories != 'wip']
   categories <- categories[!duplicated(categories)]
-  categories <- paste(categories,collapse=' ')
-  categories
+  paste(categories, collapse = ' ')
 }
 
-make.maintainer <- function(df)
+make.maintainer <- function(mklines)
 {
-  old.maintainer <- element(df,'MAINTAINER','old_value')
-  new.maintainer <- element(df,'MAINTAINER','new_value')
-  ifelse(old.maintainer == '',new.maintainer,old.maintainer)
+  old.maintainer <- element(mklines, 'MAINTAINER', 'old_value')
+  new.maintainer <- element(mklines, 'MAINTAINER', 'new_value')
+  if (old.maintainer == '') new.maintainer else old.maintainer
 }
 
-make.comment <- function(df)
+make.comment <- function(mklines)
 {
-  old.comment <- element(df,'COMMENT','old_value')
-  new.comment <- element(df,'COMMENT','new_value')
-  comment <- old.comment
-  if (!weakly.equals(old.comment,new.comment))
-    comment <- paste0(comment,'\t# [R2pkg] updated to: ',new.comment)
-  comment
+  old.comment <- element(mklines, 'COMMENT', 'old_value')
+  new.comment <- element(mklines, 'COMMENT', 'new_value')
+  if (weakly.equals(old.comment, new.comment))
+    old.comment
+  else
+    paste0(old.comment, '\t# [R2pkg] updated to: ', new.comment)
 }
 
 make.new_license <- function(df,license)
@@ -809,12 +804,8 @@ find.order <- function(df,key,field)
   value
 }
 
-write.makefile <- function(lines) write(lines,'Makefile')
-
 update.Makefile.with.metadata <- function(df,metadata)
 {
-  # message('===> update.Makefile.with.metadata():')
-
   df$new_value <- NA
 
   df <- make.new_license(df,metadata$License)
@@ -823,9 +814,6 @@ update.Makefile.with.metadata <- function(df,metadata)
   df$new_value[df$key == 'MAINTAINER'] <- arg.maintainer_email
   df$new_value[df$key == 'COMMENT'] <- one.line(metadata$Title)
   df$new_value[df$key == 'R_PKGVER'] <- one.line(metadata$Version)
-
-  # str(df)
-  # print(df)
   df
 }
 
@@ -1072,7 +1060,7 @@ update.Makefile <- function(metadata)
   df.buildlink3 <- make.df.buildlink3(df,BUILDLINK3.MK)
   df.makefile <- make.df.makefile(df,df.conflicts,df.depends,df.buildlink3)
 
-  write.makefile(df.makefile[,'new_line'])
+  write(df.makefile[, 'new_line'], 'Makefile')
 }
 
 create.Makefile <- function(metadata)
