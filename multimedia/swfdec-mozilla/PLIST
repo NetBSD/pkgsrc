@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2012/01/20 11:04:25 obache Exp $
-lib/netscape/plugins/libswfdecmozilla.la
-share/icons/hicolor/16x16/apps/swfdec-mozilla.png
-share/icons/hicolor/22x22/apps/swfdec-mozilla.png
-share/icons/hicolor/24x24/apps/swfdec-mozilla.png
-share/icons/hicolor/32x32/apps/swfdec-mozilla.png
-share/icons/hicolor/48x48/apps/swfdec-mozilla.png
-share/icons/hicolor/scalable/apps/swfdec-mozilla.svg
