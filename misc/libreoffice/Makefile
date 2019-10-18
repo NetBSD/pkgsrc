@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.208 2019/10/07 18:41:01 rhialto Exp $
+# $NetBSD: Makefile,v 1.209 2019/10/18 10:13:40 ryoon Exp $
 
 VERREL=		6.3.2
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -23,6 +24,12 @@ SUBST_FILES.use-bash+=		configure.ac
 SUBST_VARS.use-bash+=		BASH
 SUBST_VARS.use-bash+=		PREFIX
 
+SUBST_CLASSES+=			font-path
+SUBST_STAGE.font-path=		pre-configure
+SUBST_MESSAGE.font-path=	Use pkgsrc fonts for PDF import
+SUBST_FILES.font-path+=		external/pdfium/pkgsrc.patch.1
+SUBST_VARS.font-path+=		X11BASE
+
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(MACHINE_PLATFORM:MNetBSD*)
@@ -31,7 +38,7 @@ pre-build:
 .endif
 
 GCC_REQD+=	7
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 CHECK_SHLIBS_SUPPORTED=	no
 # configure will be regenerated.
@@ -99,7 +106,8 @@ MORE_DISTFILES= \
 	Scheherazade-2.100.zip \
 	lxml-4.1.1.tgz \
 	Amiri-0.111.zip \
-	ReemKufi-0.7.zip
+	ReemKufi-0.7.zip \
+	pdfium-3794.tar.bz2
 
 .for md in ${MORE_DISTFILES}
 DISTFILES+=		${md}
@@ -174,7 +182,8 @@ CONFIGURE_ARGS+=	--disable-odk
 CONFIGURE_ARGS+=	--disable-sdremote-bluetooth
 # Enabling GIO causes error. losessioninstall.component not found.
 CONFIGURE_ARGS+=	--disable-gio
-CONFIGURE_ARGS+=	--disable-pdfium
+# Use PDFium instead of poppler for PDF import since 6.3.2.2nb1
+CONFIGURE_ARGS+=	--enable-pdfium --disable-poppler
 CONFIGURE_ARGS+=	--enable-gstreamer-1-0
 CONFIGURE_ARGS+=	--enable-python=system
 #CONFIGURE_ARGS+=	--enable-release-build
@@ -358,8 +367,9 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 .if !empty(PKG_OPTIONS:Mcups)
 .include "../../print/cups-base/buildlink3.mk"
 .endif
-.include "../../print/poppler-cpp/buildlink3.mk"
-.include "../../print/poppler-includes/buildlink3.mk"
+# Use PDFium instead of poppler for PDF import since 6.3.2.2nb1
+#.include "../../print/poppler-cpp/buildlink3.mk"
+#.include "../../print/poppler-includes/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"

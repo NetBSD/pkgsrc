@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.86 2019/10/04 12:59:05 ryoon Exp $
+$NetBSD: distinfo,v 1.87 2019/10/18 10:13:40 ryoon Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -196,6 +196,10 @@ SHA1 (libreoffice/noto-fonts-20171024.tar.gz) = e775f61b4ed544198e9497b27b346062
 RMD160 (libreoffice/noto-fonts-20171024.tar.gz) = 02f8d0e2615032daf36dc375d00a2b4575d858a3
 SHA512 (libreoffice/noto-fonts-20171024.tar.gz) = 3888c5f19d85f9ae25413a064a27f01b87e09ba07b40f721b20e563bad3289a5c435686744dc3b52980625a24f82fa0b4b38046b4db971afc50a0cb3a757c179
 Size (libreoffice/noto-fonts-20171024.tar.gz) = 6646182 bytes
+SHA1 (libreoffice/pdfium-3794.tar.bz2) = 41ff3c2291c99db71ddca1873115b7fc0bfb5065
+RMD160 (libreoffice/pdfium-3794.tar.bz2) = f05b6814ed17f4a7cbce1f66a47c7689645dd3df
+SHA512 (libreoffice/pdfium-3794.tar.bz2) = 56cf1bc0afab277aa00f9ac779a95919405566a40a4f914e379983907ee3bffaf8f500a64e8c5559daf5c4f831d1daab80f39ed4e492c2e010f09a2af0d00221
+Size (libreoffice/pdfium-3794.tar.bz2) = 7123074 bytes
 SHA1 (libreoffice/postgresql-9.2.24.tar.bz2) = 63d6966ccdbab6aae1f9754fdb8e341ada1ef653
 RMD160 (libreoffice/postgresql-9.2.24.tar.bz2) = 2fc1b9c37cfefd5fae5bd02f974484c5fc680c08
 SHA512 (libreoffice/postgresql-9.2.24.tar.bz2) = a6f043e5ef5e12e23c1c43b26a5ecafce62f3a86f38b5b85e7cb0cb7aa376d40e460a526baf67ae40de40525e4744fb5e48650ee5e007db4ce9742fcf548bd56
@@ -223,6 +227,8 @@ SHA1 (patch-download.lst) = a2daa977fee0024176ebe7e180e92931a15fe8c6
 SHA1 (patch-external_harfbuzz_UnpackedTarball__harfbuzz.mk) = 90e46a519fe587c5ac0022f84e5d94cf9e15c232
 SHA1 (patch-external_mariadb-connector-c_UnpackedTarball__mariadb-connector-c.mk) = 01798842e3f573f627be31660195edbac802df89
 SHA1 (patch-external_mariadb-connector-c_netbsd.patch) = e20e0cc58153b865551a8dd2819fb141f20fcb8d
+SHA1 (patch-external_pdfium_UnpackedTarball__pdfium.mk) = e82cdef5c7636ca3340589cf1e258cc4555c8346
+SHA1 (patch-external_pdfium_pkgsrc.patch.1) = e40ad0abec8095a1598982e6ddf7752c9aa8d60f
 SHA1 (patch-external_postgresql_ExternalProject__postgresql.mk) = 48e68ff43b971996f81985ee79d71f7b83cce428
 SHA1 (patch-i18npool_source_breakiterator_breakiterator_unicode.cxx) = 0a784bced0874b3ef7cc3b6ff19a865e0d64ce49
 SHA1 (patch-i18npool_source_collator_collator_unicode.cxx) = 853367cf9a4be70c5d0de44a82e6fadc70e40ea6
