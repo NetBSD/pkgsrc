@@ -1,0 +1,63 @@
+$NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.1 2019/10/18 10:13:40 ryoon Exp $
+
+* Support NetBSD
+* Do no conflict with FreeType 2.10 from pkgsrc
+* Add pkgsrc font path
+
+--- external/pdfium/pkgsrc.patch.1.orig	2019-10-18 00:59:38.822575812 +0000
++++ external/pdfium/pkgsrc.patch.1
+@@ -0,0 +1,54 @@
++--- pdfium/core/fxcrt/cfx_fileaccess_posix.h.orig	2019-05-10 17:07:53.000000000 +0000
+++++ pdfium/core/fxcrt/cfx_fileaccess_posix.h
++@@ -12,7 +12,7 @@
++ #include "core/fxcrt/fx_system.h"
++ 
++ #if _FX_PLATFORM_ != _FX_PLATFORM_LINUX_ && !defined(OS_MACOSX) && \
++-    !defined(OS_ANDROID)
+++    !defined(OS_ANDROID) && !defined(OS_NETBSD)
++ #error "Included on the wrong platform"
++ #endif
++ 
++--- pdfium/third_party/freetype/src/src/base/ftobjs.c.orig	2019-03-11 15:49:39.000000000 +0000
+++++ pdfium/third_party/freetype/src/src/base/ftobjs.c
++@@ -4060,7 +4060,7 @@
++ 
++   FT_EXPORT_DEF( FT_UInt )
++   FT_Get_Name_Index( FT_Face     face,
++-                     FT_String*  glyph_name )
+++                     const FT_String*  glyph_name )
++   {
++     FT_UInt  result = 0;
++ 
++--- pdfium/third_party/freetype/src/include/freetype/freetype.h.orig	2019-03-11 15:49:39.000000000 +0000
+++++ pdfium/third_party/freetype/src/include/freetype/freetype.h
++@@ -3933,7 +3933,7 @@ FT_BEGIN_HEADER
++    */
++   FT_EXPORT( FT_UInt )
++   FT_Get_Name_Index( FT_Face     face,
++-                     FT_String*  glyph_name );
+++                     const FT_String*  glyph_name );
++ 
++ 
++   /**************************************************************************
++--- pdfium/core/fxcrt/fx_system.h.orig	2019-05-10 17:07:53.000000000 +0000
+++++ pdfium/core/fxcrt/fx_system.h
++@@ -26,7 +26,7 @@
++ #define _FX_PLATFORM_ _FX_PLATFORM_WINDOWS_
++ #elif defined(_WIN64)
++ #define _FX_PLATFORM_ _FX_PLATFORM_WINDOWS_
++-#elif defined(__linux__)
+++#elif defined(__linux__) || defined(__NetBSD__)
++ #define _FX_PLATFORM_ _FX_PLATFORM_LINUX_
++ #elif defined(__APPLE__)
++ #define _FX_PLATFORM_ _FX_PLATFORM_APPLE_
++--- pdfium/core/fxge/fx_ge_linux.cpp.orig	2019-10-17 12:10:31.399095490 +0000
+++++ pdfium/core/fxge/fx_ge_linux.cpp
++@@ -155,6 +155,7 @@ std::unique_ptr<SystemFontInfoIface> Sys
++     pInfo->AddPath("/usr/share/X11/fonts/Type1");
++     pInfo->AddPath("/usr/share/X11/fonts/TTF");
++     pInfo->AddPath("/usr/local/share/fonts");
+++    pInfo->AddPath("@X11BASE@/share/fonts");
++   }
++   return std::move(pInfo);
++ }
