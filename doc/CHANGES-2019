@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4397 2019/10/17 20:58:13 maya Exp $
+$NetBSD: CHANGES-2019,v 1.4398 2019/10/18 09:04:25 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7055,3 +7055,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/libmicrohttpd to 0.9.67 [ng0 2019-10-17]
 	Updated devel/doxygen to 1.8.16 [adam 2019-10-17]
 	Removed cross/nios2-gcc41 successor cross/nios2-gcc [maya 2019-10-17]
+	Updated x11/libdrm to 2.4.100 [nia 2019-10-18]
