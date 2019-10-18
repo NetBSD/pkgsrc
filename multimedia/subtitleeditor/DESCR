@@ -1,7 +1,5 @@
-Subtitle Editor is a GTK+2 tool to edit subtitles. It can be used
-for new subtitles or as a tool to transform, edit, correct and
-refine existing subtitle. This program also shows sound waves,
-which makes it easier to synchronise subtitles to voices.
+Subtitle Editor is a GTK+3 tool to edit subtitles.
 
-Subtitle Editor is free software released under the GNU General
-Public License (GPL).
+It can be used for new subtitles or as a tool to transform, edit, correct
+and refine existing subtitle. This program also shows sound waves, which
+makes it easier to synchronise subtitles to voices.
