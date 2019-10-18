@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.283 2019/10/18 15:56:44 nia Exp $
+# $NetBSD: Makefile,v 1.284 2019/10/18 16:54:42 nia Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -128,6 +128,7 @@ SUBDIR+=	libkate
 SUBDIR+=	libkcddb
 SUBDIR+=	libkcompactdisc
 SUBDIR+=	libmatroska
+SUBDIR+=	libmediaart
 SUBDIR+=	libmediainfo
 SUBDIR+=	libmp4v2
 SUBDIR+=	libmpeg2
