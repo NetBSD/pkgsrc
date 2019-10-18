@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/10/18 18:31:02 nia Exp $
+
+SHA1 (gstreamermm-1.10.0.tar.xz) = 1f63ce84d8b6738cac50b07006415bdd8c2110ef
+RMD160 (gstreamermm-1.10.0.tar.xz) = 2db5f58f80b9e062298a5e014b7b1a523b46ddf0
+SHA512 (gstreamermm-1.10.0.tar.xz) = 34eeb9eec5958c96acf7c7791eef80138e5d55fea6ddf1bf9ace6b1ec7f052da2abf04d87089e4c9ead51c631ef7afceaf9fceb946ec3d105da522187c69e429
+Size (gstreamermm-1.10.0.tar.xz) = 3529640 bytes
