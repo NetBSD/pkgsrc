@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg_test.R,v 1.8 2019/10/18 21:42:20 rillig Exp $
+# $NetBSD: R2pkg_test.R,v 1.9 2019/10/18 22:10:46 rillig Exp $
 #
 # Copyright (c) 2019
 #	Roland Illig.  All rights reserved.
@@ -31,8 +31,6 @@
 source('R2pkg.R')
 library(testthat)
 library(withr)
-
-mkcvsid = paste0('# $', 'NetBSD$')
 
 # TODO: use a test fixture for setting these
 arg.recursive <- FALSE
