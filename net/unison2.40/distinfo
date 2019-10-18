@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2018/03/14 11:16:14 dholland Exp $
+$NetBSD: distinfo,v 1.6 2019/10/18 09:59:26 pho Exp $
 
 SHA1 (unison-2.40.128.tar.gz) = 392a573cbf331d71cac8ccb32f5440dceec88470
 RMD160 (unison-2.40.128.tar.gz) = ad3f4191af957aef1084e3ea9b99c17777e35596
@@ -10,6 +10,7 @@ SHA1 (patch-bytearray.ml) = efe1e039f9f64c204229b0d6d483a480ce13dce7
 SHA1 (patch-bytearray.mli) = a93299b6880159c66b2e3feed2db10b53a99489f
 SHA1 (patch-bytearray__stubs.c) = 6ad17f3c6a581b749f1c6d52149377f908179290
 SHA1 (patch-external.ml) = 11198c37a72ee552e15f394a7f3b005ef1b4d392
+SHA1 (patch-files.ml) = 403162873ece0702eb992f9deffd9d57c3609069
 SHA1 (patch-fileutil.ml) = cfa84095f6a3d249d483fcf6aaeb18083ee3593d
 SHA1 (patch-fingerprint.ml) = 709e0ee1fa3ccdc22ac00421d0538e37f35c31b1
 SHA1 (patch-fpcache.ml) = 595791d3f9f40f058c449a361a6439088eed3121
@@ -18,8 +19,9 @@ SHA1 (patch-lwt_generic_lwt__unix__impl.ml) = f73bbd3a9b25a0fd22b946151b4b18150a
 SHA1 (patch-lwt_lwt__unix.mli) = 22875429a5fb31835f7c8c0a27473ea4d3030456
 SHA1 (patch-osx.ml) = a7bd0c11c7a49ec86fa277a128c6a887ac37f0b7
 SHA1 (patch-path.ml) = f48a08d01e2bfeff405d9a882cf6a4ab30bd48f4
+SHA1 (patch-recon.ml) = a88f6285db139c6934f941432ec923ba5979ccaf
 SHA1 (patch-remote.ml) = e1f6126be4eb784f1b37f61dda2068821d81ff11
-SHA1 (patch-system_system__generic.ml) = 02d4d678b8868a7237b0aecc3f4add74e1011fd0
+SHA1 (patch-system_system__generic.ml) = 08654e51578982c9c0814aaf89d58ac2155d8f56
 SHA1 (patch-terminal.ml) = f3c98c01361be18c97552037dc3b703419251f46
 SHA1 (patch-test.ml) = 989c23bb359fef8e8cee7df0f6cc0614b386f954
 SHA1 (patch-transfer.ml) = 4f7f2eb1621010a05a629809bb6c543a4a6e65af
