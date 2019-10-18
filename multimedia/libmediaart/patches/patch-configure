@@ -1,0 +1,30 @@
+$NetBSD: patch-configure,v 1.1 2019/10/18 16:54:42 nia Exp $
+
+test(1) portability.
+
+--- configure.orig	2017-08-11 20:55:44.000000000 +0000
++++ configure
+@@ -18722,12 +18722,12 @@ selected_for_media_art="no  (disabled)"
+ # Choose between backends (GdkPixbuf/Qt/etc)
+ ##################################################################
+ 
+-if test "x$enable_qt" == "xyes" && test "x$enable_gdkpixbuf" == "xyes"; then
++if test "x$enable_qt" = "xyes" && test "x$enable_gdkpixbuf" = "xyes"; then
+    as_fn_error $? "Can not enable both Qt and GdkPixbuf backends, please pick one" "$LINENO" 5
+ fi
+ 
+ if test "x$enable_qt" != "xno" && test "x$enable_gdkpixbuf" != "xyes"; then
+-   if test "x$with_qt_version" == "xauto" || test "x$with_qt_version" == "x5"; then
++   if test "x$with_qt_version" = "xauto" || test "x$with_qt_version" = "x5"; then
+ 
+ pkg_failed=no
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for QT5" >&5
+@@ -18800,7 +18800,7 @@ $as_echo "yes" >&6; }
+ 	have_qt5=yes
+ fi
+    fi
+-   if test "x$with_qt_version" == "xauto" || test "x$with_qt_version" == "x4"; then
++   if test "x$with_qt_version" = "xauto" || test "x$with_qt_version" = "x4"; then
+ 
+ pkg_failed=no
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for QT4" >&5
