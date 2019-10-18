@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2019/10/14 03:05:31 gutteridge Exp $
+# $NetBSD: Makefile,v 1.3 2019/10/18 09:59:46 nia Exp $
 
-DISTNAME=	meson-0.51.2
+DISTNAME=	meson-0.52.0
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/meson/}
 
@@ -27,6 +27,7 @@ SUBST_MESSAGE.man=	Fixing man page installation path.
 REPLACE_PYTHON+=	ghwt.py
 REPLACE_PYTHON+=	meson.py
 REPLACE_PYTHON+=	mesonbuild/rewriter.py
+REPLACE_PYTHON+=	mesonbuild/cmake/data/run_ctgt.py
 REPLACE_PYTHON+=	run_*.py
 REPLACE_PYTHON+=	test\ cases/*/*/*.py
 REPLACE_PYTHON+=	test\ cases/*/*/*/*.py
