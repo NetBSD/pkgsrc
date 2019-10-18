@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4400 2019/10/18 10:00:00 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4401 2019/10/18 10:14:14 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7058,3 +7058,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/libdrm to 2.4.100 [nia 2019-10-18]
 	Updated graphics/MesaLib to 19.2.1 [nia 2019-10-18]
 	Updated devel/meson to 0.52.0 [nia 2019-10-18]
+	Updated misc/libreoffice to 6.3.2.2nb1 [ryoon 2019-10-18]
