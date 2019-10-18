@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4406 2019/10/18 12:31:15 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4407 2019/10/18 12:32:13 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7065,3 +7065,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/py-mypy_extensions to 0.4.3 [adam 2019-10-18]
 	Updated lang/py-mypy to 0.740 [adam 2019-10-18]
 	Updated sysutils/brasero to 3.12.2 [nia 2019-10-18]
+	Removed sysutils/brasero-nautilus [nia 2019-10-18]
