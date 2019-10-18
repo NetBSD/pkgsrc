@@ -1,0 +1,1 @@
+bin/distro @PREFIX@/bin/distro-@PYVERSSUFFIX@
