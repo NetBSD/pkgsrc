@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4402 2019/10/18 10:42:29 micha Exp $
+$NetBSD: CHANGES-2019,v 1.4403 2019/10/18 11:04:11 micha Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7060,3 +7060,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/meson to 0.52.0 [nia 2019-10-18]
 	Updated misc/libreoffice to 6.3.2.2nb1 [ryoon 2019-10-18]
 	Updated wm/flwm to 1.16 [micha 2019-10-18]
+	Updated www/htmldoc to 1.9.7 [micha 2019-10-18]
