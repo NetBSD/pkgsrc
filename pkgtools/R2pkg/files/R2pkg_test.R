@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg_test.R,v 1.6 2019/10/18 16:07:53 rillig Exp $
+# $NetBSD: R2pkg_test.R,v 1.7 2019/10/18 17:18:03 rillig Exp $
 #
 # Copyright (c) 2019
 #	Roland Illig.  All rights reserved.
@@ -252,37 +252,45 @@ test_that('read.file.as.value, multiple variable assignments', {
 # test_that('read.file.as.values', {
 # })
 
-# test_that('simplify.whitespace', {
-# })
+test_that('simplify.whitespace', {
+    expect_equal(simplify.whitespace('\t \nword \t\n\f'), ' \nword \n\f')
+})
 
-# test_that('remove.punctuation', {
-# })
+test_that('remove.punctuation', {
+    expect_equal(remove.punctuation('+,-./'), '+./')
+})
 
-# test_that('remove.quotes', {
-# })
+test_that('remove.quotes', {
+    expect_equal(remove.quotes('"\'hello`,,'), 'hello,,')
+})
 
-# test_that('remove.articles', {
-# })
+test_that('remove.articles', {
+    expect_equal(remove.articles('Get a life'), 'Getlife')  # FIXME
+    expect_equal(remove.articles('An apple a day'), 'appleday')  # FIXME
+    expect_equal(remove.articles('Annnnnnnnnn apple'), 'apple')  # FIXME
+    expect_equal(remove.articles('Grade A'), 'Grade A')
+    expect_equal(remove.articles('Grade A is best'), 'Gradeis best')  # FIXME
+})
 
-# test_that('case.insensitive.equals', {
-# })
+test_that('case.insensitive.equals', {
+    expect_equal(case.insensitive.equals('HELLO', 'hello'), TRUE)
+    expect_equal(case.insensitive.equals('HELLO', 'hellx'), FALSE)
+    expect_equal(case.insensitive.equals('  "HELLO"', 'hello'), FALSE)
+    expect_equal(case.insensitive.equals('  "HELLO"', '  hello'), FALSE)
+    expect_equal(case.insensitive.equals('  HELLO', 'hello'), FALSE)
+    expect_equal(case.insensitive.equals('  HELLO', ' hello'), TRUE)
+})
 
-# test_that('weakly.equals', {
-# })
-
-# test_that('new.field.if.different', {
-# })
+test_that('weakly.equals', {
+    expect_equal(weakly.equals('HELLO', 'hello'), TRUE)
+    expect_equal(weakly.equals('HELLO', 'hellx'), FALSE)
+    expect_equal(weakly.equals('  "HELLO"', 'hello'), FALSE)
+    expect_equal(weakly.equals('  "HELLO"', '  hello'), TRUE)
+    expect_equal(weakly.equals('  HELLO', 'hello'), FALSE)
+    expect_equal(weakly.equals('  HELLO', ' hello'), TRUE)
+})
 
 # test_that('pkgsrc.license', {
-# })
-
-# test_that('package', {
-# })
-
-# test_that('version', {
-# })
-
-# test_that('comment', {
 # })
 
 # test_that('use.tools', {
@@ -350,14 +358,28 @@ test_that('make.dependency', {
     expect_equal(make.dependency('pkgname (>= 1.0)'), c('pkgname ', '>= 1.0'))
 })
 
-# test_that('depends', {
-# })
+test_that('depends', {
+    expect_equal(depends(make.dependency('pkg')), 'pkg')
+    expect_equal(depends(make.dependency('pkg(>=1.0)')), 'pkg')
+    expect_equal(depends(make.dependency('ellipsis(>=1.0)')), 'ellipsis')
 
-# test_that('depends.pkg', {
-# })
+    # undefined behavior
+    expect_equal(depends(make.dependency('pkg (>= 1.0)')), 'pkg ')
+    expect_equal(depends(make.dependency('ellipsis (>= 1.0)')), 'ellipsis ')
+})
 
-# test_that('new.depends.pkg', {
-# })
+test_that('depends.pkg', {
+    local_dir(package.dir)
+
+    expect_equal(depends.pkg('ellipsis'), '../../math/R-ellipsis')
+})
+
+test_that('new.depends.pkg', {
+    local_dir(package.dir)
+
+    if (dir.exists('../../wip'))
+        expect_equal(new.depends.pkg('C50'), '../../wip/R-C50')
+})
 
 # test_that('depends.pkg.fullname', {
 # })
@@ -403,8 +425,18 @@ test_that('buildlink3.file with too high version number', {
     expect_equal(bl3, '../../math/R-bitops/buildlink3.mk')
 })
 
-# test_that('buildlink3.line', {
-# })
+test_that('buildlink3.line', {
+    local_dir(package.dir)
+
+    expect_equal(
+        buildlink3.line(make.dependency('ellipsis')),
+        '.include "../../math/R-ellipsis/buildlink3.mk"')
+
+    # undefined behavior
+    expect_equal(
+        buildlink3.line(make.dependency('not-found')),
+        '.include "NA/buildlink3.mk"')
+})
 
 # test_that('dependency.dir', {
 # })
