@@ -1,11 +1,6 @@
-$NetBSD: distinfo,v 1.12 2015/11/04 01:32:07 agc Exp $
+$NetBSD: distinfo,v 1.13 2019/10/18 12:31:02 nia Exp $
 
-SHA1 (brasero-2.32.1.tar.bz2) = 56141108561f2b8d45998662b86cf6e20f0ff4f2
-RMD160 (brasero-2.32.1.tar.bz2) = 0acfcc53077cbbdaa5e0e593f290c41825f72838
-SHA512 (brasero-2.32.1.tar.bz2) = ebd08f5ff21685a853c9b339b19b51ffe62e6050a6373883dee1266b45b490308ea5a25a1167a1ea48b89ff64625114a95c6a9f5f42d0d6defc2edd9c0295f25
-Size (brasero-2.32.1.tar.bz2) = 4530933 bytes
-SHA1 (patch-ah) = 8caa999a276674bfc0512fc414ee08ab3f8f185e
-SHA1 (patch-aj) = 31928e19cfcc2612bd0826f0a89a23eb7b378c7f
-SHA1 (patch-ak) = 3db8ae8a44083aff6519f0be173b31f50d2ed3e6
-SHA1 (patch-al) = 855566588032d12315281ca983fed27eb9aeceaf
-SHA1 (patch-ba) = 1e314b690f72c767f553bcfb8360076f61b0a8b8
+SHA1 (brasero-3.12.2.tar.xz) = 2f3677c2aafa1c6a832befe45e0aeb25f9f95089
+RMD160 (brasero-3.12.2.tar.xz) = bc96ca61aa631bf018f4b9aff3ffeafae5db6e03
+SHA512 (brasero-3.12.2.tar.xz) = 14886e772123f179f79d3172b59e21ced990fd8834cd27e8717eb635a75163c44c1d5084818b53da559a0c2ef25e7c0da4a3a7d3781e2ea74b59cfe98987384f
+Size (brasero-3.12.2.tar.xz) = 3742120 bytes
