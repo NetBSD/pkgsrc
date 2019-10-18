@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg_test.R,v 1.5 2019/10/17 22:08:13 rillig Exp $
+# $NetBSD: R2pkg_test.R,v 1.6 2019/10/18 16:07:53 rillig Exp $
 #
 # Copyright (c) 2019
 #	Roland Illig.  All rights reserved.
@@ -40,11 +40,21 @@ arg.update <- FALSE
 
 package.dir <- file.path(Sys.getenv('PKGSRCDIR'), 'pkgtools', 'R2pkg')
 
-expect_printed <- function(obj, expected) {
+expect_printed <- function(obj, ...) {
     out <- ''
     with_output_sink(textConnection('out', 'w', local = TRUE), print(obj))
-    expect_equal(!!out, !!expected)
+    expect_equal(length(out), length(c(...)))
+    expect_equal(!!out, !!c(...))
 }
+
+linesConnection <- function(...)
+    textConnection(paste0(c(...), collapse = '\n'))
+
+test_that('linesConnection', {
+    lines <- readLines(linesConnection('1', '2', '3'))
+
+    expect_equal(lines, c('1', '2', '3'))
+})
 
 test_that('level.message', {
     output <- ''
@@ -129,14 +139,15 @@ test_that('as.sorted.list', {
 })
 
 test_that('read.file.as.dataframe', {
-    content <- textConnection('VAR=value\nVAR2=value2\n')
+    content <- linesConnection(
+        'VAR=value',
+        'VAR2=value2')
 
     df <- read.file.as.dataframe(content)
 
-    expect_equal(length(df$line), 3)
+    expect_equal(length(df$line), 2)
     expect_equal(df$line[[1]], 'VAR=value')
     expect_equal(df$line[[2]], 'VAR2=value2')
-    expect_equal(df$line[[3]], '')
 })
 
 # test_that('categorize.key_value', {
@@ -152,37 +163,29 @@ test_that('read.file.as.dataframe', {
 # })
 
 test_that('read.Makefile.as.dataframe', {
-    lines <- c(
-    '# comment',
-    'VAR= value',
-    '',
-    '.include "other.mk"',
-    '.if 0',
-    '.endif'
-    )
-    content <- paste0(paste(lines, collapse = '\n'), '\n')
-    expect_equal(content, '# comment\nVAR= value\n\n.include "other.mk"\n.if 0\n.endif\n')
+    df <- read.Makefile.as.dataframe(linesConnection(
+        '# comment',
+        'VAR= value',
+        '',
+        '.include "other.mk"',
+        '.if 0',
+        '.endif'))
 
-    df <- read.Makefile.as.dataframe(textConnection(content))
-
-    expect_printed(df, c(
-    '                 line order category key_value  key depends buildlink3.mk',
-    '1           # comment     1       NA     FALSE <NA>   FALSE         FALSE',
-    '2          VAR= value     2       NA      TRUE  VAR   FALSE         FALSE',
-    '3                         3       NA     FALSE <NA>   FALSE         FALSE',
-    '4 .include "other.mk"     4       NA     FALSE <NA>   FALSE         FALSE',
-    '5               .if 0     5       NA     FALSE <NA>   FALSE         FALSE',
-    '6              .endif     6       NA     FALSE <NA>   FALSE         FALSE',
-    '7                         7       NA     FALSE <NA>   FALSE         FALSE',
-    '  operator delimiter old_value old_todo',
-    '1     <NA>      <NA>      <NA>     <NA>',
-    '2        =               value         ',
-    '3     <NA>      <NA>      <NA>     <NA>',
-    '4     <NA>      <NA>      <NA>     <NA>',
-    '5     <NA>      <NA>      <NA>     <NA>',
-    '6     <NA>      <NA>      <NA>     <NA>',
-    '7     <NA>      <NA>      <NA>     <NA>'
-    ))
+    expect_printed(df,
+        '                 line order category key_value  key depends buildlink3.mk',
+        '1           # comment     1       NA     FALSE <NA>   FALSE         FALSE',
+        '2          VAR= value     2       NA      TRUE  VAR   FALSE         FALSE',
+        '3                         3       NA     FALSE <NA>   FALSE         FALSE',
+        '4 .include "other.mk"     4       NA     FALSE <NA>   FALSE         FALSE',
+        '5               .if 0     5       NA     FALSE <NA>   FALSE         FALSE',
+        '6              .endif     6       NA     FALSE <NA>   FALSE         FALSE',
+        '  operator delimiter old_value old_todo',
+        '1     <NA>      <NA>      <NA>     <NA>',
+        '2        =               value         ',
+        '3     <NA>      <NA>      <NA>     <NA>',
+        '4     <NA>      <NA>      <NA>     <NA>',
+        '5     <NA>      <NA>      <NA>     <NA>',
+        '6     <NA>      <NA>      <NA>     <NA>')
 })
 
 test_that('read.file.as.list can read an empty file', {
@@ -474,55 +477,47 @@ test_that('use.languages with Rcpp as dependency', {
 # })
 
 test_that('update.Makefile.with.metadata', {
-    df <- read.Makefile.as.dataframe(textConnection(paste0(
-    'CATEGORIES=\n',
-    'MAINTAINER=\n',
-    'COMMENT=\n',
-    'R_PKGVER=\n'
-    )))
+    df <- read.Makefile.as.dataframe(linesConnection(
+        'CATEGORIES=',
+        'MAINTAINER=',
+        'COMMENT=',
+        'R_PKGVER='))
     metadata = list(Title = 'Package comment', Version = '19.3', License = 'license')
 
     updated <- update.Makefile.with.metadata(df, metadata)
 
-    expect_printed(updated, c(
-    '         line order category key_value        key depends buildlink3.mk',
-    '1 CATEGORIES=     1       NA      TRUE CATEGORIES   FALSE         FALSE',
-    '2 MAINTAINER=     2       NA      TRUE MAINTAINER   FALSE         FALSE',
-    '3    COMMENT=     3       NA      TRUE    COMMENT   FALSE         FALSE',
-    '4   R_PKGVER=     4       NA      TRUE   R_PKGVER   FALSE         FALSE',
-    '5                 5       NA     FALSE       <NA>   FALSE         FALSE',
-    '  operator delimiter old_value old_todo       new_value',
-    '1        =                                        R2pkg',
-    '2        =                                             ',
-    '3        =                              Package comment',
-    '4        =                                         19.3',
-    '5     <NA>      <NA>      <NA>     <NA>            <NA>'
-    ))
+    expect_printed(updated,
+        '         line order category key_value        key depends buildlink3.mk',
+        '1 CATEGORIES=     1       NA      TRUE CATEGORIES   FALSE         FALSE',
+        '2 MAINTAINER=     2       NA      TRUE MAINTAINER   FALSE         FALSE',
+        '3    COMMENT=     3       NA      TRUE    COMMENT   FALSE         FALSE',
+        '4   R_PKGVER=     4       NA      TRUE   R_PKGVER   FALSE         FALSE',
+        '  operator delimiter old_value old_todo       new_value',
+        '1        =                                        R2pkg',
+        '2        =                                             ',
+        '3        =                              Package comment',
+        '4        =                                         19.3')
 })
 
 # If the variable has been removed from the Makefile, it is not updated.
 test_that('update.Makefile.with.metadata without CATEGORIES', {
-    df <- read.Makefile.as.dataframe(textConnection(paste0(
-    'MAINTAINER=\n',
-    'COMMENT=\n',
-    'R_PKGVER=\n'
-    )))
+    df <- read.Makefile.as.dataframe(linesConnection(
+        'MAINTAINER=',
+        'COMMENT=',
+        'R_PKGVER='))
     metadata = list(Title = 'Package comment', Version = '19.3', License = 'license')
 
     updated <- update.Makefile.with.metadata(df, metadata)
 
-    expect_printed(updated, c(
-    '         line order category key_value        key depends buildlink3.mk',
-    '1 MAINTAINER=     1       NA      TRUE MAINTAINER   FALSE         FALSE',
-    '2    COMMENT=     2       NA      TRUE    COMMENT   FALSE         FALSE',
-    '3   R_PKGVER=     3       NA      TRUE   R_PKGVER   FALSE         FALSE',
-    '4                 4       NA     FALSE       <NA>   FALSE         FALSE',
-    '  operator delimiter old_value old_todo       new_value',
-    '1        =                                             ',
-    '2        =                              Package comment',
-    '3        =                                         19.3',
-    '4     <NA>      <NA>      <NA>     <NA>            <NA>'
-    ))
+    expect_printed(updated,
+        '         line order category key_value        key depends buildlink3.mk',
+        '1 MAINTAINER=     1       NA      TRUE MAINTAINER   FALSE         FALSE',
+        '2    COMMENT=     2       NA      TRUE    COMMENT   FALSE         FALSE',
+        '3   R_PKGVER=     3       NA      TRUE   R_PKGVER   FALSE         FALSE',
+        '  operator delimiter old_value old_todo       new_value',
+        '1        =                                             ',
+        '2        =                              Package comment',
+        '3        =                                         19.3')
 })
 
 # test_that('update.Makefile.with.new.values', {
@@ -585,7 +580,7 @@ test_that('conflicts', {
 test_that('update.Makefile', {
     local_dir(tempdir())
     local_mock('system', function(...) {
-        expect_printed(list(...), c('asdf'))
+        expect_printed(list(...), 'asdf')
         ''
     })
     writeLines(
@@ -603,20 +598,19 @@ test_that('update.Makefile', {
     metadata <- make.metadata('DESCRIPTION')
     expect_printed(
         as.data.frame(metadata),
-        c(
-            '  Package Version Title Description License Imports          Depends',
-            '1 pkgname     1.0  <NA>        <NA>    <NA>    <NA> dep1 dep2(>=2.0)'))
-    expect_printed(metadata$Imports, c('[1] NA'))
-    expect_printed(metadata$Depends, c('[1] "dep1 dep2(>=2.0)"'))
+        '  Package Version Title Description License Imports          Depends',
+        '1 pkgname     1.0  <NA>        <NA>    <NA>    <NA> dep1 dep2(>=2.0)')
+    expect_printed(metadata$Imports, '[1] NA')
+    expect_printed(metadata$Depends, '[1] "dep1 dep2(>=2.0)"')
     expect_printed(
         paste2(metadata$Imports, metadata$Depends),
-        c('[1] "dep1 dep2(>=2.0)"'))
+        '[1] "dep1 dep2(>=2.0)"')
     expect_printed(
         make.imports(metadata$Imports, metadata$Depends),
-        c('[1] "dep1"        "dep2(>=2.0)"'))
+        '[1] "dep1"        "dep2(>=2.0)"')
     FALSE && expect_printed(
         make.depends(metadata$Imports, metadata$Depends),
-        c('[1] "dep1"        "dep2(>=2.0)"'))
+        '[1] "dep1"        "dep2(>=2.0)"')
 
     FALSE && update.Makefile(metadata)
 
@@ -633,9 +627,11 @@ test_that('update.Makefile', {
 
 test_that('create.DESCR', {
     local_dir(tempdir())
-    metadata <- list(
-        Description = 'First line\n\nSecond paragraph\nhas 2 lines'
-    )
+    metadata <- make.metadata(linesConnection(
+        'Description: First line',
+        ' .',
+        ' Second paragraph',
+        ' has 2 lines'))
 
     create.DESCR(metadata)
 
@@ -645,6 +641,16 @@ test_that('create.DESCR', {
         '',
         'Second paragraph has 2 lines'
     ))
+})
+
+test_that('create.DESCR for a package without Description', {
+    local_dir(tempdir())
+    metadata <- make.metadata(linesConnection('Package: pkgname'))
+
+    create.DESCR(metadata)
+
+    lines <- readLines('DESCR', encoding = 'UTF-8')
+    expect_equal(lines, c('NA'))  # FIXME
 })
 
 test_that('make.metadata', {
