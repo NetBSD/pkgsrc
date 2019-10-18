@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/09/26 18:36:46 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/10/18 14:48:29 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go112/AUTHORS
@@ -2685,6 +2685,8 @@ go112/src/cmd/vendor/github.com/ianlancetaylor/demangle/demangle.go
 go112/src/cmd/vendor/github.com/ianlancetaylor/demangle/demangle_test.go
 go112/src/cmd/vendor/github.com/ianlancetaylor/demangle/expected_test.go
 go112/src/cmd/vendor/github.com/ianlancetaylor/demangle/testdata/demangle-expected
+go112/src/cmd/vendor/golang.org/x/arch/LICENSE
+go112/src/cmd/vendor/golang.org/x/arch/PATENTS
 go112/src/cmd/vendor/golang.org/x/arch/arm/armasm/Makefile
 go112/src/cmd/vendor/golang.org/x/arch/arm/armasm/decode.go
 go112/src/cmd/vendor/golang.org/x/arch/arm/armasm/decode_test.go
