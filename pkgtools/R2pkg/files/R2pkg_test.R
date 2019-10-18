@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg_test.R,v 1.7 2019/10/18 17:18:03 rillig Exp $
+# $NetBSD: R2pkg_test.R,v 1.8 2019/10/18 21:42:20 rillig Exp $
 #
 # Copyright (c) 2019
 #	Roland Illig.  All rights reserved.
@@ -38,7 +38,7 @@ mkcvsid = paste0('# $', 'NetBSD$')
 arg.recursive <- FALSE
 arg.update <- FALSE
 
-package.dir <- file.path(Sys.getenv('PKGSRCDIR'), 'pkgtools', 'R2pkg')
+package_dir <- file.path(Sys.getenv('PKGSRCDIR'), 'pkgtools', 'R2pkg')
 
 expect_printed <- function(obj, ...) {
     out <- ''
@@ -369,13 +369,13 @@ test_that('depends', {
 })
 
 test_that('depends.pkg', {
-    local_dir(package.dir)
+    local_dir(package_dir)
 
     expect_equal(depends.pkg('ellipsis'), '../../math/R-ellipsis')
 })
 
 test_that('new.depends.pkg', {
-    local_dir(package.dir)
+    local_dir(package_dir)
 
     if (dir.exists('../../wip'))
         expect_equal(new.depends.pkg('C50'), '../../wip/R-C50')
@@ -406,7 +406,7 @@ test_that('new.depends.pkg', {
 # })
 
 test_that('buildlink3.file with matching version number', {
-    local_dir(package.dir)
+    local_dir(package_dir)
     dependency <- make.dependency('bitops(>=0.1)')
 
     bl3 <- buildlink3.file(dependency)
@@ -417,7 +417,7 @@ test_that('buildlink3.file with matching version number', {
 # The version number of the dependency is not checked against
 # the resolved buildlink3 file.
 test_that('buildlink3.file with too high version number', {
-    local_dir(package.dir)
+    local_dir(package_dir)
     dependency <- make.dependency('bitops(>=1000.0)')
 
     bl3 <- buildlink3.file(dependency)
@@ -426,7 +426,7 @@ test_that('buildlink3.file with too high version number', {
 })
 
 test_that('buildlink3.line', {
-    local_dir(package.dir)
+    local_dir(package_dir)
 
     expect_equal(
         buildlink3.line(make.dependency('ellipsis')),
@@ -469,14 +469,48 @@ test_that('use.languages with Rcpp as dependency', {
 # test_that('copy.description', {
 # })
 
-# test_that('write.Makefile', {
-# })
+test_that('write.Makefile', {
+    tmpdir <- paste(tempdir(), 'category', 'pkgdir', sep = '/')
+    dir.create(tmpdir, recursive = TRUE)
+    local_dir(tmpdir)
+    metadata <- make.metadata(linesConnection(
+        'Package: pkgname',
+        'Version: 1.3',
+        'Depends: ellipsis'))
+
+    write.Makefile(metadata)
+
+    expect_equal(readLines('Makefile'),c(
+        mkcvsid,
+        '',
+        'R_PKGNAME=\tpkgname',
+        'R_PKGVER=\t1.3',
+        'CATEGORIES=\tcategory',
+        '',
+        'MAINTAINER=\t',  # FIXME
+        'COMMENT=\tNA',  # FIXME
+        'LICENSE=\tNA',  # FIXME
+        '',
+        'USE_LANGUAGES=\t# none',
+        '',
+        '.include "../../math/R/Makefile.extension"',
+        '.include "../../mk/bsd.pkg.mk"'
+    ))
+})
 
 # test_that('construct.line', {
 # })
 
-# test_that('element', {
-# })
+test_that('element', {
+    mklines <- read.Makefile.as.dataframe(linesConnection(
+        'COMMENT=\tThe comment',
+        'EMPTY='))
+
+    expect_equal(element(mklines, 'COMMENT', 'order'), 1)
+    expect_equal(element(mklines, 'COMMENT', 'old_value'), 'The comment')
+    expect_equal(element(mklines, 'UNKNOWN', 'order'), '???')  # FIXME: should be a number
+    expect_equal(element(mklines, 'EMPTY', 'old_value'), '')
+})
 
 # test_that('make.categories', {
 # })
@@ -484,8 +518,16 @@ test_that('use.languages with Rcpp as dependency', {
 # test_that('make.maintainer', {
 # })
 
-# test_that('make.comment', {
-# })
+test_that('make.comment', {
+    mklines <- read.Makefile.as.dataframe(linesConnection(
+        'COMMENT=\tOld comment'))
+
+    mklines$new_value[[1]] <- 'New comment'
+    expect_equal(make.comment(mklines), 'Old comment\t# [R2pkg] updated to: New comment')
+
+    mklines$new_value[[1]] <- 'old Comment'
+    expect_equal(make.comment(mklines), 'Old comment')
+})
 
 # test_that('make.new_license', {
 # })
@@ -502,33 +544,40 @@ test_that('use.languages with Rcpp as dependency', {
 # test_that('make.r_pkgver', {
 # })
 
-# test_that('find.order', {
-# })
+test_that('find.order', {
+    mklines <- read.Makefile.as.dataframe(linesConnection(
+        'CATEGORIES=',
+        'HOMEPAGE=',
+        'USE_TOOLS+=',
+        '.include "other.mk"',
+        '# comment'))
 
-# test_that('write.makefile', {
-# })
+    vars_order <- find.order(mklines, 'key_value', 'order')
+    include_order <- find.order(mklines, 'buildlink3.mk', 'order')
+
+    expect_equal(mklines[, 'key_value'], c(TRUE, TRUE, TRUE, FALSE, FALSE))
+    expect_equal(mklines[, 'buildlink3.mk'], c(FALSE, FALSE, FALSE, FALSE, FALSE))
+    expect_equal(vars_order, c(1))
+    expect_equal(include_order, NA_integer_)
+})
 
 test_that('update.Makefile.with.metadata', {
+    local_dir(package_dir)  # to get a realistic category
     df <- read.Makefile.as.dataframe(linesConnection(
-        'CATEGORIES=',
-        'MAINTAINER=',
-        'COMMENT=',
-        'R_PKGVER='))
+        'CATEGORIES=\told categories',
+        'MAINTAINER=\told_maintainer@example.org',
+        'COMMENT=\told comment',
+        'R_PKGVER=\t1.0'))
     metadata = list(Title = 'Package comment', Version = '19.3', License = 'license')
 
     updated <- update.Makefile.with.metadata(df, metadata)
 
-    expect_printed(updated,
-        '         line order category key_value        key depends buildlink3.mk',
-        '1 CATEGORIES=     1       NA      TRUE CATEGORIES   FALSE         FALSE',
-        '2 MAINTAINER=     2       NA      TRUE MAINTAINER   FALSE         FALSE',
-        '3    COMMENT=     3       NA      TRUE    COMMENT   FALSE         FALSE',
-        '4   R_PKGVER=     4       NA      TRUE   R_PKGVER   FALSE         FALSE',
-        '  operator delimiter old_value old_todo       new_value',
-        '1        =                                        R2pkg',
-        '2        =                                             ',
-        '3        =                              Package comment',
-        '4        =                                         19.3')
+    expect_printed(data.frame(key = updated$key, new_value = updated$new_value),
+        '         key       new_value',
+        '1 CATEGORIES        pkgtools',
+        '2 MAINTAINER                ',  # FIXME: Should not always be reset.
+        '3    COMMENT Package comment',
+        '4   R_PKGVER            19.3')
 })
 
 # If the variable has been removed from the Makefile, it is not updated.
@@ -621,13 +670,10 @@ test_that('update.Makefile', {
             '',
             '.include "../../mk/bsd.pkg.mk"'),
         'Makefile.orig')
-    writeLines(
-        c(
-            'Package: pkgname',
-            'Version: 1.0',
-            'Depends: dep1 dep2(>=2.0)'),
-        'DESCRIPTION')
-    metadata <- make.metadata('DESCRIPTION')
+    metadata <- make.metadata(linesConnection(
+        'Package: pkgname',
+        'Version: 1.0',
+        'Depends: dep1 dep2(>=2.0)'))
     expect_printed(
         as.data.frame(metadata),
         '  Package Version Title Description License Imports          Depends',
