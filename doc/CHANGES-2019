@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4404 2019/10/18 11:08:46 micha Exp $
+$NetBSD: CHANGES-2019,v 1.4405 2019/10/18 12:29:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7062,3 +7062,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated wm/flwm to 1.16 [micha 2019-10-18]
 	Updated www/htmldoc to 1.9.7 [micha 2019-10-18]
 	Updated www/htmldoc-x11 to 1.9.7 [micha 2019-10-18]
+	Updated lang/py-mypy_extensions to 0.4.3 [adam 2019-10-18]
+	Updated lang/py-mypy to 0.740 [adam 2019-10-18]
