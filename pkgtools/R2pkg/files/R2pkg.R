@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg.R,v 1.11 2019/10/18 16:07:53 rillig Exp $
+# $NetBSD: R2pkg.R,v 1.12 2019/10/18 17:18:03 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -348,50 +348,27 @@ read.file.as.values <- function(filename)
   values
 }
 
-simplify.whitespace <- function(s) { gsub('[[:blank:]]+',' ',s) }
-remove.punctuation <- function(s)
-{
-  punctuation <- '[,-]'
-  gsub(punctuation,'',s)
-}
-remove.quotes <- function(s)
-{
-  quotes <- '[\'`"]'  #" to de-confuse mcedit
-  gsub(quotes,'',s)
-}
+simplify.whitespace <- function(s) gsub('[[:blank:]]+', ' ', s)
+remove.punctuation <- function(s) gsub('[,-]', '', s)
+remove.quotes <- function(s) gsub('[\'`"]', '', s)
 remove.articles <- function(s)
 {
   pattern <- '^([[:blank:]]*)An* |([[:blank:]]+)[Aa]n*[[:blank:]]+'
-  result <- gsub(pattern,'\\1',s)
-  result
+  gsub(pattern,'\\1',s)
 }
 
 case.insensitive.equals <- function(s1,s2)
 {
   s1.lower <- tolower(simplify.whitespace(s1))
   s2.lower <- tolower(simplify.whitespace(s2))
-  result <- s1.lower == s2.lower
-  result
+  s1.lower == s2.lower
 }
 
 weakly.equals <- function(s1,s2)
 {
-  result <- case.insensitive.equals(remove.articles(remove.quotes(remove.punctuation(s1))),
-                                    remove.articles(remove.quotes(remove.punctuation(s2))))
-  result
-}
-
-new.field.if.different <- function(filename, s)
-{
-  field <- varassign(filename, one.line(s))
-  field.list <- read.file.as.list(filename)
-  if (length(field.list) == 1)
-    {
-      f <- field.list[[1]]
-      if (case.insensitive.equals(f, field))
-        field <- f
-    }
-  field
+  case.insensitive.equals(
+    remove.articles(remove.quotes(remove.punctuation(s1))),
+    remove.articles(remove.quotes(remove.punctuation(s2))))
 }
 
 pkgsrc.license <- function(s)
@@ -399,11 +376,6 @@ pkgsrc.license <- function(s)
   license <- licenses[[s]]
   if (is.null(license)) license <- s else license
 }
-
-package <- function(s) one.line(s)
-version <- function(s) one.line(s)
-comment <- function(s) one.line(s)
-use.tools <- function(s) read.file.as.list(s)
 
 license <- function(s)
 {
@@ -486,34 +458,20 @@ make.dependency <- function(s)
 {
   s <- gsub('\\)','',s)
   s <- gsub('-','.',s)
-  s <- unlist(strsplit(s,'\\('))
-  s
+  unlist(strsplit(s,'\\('))
 }
 
 depends <- function(dependency) dependency[1]
 
 depends.pkg <- function(dependency)
-{
-  # XXX message('===> ',depends(dependency))
-  result <- Sys.glob(paste0('../../*/R-',depends(dependency)))
-  result
-}
+  Sys.glob(paste0('../../*/R-', depends(dependency)))
 
 new.depends.pkg <- function(dependency)
-{
-  result <- Sys.glob(paste0('../../wip/R-',depends(dependency)))
-  result
-}
+  Sys.glob(paste0('../../wip/R-', depends(dependency)))
 
 depends.pkg.fullname <- function(dependency,index=1)
 {
   result <- system(paste('cd',depends.pkg(dependency)[index],'&& bmake show-var VARNAME=PKGNAME'),intern=TRUE)
-  result
-}
-
-depends.pkg.name <- function(dependency,index=1)
-{
-  result <- sub('^(.*)-([^-]*)$','\\1',depends.pkg.fullname(dependency,index))
   result
 }
 
@@ -523,34 +481,26 @@ depends.pkg.vers <- function(dependency,index=1)
   result
 }
 
-depends.vers <- function(dependency,index=1)
+depends.vers <- function(dependency, index=1)
 {
   if (length(dependency) == 2)
-    result <- dependency[2]
+    trim.space(dependency[2])
   else
-    result <- paste0('>=',depends.pkg.vers(dependency,index))
-  result <- trim.space(result)
-  result
+    trim.space(paste0('>=', depends.pkg.vers(dependency, index)))
 }
 
 depends.vers.2 <- function(dependency)
-{
-  result <- ifelse(length(dependency) == 2, dependency[2], '>=???')
-  result <- trim.space(result)
-  result
-}
+  ifelse(length(dependency) == 2, trim.space(dependency[2]), '>=???')
 
-depends.dir <- function(dependency,index=1)
+depends.dir <- function(dependency, index=1)
 {
-  fields <- strsplit(depends.pkg(dependency)[index],'/',fixed=TRUE)
-  result <- fields[[1]][3]
-  result
+  fields <- strsplit(depends.pkg(dependency)[index], '/', fixed = TRUE)
+  fields[[1]][3]
 }
 
 depends.line <- function(dependency,index=1)
 {
-  result <- paste0('DEPENDS+=\tR-',depends(dependency),depends.vers(dependency,index),':',depends.pkg(dependency)[index])
-  result
+  paste0('DEPENDS+=\tR-', depends(dependency), depends.vers(dependency, index), ':', depends.pkg(dependency)[index])
 }
 
 depends.line.2 <- function(dependency)
@@ -562,17 +512,11 @@ depends.line.2 <- function(dependency)
   result
 }
 
-buildlink3.file <- function(dependency,index=1)
-{
-  result <- paste0(depends.pkg(dependency)[index],'/buildlink3.mk')
-  result
-}
+buildlink3.file <- function(dependency, index=1)
+  sprintf("%s/buildlink3.mk", depends.pkg(dependency)[index])
 
-buildlink3.line <- function(dependency,index=1)
-{
-  result <- paste0('.include "',buildlink3.file(dependency,index),'"')
-  result
-}
+buildlink3.line <- function(dependency, index=1)
+  sprintf('.include "%s"', buildlink3.file(dependency, index))
 
 dependency.dir <- function(dependency)
 {
@@ -704,15 +648,15 @@ copy.description <- function(connection)
 
 write.Makefile <- function(metadata)
 {
-  RCSID             <- paste0('# $','NetBSD$')
-  CATEGORIES        <- varassign('CATEGORIES',categories())
-  MAINTAINER        <- varassign('MAINTAINER',maintainer(arg.maintainer_email))
-  COMMENT           <- varassign('COMMENT',comment(metadata$Title))
-  LICENSE           <- varassign('LICENSE',license(metadata$License))
-  R_PKGNAME         <- varassign('R_PKGNAME',package(metadata$Package))
-  R_PKGVER          <- varassign('R_PKGVER',version(metadata$Version))
-  USE_LANGUAGES     <- varassigns('USE_LANGUAGES',use.languages(metadata$Imports,metadata$Depends))
-  DEPENDENCIES      <- make.depends(metadata$Imports,metadata$Depends)
+  RCSID             <- paste0('# $', 'NetBSD$')
+  CATEGORIES        <- varassign('CATEGORIES', categories())
+  MAINTAINER        <- varassign('MAINTAINER', maintainer(arg.maintainer_email))
+  COMMENT           <- varassign('COMMENT', one.line(metadata$Title))
+  LICENSE           <- varassign('LICENSE', license(metadata$License))
+  R_PKGNAME         <- varassign('R_PKGNAME', one.line(metadata$Package))
+  R_PKGVER          <- varassign('R_PKGVER', one.line(metadata$Version))
+  USE_LANGUAGES     <- varassigns('USE_LANGUAGES', use.languages(metadata$Imports, metadata$Depends))
+  DEPENDENCIES      <- make.depends(metadata$Imports, metadata$Depends)
   DEPENDS           <- DEPENDENCIES[1]
   BUILDLINK3.MK     <- DEPENDENCIES[2]
   INCLUDE.R         <- '.include "../../math/R/Makefile.extension"'
@@ -787,8 +731,7 @@ make.maintainer <- function(df)
 {
   old.maintainer <- element(df,'MAINTAINER','old_value')
   new.maintainer <- element(df,'MAINTAINER','new_value')
-  maintainer <- ifelse(old.maintainer == '',new.maintainer,old.maintainer)
-  maintainer
+  ifelse(old.maintainer == '',new.maintainer,old.maintainer)
 }
 
 make.comment <- function(df)
@@ -879,7 +822,7 @@ update.Makefile.with.metadata <- function(df,metadata)
   df$new_value[df$key == 'CATEGORIES'] <- categories()
   df$new_value[df$key == 'MAINTAINER'] <- arg.maintainer_email
   df$new_value[df$key == 'COMMENT'] <- one.line(metadata$Title)
-  df$new_value[df$key == 'R_PKGVER'] <- version(metadata$Version)
+  df$new_value[df$key == 'R_PKGVER'] <- one.line(metadata$Version)
 
   # str(df)
   # print(df)
