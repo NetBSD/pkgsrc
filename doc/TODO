@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19349 2019/10/18 09:57:30 nia Exp $
+$NetBSD: TODO,v 1.19350 2019/10/18 11:28:19 micha Exp $
 
 Suggested new packages
 ======================
@@ -818,7 +818,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hs-xml-1.3.14
 	o hs-zlib-0.6.1.1
 	o html2wml-0.4.11
-	o htmldoc-1.8.28
 	o http_load-20140814
 	o hugo-0.57.1 [needs gocloud.dev]
 	o icbirc-2.0
