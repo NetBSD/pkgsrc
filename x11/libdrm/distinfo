@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.95 2019/09/08 15:55:04 maya Exp $
+$NetBSD: distinfo,v 1.96 2019/10/18 09:04:16 nia Exp $
 
-SHA1 (libdrm-2.4.98.tar.bz2) = 4c8a11870a89f59c294bef0109939a7ffaa1fb26
-RMD160 (libdrm-2.4.98.tar.bz2) = 1896b9e53ca92d61c6aa7dd6b74303b0c794b01c
-SHA512 (libdrm-2.4.98.tar.bz2) = 3d333d060ceb14fa8e204ef468ca2c95d6f07205185ca90a044b685832b9b2d7256faa5e81d5871ce8b70aa1fdf9fb1ade18b4e582ff0c7ef5551da8506eb27b
-Size (libdrm-2.4.98.tar.bz2) = 833295 bytes
+SHA1 (libdrm-2.4.100.tar.gz) = 2097f0b98deaff16b8f3b93cedcb5cd35291a3c1
+RMD160 (libdrm-2.4.100.tar.gz) = 03d8b8b8a416988932c05f81f9f495505b44ceea
+SHA512 (libdrm-2.4.100.tar.gz) = b61835473c77691c4a8e67b32b9df420661e8bf8700507334b58bde5e6a402dee4aea2bec1e5b83343dd28fcb6cf9fd084064d437332f178df81c4780552595b
+Size (libdrm-2.4.100.tar.gz) = 1149132 bytes
 SHA1 (patch-ac) = 67c998df7dfc0dabc86320ea6d015cede3e464ea
 SHA1 (patch-include_drm_drm.h) = 48a912f40bf2b2a1c23edbe4446fa7869212f17b
 SHA1 (patch-libkms_vmwgfx.c) = d2204c0b79098c6c36b7f282b486c58c6354bd1d
