@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4418 2019/10/18 18:31:14 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4419 2019/10/18 18:33:31 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7078,3 +7078,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added multimedia/libmediaart version 1.9.4 [nia 2019-10-18]
 	Updated audio/moodbar to 1.2 [nia 2019-10-18]
 	Added multimedia/gstreamermm1 version 1.10.0 [nia 2019-10-18]
+	Updated multimedia/subtitleeditor to 0.54.0 [nia 2019-10-18]
