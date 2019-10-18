@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.4 2010/07/13 19:57:06 drochner Exp $
-
-To use empathy, you'll need a plugin for the communication protocol,
-eg. chat/telepathy-gabble or chat/telepathy-idle,
-and chat/telepathy-mission-control5 for account management.
-===========================================================================
