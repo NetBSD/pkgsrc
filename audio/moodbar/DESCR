@@ -1,9 +1,6 @@
-The Moodbar is an algorithm for creating a colorful visual
-representation of the contents of an audio file, giving an idea of
-its "mood" (this is a rather fanciful term for the simple analysis
-it actually does).  The Moodbar was invented by Gavin Wood and
-Simon O'Keefe for inclusion in the Amarok music player.
-
-This package contains a GStreamer plugin with elements that are
-used in the moodbar analysis, and an application that actually does
-the analysis.
+Moodbar is a music visualization method that assigns colors to different
+parts of a track and presents them as a timeline. Applied to a music player,
+the main goal is to help the user navigate within a particular track. For
+example, if the user wants to skip to the first chorus of a song, a good
+moodbar implementation should be able to provide a hint of where this might
+occur in the timeline.

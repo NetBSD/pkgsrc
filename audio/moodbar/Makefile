@@ -1,20 +1,24 @@
-# $NetBSD: Makefile,v 1.9 2017/09/03 08:36:49 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.10 2019/10/18 17:14:34 nia Exp $
 
-DISTNAME=	moodbar-0.1.2
-PKGREVISION=	5
+DISTNAME=	moodbar-1.2
 CATEGORIES=	audio
-MASTER_SITES=	http://pwsp.net/~qbob/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=exaile/}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	https://amarok.kde.org/wiki/Moodbar
-COMMENT=	Tool to show the "mood" of a track
-LICENSE=	gnu-gpl-v2
+HOMEPAGE=	https://github.com/exaile/moodbar
+COMMENT=	Audio timeline visualization
+LICENSE=	gnu-gpl-v3
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+USE_LANGUAGES=	c c++14
 
-.include "../../math/fftwf/buildlink3.mk"
-.include "../../multimedia/gstreamer0.10/buildlink3.mk"
+# C++14
+GCC_REQD+=	5
+
+.include "../../devel/meson/build.mk"
+.include "../../math/fftw/buildlink3.mk"
+.include "../../multimedia/gstreamer1/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
