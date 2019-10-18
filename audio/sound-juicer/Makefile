@@ -1,51 +1,40 @@
-# $NetBSD: Makefile,v 1.106 2019/07/21 22:24:28 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.107 2019/10/18 12:34:19 nia Exp $
 
-DISTNAME=		sound-juicer-2.32.0
-PKGREVISION=		24
-CATEGORIES=		audio
-MASTER_SITES=		http://www.burtonini.com/computing/
-MASTER_SITES+=		${MASTER_SITE_GNOME:=sources/sound-juicer/2.32/}
+DISTNAME=	sound-juicer-3.24.0
+CATEGORIES=	audio
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/sound-juicer/3.24/}
+EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.burtonini.com/computing/
-COMMENT=		CD ripping tool
-LICENSE=		gnu-gpl-v2
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://wiki.gnome.org/Apps/SoundJuicer
+COMMENT=	CD ripping tool
+LICENSE=	gnu-gpl-v2
 
-USE_PKGLOCALEDIR=	yes
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config intltool msgfmt msgmerge xgettext
-USE_LANGUAGES=		c c++
+TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
+TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
 
-CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
-MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
-CONFIGURE_ENV+=		GST_INSPECT="${LOCALBASE}/bin/gst-inspect-0.10"
+GNU_CONFIGURE=	yes
 
-GCONF_SCHEMAS+=	sound-juicer.schemas
+USE_TOOLS+=	pkg-config
+USE_TOOLS+=	msgfmt msgmerge xgettext
+USE_TOOLS+=	gmake
 
-DEPENDS+=	gst-plugins0.10-flac>=0.10.11:../../audio/gst-plugins0.10-flac
-DEPENDS+=	gst-plugins0.10-vorbis>=0.10.22:../../audio/gst-plugins0.10-vorbis
-DEPENDS+=	gst-plugins0.10-gio>=0.10.21:../../sysutils/gst-plugins0.10-gio
+# XXX fails without GNU msgfmt
+_TOOLS_USE_PKGSRC.msgfmt=	yes
 
 .include "../../audio/libcanberra/buildlink3.mk"
-.include "../../audio/libmusicbrainz/buildlink3.mk"
-.include "../../audio/taglib/buildlink3.mk"
-.include "../../devel/GConf/schemas.mk"
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.14.0
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
-#.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../audio/libdiscid/buildlink3.mk"
+.include "../../audio/libmusicbrainz5/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../devel/glib2/schemas.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../misc/libcdio-paranoia/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gstreamer0.10+=	gstreamer0.10>=0.10.15
-.include "../../multimedia/gstreamer0.10/buildlink3.mk"
-.include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
-.include "../../multimedia/gnome-media/buildlink3.mk"
+.include "../../multimedia/gstreamer1/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-good/buildlink3.mk"
 .include "../../sysutils/brasero/buildlink3.mk"
-.include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../mk/omf-scrollkeeper.mk"
-.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.12.0
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
+.include "../../textproc/iso-codes/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
