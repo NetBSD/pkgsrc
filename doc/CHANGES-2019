@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4398 2019/10/18 09:04:25 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4399 2019/10/18 09:57:29 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7056,3 +7056,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/doxygen to 1.8.16 [adam 2019-10-17]
 	Removed cross/nios2-gcc41 successor cross/nios2-gcc [maya 2019-10-17]
 	Updated x11/libdrm to 2.4.100 [nia 2019-10-18]
+	Updated graphics/MesaLib to 19.2.1 [nia 2019-10-18]
