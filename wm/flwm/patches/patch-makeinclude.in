@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
+$NetBSD: patch-makeinclude.in,v 1.1 2019/10/18 10:40:40 micha Exp $
 
---- makeinclude.in.orig	Sat Jan  9 14:48:33 1999
-+++ makeinclude.in	Thu Aug  3 23:43:07 2000
-@@ -15,10 +15,11 @@
+Add CPPFLAGS to CFLAGS and CXXFLAGS.
+
+--- makeinclude.in.orig	2015-06-30 09:39:45.000000000 +0000
++++ makeinclude.in
+@@ -16,10 +16,11 @@ CC	=@CC@
  MAKEDEPEND =@MAKEDEPEND@
  
  # flags for C++ compiler:
