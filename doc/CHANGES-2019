@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4415 2019/10/18 15:58:30 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4416 2019/10/18 16:54:54 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7075,3 +7075,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed multimedia/swfdec [nia 2019-10-18]
 	Removed multimedia/swfdec-gnome [nia 2019-10-18]
 	Removed multimedia/swfdec-mozilla [nia 2019-10-18]
+	Added multimedia/libmediaart version 1.9.4 [nia 2019-10-18]
