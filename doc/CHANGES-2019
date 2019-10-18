@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4412 2019/10/18 14:59:21 bsiegert Exp $
+$NetBSD: CHANGES-2019,v 1.4413 2019/10/18 15:15:02 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7071,3 +7071,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed chat/empathy [nia 2019-10-18]
 	Updated games/gcompris to 17.05 [nia 2019-10-18]
 	Updated lang/go112 to 1.12.12 [bsiegert 2019-10-18]
+	Updated graphics/clutter-gtk to 1.8.4 [nia 2019-10-18]
