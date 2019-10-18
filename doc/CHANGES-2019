@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4408 2019/10/18 12:34:33 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4409 2019/10/18 12:52:00 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7067,3 +7067,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/brasero to 3.12.2 [nia 2019-10-18]
 	Removed sysutils/brasero-nautilus [nia 2019-10-18]
 	Updated audio/sound-juicer to 3.24.0 [nia 2019-10-18]
+	Removed audio/gst-buzztard [nia 2019-10-18]
