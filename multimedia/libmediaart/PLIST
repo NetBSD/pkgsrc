@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2019/10/18 16:54:42 nia Exp $
+include/libmediaart-2.0/libmediaart/cache.h
+include/libmediaart-2.0/libmediaart/extract.h
+include/libmediaart-2.0/libmediaart/extractgeneric.h
+include/libmediaart-2.0/libmediaart/mediaart-macros.h
+include/libmediaart-2.0/libmediaart/mediaart.h
+lib/libmediaart-2.0.la
+lib/pkgconfig/libmediaart-2.0.pc
+share/gtk-doc/html/libmediaart/annotation-glossary.html
+share/gtk-doc/html/libmediaart/ch02.html
+share/gtk-doc/html/libmediaart/home.png
+share/gtk-doc/html/libmediaart/index.html
+share/gtk-doc/html/libmediaart/left-insensitive.png
+share/gtk-doc/html/libmediaart/left.png
+share/gtk-doc/html/libmediaart/libmediaart-Cache.html
+share/gtk-doc/html/libmediaart/libmediaart-MediaArtProcess.html
+share/gtk-doc/html/libmediaart/libmediaart-Plugins.html
+share/gtk-doc/html/libmediaart/libmediaart-reference.html
+share/gtk-doc/html/libmediaart/libmediaart.devhelp2
+share/gtk-doc/html/libmediaart/overview-compiling.html
+share/gtk-doc/html/libmediaart/overview.html
+share/gtk-doc/html/libmediaart/right-insensitive.png
+share/gtk-doc/html/libmediaart/right.png
+share/gtk-doc/html/libmediaart/style.css
+share/gtk-doc/html/libmediaart/up-insensitive.png
+share/gtk-doc/html/libmediaart/up.png
