@@ -1,12 +1,7 @@
-$NetBSD: distinfo,v 1.13 2016/12/17 14:20:14 joerg Exp $
+$NetBSD: distinfo,v 1.14 2019/10/18 11:02:13 micha Exp $
 
-SHA1 (htmldoc-1.8.27-source.tar.bz2) = 472908e0aafed1cedfbacd8ed3168734aebdec4b
-RMD160 (htmldoc-1.8.27-source.tar.bz2) = 9605a5894675439f5fae405fb060972e19f33c7e
-SHA512 (htmldoc-1.8.27-source.tar.bz2) = f0b2b6fec4925e549e74d6721f15b5de00c8c4889b0c67689945c408ed88074acb1330cae155655a1986adc0ca549cea32e242aa1ecac8e6338a1739f7c85438
-Size (htmldoc-1.8.27-source.tar.bz2) = 3960271 bytes
-SHA1 (patch-aa) = 92de5e1e4761ffe2d117004b2a38ec52edb33d7c
-SHA1 (patch-ab) = 22add1402202fed917a79ce67963cb282ca46f87
-SHA1 (patch-ac) = bf9036087e03095d51ee064e1f193c899848adff
-SHA1 (patch-ad) = 94e5f10387ede380b7579392e41234ff832f1295
-SHA1 (patch-ae) = 1d77dd5120605881e83bf31ee07fa9fd73619cd3
-SHA1 (patch-htmldoc_htmlsep.cxx) = be66659cc83047ced67e2c73af9f4052962cdc50
+SHA1 (htmldoc/v1.9.7.tar.gz) = c2c3c6a73dfc2bd779bb186b0497eb8de28b25b7
+RMD160 (htmldoc/v1.9.7.tar.gz) = 18908dcd30e36eb1fcdf208146ca704f391b382a
+SHA512 (htmldoc/v1.9.7.tar.gz) = e9481d32318902b5179f8d2dbaa382bcb0084bf3cc57958f8f05f52be5019ab54da5c265bbb674ca8808198c35d04bf19ad2149c2add18cfb630e66a2b9dc8f2
+Size (htmldoc/v1.9.7.tar.gz) = 4502752 bytes
+SHA1 (patch-htmldoc_http-addrlist.c) = 7c2db39b43cdbb31da0d884fbbba63e2ab258354
