@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2015/01/06 12:57:03 wiz Exp $
-bin/unison
-share/doc/unison/BUGS.txt
-share/doc/unison/CONTRIB
-share/doc/unison/COPYING
-share/doc/unison/NEWS
-share/doc/unison/README
-share/doc/unison/ROADMAP.txt
-share/doc/unison/TODO.txt
+@comment $NetBSD: PLIST,v 1.2 2019/10/18 09:59:26 pho Exp $
+bin/unison-2.40
+share/doc/unison-2.40/BUGS.txt
+share/doc/unison-2.40/CONTRIB
+share/doc/unison-2.40/COPYING
+share/doc/unison-2.40/NEWS
+share/doc/unison-2.40/README
+share/doc/unison-2.40/ROADMAP.txt
+share/doc/unison-2.40/TODO.txt
