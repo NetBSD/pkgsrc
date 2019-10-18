@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg.R,v 1.10 2019/10/17 17:14:34 rillig Exp $
+# $NetBSD: R2pkg.R,v 1.11 2019/10/18 16:07:53 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -461,7 +461,6 @@ varassigns <- function(key, values)
 }
 
 categories <- function() basename(dirname(getwd()))
-description <- function(s) strwrap(s,width=71)
 
 filter.imports <- function(s)
 {
@@ -1141,10 +1140,9 @@ create.Makefile <- function(metadata)
     write.Makefile(metadata)
 }
 
-create.DESCR <- function(metadata)
-{
-  DESCR <- description(metadata$Description)
-  write(DESCR,'DESCR')
+create.DESCR <- function(metadata) {
+  descr <- strwrap(metadata$Description, width = 71)
+  write(descr, 'DESCR')
 }
 
 make.metadata <- function(description.filename)
