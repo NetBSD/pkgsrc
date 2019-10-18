@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2019/09/13 08:59:47 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.35 2019/10/18 10:13:40 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -182,6 +182,7 @@ ${PKGNAME}/lib/libreoffice/program/libpasswordcontainerlo.so
 ${PKGNAME}/lib/libreoffice/program/libpcrlo.so
 ${PKGNAME}/lib/libreoffice/program/libpdffilterlo.so
 ${PKGNAME}/lib/libreoffice/program/libpdfimportlo.so
+${PKGNAME}/lib/libreoffice/program/libpdfiumlo.so
 ${PKGNAME}/lib/libreoffice/program/libpostgresql-sdbc-impllo.so
 ${PKGNAME}/lib/libreoffice/program/libpostgresql-sdbclo.so
 ${PKGNAME}/lib/libreoffice/program/libpricinglo.so
@@ -4178,7 +4179,6 @@ ${PKGNAME}/lib/libreoffice/program/wizards/ui/event/TaskListener.py
 ${PKGNAME}/lib/libreoffice/program/wizards/ui/event/UnoDataAware.py
 ${PKGNAME}/lib/libreoffice/program/wizards/ui/event/__init__.py
 ${PKGNAME}/lib/libreoffice/program/xid-fullscreen-on-all-monitors
-${PKGNAME}/lib/libreoffice/program/xpdfimport
 ${PKGNAME}/lib/libreoffice/readmes/README_af
 ${PKGNAME}/lib/libreoffice/readmes/README_am
 ${PKGNAME}/lib/libreoffice/readmes/README_ar
@@ -9096,7 +9096,6 @@ ${PKGNAME}/lib/libreoffice/share/xdg/math.desktop
 ${PKGNAME}/lib/libreoffice/share/xdg/startcenter.desktop
 ${PKGNAME}/lib/libreoffice/share/xdg/writer.desktop
 ${PKGNAME}/lib/libreoffice/share/xdg/xsltfilter.desktop
-${PKGNAME}/lib/libreoffice/share/xpdfimport/xpdfimport_err.pdf
 ${PKGNAME}/lib/libreoffice/share/xslt/common/copy.xsl
 ${PKGNAME}/lib/libreoffice/share/xslt/common/math.xsl
 ${PKGNAME}/lib/libreoffice/share/xslt/common/measure_conversion.xsl
