@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.284 2019/10/18 16:54:42 nia Exp $
+# $NetBSD: Makefile,v 1.285 2019/10/18 18:31:01 nia Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -93,6 +93,7 @@ SUBDIR+=	gst-plugins1-x264
 SUBDIR+=	gst123
 SUBDIR+=	gstreamer0.10
 SUBDIR+=	gstreamer1
+SUBDIR+=	gstreamermm1
 SUBDIR+=	gtranscode
 SUBDIR+=	gxine
 SUBDIR+=	handbrake
