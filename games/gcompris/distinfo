@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 20:56:50 agc Exp $
+$NetBSD: distinfo,v 1.9 2019/10/18 13:41:34 nia Exp $
 
-SHA1 (gcompris-12.11.tar.bz2) = cca586b5de850b476821e50faad571a4883db36a
-RMD160 (gcompris-12.11.tar.bz2) = 8b0a7b5f95a67de479170e2a7a5db187b37370ee
-SHA512 (gcompris-12.11.tar.bz2) = f60e9c3a5e4d781fb550b628d46f6af582a1a7de67271699b6f2abdc905250efca31d444b4cf3aa63044f7183fc8139d68849850738098d766bf5ff3fcc08916
-Size (gcompris-12.11.tar.bz2) = 167528452 bytes
-SHA1 (patch-configure) = d61565375bed732c38dd9eed0e6ab17d7278bbd0
-SHA1 (patch-src_chess__computer-activity_chess.c) = 9af1e7ee1a9e03373c5d738a8cc6d8c367dc6cbf
-SHA1 (patch-src_chess__computer-activity_chess__notation.c) = e621665adb4e8da25b82143699fbde48c5afee0c
-SHA1 (patch-src_goocanvas_src_goocanvassvg.h) = 8c14c1f842b03b18b7587675fbcf2876f667624b
+SHA1 (gcompris-17.05.tar.bz2) = 3c1afb95c99e73ebca50051c2510a2bcd54afe8f
+RMD160 (gcompris-17.05.tar.bz2) = 1f392e5f46ef8587c3bfd93a1e86a30cb27d553d
+SHA512 (gcompris-17.05.tar.bz2) = ecfb6af13a61309ad91248775dc27ba8f5a2c54154f6af093e10168cd12da90d3de65a09455b23c0c05a7217473ca8e442827e65dbabf7c4328ecd541beb7175
+Size (gcompris-17.05.tar.bz2) = 333581443 bytes
+SHA1 (patch-configure) = 3b901cd956dcb0b18e31d2cc3c68eafc482319fe

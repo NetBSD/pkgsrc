@@ -1,10 +1,10 @@
-$NetBSD: patch-configure,v 1.1 2012/04/09 23:19:49 wiz Exp $
+$NetBSD: patch-configure,v 1.2 2019/10/18 13:41:35 nia Exp $
 
-Avoid unportable test(1) construct.
+test(1) portability
 
---- configure.orig	2012-04-09 23:14:21.000000000 +0000
+--- configure.orig	2017-05-10 21:37:33.000000000 +0000
 +++ configure
-@@ -16185,7 +16185,7 @@ else
+@@ -16568,7 +16568,7 @@ else
    USE_DEBUG="no"
  fi
  
