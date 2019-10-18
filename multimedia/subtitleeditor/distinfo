@@ -1,17 +1,7 @@
-$NetBSD: distinfo,v 1.8 2018/12/02 19:17:33 bsiegert Exp $
+$NetBSD: distinfo,v 1.9 2019/10/18 18:33:18 nia Exp $
 
-SHA1 (subtitleeditor-0.30.0.tar.gz) = bf1a2064b4c68bf21c05a095ad3f746b53da4ac8
-RMD160 (subtitleeditor-0.30.0.tar.gz) = 77cd4b22740453e986d35cbdd7335fbd5728149c
-SHA512 (subtitleeditor-0.30.0.tar.gz) = 1225207105146b05704be7a6046a4597f5d9852dc62d05563bdee925425a8b400baa85f3779a013fbf7bb9c460772400045a4a6d3756a23ec56701956231d1d7
-Size (subtitleeditor-0.30.0.tar.gz) = 1094597 bytes
-SHA1 (patch-aa) = b78809f0e10b76fe298edb4b4c7f995e81ee5276
-SHA1 (patch-plugins_actions_documentmanagement_documentmanagement.cc) = e16a40abe9f4418d078a7505abb0688f782912f7
-SHA1 (patch-plugins_actions_findandreplace_findandreplace_cc) = 8861c1aab7e5fd4551af2019f28cc9e735fdcfdb
-SHA1 (patch-plugins_actions_spellchecking_spellchecking.cc) = 410cc155748a9d35ccbb2870cbd46b773d11a170
-SHA1 (patch-plugins_actions_spellchecking_spellchecking.h) = 73f3f34959c2e5d37e913caf3afed98f85cfee0b
-SHA1 (patch-plugins_subtitleformats_advancedsubstationalpha_advancedsubstationalpha.cc) = 813f2890b4fb5ab8802ddb75d978b60b13c1a92e
-SHA1 (patch-plugins_subtitleformats_mpsub_mpsub.cc) = 49f23c5d1e6b8ad8fab687019280bfb2a932c3d3
-SHA1 (patch-plugins_subtitleformats_substationalpha_substationalpha.cc) = a806c0b86530144dedff2415af1df57a262715d3
-SHA1 (patch-src_subtitleview.cc) = f8f284dd8ba25c02a727f1171ffecc59c4115237
-SHA1 (patch-src_utility.h) = 36e05367154654aaa02716f2c9b30fcbe37fad9b
-SHA1 (patch-src_vp_gstreamerplayer.cc) = 2c9625302adf02565c16a38e4b77a4d38e4db514
+SHA1 (subtitleeditor-0.54.0.tar.gz) = 23e455bc70adfd8761c0d1fe112e95f65fed6776
+RMD160 (subtitleeditor-0.54.0.tar.gz) = fffcbad1723d353d291fe6cde15efc3ed9205d7e
+SHA512 (subtitleeditor-0.54.0.tar.gz) = 4458d579775a504b22f955c41d0e95ed722c1cb6bcf715ef493988a85397d5e0d4c3327e129f49b160d398dc73257026a92bbe5104c30d2004c16b7e12dd113c
+Size (subtitleeditor-0.54.0.tar.gz) = 1783077 bytes
+SHA1 (patch-configure) = 582178786148b92ab20d19a1fdc8529b58e40242
