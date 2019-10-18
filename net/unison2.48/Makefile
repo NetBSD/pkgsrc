@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2019/07/29 18:07:10 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/10/18 09:03:12 pho Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	unison-2.48.15v4
 PKGNAME=	${DISTNAME:S/unison/unison2.48/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
 
