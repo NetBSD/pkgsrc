@@ -1,5 +1,0 @@
-This module contains experimental code that extends gstreamer. The
-library will never be ABI stable. if you are interested in any code
-here, please help to mature it in order to get it into upstream.
-The extensions are quite likely to be required to build a version
-of buzztard.
