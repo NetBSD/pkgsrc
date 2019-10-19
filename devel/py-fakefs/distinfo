@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/08/21 13:02:03 adam Exp $
+$NetBSD: distinfo,v 1.5 2019/10/19 14:43:35 adam Exp $
 
-SHA1 (pyfakefs-3.6.tar.gz) = 6be99b734f640757430e6d485b6036aa195ad24c
-RMD160 (pyfakefs-3.6.tar.gz) = 2c333356b3e1a39619430d5287e1db36f53cd530
-SHA512 (pyfakefs-3.6.tar.gz) = 21cf3813d5e96ccd1a5dda5b4f6958971988b4c0833a4246d1920cbc9d92ae506b0fcfd05d2733751142a4a8890b794bc3a6de0111d65ecdedb732fab05eaf6e
-Size (pyfakefs-3.6.tar.gz) = 157172 bytes
+SHA1 (pyfakefs-3.6.1.tar.gz) = a8ae3cb6dffb419e59b7f31c600a838849bc4115
+RMD160 (pyfakefs-3.6.1.tar.gz) = ac7b403ac244d2fa1f9a482ad4f66b31356ea4af
+SHA512 (pyfakefs-3.6.1.tar.gz) = 046a702f84f9322c2f23b19f19d1a6749e79477f2eb7474a4f3533f1203d1c6e07b599a402e51c25275ec39c9c610039a660c1c37ace8e12deff84a5e8c96af8
+Size (pyfakefs-3.6.1.tar.gz) = 158178 bytes
