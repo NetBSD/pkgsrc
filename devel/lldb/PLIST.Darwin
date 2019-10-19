@@ -1,12 +1,6 @@
-@comment $NetBSD: PLIST.Darwin,v 1.5 2019/06/02 08:35:55 adam Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.6 2019/10/19 14:01:37 adam Exp $
 bin/darwin-debug
 bin/debugserver
-lib/liblldbHostMacOSXObjCXX.a
-lib/liblldbPluginDynamicLoaderDarwinKernel.a
-lib/liblldbPluginPlatformMacOSXObjCXX.a
-lib/liblldbPluginProcessMacOSXKernel.a
-lib/liblldbPluginProcessMachCore.a
-lib/liblldbPluginSymbolVendorMacOSX.a
 ${PYSITELIB}/lldb/diagnose/__init__.py
 ${PYSITELIB}/lldb/diagnose/diagnose_nsstring.py
 ${PYSITELIB}/lldb/diagnose/diagnose_unwind.py
