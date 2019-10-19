@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2019/10/19 13:38:43 nia Exp $
+lib/aspell/fa-common.multi
+lib/aspell/fa-common.rws
+lib/aspell/fa-generic.multi
+lib/aspell/fa-generic.rws
+lib/aspell/fa-scientific.multi
+lib/aspell/fa-scientific.rws
+lib/aspell/fa.multi
+lib/aspell/farsi-common.alias
+lib/aspell/farsi-generic.alias
+lib/aspell/farsi-scientific.alias
+lib/aspell/farsi.alias
+lib/aspell/persian-common.alias
+lib/aspell/persian-generic.alias
+lib/aspell/persian-scientific.alias
+lib/aspell/persian.alias
+share/aspell/fa.dat
+share/aspell/l-fa.cmap
+share/aspell/l-fa.cset
