@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg.R,v 1.22 2019/10/19 18:43:51 rillig Exp $
+# $NetBSD: R2pkg.R,v 1.23 2019/10/19 19:10:31 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -608,16 +608,6 @@ write.Makefile <- function(orig_mklines, metadata)
   writeLines(lines, 'Makefile')
 }
 
-construct.line <- function(df,key,value)
-{
-  key <- df[df$key==key,'key']
-  operator <- df[df$key==key,'operator']
-  delimiter <- df[df$key==key,'delimiter']
-  value <- df[df$key==key,value]
-  df$new_line[df$key==key] <- paste0(key,operator,delimiter,value)
-  df
-}
-
 element <- function(mklines, varname, field, quiet=FALSE)
 {
   i <- match(varname, mklines$key, 0)
@@ -685,37 +675,17 @@ make.license <- function(df)
   old_known <- license.in.pkgsrc(old_license)
   new_known <- license.in.pkgsrc(new_license)
 
-  if (old_known && new_known)
-    {
-      if (case.insensitive.equals(old_license,new_license))
-        {
-          license <- old_license
-          todo <- old_todo
-        }
-      else
-        {
-          license <- paste0(new_license,'\t# [R2pkg] previously: ',old_license)
-          todo <- old_todo
-        }
-    }
-  else if (old_known && !new_known)
-    {
-      license <- paste0(old_license,'\t# [R2pkg] updated to: ',new_license)
-      todo <- '# TODO: '
-    }
-  else if (!old_known && new_known)
-    {
-      license <- paste0(new_license,'\t# [R2pkg] previously: ',old_license)
-      todo <- ''
-    }
+  license <- if (!old_known)
+    paste0(new_license, '\t# [R2pkg] previously: ', old_license)
+  else if (!new_known)
+    paste0(old_license, '\t# [R2pkg] updated to: ', new_license)
+  else if (case.insensitive.equals(old_license, new_license))
+    old_license
   else
-    {
-      license <- paste0(new_license,'\t# [R2pkg] previously: ',old_license)
-      todo <- '# TODO: '
-    }
+    paste0(new_license, '\t# [R2pkg] previously: ', old_license)
 
   df$value[df$key == 'LICENSE'] <- license
-  df$todo[df$key == 'LICENSE'] <- todo
+  df$todo[df$key == 'LICENSE'] <- if (new_known) old_todo else '# TODO: '
 
   df
 }
