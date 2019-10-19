@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2018/12/17 16:19:52 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/10/19 13:52:40 adam Exp $
 lib/clang/${PKGVERSION}/include/sanitizer/allocator_interface.h
 lib/clang/${PKGVERSION}/include/sanitizer/asan_interface.h
 lib/clang/${PKGVERSION}/include/sanitizer/common_interface_defs.h
 lib/clang/${PKGVERSION}/include/sanitizer/coverage_interface.h
 lib/clang/${PKGVERSION}/include/sanitizer/dfsan_interface.h
-lib/clang/${PKGVERSION}/include/sanitizer/esan_interface.h
 lib/clang/${PKGVERSION}/include/sanitizer/hwasan_interface.h
 lib/clang/${PKGVERSION}/include/sanitizer/linux_syscall_hooks.h
 lib/clang/${PKGVERSION}/include/sanitizer/lsan_interface.h
@@ -15,5 +14,6 @@ lib/clang/${PKGVERSION}/include/sanitizer/tsan_interface.h
 lib/clang/${PKGVERSION}/include/sanitizer/tsan_interface_atomic.h
 lib/clang/${PKGVERSION}/include/xray/xray_interface.h
 lib/clang/${PKGVERSION}/include/xray/xray_log_interface.h
+lib/clang/${PKGVERSION}/include/xray/xray_records.h
 ${PLIST.asan}lib/clang/${PKGVERSION}/share/asan_blacklist.txt
 ${PLIST.asan}lib/clang/${PKGVERSION}/share/cfi_blacklist.txt
