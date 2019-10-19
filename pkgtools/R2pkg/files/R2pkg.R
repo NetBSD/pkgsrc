@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg.R,v 1.14 2019/10/18 22:10:46 rillig Exp $
+# $NetBSD: R2pkg.R,v 1.15 2019/10/19 11:04:46 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -747,7 +747,6 @@ make.new_license <- function(df,license)
   df
 }
 
-license.marked.todo <- function(todo) { todo != '' }
 license.in.pkgsrc <- function(license) { license %in% sapply(licenses,'[',1) }
 
 make.license <- function(df)
@@ -757,7 +756,10 @@ make.license <- function(df)
   old_todo <- element(df,'LICENSE','old_todo')
   new_license <- element(df,'LICENSE','new_value')
 
-  if (license.in.pkgsrc(old_license) && license.in.pkgsrc(new_license))
+  old_known <- license.in.pkgsrc(old_license)
+  new_known <- license.in.pkgsrc(new_license)
+
+  if (old_known && new_known)
     {
       if (case.insensitive.equals(old_license,new_license))
         {
@@ -770,17 +772,17 @@ make.license <- function(df)
           todo <- old_todo
         }
     }
-  else if (license.in.pkgsrc(old_license) && !license.in.pkgsrc(new_license))
+  else if (old_known && !new_known)
     {
       license <- paste0(old_license,'\t# [R2pkg] updated to: ',new_license)
       todo <- '# TODO: '
     }
-  else if (!license.in.pkgsrc(old_license) && license.in.pkgsrc(new_license))
+  else if (!old_known && new_known)
     {
       license <- paste0(new_license,'\t# [R2pkg] previously: ',old_license)
       todo <- ''
     }
-  else if (!license.in.pkgsrc(old_license) && !license.in.pkgsrc(new_license))
+  else
     {
       license <- paste0(new_license,'\t# [R2pkg] previously: ',old_license)
       todo <- '# TODO: '
@@ -803,11 +805,11 @@ find.order <- function(df,key,field)
   value
 }
 
-update.Makefile.with.metadata <- function(df,metadata)
+mklines.update_with_metadata <- function(df, metadata)
 {
   df$new_value <- NA
 
-  df <- make.new_license(df,metadata$License)
+  df <- make.new_license(df, metadata$License)
 
   df$new_value[df$key == 'CATEGORIES'] <- categories()
   df$new_value[df$key == 'MAINTAINER'] <- arg.maintainer_email
@@ -816,9 +818,8 @@ update.Makefile.with.metadata <- function(df,metadata)
   df
 }
 
-update.Makefile.with.new.values <- function(df)
+mklines.update_value <- function(df)
 {
-  # message('===> update.Makefile.with.new.values():')
   df$value <- NA
   df$todo <- ''
   df <- make.license(df)
@@ -826,88 +827,41 @@ update.Makefile.with.new.values <- function(df)
   df$value[df$key == 'MAINTAINER'] <- make.maintainer(df)
   df$value[df$key == 'COMMENT'] <- make.comment(df)
   df$value[df$key == 'R_PKGVER'] <- make.r_pkgver(df)
-
-  # str(df)
-  # print(df)
   df
 }
 
-update.Makefile.with.new.line <- function(df)
+mklines.update_new_line <- function(df)
 {
-  # message('===> update.Makefile.with.new.line():')
-  df$new_line <- NA
+  df$new_line <- df$line
 
-  construct_key_value <- df$key_value & !is.na(df$value)
-  df$new_line[construct_key_value] <-
-    paste0(df$todo[construct_key_value],
-           df$key[construct_key_value],
-           df$operator[construct_key_value],
-           df$delimiter[construct_key_value],
-           df$value[construct_key_value])
+  va <- df$key_value & !is.na(df$value)
+  df$new_line[va] <- paste0(
+    df$todo[va], df$key[va], df$operator[va], df$delimiter[va], df$value[va])
 
-  copy_line <- !df$key_value | !construct_key_value
-  df$new_line[copy_line] <- df$line[copy_line]
-
-  # str(df)
-  # print(df)
   df
 }
 
-annotate.distname.in.Makefile <- function(df)
+mklines.annotate_distname <- function(mklines)
 {
-  match <- grepl('^[[:blank:]]*DISTNAME',df$new_line)
-  line <- df$new_line[match]
-  value <- sub('^[[:blank:]]*DISTNAME[[:blank:]]*=[[:blank:]]*','',line)
-  pkgname <- sub('_.+$','',value)
-  pkgver <- sub('^.+_','',value)
-  PKGNAME <- paste0('R_PKGNAME=',pkgname)
-  PKGVER <- paste0('R_PKGVER=',pkgver)
-  comment <- paste0('\t# [R2pkg] replace this line with ',PKGNAME,' and ',PKGVER,' as first stanza')
-  df$new_line[match] <- paste0(line,comment)
-  df
+  match <- grepl('^[[:blank:]]*DISTNAME', mklines$new_line)
+  line <- mklines$new_line[match]
+  value <- sub('^[[:blank:]]*DISTNAME[[:blank:]]*=[[:blank:]]*', '', line)
+  comment <- sprintf(
+    '\t# [R2pkg] replace this line with %s and %s as first stanza',
+    paste0('R_PKGNAME=', sub('_.+$', '', value)),
+    paste0('R_PKGVER=', sub('^.+_', '', value)))
+  mklines$new_line[match] <- paste0(line, comment)
+  mklines
 }
 
-annotate.Makefile <- function(df)
+mklines.remove_lines_before_update <- function(mklines)
 {
-  df <- annotate.distname.in.Makefile(df)
-  df
-}
-
-remove.master.sites.from.Makefile <- function(df)
-{
-  match <- grepl('^[[:blank:]]*MASTER_SITES',df$new_line)
-  df <- df[!match,]
-  df
-}
-
-remove.homepage.from.Makefile <- function(df)
-{
-  match <- grepl('^[[:blank:]]*HOMEPAGE',df$new_line)
-  df <- df[!match,]
-  df
-}
-
-remove.buildlink.abi.depends.from.Makefile <- function(df)
-{
-  match <- grepl('^[[:blank:]]*BUILDLINK_ABI_DEPENDS',df$new_line)
-  df <- df[!match,]
-  df
-}
-
-remove.buildlink.api.depends.from.Makefile <- function(df)
-{
-  match <- grepl('^[[:blank:]]*BUILDLINK_API_DEPENDS',df$new_line)
-  df <- df[!match,]
-  df
-}
-
-remove.lines.from.Makefile <- function(df)
-{
-  df <- remove.master.sites.from.Makefile(df)
-  df <- remove.homepage.from.Makefile(df)
-  df <- remove.buildlink.abi.depends.from.Makefile(df)
-  df <- remove.buildlink.api.depends.from.Makefile(df)
-  df
+  remove <- (
+    grepl('^[[:blank:]]*MASTER_SITES', mklines$new_line) |
+    grepl('^[[:blank:]]*HOMEPAGE', mklines$new_line) |
+    grepl('^[[:blank:]]*BUILDLINK_ABI_DEPENDS', mklines$new_line) |
+    grepl('^[[:blank:]]*BUILDLINK_API_DEPENDS', mklines$new_line))
+  mklines[!remove,]
 }
 
 reassign.order <- function(df)
@@ -1047,11 +1001,11 @@ update.Makefile <- function(metadata)
 
   # message('===> df:')
   df <- read.Makefile.as.dataframe()
-  df <- update.Makefile.with.metadata(df,metadata)
-  df <- update.Makefile.with.new.values(df)
-  df <- update.Makefile.with.new.line(df)
-  df <- annotate.Makefile(df)
-  df <- remove.lines.from.Makefile(df)
+  df <- mklines.update_with_metadata(df,metadata)
+  df <- mklines.update_value(df)
+  df <- mklines.update_new_line(df)
+  df <- mklines.annotate_distname(df)
+  df <- mklines.remove_lines_before_update(df)
   df <- reassign.order(df)
 
   df.conflicts <- make.df.conflicts(df,metadata)
