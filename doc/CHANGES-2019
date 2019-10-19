@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4419 2019/10/18 18:33:31 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4420 2019/10/19 06:33:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7079,3 +7079,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/moodbar to 1.2 [nia 2019-10-18]
 	Added multimedia/gstreamermm1 version 1.10.0 [nia 2019-10-18]
 	Updated multimedia/subtitleeditor to 0.54.0 [nia 2019-10-18]
+	Updated devel/py-astroid to 2.3.2 [adam 2019-10-19]
+	Updated devel/py-pylint to 2.4.3 [adam 2019-10-19]
