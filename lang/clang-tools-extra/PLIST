@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/27 06:24:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/10/19 13:58:10 adam Exp $
 bin/clang-apply-replacements
 bin/clang-change-namespace
+bin/clang-doc
 bin/clang-include-fixer
 bin/clang-query
 bin/clang-reorder-fields
@@ -11,6 +12,7 @@ bin/modularize
 lib/libclangApplyReplacements.a
 lib/libclangChangeNamespace.a
 lib/libclangDaemon.a
+lib/libclangDaemonTweaks.a
 lib/libclangDoc.a
 lib/libclangIncludeFixer.a
 lib/libclangIncludeFixerPlugin.a
@@ -32,6 +34,7 @@ lib/libclangTidyMPIModule.a
 lib/libclangTidyMiscModule.a
 lib/libclangTidyModernizeModule.a
 lib/libclangTidyObjCModule.a
+lib/libclangTidyOpenMPModule.a
 lib/libclangTidyPerformanceModule.a
 lib/libclangTidyPlugin.a
 lib/libclangTidyPortabilityModule.a
