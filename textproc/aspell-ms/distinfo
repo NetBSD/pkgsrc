@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2019/10/19 13:43:45 nia Exp $
+
+SHA1 (aspell-ms-0.50-0.tar.bz2) = 2f6bbe94bb717ee0009408f96800536891317d83
+RMD160 (aspell-ms-0.50-0.tar.bz2) = 2b5358f6bb2ad63bbdaf5562812d2095024bfb74
+SHA512 (aspell-ms-0.50-0.tar.bz2) = 270a6ad18d9b317588e781eab84b59c83450383d703fab815856b3afa58a19ffa0eec3c7cbc418993302703d586cb92678878aea51fff753733f7583d8c2b0e9
+Size (aspell-ms-0.50-0.tar.bz2) = 50368 bytes
+SHA1 (patch-Makefile.pre) = e4393f0b196fc023b7cb87a125abcd64260fe081
