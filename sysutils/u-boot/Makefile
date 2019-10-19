@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/10/08 21:43:05 bad Exp $
+# $NetBSD: Makefile,v 1.23 2019/10/19 18:05:47 jmcneill Exp $
 #
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
@@ -48,7 +48,7 @@ DEPENDS+=	u-boot-nanopi-m1-[0-9]*:../../sysutils/u-boot-nanopi-m1
 DEPENDS+=	u-boot-nanopi-neo-plus2-[0-9]*:../../sysutils/u-boot-nanopi-neo-plus2
 DEPENDS+=	u-boot-nanopi-neo-[0-9]*:../../sysutils/u-boot-nanopi-neo
 DEPENDS+=	u-boot-nanopi-neo2-[0-9]*:../../sysutils/u-boot-nanopi-neo2
-DEPENDS+=	u-boot-nanopi-11-[0-9]*:../../sysutils/u-boot-nanopi-11
+DEPENDS+=	u-boot-nanopi-r1-[0-9]*:../../sysutils/u-boot-nanopi-r1
 .if !empty(PKG_OPTIONS:Mamlogic-meson)
 DEPENDS+=	u-boot-odroid-c2-[0-9]*:../../sysutils/u-boot-odroid-c2
 .endif
