@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.29 2019/10/15 17:16:54 adam Exp $
+$NetBSD: distinfo,v 1.30 2019/10/19 06:38:56 adam Exp $
 
-SHA1 (pip-19.3.tar.gz) = e7d9a481827e0547f5c050a6dd92187b2aa0c321
-RMD160 (pip-19.3.tar.gz) = 71fa022b55e345ee8dfbfa73927fe0f3099dbe16
-SHA512 (pip-19.3.tar.gz) = dfb7fa9b106331d9b7a78891280cf364c6496ebac2735faedb38fc0d1cfaf09e2c4be00364ea64ee92a141faf4f1359a1e701ac4ff8a6bbdee7b4550a589ec84
-Size (pip-19.3.tar.gz) = 1393470 bytes
+SHA1 (pip-19.3.1.tar.gz) = ddf74fc8e3ba7f35757257bd5b24dbbb998ca29d
+RMD160 (pip-19.3.1.tar.gz) = e2aee78bd544b49da6f8e8af6be1ea7c0248c6f4
+SHA512 (pip-19.3.1.tar.gz) = 954b390580e23d0a85d1fa4cbd2f35171df7930fbe346f9a809477fe133e95f7d30208d79b5d07f30c81ab1b0a9b52f36f3ff6c77dc81a1c9ab9beb2bd8e0aa1
+Size (pip-19.3.1.tar.gz) = 1393609 bytes
