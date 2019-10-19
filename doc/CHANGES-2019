@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4440 2019/10/19 13:43:58 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4441 2019/10/19 13:48:36 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7130,3 +7130,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added textproc/aspell-fa version 0.11.0 [nia 2019-10-19]
 	Updated devel/p5-Glib-Object-Introspection to 0.047 [mef 2019-10-19]
 	Added textproc/aspell-ms version 0.50.0 [nia 2019-10-19]
+	Added textproc/aspell-nds version 0.01.0 [nia 2019-10-19]
