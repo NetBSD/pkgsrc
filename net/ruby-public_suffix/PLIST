@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2017/09/10 15:16:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/10/19 08:15:16 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/FUNDING.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rubocop.yml
 ${GEM_LIBDIR}/.rubocop_defaults.yml
