@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1061 2019/10/19 13:43:45 nia Exp $
+# $NetBSD: Makefile,v 1.1062 2019/10/19 13:48:24 nia Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -101,6 +101,7 @@ SUBDIR+=	aspell-mr
 SUBDIR+=	aspell-ms
 SUBDIR+=	aspell-mt
 SUBDIR+=	aspell-nb
+SUBDIR+=	aspell-nds
 SUBDIR+=	aspell-nl
 SUBDIR+=	aspell-nn
 SUBDIR+=	aspell-ny
