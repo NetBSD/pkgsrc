@@ -1,20 +1,17 @@
-# $NetBSD: Makefile,v 1.28 2018/11/26 09:15:53 fox Exp $
-#
+# $NetBSD: Makefile,v 1.29 2019/10/19 14:10:45 fox Exp $
 
-DISTNAME=	hnb-1.9.17
-PKGREVISION=	5
+DISTNAME=	hnb-1.9.18
 CATEGORIES=	editors
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hnb/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=fraggerfox/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+EXTRACT_USING=	bsdtar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hnb.sourceforge.net/
 COMMENT=	Hierarchical data organizer
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=		gmake
-
-BUILD_DIRS=		src
-BUILD_TARGET=		hnb
+USE_TOOLS+=	gmake
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
