@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg_test.R,v 1.15 2019/10/19 15:47:03 rillig Exp $
+# $NetBSD: R2pkg_test.R,v 1.16 2019/10/19 17:30:10 rillig Exp $
 #
 # Copyright (c) 2019
 #	Roland Illig.  All rights reserved.
@@ -38,6 +38,7 @@ arg.update <- FALSE
 
 package_dir <- file.path(Sys.getenv('PKGSRCDIR'), 'pkgtools', 'R2pkg')
 
+# don't use tabs in the output; see https://stackoverflow.com/q/58465177
 expect_printed <- function(obj, ...) {
     out <- ''
     with_output_sink(textConnection('out', 'w', local = TRUE), print(obj))
@@ -536,17 +537,16 @@ test_that('update.dependency', {
 # test_that('make.depends', {
 # })
 
-test_that('use.languages', {
-    languages <- use.languages(list(), list())
+test_that('use_languages without Rcpp as dependency', {
+    languages <- use_languages(list(), list())
 
-    expect_equal(languages, c('# none', ''))
+    expect_equal(languages, '# none')
 })
 
-test_that('use.languages with Rcpp as dependency', {
-    languages <- use.languages(list('Rcpp(>=0)'), list())
-    expected <- list('c cpp', '')
+test_that('use_languages with Rcpp as dependency', {
+    languages <- use_languages(list('Rcpp(>=0)'), list())
 
-    #expect_equal(languages, expected)
+    expect_equal(languages, 'c c++')
 })
 
 # test_that('copy.description', {
