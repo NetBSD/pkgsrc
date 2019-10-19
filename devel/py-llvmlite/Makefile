@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2019/06/02 09:02:45 adam Exp $
+# $NetBSD: Makefile,v 1.10 2019/10/19 14:10:00 adam Exp $
 
-DISTNAME=	llvmlite-0.29.0
+DISTNAME=	llvmlite-0.30.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/llvmlite/}
