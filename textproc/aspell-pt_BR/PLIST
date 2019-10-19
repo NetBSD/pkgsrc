@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/12 11:11:20 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/10/19 10:58:53 nia Exp $
+lib/aspell/brasileiro.alias
+lib/aspell/brazilian.alias
 lib/aspell/pt_BR.multi
 lib/aspell/pt_BR.rws
 share/aspell/br-abnt2.kbd
