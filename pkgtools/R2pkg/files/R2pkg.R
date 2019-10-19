@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg.R,v 1.15 2019/10/19 11:04:46 rillig Exp $
+# $NetBSD: R2pkg.R,v 1.16 2019/10/19 11:47:23 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -864,24 +864,20 @@ mklines.remove_lines_before_update <- function(mklines)
   mklines[!remove,]
 }
 
-reassign.order <- function(df)
+mklines.reassign_order <- function(mklines)
 {
-  # message('===> reassign.order():')
-  # str(df)
-  # print(df)
-
-  r_pkgname.order <- element(df,'R_PKGNAME','order')
-  categories.order <- element(df,'CATEGORIES','order')
+  r_pkgname.order <- element(mklines, 'R_PKGNAME', 'order')
+  categories.order <- element(mklines, 'CATEGORIES', 'order')
   if (r_pkgname.order > categories.order)
     {
-      r_pkgname.index <- df$key == 'R_PKGNAME'
-      r_pkgname.index[ is.na(r_pkgname.index) ] <- FALSE
-      r_pkgver.index <- df$key == 'R_PKGVER'
-      r_pkgver.index[ is.na(r_pkgver.index) ] <- FALSE
-      df[r_pkgname.index,'order'] <- categories.order - 0.2
-      df[r_pkgver.index,'order'] <- categories.order - 0.1
+      r_pkgname.index <- mklines$key == 'R_PKGNAME'
+      r_pkgname.index[is.na(r_pkgname.index)] <- FALSE
+      r_pkgver.index <- mklines$key == 'R_PKGVER'
+      r_pkgver.index[is.na(r_pkgver.index)] <- FALSE
+      mklines[r_pkgname.index, 'order'] <- categories.order - 0.2
+      mklines[r_pkgver.index, 'order'] <- categories.order - 0.1
     }
-  df
+  mklines
 }
 
 conflicts <- function(pkg)
@@ -1001,12 +997,12 @@ update.Makefile <- function(metadata)
 
   # message('===> df:')
   df <- read.Makefile.as.dataframe()
-  df <- mklines.update_with_metadata(df,metadata)
+  df <- mklines.update_with_metadata(df, metadata)
   df <- mklines.update_value(df)
   df <- mklines.update_new_line(df)
   df <- mklines.annotate_distname(df)
   df <- mklines.remove_lines_before_update(df)
-  df <- reassign.order(df)
+  df <- mklines.reassign_order(df)
 
   df.conflicts <- make.df.conflicts(df,metadata)
   df.depends <- make.df.depends(df,DEPENDS)
