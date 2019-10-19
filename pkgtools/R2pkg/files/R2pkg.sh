@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: R2pkg.sh,v 1.11 2019/10/19 17:15:00 rillig Exp $
+# $NetBSD: R2pkg.sh,v 1.12 2019/10/19 18:43:51 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -147,8 +147,6 @@ preserve_original_content ()
 {
     [ -f Makefile ] && grep -e "CATEGORIES=" Makefile > CATEGORIES
     [ -f Makefile ] && grep -e "COMMENT=" Makefile > COMMENT
-    [ -f Makefile ] && grep -e "LICENSE=" Makefile > LICENSE
-    [ -f Makefile ] && grep -e "MAINTAINER=" Makefile > MAINTAINER
     [ -f Makefile ] && grep -e "USE_LANGUAGES" Makefile > USE_LANGUAGES
     [ -f Makefile ] && grep -e "USE_TOOLS" Makefile > USE_TOOLS
     [ -f Makefile ] && grep -e "DEPENDS" Makefile > DEPENDS
@@ -297,7 +295,6 @@ cleanup_misc_files ()
     [ "$keep_description" = "yes" ] || rm -f DESCRIPTION
     rm -f CATEGORIES
     rm -f COMMENT
-    rm -f MAINTAINER
     rm -f USE_LANGUAGES
     rm -f USE_TOOLS
     rm -f DEPENDS
