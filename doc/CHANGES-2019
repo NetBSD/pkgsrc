@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4448 2019/10/19 15:47:19 rillig Exp $
+$NetBSD: CHANGES-2019,v 1.4449 2019/10/19 17:08:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7156,3 +7156,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/py-structlog to 19.2.0 [adam 2019-10-19]
 	Updated devel/py-fakefs to 3.6.1 [adam 2019-10-19]
 	Updated pkgtools/R2pkg to 0.6.3 [rillig 2019-10-19]
+	Updated devel/py-traitlets to 4.3.3 [adam 2019-10-19]
+	Updated devel/py-anytree to 2.7.2 [adam 2019-10-19]
