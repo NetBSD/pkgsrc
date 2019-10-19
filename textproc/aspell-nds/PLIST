@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2019/10/19 13:48:24 nia Exp $
+lib/aspell/lowsaxon.alias
+lib/aspell/nds.multi
+lib/aspell/nds.rws
+share/aspell/iso-8859-15.cmap
+share/aspell/iso-8859-15.cset
+share/aspell/nds.dat
+share/aspell/nds_affix.dat
+share/aspell/nds_phonet.dat

@@ -1,0 +1,1 @@
+Low Saxon language support for aspell, e.g. `aspell -d lowsaxon -c $myfile'.
