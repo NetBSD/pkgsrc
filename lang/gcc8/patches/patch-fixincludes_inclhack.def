@@ -1,0 +1,36 @@
+$NetBSD: patch-fixincludes_inclhack.def,v 1.1 2019/10/19 21:20:38 minskim Exp $
+
+A workaround for Catalina SDK bug from
+https://github.com/Homebrew/homebrew-core/pull/44762
+
+--- fixincludes/inclhack.def.orig	2018-02-22 08:12:26.000000000 -0800
++++ fixincludes/inclhack.def	2019-10-18 18:17:01.000000000 -0700
+@@ -1268,6 +1268,28 @@
+ };
+ 
+ /*
++ *  macOS 10.15 <Availability.h> does not define __OSX_AVAILABLE_STARTING on
++ *  non-clang compilers.
++ */
++fix = {
++    hackname  = darwin_availability;
++    mach      = "*-*-darwin*";
++    files     = Availability.h;
++    select    = "#endif /\\* __OSX_AVAILABLE_STARTING \\*/";
++    c_fix     = format;
++    c_fix_arg = <<- _EOFix_
++	#endif /* __OSX_AVAILABLE_STARTING */
++	#ifndef __OSX_AVAILABLE_STARTING
++	  #define __OSX_AVAILABLE_STARTING(_osx, _ios)
++	  #define __OSX_AVAILABLE_BUT_DEPRECATED(_osxIntro, _osxDep, _iosIntro, _iosDep)
++	  #define __OSX_AVAILABLE_BUT_DEPRECATED_MSG(_osxIntro, _osxDep, _iosIntro, _iosDep, _msg)
++	#endif
++	_EOFix_;
++
++    test_text = "#endif /* __OSX_AVAILABLE_STARTING */";
++};
++
++/*
+  *  For the AAB_darwin7_9_long_double_funcs fix to be useful,
+  *  you have to not use "" includes.
+  */

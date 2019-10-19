@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2019/08/06 06:16:15 maya Exp $
+$NetBSD: distinfo,v 1.11 2019/10/19 21:20:38 minskim Exp $
 
 SHA1 (gcc-8.3.0.tar.xz) = c27f4499dd263fe4fb01bcc5565917f3698583b2
 RMD160 (gcc-8.3.0.tar.xz) = 59396f7136301466d0ec15eb7307558c0da692df
@@ -9,6 +9,8 @@ RMD160 (isl-0.16.1.tar.bz2) = 5a99db3fe0d0a1f6bbac1ed4448f2403495c55b2
 SHA512 (isl-0.16.1.tar.bz2) = c188667a84dc5bdddb4ab7c35f89c91bf15a8171f4fcaf41301cf285fb7328846d9a367c096012fec4cc69d244f0bc9e95d84c09ec097394cd4093076f2a041b
 Size (isl-0.16.1.tar.bz2) = 1626446 bytes
 SHA1 (patch-contrib_download__prerequisites) = 9cdcde21ab174052911447d20762ddfd40aa8791
+SHA1 (patch-fixincludes_fixincl.x) = e78103bbc1783f18e39cab5f31a73767617b2a79
+SHA1 (patch-fixincludes_inclhack.def) = 7bc5afb89118bf46c66a34a0f325f0748dd081db
 SHA1 (patch-gcc_Makefile.in) = c0f97c75ba1d37eae894141edd58bb36b734f651
 SHA1 (patch-gcc_config.gcc) = 4a971d1df7f05cfaefdf462d1b7c6dea1e838713
 SHA1 (patch-gcc_config_aarch64_aarch64-builtins.c) = b10ef4b9ad39e605fc4e2a0c8dffdae677842e94
