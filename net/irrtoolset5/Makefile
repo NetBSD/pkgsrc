@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/10/17 16:05:06 he Exp $
+# $NetBSD: Makefile,v 1.13 2019/10/19 12:03:41 he Exp $
 
 VERSION=		5.1.2
 DISTNAME=		irrtoolset-${VERSION}
@@ -29,7 +29,6 @@ CONFIG_SUB_OVERRIDE=	config.sub
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf --install
-	cd ${WRKSRC} && autoconf -f
 
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
