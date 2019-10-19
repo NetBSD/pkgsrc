@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4436 2019/10/19 12:37:16 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4437 2019/10/19 12:59:11 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7120,3 +7120,8 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/aspell-eo to 2.1.20000225a.2 [nia 2019-10-19]
 	Updated textproc/aspell-it to 2.2_20050523.0 [nia 2019-10-19]
 	Updated print/poppler to 0.81.0 [nia 2019-10-19]
+	Updated devel/p5-FFI-CheckLib to 0.25 [mef 2019-10-19]
+	Updated devel/p5-File-Find-Object to 0.3.4 [mef 2019-10-19]
+	Updated devel/p5-File-Next to 1.18 [mef 2019-10-19]
+	Updated devel/p5-File-Slurp to 9999.28 [mef 2019-10-19]
+	Updated devel/p5-Getopt-Long to 2.51 [mef 2019-10-19]
