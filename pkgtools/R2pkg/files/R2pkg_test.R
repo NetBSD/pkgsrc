@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg_test.R,v 1.11 2019/10/19 11:47:23 rillig Exp $
+# $NetBSD: R2pkg_test.R,v 1.12 2019/10/19 13:37:00 rillig Exp $
 #
 # Copyright (c) 2019
 #	Roland Illig.  All rights reserved.
@@ -56,6 +56,36 @@ linesConnection <- function(...)
 make_mklines <- function(...)
     read.Makefile.as.dataframe(linesConnection(...))
 
+mocked_system <- function() {
+    commands <- list()
+    mock <- function(cmd) {
+        commands <<- append(commands, cmd)
+        0
+    }
+    get_commands <- function()
+        unlist(commands)
+    expect_commands <- function(...)
+        expect_equal(!!get_commands(), !!c(...))
+    list(
+        mock = mock,
+        commands = get_commands,
+        expect_commands = expect_commands)
+}
+
+mocked_message <- function() {
+    messages <- list()
+    mock <- function(...)
+        messages <<- append(messages, paste0(...))
+    get_messages <- function()
+        unlist(messages)
+    expect_messages <- function(...)
+        expect_equal(!!get_messages(), !!c(...))
+    list(
+        mock = mock,
+        messages = get_messages,
+        expect_messages = expect_messages)
+}
+
 test_that('linesConnection', {
     lines <- readLines(linesConnection('1', '2', '3'))
 
@@ -63,27 +93,25 @@ test_that('linesConnection', {
 })
 
 test_that('level.message', {
-    output <- ''
-    mock_message <- function(...) output <<- paste0(output, ..., '\n')
-
+    message <- mocked_message()
+    local_mock(message = message$mock)
     arg.level <<- 123  # XXX: should use with_environment instead
-    with_mock(message = mock_message, {
-        level.message('mess', 'age', ' text')
-    })
 
-    expect_equal(output, '[ 123 ] message text\n')
+    level.message('mess', 'age', ' text')
+
+    message$expect_messages(
+        '[ 123 ] message text')
 })
 
 test_that('level.warning', {
-    output <- ''
-    mock_message <- function(...) output <<- paste0(output, ..., '\n')
-
+    message <- mocked_message()
+    local_mock(message = message$mock)
     arg.level <<- 321  # XXX: should use with_environment instead
-    with_mock(message = mock_message, {
-        level.warning('mess', 'age', ' text')
-    })
 
-    expect_equal(output, '[ 321 ] WARNING: message text\n')
+    level.warning('mess', 'age', ' text')
+
+    message$expect_messages(
+        '[ 321 ] WARNING: message text')
 })
 
 test_that('trim.space', {
@@ -450,11 +478,25 @@ test_that('buildlink3.line', {
 # test_that('message.wip.dependency', {
 # })
 
-# test_that('message.too.many.dependencies', {
-# })
+test_that('update.dependency', {
+    system <- mocked_system()
+    message <- mocked_message()
+    local_mock(system = system$mock, message = message$mock)
+    local_dir(package_dir)
+    arg.packages_list <<- 'already-updated'
+    arg.r2pkg <<- 'pkg/bin/R2pkg'
+    arg.args <<- '-u'
 
-# test_that('update.dependency', {
-# })
+    update.dependency(make.dependency('assertthat'))
+
+    system$expect_commands(
+        paste0(
+            'grep -E -q -e "assertthat" already-updated ',
+            '|| ',
+            '(cd ../../devel/R-assertthat && pkg/bin/R2pkg -u assertthat)'))
+    message$expect_messages(
+        "[ 321 ] updating dependency for assertthat: ../../devel/R-assertthat")
+})
 
 # test_that('make.depends', {
 # })
@@ -740,10 +782,8 @@ test_that('conflicts', {
 
 test_that('update.Makefile', {
     local_dir(tempdir())
-    local_mock('system', function(...) {
-        expect_printed(list(...), 'asdf')
-        ''
-    })
+    system <- mocked_system()
+    local_mock(system = system$mock)
     writeLines(
         c(
             mkcvsid,
@@ -778,6 +818,7 @@ test_that('update.Makefile', {
             '',
             'asdf'),
         readLines('Makefile'))
+    system$expect_commands(c())
 })
 
 # test_that('create.Makefile', {
