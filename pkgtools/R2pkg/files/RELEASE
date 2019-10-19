@@ -1,4 +1,4 @@
-$NetBSD: RELEASE,v 1.5 2019/10/13 13:26:22 rillig Exp $
+$NetBSD: RELEASE,v 1.6 2019/10/19 15:47:03 rillig Exp $
 
 RELEASE
 =======
@@ -54,7 +54,7 @@ R2pkg v.0.6 (2019-08-08)
 * Annotate generated comments with [R2pkg] to make them easier to find.
 
 R2pkg v.0.6.1 (2019-10-13)
-------------------------
+--------------------------
 
 * Run properly even if TMPDIR is not set.
 
@@ -63,3 +63,10 @@ R2pkg v.0.6.1 (2019-10-13)
 * Write error messages to stderr instead of stdout.
 
 * Separate R source code from shell code.
+
+R2pkg v0.6.3 (2019-10-19)
+-------------------------
+
+* Fix comparison of articles (a, an) in comments.
+
+* Lots of refactorings.
