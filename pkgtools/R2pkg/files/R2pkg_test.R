@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg_test.R,v 1.17 2019/10/19 18:43:51 rillig Exp $
+# $NetBSD: R2pkg_test.R,v 1.18 2019/10/19 19:10:31 rillig Exp $
 #
 # Copyright (c) 2019
 #	Roland Illig.  All rights reserved.
@@ -579,9 +579,6 @@ test_that('write.Makefile', {
     ))
 })
 
-# test_that('construct.line', {
-# })
-
 test_that('element', {
     mklines <- make_mklines(
         'COMMENT=\tThe comment',
@@ -619,8 +616,60 @@ test_that('make.comment', {
 # test_that('license.in.pkgsrc', {
 # })
 
-# test_that('make.license', {
-# })
+test_that('make.license, old and new known and equal', {
+    mklines <- make_mklines(
+        'LICENSE=\tgnu-gpl-v2')
+    mklines$new_value <- 'gnu-gpl-v2'
+
+    updated <- make.license(mklines)
+
+    expect_equal(updated$value, 'gnu-gpl-v2')
+    expect_equal(updated$todo, '')
+})
+
+test_that('make.license, old and new known and changed', {
+    mklines <- make_mklines(
+        'LICENSE=\tgnu-gpl-v2')
+    mklines$new_value <- 'gnu-gpl-v3'
+
+    updated <- make.license(mklines)
+
+    expect_equal(updated$value, 'gnu-gpl-v3\t# [R2pkg] previously: gnu-gpl-v2')
+    expect_equal(updated$todo, '')
+})
+
+test_that('make.license, old known, new unknown', {
+    mklines <- make_mklines(
+        'LICENSE=\tgnu-gpl-v2')
+    mklines$new_value <- 'unknown-license'
+
+    updated <- make.license(mklines)
+
+    expect_equal(updated$value, 'gnu-gpl-v2\t# [R2pkg] updated to: unknown-license')
+    expect_equal(updated$todo, '# TODO: ')
+})
+
+test_that('make.license, old unknown, new known', {
+    mklines <- make_mklines(
+        'LICENSE=\tunknown-license')
+    mklines$new_value <- 'gnu-gpl-v2'
+
+    updated <- make.license(mklines)
+
+    expect_equal(updated$value, 'gnu-gpl-v2\t# [R2pkg] previously: unknown-license')
+    expect_equal(updated$todo, '')
+})
+
+test_that('make.license, old unknown, new also unknown', {
+    mklines <- make_mklines(
+        'LICENSE=\tunknown-license')
+    mklines$new_value <- 'new-unknown'
+
+    updated <- make.license(mklines)
+
+    expect_equal(updated$value, 'new-unknown\t# [R2pkg] previously: unknown-license')
+    expect_equal(updated$todo, '# TODO: ')
+})
 
 # test_that('make.r_pkgver', {
 # })
