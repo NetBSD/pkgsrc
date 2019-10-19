@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.30 2019/09/15 06:53:36 maya Exp $
+$NetBSD: distinfo,v 1.31 2019/10/19 10:43:28 nia Exp $
 
-SHA1 (aspell-0.60.7.tar.gz) = 80ef99a68e7e672f0eb06fac844387494e594948
-RMD160 (aspell-0.60.7.tar.gz) = 9463ce8f8f5db73e403cc8ee4ea9f4c66fb1ed25
-SHA512 (aspell-0.60.7.tar.gz) = 6f5fcd1c29164ee18f205594b66f382b51d19b17686293a931ca92c1442d3f7228627ca7d604d860551d0d367ac34dfb2ae34170a844f51e84e390fb1edc4535
-Size (aspell-0.60.7.tar.gz) = 2071890 bytes
+SHA1 (aspell-0.60.8.tar.gz) = ae554df297aee676b4d16f261fa5c60e285478f6
+RMD160 (aspell-0.60.8.tar.gz) = 331a10149aa4efe9b6798137d6a56a0a44fcf570
+SHA512 (aspell-0.60.8.tar.gz) = 8ef4952c553b6234dfe777240d2d97beb13ef9201e18d56bee3b5068d13525db3625b7130d9f5122f7c529da0ccb0c70eb852a81472a7d15fb7c4ee5ba21cd29
+Size (aspell-0.60.8.tar.gz) = 3486448 bytes
 SHA1 (patch-ab) = 615a676128dab7d79e697f56330c8aaa6c901d3f
 SHA1 (patch-ac) = e748877b22ca116454155d3659c16efaf02e7963
 SHA1 (patch-ad) = 5e525ed1e91b3271567f4255729e94159be86f58
