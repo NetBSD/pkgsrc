@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg_test.R,v 1.18 2019/10/19 19:10:31 rillig Exp $
+# $NetBSD: R2pkg_test.R,v 1.19 2019/10/19 21:12:18 rillig Exp $
 #
 # Copyright (c) 2019
 #	Roland Illig.  All rights reserved.
@@ -36,16 +36,19 @@ library(withr)
 arg.recursive <- FALSE
 arg.update <- FALSE
 
+original_wd <- getwd()
 package_dir <- file.path(Sys.getenv('PKGSRCDIR'), 'pkgtools', 'R2pkg')
 
-# don't use tabs in the output; see https://stackoverflow.com/q/58465177
+#' don't use tabs in the output; see https://stackoverflow.com/q/58465177
 expect_printed <- function(obj, ...) {
     out <- ''
-    with_output_sink(textConnection('out', 'w', local = TRUE), print(obj))
+    with_output_sink(textConnection('out', 'w', local = TRUE), {
+        print(obj, right = FALSE)
+    })
     exp <- c(...)
     if (! identical(out, exp)) {
-        write(out, 'R2pkg_test.out.txt')
-        write(exp, 'R2pkg_test.exp.txt')
+        write(out, file.path(original_wd, 'R2pkg_test.out.txt'))
+        write(exp, file.path(original_wd, 'R2pkg_test.exp.txt'))
     }
     expect_equal(length(out), length(exp))
     expect_equal(!!out, !!exp)
@@ -55,7 +58,7 @@ linesConnection <- function(...)
     textConnection(paste0(c(...), collapse = '\n'))
 
 make_mklines <- function(...)
-    read.Makefile.as.dataframe(linesConnection(...))
+    read_mklines(linesConnection(...))
 
 mocked_system <- function() {
     commands <- list()
@@ -143,11 +146,26 @@ test_that('varassign', {
     expect_equal(varassign('VAR', 'value'), 'VAR=\tvalue')
 })
 
+test_that('relpath_category', {
+    expect_equal(relpath_category('../../other/pkgbase'), 'other')
+    expect_equal(relpath_category('../../wip/pkgbase/Makefile'), 'wip')
+
+    expect_equal(
+        relpath_category(c(
+            '../../wip/pkgbase/Makefile',
+            '../../other/pkgbase')),
+        c(
+            'wip',
+            'other'))
+
+    # undefined behavior
+    expect_equal(relpath_category('..'), NA_character_)
+})
+
 test_that('adjacent.duplicates', {
     expect_equal(
-    adjacent.duplicates(c(1, 2, 2, 2, 3, 3, 4)),
-    c(FALSE, FALSE, TRUE, TRUE, FALSE, TRUE, FALSE)
-    )
+        adjacent.duplicates(c(1, 2, 2, 2, 3, 3, 4)),
+        c(FALSE, FALSE, TRUE, TRUE, FALSE, TRUE, FALSE))
 })
 
 test_that('paste2', {
@@ -173,26 +191,38 @@ test_that('as.sorted.list', {
     list('1', '1', '2', '3'))
 })
 
-test_that('read.file.as.dataframe', {
-    content <- linesConnection(
-        'VAR=value',
-        'VAR2=value2')
+test_that('categorize.key_value', {
+    mklines <- make_mklines(
+        '\tPATH=/bin echo',
+        'DEPENDS+= R-ellipsis>=0:../../math/R-ellipsis',
+        '.include "../../math/R-ellipsis/buildlink3.mk"')
 
-    df <- read.file.as.dataframe(content)
-
-    expect_equal(length(df$line), 2)
-    expect_equal(df$line[[1]], 'VAR=value')
-    expect_equal(df$line[[2]], 'VAR2=value2')
+    expect_printed(
+        data.frame(
+            key_value = mklines$key_value,
+            key = mklines$key,
+            old_value = mklines$old_value),
+        '  key_value key     old_value                          ',
+        '1 FALSE     <NA>    <NA>                               ',
+        '2  TRUE     DEPENDS R-ellipsis>=0:../../math/R-ellipsis',
+        '3 FALSE     <NA>    <NA>                               ')
 })
 
-# test_that('categorize.key_value', {
-# })
+test_that('categorize.depends', {
+    mklines <- make_mklines(
+        'DEPENDS+=\tR-ellipsis>=0:../../math/R-ellipsis',
+        '.include "../../math/R-ellipsis/buildlink3.mk"')
 
-# test_that('categorize.depends', {
-# })
+    expect_equal(mklines$depends, c(TRUE, FALSE))
+})
 
-# test_that('categorize.buildlink', {
-# })
+test_that('categorize.buildlink', {
+    mklines <- make_mklines(
+        'DEPENDS+=\tR-ellipsis>=0:../../math/R-ellipsis',
+        '.include "../../math/R-ellipsis/buildlink3.mk"')
+
+    expect_equal(mklines$buildlink3.mk, c(FALSE, TRUE))
+})
 
 test_that('fix.continued.lines', {
     message <- mocked_message()
@@ -232,7 +262,7 @@ test_that('fix.continued.lines, no continued lines', {
     expect_equal(mklines$line, rep('VAR= value',3))
 })
 
-test_that('read.Makefile.as.dataframe', {
+test_that('read_mklines', {
     mklines <- make_mklines(
         '# comment',
         'VAR= value',
@@ -242,20 +272,20 @@ test_that('read.Makefile.as.dataframe', {
         '.endif')
 
     expect_printed(mklines,
-        '                 line order category key_value  key depends buildlink3.mk',
-        '1           # comment     1       NA     FALSE <NA>   FALSE         FALSE',
-        '2          VAR= value     2       NA      TRUE  VAR   FALSE         FALSE',
-        '3                         3       NA     FALSE <NA>   FALSE         FALSE',
-        '4 .include "other.mk"     4       NA     FALSE <NA>   FALSE         FALSE',
-        '5               .if 0     5       NA     FALSE <NA>   FALSE         FALSE',
-        '6              .endif     6       NA     FALSE <NA>   FALSE         FALSE',
-        '  old_todo operator delimiter old_value',
-        '1     <NA>     <NA>      <NA>      <NA>',
-        '2                 =               value',
-        '3     <NA>     <NA>      <NA>      <NA>',
-        '4     <NA>     <NA>      <NA>      <NA>',
-        '5     <NA>     <NA>      <NA>      <NA>',
-        '6     <NA>     <NA>      <NA>      <NA>')
+        '  line                order key_value old_todo key  operator delimiter',
+        '1 # comment           1     FALSE     <NA>     <NA> <NA>     <NA>     ',
+        '2 VAR= value          2      TRUE              VAR  =                 ',
+        '3                     3     FALSE     <NA>     <NA> <NA>     <NA>     ',
+        '4 .include "other.mk" 4     FALSE     <NA>     <NA> <NA>     <NA>     ',
+        '5 .if 0               5     FALSE     <NA>     <NA> <NA>     <NA>     ',
+        '6 .endif              6     FALSE     <NA>     <NA> <NA>     <NA>     ',
+        '  old_value category depends buildlink3.mk',
+        '1 <NA>      NA       FALSE   FALSE        ',
+        '2 value     NA       FALSE   FALSE        ',
+        '3 <NA>      NA       FALSE   FALSE        ',
+        '4 <NA>      NA       FALSE   FALSE        ',
+        '5 <NA>      NA       FALSE   FALSE        ',
+        '6 <NA>      NA       FALSE   FALSE        ')
 })
 
 test_that('read.file.as.list can read an empty file', {
@@ -704,11 +734,11 @@ test_that('mklines.update_with_metadata with CATEGORIES', {
     updated <- mklines.update_with_metadata(df, metadata)
 
     expect_printed(data.frame(varname = updated$key, new_value = updated$new_value),
-        '     varname                   new_value',
-        '1 CATEGORIES                    pkgtools',
+        '  varname    new_value                  ',
+        '1 CATEGORIES pkgtools                   ',
         '2 MAINTAINER with-categories@example.org',  # FIXME: Should not always be reset.
-        '3    COMMENT             Package comment',
-        '4   R_PKGVER                        19.3')
+        '3 COMMENT    Package comment            ',
+        '4 R_PKGVER   19.3                       ')
 })
 
 # If the variable has been removed from the Makefile, it is not updated.
@@ -723,10 +753,10 @@ test_that('mklines.update_with_metadata without CATEGORIES', {
     updated <- mklines.update_with_metadata(df, metadata)
 
     expect_printed(data.frame(varname = updated$key, new_value = updated$new_value),
-        '     varname                      new_value',
+        '  varname    new_value                     ',
         '1 MAINTAINER without-categories@example.org',
-        '2    COMMENT                Package comment',
-        '3   R_PKGVER                           19.3')
+        '2 COMMENT    Package comment               ',
+        '3 R_PKGVER   19.3                          ')
 })
 
 test_that('mklines.update_value', {
@@ -821,18 +851,18 @@ test_that('mklines.reassign_order, reordered', {
         'R_PKGVER= 0.1')
 
     expect_printed(data.frame(varname = mklines$key, order = mklines$order),
-        '     varname order',
-        '1 CATEGORIES     1',
-        '2  R_PKGNAME     2',
-        '3   R_PKGVER     3')
+        '  varname    order',
+        '1 CATEGORIES 1    ',
+        '2 R_PKGNAME  2    ',
+        '3 R_PKGVER   3    ')
 
     updated <- mklines.reassign_order(mklines)
 
     expect_printed(data.frame(varname = updated$key, order = updated$order),
-        '     varname order',
-        '1 CATEGORIES   1.0',
-        '2  R_PKGNAME   0.8',
-        '3   R_PKGVER   0.9')
+        '  varname    order',
+        '1 CATEGORIES 1.0  ',
+        '2 R_PKGNAME  0.8  ',
+        '3 R_PKGVER   0.9  ')
 })
 
 test_that('conflicts', {
@@ -872,14 +902,15 @@ test_that('update.Makefile', {
             '',
             '.include "../../mk/bsd.pkg.mk"'),
         'Makefile.orig')
+    orig <- read_mklines('Makefile.orig')
     metadata <- make.metadata(linesConnection(
         'Package: pkgname',
         'Version: 1.0',
         'Depends: dep1 dep2(>=2.0)'))
     expect_printed(
         as.data.frame(metadata),
-        '  Package Version Title Description License Imports          Depends',
-        '1 pkgname     1.0  <NA>        <NA>    <NA>    <NA> dep1 dep2(>=2.0)')
+        '  Package Version Title Description License Imports Depends         ',
+        '1 pkgname 1.0     <NA>  <NA>        <NA>    <NA>    dep1 dep2(>=2.0)')
     expect_printed(metadata$Imports, '[1] NA')
     expect_printed(metadata$Depends, '[1] "dep1 dep2(>=2.0)"')
     expect_printed(
@@ -892,7 +923,7 @@ test_that('update.Makefile', {
         make.depends(metadata$Imports, metadata$Depends),
         '[1] "dep1"        "dep2(>=2.0)"')
 
-    FALSE && update.Makefile(metadata)  # FIXME
+    FALSE && update.Makefile(orig, metadata)  # FIXME
 
     FALSE && expect_equal(  # FIXME
         c(
