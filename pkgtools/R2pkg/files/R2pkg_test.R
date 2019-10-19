@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg_test.R,v 1.9 2019/10/18 22:10:46 rillig Exp $
+# $NetBSD: R2pkg_test.R,v 1.10 2019/10/19 11:04:46 rillig Exp $
 #
 # Copyright (c) 2019
 #	Roland Illig.  All rights reserved.
@@ -36,13 +36,19 @@ library(withr)
 arg.recursive <- FALSE
 arg.update <- FALSE
 
-package_dir <- file.path(Sys.getenv('PKGSRCDIR'), 'pkgtools', 'R2pkg')
+pkgsrcdir <- Sys.getenv('PKGSRCDIR')
+package_dir <- file.path(pkgsrcdir, 'pkgtools', 'R2pkg')
 
 expect_printed <- function(obj, ...) {
     out <- ''
     with_output_sink(textConnection('out', 'w', local = TRUE), print(obj))
-    expect_equal(length(out), length(c(...)))
-    expect_equal(!!out, !!c(...))
+    exp <- c(...)
+    if (length(out) != length(exp) || out != exp) {
+        write(out, 'R2pkg_test.out.txt')
+        write(exp, 'R2pkg_test.exp.txt')
+    }
+    expect_equal(length(out), length(exp))
+    expect_equal(!!out, !!exp)
 }
 
 linesConnection <- function(...)
@@ -559,8 +565,9 @@ test_that('find.order', {
     expect_equal(include_order, NA_integer_)
 })
 
-test_that('update.Makefile.with.metadata', {
+test_that('mklines.update_with_metadata with CATEGORIES', {
     local_dir(package_dir)  # to get a realistic category
+    arg.maintainer_email <<- 'with-categories@example.org'
     df <- read.Makefile.as.dataframe(linesConnection(
         'CATEGORIES=\told categories',
         'MAINTAINER=\told_maintainer@example.org',
@@ -568,63 +575,116 @@ test_that('update.Makefile.with.metadata', {
         'R_PKGVER=\t1.0'))
     metadata = list(Title = 'Package comment', Version = '19.3', License = 'license')
 
-    updated <- update.Makefile.with.metadata(df, metadata)
+    updated <- mklines.update_with_metadata(df, metadata)
 
     expect_printed(data.frame(key = updated$key, new_value = updated$new_value),
-        '         key       new_value',
-        '1 CATEGORIES        pkgtools',
-        '2 MAINTAINER                ',  # FIXME: Should not always be reset.
-        '3    COMMENT Package comment',
-        '4   R_PKGVER            19.3')
+        '         key                   new_value',
+        '1 CATEGORIES                    pkgtools',
+        '2 MAINTAINER with-categories@example.org',  # FIXME: Should not always be reset.
+        '3    COMMENT             Package comment',
+        '4   R_PKGVER                        19.3')
 })
 
 # If the variable has been removed from the Makefile, it is not updated.
-test_that('update.Makefile.with.metadata without CATEGORIES', {
+test_that('mklines.update_with_metadata without CATEGORIES', {
+    arg.maintainer_email <<- 'without-categories@example.org'
     df <- read.Makefile.as.dataframe(linesConnection(
         'MAINTAINER=',
         'COMMENT=',
         'R_PKGVER='))
     metadata = list(Title = 'Package comment', Version = '19.3', License = 'license')
 
-    updated <- update.Makefile.with.metadata(df, metadata)
+    updated <- mklines.update_with_metadata(df, metadata)
 
     expect_printed(updated,
         '         line order category key_value        key depends buildlink3.mk',
         '1 MAINTAINER=     1       NA      TRUE MAINTAINER   FALSE         FALSE',
         '2    COMMENT=     2       NA      TRUE    COMMENT   FALSE         FALSE',
         '3   R_PKGVER=     3       NA      TRUE   R_PKGVER   FALSE         FALSE',
-        '  operator delimiter old_value old_todo       new_value',
-        '1        =                                             ',
-        '2        =                              Package comment',
-        '3        =                                         19.3')
+        '  operator delimiter old_value old_todo                      new_value',
+        '1        =                              without-categories@example.org',
+        '2        =                                             Package comment',
+        '3        =                                                        19.3')
 })
 
-# test_that('update.Makefile.with.new.values', {
-# })
+test_that('mklines.update_value', {
+    local_dir(package_dir)
 
-# test_that('update.Makefile.with.new.line', {
-# })
+    mklines <- read.Makefile.as.dataframe(linesConnection(
+        'R_PKGVER=\t1.0',
+        'CATEGORIES=\told categories',
+        'MAINTAINER=\told_maintainer@example.org',
+        'COMMENT=\tOld comment',
+        'LICENSE=\told-license'
+    ))
+    mklines$new_value <- mklines$old_value
 
-# test_that('annotate.distname.in.Makefile', {
-# })
+    updated <- mklines.update_value(mklines)
 
-# test_that('annotate.Makefile', {
-# })
+    expect_equal(updated$value, c(
+        '1.0',
+        'pkgtools old categories',
+        'old_maintainer@example.org',
+        'Old comment',
+        'old-license\t# [R2pkg] previously: old-license'))  # FIXME: no comment necessary
+    expect_equal(updated$todo, c(
+        '',
+        '',
+        '',
+        '',
+        '# TODO: '))
+})
 
-# test_that('remove.master.sites.from.Makefile', {
-# })
+test_that('mklines.update_new_line', {
+    mklines <- read.Makefile.as.dataframe(linesConnection(
+        'VALUE=\tvalue',
+        'VALUE_WITH_COMMENT=\tvalue # comment',
+        'VALUE_NA=\tvalue',
+        '#COMMENTED=\tcommented value'
+    ))
+    mklines <- mklines.update_value(mklines)
+    mklines$value[mklines$key == 'VALUE'] <- 'new value'
+    mklines$value[mklines$key == 'VALUE_WITH_COMMENT'] <- 'new value # new comment'
+    mklines$value[mklines$key == '#COMMENTED'] <- 'new commented'
 
-# test_that('remove.homepage.from.Makefile', {
-# })
+    updated <- mklines.update_new_line(mklines)
 
-# test_that('remove.buildlink.abi.depends.from.Makefile', {
-# })
+    expect_equal(updated$new_line, c(
+        'VALUE=\tnew value',
+        'VALUE_WITH_COMMENT=\tnew value # new comment',
+        'VALUE_NA=\tvalue',
+        '#COMMENTED=\tnew commented'))
+})
 
-# test_that('remove.buildlink.api.depends.from.Makefile', {
-# })
+test_that('mklines.annotate_distname', {
+    mklines <- read.Makefile.as.dataframe(linesConnection(
+        'DISTNAME=\tpkg_1.0'))
+    mklines$new_line <- mklines$line
 
-# test_that('remove.lines.from.Makefile', {
-# })
+    annotated <- mklines.annotate_distname(mklines)
+
+    expect_equal(
+        annotated$new_line,
+        'DISTNAME=\tpkg_1.0\t# [R2pkg] replace this line with R_PKGNAME=pkg and R_PKGVER=1.0 as first stanza')
+})
+
+test_that('mklines.remove_lines_before_update', {
+    mklines <- read.Makefile.as.dataframe(linesConnection(
+        'MASTER_SITES=',
+        'HOMEPAGE=',
+        'BUILDLINK_API_DEPENDS.dependency+=',
+        'BUILDLINK_ABI_DEPENDS.dependency+=',
+        'COMMENT='))
+    mklines$new_line <- mklines$line
+
+    cleaned <- mklines.remove_lines_before_update(mklines)
+
+    expect_printed(cleaned,
+    '      line order category key_value     key depends buildlink3.mk operator',
+    '5 COMMENT=     5       NA      TRUE COMMENT   FALSE         FALSE        =',
+    '  delimiter old_value old_todo new_line',
+    '5                              COMMENT=')
+})
 
 # test_that('reassign.order', {
 # })
