@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4437 2019/10/19 12:59:11 mef Exp $
+$NetBSD: CHANGES-2019,v 1.4438 2019/10/19 13:38:56 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7125,3 +7125,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-File-Next to 1.18 [mef 2019-10-19]
 	Updated devel/p5-File-Slurp to 9999.28 [mef 2019-10-19]
 	Updated devel/p5-Getopt-Long to 2.51 [mef 2019-10-19]
+	Added textproc/aspell-fa version 0.11.0 [nia 2019-10-19]
