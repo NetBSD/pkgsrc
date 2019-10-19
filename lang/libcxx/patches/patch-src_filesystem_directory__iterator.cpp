@@ -1,11 +1,11 @@
-$NetBSD: patch-src_filesystem_directory__iterator.cpp,v 1.1 2018/12/17 16:07:09 jperkin Exp $
+$NetBSD: patch-src_filesystem_directory__iterator.cpp,v 1.2 2019/10/19 13:59:07 adam Exp $
 
 Support POSIX file modes.
 
---- src/filesystem/directory_iterator.cpp.orig	2018-07-27 03:07:09.000000000 +0000
+--- src/filesystem/directory_iterator.cpp.orig	2019-02-01 23:52:17.000000000 +0000
 +++ src/filesystem/directory_iterator.cpp
-@@ -27,7 +27,21 @@ namespace {
- #if !defined(_LIBCPP_WIN32API)
+@@ -28,7 +28,21 @@ namespace {
+ #if defined(DT_BLK)
  template <class DirEntT, class = decltype(DirEntT::d_type)>
  static file_type get_file_type(DirEntT* ent, int) {
 +#ifdef __sun
