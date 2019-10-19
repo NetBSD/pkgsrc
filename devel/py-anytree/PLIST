@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/01/31 08:21:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/10/19 17:07:54 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,6 +7,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/anytree/__init__.py
 ${PYSITELIB}/anytree/__init__.pyc
 ${PYSITELIB}/anytree/__init__.pyo
+${PYSITELIB}/anytree/cachedsearch.py
+${PYSITELIB}/anytree/cachedsearch.pyc
+${PYSITELIB}/anytree/cachedsearch.pyo
 ${PYSITELIB}/anytree/dotexport.py
 ${PYSITELIB}/anytree/dotexport.pyc
 ${PYSITELIB}/anytree/dotexport.pyo
