@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4427 2019/10/19 09:15:49 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4428 2019/10/19 10:43:38 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7111,3 +7111,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed multimedia/adobe-flash-plugin11 [tsutsui 2019-10-19]
 	Removed multimedia/farsight2 successor chat/farstream [nia 2019-10-19]
 	Removed chat/telepathy-farsight successor chat/telepathy-farstream [nia 2019-10-19]
+	Updated textproc/aspell to 0.60.8 [nia 2019-10-19]
