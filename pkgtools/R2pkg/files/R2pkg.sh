@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: R2pkg.sh,v 1.12 2019/10/19 18:43:51 rillig Exp $
+# $NetBSD: R2pkg.sh,v 1.13 2019/10/19 18:47:59 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -145,13 +145,6 @@ check_for_no_recursion ()
 
 preserve_original_content ()
 {
-    [ -f Makefile ] && grep -e "CATEGORIES=" Makefile > CATEGORIES
-    [ -f Makefile ] && grep -e "COMMENT=" Makefile > COMMENT
-    [ -f Makefile ] && grep -e "USE_LANGUAGES" Makefile > USE_LANGUAGES
-    [ -f Makefile ] && grep -e "USE_TOOLS" Makefile > USE_TOOLS
-    [ -f Makefile ] && grep -e "DEPENDS" Makefile > DEPENDS
-    [ -f Makefile ] && grep -e "buildlink3.mk" Makefile > BUILDLINK3.MK
-
     [ -f DESCR ]    && mv DESCR DESCR.orig
     [ -f Makefile ] && mv Makefile Makefile.orig
     [ -f buildlink3.mk ] && mv buildlink3.mk buildlink3.mk.orig
@@ -293,12 +286,6 @@ cleanup_distinfo ()
 cleanup_misc_files ()
 {
     [ "$keep_description" = "yes" ] || rm -f DESCRIPTION
-    rm -f CATEGORIES
-    rm -f COMMENT
-    rm -f USE_LANGUAGES
-    rm -f USE_TOOLS
-    rm -f DEPENDS
-    rm -f BUILDLINK3.MK
     [ $level -eq 0 ] && rm -f "$packages_list"
     [ $level -eq 0 ] && rm -f "$dependency_list"
 }
