@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4424 2019/10/19 08:16:45 tsutsui Exp $
+$NetBSD: CHANGES-2019,v 1.4425 2019/10/19 08:34:54 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7086,3 +7086,25 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ruby-diva to 1.0.1 [tsutsui 2019-10-19]
 	Updated net/ruby-public_suffix to 4.0.1 [tsutsui 2019-10-19]
 	Updated net/ruby-addressable to 2.7.0 [tsutsui 2019-10-19]
+	Updated devel/ruby-atk to 3.4.1 [tsutsui 2019-10-19]
+	Updated devel/ruby-gio2 to 3.4.1 [tsutsui 2019-10-19]
+	Updated devel/ruby-glib2 to 3.4.1 [tsutsui 2019-10-19]
+	Updated devel/ruby-gobject-introspection to 3.4.1 [tsutsui 2019-10-19]
+	Updated devel/ruby-pango to 3.4.1 [tsutsui 2019-10-19]
+	Updated graphics/ruby-cairo-gobject to 3.4.1 [tsutsui 2019-10-19]
+	Updated graphics/ruby-clutter to 3.4.1 [tsutsui 2019-10-19]
+	Updated graphics/ruby-clutter-gdk to 3.4.1 [tsutsui 2019-10-19]
+	Updated graphics/ruby-clutter-gtk to 3.4.1 [tsutsui 2019-10-19]
+	Updated graphics/ruby-gdk3 to 3.4.1 [tsutsui 2019-10-19]
+	Updated graphics/ruby-gdk_pixbuf2 to 3.4.1 [tsutsui 2019-10-19]
+	Updated graphics/ruby-rsvg2 to 3.4.1 [tsutsui 2019-10-19]
+	Updated multimedia/ruby-clutter-gstreamer to 3.4.1 [tsutsui 2019-10-19]
+	Updated multimedia/ruby-gstreamer to 3.4.1 [tsutsui 2019-10-19]
+	Updated print/ruby-poppler to 3.4.1 [tsutsui 2019-10-19]
+	Updated www/ruby-webkit-gtk to 3.4.1 [tsutsui 2019-10-19]
+	Updated www/ruby-webkit-gtk2 to 3.4.1 [tsutsui 2019-10-19]
+	Updated x11/ruby-gtk2 to 3.4.1 [tsutsui 2019-10-19]
+	Updated x11/ruby-gtk3 to 3.4.1 [tsutsui 2019-10-19]
+	Updated x11/ruby-gtksourceview2 to 3.4.1 [tsutsui 2019-10-19]
+	Updated x11/ruby-gtksourceview3 to 3.4.1 [tsutsui 2019-10-19]
+	Updated x11/ruby-vte to 3.4.1 [tsutsui 2019-10-19]
