@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 2018/11/26 09:15:53 fox Exp $
+$NetBSD: patch-ac,v 1.3 2019/10/19 14:10:45 fox Exp $
 
 Added the curses library path for pkgsrc.
 
@@ -7,6 +7,6 @@ Added the curses library path for pkgsrc.
 @@ -1,4 +1,4 @@
 -LIBS=-lncurses libcli/libcli.a
 +LIBS=-Wl,-R${PREFIX}/lib -lncurses libcli/libcli.a
- CFLAGS=-I.. -Ilibcli -DHAVE_CONFIG_H -Wall -pedantic -g
+ CFLAGS+=-I.. -Ilibcli -DHAVE_CONFIG_H -Wall -pedantic -g
  
  CFILES=$(wildcard *.c)
