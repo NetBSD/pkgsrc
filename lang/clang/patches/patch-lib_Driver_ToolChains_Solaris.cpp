@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_Driver_ToolChains_Solaris.cpp,v 1.3 2019/01/23 15:44:34 jperkin Exp $
+$NetBSD: patch-lib_Driver_ToolChains_Solaris.cpp,v 1.4 2019/10/19 13:54:29 adam Exp $
 
 Use compiler-rt instead of libgcc.
 Pull in libcxx correctly.
@@ -7,9 +7,9 @@ Don't specify --dynamic-linker, makes it impossible for the user to use -Wl,-r
 Ensure we reset to -zdefaultextract prior to adding compiler-rt.
 Test removing -Bdynamic for golang.
 
---- lib/Driver/ToolChains/Solaris.cpp.orig	2018-02-06 13:21:12.000000000 +0000
+--- lib/Driver/ToolChains/Solaris.cpp.orig	2019-07-16 11:06:43.000000000 +0000
 +++ lib/Driver/ToolChains/Solaris.cpp
-@@ -49,8 +49,29 @@ void solaris::Linker::ConstructJob(Compi
+@@ -48,8 +48,29 @@ void solaris::Linker::ConstructJob(Compi
                                     const InputInfoList &Inputs,
                                     const ArgList &Args,
                                     const char *LinkingOutput) const {
@@ -39,21 +39,15 @@ Test removing -Bdynamic for golang.
    // Demangle C++ names in errors
    CmdArgs.push_back("-C");
  
-@@ -63,13 +84,8 @@ void solaris::Linker::ConstructJob(Compi
+@@ -62,7 +83,6 @@ void solaris::Linker::ConstructJob(Compi
      CmdArgs.push_back("-Bstatic");
      CmdArgs.push_back("-dn");
    } else {
 -    CmdArgs.push_back("-Bdynamic");
      if (Args.hasArg(options::OPT_shared)) {
        CmdArgs.push_back("-shared");
--    } else {
--      CmdArgs.push_back("--dynamic-linker");
--      CmdArgs.push_back(
--          Args.MakeArgString(getToolChain().GetFilePath("ld.so.1")));
      }
- 
-     // libpthread has been folded into libc since Solaris 10, no need to do
-@@ -88,21 +104,21 @@ void solaris::Linker::ConstructJob(Compi
+@@ -83,13 +103,11 @@ void solaris::Linker::ConstructJob(Compi
    if (!Args.hasArg(options::OPT_nostdlib, options::OPT_nostartfiles)) {
      if (!Args.hasArg(options::OPT_shared))
        CmdArgs.push_back(
@@ -69,18 +63,8 @@ Test removing -Bdynamic for golang.
 +        Args.MakeArgString(SysPath + "values-Xa.o"));
    }
  
-   // Provide __start___sancov_guards.  Solaris ld doesn't automatically create
-   // __start_SECNAME labels.
-+#if 0
-   CmdArgs.push_back("--whole-archive");
-   CmdArgs.push_back(
-       getToolChain().getCompilerRTArgString(Args, "sancov_begin", false));
-   CmdArgs.push_back("--no-whole-archive");
-+#endif
- 
    getToolChain().AddFilePathLibArgs(Args, CmdArgs);
- 
-@@ -113,37 +129,32 @@ void solaris::Linker::ConstructJob(Compi
+@@ -101,30 +119,23 @@ void solaris::Linker::ConstructJob(Compi
    AddLinkerInputs(getToolChain(), Inputs, Args, CmdArgs, JA);
  
    if (!Args.hasArg(options::OPT_nostdlib, options::OPT_nodefaultlibs)) {
@@ -113,15 +97,6 @@ Test removing -Bdynamic for golang.
        linkSanitizerRuntimeDeps(getToolChain(), CmdArgs);
    }
  
-   // Provide __stop___sancov_guards.  Solaris ld doesn't automatically create
-   // __stop_SECNAME labels.
-+#if 0
-   CmdArgs.push_back("--whole-archive");
-   CmdArgs.push_back(
-       getToolChain().getCompilerRTArgString(Args, "sancov_end", false));
-   CmdArgs.push_back("--no-whole-archive");
-+#endif
- 
 -  if (!Args.hasArg(options::OPT_nostdlib, options::OPT_nostartfiles)) {
 -    CmdArgs.push_back(
 -        Args.MakeArgString(getToolChain().GetFilePath("crtend.o")));
@@ -131,7 +106,7 @@ Test removing -Bdynamic for golang.
  
    getToolChain().addProfileRTLibs(Args, CmdArgs);
  
-@@ -172,26 +183,9 @@ Solaris::Solaris(const Driver &D, const
+@@ -153,26 +164,9 @@ Solaris::Solaris(const Driver &D, const 
                   const ArgList &Args)
      : Generic_ELF(D, Triple, Args) {
  
@@ -161,7 +136,7 @@ Test removing -Bdynamic for golang.
  }
  
  SanitizerMask Solaris::getSupportedSanitizers() const {
-@@ -211,6 +205,32 @@ Tool *Solaris::buildAssembler() const {
+@@ -194,6 +188,32 @@ Tool *Solaris::buildAssembler() const {
  
  Tool *Solaris::buildLinker() const { return new tools::solaris::Linker(*this); }
  
@@ -194,7 +169,7 @@ Test removing -Bdynamic for golang.
  void Solaris::AddClangSystemIncludeArgs(const ArgList &DriverArgs,
                                          ArgStringList &CC1Args) const {
    const Driver &D = getDriver();
-@@ -243,40 +263,20 @@ void Solaris::AddClangSystemIncludeArgs(
+@@ -226,40 +246,20 @@ void Solaris::AddClangSystemIncludeArgs(
      return;
    }
  

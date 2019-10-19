@@ -1,12 +1,12 @@
-$NetBSD: patch-lib_Basic_Targets_OSTargets.h,v 1.3 2018/12/09 20:04:38 adam Exp $
+$NetBSD: patch-lib_Basic_Targets_OSTargets.h,v 1.4 2019/10/19 13:54:29 adam Exp $
 
 Sync SunOS default defines with a working reality.
 NetBSD __float128, needed to build anything with base libstdc++
 which assumes __float128.
 
---- lib/Basic/Targets/OSTargets.h.orig	2018-07-23 17:44:00.000000000 +0000
+--- lib/Basic/Targets/OSTargets.h.orig	2019-08-01 08:49:35.000000000 +0000
 +++ lib/Basic/Targets/OSTargets.h
-@@ -364,12 +364,22 @@ protected:
+@@ -436,12 +436,22 @@ protected:
      Builder.defineMacro("__ELF__");
      if (Opts.POSIXThreads)
        Builder.defineMacro("_REENTRANT");
@@ -29,7 +29,7 @@ which assumes __float128.
    }
  };
  
-@@ -538,19 +548,14 @@ protected:
+@@ -610,22 +620,15 @@ protected:
      Builder.defineMacro("__ELF__");
      Builder.defineMacro("__svr4__");
      Builder.defineMacro("__SVR4");
@@ -38,21 +38,23 @@ which assumes __float128.
 -    // ensure that you are not using C99 with an old version of X/Open or C89
 -    // with a new version.
 -    if (Opts.C99)
-+    // Compatibility with GCC to satisfy <sys/feature_tests.h> requirements.
-+    if (Opts.CPlusPlus) {
-+      Builder.defineMacro("__STDC_VERSION__", "199901L");
-       Builder.defineMacro("_XOPEN_SOURCE", "600");
+-      Builder.defineMacro("_XOPEN_SOURCE", "600");
 -    else
 -      Builder.defineMacro("_XOPEN_SOURCE", "500");
--    if (Opts.CPlusPlus)
++    // Compatibility with GCC to satisfy <sys/feature_tests.h> requirements.
+     if (Opts.CPlusPlus) {
 -      Builder.defineMacro("__C99FEATURES__");
--    Builder.defineMacro("_LARGEFILE_SOURCE");
--    Builder.defineMacro("_LARGEFILE64_SOURCE");
--    Builder.defineMacro("__EXTENSIONS__");
++      Builder.defineMacro("__STDC_VERSION__", "199901L");
++      Builder.defineMacro("_XOPEN_SOURCE", "600");
+       Builder.defineMacro("_FILE_OFFSET_BITS", "64");
 +      Builder.defineMacro("_LARGEFILE_SOURCE");
 +      Builder.defineMacro("_LARGEFILE64_SOURCE");
 +      Builder.defineMacro("__EXTENSIONS__");
-+    }
+     }
+-    // GCC restricts the next two to C++.
+-    Builder.defineMacro("_LARGEFILE_SOURCE");
+-    Builder.defineMacro("_LARGEFILE64_SOURCE");
+-    Builder.defineMacro("__EXTENSIONS__");
      if (Opts.POSIXThreads)
        Builder.defineMacro("_REENTRANT");
      if (this->HasFloat128)
