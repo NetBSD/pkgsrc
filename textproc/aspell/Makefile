@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.73 2019/09/15 06:53:36 maya Exp $
-#
+# $NetBSD: Makefile,v 1.74 2019/10/19 10:43:28 nia Exp $
 
-DISTNAME=		aspell-0.60.7
+DISTNAME=		aspell-0.60.8
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_GNU:=aspell/}
 
@@ -15,6 +14,7 @@ CONFLICTS=		libpspell-[0-9]*
 GNU_CONFIGURE=		yes
 USE_FEATURES=		snprintf vsnprintf
 USE_TOOLS+=		gmake
+USE_TOOLS+=		msgfmt msgmerge xgettext
 # for bin/aspell-import
 USE_TOOLS+=		perl:run
 USE_LIBTOOL=		yes
@@ -27,6 +27,8 @@ CONFIGURE_ARGS+=	--enable-doc-dir=${PREFIX}/share/doc/aspell
 CONFIGURE_ARGS+=	--enable-curses=${CURSES_TYPE}
 CONFIGURE_ARGS+=	--enable-pkgdatadir=${PREFIX}/share/aspell
 CONFIGURE_ARGS+=	--enable-dict-dir=${PREFIX}/lib/aspell
+# https://github.com/GNUAspell/aspell/issues/336
+CONFIGURE_ARGS+=	--enable-compile-in-filters
 CONFIGURE_ENV+=		gt_cv_func_gnugettext1_libintl=yes
 
 .include "../../mk/bsd.prefs.mk"
@@ -42,8 +44,6 @@ CPPFLAGS+=	-DDECLARE_VSNPRINTF -DDECLARE_SNPRINTF
 # IRIX 5 has an older implementation of signal()
 CPPFLAGS+=	-DHAVE_OLD_SIGNAL
 .endif
-
-.include "options.mk"
 
 REPLACE_PERL=		scripts/aspell-import
 
