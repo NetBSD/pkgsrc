@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.169 2019/10/18 09:57:07 nia Exp $
+# $NetBSD: Makefile,v 1.170 2019/10/19 13:42:34 nia Exp $
 
 DISTNAME=	mesa-19.2.1
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -143,6 +143,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
 
 # needed to build vulkan support
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
+
+BUILDLINK_TRANSFORM+=		rm:-Werror=incompatible-pointer-types
 
 # https://gitlab.freedesktop.org/mesa/mesa/merge_requests/1854
 BUILDLINK_TRANSFORM+=		rm:-Werror=return-type
