@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.22 2019/07/23 16:45:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2019/10/19 12:37:04 nia Exp $
 lib/libpoppler.so
-lib/libpoppler.so.89
-lib/libpoppler.so.89.0.0
-lib/pkgconfig/poppler-splash.pc
+lib/libpoppler.so.91
+lib/libpoppler.so.91.0.0
+lib/pkgconfig/poppler-cairo.pc
 lib/pkgconfig/poppler.pc
 share/doc/poppler/README.md
 share/doc/poppler/README-XPDF

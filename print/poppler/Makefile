@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.74 2019/07/23 16:45:18 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2019/10/19 12:37:04 nia Exp $
 
 .include "../../print/poppler/Makefile.common"
 
 COMMENT=	PDF rendering library
 
-#PKGCONFIG_OVERRIDE+=	${WRKSRC}/poppler-cairo.pc.cmake
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/poppler-splash.pc.cmake
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/poppler-cairo.pc.cmake
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/poppler.pc.cmake
 
 INSTALLATION_DIRS+=	include/poppler share/doc/poppler
 
-# TODO: Later add an option to choose Splash versus Cairo backend.
-# Build the Splash graphics backend.
-CMAKE_ARGS+=	-DENABLE_SPLASH=ON
+# Don't build the splash graphics backend.
+CMAKE_ARGS+=	-DENABLE_SPLASH=OFF
 # Don't compile GTK+ test program.
 CMAKE_ARGS+=	-DBUILD_GTK_TESTS=OFF
 # Don't compile GLib wrapper which also needs gtk2
@@ -39,6 +37,7 @@ post-install:
 	${RMDIR} ${DESTDIR}${PREFIX}/include/poppler || ${TRUE}
 
 .include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
