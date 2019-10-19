@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2018/04/17 10:47:06 wiz Exp $
+$NetBSD: distinfo,v 1.10 2019/10/19 14:12:45 adam Exp $
 
-SHA1 (ipaddress-1.0.22.tar.gz) = 7b60cef3c7fdb7fa9c991ddff5968754cec6adb0
-RMD160 (ipaddress-1.0.22.tar.gz) = a54f8ac5f6c1682b77d62dc7bf063d21c0b2fb87
-SHA512 (ipaddress-1.0.22.tar.gz) = b0b0bae50c0819c46554f4ca2d14403a054d73cb9df7efd8bde03bd32b7599510a0e8eb7a63bd7cc6af45a035a0fcce38058b0625732472c7f252f72b88a6084
-Size (ipaddress-1.0.22.tar.gz) = 33051 bytes
+SHA1 (ipaddress-1.0.23.tar.gz) = 43a6bcd73268ca8e3ba4a22b48f6fe821b1a6521
+RMD160 (ipaddress-1.0.23.tar.gz) = 500a7b9a17545ff9d9d27e653c11bce238a08f9c
+SHA512 (ipaddress-1.0.23.tar.gz) = 340e2a8698df1868038f55889671442eba17f06ec3f493759d8d0a9bf406eefbe1f67c14ca616f52e5bf2280942dcece7e89fb19de0923bee1ee20e60f48896e
+Size (ipaddress-1.0.23.tar.gz) = 32958 bytes
