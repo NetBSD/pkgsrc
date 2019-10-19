@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg.R,v 1.24 2019/10/19 21:12:18 rillig Exp $
+# $NetBSD: R2pkg.R,v 1.25 2019/10/19 21:32:02 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -532,12 +532,6 @@ make.depends <- function(imps,deps)
 use_languages <- function(imps, deps)
   if (find.Rcpp(imps, deps)) 'c c++' else '# none'
 
-copy.description <- function(connection)
-{
-  description <- readLines(connection)
-  writeLines(description,con='DESCRIPTION')
-}
-
 write.Makefile <- function(orig_mklines, metadata)
 {
   maintainer    <- mklines.get_value(orig_mklines, 'MAINTAINER', arg.maintainer_email)
@@ -649,8 +643,6 @@ make.license <- function(df)
   df
 }
 
-make.r_pkgver <- function(df) element(df,'R_PKGVER','new_value')
-
 find.order <- function(df,key,field)
 {
   x <- df[,key]
@@ -681,7 +673,7 @@ mklines.update_value <- function(df)
   df$value[df$key == 'CATEGORIES'] <- make.categories(df)
   df$value[df$key == 'MAINTAINER'] <- make.maintainer(df)
   df$value[df$key == 'COMMENT'] <- make.comment(df)
-  df$value[df$key == 'R_PKGVER'] <- make.r_pkgver(df)
+  df$value[df$key == 'R_PKGVER'] <- element(df, 'R_PKGVER', 'new_value')
   df
 }
 
@@ -747,12 +739,6 @@ conflicts <- function(pkg)
   conflicts
 }
 
-conflicts.order <- function(df)
-{
-  order <- element(df,'COMMENT','order')
-  order
-}
-
 make.df.conflicts <- function(df,metadata)
 {
   df.conflicts <- data.frame()
@@ -760,8 +746,7 @@ make.df.conflicts <- function(df,metadata)
   if (!conflicts.exist)
     {
       c <- conflicts(metadata$Package)
-      order <- conflicts.order(df)
-      order <- order + 2.5
+      order <- element(df, 'COMMENT', 'order') + 2.5
       i <- 0
       for (conflict in c)
         {
