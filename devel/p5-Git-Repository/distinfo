@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2018/12/01 07:35:44 wen Exp $
+$NetBSD: distinfo,v 1.17 2019/10/19 13:11:41 mef Exp $
 
-SHA1 (Git-Repository-1.323.tar.gz) = 48c4aaae8977669aab0c8dd1cd3a00edec30f9ea
-RMD160 (Git-Repository-1.323.tar.gz) = 6d508d9c36ec95e5e8dd72a2d0f90d92a9ff9233
-SHA512 (Git-Repository-1.323.tar.gz) = 520b78619dd18412eeb5a5512d1a824a693e86d269141a19f01ff5fbf65d973f3de3a8590fb7cce34bdc62ff240f276f603720ed9d28dc22793b9c44059104a0
-Size (Git-Repository-1.323.tar.gz) = 56855 bytes
+SHA1 (Git-Repository-1.324.tar.gz) = 9371e8f4973a7891eb8d4bb907c78ef348b9c9f6
+RMD160 (Git-Repository-1.324.tar.gz) = dc345618798ad8a0a99328cae907a0fc6519ec91
+SHA512 (Git-Repository-1.324.tar.gz) = ebab88c398d490cedef0891df3c7d2e87ff63d922329eb0535ffe316f7eeea3ace5798e0f5f7f30d60ce9489c33ff3044bc637782e1a401c97be7c2d67019980
+Size (Git-Repository-1.324.tar.gz) = 56277 bytes
