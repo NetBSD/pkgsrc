@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg.R,v 1.16 2019/10/19 11:47:23 rillig Exp $
+# $NetBSD: R2pkg.R,v 1.17 2019/10/19 13:37:00 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -535,26 +535,25 @@ message.wip.dependency <- function(dependency,index=1)
     level.warning('R-',arg.rpkg,' should not depend on a wip package: ',depends.pkg(dependency)[index])
 }
 
-message.too.many.dependencies <- function(dependency)
+update.dependency <- function(dependency, index=1)
 {
-  msg <- paste0('[ ',arg.level,' ] WARNING: too many dependencies found for ',depends(dependency),':')
-  for (pkg in depends.pkg(dependency))
-    msg <- paste(msg,pkg)
-  msg
-}
-
-update.dependency <- function(dependency,index=1)
-{
-  level.warning('updating dependency for ',depends(dependency),': ',depends.pkg(dependency)[index])
-  grep <- paste0('grep -E -q -e "',depends(dependency),'" ',arg.packages_list)
-  command <- paste0(grep,' || (cd ',depends.pkg(dependency)[index],' && ',arg.r2pkg,' ',arg.args,' ',depends(dependency),')')
+  level.message('updating dependency for ', depends(dependency), ': ', depends.pkg(dependency)[index])
+  command <- sprintf(
+    'grep -E -q -e "%s" %s || (cd %s && %s %s %s)',
+    depends(dependency), arg.packages_list,
+    depends.pkg(dependency)[index], arg.r2pkg, arg.args, depends(dependency))
   error <- system(command)
   if (error != 0)
-    level.warning('error updating dependency for ',depends(dependency))
+    level.warning('error updating dependency for ', depends(dependency))
 }
 
 make.depends <- function(imps,deps)
 {
+  warn_too_many_dependencies <- function(dependency) {
+    level.warning(sprintf('too many dependencies found for %s: %s',
+      depends(dependency), paste(depends.pkg(dependency))))
+  }
+
   imports <- make.imports(imps,deps)
   # XXX  message('===> imports:')
   # XXX print(imports)
@@ -565,21 +564,22 @@ make.depends <- function(imps,deps)
       for (i in 1:length(imports))
         {
           dependency <- make.dependency(imports[i])
+          depdirs <- depends.pkg(dependency)
           # XXX message('[ ',${LEVEL},' ] ===> ',i,' / ',length(imports),': ',depends(dependency))
-          if (length(depends.pkg(dependency)) == 0) # a dependency cannot be found
+          if (length(depdirs) == 0) # a dependency cannot be found
             {
               level.message('0 dependencies match ',dependency)
               if (arg.recursive)
                 {
                   dir.create(path=dependency.dir(dependency),recursive=TRUE)
-          update.dependency(dependency)
-        }
+                  update.dependency(dependency)
+                }
               else
                 level.warning('dependency needed for ',depends(dependency))
             }
-          else if (length(depends.pkg(dependency)) == 1) # a unique dependency found
+          else if (length(depdirs) == 1) # a unique dependency found
             {
-              level.message('1 dependency matches ',dependency,': ',depends.pkg(dependency))
+              level.message('1 dependency matches ',dependency,': ',depdirs)
               message.wip.dependency(dependency)
               if (arg.recursive && arg.update)
                 update.dependency(dependency)
@@ -588,18 +588,17 @@ make.depends <- function(imps,deps)
               else
                 DEPENDS <- rbind(DEPENDS,data.frame(key=depends.dir(dependency),value=depends.line(dependency)))
             }
-          else if (length(depends.pkg(dependency)) == 2) # two dependencies found
+          else if (length(depdirs) == 2) # two dependencies found
             {
-              d <- depends.pkg(dependency)
-              index <- grep('/wip/',d,invert=TRUE)
-              level.message('2 dependencies match ',dependency,':',paste(' ',depends.pkg(dependency)))
+              index <- grep('/wip/',depdirs,invert=TRUE)
+              level.message('2 dependencies match ',dependency,':',paste(' ',depdirs))
               # message('===> depends(dependency): ',depends(dependency))
               # message('===> depends.pkg(dependency):',paste(' ',d))
               # message('===> index: ',index)
               # message('===> buildlink3.line(): ',buildlink3.line(dependency,index))
               if (length(index) == 1) # a unique, non-wip, dependency found
                 {
-                  level.message('choosing unique non-wip dependency for ',dependency,': ',depends.pkg(dependency)[index])
+                  level.message('choosing unique non-wip dependency for ',dependency,': ',depdirs[index])
                   if (arg.recursive && arg.update)
                     update.dependency(dependency,index)
                   if (file.exists(buildlink3.file(dependency,index)))
@@ -610,18 +609,18 @@ make.depends <- function(imps,deps)
               else
                 {
                   level.message('no unique non-wip dependency matches')
-                  message(message.too.many.dependencies(dependency))
+                  warn_too_many_dependencies(dependency)
                   DEPENDS <- rbind(DEPENDS,data.frame(key='???',value=depends.line.2(dependency)))
                 }
             }
           else  # more than 2 dependencies found
             {
-              level.message(length(depends.pkg(dependency)),' dependencies match ',dependency,':',paste(' ',depends.pkg(dependency)))
-             message(message.too.many.dependencies(dependency))
+              level.message(length(depdirs),' dependencies match ',dependency,':',paste(' ',depdirs))
+              warn_too_many_dependencies(dependency)
               DEPENDS <- rbind(DEPENDS,data.frame(key='???',value=depends.line.2(dependency)))
             }
           if (length(new.depends.pkg(dependency)) > 0)
-            system(paste('echo',depends(dependency),arg.rpkg,'>>',arg.dependency_list))
+            system(paste('echo', depends(dependency), arg.rpkg, '>>', arg.dependency_list))
         }
     }
   DEPENDS <- as.sorted.list(DEPENDS)
