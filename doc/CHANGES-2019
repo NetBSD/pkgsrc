@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4422 2019/10/19 08:14:34 tsutsui Exp $
+$NetBSD: CHANGES-2019,v 1.4423 2019/10/19 08:15:36 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7084,3 +7084,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-pip to 19.3.1 [adam 2019-10-19]
 	Updated devel/py-xopen to 0.8.3 [adam 2019-10-19]
 	Updated devel/ruby-diva to 1.0.1 [tsutsui 2019-10-19]
+	Updated net/ruby-public_suffix to 4.0.1 [tsutsui 2019-10-19]
