@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4425 2019/10/19 08:34:54 tsutsui Exp $
+$NetBSD: CHANGES-2019,v 1.4426 2019/10/19 09:02:45 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7108,3 +7108,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/ruby-gtksourceview2 to 3.4.1 [tsutsui 2019-10-19]
 	Updated x11/ruby-gtksourceview3 to 3.4.1 [tsutsui 2019-10-19]
 	Updated x11/ruby-vte to 3.4.1 [tsutsui 2019-10-19]
+	Removed multimedia/adobe-flash-plugin11 [tsutsui 2019-10-19]
