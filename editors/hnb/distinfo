@@ -1,40 +1,7 @@
-$NetBSD: distinfo,v 1.7 2018/11/26 09:15:53 fox Exp $
+$NetBSD: distinfo,v 1.8 2019/10/19 14:10:45 fox Exp $
 
-SHA1 (hnb-1.9.17.tar.gz) = b5204a9bda13b42ef04921e71f52e5bfe5412f13
-RMD160 (hnb-1.9.17.tar.gz) = 1363eac8a785a3bad2ac319ae38726cd826268cf
-SHA512 (hnb-1.9.17.tar.gz) = 48ca89336027b54ddec31064294595498f10927d9b69a115bfbdecf79ebc720873c0cc70dc646422f196cff7aa4fda68fc2f68f4ddacfac53d4363ed295d2e7a
-Size (hnb-1.9.17.tar.gz) = 143700 bytes
-SHA1 (patch-ac) = d750eae0a0fbb61a75fce3d427bf2afdbeb806c6
-SHA1 (patch-src_actions.c) = 5c2f340e205c982d759415385f6f0038ee7ca404
-SHA1 (patch-src_cal.c) = 162a4acfa9a388ec5a1b1e9d8b5ac69f93715745
-SHA1 (patch-src_cli__macro.c) = 593bfaf56dd083ef0da45c3f320af095cd411bd1
-SHA1 (patch-src_clipboard.c) = 4dde4765825e5362f66c8b7c63ba40c1e154c63c
-SHA1 (patch-src_evilloop.c) = 4f55e0dabdeede6f33cebeb18d5c6b64c51bfbf7
-SHA1 (patch-src_expanded.c) = 772d71db739164ce59c9fe3d3b93b862063f3ee3
-SHA1 (patch-src_file.c) = 884445d3b5a2d9590ea6e1e0a1e6df98cf69bdab
-SHA1 (patch-src_file__ascii.c) = 7b523b941791b6337a13c11ce1a70c99a170b707
-SHA1 (patch-src_file__help.c) = 7a9604126a1fb4af182a1236eb5a873b82ae1690
-SHA1 (patch-src_file__hnb.c) = c2549af8b806eaef4fc760712657860d4f7b31ca
-SHA1 (patch-src_file__html.c) = 162f68b3e417b2eeb7a889ad23836dc4c79b2049
-SHA1 (patch-src_file__opml.c) = 588e1b339f0991c105d30fe077a8fa95bbdf6f9d
-SHA1 (patch-src_file__ps.c) = 7789097bd9e5ca1950e53295903a2edcb47a983e
-SHA1 (patch-src_file__xml.c) = 1bcda1d25bd1aa22e10c7eea40c7e99c05377f75
-SHA1 (patch-src_libcli_cli.c) = baabda1de8c8e24f370d06efbd9b0bd09262224d
-SHA1 (patch-src_libcli_cli.h) = c6b2ace10000bfd176418e2ecbcd8a2abb04a1e1
-SHA1 (patch-src_libcli_cli__tokenize.c) = 503d4cdd51a40773b75fe2fa8bbbafc3d1e16941
-SHA1 (patch-src_node.c) = cd6541ab5a2da5759106126d5e36e59b8b12e600
-SHA1 (patch-src_query.c) = 8f55f91444f9691655c54163c25ccb6bbad16bd0
-SHA1 (patch-src_search.c) = c7a88b365eb489a0e27d9badb1c67477aaa39b1c
-SHA1 (patch-src_spell.c) = eb05674a5c2c48e779412ba011b76a774a8087a0
-SHA1 (patch-src_statcmds.c) = 439c85247d7c2a3622cd5e09683932aac251bef6
-SHA1 (patch-src_state.c) = 24d5c9d710c8b90447f4aa2ea9431d9f2f571bed
-SHA1 (patch-src_tree__misc.c) = e8bbc96c577d77614d37f2d73ec8373304cdd245
-SHA1 (patch-src_tree__sort.c) = 95780063a609fa7b9dd1c3230e2d23dfb96ad8b5
-SHA1 (patch-src_tree__todo.c) = 43837efeddab88b4f03caa54d983f68042bda35e
-SHA1 (patch-src_ui__binding.c) = 334b952a2851d84a2e39d7256a68a584691534ca
-SHA1 (patch-src_ui__cli.c) = aa8663c7244122aac7f92f6c73369d31f41e36ad
-SHA1 (patch-src_ui__draw.c) = 637fc52cd1c44574a7f7342d92800be40e1092d6
-SHA1 (patch-src_ui__edit.c) = 6f01ecd0c0f9eaf9b05fa679b912de2ffeafb00d
-SHA1 (patch-src_ui__menu.c) = b6a7136b364f6c8f5e1afc01876601ad4f93dbf5
-SHA1 (patch-src_ui__overlay.c) = a8684a61bb97ebe85f4c3eec76ae77bcaa3c70b7
-SHA1 (patch-src_ui__style.c) = 0dbe1533587cb2bda9e077884a16df275269746e
+SHA1 (hnb-1.9.18.tar.gz) = c2750b7ea998fd8c7b8dedd83645a5d20c01f61c
+RMD160 (hnb-1.9.18.tar.gz) = 484c539df2ddc82172380329d287427c67f082c5
+SHA512 (hnb-1.9.18.tar.gz) = dc7063a214ad7712bd5d44db34ebfc4982c486b12388b280b149902f8a1a3b6dfa1804846b4dded6a5f843bd2718fe80dbdcdefe45553bcf3b473c8919e27248
+Size (hnb-1.9.18.tar.gz) = 141437 bytes
+SHA1 (patch-ac) = 14d7c3fcdb85d9cf277a402af21139e3748d31eb
