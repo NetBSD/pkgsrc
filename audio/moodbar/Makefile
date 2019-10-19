@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/10/18 17:14:34 nia Exp $
+# $NetBSD: Makefile,v 1.11 2019/10/19 00:31:52 nia Exp $
 
 DISTNAME=	moodbar-1.2
 CATEGORIES=	audio
@@ -16,6 +16,8 @@ USE_LANGUAGES=	c c++14
 
 # C++14
 GCC_REQD+=	5
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../devel/meson/build.mk"
 .include "../../math/fftw/buildlink3.mk"
