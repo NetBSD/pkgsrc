@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg.R,v 1.19 2019/10/19 14:52:40 rillig Exp $
+# $NetBSD: R2pkg.R,v 1.20 2019/10/19 15:47:03 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -336,11 +336,7 @@ read.file.as.values <- function(filename)
 simplify.whitespace <- function(s) gsub('[[:blank:]]+', ' ', s)
 remove.punctuation <- function(s) gsub('[,-]', '', s)
 remove.quotes <- function(s) gsub('[\'`"]', '', s)
-remove.articles <- function(s)
-{
-  pattern <- '^([[:blank:]]*)An* |([[:blank:]]+)[Aa]n*[[:blank:]]+'
-  gsub(pattern,'\\1',s)
-}
+remove.articles <- function(s) gsub('\\b[Aa]n?\\b', '\\1', s)
 
 case.insensitive.equals <- function(s1,s2)
 {

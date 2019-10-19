@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg_test.R,v 1.14 2019/10/19 14:52:40 rillig Exp $
+# $NetBSD: R2pkg_test.R,v 1.15 2019/10/19 15:47:03 rillig Exp $
 #
 # Copyright (c) 2019
 #	Roland Illig.  All rights reserved.
@@ -204,14 +204,13 @@ test_that('fix.continued.lines', {
         '\tvalue',
         'VAR2=\tvalue')
 
-    expect_printed(
-        data.frame(varassign = mklines$key_value, line = mklines$line),
-        '  varassign              line',
-        '1     FALSE      # comment \\\\',
-        '2      TRUE continued=comment',  # FIXME: continuation from line 1
-        '3      TRUE             VAR1=',
-        '4      TRUE      VAR1+=\\tvalue',  # FIXME: extra space at the beginning
-        '5      TRUE       VAR2=\\tvalue')
+    expect_equal(mklines$key_value, c(FALSE, TRUE, TRUE, TRUE, TRUE))
+    expect_equal(mklines$line, c(
+        '# comment \\',
+        'continued=comment',  # FIXME: continuation from line 1
+        'VAR1=',
+        'VAR1+=\tvalue',  # FIXME: extra space at the beginning
+        'VAR2=\tvalue'))
     message$expect_messages(
         '[ 321 ] WARNING: unhandled continued line(s)')
 })
@@ -335,11 +334,11 @@ test_that('remove.quotes', {
 })
 
 test_that('remove.articles', {
-    expect_equal(remove.articles('Get a life'), 'Getlife')  # FIXME
-    expect_equal(remove.articles('An apple a day'), 'appleday')  # FIXME
-    expect_equal(remove.articles('Annnnnnnnnn apple'), 'apple')  # FIXME
-    expect_equal(remove.articles('Grade A'), 'Grade A')
-    expect_equal(remove.articles('Grade A is best'), 'Gradeis best')  # FIXME
+    expect_equal(remove.articles('Get a life'), 'Get  life')
+    expect_equal(remove.articles('An apple a day'), ' apple  day')  # TODO: uppercase the first letter
+    expect_equal(remove.articles('Annnnnnnnnn apple'), 'Annnnnnnnnn apple')
+    expect_equal(remove.articles('Grade A'), 'Grade ')
+    expect_equal(remove.articles('Grade A is best'), 'Grade  is best')
 })
 
 test_that('case.insensitive.equals', {
