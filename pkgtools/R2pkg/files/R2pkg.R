@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg.R,v 1.21 2019/10/19 17:30:10 rillig Exp $
+# $NetBSD: R2pkg.R,v 1.22 2019/10/19 18:43:51 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -174,15 +174,18 @@ as.sorted.list <- function(df)
 
 read.file.as.dataframe <- function(filename)
 {
-  # message('===> read.file.as.dataframe(',filename,')')
-  contents <- as.list(readLines(filename))
   df <- data.frame()
-  for (line in contents)
-    {
-      # str(line)
-      df <- rbind(df,data.frame(line=line,stringsAsFactors=FALSE))
-    }
+  for (line in as.list(readLines(filename)))
+    df <- rbind(df, data.frame(line = line, stringsAsFactors = FALSE))
   df
+}
+
+mklines.get_value <- function(mklines, varname, default = '')
+{
+  values <- mklines$old_value[mklines$key == varname]
+  if (length(values) == 0)
+    values <- mklines$old_value[mklines$key == paste0('#', varname)]
+  if (length(values) == 1) values[1] else default
 }
 
 categorize.key_value <- function(df,line='line')
@@ -261,7 +264,7 @@ fix.continued.lines <- function(df,line='line')
   df
 }
 
-read.Makefile.as.dataframe <- function(filename = 'Makefile.orig')
+read.Makefile.as.dataframe <- function(filename)
 {
   re_varassign <- paste0(
     '^',
@@ -305,34 +308,6 @@ read.file.as.list <- function(filename)
   result
 }
 
-read.file.as.value <- function(filename)
-{
-  value <- ''
-  l <- read.file.as.list(filename)
-  if (length(l) == 1)
-    {
-      line <- l[[1]]
-      fields <- strsplit(line,'[[:blank:]]+')
-      value <- fields[[1]][2]
-    }
-  value
-}
-
-read.file.as.values <- function(filename)
-{
-  message('===> read.file.as.values(',filename,'):')
-  values <- list()
-  l <- read.file.as.list(filename)
-  print(l)
-  for (line in l)
-    {
-      # fields <- strsplit(line,'[[:blank:]]+')
-      # value <- fields[[1]][2]
-    }
-  print(values)
-  values
-}
-
 simplify.whitespace <- function(s) gsub('[[:blank:]]+', ' ', s)
 remove.punctuation <- function(s) gsub('[,-]', '', s)
 remove.quotes <- function(s) gsub('[\'`"]', '', s)
@@ -352,27 +327,15 @@ weakly.equals <- function(s1,s2)
     remove.articles(remove.quotes(remove.punctuation(s2))))
 }
 
-pkgsrc.license <- function(s)
+license <- function(mklines, s)
 {
   license <- licenses[[s]]
-  if (is.null(license)) license <- s else license
-}
-
-license <- function(s)
-{
-  license <- pkgsrc.license(s)
-  old.license <- read.file.as.value('LICENSE')
+  if (is.null(license))
+    license <- s
+  old.license <- mklines.get_value(mklines, 'LICENSE')
   if (old.license != '' && old.license != license)
-    license <- paste0(license,'\t# [R2pkg] previously: ',old.license)
+    license <- paste0(license, '\t# [R2pkg] previously: ', old.license)
   license
-}
-
-maintainer <- function(email)
-{
-  MAINTAINER <- read.file.as.value('MAINTAINER')
-  if (MAINTAINER == '')
-    MAINTAINER <- email
-  MAINTAINER
 }
 
 find.Rcpp <- function(imps, deps)
@@ -602,11 +565,9 @@ make.depends <- function(imps,deps)
             system(paste('echo', depends(dependency), arg.rpkg, '>>', arg.dependency_list))
         }
     }
-  DEPENDS <- as.sorted.list(DEPENDS)
-  DEPENDS <- end.paragraph(DEPENDS)
+  DEPENDS <- end.paragraph(as.sorted.list(DEPENDS))
   BUILDLINK3.MK <- as.sorted.list(BUILDLINK3.MK)
-  result <- list(DEPENDS,BUILDLINK3.MK)
-  result
+  list(DEPENDS,BUILDLINK3.MK)
 }
 
 use_languages <- function(imps, deps)
@@ -618,35 +579,29 @@ copy.description <- function(connection)
   writeLines(description,con='DESCRIPTION')
 }
 
-write.Makefile <- function(metadata)
+write.Makefile <- function(orig_mklines, metadata)
 {
-  CATEGORIES    <- varassign('CATEGORIES', categories())
-  MAINTAINER    <- varassign('MAINTAINER', maintainer(arg.maintainer_email))
-  COMMENT       <- varassign('COMMENT', one.line(metadata$Title))
-  LICENSE       <- varassign('LICENSE', license(metadata$License))
-  R_PKGNAME     <- varassign('R_PKGNAME', one.line(metadata$Package))
-  R_PKGVER      <- varassign('R_PKGVER', one.line(metadata$Version))
-  USE_LANGUAGES <- varassign('USE_LANGUAGES', use_languages(metadata$Imports, metadata$Depends))
+  maintainer    <- mklines.get_value(orig_mklines, 'MAINTAINER', arg.maintainer_email)
+  license       <- license(orig_mklines, metadata$License)
+  use_languages <- use_languages(metadata$Imports, metadata$Depends)
   dependencies  <- make.depends(metadata$Imports, metadata$Depends)
-  depends       <- dependencies[1]
-  buildlink3    <- dependencies[2]
 
   lines <- c(
     mkcvsid,
     '',
-    R_PKGNAME,
-    R_PKGVER,
-    CATEGORIES,
+    varassign('R_PKGNAME', one.line(metadata$Package)),
+    varassign('R_PKGVER', one.line(metadata$Version)),
+    varassign('CATEGORIES', categories()),
     '',
-    MAINTAINER,
-    COMMENT,
-    LICENSE,
+    varassign('MAINTAINER', maintainer),
+    varassign('COMMENT', one.line(metadata$Title)),
+    varassign('LICENSE', license),
     '',
-    depends,
-    USE_LANGUAGES,
+    dependencies[1],
+    varassign('USE_LANGUAGES', use_languages),
     '',
     '.include "../../math/R/Makefile.extension"',
-    buildlink3,
+    dependencies[2],
     '.include "../../mk/bsd.pkg.mk"',
     recursive = TRUE)
 
@@ -954,7 +909,7 @@ make.df.makefile <- function(df,df.conflicts,df.depends,df.buildlink3.mk)
   df.makefile
 }
 
-update.Makefile <- function(metadata)
+update.Makefile <- function(orig, metadata)
 {
   DEPENDENCIES  <- make.depends(metadata$Imports,metadata$Depends)
   DEPENDS       <- DEPENDENCIES[[1]]
@@ -967,7 +922,7 @@ update.Makefile <- function(metadata)
   # print(BUILDLINK3.MK)
 
   # message('===> df:')
-  df <- read.Makefile.as.dataframe()
+  df <- orig
   df <- mklines.update_with_metadata(df, metadata)
   df <- mklines.update_value(df)
   df <- mklines.update_new_line(df)
@@ -985,10 +940,13 @@ update.Makefile <- function(metadata)
 
 create.Makefile <- function(metadata)
 {
-  if (arg.update && file.exists('Makefile.orig'))
-    update.Makefile(metadata)
-  else
-    write.Makefile(metadata)
+  if (arg.update && file.exists('Makefile.orig')) {
+    orig <- read.Makefile.as.dataframe('Makefile.orig')
+    update.Makefile(orig, metadata)
+  } else {
+    orig <- read.Makefile.as.dataframe(textConnection(''))
+    write.Makefile(orig, metadata)
+  }
 }
 
 create.DESCR <- function(metadata) {
