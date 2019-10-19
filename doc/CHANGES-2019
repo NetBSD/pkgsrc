@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4443 2019/10/19 14:04:21 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4444 2019/10/19 14:11:23 fox Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7144,3 +7144,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/lld to 9.0.0 [adam 2019-10-19]
 	Updated devel/lldb to 9.0.0 [adam 2019-10-19]
 	Updated parallel/openmp to 9.0.0 [adam 2019-10-19]
+	Updated editors/hnb to 1.9.18 [fox 2019-10-19]
