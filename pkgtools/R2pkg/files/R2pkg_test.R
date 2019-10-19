@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg_test.R,v 1.16 2019/10/19 17:30:10 rillig Exp $
+# $NetBSD: R2pkg_test.R,v 1.17 2019/10/19 18:43:51 rillig Exp $
 #
 # Copyright (c) 2019
 #	Roland Illig.  All rights reserved.
@@ -278,43 +278,40 @@ test_that('read.file.as.list can read lines from a file', {
     expect_equal(lines, list('first', 'second \\', 'third'))
 })
 
-test_that('read.file.as.value, exactly 1 variable assignment, no space', {
-    filename <- ''
-    local_tempfile('filename')
-    writeLines(c('VAR=value'), filename)
+test_that('mklines.get_value, exactly 1 variable assignment, no space', {
+    mklines <- make_mklines(
+        'VAR=value')
 
-    str <- read.file.as.value(filename)
+    str <- mklines.get_value(mklines, 'VAR')
 
-    expect_equal(str, NA_character_)  # FIXME
+    expect_equal(str, 'value')
 })
 
 test_that('read.file.as.value, exactly 1 variable assignment', {
-    filename <- ''
-    local_tempfile('filename')
-    writeLines(c('VAR=\tvalue'), filename)
+    mklines <- make_mklines(
+        'VAR=\tvalue')
 
-    str <- read.file.as.value(filename)
+    str <- mklines.get_value(mklines, 'VAR')
 
     expect_equal(str, 'value')
 })
 
 test_that('read.file.as.value, commented variable assignment', {
-    filename <- ''
-    local_tempfile('filename')
-    writeLines(c('#VAR=\tvalue'), filename)
+    mklines <- make_mklines(
+        '#VAR=\tvalue')
 
-    str <- read.file.as.value(filename)
+    str <- mklines.get_value(mklines, 'VAR')
 
     # TODO: Check whether commented variables should really be considered.
     expect_equal(str, 'value')
 })
 
 test_that('read.file.as.value, multiple variable assignments', {
-    filename <- ''
-    local_tempfile('filename')
-    writeLines(c('VAR=\tvalue', 'VAR=\tvalue2'), filename)
+    mklines <- make_mklines(
+        'VAR=\tvalue',
+        'VAR=\tvalue2')
 
-    str <- read.file.as.value(filename)
+    str <- mklines.get_value(mklines, 'VAR')
 
     expect_equal(str, '')
 })
@@ -560,8 +557,9 @@ test_that('write.Makefile', {
         'Package: pkgname',
         'Version: 1.3',
         'Depends: ellipsis'))
+    orig <- make_mklines()
 
-    write.Makefile(metadata)
+    write.Makefile(orig, metadata)
 
     expect_equal(readLines('Makefile'),c(
         mkcvsid,
