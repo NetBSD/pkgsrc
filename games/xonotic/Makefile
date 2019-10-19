@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/10/06 12:43:53 nia Exp $
+# $NetBSD: Makefile,v 1.4 2019/10/19 20:32:40 nia Exp $
 
 DISTNAME=	xonotic-0.8.2
 CATEGORIES=	games
@@ -36,6 +36,10 @@ post-install:
 	    ${DESTDIR}${PREFIX}/share/icons/hicolor/${s}x${s}/apps/xonotic.png
 .endfor
 
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Linux"
+.  include "../../audio/alsa-lib/buildlink3.mk"
+.endif
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
