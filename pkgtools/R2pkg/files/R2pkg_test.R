@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg_test.R,v 1.20 2019/10/19 21:32:02 rillig Exp $
+# $NetBSD: R2pkg_test.R,v 1.21 2019/10/19 22:10:58 rillig Exp $
 #
 # Copyright (c) 2019
 #	Roland Illig.  All rights reserved.
@@ -120,16 +120,6 @@ test_that('level.warning', {
 
 test_that('trim.space', {
     expect_equal(trim.space(' hello, \t\nworld '), 'hello,world')
-})
-
-test_that('trim.blank', {
-    expect_equal(trim.blank(' hello, \t\nworld '), 'hello,\nworld')
-})
-
-test_that('one.space', {
-    expect_equal(
-        one.space(' \t\nhello, \t\nworld \t\n'),
-        ' \nhello, \nworld \n')
 })
 
 test_that('one.line', {
