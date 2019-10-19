@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2019/08/05 19:06:49 adam Exp $
+# $NetBSD: Makefile,v 1.19 2019/10/19 13:59:06 adam Exp $
 
-DISTNAME=	libunwind-8.0.1.src
+DISTNAME=	libunwind-9.0.0.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=llvm/}
-GITHUB_PROJECT=	llvm-project
-GITHUB_RELEASE=	llvmorg-${PKGVERSION_NOREV}
+MASTER_SITES=   http://releases.llvm.org/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -30,7 +28,7 @@ CMAKE_ARG_PATH=	${WRKSRC}
 INSTALLATION_DIRS=	include
 
 post-extract:
-	${RUN} mkdir -p ${WRKDIR}/build
+	${MKDIR} ${WRKDIR}/build
 
 post-install:
 	cd ${WRKSRC}/include && ${PAX} -rw . ${DESTDIR}${PREFIX}/include
