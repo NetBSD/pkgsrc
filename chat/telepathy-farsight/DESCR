@@ -1,3 +1,0 @@
-The telepathy-farsight library uses the MediaSignalling telepathy
-interface and passes the information to farsight2, allowing an easy
-implementation of the telepathy part of a voice/video call.
