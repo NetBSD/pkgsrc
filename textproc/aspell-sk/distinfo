@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:59:24 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/10/19 11:08:31 nia Exp $
 
-SHA1 (aspell-sk-0.52-0.tar.bz2) = 2c9ebbc82cb8eee4967fb4961e85800814935a0f
-RMD160 (aspell-sk-0.52-0.tar.bz2) = 665ab6d7e90b2f21b8a0dc52889ccd210f7c607d
-SHA512 (aspell-sk-0.52-0.tar.bz2) = 96d129867923f0d30940ac225a823dc1f350e7933897523b6f8928bbd323522c85526ef6884816a96902d91400547bc397a96f1ff71ed306590bcf4b7e04b196
-Size (aspell-sk-0.52-0.tar.bz2) = 383840 bytes
+SHA1 (aspell6-sk-2.01-2.tar.bz2) = 8eb0bd453a1db4ad12863b833a2a3512ef43d30b
+RMD160 (aspell6-sk-2.01-2.tar.bz2) = 9574b4d8a4e1f76dbfff27c852a26d3561876e4b
+SHA512 (aspell6-sk-2.01-2.tar.bz2) = 020de459d4ff9c6e0c88428d43c9feea346bf8fadb9fa1233e9e54471ee23f970524a9a47cc6a45d04d6857387c9d9d1ecc1af2062325298354ee6c2d9c314b4
+Size (aspell6-sk-2.01-2.tar.bz2) = 338933 bytes
 SHA1 (patch-aa) = f4668bfe638648c9e7e8ddccf762abffb6d1e810
-SHA1 (patch-ab) = 209e6b91d2304a07a284c4873ae21126b2105c01
