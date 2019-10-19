@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4434 2019/10/19 11:12:22 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4435 2019/10/19 11:15:59 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7118,3 +7118,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/aspell-pt_PT to 20190329.1.0 [nia 2019-10-19]
 	Updated textproc/aspell-sk to 2.01.2 [nia 2019-10-19]
 	Updated textproc/aspell-eo to 2.1.20000225a.2 [nia 2019-10-19]
+	Updated textproc/aspell-it to 2.2_20050523.0 [nia 2019-10-19]
