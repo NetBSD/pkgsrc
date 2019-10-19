@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg.R,v 1.20 2019/10/19 15:47:03 rillig Exp $
+# $NetBSD: R2pkg.R,v 1.21 2019/10/19 17:30:10 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -609,16 +609,8 @@ make.depends <- function(imps,deps)
   result
 }
 
-use.languages <- function(imps, deps)
-{
-  USE_LANGUAGES <- list()
-  if (find.Rcpp(imps, deps))
-    USE_LANGUAGES <- append(USE_LANGUAGES, list('c c++'))
-  if (length(USE_LANGUAGES) == 0)
-    USE_LANGUAGES <- '# none'
-  USE_LANGUAGES <- end.paragraph(USE_LANGUAGES)
-  USE_LANGUAGES
-}
+use_languages <- function(imps, deps)
+  if (find.Rcpp(imps, deps)) 'c c++' else '# none'
 
 copy.description <- function(connection)
 {
@@ -634,7 +626,7 @@ write.Makefile <- function(metadata)
   LICENSE       <- varassign('LICENSE', license(metadata$License))
   R_PKGNAME     <- varassign('R_PKGNAME', one.line(metadata$Package))
   R_PKGVER      <- varassign('R_PKGVER', one.line(metadata$Version))
-  USE_LANGUAGES <- varassigns('USE_LANGUAGES', use.languages(metadata$Imports, metadata$Depends))
+  USE_LANGUAGES <- varassign('USE_LANGUAGES', use_languages(metadata$Imports, metadata$Depends))
   dependencies  <- make.depends(metadata$Imports, metadata$Depends)
   depends       <- dependencies[1]
   buildlink3    <- dependencies[2]
@@ -652,6 +644,7 @@ write.Makefile <- function(metadata)
     '',
     depends,
     USE_LANGUAGES,
+    '',
     '.include "../../math/R/Makefile.extension"',
     buildlink3,
     '.include "../../mk/bsd.pkg.mk"',
