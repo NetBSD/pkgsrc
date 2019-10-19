@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg_test.R,v 1.10 2019/10/19 11:04:46 rillig Exp $
+# $NetBSD: R2pkg_test.R,v 1.11 2019/10/19 11:47:23 rillig Exp $
 #
 # Copyright (c) 2019
 #	Roland Illig.  All rights reserved.
@@ -36,14 +36,13 @@ library(withr)
 arg.recursive <- FALSE
 arg.update <- FALSE
 
-pkgsrcdir <- Sys.getenv('PKGSRCDIR')
-package_dir <- file.path(pkgsrcdir, 'pkgtools', 'R2pkg')
+package_dir <- file.path(Sys.getenv('PKGSRCDIR'), 'pkgtools', 'R2pkg')
 
 expect_printed <- function(obj, ...) {
     out <- ''
     with_output_sink(textConnection('out', 'w', local = TRUE), print(obj))
     exp <- c(...)
-    if (length(out) != length(exp) || out != exp) {
+    if (! identical(out, exp)) {
         write(out, 'R2pkg_test.out.txt')
         write(exp, 'R2pkg_test.exp.txt')
     }
@@ -53,6 +52,9 @@ expect_printed <- function(obj, ...) {
 
 linesConnection <- function(...)
     textConnection(paste0(c(...), collapse = '\n'))
+
+make_mklines <- function(...)
+    read.Makefile.as.dataframe(linesConnection(...))
 
 test_that('linesConnection', {
     lines <- readLines(linesConnection('1', '2', '3'))
@@ -167,15 +169,15 @@ test_that('read.file.as.dataframe', {
 # })
 
 test_that('read.Makefile.as.dataframe', {
-    df <- read.Makefile.as.dataframe(linesConnection(
+    mklines <- make_mklines(
         '# comment',
         'VAR= value',
         '',
         '.include "other.mk"',
         '.if 0',
-        '.endif'))
+        '.endif')
 
-    expect_printed(df,
+    expect_printed(mklines,
         '                 line order category key_value  key depends buildlink3.mk',
         '1           # comment     1       NA     FALSE <NA>   FALSE         FALSE',
         '2          VAR= value     2       NA      TRUE  VAR   FALSE         FALSE',
@@ -506,9 +508,9 @@ test_that('write.Makefile', {
 # })
 
 test_that('element', {
-    mklines <- read.Makefile.as.dataframe(linesConnection(
+    mklines <- make_mklines(
         'COMMENT=\tThe comment',
-        'EMPTY='))
+        'EMPTY=')
 
     expect_equal(element(mklines, 'COMMENT', 'order'), 1)
     expect_equal(element(mklines, 'COMMENT', 'old_value'), 'The comment')
@@ -523,8 +525,8 @@ test_that('element', {
 # })
 
 test_that('make.comment', {
-    mklines <- read.Makefile.as.dataframe(linesConnection(
-        'COMMENT=\tOld comment'))
+    mklines <- make_mklines(
+        'COMMENT=\tOld comment')
 
     mklines$new_value[[1]] <- 'New comment'
     expect_equal(make.comment(mklines), 'Old comment\t# [R2pkg] updated to: New comment')
@@ -549,12 +551,12 @@ test_that('make.comment', {
 # })
 
 test_that('find.order', {
-    mklines <- read.Makefile.as.dataframe(linesConnection(
+    mklines <- make_mklines(
         'CATEGORIES=',
         'HOMEPAGE=',
         'USE_TOOLS+=',
         '.include "other.mk"',
-        '# comment'))
+        '# comment')
 
     vars_order <- find.order(mklines, 'key_value', 'order')
     include_order <- find.order(mklines, 'buildlink3.mk', 'order')
@@ -568,17 +570,17 @@ test_that('find.order', {
 test_that('mklines.update_with_metadata with CATEGORIES', {
     local_dir(package_dir)  # to get a realistic category
     arg.maintainer_email <<- 'with-categories@example.org'
-    df <- read.Makefile.as.dataframe(linesConnection(
+    df <- make_mklines(
         'CATEGORIES=\told categories',
         'MAINTAINER=\told_maintainer@example.org',
         'COMMENT=\told comment',
-        'R_PKGVER=\t1.0'))
+        'R_PKGVER=\t1.0')
     metadata = list(Title = 'Package comment', Version = '19.3', License = 'license')
 
     updated <- mklines.update_with_metadata(df, metadata)
 
-    expect_printed(data.frame(key = updated$key, new_value = updated$new_value),
-        '         key                   new_value',
+    expect_printed(data.frame(varname = updated$key, new_value = updated$new_value),
+        '     varname                   new_value',
         '1 CATEGORIES                    pkgtools',
         '2 MAINTAINER with-categories@example.org',  # FIXME: Should not always be reset.
         '3    COMMENT             Package comment',
@@ -588,35 +590,30 @@ test_that('mklines.update_with_metadata with CATEGORIES', {
 # If the variable has been removed from the Makefile, it is not updated.
 test_that('mklines.update_with_metadata without CATEGORIES', {
     arg.maintainer_email <<- 'without-categories@example.org'
-    df <- read.Makefile.as.dataframe(linesConnection(
+    df <- make_mklines(
         'MAINTAINER=',
         'COMMENT=',
-        'R_PKGVER='))
+        'R_PKGVER=')
     metadata = list(Title = 'Package comment', Version = '19.3', License = 'license')
 
     updated <- mklines.update_with_metadata(df, metadata)
 
-    expect_printed(updated,
-        '         line order category key_value        key depends buildlink3.mk',
-        '1 MAINTAINER=     1       NA      TRUE MAINTAINER   FALSE         FALSE',
-        '2    COMMENT=     2       NA      TRUE    COMMENT   FALSE         FALSE',
-        '3   R_PKGVER=     3       NA      TRUE   R_PKGVER   FALSE         FALSE',
-        '  operator delimiter old_value old_todo                      new_value',
-        '1        =                              without-categories@example.org',
-        '2        =                                             Package comment',
-        '3        =                                                        19.3')
+    expect_printed(data.frame(varname = updated$key, new_value = updated$new_value),
+        '     varname                      new_value',
+        '1 MAINTAINER without-categories@example.org',
+        '2    COMMENT                Package comment',
+        '3   R_PKGVER                           19.3')
 })
 
 test_that('mklines.update_value', {
     local_dir(package_dir)
 
-    mklines <- read.Makefile.as.dataframe(linesConnection(
+    mklines <- make_mklines(
         'R_PKGVER=\t1.0',
         'CATEGORIES=\told categories',
         'MAINTAINER=\told_maintainer@example.org',
         'COMMENT=\tOld comment',
-        'LICENSE=\told-license'
-    ))
+        'LICENSE=\told-license')
     mklines$new_value <- mklines$old_value
 
     updated <- mklines.update_value(mklines)
@@ -636,12 +633,11 @@ test_that('mklines.update_value', {
 })
 
 test_that('mklines.update_new_line', {
-    mklines <- read.Makefile.as.dataframe(linesConnection(
+    mklines <- make_mklines(
         'VALUE=\tvalue',
         'VALUE_WITH_COMMENT=\tvalue # comment',
         'VALUE_NA=\tvalue',
-        '#COMMENTED=\tcommented value'
-    ))
+        '#COMMENTED=\tcommented value')
     mklines <- mklines.update_value(mklines)
     mklines$value[mklines$key == 'VALUE'] <- 'new value'
     mklines$value[mklines$key == 'VALUE_WITH_COMMENT'] <- 'new value # new comment'
@@ -657,8 +653,8 @@ test_that('mklines.update_new_line', {
 })
 
 test_that('mklines.annotate_distname', {
-    mklines <- read.Makefile.as.dataframe(linesConnection(
-        'DISTNAME=\tpkg_1.0'))
+    mklines <- make_mklines(
+        'DISTNAME=\tpkg_1.0')
     mklines$new_line <- mklines$line
 
     annotated <- mklines.annotate_distname(mklines)
@@ -669,25 +665,51 @@ test_that('mklines.annotate_distname', {
 })
 
 test_that('mklines.remove_lines_before_update', {
-    mklines <- read.Makefile.as.dataframe(linesConnection(
+    mklines <- make_mklines(
         'MASTER_SITES=',
         'HOMEPAGE=',
         'BUILDLINK_API_DEPENDS.dependency+=',
         'BUILDLINK_ABI_DEPENDS.dependency+=',
-        'COMMENT='))
+        'COMMENT=')
     mklines$new_line <- mklines$line
 
     cleaned <- mklines.remove_lines_before_update(mklines)
 
-    expect_printed(cleaned,
-    '      line order category key_value     key depends buildlink3.mk operator',
-    '5 COMMENT=     5       NA      TRUE COMMENT   FALSE         FALSE        =',
-    '  delimiter old_value old_todo new_line',
-    '5                              COMMENT=')
+    expect_equal(cleaned$key, c(
+        'COMMENT'))
 })
 
-# test_that('reassign.order', {
-# })
+test_that('mklines.reassign_order, no change necessary', {
+    mklines <- make_mklines(
+        'R_PKGNAME= ellipsis',
+        'R_PKGVER= 0.1',
+        'CATEGORIES= pkgtools')
+
+    updated <- mklines.reassign_order(mklines)
+
+    expect_equal(updated, mklines)
+})
+
+test_that('mklines.reassign_order, reordered', {
+    mklines <- make_mklines(
+        'CATEGORIES= pkgtools',
+        'R_PKGNAME= ellipsis',
+        'R_PKGVER= 0.1')
+
+    expect_printed(data.frame(varname = mklines$key, order = mklines$order),
+        '     varname order',
+        '1 CATEGORIES     1',
+        '2  R_PKGNAME     2',
+        '3   R_PKGVER     3')
+
+    updated <- mklines.reassign_order(mklines)
+
+    expect_printed(data.frame(varname = updated$key, order = updated$order),
+        '     varname order',
+        '1 CATEGORIES   1.0',
+        '2  R_PKGNAME   0.8',
+        '3   R_PKGVER   0.9')
+})
 
 test_that('conflicts', {
     expect_equal(conflicts('UnknownPackage'), list())
