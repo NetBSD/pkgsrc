@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg_test.R,v 1.12 2019/10/19 13:37:00 rillig Exp $
+# $NetBSD: R2pkg_test.R,v 1.13 2019/10/19 13:55:09 rillig Exp $
 #
 # Copyright (c) 2019
 #	Roland Illig.  All rights reserved.
@@ -213,13 +213,13 @@ test_that('read.Makefile.as.dataframe', {
         '4 .include "other.mk"     4       NA     FALSE <NA>   FALSE         FALSE',
         '5               .if 0     5       NA     FALSE <NA>   FALSE         FALSE',
         '6              .endif     6       NA     FALSE <NA>   FALSE         FALSE',
-        '  operator delimiter old_value old_todo',
-        '1     <NA>      <NA>      <NA>     <NA>',
-        '2        =               value         ',
-        '3     <NA>      <NA>      <NA>     <NA>',
-        '4     <NA>      <NA>      <NA>     <NA>',
-        '5     <NA>      <NA>      <NA>     <NA>',
-        '6     <NA>      <NA>      <NA>     <NA>')
+        '  old_todo operator delimiter old_value',
+        '1     <NA>     <NA>      <NA>      <NA>',
+        '2                 =               value',
+        '3     <NA>     <NA>      <NA>      <NA>',
+        '4     <NA>     <NA>      <NA>      <NA>',
+        '5     <NA>     <NA>      <NA>      <NA>',
+        '6     <NA>     <NA>      <NA>      <NA>')
 })
 
 test_that('read.file.as.list can read an empty file', {

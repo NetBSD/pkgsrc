@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg.R,v 1.17 2019/10/19 13:37:00 rillig Exp $
+# $NetBSD: R2pkg.R,v 1.18 2019/10/19 13:55:09 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -264,48 +264,32 @@ fix.continued.lines <- function(df,line='line')
 
 read.Makefile.as.dataframe <- function(filename = 'Makefile.orig')
 {
-  # message('===> read.Makefile.as.dataframe():')
-
-  re.skip_blank <- '[[:blank:]]*'
-  re.blank <- '[[:blank:]]+'
-  re.anything <- '.*'
-
-  re.key <- '[^+=[:blank:]]+'
-  re.operator <- '[+=]+'
-  re.delimiter <- re.skip_blank
-  re.value <- re.anything
-  re.optional_TODO <- '(?:#[[:blank:]]*TODO[[:blank:]]*:[[:blank:]]*)*'
-
-  re.match <- paste0('^',
-    re.skip_blank,
-    '(',re.optional_TODO,')',
-    re.key,
-    re.skip_blank,
-    '(',re.operator,')',
-    '(',re.delimiter,')',
-    '(',re.value,')',
+  re_varassign <- paste0(
+    '^',
+    ' *',
+    '(', '(?:#[\t ]*TODO[\t ]*:[\t ]*)*',')',  # comment
+    '[^+=[:blank:]]+',  # varname
+    '[\t ]*',
+    '(', '[+=]+',')',  # operator
+    '(', '[\t ]*',')',  # delimiter
+    '(', '.*',')',
     '$')
 
   df <- read.file.as.dataframe(filename)
 
   df$order <- 1:nrow(df)
-  df$category <- NA
+  df$category <- NA  # for DEPENDS lines
 
   df <- categorize.key_value(df)
   df <- fix.continued.lines(df)
   df <- categorize.depends(df)
   df <- categorize.buildlink(df)
 
-  df$operator <- sub(re.match, '\\2', df$line)
-  df$delimiter <- sub(re.match, '\\3', df$line)
-  df$old_value <- sub(re.match, '\\4', df$line)
-  df$old_todo <- sub(re.match, '\\1', df$line)
-
-  df$operator[!df$key_value] <- NA
-  df$delimiter[!df$key_value] <- NA
-  df$old_value[!df$key_value] <- NA
-  df$old_todo[!df$key_value] <- NA
-
+  va <- df$key_value
+  df$old_todo[va] <- sub(re_varassign, '\\1', df$line[va])
+  df$operator[va] <- sub(re_varassign, '\\2', df$line[va])
+  df$delimiter[va] <- sub(re_varassign, '\\3', df$line[va])
+  df$old_value[va] <- sub(re_varassign, '\\4', df$line[va])
   df
 }
 
