@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4442 2019/10/19 13:57:05 mef Exp $
+$NetBSD: CHANGES-2019,v 1.4443 2019/10/19 14:04:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7132,3 +7132,15 @@ Changes to the packages collection and infrastructure in 2019:
 	Added textproc/aspell-ms version 0.50.0 [nia 2019-10-19]
 	Added textproc/aspell-nds version 0.01.0 [nia 2019-10-19]
 	Updated devel/p5-IO-Pager to 1.01 [mef 2019-10-19]
+	Updated lang/llvm to 9.0.0 [adam 2019-10-19]
+	Updated lang/compiler-rt to 9.0.0 [adam 2019-10-19]
+	Updated lang/clang to 9.0.0 [adam 2019-10-19]
+	Updated lang/clang-static-analyzer to 9.0.0 [adam 2019-10-19]
+	Updated lang/clang-tools-extra to 9.0.0 [adam 2019-10-19]
+	Updated lang/libcxx to 9.0.0 [adam 2019-10-19]
+	Updated lang/libcxxabi to 9.0.0 [adam 2019-10-19]
+	Updated lang/libunwind to 9.0.0 [adam 2019-10-19]
+	Updated devel/polly to 9.0.0 [adam 2019-10-19]
+	Updated devel/lld to 9.0.0 [adam 2019-10-19]
+	Updated devel/lldb to 9.0.0 [adam 2019-10-19]
+	Updated parallel/openmp to 9.0.0 [adam 2019-10-19]
