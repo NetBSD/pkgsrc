@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg.R,v 1.23 2019/10/19 19:10:31 rillig Exp $
+# $NetBSD: R2pkg.R,v 1.24 2019/10/19 21:12:18 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -57,6 +57,8 @@ one.space <- function(s) gsub('[[:blank:]]+',' ',s)
 one.line <- function(s) gsub('\n',' ',s)
 pkg.vers <- function(s) gsub('_','.',s)
 varassign <- function(varname, value) paste0(varname, '=\t', value)
+relpath_category <- function(relpath)
+  unlist(sapply(strsplit(relpath, '/'), '[', 3))
 
 # The list of "recommended packages which are to be included in all
 # binary distributions of R." (R FAQ 5.1.2 2018-10-18)
@@ -138,14 +140,8 @@ licenses[['MPL-2.0']]                                <- 'mpl-2.0'
 licenses[['MPL-2.0 | file LICENSE']]                 <- 'mpl-2.0\t# OR file LICENSE'
 licenses[['POSTGRESQL']]                             <- 'postgresql-license'
 
-adjacent.duplicates <- function(x)
-{
-  a <- x[-length(x)]
-  b <- x[-1]
-  dups <- a == b
-  dups <- c(FALSE,dups)
-  dups
-}
+adjacent.duplicates <- function(lines)
+  c(FALSE, lines[-length(lines)] == lines[-1])
 
 paste2 <- function(s1,s2)
 {
@@ -172,14 +168,6 @@ as.sorted.list <- function(df)
   l
 }
 
-read.file.as.dataframe <- function(filename)
-{
-  df <- data.frame()
-  for (line in as.list(readLines(filename)))
-    df <- rbind(df, data.frame(line = line, stringsAsFactors = FALSE))
-  df
-}
-
 mklines.get_value <- function(mklines, varname, default = '')
 {
   values <- mklines$old_value[mklines$key == varname]
@@ -190,53 +178,39 @@ mklines.get_value <- function(mklines, varname, default = '')
 
 categorize.key_value <- function(df,line='line')
 {
-  re.skip_blank <- '[[:blank:]]*'
-  re.blank <- '[[:blank:]]+'
-  re.anything <- '.*'
-
-  re.key <- '[^+=[:blank:]]+'
-  re.operator <- '[+=]+'
-  re.delimiter <- re.skip_blank
-  re.value <- re.anything
-  re.optional_TODO <- '(#[[:blank:]]*TODO[[:blank:]]*:[[:blank:]]*)*'
-
-  re.match_key_value_line <- paste0('^',
-    re.skip_blank,
-    re.optional_TODO,
-    re.key,
-    re.skip_blank,
-    re.operator,
-    re.delimiter,
-    re.value,
+  re_varassign <- paste0(
+    '^',
+    ' *',
+    '((?:#[\t ]*TODO[\t ]*:[\t ]*)*)',  # $old_todo
+    '([^+=\t ]+)',  # varname ($key)
+    '[\t ]*',
+    '(\\+?=)',      # operator
+    '([\t ]*)',     # delimiter
+    '(.*)',         # value ($old_value)
     '$')
 
-  re.match_key <- paste0('^',
-    re.skip_blank,
-    re.optional_TODO,
-    '(',re.key,')',
-    re.skip_blank,
-    re.operator,
-    re.delimiter,
-    re.value,
-    '$')
-
-  df$key_value <- grepl(re.match_key_value_line,df[,line])
-  df$key <- sub(re.match_key,'\\2',df[,line])
-  df$key[!df$key_value] <- NA
+  va <- grepl(re_varassign, df[, line])
+  df$key_value     <- va
+  df$old_todo[va]  <- sub(re_varassign, '\\1', df[, line][va])
+  df$key <- NA  # XXX: why is this line necessary here, and not in the other columns?
+  df$key[va]       <- sub(re_varassign, '\\2', df[, line][va])
+  df$operator[va]  <- sub(re_varassign, '\\3', df[, line][va])
+  df$delimiter[va] <- sub(re_varassign, '\\4', df[, line][va])
+  df$old_value[va] <- sub(re_varassign, '\\5', df[, line][va])
   df
 }
 
-categorize.depends <- function(df,line='line')
+categorize.depends <- function(df, line='line')
 {
   df$depends <- df$key_value & df$key == 'DEPENDS'
-  df$category[df$depends] <- unlist(sapply(strsplit(df[df$depends,line],'/',fixed=TRUE),'[',3))
+  df$category[df$depends] <- unlist(relpath_category(df[df$depends, line]))
   df
 }
 
-categorize.buildlink <- function(df,line='line')
+categorize.buildlink <- function(df, line='line')
 {
-  df$buildlink3.mk <- grepl('buildlink3.mk',df[,line])
-  df$category[df$buildlink3.mk] <- unlist(sapply(strsplit(df[df$buildlink3.mk,line],'/',fixed=TRUE),'[',3))
+  df$buildlink3.mk <- grepl('buildlink3.mk', df[, line])
+  df$category[df$buildlink3.mk] <- relpath_category(df[df$buildlink3.mk, line])
   df
 }
 
@@ -264,34 +238,19 @@ fix.continued.lines <- function(df,line='line')
   df
 }
 
-read.Makefile.as.dataframe <- function(filename)
+read_mklines <- function(filename)
 {
-  re_varassign <- paste0(
-    '^',
-    ' *',
-    '(', '(?:#[\t ]*TODO[\t ]*:[\t ]*)*',')',  # comment
-    '[^+=[:blank:]]+',  # varname
-    '[\t ]*',
-    '(', '[+=]+',')',  # operator
-    '(', '[\t ]*',')',  # delimiter
-    '(', '.*',')',
-    '$')
-
-  df <- read.file.as.dataframe(filename)
+  df <- data.frame()
+  for (line in as.list(readLines(filename)))
+    df <- rbind(df, data.frame(line = line, stringsAsFactors = FALSE))
 
   df$order <- 1:nrow(df)
-  df$category <- NA  # for DEPENDS lines
 
   df <- categorize.key_value(df)
   df <- fix.continued.lines(df)
+  df$category <- NA
   df <- categorize.depends(df)
   df <- categorize.buildlink(df)
-
-  va <- df$key_value
-  df$old_todo[va] <- sub(re_varassign, '\\1', df$line[va])
-  df$operator[va] <- sub(re_varassign, '\\2', df$line[va])
-  df$delimiter[va] <- sub(re_varassign, '\\3', df$line[va])
-  df$old_value[va] <- sub(re_varassign, '\\4', df$line[va])
   df
 }
 
@@ -663,7 +622,7 @@ make.new_license <- function(df,license)
   df
 }
 
-license.in.pkgsrc <- function(license) { license %in% sapply(licenses,'[',1) }
+license.in.pkgsrc <- function(license) license %in% sapply(licenses, '[', 1)
 
 make.license <- function(df)
 {
@@ -865,58 +824,45 @@ make.df.buildlink3 <- function(df,BUILDLINK3.MK)
   df.buildlink3.mk
 }
 
-make.df.makefile <- function(df,df.conflicts,df.depends,df.buildlink3.mk)
+#' updates the dependencies and returns the lines to be written to the
+#' updated package Makefile.
+mklines.lines <- function(mklines, df.conflicts, df.depends, df.buildlink3.mk)
 {
-  # message('===> make.df.makefile():')
-  # message('===> df:')
-  # str(df)
-  # print(df)
-  fields <- c('new_line','order','category','depends','buildlink3.mk')
-  df.makefile <- df[!df$depends & !df$buildlink3.mk,fields]
-  df.makefile <- rbind(df.makefile,df.conflicts,df.depends,df.buildlink3.mk)
-  df.makefile <- df.makefile[order(df.makefile$order,df.makefile$category,df.makefile$new_line),]
-  df.makefile <- df.makefile[!adjacent.duplicates(df.makefile$new_line),]
-  df.makefile
+  fields <- c('new_line', 'order', 'category', 'depends', 'buildlink3.mk')
+  lines <- mklines[! mklines$depends & ! mklines$buildlink3.mk, fields]
+  lines <- rbind(lines, df.conflicts, df.depends, df.buildlink3.mk)
+  lines <- lines[order(lines$order, lines$category, lines$new_line),]
+  lines <- lines[! adjacent.duplicates(lines$new_line),]
+  lines$new_line
 }
 
-update.Makefile <- function(orig, metadata)
+update.Makefile <- function(mklines, metadata)
 {
-  DEPENDENCIES  <- make.depends(metadata$Imports,metadata$Depends)
+  DEPENDENCIES  <- make.depends(metadata$Imports, metadata$Depends)
   DEPENDS       <- DEPENDENCIES[[1]]
   BUILDLINK3.MK <- DEPENDENCIES[[2]]
-  # message('===> DEPENDS:')
-  # str(DEPENDS)
-  # print(DEPENDS)
-  # message('===> BUILDLINK3.MK:')
-  # str(BUILDLINK3.MK)
-  # print(BUILDLINK3.MK)
 
-  # message('===> df:')
-  df <- orig
-  df <- mklines.update_with_metadata(df, metadata)
-  df <- mklines.update_value(df)
-  df <- mklines.update_new_line(df)
-  df <- mklines.annotate_distname(df)
-  df <- mklines.remove_lines_before_update(df)
-  df <- mklines.reassign_order(df)
+  mklines <- mklines.update_with_metadata(mklines, metadata)
+  mklines <- mklines.update_value(mklines)
+  mklines <- mklines.update_new_line(mklines)
+  mklines <- mklines.annotate_distname(mklines)
+  mklines <- mklines.remove_lines_before_update(mklines)
+  mklines <- mklines.reassign_order(mklines)
 
-  df.conflicts <- make.df.conflicts(df,metadata)
-  df.depends <- make.df.depends(df,DEPENDS)
-  df.buildlink3 <- make.df.buildlink3(df,BUILDLINK3.MK)
-  df.makefile <- make.df.makefile(df,df.conflicts,df.depends,df.buildlink3)
+  conflicts   <- make.df.conflicts(mklines, metadata)
+  depends     <- make.df.depends(mklines, DEPENDS)
+  buildlink3  <- make.df.buildlink3(mklines, BUILDLINK3.MK)
+  lines       <- mklines.lines(mklines, conflicts, depends, buildlink3)
 
-  write(df.makefile[, 'new_line'], 'Makefile')
+  write(lines, 'Makefile')
 }
 
 create.Makefile <- function(metadata)
 {
-  if (arg.update && file.exists('Makefile.orig')) {
-    orig <- read.Makefile.as.dataframe('Makefile.orig')
-    update.Makefile(orig, metadata)
-  } else {
-    orig <- read.Makefile.as.dataframe(textConnection(''))
-    write.Makefile(orig, metadata)
-  }
+  if (arg.update && file.exists('Makefile.orig'))
+    update.Makefile(read_mklines('Makefile.orig'), metadata)
+  else
+    write.Makefile(read_mklines(textConnection('')), metadata)
 }
 
 create.DESCR <- function(metadata) {
