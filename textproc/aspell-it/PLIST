@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/09 02:33:44 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/10/19 11:15:49 nia Exp $
 lib/aspell/it.multi
 lib/aspell/it.rws
 lib/aspell/italian.alias
 lib/aspell/italiano.alias
 share/aspell/it.dat
+share/aspell/it_affix.dat

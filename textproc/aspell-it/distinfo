@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:59:22 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/10/19 11:15:49 nia Exp $
 
-SHA1 (aspell-it-0.53-0.tar.bz2) = 70388d5ee01e27215602bde9e74e2c76bead97b4
-RMD160 (aspell-it-0.53-0.tar.bz2) = 33010131e045b52c9e4fea4d91e200e6f4427b21
-SHA512 (aspell-it-0.53-0.tar.bz2) = e6140a730a9aa3da68b669b9ba36d4aa26effc541deac0d25f65d0b0c5a5cbbecf6c28b587f678fe6d2d5b91cc4432e9184cbf7d4e1637c5572c4232210c487d
-Size (aspell-it-0.53-0.tar.bz2) = 262636 bytes
+SHA1 (aspell6-it-2.2_20050523-0.tar.bz2) = 756e9c89f36eb0fdca951c818c2d3f2c52b9398d
+RMD160 (aspell6-it-2.2_20050523-0.tar.bz2) = ff5e3b974970e897fb968ed1d0500e4728d7c1cb
+SHA512 (aspell6-it-2.2_20050523-0.tar.bz2) = 2a2ccdbb8bb52e8e08525a40f985c1a2987c00d5e9fd39f57b8dc8689f3503f63751efe9ae4bec45fc5efea64666cd64abbda3e437ad0819f15b5a96987cda5a
+Size (aspell6-it-2.2_20050523-0.tar.bz2) = 216189 bytes
 SHA1 (patch-aa) = e22211d1b77a79d16e2334630dc171245bb15677
