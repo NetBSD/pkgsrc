@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/03/02 14:31:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/10/19 14:32:09 adam Exp $
 bin/jsonschema-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -55,6 +55,9 @@ ${PYSITELIB}/jsonschema/schemas/draft7.json
 ${PYSITELIB}/jsonschema/tests/__init__.py
 ${PYSITELIB}/jsonschema/tests/__init__.pyc
 ${PYSITELIB}/jsonschema/tests/__init__.pyo
+${PYSITELIB}/jsonschema/tests/_helpers.py
+${PYSITELIB}/jsonschema/tests/_helpers.pyc
+${PYSITELIB}/jsonschema/tests/_helpers.pyo
 ${PYSITELIB}/jsonschema/tests/_suite.py
 ${PYSITELIB}/jsonschema/tests/_suite.pyc
 ${PYSITELIB}/jsonschema/tests/_suite.pyo
