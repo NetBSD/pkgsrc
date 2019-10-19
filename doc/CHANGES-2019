@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4441 2019/10/19 13:48:36 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4442 2019/10/19 13:57:05 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7131,3 +7131,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-Glib-Object-Introspection to 0.047 [mef 2019-10-19]
 	Added textproc/aspell-ms version 0.50.0 [nia 2019-10-19]
 	Added textproc/aspell-nds version 0.01.0 [nia 2019-10-19]
+	Updated devel/p5-IO-Pager to 1.01 [mef 2019-10-19]
