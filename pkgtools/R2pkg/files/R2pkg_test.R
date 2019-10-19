@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg_test.R,v 1.19 2019/10/19 21:12:18 rillig Exp $
+# $NetBSD: R2pkg_test.R,v 1.20 2019/10/19 21:32:02 rillig Exp $
 #
 # Copyright (c) 2019
 #	Roland Illig.  All rights reserved.
@@ -576,9 +576,6 @@ test_that('use_languages with Rcpp as dependency', {
     expect_equal(languages, 'c c++')
 })
 
-# test_that('copy.description', {
-# })
-
 test_that('write.Makefile', {
     tmpdir <- paste(tempdir(), 'category', 'pkgdir', sep = '/')
     dir.create(tmpdir, recursive = TRUE)
@@ -700,9 +697,6 @@ test_that('make.license, old unknown, new also unknown', {
     expect_equal(updated$value, 'new-unknown\t# [R2pkg] previously: unknown-license')
     expect_equal(updated$todo, '# TODO: ')
 })
-
-# test_that('make.r_pkgver', {
-# })
 
 test_that('find.order', {
     mklines <- make_mklines(
@@ -876,9 +870,6 @@ test_that('conflicts', {
         conflicts(c('lattice', 'methods', 'general', 'UnknownPackage')),
         list('CONFLICTS=\tR>=3.6.1', ''))
 })
-
-# test_that('conflicts.order', {
-# })
 
 # test_that('make.df.conflicts', {
 # })
