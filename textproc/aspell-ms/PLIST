@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2019/10/19 13:43:45 nia Exp $
+lib/aspell/malay.alias
+lib/aspell/ms.multi
+lib/aspell/ms.rws
+share/aspell/ms.dat
