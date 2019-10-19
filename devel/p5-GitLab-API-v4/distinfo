@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/06/11 11:10:34 markd Exp $
+$NetBSD: distinfo,v 1.3 2019/10/19 13:21:21 mef Exp $
 
-SHA1 (GitLab-API-v4-0.19.tar.gz) = c4691e5a2b7bfa2bbf7f252df53be2d52836820a
-RMD160 (GitLab-API-v4-0.19.tar.gz) = dbed81856bfa16ed5371402b7ad4808e6c6a5eb4
-SHA512 (GitLab-API-v4-0.19.tar.gz) = 17bd1495a367b501ebd89746e41b70f4b34097fa65d3bc5ab1febe900929e7bcf8f5c33bbe8a88b8cc4545f23e15551c5eecd9c728ef4efafd2865c1bd3bca6c
-Size (GitLab-API-v4-0.19.tar.gz) = 82992 bytes
+SHA1 (GitLab-API-v4-0.22.tar.gz) = 4790fe06a588a11cee637aea291538813b2498d2
+RMD160 (GitLab-API-v4-0.22.tar.gz) = 290818e285d8de9f27ee706e711a3aeef185fc1a
+SHA512 (GitLab-API-v4-0.22.tar.gz) = fe629e467004b43273fb8f36217775305888928134f73e79e6f00e42d433e62bcb9ad0d227adc74a8027fc8b4d9adf18787a1119505bb8f171e8b2a4b603c162
+Size (GitLab-API-v4-0.22.tar.gz) = 84442 bytes
