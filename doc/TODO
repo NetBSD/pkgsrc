@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19356 2019/10/18 18:33:31 nia Exp $
+$NetBSD: TODO,v 1.19357 2019/10/19 12:37:16 nia Exp $
 
 Suggested new packages
 ======================
@@ -1111,7 +1111,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o polkit-0.116 [needs mozjs-60]
 	o polsms-2.1.0
 	o poppass-4.0.14
-	o poppler-0.81.0
 	o postal-0.72
 	o pound-2.8a
 	o povray-3.7.0.0
