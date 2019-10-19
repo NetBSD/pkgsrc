@@ -7,6 +7,5 @@ pdffonts  - lists fonts used in PDF files with details
 pdfimages - saves images from a PDF file as PPM, PBM or JPEG
 pdfinfo   - prints document information from 'Info' dictionary
 pdftohtml - convert PDF files into HTML, XML and PNG images
-pdftoppm  - converts PDF files to PPM, PGM, or PBM image files
 pdftops   - converts a PDF file to PostScript
 pdftotext - converts a PDF file to plain text
