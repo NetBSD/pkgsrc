@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2019/10/19 13:48:24 nia Exp $
+
+SHA1 (aspell6-nds-0.01-0.tar.bz2) = b5cc46fac7a5436f9f52395c975ec66935b3ed54
+RMD160 (aspell6-nds-0.01-0.tar.bz2) = cf2cbdbf088093bd4ab135a7d1d72b82af6aced8
+SHA512 (aspell6-nds-0.01-0.tar.bz2) = 88ef6f6773e8699a5200ff8ae3ef9935fee21958fa35868bc10d37c22b55ea721ad9c59ab4843fdc6fedbf5a9ed10c7ea144548713742b8094b99c3c46a552a5
+Size (aspell6-nds-0.01-0.tar.bz2) = 32658 bytes
+SHA1 (patch-Makefile.pre) = e4393f0b196fc023b7cb87a125abcd64260fe081
