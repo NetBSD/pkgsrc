@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:59 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/10/19 11:01:25 nia Exp $
+lib/aspell/portugues.alias
+lib/aspell/portuguese.alias
 lib/aspell/pt_PT.multi
 lib/aspell/pt_PT.rws
 share/aspell/pt_PT.dat
