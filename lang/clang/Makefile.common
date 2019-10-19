@@ -1,13 +1,11 @@
-# $NetBSD: Makefile.common,v 1.34 2019/08/26 14:56:21 adam Exp $
+# $NetBSD: Makefile.common,v 1.35 2019/10/19 13:54:29 adam Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-static-analyzer/Makefile
 # used by lang/clang-tools-extra/Makefile
 
-DISTNAME=	cfe-8.0.1.src
+DISTNAME=	cfe-9.0.0.src
 CATEGORIES=	lang devel
-MASTER_SITES=   ${MASTER_SITE_GITHUB:=llvm/}
-GITHUB_PROJECT= llvm-project
-GITHUB_RELEASE= llvmorg-${PKGVERSION_NOREV}
+MASTER_SITES=   http://releases.llvm.org/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
