@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/09 02:33:41 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/10/19 11:12:13 nia Exp $
 lib/aspell/eo.multi
 lib/aspell/eo.rws
 lib/aspell/esperanto.alias
 share/aspell/eo.dat
+share/aspell/eo_affix.dat
