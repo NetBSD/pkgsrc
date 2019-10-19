@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg.R,v 1.25 2019/10/19 21:32:02 rillig Exp $
+# $NetBSD: R2pkg.R,v 1.26 2019/10/19 22:10:58 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -51,11 +51,9 @@ level.message <- function(...)
 level.warning <- function(...)
   level.message('WARNING: ', ...)
 
-trim.space <- function(s) gsub('[[:space:]]','',s)
-trim.blank <- function(s) gsub('[[:blank:]]','',s)
-one.space <- function(s) gsub('[[:blank:]]+',' ',s)
-one.line <- function(s) gsub('\n',' ',s)
-pkg.vers <- function(s) gsub('_','.',s)
+trim.space <- function(s) gsub('[[:space:]]', '', s)
+one.line <- function(s) gsub('\n', ' ', s)
+pkg.vers <- function(s) gsub('_', '.', s)
 varassign <- function(varname, value) paste0(varname, '=\t', value)
 relpath_category <- function(relpath)
   unlist(sapply(strsplit(relpath, '/'), '[', 3))
