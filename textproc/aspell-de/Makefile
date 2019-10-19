@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2013/04/24 11:15:43 rodent Exp $
-#
+# $NetBSD: Makefile,v 1.3 2019/10/19 10:50:22 nia Exp $
 
-DISTNAME=	aspell6-de-20030222-1
-PKGNAME=	${DISTNAME:S/6-/-/1:S/-1/.1/1}
+DISTNAME=	aspell6-de-20161207-7-0
+PKGNAME=	${DISTNAME:S/6-/-/1:S/-7/.7/1:S/-0/.0/1}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNU:=aspell/dict/de/}
 EXTRACT_SUFX=	.tar.bz2

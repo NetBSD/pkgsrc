@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/09 02:33:39 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/10/19 10:50:22 nia Exp $
 lib/aspell/de-common.rws
 lib/aspell/de.multi
 lib/aspell/de_AT-only.rws
@@ -9,7 +9,6 @@ lib/aspell/de_DE-only.rws
 lib/aspell/de_DE.multi
 lib/aspell/deutsch.alias
 lib/aspell/german.alias
-lib/aspell/swiss.alias
 share/aspell/de.dat
 share/aspell/de_affix.dat
 share/aspell/de_phonet.dat
