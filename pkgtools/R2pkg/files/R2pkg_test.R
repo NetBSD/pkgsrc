@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg_test.R,v 1.13 2019/10/19 13:55:09 rillig Exp $
+# $NetBSD: R2pkg_test.R,v 1.14 2019/10/19 14:52:40 rillig Exp $
 #
 # Copyright (c) 2019
 #	Roland Illig.  All rights reserved.
@@ -193,8 +193,44 @@ test_that('read.file.as.dataframe', {
 # test_that('categorize.buildlink', {
 # })
 
-# test_that('fix.continued.lines', {
-# })
+test_that('fix.continued.lines', {
+    message <- mocked_message()
+    local_mock(message = message$mock)
+
+    mklines <- make_mklines(
+        '# comment \\',
+        'continued=comment',
+        'VAR1= \\',
+        '\tvalue',
+        'VAR2=\tvalue')
+
+    expect_printed(
+        data.frame(varassign = mklines$key_value, line = mklines$line),
+        '  varassign              line',
+        '1     FALSE      # comment \\\\',
+        '2      TRUE continued=comment',  # FIXME: continuation from line 1
+        '3      TRUE             VAR1=',
+        '4      TRUE      VAR1+=\\tvalue',  # FIXME: extra space at the beginning
+        '5      TRUE       VAR2=\\tvalue')
+    message$expect_messages(
+        '[ 321 ] WARNING: unhandled continued line(s)')
+})
+
+test_that('fix.continued.lines, single continued line at EOF', {
+    mklines <- make_mklines(
+        'VAR= \\')
+
+    expect_equal(mklines$line, 'VAR= \\')
+})
+
+test_that('fix.continued.lines, no continued lines', {
+    mklines <- make_mklines(
+        'VAR= value',
+        'VAR= value',
+        'VAR= value')
+
+    expect_equal(mklines$line, rep('VAR= value',3))
+})
 
 test_that('read.Makefile.as.dataframe', {
     mklines <- make_mklines(
@@ -806,13 +842,13 @@ test_that('update.Makefile', {
     expect_printed(
         make.imports(metadata$Imports, metadata$Depends),
         '[1] "dep1"        "dep2(>=2.0)"')
-    FALSE && expect_printed(
+    FALSE && expect_printed(  # FIXME
         make.depends(metadata$Imports, metadata$Depends),
         '[1] "dep1"        "dep2(>=2.0)"')
 
-    FALSE && update.Makefile(metadata)
+    FALSE && update.Makefile(metadata)  # FIXME
 
-    FALSE && expect_equal(
+    FALSE && expect_equal(  # FIXME
         c(
             mkcvsid,
             '',

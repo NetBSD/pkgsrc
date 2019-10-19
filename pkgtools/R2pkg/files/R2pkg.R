@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg.R,v 1.18 2019/10/19 13:55:09 rillig Exp $
+# $NetBSD: R2pkg.R,v 1.19 2019/10/19 14:52:40 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -239,25 +239,24 @@ categorize.buildlink <- function(df,line='line')
 
 fix.continued.lines <- function(df,line='line')
 {
-  if (nrow(df) > 1)
+  if (nrow(df) < 2)
+    return(df)
+
+  continued <- grepl('\\\\$', df[, line])
+  continued_key_value <- df$key_value & continued
+
+  if (FALSE %in% df[continued,'key_value'])
+    level.warning('unhandled continued line(s)')
+
+  for (i in 1 : (nrow(df) - 1))
     {
-      continued <- grepl('\\\\$',df[,line])
-      continued_key_value <- df$key_value & continued
-      if (FALSE %in% df[continued,'key_value'])
-        {
-          level.warning('unhandled continued line(s)')
-        }
-      for (i in 1:(length(continued_key_value)-1))
-        {
-          next_line <- i + 1
-          if (continued_key_value[i])
-            {
-              df[i,line] <- sub('[[:blank:]]*\\\\$','',df[i,line])
-              df$key_value[next_line] <- TRUE
-              df$key[next_line] <- df$key[i]
-              df[next_line,line] <- paste0(df$key[next_line],'+=',df[next_line,line])
-            }
-        }
+      if (!continued_key_value[i])
+        next
+
+      df[i, line] <- sub('[\t ]*\\\\$', '', df[i, line])
+      df$key_value[i + 1] <- TRUE
+      df$key[i + 1] <- df$key[i]
+      df[i + 1, line] <- paste0(df$key[i], '+=', df[i + 1, line])
     }
   df
 }
