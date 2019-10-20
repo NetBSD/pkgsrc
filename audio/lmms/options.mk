@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2019/06/17 07:31:12 nia Exp $
+# $NetBSD: options.mk,v 1.3 2019/10/20 11:10:47 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lmms
 
@@ -24,7 +24,7 @@ CMAKE_ARGS+=	-DWANT_JACK=OFF
 
 .if !empty(PKG_OPTIONS:Mportaudio)
 CMAKE_ARGS+=	-DWANT_PORTAUDIO=ON
-.include "../../audio/portaudio-devel/buildlink3.mk"
+.include "../../audio/portaudio/buildlink3.mk"
 .else
 CMAKE_ARGS+=	-DWANT_PORTAUDIO=OFF
 .endif
