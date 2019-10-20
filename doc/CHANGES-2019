@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4456 2019/10/20 15:25:29 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4457 2019/10/20 15:27:30 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7165,3 +7165,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/cups-filters to 1.25.11 [leot 2019-10-20]
 	Added graphics/luv-icon-theme version 0.4.9.31 [nia 2019-10-20]
 	Added graphics/faba-icon-theme version 4.3 [nia 2019-10-20]
+	Added graphics/moka-icon-theme version 5.4.0 [nia 2019-10-20]
