@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.851 2019/10/03 14:42:59 nia Exp $
+# $NetBSD: Makefile,v 1.852 2019/10/20 13:14:46 nia Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -341,6 +341,7 @@ SUBDIR+=	libwmf
 SUBDIR+=	libxmi
 SUBDIR+=	ljpeg
 SUBDIR+=	luminance-hdr
+SUBDIR+=	luv-icon-theme
 SUBDIR+=	lxde-icon-theme
 SUBDIR+=	magicpoint
 SUBDIR+=	mandelbulber
