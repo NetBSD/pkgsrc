@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4458 2019/10/20 18:04:41 leot Exp $
+$NetBSD: CHANGES-2019,v 1.4459 2019/10/20 20:08:05 ast Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7167,3 +7167,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added graphics/faba-icon-theme version 4.3 [nia 2019-10-20]
 	Added graphics/moka-icon-theme version 5.4.0 [nia 2019-10-20]
 	Added textproc/json2tsv version 0.2 [leot 2019-10-20]
+	Updated www/nostromo to 1.9.6nb2 [ast 2019-10-20]

@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.1 2018/02/11 13:56:21 ast Exp $
+$NetBSD: distinfo,v 1.2 2019/10/20 20:02:13 ast Exp $
 
 SHA1 (nostromo-1.9.6.tar.gz) = 6f3d8ebc15486398f819ac55a9d2a9ac14c3b35e
 RMD160 (nostromo-1.9.6.tar.gz) = 6817ac77c7645ab2bef3e73469d2f376448af868
 SHA512 (nostromo-1.9.6.tar.gz) = baf68f492653937b80629f1281a1243026ee2def9f5b092934474148f97306ef0796c4fecffb3d6061907d8fdc1beb0a34333dfe8738dec70acdd3975347d6ea
 Size (nostromo-1.9.6.tar.gz) = 50937 bytes
+SHA1 (patch-http_header_comp) = 71b79682ae110f6a728a09f15d46d41878fb9a70
+SHA1 (patch-strcutl) = e2bd849890eb0c290745d0d9703000b7909b9318

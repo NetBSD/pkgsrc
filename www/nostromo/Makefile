@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2019/09/03 12:02:48 nia Exp $
+# $NetBSD: Makefile,v 1.3 2019/10/20 20:02:13 ast Exp $
 
 DISTNAME=	nostromo-1.9.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://www.nazgul.ch/dev/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -25,7 +25,7 @@ INSTALLATION_DIRS+=	${EGDIR}/htdocs ${EGDIR}/htdocs/cgi-bin
 
 SUBST_CLASSES+=		nostromo
 SUBST_MESSAGE.nostromo=	Fixing GNUmakefile src/nhttpd/GNUmakefile
-SUBST_STAGE.nostromo=	pre-patch
+SUBST_STAGE.nostromo=	post-extract
 SUBST_FILES.nostromo=	GNUmakefile \
 			src/nhttpd/GNUmakefile \
 			src/tools/GNUmakefile \
