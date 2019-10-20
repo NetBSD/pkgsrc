@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.853 2019/10/20 15:25:17 nia Exp $
+# $NetBSD: Makefile,v 1.854 2019/10/20 15:27:12 nia Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -354,6 +354,7 @@ SUBDIR+=	materia-gtk-theme
 SUBDIR+=	metacam
 SUBDIR+=	mgl
 SUBDIR+=	mng
+SUBDIR+=	moka-icon-theme
 SUBDIR+=	mpeg2codec
 SUBDIR+=	mpgtx
 SUBDIR+=	mscgen
