@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2018/12/05 18:49:39 leot Exp $
+@comment $NetBSD: PLIST,v 1.22 2019/10/20 12:17:18 leot Exp $
 bin/driverless
 bin/foomatic-rip
 bin/ttfread
@@ -6,6 +6,7 @@ include/cupsfilters/colord.h
 include/cupsfilters/colormanager.h
 include/cupsfilters/driver.h
 include/cupsfilters/image.h
+include/cupsfilters/pdftoippprinter.h
 include/cupsfilters/ppdgenerator.h
 include/cupsfilters/raster.h
 include/fontembed/bitset.h
@@ -34,7 +35,6 @@ libexec/cups/filter/gstoraster
 libexec/cups/filter/imagetopdf
 libexec/cups/filter/imagetops
 libexec/cups/filter/imagetoraster
-libexec/cups/filter/pdftoijs
 libexec/cups/filter/pdftopdf
 libexec/cups/filter/pdftops
 libexec/cups/filter/pdftoraster
@@ -82,6 +82,7 @@ share/cups/mime/cupsfilters.convs
 share/cups/mime/cupsfilters.types
 share/cups/ppdc/escp.h
 share/cups/ppdc/pcl.h
+share/doc/cups-filters/ABOUT-NLS
 share/doc/cups-filters/AUTHORS
 share/doc/cups-filters/COPYING
 share/doc/cups-filters/INSTALL
@@ -91,7 +92,6 @@ share/examples/cups-filters/cups-browsed.conf
 share/ppd/cupsfilters/Fuji_Xerox-DocuPrint_CM305_df-PDF.ppd
 share/ppd/cupsfilters/Generic-PDF_Printer-PDF.ppd
 share/ppd/cupsfilters/HP-Color_LaserJet_CM3530_MFP-PDF.ppd
-share/ppd/cupsfilters/HP-PhotoSmart_Pro_B8300-hpijs-pdftoijs.ppd
 share/ppd/cupsfilters/Ricoh-PDF_Printer-PDF.ppd
 share/ppd/cupsfilters/pxlcolor.ppd
 share/ppd/cupsfilters/pxlmono.ppd
