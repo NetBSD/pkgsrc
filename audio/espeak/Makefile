@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/07/21 22:47:56 nia Exp $
+# $NetBSD: Makefile,v 1.13 2019/10/20 11:10:47 nia Exp $
 
 MINOR_VER=	48
 DISTNAME=	espeak-1.${MINOR_VER}.04-source
@@ -44,6 +44,6 @@ do-install:
 	cd ${WRKSRC}/espeak-data && \
 		${PAX} -rw -pp . ${DESTDIR}${PREFIX}/share/espeak-data
 
-.include "../../audio/portaudio-devel/buildlink3.mk"
+.include "../../audio/portaudio/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2019/08/22 12:23:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.36 2019/10/20 11:10:48 nia Exp $
 
 DISTNAME=	OpenCPN-5.0.0
 PKGNAME=	${DISTNAME:S/OpenCPN/opencpn/}
@@ -46,7 +46,7 @@ LDFLAGS+=	${EXPORT_SYMBOLS_LDFLAGS}
 .include "../../x11/wxGTK30/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
-.include "../../audio/portaudio-devel/buildlink3.mk"
+.include "../../audio/portaudio/buildlink3.mk"
 .include "../../textproc/tinyxml/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
