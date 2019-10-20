@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2019/09/03 01:43:10 mrg Exp $
+# $NetBSD: Makefile,v 1.125 2019/10/20 09:59:13 nia Exp $
 
 DISTNAME=		audacity-2.3.2
 PKGREVISION=		1
@@ -64,6 +64,10 @@ CONFIGURE_ENV+=		ac_cv_header_pa_linux_alsa_h=no
 CXXFLAGS+=	-march=i586
 .endif
 
+.if ${MACHINE_ARCH} != "i386" && ${MACHINE_ARCH} != "x86_64"
+CONFIGURE_ARGS+=	--disable-sse
+.endif
+
 .include "../../mk/oss.buildlink3.mk"
 
 .if !empty(OSS_TYPE) && ${OSS_TYPE} != "none"
@@ -72,9 +76,9 @@ CONFIGURE_ARGS+=	--with-oss
 CONFIGURE_ARGS+=	--without-oss
 .endif
 
-CONFIG_GUESS_OVERRIDE=		\
+CONFIG_GUESS_OVERRIDE= \
 	config.guess */config.guess */*/config.guess */*/*/config.guess
-CONFIG_SUB_OVERRIDE=		\
+CONFIG_SUB_OVERRIDE= \
 	config.sub */config.sub */*/config.sub */*/*/config.sub
 
 CFLAGS.SunOS+=	-fPIC
