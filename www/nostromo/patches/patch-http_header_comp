@@ -1,0 +1,66 @@
+$NetBSD: patch-http_header_comp,v 1.1 2019/10/20 20:02:13 ast Exp $
+
+The function http_header_comp() should return the number of received
+headers, not only 0 on fail or 1 on success.
+
+Without this functionality, one could send more than the default
+of 16 headers and overflow the header array to craft a DoS as
+shown in nostromo CVE-2019-16279.
+
+This patch adds the missing header count functionality to the function
+http_header_comp().
+
+--- src/nhttpd/http.c.orig	2019-10-20 15:20:47.521119966 +0200
++++ src/nhttpd/http.c	2019-10-20 15:28:02.327722735 +0200
+@@ -1074,21 +1074,21 @@
+  * http_header_comp()
+  * 	check if received headers arrived complete
+  * Return:
+- * 	0 = headers not complete, 1 = headers complete
++ * 	0 = headers not complete, <number of headers> = headers complete
+  */
+ int
+ http_header_comp(char *header, const int len)
+ {
+-	int	r;
+-	char	*p, *end;
++	int	i, headers;
++	char	*p;
+ 
+-	r = 0;
++	headers = 0;
+ 
+ 	/* check header for minimum size */
+ 	if (len < 4)
+ 		return (0);
+ 
+-	/* post */
++	/* post header */
+ 	if (!strncasecmp("POST", header, 4)) {
+ 		p = header;
+ 		if ((p = strstr(p, "\r\n\r\n")) == NULL)
+@@ -1097,12 +1097,19 @@
+ 			return (1);
+ 	}
+ 
+-	/* any header */
+-	end = header + (len - 4);
+-	if (!strcmp(end, "\r\n\r\n"))
+-		r = 1;
++	/* any other header */
++	for (i = 0; i < len; i++) {
++		if (header[i] == '\r') {
++			if ((len - i) < 4)
++				break;
++			if (!strncmp(&header[i], "\r\n\r\n", 4)) {
++				headers++;
++				i += 3;
++			}
++		}
++	}
+ 
+-	return (r);
++	return (headers);
+ }
+ 
+ /*
