@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/10/16 12:50:27 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/10/20 11:10:49 nia Exp $
 ${PLIST.alsa}include/portaudio2/pa_linux_alsa.h
 include/portaudio2/portaudio.h
 include/portaudio2/portaudiocpp/AutoSystem.hxx
