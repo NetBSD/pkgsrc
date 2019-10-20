@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4453 2019/10/20 11:11:53 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4454 2019/10/20 12:17:32 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7162,3 +7162,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated editors/texstudio to 2.12.16 [markd 2019-10-20]
 	Removed www/opera-plugins [nia 2019-10-20]
 	Renamed audio/portaudio-devel to audio/portaudio [nia 2019-10-20]
+	Updated print/cups-filters to 1.25.11 [leot 2019-10-20]
