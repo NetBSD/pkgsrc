@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2019/10/20 18:03:50 leot Exp $
+bin/json2tsv
+man/man1/json2tsv.1
+share/doc/json2tsv/README
