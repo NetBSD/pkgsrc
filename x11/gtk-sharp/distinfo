@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.14 2019/10/16 13:44:20 nia Exp $
+$NetBSD: distinfo,v 1.15 2019/10/20 22:31:05 nia Exp $
 
 SHA1 (gtk-sharp-2.12.45.tar.gz) = c9c50193d96a0efa5f45eb9d3f1ebb3d57fd565c
 RMD160 (gtk-sharp-2.12.45.tar.gz) = f11d2e151e2266b0b4a2aea620a4c2d6d8753676
 SHA512 (gtk-sharp-2.12.45.tar.gz) = 6e11a6a3e8f7f3f9511c674cdcbda15274e597b8e72bc2cdd6970f8906e295849a94108794c11b9aef5408631bf10d2dd7d855d5e5081f58fc790e7194f6159f
 Size (gtk-sharp-2.12.45.tar.gz) = 2644209 bytes
+SHA1 (patch-sample_test_TestRange.cs) = 72f1f8211edd3e618523ba59f20dddba1fb11c8d
