@@ -1,4 +1,4 @@
-$NetBSD: patch-src_hostapi_alsa_pa__linux__alsa.c,v 1.1 2019/10/16 12:50:27 nia Exp $
+$NetBSD: patch-src_hostapi_alsa_pa__linux__alsa.c,v 1.1 2019/10/20 11:10:49 nia Exp $
 
 Support building on non-Linux systems.
 

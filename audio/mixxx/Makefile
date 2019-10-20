@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/10/06 13:45:42 nia Exp $
+# $NetBSD: Makefile,v 1.8 2019/10/20 11:10:47 nia Exp $
 
 DISTNAME=	mixxx-2.2.2
 CATEGORIES=	audio
@@ -90,7 +90,7 @@ do-install:
 .include "../../audio/lilv/buildlink3.mk"
 .include "../../audio/lv2/buildlink3.mk"
 .include "../../audio/opusfile/buildlink3.mk"
-.include "../../audio/portaudio-devel/buildlink3.mk"
+.include "../../audio/portaudio/buildlink3.mk"
 .include "../../audio/rubberband/buildlink3.mk"
 .include "../../audio/soundtouch/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"

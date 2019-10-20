@@ -1,4 +1,4 @@
-$NetBSD: patch-src_hostapi_oss_pa__unix__oss.c,v 1.1 2017/04/27 07:14:01 nat Exp $
+$NetBSD: patch-src_hostapi_oss_pa__unix__oss.c,v 1.1 2019/10/20 11:10:49 nia Exp $
 
 Don't write an endless stream of silence when preparing the stream.
 

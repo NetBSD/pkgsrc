@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2019/09/02 13:19:59 adam Exp $
+# $NetBSD: Makefile,v 1.53 2019/10/20 11:10:48 nia Exp $
 
 DISTNAME=	hatari-2.0.0
 PKGREVISION=	1
@@ -35,7 +35,7 @@ REPLACE_PYTHON+=	tools/hconsole/hconsole.py
 
 INSTALLATION_DIRS+=	share/doc/hatari
 
-.include "../../audio/portaudio-devel/buildlink3.mk"
+.include "../../audio/portaudio/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

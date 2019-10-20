@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2019/10/16 12:50:27 nia Exp $
+# $NetBSD: options.mk,v 1.1 2019/10/20 11:10:49 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.portaudio
 PKG_SUPPORTED_OPTIONS=		alsa jack

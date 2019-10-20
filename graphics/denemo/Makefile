@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2019/07/21 22:24:56 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2019/10/20 11:10:48 nia Exp $
 #
 
 DISTNAME=	denemo-0.9.2
@@ -33,7 +33,7 @@ post-install:
 .include "../../audio/aubio/buildlink3.mk"
 .include "../../audio/libsmf/buildlink3.mk"
 .include "../../audio/fluidsynth/buildlink3.mk"
-.include "../../audio/portaudio-devel/buildlink3.mk"
+.include "../../audio/portaudio/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 # Depends on lilypond which is still guile 1.8.
 .include "../../lang/guile/buildlink3.mk"

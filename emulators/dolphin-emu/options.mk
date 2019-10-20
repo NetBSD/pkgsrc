@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2019/06/13 19:44:35 nia Exp $
+# $NetBSD: options.mk,v 1.4 2019/10/20 11:10:48 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.dolphin-emu
 PKG_SUPPORTED_OPTIONS=		alsa libao llvm openal portaudio pulseaudio
@@ -32,7 +32,7 @@ CMAKE_ARGS+=	-DENABLE_OPENAL=ON
 
 .if !empty(PKG_OPTIONS:Mportaudio)
 CMAKE_ARGS+=	-DENABLE_PORTAUDIO=ON
-.include "../../audio/portaudio-devel/buildlink3.mk"
+.include "../../audio/portaudio/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)

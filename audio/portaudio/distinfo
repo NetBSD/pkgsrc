@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2019/10/16 12:50:27 nia Exp $
+$NetBSD: distinfo,v 1.17 2019/10/20 11:10:49 nia Exp $
 
 SHA1 (pa_stable_v190600_20161030.tgz) = 56c596bba820d90df7d057d8f6a0ec6bf9ab82e8
 RMD160 (pa_stable_v190600_20161030.tgz) = e6e5cd3f3cb7469aa17549c189e445d573567e13
