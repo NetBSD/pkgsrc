@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2019/10/10 13:18:06 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/10/20 12:46:18 nia Exp $
 
 DISTNAME=		adwaita-icon-theme-3.34.0
+PKGREVISION=		1
 CATEGORIES=		graphics gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/adwaita-icon-theme/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=		.tar.xz
@@ -10,14 +11,13 @@ HOMEPAGE=		https://www.gnome.org/
 COMMENT=		Standard GNOME icons
 LICENSE=		cc-by-sa-v3.0 OR gnu-lgpl-v3
 
-# for gtk-encode-symbolic-svg
-TOOL_DEPENDS+=		gtk3+>=3:../../x11/gtk3
-
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config
 # otherwise it creates lots of superfluous lib/locale dirs
 USE_PKGLOCALEDIR=	yes
 TOOLS_NOOP+=		gtk-update-icon-cache
+
+CONFIGURE_ENV+=		ac_cv_path_GTK_ENCODE_SYMBOLIC_SVG="false"
 
 PKGCONFIG_OVERRIDE+=	adwaita-icon-theme.pc.in
 
@@ -39,5 +39,4 @@ post-install:
 
 BUILDLINK_DEPMETHOD.gettext-lib=        build
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../graphics/librsvg/tool.mk"
 .include "../../mk/bsd.pkg.mk"
