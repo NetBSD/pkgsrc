@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/10/01 19:37:50 nia Exp $
+# $NetBSD: Makefile,v 1.4 2019/10/20 09:42:13 nia Exp $
 
 DISTNAME=	dosbox-x-0.82.22
 CATEGORIES=	emulators
@@ -25,6 +25,14 @@ CONFIGURE_ARGS+=	--disable-sdl2test
 CONFIGURE_ARGS+=	--disable-sdltest
 CONFIGURE_ARGS+=	--disable-sdl
 CONFIGURE_ARGS+=	--enable-sdl2
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} != "i386" && ${MACHINE_ARCH} != "x86_64"
+CONFIGURE_ARGS+=	--disable-dynrec
+CONFIGURE_ARGS+=	--disable-fpu-x86
+CONFIGURE_ARGS+=	--disable-fpu-x64
+.endif
 
 PKGCONFIG_OVERRIDE+=	vs2015/libpng/libpng.pc.in
 PKGCONFIG_OVERRIDE+=	vs2015/sdl/sdl.pc.in
