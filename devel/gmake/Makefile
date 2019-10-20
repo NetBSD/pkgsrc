@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2018/11/16 16:00:18 leot Exp $
+# $NetBSD: Makefile,v 1.108 2019/10/20 16:29:42 triaxx Exp $
 
 DISTNAME=	make-4.2.1
 PKGNAME=	g${DISTNAME}
@@ -34,12 +34,10 @@ CONFIGURE_ARGS+=	ac_cv_func_getloadavg_setgid=no
 
 AUTO_MKDIRS=		yes
 
-PLIST_SRC=		${PKGDIR}/PLIST
-
 .include "options.mk"
 
 post-install:
-	${LN} -sf ${PREFIX}/bin/gmake ${DESTDIR}${PREFIX}/${PKGGNUDIR}/bin/make
+	${LN} -sf ${PREFIX}/bin/gmake ${DESTDIR}${PREFIX}/${PKGGNUDIR}bin/make
 	${LN} -sf ${PREFIX}/${PKGMANDIR}/man1/gmake.1 ${DESTDIR}${PREFIX}/${PKGGNUDIR}${PKGMANDIR}/man1/make.1
 
 .include "../../mk/bsd.pkg.mk"
