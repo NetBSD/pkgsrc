@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4454 2019/10/20 12:17:32 leot Exp $
+$NetBSD: CHANGES-2019,v 1.4455 2019/10/20 13:15:06 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7163,3 +7163,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed www/opera-plugins [nia 2019-10-20]
 	Renamed audio/portaudio-devel to audio/portaudio [nia 2019-10-20]
 	Updated print/cups-filters to 1.25.11 [leot 2019-10-20]
+	Added graphics/luv-icon-theme version 0.4.9.31 [nia 2019-10-20]
