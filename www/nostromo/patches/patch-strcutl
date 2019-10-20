@@ -1,0 +1,62 @@
+$NetBSD: patch-strcutl,v 1.1 2019/10/20 20:02:13 ast Exp $
+
+Mitigate nostromo CVE-2019-16278 (bypassing a check for /../ allowing
+execution of /bin/sh with arbitrary arguments).
+
+Nostromo as such handles encoded URI correctly but the strcutl()
+function in the string manipulation library removes 0x0d in the
+URI string resulting in a valid path. What should happen instead
+is that the decoded 0x0d character remains in the URI, resulting
+in an invalid path, giving rise to a 404.
+
+--- src/libmy/strcutl.c.orig	2005-06-04 10:30:04.000000000 +0200
++++ src/libmy/strcutl.c	2019-10-20 11:30:29.704645745 +0200
+@@ -26,8 +26,12 @@
+ {
+ 	int	i = 0, j = 0, cl = 0;
+ 
+-	/* first count all lines */
+-	while (1) {
++	/* requested line must be a positive integer */
++	if (line <= 0)
++		return -1;
++
++	/* count lines up to requested line or end of string */
++	while (line >= cl) {
+ 		if (src[i] == '\n' && src[i + 1] == '\0') {
+ 			cl++;
+ 			break;
+@@ -42,24 +46,24 @@
+ 		i++;
+ 	}
+ 
+-	/* do we have the requested line ? */
+-	if (line > cl || line == 0)
++	/* did we actually get the requested line ? */
++	if (line > cl)
+ 		return -1;
+ 
+-	/* go to line start */
++	/* go to beginning of the requested line */
+ 	for (i = 0, j = 0; j != line - 1; i++)
+ 		if (src[i] == '\n')
+ 			j++;
+ 
+-	/* read requested line */
++	/* copy the requested line to destination buffer */
+ 	for (j = 0; src[i] != '\n' && src[i] != '\0' && j != dsize - 1; i++) {
+-		if (src[i] != '\r') {
+-			dst[j] = src[i];
+-			j++;
+-		}
++		if (src[i] == '\r' && src[i + 1] == '\n')
++			continue;
++		dst[j] = src[i];
++		j++;
+ 	}
+ 
+-	/* terminate string */
++	/* null terminate destination buffer */
+ 	dst[j] = '\0';
+ 
+ 	return cl;
