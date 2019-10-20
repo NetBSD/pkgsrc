@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2019/09/16 22:46:20 nia Exp $
+# $NetBSD: options.mk,v 1.4 2019/10/20 11:10:48 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.mumble
 PKG_SUPPORTED_OPTIONS=		alsa pulseaudio portaudio
@@ -21,7 +21,7 @@ CONFIG_OPTIONS+=	CONFIG+=no-pulseaudio
 .endif
 
 .if !empty(PKG_OPTIONS:Mportaudio)
-.include "../../audio/portaudio-devel/buildlink3.mk"
+.include "../../audio/portaudio/buildlink3.mk"
 .else
 CONFIG_OPTIONS+=	CONFIG+=no-portaudio
 .endif

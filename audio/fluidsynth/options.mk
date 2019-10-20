@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2019/10/16 19:25:44 nia Exp $
+# $NetBSD: options.mk,v 1.2 2019/10/20 11:10:47 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fluidsynth
 PKG_SUPPORTED_OPTIONS=		alsa jack portaudio pulseaudio
@@ -22,7 +22,7 @@ CMAKE_ARGS+=	-Denable-jack=OFF
 
 .if !empty(PKG_OPTIONS:Mportaudio)
 CMAKE_ARGS+=	-Denable-portaudio=ON
-.include "../../audio/portaudio-devel/buildlink3.mk"
+.include "../../audio/portaudio/buildlink3.mk"
 .else
 CMAKE_ARGS+=	-Denable-portaudio=OFF
 .endif
