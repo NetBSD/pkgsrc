@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/02/25 01:15:03 minskim Exp $
+$NetBSD: distinfo,v 1.3 2019/10/21 22:54:23 adam Exp $
 
-SHA1 (cookiecutter-1.6.0.tar.gz) = d4d2bfe2d7cc3d31e9ae9f81158ae9812b1fbf9f
-RMD160 (cookiecutter-1.6.0.tar.gz) = 371e4c4a53cbdd9cdfd043066e38e6538a634e9e
-SHA512 (cookiecutter-1.6.0.tar.gz) = 0a06ae8fe7aceeeb0bcb98b5981d743b2e2e5d5f121c2e0703bb76399b0433816beaddb64c92f28d50f1781737db25907a10ec7b59f6c02c17171cfb56fb12f4
-Size (cookiecutter-1.6.0.tar.gz) = 255579 bytes
-SHA1 (patch-docs_Makefile) = c0451b26ea79a8ebd7ca0f733264806fea84857d
+SHA1 (cookiecutter/cookiecutter-1.6.0.tar.gz) = 412294054293eadc1c5ebaefc307db3525b48954
+RMD160 (cookiecutter/cookiecutter-1.6.0.tar.gz) = f6c6858bdd75cebd575badab9c4c044f4bd9769f
+SHA512 (cookiecutter/cookiecutter-1.6.0.tar.gz) = 347b0f45fd0bcaaa1a8d7f04bf010d8cf526e816d9a772653dc81fbda3871cff02113ed4781f8897877724321a7d612c9ba26462f148a3ace93ec1acf15e0efe
+Size (cookiecutter/cookiecutter-1.6.0.tar.gz) = 181753 bytes
