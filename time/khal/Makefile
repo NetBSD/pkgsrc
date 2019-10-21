@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2019/04/25 07:33:25 maya Exp $
+# $NetBSD: Makefile,v 1.29 2019/10/21 22:15:10 adam Exp $
 
 DISTNAME=		khal-0.10.1
 PKGREVISION=		1
@@ -42,7 +42,7 @@ REPLACE_PYTHON+=	khal/*/*.py
 REPLACE_PYTHON+=	khal/*.py
 
 post-build:
-	cd ${WRKSRC}/doc && ${SETENV} ${MAKE_ENV} PYTHONPATH=${WRKSRC} ${GMAKE} man SPHINXBUILD=sphinx-build${PYVERSSUFFIX}
+	cd ${WRKSRC}/doc && ${SETENV} ${MAKE_ENV} PYTHONPATH=${WRKSRC} ${GMAKE} man SPHINXBUILD=sphinx-build-${PYVERSSUFFIX}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/khal.conf.sample ${DESTDIR}${PREFIX}/share/doc/khal

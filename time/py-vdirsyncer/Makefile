@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2018/08/16 12:43:43 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2019/10/21 22:15:10 adam Exp $
 
 DISTNAME=	vdirsyncer-0.16.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -35,7 +35,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 # not supported any longer
 USE_TOOLS+=	gmake
 
 post-build:
-	cd ${WRKSRC}/docs && ${SETENV} ${MAKE_ENV} PYTHONPATH=${WRKSRC} ${GMAKE} man SPHINXBUILD=sphinx-build${PYVERSSUFFIX}
+	cd ${WRKSRC}/docs && ${SETENV} ${MAKE_ENV} PYTHONPATH=${WRKSRC} ${GMAKE} man SPHINXBUILD=sphinx-build-${PYVERSSUFFIX}
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/docs/_build/man/vdirsyncer.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
