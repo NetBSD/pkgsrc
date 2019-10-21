@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.171 2019/10/21 12:07:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.172 2019/10/21 20:47:55 nia Exp $
 
 DISTNAME=	mesa-19.2.1
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	https://mesa.freedesktop.org/archive/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://www.mesa3d.org/
 COMMENT=	Open source OpenGL implementation
 LICENSE=	mit
@@ -31,8 +31,8 @@ GALLIUM_DRIVERS=	swrast
 VULKAN_DRIVERS=		#
 MESA_PLATFORMS=		surfaceless
 
-.include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
+.include "features.mk"
 .include "options.mk"
 
 PLIST_SUBST+=	GLVER="1.2.0"
@@ -46,7 +46,7 @@ PLIST_VARS+=		r300 svga nouveau vc4 lima panfrost
 # other features
 PLIST_VARS+=		egl gbm vaapi xatracker
 
-.if ${OPSYS} != "Darwin" && ${OPSYS} != "Cygwin"
+.if ${MESALIB_SUPPORTS_DRI} == "yes"
 BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.81
 .include "../../x11/libdrm/buildlink3.mk"
 MESA_PLATFORMS+=	drm
@@ -114,7 +114,7 @@ PLIST.r300=		yes
 .else
 MESON_ARGS+=		-Degl=false
 MESON_ARGS+=		-Dgbm=false
-.endif # ${OPSYS} != "Darwin" && ${OPSYS} != "Cygwin"
+.endif # ${MESALIB_SUPPORTS_DRI} == "yes"
 
 MESON_ARGS+=	-Dgallium-drivers=${GALLIUM_DRIVERS:ts,}
 MESON_ARGS+=	-Ddri-drivers=${DRI_DRIVERS:ts,}
