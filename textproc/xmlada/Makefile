@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/09/02 13:20:11 adam Exp $
+# $NetBSD: Makefile,v 1.23 2019/10/21 22:11:33 adam Exp $
 
 DISTNAME=	xmlada-${XMLADA_VERS}
 PKGREVISION=	5
@@ -40,7 +40,7 @@ SUBST_SED.docs=		-e 's/^all: \(.*\)/all: \1 docs/g'
 MAKE_ENV+=	SPHINXBUILD=${PREFIX}/bin/sphinx-build${PYVERSSUFFIX}
 
 DESTSTATIC=	${DESTDIR}${PREFIX}/lib/xmlada/static
-DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx1
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 4.4.0.0
 
 post-install:
@@ -53,5 +53,5 @@ post-install:
 		     ${DESTSTATIC}/libxmlada_schema.a \
 		     ${DESTSTATIC}/libxmlada_unicode.a
 
-.include "../../lang/python/application.mk"
+.include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
