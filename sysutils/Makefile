@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.839 2019/10/18 12:31:02 nia Exp $
+# $NetBSD: Makefile,v 1.840 2019/10/21 19:15:52 adam Exp $
 #
 
 COMMENT=	System utilities
@@ -474,6 +474,7 @@ SUBDIR+=	pv
 SUBDIR+=	pwgen
 SUBDIR+=	py-Glances
 SUBDIR+=	py-Send2Trash
+SUBDIR+=	py-appnope
 SUBDIR+=	py-attic
 SUBDIR+=	py-augeas
 SUBDIR+=	py-borgbackup
