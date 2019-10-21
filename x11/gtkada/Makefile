@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2019/08/11 13:25:12 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2019/10/21 22:11:34 adam Exp $
 
 DISTNAME=	gtkada-${GTKADA_VERSION}
 PKGREVISION=	22
@@ -13,7 +13,7 @@ HOMEPAGE=	http://libre.adacore.com/libre/tools/gtkada/
 COMMENT=	Ada graphical toolkit based on Gtk+
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+PYTHON_VERSIONED_DEPENDENCIES=	sphinx:build
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake perl pkg-config
@@ -34,7 +34,7 @@ SUBST_FILES.lgnat=	src/tools/Makefile.in testgtk/Makefile.in
 SUBST_SED.lgnat=	-e 's|-largs|-largs -lgnat|'
 SUBST_STAGE.sphinx=	pre-configure
 SUBST_FILES.sphinx=	docs/gtkada_ug/Makefile
-SUBST_SED.sphinx=	-e 's|sphinx-build|${PREFIX}/bin/sphinx-build${PYVERSSUFFIX}|'
+SUBST_SED.sphinx=	-e 's|sphinx-build|${PREFIX}/bin/sphinx-build-${PYVERSSUFFIX}|'
 
 GENERATE_PLIST=	cd ${DESTDIR}${PREFIX}; \
 		${FIND} * \( -type f -or -type l \) | ${SORT};
@@ -66,6 +66,6 @@ post-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/share/doc/gtkada/gtkada_ug/_sources
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../lang/python/application.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
