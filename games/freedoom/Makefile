@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2019/08/26 16:22:42 micha Exp $
+# $NetBSD: Makefile,v 1.2 2019/10/21 09:58:35 micha Exp $
 
-DISTNAME=	freedoom-0.11.3
-PKGREVISION=	1
+DISTNAME=	freedoom-0.12.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=freedoom/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -22,21 +21,22 @@ INSTALLATION_DIRS=	${DOOMWADDIR} share/doc/freedoom
 SUBST_CLASSES+=		install
 SUBST_STAGE.install=	do-configure
 SUBST_MESSAGE.install=	Preparing INSTALL.pkgsrc file ...
-SUBST_FILES.install=	INSTALL.pkgsrc
+SUBST_FILES.install=	${WRKDIR}/INSTALL.pkgsrc
 SUBST_SED.install=	-e 's,DOOMWADDIR,${PREFIX}/${DOOMWADDIR},'
 
 NO_BUILD=		yes
 
 pre-configure:
-	${MKDIR} ${WRKSRC}
-	${CP} ${FILESDIR}/INSTALL.pkgsrc ${WRKSRC}
+	${CP} ${FILESDIR}/INSTALL.pkgsrc ${WRKDIR}
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/freedoom1.wad \
 		${DESTDIR}${PREFIX}/share/doom/freedoom1.wad
 	${INSTALL_DATA} ${WRKSRC}/freedoom2.wad \
 		${DESTDIR}${PREFIX}/share/doom/freedoom2.wad
-	${INSTALL_DATA} ${WRKSRC}/INSTALL.pkgsrc \
+	${INSTALL_DATA} ${WRKSRC}/freedoom-manual.pdf \
+		${DESTDIR}${PREFIX}/share/doc/freedoom/freedoom-manual.pdf
+	${INSTALL_DATA} ${WRKDIR}/INSTALL.pkgsrc \
 		${DESTDIR}${PREFIX}/share/doc/freedoom/INSTALL.pkgsrc
 
 .include "../../mk/bsd.pkg.mk"
