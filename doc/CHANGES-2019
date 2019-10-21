@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4468 2019/10/21 19:23:50 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4469 2019/10/21 21:11:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7181,3 +7181,11 @@ Changes to the packages collection and infrastructure in 2019:
 	Added sysutils/py-appnope version 0.1.0 [adam 2019-10-21]
 	Updated devel/py-ipykernel to 5.1.3 [adam 2019-10-21]
 	Removed devel/py-pylint-common [adam 2019-10-21]
+	Updated textproc/py-sphinx to 2.2.0 [adam 2019-10-21]
+	Added textproc/py-sphinxcontrib-applehelp version 1.0.1 [adam 2019-10-21]
+	Added textproc/py-sphinxcontrib-devhelp version 1.0.1 [adam 2019-10-21]
+	Added textproc/py-sphinxcontrib-jsmath version 1.0.1 [adam 2019-10-21]
+	Added textproc/py-sphinxcontrib-htmlhelp version 1.0.2 [adam 2019-10-21]
+	Added textproc/py-sphinxcontrib-serializinghtml version 1.1.3 [adam 2019-10-21]
+	Added textproc/py-sphinxcontrib-qthelp version 1.0.2 [adam 2019-10-21]
+	Added textproc/py-sphinx1 version 1.8.5nb3 [adam 2019-10-21]
