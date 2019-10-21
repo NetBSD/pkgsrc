@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/10/21 20:47:07 adam Exp $
+
+SHA1 (sphinxcontrib-jsmath-1.0.1.tar.gz) = 70348505f159dca801522d6df68230e3c5e749c7
+RMD160 (sphinxcontrib-jsmath-1.0.1.tar.gz) = 9ff064c88f8f121bd7876ae3f79b4c31f5a9264f
+SHA512 (sphinxcontrib-jsmath-1.0.1.tar.gz) = c1e6488f5c0ca4567c27ec7c597c9db321ac32ce354c4ad62fea534b2ae1c0acb183a921f46216bbc3891f14acfaac05ddf324b8fdaf99828df07bc91aa7e5c7
+Size (sphinxcontrib-jsmath-1.0.1.tar.gz) = 5787 bytes
