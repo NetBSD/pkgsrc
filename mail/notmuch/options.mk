@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2019/04/05 09:59:01 ryoon Exp $
+# $NetBSD: options.mk,v 1.4 2019/10/21 21:55:04 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.notmuch
 PKG_SUPPORTED_OPTIONS=	notmuch-emacs doc
@@ -24,7 +24,8 @@ CONFIGURE_ARGS+=	--without-emacs
 PLIST_VARS+=		doc
 .if !empty(PKG_OPTIONS:Mdoc)
 PLIST.doc=		yes
-BUILD_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+PYTHON_VERSIONED_DEPENDENCIES=	sphinx:build
+.include "../../lang/python/versioned_dependencies.mk"
 .else
 CONFIGURE_ARGS+=	--without-docs
 CONFIGURE_ARGS+=	--without-api-docs
