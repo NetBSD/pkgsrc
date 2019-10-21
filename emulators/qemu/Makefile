@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.217 2019/08/22 12:23:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.218 2019/10/21 21:45:39 adam Exp $
 
 DISTNAME=	qemu-4.1.0
 PKGREVISION=	1
@@ -19,7 +19,8 @@ UNLIMIT_RESOURCES=	datasize
 HAS_CONFIGURE=		yes
 
 GMAKE_REQD=		4.1 # needed for docs
-TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+
+PYTHON_VERSIONED_DEPENDENCIES=	sphinx:tool
 
 SUBST_CLASSES+=			prefix
 SUBST_STAGE.prefix=		pre-configure
@@ -33,7 +34,7 @@ SUBST_MESSAGE.sphinx-build=	Fix hardcoded sphinx-build
 SUBST_FILES.sphinx-build+=	Makefile configure
 SUBST_FILES.sphinx-build+=	roms/skiboot/doc/Makefile
 SUBST_FILES.sphinx-build+=	roms/u-boot/Documentation/Makefile
-SUBST_SED.sphinx-build+=	-e 's/sphinx-build/sphinx-build${PYVERSSUFFIX}/g'
+SUBST_SED.sphinx-build+=	-e 's/sphinx-build/sphinx-build-${PYVERSSUFFIX}/g'
 
 .include "options.mk"
 
@@ -154,6 +155,7 @@ post-install:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/extension.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
