@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2019/09/09 01:00:49 nia Exp $
+@comment $NetBSD: PLIST,v 1.44 2019/10/21 20:30:43 nia Exp $
 ${PLIST.egl}include/EGL/egl.h
 ${PLIST.egl}include/EGL/eglext.h
 ${PLIST.egl}include/EGL/eglextchromium.h
@@ -84,16 +84,16 @@ ${PLIST.nouveau}${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so
 ${PLIST.nouveau}${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so.1
 ${PLIST.nouveau}${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so.1.0
 ${PLIST.nouveau}${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so.1.0.0
-${PLIST.vdpau}lib/vdpau/libvdpau_r300.so
-${PLIST.vdpau}lib/vdpau/libvdpau_r300.so.1
-${PLIST.vdpau}lib/vdpau/libvdpau_r300.so.1.0
-${PLIST.vdpau}lib/vdpau/libvdpau_r300.so.1.0.0
-${PLIST.vdpau}lib/vdpau/libvdpau_r600.so
-${PLIST.vdpau}lib/vdpau/libvdpau_r600.so.1
-${PLIST.vdpau}lib/vdpau/libvdpau_r600.so.1.0
-${PLIST.vdpau}lib/vdpau/libvdpau_r600.so.1.0.0
-${PLIST.vdpau}lib/vdpau/libvdpau_radeonsi.so
-${PLIST.vdpau}lib/vdpau/libvdpau_radeonsi.so.1
-${PLIST.vdpau}lib/vdpau/libvdpau_radeonsi.so.1.0
-${PLIST.vdpau}lib/vdpau/libvdpau_radeonsi.so.1.0.0
+${PLIST.r300}${PLIST.vdpau}lib/vdpau/libvdpau_r300.so
+${PLIST.r300}${PLIST.vdpau}lib/vdpau/libvdpau_r300.so.1
+${PLIST.r300}${PLIST.vdpau}lib/vdpau/libvdpau_r300.so.1.0
+${PLIST.r300}${PLIST.vdpau}lib/vdpau/libvdpau_r300.so.1.0.0
+${PLIST.r600}${PLIST.vdpau}lib/vdpau/libvdpau_r600.so
+${PLIST.r600}${PLIST.vdpau}lib/vdpau/libvdpau_r600.so.1
+${PLIST.r600}${PLIST.vdpau}lib/vdpau/libvdpau_r600.so.1.0
+${PLIST.r600}${PLIST.vdpau}lib/vdpau/libvdpau_r600.so.1.0.0
+${PLIST.radeonsi}${PLIST.vdpau}lib/vdpau/libvdpau_radeonsi.so
+${PLIST.radeonsi}${PLIST.vdpau}lib/vdpau/libvdpau_radeonsi.so.1
+${PLIST.radeonsi}${PLIST.vdpau}lib/vdpau/libvdpau_radeonsi.so.1.0
+${PLIST.radeonsi}${PLIST.vdpau}lib/vdpau/libvdpau_radeonsi.so.1.0.0
 share/examples/mesa/00-mesa-defaults.conf
