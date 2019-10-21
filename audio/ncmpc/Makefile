@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2019/10/07 09:28:09 prlw1 Exp $
+# $NetBSD: Makefile,v 1.35 2019/10/21 21:19:35 adam Exp $
 
 DISTNAME=	ncmpc-0.35
 CATEGORIES=	audio
@@ -14,7 +14,7 @@ USE_TOOLS+=	pkg-config xgettext
 USE_LANGUAGES=	c c++14
 FAKE_NCURSES=	yes
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+PYTHON_VERSIONED_DEPENDENCIES=	sphinx:tool
 
 MESON_ARGS+=	-Dlirc=disabled
 MESON_ARGS+=	-Dhtml_manual=false
@@ -45,5 +45,6 @@ SUBST_VARS.py+=		PYVERSSUFFIX
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../lang/python/tool.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
