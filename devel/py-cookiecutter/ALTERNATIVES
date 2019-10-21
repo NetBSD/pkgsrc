@@ -1,0 +1,1 @@
+bin/cookiecutter @PREFIX@/bin/cookiecutter-@PYVERSSUFFIX@
