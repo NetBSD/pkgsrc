@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.74 2019/10/18 09:57:07 nia Exp $
+# $NetBSD: options.mk,v 1.75 2019/10/21 12:30:36 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 
@@ -85,7 +85,7 @@ PLIST.glx=		yes
 .  if ${OPSYS} != "Darwin" && ${OPSYS} != "Cygwin"
 MESON_ARGS+=		-Dglx=dri
 .    include "../../multimedia/libvdpau/available.mk"
-.    if ${OPSYS} != "SunOS" && ${VDPAU_AVAILABLE} == "yes"
+.    if ${VDPAU_AVAILABLE} == "yes"
 MESON_ARGS+=		-Dgallium-vdpau=true
 PLIST.vdpau=		yes
 .      include "../../multimedia/libvdpau/buildlink3.mk"
