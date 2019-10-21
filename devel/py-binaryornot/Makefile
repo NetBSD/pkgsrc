@@ -1,22 +1,18 @@
-# $NetBSD: Makefile,v 1.3 2016/08/28 15:48:29 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/10/21 21:50:03 adam Exp $
 
-DISTNAME=			binaryornot-0.4.0
-GITHUB_PROJECT=			binaryornot
-PKGNAME=			${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=			devel python
-MASTER_SITES=			${MASTER_SITE_GITHUB:=audreyr/}
-EXTRACT_SUFX=			.zip
+DISTNAME=	binaryornot-0.4.4
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	devel python
+MASTER_SITES=	${MASTER_SITE_PYPI:=b/binaryornot/}
 
-MAINTAINER=			gde@llew.me
-HOMEPAGE=			https://github.com/audreyr/binaryornot/
-COMMENT=			Guess whether a file is binary or text
-LICENSE=			modified-bsd
+MAINTAINER=	gde@llew.me
+HOMEPAGE=	https://github.com/audreyr/binaryornot
+COMMENT=	Guess whether a file is binary or text
+LICENSE=	modified-bsd
 
-USE_LANGUAGES=			#none
+DEPENDS+=	${PYPKGPREFIX}-chardet>=3.0.2:../../converters/py-chardet
 
-DEPENDS+=			${PYPKGPREFIX}-chardet>=2.0.0:../../converters/py-chardet
-
-WRKSRC= ${WRKDIR}/${DISTNAME}
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
