@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/10/21 22:11:33 adam Exp $
+# $NetBSD: Makefile,v 1.24 2019/10/21 22:15:10 adam Exp $
 
 DISTNAME=	xmlada-${XMLADA_VERS}
 PKGREVISION=	5
@@ -37,7 +37,7 @@ SUBST_MESSAGE.docs=	Set build xmlada documentation option
 SUBST_FILES.docs=	Makefile.in
 SUBST_SED.docs=		-e 's/^all: \(.*\)/all: \1 docs/g'
 
-MAKE_ENV+=	SPHINXBUILD=${PREFIX}/bin/sphinx-build${PYVERSSUFFIX}
+MAKE_ENV+=	SPHINXBUILD=${PREFIX}/bin/sphinx-build-${PYVERSSUFFIX}
 
 DESTSTATIC=	${DESTDIR}${PREFIX}/lib/xmlada/static
 DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx1
