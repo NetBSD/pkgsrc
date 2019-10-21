@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.170 2019/10/19 13:42:34 nia Exp $
+# $NetBSD: Makefile,v 1.171 2019/10/21 12:07:32 jperkin Exp $
 
 DISTNAME=	mesa-19.2.1
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -50,17 +50,12 @@ PLIST_VARS+=		egl gbm vaapi xatracker
 BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.81
 .include "../../x11/libdrm/buildlink3.mk"
 MESA_PLATFORMS+=	drm
-.  if ${OPSYS} != "SunOS"
 MESON_ARGS+=		-Degl=true
 MESON_ARGS+=		-Dgbm=true
 MESON_ARGS+=		-Dgallium-xa=true
 PLIST.egl=		yes
 PLIST.gbm=		yes
 PLIST.xatracker=	yes
-.  else
-MESON_ARGS+=		-Degl=false
-MESON_ARGS+=		-Dgbm=false
-.  endif
 .  include "../../multimedia/libva/available.mk"
 .  if ${VAAPI_AVAILABLE} == "yes"
 MESON_ARGS+=		-Dgallium-va=true
