@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.13 2019/10/09 23:52:10 maya Exp $
+$NetBSD: distinfo,v 1.14 2019/10/21 09:38:08 maya Exp $
 
 SHA1 (freeglut-3.2.1.tar.gz) = 7a62e0d2caad92ff745bc5037592b2753f0b2f20
 RMD160 (freeglut-3.2.1.tar.gz) = c9b9d76f61ff56b153367817cfbc1fb5c0816c54
 SHA512 (freeglut-3.2.1.tar.gz) = aced4bbcd36269ce6f4ee1982e0f9e3fffbf18c94f785d3215ac9f4809b992e166c7ada496ed6174e13d77c0f7ef3ca4c57d8a282e96cbbe6ff086339ade3b08
 Size (freeglut-3.2.1.tar.gz) = 440228 bytes
 SHA1 (patch-src_wayland_fg__internal__wl.h) = c1bc21cf6fa7fcb37395db172a805e60071cbbd6
+SHA1 (patch-src_x11_fg__internal__x11.h) = 3a7cfc4b274f5c8d6da2c3ce109877ffac6c0bfa
