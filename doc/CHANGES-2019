@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4460 2019/10/21 09:42:26 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4461 2019/10/21 09:59:59 micha Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7170,3 +7170,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/nostromo to 1.9.6nb2 [ast 2019-10-20]
 	Updated lang/python27 to 2.7.17 [adam 2019-10-21]
 	Updated devel/libuv to 1.33.1 [adam 2019-10-21]
+	Updated games/freedoom to 0.12.0 [micha 2019-10-21]
