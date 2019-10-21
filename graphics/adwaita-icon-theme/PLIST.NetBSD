@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.NetBSD,v 1.1 2019/10/21 09:11:23 nia Exp $
+share/icons/Adwaita/256x256/places/start-here.png
+share/icons/Adwaita/96x96/places/start-here.png
