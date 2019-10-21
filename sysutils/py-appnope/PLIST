@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2019/10/21 19:15:52 adam Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/appnope/__init__.py
+${PYSITELIB}/appnope/__init__.pyc
+${PYSITELIB}/appnope/__init__.pyo
+${PYSITELIB}/appnope/_dummy.py
+${PYSITELIB}/appnope/_dummy.pyc
+${PYSITELIB}/appnope/_dummy.pyo
+${PYSITELIB}/appnope/_nope.py
+${PYSITELIB}/appnope/_nope.pyc
+${PYSITELIB}/appnope/_nope.pyo
