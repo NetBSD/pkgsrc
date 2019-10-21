@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/10/11 16:28:39 adam Exp $
+# $NetBSD: Makefile,v 1.3 2019/10/21 22:01:05 adam Exp $
 
 DISTNAME=	Pallets-Sphinx-Themes-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -10,9 +10,10 @@ HOMEPAGE=	https://github.com/pallets/pallets-sphinx-themes
 COMMENT=	Sphinx themes for Pallets and related projects
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+PYTHON_VERSIONED_DEPENDENCIES=	sphinx
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
