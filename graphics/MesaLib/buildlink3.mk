@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.63 2019/09/04 10:56:50 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.64 2019/10/21 12:30:36 nia Exp $
 
 BUILDLINK_TREE+=	MesaLib
 
@@ -21,7 +21,7 @@ pkgbase:= MesaLib
 .if ${X11_TYPE} == "modular"
 MESALIB_SUPPORTS_OSMESA=	yes
 MESALIB_SUPPORTS_GLESv2=	yes
-.  if ${OPSYS} != "Darwin" && ${OPSYS} != "Cygwin" && ${OPSYS} != "SunOS"
+.  if ${OPSYS} != "Darwin" && ${OPSYS} != "Cygwin"
 MESALIB_SUPPORTS_EGL=		yes
 .  else
 MESALIB_SUPPORTS_EGL=		no
