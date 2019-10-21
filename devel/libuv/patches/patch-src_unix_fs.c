@@ -1,29 +1,11 @@
-$NetBSD: patch-src_unix_fs.c,v 1.3 2019/08/22 10:28:25 wiz Exp $
+$NetBSD: patch-src_unix_fs.c,v 1.4 2019/10/21 09:42:06 adam Exp $
 
-* Fix portability on NetBSD.
+Fix portability on NetBSD.
 https://github.com/libuv/libuv/pull/2436
 
---- src/unix/fs.c.orig	2019-08-09 14:57:12.000000000 +0000
+--- src/unix/fs.c.orig	2019-10-19 21:32:27.000000000 +0000
 +++ src/unix/fs.c
-@@ -537,7 +537,7 @@ static int uv__fs_closedir(uv_fs_t* req)
- 
- static int uv__fs_statfs(uv_fs_t* req) {
-   uv_statfs_t* stat_fs;
--#if defined(__sun) || defined(__MVS__)
-+#if defined(__sun) || defined(__MVS__) || defined(__NetBSD__)
-   struct statvfs buf;
- 
-   if (0 != statvfs(req->path, &buf))
-@@ -554,7 +554,7 @@ static int uv__fs_statfs(uv_fs_t* req) {
-     return -1;
-   }
- 
--#if defined(__sun) || defined(__MVS__)
-+#if defined(__sun) || defined(__MVS__) || defined(__NetBSD__)
-   stat_fs->f_type = 0;  /* f_type is not supported. */
- #else
-   stat_fs->f_type = buf.f_type;
-@@ -1147,7 +1147,7 @@ static void uv__to_stat(struct stat* src
+@@ -1138,7 +1138,7 @@ static void uv__to_stat(struct stat* src
    dst->st_blksize = src->st_blksize;
    dst->st_blocks = src->st_blocks;
  
@@ -32,7 +14,7 @@ https://github.com/libuv/libuv/pull/2436
    dst->st_atim.tv_sec = src->st_atimespec.tv_sec;
    dst->st_atim.tv_nsec = src->st_atimespec.tv_nsec;
    dst->st_mtim.tv_sec = src->st_mtimespec.tv_sec;
-@@ -1173,7 +1173,6 @@ static void uv__to_stat(struct stat* src
+@@ -1164,7 +1164,6 @@ static void uv__to_stat(struct stat* src
      defined(__DragonFly__)   || \
      defined(__FreeBSD__)     || \
      defined(__OpenBSD__)     || \
@@ -40,7 +22,7 @@ https://github.com/libuv/libuv/pull/2436
      defined(_GNU_SOURCE)     || \
      defined(_BSD_SOURCE)     || \
      defined(_SVID_SOURCE)    || \
-@@ -1185,8 +1184,7 @@ static void uv__to_stat(struct stat* src
+@@ -1176,8 +1175,7 @@ static void uv__to_stat(struct stat* src
    dst->st_mtim.tv_nsec = src->st_mtim.tv_nsec;
    dst->st_ctim.tv_sec = src->st_ctim.tv_sec;
    dst->st_ctim.tv_nsec = src->st_ctim.tv_nsec;
