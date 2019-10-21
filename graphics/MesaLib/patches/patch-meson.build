@@ -1,0 +1,15 @@
+$NetBSD: patch-meson.build,v 1.3 2019/10/21 12:07:32 jperkin Exp $
+
+Fix DRM build on SunOS.
+
+--- meson.build.orig	2019-10-09 16:51:59.000000000 +0000
++++ meson.build
+@@ -117,7 +117,7 @@ with_any_opengl = with_opengl or with_gl
+ # Only build shared_glapi if at least one OpenGL API is enabled
+ with_shared_glapi = get_option('shared-glapi') and with_any_opengl
+ 
+-system_has_kms_drm = ['openbsd', 'netbsd', 'freebsd', 'gnu/kfreebsd', 'dragonfly', 'linux'].contains(host_machine.system())
++system_has_kms_drm = ['openbsd', 'netbsd', 'freebsd', 'gnu/kfreebsd', 'dragonfly', 'linux', 'sunos'].contains(host_machine.system())
+ 
+ dri_drivers = get_option('dri-drivers')
+ if dri_drivers.contains('auto')
