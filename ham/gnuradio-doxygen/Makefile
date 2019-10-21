@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/08/22 12:23:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.28 2019/10/21 14:01:18 mef Exp $
 
 PKGNAME=	gnuradio-doxygen-${VERSION}
 PKGREVISION=	2
@@ -19,7 +19,5 @@ DEPENDS+=	tex-newunicodechar-[-0-9]*:../../print/tex-newunicodechar
 CMAKE_ARGS+=	-DENABLE_DEFAULT=False
 CMAKE_ARGS+=	-DENABLE_DOXYGEN=ON
 CMAKE_ARGS+=	-DENABLE_SPHINX=ON
-
-MAKE_JOBS_SAFE=	no
 
 .include	"../../mk/bsd.pkg.mk"
