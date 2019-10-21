@@ -1,10 +1,12 @@
-# $NetBSD: options.mk,v 1.75 2019/10/21 12:30:36 nia Exp $
+# $NetBSD: options.mk,v 1.76 2019/10/21 20:47:55 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 
+.include "features.mk"
+
 PKG_SUPPORTED_OPTIONS+=		llvm vulkan x11
 
-.if ${OPSYS} != "Darwin" && ${OPSYS} != "Cygwin"
+.if ${MESALIB_SUPPORTS_DRI} == "yes"
 PKG_SUPPORTED_OPTIONS+=		wayland
 .endif
 
@@ -15,9 +17,8 @@ PKG_SUGGESTED_OPTIONS+=		x11
 #
 # Enable it by default on platforms where such GPUs might be encountered or
 # LLVM-accelerated software rendering might be useful.
-.if ${OPSYS} != "SunOS" && \
-    ${OPSYS} != "Darwin" && \
-    ${OPSYS} != "Cygwin" && \
+.if ${MESALIB_SUPPORTS_DRI} == "yes" && \
+    ${OPSYS} != "SunOS" && \
       (${MACHINE_ARCH} == "i386" || \
        ${MACHINE_ARCH} == "x86_64" || \
        ${MACHINE_ARCH} == "aarch64")
@@ -82,7 +83,7 @@ PLIST.wayland=		yes
 .if !empty(PKG_OPTIONS:Mx11)
 MESA_PLATFORMS+=	x11
 PLIST.glx=		yes
-.  if ${OPSYS} != "Darwin" && ${OPSYS} != "Cygwin"
+.  if ${MESALIB_SUPPORTS_DRI} == "yes"
 MESON_ARGS+=		-Dglx=dri
 .    include "../../multimedia/libvdpau/available.mk"
 .    if ${VDPAU_AVAILABLE} == "yes"
