@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/07/21 21:11:37 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/10/21 22:15:11 adam Exp $
 
 DISTNAME=		khard-0.14.0
 PKGREVISION=		1
@@ -27,7 +27,7 @@ REPLACE_PYTHON+=	*/*.py
 USE_TOOLS+=		gmake
 
 pre-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} -C doc SPHINXBUILD=sphinx-build${PYVERSSUFFIX} man
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} -C doc SPHINXBUILD=sphinx-build-${PYVERSSUFFIX} man
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/misc/khard/khard.conf.example ${DESTDIR}${PREFIX}/share/examples/khard
