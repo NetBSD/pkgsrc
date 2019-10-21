@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.9 2018/06/25 13:39:14 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/10/21 23:47:07 mef Exp $
 info/emacs-w3m-ja.info
 info/emacs-w3m.info
+${NOTFOR_emacs21}${EMACS_LISPPREFIX}/w3m/.dir-locals.el
 ${EMACS_LISPPREFIX}/w3m/ChangeLog
 ${EMACS_LISPPREFIX}/w3m/ChangeLog.1
 ${FOR_emacs21}${EMACS_LISPPREFIX}/w3m/bookmark-w3m.el
@@ -289,8 +290,8 @@ ${EMACS_LISPPREFIX}/w3m/w3m-bookmark.el.gz
 ${EMACS_LISPPREFIX}/w3m/w3m-bookmark.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-bug.el.gz
 ${EMACS_LISPPREFIX}/w3m/w3m-bug.elc
-${EMACS_LISPPREFIX}/w3m/w3m-ccl.el.gz
-${EMACS_LISPPREFIX}/w3m/w3m-ccl.elc
+${FOR_emacs21}${EMACS_LISPPREFIX}/w3m/w3m-ccl.el.gz
+${FOR_emacs21}${EMACS_LISPPREFIX}/w3m/w3m-ccl.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-cookie.el.gz
 ${EMACS_LISPPREFIX}/w3m/w3m-cookie.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-dtree.el.gz
@@ -331,7 +332,6 @@ ${EMACS_LISPPREFIX}/w3m/w3m-symbol.el.gz
 ${EMACS_LISPPREFIX}/w3m/w3m-symbol.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-tabmenu.el.gz
 ${EMACS_LISPPREFIX}/w3m/w3m-tabmenu.elc
-${NOTFOR_emacs21}${EMACS_LISPPREFIX}/w3m/w3m-ucs.el
 ${FOR_emacs21}${EMACS_LISPPREFIX}/w3m/w3m-ucs.el.gz
 ${FOR_emacs21}${EMACS_LISPPREFIX}/w3m/w3m-ucs.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-util.el.gz
