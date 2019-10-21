@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.196 2019/10/07 09:28:09 prlw1 Exp $
+# $NetBSD: Makefile,v 1.197 2019/10/21 21:19:35 adam Exp $
 
 DISTNAME=		mpd-0.21.15
 PKGNAME=		${DISTNAME:S/mpd/musicpd/}
@@ -11,7 +11,7 @@ HOMEPAGE=		https://www.musicpd.org/
 COMMENT=		Remote controllable audio player
 LICENSE=		gnu-gpl-v2
 
-TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+PYTHON_VERSIONED_DEPENDENCIES=	sphinx:tool
 
 CONFLICTS=		mpd-[0-9]*
 
@@ -77,6 +77,7 @@ BUILDLINK_ABI_DEPENDS.flac+=	flac>=1.2
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
