@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4464 2019/10/21 11:18:36 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4465 2019/10/21 11:34:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7175,3 +7175,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/py27-html-docs to 2.7.17 [leot 2019-10-21]
 	Updated security/py-cryptography_vectors to 2.8 [adam 2019-10-21]
 	Updated security/py-cryptography to 2.8 [adam 2019-10-21]
+	Updated databases/py-psycopg2 to 2.8.4 [adam 2019-10-21]
+	Updated www/py-django-extensions to 2.2.5 [adam 2019-10-21]
