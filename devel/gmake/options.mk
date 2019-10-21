@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2019/10/20 16:29:42 triaxx Exp $
+# $NetBSD: options.mk,v 1.5 2019/10/21 06:33:11 triaxx Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gmake
 PKG_SUPPORTED_OPTIONS=	nls
@@ -12,7 +12,7 @@ PLIST_VARS+=		nls
     !empty(IS_BUILTIN.gettext:M[yY][eE][sS])
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt
-PREFER.gettext=		native
+USE_BUILTIN.gettext=	yes
 .  include "../../devel/gettext-lib/buildlink3.mk"
 PLIST.nls=		yes
 .else
