@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.64 2019/10/21 12:30:36 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.65 2019/10/21 20:47:55 nia Exp $
 
 BUILDLINK_TREE+=	MesaLib
 
@@ -9,7 +9,7 @@ BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=3.4.2
 BUILDLINK_ABI_DEPENDS.MesaLib+=	MesaLib>=7.11.2
 BUILDLINK_PKGSRCDIR.MesaLib?=	../../graphics/MesaLib
 
-.include "../../mk/bsd.fast.prefs.mk"
+.include "../../graphics/MesaLib/features.mk"
 
 # See <http://developer.apple.com/qa/qa2007/qa1567.html>.
 .if ${X11_TYPE} == "native" && !empty(MACHINE_PLATFORM:MDarwin-[9].*-*)
@@ -17,32 +17,6 @@ BUILDLINK_LDFLAGS.MesaLib+=	-Wl,-dylib_file,/System/Library/Frameworks/OpenGL.fr
 .endif
 
 pkgbase:= MesaLib
-
-.if ${X11_TYPE} == "modular"
-MESALIB_SUPPORTS_OSMESA=	yes
-MESALIB_SUPPORTS_GLESv2=	yes
-.  if ${OPSYS} != "Darwin" && ${OPSYS} != "Cygwin"
-MESALIB_SUPPORTS_EGL=		yes
-.  else
-MESALIB_SUPPORTS_EGL=		no
-.  endif
-.else
-.  if exists(${X11BASE}/include/EGL/egl.h)
-MESALIB_SUPPORTS_EGL=		yes
-.  else
-MESALIB_SUPPORTS_EGL=		no
-.  endif
-.  if exists(${X11BASE}/lib/libOSMesa.so)
-MESALIB_SUPPORTS_OSMESA=	yes
-.  else
-MESALIB_SUPPORTS_OSMESA=	no
-.  endif
-.  if exists(${X11BASE}/include/GLES2/gl2.h)
-MESALIB_SUPPORTS_GLESv2=	yes
-.  else
-MESALIB_SUPPORTS_GLESv2=	no
-.  endif
-.endif
 
 .include "../../mk/pkg-build-options.mk"
 
@@ -63,7 +37,7 @@ MESALIB_SUPPORTS_GLESv2=	no
 .  include "../../x11/xorgproto/buildlink3.mk"
 .endif
 
-.if ${OPSYS} != "Darwin" && ${OPSYS} != "Cygwin"
+.if ${MESALIB_SUPPORTS_DRI} == "yes"
 .  include "../../x11/libdrm/buildlink3.mk"
 .endif
 
