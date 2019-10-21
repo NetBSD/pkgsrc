@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2019/09/02 13:19:37 adam Exp $
+# $NetBSD: options.mk,v 1.16 2019/10/21 21:45:40 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-trytond
 PKG_SUPPORTED_OPTIONS=	cdecimal mysql pydot psycopg pytz simplejson sphinx
@@ -36,5 +36,6 @@ DEPENDS+=		${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson
 .endif
 
 .if !empty(PKG_OPTIONS:Msphinx)
-DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+PYTHON_VERSIONED_DEPENDENCIES=	sphinx
+.include "../../lang/python/versioned_dependencies.mk"
 .endif
