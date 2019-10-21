@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.33 2018/09/05 08:22:46 adam Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.34 2019/10/21 21:08:56 adam Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -9,7 +9,7 @@
 # PYTHON_VERSIONED_DEPENDENCIES
 #       The Python package which should be added as a dependency.
 #
-#       Possible values: Pmw X cherrypy dialog ipython jsonlib python-digest
+#       Possible values: Pmw X cherrypy dialog ipython jsonlib python-digest sphinx
 #       Default: (nothing)
 #
 
@@ -23,6 +23,7 @@ _SUPPORTED_PACKAGES+=	dialog devel/py-dialog2 devel/py-dialog
 _SUPPORTED_PACKAGES+=	ipython devel/py-ipython5 devel/py-ipython
 _SUPPORTED_PACKAGES+=	jsonlib textproc/py-jsonlib textproc/py-jsonlib3
 _SUPPORTED_PACKAGES+=	python-digest www/py-python-digest www/py-python3-digest
+_SUPPORTED_PACKAGES+=	sphinx textproc/py-sphinx1 textproc/py-sphinx
 
 .for pattern in ${PYTHON_VERSIONED_DEPENDENCIES}
 _PKG_MATCHED=	no
@@ -42,6 +43,8 @@ dir:=	${py3dir}
 BUILD_DEPENDS:=	${BUILD_DEPENDS} ${PYPKGPREFIX}-${pkg}-[0-9]*:../../${dir}
 .      elif "${type}" == ":test"
 TEST_DEPENDS:=	${TEST_DEPENDS} ${PYPKGPREFIX}-${pkg}-[0-9]*:../../${dir}
+.      elif "${type}" == ":tool"
+TOOL_DEPENDS:=	${TOOL_DEPENDS} ${PYPKGPREFIX}-${pkg}-[0-9]*:../../${dir}
 .      else
 DEPENDS:=	${DEPENDS} ${PYPKGPREFIX}-${pkg}-[0-9]*:../../${dir}
 .      endif
