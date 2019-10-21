@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2019/05/31 17:28:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2019/10/21 11:17:47 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -20,6 +20,9 @@ ${PYSITELIB}/cryptography/fernet.pyo
 ${PYSITELIB}/cryptography/hazmat/__init__.py
 ${PYSITELIB}/cryptography/hazmat/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/__init__.pyo
+${PYSITELIB}/cryptography/hazmat/_der.py
+${PYSITELIB}/cryptography/hazmat/_der.pyc
+${PYSITELIB}/cryptography/hazmat/_der.pyo
 ${PYSITELIB}/cryptography/hazmat/_oid.py
 ${PYSITELIB}/cryptography/hazmat/_oid.pyc
 ${PYSITELIB}/cryptography/hazmat/_oid.pyo

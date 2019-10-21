@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2019/05/31 17:28:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2019/10/21 11:17:47 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -32,6 +32,8 @@ ${PYSITELIB}/cryptography_vectors/asymmetric/DER_Serialization/dsa.1024.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/DER_Serialization/dsa.2048.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/DER_Serialization/dsa.3072.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/DER_Serialization/dsa_public_key.der
+${PYSITELIB}/cryptography_vectors/asymmetric/DER_Serialization/dsa_public_key_invalid_bit_string.der
+${PYSITELIB}/cryptography_vectors/asymmetric/DER_Serialization/dsa_public_key_no_params.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/DER_Serialization/ec_private_key.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/DER_Serialization/ec_private_key_encrypted.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/DER_Serialization/ec_public_key.der
@@ -2206,6 +2208,11 @@ ${PYSITELIB}/cryptography_vectors/x509/custom/valid_signature.pem
 ${PYSITELIB}/cryptography_vectors/x509/department-of-state-root.pem
 ${PYSITELIB}/cryptography_vectors/x509/e-trust.ru.der
 ${PYSITELIB}/cryptography_vectors/x509/ecdsa_root.pem
+${PYSITELIB}/cryptography_vectors/x509/ed25519/ed25519-rfc8410.pem
+${PYSITELIB}/cryptography_vectors/x509/ed25519/root-ed25519.pem
+${PYSITELIB}/cryptography_vectors/x509/ed25519/server-ed25519-cert.pem
+${PYSITELIB}/cryptography_vectors/x509/ed448/root-ed448.pem
+${PYSITELIB}/cryptography_vectors/x509/ed448/server-ed448-cert.pem
 ${PYSITELIB}/cryptography_vectors/x509/letsencryptx3.pem
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/req-ext-nonce.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/req-invalid-hash-alg.der
@@ -2221,6 +2228,7 @@ ${PYSITELIB}/cryptography_vectors/x509/ocsp/resp-sha256.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/resp-unauthorized.der
 ${PYSITELIB}/cryptography_vectors/x509/rapidssl_sha256_ca_g3.pem
 ${PYSITELIB}/cryptography_vectors/x509/requests/basic_constraints.pem
+${PYSITELIB}/cryptography_vectors/x509/requests/challenge.pem
 ${PYSITELIB}/cryptography_vectors/x509/requests/dsa_sha1.der
 ${PYSITELIB}/cryptography_vectors/x509/requests/dsa_sha1.pem
 ${PYSITELIB}/cryptography_vectors/x509/requests/ec_sha256.der
