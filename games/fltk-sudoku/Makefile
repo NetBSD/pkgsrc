@@ -1,61 +1,49 @@
-# $NetBSD: Makefile,v 1.16 2017/08/01 17:40:11 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/10/21 10:04:12 micha Exp $
 
-DISTNAME=	fltk-1.1.7-source
-PKGNAME=	fltk-sudoku-1.1.7
-PKGREVISION=	8
-VERS=		${DISTNAME:S/fltk-//:S/-source//}
-CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fltk/}
-MASTER_SITES+=	ftp://ftp2.easysw.com/pub/fltk/${VERS}/
-MASTER_SITES+=	ftp://ftp3.easysw.com/pub/fltk/${VERS}/
-MASTER_SITES+=	http://ftp.easysw.com/pub/fltk/${VERS}/
-MASTER_SITES+=	http://mirror.nu6.org/ftp.easysw.com/pub/fltk/${VERS}/
-MASTER_SITES+=	ftp://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/fltk/${VERS}/
-MASTER_SITES+=	ftp://ftp.rz.tu-bs.de/pub/mirror/ftp.easysw.com/ftp/pub/fltk/${VERS}/
+DISTNAME=	fltk-1.3.5-source
+PKGNAME=	${DISTNAME:S/fltk-/fltk-sudoku-/:S/-source//}
+VERS=		{DISTNAME:S/fltk-//:S/-source//}
+CATEGORIES=	games x11
+MASTER_SITES=	https://fltk.org/pub/fltk/${VERS}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://www.easysw.com/~mike/sudoku/index.html
+# This is one of the example programs shipped with the FLTK library
+HOMEPAGE=	https://www.fltk.org/
 COMMENT=	FLTK example Sudoku game creator and solver
+LICENSE=	gnu-lgpl-v2
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-source//}
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
-USE_LIBTOOL=		yes
+
+.include "../../mk/bsd.prefs.mk"
 
 PTHREAD_OPTS+=		require
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-libtool=${LIBTOOL:Q}
 CONFIGURE_ARGS+=	--enable-threads
+CONFIGURE_ARGS+=	ac_cv_have_overlay=yes
 
-SUBST_CLASSES+=		config
-SUBST_STAGE.config=	post-configure
-SUBST_MESSAGE.config=	Adjusting paths to fltk libraries in configure result
-SUBST_FILES.config=	makeinclude fltk-config
-SUBST_SED.config=	-e "s|../lib/|${PREFIX}/lib/|g"
-
-SUBST_CLASSES+=		config2
-SUBST_STAGE.config2=	post-configure
-SUBST_MESSAGE.config2=	Adjusting paths to fltk libraries in Sudoku's Makefile
-SUBST_FILES.config2=	test/Makefile
-SUBST_SED.config2=	-e "s|../lib/||g"
-
-BUILD_DIRS=		test
-BUILD_TARGET=		sudoku
+CONFIGURE_ARGS+=	--disable-shared
+# Use pkgsrc versions, not package's bundled versions.
+CONFIGURE_ARGS+=	--disable-localjpeg --disable-localzlib --disable-localpng
 
 INSTALLATION_DIRS=	bin
 
-SETGIDGAME=		yes
+USE_GAMESGROUP=		yes
 SPECIAL_PERMS=		bin/fltk-sudoku ${SETGID_GAMES_PERMS}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/test/sudoku ${DESTDIR}${PREFIX}/bin/fltk-sudoku
 
+.if ${OPSYS} != "Darwin"
+.  include "../../x11/libXext/buildlink3.mk"
+.  include "../../x11/libXft/buildlink3.mk"
+.  include "../../x11/libXinerama/buildlink3.mk"
 BUILDLINK_DEPMETHOD.libXt?=	build
-
+.  include "../../x11/libXt/buildlink3.mk"
+.endif
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../x11/fltk/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
