@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2019/10/21 21:42:22 adam Exp $
+# $NetBSD: Makefile,v 1.57 2019/10/21 22:15:11 adam Exp $
 
 DISTNAME=		tortoisehg-5.0.2
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -27,7 +27,7 @@ SUBST_FILES.df=		contrib/thg.desktop
 SUBST_SED.df=		-e 's:thg_logo:${PREFIX}${thg_icon}:1'
 
 pre-build:
-	${RUN} cd ${WRKSRC}/doc && ${MAKE_PROGRAM} SPHINXBUILD=sphinx-build${PYVERSSUFFIX} html
+	${RUN} cd ${WRKSRC}/doc && ${MAKE_PROGRAM} SPHINXBUILD=sphinx-build-${PYVERSSUFFIX} html
 	${RUN} rm ${WRKSRC}/doc/build/html/.buildinfo
 	# conflicts with mercurial
 	# https://bitbucket.org/tortoisehg/thg/issues/4629/tortoisehg-file-name-conflict-with
