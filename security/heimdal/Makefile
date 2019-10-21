@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.132 2019/04/03 00:33:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.133 2019/10/21 16:21:44 wiz Exp $
 
 DISTNAME=	heimdal-1.5.3
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	security
 MASTER_SITES=	http://www.h5l.org/dist/src/
 
@@ -34,7 +34,9 @@ CONFIGURE_ARGS+=	--enable-pthread-support
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/krb5
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-hdbdir=${HEIMDAL_HDB_DIR}
-CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
+# not compatible to openssl 1.1
+# TODO: re-enable when updating from 1.5.3, also in buildlink3.mk
+CONFIGURE_ARGS+=	--without-openssl
 CONFIGURE_ARGS+=	--with-sqlite3=${BUILDLINK_PREFIX.sqlite3}
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	${ABI:D--with-mips-abi=${ABI}}
@@ -97,15 +99,7 @@ pre-build:
 	${TOUCH} ${WRKSRC}/po/localefiles
 
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
-CHECK_BUILTIN.openssl:=	yes
-.include "../../security/openssl/builtin.mk"
-CHECK_BUILTIN.openssl:=no
-.if ${MACHINE_PLATFORM:MNetBSD-[1-3]*} != "" || \
-    (${OPSYS} == "SunOS" && !empty(USE_BUILTIN.openssl:Myes) &&	\
-		!empty(BUILTIN_LIB_FOUND.crypto:M[Nn][Oo]))
 PLIST.hcrypto=		yes
-.endif
 
 # Linux does not have include/vis.h and expected include/glob.h.
 .if ${OPSYS} == "Linux"
@@ -113,16 +107,9 @@ PLIST.vis=	yes
 PLIST.glob=	yes
 # Without this I get undefined references to pthread_getspecific
 PTHREAD_AUTO_VARS=	yes
-.if !empty(USE_BUILTIN.openssl:Myes) && \
-	empty(BUILTIN_VERSION.openssl:M1.0*)
-PLIST.hcrypto=		yes
-.endif
 .endif
 
 .if ${OPSYS} == "MirBSD"
-.if !empty(USE_BUILTIN.openssl:Myes)
-PLIST.hcrypto=		yes
-.endif
 PLIST.vis=		yes
 # all of the tools need to link against pthread, force it.
 PTHREAD_AUTO_VARS=	yes
