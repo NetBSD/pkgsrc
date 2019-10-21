@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/09/03 08:53:17 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/10/21 22:11:34 adam Exp $
 
 DISTNAME=		pelican-3.7.1
 PKGREVISION=		1
@@ -23,7 +23,9 @@ DEPENDS+=		${PYPKGPREFIX}-blinker-[0-9]*:../../devel/py-blinker
 DEPENDS+=		${PYPKGPREFIX}-Unidecode-[0-9]*:../../textproc/py-Unidecode
 DEPENDS+=		${PYPKGPREFIX}-six>=1.4:../../lang/py-six
 DEPENDS+=		${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
-BUILD_DEPENDS+=		${PYPKGPREFIX}-sphinx>=1.2.3nb1:../../textproc/py-sphinx
+
+PYTHON_VERSIONED_DEPENDENCIES=	sphinx:build
+
 USE_TOOLS+=		bash:run make:build sed:build
 
 REPLACE_PYTHON+=	pelican/tools/pelican_import.py
@@ -56,7 +58,7 @@ TXTDOCFILES=		changelog.txt content.txt contribute.txt faq.txt \
 AUTO_MKDIRS=		yes
 
 post-build:
-	cd ${WRKSRC}/docs/ && make SPHINXBUILD=${PREFIX}/bin/sphinx-build${PYVERSSUFFIX} text man
+	cd ${WRKSRC}/docs/ && make SPHINXBUILD=${PREFIX}/bin/sphinx-build-${PYVERSSUFFIX} text man
 
 post-install:
 .for f in ${MANPAGES}
@@ -68,4 +70,5 @@ post-install:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
