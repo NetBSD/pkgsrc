@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2928 2019/10/16 21:30:59 wiz Exp $
+# $NetBSD: Makefile,v 1.2929 2019/10/21 19:22:52 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2267,7 +2267,6 @@ SUBDIR+=	py-pydispatcher
 SUBDIR+=	py-pyelftools
 SUBDIR+=	py-pygit2
 SUBDIR+=	py-pylint
-SUBDIR+=	py-pylint-common
 SUBDIR+=	py-pylint-plugin-utils
 SUBDIR+=	py-pyobjc
 SUBDIR+=	py-pyobjc-core
