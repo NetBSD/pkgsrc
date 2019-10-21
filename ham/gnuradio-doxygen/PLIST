@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2019/07/11 14:26:09 mef Exp $
+@comment $NetBSD: PLIST,v 1.20 2019/10/21 14:01:18 mef Exp $
 share/doc/gnuradio-${PKGVERSION}/dial_tone.py
 share/doc/gnuradio-${PKGVERSION}/fm_demod.py
 share/doc/gnuradio-${PKGVERSION}/fm_rx.grc
@@ -10765,7 +10765,7 @@ share/doc/gnuradio-${PKGVERSION}/xml/mute__cc_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/mute__ff_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/mute__ii_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/mute__ss_8h.xml
-share/doc/gnuradio-${PKGVERSION}/xml/namespace_0D237.xml
+share/doc/gnuradio-${PKGVERSION}/xml/namespace_0d237.xml
 share/doc/gnuradio-${PKGVERSION}/xml/namespaceapache.xml
 share/doc/gnuradio-${PKGVERSION}/xml/namespaceapache_1_1thrift.xml
 share/doc/gnuradio-${PKGVERSION}/xml/namespaceapache_1_1thrift_1_1server.xml
