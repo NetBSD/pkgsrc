@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2019/10/07 09:28:13 prlw1 Exp $
+# $NetBSD: Makefile,v 1.11 2019/10/21 15:56:53 pho Exp $
 
 DISTNAME=	compton-7.3
+PKGREVISION=	1
 CATEGORIES=	x11 wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yshui/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,10 +15,11 @@ BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
 REPLACE_PYTHON=	bin/compton-convgen.py
 EXTRACT_USING=	bsdtar
-USE_TOOLS+=	gmake pkg-config
-BUILD_TARGET=	compton docs
-MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}/man1
-MAKE_FLAGS+=	COMPTON_VERSION=${PKGVERSION}
+USE_TOOLS+=	pkg-config
+MESON_ARGS+=	-Dbuild_docs=true
+
+# Needs a patch to meson_options.txt and meson.build. Probably not worth it.
+#MAKE_FLAGS+=	COMPTON_VERSION=${PKGVERSION}
 
 # compton uses __auto_type which is only available as of GCC 4.9.
 GCC_REQD+=	4.9
