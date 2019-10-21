@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4471 2019/10/21 23:09:20 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.4472 2019/10/21 23:49:07 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7191,3 +7191,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added textproc/py-sphinx1 version 1.8.5nb3 [adam 2019-10-21]
 	Updated devel/py-binaryornot to 0.4.4 [adam 2019-10-21]
 	Updated multimedia/mate-media to 1.22.2 [gutteridge 2019-10-21]
+	Updated www/emacs-w3m-snapshot to 1.4.632.20190920.1116 [mef 2019-10-21]
