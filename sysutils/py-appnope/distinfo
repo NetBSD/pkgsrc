@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/10/21 19:15:52 adam Exp $
+
+SHA1 (appnope-0.1.0.tar.gz) = 838158bf881f3e8538b7bfeff4ad289a6623cdda
+RMD160 (appnope-0.1.0.tar.gz) = 5356a69e7dff2a16d2cb6054a116640d18704040
+SHA512 (appnope-0.1.0.tar.gz) = 5b1dac73b768ad029834f002ac81b2edb406bf120e46a61da5a3cd720df91fb0c8dcb03d0be941ac12a1bbaff22483126896d5f7865b21f4cb991e44b48b2078
+Size (appnope-0.1.0.tar.gz) = 3779 bytes
