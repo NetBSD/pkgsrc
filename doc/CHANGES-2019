@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4470 2019/10/21 21:51:08 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4471 2019/10/21 23:09:20 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7190,3 +7190,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added textproc/py-sphinxcontrib-qthelp version 1.0.2 [adam 2019-10-21]
 	Added textproc/py-sphinx1 version 1.8.5nb3 [adam 2019-10-21]
 	Updated devel/py-binaryornot to 0.4.4 [adam 2019-10-21]
+	Updated multimedia/mate-media to 1.22.2 [gutteridge 2019-10-21]
