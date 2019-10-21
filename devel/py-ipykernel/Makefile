@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2019/08/21 10:25:56 adam Exp $
+# $NetBSD: Makefile,v 1.13 2019/10/21 19:16:56 adam Exp $
 
-DISTNAME=	ipykernel-5.1.2
+DISTNAME=	ipykernel-5.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipykernel/}
@@ -14,16 +14,22 @@ DEPENDS+=	${PYPKGPREFIX}-ipython>=5.0.0:../../devel/py-ipython
 DEPENDS+=	${PYPKGPREFIX}-jupyter_client-[0-9]*:../../devel/py-jupyter_client
 DEPENDS+=	${PYPKGPREFIX}-tornado>=4.2:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=4.1.0:../../devel/py-traitlets
+TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Darwin"
+DEPENDS+=	${PYPKGPREFIX}-appnope-[0-9]*:../../sysutils/py-appnope
+.endif
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
-	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
+	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
