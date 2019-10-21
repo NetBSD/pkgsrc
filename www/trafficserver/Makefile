@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/10/21 22:11:34 adam Exp $
+# $NetBSD: Makefile,v 1.21 2019/10/21 22:15:10 adam Exp $
 
 DISTNAME=	trafficserver-7.1.2
 PKGREVISION=	9
@@ -88,7 +88,7 @@ CONFIGURE_ARGS+=	--with-user=${TS_USER}
 
 CONFIGURE_ENV.SunOS+=	ac_cv_func_epoll_ctl=no
 CONFIGURE_ENV.SunOS+=	ac_cv_func_inotify_init=no
-CONFIGURE_ENV+=		SPHINXBUILD=sphinx-build${PYVERSSUFFIX}
+CONFIGURE_ENV+=		SPHINXBUILD=sphinx-build-${PYVERSSUFFIX}
 
 REPLACE_BASH+=		tools/tsxs.in
 REPLACE_PERL+=		tools/tspush
