@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/06/14 15:17:17 adam Exp $
+# $NetBSD: Makefile,v 1.7 2019/10/21 22:01:05 adam Exp $
 
 DISTNAME=	numpydoc-0.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,9 +11,11 @@ COMMENT=	Sphinx extension to support docstrings in Numpy format
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.3:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.6.5:../../textproc/py-sphinx
+
+PYTHON_VERSIONED_DEPENDENCIES=	sphinx
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

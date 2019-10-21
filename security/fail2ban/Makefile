@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/04/25 07:33:15 maya Exp $
+# $NetBSD: Makefile,v 1.10 2019/10/21 21:55:03 adam Exp $
 #
 
 DISTNAME=	fail2ban-0.9.6
@@ -14,8 +14,9 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.2.3nb1:../../textproc/py-sphinx
 BUILD_DEPENDS+=	${PYPKGPREFIX}-numpydoc-[0-9]*:../../textproc/py-numpydoc
+
+PYTHON_VERSIONED_DEPENDENCIES=	sphinx:build
 
 USE_TOOLS+=	make:build
 
@@ -121,4 +122,5 @@ post-install:
 .include "options.mk"
 
 .include "../../lang/python/distutils.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
