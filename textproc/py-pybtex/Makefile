@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/12/13 20:45:49 adam Exp $
+# $NetBSD: Makefile,v 1.5 2019/10/22 06:37:36 adam Exp $
 
-DISTNAME=	pybtex-0.22.0
+DISTNAME=	pybtex-0.22.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pybtex/}
@@ -18,9 +18,9 @@ USE_LANGUAGES=	# none
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} pybtex pybtex-${PYVERSSUFFIX} && \
-		${MV} pybtex-convert pybtex-convert-${PYVERSSUFFIX} && \
-		${MV} pybtex-format pybtex-format-${PYVERSSUFFIX} || ${TRUE}
+	${MV} pybtex pybtex-${PYVERSSUFFIX} && \
+	${MV} pybtex-convert pybtex-convert-${PYVERSSUFFIX} && \
+	${MV} pybtex-format pybtex-format-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
