@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.40 2019/09/30 12:35:24 fox Exp $
+$NetBSD: distinfo,v 1.41 2019/10/22 10:04:48 fox Exp $
 
-SHA1 (ft2-clone-v1.00-code.zip) = 7819feaf8afbc70851846165a1a1e009ac176658
-RMD160 (ft2-clone-v1.00-code.zip) = 1c7a670c467ab5032255e13ea0269a09584ce49b
-SHA512 (ft2-clone-v1.00-code.zip) = b387623de44397612fe9527cca2569757d820ed0fcca45d765735e1e07128bc2642f9fa891d6df3e0146b45954267b3268edbe08670f6a58ac3bfc69571a5d12
-Size (ft2-clone-v1.00-code.zip) = 4505566 bytes
+SHA1 (ft2-clone-v1.01-code.zip) = 6f0ae364a631525ce05fc31d53bd005d9539e2ed
+RMD160 (ft2-clone-v1.01-code.zip) = 378d227eb63e4afba32b9645a6d9defe81b2b18e
+SHA512 (ft2-clone-v1.01-code.zip) = ceda6e80bbf67a3ea8c5db75eaae95169b934f2f90062c129b58185c7ce7e294ceec0bc03ab9bc3ae1cf37ec1295472f31b5ff926fa8106e5b087b030f783e00
+Size (ft2-clone-v1.01-code.zip) = 4505573 bytes
 SHA1 (patch-CMakeLists.txt) = b64b4e4b9cd40e97c34d1541937b6c0b7f451093
