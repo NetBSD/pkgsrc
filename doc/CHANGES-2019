@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4482 2019/10/22 07:48:06 taca Exp $
+$NetBSD: CHANGES-2019,v 1.4483 2019/10/22 07:49:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7206,3 +7206,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated archivers/ruby-minitar-cli to 0.8 [taca 2019-10-22]
 	Updated archivers/ruby-archive-tar-minitar to 0.8 [taca 2019-10-22]
 	Updated lang/pear to 1.10.9nb1 [taca 2019-10-22]
+	Updated mail/pear-Mail_Mime to 1.10.4 [taca 2019-10-22]
