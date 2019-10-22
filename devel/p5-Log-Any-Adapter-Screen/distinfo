@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2016/10/12 12:46:25 mef Exp $
+$NetBSD: distinfo,v 1.3 2019/10/22 06:11:51 mef Exp $
 
-SHA1 (Log-Any-Adapter-Screen-0.13.tar.gz) = bec325bb39531bddd7cf7cf199517a3d06fd7503
-RMD160 (Log-Any-Adapter-Screen-0.13.tar.gz) = f73e4032b38e0d1e4fe23f314094690d1f2be44c
-SHA512 (Log-Any-Adapter-Screen-0.13.tar.gz) = 06a39a05ec607db3b56428677e1dfde090eed4ff90d27ae6333e467990e41e26dbdd76279a603f87fd2962753b08fa760027fa0ed984461f07a59375cc39d99d
-Size (Log-Any-Adapter-Screen-0.13.tar.gz) = 16592 bytes
+SHA1 (Log-Any-Adapter-Screen-0.140.tar.gz) = 2e2e465c2ac23fe3047e9302bb935396ff327818
+RMD160 (Log-Any-Adapter-Screen-0.140.tar.gz) = 92044575cb1089cc4f7fa278fb530d708b1766c9
+SHA512 (Log-Any-Adapter-Screen-0.140.tar.gz) = a7ded27bbc548108169e59964783ba6200c3afd798219bcd9daea47c390128db628c30392eb7eaebb93b5e3b59f51c717599518130b3ba31a1765cca3b4c362c
+Size (Log-Any-Adapter-Screen-0.140.tar.gz) = 18580 bytes
