@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4490 2019/10/22 16:24:55 taca Exp $
+$NetBSD: CHANGES-2019,v 1.4491 2019/10/22 16:42:01 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7220,3 +7220,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/dovecot2-sqlite to 2.3.8 [taca 2019-10-22]
 	Updated mail/dovecot2-pigeonhole to 0.5.8 [taca 2019-10-22]
 	Updated www/ruby-loofah to 2.3.1 [taca 2019-10-22]
+	Updated security/pev to 0.80 [khorben 2019-10-22]
