@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4479 2019/10/22 07:29:55 taca Exp $
+$NetBSD: CHANGES-2019,v 1.4480 2019/10/22 07:31:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7203,3 +7203,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/py-sphinxcontrib-bibtex to 1.0.0 [adam 2019-10-22]
 	Updated devel/py-flake8-docstrings to 1.5.0 [adam 2019-10-22]
 	Updated archivers/ruby-minitar to 0.9 [taca 2019-10-22]
+	Updated archivers/ruby-minitar-cli to 0.8 [taca 2019-10-22]
