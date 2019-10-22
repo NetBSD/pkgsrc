@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2019/10/01 13:18:20 mef Exp $
+# $NetBSD: Makefile,v 1.10 2019/10/22 03:55:12 mef Exp $
 
-DISTNAME= 	wl-beta_2.15.9+0.20190623.orig
-PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/beta_//:S/+0//:S/.orig//}
+DISTNAME= 	wl-beta_2.15.9+0.20190919
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/beta_//:S/+0//}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/w/wl-beta/}
+EXTRACT_SUFX=	.orig.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gohome.org/wl/
@@ -11,7 +12,7 @@ COMMENT=	Mail/news management system with IMAP4rev1 support for Emacs
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	patch
-WRKSRC=		${WRKDIR}/wanderlust-wanderlust-b9a529a
+WRKSRC=		${WRKDIR}/wanderlust-wanderlust-7a919e4
 
 BUILD_TARGET=	all info
 INSTALL_TARGET=	install install-info
