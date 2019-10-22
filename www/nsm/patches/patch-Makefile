@@ -1,0 +1,143 @@
+$NetBSD: patch-Makefile,v 1.1 2019/10/22 10:34:34 ng0 Exp $
+
+From 9137389f1efdec3502f81b0d7f39a233173a639d upstream
+Makefile: Use ${CXX} instead of g++
+
+
+--- Makefile~
++++ Makefile
+@@ -1,7 +1,7 @@
+ #basic makefile for nsm
+ objects=nsm.o DateTimeInfo.o Directory.o Filename.o PageBuilder.o PageInfo.o Path.o Quoted.o SiteInfo.o Title.o
+ cppfiles=nsm.cpp DateTimeInfo.cpp Directory.cpp Filename.cpp PageBuilder.cpp PageInfo.cpp Path.cpp Quoted.cpp SiteInfo.cpp Title.cpp
+-CC=g++
++CC=${CXX}
+ LINK=-pthread
+ CXXFLAGS=-std=c++11 -Wall -Wextra -pedantic -O3
+ #Flags to use when compiling for Chocolatey
+
+
+
+From d9ff260d813c9d8057d9e6572c3735f64f99b174 upstream
+Add PREFIX + DESTDIR support, add install + uninstall target.
+
+
+--- Makefile~
++++ Makefile
+@@ -3,9 +3,14 @@ objects=nsm.o DateTimeInfo.o Directory.o Filename.o PageBuilder.o PageInfo.o Pat
+ cppfiles=nsm.cpp DateTimeInfo.cpp Directory.cpp Filename.cpp PageBuilder.cpp PageInfo.cpp Path.cpp Quoted.cpp SiteInfo.cpp Title.cpp
+ CC=${CXX}
+ LINK=-pthread
+-CXXFLAGS=-std=c++11 -Wall -Wextra -pedantic -O3
++CXXFLAGS+= -std=c++11 -Wall -Wextra -pedantic -O3
+ #Flags to use when compiling for Chocolatey
+ #CXXFLAGS=-std=c++11 -Wall -Wextra -pedantic -O3 -static -static-libgcc -static-libstdc++
++DESTDIR?=
++PREFIX?=/usr/local
++BINDIR=${DESTDIR}${PREFIX}/bin
++
++all: nsm
+ 
+ nsm: $(objects)
+ 	$(CC) $(CXXFLAGS) $(cppfiles) -o nsm $(LINK)
+@@ -45,23 +50,15 @@ linux-gedit-highlighting:
+ 	chmod 644 html.lang
+ 	cp html.lang /usr/share/gtksourceview-3.0/language-specs/html.lang
+ 
+-linux-install:
+-	chmod 755 nsm
+-	mv nift /usr/local/bin
+-	mv nsm /usr/local/bin
+-
+-linux-uninstall:
+-	rm /usr/local/bin/nift
+-	rm /usr/local/bin/nsm
+-
+-osx-install:
++install:
++	mkdir -p ${BINDIR}
+ 	chmod 755 nsm
+-	mv nift /usr/local/bin
+-	mv nsm /usr/local/bin
++	mv nift ${BINDIR}
++	mv nsm ${BINDIR}
+ 
+-osx-uninstall:
+-	rm /usr/local/bin/nift
+-	rm /usr/local/bin/nsm 
++uninstall:
++	rm ${BINDIR}/nift
++	rm ${BINDIR}/nsm
+ 
+ git-bash-install:
+ 	chmod 755 nsm
+
+
+
+From 467ac9c372fe2aabe8513ab4d5b34de6b050174f upstream
+Use CXX for C++ compiler, use conditional assignment operator
+ for CXX.
+
+
+--- Makefile~
++++ Makefile
+@@ -1,7 +1,7 @@
+ #basic makefile for nsm
+ objects=nsm.o DateTimeInfo.o Directory.o Filename.o PageBuilder.o PageInfo.o Path.o Quoted.o SiteInfo.o Title.o
+ cppfiles=nsm.cpp DateTimeInfo.cpp Directory.cpp Filename.cpp PageBuilder.cpp PageInfo.cpp Path.cpp Quoted.cpp SiteInfo.cpp Title.cpp
+-CC=${CXX}
++CXX?=g++
+ LINK=-pthread
+ CXXFLAGS+= -std=c++11 -Wall -Wextra -pedantic -O3
+ #Flags to use when compiling for Chocolatey
+@@ -13,38 +13,38 @@ BINDIR=${DESTDIR}${PREFIX}/bin
+ all: nsm
+ 
+ nsm: $(objects)
+-	$(CC) $(CXXFLAGS) $(cppfiles) -o nsm $(LINK)
+-	$(CC) $(CXXFLAGS) $(cppfiles) -o nift $(LINK)
++	$(CXX) $(CXXFLAGS) $(cppfiles) -o nsm $(LINK)
++	$(CXX) $(CXXFLAGS) $(cppfiles) -o nift $(LINK)
+ 
+ nsm.o: nsm.cpp SiteInfo.o Timer.h
+-	$(CC) $(CXXFLAGS) -c -o $@ $< $(LINK)
++	$(CXX) $(CXXFLAGS) -c -o $@ $< $(LINK)
+ 
+ SiteInfo.o: SiteInfo.cpp SiteInfo.h PageBuilder.o
+-	$(CC) $(CXXFLAGS) -c -o $@ $< $(LINK)
++	$(CXX) $(CXXFLAGS) -c -o $@ $< $(LINK)
+ 
+ PageBuilder.o: PageBuilder.cpp PageBuilder.h DateTimeInfo.o PageInfo.o
+-	$(CC) $(CXXFLAGS) -c -o $@ $<
++	$(CXX) $(CXXFLAGS) -c -o $@ $<
+ 
+ DateTimeInfo.o: DateTimeInfo.cpp DateTimeInfo.h
+-	$(CC) $(CXXFLAGS) -c -o $@ $<
++	$(CXX) $(CXXFLAGS) -c -o $@ $<
+ 
+ PageInfo.o: PageInfo.cpp PageInfo.h Path.o Title.o
+-	$(CC) $(CXXFLAGS) -c -o $@ $<
++	$(CXX) $(CXXFLAGS) -c -o $@ $<
+ 
+ Path.o: Path.cpp Path.h Directory.o Filename.o
+-	$(CC) $(CXXFLAGS) -c -o $@ $<
++	$(CXX) $(CXXFLAGS) -c -o $@ $<
+ 
+ Directory.o: Directory.cpp Directory.h Quoted.h
+-	$(CC) $(CXXFLAGS) -c -o $@ $<
++	$(CXX) $(CXXFLAGS) -c -o $@ $<
+ 
+ Filename.o: Filename.cpp Filename.h Quoted.h
+-	$(CC) $(CXXFLAGS) -c -o $@ $<
++	$(CXX) $(CXXFLAGS) -c -o $@ $<
+ 
+ Title.o: Title.cpp Title.h Quoted.o
+-	$(CC) $(CXXFLAGS) -c -o $@ $<
++	$(CXX) $(CXXFLAGS) -c -o $@ $<
+ 
+ Quoted.o: Quoted.cpp Quoted.h
+-	$(CC) $(CXXFLAGS) -c -o $@ $<
++	$(CXX) $(CXXFLAGS) -c -o $@ $<
+ 
+ linux-gedit-highlighting:
+ 	chmod 644 html.lang
