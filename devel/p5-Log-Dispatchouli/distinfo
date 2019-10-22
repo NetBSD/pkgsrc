@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2019/03/17 14:01:39 wen Exp $
+$NetBSD: distinfo,v 1.7 2019/10/22 06:15:01 mef Exp $
 
-SHA1 (Log-Dispatchouli-2.017.tar.gz) = 96907322411e3dad1957dfa095774af3b274d757
-RMD160 (Log-Dispatchouli-2.017.tar.gz) = 8ab7c492b91b52a216e74ac386c87a9da3fcdff4
-SHA512 (Log-Dispatchouli-2.017.tar.gz) = da47b814d923c134107e5753223b01d4abba7d918bdfa0deede0d3aef26ebdd1988810a6c38e873285b15434c99690f9683a8b7343cf6a7474a011838308ab22
-Size (Log-Dispatchouli-2.017.tar.gz) = 30658 bytes
+SHA1 (Log-Dispatchouli-2.019.tar.gz) = 0a82fd586efb33f29fb81ed38481e18f0ab0c893
+RMD160 (Log-Dispatchouli-2.019.tar.gz) = f19c02c43a84961fd937e1063d6c096d1ffeb396
+SHA512 (Log-Dispatchouli-2.019.tar.gz) = bce5c3dadf4c2adbe6a988adc0c9ba4ebaec66f672e38a3dd3fadbc0b9d315b075fa31faaf4daccefb91d374ac7b22ee94596ee0b982c329bd6abdf4df7711f1
+Size (Log-Dispatchouli-2.019.tar.gz) = 30853 bytes
