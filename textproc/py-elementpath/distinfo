@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/10/22 17:28:46 adam Exp $
+
+SHA1 (elementpath-1.3.1.tar.gz) = 95c75986431995ebe8bcc81c505dcb3a297e80b1
+RMD160 (elementpath-1.3.1.tar.gz) = 083bafc500c86348851f4c6c58b8548b865ad403
+SHA512 (elementpath-1.3.1.tar.gz) = 3beea19fe431514630f3957d2005d5883fb496a7192a47ea593d4b0df7a0050a19756275af7f85c7807c929482ddaacaba76ec0f3a715b6779d4aec125ee5550
+Size (elementpath-1.3.1.tar.gz) = 100631 bytes
