@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4486 2019/10/22 10:05:32 fox Exp $
+$NetBSD: CHANGES-2019,v 1.4487 2019/10/22 13:22:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7210,3 +7210,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/php-xdebug to 2.7.2 [taca 2019-10-22]
 	Updated www/php-apcu to 5.1.17 [taca 2019-10-22]
 	Updated audio/fasttracker2 to 1.01 [fox 2019-10-22]
+	Updated devel/py-hypothesis to 4.41.3 [adam 2019-10-22]
+	Updated devel/py-test to 4.6.6 [adam 2019-10-22]
