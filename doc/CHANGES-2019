@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4493 2019/10/22 18:45:30 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4494 2019/10/22 22:21:39 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7225,3 +7225,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added textproc/py-xmlschema version 1.0.15 [adam 2019-10-22]
 	Added devel/py-test5 version 5.2.1 [adam 2019-10-22]
 	Updated graphics/py-Pillow to 6.2.1 [adam 2019-10-22]
+	Added print/xpdf4 version 4.02 [nia 2019-10-22]
