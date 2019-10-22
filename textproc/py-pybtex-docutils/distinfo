@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/07/26 16:02:31 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2019/10/22 06:45:05 adam Exp $
 
-SHA1 (pybtex-docutils-0.2.1.tar.gz) = 7555e0f8a53f06dd1f37f2e8b43d20d593d369cc
-RMD160 (pybtex-docutils-0.2.1.tar.gz) = 09063361a9e0ec790341ace2422298363c7a1c0f
-SHA512 (pybtex-docutils-0.2.1.tar.gz) = cfef936ba4136d165a95b24e6627e98b7521588337a5b9274821d6d70fec52aac3a5211f64f3eb5f6eca15dca19aa7af632feba3fd070120e933680c9aeca58f
-Size (pybtex-docutils-0.2.1.tar.gz) = 11970 bytes
+SHA1 (pybtex-docutils-0.2.2.tar.gz) = 38a5c1d0deaa4fc449e45b103c7dd511abf12cf6
+RMD160 (pybtex-docutils-0.2.2.tar.gz) = 4485b4e838b87671da038dc28eb02b97976a1fc5
+SHA512 (pybtex-docutils-0.2.2.tar.gz) = 5659d148a71cd1adb7243d06a09872f2a610dfbc3d3bf00b2b433cab0afdf5615646c195a68ee74815b5770654f584b7a994f89d5c0482f4355fbfd925de6a27
+Size (pybtex-docutils-0.2.2.tar.gz) = 12556 bytes
