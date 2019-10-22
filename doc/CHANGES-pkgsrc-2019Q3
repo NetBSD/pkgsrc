@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q3,v 1.1.2.6 2019/10/18 14:32:57 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q3,v 1.1.2.7 2019/10/22 11:08:17 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q3 branch:
 
@@ -35,4 +35,10 @@ net/bind914: security fix
 Pullup ticket #6071 - requested by taca
 devel/py-distro: dependent addition
 security/py-certbot: bugfix
+
+Pullup ticket #6072 - requested by nia
+textproc/aspell: security fix
+
+Pullup ticket #6073 - requested by ast
+www/nostromo: security fix
 
