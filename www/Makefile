@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1410 2019/10/20 10:06:45 nia Exp $
+# $NetBSD: Makefile,v 1.1411 2019/10/22 10:34:35 ng0 Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -219,6 +219,7 @@ SUBDIR+=	nginx-devel
 SUBDIR+=	nostromo
 SUBDIR+=	ns-plugger-common
 SUBDIR+=	ns-remote
+SUBDIR+=	nsm
 SUBDIR+=	nspluginwrapper
 SUBDIR+=	ocaml-cohttp
 SUBDIR+=	ocaml-curl

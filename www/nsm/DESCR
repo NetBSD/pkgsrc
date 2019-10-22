@@ -1,0 +1,13 @@
+Nifty Site Manager ("nsm") is a cross-platform framework for managing
+and generating websites. Some of its features are:
+- it can manage and generate static and dynamic websites.
+- it has support for pre/post build/serve scripts to integrate with
+  cURL, databases, SASS, Grunt, GraphQL, Python Web Server, Live
+  Server/Reload, and more.
+- there is multithreading support
+- it is language agnostic, you can use any language you want
+  (markdown, LATEX, html, xml, css, javascript, php, MySQL, etc)
+- it integrates flawlessly with various Javascript and PHP frameworks
+- it integrates with Git to clone from and push to various platforms
+  including AWS, BitBucket, GitHub, GitLab, Netlify, surge.sh, ZEIT Now, etc
+- it has a templating system
