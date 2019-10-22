@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4487 2019/10/22 13:22:13 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4488 2019/10/22 13:25:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7212,3 +7212,9 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/fasttracker2 to 1.01 [fox 2019-10-22]
 	Updated devel/py-hypothesis to 4.41.3 [adam 2019-10-22]
 	Updated devel/py-test to 4.6.6 [adam 2019-10-22]
+	Updated mail/dovecot2 to 2.3.8 [taca 2019-10-22]
+	Updated mail/dovecot2-gssapi to 2.3.8 [taca 2019-10-22]
+	Updated mail/dovecot2-ldap to 2.3.8 [taca 2019-10-22]
+	Updated mail/dovecot2-mysql to 2.3.8 [taca 2019-10-22]
+	Updated mail/dovecot2-pgsql to 2.3.8 [taca 2019-10-22]
+	Updated mail/dovecot2-sqlite to 2.3.8 [taca 2019-10-22]
