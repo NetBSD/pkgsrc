@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2019/10/22 22:21:26 nia Exp $
+bin/xpdf
+man/man1/xpdf.1
+man/man5/xpdfrc.5
+share/applications/xpdf.desktop
+share/icons/hicolor/256x256/apps/xpdf.png
+share/icons/hicolor/scalable/apps/xpdf.svg
