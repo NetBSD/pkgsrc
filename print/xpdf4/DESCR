@@ -1,0 +1,4 @@
+Xpdf is a viewer for Portable Document Format (PDF) files using the Qt toolkit.
+
+Note: this version does not include the command line tools because they
+conflict with poppler-utils.
