@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4476 2019/10/22 06:31:33 leot Exp $
+$NetBSD: CHANGES-2019,v 1.4477 2019/10/22 06:34:16 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7194,4 +7194,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/emacs-w3m-snapshot to 1.4.632.20190920.1116 [mef 2019-10-21]
 	Updated devel/p5-IPC-Cmd to 1.04 [mef 2019-10-22]
 	Updated mail/wl-snapshot to 2.15.9.20190919 [mef 2019-10-22]
+	Updated devel/p5-Log-Any-Adapter-Screen to 0.140 [mef 2019-10-22]
+	Updated devel/p5-Log-Dispatchouli to 2.019 [mef 2019-10-22]
 	Updated net/youtube-dl to 20191022 [leot 2019-10-22]
+	Updated devel/p5-Log-Report to 1.28 [mef 2019-10-22]
