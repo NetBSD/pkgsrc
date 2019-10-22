@@ -1,0 +1,17 @@
+$NetBSD: patch-cmake-config.txt,v 1.1 2019/10/22 22:21:26 nia Exp $
+
+CMake Error at xpdf/cmake_install.cmake:45 (file):
+  file RPATH_CHANGE could not write new RPATH
+
+--- cmake-config.txt.orig	2019-09-25 19:54:33.000000000 +0000
++++ cmake-config.txt
+@@ -70,9 +70,6 @@ if (WIN32)
+   endforeach ()
+ endif ()
+ 
+-#--- don't set an rpath
+-set(CMAKE_SKIP_RPATH FALSE)
+-
+ #--- miscellaneous options
+ option(A4_PAPER "use A4 (instead of Letter) paper size by default for PostScript output" OFF)
+ option(NO_TEXT_SELECT "do not allow text selection" OFF)
