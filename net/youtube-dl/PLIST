@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.91 2019/10/19 20:23:06 leot Exp $
+@comment $NetBSD: PLIST,v 1.92 2019/10/22 06:31:13 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -419,6 +419,9 @@ ${PYSITELIB}/youtube_dl/extractor/commonprotocols.pyo
 ${PYSITELIB}/youtube_dl/extractor/condenast.py
 ${PYSITELIB}/youtube_dl/extractor/condenast.pyc
 ${PYSITELIB}/youtube_dl/extractor/condenast.pyo
+${PYSITELIB}/youtube_dl/extractor/contv.py
+${PYSITELIB}/youtube_dl/extractor/contv.pyc
+${PYSITELIB}/youtube_dl/extractor/contv.pyo
 ${PYSITELIB}/youtube_dl/extractor/corus.py
 ${PYSITELIB}/youtube_dl/extractor/corus.pyc
 ${PYSITELIB}/youtube_dl/extractor/corus.pyo
@@ -1676,9 +1679,6 @@ ${PYSITELIB}/youtube_dl/extractor/senateisvp.pyo
 ${PYSITELIB}/youtube_dl/extractor/sendtonews.py
 ${PYSITELIB}/youtube_dl/extractor/sendtonews.pyc
 ${PYSITELIB}/youtube_dl/extractor/sendtonews.pyo
-${PYSITELIB}/youtube_dl/extractor/servingsys.py
-${PYSITELIB}/youtube_dl/extractor/servingsys.pyc
-${PYSITELIB}/youtube_dl/extractor/servingsys.pyo
 ${PYSITELIB}/youtube_dl/extractor/servus.py
 ${PYSITELIB}/youtube_dl/extractor/servus.pyc
 ${PYSITELIB}/youtube_dl/extractor/servus.pyo
@@ -2183,9 +2183,6 @@ ${PYSITELIB}/youtube_dl/extractor/vier.pyo
 ${PYSITELIB}/youtube_dl/extractor/viewlift.py
 ${PYSITELIB}/youtube_dl/extractor/viewlift.pyc
 ${PYSITELIB}/youtube_dl/extractor/viewlift.pyo
-${PYSITELIB}/youtube_dl/extractor/viewster.py
-${PYSITELIB}/youtube_dl/extractor/viewster.pyc
-${PYSITELIB}/youtube_dl/extractor/viewster.pyo
 ${PYSITELIB}/youtube_dl/extractor/viidea.py
 ${PYSITELIB}/youtube_dl/extractor/viidea.pyc
 ${PYSITELIB}/youtube_dl/extractor/viidea.pyo
