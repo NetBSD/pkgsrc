@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2019/05/23 19:23:14 rillig Exp $
+# $NetBSD: Makefile,v 1.88 2019/10/22 22:21:26 nia Exp $
 
 DISTNAME=	xpdf-3.04
 CATEGORIES=	print
@@ -8,7 +8,7 @@ PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xpdfreader.com/
-COMMENT=	Display tool for PDF files
+COMMENT=	Display tool for PDF files (Motif version)
 LICENSE=	gnu-gpl-v2
 
 MAKE_JOBS_SAFE=	no
