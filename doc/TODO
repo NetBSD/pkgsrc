@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19359 2019/10/21 09:42:26 adam Exp $
+$NetBSD: TODO,v 1.19360 2019/10/22 22:21:39 nia Exp $
 
 Suggested new packages
 ======================
@@ -1399,7 +1399,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xorp-1.8.5
 	o xosview-1.19
 	o xpaint-2.9.9
-	o xpdf-4.01.01
 	o xpmroot-2.7.0
 	o xrandr-1.5.1
 	o xrmap-base-2.33.1
