@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/06/24 10:36:50 nia Exp $
+# $NetBSD: Makefile,v 1.3 2019/10/23 00:17:54 maya Exp $
 
 DISTNAME=	alure-1.2
 CATEGORIES=	audio
@@ -16,6 +16,16 @@ CMAKE_ARGS+=	-DBUILD_EXAMPLES=OFF -DDUMB=OFF -DDYNLOAD=OFF
 
 PKGCONFIG_OVERRIDE+=	alure-static.pc.in
 PKGCONFIG_OVERRIDE+=	alure.pc.in
+
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=    alincldir openalincldir
+
+.if ${OPSYS} == "Darwin"
+PLIST.openalincldir=	yes
+.else
+PLIST.alincldir=	yes
+.endif
 
 .include "options.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
