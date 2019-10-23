@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2019/05/06 05:19:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/10/23 16:22:22 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
@@ -742,6 +742,10 @@ ${GEM_LIBDIR}/lib/backports/2.6.0/hash/to_h.rb
 ${GEM_LIBDIR}/lib/backports/2.6.0/hash/update.rb
 ${GEM_LIBDIR}/lib/backports/2.6.0/kernel.rb
 ${GEM_LIBDIR}/lib/backports/2.6.0/kernel/then.rb
+${GEM_LIBDIR}/lib/backports/2.6.0/method.rb
+${GEM_LIBDIR}/lib/backports/2.6.0/method/compose.rb
+${GEM_LIBDIR}/lib/backports/2.6.0/proc.rb
+${GEM_LIBDIR}/lib/backports/2.6.0/proc/compose.rb
 ${GEM_LIBDIR}/lib/backports/2.6.rb
 ${GEM_LIBDIR}/lib/backports/basic_object.rb
 ${GEM_LIBDIR}/lib/backports/force/array_map.rb
