@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/10/23 16:20:13 taca Exp $
+
+SHA1 (ffi-libarchive-0.4.10.gem) = 1959b3bae44b97f1723736a6790a76f63397cc02
+RMD160 (ffi-libarchive-0.4.10.gem) = 5e95e4abedd0c26db859f74513efb202149368db
+SHA512 (ffi-libarchive-0.4.10.gem) = b90b6a84f961848d89e5997d8b561a86eb1fc68815b3a608b697c95374643a33ce4090b91f061e3e8470dbf510652566e090a3dfdcdb6494d5519b7d8e7c9b0a
+Size (ffi-libarchive-0.4.10.gem) = 14848 bytes
