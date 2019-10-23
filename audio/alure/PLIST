@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2018/09/21 13:24:34 maya Exp $
-include/AL/alure.h
+@comment $NetBSD: PLIST,v 1.2 2019/10/23 00:17:54 maya Exp $
+${PLIST.alincldir}include/AL/alure.h
+${PLIST.openalincldir}include/OpenAL/alure.h
 lib/libalure-static.a
 lib/libalure.so
 lib/libalure.so.1
