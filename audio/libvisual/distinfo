@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2015/11/03 01:12:39 agc Exp $
+$NetBSD: distinfo,v 1.15 2019/10/23 00:13:40 maya Exp $
 
 SHA1 (libvisual-0.4.0.tar.gz) = bd21d621f1d54134c26138e19eaae46c5aeaec00
 RMD160 (libvisual-0.4.0.tar.gz) = df4fda944e84417def2817f248f587dea5b2d8f1
@@ -9,4 +9,5 @@ SHA1 (patch-ac) = ad124820a2a20550bf85181be284c1e000114ddd
 SHA1 (patch-ad) = e7b2493cf5880cea7497a1d8d6fb1ce4f856ba6d
 SHA1 (patch-ae) = 72affdd9a1302a16efe5f4ecaafbc37061e4db0c
 SHA1 (patch-libvisual_lv__defines.h) = 9b14140411ae426226318a0ccdbe64d905b7710c
+SHA1 (patch-libvisual_lv__os.c) = 9bc88cf74bab4a4fb2b47ba122e0a5512149b9f2
 SHA1 (patch-libvisual_lv__types.h) = 3f2baa4861b50d3359cd9cdfa75898dfc6b5895d
