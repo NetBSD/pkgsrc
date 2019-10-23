@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q3,v 1.1.2.7 2019/10/22 11:08:17 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q3,v 1.1.2.8 2019/10/23 11:34:04 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q3 branch:
 
@@ -41,4 +41,7 @@ textproc/aspell: security fix
 
 Pullup ticket #6073 - requested by ast
 www/nostromo: security fix
+
+Pullup ticket #6074 - requested by taca
+www/ruby-loofah: seucurity fix
 
