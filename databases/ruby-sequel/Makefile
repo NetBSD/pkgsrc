@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.74 2019/09/13 15:33:13 taca Exp $
+# $NetBSD: Makefile,v 1.75 2019/10/23 16:13:22 taca Exp $
 
-DISTNAME=	sequel-5.24.0
+DISTNAME=	sequel-5.25.0
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
