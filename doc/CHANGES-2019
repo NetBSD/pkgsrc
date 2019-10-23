@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4503 2019/10/23 16:12:29 taca Exp $
+$NetBSD: CHANGES-2019,v 1.4504 2019/10/23 16:14:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7235,3 +7235,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/vault to 1.2.3 [he 2019-10-23]
 	Updated databases/ruby-hiera to 3.6.0 [taca 2019-10-23]
 	Updated databases/ruby-moneta to 1.2.0 [taca 2019-10-23]
+	Updated databases/ruby-sequel to 5.25.0 [taca 2019-10-23]
