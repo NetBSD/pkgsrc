@@ -1,0 +1,3 @@
+ffi-libarchive
+
+A Ruby FFI binding to libarchive.
