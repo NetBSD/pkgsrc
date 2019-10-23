@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4506 2019/10/23 16:17:56 taca Exp $
+$NetBSD: CHANGES-2019,v 1.4507 2019/10/23 16:21:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7239,3 +7239,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ZenTest to 4.12.0 [taca 2019-10-23]
 	Updated devel/hoe to 3.18.1 [taca 2019-10-23]
 	Updated devel/ruby2ruby to 2.4.4 [taca 2019-10-23]
+	Added archivers/ruby-ffi-libarchive version 0.4.10 [taca 2019-10-23]
