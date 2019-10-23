@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4500 2019/10/23 12:18:19 triaxx Exp $
+$NetBSD: CHANGES-2019,v 1.4501 2019/10/23 15:00:45 he Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7232,3 +7232,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added www/nsm version 1.15 [ng0 2019-10-23]
 	Updated devel/bison to 3.2.4nb2 [triaxx 2019-10-23]
 	Updated devel/bison to 3.4.2 [triaxx 2019-10-23]
+	Updated security/vault to 1.2.3 [he 2019-10-23]
