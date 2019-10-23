@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2019/10/17 08:20:43 nia Exp $
+# $NetBSD: Makefile,v 1.53 2019/10/23 19:34:22 nia Exp $
 
 DISTNAME=	qsynth-0.5.7
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qsynth/}
@@ -8,6 +8,8 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://qsynth.sourceforge.io/qsynth-index.html
 COMMENT=	Qt GUI Interface to FluidSynth
 LICENSE=	gnu-gpl-v2
+
+TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
