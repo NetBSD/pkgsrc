@@ -1,6 +1,11 @@
-$NetBSD: distinfo,v 1.22 2018/10/07 20:19:38 fhajny Exp $
+$NetBSD: distinfo,v 1.23 2019/10/23 15:00:05 he Exp $
 
-SHA1 (vault-0.11.2.tar.gz) = edf3693416121ed75244afab37db1bad491733b1
-RMD160 (vault-0.11.2.tar.gz) = 27c7f6a5a8148c993c746b4be7198caa6b37a4f0
-SHA512 (vault-0.11.2.tar.gz) = 2feacee3180aee48a868e40fe295bb96196c84b0cfb4b6486dee5c0899f5baaa4f45a1a1ca0939fad8ca062ca97d5e256b66dd6e91f88471816e41ccf991dc03
-Size (vault-0.11.2.tar.gz) = 24804472 bytes
+SHA1 (vault-1.2.3.tar.gz) = 83765d89ce4630e8e61e81d830378b11af8078e5
+RMD160 (vault-1.2.3.tar.gz) = cd82e5658a8018eb5be7cad8a71b860d5fad0162
+SHA512 (vault-1.2.3.tar.gz) = 9543e394f187cd9b06e88b64319504e07519041741650db3b7b905f1b34348ed7d9e22955ce2a456ffd2e06210e9e01b1a0ded459cde4840fbf5903ff6e21e75
+Size (vault-1.2.3.tar.gz) = 27773681 bytes
+SHA1 (patch-scripts_gen__openapi.sh) = 1ad66480ef135adec05f58b088440e0bec6b4ab8
+SHA1 (patch-vendor_github.com_ory_dockertest_docker_pkg_system_stat__netbsd.go) = 6bdcd546eb5ac7354d4bbe8abbb91cc000378101
+SHA1 (patch-vendor_github.com_ory_dockertest_docker_pkg_term_tc.go) = c88c7ade723612ec994fa0b53d6a08f3491226f8
+SHA1 (patch-vendor_github.com_ory_dockertest_docker_pkg_term_term.go) = ce99675f1881a6b3cdf47d1b5d95d9c3df141d61
+SHA1 (patch-vendor_github.com_ory_dockertest_docker_pkg_term_termios__bsd.go) = 10bf19ea57dc7c742c49b43cd5bf6aea7057f044
