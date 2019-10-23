@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4497 2019/10/23 07:33:39 morr Exp $
+$NetBSD: CHANGES-2019,v 1.4498 2019/10/23 10:39:30 ng0 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7229,3 +7229,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added emulators/cannonball version 0.3.20190924 [fox 2019-10-23]
 	Updated www/wordpress to 5.2.4 [morr 2019-10-23]
 	Updated editors/vim-share to 8.1.2200 [morr 2019-10-23]
+	Added www/nsm version 1.15 [ng0 2019-10-23]
