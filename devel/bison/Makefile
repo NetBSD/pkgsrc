@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.107 2019/08/11 13:18:39 wiz Exp $
+# $NetBSD: Makefile,v 1.108 2019/10/23 11:58:01 triaxx Exp $
 
 DISTNAME=	bison-3.2.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=bison/}
 EXTRACT_SUFX=	.tar.xz
@@ -12,12 +12,12 @@ COMMENT=	GNU yacc(1) replacement
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=		c c++
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		grep gm4:run msgfmt flex perl:build
+USE_TOOLS+=		grep gm4:run flex perl:build
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-yacc
-CONFIGURE_ENV+=		gt_cv_func_gnugettext1_libintl=yes
 CONFIGURE_ENV+=		ac_cv_prog_M4=${TOOLS_PATH.gm4}
+
+.include "options.mk"
 
 INFO_FILES=		yes
 TEST_TARGET=		check
@@ -33,6 +33,7 @@ pre-build:
 # "bison" wants a recent version of "gettext" which at least some
 # NetBSD versions don't provide. Figure out whether it will install
 # the locale files or not.
+.if !empty(PKG_OPTIONS:Mnls)
 PLIST_SRC=	${WRKDIR}/PLIST
 
 post-configure:
@@ -41,6 +42,6 @@ post-configure:
 	else								\
 	  ${GREP} -v '^share/locale/' ${PKGDIR}/PLIST >${PLIST_SRC};	\
 	fi
+.endif
 
-.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
