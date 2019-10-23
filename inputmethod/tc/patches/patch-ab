@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.3 2009/07/16 22:51:50 uebayasi Exp $
+$NetBSD: patch-ab,v 1.4 2019/10/23 14:02:00 mef Exp $
+
+support for new mules
 
 --- configure.orig	2009-07-17 07:47:52.000000000 +0900
 +++ configure
