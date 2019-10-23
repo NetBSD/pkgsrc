@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2019/01/06 15:00:14 taca Exp $
+# $NetBSD: Makefile,v 1.25 2019/10/23 16:15:36 taca Exp $
 
-DISTNAME=	ZenTest-4.11.2
+DISTNAME=	ZenTest-4.12.0
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
@@ -10,6 +10,8 @@ LICENSE=	mit
 
 CONFLICTS+=	ruby[1-9][0-9][0-9]-ZenTest-[0-9]* ZenTest-[0-9]*
 RUBYGEM_OPTIONS+=	--format-executable
+
+USE_LANGUAGES=	# empty
 
 pre-configure:
 	${CHMOD} ${BINMODE} ${WRKSRC}/bin/*
