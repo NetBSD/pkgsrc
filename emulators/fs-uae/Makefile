@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2019/08/22 18:35:22 adam Exp $
+# $NetBSD: Makefile,v 1.10 2019/10/23 20:21:05 rhialto Exp $
 
 DISTNAME=	fs-uae-3.0.0
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	https://fs-uae.net/stable/${PKGVERSION_NOREV}/
 
@@ -13,6 +14,8 @@ USE_LANGUAGES=		c gnu++03
 USE_TOOLS+=		msgfmt pkg-config zip
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libmpeg2
+
+NOT_PAX_MPROTECT_SAFE+=	bin/fs-uae
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"
