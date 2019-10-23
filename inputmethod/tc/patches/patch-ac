@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2009/07/16 22:51:50 uebayasi Exp $
+$NetBSD: patch-ac,v 1.2 2019/10/23 14:02:00 mef Exp $
+
+support for new muls
 
 --- lisp/guess.orig	2002-03-25 09:16:05.000000000 +0900
 +++ lisp/guess
