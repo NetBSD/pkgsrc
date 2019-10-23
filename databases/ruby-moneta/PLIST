@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2019/05/06 05:10:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/10/23 16:12:04 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.rubocop.yml
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGES
@@ -54,7 +55,9 @@ ${GEM_LIBDIR}/lib/moneta/adapters/tokyotyrant.rb
 ${GEM_LIBDIR}/lib/moneta/adapters/yaml.rb
 ${GEM_LIBDIR}/lib/moneta/builder.rb
 ${GEM_LIBDIR}/lib/moneta/cache.rb
+${GEM_LIBDIR}/lib/moneta/enumerable.rb
 ${GEM_LIBDIR}/lib/moneta/expires.rb
+${GEM_LIBDIR}/lib/moneta/fallback.rb
 ${GEM_LIBDIR}/lib/moneta/lock.rb
 ${GEM_LIBDIR}/lib/moneta/logger.rb
 ${GEM_LIBDIR}/lib/moneta/mixins.rb
@@ -82,9 +85,9 @@ ${GEM_LIBDIR}/lib/rack/session/moneta.rb
 ${GEM_LIBDIR}/moneta.gemspec
 ${GEM_LIBDIR}/script/benchmarks
 ${GEM_LIBDIR}/script/contributors
-${GEM_LIBDIR}/script/install-kyotocabinet
 ${GEM_LIBDIR}/script/memusage
 ${GEM_LIBDIR}/script/parallel-tests
+${GEM_LIBDIR}/script/reconfigure-couchdb
 ${GEM_LIBDIR}/script/start-hbase
 ${GEM_LIBDIR}/script/start-services
 ${GEM_LIBDIR}/script/travis-logs
@@ -121,6 +124,7 @@ ${GEM_LIBDIR}/spec/moneta/adapters/activerecord/standard_activerecord_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/activerecord/standard_activerecord_with_expires_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/activesupportcache/adapter_activesupportcache_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/activesupportcache/adapter_activesupportcache_with_default_expires_spec.rb
+${GEM_LIBDIR}/spec/moneta/adapters/activesupportcache/standard_activesupportcache_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/cassandra/adapter_cassandra_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/cassandra/adapter_cassandra_with_default_expires_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/cassandra/helper.rb
@@ -142,6 +146,7 @@ ${GEM_LIBDIR}/spec/moneta/adapters/daybreak/standard_daybreak_with_expires_spec.
 ${GEM_LIBDIR}/spec/moneta/adapters/dbm/adapter_dbm_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/dbm/standard_dbm_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/dbm/standard_dbm_with_expires_spec.rb
+${GEM_LIBDIR}/spec/moneta/adapters/faraday_helper.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/file/adapter_file_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/file/standard_file_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/file/standard_file_with_expires_spec.rb
@@ -176,11 +181,11 @@ ${GEM_LIBDIR}/spec/moneta/adapters/memcached/adapter_memcached_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/memcached/dalli/adapter_memcached_dalli_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/memcached/dalli/adapter_memcached_dalli_with_default_expires_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/memcached/dalli/standard_memcached_dalli_spec.rb
-${GEM_LIBDIR}/spec/moneta/adapters/memcached/helper.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/memcached/native/adapter_memcached_native_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/memcached/native/adapter_memcached_native_with_default_expires_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/memcached/native/standard_memcached_native_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/memcached/standard_memcached_spec.rb
+${GEM_LIBDIR}/spec/moneta/adapters/memcached_helper.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/memory/adapter_memory_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/memory/standard_memory_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/memory/standard_memory_with_compress_spec.rb
@@ -208,6 +213,7 @@ ${GEM_LIBDIR}/spec/moneta/adapters/redis/adapter_redis_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/redis/adapter_redis_with_default_expires_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/redis/standard_redis_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/restclient/adapter_restclient_spec.rb
+${GEM_LIBDIR}/spec/moneta/adapters/restclient/helper.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/restclient/standard_restclient_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/riak/adapter_riak_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/riak/standard_riak_spec.rb
@@ -230,6 +236,7 @@ ${GEM_LIBDIR}/spec/moneta/adapters/tokyocabinet/adapter_tokyocabinet_hdb_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/tokyocabinet/standard_tokyocabinet_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/tokyocabinet/standard_tokyocabinet_with_expires_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/tokyotyrant/adapter_tokyotyrant_spec.rb
+${GEM_LIBDIR}/spec/moneta/adapters/tokyotyrant/helper.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/tokyotyrant/standard_tokyotyrant_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/tokyotyrant/standard_tokyotyrant_with_expires_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/yaml/adapter_yaml_spec.rb
@@ -239,9 +246,11 @@ ${GEM_LIBDIR}/spec/moneta/builder_spec.rb
 ${GEM_LIBDIR}/spec/moneta/mutex_spec.rb
 ${GEM_LIBDIR}/spec/moneta/proxies/cache/cache_file_memory_spec.rb
 ${GEM_LIBDIR}/spec/moneta/proxies/cache/cache_memory_null_spec.rb
+${GEM_LIBDIR}/spec/moneta/proxies/enumerable/enumerable_spec.rb
 ${GEM_LIBDIR}/spec/moneta/proxies/expires/expires_file_spec.rb
 ${GEM_LIBDIR}/spec/moneta/proxies/expires/expires_memory_spec.rb
 ${GEM_LIBDIR}/spec/moneta/proxies/expires/expires_memory_with_default_expires_spec.rb
+${GEM_LIBDIR}/spec/moneta/proxies/fallback/fallback_spec.rb
 ${GEM_LIBDIR}/spec/moneta/proxies/lock/lock_spec.rb
 ${GEM_LIBDIR}/spec/moneta/proxies/optionmerger/optionmerger_spec.rb
 ${GEM_LIBDIR}/spec/moneta/proxies/pool/pool_spec.rb
@@ -302,6 +311,7 @@ ${GEM_LIBDIR}/spec/rack/cache_moneta_spec.rb
 ${GEM_LIBDIR}/spec/rack/moneta_cookies_spec.rb
 ${GEM_LIBDIR}/spec/rack/moneta_store_spec.rb
 ${GEM_LIBDIR}/spec/rack/session_moneta_spec.rb
+${GEM_LIBDIR}/spec/restserver.rb
 ${GEM_LIBDIR}/test/action_dispatch/fixtures/session_autoload_test/foo.rb
 ${GEM_LIBDIR}/test/action_dispatch/session_moneta_store_test.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
