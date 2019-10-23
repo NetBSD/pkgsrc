@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4495 2019/10/23 00:22:59 fox Exp $
+$NetBSD: CHANGES-2019,v 1.4496 2019/10/23 07:25:58 morr Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7227,3 +7227,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/py-Pillow to 6.2.1 [adam 2019-10-22]
 	Added print/xpdf4 version 4.02 [nia 2019-10-22]
 	Added emulators/cannonball version 0.3.20190924 [fox 2019-10-23]
+	Updated www/wordpress to 5.2.4 [morr 2019-10-23]
