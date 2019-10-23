@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.146 2019/09/19 16:02:08 nia Exp $
+# $NetBSD: Makefile,v 1.147 2019/10/23 19:35:25 nia Exp $
 
 DISTNAME=	anjuta-3.34.0
 CATEGORIES=	devel
@@ -15,6 +15,7 @@ DEPENDS+=	autoconf>=2.59:../../devel/autoconf
 DEPENDS+=	automake>=1.8.2:../../devel/automake
 DEPENDS+=	gsettings-desktop-schemas-[0-9]*:../../sysutils/gsettings-desktop-schemas
 DEPENDS+=	libtool>=1.5.2:../../devel/libtool
+DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
