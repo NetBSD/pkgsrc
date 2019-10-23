@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2019/10/23 00:21:26 fox Exp $
+bin/cannonball
+libexec/cannonball
+man/man6/cannonball.6
+share/applications/cannonball.desktop
+share/cannonball/conf/config.xml
+share/cannonball/res/tilemap.bin
+share/cannonball/res/tilepatch.bin
+share/icons/hicolor/16x16/apps/cannonball.png
