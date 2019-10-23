@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/10/16 12:47:20 nia Exp $
+# $NetBSD: Makefile,v 1.4 2019/10/23 19:50:23 nia Exp $
 
 DISTNAME=	buzztrax-0.10.2
 CATEGORIES=	audio
@@ -9,6 +9,7 @@ HOMEPAGE=	https://buzztrax.org/
 COMMENT=	Modular, free, open source music studio
 LICENSE=	gnu-lgpl-v2.1
 
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 DEPENDS+=	gsettings-desktop-schemas-[0-9]*:../../sysutils/gsettings-desktop-schemas
 
 CONFLICTS+=	buzztard-[0-9]*
@@ -38,6 +39,7 @@ CONFIGURE_ARGS+=	--disable-schemas-compile
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
+.include "../../textproc/aspell/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk3/buildlink3.mk"
