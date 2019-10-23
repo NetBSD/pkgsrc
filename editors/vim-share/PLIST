@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2019/08/03 21:01:11 morr Exp $
+@comment $NetBSD: PLIST,v 1.48 2019/10/23 07:28:31 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -381,6 +381,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/ishd.vim
 share/vim/${VIM_SUBDIR}/ftplugin/j.vim
 share/vim/${VIM_SUBDIR}/ftplugin/java.vim
 share/vim/${VIM_SUBDIR}/ftplugin/javascript.vim
+share/vim/${VIM_SUBDIR}/ftplugin/javascriptreact.vim
 share/vim/${VIM_SUBDIR}/ftplugin/jproperties.vim
 share/vim/${VIM_SUBDIR}/ftplugin/json.vim
 share/vim/${VIM_SUBDIR}/ftplugin/jsp.vim
@@ -518,6 +519,7 @@ share/vim/${VIM_SUBDIR}/indent/ada.vim
 share/vim/${VIM_SUBDIR}/indent/ant.vim
 share/vim/${VIM_SUBDIR}/indent/automake.vim
 share/vim/${VIM_SUBDIR}/indent/awk.vim
+share/vim/${VIM_SUBDIR}/indent/bash.vim
 share/vim/${VIM_SUBDIR}/indent/bib.vim
 share/vim/${VIM_SUBDIR}/indent/bst.vim
 share/vim/${VIM_SUBDIR}/indent/bzl.vim
@@ -564,6 +566,7 @@ share/vim/${VIM_SUBDIR}/indent/ishd.vim
 share/vim/${VIM_SUBDIR}/indent/j.vim
 share/vim/${VIM_SUBDIR}/indent/java.vim
 share/vim/${VIM_SUBDIR}/indent/javascript.vim
+share/vim/${VIM_SUBDIR}/indent/javascriptreact.vim
 share/vim/${VIM_SUBDIR}/indent/json.vim
 share/vim/${VIM_SUBDIR}/indent/jsp.vim
 share/vim/${VIM_SUBDIR}/indent/ld.vim
@@ -789,6 +792,7 @@ share/vim/${VIM_SUBDIR}/syntax/awk.vim
 share/vim/${VIM_SUBDIR}/syntax/ayacc.vim
 share/vim/${VIM_SUBDIR}/syntax/b.vim
 share/vim/${VIM_SUBDIR}/syntax/baan.vim
+share/vim/${VIM_SUBDIR}/syntax/bash.vim
 share/vim/${VIM_SUBDIR}/syntax/basic.vim
 share/vim/${VIM_SUBDIR}/syntax/bc.vim
 share/vim/${VIM_SUBDIR}/syntax/bdf.vim
@@ -962,6 +966,7 @@ share/vim/${VIM_SUBDIR}/syntax/hex.vim
 share/vim/${VIM_SUBDIR}/syntax/hgcommit.vim
 share/vim/${VIM_SUBDIR}/syntax/hitest.vim
 share/vim/${VIM_SUBDIR}/syntax/hog.vim
+share/vim/${VIM_SUBDIR}/syntax/hollywood.vim
 share/vim/${VIM_SUBDIR}/syntax/hostconf.vim
 share/vim/${VIM_SUBDIR}/syntax/hostsaccess.vim
 share/vim/${VIM_SUBDIR}/syntax/html.vim
@@ -991,6 +996,7 @@ share/vim/${VIM_SUBDIR}/syntax/jargon.vim
 share/vim/${VIM_SUBDIR}/syntax/java.vim
 share/vim/${VIM_SUBDIR}/syntax/javacc.vim
 share/vim/${VIM_SUBDIR}/syntax/javascript.vim
+share/vim/${VIM_SUBDIR}/syntax/javascriptreact.vim
 share/vim/${VIM_SUBDIR}/syntax/jess.vim
 share/vim/${VIM_SUBDIR}/syntax/jgraph.vim
 share/vim/${VIM_SUBDIR}/syntax/jovial.vim
@@ -1316,7 +1322,7 @@ share/vim/${VIM_SUBDIR}/syntax/voscm.vim
 share/vim/${VIM_SUBDIR}/syntax/vrml.vim
 share/vim/${VIM_SUBDIR}/syntax/vroom.vim
 share/vim/${VIM_SUBDIR}/syntax/vsejcl.vim
-share/vim/${VIM_SUBDIR}/syntax/vuejs.vim
+share/vim/${VIM_SUBDIR}/syntax/vue.vim
 share/vim/${VIM_SUBDIR}/syntax/wast.vim
 share/vim/${VIM_SUBDIR}/syntax/wdiff.vim
 share/vim/${VIM_SUBDIR}/syntax/web.vim
