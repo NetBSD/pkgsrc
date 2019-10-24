@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2019/10/24 11:51:23 pho Exp $
+# $NetBSD: Makefile.common,v 1.37 2019/10/24 17:00:28 pho Exp $
 #
 # used by games/nethack/Makefile
 # used by games/nethack-lib/Makefile
@@ -16,7 +16,8 @@ NETHACK_VERSION=	${NETHACK_BASEVER}
 NETHACK_DISTVER=	${NETHACK_BASEVER:S/.//g}
 NETHACK_DIR=		nethackdir${NETHACK_SAVEVER:S/.//g}
 
-# The last compatible version of save files.
+# The oldest compatible version of save files. Only change this when
+# the upstream breaks save file compatibility.
 NETHACK_SAVEVER=	3.6.0
 
 DISTNAME=		nethack-${NETHACK_DISTVER}-src
