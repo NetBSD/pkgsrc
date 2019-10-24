@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4518 2019/10/24 18:44:46 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4519 2019/10/24 21:23:23 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7256,3 +7256,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/py-grpcio to 1.24.3 [adam 2019-10-24]
 	Updated net/py-grpcio-tools to 1.24.3 [adam 2019-10-24]
 	Updated net/wireshark to 3.0.6 [adam 2019-10-24]
+	Updated audio/musicpd to 0.21.16 [nia 2019-10-24]
