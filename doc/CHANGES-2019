@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4516 2019/10/24 17:04:28 micha Exp $
+$NetBSD: CHANGES-2019,v 1.4517 2019/10/24 17:09:06 micha Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7250,3 +7250,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/smake to 1.3nb6 [micha 2019-10-24]
 	Updated archivers/star to 1.6.1nb2 [micha 2019-10-24]
 	Updated shells/bosh to 20191007 [micha 2019-10-24]
+	Updated shells/pbosh to 20191007 [micha 2019-10-24]
