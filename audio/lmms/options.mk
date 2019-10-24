@@ -1,10 +1,18 @@
-# $NetBSD: options.mk,v 1.3 2019/10/20 11:10:47 nia Exp $
+# $NetBSD: options.mk,v 1.4 2019/10/24 16:36:56 nia Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.lmms
+PKG_OPTIONS_VAR=		PKG_OPTIONS.lmms
 
-PKG_SUPPORTED_OPTIONS+=	alsa jack portaudio pulseaudio sdl
-PKG_SUGGESTED_OPTIONS+=	jack portaudio sdl
-PKG_SUGGESTED_OPTIONS.Linux+=	alsa pulseaudio
+PKG_SUPPORTED_OPTIONS+=		alsa jack portaudio pulseaudio sdl
+PKG_SUGGESTED_OPTIONS.Linux+=	alsa
+
+.include "../../mk/bsd.fast.prefs.mk"
+.include "../../mk/oss.buildlink3.mk"
+
+# XXX may want to use SDL2 on NetBSD when support is released
+
+.if ${OPSYS} != "Linux" && ${OSS_TYPE} == "none"
+PKG_SUGGESTED_OPTIONS+=		portaudio
+.endif
 
 .include "../../mk/bsd.options.mk"
 
