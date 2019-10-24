@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2019/10/24 11:20:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.47 2019/10/24 11:40:00 tnn Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -23,6 +23,7 @@
 # version in BUILDLINK_API_DEPENDS, as there is no backwards compatibility
 
 DISTNAME=	llvm-9.0.0.src
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
 MASTER_SITES=	http://releases.llvm.org/${PKGVERSION_NOREV}/
@@ -31,7 +32,7 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://llvm.org/
 COMMENT=	Low Level Virtual Machine compiler infrastructure
-LICENSE=	modified-bsd
+LICENSE=	apache-2.0
 
 USE_LANGUAGES=		c c++11
 USE_CMAKE=		yes
