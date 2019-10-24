@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4517 2019/10/24 17:09:06 micha Exp $
+$NetBSD: CHANGES-2019,v 1.4518 2019/10/24 18:44:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7251,3 +7251,8 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated archivers/star to 1.6.1nb2 [micha 2019-10-24]
 	Updated shells/bosh to 20191007 [micha 2019-10-24]
 	Updated shells/pbosh to 20191007 [micha 2019-10-24]
+	Updated emulators/qemu to 4.1.0nb2 [adam 2019-10-24]
+	Updated net/grpc to 1.24.3 [adam 2019-10-24]
+	Updated net/py-grpcio to 1.24.3 [adam 2019-10-24]
+	Updated net/py-grpcio-tools to 1.24.3 [adam 2019-10-24]
+	Updated net/wireshark to 3.0.6 [adam 2019-10-24]
