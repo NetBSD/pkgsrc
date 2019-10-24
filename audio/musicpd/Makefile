@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.199 2019/10/24 21:23:13 nia Exp $
+# $NetBSD: Makefile,v 1.200 2019/10/24 21:36:45 nia Exp $
 
 DISTNAME=	mpd-0.21.16
 PKGNAME=	${DISTNAME:S/mpd/musicpd/}
@@ -58,7 +58,7 @@ SUBST_CLASSES+=		sphinx
 SUBST_STAGE.sphinx=	pre-configure
 SUBST_FILES.sphinx=	doc/meson.build
 SUBST_MESSAGE.sphinx=	Fixing sphinx binary name.
-SUBST_SED.sphinx+=	-e "s,sphinx-build,sphinx-build${PYVERSSUFFIX},"
+SUBST_SED.sphinx+=	-e "s,sphinx-build,sphinx-build-${PYVERSSUFFIX},"
 
 INSTALLATION_DIRS=	${EGDIR}
 
