@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2019/10/24 22:06:09 nia Exp $
+
+test(1) portability
+
+--- configure.orig	2017-07-14 09:26:20.000000000 +0000
++++ configure
+@@ -19789,7 +19789,7 @@ else
+ $as_echo "no" >&6; }
+ fi
+ 
+-if test "$have_iso_code_639" == "yes" || test "$have_iso_code_3166" == "yes" || test "$have_iso_code_15924" == "yes" ; then
++if test "$have_iso_code_639" = "yes" || test "$have_iso_code_3166" = "yes" || test "$have_iso_code_15924" = "yes" ; then
+ 
+ $as_echo "#define HAVE_ISO_CODES 1" >>confdefs.h
+ 
