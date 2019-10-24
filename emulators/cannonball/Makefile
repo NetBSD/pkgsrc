@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2019/10/23 00:21:26 fox Exp $
+# $NetBSD: Makefile,v 1.2 2019/10/24 00:32:36 fox Exp $
 
-DISTNAME=	cannonball-0.3.20190924
+DISTNAME=	cannonball-0.3.20191023
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=djyt/}
-GITHUB_TAG=	a675d7076e3ca5f7f7777e327ed27b04aae43072
+GITHUB_TAG=	b6aa525ddd552f96b43b3b3a6f69326a277206bd
 EXTRACT_USING=	bsdtar
 
 MAINTAINER=	fox@NetBSD.org
@@ -67,4 +67,5 @@ do-install:
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
