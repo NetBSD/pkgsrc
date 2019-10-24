@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4510 2019/10/24 11:56:08 pho Exp $
+$NetBSD: CHANGES-2019,v 1.4511 2019/10/24 12:52:24 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7243,3 +7243,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ruby-backports to 3.15.0 [taca 2019-10-23]
 	Updated emulators/cannonball to 0.3.20191023 [fox 2019-10-24]
 	Updated games/nethack to 3.6.2 [pho 2019-10-24]
+	Updated textproc/json2tsv to 0.3 [leot 2019-10-24]
