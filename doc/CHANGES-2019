@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4515 2019/10/24 16:54:40 micha Exp $
+$NetBSD: CHANGES-2019,v 1.4516 2019/10/24 17:04:28 micha Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7249,3 +7249,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/lmms to 1.2.1 [nia 2019-10-24]
 	Updated devel/smake to 1.3nb6 [micha 2019-10-24]
 	Updated archivers/star to 1.6.1nb2 [micha 2019-10-24]
+	Updated shells/bosh to 20191007 [micha 2019-10-24]
