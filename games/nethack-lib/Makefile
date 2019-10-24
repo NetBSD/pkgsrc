@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.31 2017/12/25 22:22:11 he Exp $
+# $NetBSD: Makefile,v 1.32 2019/10/24 11:51:23 pho Exp $
 #
 
 .include		"../../games/nethack-lib/Makefile.common"
 
 PKGNAME=		nethack-lib-${NETHACK_VERSION}
-PKGREVISION=		5
 
 COMMENT=		Data files for Nethack
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./sys/unix/setup.sh
-BUILD_TARGET=		datastuff
-INSTALL_TARGET=		manpages install-dat
-INSTALLATION_DIRS=	${PKGMANDIR}/man6
+INSTALL_TARGET=		manpages dofiles
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6 ${HACKDIR} share/doc/nethack
 
 # Using 'nroff -Tascii' works better with groff and we don't want to use col
 # on linux as it removes the escape the the ansi color sequences.
@@ -34,6 +32,9 @@ CONF_FILES_PERMS+=	/dev/null ${VARDIR}/perm \
 			${NETHACK_USER} ${NETHACK_GROUP} 664
 CONF_FILES_PERMS+=	/dev/null ${VARDIR}/record \
 			${NETHACK_USER} ${NETHACK_GROUP} 664
+CONF_FILES_PERMS+=	/dev/null ${VARDIR}/xlogfile \
+			${NETHACK_USER} ${NETHACK_GROUP} 664
+CONF_FILES+=		/dev/null ${HACKDIR}/sysconf
 
 REQD_DIRS_PERMS+=	${VARDIR}					\
 			${NETHACK_USER} ${NETHACK_GROUP} 775
@@ -42,6 +43,8 @@ REQD_DIRS_PERMS+=	${VARDIR}/save					\
 
 CHECK_FILES_SKIP+=	${VARDIR}/logfile				\
 			${VARDIR}/perm					\
-			${VARDIR}/record
+			${VARDIR}/record				\
+			${VARDIR}/xlogfile				\
+			${HACKDIR}/sysconf
 
 .include "../../mk/bsd.pkg.mk"

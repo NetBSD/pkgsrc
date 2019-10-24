@@ -1,0 +1,64 @@
+$NetBSD: patch-sys_unix_Makefile.top,v 1.1 2019/10/24 11:51:23 pho Exp $
+
+1. Don't build or install bin/nethack.
+2. Use ${INSTALL_*} for installation.
+
+--- sys/unix/Makefile.top.orig	2019-05-08 07:00:16.000000000 +0000
++++ sys/unix/Makefile.top
+@@ -20,7 +20,7 @@ NHSROOT=.
+ 
+ # make NetHack
+ #PREFIX	 = /usr
+-GAME     = nethack
++#GAME     = nethack
+ # GAME     = nethack.prg
+ #GAMEUID  = games
+ #GAMEGRP  = bin
+@@ -203,39 +203,20 @@ dofiles:
+ 		-e '}' 					\
+ 	  	-e '$$s/.*/nodlb/p' < dat/options` ;	\
+ 	$(MAKE) dofiles-$${target-nodlb}
+-	cp src/$(GAME) $(INSTDIR)
+-	cp util/recover $(INSTDIR)
+-	-if test -n '$(SHELLDIR)'; then rm -f $(SHELLDIR)/$(GAME); fi
+-	if test -n '$(SHELLDIR)'; then \
+-		sed -e 's;/usr/games/lib/nethackdir;$(HACKDIR);' \
+-		-e 's;HACKDIR/nethack;HACKDIR/$(GAME);' \
++	sed -e 's;@HACKDIR@;$(HACKDIR);' \
++		-e 's;@PREFIX@;$(PREFIX);' \
+ 		< sys/unix/nethack.sh \
+-		> $(SHELLDIR)/$(GAME) ; fi
+-# set up their permissions
+-	-( cd $(INSTDIR) ; $(CHOWN) $(GAMEUID) $(GAME) recover ; \
+-			$(CHGRP) $(GAMEGRP) $(GAME) recover )
+-	chmod $(GAMEPERM) $(INSTDIR)/$(GAME)
+-	chmod $(EXEPERM) $(INSTDIR)/recover
+-	-if test -n '$(SHELLDIR)'; then \
+-		$(CHOWN) $(GAMEUID) $(SHELLDIR)/$(GAME); fi
+-	if test -n '$(SHELLDIR)'; then \
+-		$(CHGRP) $(GAMEGRP) $(SHELLDIR)/$(GAME); \
+-		chmod $(EXEPERM) $(SHELLDIR)/$(GAME); fi
++		> nethack
++	$(INSTALL_SCRIPT) nethack $(DESTDIR)$(PREFIX)/bin
++	$(INSTALL_PROGRAM) util/recover $(DESTDIR)$(PREFIX)/bin
++	$(INSTALL_DATA) doc/Guidebook $(DESTDIR)$(PREFIX)/share/doc/nethack
+ 
+ dofiles-dlb: check-dlb
+-	( cd dat ; cp nhdat $(DATNODLB) $(INSTDIR) )
+-# set up their permissions
+-	-( cd $(INSTDIR) ; $(CHOWN) $(GAMEUID) nhdat $(DATNODLB) ; \
+-			$(CHGRP) $(GAMEGRP) nhdat $(DATNODLB) ; \
+-			chmod $(FILEPERM) nhdat $(DATNODLB) )
++	( cd dat ; $(INSTALL_DATA) nhdat $(DATNODLB) $(DESTDIR)$(HACKDIR) )
+ 
+ dofiles-nodlb:
+ # copy over the game files
+-	( cd dat ; cp $(DAT) $(INSTDIR) )
+-# set up their permissions
+-	-( cd $(INSTDIR) ; $(CHOWN) $(GAMEUID) $(DAT) ; \
+-			$(CHGRP) $(GAMEGRP) $(DAT) ; \
+-			chmod $(FILEPERM) $(DAT) )
++	( cd dat ; $(INSTALL_DATA) $(DAT) $(DESTDIR)$(HACKDIR) )
+ 
+ update: $(GAME) recover $(VARDAT) dungeon spec_levs
+ #	(don't yank the old version out from under people who're playing it)
