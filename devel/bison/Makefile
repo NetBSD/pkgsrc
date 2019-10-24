@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2019/10/23 12:17:33 triaxx Exp $
+# $NetBSD: Makefile,v 1.110 2019/10/24 10:53:23 jperkin Exp $
 
 DISTNAME=	bison-3.4.2
 CATEGORIES=	devel
@@ -28,19 +28,5 @@ CONFIGURE_ARGS.Cygwin+=	ac_cv_func___fpending=yes
 # Avoid rebuilding manpage
 pre-build:
 	${TOUCH} ${WRKSRC}/doc/bison.1
-
-# "bison" wants a recent version of "gettext" which at least some
-# NetBSD versions don't provide. Figure out whether it will install
-# the locale files or not.
-.if !empty(PKG_OPTIONS:Mnls)
-PLIST_SRC=	${WRKDIR}/PLIST
-
-post-configure:
-	if grep -q '^POSUB = po$$' ${WRKSRC}/Makefile; then		\
-	  ${CP} ${PKGDIR}/PLIST ${PLIST_SRC};				\
-	else								\
-	  ${GREP} -v '^share/locale/' ${PKGDIR}/PLIST >${PLIST_SRC};	\
-	fi
-.endif
 
 .include "../../mk/bsd.pkg.mk"
