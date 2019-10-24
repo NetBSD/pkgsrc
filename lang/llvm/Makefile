@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2019/10/19 13:52:40 adam Exp $
+# $NetBSD: Makefile,v 1.46 2019/10/24 11:20:09 jperkin Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -81,6 +81,7 @@ SUBST_CLASSES.SunOS+=	linkmap
 SUBST_STAGE.linkmap=	pre-configure
 SUBST_FILES.linkmap=	tools/lto/lto.exports
 SUBST_FILES.linkmap+=	tools/opt-remarks/OptRemarks.exports
+SUBST_FILES.linkmap+=	tools/remarks-shlib/Remarks.exports
 SUBST_SED.linkmap=	-e '/^LLVM/d'
 
 .include "../../mk/bsd.prefs.mk"
