@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.750 2019/10/22 22:21:26 nia Exp $
+# $NetBSD: Makefile,v 1.751 2019/10/24 08:30:20 micha Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1447,7 +1447,6 @@ SUBDIR+=	web2c
 SUBDIR+=	xdvik
 SUBDIR+=	xetex
 SUBDIR+=	xpdf
-SUBDIR+=	xpdf4
 SUBDIR+=	xpdf-arabic
 SUBDIR+=	xpdf-chinese-simplified
 SUBDIR+=	xpdf-chinese-traditional
@@ -1459,6 +1458,7 @@ SUBDIR+=	xpdf-korean
 SUBDIR+=	xpdf-latin2
 SUBDIR+=	xpdf-thai
 SUBDIR+=	xpdf-turkish
+SUBDIR+=	xpdf4
 SUBDIR+=	xpdfopen
 SUBDIR+=	xpp
 SUBDIR+=	yup
