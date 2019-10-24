@@ -1,14 +1,23 @@
-# $NetBSD: Makefile.common,v 1.35 2018/04/02 09:44:52 wiz Exp $
+# $NetBSD: Makefile.common,v 1.36 2019/10/24 11:51:23 pho Exp $
 #
 # used by games/nethack/Makefile
 # used by games/nethack-lib/Makefile
 # used by games/nethack-x11/Makefile
 # used by games/nethack-tty/Makefile
+#
+# System-provided variables:
+#
+# GAMEPERM
+#	The desired owner and the file mode of game executables.
+#
 
-NETHACK_BASEVER=	3.4.3
+NETHACK_BASEVER=	3.6.2
 NETHACK_VERSION=	${NETHACK_BASEVER}
 NETHACK_DISTVER=	${NETHACK_BASEVER:S/.//g}
-NETHACK_DIR=		nethackdir340
+NETHACK_DIR=		nethackdir${NETHACK_SAVEVER:S/.//g}
+
+# The last compatible version of save files.
+NETHACK_SAVEVER=	3.6.0
 
 DISTNAME=		nethack-${NETHACK_DISTVER}-src
 CATEGORIES=		games
@@ -31,12 +40,6 @@ USE_TOOLS+=		gzip yacc lex awk
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
 
-SUBST_CLASSES+=		ttylib
-SUBST_MESSAGE.ttylib=	Configuring to use correct termcap library
-SUBST_STAGE.ttylib=	pre-configure
-SUBST_FILES.ttylib=	sys/unix/Makefile.src
-SUBST_SED.ttylib=	-e 's!^WINTTYLIB = -ltermlib!WINTTYLIB = -L${BUILDLINK_PREFIX.termcap}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.termcap}/lib -l${BUILDLINK_LIBNAME.termcap}!'
-
 OPSYSVARS+=		NETHACK_OS
 NETHACK_OS.Linux=	SYSV
 NETHACK_OS.*=		BSD
@@ -45,12 +48,12 @@ SUBST_CLASSES+=		os
 SUBST_MESSAGE.os=	Configuring for ${NETHACK_OS}
 SUBST_STAGE.os=		pre-configure
 SUBST_FILES.os=		include/unixconf.h
-SUBST_SED.os=		-e 's,__NETHACK_OS__,${NETHACK_OS},'
+SUBST_VARS.os=		VARDIR NETHACK_OS
 
 SUBST_CLASSES+=		configh
 SUBST_STAGE.configh=	pre-configure
 SUBST_FILES.configh=	include/config.h
-SUBST_VARS.configh=	PREFIX
+SUBST_VARS.configh=	HACKDIR
 SUBST_SED.configh=	-e "s|@GZIP_PROGRAM@|${GZIP_CMD:[1]}|g"
 
 USE_GAMESGROUP=		yes
@@ -59,12 +62,26 @@ NETHACK_GROUP=		${GAMES_GROUP}
 BUILD_DEFS+=		GAMES_USER GAMES_GROUP
 GAMEPERM=		${NETHACK_USER} ${NETHACK_GROUP} 2555
 
-GAMEDIR=		${PREFIX}/share/${NETHACK_DIR}
-VARDIR=			/var/games/nethack340
-MAKE_ENV+=		GAMEDIR=${GAMEDIR}
+BUILD_DEFS+=		VARBASE
+HACKDIR=		${PREFIX}/share/${NETHACK_DIR}
+VARDIR=			${VARBASE}/games/nethack${NETHACK_SAVEVER:S/.//g}
+
+MAKE_ENV+=		HACKDIR=${HACKDIR}
 MAKE_ENV+=		VARDIR=${VARDIR}
+MAKE_ENV+=		INSTALL_DATA=${INSTALL_DATA:Q}
+MAKE_ENV+=		INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
+MAKE_ENV+=		INSTALL_PROGRAM=${INSTALL_PROGRAM:Q}
+
+WINTTYLIB=		-L${BUILDLINK_PREFIX.termcap}/lib \
+			${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.termcap}/lib \
+			-l${BUILDLINK_LIBNAME.termcap}
+MAKE_ENV+=		WINTTYLIB=${WINTTYLIB:Q}
 
 pre-configure:
-	@${CHMOD} 755 ${WRKSRC}/sys/unix/setup.sh
+	${RUN}${CHMOD} 755 ${WRKSRC}/sys/unix/setup.sh
 
-.endif # !NO_BUILD
+# Substitute NETHACK_DIR in PLIST.
+PLIST_SUBST+=		NETHACK_DIR=${NETHACK_DIR}
+PRINT_PLIST_AWK+=	{ gsub(/${NETHACK_DIR}/, "$${NETHACK_DIR}"); }
+
+.endif # !defined(META_PACKAGE)
