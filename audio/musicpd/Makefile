@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.200 2019/10/24 21:36:45 nia Exp $
+# $NetBSD: Makefile,v 1.201 2019/10/24 21:42:30 nia Exp $
 
 DISTNAME=	mpd-0.21.16
 PKGNAME=	${DISTNAME:S/mpd/musicpd/}
@@ -12,8 +12,6 @@ COMMENT=	Remote controllable audio player
 LICENSE=	gnu-gpl-v2
 
 CONFLICTS=	mpd-[0-9]*
-
-TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c99 c++14
@@ -63,6 +61,8 @@ SUBST_SED.sphinx+=	-e "s,sphinx-build,sphinx-build-${PYVERSSUFFIX},"
 INSTALLATION_DIRS=	${EGDIR}
 
 PYTHON_FOR_BUILD_ONLY=	tool
+
+PYTHON_VERSIONED_DEPENDENCIES=	sphinx:tool
 
 post-extract:
 	${CP} ${FILESDIR}/mpd.conf ${WRKSRC}/mpd.conf
