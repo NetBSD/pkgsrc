@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/10/16 20:51:59 maya Exp $
+# $NetBSD: Makefile,v 1.12 2019/10/24 12:50:36 otis Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -38,6 +38,8 @@ CONFIGURE_ARGS+=	--disable-atomic
 .endif
 CONFIGURE_ARGS.DragonFly+=	--disable-kqueue
 
+BUILDLINK_TRANSFORM.SunOS+=	rm:-zrelax=transtls
+
 PKG_GROUPS_VARS+=	BIND_GROUP
 PKG_USERS_VARS=		BIND_USER
 
@@ -72,4 +74,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/arm/*.html ${DESTDIR}${PREFIX}/${DOCDIR}/arm
 
 .include "../../security/openssl/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
