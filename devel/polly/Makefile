@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2019/10/19 14:01:36 adam Exp $
+# $NetBSD: Makefile,v 1.16 2019/10/24 11:52:20 tnn Exp $
 
 DISTNAME=	polly-9.0.0.src
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	devel
 MASTER_SITES=	http://releases.llvm.org/${PKGVERSION_NOREV}/
@@ -9,7 +10,7 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://polly.llvm.org/
 COMMENT=	Polyhedral optimizations for LLVM
-LICENSE=	modified-bsd
+LICENSE=	apache-2.0
 
 DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../lang/llvm
 
