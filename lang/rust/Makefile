@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2019/10/02 12:51:43 he Exp $
+# $NetBSD: Makefile,v 1.118 2019/10/24 17:34:10 jperkin Exp $
 
 DISTNAME=	rustc-1.38.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -280,8 +280,10 @@ RUST_BOOTSTRAP_PATH?=	${WRKDIR}/rust-bootstrap
 
 .if ${OPSYS} == "SunOS"
 BUILD_DEPENDS+=		coreutils>=0:../../sysutils/coreutils
+BUILD_DEPENDS+=		gzip>=0:../../archivers/gzip
 TOOLS_CREATE+=		md5sum
 TOOLS_PATH.md5sum=	${PREFIX}/bin/gmd5sum
+TOOLS_PLATFORM.gzcat=	${PREFIX}/bin/gzip -cd
 .endif
 
 SUBST_CLASSES+=		rpath
