@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2019/10/20 18:03:50 leot Exp $
+# $NetBSD: Makefile,v 1.2 2019/10/24 12:52:10 leot Exp $
 
-DISTNAME=	json2tsv-0.2
+DISTNAME=	json2tsv-0.3
 CATEGORIES=	textproc
 MASTER_SITES=	http://codemadness.org/releases/json2tsv/
 
