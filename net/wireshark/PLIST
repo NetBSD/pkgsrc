@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2019/10/01 11:47:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.45 2019/10/24 18:44:12 adam Exp $
 bin/capinfos
 bin/captype
 bin/dumpcap
@@ -602,10 +602,10 @@ include/wireshark/wsutil/wsjson.h
 include/wireshark/wsutil/xtea.h
 lib/libwireshark.so
 lib/libwireshark.so.12
-lib/libwireshark.so.12.0.5
+lib/libwireshark.so.12.0.6
 lib/libwiretap.so
 lib/libwiretap.so.9
-lib/libwiretap.so.9.0.5
+lib/libwiretap.so.9.0.6
 lib/libwscodecs.so
 lib/libwscodecs.so.2
 lib/libwscodecs.so.2.0.0
