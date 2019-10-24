@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.211 2019/10/02 13:44:34 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.212 2019/10/24 14:39:37 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -13,16 +13,9 @@
 #		Possible values: 22 24 25 26
 #		Default: 24
 #
-# RUBY_BUILD_RDOC
-#	Build rdoc of this package and so that install formated
+# RUBY_BUILD_DOCUMENT
+#	Build documentation of this package and so that install formated
 #	documentation.  It is also used in each package.
-#
-#		Possible values: Yes No
-#		Default: Yes
-#
-# RUBY_BUILD_RI
-#	Build ri format of this package so that ri command would be
-#	display class/module definitions.  It is also used in each package.
 #
 #		Possible values: Yes No
 #		Default: Yes
@@ -425,8 +418,7 @@ RUBY_SUFFIX=
 RUBY_NAME=		ruby
 .endif
 
-RUBY_BUILD_RDOC?=	Yes
-RUBY_BUILD_RI?=		Yes
+RUBY_BUILD_DOCUMENT?=	Yes
 
 RUBY?=			${PREFIX}/bin/${RUBY_NAME}
 RAKE?=			${PREFIX}/bin/${RAKE_NAME}
