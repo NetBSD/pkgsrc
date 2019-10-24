@@ -1,15 +1,31 @@
-$NetBSD: patch-aa,v 1.2 2011/12/11 20:51:48 marino Exp $
+$NetBSD: patch-aa,v 1.3 2019/10/24 22:31:48 kamil Exp $
 
 --- src/text.cpp.orig	2009-10-02 22:26:15.000000000 +0000
 +++ src/text.cpp
-@@ -441,7 +441,11 @@ void ConvertToUTF8(const std::string &te
+@@ -7,6 +7,15 @@
+ #include "text.h"
+ #include "video.h"
+ 
++#if defined(__NetBSD__)
++#include <sys/param.h>
++#if __NetBSD_Prereq__(9,99,17)
++#define NETBSD_POSIX_ICONV 1
++#else
++#define NETBSD_POSIX_ICONV 0
++#endif
++#endif
++
+ #ifndef ENABLE_PANGO
+ 
+ #include <SDL_ttf.h>
+@@ -441,7 +450,11 @@ void ConvertToUTF8(const std::string &te
  	iconv_t cd = iconv_open("UTF-8", locale_enc);
  	char *in_buf = const_cast<char *>(&text_locally_encoded[0]);
  	char *out_buf = &text_utf8[0];
-+#if defined(__DragonFly__)
- 	iconv(cd, &in_buf, &text_length, &out_buf, &text_utf8_length);
-+#else
++#if defined(__NetBSD__) && !NETBSD_POSIX_ICONV
 +	iconv(cd, (const char **)&in_buf, &text_length, &out_buf, &text_utf8_length);
++#else
+ 	iconv(cd, &in_buf, &text_length, &out_buf, &text_utf8_length);
 +#endif
  	iconv_close(cd);
  	if (errno != 0)
