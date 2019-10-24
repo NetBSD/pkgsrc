@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.2 2019/10/05 20:09:52 nia Exp $
+# $NetBSD: build.mk,v 1.3 2019/10/24 09:19:02 tnn Exp $
 
 BUILD_DEPENDS+=	meson-[0-9]*:../../devel/meson
 
@@ -11,6 +11,10 @@ INSTALL_DIRS?=		${CONFIGURE_DIRS}
 # pkgsrc contains multiple llvm-config executables at multiple locations.
 .if !empty(LLVM_CONFIG_PATH)
 MAKE_ENV+=	LLVM_CONFIG_PATH=${LLVM_CONFIG_PATH:Q}
+.endif
+
+.if !defined(USE_CMAKE)
+MAKE_ENV+=	CMAKE=${TOOLS_PATH.false}
 .endif
 
 do-configure: meson-configure
