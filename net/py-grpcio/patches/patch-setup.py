@@ -1,12 +1,12 @@
-$NetBSD: patch-setup.py,v 1.4 2019/04/19 07:31:47 adam Exp $
+$NetBSD: patch-setup.py,v 1.5 2019/10/24 18:34:17 adam Exp $
 
 Use dependencies in pkgsrc.
 
---- setup.py.orig	2019-04-15 23:12:51.000000000 +0000
+--- setup.py.orig	2019-10-22 19:40:13.000000000 +0000
 +++ setup.py
-@@ -206,19 +206,7 @@ EXTENSION_INCLUDE_DIRECTORIES = (
-     (PYTHON_STEM,) + CORE_INCLUDE + SSL_INCLUDE + ZLIB_INCLUDE +
-     NANOPB_INCLUDE + CARES_INCLUDE + ADDRESS_SORTING_INCLUDE)
+@@ -235,19 +235,7 @@ EXTENSION_INCLUDE_DIRECTORIES = (
+     UPB_GRPC_GENERATED_INCLUDE +
+     ZLIB_INCLUDE)
  
 -EXTENSION_LIBRARIES = ()
 -if "linux" in sys.platform:
@@ -25,7 +25,7 @@ Use dependencies in pkgsrc.
  
  DEFINE_MACROS = (('OPENSSL_NO_ASM', 1), ('_WIN32_WINNT', 0x600))
  if not DISABLE_LIBC_COMPATIBILITY:
-@@ -265,7 +253,7 @@ def cython_extensions_and_necessity():
+@@ -294,7 +282,7 @@ def cython_extensions_and_necessity():
                    for name in CYTHON_EXTENSION_MODULE_NAMES]
    config = os.environ.get('CONFIG', 'opt')
    prefix = 'libs/' + config + '/'
@@ -34,7 +34,7 @@ Use dependencies in pkgsrc.
      extra_objects = [prefix + 'libares.a',
                       prefix + 'libboringssl.a',
                       prefix + 'libgpr.a',
-@@ -277,7 +265,7 @@ def cython_extensions_and_necessity():
+@@ -306,7 +294,7 @@ def cython_extensions_and_necessity():
    extensions = [
        _extension.Extension(
            name=module_name,
