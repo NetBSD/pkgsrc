@@ -1,10 +1,11 @@
-$NetBSD: patch-ae,v 1.6 2011/06/01 11:20:29 wiz Exp $
+$NetBSD: patch-sys_unix_Makefile.doc,v 1.1 2019/10/24 11:51:23 pho Exp $
 
-Make configurable.
+1. Don't hardcode the man path.
+2. Support DESTDIR.
 
---- sys/unix/Makefile.doc.orig	2003-12-07 23:39:13.000000000 +0000
+--- sys/unix/Makefile.doc.orig	2019-05-08 07:00:16.000000000 +0000
 +++ sys/unix/Makefile.doc
-@@ -41,7 +41,7 @@ Guidebook.dvi:	Guidebook.tex
+@@ -62,7 +62,7 @@ Guidebook.dvi:	Guidebook.tex
  
  
  GAME	= nethack
@@ -13,8 +14,8 @@ Make configurable.
  MANEXT	= 6
  
  # manual installation for most BSD-style systems
-@@ -58,11 +58,11 @@ DLBMANCREATE = cp dlb.6
- # DLBMANCREATE = nroff -man dlb.6 >
+@@ -81,12 +81,12 @@ MDMANCREATE = cat makedefs.6 | $(NHGREP)
+ # MDMANCREATE = cat makedefs.6 | $(NHGREP) | nroff -man - >
  
  manpages:
 -	-$(GAMEMANCREATE) $(MANDIR)/$(GAME).$(MANEXT)
@@ -22,11 +23,13 @@ Make configurable.
 -	-$(DGNMANCREATE) $(MANDIR)/dgn_comp.$(MANEXT)
 -	-$(RCVRMANCREATE) $(MANDIR)/recover.$(MANEXT)
 -	-$(DLBMANCREATE) $(MANDIR)/dlb.$(MANEXT)
+-	-$(MDMANCREATE) $(MANDIR)/makedefs.$(MANEXT)
 +	-$(GAMEMANCREATE) $(DESTDIR)$(MANDIR)/$(GAME).$(MANEXT)
 +	-$(LEVMANCREATE) $(DESTDIR)$(MANDIR)/lev_comp.$(MANEXT)
 +	-$(DGNMANCREATE) $(DESTDIR)$(MANDIR)/dgn_comp.$(MANEXT)
 +	-$(RCVRMANCREATE) $(DESTDIR)$(MANDIR)/recover.$(MANEXT)
 +	-$(DLBMANCREATE) $(DESTDIR)$(MANDIR)/dlb.$(MANEXT)
++	-$(MDMANCREATE) $(DESTDIR)$(MANDIR)/makedefs.$(MANEXT)
  
  # manual creation for distribution
- DISTRIB = Guidebook.txt nethack.txt lev_comp.txt dgn_comp.txt recover.txt dlb.txt
+ DISTRIB = Guidebook.txt nethack.txt lev_comp.txt dgn_comp.txt recover.txt \
