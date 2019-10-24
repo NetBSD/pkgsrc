@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 20:56:52 agc Exp $
+$NetBSD: distinfo,v 1.4 2019/10/24 22:31:48 kamil Exp $
 
 SHA1 (hex-a-hop-1.1.0.tar.gz) = 5e1994caaa4974ba87bb5676aed1e44c81dec85d
 RMD160 (hex-a-hop-1.1.0.tar.gz) = af89e8da428d8b79e71a77b9750a10b1b303b9e4
 SHA512 (hex-a-hop-1.1.0.tar.gz) = d8f7c1ab576d499595a09703a699654b88548b7266441af8f8af5287cfdcc998389faba024650214f3cb85f359a238802ecbcecbb699e5aa80ad7c5cf02a6bcd
 Size (hex-a-hop-1.1.0.tar.gz) = 9249269 bytes
-SHA1 (patch-aa) = e5701d1a80e85ff947894e430c2a0b876192065b
+SHA1 (patch-aa) = 1e950a2ebd4190d7911eaf64f4ee53bff2fc001a
 SHA1 (patch-ab) = ad560c67520e3be4eba657c60713e25e4c24f2a6
