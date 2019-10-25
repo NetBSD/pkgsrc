@@ -1,8 +1,10 @@
-# $NetBSD: options.mk,v 1.2 2018/11/09 18:12:24 adam Exp $
+# $NetBSD: options.mk,v 1.3 2019/10/25 04:39:18 triaxx Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql11
-PKG_SUPPORTED_OPTIONS=	bonjour dtrace icu llvm gssapi ldap pam
+PKG_SUPPORTED_OPTIONS=	bonjour dtrace icu llvm gssapi ldap nls pam
 PKG_SUGGESTED_OPTIONS=	gssapi
+
+PLIST_VARS+=		llvm nls
 
 .include "../../mk/bsd.options.mk"
 
@@ -42,13 +44,25 @@ CONFIGURE_ARGS+=	--with-ldap
 .endif
 
 # LLVM based JIT support
-PLIST_VARS+=		llvm
 .if !empty(PKG_OPTIONS:Mllvm)
 .  include "../../lang/llvm/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-llvm
 CONFIGURE_ENV+=		CLANG=${CC}	# XXX: make it be better
 PLIST.llvm=		yes
 .endif
+
+# NLS support
+.if !empty(PKG_OPTIONS:Mnls)
+USE_PKGLOCALEDIR=    yes
+USE_TOOLS+=        msgfmt
+CONFIGURE_ARGS+=    --enable-nls
+PLIST.nls=        yes
+.  include "../../devel/gettext-lib/buildlink3.mk"
+LIBS.SunOS+=		-lintl
+.else
+CONFIGURE_ARGS+=    --disable-nls
+.endif
+
 
 # PAM authentication for the PostgreSQL backend
 .if !empty(PKG_OPTIONS:Mpam)

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/11/09 18:12:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/10/25 04:39:18 triaxx Exp $
 include/postgresql/server/plpy_cursorobject.h
 include/postgresql/server/plpy_elog.h
 include/postgresql/server/plpy_exec.h
@@ -19,20 +19,20 @@ ${PLIST.py3x}lib/postgresql/hstore_plpython3.so
 lib/postgresql/pgxs/src/pl/plpython/regress-python3-mangle.mk
 ${PLIST.py2x}lib/postgresql/plpython2.so
 ${PLIST.py3x}lib/postgresql/plpython3.so
-share/locale/cs/LC_MESSAGES/plpython-11.mo
-share/locale/de/LC_MESSAGES/plpython-11.mo
-share/locale/es/LC_MESSAGES/plpython-11.mo
-share/locale/fr/LC_MESSAGES/plpython-11.mo
-share/locale/it/LC_MESSAGES/plpython-11.mo
-share/locale/ja/LC_MESSAGES/plpython-11.mo
-share/locale/ko/LC_MESSAGES/plpython-11.mo
-share/locale/pl/LC_MESSAGES/plpython-11.mo
-share/locale/pt_BR/LC_MESSAGES/plpython-11.mo
-share/locale/ru/LC_MESSAGES/plpython-11.mo
-share/locale/sv/LC_MESSAGES/plpython-11.mo
-share/locale/tr/LC_MESSAGES/plpython-11.mo
-share/locale/vi/LC_MESSAGES/plpython-11.mo
-share/locale/zh_CN/LC_MESSAGES/plpython-11.mo
+${PLIST.nls}share/locale/cs/LC_MESSAGES/plpython-11.mo
+${PLIST.nls}share/locale/de/LC_MESSAGES/plpython-11.mo
+${PLIST.nls}share/locale/es/LC_MESSAGES/plpython-11.mo
+${PLIST.nls}share/locale/fr/LC_MESSAGES/plpython-11.mo
+${PLIST.nls}share/locale/it/LC_MESSAGES/plpython-11.mo
+${PLIST.nls}share/locale/ja/LC_MESSAGES/plpython-11.mo
+${PLIST.nls}share/locale/ko/LC_MESSAGES/plpython-11.mo
+${PLIST.nls}share/locale/pl/LC_MESSAGES/plpython-11.mo
+${PLIST.nls}share/locale/pt_BR/LC_MESSAGES/plpython-11.mo
+${PLIST.nls}share/locale/ru/LC_MESSAGES/plpython-11.mo
+${PLIST.nls}share/locale/sv/LC_MESSAGES/plpython-11.mo
+${PLIST.nls}share/locale/tr/LC_MESSAGES/plpython-11.mo
+${PLIST.nls}share/locale/vi/LC_MESSAGES/plpython-11.mo
+${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/plpython-11.mo
 share/postgresql/extension/hstore_plpython2u--1.0.sql
 share/postgresql/extension/hstore_plpython2u.control
 share/postgresql/extension/hstore_plpython3u--1.0.sql
