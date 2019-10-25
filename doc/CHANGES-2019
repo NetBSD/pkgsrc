@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4541 2019/10/25 14:48:17 gdt Exp $
+$NetBSD: CHANGES-2019,v 1.4542 2019/10/25 21:04:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7275,11 +7275,11 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed multimedia/vlc2 successor multimedia/vlc [kamil 2019-10-25]
 	Removed multimedia/kaffeine [kamil 2019-10-25]
 	Added www/p5-HTTP-Tiny-Mech version 1.001002 [mef 2019-10-25]
-	Renamed editors/gedit3 to editors/gedit [kamil 2019-10-25]
+	Moved editors/gedit3 to editors/gedit [kamil 2019-10-25]
 	Updated devel/p5-Modern-Perl to 1.20190727 [mef 2019-10-25]
 	Updated devel/p5-Module-Build to 0.42290 [mef 2019-10-25]
 	Updated devel/p5-MetaCPAN-Client to 2.026000 [mef 2019-10-25]
 	Renamed devel/accerciser3 to devel/accerciser [kamil 2019-10-25]
 	Updated multimedia/mpv to 0.30.0 [leot 2019-10-25]
-	Renamed graphics/eog3 to graphics/eog [kamil 2019-10-25]
+	Moved graphics/eog3 to graphics/eog [kamil 2019-10-25]
 	Updated net/unifi to 5.11.50 [gdt 2019-10-25]
