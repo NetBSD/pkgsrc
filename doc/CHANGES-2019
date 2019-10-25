@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4538 2019/10/25 14:19:55 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.4539 2019/10/25 14:36:12 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7280,3 +7280,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-Module-Build to 0.42290 [mef 2019-10-25]
 	Updated devel/p5-MetaCPAN-Client to 2.026000 [mef 2019-10-25]
 	Renamed devel/accerciser3 to devel/accerciser [kamil 2019-10-25]
+	Updated multimedia/mpv to 0.30.0 [leot 2019-10-25]
