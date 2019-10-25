@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2018/10/15 17:20:21 nia Exp $
+$NetBSD: distinfo,v 1.2 2019/10/25 11:04:04 kamil Exp $
 
 SHA1 (libretro-dolphin-20180827-a5bce7d67abeaa9142d466a578ca5049197073e9.tar.gz) = 10f66e6c88d28a0ee203ce29526c862286a30e65
 RMD160 (libretro-dolphin-20180827-a5bce7d67abeaa9142d466a578ca5049197073e9.tar.gz) = 6c60c2ba633d5195efe8a1c9632c7eea09444b52
@@ -7,7 +7,7 @@ Size (libretro-dolphin-20180827-a5bce7d67abeaa9142d466a578ca5049197073e9.tar.gz)
 SHA1 (patch-CMakeLists.txt) = a2645cbadef33fa5da955f577d7b076b4d56d139
 SHA1 (patch-Externals_SFML_include_SFML_Config.hpp) = 75ece2ce86b54b219a80d6ff028ecc80a00454f5
 SHA1 (patch-Source_Core_Common_MemoryUtil.cpp) = dd5792447e2a06b0a94e64b33d5bd77f0c439724
-SHA1 (patch-Source_Core_Common_StringUtil.cpp) = e7617eb9c16f479f3a3edda1a2ed7496d5ca531c
+SHA1 (patch-Source_Core_Common_StringUtil.cpp) = 9a0e91980e91f49e39364b46581984115e4c5c4b
 SHA1 (patch-Source_Core_Common_Swap.h) = bbba25b164dac8109c7e95256e108cff2c71924d
 SHA1 (patch-Source_Core_Common_Thread.cpp) = 2043bdbdc07eb0e3a0e78cf5258cac10b350d26b
 SHA1 (patch-Source_Core_Core_Analytics.cpp) = 7b6b5770eea86d71c42bf309eca86eff14b1b177
