@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.5 2019/10/25 13:58:42 kamil Exp $
+# $NetBSD: options.mk,v 1.6 2019/10/25 14:01:39 kamil Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.gedit3
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gedit
 PKG_SUPPORTED_OPTIONS=	enchant
 PKG_SUGGESTED_OPTIONS=	enchant
 
