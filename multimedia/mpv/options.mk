@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.19 2019/09/14 16:39:26 adam Exp $
+# $NetBSD: options.mk,v 1.20 2019/10/25 14:35:56 leot Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
 
@@ -8,7 +8,7 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
 PKG_OPTIONS_OPTIONAL_GROUPS=	gl
 PKG_OPTIONS_GROUP.gl=		opengl rpi
 
-PKG_SUPPORTED_OPTIONS+=		alsa ass bluray caca libdrm lua pulseaudio v4l2
+PKG_SUPPORTED_OPTIONS+=		alsa ass bluray caca libdrm lua pulseaudio
 PKG_SUPPORTED_OPTIONS+=		sdl2 wayland x11
 
 .include "../../mk/bsd.fast.prefs.mk"
@@ -97,15 +97,6 @@ WAF_CONFIGURE_ARGS+=	--enable-libass
 .include "../../multimedia/libass/buildlink3.mk"
 .else
 WAF_CONFIGURE_ARGS+=	--disable-libass
-.endif
-
-###
-### V4L2 support
-###
-.if !empty(PKG_OPTIONS:Mv4l2)
-WAF_CONFIGURE_ARGS+=	--enable-libv4l2
-.else
-WAF_CONFIGURE_ARGS+=	--disable-libv4l2
 .endif
 
 ###
