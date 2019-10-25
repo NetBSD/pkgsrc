@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4522 2019/10/25 02:57:30 taca Exp $
+$NetBSD: CHANGES-2019,v 1.4523 2019/10/25 03:00:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7260,3 +7260,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/musicpd to 0.21.16 [nia 2019-10-24]
 	Updated lang/php72 to 7.2.24 [taca 2019-10-25]
 	Updated lang/php73 to 7.3.11 [taca 2019-10-25]
+	Updated lang/php71 to 7.1.33 [taca 2019-10-25]
