@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2019/10/07 19:28:28 adam Exp $
+# $NetBSD: Makefile.common,v 1.16 2019/10/25 12:01:19 triaxx Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -37,8 +37,7 @@ DISTINFO_FILE?=		${.CURDIR}/../../databases/postgresql10/distinfo
 COMMON_FILESDIR?=	${.CURDIR}/../../databases/postgresql10/files
 PATCHDIR?=		${.CURDIR}/../../databases/postgresql10/patches
 
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		bison gmake lex msgfmt
+USE_TOOLS+=		bison gmake lex
 PKG_SYSCONFSUBDIR=	postgresql
 
 .include "../../mk/bsd.prefs.mk"
@@ -62,15 +61,11 @@ CONFIGURE_ARGS+=	--docdir=${PG_DOC_DIR}
 CONFIGURE_ARGS+=	--localedir=${PG_LOCALE_DIR}
 CONFIGURE_ARGS+=	--with-template=${PG_TEMPLATE.${OPSYS}}
 
-CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--with-libxml
 CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--without-perl
 CONFIGURE_ARGS+=	--without-python
 CONFIGURE_ARGS+=	--without-tcl
-
-# avoid pointing to a wrapper
-CONFIGURE_ENV+=		MSGFMT=${TOOLS_PATH.msgfmt}
 
 # sys/ucred.h shouldn't be included on Solaris, causes conflicts between
 # procfs and largefile.
@@ -107,8 +102,6 @@ USE_LIBLTDL?=		yes
 .endif
 USE_LIBLTDL?=		no
 
-.include "../../devel/gettext-lib/buildlink3.mk"
-LIBS.SunOS+=		-lintl
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 

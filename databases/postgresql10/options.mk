@@ -1,8 +1,10 @@
-# $NetBSD: options.mk,v 1.2 2017/12/15 16:52:23 dholland Exp $
+# $NetBSD: options.mk,v 1.3 2019/10/25 12:01:19 triaxx Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql10
-PKG_SUPPORTED_OPTIONS=	bonjour dtrace icu gssapi ldap pam
-PKG_SUGGESTED_OPTIONS=	gssapi
+PKG_SUPPORTED_OPTIONS=	bonjour dtrace icu gssapi ldap nls pam
+PKG_SUGGESTED_OPTIONS=	gssapi nls
+
+PLIST_VARS+=		nls
 
 .include "../../mk/bsd.options.mk"
 
@@ -39,6 +41,18 @@ CONFIGURE_ARGS+=       --without-gssapi
 .if !empty(PKG_OPTIONS:Mldap)
 .  include "../../databases/openldap-client/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ldap
+.endif
+
+# NLS support
+.if !empty(PKG_OPTIONS:Mnls)
+USE_PKGLOCALEDIR=	yes
+CONFIGURE_ARGS+=	--enable-nls
+PLIST.nls=		yes
+BROKEN_GETTEXT_DETECTION=	yes
+.  include "../../devel/gettext-lib/buildlink3.mk"
+LIBS.SunOS+=		-lintl
+.else
+CONFIGURE_ARGS+=	--disable-nls
 .endif
 
 # PAM authentication for the PostgreSQL backend
