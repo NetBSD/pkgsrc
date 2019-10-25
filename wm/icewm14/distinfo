@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2018/11/28 16:24:54 jperkin Exp $
+$NetBSD: distinfo,v 1.3 2019/10/25 10:21:32 kamil Exp $
 
 SHA1 (icewm-1.4.2.tar.bz2) = d1f9af531fec7beaa334db9c0e4764b9e40bbacd
 RMD160 (icewm-1.4.2.tar.bz2) = 6aaabad0c235901556951c9d88178adf15e29f51
@@ -11,4 +11,4 @@ SHA1 (patch-src_icetray.cc) = a8e70da376e13be187037f190c672b8b75fd287b
 SHA1 (patch-src_wmapp.cc) = fdabb4348c1dc55d390c942f34aa0fb597f49fc0
 SHA1 (patch-src_wpixres.cc) = aeb0b6423a48e0f3b4074baa2a0a0c9e52e9d8ed
 SHA1 (patch-src_yapp.cc) = f3c8e1d6d0830d4b95d131af37a1f394737a3c48
-SHA1 (patch-src_ylocale.cc) = 72f29d57d3f238c41fa93997724cc7cc8fd5f6f6
+SHA1 (patch-src_ylocale.cc) = 099296135053df781bd3755f9947d34d52fd3020
