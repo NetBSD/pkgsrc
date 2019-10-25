@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19363 2019/10/24 21:23:23 nia Exp $
+$NetBSD: TODO,v 1.19364 2019/10/25 03:02:14 taca Exp $
 
 Suggested new packages
 ======================
@@ -1012,7 +1012,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o muse-0.9.2
 	o myodbc-5.3.4
 	o mysql-connector-c++-8.0.17
-	o mysql-server-8.0.15
+	o mysql-server-8.0.18
 	o mysql-workbench-6.3
 	o nant-0.92
 	o nap-1.5.3
@@ -1189,11 +1189,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rt4-4.4.0
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.4
-	o ruby-redmine-4.0.4
+	o ruby-redmine-4.0.5
 	o rump-20131213
 	o sabayon-2.30.1
 	o sablecc-3.7
-	o samba-4.11.0
+	o samba-4.11.1
 	o sarg-2.2.5
 	o scapy-2.4.3
 	o scew-1.1.7
