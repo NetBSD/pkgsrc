@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.854 2019/10/20 15:27:12 nia Exp $
+# $NetBSD: Makefile,v 1.855 2019/10/25 14:37:55 kamil Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -98,6 +98,7 @@ SUBDIR+=	dxsamples
 SUBDIR+=	edje
 SUBDIR+=	elementary-xfce-icon-theme
 SUBDIR+=	enblend-enfuse
+SUBDIR+=	eog
 SUBDIR+=	eog3
 SUBDIR+=	eom
 SUBDIR+=	epeg
