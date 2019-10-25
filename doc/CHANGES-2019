@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4525 2019/10/25 09:21:07 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4526 2019/10/25 09:38:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7264,3 +7264,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/ghc to 6.8.3nb10 [gutteridge 2019-10-25]
 	Updated www/nginx-devel to 1.17.5 [adam 2019-10-25]
 	Updated archivers/unrar to 5.8.3 [adam 2019-10-25]
+	Updated www/py-flask-jwt-extended to 3.24.1 [adam 2019-10-25]
+	Updated devel/py-test5 to 5.2.2 [adam 2019-10-25]
