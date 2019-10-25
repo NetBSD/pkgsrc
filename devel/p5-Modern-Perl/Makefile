@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2019/08/11 13:19:48 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2019/10/25 14:04:47 mef Exp $
 
-DISTNAME=	Modern-Perl-1.20181021
+DISTNAME=	Modern-Perl-1.20190727
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/C/CH/CHROMATIC/}
 
