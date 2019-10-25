@@ -1,14 +1,13 @@
-$NetBSD: patch-video_out_wayland__common.c,v 1.1 2019/08/18 17:57:55 nia Exp $
+$NetBSD: patch-video_out_wayland__common.c,v 1.2 2019/10/25 14:35:56 leot Exp $
 
 Allow building on systems without evdev.
 
---- video/out/wayland_common.c.orig	2018-10-02 19:03:41.000000000 +0000
+--- video/out/wayland_common.c.orig	2019-10-25 13:08:15.000000000 +0000
 +++ video/out/wayland_common.c
-@@ -16,8 +16,14 @@
-  */
- 
+@@ -19,7 +19,13 @@
+ #include <limits.h>
  #include <poll.h>
--#include <unistd.h>
+ #include <unistd.h>
 +#if defined(__linux) || defined(__FreeBSD__)
  #include <linux/input.h>
 +#else
@@ -16,7 +15,6 @@ Allow building on systems without evdev.
 +#define BTN_MIDDLE	(1)
 +#define BTN_RIGHT	(2)
 +#endif
-+#include <unistd.h>
+ #include <time.h>
  #include "common/msg.h"
- #include "input/input.h"
- #include "input/keycodes.h"
+ #include "options/m_config.h"
