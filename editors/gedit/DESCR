@@ -1,0 +1,12 @@
+gedit is a small and lightweight UTF-8 text editor.  It is part of
+GNOME and uses the latest GTK+ and GNOME libraries.  Complete GNOME
+integration is featured, with support for Drag and Drop (DnD) from
+Nautilus (the GNOME file manager), the use of the GNOME help system,
+the GNOME Virtual File System and the GNOME print framework.
+
+gedit uses a Multiple Document Interface (MDI), which lets you edit
+more than one document at the same time.  It supports most standard
+editing features, plus several not found in your average text editor
+(plugins being the most notable of these).  Plugins may also be
+written in the python scripting language: to enable python support
+you need the pygtk and gnome-python-desktop bindings.
