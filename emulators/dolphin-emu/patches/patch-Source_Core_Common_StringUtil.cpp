@@ -1,10 +1,26 @@
-$NetBSD: patch-Source_Core_Common_StringUtil.cpp,v 1.1 2019/01/01 17:19:58 nia Exp $
+$NetBSD: patch-Source_Core_Common_StringUtil.cpp,v 1.2 2019/10/25 09:56:51 kamil Exp $
 
 Support NetBSD.
 
 --- Source/Core/Common/StringUtil.cpp.orig	2016-06-24 08:09:07.000000000 +0000
 +++ Source/Core/Common/StringUtil.cpp
-@@ -121,11 +121,11 @@ bool CharArrayFromFormatV(char* out, int
+@@ -28,6 +28,15 @@
+ 	#include <errno.h>
+ #endif
+ 
++#if defined(__NetBSD__)
++#include <sys/param.h>
++#if __NetBSD_Prereq__(9,99,17)
++#define NETBSD_POSIX_ICONV 1
++#else
++#define NETBSD_POSIX_ICONV 0
++#endif
++#endif
++
+ #if !defined(_WIN32) && !defined(ANDROID)
+ static locale_t GetCLocale()
+ {
+@@ -121,11 +130,11 @@ bool CharArrayFromFormatV(char* out, int
  		c_locale = _create_locale(LC_ALL, "C");
  	writtenCount = _vsnprintf_l(out, outsize, format, c_locale, args);
  #else
@@ -18,7 +34,7 @@ Support NetBSD.
  	uselocale(previousLocale);
  	#endif
  #endif
-@@ -162,12 +162,12 @@ std::string StringFromFormatV(const char
+@@ -162,12 +171,12 @@ std::string StringFromFormatV(const char
  	std::string temp = buf;
  	delete[] buf;
  #else
@@ -33,11 +49,11 @@ Support NetBSD.
  	uselocale(previousLocale);
  	#endif
  
-@@ -427,8 +427,13 @@ std::string CodeToUTF8(const char* fromc
+@@ -427,8 +436,13 @@ std::string CodeToUTF8(const char* fromc
  
  		while (src_bytes != 0)
  		{
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) && !NETBSD_POSIX_ICONV
 +			size_t const iconv_result = iconv(conv_desc, (const char**)(&src_buffer), &src_bytes,
 +				&dst_buffer, &dst_bytes);
 +#else
