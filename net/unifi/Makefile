@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2019/10/25 00:41:37 gdt Exp $
+# $NetBSD: Makefile,v 1.14 2019/10/25 14:48:02 gdt Exp $
 
-# Update to 5.11.50 is on old because of crashing.
-DISTNAME=	unifi-5.10.26
+DISTNAME=	unifi-5.11.50
 CATEGORIES=	net
 MASTER_SITES=	-http://dl.ubnt.com/unifi/${PKGVERSION_NOREV}/UniFi.unix.zip
 EXTRACT_SUFX=	.zip
