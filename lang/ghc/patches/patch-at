@@ -1,4 +1,6 @@
-$NetBSD: patch-at,v 1.8 2014/06/27 06:51:22 dholland Exp $
+$NetBSD: patch-at,v 1.9 2019/10/25 08:55:46 gutteridge Exp $
+
+Recognize more Perl versions.
 
 --- ../ghc-6.4.2/configure.orig	2006-04-19 07:36:55.000000000 +1200
 +++ ../ghc-6.4.2/configure
@@ -7,7 +9,7 @@ $NetBSD: patch-at,v 1.8 2014/06/27 06:51:22 dholland Exp $
     else
     $PerlCmd -v >conftest.out 2>&1
 -   if grep "v5.6" conftest.out >/dev/null 2>&1; then
-+   if grep "v5.[12][02468]" conftest.out >/dev/null 2>&1; then
++   if grep "v5.[123][02468]" conftest.out >/dev/null 2>&1; then
        :
     else
        if grep "v5.8" conftest.out >/dev/null 2>&1; then
