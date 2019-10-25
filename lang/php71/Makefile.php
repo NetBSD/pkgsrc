@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.php,v 1.13 2018/12/09 12:14:36 taca Exp $
+# $NetBSD: Makefile.php,v 1.13.8.1 2019/10/25 13:02:39 bsiegert Exp $
 # used by lang/php71/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
 
-# With --disable-gcc-global-regs, works around 
+# With --disable-gcc-global-regs, works around
 # https://bugs.php.net/bug.php?id=74527
 # https://gcc.gnu.org/bugzilla/show_bug.cgi?id=86236
 .if ${MACHINE_ARCH} == "i386"
@@ -80,7 +80,6 @@ CONFIGURE_ARGS+=	--enable-maintainer-zts
 .endif
 
 .if !empty(PKG_OPTIONS:Mreadline)
-USE_GNU_READLINE=	yes
 .include "../../devel/readline/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 .else
