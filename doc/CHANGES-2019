@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4527 2019/10/25 09:45:57 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4528 2019/10/25 10:22:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7268,3 +7268,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-test5 to 5.2.2 [adam 2019-10-25]
 	Updated devel/py-test-runner to 5.1 [adam 2019-10-25]
 	Updated devel/py-test-testmon to 0.9.19 [adam 2019-10-25]
+	Updated devel/py-cffi to 1.13.1 [adam 2019-10-25]
+	Updated graphics/py-graphviz to 0.13 [adam 2019-10-25]
