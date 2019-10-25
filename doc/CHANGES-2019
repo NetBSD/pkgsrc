@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4524 2019/10/25 08:56:55 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.4525 2019/10/25 09:21:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7262,3 +7262,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/php73 to 7.3.11 [taca 2019-10-25]
 	Updated lang/php71 to 7.1.33 [taca 2019-10-25]
 	Updated lang/ghc to 6.8.3nb10 [gutteridge 2019-10-25]
+	Updated www/nginx-devel to 1.17.5 [adam 2019-10-25]
+	Updated archivers/unrar to 5.8.3 [adam 2019-10-25]
