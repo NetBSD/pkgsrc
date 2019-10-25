@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.5 2019/10/21 06:33:11 triaxx Exp $
+# $NetBSD: options.mk,v 1.6 2019/10/25 12:36:12 triaxx Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gmake
 PKG_SUPPORTED_OPTIONS=	nls
+PKG_SUGGESTED_OPTIONS=	nls
 
 PLIST_VARS+=		nls
 
