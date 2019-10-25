@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4535 2019/10/25 14:04:17 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.4536 2019/10/25 14:15:56 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7276,3 +7276,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed multimedia/kaffeine [kamil 2019-10-25]
 	Added www/p5-HTTP-Tiny-Mech version 1.001002 [mef 2019-10-25]
 	Renamed editors/gedit3 to editors/gedit [kamil 2019-10-25]
+	Updated devel/p5-Modern-Perl to 1.20190727 [mef 2019-10-25]
+	Updated devel/p5-Module-Build to 0.42290 [mef 2019-10-25]
