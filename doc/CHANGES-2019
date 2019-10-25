@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4536 2019/10/25 14:15:56 mef Exp $
+$NetBSD: CHANGES-2019,v 1.4537 2019/10/25 14:18:47 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7278,3 +7278,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Renamed editors/gedit3 to editors/gedit [kamil 2019-10-25]
 	Updated devel/p5-Modern-Perl to 1.20190727 [mef 2019-10-25]
 	Updated devel/p5-Module-Build to 0.42290 [mef 2019-10-25]
+	Updated devel/p5-MetaCPAN-Client to 2.026000 [mef 2019-10-25]
