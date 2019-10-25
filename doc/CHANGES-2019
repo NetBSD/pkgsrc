@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4540 2019/10/25 14:40:22 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.4541 2019/10/25 14:48:17 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7282,3 +7282,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Renamed devel/accerciser3 to devel/accerciser [kamil 2019-10-25]
 	Updated multimedia/mpv to 0.30.0 [leot 2019-10-25]
 	Renamed graphics/eog3 to graphics/eog [kamil 2019-10-25]
+	Updated net/unifi to 5.11.50 [gdt 2019-10-25]
