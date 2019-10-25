@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q3,v 1.1.2.8 2019/10/23 11:34:04 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q3,v 1.1.2.9 2019/10/25 13:03:10 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q3 branch:
 
@@ -44,4 +44,13 @@ www/nostromo: security fix
 
 Pullup ticket #6074 - requested by taca
 www/ruby-loofah: seucurity fix
+
+Pullup ticket #6075 - requested by taca
+lang/php72: security fix
+
+Pullup ticket #6076 - requested by taca
+lang/php73: security fix
+
+Pullup ticket #6077 - requested by taca
+lang/php71: security fix
 
