@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4523 2019/10/25 03:00:30 taca Exp $
+$NetBSD: CHANGES-2019,v 1.4524 2019/10/25 08:56:55 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7261,3 +7261,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/php72 to 7.2.24 [taca 2019-10-25]
 	Updated lang/php73 to 7.3.11 [taca 2019-10-25]
 	Updated lang/php71 to 7.1.33 [taca 2019-10-25]
+	Updated lang/ghc to 6.8.3nb10 [gutteridge 2019-10-25]
