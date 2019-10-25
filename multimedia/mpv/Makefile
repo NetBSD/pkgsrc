@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.87 2019/09/18 14:17:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.88 2019/10/25 14:35:55 leot Exp $
 
-DISTNAME=	mpv-0.29.1
-PKGREVISION=	11
+DISTNAME=	mpv-0.30.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mpv-player/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -22,7 +21,6 @@ TOOL_DEPENDS+=	waf>=2.0.9:../../devel/waf
 
 WAF_CONFIGURE_ARGS+=	--bindir=${PREFIX}/bin
 WAF_CONFIGURE_ARGS+=	--enable-dvdnav
-WAF_CONFIGURE_ARGS+=	--enable-dvdread
 WAF_CONFIGURE_ARGS+=	--disable-egl-x11
 WAF_CONFIGURE_ARGS+=	--disable-swift
 
@@ -59,7 +57,6 @@ post-install:
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../multimedia/libdvdnav/buildlink3.mk"
-.include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
