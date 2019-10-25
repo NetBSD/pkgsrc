@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/02/17 08:26:11 adam Exp $
+# $NetBSD: Makefile,v 1.7 2019/10/25 12:01:19 triaxx Exp $
 
 PKGNAME=	${DISTNAME:C/-/10-server-/}
 COMMENT=	PostgreSQL database server programs
@@ -19,8 +19,6 @@ INSTALL_DIRS+=	src/timezone
 INSTALL_DIRS+=	src/pl
 BUILD_DIRS=	src/port
 BUILD_DIRS+=	${INSTALL_DIRS}
-
-LIBS.SunOS+=	-lintl
 
 # PostgreSQL has loadable server-side language modules.
 #
