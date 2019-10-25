@@ -1,0 +1,10 @@
+This code is somewhat poorly documented, and highly experimental.
+
+Its the result of a quick bit of hacking to get MetaCPAN::API working
+faster via the WWW::Mechanize::Cached module ( and gaining cache
+persistence via CHI )
+
+It works so far for this purpose.
+
+At present, only "get" and "request" are implemented, and all other
+calls fall through to a native HTTP::Tiny.
