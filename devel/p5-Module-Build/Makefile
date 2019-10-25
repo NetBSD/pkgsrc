@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2019/08/11 13:19:48 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2019/10/25 14:14:49 mef Exp $
 
-DISTNAME=	Module-Build-0.4224
+DISTNAME=	Module-Build-0.4229
 PKGNAME=	p5-${DISTNAME}0
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Module/}
 
@@ -11,23 +10,18 @@ HOMEPAGE=	https://metacpan.org/release/Module-Build
 COMMENT=	Build and install Perl modules
 LICENSE=	${PERL5_LICENSE}
 
-#DEPENDS+=	p5-ExtUtils-CBuilder>=0.27:../../devel/p5-ExtUtils-CBuilder
-#DEPENDS+=	p5-ExtUtils-ParseXS>=2.21:../../devel/p5-ExtUtils-ParseXS
-# needed for tests
-BUILD_DEPENDS+=	p5-CPAN-Meta>=2.142060:../../devel/p5-CPAN-Meta
-# one test not skipped if,
-# (but getting cyclic dependency if enabled as BUILD_DEPENDS)
-#DEPENDS+=	p5-PAR-Dist-[0-9]*:../../devel/p5-PAR-Dist
 DEPENDS+=	p5-inc-latest-[0-9]*:../../devel/p5-inc-latest
+
+TEST_DEPENDS+=	p5-CPAN-Meta>=2.142060:../../devel/p5-CPAN-Meta
+TEST_DEPENDS+=	p5-PAR-Dist-[0-9]*:../../devel/p5-PAR-Dist
+# For the tests:
+USE_TOOLS+=		perl
 
 .include "options.mk"
 
-USE_LANGUAGES=	c       # For the tests
 #BUILDING_MODULE_BUILD=	yes
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/Module/Build/.packlist
-# For the tests:
-USE_TOOLS+=		perl
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
