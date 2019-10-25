@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4533 2019/10/25 13:46:20 mef Exp $
+$NetBSD: CHANGES-2019,v 1.4534 2019/10/25 13:59:04 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7275,3 +7275,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed multimedia/vlc2 successor multimedia/vlc [kamil 2019-10-25]
 	Removed multimedia/kaffeine [kamil 2019-10-25]
 	Added www/p5-HTTP-Tiny-Mech version 1.001002 [mef 2019-10-25]
+	Added editors/gedit version 3.22.1nb10 [kamil 2019-10-25]
