@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1411 2019/10/22 10:34:35 ng0 Exp $
+# $NetBSD: Makefile,v 1.1412 2019/10/25 13:46:20 mef Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -421,6 +421,7 @@ SUBDIR+=	p5-HTTP-Server-Simple-Recorder
 SUBDIR+=	p5-HTTP-Server-Simple-Static
 SUBDIR+=	p5-HTTP-Thin
 SUBDIR+=	p5-HTTP-Tiny
+SUBDIR+=	p5-HTTP-Tiny-Mech
 SUBDIR+=	p5-HTTP-Tiny-Multipart
 SUBDIR+=	p5-HTTP-Tinyish
 SUBDIR+=	p5-HTTPD-User-Manage
