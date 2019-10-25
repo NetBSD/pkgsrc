@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2019/08/23 13:32:30 nia Exp $
+# $NetBSD: Makefile,v 1.16 2019/10/25 11:01:55 nia Exp $
 
-DISTNAME=	inspircd-3.3.0
+DISTNAME=	inspircd-3.4.0
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=inspircd/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -58,7 +58,7 @@ CONF_FILES_PERMS+=	${EGDIR}/modules.conf.example ${PKG_SYSCONFDIR}/modules.conf 
 			${INSPIRCD_USER} ${INSPIRCD_GROUP} 0600
 CONF_FILES_PERMS+=	${EGDIR}/opers.conf.example ${PKG_SYSCONFDIR}/opers.conf \
 			${INSPIRCD_USER} ${INSPIRCD_GROUP} 0600
-CONF_FILES_PERMS+=	${EGDIR}/filter.conf.example ${PKG_SYSCONFDIR}/filter.conf  \
+CONF_FILES_PERMS+=	${EGDIR}/filter.conf.example ${PKG_SYSCONFDIR}/filter.conf \
 			${INSPIRCD_USER} ${INSPIRCD_GROUP} 0600
 CONF_FILES_PERMS+=	${EGDIR}/helpop.conf.example ${PKG_SYSCONFDIR}/helpop.conf \
 			${INSPIRCD_USER} ${INSPIRCD_GROUP} 0600
