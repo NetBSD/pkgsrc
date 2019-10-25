@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2019/10/25 07:16:28 triaxx Exp $
+# $NetBSD: options.mk,v 1.4 2019/10/25 08:01:10 triaxx Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql12
-PKG_SUPPORTED_OPTIONS=	bonjour dtrace icu llvm gssapi ldap pam
+PKG_SUPPORTED_OPTIONS=	bonjour dtrace icu llvm gssapi ldap nls pam
 PKG_SUGGESTED_OPTIONS=	gssapi nls
 
 PLIST_VARS+=		llvm nls
