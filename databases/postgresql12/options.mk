@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2019/10/25 08:01:10 triaxx Exp $
+# $NetBSD: options.mk,v 1.5 2019/10/25 12:42:55 triaxx Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql12
 PKG_SUPPORTED_OPTIONS=	bonjour dtrace icu llvm gssapi ldap nls pam
@@ -54,9 +54,9 @@ PLIST.llvm=		yes
 # NLS support
 .if !empty(PKG_OPTIONS:Mnls)
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		msgfmt
 CONFIGURE_ARGS+=	--enable-nls
 PLIST.nls=		yes
+BROKEN_GETTEXT_DETECTION=	yes
 .  include "../../devel/gettext-lib/buildlink3.mk"
 LIBS.SunOS+=		-lintl
 .else
