@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2019/10/24 10:25:39 jperkin Exp $
+# $NetBSD: options.mk,v 1.3 2019/10/25 12:32:54 triaxx Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bison
 PKG_SUPPORTED_OPTIONS=	nls
+PKG_SUGGESTED_OPTIONS=	nls
 
 PLIST_VARS+=		nls
 
