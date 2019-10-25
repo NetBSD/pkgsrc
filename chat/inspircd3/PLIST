@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/05/17 09:59:18 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/10/25 11:01:55 nia Exp $
 bin/inspircd
 bin/inspircd-genssl
 lib/inspircd/modules/core_channel.so
@@ -211,6 +211,8 @@ share/examples/inspircd/modules.conf.example
 share/examples/inspircd/motd.txt.example
 share/examples/inspircd/opermotd.txt.example
 share/examples/inspircd/opers.conf.example
+share/examples/inspircd/providers/irccloud.conf.example
+share/examples/inspircd/providers/kiwiirc-com.conf.example
 share/examples/inspircd/quotes.txt.example
 share/examples/inspircd/services/anope.conf.example
 share/examples/inspircd/services/atheme.conf.example
