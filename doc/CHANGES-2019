@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4532 2019/10/25 13:43:15 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.4533 2019/10/25 13:46:20 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7274,3 +7274,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed security/keepassx successor security/keepassxc [nia 2019-10-25]
 	Removed multimedia/vlc2 successor multimedia/vlc [kamil 2019-10-25]
 	Removed multimedia/kaffeine [kamil 2019-10-25]
+	Added www/p5-HTTP-Tiny-Mech version 1.001002 [mef 2019-10-25]
