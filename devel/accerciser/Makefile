@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/10/25 14:13:23 kamil Exp $
+# $NetBSD: Makefile,v 1.34 2019/10/26 12:53:26 kamil Exp $
 
 DISTNAME=	accerciser-3.34.0
 CATEGORIES=	devel gnome
@@ -9,6 +9,8 @@ MAINTAINER=	prlw1@cam.ac.uk
 HOMEPAGE=	http://live.gnome.org/Accerciser/
 COMMENT=	Interactive Python accessibility explorer for the GNOME desktop
 LICENSE=	modified-bsd
+
+PREV_PKGPATH=	devel/accerciser3
 
 USE_TOOLS+=		gmake msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
