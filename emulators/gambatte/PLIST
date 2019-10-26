@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:51:04 joerg Exp $
-${PLIST.qt}bin/gambatte_qt
-bin/gambatte_sdl
-share/doc/gambatte/README
