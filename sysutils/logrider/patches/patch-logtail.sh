@@ -1,6 +1,7 @@
-$NetBSD: patch-logtail.sh,v 1.1 2013/05/07 08:49:28 wiz Exp $
+$NetBSD: patch-logtail.sh,v 1.2 2019/10/26 12:28:50 rillig Exp $
 
 # Replace stat arguments with NetBSD ones
+
 --- work/logtail.sh.orig	2003-04-14 00:56:00.000000000 +0000
 +++ work/logtail.sh	2013-05-05 07:23:46.000000000 +0000
 @@ -29,9 +29,9 @@
