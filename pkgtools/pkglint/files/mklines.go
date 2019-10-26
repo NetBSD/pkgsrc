@@ -86,6 +86,7 @@ func (mklines *MkLines) Check() {
 
 	// In the first pass, all additions to BUILD_DEFS and USE_TOOLS
 	// are collected to make the order of the definitions irrelevant.
+	mklines.collectRationale()
 	mklines.collectUsedVariables()
 	mklines.collectVariables()
 	mklines.collectPlistVars()
@@ -401,6 +402,25 @@ func (mklines *MkLines) collectElse() {
 	// Make a dry-run over the lines, which sets data.elseLine (in mkline.go) as a side-effect.
 	mklines.ForEach(func(mkline *MkLine) {})
 	// TODO: Check whether this ForEach is redundant because it is already run somewhere else.
+}
+
+func (mklines *MkLines) collectRationale() {
+
+	useful := func(mkline *MkLine) bool {
+		comment := trimHspace(mkline.Comment())
+		return comment != "" && !hasPrefix(comment, "$")
+	}
+
+	realComment := func(mkline *MkLine) bool {
+		return mkline.IsComment() && !mkline.IsCommentedVarassign()
+	}
+
+	rationale := false
+	for _, mkline := range mklines.mklines {
+		rationale = rationale || realComment(mkline) && useful(mkline)
+		mkline.splitResult.hasRationale = rationale || useful(mkline)
+		rationale = rationale && !mkline.IsEmpty()
+	}
 }
 
 func (mklines *MkLines) collectUsedVariables() {
