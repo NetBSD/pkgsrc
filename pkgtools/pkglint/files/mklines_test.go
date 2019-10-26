@@ -501,6 +501,77 @@ func (s *Suite) Test_MkLines_ExpandLoopVar__malformed_for(c *check.C) {
 	t.Check(values, check.HasLen, 0)
 }
 
+func (s *Suite) Test_MkLines_collectRationale(c *check.C) {
+	t := s.Init(c)
+
+	test := func(specs ...string) {
+		lines := mapStr(specs, func(s string) string { return s[4:] })
+		mklines := t.NewMkLines("filename.mk", lines...)
+		mklines.collectRationale()
+		var actual []string
+		mklines.ForEach(func(mkline *MkLine) {
+			actual = append(actual, condStr(mkline.HasRationale(), "R   ", "-   ")+mkline.Text)
+		})
+		t.CheckDeepEquals(actual, specs)
+	}
+
+	// An uncommented line does not have a rationale.
+	test(
+		"-   VAR=value")
+
+	// The rationale can be given at the end of the line.
+	// This is useful for short explanations or remarks.
+	test(
+		"R   VAR=value # rationale")
+
+	// A rationale can be given above a line. This is useful for
+	// explanations that don't fit into a single line.
+	test(
+		"R   # rationale",
+		"R   VAR=value")
+
+	// A commented variable assignment is just that, commented code.
+	// It does not count as a rationale.
+	test(
+		"-   #VAR=value",
+		"-   VAR=value")
+
+	// An empty line ends the rationale. The empty line does have a
+	// rationale itself, but that is useless since pkglint doesn't
+	// check empty lines for rationales.
+	test(
+		"R   # rationale",
+		"R   ",
+		"-   VAR=value")
+
+	// A rationale covers all lines that follow, until the next empty
+	// line.
+	test(
+		"R   # rationale",
+		"R   NOT_FOR_PLATFORM+=\tLinux-*-*",
+		"R   NOT_FOR_PLATFORM+=\tNetBSD-*-*",
+		"R   NOT_FOR_PLATFORM+=\tCygwin-*-*")
+
+	// Large comment blocks often end with an empty comment line.
+	test(
+		"R   # rationale",
+		"R   #",
+		"R   NOT_FOR_PLATFORM+=\tLinux-*-*",
+		"R   NOT_FOR_PLATFORM+=\tNetBSD-*-*",
+		"R   NOT_FOR_PLATFORM+=\tCygwin-*-*")
+
+	// The CVS Id is not a rationale.
+	test(
+		"-   "+MkCvsID,
+		"-   VAR=\tvalue")
+
+	// A rationale at the end of a line applies only to that line.
+	test(
+		"-   VAR=\tvalue",
+		"R   VAR=\tvalue # rationale",
+		"-   VAR=\tvalue")
+}
+
 func (s *Suite) Test_MkLines_collectVariables(c *check.C) {
 	t := s.Init(c)
 
