@@ -403,8 +403,14 @@ func (t *Tester) SetUpPackage(pkgpath string, makefileLines ...string) string {
 		"LICENSE=\t2-clause-bsd",
 		"",
 		".include \"suppress-varorder.mk\""}
-	for len(mlines) < 19 {
-		mlines = append(mlines, "# empty")
+	if len(mlines) < 19 {
+		mlines = append(mlines, "")
+	}
+	for len(mlines) < 18 {
+		mlines = append(mlines, "# filler")
+	}
+	if len(mlines) < 19 {
+		mlines = append(mlines, "")
 	}
 
 line:

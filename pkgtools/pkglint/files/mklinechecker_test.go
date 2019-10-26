@@ -150,15 +150,15 @@ func (s *Suite) Test_MkLineChecker_checkVarassignLeftUserSettable(c *check.C) {
 	//  the expected reading order of human readers.
 
 	t.SetUpPackage("category/package",
-		"ASSIGN_DIFF=\tpkg",          // assignment, differs from default value
-		"ASSIGN_DIFF2=\treally # ok", // ok because of the rationale in the comment
-		"ASSIGN_SAME=\tdefault",      // assignment, same value as default
-		"DEFAULT_DIFF?=\tpkg",        // default, differs from default value
-		"DEFAULT_SAME?=\tdefault",    // same value as default
-		"FETCH_USING=\tcurl",         // both user-settable and package-settable
-		"APPEND_DIRS+=\tdir3",        // appending requires a separate diagnostic
-		"COMMENTED_SAME?=\tdefault",  // commented default, same value as default
-		"COMMENTED_DIFF?=\tpkg")      // commented default, differs from default value
+		"ASSIGN_DIFF=\t\tpkg",          // assignment, differs from default value
+		"ASSIGN_DIFF2=\t\treally # ok", // ok because of the rationale in the comment
+		"ASSIGN_SAME=\t\tdefault",      // assignment, same value as default
+		"DEFAULT_DIFF?=\t\tpkg",        // default, differs from default value
+		"DEFAULT_SAME?=\t\tdefault",    // same value as default
+		"FETCH_USING=\t\tcurl",         // both user-settable and package-settable
+		"APPEND_DIRS+=\t\tdir3",        // appending requires a separate diagnostic
+		"COMMENTED_SAME?=\tdefault",    // commented default, same value as default
+		"COMMENTED_DIFF?=\tpkg")        // commented default, differs from default value
 	t.CreateFileLines("mk/defaults/mk.conf",
 		MkCvsID,
 		"ASSIGN_DIFF?=default",
@@ -409,6 +409,26 @@ func (s *Suite) Test_MkLineChecker_checkInclude__builtin_mk(c *check.C) {
 
 	t.CheckOutputLines(
 		"ERROR: ~/category/package/Makefile:20: " +
+			"../../category/package/builtin.mk must not be included directly. " +
+			"Include \"../../category/package/buildlink3.mk\" instead.")
+}
+
+func (s *Suite) Test_MkLineChecker_checkInclude__builtin_mk_rationale(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"# I have good reasons for including this file directly.",
+		".include \"../../category/package/builtin.mk\"",
+		"",
+		".include \"../../category/package/builtin.mk\"")
+	t.CreateFileLines("category/package/builtin.mk",
+		MkCvsID)
+	t.FinishSetUp()
+
+	G.checkdirPackage(t.File("category/package"))
+
+	t.CheckOutputLines(
+		"ERROR: ~/category/package/Makefile:23: " +
 			"../../category/package/builtin.mk must not be included directly. " +
 			"Include \"../../category/package/buildlink3.mk\" instead.")
 }

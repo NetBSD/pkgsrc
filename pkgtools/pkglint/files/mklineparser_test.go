@@ -1007,6 +1007,7 @@ func (s *Suite) Test_MkLineParser_split__unclosed_varuse(c *check.C) {
 					"EGDIR/apparmor.d ${EGDIR/dbus-1/system.d ${EGDIR/pam.d")),
 			"",
 			false,
+			false,
 			"",
 		},
 
