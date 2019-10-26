@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2019/10/25 14:37:27 kamil Exp $
+# $NetBSD: Makefile,v 1.101 2019/10/26 12:51:18 kamil Exp $
 
 DISTNAME=	eog-3.24.1
 PKGREVISION=	6
@@ -10,6 +10,8 @@ MAINTAINER=	prlw1@cam.ac.uk
 HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Eye of GNOME: an image viewing and cataloging program
 LICENSE=	gnu-gpl-v2
+
+PREV_PKGPATH=	graphics/eog3
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
