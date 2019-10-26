@@ -76,6 +76,8 @@ func (mkline *MkLine) String() string {
 
 func (mkline *MkLine) HasComment() bool { return mkline.splitResult.hasComment }
 
+func (mkline *MkLine) HasRationale() bool { return mkline.splitResult.hasRationale }
+
 // Comment returns the comment after the first unescaped #.
 //
 // A special case are variable assignments. If these are commented out
