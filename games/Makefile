@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.462 2019/10/16 21:25:20 wiz Exp $
+# $NetBSD: Makefile,v 1.463 2019/10/26 11:27:09 nia Exp $
 #
 
 COMMENT=	Games
@@ -347,6 +347,7 @@ SUBDIR+=	scummvm-tools
 SUBDIR+=	sex
 SUBDIR+=	sienna
 SUBDIR+=	simgear
+SUBDIR+=	simutrans
 SUBDIR+=	singularity
 SUBDIR+=	sirius
 SUBDIR+=	sjeng
