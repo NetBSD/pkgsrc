@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.17 2017/06/28 09:44:43 wiedi Exp $
+$NetBSD: distinfo,v 1.18 2019/10/26 21:24:34 nia Exp $
 
-SHA1 (Hydrogen-0.9.7.tar.gz) = 016c5427d0598f933f0975d6d25434736ba0a0b6
-RMD160 (Hydrogen-0.9.7.tar.gz) = 87d2bed2ef1fd84e5cb9bcfc4a89b40818610ce0
-SHA512 (Hydrogen-0.9.7.tar.gz) = 1480a18d1181d12e92a53e89a4d1c8f4ae9a8a9a02271e6af4089afaaca9d658abb3876dc7db08a453bbe3ab7f66f31567d992f30102818782b62ebba5141f58
-Size (Hydrogen-0.9.7.tar.gz) = 6424575 bytes
-SHA1 (patch-CMakeLists.txt) = 1cece0d6151fd5b7e00ba41e710d52dea9ed0ee6
-SHA1 (patch-src_core_src_logger.cpp) = 27c778a352b917a4a33eeab87b0855a631da471b
+SHA1 (Hydrogen-1.0.0-beta1.tar.gz) = 72caed8b4765e0371c2831b59715b8e4d4879f27
+RMD160 (Hydrogen-1.0.0-beta1.tar.gz) = f21635a71aa4c9607140e55a18035c0bfb70e50a
+SHA512 (Hydrogen-1.0.0-beta1.tar.gz) = 73963a9f400a4d9f6faca41f5f9af2c4b00ebefb16f394a78fe81f7aacb23acee49633803a484e91705da01cb59b4699133f618fac34f6caa7734bcc67bf4518
+Size (Hydrogen-1.0.0-beta1.tar.gz) = 9864135 bytes
+SHA1 (patch-CMakeLists.txt) = 574dbe7406cc24b6884292e2cd9557e569a5ba2f
