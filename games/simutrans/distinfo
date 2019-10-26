@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2019/10/26 11:27:09 nia Exp $
+
+SHA1 (simutrans-src-120-4-1.zip) = 5aa2bad5ffbdbdc4e351d7b44d0e40bc8d7da3ae
+RMD160 (simutrans-src-120-4-1.zip) = a0f2f98a7d7722453c8fb8a6e8bd6a5846326d41
+SHA512 (simutrans-src-120-4-1.zip) = b85b8916e2853a519ccf8c310d67866203e71922aa6b23cd5816fb1924cc64f190735be15a0da9e7c2e94ea844ec6938e91be40ccfa2914f3a3f73d598851357
+Size (simutrans-src-120-4-1.zip) = 4171225 bytes
+SHA1 (patch-simmain.cc) = bcd049dd17b0eda3fcfa12b403a0929bdbd47b84
+SHA1 (patch-simsys.cc) = 1c7d2e71e5e82de83e94af05638df667f7ee4a0d

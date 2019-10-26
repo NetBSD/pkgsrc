@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/10/26 11:27:10 nia Exp $
+
+SHA1 (simutrans-pak128-2.8.1/pak128.zip) = 81097593f957efac9b0cef22cf1d5ca26881fb55
+RMD160 (simutrans-pak128-2.8.1/pak128.zip) = 3547e01077f11c2fc4bbc2ecd1047db3325a609e
+SHA512 (simutrans-pak128-2.8.1/pak128.zip) = c4635a446d9874fe1cf1a15a1ca8eaa50a0888c7679df540aa7509e30db6cb8f9519a27aad10dc481a7762c6c16bb5df64e18665652dcd777885adf0dae6736a
+Size (simutrans-pak128-2.8.1/pak128.zip) = 97430218 bytes
