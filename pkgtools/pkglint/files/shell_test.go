@@ -1474,7 +1474,7 @@ func (s *Suite) Test_SimpleCommandChecker_checkAutoMkdirs__redundant(c *check.C)
 	t := s.Init(c)
 
 	t.SetUpPackage("category/package",
-		"AUTO_MKDIRS=\tyes",
+		"AUTO_MKDIRS=\t\tyes",
 		"INSTALLATION_DIRS+=\tshare/redundant",
 		"INSTALLATION_DIRS+=\tnot/redundant ${EGDIR}")
 	t.CreateFileLines("category/package/PLIST",

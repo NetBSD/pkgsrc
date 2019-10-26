@@ -355,7 +355,7 @@ func (MkLineParser) split(line *Line, text string, trimComment bool) mkLineSplit
 		}
 	}
 
-	return mkLineSplitResult{mainTrimmed, tokens, spaceBeforeComment, hasComment, comment}
+	return mkLineSplitResult{mainTrimmed, tokens, spaceBeforeComment, hasComment, false, comment}
 }
 
 // unescapeComment takes a Makefile line, as written in a file, and splits
@@ -446,5 +446,6 @@ type mkLineSplitResult struct {
 	tokens             []*MkToken
 	spaceBeforeComment string
 	hasComment         bool
+	hasRationale       bool // filled in later, by MkLines.collectRationale
 	comment            string
 }
