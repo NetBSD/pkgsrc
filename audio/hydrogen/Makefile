@@ -1,59 +1,47 @@
-# $NetBSD: Makefile,v 1.55 2018/03/12 11:16:03 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2019/10/26 21:24:34 nia Exp $
 
-DISTNAME=	Hydrogen-0.9.7
-PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	1
+DISTNAME=	Hydrogen-1.0.0-beta1
+PKGNAME=	${DISTNAME:tl:C/-beta/.beta/}
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hydrogen-music/}
 GITHUB_PROJECT=	Hydrogen
-GITHUB_TAG=	${PKGVERSION_NOREV}
+GITHUB_TAG=	${PKGVERSION_NOREV:C/.beta/-beta/}
 
 MAINTAINER=	mrg@eterna.com.au
-HOMEPAGE=	http://www.hydrogen-music.org/
+HOMEPAGE=	http://hydrogen-music.org/
 COMMENT=	Real time drum machine/sequencer
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV:C/.beta/-beta/}
 
-USE_LANGUAGES=	c c++
-USE_LIBTOOL=	yes
+USE_LANGUAGES=	c gnu++11
+USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 
-MAKE_ENV+=	QTDIR=${PREFIX}/qt4 PATH=$$PATH:${PREFIX}/qt4/bin
-#CONFIGURE_ENV+=	LADSPA_PATH=${BUILDLINK_PREFIX.ladspa}/lib/ladspa
+# C++11
+GCC_REQD+=	4.7
 
-USE_CMAKE=	yes
+.include "../../mk/oss.buildlink3.mk"
+.if ${OSS_TYPE} != "none"
 CMAKE_ARGS+=	-DWANT_OSS=ON
-CMAKE_ARGS+=	-DWANT_JACK=OFF
-CMAKE_ARGS+=	-DWANT_LRDF=OFF
-# options.mk this, and ladspa.
-CMAKE_ARGS+=	-DWANT_PULSEAUDIO=OFF
+.else
+CMAKE_ARGS+=	-DWANT_OSS=OFF
+.endif
+
+CMAKE_ARGS+=	-DWANT_CPPUNIT=OFF
+
 # NetBSD libarchive is old?
 CMAKE_ARGS+=	-DWANT_LIBARCHIVE=OFF
 CMAKE_ARGS+=	-DWANT_LIBTAR=ON
-CMAKE_ARGS+=	-DPKGMANDIR=${PKGMANDIR}
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Linux"
-CMAKE_ARGS+=	-DWANT_ALSA=ON
-.else
-CMAKE_ARGS+=	-DWANT_ALSA=OFF
-.endif
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
+.include "options.mk"
 .include "../../devel/libtar/buildlink3.mk"
-.if ${OPSYS} == "Linux"
-.  include "../../audio/alsa-lib/buildlink3.mk"
-.endif
 .include "../../audio/libsndfile/buildlink3.mk"
-#.include "../../audio/ladspa/buildlink3.mk"
-.include "../../devel/cppunit/buildlink3.mk"
+.include "../../audio/liblo/buildlink3.mk"
+.include "../../audio/ladspa/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/libSM/buildlink3.mk"
-.include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/qt4-libs/buildlink3.mk"
-.include "../../x11/qt4-tools/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtxmlpatterns/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
