@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2019/10/20 11:10:49 nia Exp $
+# $NetBSD: Makefile,v 1.25 2019/10/26 17:22:07 nia Exp $
 
 DISTNAME=	pa_stable_v190600_20161030
 PKGNAME=	${DISTNAME:S/^pa_stable_v/portaudio-/1:S/_/./g}
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://www.portaudio.com/archives/
 EXTRACT_SUFX=	.tgz
@@ -27,7 +28,13 @@ CONFIGURE_ARGS+=	--enable-cxx
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/portaudio2
 CONFIGURE_ARGS+=	--disable-mac-universal
 
+.include "../../mk/oss.buildlink3.mk"
+PLIST_VARS+=		oss
+.if ${OSS_TYPE} != "none"
+PLIST.oss=		yes
 LDFLAGS+=		${LIBOSSAUDIO}
+.endif
+
 PKGCONFIG_OVERRIDE=	portaudio-2.0.pc.in
 WRKSRC=			${WRKDIR}/portaudio
 
@@ -50,5 +57,4 @@ CFLAGS.Darwin+=		-Wno-deprecated-declarations
 
 .include "options.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
