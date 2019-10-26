@@ -131,8 +131,7 @@ func (ck MkLineChecker) checkInclude() {
 		mkline.Warnf("Please write \"USE_TOOLS+= intltool\" instead of this line.")
 
 	case hasSuffix(includedFile, "/builtin.mk"):
-		// TODO: mkline.HasRationale
-		if mkline.Basename != "hacks.mk" && !mkline.HasComment() {
+		if mkline.Basename != "hacks.mk" && !mkline.HasRationale() {
 			fix := mkline.Autofix()
 			fix.Errorf("%s must not be included directly. Include \"%s/buildlink3.mk\" instead.", includedFile, path.Dir(includedFile))
 			fix.Replace("builtin.mk", "buildlink3.mk")
@@ -438,12 +437,6 @@ func (ck MkLineChecker) checkVarassignLeftRationale() {
 		return
 	}
 
-	isRationale := func(mkline *MkLine) bool {
-		return mkline.IsComment() &&
-			!hasPrefix(mkline.Text, "# $") &&
-			!mkline.IsCommentedVarassign()
-	}
-
 	needsRationale := func(mkline *MkLine) bool {
 		if !mkline.IsVarassignMaybeCommented() {
 			return false
@@ -457,22 +450,8 @@ func (ck MkLineChecker) checkVarassignLeftRationale() {
 		return
 	}
 
-	if mkline.HasComment() {
+	if mkline.HasRationale() {
 		return
-	}
-
-	// Check whether there is a comment directly above.
-	for i, other := range ck.MkLines.mklines {
-		if other == mkline && i > 0 {
-			aboveIndex := i - 1
-			for aboveIndex > 0 && needsRationale(ck.MkLines.mklines[aboveIndex]) {
-				aboveIndex--
-			}
-
-			if isRationale(ck.MkLines.mklines[aboveIndex]) {
-				return
-			}
-		}
 	}
 
 	mkline.Warnf("Setting variable %s should have a rationale.", mkline.Varname())
