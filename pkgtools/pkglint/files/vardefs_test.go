@@ -186,7 +186,9 @@ func (s *Suite) Test_VarTypeRegistry_Init__LP64PLATFORMS(c *check.C) {
 	G.Check(pkg)
 
 	// No warning about a missing :Q modifier.
-	t.CheckOutputEmpty()
+	t.CheckOutputLines(
+		"WARN: ~/category/package/Makefile:20: " +
+			"Setting variable BROKEN_ON_PLATFORM should have a rationale.")
 }
 
 func (s *Suite) Test_VarTypeRegistry_Init__no_tracing(c *check.C) {
