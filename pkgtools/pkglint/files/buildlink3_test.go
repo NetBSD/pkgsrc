@@ -196,7 +196,7 @@ func (s *Suite) Test_CheckLinesBuildlink3Mk__name_mismatch__lib(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_CheckLinesBuildlink3Mk__name_mismatch__version(c *check.C) {
+func (s *Suite) Test_CheckLinesBuildlink3Mk__name_mismatch__version_ok(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPackage("editors/emacs22",
@@ -227,6 +227,35 @@ func (s *Suite) Test_CheckLinesBuildlink3Mk__name_mismatch__version(c *check.C) 
 	// renaming of the buildlink3 identifier, therefore the warning
 	// is suppressed in cases like this.
 	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_CheckLinesBuildlink3Mk__name_mismatch__version_bad(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("editors/emacs-client",
+		"PKGNAME=\temacs-client-22.0")
+	t.CreateFileLines("editors/emacs-client/buildlink3.mk",
+		MkCvsID,
+		"",
+		"BUILDLINK_TREE+=\temacs",
+		"",
+		".if !defined(EMACS_BUILDLINK3_MK)",
+		"EMACS_BUILDLINK3_MK:=",
+		"",
+		"BUILDLINK_API_DEPENDS.emacs+=\temacs-client>=1.0",
+		"BUILDLINK_ABI_DEPENDS.emacs+=\temacs-client>=1.0",
+		"",
+		".endif\t# EMACS_BUILDLINK3_MK",
+		"",
+		"BUILDLINK_TREE+=\t-emacs")
+	t.FinishSetUp()
+
+	G.Check(t.File("editors/emacs-client"))
+
+	t.CheckOutputLines(
+		"ERROR: ~/editors/emacs-client/buildlink3.mk:3: " +
+			"Package name mismatch between \"emacs\" in this file " +
+			"and \"emacs-client\" from Makefile:4.")
 }
 
 func (s *Suite) Test_CheckLinesBuildlink3Mk__name_mismatch_multiple_inclusion(c *check.C) {

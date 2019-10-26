@@ -267,7 +267,7 @@ func (ctx *SubstContext) suggestSubstVars(mkline *MkLine) {
 		fix.Explain(
 			"Replacing @VAR@ with ${VAR} is such a typical pattern that pkgsrc has built-in support for it,",
 			"requiring only the variable name instead of the full sed command.")
-		if mkline.VarassignComment() == "" && len(tokens) == 2 && tokens[0] == "-e" {
+		if !mkline.HasComment() && len(tokens) == 2 && tokens[0] == "-e" {
 			fix.Replace(mkline.Text, alignWith(varop, mkline.ValueAlign())+varname)
 		}
 		fix.Anyway()

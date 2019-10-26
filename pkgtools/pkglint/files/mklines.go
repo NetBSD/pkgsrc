@@ -26,7 +26,7 @@ type MkLines struct {
 func NewMkLines(lines *Lines) *MkLines {
 	mklines := make([]*MkLine, lines.Len())
 	for i, line := range lines.Lines {
-		mklines[i] = MkLineParser{}.Parse(line)
+		mklines[i] = NewMkLineParser().Parse(line)
 	}
 
 	tools := NewTools()
@@ -578,5 +578,5 @@ func (mklines *MkLines) SaveAutofixChanges() {
 }
 
 func (mklines *MkLines) EOFLine() *MkLine {
-	return MkLineParser{}.Parse(mklines.lines.EOFLine())
+	return NewMkLineParser().Parse(mklines.lines.EOFLine())
 }

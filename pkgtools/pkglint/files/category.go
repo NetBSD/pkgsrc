@@ -68,7 +68,7 @@ func CheckdirCategory(dir string) {
 			mlex.Skip()
 
 			name := mkline.Value()
-			if mkline.IsCommentedVarassign() && mkline.VarassignComment() == "" {
+			if mkline.IsCommentedVarassign() && !mkline.HasComment() {
 				mkline.Warnf("%q commented out without giving a reason.", name)
 			}
 
