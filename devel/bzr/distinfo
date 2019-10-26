@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.43 2018/01/09 22:18:57 tez Exp $
+$NetBSD: distinfo,v 1.44 2019/10/26 13:03:21 rhialto Exp $
 
-SHA1 (bzr-2.6.0.tar.gz) = 5eb4d0367c6d83396250165da5bb2c8a9f378293
-RMD160 (bzr-2.6.0.tar.gz) = 794dbc585fd1acc711b59016d0b2c3dfe97927d7
-SHA512 (bzr-2.6.0.tar.gz) = f40d4380a837321c2ed168d15b0b5d31e9de6df93c0f8f2fd9b16c9351524b0afac5b8744740f587e9704efeb4cc004cae7f35aed47f73b5c796cbe2526af980
-Size (bzr-2.6.0.tar.gz) = 11301124 bytes
+SHA1 (bzr-2.7.0.tar.gz) = 872f6088f8b07558519dbbc88fffa05e37602f52
+RMD160 (bzr-2.7.0.tar.gz) = 8ca32e920d7bf8ebce6f729bced56ebb4030b42f
+SHA512 (bzr-2.7.0.tar.gz) = c39ad3715d865788da74d8de8b469e1dc93d18b6cbcbc569464cdeb9bb2173bf8d7f4f8ee8f7599fbcbbe322817a4c72e785d544e622753699c425c32597d9aa
+Size (bzr-2.7.0.tar.gz) = 11586410 bytes
 SHA1 (patch-CVE-2017-14176) = 65a38a9db017854cdc677d0c45dcb69d4214b549
 SHA1 (patch-ab) = eae7e2baa12239e9c05e2afe775f8334c734de75

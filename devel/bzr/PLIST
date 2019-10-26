@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2015/07/29 18:05:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.38 2019/10/26 13:03:21 rhialto Exp $
 ${PYSITELIB}/bzrlib/__init__.py
 ${PYSITELIB}/bzrlib/__init__.pyc
 ${PYSITELIB}/bzrlib/__init__.pyo
@@ -1007,6 +1007,9 @@ ${PYSITELIB}/bzrlib/tests/blackbox/test_update.pyo
 ${PYSITELIB}/bzrlib/tests/blackbox/test_upgrade.py
 ${PYSITELIB}/bzrlib/tests/blackbox/test_upgrade.pyc
 ${PYSITELIB}/bzrlib/tests/blackbox/test_upgrade.pyo
+${PYSITELIB}/bzrlib/tests/blackbox/test_verify_signatures.py
+${PYSITELIB}/bzrlib/tests/blackbox/test_verify_signatures.pyc
+${PYSITELIB}/bzrlib/tests/blackbox/test_verify_signatures.pyo
 ${PYSITELIB}/bzrlib/tests/blackbox/test_version.py
 ${PYSITELIB}/bzrlib/tests/blackbox/test_version.pyc
 ${PYSITELIB}/bzrlib/tests/blackbox/test_version.pyo
