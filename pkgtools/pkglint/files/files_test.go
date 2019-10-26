@@ -105,7 +105,7 @@ func (s *Suite) Test_convertToLogicalLines__comments(c *check.C) {
 func (s *Suite) Test_nextLogicalLine__commented_multi(c *check.C) {
 	t := s.Init(c)
 
-	mklines := t.SetUpFileMkLines("filename.mk",
+	mklines := t.NewMkLines("filename.mk",
 		"#COMMENTED= \\",
 		"#\tcontinuation 1 \\",
 		"#\tcontinuation 2")
@@ -113,7 +113,7 @@ func (s *Suite) Test_nextLogicalLine__commented_multi(c *check.C) {
 
 	// The leading comments are stripped from the continuation lines as well.
 	t.CheckEquals(mkline.Value(), "continuation 1 \tcontinuation 2")
-	t.CheckEquals(mkline.VarassignComment(), "")
+	t.CheckEquals(mkline.HasComment(), false)
 }
 
 func (s *Suite) Test_convertToLogicalLines__missing_newline_at_eof(c *check.C) {

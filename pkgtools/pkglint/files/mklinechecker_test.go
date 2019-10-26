@@ -395,6 +395,24 @@ func (s *Suite) Test_MkLineChecker_checkInclude__hacks(c *check.C) {
 			"Relative path \"../../category/package/nonexistent.mk\" does not exist.")
 }
 
+func (s *Suite) Test_MkLineChecker_checkInclude__builtin_mk(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		".include \"../../category/package/builtin.mk\"",
+		".include \"../../category/package/builtin.mk\" # ok")
+	t.CreateFileLines("category/package/builtin.mk",
+		MkCvsID)
+	t.FinishSetUp()
+
+	G.checkdirPackage(t.File("category/package"))
+
+	t.CheckOutputLines(
+		"ERROR: ~/category/package/Makefile:20: " +
+			"../../category/package/builtin.mk must not be included directly. " +
+			"Include \"../../category/package/buildlink3.mk\" instead.")
+}
+
 func (s *Suite) Test_MkLineChecker__permissions_in_hacks_mk(c *check.C) {
 	t := s.Init(c)
 
@@ -606,7 +624,8 @@ func (s *Suite) Test_MkLineChecker_checkDependencyRule(c *check.C) {
 		".ORDER: target-1 target-2",
 		"target-1:",
 		"target-2:",
-		"target-3:")
+		"target-3:",
+		"${_COOKIE.test}:")
 
 	mklines.Check()
 
@@ -2107,6 +2126,7 @@ func (s *Suite) Test_MkLineChecker_checkDirectiveCond__comparing_PKGSRC_COMPILER
 
 func (s *Suite) Test_MkLineChecker_checkDirectiveCondCompareVarStr__no_tracing(c *check.C) {
 	t := s.Init(c)
+	b := NewMkTokenBuilder()
 
 	t.SetUpVartypes()
 	mklines := t.NewMkLines("filename.mk",
@@ -2114,7 +2134,7 @@ func (s *Suite) Test_MkLineChecker_checkDirectiveCondCompareVarStr__no_tracing(c
 	t.DisableTracing()
 
 	ck := MkLineChecker{mklines, mklines.mklines[0]}
-	varUse := NewMkVarUse("DISTFILES", "Mpattern", "O", "u")
+	varUse := b.VarUse("DISTFILES", "Mpattern", "O", "u")
 	ck.checkDirectiveCondCompareVarStr(varUse, "==", "distfile-1.0.tar.gz")
 
 	t.CheckOutputEmpty()
@@ -2416,6 +2436,7 @@ func (s *Suite) Test_MkLineChecker_CheckVaruse__for(c *check.C) {
 // check that the variable names match exactly.
 func (s *Suite) Test_MkLineChecker_CheckVaruse__varcanon(c *check.C) {
 	t := s.Init(c)
+	b := NewMkTokenBuilder()
 
 	t.SetUpPkgsrc()
 	t.CreateFileLines("mk/sys-vars.mk",
@@ -2429,7 +2450,7 @@ func (s *Suite) Test_MkLineChecker_CheckVaruse__varcanon(c *check.C) {
 
 	ck := MkLineChecker{mklines, mklines.mklines[1]}
 
-	ck.CheckVaruse(NewMkVarUse("CPPPATH.SunOS"), &VarUseContext{
+	ck.CheckVaruse(b.VarUse("CPPPATH.SunOS"), &VarUseContext{
 		vartype: &Vartype{
 			basicType:  BtPathname,
 			options:    Guessed,
