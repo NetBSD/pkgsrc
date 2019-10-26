@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/10/26 12:18:49 nia Exp $
+
+SHA1 (l3afpad-0.8.18.1.11.tar.gz) = d1cdc83098baa1bc941debb5fbd30ff6390cba28
+RMD160 (l3afpad-0.8.18.1.11.tar.gz) = a692c138373df07b69c980377a694653daadc1db
+SHA512 (l3afpad-0.8.18.1.11.tar.gz) = f77494afc81d4c8586a976318d77d194eedf8414fc896cc9e2593de00dd3bb8c157f199a44908147b467f04b7a76c2c20aa67c64567685a77421ba0c2bff4643
+Size (l3afpad-0.8.18.1.11.tar.gz) = 194318 bytes
