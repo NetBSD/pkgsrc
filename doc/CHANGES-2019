@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4544 2019/10/26 06:51:15 mef Exp $
+$NetBSD: CHANGES-2019,v 1.4545 2019/10/26 07:27:18 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7287,3 +7287,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-CPAN-FindDependencies to 2.49 [mef 2019-10-26]
 	Updated devel/p5-CPAN-Perl-Releases to 4.16 [mef 2019-10-26]
 	Updated devel/p5-Log-Dispatch to 2.69 [mef 2019-10-26]
+	Updated devel/p5-Module-CPANTS-Analyse to 1.01 [mef 2019-10-26]
+	Updated devel/p5-Module-CoreList to 5.20191020 [mef 2019-10-26]
+	Updated devel/p5-Module-Metadata to 1.000037 [mef 2019-10-26]
+	Updated devel/p5-Module-Starter to 1.760 [mef 2019-10-26]
