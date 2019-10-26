@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.simutrans.simutrans</id>
+  <launchable type="desktop-id">simutrans.desktop</launchable>
+  <name>Simutrans</name>
+  <summary>Transportation simulator</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>Artistic-1.0</project_license>
+  <description>
+    <p>Simutrans is a free transportation simulator: the player operates a transportation company and has to transport goods and passengers between factories and different cities.</p>
+  </description>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://screenshots.debian.net/screenshots/000/001/205/large.png</image>
+    </screenshot>
+  </screenshots>
+  <url type="bugtracker">https://forum.simutrans.com/index.php?board=8.0</url>
+  <url type="homepage">https://www.simutrans.com/</url>
+</component>
