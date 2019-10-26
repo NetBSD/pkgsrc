@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2019/10/25 09:41:54 adam Exp $
+# $NetBSD: Makefile,v 1.18 2019/10/26 23:05:44 adam Exp $
 
-DISTNAME=	pytest-runner-5.1
+DISTNAME=	pytest-runner-5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-runner/}
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-test>=2.8:../../devel/py-test
 USE_LANGUAGES=	# none
 
 do-test:
-	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
+	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
