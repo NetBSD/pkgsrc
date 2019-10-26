@@ -1841,10 +1841,9 @@ func (vt *VartypeCheckTester) Values(values ...string) {
 
 	test := func(mklines *MkLines, mkline *MkLine, value string) {
 		varname := vt.varname
-		comment := ""
+		comment := condStr(mkline.HasComment(), "#", "") + mkline.Comment()
 		if mkline.IsVarassign() {
-			mkline.Tokenize(value, true) // Produce some warnings as side-effects.
-			comment = mkline.VarassignComment()
+			_ = mkline.Tokenize(value, true) // Produce some warnings as side-effects.
 		}
 
 		effectiveValue := value
