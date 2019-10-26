@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.306 2019/10/23 00:22:11 fox Exp $
+# $NetBSD: Makefile,v 1.307 2019/10/26 16:57:53 kamil Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -69,7 +69,6 @@ SUBDIR+=	fs-uae-arcade
 SUBDIR+=	fs-uae-launcher
 SUBDIR+=	fuse-emulator
 SUBDIR+=	fuse-emulator-utils
-SUBDIR+=	gambatte
 SUBDIR+=	gcube
 SUBDIR+=	generator-cbiere
 SUBDIR+=	gens
