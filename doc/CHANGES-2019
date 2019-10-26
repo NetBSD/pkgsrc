@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4561 2019/10/26 22:55:53 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4562 2019/10/26 23:11:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7311,3 +7311,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-xopen to 0.8.4 [adam 2019-10-26]
 	Updated devel/py-ipython to 7.9.0 [adam 2019-10-26]
 	Updated textproc/py-pyquery to 1.4.1 [adam 2019-10-26]
+	Updated lang/py-asttokens to 2.0.2 [adam 2019-10-26]
+	Updated textproc/py-sphinx to 2.2.1 [adam 2019-10-26]
+	Updated devel/py-test-runner to 5.2 [adam 2019-10-26]
