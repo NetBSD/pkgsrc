@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2019/08/11 13:19:49 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2019/10/26 07:19:26 mef Exp $
 
-DISTNAME=		Module-CPANTS-Analyse-1.00
+DISTNAME=		Module-CPANTS-Analyse-1.01
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Module/}
 
@@ -35,14 +34,14 @@ DEPENDS+=	p5-YAML-Syck>=0.95:../../textproc/p5-YAML-Syck
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 #DEPENDS+=	{perl>=5.10,p5-version>=0.73}:../../devel/p5-version
 
-BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
-BUILD_DEPENDS+=	p5-Test-Warn>=0.11:../../devel/p5-Test-Warn
-BUILD_DEPENDS+=	p5-Test-FailWarnings-[0-9]*:../../devel/p5-Test-FailWarnings
-BUILD_DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
-BUILD_DEPENDS+=	p5-File-Find-Object-[0-9]*:../../devel/p5-File-Find-Object
-BUILD_DEPENDS+=	p5-Class-XSAccessor-[0-9]*:../../devel/p5-Class-XSAccessor
-BUILD_DEPENDS+=	p5-JSON-MaybeXS-[0-9]*:../../converters/p5-JSON-MaybeXS
+TEST_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+TEST_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
+TEST_DEPENDS+=	p5-Test-Warn>=0.11:../../devel/p5-Test-Warn
+TEST_DEPENDS+=	p5-Test-FailWarnings-[0-9]*:../../devel/p5-Test-FailWarnings
+TEST_DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
+TEST_DEPENDS+=	p5-File-Find-Object-[0-9]*:../../devel/p5-File-Find-Object
+TEST_DEPENDS+=	p5-Class-XSAccessor-[0-9]*:../../devel/p5-Class-XSAccessor
+TEST_DEPENDS+=	p5-JSON-MaybeXS-[0-9]*:../../converters/p5-JSON-MaybeXS
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Module/CPANTS/Analyse/.packlist
