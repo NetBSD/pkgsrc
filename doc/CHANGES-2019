@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4559 2019/10/26 17:59:37 ng0 Exp $
+$NetBSD: CHANGES-2019,v 1.4560 2019/10/26 21:24:51 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7306,3 +7306,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed databases/sqliteman [kamil 2019-10-26]
 	Removed emulators/gambatte [kamil 2019-10-26]
 	Updated www/libmicrohttpd to 0.9.68 [ng0 2019-10-26]
+	Updated audio/hydrogen to 1.0.0.beta1 [nia 2019-10-26]
