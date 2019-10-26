@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4556 2019/10/26 13:20:50 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.4557 2019/10/26 15:21:52 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7303,3 +7303,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated editors/sasm to 3.10.1 [kamil 2019-10-26]
 	Updated devel/bzr to 2.7.0 [rhialto 2019-10-26]
 	Added x11/qt5-qscintilla version 2.11.2 [kamil 2019-10-26]
+	Removed databases/sqliteman [kamil 2019-10-26]
