@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4546 2019/10/26 09:51:57 rillig Exp $
+$NetBSD: CHANGES-2019,v 1.4547 2019/10/26 11:06:34 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7292,3 +7292,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-Module-Metadata to 1.000037 [mef 2019-10-26]
 	Updated devel/p5-Module-Starter to 1.760 [mef 2019-10-26]
 	Updated pkgtools/pkglint to 19.3.2 [rillig 2019-10-26]
+	Updated ham/trustedQSL to 2.4.7 [mef 2019-10-26]
