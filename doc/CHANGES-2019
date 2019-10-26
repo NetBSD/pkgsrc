@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4558 2019/10/26 17:01:38 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.4559 2019/10/26 17:59:37 ng0 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7305,3 +7305,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added x11/qt5-qscintilla version 2.11.2 [kamil 2019-10-26]
 	Removed databases/sqliteman [kamil 2019-10-26]
 	Removed emulators/gambatte [kamil 2019-10-26]
+	Updated www/libmicrohttpd to 0.9.68 [ng0 2019-10-26]
