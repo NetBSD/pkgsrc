@@ -1,14 +1,12 @@
-$NetBSD: distinfo,v 1.8 2017/09/10 14:10:43 joerg Exp $
+$NetBSD: distinfo,v 1.9 2019/10/26 12:23:01 kamil Exp $
 
-SHA1 (LibreCAD-2.1.3.tar.gz) = eac60a4e7eadf2969d34f289059053cff4068309
-RMD160 (LibreCAD-2.1.3.tar.gz) = bbcc26997c907b445c43af323644141035cd5304
-SHA512 (LibreCAD-2.1.3.tar.gz) = 246cffcc1ea3389997b4a738ab5e3d78e8c1096817ecb1ca28f38d601bc5d1a95f60798ac82308914a34da7b5dbc302b8363cf8b58a97221fdc8ee63010adc6c
-Size (LibreCAD-2.1.3.tar.gz) = 22415288 bytes
-SHA1 (patch-librecad_src_lib_engine_rs__color.h) = f20d193e4fcdfd933d25430f66be71b4468ab2c3
-SHA1 (patch-librecad_src_lib_engine_rs__image.cpp) = 375c9454c549dcb16ca29195aec1f0f36a99bd2a
-SHA1 (patch-librecad_src_lib_engine_rs__image.h) = b10da3f1f4f68a15acd2363eae37e1b8644431b3
-SHA1 (patch-librecad_src_lib_engine_rs__polyline.cpp) = f922a1427204d8b3bbe3e76d4ff7ca4caac59565
-SHA1 (patch-librecad_src_lib_engine_rs__polyline.h) = 8c5991db6b71a7511ab0ddf5870b5014a18460e9
-SHA1 (patch-librecad_src_lib_engine_rs__system.cpp) = 8a31fb54946c06460b2328c8a3490ec26f60f33c
-SHA1 (patch-librecad_src_main_qc__applicationwindow.cpp) = cadee00f00d10d27c201375f06e14f8cd56a9cdc
-SHA1 (patch-scripts_postprocess-unix.sh) = e98c0a2d114e2730b2cb53eb6f137080253377a3
+SHA1 (LibreCAD-2.2.0.rc1.tar.gz) = 2bffa19ac39a18d9d79fde72e624d7aebbdfa236
+RMD160 (LibreCAD-2.2.0.rc1.tar.gz) = 1521ddedf187c4ce9081062edf88f3f39d5bbb7c
+SHA512 (LibreCAD-2.2.0.rc1.tar.gz) = c7baf28511f75b63382f6f7c508b2e244638a0ecbe4cf99f4854b1f628a6772b942d95c7cbbf9082d06e066cd9ab2a33961ac48bb1d0846f5c2d75f657e5d914
+Size (LibreCAD-2.2.0.rc1.tar.gz) = 13578543 bytes
+SHA1 (patch-librecad_src_lib_engine_rs__system.cpp) = 38ceb3cde81042a1eeb6c68ead874e1a3a3512bb
+SHA1 (patch-librecad_src_main_qc__applicationwindow.cpp) = 1234b3b4e087c651da76c1d8d7770bebaa71dddc
+SHA1 (patch-librecad_src_ui_forms_qg__commandwidget.cpp) = 97c40234eec588569a862387dc509cc911cb31dc
+SHA1 (patch-librecad_src_ui_generic_colorwizard.cpp) = db049f7bc948913ef215a1a8c2d7d94367b12f1b
+SHA1 (patch-librecad_src_ui_generic_widgetcreator.cpp) = 1533f373059b7068638eea9ebc32a614c997c13d
+SHA1 (patch-scripts_postprocess-unix.sh) = dfa529bff1251967764c1a21654976844cc7e19a
