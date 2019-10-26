@@ -82,6 +82,14 @@ func containsStr(slice []string, s string) bool {
 	return false
 }
 
+func mapStr(slice []string, fn func(s string) string) []string {
+	result := make([]string, len(slice))
+	for i, str := range slice {
+		result[i] = fn(str)
+	}
+	return result
+}
+
 // intern returns an independent copy of the given string.
 //
 // It should be called when only a small substring of a large string
