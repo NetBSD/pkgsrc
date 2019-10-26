@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2019/08/11 13:18:55 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2019/10/26 06:35:19 mef Exp $
 
-DISTNAME=	CPAN-FindDependencies-2.48
+DISTNAME=	CPAN-FindDependencies-2.49
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CPAN/}
 
@@ -18,12 +17,12 @@ DEPENDS+=	p5-libwww>=1.41:../../www/p5-libwww
 DEPENDS+=	p5-Parse-CPAN-Packages>=2.31:../../devel/p5-Parse-CPAN-Packages
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI # really URI::file>=4.13
 DEPENDS+=	p5-YAML-Tiny>=1.36:../../textproc/p5-YAML-Tiny
-# for make test
-BUILD_DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage
+
+TEST_DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage
 # for Types::Standard
-BUILD_DEPENDS+=	p5-Type-Tiny-[0-9]*:../../devel/p5-Type-Tiny
-BUILD_DEPENDS+=	p5-Moo-[0-9]*:../../devel/p5-Moo
-BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+TEST_DEPENDS+=	p5-Type-Tiny-[0-9]*:../../devel/p5-Type-Tiny
+TEST_DEPENDS+=	p5-Moo-[0-9]*:../../devel/p5-Moo
+TEST_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/CPAN/FindDependencies/.packlist
