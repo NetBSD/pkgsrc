@@ -47,7 +47,7 @@ func (s *Suite) Test_ShTokenizer_ShAtom(c *check.C) {
 			text += ":" + strings.Replace(strings.Replace(modifier, "\\", "\\\\", -1), ":", "\\:", -1)
 		}
 		text += "}"
-		varuse := NewMkVarUse(varname, modifiers...)
+		varuse := NewMkTokenBuilder().VarUse(varname, modifiers...)
 		return &ShAtom{shtVaruse, text, shqPlain, varuse}
 	}
 	shvar := func(text, varname string) *ShAtom { return &ShAtom{shtShVarUse, text, shqPlain, varname} }

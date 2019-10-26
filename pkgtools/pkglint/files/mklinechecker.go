@@ -131,7 +131,8 @@ func (ck MkLineChecker) checkInclude() {
 		mkline.Warnf("Please write \"USE_TOOLS+= intltool\" instead of this line.")
 
 	case hasSuffix(includedFile, "/builtin.mk"):
-		if mkline.Basename != "hacks.mk" {
+		// TODO: mkline.HasRationale
+		if mkline.Basename != "hacks.mk" && !mkline.HasComment() {
 			fix := mkline.Autofix()
 			fix.Errorf("%s must not be included directly. Include \"%s/buildlink3.mk\" instead.", includedFile, path.Dir(includedFile))
 			fix.Replace("builtin.mk", "buildlink3.mk")
@@ -272,8 +273,8 @@ func (ck MkLineChecker) checkDirectiveIndentation(expectedDepth int) {
 
 func (ck MkLineChecker) checkDependencyRule(allowedTargets map[string]bool) {
 	mkline := ck.MkLine
-	targets := ck.MkLine.ValueFields(mkline.Targets())
-	sources := ck.MkLine.ValueFields(mkline.Sources())
+	targets := mkline.ValueFields(mkline.Targets())
+	sources := mkline.ValueFields(mkline.Sources())
 
 	for _, source := range sources {
 		if source == ".PHONY" {
@@ -282,32 +283,38 @@ func (ck MkLineChecker) checkDependencyRule(allowedTargets map[string]bool) {
 			}
 		}
 	}
-
 	for _, target := range targets {
 		if target == ".PHONY" {
-			for _, dep := range sources {
-				allowedTargets[dep] = true
+			for _, source := range sources {
+				allowedTargets[source] = true
 			}
-
-		} else if target == ".ORDER" {
-			// TODO: Check for spelling mistakes.
-
-		} else if hasPrefix(target, "${.CURDIR}/") {
-			// This is deliberate, see the explanation below.
-
-		} else if !allowedTargets[target] {
-			mkline.Warnf("Undeclared target %q.", target)
-			mkline.Explain(
-				"To define a custom target in a package, declare it like this:",
-				"",
-				"\t.PHONY: my-target",
-				"",
-				"To define a custom target that creates a file (should be rarely needed),",
-				"declare it like this:",
-				"",
-				"\t${.CURDIR}/my-file:")
 		}
 	}
+
+	for _, target := range targets {
+		ck.checkDependencyTarget(target, allowedTargets)
+	}
+}
+
+func (ck MkLineChecker) checkDependencyTarget(target string, allowedTargets map[string]bool) {
+	if target == ".PHONY" ||
+		target == ".ORDER" ||
+		NewMkParser(nil, target).VarUse() != nil ||
+		allowedTargets[target] {
+		return
+	}
+
+	mkline := ck.MkLine
+	mkline.Warnf("Undeclared target %q.", target)
+	mkline.Explain(
+		"To define a custom target in a package, declare it like this:",
+		"",
+		"\t.PHONY: my-target",
+		"",
+		"To define a custom target that creates a file (should be rarely needed),",
+		"declare it like this:",
+		"",
+		"\t${.CURDIR}/my-file:")
 }
 
 // checkVarassignLeftPermissions checks the permissions for the left-hand side
@@ -450,7 +457,7 @@ func (ck MkLineChecker) checkVarassignLeftRationale() {
 		return
 	}
 
-	if mkline.VarassignComment() != "" {
+	if mkline.HasComment() {
 		return
 	}
 
@@ -1048,7 +1055,7 @@ func (ck MkLineChecker) checkVarassignOpShell() {
 	case mkline.Op() != opAssignShell:
 		return
 
-	case mkline.VarassignComment() != "":
+	case mkline.HasComment():
 		return
 
 	case mkline.Basename == "builtin.mk":
@@ -1094,7 +1101,7 @@ func (ck MkLineChecker) checkVarassignRight() {
 	varname := mkline.Varname()
 	op := mkline.Op()
 	value := mkline.Value()
-	comment := mkline.VarassignComment()
+	comment := condStr(mkline.HasComment(), "#", "") + mkline.Comment()
 
 	if trace.Tracing {
 		defer trace.Call(varname, op, value)()
@@ -1254,7 +1261,7 @@ func (ck MkLineChecker) checkVarassignMisc() {
 		ck.checkVarassignDecreasingVersions()
 	}
 
-	if mkline.VarassignComment() == "# defined" && !hasSuffix(varname, "_MK") && !hasSuffix(varname, "_COMMON") {
+	if mkline.Comment() == " defined" && !hasSuffix(varname, "_MK") && !hasSuffix(varname, "_COMMON") {
 		mkline.Notef("Please use \"# empty\", \"# none\" or \"# yes\" instead of \"# defined\".")
 		mkline.Explain(
 			"The value #defined says something about the state of the variable,",
@@ -1378,7 +1385,7 @@ func (ck MkLineChecker) checkVarassignLeftUserSettable() bool {
 	}
 
 	switch {
-	case mkline.VarassignComment() != "":
+	case mkline.HasComment():
 		// Assume that the comment contains a rationale for disabling
 		// this particular check.
 
@@ -1407,6 +1414,7 @@ func (ck MkLineChecker) checkVarassignLeftUserSettable() bool {
 	return true
 }
 
+// comment is an empty string for no comment, or "#" + the actual comment otherwise.
 func (ck MkLineChecker) checkVartype(varname string, op MkOperator, value, comment string) {
 	if trace.Tracing {
 		defer trace.Call(varname, op, value, comment)()

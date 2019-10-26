@@ -2,9 +2,36 @@ package pkglint
 
 import (
 	"gopkg.in/check.v1"
+	"strings"
 )
 
-func NewMkVarUse(varname string, modifiers ...string) *MkVarUse {
+type MkTokenBuilder struct{}
+
+func NewMkTokenBuilder() MkTokenBuilder { return MkTokenBuilder{} }
+
+func (b MkTokenBuilder) VaruseToken(varname string, modifiers ...string) *MkToken {
+	var text strings.Builder
+	text.WriteString("${")
+	text.WriteString(varname)
+	for _, modifier := range modifiers {
+		text.WriteString(":")
+		text.WriteString(modifier)
+	}
+	text.WriteString("}")
+	return &MkToken{Text: text.String(), Varuse: b.VarUse(varname, modifiers...)}
+}
+
+func (b MkTokenBuilder) VaruseTextToken(text, varname string, modifiers ...string) *MkToken {
+	return &MkToken{Text: text, Varuse: b.VarUse(varname, modifiers...)}
+}
+
+func (MkTokenBuilder) TextToken(text string) *MkToken {
+	return &MkToken{text, nil}
+}
+
+func (MkTokenBuilder) Tokens(tokens ...*MkToken) []*MkToken { return tokens }
+
+func (MkTokenBuilder) VarUse(varname string, modifiers ...string) *MkVarUse {
 	var mods []MkVarUseModifier
 	for _, modifier := range modifiers {
 		mods = append(mods, MkVarUseModifier{modifier})
