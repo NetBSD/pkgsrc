@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4554 2019/10/26 12:47:49 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.4555 2019/10/26 13:03:45 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7301,3 +7301,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added editors/l3afpad version 0.8.18.1.11 [nia 2019-10-26]
 	Updated cad/librecad to 2.2.0.rc1 [kamil 2019-10-26]
 	Updated editors/sasm to 3.10.1 [kamil 2019-10-26]
+	Updated devel/bzr to 2.7.0 [rhialto 2019-10-26]

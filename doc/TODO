@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19364 2019/10/25 03:02:14 taca Exp $
+$NetBSD: TODO,v 1.19365 2019/10/26 13:03:46 rhialto Exp $
 
 Suggested new packages
 ======================
@@ -475,7 +475,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bos-2.5
 	o boson-0.13
 	o bottlerocket-0.05b3
-	o bzr-2.7.0
 	o bzr-explorer-1.3.0
 	o bzr-gtk-0.103.0
 	o bzr-svn-1.2.2
