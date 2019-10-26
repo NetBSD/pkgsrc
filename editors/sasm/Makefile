@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2018/03/12 11:16:24 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/10/26 12:47:37 kamil Exp $
 
-DISTNAME=	SASM-3.6.0
+DISTNAME=	SASM-3.10.1
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	1
 CATEGORIES=	editors x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Dman95/}
 GITHUB_PROJECT=	SASM
@@ -21,6 +20,5 @@ do-configure:
 	${RUN} cd ${WRKSRC} && ${PKGSRC_ENV} ${CONFIGURE_ENV} ${QTDIR}/bin/qmake PREFIX=${PREFIX} -o Makefile
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/qt4-libs/buildlink3.mk"
-.include "../../x11/qt4-tools/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
