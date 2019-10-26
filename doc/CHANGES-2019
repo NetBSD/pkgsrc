@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4551 2019/10/26 11:55:12 mef Exp $
+$NetBSD: CHANGES-2019,v 1.4552 2019/10/26 12:19:04 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7298,3 +7298,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-Moo to 2.003006 [mef 2019-10-26]
 	Updated pkgtools/pkglint to 19.3.3 [rillig 2019-10-26]
 	Updated devel/p5-MooseX-Role-Parameterized to 1.11 [mef 2019-10-26]
+	Added editors/l3afpad version 0.8.18.1.11 [nia 2019-10-26]
