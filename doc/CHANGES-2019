@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4560 2019/10/26 21:24:51 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4561 2019/10/26 22:55:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7307,3 +7307,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed emulators/gambatte [kamil 2019-10-26]
 	Updated www/libmicrohttpd to 0.9.68 [ng0 2019-10-26]
 	Updated audio/hydrogen to 1.0.0.beta1 [nia 2019-10-26]
+	Updated devel/py-lazy-object-proxy to 1.4.3 [adam 2019-10-26]
+	Updated devel/py-xopen to 0.8.4 [adam 2019-10-26]
+	Updated devel/py-ipython to 7.9.0 [adam 2019-10-26]
+	Updated textproc/py-pyquery to 1.4.1 [adam 2019-10-26]
