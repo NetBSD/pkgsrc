@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4550 2019/10/26 11:43:49 rillig Exp $
+$NetBSD: CHANGES-2019,v 1.4551 2019/10/26 11:55:12 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7295,4 +7295,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated ham/trustedQSL to 2.4.7 [mef 2019-10-26]
 	Added games/simutrans version 120.4.1 [nia 2019-10-26]
 	Added games/simutrans-pak128 version 2.8.1 [nia 2019-10-26]
+	Updated devel/p5-Moo to 2.003006 [mef 2019-10-26]
 	Updated pkgtools/pkglint to 19.3.3 [rillig 2019-10-26]
+	Updated devel/p5-MooseX-Role-Parameterized to 1.11 [mef 2019-10-26]
