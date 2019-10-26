@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.148 2019/10/25 13:58:42 kamil Exp $
+# $NetBSD: Makefile,v 1.149 2019/10/26 12:52:28 kamil Exp $
 
 DISTNAME=	gedit-3.22.1
 PKGREVISION=	10
@@ -10,6 +10,8 @@ MAINTAINER=	prlw1@cam.ac.uk
 HOMEPAGE=	https://wiki.gnome.org/Apps/Gedit
 COMMENT=	Lightweight GNOME UTF-8 text editor
 LICENSE=	gnu-gpl-v2
+
+PREV_PKGPATH=	editors/gedit3
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
