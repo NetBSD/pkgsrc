@@ -39,8 +39,7 @@ func (ctx *Toplevel) checkSubdir(mkline *MkLine) {
 	subdir := mkline.Value()
 
 	if mkline.IsCommentedVarassign() {
-		comment := mkline.VarassignComment()
-		if comment == "" || comment == "#" {
+		if !mkline.HasComment() || mkline.Comment() == "" {
 			mkline.Warnf("%q commented out without giving a reason.", subdir)
 		}
 	}

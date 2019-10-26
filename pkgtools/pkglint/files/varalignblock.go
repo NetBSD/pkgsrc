@@ -118,7 +118,7 @@ func (va *VaralignBlock) processVarassign(mkline *MkLine) {
 		// .include "../../mk/pkg-build-options.mk"
 		return
 
-	case mkline.Value() == "" && mkline.VarassignComment() == "":
+	case mkline.Value() == "" && !mkline.HasComment():
 		// Multiple-inclusion guards usually appear in a block of
 		// their own and therefore do not need alignment.
 		//

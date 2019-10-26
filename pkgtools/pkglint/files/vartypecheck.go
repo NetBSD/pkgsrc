@@ -614,7 +614,7 @@ func (cv *VartypeCheck) FetchURL() {
 		hasSuffix(fetchURL, "="),
 		hasSuffix(fetchURL, ":"),
 		hasPrefix(fetchURL, "-"),
-		len(tokens) == 0 || tokens[len(tokens)-1].Varuse != nil:
+		tokens[len(tokens)-1].Varuse != nil:
 		break
 
 	default:
@@ -1401,7 +1401,7 @@ func (cv *VartypeCheck) VariableNamePattern() {
 	}
 
 	// TODO: sync with MkParser.Varname
-	if matches(cv.Value, `^[*A-Z_][*0-9A-Z_]*(?:[.].*)?$`) {
+	if matches(cv.Value, `^[*A-Z_.][*0-9A-Z_]*(?:[.].*)?$`) {
 		return
 	}
 
