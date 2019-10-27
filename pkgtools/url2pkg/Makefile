@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.106 2019/10/06 12:55:30 rillig Exp $
+# $NetBSD: Makefile,v 1.107 2019/10/27 19:19:54 rillig Exp $
 
-PKGNAME=	url2pkg-19.3.3
+PKGNAME=	url2pkg-19.3.4
 CATEGORIES=	pkgtools
 
 MAINTAINER=	rillig@NetBSD.org
@@ -41,6 +41,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/setuptools.py ${DESTDIR}${PREFIX}/lib/url2pkg/
 	${INSTALL_DATA} /dev/null ${DESTDIR}${PREFIX}/lib/url2pkg/distutils/__init__.py
 	${INSTALL_DATA} ${WRKSRC}/setuptools.py ${DESTDIR}${PREFIX}/lib/url2pkg/distutils/core.py
+	${INSTALL_DATA} ${WRKSRC}/setuptools.py ${DESTDIR}${PREFIX}/lib/url2pkg/distutils/extension.py
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

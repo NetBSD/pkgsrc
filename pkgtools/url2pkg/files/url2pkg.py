@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.23 2019/10/27 13:15:04 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.24 2019/10/27 19:19:55 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -122,6 +122,7 @@ class Globals:
              'BSD'),  # too unspecific, may be 2-clause, 3-clause, 4-clause
             ('${PERL5_LICENSE}', 'perl'),
             ('apache-2.0', 'Apache 2', 'Apache 2.0'),
+            ('artistic-2.0', 'artistic_2'),
             ('gnu-gpl-v3', 'GNU Lesser General Public License (LGPL), Version 3'),
             ('gnu-lgpl-v2', 'LGPL'),
             ('mit', 'MIT', 'MIT License'),
@@ -137,10 +138,11 @@ class Globals:
             return license_name
         return ''
 
+
 class Lines:
     """
-    A list of Makefile lines with high-level methods for manipulating
-    variable assignments.
+    A list of lines (typically from a Makefile, but other file types work as
+    well) with high-level methods for manipulating variable assignments.
     """
     lines: List[str]
 
@@ -483,7 +485,6 @@ class Generator:
     def generate_package(self, g: Globals) -> Lines:
         pkgdir = g.pkgdir
         makefile = pkgdir / 'Makefile'
-        descr = pkgdir / 'DESCR'
         plist = pkgdir / 'PLIST'
 
         initial_lines = self.generate_Makefile()
@@ -493,8 +494,14 @@ class Generator:
         except OSError:
             pass
         initial_lines.write_to(makefile)
-        plist.is_file() or Lines('@comment $''NetBSD$').write_to(plist)
-        descr.is_file() or Lines().write_to(descr)
+
+        plist_lines = [
+            f'@comment $''NetBSD$',
+            f'@comment TODO: to fill this file with the file listing:',
+            f'@comment TODO: 1. run "{g.make} package"',
+            f'@comment TODO: 2. run "{g.make} print-PLIST"'
+        ]
+        plist.is_file() or Lines(*plist_lines).write_to(plist)
 
         subprocess.check_call([g.editor, makefile])
 
@@ -570,6 +577,8 @@ class Adjuster:
 
     regenerate_distinfo: bool
 
+    descr_lines: List[str]
+
     def __init__(self, g: Globals, url: str, initial_lines: Lines):
         self.g = g
         self.url = url
@@ -591,6 +600,7 @@ class Adjuster:
         self.pkgname_transform = ''
         self.makefile_lines = Lines()
         self.regenerate_distinfo = False
+        self.descr_lines = []
 
     def add_dependency(self, kind: str, pkgbase: str, constraint: str, dep_dir: str) -> None:
         """ add_dependency('DEPENDS', 'package', '>=1', '../../category/package') """
@@ -698,6 +708,13 @@ class Adjuster:
     def wrksrc_open(self, relative_pathname: str):
         return (self.abs_wrksrc / relative_pathname).open()
 
+    def wrksrc_head(self, relative_pathname: str, n: int):
+        try:
+            with (self.abs_wrksrc / relative_pathname).open(encoding="UTF-8") as f:
+                return f.read().splitlines()[:n]
+        except IOError:
+            return []
+
     def wrksrc_find(self, what: Union[str, Callable[[str], bool]]) -> List[str]:
         def search(f):
             return re.search(what, f) if type(what) == str else what(f)
@@ -720,6 +737,22 @@ class Adjuster:
 
     def wrksrc_isfile(self, relative_pathname: str) -> bool:
         return (self.abs_wrksrc / relative_pathname).is_file()
+
+    def adjust_descr(self):
+        for filename in ('README', 'README.txt', 'README.md'):
+            lines = self.wrksrc_head(filename, 21)
+            if len(lines) == 21:
+                lines[-1] = '...'
+            if lines:
+                self.descr_lines = [
+                    f'TODO: Adjust the following lines from {filename}',
+                    '',
+                    *lines]
+                return
+
+        self.descr_lines = [
+            'TODO: Fill in a short description of the package.',
+            'TODO: It should be between 3 and 20 lines.']
 
     def adjust_configure(self):
         if not self.wrksrc_isfile('configure'):
@@ -765,7 +798,7 @@ class Adjuster:
 
     def adjust_perl_module_Makefile_PL(self):
         # Example packages:
-        # devel/p5-Algorithm-Diff (no dependencies)
+        # devel/p5-Algorithm-Diff (no dependencies, no license)
         # devel/p5-Carp-Assert-More (dependencies without version numbers)
         # www/p5-HTML-Quoted (dependency with version number)
 
@@ -990,6 +1023,7 @@ class Adjuster:
         self.wrksrc_dirs = scan(self.abs_wrksrc, Path.is_dir)
         self.wrksrc_files = scan(self.abs_wrksrc, Path.is_file)
 
+        self.adjust_descr()
         self.adjust_configure()
         self.adjust_cmake()
         self.adjust_meson()
@@ -1003,6 +1037,8 @@ class Adjuster:
         self.adjust_use_languages()
 
         self.generate_lines().write_to(self.g.pkgdir / 'Makefile')
+        descr = (self.g.pkgdir / 'DESCR')
+        descr.is_file() or Lines(*self.descr_lines).write_to(descr)
 
         if self.regenerate_distinfo:
             self.g.bmake('distinfo')
