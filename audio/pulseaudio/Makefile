@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.139 2019/09/21 10:02:30 nia Exp $
+# $NetBSD: Makefile,v 1.140 2019/10/27 12:44:27 kamil Exp $
 
 DISTNAME=	pulseaudio-13.0
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://freedesktop.org/software/pulseaudio/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -27,6 +28,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-tcpwrap
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
+CONFIGURE_ARGS+=	--without-fftw
 CONFIGURE_ENV+=		DATADIRNAME=${PKGLOCALEDIR}
 PKGCONFIG_OVERRIDE+=	libpulse-mainloop-glib.pc.in
 PKGCONFIG_OVERRIDE+=	libpulse-simple.pc.in
