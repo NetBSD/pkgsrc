@@ -1,15 +1,2 @@
-@comment $NetBSD: PLIST,v 1.4 2011/01/21 22:30:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/10/27 17:23:34 kamil Exp $
 bin/kchmviewer
-${PLIST.kde4}share/applications/kde4/kchmviewer.desktop
-${PLIST.kde4}share/locale/cs/LC_MESSAGES/kchmviewer.mo
-${PLIST.kde4}share/locale/fr/LC_MESSAGES/kchmviewer.mo
-${PLIST.kde4}share/locale/hu/LC_MESSAGES/kchmviewer.mo
-${PLIST.kde4}share/locale/it/LC_MESSAGES/kchmviewer.mo
-${PLIST.kde4}share/locale/nl/LC_MESSAGES/kchmviewer.mo
-${PLIST.kde4}share/locale/pt_BR/LC_MESSAGES/kchmviewer.mo
-${PLIST.kde4}share/locale/ru/LC_MESSAGES/kchmviewer.mo
-${PLIST.kde4}share/locale/sv/LC_MESSAGES/kchmviewer.mo
-${PLIST.kde4}share/locale/tr/LC_MESSAGES/kchmviewer.mo
-${PLIST.kde4}share/locale/uk/LC_MESSAGES/kchmviewer.mo
-${PLIST.kde4}share/locale/zh_CN/LC_MESSAGES/kchmviewer.mo
-${PLIST.kde4}share/locale/zh_TW/LC_MESSAGES/kchmviewer.mo
