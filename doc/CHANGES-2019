@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4579 2019/10/27 18:35:10 he Exp $
+$NetBSD: CHANGES-2019,v 1.4580 2019/10/27 19:20:08 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7338,3 +7338,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated inputmethod/uim to 1.8.6nb65 [kamil 2019-10-27]
 	Added security/qt5-qtkeychain version 0.9.1 [bouyer 2019-10-27]
 	Updated lang/rust to 1.38.0nb1 [he 2019-10-27]
+	Updated pkgtools/url2pkg to 19.3.4 [rillig 2019-10-27]
