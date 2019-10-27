@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4566 2019/10/27 12:44:55 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.4567 2019/10/27 13:19:14 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7318,3 +7318,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/djview4 to 4.10.6nb2 [kamil 2019-10-27]
 	Updated security/xca to 2.1.2nb1 [kamil 2019-10-27]
 	Updated audio/pulseaudio to 13.0nb1 [kamil 2019-10-27]
+	Added devel/breezy version 3.0.1 [rhialto 2019-10-27]
