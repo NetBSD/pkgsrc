@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4577 2019/10/27 17:31:51 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.4578 2019/10/27 18:21:01 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7336,3 +7336,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated misc/bibletime to 2.11.2 [kamil 2019-10-27]
 	Updated misc/kchmviewer to 7.2.1nb46 [kamil 2019-10-27]
 	Updated inputmethod/uim to 1.8.6nb65 [kamil 2019-10-27]
+	Added security/qt5-qtkeychain version 0.9.1 [bouyer 2019-10-27]
