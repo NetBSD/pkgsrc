@@ -1,0 +1,16 @@
+Breezy (brz) is a decentralized revision control system, designed to be
+easy for developers and end users alike.
+
+By default, Breezy provides support for both the `Bazaar
+<https://www.bazaar-vcs.org>`_ and `Git <https://www.git-scm.com/>`_ file
+formats.
+
+To learn how to use Breezy, see the official documentation in the `doc`
+directory or refer to the Bazaar documentation at
+<https://www.breezy-vcs.org/doc/en/>.
+
+Breezy is a friendly fork of the Bazaar (``bzr``) project, hosted on
+http://bazaar.canonical.com/. It is backwards compatibility with
+Bazaar's disk format and protocols. One of the key differences with
+Bazaar is that Breezy also runs on Python 3.3 and later, in addition to
+Python 2.7.
