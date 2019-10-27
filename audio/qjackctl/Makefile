@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.54 2019/09/18 14:17:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.55 2019/10/27 14:51:51 kamil Exp $
 #
 
 DISTNAME=	qjackctl-0.4.2
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qjackctl/}
 EXTRACT_USING=	bsdtar
