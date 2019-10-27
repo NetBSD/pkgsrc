@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2019/10/27 14:51:51 kamil Exp $
+# $NetBSD: Makefile,v 1.56 2019/10/27 15:00:03 kamil Exp $
 #
 
 DISTNAME=	qjackctl-0.4.2
@@ -22,9 +22,14 @@ USE_TOOLS+=	gmake
 CONFIGURE_ARGS+=	--without-alsa
 .endif
 
-.include "options.mk"
+CONFIGURE_ARGS+=        --with-qt5=${QTDIR}
 
 .include "../../audio/jack/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qttools/buildlink3.mk"
+.if ${OPSYS} != "Darwin"
+.  include "../../x11/qt5-qtx11extras/buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
