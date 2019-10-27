@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.91 2019/09/18 14:17:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.92 2019/10/27 17:23:34 kamil Exp $
 
 DISTNAME=		kchmviewer-7.2.1
-PKGREVISION=		45
+PKGREVISION=		46
 CATEGORIES=		misc x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kchmviewer/}
 
@@ -25,8 +25,21 @@ SUBST_STAGE.zip=	post-configure
 
 CHECK_PORTABILITY_SKIP=	build-win32-mingw.sh
 
-.include "options.mk"
+INSTALLATION_DIRS=      bin
 
-.include "../../devel/chmlib/buildlink3.mk"
+do-configure:
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${QTDIR}/bin/qmake
+	cd ${WRKSRC}/lib && ${SETENV} ${MAKE_ENV} ${QTDIR}/bin/qmake
+	cd ${WRKSRC}/lib/libebook && ${SETENV} ${MAKE_ENV} ${QTDIR}/bin/qmake
+
+do-build:
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKEFLAGS}
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/kchmviewer ${DESTDIR}${PREFIX}/bin
+
 .include "../../archivers/libzip/buildlink3.mk"
+.include "../../devel/chmlib/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtwebkit/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
