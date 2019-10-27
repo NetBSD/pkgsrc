@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2019/09/30 11:20:03 maya Exp $
+@comment $NetBSD: PLIST,v 1.33 2019/10/27 12:44:28 kamil Exp $
 bin/esdcompat
 bin/pa-info
 bin/pacat
@@ -12,7 +12,6 @@ bin/parecord
 bin/pasuspender
 ${PLIST.x11}bin/pax11publish
 bin/pulseaudio
-${PLIST.fftw}bin/qpaeq
 ${PLIST.x11}bin/start-pulseaudio-x11
 include/pulse/cdecl.h
 include/pulse/channelmap.h
@@ -122,8 +121,6 @@ lib/pulse-${PULSELIBVER}/modules/module-device-restore.a
 lib/pulse-${PULSELIBVER}/modules/module-device-restore.so
 lib/pulse-${PULSELIBVER}/modules/module-echo-cancel.a
 lib/pulse-${PULSELIBVER}/modules/module-echo-cancel.so
-${PLIST.fftw}lib/pulse-${PULSELIBVER}/modules/module-equalizer-sink.a
-${PLIST.fftw}lib/pulse-${PULSELIBVER}/modules/module-equalizer-sink.so
 lib/pulse-${PULSELIBVER}/modules/module-esound-compat-spawnfd.a
 lib/pulse-${PULSELIBVER}/modules/module-esound-compat-spawnfd.so
 lib/pulse-${PULSELIBVER}/modules/module-esound-compat-spawnpid.a
