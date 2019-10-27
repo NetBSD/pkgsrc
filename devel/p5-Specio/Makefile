@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2019/08/11 13:20:20 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/10/27 15:06:41 mef Exp $
 
-DISTNAME=	Specio-0.43
+DISTNAME=	Specio-0.44
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/
 
@@ -21,8 +20,8 @@ DEPENDS+=	p5-Sub-Quote-[0-9]*:../../devel/p5-Sub-Quote
 DEPENDS+=	p5-Ref-Util-[0-9]*:../../devel/p5-Ref-Util
 
 # TEST_DEPENDS
-BUILD_DEPENDS+=	p5-Test-Needs-[0-9]*:../../devel/p5-Test-Needs
-BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+TEST_DEPENDS+=	p5-Test-Needs-[0-9]*:../../devel/p5-Test-Needs
+TEST_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 
 PERL5_PACKLIST=	auto/Specio/.packlist
 
