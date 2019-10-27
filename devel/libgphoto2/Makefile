@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2018/07/04 13:40:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.71 2019/10/27 18:58:06 maya Exp $
 
 DISTNAME=	libgphoto2-2.5.8
 PKGREVISION=	3
@@ -28,6 +28,7 @@ REPLACE_SH=		packaging/generic/check-ptp-camera
 PLIST_VARS+=	libusb
 
 BUILDLINK_TRANSFORM.SunOS+=	opt:-Wl,--version-script=./libgphoto2_port.ver:-Wl,-M./libgphoto2_port.ver
+CONFIGURE_ARGS.SunOS+=		--without-libusb
 
 SUBST_CLASSES.SunOS+=	mapfile
 SUBST_STAGE.mapfile=	pre-configure
