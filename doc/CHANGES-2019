@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4563 2019/10/26 23:39:33 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4564 2019/10/27 10:10:32 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7315,3 +7315,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/py-sphinx to 2.2.1 [adam 2019-10-26]
 	Updated devel/py-test-runner to 5.2 [adam 2019-10-26]
 	Updated databases/repmgr to 5.0.0 [adam 2019-10-26]
+	Updated graphics/djview4 to 4.10.6nb2 [kamil 2019-10-27]
