@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2019/09/18 14:17:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.40 2019/10/27 17:11:04 kamil Exp $
 
-DISTNAME=		bibletime-2.10.1
-PKGREVISION=		40
+DISTNAME=		bibletime-2.11.2
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bibletime/}
 EXTRACT_SUFX=		.tar.xz
@@ -24,9 +23,16 @@ SUBST_SED.docdir=	-e 's,bibletime/docs,doc/bibletime,g'
 
 DEPENDS+=	dejavu-ttf-[0-9]*:../../fonts/dejavu-ttf
 
-.include "options.mk"
+CONFIGURE_DIRS=		${WRKDIR}/build
+CMAKE_ARG_PATH=		${WRKSRC}
+
+post-extract:
+	${MKDIR} ${WRKDIR}/build
 
 .include "../../misc/sword/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libclucene/buildlink3.mk"
+.include "../../x11/qt5-qttools/buildlink3.mk"
+.include "../../x11/qt5-qtwebkit/buildlink3.mk"
+.include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

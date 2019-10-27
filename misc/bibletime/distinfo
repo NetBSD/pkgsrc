@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 23:49:31 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/10/27 17:11:04 kamil Exp $
 
-SHA1 (bibletime-2.10.1.tar.xz) = 94f6f98f27ccfceee88c985bc393777b6a81d3f9
-RMD160 (bibletime-2.10.1.tar.xz) = a605ce0b04a33edd48fe33caf1ac41d017aca497
-SHA512 (bibletime-2.10.1.tar.xz) = 50f84eb1aefe911f1336ec7a23ea34ade1628383f35dca25330984787221214c0bc0cbc9f88f9540336949df02e76e769b7998d2eef3a15862e3038541564cc9
-Size (bibletime-2.10.1.tar.xz) = 3252680 bytes
-SHA1 (patch-CMakeLists.txt) = a6a992a57ee51edab2e8583c6805a017a252d7b2
+SHA1 (bibletime-2.11.2.tar.xz) = 75b0a3be9f392b568bbf974d8cf59db128fa7b20
+RMD160 (bibletime-2.11.2.tar.xz) = b4df2eb0bc581f4d0a9f0e3accebaeb955dba905
+SHA512 (bibletime-2.11.2.tar.xz) = 99e2500e07797549e32ac28238c90a4db1cd98f74ea20f0161db7675127f42363006f20d859504be958bfdecf80a18a96229a1bbc105d332af97644fafc92d31
+Size (bibletime-2.11.2.tar.xz) = 2533472 bytes
