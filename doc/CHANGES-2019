@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4567 2019/10/27 13:19:14 rhialto Exp $
+$NetBSD: CHANGES-2019,v 1.4568 2019/10/27 13:52:40 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7319,3 +7319,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/xca to 2.1.2nb1 [kamil 2019-10-27]
 	Updated audio/pulseaudio to 13.0nb1 [kamil 2019-10-27]
 	Added devel/breezy version 3.0.1 [rhialto 2019-10-27]
+	Removed lang/basic256 [kamil 2019-10-27]
