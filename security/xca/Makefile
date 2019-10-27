@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/08/13 02:39:45 brook Exp $
+# $NetBSD: Makefile,v 1.2 2019/10/27 12:08:29 kamil Exp $
 
 DISTNAME=	xca-2.1.2
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=chris2511/}
 GITHUB_RELEASE=	RELEASE.2.1.2
@@ -11,18 +12,17 @@ COMMENT=	Certificate and key management
 LICENSE=	modified-bsd
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config
-USE_LANGUAGES=		c++
+USE_TOOLS+=		gmake pkg-config perl
+USE_LANGUAGES=		c c++
 DESTDIR_VARNAME=	destdir
 
-INSTALLATION_DIRS+=	bin man/man1
+REPLACE_PERL+=		doc/code2html
+
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	share/applications share/mime/packages share/pixmaps
 INSTALLATION_DIRS+=	share/doc/xca share/xca
 
-.include "options.mk"
-
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../x11/qt4-libs/buildlink3.mk"
-.include "../../x11/qt4-tools/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
