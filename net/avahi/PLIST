@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2018/01/01 22:29:46 rillig Exp $
+@comment $NetBSD: PLIST,v 1.15 2019/10/27 14:46:09 kamil Exp $
 bin/avahi-browse
 bin/avahi-browse-domains
 ${PLIST.ui}bin/avahi-discover-standalone
@@ -44,7 +44,6 @@ include/avahi-gobject/ga-error.h
 include/avahi-gobject/ga-record-browser.h
 include/avahi-gobject/ga-service-browser.h
 include/avahi-gobject/ga-service-resolver.h
-${PLIST.qt}include/avahi-qt4/qt-watch.h
 ${PLIST.gtk2}include/avahi-ui/avahi-ui.h
 ${PLIST.introspection}lib/girepository-1.0/Avahi-0.6.typelib
 ${PLIST.introspection}lib/girepository-1.0/AvahiCore-0.6.typelib
@@ -53,7 +52,6 @@ lib/libavahi-common.la
 lib/libavahi-core.la
 lib/libavahi-glib.la
 lib/libavahi-gobject.la
-${PLIST.qt}lib/libavahi-qt4.la
 ${PLIST.gtk3}lib/libavahi-ui-gtk3.la
 ${PLIST.gtk2}lib/libavahi-ui.la
 ${PLIST.mono}lib/mono/avahi-sharp/avahi-sharp.dll
@@ -68,7 +66,6 @@ lib/pkgconfig/avahi-client.pc
 lib/pkgconfig/avahi-core.pc
 lib/pkgconfig/avahi-glib.pc
 lib/pkgconfig/avahi-gobject.pc
-${PLIST.qt}lib/pkgconfig/avahi-qt4.pc
 ${PLIST.mono}lib/pkgconfig/avahi-sharp.pc
 ${PLIST.gtk3}lib/pkgconfig/avahi-ui-gtk3.pc
 ${PLIST.mono}lib/pkgconfig/avahi-ui-sharp.pc
