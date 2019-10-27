@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.40 2019/07/21 22:24:09 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.41 2019/10/27 14:46:09 kamil Exp $
 
 BUILDLINK_TREE+=	avahi
 
@@ -30,10 +30,6 @@ pkgbase := avahi
 
 .if !empty(PKG_BUILD_OPTIONS.avahi:Mmono)
 .include "../../x11/gtk-sharp/buildlink3.mk"
-.endif
-
-.if !empty(PKG_BUILD_OPTIONS.avahi:Mqt)
-.include "../../x11/qt4-libs/buildlink3.mk"
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.avahi:Mpython)
