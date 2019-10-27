@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4574 2019/10/27 16:59:57 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.4575 2019/10/27 17:11:22 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7333,3 +7333,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-Sub-Quote to 2.006006 [mef 2019-10-27]
 	Updated print/hplip to 3.18.5nb11 [kamil 2019-10-27]
 	Updated misc/sword to 1.8.1 [kamil 2019-10-27]
+	Updated misc/bibletime to 2.11.2 [kamil 2019-10-27]
