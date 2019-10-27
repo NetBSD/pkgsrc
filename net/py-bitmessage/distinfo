@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2016/09/01 16:52:10 wiz Exp $
-
-SHA1 (PyBitmessage-0.6.1.tar.gz) = 77895e69f45f9e9f28c61dd3621e771a6087ddd0
-RMD160 (PyBitmessage-0.6.1.tar.gz) = a0d12d7b2618d513fab8ee6c55fbf2cf29a4312e
-SHA512 (PyBitmessage-0.6.1.tar.gz) = 1d94341d4a792db61d7478718b3dead7907410398390ec8b5b1c9bff1a3456179f935baf23dc36677726ae19b7cc4ea91a1e77e7b2f9346ac84fd852b290b5ec
-Size (PyBitmessage-0.6.1.tar.gz) = 962301 bytes
-SHA1 (patch-Makefile) = b6cf0b700737964d5912cc051cf3152a020e0cca
