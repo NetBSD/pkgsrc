@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.22 2019/10/27 13:15:04 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.23 2019/10/27 19:19:55 rillig Exp $
 
 import pytest
 from url2pkg import *
@@ -99,7 +99,7 @@ def test_Global_pkgsrc_license():
     assert g.pkgsrc_license('Apache 2') == 'apache-2.0'
 
     # Not explicitly in the list, looked up from PKGSRCDIR.
-    assert g.pkgsrc_license('artistic-2.0') == 'artistic-2.0'
+    assert g.pkgsrc_license('skype21-license') == 'skype21-license'
 
     # Neither in the list nor in PKGSRCDIR/licenses.
     assert g.pkgsrc_license('unknown') == ''
@@ -647,12 +647,17 @@ def test_Generator_generate_package(tmp_path: Path):
 
     Generator(url).generate_package(g)
 
-    assert (tmp_path / 'DESCR').read_text() == ''
+    assert not (tmp_path / 'DESCR').is_file()  # is created later
     assert len((tmp_path / 'Makefile').read_text().splitlines()) == 13
-    assert (tmp_path / 'PLIST').read_text() == '@comment $''NetBSD$\n'
+    assert (tmp_path / 'PLIST').read_text().splitlines() == [
+        '@comment $''NetBSD$',
+        '@comment TODO: to fill this file with the file listing:',
+        '@comment TODO: 1. run "true package"',
+        '@comment TODO: 2. run "true print-PLIST"',
+    ]
 
     # Since bmake is only fake in this test, the distinfo file is not created.
-    expected_files = ['DESCR', 'Makefile', 'PLIST']
+    expected_files = ['Makefile', 'PLIST']
     assert sorted([f.name for f in tmp_path.glob("*")]) == expected_files
 
 
