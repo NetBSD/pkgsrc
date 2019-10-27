@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2015/01/04 04:29:27 dholland Exp $
+# $NetBSD: Makefile,v 1.13 2019/10/27 19:31:40 maya Exp $
 
 DISTNAME=		torsmo-0.18
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=torsmo/}
 
@@ -11,7 +11,10 @@ COMMENT=		Tyopoytaorvelo System Monitor
 
 BROKEN_ON_PLATFORM=	Darwin-*-*
 
+USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-xft
+CONFIGURE_ENV+=		XFTCONFIG=pkg-config
 
 EGDIR=			${PREFIX}/share/examples/torsmo
 DOCDIR=			${PREFIX}/share/doc/torsmo
@@ -43,4 +46,5 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
