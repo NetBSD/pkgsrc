@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4569 2019/10/27 14:17:26 mef Exp $
+$NetBSD: CHANGES-2019,v 1.4570 2019/10/27 14:33:32 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7326,3 +7326,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-PPIx-Regexp to 0.067 [mef 2019-10-27]
 	Updated devel/p5-Perl-Tidy to 20190915 [mef 2019-10-27]
 	Updated devel/p5-Role-Tiny to 2.001004 [mef 2019-10-27]
+	Removed net/py-bitmessage [kamil 2019-10-27]
