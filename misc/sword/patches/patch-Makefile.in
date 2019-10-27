@@ -1,8 +1,8 @@
-$NetBSD: patch-Makefile.in,v 1.1 2015/03/12 13:30:28 nros Exp $
-* don't install sword.conf use pkginstall framework for this
---- Makefile.in.orig	2014-12-24 20:33:10.000000000 +0000
+$NetBSD: patch-Makefile.in,v 1.2 2019/10/27 16:59:45 kamil Exp $
+
+--- Makefile.in.orig	2018-01-09 02:02:03.000000000 +0000
 +++ Makefile.in
-@@ -438,7 +438,7 @@ EXTRA_DIST = sword.spec sword.kdevprj sw
+@@ -440,7 +440,7 @@ EXTRA_DIST = sword.spec sword.kdevprj sw
  	$(swdocdir)/translation-template.conf
  @USE_PKGCONF_TRUE@pkgconfigdir = $(libdir)/pkgconfig
  @USE_PKGCONF_TRUE@pkgconfig_DATA = sword.pc
@@ -11,7 +11,7 @@ $NetBSD: patch-Makefile.in,v 1.1 2015/03/12 13:30:28 nros Exp $
  buildtest_SOURCES = buildtest.cpp
  swlocaledir = $(top_srcdir)/locales.d
  localeDATA = $(swlocaledir)/*.conf
-@@ -1108,8 +1108,8 @@ register:
+@@ -1102,8 +1102,8 @@ register:
  	@echo ""
  
  install_config: 
@@ -20,5 +20,5 @@ $NetBSD: patch-Makefile.in,v 1.1 2015/03/12 13:30:28 nros Exp $
 +	@echo "[Install]" > $(DESTDIR)$(datarootdir)/examples/sword/sword.conf
 +	@echo "DataPath=$(pkgdatadir)/" >> $(DESTDIR)$(datarootdir)/examples/sword/sword.conf
  	@echo "sword.conf generated"
- 
- dist-hook:
+ 	@echo ""
+ 	@echo "You can now try to install modules with installmgr, e.g.,"
