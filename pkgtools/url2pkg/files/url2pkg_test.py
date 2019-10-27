@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.21 2019/10/13 08:48:23 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.22 2019/10/27 13:15:04 rillig Exp $
 
 import pytest
 from url2pkg import *
@@ -91,6 +91,18 @@ def test_Global_bmake():
     assert g.err.written() == [
         'url2pkg: running bmake (\'hello\', \'world\') in \'.\'',
     ]
+
+
+def test_Global_pkgsrc_license():
+    assert g.pkgsrc_license('BSD') == ''
+    assert g.pkgsrc_license('apache-2.0') == 'apache-2.0'
+    assert g.pkgsrc_license('Apache 2') == 'apache-2.0'
+
+    # Not explicitly in the list, looked up from PKGSRCDIR.
+    assert g.pkgsrc_license('artistic-2.0') == 'artistic-2.0'
+
+    # Neither in the list nor in PKGSRCDIR/licenses.
+    assert g.pkgsrc_license('unknown') == ''
 
 
 def test_Lines__write_and_read(tmp_path: Path):
@@ -654,8 +666,10 @@ def test_Adjuster_read_dependencies():
         'A line that is not a dependency at all',
         '',
         'var\tHOMEPAGE\thttps://homepage.example.org/',
-        'var\t#LICENSE\tBSD # TODO: too unspecific',
-        ''
+        '',
+        'cmd\tlicense\tBSD',
+        'cmd\tlicense_default\tBSD # (from Python package)',
+        'cmd\tunknown-cmd\targ',
     ]
     env = {'URL2PKG_DEPENDENCIES': '\n'.join(child_process_output)}
     cmd = "printf '%s\n' \"$URL2PKG_DEPENDENCIES\""
@@ -682,7 +696,7 @@ def test_Adjuster_read_dependencies():
         'TEST_DEPENDS+=  pkglint>=0:../../pkgtools/pkglint',
         '',
         'HOMEPAGE=       https://homepage.example.org/',
-        '#LICENSE=       BSD # TODO: too unspecific',
+        '#LICENSE=       BSD # (from Python package)',
         '',
         'BUILDLINK_API_DEPENDS.x11-links+=       x11-links>=120.0',
         '.include "../../pkgtools/x11-links/buildlink3.mk"'

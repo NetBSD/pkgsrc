@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.22 2019/10/13 08:48:23 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.23 2019/10/27 13:15:04 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -115,11 +115,32 @@ class Globals:
         output = subprocess.check_output((self.make, 'show-var', 'VARNAME=' + varname))
         return output.decode('utf-8').strip()
 
+    def pkgsrc_license(self, license_name: str) -> str:
+        known_licenses = (
+            ('',
+             'Apache Software License',  # too unspecific; needs a version number
+             'BSD'),  # too unspecific, may be 2-clause, 3-clause, 4-clause
+            ('${PERL5_LICENSE}', 'perl'),
+            ('apache-2.0', 'Apache 2', 'Apache 2.0'),
+            ('gnu-gpl-v3', 'GNU Lesser General Public License (LGPL), Version 3'),
+            ('gnu-lgpl-v2', 'LGPL'),
+            ('mit', 'MIT', 'MIT License'),
+            ('python-software-foundation',
+             'PSF', 'PSF license', 'Python Software Foundation License'),
+            ('zpl-2.1', 'ZPL 2.1'),
+        )
+
+        for known_license in known_licenses:
+            if license_name in known_license:
+                return known_license[0]
+        if (self.pkgsrcdir / 'licenses' / license_name).is_file():
+            return license_name
+        return ''
 
 class Lines:
     """
-    A list of lines with high-level methods for manipulating variable
-    assignments.
+    A list of Makefile lines with high-level methods for manipulating
+    variable assignments.
     """
     lines: List[str]
 
@@ -362,7 +383,7 @@ class Generator:
         pattern = r'''(?x)
             ^https://github\.com/
             (.+)/               # org
-            (.+)/               # proj   
+            (.+)/               # proj
             releases/download/
             (.+)/               # tag
             (.+)                # base
@@ -616,6 +637,9 @@ class Adjuster:
         self.g.debug('reading dependencies: cd {0} && env {1} {2}', str(cwd), env, cmd)
         output: bytes = subprocess.check_output(args=cmd, shell=True, env=effective_env, cwd=cwd)
 
+        license_name = ''
+        license_default = ''
+
         dep_lines: List[Tuple[str, str, str, str]] = []
         for line in output.decode('utf-8').splitlines():
             # example: DEPENDS   pkgbase>=1.2.3:../../category/pkgbase
@@ -627,13 +651,27 @@ class Adjuster:
             # example: var   VARNAME   value # possibly with comment
             m = re.search(r'^var\t(\S+)\t(.+)$', line)
             if m:
-                if not self.makefile_lines.set(m[1], m[2]):
-                    self.extra_vars.append(Var(m[1], '=', m[2]))
+                self.set_or_add(m[1], m[2])
+                continue
+
+            m = re.search(r'^cmd\t(\S+)\t(.+)$', line)
+            if m:
+                cmd, arg = m.groups()
+                if cmd == 'license':
+                    license_name = arg
+                elif cmd == 'license_default':
+                    license_default = arg
+                else:
+                    self.g.debug('unknown command: {0}', line)
                 continue
 
             if line != '':
                 self.g.debug('unknown dependency line: {0}', line)
 
+        self.set_license(license_name, license_default)
+        self.add_dependencies(pkgname_prefix, dep_lines)
+
+    def add_dependencies(self, pkgname_prefix: str, dep_lines: List[Tuple[str, str, str, str]]):
         for dep_line in dep_lines:
             kind, pkgbase, constraint, dep_dir = dep_line
 
@@ -645,6 +683,17 @@ class Adjuster:
                 dep_dir = self.g.find_package(pkgbase)
 
             self.add_dependency(kind, pkgbase, constraint, dep_dir)
+
+    def set_or_add(self, varname: str, value: str):
+        if not self.makefile_lines.set(varname, value):
+            self.extra_vars.append(Var(varname, '=', value))
+
+    def set_license(self, license_name: str, license_default: str):
+        pkgsrc_license_name = self.g.pkgsrc_license(license_name)
+        if pkgsrc_license_name != '':
+            self.set_or_add('LICENSE', pkgsrc_license_name)
+        elif license_default != '':
+            self.set_or_add('#LICENSE', license_default)
 
     def wrksrc_open(self, relative_pathname: str):
         return (self.abs_wrksrc / relative_pathname).open()
