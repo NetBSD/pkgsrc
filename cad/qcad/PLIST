@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2019/09/19 21:59:36 nia Exp $
+@comment $NetBSD: PLIST,v 1.15 2019/10/27 15:43:23 nia Exp $
 bin/qcad
 lib/libdxflib.so
 lib/libopennurbs.so
@@ -10431,8 +10431,8 @@ lib/qcad/ts/scripts_zh_CN.qm
 lib/qcad/ts/scripts_zh_CN.ts
 lib/qcad/ts/scripts_zh_TW.qm
 lib/qcad/ts/scripts_zh_TW.ts
-lib/qcad/xcbglintegrations/libqxcb-egl-integration.so
-lib/qcad/xcbglintegrations/libqxcb-glx-integration.so
+${PLIST.egl}lib/qcad/xcbglintegrations/libqxcb-egl-integration.so
+${PLIST.glx}lib/qcad/xcbglintegrations/libqxcb-glx-integration.so
 lib/qcad/xcbglintegrations/readme.txt
 man/man1/qcad.1
 share/applications/qcad.desktop

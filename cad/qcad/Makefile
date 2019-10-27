@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2019/09/19 21:59:36 nia Exp $
+# $NetBSD: Makefile,v 1.78 2019/10/27 15:43:23 nia Exp $
 #
 
 DISTNAME=		qcad-3.23.0.0
@@ -26,6 +26,16 @@ SUBST_FILES.paths+=	shared.pri src/core/RS.cpp src/core/RSettings.cpp
 SUBST_FILES.paths+=	scripts/Help/ShowReadme/ShowReadme.js
 SUBST_FILES.paths+=	scripts/Widgets/LibraryBrowser/LibraryBrowser.js
 SUBST_VARS.paths=	PREFIX
+
+.include "../../mk/bsd.prefs.mk"
+PLIST_VARS+=	glx egl
+.if ${OPSYS} != "Darwin"
+PLIST.glx=	yes
+.  include "../../graphics/MesaLib/buildlink3.mk"
+.  if ${MESALIB_SUPPORTS_EGL} == "yes"
+PLIST.egl=	yes
+.  endif
+.endif
 
 AUTO_MKDIRS=	yes
 
