@@ -1,4 +1,4 @@
-# $NetBSD: setuptools.py,v 1.6 2019/10/27 13:15:04 rillig Exp $
+# $NetBSD: setuptools.py,v 1.7 2019/10/27 19:19:55 rillig Exp $
 
 # This is a drop-in replacement for the setuptools Python module. Instead
 # of actually searching for the dependencies, it extracts the dependency
@@ -44,3 +44,14 @@ def setup(**kwargs):
 
 def find_packages(where='.', exclude=(), include=('*',)):
     return []
+
+
+# for distutils.core; see devel/py-pysha3-1.0.2 for an example
+class Command:
+    pass
+
+
+# for distutils.extension; see devel/py-pysha3-1.0.2 for an example
+class Extension:
+    def __init__(self, *args, **kwargs):
+        pass

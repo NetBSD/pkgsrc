@@ -56,6 +56,11 @@ sub url2pkg_write_var($$$) {
 	printf("var\t%s\t%s\n", $varname, $value);
 }
 
+sub url2pkg_write_cmd($$) {
+	my ($self, $cmd, $arg) = @_;
+	printf("cmd\t%s\t%s\n", $cmd, $arg);
+}
+
 sub VERSION($$) {
 	my ($class, $min_version) = @_;
 	return $min_version <= $VERSION;
@@ -79,10 +84,9 @@ sub create_build_script($) {
 
 	$self->url2pkg_write_var("COMMENT", $self->{"dist_abstract"});
 	my $license = $self->{"license"} || "";
-	if ($license eq "perl") {
-		$self->url2pkg_write_var("LICENSE", "\${PERL5_LICENSE}");
-	} elsif ($license ne "") {
-		$self->url2pkg_write_var("#LICENSE", "# TODO: $license (from Build.PL)")
+	if ($license ne "") {
+		$self->url2pkg_write_cmd("license", $license);
+		$self->url2pkg_write_var("license_default", "# TODO: $license (from Build.PL)")
 	}
 }
 
