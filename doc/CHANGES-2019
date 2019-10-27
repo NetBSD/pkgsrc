@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4568 2019/10/27 13:52:40 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.4569 2019/10/27 14:17:26 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7319,4 +7319,10 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/xca to 2.1.2nb1 [kamil 2019-10-27]
 	Updated audio/pulseaudio to 13.0nb1 [kamil 2019-10-27]
 	Added devel/breezy version 3.0.1 [rhialto 2019-10-27]
+	Updated devel/p5-Mouse to 2.5.9 [mef 2019-10-27]
 	Removed lang/basic256 [kamil 2019-10-27]
+	Updated devel/p5-OOTools to 2.41 [mef 2019-10-27]
+	Updated devel/p5-PAR to 1.016 [mef 2019-10-27]
+	Updated devel/p5-PPIx-Regexp to 0.067 [mef 2019-10-27]
+	Updated devel/p5-Perl-Tidy to 20190915 [mef 2019-10-27]
+	Updated devel/p5-Role-Tiny to 2.001004 [mef 2019-10-27]
