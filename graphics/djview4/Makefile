@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.38 2018/07/04 13:40:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.39 2019/10/27 10:10:19 kamil Exp $
 #
 
 DISTNAME=	djview-4.10.6
 PKGNAME=	${DISTNAME:S/djview/djview4/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=djvu/}
 
@@ -24,8 +24,7 @@ SUBST_FILES.nsdejavu=	nsdejavu/nsdejavu.c
 SUBST_SED.nsdejavu=	-e 's:/usr/local/lib:${LOCALBASE}/lib:'
 
 .include "../../graphics/djvulibre-lib/buildlink3.mk"
-.include "../../x11/qt4-libs/buildlink3.mk"
-.include "../../x11/qt4-tools/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
