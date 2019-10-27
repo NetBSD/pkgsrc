@@ -1,28 +1,13 @@
-# $NetBSD: setuptools.py,v 1.5 2019/10/05 22:02:32 rillig Exp $
+# $NetBSD: setuptools.py,v 1.6 2019/10/27 13:15:04 rillig Exp $
 
 # This is a drop-in replacement for the setuptools Python module. Instead
 # of actually searching for the dependencies, it extracts the dependency
 # information and includes it in the generated pkgsrc package Makefile.
 
-url2pkg_license_mapping = {
-    'Apache 2': 'apache-2.0',
-    'Apache 2.0': 'apache-2.0',
-    'Apache Software License': '',  # too unspecific; needs a version number
-    'BSD': '',  # too unspecific
-    'GNU Lesser General Public License (LGPL), Version 3': 'gnu-lgpl-v3',
-    'LGPL': 'gnu-lgpl-v2',
-    'MIT': 'mit',
-    'MIT License': 'mit',
-    'PSF': 'python-software-foundation',
-    'PSF license': 'python-software-foundation',
-    'Python Software Foundation License': 'python-software-foundation',
-    'ZPL 2.1': 'zpl-2.1',
-}
 
-
-def url2pkg_print_depends(keyword, depends):
+def url2pkg_print_depends(varname, depends):
     for dep in depends:
-        print('%s\t%s%s' % (keyword, dep.replace(' ', ''), '' if '>' in dep else '>=0'))
+        print('%s\t%s%s' % (varname, dep.replace(' ', ''), '' if '>' in dep else '>=0'))
 
 
 def url2pkg_print_var(varname, value):
@@ -30,14 +15,17 @@ def url2pkg_print_var(varname, value):
         print('var\t%s\t%s' % (varname, value))
 
 
-def url2pkg_print_license(license):
-    if license == '':
+def url2pkg_print_cmd(cmd, arg):
+    print('\t'.join(('cmd', cmd, arg)))
+
+
+def url2pkg_print_license(license_name):
+    if license_name == '':
         return
-    pkgsrc_license = url2pkg_license_mapping.get(license, '')
-    if pkgsrc_license == '':
-        url2pkg_print_var('#LICENSE', '%s # TODO: from setup.py; needs to be adjusted' % license)
-    else:
-        url2pkg_print_var('LICENSE', pkgsrc_license)
+    url2pkg_print_cmd('license', license_name)
+    url2pkg_print_cmd(
+        'license_default',
+        '%s # TODO: from setup.py; needs to be adjusted' % license_name)
 
 
 def setup(**kwargs):
