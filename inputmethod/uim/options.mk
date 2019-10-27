@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.34 2017/09/26 09:42:26 wiz Exp $
+# $NetBSD: options.mk,v 1.35 2019/10/27 17:31:35 kamil Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uim
 PKG_SUPPORTED_OPTIONS=	anthy canna curl eb expat ffi gnome gnome3 gtk gtk3 m17nlib openssl prime sj3 sqlite uim-fep wnn4 xim
-PKG_SUPPORTED_OPTIONS+=	editline kde qt
+PKG_SUPPORTED_OPTIONS+=	editline
 PKG_SUGGESTED_OPTIONS=	anthy expat gtk gtk3 prime uim-fep xim
 
 # Store installed modules
@@ -20,7 +20,7 @@ PKG_SUGGESTED_OPTIONS+=	editline
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=		helperdata uim-dict-gtk uim-dict-gtk3 uim-dict-helperdata fep
-PLIST_VARS+=		anthy curl eb expat ffi gnome gnome3 gtk gtk3 kde m17nlib openssl qt sqlite wnn xim
+PLIST_VARS+=		anthy curl eb expat ffi gnome gnome3 gtk gtk3 m17nlib openssl qt sqlite wnn xim
 PLIST_VARS+=		canna prime sj3
 PLIST_VARS+=		editline
 
@@ -150,16 +150,6 @@ PLIST.uim-dict-helperdata=	yes
 .  endif
 .endif
 
-
-.if !empty(PKG_OPTIONS:Mkde)
-.  include "../../x11/kdelibs4/buildlink3.mk"
-.  include "../../x11/qt4-libs/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-kde4-applet
-PLIST.kde=		yes
-.else
-CONFIGURE_ARGS+=	--disable-kde4-applet
-.endif
-
 .if !empty(PKG_OPTIONS:Mm17nlib)
 .  include "../../devel/m17n-lib/buildlink3.mk"
 DEPENDS+=		{m17n-db>=1.6.5,m17n-contrib-[0-9]*}:../../misc/m17n-db
@@ -170,14 +160,6 @@ CHECK_FILES_SKIP+=	${PREFIX}/share/uim/pixmaps/m17n-.*\.png
 UIM_MODULES+=		m17nlib
 .else
 CONFIGURE_ARGS+=	--without-m17nlib
-.endif
-
-.if !empty(PKG_OPTIONS:Mqt) || !empty(PKG_OPTIONS:Mkde)
-.  include "../../x11/qt4-libs/buildlink3.mk"
-.  include "../../x11/qt4-tools/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-qt4 --with-qt4-immodule
-PLIST.helperdata=	yes
-PLIST.qt=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mopenssl)
@@ -221,6 +203,4 @@ UIM_MODULES+=		wnn
 CONFIGURE_ARGS+=	--enable-default-toolkit=gtk
 .elif !empty(PKG_OPTIONS:Mgtk3) || !empty(PKG_OPTIONS:Mgnome3)
 CONFIGURE_ARGS+=	--enable-default-toolkit=gtk3
-.elif !empty(PKG_OPTIONS:Mqt) || !empty(PKG_OPTIONS:Mkde)
-CONFIGURE_ARGS+=	--enable-default-toolkit=qt4
 .endif
