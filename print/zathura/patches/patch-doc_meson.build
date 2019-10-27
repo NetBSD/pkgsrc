@@ -1,4 +1,4 @@
-$NetBSD: patch-doc_meson.build,v 1.2 2019/03/06 17:02:20 leot Exp $
+$NetBSD: patch-doc_meson.build,v 1.3 2019/10/27 10:43:43 nia Exp $
 
 Also search for versioned sphinx-build-s.
 
@@ -6,7 +6,7 @@ Also search for versioned sphinx-build-s.
 +++ doc/meson.build
 @@ -1,4 +1,4 @@
 -sphinx = find_program('sphinx-build', required: get_option('manpages'))
-+sphinx = find_program('sphinx-build', 'sphinx-build2.7', 'sphinx-build3.7', 'sphinx-build3.6', 'sphinx-build3.4', 'sphinx-build3.5', required: get_option('manpages'))
++sphinx = find_program('sphinx-build-@PYVERSSUFFIX@', 'sphinx-build', required: get_option('manpages'))
  if sphinx.found()
    custom_target('man pages',
      command: [
