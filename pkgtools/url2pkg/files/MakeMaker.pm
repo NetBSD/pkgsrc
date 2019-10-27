@@ -99,10 +99,15 @@ sub url2pkg_write_var($$) {
 	printf("var\t%s\t%s\n", $varname, $value);
 }
 
+sub url2pkg_write_cmd($$) {
+	my ($cmd, $arg) = @_;
+	printf("cmd\t%s\t%s\n", $cmd, $arg);
+}
+
 sub url2pkg_write_depends($$) {
 	my ($type, $deps) = @_;
 
-	return unless $deps;
+	return unless defined $deps;
 	foreach my $dep (sort(keys(%$deps))) {
 		url2pkg_write_dependency($type, $dep, $deps->{$dep});
 	}
@@ -115,10 +120,9 @@ sub WriteMakefile(%) {
 	url2pkg_write_depends("TEST_DEPENDS", $options{"TEST_DEPENDS"});
 
 	my $license = $options{"LICENSE"} || "";
-	if ($license eq "perl") {
-		url2pkg_write_var("LICENSE", "\${PERL5_LICENSE}");
-	} elsif ($license ne "") {
-		url2pkg_write_var("#LICENSE", "# TODO: $license (from Makefile.PL)")
+	if ($license ne "") {
+		url2pkg_write_cmd("license", $license);
+		url2pkg_write_cmd("license_default", "# TODO: $license (from Makefile.PL)");
 	}
 }
 
