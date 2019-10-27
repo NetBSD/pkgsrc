@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.13 2019/09/02 13:19:49 adam Exp $
+# $NetBSD: options.mk,v 1.14 2019/10/27 14:46:09 kamil Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.avahi
 PKG_SUPPORTED_OPTIONS=	avahi-howl gdbm introspection gtk2 gtk3 mono python
-PKG_SUPPORTED_OPTIONS+=	qt tests
+PKG_SUPPORTED_OPTIONS+=	tests
 PKG_SUGGESTED_OPTIONS+=	gtk2
-PLIST_VARS+=		introspection gtk2 gtk3 mono qt ui
+PLIST_VARS+=		introspection gtk2 gtk3 mono ui
 
 .include "../../mk/bsd.options.mk"
 
@@ -57,13 +57,6 @@ CONFIGURE_ARGS+=	--disable-monodoc # XXX broken
 PLIST.mono=		yes
 .else
 CONFIGURE_ARGS+=	--disable-mono --disable-monodoc
-.endif
-
-.if !empty(PKG_OPTIONS:Mqt)
-.include "../../x11/qt4-libs/buildlink3.mk"
-PLIST.qt=		yes
-.else
-CONFIGURE_ARGS+=	--disable-qt4
 .endif
 
 ###
