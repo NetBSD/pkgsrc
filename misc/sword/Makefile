@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2019/10/27 16:59:45 kamil Exp $
+# $NetBSD: Makefile,v 1.29 2019/10/27 17:04:20 kamil Exp $
 #
 
 DISTNAME=	sword-1.8.1
@@ -27,7 +27,7 @@ REQD_FILES=	${PREFIX}/share/examples/sword/sword.conf \
 # needed with at least GCC-5.4.0 which has a default value of 25
 CXXFLAGS+=	-ftemplate-depth=50
 
-http://site.icu-project.org/download/61#TOC-Migration-Issues
+# http://site.icu-project.org/download/61#TOC-Migration-Issues
 CXXFLAGS+=	-DU_USING_ICU_NAMESPACE=1
 
 .include "../../textproc/icu/buildlink3.mk"
