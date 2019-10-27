@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4570 2019/10/27 14:33:32 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.4571 2019/10/27 14:52:01 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7327,3 +7327,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-Perl-Tidy to 20190915 [mef 2019-10-27]
 	Updated devel/p5-Role-Tiny to 2.001004 [mef 2019-10-27]
 	Removed net/py-bitmessage [kamil 2019-10-27]
+	Updated audio/qjackctl to 0.4.2nb21 [kamil 2019-10-27]
