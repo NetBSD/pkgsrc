@@ -1,15 +1,7 @@
-$NetBSD: distinfo,v 1.3 2016/12/17 14:22:39 joerg Exp $
+$NetBSD: distinfo,v 1.4 2019/10/27 16:59:45 kamil Exp $
 
-SHA1 (sword-1.7.4.tar.gz) = 9fc1070baaa9f991056c1dc0d0455022de2610db
-RMD160 (sword-1.7.4.tar.gz) = 55a0b741a97e58f29cfa5eca4572719660447393
-SHA512 (sword-1.7.4.tar.gz) = 4c8b183e613367364439cc7a8a842012f75180fccc8eb775b9af2dc4c10f39c152261d35f0aadaaa91a11df36ab1a4057c2edc50ea4b0b3bb0ab0a847ff68f75
-Size (sword-1.7.4.tar.gz) = 2157882 bytes
-SHA1 (patch-Makefile.in) = 512be822cb96144244cb93f70ca2ba409a90db9b
-SHA1 (patch-src_keys_treekeyidx.cpp) = 2bae86876bfb4a1c74faf709d016e7665514cd90
-SHA1 (patch-src_mgr_swmgr.cpp) = e0e63ec4df6b07c89678a33827cc925f3ccb2369
-SHA1 (patch-src_modules_common_rawstr.cpp) = 89bf3b3bf389393dc0d826f6aa0ab1a4737d30bd
-SHA1 (patch-src_modules_common_rawstr4.cpp) = 966d0f6b52ac888abb27376ec0cedd2336bc6b99
-SHA1 (patch-src_modules_common_zstr.cpp) = 591cbf710dade59c5249d8c15ae2db5ac791db03
-SHA1 (patch-src_modules_lexdict_rawld4_rawld4.cpp) = d2cebbe1ddd5456d52f651079fc6e4eec46905d4
-SHA1 (patch-src_modules_lexdict_rawld_rawld.cpp) = 48a55530444b6e10412bdb08d2036395554a7299
-SHA1 (patch-src_modules_lexdict_zld_zld.cpp) = a4f4075da1011728ff6fde8c0a13b4c9d45fe3cd
+SHA1 (sword-1.8.1.tar.gz) = 3a9932fd7c9e73bb032b09288a5f29440c8bb25e
+RMD160 (sword-1.8.1.tar.gz) = 2297bd574b5c592fbbee741cd32b3c812908dfc8
+SHA512 (sword-1.8.1.tar.gz) = 5c08c070ea0c86b7d929bbf94c89730eb5a487986deb9edf01c08d1710356aecd1ab3bde4437a778e5fc1ceb05b63287612ec6161381c0986a36344c27d2ab36
+Size (sword-1.8.1.tar.gz) = 2449503 bytes
+SHA1 (patch-Makefile.in) = 6508dabcd47e08609e43c76f738c4d4384152354
