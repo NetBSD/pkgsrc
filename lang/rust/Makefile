@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2019/10/27 18:34:27 he Exp $
+# $NetBSD: Makefile,v 1.120 2019/10/28 00:42:21 jperkin Exp $
 
 DISTNAME=	rustc-1.38.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -316,6 +316,9 @@ post-extract:
 	${CP} ${WRKSRC}/vendor/backtrace-sys/.cargo-checksum.json \
 	      ${WRKSRC}/vendor/backtrace-sys/.cargo-checksum.json.orig
 	${SED} -e 's/59763fc255248b54fba5d0761d61093a73d51fa4cb400b0df1b5f339b9c2f48a/ba66d192421fd536ceddb50616c4c4aea06f4e39450eb0bc2bbbaed0b1e684c1/' ${WRKSRC}/vendor/backtrace-sys/.cargo-checksum.json.orig > ${WRKSRC}/vendor/backtrace-sys/.cargo-checksum.json
+	${CP} ${WRKSRC}/vendor/lzma-sys/.cargo-checksum.json \
+		${WRKSRC}/vendor/lzma-sys/.cargo-checksum.json.orig
+	${SED} -e 's/51a9ca7a4576822dc4fa01b31bc4bbed21817777abb304f605ef5951f68c3ed2/807c3aa4b5a62a70ba790df151e9ecf19f4bb562f2858575d690908751262db3/' ${WRKSRC}/vendor/lzma-sys/.cargo-checksum.json.orig > ${WRKSRC}/vendor/lzma-sys/.cargo-checksum.json
 .if ${OPSYS} == "NetBSD"
 	SDIR=${WRKDIR}/scripts; \
 	${MKDIR} $${SDIR}; \

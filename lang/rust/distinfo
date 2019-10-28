@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.90 2019/10/27 18:34:27 he Exp $
+$NetBSD: distinfo,v 1.91 2019/10/28 00:42:21 jperkin Exp $
 
 SHA1 (rust-1.35.0-armv7-unknown-netbsd-eabihf.tar.gz) = 91517fa95f954427c627cf63eb7c518abd068f3e
 RMD160 (rust-1.35.0-armv7-unknown-netbsd-eabihf.tar.gz) = 06a3d922b27aac2deb570301542897a131b47cd0
@@ -129,4 +129,5 @@ SHA1 (patch-src_tools_rust-installer_install-template.sh) = f2ec6dced2be1fa23773
 SHA1 (patch-src_vendor_rand-0.6.1_src_rngs_os.rs) = c068ae41fb69a524336efcef7df7a9d1326d04f1
 SHA1 (patch-vendor_backtrace-sys_src_libbacktrace_configure) = 90e54f66edce65ebe23fbf2480deb193ca926733
 SHA1 (patch-vendor_libc_src_unix_solarish_mod.rs) = 804ea03be546fef0d2bd37d7f8abb26d38a7892b
+SHA1 (patch-vendor_lzma-sys_config.h) = ab963fc8d7a847715e0e0dc2928333efe38e923f
 SHA1 (patch-vendor_rand__os_src_netbsd.rs) = 049df63c904abd81cb92f33fa0882f5c81cae51a
