@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2019/08/30 06:33:38 markd Exp $
+# $NetBSD: Makefile.common,v 1.33 2019/10/28 21:35:43 nia Exp $
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
 # used by x11/qt5-psql/Makefile
@@ -21,6 +21,7 @@
 # used by x11/qt5-qtsvg/Makefile
 # used by x11/qt5-qttools/Makefile
 # used by x11/qt5-qttranslations/Makefile
+# used by x11/qt5-qtwayland/Makefile
 # used by x11/qt5-qtwebchannel/Makefile
 # used by x11/qt5-qtwebkit/Makefile
 # used by x11/qt5-qtwebsockets/Makefile
@@ -61,7 +62,8 @@ PLIST.unix=		yes
 SCRIPTS_ENV+=		HOME=${WRKDIR}
 
 .if "${PKGPATH}" != "x11/qt5-qtbase" && "${PKGPATH}" != "x11/qt5-odbc" && \
-	"${PKGPATH}" != "x11/qt5-mysql" && "${PKGPATH}" != "x11/qt5-psql"
+	"${PKGPATH}" != "x11/qt5-mysql" && "${PKGPATH}" != "x11/qt5-psql" && \
+	"${PKGPATH}" != "x11/qt5-qtwayland"
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${QTPREFIX}/bin/qmake -o Makefile
 .endif
