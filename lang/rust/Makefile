@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2019/10/28 00:42:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.121 2019/10/28 08:56:14 jperkin Exp $
 
 DISTNAME=	rustc-1.38.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -370,6 +370,7 @@ USE_TOOLS+=		gtar
 # the rust build to use the gcc wrapper when building natively,
 # so that I could get a placeholder in the RPATH, because chrpath
 # cannot extend the length of the RPATH...
+ELFEDIT?=	/usr/bin/elfedit
 
 stage0-bootstrap: install
 	${RM} -rf ${BOOTSTRAP_TMPDIR}
@@ -411,23 +412,28 @@ stage0-bootstrap: install
 		${CP} `${PKG_CC} -print-file-name=$${lib}` \
 		    ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/; \
 	done
-	for lib in libcrypto.so.1.0.0 libcurl.so.4 libhttp_parser.so.2 \
-		   libiconv.so.2 libidn2.so.0 libintl.so.8 liblber-2.4.so.2 \
-		   libldap-2.4.so.2 libnghttp2.so.14 libsasl2.so.3 libLLVM-8.so \
-		   libssh2.so.1 libssl.so.1.0.0 libunistring.so.2 libz.so.1; do \
+	# direct dependencies
+	for lib in libLLVM-9.so libcrypto.so.1.0.0 libcurl.so.4 \
+		   libssl.so.1.0.0 libz.so.1; do \
 		${CP} ${PREFIX}/lib/$${lib} ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/; \
 	done
-	for f in ${BOOTSTRAP_TMPDIR}/bin/{cargo,rls,rustc,rustdoc}; do \
-		/usr/bin/elfedit -e 'dyn:runpath $$ORIGIN/../lib:$$ORIGIN/../lib/pkgsrc' $$f; \
+	# libcurl dependencies
+	for lib in libiconv.so.2 libidn2.so.0 libintl.so.8 liblber-2.4.so.2 \
+		   libldap-2.4.so.2 libnghttp2.so.14 libsasl2.so.3 \
+		   libssh2.so.1 libunistring.so.2; do \
+		${CP} ${PREFIX}/lib/$${lib} ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/; \
+	done
+	for f in ${BOOTSTRAP_TMPDIR}/bin/{cargo*,clippy*,miri,rls,rustc,rustdoc,rustfmt}; do \
+		${ELFEDIT} -e 'dyn:runpath $$ORIGIN/../lib:$$ORIGIN/../lib/pkgsrc' $$f; \
 	done
 	for f in ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/*.so*; do \
-		/usr/bin/elfedit -e 'dyn:runpath $$ORIGIN' $$f; \
+		${ELFEDIT} -e 'dyn:runpath $$ORIGIN' $$f; \
 	done
 	for f in ${BOOTSTRAP_TMPDIR}/lib/*.so*; do \
-		/usr/bin/elfedit -e 'dyn:runpath $$ORIGIN:$$ORIGIN/pkgsrc' $$f; \
+		${ELFEDIT} -e 'dyn:runpath $$ORIGIN:$$ORIGIN/pkgsrc' $$f; \
 	done
 	for f in ${BOOTSTRAP_TMPDIR}/lib/rustlib/${RUST_ARCH}/*/*.so*; do \
-		/usr/bin/elfedit -e 'dyn:runpath $$ORIGIN:$$ORIGIN/../../..:$$ORIGIN/../../../pkgsrc' $$f; \
+		${ELFEDIT} -e 'dyn:runpath $$ORIGIN:$$ORIGIN/../../..:$$ORIGIN/../../../pkgsrc' $$f; \
 	done
 	(cd ${WRKDIR}; \
 	 ${GTAR} -zcf ${PKGNAME_NOREV}-${RUST_ARCH}.tar.gz ${PKGNAME_NOREV}-${RUST_ARCH})
