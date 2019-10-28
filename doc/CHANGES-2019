@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4597 2019/10/28 13:06:22 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.4598 2019/10/28 13:20:43 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7356,3 +7356,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated games/minetest to 5.1.0 [nia 2019-10-28]
 	Updated www/firefox to 70.0 [ryoon 2019-10-28]
 	Updated www/firefox-l10n to 70.0 [ryoon 2019-10-28]
+	Updated graphics/MesaLib to 19.2.2 [nia 2019-10-28]
