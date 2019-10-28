@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.107 2019/10/27 19:19:54 rillig Exp $
+# $NetBSD: Makefile,v 1.108 2019/10/28 20:17:24 rillig Exp $
 
-PKGNAME=	url2pkg-19.3.4
+PKGNAME=	url2pkg-19.3.5
 CATEGORIES=	pkgtools
 
 MAINTAINER=	rillig@NetBSD.org
