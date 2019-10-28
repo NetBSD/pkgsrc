@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4593 2019/10/28 12:44:22 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4594 2019/10/28 12:54:07 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7352,3 +7352,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated games/stone-soup to 0.24.0 [nia 2019-10-28]
 	Updated games/asc to 2.6.1.0 [nia 2019-10-28]
 	Removed x11/paragui [nia 2019-10-28]
+	Updated mail/notmuch to 0.29.2 [ryoon 2019-10-28]
