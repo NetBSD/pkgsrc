@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4605 2019/10/28 19:03:44 bouyer Exp $
+$NetBSD: CHANGES-2019,v 1.4606 2019/10/28 21:36:12 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7372,3 +7372,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added security/libstark version 20191018 [agc 2019-10-28]
 	Added x11/qwt6-qt5 version 6.1.4 [bouyer 2019-10-28]
 	Updated misc/zyGrib to 8.0.1 [bouyer 2019-10-28]
+	Updated x11/qt5-qtwayland to 5.13.1 [nia 2019-10-28]
