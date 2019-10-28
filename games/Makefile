@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.463 2019/10/26 11:27:09 nia Exp $
+# $NetBSD: Makefile,v 1.464 2019/10/28 09:47:22 jperkin Exp $
 #
 
 COMMENT=	Games
@@ -348,6 +348,7 @@ SUBDIR+=	sex
 SUBDIR+=	sienna
 SUBDIR+=	simgear
 SUBDIR+=	simutrans
+SUBDIR+=	simutrans-pak128
 SUBDIR+=	singularity
 SUBDIR+=	sirius
 SUBDIR+=	sjeng
