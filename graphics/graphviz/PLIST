@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2017/05/22 11:19:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.50 2019/10/28 08:43:33 kamil Exp $
 bin/acyclic
 bin/bcomps
 bin/ccomps
@@ -18,7 +18,6 @@ bin/graphml2gv
 bin/gv2gml
 bin/gv2gxl
 bin/gvcolor
-${PLIST.qt}bin/gvedit
 bin/gvgen
 bin/gvmap
 bin/gvmap.sh
@@ -139,7 +138,6 @@ man/man1/graphml2gv.1
 man/man1/gv2gml.1
 man/man1/gv2gxl.1
 man/man1/gvcolor.1
-${PLIST.qt}man/man1/gvedit.1
 man/man1/gvgen.1
 man/man1/gvmap.1
 man/man1/gvmap.sh.1
@@ -413,7 +411,6 @@ share/graphviz/doc/pdf/edgepaint.1.pdf
 share/graphviz/doc/pdf/expr.3.pdf
 share/graphviz/doc/pdf/fdp.1.pdf
 share/graphviz/doc/pdf/gc.1.pdf
-${PLIST.qt}share/graphviz/doc/pdf/gvedit.1.pdf
 ${PLIST.tcl}${PLIST.gd}share/graphviz/doc/pdf/gdtclft.3tcl.pdf
 share/graphviz/doc/pdf/gml2gv.1.pdf
 share/graphviz/doc/pdf/graphml2gv.1.pdf
@@ -518,7 +515,6 @@ share/graphviz/graphs/undirected/Heawood.gv
 share/graphviz/graphs/undirected/Petersen.gv
 share/graphviz/graphs/undirected/ngk10_4.gv
 share/graphviz/graphs/undirected/process.gv
-${PLIST.qt}share/graphviz/gvedit/attrs.txt
 share/graphviz/gvpr/addedges
 share/graphviz/gvpr/addranks
 share/graphviz/gvpr/addrings

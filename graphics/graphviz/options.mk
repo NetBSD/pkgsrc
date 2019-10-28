@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.25 2018/03/24 17:15:39 schmonz Exp $
+# $NetBSD: options.mk,v 1.26 2019/10/28 08:43:33 kamil Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.graphviz
-PKG_SUPPORTED_OPTIONS=	gd ghostscript gtk gts lua ocaml poppler qt svg tcl x11 perl # guile does not build with guile20
+PKG_SUPPORTED_OPTIONS=	gd ghostscript gtk gts lua ocaml poppler svg tcl x11 perl # guile does not build with guile20
 .if exists(/System/Library/Frameworks/Quartz.framework)
 PKG_SUPPORTED_OPTIONS+=	quartz
 .endif
@@ -19,7 +19,7 @@ PKG_SUGGESTED_OPTIONS=	gd gtk lua perl tcl x11
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		gd ghostscript gtk guile lua ocaml perl poppler qt quartz svg tcl x11
+PLIST_VARS+=		gd ghostscript gtk guile lua ocaml perl poppler quartz svg tcl x11
 
 .if !empty(PKG_OPTIONS:Mgd)
 .  include "../../graphics/gd/buildlink3.mk"
@@ -50,14 +50,6 @@ CONFIGURE_ARGS+=	--without-gnomeui
 PLIST.poppler=		yes
 .else
 CONFIGURE_ARGS+=	--without-poppler
-.endif
-
-.if !empty(PKG_OPTIONS:Mqt)
-.  include "../../x11/qt4-libs/buildlink3.mk"
-.  include "../../x11/qt4-tools/buildlink3.mk"
-PLIST.qt=		yes
-.else
-CONFIGURE_ARGS+=	--without-qt
 .endif
 
 .if !empty(PKG_OPTIONS:Mquartz)
