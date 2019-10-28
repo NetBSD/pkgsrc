@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4581 2019/10/27 19:32:20 maya Exp $
+$NetBSD: CHANGES-2019,v 1.4582 2019/10/28 08:33:34 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7340,3 +7340,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/rust to 1.38.0nb1 [he 2019-10-27]
 	Updated pkgtools/url2pkg to 19.3.4 [rillig 2019-10-27]
 	Updated sysutils/torsmo to 0.18nb3 [maya 2019-10-27]
+	Updated graphics/gnuplot to 5.2.7nb2 [kamil 2019-10-28]
