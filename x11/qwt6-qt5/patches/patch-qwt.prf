@@ -1,0 +1,12 @@
+$NetBSD: patch-qwt.prf,v 1.1 2019/10/28 19:00:37 bouyer Exp $
+Needs to add QWT_INSTALL_LIBS to RPATH 
+
+--- qwt.prf.orig	2019-10-27 11:19:56.445946771 +0100
++++ qwt.prf	2019-10-27 11:20:03.718973346 +0100
+@@ -33,5 +33,5 @@
+     INCLUDEPATH *= $${QWT_INSTALL_HEADERS}
+ }   
+ 
+-# QMAKE_RPATHDIR *= $${QWT_INSTALL_LIBS}
++QMAKE_RPATHDIR *= $${QWT_INSTALL_LIBS}
+ qwtAddLibrary($${QWT_INSTALL_LIBS}, qwt)
