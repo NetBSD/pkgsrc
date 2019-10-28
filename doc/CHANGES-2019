@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4603 2019/10/28 15:43:33 jperkin Exp $
+$NetBSD: CHANGES-2019,v 1.4604 2019/10/28 17:48:46 agc Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7369,3 +7369,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/papirus-folders to 1.5.0 [nia 2019-10-28]
 	Updated editors/TeXmacs to 1.99.11 [kamil 2019-10-28]
 	Updated databases/couchdb to 2.3.1nb1 [jperkin 2019-10-28]
+	Added security/libstark version 20191018 [agc 2019-10-28]
