@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4592 2019/10/28 12:38:50 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4593 2019/10/28 12:44:22 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7351,3 +7351,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/materia-gtk-theme to 20191017 [nia 2019-10-28]
 	Updated games/stone-soup to 0.24.0 [nia 2019-10-28]
 	Updated games/asc to 2.6.1.0 [nia 2019-10-28]
+	Removed x11/paragui [nia 2019-10-28]
