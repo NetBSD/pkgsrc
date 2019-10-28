@@ -1,0 +1,11 @@
+The libSTARK library implements scalable and transparent argument of
+knowledge (STARK) systems.  These systems can be executed with, or
+without, zero knowledge (ZK), and may be designed as either
+interactive or non-interactive protocols.  The theoretical
+constructions which this library implements are described in detail in
+the zk-STARK paper:
+
+Scalable, transparent, and post-quantum secure computational integrity
+Eli Ben-Sasson and Iddo Bentov and Yinon Horesh and Michael Riabzev
+
+	https://eprint.iacr.org/2018/046
