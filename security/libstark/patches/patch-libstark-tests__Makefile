@@ -1,0 +1,15 @@
+$NetBSD: patch-libstark-tests__Makefile,v 1.1 2019/10/28 17:46:58 agc Exp $
+
+Find libgtest as well
+
+--- libstark-tests/Makefile	2019/10/19 04:37:04	1.1
++++ libstark-tests/Makefile	2019/10/19 04:37:45
+@@ -12,7 +12,7 @@
+ 	FFT
+ 
+ LIBFLAGS=$(addprefix -l, $(LIBS))
+-LNKFLAGS=-L"$(ALGEBRALNKDIR)" -L"$(FFTLIBLNKDIR)" -L"$(LIBSTARKLINKDIR)" -lgomp
++LNKFLAGS=-L"$(ALGEBRALNKDIR)" -L"$(FFTLIBLNKDIR)" -L"$(LIBSTARKLINKDIR)" -L${PREFIX}/lib -lgomp
+ 
+ SRCDIR  = .
+ SRCEXT  = cpp
