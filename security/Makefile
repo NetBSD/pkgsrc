@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.714 2019/10/28 17:46:58 agc Exp $
+# $NetBSD: Makefile,v 1.715 2019/10/28 18:51:37 bouyer Exp $
 #
 
 COMMENT=	Security tools
@@ -494,6 +494,7 @@ SUBDIR+=	qore-asn1-module
 SUBDIR+=	qore-ssh2-module
 SUBDIR+=	qore-xmlsec-module
 SUBDIR+=	qt4-qtkeychain
+SUBDIR+=	qt5-qtkeychain
 SUBDIR+=	racoon2
 SUBDIR+=	rainbowcrack
 SUBDIR+=	rats
