@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/10/26 11:27:09 nia Exp $
+# $NetBSD: Makefile,v 1.2 2019/10/28 13:39:02 jperkin Exp $
 
 DISTNAME=	simutrans-src-120-4-1
 PKGNAME=	${DISTNAME:S/-/./g:S/.src./-/1}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://simutrans.com/
 COMMENT=	Transportation simulation game
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	simutrans-pak128-[0-9]:../../games/simutrans-pak128
+DEPENDS+=	simutrans-pak128-[0-9]*:../../games/simutrans-pak128
 
 EXTRACT_DIR=	${WRKDIR}/simutrans
 WRKSRC=		${WRKDIR}/simutrans
