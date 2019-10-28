@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/08/08 13:40:30 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/10/28 12:24:06 nia Exp $
 bin/crawl
 share/stone-soup/dat/clua/autofight.lua
 share/stone-soup/dat/clua/automagic.lua
@@ -471,6 +471,7 @@ share/stone-soup/dat/dist_bones/bones.store.Zig
 share/stone-soup/dat/dist_bones/bones.store.Zot
 share/stone-soup/dat/dlua/debug.lua
 share/stone-soup/dat/dlua/dungeon.lua
+share/stone-soup/dat/dlua/explorer.lua
 share/stone-soup/dat/dlua/fnwrap.lua
 share/stone-soup/dat/dlua/gauntlet.lua
 share/stone-soup/dat/dlua/ghost.lua
