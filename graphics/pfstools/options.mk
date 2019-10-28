@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.6 2019/08/30 17:01:34 nia Exp $
+# $NetBSD: options.mk,v 1.7 2019/10/28 09:42:28 kamil Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pfstools
-PKG_SUPPORTED_OPTIONS=	fftw imagemagick octave qt opengl
+PKG_SUPPORTED_OPTIONS=	fftw imagemagick octave opengl
 
 PKG_SUGGESTED_OPTIONS.Darwin+=	opengl
 
-PLIST_VARS+=	fftw im octave qt gl
+PLIST_VARS+=	fftw im octave gl
 
 .include "../../mk/bsd.options.mk"
 
@@ -36,15 +36,6 @@ PLIST_SUBST+=	OCT_LOCALVERFCNFILEDIR=${OCT_LOCALVERFCNFILEDIR:S/${BUILDLINK_PREF
 CMAKE_ARGS+=	-DWITH_Octave=YES
 .else
 CMAKE_ARGS+=	-DWITH_Octave=NO
-.endif
-
-.if !empty(PKG_OPTIONS:Mqt)
-.include "../../x11/qt4-libs/buildlink3.mk"
-.include "../../x11/qt4-tools/buildlink3.mk"
-PLIST.qt=	yes
-CMAKE_ARGS+=	-DWITH_QT=YES
-.else
-CMAKE_ARGS+=	-DWITH_QT=NO
 .endif
 
 .if !empty(PKG_OPTIONS:Mopengl)
