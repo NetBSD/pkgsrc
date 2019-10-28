@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2933 2019/10/27 13:16:17 rhialto Exp $
+# $NetBSD: Makefile,v 1.2934 2019/10/28 16:03:05 kamil Exp $
 #
 
 COMMENT=	Development utilities
@@ -447,7 +447,6 @@ SUBDIR+=	gprbuild-aux
 SUBDIR+=	gps
 SUBDIR+=	gputils
 SUBDIR+=	gradle
-SUBDIR+=	grantlee
 SUBDIR+=	grantlee-qt5
 SUBDIR+=	gsoap
 SUBDIR+=	gst-plugins0.10-pango
