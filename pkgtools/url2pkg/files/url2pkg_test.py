@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.23 2019/10/27 19:19:55 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.24 2019/10/28 20:17:24 rillig Exp $
 
 import pytest
 from url2pkg import *
@@ -94,12 +94,15 @@ def test_Global_bmake():
 
 
 def test_Global_pkgsrc_license():
-    assert g.pkgsrc_license('BSD') == ''
+    assert g.pkgsrc_license('BSD') == ''  # too unspecific
     assert g.pkgsrc_license('apache-2.0') == 'apache-2.0'
     assert g.pkgsrc_license('Apache 2') == 'apache-2.0'
 
     # Not explicitly in the list, looked up from PKGSRCDIR.
     assert g.pkgsrc_license('skype21-license') == 'skype21-license'
+
+    assert g.pkgsrc_license('mit + file LICENSE') == 'mit\t# + file LICENSE'
+    assert g.pkgsrc_license('MIT | file LICENSE') == 'mit\t# OR file LICENSE'
 
     # Neither in the list nor in PKGSRCDIR/licenses.
     assert g.pkgsrc_license('unknown') == ''
