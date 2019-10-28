@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2019/10/28 12:38:35 nia Exp $
+
+Shell portability.
+
+--- configure.orig	2015-12-06 14:12:04.000000000 +0000
++++ configure
+@@ -22981,7 +22981,7 @@ fi
+ 
+ 
+ 
+-if test "x$missingmusic" == xx ; then
++if test "x$missingmusic" = xx ; then
+ { $as_echo "$as_me:${as_lineno-$LINENO}:
+ The music files could not be found. These are not distributed together with the
+ source code because of their size.
