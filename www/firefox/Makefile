@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.398 2019/10/15 18:07:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.399 2019/10/28 13:03:27 ryoon Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=		69.0
-MOZ_BRANCH_MINOR=	.3
+MOZ_BRANCH=		70.0
+MOZ_BRANCH_MINOR=	
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	${DISTNAME:S/.source//:S/b/beta/:S/esr//}
@@ -15,7 +15,7 @@ HOMEPAGE=	https://www.mozilla.com/en-US/firefox/
 COMMENT=	Web browser with support for extensions (version ${FIREFOX_VER:C/\..*//})
 LICENSE=	mpl-1.1
 
-WRKSRC=		${WRKDIR}/firefox-${FIREFOX_VER}
+WRKSRC=		${WRKDIR}/firefox-${FIREFOX_VER:C/b.*//}
 
 MOZILLA_DIR=	# empty
 
@@ -86,6 +86,7 @@ pre-configure:
 	cd ${WRKSRC}/js/src && autoconf
 	cd ${WRKSRC} && mkdir ${OBJDIR}
 	cd ${WRKSRC}/${OBJDIR} && touch old-configure.vars
+	# Do not fetch Rust Cargo file via network during build
 
 post-build:
 	${SED} -e 's|@MOZILLA@|${MOZILLA}|g'				\
