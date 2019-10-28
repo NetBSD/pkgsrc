@@ -1,0 +1,15 @@
+$NetBSD: patch-algebra__algebralib-tests__Makefile,v 1.1 2019/10/28 17:46:58 agc Exp $
+
+Find gtest in appropriate place 
+
+--- algebra/algebralib-tests/Makefile	2019/10/19 04:42:41	1.1
++++ algebra/algebralib-tests/Makefile	2019/10/19 04:43:13
+@@ -15,7 +15,7 @@
+ 	FFT
+ 
+ LIBFLAGS=$(addprefix -l, $(LIBS))
+-LNKFLAGS=-L"$(ALGEBRALNKDIR)" -L"$(FFTLIBLNKDIR)" -lgomp
++LNKFLAGS=-L"$(ALGEBRALNKDIR)" -L"$(FFTLIBLNKDIR)" -L${PREFIX}/lib -lgomp
+ 
+ TARGET=$(BLDDIR)/algebralib_tests
+ 
