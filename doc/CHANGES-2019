@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4600 2019/10/28 13:45:09 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4601 2019/10/28 13:45:35 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7366,3 +7366,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/MesaLib to 19.2.2 [nia 2019-10-28]
 	Updated devel/p5-Test-Script to 1.26 [mef 2019-10-28]
 	Updated graphics/papirus-icon-theme to 20191009 [nia 2019-10-28]
+	Updated graphics/papirus-folders to 1.5.0 [nia 2019-10-28]
