@@ -10,8 +10,8 @@ three-way calling, caller ID services, ADSI, SIP and H.323 (as both
 client and gateway).
 
 This is a long term support version.  It is scheduled to go to
-security fixes only on October 24th, 2018, and EOL on October 24th,
-2019.  See here for more information about Asterisk versions:
+security fixes only on 2020-10-24, and EOL on 2021-10-24. For more
+information about Asterisk versions, see
 https://wiki.asterisk.org/wiki/display/AST/Asterisk+Versions
 
 NOTE:  This version does not work with the zaptel drivers.  It
