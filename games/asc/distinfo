@@ -1,26 +1,19 @@
-$NetBSD: distinfo,v 1.13 2015/11/03 20:56:44 agc Exp $
+$NetBSD: distinfo,v 1.14 2019/10/28 12:38:35 nia Exp $
 
-SHA1 (asc/asc-source-1.16.4.0.tar.bz2) = 338081823943e08848325e6f2126e5c533517ae9
-RMD160 (asc/asc-source-1.16.4.0.tar.bz2) = a4de675628875cc36f30b39d1fb1ef3ac879e369
-SHA512 (asc/asc-source-1.16.4.0.tar.bz2) = cda8f530661c360248e5bacf43d1fb5bce81b9078cf533bf2bc147b8bcfd65cd80ba9b9d0665199542df64e8a9d2973db9e9211574ac92b6da860632f517133c
-Size (asc/asc-source-1.16.4.0.tar.bz2) = 11730677 bytes
-SHA1 (asc/frontiers.mp3) = 7c6753fb5fe5e498fa780271da0a302c0619a1ca
-RMD160 (asc/frontiers.mp3) = 4d2ec2ff647ef6ef66a2264465b86451bbba64f5
-SHA512 (asc/frontiers.mp3) = b3e365f5c305416bcb1a746de85250e3e400751c5328d520edfe4180bd9c25dbafd1a87e520d206a2566d71e6e6886239d8b3421de8c97dc0e482149d3d83dac
-Size (asc/frontiers.mp3) = 4407769 bytes
-SHA1 (asc/machine_wars.mp3) = d05e92b46ae0e90d9f3b38ce9c4b41bde599a02e
-RMD160 (asc/machine_wars.mp3) = 192b2a4f20676cd1ce3145df08997d9793ea373f
-SHA512 (asc/machine_wars.mp3) = 0f18a52bb551ed4138de2a37607a5d368e17f08d505ce2835574ed056a149e0df103df3fd66c752bce6de0a6b43544e3d05b015de054d91115e2e3435584a914
-Size (asc/machine_wars.mp3) = 2905989 bytes
-SHA1 (asc/time_to_strike.mp3) = 76abf03155d9a21584f30c20370db0a93449c78a
-RMD160 (asc/time_to_strike.mp3) = a402a00e490f7aca0871b52165d63f3bde3b3bff
-SHA512 (asc/time_to_strike.mp3) = 1d07827774246c59d516fdf2b2fd6d00f6b7ae7e2b90786ed7afd34b9a5c660c6c50dc2e085318c4892a6f5bcf5712271b92cf001dd647f58b4ee54e704dcf42
-Size (asc/time_to_strike.mp3) = 3242969 bytes
-SHA1 (patch-source_ASCStringHelpers.h) = 21caf558907c4eaafe88d714520b014a1c19f57b
-SHA1 (patch-source_Property.cpp) = a8a8e154f8aa5a884cb9fe0e74c806dcaf3020b2
-SHA1 (patch-source_errors.h) = 5d288a390984a5ab673609e3487feb5ab1ee6a8a
-SHA1 (patch-source_gui.cpp) = 3611c053b08fa175bf89b79b9cd0a4d5202affc8
-SHA1 (patch-source_gui.h) = 7e94c8fb53148da05177614fe79e9448693a54b8
-SHA1 (patch-source_password.cpp) = fa56110a045e111f772f09b9e9998d84a76e7d5a
-SHA1 (patch-source_strtmesg.cpp) = 3aa86f7e739983294a86c9ab5a8c0c4a6007c449
-SHA1 (patch-source_tools_lib_errorout.cpp) = 9ccfa2d4447a3606fe72c9a60e79881fdfc1b080
+SHA1 (asc/asc-2.6.1.0.tar.bz2) = 3731e8016143d3c83364f67f4ac7d8e7491b7a50
+RMD160 (asc/asc-2.6.1.0.tar.bz2) = f66fd672638c13661618b0e9a7e364a694793322
+SHA512 (asc/asc-2.6.1.0.tar.bz2) = 9bf6c8ef44e4f8df32335d6fda3d755e74065cfa36cfab913c7f5990cea0d7f7215642e290a0aa0eaa98417a0f19a971d17fd4b464dbece9f60880bd32daee2e
+Size (asc/asc-2.6.1.0.tar.bz2) = 42569531 bytes
+SHA1 (asc/frontiers.ogg) = 2c41ff90e6d8598e7efe7414cd61df0972720b71
+RMD160 (asc/frontiers.ogg) = d9180257b34871301d55ec4db37fab3d144ceecf
+SHA512 (asc/frontiers.ogg) = 8c2ce497519b3842fba2d39b5c6de6194584d64c0375d404535628898cb2e7a82433fc6008781381a80a6cbb24ff49162de3634ebcf28b17b0631c30668fd8af
+Size (asc/frontiers.ogg) = 4691844 bytes
+SHA1 (asc/machine_wars.ogg) = e889908b8d6e84a5df90be9ccc965074c6ed94b0
+RMD160 (asc/machine_wars.ogg) = 41da08dce0671329bb7bb16f52249f1baeaa1b49
+SHA512 (asc/machine_wars.ogg) = 2c1bab89b9397f52dcf7eedfc0dbc88d49a586ac0474c76a09a87a880712bf0fa408c03a65a5f5d322dee86e3b12cbc66d53cd6728e8fa34fa8f2ee2bbc06cd8
+Size (asc/machine_wars.ogg) = 3138308 bytes
+SHA1 (asc/time_to_strike.ogg) = 27f06d312a7a58aa853b46e3775d6fecd813d57a
+RMD160 (asc/time_to_strike.ogg) = 03f67601e729ba8cbdeb01b6e0b4317bbe10e435
+SHA512 (asc/time_to_strike.ogg) = 2ed946116cac2ea63d401eb7415d5b3e4e548bc5a5b00b01a6f1c4db6a242895810dfefdf1ace9652f01dc934a70b756aa74d01630cfac97b19ce84a93b772ee
+Size (asc/time_to_strike.ogg) = 3830679 bytes
+SHA1 (patch-configure) = 03ab5b82af9ec361dd671194554ca30abf9b240e
