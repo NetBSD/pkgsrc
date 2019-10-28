@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2019/03/06 05:48:55 gutteridge Exp $
+# $NetBSD: options.mk,v 1.4 2019/10/28 21:49:22 maya Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.atril
 PKG_SUPPORTED_OPTIONS=	dbus pdf ps xps dvi djvu tiff gdk-pixbuf keyring introspection
-PKG_SUGGESTED_OPTIONS=	dbus pdf ps xps dvi djvu tiff gdk-pixbuf keyring
+PKG_SUGGESTED_OPTIONS=	dbus pdf ps xps djvu tiff gdk-pixbuf keyring
 
 .include "../../mk/bsd.options.mk"
 
