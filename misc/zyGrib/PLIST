@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2014/12/30 08:50:55 plunky Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/10/28 19:02:35 bouyer Exp $
 bin/zyGrib
 share/zyGrib/colors/colors_binary.txt
 share/zyGrib/colors/colors_cape_jkg.txt
@@ -40,6 +40,7 @@ share/zyGrib/img/drapeau_en.png
 share/zyGrib/img/drapeau_es.png
 share/zyGrib/img/drapeau_fi.png
 share/zyGrib/img/drapeau_fr.png
+share/zyGrib/img/drapeau_gr.png
 share/zyGrib/img/drapeau_it.png
 share/zyGrib/img/drapeau_nl.png
 share/zyGrib/img/drapeau_pt.png
@@ -105,6 +106,8 @@ share/zyGrib/tr/zyGrib_fi.qm
 share/zyGrib/tr/zyGrib_fi.ts
 share/zyGrib/tr/zyGrib_fr.qm
 share/zyGrib/tr/zyGrib_fr.ts
+share/zyGrib/tr/zyGrib_gr.qm
+share/zyGrib/tr/zyGrib_gr.ts
 share/zyGrib/tr/zyGrib_it.qm
 share/zyGrib/tr/zyGrib_it.ts
 share/zyGrib/tr/zyGrib_nl.qm

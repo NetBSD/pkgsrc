@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.50 2018/07/04 13:40:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.51 2019/10/28 19:02:35 bouyer Exp $
 #
 
-DISTNAME=	zyGrib-7.0.0
-PKGREVISION=	5
+DISTNAME=	zyGrib-8.0.1
 CATEGORIES=	misc
-MASTER_SITES=	http://www.zygrib.org/getfile.php?file=
+MASTER_SITES=	https://www.zygrib.org/getfile.php?file=
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	plunky@NetBSD.org
@@ -34,7 +33,6 @@ INSTALLATION_DIRS+=	share/zyGrib/img
 INSTALLATION_DIRS+=	share/zyGrib/maps/gshhs
 INSTALLATION_DIRS+=	share/zyGrib/stuff
 INSTALLATION_DIRS+=	share/zyGrib/tr
-
 INSTALL_FILES+=	colors/colors_binary.txt
 INSTALL_FILES+=	colors/colors_cape_jkg.txt
 INSTALL_FILES+=	colors/colors_cin_jkg.txt
@@ -75,6 +73,7 @@ INSTALL_FILES+=	img/drapeau_en.png
 INSTALL_FILES+=	img/drapeau_es.png
 INSTALL_FILES+=	img/drapeau_fi.png
 INSTALL_FILES+=	img/drapeau_fr.png
+INSTALL_FILES+=	img/drapeau_gr.png
 INSTALL_FILES+=	img/drapeau_it.png
 INSTALL_FILES+=	img/drapeau_nl.png
 INSTALL_FILES+=	img/drapeau_pt.png
@@ -140,6 +139,8 @@ INSTALL_FILES+=	tr/zyGrib_fi.qm
 INSTALL_FILES+=	tr/zyGrib_fi.ts
 INSTALL_FILES+=	tr/zyGrib_fr.qm
 INSTALL_FILES+=	tr/zyGrib_fr.ts
+INSTALL_FILES+=	tr/zyGrib_gr.qm
+INSTALL_FILES+=	tr/zyGrib_gr.ts
 INSTALL_FILES+=	tr/zyGrib_it.qm
 INSTALL_FILES+=	tr/zyGrib_it.ts
 INSTALL_FILES+=	tr/zyGrib_nl.qm
@@ -150,7 +151,7 @@ INSTALL_FILES+=	tr/zyGrib_ru.qm
 INSTALL_FILES+=	tr/zyGrib_ru.ts
 
 do-configure:
-	cd ${WRKSRC} && ${QTDIR}/bin/qmake
+	cd ${WRKSRC} && ${QTDIR}/bin/qmake "QMAKE_RPATHDIR+=${QWT_DIR}/lib" "QMAKE_LIBDIR+=${QWT_DIR}/lib"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/zyGrib ${DESTDIR}${PREFIX}/bin
@@ -160,10 +161,13 @@ do-install:
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/jasper/buildlink3.mk"
 .include "../../geography/libnova/buildlink3.mk"
 .include "../../geography/proj/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../x11/qt4-libs/buildlink3.mk"
-.include "../../x11/qt4-tools/buildlink3.mk"
-.include "../../x11/qwt6-qt4/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qttools/buildlink3.mk"
+.include "../../x11/qwt6-qt5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
