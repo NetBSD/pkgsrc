@@ -1,16 +1,8 @@
-$NetBSD: distinfo,v 1.69 2017/08/25 20:03:03 joerg Exp $
+$NetBSD: distinfo,v 1.70 2019/10/28 15:10:00 kamil Exp $
 
-SHA1 (TeXmacs-1.99.5-src.tar.gz) = be6fdc39a094db6dc547490fa89a95876dbde002
-RMD160 (TeXmacs-1.99.5-src.tar.gz) = eba10c9be4549d61240290878af429d80ede933f
-SHA512 (TeXmacs-1.99.5-src.tar.gz) = a7d846fd8823e486cf724bfcbe04ae877dd64995d6131af59b49427a1178e36b52b9fcd9109783b9ae1e39c988ae9ed497b1540dce29645ebf2c4301ca7357a8
-Size (TeXmacs-1.99.5-src.tar.gz) = 25014543 bytes
-SHA1 (patch-aa) = 95b9e42fe1ff343e891fe299382c3647636eec99
-SHA1 (patch-ab) = a79814a9cdbf008ad08afa99822b707ab809599c
-SHA1 (patch-ac) = e54a636e6e8f789bbdb0fc5a252b4a43525de72d
-SHA1 (patch-ad) = 4a59f6e7b6f0225a5d74b1b500f9a6997ea78cb4
-SHA1 (patch-ae) = c313a19db160d9f1c0dc950a1eb465869cec777f
-SHA1 (patch-aj) = ed4d847ad8e7b12745b144e6790eab539cbc6bca
-SHA1 (patch-al) = f7deed3d692af322aebe1a4068dfd3bde9e87a0a
-SHA1 (patch-src_Plugins_Qt_QTMSockets.cpp) = 83a50c86d373301b092e1ffee1bd17650cc222c1
-SHA1 (patch-src_System_Link_socket__server.cpp) = dbc6b8e7012abf3f1833e44aedb7172de675b7e1
-SHA1 (patch-src_makefile.in) = 34dc509a9e2834e376a5989d8500f3e473d266f0
+SHA1 (TeXmacs-1.99.11-src.tar.gz) = 53abe8011df033005ffa3530f23501833afed440
+RMD160 (TeXmacs-1.99.11-src.tar.gz) = 25a17545389f06b4ac49899fc2c8554612708b48
+SHA512 (TeXmacs-1.99.11-src.tar.gz) = 3f3481834baeeee93afc2c2de1666297b8c02d7dc5223b00ee93120e175503c91bdcc3d9ff4d8df498033064b2e67b12ffd47af9e8b95ad5eee12b47ec076855
+Size (TeXmacs-1.99.11-src.tar.gz) = 32798336 bytes
+SHA1 (patch-cmake_FindGuile.cmake) = cb6085af098467d320ff65451df33bf552b2ddaa
+SHA1 (patch-misc_CMakeLists.txt) = 0534c9a1c66315d3189a4d6932ce56b3d7c2978a
