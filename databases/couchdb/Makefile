@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2019/09/06 09:10:47 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.60 2019/10/28 15:43:24 jperkin Exp $
 
 DISTNAME=		apache-couchdb-2.3.1
 PKGNAME=		${DISTNAME:S/apache-//}
+PKGREVISION=		1
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_APACHE:=couchdb/source/${PKGVERSION_NOREV}/}
 
@@ -59,6 +59,7 @@ SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Setting standard paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	configure
+SUBST_FILES.paths+=	rel/files/couchdb.in
 SUBST_FILES.paths+=	rel/overlay/bin/couchdb
 SUBST_FILES.paths+=	rel/overlay/etc/default.ini
 SUBST_FILES.paths+=	src/config/src/config_app.erl
