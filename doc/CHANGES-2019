@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4595 2019/10/28 12:54:35 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4596 2019/10/28 13:05:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7354,3 +7354,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed x11/paragui [nia 2019-10-28]
 	Updated mail/notmuch to 0.29.2 [ryoon 2019-10-28]
 	Updated games/minetest to 5.1.0 [nia 2019-10-28]
+	Updated www/firefox to 70.0 [ryoon 2019-10-28]
