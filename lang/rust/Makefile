@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2019/10/28 08:56:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.122 2019/10/28 14:38:41 he Exp $
 
 DISTNAME=	rustc-1.38.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -119,12 +119,13 @@ CHECK_PORTABILITY_SKIP+=	src/vendor/openssl-src/openssl/.travis-create-release.s
 # Bootstrapping on NetBSD/powerpc requires no debug-info from rustc
 # (both for amd64->powerpc built and powerpc->powerpc built bootstrap bits)
 CONFIGURE_ARGS+=	--disable-debug
-CONFIGURE_ARGS+=	--disable-debuginfo-tests
 CONFIGURE_ARGS+=	--disable-debug-assertions
-CONFIGURE_ARGS+=	--disable-debuginfo
-CONFIGURE_ARGS+=	--disable-debuginfo-lines
-CONFIGURE_ARGS+=	--disable-debuginfo-only-std
-CONFIGURE_ARGS+=	--disable-debuginfo-tools
+CONFIGURE_ARGS+=	--disable-llvm-release-debuginfo
+CONFIGURE_ARGS+=	--debuginfo-level=0
+CONFIGURE_ARGS+=	--debuginfo-level-rustc=0
+CONFIGURE_ARGS+=	--debuginfo-level-std=0
+CONFIGURE_ARGS+=	--debuginfo-level-tools=0
+CONFIGURE_ARGS+=	--debuginfo-level-tests=0
 .endif
 
 # Only build the ARM target on/for this host, due to resource constraints
