@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2019/10/25 12:36:12 triaxx Exp $
+# $NetBSD: options.mk,v 1.7 2019/10/28 10:03:18 triaxx Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gmake
 PKG_SUPPORTED_OPTIONS=	nls
@@ -8,6 +8,8 @@ PLIST_VARS+=		nls
 
 .include "../../mk/bsd.options.mk"
 
+# Build NLS support only if a native implementation of gettext is available
+# to avoid a circular dependency (gmake->gettext-tools->ncurses->gmake).
 .include "../../devel/gettext-lib/builtin.mk"
 .if !empty(PKG_OPTIONS:Mnls) && \
     !empty(IS_BUILTIN.gettext:M[yY][eE][sS])
