@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2019/09/07 13:05:00 nia Exp $
+# $NetBSD: Makefile,v 1.3 2019/10/28 11:38:31 nia Exp $
 
-DISTNAME=	materia-gtk-theme-20190831
+DISTNAME=	materia-gtk-theme-20191017
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nana-4/}
 GITHUB_PROJECT=	materia-theme
