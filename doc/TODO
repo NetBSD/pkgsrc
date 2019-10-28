@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19367 2019/10/28 09:33:39 kamil Exp $
+$NetBSD: TODO,v 1.19368 2019/10/28 12:38:50 nia Exp $
 
 Suggested new packages
 ======================
@@ -444,7 +444,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o aribas-1.64
 	o arirang-1.70
 	o asapm-3.1
-	o asc-2.6.0
 	o asn1c-0.9.27
 	o aspell-nb-2.0.10
 	o asterisk13-13.21.1
