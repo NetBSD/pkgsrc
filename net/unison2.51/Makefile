@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.15 2019/10/18 11:47:17 pho Exp $
+# $NetBSD: Makefile,v 1.16 2019/10/28 19:59:29 gdt Exp $
 
+# This package is "unison-2.51.x" because 2.51 is the standard
+# approach, and hence uses the bare name.
 DISTNAME=	unison-2.51.2
 PKGREVISION=	14
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	tonio@NetBSD.org
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.cis.upenn.edu/~bcpierce/unison/
 COMMENT=	File-synchronization tool
 LICENSE=	gnu-gpl-v3
