@@ -1,12 +1,22 @@
-$NetBSD: patch-ap,v 1.2 2009/10/11 09:14:52 adam Exp $
+$NetBSD: patch-ap,v 1.3 2019/10/28 19:37:41 maya Exp $
 
---- config.tests/unix/iconv/iconv.cpp.orig	2009-09-29 13:01:31.000000000 +0200
+Support NetBSD iconv variant (pre-9.99.17 and newer)
+
+--- config.tests/unix/iconv/iconv.cpp.orig	2015-05-07 14:14:42.000000000 +0000
 +++ config.tests/unix/iconv/iconv.cpp
-@@ -48,7 +48,11 @@ int main(int, char **)
+ #if defined(__sgi)
+ #error "iconv not supported on IRIX"
+ #else
++#if defined(__NetBSD__)
++#include <sys/param.h>
++#endif
+ #include <iconv.h>
+ 
+ int main(int, char **)
  {
      iconv_t x = iconv_open("", "");
  
-+#if defined(__NetBSD__)
++#if defined(__NetBSD__) && __NetBSD_Version__ < 999001700
 +    const char *inp;
 +#else
      char *inp;
