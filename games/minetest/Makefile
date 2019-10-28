@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2019/08/22 12:23:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2019/10/28 12:54:25 nia Exp $
 
-PKGNAME=	minetest-5.0.1
-PKGREVISION=	3
+PKGNAME=	minetest-5.1.0
 CATEGORIES=	games
 DIST_SUBDIR=	minetest-${PKGVERSION_NOREV}
 DISTFILES+=	minetest.tar.gz
@@ -48,6 +47,7 @@ post-extract:
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
+.include "../../devel/ncursesw/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
@@ -61,7 +61,6 @@ post-extract:
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
