@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.24 2019/10/27 19:19:55 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.25 2019/10/28 20:17:24 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -116,26 +116,74 @@ class Globals:
         return output.decode('utf-8').strip()
 
     def pkgsrc_license(self, license_name: str) -> str:
+        comment = ''
+
+        def suffix(suf: str, comm: str):
+            nonlocal license_name, comment
+            if comment == '' and license_name.endswith(suf):
+                comment = f'\t# {comm}'
+                license_name = license_name[:-len(suf)].rstrip()
+
+        suffix('| file LICENSE', 'OR file LICENSE')
+        suffix('+ file LICENSE', '+ file LICENSE')
+
         known_licenses = (
-            ('',
-             'Apache Software License',  # too unspecific; needs a version number
-             'BSD'),  # too unspecific, may be 2-clause, 3-clause, 4-clause
-            ('${PERL5_LICENSE}', 'perl'),
-            ('apache-2.0', 'Apache 2', 'Apache 2.0'),
+            ('2-clause-bsd', 'BSD-2', 'bsd2', 'BSD_2_clause'),
+            # ('2-clause-bsd OR modified-bsd OR original-bsd', 'BSD'),  # XXX: questionable
+            ('acm-license', 'ACM'),
+            ('apache-1.1 OR apache-2.0', 'APACHE'),
+            ('apache-2.0', 'Apache 2', 'Apache 2.0', 'apache2',
+             'Apache Software License', 'Apache License 2.0',
+             'Apache License (== 2.0)'),
+            ('apache-2.0 AND lppl-1.3c', 'apache2lppl', 'apache2lppl1.3c',
+             'lppl1.3capache2'),
+            ('artistic OR artistic-2.0', 'ARTISTIC'),
             ('artistic-2.0', 'artistic_2'),
-            ('gnu-gpl-v3', 'GNU Lesser General Public License (LGPL), Version 3'),
-            ('gnu-lgpl-v2', 'LGPL'),
+            ('boost-license', 'BSL-1.0'),
+            ('cc-by-v4.0', 'cc-by-4'),
+            ('cc0-1.0-universal', 'CC0'),
+            ('gfsl', 'gfl'),
+            ('gnu-fdl-v1.3', 'fdl'),
+            ('gnu-gpl-v1', 'GPL-1'),
+            ('gnu-gpl-v1 OR gnu-gpl-v2 OR gnu-gpl-v3', 'GPL'),
+            ('gnu-gpl-v2', 'gpl', 'gpl2', 'GPL-2'),
+            ('gnu-gpl-v2 AND cc-by-sa-v4.0', 'gpl3+cc-by-sa-4'),
+            ('gnu-gpl-v2 AND lppl-1.3c', 'lpplgpl', 'gpl2lppl'),
+            ('gnu-gpl-v2 AND ofl-v1.1 AND lppl-1.3c', 'gplofllppl'),
+            ('gnu-gpl-v2 OR gnu-gpl-v3', 'GPL-2 | GPL-3', 'GPL (>= 2)', 'GPL (>= 2.0)'),
+            ('gnu-gpl-v3', 'gpl3', 'GPL-3',
+             'GNU Lesser General Public License (LGPL), Version 3'),
+            ('gnu-gpl-v3', 'GPL (>= 3)'),
+            ('gnu-lgpl-v2', 'LGPL', 'LGPL-2'),
+            ('gnu-lgpl-v2 OR gnu-lgpl-v2.1 OR gnu-lgpl-v3', 'LGPL'),
+            ('gnu-lgpl-v2.1', 'LGPL-2.1'),
+            ('gnu-lgpl-v3', 'LGPL-3'),
+            ('gnu-lgpl-v2 OR gnu-lgpl-v3', 'LGPL-2 | LGPL-3'),
+            ('gnu-lgpl-v2 OR gnu-lgpl-v2.1 OR gnu-lgpl-v3', 'LGPL (>= 2)'),
+            ('lppl-1.0', 'lppl1'),
+            ('lppl-1.2', 'lppl1.2'),
+            ('lppl-1.3c', 'lppl', 'lppl1.3', 'lppl1.3c'),
+            ('lucent', 'LUCENT', 'Lucent Public License'),
             ('mit', 'MIT', 'MIT License'),
-            ('python-software-foundation',
-             'PSF', 'PSF license', 'Python Software Foundation License'),
+            ('mit\t# + file LICENSE OR unlimited', 'MIT + file LICENSE | Unlimited'),
+            ('mit AND lppl-1.3c', 'mitlppl'),
+            ('modified-bsd', 'bsd3', 'BSD 3 clause', 'BSD_3_clause'),
+            ('ofl-v1.1', 'ofl'),
+            ('ofl-v1.1 AND lppl-1.3c', 'ofllppl1.3', 'ofllppl1.3c', 'ofllppl'),
+            ('${PERL5_LICENSE}', 'perl'),
+            ('postgresql-license', 'POSTGRESQL'),
+            ('public-domain', 'pd'),
+            ('python-software-foundation', 'PSF', 'PSF license',
+             'Python Software Foundation License'),
             ('zpl-2.1', 'ZPL 2.1'),
         )
 
-        for known_license in known_licenses:
-            if license_name in known_license:
-                return known_license[0]
-        if (self.pkgsrcdir / 'licenses' / license_name).is_file():
-            return license_name
+        lower = license_name.lower()
+        for group in known_licenses:
+            if lower in map(str.lower, group):
+                return group[0] + comment
+        if (self.pkgsrcdir / 'licenses' / lower).is_file():
+            return lower + comment
         return ''
 
 
