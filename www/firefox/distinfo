@@ -1,12 +1,13 @@
-$NetBSD: distinfo,v 1.369 2019/10/15 18:07:48 ryoon Exp $
+$NetBSD: distinfo,v 1.370 2019/10/28 13:03:27 ryoon Exp $
 
-SHA1 (firefox-69.0.3.source.tar.xz) = a1ae50dd7a7cf17f28a4e7a88d87e25050b977b3
-RMD160 (firefox-69.0.3.source.tar.xz) = 2872f8b8b15272f6ffaecc76677bf75ad2673afc
-SHA512 (firefox-69.0.3.source.tar.xz) = bc4020c5f1a1eac82944f6402aa374c830231a0f168c6cdab8924a1c7a1b296381b45bce0a0567811ad86c2688972a35fda3f6c15e562b03a47d48617fe7611a
-Size (firefox-69.0.3.source.tar.xz) = 315473484 bytes
+SHA1 (firefox-70.0.source.tar.xz) = 7eccef97655ad8b127213923bfd97401d6a17836
+RMD160 (firefox-70.0.source.tar.xz) = 2115c85229b52f138ca6bc2e56db104c386ea44a
+SHA512 (firefox-70.0.source.tar.xz) = c2643d88d59012dfd762357d66005c8892dec066b0ae9d8d33a29ea4427d1e5ae4a0376725c7d960c0025d5c9567eca816eb612b4ea987069e455c06fc442973
+Size (firefox-70.0.source.tar.xz) = 321160764 bytes
 SHA1 (patch-aa) = 1f292aae7d37bd480ba834324b737bfebee52503
 SHA1 (patch-browser_app_profile_firefox.js) = 076cc2892547bac07fe907533f4e821f13f5738e
 SHA1 (patch-build_moz.configure_old.configure) = 05963b12fd908d90e3378b30cff7e48291b8a447
+SHA1 (patch-build_moz.configure_rust.configure) = ee9e207e67709f3c9455b4d22f5f254890e99ca8
 SHA1 (patch-config__make_system_wrappers.py) = 18605b32428e96915c945a189548505deacd2333
 SHA1 (patch-dom_base_nsAttrName.h) = ac7ba441a3b27df2855cf2673eea36b1cb44ad49
 SHA1 (patch-dom_media_CubebUtils.cpp) = b1b4f981c4bede877e3bd092d2648d4b8cbc73a5
@@ -19,7 +20,6 @@ SHA1 (patch-ipc_chromium_src_base_platform__thread__posix.cc) = 35d20981d33ccdb1
 SHA1 (patch-ipc_glue_CrossProcessSemaphore.h) = 25e24743060acf10c776c6b3b3660f52a2e9fbe8
 SHA1 (patch-ipc_glue_CrossProcessSemaphore__posix.cpp) = f8d155ee66008b7cc4052b6a889327543b89e0bb
 SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = 260c29bacd8bf265951b7a412f850bf2b292c836
-SHA1 (patch-js_src_threading_posix_Thread.cpp) = 47e612a676e614fd6dd43b8a3140218a3fbdc7fa
 SHA1 (patch-js_src_util_NativeStack.cpp) = 2c6f844d38343f40ebbc8fd665279256e4ae6d35
 SHA1 (patch-media_libcubeb_gtest_moz.build) = ea6dcc7ceeb76ce1fb9d508cf43080a2eef3a9e4
 SHA1 (patch-media_libcubeb_src_cubeb__alsa.c) = f359a66a22f11142d05746e15894d998d3e3bf5a
