@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.1 2019/08/08 13:40:30 nia Exp $
+# $NetBSD: Makefile.common,v 1.2 2019/10/28 12:24:06 nia Exp $
 # used by games/stone-soup/Makefile
 # used by games/stone-soup-sdl/Makefile
 
-DISTNAME=	stone_soup-0.23.2
+DISTNAME=	stone_soup-0.24.0
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	games
-MASTER_SITES=	https://crawl.develz.org/release/0.23/
+MASTER_SITES=	https://crawl.develz.org/release/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
 
 HOMEPAGE=	https://crawl.develz.org/
