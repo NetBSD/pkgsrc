@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.855 2019/10/28 12:43:57 nia Exp $
+# $NetBSD: Makefile,v 1.856 2019/10/28 19:00:37 bouyer Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -382,6 +382,7 @@ SUBDIR+=	qt5-qtx11extras
 SUBDIR+=	qt5-qtxmlpatterns
 SUBDIR+=	qwt-qt4
 SUBDIR+=	qwt6-qt4
+SUBDIR+=	qwt6-qt5
 SUBDIR+=	qwtplot3d-qt4
 SUBDIR+=	ratmen
 SUBDIR+=	redshift
