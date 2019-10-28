@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4599 2019/10/28 13:30:16 mef Exp $
+$NetBSD: CHANGES-2019,v 1.4600 2019/10/28 13:45:09 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7365,3 +7365,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-Test-MockObject to 1.20191002 [mef 2019-10-28]
 	Updated graphics/MesaLib to 19.2.2 [nia 2019-10-28]
 	Updated devel/p5-Test-Script to 1.26 [mef 2019-10-28]
+	Updated graphics/papirus-icon-theme to 20191009 [nia 2019-10-28]
