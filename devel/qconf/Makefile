@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.43 2019/04/03 00:32:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.44 2019/10/28 09:06:31 kamil Exp $
 #
 
-DISTNAME=		qconf-2.0
-PKGREVISION=		13
+DISTNAME=		qconf-2.4
 CATEGORIES=		devel
-MASTER_SITES=		http://delta.affinix.com/download/
-EXTRACT_SUFX=		.tar.bz2
+MASTER_SITES=		${MASTER_SITE_GITHUB:=psi-im/}
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://delta.affinix.com/qconf/
+HOMEPAGE=		https://github.com/psi-plus/qconf
 COMMENT=		Configure script generator for qmake
 LICENSE=		gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--qtselect=5
 USE_LANGUAGES=		c c++
 
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
@@ -29,6 +29,5 @@ post-install:
 		${INSTALL_DATA} $${fn} ${DESTDIR}${EGDIR};	\
 	done
 
-.include "options.mk"
-
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
