@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/04/27 03:20:32 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/10/28 12:38:48 ryoon Exp $
 bin/createPYMB
 bin/fcitx
 bin/fcitx-autostart
@@ -22,18 +22,6 @@ include/fcitx-gclient/fcitxclient.h
 include/fcitx-gclient/fcitxconnection.h
 include/fcitx-gclient/fcitxinputmethod.h
 include/fcitx-gclient/fcitxkbd.h
-${PLIST.qt4}include/fcitx-qt/fcitxqt_export.h
-${PLIST.qt4}include/fcitx-qt/fcitxqtconfiguifactory.h
-${PLIST.qt4}include/fcitx-qt/fcitxqtconfiguiplugin.h
-${PLIST.qt4}include/fcitx-qt/fcitxqtconfiguiwidget.h
-${PLIST.qt4}include/fcitx-qt/fcitxqtconnection.h
-${PLIST.qt4}include/fcitx-qt/fcitxqtformattedpreedit.h
-${PLIST.qt4}include/fcitx-qt/fcitxqtinputcontextproxy.h
-${PLIST.qt4}include/fcitx-qt/fcitxqtinputmethoditem.h
-${PLIST.qt4}include/fcitx-qt/fcitxqtinputmethodproxy.h
-${PLIST.qt4}include/fcitx-qt/fcitxqtkeyboardlayout.h
-${PLIST.qt4}include/fcitx-qt/fcitxqtkeyboardproxy.h
-${PLIST.qt4}include/fcitx-qt/fcitxqtkeysequencewidget.h
 include/fcitx-utils/bitset.h
 include/fcitx-utils/desktop-parse.h
 include/fcitx-utils/handler-table.h
@@ -117,7 +105,6 @@ lib/fcitx/fcitx-xkb.so
 lib/fcitx/fcitx-xkbdbus.so
 lib/fcitx/libexec/comp-spell-dict
 lib/fcitx/libexec/fcitx-po-parser
-${PLIST.qt4}lib/fcitx/libexec/fcitx-qt-gui-wrapper
 lib/fcitx/libexec/fcitx-scanner
 lib/gtk-2.0/2.10.0/immodules/im-fcitx.so
 lib/gtk-3.0/3.0.0/immodules/im-fcitx.so
@@ -130,18 +117,13 @@ lib/libfcitx-core.so.0.3
 lib/libfcitx-gclient.so
 lib/libfcitx-gclient.so.0.2
 lib/libfcitx-gclient.so.1
-${PLIST.qt4}lib/libfcitx-qt.so
-${PLIST.qt4}lib/libfcitx-qt.so.0
-${PLIST.qt4}lib/libfcitx-qt.so.0.1
 lib/libfcitx-utils.so
 lib/libfcitx-utils.so.0
 lib/libfcitx-utils.so.0.1
 lib/pkgconfig/fcitx-config.pc
 lib/pkgconfig/fcitx-gclient.pc
-${PLIST.qt4}lib/pkgconfig/fcitx-qt.pc
 lib/pkgconfig/fcitx-utils.pc
 lib/pkgconfig/fcitx.pc
-${PLIST.qt4}qt4/plugins/inputmethods/qtim-fcitx.so
 share/applications/fcitx-configtool.desktop
 share/applications/fcitx-skin-installer.desktop
 share/applications/fcitx.desktop
