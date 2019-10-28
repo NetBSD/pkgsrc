@@ -1,4 +1,6 @@
-$NetBSD: patch-ao,v 1.10 2012/04/09 09:12:49 adam Exp $
+$NetBSD: patch-ao,v 1.11 2019/10/28 19:37:41 maya Exp $
+
+Fix build on netbsd, which has an unusual prototype for iconv
 
 --- src/corelib/codecs/qiconvcodec.cpp.orig	2012-03-14 14:01:18.000000000 +0000
 +++ src/corelib/codecs/qiconvcodec.cpp
@@ -7,7 +9,7 @@ $NetBSD: patch-ao,v 1.10 2012/04/09 09:12:49 adam Exp $
  #include <dlfcn.h>
  
 +// for __DragonFly_version
-+#if defined(__DragonFly__)
++#if defined(__DragonFly__) || defined(__NetBSD__)
 +#include <sys/param.h>
 +#endif
 +
@@ -33,7 +35,7 @@ $NetBSD: patch-ao,v 1.10 2012/04/09 09:12:49 adam Exp $
      size_t inBytesLeft = len;
      // best case assumption, each byte is converted into one UTF-16 character, plus 2 bytes for the BOM
 -#ifdef GNU_LIBICONV
-+#if defined(GNU_LIBICONV) || defined(__NetBSD__)
++#if defined(GNU_LIBICONV) || (defined(__NetBSD__) && __NetBSD_Version__ < 999001700)
      // GNU doesn't disagree with POSIX :/
      const char *inBytes = chars;
  #else
@@ -42,7 +44,7 @@ $NetBSD: patch-ao,v 1.10 2012/04/09 09:12:49 adam Exp $
      size_t inBytesLeft = sizeof bom;
  
 -#if defined(GNU_LIBICONV)
-+#if defined(GNU_LIBICONV) || defined(__NetBSD__)
++#if defined(GNU_LIBICONV) || (defined(__NetBSD__) && __NetBSD_Version__ < 999001700)
      const char **inBytesPtr = const_cast<const char **>(&inBytes);
  #else
      char **inBytesPtr = &inBytes;
@@ -51,7 +53,7 @@ $NetBSD: patch-ao,v 1.10 2012/04/09 09:12:49 adam Exp $
      size_t inBytesLeft;
  
 -#if defined(GNU_LIBICONV)
-+#if defined(GNU_LIBICONV) || defined(__NetBSD__)
++#if defined(GNU_LIBICONV) || (defined(__NetBSD__) && __NetBSD_Version__ < 999001700)
      const char **inBytesPtr = const_cast<const char **>(&inBytes);
  #else
      char **inBytesPtr = &inBytes;
@@ -59,7 +61,7 @@ $NetBSD: patch-ao,v 1.10 2012/04/09 09:12:49 adam Exp $
  #endif
      const char *codeset = empty_codeset;
      cd = iconv_open(to ? to : codeset, from ? from : codeset);
-+#elif defined(__NetBSD)
++#elif defined(__NetBSD__) && __NetBSD_Version__ < 999001700
 +    const char *codeset = 0;
  #else
      char *codeset = 0;
