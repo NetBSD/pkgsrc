@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/10/28 19:59:29 gdt Exp $
+# $NetBSD: Makefile,v 1.17 2019/10/28 20:02:29 gdt Exp $
 
 # This package is "unison-2.51.x" because 2.51 is the standard
 # approach, and hence uses the bare name.
@@ -16,13 +16,6 @@ LICENSE=	gnu-gpl-v3
 # File "/data/scratch/net/unison/work/src/fswatch.mli", line 18, characters 17-29:
 # Error: Unbound module Prefs
 #MAKE_JOBS_SAFE=	no
-
-.if (${MACHINE_ARCH} == "arm")
-BUILDLINK_ABI_DEPENDS.ocaml+=	ocaml>=3.12.0nb2
-.else
-BUILDLINK_ABI_DEPENDS.ocaml+=	ocaml>=3.11.2
-.endif
-BUILDLINK_API_DEPENDS.ocaml-lablgtk+= ocaml-lablgtk>=2.16.0
 
 # docs: unison-manual.pdf/html/ps/dvi
 #WRKSRC=		${WRKDIR}/src
