@@ -1,12 +1,12 @@
-$NetBSD: patch-Terrain.cpp,v 1.3 2014/12/30 08:50:55 plunky Exp $
+$NetBSD: patch-Terrain.cpp,v 1.4 2019/10/28 19:02:35 bouyer Exp $
 
---- Terrain.cpp.orig	2014-11-02 00:01:52.000000000 +0000
-+++ Terrain.cpp
-@@ -1109,7 +1109,7 @@ void Terrain::paintEvent(QPaintEvent *)
+--- Terrain.cpp.orig	2016-11-09 17:27:38.000000000 +0100
++++ Terrain.cpp	2019-10-28 15:49:41.442663233 +0100
+@@ -1135,7 +1135,7 @@
              
              if (showOrthodromie)
              {
--                QPen penLine(QColor(Qt::white));
+-                QPen penLine(Qt::white);
 +                QPen penLine = QColor(Qt::white);
                  penLine.setWidthF(1.6);
                  pnt.setPen(penLine);

@@ -1,25 +1,87 @@
-$NetBSD: patch-aa,v 1.9 2014/12/30 08:50:55 plunky Exp $
+$NetBSD: patch-aa,v 1.10 2019/10/28 19:02:35 bouyer Exp $
 
 libraries are provided by the buildlink3.mk framework;
 no need to provide paths
 
---- zyGrib.pro.orig	2014-11-02 00:01:52.000000000 +0000
-+++ zyGrib.pro
-@@ -5,7 +5,7 @@ TEMPLATE = app
+--- zyGrib.pro.orig	2016-11-09 17:27:38.000000000 +0100
++++ zyGrib.pro	2019-10-28 18:15:22.969081317 +0100
+@@ -7,8 +7,8 @@
+ TEMPLATE = app
  TARGET   = zyGrib
  
- DEPENDPATH  += . util map GUI
--INCLUDEPATH += . util map GUI curvedrawer qwt-6.0.1/src
-+INCLUDEPATH += . util map GUI curvedrawer
+-DEPENDPATH  += . util map GUI
+-INCLUDEPATH += . util map GUI curvedrawer qwt-6.1.3/src g2clib
++DEPENDPATH  += . util map GUI 
++INCLUDEPATH += . util map GUI curvedrawer g2clib
  
  # ----------------------------------------------------
  # platform specific
-@@ -26,7 +26,7 @@ macx {
- }
- else {
- 	DESTDIR = .
--	LIBS += -lbz2 -lz -lproj -lnova -Lqwt-6.0.1/lib/ -lqwt
-+	LIBS += -lbz2 -lz -lproj -lnova -lqwt
+@@ -35,12 +35,13 @@
  }
  }
+ 
+-LIBS += -lbz2 -lz -lproj -lnova -Lqwt-6.1.3/lib/ -lqwt
+-LIBS +=  -Lg2clib -lg2c -lpng -ljasper  # respect order!
++LIBS += -lbz2 -lz -lproj -lnova -lqwt
++LIBS +=  -lpng -ljasper  # respect order!
+ 
  # ----------------------------------------------------
+-CFLAGS += -std=c99 
++CFLAGS += -std=c99 -DUSE_JPEG2000 -DUSE_PNG
+ 
++QMAKE_CFLAGS += -DUSE_JPEG2000 -DUSE_PNG
+ QMAKE_CXXFLAGS_RELEASE -= -O2
+ QMAKE_CXXFLAGS_RELEASE += -O3
+ 	
+@@ -240,6 +241,48 @@
+            Terrain.cpp \
+            Therm.cpp \
+            util/Util.cpp \
+-           util/zuFile.cpp
+-
+-
++           util/zuFile.cpp \
++	g2clib/gridtemplates.c \
++	g2clib/drstemplates.c \
++	g2clib/pdstemplates.c \
++	g2clib/gbits.c \
++	g2clib/g2_unpack1.c \
++	g2clib/g2_unpack2.c \
++	g2clib/g2_unpack3.c \
++	g2clib/g2_unpack4.c \
++	g2clib/g2_unpack5.c \
++	g2clib/g2_unpack6.c \
++	g2clib/g2_unpack7.c \
++	g2clib/g2_free.c \
++	g2clib/g2_info.c \
++	g2clib/g2_getfld.c \
++	g2clib/simunpack.c \
++	g2clib/comunpack.c \
++        g2clib/pack_gp.c \
++        g2clib/reduce.c \
++	g2clib/specpack.c \
++	g2clib/specunpack.c \
++	g2clib/rdieee.c \
++	g2clib/mkieee.c \
++	g2clib/int_power.c \
++	g2clib/simpack.c \
++	g2clib/compack.c \
++        g2clib/cmplxpack.c \
++	g2clib/misspack.c \
++	g2clib/jpcpack.c \
++	g2clib/jpcunpack.c \
++	g2clib/pngpack.c \
++	g2clib/pngunpack.c \
++	g2clib/dec_jpeg2000.c \
++	g2clib/enc_jpeg2000.c \
++	g2clib/dec_png.c \
++	g2clib/enc_png.c \
++	g2clib/g2_create.c \
++	g2clib/g2_addlocal.c \
++	g2clib/g2_addgrid.c \
++	g2clib/g2_addfield.c \
++	g2clib/g2_gribend.c \
++	g2clib/getdim.c \
++	g2clib/g2_miss.c \
++	g2clib/getpoly.c \
++	g2clib/seekgb.c
