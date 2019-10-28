@@ -1,18 +1,24 @@
-@comment $NetBSD: PLIST,v 1.6 2015/02/13 05:45:09 snj Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/10/28 09:33:29 kamil Exp $
 bin/yabause
 man/man1/yabause.1
 share/applications/yabause.desktop
 share/pixmaps/yabause.png
 share/yabause/yts/ar.yts
+share/yabause/yts/da.yts
 share/yabause/yts/de.yts
+share/yabause/yts/el.yts
 share/yabause/yts/es.yts
 share/yabause/yts/fr.yts
 share/yabause/yts/it.yts
+share/yabause/yts/ja.yts
+share/yabause/yts/ko.yts
 share/yabause/yts/lt.yts
 share/yabause/yts/nl.yts
+share/yabause/yts/pl_PL.yts
 share/yabause/yts/pt.yts
 share/yabause/yts/pt_BR.yts
 share/yabause/yts/ru.yts
 share/yabause/yts/sv.yts
+share/yabause/yts/tr.yts
 share/yabause/yts/zh_CN.yts
 share/yabause/yts/zh_TW.yts
