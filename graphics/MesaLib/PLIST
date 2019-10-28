@@ -1,15 +1,13 @@
-@comment $NetBSD: PLIST,v 1.44 2019/10/21 20:30:43 nia Exp $
+@comment $NetBSD: PLIST,v 1.45 2019/10/28 13:20:33 nia Exp $
 ${PLIST.egl}include/EGL/egl.h
 ${PLIST.egl}include/EGL/eglext.h
 ${PLIST.egl}include/EGL/eglextchromium.h
 ${PLIST.egl}include/EGL/eglmesaext.h
 ${PLIST.egl}include/EGL/eglplatform.h
 include/GL/gl.h
-include/GL/gl_mangle.h
 include/GL/glcorearb.h
 include/GL/glext.h
 ${PLIST.glx}include/GL/glx.h
-${PLIST.glx}include/GL/glx_mangle.h
 ${PLIST.glx}include/GL/glxext.h
 include/GL/internal/dri_interface.h
 include/GL/osmesa.h
