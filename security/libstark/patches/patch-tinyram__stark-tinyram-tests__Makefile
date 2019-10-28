@@ -1,0 +1,15 @@
+$NetBSD: patch-tinyram__stark-tinyram-tests__Makefile,v 1.1 2019/10/28 17:46:58 agc Exp $
+
+Find gtest lib in right place
+
+--- tinyram/stark-tinyram-tests/Makefile	2019/10/19 04:45:20	1.1
++++ tinyram/stark-tinyram-tests/Makefile	2019/10/19 04:45:42
+@@ -13,7 +13,7 @@
+ 	FFT
+ 
+ LIBFLAGS=$(addprefix -l, $(LIBS))
+-LNKFLAGS=-L"$(ALGEBRALNKDIR)" -L"$(FFTLIBLNKDIR)" -L"$(GADGET3LNKDIR)" -L"$(LIBSTARKLINKDIR)" -lgomp
++LNKFLAGS=-L"$(ALGEBRALNKDIR)" -L"$(FFTLIBLNKDIR)" -L"$(GADGET3LNKDIR)" -L"$(LIBSTARKLINKDIR)" -L${PREFIX}/lib -lgomp
+ 
+ SRCS:=	$(shell ls *.cpp)
+ OBJS=$(addprefix $(BLDDIR)/, $(SRCS:.cpp=.o))

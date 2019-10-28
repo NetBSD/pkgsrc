@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.713 2019/10/25 11:14:32 nia Exp $
+# $NetBSD: Makefile,v 1.714 2019/10/28 17:46:58 agc Exp $
 #
 
 COMMENT=	Security tools
@@ -184,6 +184,7 @@ SUBDIR+=	libsecret
 SUBDIR+=	libsodium
 SUBDIR+=	libssh
 SUBDIR+=	libssh2
+SUBDIR+=	libstark
 SUBDIR+=	libtasn1
 SUBDIR+=	libtcpa
 SUBDIR+=	libtomcrypt
