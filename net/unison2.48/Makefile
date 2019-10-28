@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/10/18 09:03:12 pho Exp $
+# $NetBSD: Makefile,v 1.3 2019/10/28 20:04:21 gdt Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	unison-2.48.15v4
@@ -7,7 +7,7 @@ PKGREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
 
-MAINTAINER=	tonio@NetBSD.org
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.cis.upenn.edu/~bcpierce/unison/
 COMMENT=	File-synchronization tool (2.48 branch)
 LICENSE=	gnu-gpl-v3
