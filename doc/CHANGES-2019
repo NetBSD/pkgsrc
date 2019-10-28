@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4586 2019/10/28 09:42:38 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.4587 2019/10/28 09:46:31 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7345,3 +7345,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/qconf to 2.4 [kamil 2019-10-28]
 	Updated emulators/yabause to 0.9.15 [kamil 2019-10-28]
 	Updated graphics/pfstools to 2.0.5nb14 [kamil 2019-10-28]
+	Updated inputmethod/fcitx to 4.2.9.6nb6 [kamil 2019-10-28]
