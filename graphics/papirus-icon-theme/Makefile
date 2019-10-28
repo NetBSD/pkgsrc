@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2019/06/20 13:24:52 nia Exp $
+# $NetBSD: Makefile,v 1.7 2019/10/28 13:44:46 nia Exp $
 
-DISTNAME=	papirus-icon-theme-20190615
+DISTNAME=	papirus-icon-theme-20191009
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PapirusDevelopmentTeam/}
 GITHUB_PROJECT=	papirus-icon-theme
@@ -14,6 +14,10 @@ LICENSE=	gnu-gpl-v3
 EXTRACT_USING=	bsdtar
 USE_TOOLS+=	gmake
 ICON_THEMES=	yes
+
+# Save some time...
+CHECK_WRKREF_SKIP+=		share/icons/*/*/*/*.svg
+CHECK_INTERPRETER_SKIP+=	share/icons/*/*/*/*.svg
 
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
