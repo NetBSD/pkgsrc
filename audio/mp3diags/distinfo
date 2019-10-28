@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.20 2017/06/17 19:36:06 joerg Exp $
+$NetBSD: distinfo,v 1.21 2019/10/28 10:20:57 kamil Exp $
 
-SHA1 (MP3Diags-1.2.02.tar.gz) = 92b102713ac767ed45476c684f68f0d300fc8354
-RMD160 (MP3Diags-1.2.02.tar.gz) = 85b8da63c135e88fcd54bf094fcad1562795ecb2
-SHA512 (MP3Diags-1.2.02.tar.gz) = 51498646ad3c9a19aeb0bcbf8cd280de75a24eb252790cc71d1eba433b986bbc58d4198d8bdfc0339dd6845ddfd966dd482f991b976e2da8f49e9d4e4f0464d0
-Size (MP3Diags-1.2.02.tar.gz) = 1220039 bytes
-SHA1 (patch-aa) = 4aae1922ca2b7fa9dbb30f1b5ceabb773a56c55f
-SHA1 (patch-src_ExportDlgImpl.cpp) = 8a950c36fddd26af7af407029ec74efac3a928f2
-SHA1 (patch-src_MainFormDlgImpl.cpp) = 9a4b223f5f9fa70db013fd25c6c06b3afefe1f6b
+SHA1 (MP3Diags-unstable-1.5.01.tar.gz) = 645caf3000209165b89a7eb49e2bd37ae8a2e939
+RMD160 (MP3Diags-unstable-1.5.01.tar.gz) = 0e6dadc2eb8487e6c0afdc361ce36441ebe8fbdd
+SHA512 (MP3Diags-unstable-1.5.01.tar.gz) = 30ef7276e1be08c0d5d1d6af2a1f6f4fa61753fda65e0914c0e07a0823e1ba9a0e3a2718bde55d68e928cb965db510c80bd5f2419ac19d063edd1fa257a1ee18
+Size (MP3Diags-unstable-1.5.01.tar.gz) = 1234926 bytes
