@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/10/06 19:46:59 roy Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/10/29 12:39:13 kamil Exp $
 bin/dhcpcd-qt
 man/man8/dhcpcd-qt.8
 share/applications/dhcpcd-qt.desktop
