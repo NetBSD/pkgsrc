@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4620 2019/10/29 17:59:36 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4621 2019/10/29 17:59:57 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7390,3 +7390,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added x11/py-qt5-qscintilla version 2.11.2 [kamil 2019-10-29]
 	Updated devel/py-tortoisehg to 5.0.2nb1 [kamil 2019-10-29]
 	Updated games/crossfire-client to 1.73.0 [nia 2019-10-29]
+	Updated games/crossfire-server to 1.71.0 [nia 2019-10-29]
