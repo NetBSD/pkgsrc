@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2019/04/25 07:32:59 maya Exp $
+# $NetBSD: Makefile,v 1.58 2019/10/29 19:17:08 kamil Exp $
 
-DISTNAME=		veusz-1.21
-PKGREVISION=		4
+DISTNAME=		veusz-3.1
 CATEGORIES=		graphics
 MASTER_SITES=		http://download.gna.org/veusz/
 
@@ -25,6 +24,9 @@ INSTALLATION_DIRS+=	share/icons/hicolor/64x64/apps
 INSTALLATION_DIRS+=	share/icons/hicolor/scalable/apps
 INSTALLATION_DIRS+=	share/mime/packages
 
+ALL_ENV+=		QMAKE_EXE=${QTDIR}/bin/qmake
+ALL_ENV+=		SIP_DIR=${PREFIX}/share/sip
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/support/veusz.desktop \
 		${DESTDIR}${PREFIX}/share/applications
@@ -42,8 +44,8 @@ post-install:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
-.include "../../x11/qt4-libs/buildlink3.mk"
-.include "../../x11/py-qt4/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/py-qt5/buildlink3.mk"
 .include "../../x11/py-sip/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
