@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.38 2019/09/06 13:42:25 adam Exp $
+$NetBSD: distinfo,v 1.39 2019/10/29 15:07:27 adam Exp $
 
-SHA1 (virtualenv-16.7.5.tar.gz) = 3f88d75215ff990b0656909688b3cc639914e9b5
-RMD160 (virtualenv-16.7.5.tar.gz) = fa57500512ab6b7db0523757b5aa67904b140a71
-SHA512 (virtualenv-16.7.5.tar.gz) = 60b734f688eec1491fe5dcc3652d42f3e44df89d0809d3ab563c5dab1b5e340404894f34a08994a5ad4d8c0f7c8bb995d8211f9378906957d34031720bb3c390
-Size (virtualenv-16.7.5.tar.gz) = 5111957 bytes
+SHA1 (virtualenv-16.7.7.tar.gz) = d4a6c431cb0d1300d6540de4309fdf632c176aa7
+RMD160 (virtualenv-16.7.7.tar.gz) = 9413383f5969eb1c71e137943c9180b776840ac1
+SHA512 (virtualenv-16.7.7.tar.gz) = bf60554770d580051692dbcdaccde73aa748a2c18273b2ecde43639f8fee6a1a515f84ea84ae5c6bc7b3475d1aa1a67a0461d461d6d0d6d2e359fde8196c95a1
+Size (virtualenv-16.7.7.tar.gz) = 5116795 bytes
