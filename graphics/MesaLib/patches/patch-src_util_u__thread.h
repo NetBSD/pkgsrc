@@ -1,11 +1,22 @@
-$NetBSD: patch-src_util_u__thread.h,v 1.2 2019/10/19 10:29:58 nia Exp $
+$NetBSD: patch-src_util_u__thread.h,v 1.3 2019/10/29 09:21:54 nia Exp $
+
+Oracle Solaris has pthread_setname_np. illumos does not.
 
 Don't hard error when there's no pthread_setname_np.
 
 handle NetBSD-style pthread_setaffinity_np(3)
 
---- src/util/u_thread.h.orig	2019-10-09 16:52:00.000000000 +0000
+--- src/util/u_thread.h.orig	2019-10-24 16:13:04.000000000 +0000
 +++ src/util/u_thread.h
+@@ -69,7 +69,7 @@ static inline thrd_t u_thread_create(int
+ static inline void u_thread_setname( const char *name )
+ {
+ #if defined(HAVE_PTHREAD)
+-#if DETECT_OS_LINUX || DETECT_OS_CYGWIN || DETECT_OS_SOLARIS
++#if DETECT_OS_LINUX || DETECT_OS_CYGWIN
+    pthread_setname_np(pthread_self(), name);
+ #elif DETECT_OS_FREEBSD || DETECT_OS_OPENBSD
+    pthread_set_name_np(pthread_self(), name);
 @@ -78,7 +78,6 @@ static inline void u_thread_setname( con
  #elif DETECT_OS_APPLE
     pthread_setname_np(name);
