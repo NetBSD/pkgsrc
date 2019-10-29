@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19370 2019/10/28 13:32:37 wiz Exp $
+$NetBSD: TODO,v 1.19371 2019/10/29 09:19:19 nia Exp $
 
 Suggested new packages
 ======================
@@ -309,10 +309,6 @@ Suggested new packages
 	qBittorrent [pkgsrc-wip]
 	https://www.qbittorrent.org/
 	Bittorrent client, open source alternative to uTorrent
-
-	Simutrans [pkgsrc-wip]
-	https://www.simutrans.com/en/
-	Transportation simulator game
 
 	gemrb [pkgsrc-wip]
 	https://github.com/gemrb/gemrb
