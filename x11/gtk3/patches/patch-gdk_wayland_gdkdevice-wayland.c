@@ -1,4 +1,4 @@
-$NetBSD: patch-gdk_wayland_gdkdevice-wayland.c,v 1.1 2019/08/18 16:47:38 nia Exp $
+$NetBSD: patch-gdk_wayland_gdkdevice-wayland.c,v 1.2 2019/10/29 22:46:39 nia Exp $
 
 Allow building on systems without evdev.
 
@@ -10,11 +10,11 @@ Allow building on systems without evdev.
  #include <linux/input.h>
 +#else
 +#ifndef BTN_LEFT
-+#define BTN_LEFT	(0)
-+#define BTN_MIDDLE	(1)
-+#define BTN_RIGHT	(2)
-+#define BTN_STYLUS	(98)
-+#define BTN_STYLUS2	(99)
++#define BTN_LEFT	(0x110)
++#define BTN_RIGHT	(0x111)
++#define BTN_MIDDLE	(0x112)
++#define BTN_STYLUS	(0x14b)
++#define BTN_STYLUS2	(0x14c)
 +#endif
  #endif
  

@@ -1,4 +1,4 @@
-$NetBSD: patch-hw_xwayland_xwayland-input.c,v 1.1 2019/08/22 13:12:31 nia Exp $
+$NetBSD: patch-hw_xwayland_xwayland-input.c,v 1.2 2019/10/29 22:46:39 nia Exp $
 
 Support non-evdev platforms.
 
@@ -8,13 +8,13 @@ Support non-evdev platforms.
  
  #include "xwayland.h"
  
-+#if defined(__linux) || defined(__FreeBSD__)
++#if defined(__linux__) || defined(__FreeBSD__)
  #include <linux/input.h>
 +#else
-+#define BTN_LEFT	(0)
-+#define BTN_MIDDLE	(1)
-+#define BTN_RIGHT	(2)
-+#define BTN_SIDE	(3)
++#define BTN_LEFT	(0x110)
++#define BTN_RIGHT	(0x111)
++#define BTN_MIDDLE	(0x112)
++#define BTN_SIDE	(0x113)
 +#endif
  
  #include <sys/mman.h>
