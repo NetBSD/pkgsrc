@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2019/08/22 12:22:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.60 2019/10/29 18:22:29 kamil Exp $
 
 VERSION=	2019.05
 DISTNAME=	openscad-${VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openscad/}
 GITHUB_TAG=	openscad-${VERSION}
@@ -44,9 +44,9 @@ do-configure:
 .include "../../math/eigen3/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/qt4-libs/buildlink3.mk"
-.include "../../x11/qt4-tools/buildlink3.mk"
-.include "../../x11/qt4-qscintilla/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtmultimedia/buildlink3.mk"
+.include "../../x11/qt5-qscintilla/buildlink3.mk"
 .include "../../textproc/libxml++/buildlink3.mk"
 .include "../../math/double-conversion/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
