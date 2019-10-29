@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.34 2019/10/13 21:48:57 he Exp $
+$NetBSD: distinfo,v 1.35 2019/10/29 09:06:12 he Exp $
 
 SHA1 (xmlrpc-c-1.51.04.tgz) = 0c085e210d07b2e2d8ce877e24c370a7b3df2074
 RMD160 (xmlrpc-c-1.51.04.tgz) = c85a1ec7bdf5bb4a49b8d0445b7ab1a94b53bd66
@@ -7,7 +7,6 @@ Size (xmlrpc-c-1.51.04.tgz) = 6656000 bytes
 SHA1 (patch-GNUmakefile) = eb669cc4d9290afe095dedb92faf3064929ecdda
 SHA1 (patch-common.mk) = c11a9a69b45d28d79b2baac681a6e3c077664683
 SHA1 (patch-config.mk.in) = 0456837827c71824aa39914086e466a494038dc8
-SHA1 (patch-src_cpp_base64.cpp) = a51ad8cc8f41d724310eaaea86ebaaa8de610498
 SHA1 (patch-src_cpp_server__pstream.cpp) = 0b28182c56bb326bf24ac031874521b1bb6d5ef5
 SHA1 (patch-tools_xml-rpc-api2cpp_Makefile) = 6b6b3f24a247856d61284cdbb4ecc21eb436d3a0
 SHA1 (patch-tools_xmlrpc_Makefile) = 92428282885a2b66ce89d629a0a7a9167715a334
