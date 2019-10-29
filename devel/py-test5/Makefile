@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/10/25 09:35:13 adam Exp $
+# $NetBSD: Makefile,v 1.3 2019/10/29 22:27:29 gutteridge Exp $
 
 DISTNAME=	pytest-5.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pytest.org/
 COMMENT=	Python testing tool
 LICENSE=	mit
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DEPENDS+=	${PYPKGPREFIX}-atomicwrites>=1.0:../../devel/py-atomicwrites
 DEPENDS+=	${PYPKGPREFIX}-attrs>=17.4.0:../../devel/py-attrs
@@ -30,8 +32,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-xmlschema-[0-9]*:../../textproc/py-xmlschema
 .if ${_PYTHON_VERSION} < 38
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=0.12:../../devel/py-importlib-metadata
 .endif
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	bash:build
