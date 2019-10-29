@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2019/09/02 13:20:21 adam Exp $
+# $NetBSD: options.mk,v 1.15 2019/10/29 19:30:11 bouyer Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qgis
 PKG_SUPPORTED_OPTIONS=	python
@@ -19,11 +19,10 @@ CMAKE_ARGS+=		-DWITH_BINDINGS:BOOL=TRUE
 CMAKE_ARGS+=		-DSIP_BINARY_PATH:PATH=${BUILDLINK_PREFIX.py-sip}/bin
 CMAKE_ARGS+=		-DWITH_INTERNAL_MARKUPSAFE=FALSE
 PLIST_SRC+=             ${PKGDIR}/PLIST.python
-PYTHON_VERSIONS_ACCEPTED=	27 # Documentation implies 27 is supported, 3x not.
 .include "../../lang/python/application.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../x11/py-qt4/buildlink3.mk"
-.include "../../x11/py-qt4-qscintilla/buildlink3.mk"
+.include "../../x11/py-qt5/buildlink3.mk"
+.include "../../x11/py-qt5-qscintilla/buildlink3.mk"
 .include "../../x11/py-sip/buildlink3.mk"
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-psycopg2-[0-9]*:../../databases/py-psycopg2
