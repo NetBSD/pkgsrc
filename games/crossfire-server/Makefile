@@ -1,28 +1,37 @@
-# $NetBSD: Makefile,v 1.46 2019/08/22 12:23:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.47 2019/10/29 17:59:18 nia Exp $
 
-DISTNAME=	crossfire-1.11.0
-PKGNAME=	crossfire-server-1.11.0
-PKGREVISION=	37
-CATEGORIES=	games x11
+DISTNAME=	crossfire-1.71.0
+PKGNAME=	${DISTNAME:S/crossfire-/crossfire-server-/1}
+CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=crossfire/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
-DISTFILES+=	${DISTNAME}.arch.tar.gz ${DISTNAME}.maps.tar.bz2
+DISTFILES+=	${DISTNAME}.arch${EXTRACT_SUFX}
+DISTFILES+=	${DISTNAME}.maps${EXTRACT_SUFX}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://crossfire.real-time.com/
-COMMENT=	X11 multi/single player game similar to gauntlet and nethack
+COMMENT=	Multi-player graphical arcade and adventure game (server)
+LICENSE=	gnu-gpl-v2
+
+WRKSRC=		${WRKDIR}/crossfire-server-${PKGVERSION_NOREV}
+USE_LIBTOOL=	yes
+USE_TOOLS+=	gmake perl:run bash:run csh:run ksh
+CONFIG_SHELL=	ksh
+GNU_CONFIGURE=	yes
+PLIST_SRC=	${WRKDIR}/PLIST PLIST
+
+BUILD_DEFS+=	VARBASE
+
+# "Collect is already running.
+# If you think this is an error, rmdir collect.lock"
+MAKE_JOBS_SAFE=	no
 
 PKG_SYSCONFSUBDIR=	crossfire
-
-USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake perl:run bash:run csh:run
-GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-check
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/games
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--x-libraries=${X11BASE}/lib
-CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include
 CONFIGURE_ENV+=		ac_cv_path_GZIP=${GZIP_CMD:Q}
-PLIST_SRC=		${WRKDIR}/PLIST PLIST
 
 INSTALLATION_DIRS=	share/crossfire/arch
 INSTALLATION_DIRS+=	share/crossfire/maps
@@ -47,6 +56,7 @@ REPLACE_PERL+=	utils/metaserver.pl.in
 REPLACE_PERL+=	utils/mktable.script
 REPLACE_PERL+=	lib/adm/map_info
 # arch
+REPLACE_BASH+=	../arch/dev/png_recompress.sh
 REPLACE_CSH+=	../arch/dev/xpmtopng
 REPLACE_CSH+=	../arch/dev/merge.csh
 REPLACE_CSH+=	../arch/dev/scripts/updatearch
@@ -78,6 +88,9 @@ CONF_FILES+=	${EGDIR}/news ${PKG_SYSCONFDIR}/news
 CONF_FILES+=	${EGDIR}/rules ${PKG_SYSCONFDIR}/rules
 CONF_FILES+=	${EGDIR}/settings ${PKG_SYSCONFDIR}/settings
 
+pre-build:
+	${LN} -sf ${WRKDIR}/arch ${WRKSRC}/lib
+
 post-install:
 	cd ${WRKDIR} && cp -R arch maps ${DESTDIR}${PREFIX}/share/crossfire
 	cd ${DESTDIR}${PREFIX} && \
@@ -85,11 +98,8 @@ post-install:
 	cd ${DESTDIR}${PREFIX} && \
 		${FIND} share/crossfire/maps -type f -print >> ${WRKDIR}/PLIST
 
-.include "options.mk"
-
-.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/gd/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
