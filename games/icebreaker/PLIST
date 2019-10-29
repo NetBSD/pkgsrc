@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:56:48 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/10/29 18:04:44 nia Exp $
 bin/icebreaker
 man/man6/icebreaker.6
+share/applications/icebreaker.desktop
+share/doc/icebreaker/ChangeLog
+share/doc/icebreaker/LICENSE
 share/doc/icebreaker/README
 share/icebreaker/atom.bmp
 share/icebreaker/bgeveryone.wav
@@ -30,6 +33,7 @@ share/icebreaker/penguinicon_32.bmp
 share/icebreaker/phase.wav
 share/icebreaker/pop.wav
 share/icebreaker/scrunch.wav
+share/icebreaker/splash.wav
 share/icebreaker/splat.wav
 share/icebreaker/squeak.wav
 share/icebreaker/star.bmp
@@ -38,3 +42,5 @@ share/icebreaker/tap.wav
 share/icebreaker/turtle.bmp
 share/icebreaker/turtles.ibt
 share/icebreaker/woodblock.bmp
+share/icons/hicolor/32x32/apps/icebreaker.png
+share/icons/hicolor/48x48/apps/icebreaker.png
