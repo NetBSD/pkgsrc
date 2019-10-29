@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4610 2019/10/29 09:18:34 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4611 2019/10/29 09:20:24 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7376,3 +7376,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/atril to 1.22.1nb6 [maya 2019-10-28]
 	Updated emulators/haxm to 7.5.4 [kamil 2019-10-29]
 	Removed security/keepassx0 successor security/keepassxc [nia 2019-10-29]
+	Updated www/logswan to 2.1.0 [fcambus 2019-10-29]
