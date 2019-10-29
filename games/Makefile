@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.464 2019/10/28 09:47:22 jperkin Exp $
+# $NetBSD: Makefile,v 1.465 2019/10/29 17:59:17 nia Exp $
 #
 
 COMMENT=	Games
@@ -80,8 +80,6 @@ SUBDIR+=	crafty-doc
 SUBDIR+=	crimsonfields
 SUBDIR+=	criticalmass
 SUBDIR+=	crossfire-client
-SUBDIR+=	crossfire-client-gtk
-SUBDIR+=	crossfire-client-gtk2
 SUBDIR+=	crossfire-server
 SUBDIR+=	d2x
 SUBDIR+=	dd2

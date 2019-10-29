@@ -1,0 +1,15 @@
+$NetBSD: patch-lib_Makefile.in,v 1.1 2019/10/29 17:59:18 nia Exp $
+
+Install configuration files to examples.
+
+--- lib/Makefile.in.orig	2014-04-05 22:30:49.000000000 +0000
++++ lib/Makefile.in
+@@ -288,7 +288,7 @@ mandir = @mandir@
+ mkdir_p = @mkdir_p@
+ oldincludedir = @oldincludedir@
+ pdfdir = @pdfdir@
+-pkgconfdir = @pkgconfdir@
++pkgconfdir = @prefix@/share/examples/crossfire
+ pkgstatedir = @pkgstatedir@
+ prefix = @prefix@
+ program_transform_name = @program_transform_name@
