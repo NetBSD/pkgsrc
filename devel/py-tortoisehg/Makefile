@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2019/10/21 22:15:11 adam Exp $
+# $NetBSD: Makefile,v 1.58 2019/10/29 17:47:23 kamil Exp $
 
 DISTNAME=		tortoisehg-5.0.2
+PKGREVISION=		1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		devel python
 MASTER_SITES=		http://bitbucket.org/tortoisehg/targz/downloads/
@@ -36,5 +37,5 @@ pre-build:
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/py-qt4-qscintilla/buildlink3.mk"
+.include "../../x11/py-qt5-qscintilla/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
