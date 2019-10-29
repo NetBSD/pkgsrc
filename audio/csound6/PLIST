@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/08/19 13:47:06 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/10/29 20:13:58 mrg Exp $
 bin/csound6
 include/csound6/CppSound.hpp
 include/csound6/CsoundFile.hpp
@@ -59,7 +59,6 @@ lib/csound6/plugins-6.0/libcontrol.so
 lib/csound6/plugins-6.0/libcs_date.so
 lib/csound6/plugins-6.0/libdoppler.so
 lib/csound6/plugins-6.0/libfareygen.so
-lib/csound6/plugins-6.0/libfluidOpcodes.so
 lib/csound6/plugins-6.0/libfractalnoise.so
 lib/csound6/plugins-6.0/libimage.so
 lib/csound6/plugins-6.0/libipmidi.so

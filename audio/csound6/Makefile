@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2019/09/18 14:17:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.39 2019/10/29 20:13:58 mrg Exp $
 
 DISTNAME=		Csound${CSOUND_VERSION}
 PKGNAME=		csound6-${CSOUND_VERSION}
-PKGREVISION=		26
+PKGREVISION=		27
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=csound/csound6/Csound6.03/}
 WRKSRC=			${WRKDIR}/Csound${CSOUND_VERSION}
@@ -39,7 +39,7 @@ CHECK_PORTABILITY_SKIP+=	installer/misc/makedeb.sh \
 post-install:
 	cd ${DESTDIR}${PREFIX} && ${LN} -s ../lib/csound6/csound bin/csound6
 
-.include "../../audio/fluidsynth/buildlink3.mk"
+#.include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
@@ -47,7 +47,7 @@ post-install:
 .include "../../graphics/png/buildlink3.mk"
 PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../lang/python/application.mk"
-.include "../../x11/fltk/buildlink3.mk"
+.include "../../x11/fltk13/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
