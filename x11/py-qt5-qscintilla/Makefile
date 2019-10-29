@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2019/10/29 17:46:36 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2019/10/29 19:17:09 bouyer Exp $
 
 .include "../../x11/qt5-qscintilla/Makefile.common"
 
+
 PKGNAME=	${PYPKGPREFIX}-qt5-${DISTNAME:tl:S/_gpl-/-/}
 COMMENT=	QScintilla -- Python bindings
+PKGREVISION=	1
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/Python
 
@@ -18,8 +20,8 @@ do-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} configure.py \
 	    --pyqt PyQt5 \
 	    --qmake=${QTDIR}/bin/qmake --sip=${PREFIX}/bin/sip${PYVERSSUFFIX} \
-	    --pyqt-sipdir=${PREFIX}/share/sip/PyQt5 \
-	    --qsci-sipdir=${PREFIX}/share/sip/PyQt5 \
+	    --pyqt-sipdir=${PREFIX}/share/sip${PYVERSSUFFIX}/PyQt5 \
+	    --qsci-sipdir=${PREFIX}/share/sip${PYVERSSUFFIX}/PyQt5 \
 	    --qsci-libdir=${QTDIR}/lib
 
 .include "../../lang/python/extension.mk"
