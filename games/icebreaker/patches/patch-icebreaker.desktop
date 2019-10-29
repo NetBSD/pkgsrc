@@ -1,0 +1,19 @@
+$NetBSD: patch-icebreaker.desktop,v 1.1 2019/10/29 18:04:44 nia Exp $
+
+Do not hardcore paths to /usr/share.
+
+--- icebreaker.desktop.orig	2002-05-31 03:15:45.000000000 +0000
++++ icebreaker.desktop
+@@ -1,7 +1,9 @@
+ [Desktop Entry]
+ Name=IceBreaker
+ Type=Application
+-Comment=addictive action-puzzle game involving bouncing penguins
++Encoding=UTF-8
++Comment=Addictive action-puzzle game involving bouncing penguins
+ Exec=icebreaker
+-Icon=/usr/share/icebreaker/icebreaker_48.bmp
+-Terminal=0
++Icon=icebreaker
++Terminal=false
++Categories=Game;ActionGame
