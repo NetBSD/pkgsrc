@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4609 2019/10/29 03:28:33 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.4610 2019/10/29 09:18:34 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7375,3 +7375,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added x11/qt5-qtwayland version 5.13.1 [nia 2019-10-28]
 	Updated print/atril to 1.22.1nb6 [maya 2019-10-28]
 	Updated emulators/haxm to 7.5.4 [kamil 2019-10-29]
+	Removed security/keepassx0 successor security/keepassxc [nia 2019-10-29]
