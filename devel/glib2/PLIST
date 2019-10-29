@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.106 2019/08/20 14:06:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.107 2019/10/29 09:22:24 adam Exp $
 ${PLIST.nococoa}bin/gapplication
 bin/gdbus
 bin/gio
@@ -10,7 +10,7 @@ bin/glib-gettextize
 bin/gobject-query
 bin/gresource
 bin/gsettings
-include/gio-unix-2.0/gio/gdesktopappinfo.h
+${PLIST.nococoa}include/gio-unix-2.0/gio/gdesktopappinfo.h
 include/gio-unix-2.0/gio/gfiledescriptorbased.h
 include/gio-unix-2.0/gio/gunixconnection.h
 include/gio-unix-2.0/gio/gunixcredentialsmessage.h
@@ -113,6 +113,7 @@ include/glib-2.0/gio/gnetworking.h
 include/glib-2.0/gio/gnetworkmonitor.h
 include/glib-2.0/gio/gnetworkservice.h
 include/glib-2.0/gio/gnotification.h
+${PLIST.cocoa}include/glib-2.0/gio/gosxappinfo.h
 include/glib-2.0/gio/goutputstream.h
 include/glib-2.0/gio/gpermission.h
 include/glib-2.0/gio/gpollableinputstream.h
@@ -280,19 +281,19 @@ ${PLIST.fam}lib/gio/modules/libgiofam.so
 lib/glib-2.0/include/glibconfig.h
 lib/libgio-2.0.so
 lib/libgio-2.0.so.0
-lib/libgio-2.0.so.0.6000.6
+lib/libgio-2.0.so.0.6000.7
 lib/libglib-2.0.so
 lib/libglib-2.0.so.0
-lib/libglib-2.0.so.0.6000.6
+lib/libglib-2.0.so.0.6000.7
 lib/libgmodule-2.0.so
 lib/libgmodule-2.0.so.0
-lib/libgmodule-2.0.so.0.6000.6
+lib/libgmodule-2.0.so.0.6000.7
 lib/libgobject-2.0.so
 lib/libgobject-2.0.so.0
-lib/libgobject-2.0.so.0.6000.6
+lib/libgobject-2.0.so.0.6000.7
 lib/libgthread-2.0.so
 lib/libgthread-2.0.so.0
-lib/libgthread-2.0.so.0.6000.6
+lib/libgthread-2.0.so.0.6000.7
 lib/pkgconfig/gio-2.0.pc
 lib/pkgconfig/gio-unix-2.0.pc
 lib/pkgconfig/glib-2.0.pc
@@ -304,8 +305,8 @@ lib/pkgconfig/gthread-2.0.pc
 share/aclocal/glib-2.0.m4
 share/aclocal/glib-gettext.m4
 share/aclocal/gsettings.m4
-share/gdb/auto-load${LOCALBASE}/lib/libglib-2.0.so.0.6000.6-gdb.py
-share/gdb/auto-load${LOCALBASE}/lib/libgobject-2.0.so.0.6000.6-gdb.py
+share/gdb/auto-load${LOCALBASE}/lib/libglib-2.0.so.0.6000.7-gdb.py
+share/gdb/auto-load${LOCALBASE}/lib/libgobject-2.0.so.0.6000.7-gdb.py
 share/gettext/its/gschema.its
 share/gettext/its/gschema.loc
 share/glib-2.0/gdb/glib_gdb.py
