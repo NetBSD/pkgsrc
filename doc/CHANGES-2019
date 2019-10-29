@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4621 2019/10/29 17:59:57 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4622 2019/10/29 18:01:56 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7391,3 +7391,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-tortoisehg to 5.0.2nb1 [kamil 2019-10-29]
 	Updated games/crossfire-client to 1.73.0 [nia 2019-10-29]
 	Updated games/crossfire-server to 1.71.0 [nia 2019-10-29]
+	Removed games/crossfire-client-gtk successor games/crossfire-client [nia 2019-10-29]
+	Removed games/crossfire-client-gtk2 successor games/crossfire-client [nia 2019-10-29]
