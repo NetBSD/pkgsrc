@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2019/10/16 07:21:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.48 2019/10/29 15:15:40 adam Exp $
 bin/easy_install-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
@@ -64,6 +64,9 @@ ${PYSITELIB}/setuptools/__init__.pyo
 ${PYSITELIB}/setuptools/_deprecation_warning.py
 ${PYSITELIB}/setuptools/_deprecation_warning.pyc
 ${PYSITELIB}/setuptools/_deprecation_warning.pyo
+${PYSITELIB}/setuptools/_imp.py
+${PYSITELIB}/setuptools/_imp.pyc
+${PYSITELIB}/setuptools/_imp.pyo
 ${PYSITELIB}/setuptools/_vendor/__init__.py
 ${PYSITELIB}/setuptools/_vendor/__init__.pyc
 ${PYSITELIB}/setuptools/_vendor/__init__.pyo
@@ -245,6 +248,9 @@ ${PYSITELIB}/setuptools/py31compat.pyo
 ${PYSITELIB}/setuptools/py33compat.py
 ${PYSITELIB}/setuptools/py33compat.pyc
 ${PYSITELIB}/setuptools/py33compat.pyo
+${PYSITELIB}/setuptools/py34compat.py
+${PYSITELIB}/setuptools/py34compat.pyc
+${PYSITELIB}/setuptools/py34compat.pyo
 ${PYSITELIB}/setuptools/sandbox.py
 ${PYSITELIB}/setuptools/sandbox.pyc
 ${PYSITELIB}/setuptools/sandbox.pyo
