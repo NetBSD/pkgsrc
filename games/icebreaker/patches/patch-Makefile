@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2019/10/29 18:04:44 nia Exp $
+
+Allow variables to be overriden by pkgsrc.
+
+--- Makefile.orig	2003-02-25 16:31:32.000000000 +0000
++++ Makefile
+@@ -1,6 +1,6 @@
+-CC=gcc
++CC?=gcc
+ 
+-SDLCONFIG=sdl-config
++SDLCONFIG?=sdl-config
+ 
+ ifndef prefix
+   prefix=/usr/local
