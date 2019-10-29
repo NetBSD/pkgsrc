@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.4 2019/01/28 08:40:07 adam Exp $
+$NetBSD: distinfo,v 1.5 2019/10/29 15:08:31 adam Exp $
 
-SHA1 (pytest-virtualenv-1.4.0.tar.gz) = 612a9603c550f616821615f4631be50a16b83bac
-RMD160 (pytest-virtualenv-1.4.0.tar.gz) = d0237ce89fde530460cacfb300e79b427d9855f6
-SHA512 (pytest-virtualenv-1.4.0.tar.gz) = 4320158608f51fb63b178acf6fccd5963dfb94a20cc5797c7dc90aad229c9ec5ac9d4c5f6331bbf5dbad208075c7a6806231542aed7efd7528e2009fd66ec70b
-Size (pytest-virtualenv-1.4.0.tar.gz) = 13664 bytes
+SHA1 (pytest-virtualenv-1.7.0.tar.gz) = d67d9dd7715bd0b6de64cc9f3a609658b2bfb126
+RMD160 (pytest-virtualenv-1.7.0.tar.gz) = cb64069d33b247d2a7c67abc5a14dc1f6e4f1b71
+SHA512 (pytest-virtualenv-1.7.0.tar.gz) = 0463ebf44ae18ee50a60e421a22aaaf0e34f827ec8f21c8f0dc79cbdc253748f9d1e5b33e4f418b52f0d8fd45990e162bb6410686ebe9fdc02650c286901d474
+Size (pytest-virtualenv-1.7.0.tar.gz) = 15767 bytes
 SHA1 (patch-common_setup.py) = 5cb1d52a64e86043fc26e7e898b6411b7ad69b41
-SHA1 (patch-setup.py) = 8d4c4a343a82d7a0ae8faa2a7eba74f0ba107bfe
