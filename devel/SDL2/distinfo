@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.35 2019/08/18 16:16:24 nia Exp $
+$NetBSD: distinfo,v 1.36 2019/10/29 22:46:39 nia Exp $
 
 SHA1 (SDL2-2.0.10.tar.gz) = fb31312ea1d4b45db839796ae2336dfe3d5884e5
 RMD160 (SDL2-2.0.10.tar.gz) = b35818cbf8eaf0c9c4d3b6d7a293c05a368366b2
@@ -7,5 +7,5 @@ Size (SDL2-2.0.10.tar.gz) = 5550762 bytes
 SHA1 (patch-configure) = 1631314dab18886ea553ee53fac89e16718cacab
 SHA1 (patch-src_joystick_bsd_SDL__sysjoystick.c) = 1c5756e47ad906235369b46b36d7b0b1ee776156
 SHA1 (patch-src_video_cocoa_SDL__cocoawindow.m) = 1d5ac9c17ceadf668925734b5cad311e26f2fc58
-SHA1 (patch-src_video_wayland_SDL__waylandevents.c) = 3a59fde90766bf1219ac204a2ce3596280a6dd2a
+SHA1 (patch-src_video_wayland_SDL__waylandevents.c) = 70eaf9a63555c067b040fd21a93c98718dd59a4d
 SHA1 (patch-src_video_x11_SDL__x11opengl.c) = 70b63021c12c52760c0811c673b259844bdfcdc0
