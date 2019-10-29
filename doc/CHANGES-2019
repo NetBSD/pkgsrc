@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4625 2019/10/29 18:39:03 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.4626 2019/10/29 19:17:19 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7396,3 +7396,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated games/icebreaker to 1.9.8 [nia 2019-10-29]
 	Updated cad/openscad to 2019.05nb3 [kamil 2019-10-29]
 	Removed devel/py-hgview [kamil 2019-10-29]
+	Updated graphics/veusz to 3.1 [kamil 2019-10-29]
