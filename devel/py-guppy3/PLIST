@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/10/04 22:11:59 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/10/29 22:38:27 gutteridge Exp $
 ${PYSITELIB}/guppy/__init__.py
 ${PYSITELIB}/guppy/__init__.pyo
 ${PYSITELIB}/guppy/__init__.pyc
@@ -98,7 +98,6 @@ ${PYSITELIB}/guppy/gsl/XHTML.pyo
 ${PYSITELIB}/guppy/gsl/XHTML.pyc
 ${PYSITELIB}/guppy/gsl/__init__.pyo
 ${PYSITELIB}/guppy/gsl/__init__.pyc
-${PYSITELIB}/guppy/heapy/AbstractAlgebra.py
 ${PYSITELIB}/guppy/heapy/Classifiers.py
 ${PYSITELIB}/guppy/heapy/Console.py
 ${PYSITELIB}/guppy/heapy/Doc.py
@@ -118,8 +117,6 @@ ${PYSITELIB}/guppy/heapy/UniSet.py
 ${PYSITELIB}/guppy/heapy/Use.py
 ${PYSITELIB}/guppy/heapy/View.py
 ${PYSITELIB}/guppy/heapy/__init__.py
-${PYSITELIB}/guppy/heapy/AbstractAlgebra.pyo
-${PYSITELIB}/guppy/heapy/AbstractAlgebra.pyc
 ${PYSITELIB}/guppy/heapy/Classifiers.pyo
 ${PYSITELIB}/guppy/heapy/Classifiers.pyc
 ${PYSITELIB}/guppy/heapy/Console.pyo
