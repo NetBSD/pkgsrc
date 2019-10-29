@@ -1,4 +1,4 @@
-$NetBSD: patch-src_video_wayland_SDL__waylandevents.c,v 1.1 2019/08/18 16:16:25 nia Exp $
+$NetBSD: patch-src_video_wayland_SDL__waylandevents.c,v 1.2 2019/10/29 22:46:39 nia Exp $
 
 Allow building with Wayland on operating systems without evdev.
 
@@ -8,14 +8,14 @@ Allow building with Wayland on operating systems without evdev.
  #include "xdg-shell-client-protocol.h"
  #include "xdg-shell-unstable-v6-client-protocol.h"
  
-+#ifdef __linux
++#if defined(__linux__) || defined(__FreeBSD__)
  #include <linux/input.h>
 +#else
-+#define BTN_LEFT    (0)
-+#define BTN_MIDDLE  (1)
-+#define BTN_RIGHT   (2)
-+#define BTN_SIDE    (3)
-+#define BTN_EXTRA   (4)
++#define BTN_LEFT    (0x110)
++#define BTN_RIGHT   (0x111)
++#define BTN_MIDDLE  (0x112)
++#define BTN_SIDE    (0x113)
++#define BTN_EXTRA   (0x114)
 +#endif
  #include <sys/select.h>
  #include <sys/mman.h>
