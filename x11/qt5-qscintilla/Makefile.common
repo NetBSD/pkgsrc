@@ -1,0 +1,20 @@
+# $NetBSD: Makefile.common,v 1.1 2019/10/29 17:45:24 kamil Exp $
+#
+# used by x11/qt5-qscintilla/Makefile
+# used by x11/py-qt5-qscintilla/Makefile
+
+DISTNAME=	QScintilla_gpl-2.11.2
+CATEGORIES=	x11
+MASTER_SITES=	https://www.riverbankcomputing.com/static/Downloads/QScintilla/${PKGVERSION_NOREV}/
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.riverbankcomputing.co.uk/software/qscintilla/intro
+LICENSE=	gnu-gpl-v3
+
+USE_LANGUAGES=	c++
+USE_LIBTOOL=	yes
+
+DISTINFO_FILE=	${.CURDIR}/../../x11/qt5-qscintilla/distinfo
+#PATCHDIR=	${.CURDIR}/../../x11/qt5-qscintilla/patches
+
+.include "../../x11/qt5-qtbase/buildlink3.mk"
