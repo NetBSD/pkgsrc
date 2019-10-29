@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.138 2019/10/29 09:21:54 nia Exp $
+$NetBSD: distinfo,v 1.139 2019/10/29 20:20:04 nia Exp $
 
 SHA1 (mesa-19.2.2.tar.xz) = 6ddc41e71d894dd406a3ca482f1cfda44566a5f8
 RMD160 (mesa-19.2.2.tar.xz) = 10a5761ecb3f9dc1157ad2516abb48cc91e9d4e1
@@ -10,6 +10,7 @@ SHA1 (patch-src_compiler_glsl_glsl__parser__extras.cpp) = ef114d6e288e6d212fce9d
 SHA1 (patch-src_egl_drivers_dri2_platform__x11.c) = 49e48c31eacb79d1da357fe70eaffd2926b5280e
 SHA1 (patch-src_egl_main_eglglobals.c) = 0d52014f52e62fc5fa6650336ddb0011ecf331e6
 SHA1 (patch-src_gallium_auxiliary_pipe-loader_pipe__loader__drm.c) = f913b779404e6bd8ae707a4fd66eb7c1dca9b311
+SHA1 (patch-src_gallium_auxiliary_rbug_rbug__texture.c) = 57d831b1001419191a27c05d9cb7734481372d27
 SHA1 (patch-src_gallium_drivers_nouveau_nouveau__vp3__video.c) = 04f95784c3270c9bb7e95377982e217962481525
 SHA1 (patch-src_gallium_drivers_nouveau_nv50_nv84__video.c) = 1b4239fe053523835ecac006894bdb0cde0ee626
 SHA1 (patch-src_gallium_drivers_radeonsi_si__state__shaders.c) = 2a6fb80e2dd8c19a73c1ae9c037e7b1769ca100f
