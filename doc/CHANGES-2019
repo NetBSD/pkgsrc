@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4617 2019/10/29 17:28:48 msaitoh Exp $
+$NetBSD: CHANGES-2019,v 1.4618 2019/10/29 17:46:52 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7387,3 +7387,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-test-virtualenv to 1.7.0 [adam 2019-10-29]
 	Updated devel/py-setuptools to 41.6.0 [adam 2019-10-29]
 	Updated sysutils/dmidecode to 3.2nb5 [msaitoh 2019-10-29]
+	Added x11/py-qt5-qscintilla version 2.11.2 [kamil 2019-10-29]
