@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4627 2019/10/29 19:38:16 bouyer Exp $
+$NetBSD: CHANGES-2019,v 1.4628 2019/10/29 22:38:38 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7398,3 +7398,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed devel/py-hgview [kamil 2019-10-29]
 	Updated graphics/qgis to 3.8.3 [bouyer 2019-10-29]
 	Updated graphics/veusz to 3.1 [kamil 2019-10-29]
+	Updated devel/py-guppy3 to 3.0.8 [gutteridge 2019-10-29]
