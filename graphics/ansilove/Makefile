@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2019/08/16 19:29:10 fcambus Exp $
+# $NetBSD: Makefile,v 1.11 2019/10/29 09:41:06 fcambus Exp $
 
-DISTNAME=	ansilove-4.0.3
+DISTNAME=	ansilove-4.0.4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ansilove/}
 
