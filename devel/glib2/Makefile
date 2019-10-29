@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.261 2019/10/08 10:58:17 prlw1 Exp $
+# $NetBSD: Makefile,v 1.262 2019/10/29 09:22:24 adam Exp $
 
 .include "Makefile.common"
 
@@ -59,12 +59,6 @@ PKGCONFIG_OVERRIDE_STAGE=	post-configure
 # to run gdbus-codegen to generate gdbus-daemon-generated.{h,c}
 TOOL_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 PYTHON_FOR_BUILD_ONLY=	yes
-
-.include "../../mk/bsd.prefs.mk"
-PLIST_VARS+=	nococoa
-.if ${OPSYS} != "Darwin"
-PLIST.nococoa=	yes
-.endif
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
