@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/09/18 14:17:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2019/10/29 15:46:54 nia Exp $
 
 DISTNAME=	keepassxc-${GITHUB_RELEASE}-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -13,6 +13,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://keepassxc.org/
 COMMENT=	Password generator and manager
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND gnu-lgpl-v2 AND gnu-lgpl-v3 AND mit AND cc0-1.0-universal
+
+SUPERSEDES+=	keepassx-[0-9]*
+SUPERSEDES+=	keepassx0-[0-9]*
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 
