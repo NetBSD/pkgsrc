@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.173 2019/10/28 13:20:33 nia Exp $
+# $NetBSD: Makefile,v 1.174 2019/10/29 20:27:39 nia Exp $
 
 DISTNAME=	mesa-19.2.2
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -14,6 +14,8 @@ LICENSE=	mit
 USE_TOOLS+=	bison flex pkg-config xgettext
 USE_LANGUAGES=	c99 c++
 USE_LIBTOOL=	yes
+
+USE_FEATURES+=	strnlen
 
 CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 CXXFLAGS.SunOS+=	-Drestrict=__restrict__
