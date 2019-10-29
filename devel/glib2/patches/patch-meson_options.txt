@@ -1,0 +1,15 @@
+$NetBSD: patch-meson_options.txt,v 1.1 2019/10/29 09:22:24 adam Exp $
+
+Add use_cocoa option.
+
+--- meson_options.txt.orig	2019-08-03 12:15:12.000000000 +0000
++++ meson_options.txt
+@@ -89,3 +89,8 @@ option('nls',
+        value : 'auto',
+        yield: true,
+        description : 'Enable native language support (translations)')
++
++option('use_cocoa',
++       type : 'boolean',
++       value : false,
++       description : 'Use Cocoa on macOS')
