@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4614 2019/10/29 09:41:22 fcambus Exp $
+$NetBSD: CHANGES-2019,v 1.4615 2019/10/29 12:39:24 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7382,3 +7382,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/gdbus-codegen to 2.60.7 [adam 2019-10-29]
 	Updated graphics/libansilove to 1.1.5 [fcambus 2019-10-29]
 	Updated graphics/ansilove to 4.0.4 [fcambus 2019-10-29]
+	Updated net/dhcpcd-qt to 0.7.5nb4 [kamil 2019-10-29]
