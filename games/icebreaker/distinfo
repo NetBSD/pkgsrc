@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 20:56:53 agc Exp $
+$NetBSD: distinfo,v 1.6 2019/10/29 18:04:44 nia Exp $
 
-SHA1 (icebreaker-1.9.7.tgz) = 856ed5e3c8498660b97558acdd10abb6b9472bfa
-RMD160 (icebreaker-1.9.7.tgz) = d3648094ee5d65bccde30f70ad774378e3b5d817
-SHA512 (icebreaker-1.9.7.tgz) = a4f4aacf8fa3a6a4e216f8089c258212fe00affff629407f968d93756f50cbd26a39619f945aaeaa2f4bf3f26ff7f5a3223af02f8d0e0113768aaec4a8047391
-Size (icebreaker-1.9.7.tgz) = 189167 bytes
-SHA1 (patch-aa) = 97accbbf40dec7b3212fcf32efd4b4fce265bb1b
+SHA1 (icebreaker-1.9.8.tgz) = 71ea9209c786f7addd4f5b84dba14f7e069d2084
+RMD160 (icebreaker-1.9.8.tgz) = 830ac7c4f7784b4ceee0cd57c5975f69102c1617
+SHA512 (icebreaker-1.9.8.tgz) = 03fd280c58efe235d8b9a11cf67f4248febef81b58532b7063619b7da08af7b1d71cc20917b959397748a2167a0aec271aa45f9488bcca56518913bde6017183
+Size (icebreaker-1.9.8.tgz) = 177355 bytes
+SHA1 (patch-Makefile) = 78a42778e7cc7a63a32b70e6f3eb31da5d47b6c4
+SHA1 (patch-icebreaker.desktop) = 7a0a34b7b722a4408410631076de22a039f0d608
