@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19375 2019/10/29 18:01:56 nia Exp $
+$NetBSD: TODO,v 1.19376 2019/10/29 19:17:19 kamil Exp $
 
 Suggested new packages
 ======================
@@ -1324,7 +1324,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o varnish-6.0
 	o vbetool-1.1
 	o vera-1.23
-	o veusz-1.26.1
 	o vfu-4.09
 	o vicq-0.4.2
 	o viewres-1.0.6
