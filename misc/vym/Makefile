@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2019/08/11 13:22:00 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2019/10/30 13:05:16 kamil Exp $
 #
 
-DISTNAME=		vym-2.2.4
-PKGREVISION=		16
+DISTNAME=		vym-2.7.1
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vym/}
 EXTRACT_SUFX=		.tar.bz2
@@ -18,8 +17,13 @@ USE_LANGUAGES=		c++
 USE_TOOLS+=		perl:run bash:run
 
 REPLACE_PERL+=		scripts/exportvym scripts/niceXML
-REPLACE_BASH+=		scripts/release-mac scripts/update-bookmarks \
-			scripts/makedist-vym scripts/vivym
+
+REPLACE_BASH+=		scripts/release-mac scripts/update-bookmarks
+REPLACE_BASH+=		scripts/makedist-vym scripts/vivym
+REPLACE_BASH+=		scripts/getbinaries scripts/screencast
+
+REPLACE_RUBY+=		scripts/jigger
+REPLACE_RUBY+=		scripts/make-qrc.rb
 
 CHECK_INTERPRETER_SKIP=	share/vym/scripts/bugger \
 			share/vym/scripts/vym-addmail.rb
@@ -42,8 +46,9 @@ do-configure:
 		DATADIR=${PREFIX}/share \
 		DOCDIR=${PREFIX}/doc/vym vym.pro
 
-.include "../../x11/qt4-qdbus/buildlink3.mk"
-.include "../../x11/qt4-libs/buildlink3.mk"
-.include "../../x11/qt4-tools/buildlink3.mk"
-
+.include "../../lang/ruby/buildlink3.mk"                                                                                                          
+.include "../../lang/ruby/replace.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtscript/buildlink3.mk"
+.include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
