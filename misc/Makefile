@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.515 2019/10/30 12:37:50 kamil Exp $
+# $NetBSD: Makefile,v 1.516 2019/10/30 13:45:42 kamil Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -184,7 +184,6 @@ SUBDIR+=	mdp
 SUBDIR+=	mirmon
 SUBDIR+=	mkcue
 SUBDIR+=	mmv
-SUBDIR+=	mnemosyne
 SUBDIR+=	molden
 SUBDIR+=	moreutils
 SUBDIR+=	most
