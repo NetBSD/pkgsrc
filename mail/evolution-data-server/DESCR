@@ -1,2 +1,2 @@
-Evolution Data Server is responsible for managing calendar and addressbook
-information within the GNOME desktop.
+Evolution-Data-Server is a collection of libraries and services for storing
+addressbooks and calendars.

@@ -1,29 +1,7 @@
-$NetBSD: distinfo,v 1.88 2018/04/25 05:57:58 markd Exp $
+$NetBSD: distinfo,v 1.89 2019/10/30 17:26:50 nia Exp $
 
-SHA1 (evolution-data-server-2.32.3.tar.bz2) = cbf32c3438c4f1650b35b87007a337ebc1c56cec
-RMD160 (evolution-data-server-2.32.3.tar.bz2) = adc8b07aef41a89d16fc426541c12190a3688b8f
-SHA512 (evolution-data-server-2.32.3.tar.bz2) = 863ccea7717a7fe743155513e74fc8ea35f558702bd4ff1075e15d1a36c1ecd9d5e285bd2a81245d680c05cf0521029583134b4e1d12668244042df3f5e62dfb
-Size (evolution-data-server-2.32.3.tar.bz2) = 4322281 bytes
-SHA1 (patch-aa) = 117f3ce1f2c948cae502486afdb62078e952afc0
-SHA1 (patch-ab) = 4014a3c318db2b5858ed83df2fcb1206c9d37ee5
-SHA1 (patch-addressbook_libebook_e-book.c) = ac32dc97eb0a66bf0c912d384655fdde47d178ee
-SHA1 (patch-bd) = 8df85b9ab7ae71558fb939565e944b614de628bb
-SHA1 (patch-ca) = e879d29105997045e1293fe627ec55a05e5ba88d
-SHA1 (patch-calendar_backends_caldav_e-cal-backend-caldav.c) = 756ce60a8b684369bf7b0c14f2f52e735253c381
-SHA1 (patch-calendar_backends_contacts_e-cal-backend-contacts.c) = d44e6d0e56b9840e01cebdb39442669ec86247bd
-SHA1 (patch-calendar_libecal_e-cal-component.c) = f0a896d159d4daa8c6bed4143d3888156d9bb7e5
-SHA1 (patch-calendar_libecal_e-cal-recur.c) = fb5256d428f1b7e3a6eb3a89f058059f3ae67b8f
-SHA1 (patch-calendar_libecal_e-cal-time-util.c) = 4b7c1cd7f40509a9cafc9fc481a49573cc4b869b
-SHA1 (patch-calendar_libecal_e-cal.c) = 2b489dfedec0d22d1c64b9fb99526c92a8493253
-SHA1 (patch-calendar_libedata-cal_e-cal-backend-intervaltree.c) = af78b5854666325a9dd1229702968c093805ec03
-SHA1 (patch-calendar_libegdbus_Makefile.in) = ac5aabae5160967c498f12c0f29be3e206e03622
-SHA1 (patch-camel_providers_imapx_camel-imapx-tokens.txt) = 8a62d2064d9bda5f9f79eb9473e71734560c3983
-SHA1 (patch-cc) = a59bbc664a96f467888cae89cb00eb9a9033a925
-SHA1 (patch-cd) = 6e366e65e68cd0c5a8eafa67c7f9152c6521de12
-SHA1 (patch-ce) = 1da2a3773ff89319bc79bbb7375e8259f0be89e4
-SHA1 (patch-cg) = ef8059123df8b774b75549e0cbb46d2976ed6aff
-SHA1 (patch-e_data_book_c) = b52f6f50cc19794b2acb9df401bc34eaf8ea7ec7
-SHA1 (patch-e_data_book_factory_c) = 263be8ddce6883293f68be0d90ca4c7e1afa6aca
-SHA1 (patch-e_data_cal_factory_c) = 0aad627e34d186e987884bab5259ab8859ae3f3e
-SHA1 (patch-e_data_server_util_c) = fb7d01a036883b22e51a11082ae15e3fe81d81f0
-SHA1 (patch-libedataserver_e-categories_c) = f4045926c8bfd7b6dd0f5905825dd4ece7c09ad1
+SHA1 (evolution-data-server-3.35.1.tar.xz) = bde163834bfc85553ece99e8ac1182fadcfa750d
+RMD160 (evolution-data-server-3.35.1.tar.xz) = c615e75959ea3a43cbb213c64de5de7076179202
+SHA512 (evolution-data-server-3.35.1.tar.xz) = 67ea9739b27df42c8ae91fe3c98073850da0cb5c7e85a3bf2e9c6272eaac27d62b62d576bbd5cbf76b9b077d08b71065e00de11912d2b3aba162786e6e1db6cd
+Size (evolution-data-server-3.35.1.tar.xz) = 4614216 bytes
+SHA1 (patch-src_tools_addressbook-export_CMakeLists.txt) = 1e0d65ac17062bfa72ebdc0d1a3fa50f4fd1cdb2
