@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4636 2019/10/30 12:43:41 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.4637 2019/10/30 12:48:07 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7406,3 +7406,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed databases/luma [kamil 2019-10-30]
 	Removed misc/tellico [kamil 2019-10-30]
 	Removed print/kbibtex [kamil 2019-10-30]
+	Removed print/okular [kamil 2019-10-30]
