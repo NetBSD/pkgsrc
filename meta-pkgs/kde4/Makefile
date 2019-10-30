@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2019/08/11 13:21:53 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2019/10/30 12:47:02 kamil Exp $
 
 DISTNAME=	kde4-4.14.3
 PKGREVISION=	12
@@ -94,7 +94,6 @@ DEPENDS+=	kcolorchooser-15.12.0{,nb[0-9]*}:../../graphics/kcolorchooser
 DEPENDS+=	kgamma-4.14.3{,nb[0-9]*}:../../graphics/kgamma
 DEPENDS+=	kruler-4.14.3{,nb[0-9]*}:../../graphics/kruler
 DEPENDS+=	kolourpaint-16.04.0{,nb[0-9]*}:../../graphics/kolourpaint
-##DEPENDS+=	okular-16.08.0{,nb[0-9]*}:../../print/okular
 DEPENDS+=	kdegraphics-mobipocket-16.08.0{,nb[0-9]*}:../../graphics/kdegraphics-mobipocket
 DEPENDS+=	kdegraphics-strigi-analyzer-16.04.0{,nb[0-9]*}:../../graphics/kdegraphics-strigi-analyzer
 DEPENDS+=	kdegraphics-thumbnailers-4.14.3{,nb[0-9]*}:../../graphics/kdegraphics-thumbnailers
