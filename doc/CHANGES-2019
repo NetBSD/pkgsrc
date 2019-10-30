@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4642 2019/10/30 14:04:06 taca Exp $
+$NetBSD: CHANGES-2019,v 1.4643 2019/10/30 14:05:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7413,3 +7413,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed x11/qt4-qscintilla [kamil 2019-10-30]
 	Removed x11/py-qt4-qscintilla [kamil 2019-10-30]
 	Updated devel/ruby-fast_gettext to 2.0.1 [taca 2019-10-30]
+	Updated devel/ruby-ffi to 1.11.1 [taca 2019-10-30]
