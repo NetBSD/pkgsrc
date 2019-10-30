@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4648 2019/10/30 15:04:18 taca Exp $
+$NetBSD: CHANGES-2019,v 1.4649 2019/10/30 15:09:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7419,3 +7419,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed misc/py-anki2 [kamil 2019-10-30]
 	Updated devel/ruby-hocon to 1.2.6 [taca 2019-10-30]
 	Updated devel/ruby-i18n to 1.7.0 [taca 2019-10-30]
+	Updated devel/ruby-inline to 3.12.5 [taca 2019-10-30]
