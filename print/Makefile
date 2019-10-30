@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.751 2019/10/24 08:30:20 micha Exp $
+# $NetBSD: Makefile,v 1.752 2019/10/30 12:42:16 kamil Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -73,7 +73,6 @@ SUBDIR+=	ja-vflib-lib
 SUBDIR+=	ja-vflib-utils
 SUBDIR+=	ja-vfxdvik
 SUBDIR+=	jcabc2ps
-SUBDIR+=	kbibtex
 SUBDIR+=	kpathsea
 SUBDIR+=	lacheck
 SUBDIR+=	latex-mk
