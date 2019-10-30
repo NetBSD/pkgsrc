@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.858 2019/10/30 10:43:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.859 2019/10/30 13:53:26 kamil Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -327,7 +327,6 @@ SUBDIR+=	py-keybinder
 SUBDIR+=	py-kiwi
 SUBDIR+=	py-pyperclip
 SUBDIR+=	py-qt4
-SUBDIR+=	py-qt4-qscintilla
 SUBDIR+=	py-qt5
 SUBDIR+=	py-qt5-qscintilla
 SUBDIR+=	py-qwt-qt4
@@ -347,7 +346,6 @@ SUBDIR+=	qt4-mng
 SUBDIR+=	qt4-mysql
 SUBDIR+=	qt4-pgsql
 SUBDIR+=	qt4-qdbus
-SUBDIR+=	qt4-qscintilla
 SUBDIR+=	qt4-sqlite3
 SUBDIR+=	qt4-tiff
 SUBDIR+=	qt4-tools
