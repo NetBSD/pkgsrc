@@ -1,31 +1,6 @@
-$NetBSD: distinfo,v 1.85 2018/05/16 16:15:23 jperkin Exp $
+$NetBSD: distinfo,v 1.86 2019/10/30 17:26:49 nia Exp $
 
-SHA1 (evolution-2.32.3.tar.bz2) = cc2a2126ef4192193dce50c43c5bb6fc0a57fcde
-RMD160 (evolution-2.32.3.tar.bz2) = 1b64d00a38cf8ad5c273cc4f4aee73124fe818af
-SHA512 (evolution-2.32.3.tar.bz2) = 7241954f4e6ab87151e2c4af0bd33d5f428ab5e01f935aafbfaf50714a495fe01fe54c3f3c6498d514880bf1c5271d491a523d79b2928827490204b9eee4c0d3
-Size (evolution-2.32.3.tar.bz2) = 31966138 bytes
-SHA1 (patch-aa) = 6656278d2a54fdc585b4f0708da657ed0afbeec2
-SHA1 (patch-ab) = 792e5f7fdb0dc84fdbe0ef1ade21ce4a391e9328
-SHA1 (patch-ac) = 853fe9f4a28fa1fe1266607b93e4ef9f63969b42
-SHA1 (patch-ad) = 7efe568191ab181ea2b42ddac33db277b69b7d1e
-SHA1 (patch-calendar_gui_alarm-notify_alarm-queue.c) = 6466bcb2a53b2af82407a63d2e6439a985e286a5
-SHA1 (patch-calendar_gui_comp-util.c) = 5d9242c3b01f73082cf469491b0c86379929de0e
-SHA1 (patch-calendar_gui_dialogs_recurrence-page.c) = 9cb2675d011b490810ef0c6997286ff9742d6f60
-SHA1 (patch-calendar_gui_dialogs_task-details-page.c) = a0c0f84a597fd2d991e6d878ff2148779d38e65c
-SHA1 (patch-calendar_gui_e-cal-component-preview.c) = 93512fdbe8fbe2ce81bb4b6cb7a6e2ec3c25bfb3
-SHA1 (patch-calendar_gui_e-itip-control.c) = 680ff6e6861687e30e479479ec42528d67d5eb83
-SHA1 (patch-calendar_gui_e-meeting-store.c) = 754cddc4575ec8007c6134b435b54b6c4254209f
-SHA1 (patch-calendar_gui_gnome-cal.c) = 457d750fc223cb904d64d864e128ccf2606f034c
-SHA1 (patch-calendar_gui_itip-utils.c) = 8e780a506437f9b426976aefa05c5cdf42ac31f6
-SHA1 (patch-calendar_importers_icalendar-importer.c) = 6057fe6d1cd460aa27f2bb2e3a432364fdaff57b
-SHA1 (patch-plugins_caldav_caldav-browse-server.c) = c35c4acb0c3d28337d7aa811e81a4ce85ecec7b0
-SHA1 (patch-plugins_groupwise-features_process-meeting.c) = a975b1800504c9446a53f1152e2e1b49eeaa76bc
-SHA1 (patch-plugins_groupwise-features_send-options.c) = c399fafa029fef8e4fce9f6d5be8dc345c3da76e
-SHA1 (patch-plugins_itip-formatter_itip-formatter.c) = 103ba2b985520f0e9252e3130c19990f77a82400
-SHA1 (patch-plugins_mail-notification_mail-notification.c) = 999ea9e55133077d1e3ed8c8dad26158b8e5260f
-SHA1 (patch-plugins_publish-calendar_publish-calendar.c) = 9af3644d68de690126c4cbaf7db9bb2da7b956b4
-SHA1 (patch-ya) = 73872309c1d69d6d10bf04d867cc04ce17e724d3
-SHA1 (patch-yb) = 7f6df34a233edcd3d38ddfe32a3a45770fe58b4a
-SHA1 (patch-yc) = 1312f89cd935dab9fd3bfae860a055d9d2fef794
-SHA1 (patch-yd) = fa04a365b079a000d86fe741b22f83261c611c36
-SHA1 (patch-ye) = 57fd2cb481a8b465b94a2155d82633f0f4b3fa06
+SHA1 (evolution-3.34.1.tar.xz) = a4bdfa2866a887f168a1ef33a4e2161875748400
+RMD160 (evolution-3.34.1.tar.xz) = f0f635dee4d01c8458ad180f247507ee0a7ae6f7
+SHA512 (evolution-3.34.1.tar.xz) = d72329b2dde41724cc8818f843b5530c5465e4fd7fceca3208a26180f9d6e286165d03d33ba4066e959a6e69bd1e5d33759d4287a57bb765bf7143410be6102c
+Size (evolution-3.34.1.tar.xz) = 11919428 bytes
