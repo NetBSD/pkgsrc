@@ -1,0 +1,22 @@
+$NetBSD: patch-src_tools_addressbook-export_CMakeLists.txt,v 1.1 2019/10/30 17:26:50 nia Exp $
+
+Allow pkgsrc to replace the interpreter.
+
+--- src/tools/addressbook-export/CMakeLists.txt.orig	2019-10-11 05:42:45.000000000 +0000
++++ src/tools/addressbook-export/CMakeLists.txt
+@@ -46,13 +46,8 @@ install(TARGETS addressbook-export
+ 
+ find_program(PERL perl)
+ if(PERL)
+-	configure_file(
+-		${CMAKE_CURRENT_SOURCE_DIR}/csv2vcard.in
+-		${CMAKE_CURRENT_BINARY_DIR}/csv2vcard
+-		@ONLY
+-	)
+-
+-	install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/csv2vcard
++	install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/csv2vcard.in
++		RENAME csv2vcard
+ 		DESTINATION ${privlibexecdir}
+ 	)
+ else(PERL)
