@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2019/01/20 13:48:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.18 2019/10/30 14:05:23 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/ffi_c.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
@@ -23,7 +23,6 @@ ${GEM_LIBDIR}/ext/ffi_c/Call.c
 ${GEM_LIBDIR}/ext/ffi_c/Call.h
 ${GEM_LIBDIR}/ext/ffi_c/ClosurePool.c
 ${GEM_LIBDIR}/ext/ffi_c/ClosurePool.h
-${GEM_LIBDIR}/ext/ffi_c/DataConverter.c
 ${GEM_LIBDIR}/ext/ffi_c/DynamicLibrary.c
 ${GEM_LIBDIR}/ext/ffi_c/DynamicLibrary.h
 ${GEM_LIBDIR}/ext/ffi_c/Function.c
@@ -45,8 +44,6 @@ ${GEM_LIBDIR}/ext/ffi_c/Pointer.c
 ${GEM_LIBDIR}/ext/ffi_c/Pointer.h
 ${GEM_LIBDIR}/ext/ffi_c/Struct.c
 ${GEM_LIBDIR}/ext/ffi_c/Struct.h
-${GEM_LIBDIR}/ext/ffi_c/StructByReference.c
-${GEM_LIBDIR}/ext/ffi_c/StructByReference.h
 ${GEM_LIBDIR}/ext/ffi_c/StructByValue.c
 ${GEM_LIBDIR}/ext/ffi_c/StructByValue.h
 ${GEM_LIBDIR}/ext/ffi_c/StructLayout.c
@@ -472,6 +469,7 @@ ${GEM_LIBDIR}/lib/ffi.rb
 ${GEM_LIBDIR}/lib/ffi/autopointer.rb
 ${GEM_LIBDIR}/lib/ffi/buffer.rb
 ${GEM_LIBDIR}/lib/ffi/callback.rb
+${GEM_LIBDIR}/lib/ffi/data_converter.rb
 ${GEM_LIBDIR}/lib/ffi/enum.rb
 ${GEM_LIBDIR}/lib/ffi/errno.rb
 ${GEM_LIBDIR}/lib/ffi/ffi.rb
@@ -526,6 +524,8 @@ ${GEM_LIBDIR}/lib/ffi/platform/x86_64-solaris/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/x86_64-windows/types.conf
 ${GEM_LIBDIR}/lib/ffi/pointer.rb
 ${GEM_LIBDIR}/lib/ffi/struct.rb
+${GEM_LIBDIR}/lib/ffi/struct_by_reference.rb
+${GEM_LIBDIR}/lib/ffi/struct_layout.rb
 ${GEM_LIBDIR}/lib/ffi/struct_layout_builder.rb
 ${GEM_LIBDIR}/lib/ffi/tools/const_generator.rb
 ${GEM_LIBDIR}/lib/ffi/tools/generator.rb
