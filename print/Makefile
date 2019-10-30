@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.752 2019/10/30 12:42:16 kamil Exp $
+# $NetBSD: Makefile,v 1.753 2019/10/30 12:47:02 kamil Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -90,7 +90,6 @@ SUBDIR+=	magicfilter
 SUBDIR+=	mp
 SUBDIR+=	mpage
 SUBDIR+=	mupdf
-SUBDIR+=	okular
 SUBDIR+=	p5-LaTeX-Driver
 SUBDIR+=	p5-LaTeX-Encode
 SUBDIR+=	p5-LaTeX-Table
