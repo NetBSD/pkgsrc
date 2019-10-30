@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 23:49:44 agc Exp $
-
-SHA1 (Mnemosyne-2.3.1.tar.gz) = 46aa318f3df0d402e26d082bb1e053ac375f2f98
-RMD160 (Mnemosyne-2.3.1.tar.gz) = 3f4bb7686d1e1106a976efe06ab1cfd468f749a6
-SHA512 (Mnemosyne-2.3.1.tar.gz) = 8be04c99691d1222973a5702ab1cf5dd0588c787bce35986cb2e2b1827bcd53e39982150e8329cdd992c128c038420b223e8154412960e5801ada0711196b929
-Size (Mnemosyne-2.3.1.tar.gz) = 1331123 bytes
