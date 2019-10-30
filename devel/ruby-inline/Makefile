@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2015/06/03 13:57:09 taca Exp $
+# $NetBSD: Makefile,v 1.16 2019/10/30 15:09:03 taca Exp $
 
-DISTNAME=	RubyInline-3.12.4
+DISTNAME=	RubyInline-3.12.5
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/^Ruby//:tl}
 CATEGORIES=	devel
 
@@ -10,6 +10,8 @@ COMMENT=	Embed C/C++ code directly in Ruby
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-ZenTest>=4.3<5:../../devel/ZenTest
+
+USE_LANGUAGES=	# none
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
