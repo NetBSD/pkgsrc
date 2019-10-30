@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4649 2019/10/30 15:09:27 taca Exp $
+$NetBSD: CHANGES-2019,v 1.4650 2019/10/30 15:10:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7420,3 +7420,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ruby-hocon to 1.2.6 [taca 2019-10-30]
 	Updated devel/ruby-i18n to 1.7.0 [taca 2019-10-30]
 	Updated devel/ruby-inline to 3.12.5 [taca 2019-10-30]
+	Updated devel/ruby-mocha to 1.9.0 [taca 2019-10-30]
