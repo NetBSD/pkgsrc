@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4630 2019/10/30 10:38:58 micha Exp $
+$NetBSD: CHANGES-2019,v 1.4631 2019/10/30 12:23:06 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7400,3 +7400,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/veusz to 3.1 [kamil 2019-10-29]
 	Updated devel/py-guppy3 to 3.0.8 [gutteridge 2019-10-29]
 	Updated games/freedoom to 0.12.1 [micha 2019-10-29]
+	Updated mail/thunderbird to 68.2.0 [ryoon 2019-10-30]
