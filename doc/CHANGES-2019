@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4654 2019/10/30 15:28:08 taca Exp $
+$NetBSD: CHANGES-2019,v 1.4655 2019/10/30 15:50:17 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7425,3 +7425,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ruby-minitest to 5.13.0 [taca 2019-10-30]
 	Updated devel/ruby-parser to 3.14.1 [taca 2019-10-30]
 	Updated devel/ruby-rgl to 0.5.6 [taca 2019-10-30]
+	Updated math/speedcrunch to 0.12.0 [kamil 2019-10-30]
