@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.516 2019/10/30 13:45:42 kamil Exp $
+# $NetBSD: Makefile,v 1.517 2019/10/30 14:43:46 kamil Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -237,7 +237,6 @@ SUBDIR+=	pinfo
 SUBDIR+=	ppower
 SUBDIR+=	pty-redir
 SUBDIR+=	py-anita
-SUBDIR+=	py-anki2
 SUBDIR+=	py-ansi
 SUBDIR+=	py-asciinema
 SUBDIR+=	py-carddav
