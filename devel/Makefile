@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2936 2019/10/29 18:34:27 kamil Exp $
+# $NetBSD: Makefile,v 1.2937 2019/10/30 12:54:46 kamil Exp $
 #
 
 COMMENT=	Development utilities
@@ -285,7 +285,6 @@ SUBDIR+=	emacs-ilisp
 SUBDIR+=	emacs20-elib
 SUBDIR+=	empty
 SUBDIR+=	epydoc
-SUBDIR+=	eric4
 SUBDIR+=	erlang-base64url
 SUBDIR+=	erlang-cache_tab
 SUBDIR+=	erlang-ezlib
