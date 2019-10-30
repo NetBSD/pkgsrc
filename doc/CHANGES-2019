@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4638 2019/10/30 12:55:22 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.4639 2019/10/30 13:05:30 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7408,3 +7408,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed print/kbibtex [kamil 2019-10-30]
 	Removed print/okular [kamil 2019-10-30]
 	Removed devel/eric4 [kamil 2019-10-30]
+	Updated misc/vym to 2.7.1 [kamil 2019-10-30]
