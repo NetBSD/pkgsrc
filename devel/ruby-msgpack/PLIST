@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2018/03/14 14:07:38 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2019/10/30 15:14:10 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/msgpack/msgpack.${RUBY_DLEXT}
@@ -28,6 +28,8 @@ ${GEM_LIBDIR}/doclib/msgpack/error.rb
 ${GEM_LIBDIR}/doclib/msgpack/extension_value.rb
 ${GEM_LIBDIR}/doclib/msgpack/factory.rb
 ${GEM_LIBDIR}/doclib/msgpack/packer.rb
+${GEM_LIBDIR}/doclib/msgpack/time.rb
+${GEM_LIBDIR}/doclib/msgpack/timestamp.rb
 ${GEM_LIBDIR}/doclib/msgpack/unpacker.rb
 ${GEM_LIBDIR}/ext/java/org/msgpack/jruby/Buffer.java
 ${GEM_LIBDIR}/ext/java/org/msgpack/jruby/Decoder.java
@@ -73,6 +75,8 @@ ${GEM_LIBDIR}/lib/msgpack/factory.rb
 ${GEM_LIBDIR}/lib/msgpack/msgpack.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/msgpack/packer.rb
 ${GEM_LIBDIR}/lib/msgpack/symbol.rb
+${GEM_LIBDIR}/lib/msgpack/time.rb
+${GEM_LIBDIR}/lib/msgpack/timestamp.rb
 ${GEM_LIBDIR}/lib/msgpack/unpacker.rb
 ${GEM_LIBDIR}/lib/msgpack/version.rb
 ${GEM_LIBDIR}/msgpack.gemspec
@@ -98,6 +102,7 @@ ${GEM_LIBDIR}/spec/pack_spec.rb
 ${GEM_LIBDIR}/spec/packer_spec.rb
 ${GEM_LIBDIR}/spec/random_compat.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/timestamp_spec.rb
 ${GEM_LIBDIR}/spec/unpack_spec.rb
 ${GEM_LIBDIR}/spec/unpacker_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
