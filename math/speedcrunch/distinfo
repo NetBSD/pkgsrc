@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 23:33:44 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/10/30 15:50:07 kamil Exp $
 
-SHA1 (speedcrunch-0.10.1.tar.gz) = 385828ae8900dd4caee7fa437a2fb35f224d540a
-RMD160 (speedcrunch-0.10.1.tar.gz) = 1a3b81d979b95a0c88e65add28736e5960c19bad
-SHA512 (speedcrunch-0.10.1.tar.gz) = cafd2dc80d4925e0228648883e0117dfe8f7f80b715fc1a97586c19d4f5790833d422aacc117f5beafc18918c116004cb8fce5701b801280f1e9e74a5933d037
-Size (speedcrunch-0.10.1.tar.gz) = 1722124 bytes
-SHA1 (patch-aa) = ca2f19a98b74fa5d8f2250c6914b72c68f2b73aa
+SHA1 (speedcrunch/release-0.12.0.tar.gz) = 0d2ef617a32a3b87fe65b7d925025789e365f2cf
+RMD160 (speedcrunch/release-0.12.0.tar.gz) = 33e42f8c37830877fe05f8e82d0ead58977b4f33
+SHA512 (speedcrunch/release-0.12.0.tar.gz) = 9f93936311e227ed0aff374adae408f212e6d63174154931ecb19a31f1a6f360b9548989bbdc5988d03a7600f2d3e466ef18bf5f071002b99f22b22e773143eb
+Size (speedcrunch/release-0.12.0.tar.gz) = 3667420 bytes
