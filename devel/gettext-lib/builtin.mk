@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.46 2014/07/03 14:59:55 wiz Exp $
+# $NetBSD: builtin.mk,v 1.47 2019/10/30 14:43:20 triaxx Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -32,12 +32,17 @@ BUILTIN_FIND_GREP.H_OPNSVR5_GETTEXT=	libgnuintl.h
 # SCO OpenServer 5.0.7/3.2 has an unusual scheme where /usr/include/libintl.h
 # pulls in /usr/include/libgnuintl.h, where the latter is the real libintl.h.
 #
+# By default, assume that the native gettext implementation is good
+# enough to replace GNU gettext if it supplies ngettext().
+#
 .if !defined(IS_BUILTIN.gettext)
 IS_BUILTIN.gettext=	no
 .  if (empty(H_GETTEXT:M__nonexistent__) && \
        empty(H_GETTEXT:M${LOCALBASE}/*)) || \
       (empty(H_GENTOO_GETTEXT:M__nonexistent__) && \
        empty(H_GENTOO_GETTEXT:M${LOCALBASE}/*)) || \
+      (empty(H_NGETTEXT_GETTEXT:M__nonexistent__) && \
+       empty(H_NGETTEXT_GETTEXT:M${LOCALBASE}/*)) || \
       (empty(H_OPNSVR5_GETTEXT:M__nonexistent__) && \
        empty(H_OPNSVR5_GETTEXT:M${LOCALBASE}/*))
 IS_BUILTIN.gettext=	yes
@@ -68,14 +73,7 @@ USE_BUILTIN.gettext!=							\
 .        endif
 .      endfor
 .    endif
-# XXX
-# XXX By default, assume that the native gettext implementation is good
-# XXX enough to replace GNU gettext if it supplies ngettext().
-# XXX
-.    if empty(H_NGETTEXT_GETTEXT:M__nonexistent__) && \
-	empty(H_NGETTEXT_GETTEXT:M${LOCALBASE}/*)
-USE_BUILTIN.gettext=	yes
-.    endif
+#
 #
 # Some platforms don't have a gettext implementation that can replace
 # GNU gettext.
