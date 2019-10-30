@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2019/01/20 13:51:15 taca Exp $
+@comment $NetBSD: PLIST,v 1.25 2019/10/30 15:10:32 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/.rubocop.yml
@@ -12,7 +12,6 @@ ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/RELEASE.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/build-matrix
-${GEM_LIBDIR}/docs/CNAME
 ${GEM_LIBDIR}/docs/Mocha.html
 ${GEM_LIBDIR}/docs/Mocha/API.html
 ${GEM_LIBDIR}/docs/Mocha/ClassMethods.html
