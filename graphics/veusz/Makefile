@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2019/10/29 19:17:08 kamil Exp $
+# $NetBSD: Makefile,v 1.59 2019/10/30 00:38:11 kamil Exp $
 
 DISTNAME=		veusz-3.1
 CATEGORIES=		graphics
@@ -25,7 +25,7 @@ INSTALLATION_DIRS+=	share/icons/hicolor/scalable/apps
 INSTALLATION_DIRS+=	share/mime/packages
 
 ALL_ENV+=		QMAKE_EXE=${QTDIR}/bin/qmake
-ALL_ENV+=		SIP_DIR=${PREFIX}/share/sip
+ALL_ENV+=		SIP_DIR=${PREFIX}/share/sip${PYVERSSUFFIX}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/support/veusz.desktop \
