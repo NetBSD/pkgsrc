@@ -1,29 +1,26 @@
-# $NetBSD: Makefile,v 1.25 2018/03/12 11:17:04 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2019/10/30 15:50:07 kamil Exp $
 #
 
-DISTNAME=	speedcrunch-0.10.1
-PKGREVISION=	23
+DISTNAME=	release-0.12.0
+PKGNAME=	${DISTNAME:C/release/speedcrunch/}
 CATEGORIES=	math
-MASTER_SITES=	http://speedcrunch.googlecode.com/files/
+MASTER_SITES=	http://bitbucket.org/heldercorreia/speedcrunch/get/
+DIST_SUBDIR=	speedcrunch
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.speedcrunch.org/
 COMMENT=	Calculator
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/speedcrunch-0.10.1/src
+WRKSRC=		${WRKDIR}/heldercorreia-speedcrunch-ea93b21f9498/src
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
-
-SUBST_CLASSES+=	prefix
-SUBST_STAGE.prefix= pre-configure
-SUBST_FILES.prefix= gui/mainwindow.cpp
-SUBST_VARS.prefix= PREFIX
+USE_TOOLS=	gmake # Required for handling file names with whitespaces
 
 post-build:
 	(cd ${WRKSRC} && ${QTDIR}/bin/lrelease speedcrunch.pro)
 
-.include "../../x11/qt4-libs/buildlink3.mk"
-.include "../../x11/qt4-tools/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
