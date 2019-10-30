@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4659 2019/10/30 17:34:45 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4660 2019/10/30 17:35:32 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7429,3 +7429,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/evolution to 3.34.1 [nia 2019-10-30]
 	Updated mail/evolution-data-server to 3.35.1 [nia 2019-10-30]
 	Removed time/evolution-webcal [nia 2019-10-30]
+	Removed mail/evolution-exchange [nia 2019-10-30]
