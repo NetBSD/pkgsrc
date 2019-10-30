@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4657 2019/10/30 17:33:07 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4658 2019/10/30 17:33:35 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7427,3 +7427,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ruby-rgl to 0.5.6 [taca 2019-10-30]
 	Updated math/speedcrunch to 0.12.0 [kamil 2019-10-30]
 	Updated mail/evolution to 3.34.1 [nia 2019-10-30]
+	Updated mail/evolution-data-server to 3.35.1 [nia 2019-10-30]
