@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.240 2019/10/30 17:26:49 nia Exp $
+# $NetBSD: Makefile,v 1.241 2019/10/30 17:27:33 nia Exp $
 
 DISTNAME=	evolution-3.34.1
 CATEGORIES=	mail
@@ -41,7 +41,7 @@ _TOOLS_USE_PKGSRC.xgettext=	yes
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../mywip/evolution-data-server/buildlink3.mk"
+.include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../mail/libytnef/buildlink3.mk"
 .include "../../security/gcr/buildlink3.mk"
 .include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
