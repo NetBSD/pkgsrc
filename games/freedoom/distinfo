@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/10/21 09:58:35 micha Exp $
+$NetBSD: distinfo,v 1.3 2019/10/30 10:33:02 micha Exp $
 
-SHA1 (freedoom-0.12.0.zip) = a0abbea8684ba75513913c941d9a04adef8f9c2f
-RMD160 (freedoom-0.12.0.zip) = 30796ce5b6cfeb47eadbe12ac7fce824dc72c695
-SHA512 (freedoom-0.12.0.zip) = ba0b02c785a14259f150a3ce8f9ff4fa21cad4efb3bdef95ed798b4276661b741bde05743377480b7969e923d11603358049ff2ae34cf3952251d2b4f848b27b
-Size (freedoom-0.12.0.zip) = 21986242 bytes
+SHA1 (freedoom-0.12.1.zip) = 7747cf5044b60005b561befa94ccb753935e24e7
+RMD160 (freedoom-0.12.1.zip) = b0b7312ce6824f33ec50a3293ed97f11d33a6017
+SHA512 (freedoom-0.12.1.zip) = c1cb0a45976b82d092cb0aaf6958fa920dc7c7e2fdd8dcc8ae9a3b622f648e2b78d1e8022a2d501e33965949f03643a63d1d25f7f03312a8831d430dd1c5af18
+Size (freedoom-0.12.1.zip) = 21996221 bytes
