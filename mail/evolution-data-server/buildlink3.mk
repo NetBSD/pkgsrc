@@ -1,14 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.70 2019/10/30 17:26:50 nia Exp $
-# XXX
-# XXX This file was created automatically using createbuildlink-3.17.
-# XXX After this file has been verified as correct, the comment lines
-# XXX beginning with "XXX" should be removed.  Please do not commit
-# XXX unverified buildlink3.mk files.
-# XXX
-# XXX Packages that only install static libraries or headers should
-# XXX include the following line:
-# XXX
-# XXX	BUILDLINK_DEPMETHOD.evolution-data-server?=	build
+# $NetBSD: buildlink3.mk,v 1.71 2019/10/30 23:09:35 nia Exp $
 
 BUILDLINK_TREE+=	evolution-data-server
 
