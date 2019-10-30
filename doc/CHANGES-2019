@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4634 2019/10/30 12:32:58 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.4635 2019/10/30 12:39:37 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7404,3 +7404,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/thunderbird-l10n to 68.2.0 [ryoon 2019-10-30]
 	Updated lang/nim to 1.0.2 [ryoon 2019-10-30]
 	Removed databases/luma [kamil 2019-10-30]
+	Removed misc/tellico [kamil 2019-10-30]
