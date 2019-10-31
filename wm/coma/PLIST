@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2019/08/16 14:07:27 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/10/31 10:30:22 fcambus Exp $
 bin/coma
+bin/coma-cmd
+bin/coma-remote
 man/man1/coma.1
