@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.71 2019/10/01 15:15:33 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.72 2019/10/31 23:19:52 wiz Exp $
 bin/thunderbird
 lib/thunderbird/actors/AudioPlaybackChild.jsm
 lib/thunderbird/actors/AutoplayChild.jsm
@@ -2464,11 +2464,11 @@ lib/thunderbird/chrome/devtools/skin/webconsole.css
 lib/thunderbird/chrome/devtools/skin/widgets.css
 ${PLIST.nobranding}lib/thunderbird/chrome/en-US/locale/branding/brand.dtd
 ${PLIST.nobranding}lib/thunderbird/chrome/en-US/locale/branding/brand.properties
-${PLIST.branding}lib/thunderbird/chrome/en-US/locale/en-US/branding/brand.dtd
-${PLIST.branding}lib/thunderbird/chrome/en-US/locale/en-US/branding/brand.properties
 lib/thunderbird/chrome/en-US/locale/en-US/alerts/alert.dtd
 lib/thunderbird/chrome/en-US/locale/en-US/alerts/alert.properties
 lib/thunderbird/chrome/en-US/locale/en-US/autoconfig/autoconfig.properties
+${PLIST.branding}lib/thunderbird/chrome/en-US/locale/en-US/branding/brand.dtd
+${PLIST.branding}lib/thunderbird/chrome/en-US/locale/en-US/branding/brand.properties
 lib/thunderbird/chrome/en-US/locale/en-US/chat/accounts.dtd
 lib/thunderbird/chrome/en-US/locale/en-US/chat/accounts.properties
 lib/thunderbird/chrome/en-US/locale/en-US/chat/commands.properties
