@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2019/07/20 23:40:05 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2019/10/31 00:32:16 gdt Exp $
 
-DISTNAME=	paho-mqtt-1.4.0
+DISTNAME=	paho-mqtt-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://files.pythonhosted.org/packages/25/63/db25e62979c2a716a74950c9ed658dce431b5cb01fde29eb6cba9489a904/
+MASTER_SITES=	https://files.pythonhosted.org/packages/59/11/1dd5c70f0f27a88a3a05772cd95f6087ac479fac66d9c7752ee5e16ddbbc/
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.eclipse.org/paho/

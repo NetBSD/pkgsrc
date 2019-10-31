@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/07/20 23:40:05 gdt Exp $
+$NetBSD: distinfo,v 1.2 2019/10/31 00:32:16 gdt Exp $
 
-SHA1 (paho-mqtt-1.4.0.tar.gz) = 5d1e2cbfb9db9985719d1e89446c898c56443f0d
-RMD160 (paho-mqtt-1.4.0.tar.gz) = 32e05e56cec24bb3e065270f6d12cead68b9b5d8
-SHA512 (paho-mqtt-1.4.0.tar.gz) = 8b161253d55279e749c3489f86dcc11f768990ec3dc643b1eb408a86a8ffd6868f2555e2041ca018ca3816780f7336285c999fe5b9e48b403278f01f97817441
-Size (paho-mqtt-1.4.0.tar.gz) = 88626 bytes
+SHA1 (paho-mqtt-1.5.0.tar.gz) = 0feb0349d4887ee738ea858cef09b76545255262
+RMD160 (paho-mqtt-1.5.0.tar.gz) = d1edc86d593af29a2bc6cf6ca269140ac082fa42
+SHA512 (paho-mqtt-1.5.0.tar.gz) = 01c23df02f86fe48f261ad136580f822f00be9909e203285f233b05377ee397dd73d16e8703b19ef13d7c7b0efdfc9905da46a50d8603e03bf708b4639432ab3
+Size (paho-mqtt-1.5.0.tar.gz) = 99525 bytes
