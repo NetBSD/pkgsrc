@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4673 2019/10/31 16:30:19 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4674 2019/10/31 16:59:13 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7452,3 +7452,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-Test2-Suite to 0.000126 [mef 2019-10-31]
 	Updated security/sudo to 1.8.28nb2 [triaxx 2019-10-31]
 	Updated fonts/harfbuzz to 2.6.4 [nia 2019-10-31]
+	Removed net/unison2.32 [gdt 2019-10-31]
+	Removed net/unison2.40 [gdt 2019-10-31]
