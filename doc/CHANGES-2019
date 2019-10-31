@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4675 2019/10/31 18:34:23 pgoyette Exp $
+$NetBSD: CHANGES-2019,v 1.4676 2019/10/31 22:57:50 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7455,3 +7455,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed net/unison2.32 [gdt 2019-10-31]
 	Removed net/unison2.40 [gdt 2019-10-31]
 	Updated sysutils/decode-dimms to 4.1-20191002nb2 [pgoyette 2019-10-31]
+	Updated parallel/parallel to 20190922 [mef 2019-10-31]
