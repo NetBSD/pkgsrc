@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4671 2019/10/31 14:19:18 mef Exp $
+$NetBSD: CHANGES-2019,v 1.4672 2019/10/31 14:43:48 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7450,3 +7450,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-Test2-Plugin-NoWarnings to 0.08 [mef 2019-10-31]
 	Updated security/kpcli to 3.3 [nia 2019-10-31]
 	Updated devel/p5-Test2-Suite to 0.000126 [mef 2019-10-31]
+	Updated security/sudo to 1.8.28nb2 [triaxx 2019-10-31]
