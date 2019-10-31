@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2019/10/10 15:43:44 prlw1 Exp $
+# $NetBSD: Makefile,v 1.57 2019/10/31 11:22:15 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -62,6 +62,9 @@ PKG_USERS_VARS=		CLAMAV_USER
 EGDIR=		${PREFIX}/share/examples/clamav
 
 CONF_SAMPLES=		clamd.conf freshclam.conf
+
+.include "options.mk"
+
 OWN_DIRS_PERMS=		${CLAMAV_DBDIR} ${CLAMAV_USER} ${CLAMAV_GROUP} 0775
 CONF_FILES=		# empty
 CONF_FILES_PERMS=	# empty
@@ -70,8 +73,6 @@ CONF_FILES+=		${EGDIR}/${i} ${PKG_SYSCONFDIR}/${i}
 .endfor
 
 INSTALLATION_DIRS+=	${EGDIR}
-
-.include "options.mk"
 
 post-install:
 .for i in ${CONF_SAMPLES}
