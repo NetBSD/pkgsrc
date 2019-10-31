@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2019/10/29 09:18:08 fcambus Exp $
+$NetBSD: distinfo,v 1.11 2019/10/31 10:45:34 fcambus Exp $
 
-SHA1 (logswan-2.1.0.tar.gz) = 76aa8599f0f96ab7bf054f0d10ecb3ac1df49c6a
-RMD160 (logswan-2.1.0.tar.gz) = c9f156d9c8283381bb7f2a65366aa63aed1eb053
-SHA512 (logswan-2.1.0.tar.gz) = 758166da111cf80a22982b1830e76dfde244d1464095e8cf984c94ad2c2b2e37bae6182c4b16cadde9d4ddfb86d3ac407c38f8fc6a4fe7f98e69e17f5fb09ba7
-Size (logswan-2.1.0.tar.gz) = 19501 bytes
+SHA1 (logswan-2.1.1.tar.gz) = 525cf2a766b2f563ed3af09d4d91aab8f60812e4
+RMD160 (logswan-2.1.1.tar.gz) = 949c9a640c71e4ded655873f85366930c62098f9
+SHA512 (logswan-2.1.1.tar.gz) = 9231e5bab2eb46887bec0e55484b9b600d7ed64134c1476aafc0616ca0116eb0756fff82cd3e293f9036019292ec1153ef057476fddc428dbd94d2255bcaf835
+Size (logswan-2.1.1.tar.gz) = 19942 bytes
