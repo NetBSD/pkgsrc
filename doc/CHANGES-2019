@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4674 2019/10/31 16:59:13 gdt Exp $
+$NetBSD: CHANGES-2019,v 1.4675 2019/10/31 18:34:23 pgoyette Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7454,3 +7454,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated fonts/harfbuzz to 2.6.4 [nia 2019-10-31]
 	Removed net/unison2.32 [gdt 2019-10-31]
 	Removed net/unison2.40 [gdt 2019-10-31]
+	Updated sysutils/decode-dimms to 4.1-20191002nb2 [pgoyette 2019-10-31]
