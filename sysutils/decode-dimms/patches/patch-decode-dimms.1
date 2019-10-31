@@ -1,4 +1,4 @@
-$NetBSD: patch-decode-dimms.1,v 1.1 2018/07/25 02:05:26 pgoyette Exp $
+$NetBSD: patch-decode-dimms.1,v 1.2 2019/10/31 18:33:40 pgoyette Exp $
 
 Document the -s option (use spdmem(4)'s sysctl for input)
 
@@ -9,7 +9,7 @@ Document the -s option (use spdmem(4)'s sysctl for input)
  .SH SYNOPSIS
  .B decode-dimms
 -[-c] [-f [-b]] [-x|-X file [files..]]
-+[-c] [-f [-b]] [-x|-X|-s file [files..]]
++[-c] [-f [-b]] [-x|-X|-s] file ...
  .br
  .B decode-dimms
  -h
@@ -23,13 +23,19 @@ Document the -s option (use spdmem(4)'s sysctl for input)
  .SH PARAMETERS
  .TP
  .B \-f, --format
-@@ -60,9 +59,11 @@
+@@ -60,9 +59,17 @@
  .B \-X
  Same as -x except treat multibyte hex data as little endian
  .TP
 +.B \-s
 +Read the SPD data from the sysctl (9) node hw.<file>.spd_data instead of
 +from a file.
++One of
++.B \-x,
++.B \-X,
++or
++.B \-s
++must be specified.
 +.TP
  .B \-h, --help
  Display the usage summary
