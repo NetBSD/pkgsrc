@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2019/02/14 09:01:45 adam Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.5 2019/10/31 10:24:52 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/joblib/__init__.py
 ${PYSITELIB}/joblib/__init__.pyc
 ${PYSITELIB}/joblib/__init__.pyo
@@ -45,6 +48,9 @@ ${PYSITELIB}/joblib/externals/cloudpickle/__init__.pyo
 ${PYSITELIB}/joblib/externals/cloudpickle/cloudpickle.py
 ${PYSITELIB}/joblib/externals/cloudpickle/cloudpickle.pyc
 ${PYSITELIB}/joblib/externals/cloudpickle/cloudpickle.pyo
+${PYSITELIB}/joblib/externals/cloudpickle/cloudpickle_fast.py
+${PYSITELIB}/joblib/externals/cloudpickle/cloudpickle_fast.pyc
+${PYSITELIB}/joblib/externals/cloudpickle/cloudpickle_fast.pyo
 ${PYSITELIB}/joblib/externals/loky/__init__.py
 ${PYSITELIB}/joblib/externals/loky/__init__.pyc
 ${PYSITELIB}/joblib/externals/loky/__init__.pyo
@@ -99,9 +105,9 @@ ${PYSITELIB}/joblib/externals/loky/backend/queues.pyo
 ${PYSITELIB}/joblib/externals/loky/backend/reduction.py
 ${PYSITELIB}/joblib/externals/loky/backend/reduction.pyc
 ${PYSITELIB}/joblib/externals/loky/backend/reduction.pyo
-${PYSITELIB}/joblib/externals/loky/backend/semaphore_tracker.py
-${PYSITELIB}/joblib/externals/loky/backend/semaphore_tracker.pyc
-${PYSITELIB}/joblib/externals/loky/backend/semaphore_tracker.pyo
+${PYSITELIB}/joblib/externals/loky/backend/resource_tracker.py
+${PYSITELIB}/joblib/externals/loky/backend/resource_tracker.pyc
+${PYSITELIB}/joblib/externals/loky/backend/resource_tracker.pyo
 ${PYSITELIB}/joblib/externals/loky/backend/semlock.py
 ${PYSITELIB}/joblib/externals/loky/backend/semlock.pyc
 ${PYSITELIB}/joblib/externals/loky/backend/semlock.pyo
