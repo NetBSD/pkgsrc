@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4664 2019/10/31 10:30:35 fcambus Exp $
+$NetBSD: CHANGES-2019,v 1.4665 2019/10/31 10:45:46 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7438,3 +7438,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/py-crontab to 2.4.0 [adam 2019-10-31]
 	Updated devel/py-joblib to 0.14.0 [adam 2019-10-31]
 	Updated wm/coma to 1.1 [fcambus 2019-10-31]
+	Updated www/logswan to 2.1.1 [fcambus 2019-10-31]
