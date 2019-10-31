@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.196 2019/10/26 12:18:49 nia Exp $
+# $NetBSD: Makefile,v 1.197 2019/10/31 03:05:26 jnemeth Exp $
 #
 
 COMMENT=	Editors
@@ -63,8 +63,8 @@ SUBDIR+=	kakoune
 SUBDIR+=	kate
 SUBDIR+=	kile
 SUBDIR+=	kilo
-SUBDIR+=	le
 SUBDIR+=	l3afpad
+SUBDIR+=	le
 SUBDIR+=	leafpad
 SUBDIR+=	leim20
 SUBDIR+=	leim21
