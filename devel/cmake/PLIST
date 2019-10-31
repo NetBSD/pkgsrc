@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.57 2019/08/02 04:46:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.58 2019/10/31 13:30:31 adam Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -2570,6 +2570,7 @@ share/cmake-${CMAKE_API}/Templates/MSBuild/FlagTables/v141_CL.json
 share/cmake-${CMAKE_API}/Templates/MSBuild/FlagTables/v141_CSharp.json
 share/cmake-${CMAKE_API}/Templates/MSBuild/FlagTables/v141_Link.json
 share/cmake-${CMAKE_API}/Templates/MSBuild/FlagTables/v142_CL.json
+share/cmake-${CMAKE_API}/Templates/MSBuild/FlagTables/v142_CSharp.json
 share/cmake-${CMAKE_API}/Templates/MSBuild/FlagTables/v142_Link.json
 share/cmake-${CMAKE_API}/Templates/MSBuild/FlagTables/v14_LIB.json
 share/cmake-${CMAKE_API}/Templates/MSBuild/FlagTables/v14_MASM.json
