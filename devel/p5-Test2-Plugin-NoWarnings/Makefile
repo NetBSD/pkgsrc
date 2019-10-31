@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2019/08/11 13:20:39 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2019/10/31 14:07:53 mef Exp $
 
-DISTNAME=		Test2-Plugin-NoWarnings-0.06
+DISTNAME=		Test2-Plugin-NoWarnings-0.08
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		2
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DR/DROLSKY/}
 
@@ -13,8 +12,8 @@ LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		p5-Test2-Suite-[0-9]*:../../devel/p5-Test2-Suite
 # for make test
-BUILD_DEPENDS+=		p5-Sub-Info-[0-9]*:../../devel/p5-Sub-Info
-BUILD_DEPENDS+=		p5-Term-Table-[0-9]*:../../devel/p5-Term-Table
+TEST_DEPENDS+=		p5-Sub-Info-[0-9]*:../../devel/p5-Sub-Info
+TEST_DEPENDS+=		p5-Term-Table-[0-9]*:../../devel/p5-Term-Table
 
 PERL5_PACKLIST=		auto/Test2/Plugin/NoWarnings/.packlist
 
