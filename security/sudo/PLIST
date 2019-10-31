@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2018/11/30 18:08:05 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.18 2019/10/31 14:43:13 triaxx Exp $
 bin/cvtsudoers
 bin/sudo
 bin/sudoedit
@@ -38,6 +38,7 @@ share/examples/sudo/sudo.conf
 share/examples/sudo/sudoers
 share/examples/sudo/syslog.conf
 ${PLIST.nls}share/locale/ast/LC_MESSAGES/sudo.mo
+${PLIST.nls}share/locale/ast/LC_MESSAGES/sudoers.mo
 ${PLIST.nls}share/locale/ca/LC_MESSAGES/sudo.mo
 ${PLIST.nls}share/locale/ca/LC_MESSAGES/sudoers.mo
 ${PLIST.nls}share/locale/cs/LC_MESSAGES/sudo.mo
@@ -100,3 +101,4 @@ ${PLIST.nls}share/locale/vi/LC_MESSAGES/sudoers.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/sudo.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/sudoers.mo
 ${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/sudo.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/sudoers.mo
