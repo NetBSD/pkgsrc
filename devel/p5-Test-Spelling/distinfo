@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:28:54 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/10/31 14:02:58 mef Exp $
 
-SHA1 (Test-Spelling-0.20.tar.gz) = 28b92405ec410aafa72a16adfeaada6a6ba37534
-RMD160 (Test-Spelling-0.20.tar.gz) = d54a42fe3186e4cc27868d1a1b48485b3f47b8f8
-SHA512 (Test-Spelling-0.20.tar.gz) = 43c401c2e61d7b2365d0cd69abc5f90a570fa3469632843ff8379ae7e85e50fe18786d89023f2aab635a805ecdadcd270ec36c19a7c1fbc5520c7c38604ff5a7
-Size (Test-Spelling-0.20.tar.gz) = 26839 bytes
+SHA1 (Test-Spelling-0.25.tar.gz) = a5c48f59c0d85753cafd20bc0063c52b03a36b98
+RMD160 (Test-Spelling-0.25.tar.gz) = d54fb1d7f2919cc0f6c3bf7349d97bae7c78a221
+SHA512 (Test-Spelling-0.25.tar.gz) = 3ecb6ab43609a340a3a2fed2e60495efa0cd118c3516eaeaa3b8d60748661fc9212c8b3b2c1b66d6b42caa2acb6f089b7bef8328d3244dbb48bc70ef29db3999
+Size (Test-Spelling-0.25.tar.gz) = 29273 bytes
