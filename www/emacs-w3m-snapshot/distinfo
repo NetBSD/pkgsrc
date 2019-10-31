@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2019/10/21 23:47:07 mef Exp $
+$NetBSD: distinfo,v 1.13 2019/10/31 22:41:44 mef Exp $
 
 SHA1 (w3m-el-snapshot_1.4.632+0.20190920.1116.c9cdb7e.orig.tar.gz) = 30b6373819a34000d96d3a81c0260ecf523d2827
 RMD160 (w3m-el-snapshot_1.4.632+0.20190920.1116.c9cdb7e.orig.tar.gz) = 986ad61041e8f66519a8a72c5664743dd365acf0
@@ -6,3 +6,4 @@ SHA512 (w3m-el-snapshot_1.4.632+0.20190920.1116.c9cdb7e.orig.tar.gz) = 34dbf0d83
 Size (w3m-el-snapshot_1.4.632+0.20190920.1116.c9cdb7e.orig.tar.gz) = 1061974 bytes
 SHA1 (patch-Makefile.in) = 5e3c1d6335c72c2644f3b6136dace3358a6ba347
 SHA1 (patch-w3m.el) = a4c14deed274e984f854255513ce49dbd320eb83
+SHA1 (patch-w3mhack.el) = 074487089804e8685d53f7cf5918843945990710
