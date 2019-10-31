@@ -1,6 +1,7 @@
-$NetBSD: patch-configure,v 1.5 2019/10/10 15:41:30 prlw1 Exp $
+$NetBSD: patch-configure,v 1.6 2019/10/31 11:22:15 jperkin Exp $
 
 Portability fixes.
+Move the checks for $have_milter to after it is defined.
 
 --- configure.orig	2019-10-01 17:24:08.000000000 +0000
 +++ configure
@@ -33,7 +34,20 @@ Portability fixes.
      CHECK_CPPFLAGS=$CHECK_CFLAGS
  else
  
-@@ -29013,10 +29013,10 @@ fi
+@@ -24689,6 +24689,12 @@ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: checking for systemd system unit installation directory... $with_systemdsystemunitdir" >&5
+ $as_echo "checking for systemd system unit installation directory... $with_systemdsystemunitdir" >&6; }
+ 
++# Check whether --enable-milter was given.
++if test "${enable_milter+set}" = set; then :
++  enableval=$enable_milter; have_milter=$enableval
++else
++  have_milter="no"
++fi
+ 
+ if test "$have_milter" = "yes"; then
+ 
+@@ -29013,10 +29019,10 @@ fi
  
  			;;
  		*)
@@ -46,7 +60,7 @@ Portability fixes.
    BUILD_CLAMONACC_TRUE=
    BUILD_CLAMONACC_FALSE='#'
  else
-@@ -29027,7 +29027,7 @@ fi
+@@ -29027,7 +29033,7 @@ fi
                          ;;
  	esac
  else
@@ -55,3 +69,16 @@ Portability fixes.
    BUILD_CLAMONACC_TRUE=
    BUILD_CLAMONACC_FALSE='#'
  else
+@@ -29296,12 +29302,6 @@ if test $ac_cv_func_setpgrp_void = yes;
+ fi
+ fi
+ 
+-# Check whether --enable-milter was given.
+-if test "${enable_milter+set}" = set; then :
+-  enableval=$enable_milter; have_milter=$enableval
+-else
+-  have_milter="no"
+-fi
+ 
+ 
+ # Check whether --enable-id-check was given.
