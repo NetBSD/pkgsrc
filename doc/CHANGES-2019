@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4662 2019/10/31 08:41:11 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4663 2019/10/31 10:25:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7433,3 +7433,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/py-paho-mqtt to 1.5.0 [gdt 2019-10-31]
 	Updated devel/py-xdis to 4.1.2 [adam 2019-10-31]
 	Updated www/py-asgiref to 3.2.3 [adam 2019-10-31]
+	Updated www/py-autobahn to 19.10.1 [adam 2019-10-31]
+	Updated www/py-channels to 2.3.1 [adam 2019-10-31]
+	Updated sysutils/py-crontab to 2.4.0 [adam 2019-10-31]
+	Updated devel/py-joblib to 0.14.0 [adam 2019-10-31]
