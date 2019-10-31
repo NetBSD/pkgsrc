@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4665 2019/10/31 10:45:46 fcambus Exp $
+$NetBSD: CHANGES-2019,v 1.4666 2019/10/31 10:59:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7439,3 +7439,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-joblib to 0.14.0 [adam 2019-10-31]
 	Updated wm/coma to 1.1 [fcambus 2019-10-31]
 	Updated www/logswan to 2.1.1 [fcambus 2019-10-31]
+	Updated net/haproxy to 2.0.8 [adam 2019-10-31]
+	Updated devel/ccache to 3.7.5 [adam 2019-10-31]
