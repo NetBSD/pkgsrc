@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.859 2019/10/30 13:53:26 kamil Exp $
+# $NetBSD: Makefile,v 1.860 2019/10/31 03:16:23 jnemeth Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -352,8 +352,8 @@ SUBDIR+=	qt4-tools
 SUBDIR+=	qt5
 SUBDIR+=	qt5-mysql
 SUBDIR+=	qt5-odbc
-SUBDIR+=	qt5-qscintilla
 SUBDIR+=	qt5-psql
+SUBDIR+=	qt5-qscintilla
 SUBDIR+=	qt5-qtbase
 SUBDIR+=	qt5-qtcharts
 SUBDIR+=	qt5-qtconnectivity
