@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4670 2019/10/31 14:09:23 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4671 2019/10/31 14:19:18 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7442,6 +7442,11 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/haproxy to 2.0.8 [adam 2019-10-31]
 	Updated devel/ccache to 3.7.5 [adam 2019-10-31]
 	Updated devel/cmake to 3.15.5 [adam 2019-10-31]
+	Updated devel/p5-Test-Simple to 1.302168 [mef 2019-10-31]
 	Updated audio/fluidsynth to 2.0.8 [nia 2019-10-31]
+	Updated devel/p5-Test-Spelling to 0.25 [mef 2019-10-31]
+	Updated devel/p5-Test-Taint to 1.08 [mef 2019-10-31]
 	Updated audio/mpg123 to 1.25.13 [nia 2019-10-31]
+	Updated devel/p5-Test2-Plugin-NoWarnings to 0.08 [mef 2019-10-31]
 	Updated security/kpcli to 3.3 [nia 2019-10-31]
+	Updated devel/p5-Test2-Suite to 0.000126 [mef 2019-10-31]
