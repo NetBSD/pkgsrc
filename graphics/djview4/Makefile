@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2019/10/27 10:10:19 kamil Exp $
+# $NetBSD: Makefile,v 1.40 2019/11/01 23:34:51 kamil Exp $
 #
 
 DISTNAME=	djview-4.10.6
@@ -24,6 +24,8 @@ SUBST_FILES.nsdejavu=	nsdejavu/nsdejavu.c
 SUBST_SED.nsdejavu=	-e 's:/usr/local/lib:${LOCALBASE}/lib:'
 
 .include "../../graphics/djvulibre-lib/buildlink3.mk"
+BUILDLINK_DEPMETHOD.qt5-qttools= build
+.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
