@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2019/03/04 13:18:05 nia Exp $
+# $NetBSD: Makefile,v 1.6 2019/11/01 17:39:34 nia Exp $
 
-DISTNAME=	rgbds-0.3.8
+DISTNAME=	rgbds-0.3.9
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rednex/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -13,7 +13,15 @@ LICENSE=	mit
 EXTRACT_USING=	bsdtar
 USE_TOOLS+=	gmake pkg-config lex bison
 
+MAKE_FLAGS+=	Q= # Be noisy.
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
+MAKE_FLAGS+=	PREFIX=${PREFIX}
+MAKE_FLAGS+=	YACC=${YACC}
+MAKE_FLAGS+=	LEX=${LEX}
 MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
+
+CHECK_PORTABILITY_SKIP=	test/pokecrystal/tools/compare2.sh
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
