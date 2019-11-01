@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2019/11/01 16:21:11 nia Exp $
+
+Shell portability.
+
+--- configure.ac.orig	2018-05-11 21:26:13.000000000 +0000
++++ configure.ac
+@@ -864,7 +864,7 @@ AM_CONDITIONAL(GNOME3_APPLET, test "x$en
+ 
+ if test "x$enable_gnome3_applet" = xyes; then
+   AC_ARG_WITH([libpanel-applet-dir], [], [LIBPANEL_APPLET_DIR=$withval], [LIBPANEL_APPLET_DIR=""])
+-  if test "$LIBPANEL_APPLET_DIR" == ""; then
++  if test "$LIBPANEL_APPLET_DIR" = ""; then
+     LIBPANEL_APPLET_DIR=`$PKG_CONFIG --variable=libpanel_applet_dir libpanel-applet`
+   fi
+   AC_SUBST(LIBPANEL_APPLET_DIR)

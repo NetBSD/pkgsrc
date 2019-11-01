@@ -1,8 +1,8 @@
-$NetBSD: patch-scm_Makefile.am,v 1.1 2014/04/20 06:40:00 ryoon Exp $
+$NetBSD: patch-scm_Makefile.am,v 1.2 2019/11/01 16:21:11 nia Exp $
 
 https://github.com/uim/uim/pull/41
 
---- scm/Makefile.am.orig	2013-06-30 04:26:20.000000000 +0000
+--- scm/Makefile.am.orig	2018-01-06 06:55:20.000000000 +0000
 +++ scm/Makefile.am
 @@ -1,8 +1,9 @@
  scmdir = $(pkgdatadir)
