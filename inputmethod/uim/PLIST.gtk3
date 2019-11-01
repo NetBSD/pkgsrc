@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST.gtk3,v 1.1 2019/11/01 16:21:11 nia Exp $
+bin/uim-im-switcher-gtk3
+bin/uim-input-pad-ja-gtk3
+bin/uim-pref-gtk3
+bin/uim-toolbar-gtk3
+bin/uim-toolbar-gtk3-systray
+lib/gtk-3.0/3.0.0/immodules/im-uim.la
+libexec/uim-candwin-gtk3
+libexec/uim-candwin-horizontal-gtk3
+libexec/uim-candwin-tbl-gtk3
