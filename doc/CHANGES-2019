@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4682 2019/11/01 17:53:51 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4683 2019/11/01 19:42:16 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7462,3 +7462,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/dnscrypt-proxy2 to 2.0.31 [nia 2019-11-01]
 	Updated www/gitea to 1.9.5 [nia 2019-11-01]
 	Updated emulators/dosbox-x to 0.82.23 [nia 2019-11-01]
+	Updated devel/ocaml-dune to 1.11.4 [maya 2019-11-01]
