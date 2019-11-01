@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4679 2019/11/01 17:39:43 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4680 2019/11/01 17:42:03 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7459,3 +7459,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated inputmethod/uim to 1.8.8 [nia 2019-11-01]
 	Updated mail/balsa to 2.5.9 [nia 2019-11-01]
 	Updated devel/rgbds to 0.3.9 [nia 2019-11-01]
+	Updated net/dnscrypt-proxy2 to 2.0.31 [nia 2019-11-01]
