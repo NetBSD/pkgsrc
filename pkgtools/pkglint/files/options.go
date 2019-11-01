@@ -1,7 +1,5 @@
 package pkglint
 
-import "path"
-
 func CheckLinesOptionsMk(mklines *MkLines) {
 	ck := OptionsLinesChecker{
 		mklines,
@@ -42,10 +40,13 @@ func (ck *OptionsLinesChecker) Check() {
 		mlex.Skip()
 	}
 
-	for !mlex.EOF() {
-		ck.handleLowerLine(mlex.CurrentMkLine())
-		mlex.Skip()
-	}
+	i := 0
+	mklines.ForEach(func(mkline *MkLine) {
+		if i >= mlex.index {
+			ck.handleLowerLine(mkline)
+		}
+		i++
+	})
 
 	ck.checkOptionsMismatch()
 
@@ -81,7 +82,10 @@ func (ck *OptionsLinesChecker) handleUpperLine(mkline *MkLine) bool {
 
 	case mkline.IsVarassign():
 		switch mkline.Varcanon() {
-		case "PKG_SUPPORTED_OPTIONS", "PKG_OPTIONS_GROUP.*", "PKG_OPTIONS_SET.*":
+		case "PKG_SUPPORTED_OPTIONS",
+			"PKG_SUPPORTED_OPTIONS.*",
+			"PKG_OPTIONS_GROUP.*",
+			"PKG_OPTIONS_SET.*":
 			for _, option := range mkline.ValueFields(mkline.Value()) {
 				if !containsVarRef(option) {
 					ck.declaredOptions[option] = mkline
@@ -113,48 +117,64 @@ func (ck *OptionsLinesChecker) handleUpperLine(mkline *MkLine) bool {
 }
 
 func (ck *OptionsLinesChecker) handleLowerLine(mkline *MkLine) {
-	if mkline.IsDirective() {
-		directive := mkline.Directive()
-		if directive == "if" || directive == "elif" {
-			cond := mkline.Cond()
-			if cond != nil {
-				ck.handleLowerCondition(mkline, cond)
-			}
-		}
+	if !mkline.IsDirective() {
+		return
 	}
+
+	directive := mkline.Directive()
+	if directive != "if" && directive != "elif" {
+		return
+	}
+
+	cond := mkline.Cond()
+	if cond == nil {
+		return
+	}
+
+	ck.handleLowerCondition(mkline, cond)
 }
 
 func (ck *OptionsLinesChecker) handleLowerCondition(mkline *MkLine, cond *MkCond) {
 
-	recordUsedOption := func(varuse *MkVarUse) {
+	recordOption := func(option string) {
+		if containsVarRef(option) {
+			return
+		}
+
+		ck.handledOptions[option] = mkline
+		ck.optionsInDeclarationOrder = append(ck.optionsInDeclarationOrder, option)
+	}
+
+	recordVarUse := func(varuse *MkVarUse) {
 		if varuse.varname != "PKG_OPTIONS" || len(varuse.modifiers) != 1 {
 			return
 		}
 
 		m, positive, pattern, exact := varuse.modifiers[0].MatchMatch()
-		if !m || !positive || containsVarRef(pattern) {
+		if !m || !positive {
 			return
 		}
 
-		if exact {
-			option := pattern
-			ck.handledOptions[option] = mkline
-			ck.optionsInDeclarationOrder = append(ck.optionsInDeclarationOrder, option)
-			return
-		}
+		if optionVarUse := ToVarUse(pattern); optionVarUse != nil {
+			for _, option := range ck.mklines.ExpandLoopVar(optionVarUse.varname) {
+				recordOption(option)
+			}
 
-		for declaredOption := range ck.declaredOptions {
-			matched, err := path.Match(pattern, declaredOption)
-			if err == nil && matched {
-				ck.handledOptions[declaredOption] = mkline
-				ck.optionsInDeclarationOrder = append(ck.optionsInDeclarationOrder, declaredOption)
+		} else if exact {
+			recordOption(pattern)
+
+		} else {
+			for declaredOption := range ck.declaredOptions {
+				if pathMatches(pattern, declaredOption) {
+					recordOption(declaredOption)
+				}
 			}
 		}
 	}
 
 	cond.Walk(&MkCondCallback{
-		Empty: recordUsedOption,
-		Var:   recordUsedOption})
+		Empty: recordVarUse,
+		Var:   recordVarUse})
 
 	if cond.Empty != nil && cond.Empty.varname == "PKG_OPTIONS" && mkline.HasElseBranch() {
 		mkline.Notef("The positive branch of the .if/.else should be the one where the option is set.")

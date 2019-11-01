@@ -387,3 +387,101 @@ func (s *Suite) Test_CheckLinesOptionsMk__combined_option_handling_coverage(c *c
 	t.CheckOutputLines(
 		"WARN: options.mk:4: Option \"opt-variant\" should be handled below in an .if block.")
 }
+
+func (s *Suite) Test_CheckLinesOptionsMk__options_in_for_loop(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpOption("idea", "")
+	t.SetUpOption("md2", "")
+	t.SetUpOption("md5", "")
+	t.SetUpOption("other", "")
+	t.CreateFileLines("mk/bsd.options.mk")
+	t.SetUpPackage("category/package",
+		".include \"options.mk\"")
+	t.CreateFileLines("category/package/options.mk",
+		MkCvsID,
+		"",
+		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.package",
+		"PKG_SUPPORTED_OPTIONS=\tidea md2 md5 other",
+		"",
+		".include \"../../mk/bsd.options.mk\"",
+		"",
+		".for alg in idea md2 md5",
+		".  if ${PKG_OPTIONS:M${alg}}",
+		".  endif",
+		".endfor")
+	t.FinishSetUp()
+	t.Chdir("category/package")
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"WARN: options.mk:4: Option \"other\" should be handled below in an .if block.")
+}
+
+func (s *Suite) Test_CheckLinesOptionsMk__indirect(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpOption("generic", "")
+	t.SetUpOption("netbsd", "")
+	t.SetUpOption("os", "")
+	t.CreateFileLines("mk/bsd.options.mk")
+	t.SetUpPackage("category/package",
+		".include \"options.mk\"")
+	t.CreateFileLines("category/package/options.mk",
+		MkCvsID,
+		"",
+		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.package",
+		"PKG_SUPPORTED_OPTIONS=\tgeneric",
+		"PKG_SUGGESTED_OPTIONS=\tgeneric",
+		"",
+		"PKG_SUPPORTED_OPTIONS.FreeBSD=\tos",
+		"PKG_SUGGESTED_OPTIONS.FreeBSD=\tos",
+		"",
+		"PKG_SUPPORTED_OPTIONS.NetBSD+=\tnetbsd os",
+		"PKG_SUGGESTED_OPTIONS.NetBSD+=\tnetbsd os",
+		"",
+		".include \"../../mk/bsd.options.mk\"",
+		"",
+		"PLIST_VARS+=\tgeneric netbsd os",
+		"",
+		".for option in ${PLIST_VARS}",
+		".  if ${PKG_OPTIONS:M${option}}",
+		"CONFIGURE_ARGS+=\t--enable-${option:S/-/_/}",
+		"PLIST.${option}=\tyes",
+		".  endif",
+		".endfor")
+	t.FinishSetUp()
+	t.Chdir("category/package")
+
+	G.Check(".")
+
+	t.CheckOutputEmpty()
+}
+
+// An unrealistic scenario, but necessary for code coverage.
+func (s *Suite) Test_CheckLinesOptionsMk__partly_indirect(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("mk/bsd.options.mk")
+	t.SetUpPackage("category/package",
+		".include \"options.mk\"")
+	t.CreateFileLines("category/package/options.mk",
+		MkCvsID,
+		"",
+		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.package",
+		"PKG_SUPPORTED_OPTIONS=\tgeneric-${OPSYS}",
+		"",
+		".include \"../../mk/bsd.options.mk\"",
+		"",
+		".for option in generic-${OPSYS}",
+		".  if ${PKG_OPTIONS:M${option}}",
+		".  endif",
+		".endfor")
+	t.FinishSetUp()
+	t.Chdir("category/package")
+
+	G.Check(".")
+
+	t.CheckOutputEmpty()
+}
