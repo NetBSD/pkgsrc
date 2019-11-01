@@ -1,8 +1,8 @@
-$NetBSD: patch-uim_uim-module-manager.c,v 1.1 2014/04/20 06:40:00 ryoon Exp $
+$NetBSD: patch-uim_uim-module-manager.c,v 1.2 2019/11/01 16:21:11 nia Exp $
 
 https://github.com/uim/uim/pull/41
 
---- uim/uim-module-manager.c.orig	2013-06-30 04:26:09.000000000 +0000
+--- uim/uim-module-manager.c.orig	2017-08-14 00:07:27.000000000 +0000
 +++ uim/uim-module-manager.c
 @@ -47,8 +47,8 @@
  #include "uim-internal.h"

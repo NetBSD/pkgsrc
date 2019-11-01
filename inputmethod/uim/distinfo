@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.31 2015/11/03 22:13:41 agc Exp $
+$NetBSD: distinfo,v 1.32 2019/11/01 16:21:11 nia Exp $
 
-SHA1 (uim-1.8.6.tar.bz2) = 43b9dbdead6797880e6cfc9c032ecb2d37d42777
-RMD160 (uim-1.8.6.tar.bz2) = 5f94218d82475ac463534ec681769f34547e5707
-SHA512 (uim-1.8.6.tar.bz2) = 26a95d3b51ef7a99108234b9af30ee7b74141cb3af13d092d4cdbf0749f630934cfd67f74b09dacc3adcdce4a390104489d68a4e2419ec07418645a9b4e5715b
-Size (uim-1.8.6.tar.bz2) = 6500739 bytes
-SHA1 (patch-af) = 9f543b90bfefc5f560e1eaac97d60af70ffed5cc
+SHA1 (uim-1.8.8.tar.bz2) = 369e0c10927d4ede8ed5434631b57ab42ca98406
+RMD160 (uim-1.8.8.tar.bz2) = 80eb077b2a53997f13f036da7cd565696441482e
+SHA512 (uim-1.8.8.tar.bz2) = 2257ae48f4f2b79039a5f6be0fc740e218d5609e004dad9a5a1aa5d4066587ee59d0be06bc23c7d567a48901466227fedc4778b480f7184d84b0b3b4dddac9a3
+Size (uim-1.8.8.tar.bz2) = 6228743 bytes
+SHA1 (patch-configure.ac) = 741c0f4ee905218cebe0f0b86aeb1e1923a82b40
 SHA1 (patch-fep_escseq.c) = 6c25c344e5b694542a3c5bc137ae1a1d36a8c835
-SHA1 (patch-scm_Makefile.am) = c3af52e2d9d06736911c0efd9a25e0aee2c62219
-SHA1 (patch-sigscheme_configure) = 2af99374a3af542d25124737bf8cd3b67f191c03
-SHA1 (patch-sigscheme_configure.in) = 9c5c48a477ea03263488e15565e4a568ba55a125
-SHA1 (patch-sigscheme_doc_Makefile.am) = 998b9a0844853c7996f333155dfe38a183c266f4
+SHA1 (patch-fep_uim-fep.c) = 734bccf97a1f0a2ba709c0841a46fe9c9f448e92
+SHA1 (patch-scm_Makefile.am) = b4a23a7d507d8d7fe6122f3d2f50fed40589947f
+SHA1 (patch-sigscheme_configure.ac) = 221077809cfaa80cee2e52e3eaebf39b13ae5799
+SHA1 (patch-sigscheme_doc_Makefile.am) = e21e33d7eb078819ab34f9d7fdc10d7f4401a2c4
 SHA1 (patch-sigscheme_include_sigscheme_Makefile.am) = d54b38982c199b321c6ac0d8700bfe9c29084eee
-SHA1 (patch-uim_Makefile.am) = 6e3a37ee3ed2a68354b59e6dd7816017a95f15fd
-SHA1 (patch-uim_uim-module-manager.c) = 8c81edd3af3de7a2f7b7158d8c66e2082327b931
+SHA1 (patch-uim_Makefile.am) = e3a9e4dc99965c271fd6e783d42a6a136bf904b2
+SHA1 (patch-uim_uim-module-manager.c) = 345b09a209fc1ccc9ba96aa50a5adac1f2ef35ee
