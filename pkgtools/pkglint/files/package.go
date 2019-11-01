@@ -1272,6 +1272,18 @@ func (pkg *Package) checkIncludeConditionally(mkline *MkLine, indentation *Inden
 
 	key := pkg.Rel(mkline.IncludedFileFull())
 
+	explainPkgOptions := func(uncond *MkLine, cond *MkLine) {
+		if uncond.Basename == "buildlink3.mk" && containsStr(cond.ConditionalVars(), "PKG_OPTIONS") {
+			mkline.Explain(
+				"When including a dependent file, the conditions in the",
+				"buildlink3.mk file should be the same as in options.mk",
+				"or the Makefile.",
+				"",
+				"To find out the PKG_OPTIONS of this package at build time,",
+				"have a look at mk/pkg-build-options.mk.")
+		}
+	}
+
 	if indentation.IsConditional() {
 		if other := pkg.unconditionalIncludes[key]; other != nil {
 			if !pkg.Once.FirstTimeSlice("checkIncludeConditionally", mkline.Location.String(), other.Location.String()) {
@@ -1282,6 +1294,8 @@ func (pkg *Package) checkIncludeConditionally(mkline *MkLine, indentation *Inden
 				"%q is included conditionally here (depending on %s) "+
 					"and unconditionally in %s.",
 				cleanpath(mkline.IncludedFile()), strings.Join(mkline.ConditionalVars(), ", "), mkline.RefTo(other))
+
+			explainPkgOptions(other, mkline)
 		}
 
 	} else {
@@ -1295,15 +1309,7 @@ func (pkg *Package) checkIncludeConditionally(mkline *MkLine, indentation *Inden
 					"and conditionally in %s (depending on %s).",
 				cleanpath(mkline.IncludedFile()), mkline.RefTo(other), strings.Join(other.ConditionalVars(), ", "))
 
-			if mkline.Basename == "buildlink3.mk" && containsStr(other.ConditionalVars(), "PKG_OPTIONS") {
-				mkline.Explain(
-					"When including a dependent file, the conditions in the",
-					"buildlink3.mk file should be the same as in options.mk",
-					"or the Makefile.",
-					"",
-					"To find out the PKG_OPTIONS of this package at build time,",
-					"have a look at mk/pkg-build-options.mk.")
-			}
+			explainPkgOptions(mkline, other)
 		}
 	}
 
