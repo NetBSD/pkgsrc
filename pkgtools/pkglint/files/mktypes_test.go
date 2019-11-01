@@ -39,6 +39,16 @@ func (MkTokenBuilder) VarUse(varname string, modifiers ...string) *MkVarUse {
 	return &MkVarUse{varname, mods}
 }
 
+// AddCommand adds a command directly to a list of commands,
+// creating all the intermediate nodes for the syntactic representation.
+// As soon as that representation is replaced with a semantic representation,
+// this method should no longer be necessary.
+func (list *MkShList) AddCommand(command *MkShCommand) *MkShList {
+	pipeline := NewMkShPipeline(false, []*MkShCommand{command})
+	andOr := NewMkShAndOr(pipeline)
+	return list.AddAndOr(andOr)
+}
+
 func (s *Suite) Test_MkVarUse_Mod(c *check.C) {
 	t := s.Init(c)
 
@@ -53,14 +63,29 @@ func (s *Suite) Test_MkVarUse_Mod(c *check.C) {
 	test("${PATH:ts::Q}", ":ts::Q")
 }
 
-// AddCommand adds a command directly to a list of commands,
-// creating all the intermediate nodes for the syntactic representation.
-// As soon as that representation is replaced with a semantic representation,
-// this method should no longer be necessary.
-func (list *MkShList) AddCommand(command *MkShCommand) *MkShList {
-	pipeline := NewMkShPipeline(false, []*MkShCommand{command})
-	andOr := NewMkShAndOr(pipeline)
-	return list.AddAndOr(andOr)
+func (s *Suite) Test_MkVarUseModifier_MatchMatch(c *check.C) {
+	t := s.Init(c)
+
+	testFail := func(modifier string) {
+		mod := MkVarUseModifier{modifier}
+		ok, _, _, _ := mod.MatchMatch()
+		t.CheckEquals(ok, false)
+	}
+	test := func(modifier string, positive bool, pattern string, exact bool) {
+		mod := MkVarUseModifier{modifier}
+		actualOk, actualPositive, actualPattern, actualExact := mod.MatchMatch()
+		t.CheckDeepEquals(
+			[]interface{}{actualOk, actualPositive, actualPattern, actualExact},
+			[]interface{}{true, positive, pattern, exact})
+	}
+
+	testFail("")
+	testFail("X")
+
+	test("Mpattern", true, "pattern", true)
+	test("M*", true, "*", false)
+	test("M${VAR}", true, "${VAR}", false)
+	test("Npattern", false, "pattern", true)
 }
 
 func (s *Suite) Test_MkVarUseModifier_ChangesWords(c *check.C) {
