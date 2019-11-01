@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.21 2019/09/14 18:57:10 nia Exp $
+$NetBSD: distinfo,v 1.22 2019/11/01 17:24:44 nia Exp $
 
-SHA1 (balsa-2.5.7.tar.bz2) = d0b1fb03643d566a4d59117d18558bac1d7e967e
-RMD160 (balsa-2.5.7.tar.bz2) = 8177440988de8ca00e45499d9558d8778e6a0901
-SHA512 (balsa-2.5.7.tar.bz2) = dbcda781cabdc9fa79f50d04999ac94a1016371ede7ffd087d18c8e389ccaf0d92a38bebb55eddcf46428eeff438e0e799597dab51a1a7d20dc91f842d4731e4
-Size (balsa-2.5.7.tar.bz2) = 4498216 bytes
+SHA1 (balsa-2.5.9.tar.bz2) = af75aeb9ac6eb671ac2331bce2ae93d3947d40ab
+RMD160 (balsa-2.5.9.tar.bz2) = f6305e2ce733bc0fccbaeabc58c4569186b92285
+SHA512 (balsa-2.5.9.tar.bz2) = a5653053c181b0ed564221e6af2722b5734ac1b7377df06ff5164dd1f1adc415ccdcb14d59a1d62dcc1325f178fbadae1f844ca0e61a08a65449d5b691a391c7
+Size (balsa-2.5.9.tar.bz2) = 4508717 bytes
 SHA1 (patch-sounds_Makefile.in) = 5c131b93f1431bb0c6f62a44cd6dbad4e5c5edc2
 SHA1 (patch-src_sendmsg-window.c) = 1ac652d2366f952f115d1e4546a034b0dd4bcf0e
