@@ -161,6 +161,6 @@ func CheckdirCategory(dir string) {
 				recurseInto = append(recurseInto, joinPath(dir, msub.name))
 			}
 		}
-		G.Todo = append(recurseInto, G.Todo...)
+		G.Todo.PushFront(recurseInto...)
 	}
 }

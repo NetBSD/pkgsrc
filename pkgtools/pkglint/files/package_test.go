@@ -1288,6 +1288,111 @@ func (s *Suite) Test_Package_checkIncludeConditionally__conditional_and_uncondit
 		"WARN: options.mk:3: Expected definition of PKG_OPTIONS_VAR.")
 }
 
+func (s *Suite) Test_Package_checkIncludeConditionally__explain_PKG_OPTIONS_in_Makefile(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("-Wall", "--explain")
+	t.SetUpOption("zlib", "use zlib compression")
+
+	t.CreateFileLines("mk/bsd.options.mk",
+		MkCvsID)
+	t.CreateFileLines("devel/zlib/buildlink3.mk",
+		MkCvsID)
+	t.SetUpPackage("category/package",
+		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.package",
+		"PKG_SUPPORTED_OPTIONS=\tzlib",
+		"",
+		".include \"../../mk/bsd.options.mk\"",
+		"",
+		".if ${PKG_OPTIONS:Mzlib}",
+		".include \"../../devel/zlib/buildlink3.mk\"",
+		".endif")
+	t.CreateFileDummyBuildlink3("category/package/buildlink3.mk",
+		".include \"../../devel/zlib/buildlink3.mk\"")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.checkdirPackage(".")
+
+	t.CheckOutputLines(
+		"WARN: Makefile:26: "+
+			"\"../../devel/zlib/buildlink3.mk\" is included conditionally here "+
+			"(depending on PKG_OPTIONS) and unconditionally in buildlink3.mk:12.",
+		"",
+		"\tWhen including a dependent file, the conditions in the buildlink3.mk",
+		"\tfile should be the same as in options.mk or the Makefile.",
+		"",
+		"\tTo find out the PKG_OPTIONS of this package at build time, have a",
+		"\tlook at mk/pkg-build-options.mk.",
+		"")
+}
+
+func (s *Suite) Test_Package_checkIncludeConditionally__no_explanation(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("-Wall", "--explain")
+	t.CreateFileLines("devel/zlib/buildlink3.mk",
+		MkCvsID)
+	t.SetUpPackage("category/package",
+		".if ${OPSYS} == Linux",
+		".include \"../../devel/zlib/buildlink3.mk\"",
+		".endif")
+	t.CreateFileDummyBuildlink3("category/package/buildlink3.mk",
+		".include \"../../devel/zlib/buildlink3.mk\"")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.checkdirPackage(".")
+
+	t.CheckOutputLines(
+		"WARN: Makefile:21: " +
+			"\"../../devel/zlib/buildlink3.mk\" is included conditionally here " +
+			"(depending on OPSYS) and unconditionally in buildlink3.mk:12.")
+}
+
+func (s *Suite) Test_Package_checkIncludeConditionally__explain_PKG_OPTIONS_in_options_mk(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("-Wall", "--explain")
+	t.SetUpOption("zlib", "use zlib compression")
+
+	t.CreateFileLines("mk/bsd.options.mk",
+		MkCvsID)
+	t.CreateFileLines("devel/zlib/buildlink3.mk",
+		MkCvsID)
+	t.SetUpPackage("category/package",
+		".include \"options.mk\"")
+	t.CreateFileLines("category/package/options.mk",
+		MkCvsID,
+		"",
+		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.package",
+		"PKG_SUPPORTED_OPTIONS=\tzlib",
+		"",
+		".include \"../../mk/bsd.options.mk\"",
+		"",
+		".if ${PKG_OPTIONS:Mzlib}",
+		".include \"../../devel/zlib/buildlink3.mk\"",
+		".endif")
+	t.CreateFileDummyBuildlink3("category/package/buildlink3.mk",
+		".include \"../../devel/zlib/buildlink3.mk\"")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.checkdirPackage(".")
+
+	t.CheckOutputLines(
+		"WARN: buildlink3.mk:12: "+
+			"\"../../devel/zlib/buildlink3.mk\" is included unconditionally here "+
+			"and conditionally in options.mk:9 (depending on PKG_OPTIONS).",
+		"",
+		"\tWhen including a dependent file, the conditions in the buildlink3.mk",
+		"\tfile should be the same as in options.mk or the Makefile.",
+		"",
+		"\tTo find out the PKG_OPTIONS of this package at build time, have a",
+		"\tlook at mk/pkg-build-options.mk.",
+		"")
+}
+
 func (s *Suite) Test_Package_checkIncludeConditionally__unconditionally_first(c *check.C) {
 	t := s.Init(c)
 

@@ -31,7 +31,7 @@ func CheckdirToplevel(dir string) {
 		if G.Opts.CheckGlobal {
 			G.InterPackage.Enable()
 		}
-		G.Todo = append(append([]string(nil), ctx.subdirs...), G.Todo...)
+		G.Todo.PushFront(ctx.subdirs...)
 	}
 }
 

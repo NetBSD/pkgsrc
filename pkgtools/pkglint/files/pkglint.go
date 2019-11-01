@@ -26,12 +26,12 @@ type Pkglint struct {
 	Pkgsrc Pkgsrc   // Global data, mostly extracted from mk/*.
 	Pkg    *Package // The package that is currently checked, or nil.
 
-	Todo           []string // The files or directories that still need to be checked.
-	Wip            bool     // Is the currently checked file or package from pkgsrc-wip?
-	Infrastructure bool     // Is the currently checked file from the pkgsrc infrastructure?
-	Testing        bool     // Is pkglint in self-testing mode (only during development)?
-	Experimental   bool     // For experimental features, only enabled individually in tests
-	Username       string   // For checking against OWNER and MAINTAINER
+	Todo           StringQueue // The files or directories that still need to be checked.
+	Wip            bool        // Is the currently checked file or package from pkgsrc-wip?
+	Infrastructure bool        // Is the currently checked file from the pkgsrc infrastructure?
+	Testing        bool        // Is pkglint in self-testing mode (only during development)?
+	Experimental   bool        // For experimental features, only enabled individually in tests
+	Username       string      // For checking against OWNER and MAINTAINER
 
 	cvsEntriesDir string // Cached to avoid I/O
 	cvsEntries    map[string]CvsEntry
@@ -190,10 +190,8 @@ func (pkglint *Pkglint) Main(stdout io.Writer, stderr io.Writer, args []string) 
 
 	pkglint.prepareMainLoop()
 
-	for len(pkglint.Todo) > 0 {
-		item := pkglint.Todo[0]
-		pkglint.Todo = pkglint.Todo[1:]
-		pkglint.Check(item)
+	for !pkglint.Todo.Empty() {
+		pkglint.Check(pkglint.Todo.Pop())
 	}
 
 	pkglint.Pkgsrc.checkToplevelUnusedLicenses()
@@ -258,7 +256,7 @@ func (pkglint *Pkglint) setUpProfiling() func() {
 }
 
 func (pkglint *Pkglint) prepareMainLoop() {
-	firstDir := pkglint.Todo[0]
+	firstDir := pkglint.Todo.Front()
 	if fileExists(firstDir) {
 		firstDir = path.Dir(firstDir)
 	}
@@ -333,12 +331,11 @@ func (pkglint *Pkglint) ParseCommandLine(args []string) int {
 		return 0
 	}
 
-	pkglint.Todo = nil
 	for _, arg := range pkglint.Opts.args {
-		pkglint.Todo = append(pkglint.Todo, filepath.ToSlash(arg))
+		pkglint.Todo.Push(filepath.ToSlash(arg))
 	}
-	if len(pkglint.Todo) == 0 {
-		pkglint.Todo = []string{"."}
+	if pkglint.Todo.Empty() {
+		pkglint.Todo.Push(".")
 	}
 
 	return -1
