@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2019/10/29 05:12:47 gutteridge Exp $
+# $NetBSD: Makefile,v 1.36 2019/11/01 06:10:23 gutteridge Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -193,6 +193,10 @@ BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 # compat80.
 .if ${OPSYS} == "NetBSD" && empty(OS_VERSION:M[0-8].*)
 BUILD_DEPENDS+=	compat80-[0-9]*:../../emulators/compat80
+# In a sandboxed build environment, we have to reach over to the
+# installed libraries themselves, since the symlinks compat80 adds
+# to the /usr tree can't be applied.
+MAKE_ENV+=	LD_LIBRARY_PATH=${LOCALBASE}/emul/netbsd/usr/lib
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
