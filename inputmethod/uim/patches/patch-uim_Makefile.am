@@ -1,19 +1,20 @@
-$NetBSD: patch-uim_Makefile.am,v 1.2 2014/05/31 22:41:32 ryoon Exp $
+$NetBSD: patch-uim_Makefile.am,v 1.3 2019/11/01 16:21:11 nia Exp $
 
 https://github.com/uim/uim/pull/41
 
---- uim/Makefile.am.orig	2013-06-30 04:26:20.000000000 +0000
+--- uim/Makefile.am.orig	2018-05-11 21:26:06.000000000 +0000
 +++ uim/Makefile.am
-@@ -6,7 +6,7 @@ AUTOMAKE_OPTIONS = foreign
+@@ -8,7 +8,8 @@ AUTOMAKE_OPTIONS = foreign
  
  EXTRA_DIST = encoding-table.c test-gc.c version.h.in
  
 -uim_defs = -DSCM_FILES=\"$(datadir)/uim\"
 +uim_defs = -DSCM_FILES=\"$(sysconfdir)/uim:$(datadir)/uim\"
++
  # FIXME: $(UIM_SCM_CFLAGS) should only affect on uim-scm.c
  CFLAGS = @CFLAGS@ $(UIM_SCM_CFLAGS)
- # FIXME: $(SCIM_CFLAGS) should only affect on scim.cpp
-@@ -320,7 +320,7 @@ if LIBEDIT
+ CXXFLAGS = @CXXFLAGS@
+@@ -321,7 +322,7 @@ if LIBEDIT
  endif
  
  uim_module_manager_LIBS =
