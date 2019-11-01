@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.2 2015/11/25 12:50:58 jperkin Exp $
+# $NetBSD: modules.mk,v 1.3 2019/11/01 16:21:11 nia Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # UIM modules.  It takes care of update the corresponding databases
@@ -10,14 +10,14 @@
 .if !defined(UIM_MODULES_MK)
 UIM_MODULES_MK=	# defined
 
-.if (defined(UIM_MODULES) && !empty(UIM_MODULES)) || defined(_BUILDING_UIM)
+.if (defined(UIM_MODULES) && !empty(UIM_MODULES))
 
-.  if !defined(_BUILDING_UIM)
+.  if !empty(PKGPATH) && ${PKGPATH} != "inputmethod/uim"
 DEPENDS+=		uim-[0-9]*:../../inputmethod/uim
 .  endif
 
-UIM_MODULE_MANAGER=	${LOCALBASE}/bin/uim-module-manager
-UIM_MODULE_LIST_DIR=	${LOCALBASE}/share/uim/pkgsrc
+UIM_MODULE_MANAGER=	${PREFIX}/bin/uim-module-manager
+UIM_MODULE_LIST_DIR=	${PREFIX}/share/uim/pkgsrc
 
 FILES_SUBST+=		UIM_MODULE_MANAGER=${UIM_MODULE_MANAGER:Q}
 FILES_SUBST+=		UIM_MODULE_LIST_DIR=${UIM_MODULE_LIST_DIR:Q}
@@ -26,11 +26,11 @@ INSTALL_TEMPLATES+=	../../inputmethod/uim/files/modules.tmpl
 DEINSTALL_TEMPLATES+=	../../inputmethod/uim/files/modules.tmpl
 
 GENERATE_PLIST+=	for m in ${UIM_MODULES}; do \
-			echo ${UIM_MODULE_LIST_DIR:S,^${LOCALBASE}/,,}/$${m}; \
-			done
+			${ECHO} ${UIM_MODULE_LIST_DIR:S,^${PREFIX}/,,}/$${m}; \
+			done ;
 
 post-install: uim-add-module-names
-uim-add-module-names: .PHONY 
+uim-add-module-names: .PHONY
 	${INSTALL_DATA_DIR} ${DESTDIR}${UIM_MODULE_LIST_DIR}
 	${RUN}cd ${DESTDIR}${UIM_MODULE_LIST_DIR};		\
 		for m in ${UIM_MODULES}; do			\

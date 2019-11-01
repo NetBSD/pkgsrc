@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL.m17nlib,v 1.1 2009/10/01 12:30:32 obache Exp $
+# $NetBSD: INSTALL,v 1.3 2019/11/01 16:21:11 nia Exp $
 
 case ${STAGE} in
 POST-INSTALL)
