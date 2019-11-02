@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.3 2009/01/12 21:12:40 shattered Exp $
+# $NetBSD: options.mk,v 1.4 2019/11/02 21:09:14 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.gqmpeg
+PKG_OPTIONS_VAR=		PKG_OPTIONS.gqmpeg
 PKG_OPTIONS_OPTIONAL_GROUPS=	recode
 PKG_OPTIONS_GROUP.recode=	gqmpeg-japanese gqmpeg-russian
 

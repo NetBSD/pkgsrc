@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2018/10/12 13:51:59 martin Exp $
+# $NetBSD: Makefile,v 1.36 2019/11/02 21:09:14 rillig Exp $
 #
 
 DISTNAME=	id3lib-3.8.3
@@ -15,7 +15,7 @@ USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
-CPPFLAGS+=-DID3_NEED_WCHAR_TEMPLATE
+CPPFLAGS+=	-DID3_NEED_WCHAR_TEMPLATE
 
 .include "../../mk/bsd.prefs.mk"
 .if !empty(MACHINE_PLATFORM:MSunOS-5.1[0-9]-*)
