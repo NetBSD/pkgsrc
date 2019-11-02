@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/08/11 13:21:00 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/02 16:08:48 rillig Exp $
 
 DISTNAME=	Locale-Currency-Format-1.35
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ HOMEPAGE=	https://metacpan.org/release/Locale-Currency-Format
 COMMENT=	Perl functions for formatting monetary values
 LICENSE=	gnu-gpl-v2 # OR artistic
 
-#DEPENDS+=       p5-Locale-Codes>=2.07:../../misc/p5-Locale-Codes
+#DEPENDS+=	p5-Locale-Codes>=2.07:../../misc/p5-Locale-Codes
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Locale/Currency/Format/.packlist

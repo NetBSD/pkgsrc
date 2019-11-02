@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/04/25 07:32:54 maya Exp $
+# $NetBSD: Makefile,v 1.24 2019/11/02 16:08:47 rillig Exp $
 
 DISTNAME=	moneyguru-src-2.11.0
 PKGNAME=	${DISTNAME:S/-src//}
@@ -24,8 +24,8 @@ USE_LANGUAGES=	c
 USE_TOOLS=	pax
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-PY_PATCHPLIST=		yes
-REPLACE_PYTHON+=	run.py
+PY_PATCHPLIST=			yes
+REPLACE_PYTHON+=		run.py
 
 INSTALLATION_DIRS=	bin share/applications share/moneyguru
 

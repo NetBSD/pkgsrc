@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2017/09/06 10:40:27 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/11/02 16:08:48 rillig Exp $
 
 DISTNAME=		xquote-2.6.10
 PKGREVISION=		4
@@ -13,7 +13,7 @@ USE_IMAKE=		YES
 NO_INSTALL_MANPAGES=	YES
 
 # needs a symbol that appeared after 4.9.1
-BUILDLINK_API_DEPENDS.Xbae+=        Xbae>=4.50
+BUILDLINK_API_DEPENDS.Xbae+=	Xbae>=4.50
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
