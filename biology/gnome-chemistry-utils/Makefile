@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2019/08/11 13:18:00 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2019/11/02 22:09:00 rillig Exp $
 #
 
 DISTNAME=	gnome-chemistry-utils-0.12.13
@@ -22,8 +22,8 @@ GCONF_SCHEMAS+=	gchempaint-arrows.schemas
 GCONF_SCHEMAS+=	gcrystal.schemas
 GCONF_SCHEMAS+=	gchempaint.schemas
 
-BUILDLINK_TRANSFORM+=rm:-DGTK_DISABLE_DEPRECATED
-BUILDLINK_TRANSFORM+=rm:-ldl
+BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
+BUILDLINK_TRANSFORM+=	rm:-ldl
 
 CONFIGURE_ARGS+=	--disable-update-databases
 
