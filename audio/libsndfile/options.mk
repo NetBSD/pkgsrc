@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.9 2010/10/16 08:23:04 adam Exp $
+# $NetBSD: options.mk,v 1.10 2019/11/02 21:09:14 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.libsndfile
-PKG_SUPPORTED_OPTIONS=	octave
+PKG_OPTIONS_VAR=		PKG_OPTIONS.libsndfile
+PKG_SUPPORTED_OPTIONS=		octave
 PKG_OPTIONS_OPTIONAL_GROUPS=	output
 PKG_OPTIONS_GROUP.output=	oss sun
 

@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.7 2016/09/15 17:02:24 wiz Exp $
+# $NetBSD: options.mk,v 1.8 2019/11/02 21:09:16 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.snd
+PKG_OPTIONS_VAR=		PKG_OPTIONS.snd
 PKG_SUPPORTED_OPTIONS=
 # ruby, forth, alsa, oss, jack, pulseaudio, gmp, ladspa
 PKG_OPTIONS_REQUIRED_GROUPS=	frontend
 PKG_OPTIONS_GROUP.frontend=	gtk motif
-PKG_SUGGESTED_OPTIONS=	gtk
+PKG_SUGGESTED_OPTIONS=		gtk
 
 .include "../../mk/bsd.options.mk"
 

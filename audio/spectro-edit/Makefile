@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/09/04 18:55:07 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/02 21:09:17 rillig Exp $
 
 DISTNAME=	spectro-edit_0.4
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -11,8 +11,8 @@ HOMEPAGE=	https://code.google.com/archive/p/spectro-edit/
 COMMENT=	Graphically view and edit WAV files
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}
-USE_LANGUAGES=	# none
+WRKSRC=			${WRKDIR}
+USE_LANGUAGES=		# none
 INSTALLATION_DIRS=	bin share/spectro-edit
 
 USE_JAVA=	run
