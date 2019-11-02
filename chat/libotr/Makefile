@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/03/09 18:04:17 gdt Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/02 22:18:23 rillig Exp $
 
 VERSION=	4.1.1
 DISTNAME=	libotr-${VERSION}
@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v2
 # Work around rc tarballs that unpack to bare version.
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-pic
 
 USE_LIBTOOL=	yes

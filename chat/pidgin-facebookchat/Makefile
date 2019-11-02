@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2019/05/05 22:49:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.37 2019/11/02 22:18:24 rillig Exp $
 
 DISTNAME=	pidgin-facebookchat-source-1.69
 PKGNAME=	${DISTNAME:S/-source-/-/}
@@ -16,7 +16,7 @@ DEPENDS+=	pidgin>=2.7.9:../../chat/pidgin
 
 WRKSRC=		${WRKDIR}/${PKGBASE}
 
-SUBST_CLASSES+=	paths
+SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Fixing absolute paths.
 SUBST_FILES.paths=	Makefile

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/02/23 18:18:42 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2019/11/02 22:18:22 rillig Exp $
 #
 
 DISTNAME=	emech-3.0.2
@@ -16,7 +16,7 @@ HAS_CONFIGURE=			YES
 CONFIGURE_ARGS+=		< /dev/null
 BUILD_TARGET=			mech
 
-INSTALLATION_DIRS+= bin share/examples/emech
+INSTALLATION_DIRS+=	bin share/examples/emech
 
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/energymech ${DESTDIR}${PREFIX}/bin/mech

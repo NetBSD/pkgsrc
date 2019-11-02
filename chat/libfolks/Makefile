@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/09/19 08:32:08 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/11/02 22:18:23 rillig Exp $
 
 DISTNAME=	folks-0.4.2
 PKGNAME=	lib${DISTNAME}
@@ -12,10 +12,10 @@ HOMEPAGE=	https://wiki.gnome.org/action/show/Projects/Folks
 COMMENT=	Library to manage contacts
 LICENSE=	gnu-lgpl-v2
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool gmake msgfmt
-USE_PKGLOCALEDIR= yes
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config intltool gmake msgfmt
+USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE+=	backends/telepathy/lib/folks-telepathy.pc.in
 PKGCONFIG_OVERRIDE+=	folks/folks.pc.in
