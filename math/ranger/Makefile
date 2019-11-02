@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/08/26 17:17:22 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/02 16:16:22 rillig Exp $
 
 DISTNAME=	ranger-0.4.2
 CATEGORIES=	math
@@ -9,10 +9,10 @@ HOMEPAGE=	https://github.com/imbs-hl/ranger
 COMMENT=	Fast Implementation of Random Forests
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/source
-USE_LANGUAGES=	c c++
-USE_CMAKE=	yes
-PTHREAD_AUTO_VARS= yes
+WRKSRC=			${WRKDIR}/${DISTNAME}/source
+USE_LANGUAGES=		c c++
+USE_CMAKE=		yes
+PTHREAD_AUTO_VARS=	yes
 
 INSTALLATION_DIRS+=	bin
 
