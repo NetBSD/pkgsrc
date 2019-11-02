@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2019/02/13 22:26:50 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2019/11/02 16:16:20 rillig Exp $
 
 DISTNAME=		mpfr-4.0.2
 CATEGORIES=		math
@@ -26,5 +26,5 @@ BUILDLINK_API_DEPENDS.gmp+=	gmp>=5.0
 .include "../../mk/bsd.pkg.mk"
 
 .if (${MACHINE_ARCH} == alpha)
-CONFIGURE_ENV+=CFLAGS="${CFLAGS:N-mieee}"
+CONFIGURE_ENV+=	CFLAGS="${CFLAGS:N-mieee}"
 .endif

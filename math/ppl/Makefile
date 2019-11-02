@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/08/11 13:21:52 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/02 16:16:21 rillig Exp $
 
 DISTNAME=	ppl-1.2
 PKGREVISION=	1
@@ -17,7 +17,7 @@ DEPENDS+=	gsed-[0-9]*:../../textproc/gsed
 USE_LANGUAGES=	c gnu++03
 GNU_CONFIGURE=	yes
 
-MAKE_ENV+=	lt_cv_path_SED=${PREFIX}/bin/gsed
+MAKE_ENV+=		lt_cv_path_SED=${PREFIX}/bin/gsed
 CONFIGURE_ARGS+=	--with-gmp-prefix=${PREFIX}
 #CONFIGURE_ARGS+=	--enable-interfaces=c,cxx
 

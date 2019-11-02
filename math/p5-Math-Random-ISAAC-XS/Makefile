@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/08/11 13:21:48 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2019/11/02 16:16:21 rillig Exp $
 #
 
 DISTNAME=	Math-Random-ISAAC-XS-1.004
@@ -14,8 +14,8 @@ LICENSE=	cc0-1.0-universal
 
 BUILD_DEPENDS+=	p5-Test-NoWarnings>=0.084:../../devel/p5-Test-NoWarnings
 
-USE_LANGUAGES=	c
-PERL5_PACKLIST=	auto/Math/Random/ISAAC/XS/.packlist
+USE_LANGUAGES=		c
+PERL5_PACKLIST=		auto/Math/Random/ISAAC/XS/.packlist
 PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"

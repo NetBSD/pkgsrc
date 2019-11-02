@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.extension,v 1.25 2019/10/13 12:21:23 rillig Exp $
+# $NetBSD: Makefile.extension,v 1.26 2019/11/02 16:16:18 rillig Exp $
 #
 # This Makefile fragment is included by packages for R library packages.
 #
@@ -22,14 +22,14 @@ _IGN_VARS.R=	INSTALLATION_DIRS MAKE_ENV INSTALL_ENV MASTER_SITES \
 R_PKGNAME?=	${DISTNAME:C/_.*//}
 R_PKGVER?=	${DISTNAME:C/.*_//}
 .else
-DISTNAME?=		${R_PKGNAME}_${R_PKGVER}
+DISTNAME?=	${R_PKGNAME}_${R_PKGVER}
 .endif
-PKGNAME?=		R-${R_PKGNAME}-${R_PKGVER:S/-/./}
-MASTER_SITES?=		${MASTER_SITE_R_CRAN:=contrib/} \
-			${MASTER_SITE_R_CRAN:=contrib/Archive/${R_PKGNAME}/}
-DIST_SUBDIR?=		R
-CATEGORIES+=		math R
-HOMEPAGE?=		https://CRAN.R-project.org/package=${R_PKGNAME}
+PKGNAME?=	R-${R_PKGNAME}-${R_PKGVER:S/-/./}
+MASTER_SITES?=	${MASTER_SITE_R_CRAN:=contrib/} \
+		${MASTER_SITE_R_CRAN:=contrib/Archive/${R_PKGNAME}/}
+DIST_SUBDIR?=	R
+CATEGORIES+=	math R
+HOMEPAGE?=	https://CRAN.R-project.org/package=${R_PKGNAME}
 
 WRKSRC=		${WRKDIR}/${R_PKGNAME}
 

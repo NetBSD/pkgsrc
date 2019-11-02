@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/01/28 16:24:14 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/02 16:16:19 rillig Exp $
 
 DISTNAME=	harminv-1.3.1
 PKGREVISION=	1
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=  c c++ fortran77
+USE_LANGUAGES=	c c++ fortran77
 
 PKGCONFIG_OVERRIDE+=	harminv.pc.in
 

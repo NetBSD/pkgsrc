@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/04/25 07:33:05 maya Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/02 16:16:22 rillig Exp $
 
 DISTNAME=	sundials-4.1.0
 PKGREVISION=	1
@@ -11,8 +11,8 @@ COMMENT=	Suite of nonlinear and differential/algrbraic equation solvers
 LICENSE=	modified-bsd
 
 PYTHON_FOR_BUILD_ONLY=	yes
-USE_CMAKE=	yes
-WRKSRC=		${WRKDIR}/${DISTNAME}/build
+USE_CMAKE=		yes
+WRKSRC=			${WRKDIR}/${DISTNAME}/build
 
 CMAKE_ARG_PATH=	..
 CMAKE_ARGS+=	-DEXAMPLES_INSTALL_PATH=${PREFIX}/share/examples/sundials

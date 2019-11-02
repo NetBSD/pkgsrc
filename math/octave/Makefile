@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.194 2019/09/18 14:17:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.195 2019/11/02 16:16:20 rillig Exp $
 
 DISTNAME=	octave-5.1.0
 PKGREVISION=	8
@@ -55,8 +55,8 @@ CONFIGURE_ENV+=		INSTALL_LIB=${INSTALL_LIB:Q}
 
 .include "options.mk"
 
-INFO_FILES=	yes
-OCTAVE_DOC=	doc/interpreter/octave.pdf doc/liboctave/liboctave.pdf \
+INFO_FILES=		yes
+OCTAVE_DOC=		doc/interpreter/octave.pdf doc/liboctave/liboctave.pdf \
 		doc/refcard/refcard-a4.pdf doc/refcard/refcard-legal.pdf \
 		doc/refcard/refcard-letter.pdf
 INSTALLATION_DIRS+=	share/octave/${PKGVERSION_NOREV}/doc
