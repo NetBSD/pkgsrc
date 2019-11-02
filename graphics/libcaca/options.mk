@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2014/02/24 16:14:58 joerg Exp $
+# $NetBSD: options.mk,v 1.6 2019/11/02 22:37:59 rillig Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libcaca
 PKG_SUPPORTED_OPTIONS=		imlib2
@@ -35,7 +35,7 @@ CONFIGURE_ARGS+=	--disable-slang
 CONFIGURE_ARGS+=	--enable-x11
 .  if ${X11_TYPE} == "modular"
 CONFIGURE_ARGS+=	--x-libraries=${BUILDLINK_PREFIX.libX11}/lib
-.endif
+.  endif
 .else
 CONFIGURE_ARGS+=	--disable-x11
 .endif

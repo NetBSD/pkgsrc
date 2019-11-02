@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.54 2019/10/04 13:40:08 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.55 2019/11/02 22:38:00 rillig Exp $
 
 BUILDLINK_TREE+=	librsvg
 
@@ -12,15 +12,15 @@ BUILDLINK_API_DEPENDS.librsvg+=		librsvg>=2.12.6nb1
 .include "../../graphics/librsvg/available.mk"
 
 .if ${LIBRSVG_TYPE} == "rust"
-BUILDLINK_PKGSRCDIR.librsvg?=		../../graphics/librsvg
-BUILDLINK_API_DEPENDS.librsvg+=		librsvg>=2.41
-BUILDLINK_ABI_DEPENDS.librsvg+=		librsvg>=2.44.14nb2
+BUILDLINK_PKGSRCDIR.librsvg?=	../../graphics/librsvg
+BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.41
+BUILDLINK_ABI_DEPENDS.librsvg+=	librsvg>=2.44.14nb2
 .elif ${LIBRSVG_TYPE} == "c"
-BUILDLINK_PKGSRCDIR.librsvg?=		../../graphics/librsvg-c
-BUILDLINK_API_DEPENDS.librsvg+=		librsvg<2.41
-BUILDLINK_ABI_DEPENDS.librsvg+=		librsvg>=2.40.20nb4
+BUILDLINK_PKGSRCDIR.librsvg?=	../../graphics/librsvg-c
+BUILDLINK_API_DEPENDS.librsvg+=	librsvg<2.41
+BUILDLINK_ABI_DEPENDS.librsvg+=	librsvg>=2.40.20nb4
 .else
-PKG_FAIL_REASON+=       "[graphics/librsvg/buildlink3.mk] Invalid value ${LIBRSVG_TYPE} for LIBRSVG_TYPE."
+PKG_FAIL_REASON+=		"[graphics/librsvg/buildlink3.mk] Invalid value ${LIBRSVG_TYPE} for LIBRSVG_TYPE."
 .endif
 
 .include "../../devel/pango/buildlink3.mk"

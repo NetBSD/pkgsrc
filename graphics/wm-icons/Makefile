@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/12/28 15:08:54 tsutsui Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/02 22:38:06 rillig Exp $
 
 DISTNAME=		wm-icons-0.4.0
 CATEGORIES=		graphics
@@ -13,6 +13,6 @@ LICENSE=		gnu-gpl-v2
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-all-sets
 
-INSTALLATION_DIRS+=     share/icons/wm-icons
+INSTALLATION_DIRS+=	share/icons/wm-icons
 
 .include "../../mk/bsd.pkg.mk"

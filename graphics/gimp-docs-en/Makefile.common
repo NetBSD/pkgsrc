@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2019/09/02 13:20:17 adam Exp $
+# $NetBSD: Makefile.common,v 1.20 2019/11/02 22:37:57 rillig Exp $
 #
 # used by graphics/gimp-docs-de/Makefile
 # used by graphics/gimp-docs-en/Makefile
@@ -51,7 +51,7 @@ GNU_CONFIGURE=	yes
 
 USE_TOOLS+=	gmake msgfmt perl:build
 
-MAKE_ENV+=	DATDIR=${PREFIX}/share
+MAKE_ENV+=		DATDIR=${PREFIX}/share
 CONFIGURE_ARGS+=	--without-gimp
 
 .include "../../lang/python/tool.mk"

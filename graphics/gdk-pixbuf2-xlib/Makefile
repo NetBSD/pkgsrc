@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/10/07 09:28:11 prlw1 Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/02 22:37:57 rillig Exp $
 
 DISTNAME=	gdk-pixbuf-${PIXBUF2_VERSION}
 PKGNAME=	gdk-pixbuf2-xlib-${PIXBUF2_VERSION}
@@ -21,10 +21,10 @@ CONFLICTS+=	gtk2+<2.22
 USE_TOOLS+=	gmake pkg-config
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gdk-pixbuf
 
-MESON_ARGS+=	-D installed_tests=false
-MESON_ARGS+=	-D x11=true
-PKGCONFIG_OVERRIDE_STAGE=pre-install
-PKGCONFIG_OVERRIDE=    output/meson-private/gdk-pixbuf-xlib-2.0.pc
+MESON_ARGS+=			-D installed_tests=false
+MESON_ARGS+=			-D x11=true
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
+PKGCONFIG_OVERRIDE=		output/meson-private/gdk-pixbuf-xlib-2.0.pc
 
 post-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/*

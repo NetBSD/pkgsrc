@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/09/02 13:00:55 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/11/02 22:38:05 rillig Exp $
 
 DISTNAME=	tuxpaint-stamps-2018.09.01
 CATEGORIES=	graphics
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	tuxpaint>=0.9.13:../../graphics/tuxpaint
 CONFLICTS+=	tuxpaint<0.9.13
 
-INSTALL_TARGET=	install-all
+INSTALL_TARGET=		install-all
 INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
 
 post-install:

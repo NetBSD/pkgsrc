@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2018/07/18 00:06:19 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/02 22:38:00 rillig Exp $
 #
 
-DISTNAME=		LibRaw-0.13.8
-PKGNAME=		${DISTNAME:tl}
-CATEGORIES=		graphics
+DISTNAME=	LibRaw-0.13.8
+PKGNAME=	${DISTNAME:tl}
+CATEGORIES=	graphics
 MASTER_SITES=	https://www.libraw.org/data/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v2.1 OR cddl-1.0
 
 USE_LANGUAGES=	c c++03
 GNU_CONFIGURE=	yes
-USE_TOOLS+=		pkg-config gmake
+USE_TOOLS+=	pkg-config gmake
 USE_LIBTOOL=	yes
 MAKE_JOBS_SAFE=	no
 

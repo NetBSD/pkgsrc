@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/01/14 14:58:38 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2019/11/02 22:37:52 rillig Exp $
 
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.corel.com/akdlm/6763/downloads/AfterShotPro/1/PF/
@@ -9,11 +9,11 @@ HOMEPAGE=	http://www.corel.com/corel/product/index.jsp?pid=prod4670071
 COMMENT=	Photo management software
 LICENSE=	corel-license
 
-RESTRICTED=	Redistribution not permitted
-NO_SRC_ON_CDROM=${RESTRICTED}
-NO_SRC_ON_FTP=  ${RESTRICTED}
-NO_BIN_ON_CDROM=${RESTRICTED}
-NO_BIN_ON_FTP=  ${RESTRICTED}
+RESTRICTED=		Redistribution not permitted
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none

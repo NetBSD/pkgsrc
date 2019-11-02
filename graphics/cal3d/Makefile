@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2019/08/30 18:33:56 nia Exp $
+# $NetBSD: Makefile,v 1.12 2019/11/02 22:37:54 rillig Exp $
 #
 
-PKGNAME=		cal3d-${CAL3D_VERSION}
+PKGNAME=	cal3d-${CAL3D_VERSION}
 PKGREVISION=	3
 
 .include "../../graphics/cal3d/Makefile.common"

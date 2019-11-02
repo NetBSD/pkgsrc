@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/10/03 10:42:56 adam Exp $
+# $NetBSD: Makefile,v 1.6 2019/11/02 22:38:02 rillig Exp $
 
 DISTNAME=	OpenEXR-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -17,7 +17,7 @@ SUBST_MESSAGE.fix-path=	Fixing paths.
 SUBST_STAGE.fix-path=	pre-configure
 SUBST_FILES.fix-path=	setup.py
 SUBST_SED.fix-path=	-e 's,/usr/include/OpenEXR,${BUILDLINK_PREFIX.openexr}/include/OpenEXR,'
-SUBST_SED.fix-path+=    -e 's,/usr/local/lib,${BUILDLINK_PREFIX.openexr}/lib,'
+SUBST_SED.fix-path+=	-e 's,/usr/local/lib,${BUILDLINK_PREFIX.openexr}/lib,'
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"

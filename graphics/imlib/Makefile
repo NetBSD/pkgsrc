@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2018/01/14 14:58:39 rillig Exp $
+# $NetBSD: Makefile,v 1.127 2019/11/02 22:37:58 rillig Exp $
 
 DISTNAME=	imlib-1.9.15
 PKGREVISION=	20
@@ -35,9 +35,9 @@ CONF_FILES+=		${EGDIR}/im_palette-small.pal \
 CONF_FILES+=		${EGDIR}/im_palette-tiny.pal \
 			${PKG_SYSCONFDIR}/im_palette-tiny.pal
 
-SUBST_CLASSES+=		imlib-config
+SUBST_CLASSES+=			imlib-config
 SUBST_FILES.imlib-config=	imlib-config
-SUBST_SED.imlib-config=	-e 's,no --,${PREFIX}/bin/gtk-config --,'
+SUBST_SED.imlib-config=		-e 's,no --,${PREFIX}/bin/gtk-config --,'
 SUBST_STAGE.imlib-config=	post-configure
 
 # The following ensures that `imlib-config --libs' includes the correct

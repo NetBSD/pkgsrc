@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2019/09/11 18:13:27 nia Exp $
+# $NetBSD: Makefile,v 1.80 2019/11/02 22:37:59 rillig Exp $
 
 DISTNAME=	libgdiplus-6.0.2
 CATEGORIES=	graphics
@@ -19,8 +19,8 @@ PKGCONFIG_OVERRIDE+=	cairo/src/cairo-backend.pc.in
 GNU_CONFIGURE=		yes
 
 BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.1.5
-BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2
-BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8
+BUILDLINK_API_DEPENDS.Xft2+=		Xft2>=2.1.2
+BUILDLINK_API_DEPENDS.Xrender+=		Xrender>=0.8
 
 BUILDLINK_TRANSFORM+=		rm:-Werror
 

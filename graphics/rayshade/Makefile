@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2016/06/01 13:31:49 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2019/11/02 22:38:04 rillig Exp $
 
 DISTNAME=	rayshade.4.0.6
 PKGNAME=	rayshade-4.0.6
@@ -18,7 +18,7 @@ CONFIGURE_SCRIPT=	./Configure
 USE_TOOLS+=		lex yacc
 BUILD_TARGET=
 INSTALLATION_DIRS=	bin lib share/doc/rayshade share/examples/rayshade
-WRKSRC=		${WRKDIR}/rayshade.4.0
+WRKSRC=			${WRKDIR}/rayshade.4.0
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rayshade/rayshade ${DESTDIR}${PREFIX}/bin
