@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/09/02 13:20:16 adam Exp $
+# $NetBSD: Makefile,v 1.13 2019/11/02 16:08:48 rillig Exp $
 
 DISTNAME=		vatnumber-1.2
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=		gnu-gpl-v3
 
 DEPENDS+=		${PYPKGPREFIX}-stdnum-[0-9]*:../../misc/py-stdnum
 
-PYTHON_VERSIONS_ACCEPTED=	 27 # py-simplesoap via py-stdnum
+PYTHON_VERSIONS_ACCEPTED=	27 # py-simplesoap via py-stdnum
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
