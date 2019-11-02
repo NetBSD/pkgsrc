@@ -1,45 +1,34 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2014/08/05 05:12:38 mrg Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2019/11/02 22:25:46 mrg Exp $
 
 Install csound in lib/csound6 to avoid conflicts with csound5.
 Add NetBSD support.
 
---- CMakeLists.txt.orig	2014-01-07 08:54:20.000000000 -0800
-+++ CMakeLists.txt	2014-02-14 16:31:43.000000000 -0800
-@@ -13,26 +13,26 @@
+--- CMakeLists.txt.orig	2019-07-12 14:54:19.000000000 -0700
++++ CMakeLists.txt	2019-10-30 12:16:51.495210409 -0700
+@@ -20,10 +20,10 @@
  set(APIVERSION "6.0")
  
  # Relative install paths
 -set(EXECUTABLE_INSTALL_DIR "bin")
 +set(EXECUTABLE_INSTALL_DIR "lib/csound6")
  
- option(USE_LIB64 "Set to on to set installation directory for libraries to lib64" OFF)
- if(USE_LIB64)
--    set(LIBRARY_INSTALL_DIR "lib64")
-+    set(LIBRARY_INSTALL_DIR "lib64/csound6")
- else()
--    set(LIBRARY_INSTALL_DIR "lib")
-+    set(LIBRARY_INSTALL_DIR "lib/csound6")
- endif()
- message(STATUS "LIBRARY INSTALL DIR: ${LIBRARY_INSTALL_DIR}")
- 
- if(USE_DOUBLE)
--    set(PLUGIN_INSTALL_DIR "${LIBRARY_INSTALL_DIR}/csound/plugins64-${APIVERSION}")
-+    set(PLUGIN_INSTALL_DIR "${LIBRARY_INSTALL_DIR}/plugins-${APIVERSION}")
- else()
--    set(PLUGIN_INSTALL_DIR "${LIBRARY_INSTALL_DIR}/csound/plugins-${APIVERSION}")
-+    set(PLUGIN_INSTALL_DIR "${LIBRARY_INSTALL_DIR}/plugins-${APIVERSION}")
- endif()
- set(PYTHON_MODULE_INSTALL_DIR ${LIBRARY_INSTALL_DIR})
- set(JAVA_MODULE_INSTALL_DIR ${LIBRARY_INSTALL_DIR})
- set(LUA_MODULE_INSTALL_DIR ${LIBRARY_INSTALL_DIR})
  set(LOCALE_INSTALL_DIR "share/locale")
 -set(HEADER_INSTALL_DIR "include/csound")
 +set(HEADER_INSTALL_DIR "include/csound6")
  
- set(CS_FRAMEWORK_DEST "~/Library/Frameworks")
+ set(CS_FRAMEWORK_DEST "~/Library/Frameworks" CACHE PATH "Csound framework path")
  include(TestBigEndian)
-@@ -239,6 +239,12 @@
-     set(LINUX NO)
+@@ -36,7 +36,7 @@
+ include(CheckCXXCompilerFlag)
+ include(CMakePushCheckState)
+ 
+-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
++set (CMAKE_MODULE_PATH "/var/obj/pkgsrc/audio/csound6/work.the-blessing/.buildlink/cmake-Modules" "/var/obj/pkgsrc/audio/csound6/work.the-blessing/.buildlink/cmake-Modules" "/var/obj/pkgsrc/audio/csound6/work.the-blessing/.buildlink/cmake-Modules" ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
+ 
+ # Utility to munge with items in a list.
+ #
+@@ -128,6 +128,12 @@
+     set(OSX_VERSION " ")
  endif()
  
 +if(CMAKE_SYSTEM_NAME MATCHES "NetBSD")
@@ -49,9 +38,33 @@ Add NetBSD support.
 +endif()
 +
  ## USER OPTIONS ##
- 
+ # Optional targets, they should all default to ON (check_deps will disable them if not possible to build)
  option(USE_DOUBLE "Set to use double-precision floating point for audio samples." ON)
-@@ -326,6 +332,10 @@
+@@ -188,19 +194,19 @@
+ 
+ option(USE_LIB64 "Set to on to set installation directory for libraries to lib64" OFF)
+ if(USE_LIB64)
+-    set(LIBRARY_INSTALL_DIR "lib64")
++    set(LIBRARY_INSTALL_DIR "lib64/csound6")
+     add_definitions("-DLIB64")
+ else()
+-    set(LIBRARY_INSTALL_DIR "lib")
++    set(LIBRARY_INSTALL_DIR "lib/csound6")
+ endif()
+ message(STATUS "LIBRARY INSTALL DIR: ${LIBRARY_INSTALL_DIR}")
+ 
+ if(USE_DOUBLE)
+    message(STATUS "Building with 64-bit floats")
+-    set(PLUGIN_INSTALL_DIR "${LIBRARY_INSTALL_DIR}/csound/plugins64-${APIVERSION}")
++    set(PLUGIN_INSTALL_DIR "${LIBRARY_INSTALL_DIR}/plugins-${APIVERSION}")
+ else()
+   message(STATUS "Building with 32-bit floats")
+-    set(PLUGIN_INSTALL_DIR "${LIBRARY_INSTALL_DIR}/csound/plugins-${APIVERSION}")
++    set(PLUGIN_INSTALL_DIR "${LIBRARY_INSTALL_DIR}/plugins-${APIVERSION}")
+ endif()
+ 
+ execute_process (
+@@ -466,6 +472,10 @@
  
  endif()
  
@@ -62,3 +75,13 @@ Add NetBSD support.
  if(BUILD_RELEASE)
      add_definitions("-D_CSOUND_RELEASE_")
      if(LINUX)
+@@ -1296,7 +1306,9 @@
+       list(APPEND libcsound_LIBS ${LIBRT_LIBRARY})
+       message(STATUS "  ADDING LIBRT LIBRARY: ${LIBRT_LIBRARY}.")
+     endif()
++endif()
+ 
++if(LINUX OR NETBSD)
+     find_library(LIBEXECINFO_LIBRARY execinfo)
+ 
+     if(LIBEXECINFO_LIBRARY)
