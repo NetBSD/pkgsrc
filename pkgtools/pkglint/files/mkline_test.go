@@ -1587,9 +1587,7 @@ func (s *Suite) Test_MkLine_UnquoteShell(c *check.C) {
 	test("\"\\", "")
 	test("'", "")
 
-	test("\"$(\"", "$(\"",
-		"WARN: filename.mk:1: Missing closing \")\" for \"\\\"\".",
-		"WARN: filename.mk:1: Invalid part \"\\\"\" after variable name \"\".")
+	test("\"$(\"", "$(\"")
 
 	test("`", "`")
 

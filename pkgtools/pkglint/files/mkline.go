@@ -279,6 +279,8 @@ func (mkline *MkLine) MustExist() bool { return mkline.data.(*mkLineInclude).mus
 
 func (mkline *MkLine) IncludedFile() string { return mkline.data.(*mkLineInclude).includedFile }
 
+// IncludedFileFull returns the path to the included file, relative to the
+// current working directory.
 func (mkline *MkLine) IncludedFileFull() string {
 	return cleanpath(path.Join(path.Dir(mkline.Filename), mkline.IncludedFile()))
 }
@@ -325,7 +327,11 @@ func (mkline *MkLine) Tokenize(text string, warn bool) []*MkToken {
 	if mkline.IsVarassignMaybeCommented() && text == mkline.Value() {
 		tokens, rest = mkline.ValueTokens()
 	} else {
-		p := NewMkParser(mkline.Line, text)
+		var line *Line
+		if warn {
+			line = mkline.Line
+		}
+		p := NewMkParser(line, text)
 		tokens = p.MkTokens()
 		rest = p.Rest()
 	}
