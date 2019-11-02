@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4719 2019/11/02 20:36:19 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.4720 2019/11/02 20:55:56 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7508,3 +7508,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/mpc to 0.33 [nia 2019-11-02]
 	Updated x11/kdelibs4 to 4.14.38nb8 [maya 2019-11-02]
 	Updated devel/picotrace to 20191102 [kamil 2019-11-02]
+	Updated time/libical to 3.0.6 [nia 2019-11-02]
