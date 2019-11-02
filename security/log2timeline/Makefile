@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/08/11 13:22:47 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/11/02 13:58:32 rillig Exp $
 #
 
 DISTNAME=	log2timeline_${L2T_VERSION}
@@ -15,15 +15,6 @@ LICENSE=	gnu-gpl-v3
 
 L2T_VERSION=	0.65
 
-REPLACE_PERL=	lib/Log2t/BinRead.pm
-REPLACE_PERL=	lib/Log2t/Common.pm
-REPLACE_PERL=	lib/Log2t/Network.pm
-REPLACE_PERL=	lib/Log2t/Numbers.pm
-REPLACE_PERL=	lib/Log2t/Time.pm
-REPLACE_PERL=	lib/Log2t/Win.pm
-REPLACE_PERL=	lib/Log2t/WinReg.pm
-REPLACE_PERL=	lib/Log2t/input/ff_cache.pm
-REPLACE_PERL=	lib/Log2t/input/safari.pm
 REPLACE_PERL=	l2t_process_old.pl
 
 DEPENDS+=	p5-Archive-Zip>=1.18:../../archivers/p5-Archive-Zip
