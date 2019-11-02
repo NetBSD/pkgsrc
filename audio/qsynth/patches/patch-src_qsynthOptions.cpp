@@ -1,13 +1,13 @@
-$NetBSD: patch-src_qsynthOptions.cpp,v 1.1 2019/10/17 08:20:43 nia Exp $
+$NetBSD: patch-src_qsynthOptions.cpp,v 1.2 2019/11/02 15:05:29 nia Exp $
 
-Use OSS as the default audio driver on non-Linux/macOS.
+Use OSS as the default audio driver on non-Linux.
 
---- src/qsynthOptions.cpp.orig	2019-07-12 10:35:23.877356128 +0000
+--- src/qsynthOptions.cpp.orig	2019-10-17 07:46:21.791671088 +0000
 +++ src/qsynthOptions.cpp
-@@ -487,9 +487,12 @@ void qsynthOptions::loadSetup ( qsynthSe
- #elif defined(__WIN32__) || defined(_WIN32) || defined(WIN32)
- 	pSetup->sMidiDriver      = m_settings.value("/MidiDriver", "winmidi").toString();
- 	pSetup->sAudioDriver     = m_settings.value("/AudioDriver", "dsound").toString();
+@@ -493,9 +493,12 @@ void qsynthOptions::loadSetup ( qsynthSe
+ #elif defined(__OpenBSD__)
+ 	pSetup->sMidiDriver      = m_settings.value("/MidiDriver", "sndio").toString();
+ 	pSetup->sAudioDriver     = m_settings.value("/AudioDriver", "sndio").toString();
 -#else
 +#elif defined(__linux__)
  	pSetup->sMidiDriver      = m_settings.value("/MidiDriver", "alsa_seq").toString();

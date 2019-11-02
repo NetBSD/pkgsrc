@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2019/10/23 19:34:22 nia Exp $
+# $NetBSD: Makefile,v 1.54 2019/11/02 15:05:29 nia Exp $
 
-DISTNAME=	qsynth-0.5.7
+DISTNAME=	qsynth-0.6.0
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qsynth/}
 CATEGORIES=	audio
 
@@ -16,6 +16,7 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 .include "../../audio/fluidsynth/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
