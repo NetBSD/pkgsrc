@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/09/02 13:19:52 adam Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/02 22:18:26 rillig Exp $
 
 DISTNAME=	telepathy-qt-0.9.6.1
 PKGREVISION=	3
@@ -18,9 +18,9 @@ PKGCONFIG_OVERRIDE+=	TelepathyQt/TelepathyQt.pc.in
 PKGCONFIG_OVERRIDE+=	TelepathyQt/TelepathyQtService.pc.in
 PKGCONFIG_OVERRIDE+=	TelepathyQt/Farstream/TelepathyQtFarstream.pc.in
 
-PYTHON_FOR_BUILD_ONLY=	yes
+PYTHON_FOR_BUILD_ONLY=		yes
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.24.1
-BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+BUILD_DEPENDS+=			${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-add-needed
 

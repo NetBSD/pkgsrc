@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/07/20 22:46:11 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/02 22:18:22 rillig Exp $
 
 DISTNAME=		gloox-1.0.17
 PKGREVISION=		3
@@ -22,7 +22,7 @@ LIBS.SunOS+=		-lnsl
 # -pedantic in gcc 4.5.3 (NetBSD 6) is less pedantic than
 # in gcc 4.1.3 (NetBSD 5.*) aka, -pedantic causes build
 # failures when including gnutls on older versions of gcc.
-BUILDLINK_TRANSFORM+=   rm:-pedantic
+BUILDLINK_TRANSFORM+=	rm:-pedantic
 
 .include "options.mk"
 

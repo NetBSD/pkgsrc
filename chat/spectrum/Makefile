@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2019/09/02 13:19:53 adam Exp $
+# $NetBSD: Makefile,v 1.85 2019/11/02 22:18:25 rillig Exp $
 
 DISTNAME=		spectrum-1.4.8
 PKGREVISION=		55
@@ -18,9 +18,9 @@ USE_TOOLS+=		pkg-config msgfmt xgettext
 USE_CMAKE=		yes
 USE_LANGUAGES=		c++ c
 
-REPLACE_PYTHON+=	spectrumctl/spectrumctl.py
-PY_PATCHPLIST=		yes
-PYTHON_VERSIONS_ACCEPTED=	 27 # py-xmpppy
+REPLACE_PYTHON+=		spectrumctl/spectrumctl.py
+PY_PATCHPLIST=			yes
+PYTHON_VERSIONS_ACCEPTED=	27 # py-xmpppy
 
 BUILD_DEFS+=		JABBER_USER JABBER_GROUP
 BUILD_DEFS+=		SPECTRUM_RUN SPECTRUM_DB SPECTRUM_LOG
