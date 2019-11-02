@@ -1,9 +1,9 @@
-$NetBSD: patch-InOut_winFLTK.c,v 1.3 2014/08/06 06:17:07 mrg Exp $
+$NetBSD: patch-InOut_winFLTK.c,v 1.4 2019/11/02 22:25:46 mrg Exp $
 
 Add NetBSD and DragonFlyBSD support.
 
---- InOut/winFLTK.c.orig	2014-05-04 04:49:41.000000000 -0700
-+++ InOut/winFLTK.c	2014-08-04 22:18:13.000000000 -0700
+--- InOut/winFLTK.c.orig	2019-07-12 14:54:19.000000000 -0700
++++ InOut/winFLTK.c	2019-10-29 13:43:18.530007153 -0700
 @@ -29,7 +29,7 @@
  #include <stdio.h>
  #include "cwindow.h"
@@ -23,7 +23,7 @@ Add NetBSD and DragonFlyBSD support.
        if (dpy != NULL) {
          XCloseDisplay(dpy);
 @@ -104,7 +104,7 @@
-           csound->Message(csound, "graph init... \n");
+           csound->Message(csound, "graph init...\n");
  
          }
 -#ifdef LINUX
