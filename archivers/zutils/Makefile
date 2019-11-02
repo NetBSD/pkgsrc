@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/07/04 13:40:08 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2019/11/02 22:54:28 rillig Exp $
 #
 
 DISTNAME=	zutils-1.6
@@ -25,11 +25,11 @@ INFO_FILES=		yes
 EGDIR=			${PREFIX}/share/examples/zutils
 CONF_FILES=		${EGDIR}/zutilsrc ${PREFIX}/etc/zutilsrc
 
-SUBST_CLASSES+=		sysconfdir
-SUBST_STAGE.sysconfdir=	pre-configure
-SUBST_FILES.sysconfdir= zutilsrc
-SUBST_MESSAGE.sysconfdir= path of sysconfdir in example (zutilsrc)
-SUBST_SED.sysconfdir=	-e '/sysconfdir/s,$${sysconfdir},${PREFIX}/etc,'
+SUBST_CLASSES+=			sysconfdir
+SUBST_STAGE.sysconfdir=		pre-configure
+SUBST_FILES.sysconfdir=		zutilsrc
+SUBST_MESSAGE.sysconfdir=	path of sysconfdir in example (zutilsrc)
+SUBST_SED.sysconfdir=		-e '/sysconfdir/s,$${sysconfdir},${PREFIX}/etc,'
 
 TEST_TARGET=	check
 

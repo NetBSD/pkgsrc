@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.9 2013/11/23 10:51:09 obache Exp $
+# $NetBSD: builtin.mk,v 1.10 2019/11/02 22:54:26 rillig Exp $
 
 BUILTIN_PKG:=	bzip2
 
@@ -18,7 +18,7 @@ IS_BUILTIN.bzip2=	no
 IS_BUILTIN.bzip2=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.bzip2
+MAKEVARS+=		IS_BUILTIN.bzip2
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -43,7 +43,7 @@ BUILTIN_VERSION.bzip2!=							\
 
 BUILTIN_PKG.bzip2=	bzip2-${BUILTIN_VERSION.bzip2}
 .endif
-MAKEVARS+=    BUILTIN_PKG.bzip2
+MAKEVARS+=		BUILTIN_PKG.bzip2
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -80,7 +80,7 @@ USE_BUILTIN.bzip2=	no
 .    endfor
 .  endif  # PREFER.bzip2
 .endif
-MAKEVARS+=	USE_BUILTIN.bzip2
+MAKEVARS+=		USE_BUILTIN.bzip2
 
 # if USE_BZIP2 is defined, then force the use of a true bzip2
 # implementation.
