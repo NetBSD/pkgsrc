@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4717 2019/11/02 19:07:35 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4718 2019/11/02 19:45:49 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7506,3 +7506,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated math/ruby-spreadsheet to 1.2.5 [taca 2019-11-02]
 	Updated pkgtools/pkglint to 19.3.5 [rillig 2019-11-02]
 	Updated audio/mpc to 0.33 [nia 2019-11-02]
+	Updated x11/kdelibs4 to 4.14.38nb8 [maya 2019-11-02]
