@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/02/20 17:00:35 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/11/02 16:08:48 rillig Exp $
 TRYTON_MODULE_NAME=	trytond_account_asset
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	finance python
@@ -8,13 +8,13 @@ HOMEPAGE=	http://www.tryton.org/
 COMMENT=	Account_asset module of the Tryton application platform
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=   ${PYPKGPREFIX}-cached-property-[0-9]*:../../devel/py-cached-property
-DEPENDS+=   ${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
-DEPENDS+=   ${PYPKGPREFIX}-trytond-account>=${TRYTON_BASEVER}:../../finance/py-trytond-account
-DEPENDS+=   ${PYPKGPREFIX}-trytond-account-product>=${TRYTON_BASEVER}:../../finance/py-trytond-account-product
-DEPENDS+=   ${PYPKGPREFIX}-trytond-account-invoice>=${TRYTON_BASEVER}:../../finance/py-trytond-account-invoice
-DEPENDS+=   ${PYPKGPREFIX}-trytond-product>=${TRYTON_BASEVER}:../../misc/py-trytond-product
-DEPENDS+=   ${PYPKGPREFIX}-trytond>=${TRYTON_BASEVER}:../../devel/py-trytond
+DEPENDS+=	${PYPKGPREFIX}-cached-property-[0-9]*:../../devel/py-cached-property
+DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
+DEPENDS+=	${PYPKGPREFIX}-trytond-account>=${TRYTON_BASEVER}:../../finance/py-trytond-account
+DEPENDS+=	${PYPKGPREFIX}-trytond-account-product>=${TRYTON_BASEVER}:../../finance/py-trytond-account-product
+DEPENDS+=	${PYPKGPREFIX}-trytond-account-invoice>=${TRYTON_BASEVER}:../../finance/py-trytond-account-invoice
+DEPENDS+=	${PYPKGPREFIX}-trytond-product>=${TRYTON_BASEVER}:../../misc/py-trytond-product
+DEPENDS+=	${PYPKGPREFIX}-trytond>=${TRYTON_BASEVER}:../../devel/py-trytond
 
 USE_LANGUAGES=	# none
 
