@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/08/11 13:21:29 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/02 16:25:22 rillig Exp $
 #
 
 DISTNAME=	mailhops-1.4
@@ -18,11 +18,11 @@ EXTRACT_CMD=	${ECHO} ${CP} "$${extract_file}" ${WRKSRC}/mailhops; \
 				${CP} "$${extract_file}" ${WRKSRC}/mailhops
 
 
-DEPENDS+=       	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
+DEPENDS+=		p5-TimeDate-[0-9]*:../../time/p5-TimeDate
 
-USE_TOOLS+=     	perl:run
+USE_TOOLS+=		perl:run
 
-REPLACE_PERL+=  	mailhops
+REPLACE_PERL+=		mailhops
 
 do-build:
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/09/03 08:36:56 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/02 16:25:24 rillig Exp $
 #
 
 DISTNAME=	oe2mbx-1.21
@@ -20,7 +20,7 @@ MAKE_ENV+=	INSTALL_PROGRAM=${INSTALL_PROGRAM:Q} \
 		INSTALL_LIB=${INSTALL_LIB:Q} \
 		INSTALL_DATA=${INSTALL_DATA:Q}
 
-BUILD_TARGET=	liboe oe2mbx
+BUILD_TARGET=		liboe oe2mbx
 INSTALLATION_DIRS=	bin lib include
 
 pre-build:
