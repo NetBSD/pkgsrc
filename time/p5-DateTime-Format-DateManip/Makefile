@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/08/11 13:24:06 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/02 16:28:39 rillig Exp $
 
 DISTNAME=	DateTime-Format-DateManip-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -13,8 +13,8 @@ COMMENT=	Convert Date::Manip dates and durations to/from DateTimes
 DEPENDS+=	p5-DateTime>0:../../time/p5-DateTime
 DEPENDS+=	p5-Date-Manip>0:../../devel/p5-Date-Manip
 
-PERL5_MODULE_TYPE=     Module::Build
-USE_LANGUAGES=	#
+PERL5_MODULE_TYPE=	Module::Build
+USE_LANGUAGES=		#
 
 PERL5_PACKLIST=	auto/DateTime/Format/DateManip/.packlist
 

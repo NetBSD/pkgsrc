@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/08/11 13:24:03 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/02 16:28:38 rillig Exp $
 #
 
 DISTNAME=	libical-3.0.3
@@ -14,9 +14,9 @@ LICENSE=	gnu-lgpl-v2.1 OR mpl-2.0
 
 USE_TOOLS+=	perl pkg-config
 USE_CMAKE=	yes
-CMAKE_ARGS+= -DUSE_BUILTIN_TZDATA=false
-CMAKE_ARGS+= -DICAL_BUILD_DOCS=false
-CMAKE_ARGS+= -DCMAKE_DISABLE_FIND_PACKAGE_BDB=true
+CMAKE_ARGS+=	-DUSE_BUILTIN_TZDATA=false
+CMAKE_ARGS+=	-DICAL_BUILD_DOCS=false
+CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_BDB=true
 MAKE_JOBS_SAFE=	no
 
 PKGCONFIG_OVERRIDE+=	libical.pc.in src/libical-glib/libical-glib.pc.in

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/08/11 13:24:09 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/11/02 16:28:40 rillig Exp $
 
 DISTNAME=	DateTimeX-Easy-0.089
 PKGNAME=	p5-${DISTNAME}
@@ -21,7 +21,7 @@ DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
 BUILD_DEPENDS+=	p5-Test-Most>0:../../devel/p5-Test-Most
 
 PERL5_MODULE_TYPE=	Module::Install::Bundled
-USE_LANGUAGES=	#
+USE_LANGUAGES=		#
 
 PERL5_PACKLIST=	auto/DateTimeX/Easy/.packlist
 

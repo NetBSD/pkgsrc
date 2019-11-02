@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/05/23 19:23:18 rillig Exp $
+# $NetBSD: Makefile,v 1.33 2019/11/02 16:28:37 rillig Exp $
 #
 
 DISTNAME=	cs113ins
@@ -13,7 +13,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Project and resource management software implemented in Java/Swing
 LICENSE=	cardboard-schedule-license
 
-RESTRICTED=	Distribution permitted only of unmodified distfile at no charge.
+RESTRICTED=		Distribution permitted only of unmodified distfile at no charge.
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}

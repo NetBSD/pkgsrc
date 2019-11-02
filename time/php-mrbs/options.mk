@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2016/09/11 17:03:28 taca Exp $
+# $NetBSD: options.mk,v 1.4 2019/11/02 16:28:41 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.php-mrbs
 
@@ -13,10 +13,10 @@ PKG_SUGGESTED_OPTIONS=	mysql
 ### Use mysql, or pgsql backend
 ###
 .if !empty(PKG_OPTIONS:Mmysql)
-DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=5.2.0:../../databases/php-mysql
+DEPENDS+=		${PHP_PKG_PREFIX}-mysql>=5.2.0:../../databases/php-mysql
 PHP_VERSIONS_ACCEPTED=	56
 .elif !empty(PKG_OPTIONS:Mpgsql)
-DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=5.2.0:../../databases/php-pgsql
+DEPENDS+=		${PHP_PKG_PREFIX}-pgsql>=5.2.0:../../databases/php-pgsql
 .else
 PKG_FAIL_REASON+=	${PKGNAME} needs either mysql or pgsql
 .endif

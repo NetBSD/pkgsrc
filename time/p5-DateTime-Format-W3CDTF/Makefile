@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/08/11 13:24:08 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/02 16:28:40 rillig Exp $
 
 DISTNAME=	DateTime-Format-W3CDTF-0.07
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Convert between DateTime and W3CDTF date/time format
 
 DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
 
-PERL5_PACKLIST= auto/DateTime/Format/W3CDTF/.packlist
+PERL5_PACKLIST=	auto/DateTime/Format/W3CDTF/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
