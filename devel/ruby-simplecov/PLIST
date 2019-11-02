@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2018/03/17 14:15:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2019/11/02 14:51:05 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
@@ -25,6 +25,7 @@ ${GEM_LIBDIR}/lib/simplecov/load_global_config.rb
 ${GEM_LIBDIR}/lib/simplecov/no_defaults.rb
 ${GEM_LIBDIR}/lib/simplecov/profiles.rb
 ${GEM_LIBDIR}/lib/simplecov/profiles/bundler_filter.rb
+${GEM_LIBDIR}/lib/simplecov/profiles/hidden_filter.rb
 ${GEM_LIBDIR}/lib/simplecov/profiles/rails.rb
 ${GEM_LIBDIR}/lib/simplecov/profiles/root_filter.rb
 ${GEM_LIBDIR}/lib/simplecov/profiles/test_frameworks.rb
