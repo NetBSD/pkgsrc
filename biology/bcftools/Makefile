@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/08/11 13:17:59 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/02 22:09:00 rillig Exp $
 
 DISTNAME=	bcftools-1.9
 PKGREVISION=	2
@@ -17,7 +17,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-htslib=system
 TEST_TARGET=		test
 
-BUILDLINK_TRANSFORM+=   opt:-ldl:${BUILDLINK_LDADD.dl:M*}
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 
 REPLACE_PERL+=		misc/*.pl
 REPLACE_PERL+=		misc/plot-vcfstats
