@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/07/21 22:24:35 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2019/11/02 15:38:12 rillig Exp $
 #
 
 DISTNAME=	virtuoso-opensource-6.1.6
@@ -11,13 +11,13 @@ HOMEPAGE=	https://virtuoso.openlinksw.com/
 COMMENT=	Universal SQL/Application server
 LICENSE=	gnu-gpl-v2 # with exemptions
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-jdk2 --without-jdk3 --without-jdk4 \
 			--with-iodbc=${PREFIX} \
 			--with-layout=pkgsrc --localstatedir=${PREFIX}
-USE_TOOLS+=	pkg-config gmake
-USE_LANGUAGES=	c c++
-USE_LIBTOOL=	yes
+USE_TOOLS+=		pkg-config gmake
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE+=	libsrc/zlib/zlib.pc.in
 

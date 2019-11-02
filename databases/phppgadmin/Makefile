@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2014/09/17 10:50:15 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2019/11/02 15:38:07 rillig Exp $
 
 DISTNAME=	phpPgAdmin-5.1
 PKGNAME=	${DISTNAME:S/PgAdmin/pgadmin/}
@@ -25,9 +25,9 @@ CONF_FILES=	${EGDIR}/config.inc.php-dist ${PHPPGBASE}/conf/config.inc.php
 DOC_FILES=	CREDITS DEVELOPERS FAQ HISTORY INSTALL LICENSE TODO \
 		TRANSLATORS
 
-REPLACE_INTERPRETER+=	pkgsrc-php
-REPLACE.pkgsrc-php.old=	.*php
-REPLACE.pkgsrc-php.new=	${PREFIX}/bin/php
+REPLACE_INTERPRETER+=		pkgsrc-php
+REPLACE.pkgsrc-php.old=		.*php
+REPLACE.pkgsrc-php.new=		${PREFIX}/bin/php
 REPLACE_FILES.pkgsrc-php=	build_tests.php
 
 do-configure:
