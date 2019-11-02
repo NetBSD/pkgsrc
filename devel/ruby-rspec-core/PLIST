@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2019/02/06 15:12:13 taca Exp $
+@comment $NetBSD: PLIST,v 1.18 2019/11/02 14:32:03 taca Exp $
 bin/rspec${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
@@ -19,6 +19,7 @@ ${GEM_LIBDIR}/lib/rspec/core/bisect/shell_runner.rb
 ${GEM_LIBDIR}/lib/rspec/core/bisect/utilities.rb
 ${GEM_LIBDIR}/lib/rspec/core/configuration.rb
 ${GEM_LIBDIR}/lib/rspec/core/configuration_options.rb
+${GEM_LIBDIR}/lib/rspec/core/did_you_mean.rb
 ${GEM_LIBDIR}/lib/rspec/core/drb.rb
 ${GEM_LIBDIR}/lib/rspec/core/dsl.rb
 ${GEM_LIBDIR}/lib/rspec/core/example.rb
@@ -36,6 +37,7 @@ ${GEM_LIBDIR}/lib/rspec/core/formatters/console_codes.rb
 ${GEM_LIBDIR}/lib/rspec/core/formatters/deprecation_formatter.rb
 ${GEM_LIBDIR}/lib/rspec/core/formatters/documentation_formatter.rb
 ${GEM_LIBDIR}/lib/rspec/core/formatters/exception_presenter.rb
+${GEM_LIBDIR}/lib/rspec/core/formatters/failure_list_formatter.rb
 ${GEM_LIBDIR}/lib/rspec/core/formatters/fallback_message_formatter.rb
 ${GEM_LIBDIR}/lib/rspec/core/formatters/helpers.rb
 ${GEM_LIBDIR}/lib/rspec/core/formatters/html_formatter.rb
