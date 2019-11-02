@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2018/06/20 12:03:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.38 2019/11/02 22:56:54 rillig Exp $
 
 DISTNAME=	ddskk-16.2
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/^ddskk/skk/}
@@ -13,8 +13,8 @@ LICENSE=	gnu-gpl-v2
 
 CONFLICTS=	ddskk-[0-9]*
 
-EMACS_MODULES+=	base leim
-EMACS_BUILDLINK=YES
+EMACS_MODULES+=		base leim
+EMACS_BUILDLINK=	YES
 
 EMACS_VERSIONS_ACCEPTED=	emacs26 emacs26nox
 EMACS_VERSIONS_ACCEPTED+=	emacs25 emacs25nox
