@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4713 2019/11/02 15:10:54 taca Exp $
+$NetBSD: CHANGES-2019,v 1.4714 2019/11/02 15:12:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7502,3 +7502,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/qsynth to 0.6.0 [nia 2019-11-02]
 	Updated mail/ruby-mime-types-data to 3.2019.1009 [taca 2019-11-02]
 	Updated mail/ruby-mime-types to 3.3 [taca 2019-11-02]
+	Updated mail/ruby-mini_mime to 1.0.2 [taca 2019-11-02]
