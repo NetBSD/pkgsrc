@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2019/08/11 13:20:47 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/02 11:33:51 mef Exp $
 
-DISTNAME=	namespace-autoclean-0.28
+DISTNAME=	namespace-autoclean-0.29
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=namespace/}
 
@@ -16,11 +15,13 @@ DEPENDS+=	p5-namespace-clean>=0.11:../../devel/p5-namespace-clean
 DEPENDS+=	p5-Sub-Identify-[0-9]*:../../devel/p5-Sub-Identify
 
 # for make test
-BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
-BUILD_DEPENDS+=	p5-Sub-Name-[0-9]*:../../devel/p5-Sub-Name
+TEST_DEPENDS+=	p5-Test-Needs-[0-9]*:../../devel/p5-Test-Needs
+TEST_DEPENDS+=	p5-Sub-Name-[0-9]*:../../devel/p5-Sub-Name
+TEST_DEPENDS+=	p5-Mouse-[0-9]*:../../devel/p5-Mouse
+TEST_DEPENDS+=	p5-MooseX-Role-Parameterized-[0-9]*:../../devel/p5-MooseX-Role-Parameterized
 
 # used by some tests but would introduce cyclic dependency
-#BUILD_DEPENDS+=	p5-Moose>=2:../../devel/p5-Moose
+TEST_DEPENDS+=	p5-Moose>=2:../../devel/p5-Moose
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/namespace/autoclean/.packlist
