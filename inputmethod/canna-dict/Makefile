@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/11/25 12:50:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/02 22:56:53 rillig Exp $
 
 CANNA_MODULE=	dict
 
@@ -69,7 +69,7 @@ REQD_DIRS_PERMS+=	${CANNA_DICTDIR} ${CANNA_USER} ${CANNA_GROUP} 0775
 .for d in fuzokugo.cbd bushu.cld dics.dir iroha.cbd iroha.cld \
 	chimei.ctd hojomwd.ctd hojoswd.ctd kanasmpl.ctd katakana.ctd \
 	keishiki.ctd necgaiji.ctd number.ctd software.ctd suffix.ctd
-SPECIAL_PERMS+=	${CANNA_DICTDIR}/${d} ${CANNA_USER} ${CANNA_GROUP} 0664
+SPECIAL_PERMS+=		${CANNA_DICTDIR}/${d} ${CANNA_USER} ${CANNA_GROUP} 0664
 .endfor
 
 .include "../../inputmethod/canna-lib/buildlink3.mk"

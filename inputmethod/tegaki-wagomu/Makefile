@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/09/02 13:19:45 adam Exp $
+# $NetBSD: Makefile,v 1.25 2019/11/02 22:56:55 rillig Exp $
 
 DISTNAME=	tegaki-wagomu-0.3.1
 PKGREVISION=	7
@@ -21,8 +21,8 @@ USE_TOOLS+=	pkg-config
 # some files are missing in distfile, taken from 0.3.
 # http://sourceforge.net/p/tegaki/bugs/8/
 post-extract:
-		${CP} ${WRKDIR}/tegaki-wagomu-0.3/tegakiwagomu.py ${WRKSRC}
-		${CP} ${WRKDIR}/tegaki-wagomu-0.3/wagomu.h ${WRKSRC}
+	${CP} ${WRKDIR}/tegaki-wagomu-0.3/tegakiwagomu.py ${WRKSRC}
+	${CP} ${WRKDIR}/tegaki-wagomu-0.3/wagomu.h ${WRKSRC}
 
 SUBST_CLASSES+=		fixver
 SUBST_STAGE.fixver=	pre-configure
