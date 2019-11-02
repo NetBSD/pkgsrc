@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2018/11/12 16:10:28 jaapb Exp $
+# $NetBSD: Makefile,v 1.23 2019/11/02 16:28:38 rillig Exp $
 #
 
 DISTNAME=	calendar-2.04
@@ -12,8 +12,8 @@ HOMEPAGE=	http://calendar.forge.ocamlcore.org/
 COMMENT=	OCaml library managing dates and times
 LICENSE=	gnu-lgpl-v2.1
 
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		gmake
 OCAML_USE_FINDLIB=	yes
 
 .include "../../mk/bsd.prefs.mk"
