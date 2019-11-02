@@ -1,0 +1,25 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2019/11/02 13:51:12 maya Exp $
+
+Workaround kdelibs4's FindExiv2.cmake not matching for newer exiv2.
+Use pkgconfig instead.
+
+--- CMakeLists.txt.orig	2015-04-30 19:04:22.000000000 +0000
++++ CMakeLists.txt
+@@ -10,6 +10,7 @@ message(STATUS "------------------------
+ message(STATUS "Starting CMake configuration for: libkexiv2")
+ 
+ find_package(KDE4 REQUIRED)
++find_package(PkgConfig)
+ 
+ include(KDE4Defaults)
+ include(MacroLibrary)
+@@ -23,8 +24,7 @@ include_directories(${QDBUS_INCLUDE_DIRS
+ set(LIBKEXIV2_AREA_CODE_GENERAL 51003)
+ add_definitions(-DKDE_DEFAULT_DEBUG_AREA=${LIBKEXIV2_AREA_CODE_GENERAL})
+ 
+-set(EXIV2_MIN_VERSION "0.24")
+-find_package(Exiv2)
++pkg_check_modules(EXIV2 exiv2>=0.25)
+ MACRO_LOG_FEATURE(EXIV2_FOUND "Exiv2" "Required to build libkexiv2." "http://www.exiv2.org"
+                   TRUE ${EXIV2_MIN_VERSION} "")
+ 
