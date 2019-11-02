@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/07/21 22:24:22 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/02 21:09:12 rillig Exp $
 
 PKGNAME=		bmp-crossfade-0.3.11
 DISTNAME=		xmms-crossfade-0.3.11
@@ -23,7 +23,7 @@ MAKE_ENV+=		OSS_DEFS=${OSS_DEFS:Q}
 .include "../../audio/bmp/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 
-CONFIGURE_ARGS+=	--enable-player=bmp
+CONFIGURE_ARGS+=		--enable-player=bmp
 GNU_CONFIGURE_LIBSUBDIR=	bmp/Output
 
 .if ${OSS_TYPE} == "none"

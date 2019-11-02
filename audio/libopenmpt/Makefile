@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2019/09/18 14:17:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2019/11/02 21:09:14 rillig Exp $
 
 DISTNAME=	libopenmpt-0.4.3+release.autotools
 PKGNAME=	${DISTNAME:C/\+.*//}
@@ -16,8 +16,8 @@ BUILD_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
 USE_LANGUAGES=	c c++
 USE_TOOLS=	gmake pkg-config
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE=	libmodplug/libmodplug.pc.in libopenmpt/libopenmpt.pc.in
 CONFIGURE_ARGS+=	--without-portaudio
 CONFIGURE_ARGS+=	--without-portaudiocpp

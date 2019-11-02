@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/09/02 13:20:06 adam Exp $
+# $NetBSD: Makefile,v 1.30 2019/11/02 21:09:12 rillig Exp $
 
 DISTNAME=	ardour-4.7
 PKGREVISION=	23
@@ -140,12 +140,12 @@ CONF_FILES+=		${EGDIR}/trx.menus ${PKG_SYSCONFDIR}/trx.menus
 # As of NetBSD-7.99.21 pkgsrc's checks cannot open file with rare unicode characters
 CHECK_PORTABILITY_SKIP+=	libs/pbd/test/i18n_test/*.tst
 
-PYTHON_VERSIONS_ACCEPTED=	 27 # as of 4.4
+PYTHON_VERSIONS_ACCEPTED=	27 # as of 4.4
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "Linux"
-BUILDLINK_TRANSFORM+=   rm:-ldl
+BUILDLINK_TRANSFORM+=	rm:-ldl
 .endif
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour4/LV2/reasonablesynth.lv2

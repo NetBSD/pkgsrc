@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/09/09 03:11:23 dbj Exp $
+# $NetBSD: Makefile,v 1.38 2019/11/02 21:09:14 rillig Exp $
 
 DISTNAME=	jack-audio-connection-kit-0.125.0
 PKGREVISION=	1
@@ -114,7 +114,7 @@ CONFIGURE_ARGS+=	--disable-dynsimd
 .  endif
 .endif
 
-BDB_ACCEPTED=	db4 db5
+BDB_ACCEPTED=		db4 db5
 BUILDLINK_TRANSFORM+=	l:db:${BDB_TYPE}
 
 post-extract:

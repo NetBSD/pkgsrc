@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/04/25 07:32:34 maya Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/02 21:09:12 rillig Exp $
 #
 
 DISTNAME=		amaroc-0.3
@@ -15,7 +15,7 @@ LICENSE=		gnu-gpl-v2
 DEPENDS+=		${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 
 INSTALLATION_DIRS=	bin share/doc/amaroc
-REPLACE_PYTHON=	amaroc.py
+REPLACE_PYTHON=		amaroc.py
 
 NO_BUILD=		yes
 
