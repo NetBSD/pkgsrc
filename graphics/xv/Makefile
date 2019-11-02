@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2019/05/23 19:23:02 rillig Exp $
+# $NetBSD: Makefile,v 1.95 2019/11/02 22:38:06 rillig Exp $
 
 DISTNAME=	xv-3.10a
 PKGREVISION=	25
@@ -6,13 +6,13 @@ CATEGORIES=	graphics x11
 MASTER_SITES=	ftp://ftp.cis.upenn.edu/pub/xv/
 DISTFILES=	${DEFAULT_DISTFILES} ${JUMBO_PATCHES}
 
-PATCHFILES=	${JUMBO_PATCHES}
-JUMBO_PATCHES=	xv-3.10a-jumbo-patches-20070520.tar.gz
+PATCHFILES=				${JUMBO_PATCHES}
+JUMBO_PATCHES=				xv-3.10a-jumbo-patches-20070520.tar.gz
 PATCH_DIST_CAT.${JUMBO_PATCHES}=	${CAT} ${WRKDIR}/*-patch-*
 PATCH_DIST_STRIP.${JUMBO_PATCHES}=	-p1
-SITES.${JUMBO_PATCHES}=	${MASTER_SITE_SOURCEFORGE:=png-mng/}
-PATCHFILES+=	xv-3.10a-enhancements.20070520-20081216.diff
-PATCH_SITES=	http://www.gregroelofs.com/code/
+SITES.${JUMBO_PATCHES}=			${MASTER_SITE_SOURCEFORGE:=png-mng/}
+PATCHFILES+=				xv-3.10a-enhancements.20070520-20081216.diff
+PATCH_SITES=				http://www.gregroelofs.com/code/
 
 MAINTAINER=	tsutsui@NetBSD.org
 HOMEPAGE=	http://www.trilon.com/xv/
@@ -25,7 +25,7 @@ USE_IMAKE=	YES
 .include "options.mk"
 
 # See the end of README in work/xv-3.10a for details.
-RESTRICTED=	Distribution of modified copies and commercial distribution is not permitted.
+RESTRICTED=		Distribution of modified copies and commercial distribution is not permitted.
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
@@ -42,7 +42,7 @@ SUBST_VARS.gspath=	PREFIX
 SUBST_STAGE.gspath=	post-configure
 SUBST_MESSAGE.gspath=	Fixing path to ghostscript interpreter.
 
-INSTALLATION_DIRS+= share/doc/xv
+INSTALLATION_DIRS+=	share/doc/xv
 
 .include "../../mk/bsd.prefs.mk"
 

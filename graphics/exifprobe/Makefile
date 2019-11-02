@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2017/08/01 17:40:12 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/02 22:37:55 rillig Exp $
 #
 
 DISTNAME=		exifprobe-2.0.1
 CATEGORIES=		graphics
 MASTER_SITES=		http://www.virtual-cafe.com/~dhh/tools.d/exifprobe.d/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-#HOMEPAGE= http://www.virtual-cafe.com/~dhh/tools.d/exifprobe.d/exifprobe.html
-COMMENT=		EXIF data extractor
+MAINTAINER=	pkgsrc-users@NetBSD.org
+#HOMEPAGE=	http://www.virtual-cafe.com/~dhh/tools.d/exifprobe.d/exifprobe.html
+COMMENT=	EXIF data extractor
 
 # byteorder.h problems
 MAKE_JOBS_SAFE=	no

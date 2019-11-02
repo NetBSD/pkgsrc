@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.4 2014/12/15 11:46:35 jperkin Exp $
+# $NetBSD: hacks.mk,v 1.5 2019/11/02 22:38:01 rillig Exp $
 
 .if !defined(PNG_HACKS_MK)
 PNG_HACKS_MK=	defined
@@ -12,7 +12,7 @@ PNG_HACKS_MK=	defined
 # XXX: is there any good way to replace the default -O2 with multiple args?
 #PKG_HACKS+=		optimisation
 #BUILDLINK_TRANSFORM+=	opt:-O[2-9]*:-O2 -fno-ipa-sra
-CFLAGS+=-O2 -fno-ipa-sra
+CFLAGS+=		-O2 -fno-ipa-sra
 .endif
 
 .endif	# PNG_HACKS_MK

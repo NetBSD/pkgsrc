@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2017/08/01 17:40:12 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2019/11/02 22:37:55 rillig Exp $
 
 DISTNAME=	dxsamples-4.4.0
 CATEGORIES=	graphics
@@ -10,8 +10,8 @@ COMMENT=	Sample data for Open Visualization Data Explorer
 
 DEPENDS+=	dx-[0-9]*:../../graphics/dx
 
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake makeinfo
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		gmake makeinfo
 CONFIGURE_ARGS+=	MAKEINFO=${TOOLS_PATH.makeinfo}
 
 .include "../../mk/bsd.pkg.mk"

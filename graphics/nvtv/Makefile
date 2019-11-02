@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2019/07/21 22:25:02 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2019/11/02 22:38:01 rillig Exp $
 
 DISTNAME=	nvtv-0.4.7
 PKGREVISION=	35
@@ -12,13 +12,13 @@ COMMENT=	Tool to manipulate TV-Out settings on NVidia cards
 ONLY_FOR_PLATFORM=	*-*-i386	# uses iopl()
 ONLY_FOR_PLATFORM+=	*-*-x86_64	# may not build without some hacking
 NOT_FOR_PLATFORM+=	NetBSD-*-x86_64	# lack of x86_64_[gs]_set_ioperm.
-CONFLICTS=	nvtv-gtk2-[0-9]*
+CONFLICTS=		nvtv-gtk2-[0-9]*
 
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		YES
 RCD_SCRIPTS=		nvtvd
 
-INSTALLATION_DIRS+= share/doc/nvtv
+INSTALLATION_DIRS+=	share/doc/nvtv
 
 post-patch:
 	${CP} ${WRKSRC}/man/nvtv.1x ${WRKSRC}/man/nvtv.1

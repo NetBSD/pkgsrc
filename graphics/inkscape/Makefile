@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.195 2019/10/19 12:46:05 nia Exp $
+# $NetBSD: Makefile,v 1.196 2019/11/02 22:37:58 rillig Exp $
 
 DISTNAME=	inkscape-0.92.4
 PKGREVISION=	7
@@ -66,10 +66,10 @@ REPLACE_PYTHON+=	share/extensions/Barcode/*.py
 REPLACE_PYTHON+=	share/extensions/ink2canvas/*.py
 REPLACE_PYTHON+=	share/extensions/test/*.test.py
 
-CHECK_INTERPRETER_SKIP+=share/inkscape/extensions/genpofiles.sh
-CHECK_INTERPRETER_SKIP+=share/inkscape/extensions/simplepath.rb
-CHECK_PORTABILITY_SKIP+=packaging/macosx/Resources/bin/inkscape
-CHECK_PORTABILITY_SKIP+=packaging/macosx/ScriptExec/launcher-quartz-no-macintegration.sh
+CHECK_INTERPRETER_SKIP+=	share/inkscape/extensions/genpofiles.sh
+CHECK_INTERPRETER_SKIP+=	share/inkscape/extensions/simplepath.rb
+CHECK_PORTABILITY_SKIP+=	packaging/macosx/Resources/bin/inkscape
+CHECK_PORTABILITY_SKIP+=	packaging/macosx/ScriptExec/launcher-quartz-no-macintegration.sh
 
 .include "options.mk"
 
