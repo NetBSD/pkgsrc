@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2019/08/11 13:18:22 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2019/11/02 13:31:51 mef Exp $
 
-DISTNAME=	BerkeleyDB-0.55
+DISTNAME=	BerkeleyDB-0.63
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=BerkeleyDB/}
 
@@ -10,6 +9,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/BerkeleyDB
 COMMENT=	Access Berkeley DB
 LICENSE=	${PERL5_LICENSE}
+
+TEST_DEPENDS+=	p5-Test-CPAN-Meta-[0-9]*:../../devel/p5-Test-CPAN-Meta
+TEST_DEPENDS+=	p5-Test-CPAN-Meta-JSON-[0-9]*:../../devel/p5-Test-CPAN-Meta-JSON
+TEST_DEPENDS+=	p5-MLDBM-[0-9]*:../../databases/p5-MLDBM
 
 BDB_ACCEPTED=		db5 db4 db3 db2
 PERL5_PACKLIST=		auto/BerkeleyDB/.packlist
