@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/06 14:10:41 asau Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/02 22:37:54 rillig Exp $
 #
 
 DISTNAME=	bktr2jpeg-1.0
@@ -12,7 +12,7 @@ COMMENT=	Write jpeg image captured from /dev/bktr to file
 
 ONLY_FOR_PLATFORM=	NetBSD-*-* DragonFly-*-* FreeBSD-*-*
 
-MAKE_FLAGS+=	INSTALL=${INSTALL_PROGRAM:Q}
+MAKE_FLAGS+=		INSTALL=${INSTALL_PROGRAM:Q}
 INSTALL_MAKE_FLAGS=	PREFIX=${DESTDIR}${PREFIX}
 
 INSTALLATION_DIRS=	bin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2015/06/09 08:55:22 wiz Exp $
+# $NetBSD: Makefile.common,v 1.30 2019/11/02 22:37:55 rillig Exp $
 #
 # used by graphics/dia-python/Makefile
 
@@ -22,7 +22,7 @@ USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES=		c c++
 
-CHECK_PORTABILITY_SKIP+= installer/macosx/dia
+CHECK_PORTABILITY_SKIP+=	installer/macosx/dia
 
 CONFIGURE_ARGS+=	--disable-emf
 CONFIGURE_ARGS+=	--without-python

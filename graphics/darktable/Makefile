@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2019/08/22 12:23:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.104 2019/11/02 22:37:54 rillig Exp $
 
 DISTNAME=	darktable-2.6.0
 PKGREVISION=	7
@@ -31,12 +31,12 @@ CMAKE_ARGS+=	-Wno-dev
 CMAKE_ARGS+=	-DWITH_OPENMP=OFF
 CMAKE_ARGS+=	-DUSE_COLORD=OFF
 
-CONFIGURE_DIRS= ../pkgsrc_build
-CMAKE_ARG_PATH= ${WRKSRC}
+CONFIGURE_DIRS=	../pkgsrc_build
+CMAKE_ARG_PATH=	${WRKSRC}
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/darktable
 
 # NetBSD 6 libm is the first with exp2f(3)
-#NOT_FOR_PLATFORM= NetBSD-4*-* NetBSD-5.[0-8]*-*
+#NOT_FOR_PLATFORM=	NetBSD-4*-* NetBSD-5.[0-8]*-*
 
 # Hard-coded use of SSE2
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
@@ -57,12 +57,12 @@ CFLAGS.SunOS+=	-D__SUNOS__=1
 CFLAGS+=	-Wno-error=deprecated-declarations
 .endif
 
-CHECK_PORTABILITY_SKIP+= packaging/macosx/start
+CHECK_PORTABILITY_SKIP+=	packaging/macosx/start
 
 pre-configure:
 	${MKDIR} ${WRKDIR}/pkgsrc_build
 
-BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=3.7.14.1nb1
+BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.7.14.1nb1
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"

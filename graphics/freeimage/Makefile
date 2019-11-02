@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/07/18 00:06:18 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/02 22:37:56 rillig Exp $
 
 DISTNAME=	FreeImage3170
 PKGNAME=	freeimage-3.17.0
@@ -12,12 +12,12 @@ HOMEPAGE=	http://freeimage.sf.net/
 COMMENT=	Library for supporting PNG, BMP, JPEG, and TIFF
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3 OR mpl-1.0
 
-USE_LANGUAGES+= c c++03
+USE_LANGUAGES+=	c c++03
 USE_TOOLS+=	gmake
 
 WRKSRC=		${WRKDIR}/FreeImage
 
-INSTALLATION_DIRS+= include lib share/doc/${PKGBASE}
+INSTALLATION_DIRS+=	include lib share/doc/${PKGBASE}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/Source/LibJXR/LICENCE \
@@ -39,6 +39,6 @@ post-install:
 
 PLIST_SUBST+=	PKGVERSION_NOREV=${PKGVERSION_NOREV}
 
-NOT_FOR_PLATFORM=Darwin-*-*
+NOT_FOR_PLATFORM=	Darwin-*-*
 
 .include "../../mk/bsd.pkg.mk"
