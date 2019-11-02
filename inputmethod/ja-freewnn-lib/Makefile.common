@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.22 2017/01/19 18:52:13 agc Exp $
+# $NetBSD: Makefile.common,v 1.23 2019/11/02 22:56:54 rillig Exp $
 # used by inputmethod/ja-freewnn-server/Makefile
 # used by inputmethod/ja-freewnn-lib/Makefile
 
 DISTNAME=	FreeWnn-1.1.1-a023
-MASTER_SITES=   ${MASTER_SITE_OSDN:=freewnn/63271/}
+MASTER_SITES=	${MASTER_SITE_OSDN:=freewnn/63271/}
 MASTER_SITES+=	ftp://ftp.st.ryukoku.ac.jp/pub/japanese-im/FreeWnn/
 CATEGORIES=	inputmethod
 
@@ -15,9 +15,9 @@ LICENSE=	gnu-gpl-v2
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 
-FILESDIR=       ${.CURDIR}/../../inputmethod/ja-freewnn-lib/files
-DISTINFO_FILE=  ${.CURDIR}/../../inputmethod/ja-freewnn-lib/distinfo
-PATCHDIR=       ${.CURDIR}/../../inputmethod/ja-freewnn-lib/patches
+FILESDIR=	${.CURDIR}/../../inputmethod/ja-freewnn-lib/files
+DISTINFO_FILE=	${.CURDIR}/../../inputmethod/ja-freewnn-lib/distinfo
+PATCHDIR=	${.CURDIR}/../../inputmethod/ja-freewnn-lib/patches
 
 # will be taka care with pkg INSTALL script
 INSTALL_MAKE_FLAGS+=	WNNTOUCH=${TRUE}
