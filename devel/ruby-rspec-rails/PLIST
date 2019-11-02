@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2018/03/14 14:23:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.20 2019/11/02 14:41:08 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
@@ -13,6 +13,8 @@ ${GEM_LIBDIR}/lib/generators/rspec/controller/templates/view_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/feature/feature_generator.rb
 ${GEM_LIBDIR}/lib/generators/rspec/feature/templates/feature_singular_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/feature/templates/feature_spec.rb
+${GEM_LIBDIR}/lib/generators/rspec/generators/generator_generator.rb
+${GEM_LIBDIR}/lib/generators/rspec/generators/templates/generator_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/helper/helper_generator.rb
 ${GEM_LIBDIR}/lib/generators/rspec/helper/templates/helper_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/install/install_generator.rb
@@ -39,6 +41,8 @@ ${GEM_LIBDIR}/lib/generators/rspec/scaffold/templates/index_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/scaffold/templates/new_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/scaffold/templates/routing_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/scaffold/templates/show_spec.rb
+${GEM_LIBDIR}/lib/generators/rspec/system/system_generator.rb
+${GEM_LIBDIR}/lib/generators/rspec/system/templates/system_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/view/templates/view_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/view/view_generator.rb
 ${GEM_LIBDIR}/lib/rspec-rails.rb
@@ -66,9 +70,11 @@ ${GEM_LIBDIR}/lib/rspec/rails/fixture_file_upload_support.rb
 ${GEM_LIBDIR}/lib/rspec/rails/fixture_support.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers/active_job.rb
+${GEM_LIBDIR}/lib/rspec/rails/matchers/base_matcher.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers/be_a_new.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers/be_new_record.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers/be_valid.rb
+${GEM_LIBDIR}/lib/rspec/rails/matchers/have_enqueued_mail.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers/have_http_status.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers/have_rendered.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers/redirect_to.rb
