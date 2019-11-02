@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2017/10/30 14:44:05 fhajny Exp $
+# $NetBSD: options.mk,v 1.3 2019/11/02 22:37:53 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.ImageMagick
-PKG_SUPPORTED_OPTIONS=	x11 jp2 djvu openexr wmf
-PKG_SUGGESTED_OPTIONS=	x11 jp2
+PKG_OPTIONS_VAR=		PKG_OPTIONS.ImageMagick
+PKG_SUPPORTED_OPTIONS=		x11 jp2 djvu openexr wmf
+PKG_SUGGESTED_OPTIONS=		x11 jp2
 PKG_OPTIONS_LEGACY_OPTS+=	jasper:jp2
 
 .include "../../mk/bsd.options.mk"

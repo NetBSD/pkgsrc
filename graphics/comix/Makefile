@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2019/09/02 13:20:18 adam Exp $
+# $NetBSD: Makefile,v 1.68 2019/11/02 22:37:54 rillig Exp $
 
 DISTNAME=		comix-4.0.4
 PKGREVISION=		36
@@ -24,7 +24,7 @@ SUBST_FILES.install-path=	install.py
 SUBST_SED.install-path=		-e "s,share/man/man,${PKGMANDIR}/man,g"
 
 REPLACE_PYTHON=			src/comix.py mime/comicthumb
-PYTHON_VERSIONS_ACCEPTED=	 27 # py-imaging, py-gtk2
+PYTHON_VERSIONS_ACCEPTED=	27 # py-imaging, py-gtk2
 
 do-build:
 

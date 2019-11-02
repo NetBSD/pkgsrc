@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2019/09/04 13:17:33 nia Exp $
+# $NetBSD: options.mk,v 1.19 2019/11/02 22:37:54 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cairo
 PKG_SUPPORTED_OPTIONS=	x11 xcb
@@ -25,7 +25,7 @@ PLIST.x11=		yes
 .  if !empty(PKG_OPTIONS:Mxcb)
 CONFIGURE_ARGS+=	--enable-xcb
 PLIST.xcb=		yes
-.  include "../../x11/libxcb/buildlink3.mk"
+.    include "../../x11/libxcb/buildlink3.mk"
 .  else
 CONFIGURE_ARGS+=	--disable-xcb
 .  endif

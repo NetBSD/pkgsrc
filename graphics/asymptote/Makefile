@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2019/08/11 13:21:07 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2019/11/02 22:37:53 rillig Exp $
 
 DISTNAME=	asymptote-2.41
 PKGREVISION=	4
@@ -29,7 +29,7 @@ MAKE_JOBS_SAFE=		no # random failure during build as of 2.38
 
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
-USE_LANGUAGES=          c c++
+USE_LANGUAGES=		c c++
 
 CONFIGURE_ARGS+=	--enable-gc=system
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/info

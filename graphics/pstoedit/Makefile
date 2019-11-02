@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2019/07/21 22:25:03 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2019/11/02 22:38:02 rillig Exp $
 
 DISTNAME=	pstoedit-3.70
 PKGREVISION=	15
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=	--without-emf
 CONFIGURE_ENV+=		CXXFLAGS="${CFLAGS} -Dunix"
 CONFIGURE_ENV+=		ac_cv_path_GS=${TOOLS_PATH.gs}
 
-GNU_CONFIGURE_LIBSUBDIR=pstoedit	# plugin dir -- unused for now
+GNU_CONFIGURE_LIBSUBDIR=	pstoedit	# plugin dir -- unused for now
 #BUILD_TARGET=
 
 LIBS.SunOS+=	-ldl

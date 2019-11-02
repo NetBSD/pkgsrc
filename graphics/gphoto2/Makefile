@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2018/04/03 06:14:54 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2019/11/02 22:37:58 rillig Exp $
 
 DISTNAME=	gphoto2-2.5.8
 PKGREVISION=	1
@@ -20,7 +20,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-cdk-prefix=${BUILDLINK_PREFIX.cdk}
 CONFIGURE_ARGS+=	--with-jpeg-prefix=${JPEGBASE}
 
-CFLAGS.Darwin+= -D_DARWIN_C_SOURCE
+CFLAGS.Darwin+=	-D_DARWIN_C_SOURCE
 
 .include "../../devel/cdk/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"

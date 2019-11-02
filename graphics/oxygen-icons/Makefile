@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2019/08/27 21:22:59 markd Exp $
+# $NetBSD: Makefile,v 1.35 2019/11/02 22:38:01 rillig Exp $
 
 DISTNAME=	oxygen-icons5-5.61.0
 PKGNAME=	${DISTNAME:S/5//}
@@ -11,8 +11,8 @@ HOMEPAGE=	http://www.oxygen-icons.org/
 COMMENT=	Oxygen icon set for the KDE integrated X11 desktop
 LICENSE=	gnu-lgpl-v3
 
-BUILD_DEPENDS+= extra-cmake-modules>=5.61.0:../../devel/extra-cmake-modules
-TOOLS_DEPENDS.cmake= cmake>=3.0:../../devel/cmake
+BUILD_DEPENDS+=		extra-cmake-modules>=5.61.0:../../devel/extra-cmake-modules
+TOOLS_DEPENDS.cmake=	cmake>=3.0:../../devel/cmake
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++

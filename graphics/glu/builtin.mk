@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.16 2019/09/01 10:57:27 nia Exp $
+# $NetBSD: builtin.mk,v 1.17 2019/11/02 22:37:58 rillig Exp $
 
 BUILTIN_PKG:=	glu
 
@@ -66,7 +66,7 @@ USE_BUILTIN.glu!=							\
 .    endif
 .  endif  # PREFER.glu
 .endif
-MAKEVARS+=	USE_BUILTIN.glu
+MAKEVARS+=		USE_BUILTIN.glu
 
 ###
 ### The section below only applies if we are not including this file

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2019/07/21 22:24:57 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2019/11/02 22:37:56 rillig Exp $
 #
 
 DISTNAME=	fotoxx-16.02.1
@@ -16,9 +16,9 @@ BUILD_DEFS+=	PKG_SYSCONFBASE
 PKG_SYSCONFSUBDIR=	xdg/menus
 
 # XXX work around misc/xdg-utils being completely broken
-XDG_CONFIG_DIRS="${DESTDIR}${PKG_SYSCONFBASE}/xdg"
-MAKE_ENV+=	XDG_CONFIG_DIRS="${XDG_CONFIG_DIRS}"
-MAKE_ENV+=	XDG_DATA_DIRS="${DESTDIR}${PREFIX}/share"
+XDG_CONFIG_DIRS=	"${DESTDIR}${PKG_SYSCONFBASE}/xdg"
+MAKE_ENV+=		XDG_CONFIG_DIRS="${XDG_CONFIG_DIRS}"
+MAKE_ENV+=		XDG_DATA_DIRS="${DESTDIR}${PREFIX}/share"
 
 OWN_DIRS+=	${PREFIX}/share/desktop-directories
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/06/08 20:49:41 nros Exp $
+# $NetBSD: Makefile,v 1.9 2019/11/02 22:38:03 rillig Exp $
 
 DISTNAME=	qore-opengl-module-0.0.3
 PKGREVISION=	10
@@ -20,7 +20,7 @@ pre-configure:
 	set -e; cd ${WRKSRC}; \
 	aclocal; autoheader; automake -a --foreign -i; autoconf
 
-CONFIGURE_ARGS+=--with-opengl=${BUILDLINK_PREFIX.MesaLib}
+CONFIGURE_ARGS+=	--with-opengl=${BUILDLINK_PREFIX.MesaLib}
 
 INSTALLATION_DIRS+=     share/doc/${PKGBASE}
 post-install:

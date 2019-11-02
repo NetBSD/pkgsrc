@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2011/02/25 17:02:53 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2019/11/02 22:38:00 rillig Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -28,9 +28,9 @@ CONFIGURE_ARGS+=	--disable-vflib
 
 .if !empty(PKG_OPTIONS:Mxft2)
 CONFIGURE_ARGS+=	--enable-xft2
-MGP_XFONT=	# empty
-MGP_TFONT=	% %
-MGP_VFONT=	% %
+MGP_XFONT=		# empty
+MGP_TFONT=		% %
+MGP_VFONT=		% %
 
 .include "../../x11/libXft/buildlink3.mk"
 .else

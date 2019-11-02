@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/09/02 13:20:18 adam Exp $
+# $NetBSD: Makefile,v 1.11 2019/11/02 22:38:02 rillig Exp $
 
 DISTNAME=	PyChart-1.39
 PKGNAME=	${PYPKGPREFIX}-chart-1.39
@@ -10,7 +10,7 @@ HOMEPAGE=	https://wiki.python.org/moin/PyChart
 COMMENT=	Create high quality Encapsulated Postscript, PDF, or PNG charts
 LICENSE=	gnu-gpl-v2
 
-PYTHON_VERSIONS_ACCEPTED=	 27
+PYTHON_VERSIONS_ACCEPTED=	27
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

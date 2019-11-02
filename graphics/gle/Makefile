@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2017/01/19 18:52:12 agc Exp $
+# $NetBSD: Makefile,v 1.33 2019/11/02 22:37:57 rillig Exp $
 #
 
 DISTNAME=	gle-3.1.0
@@ -15,7 +15,7 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LIBS+=			-lXext
 
-BUILDLINK_DEPMETHOD.libXt?=      build
+BUILDLINK_DEPMETHOD.libXt?=	build
 
 # GLUT is used only by the examples, which aren't built or installed.
 #.include "../../graphics/glut/buildlink3.mk"

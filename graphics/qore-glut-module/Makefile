@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/08/30 17:01:34 nia Exp $
+# $NetBSD: Makefile,v 1.10 2019/11/02 22:38:03 rillig Exp $
 
 DISTNAME=	qore-glut-module-0.0.3
 PKGREVISION=	10
@@ -15,7 +15,7 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++11
 PTHREAD_OPTS+=	native
 
-CONFIGURE_ARGS+=--with-glut=${BUILDLINK_PREFIX.glut}
+CONFIGURE_ARGS+=	--with-glut=${BUILDLINK_PREFIX.glut}
 
 .include "options.mk"
 

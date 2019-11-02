@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/09/02 13:20:17 adam Exp $
+# $NetBSD: Makefile,v 1.13 2019/11/02 22:38:06 rillig Exp $
 
 DISTNAME=	xdot
 PKGNAME=	xdot-20121124
@@ -14,12 +14,12 @@ LICENSE=	gnu-lgpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
 
-WRKSRC=		${WRKDIR}
-USE_LANGUAGES=	# none
-DIST_SUBDIR=	${PKGNAME_NOREV}
-REPLACE_PYTHON=	xdot.py
-PYTHON_VERSIONS_ACCEPTED=	 27 # py-gtk2
-INSTALLATION_DIRS=	bin
+WRKSRC=				${WRKDIR}
+USE_LANGUAGES=			# none
+DIST_SUBDIR=			${PKGNAME_NOREV}
+REPLACE_PYTHON=			xdot.py
+PYTHON_VERSIONS_ACCEPTED=	27 # py-gtk2
+INSTALLATION_DIRS=		bin
 
 do-build:
 
