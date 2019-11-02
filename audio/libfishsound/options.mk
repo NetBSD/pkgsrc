@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2015/12/29 04:54:36 dholland Exp $
+# $NetBSD: options.mk,v 1.4 2019/11/02 21:09:14 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.libfishsound
-PKG_SUPPORTED_OPTIONS=	doc valgrind
-PKG_SUGGESTED_OPTIONS+=	flac speex vorbis
+PKG_OPTIONS_VAR=		PKG_OPTIONS.libfishsound
+PKG_SUPPORTED_OPTIONS=		doc valgrind
+PKG_SUGGESTED_OPTIONS+=		flac speex vorbis
 PKG_OPTIONS_NONEMPTY_SETS+=	codec
 PKG_OPTIONS_SET.codec=		flac speex vorbis
 
@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--disable-speex
 .endif
 
 .if !empty(PKG_OPTIONS:Mvalgrind)
-BUILD_DEPENDS+=	valgrind-[0-9]*:../../devel/valgrind
+BUILD_DEPENDS+=		valgrind-[0-9]*:../../devel/valgrind
 CONFIGURE_ARGS+=	--enable-valgrind-testing
 .else
 CONFIGURE_ARGS+=	--disable-valgrind-testing
