@@ -3,7 +3,9 @@ package pkglint
 func CheckLinesOptionsMk(mklines *MkLines) {
 	ck := OptionsLinesChecker{
 		mklines,
+		false,
 		make(map[string]*MkLine),
+		false,
 		make(map[string]*MkLine),
 		nil}
 
@@ -16,7 +18,9 @@ func CheckLinesOptionsMk(mklines *MkLines) {
 type OptionsLinesChecker struct {
 	mklines *MkLines
 
+	declaredArbitrary         bool
 	declaredOptions           map[string]*MkLine
+	handledArbitrary          bool
 	handledOptions            map[string]*MkLine
 	optionsInDeclarationOrder []string
 }
@@ -26,94 +30,91 @@ func (ck *OptionsLinesChecker) Check() {
 
 	mklines.Check()
 
-	mlex := NewMkLinesLexer(mklines)
-	mlex.SkipWhile(func(mkline *MkLine) bool { return mkline.IsComment() || mkline.IsEmpty() })
-
-	if !ck.lookingAtPkgOptionsVar(mlex) {
-		return
-	}
-	mlex.Skip()
-
-	upper := true
-	for !mlex.EOF() && upper {
-		upper = ck.handleUpperLine(mlex.CurrentMkLine())
-		mlex.Skip()
-	}
-
-	i := 0
-	mklines.ForEach(func(mkline *MkLine) {
-		if i >= mlex.index {
-			ck.handleLowerLine(mkline)
-		}
-		i++
-	})
+	ck.collect()
 
 	ck.checkOptionsMismatch()
 
 	mklines.SaveAutofixChanges()
 }
 
-func (ck *OptionsLinesChecker) lookingAtPkgOptionsVar(mlex *MkLinesLexer) bool {
-	if !mlex.EOF() {
-		mkline := mlex.CurrentMkLine()
-		if mkline.IsVarassign() && mkline.Varname() == "PKG_OPTIONS_VAR" {
-			return true
+func (ck *OptionsLinesChecker) collect() {
+	seenPkgOptionsVar := false
+	seenInclude := false
+
+	ck.mklines.ForEach(func(mkline *MkLine) {
+		if mkline.IsEmpty() || mkline.IsComment() {
+			return
 		}
+
+		if !seenInclude {
+			if !seenPkgOptionsVar && mkline.IsVarassign() && mkline.Varname() == "PKG_OPTIONS_VAR" {
+				seenPkgOptionsVar = true
+			}
+			seenInclude = mkline.IsInclude() && mkline.IncludedFile() == "../../mk/bsd.options.mk"
+		}
+
+		if !seenInclude {
+			ck.handleUpperLine(mkline, seenPkgOptionsVar)
+		} else {
+			ck.handleLowerLine(mkline)
+		}
+	})
+
+	if !seenPkgOptionsVar {
+		ck.mklines.Whole().Errorf("Each options.mk file must define PKG_OPTIONS_VAR.")
 	}
 
-	line := mlex.CurrentLine()
-	line.Warnf("Expected definition of PKG_OPTIONS_VAR.")
-	line.Explain(
-		"The input variables in an options.mk file should always be",
-		"mentioned in the same order: PKG_OPTIONS_VAR,",
-		"PKG_SUPPORTED_OPTIONS, PKG_SUGGESTED_OPTIONS.",
-		"This way, the options.mk files have the same structure and are easy to understand.")
-	return false
+	if !seenInclude {
+		file := ck.mklines.Whole()
+		file.Errorf("Each options.mk file must .include \"../../mk/bsd.options.mk\".")
+		file.Explain(
+			"After defining the input variables (PKG_OPTIONS_VAR, etc.),",
+			"bsd.options.mk must be included to do the actual processing.")
+	}
 }
 
 // handleUpperLine checks a line from the upper part of an options.mk file,
 // before bsd.options.mk is included.
-func (ck *OptionsLinesChecker) handleUpperLine(mkline *MkLine) bool {
-	switch {
-	case mkline.IsComment():
-		break
-	case mkline.IsEmpty():
-		break
+func (ck *OptionsLinesChecker) handleUpperLine(mkline *MkLine, seenPkgOptionsVar bool) {
 
-	case mkline.IsVarassign():
-		switch mkline.Varcanon() {
-		case "PKG_SUPPORTED_OPTIONS",
-			"PKG_SUPPORTED_OPTIONS.*",
-			"PKG_OPTIONS_GROUP.*",
-			"PKG_OPTIONS_SET.*":
-			for _, option := range mkline.ValueFields(mkline.Value()) {
-				if !containsVarRef(option) {
-					ck.declaredOptions[option] = mkline
-					ck.optionsInDeclarationOrder = append(ck.optionsInDeclarationOrder, option)
-				}
-			}
+	declare := func(option string) {
+		if containsVarRef(option) {
+			ck.declaredArbitrary = true
+		} else {
+			ck.declaredOptions[option] = mkline
+			ck.optionsInDeclarationOrder = append(ck.optionsInDeclarationOrder, option)
 		}
-
-	case mkline.IsDirective():
-		// The conditionals are typically for OPSYS and MACHINE_ARCH.
-
-	case mkline.IsInclude():
-		if mkline.IncludedFile() == "../../mk/bsd.options.mk" {
-			return false
-		}
-
-	default:
-		line := mkline
-		line.Warnf("Expected inclusion of \"../../mk/bsd.options.mk\".")
-		line.Explain(
-			"After defining the input variables (PKG_OPTIONS_VAR, etc.),",
-			"bsd.options.mk should be included to do the actual processing.",
-			"No other actions should take place in this part of the file",
-			"in order to have the same structure in all options.mk files.")
-		return false
 	}
 
-	return true
+	if !mkline.IsVarassign() {
+		return
+	}
+
+	switch mkline.Varcanon() {
+	case "PKG_SUPPORTED_OPTIONS",
+		"PKG_SUPPORTED_OPTIONS.*",
+		"PKG_OPTIONS_GROUP.*",
+		"PKG_OPTIONS_SET.*":
+		if !seenPkgOptionsVar {
+			ck.warnVarorder(mkline)
+		}
+
+		for _, option := range mkline.ValueFields(mkline.Value()) {
+			if optionVarUse := ToVarUse(option); optionVarUse != nil {
+				forVars := ck.mklines.ExpandLoopVar(optionVarUse.varname)
+				for _, option := range forVars {
+					declare(option)
+				}
+				if len(forVars) == 0 {
+					for _, option := range mkline.ValueFields(resolveVariableRefs(ck.mklines, option)) {
+						declare(option)
+					}
+				}
+			} else {
+				declare(option)
+			}
+		}
+	}
 }
 
 func (ck *OptionsLinesChecker) handleLowerLine(mkline *MkLine) {
@@ -138,6 +139,7 @@ func (ck *OptionsLinesChecker) handleLowerCondition(mkline *MkLine, cond *MkCond
 
 	recordOption := func(option string) {
 		if containsVarRef(option) {
+			ck.handledArbitrary = true
 			return
 		}
 
@@ -164,10 +166,15 @@ func (ck *OptionsLinesChecker) handleLowerCondition(mkline *MkLine, cond *MkCond
 			recordOption(pattern)
 
 		} else {
+			matched := false
 			for declaredOption := range ck.declaredOptions {
 				if pathMatches(pattern, declaredOption) {
+					matched = true
 					recordOption(declaredOption)
 				}
+			}
+			if !matched {
+				ck.handledArbitrary = true
 			}
 		}
 	}
@@ -199,13 +206,13 @@ func (ck *OptionsLinesChecker) checkOptionsMismatch() {
 		handled := ck.handledOptions[option]
 
 		switch {
-		case handled == nil:
+		case handled == nil && !ck.handledArbitrary:
 			declared.Warnf("Option %q should be handled below in an .if block.", option)
 			declared.Explain(
 				"If an option is not processed in this file, it may either be a",
 				"typo, or the option does not have any effect.")
 
-		case declared == nil:
+		case declared == nil && !ck.declaredArbitrary:
 			handled.Warnf("Option %q is handled but not added to PKG_SUPPORTED_OPTIONS.", option)
 			handled.Explain(
 				"This block of code will never be run since PKG_OPTIONS cannot",
@@ -213,4 +220,14 @@ func (ck *OptionsLinesChecker) checkOptionsMismatch() {
 				"This is most probably a typo.")
 		}
 	}
+}
+
+func (ck *OptionsLinesChecker) warnVarorder(mkline *MkLine) {
+	mkline.Warnf("Expected definition of PKG_OPTIONS_VAR.")
+	mkline.Explain(
+		"The input variables in an options.mk file should always be",
+		"mentioned in the same order: PKG_OPTIONS_VAR,",
+		"PKG_SUPPORTED_OPTIONS, PKG_SUGGESTED_OPTIONS.",
+		"",
+		"This way, the options.mk files have the same structure and are easy to understand.")
 }
