@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4711 2019/11/02 15:05:39 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4712 2019/11/02 15:07:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7500,3 +7500,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated games/bastet to 0.43.2 [nia 2019-11-02]
 	Updated graphics/ruby-RMagick to 3.2.0 [taca 2019-11-02]
 	Updated audio/qsynth to 0.6.0 [nia 2019-11-02]
+	Updated mail/ruby-mime-types-data to 3.2019.1009 [taca 2019-11-02]
