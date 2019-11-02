@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2019/09/13 09:55:05 wen Exp $
+# $NetBSD: Makefile,v 1.104 2019/11/02 16:28:40 rillig Exp $
 
 DISTNAME=	DateTime-TimeZone-2.37
 PKGNAME=	p5-${DISTNAME}
@@ -15,23 +15,23 @@ DEPENDS+=	p5-Params-Validate>=0.72:../../devel/p5-Params-Validate
 DEPENDS+=	p5-List-AllUtils>=0:../../devel/p5-List-AllUtils
 DEPENDS+=	p5-Module-Runtime-[0-9]*:../../devel/p5-Module-Runtime
 DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
-DEPENDS+=       p5-Params-ValidationCompiler-[0-9]*:../../devel/p5-Params-ValidationCompiler
-DEPENDS+=       p5-Specio-[0-9]*:../../devel/p5-Specio
+DEPENDS+=	p5-Params-ValidationCompiler-[0-9]*:../../devel/p5-Params-ValidationCompiler
+DEPENDS+=	p5-Specio-[0-9]*:../../devel/p5-Specio
 
 # for tests, but can't depend in it, since it depends on this package
 #BUILD_DEPENDS+=	p5-DateTime>=0.1501:../../time/p5-DateTime
-BUILD_DEPENDS+=	p5-Exception-Class-[0-9]*:../../devel/p5-Exception-Class
-BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
-BUILD_DEPENDS+=	p5-Test-Output-[0-9]*:../../devel/p5-Test-Output
-BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
-BUILD_DEPENDS+=	p5-Test-Taint-[0-9]*:../../devel/p5-Test-Taint
-BUILD_DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
+BUILD_DEPENDS+=		p5-Exception-Class-[0-9]*:../../devel/p5-Exception-Class
+BUILD_DEPENDS+=		p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+BUILD_DEPENDS+=		p5-Test-Output-[0-9]*:../../devel/p5-Test-Output
+BUILD_DEPENDS+=		p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+BUILD_DEPENDS+=		p5-Test-Taint-[0-9]*:../../devel/p5-Test-Taint
+BUILD_DEPENDS+=		p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 
 # on HPUX it requires ../../time/p5-DateTime-TimeZone-HPUX
 # but this will result in a circular dependency
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST=		auto/DateTime/TimeZone/.packlist
+PERL5_PACKLIST=	auto/DateTime/TimeZone/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
