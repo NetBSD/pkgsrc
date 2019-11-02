@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/02/17 19:18:04 dholland Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/02 22:56:54 rillig Exp $
 #
 
 DISTNAME=	IIIMECF-0.6
@@ -12,7 +12,7 @@ MAINTAINER=	uebayasi@NetBSD.org
 COMMENT=	Emacs Lisp library for IIIM Protocol
 
 EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20
-EMACS_BUILDLINK=# defined
+EMACS_BUILDLINK=		# defined
 
 do-build:
 	@cd ${WRKSRC} && \

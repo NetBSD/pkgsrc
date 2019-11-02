@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2009/08/03 23:30:06 taya Exp $
+# $NetBSD: options.mk,v 1.4 2019/11/02 22:56:53 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.anthy
-PKG_SUPPORTED_OPTIONS=	anthy-2ch-dict anthy-okinawa-dict
+PKG_OPTIONS_VAR=		PKG_OPTIONS.anthy
+PKG_SUPPORTED_OPTIONS=		anthy-2ch-dict anthy-okinawa-dict
 PKG_OPTIONS_LEGACY_OPTS+=	2ch_dict:anthy-2ch-dict
 PKG_OPTIONS_LEGACY_OPTS+=	okinawa_dict:anthy-okinawa-dict
 

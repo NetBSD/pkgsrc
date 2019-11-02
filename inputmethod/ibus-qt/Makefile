@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2019/04/03 00:32:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.54 2019/11/02 22:56:53 rillig Exp $
 
 DISTNAME=	ibus-qt-1.3.3-Source
 PKGNAME=	${DISTNAME:S/-Source//}
@@ -17,7 +17,7 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
 
 # optionally, but required by configure.
-#BUILD_DEPENDS+=		doxygen>=1.6:../../devel/doxygen
+#BUILD_DEPENDS+=	doxygen>=1.6:../../devel/doxygen
 TOOLS_NOOP=		doxygen
 
 # avoid lib64

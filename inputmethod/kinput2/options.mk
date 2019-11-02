@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.2 2010/02/15 13:41:17 obache Exp $
+# $NetBSD: options.mk,v 1.3 2019/11/02 22:56:54 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.kinput2
+PKG_OPTIONS_VAR=		PKG_OPTIONS.kinput2
 PKG_OPTIONS_NONEMPTY_SETS=	inputmethod
 PKG_OPTIONS_SET.inputmethod=	canna wnn4 sj3
-PKG_SUGGESTED_OPTIONS=	canna wnn4 sj3
+PKG_SUGGESTED_OPTIONS=		canna wnn4 sj3
 #PKG_OPTIONS_SET.inputmethod+=	wnn6
 
 .include "../../mk/bsd.options.mk"
