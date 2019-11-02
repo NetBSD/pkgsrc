@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.6 2015/11/01 13:25:27 wiz Exp $
+# $NetBSD: options.mk,v 1.7 2019/11/02 22:38:06 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.zphoto
-PKG_SUPPORTED_OPTIONS=	zip
+PKG_OPTIONS_VAR=		PKG_OPTIONS.zphoto
+PKG_SUPPORTED_OPTIONS=		zip
 PKG_OPTIONS_REQUIRED_GROUPS=	graphics
 PKG_OPTIONS_GROUP.graphics=	imlib2 imagemagick
-PKG_SUGGESTED_OPTIONS=	imlib2
+PKG_SUGGESTED_OPTIONS=		imlib2
 PKG_OPTIONS_LEGACY_OPTS+=	magick:imagemagick
 
 .include "../../mk/bsd.options.mk"
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--disable-imlib2
 .endif
 
 .if !empty(PKG_OPTIONS:Mzip)
-USE_TOOLS+=	zip:run
+USE_TOOLS+=		zip:run
 .else
 CONFIGURE_ARGS+=	--disable-zip
 .endif

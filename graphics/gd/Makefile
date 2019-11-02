@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2019/08/11 13:21:08 wiz Exp $
+# $NetBSD: Makefile,v 1.123 2019/11/02 22:37:57 rillig Exp $
 
 DISTNAME=	libgd-2.2.5
 PKGNAME=	${DISTNAME:S/libgd/gd/}
@@ -7,8 +7,8 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libgd/}
 EXTRACT_SUFX=	.tar.xz
 
-PATCH_SITES=	${MASTER_SITE_GITHUB:=libgd/libgd/commit/}
-PATCHFILES=	4b1e18a00ce7c4b7e6919c3b3109a034393b805a.patch
+PATCH_SITES=		${MASTER_SITE_GITHUB:=libgd/libgd/commit/}
+PATCHFILES=		4b1e18a00ce7c4b7e6919c3b3109a034393b805a.patch
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	adam@NetBSD.org
