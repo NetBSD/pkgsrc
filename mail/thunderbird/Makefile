@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.232 2019/10/30 12:21:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.233 2019/11/02 13:02:55 ryoon Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER}
-TB_VER=		68.2.0
+TB_VER=		68.2.1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
@@ -40,6 +40,7 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${MOZILLA}
 #SUBST_SED.ext-compat=		-e 's,\(<em:maxVersion>\).*<,\19.0<,g'
 
 CHECK_WRKREF_SKIP+=lib/${MOZILLA}/chrome/toolkit/content/global/buildconfig.html
+CHECK_WRKREF_SKIP+=lib/${MOZILLA}/chrome/messenger/content/messenger/buildconfig.html
 
 post-extract:
 	${CP} ${FILESDIR}/cubeb_sun.c ${WRKSRC}/media/libcubeb/src/cubeb_sun.c

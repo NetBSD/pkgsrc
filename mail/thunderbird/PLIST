@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.72 2019/10/31 23:19:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.73 2019/11/02 13:02:55 ryoon Exp $
 bin/thunderbird
 lib/thunderbird/actors/AudioPlaybackChild.jsm
 lib/thunderbird/actors/AutoplayChild.jsm
@@ -579,6 +579,7 @@ lib/thunderbird/chrome/devtools/content/shared/splitview.css
 lib/thunderbird/chrome/devtools/content/shared/theme-switching.js
 lib/thunderbird/chrome/devtools/content/shared/vendor/d3.js
 lib/thunderbird/chrome/devtools/content/shared/vendor/dagre-d3.js
+lib/thunderbird/chrome/devtools/content/shared/webextension-fallback.html
 lib/thunderbird/chrome/devtools/content/shared/widgets/VariablesView.xul
 lib/thunderbird/chrome/devtools/content/shared/widgets/cubic-bezier.css
 lib/thunderbird/chrome/devtools/content/shared/widgets/filter-widget.css
@@ -1731,7 +1732,6 @@ lib/thunderbird/chrome/devtools/modules/devtools/client/shared/demangle.js
 lib/thunderbird/chrome/devtools/modules/devtools/client/shared/devices.js
 lib/thunderbird/chrome/devtools/modules/devtools/client/shared/enum.js
 lib/thunderbird/chrome/devtools/modules/devtools/client/shared/events.js
-lib/thunderbird/chrome/devtools/modules/devtools/client/shared/file-saver.js
 lib/thunderbird/chrome/devtools/modules/devtools/client/shared/focus.js
 lib/thunderbird/chrome/devtools/modules/devtools/client/shared/getjson.js
 lib/thunderbird/chrome/devtools/modules/devtools/client/shared/inplace-editor.js
@@ -3039,6 +3039,8 @@ lib/thunderbird/chrome/messenger/content/messenger/bindings.css
 lib/thunderbird/chrome/messenger/content/messenger/browser-development-helpers.js
 lib/thunderbird/chrome/messenger/content/messenger/browserRequest.js
 lib/thunderbird/chrome/messenger/content/messenger/browserRequest.xul
+lib/thunderbird/chrome/messenger/content/messenger/buildconfig.css
+lib/thunderbird/chrome/messenger/content/messenger/buildconfig.html
 lib/thunderbird/chrome/messenger/content/messenger/button-menu-button.js
 lib/thunderbird/chrome/messenger/content/messenger/certpicker.js
 lib/thunderbird/chrome/messenger/content/messenger/certpicker.xul
@@ -3200,6 +3202,7 @@ lib/thunderbird/chrome/messenger/content/messenger/parent/ext-legacy.js
 lib/thunderbird/chrome/messenger/content/messenger/parent/ext-mail.js
 lib/thunderbird/chrome/messenger/content/messenger/parent/ext-mailTabs.js
 lib/thunderbird/chrome/messenger/content/messenger/parent/ext-menus.js
+lib/thunderbird/chrome/messenger/content/messenger/parent/ext-messageDisplay.js
 lib/thunderbird/chrome/messenger/content/messenger/parent/ext-messages.js
 lib/thunderbird/chrome/messenger/content/messenger/parent/ext-pkcs11.js
 lib/thunderbird/chrome/messenger/content/messenger/parent/ext-tabs.js
@@ -3280,6 +3283,7 @@ lib/thunderbird/chrome/messenger/content/messenger/schemas/legacy.json
 lib/thunderbird/chrome/messenger/content/messenger/schemas/mailTabs.json
 lib/thunderbird/chrome/messenger/content/messenger/schemas/menus.json
 lib/thunderbird/chrome/messenger/content/messenger/schemas/menus_child.json
+lib/thunderbird/chrome/messenger/content/messenger/schemas/messageDisplay.json
 lib/thunderbird/chrome/messenger/content/messenger/schemas/messages.json
 lib/thunderbird/chrome/messenger/content/messenger/schemas/pkcs11.json
 lib/thunderbird/chrome/messenger/content/messenger/schemas/tabs.json
@@ -4694,6 +4698,7 @@ lib/thunderbird/modules/GlobalPopupNotifications.jsm
 lib/thunderbird/modules/HTMLMenuBuilder.jsm
 lib/thunderbird/modules/HealthPing.jsm
 lib/thunderbird/modules/HelperAppDlg.jsm
+lib/thunderbird/modules/HiddenFrame.jsm
 lib/thunderbird/modules/History.jsm
 lib/thunderbird/modules/Http.jsm
 lib/thunderbird/modules/HybridContentTelemetry.jsm
@@ -5198,4 +5203,3 @@ lib/thunderbird/thunderbird
 lib/thunderbird/thunderbird-bin
 share/applications/thunderbird.desktop
 share/pixmaps/thunderbird.png
-@pkgdir lib/thunderbird/extensions
