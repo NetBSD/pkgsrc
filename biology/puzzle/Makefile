@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2013/04/01 08:56:43 sbd Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/02 22:09:01 rillig Exp $
 
 DISTNAME=	tree-puzzle-5.2
 PKGNAME=	${DISTNAME:S/^tree-//}
@@ -11,7 +11,7 @@ COMMENT=	Maximum likelihood analysis of molecular sequence data
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE= no
+MAKE_JOBS_SAFE=	no
 
 INSTALLATION_DIRS=	share/doc/puzzle \
 			share/examples/puzzle
