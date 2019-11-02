@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.13 2012/06/12 15:45:58 wiz Exp $
+# $NetBSD: options.mk,v 1.14 2019/11/02 16:25:27 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.qpopper
-PKG_SUPPORTED_OPTIONS=	drac inet6 kerberos pam qpopper-servermode ssl
-PKG_SUGGESTED_OPTIONS=	inet6 ssl
+PKG_OPTIONS_VAR=		PKG_OPTIONS.qpopper
+PKG_SUPPORTED_OPTIONS=		drac inet6 kerberos pam qpopper-servermode ssl
+PKG_SUGGESTED_OPTIONS=		inet6 ssl
 PKG_OPTIONS_LEGACY_VARS+=	QPOPPER_SERVERMODE:qpopper-servermode
 PKG_OPTIONS_LEGACY_VARS+=	QPOPPER_USE_DRAC:drac
 
