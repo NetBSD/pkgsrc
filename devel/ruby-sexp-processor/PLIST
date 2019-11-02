@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/02/28 15:19:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/11/02 14:49:12 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/History.rdoc
 ${GEM_LIBDIR}/Manifest.txt
@@ -7,6 +7,7 @@ ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/composite_sexp_processor.rb
 ${GEM_LIBDIR}/lib/pt_testcase.rb
 ${GEM_LIBDIR}/lib/sexp.rb
+${GEM_LIBDIR}/lib/sexp_matcher.rb
 ${GEM_LIBDIR}/lib/sexp_processor.rb
 ${GEM_LIBDIR}/lib/strict_sexp.rb
 ${GEM_LIBDIR}/lib/unique.rb
