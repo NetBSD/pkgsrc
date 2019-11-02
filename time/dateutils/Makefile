@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/09/29 17:18:19 wiedi Exp $
+# $NetBSD: Makefile,v 1.12 2019/11/02 16:28:38 rillig Exp $
 
 DISTNAME=	dateutils-0.4.3
 PKGREVISION=	1
@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config automake autoconf gmake makeinfo bison flex
 USE_LIBTOOL=	yes
-MAKE_JOBS_SAFE= no
+MAKE_JOBS_SAFE=	no
 
 INFO_FILES=		yes
 TEST_TARGET=		check

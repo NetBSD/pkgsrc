@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2018/11/08 05:32:23 markd Exp $
+# $NetBSD: Makefile,v 1.38 2019/11/02 16:28:38 rillig Exp $
 
 DISTNAME=	ical-3.0.3
 CATEGORIES=	time
@@ -8,9 +8,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://launchpad.net/ical-tcl/
 COMMENT=	Calendar application
 
-USE_LANGUAGES=	c c++
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+= --prefix=${PREFIX} \
+USE_LANGUAGES=		c c++
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--prefix=${PREFIX} \
 		--with-tclconfig=${BUILDLINK_PREFIX.tcl}/lib \
 		--with-tclsh=${BUILDLINK_PREFIX.tcl}/bin/tclsh \
 		--with-tkconfig=${BUILDLINK_PREFIX.tk}/lib

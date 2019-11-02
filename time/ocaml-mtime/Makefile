@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/07/01 16:06:55 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/02 16:28:39 rillig Exp $
 
 DISTNAME=	mtime-1.1.0
 PKGNAME=	ocaml-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Monotonic wall-clock time for OCaml
 LICENSE=	isc
 
 OCAML_USE_TOPKG=	yes
-OCAML_USE_OPAM=	yes
+OCAML_USE_OPAM=		yes
 
 .include "options.mk"
 .include "../../mk/ocaml.mk"

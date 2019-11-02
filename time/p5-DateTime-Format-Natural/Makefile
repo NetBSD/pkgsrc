@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2019/08/11 13:24:07 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2019/11/02 16:28:40 rillig Exp $
 
 DISTNAME=	DateTime-Format-Natural-1.07
 PKGNAME=	p5-${DISTNAME}
@@ -22,8 +22,8 @@ DEPENDS+=	p5-Date-Calc-[0-9]*:../../devel/p5-Date-Calc
 
 TEST_DEPENDS+=	p5-Test-MockTime-[0-9]*:../../time/p5-Test-MockTime
 
-PERL5_MODULE_TYPE=  	Module::Build
-USE_LANGUAGES=	#
+PERL5_MODULE_TYPE=	Module::Build
+USE_LANGUAGES=		#
 
 PERL5_PACKLIST=	auto/DateTime/Format/Natural/.packlist
 

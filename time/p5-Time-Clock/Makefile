@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/08/11 13:24:10 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/02 16:28:40 rillig Exp $
 
 DISTNAME=	Time-Clock-1.03
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Twenty-four hour clock object with nanosecond precision
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST=		auto/Time/Clock/.packlist
+PERL5_PACKLIST=	auto/Time/Clock/.packlist
 
 post-extract:
 	${FIND} ${WRKSRC} -name "*.pm" -type f -exec ${CHMOD} -x {} \;
