@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/08/08 21:18:43 nia Exp $
+# $NetBSD: Makefile,v 1.11 2019/11/02 21:09:15 rillig Exp $
 
 DISTNAME=	openal-soft-1.19.1
 CATEGORIES=	audio
@@ -14,7 +14,7 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
-PKG_SYSCONFSUBDIR=openal
+PKG_SYSCONFSUBDIR=	openal
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -43,11 +43,11 @@ CMAKE_ARGS+=	-DALSOFT_REQUIRE_OSS:BOOL=OFF
 CMAKE_ARGS+=	-DALSOFT_REQUIRE_OSS:BOOL=ON
 .endif
 
-CFLAGS+= -DSYS_CONF_DIR="\"${PKG_SYSCONFDIR}\""
+CFLAGS+=	-DSYS_CONF_DIR="\"${PKG_SYSCONFDIR}\""
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 CFLAGS.SunOS+=	-D__EXTENSIONS__
 
-CONF_FILES+= ${PREFIX}/share/openal/alsoftrc.sample ${PKG_SYSCONFDIR}/alsoft.conf
+CONF_FILES+=	${PREFIX}/share/openal/alsoftrc.sample ${PKG_SYSCONFDIR}/alsoft.conf
 
 SUBST_CLASSES+=			fix-oss
 SUBST_STAGE.fix-oss=		pre-configure

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/08/11 13:17:54 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/11/02 21:09:15 rillig Exp $
 
 DISTNAME=	mserv-0.39a
 PKGREVISION=	10
@@ -19,7 +19,7 @@ REPLACE_PERL=		support/mservedit webclient/main.cgi \
 			webclient/margin.cgi webclient/mserv.cgi
 USE_TOOLS+=		perl:run pkg-config
 
-INSTALLATION_DIRS+= share/doc/mserv share/mserv/webclient
+INSTALLATION_DIRS+=	share/doc/mserv share/mserv/webclient
 
 post-configure:
 	${MV} ${WRKSRC}/mserv/soundcard.h ${WRKSRC}/mserv/mservsoundcard.h

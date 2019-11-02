@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/08/11 13:17:57 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2019/11/02 21:09:17 rillig Exp $
 
 # To the poor soul who wants to update this package:
 #
@@ -57,12 +57,12 @@ PRODUCT=	SqueezeboxServer_v7.5.1
 PRODUCTREV=	30836
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-noCPAN//}-${PRODUCTREV}-noCPAN
 
-RESTRICTED=	Firmwares and some other components cannot be redistributed
+RESTRICTED=		Firmwares and some other components cannot be redistributed
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
-LICENSE=	squeezeboxserver-license
+LICENSE=		squeezeboxserver-license
 
 # Database server
 MYSQL_VERSIONS_ACCEPTED=	55
