@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/09/02 13:19:53 adam Exp $
+# $NetBSD: Makefile,v 1.11 2019/11/02 22:18:26 rillig Exp $
 
 DISTNAME=	telepathy-haze-0.8.0
 PKGREVISION=	1
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_TOOLS=	gmake pkg-config
-PYTHON_VERSIONS_ACCEPTED=	 27 # as of 0.8.0
+PYTHON_VERSIONS_ACCEPTED= 27 # as of 0.8.0
 
 .include "../../chat/libpurple/buildlink3.mk"
 .include "../../chat/telepathy-glib/buildlink3.mk"
