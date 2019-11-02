@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2019/08/11 13:21:42 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2019/11/02 16:25:28 rillig Exp $
 
 DISTNAME=	sympa-6.2.16
 PKGREVISION=	3
@@ -13,48 +13,48 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	destdir
 
-DEPENDS+=	mhonarc-[0-9]*:../../mail/mhonarc
-DEPENDS+=	p5-Archive-Zip>=1.05:../../archivers/p5-Archive-Zip
-DEPENDS+=	p5-AuthCAS>=1.5:../../security/p5-AuthCAS
-DEPENDS+=	p5-CGI>=2.52:../../www/p5-CGI
-DEPENDS+=	p5-CGI-Fast>=2.10:../../www/p5-CGI-Fast
-DEPENDS+=	p5-Crypt-CipherSaber>=0.50:../../security/p5-Crypt-CipherSaber
-DEPENDS+=	p5-DBD-Sybase>=0.90:../../databases/p5-DBD-Sybase
-DEPENDS+=	p5-DBI>=1.06:../../databases/p5-DBI
-#DEPENDS+=	{perl>=5.10,p5-Digest-MD5>=2.00}:../../security/p5-Digest-MD5
-DEPENDS+=	p5-Email-Date-Format>=1.002:../../mail/p5-Email-Date-Format
-DEPENDS+=	p5-FCGI>=0.67:../../www/p5-FCGI
-DEPENDS+=	p5-File-Copy-Recursive>=0.38:../../sysutils/p5-File-Copy-Recursive
-DEPENDS+=	p5-HTML-Format>=2.10:../../www/p5-HTML-Format
-DEPENDS+=	p5-HTML-StripScripts-Parser>=1.02:../../www/p5-HTML-StripScripts-Parser
-DEPENDS+=	p5-HTML-Tree>=4.2:../../www/p5-HTML-Tree
-DEPENDS+=	p5-IO-Socket-SSL>=0.90:../../security/p5-IO-Socket-SSL
-DEPENDS+=	p5-IO-stringy>=1.0:../../devel/p5-IO-stringy
-DEPENDS+=	p5-Locale-libintl>=1.16:../../misc/p5-Locale-libintl
-#DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64>=1.0}:../../converters/p5-MIME-Base64
-DEPENDS+=	p5-MIME-EncWords>=1.014.000:../../mail/p5-MIME-EncWords
-DEPENDS+=	p5-MIME-Lite-HTML>=1.23:../../mail/p5-MIME-Lite-HTML
-DEPENDS+=	p5-MIME-tools>=5.209:../../mail/p5-MIME-tools
-DEPENDS+=	p5-MailTools>=1.51:../../mail/p5-MailTools
-#DEPENDS+=	{perl>=5.10,p5-Net>=1.0}:../../net/p5-Net
-DEPENDS+=	p5-Net-Netmask>=1.9015:../../devel/p5-Net-Netmask
-DEPENDS+=	p5-Net-SSLeay>=1.16:../../security/p5-Net-SSLeay
-DEPENDS+=	p5-Regexp-Common>=2.120:../../textproc/p5-Regexp-Common
-DEPENDS+=	p5-SOAP-Lite-[0-9]*:../../net/p5-SOAP-Lite
-DEPENDS+=	p5-Template-Toolkit>=2.20:../../www/p5-Template-Toolkit
-DEPENDS+=	p5-Term-ProgressBar>=2.09:../../devel/p5-Term-ProgressBar
-#DEPENDS+=	{perl>=5.15.1,p5-Time-HiRes>=1.9724}:../../time/p5-Time-HiRes
-DEPENDS+=	p5-Unicode-LineBreak>=2012.02:../../textproc/p5-Unicode-LineBreak
-DEPENDS+=	p5-XML-LibXML>=1.61:../../textproc/p5-XML-LibXML
-DEPENDS+=	p5-libwww>=1.09:../../www/p5-libwww
-DEPENDS+=	p5-perl-ldap>=0.27:../../databases/p5-perl-ldap
-DEPENDS+=	p5-DateTime>=1.2000:../../time/p5-DateTime
-DEPENDS+=	p5-DateTime-Format-Mail>=0.401:../../time/p5-DateTime-Format-Mail
-DEPENDS+=	p5-Email-Simple>=2.208:../../mail/p5-Email-Simple
-DEPENDS+=	p5-File-NFSLock>=1.27:../../devel/p5-File-NFSLock
-DEPENDS+=	p5-Net-CIDR>=0.18:../../devel/p5-Net-CIDR
-DEPENDS+=	p5-Net-DNS>=1.01:../../net/p5-Net-DNS
-DEPENDS+=	p5-Proc-ProcessTable>=0.53:../../devel/p5-Proc-ProcessTable
+DEPENDS+=		mhonarc-[0-9]*:../../mail/mhonarc
+DEPENDS+=		p5-Archive-Zip>=1.05:../../archivers/p5-Archive-Zip
+DEPENDS+=		p5-AuthCAS>=1.5:../../security/p5-AuthCAS
+DEPENDS+=		p5-CGI>=2.52:../../www/p5-CGI
+DEPENDS+=		p5-CGI-Fast>=2.10:../../www/p5-CGI-Fast
+DEPENDS+=		p5-Crypt-CipherSaber>=0.50:../../security/p5-Crypt-CipherSaber
+DEPENDS+=		p5-DBD-Sybase>=0.90:../../databases/p5-DBD-Sybase
+DEPENDS+=		p5-DBI>=1.06:../../databases/p5-DBI
+#DEPENDS+=		{perl>=5.10,p5-Digest-MD5>=2.00}:../../security/p5-Digest-MD5
+DEPENDS+=		p5-Email-Date-Format>=1.002:../../mail/p5-Email-Date-Format
+DEPENDS+=		p5-FCGI>=0.67:../../www/p5-FCGI
+DEPENDS+=		p5-File-Copy-Recursive>=0.38:../../sysutils/p5-File-Copy-Recursive
+DEPENDS+=		p5-HTML-Format>=2.10:../../www/p5-HTML-Format
+DEPENDS+=		p5-HTML-StripScripts-Parser>=1.02:../../www/p5-HTML-StripScripts-Parser
+DEPENDS+=		p5-HTML-Tree>=4.2:../../www/p5-HTML-Tree
+DEPENDS+=		p5-IO-Socket-SSL>=0.90:../../security/p5-IO-Socket-SSL
+DEPENDS+=		p5-IO-stringy>=1.0:../../devel/p5-IO-stringy
+DEPENDS+=		p5-Locale-libintl>=1.16:../../misc/p5-Locale-libintl
+#DEPENDS+=		{perl>=5.7.3,p5-MIME-Base64>=1.0}:../../converters/p5-MIME-Base64
+DEPENDS+=		p5-MIME-EncWords>=1.014.000:../../mail/p5-MIME-EncWords
+DEPENDS+=		p5-MIME-Lite-HTML>=1.23:../../mail/p5-MIME-Lite-HTML
+DEPENDS+=		p5-MIME-tools>=5.209:../../mail/p5-MIME-tools
+DEPENDS+=		p5-MailTools>=1.51:../../mail/p5-MailTools
+#DEPENDS+=		{perl>=5.10,p5-Net>=1.0}:../../net/p5-Net
+DEPENDS+=		p5-Net-Netmask>=1.9015:../../devel/p5-Net-Netmask
+DEPENDS+=		p5-Net-SSLeay>=1.16:../../security/p5-Net-SSLeay
+DEPENDS+=		p5-Regexp-Common>=2.120:../../textproc/p5-Regexp-Common
+DEPENDS+=		p5-SOAP-Lite-[0-9]*:../../net/p5-SOAP-Lite
+DEPENDS+=		p5-Template-Toolkit>=2.20:../../www/p5-Template-Toolkit
+DEPENDS+=		p5-Term-ProgressBar>=2.09:../../devel/p5-Term-ProgressBar
+#DEPENDS+=		{perl>=5.15.1,p5-Time-HiRes>=1.9724}:../../time/p5-Time-HiRes
+DEPENDS+=		p5-Unicode-LineBreak>=2012.02:../../textproc/p5-Unicode-LineBreak
+DEPENDS+=		p5-XML-LibXML>=1.61:../../textproc/p5-XML-LibXML
+DEPENDS+=		p5-libwww>=1.09:../../www/p5-libwww
+DEPENDS+=		p5-perl-ldap>=0.27:../../databases/p5-perl-ldap
+DEPENDS+=		p5-DateTime>=1.2000:../../time/p5-DateTime
+DEPENDS+=		p5-DateTime-Format-Mail>=0.401:../../time/p5-DateTime-Format-Mail
+DEPENDS+=		p5-Email-Simple>=2.208:../../mail/p5-Email-Simple
+DEPENDS+=		p5-File-NFSLock>=1.27:../../devel/p5-File-NFSLock
+DEPENDS+=		p5-Net-CIDR>=0.18:../../devel/p5-Net-CIDR
+DEPENDS+=		p5-Net-DNS>=1.01:../../net/p5-Net-DNS
+DEPENDS+=		p5-Proc-ProcessTable>=0.53:../../devel/p5-Proc-ProcessTable
 #DEPENDS.SunOS+=	{perl>=5.10,p5-DB_File>=1.75}:../../databases/p5-DB_File
 
 OPSYSVARS+=	DEPENDS
@@ -144,13 +144,13 @@ OWN_DIRS_PERMS+=	${SYMPA_SPOOL}/outgoing ${SYMPA_USER} ${SYMPA_GROUP} 770
 OWN_DIRS_PERMS+=	${SYMPA_SPOOL}/task ${SYMPA_USER} ${SYMPA_GROUP} 770
 OWN_DIRS_PERMS+=	${SYMPA_SPOOL}/tmp ${SYMPA_USER} ${SYMPA_GROUP} 770
 
-SPECIAL_PERMS+=  ${SYMPA_BIN}/sympa_newaliases-wrapper ${REAL_ROOT_USER} ${SYMPA_GROUP} 4550
-SPECIAL_PERMS+=	 ${SYMPA_BIN}/bouncequeue ${SYMPA_USER} ${SYMPA_GROUP} 4555
-SPECIAL_PERMS+=	 ${SYMPA_BIN}/familyqueue ${SYMPA_USER} ${SYMPA_GROUP} 4555
-SPECIAL_PERMS+=	 ${SYMPA_BIN}/queue ${SYMPA_USER} ${SYMPA_GROUP} 4555
-SPECIAL_PERMS+=	 ${SYMPA_PREFIX}/libexec/cgi-bin/wwsympa-wrapper.fcgi \
+SPECIAL_PERMS+=	${SYMPA_BIN}/sympa_newaliases-wrapper ${REAL_ROOT_USER} ${SYMPA_GROUP} 4550
+SPECIAL_PERMS+=	${SYMPA_BIN}/bouncequeue ${SYMPA_USER} ${SYMPA_GROUP} 4555
+SPECIAL_PERMS+=	${SYMPA_BIN}/familyqueue ${SYMPA_USER} ${SYMPA_GROUP} 4555
+SPECIAL_PERMS+=	${SYMPA_BIN}/queue ${SYMPA_USER} ${SYMPA_GROUP} 4555
+SPECIAL_PERMS+=	${SYMPA_PREFIX}/libexec/cgi-bin/wwsympa-wrapper.fcgi \
 			 ${SYMPA_USER} ${SYMPA_GROUP} 6555
-SPECIAL_PERMS+=	 ${SYMPA_PREFIX}/libexec/cgi-bin/sympa_soap_server-wrapper.fcgi \
+SPECIAL_PERMS+=	${SYMPA_PREFIX}/libexec/cgi-bin/sympa_soap_server-wrapper.fcgi \
 			 ${SYMPA_USER} ${SYMPA_GROUP} 6555
 
 CONF_FILES=	${PREFIX}/share/examples/sympa/sympa.conf \

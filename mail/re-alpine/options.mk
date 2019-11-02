@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.2 2012/10/10 19:49:07 markd Exp $
+# $NetBSD: options.mk,v 1.3 2019/11/02 16:25:27 rillig Exp $
 #
 
-PKG_OPTIONS_VAR=        PKG_OPTIONS.alpine
-PKG_SUPPORTED_OPTIONS=  ldap kerberos pinepwd
-PKG_SUGGESTED_OPTIONS=  pinepwd
+PKG_OPTIONS_VAR=	PKG_OPTIONS.alpine
+PKG_SUPPORTED_OPTIONS=	ldap kerberos pinepwd
+PKG_SUGGESTED_OPTIONS=	pinepwd
 
 .include "../../mk/bsd.options.mk"
 
@@ -26,5 +26,5 @@ CONFIGURE_ARGS+=        --with-ldap
 .endif
 
 .if !empty(PKG_OPTIONS:Mpinepwd)
-CONFIGURE_ARGS+= --with-passfile=.pinepwd
+CONFIGURE_ARGS+=	--with-passfile=.pinepwd
 .endif

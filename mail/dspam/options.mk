@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.26 2010/12/31 06:13:46 taca Exp $
+# $NetBSD: options.mk,v 1.27 2019/11/02 16:25:20 rillig Exp $
 
 .if defined(DSPAM_DELIVERY_AGENT) && !empty(DSPAM_DELIVERY_AGENT:Mcustom)
 DSPAM_DELIVERY_AGENT:=	${DSPAM_DELIVERY_AGENT_ARGS}
@@ -22,20 +22,20 @@ PKG_OPTIONS_LEGACY_OPTS+=	preferences-extension:dspam-preferences-extension
 ### Default: procmail
 ###
 DSPAM_DELIVERY_AGENT?=		procmail
-BUILD_DEFS+=		DSPAM_DELIVERY_AGENT
+BUILD_DEFS+=			DSPAM_DELIVERY_AGENT
 .if !empty(DSPAM_DELIVERY_AGENT:Mprocmail)
 DSPAM_DELIVERY_AGENT_BIN?=	${PREFIX}/bin/procmail
-BUILD_DEPENDS+=		procmail-[0-9]*:../../mail/procmail
-CONFIGURE_ARGS+=	--with-delivery-agent=${DSPAM_DELIVERY_AGENT_BIN:Q}
+BUILD_DEPENDS+=			procmail-[0-9]*:../../mail/procmail
+CONFIGURE_ARGS+=		--with-delivery-agent=${DSPAM_DELIVERY_AGENT_BIN:Q}
 .elif !empty(DSPAM_DELIVERY_AGENT:Mmaildrop)
 DSPAM_DELIVERY_AGENT_BIN?=	${PREFIX}/bin/maildrop
-BUILD_DEPENDS+=		maildrop-[0-9]*:../../mail/maildrop
-CONFIGURE_ARGS+=	--with-delivery-agent=${DSPAM_DELIVERY_AGENT_BIN:Q}
+BUILD_DEPENDS+=			maildrop-[0-9]*:../../mail/maildrop
+CONFIGURE_ARGS+=		--with-delivery-agent=${DSPAM_DELIVERY_AGENT_BIN:Q}
 .elif !empty(DSPAM_DELIVERY_AGENT)
 DSPAM_DELIVERY_AGENT_BIN?=	${DSPAM_DELIVERY_AGENT}
-CONFIGURE_ARGS+=	--with-delivery-agent=${DSPAM_DELIVERY_AGENT_BIN:Q}
+CONFIGURE_ARGS+=		--with-delivery-agent=${DSPAM_DELIVERY_AGENT_BIN:Q}
 .else
-PKG_FAIL_REASON+=	"${PKGBASE}: unknown delivery agent \`${DSPAM_DELIVERY_AGENT}'"
+PKG_FAIL_REASON+=		"${PKGBASE}: unknown delivery agent \`${DSPAM_DELIVERY_AGENT}'"
 .endif
 
 PLIST_VARS+=		hash mysql pgsql sqlite

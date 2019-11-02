@@ -1,9 +1,9 @@
-# $NetBSD: builtin.mk,v 1.6 2013/11/23 11:34:45 obache Exp $
+# $NetBSD: builtin.mk,v 1.7 2019/11/02 16:25:22 rillig Exp $
 
 BUILTIN_PKG:=	libmilter
 
-BUILTIN_FIND_LIBS:=		milter
-BUILTIN_FIND_HEADERS_VAR:=	H_LIBMILTER
+BUILTIN_FIND_LIBS:=			milter
+BUILTIN_FIND_HEADERS_VAR:=		H_LIBMILTER
 BUILTIN_FIND_HEADERS.H_LIBMILTER=	libmilter/mfapi.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
@@ -20,7 +20,7 @@ IS_BUILTIN.libmilter=	no
 IS_BUILTIN.libmilter=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.libmilter
+MAKEVARS+=		IS_BUILTIN.libmilter
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -47,4 +47,4 @@ USE_BUILTIN.libmilter!=							\
 .    endif
 .  endif  # PREFER.libmilter
 .endif
-MAKEVARS+=	USE_BUILTIN.libmilter
+MAKEVARS+=		USE_BUILTIN.libmilter
