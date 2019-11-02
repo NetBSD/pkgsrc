@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.3 2008/01/05 21:01:37 rillig Exp $
+$NetBSD: patch-ab,v 1.4 2019/11/02 15:46:05 rillig Exp $
+
+Add support for DragonFly.
 
 --- configure.orig	2006-09-10 00:32:55.000000000 +0000
 +++ configure
