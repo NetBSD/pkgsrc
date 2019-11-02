@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2018/01/28 16:24:11 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2019/11/02 16:16:20 rillig Exp $
 
 BUILDLINK_TREE+=	mpcomplex
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	mpcomplex
 MPCOMPLEX_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mpcomplex+=	mpcomplex>=0.8.2
-BUILDLINK_ABI_DEPENDS.mpcomplex?=		mpcomplex>=1.0.3nb1
+BUILDLINK_ABI_DEPENDS.mpcomplex?=	mpcomplex>=1.0.3nb1
 BUILDLINK_PKGSRCDIR.mpcomplex?=		../../math/mpcomplex
 
 BUILDLINK_API_DEPENDS.gmp+=	gmp>=4.3.2
