@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.5 2017/03/20 06:02:27 adam Exp $
+# $NetBSD: builtin.mk,v 1.6 2019/11/02 15:38:00 rillig Exp $
 
 BUILTIN_PKG:=			gdbm_compat
 BUILTIN_FIND_HEADERS_VAR=	NDBM_H
@@ -17,7 +17,7 @@ IS_BUILTIN.gdbm_compat=	no
 IS_BUILTIN.gdbm_compat=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.gdbm_compat
+MAKEVARS+=		IS_BUILTIN.gdbm_compat
 
 ##
 ## Include databases/gdbm/builtin.mk so that BUILTIN_PKG.gdbm and
@@ -62,4 +62,4 @@ USE_BUILTIN.gdbm_compat!=						\
 .    endif
 .  endif
 .endif
-MAKEVARS+=	USE_BUILTIN.gdbm_compat
+MAKEVARS+=			USE_BUILTIN.gdbm_compat

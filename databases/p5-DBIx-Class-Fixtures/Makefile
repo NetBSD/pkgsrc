@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2019/08/11 13:18:27 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2019/11/02 15:38:03 rillig Exp $
 
 DISTNAME=	DBIx-Class-Fixtures-1.001039
 PKGNAME=	p5-${DISTNAME}
@@ -34,8 +34,8 @@ DEPENDS+=	p5-Test-Compile>=0:../../devel/p5-Test-Compile
 BUILD_DEPENDS+=	p5-Test-TempDir-Tiny>=0:../../devel/p5-Test-TempDir-Tiny
 BUILD_DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
 
-USE_LANGUAGES=	# empty
-PERL5_PACKLIST=	auto/DBIx/Class/Fixtures/.packlist
+USE_LANGUAGES=		# empty
+PERL5_PACKLIST=		auto/DBIx/Class/Fixtures/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 .include "../../lang/perl5/module.mk"

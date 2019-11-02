@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/07/04 09:18:37 jaapb Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/02 15:38:06 rillig Exp $
 
 GITHUB_PROJECT=	pgocaml
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,12 +12,12 @@ HOMEPAGE=	http://pgocaml.forge.ocamlcore.org/
 COMMENT=	Native PostgreSQL binding for OCaml
 LICENSE=	gnu-lgpl-v2
 
-HAS_CONFIGURE=	yes
-USE_LANGUAGES=	c
-USE_TOOLS+=	gmake
+HAS_CONFIGURE=		yes
+USE_LANGUAGES=		c
+USE_TOOLS+=		gmake
 CONFIGURE_ARGS+=	--disable-p4
 
-OCAML_USE_OASIS= yes
+OCAML_USE_OASIS=	yes
 
 .include "../../mk/ocaml.mk"
 .include "../../devel/ocamlbuild/buildlink3.mk"
