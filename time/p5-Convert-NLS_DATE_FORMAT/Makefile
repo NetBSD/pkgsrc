@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/08/11 13:24:03 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/02 16:28:39 rillig Exp $
 
 DISTNAME=	Convert-NLS_DATE_FORMAT-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Convert Oracle NLS_DATE_FORMAT <-> strftime Format Strings
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	#empty
-PERL5_PACKLIST= auto/Convert/NLS_DATE_FORMAT/.packlist
+PERL5_PACKLIST=	auto/Convert/NLS_DATE_FORMAT/.packlist
 
 PERL5_MODULE_TYPE=	Module::Build::Tiny
 

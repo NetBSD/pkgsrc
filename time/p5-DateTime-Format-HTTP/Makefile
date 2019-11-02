@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/08/11 13:24:07 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/02 16:28:39 rillig Exp $
 
 DISTNAME=	DateTime-Format-HTTP-0.42
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-DateTime>=0.17:../../time/p5-DateTime
 DEPENDS+=	p5-libwww>=1.44:../../www/p5-libwww
 
-PERL5_PACKLIST=	auto/DateTime/Format/HTTP/.packlist
+PERL5_PACKLIST=		auto/DateTime/Format/HTTP/.packlist
 PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"
