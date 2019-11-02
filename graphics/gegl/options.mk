@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2019/07/16 15:34:25 nia Exp $
+# $NetBSD: options.mk,v 1.3 2019/11/02 14:05:46 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gegl
 PKG_SUPPORTED_OPTIONS=	svg jasper
@@ -10,6 +10,8 @@ PLIST_VARS+=	svg
 .if !empty(PKG_OPTIONS:Msvg)
 .include "../../graphics/librsvg/buildlink3.mk"
 PLIST.svg=	yes
+.else
+MESON_ARGS+=	-Dlibrsvg=disabled
 .endif
 
 PLIST_VARS+=	jasper
@@ -17,5 +19,5 @@ PLIST_VARS+=	jasper
 .include "../../graphics/jasper/buildlink3.mk"
 PLIST.jasper=	yes
 .else
-CONFIGURE_ARGS+=	--without-jasper
+MESON_ARGS+=	-Djasper=disabled
 .endif
