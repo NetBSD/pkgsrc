@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4707 2019/11/02 14:53:02 mef Exp $
+$NetBSD: CHANGES-2019,v 1.4708 2019/11/02 14:54:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7496,3 +7496,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ruby-sexp-processor to 4.13.0 [taca 2019-11-02]
 	Updated devel/ruby-simplecov to 0.17.1 [taca 2019-11-02]
 	Updated time/p5-Data-ICal to 0.23 [mef 2019-11-02]
+	Updated devel/ruby-test-unit to 3.3.4 [taca 2019-11-02]
