@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/09/06 10:40:25 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/11/02 22:54:28 rillig Exp $
 #
 
 DISTNAME=	linunace25
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://www.winace.com/
 COMMENT=	Extract, list and test files in ACE archives (Linux binary)
-LICENSE=		unace-license
+LICENSE=	unace-license
 
 RESTRICTED=		Only original file distribution.
 NO_BIN_ON_FTP=		${RESTRICTED}

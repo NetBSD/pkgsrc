@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2018/11/12 16:10:17 jaapb Exp $
+# $NetBSD: Makefile,v 1.25 2019/11/02 22:54:27 rillig Exp $
 #
 
 VERSION=	1.07
@@ -15,9 +15,9 @@ MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	https://github.com/xavierleroy/camlzip
 COMMENT=	OCaml library to manipulate ZIP/GZIP/JAR archives
 
-BUILD_TARGET=	all
-INSTALL_TARGET=	install-findlib
-USE_TOOLS+=	gmake
+BUILD_TARGET=		all
+INSTALL_TARGET=		install-findlib
+USE_TOOLS+=		gmake
 OCAML_USE_FINDLIB=	yes
 
 .include "../../mk/ocaml.mk"

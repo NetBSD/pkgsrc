@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2016/09/18 11:17:41 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/02 22:54:26 rillig Exp $
 
 DISTNAME=	fastjar-0.98
 PKGREVISION=	1
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	YES
 
-INFO_FILES=	YES
+INFO_FILES=		YES
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 post-install:

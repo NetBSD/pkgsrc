@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/07/04 13:40:08 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2019/11/02 22:54:27 rillig Exp $
 
 DISTNAME=	sarab-1.0.0
 CATEGORIES=	archivers
@@ -20,9 +20,9 @@ REPLACE.bash.new=	${TOOLS_PATH.bash}
 REPLACE_FILES.bash=	sarab.sh
 
 EGDIR=		${PREFIX}/share/examples/sarab
-CONF_FILES+= ${EGDIR}/rotation.schedule	${PKG_SYSCONFDIR}/rotation.schedule
-CONF_FILES+= ${EGDIR}/sarab.conf	${PKG_SYSCONFDIR}/sarab.conf
-CONF_FILES+= ${EGDIR}/sarab.dcf	${PKG_SYSCONFDIR}/sarab.dcf
+CONF_FILES+=	${EGDIR}/rotation.schedule	${PKG_SYSCONFDIR}/rotation.schedule
+CONF_FILES+=	${EGDIR}/sarab.conf	${PKG_SYSCONFDIR}/sarab.conf
+CONF_FILES+=	${EGDIR}/sarab.dcf	${PKG_SYSCONFDIR}/sarab.dcf
 
 SUBST_CLASSES+=		dar
 SUBST_STAGE.dar=	pre-configure

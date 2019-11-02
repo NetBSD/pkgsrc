@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2018/12/14 16:02:55 bsiegert Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2019/11/02 22:54:26 rillig Exp $
 
 BUILDLINK_TREE+=	libunrar
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libunrar
 LIBUNRAR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libunrar+=	libunrar>=5.6.8
-BUILDLINK_PKGSRCDIR.libunrar?=	../../archivers/libunrar
+BUILDLINK_PKGSRCDIR.libunrar?=		../../archivers/libunrar
 .endif	# LIBUNRAR_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libunrar

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2016/01/23 05:15:22 zafer Exp $
+# $NetBSD: Makefile,v 1.25 2019/11/02 22:54:26 rillig Exp $
 #
 
 DISTNAME=	nulibdist-220
@@ -19,7 +19,7 @@ GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS+=--cache-file=${WRKDIR}/config.cache
+CONFIGURE_ARGS+=	--cache-file=${WRKDIR}/config.cache
 
 CFLAGS+=	-D__unix__
 

@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.10 2019/04/10 08:24:03 adam Exp $
+# $NetBSD: builtin.mk,v 1.11 2019/11/02 22:54:26 rillig Exp $
 
 BUILTIN_PKG:=	libarchive
 
@@ -17,7 +17,7 @@ IS_BUILTIN.libarchive=	no
 IS_BUILTIN.libarchive=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.libarchive
+MAKEVARS+=		IS_BUILTIN.libarchive
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -60,7 +60,7 @@ BUILTIN_PKG.libarchive=	libarchive-${BUILTIN_VERSION.libarchive}
 IS_BUILTIN.libarchive=	no
 .  endif
 .endif
-MAKEVARS+=	BUILTIN_PKG.libarchive
+MAKEVARS+=		BUILTIN_PKG.libarchive
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -87,7 +87,7 @@ USE_BUILTIN.libarchive!=	\
 .    endif
 .  endif  # PREFER.libarchive
 .endif
-MAKEVARS+=	USE_BUILTIN.libarchive
+MAKEVARS+=		USE_BUILTIN.libarchive
 
 ###
 ### The section below only applies if we are not including this file
