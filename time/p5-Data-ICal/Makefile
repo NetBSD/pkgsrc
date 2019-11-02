@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2019/08/11 13:24:04 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/02 14:51:35 mef Exp $
 
-DISTNAME=		Data-ICal-0.22
+DISTNAME=		Data-ICal-0.23
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		5
 CATEGORIES=		time perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Data/}
 
@@ -17,9 +16,9 @@ DEPENDS+=		p5-Class-ReturnValue>=0.53:../../devel/p5-Class-ReturnValue
 DEPENDS+=		p5-Text-vFile-asData>=0.05:../../textproc/p5-Text-vFile-asData
 
 #BUILD_DEPENDS+=		{perl>=5.6.2,p5-Test-Simple-[0-9]*}:../../devel/p5-Test-Simple
-BUILD_DEPENDS+=		p5-Test-LongString-[0-9]*:../../devel/p5-Test-LongString
-BUILD_DEPENDS+=		p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
-BUILD_DEPENDS+=		p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
+TEST_DEPENDS+=		p5-Test-LongString-[0-9]*:../../devel/p5-Test-LongString
+TEST_DEPENDS+=		p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
+TEST_DEPENDS+=		p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
 
 PERL5_PACKLIST=		auto/Data/ICal/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
