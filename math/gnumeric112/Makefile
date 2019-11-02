@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2019/09/02 13:20:00 adam Exp $
+# $NetBSD: Makefile,v 1.61 2019/11/02 16:16:19 rillig Exp $
 
 DISTNAME=	gnumeric-1.12.45
 PKGREVISION=	1
@@ -27,8 +27,8 @@ TEST_TARGET=		check
 
 .include "options.mk"
 
-CONFIGURE_ARGS+=	--with-python
-CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
+CONFIGURE_ARGS+=		--with-python
+CONFIGURE_ENV+=			PYTHON=${PYTHONBIN:Q}
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 1.12.9
 
 #CONFIGURE_ARGS+=	--with-gnome
