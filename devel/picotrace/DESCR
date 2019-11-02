@@ -1,11 +1,12 @@
-picotrace enables syscall trace logging for the specified processes.
+picotrace is designed to be a framework for other more advanced tracers, and an
+example of the canonical usage of ptrace(2). New features are not expected
+unless they reflect a new feature in the kernel.
 
-The tracer uses the ptrace(2) system call to perform the tracing process.
+For historical reasons this repository is called picotrace, although it now
+contains other software as well:
 
-The picotrace program has been designed to ship bare functionality only,
-without pretty printing of data structures and interpreting passed arguments
-to syscalls.
-
-picotrace is designed to be a framework for other more advanced tracers and
-illustration of the canonical usage of the ptrace system call. New features are
-not expected unless they present a new feature in the NetBSD kernel.
+ * sigtracer
+ * singlestepper
+ * NetBSD strace
+ * NetBSD truss
+ * coredumper
