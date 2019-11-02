@@ -1,9 +1,14 @@
-# $NetBSD: Makefile,v 1.96 2019/08/22 12:23:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.97 2019/11/02 18:39:52 maya Exp $
 
 DISTNAME=	gwenview-${_KDE_VERSION}
 PKGREVISION=	17
 CATEGORIES=	graphics
 COMMENT=	KDE image viewer
+
+# Workaround cryptic issue where cmake CMAKE_COMPILER_IS_GNUCXX is not
+# defined in this project (in FindKDE4Internal.cmake)
+BUILDLINK_TRANSFORM+=	opt:-fno-exceptions:-fexceptions
+BUILDLINK_TRANSFORM+=	opt:-DQT_NO_EXCEPTIONS:-UQT_EXCEPTIONS
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
