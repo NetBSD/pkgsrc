@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/09/11 23:59:30 asau Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/02 21:09:13 rillig Exp $
 #
 
 DISTNAME=	eawpats12_full
@@ -11,7 +11,7 @@ MAINTAINER=	adam@NetBSD.org
 COMMENT=	Eric A. Welsh' patches (audio samples) for TiMidity
 LICENSE=	generic-nonlicense
 
-RESTRICTED=	Some patches are copyrighted, some marked no-commercial-use
+RESTRICTED=		Some patches are copyrighted, some marked no-commercial-use
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
