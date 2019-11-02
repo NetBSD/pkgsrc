@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/10/22 08:25:59 taca Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/02 12:54:38 rillig Exp $
 
 MODNAME=	apcu
 PECL_VERSION=	5.1.17
@@ -10,10 +10,11 @@ LICENSE=	php
 
 PHP_VERSIONS_ACCEPTED=	71 72 73
 
+GNU_CONFIGURE_STRICT=	no # --with-pcre-dir is added for all PHP extensions
 CONFIGURE_ARGS+=	--enable-${MODNAME}
 
 PLIST_SRC+=		${.CURDIR}/PLIST.extras
-PLIST_SUBST+=		PKGBASE=${PKGBASE:Q}
+PLIST_SUBST+=		PKGBASE=${PKGBASE}
 
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 
