@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/08/11 13:21:38 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2019/11/02 16:25:25 rillig Exp $
 
 DISTNAME=	Mail-SRS-0.31
 PKGNAME=	p5-${DISTNAME}
@@ -12,10 +12,10 @@ COMMENT=	SMTP envelope sender rewriting for SPF-compliant forwarding
 
 CONFLICTS+=	libsrs2-[0-9]*
 
-#DEPENDS+=	{perl>=5.8.1,p5-DB_File>=1.806}:../../databases/p5-DB_File
-DEPENDS+=	p5-Digest-HMAC>=1.01:../../security/p5-Digest-HMAC
-DEPENDS+=	p5-MLDBM>=2.01:../../databases/p5-MLDBM
-#DEPENDS+=	p5-Storable>=2.04:../../devel/p5-Storable
+#DEPENDS+=		{perl>=5.8.1,p5-DB_File>=1.806}:../../databases/p5-DB_File
+DEPENDS+=		p5-Digest-HMAC>=1.01:../../security/p5-Digest-HMAC
+DEPENDS+=		p5-MLDBM>=2.01:../../databases/p5-MLDBM
+#DEPENDS+=		p5-Storable>=2.04:../../devel/p5-Storable
 #BUILD_DEPENDS+=	{perl>=5.6.2,p5-Test-Simple>=0.40}:../../devel/p5-Test-Simple
 
 PERL5_PACKLIST=	auto/Mail/SRS/.packlist

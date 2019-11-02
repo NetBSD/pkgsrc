@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2019/09/14 18:13:50 tsutsui Exp $
+# $NetBSD: Makefile,v 1.45 2019/11/02 16:25:23 rillig Exp $
 #
 
 DISTNAME=	milter-manager-2.0.5
@@ -27,11 +27,11 @@ CONFIGURE_ARGS+=	--with-ruby=${RUBY}
 CONFIGURE_ARGS+=	--enable-ruby-milter=${PREFIX}/${RUBY_VENDORLIB}
 CONFIGURE_ARGS+=	--with-bundled-ruby-glib2=no
 
-SUBST_CLASSES+=		libev_inc
-SUBST_STAGE.libev_inc=	pre-configure
-SUBST_MESSAGE.libev_inc=Adjust include path for libevent from pkgsrc.
-SUBST_FILES.libev_inc=	configure
-SUBST_SED.libev_inc=	's,/include/ev.h,/include/ev/ev.h,g'
+SUBST_CLASSES+=			libev_inc
+SUBST_STAGE.libev_inc=		pre-configure
+SUBST_MESSAGE.libev_inc=	Adjust include path for libevent from pkgsrc.
+SUBST_FILES.libev_inc=		configure
+SUBST_SED.libev_inc=		's,/include/ev.h,/include/ev/ev.h,g'
 
 PKG_SYSCONFSUBDIR=	${PKGBASE}
 
@@ -48,14 +48,14 @@ PKGCONFIG_OVERRIDE+=	ruby-milter-client.pc.in
 PKGCONFIG_OVERRIDE+=	ruby-milter-core.pc.in
 PKGCONFIG_OVERRIDE+=	ruby-milter-server.pc.in
 
-MILTER_MANAGER_USER?=	_milter
-MILTER_MANAGER_GROUP?=	_milter
-MILTER_MANAGER_SOCKET_GROUP?=	mail
-PKG_GROUPS=		${MILTER_MANAGER_GROUP} ${MILTER_MANAGER_SOCKET_GROUP}
-PKG_USERS=		${MILTER_MANAGER_USER}:${MILTER_MANAGER_GROUP}
+MILTER_MANAGER_USER?=			_milter
+MILTER_MANAGER_GROUP?=			_milter
+MILTER_MANAGER_SOCKET_GROUP?=		mail
+PKG_GROUPS=				${MILTER_MANAGER_GROUP} ${MILTER_MANAGER_SOCKET_GROUP}
+PKG_USERS=				${MILTER_MANAGER_USER}:${MILTER_MANAGER_GROUP}
 PKG_GECOS.${MILTER_MANAGER_USER}=	Milter Manager
-PKG_GROUPS_VARS+=	MILTER_MANAGER_GROUP MILTER_MANAGER_SOCKET_GROUP
-PKG_USERS_VARS=		MILTER_MANAGER_USER
+PKG_GROUPS_VARS+=			MILTER_MANAGER_GROUP MILTER_MANAGER_SOCKET_GROUP
+PKG_USERS_VARS=				MILTER_MANAGER_USER
 
 FILES_SUBST+=		MILTER_MANAGER_USER=${MILTER_MANAGER_USER:Q}
 FILES_SUBST+=		MILTER_MANAGER_GROUP=${MILTER_MANAGER_GROUP:Q}

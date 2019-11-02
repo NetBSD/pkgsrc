@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2019/09/02 13:19:56 adam Exp $
+# $NetBSD: Makefile,v 1.64 2019/11/02 16:25:29 rillig Exp $
 
 DISTNAME=	tmda-1.1.12
 PKGREVISION=	6
@@ -12,7 +12,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Python-based SPAM reduction system
 
 REPLACE_PYTHON=	${TMDA_PROGRAMS}
-PY_PATCHPLIST=		yes
+PY_PATCHPLIST=	yes
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 1.1.12
 
 PKG_SYSCONFSUBDIR=	${PKGBASE}
