@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/07/11 09:25:26 nia Exp $
+# $NetBSD: Makefile,v 1.38 2019/11/02 15:38:12 rillig Exp $
 #
 
 DISTNAME=	tokyotyrant-1.1.41
@@ -11,9 +11,9 @@ HOMEPAGE=	https://fallabs.com/tokyotyrant/
 COMMENT=	Network interface of Tokyo Cabinet
 LICENSE=	gnu-lgpl-v2.1
 
-GNU_CONFIGURE=	yes
-USE_GCC_RUNTIME=yes
-USE_TOOLS+=	gmake pkg-config
+GNU_CONFIGURE=		yes
+USE_GCC_RUNTIME=	yes
+USE_TOOLS+=		gmake pkg-config
 
 PKGCONFIG_OVERRIDE+=	tokyotyrant.pc.in
 
