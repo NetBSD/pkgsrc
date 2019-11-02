@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/09/04 05:47:37 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/11/02 22:24:42 rillig Exp $
 
 DISTNAME=	Mothanna-0.02
 PKGNAME=	${DISTNAME:S/M/m/:S/-0.02//}-ttf-0.02
@@ -12,8 +12,8 @@ COMMENT=	Mothanna is a sans-serif like Arabic OpenType font
 
 USE_LANGUAGES=	# none
 
-NO_CONFIGURE=		yes
-NO_BUILD=		yes
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 USE_LANGUAGES=	# none
 
 FONTS_DIRS.ttf=		share/fonts/X11/TTF

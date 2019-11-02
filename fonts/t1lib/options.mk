@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2011/11/29 17:55:07 drochner Exp $
+# $NetBSD: options.mk,v 1.3 2019/11/02 22:24:43 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.t1lib
-PKG_SUPPORTED_OPTIONS+= x11
-PKG_SUGGESTED_OPTIONS+= x11
+PKG_SUPPORTED_OPTIONS+=	x11
+PKG_SUGGESTED_OPTIONS+=	x11
 
 .include "../../mk/bsd.options.mk"
 

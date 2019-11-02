@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/01/20 11:40:13 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/02 22:24:37 rillig Exp $
 
 DISTNAME=	CutiveFont-0.0.20121026
 CATEGORIES=	fonts
@@ -10,12 +10,12 @@ HOMEPAGE=	https://www.google.com/fonts/specimen/Cutive%20Mono
 COMMENT=	Classic typewriter typeface
 LICENSE=	ofl-v1.1
 
-USE_TOOLS+=	bsdtar
-EXTRACT_USING=	bsdtar
-USE_LANGUAGES=	# none
-NO_BUILD=	yes
+USE_TOOLS+=		bsdtar
+EXTRACT_USING=		bsdtar
+USE_LANGUAGES=		# none
+NO_BUILD=		yes
 #WRKSRC=		${WRKDIR}
-FONTS_DIRS.ttf=	${PREFIX}/share/fonts/X11/OTF
+FONTS_DIRS.ttf=		${PREFIX}/share/fonts/X11/OTF
 INSTALLATION_DIRS=	share/fonts/X11/OTF
 
 do-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2008/04/12 14:44:05 taca Exp $
+# $NetBSD: Makefile,v 1.34 2019/11/02 22:24:41 rillig Exp $
 #
 
 DISTNAME=	jisx0208fonts-200301316
@@ -14,8 +14,8 @@ META_PACKAGE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_NON_SQUARE?= NO
-USE_KANAME?= NO
+USE_NON_SQUARE?=	NO
+USE_KANAME?=		NO
 
 DEPENDS+=	ja-elisat>=1.0:../../fonts/ja-elisat
 DEPENDS+=	ja-kappa20>=0.394:../../fonts/ja-kappa20

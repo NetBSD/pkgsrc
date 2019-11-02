@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2019/07/30 05:46:40 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/02 22:24:42 rillig Exp $
 
 DISTNAME=	Ricty-3.2.4
 PKGNAME=	${DISTNAME:S/Ricty/ricty-ttf/}
-GITHUB_PROJECT=		Ricty
-GITHUB_TAG=             ${PKGVERSION_NOREV}
+GITHUB_PROJECT=	Ricty
+GITHUB_TAG=	${PKGVERSION_NOREV}
 CATEGORIES=	fonts japanese
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yascentur/}
 
