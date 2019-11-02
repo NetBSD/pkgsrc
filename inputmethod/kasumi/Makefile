@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/07/21 22:25:10 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2019/11/02 22:56:54 rillig Exp $
 
 DISTNAME=	kasumi-2.5
 PKGREVISION=	28
@@ -10,11 +10,11 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Dictionary management tool for anthy
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	pkg-config
-USE_X11=	yes
+USE_TOOLS+=		pkg-config
+USE_X11=		yes
 USE_PKGLOCALEDIR=	yes
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
 
 BUILDLINK_API_DEPENDS.anthy+=	anthy>=6520
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6
