@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2019/09/14 04:26:39 tsutsui Exp $
+# $NetBSD: Makefile,v 1.67 2019/11/02 22:56:53 rillig Exp $
 
 .include "Makefile.common"
 
@@ -9,13 +9,13 @@ BUILD_DEPENDS+=	cldr-emoji-annotation>=35.12.14971.0:../../textproc/cldr-emoji-a
 BUILD_DEPENDS+=	unicode-character-database>=12.0.0:../../textproc/unicode-character-database
 BUILD_DEPENDS+=	unicode-emoji>=12.0:../../textproc/unicode-emoji
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
+GNU_CONFIGURE=			yes
+USE_LIBTOOL=			yes
 # XXX fails without GNU msgfmt
 _TOOLS_USE_PKGSRC.msgfmt=	yes
-USE_TOOLS+=	pkg-config intltool gmsgfmt gmake msgmerge
-USE_LANGUAGES=	c c++
-USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=			pkg-config intltool gmsgfmt gmake msgmerge
+USE_LANGUAGES=			c c++
+USE_PKGLOCALEDIR=		yes
 
 GCONF_SCHEMAS+=		ibus.schemas
 PKGCONFIG_OVERRIDE+=	ibus-1.0.pc.in
