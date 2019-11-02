@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2014/10/09 14:05:55 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2019/11/02 22:54:28 rillig Exp $
 
 DISTNAME=	${PRGNAME}unix
 PKGNAME=	${PRGNAME}-2.3
@@ -10,9 +10,9 @@ DISTFILES=	${DISTNAME}.c ${PRGNAME}.man
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Convert mailable BinHex format into binary
 
-RESTRICTED=	May not be sold without permission.
-NO_SRC_ON_CDROM=${RESTRICTED}
-NO_BIN_ON_CDROM=${RESTRICTED}
+RESTRICTED=		May not be sold without permission.
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=		${WRKDIR}
 
@@ -23,9 +23,9 @@ EXTRACT_ONLY=	# empty
 
 .if !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly"
 CFLAGS+=		-DBSD
-.if ${OPSYS} != "OpenBSD"
+.  if ${OPSYS} != "OpenBSD"
 LDFLAGS+=		-lcompat
-.endif
+.  endif
 .endif
 CFLAGS.Interix+=	-DBSD
 CFLAGS.Darwin+=		-DBSD
