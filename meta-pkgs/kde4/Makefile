@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2019/10/30 12:47:02 kamil Exp $
+# $NetBSD: Makefile,v 1.44 2019/11/02 20:06:58 maya Exp $
 
 DISTNAME=	kde4-4.14.3
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	meta-pkgs x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -49,7 +49,7 @@ DEPENDS+=	step-4.14.3{,nb[0-9]*}:../../misc/step
 DEPENDS+=	bomber-4.14.3{,nb[0-9]*}:../../games/bomber
 DEPENDS+=	bovo-4.14.3{,nb[0-9]*}:../../games/bovo
 DEPENDS+=	granatier-4.14.3{,nb[0-9]*}:../../games/granatier
-DEPENDS+=	kajongg-4.14.3{,nb[0-9]*}:../../games/kajongg
+#DEPENDS+=	kajongg-4.14.3{,nb[0-9]*}:../../games/kajongg # Requires py2
 DEPENDS+=	kapman-4.14.3{,nb[0-9]*}:../../games/kapman
 DEPENDS+=	katomic-4.14.3{,nb[0-9]*}:../../games/katomic
 DEPENDS+=	kblackbox-4.14.3{,nb[0-9]*}:../../games/kblackbox
