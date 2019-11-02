@@ -1,4 +1,4 @@
-$NetBSD: patch-Engine_linevent.c,v 1.2 2014/08/05 05:12:38 mrg Exp $
+$NetBSD: patch-Engine_linevent.c,v 1.3 2019/11/02 22:25:46 mrg Exp $
 
 Add NetBSD and DragonFlyBSD support.
 
@@ -12,4 +12,4 @@ Add NetBSD and DragonFlyBSD support.
 +# if defined(SGI) || defined(LINUX) || defined(NeXT) || defined(__MACH__) || defined(__NetBSD__) || defined(__DragonFly__)
  #  define _popen popen
  #  define _pclose pclose
- # elif defined(__BEOS__) || defined(__MACH__)
+ # elif defined(__BEOS__) ||  defined(__HAIKU__) || defined(__MACH__)
