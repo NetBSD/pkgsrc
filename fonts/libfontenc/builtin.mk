@@ -1,6 +1,6 @@
-# $NetBSD: builtin.mk,v 1.3 2014/03/10 11:05:51 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.4 2019/11/02 22:24:41 rillig Exp $
 
-BUILTIN_PKG:=	libfontenc
+BUILTIN_PKG:=			libfontenc
 PKGCONFIG_FILE.libfontenc=	${X11BASE}/lib/pkgconfig/fontenc.pc
 PKGCONFIG_FILE.libfontenc+=	${X11BASE}/lib${LIBABISUFFIX}/pkgconfig/fontenc.pc
 

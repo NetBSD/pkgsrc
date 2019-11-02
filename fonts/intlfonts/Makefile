@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2014/06/01 16:35:34 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2019/11/02 22:24:41 rillig Exp $
 
 DISTNAME=	intlfonts-1.2.1
 PKGREVISION=	6
@@ -34,8 +34,8 @@ EXTRA_FONTS=	Chinese.BIG	\
 # Type1/TrueType fonts for Latin1, Thai and Vietnamese
 # XXX need "fonts.scale" for them
 #
-EXTRA_FONTS+=	Type1		\
-		TrueType
+EXTRA_FONTS+=		Type1		\
+			TrueType
 CONFIGURE_ARGS+=	--with-type1 --with-truetype
 
 MISC_FILES=	README.split
@@ -43,9 +43,9 @@ MISC_FILES=	README.split
 DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_ONLY=	${FONT_SETS:=${EXTRACT_SUFX}}
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--with-fontdir=${FONTS_DIR} \
-		--enable-compress=gzip
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-fontdir=${FONTS_DIR} \
+			--enable-compress=gzip
 INSTALL_MAKE_FLAGS+=	fontdir=${DESTDIR}${FONTS_DIR}
 
 FONTS_DIR=	${PREFIX}/share/fonts/X11/intlfonts
