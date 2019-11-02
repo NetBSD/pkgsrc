@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2019/07/21 22:24:08 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/11/02 12:47:58 rillig Exp $
 
 DISTNAME=	Player-0.1.6
 PKGNAME=	deforaos-player-0.1.6
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	multimedia
 MASTER_SITES=	https://www.defora.org/os/download/download/4297/
 
@@ -27,13 +27,14 @@ AUTO_MKDIRS=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${PKGMANDIR} != "share/man"
 post-install:
+.if ${PKGMANDIR} != "share/man"
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/player.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/player.1
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/playerctl.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/playerctl.1
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man/man1
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man
 .endif
+	cd ${DESTDIR}${PREFIX} && ${MV} share/doc/html/Player/* share/doc/deforaos-player/
 
 .include "options.mk"
 
