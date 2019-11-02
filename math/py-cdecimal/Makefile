@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/09/02 13:20:00 adam Exp $
+# $NetBSD: Makefile,v 1.10 2019/11/02 16:16:21 rillig Exp $
 
 DISTNAME=	cdecimal-2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,8 +16,8 @@ USE_TOOLS+=	gmake
 USE_LANGUAGES=	c
 GNU_CONFIGURE=	yes
 
-#PKG_FAIL_REASON+=	"${DISTNAME} is obsoleted by the builtin \`decimal\` in python3.3."
-PYTHON_VERSIONS_ACCEPTED=	 27
+#PKG_FAIL_REASON+=		"${DISTNAME} is obsoleted by the builtin \`decimal\` in python3.3."
+PYTHON_VERSIONS_ACCEPTED=	27
 
 #.include "../../devel/gmp/buildlink3.mk"
 .include "../../lang/python/distutils.mk"
