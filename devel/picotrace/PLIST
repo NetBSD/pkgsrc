@@ -1,7 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2019/05/26 05:14:26 kamil Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/11/02 20:36:07 kamil Exp $
 bin/coredumper
 bin/picotrace
+bin/sigtracer
+bin/singlestepper
 bin/truss
 man/man1/coredumper.1
 man/man1/picotrace.1
+man/man1/sigtracer.1
+man/man1/singlestepper.1
 man/man1/truss.1
