@@ -438,7 +438,7 @@ func findPkgsrcTopdir(dirname string) string {
 func resolveVariableRefs(mklines *MkLines, text string) (resolved string) {
 	// TODO: How does this fit into the Scope type, which is newer than this function?
 
-	if !contains(text, "${") {
+	if !containsVarRef(text) {
 		return text
 	}
 
@@ -497,7 +497,7 @@ func CheckLinesDescr(lines *Lines) {
 		ck.CheckTrailingWhitespace()
 		ck.CheckValidCharacters()
 
-		if contains(line.Text, "${") {
+		if containsVarRef(line.Text) {
 			for _, token := range NewMkParser(nil, line.Text).MkTokens() {
 				if token.Varuse != nil && G.Pkgsrc.VariableType(nil, token.Varuse.varname) != nil {
 					line.Notef("Variables are not expanded in the DESCR file.")
