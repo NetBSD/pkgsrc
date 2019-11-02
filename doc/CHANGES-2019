@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4684 2019/11/01 19:57:06 rillig Exp $
+$NetBSD: CHANGES-2019,v 1.4685 2019/11/02 02:10:31 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7464,3 +7464,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated emulators/dosbox-x to 0.82.23 [nia 2019-11-01]
 	Updated devel/ocaml-dune to 1.11.4 [maya 2019-11-01]
 	Updated pkgtools/pkglint to 19.3.4 [rillig 2019-11-01]
+	Updated www/firefox to 70.0.1 [ryoon 2019-11-02]
