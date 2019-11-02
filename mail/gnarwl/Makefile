@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/02/02 00:20:45 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2019/11/02 16:25:21 rillig Exp $
 
 DISTNAME=	gnarwl-3.6
 PKGREVISION=	3
@@ -19,22 +19,22 @@ MAKE_JOBS_SAFE=	no
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake groff
 
-GNARWL_LIBS=	-L${BUILDLINK_PREFIX.openldap}/lib	\
+GNARWL_LIBS=		-L${BUILDLINK_PREFIX.openldap}/lib	\
 		-W,-lR${BUILDLINK_PREFIX.openldap}/lib	\
 		-L${BUILDLINK_PREFIX.gdbm}/lib 		\
 		-W,-lR${BUILDLINK_PREFIX.gdbm}/lib
-CONFIGURE_ENV+=	LDFLAGS=${GNARWL_LIBS:Q}
-CONFIGURE_ARGS+=--with-homedir=${GNARWL_HOME}
+CONFIGURE_ENV+=		LDFLAGS=${GNARWL_LIBS:Q}
+CONFIGURE_ARGS+=	--with-homedir=${GNARWL_HOME}
 
 LDFLAGS.SunOS+=	-liconv
 
-GNARWL_USER?=	gnarwl
-GNARWL_GROUP?=	gnarwl
-GNARWL_HOME?=	${VARBASE}/gnarwl
-BUILD_DEFS+=	GNARWL_USER GNARWL_GROUP
-PKG_GROUPS+=	${GNARWL_GROUP}
-PKG_USERS+=	${GNARWL_USER}:${GNARWL_GROUP}
-PKG_HOME.gnarwl=${GNARWL_HOME}
+GNARWL_USER?=		gnarwl
+GNARWL_GROUP?=		gnarwl
+GNARWL_HOME?=		${VARBASE}/gnarwl
+BUILD_DEFS+=		GNARWL_USER GNARWL_GROUP
+PKG_GROUPS+=		${GNARWL_GROUP}
+PKG_USERS+=		${GNARWL_USER}:${GNARWL_GROUP}
+PKG_HOME.gnarwl=	${GNARWL_HOME}
 
 GNARWL_MANDIR=		${DESTDIR}${PREFIX}/${PKGMANDIR}
 
@@ -57,11 +57,11 @@ EGDIR=		${PREFIX}/share/examples/gnarwl
 EGFILES=	badheaders.txt blacklist.txt footer.txt header.txt gnarwl.cfg
 
 .for files in ${EGFILES}
-CONF_FILES+=            ${EGDIR}/${files} ${PKG_SYSCONFDIR}/${files}
+CONF_FILES+=		${EGDIR}/${files} ${PKG_SYSCONFDIR}/${files}
 .endfor
 
-MAKE_DIRS_PERMS+=${GNARWL_HOME} ${GNARWL_USER} ${GNARWL_GROUP} 0750
-SPECIAL_PERMS+=${PREFIX}/bin/gnarwl ${GNARWL_USER} ${GNARWL_GROUP} 04555
+MAKE_DIRS_PERMS+=	${GNARWL_HOME} ${GNARWL_USER} ${GNARWL_GROUP} 0750
+SPECIAL_PERMS+=		${PREFIX}/bin/gnarwl ${GNARWL_USER} ${GNARWL_GROUP} 04555
 
 .include "../../mk/dlopen.builtin.mk"
 .include "../../databases/openldap-client/buildlink3.mk"

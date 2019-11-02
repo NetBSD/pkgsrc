@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/09/21 11:25:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/02 16:25:29 rillig Exp $
 #
 
 TB_VER=		60.9.0
@@ -18,7 +18,7 @@ NO_BUILD=	yes
 
 INSTALLATION_DIRS=	lib/thunderbird60/extensions
 
-TB_LOCALES=	        ar ast be bg br ca cs cy		\
+TB_LOCALES=		ar ast be bg br ca cs cy		\
                         da de dsb el en-GB en-US es-AR es-ES et	\
                         eu fi fr fy-NL ga-IE gd gl he hr hsb	\
                         hy-AM hu id is it ja ko			\

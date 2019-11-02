@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2016/09/11 17:03:26 taca Exp $
+# $NetBSD: options.mk,v 1.6 2019/11/02 16:25:29 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.turba
 PKG_SUPPORTED_OPTIONS=	ldap mysql
@@ -17,6 +17,6 @@ DEPENDS+=	${PHP_PKG_PREFIX}-ldap>=4.3.3:../../databases/php-ldap
 ### Use MySQL for storing data
 ###
 .if !empty(PKG_OPTIONS:Mmysql)
-DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.3:../../databases/php-mysql
+DEPENDS+=		${PHP_PKG_PREFIX}-mysql>=4.3.3:../../databases/php-mysql
 PHP_VERSIONS_ACCEPTED=	56
 .endif
