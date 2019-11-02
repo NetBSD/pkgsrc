@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/08/01 14:58:57 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/02 22:24:37 rillig Exp $
 
 DISTNAME=	cnr_BETA
 PKGNAME=	Code-New-Roman-2.1beta1
@@ -11,11 +11,11 @@ HOMEPAGE=	https://sourceforge.net/projects/codenewroman/
 COMMENT=	Programming font
 LICENSE=	ofl-v1.1
 
-DIST_SUBDIR=	${PKGNAME_NOREV}
-USE_LANGUAGES=	# none
-WRKSRC=		${WRKDIR}
-NO_BUILD=	yes
-FONTS_DIR=	${PREFIX}/share/fonts/X11/OTF
+DIST_SUBDIR=		${PKGNAME_NOREV}
+USE_LANGUAGES=		# none
+WRKSRC=			${WRKDIR}
+NO_BUILD=		yes
+FONTS_DIR=		${PREFIX}/share/fonts/X11/OTF
 INSTALLATION_DIRS=	share/fonts/X11/OTF
 
 do-install:
