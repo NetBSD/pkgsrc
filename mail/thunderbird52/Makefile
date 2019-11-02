@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/09/18 14:17:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2019/11/02 16:25:28 rillig Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird${TB_VER:C/\..*$//}-${TB_VER}
@@ -34,10 +34,10 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${PKGBASE}
 
 .include "../../mk/bsd.prefs.mk"
 
-#SUBST_CLASSES+=			ext-compat
-#SUBST_STAGE.ext-compat=		pre-configure
+#SUBST_CLASSES+=		ext-compat
+#SUBST_STAGE.ext-compat=	pre-configure
 #SUBST_MESSAGE.ext-compat=	Fixing extension compatibility
-#SUBST_FILES.ext-compat=		mailnews/extensions/enigmail/package/install.rdf
+#SUBST_FILES.ext-compat=	mailnews/extensions/enigmail/package/install.rdf
 #SUBST_FILES.ext-compat+=	calendar/*/install.rdf
 #SUBST_FILES.ext-compat+=	calendar/*/*/install.rdf
 #SUBST_SED.ext-compat=		-e 's,\(<em:maxVersion>\).*<,\19.0<,g'
@@ -48,7 +48,7 @@ SUBST_MESSAGE.sys-dic=	Reference to system hunspell dictionaries.
 SUBST_FILES.sys-dic=	mozilla/extensions/spellcheck/hunspell/glue/mozHunspell.cpp
 SUBST_VARS.sys-dic=	LOCALBASE
 
-CHECK_WRKREF_SKIP+=lib/${PKGBASE}/chrome/toolkit/content/global/buildconfig.html
+CHECK_WRKREF_SKIP+=	lib/${PKGBASE}/chrome/toolkit/content/global/buildconfig.html
 
 post-extract:
 	mv ${WRKSRC}/mozilla/gfx/ycbcr/yuv_row_arm.s \

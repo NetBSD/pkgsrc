@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/06/19 17:43:28 schmonz Exp $
+# $NetBSD: Makefile,v 1.33 2019/11/02 16:25:23 rillig Exp $
 #
 
 DISTNAME=		mess822-0.58
@@ -27,10 +27,10 @@ SUBST_STAGE.paths=	do-configure
 SUBST_FILES.paths=	hier.c
 SUBST_VARS.paths=	PKGMANDIR
 
-MESS822PATCHES=		qmailqueue:${QMAILQUEUE_PATCH}
-QMAILQUEUE_PATCH=	mess822-0.58-qmailqueue-20170527.patch
-PATCHFILES+=		${QMAILQUEUE_PATCH}
-SITES.${QMAILQUEUE_PATCH}=https://schmonz.com/qmail/mess822qmailqueue/
+MESS822PATCHES=			qmailqueue:${QMAILQUEUE_PATCH}
+QMAILQUEUE_PATCH=		mess822-0.58-qmailqueue-20170527.patch
+PATCHFILES+=			${QMAILQUEUE_PATCH}
+SITES.${QMAILQUEUE_PATCH}=	https://schmonz.com/qmail/mess822qmailqueue/
 
 BUILD_DEFS+=		MESS822PATCHES
 

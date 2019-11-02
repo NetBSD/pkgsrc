@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/01/23 12:20:47 tron Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/02 16:25:27 rillig Exp $
 
 DISTNAME=	sma-1.4
 PKGREVISION=	1
@@ -19,7 +19,7 @@ BUILD_TARGET=	sma
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "IRIX"
-CFLAGS+=	-DUSE_REGEXP
+CFLAGS+=		-DUSE_REGEXP
 .endif
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8 share/doc/sma share/examples/sma
 
