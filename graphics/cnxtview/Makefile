@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2014/09/08 21:24:44 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2019/11/02 22:37:54 rillig Exp $
 
 DISTNAME=	cnxtutil-0.00-alpha
 PKGNAME=	cnxtview-0.00a
@@ -14,7 +14,7 @@ NOT_FOR_PLATFORM=	SunOS-*-*	# needs <err.h> and <dev/usb/usb.h>
 
 USE_BSD_MAKEFILE=	yes
 USE_TOOLS+=		groff nroff
-MAKE_ENV+=	NOGCCERROR=
+MAKE_ENV+=		NOGCCERROR=
 
 INSTALLATION_DIRS+=	bin
 

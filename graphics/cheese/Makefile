@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2019/08/11 13:21:07 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2019/11/02 22:37:54 rillig Exp $
 
 DISTNAME=	cheese-2.26.3
 PKGREVISION=	66
@@ -11,14 +11,14 @@ COMMENT=	Use your webcam to take photos and videos
 LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
-DEPENDS+= gst-plugins0.10-theora>=0.10.1:../../multimedia/gst-plugins0.10-theora
-DEPENDS+= gst-plugins0.10-ogg>=0.10.1:../../multimedia/gst-plugins0.10-ogg
-DEPENDS+= gst-plugins0.10-vorbis>=0.10.1:../../audio/gst-plugins0.10-vorbis
+DEPENDS+=	gst-plugins0.10-theora>=0.10.1:../../multimedia/gst-plugins0.10-theora
+DEPENDS+=	gst-plugins0.10-ogg>=0.10.1:../../multimedia/gst-plugins0.10-ogg
+DEPENDS+=	gst-plugins0.10-vorbis>=0.10.1:../../audio/gst-plugins0.10-vorbis
 
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-[5-9]*) || !empty(MACHINE_PLATFORM:MLinux)
-DEPENDS+= gst-plugins0.10-v4l2>=0.10.10:../../multimedia/gst-plugins0.10-v4l2
+DEPENDS+=	gst-plugins0.10-v4l2>=0.10.10:../../multimedia/gst-plugins0.10-v4l2
 .endif
 
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.3 2013/04/06 11:23:05 rodent Exp $
+# $NetBSD: hacks.mk,v 1.4 2019/11/02 22:38:05 rillig Exp $
 
 .if !defined(FOO_TGIF_MK)
 TGIF_HACKS_MK=	defined
@@ -14,8 +14,8 @@ TGIF_HACKS_MK=	defined
 ### Work around by not optimizing
 
 .if !empty(PKGSRC_COMPILER:Msunpro)
-PKG_HACKS+=	optimisation
-BUILDLINK_TRANSFORM+= rm:-O[0-9]*
+PKG_HACKS+=		optimisation
+BUILDLINK_TRANSFORM+=	rm:-O[0-9]*
 .endif
 
 .endif  # TGIF_HACKS_MK
