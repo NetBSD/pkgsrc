@@ -1,7 +1,9 @@
-# $NetBSD: module.mk,v 1.11 2018/01/01 01:10:13 rillig Exp $
-
-# Used variables:
-# CLISP_MODULE - name of module and subdirectory in "modules"
+# $NetBSD: module.mk,v 1.12 2019/11/02 10:20:42 rillig Exp $
+#
+# Package-settable variables:
+#
+# CLISP_MODULE
+#	name of module and subdirectory in "modules"
 
 CLISP_VERSION=		2.49
 DISTNAME=		clisp-${CLISP_VERSION}
@@ -20,7 +22,7 @@ INSTALLATION_DIRS=	lib/clisp
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/clisp/dynmod
 	cd ${WRKSRC}/modules;	\
-	${SETENV} ${MAKE_ENV} ${INSTALL_ENV} sh ${LOCALBASE}/bin/clisp-link install ${CLISP_MODULE}
+	${SETENV} ${MAKE_ENV} ${INSTALL_ENV} sh ${PREFIX}/bin/clisp-link install ${CLISP_MODULE}
 .endif
 
 .include "../../lang/clisp/buildlink3.mk"
