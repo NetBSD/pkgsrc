@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/08 13:45:43 asau Exp $
+# $NetBSD: Makefile,v 1.23 2019/11/02 14:21:53 rillig Exp $
 #
 
 DISTNAME=	pcps840
@@ -12,14 +12,14 @@ HOMEPAGE=	http://www.swreg.org/soft_shop/695/shopscr3.shtml
 COMMENT=	Converts text files to PostScript(tm)
 LICENSE=	pcps-license
 
-RESTRICTED=	This is shareware for your evaluation and subsequent payment
-NO_BIN_ON_FTP=	${RESTRICTED}
-NO_BIN_ON_CDROM=${RESTRICTED}
+RESTRICTED=		This is shareware for your evaluation and subsequent payment
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
 
 WRKSRC=		${WRKDIR}
 MAKE_FILE=	makefile
 BUILD_TARGET=
-MAKE_ENV+=	"CC=${CC} ${CFLAGS} -DUNIX"
+MAKE_ENV+=	CC=${CC:Q}\ ${CFLAGS:Q}\ -DUNIX
 NO_CONFIGURE=	yes
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/pcps share/examples/pcps
@@ -30,11 +30,11 @@ post-patch:
 	${SED} "s,@PREFIX@,${PREFIX},g" ${FILESDIR}/pcps.1 > ${WRKDIR}/pcps.1
 
 do-install:
-	@${INSTALL_PROGRAM}  ${WRKSRC}/pcps ${DESTDIR}${PREFIX}/bin/pcps
-	@${INSTALL_MAN}      ${WRKDIR}/pcps.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	@${INSTALL_DATA}     ${WRKSRC}/license.doc ${DESTDIR}${PREFIX}/share/doc/pcps
-	@${INSTALL_DATA}     ${WRKSRC}/register.doc ${DESTDIR}${PREFIX}/share/doc/pcps
-	@${INSTALL_DATA}     ${WRKSRC}/pcps.man ${DESTDIR}${PREFIX}/share/doc/pcps
-	@${INSTALL_DATA}     ${FILESDIR}/pcps.cfg ${DESTDIR}${PREFIX}/share/examples/pcps/pcps.cfg
+	${INSTALL_PROGRAM}  ${WRKSRC}/pcps ${DESTDIR}${PREFIX}/bin/pcps
+	${INSTALL_MAN}      ${WRKDIR}/pcps.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA}     ${WRKSRC}/license.doc ${DESTDIR}${PREFIX}/share/doc/pcps
+	${INSTALL_DATA}     ${WRKSRC}/register.doc ${DESTDIR}${PREFIX}/share/doc/pcps
+	${INSTALL_DATA}     ${WRKSRC}/pcps.man ${DESTDIR}${PREFIX}/share/doc/pcps
+	${INSTALL_DATA}     ${FILESDIR}/pcps.cfg ${DESTDIR}${PREFIX}/share/examples/pcps/pcps.cfg
 
 .include "../../mk/bsd.pkg.mk"
