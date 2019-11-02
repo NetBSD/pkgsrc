@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/07/11 09:25:24 nia Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/02 15:38:01 rillig Exp $
 #
 
 DISTNAME=	kyotocabinet-1.2.76
@@ -11,10 +11,10 @@ HOMEPAGE=	https://fallabs.com/kyotocabinet/
 COMMENT=	Straightforward implementation of DBM
 LICENSE=	gnu-gpl-v3
 
-GNU_CONFIGURE=	yes
-USE_GCC_RUNTIME=yes
-USE_TOOLS+=	gmake pkg-config
-USE_LANGUAGES=	c c++
+GNU_CONFIGURE=		yes
+USE_GCC_RUNTIME=	yes
+USE_TOOLS+=		gmake pkg-config
+USE_LANGUAGES=		c c++
 
 PKGCONFIG_OVERRIDE+=	kyotocabinet.pc.in
 

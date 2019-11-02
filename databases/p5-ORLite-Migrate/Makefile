@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/08/11 13:18:31 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/11/02 15:38:05 rillig Exp $
 
 DISTNAME=	ORLite-Migrate-1.10
 PKGNAME=	p5-${DISTNAME}
@@ -23,7 +23,7 @@ DEPENDS+=	p5-Probe-Perl>=0.01:../../devel/p5-Probe-Perl
 BUILDLINK_API_DEPENDS.p5-DBI+=	p5-DBI>=1.580
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/ORLite/Migrate/.packlist
+PERL5_PACKLIST=	auto/ORLite/Migrate/.packlist
 
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 
