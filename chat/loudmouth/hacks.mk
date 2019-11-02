@@ -1,7 +1,7 @@
-# $NetBSD: hacks.mk,v 1.2 2012/05/06 17:41:30 dholland Exp $
+# $NetBSD: hacks.mk,v 1.3 2019/11/02 22:18:23 rillig Exp $
 
 .if !defined(HACKS_MK)
-HACKS_MK= defined
+HACKS_MK=	defined
 
 ### [Tue Feb 21 19:10:18 NZDT 2012: sbd]
 ### 'AC_CHECK_LIB(resolv,res_query)' fails on Linux because the function's

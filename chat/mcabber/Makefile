@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/11/18 12:06:23 bsiegert Exp $
+# $NetBSD: Makefile,v 1.12 2019/11/02 22:18:24 rillig Exp $
 
 DISTNAME=	mcabber-1.1.0
 PKGREVISION=	1
@@ -18,7 +18,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake xgettext pkg-config
 USE_NCURSES=	yes
 
-INSTALLATION_DIRS+= 	share/examples/mcabber
+INSTALLATION_DIRS+=	share/examples/mcabber
 CONFIGURE_ARGS+=	--disable-hgcset
 
 post-install:
