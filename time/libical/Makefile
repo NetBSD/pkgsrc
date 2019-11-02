@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2019/11/02 16:28:38 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.23 2019/11/02 20:55:46 nia Exp $
 
-DISTNAME=	libical-3.0.3
-PKGREVISION=	5
+DISTNAME=	libical-3.0.6
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libical/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/libical/libical/
@@ -14,12 +12,18 @@ LICENSE=	gnu-lgpl-v2.1 OR mpl-2.0
 
 USE_TOOLS+=	perl pkg-config
 USE_CMAKE=	yes
-CMAKE_ARGS+=	-DUSE_BUILTIN_TZDATA=false
-CMAKE_ARGS+=	-DICAL_BUILD_DOCS=false
-CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_BDB=true
-MAKE_JOBS_SAFE=	no
 
-PKGCONFIG_OVERRIDE+=	libical.pc.in src/libical-glib/libical-glib.pc.in
+CMAKE_ARGS+= 	-DUSE_BUILTIN_TZDATA=OFF
+CMAKE_ARGS+=	-DICAL_BUILD_DOCS=OFF
+CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_BDB=ON
+
+REPLACE_INTERPRETER+=	perl
+REPLACE.perl.old=	.*/bin/tclsh
+REPLACE.perl.new=	${PREFIX}/bin/tclsh
+REPLACE_FILES.perl=
+
+PKGCONFIG_OVERRIDE+=	libical.pc.in
+PKGCONFIG_OVERRIDE+=	src/libical-glib/libical-glib.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "NetBSD"
