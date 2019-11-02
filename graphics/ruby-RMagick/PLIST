@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2019/05/06 15:38:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.30 2019/11/02 15:00:56 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/RMagick2.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
@@ -22,6 +22,9 @@ ${GEM_LIBDIR}/README.textile
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/before_install_linux.sh
 ${GEM_LIBDIR}/before_install_osx.sh
+${GEM_LIBDIR}/benchmarks/memory/README.md
+${GEM_LIBDIR}/benchmarks/memory/image_new.rb
+${GEM_LIBDIR}/benchmarks/memory/rmagick.gnuplot
 ${GEM_LIBDIR}/deprecated/RMagick.rb
 ${GEM_LIBDIR}/doc/.cvsignore
 ${GEM_LIBDIR}/doc/comtasks.html
@@ -151,18 +154,18 @@ ${GEM_LIBDIR}/doc/ex/images/Button_X.gif
 ${GEM_LIBDIR}/doc/ex/images/Button_Y.gif
 ${GEM_LIBDIR}/doc/ex/images/Button_Z.gif
 ${GEM_LIBDIR}/doc/ex/images/Cheetah.jpg
-${GEM_LIBDIR}/doc/ex/images/Coffee.wmf
+${GEM_LIBDIR}/doc/ex/images/Coffee.png
 ${GEM_LIBDIR}/doc/ex/images/Flower_Hat.jpg
 ${GEM_LIBDIR}/doc/ex/images/Gold_Statue.jpg
 ${GEM_LIBDIR}/doc/ex/images/Hot_Air_Balloons.jpg
 ${GEM_LIBDIR}/doc/ex/images/Hot_Air_Balloons_H.jpg
 ${GEM_LIBDIR}/doc/ex/images/Leaf.miff
-${GEM_LIBDIR}/doc/ex/images/No.wmf
+${GEM_LIBDIR}/doc/ex/images/No.png
 ${GEM_LIBDIR}/doc/ex/images/Polynesia.jpg
 ${GEM_LIBDIR}/doc/ex/images/Red_Rocks.jpg
 ${GEM_LIBDIR}/doc/ex/images/Rocks_On_Beach.miff
 ${GEM_LIBDIR}/doc/ex/images/Shorts.jpg
-${GEM_LIBDIR}/doc/ex/images/Snake.wmf
+${GEM_LIBDIR}/doc/ex/images/Snake.png
 ${GEM_LIBDIR}/doc/ex/images/Violin.jpg
 ${GEM_LIBDIR}/doc/ex/images/Yellow_Rose.miff
 ${GEM_LIBDIR}/doc/ex/images/big-duck.gif
@@ -354,6 +357,7 @@ ${GEM_LIBDIR}/ext/RMagick/rmpixel.c
 ${GEM_LIBDIR}/ext/RMagick/rmstruct.c
 ${GEM_LIBDIR}/ext/RMagick/rmutil.c
 ${GEM_LIBDIR}/lib/RMagick2.${RUBY_DLEXT}
+${GEM_LIBDIR}/lib/obsolete.rb
 ${GEM_LIBDIR}/lib/rmagick.rb
 ${GEM_LIBDIR}/lib/rmagick/version.rb
 ${GEM_LIBDIR}/lib/rmagick_internal.rb
@@ -396,11 +400,20 @@ ${GEM_LIBDIR}/test/ImageList2.rb
 ${GEM_LIBDIR}/test/Image_attributes.rb
 ${GEM_LIBDIR}/test/Import_Export.rb
 ${GEM_LIBDIR}/test/Info.rb
+${GEM_LIBDIR}/test/KernelInfo.rb
 ${GEM_LIBDIR}/test/Magick.rb
 ${GEM_LIBDIR}/test/Pixel.rb
 ${GEM_LIBDIR}/test/PolaroidOptions.rb
 ${GEM_LIBDIR}/test/Preview.rb
+${GEM_LIBDIR}/test/Struct.rb
+${GEM_LIBDIR}/test/appearance/Montage.rb
+${GEM_LIBDIR}/test/appearance/appearance_assertion.rb
+${GEM_LIBDIR}/test/appearance/expected/montage_border_color.jpg
 ${GEM_LIBDIR}/test/cmyk.icm
+${GEM_LIBDIR}/test/lib/Obsolete.rb
+${GEM_LIBDIR}/test/lib/internal/Draw.rb
+${GEM_LIBDIR}/test/lib/internal/Geometry.rb
+${GEM_LIBDIR}/test/lib/internal/Magick.rb
 ${GEM_LIBDIR}/test/srgb.icm
 ${GEM_LIBDIR}/test/test_all_basic.rb
 ${GEM_LIBDIR}/test/tmpnam_test.rb
