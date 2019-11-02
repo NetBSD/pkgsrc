@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/09/15 16:25:22 khorben Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/02 16:28:38 rillig Exp $
 
 DISTNAME=	memo-0.6
 PKGREVISION=	1
@@ -15,7 +15,7 @@ USE_TOOLS+=	bash:run
 
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
-NO_BUILD=	yes
+NO_BUILD=		yes
 INSTALLATION_DIRS=	bin share/doc/memo
 
 REPLACE_BASH+=	memo
