@@ -1,10 +1,10 @@
-$NetBSD: patch-hotspot_make_solaris_makefiles_jsig.make,v 1.2 2017/12/15 14:27:52 jperkin Exp $
+$NetBSD: patch-hotspot_make_solaris_makefiles_jsig.make,v 1.3 2019/11/02 21:31:14 tnn Exp $
 
 GCC support.
 
---- hotspot/make/solaris/makefiles/jsig.make.orig	2017-11-28 00:13:38.000000000 +0000
+--- hotspot/make/solaris/makefiles/jsig.make.orig	2019-10-16 01:41:55.000000000 +0000
 +++ hotspot/make/solaris/makefiles/jsig.make
-@@ -39,18 +39,29 @@ DEST_JSIG_DIZ       = $(JDK_LIBDIR)/$(LI
+@@ -39,10 +39,11 @@ DEST_JSIG_DIZ       = $(JDK_LIBDIR)/$(LI
  
  LIBJSIG_MAPFILE = $(MAKEFILES_DIR)/mapfile-vers-jsig
  
@@ -17,21 +17,17 @@ GCC support.
  else
  LFLAGS_JSIG += -mt -xnolib
  endif
+@@ -52,6 +53,13 @@ ifneq ($(DEBUG_LEVEL), slowdebug)
+   JSIG_OPT_FLAGS = -xO4 -g
+ endif
  
 +# DEBUG_BINARIES overrides everything, use full -g debug information
-+ifeq ($(DEBUG_BINARIES), true)
-+JSIG_DEBUG_CFLAGS = -g
++ifdef USE_GCC
++  ifeq ($(DEBUG_BINARIES), true)
++    JSIG_OPT_FLAGS = -g
++  endif
 +endif
 +
  $(LIBJSIG): $(JSIGSRCDIR)/jsig.c $(LIBJSIG_MAPFILE)
  	@echo Making signal interposition lib...
-+ifdef USE_GCC
-+	$(QUIETLY) $(CC) $(SYMFLAG) $(ARCHFLAG) $(SHARED_FLAG) $(PICFLAG) \
-+                         $(LFLAGS_JSIG) $(JSIG_DEBUG_CFLAGS) -o $@ $(JSIGSRCDIR)/jsig.c -ldl
-+else
  	$(QUIETLY) $(CC) $(SYMFLAG) $(ARCHFLAG) $(SHARED_FLAG) $(PICFLAG) \
-                          $(LFLAGS_JSIG) -o $@ $(JSIGSRCDIR)/jsig.c -ldl
-+endif
- ifeq ($(ENABLE_FULL_DEBUG_SYMBOLS),1)
- 	$(QUIETLY) $(OBJCOPY) --only-keep-debug $@ $(LIBJSIG_DEBUGINFO)
- 	$(QUIETLY) $(OBJCOPY) --add-gnu-debuglink=$(LIBJSIG_DEBUGINFO) $@
