@@ -1407,7 +1407,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.acllist("PKG_HACKS", BtIdentifier,
 		PackageSettable,
 		"*: none")
-	reg.sys("PKG_INFO", BtShellCommand)
+	reg.sysload("PKG_INFO", BtShellCommand)
 	reg.sys("PKG_JAVA_HOME", BtPathname)
 	reg.sys("PKG_JVM", jvms)
 	reg.pkglistrat("PKG_JVMS_ACCEPTED", jvms)
