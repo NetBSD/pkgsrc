@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/11/12 16:10:16 jaapb Exp $
+# $NetBSD: Makefile,v 1.20 2019/11/02 15:38:02 rillig Exp $
 #
 
 PKGNAME=	ocaml-dbm-${VERSION}
@@ -16,9 +16,9 @@ LICENSE=	gnu-lgpl-v2
 
 CONFLICTS=	ocaml-findlib<1.4nb1
 
-HAS_CONFIGURE=	yes
-USE_TOOLS+=	gmake
-MAKE_ENV+=	HAS_OCAMLOPT="${OCAML_USE_OPT_COMPILER}"
+HAS_CONFIGURE=		yes
+USE_TOOLS+=		gmake
+MAKE_ENV+=		HAS_OCAMLOPT="${OCAML_USE_OPT_COMPILER}"
 OCAML_USE_FINDLIB=	yes
 
 post-install:

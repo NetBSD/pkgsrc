@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/07/11 09:25:25 nia Exp $
+# $NetBSD: Makefile,v 1.11 2019/11/02 15:38:10 rillig Exp $
 #
 
 .include "../../databases/qdbm/Makefile.common"
@@ -17,7 +17,7 @@ CONFIGURE_DIRS=	${MY_SUBDIR}
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
-TEST_TARGET=		check
+TEST_TARGET=	check
 
 .include "../../databases/qdbm/buildlink3.mk"
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} != "none"

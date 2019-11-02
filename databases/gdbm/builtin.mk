@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2017/03/20 06:02:26 adam Exp $
+# $NetBSD: builtin.mk,v 1.4 2019/11/02 15:38:00 rillig Exp $
 
 BUILTIN_PKG:=			gdbm
 BUILTIN_FIND_HEADERS_VAR=	GDBM_H
@@ -16,7 +16,7 @@ IS_BUILTIN.gdbm=	no
 IS_BUILTIN.gdbm=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.gdbm
+MAKEVARS+=		IS_BUILTIN.gdbm
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -66,4 +66,4 @@ USE_BUILTIN.gdbm!=							\
 .    endif
 .  endif
 .endif
-MAKEVARS+=	USE_BUILTIN.gdbm
+MAKEVARS+=		USE_BUILTIN.gdbm

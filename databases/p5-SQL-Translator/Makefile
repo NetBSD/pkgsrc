@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/09/15 06:27:08 mef Exp $
+# $NetBSD: Makefile,v 1.38 2019/11/02 15:38:06 rillig Exp $
 
 DISTNAME=	SQL-Translator-1.60
 PKGNAME=	p5-${DISTNAME}
@@ -37,15 +37,15 @@ DEPENDS+=	p5-XML-LibXML>=1.69:../../textproc/p5-XML-LibXML
 DEPENDS+=	p5-YAML>=0.66:../../textproc/p5-YAML
 
 #BUILD_DEPENDS+=	{perl>=5.10,p5-PathTools-[0-9]*}:../../devel/p5-PathTools
-BUILD_DEPENDS+=	p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	p5-XML-Writer>=0.500:../../textproc/p5-XML-Writer
+BUILD_DEPENDS+=		p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
+BUILD_DEPENDS+=		p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+BUILD_DEPENDS+=		p5-XML-Writer>=0.500:../../textproc/p5-XML-Writer
 # for make test
-BUILD_DEPENDS+=	p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
+BUILD_DEPENDS+=		p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
 
-USE_LANGUAGES=	# empty
-PERL5_MODULE_TYPE= Module::Install::Bundled
-PERL5_PACKLIST=	auto/SQL/Translator/.packlist
+USE_LANGUAGES=		# empty
+PERL5_MODULE_TYPE=	Module::Install::Bundled
+PERL5_PACKLIST=		auto/SQL/Translator/.packlist
 
 REPLACE_PERL+=	script/*
 

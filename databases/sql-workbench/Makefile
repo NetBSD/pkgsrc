@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/10/10 13:32:04 gdt Exp $
+# $NetBSD: Makefile,v 1.7 2019/11/02 15:38:11 rillig Exp $
 
 DISTNAME=	Workbench-Build124
 PKGNAME=	sql-workbench-124
@@ -11,8 +11,8 @@ HOMEPAGE=	http://www.sql-workbench.net/
 COMMENT=	JDBC-based cross-platform SQL query tool
 
 # Apache, except not granted to certain entities
-LICENSE=	generic-nonlicense
-RESTRICTED=	Some entities are not permitted to use/download.
+LICENSE=		generic-nonlicense
+RESTRICTED=		Some entities are not permitted to use/download.
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}

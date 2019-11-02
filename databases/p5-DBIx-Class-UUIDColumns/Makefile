@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/08/11 13:18:28 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/02 15:38:04 rillig Exp $
 
 DISTNAME=	DBIx-Class-UUIDColumns-0.02006
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	p5-DBIx-Class>=0.07005:../../databases/p5-DBIx-Class
 DEPENDS+=	p5-Data-UUID>=0:../../devel/p5-Data-UUID
 DEPENDS+=	p5-Class-Accessor-Grouped>=0:../../devel/p5-Class-Accessor-Grouped
 
-BUILD_DEPENDS+= p5-DBD-SQLite>=1.11:../../databases/p5-DBD-SQLite
+BUILD_DEPENDS+=	p5-DBD-SQLite>=1.11:../../databases/p5-DBD-SQLite
 
 USE_LANGUAGES=	# empty
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1

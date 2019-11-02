@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/10/14 20:19:29 adam Exp $
+# $NetBSD: Makefile,v 1.28 2019/11/02 15:38:02 rillig Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 COMMENT=	MySQL 5, a free SQL database (server)
@@ -10,10 +10,10 @@ CONFLICTS=	mysql3-server-[0-9]*
 CMAKE_ARGS+=		-DINSTALL_INFODIR=${PKGINFODIR}
 
 .if !empty(PKG_OPTIONS:Membedded-server)
-CMAKE_ARGS+=		-DWITH_EMBEDDED_SERVER=ON
-PLIST.embedded=		yes
+CMAKE_ARGS+=			-DWITH_EMBEDDED_SERVER=ON
+PLIST.embedded=			yes
 .else
-CMAKE_ARGS+=		-DWITH_EMBEDDED_SERVER=OFF
+CMAKE_ARGS+=			-DWITH_EMBEDDED_SERVER=OFF
 # We only need readline to placate the configure script if we don't build
 # the embedded server as it is the only binary linked against "readline".
 BUILDLINK_DEPMETHOD.editline=	build
