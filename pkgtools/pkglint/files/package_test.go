@@ -1263,11 +1263,17 @@ func (s *Suite) Test_Package_checkIncludeConditionally__conditional_and_uncondit
 		".if ${OPSYS} == \"Linux\"",
 		".include \"../../sysutils/coreutils/buildlink3.mk\"",
 		".endif")
+	t.CreateFileLines("mk/bsd.options.mk", "")
 	t.CreateFileLines("devel/zlib/buildlink3.mk", "")
 	t.CreateFileLines("sysutils/coreutils/buildlink3.mk", "")
 
 	t.CreateFileLines("category/package/options.mk",
 		MkCvsID,
+		"",
+		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.package",
+		"PKG_SUPPORTED_OPTIONS=\tzlib",
+		"",
+		".include \"../../mk/bsd.options.mk\"",
 		"",
 		".if !empty(PKG_OPTIONS:Mzlib)",
 		".  include \"../../devel/zlib/buildlink3.mk\"",
@@ -1281,11 +1287,10 @@ func (s *Suite) Test_Package_checkIncludeConditionally__conditional_and_uncondit
 	t.CheckOutputLines(
 		"WARN: Makefile:20: \"../../devel/zlib/buildlink3.mk\" is included "+
 			"unconditionally here "+
-			"and conditionally in options.mk:4 (depending on PKG_OPTIONS).",
+			"and conditionally in options.mk:9 (depending on PKG_OPTIONS).",
 		"WARN: Makefile:22: \"../../sysutils/coreutils/buildlink3.mk\" is included "+
 			"conditionally here (depending on OPSYS) and "+
-			"unconditionally in options.mk:6.",
-		"WARN: options.mk:3: Expected definition of PKG_OPTIONS_VAR.")
+			"unconditionally in options.mk:11.")
 }
 
 func (s *Suite) Test_Package_checkIncludeConditionally__explain_PKG_OPTIONS_in_Makefile(c *check.C) {
@@ -1859,6 +1864,37 @@ func (s *Suite) Test_Package_checkfilePackageMakefile__files_Makefile(c *check.C
 
 	t.CheckOutputLines(
 		"ERROR: ~/category/package/Makefile: Each package must define its LICENSE.")
+}
+
+// Until version 19.3.5, pkglint warned that this package would need a
+// distinfo file.
+func (s *Suite) Test_Package_checkfilePackageMakefile__no_distfiles(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"DISTFILES=\t# none")
+	t.FinishSetUp()
+
+	G.Check(t.File("category/package"))
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/distinfo: " +
+			"This file should not exist since NO_CHECKSUM or META_PACKAGE is set.")
+}
+
+func (s *Suite) Test_Package_checkfilePackageMakefile__distfiles(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"DISTFILES=\tpackage-1.0.tar.gz")
+	t.Remove("category/package/distinfo")
+	t.FinishSetUp()
+
+	G.Check(t.File("category/package"))
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/distinfo: " +
+			"A package that downloads files should have a distinfo file.")
 }
 
 func (s *Suite) Test_Package_checkGnuConfigureUseLanguages__no_C(c *check.C) {

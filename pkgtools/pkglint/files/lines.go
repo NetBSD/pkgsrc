@@ -21,13 +21,9 @@ func (ls *Lines) LastLine() *Line { return ls.Lines[ls.Len()-1] }
 
 func (ls *Lines) EOFLine() *Line { return NewLineMulti(ls.Filename, -1, -1, "", nil) }
 
-func (ls *Lines) Errorf(format string, args ...interface{}) {
-	NewLineWhole(ls.Filename).Errorf(format, args...)
-}
-
-func (ls *Lines) Warnf(format string, args ...interface{}) {
-	NewLineWhole(ls.Filename).Warnf(format, args...)
-}
+// Whole returns a virtual line that can be used for issuing diagnostics
+// and explanations, but not for text replacements.
+func (ls *Lines) Whole() *Line { return NewLineWhole(ls.Filename) }
 
 func (ls *Lines) SaveAutofixChanges() bool {
 	return SaveAutofixChanges(ls)
