@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/08/11 13:17:59 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2019/11/02 22:09:00 rillig Exp $
 
 DISTNAME=	BioPerl-1.007002
 PKGNAME=	${DISTNAME:tl}
@@ -12,7 +12,7 @@ COMMENT=	Perl tools for computational molecular biology
 LICENSE=	${PERL5_LICENSE}
 
 #BUILD_DEPENDS+=	{perl>=5.19.6,p5-Module-Build>0.42}:../../devel/p5-Module-Build
-BUILD_DEPENDS+=	p5-Test-Most-[0-9]*:../../devel/p5-Test-Most
+BUILD_DEPENDS+=		p5-Test-Most-[0-9]*:../../devel/p5-Test-Most
 
 DEPENDS+=	p5-Algorithm-Munkres-[0-9]*:../../math/p5-Algorithm-Munkres
 DEPENDS+=	p5-Array-Compare-[0-9]*:../../devel/p5-Array-Compare
