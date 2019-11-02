@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2019/08/11 13:21:40 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2019/11/02 16:25:26 rillig Exp $
 
 DISTNAME=	prayer-1.3.5
 PKGREVISION=	2
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/email/prayer/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://www-uxsup.csx.cam.ac.uk/~dpc22/prayer/
 COMMENT=	Small, fast, web mail interface
-LICENSE=		gnu-gpl-v2
+LICENSE=	gnu-gpl-v2
 
 BDB_ACCEPTED=		db4 db5
 USE_TOOLS+=		gmake perl
@@ -49,7 +49,7 @@ CONF_FILES+=	${EGDIR}/motd.html ${PKG_SYSCONFDIR}/motd.html
 
 VAR_PREFIX=	${VARBASE}/spool/prayer
 
-OWN_DIRS_PERMS+=${VAR_PREFIX} ${PRAYER_USER} ${PRAYER_GROUP} 0750
+OWN_DIRS_PERMS+=	${VAR_PREFIX} ${PRAYER_USER} ${PRAYER_GROUP} 0750
 
 FILES_SUBST+=	OPSYS=${OPSYS}
 FILES_SUBST+=	VAR_PREFIX=${VAR_PREFIX:Q}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/08/11 13:21:27 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/02 16:25:21 rillig Exp $
 #
 
 DISTNAME=	fml-7.99.1
@@ -59,7 +59,7 @@ PRINT_PLIST_AWK+=	/share\/examples\/fml/ \
 			/${FML_STAMP}/ \
 			{ gsub(/${FML_STAMP}/, "$${FML_STAMP}"); }
 
-CHECK_INTERPRETER_SKIP+= lib/fml/${FML_STAMP}/* \
+CHECK_INTERPRETER_SKIP+=	lib/fml/${FML_STAMP}/* \
 			libexec/fml/${FML_STAMP}/loader.in
 
 SUBST_CLASSES+=		fixpaths

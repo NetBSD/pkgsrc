@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2013/04/08 11:17:16 rodent Exp $
+# $NetBSD: Makefile.common,v 1.10 2019/11/02 16:25:25 rillig Exp $
 #
 # used by mail/perdition-bdb/Makefile
 # used by mail/perdition-gdbm/Makefile
@@ -36,10 +36,10 @@ DEPENDS+=		perdition-${PERDITION_VERSION}{,nb*}:../../mail/perdition
 BUILD_DIRS?=		perdition/db/${PERDITION_PKGNAME}
 .endif
 
-PERDITION_SKIP_DISABLE?=${PERDITION_PKGNAME}
+PERDITION_SKIP_DISABLE?=	${PERDITION_PKGNAME}
 .for f in mysql odbc pg gdbm bdb ldap ldap-doc
 .  if empty(PERDITION_SKIP_DISABLE:M$f)
-CONFIGURE_ARGS+=	--disable-${f}
+CONFIGURE_ARGS+=		--disable-${f}
 .  endif
 .endfor
 

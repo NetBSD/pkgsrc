@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2019/08/11 13:21:28 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2019/11/02 16:25:22 rillig Exp $
 
 DISTNAME=	maildrop-3.0.0
 PKGREVISION=	2
@@ -23,7 +23,7 @@ DOCFILES=	README README.postfix README.dovecotauth maildroptips.txt
 
 # These are the users that may invoke maildrop with the "-d user"
 # argument (mailbox delivery mode).
-MAILDROP_TRUSTED_USERS?=${REAL_ROOT_USER} ${COURIER_USER} ${QMAIL_DAEMON_USER}
+MAILDROP_TRUSTED_USERS?= ${REAL_ROOT_USER} ${COURIER_USER} ${QMAIL_DAEMON_USER}
 BUILD_DEFS+=		QMAIL_DAEMON_USER
 
 CONFIGURE_ARGS+=	--datadir=${DATADIR}

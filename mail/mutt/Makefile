@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.214 2019/09/21 22:32:41 tron Exp $
+# $NetBSD: Makefile,v 1.215 2019/11/02 16:25:23 rillig Exp $
 
 DISTNAME=		mutt-1.12.2
 CATEGORIES=		mail
@@ -60,7 +60,7 @@ SUBST_FILES.paths=	doc/Muttrc
 SUBST_VARS.paths+=	DOCDIR PREFIX
 SUBST_STAGE.paths=	pre-configure
 
-SPECIAL_PERMS+=	bin/mutt_dotlock ${REAL_ROOT_USER} mail 2551
+SPECIAL_PERMS+=		bin/mutt_dotlock ${REAL_ROOT_USER} mail 2551
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 
 .include "../../devel/zlib/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2012/10/08 12:19:07 asau Exp $
+# $NetBSD: Makefile,v 1.37 2019/11/02 16:25:19 rillig Exp $
 #
 
 DISTNAME=	cucipop-1.31
@@ -6,8 +6,8 @@ PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.informatik.rwth-aachen.de/pub/packages/cucipop/
 
-PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
-PATCHFILES=	cucipop-1.31-v6-20010223.diff.gz
+PATCH_SITES=		ftp://ftp.kame.net/pub/kame/misc/
+PATCHFILES=		cucipop-1.31-v6-20010223.diff.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

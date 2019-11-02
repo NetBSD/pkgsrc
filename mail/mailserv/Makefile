@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/08/11 13:21:29 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2019/11/02 16:25:22 rillig Exp $
 #
 
 DISTNAME=	mailserv
@@ -18,11 +18,11 @@ USE_TOOLS+=	perl:run
 NO_BUILD=	YES
 
 PKG_SYSCONFSUBDIR=	mailserv
-EGDIR=		${PREFIX}/share/examples/mailserv
+EGDIR=			${PREFIX}/share/examples/mailserv
 CONF_FILES=
 .for cf in listproc listserv mail-list maiser majordomo-admin		\
 	majordomo-share majordomo mlp pmdf smartlist subscribe
-CONF_FILES+=	${EGDIR}/${cf}.cf ${PKG_SYSCONFDIR}/${cf}.cf
+CONF_FILES+=		${EGDIR}/${cf}.cf ${PKG_SYSCONFDIR}/${cf}.cf
 .endfor
 
 INSTALLATION_DIRS=	libexec/cgi-bin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/08/11 13:21:32 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/02 16:25:24 rillig Exp $
 
 DISTNAME=	Email-Folder-0.860
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/Email-Folder
 COMMENT=	Perl 5 module to read all the messages from a folder
 LICENSE=	${PERL5_LICENSE}
 
-PERL5_PACKLIST= auto/Email/Folder/.packlist
+PERL5_PACKLIST=	auto/Email/Folder/.packlist
 
 DEPENDS+=	p5-Email-FolderType>=0.6:../../mail/p5-Email-FolderType
 DEPENDS+=	p5-Email-Simple-[0-9]*:../../mail/p5-Email-Simple

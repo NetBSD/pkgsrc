@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/10/08 12:19:16 asau Exp $
+# $NetBSD: Makefile,v 1.29 2019/11/02 16:25:23 rillig Exp $
 
 DISTNAME=	mailwrapper-19990412
 PKGREVISION=	4
@@ -16,7 +16,7 @@ WRKSRC=			${WRKDIR}/mailwrapper
 EGDIR=			${PREFIX}/share/examples/mailwrapper
 
 MAILWRAPPER_BACKUP_SFX=	.pkgsrc.mailwrapper
-FILES_SUBST+=	MAILWRAPPER_BACKUP_SFX=${MAILWRAPPER_BACKUP_SFX:Q}
+FILES_SUBST+=		MAILWRAPPER_BACKUP_SFX=${MAILWRAPPER_BACKUP_SFX:Q}
 
 MAILWRAPPEES=	/usr/bin/mailq						\
 		/usr/bin/newaliases	/usr/sbin/newaliases		\

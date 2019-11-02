@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/08/11 13:21:28 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/02 16:25:21 rillig Exp $
 #
 
 DISTNAME=	fml-4.0-stable-20040215
@@ -23,11 +23,11 @@ BUILD_DEFS=	FML_DATADIR
 
 .include "../../mk/bsd.prefs.mk"
 
-FML_DATADIR?=	${VARBASE}/fml
-FML_USER?=	fml
-FML_GROUP?=	fml
-PKG_GROUPS=	${FML_GROUP}
-PKG_USERS=	${FML_USER}:${FML_GROUP}
+FML_DATADIR?=		${VARBASE}/fml
+FML_USER?=		fml
+FML_GROUP?=		fml
+PKG_GROUPS=		${FML_GROUP}
+PKG_USERS=		${FML_USER}:${FML_GROUP}
 PKG_SHELL.${FML_USER}=	/bin/csh
 
 REPLACE_PERL=	databases/examples/ldap-toymodel/dump.pl \

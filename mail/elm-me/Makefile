@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2018/07/04 13:40:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.37 2019/11/02 16:25:20 rillig Exp $
 
 DISTNAME=		elm-2.4ME+93
 PKGNAME=		elm-me-2.4.93
@@ -37,7 +37,7 @@ SUBST_SED.errno=	-e 's,^extern int errno;,\#include <errno.h>,'
 
 # currently not set in files/config.sh
 # (should probably be a package option)
-#SPECIAL_PERMS+= 	bin/elm ${ROOT_USER} mail 2755
+#SPECIAL_PERMS+=	bin/elm ${ROOT_USER} mail 2755
 
 pre-configure:
 	${CP} ${FILESDIR}/config.sh ${WRKSRC}/

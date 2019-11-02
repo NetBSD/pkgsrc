@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/06/24 10:59:41 nia Exp $
+# $NetBSD: Makefile,v 1.7 2019/11/02 16:25:20 rillig Exp $
 #
 
 VERSION=	6.45
@@ -12,7 +12,7 @@ HOMEPAGE=	https://www.five-ten-sg.com/dnsbl/
 COMMENT=	DNSBL Sendmail milter
 LICENSE=	gnu-gpl-v3
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 PKG_SYSCONFSUBDIR?=	dnsbl-milter
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}/${PKG_SYSCONFSUBDIR}
 CONFIGURE_ARGS+=	ac_cv_path_BASH=${SH}
@@ -33,11 +33,11 @@ EGDIR=		share/examples/dnsbl-milter
 
 CONFS=		dnsbl.conf hosts-ignore.conf tld.conf html-tags.conf
 .for f in ${CONFS}
-CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
+CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
 INSTALLATION_DIRS=	${EGDIR} ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
-INSTALL_DIRS=	src man
+INSTALL_DIRS=		src man
 
 post-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} ${CONFS} ${DESTDIR}${PREFIX}/${EGDIR}

@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.12 2018/07/04 13:40:24 jperkin Exp $
+# $NetBSD: options.mk,v 1.13 2019/11/02 16:25:23 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.neomutt
+PKG_OPTIONS_VAR=		PKG_OPTIONS.neomutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
 PKG_OPTIONS_GROUP.display=	curses ncurses ncursesw slang
-PKG_SUPPORTED_OPTIONS=	debug gpgme gssapi idn ssl smime sasl
-PKG_SUPPORTED_OPTIONS+=	tokyocabinet
-PKG_SUGGESTED_OPTIONS=	gpgme gssapi idn ncursesw sasl smime ssl
-PKG_SUGGESTED_OPTIONS+=	tokyocabinet
+PKG_SUPPORTED_OPTIONS=		debug gpgme gssapi idn ssl smime sasl
+PKG_SUPPORTED_OPTIONS+=		tokyocabinet
+PKG_SUGGESTED_OPTIONS=		gpgme gssapi idn ncursesw sasl smime ssl
+PKG_SUGGESTED_OPTIONS+=		tokyocabinet
 
 .include "../../mk/bsd.options.mk"
 
@@ -127,7 +127,7 @@ CONFIGURE_ARGS+=	--disable-idn
 ### Enable debugging support
 ###
 .if !empty(PKG_OPTIONS:Mdebug)
-CFLAGS+= -g
+CFLAGS+=	-g
 .endif
 
 ###

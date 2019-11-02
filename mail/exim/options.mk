@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.23 2019/06/07 12:20:32 tm Exp $
+# $NetBSD: options.mk,v 1.24 2019/11/02 16:25:20 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.exim
 PKG_SUPPORTED_OPTIONS=	exim-appendfile-maildir exim-appendfile-mailstore
@@ -18,19 +18,19 @@ PKG_SUGGESTED_OPTIONS+=	exim-tls inet6
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mexim-appendfile-maildir)
-LOCAL_MAKEFILE_OPTIONS+=SUPPORT_MAILDIR=yes
+LOCAL_MAKEFILE_OPTIONS+=	SUPPORT_MAILDIR=yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mexim-appendfile-mailstore)
-LOCAL_MAKEFILE_OPTIONS+=SUPPORT_MAILSTORE=yes
+LOCAL_MAKEFILE_OPTIONS+=	SUPPORT_MAILSTORE=yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mexim-auth-dovecot)
-LOCAL_MAKEFILE_OPTIONS+=AUTH_DOVECOT=yes
+LOCAL_MAKEFILE_OPTIONS+=	AUTH_DOVECOT=yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mexim-appendfile-mbx)
-LOCAL_MAKEFILE_OPTIONS+=SUPPORT_MBX=yes
+LOCAL_MAKEFILE_OPTIONS+=	SUPPORT_MBX=yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mexim-build-eximon)
@@ -41,20 +41,20 @@ PLIST_SRC+=${PKGDIR}/PLIST.eximon
 .endif
 
 .if !empty(PKG_OPTIONS:Mexim-content-scan)
-LOCAL_MAKEFILE_OPTIONS+=WITH_CONTENT_SCAN=YES
+LOCAL_MAKEFILE_OPTIONS+=	WITH_CONTENT_SCAN=YES
 .endif
 
 .if !empty(PKG_OPTIONS:Mexim-lookup-cdb)
-LOCAL_MAKEFILE_OPTIONS+=LOOKUP_CDB=YES
-DEPENDS+=cdb-[0-9]*:../../databases/cdb
+LOCAL_MAKEFILE_OPTIONS+= LOOKUP_CDB=YES
+DEPENDS+=	cdb-[0-9]*:../../databases/cdb
 .endif
 
 .if !empty(PKG_OPTIONS:Mexim-lookup-dnsdb)
-LOCAL_MAKEFILE_OPTIONS+=LOOKUP_DNSDB=YES
+LOCAL_MAKEFILE_OPTIONS+=	LOOKUP_DNSDB=YES
 .endif
 
 .if !empty(PKG_OPTIONS:Mexim-lookup-dsearch)
-LOCAL_MAKEFILE_OPTIONS+=LOOKUP_DSEARCH=YES
+LOCAL_MAKEFILE_OPTIONS+=	LOOKUP_DSEARCH=YES
 .endif
 
 .if !empty(PKG_OPTIONS:Mexim-lookup-ldap)
@@ -95,11 +95,11 @@ LOOKUP_LIBS+=-lwhoson
 .endif
 
 .if !empty(PKG_OPTIONS:Mexim-old-demime)
-LOCAL_MAKEFILE_OPTIONS+=WITH_OLD_DEMIME=YES
+LOCAL_MAKEFILE_OPTIONS+=	WITH_OLD_DEMIME=YES
 .endif
 
 .if !empty(PKG_OPTIONS:Mexim-router-iplookup)
-LOCAL_MAKEFILE_OPTIONS+=ROUTER_IPLOOKUP=yes
+LOCAL_MAKEFILE_OPTIONS+=	ROUTER_IPLOOKUP=yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mexim-tcp-wrappers)
@@ -115,13 +115,13 @@ LOOKUP_LIBS+=-lssl -lcrypto
 .endif
 
 .if !empty(PKG_OPTIONS:Mexim-transport-lmtp)
-LOCAL_MAKEFILE_OPTIONS+=TRANSPORT_LMTP=yes
+LOCAL_MAKEFILE_OPTIONS+=	TRANSPORT_LMTP=yes
 .endif
 
 .if !empty(PKG_OPTIONS:Minet6)
-LOCAL_MAKEFILE_OPTIONS+=HAVE_IPV6=YES
+LOCAL_MAKEFILE_OPTIONS+=	HAVE_IPV6=YES
 .else
-LOCAL_MAKEFILE_OPTIONS+=HAVE_IPV6=NO
+LOCAL_MAKEFILE_OPTIONS+=	HAVE_IPV6=NO
 .endif
 
 .if !empty(PKG_OPTIONS:Mopendmarc)
