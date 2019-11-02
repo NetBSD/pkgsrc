@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/09/11 23:04:23 asau Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/02 16:16:19 rillig Exp $
 
 DISTNAME=	linpack-20010510
 PKGREVISION=	2
@@ -10,9 +10,9 @@ COMMENT=	Library of linear algebra Fortran routines
 
 DEPENDS+=	blas-[0-9]*:../../math/blas
 
-NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL
-USE_LANGUAGES=	fortran77
-WRKSRC=		${WRKDIR}/linpack
+NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
+USE_LANGUAGES=		fortran77
+WRKSRC=			${WRKDIR}/linpack
 INSTALLATION_DIRS=	lib
 
 .include "../../mk/bsd.pkg.mk"

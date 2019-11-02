@@ -1,11 +1,11 @@
-# $NetBSD: builtin.mk,v 1.4 2019/05/31 08:36:12 dholland Exp $
+# $NetBSD: builtin.mk,v 1.5 2019/11/02 16:16:20 rillig Exp $
 
 BUILTIN_PKG:=	mpfr
 
 BUILTIN_FIND_HEADERS_VAR:=	H_MPFR
 BUILTIN_FIND_HEADERS.H_MPFR=	mpfr.h mpfr/mpfr.h
 
-BUILTIN_VERSION_SCRIPT.mpfr= ${AWK} \
+BUILTIN_VERSION_SCRIPT.mpfr=	${AWK} \
 	'/\#define[ \t]*MPFR_VERSION_STRING[ \t]/ { \
 	v = substr($$3, 2, length($$3)-2) } \
 	END { gsub("-p",".",v); print v }'
@@ -22,7 +22,7 @@ IS_BUILTIN.mpfr=	no
 IS_BUILTIN.mpfr=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.mpfr
+MAKEVARS+=		IS_BUILTIN.mpfr
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -34,7 +34,7 @@ MAKEVARS+=	IS_BUILTIN.mpfr
 BUILTIN_VERSION.mpfr!=	${BUILTIN_VERSION_SCRIPT.mpfr} ${H_MPFR}
 BUILTIN_PKG.mpfr=	mpfr-${BUILTIN_VERSION.mpfr}
 .endif
-MAKEVARS+=	BUILTIN_PKG.mpfr
+MAKEVARS+=		BUILTIN_PKG.mpfr
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -60,7 +60,7 @@ USE_BUILTIN.mpfr!=	\
 .    endif
 .  endif  # PREFER.mpfr
 .endif
-MAKEVARS+=	USE_BUILTIN.mpfr
+MAKEVARS+=		USE_BUILTIN.mpfr
 
 CHECK_BUILTIN.mpfr?=	no
 .if !empty(CHECK_BUILTIN.mpfr:M[Nn][Oo])

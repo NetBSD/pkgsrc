@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/08/11 13:21:44 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/02 16:16:20 rillig Exp $
 #
 
 VERSION=	1.7
@@ -18,9 +18,9 @@ LICENSE=	gnu-lgpl-v2
 # zarith library creation is racy
 MAKE_JOBS_SAFE=	no
 
-HAS_CONFIGURE=	yes
-CONFIGURE_ENV+=	DESTDIR=${DESTDIR}
-USE_TOOLS+=	gmake perl
+HAS_CONFIGURE=		yes
+CONFIGURE_ENV+=		DESTDIR=${DESTDIR}
+USE_TOOLS+=		gmake perl
 INSTALLATION_DIRS+=	${OCAML_SITELIBDIR}/zarith
 
 OCAML_USE_FINDLIB=	yes

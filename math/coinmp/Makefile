@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/03/25 13:26:12 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/11/02 16:16:18 rillig Exp $
 
 DISTNAME=	CoinMP-1.8.4
 PKGNAME=	${DISTNAME:tl}
@@ -33,11 +33,11 @@ PKGCONFIG_OVERRIDE+=	Osi/src/OsiGrb/osi-gurobi.pc.in
 PKGCONFIG_OVERRIDE+=	Osi/osi-unittests.pc.in
 PKGCONFIG_OVERRIDE+=	Osi/osi.pc.in
 
-SUBST_CLASSES+=		pkgconfig
-SUBST_STAGE.pkgconfig=	pre-configure
-SUBST_MESSAGE.pkgconfig=Set temporary pkg-config directory
-SUBST_FILES.pkgconfig+=	*/Makefile.in
-SUBST_SED.pkgconfig+=	-e 's,PKG_CONFIG_PATH=@COIN_PKG_CONFIG_PATH@,PKG_CONFIG_PATH=@COIN_PKG_CONFIG_PATH@:${DESTDIR}${PREFIX}/lib/pkgconfig,'
-SUBST_SED.pkgconfig+=	-e 's,PKG_CONFIG_PATH="@COIN_PKG_CONFIG_PATH@",PKG_CONFIG_PATH=@COIN_PKG_CONFIG_PATH@:${DESTDIR}${PREFIX}/lib/pkgconfig,'
+SUBST_CLASSES+=			pkgconfig
+SUBST_STAGE.pkgconfig=		pre-configure
+SUBST_MESSAGE.pkgconfig=	Set temporary pkg-config directory
+SUBST_FILES.pkgconfig+=		*/Makefile.in
+SUBST_SED.pkgconfig+=		-e 's,PKG_CONFIG_PATH=@COIN_PKG_CONFIG_PATH@,PKG_CONFIG_PATH=@COIN_PKG_CONFIG_PATH@:${DESTDIR}${PREFIX}/lib/pkgconfig,'
+SUBST_SED.pkgconfig+=		-e 's,PKG_CONFIG_PATH="@COIN_PKG_CONFIG_PATH@",PKG_CONFIG_PATH=@COIN_PKG_CONFIG_PATH@:${DESTDIR}${PREFIX}/lib/pkgconfig,'
 
 .include "../../mk/bsd.pkg.mk"
