@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/08/11 13:24:10 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/02 16:28:40 rillig Exp $
 
 DISTNAME=	Rose-DateTime-0.540
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/Rose-DateTime
 COMMENT=	DateTime helper functions and objects for Rose
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+= 	p5-Rose-Object>=0.82:../../devel/p5-Rose-Object
+DEPENDS+=	p5-Rose-Object>=0.82:../../devel/p5-Rose-Object
 DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
 
 PERL5_PACKLIST=		auto/Rose/DateTime/.packlist

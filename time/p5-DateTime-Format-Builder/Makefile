@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/08/11 13:24:05 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/02 16:28:39 rillig Exp $
 
 DISTNAME=	DateTime-Format-Builder-0.82
 PKGNAME=	p5-${DISTNAME}00
@@ -20,7 +20,7 @@ BUILD_DEPENDS+=	p5-Package-Stash-[0-9]*:../../devel/p5-Package-Stash
 BUILD_DEPENDS+=	p5-Sub-Name-[0-9]*:../../devel/p5-Sub-Name
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST=		auto/DateTime/Format/Builder/.packlist
+PERL5_PACKLIST=	auto/DateTime/Format/Builder/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
