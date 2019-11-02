@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/03/20 10:53:07 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/11/02 22:38:06 rillig Exp $
 
 DISTNAME=	xmorph_20060817
 PKGNAME=	xmorph-20060817
@@ -10,13 +10,13 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xmorph.sourceforge.net/home/gourlay/public_html/Xmorph/
 COMMENT=	X program for image warping and dissolving
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-gtkmorph=no
-INFO_FILES=	yes
-USE_LANGUAGES=	c c++ fortran77
-USE_LIBTOOL=	yes
-USE_TOOLS+=	msgfmt
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+INFO_FILES=		yes
+USE_LANGUAGES=		c c++ fortran77
+USE_LIBTOOL=		yes
+USE_TOOLS+=		msgfmt
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${X11BASE}/lib -L${X11BASE}/lib
 

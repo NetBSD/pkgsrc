@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2019/06/21 13:15:07 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2019/11/02 22:38:06 rillig Exp $
 
 DISTNAME=	xfig-3.2.6a
 PKGNAME=	${DISTNAME:S/-full//}
@@ -17,7 +17,7 @@ XAW_TYPE?=		3d
 
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=       --with-appdefaultdir=${PREFIX}/lib/X11/app-defaults
+CONFIGURE_ARGS+=	--with-appdefaultdir=${PREFIX}/lib/X11/app-defaults
 
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
