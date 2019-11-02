@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/09/24 15:15:35 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2019/11/02 22:24:38 rillig Exp $
 
 DISTNAME=	adobe-cmaps-20060615
 CATEGORIES=	fonts print
@@ -13,12 +13,12 @@ SITES.${f}+=	ftp://ftp.oreilly.com/pub/examples/nutshell/cjkv/adobe/
 DISTFILES+=	${CMAP_DISTFILES}
 EXTRACT_ONLY=	${CMAP_DISTFILES}
 
-PDFCORE=	chinese_s chinese_t japanese korean
+PDFCORE=		chinese_s chinese_t japanese korean
 PDFCORE_DISTFILES=	${PDFCORE:S/$/.zip/}
 .for f in ${PDFCORE_DISTFILES}
-SITES.${f}+=	http://partners.adobe.com/public/developer/en/pdf/
+SITES.${f}+=		http://partners.adobe.com/public/developer/en/pdf/
 .endfor
-DISTFILES+=	${PDFCORE_DISTFILES}
+DISTFILES+=		${PDFCORE_DISTFILES}
 
 MAINTAINER=	minskim@NetBSD.org
 #HOMEPAGE=	https://partners.adobe.com/public/developer/opentype/

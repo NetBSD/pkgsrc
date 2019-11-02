@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2019/07/09 15:46:10 riastradh Exp $
+# $NetBSD: Makefile,v 1.117 2019/11/02 22:24:40 rillig Exp $
 
 DISTNAME=	fontconfig-2.13.1
 CATEGORIES=	fonts
@@ -50,12 +50,12 @@ ADDFONTS:=	${LOCALBASE}/share/fonts/X11,${ADDFONTS}
 .endif
 
 .if ${OPSYS} == "Darwin"
-ADDFONTS:=	~/Library/Fonts,/Library/Fonts,/System/Library/Fonts,${ADDFONTS}
+ADDFONTS:=		~/Library/Fonts,/Library/Fonts,/System/Library/Fonts,${ADDFONTS}
 CONFIGURE_ARGS+=	--with-arch=${MACHINE_ARCH}
 .endif
 CONFIGURE_ARGS+=	--with-add-fonts=${ADDFONTS}
 
-SUBST_CLASSES+= prefix
+SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-build
 SUBST_FILES.prefix=	conf.d/README
 SUBST_VARS.prefix=	PREFIX

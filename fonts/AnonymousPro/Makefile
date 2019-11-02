@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/08/01 14:58:57 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/02 22:24:37 rillig Exp $
 #
 
 DISTNAME=	AnonymousPro-1.002
@@ -28,7 +28,7 @@ INSTALL_FONTS=	AnonymousProB.ttf \
 		AnonymousProBI.ttf \
 		AnonymousProI.ttf \
 		AnonymousPro.ttf
-INSTALL_DOCS=   FONTLOG.txt OFL-FAQ.txt OFL.txt README.txt
+INSTALL_DOCS=	FONTLOG.txt OFL-FAQ.txt OFL.txt README.txt
 
 post-extract:
 	cd ${WRKSRC} && for i in *.ttf; do \

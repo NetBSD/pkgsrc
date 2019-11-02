@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/06/01 16:35:31 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/11/02 22:24:37 rillig Exp $
 
 DISTNAME=	EBGaramond-0.016
 PKGREVISION=	1
@@ -12,10 +12,10 @@ COMMENT=	Egenolff-Berner Garamond font
 LICENSE=	ofl-v1.1
 
 FONTS_DIRS.ttf=		share/fonts/X11/OTF
-DOCDIR=		share/doc/EBGaramond
+DOCDIR=			share/doc/EBGaramond
 INSTALLATION_DIRS=	${FONTS_DIRS.ttf} ${DOCDIR}
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
+NO_CONFIGURE=		yes
+NO_BUILD=		yes
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/otf/* ${DESTDIR}${PREFIX}/${FONTS_DIRS.ttf}

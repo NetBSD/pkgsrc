@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/06/01 16:35:33 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/02 22:24:40 rillig Exp $
 #
 
 DISTNAME=	dbz
@@ -13,11 +13,11 @@ HOMEPAGE=	http://fonts.tom7.com/
 COMMENT=	Divide By Zero TrueType fonts created by Tom Murphy 7
 LICENSE=	dbz-ttf-license
 
-RESTRICTED=	Resale prohibited.
-NO_SRC_ON_CDROM=${RESTRICTED}
-NO_BIN_ON_CDROM=${RESTRICTED}
+RESTRICTED=		Resale prohibited.
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
-DIST_SUBDIR=	${PKGNAME_NOREV}
+DIST_SUBDIR=		${PKGNAME_NOREV}
 EXTRACT_OPTS_ZIP=	-Laqo
 
 USE_X11=	YES

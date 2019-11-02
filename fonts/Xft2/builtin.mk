@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.20 2013/06/07 17:43:40 dholland Exp $
+# $NetBSD: builtin.mk,v 1.21 2019/11/02 22:24:38 rillig Exp $
 
 BUILTIN_PKG:=	Xft2
 
@@ -18,7 +18,7 @@ IS_BUILTIN.Xft2=	yes
 IS_BUILTIN.Xft2=	no
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.Xft2
+MAKEVARS+=		IS_BUILTIN.Xft2
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -40,7 +40,7 @@ BUILTIN_VERSION.Xft2!=							\
 		${H_XFT2}
 BUILTIN_PKG.Xft2=	Xft2-${BUILTIN_VERSION.Xft2}
 .endif
-MAKEVARS+=	BUILTIN_PKG.Xft2
+MAKEVARS+=		BUILTIN_PKG.Xft2
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -68,7 +68,7 @@ USE_BUILTIN.Xft2!=							\
 .    endif
 .  endif  # PREFER.Xft2
 .endif
-MAKEVARS+=	USE_BUILTIN.Xft2
+MAKEVARS+=		USE_BUILTIN.Xft2
 
 ###
 ### The section below only applies if we are not including this file

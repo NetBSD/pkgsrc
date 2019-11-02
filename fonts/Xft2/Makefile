@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2018/03/12 11:15:32 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2019/11/02 22:24:38 rillig Exp $
 
 DISTNAME=	libXft-2.1.7
 PKGNAME=	Xft2-2.1.7
@@ -20,7 +20,7 @@ USE_TOOLS+=		gmake pkg-config
 PKGCONFIG_OVERRIDE=	xft.pc.in
 MAKE_ENV+=		EGREP=${EGREP:Q}
 
-BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.9.0nb2
+BUILDLINK_API_DEPENDS.Xrender+=		Xrender>=0.9.0nb2
 BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.2
 
 .include "../../devel/zlib/buildlink3.mk"

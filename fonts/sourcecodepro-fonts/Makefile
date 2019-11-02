@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/04/29 21:07:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2019/11/02 22:24:43 rillig Exp $
 
 DISTNAME=	sourcecodepro-fonts-1.050
 PKGREVISION=	1
@@ -14,10 +14,10 @@ LICENSE=	ofl-v1.1
 
 WRKSRC=		${WRKDIR}/source-code-pro-2.030R-ro-1.050R-it
 
-USE_LANGUAGES=	# none
-NO_BUILD=	yes
-FONTSDIR=	${PREFIX}/share/fonts/X11/TTF
-FONTS_DIRS.ttf=	${FONTSDIR}
+USE_LANGUAGES=		# none
+NO_BUILD=		yes
+FONTSDIR=		${PREFIX}/share/fonts/X11/TTF
+FONTS_DIRS.ttf=		${FONTSDIR}
 INSTALLATION_DIRS=	share/fonts/X11/TTF
 
 do-install:

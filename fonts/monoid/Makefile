@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/02/11 15:48:05 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/02 22:24:42 rillig Exp $
 
 PKGNAME=	monoid-0.61
 DISTNAME=	Monoid
@@ -13,10 +13,10 @@ LICENSE=	ofl-v1.1 OR mit
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
-USE_LANGUAGES=	# none
-WRKSRC=		${WRKDIR}
-NO_BUILD=	yes
-FONTS_DIRS.ttf=	${PREFIX}/share/fonts/X11/TTF
+USE_LANGUAGES=		# none
+WRKSRC=			${WRKDIR}
+NO_BUILD=		yes
+FONTS_DIRS.ttf=		${PREFIX}/share/fonts/X11/TTF
 INSTALLATION_DIRS=	share/fonts/X11/TTF
 
 do-install:

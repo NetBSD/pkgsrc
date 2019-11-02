@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/09/02 13:20:19 adam Exp $
+# $NetBSD: Makefile,v 1.24 2019/11/02 22:24:42 rillig Exp $
 
 DISTNAME=		TTFQuery-1.0.5
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=		modified-bsd
 
 DEPENDS+=		${PYPKGPREFIX}-fonttools>=2.0b1:../../fonts/py-fonttools
 
-PYTHON_VERSIONS_ACCEPTED=	 27 # py-fonttools
+PYTHON_VERSIONS_ACCEPTED=	27 # py-fonttools
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && for f in ttffamily ttffiles ttfgroups ttfmetadata; do \

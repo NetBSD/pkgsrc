@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/03 18:28:17 asau Exp $
+# $NetBSD: Makefile,v 1.24 2019/11/02 22:24:38 rillig Exp $
 #
 
 DISTNAME=	chkfontpath-1.9.7
@@ -17,11 +17,11 @@ USE_TOOLS+=	gmake tar gzcat
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 
 post-extract:
-		${RUN}cd ${WRKDIR};${EXTRACTOR} ${DISTNAME}.tar.gz
+	${RUN}cd ${WRKDIR};${EXTRACTOR} ${DISTNAME}.tar.gz
 
 do-install:
-		${INSTALL_PROGRAM} ${WRKSRC}/chkfontpath ${DESTDIR}${PREFIX}/bin
-		${INSTALL_MAN} ${WRKSRC}/man/en/chkfontpath.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_PROGRAM} ${WRKSRC}/chkfontpath ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/man/en/chkfontpath.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../devel/popt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:44 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/02 22:24:43 rillig Exp $
 
 DISTNAME=	gnu-freefont.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2014
@@ -34,7 +34,7 @@ REPLACE_PERL+=		doc/fonts/gnu-freefont/tools/utility/KerningNumerals.pl
 #REPLACE_PYTHON+=	doc/fonts/gnu-freefont/tools/utility/metafont/bulk_eps_import.py
 #REPLACE_PYTHON+=	doc/fonts/gnu-freefont/tools/utility/special-purpose/makeBraille.py
 
-CHECK_INTERPRETER_SKIP+= 	share/texmf-dist/doc/fonts/gnu-freefont/tools/test/MES-Conformance/CheckConformance.pl
+CHECK_INTERPRETER_SKIP+=	share/texmf-dist/doc/fonts/gnu-freefont/tools/test/MES-Conformance/CheckConformance.pl
 CHECK_INTERPRETER_SKIP+=	share/texmf-dist/doc/fonts/gnu-freefont/tools/test/MES-Conformance/mes-list-expand.pl
 CHECK_INTERPRETER_SKIP+=	share/texmf-dist/doc/fonts/gnu-freefont/tools/utility/KerningNumerals.pl
 CHECK_INTERPRETER_SKIP+=	share/texmf-dist/doc/fonts/gnu-freefont/tools/generate/buildutils.py

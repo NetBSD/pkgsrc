@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2017/11/22 13:41:20 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/02 22:24:38 rillig Exp $
 
-DISTNAME=	Merriweather-2.002
-PKGNAME=	${DISTNAME:S/her/her-ttf/}
-CATEGORIES=	fonts
+DISTNAME=		Merriweather-2.002
+PKGNAME=		${DISTNAME:S/her/her-ttf/}
+CATEGORIES=		fonts
 # does not provide distfile for versions > 1.584; 2.002 is from fontsquirrel
-#MASTER_SITES=	${MASTER_SITE_GITHUB:=EbenSorkin/}
+#MASTER_SITES=		${MASTER_SITE_GITHUB:=EbenSorkin/}
 #GITHUB_PROJECT=	Merriweather
 #GITHUB_RELEASE=	${PKGVERSION_NOREV}
-EXTRACT_SUFX=	.zip
+EXTRACT_SUFX=		.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ebensorkin.wordpress.com/
