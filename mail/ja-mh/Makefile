@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/11/11 09:18:31 sbd Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/02 16:25:22 rillig Exp $
 
 DISTNAME=	mh-6.8.4-JP-3.05
 PKGNAME=	ja-mh6-3.05
@@ -26,9 +26,9 @@ PKG_DESTDIR_SUPPORT=	destdir
 
 .include "../../mk/bsd.prefs.mk"
 
-MAKE_JOBS_SAFE=	NO
-MANCOMPRESSED=	yes
-GNU_CONFIGURE=	yes
+MAKE_JOBS_SAFE=		NO
+MANCOMPRESSED=		yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-batchmode
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX:Q}/libexec/mh
 CONFIGURE_ARGS+=	--enable-jmandir=${PREFIX:Q}/${PKGMANDIR:Q}/ja_JP.EUC

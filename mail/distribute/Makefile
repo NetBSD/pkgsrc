@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2019/08/11 13:21:26 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2019/11/02 16:25:19 rillig Exp $
 
 DISTNAME=	distribute-2.1-pl19
 PKGNAME=	distribute-2.1.26
@@ -22,8 +22,8 @@ INSTALLATION_DIRS=	libexec ${PKGMANDIR}/man1
 WRKSRC=		${WRKDIR}/distribute-pl19
 USE_TOOLS+=	perl:run
 
-MAN1=		distribute.1
-DIST_SUBDIR=	distribute
+MAN1=			distribute.1
+DIST_SUBDIR=		distribute
 PATCH_DIST_STRIP=	-p1
 
 # customize below if you would like to
