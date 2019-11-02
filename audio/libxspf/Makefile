@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/10/03 12:19:57 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/02 21:09:15 rillig Exp $
 
 DISTNAME=	libxspf-1.2.0
 CATEGORIES=	audio
@@ -12,17 +12,17 @@ LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=	pkg-config
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++
-PKGCONFIG_OVERRIDE+= xspf.pc.in
+USE_TOOLS+=		pkg-config
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_LANGUAGES=		c c++
+PKGCONFIG_OVERRIDE+=	xspf.pc.in
 
 CONFIGURE_ARGS+=	--with-expat=${BUILDLINK_PREFIX.expat:Q}
 #CONFIGURE_ARGS+=	--with-uriparser=${BUILDLINK_PREFIX.uriparser:Q}
 
-CONFIGURE_ARGS+= --disable-test
-#TEST_TARGET=	check
+CONFIGURE_ARGS+=	--disable-test
+#TEST_TARGET=		check
 
 BUILDLINK_ABI_DEPENDS.expat+=		expat>=2.0.0nb1
 BUILDLINK_API_DEPENDS.uriparser+=	uriparser>=0.7.5

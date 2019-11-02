@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2014/10/09 14:05:58 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2019/11/02 21:09:17 rillig Exp $
 
 DISTNAME=		tracker-5.3
 PKGREVISION=		1
@@ -18,8 +18,8 @@ MAKE_JOBS_SAFE=		no
 
 WRKSRC=			${WRKDIR}/tracker
 MAKE_FLAGS+=		MACHINE=${LOWER_OPSYS:Q} INSTALL=${INSTALL:Q} \
-		COMPRESSION_FILE=${PKG_SYSCONFDIR}/compression_methods \
-		COMPRESSION_FILE_EG=${EGDIR}/compression_methods
+			COMPRESSION_FILE=${PKG_SYSCONFDIR}/compression_methods \
+			COMPRESSION_FILE_EG=${EGDIR}/compression_methods
 
 EGDIR=		${PREFIX}/share/examples/tracker
 CONF_FILES=	${EGDIR}/compression_methods ${PKG_SYSCONFDIR}/compression_methods

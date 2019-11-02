@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2017/08/01 17:40:08 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/02 21:09:13 rillig Exp $
 #
 
 DISTNAME=	cs4235-20001009
@@ -13,7 +13,7 @@ LICENSE=	public-domain
 
 INSTALLATION_DIRS=	bin
 
-ONLY_FOR_PLATFORM= NetBSD-*-i386 NetBSD-*-x86_64
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64
 
 WRKSRC=		${WRKDIR}/cs4235
 MAKE_ENV+=	${BSD_MAKE_ENV}

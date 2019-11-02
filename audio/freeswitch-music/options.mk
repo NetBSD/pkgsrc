@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2016/07/09 11:41:57 rillig Exp $
+# $NetBSD: options.mk,v 1.6 2019/11/02 21:09:13 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.freeswitch
 PKG_SUPPORTED_OPTIONS=	freeswitch-08k freeswitch-16k freeswitch-32k freeswitch-48k
@@ -7,27 +7,27 @@ PKG_SUGGESTED_OPTIONS=	freeswitch-08k freeswitch-16k
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mfreeswitch-08k)
-DISTFILES+=	freeswitch-sounds-music-8000-1.0.8.tar.gz
-INSTALLATION_DIRS+= share/freeswitch/sounds/music/8000
-SOUND_DIRS+=	8000
+DISTFILES+=		freeswitch-sounds-music-8000-1.0.8.tar.gz
+INSTALLATION_DIRS+=	share/freeswitch/sounds/music/8000
+SOUND_DIRS+=		8000
 .endif
 
 .if !empty(PKG_OPTIONS:Mfreeswitch-16k)
-DISTFILES+=	freeswitch-sounds-music-16000-1.0.8.tar.gz
-SOUND_DIRS+=	16000
-INSTALLATION_DIRS+= share/freeswitch/sounds/music/16000
+DISTFILES+=		freeswitch-sounds-music-16000-1.0.8.tar.gz
+SOUND_DIRS+=		16000
+INSTALLATION_DIRS+=	share/freeswitch/sounds/music/16000
 .endif
 
 .if !empty(PKG_OPTIONS:Mfreeswitch-32k)
-DISTFILES+=	freeswitch-sounds-music-32000-1.0.8.tar.gz
-SOUND_DIRS+=	32000
-INSTALLATION_DIRS+= share/freeswitch/sounds/music/32000
+DISTFILES+=		freeswitch-sounds-music-32000-1.0.8.tar.gz
+SOUND_DIRS+=		32000
+INSTALLATION_DIRS+=	share/freeswitch/sounds/music/32000
 .endif
 
 .if !empty(PKG_OPTIONS:Mfreeswitch-48k)
-DISTFILES+=	freeswitch-sounds-music-48000-1.0.8.tar.gz
-SOUND_DIRS+=	48000
-INSTALLATION_DIRS+= share/freeswitch/sounds/music/48000
+DISTFILES+=		freeswitch-sounds-music-48000-1.0.8.tar.gz
+SOUND_DIRS+=		48000
+INSTALLATION_DIRS+=	share/freeswitch/sounds/music/48000
 .endif
 
 .for opt in ${PKG_SUPPORTED_OPTIONS}

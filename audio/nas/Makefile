@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2019/05/23 19:22:55 rillig Exp $
+# $NetBSD: Makefile,v 1.99 2019/11/02 21:09:15 rillig Exp $
 
 DISTNAME=	nas-1.9.4.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -81,7 +81,7 @@ CONF_FILES=	${EGDIR}/nasd.conf.eg ${PKG_SYSCONFDIR}/nasd.conf
 
 .  if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" \
    || ${OPSYS} == "DragonFly" || ${OPSYS} == "Linux" || ${OPSYS} == "UnixWare"
-.  include "../../mk/oss.buildlink3.mk"
+.    include "../../mk/oss.buildlink3.mk"
 .  endif
 .endif
 

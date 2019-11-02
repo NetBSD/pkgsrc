@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/10/25 21:17:13 khorben Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/02 21:09:18 rillig Exp $
 #
 
 DISTNAME=	wmsmixer-0.5.1
@@ -13,15 +13,15 @@ LICENSE=	gnu-gpl-v2
 
 NOT_FOR_PLATFORM=	Interix-*-*
 
-USE_IMAKE=	YES
-USE_LANGUAGES=	c++
-NO_INSTALL_MANPAGES= YES
+USE_IMAKE=		YES
+USE_LANGUAGES=		c++
+NO_INSTALL_MANPAGES=	YES
 
 MAKE_FLAGS+=	CCOPTIONS=${CFLAGS:Q}
 MAKE_FLAGS+=	CXXOPTIONS=${CFLAGS:Q}
 MAKE_FLAGS+=	LOCAL_LDFLAGS=${LDFLAGS:Q}
 
-INSTALLATION_DIRS+= share/doc/wmsmixer share/examples/wmsmixer
+INSTALLATION_DIRS+=	share/doc/wmsmixer share/examples/wmsmixer
 
 pre-build:
 	${TOUCH} ${WRKSRC}/wmsmixer.man

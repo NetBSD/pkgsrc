@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2019/08/22 12:22:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.51 2019/11/02 21:09:13 rillig Exp $
 #
 
 DISTNAME=	gbemol-0.3.2
@@ -11,10 +11,10 @@ HOMEPAGE=	http://gbemol.sourceforge.net/
 COMMENT=	Graphical frontend for the Music Player Daemon (MPD)
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool msgfmt
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config intltool msgfmt
 
 .include "../../audio/id3lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"

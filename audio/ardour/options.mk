@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2016/07/07 06:28:24 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2019/11/02 21:09:12 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ardour
 
@@ -30,9 +30,9 @@ PLIST.jack=	yes
 # Useful for developers
 .if !empty(PKG_OPTIONS:Mdummy)
 ARDOUR_BACKENDS_DUMMY=	yes
-PLIST.dummy=	yes
+PLIST.dummy=		yes
 .endif
 
 ARDOUR_BACKENDS=	${ARDOUR_BACKENDS_ALSA:Dalsa},${ARDOUR_BACKENDS_JACK:Djack},${ARDOUR_BACKENDS_DUMMY:Ddummy}
 
-WAF_ARGS+=      --with-backends=${ARDOUR_BACKENDS:C/,+$//}
+WAF_ARGS+=	--with-backends=${ARDOUR_BACKENDS:C/,+$//}

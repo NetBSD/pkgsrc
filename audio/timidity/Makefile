@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2019/07/21 22:24:29 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2019/11/02 21:09:17 rillig Exp $
 
 DISTNAME=	TiMidity++-2.14.0
 PKGNAME=	${DISTNAME:S/TiMidity++/timidity/}
@@ -49,8 +49,8 @@ TIMIDITY_NATIVE_AUDIO=	alsa,oss
 TIMIDITY_NATIVE_AUDIO=	darwin
 .endif
 
-EGDIR=${PREFIX}/share/examples/timidity
-CONF_FILES=${EGDIR}/timidity.cfg ${PKG_SYSCONFDIR}/timidity.cfg
+EGDIR=		${PREFIX}/share/examples/timidity
+CONF_FILES=	${EGDIR}/timidity.cfg ${PKG_SYSCONFDIR}/timidity.cfg
 
 pre-configure:
 	${SED} "s|@PREFIX@|${PREFIX}|" < ${FILESDIR}/timidity.cfg > \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/10/02 23:47:57 asau Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/02 21:09:15 rillig Exp $
 
 DISTNAME=	maplay1_2
 PKGNAME=	maplay-1.2
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}
 
-USE_LANGUAGES=	c++
+USE_LANGUAGES=		c++
 NOT_FOR_PLATFORM=	Interix-*-*
 
 INSTALLATION_DIRS=	bin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/01/28 20:10:43 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/02 21:09:16 rillig Exp $
 
 DISTNAME=	rsynth-2.0
 PKGREVISION=	6
@@ -13,17 +13,17 @@ COMMENT=	Public Domain Speech Synthesis System
 DICT_FILES+=	README cmudict.0.4.Z cmulex.0.4.Z phoneset.0.4
 EXTRACT_ONLY=	rsynth-2.0.tar.gz
 
-DIST_SUBDIR=	rsynth
-GNU_CONFIGURE=	YES
+DIST_SUBDIR=		rsynth
+GNU_CONFIGURE=		YES
 CONFIGURE_HAS_MANDIR=	NO
 
 USE_TOOLS+=	gzcat
 
-CONFIGURE_ARGS+=--with-aDict="${WRKDIR}/cmudict.0.4"
-CONFIGURE_ARGS+=--without-bDict
-CONFIGURE_ENV+=	ac_cv_lib_audio=yes XLIBS=-lXt
+CONFIGURE_ARGS+=	--with-aDict="${WRKDIR}/cmudict.0.4"
+CONFIGURE_ARGS+=	--without-bDict
+CONFIGURE_ENV+=		ac_cv_lib_audio=yes XLIBS=-lXt
 
-INSTALLATION_DIRS+= bin share/rsynth
+INSTALLATION_DIRS+=	bin share/rsynth
 
 pre-configure:
 	${GZCAT} ${DISTDIR}/${DIST_SUBDIR}/cmudict.0.4.Z > ${WRKDIR}/cmudict.0.4

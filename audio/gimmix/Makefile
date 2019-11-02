@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2019/08/22 12:22:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.60 2019/11/02 21:09:13 rillig Exp $
 #
 
 DISTNAME=	gimmix-0.5.7.1
@@ -12,10 +12,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Graphical Music player daemon (MPD) client
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=	intltool gmake msgfmt pkg-config
+USE_TOOLS+=		intltool gmake msgfmt pkg-config
 
 # fixes broken symbolic link to /usr/share/intltool/Makefile.in.in
 post-extract:
