@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4695 2019/11/02 13:32:08 mef Exp $
+$NetBSD: CHANGES-2019,v 1.4696 2019/11/02 13:37:11 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7478,3 +7478,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated misc/libreoffice to 6.3.3.2 [ryoon 2019-11-02]
 	Added devel/p5-Test-CPAN-Meta-JSON version 0.16 [mef 2019-11-02]
 	Updated databases/p5-BerkeleyDB to 0.63 [mef 2019-11-02]
+	Updated mail/p5-MIME-Lite to 3.031 [mef 2019-11-02]
