@@ -1,0 +1,24 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2019/11/02 18:39:52 maya Exp $
+
+kdelibs4's FindExiv2.cmake is wrong about new exiv2.
+Workaround using pkgconfig.
+
+--- CMakeLists.txt.orig	2014-09-30 09:11:42.000000000 +0000
++++ CMakeLists.txt
+@@ -3,6 +3,7 @@ project(gwenview)
+ set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake )
+ 
+ find_package(KDE4 4.6.41 REQUIRED)
++find_package(PkgConfig)
+ include(KDE4Defaults)
+ include(MacroLibrary)
+ include(MacroOptionalAddSubdirectory)
+@@ -32,7 +33,7 @@ macro_log_feature(JPEG_FOUND "libjpeg" "
+ find_package(PNG)
+ macro_log_feature(PNG_FOUND "libpng" "PNG image manipulation support" "http://www.libpng.org" TRUE)
+ 
+-find_package(Exiv2)
++pkg_check_modules(EXIV2 exiv2>=0.19)
+ macro_log_feature(EXIV2_FOUND "Exiv2" "Image metadata support" "http://www.exiv2.org" TRUE "0.19")
+ 
+ macro_optional_find_package(Kipi)
