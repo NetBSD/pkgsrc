@@ -255,6 +255,31 @@ func (s *Suite) Test_CheckLinesPatch__two_patched_files(c *check.C) {
 		"WARN: patch-aa: Contains patches for 2 files, should be only one.")
 }
 
+func (s *Suite) Test_CheckLinesPatch__two_patched_files_for_CVE(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.NewLines("patch-CVE-2019-0001",
+		CvsID,
+		"",
+		"Patches that are provided by upstream for a specific topic don't",
+		"need to be split artificially.",
+		"",
+		"--- oldfile",
+		"+++ newfile",
+		"@@ -1 +1 @@",
+		"-old",
+		"+new",
+		"--- oldfile2",
+		"+++ newfile2",
+		"@@ -1 +1 @@",
+		"-old",
+		"+new")
+
+	CheckLinesPatch(lines)
+
+	t.CheckOutputEmpty()
+}
+
 // The patch headers are only recognized as such if they appear directly below each other.
 func (s *Suite) Test_CheckLinesPatch__documentation_that_looks_like_patch_lines(c *check.C) {
 	t := s.Init(c)
