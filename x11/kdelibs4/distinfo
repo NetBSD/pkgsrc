@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.53 2018/02/08 10:50:44 mrg Exp $
+$NetBSD: distinfo,v 1.54 2019/11/02 19:45:26 maya Exp $
 
 SHA1 (kdelibs-4.14.38.tar.xz) = 2271f8b38cd5b6b55fa31c567271e3ca37ef641a
 RMD160 (kdelibs-4.14.38.tar.xz) = edf16e14842237950655bf44c073070c5bb7d74b
@@ -14,6 +14,7 @@ SHA1 (patch-aj) = 501e34c8fdf242c3718ecb26577ac5940d37fae5
 SHA1 (patch-ak) = 73cc1bb149039d2fe3c05ee631426a8773f951c6
 SHA1 (patch-al) = 20212d740191a699f7aa35db8c23a3b3cb55904e
 SHA1 (patch-am) = b6c315d152d2c3d3c66ad85050549d0b39b263e5
+SHA1 (patch-cmake_modules_FindHUNSPELL.cmake) = 52bd28c88d696d52ce052ddd7702a0f46244f86e
 SHA1 (patch-cmake_modules_FindKDE4Internal.cmake) = becfce89d45fd9b70c2ca08a83ca0e650004996a
 SHA1 (patch-kdecore_io_kdirwatch__p.h) = 3c14e26f3962743f7d450e2a5ea2df43bc7524b5
 SHA1 (patch-kdecore_localization_klocale_kde.cpp) = b8a513a0c51e65d7e604a88c1d0e3325be6ad688
