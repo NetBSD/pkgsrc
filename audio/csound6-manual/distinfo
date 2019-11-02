@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 01:12:28 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/11/02 22:49:23 mrg Exp $
 
-SHA1 (csound6-manual-6.02/manual_src.tar.gz) = c1621be706e0f3d8bceb3878a106630dfccfc056
-RMD160 (csound6-manual-6.02/manual_src.tar.gz) = 3475ccd1f3fd2f255d1a6ebbd63097daf5d6d264
-SHA512 (csound6-manual-6.02/manual_src.tar.gz) = cc16a55f647d3f1262e811ab0d7edd9d539f12989c185141216061180287bfc16c74695f58f5f0c18709ef8903bee5069b14c66ad1c6a2126a95ce769b7397fc
-Size (csound6-manual-6.02/manual_src.tar.gz) = 17840173 bytes
+SHA1 (Csound6.13.0_manual_html.zip) = 3fb4c2a504a10e76411f881c8678cca5101c1244
+RMD160 (Csound6.13.0_manual_html.zip) = b959eece3c7e7051f2b8ae7bf4fe4ae620b1de77
+SHA512 (Csound6.13.0_manual_html.zip) = 87de3efc9aba736751d5bd93bb7bb9d47a3fc4c2e9df4552c9c1f3030f84e1aa29fa421f5360a22993cf0f6f7baae1d70bfb54201e5110f44f5a8c81d955deb5
+Size (Csound6.13.0_manual_html.zip) = 16436055 bytes
