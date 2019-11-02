@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/05/23 19:23:02 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/02 22:37:59 rillig Exp $
 
 DISTNAME=	libbpg-0.9.2
 CATEGORIES=	graphics
@@ -14,10 +14,10 @@ USE_LANGUAGES+=	c c++
 
 AUTO_MKDIRS=	yes
 
-SUBST_CLASSES+= config
-SUBST_MESSAGE.config= config.h file substitutions
-SUBST_STAGE.config= pre-configure
-SUBST_FILES.config= config.h
+SUBST_CLASSES+=		config
+SUBST_MESSAGE.config=	config.h file substitutions
+SUBST_STAGE.config=	pre-configure
+SUBST_FILES.config=	config.h
 SUBST_VARS.config=	PREFIX
 
 .include "../../devel/zlib/buildlink3.mk"
