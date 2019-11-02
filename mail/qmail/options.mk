@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.66 2019/08/20 02:38:04 schmonz Exp $
+# $NetBSD: options.mk,v 1.67 2019/11/02 16:25:26 rillig Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=		eai inet6 pam syncdir tai-system-clock tls
@@ -24,11 +24,11 @@ DEPENDS+=			checkpassword>=0.90nb1:../../sysutils/checkpassword
 .endif
 
 .if !empty(PKG_OPTIONS:Mqmail-customerror)
-QMAILPATCHES+=			customerror:${CUSTOMERROR_PATCH}
-CUSTOMERROR_PATCH=		qmail-queue-custom-error-v2.netqmail-1.05.patch
-PATCHFILES+=			${CUSTOMERROR_PATCH}
-SITES.${CUSTOMERROR_PATCH}=	https://notes.sagredo.eu/files/qmail/patches/
-PATCH_DIST_STRIP.${CUSTOMERROR_PATCH}=-p1
+QMAILPATCHES+=				customerror:${CUSTOMERROR_PATCH}
+CUSTOMERROR_PATCH=			qmail-queue-custom-error-v2.netqmail-1.05.patch
+PATCHFILES+=				${CUSTOMERROR_PATCH}
+SITES.${CUSTOMERROR_PATCH}=		https://notes.sagredo.eu/files/qmail/patches/
+PATCH_DIST_STRIP.${CUSTOMERROR_PATCH}=	-p1
 PATCH_DIST_CAT.${CUSTOMERROR_PATCH}=	${SED} -e 's|vfork|fork|g' < ${CUSTOMERROR_PATCH}
 .endif
 
@@ -66,19 +66,19 @@ SUBST_MESSAGE.load=		Setting linker flags for syncdir.
 .endif
 
 .if !empty(PKG_OPTIONS:Mtai-system-clock)
-QMAILPATCHES+=			taileapsecs:${TAILEAPSECS_PATCH}
-TAILEAPSECS_PATCH=		netqmail-1.05-TAI-leapsecs.patch
-PATCHFILES+=			${TAILEAPSECS_PATCH}
-SITES.${TAILEAPSECS_PATCH}=	https://su.bze.ro/software/
-PATCH_DIST_STRIP.${TAILEAPSECS_PATCH}=-p1
-PATCH_DIST_CAT.${TAILEAPSECS_PATCH}= \
+QMAILPATCHES+=				taileapsecs:${TAILEAPSECS_PATCH}
+TAILEAPSECS_PATCH=			netqmail-1.05-TAI-leapsecs.patch
+PATCHFILES+=				${TAILEAPSECS_PATCH}
+SITES.${TAILEAPSECS_PATCH}=		https://su.bze.ro/software/
+PATCH_DIST_STRIP.${TAILEAPSECS_PATCH}=	-p1
+PATCH_DIST_CAT.${TAILEAPSECS_PATCH}=	\
 				${SED} -e 's|"/etc/leapsecs.dat"|"@PKG_SYSCONFDIR@/leapsecs.dat"|' \
 				< ${TAILEAPSECS_PATCH}
-SUBST_CLASSES+=			libtai
-SUBST_STAGE.libtai=		do-configure
-SUBST_FILES.libtai=		leapsecs_read.c
-SUBST_SED.libtai=		-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR.libtai}|g'
-DEPENDS+=			libtai>=0.60nb5:../../devel/libtai
+SUBST_CLASSES+=				libtai
+SUBST_STAGE.libtai=			do-configure
+SUBST_FILES.libtai=			leapsecs_read.c
+SUBST_SED.libtai=			-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR.libtai}|g'
+DEPENDS+=				libtai>=0.60nb5:../../devel/libtai
 .endif
 
 PLIST_VARS+=			tls

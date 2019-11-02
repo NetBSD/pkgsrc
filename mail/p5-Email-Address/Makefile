@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/08/11 13:21:31 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2019/11/02 16:25:24 rillig Exp $
 
 DISTNAME=	Email-Address-1.912
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 #DEPENDS+=	{perl>=5.7.3,p5-Test-Simple>=0.47}:../../devel/p5-Test-Simple
 
-PERL5_PACKLIST= auto/Email/Address/.packlist
+PERL5_PACKLIST=	auto/Email/Address/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

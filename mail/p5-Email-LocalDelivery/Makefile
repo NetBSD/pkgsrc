@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/08/11 13:21:32 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/02 16:25:25 rillig Exp $
 
 DISTNAME=	Email-LocalDelivery-1.200
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/Email-LocalDelivery
 COMMENT=	Perl 5 module to deliver a piece of email - simply
 LICENSE=	${PERL5_LICENSE}
 
-PERL5_PACKLIST= auto/Email/LocalDelivery/.packlist
+PERL5_PACKLIST=	auto/Email/LocalDelivery/.packlist
 
 DEPENDS+=	p5-Email-FolderType>=0.7:../../mail/p5-Email-FolderType
 DEPENDS+=	p5-Email-Simple>=1.998:../../mail/p5-Email-Simple

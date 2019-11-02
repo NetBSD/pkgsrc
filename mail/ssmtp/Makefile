@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/05/23 19:23:09 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2019/11/02 16:25:28 rillig Exp $
 #
 # TLS functionality needs testing. Please let me know the result,
 # and preferably info about your system.
@@ -26,8 +26,8 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE:Q}
 
 PKG_SYSCONFSUBDIR=	${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
-CONF_FILES=	${EGDIR}/ssmtp.conf ${PKG_SYSCONFDIR}/ssmtp.conf
-CONF_FILES+=	${EGDIR}/revaliases ${PKG_SYSCONFDIR}/revaliases
+CONF_FILES=		${EGDIR}/ssmtp.conf ${PKG_SYSCONFDIR}/ssmtp.conf
+CONF_FILES+=		${EGDIR}/revaliases ${PKG_SYSCONFDIR}/revaliases
 
 MAKE_DIRS+=		${PKG_SYSCONFDIR}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/08/11 13:21:38 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/11/02 16:25:25 rillig Exp $
 
 DISTNAME=	Mail-Sender-0.903
 PKGNAME=	p5-${DISTNAME}
@@ -15,8 +15,8 @@ LICENSE=	${PERL5_LICENSE}
 
 PERL5_PACKLIST=	auto/Mail/Sender/.packlist
 
-BUILD_TARGET=pure_all
-INSTALL_TARGET=pure_install
+BUILD_TARGET=	pure_all
+INSTALL_TARGET=	pure_install
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

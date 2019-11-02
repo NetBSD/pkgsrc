@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.18 2015/09/30 08:25:37 tnn Exp $
+# $NetBSD: options.mk,v 1.19 2019/11/02 16:25:21 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.fetchmail
-PKG_SUPPORTED_OPTIONS=	kerberos4 kerberos gssapi ssl
+PKG_OPTIONS_VAR=		PKG_OPTIONS.fetchmail
+PKG_SUPPORTED_OPTIONS=		kerberos4 kerberos gssapi ssl
 PKG_OPTIONS_OPTIONAL_GROUPS=	socks
 PKG_OPTIONS_GROUP.socks=	socks4 dante
 
-PKG_SUGGESTED_OPTIONS= ssl
+PKG_SUGGESTED_OPTIONS=	ssl
 
 .include "../../mk/bsd.options.mk"
 

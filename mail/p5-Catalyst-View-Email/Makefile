@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/08/11 13:21:31 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2019/11/02 16:25:24 rillig Exp $
 
 DISTNAME=	Catalyst-View-Email-0.36
 PKGNAME=	p5-${DISTNAME}
@@ -28,7 +28,7 @@ USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Catalyst/View/Email/.packlist
 
 # M:I:AI switch - this is EU:MM module
-#MAKE_ENV+=       PERL_AUTOINSTALL=--skipdeps
+#MAKE_ENV+=	PERL_AUTOINSTALL=--skipdeps
 
 EXTRACT_USING=		gtar
 

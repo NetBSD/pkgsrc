@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/08/11 13:21:29 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2019/11/02 16:25:23 rillig Exp $
 #
 
 DISTNAME=	mailsort-1.26
@@ -13,9 +13,9 @@ COMMENT=	Sort mbox mail folders by date
 LICENSE=	gnu-gpl-v2
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-REPLACE_PERL+=	mailsort
-USE_LANGUAGES=	# none
-USE_TOOLS=	perl pod2man
+REPLACE_PERL+=		mailsort
+USE_LANGUAGES=		# none
+USE_TOOLS=		perl pod2man
 
 do-build:
 	pod2man ${WRKSRC}/mailsort > ${WRKSRC}/mailsort.1

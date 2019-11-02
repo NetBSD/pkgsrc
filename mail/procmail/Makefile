@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2019/07/09 15:46:42 riastradh Exp $
+# $NetBSD: Makefile,v 1.52 2019/11/02 16:25:26 rillig Exp $
 
 DISTNAME=	procmail-3.22
 PKGREVISION=	5
@@ -12,8 +12,8 @@ LICENSE=	artistic OR gnu-gpl-v2
 
 MAKE_JOBS_SAFE=	no
 
-MAKE_ENV+=	SHELL=${SH:Q} CHMOD=${CHMOD:Q}
-INSTALL_TARGET=	install-suid install.man
+MAKE_ENV+=		SHELL=${SH:Q} CHMOD=${CHMOD:Q}
+INSTALL_TARGET=		install-suid install.man
 UNLIMIT_RESOURCES=	datasize
 
 SPECIAL_PERMS+=	bin/procmail ${SETUID_ROOT_PERMS}
@@ -29,7 +29,7 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 ### Inlining functions (implied by -O3 or higher) cause the strstr() test
 ### to enter an infinite loop so disable it.  This fixes PR pkg/30999.
-CFLAGS+=        -fno-inline-functions
+CFLAGS+=	-fno-inline-functions
 
 pre-configure:
 	${ECHO} "#define TRUSTED_IDS {${PROCMAIL_TRUSTED_IDS:Q}}"	\
