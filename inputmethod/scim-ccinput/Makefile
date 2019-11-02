@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2019/07/21 22:25:12 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2019/11/02 22:56:54 rillig Exp $
 #
 
 DISTNAME=		scim-ccinput-0.3.1
@@ -26,7 +26,7 @@ SUBST_STAGE.localedir=	pre-configure
 SUBST_SED.localedir+=	-e 's,\$$(datadir)/locale,@prefix@/${PKGLOCALEDIR}/locale,'
 SUBST_SED.localedir+=	-e 's,/usr/share/locale,${PREFIX}/${PKGLOCALEDIR}/locale,'
 SUBST_FILES.localedir=	po/Makefile.am po/Makefile.in
-SUBST_FILES.localedir+= scim/IMEngine/scim_ccin_imengine.cpp
+SUBST_FILES.localedir+=	scim/IMEngine/scim_ccin_imengine.cpp
 SUBST_FILES.localedir+=	scim/SetupUI/scim_ccin_imengine_setup.cpp
 
 .include "../../devel/gettext-lib/buildlink3.mk"

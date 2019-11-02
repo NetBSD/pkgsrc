@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2017/09/04 18:00:56 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/02 22:56:55 rillig Exp $
 
 DISTNAME=	skk9.6
 PKGNAME=	skkserv-3.9.4
@@ -25,13 +25,13 @@ BUILD_DIRS=	skkserv
 .include "../../mk/bsd.prefs.mk"
 
 .if (${OPSYS} == "SunOS")
-.if exists(/usr/ccs)
+.  if exists(/usr/ccs)
 SKKSERV_UID?=	60002		# noaccess
 SKKSERV_GID?=	60002		# noaccess
-.else
+.  else
 SKKSERV_UID?=	65534		# nobody
 SKKSERV_GID?=	65534		# nogroup
-.endif
+.  endif
 .endif
 SKKSERV_UID?=	32767		# nobody
 SKKSERV_GID?=	32766		# nogroup
