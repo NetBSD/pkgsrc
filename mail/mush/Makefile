@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2019/05/23 19:23:06 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2019/11/02 16:25:23 rillig Exp $
 
 DISTNAME=	mush-7.2.5
 PKGNAME=	mush-7.2.6.b4.pl1
@@ -7,9 +7,9 @@ CATEGORIES=	mail
 MASTER_SITES=	# ftp://cse.ogi.edu/pub/mush/
 EXTRACT_SUFX=	.tar.Z
 
-PATCH_SITES=	# ftp://cse.ogi.edu/pub/mush/CONTRIB/
+PATCH_SITES=		# ftp://cse.ogi.edu/pub/mush/CONTRIB/
 PATCH_DIST_ARGS=	-s -d ${WRKDIR} -E -p1
-PATCHFILES=	patch-7.2.6-alpha-1 \
+PATCHFILES=		patch-7.2.6-alpha-1 \
 		patch-7.2.6-alpha-2 \
 		patch-7.2.6-alpha-3 \
 		patch-7.2.6-beta-1 \

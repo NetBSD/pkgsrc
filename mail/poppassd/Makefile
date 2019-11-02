@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/05/23 19:23:07 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2019/11/02 16:25:26 rillig Exp $
 #
 
 DISTNAME=		qpopper${VERSION}
@@ -22,8 +22,8 @@ SUBST_VARS.prefix=	PREFIX
 .include "../../mail/qpopper/Makefile.common"
 
 CONFIGURE_ARGS+=	--enable-poppassd --without-pam
-CONFIGURE_ENV+=	CDEFS='-DSMBPASSWD_BINARY=\"${LOCALBASE}/bin/smbpasswd\"'
-MAKE_ENV+=	ROOT_USER=${ROOT_USER:Q} ROOT_GROUP=${ROOT_GROUP:Q}
+CONFIGURE_ENV+=		CDEFS='-DSMBPASSWD_BINARY=\"${LOCALBASE}/bin/smbpasswd\"'
+MAKE_ENV+=		ROOT_USER=${ROOT_USER:Q} ROOT_GROUP=${ROOT_GROUP:Q}
 
 .include "options.mk"
 

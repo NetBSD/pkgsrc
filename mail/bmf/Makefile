@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/08/01 14:59:01 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/11/02 16:25:18 rillig Exp $
 #
 
 DISTNAME=	bmf-0.9.4
@@ -12,6 +12,6 @@ COMMENT=	Self contained and extremely efficient Bayesian mail filter
 HAS_CONFIGURE=	YES
 
 CONFIGURE_ARGS+=	--without-mysql
-MAKE_ENV+=	BINDIR=${PREFIX}/bin MANDIR=${PREFIX}/${PKGMANDIR}
+MAKE_ENV+=		BINDIR=${PREFIX}/bin MANDIR=${PREFIX}/${PKGMANDIR}
 
 .include "../../mk/bsd.pkg.mk"

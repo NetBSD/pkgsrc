@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/05/23 19:23:06 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/02 16:25:24 rillig Exp $
 #
 
 DISTNAME=		newspipe.1.1.9
@@ -18,7 +18,7 @@ DEPENDS+=		${PYPKGPREFIX}-html2text-[0-9]*:../../textproc/py-html2text
 
 WRKSRC=			${WRKDIR}
 
-NO_BUILD=		yes
+NO_BUILD=	yes
 REPLACE_PYTHON=	*.py
 
 SUBST_CLASSES+=		bin

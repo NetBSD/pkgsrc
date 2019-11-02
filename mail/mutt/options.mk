@@ -1,18 +1,18 @@
-# $NetBSD: options.mk,v 1.31 2019/01/22 13:19:44 wiz Exp $
+# $NetBSD: options.mk,v 1.32 2019/11/02 16:25:23 rillig Exp $
 
 # Global and legacy options
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.mutt
+PKG_OPTIONS_VAR=		PKG_OPTIONS.mutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
 PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
 PKG_OPTIONS_GROUP.display=	curses wide-curses slang
-PKG_OPTIONS_GROUP.ssl=	gnutls openssl
-PKG_SUPPORTED_OPTIONS=	debug gpgme idn smime sasl
+PKG_OPTIONS_GROUP.ssl=		gnutls openssl
+PKG_SUPPORTED_OPTIONS=		debug gpgme idn smime sasl
 # TODO: add kyoto cabinet and lmdb backend options for header cache
-PKG_SUPPORTED_OPTIONS+=	mutt-hcache mutt-compressed-mbox tokyocabinet mutt-smtp
-PKG_SUPPORTED_OPTIONS+=	gssapi
-PKG_SUGGESTED_OPTIONS=	curses gpgme mutt-hcache mutt-smtp smime openssl
-PKG_SUGGESTED_OPTIONS+= gssapi mutt-compressed-mbox
+PKG_SUPPORTED_OPTIONS+=		mutt-hcache mutt-compressed-mbox tokyocabinet mutt-smtp
+PKG_SUPPORTED_OPTIONS+=		gssapi
+PKG_SUGGESTED_OPTIONS=		curses gpgme mutt-hcache mutt-smtp smime openssl
+PKG_SUGGESTED_OPTIONS+=		gssapi mutt-compressed-mbox
 # remove after 2019Q1
 PKG_OPTIONS_LEGACY_OPTS+=	ncurses:curses ncursesw:wide-curses
 PKG_OPTIONS_LEGACY_OPTS+=	ssl:openssl
@@ -153,7 +153,7 @@ CONFIGURE_ARGS+=	--with-idn=no
 ###
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug
-CFLAGS+= -g
+CFLAGS+=		-g
 .endif
 
 ###

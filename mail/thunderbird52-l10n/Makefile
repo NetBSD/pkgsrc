@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/12/16 08:31:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/02 16:25:28 rillig Exp $
 #
 
 TB_VER=		52.9.1
@@ -16,7 +16,7 @@ DISTFILES=	${XPI_FILES}
 
 NO_BUILD=	yes
 
-TB_LOCALES=	        ar ast be bg bn-BD br ca cs cy		\
+TB_LOCALES=		ar ast be bg bn-BD br ca cs cy		\
                         da de dsb el en-GB en-US es-AR es-ES et	\
                         eu fi fr fy-NL ga-IE gd gl he hr hsb	\
                         hy-AM hu id is it ja ko			\

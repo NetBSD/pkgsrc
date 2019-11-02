@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2019/08/11 13:21:27 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2019/11/02 16:25:20 rillig Exp $
 
 DISTNAME=	faces-1.6.1
 PKGREVISION=	12
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Visual mail, user and print face server
 LICENSE=	faces-license
 
-RESTRICTED=	Distribution not allowed if money exchanged
+RESTRICTED=		Distribution not allowed if money exchanged
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 

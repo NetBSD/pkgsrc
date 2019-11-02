@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2019/08/22 12:23:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.43 2019/11/02 16:25:21 rillig Exp $
 #
 
 DISTNAME=	freepops-0.2.9
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.freepops.org/
 COMMENT=	POP3 gateway to AOL, Gmail, Hotmail, Juno, Yahoo, etc
 LICENSE=	gnu-gpl-v2
 
-MAKE_JOBS_SAFE=	no
+MAKE_JOBS_SAFE=		no
 LUA_VERSIONS_ACCEPTED=	51
 
 .include "../../mk/bsd.prefs.mk"

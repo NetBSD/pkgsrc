@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.29 2011/06/14 09:37:18 tron Exp $
+# $NetBSD: options.mk,v 1.30 2019/11/02 16:25:20 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
-PKG_SUPPORTED_OPTIONS=	dovecot-sieve dovecot-managesieve gssapi
-PKG_SUPPORTED_OPTIONS+=	kqueue ldap mysql pam pgsql sqlite
-PKG_OPTIONS_OPTIONAL_GROUPS= ssl
-PKG_OPTIONS_GROUP.ssl=	gnutls ssl
-PKG_SUGGESTED_OPTIONS=	pam ssl
+PKG_OPTIONS_VAR=		PKG_OPTIONS.dovecot
+PKG_SUPPORTED_OPTIONS=		dovecot-sieve dovecot-managesieve gssapi
+PKG_SUPPORTED_OPTIONS+=		kqueue ldap mysql pam pgsql sqlite
+PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
+PKG_OPTIONS_GROUP.ssl=		gnutls ssl
+PKG_SUGGESTED_OPTIONS=		pam ssl
 
 .if defined(PKG_HAVE_KQUEUE)
 PKG_SUGGESTED_OPTIONS+=	kqueue

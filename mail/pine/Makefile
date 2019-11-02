@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2017/03/23 17:32:39 joerg Exp $
+# $NetBSD: Makefile,v 1.137 2019/11/02 16:25:26 rillig Exp $
 
 DISTNAME=	pine4.64
 PKGNAME=	pine-4.64
@@ -13,7 +13,7 @@ HOMEPAGE=	http://www.washington.edu/pine/
 COMMENT=	Program for Internet News and E-mail
 LICENSE=	pine-license
 
-CONF_FILES=    ${PREFIX}/share/examples/pine/pine.conf ${PKG_SYSCONFDIR}/pine.conf
+CONF_FILES=	${PREFIX}/share/examples/pine/pine.conf ${PKG_SYSCONFDIR}/pine.conf
 
 .include "../../mk/compiler.mk"
 

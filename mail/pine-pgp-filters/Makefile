@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/09/03 08:53:11 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/02 16:25:26 rillig Exp $
 #
 
 DISTNAME=		pine-pgp-filters-1.6
@@ -13,8 +13,8 @@ COMMENT=		Filters to integrate Pine with gnupg or pgp
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 
-DOCDIR=			 ${PREFIX}/share/doc/pine-pgp-filters
-DOCFILES=		BUGS CHANGES INSTALL LICENSE README
+DOCDIR=		${PREFIX}/share/doc/pine-pgp-filters
+DOCFILES=	BUGS CHANGES INSTALL LICENSE README
 
 DEPENDS+=	gnupg>=1.4.9:../../security/gnupg
 
