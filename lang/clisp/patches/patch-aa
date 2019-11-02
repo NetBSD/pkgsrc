@@ -1,12 +1,26 @@
-$NetBSD: patch-aa,v 1.19 2014/05/14 11:24:25 jperkin Exp $
+$NetBSD: patch-aa,v 1.20 2019/11/02 17:02:56 rillig Exp $
 
 Override library subdirectory name for consistency.
 Don't use cache file to avoid trailing space problem.
 Support staged installation of modules.
 Fix SunOS linking.
 
+https://mail-index.netbsd.org/pkgsrc-users/2019/11/02/msg029846.html
+https://sourceforge.net/p/clisp/bugs/740/ (macOS build failure)
+
 --- src/makemake.in.orig	2010-07-07 15:15:35.000000000 +0000
 +++ src/makemake.in
+@@ -577,8 +577,8 @@
+      CROSS=false
+      if [ -z "$HSYS" ]; then # not win32gcc
+        # some shells (A/UX and OSF/1) need the parentheses around "arch" below.
+-       HSYS=`((arch) 2>/dev/null || uname -m 2>/dev/null) | $tolower` # system name in lowercase
+-       HSYSOS=`((uname) 2>/dev/null || arch 2>/dev/null) | $tolower` # OS name in lowercase
++       HSYS=`( (arch) 2>/dev/null || uname -m 2>/dev/null) | $tolower` # system name in lowercase
++       HSYSOS=`( (uname) 2>/dev/null || arch 2>/dev/null) | $tolower` # OS name in lowercase
+        if [ "$HSYS" = 386bsd -o "$HSYS" = sun386 -o "$HSYS" = "386/at" -o "$HSYS" = i86pc ] ; then
+          HSYS='i386'
+        fi
 @@ -1416,42 +1416,42 @@ if [ "${with_dynamic_modules}" != no ];
        XCC_PICFLAG=''
        ;;
