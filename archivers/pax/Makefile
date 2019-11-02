@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2018/10/29 20:18:02 triaxx Exp $
+# $NetBSD: Makefile,v 1.54 2019/11/02 22:54:27 rillig Exp $
 
 DISTNAME=		pax-20080110
 PKGREVISION=		4
@@ -12,7 +12,7 @@ COMMENT=		POSIX standard archiver with many extensions
 LICENSE=		2-clause-bsd AND modified-bsd AND public-domain
 
 BOOTSTRAP_PKG=	yes
-CHECK_PERMS=		no
+CHECK_PERMS=	no
 
 MAKE_ENV+=		CATMAN_SECTION_SUFFIX=${CATMAN_SECTION_SUFFIX:Q}
 MAKE_ENV+=		MANINSTALL=${MANINSTALL:Q}
