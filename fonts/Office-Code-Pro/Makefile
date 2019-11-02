@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/01/20 11:37:52 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/02 22:24:38 rillig Exp $
 
 DISTNAME=	Office-Code-Pro-1.004
 CATEGORIES=	fonts
@@ -9,8 +9,8 @@ HOMEPAGE=	https://github.com/nathco/Office-Code-Pro/
 COMMENT=	Customized version of Source Code Pro
 LICENSE=	ofl-v1.1
 
-USE_LANGUAGES=	# none
-NO_BUILD=	yes
+USE_LANGUAGES=		# none
+NO_BUILD=		yes
 FONTS_DIRS.ttf=		${PREFIX}/share/fonts/X11/OTF
 INSTALLATION_DIRS=	share/fonts/X11/OTF
 
