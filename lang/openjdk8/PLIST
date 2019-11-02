@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2019/07/25 19:08:30 tnn Exp $
+@comment $NetBSD: PLIST,v 1.12 2019/11/02 21:31:14 tnn Exp $
 bin/openjdk8-jar
 bin/openjdk8-java
 bin/openjdk8-javac
@@ -338,8 +338,6 @@ java/openjdk8/include/${LOWER_OPSYS}/jni_md.h
 java/openjdk8/jre/ASSEMBLY_EXCEPTION
 java/openjdk8/jre/LICENSE
 java/openjdk8/jre/THIRD_PARTY_README
-java/openjdk8/jre/bin/clhsdb
-java/openjdk8/jre/bin/hsdb
 java/openjdk8/jre/bin/java
 java/openjdk8/jre/bin/jjs
 java/openjdk8/jre/bin/keytool

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.73 2019/09/22 15:16:26 tnn Exp $
+$NetBSD: distinfo,v 1.74 2019/11/02 21:31:14 tnn Exp $
 
 SHA1 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 7408f52d3bbe35c2b14bbd3215cbf60f1335d334
 RMD160 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 24f1577b5fc86d137f070aedb4610c8c89e45815
@@ -32,10 +32,10 @@ SHA1 (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = 29b
 RMD160 (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = b13d0e42839fb746d41f9001e488162b47803140
 SHA512 (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = 1403e582dacd0474e57d9aa8f1333060c50d099ef5d2c5a992ff7f63dcde2e538ff1e7fb78e45d12fd5aea6daf0704672e7f326399d415ee0d6bb53b6f925e9f
 Size (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = 37883700 bytes
-SHA1 (openjdk7/openjdk-jdk8u-jdk8u222-b10.1.tar.gz) = 01c72ea589f75c4e0c2d2f930c30053dd0414692
-RMD160 (openjdk7/openjdk-jdk8u-jdk8u222-b10.1.tar.gz) = a0d4d87155a1c86293d89d66b6130990ed0b404a
-SHA512 (openjdk7/openjdk-jdk8u-jdk8u222-b10.1.tar.gz) = e4c02422fe7652ad8b2987354626591efbaf94dde975d7eabfd852b6a5abada6d2ece463f9ebd21b73d67428456c7f7b9bbb66368f7ba486a8346f677a1a0ce2
-Size (openjdk7/openjdk-jdk8u-jdk8u222-b10.1.tar.gz) = 85692163 bytes
+SHA1 (openjdk7/openjdk-jdk8u-jdk8u232-b09.1.tar.gz) = 0cad18a0c348d32fc347d27f11a30b63c7b2912e
+RMD160 (openjdk7/openjdk-jdk8u-jdk8u232-b09.1.tar.gz) = 124ecc82ef3c80c6da9fe88f021600b8e90fa8fa
+SHA512 (openjdk7/openjdk-jdk8u-jdk8u232-b09.1.tar.gz) = 8179a402157f951ead3624b45bad8d5a7416f224a2b160f68b1f3788289a1cf8a2fc70efb7ad1a8a0416f48f89876e5d1c1c343d26c7452f2cf9d79906316107
+Size (openjdk7/openjdk-jdk8u-jdk8u232-b09.1.tar.gz) = 85766372 bytes
 SHA1 (patch-aa) = df056ced73a06e9a2c5ae59d15218a6f38c2ab5e
 SHA1 (patch-al) = f65f739805c2ef471a4de10d6da42e86c5561b8c
 SHA1 (patch-an) = fce4da00762770c1c0592bd225bf73e875252178
@@ -47,7 +47,7 @@ SHA1 (patch-bh) = 6194a7c319a496f8ff7df173912cf87118f26a63
 SHA1 (patch-bi) = 5409f0944d6f850baeaaa7c64d2e8ad52233e1e9
 SHA1 (patch-bn) = a50dbe17236a90d60d4bbb852ae447e51a279892
 SHA1 (patch-common_autoconf_boot-jdk.m4) = a29767c79544dea243019cc841d834f756172462
-SHA1 (patch-common_autoconf_generated-configure.sh) = ef90427a50ceef8b3761a44a4456a3da5348867e
+SHA1 (patch-common_autoconf_generated-configure.sh) = 89eb88343d3f2755d656bb16199de53ee7012697
 SHA1 (patch-common_autoconf_spec.gmk.in) = e98bc4c8a09f49c6a26447e6f78abf4709ee694b
 SHA1 (patch-hotspot_agent_src_os_bsd_Makefile) = 6e4c41b080577ed7cd418ee3b84f7f5a73dd11e6
 SHA1 (patch-hotspot_agent_src_share_classes_sun_jvm_hotspot_utilities_PlatformInfo.java) = 893f3b7ad0839a75be49ddd0f5eefcff2dbd2928
@@ -58,7 +58,7 @@ SHA1 (patch-hotspot_make_solaris_makefiles_debug.make) = 7195c97c4f559b2e9410028
 SHA1 (patch-hotspot_make_solaris_makefiles_dtrace.make) = 84e3d6b6603887aaac13747b5c972dd3eec4c7f1
 SHA1 (patch-hotspot_make_solaris_makefiles_fastdebug.make) = 632f96a322f1568df6f49bf31716bafe1d324976
 SHA1 (patch-hotspot_make_solaris_makefiles_gcc.make) = 4763215f5ce2c3d9fcadb69e52afad7c9de97417
-SHA1 (patch-hotspot_make_solaris_makefiles_jsig.make) = 06d9e495fe7f28b11b169cf4e56d7f8a37944ed7
+SHA1 (patch-hotspot_make_solaris_makefiles_jsig.make) = cf3a42b377f5e470bcd665137420075900e2863e
 SHA1 (patch-hotspot_make_solaris_makefiles_mapfile-vers-COMPILER1.gcc) = 58965fe7c142b67be35cab8b30f84dcee2096e39
 SHA1 (patch-hotspot_make_solaris_makefiles_mapfile-vers-COMPILER2.gcc) = 2dfd843c450971ee0857cbd81b946a4d7c86ee3b
 SHA1 (patch-hotspot_make_solaris_makefiles_mapfile-vers-TIERED.gcc) = 82ac550f4c342f657834f30f87b7b359e2b7b41b
@@ -85,7 +85,7 @@ SHA1 (patch-hotspot_src_share_vm_gc__implementation_concurrentMarkSweep_compacti
 SHA1 (patch-hotspot_src_share_vm_gc__implementation_g1_heapRegionSet.hpp) = 9e9347f9695cce3599fe12448445bb20d9b36f08
 SHA1 (patch-hotspot_src_share_vm_memory_metaspace.cpp) = 260005e002e0926447952850bbc1150e50a05509
 SHA1 (patch-hotspot_src_share_vm_oops_klass.hpp) = 2a728aa8fb04976195ebf58549a544b97e56b329
-SHA1 (patch-hotspot_src_share_vm_opto_library__call.cpp) = 4654248e3fdf9a1be8ef5563e50b12dcd59aa1aa
+SHA1 (patch-hotspot_src_share_vm_opto_library__call.cpp) = 35484c16c7ff1ce57b78c1c0fafa0dfcc7f0072a
 SHA1 (patch-hotspot_src_share_vm_opto_node.cpp) = aacb4e03f62f1a6f9b38de39a966c318b70b1293
 SHA1 (patch-hotspot_src_share_vm_runtime_arguments.cpp) = 80265396c62de95b0937d770c1dba0e8a53daa80
 SHA1 (patch-hotspot_src_share_vm_utilities_globalDefinitions__gcc.hpp) = a8e8fef04d7acb4772f57961e7df3681bd53d0b9

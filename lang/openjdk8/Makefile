@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2019/10/01 14:43:32 tnn Exp $
+# $NetBSD: Makefile,v 1.86 2019/11/02 21:31:14 tnn Exp $
 
 DISTNAME=	openjdk-jdk8u-${GITHUB_TAG}
 PKGNAME=	openjdk8-1.8.${GITHUB_TAG:C/.*u([0-9]+).*/\1/}
@@ -6,7 +6,7 @@ CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=battleblow/}
 MASTER_SITES+=	${MASTER_SITE_LOCAL:=openjdk7/}	# for bootstrap kits
 GITHUB_PROJECT= openjdk-jdk8u
-GITHUB_TAG=     jdk8u222-b10.1
+GITHUB_TAG=     jdk8u232-b09.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://openjdk.java.net/
@@ -194,7 +194,7 @@ do-build: ${WRKDIR}/stage3-done
 
 # stage 1 builds a native JDK using the bootstrap binaries
 ${WRKDIR}/stage1-done:
-	${_ULIMIT_CMD} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} images
+	${_ULIMIT_CMD} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} images
 	rm -rf ${ALT_BOOTDIR}
 	cd ${BUILDDIR}/images && mv j2sdk-image ${ALT_BOOTDIR}
 .for d in corba hotspot jaxp jaxws langtools tmp
@@ -220,7 +220,7 @@ ${WRKDIR}/stage1_5-done: ${WRKDIR}/stage1-done
 
 # stage 2 rebuilds the JDK using native tools
 ${WRKDIR}/stage2-done: ${WRKDIR}/stage1_5-done
-	${_ULIMIT_CMD} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} images
+	${_ULIMIT_CMD} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} images
 	touch ${.TARGET}
 
 # stage 3 builds third party add-ons
