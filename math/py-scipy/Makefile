@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2019/06/14 14:53:29 adam Exp $
+# $NetBSD: Makefile,v 1.39 2019/11/02 16:16:22 rillig Exp $
 
 DISTNAME=	scipy-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,7 +22,7 @@ PYSETUPBUILDARGS+=	--fcompiler=g95
 PYSETUPBUILDARGS+=	--fcompiler=gnu95
 LDFLAGS.Darwin+=	-undefined dynamic_lookup
 .else
-BROKEN=		Requires fortran 95
+BROKEN=			Requires fortran 95
 .endif
 
 CPPFLAGS+=	-D__STDC_FORMAT_MACROS
