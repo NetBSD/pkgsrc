@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/08/11 13:21:35 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/02 16:25:25 rillig Exp $
 
 DISTNAME=	Mail-Alias-1.12
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl 5 module to manipulate mail alias files
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Mail/Alias/.packlist
+PERL5_PACKLIST=	auto/Mail/Alias/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
