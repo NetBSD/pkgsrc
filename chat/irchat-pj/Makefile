@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/08/16 20:45:32 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/02 22:18:23 rillig Exp $
 
 DISTNAME=	irchat-pj-2.4.24.22
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -17,12 +17,12 @@ INSTALLATION_DIRS=	bin ${EMACS_LISPPREFIX:C|^${PREFIX}/||}/irchat-pj
 .include "../../editors/emacs/modules.mk"
 
 .if ${EMACS_FLAVOR} == "emacs"
-INSTALL_TARGET=	install
+INSTALL_TARGET=		install
 .elif ${EMACS_FLAVOR} == "xemacs"
-BUILD_TARGET=	package
-INSTALL_TARGET=	install-package
+BUILD_TARGET=		package
+INSTALL_TARGET=		install-package
 .else
-PKG_FAIL_REASON+= "Unknown Emacs flavor"
+PKG_FAIL_REASON+=	"Unknown Emacs flavor"
 .endif
 
 LIBS.SunOS+=	-lnsl -lsocket

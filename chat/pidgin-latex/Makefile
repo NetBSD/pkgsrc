@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2019/07/21 22:24:32 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2019/11/02 22:18:24 rillig Exp $
 
 VERSION=	1.2.1
 PKGREVISION=	43
@@ -28,7 +28,7 @@ do-install:
 
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/pidgin-latex/
 
-DEPENDS+= ImageMagick-[0-9]*:../../graphics/ImageMagick
+DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 
 .include "../../chat/pidgin/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"

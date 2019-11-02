@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/06/22 11:52:31 nia Exp $
+# $NetBSD: Makefile,v 1.11 2019/11/02 22:18:23 rillig Exp $
 
 DISTNAME=	libmsn-4.2.1
 PKGREVISION=	3
@@ -12,7 +12,7 @@ COMMENT=	Library for connecting to Microsoft's MSN Messenger service
 LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
-USE_LANGUAGES= c c++
+USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	libmsn.pc.cmake
 
