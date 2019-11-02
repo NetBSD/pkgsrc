@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4688 2019/11/02 11:07:58 tsutsui Exp $
+$NetBSD: CHANGES-2019,v 1.4689 2019/11/02 11:36:25 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7468,3 +7468,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/firefox-l10n to 70.0.1 [ryoon 2019-11-02]
 	Updated devel/p5-Alien-Build to 1.90 [mef 2019-11-02]
 	Updated emulators/PC6001VX to 3.3.1 [tsutsui 2019-11-02]
+	Updated devel/p5-Test2-Suite to 0.000127 [mef 2019-11-02]
+	Updated devel/p5-Type-Tiny-XS to 0.016 [mef 2019-11-02]
+	Updated devel/p5-namespace-autoclean to 0.29 [mef 2019-11-02]
