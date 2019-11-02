@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.140 2019/10/27 12:44:27 kamil Exp $
+# $NetBSD: Makefile,v 1.141 2019/11/02 21:09:16 rillig Exp $
 
 DISTNAME=	pulseaudio-13.0
 PKGREVISION=	1
@@ -110,13 +110,13 @@ PULSE_GROUP_ACCESS?=	pulseacc
 BUILD_DEFS+=		VARBASE PKG_SYSCONFBASE
 
 PKG_SYSCONFSUBDIR=	pulse
-EGDIR=		${PREFIX}/share/examples/pulseaudio
-CONF_FILES=	${EGDIR}/client.conf ${PKG_SYSCONFDIR}/client.conf
-CONF_FILES+=	${EGDIR}/daemon.conf ${PKG_SYSCONFDIR}/daemon.conf
-CONF_FILES+=	${EGDIR}/default.pa ${PKG_SYSCONFDIR}/default.pa
-CONF_FILES+=	${EGDIR}/system.pa ${PKG_SYSCONFDIR}/system.pa
-CONF_FILES+=	${EGDIR}/pulseaudio-system.conf \
-		${PKG_SYSCONFBASE}/dbus-1/system.d/pulseaudio-system.conf
+EGDIR=			${PREFIX}/share/examples/pulseaudio
+CONF_FILES=		${EGDIR}/client.conf ${PKG_SYSCONFDIR}/client.conf
+CONF_FILES+=		${EGDIR}/daemon.conf ${PKG_SYSCONFDIR}/daemon.conf
+CONF_FILES+=		${EGDIR}/default.pa ${PKG_SYSCONFDIR}/default.pa
+CONF_FILES+=		${EGDIR}/system.pa ${PKG_SYSCONFDIR}/system.pa
+CONF_FILES+=		${EGDIR}/pulseaudio-system.conf \
+			${PKG_SYSCONFBASE}/dbus-1/system.d/pulseaudio-system.conf
 
 PKG_GROUPS=		${PULSE_GROUP}
 PKG_GROUPS+=		${PULSE_GROUP_REALTIME}

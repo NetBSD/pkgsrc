@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/02/27 23:56:07 khorben Exp $
+# $NetBSD: Makefile,v 1.7 2019/11/02 21:09:14 rillig Exp $
 #
 
 DISTNAME=	libifp-1.0.0.2
@@ -11,11 +11,11 @@ HOMEPAGE=	http://ifp-driver.sourceforge.net/
 COMMENT=	General-purpose library-driver for iRiver's iFP portable players
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libusb=${BUILDLINK_PREFIX.libusb}
-USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++
-USE_FEATURES+=	fts_open
+USE_LIBTOOL=		yes
+USE_LANGUAGES=		c c++
+USE_FEATURES+=		fts_open
 
 CFLAGS.SunOS+=	-fPIC
 LIBS.SunOS+=	-liconv

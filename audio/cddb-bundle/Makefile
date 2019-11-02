@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2019/04/03 00:32:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2019/11/02 21:09:12 rillig Exp $
 #
 
 DISTNAME=	cddb.bundle-0.2
@@ -21,7 +21,7 @@ MAKE_FILE=	GNUmakefile
 INSTALL_MAKE_FLAGS=	INSTALL_PROGRAM=${INSTALL_PROGRAM:Q} \
 			INSTALL_DATA=${INSTALL_DATA:Q}
 
-FIX_GNUSTEP_INSTALLATION_DIR= yes
+FIX_GNUSTEP_INSTALLATION_DIR=		yes
 SUBST_FILES.gnustep_installation_dir+=	Cddb/GNUmakefile
 
 .include "../../devel/gnustep-base/buildlink3.mk"
