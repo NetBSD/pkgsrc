@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2937 2019/10/30 12:54:46 kamil Exp $
+# $NetBSD: Makefile,v 1.2938 2019/11/02 13:23:05 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -1765,6 +1765,7 @@ SUBDIR+=	p5-Test-BDD-Cucumber
 SUBDIR+=	p5-Test-Base
 SUBDIR+=	p5-Test-Bits
 SUBDIR+=	p5-Test-CPAN-Meta
+SUBDIR+=	p5-Test-CPAN-Meta-JSON
 SUBDIR+=	p5-Test-CPAN-Meta-YAML
 SUBDIR+=	p5-Test-CheckDeps
 SUBDIR+=	p5-Test-CheckManifest
