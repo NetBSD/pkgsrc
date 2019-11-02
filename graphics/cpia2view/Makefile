@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/09/08 21:24:44 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2019/11/02 22:37:54 rillig Exp $
 
 DISTNAME=	cpia2_driver-1.0
 PKGNAME=	cpia2view-0.03
@@ -7,8 +7,8 @@ CATEGORIES=	graphics x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cpia2/}
 EXTRACT_SUFX=	.tgz
 
-PATCH_SITES=	http://home.384.jp/takam/bsd/
-PATCHFILES=	cpia2_driver-1.0-bsd-0.03.patch.gz
+PATCH_SITES=		http://home.384.jp/takam/bsd/
+PATCHFILES=		cpia2_driver-1.0-bsd-0.03.patch.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

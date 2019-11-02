@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2017/09/04 18:00:55 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2019/11/02 22:38:04 rillig Exp $
 
 DISTNAME=	imlib2-ruby-0.5.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
@@ -11,9 +11,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Imlib2 bindings for Ruby
 LICENSE=	mit
 
-GEM_CLEANBUILD=	Makefile *.o imlib2.${RUBY_DLEXT} mkmf.log .*.time
-OVERRIDE_GEMSPEC=	:name=imlib2-ruby
-BUILDLINK_API_DEPENDS.imlib2+=      imlib2>=1.2.0nb2
+GEM_CLEANBUILD=			Makefile *.o imlib2.${RUBY_DLEXT} mkmf.log .*.time
+OVERRIDE_GEMSPEC=		:name=imlib2-ruby
+BUILDLINK_API_DEPENDS.imlib2+=	imlib2>=1.2.0nb2
 
 pre-configure:
 	${CHMOD} -R g-w ${WRKSRC}

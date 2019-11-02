@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/08/11 13:21:07 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2019/11/02 22:37:53 rillig Exp $
 
 PKGREVISION=	11
 .include "Makefile.common"
@@ -91,11 +91,11 @@ SUBST_MESSAGE.fix-etc=	Handle configuration files.
 SUBST_FILES.fix-etc=	Makefile.in
 SUBST_SED.fix-etc=	-e 's,^configlibdir =.*,configlibdir = $$(DATA_DIR)/examples/ImageMagick6,'
 
-SUBST_CLASSES+=		fix-tools
-SUBST_STAGE.fix-tools=	pre-install
-SUBST_MESSAGE.fix-tools=Unwrapping tools path in delegate paths.
-SUBST_FILES.fix-tools=	config/delegates.xml
-SUBST_SED.fix-tools=	-e 's,${TOOLS_DIR},,g'
+SUBST_CLASSES+=			fix-tools
+SUBST_STAGE.fix-tools=		pre-install
+SUBST_MESSAGE.fix-tools=	Unwrapping tools path in delegate paths.
+SUBST_FILES.fix-tools=		config/delegates.xml
+SUBST_SED.fix-tools=		-e 's,${TOOLS_DIR},,g'
 
 # failed to convert strong functions and variables: Invalid type identifier
 CTF_FILES_SKIP+=	lib/libMagickCore-6.Q16.so.5.0.0
