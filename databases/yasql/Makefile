@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/08/11 13:18:37 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/11/02 15:38:12 rillig Exp $
 
 DISTNAME=	yasql-1.81
 PKGREVISION=	9
@@ -17,7 +17,7 @@ USE_TOOLS+=	perl:run
 GNU_CONFIGURE=	yes
 NO_BUILD=	yes
 
-CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 CONF_FILES+=	${PREFIX}/share/examples/yasql/yasql.conf \
 		${PKG_SYSCONFDIR}/yasql.conf

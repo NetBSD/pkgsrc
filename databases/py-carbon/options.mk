@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2019/09/02 13:19:47 adam Exp $
+# $NetBSD: options.mk,v 1.7 2019/11/02 15:38:09 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-carbon
 PKG_SUPPORTED_OPTIONS=	amqp ldap memcached
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-txamqp-[0-9]*:../../net/py-txamqp
 ###
 .if !empty(PKG_OPTIONS:Mldap)
 DEPENDS+=	${PYPKGPREFIX}-ldap-[0-9]*:../../databases/py-ldap
-PYTHON_VERSIONS_ACCEPTED=	 27 # py-ldap
+PYTHON_VERSIONS_ACCEPTED= 27 # py-ldap
 .endif
 
 ###
@@ -26,5 +26,5 @@ PYTHON_VERSIONS_ACCEPTED=	 27 # py-ldap
 ###
 .if !empty(PKG_OPTIONS:Mmemcached)
 DEPENDS+=	${PYPKGPREFIX}-memcached-[0-9]*:../../devel/py-memcached
-PYTHON_VERSIONS_ACCEPTED=	 27 # py-memcached
+PYTHON_VERSIONS_ACCEPTED= 27 # py-memcached
 .endif
