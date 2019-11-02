@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/07/11 09:25:24 nia Exp $
+# $NetBSD: Makefile,v 1.28 2019/11/02 15:38:01 rillig Exp $
 #
 
 DISTNAME=	tokyocabinet-lua-1.10
@@ -28,11 +28,11 @@ MAKE_ENV+=	INCLUDEDIR=${BUILDLINK_PREFIX.tokyocabinet}/include
 .include "../../mk/bsd.prefs.mk"
 
 .if ${SHLIB_TYPE} == "dylib"
-SOEXT= 		dylib
+SOEXT=		dylib
 .else
-SOEXT= 		so
+SOEXT=		so
 .endif
-PLIST_SUBST+= 	SOEXT=${SOEXT}
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 post-extract:
 	${CHMOD} -R go-w ${WRKSRC}

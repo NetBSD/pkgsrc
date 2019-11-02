@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2019/08/11 13:18:33 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2019/11/02 15:38:05 rillig Exp $
 
 DISTNAME=	SQL-Abstract-1.86
 PKGNAME=	p5-${DISTNAME}
@@ -16,12 +16,12 @@ DEPENDS+=	p5-Getopt-Long-Descriptive>=0.091:../../devel/p5-Getopt-Long-Descripti
 DEPENDS+=	p5-Hash-Merge>=0.12:../../devel/p5-Hash-Merge
 #DEPENDS+=	{perl>=5.7.3,p5-Scalar-List-Utils-[0-9]*}:../../devel/p5-Scalar-List-Utils
 
-BUILD_DEPENDS+=	p5-Moo-[0-9]*:../../devel/p5-Moo
-BUILD_DEPENDS+=	p5-Test-Deep>=0.101:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+BUILD_DEPENDS+=		p5-Moo-[0-9]*:../../devel/p5-Moo
+BUILD_DEPENDS+=		p5-Test-Deep>=0.101:../../devel/p5-Test-Deep
+BUILD_DEPENDS+=		p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 #BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.92}:../../devel/p5-Test-Simple
-BUILD_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
-BUILD_DEPENDS+=	p5-Tree-DAG_Node>=0:../../devel/p5-Tree-DAG_Node
+BUILD_DEPENDS+=		p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
+BUILD_DEPENDS+=		p5-Tree-DAG_Node>=0:../../devel/p5-Tree-DAG_Node
 
 PERL5_PACKLIST=		auto/SQL/Abstract/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.65 2019/04/30 14:09:52 abs Exp $
+# $NetBSD: Makefile.common,v 1.66 2019/11/02 15:38:02 rillig Exp $
 #
 # used by databases/mysql55-client/Makefile
 # used by databases/mysql55-server/Makefile
@@ -60,7 +60,7 @@ CMAKE_ARGS+=		-DINSTALL_SCRIPTDIR="bin"
 CMAKE_ARGS+=		-DINSTALL_SQLBENCHDIR="share/mysql/sql-bench"
 CMAKE_ARGS+=		-DINSTALL_SUPPORTFILESDIR="share/mysql"
 CMAKE_ARGS+=		-DMYSQL_DATADIR=${MYSQL_DATADIR}
-CMAKE_ARGS+=            -DWITH_SSL=system
+CMAKE_ARGS+=		-DWITH_SSL=system
 
 # always use our own readline, not MySQL bundled one
 CMAKE_ARGS+=		-DWITH_LIBEDIT=OFF

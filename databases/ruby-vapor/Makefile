@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2016/10/09 21:41:58 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2019/11/02 15:38:11 rillig Exp $
 
 DISTNAME=	vapor-0.81
 PKGREVISION=	10
@@ -15,7 +15,7 @@ CONFLICTS+=	ruby[1-9][0-9]-vapor-*
 DEPENDS+=	${RUBY_PKGPREFIX}-dbd-pg>=0.0.20:../../databases/ruby-dbd-pg
 
 USE_TOOLS=	pax
-USE_RUBY_SETUP= yes
+USE_RUBY_SETUP=	yes
 RUBY_SETUP=	install.rb
 REPLACE_RUBY=	doc/examples/university/createperson \
 		doc/examples/university/createuni \

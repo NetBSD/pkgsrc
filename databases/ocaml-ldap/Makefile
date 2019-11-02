@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/11/12 16:10:17 jaapb Exp $
+# $NetBSD: Makefile,v 1.11 2019/11/02 15:38:02 rillig Exp $
 
 VERSION=	2.3.0
 GITHUB_PROJECT=	ocamldap
@@ -14,8 +14,8 @@ HOMEPAGE=	http://ocamldap.sourceforge.net/
 COMMENT=	OCamL implementation of the LDAP protocol
 LICENSE=	gnu-lgpl-v2.1
 
-HAS_CONFIGURE=	yes
-USE_LANGUAGES=	# none
+HAS_CONFIGURE=		yes
+USE_LANGUAGES=		# none
 OCAML_USE_OASIS=	yes
 
 .include "../../mk/ocaml.mk"

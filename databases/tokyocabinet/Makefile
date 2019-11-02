@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2019/07/11 09:25:26 nia Exp $
+# $NetBSD: Makefile,v 1.46 2019/11/02 15:38:11 rillig Exp $
 #
 
 DISTNAME=	tokyocabinet-1.4.48
@@ -10,10 +10,10 @@ HOMEPAGE=	https://fallabs.com/tokyocabinet/
 COMMENT=	Modern implementation of DBM
 LICENSE=	gnu-lgpl-v2.1
 
-GNU_CONFIGURE=	yes
-USE_GCC_RUNTIME=yes
-USE_TOOLS+=	gmake pkg-config
-USE_LANGUAGES=	c99
+GNU_CONFIGURE=		yes
+USE_GCC_RUNTIME=	yes
+USE_TOOLS+=		gmake pkg-config
+USE_LANGUAGES=		c99
 
 PKGCONFIG_OVERRIDE+=	tokyocabinet.pc.in
 

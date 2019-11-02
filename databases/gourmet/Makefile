@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2019/09/02 13:19:46 adam Exp $
+# $NetBSD: Makefile,v 1.59 2019/11/02 15:38:01 rillig Exp $
 
 DISTNAME=		gourmet-0.8.5.14
 PKGREVISION=		40
@@ -9,8 +9,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://grecipe-manager.sourceforge.net/
 COMMENT=		Recipe database
 
-USE_PKGLOCALEDIR=	yes
-PYTHON_VERSIONS_ACCEPTED=	 27 # py-metakit, py-imaging, py-gtk2
+USE_PKGLOCALEDIR=		yes
+PYTHON_VERSIONS_ACCEPTED=	27 # py-metakit, py-imaging, py-gtk2
 
 REPLACE_PYTHON+=	build_rpms.py
 REPLACE_PYTHON+=	setup.py

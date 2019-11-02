@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/09/03 08:36:52 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/02 15:38:06 rillig Exp $
 #
 
 VER=		1.5.3
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--with-postgres-lib=${PREFIX:Q}/lib
 
 CPPFLAGS+=	-DUSE_INTERP_ERRORLINE
 
-PGTCLLIBNAME		= libpgtcl${VER:C/\.//g}.so
+PGTCLLIBNAME		=	libpgtcl${VER:C/\.//g}.so
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/lib && ln -s pgtcl${VER}/${PGTCLLIBNAME} libpgtcl.so

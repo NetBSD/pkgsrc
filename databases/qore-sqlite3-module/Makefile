@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2019/04/03 00:32:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/02 15:38:10 rillig Exp $
 
 DISTNAME=	qore-sqlite3-module-1.0.1
 PKGREVISION=	20
 CATEGORIES=	databases
-MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=qore/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qore/}
 
 MAINTAINER=	nros@NetBSD.org
 HOMEPAGE=	http://www.qore.org/
@@ -15,7 +15,7 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++11
 PTHREAD_OPTS+=	native
 
-CONFIGURE_ARGS+=--with-sqlite3=${BUILDLINK_PREFIX.sqlite3}
+CONFIGURE_ARGS+=	--with-sqlite3=${BUILDLINK_PREFIX.sqlite3}
 
 INSTALLATION_DIRS+=     share/doc/${PKGBASE}
 post-install:
