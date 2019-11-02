@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.317 2019/11/02 14:06:44 nia Exp $
+# $NetBSD: Makefile,v 1.318 2019/11/02 22:37:57 rillig Exp $
 
 DISTNAME=	gimp-2.10.14
 CATEGORIES=	graphics
@@ -51,11 +51,11 @@ _TOOLS_USE_PKGSRC.xgettext=	yes
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
-PLIST_VARS+=		remote
+PLIST_VARS+=	remote
 .if ${OPSYS} == "Darwin"
-PLIST_SUBST+=  GIMP_DEBUG_TOOL_DIR="bin"
+PLIST_SUBST+=	GIMP_DEBUG_TOOL_DIR="bin"
 .else
-PLIST_SUBST+=  GIMP_DEBUG_TOOL_DIR="libexec"
+PLIST_SUBST+=	GIMP_DEBUG_TOOL_DIR="libexec"
 .endif
 
 .include "options.mk"

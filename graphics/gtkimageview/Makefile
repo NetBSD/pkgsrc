@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.44 2019/07/21 22:25:01 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2019/11/02 22:37:58 rillig Exp $
 
 DISTNAME=	gtkimageview-1.6.4
 PKGREVISION=	29
 CATEGORIES=	graphics
-#MASTER_SITES= 	http://trac.bjourne.webfactional.com/chrome/common/releases/
+#MASTER_SITES=	http://trac.bjourne.webfactional.com/chrome/common/releases/
 
 # This package has no NEWS, and it is very difficult to find the
 # summary of changes.  See
