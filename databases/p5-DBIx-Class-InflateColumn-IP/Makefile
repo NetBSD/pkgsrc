@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/08/11 13:18:27 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/02 15:38:04 rillig Exp $
 
 DISTNAME=	DBIx-Class-InflateColumn-IP-0.02003
 PKGNAME=	p5-${DISTNAME}
@@ -18,7 +18,7 @@ PERL5_PACKLIST=	auto/DBIx/Class/InflateColumn/IP/.packlist
 DEPENDS+=	p5-DBIx-Class>=0.07005:../../databases/p5-DBIx-Class
 DEPENDS+=	p5-NetAddr-IP-[0-9]*:../../net/p5-NetAddr-IP
 # For test really
-BUILD_DEPENDS+= p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
+BUILD_DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

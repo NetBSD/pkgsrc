@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2019/07/21 22:24:35 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2019/11/02 15:38:02 rillig Exp $
 
 DISTNAME=	mysql-workbench-gpl-5.2.33b-src
 PKGNAME=	${DISTNAME:S/-gpl//:S/b-src$//}
@@ -13,15 +13,15 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/b-src$/-src/}
 
-USE_LANGUAGES=		c c++11
-USE_LIBTOOL=		yes
-USE_TOOLS+=		bash gmake pkg-config
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-system-ctemplate
+USE_LANGUAGES=			c c++11
+USE_LIBTOOL=			yes
+USE_TOOLS+=			bash gmake pkg-config
+GNU_CONFIGURE=			yes
+CONFIGURE_ARGS+=		--with-system-ctemplate
 LUA_VERSIONS_INCOMPATIBLE=	52 53
 
-CHECK_PORTABILITY_SKIP=	build/make_dmg.sh
-CHECK_PORTABILITY_SKIP+=ext/ctemplate/ctemplate-src/configure.ac
+CHECK_PORTABILITY_SKIP=		build/make_dmg.sh
+CHECK_PORTABILITY_SKIP+=	ext/ctemplate/ctemplate-src/configure.ac
 
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-configure

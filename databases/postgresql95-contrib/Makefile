@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2018/11/09 18:12:26 adam Exp $
+# $NetBSD: Makefile,v 1.6 2019/11/02 15:38:08 rillig Exp $
 
 PKGNAME=	${DISTNAME:C/-/95-contrib-/}
 COMMENT=	Contrib subtree of tools and plug-ins
 
 .include "../../databases/postgresql95/Makefile.common"
 
-DEPENDS+=       postgresql95-server>=${PKGVERSION_NOREV}:../../databases/postgresql95-server
+DEPENDS+=	postgresql95-server>=${PKGVERSION_NOREV}:../../databases/postgresql95-server
 
 BUILD_MAKE_FLAGS=	USE_PGXS=1
 

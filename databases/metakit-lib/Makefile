@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/02 21:25:22 asau Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/02 15:38:02 rillig Exp $
 #
 
 VERSION=	2.4.9.7
@@ -11,14 +11,14 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.equi4.com/metakit/
 COMMENT=	Embedded database library
 
-GNU_CONFIGURE=	yes
-CONFIGURE_DIRS=	builds
-CONFIGURE_SCRIPT= ../unix/configure
+GNU_CONFIGURE=		yes
+CONFIGURE_DIRS=		builds
+CONFIGURE_SCRIPT=	../unix/configure
 CONFIGURE_ARGS+=	--without-tcl
-BUILD_DIRS=	builds
-USE_LANGUAGES=	c c++
-USE_LIBTOOL=	yes
-TEST_TARGET=	test
+BUILD_DIRS=		builds
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+TEST_TARGET=		test
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/include/mk4io.h ${DESTDIR}${PREFIX}/include
