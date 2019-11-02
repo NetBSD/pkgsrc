@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/01/13 23:18:27 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/02 22:18:26 rillig Exp $
 #
 
 DISTNAME=	zenirc-2.112
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.splode.com/~friedman/software/emacs-lisp/zenirc/
 COMMENT=	IRC client for Emacs
 
-GNU_CONFIGURE=	YES
+GNU_CONFIGURE=		YES
 CONFIGURE_HAS_MANDIR=	NO
 
 .include "../../editors/emacs/modules.mk"

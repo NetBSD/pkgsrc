@@ -1,16 +1,16 @@
-# $NetBSD: options.mk,v 1.4 2019/03/03 21:05:57 nia Exp $
+# $NetBSD: options.mk,v 1.5 2019/11/02 22:18:24 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.psi
 PKG_SUPPORTED_OPTIONS+=	aspell enchant whiteboard xscreensaver
 PKG_SUGGESTED_OPTIONS+=	aspell enchant
 
 # from an idea stolen from ../../misc/openoffice3.
-PSI_SUPPORTED_LANGUAGES=be cs de eo es es-es fr it ja mk pl pt-br ru \
-			sl sv uk ur-pk vi zh-cn zh-tw
+PSI_SUPPORTED_LANGUAGES=	be cs de eo es es-es fr it ja mk pl pt-br ru \
+				sl sv uk ur-pk vi zh-cn zh-tw
 
 .for l in ${PSI_SUPPORTED_LANGUAGES}
-PKG_SUPPORTED_OPTIONS+= lang-${l}
-PLIST_VARS+=${l}
+PKG_SUPPORTED_OPTIONS+=	lang-${l}
+PLIST_VARS+=		${l}
 .endfor
 
 .include "../../mk/bsd.options.mk"
@@ -19,12 +19,12 @@ PLIST_VARS+=${l}
 #   bit of special logic, as the dialects of languages are handled
 #   as lang_DIALECT (aka, lower underscore UPPER) in the PSI translations
 .for lang in ${PKG_OPTIONS:Mlang-*:S/lang-//g}
-PLIST.${lang} = yes
-. if ${lang:M??-??}
-    LANG_FILES+= psi_${lang:C/-.*//g}_${lang:C/.*-//g:tu}.qm
-. else
-    LANG_FILES+= psi_${lang}.qm
-. endif
+PLIST.${lang} =		yes
+.  if ${lang:M??-??}
+    LANG_FILES+=	psi_${lang:C/-.*//g}_${lang:C/.*-//g:tu}.qm
+.  else
+    LANG_FILES+=	psi_${lang}.qm
+.  endif
 .endfor
 
 # enable aspell
