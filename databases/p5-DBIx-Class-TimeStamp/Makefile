@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/08/11 13:18:28 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2019/11/02 15:38:04 rillig Exp $
 
 DISTNAME=	DBIx-Class-TimeStamp-0.14
 PKGNAME=	p5-${DISTNAME}
@@ -12,14 +12,14 @@ COMMENT=	DBIx::Class component to automatically handle timestamp fields
 LICENSE=	${PERL5_LICENSE}
 
 PERL5_MODULE_TYPE=	Module::Install::Bundled
-USE_LANGUAGES=	# empty
-PERL5_PACKLIST=	auto/DBIx/Class/TimeStamp/.packlist
+USE_LANGUAGES=		# empty
+PERL5_PACKLIST=		auto/DBIx/Class/TimeStamp/.packlist
 
-BUILD_DEPENDS+=	p5-Class-Accessor-Grouped-[0-9]*:../../devel/p5-Class-Accessor-Grouped
-BUILD_DEPENDS+=	p5-DateTime-Format-MySQL-[0-9]*:../../time/p5-DateTime-Format-MySQL
-BUILD_DEPENDS+=	p5-DateTime-Format-SQLite-[0-9]*:../../time/p5-DateTime-Format-SQLite
+BUILD_DEPENDS+=		p5-Class-Accessor-Grouped-[0-9]*:../../devel/p5-Class-Accessor-Grouped
+BUILD_DEPENDS+=		p5-DateTime-Format-MySQL-[0-9]*:../../time/p5-DateTime-Format-MySQL
+BUILD_DEPENDS+=		p5-DateTime-Format-SQLite-[0-9]*:../../time/p5-DateTime-Format-SQLite
 #BUILD_DEPENDS+=	{perl>=5.10,p5-Time-HiRes-[0-9]*}:../../time/p5-Time-HiRes
-BUILD_DEPENDS+=	p5-Time-Warp-[0-9]*:../../time/p5-Time-Warp
+BUILD_DEPENDS+=		p5-Time-Warp-[0-9]*:../../time/p5-Time-Warp
 
 DEPENDS+=	p5-DBIx-Class>=0.08009:../../databases/p5-DBIx-Class
 DEPENDS+=	p5-DBIx-Class-DynamicDefault>=0.03:../../databases/p5-DBIx-Class-DynamicDefault

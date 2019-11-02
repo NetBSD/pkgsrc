@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.1 2014/11/21 11:29:52 obache Exp $
+# $NetBSD: options.mk,v 1.2 2019/11/02 15:38:01 rillig Exp $
 #
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.kyotocabinet
-PKG_SUPPORTED_OPTIONS=	zlib
+PKG_OPTIONS_VAR=		PKG_OPTIONS.kyotocabinet
+PKG_SUPPORTED_OPTIONS=		zlib
 PKG_OPTIONS_OPTIONAL_GROUPS=	codec
 PKG_OPTIONS_GROUP.codec=	lzma lzo
-PKG_SUGGESTED_OPTIONS=	zlib
+PKG_SUGGESTED_OPTIONS=		zlib
 
 .include "../../mk/bsd.options.mk"
 

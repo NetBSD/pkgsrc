@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/08/11 13:18:26 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/02 15:38:03 rillig Exp $
 
 DISTNAME=	DBIx-Class-DigestColumns-0.06000
 PKGNAME=	p5-${DISTNAME}
@@ -13,12 +13,12 @@ COMMENT=	Automatic digest columns for DBIx::Class
 DEPENDS+=	p5-DBIx-Class>=0.06002:../../databases/p5-DBIx-Class
 #DEPENDS+=	{perl>=5.7.3,p5-Digest-MD5>=0}:../../security/p5-Digest-MD5
 
-BUILD_DEPENDS+= p5-DBD-SQLite>=1.11:../../databases/p5-DBD-SQLite
+BUILD_DEPENDS+=	p5-DBD-SQLite>=1.11:../../databases/p5-DBD-SQLite
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/DBIx/Class/DigestColumns/.packlist
 
-PERL5_MODULE_TYPE= 	Module::Build
+PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

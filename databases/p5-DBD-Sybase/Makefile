@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2019/08/11 13:18:25 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2019/11/02 15:38:03 rillig Exp $
 
 DISTNAME=		DBD-Sybase-1.15
 PKGNAME=		p5-${DISTNAME}
@@ -18,13 +18,13 @@ BUILD_DEFS+=		SYBASE
 
 .if defined(USE_SYBASE_OPENCLIENT) && empty(USE_SYBASE_OPENCLIENT:M[Nn][Oo])
 .  if defined(SYBASE) || exists(${SYBASE}/lib/libct.so)
-BUILDLINK_PASSTHRU_DIRS=${SYBASE}
-_SYBASE=		${SYBASE}
+BUILDLINK_PASSTHRU_DIRS=	${SYBASE}
+_SYBASE=			${SYBASE}
 .  else
-PKG_FAIL_REASON+=	"You must define SYBASE to the base directory of your Open Client."
+PKG_FAIL_REASON+=		"You must define SYBASE to the base directory of your Open Client."
 .  endif
 .else
-_SYBASE=		${BUILDLINK_PREFIX.freetds}
+_SYBASE=			${BUILDLINK_PREFIX.freetds}
 .endif
 
 PERL5_LDFLAGS+=		${COMPILER_RPATH_FLAG}${_SYBASE}/lib
