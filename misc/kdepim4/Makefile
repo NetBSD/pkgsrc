@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.93 2019/08/22 12:23:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.94 2019/11/02 20:48:05 maya Exp $
 
 DISTNAME=	kdepim-4.14.10
 PKGNAME=	${DISTNAME:S/-4/4-4/}
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	misc
 COMMENT=	Personal Information Management tools for the KDE desktop
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.04.3/src/}
@@ -60,6 +60,11 @@ SUBST_SED.perlfix=	-e 's:@PERL@:${PERL5}:g'
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/share/icons/oxygen/*/mimetypes/x-mail-distribution-list.png
+
+NOT_PAX_MPROTECT_SAFE+=	bin/kmail
+NOT_PAX_MPROTECT_SAFE+=	bin/kontact
+NOT_PAX_MPROTECT_SAFE+=	bin/blogilo
+NOT_PAX_MPROTECT_SAFE+=	bin/knode
 
 BUILDLINK_DEPMETHOD.qt4-tools=full
 
