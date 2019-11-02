@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.209 2019/10/18 10:13:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.210 2019/11/02 13:12:35 ryoon Exp $
 
-VERREL=		6.3.2
+VERREL=		6.3.3
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -119,8 +118,8 @@ SITES.884ed41809687c3e168fc7c19b16585149ff058eca79acbf3ee784f6630704cc-opens___.
 
 .include "../../graphics/librsvg/available.mk"
 .if ${LIBRSVG_TYPE} == "c" || make(distinfo) || make(mdi)
-MORE_DISTFILES2+=		harfbuzz-2.5.3.tar.xz
-SITES.harfbuzz-2.5.3.tar.xz=	https://www.freedesktop.org/software/harfbuzz/release/
+MORE_DISTFILES2+=		harfbuzz-2.6.4.tar.xz
+SITES.harfbuzz-2.6.4.tar.xz=	https://www.freedesktop.org/software/harfbuzz/release/
 .endif
 
 .for md2 in ${MORE_DISTFILES2}

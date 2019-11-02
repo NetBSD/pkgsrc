@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2019/10/18 10:13:40 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.36 2019/11/02 13:12:35 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -4713,6 +4713,7 @@ ${PKGNAME}/lib/libreoffice/share/config/images_colibre_svg.zip
 ${PKGNAME}/lib/libreoffice/share/config/images_elementary.zip
 ${PKGNAME}/lib/libreoffice/share/config/images_elementary_svg.zip
 ${PKGNAME}/lib/libreoffice/share/config/images_karasa_jaga.zip
+${PKGNAME}/lib/libreoffice/share/config/images_karasa_jaga_svg.zip
 ${PKGNAME}/lib/libreoffice/share/config/images_sifr.zip
 ${PKGNAME}/lib/libreoffice/share/config/images_sifr_dark.zip
 ${PKGNAME}/lib/libreoffice/share/config/images_sifr_svg.zip
