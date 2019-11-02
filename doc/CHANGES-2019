@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4701 2019/11/02 14:26:41 taca Exp $
+$NetBSD: CHANGES-2019,v 1.4702 2019/11/02 14:28:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7484,3 +7484,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/gimp to 2.10.14 [nia 2019-11-02]
 	Updated time/p5-DateTime-Locale to 1.25 [mef 2019-11-02]
 	Updated databases/ruby-sequel to 5.26.0 [taca 2019-11-02]
+	Updated devel/hoe to 3.19.0 [taca 2019-11-02]
