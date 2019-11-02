@@ -194,6 +194,8 @@ func (t *Tester) SetUpMasterSite(varname string, urls ...string) {
 }
 
 // SetUpOption pretends that the given package option is defined in mk/defaults/options.description.
+//
+// In tests, the description may be left empty.
 func (t *Tester) SetUpOption(name, description string) {
 	G.Pkgsrc.PkgOptions[name] = description
 }

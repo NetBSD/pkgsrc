@@ -131,16 +131,6 @@ func (mlex *MkLinesLexer) CurrentMkLine() *MkLine {
 	return mlex.mklines.mklines[mlex.index]
 }
 
-func (mlex *MkLinesLexer) SkipWhile(pred func(mkline *MkLine) bool) {
-	if trace.Tracing {
-		defer trace.Call(mlex.CurrentMkLine().Text)()
-	}
-
-	for !mlex.EOF() && pred(mlex.CurrentMkLine()) {
-		mlex.Skip()
-	}
-}
-
 func (mlex *MkLinesLexer) SkipIf(pred func(mkline *MkLine) bool) bool {
 	if !mlex.EOF() && pred(mlex.CurrentMkLine()) {
 		mlex.Skip()

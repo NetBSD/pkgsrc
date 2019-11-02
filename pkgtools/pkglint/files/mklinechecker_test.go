@@ -2125,6 +2125,14 @@ func (s *Suite) Test_MkLineChecker_checkDirectiveCondEmpty(c *check.C) {
 		"NOTE: module.mk:2: PKGPATH should be compared using == instead of matching against \":Mtwo\".",
 
 		".if ${PKGPATH:Mone:Mtwo}")
+
+	test(
+		".if ${MACHINE_ARCH:Mx86_64}",
+
+		"NOTE: module.mk:2: MACHINE_ARCH should be compared using == instead of matching against \":Mx86_64\".",
+		"AUTOFIX: module.mk:2: Replacing \"${MACHINE_ARCH:Mx86_64}\" with \"${MACHINE_ARCH} == x86_64\".",
+
+		".if ${MACHINE_ARCH} == x86_64")
 }
 
 func (s *Suite) Test_MkLineChecker_checkDirectiveCond__comparing_PKGSRC_COMPILER_with_eqeq(c *check.C) {

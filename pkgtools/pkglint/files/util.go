@@ -609,7 +609,7 @@ func pathContainsDir(haystack, needle string) bool {
 }
 
 func containsVarRef(s string) bool {
-	return contains(s, "${")
+	return contains(s, "${") || contains(s, "$(")
 }
 
 func hasAlnumPrefix(s string) bool { return s != "" && textproc.AlnumU.Contains(s[0]) }

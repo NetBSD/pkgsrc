@@ -627,9 +627,12 @@ func (pkg *Package) checkfilePackageMakefile(filename string, mklines *MkLines, 
 	vars := pkg.vars
 	pkg.checkPlist()
 
-	if (vars.Defined("NO_CHECKSUM") || vars.Defined("META_PACKAGE")) &&
-		isEmptyDir(pkg.File(pkg.Patchdir)) {
+	want := !vars.Defined("NO_CHECKSUM")
+	want = want && !vars.Defined("META_PACKAGE")
+	want = want && !(vars.Defined("DISTFILES") && vars.LastValue("DISTFILES") == "")
+	want = want || !isEmptyDir(pkg.File(pkg.Patchdir))
 
+	if !want {
 		distinfoFile := pkg.File(pkg.DistinfoFile)
 		if fileExists(distinfoFile) {
 			NewLineWhole(distinfoFile).Warnf("This file should not exist since NO_CHECKSUM or META_PACKAGE is set.")

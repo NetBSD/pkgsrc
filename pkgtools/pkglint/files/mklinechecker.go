@@ -1588,7 +1588,7 @@ func (ck MkLineChecker) simplifyCondition(varuse *MkVarUse, fromEmpty bool, notE
 			pattern +
 			condStr(fromEmpty, ")", "}")
 
-		quote := condStr(matches(pattern, `[^\-/0-9@A-Za-z]`), "\"", "")
+		quote := condStr(matches(pattern, `[^\-/0-9@A-Z_a-z]`), "\"", "")
 		to := "${" + varname + "} " + op + " " + quote + pattern + quote
 		return from, to
 	}

@@ -70,6 +70,10 @@ func NewMkLines(lines *Lines) *MkLines {
 //  ck.AfterLine
 //  ck.Finish
 
+// Whole returns a virtual line that can be used for issuing diagnostics
+// and explanations, but not for text replacements.
+func (mklines *MkLines) Whole() *Line { return mklines.lines.Whole() }
+
 // UseVar remembers that the given variable is used in the given line.
 // This controls the "defined but not used" warning.
 func (mklines *MkLines) UseVar(mkline *MkLine, varname string, time VucTime) {
