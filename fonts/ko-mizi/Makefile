@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/07/04 16:18:32 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2019/11/02 22:24:41 rillig Exp $
 #
 
 DISTNAME=	xfntmizi-1.1-2.noarch
@@ -23,9 +23,9 @@ MAKE_ENV+=	FONTDIR=${FONTDIR:Q} GZIP_CMD=${GZIP_CMD:Q}
 MIZI_PCF=	mzgt16e.pcf mzgt16h1.pcf mzmj16h.pcf mzpg16h.pcf mzsm16h.pcf \
 		mzgt16h.pcf mzmj16e.pcf mzpg16e.pcf mzsm16e.pcf
 
-FONTDIR=	${PREFIX}/share/fonts/X11/local
-FONTS_DIRS.x11=	${FONTDIR}
-INSTALLATION_DIRS+= ${FONTDIR}
+FONTDIR=		${PREFIX}/share/fonts/X11/local
+FONTS_DIRS.x11=		${FONTDIR}
+INSTALLATION_DIRS+=	${FONTDIR}
 
 do-extract:
 	${MKDIR} ${WRKSRC}

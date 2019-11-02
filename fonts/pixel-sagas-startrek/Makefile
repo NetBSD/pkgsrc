@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/09/03 08:36:54 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/11/02 22:24:42 rillig Exp $
 
 DISTNAME=	pixels-sagas-startrek-201404
 PKGREVISION=	1
@@ -24,14 +24,14 @@ RESTRICTED=	License prohibits 3rd parties hosting the files.
 NO_BIN_ON_FTP=	${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
 
-WRKSRC=		${WRKDIR}
-OTFPATH=	share/fonts/X11/OTF
-TTFPATH=	share/fonts/X11/TTF
+WRKSRC=			${WRKDIR}
+OTFPATH=		share/fonts/X11/OTF
+TTFPATH=		share/fonts/X11/TTF
 FONTS_DIRS.otf+=	${PREFIX}/${OTFPATH:Q}
 FONTS_DIRS.ttf+=	${PREFIX}/${TTFPATH:Q}
 INSTALLATION_DIRS=	${OTFPATH:Q} ${TTFPATH:Q}
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
+NO_CONFIGURE=		yes
+NO_BUILD=		yes
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${FONTS_DIRS.otf:Q}
