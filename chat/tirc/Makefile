@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2013/10/16 07:37:10 roy Exp $
+# $NetBSD: Makefile,v 1.20 2019/11/02 22:18:26 rillig Exp $
 #
 
 DISTNAME=	tirc-1.2
@@ -12,7 +12,7 @@ COMMENT=	Token's 'Internet Relay Chat' Client
 
 GNU_CONFIGURE=	YES
 
-CONFIGURE_ARGS+="--with-ansi-colours"
+CONFIGURE_ARGS+=	"--with-ansi-colours"
 
 LIBS.SunOS+=	-lnsl -lsocket
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2018/02/11 15:43:18 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2019/11/02 22:18:22 rillig Exp $
 
 DISTNAME=	i2cb-6.0_ALPHA
 PKGREVISION=	7
@@ -19,7 +19,7 @@ MAKE_ENV+=	LIBS=${LIBS:Q}
 INSTALLATION_DIRS=	bin libdata
 
 post-extract:
-		${RM} -f ${WRKSRC}/src/.depend
+	${RM} -f ${WRKSRC}/src/.depend
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/icb ${DESTDIR}${PREFIX}/bin/i2cb

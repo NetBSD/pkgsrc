@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2019/08/11 13:18:05 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2019/11/02 22:18:24 rillig Exp $
 
 VERSION=	4.0.2
 DISTNAME=	pidgin-otr-${VERSION}
@@ -18,9 +18,9 @@ LICENSE=	gnu-gpl-v2
 # Work around rc tarballs that unpack to bare version.
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	intltool msgfmt perl pkg-config
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		intltool msgfmt perl pkg-config
 INSTALLATION_DIRS+=	share/doc/pidgin-otr
 
 BUILDLINK_ABI_DEPENDS.libgcrypt+=	libgcrypt>=1.4.3
