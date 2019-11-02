@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2019/08/22 12:23:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.59 2019/11/02 22:37:53 rillig Exp $
 
 DISTNAME=	GMT4.1.4
 PKGNAME=	GMT-4.1.4
@@ -27,16 +27,16 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pax
 
-CONFIGURE_ARGS+=--includedir=${PREFIX}/include/gmt
-CONFIGURE_ARGS+=--datadir=${PREFIX}/share/gmt
-CONFIGURE_ARGS+=--enable-eps
-CONFIGURE_ARGS+=--enable-netcdf=${BUILDLINK_PREFIX.netcdf}
-CONFIGURE_ARGS+=--enable-www=${PREFIX}/share/doc
-CONFIGURE_ARGS+=--enable-mansect=1
-CONFIGURE_ARGS+=--disable-mex
+CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/gmt
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/gmt
+CONFIGURE_ARGS+=	--enable-eps
+CONFIGURE_ARGS+=	--enable-netcdf=${BUILDLINK_PREFIX.netcdf}
+CONFIGURE_ARGS+=	--enable-www=${PREFIX}/share/doc
+CONFIGURE_ARGS+=	--enable-mansect=1
+CONFIGURE_ARGS+=	--disable-mex
 
 BUILD_TARGET=	all suppl
-INSTALL_TARGET= install-all
+INSTALL_TARGET=	install-all
 LIBS+=		${X11_LDFLAGS} # XXX: LDFLAGS doesn't work
 
 post-extract:

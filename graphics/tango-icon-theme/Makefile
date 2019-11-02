@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2019/07/21 22:25:05 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2019/11/02 22:38:05 rillig Exp $
 
 DISTNAME=	tango-icon-theme-0.8.90
 PKGREVISION=	33
@@ -13,7 +13,7 @@ LICENSE=	public-domain
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake intltool pkg-config msgfmt
 
-BUILDLINK_DEPMETHOD.ImageMagick=	build
+BUILDLINK_DEPMETHOD.ImageMagick=		build
 BUILDLINK_API_DEPENDS.icon-naming-utils+=	icon-naming-utils>=0.8.90
 
 

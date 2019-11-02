@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/08/13 20:50:59 gdt Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/02 22:37:59 rillig Exp $
 
 DISTNAME=	libjpeg-turbo-1.5.3
 CATEGORIES=	graphics
@@ -18,12 +18,12 @@ CONFLICTS=	jpeg-[0-9]*
 BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 .endif
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 # Ask for compatibility with jpeg 8, to get the highest ABI that
 # libjpeg-turbo supports.
-CONFIGURE_ARGS+= --with-jpeg8
-USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++
+CONFIGURE_ARGS+=	--with-jpeg8
+USE_LIBTOOL=		yes
+USE_LANGUAGES=		c c++
 
 PKGCONFIG_OVERRIDE=	release/libturbojpeg.pc.in release/libjpeg.pc.in
 

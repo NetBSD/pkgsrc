@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.42 2019/08/22 12:23:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.43 2019/11/02 22:38:01 rillig Exp $
 
-DISTNAME=		ncview-1.92d
+DISTNAME=	ncview-1.92d
 PKGREVISION=	18
-CATEGORIES=		graphics
-MASTER_SITES=		ftp://cirrus.ucsd.edu/pub/ncview/
+CATEGORIES=	graphics
+MASTER_SITES=	ftp://cirrus.ucsd.edu/pub/ncview/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://meteora.ucsd.edu/~pierce/ncview_home_page.html

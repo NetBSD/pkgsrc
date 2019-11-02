@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2019/08/22 12:23:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.68 2019/11/02 22:37:59 rillig Exp $
 
 DISTNAME=	libkdcraw-15.08.3
 PKGREVISION=	12
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.3/src/}
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
-PKGCONFIG_OVERRIDE+=    libkdcraw.pc.cmake
+PKGCONFIG_OVERRIDE+=	libkdcraw.pc.cmake
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 

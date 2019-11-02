@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2019/09/02 13:20:16 adam Exp $
+# $NetBSD: Makefile,v 1.43 2019/11/02 22:38:04 rillig Exp $
 
 DISTNAME=	skencil-0.6.17
 PKGREVISION=	15
@@ -13,8 +13,8 @@ DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
 USE_TOOLS+=	pax
 
-REPLACE_PYTHON= sk2ppm.py sk2ps.py skconvert.py skencil.py skshow.py
-PYTHON_VERSIONS_ACCEPTED=	 27 # py-imaging
+REPLACE_PYTHON=	sk2ppm.py sk2ps.py skconvert.py skencil.py skshow.py
+PYTHON_VERSIONS_ACCEPTED= 27 # py-imaging
 
 SK_CONF_ARGS=	--imaging-include=${BUILDLINK_PREFIX.pyimaging}/${PYINC}/PIL
 SK_TKFLAGS=	-L${BUILDLINK_PREFIX.tk}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.tk}/lib -ltk -ltcl
