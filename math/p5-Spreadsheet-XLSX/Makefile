@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/08/11 13:21:51 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/02 16:16:21 rillig Exp $
 #
 
 DISTNAME=	Spreadsheet-XLSX-0.15
@@ -16,8 +16,8 @@ DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
 DEPENDS+=	p5-Spreadsheet-ParseExcel-[0-9]*:../../math/p5-Spreadsheet-ParseExcel
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV:S/p5-//}
-USE_LANGUAGES=		# empty
-PERL5_PACKLIST=		auto/Spreadsheet/XLSX/.packlist
+USE_LANGUAGES=	# empty
+PERL5_PACKLIST=	auto/Spreadsheet/XLSX/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
