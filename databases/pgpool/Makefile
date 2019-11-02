@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/09/03 08:36:52 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/11/02 15:38:06 rillig Exp $
 
 DISTNAME=	pgpool-3.4.1
 CATEGORIES=	databases
@@ -10,7 +10,7 @@ COMMENT=	Connection pooling/replication server for PostgreSQL
 
 GNU_CONFIGURE=	yes
 
-CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 INSTALLATION_DIRS=	share/examples
 

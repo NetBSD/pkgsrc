@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/04/06 12:08:38 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/02 15:38:09 rillig Exp $
 #
 
 DISTNAME=	cx_Oracle-5.0.2
@@ -22,7 +22,7 @@ PKG_FAIL_REASON+=	"The location of ORACLE_HOME does not exist"
 
 BUILDLINK_PASSTHRU_DIRS+=	${ORACLE_HOME}
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${ORACLE_HOME}
-LDFLAGS+=	-Wl,-rpath,${ORACLE_HOME}/lib
+LDFLAGS+=			-Wl,-rpath,${ORACLE_HOME}/lib
 
 ALL_ENV+=	ORACLE_HOME=${ORACLE_HOME:Q}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2014/08/21 19:38:55 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2019/11/02 15:38:01 rillig Exp $
 
 DISTNAME=	libiodbc-3.52.9
 PKGNAME=	${DISTNAME:S/^lib//}
@@ -10,13 +10,13 @@ HOMEPAGE=	http://www.iodbc.org/dataspace/iodbc/wiki/iODBC/
 COMMENT=	ODBC 3.x driver manager
 LICENSE=	gnu-lgpl-v2
 
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-gui
-CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/iodbc
+USE_LIBTOOL=			yes
+GNU_CONFIGURE=			yes
+CONFIGURE_ARGS+=		--disable-gui
+CONFIGURE_ARGS+=		--includedir=${PREFIX}/include/iodbc
 GNU_CONFIGURE_LIBSUBDIR=	iodbc
-CONFIGURE_ARGS+=	--pkgconfigdir=${PREFIX}/lib/pkgconfig
-CONFIGURE_ARGS+=	--with-iodbc-inidir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=		--pkgconfigdir=${PREFIX}/lib/pkgconfig
+CONFIGURE_ARGS+=		--with-iodbc-inidir=${PKG_SYSCONFDIR}
 
 DL_AUTO_VARS=		yes
 

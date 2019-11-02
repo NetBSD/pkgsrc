@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2019/07/10 10:37:13 nia Exp $
+# $NetBSD: Makefile,v 1.42 2019/11/02 15:38:00 rillig Exp $
 
 DISTNAME=	db-3.3.11
 PKGNAME=	db3-3.11.2
@@ -11,9 +11,9 @@ HOMEPAGE=	https://www.oracle.com/database/berkeley-db.html
 COMMENT=	Sleepycat Software's Berkeley DB version 3
 LICENSE=	sleepycat-license # minus ASM stanza
 
-PATCH_SITES=	http://www.oracle.com/technology/products/berkeley-db/db/update/3.3.11/
-PATCHFILES=	patch.3.3.11.1 patch.3.3.11.2
-PATCH_DIST_ARGS=-d ${WRKSRC}/.. --forward --quiet -p0
+PATCH_SITES=		http://www.oracle.com/technology/products/berkeley-db/db/update/3.3.11/
+PATCHFILES=		patch.3.3.11.1 patch.3.3.11.2
+PATCH_DIST_ARGS=	-d ${WRKSRC}/.. --forward --quiet -p0
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/build_unix
 USE_LIBTOOL=		yes

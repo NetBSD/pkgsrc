@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/06/08 19:04:49 nros Exp $
+# $NetBSD: Makefile,v 1.9 2019/11/02 15:38:10 rillig Exp $
 
 DISTNAME=	qore-pgsql-module-2.4.1
 CATEGORIES=	databases
@@ -18,7 +18,7 @@ USE_LANGUAGES=	c c++11
 USE_TOOLS+=	gmake pax
 PTHREAD_OPTS+=	native
 
-CONFIGURE_ARGS+=--with-libsuffix=""
+CONFIGURE_ARGS+=	--with-libsuffix=""
 
 #This is needed in order to comply the with MIT license and binary distribution
 #Install docs

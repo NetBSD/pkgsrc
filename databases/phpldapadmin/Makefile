@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2015/11/29 11:25:53 taca Exp $
+# $NetBSD: Makefile,v 1.40 2019/11/02 15:38:07 rillig Exp $
 
 DISTNAME=	phpldapadmin-${VERSION}
 PKGREVISION=	1
@@ -24,7 +24,7 @@ USE_TOOLS+=	pax
 VERSION=	1.2.3
 NO_BUILD=	YES
 
-CONF_FILES+=  ${PREFIX}/share/examples/phpldapadmin/config.php.example \
+CONF_FILES+=	${PREFIX}/share/examples/phpldapadmin/config.php.example \
 		${PREFIX}/share/phpldapadmin/config/config.php
 CONF_FILES+=	${PREFIX}/share/examples/phpldapadmin/phpldapadmin.conf \
 		${PKG_SYSCONFDIR}/phpldapadmin.conf

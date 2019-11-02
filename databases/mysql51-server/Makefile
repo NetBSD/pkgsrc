@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/08/11 13:18:20 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2019/11/02 15:38:02 rillig Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 PKGREVISION=	4
@@ -19,13 +19,13 @@ PLIST.embedded=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mndb-cluster)
-CONFIGURE_ARGS+=	--with-plugins=innobase,ndbcluster
-REPLACE_PERL+=		storage/ndb/tools/ndb_error_reporter \
+CONFIGURE_ARGS+=		--with-plugins=innobase,ndbcluster
+REPLACE_PERL+=			storage/ndb/tools/ndb_error_reporter \
 			storage/ndb/tools/ndb_size.pl
-PLIST.ndb=		yes
+PLIST.ndb=			yes
 BUILDLINK_DEPMETHOD.readline=	full
 .else
-CONFIGURE_ARGS+=	--with-plugins=innobase
+CONFIGURE_ARGS+=		--with-plugins=innobase
 .endif
 
 .if !empty(PKG_OPTIONS:Mpstack)

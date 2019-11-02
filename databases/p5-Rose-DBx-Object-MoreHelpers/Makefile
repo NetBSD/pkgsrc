@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/08/11 13:18:33 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/02 15:38:05 rillig Exp $
 
 DISTNAME=	Rose-DBx-Object-MoreHelpers-0.100
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	p5-Rose-DB-Object>=0.770:../../databases/p5-Rose-DB-Object
 DEPENDS+=	p5-Rose-DBx-TestDB-[0-9]*:../../databases/p5-Rose-DBx-TestDB
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Rose/DBx/Object/MoreHelpers/.packlist
+PERL5_PACKLIST=	auto/Rose/DBx/Object/MoreHelpers/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

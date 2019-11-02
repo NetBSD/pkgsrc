@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/08/11 13:18:23 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/02 15:38:03 rillig Exp $
 #
 
 DISTNAME=	Class-DBI-Plugin-DeepAbstractSearch-0.08
@@ -11,9 +11,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/pod/Class::DBI::Plugin::DeepAbstractSearch
 COMMENT=	Implement deep_search_where() for Class::DBI
 
-DEPENDS+=	p5-Class-DBI>=0.96:../../databases/p5-Class-DBI
-DEPENDS+=	p5-Class-DBI-Plugin>=0.02:../../databases/p5-Class-DBI-Plugin
-DEPENDS+=	p5-SQL-Abstract>=1.18:../../databases/p5-SQL-Abstract
+DEPENDS+=		p5-Class-DBI>=0.96:../../databases/p5-Class-DBI
+DEPENDS+=		p5-Class-DBI-Plugin>=0.02:../../databases/p5-Class-DBI-Plugin
+DEPENDS+=		p5-SQL-Abstract>=1.18:../../databases/p5-SQL-Abstract
 #BUILD_DEPENDS+=	{perl>=5.6.2,p5-Test-Simple>=0.32}:../../devel/p5-Test-Simple
 
 PERL5_PACKLIST=	auto/Class/DBI/Plugin/DeepAbstractSearch/.packlist

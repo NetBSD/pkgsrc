@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/08/11 13:18:35 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/11/02 15:38:06 rillig Exp $
 #
 
 PKGREVISION= 5
@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 MAKE_JOBS_SAFE=		no
 
-MY_SUBDIR=perl
+MY_SUBDIR=	perl
 BUILD_DIRS=	${MY_SUBDIR}
 CONFIGURE_DIRS=	${MY_SUBDIR}
 
@@ -23,7 +23,7 @@ USE_TOOLS+=		perl
 PERL5_CONFIGURE=	no
 TEST_TARGET=		check
 
-PERL5_PACKLIST= auto/Curia/.packlist auto/Depot/.packlist auto/Villa/.packlist
+PERL5_PACKLIST=	auto/Curia/.packlist auto/Depot/.packlist auto/Villa/.packlist
 REPLACE_PERL=	${MY_SUBDIR}/curia/plcrtest ${MY_SUBDIR}/depot/pldptest \
 		${MY_SUBDIR}/villa/plvltest
 

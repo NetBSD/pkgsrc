@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.28 2018/11/12 16:10:17 jaapb Exp $
+# $NetBSD: Makefile,v 1.29 2019/11/02 15:38:03 rillig Exp $
 #
 
 VERSION=	1.2.0
 GITHUB_PROJECT=	ocaml-mysql
 GITHUB_TAG=	v${VERSION}
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
-PKGREVISION=		7
-CATEGORIES=		databases
-MASTER_SITES=		${MASTER_SITE_GITHUB:=ygrek/}
+PKGREVISION=	7
+CATEGORIES=	databases
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ygrek/}
 
 MAINTAINER=		jaapb@NetBSD.org
 HOMEPAGE=		http://ocaml-mysql.forge.ocamlcore.org/

@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.22 2019/09/28 08:07:51 adam Exp $
+# $NetBSD: options.mk,v 1.23 2019/11/02 15:38:03 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.openldap-server
-PKG_SUPPORTED_OPTIONS=	bdb dso inet6 sasl slapi slp smbk5pwd
+PKG_OPTIONS_VAR=		PKG_OPTIONS.openldap-server
+PKG_SUPPORTED_OPTIONS=		bdb dso inet6 sasl slapi slp smbk5pwd
 PKG_OPTIONS_OPTIONAL_GROUPS+=	odbc
-PKG_OPTIONS_GROUP.odbc=	iodbc unixodbc
-PKG_SUGGESTED_OPTIONS=	bdb inet6
+PKG_OPTIONS_GROUP.odbc=		iodbc unixodbc
+PKG_SUGGESTED_OPTIONS=		bdb inet6
 
 .include "../../mk/bsd.options.mk"
 

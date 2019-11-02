@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2018/11/12 16:10:17 jaapb Exp $
+# $NetBSD: Makefile,v 1.54 2019/11/02 15:38:00 rillig Exp $
 #
 
 DISTNAME=	geneweb-5.01
@@ -37,7 +37,7 @@ CONFLICTS+=	coreutils-[0-9]*
 # Stripped OCAML binaries don't seem to work any more.
 # Installing unstripped binaries until this is fixed.
 # (not checked in 5.01)
-INSTALL_PROGRAM= ${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
+INSTALL_PROGRAM=	${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
 
 INSTALLATION_DIRS=	bin libexec sbin share/examples/geneweb \
 			share/doc/geneweb share/geneweb/etc \

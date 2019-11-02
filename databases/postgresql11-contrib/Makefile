@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2018/10/23 16:02:52 adam Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/02 15:38:07 rillig Exp $
 
 PKGNAME=	${DISTNAME:C/-/11-contrib-/}
 COMMENT=	Contrib subtree of tools and plug-ins
 
 .include "../../databases/postgresql11/Makefile.common"
 
-DEPENDS+=       postgresql11-server>=${PKGVERSION_NOREV}:../../databases/postgresql11-server
+DEPENDS+=	postgresql11-server>=${PKGVERSION_NOREV}:../../databases/postgresql11-server
 
 BUILD_MAKE_FLAGS=	USE_PGXS=1
 
