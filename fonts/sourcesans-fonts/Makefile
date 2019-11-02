@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/04/29 21:09:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2019/11/02 22:24:43 rillig Exp $
 
 DISTNAME=	source-sans-pro-2.020R-ro-1.075R-it
 PKGNAME=	sourcesans-fonts-2.020
@@ -16,10 +16,10 @@ LICENSE=	ofl-v1.1
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S|/|-|}
 
-USE_LANGUAGES=	# none
-NO_BUILD=	yes
-FONTSDIR=	${PREFIX}/share/fonts/X11/TTF
-FONTS_DIRS.ttf=	${FONTSDIR}
+USE_LANGUAGES=		# none
+NO_BUILD=		yes
+FONTSDIR=		${PREFIX}/share/fonts/X11/TTF
+FONTS_DIRS.ttf=		${FONTSDIR}
 INSTALLATION_DIRS=	share/fonts/X11/TTF
 
 do-install:

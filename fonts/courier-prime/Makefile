@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/08/01 14:58:58 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/02 22:24:38 rillig Exp $
 #
 
 DISTNAME=	courier-prime
@@ -18,7 +18,7 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 
 USE_LANGUAGES=	# none
 
-FONTS_DIRS.ttf=	${PREFIX}/share/fonts/X11/TTF
+FONTS_DIRS.ttf=		${PREFIX}/share/fonts/X11/TTF
 INSTALLATION_DIRS=	${FONTS_DIRS.ttf}
 INSTALLATION_DIRS+=	share/doc/courier-prime
 

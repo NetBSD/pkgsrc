@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/04/25 07:32:54 maya Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/02 22:24:42 rillig Exp $
 #
 
 DISTNAME=	mkfontalias.py
@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# empty
 NO_BUILD=	yes
 
-REPLACE_PYTHON=	${DISTNAME}
+REPLACE_PYTHON=		${DISTNAME}
 INSTALLATION_DIRS=	bin
 
 do-extract:

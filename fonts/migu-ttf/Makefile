@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/07/04 16:18:32 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2019/11/02 22:24:41 rillig Exp $
 #
 
 DISTNAME=	# empty
@@ -20,9 +20,9 @@ NO_BUILD=	yes
 
 VERSION=	20130617
 
-FONTDIR=	${PREFIX}/share/fonts/X11/TTF
-FONTS_DIRS.ttf=	${FONTDIR}
-DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
+FONTDIR=		${PREFIX}/share/fonts/X11/TTF
+FONTS_DIRS.ttf=		${FONTDIR}
+DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 INSTALLATION_DIRS=	${FONTDIR} ${DOCDIR}
 
 INSTALL_FONTS=	migu-1c-${VERSION}/migu-1c-bold.ttf \

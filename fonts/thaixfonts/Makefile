@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/09/06 09:03:01 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/11/02 22:24:43 rillig Exp $
 #
 
 DISTNAME=	thaixfonts-1.2.7
@@ -17,7 +17,7 @@ CONFIGURE_ARGS+=	--with-fontdir=${FONTDIR}
 
 FONTDIR=		${PREFIX}/share/fonts/X11/thaixfonts
 FONTS_DIRS.x11+=	${FONTDIR}
-INSTALLATION_DIRS=		${FONTDIR}
+INSTALLATION_DIRS=	${FONTDIR}
 
 post-install:
 	cp -p ${DESTDIR}${FONTDIR}/thai.alias ${DESTDIR}${FONTDIR}/fonts.alias

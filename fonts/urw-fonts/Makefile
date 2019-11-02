@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/07/19 04:01:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2019/11/02 22:24:44 rillig Exp $
 
 DISTNAME=	urw-fonts-2.0
 PKGREVISION=	1
@@ -13,22 +13,22 @@ LICENSE=	gnu-gpl-v2
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
-URW_DINGBATS=	urw-dingbats.tar.bz2
+URW_DINGBATS=		urw-dingbats.tar.bz2
 SITES.${URW_DINGBATS}=	http://pkgs.fedoraproject.org/repo/pkgs/urw-fonts/urw-dingbats.tar.bz2/5115d797f66c7414a08b5300aae64273/
 
-URW_SYMBOL=	urw-symbol.tar.bz2
+URW_SYMBOL=		urw-symbol.tar.bz2
 SITES.${URW_SYMBOL}=	http://pkgs.fedoraproject.org/repo/pkgs/urw-fonts/urw-symbol.tar.bz2/efb9216f950612419874f37b63d80ae3/
 
-#URW_TWEAKS=	urw-tweaks.tar.bz2
+#URW_TWEAKS=		urw-tweaks.tar.bz2
 #SITES.${URW_TWEAKS}=	http://pkgs.fedoraproject.org/repo/pkgs/urw-fonts/urw-tweaks.tar.bz2/bf5a7e18737c3a8152f4f0c3aa6fa8fa/
 
 DISTFILES=	${DEFAULT_DISTFILES} ${URW_DINGBATS} ${URW_SYMBOL} #${URW_TWEAKS}
 
-WRKSRC=		${WRKDIR}/fonts
-USE_LANGUAGES=	# none
-NO_BUILD=	yes
-FONTS_DIR=	${PREFIX}/share/fonts/urw
-INSTALLATION_DIRS= share/fonts/urw
+WRKSRC=			${WRKDIR}/fonts
+USE_LANGUAGES=		# none
+NO_BUILD=		yes
+FONTS_DIR=		${PREFIX}/share/fonts/urw
+INSTALLATION_DIRS=	share/fonts/urw
 
 do-install:
 	for dir in ${WRKSRC} ${WRKDIR}; \
