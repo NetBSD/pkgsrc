@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2019/08/22 12:23:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.52 2019/11/02 14:41:09 maya Exp $
 
 DISTNAME=	cantor-${_KDE_VERSION}
 PKGREVISION=	24
@@ -7,8 +7,10 @@ COMMENT=	KDE frontend to mathematical software
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
-CMAKE_ARGS+= -DWITH_R=OFF
-CMAKE_ARGS+= -DWITH_LuaJIT=OFF
+CMAKE_ARGS+=	-DWITH_R=OFF
+CMAKE_ARGS+=	-DWITH_LuaJIT=OFF
+
+PYTHON_VERSIONS_ACCEPTED=	27
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 
