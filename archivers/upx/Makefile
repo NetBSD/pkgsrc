@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.29 2019/08/12 11:08:36 leot Exp $
+# $NetBSD: Makefile,v 1.30 2019/11/02 22:54:28 rillig Exp $
 
-DISTNAME=	upx-3.91-src
-PKGNAME=	${DISTNAME:S/-src//1}
-PKGREVISION=	6
-CATEGORIES=	archivers
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=upx/}
-EXTRACT_SUFX=	.tar.bz2
+DISTNAME=		upx-3.91-src
+PKGNAME=		${DISTNAME:S/-src//1}
+PKGREVISION=		6
+CATEGORIES=		archivers
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=upx/}
+EXTRACT_SUFX=		.tar.bz2
 # consult src/stub/src/c/Makevars.lzma for the supported LZMA SDK version
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} lzma443${EXTRACT_SUFX}
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} lzma443${EXTRACT_SUFX}
 SITES.lzma443.tar.bz2=	${MASTER_SITE_SOURCEFORGE:=sevenzip/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
