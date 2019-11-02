@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2010/05/16 12:04:03 asau Exp $
+# $NetBSD: options.mk,v 1.3 2019/11/02 22:09:00 rillig Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gromacs
 PKG_SUPPORTED_OPTIONS+=		mpi x11
@@ -20,7 +20,7 @@ PLIST_SUBST+=		MPI=
 # X support:
 .if !empty(PKG_OPTIONS:Mx11)
 CONFIGURE_ARGS+=	--with-x
-PLIST.x11=	yes
+PLIST.x11=		yes
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
