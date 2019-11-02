@@ -1,10 +1,10 @@
-$NetBSD: patch-Top_threads.c,v 1.2 2014/08/05 05:12:38 mrg Exp $
+$NetBSD: patch-Top_threads.c,v 1.3 2019/11/02 22:25:46 mrg Exp $
 
 Add NetBSD and DragonFlyBSD support.
 
---- Top/threads.c.orig	2014-01-07 08:54:20.000000000 -0800
-+++ Top/threads.c	2014-02-12 23:55:26.000000000 -0800
-@@ -26,7 +26,7 @@
+--- Top/threads.c.orig	2019-07-12 14:54:19.000000000 -0700
++++ Top/threads.c	2019-10-29 13:37:43.363970338 -0700
+@@ -28,7 +28,7 @@
  
  #ifndef HAVE_GETTIMEOFDAY
  #if defined(LINUX)    || defined(__unix)   || defined(__unix__) || \
@@ -13,12 +13,3 @@ Add NetBSD and DragonFlyBSD support.
  #define HAVE_GETTIMEOFDAY 1
  #endif
  #endif
-@@ -152,7 +152,7 @@
- 
- 
- #if defined(LINUX) || defined(__MACH__) || defined(__HAIKU__) || \
--    defined(ANDROID) || defined(WIN32)
-+    defined(ANDROID) || defined(WIN32) || defined(__NetBSD__) || defined(__DragonFly__)
- 
- #include <errno.h>
- #include <pthread.h>
