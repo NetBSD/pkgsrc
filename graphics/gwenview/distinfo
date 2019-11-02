@@ -1,6 +1,11 @@
-$NetBSD: distinfo,v 1.29 2015/11/03 21:34:03 agc Exp $
+$NetBSD: distinfo,v 1.30 2019/11/02 18:39:52 maya Exp $
 
 SHA1 (gwenview-4.14.3.tar.xz) = dfa98856fbcd7e51050f23716d7f24dab264bf12
 RMD160 (gwenview-4.14.3.tar.xz) = 493754167864154be07772bc85be168fb5a2b755
 SHA512 (gwenview-4.14.3.tar.xz) = cb64b2278adb01f0fad92d861126ff8256c80ae8780de0a37bcc1e6a0e19e2f5b14c09fc884c6d759a0cd6b3a2611787235020745147c9fc66883d61ab4861c3
 Size (gwenview-4.14.3.tar.xz) = 2910652 bytes
+SHA1 (patch-CMakeLists.txt) = b0a28c3b1504dc1cb7ab1403cc89518bf2d14022
+SHA1 (patch-lib_exiv2imageloader.cpp) = fdcec8772c464561fee30a79fb1d41e141638cab
+SHA1 (patch-lib_imagemetainfomodel.cpp) = cbccab9c83c4998ade81ba1dc44226b5d84f4a30
+SHA1 (patch-lib_jpegcontent.cpp) = f2701a9c41e97012607cc9c43969f018b040f425
+SHA1 (patch-lib_timeutils.cpp) = a0ed38eaffd907f19a53abbb79ab182a8dbe623a
