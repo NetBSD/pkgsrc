@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2019/08/11 13:24:06 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2019/11/02 14:39:05 mef Exp $
 
-DISTNAME=	DateTime-Format-Flexible-0.31
+DISTNAME=	DateTime-Format-Flexible-0.32
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DateTime/}
 
@@ -18,9 +17,9 @@ DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-Sub-Name-[0-9]*:../../devel/p5-Sub-Name
 DEPENDS+=	p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
 
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	p5-Test-MockTime-[0-9]*:../../time/p5-Test-MockTime
-BUILD_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
+TEST_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TEST_DEPENDS+=	p5-Test-MockTime-[0-9]*:../../time/p5-Test-MockTime
+TEST_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
 
 USE_LANGUAGES=	#
 
