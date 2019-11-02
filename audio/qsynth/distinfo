@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2019/10/17 08:20:43 nia Exp $
+$NetBSD: distinfo,v 1.6 2019/11/02 15:05:29 nia Exp $
 
-SHA1 (qsynth-0.5.7.tar.gz) = f741da07c86d8d8dfdec9783384053bdc4251583
-RMD160 (qsynth-0.5.7.tar.gz) = feeebed368c7224d3c980db9efb0c30e9ab3ff75
-SHA512 (qsynth-0.5.7.tar.gz) = cf28b2e16a7951bdd1539f4fd7624b8216652ba2debb8b3ccf60daf5ad510fea75b598aef7ef7264bee9c1aabbbce5161ad13e2ec879c9568c76794bb00fd017
-Size (qsynth-0.5.7.tar.gz) = 315715 bytes
-SHA1 (patch-src_qsynthOptions.cpp) = 737c2877f99fbd31a5872257fdce4c5fb3e4b284
+SHA1 (qsynth-0.6.0.tar.gz) = 219ea4d25e81cb34b426bfb169a900c3c877b041
+RMD160 (qsynth-0.6.0.tar.gz) = 486763635aeb4732a0d6a8ef07f964702e443915
+SHA512 (qsynth-0.6.0.tar.gz) = 34e15d283f403ec6633fef911285dc2d4d4b2c5a0cd3614bd38feefbf68cff5fd8e296f47d1bcd527658b8a9dab212106aa63ca71ea60cf49f8126adb7d28591
+Size (qsynth-0.6.0.tar.gz) = 316308 bytes
+SHA1 (patch-src_qsynthOptions.cpp) = 12f17d08814e7b913d27f26d81a313cf856714e5
