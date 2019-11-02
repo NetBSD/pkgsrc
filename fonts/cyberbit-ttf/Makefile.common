@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2019/04/06 08:44:07 wiz Exp $
+# $NetBSD: Makefile.common,v 1.31 2019/11/02 22:24:38 rillig Exp $
 #
 # used by fonts/cyberbit-ttf/Makefile
 # used by fonts/cyberbase-ttf/Makefile
@@ -12,13 +12,13 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.bitstream.com/
 LICENSE=	cyberbit-ttf-license
 
-RESTRICTED=	Redistribution not permitted; single user license only.
-NO_SRC_ON_CDROM=${RESTRICTED}
-NO_SRC_ON_FTP=	${RESTRICTED}
-NO_BIN_ON_CDROM=${RESTRICTED}
-NO_BIN_ON_FTP=	${RESTRICTED}
+RESTRICTED=		Redistribution not permitted; single user license only.
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
 
-USE_TOOLS+=     unzip
+USE_TOOLS+=	unzip
 
 DIST_SUBDIR=	cyberbit-ttf
 
