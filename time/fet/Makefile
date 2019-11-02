@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2019/09/18 14:17:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.37 2019/11/02 16:28:38 rillig Exp $
 
 DISTNAME=	fet-5.25.0
 PKGREVISION=	28
@@ -13,10 +13,10 @@ LICENSE=	gnu-gpl-v2
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_LANGUAGES=	c c++
-USE_LIBTOOL=	yes
-USE_TOOLS+=	bsdtar
-EXTRACT_USING=	bsdtar
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+USE_TOOLS+=		bsdtar
+EXTRACT_USING=		bsdtar
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/fet
 
 # conflicts with import.h in package itself

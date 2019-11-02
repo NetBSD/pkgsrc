@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/01/31 12:23:14 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/02 16:28:41 rillig Exp $
 #
 
 DISTNAME=	mrbs-1.4.11
@@ -16,7 +16,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=5.3.0:../../converters/php-iconv
 .include "options.mk"
 
 USE_LANGUAGES=	# none
-EGDIR=	${PREFIX}/share/examples/mrbs
+EGDIR=		${PREFIX}/share/examples/mrbs
 CONF_FILES=	${EGDIR}/config.inc.php ${PREFIX}/share/mrbs/config.inc.php
 CONF_FILES+=	${EGDIR}/site_faq/site_faq.html ${PREFIX}/share/mrbs/site_faq/site_faq.html
 CONF_FILES+=	${EGDIR}/site_faq/site_faq_cs.html ${PREFIX}/share/mrbs/site_faq/site_faq_cs.html
