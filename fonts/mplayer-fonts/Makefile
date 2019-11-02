@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/01/19 18:52:09 agc Exp $
+# $NetBSD: Makefile,v 1.11 2019/11/02 22:24:42 rillig Exp $
 
 DISTNAME=	mplayer-fonts-20030714
 PKGREVISION=	1
@@ -24,7 +24,7 @@ NO_CONFIGURE=	YES
 
 USE_TOOLS+=	pax
 
-INSTALLATION_DIRS= share/mplayer/fonts
+INSTALLATION_DIRS=	share/mplayer/fonts
 
 do-install:
 	for D in font-arial-cp1250 font-arial-iso-8859-1 \

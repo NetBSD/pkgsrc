@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/11/30 14:24:47 mef Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/02 22:24:37 rillig Exp $
 
 DISTNAME=	FiraCode_1.204
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -12,11 +12,11 @@ HOMEPAGE=	https://github.com/tonsky/FiraCode/
 COMMENT=	Monospaced font with programming ligatures
 LICENSE=	ofl-v1.1
 
-USE_LANGUAGES=	# none
-NO_BUILD=	yes
-FONTS_DIRS.ttf=	${PREFIX}/share/fonts/X11/OTF ${PREFIX}/share/fonts/X11/TTF
+USE_LANGUAGES=		# none
+NO_BUILD=		yes
+FONTS_DIRS.ttf=		${PREFIX}/share/fonts/X11/OTF ${PREFIX}/share/fonts/X11/TTF
 INSTALLATION_DIRS=	share/fonts/X11/OTF share/fonts/X11/TTF
-WRKSRC=		${WRKDIR}
+WRKSRC=			${WRKDIR}
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/otf/*.otf  ${DESTDIR}${PREFIX}/share/fonts/X11/OTF

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/06/24 10:59:40 nia Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/02 22:24:37 rillig Exp $
 
 DISTNAME=	CamingoCode-v1.0
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -14,7 +14,7 @@ LICENSE=	cc-by-nd-v3.0-license
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
 
-FONTS_DIRS.ttf=	${PREFIX}/share/fonts/X11/TTF
+FONTS_DIRS.ttf=		${PREFIX}/share/fonts/X11/TTF
 INSTALLATION_DIRS=	share/fonts/X11/TTF share/doc/CamingoCode
 
 do-build:
