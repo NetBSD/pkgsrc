@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4690 2019/11/02 11:51:38 mef Exp $
+$NetBSD: CHANGES-2019,v 1.4691 2019/11/02 13:03:53 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7473,3 +7473,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-namespace-autoclean to 0.29 [mef 2019-11-02]
 	Updated devel/p5-Alien-Build to 1.91 [mef 2019-11-02]
 	Updated devel/p5-CPAN-Perl-Releases to 4.18 [mef 2019-11-02]
+	Updated mail/thunderbird to 68.2.1 [ryoon 2019-11-02]
