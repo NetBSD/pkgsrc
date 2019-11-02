@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.8 2017/09/25 22:32:16 joerg Exp $
+$NetBSD: distinfo,v 1.9 2019/11/02 14:58:34 nia Exp $
 
-SHA1 (bastet-0.43.1.tar.gz) = 003e342df526211a9a811c2235a02b2d8288e020
-RMD160 (bastet-0.43.1.tar.gz) = dde16fd74747bbd9dcc3a9762c0e681b7c9318ce
-SHA512 (bastet-0.43.1.tar.gz) = b2b67cd5bcc015629bd679b2bce696bd9e944cd233c78a9d49f91d340cd57f36f17181ffee5637c5883d5d28d4a1e3378697c5015dfd1cdac55e4a893c025e6f
-Size (bastet-0.43.1.tar.gz) = 82802 bytes
+SHA1 (bastet-0.43.2.tar.gz) = 75b1f154e4d60599959198d3cb3a5d06a21cfc90
+RMD160 (bastet-0.43.2.tar.gz) = 41c22ef7daebfa37c9d2aad5a13a8db5d80aaded
+SHA512 (bastet-0.43.2.tar.gz) = e81ca8bf674b537b539b7f6b35b1233a714f03750ce1b3947f84e70ca5f98ed4583902e7b4800c5bdde66ee95a4ef8ed0f5854675c2d149cd26d2498dc187a41
+Size (bastet-0.43.2.tar.gz) = 87496 bytes
 SHA1 (patch-BastetBlockChooser.hpp) = 95aa010f8862facc6062f9be968e0975524aeed7
 SHA1 (patch-Makefile) = e372e9c19166dbfb4b432e720a0c56990792297e
 SHA1 (patch-Ui.cpp) = 8f8add5b848faf96f97723e0839fdf457b20eb9a
-SHA1 (patch-Well.hpp) = d4f84a24f39aae1a84d62ad3e33fb9466dc2bbbe
