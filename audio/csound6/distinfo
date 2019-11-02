@@ -1,22 +1,19 @@
-$NetBSD: distinfo,v 1.7 2017/06/27 20:09:24 joerg Exp $
+$NetBSD: distinfo,v 1.8 2019/11/02 22:25:46 mrg Exp $
 
-SHA1 (Csound6.03.2.tar.gz) = 2ff8081c887ef98735197c1ff70bb4955c3eb3ff
-RMD160 (Csound6.03.2.tar.gz) = 00d6407feab8f992b8d309ec6701858087569752
-SHA512 (Csound6.03.2.tar.gz) = 01cea31349632ecf3692a23535793c1cd622669e07a9035e1ee80d6ad117e8d0296d2ece78635fee8a73eb5ba53d2b03a8b895f0b2a9a74ae015288243445c1b
-Size (Csound6.03.2.tar.gz) = 24571513 bytes
-SHA1 (patch-CMakeLists.txt) = 47e77bb65a091a8925893f4cf7bc76efc5080110
-SHA1 (patch-Engine_entry1.c) = 915c11cb182ad9375ec0f034f1adfde009131aa4
-SHA1 (patch-Engine_linevent.c) = da606596a1c8d2545dc0a8e948cd04e9188975ad
+SHA1 (csound-6.13.0.tar.gz) = 1775f3bdd273364995ba52a79c32795928cb3ec2
+RMD160 (csound-6.13.0.tar.gz) = 780b93bb5547e5a3807affabfe1c9f0315d5fec3
+SHA512 (csound-6.13.0.tar.gz) = 51a30cb426fc77ac648f6a9fb669b9298e6608b39ae3b12181d16ecf1fb6f2ed3db31471615a60d2ce7906b91fdb911b38c8dfa3f93699768f490f87a2bcbbbd
+Size (csound-6.13.0.tar.gz) = 26328673 bytes
+SHA1 (patch-CMakeLists.txt) = e526ab5157e8b7d636a983418f0d504b0ced6fe5
+SHA1 (patch-Engine_linevent.c) = b141da5b28d775f44f5804a08c22371be0cad3aa
+SHA1 (patch-Frontends_csound_csound_main.c) = 0004c7fedd7b57077587c7a2e6e4ce112b264304
 SHA1 (patch-InOut_libsnd.c) = b460ef3ef7117fd9c194eff3f62a64435243ccc4
-SHA1 (patch-InOut_widgets.cpp) = f73a58a636254d27a3aa6b94ace4f72b978ca9ec
+SHA1 (patch-InOut_widgets.cpp) = 4c6addbec8874e6525919b08b3e16d1f74fb525b
 SHA1 (patch-InOut_winEPS.c) = 5b3182dc79d819145df73426fead54fc28414ff2
-SHA1 (patch-InOut_winFLTK.c) = 0c9b566ae5acfae5dcf7a9d0795976f103d069a5
-SHA1 (patch-Opcodes_cpumeter.c) = 4f5fdcdd1c0eb600be49e977df5214f52de1437b
-SHA1 (patch-Opcodes_wavegde.h) = e1a6d742b28dd9b6b129a993102baf7218efa57c
-SHA1 (patch-Top_csmodule.c) = 0ce136346dfe19d56dc4e882976aa2e66cd17e92
-SHA1 (patch-Top_csound.c) = 26c03324e0f8f8ccedbfe32bfedbd282d69a93fa
-SHA1 (patch-Top_one_file.c) = c5929f9efcf8c11625fde7a86321f2fd303b55d2
-SHA1 (patch-Top_threads.c) = 107cb8605b5b46b70de3adeec0ae8acaafc2a6f2
-SHA1 (patch-frontends_CsoundVST_ScoreGeneratorVstMain.cpp) = a16da9c4975d37e56fefb58fd0458e94c3ed4925
-SHA1 (patch-include_interlocks.h) = 60bbb3a92ccb4d52665db58042de4a7caabfa5f2
-SHA1 (patch-include_text.h) = fc3c164c3740b2c595113dd7811506abb29402d0
+SHA1 (patch-InOut_winFLTK.c) = c8eb6e799095e0a82759fbd9df042fd3dc5c3ae6
+SHA1 (patch-Opcodes_cpumeter.c) = d1b80026b3f0ea203a1055553bb4bd43c7a1dde1
+SHA1 (patch-Opcodes_wavegde.h) = a94da3b1cf6bf5497c6b0ccc15bd9e1e554146d5
+SHA1 (patch-Top_csmodule.c) = 68749a33360c85bb9025d5cb297fcfd757ca6803
+SHA1 (patch-Top_csound.c) = 6f9e216ff6df71fe937866daa21e205469b732e7
+SHA1 (patch-Top_one_file.c) = b93131eb5b4ea89fb1ab13cff3377510060059dc
+SHA1 (patch-Top_threads.c) = 1c296a92b62561428f5dd010834d6858ff83e481
