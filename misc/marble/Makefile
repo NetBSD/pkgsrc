@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2019/08/22 12:23:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.45 2019/11/03 17:04:24 rillig Exp $
 
 DISTNAME=	marble-${_KDE_VERSION}
 PKGREVISION=	14
@@ -6,7 +6,7 @@ CATEGORIES=	misc
 COMMENT=	KDE desktop globe
 
 # .../src/apps/marble-kde/marble_part.cpp:106:10: fatal error: 'settings.h' file not found
-MAKE_JOBS_SAFE=no
+MAKE_JOBS_SAFE=	no
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 

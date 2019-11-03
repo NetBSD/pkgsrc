@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2017/01/19 18:52:18 agc Exp $
+# $NetBSD: Makefile,v 1.41 2019/11/03 17:04:19 rillig Exp $
 
 DISTNAME=	ast54unx
 PKGNAME=	astrolog-5.40
-PKGREVISION=     1
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://www.astrolog.org/ftp/ephem/
 MASTER_SITES+=	http://www.astrolog.org/ftp/
@@ -13,9 +13,9 @@ HOMEPAGE=	http://www.astrolog.org/
 COMMENT=	Astrology program for X11 and alpha-numeric terminals
 LICENSE=	astrolog-license
 
-RESTRICTED=	Do not sell or profit from this software in any way
-NO_SRC_ON_CDROM=${RESTRICTED}
-NO_BIN_ON_CDROM=${RESTRICTED}
+RESTRICTED=		Do not sell or profit from this software in any way
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=		${WRKDIR}
 EPHEM=		LRZ5_24 CHI_24 CPJV_24
