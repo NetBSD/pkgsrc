@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2019/07/10 10:24:06 nia Exp $
+# $NetBSD: Makefile,v 1.52 2019/11/03 19:04:03 rillig Exp $
 
 DISTNAME=		nhc98src-1.22
 PKGNAME=		nhc98-1.22
@@ -27,9 +27,9 @@ NOT_FOR_PLATFORM+=	DragonFly-*-x86_64
 # This package has LP64 issues, so must build as 32-bit binary.
 M32=
 .for P in ${LP64PLATFORMS}
-.if ${MACHINE_PLATFORM:M${P}}
+.  if ${MACHINE_PLATFORM:M${P}}
 M32=			-m32
-.endif
+.  endif
 .endfor
 BUILD_MAKE_FLAGS+=	PKGSRC_M32=${M32}
 

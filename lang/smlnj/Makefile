@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2019/10/12 20:52:53 he Exp $
+# $NetBSD: Makefile,v 1.36 2019/11/03 19:04:08 rillig Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
@@ -57,12 +57,12 @@ BUILD_ENV+=	PATCH=${PATCH:Q} PATCH_ARGS=${PATCH_ARGS:Q}
 # note that this includes bsd.prefs.mk
 .include "../../lang/smlnj/Makefile.common"
 
-BOXES= x86 ppc sparc
+BOXES=	x86 ppc sparc
 
 .if make(distinfo) || make(makesum) || make(mdi)
-.for B in ${BOXES}
-DISTFILES+=    boot.${B}-unix.tgz
-.endfor
+.  for B in ${BOXES}
+DISTFILES+=	boot.${B}-unix.tgz
+.  endfor
 .endif
 
 #

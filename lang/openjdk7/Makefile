@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2019/10/01 14:54:31 tnn Exp $
+# $NetBSD: Makefile,v 1.139 2019/11/03 19:04:04 rillig Exp $
 
 JDK_MICRO=	141
 DISTNAME=	openjdk-1.7.${JDK_MICRO}-20170813
@@ -87,12 +87,12 @@ MAKE_ENV+=	SKIP_COMPARE_IMAGES=true
 MAKE_ENV+=	JAVA_HOME=
 MAKE_ENV+=	CLASSPATH=
 
-BUILD_OPSYS=	${OPSYS:C/.*BSD/bsd/:S/DragonFly/bsd/:S/SunOS/solaris/}
-BUILD_ARCH=	${MACHINE_ARCH:S/i386/i586/:S/x86_64/amd64/:S/sparc64/sparcv9/:C/^e?arm.*$/arm/}
-LIBDIR_ARCH=	${MACHINE_ARCH:S/x86_64/amd64/:S/sparc64/sparcv9/:C/^e?arm.*$/arm/}
-BUILDDIR=	${WRKSRC}/build/${BUILD_OPSYS}-${BUILD_ARCH}
-LD_LIBRARY_PATH=	${WRKDIR}/bootstrap/jre/lib/${LIBDIR_ARCH}:${WRKDIR}/bootstrap/jre/lib/${LIBDIR_ARCH}/jli:${WRKDIR}/bootstrap/jre/lib/${LIBDIR_ARCH}/server
-MAKE_ENV+=	LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
+BUILD_OPSYS=			${OPSYS:C/.*BSD/bsd/:S/DragonFly/bsd/:S/SunOS/solaris/}
+BUILD_ARCH=			${MACHINE_ARCH:S/i386/i586/:S/x86_64/amd64/:S/sparc64/sparcv9/:C/^e?arm.*$/arm/}
+LIBDIR_ARCH=			${MACHINE_ARCH:S/x86_64/amd64/:S/sparc64/sparcv9/:C/^e?arm.*$/arm/}
+BUILDDIR=			${WRKSRC}/build/${BUILD_OPSYS}-${BUILD_ARCH}
+LD_LIBRARY_PATH=		${WRKDIR}/bootstrap/jre/lib/${LIBDIR_ARCH}:${WRKDIR}/bootstrap/jre/lib/${LIBDIR_ARCH}/jli:${WRKDIR}/bootstrap/jre/lib/${LIBDIR_ARCH}/server
+MAKE_ENV+=			LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/java/${JAVA_NAME}/jre/lib/${LIBDIR_ARCH}
 
 PLIST_SUBST+=	ARCH=${LIBDIR_ARCH}
@@ -162,10 +162,10 @@ CWRAPPERS_APPEND.cxx+=	-Wno-parentheses -Wno-sign-conversion \
 			-Wno-delete-non-virtual-dtor \
 			-Wno-return-type -Wno-unused-parameter \
 			-Wno-parentheses-equality -Wno-empty-body
-.if ${OPSYS} != "FreeBSD"
+.  if ${OPSYS} != "FreeBSD"
 _WRAP_EXTRA_ARGS.CXX+=	-Wno-new-returns-null
 CWRAPPERS_APPEND.cxx+=	-Wno-new-returns-null
-.endif
+.  endif
 BUILDLINK_TRANSFORM+=	rm:-fcheck-new
 BUILDLINK_TRANSFORM+=	rm:-fpch-deps
 .  if ${MACHINE_ARCH} == "x86_64"

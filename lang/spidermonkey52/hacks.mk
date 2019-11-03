@@ -1,7 +1,7 @@
-# $NetBSD: hacks.mk,v 1.1 2018/08/01 09:32:27 jmcneill Exp $
+# $NetBSD: hacks.mk,v 1.2 2019/11/03 19:04:08 rillig Exp $
 
 .if !defined(SPIDERMONKEY52_HACKS_MK)
-SPIDERMONKEY52_HACKS_MK= # defined
+SPIDERMONKEY52_HACKS_MK=	# defined
 
 ###
 ### TLS is not supported yet on NetBSD aarch64 as of 8.99.22

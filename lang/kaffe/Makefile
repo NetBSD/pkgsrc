@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2011/04/22 13:43:59 obache Exp $
+# $NetBSD: Makefile,v 1.78 2019/11/03 19:04:02 rillig Exp $
 #
 
 .include "Makefile.common"
@@ -21,8 +21,8 @@ JAVA_WRAPPERS=		appletviewer jar java javac javadoc javah javakey \
 
 .include "../../mk/bsd.prefs.mk"
 
-UNLIMIT_RESOURCES=        datasize
-LIBS+= -lltdl
+UNLIMIT_RESOURCES= datasize
+LIBS+=	-lltdl
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/10/18 14:58:53 bsiegert Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/03 19:04:01 rillig Exp $
 
 DISTNAME=	hcl-0.0.20160616
 PKGNAME=	go-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	13
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 CATEGORIES=	lang
 GITHUB_TAG=	d7400db7143f8e869812e50a53acd6c8d92af3b8
-GITHUB_PROJECT= ${PKGBASE:S/^go-//}
+GITHUB_PROJECT=	${PKGBASE:S/^go-//}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/hashicorp/hcl

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2018/12/09 21:05:33 adam Exp $
+# $NetBSD: Makefile,v 1.28 2019/11/03 19:04:09 rillig Exp $
 
 # Note: Regen distinfo with PKG_OPTIONS.sun-jre7+=sun-jre-jce
 # Note: Update DOWNLOAD_NAME when you update the JRE version
@@ -28,7 +28,7 @@ CONF_FILES=	# empty
 
 .include "../../lang/sun-jre7/Makefile.common"
 
-SFILES_MK=sfiles-${DIST_OS}-${EMUL_ARCH}.mk
+SFILES_MK=	sfiles-${DIST_OS}-${EMUL_ARCH}.mk
 
 .sinclude "${SFILES_MK}"
 
@@ -77,11 +77,11 @@ PKG_FAIL_REASON+=	"${X11_LIB} does not exist.  Please install the" \
 			"X11 library packages for your system."
 .    endif
 .  else
-.  include "../../x11/libX11/buildlink3.mk"
-.  include "../../x11/libXext/buildlink3.mk"
-.  include "../../x11/libXi/buildlink3.mk"
-.  include "../../x11/libXt/buildlink3.mk"
-.  include "../../x11/libXtst/buildlink3.mk"
+.    include "../../x11/libX11/buildlink3.mk"
+.    include "../../x11/libXext/buildlink3.mk"
+.    include "../../x11/libXi/buildlink3.mk"
+.    include "../../x11/libXt/buildlink3.mk"
+.    include "../../x11/libXtst/buildlink3.mk"
 X11_LIBDIR=	${X11BASE}/lib
 .  endif
 
