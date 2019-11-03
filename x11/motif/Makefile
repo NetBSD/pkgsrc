@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/12/22 09:42:41 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/03 09:14:13 rillig Exp $
 
 DISTNAME=		motif-2.3.8
 CATEGORIES=		x11
@@ -27,15 +27,15 @@ SUBST_SED.man_rename=		-e 's: Core.3: XCore.3:g'
 SUBST_SED.man_rename+=		-e 's: Object.3: XObject.3:g'
 SUBST_SED.man_rename+=		-e 's: Shell.3: XShell.3:g'
 
-CONFIGURE_ARGS+= --enable-jpeg
-CONFIGURE_ARGS+= --enable-png
-CONFIGURE_ARGS+= --with-libjpeg-includes=${JPEGBASE}/include
-CONFIGURE_ARGS+= --with-libjpeg-lib=${JPEGBASE}/lib
-CONFIGURE_ARGS+= --with-libpng-includes=${BUILDLINK_PREFIX.png}/include
-CONFIGURE_ARGS+= --with-libpng-lib=${BUILDLINK_PREFIX.png}/lib
-CONFIGURE_ARGS+= --x-libraries=${X11BASE}/lib
+CONFIGURE_ARGS+=	--enable-jpeg
+CONFIGURE_ARGS+=	--enable-png
+CONFIGURE_ARGS+=	--with-libjpeg-includes=${JPEGBASE}/include
+CONFIGURE_ARGS+=	--with-libjpeg-lib=${JPEGBASE}/lib
+CONFIGURE_ARGS+=	--with-libpng-includes=${BUILDLINK_PREFIX.png}/include
+CONFIGURE_ARGS+=	--with-libpng-lib=${BUILDLINK_PREFIX.png}/lib
+CONFIGURE_ARGS+=	--x-libraries=${X11BASE}/lib
 
-CONFIGURE_ARGS+= --disable-printing
+CONFIGURE_ARGS+=	--disable-printing
 
 BUILDLINK_TRANSFORM+=	l:Xft:Xft:fontconfig
 
@@ -48,7 +48,7 @@ CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 MAKE_FLAGS+=	CROSS_COMPILING=yes CC_FOR_BUILD=${NATIVE_CC:Q} \
-    CPPFLAGS_FOR_BUILD=-I${PREFIX}/include
+		CPPFLAGS_FOR_BUILD=-I${PREFIX}/include
 .endif
 
 # 1) Fix the man pages to refer to the correct sections.

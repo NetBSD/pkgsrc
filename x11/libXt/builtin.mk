@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2008/10/05 21:36:33 cube Exp $
+# $NetBSD: builtin.mk,v 1.3 2019/11/03 09:14:12 rillig Exp $
 
 BUILTIN_PKG:=	libXt
 
@@ -19,7 +19,7 @@ IS_BUILTIN.libXt=	no
 IS_BUILTIN.libXt=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.libXt
+MAKEVARS+=		IS_BUILTIN.libXt
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -46,6 +46,6 @@ USE_BUILTIN.libXt!=							\
 .    endif
 .  endif  # PREFER.libXt
 .endif
-MAKEVARS+=	USE_BUILTIN.libXt
+MAKEVARS+=		USE_BUILTIN.libXt
 
 .include "../../mk/x11.builtin.mk"

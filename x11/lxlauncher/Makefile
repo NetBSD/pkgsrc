@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/07/21 22:26:01 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/11/03 09:14:13 rillig Exp $
 
 DISTNAME=	lxlauncher-0.2.5
 PKGREVISION=	8
@@ -17,8 +17,8 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	intltool pkg-config msgfmt
 
 PKG_SYSCONFSUBDIR=	xdg
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/lxlauncher \
-		${PKG_SYSCONFDIR}/menus
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/lxlauncher \
+			${PKG_SYSCONFDIR}/menus
 
 EGDIR=			share/examples
 

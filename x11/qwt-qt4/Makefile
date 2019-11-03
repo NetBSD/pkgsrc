@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2018/03/12 11:15:57 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2019/11/03 09:14:17 rillig Exp $
 
 DISTNAME=	qwt-5.2.3
 PKGREVISION=	2
@@ -19,7 +19,7 @@ USE_TOOLS+=		gmake
 
 CONFLICTS=	qwtlib-[0-9]*
 
-AUTO_MKDIRS=			yes
+AUTO_MKDIRS=		yes
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
 
 do-configure:

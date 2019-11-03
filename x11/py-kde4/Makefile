@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2019/08/22 12:23:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.65 2019/11/03 09:14:15 rillig Exp $
 
 PKGNAME=	${PYPKGPREFIX}-kde4-${_KDE_VERSION}
 PKGREVISION=	17
@@ -23,7 +23,7 @@ REPLACE_PYTHON+= \
 	docs/html/tutorials/started/*.py
 
 # We need to replace the embedded interpreter
-SUBST_CLASSES+=	pykdeuic4
+SUBST_CLASSES+=		pykdeuic4
 SUBST_STAGE.pykdeuic4=	post-build
 SUBST_FILES.pykdeuic4=	tools/pykdeuic4/pykdeuic4.py
 SUBST_SED.pykdeuic4=	-e 's:/usr/bin/env python$$:${PYTHONBIN}:'

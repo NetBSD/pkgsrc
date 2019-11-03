@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2019/04/05 12:14:58 tsutsui Exp $
+# $NetBSD: options.mk,v 1.17 2019/11/03 09:14:13 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mlterm
 PKG_SUPPORTED_OPTIONS=	cairo canna fcitx fribidi gdk_pixbuf2 ibus libind m17nlib mlterm-fb otl scim skk uim utmp wnn4 xft2
@@ -138,10 +138,10 @@ CONFIGURE_ARGS+=	--disable-fontconfig
 
 .if !empty(PKG_OPTIONS:Mcairo) && !empty(PKG_OPTIONS:Mxft2)
 CONFIGURE_ARGS+=	--with-type-engines=xcore,xft,cairo
-.if !empty(PKG_OPTIONS:Mmlterm-fb)
+.  if !empty(PKG_OPTIONS:Mmlterm-fb)
 # --enable-anti-alias is also required for mlterm-fb
 CONFIGURE_ARGS+=	--enable-anti-alias
-.endif
+.  endif
 .elif !empty(PKG_OPTIONS:Mcairo)
 CONFIGURE_ARGS+=	--with-type-engines=xcore,cairo
 .elif !empty(PKG_OPTIONS:Mxft2)

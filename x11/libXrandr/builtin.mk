@@ -1,6 +1,6 @@
-# $NetBSD: builtin.mk,v 1.6 2018/03/07 11:57:37 wiz Exp $
+# $NetBSD: builtin.mk,v 1.7 2019/11/03 09:14:12 rillig Exp $
 
-BUILTIN_PKG:=	libXrandr
+BUILTIN_PKG:=			libXrandr
 PKGCONFIG_FILE.libXrandr=	${X11BASE}/lib/pkgconfig/xrandr.pc
 PKGCONFIG_FILE.libXrandr+=	${X11BASE}/lib${LIBABISUFFIX}/pkgconfig/xrandr.pc
 

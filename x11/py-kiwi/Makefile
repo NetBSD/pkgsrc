@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2019/09/02 13:20:16 adam Exp $
+# $NetBSD: Makefile,v 1.52 2019/11/03 09:14:15 rillig Exp $
 
 DISTNAME=	kiwi-1.9.29
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,10 +12,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Framework and a set of enhanced PyGTK widgets
 LICENSE=	gnu-lgpl-v2.1 # or later
 
-USE_LANGUAGES=		#none
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		msgfmt
-PYTHON_VERSIONS_ACCEPTED=	 27 # py-gtk2
+USE_LANGUAGES=			#none
+USE_PKGLOCALEDIR=		yes
+USE_TOOLS+=			msgfmt
+PYTHON_VERSIONS_ACCEPTED=	27 # py-gtk2
 
 SUBST_CLASSES+=		localedir
 SUBST_STAGE.localedir=	pre-configure

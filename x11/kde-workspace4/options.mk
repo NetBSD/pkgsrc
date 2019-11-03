@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2012/06/12 15:46:05 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2019/11/03 09:14:09 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kde-workspace
 PKG_SUPPORTED_OPTIONS=	inet6
@@ -20,7 +20,7 @@ PKG_SUGGESTED_OPTIONS=	inet6
 #CC+=			-ggdb
 #CXX+=			-ggdb
 #CONFIGURE_ARGS+=	--enable-debug=full
-#CONFIGURE_ENV+=		INSTALL_STRIP_FLAG=
+#CONFIGURE_ENV+=	INSTALL_STRIP_FLAG=
 #INSTALL_UNSTRIPPED=	yes
 #.endif
 
