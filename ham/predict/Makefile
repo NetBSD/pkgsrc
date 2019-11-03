@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/05/05 21:44:58 wiedi Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/03 19:32:07 rillig Exp $
 #
 
 DISTNAME=	predict-2.2.3
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.qsl.net/kd2bd/
 
 MAINTAINER=	dbj@NetBSD.org
 HOMEPAGE=	http://www.qsl.net/kd2bd/predict.html
-COMMENT= 	PREDICT - curses satellite tracking/orbital prediction program
+COMMENT=	PREDICT - curses satellite tracking/orbital prediction program
 
 LICENSE=	gnu-gpl-v2
 
@@ -25,7 +25,7 @@ do-build:
 	cd ${WRKSRC} && ${CC} ${CFLAGS} ${LDFLAGS} predict.c -o predict -lm -lncurses -lpthread
 	${SED} -e 's|@PREFIX@|${PREFIX}|g' ${FILESDIR}/vocalizer.sh > ${WRKSRC}/vocalizer/vocalizer.sh
 
-INSTALLATION_DIRS+= bin ${PKGMANDIR}/man1 share/predict/default share/predict/vocalizer
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 share/predict/default share/predict/vocalizer
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/predict ${DESTDIR}${PREFIX}/bin/
