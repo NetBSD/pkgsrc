@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/08/14 02:32:28 wen Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/03 10:15:55 rillig Exp $
 
 DISTNAME=	IO-Async-0.74
 PKGNAME=	p5-${DISTNAME}
@@ -15,9 +15,9 @@ DEPENDS+=	p5-Future>=0.18:../../devel/p5-Future
 BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 BUILD_DEPENDS+=	p5-Test-Identity-[0-9]*:../../devel/p5-Test-Identity
 BUILD_DEPENDS+=	p5-Test-Refcount-[0-9]*:../../devel/p5-Test-Refcount
-BUILD_DEPENDS+= p5-Struct-Dumb-[0-9]*:../../devel/p5-Struct-Dumb
+BUILD_DEPENDS+=	p5-Struct-Dumb-[0-9]*:../../devel/p5-Struct-Dumb
 
-USE_LANGUAGES=	# empty
+USE_LANGUAGES=		# empty
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/IO/Async/.packlist
 

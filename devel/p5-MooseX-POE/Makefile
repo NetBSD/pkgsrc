@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/08/11 13:19:58 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2019/11/03 10:15:59 rillig Exp $
 
 DISTNAME=	MooseX-POE-0.215
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Moose wrapper around a POE::Session
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/MooseX/POE/.packlist
+PERL5_PACKLIST=	auto/MooseX/POE/.packlist
 
 BUILD_DEPENDS+=	p5-Test-Fatal>=0.003:../../devel/p5-Test-Fatal
 DEPENDS+=	p5-POE>=1.310:../../devel/p5-POE
