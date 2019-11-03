@@ -1,18 +1,61 @@
-$NetBSD: patch-aa,v 1.3 2017/06/18 15:27:24 taca Exp $
+$NetBSD: patch-aa,v 1.4 2019/11/03 14:05:19 triaxx Exp $
 
 Set pkgsrc AWLDIR.
 
---- dba/create-database.sh.orig	2017-01-23 22:04:46.000000000 +0000
+--- dba/create-database.sh.orig	2019-01-30 21:53:08.000000000 +0000
 +++ dba/create-database.sh
 @@ -12,7 +12,7 @@ INSTALL_NOTE_FN="`mktemp -t tmp.XXXXXXXX
  
  
  # Candidate locations of the AWL directory
 -awldirs="${DBADIR}/../../awl
-+AWLDIR="@LIBAWLPATH@"
++awldirs="@LIBAWLPATH@
  /usr/share/awl
  /usr/share/php/awl
  /usr/local/share/awl"
+@@ -41,19 +41,19 @@ AWL_APPUSER="${4:-davical_app}"
+ # set -x
+ 
+ # Get the major version for PostgreSQL
+-export DBVERSION="`psql -qXAt ${PSQLOPTS} -c "SELECT version();" template1 | cut -f2 -d' ' | cut -f1-2 -d'.'`"
++export DBVERSION="`psql -U @PGUSER@ -qXAt ${PSQLOPTS} -c "SELECT version();" template1 | cut -f2 -d' ' | cut -f1-2 -d'.'`"
+ 
+ install_note() {
+   cat >>"${INSTALL_NOTE_FN}"
+ }
+ 
+ db_users() {
+-  psql -qXAt ${PSQLOPTS} -c "SELECT usename FROM pg_user;" template1
++  psql -U @PGUSER@ -qXAt ${PSQLOPTS} -c "SELECT usename FROM pg_user;" template1
+ }
+ 
+ create_db_user() {
+   if ! db_users | grep "^${1}$" >/dev/null ; then
+-    psql -qXAt ${PSQLOPTS} -c "CREATE USER ${1} NOCREATEDB NOCREATEROLE;" template1
++    psql -U @PGUSER@ -qXAt ${PSQLOPTS} -c "CREATE USER ${1} NOCREATEDB NOCREATEROLE;" template1
+     cat <<EONOTE | install_note
+ *  You will need to edit the PostgreSQL pg_hba.conf to allow the
+    '${1}' database user access to the 'davical' database.
+@@ -79,7 +79,7 @@ create_db_user "${AWL_DBAUSER}"
+ create_db_user "${AWL_APPUSER}"
+ 
+ # FIXME: Need to check that the database was actually created.
+-if ! createdb --encoding UTF8 --template template0 --owner "${AWL_DBAUSER}" ${PSQLOPTS} "${DBNAME}" ; then
++if ! createdb --username=@PGUSER@ --encoding UTF8 --template template0 --owner "${AWL_DBAUSER}" ${PSQLOPTS} "${DBNAME}" ; then
+   echo "Unable to create database"
+   exit 1
+ fi
+@@ -95,8 +95,8 @@ else
+     if try_db_user "${USER}" ; then
+       export DBA=""
+     else
+-      if try_db_user "${PGUSER}" ; then
+-        export DBA=""
++      if try_db_user "@PGUSER@" ; then
++        export DBA="-U @PGUSER@"
+       else
+         cat <<EOFAILURE
+ * * * * ERROR * * * *
 @@ -184,7 +184,7 @@ rm "${INSTALL_NOTE_FN}"
  cat <<FRIENDLY
  *  The password for the 'admin' user has been set to '${ADMINPW}'
