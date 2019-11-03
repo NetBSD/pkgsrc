@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2019/08/22 12:22:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.39 2019/11/03 17:14:25 rillig Exp $
 
 DISTNAME=	libmspub-0.1.4
 PKGREVISION=	9
@@ -11,10 +11,10 @@ HOMEPAGE=	https://wiki.documentfoundation.org/DLP/Libraries/libmspub
 COMMENT=	Library for importing Microsoft Publisher content
 LICENSE=	mpl-1.1 OR gnu-lgpl-v2 OR gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
+USE_LANGUAGES=		c c++
 CONFIGURE_ARGS+=	--without-docs
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
