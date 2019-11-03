@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/07/21 22:25:56 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/03 09:14:07 rillig Exp $
 #
 
 DISTNAME=	clipit-1.4.2
@@ -12,8 +12,8 @@ COMMENT=	Lightweight, fully featured GTK+ clipboard manager
 
 LICENSE=	gnu-gpl-v3
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+= --sysconfdir=${PKG_SYSCONFDIR}
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 USE_TOOLS+=	gmake
 USE_TOOLS+=	intltool msgfmt

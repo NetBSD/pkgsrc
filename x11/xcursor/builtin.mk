@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.15 2012/03/19 12:34:22 joerg Exp $
+# $NetBSD: builtin.mk,v 1.16 2019/11/03 09:14:19 rillig Exp $
 
 BUILTIN_PKG:=	xcursor
 
@@ -18,7 +18,7 @@ IS_BUILTIN.xcursor=	yes
 IS_BUILTIN.xcursor=	no
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.xcursor
+MAKEVARS+=		IS_BUILTIN.xcursor
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -35,7 +35,7 @@ BUILTIN_VERSION.xcursor!=						\
 		${H_XCURSOR}
 BUILTIN_PKG.xcursor=	xcursor-${BUILTIN_VERSION.xcursor}
 .endif
-MAKEVARS+=	BUILTIN_PKG.xcursor
+MAKEVARS+=		BUILTIN_PKG.xcursor
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -69,7 +69,7 @@ USE_BUILTIN.xcursor!=							\
 .    endif
 .  endif  # PREFER.xcursor
 .endif
-MAKEVARS+=	USE_BUILTIN.xcursor
+MAKEVARS+=		USE_BUILTIN.xcursor
 
 ###
 ### The section below only applies if we are not including this file

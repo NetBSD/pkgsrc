@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2017/09/06 10:40:36 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/11/03 09:14:21 rillig Exp $
 
 DISTNAME=	xscribble
 PKGNAME=	xscribble-20000616
@@ -13,7 +13,7 @@ COMMENT=	Handwriting recognition (like graffiti)
 
 MAKE_JOBS_SAFE=		no
 
-USE_IMAKE=	YES
+USE_IMAKE=		YES
 NO_INSTALL_MANPAGES=	YES
 
 .include "../../mk/bsd.prefs.mk"

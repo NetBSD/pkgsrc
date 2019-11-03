@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/09/02 13:20:15 adam Exp $
+# $NetBSD: Makefile,v 1.30 2019/11/03 09:14:07 rillig Exp $
 
 DISTNAME=	driconf-0.9.1
 PKGREVISION=	11
@@ -17,9 +17,9 @@ DEPENDS+=	xdriinfo>=1.0.2:../../x11/xdriinfo
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt msgmerge xgettext
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
-REPLACE_PYTHON=		*.py
-PYTHON_VERSIONS_ACCEPTED=	 27 # py-gtk2
+CONFIGURE_ARGS+=		--prefix=${PREFIX:Q}
+REPLACE_PYTHON=			*.py
+PYTHON_VERSIONS_ACCEPTED=	27 # py-gtk2
 
 SUBST_CLASSES+=		fix-paths
 SUBST_FILES.fix-paths=	driconf driconf.desktop

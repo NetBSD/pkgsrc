@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2019/03/16 08:50:47 bsiegert Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/03 09:14:21 rillig Exp $
 
 .include "Makefile.common"
 
-COMMENT=		Library to display shaped text on your X display
+COMMENT=	Library to display shaped text on your X display
 PKGREVISION=	1
 
 CONFIGURE_ENV+=		XOSD_XMMS_PLUGIN=NO

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2017/05/09 14:18:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.64 2019/11/03 09:14:09 rillig Exp $
 
 DISTNAME=	kterm-6.2.0
 PKGREVISION=	24
@@ -6,12 +6,12 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/}
 
 # the following patch includes NFS xauth patch, and kamo's wd0.2 patch.
-PATCH_SITES=	${MASTER_SITE_LOCAL}
-PATCHFILES=	kterm-6.2.0-termios-wd0.2.patch2 \
-		kterm-6.2.0-scroll-wd0.2.patch \
-		kterm-6.2.0.NFS-xauth.patch \
-		kterm-6.2.0.ext06.patch.gz
-PATCH_DIST_STRIP= -p1
+PATCH_SITES=		${MASTER_SITE_LOCAL}
+PATCHFILES=		kterm-6.2.0-termios-wd0.2.patch2 \
+			kterm-6.2.0-scroll-wd0.2.patch \
+			kterm-6.2.0.NFS-xauth.patch \
+			kterm-6.2.0.ext06.patch.gz
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	# none

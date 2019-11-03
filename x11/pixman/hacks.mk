@@ -1,9 +1,9 @@
-# $NetBSD: hacks.mk,v 1.12 2016/02/26 11:27:16 jperkin Exp $
+# $NetBSD: hacks.mk,v 1.13 2019/11/03 09:14:14 rillig Exp $
 #
 .if !defined(PIXMAN_HACKS_MK)
 PIXMAN_HACKS_MK=	# empty
-.  include "../../mk/bsd.fast.prefs.mk"
-.  include "../../mk/compiler.mk"
+.include "../../mk/bsd.fast.prefs.mk"
+.include "../../mk/compiler.mk"
 ###
 ### XXX SSE2 intrinsics require gcc-4.2+ to build.
 ### XXX Need to disable SSSE3 explicitly, too.

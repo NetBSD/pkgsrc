@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/09/06 10:40:36 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/03 09:14:20 rillig Exp $
 #
 
 DISTNAME=	xkbd-0.8.5
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://handhelds.org/~mallum/
 COMMENT=	On-screen keyboard for X, useful for palmtops
 
-CONFIGURE_ARGS+=--enable-xpm
+CONFIGURE_ARGS+=	--enable-xpm
 
 GNU_CONFIGURE=	YES
 

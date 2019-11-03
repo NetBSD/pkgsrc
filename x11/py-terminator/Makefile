@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/09/02 13:20:14 adam Exp $
+# $NetBSD: Makefile,v 1.23 2019/11/03 09:14:15 rillig Exp $
 
 DISTNAME=	terminator-0.98
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,9 +13,9 @@ LICENSE=	gnu-gpl-v2
 
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.98
 
-REPLACE_PYTHON+= *.py
-REPLACE_PYTHON+= terminatorlib/*.py
-REPLACE_PYTHON+= terminatorlib/plugins/*.py
+REPLACE_PYTHON+=	*.py
+REPLACE_PYTHON+=	terminatorlib/*.py
+REPLACE_PYTHON+=	terminatorlib/plugins/*.py
 
 USE_TOOLS+=	intltool bash
 

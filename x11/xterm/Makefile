@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2019/07/22 08:37:58 nia Exp $
+# $NetBSD: Makefile,v 1.121 2019/11/03 09:14:21 rillig Exp $
 
 DISTNAME=	xterm-344
 CATEGORIES=	x11
@@ -20,11 +20,11 @@ CONFIGURE_ARGS+=	--enable-256-color
 CONFIGURE_ARGS+=	--enable-paste64
 CONFIGURE_ARGS+=	--enable-readline-mouse
 
-CONFIGURE_ARGS.standard=# empty
-CONFIGURE_ARGS.3d=	--with-Xaw3d
-CONFIGURE_ARGS.xpm=	--with-Xaw3d
-CONFIGURE_ARGS.neXtaw=	--with-neXtaw
-CONFIGURE_ARGS+=	${${CONFIGURE_ARGS.${XAW_TYPE}}:L}
+CONFIGURE_ARGS.standard=	# empty
+CONFIGURE_ARGS.3d=		--with-Xaw3d
+CONFIGURE_ARGS.xpm=		--with-Xaw3d
+CONFIGURE_ARGS.neXtaw=		--with-neXtaw
+CONFIGURE_ARGS+=		${${CONFIGURE_ARGS.${XAW_TYPE}}:L}
 
 INSTALLATION_DIRS=	share/applications
 

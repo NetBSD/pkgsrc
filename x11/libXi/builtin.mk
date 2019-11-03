@@ -1,8 +1,8 @@
-# $NetBSD: builtin.mk,v 1.1 2014/04/23 12:22:48 obache Exp $
+# $NetBSD: builtin.mk,v 1.2 2019/11/03 09:14:11 rillig Exp $
 
-BUILTIN_PKG:=	libXi
-PKGCONFIG_FILE.libXi=		${X11BASE}/lib/pkgconfig/xi.pc
-PKGCONFIG_FILE.libXi+=		${X11BASE}/lib${LIBABISUFFIX}/pkgconfig/xi.pc
+BUILTIN_PKG:=		libXi
+PKGCONFIG_FILE.libXi=	${X11BASE}/lib/pkgconfig/xi.pc
+PKGCONFIG_FILE.libXi+=	${X11BASE}/lib${LIBABISUFFIX}/pkgconfig/xi.pc
 
 BUILTIN_FIND_FILES_VAR:=	H_XINPUT
 BUILTIN_FIND_FILES.H_XINPUT=	${X11BASE}/include/X11/extensions/XInput.h
@@ -21,7 +21,7 @@ IS_BUILTIN.libXi=	no
 IS_BUILTIN.libXi=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.libXi
+MAKEVARS+=		IS_BUILTIN.libXi
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -38,7 +38,7 @@ USE_BUILTIN.libXi=	yes
 .    endif
 .  endif  # PREFER.libXi
 .endif
-MAKEVARS+=	USE_BUILTIN.libXi
+MAKEVARS+=		USE_BUILTIN.libXi
 
 .include "../../mk/buildlink3/pkgconfig-builtin.mk"
 .include "../../mk/x11.builtin.mk"

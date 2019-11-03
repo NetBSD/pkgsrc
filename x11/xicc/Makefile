@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/09/06 10:40:35 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/03 09:14:20 rillig Exp $
 #
 
 DISTNAME=	xicc-0.1
@@ -11,8 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Load ICC profile into X server
 LICENSE=	generic-nonlicense
 
-USE_TOOLS+=	pkg-config
-USE_LIBTOOL=	yes
+USE_TOOLS+=		pkg-config
+USE_LIBTOOL=		yes
 INSTALLATION_DIRS=	bin
 
 do-build:

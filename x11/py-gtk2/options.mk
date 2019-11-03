@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2013/07/09 15:49:43 tsutsui Exp $
+# $NetBSD: options.mk,v 1.4 2019/11/03 09:14:14 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.py-gtk2
-PKG_SUPPORTED_OPTIONS=	py-numpy
+PKG_OPTIONS_VAR=		PKG_OPTIONS.py-gtk2
+PKG_SUPPORTED_OPTIONS=		py-numpy
 PKG_SUGGESTED_OPTIONS=
 # Enable py-numpy (which requires fortran support) by default on
 # platforms supported by lang/g95.

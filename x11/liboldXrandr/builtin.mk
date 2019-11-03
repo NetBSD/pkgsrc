@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.4 2018/03/07 11:57:38 wiz Exp $
+# $NetBSD: builtin.mk,v 1.5 2019/11/03 09:14:13 rillig Exp $
 
 BUILTIN_PKG:=	Xrandr
 
@@ -18,7 +18,7 @@ IS_BUILTIN.Xrandr=	yes
 IS_BUILTIN.Xrandr=	no
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.Xrandr
+MAKEVARS+=		IS_BUILTIN.Xrandr
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -47,10 +47,10 @@ BUILTIN_VERSION.Xrandr?=	${_version_}
 .    endfor
 .  endfor
 .  if defined(BUILTIN_VERSION.Xrandr)
-BUILTIN_PKG.Xrandr=	Xrandr-${BUILTIN_VERSION.Xrandr}
+BUILTIN_PKG.Xrandr=		Xrandr-${BUILTIN_VERSION.Xrandr}
 .  endif
 .endif
-MAKEVARS+=	BUILTIN_PKG.Xrandr
+MAKEVARS+=			BUILTIN_PKG.Xrandr
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -86,7 +86,7 @@ USE_BUILTIN.Xrandr!=							\
 .    endif
 .  endif  # PREFER.Xrandr
 .endif
-MAKEVARS+=	USE_BUILTIN.Xrandr
+MAKEVARS+=		USE_BUILTIN.Xrandr
 
 ###
 ### The section below only applies if we are not including this file

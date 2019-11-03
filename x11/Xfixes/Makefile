@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2017/09/06 09:03:05 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2019/11/03 09:14:06 rillig Exp $
 
 DISTNAME=		libXfixes-2.0.1
 PKGNAME=		${DISTNAME:S/libX/X/}
@@ -22,7 +22,7 @@ PKGCONFIG_OVERRIDE+=	xfixes.pc.in
 .include "../../mk/bsd.prefs.mk"
 
 .if ${X11_TYPE} != "native"
-PKG_FAIL_REASON+="This package is for native X11 only; use libXfixes instead."
+PKG_FAIL_REASON+=	"This package is for native X11 only; use libXfixes instead."
 .endif
 
 CFLAGS.Darwin+=	-fno-common

@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2015/07/04 16:18:43 joerg Exp $
+# $NetBSD: builtin.mk,v 1.3 2019/11/03 09:14:18 rillig Exp $
 
 BUILTIN_PKG:=	xauth
 
@@ -18,7 +18,7 @@ IS_BUILTIN.xauth=	yes
 IS_BUILTIN.xauth=	no
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.xauth
+MAKEVARS+=		IS_BUILTIN.xauth
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -33,7 +33,7 @@ BUILTIN_VERSION.xauth=	11.7
 
 BUILTIN_PKG.xauth=	xauth-${BUILTIN_VERSION.xauth}
 .endif
-MAKEVARS+=	BUILTIN_PKG.xauth
+MAKEVARS+=		BUILTIN_PKG.xauth
 
 ###
 ### Determine whether we should use the built-in implementation if it

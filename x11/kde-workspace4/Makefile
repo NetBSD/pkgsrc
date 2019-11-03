@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2019/11/03 06:33:56 markd Exp $
+# $NetBSD: Makefile,v 1.78 2019/11/03 09:14:09 rillig Exp $
 
 DISTNAME=	kde-workspace-4.11.22
 PKGNAME=	${DISTNAME:S/-4/4-4/}
@@ -9,10 +9,10 @@ MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.0/src/}
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
-DISTFILES=	${DEFAULT_DISTFILES} Daemon.png Daemon.README
-DISTFILES+=	NetBSD-flag-1.0.png
-SITES.Daemon.png=	${MASTER_SITE_LOCAL}
-SITES.Daemon.README=	${MASTER_SITE_LOCAL}
+DISTFILES=			${DEFAULT_DISTFILES} Daemon.png Daemon.README
+DISTFILES+=			NetBSD-flag-1.0.png
+SITES.Daemon.png=		${MASTER_SITE_LOCAL}
+SITES.Daemon.README=		${MASTER_SITE_LOCAL}
 SITES.NetBSD-flag-1.0.png=	${MASTER_SITE_LOCAL}
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
@@ -59,7 +59,7 @@ PKG_GROUPS=		${KDM_GROUP}
 PKG_USERS=		${KDM_USER}:${KDM_GROUP}
 PKG_GECOS.${KDM_USER}=	kdm unprivileged user
 
-REPLACE_PERL+= \
+REPLACE_PERL+=		\
 	kcontrol/keys/convertShortcuts.pl \
 	kwin/clients/oxygen/data/update_oxygen.pl \
 	kwin/data/kwin3_plugin.pl \
@@ -71,7 +71,7 @@ PY_PATCHPLIST=	yes
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-PLIST_VARS+=	gles utempter noutempter
+PLIST_VARS+=		gles utempter noutempter
 .if ${OPSYS} == "Linux" && exists(/usr/include/utempter.h)
 PLIST.utempter=		yes
 .elif ${OPSYS} == "FreeBSD" && exists(/usr/include/utempter.h)
@@ -112,7 +112,7 @@ CMAKE_ARGS+=	-DRT_LIB_SCHED=${RT_LIB_SCHED}
 CMAKE_ARGS+=	-DWITH_Xmms:BOOL=OFF
 
 # genkdmconf wont install faces if using destdir so do it ourselves
-INSTALLATION_DIRS+= share/kde/apps/kdm/faces
+INSTALLATION_DIRS+=	share/kde/apps/kdm/faces
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/kdm/kfrontend/pics/default1.png \

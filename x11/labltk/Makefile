@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2018/11/12 16:10:29 jaapb Exp $
+# $NetBSD: Makefile,v 1.36 2019/11/03 09:14:10 rillig Exp $
 
 DISTNAME=	labltk-8.06.3
 PKGREVISION=	5
@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v2.1
 USE_TOOLS+=	gmake
 MAKE_JOBS_SAFE=	no
 
-HAS_CONFIGURE=	yes
+HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	-x11include ${X11BASE}/include
 CONFIGURE_ARGS+=	-x11lib ${X11BASE}/lib
 CONFIGURE_ARGS+=	-use-findlib
