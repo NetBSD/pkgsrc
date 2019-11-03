@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/07/21 22:24:45 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/03 19:24:32 rillig Exp $
 
 DISTNAME=	free42
 PKGNAME=	${DISTNAME}-1.4.78
@@ -14,7 +14,7 @@ HOMEPAGE=	https://thomasokken.com/free42/
 COMMENT=	HP42S Calculator Simulator
 LICENSE=	gnu-gpl-v2
 
-#WRKSRC=		${WRKDIR}/free42/gtk/
+#WRKSRC=	${WRKDIR}/free42/gtk/
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES+=	c++03
 BUILD_DIRS=	gtk
@@ -26,8 +26,8 @@ BUILD_TARGET=	free42${VARIANT}
 CXXFLAGS.NetBSD+=	-DNO_SINCOS
 MAKE_ENV.Linux+=	AUDIO_ALSA=1
 
-INSTALLATION_DIRS+= bin
-INSTALLATION_DIRS+= share/doc/free42
+INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	share/doc/free42
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${BUILD_DIRS}/${BUILD_TARGET} \
