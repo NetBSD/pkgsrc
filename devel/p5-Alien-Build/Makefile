@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/11/02 11:43:50 mef Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/03 10:15:49 rillig Exp $
 
 DISTNAME=	Alien-Build-1.91
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://metacpan.org/release/Alien-Build
 COMMENT=	Build external dependencies for use in CPAN
 LICENSE=	${PERL5_LICENSE}
 
-PERL5_PACKLIST=         auto/Alien/Build/.packlist
+PERL5_PACKLIST=		auto/Alien/Build/.packlist
 
 USE_TOOLS+=	pkg-config:run
 
