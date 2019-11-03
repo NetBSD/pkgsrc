@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2019/08/11 13:22:32 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2019/11/03 11:45:57 rillig Exp $
 
 DISTNAME=		vnc-3.3.3r2
 PKGNAME=		vnc-3.3.3.2
@@ -24,11 +24,11 @@ BUILD_DEFS+=		IPV6_READY
 
 BUILD_TARGET=		World
 
-MAKE_ENV+= CC=${CC:Q}	#for make imake in Xvnc/config/imake
+MAKE_ENV+=	CC=${CC:Q}	#for make imake in Xvnc/config/imake
 
-PKG_OPTIONS_VAR=        PKG_OPTIONS.vnc
-PKG_SUPPORTED_OPTIONS=  inet6
-PKG_SUGGESTED_OPTIONS=  inet6
+PKG_OPTIONS_VAR=	PKG_OPTIONS.vnc
+PKG_SUPPORTED_OPTIONS=	inet6
+PKG_SUGGESTED_OPTIONS=	inet6
 
 .include "../../mk/bsd.options.mk"
 
@@ -58,7 +58,7 @@ INSTALLATION_DIRS=	bin share/doc/vnc
 .if ${OPSYS} == "SunOS"
 _WRAP_EXTRA_ARGS.CC+=	-D_POSIX_SOURCE
 CWRAPPERS_APPEND.cc+=	-D_POSIX_SOURCE
-SPECIAL_PERMS+=	bin/Xvnc ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 2555
+SPECIAL_PERMS+=		bin/Xvnc ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 2555
 .endif
 
 .if ${OS_VARIANT} == "SmartOS"

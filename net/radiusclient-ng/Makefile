@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/09/04 18:00:58 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/11/03 11:45:51 rillig Exp $
 
 DISTNAME=	radiusclient-ng-0.5.5.1
 CATEGORIES=	net
@@ -16,12 +16,12 @@ USE_LIBTOOL=		YES
 PKG_SYSCONFSUBDIR=	radiusclient-ng
 EGDIR=			${PREFIX}/share/examples/radiusclient-ng
 
-CONFIGURE_ARGS+=        --sysconfdir=${PKG_SYSCONFBASEDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
 
-EGFILES= issue port-id-map radiusclient.conf  dictionary dictionary.ascend \
-	dictionary.compat dictionary.merit  dictionary.sip
+EGFILES=	issue port-id-map radiusclient.conf  dictionary dictionary.ascend \
+		dictionary.compat dictionary.merit  dictionary.sip
 .for f in ${EGFILES}
-CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
+CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"

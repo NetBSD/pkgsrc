@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/23 17:18:41 asau Exp $
+# $NetBSD: Makefile,v 1.7 2019/11/03 11:45:44 rillig Exp $
 #
 
 DISTNAME=	netgroup-0.0
@@ -13,7 +13,7 @@ USE_FEATURES+=		cdefs
 NOT_FOR_PLATFORM=	Interix-*-* # no netgroups
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
-INSTALL_TARGET=	inst-all
+INSTALL_TARGET=		inst-all
 INSTALL_MAKE_FLAGS+=	BINDIR=${DESTDIR}${PREFIX}/bin \
 			MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 

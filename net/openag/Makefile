@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/09/03 08:53:13 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/03 11:45:46 rillig Exp $
 #
 
 DISTNAME=	OpenAG-1.1.1
@@ -24,7 +24,7 @@ INSTALLATION_DIRS+=	share/doc/OpenAG
 
 post-install:
 .for i in AUTHORS ChangeLog INSTALL NEWS README
-		${INSTALL_MAN} ${WRKSRC}/${i} ${DESTDIR}${PREFIX}/share/doc/OpenAG/${i}
+	${INSTALL_MAN} ${WRKSRC}/${i} ${DESTDIR}${PREFIX}/share/doc/OpenAG/${i}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"

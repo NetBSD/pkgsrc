@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/07/04 13:40:29 jperkin Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/03 11:45:43 rillig Exp $
 #
 
 PKGNAME=	nagios-plugin-radius-${PLUGINSVERSION}
@@ -12,7 +12,7 @@ DEPENDS+=	nagios-plugins-${PLUGINSVERSION}{,nb[0-9]*}:../../net/nagios-plugins
 DEPENDS+=	p5-Net-SNMP-[0-9]*:../../net/p5-Net-SNMP
 
 # linked with libradiusclient-ng.so.
-BUILDLINK_DEPMETHOD.radiusclient-ng= full
+BUILDLINK_DEPMETHOD.radiusclient-ng=	full
 
 BUILD_DEFS+=	PKG_SYSCONFBASE
 

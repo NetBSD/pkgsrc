@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/02/20 13:29:43 hauke Exp $
+# $NetBSD: Makefile,v 1.6 2019/11/03 11:45:50 rillig Exp $
 
 PKGNAME=	${PYPKGPREFIX}-bonjour-${PKGVER}
 DISTNAME=	bonjour-py-${PKGVER}
@@ -24,11 +24,11 @@ PYTHON_VERSIONS_ACCEPTED=	27 # Uses old exception syntax in 0.3
 REPLACE_PYTHON+=	examples/${ee}
 .endfor
 
-SUBST_CLASSES+=                 fix-paths
-SUBST_STAGE.fix-paths=          pre-configure
-SUBST_MESSAGE.fix-paths=        Fixing absolute paths.
-SUBST_FILES.fix-paths=          setup.py
-SUBST_SED.fix-paths=            -e 's,%PREFIX%,${PREFIX},g'
+SUBST_CLASSES+=			fix-paths
+SUBST_STAGE.fix-paths=		pre-configure
+SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
+SUBST_FILES.fix-paths=		setup.py
+SUBST_SED.fix-paths=		-e 's,%PREFIX%,${PREFIX},g'
 
 PLIST_SUBST+=	EGDIR=${EGDIR}
 PLIST_SUBST+=	DOCDIR=${DOCDIR}

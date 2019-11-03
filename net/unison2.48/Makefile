@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/10/28 20:04:21 gdt Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/03 11:45:56 rillig Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	unison-2.48.15v4
@@ -17,11 +17,11 @@ LICENSE=	gnu-gpl-v3
 MAKE_JOBS_SAFE=	no
 
 .if (${MACHINE_ARCH} == "arm")
-BUILDLINK_ABI_DEPENDS.ocaml+=	ocaml>=3.12.0nb2
+BUILDLINK_ABI_DEPENDS.ocaml+=		ocaml>=3.12.0nb2
 .else
-BUILDLINK_ABI_DEPENDS.ocaml+=	ocaml>=3.11.2
+BUILDLINK_ABI_DEPENDS.ocaml+=		ocaml>=3.11.2
 .endif
-BUILDLINK_API_DEPENDS.ocaml-lablgtk+= ocaml-lablgtk>=2.16.0
+BUILDLINK_API_DEPENDS.ocaml-lablgtk+=	ocaml-lablgtk>=2.16.0
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_TOOLS+=	gmake

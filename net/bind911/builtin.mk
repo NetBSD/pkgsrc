@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2018/09/09 13:11:38 taca Exp $
+# $NetBSD: builtin.mk,v 1.2 2019/11/03 11:45:30 rillig Exp $
 
 BUILTIN_PKG:=	bind
 
@@ -34,7 +34,7 @@ IS_BUILTIN.bind=	no
 IS_BUILTIN.bind=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.bind
+MAKEVARS+=		IS_BUILTIN.bind
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -45,7 +45,7 @@ MAKEVARS+=	IS_BUILTIN.bind
     defined(BUILTIN_VERSION.bind)
 BUILTIN_PKG.bind=	bind-${BUILTIN_VERSION.bind}
 .endif
-MAKEVARS+=	BUILTIN_PKG.bind
+MAKEVARS+=		BUILTIN_PKG.bind
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -72,7 +72,7 @@ USE_BUILTIN.bind!=							\
 .    endif
 .  endif  # PREFER.bind
 .endif
-MAKEVARS+=	USE_BUILTIN.bind
+MAKEVARS+=		USE_BUILTIN.bind
 
 ###
 ### The section below only applies if we are not including this file

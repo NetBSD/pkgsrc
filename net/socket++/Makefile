@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/11/06 13:36:39 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/11/03 11:45:53 rillig Exp $
 
 DISTNAME=		socket++-1.12.10
 PKGREVISION=		2
@@ -18,11 +18,11 @@ TEST_DIRS=		test
 TEST_TARGET=		check
 
 pre-configure:
-		cd ${WRKSRC};						\
-		${LOCALBASE}/bin/libtoolize --automake;                 \
-		aclocal -I .;						\
-		autoheader;						\
-		automake --add-missing;					\
-		autoconf
+	cd ${WRKSRC};						\
+	${LOCALBASE}/bin/libtoolize --automake;                 \
+	aclocal -I .;						\
+	autoheader;						\
+	automake --add-missing;					\
+	autoconf
 
 .include "../../mk/bsd.pkg.mk"

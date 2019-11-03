@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2019/08/11 13:22:24 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2019/11/03 11:45:48 rillig Exp $
 
 DISTNAME=	NetAddr-IP-4.079
 PKGNAME=	p5-${DISTNAME}
@@ -20,7 +20,7 @@ REPLACE_PERL+=	Lite/Util/Util.pm
 REPLACE_PERL+=	Lite/Util/lib/NetAddr/IP/UtilPP.pm
 REPLACE_PERL+=	Lite/Util/tlib/NetAddr/IP/Util_IS.pm
 
-SUBST_CLASSES+=	fixperl
+SUBST_CLASSES+=		fixperl
 SUBST_STAGE.fixperl=	pre-configure
 SUBST_MESSAGE.fixperl=	Fixing perl interpreter
 SUBST_FILES.fixperl+=	Lite/Util/Makefile.PL
