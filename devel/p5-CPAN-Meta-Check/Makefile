@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/08/11 13:18:55 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/11/03 10:15:50 rillig Exp $
 
 DISTNAME=	CPAN-Meta-Check-0.014
 PKGNAME=	p5-${DISTNAME}
@@ -18,7 +18,7 @@ LICENSE=	${PERL5_LICENSE}
 # perl 5.20.0 has 1.000019, but test wants following version
 BUILD_DEPENDS+=	p5-Module-Metadata>=1.00023:../../devel/p5-Module-Metadata
 
-BUILD_DEPENDS+= p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 
 PERL5_PACKLIST=		auto/CPAN/Meta/Check/.packlist
 

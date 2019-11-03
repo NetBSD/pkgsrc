@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/08/11 13:20:35 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/11/03 10:16:05 rillig Exp $
 #
 
 DISTNAME=	Test-Perl-Critic-1.04
@@ -14,9 +14,9 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Perl-Critic>=1.105:../../devel/p5-Perl-Critic
 
-USE_LANGUAGES=	# empty
+USE_LANGUAGES=		# empty
 PERL5_MODULE_TYPE=	Module::Build	
-PERL5_PACKLIST=	auto/Test/Perl/Critic/.packlist
+PERL5_PACKLIST=		auto/Test/Perl/Critic/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

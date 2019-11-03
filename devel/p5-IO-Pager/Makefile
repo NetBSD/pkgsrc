@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.25 2019/10/19 13:56:49 mef Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/03 10:15:55 rillig Exp $
 #
 
 DISTNAME=	IO-Pager-1.01
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IO/}
-EXTRACT_SUFX=  .tgz
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/IO-Pager

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/08/11 13:19:18 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/03 10:15:53 rillig Exp $
 
 DISTNAME=	Devel-Refcount-0.10
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/Devel-Refcount
 COMMENT=	Perl 5 module to obtain the REFCNT value of a referent
 LICENSE=	${PERL5_LICENSE}
 
-PERL5_PACKLIST=	auto/Devel/Refcount/.packlist
+PERL5_PACKLIST=		auto/Devel/Refcount/.packlist
 PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"

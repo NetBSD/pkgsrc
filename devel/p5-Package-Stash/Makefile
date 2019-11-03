@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/08/11 13:20:07 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/03 10:16:02 rillig Exp $
 
 DISTNAME=	Package-Stash-0.38
 PKGNAME=	p5-${DISTNAME}
@@ -17,9 +17,9 @@ DEPENDS+=	p5-Dist-CheckConflicts>=0.02:../../devel/p5-Dist-CheckConflicts
 DEPENDS+=	p5-Module-Implementation>=0.06:../../devel/p5-Module-Implementation
 DEPENDS+=	p5-Package-Stash-XS>=0.26:../../devel/p5-Package-Stash-XS
 
-BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
-BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+BUILD_DEPENDS+=		p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+BUILD_DEPENDS+=		p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+BUILD_DEPENDS+=		p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 #BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 
 USE_LANGUAGES=	# empty

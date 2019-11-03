@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/08/11 13:20:06 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/03 10:16:02 rillig Exp $
 
 DISTNAME=	PPI-XS-0.910
 PKGNAME=	p5-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	p5-PPI>=1.203:../../devel/p5-PPI
 
 BUILD_DEPENDS+=	p5-ExtUtils-AutoInstall>=0.63:../../devel/p5-ExtUtils-AutoInstall
 
-USE_LANGUAGES=c
+USE_LANGUAGES=	c
 PERL5_PACKLIST=	auto/PPI/XS/.packlist
 
 .include "../../lang/perl5/module.mk"
