@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4724 2019/11/03 02:19:30 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.4725 2019/11/03 04:01:52 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7518,3 +7518,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added emulators/gns3-gui version 2.2.1 [markd 2019-11-03]
 	Removed emulators/gns3 successor emulators/gns3-gui [markd 2019-11-03]
 	Updated devel/kdiff3 to 1.8.1 [gutteridge 2019-11-03]
+	Updated devel/kdiff3 to 1.8.1nb1 [gutteridge 2019-11-03]
