@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2019/11/03 12:12:56 nia Exp $
+
+OpenJK requires the original game files from Star Wars: Jedi Knight: Jedi
+Academy to be useful.
+
+If using the GOG version, you must extract the files from the setup exe
+using the innoextract package.
+
+The files will be in a directory named app. Inside the app directory, there
+is a GameData directory. Inside the GameData directory, there is a directory
+named base. This base directory must be moved to ~/.local/share/openjk
+
+===========================================================================
