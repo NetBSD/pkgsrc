@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/08/22 18:35:22 adam Exp $
+# $NetBSD: Makefile,v 1.13 2019/11/03 19:24:32 rillig Exp $
 
 DISTNAME=	fs-uae-launcher-3.0.0
 CATEGORIES=	emulators
@@ -25,8 +25,8 @@ INSTALL_TARGET=		install-data
 USE_TOOLS+=		gmake msgfmt
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-PYSETUPINSTALLARGS=	--install-lib=${PREFIX:Q}/share/fs-uae-launcher
-PYSETUPINSTALLARGS+=	--install-scripts=${PREFIX:Q}/share/fs-uae-launcher
+PYSETUPINSTALLARGS=		--install-lib=${PREFIX:Q}/share/fs-uae-launcher
+PYSETUPINSTALLARGS+=		--install-scripts=${PREFIX:Q}/share/fs-uae-launcher
 
 REPLACE_PYTHON+=	fs-uae-launcher
 

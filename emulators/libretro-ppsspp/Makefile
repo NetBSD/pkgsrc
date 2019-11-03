@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/01/03 21:44:32 nia Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/03 19:24:33 rillig Exp $
 
 PKGNAME=	libretro-ppsspp-1.7.5
 CATEGORIES=	emulators
@@ -20,16 +20,16 @@ GLSLANG_TAG=	29619b2312f7bc862221749f3f4d37c3e6a0dee2
 SPRIV_TAG=	be7425ef70231ab82930331959ab487d605d0482
 
 SITES.ppsspp.tar.gz= \
-    -https://github.com/hrydgard/ppsspp/archive/v${PKGVERSION_NOREV}.tar.gz
+	-https://github.com/hrydgard/ppsspp/archive/v${PKGVERSION_NOREV}.tar.gz
 
 SITES.ppsspp-armips.tar.gz= \
-    -https://github.com/Kingcom/armips/archive/${ARMIPS_TAG}.tar.gz
+	-https://github.com/Kingcom/armips/archive/${ARMIPS_TAG}.tar.gz
 
 SITES.ppsspp-glslang.tar.gz= \
-    -https://github.com/hrydgard/glslang/archive/${GLSLANG_TAG}.tar.gz
+	-https://github.com/hrydgard/glslang/archive/${GLSLANG_TAG}.tar.gz
 
 SITES.ppsspp-spriv.tar.gz= \
-    -https://github.com/KhronosGroup/SPIRV-Cross/archive/${SPRIV_TAG}.tar.gz
+	-https://github.com/KhronosGroup/SPIRV-Cross/archive/${SPRIV_TAG}.tar.gz
 
 EXTRACT_USING=	bsdtar
 WRKSRC=		${WRKDIR}/ppsspp-${PKGVERSION_NOREV}

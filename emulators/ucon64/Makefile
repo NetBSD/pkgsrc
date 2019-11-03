@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/07/07 22:47:57 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/03 19:24:34 rillig Exp $
 
 DISTNAME=		ucon64-2.2.0-src
 PKGNAME=		${DISTNAME:S/-src//}
@@ -12,10 +12,10 @@ LICENSE=		gnu-gpl-v2
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 
-CONFIGURE_ARGS+=	--with-libcd64
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
-CHECK_PORTABILITY_SKIP+=install_beos.sh
+CONFIGURE_ARGS+=		--with-libcd64
+GNU_CONFIGURE=			yes
+USE_TOOLS+=			gmake
+CHECK_PORTABILITY_SKIP+=	install_beos.sh
 
 INSTALLATION_DIRS=	bin lib share/examples/ucon64 share/doc/ucon64/images
 
