@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2019/10/25 14:14:49 mef Exp $
+# $NetBSD: Makefile,v 1.60 2019/11/03 10:15:56 rillig Exp $
 
 DISTNAME=	Module-Build-0.4229
 PKGNAME=	p5-${DISTNAME}0
@@ -15,7 +15,7 @@ DEPENDS+=	p5-inc-latest-[0-9]*:../../devel/p5-inc-latest
 TEST_DEPENDS+=	p5-CPAN-Meta>=2.142060:../../devel/p5-CPAN-Meta
 TEST_DEPENDS+=	p5-PAR-Dist-[0-9]*:../../devel/p5-PAR-Dist
 # For the tests:
-USE_TOOLS+=		perl
+USE_TOOLS+=	perl
 
 .include "options.mk"
 
