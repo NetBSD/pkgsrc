@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/07/21 22:24:03 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2019/11/03 19:30:33 rillig Exp $
 
 DISTNAME=	libchamplain-0.12.10
 PKGNAME=	libchamplain012-0.12.10
@@ -16,8 +16,8 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 
-CONFIGURE_ARGS+=--disable-gtk-doc
-CONFIGURE_ARGS+=--enable-memphis
+CONFIGURE_ARGS+=	--disable-gtk-doc
+CONFIGURE_ARGS+=	--enable-memphis
 
 PKGCONFIG_OVERRIDE+=	champlain-gtk.pc.in
 PKGCONFIG_OVERRIDE+=	champlain.pc.in
