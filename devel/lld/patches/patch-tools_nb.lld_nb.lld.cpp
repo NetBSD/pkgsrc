@@ -1,11 +1,13 @@
-$NetBSD: patch-tools_nb.lld_nb.lld.cpp,v 1.1 2019/11/03 12:11:27 kamil Exp $
+$NetBSD: patch-tools_nb.lld_nb.lld.cpp,v 1.2 2019/11/03 12:40:40 kamil Exp $
 
 [LLD] Add NetBSD support as a new flavor of LLD (nb.lld)
 https://reviews.llvm.org/D69755
 
---- tools/nb.lld/nb.lld.cpp.orig	2019-11-03 11:46:29.311435568 +0000
+Disable gnustack for NetBSD.
+
+--- tools/nb.lld/nb.lld.cpp.orig	2019-11-03 12:31:14.712069007 +0000
 +++ tools/nb.lld/nb.lld.cpp
-@@ -0,0 +1,218 @@
+@@ -0,0 +1,221 @@
 +//===- nb.lld.cpp - NetBSD LLD standalone linker --------------------------===//
 +//
 +// Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
@@ -101,6 +103,9 @@ https://reviews.llvm.org/D69755
 +
 +  // disable superfluous RUNPATH on NetBSD
 +  args.push_back("--disable-new-dtags");
++
++  // disable gnustack
++  args.push_back("-znognustack");
 +
 +  // set default image base address
 +  switch (targetTriple.getArch()) {
