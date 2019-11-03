@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2019/09/02 13:19:58 adam Exp $
+# $NetBSD: Makefile,v 1.69 2019/11/03 12:04:13 rillig Exp $
 
 DISTNAME=	multisync-gui-0.91.0
 PKGREVISION=	51
@@ -12,7 +12,7 @@ COMMENT=	GUI for libopensync
 USE_TOOLS+=	pkg-config
 HAS_CONFIGURE=	yes
 
-REPLACE_PYTHON= waf
+REPLACE_PYTHON=	waf
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.91.0
 
 LDFLAGS.DragonFly=	-lgthread-2.0
