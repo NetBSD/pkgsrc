@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.8 2019/10/28 09:33:29 kamil Exp $
+# $NetBSD: options.mk,v 1.9 2019/11/03 19:24:35 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.yabause
-PKG_SUPPORTED_OPTIONS=	openal opengl sdl
+PKG_OPTIONS_VAR=		PKG_OPTIONS.yabause
+PKG_SUPPORTED_OPTIONS=		openal opengl sdl
 PKG_OPTIONS_OPTIONAL_GROUPS=	GUI SDL
 PKG_OPTIONS_GROUP.GUI=		gtk qt
 PKG_OPTIONS_GROUP.SDL=		sdl sdl2

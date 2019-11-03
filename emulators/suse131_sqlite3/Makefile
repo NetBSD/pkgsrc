@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2017/09/16 19:26:51 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/03 19:24:34 rillig Exp $
 
 PKGNAME=	suse_sqlite3-${SUSE_VERSION}
 CATEGORIES=	emulators
-RPMPKGS+=	 libsqlite3-0-3.7.17-2.1.2.${SUSE_ARCH}
+RPMPKGS+=	libsqlite3-0-3.7.17-2.1.2.${SUSE_ARCH}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Linux compatibility package for sqlite3

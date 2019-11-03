@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2017/09/06 10:40:27 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/11/03 19:24:34 rillig Exp $
 
 DISTNAME=	x48-0.6.4
 PKGREVISION=	1
@@ -32,7 +32,7 @@ CONFIGURE_ARGS=	--disable-shm
 CPPFLAGS+=	-DHAVE_STDLIB
 CPPFLAGS+=	-DX11APPDEFS=\"${PREFIX}/${APPDEFS}\"
 
-SUBST_CLASSES=	fix-ad
+SUBST_CLASSES=		fix-ad
 SUBST_STAGE.fix-ad=	post-configure
 SUBST_MESSAGE.fix-ad=	Fix default rom path
 SUBST_FILES.fix-ad=	src/X48.ad
