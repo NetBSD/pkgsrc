@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/04/10 21:37:51 maya Exp $
+# $NetBSD: Makefile,v 1.9 2019/11/03 19:26:20 rillig Exp $
 
 DISTNAME=	fuse-ext2-0.0.7
 PKGREVISION=	2
@@ -12,10 +12,10 @@ LICENSE=	gnu-gpl-v2
 
 ONLY_FOR_PLATFORM=	Linux-*-* NetBSD-*-*
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	autoheader automake autoreconf gmake pkg-config
-USE_LANGUAGES=	c c++
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		autoheader automake autoreconf gmake pkg-config
+USE_LANGUAGES=		c c++
 INSTALLATION_DIRS=	lib/umview/modules
 
 pre-configure:
