@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2019/08/11 13:21:19 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2019/11/03 18:11:51 rillig Exp $
 
 DISTNAME=		OTP-${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}${!empty(DIST_VERSION_PATCH):?.:}${DIST_VERSION_PATCH}
 PKGNAME=		${DISTNAME:S/OTP-/erlang-/}
@@ -101,9 +101,8 @@ pre-build:
 versions: do-extract
 	@${ECHO} "# \$$NetBSD\$$" > ${.CURDIR}/versions.mk
 	@${ECHO} "# Do not edit, regenerate using 'make versions'" >> ${.CURDIR}/versions.mk
-	@${ECHO} "_VERSIONS= \\" >> ${.CURDIR}/versions.mk
 	${AWK} -F: '/OTP-${PKGVERSION_NOREV} :/{print $$2}' ${WRKSRC}/otp_versions.table |\
-		${SED} -e 's/# //g' -e 's/-/ /g' >> ${.CURDIR}/versions.mk
+		${SED} -e 's/# //g' -e 's/-/ /g' -e 's,^ ,_VERSIONS=	,' >> ${.CURDIR}/versions.mk
 
 post-install:
 	chmod -R go-w ${DESTDIR}${PREFIX}/lib/erlang/lib
