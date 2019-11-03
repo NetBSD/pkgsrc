@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2019/08/11 13:18:16 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/03 17:14:27 rillig Exp $
 
-DISTNAME=       wkhtmltox-0.12.4
+DISTNAME=	wkhtmltox-0.12.4
 PKGNAME=	wkhtmltopdf-0.12.4
 PKGREVISION=	4
-MASTER_SITES=   ${MASTER_SITE_GITHUB:=wkhtmltopdf/}
-GITHUB_PROJECT= wkhtmltopdf
-GITHUB_RELEASE= ${PKGVERSION_NOREV}
-EXTRACT_SUFX=   .tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=wkhtmltopdf/}
+GITHUB_PROJECT=	wkhtmltopdf
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
+EXTRACT_SUFX=	.tar.bz2
 
 CATEGORIES=	www print converters
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -18,7 +18,7 @@ USE_LANGUAGES+=	c c++ gnu++98
 USE_TOOLS+=	perl
 #USE_LIBTOOL=	yes
 
-BUILDLINK_TRANSFORM+=   opt:-std=gnu++11:-std=gnu++98 
+BUILDLINK_TRANSFORM+=	opt:-std=gnu++11:-std=gnu++98 
 
 SUBST_CLASSES+=		x11
 SUBST_MESSAGE.x11=	Fixing x11 options.

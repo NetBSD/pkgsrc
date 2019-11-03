@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/08/11 13:18:10 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/03 17:14:24 rillig Exp $
 #
 
 DISTNAME=	docx2txt-1.2
@@ -13,8 +13,8 @@ COMMENT=	Convert Microsoft .docx documents to simple text files
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	# none
-USE_TOOLS+=     perl:run unzip:run
-REPLACE_PERL=   docx2txt.pl
+USE_TOOLS+=	perl:run unzip:run
+REPLACE_PERL=	docx2txt.pl
 
 BINDIR=		${PREFIX}/bin
 EGDIR=		${PREFIX}/share/doc/docx2txt
@@ -27,11 +27,11 @@ SUBST_FILES.fix-etc=	*.pl README
 SUBST_SED.fix-etc=	-e 's,"/etc,"${PKG_SYSCONFDIR},g'
 SUBST_SED.fix-etc+=	-e 's, /etc , ${PKG_SYSCONFDIR} ,g'
 
-SUBST_CLASSES+=         unzip
-SUBST_STAGE.unzip=      pre-configure
-SUBST_MESSAGE.unzip=    Hardcoding unzip path
-SUBST_FILES.unzip=      *.pl *.config
-SUBST_SED.unzip=        -e 's,/usr/bin/unzip,${TOOLS_PATH.unzip},'
+SUBST_CLASSES+=		unzip
+SUBST_STAGE.unzip=	pre-configure
+SUBST_MESSAGE.unzip=	Hardcoding unzip path
+SUBST_FILES.unzip=	*.pl *.config
+SUBST_SED.unzip=	-e 's,/usr/bin/unzip,${TOOLS_PATH.unzip},'
 
 SUBST_CLASSES+=		suffix
 SUBST_STAGE.suffix=	pre-configure

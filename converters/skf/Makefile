@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2019/08/11 13:18:16 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2019/11/03 17:14:27 rillig Exp $
 
 DISTNAME=	skf_${VERSION}.4
 VERSION=	2.00
@@ -24,7 +24,7 @@ MAKE_JOBS_SAFE=		no
 
 REPLACE_PERL=	scripts/parse_uni.p
 
-PLIST_SUBST+=	VERSION=${VERSION}
+PLIST_SUBST+=		VERSION=${VERSION}
 PRINT_PLIST_AWK+=	{gsub(/${VERSION}/, "$${VERSION}");}
 
 .include "../../converters/libiconv/buildlink3.mk"

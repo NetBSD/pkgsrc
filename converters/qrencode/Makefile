@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/02/13 15:16:00 tnn Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/03 17:14:26 rillig Exp $
 #
 
 DISTNAME=	qrencode-4.0.2
@@ -18,7 +18,7 @@ USE_LIBTOOL=	yes
 
 # The tests are not actually installed anyway, and at least
 # one of these tests requires SDL.
-CONFIGURE_ARGS+= --without-tests
+CONFIGURE_ARGS+=	--without-tests
 
 PKGCONFIG_OVERRIDE+=	libqrencode.pc.in
 
