@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/07/21 22:24:33 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/03 17:14:24 rillig Exp $
 
 DISTNAME=	gbase-0.5
 PKGREVISION=	15
@@ -17,7 +17,7 @@ INSTALLATION_DIRS+=	bin
 BUILD_TARGET=	gbase
 
 do-install:
-		${INSTALL_PROGRAM} ${WRKSRC}/gbase ${DESTDIR}${PREFIX}/bin/gbase
+	${INSTALL_PROGRAM} ${WRKSRC}/gbase ${DESTDIR}${PREFIX}/bin/gbase
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
