@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/09/02 13:19:43 adam Exp $
+# $NetBSD: Makefile,v 1.9 2019/11/03 10:18:28 rillig Exp $
 
 DISTNAME=	hglist-0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ USE_LANGUAGES=	# none
 
 DEPENDS+=	${PYPKGPREFIX}-mercurial-[0-9]*:../../devel/py-mercurial
 
-PYTHON_VERSIONS_ACCEPTED=    27
+PYTHON_VERSIONS_ACCEPTED=	27
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
