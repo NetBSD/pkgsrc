@@ -1,0 +1,10 @@
+zipstream.py is a zip archive generator based on python 3.3's
+zipfile.py. It was created to generate a zip file generator for
+streaming (ie web apps). This is beneficial for when you want to
+provide a downloadable archive of a large collection of regular files,
+which would be infeasible to generate the archive prior to downloading
+or of a very large file that you do not want to store entirely on disk
+or on memory.
+
+The archive is generated as an iterator of strings, which, when
+joined, form the zip archive.
