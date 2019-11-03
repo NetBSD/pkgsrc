@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4733 2019/11/03 18:50:41 triaxx Exp $
+$NetBSD: CHANGES-2019,v 1.4734 2019/11/03 22:25:54 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7528,3 +7528,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/davical to 1.1.8nb3 [triaxx 2019-11-03]
 	Updated mail/rspamd to 2.1 [triaxx 2019-11-03]
 	Updated net/php-baikal to 0.6.0 [triaxx 2019-11-03]
+	Updated net/youtube-dl to 20191029 [leot 2019-11-03]
