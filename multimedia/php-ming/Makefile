@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2018/11/13 10:25:18 markd Exp $
+# $NetBSD: Makefile,v 1.31 2019/11/03 17:12:03 rillig Exp $
 
 .include "../../multimedia/ming/Makefile.common"
 PECL_VERSION=		${MING_VERSION}
@@ -22,7 +22,7 @@ USE_TOOLS+=		aclocal autoconf automake autoheader pkg-config
 
 # missing in 0.4.4 release tarball.
 post-extract:
-		${CP} ${FILESDIR}/config.m4 ${WRKSRC}/${PHPSETUPSUBDIR}
+	${CP} ${FILESDIR}/config.m4 ${WRKSRC}/${PHPSETUPSUBDIR}
 
 pre-configure:
 	cd ${WRKSRC}; sh ./autogen.sh
