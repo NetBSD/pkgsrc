@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2018/07/04 13:40:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.28 2019/11/03 19:28:49 rillig Exp $
 #
 
 DISTNAME=	xrick-021212
@@ -11,11 +11,11 @@ MAINTAINER=	pino@dohd.org
 HOMEPAGE=	http://www.bigorno.net/xrick/
 COMMENT=	Rick Dangerous clone for X
 
-RESTRICTED=	Copyright of graphics, images, maps, and sounds is questionable.
-NO_BIN_ON_CDROM=    ${RESTRICTED}
-NO_SRC_ON_CDROM=    ${RESTRICTED}
-NO_BIN_ON_FTP=	    ${RESTRICTED}
-NO_SRC_ON_FTP=	    ${RESTRICTED}
+RESTRICTED=		Copyright of graphics, images, maps, and sounds is questionable.
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
 
 USE_TOOLS+=		gmake gunzip
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2018/01/14 15:26:47 rillig Exp $
+# $NetBSD: Makefile,v 1.37 2019/11/03 19:28:48 rillig Exp $
 
 DISTNAME=	lbreakout-010315
 PKGREVISION=	12
@@ -17,9 +17,9 @@ USE_LANGUAGES=	c c++
 
 SETGIDGAME=	yes
 
-REQD_DIRS=	${VARBASE}/games
-REQD_FILES_PERMS= ${PREFIX}/share/games/lbreakout/lbreakout.hscr ${VARBASE}/games/lbreakout.hscr ${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
-SPECIAL_PERMS+=	bin/lbreakout ${SETGID_GAMES_PERMS}
+REQD_DIRS=		${VARBASE}/games
+REQD_FILES_PERMS=	${PREFIX}/share/games/lbreakout/lbreakout.hscr ${VARBASE}/games/lbreakout.hscr ${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
+SPECIAL_PERMS+=		bin/lbreakout ${SETGID_GAMES_PERMS}
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
