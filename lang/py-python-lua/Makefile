@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/10/26 12:52:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/03 19:04:05 rillig Exp $
 
 DISTNAME=		python-lua
 PKGNAME=		${PYPKGPREFIX}-python-lua-20170109
@@ -19,7 +19,7 @@ BUILD_DEPENDS+=		${PYPKGPREFIX}-yaml>=3.12:../../textproc/py-yaml
 
 USE_LANGUAGES=		#none
 
-PYTHON_VERSIONS_INCOMPATIBLE=  27
+PYTHON_VERSIONS_INCOMPATIBLE= 27
 REPLACE_PYTHON=		pythonlua/*.py tests/*.py *.py
 
 AUTO_MKDIRS=		yes

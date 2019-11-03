@@ -1,4 +1,4 @@
-# $NetBSD: libm.mk,v 1.1 2008/02/06 10:08:01 bjs Exp $
+# $NetBSD: libm.mk,v 1.2 2019/11/03 19:04:04 rillig Exp $
 #
 # XXX I took this from jslibmath.h.  If this is not correct, please feel
 # 	free to change it.  Our lang/spidermonkey package never uses
@@ -7,9 +7,9 @@
 .include "../../mk/bsd.fast.prefs.mk"
 
 JS_FDLIBM_PLATFORMS=	Linux-*-* IRIX-*-* SunOS-*-* \
- 	 	 	Solaris-*-* AIX-*-* HPUX-*-*
+			Solaris-*-* AIX-*-* HPUX-*-*
 
-JS_FDLIBM_MATH_REQUESTED?= 	no
+JS_FDLIBM_MATH_REQUESTED?=	no
 .for plat in ${JS_FDLIBM_PLATFORMS}
 .  if !empty(MACHINE_PLATFORM:M${plat})
 JS_FDLIBM_MATH_REQUESTED=	yes

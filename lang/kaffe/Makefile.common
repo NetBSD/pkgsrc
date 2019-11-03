@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2014/10/05 16:41:07 wiz Exp $
+# $NetBSD: Makefile.common,v 1.27 2019/11/03 19:04:02 rillig Exp $
 #
 # used by lang/kaffe-esound/Makefile
 # used by lang/kaffe-x11/Makefile
@@ -14,7 +14,7 @@ COMMENT=		Virtual machine capable of running Java(tm) code
 DEPENDS+=	jikes>=1.22:../../lang/jikes
 DEPENDS+=	fastjar>=0.93:../../archivers/fastjar
 
-EXTRACT_USING=	bsdtar
+EXTRACT_USING=		bsdtar
 GNU_CONFIGURE_PREFIX=	${JAVA_HOME}
 GNU_CONFIGURE_MANDIR=	${PREFIX}/${PKGMANDIR}
 JAVA_HOME=		${PREFIX}/java/kaffe

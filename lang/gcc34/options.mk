@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2016/09/30 13:16:59 sevan Exp $
+# $NetBSD: options.mk,v 1.8 2019/11/03 19:03:58 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc34
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran gcc-java gcc-objc gcc-ada
@@ -21,10 +21,10 @@ PKG_OPTIONS_LEGACY_VARS+=	BUILD_OBJC:gcc-objc
 ###
 .if !empty(PKG_OPTIONS:Mgcc-fortran)
 .  if !empty(PKG_OPTIONS:Mgcc-inplace-math)
-.  include "../../devel/gmp/inplace.mk"
+.    include "../../devel/gmp/inplace.mk"
 .  else
 CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
-.  include "../../devel/gmp/buildlink3.mk"
+.    include "../../devel/gmp/buildlink3.mk"
 .  endif
 .endif
 
@@ -54,8 +54,8 @@ CONFIGURE_ARGS+=	--enable-__cxa_atexit
 .endif
 
 .if !empty(PKG_OPTIONS:Mgcc-fortran)
-USE_TOOLS+=             chmod
-MAKE_ENV+=              ac_cv_path_ac_cv_prog_chmod=${TOOLS_CHMOD:Q}
+USE_TOOLS+=		chmod
+MAKE_ENV+=		ac_cv_path_ac_cv_prog_chmod=${TOOLS_CHMOD:Q}
 LANGS+=			f77
 .endif
 
@@ -74,25 +74,25 @@ LANGS+=			objc
 .endif
 
 .if !empty(PKG_OPTIONS:Mgcc-ada)
-PTHREAD_OPTS+=          require native
+PTHREAD_OPTS+=	require native
 LANGS+=		ada
 
 # Ada bootstrap compiler section
 # An Ada compiler is required to build the Ada compiler.
 # You may specify the path of any gcc/gnat Ada compiler
 # by providing the full path of the compiler (example) below:
-ALT_GCC=	/usr/pkg/bin/gnatgcc
+ALT_GCC=		/usr/pkg/bin/gnatgcc
 .  if defined(ALT_GCC)
-.     if exists(${ALT_GCC})
-ALT_GCC_RTS!=	${ALT_GCC} --print-file-name=adalib
-.	if !empty(ALT_GCC_RTS)
-RALT_GCC_RTS=	${ALT_GCC_RTS:S%${LOCALBASE}%%:S%/%%}
-.	else
+.    if exists(${ALT_GCC})
+ALT_GCC_RTS!=		${ALT_GCC} --print-file-name=adalib
+.      if !empty(ALT_GCC_RTS)
+RALT_GCC_RTS=		${ALT_GCC_RTS:S%${LOCALBASE}%%:S%/%%}
+.      else
 PKG_FAIL_REASON+=	"${ALT_GCC} does not appear to be an Ada compiler"
-.	endif
-.     else
+.      endif
+.    else
 PKG_FAIL_REASON+=	"Missing bootstrap Ada compiler"
-.     endif
+.    endif
 .  endif
 .  if !defined(ALT_GCC)
 PKG_FAIL_REASON+=	"An Ada bootstrap compiler must be specified to build Ada"

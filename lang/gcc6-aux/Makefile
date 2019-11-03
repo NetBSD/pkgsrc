@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/08/05 21:16:39 maya Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/03 19:04:00 rillig Exp $
 
 PKGNAME=	gcc6-aux-${SNAPSHOT}
 PKGREVISION=	${MAIN_PR}
@@ -49,12 +49,12 @@ BOOTSTRAP_COMPILER=	ada-bootstrap.${GARCH}.freebsd.100B.tar.bz2
 
 .if ${OPSYS} == NetBSD
 .  if !empty(OS_VERSION:M7.99.*)
-NSUFF=	8.0_DEV
+NSUFF=			8.0_DEV
 .  else
-NSUFF=	${OS_VERSION}
+NSUFF=			${OS_VERSION}
 .  endif
 .  if ${GARCH} == i386
-NELF=	elf
+NELF=			elf
 .  endif
 XLDF=			-lm
 .  if ${OS_VERSION:R} < 7
@@ -120,7 +120,7 @@ BUILDDIR=		${WRKDIR}/build
 NEWBSDIR=		${WRKDIR}/newbs/bootstrap
 SYSLIBDIR=		${WRKDIR}/lib
 CFG_SCRIPT=		${WRKSRC}/configure
-REVFILE= 		${WRKSRC}/gcc/REVISION
+REVFILE=		${WRKSRC}/gcc/REVISION
 PHASEFILE=		${WRKSRC}/gcc/DEV-PHASE
 BOOTSTRAP_PREFIX=	${WRKDIR}/bootstrap
 PKG_PREFIX=		${PREFIX}/gcc6-aux
@@ -130,39 +130,39 @@ BSFILENAME=		ada-bootstrap.${GARCH}.${LOWER_OPSYS}.${OS_VERSION:C/[A-Z_.-]//g}.t
 # testing if gcc6-aux is already installed - if so, use this compiler along with
 # its gnatlink, gnatbind, and gnatmake rather than the older bootstrap versions
 .if exists(${LOCALBASE}/gcc6-aux/bin/ada)
-FULL_GNATGCC=${LOCALBASE}/gcc6-aux/bin/ada
-FULL_GNATGXX=${LOCALBASE}/gcc6-aux/bin/g++
+FULL_GNATGCC=	${LOCALBASE}/gcc6-aux/bin/ada
+FULL_GNATGXX=	${LOCALBASE}/gcc6-aux/bin/g++
 .endif
 
 
 .if ${FULL_GNATGCC} == "NOT SET"
 # here we know we need to install the bootstrap compiler
 .  if defined(BOOTSTRAP_TRIPLET)
-FULL_GNATGCC=${BOOTSTRAP_PREFIX}/bin/gnatgcc
+FULL_GNATGCC=	${BOOTSTRAP_PREFIX}/bin/gnatgcc
 .  else
-FULL_GNATGCC=${BOOTSTRAP_PREFIX}/bin/gcc ${COMPILER_ABI_SWITCH}
-FULL_GNATGXX=${BOOTSTRAP_PREFIX}/bin/g++ ${COMPILER_ABI_SWITCH}
+FULL_GNATGCC=	${BOOTSTRAP_PREFIX}/bin/gcc ${COMPILER_ABI_SWITCH}
+FULL_GNATGXX=	${BOOTSTRAP_PREFIX}/bin/g++ ${COMPILER_ABI_SWITCH}
 .  endif
-DISTFILES+= ${BOOTSTRAP_COMPILER}
+DISTFILES+=	${BOOTSTRAP_COMPILER}
 SITES.${BOOTSTRAP_COMPILER}=	http://downloads.dragonlace.net/src/
-FULL_PATH=${BOOTSTRAP_PREFIX}/bin:/sbin:/bin:/usr/sbin:/usr/bin:${PREFIX}/sbin:${PREFIX}/bin
+FULL_PATH=	${BOOTSTRAP_PREFIX}/bin:/sbin:/bin:/usr/sbin:/usr/bin:${PREFIX}/sbin:${PREFIX}/bin
 .endif
 
 
 # for port maintenance, invoke "make mdi PLUS_BOOTSTRAPS=1"
 .if defined(PLUS_BOOTSTRAPS)
-ALL_BOOTSTRAPS= \
-   ada-bootstrap.i386.freebsd.100B.tar.bz2 \
-   ada-bootstrap.i386.netbsd.614.tar.bz2 \
-   ada-bootstrap.x86_64.dragonfly.41.tar.bz2 \
-   ada-bootstrap.x86_64.freebsd.84.tar.bz2 \
-   ada-bootstrap.x86_64.freebsd.100B.tar.bz2 \
-   ada-bootstrap.x86_64.netbsd.614.tar.bz2 \
-   ada-bootstrap.x86_64.solaris.511.tar.bz2
-.for BC in ${ALL_BOOTSTRAPS}
+ALL_BOOTSTRAPS=	\
+	ada-bootstrap.i386.freebsd.100B.tar.bz2 \
+	ada-bootstrap.i386.netbsd.614.tar.bz2 \
+	ada-bootstrap.x86_64.dragonfly.41.tar.bz2 \
+	ada-bootstrap.x86_64.freebsd.84.tar.bz2 \
+	ada-bootstrap.x86_64.freebsd.100B.tar.bz2 \
+	ada-bootstrap.x86_64.netbsd.614.tar.bz2 \
+	ada-bootstrap.x86_64.solaris.511.tar.bz2
+.  for BC in ${ALL_BOOTSTRAPS}
 SITES.${BC}=	http://downloads.dragonlace.net/src/
-.endfor
-DISTFILES= ${DISTNAME}.tar.bz2 ${ALL_BOOTSTRAPS}
+.  endfor
+DISTFILES=	${DISTNAME}.tar.bz2 ${ALL_BOOTSTRAPS}
 .endif
 
 # establish ada-aware compiler for use
@@ -180,7 +180,7 @@ MY_MAKE_ENV+=		lt_cv_path_SED=${TOOLS_SED}
 
 
 # The standard configuration options
-CONFIGURE_ARGS= 	--enable-languages=${LANGS:Q}
+CONFIGURE_ARGS=		--enable-languages=${LANGS:Q}
 CONFIGURE_ARGS+=	--build=${BLD_TARGET}
 CONFIGURE_ARGS+=	--prefix=${PKG_PREFIX:Q}
 CONFIGURE_ARGS+=	--enable-threads=posix
@@ -193,8 +193,8 @@ CONFIGURE_ARGS+=	--disable-libitm
 CONFIGURE_ARGS+=	${EXTRA_CONFARGS}
 
 # Automatic package list generation
-GENERATE_PLIST=  cd ${DESTDIR}${PREFIX};
-GENERATE_PLIST+= ${FIND} * \( -type f -or -type l \) | ${SORT} -dr;
+GENERATE_PLIST=		cd ${DESTDIR}${PREFIX};
+GENERATE_PLIST+=	${FIND} * \( -type f -or -type l \) | ${SORT} -dr;
 
 
 post-extract:
@@ -276,7 +276,7 @@ do-build:
 do-test: build test-ada test-fortran test-objc test-cxx test-c
 
 test-ada:
-.if (${OPSYS} == NetBSD) && (${MACHINE_ARCH} == x86_64)
+.  if (${OPSYS} == NetBSD) && (${MACHINE_ARCH} == x86_64)
 	# NetBSD has an extremely small default stacksize of 2MB, which is
 	# insufficient for the gnat.dg testsuite.
 	# specifically: entry_queues test on AMD64
@@ -285,20 +285,20 @@ test-ada:
 	cd ${BUILDDIR} && \
 	${ULIMIT_CMD_stacksize} && \
 	${SETENV} ${MY_MAKE_ENV} ${GMAKE} -sk check-ada
-.else
+.  else
 	cd ${BUILDDIR} && ${SETENV} ${MY_MAKE_ENV} DEJAGNU_TIMEOUT=30 \
 		${GMAKE} -sk check-ada
-.endif
+.  endif
 
 test-fortran:
-.if !empty(PKG_OPTIONS:Mfortran)
+.  if !empty(PKG_OPTIONS:Mfortran)
 	cd ${BUILDDIR} && ${SETENV} ${MY_MAKE_ENV} ${GMAKE} -sk check-fortran
-.endif
+.  endif
 
 test-objc:
-.if !empty(PKG_OPTIONS:Mobjc)
+.  if !empty(PKG_OPTIONS:Mobjc)
 	cd ${BUILDDIR} && ${SETENV} ${MY_MAKE_ENV} ${GMAKE} -sk check-objc
-.endif
+.  endif
 
 test-cxx:
 	# libstdc++ always ends with error status, so ignore it
