@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.1 2008/08/29 06:14:22 bjs Exp $
+# $NetBSD: options.mk,v 1.2 2019/11/03 11:55:29 rillig Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.iozone
 PKG_SUPPORTED_OPTIONS=	threads
 
 CHECK_BUILTIN.pthread:=	yes
-.  include "../../mk/pthread.builtin.mk"
+.include "../../mk/pthread.builtin.mk"
 CHECK_BUILTIN.pthread:=	no
 
 .if !empty(USE_BUILTIN.pthread:M[Yy][Ee][Ss])
