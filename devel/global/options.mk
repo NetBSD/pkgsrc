@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.2 2018/06/18 09:43:12 leot Exp $
+# $NetBSD: options.mk,v 1.3 2019/11/03 10:39:12 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.global
+PKG_OPTIONS_VAR=		PKG_OPTIONS.global
 PKG_OPTIONS_REQUIRED_GROUPS=	db
-PKG_OPTIONS_GROUP.db=	bdb sqlite3
-PKG_SUGGESTED_OPTIONS=	sqlite3
+PKG_OPTIONS_GROUP.db=		bdb sqlite3
+PKG_SUGGESTED_OPTIONS=		sqlite3
 
 .include "../../mk/bsd.options.mk"
 

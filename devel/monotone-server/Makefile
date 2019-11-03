@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2019/05/23 19:22:58 rillig Exp $
+# $NetBSD: Makefile,v 1.62 2019/11/03 10:39:20 rillig Exp $
 #
 
 DISTNAME=	monotone-1.0
@@ -22,8 +22,8 @@ NO_CHECKSUM=	yes
 RCD_SCRIPTS=		monotone
 
 PKG_SYSCONFSUBDIR=	monotone-server
-OWN_DIRS_PERMS=	${PKG_SYSCONFDIR}/keys \
-			${MONOTONE_USER} ${MONOTONE_GROUP} 700
+OWN_DIRS_PERMS=		${PKG_SYSCONFDIR}/keys \
+				${MONOTONE_USER} ${MONOTONE_GROUP} 700
 
 EXAMPLEDIR=		${PREFIX}/share/examples/monotone-server
 CONF_FILES_PERMS=	${EXAMPLEDIR}/monotonerc \
@@ -55,7 +55,7 @@ PKG_GECOS.${MONOTONE_USER}=	Monotone dedicated server
 PKG_HOME.${MONOTONE_USER}=	${MONOTONE_HOME}
 PKG_SHELL.${MONOTONE_USER}=	${SH}
 
-SUBST_CLASSES+=	vars
+SUBST_CLASSES+=		vars
 SUBST_STAGE.vars=	do-configure
 SUBST_MESSAGE.vars=	Configuring sources.
 SUBST_FILES.vars=	${WRKDIR}/monotone-server.7

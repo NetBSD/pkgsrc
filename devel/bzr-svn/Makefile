@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2019/09/02 13:19:41 adam Exp $
+# $NetBSD: Makefile,v 1.39 2019/11/03 10:39:07 rillig Exp $
 
 DISTNAME=	bzr-svn-${VER}
 PKGREVISION=	1
@@ -12,7 +12,7 @@ HOMEPAGE=	http://wiki.bazaar.canonical.com/ForeignBranches/Subversion
 COMMENT=	Foreign Subversion repository support for Bazaar
 LICENSE=	gnu-gpl-v2
 
-REPLACE_PYTHON= info.py wiki.py
+REPLACE_PYTHON=	info.py wiki.py
 
 DEPENDS+=	${PYPKGPREFIX}-subvertpy>=0.8.8:../../devel/py-subvertpy
 DEPENDS=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
@@ -26,7 +26,7 @@ USE_LANGUAGES=	#none
 #TEST_DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
 #TEST_TARGET=	check-verbose
 
-PYTHON_VERSIONS_ACCEPTED=	 27 # py-subvertpy
+PYTHON_VERSIONS_ACCEPTED=	27 # py-subvertpy
 
 .include "../../devel/bzr/plugin.mk"
 .include "../../lang/python/application.mk"

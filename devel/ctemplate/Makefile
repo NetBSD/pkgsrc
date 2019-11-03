@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/08/11 13:18:40 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/03 10:39:09 rillig Exp $
 
 DISTNAME=	ctemplate-2.3
 PKGREVISION=	5
@@ -16,11 +16,11 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		perl
 GNU_CONFIGURE=		yes
 
-PKGCONFIG_OVERRIDE=	libctemplate.pc
-PKGCONFIG_OVERRIDE+=	libctemplate_nothreads.pc
-PKGCONFIG_OVERRIDE_STAGE=post-build
-REPLACE_PERL=		src/template-converter
-REPLACE_PYTHON=		src/htmlparser/generate_fsm.py
+PKGCONFIG_OVERRIDE=		libctemplate.pc
+PKGCONFIG_OVERRIDE+=		libctemplate_nothreads.pc
+PKGCONFIG_OVERRIDE_STAGE=	post-build
+REPLACE_PERL=			src/template-converter
+REPLACE_PYTHON=			src/htmlparser/generate_fsm.py
 
 # In Python 3.x, print is a function, not a statement:
 #	print '\n'.join(...)
