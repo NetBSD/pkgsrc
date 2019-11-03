@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2019/11/02 16:25:27 rillig Exp $
+# $NetBSD: Makefile,v 1.56 2019/11/03 18:19:32 triaxx Exp $
 
-DISTNAME=	rspamd-1.9.4
-PKGREVISION=	1
+DISTNAME=	rspamd-2.1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vstakhov/}
 
@@ -17,14 +16,14 @@ DEPENDS+=	ragel-[0-9]*:../../devel/ragel
 
 USE_CMAKE=	yes
 USE_TOOLS+=	perl pkg-config
-USE_LANGUAGES=	c99
+USE_LANGUAGES=	c99 c++
 BUILD_DEFS+=	VARBASE
 
 # Not really true, but difficult to avoid picking up 5.3
 LUA_VERSIONS_ACCEPTED=	53
 
-CPPFLAGS.SunOS+=		-D__EXTENSIONS__
-BUILDLINK_TRANSFORM.Darwin+=	rm:-lrt
+CPPFLAGS.SunOS+=			-D__EXTENSIONS__
+BUILDLINK_FNAME_TRANSFORM.Darwin+=	-e "s|-lrt||g"
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/rspamd
 TEST_TARGET=	run-test
@@ -101,6 +100,7 @@ post-extract:
 .include "../../lang/lua/buildlink3.mk"
 .include "../../mail/gmime/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../security/libsodium/buildlink3.mk"
 .include "../../sysutils/file/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
