@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2017/08/01 17:40:11 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/11/03 19:28:47 rillig Exp $
 #
 
 DISTNAME=	galaxa.0.1
@@ -19,7 +19,7 @@ INSTALL_MAKE_FLAGS+=	INSTALLROOT=${DESTDIR}${PREFIX}
 
 SETGIDGAME=	yes
 
-SPECIAL_PERMS+=	bin/galaxa ${SETGID_GAMES_PERMS}
+SPECIAL_PERMS+=		bin/galaxa ${SETGID_GAMES_PERMS}
 CONF_FILES_PERMS+=	${PREFIX}/share/examples/galaxa/galaxa-highs.dat \
 			/var/games/galaxa-highs.dat \
 			${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}

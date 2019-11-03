@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/01/14 17:34:02 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/03 19:28:49 rillig Exp $
 
 DISTNAME=	xemeraldia-0.3
 PKGNAME=	xemeraldia-0.31
@@ -22,7 +22,7 @@ PLIST_SUBST=	GAMES_DIR=${GAMES_DIR}
 
 SETGIDGAME=	yes
 
-SPECIAL_PERMS+=	bin/xemeraldia ${SETGID_GAMES_PERMS}
+SPECIAL_PERMS+=		bin/xemeraldia ${SETGID_GAMES_PERMS}
 CONF_FILES_PERMS+=	/dev/null ${PREFIX}/${GAMES_DIR}/xemeraldia/xemeraldia.scores \
 			${GAMES_USER} ${GAMES_GROUP} ${GAMEMODE}
 
