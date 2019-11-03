@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2019/08/30 13:16:27 bouyer Exp $
+$NetBSD: distinfo,v 1.7 2019/11/03 10:07:16 maya Exp $
 
 SHA1 (xen411/ipxe-git-356f6c1b64d7a97746d1816cef8ca22bdd8d0b5d.tar.gz) = 272b8c904dc0127690eca2c5c20c67479e40da34
 RMD160 (xen411/ipxe-git-356f6c1b64d7a97746d1816cef8ca22bdd8d0b5d.tar.gz) = cfcb4a314c15da19b36132b27126f3bd9699d0e5
@@ -12,6 +12,7 @@ SHA1 (patch-.._ipxe_src_core_settings.c) = 1eab2fbd8b22dde2b8aa830ae7701603486f7
 SHA1 (patch-.._ipxe_src_net_fcels.c) = eda41b25c3d5f5bef33caa9a6af28c40cb91e66b
 SHA1 (patch-Config.mk) = c41005a60de2f94a72b0206030eb021c137653d3
 SHA1 (patch-Makefile) = 2f3a5eafc5039b149c98dd5e59c39a3197fd9264
+SHA1 (patch-always_inline) = 23201b2b63072e040630525416a0b61280492f93
 SHA1 (patch-docs_man_xl-disk-configuration.pod.5) = 03ff4c22dde1e1b60ab8750c8971ea057e479151
 SHA1 (patch-docs_man_xl.cfg.pod.5.in) = 951915037a9975b76cc5c41a0e1abe0a202a3696
 SHA1 (patch-docs_man_xl.conf.pod.5) = d77e3313750db315d540d7713c95cd54d6f02938
