@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2017/09/04 18:00:51 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2019/11/03 12:04:13 rillig Exp $
 #
 
 DISTNAME=		scmxx-0.9.0
@@ -15,7 +15,7 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake msgfmt
 LDFLAGS.SunOS+=		-lintl
 
-INSTALLATION_DIRS+= share/doc/scmxx share/examples/scmxx
+INSTALLATION_DIRS+=	share/doc/scmxx share/examples/scmxx
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/doc_sources.txt			\
