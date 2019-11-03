@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/08/11 13:22:14 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2019/11/03 11:45:46 rillig Exp $
 
 DISTNAME=	File-Rsync-0.49
 PKGNAME=	p5-${DISTNAME}
@@ -24,10 +24,10 @@ SUBST_MESSAGE.fix-paths=	Fixing absolute paths
 SUBST_FILES.fix-paths=		Rsync.pm
 SUBST_VARS.fix-paths+=		PREFIX
 
-PERL5_MODULE_TYPE=      MakeMaker
-PERL5_PACKLIST=         auto/File/Rsync/.packlist
+PERL5_MODULE_TYPE=	MakeMaker
+PERL5_PACKLIST=		auto/File/Rsync/.packlist
 
-USE_LANGUAGES=          # none
+USE_LANGUAGES=		# none
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

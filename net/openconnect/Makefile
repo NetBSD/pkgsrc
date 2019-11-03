@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/09/12 19:23:13 schmonz Exp $
+# $NetBSD: Makefile,v 1.13 2019/11/03 11:45:46 rillig Exp $
 
 DISTNAME=	openconnect-8.05
 CATEGORIES=	net security
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--disable-nls
 REPLACE_PYTHON=		trojans/tncc-wrapper.py
 REPLACE_BASH=		trojans/*.sh
 
-PYTHON_VERSIONS_ACCEPTED=27
+PYTHON_VERSIONS_ACCEPTED=	27
 
 INSTALLATION_DIRS=	sbin include lib ${PKGMANDIR}/man8
 

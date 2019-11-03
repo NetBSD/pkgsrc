@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/10/09 14:06:44 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/03 11:45:35 rillig Exp $
 
 DISTNAME=	gethost-0.03
 PKGREVISION=	1
@@ -14,7 +14,7 @@ CONFLICTS=	dnssec-tools-[0-9]*
 USE_FEATURES=		inet6
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-BUILD_TARGET=	gethost
+BUILD_TARGET=		gethost
 
 LIBS.SunOS=	-lnsl -lresolv -lsocket
 

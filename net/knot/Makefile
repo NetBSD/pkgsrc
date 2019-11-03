@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2019/08/21 14:19:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.48 2019/11/03 11:45:38 rillig Exp $
 
 DISTNAME=	knot-2.8.3
 CATEGORIES=	net
@@ -26,7 +26,7 @@ CONFIGURE_ARGS.NetBSD+=	--enable-recvmmsg=no
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "i386" 
-CFLAGS += -march=i586 
+CFLAGS +=	-march=i586 
 .endif 
 
 USE_LIBTOOL=	yes

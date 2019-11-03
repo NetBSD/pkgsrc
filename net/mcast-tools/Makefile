@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/23 17:18:36 asau Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/03 11:45:41 rillig Exp $
 
 DISTNAME=	mcast-tools-20061214
 PKGREVISION=	1
@@ -16,7 +16,7 @@ GNU_CONFIGURE=	yes
 
 USE_TOOLS+=	yacc lex
 
-INSTALLATION_DIRS= share/examples/mcast-tools
+INSTALLATION_DIRS=	share/examples/mcast-tools
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/pim6sd/pim6sd.conf.sample ${DESTDIR}${PREFIX}/share/examples/mcast-tools

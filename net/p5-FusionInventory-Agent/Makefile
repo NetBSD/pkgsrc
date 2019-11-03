@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/08/11 13:22:14 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/03 11:45:47 rillig Exp $
 
 DISTNAME=	FusionInventory-Agent-2.3.21
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,8 @@ COMMENT=	Fusion Inventory agent
 LICENSE=	gnu-gpl-v2
 
 PKG_SYSCONFSUBDIR?=	fusioninventory
-EGDIR=		${PREFIX}/share/examples/fusioninventory
-CONF_FILES+=	${EGDIR}/agent.cfg ${PKG_SYSCONFDIR}/agent.cfg
+EGDIR=			${PREFIX}/share/examples/fusioninventory
+CONF_FILES+=		${EGDIR}/agent.cfg ${PKG_SYSCONFDIR}/agent.cfg
 
 BUILD_DEFS+=	VARBASE
 
@@ -40,7 +40,7 @@ BUILD_DEPENDS+=	p5-Test-MockModule-[0-9]*:../../devel/p5-Test-MockModule
 BUILD_DEPENDS+=	p5-Test-MockObject-[0-9]*:../../devel/p5-Test-MockObject
 BUILD_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
 
-PERL5_PACKLIST= auto/FusionInventory/Agent/.packlist
+PERL5_PACKLIST=	auto/FusionInventory/Agent/.packlist
 
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 

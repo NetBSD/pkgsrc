@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.185 2019/10/06 11:19:15 tsutsui Exp $
+# $NetBSD: Makefile,v 1.186 2019/11/03 11:45:41 rillig Exp $
 #
 
 DISTNAME=	mikutter.3.9.6
@@ -32,7 +32,7 @@ WRKSRC=		${WRKDIR}/mikutter
 USE_LANGUAGES=	# none
 USE_TOOLS+=	pax
 
-REPLACE_RUBY=	mikutter.rb
+REPLACE_RUBY=		mikutter.rb
 REPLACE_RUBY_DIRS=	core
 
 INSTALLATION_DIRS+=	bin share/doc/mikutter share/applications share/mikutter

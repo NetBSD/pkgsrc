@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.5 2013/11/06 13:31:21 joerg Exp $
+# $NetBSD: options.mk,v 1.6 2019/11/03 11:45:34 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ekiga
-PKG_SUPPORTED_OPTIONS+= avahi dbus evolution-data-server gconf gnome notify
-PKG_SUGGESTED_OPTIONS+= avahi dbus evolution-data-server gconf gnome notify
+PKG_SUPPORTED_OPTIONS+=	avahi dbus evolution-data-server gconf gnome notify
+PKG_SUGGESTED_OPTIONS+=	avahi dbus evolution-data-server gconf gnome notify
 
 .include "../../mk/bsd.options.mk"
 

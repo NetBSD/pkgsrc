@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2019/07/21 22:25:33 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2019/11/03 11:45:45 rillig Exp $
 #
 
 DISTNAME=		ocamlnet-4.1.6
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	-without-nethttpd -disable-tcl -disable-apache \
 USE_TOOLS+=		gmake
 BUILD_TARGET=		all
 OCAML_USE_FINDLIB=	yes
-OCAML_FINDLIB_DIRS= \
+OCAML_FINDLIB_DIRS=	\
 	equeue netcamlbox netcgi2-plex netcgi2 netclient netmulticore \
 	netplex netshm netstring-pcre netstring netsys netunidata \
 	netzip rpc-auth-local rpc-generator rpc
