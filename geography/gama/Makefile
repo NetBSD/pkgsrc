@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/09/10 01:05:18 gdt Exp $
+# $NetBSD: Makefile,v 1.33 2019/11/03 19:30:33 rillig Exp $
 #
 
 DISTNAME=	gama-2.07
@@ -14,7 +14,7 @@ USE_LANGUAGES=	c c++11
 # Not documented, but apparent.
 USE_TOOLS+=	gmake
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
 
 INFO_FILES=	yes

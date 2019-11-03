@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/04 09:19:17 asau Exp $
+# $NetBSD: Makefile,v 1.7 2019/11/03 19:30:32 rillig Exp $
 #
 
 DISTNAME=		G7-1
@@ -21,7 +21,7 @@ CONFLICTS+=		epsg<6.13
 
 WRKSRC=			${WRKDIR}
 NO_BUILD=		yes
-DOCDIR=                 ${PREFIX}/share/doc/epsg
+DOCDIR=			${PREFIX}/share/doc/epsg
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
