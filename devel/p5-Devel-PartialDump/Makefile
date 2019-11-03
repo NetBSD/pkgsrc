@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/08/11 13:19:18 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/03 10:15:52 rillig Exp $
 
 DISTNAME=	Devel-PartialDump-0.20
 PKGNAME=	p5-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	p5-namespace-clean>=0.08:../../devel/p5-namespace-clean
 # For test target
 BUILD_DEPENDS+=	p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
 BUILD_DEPENDS+=	p5-Test-Simple>=1.001010:../../devel/p5-Test-Simple
-BUILD_DEPENDS+= p5-Class-Tiny-[0-9]*:../../devel/p5-Class-Tiny
+BUILD_DEPENDS+=	p5-Class-Tiny-[0-9]*:../../devel/p5-Class-Tiny
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Devel/PartialDump/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/08/11 13:20:07 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/03 10:16:02 rillig Exp $
 
 DISTNAME=	PadWalker-2.3
 PKGNAME=	p5-${DISTNAME:S/96/9.6/}
@@ -12,7 +12,7 @@ COMMENT=	Play with other peoples' lexical variables
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	c
-PERL5_PACKLIST= auto/PadWalker/.packlist
+PERL5_PACKLIST=	auto/PadWalker/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

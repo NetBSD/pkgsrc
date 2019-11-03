@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/08/11 13:20:06 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2019/11/03 10:16:02 rillig Exp $
 
 DISTNAME=	Package-DeprecationManager-0.17
 PKGNAME=	p5-${DISTNAME}
@@ -17,14 +17,14 @@ PERL5_PACKLIST=		auto/Package/DeprecationManager/.packlist
 DEPENDS+=	p5-Package-Stash-[0-9]*:../../devel/p5-Package-Stash
 DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+BUILD_DEPENDS+=		p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 #BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
-BUILD_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
-BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
-BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+BUILD_DEPENDS+=		p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
+BUILD_DEPENDS+=		p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+BUILD_DEPENDS+=		p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 # for make test
-BUILD_DEPENDS+=	p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
-BUILD_DEPENDS+=	p5-Sub-Name-[0-9]*:../../devel/p5-Sub-Name
+BUILD_DEPENDS+=		p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
+BUILD_DEPENDS+=		p5-Sub-Name-[0-9]*:../../devel/p5-Sub-Name
 
 DEPENDS+=	p5-Params-Util-[0-9]*:../../devel/p5-Params-Util
 DEPENDS+=	p5-Sub-Install-[0-9]*:../../devel/p5-Sub-Install

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/10/26 11:53:56 mef Exp $
+# $NetBSD: Makefile,v 1.28 2019/11/03 10:15:59 rillig Exp $
 #
 
 DISTNAME=	MooseX-Role-Parameterized-1.11
@@ -27,9 +27,9 @@ TEST_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 # for make test
 TEST_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
-USE_LANGUAGES=	# empty
+USE_LANGUAGES=		# empty
 PERL5_MODULE_TYPE=	Module::Install::Bundled
-PERL5_PACKLIST=	auto/MooseX/Role/Parameterized/.packlist
+PERL5_PACKLIST=		auto/MooseX/Role/Parameterized/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

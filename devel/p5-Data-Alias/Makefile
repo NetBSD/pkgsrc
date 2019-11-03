@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/08/11 13:19:08 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/03 10:15:51 rillig Exp $
 
 DISTNAME=	Data-Alias-1.21
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/Data-Alias
 COMMENT=	Comprehensive set of aliasing operations
 LICENSE=	${PERL5_LICENSE}
 
-PERL5_PACKLIST=	auto/Data/Alias/.packlist
+PERL5_PACKLIST=		auto/Data/Alias/.packlist
 PERL5_MODULE_TYPE=	Module::Install
 
 USE_LANGUAGES=	c

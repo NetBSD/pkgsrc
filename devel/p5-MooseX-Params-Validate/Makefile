@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/08/11 13:19:59 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/11/03 10:15:59 rillig Exp $
 #
 
 DISTNAME=	MooseX-Params-Validate-0.21
@@ -22,7 +22,7 @@ DEPENDS+=	p5-Sub-Exporter-[0-9]*:../../devel/p5-Sub-Exporter
 
 # for make test
 BUILD_DEPENDS+=	p5-Test-Exception>=0.21:../../devel/p5-Test-Exception
-BUILD_DEPENDS+= p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 
 .include "../../lang/perl5/module.mk"

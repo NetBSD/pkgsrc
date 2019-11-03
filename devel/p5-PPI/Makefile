@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/08/14 15:13:34 wen Exp $
+# $NetBSD: Makefile,v 1.33 2019/11/03 10:16:02 rillig Exp $
 
 DISTNAME=	PPI-1.270
 PKGNAME=	p5-${DISTNAME}
@@ -21,12 +21,12 @@ DEPENDS+=	p5-Params-Util>=1.00:../../devel/p5-Params-Util
 DEPENDS+=	p5-Task-Weaken-[0-9]*:../../devel/p5-Task-Weaken
 #DEPENDS+=	{perl>=5.8,p5-Storable>=2.17}:../../devel/p5-Storable
 
-BUILD_DEPENDS+=	p5-Class-Inspector>=1.22:../../devel/p5-Class-Inspector
-BUILD_DEPENDS+=	p5-File-Remove>=1.42:../../sysutils/p5-File-Remove
-BUILD_DEPENDS+=	p5-Test-NoWarnings>=0.084:../../devel/p5-Test-NoWarnings
-BUILD_DEPENDS+=	p5-Test-Object>=0.07:../../devel/p5-Test-Object
+BUILD_DEPENDS+=		p5-Class-Inspector>=1.22:../../devel/p5-Class-Inspector
+BUILD_DEPENDS+=		p5-File-Remove>=1.42:../../sysutils/p5-File-Remove
+BUILD_DEPENDS+=		p5-Test-NoWarnings>=0.084:../../devel/p5-Test-NoWarnings
+BUILD_DEPENDS+=		p5-Test-Object>=0.07:../../devel/p5-Test-Object
 #BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.86}:../../devel/p5-Test-Simple
-BUILD_DEPENDS+=	p5-Test-SubCalls>=1.07:../../devel/p5-Test-SubCalls
+BUILD_DEPENDS+=		p5-Test-SubCalls>=1.07:../../devel/p5-Test-SubCalls
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/PPI/.packlist
