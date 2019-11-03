@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/10/03 00:20:16 asau Exp $
+# $NetBSD: Makefile,v 1.32 2019/11/03 17:14:26 rillig Exp $
 #
 
 DISTNAME=		recode-3.6
@@ -11,9 +11,9 @@ HOMEPAGE=		http://www.gnu.org/software/recode/recode.html
 COMMENT=		Convert files between character sets and usages
 LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2.1
 
-USE_PKGLOCALEDIR=	yes
-GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=		yes
+GNU_CONFIGURE=			yes
+USE_LIBTOOL=			yes
 BROKEN_GETTEXT_DETECTION=	yes
 
 INFO_FILES=		yes
