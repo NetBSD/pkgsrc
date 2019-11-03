@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/08/11 13:21:56 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/03 17:04:25 rillig Exp $
 
 DISTNAME=	App-MrShell-2.0207
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Mr. Shell runs a command on multiple hosts
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/App/MrShell/.packlist
+PERL5_PACKLIST=	auto/App/MrShell/.packlist
 
 DEPENDS+=	p5-Config-Tiny-[0-9]*:../../devel/p5-Config-Tiny
 DEPENDS+=	p5-POE-[0-9]*:../../devel/p5-POE

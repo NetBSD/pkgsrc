@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2019/08/22 12:23:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.32 2019/11/03 17:04:25 rillig Exp $
 
 VERSION=	2.0.3
 GITHUB_PROJECT=	opam
@@ -14,7 +14,7 @@ COMMENT=	OCaml package manager
 LICENSE=	gnu-lgpl-v3
 MAKE_JOBS_SAFE=	no
 
-HAS_CONFIGURE=		yes
+HAS_CONFIGURE=	yes
 OCAML_USE_DUNE=	yes
 
 OCAML_FINDLIB_DIRS+=	opam-installer

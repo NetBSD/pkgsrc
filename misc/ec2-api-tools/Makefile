@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/08 09:57:20 asau Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/03 17:04:21 rillig Exp $
 #
 
 PKGNAME=	ec2-api-tools-1.3.62308
@@ -26,11 +26,11 @@ REPLACE.bash.old=	/usr/bin/env.*bash
 REPLACE.bash.new=	/bin/sh
 REPLACE_FILES.bash=	bin/*
 
-SUBST_CLASSES+=		java-path
-SUBST_STAGE.java-path=	pre-configure
-SUBST_FILES.java-path=	bin/ec2-cmd
-SUBST_VARS.java-path+=	PKG_JAVA_HOME
-SUBST_MESSAGE.java-path=Fixing path to Java interpreter.
+SUBST_CLASSES+=			java-path
+SUBST_STAGE.java-path=		pre-configure
+SUBST_FILES.java-path=		bin/ec2-cmd
+SUBST_VARS.java-path+=		PKG_JAVA_HOME
+SUBST_MESSAGE.java-path=	Fixing path to Java interpreter.
 
 SUBST_CLASSES+=		ec2-home
 SUBST_STAGE.ec2-home=	pre-configure
