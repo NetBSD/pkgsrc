@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4725 2019/11/03 04:01:52 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.4726 2019/11/03 11:08:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7519,3 +7519,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed emulators/gns3 successor emulators/gns3-gui [markd 2019-11-03]
 	Updated devel/kdiff3 to 1.8.1 [gutteridge 2019-11-03]
 	Updated devel/kdiff3 to 1.8.1nb1 [gutteridge 2019-11-03]
+	Updated multimedia/libdvdread to 6.0.2 [adam 2019-11-03]
+	Updated multimedia/libdvdnav to 6.0.1 [adam 2019-11-03]
