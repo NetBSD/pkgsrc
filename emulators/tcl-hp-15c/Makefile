@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/08/31 09:24:25 hauke Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/03 19:24:34 rillig Exp $
 
 DISTNAME=	HP-15C_4.0.00_Source
 PKGNAME=	tcl-hp-15c-${PKGVER}
@@ -12,12 +12,12 @@ HOMEPAGE=	http://hp-15c.homepage.t-online.de/
 COMMENT=	Simulated HP-15C RPN calculator
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=       tk>=8.3.2:../../x11/tk
+DEPENDS+=	tk>=8.3.2:../../x11/tk
 
-NO_CONFIGURE=   YES
-NO_BUILD=       YES
+NO_CONFIGURE=	YES
+NO_BUILD=	YES
 
-USE_TOOLS+=     unzip pax find sed
+USE_TOOLS+=	unzip pax find sed
 
 HP15CDIR=	share/tcl-hp-15c
 
@@ -25,7 +25,7 @@ INSTALLATION_DIRS=	share/fonts/X11/TTF
 INSTALLATION_DIRS+=	${HP15CDIR}
 INSTALLATION_DIRS+=	bin
 
-FONTS_DIRS.ttf= 	${PREFIX}/share/fonts/X11/TTF
+FONTS_DIRS.ttf=		${PREFIX}/share/fonts/X11/TTF
 
 do-extract:
 	${MKDIR} ${WRKSRC} ; \

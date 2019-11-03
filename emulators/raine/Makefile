@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/08/11 13:20:58 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2019/11/03 19:24:33 rillig Exp $
 #
 
 DISTNAME=	raines-0.43.3
@@ -24,7 +24,7 @@ PTHREAD_OPTS+=	require
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 
 # Uses i386 assembler.
-ONLY_FOR_PLATFORM=  *-*-i386
+ONLY_FOR_PLATFORM=	*-*-i386
 
 post-build:
 	(${ECHO} "#!${SH}";					\

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/09/04 18:08:23 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/11/03 19:24:33 rillig Exp $
 
 DISTNAME=	realboy-0.2.2
 PKGREVISION=	1
@@ -11,7 +11,7 @@ HOMEPAGE=	https://realboyemulator.wordpress.com/
 COMMENT=	Complete, fast, yet accurate Game Boy/Game Boy Color emulator
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 INSTALLATION_DIRS=	share/doc/realboy
 
 post-install:

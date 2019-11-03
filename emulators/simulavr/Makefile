@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2019/04/25 07:32:53 maya Exp $
+# $NetBSD: Makefile,v 1.29 2019/11/03 19:24:34 rillig Exp $
 #
 DISTNAME=		simulavr-1.0.0
 PKGREVISION=		5
@@ -77,7 +77,7 @@ SUBST_SED.intrpt0=	-e 's/SIG_INTERRUPT0/INT0_vect/g'
 
 SUBST_CLASSES+=		makeinfo
 SUBST_STAGE.makeinfo=	post-configure
-SUBST_MESSAGE.makeinfo= set MAKEINFO path (to avoid work-directory references included)
+SUBST_MESSAGE.makeinfo=	set MAKEINFO path (to avoid work-directory references included)
 SUBST_FILES.makeinfo=	examples/anacomp/Makefile.in
 SUBST_FILES.makeinfo+=	examples/python/Makefile.in
 SUBST_SED.makeinfo=	-e 's,@MAKEINFO@,${PREFIX}/bin/makeinfo,g'

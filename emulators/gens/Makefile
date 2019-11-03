@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2019/07/21 22:24:46 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2019/11/03 19:24:32 rillig Exp $
 #
 
 DISTNAME=		gens-rc3
@@ -20,7 +20,7 @@ WRKSRC=			${WRKDIR}/GensForLinux
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config
 
-INSTALLATION_DIRS+= share/doc/gens
+INSTALLATION_DIRS+=	share/doc/gens
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
