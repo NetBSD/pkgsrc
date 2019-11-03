@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.3 2008/04/12 22:43:02 jlam Exp $
+# $NetBSD: options.mk,v 1.4 2019/11/03 19:03:57 rillig Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.elk
-PKG_SUPPORTED_OPTIONS= xaw motif
+PKG_SUPPORTED_OPTIONS=	xaw motif
 PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
@@ -23,7 +23,7 @@ CONFIGURE_ENV+=		WITH_XAW="yes"
 CONFIGURE_ENV+=		WITH_XAW="no"
 .  endif
 .  if !empty(PKG_OPTIONS:Mmotif)
-.  include "../../mk/motif.buildlink3.mk"
+.    include "../../mk/motif.buildlink3.mk"
 PLIST.motif=		yes
 .  endif
 .else

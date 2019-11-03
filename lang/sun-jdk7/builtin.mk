@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2014/09/03 12:47:37 tron Exp $
+# $NetBSD: builtin.mk,v 1.4 2019/11/03 19:04:09 rillig Exp $
 
 BUILTIN_PKG:=	sun-jdk7
 
@@ -13,7 +13,7 @@ BUILTIN_FIND_FILES.JDK7=	\
 ### program to find the default 1.7 JDK if it exists.
 ###
 .if ${OPSYS} == "Darwin"
-_JAVA_HOME_ANSWER!=	\
+_JAVA_HOME_ANSWER!=		\
 	if [ -x /usr/libexec/java_home ]; then \
 		result=`/usr/libexec/java_home -v 1.7 2> /dev/null`; \
 		if [ $$? -eq 0 ]; then \
@@ -38,7 +38,7 @@ IS_BUILTIN.sun-jdk7=	yes
 IS_BUILTIN.sun-jdk7=	no
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.sun-jdk7
+MAKEVARS+=		IS_BUILTIN.sun-jdk7
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -48,13 +48,13 @@ MAKEVARS+=	IS_BUILTIN.sun-jdk7
     !empty(IS_BUILTIN.sun-jdk7:M[yY][eE][sS]) && \
     empty(JDK7:M__nonexistent__)
 
-BUILTIN_VERSION.sun-jdk7!= ${JDK7} -version 2>&1 | \
-	${AWK} '{print $$2; exit}' | \
+BUILTIN_VERSION.sun-jdk7!=	${JDK7} -version 2>&1 | \
+				${AWK} '{print $$2; exit}' | \
 	${AWK} '{sub(/^1\./,"");sub(/_/,".");print $$1}'
 
 BUILTIN_PKG.sun-jdk7=	sun-jdk7-${BUILTIN_VERSION.sun-jdk7}
 .endif
-MAKEVARS+=	BUILTIN_PKG.sun-jdk7
+MAKEVARS+=		BUILTIN_PKG.sun-jdk7
 
 ###
 ### Determine whether we should use the built-in implementation if it
