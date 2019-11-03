@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2019/08/20 00:14:25 schmonz Exp $
+# $NetBSD: Makefile,v 1.39 2019/11/03 11:45:56 rillig Exp $
 #
 
 DISTNAME=		ucspi-ssl-0.10.11
@@ -52,30 +52,30 @@ do-test:
 		./package/rts
 
 do-install: do-install-sslperl
-.	for i in ${SSL_SCRIPTS}
+.for i in ${SSL_SCRIPTS}
 	  ${INSTALL_SCRIPT} ${WRKSRC}/command/${i} ${DESTDIR}${PREFIX}/bin
-.	endfor
+.endfor
 
-.	for i in ${SSL_PROGRAMS}
+.for i in ${SSL_PROGRAMS}
 	  ${INSTALL_PROGRAM} ${WRKSRC}/command/${i} ${DESTDIR}${PREFIX}/bin
-.	endfor
+.endfor
 
-.	for i in ${SSL_MAN1PAGES}
+.for i in ${SSL_MAN1PAGES}
 	  ${INSTALL_MAN} ${WRKSRC}/man/${i} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-.	endfor
+.endfor
 
-.	for i in ${SSL_MAN2PAGES}
+.for i in ${SSL_MAN2PAGES}
 	  ${INSTALL_MAN} ${WRKSRC}/man/${i} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man2
-.	endfor
+.endfor
 
-.	for i in dh1024.pem
+.for i in dh1024.pem
 	  ${INSTALL_DATA} ${WRKSRC}/etc/${i} ${DESTDIR}${EGDIR}
-.	endfor
+.endfor
 
-.	for i in CERTS CHAIN-SSL CHANGES TLSVERSION_CIPHERSUITES TLS_1_3 TODO UCSPI-SSL
+.for i in CERTS CHAIN-SSL CHANGES TLSVERSION_CIPHERSUITES TLS_1_3 TODO UCSPI-SSL
 	  ${INSTALL_DATA} ${WRKSRC}/doc/${i} \
 	    ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-.	endfor
+.endfor
 
 .include "../../net/fehqlibs/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

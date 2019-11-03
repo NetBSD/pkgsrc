@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/08/11 13:22:06 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2019/11/03 11:45:29 rillig Exp $
 
 DISTNAME=	argus-3.7
 PKGREVISION=	5
@@ -21,7 +21,7 @@ DEPENDS+=	p5-Crypt-DES-[0-9]*:../../security/p5-Crypt-DES
 DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
 
 USE_TOOLS+=		perl:run
-HAS_CONFIGURE=	yes
+HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	${WRKSRC}/Configure
 CONFIGURE_ARGS+=	--bin_dir ${PREFIX}/bin
 CONFIGURE_ARGS+=	--sbin_dir ${PREFIX}/sbin
@@ -35,7 +35,7 @@ REPLACE_PERL+=		${WRKSRC}/built/argus-config
 
 RCD_SCRIPTS=		argusd
 
-INSTALL_MAKE_FLAGS+= 	INSTALL_BIN=${DESTDIR}${PREFIX}/bin \
+INSTALL_MAKE_FLAGS+=	INSTALL_BIN=${DESTDIR}${PREFIX}/bin \
 			INSTALL_SBIN=${DESTDIR}${PREFIX}/sbin \
 			INSTALL_CGI=${DESTDIR}${PREFIX}/libexec/cgi-bin \
 			INSTALL_LIB=${DESTDIR}${PREFIX}/lib/argus \

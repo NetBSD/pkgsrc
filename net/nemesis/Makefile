@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/09/03 08:36:57 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/03 11:45:43 rillig Exp $
 
 DISTNAME=	nemesis-1.4
 PKGREVISION=	2
@@ -9,7 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://jeff.wwti.com/nemesis/
 COMMENT=	Nemesis is a command-line UNIX network packet injection suite
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libnet-includes=${BUILDLINK_PREFIX.libnet10}/include/libnet10
 CONFIGURE_ARGS+=	--with-libnet-libs=${BUILDLINK_PREFIX.libnet10}/lib/libnet10
 

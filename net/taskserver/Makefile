@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/07/20 22:46:42 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/03 11:45:54 rillig Exp $
 
 DISTNAME=	taskd-1.1.0
 PKGNAME=	${DISTNAME:S/taskd/taskserver/}
@@ -42,7 +42,7 @@ INSTALLATION_DIRS+=	${EGDIR}/pki
 
 BUILD_DEFS+=	TASKD_USER TASKD_GROUP TASKD_DATA VARBASE
 
-REPLACE_SH=	src/taskdctl
+REPLACE_SH=		src/taskdctl
 SUBST_CLASSES+=		abspath
 SUBST_STAGE.abspath=	post-configure
 SUBST_MESSAGE.abspath=	Set absolute paths.

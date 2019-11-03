@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/11/14 15:25:28 hauke Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/03 11:45:53 rillig Exp $
 
 DISTNAME=	siproxd-0.8.2
 PKGREVISION=	2
@@ -24,8 +24,8 @@ SIPROXD_HOME?=		${VARBASE}/chroot/siproxd
 PKG_GROUPS=		${SIPROXD_GROUP}
 PKG_USERS=		${SIPROXD_USER}:${SIPROXD_GROUP}
 
-PKG_GECOS.${SIPROXD_USER}= SIP proxy
-PKG_HOME.${SIPROXD_USER}=  ${SIPROXD_HOME}
+PKG_GECOS.${SIPROXD_USER}=	SIP proxy
+PKG_HOME.${SIPROXD_USER}=	${SIPROXD_HOME}
 
 PKG_GROUPS_VARS+=	SIPROXD_GROUP
 PKG_USERS_VARS+=	SIPROXD_USER
@@ -54,9 +54,9 @@ INSTALLATION_DIRS=	sbin ${DOCDIR} ${EGDIR}
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=      doc/siproxd.conf.example
-SUBST_MESSAGE.paths=    performing pathname substitutions
-SUBST_VARS.paths=       VARBASE PREFIX PKG_SYSCONFDIR SIPROXD_USER SIPROXD_HOME
+SUBST_FILES.paths=	doc/siproxd.conf.example
+SUBST_MESSAGE.paths=	performing pathname substitutions
+SUBST_VARS.paths=	VARBASE PREFIX PKG_SYSCONFDIR SIPROXD_USER SIPROXD_HOME
 
 post-install:
 .for ff in README RELNOTES doc/FAQ doc/KNOWN_BUGS doc/RFC3261_compliance.txt

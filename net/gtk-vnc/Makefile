@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2019/09/18 14:17:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.70 2019/11/03 11:45:36 rillig Exp $
 #
 
 DISTNAME=	gtk-vnc-0.5.2
@@ -20,7 +20,7 @@ PKGCONFIG_OVERRIDE+=	gtk-vnc-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	gtk-vnc-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gvnc-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	gvncpulse-1.0.pc.in
-PY_PATCHPLIST=	yes
+PY_PATCHPLIST=		yes
 
 CONFIGURE_ARGS+=	--with-coroutine=gthread
 
@@ -50,7 +50,7 @@ SUBST_STAGE.mapfile=	pre-build
 SUBST_FILES.mapfile=	gtk3-build/src/Makefile
 SUBST_SED.mapfile=	-e '/VERSION_SCRIPT_FLAGS.*GTK_VNC_VERSION_FILE/d'
 
-#VIEW_REQUIRED=0.6.0
+#VIEW_REQUIRED=	0.6.0
 #libview
 
 .include "../../devel/glib2/buildlink3.mk"

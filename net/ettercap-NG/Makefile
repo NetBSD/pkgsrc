@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2017/05/12 12:01:01 jperkin Exp $
+# $NetBSD: Makefile,v 1.28 2019/11/03 11:45:34 rillig Exp $
 
 DISTNAME=	ettercap-NG-0.7.3
 PKGREVISION=	14
@@ -44,7 +44,7 @@ SUBST_MESSAGE.conf=	Fixing configuration script.
 CONF_FILES=	${PREFIX}/share/examples/ettercap-NG/etter.conf \
 		${PKG_SYSCONFDIR}/etter.conf
 
-INSTALLATION_DIRS+=	 share/examples/ettercap-NG
+INSTALLATION_DIRS+=	share/examples/ettercap-NG
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/share/etter.conf \

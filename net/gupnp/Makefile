@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2019/08/20 13:17:48 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2019/11/03 11:45:36 rillig Exp $
 
 DISTNAME=	gupnp-1.0.3
 PKGREVISION=	4
@@ -16,10 +16,10 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 
 PKGCONFIG_OVERRIDE+=	gupnp-1.0.pc.in
-REPLACE_PYTHON=	tools/gupnp-binding-tool
+REPLACE_PYTHON=		tools/gupnp-binding-tool
 
-TEST_TARGET=	check
-#CFLAGS=-O0 -g
+TEST_TARGET=		check
+#CFLAGS=		-O0 -g
 #CONFIGURE_ARGS+=	CFLAGS=${CFLAGS:Q}
 #CONFIGURE_ARGS+=	--disable-shared
 #CONFIGURE_ARGS+=	--enable-static

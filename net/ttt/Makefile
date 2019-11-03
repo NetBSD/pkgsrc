@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2018/03/12 11:17:23 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2019/11/03 11:45:56 rillig Exp $
 #
 
 DISTNAME=	ttt-1.8.2
@@ -10,12 +10,12 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.sonycsl.co.jp/person/kjc/software.html
 COMMENT=	Tele Traffic Tapper
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}
 CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
-INSTALL_TARGET=	install install-man
+INSTALL_TARGET=		install install-man
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \
 			exec_prefix=${DESTDIR}${PREFIX} \
 			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
@@ -28,13 +28,13 @@ REPLACE_FILES.sys-BLTWISH=	ttt.tcl
 
 .include "../../mk/bsd.prefs.mk"
 
-CFLAGS+=	-DUSE_INTERP_RESULT
+CFLAGS+=		-DUSE_INTERP_RESULT
 CONFIGURE_ARGS+=	ttt_cv_prog_cflags=${CFLAGS:Q}
 
 .if ${OPSYS} == "NetBSD"
-.if empty(OS_VERSION:M1.[56]*)
+.  if empty(OS_VERSION:M1.[56]*)
 .include "../../mk/pthread.buildlink3.mk"
-.endif
+.  endif
 .endif
 
 .include "options.mk"

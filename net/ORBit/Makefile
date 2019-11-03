@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2017/07/30 22:47:53 wiz Exp $
+# $NetBSD: Makefile,v 1.127 2019/11/03 11:45:29 rillig Exp $
 
 DISTNAME=	ORBit-0.5.17
 PKGREVISION=	2
@@ -14,7 +14,7 @@ USE_TOOLS+=		bison flex gmake xgettext
 USE_LIBTOOL=		YES
 PTHREAD_AUTO_VARS=	YES
 
-GNU_CONFIGURE=		YES
+GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	LIBWRAP_PATH=${BUILDLINK_PREFIX.tcp_wrappers}/lib/libwrap.a
 CONFIGURE_ENV+=	LIB_WRAP="-lwrap"
 

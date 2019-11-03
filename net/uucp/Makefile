@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2017/11/26 10:54:19 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/03 11:45:57 rillig Exp $
 
 DISTNAME=	uucp-1.07
 PKGREVISION=	7
@@ -77,11 +77,11 @@ UUCPD_CPPFLAGS.${OPSYS}+=	-DSUPPORT_UTMP
 .if exists(/usr/include/utmpx.h)
 UUCPD_CPPFLAGS.${OPSYS}+=	-DSUPPORT_UTMPX
 .endif
-UUCPD_CPPFLAGS.Darwin=	-DSUPPORT_UTMP
-UUCPD_CPPFLAGS.*=	# empty
-UUCPD_LIBS.Darwin=	# empty
-UUCPD_LIBS.*=		-lcrypt -lutil
-OPSYSVARS+=		UUCPD_CPPFLAGS UUCPD_LIBS
+UUCPD_CPPFLAGS.Darwin=		-DSUPPORT_UTMP
+UUCPD_CPPFLAGS.*=		# empty
+UUCPD_LIBS.Darwin=		# empty
+UUCPD_LIBS.*=			-lcrypt -lutil
+OPSYSVARS+=			UUCPD_CPPFLAGS UUCPD_LIBS
 
 INSTALLATION_DIRS=	bin libexec ${PKGMANDIR}/man8 share/examples/uucp
 

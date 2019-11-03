@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/08/11 13:22:30 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/03 11:45:53 rillig Exp $
 #
 
 DISTNAME=	spreadlogd
@@ -33,7 +33,7 @@ INSTALLATION_DIRS+=	${EXAMPLEDIR}
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/spreadlogd.conf ${DESTDIR}${EXAMPLEDIR}/spreadlogd.conf.sample
 
-BUILDLINK_API_DEPENDS.libevent+=libevent>=1.0c
+BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.0c
 
 .include "../../net/spread/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"

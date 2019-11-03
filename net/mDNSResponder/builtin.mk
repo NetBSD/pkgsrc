@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.9 2018/02/26 18:13:16 ryoon Exp $
+# $NetBSD: builtin.mk,v 1.10 2019/11/03 11:45:41 rillig Exp $
 
 BUILTIN_PKG:=	mDNSResponder
 
@@ -17,7 +17,7 @@ IS_BUILTIN.mDNSResponder=	no
 IS_BUILTIN.mDNSResponder=	yes
 .  endif
 .endif	# IS_BUILTIN.mDNSResponder
-MAKEVARS+=	IS_BUILTIN.mDNSResponder
+MAKEVARS+=			IS_BUILTIN.mDNSResponder
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -26,19 +26,19 @@ MAKEVARS+=	IS_BUILTIN.mDNSResponder
 .if !defined(BUILTIN_PKG.mDNSResponder) && \
     !empty(IS_BUILTIN.mDNSResponder:M[yY][eE][sS]) && \
     empty(H_DNSSD:M__nonexistent__)
-_BLTN_DNSSD_212_1!= \
+_BLTN_DNSSD_212_1!=		\
 	${GREP} -c 2120100 ${H_DNSSD} || ${TRUE}
-_BLTN_DNSSD_214_3_2!= \
+_BLTN_DNSSD_214_3_2!=		\
 	${GREP} -c 2140302 ${H_DNSSD} || ${TRUE}
-_BLTN_DNSSD_258_14!= \
+_BLTN_DNSSD_258_14!=		\
 	${GREP} -c 2581400 ${H_DNSSD} || ${TRUE}
-_BLTN_DNSSD_320_5!= \
+_BLTN_DNSSD_320_5!=		\
 	${GREP} -c 3200500 ${H_DNSSD} || ${TRUE}
-_BLTN_DNSSD_320_16!= \
+_BLTN_DNSSD_320_16!=		\
 	${GREP} -c 3201600 ${H_DNSSD} || ${TRUE}
-_BLTN_DNSSD_878_1_1!= \
+_BLTN_DNSSD_878_1_1!=		\
 	${GREP} -c 8780101 ${H_DNSSD} || ${TRUE}
-_BLTN_DNSSD_878_30_4!= \
+_BLTN_DNSSD_878_30_4!=		\
 	${GREP} -c 8783004 ${H_DNSSD} || ${TRUE}
 .  if ${_BLTN_DNSSD_320_16} == "1"
 BUILTIN_VERSION.mDNSResponder=	320.16
@@ -85,4 +85,4 @@ USE_BUILTIN.mDNSResponder!=							\
 .    endif
 .  endif  # PREFER.mDNSResponder
 .endif
-MAKEVARS+=	USE_BUILTIN.mDNSResponder
+MAKEVARS+=			USE_BUILTIN.mDNSResponder

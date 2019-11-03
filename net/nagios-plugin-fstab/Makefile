@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/09/14 13:53:03 manu Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/03 11:45:42 rillig Exp $
 #
 
 PKGNAME=	nagios-plugin-fstab-${DISTNAME:C/.*-//}
@@ -16,7 +16,7 @@ ONLY_FOR_PLATFORM=	FreeBSD-*-* NetBSD-*-* OpenBSD-*-* DragonFly-*-*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-INSTALLATION_DIRS+= libexec/nagios
+INSTALLATION_DIRS+=	libexec/nagios
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/check_fstab \

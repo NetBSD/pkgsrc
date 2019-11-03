@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2016/04/14 21:58:09 abs Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/03 11:45:56 rillig Exp $
 
 DISTNAME=	tvnjviewer-2.7.2-bin
 PKGNAME=	${DISTNAME:S:-bin::}
@@ -11,9 +11,9 @@ HOMEPAGE=	http://www.tightvnc.com/doc/java/README.txt
 COMMENT=	JAVA VNC viewer
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}
-USE_LANGUAGES=	# none
-USE_JAVA=	run
+WRKSRC=			${WRKDIR}
+USE_LANGUAGES=		# none
+USE_JAVA=		run
 INSTALLATION_DIRS=	bin lib/java/tvnjviewer share/doc/tvnjviewer
 
 do-build:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2016/09/11 12:46:46 mef Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/03 11:45:28 rillig Exp $
 #
 
 DISTNAME=	6tunnel-0.11
@@ -10,7 +10,7 @@ HOMEPAGE=	http://toxygen.net/6tunnel/
 COMMENT=	Tunnelling for applications that don't speak IPv6
 LICENSE=	gnu-gpl-v2
 
-NOT_FOR_PLATFORM+= Interix-*-* # no IPv6 support
+NOT_FOR_PLATFORM+=	Interix-*-* # no IPv6 support
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 

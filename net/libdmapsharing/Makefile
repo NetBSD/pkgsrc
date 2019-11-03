@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2019/07/21 22:25:31 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2019/11/03 11:45:39 rillig Exp $
 
 DISTNAME=	libdmapsharing-2.1.9
 PKGREVISION=	54
@@ -17,7 +17,7 @@ USE_TOOLS+=		gmake pkg-config
 PKGCONFIG_OVERRIDE=	libdmapsharing.pc.in
 
 BUILDLINK_ABI_DEPENDS.gst-plugins0.10-base+= gst-plugins0.10-base>=0.10.23.2
-BUILDLINK_ABI_DEPENDS.libsoup+= libsoup>=2.32
+BUILDLINK_ABI_DEPENDS.libsoup+=	libsoup>=2.32
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"

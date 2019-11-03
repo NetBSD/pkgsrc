@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/10/17 00:48:31 taca Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/03 11:45:30 rillig Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -26,18 +26,18 @@ USE_TOOLS+=		pax perl
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	--with-libtool
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
-CONFIGURE_ARGS+=	--with-python=no
+CONFIGURE_ARGS+=		--with-libtool
+CONFIGURE_ARGS+=		--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=		--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=		--with-openssl=${SSLBASE:Q}
+CONFIGURE_ARGS+=		--with-python=no
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-m68k) || \
     !empty(MACHINE_PLATFORM:MNetBSD-*-mipsel) || \
     !empty(MACHINE_PLATFORM:MNetBSD-*-vax)
-CONFIGURE_ARGS+=	--disable-atomic
+CONFIGURE_ARGS+=		--disable-atomic
 .endif
 .if ${MACHINE_PLATFORM:MNetBSD-*-powerpc} != ""
-CONFIGURE_ARGS+=	--disable-threads
+CONFIGURE_ARGS+=		--disable-threads
 .endif
 CONFIGURE_ARGS.DragonFly+=	--disable-kqueue
 

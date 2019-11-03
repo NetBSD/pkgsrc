@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2011/09/17 11:12:26 shattered Exp $
+# $NetBSD: options.mk,v 1.3 2019/11/03 11:45:45 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.oinkmaster
 
-PKG_SUPPORTED_OPTIONS=	perl
+PKG_SUPPORTED_OPTIONS=		perl
 PKG_OPTIONS_LEGACY_OPTS+=	oinkmaster-perl-tools:perl
 
 .include "../../mk/bsd.options.mk"

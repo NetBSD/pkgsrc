@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/08/11 13:22:24 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/03 11:45:47 rillig Exp $
 #
 
 DISTNAME=	Net-XMPP-1.05
@@ -15,8 +15,8 @@ LICENSE=	gnu-lgpl-v2.1
 DEPENDS+=	p5-XML-Stream>=1.24:../../textproc/p5-XML-Stream
 DEPENDS+=	p5-Digest-SHA1>=1.02:../../security/p5-Digest-SHA1
 
-PERL5_MODULE_TYPE= Module::Build
-PERL5_PACKLIST=	auto/Net/XMPP/.packlist
+PERL5_MODULE_TYPE=	Module::Build
+PERL5_PACKLIST=		auto/Net/XMPP/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

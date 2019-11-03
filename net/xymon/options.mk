@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2012/05/10 21:58:38 spz Exp $
+# $NetBSD: options.mk,v 1.3 2019/11/03 11:45:58 rillig Exp $
 
-PKG_OPTIONS_VAR=        PKG_OPTIONS.xymon
-PKG_SUPPORTED_OPTIONS=  ldap snmp ssl
-PKG_SUGGESTED_OPTIONS=  ldap ssl
+PKG_OPTIONS_VAR=	PKG_OPTIONS.xymon
+PKG_SUPPORTED_OPTIONS=	ldap snmp ssl
+PKG_SUGGESTED_OPTIONS=	ldap ssl
 
 .include "../../mk/bsd.options.mk"
 
@@ -13,9 +13,9 @@ PLIST_VARS+=		snmp
 CONFIGURE_ARGS+=	"--ldapinclude" "${BUILDLINK_PREFIX.openldap-client}/include"
 CONFIGURE_ARGS+=	"--ldaplib" "${BUILDLINK_PREFIX.openldap-client}/lib"
 CONFIGURE_ENV+=		ENABLELDAP=y
-.if !empty(PKG_OPTIONS:Mssl)
+.  if !empty(PKG_OPTIONS:Mssl)
 CONFIGURE_ENV+=		ENABLELDAPSSL=y
-.endif
+.  endif
 .include "../../databases/openldap-client/buildlink3.mk"
 .else
 CONFIGURE_ENV+=		ENABLELDAP=n

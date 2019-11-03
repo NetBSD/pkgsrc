@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.22 2019/01/05 06:18:11 schmonz Exp $
+# $NetBSD: options.mk,v 1.23 2019/11/03 11:45:33 rillig Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.djbdns
 PKG_SUPPORTED_OPTIONS+=		djbdns-cachestats djbdns-ignoreip2
@@ -8,10 +8,10 @@ PKG_SUGGESTED_OPTIONS+=		djbdns-mergequeries djbdns-tinydns64
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mdjbdns-cachestats)
-CACHESTATS_PATCH=		djbdns-cachestats.patch
-PATCHFILES+=			${CACHESTATS_PATCH}
-SITES.${CACHESTATS_PATCH}=	http://romana.now.ie/software/
-PATCH_DIST_STRIP.${CACHESTATS_PATCH}= -p1
+CACHESTATS_PATCH=			djbdns-cachestats.patch
+PATCHFILES+=				${CACHESTATS_PATCH}
+SITES.${CACHESTATS_PATCH}=		http://romana.now.ie/software/
+PATCH_DIST_STRIP.${CACHESTATS_PATCH}=	-p1
 .endif
 
 .if !empty(PKG_OPTIONS:Mdjbdns-ignoreip2)

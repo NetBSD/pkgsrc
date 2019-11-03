@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.39 2018/01/16 07:48:47 maya Exp $
+# $NetBSD: options.mk,v 1.40 2019/11/03 11:45:52 rillig Exp $
 
 # Recommended package options for various setups:
 #
@@ -154,10 +154,10 @@ NSS_WINBIND_cmd=	\
 # Install a /usr/lib/${NSS_WINBIND:T} -> ${PREFIX}/${NSS_WINBIND} symlink
 # Unfortunately NSS_WINDIND_cmd can not be used to determine whether the
 # (de)install templates are needed or not.
-.if ${OS_VARIANT} != "SmartOS"
+.  if ${OS_VARIANT} != "SmartOS"
 INSTALL_TEMPLATES+=	INSTALL.nss_winbind
 DEINSTALL_TEMPLATES+=	DEINSTALL.nss_winbind
-.endif
+.  endif
 
 .PHONY: samba-nss-winbind-install
 post-install: samba-nss-winbind-install

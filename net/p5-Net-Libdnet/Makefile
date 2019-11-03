@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/08/11 13:22:21 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/03 11:45:47 rillig Exp $
 #
 
 DISTNAME=	Net-Libdnet-0.99
@@ -16,7 +16,7 @@ LICENSE=	2-clause-bsd
 PERL5_PACKLIST=	auto/Net/Libdnet/.packlist
 USE_LANGUAGES+=	c
 
-DEPENDS+= p5-Class-Gomor-[0-9]*:../../devel/p5-Class-Gomor
+DEPENDS+=	p5-Class-Gomor-[0-9]*:../../devel/p5-Class-Gomor
 
 .include "../../net/libdnet/buildlink3.mk"
 .include "../../lang/perl5/module.mk"

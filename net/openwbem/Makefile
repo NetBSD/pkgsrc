@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/08/11 13:22:13 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/03 11:45:46 rillig Exp $
 
 DISTNAME=	openwbem-3.2.2
 PKGREVISION=	7
@@ -9,11 +9,11 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openwbem.org/
 COMMENT=	Web-based Enterprise Management software
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	ac_cv_path_TRUE_PATHNAME=true ac_cv_path_FALSE_PATHNAME=false
-USE_TOOLS+=	gmake
-USE_LIBTOOL=	yes
-USE_LANGUAGES+=	c c++
+USE_TOOLS+=		gmake
+USE_LIBTOOL=		yes
+USE_LANGUAGES+=		c c++
 
 INSTALLATION_DIRS+=	etc/openwbem include/openwbem var/openwbem
 INSTALLATION_DIRS+=	share/openwbem lib/openwbem share/examples/openwbem
@@ -24,11 +24,11 @@ INSTALLATION_DIRS+=	lib/authentication
 PKG_SYSCONFSUBDIR=	openwbem
 EGDIR=			${PREFIX}/share/examples/openwbem
 CONF_FILES+=		${EGDIR}/openwbem.conf \
-                        ${PKG_SYSCONFDIR}/openwbem.conf
+			${PKG_SYSCONFDIR}/openwbem.conf
 CONF_FILES+=		${EGDIR}/owgencert \
-                        ${PKG_SYSCONFDIR}/owgencert
+			${PKG_SYSCONFDIR}/owgencert
 CONF_FILES+=		${EGDIR}/ssleay.cnf \
-                        ${PKG_SYSCONFDIR}/ssleay.cnf
+			${PKG_SYSCONFDIR}/ssleay.cnf
 
 
 SUBST_CLASSES+=		mkdir
@@ -80,8 +80,8 @@ SUBST_FILES.mkdir+=	${WRKSRC}/src/providers/cpp/instance/OW_NameSpace/Makefile.i
 SUBST_FILES.mkdir+=	${WRKSRC}/src/providers/cpp/instance/CIM_IndicationFilter/Makefile.in
 SUBST_FILES.mkdir+=	${WRKSRC}/src/providers/cpp/instance/CIM_NamespaceInManager/Makefile.in
 SUBST_FILES.mkdir+=	${WRKSRC}/src/providers/cpp/instance/OpenWBEM_ConfigSettingData/Makefile.in
-SUBST_SED.mkdir=        -e "s|\$$(INSTALL_PROGRAM) -d|\$${mkdir_p}|g"
-SUBST_MESSAGE.mkdir=    Fixing ${INSTALL_PROGRAM} -d lines (the -s does not interoperate with -d)
+SUBST_SED.mkdir=	-e "s|\$$(INSTALL_PROGRAM) -d|\$${mkdir_p}|g"
+SUBST_MESSAGE.mkdir=	Fixing ${INSTALL_PROGRAM} -d lines (the -s does not interoperate with -d)
 
 CONFIGURE_ARGS.NetBSD+=	ac_cv_func_gethostbyname_r=no
 

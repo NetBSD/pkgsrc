@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/09/04 18:00:59 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/03 11:45:53 rillig Exp $
 #
 
 DISTNAME=	ser-0.8.14_src
@@ -22,10 +22,10 @@ CONF_FILES=		${PREFIX}/${EGDIR}/ser.cfg ${PKG_SYSCONFDIR}/ser.cfg
 
 REQD_DIRS=	${PREFIX}/${EGDIR}
 
-MAKE_ENV+= BUILDLINK_PREFIX.pthread=${BUILDLINK_PREFIX.pthread:Q}
-MAKE_ENV+= cfg-prefix=${PREFIX}/share/examples
-MAKE_ENV+= EGDIR=${EGDIR:Q}
-INSTALL_ENV+= BASEDIR=${DESTDIR}
+MAKE_ENV+=	BUILDLINK_PREFIX.pthread=${BUILDLINK_PREFIX.pthread:Q}
+MAKE_ENV+=	cfg-prefix=${PREFIX}/share/examples
+MAKE_ENV+=	EGDIR=${EGDIR:Q}
+INSTALL_ENV+=	BASEDIR=${DESTDIR}
 
 CHECK_PORTABILITY_SKIP+=	scripts/sc
 

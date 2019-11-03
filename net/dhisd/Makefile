@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/12/18 19:54:14 wiedi Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/03 11:45:33 rillig Exp $
 #
 
 DISTNAME=	dhisd-5.5
@@ -20,25 +20,25 @@ SUBST_STAGE.varbase=	pre-configure
 SUBST_MESSAGE.varbase=	Adapt VARBASE and PREFIX
 SUBST_VARS.varbase+=	VARBASE PREFIX
 
-SPECIAL_PERMS+=         bin/dhisd-genkeys ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700 \
-                        bin/dhisd	  ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
+SPECIAL_PERMS+=		bin/dhisd-genkeys ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700 \
+			bin/dhisd	  ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
 
 do-install:
-		${INSTALL_DATA} \
-			${WRKSRC}/*.sample \
-			${DESTDIR}${PREFIX}/share/examples/dhisd
-		${INSTALL_DATA} \
-			${WRKSRC}/CONTRIBUTORS  \
-			${WRKSRC}/COPYRIGHT  \
-			${WRKSRC}/INSTALL  \
-			${WRKSRC}/README  \
-			${DESTDIR}${PREFIX}/share/doc/dhisd
-		${INSTALL_PROGRAM} \
-			${WRKSRC}/dhisd \
-			${DESTDIR}${PREFIX}/bin
-		${INSTALL_PROGRAM} \
-			${WRKSRC}/dhisgenkeys \
-			${DESTDIR}${PREFIX}/bin/dhisd-genkeys
+	${INSTALL_DATA} \
+		${WRKSRC}/*.sample \
+		${DESTDIR}${PREFIX}/share/examples/dhisd
+	${INSTALL_DATA} \
+		${WRKSRC}/CONTRIBUTORS  \
+		${WRKSRC}/COPYRIGHT  \
+		${WRKSRC}/INSTALL  \
+		${WRKSRC}/README  \
+		${DESTDIR}${PREFIX}/share/doc/dhisd
+	${INSTALL_PROGRAM} \
+		${WRKSRC}/dhisd \
+		${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} \
+		${WRKSRC}/dhisgenkeys \
+		${DESTDIR}${PREFIX}/bin/dhisd-genkeys
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

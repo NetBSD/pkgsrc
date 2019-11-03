@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/10/28 20:02:29 gdt Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/03 11:45:56 rillig Exp $
 
 # This package is "unison-2.51.x" because 2.51 is the standard
 # approach, and hence uses the bare name.
@@ -18,7 +18,7 @@ LICENSE=	gnu-gpl-v3
 #MAKE_JOBS_SAFE=	no
 
 # docs: unison-manual.pdf/html/ps/dvi
-#WRKSRC=		${WRKDIR}/src
+#WRKSRC=	${WRKDIR}/src
 USE_TOOLS+=	gmake
 MAKE_FLAGS+=	CFLAGS="" -C src
 MAKE_ENV+=	HOME=${WRKDIR:Q}

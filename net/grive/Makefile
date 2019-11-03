@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/08/22 12:23:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/03 11:45:35 rillig Exp $
 
 DISTNAME=	${GHNAME}-${GHDATE}-${GHCOMMIT}
 PKGNAME=	${GHNAME}-0.3.0.${GHDATE}
@@ -20,11 +20,11 @@ WRKSRC=		${WRKDIR}/grive-${GHCOMMIT}
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++11
 
-SUBST_CLASSES+=		disableqt
-SUBST_MESSAGE.disableqt=Disable QT frontend
-SUBST_STAGE.disableqt=	pre-configure
-SUBST_FILES.disableqt=	CMakeLists.txt
-SUBST_SED.disableqt=	-e '/ bgrive/d'
+SUBST_CLASSES+=			disableqt
+SUBST_MESSAGE.disableqt=	Disable QT frontend
+SUBST_STAGE.disableqt=		pre-configure
+SUBST_FILES.disableqt=		CMakeLists.txt
+SUBST_SED.disableqt=		-e '/ bgrive/d'
 
 SUBST_CLASSES+=		manpath
 SUBST_MESSAGE.manpath=	Fix manpath

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2017/09/06 10:40:32 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2019/11/03 11:45:58 rillig Exp $
 #
 
 DISTNAME=	xtraceroute-0.8.14
@@ -17,9 +17,9 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt
 USE_FEATURES=		snprintf
 
-CONFIGURE_ARGS+= --with-gtk-prefix="${BUILDLINK_PREFIX.gtk}"
-CONFIGURE_ARGS+= --with-GL-prefix=${LOCALBASE}
-CONFIGURE_ARGS+= --with-lib-MesaGL
+CONFIGURE_ARGS+=	--with-gtk-prefix="${BUILDLINK_PREFIX.gtk}"
+CONFIGURE_ARGS+=	--with-GL-prefix=${LOCALBASE}
+CONFIGURE_ARGS+=	--with-lib-MesaGL
 
 .include "../../mk/bsd.prefs.mk"
 

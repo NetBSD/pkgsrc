@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2014/12/14 15:57:44 wiz Exp $
+# $NetBSD: options.mk,v 1.7 2019/11/03 11:45:42 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mtr
 PKG_SUPPORTED_OPTIONS=	gtk inet6
@@ -13,7 +13,7 @@ CONFIGURE_ARGS+=	--without-gtk
 .endif
 
 .if !empty(PKG_OPTIONS:Minet6)
-CONFIGURE_ARGS+=        --enable-ipv6
+CONFIGURE_ARGS+=	--enable-ipv6
 .else
-CONFIGURE_ARGS+=        --disable-ipv6
+CONFIGURE_ARGS+=	--disable-ipv6
 .endif

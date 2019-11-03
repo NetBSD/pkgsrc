@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/06/08 15:13:02 taca Exp $
+# $NetBSD: Makefile,v 1.7 2019/11/03 11:45:52 rillig Exp $
 
 DISTNAME=	soap4r-ruby1.9-2.0.5
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/-ruby1.9//}
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2 OR ruby-license
 USE_LANGUAGES=	# none
 
 RUBYGEM_OPTIONS+=	--format-executable
-OVERRIDE_GEMSPEC= \
+OVERRIDE_GEMSPEC=	\
 	:files lib/soap/rpc/element.rb.orig= lib/xsd/xmlparser.rb.orig=
 
 .include "../../lang/ruby/gem.mk"

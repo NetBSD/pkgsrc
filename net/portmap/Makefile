@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/23 17:18:59 asau Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/03 11:45:49 rillig Exp $
 
 DISTNAME=	portmap_4
 PKGNAME=	portmap-4
@@ -16,9 +16,9 @@ COMMENT=	RPC portmapper with access control
 # XXX provides pmap_dump and pmap_set
 
 INSTALLATION_DIRS+=	sbin share/doc/portmap
-MAKE_FLAGS+=	WRAP_DIR=${BUILDLINK_PREFIX.tcp_wrappers}/lib
-NO_CONFIGURE=	yes
-RCD_SCRIPTS=	portmap
+MAKE_FLAGS+=		WRAP_DIR=${BUILDLINK_PREFIX.tcp_wrappers}/lib
+NO_CONFIGURE=		yes
+RCD_SCRIPTS=		portmap
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/portmap ${DESTDIR}${PREFIX}/sbin/

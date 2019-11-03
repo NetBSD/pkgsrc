@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2019/10/10 14:23:53 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2019/11/03 11:45:40 rillig Exp $
 
 DISTNAME=	libsoup-2.68.2
 CATEGORIES=	net gnome
@@ -14,10 +14,10 @@ DEPENDS+=	glib-networking-[0-9]*:../../net/glib-networking
 
 USE_TOOLS+=		pkg-config gmake intltool msgfmt
 
-PKGCONFIG_OVERRIDE+=	output/meson-private/libsoup-2.4.pc
-PKGCONFIG_OVERRIDE+=	output/meson-private/libsoup-gnome-2.4.pc
-PKGCONFIG_OVERRIDE_STAGE=pre-install
-MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/output/${PKGBASE}
+PKGCONFIG_OVERRIDE+=		output/meson-private/libsoup-2.4.pc
+PKGCONFIG_OVERRIDE+=		output/meson-private/libsoup-gnome-2.4.pc
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
+MAKE_ENV+=			LD_LIBRARY_PATH=${WRKSRC}/output/${PKGBASE}
 
 # disable vala detection
 MESON_ARGS+=		-Dvapi=disabled

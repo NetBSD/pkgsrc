@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2018/12/26 11:11:23 adam Exp $
+# $NetBSD: Makefile,v 1.48 2019/11/03 11:45:57 rillig Exp $
 
 DISTNAME=	vsftpd-3.0.3
 PKGREVISION=	1
@@ -39,17 +39,17 @@ MAKE_ENV+=		LIBS=${LIBS:Q}
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS" && ${OS_VERSION} == "5.11"
-SUBST_CLASSES+=		dirfd
-SUBST_STAGE.dirfd=	pre-build
-SUBST_FILES.dirfd=	port/solaris_bogons.h
-SUBST_SED.dirfd=	-e '/dirfd_extras/d'
+SUBST_CLASSES+=			dirfd
+SUBST_STAGE.dirfd=		pre-build
+SUBST_FILES.dirfd=		port/solaris_bogons.h
+SUBST_SED.dirfd=		-e '/dirfd_extras/d'
 .endif
 .if !empty(PKGSRC_COMPILER:Mclang)
-SUBST_CLASSES+=		idirafter
-SUBST_MESSAGE.idirafter=Fix buggy -idirafter for clang
-SUBST_STAGE.idirafter=	pre-build
-SUBST_FILES.idirafter=	Makefile
-SUBST_SED.idirafter=	-e 's,-idirafter ,-I,'
+SUBST_CLASSES+=			idirafter
+SUBST_MESSAGE.idirafter=	Fix buggy -idirafter for clang
+SUBST_STAGE.idirafter=		pre-build
+SUBST_FILES.idirafter=		Makefile
+SUBST_SED.idirafter=		-e 's,-idirafter ,-I,'
 .endif
 
 VSFTPD_USER?=	vsftpd

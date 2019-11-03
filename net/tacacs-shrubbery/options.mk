@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2012/05/10 19:01:08 schwarz Exp $
+# $NetBSD: options.mk,v 1.3 2019/11/03 11:45:54 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tacacs-shrubbery
 PKG_SUPPORTED_OPTIONS=	tacacs-shrubbery-acls-support tacacs-shrubbery-drop-root-privileges tcpwrappers skey
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--with-groupid=${TACACS_GROUP:Q}
 
 .if !empty(PKG_OPTIONS:Mtcpwrappers)
 CONFIGURE_ARGS+=	--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers}
-. include "../../security/tcp_wrappers/buildlink3.mk"
+.  include "../../security/tcp_wrappers/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-libwrap
 .endif
@@ -34,13 +34,13 @@ CONFIGURE_ARGS+=	--without-libwrap
 .if !empty(PKG_OPTIONS:Mskey)
 CONFIGURE_ARGS+=	--with-skey=${BUILDLINK_PREFIX.skey}
 CHECK_BUILTIN.skey:=yes
-. include "../../security/skey/builtin.mk"
+.  include "../../security/skey/builtin.mk"
 CHECK_BUILTIN.skey:=no
-. if !empty(USE_BUILTIN.skey:M[nN][oO]) || ${OPSYS} == "OpenBSD"
+.  if !empty(USE_BUILTIN.skey:M[nN][oO]) || ${OPSYS} == "OpenBSD"
 # pkgsrc's version uses three arguments only, as does OpenBSD's
 CPPFLAGS+=		-DOLDSKEY
-. endif
-. include "../../security/skey/buildlink3.mk"
+.  endif
+.  include "../../security/skey/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-skey
 .endif

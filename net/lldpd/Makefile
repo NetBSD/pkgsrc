@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/08/11 13:22:10 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/11/03 11:45:40 rillig Exp $
 
 DISTNAME=		lldpd-1.0.1
 PKGREVISION=		2
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=	--with-privsep-chroot=${PKG_HOME._lldpd}
 CONFIGURE_ARGS+=	--disable-hardening
 # run/lldpd.socket is created under this directory
 # (the default is ${PRERIX}/var, changed since 0.7.9)
-CONFIGURE_ARGS+=       --localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 BUILD_DEFS+=		VARBASE
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}

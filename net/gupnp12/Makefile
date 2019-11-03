@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/10/07 09:28:12 prlw1 Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/03 11:45:36 rillig Exp $
 
 DISTNAME=	gupnp-1.2.1
 PKGNAME=	${DISTNAME:S/gupnp/gupnp12/}
@@ -17,9 +17,9 @@ USE_TOOLS+=	gmake pkg-config
 
 REPLACE_PYTHON=	tools/gupnp-binding-tool-1.2
 
-PKGCONFIG_OVERRIDE+=    output/meson-private/gupnp-1.2.pc
-PKGCONFIG_OVERRIDE_STAGE=pre-install
-MAKE_ENV+=              LD_LIBRARY_PATH=${WRKSRC}/output/libgupnp
+PKGCONFIG_OVERRIDE+=		output/meson-private/gupnp-1.2.pc
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
+MAKE_ENV+=			LD_LIBRARY_PATH=${WRKSRC}/output/libgupnp
 
 TEST_TARGET=	check
 

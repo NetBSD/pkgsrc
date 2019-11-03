@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2018/12/27 15:04:42 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2019/11/03 11:45:50 rillig Exp $
 
 DISTNAME=	dropbox-python-sdk-2.2.0
 PKGNAME=	${PYPKGPREFIX}-dropbox-2.2.0
 PKGREVISION=	1
 CATEGORIES=	net
-MASTER_SITES=   https://www.dropbox.com/developers/downloads/sdks/core/python/
+MASTER_SITES=	https://www.dropbox.com/developers/downloads/sdks/core/python/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2019/09/02 13:19:51 adam Exp $
+# $NetBSD: Makefile,v 1.37 2019/11/03 11:45:51 rillig Exp $
 
 DISTNAME=	pygopherd_2.0.16
 PKGREVISION=	5
@@ -12,8 +12,8 @@ COMMENT=	Gopher server
 LICENSE=	gnu-gpl-v2
 
 PKG_SYSCONFSUBDIR=	pygopherd
-EXAMPLEDIR=	${PREFIX}/share/examples/pygopherd
-RUNTIMEDIR=	${VARBASE}/gopher
+EXAMPLEDIR=		${PREFIX}/share/examples/pygopherd
+RUNTIMEDIR=		${VARBASE}/gopher
 
 BUILD_DEFS+=	VARBASE
 
@@ -34,12 +34,12 @@ FILES_SUBST+=	RUNTIMEDIR=${RUNTIMEDIR:Q}
 FILES_SUBST+=	PYTHONBIN=${PYTHONBIN:Q}
 
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 2.0.16
-REPLACE_PYTHON=	bin/pygopherd
-REPLACE_PYTHON+=	pygopherd/GopherExceptionsTest.py
-REPLACE_PYTHON+=	pygopherd/fileextTest.py
-REPLACE_PYTHON+=	pygopherd/gopherentryTest.py
-REPLACE_PYTHON+=	pygopherd/initializationTest.py
-REPLACE_PYTHON+=	pygopherd/testutil.py
+REPLACE_PYTHON=			bin/pygopherd
+REPLACE_PYTHON+=		pygopherd/GopherExceptionsTest.py
+REPLACE_PYTHON+=		pygopherd/fileextTest.py
+REPLACE_PYTHON+=		pygopherd/gopherentryTest.py
+REPLACE_PYTHON+=		pygopherd/initializationTest.py
+REPLACE_PYTHON+=		pygopherd/testutil.py
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure

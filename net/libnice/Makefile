@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.57 2019/07/20 22:46:02 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2019/11/03 11:45:40 rillig Exp $
 
 PKGREVISION= 1
 .include "Makefile.common"
 
 # introspection Makefile uses GNUisms
-USE_TOOLS+=	gmake
-CONFIGURE_ARGS+= --without-gstreamer
+USE_TOOLS+=		gmake
+CONFIGURE_ARGS+=	--without-gstreamer
 
 PKGCONFIG_OVERRIDE+=	nice/nice.pc.in
 

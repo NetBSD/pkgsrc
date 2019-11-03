@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/08/03 10:42:46 schmonz Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/03 11:45:34 rillig Exp $
 
 DISTNAME=		fehQlibs-12c
 PKGNAME=		${DISTNAME:S/Qlibs-/qlibs-0.9./:S/12/12.12/}
@@ -36,10 +36,10 @@ do-configure:
 .include "../../mk/bsd.prefs.mk"
 
 post-build:
-.	if ${OPSYS} == Darwin
+.if ${OPSYS} == Darwin
 	cd ${WRKSRC} && for lib in *.so; do \
 	  install_name_tool -id ${PREFIX}/lib/qlibs/$${lib} $${lib}; \
 	done
-.	endif
+.endif
 
 .include "../../mk/bsd.pkg.mk"

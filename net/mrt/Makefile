@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/23 17:18:38 asau Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/03 11:45:41 rillig Exp $
 #
 
 DISTNAME=	mrt-2.2.2a-Aug11
@@ -13,8 +13,8 @@ COMMENT=	Multi-threaded Routing Toolkit
 
 MAKE_JOBS_SAFE=		no
 
-WRKSRC=		${WRKDIR}/mrt/src
-GNU_CONFIGURE=	yes
+WRKSRC=			${WRKDIR}/mrt/src
+GNU_CONFIGURE=		yes
 DESTDIR_VARNAME=	# empty
 INSTALL_MAKE_FLAGS+=	DESTDIR=${DESTDIR}${PREFIX}/sbin
 INSTALL_MAKE_FLAGS+=	MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}

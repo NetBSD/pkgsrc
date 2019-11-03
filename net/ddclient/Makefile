@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2019/09/21 10:40:08 abs Exp $
+# $NetBSD: Makefile,v 1.47 2019/11/03 11:45:33 rillig Exp $
 
 DISTNAME=	ddclient-3.8.3
 PKGREVISION=	6
@@ -22,7 +22,7 @@ CONF_FILES_PERMS=	${EGDIR}/sample-etc_ddclient.conf		\
 			${PKG_SYSCONFDIR}/ddclient.conf			\
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0600
 
-DEPENDS+=               p5-JSON-Any>=0.0:../../converters/p5-JSON-Any
+DEPENDS+=		p5-JSON-Any>=0.0:../../converters/p5-JSON-Any
 
 REPLACE_INTERPRETER+=	sh
 REPLACE.sh.old=		.*/bin/bash

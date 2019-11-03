@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/04/25 07:33:11 maya Exp $
+# $NetBSD: Makefile,v 1.24 2019/11/03 11:45:37 rillig Exp $
 #
 
 DISTNAME=	ipcheck.233
@@ -17,7 +17,7 @@ EXTRACT_SUFX=	#none
 EXTRACT_CMD=	${CP} "$${extract_file}" ipcheck.py
 NO_BUILD=	yes
 
-REPLACE_PYTHON=	ipcheck.py
+REPLACE_PYTHON=		ipcheck.py
 INSTALLATION_DIRS=	bin
 
 do-install:

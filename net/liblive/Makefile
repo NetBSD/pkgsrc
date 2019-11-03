@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/12/13 09:20:02 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/11/03 11:45:40 rillig Exp $
 
 DISTNAME=	live.2014.12.11
 PKGNAME=	lib${DISTNAME:S/./-/:S/.//g}
@@ -22,11 +22,11 @@ INSTALLATION_DIRS+=	share/examples/liblive
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-. if ${MACHINE_ARCH} == "x86_64"
+.  if ${MACHINE_ARCH} == "x86_64"
 LIVE_BITNESS=	-64bit
-. else
+.  else
 LIVE_BITNESS=	-32bit
-. endif
+.  endif
 .else
 LIVE_BITNESS=	# empty
 .endif

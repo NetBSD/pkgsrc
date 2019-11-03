@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/04/06 03:45:21 rodent Exp $
+# $NetBSD: Makefile,v 1.13 2019/11/03 11:45:44 rillig Exp $
 #
 
 DISTNAME=	nidentd-1.0
@@ -15,10 +15,10 @@ DEPENDS+=	lsof>=4.61:../../sysutils/lsof
 INSTALLATION_DIRS+=	etc libexec
 
 do-build:
-		${SED} \
-			-e 's,@LOCALBASE@,${LOCALBASE},' \
-			<${WRKSRC}/nidentd >${WRKSRC}/nidentd.tmp
-		${MV} ${WRKSRC}/nidentd.tmp ${WRKSRC}/nidentd
+	${SED} \
+		-e 's,@LOCALBASE@,${LOCALBASE},' \
+		<${WRKSRC}/nidentd >${WRKSRC}/nidentd.tmp
+	${MV} ${WRKSRC}/nidentd.tmp ${WRKSRC}/nidentd
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/nidentd.nat ${DESTDIR}${PREFIX}/etc/nidentd.nat.example ; \
