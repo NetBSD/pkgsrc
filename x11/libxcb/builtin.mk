@@ -1,6 +1,6 @@
-# $NetBSD: builtin.mk,v 1.3 2014/03/10 11:05:53 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.4 2019/11/03 09:14:13 rillig Exp $
 
-BUILTIN_PKG:=	libxcb
+BUILTIN_PKG:=		libxcb
 PKGCONFIG_FILE.libxcb=	${X11BASE}/lib/pkgconfig/xcb.pc
 PKGCONFIG_FILE.libxcb+=	${X11BASE}/lib${LIBABISUFFIX}/pkgconfig/xcb.pc
 

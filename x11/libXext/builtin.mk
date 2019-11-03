@@ -1,6 +1,6 @@
-# $NetBSD: builtin.mk,v 1.5 2014/03/10 11:05:52 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.6 2019/11/03 09:14:11 rillig Exp $
 
-BUILTIN_PKG:=	libXext
+BUILTIN_PKG:=			libXext
 PKGCONFIG_FILE.libXext=		${X11BASE}/lib/pkgconfig/xext.pc
 PKGCONFIG_FILE.libXext+=	${X11BASE}/lib${LIBABISUFFIX}/pkgconfig/xext.pc
 

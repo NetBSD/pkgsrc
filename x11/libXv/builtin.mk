@@ -1,6 +1,6 @@
-# $NetBSD: builtin.mk,v 1.2 2014/03/10 11:05:53 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.3 2019/11/03 09:14:12 rillig Exp $
 
-BUILTIN_PKG:=	libXv
+BUILTIN_PKG:=		libXv
 PKGCONFIG_FILE.libXv=	${X11BASE}/lib/pkgconfig/xv.pc
 PKGCONFIG_FILE.libXv+=	${X11BASE}/lib${LIBABISUFFIX}/pkgconfig/xv.pc
 PKGCONFIG_FILE.libXv+=	${X11BASE}/lib/libXv.so

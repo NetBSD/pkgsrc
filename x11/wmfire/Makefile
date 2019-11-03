@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/29 05:06:55 asau Exp $
+# $NetBSD: Makefile,v 1.25 2019/11/03 09:14:18 rillig Exp $
 #
 
 DISTNAME=	wmfire-0.0.3.9pre4
@@ -10,8 +10,8 @@ MASTER_SITES=	http://staff.xmms.org/zinx/misc/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Displays generated fire according to system load
 
-GNU_CONFIGURE=	YES
-INSTALLATION_DIRS+= share/doc/wmfire
+GNU_CONFIGURE=		YES
+INSTALLATION_DIRS+=	share/doc/wmfire
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README  ${DESTDIR}${PREFIX}/share/doc/wmfire

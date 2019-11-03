@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2008/10/05 21:36:33 cube Exp $
+# $NetBSD: builtin.mk,v 1.3 2019/11/03 09:14:12 rillig Exp $
 
 BUILTIN_PKG:=	libXmu
 
@@ -19,7 +19,7 @@ IS_BUILTIN.libXmu=	no
 IS_BUILTIN.libXmu=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.libXmu
+MAKEVARS+=		IS_BUILTIN.libXmu
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -46,6 +46,6 @@ USE_BUILTIN.libXmu!=							\
 .    endif
 .  endif  # PREFER.libXmu
 .endif
-MAKEVARS+=	USE_BUILTIN.libXmu
+MAKEVARS+=		USE_BUILTIN.libXmu
 
 .include "../../mk/x11.builtin.mk"
