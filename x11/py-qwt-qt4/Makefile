@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/09/02 13:20:14 adam Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/03 09:14:15 rillig Exp $
 
 DISTNAME=	PyQwt-5.2.0
 PKGNAME=	${PYPKGPREFIX}-qwt-qt4-${DISTNAME:S/PyQwt-//}
@@ -20,10 +20,10 @@ BUILD_DIRS=	configure
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
-PYTHON_VERSIONS_ACCEPTED=	 27 # py-Numeric
+PYTHON_VERSIONS_ACCEPTED=	27 # py-Numeric
 
-REPLACE_PYTHON+=qt4lib/PyQt4/Qwt5/grace.py
-REPLACE_PYTHON+=qt4lib/PyQt4/Qwt5/qplt.py
+REPLACE_PYTHON+=	qt4lib/PyQt4/Qwt5/grace.py
+REPLACE_PYTHON+=	qt4lib/PyQt4/Qwt5/qplt.py
 
 do-configure:
 	(cd ${WRKSRC}/configure &&\

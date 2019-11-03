@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1.1.1 2010/12/08 00:39:31 abs Exp $
+# $NetBSD: builtin.mk,v 1.2 2019/11/03 09:14:08 rillig Exp $
 
 BUILTIN_PKG:=	fixesproto
 
@@ -28,7 +28,7 @@ IS_BUILTIN.fixesproto=	no
 IS_BUILTIN.fixesproto=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.fixesproto
+MAKEVARS+=		IS_BUILTIN.fixesproto
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -55,7 +55,7 @@ USE_BUILTIN.fixesproto!=						\
 .    endif
 .  endif  # PREFER.fixesproto
 .endif
-MAKEVARS+=	USE_BUILTIN.fixesproto
+MAKEVARS+=		USE_BUILTIN.fixesproto
 
 .include "../../mk/x11.builtin.mk"
 

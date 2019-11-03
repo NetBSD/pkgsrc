@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2019/10/07 11:52:36 nros Exp $
+# $NetBSD: Makefile,v 1.85 2019/11/03 09:14:16 rillig Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
@@ -68,40 +68,40 @@ PLIST_VARS+=		egl
 .if ${OPSYS} == "SunOS"
 .  if !empty(PKGSRC_COMPILER:Mgcc) || !empty(PKGSRC_COMPILER:Mclang)
 .    if ${ABI:U} == "64"
-CONFIGURE_ARGS+=	-platform solaris-g++-64
+CONFIGURE_ARGS+=		-platform solaris-g++-64
 .    else
-CONFIGURE_ARGS+=	-platform solaris-g++
+CONFIGURE_ARGS+=		-platform solaris-g++
 .    endif
 .  else
 .    if ${ABI:U} == "64"
-CONFIGURE_ARGS+=	-platform solaris-cc-64
+CONFIGURE_ARGS+=		-platform solaris-cc-64
 .    else
-CONFIGURE_ARGS+=	-platform solaris-cc
+CONFIGURE_ARGS+=		-platform solaris-cc
 .    endif
 .  endif
-NETWORK_LIBS=		-lsocket -lnsl
+NETWORK_LIBS=			-lsocket -lnsl
 .elif ${OPSYS} == "Interix"
-CONFIGURE_ARGS+=	-platform interix-g++
-CFLAGS+=		-I/usr/local/include/bind
-LDFLAGS+=		-L/usr/local/lib/bind -lbind
-BUILDLINK_PASSTHRU_DIRS+=/usr/local/include/bind /usr/local/lib/bind
-SYS_LIBS=		-lbind -ldb -ldl
+CONFIGURE_ARGS+=		-platform interix-g++
+CFLAGS+=			-I/usr/local/include/bind
+LDFLAGS+=			-L/usr/local/lib/bind -lbind
+BUILDLINK_PASSTHRU_DIRS+=	/usr/local/include/bind /usr/local/lib/bind
+SYS_LIBS=			-lbind -ldb -ldl
 .elif ${OPSYS} == "DragonFly"
-CONFIGURE_ARGS+=	-platform freebsd-g++
-LDFLAGS+=		-lexecinfo
+CONFIGURE_ARGS+=		-platform freebsd-g++
+LDFLAGS+=			-lexecinfo
 .elif ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=	-platform macx-clang
-CONFIGURE_ARGS+=	-no-framework
+CONFIGURE_ARGS+=		-platform macx-clang
+CONFIGURE_ARGS+=		-no-framework
 .  if exists(/usr/lib/libresolv.dylib)
-LDFLAGS+=		-lresolv
+LDFLAGS+=			-lresolv
 .  endif
 .elif ${OPSYS} == "Linux"
-LDFLAGS+=		-ldl
+LDFLAGS+=			-ldl
 .elif ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
 .  if exists(/usr/lib/libexecinfo.so)
-LDFLAGS+=		-lexecinfo
+LDFLAGS+=			-lexecinfo
 .  endif
-LDFLAGS.FreeBSD+=	-lutil
+LDFLAGS.FreeBSD+=		-lutil
 .endif
 
 REPLACE_PERL+=		bin/fixqt4headers.pl
@@ -117,16 +117,16 @@ BUILD_TARGET=		sub-src
 INSTALLATION_DIRS=	${QTPREFIX}/bin lib/pkgconfig
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 
-CHECK_INTERPRETER_SKIP+=qt5/examples/widgets/tools/echoplugin/echoplugin.pro
-CHECK_INTERPRETER_SKIP+=qt5/examples/widgets/tools/echoplugin/plugin/plugin.pro
-CHECK_INTERPRETER_SKIP+=qt5/examples/widgets/tools/plugandpaint/plugandpaint.pro
-CHECK_INTERPRETER_SKIP+=qt5/examples/widgets/tools/plugandpaintplugins/basictools/basictools.pro
-CHECK_INTERPRETER_SKIP+=qt5/examples/widgets/tools/plugandpaintplugins/extrafilters/extrafilters.pro
-CHECK_INTERPRETER_SKIP+=qt5/examples/widgets/tools/styleplugin/plugin/plugin.pro
-CHECK_INTERPRETER_SKIP+=qt5/mkspecs/features/data/mac/objc_namespace.sh
-CHECK_INTERPRETER_SKIP+=qt5/mkspecs/features/uikit/device_destinations.sh
-CHECK_INTERPRETER_SKIP+=qt5/mkspecs/features/uikit/devices.py
-CHECK_INTERPRETER_SKIP+=qt5/mkspecs/macx-ios-clang/rename_main.sh
+CHECK_INTERPRETER_SKIP+=	qt5/examples/widgets/tools/echoplugin/echoplugin.pro
+CHECK_INTERPRETER_SKIP+=	qt5/examples/widgets/tools/echoplugin/plugin/plugin.pro
+CHECK_INTERPRETER_SKIP+=	qt5/examples/widgets/tools/plugandpaint/plugandpaint.pro
+CHECK_INTERPRETER_SKIP+=	qt5/examples/widgets/tools/plugandpaintplugins/basictools/basictools.pro
+CHECK_INTERPRETER_SKIP+=	qt5/examples/widgets/tools/plugandpaintplugins/extrafilters/extrafilters.pro
+CHECK_INTERPRETER_SKIP+=	qt5/examples/widgets/tools/styleplugin/plugin/plugin.pro
+CHECK_INTERPRETER_SKIP+=	qt5/mkspecs/features/data/mac/objc_namespace.sh
+CHECK_INTERPRETER_SKIP+=	qt5/mkspecs/features/uikit/device_destinations.sh
+CHECK_INTERPRETER_SKIP+=	qt5/mkspecs/features/uikit/devices.py
+CHECK_INTERPRETER_SKIP+=	qt5/mkspecs/macx-ios-clang/rename_main.sh
 
 SUBST_CLASSES+=		opt
 SUBST_STAGE.opt=	pre-configure
@@ -187,7 +187,7 @@ pre-configure:
 		-e 's:@QMAKE_RANLIB@:${QMAKE_RANLIB:Q}:g' \
 		-e 's:@QMAKE_EXTRA@:${QMAKE_EXTRA:Q}:g' \
 		${FILESDIR}/${QMAKE_CONF} > ${WRKSRC}/qmake.conf
-		for dir in ${WRKSRC}/mkspecs/*; do \
+	for dir in ${WRKSRC}/mkspecs/*; do \
 			cp ${WRKSRC}/qmake.conf $${dir}; \
 			rm -f $${dir}/*.orig; \
 		done

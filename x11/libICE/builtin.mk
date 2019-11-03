@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2008/10/05 21:36:33 cube Exp $
+# $NetBSD: builtin.mk,v 1.3 2019/11/03 09:14:10 rillig Exp $
 
 BUILTIN_PKG:=	libICE
 
@@ -19,7 +19,7 @@ IS_BUILTIN.libICE=	no
 IS_BUILTIN.libICE=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.libICE
+MAKEVARS+=		IS_BUILTIN.libICE
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -46,6 +46,6 @@ USE_BUILTIN.libICE!=							\
 .    endif
 .  endif  # PREFER.libICE
 .endif
-MAKEVARS+=	USE_BUILTIN.libICE
+MAKEVARS+=		USE_BUILTIN.libICE
 
 .include "../../mk/x11.builtin.mk"
