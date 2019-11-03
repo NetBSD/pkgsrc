@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2019/02/25 00:52:07 manu Exp $
+# $NetBSD: Makefile,v 1.36 2019/11/03 19:26:22 rillig Exp $
 #
 
 DISTNAME=	perfuse-20190222
@@ -10,10 +10,10 @@ MAINTAINER=	manu@NetBSD.org
 COMMENT=	PUFFS Enabled Relay to FUSE
 LICENSE=	2-clause-bsd
 
-WRKSRC=	${WRKDIR}/src/
-BUILD_DIRS=	lib/libperfuse usr.sbin/perfused
+WRKSRC=			${WRKDIR}/src/
+BUILD_DIRS=		lib/libperfuse usr.sbin/perfused
 BUILDLINK_TRANSFORM=	rm:-Werror
-CPPFLAGS+=	-DPERFUSE_DEBUG -D_PATH_PERFUSED=\"${PREFIX}/sbin/perfused\"
+CPPFLAGS+=		-DPERFUSE_DEBUG -D_PATH_PERFUSED=\"${PREFIX}/sbin/perfused\"
 CPPFLAGS.NetBSD+=	-D_KERNTYPES
 
 CFLAGS+=	-g

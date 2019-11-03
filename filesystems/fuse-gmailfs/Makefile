@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/09/02 13:20:21 adam Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/03 19:26:21 rillig Exp $
 
 DISTNAME=	gmailfs-0.7.2
 PKGREVISION=	4
@@ -10,9 +10,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://richard.jones.name/google-hacks/gmail-filesystem/gmail-filesystem.html
 COMMENT=	FUSE filesystem which uses Google mail for free space
 
-NO_BUILD=			yes
-REPLACE_PYTHON=		gmailfs.py mount.gmailfs
-PYTHON_VERSIONS_ACCEPTED=	 27 # py-fuse-bindings
+NO_BUILD=	yes
+REPLACE_PYTHON=	gmailfs.py mount.gmailfs
+PYTHON_VERSIONS_ACCEPTED= 27 # py-fuse-bindings
 
 CONF_FILES=		${PREFIX}/share/examples/gmailfs/gmailfs.conf \
 			${PKG_SYSCONFDIR}/gmailfs.conf
@@ -23,7 +23,7 @@ SUBST_FILES.config=	gmailfs.py mount.gmailfs
 SUBST_VARS.config=	PKG_SYSCONFDIR
 SUBST_VARS.config+=	PREFIX
 SUBST_SED.config+=	-e "s|@PYSITELIB@|${PREFIX}/${PYSITELIB}|g"
-SUBST_MESSAGE.config=   Fixing paths.
+SUBST_MESSAGE.config=	Fixing paths.
 
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB:Q}
 

@@ -1,15 +1,15 @@
-# $NetBSD: options.mk,v 1.1 2012/08/30 17:37:55 jakllsch Exp $
+# $NetBSD: options.mk,v 1.2 2019/11/03 19:26:21 rillig Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
-PKG_OPTIONS_VAR=        PKG_OPTIONS.openafs
-PKG_SUPPORTED_OPTIONS+= server bitmap-later bos-new-config fast-restart
-PKG_SUPPORTED_OPTIONS+= largefile kernel-module supergroups namei
+PKG_OPTIONS_VAR=	PKG_OPTIONS.openafs
+PKG_SUPPORTED_OPTIONS+=	server bitmap-later bos-new-config fast-restart
+PKG_SUPPORTED_OPTIONS+=	largefile kernel-module supergroups namei
 .if ${MACHINE_ARCH} != "x86_64"
-PKG_SUPPORTED_OPTIONS+= pam
+PKG_SUPPORTED_OPTIONS+=	pam
 .endif
-PKG_SUGGESTED_OPTIONS=  server bitmap-later bos-new-config fast-restart
-PKG_SUGGESTED_OPTIONS+= namei largefile -kernel-module supergroups
+PKG_SUGGESTED_OPTIONS=	server bitmap-later bos-new-config fast-restart
+PKG_SUGGESTED_OPTIONS+=	namei largefile -kernel-module supergroups
 
 .include "../../mk/bsd.options.mk"
 
