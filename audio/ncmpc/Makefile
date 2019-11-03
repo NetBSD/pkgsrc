@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2019/10/21 21:19:35 adam Exp $
+# $NetBSD: Makefile,v 1.36 2019/11/03 11:14:56 maya Exp $
 
 DISTNAME=	ncmpc-0.35
 CATEGORIES=	audio
@@ -23,7 +23,6 @@ MESON_ARGS+=	-Dhtml_manual=false
 GCC_REQD+=	4.9
 
 # make stderr readable
-CXXFLAGS+=	-Wno-noexcept-type
 CXXFLAGS+=	-Wno-undef
 
 LDFLAGS+=	${BUILDLINK_LDADD.curses}
