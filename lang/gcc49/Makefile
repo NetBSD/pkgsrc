@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2019/08/11 13:21:20 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2019/11/03 19:03:59 rillig Exp $
 
 GCC_PKGNAME=	gcc49
 .include	"version.mk"
@@ -106,12 +106,12 @@ CONFIGURE_ARGS.DragonFly+=	--disable-bootstrap
 CONFIGURE_ARGS.Darwin+=	STRIP_FOR_TARGET=${TOOLS_PLATFORM.strip}
 
 .if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
-CONFIGURE_ARGS+=       --with-dwarf2
-CONFIGURE_ARGS+=       --disable-libitm
+CONFIGURE_ARGS+=	--with-dwarf2
+CONFIGURE_ARGS+=	--disable-libitm
 .endif
 
 .if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-powerpc)
-CONFIGURE_ARGS+=       --disable-multilib
+CONFIGURE_ARGS+=	--disable-multilib
 .endif
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || !empty(MACHINE_PLATFORM:MLinux-*-i386)

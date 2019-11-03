@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.86 2019/11/02 21:31:14 tnn Exp $
+# $NetBSD: Makefile,v 1.87 2019/11/03 19:04:04 rillig Exp $
 
 DISTNAME=	openjdk-jdk8u-${GITHUB_TAG}
 PKGNAME=	openjdk8-1.8.${GITHUB_TAG:C/.*u([0-9]+).*/\1/}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=battleblow/}
 MASTER_SITES+=	${MASTER_SITE_LOCAL:=openjdk7/}	# for bootstrap kits
-GITHUB_PROJECT= openjdk-jdk8u
-GITHUB_TAG=     jdk8u232-b09.1
+GITHUB_PROJECT=	openjdk-jdk8u
+GITHUB_TAG=	jdk8u232-b09.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://openjdk.java.net/
@@ -66,26 +66,26 @@ CONFIGURE_ARGS+=	--with-extra-ldflags=${LDFLAGS:Q}
 
 CHECK_PORTABILITY_SKIP+=	hotspot/test/runtime/*/*.sh
 
-NOT_PAX_MPROTECT_SAFE+= java/${JAVA_NAME}/bin/[a-ik-z]*
-NOT_PAX_MPROTECT_SAFE+= java/${JAVA_NAME}/bin/j[b-z]*
-NOT_PAX_MPROTECT_SAFE+= java/${JAVA_NAME}/bin/jar*
-NOT_PAX_MPROTECT_SAFE+= java/${JAVA_NAME}/bin/java
-NOT_PAX_MPROTECT_SAFE+= java/${JAVA_NAME}/bin/java[a-z]*
-NOT_PAX_MPROTECT_SAFE+= java/${JAVA_NAME}/jre/bin/*
+NOT_PAX_MPROTECT_SAFE+=	java/${JAVA_NAME}/bin/[a-ik-z]*
+NOT_PAX_MPROTECT_SAFE+=	java/${JAVA_NAME}/bin/j[b-z]*
+NOT_PAX_MPROTECT_SAFE+=	java/${JAVA_NAME}/bin/jar*
+NOT_PAX_MPROTECT_SAFE+=	java/${JAVA_NAME}/bin/java
+NOT_PAX_MPROTECT_SAFE+=	java/${JAVA_NAME}/bin/java[a-z]*
+NOT_PAX_MPROTECT_SAFE+=	java/${JAVA_NAME}/jre/bin/*
 
 # Avoid build errors when JAVA_HOME and CLASSPATH are defined by user.
 MAKE_ENV+=	JAVA_HOME=
 MAKE_ENV+=	CLASSPATH=
 
-BUILD_OPSYS=	${OPSYS:C/.*BSD/bsd/:S/DragonFly/bsd/:S/SunOS/solaris/:S/Linux/linux/}
-BUILD_ARCH=	${MACHINE_ARCH:S/i386/x86/:S/sparc64/sparcv9/:C/^e?arm.*$/arm/}
-LIBDIR_ARCH=	${MACHINE_ARCH:S/x86_64/amd64/:S/sparc64/sparcv9/:C/^e?arm.*$/arm/}
-BUILDDIR=	${WRKSRC}/build/${BUILD_OPSYS}-${BUILD_ARCH}-normal-${BUILD_VARIANT}-${BUILD_DEBUG_LEVEL}
-LD_LIBRARY_PATH=	${WRKDIR}/bootstrap/jre/lib/${LIBDIR_ARCH}:${WRKDIR}/bootstrap/jre/lib/${LIBDIR_ARCH}/jli:${WRKDIR}/bootstrap/jre/lib/${LIBDIR_ARCH}/server
-CONFIGURE_ENV+=	LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
-MAKE_ENV+=	LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
-CONFIGURE_ENV+=	LFLAGS=${LDFLAGS:Q}
-MAKE_ENV+=	LFLAGS=${LDFLAGS:Q}
+BUILD_OPSYS=			${OPSYS:C/.*BSD/bsd/:S/DragonFly/bsd/:S/SunOS/solaris/:S/Linux/linux/}
+BUILD_ARCH=			${MACHINE_ARCH:S/i386/x86/:S/sparc64/sparcv9/:C/^e?arm.*$/arm/}
+LIBDIR_ARCH=			${MACHINE_ARCH:S/x86_64/amd64/:S/sparc64/sparcv9/:C/^e?arm.*$/arm/}
+BUILDDIR=			${WRKSRC}/build/${BUILD_OPSYS}-${BUILD_ARCH}-normal-${BUILD_VARIANT}-${BUILD_DEBUG_LEVEL}
+LD_LIBRARY_PATH=		${WRKDIR}/bootstrap/jre/lib/${LIBDIR_ARCH}:${WRKDIR}/bootstrap/jre/lib/${LIBDIR_ARCH}/jli:${WRKDIR}/bootstrap/jre/lib/${LIBDIR_ARCH}/server
+CONFIGURE_ENV+=			LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
+MAKE_ENV+=			LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
+CONFIGURE_ENV+=			LFLAGS=${LDFLAGS:Q}
+MAKE_ENV+=			LFLAGS=${LDFLAGS:Q}
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/java/${JAVA_NAME}/jre/lib/${LIBDIR_ARCH}
 
 PLIST_SUBST+=	ARCH=${LIBDIR_ARCH}
