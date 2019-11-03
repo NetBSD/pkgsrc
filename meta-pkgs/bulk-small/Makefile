@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/08/11 13:21:53 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2019/11/03 19:35:54 rillig Exp $
 
 DISTNAME=	bulk-small-20180101
 PKGREVISION=	3
@@ -98,22 +98,22 @@ BUILD_DEPENDS+=	python27-[0-9]*:../../lang/python27
 #
 # 3. Archivers and build tools.
 #
-BUILD_DEPENDS+=	bsdtar-[0-9]*:../../archivers/bsdtar
-BUILD_DEPENDS+=	bzip2-[0-9]*:../../archivers/bzip2
-BUILD_DEPENDS+=	gtar-base-[0-9]*:../../archivers/gtar-base
-BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
-BUILD_DEPENDS+=	xz-[0-9]*:../../archivers/xz
-BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
-BUILD_DEPENDS+=	autoconf-[0-9]*:../../devel/autoconf
-BUILD_DEPENDS+=	automake-[0-9]*:../../devel/automake
-BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
-BUILD_DEPENDS+=	flex-[0-9]*:../../devel/flex
-BUILD_DEPENDS+=	gmake-[0-9]*:../../devel/gmake
-BUILD_DEPENDS+=	libtool-base-[0-9]*:../../devel/libtool-base
-BUILD_DEPENDS+=	m4-[0-9]*:../../devel/m4
-BUILD_DEPENDS+=	pkg-config-[0-9]*:../../devel/pkg-config
+BUILD_DEPENDS+=		bsdtar-[0-9]*:../../archivers/bsdtar
+BUILD_DEPENDS+=		bzip2-[0-9]*:../../archivers/bzip2
+BUILD_DEPENDS+=		gtar-base-[0-9]*:../../archivers/gtar-base
+BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
+BUILD_DEPENDS+=		xz-[0-9]*:../../archivers/xz
+BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
+BUILD_DEPENDS+=		autoconf-[0-9]*:../../devel/autoconf
+BUILD_DEPENDS+=		automake-[0-9]*:../../devel/automake
+BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
+BUILD_DEPENDS+=		flex-[0-9]*:../../devel/flex
+BUILD_DEPENDS+=		gmake-[0-9]*:../../devel/gmake
+BUILD_DEPENDS+=		libtool-base-[0-9]*:../../devel/libtool-base
+BUILD_DEPENDS+=		m4-[0-9]*:../../devel/m4
+BUILD_DEPENDS+=		pkg-config-[0-9]*:../../devel/pkg-config
 #BUILD_DEPENDS+=	osabi-[0-9]*:../../pkgtools/osabi
-BUILD_DEPENDS+=	pkg_tarup-[0-9]*:../../pkgtools/pkg_tarup
+BUILD_DEPENDS+=		pkg_tarup-[0-9]*:../../pkgtools/pkg_tarup
 
 .include "../../mk/bsd.prefs.mk"
 
