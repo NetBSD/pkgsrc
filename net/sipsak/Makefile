@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/07/04 13:40:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/03 11:45:53 rillig Exp $
 
 DISTNAME=	sipsak-0.9.6-1
 PKGNAME=	${DISTNAME:S/-1//}
@@ -17,7 +17,7 @@ GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
 
 # get rid of inline
-SUBST_CLASSES+=	inline
+SUBST_CLASSES+=		inline
 SUBST_STAGE.inline=	pre-configure
 SUBST_FILES.inline=	header_f.h header_f.c
 SUBST_SED.inline=	-e 's/^inline //g'

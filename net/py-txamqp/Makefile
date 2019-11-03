@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/09/02 13:19:50 adam Exp $
+# $NetBSD: Makefile,v 1.9 2019/11/03 11:45:51 rillig Exp $
 
 DISTNAME=	python-txamqp_0.3.orig
 PKGNAME=	${PYPKGPREFIX}-txamqp-0.3
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 
-PYTHON_VERSIONS_ACCEPTED=	 27 # as of 0.3
+PYTHON_VERSIONS_ACCEPTED=	27 # as of 0.3
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/05/01 21:10:42 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/03 11:45:35 rillig Exp $
 
 DISTNAME=	fwknop-2.6.9
 CATEGORIES=	net
@@ -14,14 +14,14 @@ DEPENDS+=	wget-[0-9]*:../../net/wget
 
 USE_TOOLS+=	aclocal autoconf automake autoheader makeinfo
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--infodir=${PREFIX}/${PKGINFODIR}
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
 
-EGDIR=		${PREFIX}/share/examples/fwknop
-CONF_FILES+=	${EGDIR}/access.conf \
-		${PKG_SYSCONFDIR}/fwknop/access.conf
-CONF_FILES+=	${EGDIR}/fwknopd.conf \
-		${PKG_SYSCONFDIR}/fwknop/fwknopd.conf
+EGDIR=			${PREFIX}/share/examples/fwknop
+CONF_FILES+=		${EGDIR}/access.conf \
+			${PKG_SYSCONFDIR}/fwknop/access.conf
+CONF_FILES+=		${EGDIR}/fwknopd.conf \
+			${PKG_SYSCONFDIR}/fwknop/fwknopd.conf
 INSTALLATION_DIRS+=	${EGDIR}
 
 INFO_FILES=	yes
