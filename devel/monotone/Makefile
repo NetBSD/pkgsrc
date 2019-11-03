@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2019/08/11 13:18:46 wiz Exp $
+# $NetBSD: Makefile,v 1.111 2019/11/03 10:39:20 rillig Exp $
 
 DISTNAME=	monotone-1.1
 PKGREVISION=	19
@@ -35,7 +35,7 @@ REPLACE_SH=			mtnopt
 # The following are optional scripts for hooks.  We do not replace their
 # interpreter because we want to avoid a dependency on them.  (Ideally they
 # should be in separate packages with appropriate dependencies.)
-CHECK_INTERPRETER_SKIP=	share/monotone/scripts/monotone-ciabot.py
+CHECK_INTERPRETER_SKIP=		share/monotone/scripts/monotone-ciabot.py
 CHECK_INTERPRETER_SKIP+=	share/monotone/scripts/monotone-mail-notify
 
 .include "../../mk/bsd.options.mk"

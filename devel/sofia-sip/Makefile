@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/03/05 11:27:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2019/11/03 10:39:30 rillig Exp $
 #
 
 DISTNAME=	sofia-sip-1.12.11
@@ -20,7 +20,7 @@ USE_LANGUAGES=	c
 
 MAKE_JOBS_SAFE=	no
 
-SUBST_CLASSES+=	awk
+SUBST_CLASSES+=		awk
 SUBST_FILES.awk+=	libsofia-sip-ua/msg/msg_parser.awk
 SUBST_FILES.awk+=	libsofia-sip-ua/su/tag_dll.awk
 SUBST_STAGE.awk=	pre-configure

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/11/12 16:10:18 jaapb Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/03 10:39:21 rillig Exp $
 
 VERSION=	2.8.0
 GITHUB_PROJECT=	batteries-included
@@ -14,7 +14,7 @@ HOMEPAGE=	http://batteries.forge.ocamlcore.org/
 COMMENT=	Alternative standard library for OCaml
 LICENSE=	gnu-lgpl-v2.1
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=		gmake
 OCAML_USE_FINDLIB=	yes
 
 MAKE_ENV=	DESTDIR="${DESTDIR}" PREFIX="${PREFIX}"

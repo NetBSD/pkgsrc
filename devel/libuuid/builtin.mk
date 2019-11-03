@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.10 2018/11/06 09:38:54 markd Exp $
+# $NetBSD: builtin.mk,v 1.11 2019/11/03 10:39:19 rillig Exp $
 
 BUILTIN_PKG:=	libuuid
 
@@ -22,7 +22,7 @@ IS_BUILTIN.libuuid=	no
 IS_BUILTIN.libuuid=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.libuuid
+MAKEVARS+=		IS_BUILTIN.libuuid
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -32,9 +32,9 @@ MAKEVARS+=	IS_BUILTIN.libuuid
     !empty(IS_BUILTIN.libuuid:M[yY][eE][sS])
 .  if empty(UUID_PC:M__nonexistent__)
 BUILTIN_VERSION.libuuid!=	${SED} -n -e 's/Version: //p' ${UUID_PC}
-BUILTIN_PKG.libuuid=	libuuid-${BUILTIN_VERSION.libuuid}
+BUILTIN_PKG.libuuid=		libuuid-${BUILTIN_VERSION.libuuid}
 .  else
-BUILTIN_PKG.libuuid=	libuuid-2.18	# whatever, as long as it is big enough
+BUILTIN_PKG.libuuid=		libuuid-2.18	# whatever, as long as it is big enough
 .  endif
 .endif
 
@@ -63,7 +63,7 @@ USE_BUILTIN.libuuid!=      \
 .    endif
 .  endif
 .endif
-MAKEVARS+=	USE_BUILTIN.libuuid
+MAKEVARS+=		USE_BUILTIN.libuuid
 
 ###
 ### The section below only applies if we are not including this file
