@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/05/18 22:18:43 snj Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/03 09:14:17 rillig Exp $
 
 DISTNAME=	redshift-1.11
 CATEGORIES=	x11
@@ -12,11 +12,11 @@ COMMENT=	Adjust screen color temperature based on the position of the sun
 
 LICENSE=	gnu-gpl-v3
 
-BUILD_DEPENDS+=	gettext-tools-[0-9]*:../../devel/gettext-tools
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--disable-gui
-USE_LIBTOOL=	yes
-USE_TOOLS+=	intltool pkg-config
+BUILD_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-gui
+USE_LIBTOOL=		yes
+USE_TOOLS+=		intltool pkg-config
 
 .include "options.mk"
 
