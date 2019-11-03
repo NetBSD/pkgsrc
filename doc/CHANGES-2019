@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4728 2019/11/03 12:10:47 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.4729 2019/11/03 12:13:09 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7523,3 +7523,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated multimedia/libdvdnav to 6.0.1 [adam 2019-11-03]
 	Updated lang/clang to 9.0.0nb3 [kamil 2019-11-03]
 	Updated devel/lld to 9.0.0nb3 [kamil 2019-11-03]
+	Added games/openjk version 0.0.0.20191030 [nia 2019-11-03]
