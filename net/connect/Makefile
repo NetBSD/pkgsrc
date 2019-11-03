@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2015/03/09 09:24:35 mef Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/03 11:45:33 rillig Exp $
 
 DISTNAME=	1.104
 PKGNAME=	connect-${DISTNAME}
 CATEGORIES=	net security
-MASTER_SITES=   http://bitbucket.org/gotoh/connect/get/
+MASTER_SITES=	http://bitbucket.org/gotoh/connect/get/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://bitbucket.org/gotoh/connect/wiki/Home

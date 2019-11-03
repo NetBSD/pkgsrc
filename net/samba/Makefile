@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.276 2019/08/11 13:22:29 wiz Exp $
+# $NetBSD: Makefile,v 1.277 2019/11/03 11:45:52 rillig Exp $
 
 DISTNAME=	samba-${VERSION}
 CATEGORIES=	net
@@ -52,26 +52,26 @@ FILES_SUBST+=		WINBINDD_RCD_SCRIPT=${WINBINDD_RCD_SCRIPT:Q}
 USE_TOOLS+=		gmake mktemp perl:run pkg-config
 REPLACE_PERL=		script/findsmb.in
 
-BROKEN_GETTEXT_DETECTION=yes
-GNU_CONFIGURE=		yes
-GNU_CONFIGURE_LIBDIR=	${SAMBA_LIBDIR}
-CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
-CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
-CONFIGURE_ARGS+=	--with-configdir=${SAMBA_ETCDIR}
-CONFIGURE_ARGS+=	--with-lockdir=${SAMBA_LOCKDIR}
-CONFIGURE_ARGS+=	--with-logfilebase=${SAMBA_LOGDIR}
-CONFIGURE_ARGS+=	--with-modulesdir=${SAMBA_MODULESDIR}
-CONFIGURE_ARGS+=	--with-piddir=${SAMBA_PIDDIR}
-CONFIGURE_ARGS+=	--with-privatedir=${SAMBA_PRIVATE:Q}
-CONFIGURE_ARGS+=	--with-statedir=${SAMBA_STATEDIR}
-CONFIGURE_ARGS+=	--localstatedir=${SAMBA_VARDIR}
-CONFIGURE_ARGS+=	--with-mandir=${PREFIX}/${PKGMANDIR}
-CONFIGURE_ARGS+=	--with-swatdir=${PREFIX}/share/samba/swat
-CONFIGURE_ARGS+=	--enable-external-libtdb
+BROKEN_GETTEXT_DETECTION=	yes
+GNU_CONFIGURE=			yes
+GNU_CONFIGURE_LIBDIR=		${SAMBA_LIBDIR}
+CONFIGURE_ARGS+=		--with-libiconv=${BUILDLINK_PREFIX.iconv}
+CONFIGURE_ARGS+=		--with-readline=${BUILDLINK_PREFIX.readline}
+CONFIGURE_ARGS+=		--with-configdir=${SAMBA_ETCDIR}
+CONFIGURE_ARGS+=		--with-lockdir=${SAMBA_LOCKDIR}
+CONFIGURE_ARGS+=		--with-logfilebase=${SAMBA_LOGDIR}
+CONFIGURE_ARGS+=		--with-modulesdir=${SAMBA_MODULESDIR}
+CONFIGURE_ARGS+=		--with-piddir=${SAMBA_PIDDIR}
+CONFIGURE_ARGS+=		--with-privatedir=${SAMBA_PRIVATE:Q}
+CONFIGURE_ARGS+=		--with-statedir=${SAMBA_STATEDIR}
+CONFIGURE_ARGS+=		--localstatedir=${SAMBA_VARDIR}
+CONFIGURE_ARGS+=		--with-mandir=${PREFIX}/${PKGMANDIR}
+CONFIGURE_ARGS+=		--with-swatdir=${PREFIX}/share/samba/swat
+CONFIGURE_ARGS+=		--enable-external-libtdb
 #
 # Explicitly disable samba4 merged-build option which is broken.
 #
-CONFIGURE_ARGS+=	--enable-merged-build=no
+CONFIGURE_ARGS+=		--enable-merged-build=no
 
 .include "../../net/samba/options.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/09/02 13:19:49 adam Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/03 11:45:51 rillig Exp $
 
 DISTNAME=	s3cmd-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 PYDISTUTILSPKG=		yes
 MAKE_ENV+=		S3CMD_INSTPATH_MAN=${PKGMANDIR}
 
-PYTHON_SELF_CONFLICT=	yes
+PYTHON_SELF_CONFLICT=		yes
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 1.0.1
 
 .include "../../lang/python/pyversion.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/23 17:18:35 asau Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/03 11:45:40 rillig Exp $
 #
 
 DISTNAME=		llnlxftp2.1
@@ -12,8 +12,8 @@ MAINTAINER=		tor@stormwall.org
 HOMEPAGE=		http://www.llnl.gov/icc/sdd/img/xftp.html
 COMMENT=		Motif FTP client
 
-USE_IMAKE=	yes
-WRKSRC=		${WRKDIR}/llnlxftp2.1/sources
+USE_IMAKE=		yes
+WRKSRC=			${WRKDIR}/llnlxftp2.1/sources
 INSTALLATION_DIRS=	bin lib/X11/app-defaults
 
 do-install:

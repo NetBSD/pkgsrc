@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2019/10/11 16:40:03 kamil Exp $
+# $NetBSD: Makefile,v 1.82 2019/11/03 11:45:36 rillig Exp $
 
 DISTNAME=	gssdp-1.0.3
 PKGREVISION=	4
@@ -11,10 +11,10 @@ HOMEPAGE=	http://www.gupnp.org/
 COMMENT=	Simple Service Discovery Protocol library and device sniffer (1.0 branch)
 LICENSE=	gnu-lgpl-v2
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+= --without-gtk
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config gmake
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--without-gtk
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config gmake
 
 PKGCONFIG_OVERRIDE+=	gssdp-1.0.pc.in
 

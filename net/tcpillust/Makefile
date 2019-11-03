@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2018/03/12 11:17:23 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2019/11/03 11:45:54 rillig Exp $
 
 DISTNAME=	tcpillust-1.0a
 PKGREVISION=	11
@@ -12,10 +12,10 @@ COMMENT=	Graphical TCP connection analysis tool
 USE_IMAKE=	yes
 GNU_CONFIGURE=	yes
 
-CONFIGURE_ARGS+=--with-tcl-include=${BUILDLINK_PREFIX.tcl}/include
-CONFIGURE_ARGS+=--with-tcl-lib=${BUILDLINK_PREFIX.tcl}/lib
-CONFIGURE_ARGS+=--with-tk-include=${BUILDLINK_PREFIX.tk}/include
-CONFIGURE_ARGS+=--with-tk-lib=${BUILDLINK_PREFIX.tk}/lib
+CONFIGURE_ARGS+=	--with-tcl-include=${BUILDLINK_PREFIX.tcl}/include
+CONFIGURE_ARGS+=	--with-tcl-lib=${BUILDLINK_PREFIX.tcl}/lib
+CONFIGURE_ARGS+=	--with-tk-include=${BUILDLINK_PREFIX.tk}/include
+CONFIGURE_ARGS+=	--with-tk-lib=${BUILDLINK_PREFIX.tk}/lib
 
 DOCS=		README
 SAMPLES=	tcpclient.log tcpserver.log

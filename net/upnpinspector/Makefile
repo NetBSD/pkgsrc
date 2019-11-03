@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/09/02 13:19:50 adam Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/03 11:45:56 rillig Exp $
 
 DISTNAME=	UPnP-Inspector-0.2.2
 PKGREVISION=	4
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED=	 27 # py-gtk2
+PYTHON_VERSIONS_ACCEPTED=	27 # py-gtk2
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

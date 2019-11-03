@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/10/23 01:42:35 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/03 11:45:51 rillig Exp $
 
 DISTNAME=	sbws-0.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -34,11 +34,11 @@ REPLACE_BASH+=	tests/testnets/simple.common/01-gen-configs.sh
 REPLACE_BASH+=	tests/testnets/simple.common/02-start-network.sh
 REPLACE_BASH+=	tests/testnets/simple.common/04-stop-network.sh
 
-REPLACE_PYTHON+=scripts/tools/get-per-relay-budget.py
-REPLACE_PYTHON+=scripts/tools/sbws-http-server.py
-REPLACE_PYTHON+=scripts/tools/scale-v3bw-with-budget.py
-REPLACE_PYTHON+=setup.py
-REPLACE_PYTHON+=tests/testnets/simple.common/03-network-in-ready-state.py
+REPLACE_PYTHON+=	scripts/tools/get-per-relay-budget.py
+REPLACE_PYTHON+=	scripts/tools/sbws-http-server.py
+REPLACE_PYTHON+=	scripts/tools/scale-v3bw-with-budget.py
+REPLACE_PYTHON+=	setup.py
+REPLACE_PYTHON+=	tests/testnets/simple.common/03-network-in-ready-state.py
 
 # XXX Should run the integration tests too, but it's a bit more
 # involved.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/08/11 13:22:20 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2019/11/03 11:45:47 rillig Exp $
 
 DISTNAME=	Net-Jifty-0.14
 PKGNAME=	p5-${DISTNAME}
@@ -24,8 +24,8 @@ DEPENDS+=	p5-YAML-[0-9]*:../../textproc/p5-YAML
 DEPENDS+=	p5-Test-MockObject-[0-9]*:../../devel/p5-Test-MockObject
 DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
 
-MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
-PERL5_PACKLIST=	auto/Net/Jifty/.packlist
+MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
+PERL5_PACKLIST=		auto/Net/Jifty/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 .include "../../lang/perl5/module.mk"

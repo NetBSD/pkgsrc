@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/02/04 09:34:49 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/03 11:45:54 rillig Exp $
 
 PKGNAME=		teamspeak-server-2.0.24.01
 DISTNAME=		ts2_server_rc2_202319
@@ -14,10 +14,10 @@ HOMEPAGE=		http://www.goteamspeak.com/
 COMMENT=		Teamspeak group VoIP server
 LICENSE=		teamspeak-license-200700213
 
-RESTRICTED=             Redistribution to third parties is expressly prohibited
-NO_SRC_ON_CDROM=        ${RESTRICTED}
-NO_BIN_ON_FTP=          ${RESTRICTED}
-NO_BIN_ON_CDROM=        ${RESTRICTED}
+RESTRICTED=		Redistribution to third parties is expressly prohibited
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	base
@@ -51,7 +51,7 @@ PKG_GECOS.${TSUSER}=	Teamspeak server user
 PKG_HOME.${TSUSER}=	${TSHOME}
 PKG_SHELL.${TSUSER}=	${SH}
 
-FILES_SUBST+=   	TSUSER=${TSUSER}
+FILES_SUBST+=		TSUSER=${TSUSER}
 
 INSTALLATION_DIRS=	${LIB_DIR} share/examples/rc.d ${SHARE_DIR}/httpdocs \
 			${SHARE_DIR}/tcpquerydocs ${SHARE_DIR}/mysql_sql \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2019/08/11 13:22:13 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2019/11/03 11:45:44 rillig Exp $
 
 DISTNAME=		netdisco-1.3.3_with_mibs
 PKGNAME=		${DISTNAME:S/_with_mibs//}
@@ -126,7 +126,7 @@ SUBST_FILES.apachevers=		html/admin_user.html html/change_pw.html html/login.htm
 SUBST_FILES.apachevers+=	html/logout.html html/portcontrol.html
 SUBST_FILES.apachevers+=	html/public_debugging.html
 SUBST_SED.apachevers=		-e "s|connection->remote_ip|connection->client_ip|g"
-SUBST_MESSAGE.apachevers= 	Fixing perl files for apache > 2.2.
+SUBST_MESSAGE.apachevers=	Fixing perl files for apache > 2.2.
 
 do-build:
 	${RM} -f ${WRKSRC:Q}/html/doc/ChangeLog.txt

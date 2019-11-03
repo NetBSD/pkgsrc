@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/10/08 12:04:33 sborrill Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/03 11:45:38 rillig Exp $
 #
 
 DISTNAME=		istgt-20150713
@@ -27,7 +27,7 @@ CONF_FILES=	${EG_DIR}/auth.conf ${PKG_SYSCONFDIR}/auth.conf \
 		${EG_DIR}/istgt.conf ${PKG_SYSCONFDIR}/istgt.conf \
 		${EG_DIR}/istgtcontrol.conf ${PKG_SYSCONFDIR}/istgtcontrol.conf
 
-RCD_SCRIPTS=	istgt
+RCD_SCRIPTS=		istgt
 INSTALLATION_DIRS+=	bin ${EG_DIR} ${PKGMANDIR}/man1
 
 CPPFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS

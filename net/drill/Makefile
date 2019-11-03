@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/08/01 17:40:14 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/03 11:45:34 rillig Exp $
 
 VERSION=	1.6.17
 DISTNAME=	ldns-${VERSION}
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/drill
 
-BUILDLINK_API_DEPENDS.ldns+=    ldns>=${VERSION}
+BUILDLINK_API_DEPENDS.ldns+=	ldns>=${VERSION}
 
 .include "../../net/ldns/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

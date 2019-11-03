@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2019/02/04 09:34:49 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2019/11/03 11:45:58 rillig Exp $
 
 DISTNAME=	wu-ftpd-2.6.2
 PKGREVISION=	3
@@ -21,7 +21,7 @@ CONFLICTS+=	lukemftpd-[0-9]*
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	yacc
 
-CONFIGURE_ARGS+=--enable-quota --enable-noop --enable-skey
+CONFIGURE_ARGS+=	--enable-quota --enable-noop --enable-skey
 
 DIST_SUBDIR=		wu-ftpd
 

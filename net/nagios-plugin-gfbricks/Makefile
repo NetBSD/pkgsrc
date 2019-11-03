@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/08/07 09:30:45 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/03 11:45:42 rillig Exp $
 #
 
 PKGNAME=	nagios-plugin-gfbricks-${DISTNAME:C/.*-//}
@@ -13,13 +13,13 @@ HOMEPAGE=	http://ftp.espci.fr/pub/nagios-local/
 COMMENT=	GlusterFS bricks monitoring plugin for Nagios
 LICENSE=	modified-bsd
 
-INSTALLATION_DIRS+= libexec/nagios
+INSTALLATION_DIRS+=	libexec/nagios
 
 BUILD_DEFS+=		NAGIOS_GROUP
 PKG_GROUPS_VARS=	NAGIOS_GROUP
 PKG_GROUPS=		${NAGIOS_GROUP}
 
-SPECIAL_PERMS+= ${PREFIX}/libexec/nagios/check_gfbricks \
+SPECIAL_PERMS+=	${PREFIX}/libexec/nagios/check_gfbricks \
 		${REAL_ROOT_USER} ${NAGIOS_GROUP} 4554
 
 do-install:
