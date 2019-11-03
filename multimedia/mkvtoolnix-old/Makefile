@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2019/08/22 12:23:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.59 2019/11/03 17:12:03 rillig Exp $
 
 DISTNAME=	mkvtoolnix-2.9.8
 PKGREVISION=	55
@@ -11,10 +11,10 @@ HOMEPAGE=	http://www.bunkus.org/videotools/mkvtoolnix/
 COMMENT=	Matroska tools, old version for build with g++-4.1
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake msgfmt
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		gmake msgfmt
 USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=		c c++
 
 CONFIGURE_ARGS+=	--with-boost-libdir=${BUILDLINK_PREFIX.boost-libs}
 CONFIGURE_ARGS+=	--with-boost_regex=boost_regex
@@ -31,7 +31,7 @@ PLIST_VARS+=	gui
 PLIST.gui=	yes
 CONFIGURE_ARGS+=	--enable-gui
 CONFIGURE_ARGS+=	--enable-wxwidgets
-.   include "../../x11/wxGTK28/buildlink3.mk"
+.  include "../../x11/wxGTK28/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-gui
 CONFIGURE_ARGS+=	--disable-wxwidgets

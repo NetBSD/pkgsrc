@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/09/06 11:30:41 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2019/11/03 17:12:04 rillig Exp $
 #
 
 DISTNAME=	tstools-1_11
@@ -20,24 +20,24 @@ USE_TOOLS+=	gmake
 
 LDFLAGS.SunOS+=	-lsocket -lnsl -lresolv
 
-TSPROGS=es2ts \
-	esdots \
-	esfilter \
-	esmerge \
-	esreport \
-	esreverse \
-	m2ts2ts \
-	pcapreport \
-	ps2ts \
-	psdots \
-	psreport \
-	stream_type \
-	ts2es \
-	ts_packet_insert \
-	tsinfo \
-	tsplay \
-	tsreport \
-	tsserve
+TSPROGS=	es2ts \
+		esdots \
+		esfilter \
+		esmerge \
+		esreport \
+		esreverse \
+		m2ts2ts \
+		pcapreport \
+		ps2ts \
+		psdots \
+		psreport \
+		stream_type \
+		ts2es \
+		ts_packet_insert \
+		tsinfo \
+		tsplay \
+		tsreport \
+		tsserve
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
