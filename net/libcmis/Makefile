@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/08/22 12:23:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/03 11:45:39 rillig Exp $
 
 DISTNAME=	libcmis-0.5.2
 PKGREVISION=	3
@@ -12,11 +12,11 @@ HOMEPAGE=	https://github.com/tdf/libcmis
 COMMENT=	Client library for the CMIS interface
 LICENSE=	gnu-gpl-v2 OR gnu-lgpl-v2 OR mpl-1.1
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-man=no --disable-werror
-USE_LANGUAGES+=	c c++
-USE_TOOLS+=	gmake pkg-config
-USE_LIBTOOL=	yes
+USE_LANGUAGES+=		c c++
+USE_TOOLS+=		gmake pkg-config
+USE_LIBTOOL=		yes
 
 BUILDLINK_DEPMETHOD.boost-headers?=     build
 .include "../../devel/boost-headers/buildlink3.mk"

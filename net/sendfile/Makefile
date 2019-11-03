@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2016/05/17 10:32:08 fhajny Exp $
+# $NetBSD: Makefile,v 1.37 2019/11/03 11:45:53 rillig Exp $
 #
 
 DISTNAME=	sendfile-2.1b
@@ -26,8 +26,8 @@ OVERRIDE_GNU_CONFIG_SCRIPTS=	yes
 post-configure:
 	cd ${WRKSRC} &&${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} config
 
-OWN_DIRS+=	${VARBASE}/spool/sendfile
-OWN_DIRS_PERMS+=${VARBASE}/spool/sendfile/LOG ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 700
-OWN_DIRS_PERMS+=${VARBASE}/spool/sendfile/OUTGOING ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 1777
+OWN_DIRS+=		${VARBASE}/spool/sendfile
+OWN_DIRS_PERMS+=	${VARBASE}/spool/sendfile/LOG ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 700
+OWN_DIRS_PERMS+=	${VARBASE}/spool/sendfile/OUTGOING ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 1777
 
 .include "../../mk/bsd.pkg.mk"

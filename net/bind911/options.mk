@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2019/04/30 02:51:38 taca Exp $
+# $NetBSD: options.mk,v 1.4 2019/11/03 11:45:30 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bind911
 PKG_SUPPORTED_OPTIONS=	bind-dig-sigchase bind-xml-statistics-server
@@ -25,7 +25,7 @@ PKG_SUGGESTED_OPTIONS+=	threads
 .if empty(MISSING_FEATURES:Minet6)
 PKG_SUGGESTED_OPTIONS+=	inet6
 .else
-PLIST.inet6=	yes
+PLIST.inet6=		yes
 .endif
 
 .include "../../mk/bsd.options.mk"

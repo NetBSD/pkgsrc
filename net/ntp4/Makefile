@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2019/08/11 13:22:13 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2019/11/03 11:45:45 rillig Exp $
 #
 
 DISTNAME=	ntp-4.2.8p13
@@ -17,9 +17,9 @@ GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 USE_TOOLS+=	pax perl:run
 
-CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=--with-locfile=loc/pkgsrc
-CONFIGURE_ENV+=	  PATH_PERL=${PERL5}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-locfile=loc/pkgsrc
+CONFIGURE_ENV+=		PATH_PERL=${PERL5}
 
 OVERRIDE_DIRDEPTH=	4
 

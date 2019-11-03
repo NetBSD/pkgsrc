@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.36 2019/07/20 22:46:38 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2019/11/03 11:45:36 rillig Exp $
 
 PKGNAME=	gst-plugins1-${DISTNAME}
 PKGREVISION=	1
 COMMENT+=	(gstreamer plugin)
 
-CONFIGURE_ARGS+= --with-gstreamer
+CONFIGURE_ARGS+=	--with-gstreamer
 
 .include "../../net/libnice/Makefile.common"
 

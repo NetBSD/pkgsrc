@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.14 2017/07/08 21:45:42 adam Exp $
+# $NetBSD: options.mk,v 1.15 2019/11/03 11:45:39 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.lftp
+PKG_OPTIONS_VAR=		PKG_OPTIONS.lftp
 PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
-PKG_OPTIONS_GROUP.ssl=	gnutls ssl
-PKG_SUPPORTED_OPTIONS=	perl dnssec
-PKG_SUGGESTED_OPTIONS=	ssl
+PKG_OPTIONS_GROUP.ssl=		gnutls ssl
+PKG_SUPPORTED_OPTIONS=		perl dnssec
+PKG_SUGGESTED_OPTIONS=		ssl
 
 .include "../../mk/bsd.options.mk"
 
