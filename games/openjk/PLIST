@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2019/11/03 12:12:56 nia Exp $
+bin/openjk
+bin/openjk_sp
+bin/openjkded
+share/JediAcademy/OpenJK/cgame${OPENJK_ARCH}.so
+share/JediAcademy/OpenJK/jagame${OPENJK_ARCH}.so
+share/JediAcademy/OpenJK/jampgame${OPENJK_ARCH}.so
+share/JediAcademy/OpenJK/ui${OPENJK_ARCH}.so
+share/JediAcademy/base/cgame${OPENJK_ARCH}.so
+share/JediAcademy/base/jampgame${OPENJK_ARCH}.so
+share/JediAcademy/base/ui${OPENJK_ARCH}.so
+share/JediAcademy/openjk.${OPENJK_ARCH}
+share/JediAcademy/openjk_sp.${OPENJK_ARCH}
+share/JediAcademy/openjkded.${OPENJK_ARCH}
+share/JediAcademy/rd-vanilla_${OPENJK_ARCH}.so
+share/JediAcademy/rdsp-vanilla_${OPENJK_ARCH}.so
+share/applications/openjk.desktop
+share/icons/hicolor/128x128/apps/openjk.png
+share/icons/hicolor/16x16/apps/openjk.png
+share/icons/hicolor/256x256/apps/openjk.png
+share/icons/hicolor/32x32/apps/openjk.png
+share/icons/hicolor/48x48/apps/openjk.png
+share/icons/hicolor/64x64/apps/openjk.png

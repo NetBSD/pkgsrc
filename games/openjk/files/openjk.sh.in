@@ -1,0 +1,2 @@
+#!/bin/sh
+cd @PREFIX@/share/JediAcademy && exec ./@OPENJK_BIN@
