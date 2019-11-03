@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/10/18 14:58:47 bsiegert Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/03 10:00:21 rillig Exp $
 
 DISTNAME=	cobra-0.0.3
 PKGNAME=	go-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=spf13/}
 CATEGORIES=	devel
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-GITHUB_PROJECT= ${PKGBASE:S/^go-//}
+GITHUB_PROJECT=	${PKGBASE:S/^go-//}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/spf13/cobra

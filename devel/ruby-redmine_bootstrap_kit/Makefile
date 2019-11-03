@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/09/16 19:26:50 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/03 10:00:24 rillig Exp $
 
 GITHUB_PROJECT=	redmine_bootstrap_kit
 DISTNAME=	0.2.4
@@ -135,8 +135,8 @@ do-install:
 		${INSTALL_DATA} ${WRKSRC}/assets/stylesheets/$$i/*.css \
 			${DESTDIR}${PREFIX}/${RM_BSK_PLUGIN_DIR}/assets/stylesheets/$$i/; \
 	done
-		${INSTALL_DATA} ${WRKSRC}/assets/stylesheets/bootstrap/images/*.png \
-			${DESTDIR}${PREFIX}/${RM_BSK_PLUGIN_DIR}/assets/stylesheets/bootstrap/images
+	${INSTALL_DATA} ${WRKSRC}/assets/stylesheets/bootstrap/images/*.png \
+		${DESTDIR}${PREFIX}/${RM_BSK_PLUGIN_DIR}/assets/stylesheets/bootstrap/images
 	${INSTALL_DATA} ${WRKSRC}/assets/stylesheets/codemirror/addon/display/*.css \
 		${DESTDIR}${PREFIX}/${RM_BSK_PLUGIN_DIR}/assets/stylesheets/codemirror/addon/display
 	${INSTALL_DATA} ${WRKSRC}/config/locales/*.yml \

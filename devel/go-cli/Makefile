@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/10/18 14:58:46 bsiegert Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/03 10:00:20 rillig Exp $
 
 DISTNAME=	cli-1.20.0
 PKGNAME=	go-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	14
 MASTER_SITES=	${MASTER_SITE_GITHUB:=urfave/}
 CATEGORIES=	devel
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-GITHUB_PROJECT= ${PKGBASE:S/^go-//}
+GITHUB_PROJECT=	${PKGBASE:S/^go-//}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/urfave/cli
@@ -16,10 +16,10 @@ LICENSE=	mit
 GO_DIST_BASE=	${DISTNAME}
 GO_SRCPATH=	gopkg.in/urfave/cli.v1
 
-REPLACE_BASH+=	autocomplete/bash_autocomplete
-REPLACE_PYTHON+= generate-flag-types
-REPLACE_PYTHON+= runtests
-USE_TOOLS+=	bash:run
+REPLACE_BASH+=		autocomplete/bash_autocomplete
+REPLACE_PYTHON+=	generate-flag-types
+REPLACE_PYTHON+=	runtests
+USE_TOOLS+=		bash:run
 
 # Deal with renaming
 pre-install:

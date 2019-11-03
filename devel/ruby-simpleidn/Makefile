@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/08/25 14:53:03 tsutsui Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/03 10:00:25 rillig Exp $
 
 DISTNAME=	simpleidn-0.0.9
-PKGNAME=        ${RUBY_PKGPREFIX}-${DISTNAME}
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 
 MAINTAINER=	tsutsui@NetBSD.org
