@@ -1,11 +1,11 @@
-$NetBSD: patch-docs_ld.lld.1,v 1.4 2019/10/21 22:07:58 rjs Exp $
+$NetBSD: patch-docs_ld.lld.1,v 1.5 2019/11/03 12:10:29 kamil Exp $
 
-Add '-z nognustack' option to disable emitting PT_GNU_STACK.
-https://reviews.llvm.org/D56554
+Cherry-pick upstream patch commit 2a0fcae3d4d1fd85d6ae8378d7c6f12430c0087d
+[lld] [ELF] Add '-z nognustack' opt to suppress emitting PT_GNU_STAC dummy option for an AArch64 erratum.
 
---- docs/ld.lld.1.orig	2019-01-17 13:46:36.000000000 +0000
+--- docs/ld.lld.1.orig	2019-11-03 11:37:33.105878671 +0000
 +++ docs/ld.lld.1
-@@ -511,6 +511,10 @@ Set the
+@@ -612,6 +612,11 @@ Set the
  .Dv DF_1_NOOPEN
  flag to indicate that the object may not be opened by
  .Xr dlopen 3 .
@@ -13,6 +13,7 @@ https://reviews.llvm.org/D56554
 +Do not emit the
 +.Dv PT_GNU_STACK
 +segment.
++.Pp
  .It Cm norelro
  Do not indicate that portions of the object shold be mapped read-only
  after initial relocation processing.

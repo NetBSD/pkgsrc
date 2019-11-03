@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2019/10/19 14:01:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/11/03 12:10:29 kamil Exp $
 bin/ld.lld
 bin/ld64.lld
 bin/lld
 bin/lld-link
+bin/nb.lld
 bin/wasm-ld
 include/lld/Common/Args.h
 include/lld/Common/Driver.h
