@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/07/04 13:40:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/03 17:04:19 rillig Exp $
 #
 
 DISTNAME=	ascii-3.15
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 USE_TOOLS=		gmake
 USE_LIBTOOL=		yes
 
-BUILD_TARGET= 		ascii
+BUILD_TARGET=		ascii
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 
 SUBST_CLASSES+=		prefix

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/02/21 05:56:57 tsutsui Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/03 17:04:23 rillig Exp $
 
 DISTNAME=		libreoffice5-bin	# overridden below
 PKGNAME=		libreoffice5-bin-${OO_RELEASE}
@@ -65,7 +65,7 @@ MASTER_SITES=		https://downloadarchive.documentfoundation.org/libreoffice/old/${
 
 .include "options.mk"
 
-INSTALLATION_DIRS= bin share/applications
+INSTALLATION_DIRS=	bin share/applications
 DESKTOP_FILESDIR=	${.CURDIR}/../../misc/libreoffice5-bin/files
 
 do-install:

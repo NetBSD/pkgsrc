@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2019/06/22 11:37:13 nia Exp $
+# $NetBSD: Makefile,v 1.87 2019/11/03 17:04:21 rillig Exp $
 
 DISTNAME=	dialog-1.3-20190211
 PKGNAME=	${DISTNAME:C/-2/.2/}
@@ -11,9 +11,9 @@ HOMEPAGE=	https://invisible-island.net/dialog/dialog.html
 COMMENT=	Display dialog boxes from shell scripts
 LICENSE=	gnu-lgpl-v2.1
 
-GNU_CONFIGURE=	yes
-MAKE_FILE=	makefile
-USE_LIBTOOL=	yes
+GNU_CONFIGURE=		yes
+MAKE_FILE=		makefile
+USE_LIBTOOL=		yes
 CONFIGURE_ARGS+=	--with-libtool
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1

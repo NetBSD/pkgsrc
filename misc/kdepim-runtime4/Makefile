@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2019/08/22 12:23:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.75 2019/11/03 17:04:22 rillig Exp $
 
 DISTNAME=	kdepim-runtime-4.14.10
 PKGNAME=	${DISTNAME:S/-4/4-4/}
@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.04.3/src/}
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
 
-BUILDLINK_DEPMETHOD.qt4-tools=full
+BUILDLINK_DEPMETHOD.qt4-tools=	full
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 

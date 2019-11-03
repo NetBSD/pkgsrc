@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2015/04/25 14:23:36 tnn Exp $
+# $NetBSD: Makefile,v 1.34 2019/11/03 17:04:24 rillig Exp $
 
 DISTNAME=	molden4.6
 PKGNAME=	${DISTNAME:S/molden/&-/}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.cmbi.ru.nl/molden/molden.html
 COMMENT=	Displaying MOLecular DENsity
 LICENSE=	molden-license
 
-RESTRICTED=	Redistributing Molden by unregistered user is prohibited.
+RESTRICTED=		Redistributing Molden by unregistered user is prohibited.
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}

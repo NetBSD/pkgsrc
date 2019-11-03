@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2019/08/22 12:23:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.91 2019/11/03 17:04:23 rillig Exp $
 
 DISTNAME=	kdepimlibs-4.14.10
 PKGNAME=	${DISTNAME:S/-4/4-4/}
@@ -15,14 +15,14 @@ SUBST_MESSAGE.phononrelpath=	Fixing phonon RELWITHDEBINFO path
 SUBST_FILES.phononrelpath=	_KDE_build/CMakeFiles/Export/${LOCALBASE:S^/^_^}/lib/cmake/KdepimLibs/KDEPimLibsLibraryTargetsWithPrefix-${TARGET_NAME}.cmake
 SUBST_SED.phononrelpath=	-e 's:[^"]*/\.buildlink/lib/libphonon\.so::'
 
-CMAKE_DEPENDENCIES_REWRITE= _KDE_build/KDEPimLibsDependencies.cmake
+CMAKE_DEPENDENCIES_REWRITE=	_KDE_build/KDEPimLibsDependencies.cmake
 
 CMAKE_ARGS+=	-DKDE4_BUILD_TESTS:BOOL=OFF
 
 # for strcasecmp
 CFLAGS.SunOS+=	-D__EXTENSIONS__
 
-REPLACE_PERL+= mailtransport/kconf_update/migrate-transports.pl
+REPLACE_PERL+=	mailtransport/kconf_update/migrate-transports.pl
 
 BUILDLINK_API_DEPENDS.akonadi+=	akonadi>=1.8.51
 
