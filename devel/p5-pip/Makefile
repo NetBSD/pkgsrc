@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/08/11 13:20:48 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/11/03 10:16:06 rillig Exp $
 
 DISTNAME=	pip-1.19
 PKGNAME=	p5-${DISTNAME}
@@ -26,7 +26,7 @@ BUILD_DEPENDS+=	p5-Test-Script>=1.02:../../devel/p5-Test-Script
 
 PERL5_PACKLIST=		auto/pip/.packlist
 #PERL5_MODULE_TYPE=	Module::Install::Bundled
-MAKE_PARAMS+=	--skipdeps
+MAKE_PARAMS+=		--skipdeps
 
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 

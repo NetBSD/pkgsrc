@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/08/11 13:19:09 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/03 10:15:51 rillig Exp $
 
 DISTNAME=	Data-Dumper-Names-0.03
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-PadWalker>0.13:../../devel/p5-PadWalker
 
-PERL5_MODULE_TYPE= Module::Build
+PERL5_MODULE_TYPE=	Module::Build
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Data/Dumper/Names/.packlist

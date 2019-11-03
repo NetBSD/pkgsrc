@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/08/11 13:19:57 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2019/11/03 10:15:58 rillig Exp $
 #
 
 DISTNAME=	MooseX-Declare-0.43
@@ -25,7 +25,7 @@ BUILD_DEPENDS+=	p5-Class-Tiny-[0-9]*:../../devel/p5-Class-Tiny
 BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 BUILD_DEPENDS+=	p5-Test-CheckDeps>=0.007:../../devel/p5-Test-CheckDeps
 
-USE_LANGUAGES=	# empty
+USE_LANGUAGES=		# empty
 PERL5_MODULE_TYPE=	Module::Build::Tiny
 PERL5_PACKLIST=		auto/MooseX/Declare/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/08/11 13:19:51 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/03 10:15:57 rillig Exp $
 #
 
 DISTNAME=	Module-Install-ReadmeFromPod-0.30
@@ -16,9 +16,9 @@ DEPENDS+=	p5-Capture-Tiny>=0.05:../../devel/p5-Capture-Tiny
 DEPENDS+=	p5-Module-Install>=0.85:../../devel/p5-Module-Install
 
 # for make test
-BUILD_DEPENDS+=p5-IO-All-[0-9]*:../../devel/p5-IO-All
-BUILD_DEPENDS+=p5-Test-InDistDir-[0-9]*:../../devel/p5-Test-InDistDir
-BUILD_DEPENDS+=p5-Pod-Markdown-[0-9]*:../../textproc/p5-Pod-Markdown
+BUILD_DEPENDS+=	p5-IO-All-[0-9]*:../../devel/p5-IO-All
+BUILD_DEPENDS+=	p5-Test-InDistDir-[0-9]*:../../devel/p5-Test-InDistDir
+BUILD_DEPENDS+=	p5-Pod-Markdown-[0-9]*:../../textproc/p5-Pod-Markdown
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Module/Install/ReadmeFromPod/.packlist

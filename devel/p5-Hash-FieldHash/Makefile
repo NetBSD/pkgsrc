@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/08/11 13:19:34 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/03 10:15:54 rillig Exp $
 #
 
 DISTNAME=	Hash-FieldHash-0.15
@@ -14,8 +14,8 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Test-LeakTrace>=0:../../devel/p5-Test-LeakTrace
 
-PERL5_PACKLIST=	auto/Hash/FieldHash/.packlist
-USE_LANGUAGES=	c
+PERL5_PACKLIST=		auto/Hash/FieldHash/.packlist
+USE_LANGUAGES=		c
 PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"

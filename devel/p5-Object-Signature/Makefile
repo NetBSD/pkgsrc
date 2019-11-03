@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/08/11 13:20:04 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/03 10:16:01 rillig Exp $
 
 DISTNAME=	Object-Signature-1.08
 PKGNAME=	p5-${DISTNAME}
@@ -17,8 +17,8 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-PathTools>=0.80:../../devel/p5-PathTools
 DEPENDS+=	p5-ExtUtils-AutoInstall>=0.63:../../devel/p5-ExtUtils-AutoInstall
 
-USE_LANGUAGES=	# empty
-PERL5_PACKLIST=	auto/Object/Signature/.packlist
+USE_LANGUAGES=		# empty
+PERL5_PACKLIST=		auto/Object/Signature/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/10/11 14:44:18 mef Exp $
+# $NetBSD: Makefile,v 1.20 2019/11/03 10:15:50 rillig Exp $
 
 DISTNAME=	CPANPLUS-0.9178
 PKGNAME=	p5-${DISTNAME}
@@ -23,7 +23,7 @@ BUILD_DEPENDS+=	p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
 BUILD_DEPENDS+=	p5-Log-Message-Simple-[0-9]*:../../devel/p5-Log-Message-Simple
 BUILD_DEPENDS+=	p5-Package-Constants-[0-9]*:../../devel/p5-Package-Constants
 
-PERL5_PACKLIST= auto/CPANPLUS/.packlist
+PERL5_PACKLIST=	auto/CPANPLUS/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

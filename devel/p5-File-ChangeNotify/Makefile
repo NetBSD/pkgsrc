@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2019/08/11 13:19:25 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2019/11/03 10:15:53 rillig Exp $
 
 DISTNAME=	File-ChangeNotify-0.31
 PKGNAME=	p5-${DISTNAME}
@@ -12,10 +12,10 @@ COMMENT=	Watch for changes to files, cross-platform style
 LICENSE=	artistic-2.0
 
 #BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
-DEPENDS+=	p5-MooseX-Params-Validate>=0.08:../../devel/p5-MooseX-Params-Validate
-DEPENDS+=	p5-MooseX-SemiAffordanceAccessor-[0-9]*:../../devel/p5-MooseX-SemiAffordanceAccessor
-DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
-DEPENDS+=	p5-Type-Tiny-[0-9]*:../../devel/p5-Type-Tiny
+DEPENDS+=		p5-MooseX-Params-Validate>=0.08:../../devel/p5-MooseX-Params-Validate
+DEPENDS+=		p5-MooseX-SemiAffordanceAccessor-[0-9]*:../../devel/p5-MooseX-SemiAffordanceAccessor
+DEPENDS+=		p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
+DEPENDS+=		p5-Type-Tiny-[0-9]*:../../devel/p5-Type-Tiny
 
 # for make test
 BUILD_DEPENDS+=	p5-Moo-[0-9]*:../../devel/p5-Moo
