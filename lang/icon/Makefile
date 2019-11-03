@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2012/10/02 20:11:42 asau Exp $
+# $NetBSD: Makefile,v 1.51 2019/11/03 19:04:01 rillig Exp $
 
 DISTNAME=		icon.v943src
 PKGNAME=		icon-9.4.3
@@ -29,7 +29,7 @@ NAME=	bsd
 	(${MACHINE_ARCH} == "m68k") || (${MACHINE_ARCH} == "vax")
 .  else
 PTHREAD_OPTS+=		require native
-.  include "../../mk/pthread.buildlink3.mk"
+.    include "../../mk/pthread.buildlink3.mk"
 .  endif
 
 .elif ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
@@ -54,7 +54,7 @@ PKG_FAIL_REASON+=	"${PKGNAME} does not know about "${CC_VERSION:Q}
 .  if ${MACHINE_ARCH} == "sparc"
 .  else
 PTHREAD_OPTS+=		require native
-.  include "../../mk/pthread.buildlink3.mk"
+.    include "../../mk/pthread.buildlink3.mk"
 .  endif
 
 .else

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2016/02/25 14:42:55 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.29 2019/11/03 19:03:57 rillig Exp $
 #
 # used by lang/gcc3/language.mk
 # used by lang/gcc3-c/Makefile
@@ -27,7 +27,7 @@ DISTINFO_FILE=		${.CURDIR}/../../lang/gcc3/distinfo
 GCC3_DEFAULT_SUBPREFIX=		gcc3
 GCC3_INSTALLTO_SUBPREFIX?=	${GCC3_DEFAULT_SUBPREFIX}
 .if ${GCC3_INSTALLTO_SUBPREFIX} != ${GCC3_DEFAULT_SUBPREFIX}
-GCC3_PKGMODIF=		_${GCC3_INSTALLTO_SUBPREFIX}
+GCC3_PKGMODIF=			_${GCC3_INSTALLTO_SUBPREFIX}
 .endif
 
 GCC_SUBPREFIX=		${GCC3_INSTALLTO_SUBPREFIX}
@@ -63,11 +63,11 @@ CONFIGURE_ARGS.AIX+=	--disable-aix64
 
 .if ${OPSYS} == "NetBSD"
 .  if !defined(USE_BINUTILS)
-AS_PATH:=   ${AS}
+AS_PATH:=	${AS}
 .    for _dir_ in ${PATH:C/\:/ /g}
 .      if empty(AS_PATH:M/*)
 .        if exists(${_dir_}/${AS})
-AS_PATH:=   ${_dir_}/${AS}
+AS_PATH:=	${_dir_}/${AS}
 .        endif
 .      endif
 .    endfor
@@ -110,7 +110,7 @@ GCC_REQD+=		${GCC_VERSION}
 
 .if ${OPSYS} == "IRIX"
 .  if !empty(PKGSRC_COMPILER:Mmipspro*)
-CONFIGURE_ENV+= SGI_ABI="n32"
+CONFIGURE_ENV+=	SGI_ABI="n32"
 MAKE_ENV+=	SGI_ABI="n32"
 .  endif
 .endif

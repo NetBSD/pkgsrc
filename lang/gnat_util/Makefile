@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/04/02 09:30:06 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/03 19:04:01 rillig Exp $
 
 PKGNAME=	gnat_util-${SNAPSHOT}
 CATEGORIES=	lang
@@ -22,8 +22,8 @@ MAKE_ENV=	MAKEOBJDIR=${WRKSRC}/obj
 USE_LANGUAGES=	c ada
 
 # Automatic package list generation
-GENERATE_PLIST=  cd ${DESTDIR}${PREFIX};
-GENERATE_PLIST+= ${FIND} * \( -type f -or -type l \) | ${SORT} -dr;
+GENERATE_PLIST=		cd ${DESTDIR}${PREFIX};
+GENERATE_PLIST+=	${FIND} * \( -type f -or -type l \) | ${SORT} -dr;
 
 post-extract:
 	${MKDIR} ${WRKSRC}/obj

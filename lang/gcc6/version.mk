@@ -1,2 +1,2 @@
-# $NetBSD: version.mk,v 1.4 2018/11/05 18:59:44 maya Exp $
-GCC6_DIST_VERSION:=6.5.0
+# $NetBSD: version.mk,v 1.5 2019/11/03 19:03:59 rillig Exp $
+GCC6_DIST_VERSION:=	6.5.0

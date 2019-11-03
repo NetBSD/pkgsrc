@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/10/15 16:50:11 adam Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/03 19:04:05 rillig Exp $
 
 .include "dist.mk"
 
@@ -158,10 +158,10 @@ SUBST_SED.findlib+=	-e "s!\('-Wl,-t'\)!'${COMPILER_RPATH_FLAG}${PREFIX}/lib', '-
 
 .include "options.mk"
 
-CHECK_INTERPRETER_SKIP=	lib/python${PY_VER_SUFFIX}/venv/scripts/posix/pydoc
-CHECK_INTERPRETER_SKIP+=lib/python${PY_VER_SUFFIX}/test/ziptestdata/exe_with_z64
-CHECK_INTERPRETER_SKIP+=lib/python${PY_VER_SUFFIX}/test/ziptestdata/exe_with_zip
-CHECK_INTERPRETER_SKIP+=lib/python${PY_VER_SUFFIX}/test/ziptestdata/header.sh
+CHECK_INTERPRETER_SKIP=		lib/python${PY_VER_SUFFIX}/venv/scripts/posix/pydoc
+CHECK_INTERPRETER_SKIP+=	lib/python${PY_VER_SUFFIX}/test/ziptestdata/exe_with_z64
+CHECK_INTERPRETER_SKIP+=	lib/python${PY_VER_SUFFIX}/test/ziptestdata/exe_with_zip
+CHECK_INTERPRETER_SKIP+=	lib/python${PY_VER_SUFFIX}/test/ziptestdata/header.sh
 
 # Avoid error: Cannot generate ./Include/opcode.h, python not found !
 post-configure:

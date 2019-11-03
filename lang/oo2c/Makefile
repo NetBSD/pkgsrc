@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2019/10/12 20:03:36 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2019/11/03 19:04:03 rillig Exp $
 
 DISTNAME=		oo2c_${BITS}-2.0.11
 PKGNAME=		oo2c-2.0.11
@@ -36,10 +36,10 @@ SUBST_SED.pkg-unwrap=	-e 's,${WRAPPER_DIR},${LOCALBASE},g'
 
 .include "../../mk/bsd.prefs.mk"
 
-BITS=32
+BITS=	32
 .for PLAT in ${LP64PLATFORMS}
 .  if !empty(MACHINE_PLATFORM:M${PLAT})
-BITS=64
+BITS=	64
 .  endif
 .endfor
 

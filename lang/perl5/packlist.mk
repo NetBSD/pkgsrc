@@ -1,4 +1,4 @@
-# $NetBSD: packlist.mk,v 1.20 2018/01/07 11:40:57 rillig Exp $
+# $NetBSD: packlist.mk,v 1.21 2019/11/03 19:04:05 rillig Exp $
 #
 # This Makefile fragment is intended to be included by packages that
 # create packlist files.  This file is automatically included by
@@ -62,7 +62,7 @@ FILES_SUBST+=		PERL5_PACKLIST=${_PERL5_REAL_PACKLIST:Q}
 PERL5_PLIST_COMMENT_CMD= \
 	{ ${ECHO} "@comment The following lines are automatically generated"; \
 	  ${ECHO} "@comment from the installed .packlist files."; }
-PERL5_PLIST_FILES_CMD= \
+PERL5_PLIST_FILES_CMD=	\
 	{ ${CAT} ${_PERL5_PACKLIST}; for f in ${_PERL5_REAL_PACKLIST}; do ${TEST} ! -f "${DESTDIR}$$f" || ${ECHO} "$$f"; done; } \
 	| ${SED} -e "s,[ 	].*,," -e "s,/\\./,/,g" -e "s,${PREFIX}/,," \
 	| ${SORT} -u
@@ -95,7 +95,7 @@ _PERL5_PACKLIST_AWK_STRIP_DESTDIR=
 ###
 
 _PERL5_PACKLIST_MANPAGE_RE=	\
-  ^(\/[^ \/]*)+\/(man[1-9ln]\/[^ \/]*\.[1-9ln]|cat[1-9ln]\/[^ \/]*\.[0-9])$$
+	^(\/[^ \/]*)+\/(man[1-9ln]\/[^ \/]*\.[1-9ln]|cat[1-9ln]\/[^ \/]*\.[0-9])$$
 
 _PERL5_PACKLIST_AWK_STRIP_MANZ=						\
 	/${_PERL5_PACKLIST_MANPAGE_RE}\.gz/				\

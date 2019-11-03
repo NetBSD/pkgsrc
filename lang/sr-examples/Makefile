@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/02 20:11:54 asau Exp $
+# $NetBSD: Makefile,v 1.12 2019/11/03 19:04:09 rillig Exp $
 #
 
 DISTNAME=		vs233
@@ -21,7 +21,7 @@ NO_BUILD=		yes
 
 ### Use the second line below for installing if you want to make print-PLIST!
 DOMOD=
-#DOMOD=-pm
+#DOMOD=	-pm
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX:Q}/share/examples/sr

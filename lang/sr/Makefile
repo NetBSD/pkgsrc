@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2018/04/18 08:42:16 he Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/03 19:04:08 rillig Exp $
 #
 
 DISTNAME=		sr233
@@ -20,9 +20,9 @@ MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=		yacc
 
-WRKSRC= ${WRKDIR}
-TEST_TARGET=		verify
-AUTO_MKDIRS=		yes
+WRKSRC=		${WRKDIR}
+TEST_TARGET=	verify
+AUTO_MKDIRS=	yes
 
 SUBST_CLASSES+=		sr
 SUBST_STAGE.sr=		pre-configure

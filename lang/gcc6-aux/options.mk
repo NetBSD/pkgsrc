@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2016/12/13 01:19:20 marino Exp $
+# $NetBSD: options.mk,v 1.2 2019/11/03 19:04:00 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc6-aux
-PKG_SUPPORTED_OPTIONS=  fortran objc testsuite static bootstrap allstages
-PKG_SUGGESTED_OPTIONS=  # fortran
+PKG_SUPPORTED_OPTIONS=	fortran objc testsuite static bootstrap allstages
+PKG_SUGGESTED_OPTIONS=	# fortran
 
 # fortran fails to build transfer.c, disable
 
@@ -18,15 +18,15 @@ PKG_SUGGESTED_OPTIONS=  # fortran
 #############################
 
 .if empty(PKG_OPTIONS:Mfortran) || !empty(PKG_OPTIONS:Mbootstrap)
-EXTRA_CONFARGS+= --disable-libquadmath
+EXTRA_CONFARGS+=	--disable-libquadmath
 .else
-LANGS+= fortran
-APPLY_DIFFS+= fortran
-.if ${OPSYS} == NetBSD
-EXTRA_CONFARGS+= --disable-libquadmath
-.else
-EXTRA_CONFARGS+= --enable-libquadmath
-.endif
+LANGS+=			fortran
+APPLY_DIFFS+=		fortran
+.  if ${OPSYS} == NetBSD
+EXTRA_CONFARGS+=	--disable-libquadmath
+.  else
+EXTRA_CONFARGS+=	--enable-libquadmath
+.  endif
 .endif
 
 
@@ -35,7 +35,7 @@ EXTRA_CONFARGS+= --enable-libquadmath
 #################################
 
 .if !empty(PKG_OPTIONS:Mobjc) && empty(PKG_OPTIONS:Mbootstrap)
-LANGS+= objc
+LANGS+=	objc
 .endif
 
 
@@ -44,9 +44,9 @@ LANGS+= objc
 #########################
 
 .if !empty(PKG_OPTIONS:Mtestsuite) && empty(PKG_OPTIONS:Mbootstrap)
-BUILD_DEPENDS+= dejagnu>=1.4:../../devel/dejagnu
-APPLY_DIFFS+= ada-testsuite
-APPLY_DIFFS+= gcc-testsuite
+BUILD_DEPENDS+=	dejagnu>=1.4:../../devel/dejagnu
+APPLY_DIFFS+=	ada-testsuite
+APPLY_DIFFS+=	gcc-testsuite
 .endif
 
 
@@ -55,14 +55,14 @@ APPLY_DIFFS+= gcc-testsuite
 ###############################
 
 .if !empty(PKG_OPTIONS:Mstatic)
-STATIC_BUILD = yes
+STATIC_BUILD =	yes
 .endif
 
 .if defined(STATIC_BUILD) && empty(PKG_OPTIONS:Mbootstrap)
 .  if ${OPSYS} == SunOS
-PKG_FAIL_REASON+= SunOS does not support static builds
+PKG_FAIL_REASON+=	SunOS does not support static builds
 .  else
-EXTRA_CONFARGS+= --with-stage1-ldflags=-static
+EXTRA_CONFARGS+=	--with-stage1-ldflags=-static
 .  endif
 .endif
 
@@ -93,17 +93,17 @@ EXTRA_CONFARGS+= --with-mpc=${BUILDLINK_PREFIX.mpcomplex}
 .endif
 
 .if !empty(PKG_OPTIONS:Mbootstrap)
-EXTRA_CONFARGS+= --disable-shared --disable-lto
-EXTRA_CONFARGS+= --disable-libstdcxx-pch
+EXTRA_CONFARGS+=	--disable-shared --disable-lto
+EXTRA_CONFARGS+=	--disable-libstdcxx-pch
 .  if ${OPSYS} != SunOS
-EXTRA_CONFARGS+= --with-stage1-ldflags=-static
-EXTRA_CONFARGS+= --with-boot-ldflags=-static
-EXTRA_CONFARGS+= --with-system-zlib
+EXTRA_CONFARGS+=	--with-stage1-ldflags=-static
+EXTRA_CONFARGS+=	--with-boot-ldflags=-static
+EXTRA_CONFARGS+=	--with-system-zlib
 .  endif
 .else
 .  if empty(PKG_OPTIONS:Mallstages)
-EXTRA_CONFARGS+= --disable-bootstrap
-EXTRA_CONFARGS+= --disable-libcc1
+EXTRA_CONFARGS+=	--disable-bootstrap
+EXTRA_CONFARGS+=	--disable-libcc1
 .  endif
-EXTRA_CONFARGS+= --enable-shared
+EXTRA_CONFARGS+=	--enable-shared
 .endif

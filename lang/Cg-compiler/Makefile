@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2017/08/01 14:59:00 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/11/03 19:03:56 rillig Exp $
 #
 
 DISTNAME=	Cg-3.1_April2012_x86${DIST_ARCH}
@@ -71,23 +71,23 @@ INSTALLATION_DIRS+=	bin include/Cg share/doc/Cg-compiler \
 			share/examples/Cg-compiler/Direct3D11/advanced/include_string \
 			share/examples/Cg-compiler/Direct3D11/advanced/interpolation_modifier \
 			share/examples/Cg-compiler/Direct3D11/basic/02_vertex_and_fragment_program \
-                        share/examples/Cg-compiler/Direct3D11/basic/03_uniform_parameter \
-                        share/examples/Cg-compiler/Direct3D11/basic/04_varying_parameter \
-                        share/examples/Cg-compiler/Direct3D11/basic/05_texture_sampling \
-                        share/examples/Cg-compiler/Direct3D11/basic/06_vertex_twisting \
-                        share/examples/Cg-compiler/Direct3D11/basic/07_two_texture_accesses \
-                        share/examples/Cg-compiler/Direct3D11/basic/cgfx_buffer \
-                        share/examples/Cg-compiler/Direct3D11/basic/cgfx_simple \
-                        share/examples/Cg-compiler/Direct3D11/basic/cgfx_texture \
+			share/examples/Cg-compiler/Direct3D11/basic/03_uniform_parameter \
+			share/examples/Cg-compiler/Direct3D11/basic/04_varying_parameter \
+			share/examples/Cg-compiler/Direct3D11/basic/05_texture_sampling \
+			share/examples/Cg-compiler/Direct3D11/basic/06_vertex_twisting \
+			share/examples/Cg-compiler/Direct3D11/basic/07_two_texture_accesses \
+			share/examples/Cg-compiler/Direct3D11/basic/cgfx_buffer \
+			share/examples/Cg-compiler/Direct3D11/basic/cgfx_simple \
+			share/examples/Cg-compiler/Direct3D11/basic/cgfx_texture \
 			share/examples/Cg-compiler/Direct3D9/advanced/cgfx_buffer_lighting \
-                        share/examples/Cg-compiler/Direct3D9/advanced/cgfx_bumpdemo \
+			share/examples/Cg-compiler/Direct3D9/advanced/cgfx_bumpdemo \
 			share/examples/Cg-compiler/Direct3D9/basic/01_vertex_program \
 			share/examples/Cg-compiler/Direct3D9/basic/02_vertex_and_fragment_program \
-                        share/examples/Cg-compiler/Direct3D9/basic/03_uniform_parameter \
-                        share/examples/Cg-compiler/Direct3D9/basic/04_varying_parameter \
-                        share/examples/Cg-compiler/Direct3D9/basic/05_texture_sampling \
-                        share/examples/Cg-compiler/Direct3D9/basic/06_vertex_twisting \
-                        share/examples/Cg-compiler/Direct3D9/basic/07_two_texture_accesses \
+			share/examples/Cg-compiler/Direct3D9/basic/03_uniform_parameter \
+			share/examples/Cg-compiler/Direct3D9/basic/04_varying_parameter \
+			share/examples/Cg-compiler/Direct3D9/basic/05_texture_sampling \
+			share/examples/Cg-compiler/Direct3D9/basic/06_vertex_twisting \
+			share/examples/Cg-compiler/Direct3D9/basic/07_two_texture_accesses \
 			share/examples/Cg-compiler/Direct3D9/miniDXUT \
 			share/examples/Cg-compiler/OpenGL/advanced/cgfx_boxfilter \
 			share/examples/Cg-compiler/OpenGL/advanced/cgfx_bumpdemo_array \
