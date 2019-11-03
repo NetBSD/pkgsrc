@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2019/07/21 22:25:08 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2019/11/03 19:32:08 rillig Exp $
 #
 
 DISTNAME=	xlog-2.0.17
@@ -13,9 +13,9 @@ COMMENT=	Amateur Radio logging program
 
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 
-GNU_CONFIGURE=	yes
-USE_PKGLOCALEDIR=yes
-USE_TOOLS+=	gmake pkg-config
+GNU_CONFIGURE=		yes
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		gmake pkg-config
 
 CONFIGURE_ARGS+=	--enable-hamlib
 

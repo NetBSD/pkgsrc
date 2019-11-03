@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/09/19 09:27:57 mef Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/03 19:32:06 rillig Exp $
 #
 
 DISTNAME=	codec2-0.5.1
@@ -14,9 +14,9 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=	c
 
-USE_CMAKE=yes
-CONFIGURE_DIRS=build
-CMAKE_ARG_PATH=..
+USE_CMAKE=	yes
+CONFIGURE_DIRS=	build
+CMAKE_ARG_PATH=	..
 
 pre-configure:
 	cd ${WRKSRC} && mkdir build

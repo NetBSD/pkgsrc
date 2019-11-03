@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.4 2019/06/15 17:54:22 adam Exp $
+# $NetBSD: options.mk,v 1.5 2019/11/03 19:32:07 rillig Exp $
 
-PKG_OPTIONS_VAR=        PKG_OPTIONS.gnuradio
-PKG_SUPPORTED_OPTIONS=  ninja-build filter-design alsa
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gnuradio
+PKG_SUPPORTED_OPTIONS=	ninja-build filter-design alsa
 # ninja-build is said supported, but not working
 # alas        is said supported, but not good on NetBSD
 
@@ -10,7 +10,7 @@ PKG_SUPPORTED_OPTIONS=  ninja-build filter-design alsa
 # FAILED: cd /PATH/ham/gnuradio-core/work/gnuradio-3.7.5/build/gr-audio/swig && ""
 # : permission denied
 
-PKG_SUGGESTED_OPTIONS= filter-design
+PKG_SUGGESTED_OPTIONS=	filter-design
 
 .include "../../mk/bsd.options.mk"
 
