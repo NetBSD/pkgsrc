@@ -1,0 +1,6 @@
+OpenJK is an effort by the JACoders group to maintain and improve the game
+engine on which the Star Wars: Jedi Academy game runs on, while maintaining
+full backwards compatibility with the existing game. This project does not
+attempt to rebalance or otherwise modify core gameplay.
+
+You will need a copy of Jedi Academy to play OpenJK.

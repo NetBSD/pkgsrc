@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Jedi Knight: Jedi Academy
+Exec=openjk --quiet
+Terminal=false
+Icon=openjk
+Type=Application
+Categories=Game;ActionGame;
+Comment=Action shooter video game set in the Star Wars universe
+Keywords=fps;first person shooter;dark forces;raven;deathmatch;multi-player;ctf;
