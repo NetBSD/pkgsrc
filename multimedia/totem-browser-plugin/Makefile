@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2019/07/21 22:25:28 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2019/11/03 17:12:04 rillig Exp $
 #
 
 .include "../../multimedia/totem/Makefile.common"
@@ -9,7 +9,7 @@ PKGNAME=	${DISTNAME:S/totem/totem-browser-plugin/}
 PKGREVISION=	57
 
 # override Makefile.common
-PLIST_SRC=      ${.CURDIR}/PLIST
+PLIST_SRC=	${.CURDIR}/PLIST
 GCONF_SCHEMAS=	# none
 
 COMMENT+=	(gecko plugin)

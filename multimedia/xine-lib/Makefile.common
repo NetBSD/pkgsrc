@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.87 2019/07/31 09:39:56 nia Exp $
+# $NetBSD: Makefile.common,v 1.88 2019/11/03 17:12:04 rillig Exp $
 #
 # used by audio/xine-alsa/Makefile
 # used by audio/xine-esound/Makefile
@@ -37,7 +37,7 @@ CONFIGURE_ENV+=		have_libpng="yes"
 CONFIGURE_ENV+=		PNG_CFLAGS="-I${PREFIX}/include"
 CONFIGURE_ENV+=		PNG_LIBS="-L${PREFIX}/lib -Wl,-R${PREFIX}/lib -lpng"
 # XXX broken configure check in 1.2.1
-CONFIGURE_ENV+= cc_cv_cflags__Werror_implicit_function_declaration="no"
+CONFIGURE_ENV+=		cc_cv_cflags__Werror_implicit_function_declaration="no"
 PKGSRC_MAKE_ENV+=	"mkdir_p"="mkdir -p"
 
 .include "../../mk/bsd.prefs.mk"
@@ -50,15 +50,15 @@ PLIST_VARS+=		xv xvmc
 PLIST.xv=		yes
 PLIST.xvmc=		yes
 .else
-.if exists(${X11BASE}/lib/libXv.so)
+.  if exists(${X11BASE}/lib/libXv.so)
 CONFIGURE_ARGS+=	--with-xv-path='${X11BASE}/lib'
 PLIST.xv=		yes
-.endif
-.if exists(${X11BASE}/lib/libXvMC.so)
+.  endif
+.  if exists(${X11BASE}/lib/libXvMC.so)
 CONFIGURE_ARGS+=	--with-xvmc-path='${X11BASE}/lib'
 CONFIGURE_ARGS+=	--with-xxmc-path='${X11BASE}/lib'
 PLIST.xvmc=		yes
-.endif
+.  endif
 .endif # X11_TYPE
 
 .include "../../mk/bsd.prefs.mk"

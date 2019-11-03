@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/08/16 20:45:41 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/03 17:12:00 rillig Exp $
 #
 
 DISTNAME=		${PKGNAME}-linux
@@ -12,7 +12,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Server for recording video streams from dream dvb-receivers
 
 USE_LANGUAGES=	c++
-WRKSRC=			${WRKDIR}/ggrab-0.22a
+WRKSRC=		${WRKDIR}/ggrab-0.22a
 
 RCD_SCRIPTS=		sserver
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
