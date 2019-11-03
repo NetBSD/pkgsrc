@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2019/07/21 22:24:50 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2019/11/03 19:28:47 rillig Exp $
 #
 
 DISTNAME=		genecys-0.2
@@ -15,7 +15,7 @@ LICENSE=		gnu-gpl-v2
 DEPENDS+=		genecys-data>=0.2:../../games/genecys-data
 
 GNU_CONFIGURE=		yes
-#CONFIGURE_DIRS=		${WRKSRC}/common ${WRKSRC}/client
+#CONFIGURE_DIRS=	${WRKSRC}/common ${WRKSRC}/client
 #BUILD_DIRS=		${WRKSRC}/common ${WRKSRC}/client
 LIBS+=			-lm
 CONFIGURE_ARGS+=	--disable-server --disable-metaserver --disable-utils

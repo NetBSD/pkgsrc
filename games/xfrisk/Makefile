@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2015/10/14 20:17:25 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2019/11/03 19:28:49 rillig Exp $
 
 DISTNAME=	xfrisk-1.2
 PKGREVISION=	9
@@ -16,11 +16,11 @@ LICENSE=	generic-nonlicense
 WRKSRC=		${WRKDIR}/XFrisk
 USE_TOOLS+=	gmake
 
-RESTRICTED=	Possible trademark infringement
-NO_SRC_ON_FTP=	${RESTRICTED}
-NO_BIN_ON_FTP=	${RESTRICTED}
-NO_SRC_ON_CDROM=${RESTRICTED}
-NO_BIN_ON_CDROM=${RESTRICTED}
+RESTRICTED=		Possible trademark infringement
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 .include "../../mk/bsd.prefs.mk"
 

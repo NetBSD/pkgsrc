@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2019/08/30 17:53:06 nia Exp $
+# $NetBSD: Makefile,v 1.32 2019/11/03 19:28:48 rillig Exp $
 
 DISTNAME=	plib-1.8.5
 PKGREVISION=	5
@@ -23,11 +23,11 @@ CXXFLAGS+=	-fPIC
 PLIST_VARS+=	sl pw
 
 .if ${OPSYS} == "Darwin" && ${ABI} == "64"
-CONFIGURE_ARGS+=--disable-sl \
-				--disable-pw
+CONFIGURE_ARGS+=	--disable-sl \
+					--disable-pw
 .else
-PLIST.sl=	yes
-PLIST.pw=	yes
+PLIST.sl=		yes
+PLIST.pw=		yes
 .endif
 
 .include "../../graphics/MesaLib/buildlink3.mk"
