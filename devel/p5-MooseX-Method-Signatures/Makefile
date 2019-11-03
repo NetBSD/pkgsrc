@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/08/11 13:19:58 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2019/11/03 10:15:58 rillig Exp $
 #
 
 DISTNAME=	MooseX-Method-Signatures-0.49
@@ -29,14 +29,14 @@ DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
 DEPENDS+=	p5-Eval-Closure-[0-9]*:../../devel/p5-Eval-Closure
 DEPENDS+=	p5-Module-Runtime>=0.012:../../devel/p5-Module-Runtime
 
-BUILD_DEPENDS+=	p5-Class-Tiny-[0-9]*:../../devel/p5-Class-Tiny
-BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+BUILD_DEPENDS+=		p5-Class-Tiny-[0-9]*:../../devel/p5-Class-Tiny
+BUILD_DEPENDS+=		p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+BUILD_DEPENDS+=		p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 #BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.89}:../../devel/p5-Test-Simple
 
-USE_LANGUAGES=	# empty
+USE_LANGUAGES=		# empty
 PERL5_MODULE_TYPE=	Module::Install::Bundled
-PERL5_PACKLIST=	auto/MooseX/Method/Signatures/.packlist
+PERL5_PACKLIST=		auto/MooseX/Method/Signatures/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

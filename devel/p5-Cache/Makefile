@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/08/11 13:18:56 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/03 10:15:51 rillig Exp $
 
 DISTNAME=	Cache-2.11
 PKGNAME=	p5-${DISTNAME}
@@ -19,7 +19,7 @@ DEPENDS+=	p5-IO-String>=1.02:../../devel/p5-IO-String
 DEPENDS+=	p5-TimeDate>=1.00:../../time/p5-TimeDate
 DEPENDS+=	p5-Digest-SHA1>=2.01:../../security/p5-Digest-SHA1
 
-PERL5_PACKLIST=	auto/Cache/.packlist
+PERL5_PACKLIST=		auto/Cache/.packlist
 PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"

@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.1 2014/09/06 13:29:55 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2019/11/03 10:15:49 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.p5-Any-Moose
+PKG_OPTIONS_VAR=		PKG_OPTIONS.p5-Any-Moose
 PKG_OPTIONS_REQUIRED_GROUPS=	backend
 PKG_OPTIONS_GROUP.backend=	moose mouse
 PKG_SUGGESTED_OPTIONS=		moose

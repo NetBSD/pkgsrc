@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/08/11 13:19:27 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/03 10:15:54 rillig Exp $
 
 DISTNAME=	File-Modified-0.10
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,8 @@ COMMENT=	Perl module for checking intelligently if files have changed
 LICENSE=	${PERL5_LICENSE}
 
 #BUILD_DEPENDS+=	{perl>=5.6.1,p5-File-Temp>=0}:../../devel/p5-File-Temp
-DEPENDS+=	p5-Digest-SHA1>=0:../../security/p5-Digest-SHA1
-#DEPENDS+=	{perl>=5.7.3,p5-Digest-MD5>=0}:../../security/p5-Digest-MD5
+DEPENDS+=		p5-Digest-SHA1>=0:../../security/p5-Digest-SHA1
+#DEPENDS+=		{perl>=5.7.3,p5-Digest-MD5>=0}:../../security/p5-Digest-MD5
 
 PERL5_PACKLIST=		auto/File/Modified/.packlist
 
