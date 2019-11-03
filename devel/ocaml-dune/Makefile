@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/11/01 19:41:46 maya Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/03 10:39:22 rillig Exp $
 
 GITHUB_PROJECT=	dune
 #GITHUB_TAG=	${PKGVERSION_NOREV:S/_/+/}
@@ -15,17 +15,17 @@ LICENSE=	apache-2.0
 CONFLICTS=	ocaml-jbuilder-[0-9]*
 SUPERSEDES=	ocaml-jbuilder-[0-9]*
 
-USE_TOOLS+=	gmake
-USE_LANGUAGES=	# none
+USE_TOOLS+=		gmake
+USE_LANGUAGES=		# none
 UNLIMIT_RESOURCES+=	stacksize
 
-BUILD_TARGET=	release
-MAKE_ENV+=	MAKE_JOBS=${MAKE_JOBS:U1}
+BUILD_TARGET=		release
+MAKE_ENV+=		MAKE_JOBS=${MAKE_JOBS:U1}
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${OCAML_SITELIBDIR}/dune
 
 OCAML_USE_FINDLIB=	yes
 OCAML_FINDLIB_DIRS=	dune stublibs
-OCAML_USE_OPAM=	yes
+OCAML_USE_OPAM=		yes
 
 .include "../../mk/ocaml.mk"
 

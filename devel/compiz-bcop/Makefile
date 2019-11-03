@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/01/01 11:52:11 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/11/03 10:39:08 rillig Exp $
 #
 
 PKGVER=		0.8.8
@@ -18,10 +18,10 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE+=	bcop.pc.in
-DEPENDS+=	getopt-[0-9]*:../../misc/getopt
-REPLACE_BASH+=	src/bcop.in
+DEPENDS+=		getopt-[0-9]*:../../misc/getopt
+REPLACE_BASH+=		src/bcop.in
 
-SUBST_CLASSES+=	getopt
+SUBST_CLASSES+=		getopt
 SUBST_STAGE.getopt=	pre-configure
 SUBST_FILES.getopt=	src/bcop.in
 SUBST_SED.getopt=	-e "s|getopt|${PREFIX}/bin/getopt|"

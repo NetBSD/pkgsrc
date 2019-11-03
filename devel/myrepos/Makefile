@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/08/11 13:18:46 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/03 10:39:20 rillig Exp $
 #
 
 DISTNAME=		myrepos_1.20180726
@@ -24,7 +24,7 @@ BUILD_TARGET+=		build
 TEST_TARGET+=		test
 USE_TOOLS+=		perl:run
 
-REPLACE_PERL+=  	mr webcheckout
+REPLACE_PERL+=		mr webcheckout
 
 EGDIR=			${PREFIX}/share/examples/mr
 INSTALLATION_DIRS=	bin ${PKGMANDIR} ${EGDIR}

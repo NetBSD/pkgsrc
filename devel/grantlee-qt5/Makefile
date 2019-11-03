@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/09/18 14:17:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2019/11/03 10:39:13 rillig Exp $
 #
 
 DISTNAME=	grantlee-5.1.0
@@ -12,8 +12,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	String template engine in QT5 based on Django template system
 LICENSE=	gnu-lgpl-v3
 
-USE_LANGUAGES=  c c++
-USE_CMAKE=      yes
+USE_LANGUAGES=	c c++
+USE_CMAKE=	yes
 
 # Unbreak nested templates https://github.com/steveire/grantlee/issues/27
 post-patch:

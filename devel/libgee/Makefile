@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2019/03/25 13:56:26 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2019/11/03 10:39:16 rillig Exp $
 
 DISTNAME=	libgee-0.20.1
 PKGREVISION=	1
@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=		pkg-config gmake
+USE_TOOLS+=	pkg-config gmake
 
 PKGCONFIG_OVERRIDE+=	gee-0.8.pc.in
 

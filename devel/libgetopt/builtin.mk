@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.7 2013/11/23 11:29:35 obache Exp $
+# $NetBSD: builtin.mk,v 1.8 2019/11/03 10:39:17 rillig Exp $
 
 BUILTIN_PKG:=	getopt
 
@@ -18,7 +18,7 @@ IS_BUILTIN.getopt=	no
 IS_BUILTIN.getopt=	yes
 .  endif
 .endif	# IS_BUILTIN.getopt
-MAKEVARS+=	IS_BUILTIN.getopt
+MAKEVARS+=		IS_BUILTIN.getopt
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -45,7 +45,7 @@ USE_BUILTIN.getopt!=							\
 .    endif
 .  endif  # PREFER.getopt
 .endif
-MAKEVARS+=	USE_BUILTIN.getopt
+MAKEVARS+=		USE_BUILTIN.getopt
 
 ###
 ### The section below only applies if we are not including this file
@@ -55,9 +55,9 @@ CHECK_BUILTIN.getopt?=	no
 .if !empty(CHECK_BUILTIN.getopt:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.getopt:M[nN][oO])
-_BLTN_LIBGETOPT=	-lgetopt
+_BLTN_LIBGETOPT=		-lgetopt
 .  else
-_BLTN_LIBGETOPT=	# empty
+_BLTN_LIBGETOPT=		# empty
 .  endif
 BUILDLINK_LDADD.getopt?=	${_BLTN_LIBGETOPT}
 
