@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/08/11 13:18:08 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/03 12:04:13 rillig Exp $
 
 DISTNAME=		asterisk-perl-1.08
 PKGNAME=		p5-Asterisk-${DISTNAME:S/asterisk-perl-//}
@@ -18,8 +18,8 @@ PERL5_PACKLIST=		auto/asterisk-perl/.packlist
 EXAMPLES_DIR=		${PREFIX}/share/examples/p5-Asterisk
 
 EXAMPLE_FILES=		agi-enum.agi agi-sayani.agi agi-test.agi
-EXAMPLE_FILES+= 	calleridnamelookup.agi directory.agi manager-test.pl
-EXAMPLE_FILES+= 	tts-bofh.agi tts-line.agi tts-ping.agi
+EXAMPLE_FILES+=		calleridnamelookup.agi directory.agi manager-test.pl
+EXAMPLE_FILES+=		tts-bofh.agi tts-line.agi tts-ping.agi
 
 .for file in ${EXAMPLE_FILES}
 REPLACE_PERL+=		${WRKSRC}/examples/${file}
