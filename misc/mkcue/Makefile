@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/08 09:57:30 asau Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/03 17:04:24 rillig Exp $
 #
 
 DISTNAME=	mkcue_1.orig
@@ -17,7 +17,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 MAKE_FILE=	GNUmakefile
 
-INSTALLATION_DIRS= bin
+INSTALLATION_DIRS=	bin
 
 post-extract:
 	${CP} ${FILESDIR}/mb_dragonfly.cpp ${WRKSRC}/osdep

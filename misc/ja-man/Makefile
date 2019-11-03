@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/03/02 07:20:30 obache Exp $
+# $NetBSD: Makefile,v 1.20 2019/11/03 17:04:22 rillig Exp $
 
 DISTNAME=	NetBSD1.3I-jman-19990531
 PKGNAME=	ja-man-19990531
@@ -63,14 +63,14 @@ MKCATPAGES?=	yes
 pre-install:
 .if ${MKCATPAGES} == no
 	sed -e '/\/cat[1-9]\//d' ${PKGDIR}/PLIST > ${PLIST_SRC}
-.if exists(${PKGDIR}/PLIST.${MACHINE})
+.  if exists(${PKGDIR}/PLIST.${MACHINE})
 	sed -e '/\/cat[1-9]\//d' ${PKGDIR}/PLIST.${MACHINE} >> ${PLIST_SRC}
-.endif
+.  endif
 .else
 	cp ${PKGDIR}/PLIST ${PLIST_SRC}
-.if exists(${PKGDIR}/PLIST.${MACHINE})
+.  if exists(${PKGDIR}/PLIST.${MACHINE})
 	cat ${PKGDIR}/PLIST.${MACHINE} >> ${PLIST_SRC}
-.endif
+.  endif
 .endif
 
 post-install:

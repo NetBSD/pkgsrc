@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/02/17 19:18:07 dholland Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/03 17:04:21 rillig Exp $
 #
 
 DISTNAME=	${EMACSWIKI}-${EMACSWIKIVERSION}
@@ -13,12 +13,12 @@ HOMEPAGE=	http://repose.cx/emacs/wiki/
 COMMENT=	Wiki major mode for emacs, which aims for implicit and natural markup
 LICENSE=	gnu-gpl-v2
 
-EMACSWIKI=	emacs-wiki
-EMACSWIKIVERSION= 2.72
-DEPENDS=	semi>=1.14.6:../../devel/semi
+EMACSWIKI=		emacs-wiki
+EMACSWIKIVERSION=	2.72
+DEPENDS=		semi>=1.14.6:../../devel/semi
 
-USE_TOOLS+=	gmake makeinfo
-INFO_FILES=	yes
+USE_TOOLS+=		gmake makeinfo
+INFO_FILES=		yes
 INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
 
 .include "../../editors/emacs/modules.mk"

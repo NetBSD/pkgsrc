@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/04/06 03:45:17 rodent Exp $
+# $NetBSD: Makefile,v 1.12 2019/11/03 17:04:19 rillig Exp $
 #
 
 DISTNAME=	JBidwatcher-2.1.5
@@ -11,9 +11,9 @@ HOMEPAGE=	http://www.jbidwatcher.com/
 COMMENT=	Software for eBay sniping, bidding and monitoring
 #LICENSE=	Creative Commons BY-NC-SA Amended
 
-WRKSRC=		${WRKDIR}
-USE_JAVA=	run
-INSTALLATION_DIRS=      bin libexec/JBidwatcher
+WRKSRC=			${WRKDIR}
+USE_JAVA=		run
+INSTALLATION_DIRS=	bin libexec/JBidwatcher
 
 do-build:
 	${ECHO} "#!/bin/sh" > ${WRKSRC}/JBidwatcher

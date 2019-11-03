@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2015/10/14 20:17:27 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2019/11/03 17:04:27 rillig Exp $
 #
 
 DISTNAME=	siag-3.6.1
@@ -16,23 +16,23 @@ CONFLICTS=	siod-[0-9]*
 #DEPENDS+=	gv>=3.5.8nb1:../../print/gv
 #DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--with-x
-CONFIGURE_ARGS+=--with-docdir=${PREFIX}/share/doc/siag
-USE_TOOLS+=	gmake
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-x
+CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/siag
+USE_TOOLS+=		gmake
 
 .include "../../mk/bsd.prefs.mk"
 
 BUILD_DEFS+=	XAW_TYPE
 
 .if ${XAW_TYPE} == "xpm"
-CONFIGURE_ARGS+=--with-xawm=XawXpm
+CONFIGURE_ARGS+=	--with-xawm=XawXpm
 .elif ${XAW_TYPE} == "3d"
-CONFIGURE_ARGS+=--with-xawm=Xaw3d
+CONFIGURE_ARGS+=	--with-xawm=Xaw3d
 .elif ${XAW_TYPE} == "neXtaw"
-CONFIGURE_ARGS+=--with-xawm=neXtaw
+CONFIGURE_ARGS+=	--with-xawm=neXtaw
 .else
-CONFIGURE_ARGS+=--with-xawm=Xaw
+CONFIGURE_ARGS+=	--with-xawm=Xaw
 .endif
 
 .include "../../devel/ncurses/buildlink3.mk"

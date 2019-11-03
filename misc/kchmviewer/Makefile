@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2019/10/27 17:23:34 kamil Exp $
+# $NetBSD: Makefile,v 1.93 2019/11/03 17:04:22 rillig Exp $
 
 DISTNAME=		kchmviewer-7.2.1
 PKGREVISION=		46
@@ -25,7 +25,7 @@ SUBST_STAGE.zip=	post-configure
 
 CHECK_PORTABILITY_SKIP=	build-win32-mingw.sh
 
-INSTALLATION_DIRS=      bin
+INSTALLATION_DIRS=	bin
 
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${QTDIR}/bin/qmake

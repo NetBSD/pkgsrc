@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2019/08/22 12:23:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.64 2019/11/03 17:04:22 rillig Exp $
 
 DISTNAME=	kdeartwork-15.08.3
 PKGNAME=	${DISTNAME:S/-1/4-1/}
@@ -13,9 +13,9 @@ CMAKE_ARGS+=	-DXSCREENSAVER_CONFIG_DIR:PATH=${BUILDLINK_PREFIX.xscreensaver}/lib
 CMAKE_ARGS+=	-DXSCREENSAVER_DIR:PATH=${BUILDLINK_PREFIX.xscreensaver}/libexec/xscreensaver
 CMAKE_ARGS+=	-DWITH_Eigen3:BOOL=OFF
 
-#BUILD_MAKE_FLAGS+= VERBOSE=1
+#BUILD_MAKE_FLAGS+=	VERBOSE=1
 
-BUILDLINK_API_DEPENDS.xscreensaver+=  xscreensaver>=5.10
+BUILDLINK_API_DEPENDS.xscreensaver+=	xscreensaver>=5.10
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 

@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.9 2017/05/28 12:48:53 gson Exp $
+# $NetBSD: options.mk,v 1.10 2019/11/03 17:04:26 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.py-anita
+PKG_OPTIONS_VAR=		PKG_OPTIONS.py-anita
 PKG_SUPPORTED_OPTIONS=		xen
 PKG_OPTIONS_OPTIONAL_GROUPS=	qemu
 PKG_OPTIONS_GROUP.qemu=		qemu

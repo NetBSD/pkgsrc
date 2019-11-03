@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2019/10/27 17:26:10 kamil Exp $
+# $NetBSD: options.mk,v 1.8 2019/11/03 17:04:23 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libreoffice
 PKG_SUPPORTED_OPTIONS=	java debug gtk3 cups
@@ -20,7 +20,7 @@ USE_JAVA2=		yes
 BUILD_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
 CONFIGURE_ARGS+=	--with-ant-home=${LOCALBASE}
 
-DEPENDS+=	hsqldb18-[0-9]*:../../databases/hsqldb18
+DEPENDS+=		hsqldb18-[0-9]*:../../databases/hsqldb18
 CONFIGURE_ARGS+=	--with-hsqldb-jar=${LOCALBASE}/lib/java/hsqldb18/hsqldb.jar
 CONFIGURE_ARGS+=	--enable-ext-wiki-publisher \
 			--with-java \

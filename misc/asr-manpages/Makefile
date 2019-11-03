@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/08/01 17:40:13 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/03 17:04:19 rillig Exp $
 #
 
 DISTNAME=	asr.pages
@@ -11,9 +11,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://web.archive.org/web/2/www.winternet.com/~eric/sysadmin/manpages.html
 COMMENT=	Distribution of alt.sysadmin.recovery man page
 
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
-DIST_SUBDIR=	${PKGNAME_NOREV}
+NO_CONFIGURE=		yes
+NO_BUILD=		yes
+DIST_SUBDIR=		${PKGNAME_NOREV}
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PKGMANDIR}/man2 ${PKGMANDIR}/man3 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 
 do-install:

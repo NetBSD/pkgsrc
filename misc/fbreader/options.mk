@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.3 2017/09/26 09:43:28 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2019/11/03 17:04:21 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.fbreader
+PKG_OPTIONS_VAR=		PKG_OPTIONS.fbreader
 PKG_OPTIONS_REQUIRED_GROUPS=	gui
-PKG_OPTIONS_GROUP.gui=	gtk2 qt4
-PKG_SUPPORTED_OPTIONS=	debug
-PKG_SUGGESTED_OPTIONS=	qt4
+PKG_OPTIONS_GROUP.gui=		gtk2 qt4
+PKG_SUPPORTED_OPTIONS=		debug
+PKG_SUGGESTED_OPTIONS=		qt4
 
 .include "../../mk/bsd.options.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2019/11/02 20:48:05 maya Exp $
+# $NetBSD: Makefile,v 1.95 2019/11/03 17:04:23 rillig Exp $
 
 DISTNAME=	kdepim-4.14.10
 PKGNAME=	${DISTNAME:S/-4/4-4/}
@@ -13,16 +13,16 @@ USE_TOOLS+=	gmake
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
 
-CMAKE_ARGS+=-DKDEPIM_BUILD_MOBILE=OFF
+CMAKE_ARGS+=	-DKDEPIM_BUILD_MOBILE=OFF
 
-CHECK_PORTABILITY_SKIP+=ktimetracker/test/booktime-baddate.sh \
-		ktimetracker/test/booktime-badduration.sh \
-		ktimetracker/test/booktime-badtime.sh \
-		ktimetracker/test/booktime-baduid.sh \
-		ktimetracker/test/booktime-works.sh \
-		ktimetracker/test/delete.sh \
-		ktimetracker/test/refresh_on_change.sh \
-		ktimetracker/test/version.sh
+CHECK_PORTABILITY_SKIP+=	ktimetracker/test/booktime-baddate.sh \
+				ktimetracker/test/booktime-badduration.sh \
+				ktimetracker/test/booktime-badtime.sh \
+				ktimetracker/test/booktime-baduid.sh \
+				ktimetracker/test/booktime-works.sh \
+				ktimetracker/test/delete.sh \
+				ktimetracker/test/refresh_on_change.sh \
+				ktimetracker/test/version.sh
 
 REPLACE_BASH+=	kmail/kconf_update/kmail-*.sh
 
@@ -66,7 +66,7 @@ NOT_PAX_MPROTECT_SAFE+=	bin/kontact
 NOT_PAX_MPROTECT_SAFE+=	bin/blogilo
 NOT_PAX_MPROTECT_SAFE+=	bin/knode
 
-BUILDLINK_DEPMETHOD.qt4-tools=full
+BUILDLINK_DEPMETHOD.qt4-tools=	full
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 
