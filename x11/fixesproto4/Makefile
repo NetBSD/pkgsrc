@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/03/07 11:57:34 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/03 09:14:08 rillig Exp $
 #
 # This package is for use with Xfixes only. Do not update to later versions.
 
@@ -21,7 +21,7 @@ USE_LANGUAGES=		# none, not even C
 .include "../../mk/bsd.prefs.mk"
 
 .if ${X11_TYPE} != "native"
-PKG_FAIL_REASON+="This package is for native X11 only; use libXfixes instead."
+PKG_FAIL_REASON+=	"This package is for native X11 only; use libXfixes instead."
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"

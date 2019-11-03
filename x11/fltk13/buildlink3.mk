@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2019/10/17 10:16:28 micha Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2019/11/03 09:14:08 rillig Exp $
 
 BUILDLINK_TREE+=	fltk
 
@@ -17,8 +17,8 @@ pkgbase := fltk
 # For "opengl" option
 .if !empty(PKG_BUILD_OPTIONS.fltk:Mopengl)
 .  if ${OPSYS} != "Darwin"
-.     include "../../graphics/MesaLib/buildlink3.mk"
-.     include "../../graphics/glu/buildlink3.mk"
+.    include "../../graphics/MesaLib/buildlink3.mk"
+.    include "../../graphics/glu/buildlink3.mk"
 .  endif
 .endif
 

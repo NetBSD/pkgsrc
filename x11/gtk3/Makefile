@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.135 2019/10/10 12:04:13 wiz Exp $
+# $NetBSD: Makefile,v 1.136 2019/11/03 09:14:08 rillig Exp $
 
 DISTNAME=	gtk+-3.24.11
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
@@ -11,16 +11,16 @@ HOMEPAGE=	https://www.gtk.org/
 COMMENT=	GIMP Toolkit v3 - libraries for building X11 user interfaces
 LICENSE=	gnu-lgpl-v2.1
 
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		ggrep gmake perl pkg-config bash xgettext msgmerge
-USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
-PTHREAD_AUTO_VARS=	yes
-TOOL_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
-TOOL_DEPENDS+=		gettext-tools>=0.19.4nb1:../../devel/gettext-tools
+USE_PKGLOCALEDIR=		yes
+USE_TOOLS+=			ggrep gmake perl pkg-config bash xgettext msgmerge
+USE_LANGUAGES=			c c++
+USE_LIBTOOL=			yes
+PTHREAD_AUTO_VARS=		yes
+TOOL_DEPENDS+=			gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
+TOOL_DEPENDS+=			gettext-tools>=0.19.4nb1:../../devel/gettext-tools
 # There is no logic in gettext.mk to detect the native version of xgettext,
 # and we do need it to be compiled with Glade support.
-_TOOLS_USE_PKGSRC.xgettext=yes
+_TOOLS_USE_PKGSRC.xgettext=	yes
 
 GNU_CONFIGURE=		yes
 # XXX there is a subtle bashism in "configure" or a bug in NetBSD's sh

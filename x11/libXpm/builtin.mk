@@ -1,9 +1,9 @@
-# $NetBSD: builtin.mk,v 1.1 2009/12/16 19:57:47 joerg Exp $
+# $NetBSD: builtin.mk,v 1.2 2019/11/03 09:14:12 rillig Exp $
 
 BUILTIN_PKG:=	libXpm
 
 BUILTIN_FIND_FILES_VAR:=	H_XPM
-BUILTIN_FIND_FILES.H_XPM= ${X11BASE}/include/X11/xpm.h
+BUILTIN_FIND_FILES.H_XPM=	${X11BASE}/include/X11/xpm.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -19,7 +19,7 @@ IS_BUILTIN.libXpm=	no
 IS_BUILTIN.libXpm=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.libXpm
+MAKEVARS+=		IS_BUILTIN.libXpm
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -36,6 +36,6 @@ USE_BUILTIN.libX11=	yes
 .    endif
 .  endif  # PREFER.libXpm
 .endif
-MAKEVARS+=	USE_BUILTIN.libXpm
+MAKEVARS+=		USE_BUILTIN.libXpm
 
 .include "../../mk/x11.builtin.mk"
