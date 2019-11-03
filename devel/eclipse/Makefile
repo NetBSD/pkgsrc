@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2019/05/02 08:36:10 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2019/11/03 10:39:10 rillig Exp $
 
 DISTNAME=	${PKGNAME_NOREV}
 PKGNAME=	eclipse-${VERSION}
@@ -15,7 +15,7 @@ LICENSE=	eclipse-license
 DEPENDS+=	apache-ant>=1.4.1:../../devel/apache-ant
 USE_TOOLS+=	unzip zip
 
-PKG_JVMS_ACCEPTED= sun-jdk7
+PKG_JVMS_ACCEPTED=	sun-jdk7
 
 MAKE_ENV+=	JAVA_HOME=${PKG_JAVA_HOME:Q}
 MAKE_ENV+=	ANT_HOME=${PREFIX:Q}
@@ -61,7 +61,7 @@ do-install:
 # resistance, since replacing it after install is problematic and
 # replacing it before install is even more problematic. XXX.
 #
-CHECK_INTERPRETER_SKIP+=eclipse/plugins/org.apache.ant_1.6.2/bin/antRun.pl
+CHECK_INTERPRETER_SKIP+=	eclipse/plugins/org.apache.ant_1.6.2/bin/antRun.pl
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

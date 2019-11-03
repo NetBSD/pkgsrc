@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/09/16 19:53:50 alnsn Exp $
+# $NetBSD: Makefile,v 1.7 2019/11/03 10:39:19 rillig Exp $
 
 DISTNAME=	LuaBitOp-1.0.2
 PKGNAME=	${DISTNAME:S/Lua/${LUA_PKGPREFIX}-/}
@@ -23,7 +23,7 @@ MAKE_FLAGS+=	INSTALLPATH=${DESTDIR}${PREFIX}/${LUA_CDIR}
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin"
-BUILD_TARGET=   macosx
+BUILD_TARGET=	macosx
 .endif
 
 INSTALLATION_DIRS+=	${LUA_CDIR} ${LUA_DOCDIR}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2019/10/26 12:53:26 kamil Exp $
+# $NetBSD: Makefile,v 1.35 2019/11/03 10:39:05 rillig Exp $
 
 DISTNAME=	accerciser-3.34.0
 CATEGORIES=	devel gnome
@@ -20,7 +20,7 @@ REPLACE_PYTHON=		plugins/ipython_view.py
 REPLACE_PYTHON+=	src/accerciser.in
 
 TOOL_DEPENDS+=		gettext-tools>=0.19.8:../../devel/gettext-tools
-_TOOLS_USE_PKGSRC.msgfmt=yes
+_TOOLS_USE_PKGSRC.msgfmt= yes
 BUILD_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
 
 DEPENDS+=	libwnck3-[0-9]*:../../devel/libwnck3

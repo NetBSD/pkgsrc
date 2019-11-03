@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2010/08/30 17:27:11 drochner Exp $
+# $NetBSD: builtin.mk,v 1.3 2019/11/03 10:39:18 rillig Exp $
 
 BUILTIN_PKG:=	librfuncs
 .include "../../mk/buildlink3/bsd.builtin.mk"
@@ -30,7 +30,7 @@ USE_BUILTIN.librfuncs=	no
 USE_BUILTIN.librfuncs=	${IS_BUILTIN.librfuncs}
 .  endif
 .endif
-MAKEVARS+=	USE_BUILTIN.librfuncs
+MAKEVARS+=		USE_BUILTIN.librfuncs
 
 ###
 ### The section below only applies if we are not including this file

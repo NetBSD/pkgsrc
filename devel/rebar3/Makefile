@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/09/15 13:56:15 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/03 10:39:29 rillig Exp $
 
 DISTNAME=	rebar3-3.6.1
 CATEGORIES=	devel
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 USE_TOOLS+=	tar
 
-REBAR_DEPS=     bbmustache-1.5.0 \
+REBAR_DEPS=	bbmustache-1.5.0 \
 		certifi-2.0.0 \
 		cf-0.2.2 \
 		cth_readable-1.4.2 \

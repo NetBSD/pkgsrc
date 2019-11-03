@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/07/04 13:40:16 jperkin Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/03 10:39:32 rillig Exp $
 #
 
 DISTNAME=		uno_v213
@@ -24,11 +24,11 @@ NOT_FOR_PLATFORM+=	*-*-alpha
 NOT_FOR_PLATFORM+=	DragonFly-*-x86_64
 
 # This package always issues -m32 from its makefile; remove it if 32-bit.
-IS32=yes
+IS32=	yes
 .for P in ${LP64PLATFORMS}
-.if ${MACHINE_PLATFORM:M${P}}
-IS32=no
-.endif
+.  if ${MACHINE_PLATFORM:M${P}}
+IS32=	no
+.  endif
 .endfor
 .if ${IS32} == "yes"
 BUILDLINK_TRANSFORM+=	rm:-m32

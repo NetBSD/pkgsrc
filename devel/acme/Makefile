@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.15 2016/08/13 06:14:48 mef Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/03 10:39:05 rillig Exp $
 #
 
-DISTNAME=	acme091src
-PKGNAME=	acme-0.91
-CATEGORIES=	devel
-MASTER_SITES=	http://www.esw-heim.tu-clausthal.de/~marco/smorbrod/acme/current/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${LIBDIST}
-EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+DISTNAME=		acme091src
+PKGNAME=		acme-0.91
+CATEGORIES=		devel
+MASTER_SITES=		http://www.esw-heim.tu-clausthal.de/~marco/smorbrod/acme/current/
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${LIBDIST}
+EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 SITES.${LIBDIST}=	http://www.esw-heim.tu-clausthal.de/~marco/smorbrod/acme/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

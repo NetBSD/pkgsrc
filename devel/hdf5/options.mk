@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.8 2019/05/01 22:39:29 bacon Exp $
+# $NetBSD: options.mk,v 1.9 2019/11/03 10:39:13 rillig Exp $
 
-PKG_OPTIONS_VAR=PKG_OPTIONS.hdf5
+PKG_OPTIONS_VAR=	PKG_OPTIONS.hdf5
 PKG_SUPPORTED_OPTIONS=	szip threads
 PKG_SUGGESTED_OPTIONS=	szip
 

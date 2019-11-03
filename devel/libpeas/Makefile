@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2019/07/21 22:24:01 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2019/11/03 10:39:18 rillig Exp $
 
 DISTNAME=	libpeas-1.20.0
 PKGREVISION=	7
@@ -13,10 +13,10 @@ LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
-USE_LIBTOOL=	yes
+USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=	gmake intltool msgfmt pkg-config gsed
-GNU_CONFIGURE=	yes
+USE_TOOLS+=		gmake intltool msgfmt pkg-config gsed
+GNU_CONFIGURE=		yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

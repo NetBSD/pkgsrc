@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2019/08/11 13:18:39 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2019/11/03 10:39:06 rillig Exp $
 
 DISTNAME=	automake-1.4-p6
 PKGNAME=	automake14-1.4.6
@@ -18,7 +18,7 @@ CONFLICTS=	automake<1.6
 GNU_CONFIGURE=		YES
 _STRIPFLAG_INSTALL=	# none
 
-USE_TOOLS+=		makeinfo perl:run
+USE_TOOLS+=	makeinfo perl:run
 INFO_FILES=	yes
 
 TEST_TARGET=		check

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/05/28 19:59:04 nros Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/03 10:39:10 rillig Exp $
  
 DISTNAME=	editorconfig-core-c-0.12.1
 PKGNAME=	${DISTNAME:S/c-//}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.editorconfig.org/
 COMMENT=	Editorconfig C library
 LICENSE=	2-clause-bsd
 
-USE_CMAKE= 	yes
+USE_CMAKE=	yes
 
 .include "options.mk"
 .include "../../devel/pcre/buildlink3.mk"

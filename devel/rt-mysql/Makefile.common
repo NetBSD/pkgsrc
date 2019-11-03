@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2017/03/11 23:26:32 maya Exp $
+# $NetBSD: Makefile.common,v 1.23 2019/11/03 10:39:29 rillig Exp $
 # used by devel/rt-mysql/Makefile
 # used by devel/rt-pgsql/Makefile
 
@@ -15,18 +15,18 @@ PKG_DESTDIR_SUPPORT=	destdir
 
 .include "../../mk/bsd.prefs.mk"
 
-RT_GROUP?=	rt
-RT_PATH?=	${PREFIX}/rt
-RT_VAR_PATH?=	${VARBASE}/pkg/rt
-RT_LOG_PATH?=	${RT_VAR_PATH}/log
-RT_DATA_PATH?=	${RT_VAR_PATH}/data
+RT_GROUP?=		rt
+RT_PATH?=		${PREFIX}/rt
+RT_VAR_PATH?=		${VARBASE}/pkg/rt
+RT_LOG_PATH?=		${RT_VAR_PATH}/log
+RT_DATA_PATH?=		${RT_VAR_PATH}/data
 RT_SESSION_PATH?=	${RT_VAR_PATH}/sessiondata
-BUILD_DEFS+=	VARBASE
+BUILD_DEFS+=		VARBASE
 
-RT_DB_HOME?=	${PREFIX}
-RT_DB_DATABASE?=rt2
-RT_DB_USER?=	rt
-RT_DB_PASS?=	changemeplease
+RT_DB_HOME?=		${PREFIX}
+RT_DB_DATABASE?=	rt2
+RT_DB_USER?=		rt
+RT_DB_PASS?=		changemeplease
 
 RT_WEB_USER?=	nobody
 RT_WEB_GROUP?=	nobody
@@ -101,7 +101,7 @@ SUBST_CLASSES+=	rt
 SUBST_STAGE.rt=	pre-configure
 SUBST_FILES.rt=	Makefile rtconfig README.pkg
 SUBST_VARS.rt=	PREFIX RT_GROUP \
-	RT_PATH RT_LOG_PATH RT_DATA_PATH RT_SESSION_PATH \
+		RT_PATH RT_LOG_PATH RT_DATA_PATH RT_SESSION_PATH \
 	RT_DB_TYPE RT_DB_DBA RT_DB_DBA_PASSWORD RT_DB_DATABASE RT_DB_USER \
 	RT_DB_PASS RT_DB_HOME RT_DB_HOST RT_DB_PORT RT_WEB_USER RT_WEB_GROUP
 

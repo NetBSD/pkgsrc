@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/02/28 23:43:01 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2019/11/03 10:39:10 rillig Exp $
 
 PKGREVISION=		1
 
@@ -11,9 +11,9 @@ LICENSE=		gnu-lgpl-v2.1
 USE_TOOLS+=		cmake
 USE_CMAKE=		yes
 
-USE_LANGUAGES+=		c99
+USE_LANGUAGES+=	c99
 # Perhaps not, but cmake complains
-USE_LANGUAGES+=		 c++
+USE_LANGUAGES+=	c++
 
 USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE+=	fann.pc.in

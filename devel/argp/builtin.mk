@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2013/11/23 11:29:35 obache Exp $
+# $NetBSD: builtin.mk,v 1.3 2019/11/03 10:39:05 rillig Exp $
 
 BUILTIN_PKG:=	argp
 
@@ -17,7 +17,7 @@ IS_BUILTIN.argp=	no
 IS_BUILTIN.argp=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.argp
+MAKEVARS+=		IS_BUILTIN.argp
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -31,16 +31,16 @@ MAKEVARS+=	IS_BUILTIN.argp
 ### Determine whether we should use the built-in implementation if it
 ### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
 ###
-.if !defined(USE_BUILTIN.argp)
-.  if ${PREFER.argp} == "pkgsrc"
+.  if !defined(USE_BUILTIN.argp)
+.    if ${PREFER.argp} == "pkgsrc"
 USE_BUILTIN.argp=	no
-.  else
+.    else
 USE_BUILTIN.argp=	${IS_BUILTIN.argp}
-.    if defined(BUILTIN_PKG.argp) && \
+.      if defined(BUILTIN_PKG.argp) && \
         !empty(IS_BUILTIN.argp:M[yY][eE][sS])
 USE_BUILTIN.argp=	yes
-.    endif
-.  endif  # PREFER.argp
-.endif
-MAKEVARS+=	USE_BUILTIN.argp
+.      endif
+.    endif  # PREFER.argp
+.  endif
+MAKEVARS+=		USE_BUILTIN.argp
 .endif

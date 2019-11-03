@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2016/12/22 21:02:19 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2019/11/03 10:39:06 rillig Exp $
 
 DISTNAME=		bcc
 PKGREVISION=		2
@@ -22,16 +22,16 @@ USE_TOOLS+=		groff nroff
 INSTALLATION_DIRS=	bin lib/bcc ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
 CWARNFLAGS.clang=	-Wno-error=logical-op-parentheses -Wno-error=array-bounds
-MAKE_FLAGS+=	CWARNFLAGS.clang=${CWARNFLAGS.clang:Q}
+MAKE_FLAGS+=		CWARNFLAGS.clang=${CWARNFLAGS.clang:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
 # This package has LP64 issues, so must build as 32-bit binary.
 .for P in ${LP64PLATFORMS}
-.if ${MACHINE_PLATFORM:M${P}}
+.  if ${MACHINE_PLATFORM:M${P}}
 CFLAGS+=		-m32
 LDFLAGS+=		-m32
-.endif
+.  endif
 .endfor
 
 CPPFLAGS.DragonFly+=	-D_POSIX_SOURCE

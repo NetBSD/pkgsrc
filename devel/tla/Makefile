@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2017/09/06 10:40:26 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2019/11/03 10:39:31 rillig Exp $
 #
 
 DISTNAME=	tla-1.3.5
@@ -24,16 +24,16 @@ REPLACE_BASH+=	src/tla/tests/changeset-tests/chmod_random
 USE_TOOLS+=	bash
 USE_TOOLS+=	gmake pax
 
-HAS_CONFIGURE=		yes
+HAS_CONFIGURE=			yes
 OVERRIDE_GNU_CONFIG_SCRIPTS=	yes
-OVERRIDE_DIRDEPTH=	3
-CONFIGURE_DIRS=		src/=build
-CONFIGURE_SCRIPT=	../configure
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--with-gnu-diff=${PREFIX}/bin/gdiff
-CONFIGURE_ARGS+=	--with-gnu-diff3=${PREFIX}/bin/gdiff3
-CONFIGURE_ARGS+=	--with-gnu-patch=${PREFIX}/bin/gpatch
-CONFIGURE_ARGS+=	--with-gnu-tar=${PREFIX}/bin/gtar
+OVERRIDE_DIRDEPTH=		3
+CONFIGURE_DIRS=			src/=build
+CONFIGURE_SCRIPT=		../configure
+CONFIGURE_ARGS+=		--prefix=${PREFIX}
+CONFIGURE_ARGS+=		--with-gnu-diff=${PREFIX}/bin/gdiff
+CONFIGURE_ARGS+=		--with-gnu-diff3=${PREFIX}/bin/gdiff3
+CONFIGURE_ARGS+=		--with-gnu-patch=${PREFIX}/bin/gpatch
+CONFIGURE_ARGS+=		--with-gnu-tar=${PREFIX}/bin/gtar
 
 DOCDIR=			${PREFIX}/share/doc/tla
 

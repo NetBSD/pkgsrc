@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.10 2013/11/23 11:29:35 obache Exp $
+# $NetBSD: builtin.mk,v 1.11 2019/11/03 10:39:10 rillig Exp $
 
 BUILTIN_PKG:=	dlcompat
 
@@ -19,7 +19,7 @@ IS_BUILTIN.dlcompat=	no
 IS_BUILTIN.dlcompat=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.dlcompat
+MAKEVARS+=		IS_BUILTIN.dlcompat
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -32,7 +32,7 @@ MAKEVARS+=	IS_BUILTIN.dlcompat
 # XXX
 BUILTIN_PKG.dlcompat=	dlcompat-20030629
 .endif
-MAKEVARS+=	BUILTIN_PKG.dlcompat
+MAKEVARS+=		BUILTIN_PKG.dlcompat
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -59,4 +59,4 @@ USE_BUILTIN.dlcompat!=							\
 .    endif
 .  endif  # PREFER.dlcompat
 .endif
-MAKEVARS+=	USE_BUILTIN.dlcompat
+MAKEVARS+=		USE_BUILTIN.dlcompat

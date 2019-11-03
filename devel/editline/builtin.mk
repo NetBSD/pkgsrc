@@ -1,11 +1,11 @@
-# $NetBSD: builtin.mk,v 1.8 2015/04/09 09:55:58 tron Exp $
+# $NetBSD: builtin.mk,v 1.9 2019/11/03 10:39:10 rillig Exp $
 
 BUILTIN_PKG:=	editline
 
-BUILTIN_FIND_LIBS:=		edit
-BUILTIN_FIND_HEADERS_VAR:=	H_EDITLINE
-BUILTIN_FIND_HEADERS.H_EDITLINE=editline/readline.h \
-				readline/readline.h
+BUILTIN_FIND_LIBS:=			edit
+BUILTIN_FIND_HEADERS_VAR:=		H_EDITLINE
+BUILTIN_FIND_HEADERS.H_EDITLINE=	editline/readline.h \
+					readline/readline.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -20,7 +20,7 @@ IS_BUILTIN.editline=	no
 IS_BUILTIN.editline=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.editline
+MAKEVARS+=		IS_BUILTIN.editline
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -35,7 +35,7 @@ USE_BUILTIN.editline=	${IS_BUILTIN.editline}
         !empty(IS_BUILTIN.editline:M[yY][eE][sS])
 USE_BUILTIN.editline=	yes
 .    endif
-MAKEVARS+=	USE_BUILTIN.editline
+MAKEVARS+=		USE_BUILTIN.editline
 .  endif
 .endif
 

@@ -1,7 +1,7 @@
-# $NetBSD: tool.mk,v 1.2 2019/04/25 08:09:49 maya Exp $
+# $NetBSD: tool.mk,v 1.3 2019/11/03 10:39:13 rillig Exp $
 
 .if !defined(GYP_TOOL_MK)
-GYP_TOOL_MK= defined
+GYP_TOOL_MK=	defined
 
 PYTHON_VERSIONS_ACCEPTED=	27
 

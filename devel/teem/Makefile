@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2013/02/16 11:20:51 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/03 10:39:31 rillig Exp $
 #
 
 DISTNAME=		teem-1.8.0-src
@@ -17,22 +17,22 @@ USE_TOOLS+=		gmake pax
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
 .  if ${MACHINE_ARCH} == "i386"
-NARCH=32
-LARCH=32
+NARCH=	32
+LARCH=	32
 .  elif ${MACHINE_ARCH} == "x86_64"
-NARCH=64
-LARCH=amd64
+NARCH=	64
+LARCH=	amd64
 .  else
 PKG_FAIL_REASON+=	"Need configuration rules for ${MACHINE_ARCH}."
 .  endif
 
-TEEM_ARCH=netbsd.${NARCH}
+TEEM_ARCH=	netbsd.${NARCH}
 
 do-configure:
 	cd ${WRKSRC} && ${CP} -pR linux.${LARCH} ${TEEM_ARCH}
 
 .elif ${OPSYS} == "Linux" && ${MACHINE_ARCH} == "i386"
-TEEM_ARCH=linux.32
+TEEM_ARCH=		linux.32
 .else
 PKG_FAIL_REASON+=	"Support for this platform has not yet been added."
 .endif
