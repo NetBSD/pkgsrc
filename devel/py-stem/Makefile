@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/02/28 06:22:28 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/03 10:18:29 rillig Exp $
 
 DISTNAME=	stem-1.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,11 +21,11 @@ DEPENDS+=	${PYPKGPREFIX}-nacl-[0-9]*:../../security/py-nacl
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
 
-REPLACE_PYTHON+=cache_fallback_directories.py
-REPLACE_PYTHON+=cache_manual.py
-REPLACE_PYTHON+=run_tests.py
-REPLACE_PYTHON+=setup.py
-REPLACE_PYTHON+=tor-prompt
+REPLACE_PYTHON+=	cache_fallback_directories.py
+REPLACE_PYTHON+=	cache_manual.py
+REPLACE_PYTHON+=	run_tests.py
+REPLACE_PYTHON+=	setup.py
+REPLACE_PYTHON+=	tor-prompt
 
 do-test:
 	cd ${WRKSRC} && ./run_tests.py --unit

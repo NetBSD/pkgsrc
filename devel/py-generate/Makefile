@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2014/01/25 10:30:03 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/03 10:18:27 rillig Exp $
 
 DISTNAME=	generate-2.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ MAKE_ENV+=		BINDIR=${DESTDIR}${PREFIX}/bin
 USE_TOOLS+=		gmake
 
 LIBS.SunOS+=	-lnsl -lsocket
-LIBS.QNX=		-lsocket
+LIBS.QNX=	-lsocket
 
 EGG_NAME=	${DISTNAME:S/${PKGVERSION_NOREV}/2.2/}
 

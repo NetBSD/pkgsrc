@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.9 2019/09/02 13:19:42 adam Exp $
+# $NetBSD: options.mk,v 1.10 2019/11/03 10:18:29 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-proteus
 PKG_SUPPORTED_OPTIONS+=	cdecimal simplejson
 # track py-trytond for cdecimal suggested option selection
-PKG_SUGGESTED_OPTIONS+= ${PKG_DEFAULT_OPTIONS:Mcdecimal} ${PKG_OPTIONS.py-trytond:Mcdecimal}
+PKG_SUGGESTED_OPTIONS+=	${PKG_DEFAULT_OPTIONS:Mcdecimal} ${PKG_OPTIONS.py-trytond:Mcdecimal}
 PKG_SUGGESTED_OPTIONS+=	simplejson
 
 .include "../../mk/bsd.options.mk"
