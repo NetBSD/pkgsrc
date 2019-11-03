@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2019/09/02 13:20:21 adam Exp $
+# $NetBSD: Makefile,v 1.92 2019/11/03 19:26:21 rillig Exp $
 
 DISTNAME=	glusterfs-3.12.8
 PKGREVISION=	4
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 # Only libfl.a is available, and libtool wants libfl.so
 MAKE_FLAGS+=		LEXLIB=""
 
-PYTHON_VERSIONS_ACCEPTED=	 27 # only 2.x supported as of 3.8.x
+PYTHON_VERSIONS_ACCEPTED=	27 # only 2.x supported as of 3.8.x
 
 REPLACE_PYTHON+=	contrib/ipaddr-py/ipaddr.py
 REPLACE_PYTHON+=	events/src/glustereventsd.py
@@ -81,9 +81,9 @@ SUBST_SED.mtab=		-e "s,/etc/mtab,/proc/mounts,g"
 
 SUBST_CLASSES+=		etc
 SUBST_STAGE.etc=	pre-build
-SUBST_FILES.etc+=       libglusterfs/src/logging.c
-SUBST_FILES.etc+=       extras/ocf/volume
-SUBST_FILES.etc+=       doc/glusterfsd.8
+SUBST_FILES.etc+=	libglusterfs/src/logging.c
+SUBST_FILES.etc+=	extras/ocf/volume
+SUBST_FILES.etc+=	doc/glusterfsd.8
 SUBST_SED.etc=		-e "s,/etc/gluster,${PREFIX}/etc/gluster,g"
 
 SUBST_CLASSES+=		vol
@@ -119,9 +119,9 @@ CFLAGS+=		-g
 INSTALL_UNSTRIPPED=	yes
 CONFIGURE_ARGS+=	--enable-debug
 #.include "../../devel/boehm-gc/buildlink3.mk"
-#CFLAGS+=-DGC_DEBUG
-#CFLAGS+=-include gc.h
-#LIBS+=-lgc
+#CFLAGS+=		-DGC_DEBUG
+#CFLAGS+=		-include gc.h
+#LIBS+=			-lgc
 
 .include "../../mk/bsd.prefs.mk"
 
