@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/08/16 20:45:42 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2019/11/03 11:45:37 rillig Exp $
 #
 
 DISTNAME=	httptunnel-3.3
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Encapsulate TCP/IP connections in HTTP requests
 LICENSE=	gnu-gpl-v2
 
-HAS_CONFIGURE=	YES
+HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 

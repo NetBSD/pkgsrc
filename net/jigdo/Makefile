@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2019/08/22 12:23:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.71 2019/11/03 11:45:38 rillig Exp $
 
 DISTNAME=		jigdo-0.7.3
 PKGREVISION=		47
@@ -13,10 +13,10 @@ LICENSE=		gnu-gpl-v2
 
 MAKE_JOBS_SAFE=		no
 
-USE_TOOLS+=		pkg-config wget:run
-USE_LANGUAGES=		c c++
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--without-libdb
+USE_TOOLS+=			pkg-config wget:run
+USE_LANGUAGES=			c c++
+GNU_CONFIGURE=			yes
+CONFIGURE_ARGS+=		--without-libdb
 BROKEN_GETTEXT_DETECTION=	yes
 
 #.include "../../databases/db3/buildlink3.mk"

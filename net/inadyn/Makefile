@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/02/08 23:48:45 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/03 11:45:37 rillig Exp $
 
 DISTNAME=	inadyn-1.99.15
 CATEGORIES=	net
@@ -16,8 +16,8 @@ GITHUB_TYPE=	release
 USE_TOOLS+=	autoconf automake gmake
 RCD_SCRIPTS=	inadyn
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--enable-openssl --disable-gitcheck
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-openssl --disable-gitcheck
 
 LIBS.SunOS=	-lsocket -lnsl
 
@@ -43,7 +43,7 @@ SUBST_STAGE.var=	pre-configure
 .include "../../mk/bsd.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.inadyn
-PKG_SUPPORTED_OPTIONS=  static
+PKG_SUPPORTED_OPTIONS=	static
 
 .include "../../mk/bsd.options.mk"
 

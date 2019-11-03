@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/08/11 13:22:32 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/11/03 11:45:57 rillig Exp $
 #
 
 DISTNAME=	walker-3.8
@@ -14,10 +14,10 @@ DEPENDS+=	p5-Net-DNS>=0.50:../../net/p5-Net-DNS
 DEPENDS+=	p5-Net-DNS-SEC>=0.12:../../security/p5-Net-DNS-SEC
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 bin
-NO_BUILD=	yes
-REPLACE_PERL=	walker
-USE_LANGUAGES=	# none
-USE_TOOLS+=	perl:run
+NO_BUILD=		yes
+REPLACE_PERL=		walker
+USE_LANGUAGES=		# none
+USE_TOOLS+=		perl:run
 
 do-install:
 	${INSTALL} ${WRKSRC}/walker ${DESTDIR}${PREFIX}/bin/
