@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/04/05 12:55:15 nonaka Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/03 10:39:14 rillig Exp $
 
 DISTNAME=	jna-5.2.0
 PKGNAME=	java-${DISTNAME}
@@ -25,16 +25,16 @@ EXTRACT_USING=	bsdtar
 #   FreeBSD/OpenBSD/NetBSD (i386/amd64)
 #   Android (arm/armv7/aarch64/x86/x86-64/mipsel/mips64el)
 #
-ONLY_FOR_PLATFORM+= Cygwin-*-*
-ONLY_FOR_PLATFORM+= Darwin-*-*
-ONLY_FOR_PLATFORM+= Linux-*-i386 Linux-*-x86_64
-ONLY_FOR_PLATFORM+= Linux-*-powerpc*
-ONLY_FOR_PLATFORM+= Linux-*-arm* Linux-*-aarch64
-ONLY_FOR_PLATFORM+= SunOS-*-*
-ONLY_FOR_PLATFORM+= AIX-*-*
-ONLY_FOR_PLATFORM+= FreeBSD-*-i386 FreeBSD-*-x86_64
-ONLY_FOR_PLATFORM+= OpenBSD-*-i386 OpenBSD-*-x86_64
-ONLY_FOR_PLATFORM+= NetBSD-*-i386 NetBSD-*-x86_64
+ONLY_FOR_PLATFORM+=	Cygwin-*-*
+ONLY_FOR_PLATFORM+=	Darwin-*-*
+ONLY_FOR_PLATFORM+=	Linux-*-i386 Linux-*-x86_64
+ONLY_FOR_PLATFORM+=	Linux-*-powerpc*
+ONLY_FOR_PLATFORM+=	Linux-*-arm* Linux-*-aarch64
+ONLY_FOR_PLATFORM+=	SunOS-*-*
+ONLY_FOR_PLATFORM+=	AIX-*-*
+ONLY_FOR_PLATFORM+=	FreeBSD-*-i386 FreeBSD-*-x86_64
+ONLY_FOR_PLATFORM+=	OpenBSD-*-i386 OpenBSD-*-x86_64
+ONLY_FOR_PLATFORM+=	NetBSD-*-i386 NetBSD-*-x86_64
 
 USE_LANGUAGES=	c
 USE_JAVA=	yes

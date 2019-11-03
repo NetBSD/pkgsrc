@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2014/01/08 14:59:15 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2019/11/03 10:39:30 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.starbug1
+PKG_OPTIONS_VAR=		PKG_OPTIONS.starbug1
 PKG_OPTIONS_REQUIRED_GROUPS=	lang
 PKG_OPTIONS_GROUP.lang=		lang-en lang-ja lang-zh-cn
-PKG_SUGGESTED_OPTIONS=	lang-en
+PKG_SUGGESTED_OPTIONS=		lang-en
 
 .include "../../mk/bsd.options.mk"
 

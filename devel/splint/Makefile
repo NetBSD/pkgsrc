@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2013/05/04 19:48:00 richard Exp $
+# $NetBSD: Makefile,v 1.20 2019/11/03 10:39:30 rillig Exp $
 #
 
 DISTNAME=	splint-3.1.2.src
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lclint.cs.virginia.edu/
 COMMENT=	Statically check C programs
-LICENSE=        gnu-gpl-v2
+LICENSE=	gnu-gpl-v2
 
 MAKE_JOBS_SAFE=		no
 

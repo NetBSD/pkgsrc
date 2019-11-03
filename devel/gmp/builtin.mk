@@ -1,11 +1,11 @@
-# $NetBSD: builtin.mk,v 1.8 2015/07/16 09:16:30 richard Exp $
+# $NetBSD: builtin.mk,v 1.9 2019/11/03 10:39:12 rillig Exp $
 
 BUILTIN_PKG:=	gmp
 
 BUILTIN_FIND_HEADERS_VAR:=	H_GMP
 BUILTIN_FIND_HEADERS.H_GMP=	gmp.h gmp/gmp.h
 
-BUILTIN_VERSION_SCRIPT.gmp= ${AWK} \
+BUILTIN_VERSION_SCRIPT.gmp=	${AWK} \
 	'/\#define[ \t]*__GNU_MP_VERSION[ \t]/ { major = $$3; } \
 	/\#define[ \t]*__GNU_MP_VERSION_MINOR[ \t]/ { minor = $$3; } \
 	/\#define[ \t]*__GNU_MP_VERSION_PATCHLEVEL[ \t]/ { patch = $$3; } \
@@ -19,9 +19,9 @@ BUILTIN_VERSION_SCRIPT.gmp= ${AWK} \
 ### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
 ###
 .if !defined(IS_BUILTIN.gmp)
-IS_BUILTIN.gmp=		no
+IS_BUILTIN.gmp=	no
 .  if empty(H_GMP:M__nonexistent__) && empty(H_GMP:M${LOCALBASE}/*)
-IS_BUILTIN.gmp=		yes
+IS_BUILTIN.gmp=	yes
 .  endif
 .endif
 MAKEVARS+=	IS_BUILTIN.gmp
@@ -36,7 +36,7 @@ MAKEVARS+=	IS_BUILTIN.gmp
 BUILTIN_VERSION.gmp!=	${BUILTIN_VERSION_SCRIPT.gmp} ${H_GMP}
 BUILTIN_PKG.gmp=	gmp-${BUILTIN_VERSION.gmp}
 .endif
-MAKEVARS+=	BUILTIN_PKG.gmp
+MAKEVARS+=		BUILTIN_PKG.gmp
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -52,17 +52,17 @@ USE_BUILTIN.gmp=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.gmp}
 .        if !empty(USE_BUILTIN.gmp:M[yY][eE][sS])
 USE_BUILTIN.gmp!=	\
-        if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.gmp:Q}; then	\
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.gmp:Q}; then	\
 		${ECHO} yes;						\
-        else								\
+	else								\
 		${ECHO} no;						\
-        fi
+	fi
 .        endif
 .      endfor
 .    endif
 .  endif  # PREFER.gmp
 .endif
-MAKEVARS+=	USE_BUILTIN.gmp
+MAKEVARS+=		USE_BUILTIN.gmp
 
 CHECK_BUILTIN.gmp?=	no
 .if !empty(CHECK_BUILTIN.gmp:M[Nn][Oo])

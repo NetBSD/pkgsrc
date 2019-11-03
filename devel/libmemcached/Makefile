@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/02/12 17:06:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.12 2019/11/03 10:39:17 rillig Exp $
 #
 
 DISTNAME=	libmemcached-1.0.18
@@ -26,7 +26,7 @@ CONFIGURE_ENV+=	ax_cv_check_cxxflags__Werror__pie=no
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-CONFIGURE_ARGS+=--enable-jobserver=no
+CONFIGURE_ARGS+=	--enable-jobserver=no
 
 CPPFLAGS+=	-D__STDC_FORMAT_MACROS
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2019/08/22 12:23:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.84 2019/11/03 10:39:15 rillig Exp $
 #
 
 DISTNAME=	kdevelop-4.7.0
@@ -19,7 +19,7 @@ USE_TOOLS+=	pkg-config perl msgfmt
 USE_LANGUAGES=	c c++
 
 # because of some expansion to ${PKGDIRNAME}.kdev4 which is done wrong by bmake
-USE_TOOLS+=     gmake
+USE_TOOLS+=	gmake
 
 CMAKE_ARGS+=	-DWITH_KDE4Workspace:BOOL=OFF
 

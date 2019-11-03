@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/08/11 13:20:50 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2019/11/03 10:39:30 rillig Exp $
 
 DISTNAME=	rt-4.2.16
 PKGNAME=	${DISTNAME:S/rt/rt4/}
@@ -178,10 +178,10 @@ SUBST_SED.egpath=	-e 's,@CONFIG_FILE_PATH_R@,${RT_EXAMPLE_DIR},'
 SUBST_SED.egpath+=	-e 's,@RT_ETC_PATH_R@,${RT4DIR}/etc,'
 SUBST_STAGE.egpath=	pre-configure
 
-GNU_CONFIGURE=	yes
-NO_BUILD=	yes
-USE_LANGUAGES=	c
-USE_TOOLS+=	perl:run
+GNU_CONFIGURE=		yes
+NO_BUILD=		yes
+USE_LANGUAGES=		c
+USE_TOOLS+=		perl:run
 PKG_SYSCONFSUBDIR=	rt4
 
 USE_PKGLOCALEDIR=	yes
@@ -198,9 +198,9 @@ CONF_FILES_PERMS+=	${RT_EXAMPLE_DIR}/${_file_} \
 			640
 .endfor
 
-OWN_DIRS+=              ${RT_VAR_DIR} ${RT_LOCAL_DIR} ${RT_LOCAL_DIR}/etc
-OWN_DIRS+=              ${RT_LOCAL_DIR}/lib ${RT_LOCAL_DIR}/po ${RT_LOCAL_DIR}/plugins
-OWN_DIRS+=              ${RT_LOCAL_DIR}/html ${RT_LOCAL_DIR}/static
+OWN_DIRS+=		${RT_VAR_DIR} ${RT_LOCAL_DIR} ${RT_LOCAL_DIR}/etc
+OWN_DIRS+=		${RT_LOCAL_DIR}/lib ${RT_LOCAL_DIR}/po ${RT_LOCAL_DIR}/plugins
+OWN_DIRS+=		${RT_LOCAL_DIR}/html ${RT_LOCAL_DIR}/static
 
 OWN_DIRS_PERMS+=	${RT_VAR_DIR}/mason_data	${APACHE_USER}	${APACHE_GROUP}	0770
 OWN_DIRS_PERMS+=	${RT_VAR_DIR}/mason_data/cache	${APACHE_USER}	${APACHE_GROUP}	0770

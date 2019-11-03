@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/11/12 16:10:19 jaapb Exp $
+# $NetBSD: Makefile,v 1.20 2019/11/03 10:39:22 rillig Exp $
 #
 
 VERSION=	0.8.1
@@ -14,7 +14,7 @@ MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	https://github.com/ocsigen/deriving
 LICENSE=	mit
 
-USE_TOOLS=	gmake
+USE_TOOLS=		gmake
 OCAML_USE_OASIS_DYNRUN=	yes
 OCAML_FINDLIB_DIRS=	deriving
 

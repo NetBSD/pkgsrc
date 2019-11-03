@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/07/04 13:40:16 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/03 10:39:32 rillig Exp $
 #
 
 DISTNAME=	zzuf-0.15
@@ -18,11 +18,11 @@ SHLIBTOOL_OVERRIDE=	# empty
 CONFIG_GUESS_OVERRIDE=	.auto/config.guess
 CONFIG_SUB_OVERRIDE=	.auto/config.sub
 
-SUBST_CLASSES+=		fix-paths
-SUBST_FILES.fix-paths=	doc/libzzuf.3.in
-SUBST_MESSAGE.fix-paths=Fixing hard-coded pathnames
-SUBST_SED.fix-paths=	-e 's,/usr,${PREFIX},g'
-SUBST_STAGE.fix-paths=	pre-configure
+SUBST_CLASSES+=			fix-paths
+SUBST_FILES.fix-paths=		doc/libzzuf.3.in
+SUBST_MESSAGE.fix-paths=	Fixing hard-coded pathnames
+SUBST_SED.fix-paths=		-e 's,/usr,${PREFIX},g'
+SUBST_STAGE.fix-paths=		pre-configure
 
 .include "../../mk/bsd.fast.prefs.mk"
 
