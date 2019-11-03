@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/10/10 13:54:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/03 19:24:33 rillig Exp $
 
 DISTNAME=	minivmac-36.04.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -22,33 +22,33 @@ SUBST_VARS.prefix+=	X11BASE COMPILER_RPATH_FLAG
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64)
-MVMTARGET=	nb64
+MVMTARGET=		nb64
 .elif !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
-MVMTARGET=	nbsd
+MVMTARGET=		nbsd
 .elif !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
-MVMTARGET=	lx64
+MVMTARGET=		lx64
 .elif !empty(MACHINE_PLATFORM:MLinux-*-i386)
-MVMTARGET=	lx86
+MVMTARGET=		lx86
 .elif !empty(MACHINE_PLATFORM:MDarwin-*-x86_64)
-MVMTARGET=	mc64
+MVMTARGET=		mc64
 .elif !empty(MACHINE_PLATFORM:MDarwin-*-i386)
-MVMTARGET=	imch
+MVMTARGET=		imch
 .elif !empty(MACHINE_PLATFORM:MFreeBSD-*-x86_86)
-MVMTARGET=	fb64
+MVMTARGET=		fb64
 .elif !empty(MACHINE_PLATFORM:MFreeBSD-*-i386)
-MVMTARGET=	fbsd
+MVMTARGET=		fbsd
 .elif !empty(MACHINE_PLATFORM:MOpenBSD-*-x86_64)
-MVMTARGET=	ob64
+MVMTARGET=		ob64
 .elif !empty(MACHINE_PLATFORM:MOpenBSD-*-i386)
-MVMTARGET=	obsd
+MVMTARGET=		obsd
 .elif !empty(MACHINE_PLATFORM:MDragonFly-*-x86_64)
-MVMTARGET=	db64
+MVMTARGET=		db64
 .elif !empty(MACHINE_PLATFORM:MDragonFly-*-i386)
-MVMTARGET=	dfbs
+MVMTARGET=		dfbs
 .elif !empty(MACHINE_PLATFORM:MSunOS-*-x86_64)
-MVMTARGET=	oi64
+MVMTARGET=		oi64
 .elif !empty(MACHINE_PLATFORM:MSunOS-*-i386)
-MVMTARGET=	oind
+MVMTARGET=		oind
 .else
 NOT_FOR_PLATFORM+=	${MACHINE_PLATFORM}
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2019/08/11 13:20:57 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2019/11/03 19:24:32 rillig Exp $
 
 DISTNAME=		ckmame-1.0
 PKGREVISION=		3
@@ -15,7 +15,7 @@ USE_TOOLS+=		pkg-config perl:test
 USE_CMAKE=		yes
 TEST_TARGET=		check
 
-BUILDLINK_API_DEPENDS.libzip+=  libzip>=1.0
+BUILDLINK_API_DEPENDS.libzip+=	libzip>=1.0
 
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
