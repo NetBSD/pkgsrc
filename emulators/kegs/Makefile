@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/08/11 13:20:57 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/03 19:24:32 rillig Exp $
 
 DISTNAME=	kegs.0.91
 PKGNAME=	kegs-0.91
@@ -20,9 +20,9 @@ BROKEN_EXCEPT_ON_PLATFORM+=	*-*-i386 *-*-x86_64 *-*-ia64 \
 				*-*-powerpc *-*-mips *-*-m68k
 
 #WRKSRC=		${WRKDIR}/${DISTNAME}/src
-CONFIGURE_DIRS=	src
-BUILD_DIRS=	src
-USE_TOOLS+=     gmake perl
+CONFIGURE_DIRS=		src
+BUILD_DIRS=		src
+USE_TOOLS+=		gmake perl
 INSTALLATION_DIRS+=	bin share/doc/${PKGBASE} share/${PKGBASE}
 
 # Has problems finding shared libs on some platforms...
