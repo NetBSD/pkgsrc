@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/08/11 13:19:50 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2019/11/03 10:15:57 rillig Exp $
 
 DISTNAME=	Module-Install-GithubMeta-0.30
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ LICENSE=	${PERL5_LICENSE}
 BUILD_DEPENDS+=	p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
 BUILD_DEPENDS+=	p5-Module-Install-[0-9]*:../../devel/p5-Module-Install
 
-USE_LANGUAGES=  # empty
+USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Module/Install/GithubMeta/.packlist
 
 .include "../../lang/perl5/module.mk"

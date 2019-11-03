@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/08/11 13:19:55 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/03 10:15:57 rillig Exp $
 #
 
 DISTNAME=	Moose-Autobox-0.16
@@ -12,8 +12,8 @@ HOMEPAGE=	https://metacpan.org/release/Moose-Autobox
 COMMENT=	Perl 5 module providing autoboxed wrappers for native datatypes
 LICENSE=	${PERL5_LICENSE}
 
-USE_LANGUAGES=	# empty
-PERL5_PACKLIST=	auto/Moose/Autobox/.packlist
+USE_LANGUAGES=		# empty
+PERL5_PACKLIST=		auto/Moose/Autobox/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 DEPENDS+=	p5-autobox>=2.23:../../devel/p5-autobox
@@ -23,7 +23,7 @@ DEPENDS+=	p5-List-MoreUtils>=0.07:../../devel/p5-List-MoreUtils
 
 BUILD_DEPENDS+=	p5-Test-Exception>=0.21:../../devel/p5-Test-Exception
 # for make test
-BUILD_DEPENDS+=p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 
 .include "../../lang/perl5/module.mk"

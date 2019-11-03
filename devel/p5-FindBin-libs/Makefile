@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2019/08/11 13:19:31 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/03 10:15:54 rillig Exp $
 
 DISTNAME=		FindBin-libs-2.019002
-PKGNAME=        	p5-${DISTNAME:S/.0/./:S/00/./}
-PKGREVISION=        	2
+PKGNAME=		p5-${DISTNAME:S/.0/./:S/00/./}
+PKGREVISION=		2
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=FindBin/}
 

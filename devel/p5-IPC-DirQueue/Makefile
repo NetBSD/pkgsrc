@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/08/11 13:19:40 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/03 10:15:55 rillig Exp $
 
 DISTNAME=	IPC-DirQueue-1.0
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/IPC-DirQueue
 COMMENT=	Disk-based many-to-many task queue
 LICENSE=	${PERL5_LICENSE}
 
-#DEPENDS+=  {perl>=5.7.3,p5-Time-HiRes-[0-9]*}:../../time/p5-Time-HiRes
+#DEPENDS+=	{perl>=5.7.3,p5-Time-HiRes-[0-9]*}:../../time/p5-Time-HiRes
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/IPC/DirQueue/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/08/11 13:19:48 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/03 10:15:56 rillig Exp $
 #
 
 DISTNAME=	Module-Build-Tiny-0.039
@@ -18,7 +18,7 @@ DEPENDS+=	p5-ExtUtils-InstallPaths>=0.002:../../devel/p5-ExtUtils-InstallPaths
 
 BUILD_DEPENDS+=	p5-Test-Harness>=3.30:../../devel/p5-Test-Harness
 
-USE_LANGUAGES=	c       # For the tests
+USE_LANGUAGES=		c       # For the tests
 #BUILDING_MODULE_BUILD=	yes
 PERL5_MODULE_TYPE=	Module::Build::Tiny
 PERL5_PACKLIST=		auto/Module/Build/Tiny/.packlist

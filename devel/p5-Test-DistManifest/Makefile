@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/08/11 13:20:29 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/11/03 10:16:04 rillig Exp $
 #
 
 DISTNAME=	Test-DistManifest-1.014
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v1
 
 DEPENDS+=	p5-Test-NoWarnings>=1.04:../../devel/p5-Test-NoWarnings
 
-USE_LANGUAGES=  # empty
+USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Test/DistManifest/.packlist
 
 .include "../../lang/perl5/module.mk"

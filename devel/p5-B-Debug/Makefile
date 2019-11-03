@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/10/15 14:23:00 mef Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/03 10:15:50 rillig Exp $
 
 DISTNAME=	B-Debug-1.26
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Walk Perl syntax tree, printing debug info about ops
 LICENSE=	gnu-gpl-v1
 
 USE_LANGUAGES=	# none
-PERL5_PACKLIST=         auto/B/Debug/.packlist
+PERL5_PACKLIST=	auto/B/Debug/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

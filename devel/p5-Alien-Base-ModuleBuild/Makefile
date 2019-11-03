@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/08/11 13:18:49 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2019/11/03 10:15:49 rillig Exp $
 
 DISTNAME=	Alien-Base-ModuleBuild-1.06
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/Alien-Base-ModuleBuild
 COMMENT=	Module::Build subclass for building Alien:: modules and libraries
 LICENSE=	${PERL5_LICENSE}
 
-PERL5_PACKLIST=         auto/Alien/Base/ModuleBuild/.packlist
+PERL5_PACKLIST=		auto/Alien/Base/ModuleBuild/.packlist
 PERL5_MODULE_TYPE=	Module::Build
 
 USE_TOOLS+=	pkg-config:run

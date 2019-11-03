@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/08/11 13:20:05 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2019/11/03 10:16:01 rillig Exp $
 
 DISTNAME=	POE-Test-Loops-1.360
 PKGNAME=	p5-${DISTNAME}
@@ -13,8 +13,8 @@ LICENSE=	${PERL5_LICENSE}
 
 PERL5_PACKLIST=		auto/POE/Test/Loops/.packlist
 
-TESTS_TO_FIX= 00_info.pm comp_tcp_concurrent.pm all_errors.pm comp_tcp.pm \
-	connect_errors.pm k_alarms.pm k_aliases.pm k_detach.pm \
+TESTS_TO_FIX=	00_info.pm comp_tcp_concurrent.pm all_errors.pm comp_tcp.pm \
+		connect_errors.pm k_alarms.pm k_aliases.pm k_detach.pm \
 	k_run_returns.pm k_selects.pm k_sig_child.pm k_signals.pm \
 	k_signals_rerun.pm sbk_signal_init.pm \
 	ses_nfa.pm ses_session.pm wheel_accept.pm wheel_curses.pm \
@@ -26,7 +26,7 @@ TESTS_TO_FIX= 00_info.pm comp_tcp_concurrent.pm all_errors.pm comp_tcp.pm \
 	z_rt54319_bazerka_followtail.pm z_steinert_signal_integrity.pm
 
 .for t in ${TESTS_TO_FIX}
-REPLACE_PERL+= lib/POE/Test/Loops/${t}
+REPLACE_PERL+=	lib/POE/Test/Loops/${t}
 .endfor
 
 SUBST_CLASSES+=		perl

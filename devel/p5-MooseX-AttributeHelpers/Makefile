@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/08/11 13:19:56 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/03 10:15:57 rillig Exp $
 #
 
 DISTNAME=	MooseX-AttributeHelpers-0.25
@@ -17,7 +17,7 @@ USE_LANGUAGES=	# empty
 BUILD_DEPENDS+=	p5-Test-Exception>=0.21:../../devel/p5-Test-Exception
 DEPENDS+=	p5-Moose>=0.56:../../devel/p5-Moose
 
-PERL5_PACKLIST=	auto/MooseX/AttributeHelpers/.packlist
+PERL5_PACKLIST=		auto/MooseX/AttributeHelpers/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 .include "../../lang/perl5/module.mk"

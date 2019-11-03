@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/10/28 13:06:24 mef Exp $
+# $NetBSD: Makefile,v 1.27 2019/11/03 10:16:05 rillig Exp $
 
 DISTNAME=	Test-MockObject-1.20191002
 PKGNAME=	p5-${DISTNAME}
@@ -20,7 +20,7 @@ TEST_DEPENDS+=	p5-Test-Warn>=0.23:../../devel/p5-Test-Warn
 INSTALL_TARGET=	pure_install
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Test/MockObject/.packlist
+PERL5_PACKLIST=	auto/Test/MockObject/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

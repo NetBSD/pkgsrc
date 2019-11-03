@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/08/11 13:19:50 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/03 10:15:56 rillig Exp $
 
 DISTNAME=	Module-Implementation-0.09
 PKGNAME=	p5-${DISTNAME}
@@ -19,7 +19,7 @@ BUILD_DEPENDS+=	p5-Test-Fatal>=0.006:../../devel/p5-Test-Fatal
 BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST=		auto/Module/Implementation/.packlist
+PERL5_PACKLIST=	auto/Module/Implementation/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/08/11 13:19:57 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/03 10:15:58 rillig Exp $
 #
 
 DISTNAME=	MooseX-MarkAsMethods-0.15
@@ -19,7 +19,7 @@ DEPENDS+=	p5-Moose>=1.10:../../devel/p5-Moose
 DEPENDS+=	p5-B-Hooks-EndOfScope-[0-9]*:../../devel/p5-B-Hooks-EndOfScope
 DEPENDS+=	p5-namespace-autoclean>=0.12:../../devel/p5-namespace-autoclean
 # for make test
-BUILD_DEPENDS+= p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

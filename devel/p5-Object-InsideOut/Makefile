@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/08/11 13:20:03 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2019/11/03 10:16:01 rillig Exp $
 
 DISTNAME=	Object-InsideOut-4.05
 PKGNAME=	p5-${DISTNAME}
@@ -18,8 +18,8 @@ DEPENDS+=	p5-Scalar-List-Utils>=1.23:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-Want>=0.12:../../devel/p5-Want
 #DEPENDS+=	{perl>=5.8.8,p5-Storable>=2.15}:../../devel/p5-Storable
 
-USE_LANGUAGES=	# empty
-PERL5_PACKLIST=	auto/Object/InsideOut/.packlist
+USE_LANGUAGES=		# empty
+PERL5_PACKLIST=		auto/Object/InsideOut/.packlist
 PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"

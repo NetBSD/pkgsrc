@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/08/11 13:19:20 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/03 10:15:53 rillig Exp $
 
 DISTNAME=	Devel-ebug-0.59
 PKGNAME=	p5-${DISTNAME}
@@ -27,7 +27,7 @@ BUILD_DEPENDS+=	p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
 USE_LANGUAGES=		# empty
 PERL5_MODULE_TYPE=	Module::Install
 PERL5_PACKLIST=		auto/Devel/ebug/.packlist
-REPLACE_PERL+=	bin/ebug bin/ebug_backend_perl
+REPLACE_PERL+=		bin/ebug bin/ebug_backend_perl
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

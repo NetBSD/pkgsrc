@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/08/11 13:20:05 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/03 10:16:01 rillig Exp $
 
 DISTNAME=	POE-Component-Schedule-0.95
 PKGNAME=	p5-${DISTNAME}
@@ -16,8 +16,8 @@ DEPENDS+=	p5-DateTime>=0.48:../../time/p5-DateTime
 DEPENDS+=	p5-DateTime-Set>=0.25:../../time/p5-DateTime-Set
 DEPENDS+=	p5-DateTime-TimeZone>=1.13:../../time/p5-DateTime-TimeZone
 
-USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/POE/Component/Schedule/.packlist
+USE_LANGUAGES=		# empty
+PERL5_PACKLIST=		auto/POE/Component/Schedule/.packlist
 PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"

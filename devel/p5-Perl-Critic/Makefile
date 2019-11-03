@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2019/08/11 13:20:10 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2019/11/03 10:16:02 rillig Exp $
 #
 
 DISTNAME=	Perl-Critic-1.134
@@ -38,8 +38,8 @@ BUILD_DEPENDS+=	p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
 DEPENDS+=	p5-Readonly-XS-[0-9]*:../../devel/p5-Readonly-XS
 #DEPENDS+=	p5-Regexp-Parser>=0.20:../../devel/p5-Regexp-Parser
 
-USE_LANGUAGES=	# empty
-PERL5_PACKLIST=	auto/Perl/Critic/.packlist
+USE_LANGUAGES=		# empty
+PERL5_PACKLIST=		auto/Perl/Critic/.packlist
 PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"

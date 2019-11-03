@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/08/14 01:36:13 wen Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/03 10:15:54 rillig Exp $
 
 DISTNAME=	Future-0.41
 PKGNAME=	p5-${DISTNAME}
@@ -14,10 +14,10 @@ BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 BUILD_DEPENDS+=	p5-Test-Identity-[0-9]*:../../devel/p5-Test-Identity
 BUILD_DEPENDS+=	p5-Test-Refcount-[0-9]*:../../devel/p5-Test-Refcount
 
-USE_LANGUAGES=	#empty
+USE_LANGUAGES=		#empty
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/Future/.packlist
-PERL5_REQD+=	5.10.1	# Test::More >= 0.88
+PERL5_REQD+=		5.10.1	# Test::More >= 0.88
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/08/11 13:18:50 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/03 10:15:49 rillig Exp $
 
 DISTNAME=	AnyEvent-IRC-0.97
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl 5 event based IRC protocol client API
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/AnyEvent/IRC/.packlist
+PERL5_PACKLIST=	auto/AnyEvent/IRC/.packlist
 
 DEPENDS+=	p5-Object-Event-[0-9]*:../../devel/p5-Object-Event
 DEPENDS+=	p5-AnyEvent>=5:../../devel/p5-AnyEvent

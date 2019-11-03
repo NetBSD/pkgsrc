@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/08/11 13:19:51 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/03 10:15:57 rillig Exp $
 
 DISTNAME=	Module-Install-RTx-0.40
 PKGNAME=	p5-${DISTNAME}
@@ -15,9 +15,9 @@ DEPENDS+=	p5-Module-Install-[0-9]*:../../devel/p5-Module-Install
 
 PERL5_PACKLIST=		auto/Module/Install/RTx/.packlist
 
-SUBST_CLASSES+=         manpath
-SUBST_STAGE.manpath=    pre-configure
-SUBST_FILES.manpath=    lib/Module/Install/RTx.pm
+SUBST_CLASSES+=		manpath
+SUBST_STAGE.manpath=	pre-configure
+SUBST_FILES.manpath=	lib/Module/Install/RTx.pm
 SUBST_VARS.manpath=	PREFIX PKGMANDIR
 
 .include "../../lang/perl5/module.mk"

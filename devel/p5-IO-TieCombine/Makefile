@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/08/11 13:19:39 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/03 10:15:55 rillig Exp $
 #
 
 DISTNAME=	IO-TieCombine-1.005
@@ -12,7 +12,7 @@ HOMEPAGE=	https://metacpan.org/release/IO-TieCombine
 COMMENT=	Perl 5 module to produce tied separate but combined variables
 LICENSE=	${PERL5_LICENSE}
 
-PERL5_PACKLIST= auto/IO/TieCombine/.packlist
+PERL5_PACKLIST=	auto/IO/TieCombine/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

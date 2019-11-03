@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2019/08/11 13:19:16 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2019/11/03 10:15:52 rillig Exp $
 
 DISTNAME=	Devel-Declare-0.006019
 PKGNAME=	p5-${DISTNAME}
@@ -11,18 +11,18 @@ HOMEPAGE=	https://metacpan.org/release/Devel-Declare
 COMMENT=	Declarator magic for perl
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-B-Hooks-EndOfScope>0.05:../../devel/p5-B-Hooks-EndOfScope
-DEPENDS+=	p5-Sub-Name-[0-9]*:../../devel/p5-Sub-Name
-BUILD_DEPENDS+=	p5-ExtUtils-Depends>=0.302:../../devel/p5-ExtUtils-Depends
-BUILD_DEPENDS+= p5-B-Compiling-[0-9]*:../../devel/p5-B-Compiling # t/lines.t
+DEPENDS+=		p5-B-Hooks-EndOfScope>0.05:../../devel/p5-B-Hooks-EndOfScope
+DEPENDS+=		p5-Sub-Name-[0-9]*:../../devel/p5-Sub-Name
+BUILD_DEPENDS+=		p5-ExtUtils-Depends>=0.302:../../devel/p5-ExtUtils-Depends
+BUILD_DEPENDS+=		p5-B-Compiling-[0-9]*:../../devel/p5-B-Compiling # t/lines.t
 #BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
-BUILD_DEPENDS+= p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
+BUILD_DEPENDS+=		p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
 # for make test
-BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+BUILD_DEPENDS+=		p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 
-USE_LANGUAGES=		c
-PERL5_PACKLIST=		auto/Devel/Declare/.packlist
-PERL5_MODULE_TYPE=	Module::Install::Bundled
+USE_LANGUAGES=					c
+PERL5_PACKLIST=					auto/Devel/Declare/.packlist
+PERL5_MODULE_TYPE=				Module::Install::Bundled
 BUILDLINK_DEPMETHOD.p5-B-Hooks-OP-Check=	full
 BUILDLINK_API_DEPENDS.p5-B-Hooks-OP-Check+=	p5-B-Hooks-OP-Check>=0.19
 

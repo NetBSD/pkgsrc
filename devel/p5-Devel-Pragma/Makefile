@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/08/11 13:19:18 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/03 10:15:53 rillig Exp $
 
 DISTNAME=	Devel-Pragma-1.1.0
 PKGNAME=	p5-${DISTNAME}
@@ -17,8 +17,8 @@ DEPENDS+=	p5-B-Hooks-EndOfScope>0.09:../../devel/p5-B-Hooks-EndOfScope
 #DEPENDS+=	p5-B-Hooks-OP-Check>0.18:../../devel/p5-B-Hooks-OP-Check
 BUILD_DEPENDS+=	p5-ExtUtils-Depends>=0.302:../../devel/p5-ExtUtils-Depends
 
-USE_LANGUAGES=		c
-PERL5_PACKLIST=		auto/Devel/Pragma/.packlist
+USE_LANGUAGES=					c
+PERL5_PACKLIST=					auto/Devel/Pragma/.packlist
 BUILDLINK_DEPMETHOD.p5-B-Hooks-OP-Check=	full
 BUILDLINK_API_DEPENDS.p5-B-Hooks-OP-Check+=	p5-B-Hooks-OP-Check>=0.18
 

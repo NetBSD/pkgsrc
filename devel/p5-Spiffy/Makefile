@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2019/08/11 13:20:20 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2019/11/03 10:16:03 rillig Exp $
 
 DISTNAME=	Spiffy-0.46
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,7 @@ LICENSE=	${PERL5_LICENSE}
 # optional requirement for spiffy_filter() sub
 DEPENDS+=	p5-Filter-[0-9]*:../../textproc/p5-Filter
 
-PERL5_PACKLIST=	auto/Spiffy/.packlist
+PERL5_PACKLIST=		auto/Spiffy/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 .include "../../lang/perl5/module.mk"

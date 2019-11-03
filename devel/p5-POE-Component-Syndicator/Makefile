@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/08/11 13:20:05 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2019/11/03 10:16:01 rillig Exp $
 
 DISTNAME=	POE-Component-Syndicator-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	p5-POE>=1.311:../../devel/p5-POE
 DEPENDS+=	p5-Object-Pluggable>=1.29:../../devel/p5-Object-Pluggable
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/POE/Component/Syndicator/.packlist
+PERL5_PACKLIST=	auto/POE/Component/Syndicator/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

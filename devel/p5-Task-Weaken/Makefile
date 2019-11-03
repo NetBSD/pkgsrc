@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/08/11 13:20:24 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/11/03 10:16:04 rillig Exp $
 
 DISTNAME=	Task-Weaken-1.06
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl 5 module to ensure that a platform has weaken support
 LICENSE=	${PERL5_LICENSE}
 
 PERL5_MODULE_TYPE=	Module::Install::Bundled
-PERL5_PACKLIST=	auto/Task/Weaken/.packlist
+PERL5_PACKLIST=		auto/Task/Weaken/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

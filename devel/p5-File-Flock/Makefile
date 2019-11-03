@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/08/11 13:19:26 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/11/03 10:15:53 rillig Exp $
 
 DISTNAME=	File-Flock-2014.01
 PKGNAME=	p5-${DISTNAME}
@@ -19,8 +19,8 @@ BUILD_DEPENDS+=	p5-IO-Event-[0-9]*:../../devel/p5-IO-Event
 BUILD_DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 BUILD_DEPENDS+=	p5-AnyEvent-[0-9]*:../../devel/p5-AnyEvent
 
-PERL5_PACKLIST= auto/File/Flock/.packlist
-USE_LANGUAGES=  # none
+PERL5_PACKLIST=	auto/File/Flock/.packlist
+USE_LANGUAGES=	# none
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
