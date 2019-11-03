@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.2 2019/06/15 10:03:38 leot Exp $
+# $NetBSD: options.mk,v 1.3 2019/11/03 17:04:23 rillig Exp $
 
-PKG_OPTIONS_VAR=	 	PKG_OPTIONS.less
+PKG_OPTIONS_VAR=		PKG_OPTIONS.less
 PKG_OPTIONS_REQUIRED_GROUPS=	regex
 PKG_OPTIONS_GROUP.regex=	pcre regexp
-PKG_SUGGESTED_OPTIONS=	 	regexp
+PKG_SUGGESTED_OPTIONS=		regexp
 
 .include "../../mk/bsd.options.mk"
 

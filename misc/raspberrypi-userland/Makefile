@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/12/24 02:06:59 tsutsui Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/03 17:04:26 rillig Exp $
 #
 
 DISTNAME=	userland-20170109
@@ -14,7 +14,7 @@ HOMEPAGE=	https://github.com/jaredmcneill/userland
 COMMENT=	Various libraries for the Raspberry Pi
 LICENSE=	modified-bsd
 
-EXTRACT_USING=                bsdtar
+EXTRACT_USING=	bsdtar
 
 ONLY_FOR_PLATFORM=	NetBSD-*-*arm*
 
@@ -22,7 +22,7 @@ USE_LANGUAGES=	c c++
 
 USE_CMAKE=	yes
 CMAKE_ARGS+=	-DCMAKE_TOOLCHAIN_FILE=${WRKSRC}/makefiles/cmake/toolchains/arm-netbsdelf.cmake
-USE_TOOLS+=		bash:run
+USE_TOOLS+=	bash:run
 
 SUBST_CLASSES+=		vc
 SUBST_STAGE.vc=		pre-configure

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/03/02 20:33:29 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/03 17:04:25 rillig Exp $
 #
 
 PKGNAME=	${DISTNAME:S/-/-mysql-/}
@@ -6,8 +6,8 @@ PKGREVISION=	3
 COMMENT=	WS 23xx weather station MySQL support
 LICENSE=	gnu-gpl-v2
 
-BUILD_TARGET=	mysql2300
-INSTALL_TARGET=	install-mysql
+BUILD_TARGET=		mysql2300
+INSTALL_TARGET=		install-mysql
 INSTALLATION_DIRS+=	bin
 
 LIBS+=		-lmysqlclient

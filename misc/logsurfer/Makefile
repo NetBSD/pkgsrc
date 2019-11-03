@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2017/08/16 20:21:11 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2019/11/03 17:04:23 rillig Exp $
 
 DISTNAME=	logsurfer-1.8
 PKGNAME=	logsurfer-1.8
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.crypt.gen.nz/logsurfer/
 COMMENT=	Processes logfiles and performs certain actions
 
-GNU_CONFIGURE=	YES
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
