@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19381 2019/11/02 11:09:54 mef Exp $
+$NetBSD: TODO,v 1.19382 2019/11/03 11:04:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -383,10 +383,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
-	o ImageMagick-7.0.9.0
+	o ImageMagick-7.0.9.2
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
-	o MesaLib-19.2.2
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o PAM-0.99.7.1
@@ -666,7 +665,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glibmm-2.62.0
 	o gliv-1.9.7
 	o glom-1.14.2
-	o gmime-3.2.3
+	o gmime-3.2.4
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.30.1
@@ -917,7 +916,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o liboobs-2.32.0
 	o liboop-1.0.1
 	o libpciaccess-0.16
-	o libpeas-1.24.0
+	o libpeas-1.24.1
 	o libpgm-5.2.122
 	o libprelude-3.1.0
 	o libpreludedb-3.1.0
@@ -933,6 +932,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libwnck3-3.32.0
 	o libxdg-basedir-1.2.0
 	o libxkbcommon-0.9.1
+	o libxml2-2.9.10
+	o libxslt-1.1.34
 	o libykneomgr-0.1.8
 	o lincvs-2.1.4 [now called CrossVC]
 	o links-2.20.2
@@ -987,6 +988,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mini_sendmail-1.3.9
 	o mit-krb5-1.17
 	o mit-scheme-bin-9.2
+	o mm-common-1.0.0
 	o mnemosyne-2.6.1
 	o modular-xorg-server-1.20.5
 	o modular-xorg-xquartz-1.18.0
@@ -1014,6 +1016,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nas-auscope-1.9.4
 	o nautilus-actions-2.30.3
 	o ncview-2.1.6
+	o neomutt-20191102
 	o nessus-4.4.1
 	o netbt-hcidump-5.37
 	o netio-1.32
@@ -1047,6 +1050,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o openssh-8.1
 	o openvas-libraries-8.0.8
 	o opera-26
+	o orc-0.4.31
 	o oroborus-2.0.18
 	o ortp-0.25.0
 	o oto-0.5
@@ -1130,12 +1134,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pwlib-1.11.1
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
+	o py-backports.functools_lru_cache-1.6.1
 	o py-cairo-1.18.2
 	o py-cassa-1.11.0
 	o py-curl-7.43.0.3
 	o py-ephem3-3.7.6.0
 	o py-gnome-menus-3.8.0
 	o py-hgview-1.9.0
+	o py-html5-parser-0.4.9
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
 	o py-more-itertools-7.2.0
@@ -1255,7 +1261,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o strace-4.23
 	o stratagus-2.2.5.5
 	o streamtuner-2.2.0
-	o subversion-base-1.12.2
+	o subversion-base-1.13.0
 	o sunclock-3.57 [https://github.com/mdoege/Sunclock]
 	o superlu-5.1.1
 	o swapd-1.0.5
@@ -1285,6 +1291,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tetrinetx-1.40c
 	o tex2page-20130325
 	o tfmxplay-1.1.6
+	o thunderbird-enigmail-2.1.3
 	o tig-2.2
 	o tightvnc-2.7.10
 	o tile-0.7.4
