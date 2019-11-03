@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2016/04/24 10:34:44 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2019/11/03 11:45:37 rillig Exp $
 
 DISTNAME=	icsi-finger-1.0.29
 CATEGORIES=	net
@@ -29,54 +29,54 @@ CPPFLAGS+=	-Wno-error=return-type
 MAKE_ENV.SunOS+=	CPP_ARGS=-DSVR4
 
 pre-configure:
-		chmod +w ${WRKSRC}/config.h
-		${ECHO} \#define ManDir ${PREFIX}/${PKGMANDIR} >> \
-			${WRKSRC}/config.h
-		${ECHO} \#define TARGETDIR \"${PKG_SYSCONFDIR}/fingerdir/targets\"\
-			>> ${WRKSRC}/config.h
-		${ECHO} \#define TargetDir ${PKG_SYSCONFDIR}/fingerdir/targets \
-			>> ${WRKSRC}/config.h
-		${ECHO} \#define TTYLOCFILE \"${PKG_SYSCONFDIR}/fingerdir/ttylocs\" \
-			>> ${WRKSRC}/config.h
-		${ECHO} \#define HOSTCONFIGFILE \"${PKG_SYSCONFDIR}/fingerdir/hostconfig\" \
-			>> ${WRKSRC}/config.h
-		${MV} -f ${WRKSRC}/support/inetd.conf-add \
-			${WRKSRC}/support/inetd.conf-add.bak
-		${SED}	-e s@/usr/local/etc@${PREFIX}/libexec@      \
-			-e s@/usr/local/etc@${PREFIX}/libexec@      \
-			${WRKSRC}/support/inetd.conf-add.bak > \
-			${WRKSRC}/support/inetd.conf-add
-		${MV} -f ${WRKSRC}/support/rc.local-add \
-			${WRKSRC}/support/rc.local-add.bak
-		${SED}  -e s@/usr/local/bin/@${PREFIX}/sbin/g@      \
-			${WRKSRC}/support/rc.local-add.bak > \
-			${WRKSRC}/support/rc.local-add
-		for i in ${WRKSRC}/src/targets/x-.busy \
-			${WRKSRC}/src/targets/x-.down; do \
-			${MV} $$i $$i.bak; ${SED} -e s@nawk@awk@ \
-				-e s@/usr/local/etc@${PREFIX}/libexec@ \
-				$$i.bak > $$i ; \
-			${RM} -f $$i.bak ; \
-		done
+	chmod +w ${WRKSRC}/config.h
+	${ECHO} \#define ManDir ${PREFIX}/${PKGMANDIR} >> \
+		${WRKSRC}/config.h
+	${ECHO} \#define TARGETDIR \"${PKG_SYSCONFDIR}/fingerdir/targets\"\
+		>> ${WRKSRC}/config.h
+	${ECHO} \#define TargetDir ${PKG_SYSCONFDIR}/fingerdir/targets \
+		>> ${WRKSRC}/config.h
+	${ECHO} \#define TTYLOCFILE \"${PKG_SYSCONFDIR}/fingerdir/ttylocs\" \
+		>> ${WRKSRC}/config.h
+	${ECHO} \#define HOSTCONFIGFILE \"${PKG_SYSCONFDIR}/fingerdir/hostconfig\" \
+		>> ${WRKSRC}/config.h
+	${MV} -f ${WRKSRC}/support/inetd.conf-add \
+		${WRKSRC}/support/inetd.conf-add.bak
+	${SED}	-e s@/usr/local/etc@${PREFIX}/libexec@      \
+		-e s@/usr/local/etc@${PREFIX}/libexec@      \
+		${WRKSRC}/support/inetd.conf-add.bak > \
+		${WRKSRC}/support/inetd.conf-add
+	${MV} -f ${WRKSRC}/support/rc.local-add \
+		${WRKSRC}/support/rc.local-add.bak
+	${SED}  -e s@/usr/local/bin/@${PREFIX}/sbin/g@      \
+		${WRKSRC}/support/rc.local-add.bak > \
+		${WRKSRC}/support/rc.local-add
+	for i in ${WRKSRC}/src/targets/x-.busy \
+		${WRKSRC}/src/targets/x-.down; do \
+		${MV} $$i $$i.bak; ${SED} -e s@nawk@awk@ \
+			-e s@/usr/local/etc@${PREFIX}/libexec@ \
+			$$i.bak > $$i ; \
+		${RM} -f $$i.bak ; \
+	done
 
 do-install:
-		${INSTALL_PROGRAM} ${WRKSRC}/src/finger ${DESTDIR}${PREFIX}/bin/gfinger
-		${INSTALL_PROGRAM} ${WRKSRC}/src/fingerd ${DESTDIR}${PREFIX}/sbin/gfingerd
-		${INSTALL_SCRIPT} ${WRKSRC}/src/vifinger ${DESTDIR}${PREFIX}/sbin
-		${INSTALL_PROGRAM} ${WRKSRC}/src/packet2ascii ${DESTDIR}${PREFIX}/sbin
-		${LN} -sf packet2ascii ${DESTDIR}${PREFIX}/sbin/ascii2packet
-		${INSTALL_PROGRAM} ${WRKSRC}/src/in.fingerd ${DESTDIR}${PREFIX}/libexec
-		${INSTALL_PROGRAM} ${WRKSRC}/src/in.cfingerd ${DESTDIR}${PREFIX}/libexec
-		${INSTALL_PROGRAM} ${WRKSRC}/src/in.cfingerd ${DESTDIR}${PREFIX}/libexec
-		${INSTALL_SCRIPT_DIR} ${DESTDIR}${PREFIX}/etc/fingerdir/targets
-		${INSTALL_DATA} ${WRKSRC}/support/ttylocs ${XMPLD}
-		${INSTALL_DATA} ${WRKSRC}/support/hostconfig ${XMPLD}
-		${INSTALL_DATA} ${WRKSRC}/support/rc.local-add ${XMPLD}
-		${INSTALL_DATA} ${WRKSRC}/support/services-add ${XMPLD}
-		${INSTALL_DATA} ${WRKSRC}/support/inetd.conf-add ${XMPLD}
-		(cd ${WRKSRC}/src; ${MAKE} install.man DESTDIR=${DESTDIR} \
-			INSTALLMAN=${INSTALL_MAN:Q})
-		(cd ${WRKSRC}/src; ${MAKE} TARGETD=${XMPLDT} install.targets \
-			INSTALLSCRIPT=${INSTALL_SCRIPT:Q})
+	${INSTALL_PROGRAM} ${WRKSRC}/src/finger ${DESTDIR}${PREFIX}/bin/gfinger
+	${INSTALL_PROGRAM} ${WRKSRC}/src/fingerd ${DESTDIR}${PREFIX}/sbin/gfingerd
+	${INSTALL_SCRIPT} ${WRKSRC}/src/vifinger ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/src/packet2ascii ${DESTDIR}${PREFIX}/sbin
+	${LN} -sf packet2ascii ${DESTDIR}${PREFIX}/sbin/ascii2packet
+	${INSTALL_PROGRAM} ${WRKSRC}/src/in.fingerd ${DESTDIR}${PREFIX}/libexec
+	${INSTALL_PROGRAM} ${WRKSRC}/src/in.cfingerd ${DESTDIR}${PREFIX}/libexec
+	${INSTALL_PROGRAM} ${WRKSRC}/src/in.cfingerd ${DESTDIR}${PREFIX}/libexec
+	${INSTALL_SCRIPT_DIR} ${DESTDIR}${PREFIX}/etc/fingerdir/targets
+	${INSTALL_DATA} ${WRKSRC}/support/ttylocs ${XMPLD}
+	${INSTALL_DATA} ${WRKSRC}/support/hostconfig ${XMPLD}
+	${INSTALL_DATA} ${WRKSRC}/support/rc.local-add ${XMPLD}
+	${INSTALL_DATA} ${WRKSRC}/support/services-add ${XMPLD}
+	${INSTALL_DATA} ${WRKSRC}/support/inetd.conf-add ${XMPLD}
+	(cd ${WRKSRC}/src; ${MAKE} install.man DESTDIR=${DESTDIR} \
+		INSTALLMAN=${INSTALL_MAN:Q})
+	(cd ${WRKSRC}/src; ${MAKE} TARGETD=${XMPLDT} install.targets \
+		INSTALLSCRIPT=${INSTALL_SCRIPT:Q})
 
 .include "../../mk/bsd.pkg.mk"

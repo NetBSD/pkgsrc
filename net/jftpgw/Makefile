@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.15 2018/12/09 21:05:33 adam Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/03 11:45:38 rillig Exp $
 
-DISTNAME=	    jftpgw-0.13.5
-CATEGORIES=	    net
-MASTER_SITES=	    http://www.mcknight.de/jftpgw/
+DISTNAME=	jftpgw-0.13.5
+CATEGORIES=	net
+MASTER_SITES=	http://www.mcknight.de/jftpgw/
 
-MAINTAINER=	    pkgsrc-users@NetBSD.org
-HOMEPAGE=	    http://www.mcknight.de/jftpgw/
-COMMENT=	    FTP gateway/proxy
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.mcknight.de/jftpgw/
+COMMENT=	FTP gateway/proxy
 
 GNU_CONFIGURE=		yes
 

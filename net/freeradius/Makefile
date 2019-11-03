@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2019/08/11 13:22:08 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2019/11/03 11:45:34 rillig Exp $
 
 PKGREVISION= 1
 .include "Makefile.common"
@@ -34,7 +34,7 @@ RADIUS_GROUP?=		radiusd
 RADIUS_USER?=		radiusd
 PKG_GROUPS=		${RADIUS_GROUP}
 PKG_USERS=		${RADIUS_USER}:${RADIUS_GROUP}
-PKG_HOME.${RADIUS_USER}=${VARBASE}/log/radiusd
+PKG_HOME.${RADIUS_USER}= ${VARBASE}/log/radiusd
 
 OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd \
 			${RADIUS_USER} ${RADIUS_GROUP} 0750

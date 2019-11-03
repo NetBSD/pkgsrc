@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2019/08/11 13:22:24 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2019/11/03 11:45:48 rillig Exp $
 
 DISTNAME=		Net-Z3950-ZOOM-1.30
 PKGNAME=		p5-${DISTNAME}
@@ -11,8 +11,8 @@ HOMEPAGE=		https://metacpan.org/release/Net-Z3950-ZOOM
 COMMENT=		Perl extension for talking to Z39.50 servers
 LICENSE=		${PERL5_LICENSE}
 
-DEPENDS+=     p5-Event>=1.06:../../devel/p5-Event
-DEPENDS+=     p5-MARC-Record>=2.0.0:../../databases/p5-MARC-Record
+DEPENDS+=	p5-Event>=1.06:../../devel/p5-Event
+DEPENDS+=	p5-MARC-Record>=2.0.0:../../databases/p5-MARC-Record
 BUILDLINK_API_DEPENDS.yaz+=	yaz>=4
 
 PERL5_PACKLIST=	auto/Net/Z3950/ZOOM/.packlist
