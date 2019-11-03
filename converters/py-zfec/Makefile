@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/09/02 13:19:58 adam Exp $
+# $NetBSD: Makefile,v 1.24 2019/11/03 17:14:25 rillig Exp $
 
 DISTNAME=	zfec-1.4.24
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,12 +20,12 @@ DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 CFLAGS.SunOS+=	-std=c99 -D_XOPEN_SOURCE=600
 
-REPLACE_INTERPRETER+=  python
-REPLACE.python.old=    /usr/bin/env python
-REPLACE.python.new=    ${PYTHONBIN}
-REPLACE_FILES.python=  zfec/cmdline_zfec.py zfec/cmdline_zunfec.py zfec/test/test_zfec.py
+REPLACE_INTERPRETER+=	python
+REPLACE.python.old=	/usr/bin/env python
+REPLACE.python.new=	${PYTHONBIN}
+REPLACE_FILES.python=	zfec/cmdline_zfec.py zfec/cmdline_zunfec.py zfec/test/test_zfec.py
 
-PYTHON_VERSIONS_ACCEPTED=	 27 # py-darcsver
+PYTHON_VERSIONS_ACCEPTED=	27 # py-darcsver
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
