@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.92 2019/10/22 06:31:13 leot Exp $
+@comment $NetBSD: PLIST,v 1.93 2019/11/03 22:25:27 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -794,9 +794,6 @@ ${PYSITELIB}/youtube_dl/extractor/gputechconf.pyo
 ${PYSITELIB}/youtube_dl/extractor/groupon.py
 ${PYSITELIB}/youtube_dl/extractor/groupon.pyc
 ${PYSITELIB}/youtube_dl/extractor/groupon.pyo
-${PYSITELIB}/youtube_dl/extractor/hark.py
-${PYSITELIB}/youtube_dl/extractor/hark.pyc
-${PYSITELIB}/youtube_dl/extractor/hark.pyo
 ${PYSITELIB}/youtube_dl/extractor/hbo.py
 ${PYSITELIB}/youtube_dl/extractor/hbo.pyc
 ${PYSITELIB}/youtube_dl/extractor/hbo.pyo
@@ -1004,9 +1001,6 @@ ${PYSITELIB}/youtube_dl/extractor/lci.pyo
 ${PYSITELIB}/youtube_dl/extractor/lcp.py
 ${PYSITELIB}/youtube_dl/extractor/lcp.pyc
 ${PYSITELIB}/youtube_dl/extractor/lcp.pyo
-${PYSITELIB}/youtube_dl/extractor/learnr.py
-${PYSITELIB}/youtube_dl/extractor/learnr.pyc
-${PYSITELIB}/youtube_dl/extractor/learnr.pyo
 ${PYSITELIB}/youtube_dl/extractor/lecture2go.py
 ${PYSITELIB}/youtube_dl/extractor/lecture2go.pyc
 ${PYSITELIB}/youtube_dl/extractor/lecture2go.pyo
@@ -1076,15 +1070,9 @@ ${PYSITELIB}/youtube_dl/extractor/lynda.pyo
 ${PYSITELIB}/youtube_dl/extractor/m6.py
 ${PYSITELIB}/youtube_dl/extractor/m6.pyc
 ${PYSITELIB}/youtube_dl/extractor/m6.pyo
-${PYSITELIB}/youtube_dl/extractor/macgamestore.py
-${PYSITELIB}/youtube_dl/extractor/macgamestore.pyc
-${PYSITELIB}/youtube_dl/extractor/macgamestore.pyo
 ${PYSITELIB}/youtube_dl/extractor/mailru.py
 ${PYSITELIB}/youtube_dl/extractor/mailru.pyc
 ${PYSITELIB}/youtube_dl/extractor/mailru.pyo
-${PYSITELIB}/youtube_dl/extractor/makertv.py
-${PYSITELIB}/youtube_dl/extractor/makertv.pyc
-${PYSITELIB}/youtube_dl/extractor/makertv.pyo
 ${PYSITELIB}/youtube_dl/extractor/malltv.py
 ${PYSITELIB}/youtube_dl/extractor/malltv.pyc
 ${PYSITELIB}/youtube_dl/extractor/malltv.pyo
@@ -1895,6 +1883,9 @@ ${PYSITELIB}/youtube_dl/extractor/telewebion.pyo
 ${PYSITELIB}/youtube_dl/extractor/tennistv.py
 ${PYSITELIB}/youtube_dl/extractor/tennistv.pyc
 ${PYSITELIB}/youtube_dl/extractor/tennistv.pyo
+${PYSITELIB}/youtube_dl/extractor/tenplay.py
+${PYSITELIB}/youtube_dl/extractor/tenplay.pyc
+${PYSITELIB}/youtube_dl/extractor/tenplay.pyo
 ${PYSITELIB}/youtube_dl/extractor/testurl.py
 ${PYSITELIB}/youtube_dl/extractor/testurl.pyc
 ${PYSITELIB}/youtube_dl/extractor/testurl.pyo
@@ -1997,9 +1988,6 @@ ${PYSITELIB}/youtube_dl/extractor/turbo.pyo
 ${PYSITELIB}/youtube_dl/extractor/turner.py
 ${PYSITELIB}/youtube_dl/extractor/turner.pyc
 ${PYSITELIB}/youtube_dl/extractor/turner.pyo
-${PYSITELIB}/youtube_dl/extractor/tutv.py
-${PYSITELIB}/youtube_dl/extractor/tutv.pyc
-${PYSITELIB}/youtube_dl/extractor/tutv.pyo
 ${PYSITELIB}/youtube_dl/extractor/tv2.py
 ${PYSITELIB}/youtube_dl/extractor/tv2.pyc
 ${PYSITELIB}/youtube_dl/extractor/tv2.pyo
