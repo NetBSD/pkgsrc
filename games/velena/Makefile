@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/01/04 03:07:51 dholland Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/03 19:28:48 rillig Exp $
 #
 
 DISTNAME=	veleng10
@@ -49,10 +49,10 @@ SUBST_SED.cflags=	-e s,^CFLAGS.*,,
 # Try for example "c170", which works with -m32 and fails without.
 #
 .for P in ${LP64PLATFORMS}
-.if ${MACHINE_PLATFORM:M${P}}
+.  if ${MACHINE_PLATFORM:M${P}}
 CFLAGS+=		-m32
 LDFLAGS+=		-m32
-.endif
+.  endif
 .endfor
 
 do-install:
