@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/04/26 13:14:06 maya Exp $
+# $NetBSD: Makefile,v 1.24 2019/11/03 17:04:27 rillig Exp $
 #
 
 DISTNAME=		routeplanner_0.11
@@ -16,9 +16,9 @@ NO_BUILD=		yes
 USE_TOOLS+=		gzip
 
 REPLACE_PYTHON=	rpcli
-RPLIBDIR=		${PREFIX}/lib/routeplanner
-RPPY= rpcli.py rpcountry.py rpdbase.py rpunits.py rpcity.py rproute.py
-RPDB= Basic-USA.rpl3 NorthAmerica.rpl3
+RPLIBDIR=	${PREFIX}/lib/routeplanner
+RPPY=		rpcli.py rpcountry.py rpdbase.py rpunits.py rpcity.py rproute.py
+RPDB=		Basic-USA.rpl3 NorthAmerica.rpl3
 
 RP_LIBDIR_SED=	"s|/usr/share/routeplanner|${RPLIBDIR}|g"
 
@@ -41,7 +41,7 @@ do-install:
 	done
 
 # optional speedup
-#PYTHON_VERSIONS_INCOMPATIBLE=  36 # py-kjbuckets
+#PYTHON_VERSIONS_INCOMPATIBLE=	36 # py-kjbuckets
 #.include "../../devel/py-kjbuckets/buildlink3.mk"
 #.include "../../devel/py-pqueue/buildlink3.mk"
 

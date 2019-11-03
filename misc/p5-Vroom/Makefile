@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/08/11 13:21:59 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/03 17:04:25 rillig Exp $
 
 DISTNAME=	Vroom-0.37
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Slide Shows in Vim
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Vroom/.packlist
+PERL5_PACKLIST=	auto/Vroom/.packlist
 
 REPLACE_PERL+=	bin/vroom
 

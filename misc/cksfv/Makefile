@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/12/12 10:44:10 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2019/11/03 17:04:20 rillig Exp $
 #
 
 DISTNAME=	cksfv-1.3.14
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 INSTALLATION_DIRS=	share/doc/cksfv
 
-HAS_CONFIGURE=	YES
+HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--package-prefix=${DESTDIR:Q}
 CONFIGURE_ARGS+=	--mandir=${PREFIX:Q}/${PKGMANDIR}
