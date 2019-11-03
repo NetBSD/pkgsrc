@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.156 2019/08/30 18:00:15 nia Exp $
+# $NetBSD: Makefile,v 1.157 2019/11/03 17:12:04 rillig Exp $
 
 PKGREVISION= 4
 .include "Makefile.common"
@@ -34,9 +34,9 @@ BUILDLINK_API_DEPENDS.libcdio+=	libcdio>=0.75
 
 .if ${OPSYS} == "FreeBSD"
 PLIST_VARS+=	vidix
-.if ${MACHINE_ARCH} == "i386"
+.  if ${MACHINE_ARCH} == "i386"
 PLIST.vidix=	yes
-.endif
+.  endif
 .endif
 
 PLIST_VARS+=	qtw32
@@ -46,9 +46,9 @@ PLIST.qtw32=	yes
 
 .if ${OPSYS} == "SunOS"
 PLIST_VARS+=	oss
-.if ${OS_VERSION} == "5.11"
+.  if ${OS_VERSION} == "5.11"
 PLIST.oss=	yes
-.endif
+.  endif
 .endif
 
 CPPFLAGS.SunOS+=	-D__u32=uint32_t -DHAVE_SYSI86 -DHAVE_MMX_FALSE
