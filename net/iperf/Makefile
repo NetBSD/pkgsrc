@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.22 2018/10/01 09:47:06 jperkin Exp $
+# $NetBSD: Makefile,v 1.23 2019/11/03 11:45:38 rillig Exp $
 
 DISTNAME=	iperf-2.0.5
 PKGREVISION=	1
 CATEGORIES=	net benchmarks
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=iperf/}
 
-PATCH_SITES=	http://sourceforge.net/p/iperf/patches/28/attachment/
-PATCHFILES=	nomaxcpu.patch
-PATCH_DIST_STRIP=-p1
+PATCH_SITES=		http://sourceforge.net/p/iperf/patches/28/attachment/
+PATCHFILES=		nomaxcpu.patch
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://iperf.sourceforge.net/

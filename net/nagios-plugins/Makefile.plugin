@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.plugin,v 1.4 2011/04/08 22:56:12 morr Exp $
+# $NetBSD: Makefile.plugin,v 1.5 2019/11/03 11:45:43 rillig Exp $
 #
 
-INSTALLATION_DIRS+= libexec/nagios
+INSTALLATION_DIRS+=	libexec/nagios
 
 do-build:
 	cd ${WRKSRC}/lib && ${SETENV} ${MAKE_ENV} \

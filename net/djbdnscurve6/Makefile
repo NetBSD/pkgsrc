@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/08/03 10:45:18 schmonz Exp $
+# $NetBSD: Makefile,v 1.10 2019/11/03 11:45:33 rillig Exp $
 
 DISTNAME=		djbdnscurve6-35
 PKGREVISION=		3
@@ -25,11 +25,11 @@ SUBST_FILES.etc=	src/dns_rcrw.c man/qualification.5
 SUBST_SED.etc=		-e 's|/etc/dnsrewrite|${PKG_SYSCONFBASE}/dnsrewrite|g'
 SUBST_MESSAGE.etc=	Fixing prefix.
 
-SUBST_CLASSES+=		sysconfdir
-SUBST_STAGE.sysconfdir=	do-configure
-SUBST_FILES.sysconfdir=	src/dnscache-conf.c
-SUBST_VARS.sysconfdir=	PKG_SYSCONFDIR
-SUBST_MESSAGE.sysconfdir=Fixing sysconfdir.
+SUBST_CLASSES+=			sysconfdir
+SUBST_STAGE.sysconfdir=		do-configure
+SUBST_FILES.sysconfdir=		src/dnscache-conf.c
+SUBST_VARS.sysconfdir=		PKG_SYSCONFDIR
+SUBST_MESSAGE.sysconfdir=	Fixing sysconfdir.
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES+=		${EGDIR}/dnsroots.global ${PKG_SYSCONFDIR}/dnsroots.global

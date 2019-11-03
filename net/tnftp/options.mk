@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.11 2015/09/30 08:25:37 tnn Exp $
+# $NetBSD: options.mk,v 1.12 2019/11/03 11:45:55 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tnftp
-PKG_SUPPORTED_OPTIONS=		inet6 ssl socks
-PKG_SUGGESTED_OPTIONS=		inet6
+PKG_SUPPORTED_OPTIONS=	inet6 ssl socks
+PKG_SUGGESTED_OPTIONS=	inet6
 
 CHECK_BUILTIN.openssl:=	yes
 .include "../../security/openssl/builtin.mk"

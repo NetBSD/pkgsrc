@@ -1,6 +1,6 @@
-# $NetBSD: hacks.mk,v 1.2 2013/04/08 11:17:18 rodent Exp $
+# $NetBSD: hacks.mk,v 1.3 2019/11/03 11:45:51 rillig Exp $
 .if !defined(HACKS_MK)
-HACKS_MK= defined
+HACKS_MK=	defined
 
 ### [ Tue Feb 28 17:44:28 NZDT 2012 : sbd ]
 ### The omniORB package install files into ${PYSITELIB}/omniidl_be,
@@ -9,13 +9,13 @@ HACKS_MK= defined
 ### So if this package is being built with the same PYTHON_VERSION_DEFAULT as
 ### omniORB was simply don't install the __int__.py{,c} files.
 ###
-PKG_HACKS+=	omniidl_be_init
-PLIST_VARS+=    omniidl_be_init
+PKG_HACKS+=			omniidl_be_init
+PLIST_VARS+=			omniidl_be_init
 .if defined(_PKGSRC_BARRIER)
 omniORB_PYTHON_VERSION!=	${PKG_INFO} -Q PYTHON_VERSION_DEFAULT omniORB
 .  if "${omniORB_PYTHON_VERSION}" != "${PYTHON_VERSION_DEFAULT}"
-PLIST.omniidl_be_init=  yes
-INSTALL_ENV+=   INSTALL_OMNIIDL_BE_INIT=yes
+PLIST.omniidl_be_init=		yes
+INSTALL_ENV+=			INSTALL_OMNIIDL_BE_INIT=yes
 .  endif
 .endif
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/07/04 13:40:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2019/11/03 11:45:49 rillig Exp $
 #
 
 DISTNAME=	proxytunnel-1.9.0
@@ -13,8 +13,8 @@ COMMENT=	Connect stdin/stdout to a remote host through a standard HTTPS proxy
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_TOOLS+=	gmake
-BUILD_TARGET=	proxytunnel
+USE_TOOLS+=		gmake
+BUILD_TARGET=		proxytunnel
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 bin
 
 SUBST_CLASSES+=			fix-paths

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2017/02/11 02:29:48 mef Exp $
+# $NetBSD: Makefile.common,v 1.9 2019/11/03 11:45:30 rillig Exp $
 # used by net/bird/Makefile
 # used by net/bird6/Makefile
 
@@ -23,8 +23,8 @@ CONFIGURE_ARGS+=	--localstatedir=/var
 BIRD6?=			# empty
 PLIST_SUBST+=		BIRD6=${BIRD6}
 
-FILESDIR=               ${.CURDIR}/../bird/files
-PATCHDIR=               ${.CURDIR}/../bird/patches
+FILESDIR=		${.CURDIR}/../bird/files
+PATCHDIR=		${.CURDIR}/../bird/patches
 DISTINFO_FILE=		${.CURDIR}/../bird/distinfo
 PLIST_SRC=		${.CURDIR}/../bird/PLIST
 DESCR_SRC=		${.CURDIR}/../bird/DESCR
