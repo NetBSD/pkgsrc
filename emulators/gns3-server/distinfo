@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/11/03 01:31:38 markd Exp $
+
+SHA1 (gns3-server-2.2.1.tar.gz) = f463738d6e74979543388d435e5257044f503638
+RMD160 (gns3-server-2.2.1.tar.gz) = 5daa005787e0da772d18efd74bcd4d71d6a66f58
+SHA512 (gns3-server-2.2.1.tar.gz) = d632c9d56c445a851e5f5b3a7d95fe404894b6cb856d7db68a1e8f3d1f4f1b3ff2a90fa3797eae5ce7457f3981eb8d0b50b5c0cec03581c8de2a1204412b8764
+Size (gns3-server-2.2.1.tar.gz) = 7370035 bytes
