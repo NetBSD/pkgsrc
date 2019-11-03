@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/02/22 13:48:44 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/03 10:18:27 rillig Exp $
 
 DISTNAME=	extras-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	mit
 USE_LANGUAGES=	# none
 
 # TEST_DEPENDS
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+BUILD_DEPENDS+=		${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 # testtools depends on extras
 #BUILD_DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
 
