@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/12/03 13:02:22 sevan Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/03 12:04:12 rillig Exp $
 #
 
 DISTNAME=		dfu-util-0.9
@@ -10,12 +10,12 @@ HOMEPAGE=		http://dfu-util.sourceforge.net/
 COMMENT=		Host side implementation of the USB DFU protocol
 LICENSE=		gnu-gpl-v2
 
-GNU_CONFIGURE= 		YES
+GNU_CONFIGURE=		YES
 
-CPPFLAGS+= 		"-I${BUILDLINK_PREFIX.libusb1}/include/libusb-1.0"
+CPPFLAGS+=		"-I${BUILDLINK_PREFIX.libusb1}/include/libusb-1.0"
 
 CONFIGURE_ARGS+=	-prefix=${PREFIX}
-CONFIGURE_ARGS+= 	CPPFLAGS="${CPPFLAGS}"
+CONFIGURE_ARGS+=	CPPFLAGS="${CPPFLAGS}"
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2017/08/01 17:40:09 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/03 12:04:12 rillig Exp $
 #
 
-PKGNAME=    asterisk-sounds-native-20060209
+PKGNAME=	asterisk-sounds-native-20060209
 DISTNAME=	asterisk-native-sounds-20060209-01-ulaw
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=	asterisk-native-sounds-20060209-01-alaw.tar.bz2

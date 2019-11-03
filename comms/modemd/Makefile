@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2014/02/24 12:44:23 wiedi Exp $
+# $NetBSD: Makefile,v 1.25 2019/11/03 12:04:13 rillig Exp $
 
 DISTNAME=	modemd-970221
 PKGNAME=	modemd-19970221
@@ -15,7 +15,7 @@ MAKE_JOBS_SAFE=		no
 
 MANCOMPRESSED_IF_MANZ=	yes
 
-MAKE_ENV+=	LIBS=${LIBS:Q}
+MAKE_ENV+=		LIBS=${LIBS:Q}
 USE_BSD_MAKEFILE=	yes
 
 INSTALLATION_DIRS=	${PKGMANDIR}/cat5 ${PKGMANDIR}/man5 \
