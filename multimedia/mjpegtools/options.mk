@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.6 2012/07/07 15:49:00 adam Exp $
+# $NetBSD: options.mk,v 1.7 2019/11/03 17:12:02 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.mjpegtools
-PKG_SUPPORTED_OPTIONS=	dv simd
-PKG_SUGGESTED_OPTIONS=	dv
+PKG_OPTIONS_VAR=		PKG_OPTIONS.mjpegtools
+PKG_SUPPORTED_OPTIONS=		dv simd
+PKG_SUGGESTED_OPTIONS=		dv
 PKG_OPTIONS_LEGACY_OPTS+=	mjpegtools-simd:simd
 
 .include "../../mk/bsd.options.mk"

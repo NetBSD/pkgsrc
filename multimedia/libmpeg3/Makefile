@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/10/12 20:26:43 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2019/11/03 17:12:02 rillig Exp $
 #
 
 DISTNAME=	libmpeg3-1.8-src
@@ -15,9 +15,9 @@ COMMENT=	MPEG decoding library and tools
 .include "../../mk/bsd.prefs.mk"
 
 .if (${MACHINE_ARCH} == "i386" && ${OPSYS} != "Darwin")
-MAKE_ENV+=	USE_MMX=1
-MAKE_ENV+=	USE_CSS=1
-BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
+MAKE_ENV+=		USE_MMX=1
+MAKE_ENV+=		USE_CSS=1
+BUILD_DEPENDS+=		nasm-[0-9]*:../../devel/nasm
 .else
 MAKE_ENV.DragonFly+=	USE_MMX=0
 MAKE_ENV.DragonFly+=	USE_CSS=0
@@ -25,7 +25,7 @@ MAKE_ENV.DragonFly+=	USE_CSS=0
 
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake
-WRKSRC= 	${WRKDIR}/${PKGNAME_NOREV}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 PTHREAD_AUTO_VARS=	yes
 PTHREAD_OPTS+=		require

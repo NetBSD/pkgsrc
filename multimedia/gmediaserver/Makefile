@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/08/11 13:22:02 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/03 17:12:00 rillig Exp $
 
 DISTNAME=		gmediaserver-0.13.0
 PKGREVISION=		13
@@ -24,7 +24,7 @@ CFGFILE=		${PKG_SYSCONFDIR}/${CFGNAME}
 
 CONF_FILES=		${PREFIX}/${EGDIR}/${CFGNAME} ${CFGFILE}
 INSTALLATION_DIRS+=	${EGDIR}
-OWN_DIRS_PERMS+= 	${VARBASE}/gmediaserver ${GMEDIA_USER} \
+OWN_DIRS_PERMS+=	${VARBASE}/gmediaserver ${GMEDIA_USER} \
 			${GMEDIA_GROUP} 750
 RCD_SCRIPTS=		gmediaserver
 
