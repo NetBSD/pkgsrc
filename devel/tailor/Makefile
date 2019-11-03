@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2019/09/02 13:19:39 adam Exp $
+# $NetBSD: Makefile,v 1.32 2019/11/03 10:39:31 rillig Exp $
 
 DISTNAME=		tailor-0.9.35
 PKGREVISION=		6
@@ -12,7 +12,7 @@ LICENSE=		gnu-gpl-v3
 
 USE_LANGUAGES=		#none
 
-PYTHON_VERSIONS_ACCEPTED=   27 # not yet ported as of 0.9.35
+PYTHON_VERSIONS_ACCEPTED= 27 # not yet ported as of 0.9.35
 REPLACE_PYTHON=		tailor
 
 AUTO_MKDIRS=		yes

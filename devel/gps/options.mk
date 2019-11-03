@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2019/09/02 13:19:37 adam Exp $
+# $NetBSD: options.mk,v 1.15 2019/11/03 10:39:13 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gps
 PKG_SUPPORTED_OPTIONS=	syslog sqlite readline python pgsql
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+= --disable-readline
 ######################
 
 .if empty(PKG_OPTIONS:Msyslog)
-CONFIGURE_ARGS+= --disable-syslog
+CONFIGURE_ARGS+=	--disable-syslog
 .endif
 
 
@@ -33,9 +33,9 @@ CONFIGURE_ARGS+= --disable-syslog
 ######################
 
 .if !empty(PKG_OPTIONS:Msqlite)
-CONFIGURE_ARGS+= --with-sqlite=embedded
+CONFIGURE_ARGS+=	--with-sqlite=embedded
 .else
-CONFIGURE_ARGS+= --without-sqlite
+CONFIGURE_ARGS+=	--without-sqlite
 .endif
 
 

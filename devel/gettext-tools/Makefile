@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2019/06/04 17:22:22 nia Exp $
+# $NetBSD: Makefile,v 1.39 2019/11/03 10:39:12 rillig Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
@@ -30,7 +30,7 @@ SHLIBTOOL_OVERRIDE=	# empty
 INFO_FILES=		yes
 
 BROKEN_GETTEXT_DETECTION=	yes
-USE_BUILTIN.gettext=	no # force use of pkgsrc gettext-lib
+USE_BUILTIN.gettext=		no # force use of pkgsrc gettext-lib
 
 BUILDLINK_TRANSFORM.Cygwin+=	rm:-Wl,--disable-auto-import
 

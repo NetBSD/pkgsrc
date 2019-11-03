@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/11/12 16:10:19 jaapb Exp $
+# $NetBSD: Makefile,v 1.11 2019/11/03 10:39:23 rillig Exp $
 
 GITHUB_PROJECT=	jbuilder
 GITHUB_TAG=	${PKGVERSION_NOREV:S/_/+/}
@@ -13,12 +13,12 @@ HOMEPAGE=	https://github.com/janestreet/jbuilder/
 COMMENT=	Composable build system for OCaml
 LICENSE=	apache-2.0
 
-WRKSRC=		${WRKDIR}/dune-${PKGVERSION_NOREV:S/_/-/}
-USE_LANGUAGES=	# none
+WRKSRC=			${WRKDIR}/dune-${PKGVERSION_NOREV:S/_/-/}
+USE_LANGUAGES=		# none
 UNLIMIT_RESOURCES+=	stacksize
 
-BUILD_TARGET=	default
-MAKE_ENV+=	MAKE_JOBS=${MAKE_JOBS:U1}
+BUILD_TARGET=		default
+MAKE_ENV+=		MAKE_JOBS=${MAKE_JOBS:U1}
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${OCAML_SITELIBDIR}/jbuilder
 
 OCAML_USE_FINDLIB=	yes

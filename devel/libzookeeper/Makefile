@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/10/09 13:59:57 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/03 10:39:19 rillig Exp $
 #
 
 .include "../../devel/zookeeper/Makefile.common"
@@ -17,7 +17,7 @@ LIBS.SunOS+=	-lnsl -lsocket
 
 # Tests require c++ and cppunit
 #USE_LANGUAGES+=	c++
-#TEST_TARGET=	run-check
+#TEST_TARGET=		run-check
 
 BUILDLINK_DEPMETHOD.cppunit=	build
 .include "../../devel/cppunit/buildlink3.mk"

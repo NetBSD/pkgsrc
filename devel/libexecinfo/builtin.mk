@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2014/03/24 20:36:47 asau Exp $
+# $NetBSD: builtin.mk,v 1.4 2019/11/03 10:39:16 rillig Exp $
 
 BUILTIN_PKG:=	libexecinfo
 
@@ -17,7 +17,7 @@ IS_BUILTIN.libexecinfo=	no
 IS_BUILTIN.libexecinfo=	yes
 .  endif
 .endif	# IS_BUILTIN.libexecinfo
-MAKEVARS+=	IS_BUILTIN.libexecinfo
+MAKEVARS+=		IS_BUILTIN.libexecinfo
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -44,7 +44,7 @@ USE_BUILTIN.libexecinfo!=							\
 .    endif
 .  endif  # PREFER.libexecinfo
 .endif
-MAKEVARS+=	USE_BUILTIN.libexecinfo
+MAKEVARS+=			USE_BUILTIN.libexecinfo
 
 ###
 ### The section below only applies if we are not including this file
@@ -54,12 +54,12 @@ CHECK_BUILTIN.libexecinfo?=	no
 .if !empty(CHECK_BUILTIN.libexecinfo:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.libexecinfo:M[nN][oO])
-_BLTN_LIBEXECINFO=	-lexecinfo
+_BLTN_LIBEXECINFO=		-lexecinfo
 .  else
 .    if exists(/usr/include/execinfo.h) && (${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD")
-_BLTN_LIBEXECINFO=	-lexecinfo
+_BLTN_LIBEXECINFO=		-lexecinfo
 .    else
-_BLTN_LIBEXECINFO=	# empty
+_BLTN_LIBEXECINFO=		# empty
 .    endif
 .  endif
 BUILDLINK_LDADD.libexecinfo?=	${_BLTN_LIBEXECINFO}

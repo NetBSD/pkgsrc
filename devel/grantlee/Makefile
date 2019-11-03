@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/10/28 16:10:52 kamil Exp $
+# $NetBSD: Makefile,v 1.12 2019/11/03 10:39:13 rillig Exp $
 #
 
 DISTNAME=	grantlee-0.5.1
@@ -11,8 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	String template engine in QT based on Django template system
 LICENSE=	gnu-lgpl-v3
 
-USE_LANGUAGES=  c c++
-USE_CMAKE=      yes
+USE_LANGUAGES=	c c++
+USE_CMAKE=	yes
 
 SUBST_CLASSES+=		fix-inc
 SUBST_STAGE.fix-inc=	pre-configure

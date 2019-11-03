@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/11/12 16:10:19 jaapb Exp $
+# $NetBSD: Makefile,v 1.11 2019/11/03 10:39:23 rillig Exp $
 
 VERSION=	113.33.06
 GITHUB_PROJECT=	js-build-tools
@@ -13,8 +13,8 @@ HOMEPAGE=	https://github.com/janestreet/js-build-tools/
 COMMENT=	OCaml build helper tools from Jane Street
 LICENSE=	apache-2.0
 
-HAS_CONFIGURE=	yes
-USE_LANGUAGES=	# none
+HAS_CONFIGURE=		yes
+USE_LANGUAGES=		# none
 OCAML_USE_FINDLIB=	yes
 
 .include "../../devel/ocaml-oasis/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2018/02/25 16:04:01 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2019/11/03 10:39:09 rillig Exp $
 
 DISTNAME=	cvsync-0.24.19
 PKGREVISION=	9
@@ -9,8 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.cvsync.org/
 COMMENT=	Portable incremental cvs repository syncer
 
-USE_TOOLS+=	gmake
-USE_LANGUAGES=	c99
+USE_TOOLS+=		gmake
+USE_LANGUAGES=		c99
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/cvsync
 
 MAKE_ENV+=	BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q} BINMODE=${BINMODE:Q}

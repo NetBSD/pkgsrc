@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.10 2019/07/25 19:06:28 tnn Exp $
+# $NetBSD: builtin.mk,v 1.11 2019/11/03 10:39:06 rillig Exp $
 
 BINUTILS_PREFIX?=	/usr
 
@@ -52,7 +52,7 @@ USE_BUILTIN.binutils=	no
 .    endfor
 .  endif  # PREFER.binutils
 .endif
-MAKEVARS+=	USE_BUILTIN.binutils
+MAKEVARS+=		USE_BUILTIN.binutils
 
 # if USE_BINUTILS is defined, then force the use of a true binutils
 # implementation.

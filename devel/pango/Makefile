@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.227 2019/10/07 09:28:10 prlw1 Exp $
+# $NetBSD: Makefile,v 1.228 2019/11/03 10:39:27 rillig Exp $
 
 DISTNAME=	pango-1.44.6
 CATEGORIES=	devel fonts
@@ -16,15 +16,15 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
-PKGCONFIG_OVERRIDE+=	output/meson-private/pango.pc
-PKGCONFIG_OVERRIDE+=	output/meson-private/pangocairo.pc
-PKGCONFIG_OVERRIDE+=	output/meson-private/pangoft2.pc
-PKGCONFIG_OVERRIDE+=	output/meson-private/pangoxft.pc
-PKGCONFIG_OVERRIDE_STAGE=pre-install
-MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/output/${PKGBASE}
+PKGCONFIG_OVERRIDE+=		output/meson-private/pango.pc
+PKGCONFIG_OVERRIDE+=		output/meson-private/pangocairo.pc
+PKGCONFIG_OVERRIDE+=		output/meson-private/pangoft2.pc
+PKGCONFIG_OVERRIDE+=		output/meson-private/pangoxft.pc
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
+MAKE_ENV+=			LD_LIBRARY_PATH=${WRKSRC}/output/${PKGBASE}
 
-CHECK_FILES_SKIP+=	${PREFIX}/libdata/pango/pango.modules
-CHECK_PORTABILITY_SKIP+= docs/check.docs
+CHECK_FILES_SKIP+=		${PREFIX}/libdata/pango/pango.modules
+CHECK_PORTABILITY_SKIP+=	docs/check.docs
 
 BUILDLINK_TRANSFORM+=	rm:-Werror=implicit-fallthrough # clang10svn
 

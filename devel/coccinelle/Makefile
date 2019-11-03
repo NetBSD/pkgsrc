@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2019/04/25 07:32:43 maya Exp $
+# $NetBSD: Makefile,v 1.37 2019/11/03 10:39:08 rillig Exp $
 
 DISTNAME=	coccinelle-1.0.0-rc17
 PKGNAME=	${DISTNAME:S/-rc/rc/}
@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v2
 BUILD_DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
 
 # the current version rejects this package's .mly file
-#DEPENDS+=	menhir>=20071212:../../devel/menhir
+#DEPENDS+=		menhir>=20071212:../../devel/menhir
 CONFIGURE_ARGS+=	--without-menhir --disable-menhirLib
 
 MAKE_JOBS_SAFE=		no

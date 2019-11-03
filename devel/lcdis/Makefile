@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/07/19 04:09:30 tpaul Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/03 10:39:15 rillig Exp $
 
 DISTNAME=	LCDISSRC
 PKGNAME=	lcdis-1.04
@@ -14,7 +14,7 @@ LICENSE=		gnu-gpl-v2
 USE_TOOLS+=		unzip
 
 WRKSRC=			${WRKDIR}
-DIST_SUBDIR=  ${PKGNAME_NOREV}
+DIST_SUBDIR=		${PKGNAME_NOREV}
 INSTALLATION_DIRS=	bin
 
 do-build:

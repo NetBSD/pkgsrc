@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/05/07 03:13:24 mef Exp $
+# $NetBSD: Makefile,v 1.7 2019/11/03 10:39:09 rillig Exp $
 
 VERSION=	0.3.4
 DISTNAME=	cre2-${VERSION}
@@ -11,11 +11,11 @@ HOMEPAGE=	https://github.com/google/re2
 COMMENT=	C wrapper for re2 regular expression library
 LICENSE=	modified-bsd
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-maintainer-mode
-USE_LIBTOOL=	yes
-USE_LANGUAGES+=	c c++
-USE_TOOLS+=	autoconf autoreconf automake gmake makeinfo
+USE_LIBTOOL=		yes
+USE_LANGUAGES+=		c c++
+USE_TOOLS+=		autoconf autoreconf automake gmake makeinfo
 
 INFO_FILES=	yes
 

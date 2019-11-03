@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/06/17 09:19:57 jaapb Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/03 10:39:22 rillig Exp $
 
 DISTNAME=	fmt-0.8.5
 PKGNAME=	ocaml-${DISTNAME}
@@ -15,7 +15,7 @@ LICENSE=	isc
 USE_LANGUAGES=	# none
 
 OCAML_USE_TOPKG=	yes
-OCAML_USE_OPAM=	yes
+OCAML_USE_OPAM=		yes
 
 .include "../../mk/ocaml.mk"
 .include "../../devel/ocamlbuild/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/09/02 13:19:36 adam Exp $
+# $NetBSD: Makefile,v 1.23 2019/11/03 10:39:21 rillig Exp $
 #
 
 DISTNAME=	nsis-${NSIS_VER}
@@ -15,12 +15,12 @@ COMMENT=	Scriptable system to build Windows installers
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pax
 
-PYTHON_VERSIONS_ACCEPTED=	 27	# as of 3.04
+PYTHON_VERSIONS_ACCEPTED=	27	# as of 3.04
 
-NSIS_SRC=	${DISTNAME:=-src}
-NSIS_VER=	3.04
-WRKSRC=		${WRKDIR}/${NSIS_SRC}
-NO_CONFIGURE=	yes
+NSIS_SRC=		${DISTNAME:=-src}
+NSIS_VER=		3.04
+WRKSRC=			${WRKDIR}/${NSIS_SRC}
+NO_CONFIGURE=		yes
 EXTRACT_OPTS_ZIP=	-qo
 
 MAKENSIS_BIN=	${PREFIX}/share/nsis/makensis

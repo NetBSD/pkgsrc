@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/09/02 13:19:40 adam Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/03 10:39:13 rillig Exp $
 
 GIT_VERSION=	20161117.940a15ee3f1c89f193cb4c19373b3f6e9ad15b95
 DIST_VERSION=	0.1
@@ -12,7 +12,7 @@ HOMEPAGE=	https://gyp.gsrc.io/
 COMMENT=	GYP can Generate Your Projects
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_ACCEPTED=   27 # not yet ported as of 0.1pre20161117.940a15ee3f1c89f193cb4c19373b3f6e9ad15b95
+PYTHON_VERSIONS_ACCEPTED= 27 # not yet ported as of 0.1pre20161117.940a15ee3f1c89f193cb4c19373b3f6e9ad15b95
 EGG_NAME=	gyp-${DIST_VERSION}
 
 WRKSRC=		${WRKDIR}/gyp
@@ -20,7 +20,7 @@ WRKSRC=		${WRKDIR}/gyp
 # REPLACE_PYTHON settings farmed out due to size...
 .include "Makefile.replace-python"
 
-SUBST_CLASSES+=	python
+SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-build
 SUBST_MESSAGE.python=	Fix python invocation
 SUBST_FILES.python+=	gyp

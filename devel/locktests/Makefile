@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/08/16 20:45:35 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/03 10:39:19 rillig Exp $
 #
 
 DISTNAME=	locktests
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	POSIX locks stress-test
 LICENSE=	gnu-gpl-v3 # According to web site
 
-WRKSRC=	${WRKDIR}/locks
+WRKSRC=		${WRKDIR}/locks
 BUILD_TARGET=	All
 
 do-install:

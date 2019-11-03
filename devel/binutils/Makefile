@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2018/05/28 14:15:38 bacon Exp $
+# $NetBSD: Makefile,v 1.78 2019/11/03 10:39:06 rillig Exp $
 
 DISTNAME=	binutils-2.26.1
 PKGREVISION=	1
@@ -16,7 +16,7 @@ MAKE_JOBS_SAFE=	no
 
 CONFLICTS=	avr-binutils<2.13.2.1nb1
 
-USE_PKGLOCALEDIR=	yes
+USE_PKGLOCALEDIR=		yes
 REPLACE_LOCALEDIR_PATTERNS+=	Make-in
 
 USE_LANGUAGES=		c c++
@@ -33,14 +33,14 @@ CONFIG_SHELL=		ksh
 
 GNU_CONFIGURE=		yes
 # Standard lib dirs on RHEL are named *lib64
-LIB_PATH=       /lib:/usr/lib
+LIB_PATH=		/lib:/usr/lib
 .if exists(/usr/lib64)
-LIB_PATH:=	/usr/lib64:${LIB_PATH}
+LIB_PATH:=		/usr/lib64:${LIB_PATH}
 .endif
 .if exists(/lib64)
-LIB_PATH:=	/lib64:${LIB_PATH}
+LIB_PATH:=		/lib64:${LIB_PATH}
 .endif
-CONFIGURE_ARGS+=        --with-lib-path=${LIB_PATH}
+CONFIGURE_ARGS+=	--with-lib-path=${LIB_PATH}
 CONFIGURE_ARGS+=	--program-prefix=g
 BINUTILS_PREFIX=	${PREFIX}/${MACHINE_GNU_PLATFORM}
 
@@ -75,11 +75,11 @@ PLIST.SunOS=	yes
 	|| (${OPSYS} == FreeBSD && empty(OS_VERSION:M[12345678].*)) \
 	|| (${OPSYS} == OpenBSD && empty(OS_VERSION:M[1234].*)) \
 	|| (${OPSYS} == NetBSD && empty(OS_VERSION:M[12345].*))
-BUILD_GOLD=	yes
-PLIST.gold=	yes
-USE_TOOLS+=	bison
-EXTRA_FILES+=	dwp ld.gold
-CONFIGURE_ARGS+=--enable-gold --enable-plugins
+BUILD_GOLD=		yes
+PLIST.gold=		yes
+USE_TOOLS+=		bison
+EXTRA_FILES+=		dwp ld.gold
+CONFIGURE_ARGS+=	--enable-gold --enable-plugins
 .endif
 
 CFLAGS.OpenBSD+=	-Wno-bounded

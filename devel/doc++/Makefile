@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2012/10/31 11:16:54 asau Exp $
+# $NetBSD: Makefile,v 1.24 2019/11/03 10:39:10 rillig Exp $
 
-DISTNAME=		doc++-3.4.10
+DISTNAME=	doc++-3.4.10
 PKGREVISION=	3
-CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=docpp/}
+CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docpp/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://docpp.sourceforge.net/
@@ -16,7 +16,7 @@ USE_LANGUAGES=		c c++
 
 LIBS.SunOS+=		-lintl
 
-INSTALLATION_DIRS+= share/doc/doc++
+INSTALLATION_DIRS+=	share/doc/doc++
 
 #post-extract:
 #	${RM} ${WRKSRC}/src/getopt.h

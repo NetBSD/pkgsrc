@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.42 2019/10/10 12:29:11 triaxx Exp $
+# $NetBSD: Makefile.common,v 1.43 2019/11/03 10:39:20 rillig Exp $
 #
 # used by devel/ncurses/Makefile
 # used by devel/ncursesw/Makefile
@@ -75,9 +75,9 @@ CONFIGURE_ENV+=		ac_cv_cxx_compiler_gnu=no
 
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ARGS+=	--disable-const
-TERMINFODIR=	share/lib/terminfo
+TERMINFODIR=		share/lib/terminfo
 .else
-TERMINFODIR=	share/terminfo
+TERMINFODIR=		share/terminfo
 .endif
 
 .if !empty(CC_VERSION:Mgcc-5.*)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/08/11 13:20:49 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2019/11/03 10:39:27 rillig Exp $
 
 DISTNAME=		patchutils-0.3.4
 PKGREVISION=		2
@@ -20,7 +20,7 @@ USE_TOOLS+=		perl:run
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-patch=${PREFIX}/bin/gpatch
 
-CHECK_PORTABILITY_SKIP+=tests/rediff2/run-test
+CHECK_PORTABILITY_SKIP+= tests/rediff2/run-test
 REPLACE_BASH+=		scripts/editdiff.in scripts/espdiff.in
 USE_TOOLS+=		bash:run
 

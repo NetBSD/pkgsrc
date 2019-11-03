@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/31 11:16:53 asau Exp $
+# $NetBSD: Makefile,v 1.23 2019/11/03 10:39:10 rillig Exp $
 
 DISTNAME=		dmalloc-5.5.2
 CATEGORIES=		devel
@@ -20,8 +20,8 @@ CONFIGURE_ARGS+=	--enable-threads
 CONFIGURE_ARGS+=	--enable-cxx
 
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
-INSTALL_TARGET=	install installcxx
-TEST_TARGET=	heavy
+INSTALL_TARGET=		install installcxx
+TEST_TARGET=		heavy
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

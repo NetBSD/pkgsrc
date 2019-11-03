@@ -1,12 +1,12 @@
-# $NetBSD: builtin.mk,v 1.20 2013/11/23 11:29:35 obache Exp $
+# $NetBSD: builtin.mk,v 1.21 2019/11/03 10:39:29 rillig Exp $
 
 BUILTIN_PKG:=	readline
 
-BUILTIN_FIND_LIBS:=		readline history
-BUILTIN_FIND_HEADERS_VAR:=	H_READLINE _BLTN_H_READLINE
-BUILTIN_FIND_HEADERS.H_READLINE=readline/readline.h	\
-				readline.h
-BUILTIN_FIND_GREP.H_READLINE=	\#define[ 	]*RL_VERSION_MAJOR
+BUILTIN_FIND_LIBS:=			readline history
+BUILTIN_FIND_HEADERS_VAR:=		H_READLINE _BLTN_H_READLINE
+BUILTIN_FIND_HEADERS.H_READLINE=	readline/readline.h	\
+					readline.h
+BUILTIN_FIND_GREP.H_READLINE=		\#define[ 	]*RL_VERSION_MAJOR
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -22,7 +22,7 @@ IS_BUILTIN.readline=	no
 IS_BUILTIN.readline=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.readline
+MAKEVARS+=		IS_BUILTIN.readline
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -38,7 +38,7 @@ BUILTIN_VERSION.readline!=						\
 	' ${H_READLINE:Q}
 BUILTIN_PKG.readline=	readline-${BUILTIN_VERSION.readline}
 .endif
-MAKEVARS+=	BUILTIN_PKG.readline
+MAKEVARS+=		BUILTIN_PKG.readline
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -78,7 +78,7 @@ USE_BUILTIN.readline=	no
 .    endfor
 .  endif  # PREFER.readline
 .endif
-MAKEVARS+=	USE_BUILTIN.readline
+MAKEVARS+=		USE_BUILTIN.readline
 
 ###
 ### The section below only applies if we are not including this file

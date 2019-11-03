@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/08/11 13:18:43 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/03 10:39:13 rillig Exp $
 
 DISTNAME=	gperftools-2.7
 PKGREVISION=	2
@@ -27,11 +27,11 @@ CFLAGS.Darwin+=		-D_XOPEN_SOURCE=1
 LIBS+=			-lexecinfo
 .endif
 
-PKGCONFIG_OVERRIDE=	libprofiler.pc
-PKGCONFIG_OVERRIDE+=	libtcmalloc.pc
-PKGCONFIG_OVERRIDE+=	libtcmalloc_debug.pc
-PKGCONFIG_OVERRIDE+=	libtcmalloc_minimal.pc
-PKGCONFIG_OVERRIDE+=	libtcmalloc_minimal_debug.pc
+PKGCONFIG_OVERRIDE=		libprofiler.pc
+PKGCONFIG_OVERRIDE+=		libtcmalloc.pc
+PKGCONFIG_OVERRIDE+=		libtcmalloc_debug.pc
+PKGCONFIG_OVERRIDE+=		libtcmalloc_minimal.pc
+PKGCONFIG_OVERRIDE+=		libtcmalloc_minimal_debug.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 REPLACE_PERL=		src/pprof

@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.4 2015/06/07 14:16:01 youri Exp $
+# $NetBSD: options.mk,v 1.5 2019/11/03 10:39:09 rillig Exp $
 #
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.cutter
+PKG_OPTIONS_VAR=	PKG_OPTIONS.cutter
 PKG_SUPPORTED_OPTIONS=	goffice gstreamer gtk2 libsoup pdf
 PKG_SUGGESTED_OPTIONS=	#
 

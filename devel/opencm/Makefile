@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2017/09/03 08:36:52 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2019/11/03 10:39:27 rillig Exp $
 #
 
 DISTNAME=	${OPENCM_VERSION}-2-src
@@ -12,9 +12,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://www.opencm.org/
 COMMENT=	Secure, high-integrity replacement for CVS
 
-WRKSRC=		${WRKDIR}/${OPENCM_VERSION}/base
-USE_TOOLS+=	gmake gzip makeinfo lex
-GNU_CONFIGURE=	YES
+WRKSRC=			${WRKDIR}/${OPENCM_VERSION}/base
+USE_TOOLS+=		gmake gzip makeinfo lex
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-ssl-dir=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	KRB5_BUILDLINK=${KRB5BASE:Q}
 

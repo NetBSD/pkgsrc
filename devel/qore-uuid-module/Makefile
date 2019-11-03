@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2018/06/08 20:49:41 nros Exp $
+# $NetBSD: Makefile,v 1.7 2019/11/03 10:39:29 rillig Exp $
 
 DISTNAME=	qore-uuid-module-1.3
 PKGREVISION=	6
 CATEGORIES=	devel
-MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=qore/}
-EXTRACT_SUFX=   .tar.bz2
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qore/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	nros@users.sourceforge.net
 HOMEPAGE=	http://www.qore.org/

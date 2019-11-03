@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2019/09/02 13:19:39 adam Exp $
+# $NetBSD: Makefile,v 1.31 2019/11/03 10:39:04 rillig Exp $
 
 DISTNAME=	ExmanIDE-0.9.4
 PKGREVISION=	8
@@ -16,7 +16,7 @@ USE_TOOLS+=	pax
 WRKSRC=		${WRKDIR}/${PKGBASE}
 NO_BUILD=	yes
 
-PYTHON_VERSIONS_ACCEPTED=	 27 # py-wxWidgets
+PYTHON_VERSIONS_ACCEPTED=	27 # py-wxWidgets
 
 SUBST_CLASSES+=		mod
 SUBST_MESSAGE.mod=	Fixing deprecated module names.
@@ -37,7 +37,7 @@ SUBST_STAGE.py2=	pre-configure
 SUBST_FILES.py2=	ExmanIDE.pyw
 SUBST_SED.py2=		-e 's,/usr/bin/env python.*$$,${PYTHONBIN},'
 
-INSTALLATION_DIRS=	 bin share/ExmanIDE
+INSTALLATION_DIRS=	bin share/ExmanIDE
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/ExmanIDE ${DESTDIR}${PREFIX}/bin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2019/10/05 20:53:01 gutteridge Exp $
+# $NetBSD: Makefile,v 1.53 2019/11/03 10:39:11 rillig Exp $
 
 PKGREVISION=	1
 DISTNAME=	fossil-src-2.10
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.fossil-scm.org/
 COMMENT=	High-reliability, distributed software configuration management
 LICENSE=	2-clause-bsd
 
-HAS_CONFIGURE=	yes
+HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl:Q}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib:Q}
 

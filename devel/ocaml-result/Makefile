@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/03/05 16:27:42 jaapb Exp $
+# $NetBSD: Makefile,v 1.11 2019/11/03 10:39:26 rillig Exp $
 
 GITHUB_PROJECT=	result
 DISTNAME=	${GITHUB_PROJECT}-1.3
@@ -12,8 +12,8 @@ HOMEPAGE=	https://github.com/janestreet/result/
 COMMENT=	OCaml compatibility library for Result module
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=	# none
-OCAML_USE_DUNE=	yes
+USE_LANGUAGES=		# none
+OCAML_USE_DUNE=		yes
 INSTALLATION_DIRS+=	${OCAML_SITELIBDIR}/result share/doc/result
 
 .include "../../mk/ocaml.mk"

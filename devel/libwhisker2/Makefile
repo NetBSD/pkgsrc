@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/08/11 13:18:46 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/03 10:39:19 rillig Exp $
 
 DISTNAME=	libwhisker2-2.5
 PKGREVISION=	5
@@ -35,9 +35,9 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/LW2.pm \
 		${DESTDIR}${PREFIX}/libdata/${PKGBASE}
 
-.	for f in ${REPLACE_PERL}
-		${INSTALL_SCRIPT} ${WRKSRC}/${f} \
-			${DESTDIR}${PREFIX}/share/examples/${PKGBASE}
-.	endfor
+.for f in ${REPLACE_PERL}
+	${INSTALL_SCRIPT} ${WRKSRC}/${f} \
+		${DESTDIR}${PREFIX}/share/examples/${PKGBASE}
+.endfor
 
 .include "../../mk/bsd.pkg.mk"

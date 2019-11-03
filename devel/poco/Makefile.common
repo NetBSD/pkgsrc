@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2018/07/27 21:03:26 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.16 2019/11/03 10:39:28 rillig Exp $
 #
 # used by devel/poco/Makefile
 # used by databases/poco-data/Makefile
@@ -6,7 +6,7 @@
 # used by databases/poco-data-mysql/Makefile
 # used by databases/poco-data-odbc/Makefile
 
-POCO_VERSION=1.6.1
+POCO_VERSION=	1.6.1
 
 DISTNAME=	poco-${POCO_VERSION}-all
 MASTER_SITES=	http://pocoproject.org/releases/poco-${POCO_VERSION}/
@@ -46,17 +46,17 @@ CONFIGURE_ARGS.NetBSD+=	--no-sharedmemory
 
 .if ${OPSYS} == "SunOS"
 .include "../../mk/compiler.mk"
-. if ${PKGSRC_COMPILER} == "sunpro"
+.  if ${PKGSRC_COMPILER} == "sunpro"
 CONFIGURE_ARGS+=	--config=SunOS-SunStudio
-. else
+.  else
 CONFIGURE_ARGS+=	--config=SunOS-GCC
 # GCC 4.6 and newer forces c99 for C++, need _XOPEN_SOURCE=600
-.  if !empty(CC_VERSION:Mgcc-4.[6-9].*) || !empty(CC_VERSION:Mgcc-[5-9].*) || !empty(PKGSRC_COMPILER:Mclang)
+.    if !empty(CC_VERSION:Mgcc-4.[6-9].*) || !empty(CC_VERSION:Mgcc-[5-9].*) || !empty(PKGSRC_COMPILER:Mclang)
 MAKE_ENV+=		XOPEN_SOURCE=600
-.  else
+.    else
 MAKE_ENV+=		XOPEN_SOURCE=500
+.    endif
 .  endif
-. endif
 .endif
 
 MAKE_FLAGS+=		POCO_BASE=${WRKSRC}

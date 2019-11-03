@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/05/19 13:36:04 mef Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/03 10:39:29 rillig Exp $
 
 DISTNAME=	rainbow-delimiters-1.3.5
 CATEGORIES=	devel
@@ -8,8 +8,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Fanael/rainbow-delimiters
 COMMENT=	Emacs mode for colorful parentheses highlighting
 
-USE_LANGUAGES=	# none
-MESSAGE_SUBST+=	LISPDIR=${EMACS_LISPPREFIX:Q}
+USE_LANGUAGES=		# none
+MESSAGE_SUBST+=		LISPDIR=${EMACS_LISPPREFIX:Q}
 INSTALLATION_DIRS=	${EMACS_LISPPREFIX}
 
 do-build:

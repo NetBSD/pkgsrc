@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.62 2019/10/11 16:20:18 kamil Exp $
+# $NetBSD: Makefile,v 1.63 2019/11/03 10:39:05 rillig Exp $
 
 DISTNAME=	afl-2.56b
 CATEGORIES=	devel
 MASTER_SITES=	http://lcamtuf.coredump.cx/afl/releases/
-MASTER_SITES=   ${MASTER_SITE_GITHUB:=google/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

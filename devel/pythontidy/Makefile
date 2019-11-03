@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/04/25 07:32:49 maya Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/03 10:39:28 rillig Exp $
 #
 
 DISTNAME=	PythonTidy-1.20
@@ -15,15 +15,15 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
-NO_BUILD=	yes
+NO_BUILD=		yes
 INSTALLATION_DIRS=	bin
 
-REPLACE_PYTHON=	${WRKSRC}/*.py
-SUBST_CLASSES+=                 pythonbin
-SUBST_STAGE.pythonbin=          pre-configure
-SUBST_MESSAGE.pythonbin=        Fixing references to python interpreter.
-SUBST_FILES.pythonbin=          *.py
-SUBST_SED.pythonbin=            -e 's,%PYTHONBIN%,${PYTHONBIN},g'
+REPLACE_PYTHON=			${WRKSRC}/*.py
+SUBST_CLASSES+=			pythonbin
+SUBST_STAGE.pythonbin=		pre-configure
+SUBST_MESSAGE.pythonbin=	Fixing references to python interpreter.
+SUBST_FILES.pythonbin=		*.py
+SUBST_SED.pythonbin=		-e 's,%PYTHONBIN%,${PYTHONBIN},g'
 
 do-extract:
 	${MKDIR} ${WRKSRC:Q}

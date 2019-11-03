@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/06/20 00:56:58 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/03 10:39:30 rillig Exp $
 
 DISTNAME=		skalibs-2.8.1.0
 CATEGORIES=		devel
@@ -15,9 +15,9 @@ USE_TOOLS+=		gmake
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 
-PLIST_VARS+=		include-shared-objects
+PLIST_VARS+=			include-shared-objects
 .if "${OPSYS}" == "Darwin"
-CONFIGURE_ARGS+=	"--disable-shared"
+CONFIGURE_ARGS+=		"--disable-shared"
 .else
 PLIST.include-shared-objects=	yes
 .endif

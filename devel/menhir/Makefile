@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/03/21 12:18:56 jaapb Exp $
+# $NetBSD: Makefile,v 1.28 2019/11/03 10:39:20 rillig Exp $
 #
 
 DISTNAME=	menhir-20181113
@@ -10,10 +10,10 @@ HOMEPAGE=	http://gallium.inria.fr/~fpottier/menhir/
 COMMENT=	LR(1) parser generator in OCaml
 LICENSE=	qpl-v1.0
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=	gmake
 MAKE_JOBS_SAFE=	no
 
-SUPERSEDES=	ocaml-menhir-[0-9]*
+SUPERSEDES=		ocaml-menhir-[0-9]*
 OCAML_USE_FINDLIB=	yes
 OCAML_FINDLIB_REGISTER=	no
 
@@ -25,9 +25,9 @@ MAKE_ENV+=	TARGET=native
 MAKE_ENV+=	TARGET=byte
 .endif
 
-EGDIR=				${PREFIX}/share/examples/${PKGBASE}
-MAKE_ENV+=		EGDIR=${EGDIR:Q} USE_OCAMLFIND=true \
-	OCAML_SITELIBDIR=${OCAML_SITELIBDIR}
+EGDIR=		${PREFIX}/share/examples/${PKGBASE}
+MAKE_ENV+=	EGDIR=${EGDIR:Q} USE_OCAMLFIND=true \
+		OCAML_SITELIBDIR=${OCAML_SITELIBDIR}
 
 .include "../../devel/ocamlbuild/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

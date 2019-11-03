@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/05/13 17:30:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/03 10:39:14 rillig Exp $
 #
 # TODO Import intellij-fsnotifier with inotify support from FreeBSD.
 
@@ -23,7 +23,7 @@ USE_TOOLS+=	bash pax sed
 
 REPLACE_PYTHON=	bin/printenv.py \
 		bin/restart.py  \
-
+		
 REPLACE_BASH=	plugins/Kotlin/kotlinc/bin/kotlin	\
 		plugins/Kotlin/kotlinc/bin/kotlin-dce-js\
 		plugins/Kotlin/kotlinc/bin/kotlinc	\

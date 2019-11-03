@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2019/11/03 04:01:32 gutteridge Exp $
+# $NetBSD: Makefile,v 1.59 2019/11/03 10:39:15 rillig Exp $
 
 VERSION=	1.8.1
 PKGREVISION=	1
@@ -17,7 +17,7 @@ USE_LANGUAGES=	c c++
 
 BUILDLINK_TRANSFORM+=	rm:-Wl,--fatal-warnings
 
-BUILD_DEPENDS+=	extra-cmake-modules>=5.10.0:../../devel/extra-cmake-modules
+BUILD_DEPENDS+=		extra-cmake-modules>=5.10.0:../../devel/extra-cmake-modules
 TOOLS_DEPENDS.cmake=	cmake>=3.0:../../devel/cmake
 
 .include "../../devel/gettext-lib/buildlink3.mk"

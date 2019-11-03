@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2018/11/04 16:51:30 bsiegert Exp $
+# $NetBSD: Makefile.common,v 1.6 2019/11/03 10:39:19 rillig Exp $
 # used by devel/libblkid/Makefile
 # used by devel/libuuid/Makefile
 # used by x11/mcookie/Makefile
@@ -33,6 +33,6 @@ TEST_TARGET=		check
 
 # XXX PR pkg/52877: configure is broken on netbsd6
 .if (${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[0123456].*))
-USE_TOOLS+=            ksh
-CONFIG_SHELL=          ksh
+USE_TOOLS+=	ksh
+CONFIG_SHELL=	ksh
 .endif
