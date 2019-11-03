@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/06/11 08:13:05 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/03 09:14:18 rillig Exp $
 
 DISTNAME=	sessreg-1.1.2
 CATEGORIES=	x11
@@ -12,8 +12,8 @@ COMMENT=	Manage utmp/wtmp entries for xdm
 USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=	yes
 
-BUILD_DEFS+=	VARBASE
-CONFIGURE_ARGS+=--localstatedir=${VARBASE:Q}
+BUILD_DEFS+=		VARBASE
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mgcc)

@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2013/12/14 09:54:52 tron Exp $
+# $NetBSD: builtin.mk,v 1.2 2019/11/03 09:14:10 rillig Exp $
 
 BUILTIN_PKG:=	libXcomposite
 
@@ -19,7 +19,7 @@ IS_BUILTIN.libXcomposite=	yes
 IS_BUILTIN.libXcomposite=	no
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.libXcomposite
+MAKEVARS+=			IS_BUILTIN.libXcomposite
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -46,6 +46,6 @@ USE_BUILTIN.libXcomposite!=						\
 .    endif
 .  endif  # PREFER.libXcomposite
 .endif
-MAKEVARS+=	USE_BUILTIN.libXcomposite
+MAKEVARS+=			USE_BUILTIN.libXcomposite
 
 .include "../../mk/x11.builtin.mk"

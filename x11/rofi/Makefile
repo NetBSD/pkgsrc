@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/07/21 22:26:03 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/03 09:14:17 rillig Exp $
 
 DISTNAME=	rofi-1.5.2
 PKGREVISION=	1
@@ -14,7 +14,7 @@ LICENSE=	x11
 
 USE_TOOLS+=	pkg-config bash bison
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	YACC='bison -y'
 
 REPLACE_BASH+=	script/rofi-sensible-terminal
