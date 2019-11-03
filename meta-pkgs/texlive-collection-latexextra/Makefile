@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2019/08/13 20:55:15 markd Exp $
+# $NetBSD: Makefile,v 1.48 2019/11/03 19:35:55 rillig Exp $
 
 DISTNAME=	collection-latexextra
 PKGNAME=	texlive-${DISTNAME}-2019pre4
@@ -10,8 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
 COMMENT=	LaTeX additional packages
 
-DEPENDS+=      texlive-collection-latexrecommended-[0-9]*:../../meta-pkgs/texlive-collection-latexrecommended
-DEPENDS+=      texlive-collection-pictures-[0-9]*:../../meta-pkgs/texlive-collection-pictures
+DEPENDS+=	texlive-collection-latexrecommended-[0-9]*:../../meta-pkgs/texlive-collection-latexrecommended
+DEPENDS+=	texlive-collection-pictures-[0-9]*:../../meta-pkgs/texlive-collection-pictures
 
 DEPENDS+=	tex-2up-[0-9]*:../../print/tex-2up
 # depend ESIEEcv
