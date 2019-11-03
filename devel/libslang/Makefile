@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2017/01/19 18:52:06 agc Exp $
+# $NetBSD: Makefile,v 1.73 2019/11/03 10:39:18 rillig Exp $
 #
 
 DISTNAME=	slang-1.4.9
@@ -18,7 +18,7 @@ MAKE_JOBS_SAFE=		no
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-DLOPEN_REQUIRE_PTHREADS=no
+DLOPEN_REQUIRE_PTHREADS= no
 
 .include "../../mk/termcap.buildlink3.mk"
 

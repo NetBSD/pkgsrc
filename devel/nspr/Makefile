@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2019/08/11 13:18:47 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2019/11/03 10:39:21 rillig Exp $
 
 DISTNAME=	nspr-${NSPR_RELEASE:S/.0$//}
 NSPR_RELEASE=	4.21.0
@@ -11,15 +11,15 @@ HOMEPAGE=	https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR
 COMMENT=	Platform-neutral API for system level and libc like functions
 LICENSE=	mpl-2.0
 
-CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
-CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
-CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}js/src/configure
-CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}configure
+CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
+CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
+CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}js/src/configure
+CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}configure
 
 OVERRIDE_DIRDEPTH=	3
 
 GNU_CONFIGURE=		yes
-GNU_CONFIGURE_LIBSUBDIR=nspr
+GNU_CONFIGURE_LIBSUBDIR= nspr
 CONFIGURE_DIRS=		nspr
 
 USE_GCC_RUNTIME=	yes
@@ -46,7 +46,7 @@ SUBST_FILES.nspr-rpath=		nspr/lib/libc/src/Makefile.in nspr/lib/ds/Makefile.in
 SUBST_SED.nspr-rpath=		-e 's|$$$$ORIGIN|${PREFIX}/lib/nspr|g'
 
 .if ${OPSYS} == "OpenBSD"
-CHECK_SHLIBS_SUPPORTED= no
+CHECK_SHLIBS_SUPPORTED=	no
 .endif
 
 SUBST_CLASSES.Darwin+=		exec_path
@@ -72,9 +72,9 @@ PLIST_VARS+=		sun4u_32
 .  if defined(ABI) && ${ABI} == "64"
 CONFIGURE_ARGS+=	--enable-64bit
 .  else
-HW_CLASS!=	${UNAME} -m
+HW_CLASS!=		${UNAME} -m
 .    if ${HW_CLASS} == "sun4u"
-PLIST.sun4u_32=                yes
+PLIST.sun4u_32=		yes
 .    endif
 .  endif
 .endif

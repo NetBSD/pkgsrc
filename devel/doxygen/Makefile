@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.140 2019/10/17 20:35:58 adam Exp $
+# $NetBSD: Makefile,v 1.141 2019/11/03 10:39:10 rillig Exp $
 
 DISTNAME=	doxygen-1.8.16.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -38,13 +38,13 @@ SUBST_SED.epstopdf=	-e 's,"epstopdf","${PREFIX}/bin/epstopdf",g'
 # Fixing $PWD / $(PWD) / $(HOME) for documentation
 # The dollar sign should be inserted literally in the documentation
 # doxygen always inserted the path => Completely remove dollar sign
-SUBST_CLASSES+=		changelog
-SUBST_STAGE.changelog=	pre-configure
-SUBST_MESSAGE.changelog=Fixing dollar sign for documentation
-SUBST_FILES.changelog=	doc/changelog.doc
-SUBST_SED.changelog=	-e 's,$$PWD,PWD,g'
-SUBST_SED.changelog+=	-e 's,$$(PWD,(PWD,g'
-SUBST_SED.changelog+=	-e 's,$$(HOME,(HOME,g'
+SUBST_CLASSES+=			changelog
+SUBST_STAGE.changelog=		pre-configure
+SUBST_MESSAGE.changelog=	Fixing dollar sign for documentation
+SUBST_FILES.changelog=		doc/changelog.doc
+SUBST_SED.changelog=		-e 's,$$PWD,PWD,g'
+SUBST_SED.changelog+=		-e 's,$$(PWD,(PWD,g'
+SUBST_SED.changelog+=		-e 's,$$(HOME,(HOME,g'
 
 .include "../../mk/bsd.prefs.mk"
 

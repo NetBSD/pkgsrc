@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/07/04 13:40:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2019/11/03 10:39:20 rillig Exp $
 #
 
 #
@@ -19,8 +19,8 @@ USE_TOOLS+=		gmake msgfmt intltool
 GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++
 
-SUBST_CLASSES+=		exampledir
-SUBST_STAGE.exampledir=	pre-configure
+SUBST_CLASSES+=			exampledir
+SUBST_STAGE.exampledir=		pre-configure
 SUBST_MESSAGE.exampledir=	Fixing up examples directory path
 SUBST_FILES.exampledir=		demo/ccm/Makefile demo/Makefile demo/MakeVars
 SUBST_FILES.exampledir+=	demo/csiv2/Makefile demo/csiv2/interop/Makefile

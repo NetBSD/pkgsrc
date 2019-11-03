@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2018/07/29 11:36:06 minskim Exp $
+# $NetBSD: Makefile.common,v 1.6 2019/11/03 10:39:19 rillig Exp $
 # used by devel/lua-lrexlib-posix/Makefile
 # used by devel/lua-lrexlib-pcre/Makefile
 # used by devel/lua-lrexlib-onig/Makefile
@@ -29,7 +29,7 @@ PATCHDIR=		${.CURDIR}/../../devel/lua-lrexlib/patches
 DISTINFO_FILE=		${.CURDIR}/../../devel/lua-lrexlib/distinfo
 DESCR_SRC=		${.CURDIR}/../../devel/lua-lrexlib/DESCR.common
 
-CFLAGS+=                -DLUA_COMPAT_APIINTCASTS
+CFLAGS+=		-DLUA_COMPAT_APIINTCASTS
 MAKE_FLAGS+=		LIBS=${LIBS:Q}
 MAKE_FLAGS+=		LIBTOOL=${LIBTOOL:Q}
 MAKE_FLAGS+=		MODULES_DIR=${PREFIX}/${LUA_CDIR}

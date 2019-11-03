@@ -1,21 +1,21 @@
-# $NetBSD: builtin.mk,v 1.41 2019/05/01 20:15:59 gdt Exp $
+# $NetBSD: builtin.mk,v 1.42 2019/11/03 10:39:20 rillig Exp $
 
 BUILTIN_PKG:=	ncurses
 
 # what we really need for builtin on solaris is in /usr/gnu/lib
 #
 
-BUILTIN_FIND_LIBS:=		ncurses curses terminfo
-BUILTIN_FIND_HEADERS_VAR:=	H_NCURSES H_CURSES H_CURSES1
-BUILTIN_FIND_HEADERS.H_NCURSES=	ncurses.h curses.h
+BUILTIN_FIND_LIBS:=			ncurses curses terminfo
+BUILTIN_FIND_HEADERS_VAR:=		H_NCURSES H_CURSES H_CURSES1
+BUILTIN_FIND_HEADERS.H_NCURSES=		ncurses.h curses.h
 #BUILTIN_FIND_HEADERS.H_NCURSES+=	ncurses/curses.h
-BUILTIN_FIND_GREP.H_NCURSES=	\#define[ 	]*NCURSES_VERSION
-BUILTIN_FIND_HEADERS.H_CURSES=	ncurses.h curses.h
-BUILTIN_FIND_GREP.H_CURSES=	mvwchgat
-BUILTIN_FIND_HEADERS.H_CURSES1=	ncurses.h curses.h
-BUILTIN_FIND_GREP.H_CURSES1=	wsyncup
-BUILTIN_FIND_FILES_VAR=		NCURSES_PC
-BUILTIN_FIND_FILES.NCURSES_PC=	/usr/lib/pkgconfig/ncurses.pc
+BUILTIN_FIND_GREP.H_NCURSES=		\#define[ 	]*NCURSES_VERSION
+BUILTIN_FIND_HEADERS.H_CURSES=		ncurses.h curses.h
+BUILTIN_FIND_GREP.H_CURSES=		mvwchgat
+BUILTIN_FIND_HEADERS.H_CURSES1=		ncurses.h curses.h
+BUILTIN_FIND_GREP.H_CURSES1=		wsyncup
+BUILTIN_FIND_FILES_VAR=			NCURSES_PC
+BUILTIN_FIND_FILES.NCURSES_PC=		/usr/lib/pkgconfig/ncurses.pc
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -32,7 +32,7 @@ IS_BUILTIN.ncurses=	no
 IS_BUILTIN.ncurses=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.ncurses
+MAKEVARS+=		IS_BUILTIN.ncurses
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -50,7 +50,7 @@ BUILTIN_VERSION.ncurses!=						\
 	' ${H_NCURSES:Q}
 BUILTIN_PKG.ncurses=	ncurses-${BUILTIN_VERSION.ncurses}
 .endif
-MAKEVARS+=	BUILTIN_PKG.ncurses
+MAKEVARS+=		BUILTIN_PKG.ncurses
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -98,7 +98,7 @@ USE_BUILTIN.ncurses=	no
 .    endfor
 .  endif  # PREFER.ncurses
 .endif
-MAKEVARS+=	USE_BUILTIN.ncurses
+MAKEVARS+=		USE_BUILTIN.ncurses
 
 # If USE_NCURSES is set to yes, the use of an ncurses implementation
 # is forced.

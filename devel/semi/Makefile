@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2015/11/25 12:49:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.37 2019/11/03 10:39:30 rillig Exp $
 #
 
 DISTNAME=	semi-1.14.6
@@ -29,8 +29,8 @@ MAKEFLAGS=	${MAKEFLAGS.${EMACS_FLAVOR}}
 USE_TOOLS+=	makeinfo
 INFO_FILES=	yes
 
-EMACS_MODULES=	base
-EMACS_BUILDLINK=# defined
+EMACS_MODULES=		base
+EMACS_BUILDLINK=	# defined
 
 BUILD_TARGET.emacs=	elc
 BUILD_TARGET.xemacs=	package

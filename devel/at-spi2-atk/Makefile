@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/10/25 03:43:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/03 10:39:05 rillig Exp $
 
 DISTNAME=	at-spi2-atk-2.33.2
 CATEGORIES=	devel gnome
@@ -12,8 +12,8 @@ LICENSE=	gnu-lgpl-v2
 
 USE_TOOLS+=	pkg-config
 
-PKGCONFIG_OVERRIDE=	output/meson-private/atk-bridge-2.0.pc
-PKGCONFIG_OVERRIDE_STAGE=pre-install
+PKGCONFIG_OVERRIDE=		output/meson-private/atk-bridge-2.0.pc
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
 
 BUILDLINK_API_DEPENDS.atk+=	atk>=2.33.3
 .include "../../devel/atk/buildlink3.mk"

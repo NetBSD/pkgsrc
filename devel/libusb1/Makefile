@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/08/06 08:50:28 maya Exp $
+# $NetBSD: Makefile,v 1.20 2019/11/03 10:39:18 rillig Exp $
 
 DISTNAME=	libusb-1.0.22
 PKGNAME=	${DISTNAME:S/libusb/libusb1/}
@@ -19,7 +19,7 @@ NOT_FOR_PLATFORM=	DragonFly-*-*
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-MAKE_JOBS_SAFE=            no
+MAKE_JOBS_SAFE=	no
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)

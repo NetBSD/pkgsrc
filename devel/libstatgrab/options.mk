@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.4 2013/10/16 13:09:00 roy Exp $
+# $NetBSD: options.mk,v 1.5 2019/11/03 10:39:18 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.libstatgrab
-PKG_SUPPORTED_OPTIONS=	saidar statgrab
-PKG_SUGGESTED_OPTIONS=	saidar statgrab
+PKG_OPTIONS_VAR=		PKG_OPTIONS.libstatgrab
+PKG_SUPPORTED_OPTIONS=		saidar statgrab
+PKG_SUGGESTED_OPTIONS=		saidar statgrab
 PKG_OPTIONS_LEGACY_VARS+=	WITHOUT_SAIDAR:-saidar
 PKG_OPTIONS_LEGACY_VARS+=	WITHOUT_STATGRAB:-statgrab
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/08/22 22:33:15 ast Exp $
+# $NetBSD: Makefile,v 1.13 2019/11/03 10:39:05 rillig Exp $
 
 DISTNAME=	MoarVM-2019.07.1
 PKGREVISION=	1
@@ -10,8 +10,8 @@ HOMEPAGE=	http://www.moarvm.org/
 COMMENT=	Virtual machine for Rakudo Perl 6
 LICENSE=	artistic-2.0
 
-USE_TOOLS+=	perl gmake
-USE_LANGUAGES=	c c++
+USE_TOOLS+=		perl gmake
+USE_LANGUAGES=		c c++
 NOT_PAX_MPROTECT_SAFE=	bin/moar
 
 HAS_CONFIGURE=		yes

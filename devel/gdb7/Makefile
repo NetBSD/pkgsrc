@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/08/11 13:18:42 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/03 10:39:11 rillig Exp $
 
 DISTNAME=	gdb-7.11
 PKGREVISION=	6
@@ -11,15 +11,15 @@ COMMENT=	Symbolic debugger for multiple language frontends
 LICENSE=	gnu-gpl-v3
 
 BROKEN_GETTEXT_DETECTION=	yes
-GNU_CONFIGURE=		YES
-USE_PKGLOCALEDIR=	YES
-USE_LIBTOOL=		YES
-USE_TOOLS+=		gmake msgfmt makeinfo perl:build
+GNU_CONFIGURE=			YES
+USE_PKGLOCALEDIR=		YES
+USE_LIBTOOL=			YES
+USE_TOOLS+=			gmake msgfmt makeinfo perl:build
 REPLACE_LOCALEDIR_PATTERNS+=	Make-in
-INSTALL_TARGET=		install install-info
-TEST_TARGET=		check
-INFO_FILES=		yes
-CONFIGURE_ENV+=		CONFIG_LDFLAGS=${LDFLAGS:M*:Q}
+INSTALL_TARGET=			install install-info
+TEST_TARGET=			check
+INFO_FILES=			yes
+CONFIGURE_ENV+=			CONFIG_LDFLAGS=${LDFLAGS:M*:Q}
 
 # In gdb/configure, depcomp is parsed with sed.
 SUBST_CLASSES+=			fix-depcomp
@@ -50,7 +50,7 @@ TARGET_STR=		${MACHINE_ARCH}--dragonfly
 BUILD_DEFS+=		${TARGET_STR}
 ## Remove "-pc" string, without this, getting following message:
 ##	   *** Gdb does not support native target i386-pc-dragonfly"
-CONFIGURE_ARGS+=		--target=${TARGET_STR}
+CONFIGURE_ARGS+=	--target=${TARGET_STR}
 TEST_ENV=		DEJAGNU=${WRKDIR}/../files/dragonfly-default.exp
 .endif
 

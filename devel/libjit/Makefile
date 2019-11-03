@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2016/02/25 12:12:48 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2019/11/03 10:39:17 rillig Exp $
 #
 
 DISTNAME=	libjit-0.1.2
@@ -12,10 +12,10 @@ COMMENT=	Just-In-Time compilation functionality
 
 LICENSE=	gnu-lgpl-v2.1
 
-USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake lex yacc makeinfo
-GNU_CONFIGURE=		yes
+USE_LANGUAGES=	c c++
+USE_LIBTOOL=	yes
+USE_TOOLS+=	gmake lex yacc makeinfo
+GNU_CONFIGURE=	yes
 INFO_FILES=	yes
 
 CONFIGURE_ARGS.NetBSD+=	ac_cv_header_tgmath_h=no

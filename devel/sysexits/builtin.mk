@@ -1,9 +1,9 @@
-# $NetBSD: builtin.mk,v 1.4 2013/11/23 11:29:36 obache Exp $
+# $NetBSD: builtin.mk,v 1.5 2019/11/03 10:39:31 rillig Exp $
 
 BUILTIN_PKG:=	sysexits
 
-BUILTIN_FIND_HEADERS_VAR:=	H_SYSEXITS
-BUILTIN_FIND_HEADERS.H_SYSEXITS=sysexits.h
+BUILTIN_FIND_HEADERS_VAR:=		H_SYSEXITS
+BUILTIN_FIND_HEADERS.H_SYSEXITS=	sysexits.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -17,7 +17,7 @@ IS_BUILTIN.sysexits=	no
 IS_BUILTIN.sysexits=	yes
 .  endif
 .endif	# IS_BUILTIN.sysexits
-MAKEVARS+=	IS_BUILTIN.sysexits
+MAKEVARS+=		IS_BUILTIN.sysexits
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -44,4 +44,4 @@ USE_BUILTIN.sysexits!=							\
 .    endif
 .  endif  # PREFER.sysexits
 .endif
-MAKEVARS+=	USE_BUILTIN.sysexits
+MAKEVARS+=		USE_BUILTIN.sysexits
