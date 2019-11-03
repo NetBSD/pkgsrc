@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/04/25 07:32:40 maya Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/03 17:14:27 rillig Exp $
 
 DISTNAME=	unoconv-0.7
 PKGREVISION=	1
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake
 
-REPLACE_PYTHON+=unoconv
+REPLACE_PYTHON+=	unoconv
 
 BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 DEPENDS+=	libreoffice>=5.3.4.2nb1:../../misc/libreoffice

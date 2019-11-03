@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/03/15 17:25:56 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/03 17:14:24 rillig Exp $
 
 DISTNAME=	kcc
 PKGNAME=	kcc-2.3
@@ -15,7 +15,7 @@ INSTALL_MAKE_FLAGS+=	BINPATH=${DESTDIR}${PREFIX}/bin
 INSTALL_MAKE_FLAGS+=	MANPATH=${DESTDIR}${PREFIX}/${PKGMANDIR}
 INSTALL_MAKE_FLAGS+=	JMANDIR=ja_JP.EUC
 
-INSTALL_TARGET=	install install.man
+INSTALL_TARGET=		install install.man
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/ja_JP.EUC/man1
 
 .include "../../mk/bsd.pkg.mk"
