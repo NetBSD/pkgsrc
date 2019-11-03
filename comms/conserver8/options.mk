@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.5 2017/02/10 10:35:06 he Exp $
+# $NetBSD: options.mk,v 1.6 2019/11/03 12:04:12 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.conserver8
 
-PKG_OPTIONS_OPTIONAL_GROUPS= connectivity
-PKG_OPTIONS_GROUP.connectivity=inet6 uds
+PKG_OPTIONS_OPTIONAL_GROUPS=	connectivity
+PKG_OPTIONS_GROUP.connectivity=	inet6 uds
 
 PKG_SUPPORTED_OPTIONS=	pam ssl
 
@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--with-ipv6
 
 .if !empty(PKG_OPTIONS:Mssl)
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
-. include "../../security/openssl/buildlink3.mk"
+.  include "../../security/openssl/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-openssl
 .endif
