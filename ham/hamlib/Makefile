@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2019/08/11 13:21:18 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2019/11/03 19:32:07 rillig Exp $
 #
 
 DISTNAME=	hamlib-${VERSION}
@@ -20,13 +20,13 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
-INFO_FILES=     yes
+INFO_FILES=	yes
 USE_LIBTOOL=	yes
 
 # \todo Consider language bindings.
-CONFIGURE_ARGS+=--without-tcl-binding \
-		--without-perl-binding \
-		--without-python-binding
+CONFIGURE_ARGS+=	--without-tcl-binding \
+			--without-perl-binding \
+			--without-python-binding
 
 .include "../../mk/bsd.prefs.mk"
 
