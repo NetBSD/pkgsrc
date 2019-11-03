@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/08/11 13:20:59 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/11/03 19:26:21 rillig Exp $
 
 DISTNAME=	MooseX-Types-Path-Tiny-0.012
 PKGNAME=	p5-${DISTNAME}
@@ -21,8 +21,8 @@ BUILD_DEPENDS+=	p5-File-pushd-[0-9]*:../../devel/p5-File-pushd
 BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 PERL5_MODULE_TYPE=	Module::Build::Tiny
-USE_LANGUAGES=	# empty
-PERL5_PACKLIST=	auto/MooseX/Types/Path/Tiny/.packlist
+USE_LANGUAGES=		# empty
+PERL5_PACKLIST=		auto/MooseX/Types/Path/Tiny/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
