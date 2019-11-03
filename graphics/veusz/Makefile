@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.59 2019/10/30 00:38:11 kamil Exp $
+# $NetBSD: Makefile,v 1.60 2019/11/03 10:56:44 kamil Exp $
 
 DISTNAME=		veusz-3.1
 CATEGORIES=		graphics
-MASTER_SITES=		http://download.gna.org/veusz/
+MASTER_SITES=		${MASTER_SITE_GITHUB:=veusz/}
+GITHUB_RELEASE=		${DISTNAME}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=		https://veusz.github.io/
