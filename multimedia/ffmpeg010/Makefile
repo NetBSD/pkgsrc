@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2018/11/23 08:06:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2019/11/03 17:12:00 rillig Exp $
 
 PKGNAME=	ffmpeg010-20150312.${DISTVERSION}
 PKGREVISION=	8
@@ -33,14 +33,14 @@ CONF_FILES+=	${PREFIX}/share/examples/ffmpeg010/ffserver.conf \
 # disable asm on i386 for non-gcc and gcc < 4.2
 
 .if ${MACHINE_ARCH} == "i386"
-.if !empty(MACHINE_PLATFORM:MDarwin-*-i386) \
+.  if !empty(MACHINE_PLATFORM:MDarwin-*-i386) \
    || !empty(CC_VERSION:Mgcc-[123]*) \
    || !empty(CC_VERSION:Mgcc-4.[01].*) \
    || empty(CC_VERSION:Mgcc*)
 CONFIGURE_ARGS+=	--disable-asm
-.elif !empty(CC_VERSION:Mgcc-[456].*)
-CFLAGS+=-mstackrealign -mpreferred-stack-boundary=4
-.endif
+.  elif !empty(CC_VERSION:Mgcc-[456].*)
+CFLAGS+=		-mstackrealign -mpreferred-stack-boundary=4
+.  endif
 .endif
 
 TEST_TARGET=	check

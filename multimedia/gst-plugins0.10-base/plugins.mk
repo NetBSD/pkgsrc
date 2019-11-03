@@ -1,4 +1,4 @@
-# $NetBSD: plugins.mk,v 1.16 2017/10/17 10:50:39 wiz Exp $
+# $NetBSD: plugins.mk,v 1.17 2019/11/03 17:12:01 rillig Exp $
 #
 # This file is shared across the gst-plugins-{base,good} packages to
 # simplify their code.  It provides a framework to write simple packages
@@ -56,9 +56,9 @@ COMMENT+=		${GST_PLUGINS0.10_NAME} plugin
 GST_PLUGINS0.10_FLAGS?=	${GST_PLUGINS0.10_NAME}
 GST_PLUGINS0.10_DIRS?=	non-existent
 
-.for _f_ in ${GST_PLUGINS0.10_FLAGS}
+.  for _f_ in ${GST_PLUGINS0.10_FLAGS}
 CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/--disable-${_f_}/--enable-${_f_}/}
-.endfor
+.  endfor
 
 BUILD_DIRS=		${GST_PLUGINS0.10_DIRS}
 INSTALL_DIRS=		${GST_PLUGINS0.10_DIRS}
@@ -68,9 +68,9 @@ SUBST_CLASSES+=		libs
 SUBST_MESSAGE.libs=	Fixing path to dependent libraries.
 SUBST_STAGE.libs=	pre-configure
 SUBST_FILES.libs=
-.for _d_ in ${GST_PLUGINS0.10_DIRS}
+.  for _d_ in ${GST_PLUGINS0.10_DIRS}
 SUBST_FILES.libs+=	${_d_}/Makefile.in
-.endfor
+.  endfor
 SUBST_SED.libs=		-e 's|$$(top_builddir)/gst-libs/gst/.*/libgst|${BUILDLINK_PREFIX.gst-plugins0.10-${GST_PLUGINS0.10_TYPE}}/lib/libgst|g'
 
 .include "../../multimedia/gst-plugins0.10-${GST_PLUGINS0.10_TYPE}/buildlink3.mk"
