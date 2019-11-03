@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/09/10 03:47:27 gutteridge Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/03 19:04:01 rillig Exp $
 
 DISTNAME=	guile-2.2.6
 PKGNAME=	${DISTNAME:S/guile/guile22/}
@@ -36,9 +36,9 @@ CONFIGURE_ARGS+=		--infodir=${PREFIX}/${PKGINFODIR}
 CONFIGURE_ARGS+=		--mandir=${PREFIX}/${PKGMANDIR}
 .endif
 
-INFO_FILES=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake pkg-config
+INFO_FILES=		yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake pkg-config
 USE_TOOLS.Darwin+=	gsed
 
 PKGCONFIG_OVERRIDE+=	meta/guile-2.2.pc.in

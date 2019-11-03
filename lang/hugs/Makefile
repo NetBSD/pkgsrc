@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2019/07/10 10:24:05 nia Exp $
+# $NetBSD: Makefile,v 1.45 2019/11/03 19:04:01 rillig Exp $
 
 DISTNAME=	hugs98-Sep2006
 PKGNAME=	hugs98-200609
@@ -41,5 +41,5 @@ CONFIGURE_ARGS+=	ac_cv_lib_readline_readline=no
 # The default -O2 breaks the interpreter producing strange internal errors
 # at run time.
 .if !empty(CC_VERSION:Mgcc-4*)
-CFLAGS+=    -O0
+CFLAGS+=	-O0
 .endif

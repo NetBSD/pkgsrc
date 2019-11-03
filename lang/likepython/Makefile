@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2019/04/25 07:33:02 maya Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/03 19:04:03 rillig Exp $
 #
 
-VER=            0.1
-DISTNAME=       likepython_${VER}
-PKGNAME=        likepython-${VER}
+VER=		0.1
+DISTNAME=	likepython_${VER}
+PKGNAME=	likepython-${VER}
 PKGREVISION=	3
 
 CATEGORIES=	lang
@@ -17,7 +17,7 @@ LICENSE=	mit
 
 WRKSRC=		${WRKDIR} # More than one possibility -- please check manually.
 
-REPLACE_PYTHON=  likepython
+REPLACE_PYTHON=	likepython
 
 SUBST_CLASSES+=			fix-runt-interp
 SUBST_STAGE.fix-runt-interp=	pre-configure
@@ -26,7 +26,7 @@ SUBST_FILES.fix-runt-interp=	likepython
 SUBST_SED.fix-runt-interp=	-e '/call/s,python,${PYTHONBIN},g'
 
 
-NO_BUILD=      		yes
+NO_BUILD=		yes
 
 INSTALLATION_DIRS=	bin share/examples/likepython share/doc/likepython
 
