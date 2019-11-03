@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/08/11 13:22:06 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/03 11:45:28 rillig Exp $
 
 DISTNAME=	DarwinStreamingSrvr5.5.5-Source
 PKGNAME=	DarwinStreamingServer-5.5.5
@@ -13,9 +13,9 @@ LICENSE=	apple-public-source-license
 
 MAKE_JOBS_SAFE=	no
 
-RESTRICTED=	Under APSL (see http://www.opensource.apple.com/apsl/).
-NO_BIN_ON_CDROM=${RESTRICTED}
-NO_BIN_ON_FTP=	${RESTRICTED}
+RESTRICTED=		Under APSL (see http://www.opensource.apple.com/apsl/).
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
 
 USE_LANGUAGES=	c c++03
 
@@ -71,10 +71,10 @@ REPLACE_PERL+=	WebAdmin/src/streamingadminserver.pl
 REPLACE_PERL+=	WinNTSupport/WinPasswdAssistant.pl
 
 PKG_SYSCONFSUBDIR=	streaming
-CONF_FILES=	share/examples/streaming/qtgroups ${PKG_SYSCONFDIR}/qtgroups
-CONF_FILES+=	share/examples/streaming/qtusers ${PKG_SYSCONFDIR}/qtusers
-CONF_FILES+=	share/examples/streaming/relayconfig.xml-Sample ${PKG_SYSCONFDIR}/relayconfig.xml
-CONF_FILES+=	share/examples/streaming/streamingserver.xml-POSIX ${PKG_SYSCONFDIR}/streamingserver.xml
+CONF_FILES=		share/examples/streaming/qtgroups ${PKG_SYSCONFDIR}/qtgroups
+CONF_FILES+=		share/examples/streaming/qtusers ${PKG_SYSCONFDIR}/qtusers
+CONF_FILES+=		share/examples/streaming/relayconfig.xml-Sample ${PKG_SYSCONFDIR}/relayconfig.xml
+CONF_FILES+=		share/examples/streaming/streamingserver.xml-POSIX ${PKG_SYSCONFDIR}/streamingserver.xml
 
 SUBST_CLASSES+=		makefile
 SUBST_STAGE.makefile=	pre-configure

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/05/23 19:23:11 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/03 11:45:55 rillig Exp $
 #
 
 DISTNAME=	tsocks-1.8beta5
@@ -14,9 +14,9 @@ LICENSE=	gnu-gpl-v2
 MAKE_JOBS_SAFE=		no
 
 WRKSRC=		${WRKDIR}/tsocks-1.8
-GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake
-USE_LIBTOOL=		yes
+GNU_CONFIGURE=	YES
+USE_TOOLS+=	gmake
+USE_LIBTOOL=	yes
 
 CONFIGURE_ARGS+=	--with-conf=${PKG_SYSCONFDIR}/tsocks.conf
 

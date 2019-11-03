@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2019/08/11 13:22:30 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2019/11/03 11:45:53 rillig Exp $
 
 DISTNAME=	smokeping-2.6.7
 PKGREVISION=	8
@@ -62,7 +62,7 @@ SUBST_MESSAGE.files=	Fixing configuration files.
 SUBST_CLASSES+=		libs
 SUBST_STAGE.libs=	pre-configure
 SUBST_FILES.libs=	bin/smokeping_cgi bin/smokeping bin/smokeinfo bin/tSmoke
-SUBST_SED.libs=	-e "s|FindBin::Bin/../lib|FindBin::Bin/../lib/smokeping|g"
+SUBST_SED.libs=		-e "s|FindBin::Bin/../lib|FindBin::Bin/../lib/smokeping|g"
 SUBST_MESSAGE.libs=	Fixing library path
 
 OWN_DIRS+=		${SMOKEPING_HOME}

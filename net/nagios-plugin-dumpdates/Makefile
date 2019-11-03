@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/03/09 23:47:47 manu Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/03 11:45:42 rillig Exp $
 #
 
 PKGNAME=	nagios-plugin-dumpdates-${DISTNAME:C/.*-//}
@@ -12,7 +12,7 @@ HOMEPAGE=	http://ftp.espci.fr/pub/nagios-local/
 COMMENT=	/etc/dumpdates monitoring plugin for Nagios
 LICENSE=	modified-bsd
 
-INSTALLATION_DIRS+= libexec/nagios
+INSTALLATION_DIRS+=	libexec/nagios
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/check_dumpdates \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/02/01 13:37:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/03 11:45:49 rillig Exp $
 
 MODNAME=		sockets
 CATEGORIES+=		net
@@ -14,7 +14,7 @@ CONFIGURE_ARGS.SunOS+=	ac_cv_func_if_indextoname=yes
 
 .include "../../mk/compiler.mk"
 
-. if !empty(PKGSRC_COMPILER:Mclang) || !empty(CC_VERSION:Mgcc-[6-9]*)
+.if !empty(PKGSRC_COMPILER:Mclang) || !empty(CC_VERSION:Mgcc-[6-9]*)
 CFLAGS.SunOS+=		-D_XOPEN_SOURCE=600
 .else
 CFLAGS.SunOS+=		-D_XOPEN_SOURCE=500	# msghdr extensions
