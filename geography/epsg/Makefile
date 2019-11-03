@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/01/19 18:52:11 agc Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/03 19:30:32 rillig Exp $
 #
 
 DISTNAME=		epsg-v${VERS}sql-PostgreSQL
@@ -78,9 +78,9 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/epsg-load ${DESTDIR}${BINDIR}
 	${INSTALL_DATA} ${WRKSRC}/${DIR.doc}/epsg-v${VERS_README}_readme.pdf ${DESTDIR}${DOCDIR:Q}
 .for d in pgsql mysql
-.for f in ${DATAFILES.${d}}
+.  for f in ${DATAFILES.${d}}
 	${INSTALL_DATA} ${WRKSRC}/${DIR.${d}}/${f} ${DESTDIR}${EPSGDIR:Q}/${f}
-.endfor
+.  endfor
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
