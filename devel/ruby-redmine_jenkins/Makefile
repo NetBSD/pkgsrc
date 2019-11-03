@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/09/16 19:26:50 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/03 10:00:24 rillig Exp $
 
 GITHUB_PROJECT=	redmine_jenkins
 DISTNAME=	1.0.1
@@ -74,13 +74,13 @@ do-build:
 	${FAIL_MSG} "Build of ${_gem_}.gem failed."
 .endfor
 
-RUBYGEM_INSTALL_ROOT=	${WRKDIR}/.inst
+RUBYGEM_INSTALL_ROOT=		${WRKDIR}/.inst
 RUBYGEM_INSTALL_ROOT_OPTION=	--install-root ${RUBYGEM_INSTALL_ROOT}
-_RUBYGEM_OPTIONS=	--no-update-sources	# don't cache the gem index
-_RUBYGEM_OPTIONS+=	--install-dir ${PREFIX}/${GEM_HOME}
-_RUBYGEM_OPTIONS+=	${RUBYGEM_INSTALL_ROOT_OPTION}
-_RUBYGEM_OPTIONS+=	--ignore-dependencies
-_RUBYGEM_OPTIONS+=	--no-ri --no-rdoc
+_RUBYGEM_OPTIONS=		--no-update-sources	# don't cache the gem index
+_RUBYGEM_OPTIONS+=		--install-dir ${PREFIX}/${GEM_HOME}
+_RUBYGEM_OPTIONS+=		${RUBYGEM_INSTALL_ROOT_OPTION}
+_RUBYGEM_OPTIONS+=		--ignore-dependencies
+_RUBYGEM_OPTIONS+=		--no-ri --no-rdoc
 
 .include "../../lang/ruby/rubyversion.mk"
 
