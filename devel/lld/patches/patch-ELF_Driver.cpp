@@ -1,7 +1,7 @@
-$NetBSD: patch-ELF_Driver.cpp,v 1.6 2019/11/03 12:10:29 kamil Exp $
+$NetBSD: patch-ELF_Driver.cpp,v 1.7 2019/11/03 12:40:40 kamil Exp $
 
 Cherry-pick upstream patch commit 2a0fcae3d4d1fd85d6ae8378d7c6f12430c0087d
-[lld] [ELF] Add '-z nognustack' opt to suppress emitting PT_GNU_STAC dummy option for an AArch64 erratum.    
+[lld] [ELF] Add '-z nognustack' opt to suppress emitting PT_GNU_STACK
 
 Add dummy option for an AArch64 erratum.
 
