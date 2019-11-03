@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/11/03 00:59:34 markd Exp $
+
+SHA1 (aiohttp-cors-0.7.0.tar.gz) = d5c9e73409751a881678c680d8f931075e89a55f
+RMD160 (aiohttp-cors-0.7.0.tar.gz) = 2f45d51e5a9c2937778b679fc71e8dcd80eb6880
+SHA512 (aiohttp-cors-0.7.0.tar.gz) = d7c9e1bf8f9eed0d0eb1abb1b2e1704f4a02dd93aa21cb460145e4cb355ae60f103167ae649c3d443e2ff9af2d1195d9742236942cce144c5de271002147323f
+Size (aiohttp-cors-0.7.0.tar.gz) = 35966 bytes
