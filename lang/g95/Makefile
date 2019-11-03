@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/08/11 13:21:19 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2019/11/03 19:03:57 rillig Exp $
 
 DISTNAME=	g95_source
 PKGNAME=	g95-0.93
@@ -37,10 +37,10 @@ LDFLAGS.Darwin+=	-Wl,-read_only_relocs,suppress
 
 .if ${OPSYS} == "Linux"
 .  if exists(/usr/lib/${MACHINE_ARCH}-linux-gnu)
-MAKE_ENV+=             LIBRARY_PATH=/usr/lib/${MACHINE_ARCH}-linux-gnu
+MAKE_ENV+=	LIBRARY_PATH=/usr/lib/${MACHINE_ARCH}-linux-gnu
 .  endif
-MAKE_ENV+=             ac_cv_have_decl_asprintf=yes
-USE_TOOLS+=            perl:build
+MAKE_ENV+=	ac_cv_have_decl_asprintf=yes
+USE_TOOLS+=	perl:build
 .endif
 
 .if ${OPSYS} == "SunOS"

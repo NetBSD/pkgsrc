@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2019/10/01 12:36:34 tnn Exp $
+# $NetBSD: options.mk,v 1.2 2019/11/03 19:04:04 rillig Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openjdk11
 PKG_OPTIONS_OPTIONAL_GROUPS=	variant
@@ -93,9 +93,9 @@ CONFIGURE_ARGS+=	--enable-dtrace=no
 # Also, -static-libgcc doesn't work because libpthread needs dynamic
 # linkage of libgcc.
 .if !empty(PKG_OPTIONS:Mstatic-libstdcpp)
-. if ${OPSYS} == "NetBSD" && !empty(PKGSRC_COMPILER:Mgcc)
+.  if ${OPSYS} == "NetBSD" && !empty(PKGSRC_COMPILER:Mgcc)
 BUILDLINK_TRANSFORM+=	rm:-static-libgcc
-. endif
+.  endif
 .else
 CONFIGURE_ARGS+=	--with-stdc++lib=dynamic
 .endif

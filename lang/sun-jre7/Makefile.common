@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2019/07/10 10:37:13 nia Exp $
+# $NetBSD: Makefile.common,v 1.17 2019/11/03 19:04:09 rillig Exp $
 # used by lang/sun-jre7/Makefile
 # used by lang/sun-jdk7/Makefile
 
@@ -10,11 +10,11 @@ HOMEPAGE=	https://www.oracle.com/technetwork/java/index.html
 DOWNLOAD=	https://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html
 ARCHIVE=	https://www.oracle.com/technetwork/java/javase/archive-139210.html
 
-RESTRICTED=	Redistribution of repackaged binaries not permitted
-NO_SRC_ON_CDROM=${RESTRICTED}
-NO_SRC_ON_FTP=	${RESTRICTED}
-NO_BIN_ON_CDROM=${RESTRICTED}
-NO_BIN_ON_FTP=	${RESTRICTED}
+RESTRICTED=		Redistribution of repackaged binaries not permitted
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
 
 EMUL_PLATFORMS=		linux-i386 linux-x86_64 solaris-i386 solaris-x86_64
 

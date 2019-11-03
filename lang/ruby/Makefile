@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2017/05/30 15:47:51 taca Exp $
+# $NetBSD: Makefile,v 1.64 2019/11/03 19:04:06 rillig Exp $
 
 DISTNAME=	# empty
 PKGNAME=	ruby-${RUBY_VERSION}
@@ -17,7 +17,7 @@ NO_BUILD=	yes
 
 .include "../../lang/ruby/rubyversion.mk"
 
-DEPENDS+= ${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
+DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
 
 RUBY_COMMANDS=	erb gem irb rake ruby testrb
 

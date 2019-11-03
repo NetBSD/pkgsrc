@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.25 2019/10/14 02:36:30 gutteridge Exp $
+# $NetBSD: bootstrap.mk,v 1.26 2019/11/03 19:04:00 rillig Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis.
 #
@@ -54,7 +54,7 @@ BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-x86_64-unknown-solaris2.tar.xz
 .endif
 
 .if empty(BOOT_ARCHIVE)
-BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-unknown.tar.xz
+BOOT_ARCHIVE:=		ghc-${BOOT_VERSION}-boot-unknown.tar.xz
 PKG_FAIL_REASON+=	"internal error: unsupported platform"
 .endif
 

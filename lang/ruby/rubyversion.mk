@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.212 2019/10/24 14:39:37 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.213 2019/11/03 19:04:06 rillig Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -200,10 +200,10 @@ _RUBYVERSION_MK=	# defined
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(PKGNAME_REQD)
-. if !empty(PKGNAME_REQD:Mruby[0-9][0-9]-*)
-_RUBY_VERSION_REQD:= ${PKGNAME_REQD:C/ruby([0-9][0-9])-.*/\1/}
-RUBY_VERSION_REQD?= ${PKGNAME_REQD:C/ruby([0-9][0-9])-.*/\1/}
-. endif
+.  if !empty(PKGNAME_REQD:Mruby[0-9][0-9]-*)
+_RUBY_VERSION_REQD:=	${PKGNAME_REQD:C/ruby([0-9][0-9])-.*/\1/}
+RUBY_VERSION_REQD?=	${PKGNAME_REQD:C/ruby([0-9][0-9])-.*/\1/}
+.  endif
 .endif
 
 # current supported Ruby's version
@@ -222,13 +222,13 @@ RUBY26_API_VERSION=	2.6.0
 RUBY_VERSION_DEFAULT?=	24
 
 # supported Ruby's version
-RUBY_VERSIONS_SUPPORTED= 24 25 26 22
+RUBY_VERSIONS_SUPPORTED=	24 25 26 22
 
-RUBY_VERSIONS_ACCEPTED?= 24 25 26
+RUBY_VERSIONS_ACCEPTED?=	24 25 26
 RUBY_VERSIONS_INCOMPATIBLE?=
 
 .if empty(RUBY_VERSIONS_SUPPORTED:M${RUBY_VERSION_DEFAULT})
-.error Unsuported RUBY_VERSION_DEFAULT: ${RUBY_VERSION_DEFAULT}
+.  error Unsuported RUBY_VERSION_DEFAULT: ${RUBY_VERSION_DEFAULT}
 .endif
 
 .for rv in ${RUBY_VERSIONS_ACCEPTED}
@@ -238,25 +238,25 @@ _RUBY_VERSIONS_ACCEPTED+=	${rv}
 .endfor
 
 .if defined(RUBY_VERSION_REQD)
-. for rv in ${_RUBY_VERSIONS_ACCEPTED}
-.  if "${rv}" == ${RUBY_VERSION_REQD}
+.  for rv in ${_RUBY_VERSIONS_ACCEPTED}
+.    if "${rv}" == ${RUBY_VERSION_REQD}
 RUBY_VER=	${rv}
-.  endif
-. endfor
+.    endif
+.  endfor
 .elif !defined(RUBY_VER)
-. for rv in ${_RUBY_VERSIONS_ACCEPTED}
-.  if "${rv}" == ${RUBY_VERSION_DEFAULT}
+.  for rv in ${_RUBY_VERSIONS_ACCEPTED}
+.    if "${rv}" == ${RUBY_VERSION_DEFAULT}
 RUBY_VER=	${rv}
-.  endif
-. endfor
+.    endif
+.  endfor
 .endif
 
 .if !defined(RUBY_VER)
-. for rv in ${_RUBY_VERSIONS_ACCEPTED}
-.  if !defined(RUBY_VER)
+.  for rv in ${_RUBY_VERSIONS_ACCEPTED}
+.    if !defined(RUBY_VER)
 RUBY_VER=	${rv}
-.  endif
-. endfor
+.    endif
+.  endfor
 .endif
 
 RUBY_VER:=	${RUBY_VER_MAP.${RUBY_VER}:U${RUBY_VER}}
@@ -375,7 +375,7 @@ RUBY_ZLIB_VERSION=		1.0.0
 RUBY_SUFFIX=	${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}
 
 .else
-PKG_FAIL_REASON+= "Unknown Ruby version specified: ${RUBY_VER}."
+PKG_FAIL_REASON+=	"Unknown Ruby version specified: ${RUBY_VER}."
 .endif
 
 .if !empty(RUBY_VERSION)
@@ -424,7 +424,7 @@ RUBY?=			${PREFIX}/bin/${RUBY_NAME}
 RAKE?=			${PREFIX}/bin/${RAKE_NAME}
 RDOC?=			${PREFIX}/bin/rdoc${RUBY_SUFFIX}
 
-RUBY_ARCH?= ${MACHINE_GNU_ARCH}-${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}${APPEND_ABI}
+RUBY_ARCH?=	${MACHINE_GNU_ARCH}-${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}${APPEND_ABI}
 
 RUBY_MAJOR_MINOR=	${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}
 
@@ -450,11 +450,11 @@ _RUBY_SHLIBALIAS=	${RUBY_SUFFIX}.${RUBY_SLEXT}.${_RUBY_SHLIB_MAJOR}
 .elif ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 RUBY_SHLIBVER=		${_RUBY_SHLIB_MAJOR}${_RUBY_SHLIB_MINOR}
 .elif ${OPSYS} == "OpenBSD" || ${OPSYS} == "MirBSD"
-.if ${_RUBY_VER_MINOR} == 0
+.  if ${_RUBY_VER_MINOR} == 0
 RUBY_SHLIBVER=		${_RUBY_VER_MAJOR}.${_RUBY_SHLIB_MINOR}
-.else
+.  else
 RUBY_SHLIBVER=		${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}${_RUBY_SHLIB_MINOR}
-.endif
+.  endif
 .elif ${OPSYS} == "Darwin"
 RUBY_SHLIB=		${RUBY_SUFFIX}.${RUBY_SHLIBVER}.${RUBY_SLEXT}
 _RUBY_SHLIBALIAS=	.${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}.${RUBY_SLEXT}
@@ -632,28 +632,28 @@ PLIST_SUBST+=	\
 
 RUBY_PLIST_DYNAMIC=	${WRKDIR}/PLIST.work
 
-.if !defined(PLIST_SRC)
-.  if exists(${PKGDIR}/PLIST.common)
+.  if !defined(PLIST_SRC)
+.    if exists(${PKGDIR}/PLIST.common)
 PLIST_SRC+=		${PKGDIR}/PLIST.common
-.  elif exists(${PKGDIR}/PLIST)
+.    elif exists(${PKGDIR}/PLIST)
 PLIST_SRC+=		${PKGDIR}/PLIST
-.  endif
+.    endif
 
 PLIST_SRC+=		${RUBY_PLIST_DYNAMIC}
 
-.  if exists(${PKGDIR}/PLIST.common_end)
+.    if exists(${PKGDIR}/PLIST.common_end)
 PLIST_SRC+=		${PKGDIR}/PLIST.common_end
+.    endif
+
 .  endif
 
-.endif
-
-RUBY_PLIST_COMMENT_CMD= \
+RUBY_PLIST_COMMENT_CMD=	\
 	${ECHO} "@comment The following lines are automatically generated"
-RUBY_PLIST_FILES_CMD= ( cd ${DESTDIR}${PREFIX}; \
+RUBY_PLIST_FILES_CMD=	( cd ${DESTDIR}${PREFIX}; \
 	${FIND} ${RUBY_DYNAMIC_DIRS} \( -type f -o -type l \) -print ) | \
 	${SORT} -u
 RUBY_GENERATE_PLIST=	( \
-	${RUBY_PLIST_COMMENT_CMD}; \
+			${RUBY_PLIST_COMMENT_CMD}; \
 	${RUBY_PLIST_FILES_CMD} ) > ${RUBY_PLIST_DYNAMIC}
 .endif
 

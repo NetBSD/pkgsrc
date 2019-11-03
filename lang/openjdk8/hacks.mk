@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.7 2018/09/14 15:53:46 tnn Exp $
+# $NetBSD: hacks.mk,v 1.8 2019/11/03 19:04:04 rillig Exp $
 
 .if !defined(OPENJDK8_HACKS_MK)
 OPENJDK8_HACKS_MK=	# empty
@@ -23,22 +23,22 @@ VA_HACK_ARGS+=	-XX:CompressedClassSpaceSize=128M
 .PHONY: apply-va-hack
 apply-va-hack:
 	@${STEP_MSG} "Bulk build: reducing VA usage for tools in ${ALT_BOOTDIR}"
-.  for t in bin/java
+.for t in bin/java
 	@test -f ${ALT_BOOTDIR}/${t}.real ||	\
 		mv ${ALT_BOOTDIR}/${t} ${ALT_BOOTDIR}/${t}.real
 	@echo '#!/bin/sh' > ${ALT_BOOTDIR}/${t}	&& \
 	 echo 'exec ${ALT_BOOTDIR}/${t}.real ${VA_HACK_ARGS:M*} "$$@"' >> \
 		${ALT_BOOTDIR}/${t}	&& \
 	 chmod +x ${ALT_BOOTDIR}/${t}
-.  endfor
-.  for t in bin/jar bin/jarsigner bin/javac bin/javah bin/javap bin/keytool bin/native2ascii bin/rmic
+.endfor
+.for t in bin/jar bin/jarsigner bin/javac bin/javah bin/javap bin/keytool bin/native2ascii bin/rmic
 	@test -f ${ALT_BOOTDIR}/${t}.real ||	\
 		mv ${ALT_BOOTDIR}/${t} ${ALT_BOOTDIR}/${t}.real
 	@echo '#!/bin/sh' > ${ALT_BOOTDIR}/${t}	&& \
 	 echo 'exec ${ALT_BOOTDIR}/${t}.real ${VA_HACK_ARGS:C/^/-J/} "$$@"' >> \
 		${ALT_BOOTDIR}/${t}	&& \
 	 chmod +x ${ALT_BOOTDIR}/${t}
-.  endfor
+.endfor
 
 # Workaround incorrect constant folding of subnormals in javac when the FPU
 # does not handle subnormal arithmetic, like on ARM in Flush-to-zero mode.

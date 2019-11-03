@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2019/11/03 00:37:28 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/03 19:04:04 rillig Exp $
 
 DISTNAME=	openjdk-jdk11u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk11-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=battleblow/}
-GITHUB_PROJECT= openjdk-jdk11u
-GITHUB_TAG=     jdk-11.0.5+10-1
+GITHUB_PROJECT=	openjdk-jdk11u
+GITHUB_TAG=	jdk-11.0.5+10-1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://openjdk.java.net/
@@ -69,12 +69,12 @@ CONFIGURE_ARGS+=	USER=pkgsrc
 MAKE_ENV+=	JAVA_HOME=
 MAKE_ENV+=	CLASSPATH=
 
-BUILD_OPSYS=	${OPSYS:C/.*BSD/bsd/:S/DragonFly/bsd/:S/SunOS/solaris/:S/Linux/linux/}
-BUILD_ARCH=	${MACHINE_ARCH:S/i386/x86/:S/sparc64/sparcv9/:C/^e?arm.*$/arm/}
-BUILDDIR=	${WRKSRC}/build/${BUILD_OPSYS}-${BUILD_ARCH}-normal-${BUILD_VARIANT}-${BUILD_DEBUG_LEVEL}
+BUILD_OPSYS=			${OPSYS:C/.*BSD/bsd/:S/DragonFly/bsd/:S/SunOS/solaris/:S/Linux/linux/}
+BUILD_ARCH=			${MACHINE_ARCH:S/i386/x86/:S/sparc64/sparcv9/:C/^e?arm.*$/arm/}
+BUILDDIR=			${WRKSRC}/build/${BUILD_OPSYS}-${BUILD_ARCH}-normal-${BUILD_VARIANT}-${BUILD_DEBUG_LEVEL}
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/java/${JAVA_NAME}/lib
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/java/${JAVA_NAME}/lib/server
-WRKSRC=	${WRKDIR}/${DISTNAME}
+WRKSRC=				${WRKDIR}/${DISTNAME}
 
 .include "../../mk/compiler.mk"
 

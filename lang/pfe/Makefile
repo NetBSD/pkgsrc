@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/08/11 13:21:23 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/03 19:04:05 rillig Exp $
 
 DISTNAME=	pfe-0.33.71
 PKGREVISION=	13
@@ -21,7 +21,7 @@ BUILD_TARGET=	all mans docs
 INSTALL_TARGET=	install install-mans install-docs
 TEST_TARGET=	tests
 
-TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto	# documentation
+TOOL_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto	# documentation
 PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../lang/python/pyversion.mk"

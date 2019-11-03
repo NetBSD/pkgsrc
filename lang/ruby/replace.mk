@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.16 2017/04/23 14:16:58 taca Exp $
+# $NetBSD: replace.mk,v 1.17 2019/11/03 19:04:06 rillig Exp $
 #
 
 .if !defined(_RUBY_REPLACE_MK)
@@ -30,10 +30,10 @@ REPLACE_RUBY_PAT?=	*.rb
 .if defined(REPLACE_RUBY_DIRS) && !empty(REPLACE_RUBY_DIRS)
 pre-configure: replace-ruby-dirs
 
-.for f in ${REPLACE_RUBY_PAT}
-_REPLACE_RUBY_PAT+= -o -name "${f}"
-.endfor
-_REPLACE_RUBY_FIND_ARGS=\( ${_REPLACE_RUBY_PAT:S/-o//1} \)
+.  for f in ${REPLACE_RUBY_PAT}
+_REPLACE_RUBY_PAT+=		-o -name "${f}"
+.  endfor
+_REPLACE_RUBY_FIND_ARGS=	\( ${_REPLACE_RUBY_PAT:S/-o//1} \)
 
 replace-ruby-dirs:
 	${RUN} cd ${WRKSRC} && \

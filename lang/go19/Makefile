@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/08/11 13:21:21 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/03 19:04:01 rillig Exp $
 
 PKGREVISION= 2
 .include "../../lang/go/version.mk"
@@ -24,8 +24,8 @@ USE_TOOLS+=	bash:run perl:run pax
 TMPDIR?=	/tmp
 BUILDLINK_PASSTHRU_DIRS+= ${TMPDIR}
 
-GOROOT_FINAL=	${PREFIX}/go19
-INSTALLATION_DIRS= bin
+GOROOT_FINAL=		${PREFIX}/go19
+INSTALLATION_DIRS=	bin
 
 REPLACE_BASH+=	doc/articles/wiki/test.bash
 REPLACE_BASH+=	doc/codewalk/run

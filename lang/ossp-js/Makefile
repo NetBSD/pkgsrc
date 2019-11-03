@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/08/11 13:21:22 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/03 19:04:04 rillig Exp $
 #
 
 DISTNAME=	js-1.6.20070208
@@ -34,8 +34,8 @@ CONFIGURE_ARGS+=	--without-perl
 REPLACE_SH=		js-config.sh.in
 
 REPLACE_INTERPRETER+=	js
-REPLACE.js.old=	./js
-REPLACE.js.new=	${PREFIX}/bin/js
+REPLACE.js.old=		./js
+REPLACE.js.new=		${PREFIX}/bin/js
 REPLACE_FILES.js=	jslint.js jspack.js
 
 .include "libm.mk"

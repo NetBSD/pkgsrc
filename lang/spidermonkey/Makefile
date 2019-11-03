@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2017/09/09 16:04:31 sevan Exp $
+# $NetBSD: Makefile,v 1.32 2019/11/03 19:04:08 rillig Exp $
 
 DISTNAME=	js-1.8.0-rc1
 PKGNAME=	spidermonkey-1.8.0rc1
@@ -41,9 +41,9 @@ BUILDDIRPREFIX=	${OPSYS}
 .endif
 
 .if ${OPSYS} == "Darwin"
-SO_SUFFIX=dylib
+SO_SUFFIX=	dylib
 .else
-SO_SUFFIX=so
+SO_SUFFIX=	so
 .endif
 PLIST_SUBST+=	SO_SUFFIX=${SO_SUFFIX}
 

@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.42 2018/03/18 14:21:21 taca Exp $
+# $NetBSD: modules.mk,v 1.43 2019/11/03 19:04:06 rillig Exp $
 #
 #
 # Package-settable variables:
@@ -64,50 +64,50 @@ RUBY_EXTCONF_MAKEFILE?=	Makefile
 
 do-configure:	ruby-extconf-configure
 
-.if defined(RUBY_EXTCONF_SUBDIRS)
+.  if defined(RUBY_EXTCONF_SUBDIRS)
 ruby-extconf-configure:
-.for d in ${RUBY_EXTCONF_SUBDIRS}
+.    for d in ${RUBY_EXTCONF_SUBDIRS}
 	@${ECHO_MSG} "===>  Running ${RUBY_EXTCONF} in ${d} to configure"; \
 	${ECHO_MSG} "${RUBY} ${RUBY_EXTCONF_DEBUG} ${RUBY_EXTCONF} ${CONFIGURE_ARGS}"
 	${RUN}cd ${WRKSRC}/${d}; \
 	${SETENV} ${CONFIGURE_ENV} ${RUBY} ${RUBY_EXTCONF_DEBUG} ${RUBY_EXTCONF} ${CONFIGURE_ARGS}
-.if empty(RUBY_EXTCONF_CHECK:M[nN][oO])
+.      if empty(RUBY_EXTCONF_CHECK:M[nN][oO])
 	${RUN}cd ${WRKSRC}/${d}; \
 		${TEST} -f ${RUBY_EXTCONF_MAKEFILE}
-.endif
-.endfor
+.      endif
+.    endfor
 
-.if !target(do-build)
+.    if !target(do-build)
 do-build:	ruby-extconf-build
 
 ruby-extconf-build:
-.for d in ${RUBY_EXTCONF_SUBDIRS}
+.      for d in ${RUBY_EXTCONF_SUBDIRS}
 	@${ECHO_MSG} "===>  Building ${d}"
 	${RUN}cd ${WRKSRC}/${d}; ${SETENV} ${MAKE_ENV} ${MAKE} ${BUILD_TARGET}
-.endfor
-.endif
+.      endfor
+.    endif
 
-.if !target(do-install)
+.    if !target(do-install)
 do-install:	ruby-extconf-install
 
 ruby-extconf-install:
-.for d in ${RUBY_EXTCONF_SUBDIRS}
+.      for d in ${RUBY_EXTCONF_SUBDIRS}
 	@${ECHO_MSG} "===>  Installing ${d}"
 	${RUN}cd ${WRKSRC}/${d}; ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} ${MAKE} ${INSTALL_TARGET} ${INSTALL_MAKE_FLAGS}
-.endfor
-.endif
+.      endfor
+.    endif
 
-.else
+.  else
 ruby-extconf-configure:
 	@${ECHO_MSG} "===>  Running ${RUBY_EXTCONF} to configure"; \
 	${ECHO_MSG} "${RUBY} ${RUBY_EXTCONF_DEBUG} ${RUBY_EXTCONF} ${CONFIGURE_ARGS}"
 	${RUN}cd ${WRKSRC}; \
 	${SETENV} ${CONFIGURE_ENV} ${RUBY} ${RUBY_EXTCONF_DEBUG} ${RUBY_EXTCONF} ${CONFIGURE_ARGS}
-.if empty(RUBY_EXTCONF_CHECK:M[nN][oO])
+.    if empty(RUBY_EXTCONF_CHECK:M[nN][oO])
 	${RUN}cd ${WRKSRC}/${d}; \
 		${TEST} -f ${RUBY_EXTCONF_MAKEFILE}
-.endif
-.endif
+.    endif
+.  endif
 
 #
 # setup.rb support
@@ -117,50 +117,50 @@ ruby-extconf-configure:
 RUBY_SETUP?=		setup.rb
 RUBY_SETUP_SUBDIRS?=	.
 
-.if defined(USE_RUBY_SETUP_PKG) && empty(USE_RUBY_SETUP_PKG:M[nN][oO])
+.  if defined(USE_RUBY_SETUP_PKG) && empty(USE_RUBY_SETUP_PKG:M[nN][oO])
 BUILD_DEPENDS+=		${RUBY_PKGPREFIX}-setup>=3.4.0:../../devel/ruby-setup
-.endif
+.  endif
 
-.if !target(do-configure)
+.  if !target(do-configure)
 do-configure:	ruby-setup-configure
 
 ruby-setup-configure:
-.for d in ${RUBY_SETUP_SUBDIRS}
-.if defined(USE_RUBY_SETUP_PKG) && empty(USE_RUBY_SETUP_PKG:M[nN][oO])
+.    for d in ${RUBY_SETUP_SUBDIRS}
+.      if defined(USE_RUBY_SETUP_PKG) && empty(USE_RUBY_SETUP_PKG:M[nN][oO])
 	@${ECHO_MSG} "===>  Use pkgsrc's ruby-setup"
 	${RUN}cd ${WRKSRC}/${d}; \
 		${CP} ${PREFIX}/${RUBY_VENDORLIB}/setup.rb ${RUBY_SETUP}
-.endif
+.      endif
 	@${ECHO_MSG} "===>  Running ${RUBY_SETUP} to configure"
 	${RUN}cd ${WRKSRC}/${d}; \
 	${SETENV} ${CONFIGURE_ENV} ${RUBY} ${RUBY_SETUP} config ${CONFIGURE_ARGS}
-.  endfor
-.endif
+.    endfor
+.  endif
 
-.if !target(do-build)
+.  if !target(do-build)
 do-build:	ruby-setup-build
 
 ruby-setup-build:
 	@${ECHO_MSG} "===>  Running ${RUBY_SETUP} to build"
-.for d in ${RUBY_SETUP_SUBDIRS}
+.    for d in ${RUBY_SETUP_SUBDIRS}
 	${RUN}cd ${WRKSRC}/${d}; \
 	${SETENV} ${MAKE_ENV} ${RUBY} ${RUBY_SETUP} setup
-.endfor
-.endif
+.    endfor
+.  endif
 
-.if !target(do-install)
+.  if !target(do-install)
 do-install:	ruby-setup-install
 
-_RUBY_SETUP_INSTALLARGS=   ${INSTALL_TARGET}
-_RUBY_SETUP_INSTALLARGS+=   --prefix=${DESTDIR:Q}
+_RUBY_SETUP_INSTALLARGS=	${INSTALL_TARGET}
+_RUBY_SETUP_INSTALLARGS+=	--prefix=${DESTDIR:Q}
 
 ruby-setup-install:
 	@${ECHO_MSG} "===>  Running ${RUBY_SETUP} to ${INSTALL_TARGET}"
-.for d in ${RUBY_SETUP_SUBDIRS}
+.    for d in ${RUBY_SETUP_SUBDIRS}
 	${RUN}cd ${WRKSRC}/${d}; \
 	${SETENV} ${INSTALL_ENV} ${MAKE_ENV} ${RUBY} ${RUBY_SETUP} ${_RUBY_SETUP_INSTALLARGS}
-.endfor
-.endif
+.    endfor
+.  endif
 
 #
 # install.rb support
@@ -178,14 +178,14 @@ SUBST_SED.rinstall+=	-e 's|"sitelibdir"|"vendorlibdir"|g'
 SUBST_SED.rinstall+=	-e 's|/site_ruby/|/vendor_ruby/|g'
 SUBST_MESSAGE.rinstall=	Fixing ${RUBY_SIMPLE_INSTALL} files.
 
-.if !target(do-install)
+.  if !target(do-install)
 do-install:	ruby-simple-install
 
 ruby-simple-install:
 	@${ECHO_MSG} "===>  Running ${RUBY_SIMPLE_INSTALL} to ${INSTALL_TARGET}"
 	${RUN}cd ${WRKSRC}; \
 	${SETENV} ${INSTALL_ENV} ${MAKE_ENV} ${RUBY} ${RUBY_SIMPLE_INSTALL} ${INSTALL_TARGET}
-.endif
+.  endif
 .endif # USE_RUBY_INSTALL
 
 .include "replace.mk"

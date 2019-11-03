@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/05/31 09:23:57 kamil Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/03 19:04:00 rillig Exp $
 
 GCC_PKGNAME=	gcc8
 .include	"../../lang/${GCC_PKGNAME}/version.mk"
@@ -43,10 +43,10 @@ SHLIB_EXT=	so
 
 LIBRARY_FILES=	${WRKDIR}/lib_files
 
-GENERATE_PLIST+= ${SED} -e 's,^,${LIBGCC_SUBPREFIX}/${GCC_TARGET_MACHINE}/,' \
-			${LIBRARY_FILES};
-GENERATE_PLIST+= ${GREP} -q 'lib/' ${LIBRARY_FILES} || \
-	   ${ECHO} '@pkgdir ${LIBGCC_SUBPREFIX}/${GCC_TARGET_MACHINE}/lib' ;
+GENERATE_PLIST+=	${SED} -e 's,^,${LIBGCC_SUBPREFIX}/${GCC_TARGET_MACHINE}/,' \
+			       ${LIBRARY_FILES};
+GENERATE_PLIST+=	${GREP} -q 'lib/' ${LIBRARY_FILES} || \
+			${ECHO} '@pkgdir ${LIBGCC_SUBPREFIX}/${GCC_TARGET_MACHINE}/lib' ;
 
 ${LIBRARY_FILES}:
 	${PKG_INFO} -qL '${GCC_PKGNAME}-${GCC8_DIST_VERSION}*' |		\

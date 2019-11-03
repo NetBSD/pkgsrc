@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2015/11/25 12:51:16 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2019/11/03 19:03:58 rillig Exp $
 
 BUILDLINK_TREE+=	gcc44
 
@@ -15,10 +15,10 @@ BUILDLINK_PKGSRCDIR.gcc44?=	../../lang/gcc44
 .if exists(${_GCC44_PREFIX}/bin/gcc)
 
 # logic for detecting the ADA compiler (not yet supported)
-#gcc44_GNAT1!=${_GCC44_PREFIX}/bin/gcc -print-prog-name=gnat1
+#gcc44_GNAT1!=		${_GCC44_PREFIX}/bin/gcc -print-prog-name=gnat1
 #.  if exists(${gcc44_GNAT1})
 #CONFIGURE_ENV+=	ADAC=${_GCC44_PREFIX}/bin/gcc
-#MAKE_ENV+=	ADAC=${_GCC44_PREFIX}/bin/gcc
+#MAKE_ENV+=		ADAC=${_GCC44_PREFIX}/bin/gcc
 #.  endif
 
 # add libraries

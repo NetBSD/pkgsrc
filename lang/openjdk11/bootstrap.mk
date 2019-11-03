@@ -1,10 +1,10 @@
-# $NetBSD: bootstrap.mk,v 1.2 2019/10/14 07:58:50 tnn Exp $
+# $NetBSD: bootstrap.mk,v 1.3 2019/11/03 19:04:04 rillig Exp $
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64
-BOOT.nb7-i386=		bootstrap-jdk-1.11.0.5.8-netbsd-7-i386-20190928.tar.xz
-SITES.${BOOT.nb7-i386}=	${MASTER_SITE_LOCAL:=openjdk11/}
-BOOT.nb7-amd64=		bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz
-SITES.${BOOT.nb7-amd64}=${MASTER_SITE_LOCAL:=openjdk11/}
+ONLY_FOR_PLATFORM=		NetBSD-*-i386 NetBSD-*-x86_64
+BOOT.nb7-i386=			bootstrap-jdk-1.11.0.5.8-netbsd-7-i386-20190928.tar.xz
+SITES.${BOOT.nb7-i386}=		${MASTER_SITE_LOCAL:=openjdk11/}
+BOOT.nb7-amd64=			bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz
+SITES.${BOOT.nb7-amd64}=	${MASTER_SITE_LOCAL:=openjdk11/}
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || make(distinfo)
 DISTFILES+=		${BOOT.nb7-i386}

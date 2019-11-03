@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2019/08/11 13:21:23 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2019/11/03 19:04:07 rillig Exp $
 
 DISTNAME=		sather-1.2.3
 PKGREVISION=		15
@@ -21,7 +21,7 @@ INFO_FILES=		yes
 
 REPLACE_PERL=		Browser/Web/ps2gif
 
-SUBST_CLASSES+=		sather-configure
+SUBST_CLASSES+=			sather-configure
 SUBST_STAGE.sather-configure=	pre-configure
 SUBST_MESSAGE.sather-configure=	Configuring sources
 SUBST_FILES.sather-configure=			\

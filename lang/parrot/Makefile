@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2019/08/11 13:21:23 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2019/11/03 19:04:04 rillig Exp $
 #
 
 DISTNAME=		parrot-${PARROT_VERSION}
@@ -44,7 +44,7 @@ SUBST_SED.pthread+=	-e '/^LINKFLAGS /s|$$|${PTHREAD_LDFLAGS:Q} ${PTHREAD_LIBS:Q}
 SUBST_SED.pthread+=	-e '/^LDFLAGS /s|$$|${PTHREAD_LDFLAGS:Q} ${PTHREAD_LIBS:Q}|'
 
 PLIST_SUBST+=		PARROT_VERSION=${PARROT_VERSION:Q}
-PRINT_PLIST_AWK+=        { gsub(/${PARROT_VERSION}/, "$${PARROT_VERSION}") }
+PRINT_PLIST_AWK+=	{ gsub(/${PARROT_VERSION}/, "$${PARROT_VERSION}") }
 PLIST_SRC+=		${PLIST_SRC_DFLT}
 # Default this to ELF shared libs with .so,
 # Darwin has PLIST.Darwin which gets included automatically.
@@ -63,12 +63,12 @@ REPLACE_PERL+=		tools/dev/reconfigure.pl
 REPLACE_INTERPRETER+=	parrot
 REPLACE.parrot.old=	.*parrot[^[:space:]]*
 REPLACE.parrot.new=	${PREFIX}/bin/parrot
-REPLACE_FILES.parrot+= 	tools/dev/pbc_to_exe.pir
+REPLACE_FILES.parrot+=	tools/dev/pbc_to_exe.pir
 
-REPLACE_INTERPRETER+=	parrot-nqp
-REPLACE.parrot-nqp.old=	.*parrot-nqp[^[:space:]]*
-REPLACE.parrot-nqp.new= ${PREFIX}/bin/parrot-nqp
-REPLACE_FILES.parrot-nqp+= compilers/data_json/JSON.nqp
+REPLACE_INTERPRETER+=		parrot-nqp
+REPLACE.parrot-nqp.old=		.*parrot-nqp[^[:space:]]*
+REPLACE.parrot-nqp.new=		${PREFIX}/bin/parrot-nqp
+REPLACE_FILES.parrot-nqp+=	compilers/data_json/JSON.nqp
 
 REPLACE_INTERPRETER+=	nqp
 REPLACE.nqp.old=	.*nqp[^[:space:]]*

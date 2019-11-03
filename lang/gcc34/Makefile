@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2016/01/24 16:14:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.58 2019/11/03 19:03:58 rillig Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -23,25 +23,25 @@ NOT_FOR_PLATFORM=	Interix-*-*
 # Determine whether to use binutils
 .if ${OPSYS} == "NetBSD"
 .  if !defined(USE_BINUTILS)
-AS_PATH:=	${AS}
+AS_PATH:=		${AS}
 .    for _dir_ in ${PATH:C/\:/ /g}
 .      if empty(AS_PATH:M/*)
 .        if exists(${_dir_}/${AS})
-AS_PATH:=	${_dir_}/${AS}
+AS_PATH:=		${_dir_}/${AS}
 .        endif
 .      endif
 .    endfor
 .    if !empty(AS_PATH:M${LOCALBASE}/*)
-USE_BINUTILS=	YES
+USE_BINUTILS=		YES
 .    else
-AS_VERSION!=	${AS_PATH} --version | ${AWK} '{			\
+AS_VERSION!=		${AS_PATH} --version | ${AWK} '{			\
 		    split($$3, v, /[.]/);				\
 		    printf "%02d%02d%02d%02d\n",v[1],v[2],v[3],v[4];	\
 		    exit;						\
 		}'
-USE_BINUTILS!=	${TEST} ${AS_VERSION} -lt 02130201 && ${ECHO} YES || ${ECHO} NO
+USE_BINUTILS!=		${TEST} ${AS_VERSION} -lt 02130201 && ${ECHO} YES || ${ECHO} NO
 .    endif
-MAKEFLAGS+=	USE_BINUTILS=${USE_BINUTILS:Q}
+MAKEFLAGS+=		USE_BINUTILS=${USE_BINUTILS:Q}
 .  endif
 .elif ${OPSYS} == "SunOS"
 CONFIGURE_ENV+=		OBJDUMP=/usr/sfw/bin/gobjdump
@@ -53,7 +53,7 @@ CONFIGURE_ARGS+=	--with-gnu-as --with-as=/usr/sfw/bin/gas
 .  endif
 .endif
 .if defined(USE_BINUTILS) && !empty(USE_BINUTILS:M[yY][eE][sS])
-DEPENDS+=	binutils>=2.14:../../devel/binutils
+DEPENDS+=		binutils>=2.14:../../devel/binutils
 CONFIGURE_ARGS+=	--with-as=${LOCALBASE}/bin/as
 CONFIGURE_ARGS+=	--with-ld=${LOCALBASE}/bin/ld
 CONFIGURE_ARGS+=	--with-gnu-as
@@ -85,14 +85,14 @@ GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
 FILES_SUBST+=		PKGNAME=${PKGNAME:Q}
 MESSAGE_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
 CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX:Q}
-CPPFLAGS+=	-I${BUILDLINK_DIR}/include
-CFLAGS+=	-I${BUILDLINK_DIR}/include
+CPPFLAGS+=		-I${BUILDLINK_DIR}/include
+CFLAGS+=		-I${BUILDLINK_DIR}/include
 .if ${OPSYS} == "NetBSD"
 # thread / crtbegin / __cxa_atexit support depend on a "netbsd2" OS name
-GCC_PLATFORM=	${MACHINE_ARCH}--${LOWER_OPSYS}${APPEND_ELF}${LOWER_OS_VERSION:C/[_a-z].*//}
+GCC_PLATFORM=		${MACHINE_ARCH}--${LOWER_OPSYS}${APPEND_ELF}${LOWER_OS_VERSION:C/[_a-z].*//}
 CONFIGURE_ARGS+=	--host=${GCC_PLATFORM:Q}
 ABI_BASELINE_PAIR=	${GCC_PLATFORM:C/--/-/}
-MAKE_ENV+=	ABI_BASELINE_PAIR=${ABI_BASELINE_PAIR:Q}
+MAKE_ENV+=		ABI_BASELINE_PAIR=${ABI_BASELINE_PAIR:Q}
 .endif # NetBSD
 
 post-patch:
@@ -134,12 +134,12 @@ do-install:
 	(cd ${WRKDIR}/obj && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} ${GMAKE} install \
 	 && ${TEST} -f ${GCC_PREFIX}/bin/cc || ${LN} -f ${DESTDIR}${GCC_PREFIX}/bin/gcc ${DESTDIR}${GCC_PREFIX}/bin/cc)
 .if !empty(PKG_OPTIONS:Mgcc-ada)
-		(SPECPATH=`${GCC_PREFIX}/bin/gcc -print-file-name=specs` && \
-		for EXPANDEDSPECPATH in $${SPECPATH} ; do \
-			SPECDIR=`${DIRNAME} $${EXPANDEDSPECPATH}`; \
-			${ECHO} $${SPECDIR}/adainclude > $${SPECDIR}/ada_source_path;	\
-			${ECHO} $${SPECDIR}/adalib > $${SPECDIR}/ada_object_path;	\
-		done )
+	(SPECPATH=`${GCC_PREFIX}/bin/gcc -print-file-name=specs` && \
+	for EXPANDEDSPECPATH in $${SPECPATH} ; do \
+		SPECDIR=`${DIRNAME} $${EXPANDEDSPECPATH}`; \
+		${ECHO} $${SPECDIR}/adainclude > $${SPECDIR}/ada_source_path;	\
+		${ECHO} $${SPECDIR}/adalib > $${SPECDIR}/ada_object_path;	\
+	done )
 .endif
 
 GENERATE_PLIST+=							\

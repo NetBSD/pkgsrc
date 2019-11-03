@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/08/18 07:31:10 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/11/03 19:04:06 rillig Exp $
 #
 
 DISTNAME=	rcfunge2
@@ -14,8 +14,8 @@ HOMEPAGE=	http://www.rcfunge98.com/
 COMMENT=	Funge interpreter
 #LICENSE=	# TODO: (see mk/license.mk)
 
-WRKSRC=	${WRKDIR}/rcfunge
-BUILD_TARGET=	funge
+WRKSRC=			${WRKDIR}/rcfunge
+BUILD_TARGET=		funge
 INSTALLATION_DIRS=	bin
 
 CFLAGS.SunOS+=	-Du_int32_t=uint32_t

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/07/18 00:06:20 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/03 19:03:57 rillig Exp $
 #
 
 DISTNAME=	gambc-${GAMBC_DIST_VERSION}
@@ -36,8 +36,8 @@ MAKE_FILE=		makefile
 BUILD_TARGET+=		bootstrap
 TEST_TARGET=		check
 
-CHECK_PORTABILITY_SKIP=	prebuilt/*/*
-DLOPEN_REQUIRE_PTHREADS=no
+CHECK_PORTABILITY_SKIP=		prebuilt/*/*
+DLOPEN_REQUIRE_PTHREADS=	no
 
 TEST_TARGET=		check
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2018/07/17 10:56:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/03 19:04:06 rillig Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION}
@@ -21,19 +21,19 @@ CONFIGURE_ARGS+=	--enable-shared
 WRKSRC=			${RUBY_WRKSRC}
 
 # This file is directly installed from 
-CHECK_INTERPRETER_SKIP+= ${GEM_HOME}/gems/test-unit-3.0.8/test/run-test.rb
+CHECK_INTERPRETER_SKIP+=	${GEM_HOME}/gems/test-unit-3.0.8/test/run-test.rb
 
 .include "options.mk"
 .include "../../lang/ruby/platform.mk"
 
 .if !empty(RUBY_SUFFIX)
-CONFIGURE_ARGS+= --program-suffix=${RUBY_SUFFIX}
-CONFIGURE_ARGS+= --with-soname=${RUBY_NAME}
-CONFIGURE_ARGS+= --with-ruby-version=${RUBY_VER_DIR}
-CONFIGURE_ARGS+= --with-ruby-pc="ruby-${RUBY_VERSION}.pc"
+CONFIGURE_ARGS+=	--program-suffix=${RUBY_SUFFIX}
+CONFIGURE_ARGS+=	--with-soname=${RUBY_NAME}
+CONFIGURE_ARGS+=	--with-ruby-version=${RUBY_VER_DIR}
+CONFIGURE_ARGS+=	--with-ruby-pc="ruby-${RUBY_VERSION}.pc"
 .endif
 
-DOCS=	BSDL COPYING COPYING.ja ChangeLog LEGAL NEWS README.EXT README.EXT.ja \
+DOCS=		BSDL COPYING COPYING.ja ChangeLog LEGAL NEWS README.EXT README.EXT.ja \
 	README.ja.md README.md doc/ChangeLog-1.8.0 doc/ChangeLog-1.9.3 \
 	doc/ChangeLog-2.0.0 doc/ChangeLog-2.1.0 doc/ChangeLog-YARV \
 	doc/NEWS-1.8.7 doc/NEWS-1.9.1 doc/NEWS-1.9.2 doc/NEWS-1.9.3 \
