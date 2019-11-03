@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.12 2012/03/19 12:34:21 joerg Exp $
+# $NetBSD: builtin.mk,v 1.13 2019/11/03 09:14:06 rillig Exp $
 
 BUILTIN_PKG:=	Xfixes
 
@@ -18,7 +18,7 @@ IS_BUILTIN.Xfixes=	yes
 IS_BUILTIN.Xfixes=	no
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.Xfixes
+MAKEVARS+=		IS_BUILTIN.Xfixes
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -45,6 +45,6 @@ USE_BUILTIN.Xfixes!=							\
 .    endif
 .  endif  # PREFER.Xfixes
 .endif
-MAKEVARS+=	USE_BUILTIN.Xfixes
+MAKEVARS+=		USE_BUILTIN.Xfixes
 
 .include "../../mk/x11.builtin.mk"

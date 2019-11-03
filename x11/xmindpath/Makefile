@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/01/19 18:52:30 agc Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/03 09:14:20 rillig Exp $
 
 DISTNAME=	magicpoint-1.09a
 PKGNAME=	xmindpath-1.09a
@@ -15,7 +15,7 @@ GNU_CONFIGURE=	yes
 USE_FEATURES=	err
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-SPECIAL_PERMS=	bin/xmindpath uucp ${REAL_ROOT_GROUP} 4511
+SPECIAL_PERMS=		bin/xmindpath uucp ${REAL_ROOT_GROUP} 4511
 
 
 .include "../../mk/bsd.prefs.mk"

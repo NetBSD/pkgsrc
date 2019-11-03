@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2019/07/21 22:25:55 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2019/11/03 09:14:07 rillig Exp $
 #
 
 DISTNAME=	aterm-1.0.1
@@ -17,21 +17,21 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	YES
 MAKE_JOBS_SAFE=	no
 
-CONFIGURE_ARGS+=--enable-background-image \
-		--enable-transparency \
-		--enable-fading \
-		--enable-graphics \
-		--with-xpm \
-		--with-xpm-includes=${BUILDLINK_PREFIX.libXpm}/include \
-		--with-xpm-library=${BUILDLINK_PREFIX.libXpm}/lib \
-		--with-jpeg \
-		--with-jpeg-includes=${JPEGBASE}/include \
-		--with-jpeg-library=${JPEGBASE}/lib \
-		--with-png \
-		--with-png-library=${BUILDLINK_PREFIX.png}/lib \
-		--with-png-includes=${BUILDLINK_PREFIX.png}/include \
-		--enable-utmp \
-		--enable-wtmp
+CONFIGURE_ARGS+=	--enable-background-image \
+			--enable-transparency \
+			--enable-fading \
+			--enable-graphics \
+			--with-xpm \
+			--with-xpm-includes=${BUILDLINK_PREFIX.libXpm}/include \
+			--with-xpm-library=${BUILDLINK_PREFIX.libXpm}/lib \
+			--with-jpeg \
+			--with-jpeg-includes=${JPEGBASE}/include \
+			--with-jpeg-library=${JPEGBASE}/lib \
+			--with-png \
+			--with-png-library=${BUILDLINK_PREFIX.png}/lib \
+			--with-png-includes=${BUILDLINK_PREFIX.png}/include \
+			--enable-utmp \
+			--enable-wtmp
 
 .include "options.mk"
 

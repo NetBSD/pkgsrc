@@ -1,6 +1,6 @@
-# $NetBSD: builtin.mk,v 1.1 2015/12/11 14:04:23 wiz Exp $
+# $NetBSD: builtin.mk,v 1.2 2019/11/03 09:14:11 rillig Exp $
 
-BUILTIN_PKG:=	libXfont2
+BUILTIN_PKG:=			libXfont2
 PKGCONFIG_FILE.libXfont2=	${X11BASE}/lib/pkgconfig/xfont2.pc
 PKGCONFIG_FILE.libXfont2+=	${X11BASE}/lib${LIBABISUFFIX}/pkgconfig/xfont2.pc
 

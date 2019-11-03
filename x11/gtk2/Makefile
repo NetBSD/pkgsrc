@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.310 2019/09/02 13:20:15 adam Exp $
+# $NetBSD: Makefile,v 1.311 2019/11/03 09:14:08 rillig Exp $
 
 DISTNAME=	gtk+-2.24.32
 PKGNAME=	${DISTNAME:S/gtk/gtk2/}
@@ -62,7 +62,7 @@ CONFIGURE_ARGS.Darwin+=	--disable-visibility
 
 CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
 
-#SUBST_CLASSES+=		pthread
+#SUBST_CLASSES+=	pthread
 #SUBST_STAGE.pthread=	pre-configure
 #SUBST_MESSAGE.pthread=	Fixing pthread flags.
 #SUBST_SED.pthread=	-e 's,__PTHREAD_FLAGS__,${BUILDLINK_LDFLAGS.pthread},g'
