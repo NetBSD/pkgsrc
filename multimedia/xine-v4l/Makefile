@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/08/11 13:22:05 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/03 17:12:04 rillig Exp $
 
 PKGREVISION= 2
 .include "../../multimedia/xine-lib/Makefile.common"
@@ -12,7 +12,7 @@ NOT_FOR_PLATFORM=	NetBSD-*-*
 
 DEPENDS+=	xine-lib>=1rc3a:../../multimedia/xine-lib
 
-BUILD_DIRS=	src/input
+BUILD_DIRS=		src/input
 CONFIGURE_ARGS+=	--without-x --disable-xinerama
 CONFIGURE_ARGS+=	--disable-vcd
 

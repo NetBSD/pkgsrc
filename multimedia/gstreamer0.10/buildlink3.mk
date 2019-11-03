@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2018/01/07 13:04:24 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2019/11/03 17:12:01 rillig Exp $
 
 BUILDLINK_TREE+=	gstreamer0.10
 
@@ -12,9 +12,9 @@ BUILDLINK_PKGSRCDIR.gstreamer0.10?=	../../multimedia/gstreamer0.10
 pkgbase := gstreamer0.10
 .include "../../mk/pkg-build-options.mk"
 
-.  if !empty(PKG_BUILD_OPTIONS.gstreamer0.10:Mgstcheck)
+.if !empty(PKG_BUILD_OPTIONS.gstreamer0.10:Mgstcheck)
 .include "../../devel/check/buildlink3.mk"
-.  endif
+.endif
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
