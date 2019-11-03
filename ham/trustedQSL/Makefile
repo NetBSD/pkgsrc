@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2019/10/26 11:06:22 mef Exp $
+# $NetBSD: Makefile,v 1.43 2019/11/03 19:32:08 rillig Exp $
 
 DISTNAME=		tqsl-2.4.7
 CATEGORIES=		ham
@@ -26,11 +26,11 @@ USE_CMAKE=		yes
 # usage in Makefile.am, without matching -R.
 
 # remove the string $(LIB_SUFFIX), tested with NetBSD at least
-SUBST_CLASSES+=		lib-suffix
-SUBST_MESSAGE.lib-suffix= Removing $$(LIB_SUFFIX) from src/CMakeLists.txt
-SUBST_STAGE.lib-suffix= pre-configure
-SUBST_FILES.lib-suffix= src/CMakeLists.txt
-SUBST_SED.lib-suffix= 	-e s/\$$\(LIB_SUFFIX\)//
+SUBST_CLASSES+=			lib-suffix
+SUBST_MESSAGE.lib-suffix=	Removing $$(LIB_SUFFIX) from src/CMakeLists.txt
+SUBST_STAGE.lib-suffix=		pre-configure
+SUBST_FILES.lib-suffix=		src/CMakeLists.txt
+SUBST_SED.lib-suffix=		-e s/\$$\(LIB_SUFFIX\)//
 
 do-configure:
 	(cd ${WRKSRC} ; \
