@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2019/07/21 22:24:03 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2019/11/03 19:30:33 rillig Exp $
 #
 
 DISTNAME=	libchamplain-0.8.3
@@ -22,9 +22,9 @@ PKGCONFIG_OVERRIDE+=	champlain-memphis.pc.in
 PKGCONFIG_OVERRIDE+=	champlain.pc.in
 
 # XXX notyet
-#PLIST_VARS+= memphis
+#PLIST_VARS+=	memphis
 #.include "../../geography/memphis/buildlink3.mk"
-#PLIST.memphis= yes
+#PLIST.memphis=	yes
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
