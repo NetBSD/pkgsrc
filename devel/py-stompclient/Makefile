@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/09/02 13:19:36 adam Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/03 10:18:29 rillig Exp $
 
 DISTNAME=	stompclient-0.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Lightweight and extensible STOMP messaging client
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_ACCEPTED=	 27
+PYTHON_VERSIONS_ACCEPTED= 27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
