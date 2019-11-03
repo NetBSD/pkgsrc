@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2018/03/12 11:17:04 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2019/11/03 11:04:16 rillig Exp $
 
 DISTNAME=	vicsrc-2.8
 PKGNAME=	${DISTNAME:S/src//}
@@ -22,7 +22,7 @@ COMMENT=	MBONE video conferencing tool
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=	yes
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=		c c++
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}
