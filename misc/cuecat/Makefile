@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2017/08/01 16:47:40 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/03 17:04:20 rillig Exp $
 #
 
 DISTNAME=	cuecat-0.2.1
@@ -16,7 +16,7 @@ COMMENT=	Read and parse barcodes from your CueCat barcode reader
 # with both netbsd and linux.
 ONLY_FOR_PLATFORM=	NetBSD-*-*
 
-RESTRICTED=	Hardware manufacturer claims intellectual property infringement.
+RESTRICTED=		Hardware manufacturer claims intellectual property infringement.
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}

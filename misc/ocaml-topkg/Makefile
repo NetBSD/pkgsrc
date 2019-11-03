@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/11/27 16:43:05 jaapb Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/03 17:04:25 rillig Exp $
 
 DISTNAME=	topkg-1.0.0
 PKGNAME=	ocaml-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Transitory OCaml software packager
 LICENSE=	isc
 
 OCAML_USE_TOPKG=	yes
-OCAML_USE_OPAM=	yes
+OCAML_USE_OPAM=		yes
 
 INSTALLATION_DIRS+=	share/doc/topkg
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/06/24 10:59:41 nia Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/03 17:04:20 rillig Exp $
 
 DISTNAME=	colortail-0.3.0
 CATEGORIES=	misc
@@ -10,8 +10,8 @@ COMMENT=	Colour-able replacement for tail(1)
 
 USE_LANGUAGES=	c c++
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--datadir=${PREFIX}/share/examples/colortail
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/examples/colortail
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/examples/colortail
 

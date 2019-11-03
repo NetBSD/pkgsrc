@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2011/06/11 18:49:31 shattered Exp $
+# $NetBSD: options.mk,v 1.3 2019/11/03 17:04:27 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.screen
 
@@ -17,12 +17,12 @@ CURSES_DEFAULT=	curses
 .endif
 
 .if !empty(PKG_OPTIONS:Mncurses)
-CURSES_DEFAULT=	ncurses
+CURSES_DEFAULT=		ncurses
 CONFIGURE_ARGS+=	--enable-colors256
 .endif
 
 .if !empty(PKG_OPTIONS:Mpdcurses)
-CURSES_DEFAULT=	pdcurses
+CURSES_DEFAULT=		pdcurses
 CONFIGURE_ARGS+=	--enable-colors256
 .endif
 

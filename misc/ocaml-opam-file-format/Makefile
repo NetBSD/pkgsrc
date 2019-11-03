@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/01/13 23:22:51 dholland Exp $
+# $NetBSD: Makefile,v 1.9 2019/11/03 17:04:25 rillig Exp $
 
 VERSION=	2.0.0
 GITHUB_PROJECT=	opam-file-format
@@ -14,7 +14,7 @@ HOMEPAGE=	http://opam.ocaml.org/
 COMMENT=	Parser and printer for the opam file syntax
 LICENSE=	gnu-lgpl-v3
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=		gmake
 OCAML_USE_FINDLIB=	yes
 
 INSTALL_ENV+=	LIBDIR=${PREFIX}/${OCAML_SITELIBDIR}
