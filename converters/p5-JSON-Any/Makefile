@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2019/08/11 13:18:12 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2019/11/03 17:14:25 rillig Exp $
 
 DISTNAME=	JSON-Any-1.39
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,7 @@ PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 # p5-JSON-XS appears to be the current "best of breed"
 # and is the preferred JSON dependency (see Makefile.PL)
-DEPENDS+=		p5-JSON-XS>=2.232:../../converters/p5-JSON-XS
+DEPENDS+=	p5-JSON-XS>=2.232:../../converters/p5-JSON-XS
 # for make test
 BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 BUILD_DEPENDS+=	p5-Test-Without-Module-[0-9]*:../../devel/p5-Test-Without-Module
