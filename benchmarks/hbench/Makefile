@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2019/08/11 13:17:58 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2019/11/03 11:55:29 rillig Exp $
 
 DISTNAME=		hbench-OS-1.1
 PKGNAME=		hbench-1.1
@@ -16,12 +16,12 @@ COMMENT=		Suite of portable benchmarks to measure the OS and the hardware
 
 DEPENDS+=		gnuplot>=3.7:../../graphics/gnuplot
 
-WRKSRC=			${WRKDIR}/HBenchOS
-OSVERSION_SPECIFIC=	YES
-BUILD_TARGET=		build
-USE_TOOLS+=		perl:run
+WRKSRC=				${WRKDIR}/HBenchOS
+OSVERSION_SPECIFIC=		YES
+BUILD_TARGET=			build
+USE_TOOLS+=			perl:run
 OVERRIDE_GNU_CONFIG_SCRIPTS=	yes
-MAKE_JOBS_SAFE=		no
+MAKE_JOBS_SAFE=			no
 
 GET_ARCH_CMD=		${PKGSRCDIR:Q}/mk/gnu-config/config.guess | ${SED} -e 's/-.*-.*$$//'
 GET_OS_CMD=		${PKGSRCDIR:Q}/mk/gnu-config/config.guess | ${SED} -e 's/^[^-]*-[^-]*-//;s/-.*$$//'
