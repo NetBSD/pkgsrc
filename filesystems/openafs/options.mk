@@ -1,13 +1,13 @@
-# $NetBSD: options.mk,v 1.3 2014/02/21 21:33:51 gendalia Exp $
+# $NetBSD: options.mk,v 1.4 2019/11/03 19:26:21 rillig Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
-PKG_OPTIONS_VAR=        PKG_OPTIONS.openafs
-PKG_SUPPORTED_OPTIONS+= server bitmap-later kernel-module supergroups namei
+PKG_OPTIONS_VAR=	PKG_OPTIONS.openafs
+PKG_SUPPORTED_OPTIONS+=	server bitmap-later kernel-module supergroups namei
 .if ${MACHINE_ARCH} != "x86_64"
-PKG_SUPPORTED_OPTIONS+= pam
+PKG_SUPPORTED_OPTIONS+=	pam
 .endif
-PKG_SUGGESTED_OPTIONS=  server -bitmap-later namei -kernel-module supergroups
+PKG_SUGGESTED_OPTIONS=	server -bitmap-later namei -kernel-module supergroups
 
 .include "../../mk/bsd.options.mk"
 
