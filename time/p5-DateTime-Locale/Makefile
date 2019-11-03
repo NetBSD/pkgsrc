@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2019/11/02 14:06:49 mef Exp $
+# $NetBSD: Makefile,v 1.57 2019/11/03 23:43:49 schmonz Exp $
 
 DISTNAME=	DateTime-Locale-1.25
 PKGNAME=	p5-${DISTNAME}
@@ -17,9 +17,10 @@ DEPENDS+=	p5-Scalar-List-Utils>=1.45:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-Specio-[0-9]*:../../devel/p5-Specio
 DEPENDS+=	p5-namespace-autoclean>=0.19:../../devel/p5-namespace-autoclean
 
+BUILD_DEPENDS+=	p5-File-ShareDir-Install>=0.03:../../devel/p5-File-ShareDir-Install
+
 TEST_DEPENDS+=	p5-CPAN-Meta-Check>=0.011:../../devel/p5-CPAN-Meta-Check
 TEST_DEPENDS+=	p5-Exception-Class-[0-9]*:../../devel/p5-Exception-Class
-TEST_DEPENDS+=	p5-File-ShareDir-Install>=0.06:../../devel/p5-File-ShareDir-Install
 TEST_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 TEST_DEPENDS+=	p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
 TEST_DEPENDS+=	p5-Test-File-ShareDir-[0-9]*:../../devel/p5-Test-File-ShareDir
