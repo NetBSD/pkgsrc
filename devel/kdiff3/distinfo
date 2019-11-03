@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2019/11/03 02:19:16 gutteridge Exp $
+$NetBSD: distinfo,v 1.8 2019/11/03 04:01:32 gutteridge Exp $
 
 SHA1 (kdiff3-1.8.1.tar.xz) = cfb63e7fb8ef81e9ebc0ae47d6922f25a32a1ef9
 RMD160 (kdiff3-1.8.1.tar.xz) = b5076a50461f3612071aa08732c1d7c3b5ec5d8b
 SHA512 (kdiff3-1.8.1.tar.xz) = 09cddac0f3adffa91f1986dfb50982deb1c6a31c232215da8a2a396d7525b4d28ef6d3febdcd4ba89cf9f6371a7b34441ef4e10aa0e3468fadf95fb7f78d7720
 Size (kdiff3-1.8.1.tar.xz) = 897692 bytes
+SHA1 (patch-src_smalldialogs.cpp) = d189a1631ba5bed1d794babb11764eff40efcf07
