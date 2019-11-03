@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/08/11 13:20:05 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2019/11/03 10:16:02 rillig Exp $
 
 DISTNAME=	POEx-Types-1.100910
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Exported Types for use within POEx modules
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/POEx/Types/.packlist
+PERL5_PACKLIST=	auto/POEx/Types/.packlist
 
 DEPENDS+=	p5-MooseX-Types-[0-9]*:../../devel/p5-MooseX-Types
 DEPENDS+=	p5-MooseX-Types-Structured-[0-9]*:../../devel/p5-MooseX-Types-Structured

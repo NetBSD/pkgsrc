@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2019/10/10 11:25:07 mef Exp $
+# $NetBSD: Makefile,v 1.48 2019/11/03 10:15:49 rillig Exp $
 
 DISTNAME=	AnyEvent-7.17
 PKGNAME=	p5-${DISTNAME}
@@ -13,16 +13,16 @@ LICENSE=	${PERL5_LICENSE}
 PERL5_PACKLIST=	auto/AnyEvent/.packlist
 
 # 	  Task::Weaken in perl 5.14
-DEPENDS+= p5-Net-SSLeay>=1.33:../../security/p5-Net-SSLeay
-DEPENDS+= p5-JSON>=2.09:../../converters/p5-JSON
-DEPENDS+= p5-JSON-XS>=2.200:../../converters/p5-JSON-XS
-DEPENDS+= p5-EV>=4:../../devel/p5-EV
-DEPENDS+= p5-Guard>=1.020:../../devel/p5-Guard
-DEPENDS+= p5-Async-Interrupt>=1:../../devel/p5-Async-Interrupt
+DEPENDS+=	p5-Net-SSLeay>=1.33:../../security/p5-Net-SSLeay
+DEPENDS+=	p5-JSON>=2.09:../../converters/p5-JSON
+DEPENDS+=	p5-JSON-XS>=2.200:../../converters/p5-JSON-XS
+DEPENDS+=	p5-EV>=4:../../devel/p5-EV
+DEPENDS+=	p5-Guard>=1.020:../../devel/p5-Guard
+DEPENDS+=	p5-Async-Interrupt>=1:../../devel/p5-Async-Interrupt
 
 # setup for make test (expecting PASS with several skipping items)
 #BUILD_DEPENDS+=	p5-AnyEvent-AIO-[0-9]*:../../devel/p5-AnyEvent-AIO
-BUILD_DEPENDS+=	p5-IO-Async-[0-9]*:../../devel/p5-IO-Async
+BUILD_DEPENDS+=		p5-IO-Async-[0-9]*:../../devel/p5-IO-Async
 
 TEST_ENV+=	PERL_ANYEVENT_LOOP_TESTS=true
 TEST_ENV+=	PERL_ANYEVENT_NET_TESTS=true

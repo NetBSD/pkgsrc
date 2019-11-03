@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/08/11 13:19:17 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2019/11/03 10:15:52 rillig Exp $
 
 DISTNAME=	Devel-OverloadInfo-0.005
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/Devel-OverloadInfo
 COMMENT=	Perl 5 module for introspect overloaded operators
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=       p5-MRO-Compat>=0:../../devel/p5-MRO-Compat
+DEPENDS+=	p5-MRO-Compat>=0:../../devel/p5-MRO-Compat
 DEPENDS+=	p5-Sub-Identify>=0:../../devel/p5-Sub-Identify
 
 BUILD_DEPENDS+=	p5-Package-Stash-[0-9]*:../../devel/p5-Package-Stash

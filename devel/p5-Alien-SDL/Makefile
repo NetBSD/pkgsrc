@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/08/11 13:18:49 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2019/11/03 10:15:49 rillig Exp $
 
 DISTNAME=	Alien-SDL-1.446
 PKGNAME=	p5-${DISTNAME}
@@ -25,7 +25,7 @@ DEPENDS+=	p5-Tie-Simple-[0-9]*:../../devel/p5-Tie-Simple
 
 # To set this configure log "checking SDL_INST_DIR env var... yes, /usr/pkg"
 MAKE_ENV+=	SDL_INST_DIR=${PREFIX}
-USE_LANGUAGES=		c
+USE_LANGUAGES=	c
 
 SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Adjust path (see console output at configure stage)
