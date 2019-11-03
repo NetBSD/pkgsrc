@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/07/21 22:24:54 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/11/03 19:30:33 rillig Exp $
 #
 
 VERSION=	20180827
@@ -26,7 +26,7 @@ CMAKE_MODULE_PATH_OVERRIDE = \
 		cmake/PluginLocalization.cmake \
 		cmake/PluginPackage.cmake
 
-SUBST_CLASSES+=	isnan
+SUBST_CLASSES+=		isnan
 SUBST_STAGE.isnan=	pre-configure
 SUBST_MESSAGE.isnan=	replace wxIsNaN with std::isnan
 SUBST_FILES.isnan=	src/BoatDialog.cpp \

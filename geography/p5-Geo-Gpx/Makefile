@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/08/11 13:21:06 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/03 19:30:34 rillig Exp $
 #
 
 DISTNAME=	Geo-Gpx-0.26
@@ -12,9 +12,9 @@ HOMEPAGE=	https://metacpan.org/pod/release/ANDYA/Geo-Gpx-0.26/lib/Geo/Gpx.pm
 COMMENT=	Geo::Gpx - Create and parse GPX files.
 LICENSE=	${PERL5_LICENSE}
 
-PERL5_PACKLIST=	auto/Geo/Gpx/.packlist
+PERL5_PACKLIST=		auto/Geo/Gpx/.packlist
 #PERL5_MODULE_TYPE=	Module::Install::Bundled
-MAKE_PARAMS+=	--skipdeps
+MAKE_PARAMS+=		--skipdeps
 
 DEPENDS+=	p5-DateTime-Format-ISO8601>=0.0800:../../time/p5-DateTime-Format-ISO8601
 DEPENDS+=	p5-HTML-Parser>=3.71:../../www/p5-HTML-Parser

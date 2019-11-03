@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2019/10/29 19:30:11 bouyer Exp $
+# $NetBSD: Makefile,v 1.80 2019/11/03 19:30:34 rillig Exp $
 
 DISTNAME=	qgis-3.8.3
 CATEGORIES=	geography
@@ -22,31 +22,31 @@ PLIST_SRC=		PLIST
 
 .include "options.mk"
 
-DEPENDS+=     qca2-qt5-ossl-[0-9]*:../../security/qca2-qt5-ossl
+DEPENDS+=		qca2-qt5-ossl-[0-9]*:../../security/qca2-qt5-ossl
 # This is needed to find qca2.
-CMAKE_PREFIX_PATH+=${QTDIR}
+CMAKE_PREFIX_PATH+=	${QTDIR}
 
 # This could be used if we want to build pdf doc, which is currently false
-#BUILD_DEPENDS+= txt2tags-[0-9]*:../../wip/txt2tags
+#BUILD_DEPENDS+=	txt2tags-[0-9]*:../../wip/txt2tags
 
 # Disable building of QGIS.app
 # (XXX For now, we might want to find a way to do this later.)
 SUBST_CLASSES+=			xapple
 SUBST_STAGE.xapple=		pre-configure
 SUBST_MESSAGE.xapple=		Disabling APPLE App in cmake scripts
-xapple_FIND_CMD= 		cd ${WRKSRC} && \
+xapple_FIND_CMD=		cd ${WRKSRC} && \
 	find . -name '*.cmake' -o -name CMakeLists.txt
 SUBST_FILES.xapple=		${xapple_FIND_CMD:sh}
 SUBST_SED.xapple+=		-e 's,APPLE,XAPPLE,'
 SUBST_SED.xapple+=		-e 's,MACOSX_BUNDLE ,,'
 
-CMAKE_ARGS+= 	-DWITH_QTWEBKIT=FALSE
-CMAKE_ARGS+= 	-DQWT_DIR=${QWT_DIR}
+CMAKE_ARGS+=	-DWITH_QTWEBKIT=FALSE
+CMAKE_ARGS+=	-DQWT_DIR=${QWT_DIR}
 # Useful for package development:
-#CMAKE_ARGS+= 	-DCMAKE_VERBOSE_MAKEFILE=TRUE
+#CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE=TRUE
 
-CONFIGURE_DIRS=build
-CMAKE_ARG_PATH=..
+CONFIGURE_DIRS=	build
+CMAKE_ARG_PATH=	..
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/build
