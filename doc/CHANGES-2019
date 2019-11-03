@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4722 2019/11/03 00:37:57 tnn Exp $
+$NetBSD: CHANGES-2019,v 1.4723 2019/11/03 01:48:56 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7512,3 +7512,8 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/csound6 to 6.13 [mrg 2019-11-02]
 	Updated lang/openjdk8 to 1.8.232 [tnn 2019-11-02]
 	Updated lang/openjdk11 to 1.11.0.5.10 [tnn 2019-11-03]
+	Added www/py-aiohttp-cors version 0.7.0 [markd 2019-11-03]
+	Added archivers/py-zipstream version 1.1.4 [markd 2019-11-03]
+	Added emulators/gns3-server version 2.2.1 [markd 2019-11-03]
+	Added emulators/gns3-gui version 2.2.1 [markd 2019-11-03]
+	Removed emulators/gns3 successor emulators/gns3-gui [markd 2019-11-03]
