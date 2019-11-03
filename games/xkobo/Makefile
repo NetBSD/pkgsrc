@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2018/07/18 00:06:17 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2019/11/03 19:28:49 rillig Exp $
 
 DISTNAME=	xkobo-1.11
 PKGREVISION=	5
@@ -11,8 +11,8 @@ COMMENT=	Multi-way scrolling shoot 'em up game for X.  Strangely addictive
 
 LICENSE=	gnu-gpl-v2
 
-SETGIDGAME=	yes
-SPECIAL_PERMS+=	bin/xoko ${SETGID_GAMES_PERMS}
+SETGIDGAME=		yes
+SPECIAL_PERMS+=		bin/xoko ${SETGID_GAMES_PERMS}
 OWN_DIRS_PERMS+=	${VARBASE}/games/xkobo ${GAMES_USER} ${GAMES_GROUP} \
 			${GAMEDIRMODE}
 

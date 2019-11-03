@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/10/06 11:54:59 asau Exp $
+# $NetBSD: Makefile,v 1.29 2019/11/03 19:28:48 rillig Exp $
 #
 
 DISTNAME=		xboing2.4
@@ -25,7 +25,7 @@ SETGIDGAME=		yes
 SPECIAL_PERMS+=		bin/xboing ${SETGID_GAMES_PERMS}
 
 CONF_FILES_PERMS+=		/dev/null ${VARBASE}/games/xboing.scr \
-			${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
+				${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/xboing.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/xboing.6
