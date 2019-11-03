@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/08/11 13:18:41 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/03 10:39:09 rillig Exp $
 
 DISTNAME=		cvsd-1.0.23
 PKGREVISION=		9
@@ -11,7 +11,7 @@ COMMENT=		Run CVS pserver in a chroot-ed environment
 LICENSE=		gnu-gpl-v2
 
 .if !exists(/usr/bin/cvs)
-DEPENDS+=   		cvs>=1.11:../../devel/scmcvs
+DEPENDS+=		cvs>=1.11:../../devel/scmcvs
 .endif
 
 USE_TOOLS+=		gmake perl

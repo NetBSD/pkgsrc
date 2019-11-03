@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2016/02/21 07:40:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/03 10:39:32 rillig Exp $
 #
 
 DISTNAME=	z80-asm-2.3.7
@@ -23,7 +23,7 @@ INSTALL_MAKE_FLAGS+=	MAN_DIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
 INSTALL_TARGET=		install-all
 
 INSTALLATION_DIRS+=	share/doc/${PKGBASE}
-Z80ASM_DOCS+=	CHANGELOG README SRC_FILES TODO dizz80.dvi dizz80.ps \
+Z80ASM_DOCS+=		CHANGELOG README SRC_FILES TODO dizz80.dvi dizz80.ps \
 		execute_timing.txt z80-asm.html Z80-cpu-pins z80-decoder.c \
 		z80-decoder.h z80-mon.html z80instructions.txt \
 		z80mnemonics.txt etc/ti86ports.txt

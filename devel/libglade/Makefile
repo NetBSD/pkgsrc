@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2019/07/21 22:24:00 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2019/11/03 10:39:17 rillig Exp $
 
 DISTNAME=		libglade-2.6.4
 PKGREVISION=		30
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--without-xml-catalog
 XML_ENTRIES=	system https://glade.gnome.org/glade-2.0.dtd \
 		${PREFIX}/share/xml/libglade/glade-2.0.dtd
 
-BUILDLINK_API_DEPENDS.atk+=		atk>=1.9.0
+BUILDLINK_API_DEPENDS.atk+=	atk>=1.9.0
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
 

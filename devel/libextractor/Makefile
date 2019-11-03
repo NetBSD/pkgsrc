@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2019/08/23 11:02:30 ng0 Exp $
+# $NetBSD: Makefile,v 1.82 2019/11/03 10:39:16 rillig Exp $
 
 DISTNAME=	libextractor-1.9
 PKGREVISION=	4
@@ -26,7 +26,7 @@ CONFLICTS=		csound-{bath,dev}-[0-9]*	# bin/extract
 # This package requires dlopen, so save on space by skipping non-PIC libs
 SHLIBTOOL_OVERRIDE=	# empty
 
-DEPENDS+= ImageMagick-[0-9]*:../../graphics/ImageMagick
+DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"

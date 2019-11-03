@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2014/02/20 10:51:28 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.2 2019/11/03 10:39:17 rillig Exp $
 
 BUILTIN_PKG:=	libinotify
 
@@ -17,7 +17,7 @@ IS_BUILTIN.libinotify=	no
 IS_BUILTIN.libinotify=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.libinotify
+MAKEVARS+=		IS_BUILTIN.libinotify
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -44,4 +44,4 @@ USE_BUILTIN.libinotify!=						\
 .    endif
 .  endif  # PREFER.libinotify
 .endif
-MAKEVARS+=	USE_BUILTIN.libinotify
+MAKEVARS+=		USE_BUILTIN.libinotify
