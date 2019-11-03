@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/09/30 07:48:48 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2019/11/03 19:24:33 rillig Exp $
 
 DISTNAME=	or1ksim-0.2.0rc2
 PKGREVISION=	1
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/openrisc/or1ksim
 COMMENT=	OpenRISC emulator
 
-GNU_CONFIGURE=  yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--target=or32
 
 # rl_event_hook

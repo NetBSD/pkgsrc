@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2018/07/04 13:40:18 jperkin Exp $
+# $NetBSD: options.mk,v 1.5 2019/11/03 19:24:34 rillig Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -34,8 +34,8 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} OS-1.2.rom BASIC2.rom
-SITES.BASIC2.rom= http://bbc.nvg.org/rom/Acorn/lang/
-SITES.OS-1.2.rom= http://bbc.nvg.org/rom/Acorn/os/
+SITES.BASIC2.rom=	http://bbc.nvg.org/rom/Acorn/lang/
+SITES.OS-1.2.rom=	http://bbc.nvg.org/rom/Acorn/os/
 
 ROMDIR=${PREFIX}/${XBEEBROOT}/roms
 post-install:

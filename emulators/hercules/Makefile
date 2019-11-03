@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2019/10/06 11:51:25 nia Exp $
+# $NetBSD: Makefile,v 1.42 2019/11/03 19:24:32 rillig Exp $
 
 DISTNAME=		hercules-3.13
 CATEGORIES=		emulators
@@ -24,7 +24,7 @@ USE_TOOLS+=		perl:run
 
 INSTALLATION_DIRS+=	bin share/examples/hercules
 #CONFIGURE_ARGS+=	--enable-setuid-hercifc=hercules
-#SPECIAL_PERMS+=		${PREFIX}/bin/hercifc ${SETUID_ROOT_PERMS}
+#SPECIAL_PERMS+=	${PREFIX}/bin/hercifc ${SETUID_ROOT_PERMS}
 
 pre-configure:
 	${RM} ${WRKSRC}/ltdl.h ${WRKSRC}/ltdl.c
