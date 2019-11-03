@@ -1,7 +1,7 @@
-$NetBSD: patch-test_ELF_gnustack.s,v 1.4 2019/11/03 12:10:29 kamil Exp $
+$NetBSD: patch-test_ELF_gnustack.s,v 1.5 2019/11/03 12:40:40 kamil Exp $
 
 Cherry-pick upstream patch commit 2a0fcae3d4d1fd85d6ae8378d7c6f12430c0087d
-[lld] [ELF] Add '-z nognustack' opt to suppress emitting PT_GNU_STAC dummy option for an AArch64 erratum.
+[lld] [ELF] Add '-z nognustack' opt to suppress emitting PT_GNU_STACK
 
 --- test/ELF/gnustack.s.orig	2019-05-01 05:49:01.000000000 +0000
 +++ test/ELF/gnustack.s
