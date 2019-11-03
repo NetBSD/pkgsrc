@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/05/23 19:23:00 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2019/11/03 19:24:32 rillig Exp $
 
 DISTNAME=	dynagen-0.11.0
 PKGREVISION=	5
@@ -12,10 +12,10 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	dynamips>=0.2.8rc1:../../emulators/dynamips
 
-NO_BUILD=	yes
-PY_PATCHPLIST=	yes
-REPLACE_PYTHON+= dynagen confConsole.py console.py dynamips_lib.py pemu_lib.py \
-		pemubin.py pemuwrapper.py
+NO_BUILD=		yes
+PY_PATCHPLIST=		yes
+REPLACE_PYTHON+=	dynagen confConsole.py console.py dynamips_lib.py pemu_lib.py \
+			pemubin.py pemuwrapper.py
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
