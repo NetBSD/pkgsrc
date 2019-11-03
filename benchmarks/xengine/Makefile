@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/10/09 14:06:00 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2019/11/03 11:55:30 rillig Exp $
 
 DISTNAME=	xengine-1.0.1
 PKGREVISION=	4
@@ -9,9 +9,9 @@ DISTFILES=	part01.z patch1.z
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Reciprocating engine for X
 
-WRKSRC=		${WRKDIR}
-DIST_SUBDIR=	xengine
-USE_IMAKE=	yes
+WRKSRC=			${WRKDIR}
+DIST_SUBDIR=		xengine
+USE_IMAKE=		yes
 PATCH_DIST_STRIP=	-p1
 
 USE_TOOLS+=	gzcat patch sed

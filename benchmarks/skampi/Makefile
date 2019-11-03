@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2018/01/01 18:16:35 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2019/11/03 11:55:29 rillig Exp $
 #
 
 DISTNAME=	skampi
@@ -14,8 +14,8 @@ LICENSE=	gnu-gpl-v2
 DIST_SUBDIR=	${PKGNAME_NOREV}
 WRKSRC=		${WRKDIR}/skampi-5.0.4-r0355
 
-USE_TOOLS+=	gmake pax
-BUILD_TARGET=	skampi
+USE_TOOLS+=		gmake pax
+BUILD_TARGET=		skampi
 INSTALLATION_DIRS=	bin
 
 # Force file regeneration:
