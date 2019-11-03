@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/11/02 22:49:23 mrg Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/03 08:27:07 rillig Exp $
 
 DISTNAME=		Csound${CSOUND_VERSION}_manual_html
 PKGNAME=		csound6-manual-${CSOUND_VERSION}
@@ -18,12 +18,11 @@ CSOUND_VERSION=		6.13.0
 WRKSRC=			${WRKDIR}/html
 USE_TOOLS+=		gmake pax
 EXTRACT_USING=		bsdtar
+NO_BUILD=		yes
 
 DOCDIR=			share/doc/csound6
 INSTALLATION_DIRS+=	${DOCDIR}
 
-do-build:
-	
 do-install:
 	cd ${WRKSRC} && pax -rw * ${DESTDIR}${PREFIX}/${DOCDIR}
 
