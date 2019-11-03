@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/08/16 20:45:35 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/11/03 10:39:18 rillig Exp $
 
 DISTNAME=	libnet-1.1.2.1
 PKGNAME=	${DISTNAME:S/libnet/libnet11/}
@@ -16,8 +16,8 @@ USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/libnet
 
-GNU_CONFIGURE_LIBSUBDIR=libnet11
-CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/libnet11
+GNU_CONFIGURE_LIBSUBDIR=	libnet11
+CONFIGURE_ARGS+=		--includedir=${PREFIX}/include/libnet11
 
 LNDOCS=		DESIGN_NOTES MIGRATION PACKET_BUILDING RAWSOCKET_NON_SEQUITUR
 LNMAN=		libnet-functions.h.3 libnet-headers.h.3 libnet-macros.h.3 \
@@ -40,12 +40,12 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/sample/*.c \
 		${DESTDIR}${PREFIX}/share/examples/libnet11
 .for f in ${LNMAN}
-		${INSTALL_MAN} ${WRKSRC}/doc/man/man3/${f} \
-			${DESTDIR}${PREFIX}/${PKGMANDIR}/man3/${f:S/libnet/libnet11/}
+	${INSTALL_MAN} ${WRKSRC}/doc/man/man3/${f} \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man3/${f:S/libnet/libnet11/}
 .endfor
 .for f in ${LNDOCS}
-		${INSTALL_DATA} ${WRKSRC}/doc/${f} \
-			${DESTDIR}${PREFIX}/share/doc/libnet11/
+	${INSTALL_DATA} ${WRKSRC}/doc/${f} \
+		${DESTDIR}${PREFIX}/share/doc/libnet11/
 .endfor
 	${INSTALL_SCRIPT} ${WRKSRC}/libnet-config \
 		${DESTDIR}${PREFIX}/bin/libnet11-config

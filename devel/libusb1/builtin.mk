@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2015/02/04 23:44:34 tnn Exp $
+# $NetBSD: builtin.mk,v 1.3 2019/11/03 10:39:18 rillig Exp $
 
 BUILTIN_PKG:=	libusb1
 
@@ -8,12 +8,12 @@ BUILTIN_FIND_HEADERS.H_LIBUSB=	libusb.h
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
 .if !defined(IS_BUILTIN.libusb1)
-IS_BUILTIN.libusb1=		no
+IS_BUILTIN.libusb1=	no
 .  if empty(H_LIBUSB:M__nonexistent__)
-IS_BUILTIN.libusb1=		yes
+IS_BUILTIN.libusb1=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.libusb1
+MAKEVARS+=		IS_BUILTIN.libusb1
 
 .if !defined(USE_BUILTIN.libusb1)
 USE_BUILTIN.libusb1=	${IS_BUILTIN.libusb1}

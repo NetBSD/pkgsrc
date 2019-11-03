@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.5 2008/04/12 22:43:00 jlam Exp $
+# $NetBSD: options.mk,v 1.6 2019/11/03 10:39:30 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.semi
-PKG_SUPPORTED_OPTIONS=	semi-bbdb
+PKG_OPTIONS_VAR=		PKG_OPTIONS.semi
+PKG_SUPPORTED_OPTIONS=		semi-bbdb
 PKG_OPTIONS_OPTIONAL_GROUPS=	semi-browser
 PKG_OPTIONS_GROUP.semi-browser=	w3 w3m
 PKG_SUGGESTED_OPTIONS=

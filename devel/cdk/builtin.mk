@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.5 2013/11/23 11:29:35 obache Exp $
+# $NetBSD: builtin.mk,v 1.6 2019/11/03 10:39:08 rillig Exp $
 
 BUILTIN_PKG:=	cdk
 
@@ -34,9 +34,9 @@ USE_BUILTIN.cdk=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.cdk}
 .        if !empty(USE_BUILTIN.cdk:M[yY][eE][sS])
 USE_BUILTIN.cdk!=							\
-        if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.cdk:Q}; then	\
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.cdk:Q}; then	\
 		${ECHO} yes;						\
-        else								\
+	else								\
 		${ECHO} no;						\
 	fi
 .        endif
@@ -44,4 +44,4 @@ USE_BUILTIN.cdk!=							\
 .    endif
 .  endif  # PREFER.cdk
 .endif
-MAKEVARS+=	USE_BUILTIN.cdk
+MAKEVARS+=		USE_BUILTIN.cdk

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/03/22 08:14:51 adam Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/03 10:39:18 rillig Exp $
 #
 
 DISTNAME=	slang-2.2.4
@@ -25,9 +25,9 @@ CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--with-z=${BUILDLINK_PREFIX.zlib}
 
-DLOPEN_REQUIRE_PTHREADS=no
+DLOPEN_REQUIRE_PTHREADS=	no
 
-EGDIR=			${PREFIX}/share/examples/libslang2
+EGDIR=		${PREFIX}/share/examples/libslang2
 CONF_FILES+=	${EGDIR}/slsh.rc ${PKG_SYSCONFDIR}/slsh.rc
 
 INSTALL_MAKE_FLAGS+=	DEST_SLSH_CONF_DIR=${DESTDIR}/${EGDIR}

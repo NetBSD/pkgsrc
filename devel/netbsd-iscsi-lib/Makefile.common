@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2017/09/03 08:36:52 wiz Exp $
+# $NetBSD: Makefile.common,v 1.7 2019/11/03 10:39:21 rillig Exp $
 #
 # used by net/netbsd-iscsi-target/Makefile
 # used by net/netbsd-iscsi-initiator/Makefile
@@ -16,5 +16,5 @@ AUTO_MKDIRS=		yes
 
 # ISCSI_INITIATOR_MAX_TARGETS can be overridden in your mk.conf file
 ISCSI_INITIATOR_MAX_TARGETS?=	16
-MESSAGE_SUBST+=		MAX_TARGETS=${ISCSI_INITIATOR_MAX_TARGETS:Q}
+MESSAGE_SUBST+=	MAX_TARGETS=${ISCSI_INITIATOR_MAX_TARGETS:Q}
 CFLAGS+=	-DCONFIG_INITIATOR_NUM_TARGETS=${ISCSI_INITIATOR_MAX_TARGETS}

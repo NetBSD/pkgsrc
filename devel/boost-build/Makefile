@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/04/29 20:41:11 adam Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/03 10:39:06 rillig Exp $
 
 BOOST_PACKAGE=		build
 BOOST_COMMENT=		(Boost.Build framework)
@@ -19,12 +19,12 @@ CONF_FILES=		${EGDIR}/site-config.jam \
 			${PKG_SYSCONFDIR}/site-config.jam
 
 # contains /usr/bin/python
-CHECK_INTERPRETER_SKIP=	share/boost-build/example/customization/inline_file.py
-CHECK_INTERPRETER_SKIP+=share/boost-build/tools/doxproc.py
-CHECK_INTERPRETER_SKIP+=share/boost-build/test/*.py
+CHECK_INTERPRETER_SKIP=		share/boost-build/example/customization/inline_file.py
+CHECK_INTERPRETER_SKIP+=	share/boost-build/tools/doxproc.py
+CHECK_INTERPRETER_SKIP+=	share/boost-build/test/*.py
 # contains /bin/bash
-CHECK_INTERPRETER_SKIP+=share/boost-build/nightly.sh
-CHECK_INTERPRETER_SKIP+=share/boost-build/roll.sh
+CHECK_INTERPRETER_SKIP+=	share/boost-build/nightly.sh
+CHECK_INTERPRETER_SKIP+=	share/boost-build/roll.sh
 
 INSTALLATION_DIRS+=	share/boost-build
 
