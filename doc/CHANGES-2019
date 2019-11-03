@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4721 2019/11/02 22:27:15 mrg Exp $
+$NetBSD: CHANGES-2019,v 1.4722 2019/11/03 00:37:57 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7510,3 +7510,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/picotrace to 20191102 [kamil 2019-11-02]
 	Updated time/libical to 3.0.6 [nia 2019-11-02]
 	Updated audio/csound6 to 6.13 [mrg 2019-11-02]
+	Updated lang/openjdk8 to 1.8.232 [tnn 2019-11-02]
+	Updated lang/openjdk11 to 1.11.0.5.10 [tnn 2019-11-03]
