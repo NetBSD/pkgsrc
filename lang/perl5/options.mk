@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2016/06/20 17:19:56 sevan Exp $
+# $NetBSD: options.mk,v 1.13 2019/11/03 19:04:05 rillig Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.perl
 PKG_OPTIONS_REQUIRED_GROUPS=	perlbits
@@ -89,7 +89,7 @@ CONFIGURE_ARGS+=	-Duse64bitall
 CONFIGURE_ARGS+=	-Uuse64bitall -Uusemorebits -Uuse64bitint
 .else
 .  if ${OBJECT_FMT} == "XCOFF"
-BROKEN=		XCOFF targets need the path specified where libperl.a resides.\
-Please choose on of 64bitint 64bitmore 64bitall or 64bitnone to allow this.
+BROKEN=			XCOFF targets need the path specified where libperl.a resides.\
+			Please choose on of 64bitint 64bitmore 64bitall or 64bitnone to allow this.
 .  endif
 .endif

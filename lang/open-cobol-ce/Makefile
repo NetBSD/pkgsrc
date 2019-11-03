@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/09/03 08:53:09 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/03 19:04:04 rillig Exp $
 
 DISTNAME=	open-cobol-ce-1.1.r59
 PKGNAME=	${DISTNAME:S/.r/./}
@@ -28,7 +28,7 @@ SUBST_MESSAGE.bdb=	Fixing runrime error.
 SUBST_STAGE.bdb=	pre-configure
 SUBST_FILES.bdb=	configure
 SUBST_SED.bdb=		-e 's,db-4.4,db4,g'
-#SUBST_SED.bdb+=		-e 's,ncurses,curses,g'
+#SUBST_SED.bdb+=	-e 's,ncurses,curses,g'
 
 TEST_TARGET=		check
 

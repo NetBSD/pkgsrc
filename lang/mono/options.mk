@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2010/10/16 04:32:18 kefren Exp $
+# $NetBSD: options.mk,v 1.4 2019/11/03 19:04:03 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mono
 PKG_SUPPORTED_OPTIONS=	moonlight
@@ -9,7 +9,7 @@ PKG_SUPPORTED_OPTIONS=	moonlight
 PLIST_VARS+=		moon
 
 .if !empty(PKG_OPTIONS:Mmoonlight)
-PLIST.moon=	yes
+PLIST.moon=		yes
 CONFIGURE_ARGS+=	--with-moonlight=yes
 .else
 CONFIGURE_ARGS+=	--with-moonlight=no
