@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.148 2019/07/21 22:25:25 wiz Exp $
+# $NetBSD: Makefile,v 1.149 2019/11/03 17:12:00 rillig Exp $
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
 # that *both* distinfo files contain the correct, up-to-date files and
@@ -95,7 +95,7 @@ SKINS+=		Abyss-1.7${SKIN_EXTRACT_SUFX}			\
 		xmmplayer-1.5${SKIN_EXTRACT_SUFX}
 
 .for skin in ${SKINS}
-SITES.${skin}= ${SKIN_SITES}
+SITES.${skin}=	${SKIN_SITES}
 .endfor
 
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
