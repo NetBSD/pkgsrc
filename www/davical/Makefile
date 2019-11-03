@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2019/09/20 07:45:21 triaxx Exp $
+# $NetBSD: Makefile,v 1.39 2019/11/03 14:05:19 triaxx Exp $
 
 DISTNAME=	davical-${DAVICAL_VERSION}
 PKGNAME=	${PHP_PKG_PREFIX}-davical-${DAVICAL_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	-https://gitlab.com/davical-project/davical/repository/archive.tar.gz?ref=${GITLAB_TAG}
 
@@ -85,7 +85,7 @@ SUBST_MESSAGE.conf-path=Fixing configuration path.
 SUBST_CLASSES+=		inc-path
 SUBST_STAGE.inc-path=	pre-configure
 SUBST_VARS.inc-path+=	PKG_SYSCONFDIR
-SUBST_FILES.inc-path=	davical.conf inc/always.php.in
+SUBST_FAWLDIRILES.inc-path=	davical.conf inc/always.php.in
 SUBST_FILES.inc-path+=	scripts/po/rebuild-translations.sh
 SUBST_FILES.inc-path+=	dba/create-database.sh
 SUBST_SED.inc-path+=	-e "s|@LIBAWLPATH@|${PREFIX}/${LIBAWLDIR}|g"
@@ -102,6 +102,12 @@ SUBST_STAGE.files=	pre-configure
 SUBST_VARS.files+=	DAVICALDIR
 SUBST_FILES.files=	davical.conf
 SUBST_MESSAGE.files=	Fixing DAViCal configuration file for Apache.
+
+SUBST_CLASSES+=		postgres
+SUBST_STAGE.postgres=	pre-configure
+SUBST_VARS.postgres=	PGUSER
+SUBST_FILES.postgres=	dba/create-database.sh
+SUBST_MESSAGE.postgres=	Fixing PostgreSQL variables.
 
 pre-patch:
 	${MV} ${WRKDIR}/davical-${GITLAB_TAG}-${GITLAB_REV} ${WRKSRC}
