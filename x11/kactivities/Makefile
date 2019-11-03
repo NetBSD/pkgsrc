@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2019/08/22 12:23:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.48 2019/11/03 09:14:09 rillig Exp $
 
 DISTNAME=	kactivities-4.13.3
 PKGREVISION=	15
@@ -20,7 +20,7 @@ CMAKE_ARGS+=	-DWITH_NepomukCore:BOOL=OFF
 # The default MACOSX_DEPLOYMENT_TARGET is incompatible with the C++11 tests.
 CMAKE_ARGS.Darwin+=	-DCMAKE_OSX_DEPLOYMENT_TARGET:STRING=${OSX_VERSION}
 
-INSTALLATION_DIRS= bin
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/_KDE_build/src/service/kactivitymanagerd ${DESTDIR}${PREFIX}/bin/kactivitymanagerd

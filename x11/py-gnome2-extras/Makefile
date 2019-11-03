@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2019/09/02 13:20:15 adam Exp $
+# $NetBSD: Makefile,v 1.96 2019/11/03 09:14:14 rillig Exp $
 
 DISTNAME=	gnome-python-extras-2.25.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gnome-python/gnome2/}
@@ -15,15 +15,15 @@ COMMENT=	Python binding for GNOME2
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
-PY_PATCHPLIST=	YES
+PY_PATCHPLIST=			YES
 PYTHON_VERSIONS_ACCEPTED=	27 # py-ORBit via py-gnome2
-USE_LIBTOOL=	YES
-PKGCONFIG_OVERRIDE+=	gnome-python-extras-2.0.pc.in
-GNU_CONFIGURE=	YES
-CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
-USE_TOOLS+=		pkg-config gmake
-USE_LANGUAGES=	c c++
-CONFIGURE_ARGS+=	--enable-docs
+USE_LIBTOOL=			YES
+PKGCONFIG_OVERRIDE+=		gnome-python-extras-2.0.pc.in
+GNU_CONFIGURE=			YES
+CONFIGURE_ENV+=			PYTHON=${PYTHONBIN:Q}
+USE_TOOLS+=			pkg-config gmake
+USE_LANGUAGES=			c c++
+CONFIGURE_ARGS+=		--enable-docs
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"

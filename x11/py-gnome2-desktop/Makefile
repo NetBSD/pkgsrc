@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2019/09/14 19:14:23 nia Exp $
+# $NetBSD: Makefile,v 1.134 2019/11/03 09:14:14 rillig Exp $
 
 DISTNAME=	gnome-python-desktop-2.32.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python/2/}
@@ -27,8 +27,8 @@ PYTHON_VERSIONS_ACCEPTED=	27 # py-ORBit via py-gnome2, py-gtk2
 # The "real" value here is: 27
 # but because of single-version deps of gnome bits this will only
 # ever work for the python version those gnome bits were built with.
-PYTHON_VERSIONS_REALLY_ACCEPTED=27
-PYTHON_VERSIONS_ACCEPTED=	${PYTHON_VERSION_DEFAULT:M27}
+PYTHON_VERSIONS_REALLY_ACCEPTED=	27
+PYTHON_VERSIONS_ACCEPTED=		${PYTHON_VERSION_DEFAULT:M27}
 
 .include "options.mk"
 

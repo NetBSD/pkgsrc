@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2019/10/17 10:16:28 micha Exp $
+# $NetBSD: Makefile,v 1.32 2019/11/03 09:14:08 rillig Exp $
 
 DISTNAME=	fltk-1.3.5-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -21,8 +21,8 @@ TEST_TARGET=		test
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fltk13
 PKG_SUPPORTED_OPTIONS=	opengl # cairo
 PKG_SUGGESTED_OPTIONS=	opengl # cairo
-#PLIST_VARS+=	cairo
-PLIST_VARS+=	opengl
+#PLIST_VARS+=		cairo
+PLIST_VARS+=		opengl
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
@@ -42,15 +42,15 @@ PLIST.cs=		yes
 #.if !empty(PKG_OPTIONS:Mcairo)
 #.  include "../../graphics/cairo/buildlink3.mk"
 #CONFIGURE_ARGS+=	--enable-cairo
-#PLIST.cairo=	yes
+#PLIST.cairo=		yes
 #.else
 #CONFIGURE_ARGS+=	--disable-cairo
 #.endif
 
 .if !empty(PKG_OPTIONS:Mopengl)
 .  if ${OPSYS} != "Darwin"
-.     include "../../graphics/MesaLib/buildlink3.mk"
-.     include "../../graphics/glu/buildlink3.mk"
+.    include "../../graphics/MesaLib/buildlink3.mk"
+.    include "../../graphics/glu/buildlink3.mk"
 .  endif
 CONFIGURE_ARGS+=	--enable-gl
 PLIST.opengl=	yes

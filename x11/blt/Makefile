@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2018/03/12 11:15:48 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2019/11/03 09:14:07 rillig Exp $
 
 DISTNAME=	BLT2.4z
 PKGNAME=	blt-2.4z
@@ -6,9 +6,9 @@ PKGREVISION=	10
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=blt/}
 
-PATCHFILES=	blt2.4z-patch-2
-PATCH_SITES=	${MASTER_SITES}
-PATCH_DIST_STRIP=-p1
+PATCHFILES=		blt2.4z-patch-2
+PATCH_SITES=		${MASTER_SITES}
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	brook@nmsu.edu
 HOMEPAGE=	http://blt.sourceforge.net/

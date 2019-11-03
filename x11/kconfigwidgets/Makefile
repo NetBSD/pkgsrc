@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/08/27 20:18:01 markd Exp $
+# $NetBSD: Makefile,v 1.27 2019/11/03 09:14:09 rillig Exp $
 
 DISTNAME=	kconfigwidgets-${KF5VER}
 CATEGORIES=	x11
@@ -9,7 +9,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kde/kf5.mk"
 
-BUILD_DEPENDS+= kdoctools>=${KF5VER}:../../devel/kdoctools
+BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
 
 USE_TOOLS+=	perl:run msgmerge
 

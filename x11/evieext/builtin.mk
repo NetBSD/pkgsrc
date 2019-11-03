@@ -1,6 +1,6 @@
-# $NetBSD: builtin.mk,v 1.4 2015/08/03 09:53:01 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.5 2019/11/03 09:14:07 rillig Exp $
 
-BUILTIN_PKG:=	evieext
+BUILTIN_PKG:=			evieext
 PKGCONFIG_FILE.evieext=		${X11BASE}/lib/pkgconfig/evieproto.pc
 PKGCONFIG_FILE.evieext+=	${X11BASE}/lib${LIBABISUFFIX}/pkgconfig/evieproto.pc
 PKGCONFIG_FILE.evieext+=	${X11BASE}/share/pkgconfig/evieproto.pc

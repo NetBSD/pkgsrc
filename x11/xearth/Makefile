@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2013/04/06 14:09:35 rodent Exp $
+# $NetBSD: Makefile,v 1.23 2019/11/03 09:14:19 rillig Exp $
 #
 
 DISTNAME=	xearth-1.1
@@ -10,7 +10,7 @@ MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	# AWOL
 COMMENT=	Rotating map of the Earth in X11 root window
 
-USE_IMAKE=	yes
+USE_IMAKE=		yes
 INSTALL_MAKE_FLAGS=	MANPATH=${PREFIX}/${PKGMANDIR}
 
 .include "../../x11/libXext/buildlink3.mk"

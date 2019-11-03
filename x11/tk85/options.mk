@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2014/03/10 14:22:01 taca Exp $
+# $NetBSD: options.mk,v 1.2 2019/11/03 09:14:18 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tk
 PKG_SUPPORTED_OPTIONS=	threads debug xft2
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+=	--enable-symbols
 
 .if !empty(PKG_OPTIONS:Mthreads)
 CONFIGURE_ARGS+=	--enable-threads
-. include "../../mk/pthread.buildlink3.mk"
+.  include "../../mk/pthread.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-threads
 .endif
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--disable-threads
 .if !empty(PKG_OPTIONS:Mxft2)
 CONFIGURE_ARGS+=	--enable-xft
 USE_TOOLS+=		pkg-config
-. include "../../x11/libXft/buildlink3.mk"
+.  include "../../x11/libXft/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-xft
 .endif

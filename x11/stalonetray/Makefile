@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.8 2016/08/11 23:03:26 mef Exp $
+# $NetBSD: Makefile,v 1.9 2019/11/03 09:14:18 rillig Exp $
 #
-DISTNAME=stalonetray-0.8.3
-CATEGORIES=x11
-MASTER_SITES=${MASTER_SITE_SOURCEFORGE:=stalonetray/}
+DISTNAME=	stalonetray-0.8.3
+CATEGORIES=	x11
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=stalonetray/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://stalonetray.sourceforge.net/
 COMMENT=	Stand-alone system tray
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-native-kde
-USE_LANGUAGES+=	c
+USE_LANGUAGES+=		c
 
 INSTALLATION_DIRS=	share/examples
 

@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.6 2019/01/28 12:25:35 kamil Exp $
+# $NetBSD: builtin.mk,v 1.7 2019/11/03 09:14:20 rillig Exp $
 
 BUILTIN_PKG:=	xorgproto
 
@@ -49,7 +49,7 @@ PRE_XORGPROTO_LIST+= \
 # NetBSD-8 has 7.0.31.
 # NetBSD-7 has 7.0.26.
 # NetBSD-6 has 7.0.22.
-BUILTIN_VERSION_SCRIPT.${BUILTIN_PKG}?= ${SED} -n \
+BUILTIN_VERSION_SCRIPT.${BUILTIN_PKG}?=	${SED} -n \
 	-e 's/Version: 7\.0\.32/2018.4/p' \
 	-e 's/Version: 7\.0\.31/2018.1/p' \
 	-e 's/Version: 7\.0\.26/2017.1/p' \

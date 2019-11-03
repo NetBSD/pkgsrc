@@ -1,6 +1,6 @@
-# $NetBSD: builtin.mk,v 1.4 2014/03/10 11:05:54 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.5 2019/11/03 09:14:21 rillig Exp $
 
-BUILTIN_PKG:=	xtrans
+BUILTIN_PKG:=		xtrans
 PKGCONFIG_FILE.xtrans=	${X11BASE}/lib/pkgconfig/xtrans.pc
 PKGCONFIG_FILE.xtrans+=	${X11BASE}/lib${LIBABISUFFIX}/pkgconfig/xtrans.pc
 PKGCONFIG_FILE.xtrans+=	${X11BASE}/share/pkgconfig/xtrans.pc

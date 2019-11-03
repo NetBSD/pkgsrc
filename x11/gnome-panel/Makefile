@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.216 2019/09/02 13:20:15 adam Exp $
+# $NetBSD: Makefile,v 1.217 2019/11/03 09:14:08 rillig Exp $
 
 DISTNAME=		gnome-panel-2.32.1
 PKGREVISION=		72
@@ -15,13 +15,13 @@ COMMENT=		GNOME2 panel application
 #CONF_FILES+=	${PREFIX}/share/examples/gnome-panel/org.gnome.ClockApplet.Mechanism.conf \
 #		${PKG_SYSCONFDIR}/dbus-1/system.d/org.gnome.ClockApplet.Mechanism.conf
 
-GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config
-USE_PKGLOCALEDIR=	YES
-USE_LIBTOOL=		YES
-PKGCONFIG_OVERRIDE+=	bonobo/libpanel-applet/libpanelapplet-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	libpanel-applet/libpanelapplet-3.0.pc.in
-CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
+GNU_CONFIGURE=			YES
+USE_TOOLS+=			gmake intltool msgfmt perl:run pkg-config
+USE_PKGLOCALEDIR=		YES
+USE_LIBTOOL=			YES
+PKGCONFIG_OVERRIDE+=		bonobo/libpanel-applet/libpanelapplet-2.0.pc.in
+PKGCONFIG_OVERRIDE+=		libpanel-applet/libpanelapplet-3.0.pc.in
+CONFIGURE_ENV+=			PYTHON=${PYTHONBIN}
 PYTHON_VERSIONS_ACCEPTED=	27 # py-ORBit via py-gnome2
 
 # XXX this pkg installs a gio module to ${PREFIX}/lib/gnome-panel/modules
@@ -44,7 +44,7 @@ GCONF_SCHEMAS+=	panel-object.schemas
 GCONF_SCHEMAS+=	panel-compatibility.schemas
 GCONF_SCHEMAS+=	workspace-switcher.schemas
 GCONF_SCHEMAS+=	window-list.schemas
-GCONF_ENTRIES=		panel-default-setup.entries
+GCONF_ENTRIES=	panel-default-setup.entries
 
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.15.1
 BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.13.0

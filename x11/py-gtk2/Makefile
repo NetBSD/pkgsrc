@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2019/09/07 04:32:14 gutteridge Exp $
+# $NetBSD: Makefile,v 1.122 2019/11/03 09:14:14 rillig Exp $
 
 DISTNAME=	pygtk-2.24.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pygtk/gtk2/}
@@ -17,11 +17,11 @@ CONFLICTS=	${PYPKGPREFIX}-gtk<0.6.10
 # IOError: [Errno 2] No such file or directory: 'gtk-types.defs'
 MAKE_JOBS_SAFE=	no
 
-USE_LIBTOOL=	YES
+USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE+=	pygtk-2.0.pc.in
-GNU_CONFIGURE=	YES
-CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
-USE_TOOLS+=	gmake pkg-config
+GNU_CONFIGURE=		YES
+CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
+USE_TOOLS+=		gmake pkg-config
 
 PY_PATCHPLIST=	YES
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 2.24.0

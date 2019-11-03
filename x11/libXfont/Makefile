@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2019/07/09 09:51:55 sevan Exp $
+# $NetBSD: Makefile,v 1.42 2019/11/03 09:14:11 rillig Exp $
 
 DISTNAME=		libXfont-1.5.4
 PKGREVISION=		2
@@ -14,7 +14,7 @@ LICENSE=		mit AND modified-bsd
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
-USE_FEATURES+= 		strnlen
+USE_FEATURES+=		strnlen
 
 PKGCONFIG_OVERRIDE+=	xfont.pc.in
 

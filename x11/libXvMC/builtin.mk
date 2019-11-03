@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2017/06/01 13:30:26 jlam Exp $
+# $NetBSD: builtin.mk,v 1.4 2019/11/03 09:14:13 rillig Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -28,7 +28,7 @@ IS_BUILTIN.libXvMC=	no
 IS_BUILTIN.libXvMC=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.libXvMC
+MAKEVARS+=		IS_BUILTIN.libXvMC
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -55,6 +55,6 @@ USE_BUILTIN.libXvMC!=							\
 .    endif
 .  endif  # PREFER.libXvMC
 .endif
-MAKEVARS+=	USE_BUILTIN.libXvMC
+MAKEVARS+=		USE_BUILTIN.libXvMC
 
 .include "../../mk/x11.builtin.mk"

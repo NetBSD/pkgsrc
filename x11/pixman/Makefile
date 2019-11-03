@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2019/08/11 13:25:14 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2019/11/03 09:14:14 rillig Exp $
 
 DISTNAME=	pixman-0.38.4
 PKGREVISION=	1
@@ -11,9 +11,9 @@ HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Library of low-level pixel manipulation routines
 LICENSE=	mit
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 .if ${MACHINE_ARCH} == i386
-CONFIGURE_ARGS+= --disable-sse2
+CONFIGURE_ARGS+=	--disable-sse2
 .endif
 
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2019/05/23 19:23:23 rillig Exp $
+# $NetBSD: Makefile.common,v 1.19 2019/11/03 09:14:18 rillig Exp $
 #
 # used by x11/wxGTK28/Makefile
 # used by x11/wxGTK28-contrib/Makefile
@@ -41,7 +41,7 @@ DOCDIR=			${PREFIX}/share/wx-2.8/doc/wxGTK
 CONFIGURE_DIRS=	build-non-unicode build-unicode
 
 #CONFIGURE_ARGS+=	--enable-debug
-#PLIST_SUBST+=	DEBUG_LIB=d DEBUG_CONFIG=-config
+#PLIST_SUBST+=		DEBUG_LIB=d DEBUG_CONFIG=-config
 
 PLIST_SUBST+=	DEBUG_LIB= DEBUG_CONFIG=-release
 
@@ -50,7 +50,7 @@ SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
 SUBST_FILES.fix-paths=		configure
 SUBST_SED.fix-paths=		-e 's,/usr/pkg/include,${PREFIX}/include,g'
-SUBST_VARS.fix-paths=	PREFIX
+SUBST_VARS.fix-paths=		PREFIX
 SUBST_SED.fix-paths+=		-e 's,/usr/X11/,${X11BASE}/,g'
 
 pre-configure:

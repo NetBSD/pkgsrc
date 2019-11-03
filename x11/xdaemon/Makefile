@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2013/04/08 11:17:26 rodent Exp $
+# $NetBSD: Makefile,v 1.23 2019/11/03 09:14:19 rillig Exp $
 
 DISTNAME=	xdaemon-1.2
 CATEGORIES=	games x11
@@ -29,9 +29,9 @@ do-extract:
 
 do-install:
 .for img in ${IMAGES}
-.for sufx in _bw.xbm _color.xpm _icon.xbm _mask.xbm
+.  for sufx in _bw.xbm _color.xpm _icon.xbm _mask.xbm
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${img}${sufx} ${DESTDIR}${PREFIX}/share/xteddy/pixmaps/${img}${sufx}
-.endfor # sufx
+.  endfor # sufx
 	${RM} -f ${DESTDIR}${PREFIX}/bin/${img}
 	${LN} -s xteddy ${DESTDIR}${PREFIX}/bin/${img}
 .endfor # img

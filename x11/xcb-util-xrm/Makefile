@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/05/01 08:32:26 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/03 09:14:19 rillig Exp $
 
 DISTNAME=	xcb-util-xrm-1.3
 CATEGORIES=	x11
@@ -14,7 +14,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gm4 pkg-config
 
-PKGCONFIG_OVERRIDE=xcb-xrm.pc.in
+PKGCONFIG_OVERRIDE=	xcb-xrm.pc.in
 
 .include "../../devel/xorg-util-macros/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"

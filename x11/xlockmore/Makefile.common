@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.79 2018/09/09 20:05:19 maya Exp $
+# $NetBSD: Makefile.common,v 1.80 2019/11/03 09:14:20 rillig Exp $
 #
 # used by x11/xlockmore/Makefile
 # used by x11/xlockmore-lite/Makefile
@@ -19,14 +19,14 @@ MESSAGE_SRC?=		${.CURDIR}/../xlockmore/MESSAGE
 
 .include "../../mk/bsd.prefs.mk"
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.xlockmore
-PKG_SUPPORTED_OPTIONS=	xlockmore-allow-root xlockmore-dpms pam
+PKG_OPTIONS_VAR=		PKG_OPTIONS.xlockmore
+PKG_SUPPORTED_OPTIONS=		xlockmore-allow-root xlockmore-dpms pam
 .if ${OPSYS} == "NetBSD"
-PKG_SUPPORTED_OPTIONS+=	oss
+PKG_SUPPORTED_OPTIONS+=		oss
 .endif
-PKG_SUGGESTED_OPTIONS=	xlockmore-allow-root xlockmore-dpms
-PKG_OPTIONS_LEGACY_VARS+=XLOCK_DISABLE_ALLOW_ROOT:-xlockmore-allow-root
-PKG_OPTIONS_LEGACY_VARS+=XLOCK_NO_DPMS:-xlockmore-dpms
+PKG_SUGGESTED_OPTIONS=		xlockmore-allow-root xlockmore-dpms
+PKG_OPTIONS_LEGACY_VARS+=	XLOCK_DISABLE_ALLOW_ROOT:-xlockmore-allow-root
+PKG_OPTIONS_LEGACY_VARS+=	XLOCK_NO_DPMS:-xlockmore-dpms
 
 .include "../../mk/bsd.options.mk"
 
@@ -64,7 +64,7 @@ CONFIGURE_ARGS+=	--without-dpms
 .  if ${X11_TYPE} != "native" || !exists(${X11BASE}/lib${LIBABISUFFIX}/libXdpms.a)
 BUILDLINK_TRANSFORM+=	l:Xdpms:Xext
 .  endif
-DPMS_ENV=	no_dpms= ac_dpms_includes=${BUILDLINK_PREFIX.xorgproto}/include ac_dpms_libraries=${BUILDLINK_PREFIX.libXext}/lib
+DPMS_ENV=		no_dpms= ac_dpms_includes=${BUILDLINK_PREFIX.xorgproto}/include ac_dpms_libraries=${BUILDLINK_PREFIX.libXext}/lib
 CONFIGURE_ENV+=		ac_cv_path_dpms=${DPMS_ENV:Q}
 .endif
 

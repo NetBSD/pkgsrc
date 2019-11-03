@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2019/11/02 19:45:26 maya Exp $
+# $NetBSD: Makefile,v 1.107 2019/11/03 09:14:09 rillig Exp $
 
 DISTNAME=	kdelibs-4.14.38
 PKGNAME=	${DISTNAME:S/-4/4-4/}
@@ -18,9 +18,9 @@ CONFLICTS=	kdelibs-[0-9]*
 # BUILD_MAKE_FLAGS+= VERBOSE=1
 #CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
 
-CMAKE_DEPENDENCIES_REWRITE= _KDE_build/KDELibsDependencies.cmake
-CMAKE_DEPENDENCIES_REWRITE+= _KDE_build/KDELibsDependenciesInternal.cmake
-CMAKE_MODULE_PATH_OVERRIDE+= kjsembed/qtonly/CMakeLists.txt
+CMAKE_DEPENDENCIES_REWRITE=	_KDE_build/KDELibsDependencies.cmake
+CMAKE_DEPENDENCIES_REWRITE+=	_KDE_build/KDELibsDependenciesInternal.cmake
+CMAKE_MODULE_PATH_OVERRIDE+=	kjsembed/qtonly/CMakeLists.txt
 
 CMAKE_ARGS+=	-DKDE_DISTRIBUTION_TEXT:STRING="NetBSD pkgsrc"
 CMAKE_ARGS+=	-DWITH_Avahi:BOOL=off
@@ -51,7 +51,7 @@ REPLACE_PERL+= \
 	kdeui/preparetips \
 	plasma/data/kconfig_updates/plasma_popupapplet_fix_groups.pl
 
-CHECK_PORTABILITY_SKIP+=kate/tests/hl/highlight.sh
+CHECK_PORTABILITY_SKIP+=	kate/tests/hl/highlight.sh
 
 SUBST_CLASSES+=			kdelibsfix
 SUBST_STAGE.kdelibsfix=		pre-configure
@@ -98,7 +98,7 @@ CXXFLAGS+=	-D__STDC_LIMIT_MACROS
 BUILDLINK_DEPMETHOD.qt4-tools=		full
 .include "../../meta-pkgs/kde4/kde4.mk"
 
-BUILDLINK_API_DEPENDS.strigi+=	strigi>=0.5.11
+BUILDLINK_API_DEPENDS.strigi+=		strigi>=0.5.11
 #BUILDLINK_API_DEPENDS.soprano+=	soprano>=2.5.60
 #BUILDLINK_API_DEPENDS.shared-desktop-ontologies+=	shared-desktop-ontologies>=0.10.0
 

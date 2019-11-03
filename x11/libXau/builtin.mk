@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.6 2018/03/07 11:57:35 wiz Exp $
+# $NetBSD: builtin.mk,v 1.7 2019/11/03 09:14:10 rillig Exp $
 
 BUILTIN_PKG:=	libXau
 
@@ -19,7 +19,7 @@ IS_BUILTIN.libXau=	no
 IS_BUILTIN.libXau=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.libXau
+MAKEVARS+=		IS_BUILTIN.libXau
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -46,7 +46,7 @@ USE_BUILTIN.libXau!=							\
 .    endif
 .  endif  # PREFER.libXau
 .endif
-MAKEVARS+=	USE_BUILTIN.libXau
+MAKEVARS+=		USE_BUILTIN.libXau
 
 .include "../../mk/x11.builtin.mk"
 

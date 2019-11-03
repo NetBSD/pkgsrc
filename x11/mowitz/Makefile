@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/10/14 20:17:28 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/03 09:14:14 rillig Exp $
 
 DISTNAME=	Mowitz-0.3.1
 PKGREVISION=	3
@@ -17,13 +17,13 @@ GNU_CONFIGURE=	yes
 BUILD_DEFS+=	XAW_TYPE
 
 .if ${XAW_TYPE} == "xpm"
-CONFIGURE_ARGS+=--with-xaw3d=XawXpm
+CONFIGURE_ARGS+=	--with-xaw3d=XawXpm
 .elif ${XAW_TYPE} == "3d"
-CONFIGURE_ARGS+=--with-xaw3d=Xaw3d
+CONFIGURE_ARGS+=	--with-xaw3d=Xaw3d
 .elif ${XAW_TYPE} == "neXtaw"
-CONFIGURE_ARGS+=--with-xaw3d=neXtaw
+CONFIGURE_ARGS+=	--with-xaw3d=neXtaw
 .else
-CONFIGURE_ARGS+=--with-xaw3d=Xaw
+CONFIGURE_ARGS+=	--with-xaw3d=Xaw
 .endif
 
 .include "../../x11/libXpm/buildlink3.mk"

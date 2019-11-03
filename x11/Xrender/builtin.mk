@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.21 2014/03/10 11:56:02 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.22 2019/11/03 09:14:06 rillig Exp $
 
 BUILTIN_PKG:=	Xrender
 
@@ -18,7 +18,7 @@ IS_BUILTIN.Xrender=	yes
 IS_BUILTIN.Xrender=	no
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.Xrender
+MAKEVARS+=		IS_BUILTIN.Xrender
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -50,10 +50,10 @@ BUILTIN_VERSION.Xrender?=	${_version_}
 .    endfor
 .  endfor
 .  if defined(BUILTIN_VERSION.Xrender)
-BUILTIN_PKG.Xrender=	Xrender-${BUILTIN_VERSION.Xrender}
+BUILTIN_PKG.Xrender=		Xrender-${BUILTIN_VERSION.Xrender}
 .  endif
 .endif
-MAKEVARS+=	BUILTIN_PKG.Xrender
+MAKEVARS+=			BUILTIN_PKG.Xrender
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -89,7 +89,7 @@ USE_BUILTIN.Xrender!=							\
 .    endif
 .  endif  # PREFER.Xrender
 .endif
-MAKEVARS+=	USE_BUILTIN.Xrender
+MAKEVARS+=		USE_BUILTIN.Xrender
 
 ###
 ### The section below only applies if we are not including this file

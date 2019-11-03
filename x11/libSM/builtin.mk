@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2008/10/05 21:36:33 cube Exp $
+# $NetBSD: builtin.mk,v 1.3 2019/11/03 09:14:10 rillig Exp $
 
 BUILTIN_PKG:=	libSM
 
@@ -19,7 +19,7 @@ IS_BUILTIN.libSM=	no
 IS_BUILTIN.libSM=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.libSM
+MAKEVARS+=		IS_BUILTIN.libSM
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -46,6 +46,6 @@ USE_BUILTIN.libSM!=							\
 .    endif
 .  endif  # PREFER.libSM
 .endif
-MAKEVARS+=	USE_BUILTIN.libSM
+MAKEVARS+=		USE_BUILTIN.libSM
 
 .include "../../mk/x11.builtin.mk"

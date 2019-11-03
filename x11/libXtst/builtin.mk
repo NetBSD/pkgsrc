@@ -1,6 +1,6 @@
-# $NetBSD: builtin.mk,v 1.2 2014/03/10 11:05:53 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.3 2019/11/03 09:14:12 rillig Exp $
 
-BUILTIN_PKG:=	libXtst
+BUILTIN_PKG:=			libXtst
 PKGCONFIG_FILE.libXtst=		${X11BASE}/lib/pkgconfig/xtst.pc
 PKGCONFIG_FILE.libXtst+=	${X11BASE}/lib${LIBABISUFFIX}/pkgconfig/xtst.pc
 PKGCONFIG_FILE.libXtst+=	${X11BASE}/lib/libXtst.so

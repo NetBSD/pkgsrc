@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/07/21 22:26:00 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/11/03 09:14:13 rillig Exp $
 #
 
 DISTNAME=	libgnomekbd-2.32.0
@@ -19,7 +19,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config intltool gmake msgfmt
 
-GCONF_SCHEMAS+=	desktop_gnome_peripherals_keyboard_xkb.schemas
+GCONF_SCHEMAS+=		desktop_gnome_peripherals_keyboard_xkb.schemas
 PKGCONFIG_OVERRIDE+=	libgnomekbd.pc.in
 PKGCONFIG_OVERRIDE+=	libgnomekbdui.pc.in
 

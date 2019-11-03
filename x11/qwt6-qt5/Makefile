@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/10/28 19:00:37 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/03 09:14:17 rillig Exp $
 
 DISTNAME=	qwt-6.1.4
 PKGNAME=	qwt6-qt5-6.1.4
@@ -18,7 +18,7 @@ USE_LIBTOOL=	yes
 AUTO_MKDIRS=		yes
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
 
-PLIST_SUBST+=   VERSION=${PKGVERSION_NOREV}
+PLIST_SUBST+=	VERSION=${PKGVERSION_NOREV}
 
 do-configure:
 	cd ${WRKSRC} && env ${CONFIGURE_ENV} ${QTDIR}/bin/qmake

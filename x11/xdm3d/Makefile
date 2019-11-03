@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2015/10/14 20:17:28 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2019/11/03 09:14:19 rillig Exp $
 
 DISTNAME=		xdm3d-1.0
 PKGREVISION=		7
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 PATCHFILES=		xdm3d-jumbo-patch-20130616.gz
 PATCH_SITES=		http://www.NetBSD.org/~dholland/patchkits/xdm3d/
-PATCH_DIST_STRIP= -p1
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.hijinks.com/~spade/linux/XBanner/
@@ -23,9 +23,9 @@ INSTALLATION_DIRS=	bin
 .include "../../mk/bsd.prefs.mk"
 
 .if exists(${X11BASE}/lib/X11/xdm)
-XDMDIR=${X11BASE}/lib/X11/xdm
+XDMDIR=	${X11BASE}/lib/X11/xdm
 .elif exists(/etc/X11/xdm)
-XDMDIR=/etc/X11/xdm
+XDMDIR=	/etc/X11/xdm
 .else
 PKG_FAIL_REASON+=	"Cannot find xdm directory."
 .endif
@@ -34,10 +34,10 @@ PKG_FAIL_REASON+=	"Cannot find xdm directory."
 .if ${OPSYS} == "NetBSD"
 .  if ${X11_TYPE} == "native"
 # wrong in 5.x's native X
-IMAKEOPTS+=-DHasSecureRPC=NO
+IMAKEOPTS+=		-DHasSecureRPC=NO
 BUILDLINK_TRANSFORM+=	rm:-DSECURE_RPC
 .  endif
-IMAKEOPTS+=-DHasSetUserContext=YES
+IMAKEOPTS+=		-DHasSetUserContext=YES
 .endif
 
 do-install:
