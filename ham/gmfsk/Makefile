@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2019/07/21 22:25:07 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2019/11/03 19:32:07 rillig Exp $
 #
 
 DISTNAME=	gmfsk-0.6
@@ -13,9 +13,9 @@ COMMENT=	Multimode HF terminal program
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
 GNU_CONFIGURE=	yes
-GCONF_SCHEMAS+=gmfsk.schemas
+GCONF_SCHEMAS+=	gmfsk.schemas
 
-CONFIGURE_ARGS+=--enable-hamlib
+CONFIGURE_ARGS+=	--enable-hamlib
 
 .include "../../mk/bsd.prefs.mk"
 LDFLAGS+=	${LIBOSSAUDIO}

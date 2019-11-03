@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2019/08/22 12:23:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.64 2019/11/03 19:32:07 rillig Exp $
 
 DISTNAME=	gpredict-1.3
 PKGREVISION=	23
@@ -10,10 +10,10 @@ HOMEPAGE=	https://sourceforge.net/projects/gpredict/
 COMMENT=	Gnome satellite tracking program
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake msgfmt pkg-config intltool
-USE_PKGLOCALEDIR=yes
-GNU_CONFIGURE=	yes
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake msgfmt pkg-config intltool
+USE_PKGLOCALEDIR=	yes
+GNU_CONFIGURE=		yes
 
 # needed for gpredict-0.8.0 and gtk2-2.20 -- remove on next update!
 BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED

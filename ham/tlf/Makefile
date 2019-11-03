@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/09/02 21:17:02 mef Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/03 19:32:08 rillig Exp $
 #
 
 DISTNAME=	tlf-0.9.31-2
@@ -11,10 +11,10 @@ HOMEPAGE=	http://home.iae.nl/users/reinc/TLF-0.2.html
 COMMENT=	Advanced hamradio logging and contest program
 LICENSE=	gnu-gpl-v2
 
-USE_NCURSES=	yes
-USE_TOOLS+=	gmake msgfmt
-GNU_CONFIGURE=	yes
-PTHREAD_OPTS+=	require
+USE_NCURSES=		yes
+USE_TOOLS+=		gmake msgfmt
+GNU_CONFIGURE=		yes
+PTHREAD_OPTS+=		require
 PTHREAD_AUTO_VARS=	yes
 
 # 0.9.31-2 -> 0.9.31
