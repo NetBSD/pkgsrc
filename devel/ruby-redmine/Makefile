@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2019/07/21 22:24:40 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2019/11/03 10:00:24 rillig Exp $
 
 DISTNAME=	redmine-3.3.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -106,11 +106,11 @@ REPLACE_RUBY+=	unicorn-5.2.0/t/bin/content-md5-put
 REPLACE_RUBY+=	unicorn-5.2.0/t/bin/sha1sum.rb unicorn-5.2.0/t/bin/unused_listen
 REPLACE_RUBY+=	unicorn-5.2.0/test/aggregate.rb
 
-CHECK_INTERPRETER_SKIP+=${RM_DIR}/gems/gems/bundler-*/lib/bundler/templates/*
-CHECK_INTERPRETER_SKIP+=${RM_DIR}/gems/gems/rack-*/test/cgi/test.ru
-CHECK_INTERPRETER_SKIP+=${RM_DIR}/gems/gems/json-1.8.3/json-java.gemspec
-CHECK_INTERPRETER_SKIP+=${RM_DIR}/gems/gems/nokogiri-1.6.7.2/ports/patches/sort-patches-by-date
-CHECK_INTERPRETER_SKIP+=${RM_DIR}/gems/gems/loofah-2.0.3/benchmark/benchmark.rb
+CHECK_INTERPRETER_SKIP+=	${RM_DIR}/gems/gems/bundler-*/lib/bundler/templates/*
+CHECK_INTERPRETER_SKIP+=	${RM_DIR}/gems/gems/rack-*/test/cgi/test.ru
+CHECK_INTERPRETER_SKIP+=	${RM_DIR}/gems/gems/json-1.8.3/json-java.gemspec
+CHECK_INTERPRETER_SKIP+=	${RM_DIR}/gems/gems/nokogiri-1.6.7.2/ports/patches/sort-patches-by-date
+CHECK_INTERPRETER_SKIP+=	${RM_DIR}/gems/gems/loofah-2.0.3/benchmark/benchmark.rb
 
 # Selenium has Linux .so files.
 CHECK_SHLIBS_SUPPORTED=	no
@@ -187,13 +187,13 @@ do-build:
 		${FAIL_MSG} "Build of ${_gem_}.gem failed."
 .endfor
 
-RUBYGEM_INSTALL_ROOT=	${WRKDIR}/.inst
+RUBYGEM_INSTALL_ROOT=		${WRKDIR}/.inst
 RUBYGEM_INSTALL_ROOT_OPTION=	--install-root ${RUBYGEM_INSTALL_ROOT}
-_RUBYGEM_OPTIONS=	--no-update-sources     # don't cache the gem index
-_RUBYGEM_OPTIONS+=	--install-dir ${PREFIX}/${GEM_HOME}
-_RUBYGEM_OPTIONS+=	${RUBYGEM_INSTALL_ROOT_OPTION}
-_RUBYGEM_OPTIONS+=	--ignore-dependencies
-_RUBYGEM_OPTIONS+=	--no-ri --no-rdoc
+_RUBYGEM_OPTIONS=		--no-update-sources     # don't cache the gem index
+_RUBYGEM_OPTIONS+=		--install-dir ${PREFIX}/${GEM_HOME}
+_RUBYGEM_OPTIONS+=		${RUBYGEM_INSTALL_ROOT_OPTION}
+_RUBYGEM_OPTIONS+=		--ignore-dependencies
+_RUBYGEM_OPTIONS+=		--no-ri --no-rdoc
 
 do-install:
 # Install gems

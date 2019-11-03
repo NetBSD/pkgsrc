@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2019/10/18 14:58:46 bsiegert Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/03 10:00:20 rillig Exp $
 
 DISTNAME=	afero-1.1.1
 PKGNAME=	go-${DISTNAME}
 PKGREVISION=	10
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=spf13/}
-GITHUB_PROJECT= ${PKGBASE:S/^go-//}
+GITHUB_PROJECT=	${PKGBASE:S/^go-//}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
