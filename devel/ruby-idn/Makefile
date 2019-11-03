@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2017/12/30 04:34:58 tsutsui Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/03 10:00:23 rillig Exp $
 
 DISTNAME=	idn-ruby-0.1.0
-PKGNAME=        ${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
 CATEGORIES=	devel
 
 MAINTAINER=	tsutsui@NetBSD.org
