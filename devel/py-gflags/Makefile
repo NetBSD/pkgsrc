@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/05/31 20:07:00 bsiegert Exp $
+# $NetBSD: Makefile,v 1.10 2019/11/03 10:18:27 rillig Exp $
 
 DISTNAME=	python-gflags-3.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -12,7 +12,7 @@ COMMENT=	Python equivalent of gflags, a commandline flag implementation
 LICENSE=	modified-bsd
 
 REPLACE_PYTHON+=	*.py
-PYDISTUTILSPKG=	yes
+PYDISTUTILSPKG=		yes
 
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
