@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2019/10/10 13:23:14 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/03 17:04:27 rillig Exp $
 
-DISTNAME=	todoman-3.7.0
-CATEGORIES=	misc
-MASTER_SITES=	${MASTER_SITE_PYPI:=t/todoman/}
-#MASTER_SITES=	${MASTER_SITE_GITHUB:=pimutils/}
+DISTNAME=		todoman-3.7.0
+CATEGORIES=		misc
+MASTER_SITES=		${MASTER_SITE_PYPI:=t/todoman/}
+#MASTER_SITES=		${MASTER_SITE_GITHUB:=pimutils/}
 #GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -35,8 +35,8 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-REPLACE_PYTHON+=	bin/todo
-USE_LANGUAGES=	# none
+REPLACE_PYTHON+=		bin/todo
+USE_LANGUAGES=			# none
 
 # overwrite automatically generated file with recommended one, per
 # "Notes for Packagers" in documentation

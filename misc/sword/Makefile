@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/10/27 17:04:20 kamil Exp $
+# $NetBSD: Makefile,v 1.30 2019/11/03 17:04:27 rillig Exp $
 #
 
 DISTNAME=	sword-1.8.1
@@ -19,10 +19,10 @@ CONFIGURE_ARGS+=	--with-clucene=${BUILDLINK_PREFIX.libclucene}
 
 PKGCONFIG_OVERRIDE+=	sword.pc.in
 
-INSTALLATION_DIRS+=share/examples/sword
-INSTALL_TARGET= install install_config
-REQD_FILES=	${PREFIX}/share/examples/sword/sword.conf \
-		${PKG_SYSCONFDIR}/sword.conf
+INSTALLATION_DIRS+=	share/examples/sword
+INSTALL_TARGET=		install install_config
+REQD_FILES=		${PREFIX}/share/examples/sword/sword.conf \
+			${PKG_SYSCONFDIR}/sword.conf
 
 # needed with at least GCC-5.4.0 which has a default value of 25
 CXXFLAGS+=	-ftemplate-depth=50
