@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2019/04/03 00:33:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.56 2019/11/03 09:14:08 rillig Exp $
 
 DISTNAME=	Preferences-1.2.0
 PKGNAME=	gnustep-${DISTNAME:S/P/p/}
@@ -20,7 +20,7 @@ MAKE_FILE=	GNUmakefile
 MAKE_JOBS_SAFE=	NO
 MAKE_FLAGS+=	GNUSTEP_USER_DIR=${WRKDIR}/fake_home/GNUstep
 
-FIX_GNUSTEP_INSTALLATION_DIR= yes
+FIX_GNUSTEP_INSTALLATION_DIR=		yes
 SUBST_FILES.gnustep_installation_dir+=	GNUmakefile.preamble
 SUBST_FILES.gnustep_installation_dir+=	PrefsModule/GNUmakefile.preamble
 SUBST_FILES.gnustep_installation_dir+=	Modules/Keyboard/GNUmakefile
