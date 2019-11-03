@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/08 09:21:03 asau Exp $
+# $NetBSD: Makefile,v 1.13 2019/11/03 17:12:01 rillig Exp $
 #
 
 GST_PLUGINS0.10_NAME=	v4l2
@@ -10,7 +10,7 @@ ONLY_FOR_PLATFORM=	NetBSD-[5-9]* Linux-* SunOS-5.11-*
 
 .include "../../multimedia/gst-plugins0.10-good/Makefile.common"
 
-CONFIGURE_ARGS+= --with-libv4l2
+CONFIGURE_ARGS+=	--with-libv4l2
 
 .include "../../graphics/libv4l/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

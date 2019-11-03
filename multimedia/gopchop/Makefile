@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2019/07/21 22:25:26 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2019/11/03 17:12:00 rillig Exp $
 #
 
 DISTNAME=		gopchop-1.1.8
@@ -11,11 +11,11 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://outflux.net/unix/software/GOPchop/
 COMMENT=		MPEG2 GOP-accurate editor
 
-GNU_CONFIGURE=		yes
-USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		intltool msgfmt pkg-config
+GNU_CONFIGURE=			yes
+USE_LANGUAGES=			c c++
+USE_LIBTOOL=			yes
+USE_PKGLOCALEDIR=		yes
+USE_TOOLS+=			intltool msgfmt pkg-config
 BROKEN_GETTEXT_DETECTION=	yes
 
 # XXX make this an option?

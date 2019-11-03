@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/08/11 13:22:01 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/03 17:11:59 rillig Exp $
 #
 
 DISTNAME=	acidrip-0.14
@@ -15,7 +15,7 @@ DEPENDS+=	mencoder-[0-9]*:../../multimedia/mencoder
 DEPENDS+=	mplayer-[0-9]*:../../multimedia/mplayer
 DEPENDS+=	p5-gtk2>=1.040:../../x11/p5-gtk2
 
-PERL5_PACKLIST= auto/AcidRip/.packlist
+PERL5_PACKLIST=	auto/AcidRip/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

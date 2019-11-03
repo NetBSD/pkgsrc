@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2019/07/21 22:25:26 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2019/11/03 17:12:01 rillig Exp $
 
 DISTNAME=	gst123-0.3.5
 PKGREVISION=	3
@@ -16,7 +16,7 @@ USE_LANGUAGES=	c c++
 
 USE_TOOLS+=	pkg-config gmake
 
-USE_NCURSES=	yes
+USE_NCURSES=		yes
 CONFIGURE_ARGS+=	NCURSES_CFLAGS=-I${BUILDLINK_PREFIX.ncurses}/include
 CONFIGURE_ARGS+=	NCURSES_LIBS="-L${BUILDLINK_PREFIX.ncurses}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.ncurses}/lib -l${BUILDLINK_LIBNAME.ncurses}"
 

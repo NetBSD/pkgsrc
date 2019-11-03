@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2019/09/02 13:20:10 adam Exp $
+# $NetBSD: Makefile,v 1.55 2019/11/03 17:12:02 rillig Exp $
 
 PKGNAME=	kodi-15.2
 PKGREVISION=	42
@@ -29,14 +29,14 @@ USE_JAVA2=		yes
 GNU_CONFIGURE=		yes
 
 CONFIG_SHELL=		${TOOLS_PATH.bash}
-CONFIG_GUESS_OVERRIDE=  lib/libmpeg2/.auto/config.guess \
+CONFIG_GUESS_OVERRIDE=	lib/libmpeg2/.auto/config.guess \
 			tools/depends/build-aux/config.guess
-CONFIG_SUB_OVERRIDE=    lib/libmpeg2/.auto/config.sub \
+CONFIG_SUB_OVERRIDE=	lib/libmpeg2/.auto/config.sub \
 			tools/depends/build-aux/config.sub
 
 CONFIGURE_ENV+=		ac_cv_path_SWIG_EXE=${PREFIX}/bin/swig2.0
 
-PYTHON_VERSIONS_ACCEPTED=	 27 # insists on < 3.0 as of 15.2
+PYTHON_VERSIONS_ACCEPTED=	27 # insists on < 3.0 as of 15.2
 
 # These need to be ported
 CONFIGURE_ARGS+=	--disable-projectm

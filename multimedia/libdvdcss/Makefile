@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2018/06/22 12:45:46 jakllsch Exp $
+# $NetBSD: Makefile,v 1.37 2019/11/03 17:12:02 rillig Exp $
 #
 # In order to ensure compliance with U.S. and international law, please
 # do not modify this file to provide pointers to the source or homepage
@@ -32,9 +32,9 @@ PKGCONFIG_OVERRIDE=	src/libdvdcss.pc.in
 
 .if !exists(${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}) && !defined(LIBDVDCSS_MASTER_SITES)
 INTERACTIVE_STAGE=	fetch
-FETCH_MESSAGE+=	"Please define LIBDVDCSS_MASTER_SITES in mk.conf."
-FETCH_MESSAGE+=	"Alternatively you may download '${DISTNAME}${EXTRACT_SUFX}' manually"
-FETCH_MESSAGE+=	"to ${DISTDIR}."
+FETCH_MESSAGE+=		"Please define LIBDVDCSS_MASTER_SITES in mk.conf."
+FETCH_MESSAGE+=		"Alternatively you may download '${DISTNAME}${EXTRACT_SUFX}' manually"
+FETCH_MESSAGE+=		"to ${DISTDIR}."
 .endif
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2017/01/19 18:52:19 agc Exp $
+# $NetBSD: Makefile,v 1.36 2019/11/03 17:12:04 rillig Exp $
 
 DISTNAME=	windows-all-20071007
 PKGNAME=	win32-codecs-071007
@@ -16,11 +16,11 @@ HOMEPAGE=	http://www.mplayerhq.hu/MPlayer/releases/codecs/
 COMMENT=	Huge compilation of Win32 binary codecs
 LICENSE=	mplayer-codec-license
 
-RESTRICTED=	Unsure of codec's license
-NO_BIN_ON_CDROM=${RESTRICTED}
-NO_BIN_ON_FTP=	${RESTRICTED}
-NO_SRC_ON_CDROM=${RESTRICTED}
-NO_SRC_ON_FTP=	${RESTRICTED}
+RESTRICTED=		Unsure of codec's license
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
 
 USE_LANGUAGES=		# empty
 

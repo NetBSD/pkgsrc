@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.65 2019/06/25 20:50:22 markd Exp $
+# $NetBSD: options.mk,v 1.66 2019/11/03 17:12:03 rillig Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -24,73 +24,73 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
 # Options supported by both mplayer* or mencoder*.
 
 PKG_SUPPORTED_OPTIONS=	gif jpeg mad dts dv png theora vorbis x264 debug
-PKG_SUPPORTED_OPTIONS+= dvdread dvdnav libmpg123 opus
-.if ${OSS_TYPE} != "none"
+PKG_SUPPORTED_OPTIONS+=	dvdread dvdnav libmpg123 opus
+.  if ${OSS_TYPE} != "none"
 PKG_SUPPORTED_OPTIONS+=	oss
-.endif
+.  endif
 
-PKG_SUPPORTED_OPTIONS+= 	faad
+PKG_SUPPORTED_OPTIONS+=		faad
 
 # Set options based on the specific package being built.
-.if !empty(PKGNAME:M*mplayer*)
+.  if !empty(PKGNAME:M*mplayer*)
 PKG_SUPPORTED_OPTIONS+=	aalib alsa caca esound ggi mplayer-menu nas pulseaudio sdl
 
-.if ${VDPAU_AVAILABLE} == "yes"
+.    if ${VDPAU_AVAILABLE} == "yes"
 PKG_SUPPORTED_OPTIONS+=	vdpau
-.endif
+.    endif
 
-.if ${LIRC_AVAILABLE} == "yes"
+.    if ${LIRC_AVAILABLE} == "yes"
 PKG_SUPPORTED_OPTIONS+=	lirc
-.endif
+.    endif
 
-.elif !empty(PKGNAME:M*mencoder*)
+.  elif !empty(PKGNAME:M*mencoder*)
 PKG_SUPPORTED_OPTIONS+=	faac lame
-.endif
+.  endif
 
 # OS-specific options.
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD"
-PKG_SUPPORTED_OPTIONS+=	cdparanoia
-.endif
+.  if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD"
+PKG_SUPPORTED_OPTIONS+=		cdparanoia
+.  endif
 PKG_SUPPORTED_OPTIONS.SunOS+=	mlib
 PKG_SUPPORTED_OPTIONS.Linux+=	vidix
 
 # TODO: v4l2 option probably could be supported on Linux and OpenBSD too
-.if ${OPSYS} == "NetBSD" && exists(/usr/include/sys/videoio.h)
+.  if ${OPSYS} == "NetBSD" && exists(/usr/include/sys/videoio.h)
 PKG_SUPPORTED_OPTIONS+=	v4l2
 PKG_SUGGESTED_OPTIONS+=	v4l2
-.endif
+.  endif
 
 # Platform-specific options.
-.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64" || \
+.  if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64" || \
     ${MACHINE_ARCH} == "powerpc"
-PKG_SUPPORTED_OPTIONS+= mplayer-runtime-cpudetection
-.endif
-.if ${MACHINE_ARCH} == "i386"
-PKG_SUPPORTED_OPTIONS+= mplayer-default-cflags mplayer-win32
-.endif
-.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+PKG_SUPPORTED_OPTIONS+=	mplayer-runtime-cpudetection
+.  endif
+.  if ${MACHINE_ARCH} == "i386"
+PKG_SUPPORTED_OPTIONS+=	mplayer-default-cflags mplayer-win32
+.  endif
+.  if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 PKG_SUPPORTED_OPTIONS+=	mplayer-ssse3
-.endif
-.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64" || \
+.  endif
+.  if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64" || \
     ${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "sparc64"
-PKG_SUPPORTED_OPTIONS+= xvid
-.endif
+PKG_SUPPORTED_OPTIONS+=	xvid
+.  endif
 
 # -------------------------------------------------------------------------
 # Define PKG_SUGGESTED_OPTIONS.
 # -------------------------------------------------------------------------
 
-.for o in   dvdread dvdnav gif jpeg \
+.  for o in   dvdread dvdnav gif jpeg \
 	    mplayer-menu \
 	    mplayer-default-cflags mplayer-runtime-cpudetection \
 	    oss png pulseaudio sdl vdpau lirc
-.  if !empty(PKG_SUPPORTED_OPTIONS:M${o})
-PKG_SUGGESTED_OPTIONS+=	${o}
-.  endif
-.endfor
-.if !empty(PKGNAME:M*mplayer*)
+.    if !empty(PKG_SUPPORTED_OPTIONS:M${o})
+PKG_SUGGESTED_OPTIONS+=		${o}
+.    endif
+.  endfor
+.  if !empty(PKGNAME:M*mplayer*)
 PKG_SUGGESTED_OPTIONS.Linux+=	alsa
-.endif
+.  endif
 PKG_SUGGESTED_OPTIONS.Linux+=	vidix
 
 # -------------------------------------------------------------------------
@@ -104,263 +104,263 @@ EXTRA_LIBS=
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Maalib)
+.  if !empty(PKG_OPTIONS:Maalib)
 CONFIGURE_ARGS+=	--enable-aa
-.  include "../../graphics/aalib/buildlink3.mk"
-.else
+.    include "../../graphics/aalib/buildlink3.mk"
+.  else
 CONFIGURE_ARGS+=	--disable-aa
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Malsa)
+.  if !empty(PKG_OPTIONS:Malsa)
 CONFIGURE_ARGS+=	--enable-alsa
-.  include "../../audio/alsa-lib/buildlink3.mk"
-.else
+.    include "../../audio/alsa-lib/buildlink3.mk"
+.  else
 CONFIGURE_ARGS+=	--disable-alsa
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mcaca)
+.  if !empty(PKG_OPTIONS:Mcaca)
 CONFIGURE_ARGS+=	--enable-caca
-.  include "../../graphics/libcaca/buildlink3.mk"
-.else
+.    include "../../graphics/libcaca/buildlink3.mk"
+.  else
 CONFIGURE_ARGS+=	--disable-caca
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mcdparanoia)
+.  if !empty(PKG_OPTIONS:Mcdparanoia)
 CONFIGURE_ARGS+=	--enable-cdparanoia
-.  include "../../audio/cdparanoia/buildlink3.mk"
+.    include "../../audio/cdparanoia/buildlink3.mk"
 CFLAGS+=		-I${BUILDLINK_PREFIX.cdparanoia}/include/cdparanoia
-.else
+.  else
 CONFIGURE_ARGS+=	--disable-cdparanoia
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mdebug)
+.  if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug --disable-sighandler
 INSTALL_UNSTRIPPED=	yes
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mdts)
+.  if !empty(PKG_OPTIONS:Mdts)
 # The configure handling for --enable-libdca is broken.
 # However, it works if you omit the argument and let
 # configure autodetect support.
 #CONFIGURE_ARGS+=       --enable-libdca
-.  include "../../audio/libdca/buildlink3.mk"
-.else
+.    include "../../audio/libdca/buildlink3.mk"
+.  else
 CONFIGURE_ARGS+=	--disable-libdca
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mdv)
+.  if !empty(PKG_OPTIONS:Mdv)
 CONFIGURE_ARGS+=	--enable-libdv
-.  include "../../multimedia/libdv/buildlink3.mk"
-.else
+.    include "../../multimedia/libdv/buildlink3.mk"
+.  else
 CONFIGURE_ARGS+=	--disable-libdv
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mdvdread)
-.  include "../../multimedia/libdvdread/buildlink3.mk"
-.else
+.  if !empty(PKG_OPTIONS:Mdvdread)
+.    include "../../multimedia/libdvdread/buildlink3.mk"
+.  else
 CONFIGURE_ARGS+=	--disable-dvdread
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mdvdnav)
+.  if !empty(PKG_OPTIONS:Mdvdnav)
 CONFIGURE_ARGS+=	--enable-dvdnav
-.  include "../../multimedia/libdvdnav/buildlink3.mk"
+.    include "../../multimedia/libdvdnav/buildlink3.mk"
 #CFLAGS+=		-I${BUILDLINK_PREFIX.libdvdnav}/include/dvdnav
-.else
+.  else
 CONFIGURE_ARGS+=	--disable-dvdnav
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mesound)
+.  if !empty(PKG_OPTIONS:Mesound)
 CONFIGURE_ARGS+=	--enable-esd
-.  include "../../audio/esound/buildlink3.mk"
-.else
+.    include "../../audio/esound/buildlink3.mk"
+.  else
 CONFIGURE_ARGS+=	--disable-esd
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mfaac)
+.  if !empty(PKG_OPTIONS:Mfaac)
 CONFIGURE_ARGS+=	--enable-faac
 EXTRA_LIBS+=		-lfaac
-.  include "../../audio/faac/buildlink3.mk"
-.else
+.    include "../../audio/faac/buildlink3.mk"
+.  else
 CONFIGURE_ARGS+=	--disable-faac
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mfaad)
+.  if !empty(PKG_OPTIONS:Mfaad)
 CONFIGURE_ARGS+=	--enable-faad
-.  include "../../audio/faad2/buildlink3.mk"
-.else
+.    include "../../audio/faad2/buildlink3.mk"
+.  else
 CONFIGURE_ARGS+=	--disable-faad
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mggi)
+.  if !empty(PKG_OPTIONS:Mggi)
 CONFIGURE_ARGS+=	--enable-ggi
-.  include "../../graphics/libggi/buildlink3.mk"
-.else
+.    include "../../graphics/libggi/buildlink3.mk"
+.  else
 CONFIGURE_ARGS+=	--disable-ggi
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mgif)
+.  if !empty(PKG_OPTIONS:Mgif)
 CONFIGURE_ARGS+=	--enable-gif
-.  include "../../graphics/giflib/buildlink3.mk"
-.else
+.    include "../../graphics/giflib/buildlink3.mk"
+.  else
 CONFIGURE_ARGS+=	--disable-gif
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mjpeg)
+.  if !empty(PKG_OPTIONS:Mjpeg)
 CONFIGURE_ARGS+=	--enable-jpeg
-.  include "../../mk/jpeg.buildlink3.mk"
-.else
+.    include "../../mk/jpeg.buildlink3.mk"
+.  else
 CONFIGURE_ARGS+=	--disable-jpeg
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mlibmpg123)
+.  if !empty(PKG_OPTIONS:Mlibmpg123)
 # no --enable-mpg123: configure forgets to add -lmpg123.
-.  include "../../audio/mpg123/buildlink3.mk"
-.else
+.    include "../../audio/mpg123/buildlink3.mk"
+.  else
 CONFIGURE_ARGS+=	--disable-mpg123
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mlame)
+.  if !empty(PKG_OPTIONS:Mlame)
 CONFIGURE_ARGS+=	--enable-mp3lame
-.  include "../../audio/lame/buildlink3.mk"
-.else
+.    include "../../audio/lame/buildlink3.mk"
+.  else
 CONFIGURE_ARGS+=	--disable-mp3lame
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mopus)
+.  if !empty(PKG_OPTIONS:Mopus)
 CONFIGURE_ARGS+=	--enable-libopus
-.  include "../../audio/libopus/buildlink3.mk"
-.else
+.    include "../../audio/libopus/buildlink3.mk"
+.  else
 CONFIGURE_ARGS+=	--disable-libopus
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mmad)
+.  if !empty(PKG_OPTIONS:Mmad)
 CONFIGURE_ARGS+=	--enable-mad
-.  include "../../audio/libmad/buildlink3.mk"
-.else
+.    include "../../audio/libmad/buildlink3.mk"
+.  else
 CONFIGURE_ARGS+=	--disable-mad
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mmlib)
+.  if !empty(PKG_OPTIONS:Mmlib)
 CONFIGURE_ARGS+=	--enable-mlib
-.else
+.  else
 CONFIGURE_ARGS+=	--disable-mlib
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mmplayer-menu)
+.  if !empty(PKG_OPTIONS:Mmplayer-menu)
 CONFIGURE_ARGS+=	--enable-menu
-.else
+.  else
 CONFIGURE_ARGS+=	--disable-menu
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mmplayer-runtime-cpudetection)
+.  if !empty(PKG_OPTIONS:Mmplayer-runtime-cpudetection)
 CONFIGURE_ARGS+=	--enable-runtime-cpudetection
-.else
+.  else
 CONFIGURE_ARGS+=	--disable-runtime-cpudetection
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mmplayer-win32)
+.  if !empty(PKG_OPTIONS:Mmplayer-win32)
 CONFIGURE_ARGS+=	--enable-win32dll
 DEPENDS+=		win32-codecs>=011227:../../multimedia/win32-codecs
-.else
+.  else
 CONFIGURE_ARGS+=	--disable-win32dll
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mnas)
+.  if !empty(PKG_OPTIONS:Mnas)
 CONFIGURE_ARGS+=	--enable-nas
-.  include "../../audio/nas/buildlink3.mk"
-.else
+.    include "../../audio/nas/buildlink3.mk"
+.  else
 CONFIGURE_ARGS+=	--disable-nas
-.endif
+.  endif
 
-.if ${OSS_TYPE} != "none" && !empty(PKG_OPTIONS:Moss)
+.  if ${OSS_TYPE} != "none" && !empty(PKG_OPTIONS:Moss)
 CONFIGURE_ARGS+=	--enable-ossaudio
-.else
+.  else
 CONFIGURE_ARGS+=	--disable-ossaudio
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mpng)
+.  if !empty(PKG_OPTIONS:Mpng)
 CONFIGURE_ARGS+=	--enable-png
-.  include "../../graphics/png/buildlink3.mk"
-.else
+.    include "../../graphics/png/buildlink3.mk"
+.  else
 CONFIGURE_ARGS+=	--disable-png
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mpulseaudio)
+.  if !empty(PKG_OPTIONS:Mpulseaudio)
 CONFIGURE_ARGS+=	--enable-pulse
-.  include "../../devel/glib2/buildlink3.mk"
-.  include "../../audio/pulseaudio/buildlink3.mk"
-.else
+.    include "../../devel/glib2/buildlink3.mk"
+.    include "../../audio/pulseaudio/buildlink3.mk"
+.  else
 CONFIGURE_ARGS+=	--disable-pulse
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Msdl)
+.  if !empty(PKG_OPTIONS:Msdl)
 CONFIGURE_ARGS+=	--enable-sdl
-.  include "../../devel/SDL/buildlink3.mk"
-.else
+.    include "../../devel/SDL/buildlink3.mk"
+.  else
 CONFIGURE_ARGS+=	--disable-sdl
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mtheora)
+.  if !empty(PKG_OPTIONS:Mtheora)
 CONFIGURE_ARGS+=	--enable-theora
-.  include "../../multimedia/libtheora/buildlink3.mk"
-.else
+.    include "../../multimedia/libtheora/buildlink3.mk"
+.  else
 CONFIGURE_ARGS+=	--disable-theora
-.endif
+.  endif
 
-.if empty(PKG_OPTIONS:Mv4l2)
+.  if empty(PKG_OPTIONS:Mv4l2)
 CONFIGURE_ARGS+=	--disable-tv-v4l2
-.endif
+.  endif
 
 # disable vidix if not in options
-.if empty(PKG_OPTIONS:Mvidix)
+.  if empty(PKG_OPTIONS:Mvidix)
 CONFIGURE_ARGS+=	--disable-vidix
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mvorbis)
-.  include "../../audio/libvorbis/buildlink3.mk"
-.else
+.  if !empty(PKG_OPTIONS:Mvorbis)
+.    include "../../audio/libvorbis/buildlink3.mk"
+.  else
 CONFIGURE_ARGS+=	--disable-libvorbis
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mx264)
+.  if !empty(PKG_OPTIONS:Mx264)
 CONFIGURE_ARGS+=	--enable-x264
 EXTRA_LIBS+=		-lx264
-.  include "../../multimedia/x264-devel/buildlink3.mk"
-.else
+.    include "../../multimedia/x264-devel/buildlink3.mk"
+.  else
 CONFIGURE_ARGS+=	--disable-x264
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mxvid)
+.  if !empty(PKG_OPTIONS:Mxvid)
 CONFIGURE_ARGS+=	--enable-xvid
 EXTRA_LIBS+=		-lxvidcore
-.  include "../../multimedia/xvidcore/buildlink3.mk"
-.else
+.    include "../../multimedia/xvidcore/buildlink3.mk"
+.  else
 CONFIGURE_ARGS+=	--disable-xvid
-.endif
+.  endif
 
-.if empty(PKG_OPTIONS:Mmplayer-ssse3)
+.  if empty(PKG_OPTIONS:Mmplayer-ssse3)
 CONFIGURE_ARGS+=	--disable-ssse3
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mvdpau)
+.  if !empty(PKG_OPTIONS:Mvdpau)
 CONFIGURE_ARGS+=	--enable-vdpau
-.  include "../../multimedia/libvdpau/buildlink3.mk"
-.else
+.    include "../../multimedia/libvdpau/buildlink3.mk"
+.  else
 CONFIGURE_ARGS+=	--disable-vdpau
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mlirc)
+.  if !empty(PKG_OPTIONS:Mlirc)
 CONFIGURE_ARGS+=	--enable-lirc
-.  include "../../comms/lirc/buildlink3.mk"
-.else
+.    include "../../comms/lirc/buildlink3.mk"
+.  else
 CONFIGURE_ARGS+=	--disable-lirc
-.endif
+.  endif
 
 # -------------------------------------------------------------------------
 # Handle extra libraries (part 1)
 # -------------------------------------------------------------------------
-.if ${EXTRA_LIBS} != ""
+.  if ${EXTRA_LIBS} != ""
 CONFIGURE_ARGS+=	--extra-libs=${EXTRA_LIBS:C/^ //:Q}
-.endif
+.  endif
 
 .endif # defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)

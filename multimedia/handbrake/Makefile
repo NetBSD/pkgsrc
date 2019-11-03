@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2019/08/11 13:22:03 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2019/11/03 17:12:01 rillig Exp $
 #
 
 DISTNAME=	HandBrake-1.2.2-source
@@ -28,11 +28,11 @@ DISTFILES+=	${CDISTFILES}
 SITES.${f}=	https://download.handbrake.fr/contrib/
 .endfor
 
-RESTRICTED=	Unresolved patent issues
-NO_BIN_ON_CDROM=${RESTRICTED}
-NO_BIN_ON_FTP=	${RESTRICTED}
-NO_SRC_ON_CDROM=${RESTRICTED}
-NO_SRC_ON_FTP=	${RESTRICTED}
+RESTRICTED=		Unresolved patent issues
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-source//}
 
@@ -50,8 +50,8 @@ MAKE_FILE=		GNUmakefile
 BUILD_TARGET=		# empty
 BUILD_FLAGS+=		BUILDLINK_DIR=${BUILDLINK_DIR}
 
-BUILD_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
-BUILD_DEPENDS+=	nasm>=2.05.01:../../devel/nasm
+BUILD_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
+BUILD_DEPENDS+=		nasm>=2.05.01:../../devel/nasm
 #BUILD_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
 
 # harfbuzz, which is now separate from pango, installs a header file

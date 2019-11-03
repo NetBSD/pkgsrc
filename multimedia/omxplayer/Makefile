@@ -1,22 +1,22 @@
-# $NetBSD: Makefile,v 1.23 2019/08/22 12:23:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2019/11/03 17:12:03 rillig Exp $
 
 DISTNAME=	omxplayer-20170112
 PKGREVISION=	12
 CATEGORIES=	multimedia
-MASTER_SITES=   ${MASTER_SITE_GITHUB:=popcornmix/}
-GITHUB_PROJECT= omxplayer
-GITHUB_TAG=     12b472eaa75bce25dc63ec61d9233aadb996f3a4
+MASTER_SITES=	${MASTER_SITE_GITHUB:=popcornmix/}
+GITHUB_PROJECT=	omxplayer
+GITHUB_TAG=	12b472eaa75bce25dc63ec61d9233aadb996f3a4
 
 MAINTAINER=	port-arm@NetBSD.org
 HOMEPAGE=	https://github.com/popcornmix/omxplayer
 COMMENT=	Raspberry Pi video player
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c++
-USE_TOOLS+=	gmake bash:build
-BUILD_TARGET=	omxplayer.bin
-INSTALLATION_DIRS+= bin share/docs/omxplayer
-REPLACE_BASH=	omxplayer
+USE_LANGUAGES=		c++
+USE_TOOLS+=		gmake bash:build
+BUILD_TARGET=		omxplayer.bin
+INSTALLATION_DIRS+=	bin share/docs/omxplayer
+REPLACE_BASH=		omxplayer
 
 EXTRACT_USING=	bsdtar
 

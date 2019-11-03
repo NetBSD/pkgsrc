@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2019/08/11 13:22:01 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2019/11/03 17:11:59 rillig Exp $
 
 DISTNAME=	dvdrip-0.98.11
 PKGREVISION=	9
@@ -35,7 +35,7 @@ USE_TOOLS+=		perl
 MAKE_ENV+=		SKIP_UNPACK_REQUIRED_MODULES=1
 MAKE_JOBS_SAFE=		no
 
-PERL5_PACKLIST= auto/Video/DVDRip/.packlist
+PERL5_PACKLIST=	auto/Video/DVDRip/.packlist
 
 SUBST_CLASSES+=		fping
 SUBST_STAGE.fping=	pre-configure

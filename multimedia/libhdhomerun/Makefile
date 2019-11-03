@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/08/16 20:21:12 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/11/03 17:12:02 rillig Exp $
 
 DISTNAME=	libhdhomerun_20140121
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -27,21 +27,21 @@ SHLIBEXT=	so
 .endif
 PLIST_SUBST+=	SHLIBEXT=${SHLIBEXT}
 
-INSTALL_HEADERS=hdhomerun.h \
-		hdhomerun_channelscan.h \
-		hdhomerun_channels.h \
-		hdhomerun_control.h \
-		hdhomerun_debug.h \
-		hdhomerun_device.h \
-		hdhomerun_device_selector.h \
-		hdhomerun_discover.h \
-		hdhomerun_os.h \
-		hdhomerun_os_posix.h \
-		hdhomerun_os_windows.h \
-		hdhomerun_pkt.h \
-		hdhomerun_sock.h \
-		hdhomerun_types.h \
-		hdhomerun_video.h
+INSTALL_HEADERS=	hdhomerun.h \
+			hdhomerun_channelscan.h \
+			hdhomerun_channels.h \
+			hdhomerun_control.h \
+			hdhomerun_debug.h \
+			hdhomerun_device.h \
+			hdhomerun_device_selector.h \
+			hdhomerun_discover.h \
+			hdhomerun_os.h \
+			hdhomerun_os_posix.h \
+			hdhomerun_os_windows.h \
+			hdhomerun_pkt.h \
+			hdhomerun_sock.h \
+			hdhomerun_types.h \
+			hdhomerun_video.h
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hdhomerun_config ${DESTDIR}${PREFIX}/bin/hdhomerun_config

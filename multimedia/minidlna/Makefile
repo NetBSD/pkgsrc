@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2019/09/15 22:08:33 maya Exp $
+# $NetBSD: Makefile,v 1.37 2019/11/03 17:12:02 rillig Exp $
 
 PKGNAME=	minidlna-1.2.1.20180601
 PKGREVISION=	5
@@ -13,9 +13,9 @@ HOMEPAGE=	http://minidlna.sourceforge.net/
 COMMENT=	DLNA server
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=      yes
+GNU_CONFIGURE=	yes
 EGDIR=		${PREFIX}/share/examples/minidlna
-USE_TOOLS+=     msgfmt autoreconf autoconf automake
+USE_TOOLS+=	msgfmt autoreconf autoconf automake
 
 CONF_FILES=	${EGDIR}/minidlna.conf \
 		${PKG_SYSCONFDIR}/minidlna.conf

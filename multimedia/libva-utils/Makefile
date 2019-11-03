@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/07/15 19:45:40 rjs Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/03 17:12:02 rillig Exp $
 
 DISTNAME=	libva-utils-2.3.0
 CATEGORIES=	multimedia
@@ -22,7 +22,7 @@ SUBST_MESSAGE.getopt=	Fixing getopt_long_only
 SUBST_FILES.getopt+=	encode/*.c
 SUBST_SED.getopt+=	-e 's,getopt_long_only,getopt_long,'
 
-LIBS+=-lm
+LIBS+=	-lm
 
 .include "../../multimedia/libva/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
