@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4727 2019/11/03 11:56:04 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.4728 2019/11/03 12:10:47 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7522,3 +7522,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated multimedia/libdvdread to 6.0.2 [adam 2019-11-03]
 	Updated multimedia/libdvdnav to 6.0.1 [adam 2019-11-03]
 	Updated lang/clang to 9.0.0nb3 [kamil 2019-11-03]
+	Updated devel/lld to 9.0.0nb3 [kamil 2019-11-03]
