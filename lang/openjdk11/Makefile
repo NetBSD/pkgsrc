@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/10/14 07:58:50 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/03 00:37:28 tnn Exp $
 
 DISTNAME=	openjdk-jdk11u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk11-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=battleblow/}
 GITHUB_PROJECT= openjdk-jdk11u
-GITHUB_TAG=     jdk-11.0.5+8-1
-PKGREVISION=	1
+GITHUB_TAG=     jdk-11.0.5+10-1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://openjdk.java.net/
@@ -141,7 +140,7 @@ ${WRKDIR}/cacerts.out:
 		${PREFIX}/sbin/mozilla-rootcerts extract
 	for cert in ${WRKDIR}/cacerts/*.pem; do				\
 		${INFO_MSG} "Importing $$cert" &&			\
-		 ${SETENV} ${CONFIGURE_ENV} LC_ALL=C	\
+		 ${SETENV} ${CONFIGURE_ENV} LC_ALL=C			\
 		  ${ALT_BOOTDIR}/bin/keytool				\
 		  -noprompt						\
 		  -importcert						\
