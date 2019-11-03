@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2019/10/28 14:38:41 he Exp $
+# $NetBSD: Makefile,v 1.123 2019/11/03 19:04:07 rillig Exp $
 
 DISTNAME=	rustc-1.38.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -20,28 +20,28 @@ USE_TOOLS+=		bash ggrep gmake perl:build pkg-config
 # build on 7).  Mark earlier versions as broken.
 BROKEN_ON_PLATFORM+=	NetBSD-[1-7].*-*
 
-CHECK_PORTABILITY_SKIP+=vendor/openssl-src/openssl/.travis-create-release.sh
+CHECK_PORTABILITY_SKIP+=	vendor/openssl-src/openssl/.travis-create-release.sh
 
-HAS_CONFIGURE=		yes
-PYTHON_FOR_BUILD_ONLY=	yes
-PYTHON_VERSIONS_ACCEPTED=27
-CONFIG_SHELL=		${PYTHONBIN}
-CONFIGURE_SCRIPT=	src/bootstrap/configure.py
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--python=${PYTHONBIN}
-CONFIGURE_ARGS+=	--release-channel=stable
-#CONFIGURE_ARGS+=	--enable-local-rust
-CONFIGURE_ARGS+=	--local-rust-root=${RUST_BOOTSTRAP_PATH}
-CONFIGURE_ARGS+=	--enable-extended	# Build and install cargo too.
-CONFIGURE_ARGS+=	--enable-rpath
-CONFIGURE_ARGS+=	--disable-codegen-tests
-CONFIGURE_ARGS+=	--disable-dist-src
-CONFIGURE_ARGS+=	--disable-llvm-static-stdcpp
-CONFIGURE_ARGS+=	--disable-ninja
+HAS_CONFIGURE=			yes
+PYTHON_FOR_BUILD_ONLY=		yes
+PYTHON_VERSIONS_ACCEPTED=	27
+CONFIG_SHELL=			${PYTHONBIN}
+CONFIGURE_SCRIPT=		src/bootstrap/configure.py
+CONFIGURE_ARGS+=		--prefix=${PREFIX}
+CONFIGURE_ARGS+=		--mandir=${PREFIX}/${PKGMANDIR}
+CONFIGURE_ARGS+=		--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=		--python=${PYTHONBIN}
+CONFIGURE_ARGS+=		--release-channel=stable
+#CONFIGURE_ARGS+=		--enable-local-rust
+CONFIGURE_ARGS+=		--local-rust-root=${RUST_BOOTSTRAP_PATH}
+CONFIGURE_ARGS+=		--enable-extended	# Build and install cargo too.
+CONFIGURE_ARGS+=		--enable-rpath
+CONFIGURE_ARGS+=		--disable-codegen-tests
+CONFIGURE_ARGS+=		--disable-dist-src
+CONFIGURE_ARGS+=		--disable-llvm-static-stdcpp
+CONFIGURE_ARGS+=		--disable-ninja
 # XXX: to be enabled in the future
-#CONFIGURE_ARGS+=	--jemalloc-root=${BUILDLINK_PREFIX.jemalloc}/lib
+#CONFIGURE_ARGS+=		--jemalloc-root=${BUILDLINK_PREFIX.jemalloc}/lib
 
 # Use "dist" build target for cross compile of bootstrap
 #BUILD_TARGET=		dist
@@ -67,10 +67,10 @@ BUILD_TARGET=		build
 # the ultimate target to built for, as well as the
 # host the compiler is supposed to run on.
 # Rust's target designation
-#TARGET= 		armv7-unknown-netbsd-eabihf
-#TARGET= 	 	sparc64-unknown-netbsd
-#TARGET= 		powerpc-unknown-netbsd
-#TARGET= 		aarch64-unknown-netbsd
+#TARGET=		armv7-unknown-netbsd-eabihf
+#TARGET=		sparc64-unknown-netbsd
+#TARGET=		powerpc-unknown-netbsd
+#TARGET=		aarch64-unknown-netbsd
 #SCRIPTS=		${WRKDIR}/scripts
 #CONFIGURE_ARGS+=	--host=${TARGET}
 #CONFIGURE_ARGS+=	--target=${TARGET}
@@ -132,7 +132,7 @@ CONFIGURE_ARGS+=	--debuginfo-level-tests=0
 # (X86 needs to go along due to 2-stage build process)
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv7hf) || \
     !empty(TARGET:Marmv7-unknown-netbsd-eabihf)
-CONFIGURE_ARGS+=        --set llvm.targets="ARM;X86"
+CONFIGURE_ARGS+=	--set llvm.targets="ARM;X86"
 .endif
 
 
@@ -358,8 +358,8 @@ do-install:
 	&& ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} \
 		${PYTHONBIN} ./x.py -v install -j ${MAKE_JOBS:U1}
 
-GENERATE_PLIST+=find ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
-		sed 's,${DESTDIR}${PREFIX}/,,' | ${SORT} ;
+GENERATE_PLIST+=	find ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
+			sed 's,${DESTDIR}${PREFIX}/,,' | ${SORT} ;
 
 # Create a relocatable stage2 bootstrap from the bits we just built that can be
 # used to build the next version of rust.  Currently only tested on SmartOS.

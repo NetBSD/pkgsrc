@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/08/11 13:21:21 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/11/03 19:04:01 rillig Exp $
 
 .include "../../lang/go/version.mk"
 
@@ -24,8 +24,8 @@ BUILD_DEPENDS+=	bash>=4.2nb3:../../shells/bash
 TMPDIR?=	/tmp
 BUILDLINK_PASSTHRU_DIRS+= ${TMPDIR}
 
-GOROOT_FINAL=	${PREFIX}/go14
-INSTALLATION_DIRS= go14
+GOROOT_FINAL=		${PREFIX}/go14
+INSTALLATION_DIRS=	go14
 
 MAKE_ENV+=	GOROOT_FINAL=${GOROOT_FINAL:Q}
 MAKE_ENV+=	CGO_ENABLED=0

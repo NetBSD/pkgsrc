@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/09/17 23:46:37 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/03 19:04:05 rillig Exp $
 
 DISTNAME=	byterun
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}-20160218
@@ -14,7 +14,7 @@ LICENSE=	mit
 
 WRKSRC=		${WRKDIR}/${DISTNAME}-${GITHUB_TAG}
 
-DEPENDS+=       ${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 EGG_NAME=	Byterun-1.0
 

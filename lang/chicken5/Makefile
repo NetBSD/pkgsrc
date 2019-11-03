@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/07/06 21:16:59 leot Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/03 19:03:56 rillig Exp $
 
 DISTNAME=	chicken-5.1.0
 PKGREVISION=	1
@@ -28,17 +28,17 @@ BUILD_TARGET=		all
 
 # PLATFORM detection:
 .if !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly"
-PLATFORM=	bsd
+PLATFORM=		bsd
 .elif ${OPSYS} == "Linux"
-PLATFORM=	linux
+PLATFORM=		linux
 .elif ${OPSYS} == "Darwin"
-PLATFORM=	macosx
+PLATFORM=		macosx
 .elif ${OPSYS} == "SunOS"
-PLATFORM=	solaris
+PLATFORM=		solaris
 .elif ${OPSYS} == "Haiku"
-PLATFORM=	haiku
+PLATFORM=		haiku
 .else
-#PLATFORM+=	${OPSYS} == "Interix"
+#PLATFORM+=		${OPSYS} == "Interix"
 # possible choices left: aix android cross-linux-mingw cygwin hurd mingw
 #                        mingw-msys
 PKG_SKIP_REASON+=	"${OPSYS} is not supported"
