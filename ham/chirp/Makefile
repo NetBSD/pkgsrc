@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/07/21 22:25:07 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/03 19:32:06 rillig Exp $
 
 DISTNAME=	chirp-0.4.1
 PKGREVISION=	10
@@ -11,9 +11,9 @@ COMMENT=	Tool for programming Amateur Radio HTs
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	#none
-REPLACE_PYTHON= *.py chirp/*.py chirpui/*.py
+REPLACE_PYTHON=	*.py chirp/*.py chirpui/*.py
 
-DEPENDS+=       ${PYPKGPREFIX}-serial>=2.7:../../comms/py-serial
+DEPENDS+=	${PYPKGPREFIX}-serial>=2.7:../../comms/py-serial
 
 PYTHON_VERSIONS_ACCEPTED=	27 # py-gtk2
 

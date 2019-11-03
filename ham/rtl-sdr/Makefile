@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/02/03 10:48:17 tnn Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/03 19:32:08 rillig Exp $
 
 DISTNAME=		rtl-sdr-0.6.0
 CATEGORIES=		ham
@@ -14,12 +14,12 @@ LICENSE=		gnu-gpl-v2
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		gmake pkg-config
 
-USE_CMAKE=		yes
-CONFIGURE_DIRS=build
-BUILD_DIRS=${CONFIGURE_DIRS}
-CMAKE_ARG_PATH=..
+USE_CMAKE=	yes
+CONFIGURE_DIRS=	build
+BUILD_DIRS=	${CONFIGURE_DIRS}
+CMAKE_ARG_PATH=	..
 
-PKGCONFIG_OVERRIDE+=     librtlsdr.pc.in
+PKGCONFIG_OVERRIDE+=	librtlsdr.pc.in
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
 

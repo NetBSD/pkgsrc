@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/03 13:01:43 asau Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/03 19:32:07 rillig Exp $
 #
 
 DISTNAME=	dpbox-60000
@@ -15,18 +15,18 @@ WRKSRC=		${WRKDIR}/dpbox-6.00.00/source
 USE_TOOLS+=	gmake
 MAKE_FILE=	Makefile.netbsd
 
-MAKE_ENV+=	prefix=${PREFIX:Q}
+MAKE_ENV+=		prefix=${PREFIX:Q}
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 
 .include "../../mk/bsd.prefs.mk"
 
-PKG_SYSCONFDIR.dpbox=${PREFIX}/share/dpbox/conf
+PKG_SYSCONFDIR.dpbox=	${PREFIX}/share/dpbox/conf
 
-DPBOX_CONF_DIR=	${PKG_SYSCONFDIR}
-DPBOX_SPOOL_DIR=/var/spool/dpbox
-FILES_SUBST+=	DPBOX_CONF_DIR=${DPBOX_CONF_DIR:Q} \
-		DPBOX_SPOOL_DIR=${DPBOX_SPOOL_DIR:Q}
-EGDIR=		${PREFIX}/share/examples/${PKGBASE}/conf
+DPBOX_CONF_DIR=		${PKG_SYSCONFDIR}
+DPBOX_SPOOL_DIR=	/var/spool/dpbox
+FILES_SUBST+=		DPBOX_CONF_DIR=${DPBOX_CONF_DIR:Q} \
+			DPBOX_SPOOL_DIR=${DPBOX_SPOOL_DIR:Q}
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}/conf
 
 REQD_DIRS=	${PKG_SYSCONFDIR} \
 		${PKG_SYSCONFDIR}/sf \
