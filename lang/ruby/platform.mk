@@ -1,4 +1,4 @@
-# $NetBSD: platform.mk,v 1.5 2019/05/23 19:23:03 rillig Exp $
+# $NetBSD: platform.mk,v 1.6 2019/11/03 19:04:06 rillig Exp $
 #
 
 #
@@ -32,7 +32,7 @@ SUBST_MESSAGE.conf=	Fixing configuration files.
 #
 CONFIGURE_ENV+=	INSTALL="${INSTALL} ${COPY}" \
 		INSTALL_DATA= INSTALL_PROGRAM= INSTALL_SCRIPT=
-CONFIGURE_ENV+= ac_cv_prog_PKG_CONFIG=""
+CONFIGURE_ENV+=	ac_cv_prog_PKG_CONFIG=""
 
 #
 # prevent unwanted mkdir recorded in rbconfig.rb

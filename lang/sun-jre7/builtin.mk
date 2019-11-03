@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2014/09/03 12:47:37 tron Exp $
+# $NetBSD: builtin.mk,v 1.4 2019/11/03 19:04:09 rillig Exp $
 
 BUILTIN_PKG:=	sun-jre7
 
@@ -38,7 +38,7 @@ IS_BUILTIN.sun-jre7=	yes
 IS_BUILTIN.sun-jre7=	no
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.sun-jre7
+MAKEVARS+=		IS_BUILTIN.sun-jre7
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -48,13 +48,13 @@ MAKEVARS+=	IS_BUILTIN.sun-jre7
     !empty(IS_BUILTIN.sun-jre7:M[yY][eE][sS]) && \
     empty(JAVAVM7:M__nonexistent__)
 
-BUILTIN_VERSION.sun-jre7!= ${JAVAVM7:Q}/bin/java -version 2>&1 | \
-	${AWK} -F \" '{print $$2; exit}' | \
+BUILTIN_VERSION.sun-jre7!=	${JAVAVM7:Q}/bin/java -version 2>&1 | \
+				${AWK} -F \" '{print $$2; exit}' | \
 	${AWK} '{sub(/^1\./,"");sub(/_/,".");print $$1}'
 
 BUILTIN_PKG.sun-jre7=	sun-jre7-${BUILTIN_VERSION.sun-jre7}
 .endif
-MAKEVARS+=	BUILTIN_PKG.sun-jre7
+MAKEVARS+=		BUILTIN_PKG.sun-jre7
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -81,7 +81,7 @@ USE_BUILTIN.sun-jre7!=						\
 .    endif
 .  endif  # PREFER.sun-jre7
 .endif
-MAKEVARS+=	USE_BUILTIN.sun-jre7
+MAKEVARS+=		USE_BUILTIN.sun-jre7
 
 ###
 ### The section below only applies if we are not including this file

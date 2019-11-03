@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2018/01/02 00:17:35 rillig Exp $
+# $NetBSD: builtin.mk,v 1.4 2019/11/03 19:04:04 rillig Exp $
 
 BUILTIN_PKG:=	openjdk8
 
@@ -19,7 +19,7 @@ IS_BUILTIN.openjdk8=	yes
 IS_BUILTIN.openjdk8=	no
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.openjdk8
+MAKEVARS+=		IS_BUILTIN.openjdk8
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -28,9 +28,9 @@ MAKEVARS+=	IS_BUILTIN.openjdk8
 .if !defined(BUILTIN_PKG.openjdk8) && \
     !empty(IS_BUILTIN.openjdk8:M[yY][eE][sS])
 BUILTIN_VERSION.openjdk8!=	${OJDK8} -version 2>&1 | ${SED} -Ee 's:^[^0-9]*([0-9._]+)$$:\1:' -e 's/_/./g' -e 's/([0-9]+)\.([0-9]+)\.([0-9]+)\.([0-9]+)/\1.\2.\4/'
-BUILTIN_PKG.openjdk8=	openjdk8-${BUILTIN_VERSION.openjdk8}
+BUILTIN_PKG.openjdk8=		openjdk8-${BUILTIN_VERSION.openjdk8}
 .endif
-MAKEVARS+=	BUILTIN_PKG.openjdk8
+MAKEVARS+=			BUILTIN_PKG.openjdk8
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -57,7 +57,7 @@ USE_BUILTIN.openjdk8!=							\
 .    endif
 .  endif
 .endif
-MAKEVARS+=	USE_BUILTIN.openjdk8
+MAKEVARS+=		USE_BUILTIN.openjdk8
 
 ###
 ### The section below only applies if we are not including this file

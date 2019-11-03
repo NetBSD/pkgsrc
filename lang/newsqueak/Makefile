@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/09/03 08:53:09 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/03 19:04:03 rillig Exp $
 
 DISTNAME=	newsqueak
 PKGNAME=	newsqueak-20000211
@@ -10,8 +10,8 @@ HOMEPAGE=	https://en.wikipedia.org/wiki/Newsqueak
 COMMENT=	Newsqueak: a language for communicating with mice
 LICENSE=	public-domain
 
-WRKSRC=		${WRKDIR}
-USE_TOOLS+=	yacc
+WRKSRC=			${WRKDIR}
+USE_TOOLS+=		yacc
 INSTALLATION_DIRS=	bin share/squint/include
 
 do-install:

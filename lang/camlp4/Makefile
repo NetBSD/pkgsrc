@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/10/09 08:57:14 msaitoh Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/03 19:03:56 rillig Exp $
 
 GITHUB_PROJECT=	camlp4
 DISTNAME=	${GITHUB_PROJECT}-4.08+1
@@ -16,9 +16,9 @@ MAKE_JOBS_SAFE=	no
 
 .include "../../mk/ocaml.mk"
 
-BUILD_TARGET=	byte camlp4/META
+BUILD_TARGET=		byte camlp4/META
 .if ${OCAML_USE_OPT_COMPILER} == "yes"
-BUILD_TARGET+=	native
+BUILD_TARGET+=		native
 .endif
 INSTALLATION_DIRS+=	${OCAML_SITELIBDIR}/camlp4
 

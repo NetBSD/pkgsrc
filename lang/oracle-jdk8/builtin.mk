@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2015/05/30 09:51:11 ryoon Exp $
+# $NetBSD: builtin.mk,v 1.2 2019/11/03 19:04:04 rillig Exp $
 
 BUILTIN_PKG:=	oracle-jdk8
 
@@ -13,7 +13,7 @@ BUILTIN_FIND_FILES.JDK8=	\
 ### program to find the default 1.8 JDK if it exists.
 ###
 .if ${OPSYS} == "Darwin"
-_JAVA_HOME_ANSWER!=	\
+_JAVA_HOME_ANSWER!=		\
 	if [ -x /usr/libexec/java_home ]; then \
 		result=`/usr/libexec/java_home -v 1.8 2> /dev/null`; \
 		if [ $$? -eq 0 ]; then \
@@ -38,7 +38,7 @@ IS_BUILTIN.oracle-jdk8=	yes
 IS_BUILTIN.oracle-jdk8=	no
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.oracle-jdk8
+MAKEVARS+=		IS_BUILTIN.oracle-jdk8
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -48,8 +48,8 @@ MAKEVARS+=	IS_BUILTIN.oracle-jdk8
     !empty(IS_BUILTIN.oracle-jdk8:M[yY][eE][sS]) && \
     empty(JDK8:M__nonexistent__)
 
-BUILTIN_VERSION.oracle-jdk8!= ${JDK8} -version 2>&1 | \
-	${AWK} '{print $$2; exit}' | \
+BUILTIN_VERSION.oracle-jdk8!=	${JDK8} -version 2>&1 | \
+				${AWK} '{print $$2; exit}' | \
 	${AWK} '{sub(/^1\./,"");sub(/_/,".");print $$1}'
 
 BUILTIN_PKG.oracle-jdk8=	oracle-jdk8-${BUILTIN_VERSION.oracle-jdk8}

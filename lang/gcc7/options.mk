@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2019/09/08 14:47:52 maya Exp $
+# $NetBSD: options.mk,v 1.6 2019/11/03 19:04:00 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${GCC_PKGNAME}
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran \
@@ -30,9 +30,9 @@ _GNU_INCLUDE_DIR=	/usr/include/gnu
 .  endif
 .  if exists(${_GNU_INCLUDE_DIR}/stubs-64.h) && \
      !exists(${_GNU_INCLUDE_DIR}/stubs-32.h)
-MULTILIB_SUPPORTED=No
+MULTILIB_SUPPORTED=	No
 .  else
-MULTILIB_SUPPORTED=Yes
+MULTILIB_SUPPORTED=	Yes
 .  endif
 .endif
 .if !empty(MULTILIB_SUPPORTED:M[Yy][Ee][Ss])
@@ -70,24 +70,24 @@ CONFIGURE_ARGS+=	--disable-multilib
 ###
 .if empty(PKG_OPTIONS:Malways-libgcc)
 
-.for _libdir_ in ${_OPSYS_LIB_DIRS}
-.  if exists(${_libdir_})
+.  for _libdir_ in ${_OPSYS_LIB_DIRS}
+.    if exists(${_libdir_})
 BASE_LIBGCC!=			find ${_libdir_} -name libgcc_s.so
 BASE_LIBGCC_MATCH_STRING!=	${ECHO} ${BASE_LIBGCC} ${GCC7_DIST_VERSION} | \
 				${AWK} -f ../../mk/scripts/larger_symbol_version.awk
-.    if ${BASE_LIBGCC_MATCH_STRING:Mnewer}
+.      if ${BASE_LIBGCC_MATCH_STRING:Mnewer}
 DELETE_INSTALLED_LIBGCC=	yes
+.      endif
 .    endif
-.  endif
-.endfor
+.  endfor
 
-.if ${DELETE_INSTALLED_LIBGCC:Uno}
+.  if ${DELETE_INSTALLED_LIBGCC:Uno}
 post-install:	delete-installed-libgcc
 
 delete-installed-libgcc:
 	${FIND} ${DESTDIR} -name 'libgcc_s.so*' -delete
 
-.endif
+.  endif
 
 .endif
 

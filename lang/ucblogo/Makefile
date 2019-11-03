@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2017/01/05 17:22:09 roy Exp $
+# $NetBSD: Makefile,v 1.30 2019/11/03 19:04:09 rillig Exp $
 
 DISTNAME=	ucblogo
 PKGNAME=	${DISTNAME}-6.0
@@ -15,17 +15,17 @@ COMMENT=	Brian Harvey's logo language interpreter
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
-MAKE_FILE=	makefile
-BUILD_TARGET=	# empty
-GNU_CONFIGURE=	yes
+MAKE_FILE=		makefile
+BUILD_TARGET=		# empty
+GNU_CONFIGURE=		yes
 # otherwise ./configure might find wxgtk
 CONFIGURE_ARGS+=	--wx-disable
 # otherwise ./configure guesses -L incorrectly
-LIBS+=		-L${X11BASE}/lib
+LIBS+=			-L${X11BASE}/lib
 
-USE_TOOLS+=	makeinfo
+USE_TOOLS+=		makeinfo
 INSTALLATION_DIRS=	info
-INFO_FILES=	yes
+INFO_FILES=		yes
 
 post-extract:
 	${RM} ${WRKSRC}/config.cache

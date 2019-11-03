@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2019/07/10 10:38:18 nia Exp $
+# $NetBSD: Makefile,v 1.36 2019/11/03 19:04:06 rillig Exp $
 
 PKGNAME=		racket-minimal-6.12
 DISTNAME=		${PKGNAME_NOREV}-src
@@ -27,12 +27,12 @@ WRKSRC=		${WRKDIR}/racket-${PKGVERSION_NOREV}
 GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		src
 CONFIGURE_ARGS=		--enable-pthread
-USE_TOOLS+=				paxctl
+USE_TOOLS+=		paxctl
 USE_LANGUAGES=		c c++
 MAKE_JOBS_SAFE=		no
 UNLIMIT_RESOURCES=	datasize
 OVERRIDE_DIRDEPTH=	3
-MAKE_ENV+=	"PAXCTL=${TOOLS_PLATFORM.paxctl}"
+MAKE_ENV+=		"PAXCTL=${TOOLS_PLATFORM.paxctl}"
 
 CPPFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
 LDFLAGS.DragonFly+=	-rdynamic

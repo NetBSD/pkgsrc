@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2016/09/06 20:54:00 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2019/11/03 19:04:08 rillig Exp $
 #
 # Convert the version number as follows 2d2 -> 2.4.2, where the d is
 # changed to a 4, representing the 4th letter.
@@ -27,10 +27,10 @@ INFO_FILES=	yes
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
-SCM_MODULES+=	sc2 ramap dynl edline gsubr ioext posix record rgx socket
-SCM_MODULES+=	unix  continue scm scmmain findexec script time repl scl eval
-SCM_MODULES+=	sys subr debug unif rope unexelf
-COMPILED_INITS+=init_edline
+SCM_MODULES+=		sc2 ramap dynl edline gsubr ioext posix record rgx socket
+SCM_MODULES+=		unix  continue scm scmmain findexec script time repl scl eval
+SCM_MODULES+=		sys subr debug unif rope unexelf
+COMPILED_INITS+=	init_edline
 
 .include "options.mk"
 

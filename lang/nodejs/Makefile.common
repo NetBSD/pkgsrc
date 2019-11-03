@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2019/01/18 16:24:37 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.28 2019/11/03 19:04:03 rillig Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs6/Makefile
 # used by lang/nodejs8/Makefile
@@ -42,7 +42,7 @@ REPLACE_PYTHON+=	tools/genv8constants.py
 REPLACE_PYTHON+=	tools/gyp/pylib/gyp/flock_tool.py
 
 .if ${OPSYS} == "NetBSD"
-BUILD_DEPENDS+=	lockf-[0-9]*:../../sysutils/lockf
+BUILD_DEPENDS+=		lockf-[0-9]*:../../sysutils/lockf
 BUILDLINK_TRANSFORM+=	rm:-ldl
 .endif
 

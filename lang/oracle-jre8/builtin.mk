@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2015/05/30 09:49:43 ryoon Exp $
+# $NetBSD: builtin.mk,v 1.2 2019/11/03 19:04:04 rillig Exp $
 
 BUILTIN_PKG:=	oracle-jre8
 
@@ -38,7 +38,7 @@ IS_BUILTIN.oracle-jre8=	yes
 IS_BUILTIN.oracle-jre8=	no
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.oracle-jre8
+MAKEVARS+=		IS_BUILTIN.oracle-jre8
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -48,8 +48,8 @@ MAKEVARS+=	IS_BUILTIN.oracle-jre8
     !empty(IS_BUILTIN.oracle-jre8:M[yY][eE][sS]) && \
     empty(JAVAVM8:M__nonexistent__)
 
-BUILTIN_VERSION.oracle-jre8!= ${JAVAVM8:Q}/bin/java -version 2>&1 | \
-	${AWK} -F \" '{print $$2; exit}' | \
+BUILTIN_VERSION.oracle-jre8!=	${JAVAVM8:Q}/bin/java -version 2>&1 | \
+				${AWK} -F \" '{print $$2; exit}' | \
 	${AWK} '{sub(/^1\./,"");sub(/_/,".");print $$1}'
 
 BUILTIN_PKG.oracle-jre8=	oracle-jre8-${BUILTIN_VERSION.oracle-jre8}
@@ -81,7 +81,7 @@ USE_BUILTIN.oracle-jre8!=						\
 .    endif
 .  endif  # PREFER.oracle-jre8
 .endif
-MAKEVARS+=	USE_BUILTIN.oracle-jre8
+MAKEVARS+=			USE_BUILTIN.oracle-jre8
 
 ###
 ### The section below only applies if we are not including this file

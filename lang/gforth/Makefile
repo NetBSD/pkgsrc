@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2019/08/11 13:21:20 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2019/11/03 19:04:00 rillig Exp $
 
 DISTNAME=		gforth-0.7.3
 PKGREVISION=		5
@@ -60,9 +60,9 @@ PLIST_SUBST+=	KERNEL_FI=${KERNEL_FI_cmd:sh:Q}
 # demand at least gcc 4.3 for arm.
 .include "../../mk/bsd.prefs.mk"
 .if !empty(MACHINE_ARCH:Marm*) || !empty(MACHINE_ARCH:Mearm*)
-.if !empty(PKGSRC_COMPILER:Mgcc)
+.  if !empty(PKGSRC_COMPILER:Mgcc)
 GCC_REQD+=	4.3
-.endif
+.  endif
 .endif
 
 # XXX Need test.
