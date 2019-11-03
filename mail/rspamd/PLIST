@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2019/06/21 15:00:12 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.17 2019/11/03 18:19:32 triaxx Exp $
 bin/rspamadm
 bin/rspamadm-${PKGVERSION}
 bin/rspamc
@@ -7,22 +7,27 @@ bin/rspamd
 bin/${PKGNAME}
 bin/rspamd_stats
 lib/rspamd/librspamd-actrie.so
+lib/rspamd/librspamd-ev.so
+lib/rspamd/librspamd-kann.so
+lib/rspamd/librspamd-replxx.so
 lib/rspamd/librspamd-server.so
 man/man1/rspamadm.1
 man/man1/rspamc.1
 man/man8/rspamd.8
-share/examples/rspamd/2tld.inc
 share/examples/rspamd/actions.conf
 share/examples/rspamd/cgp.inc
 share/examples/rspamd/common.conf
 share/examples/rspamd/composites.conf
-share/examples/rspamd/dmarc_whitelist.inc
 share/examples/rspamd/groups.conf
 share/examples/rspamd/logging.inc
-share/examples/rspamd/maillist.inc
+share/examples/rspamd/maps.d/dmarc_whitelist.inc
+share/examples/rspamd/maps.d/maillist.inc
+share/examples/rspamd/maps.d/mid.inc
+share/examples/rspamd/maps.d/mime_types.inc
+share/examples/rspamd/maps.d/redirectors.inc
+share/examples/rspamd/maps.d/spf_dkim_whitelist.inc
+share/examples/rspamd/maps.d/surbl-whitelist.inc
 share/examples/rspamd/metrics.conf
-share/examples/rspamd/mid.inc
-share/examples/rspamd/mime_types.inc
 share/examples/rspamd/modules.conf
 share/examples/rspamd/modules.d/antivirus.conf
 share/examples/rspamd/modules.d/arc.conf
@@ -42,7 +47,6 @@ share/examples/rspamd/modules.d/fuzzy_check.conf
 share/examples/rspamd/modules.d/greylist.conf
 share/examples/rspamd/modules.d/hfilter.conf
 share/examples/rspamd/modules.d/history_redis.conf
-share/examples/rspamd/modules.d/ip_score.conf
 share/examples/rspamd/modules.d/maillist.conf
 share/examples/rspamd/modules.d/metadata_exporter.conf
 share/examples/rspamd/modules.d/metric_exporter.conf
@@ -53,6 +57,7 @@ share/examples/rspamd/modules.d/multimap.conf
 share/examples/rspamd/modules.d/mx_check.conf
 share/examples/rspamd/modules.d/neural.conf
 share/examples/rspamd/modules.d/once_received.conf
+share/examples/rspamd/modules.d/p0f.conf
 share/examples/rspamd/modules.d/phishing.conf
 share/examples/rspamd/modules.d/ratelimit.conf
 share/examples/rspamd/modules.d/rbl.conf
@@ -67,11 +72,8 @@ share/examples/rspamd/modules.d/spf.conf
 share/examples/rspamd/modules.d/surbl.conf
 share/examples/rspamd/modules.d/trie.conf
 share/examples/rspamd/modules.d/url_redirector.conf
-share/examples/rspamd/modules.d/url_reputation.conf
-share/examples/rspamd/modules.d/url_tags.conf
 share/examples/rspamd/modules.d/whitelist.conf
 share/examples/rspamd/options.inc
-share/examples/rspamd/redirectors.inc
 share/examples/rspamd/rspamd.conf
 share/examples/rspamd/scores.d/fuzzy_group.conf
 share/examples/rspamd/scores.d/headers_group.conf
@@ -86,9 +88,7 @@ share/examples/rspamd/scores.d/subject_group.conf
 share/examples/rspamd/scores.d/surbl_group.conf
 share/examples/rspamd/scores.d/whitelist_group.conf
 share/examples/rspamd/settings.conf
-share/examples/rspamd/spf_dkim_whitelist.inc
 share/examples/rspamd/statistic.conf
-share/examples/rspamd/surbl-whitelist.inc
 share/examples/rspamd/worker-controller.inc
 share/examples/rspamd/worker-fuzzy.inc
 share/examples/rspamd/worker-normal.inc
@@ -149,6 +149,7 @@ share/rspamd/lualib/fun.lua
 share/rspamd/lualib/global_functions.lua
 share/rspamd/lualib/lpegre.lua
 share/rspamd/lualib/lua_auth_results.lua
+share/rspamd/lualib/lua_bayes_learn.lua
 share/rspamd/lualib/lua_cfg_transform.lua
 share/rspamd/lualib/lua_clickhouse.lua
 share/rspamd/lualib/lua_dkim_tools.lua
@@ -158,9 +159,15 @@ share/rspamd/lualib/lua_ffi/init.lua
 share/rspamd/lualib/lua_ffi/spf.lua
 share/rspamd/lualib/lua_fuzzy.lua
 share/rspamd/lualib/lua_ical.lua
+share/rspamd/lualib/lua_lexer.lua
+share/rspamd/lualib/lua_magic/heuristics.lua
+share/rspamd/lualib/lua_magic/init.lua
+share/rspamd/lualib/lua_magic/patterns.lua
+share/rspamd/lualib/lua_magic/types.lua
 share/rspamd/lualib/lua_maps.lua
+share/rspamd/lualib/lua_maps_expressions.lua
 share/rspamd/lualib/lua_meta.lua
-share/rspamd/lualib/lua_nn.lua
+share/rspamd/lualib/lua_mime.lua
 share/rspamd/lualib/lua_redis.lua
 share/rspamd/lualib/lua_scanners/clamav.lua
 share/rspamd/lualib/lua_scanners/common.lua
@@ -169,13 +176,20 @@ share/rspamd/lualib/lua_scanners/fprot.lua
 share/rspamd/lualib/lua_scanners/icap.lua
 share/rspamd/lualib/lua_scanners/init.lua
 share/rspamd/lualib/lua_scanners/kaspersky_av.lua
+share/rspamd/lualib/lua_scanners/kaspersky_se.lua
 share/rspamd/lualib/lua_scanners/oletools.lua
+share/rspamd/lualib/lua_scanners/p0f.lua
+share/rspamd/lualib/lua_scanners/razor.lua
 share/rspamd/lualib/lua_scanners/savapi.lua
 share/rspamd/lualib/lua_scanners/sophos.lua
 share/rspamd/lualib/lua_scanners/spamassassin.lua
 share/rspamd/lualib/lua_scanners/vadesecure.lua
-share/rspamd/lualib/lua_selectors.lua
-share/rspamd/lualib/lua_squeeze_rules.lua
+share/rspamd/lualib/lua_selectors/extractors.lua
+share/rspamd/lualib/lua_selectors/init.lua
+share/rspamd/lualib/lua_selectors/maps.lua
+share/rspamd/lualib/lua_selectors/transforms.lua
+share/rspamd/lualib/lua_settings.lua
+share/rspamd/lualib/lua_smtp.lua
 share/rspamd/lualib/lua_stat.lua
 share/rspamd/lualib/lua_tcp_sync.lua
 share/rspamd/lualib/lua_util.lua
@@ -229,6 +243,7 @@ share/rspamd/plugins/multimap.lua
 share/rspamd/plugins/mx_check.lua
 share/rspamd/plugins/neural.lua
 share/rspamd/plugins/once_received.lua
+share/rspamd/plugins/p0f.lua
 share/rspamd/plugins/phishing.lua
 share/rspamd/plugins/ratelimit.lua
 share/rspamd/plugins/rbl.lua
@@ -240,9 +255,8 @@ share/rspamd/plugins/spamassassin.lua
 share/rspamd/plugins/spamtrap.lua
 share/rspamd/plugins/trie.lua
 share/rspamd/plugins/url_redirector.lua
-share/rspamd/plugins/url_reputation.lua
-share/rspamd/plugins/url_tags.lua
 share/rspamd/plugins/whitelist.lua
+share/rspamd/rules/bitcoin.lua
 share/rspamd/rules/forwarding.lua
 share/rspamd/rules/headers_checks.lua
 share/rspamd/rules/html.lua
@@ -253,7 +267,6 @@ share/rspamd/rules/regexp/compromised_hosts.lua
 share/rspamd/rules/regexp/headers.lua
 share/rspamd/rules/regexp/misc.lua
 share/rspamd/rules/regexp/upstream_spam_filters.lua
-share/rspamd/rules/rspamd.classifiers.lua
 share/rspamd/rules/rspamd.lua
 share/rspamd/rules/subject_checks.lua
 share/rspamd/www/README.md
@@ -281,10 +294,9 @@ share/rspamd/www/js/lib/bootstrap.min.js
 share/rspamd/www/js/lib/d3.min.js
 share/rspamd/www/js/lib/d3evolution.min.js
 share/rspamd/www/js/lib/d3pie.min.js
-share/rspamd/www/js/lib/domReady.js
 share/rspamd/www/js/lib/footable.min.js
 share/rspamd/www/js/lib/humanize.min.js
-share/rspamd/www/js/lib/jquery-3.3.1.min.js
+share/rspamd/www/js/lib/jquery-3.4.1.min.js
 share/rspamd/www/js/lib/jquery.stickytabs.min.js
 share/rspamd/www/js/lib/nprogress.min.js
 share/rspamd/www/js/lib/require.min.js
@@ -292,3 +304,4 @@ share/rspamd/www/js/lib/visibility.min.js
 share/rspamd/www/js/main.js
 share/rspamd/www/plugins.txt
 share/rspamd/www/react-index.html
+@pkgdir etc/rspamd
