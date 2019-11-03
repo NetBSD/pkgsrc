@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/11/03 18:50:18 triaxx Exp $
+# $NetBSD: Makefile,v 1.12 2019/11/03 22:28:30 wiz Exp $
 
 DISTNAME=	baikal-0.6.0
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=5.3.1:../../databases/php-pdo
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_sqlite>=5.3.1:../../databases/php-pdo_sqlite
+
+PHP_VERSIONS_INCOMPATIBLE=	56 # as of 0.6.0
 
 WRKSRC=		${WRKDIR}/baikal
 
