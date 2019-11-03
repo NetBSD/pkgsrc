@@ -1,6 +1,6 @@
-# $NetBSD: builtin.mk,v 1.4 2016/09/17 05:20:34 richard Exp $
+# $NetBSD: builtin.mk,v 1.5 2019/11/03 19:26:20 rillig Exp $
 
-BUILTIN_PKG:=	fuse
+BUILTIN_PKG:=		fuse
 PKGCONFIG_BASE.fuse=	/usr
 PKGCONFIG_FILE.fuse=	/usr/lib/pkgconfig/fuse.pc
 PKGCONFIG_FILE.fuse+=	/usr/lib${LIBABISUFFIX}/pkgconfig/fuse.pc

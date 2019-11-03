@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2017/10/08 07:53:05 sevan Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/03 19:26:21 rillig Exp $
 
 DISTNAME=	openafs-1.6.21-src
 PKGNAME=	${DISTNAME:C/-src//}
@@ -18,7 +18,7 @@ CONFLICTS+=	heimdal-[0-9]*
 CONFLICTS+=	lwp-[0-9]*
 CONFLICTS+=	rx-[0-9]*
 
-MAKE_JOBS_SAFE=no
+MAKE_JOBS_SAFE=	no
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		lex
@@ -29,7 +29,7 @@ RCD_SCRIPTS+=		bosserver
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
-USE_GNU_CONFIGURE_HOST= no
+USE_GNU_CONFIGURE_HOST=	no
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
@@ -42,7 +42,7 @@ OWN_DIRS_PERMS+=	${VARBASE}/openafs/db ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 700
 
 FILES_SUBST+=		HOSTNAME_CMD=${HOSTNAME_CMD:Q}
 
-BUILD_DEFS+= VARBASE
+BUILD_DEFS+=	VARBASE
 
 # attempt to future-proof configuration
 pre-patch:

@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2013/11/23 11:31:47 obache Exp $
+# $NetBSD: builtin.mk,v 1.3 2019/11/03 19:26:22 rillig Exp $
 
 BUILTIN_PKG:=	perfuse
 
@@ -17,7 +17,7 @@ IS_BUILTIN.perfuse=	no
 IS_BUILTIN.perfuse=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.perfuse
+MAKEVARS+=		IS_BUILTIN.perfuse
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -44,4 +44,4 @@ USE_BUILTIN.perfuse!=							\
 .    endif
 .  endif  # PREFER.perfuse
 .endif
-MAKEVARS+=	USE_BUILTIN.perfuse
+MAKEVARS+=		USE_BUILTIN.perfuse
