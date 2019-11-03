@@ -1,0 +1,29 @@
+$NetBSD: patch-tools_nb.lld_CMakeLists.txt,v 1.1 2019/11/03 12:11:27 kamil Exp $
+
+[LLD] Add NetBSD support as a new flavor of LLD (nb.lld)
+https://reviews.llvm.org/D69755
+
+--- tools/nb.lld/CMakeLists.txt.orig	2019-11-03 11:46:29.308376407 +0000
++++ tools/nb.lld/CMakeLists.txt
+@@ -0,0 +1,21 @@
++set(LLVM_TARGET_DEFINITIONS Options.td)
++tablegen(LLVM Options.inc -gen-opt-parser-defs)
++add_public_tablegen_target(SLLDOptionsTableGen)
++
++set(LLVM_LINK_COMPONENTS
++  Support
++  Option
++  Target
++  ${LLVM_TARGETS_TO_BUILD}
++  )
++
++add_lld_tool(nb.lld
++  nb.lld.cpp
++
++  DEPENDS
++  SLLDOptionsTableGen
++  )
++
++install(TARGETS nb.lld
++  RUNTIME DESTINATION bin
++  )
