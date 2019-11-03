@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/08/11 13:22:00 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/03 17:04:27 rillig Exp $
 
 DISTNAME=	teseq-1.1.1
 PKGREVISION=	3
@@ -16,7 +16,7 @@ USE_LANGUAGES=	c99
 USE_TOOLS+=	perl:run
 
 CONFIGURE_ENV+=	AUTOCONF=true # files pre-built, not needed
-CONFIGURE_ENV+= MAKEINFO=true
+CONFIGURE_ENV+=	MAKEINFO=true
 CONFIGURE_ENV+=	HELP2MAN=true
 
 INFO_FILES=	yes
@@ -24,7 +24,7 @@ INFO_FILES=	yes
 REPLACE_PERL=	reseq.in
 REPLACE_SH=	tests/run.in
 
-SUBST_CLASSES+=	infodir
+SUBST_CLASSES+=		infodir
 SUBST_FILES.infodir=	Makefile.in
 SUBST_MESSAGE.infodir=	Fixing info directory pathname
 SUBST_SED.infodir=	-e 's,@infodir@,${PREFIX}/${PKGINFODIR},g'

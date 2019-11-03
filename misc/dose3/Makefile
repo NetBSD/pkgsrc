@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/11/12 16:10:25 jaapb Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/03 17:04:21 rillig Exp $
 
 DISTNAME=	dose3-5.0.1
 PKGREVISION=	5
@@ -10,9 +10,9 @@ HOMEPAGE=	https://gforge.inria.fr/projects/dose/
 COMMENT=	Package repository analysis toolkit
 LICENSE=	gnu-lgpl-v3
 
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	aclocal automake autoconf gmake pod2man
-MAKE_JOBS_SAFE=	no
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		aclocal automake autoconf gmake pod2man
+MAKE_JOBS_SAFE=		no
 OCAML_USE_FINDLIB=	yes
 
 .include "../../mk/ocaml.mk"

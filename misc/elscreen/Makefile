@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2017/09/29 12:40:28 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2019/11/03 17:04:21 rillig Exp $
 
 DISTNAME=	elscreen-1.4.6
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -26,7 +26,7 @@ USE_LANGUAGES+=	c
 
 NO_BUILD=	yes
 
-EMACS_BUILDLINK=# empty
+EMACS_BUILDLINK=	# empty
 
 # Emacs 24 or later is not supported. Try wip/elscreen-current
 # instead.
@@ -34,8 +34,8 @@ EMACS_VERSIONS_ACCEPTED= \
 	emacs21 emacs21nox \
 	emacs20
 
-INSTALLATION_DIRS+= ${EMACS_LISPPREFIX}/elscreen
-INSTALLATION_DIRS+= share/doc/elscreen
+INSTALLATION_DIRS+=	${EMACS_LISPPREFIX}/elscreen
+INSTALLATION_DIRS+=	share/doc/elscreen
 
 do-install:
 	${INSTALL_DATA} ${WRKDIR}/*/*.el ${DESTDIR}${EMACS_LISPPREFIX}/elscreen

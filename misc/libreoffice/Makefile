@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.210 2019/11/02 13:12:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.211 2019/11/03 17:04:23 rillig Exp $
 
 VERREL=		6.3.3
 VERRC=		2
@@ -41,7 +41,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 CHECK_SHLIBS_SUPPORTED=	no
 # configure will be regenerated.
-CHECK_PORTABILITY_SKIP=configure
+CHECK_PORTABILITY_SKIP=	configure
 
 NOT_PAX_MPROTECT_SAFE+=	${PKGNAME_NOREV}/lib/libreoffice/program/soffice.bin
 
@@ -142,7 +142,7 @@ DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 # is a no-go with normal pkgsrc wrappers.
 # dmake is slowly beeing removed from the LibreOffice build process
 # and this option will hopefully become unneeded in the future
-WRAPPER_SKIP_TRANSFORM=yes
+WRAPPER_SKIP_TRANSFORM=	yes
 
 LDFLAGS+=		-lboost_system
 
@@ -237,8 +237,8 @@ LO_PROGRAMS+=		lofromtemplate loimpress lomath loweb lowriter
 LO_DESKTOP_FILES=	calc.desktop draw.desktop impress.desktop math.desktop \
 			startcenter.desktop writer.desktop
 
-#OBJDIR=			pkgsrcbuild
-#CONFIGURE_DIRS=		${OBJDIR}
+#OBJDIR=		pkgsrcbuild
+#CONFIGURE_DIRS=	${OBJDIR}
 CONFIGURE_SCRIPT=	${WRKSRC}/autogen.sh
 
 #LD_LIBRARY_PATH+=	${WRKSRC}/instdir/sdk/lib:${WRKSRC}/instdir/ure/lib:${WRKSRC}/instdir/program
@@ -284,10 +284,10 @@ do-install:
 		${MKDIR} ${d}
 .endfor
 
-UNO_PATH=${PREFIX}/${PKGNAME}/lib/libreoffice/program
+UNO_PATH=	${PREFIX}/${PKGNAME}/lib/libreoffice/program
 
-BUILD_DEFS+=   UNO_PATH
-BUILD_DEFS+=   PYTHONBIN
+BUILD_DEFS+=	UNO_PATH
+BUILD_DEFS+=	PYTHONBIN
 
 post-install:
 .for f in ${LO_PROGRAMS}

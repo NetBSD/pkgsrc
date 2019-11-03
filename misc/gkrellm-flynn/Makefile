@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2019/07/21 22:25:22 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2019/11/03 17:04:21 rillig Exp $
 #
 
 DISTNAME=	gkrellflynn-0.8
@@ -11,9 +11,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://bax.comlab.uni-rostock.de/en/projekte/gkrellflynn.html
 COMMENT=	GKrellM2 plugin that shows system load with a DooM marine
 
-USE_TOOLS+=	gmake pkg-config
-BUILD_TARGET=	gkrellm2
-INSTALL_TARGET=	installgkrellm2
+USE_TOOLS+=		gmake pkg-config
+BUILD_TARGET=		gkrellm2
+INSTALL_TARGET=		installgkrellm2
 INSTALLATION_DIRS=	lib/gkrellm2/plugins
 
 .include "../../sysutils/gkrellm/buildlink3.mk"
