@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/10/10 12:27:25 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/03 10:39:17 rillig Exp $
 
 DISTNAME=	liblangtag-0.6.3
 CATEGORIES=	devel
@@ -10,13 +10,13 @@ HOMEPAGE=	http://tagoh.bitbucket.org/liblangtag/
 COMMENT=	RFC 5646 language tag interface library
 LICENSE=	gnu-lgpl-v3 OR mpl-2.0
 
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config
-USE_LIBTOOL=	yes
-USE_LANGUAGES+=	c
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		pkg-config
+USE_LIBTOOL=		yes
+USE_LANGUAGES+=		c
 PKGCONFIG_OVERRIDE+=	liblangtag.pc.in
 
-#TEST_TARGET=   check
+#TEST_TARGET=	check
 #.include "../../devel/check/buildlink3.mk"
 
 .include "../../devel/glib2/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2017/03/17 16:26:30 mef Exp $
+# $NetBSD: options.mk,v 1.4 2019/11/03 10:39:07 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bugzilla
 
@@ -11,7 +11,7 @@ PKG_SUPPORTED_OPTIONS+=	bugzilla-imagemagick bugzilla-patchviewer
 PKG_SUPPORTED_OPTIONS+=	bugzilla-descriptions bugzilla-xmlrpc
 PKG_SUPPORTED_OPTIONS+=	bugzilla-modperl radius
 PKG_SUPPORTED_OPTIONS+=	mysql pgsql oracle ldap sqlite
-PKG_SUGGESTED_OPTIONS=	                        sqlite
+PKG_SUGGESTED_OPTIONS=	sqlite
 
 .include "../../mk/bsd.options.mk"
 

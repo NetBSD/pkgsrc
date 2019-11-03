@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/10/12 08:39:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/03 10:39:08 rillig Exp $
 
 DISTNAME=	cgen-20131001
 CATEGORIES=	devel
@@ -25,7 +25,7 @@ INFO_FILES=	yes
 BUILD_TARGET=	info
 INSTALL_TARGET=	install-info
 
-CGEN_DIR=	share/cgen
+CGEN_DIR=		share/cgen
 INSTALLATION_DIRS+=	${CGEN_DIR}/cgen ${CGEN_DIR}/cpu
 
 post-install:

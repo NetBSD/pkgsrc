@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2018/07/04 13:40:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.59 2019/11/03 10:39:13 rillig Exp $
 
 DISTNAME=	gnustep-make-2.6.2
 PKGREVISION=	2
@@ -55,11 +55,11 @@ SUBST_FILES.maninfo=	${WRKSRC}/FilesystemLayouts/fhs
 SUBST_SED.maninfo=	-e 's|share/man|${PKGMANDIR}|'
 SUBST_SED.maninfo+=	-e 's|share/info|${PKGINFODIR}|'
 
-SUBST_CLASSES+=         unwrapping
-SUBST_STAGE.unwrapping= post-build
-SUBST_MESSAGE.unwrapping=Unwrapping wrapper scripts.
-SUBST_FILES.unwrapping= TestFramework/gnustep-tests
-SUBST_SED.unwrapping=   -e 's|${TOOLS_DIR}|${PREFIX}|g'
+SUBST_CLASSES+=			unwrapping
+SUBST_STAGE.unwrapping=		post-build
+SUBST_MESSAGE.unwrapping=	Unwrapping wrapper scripts.
+SUBST_FILES.unwrapping=		TestFramework/gnustep-tests
+SUBST_SED.unwrapping=		-e 's|${TOOLS_DIR}|${PREFIX}|g'
 
 INSTALLATION_DIRS+=	share/GNUstep/Library
 INSTALLATION_DIRS+=	share/GNUstep/Makefiles/${GNUSTEP_ARCH}
