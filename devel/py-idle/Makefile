@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2017/09/03 08:53:08 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2019/11/03 10:18:28 rillig Exp $
 
 PKGNAME=	${PYPKGPREFIX}-idle-${PY_DISTVERSION}
 CATEGORIES=	devel python
@@ -32,8 +32,8 @@ IDLE_NAME=	idle
 .endif
 
 EXTRACT_ELEMENTS=	${PYSUBDIR}/Tools/scripts/${IDLE_NAME}
-REPLACE_PYTHON= Tools/scripts/${IDLE_NAME}
-NO_BUILD=	yes
+REPLACE_PYTHON=		Tools/scripts/${IDLE_NAME}
+NO_BUILD=		yes
 INSTALLATION_DIRS=	bin
 
 do-install:
