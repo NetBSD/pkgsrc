@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/08/11 13:21:02 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/11/03 19:28:47 rillig Exp $
 #
 
 DISTNAME=	asciiquarium_1.1
@@ -14,11 +14,11 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	p5-Term-Animation-[0-9]*:../../devel/p5-Term-Animation
 
-USE_LANGUAGES=	# none
-USE_TOOLS+=	perl:run
-NO_BUILD=	yes
-REPLACE_PERL+=	asciiquarium
-INSTALLATION_DIRS+= bin
+USE_LANGUAGES=		# none
+USE_TOOLS+=		perl:run
+NO_BUILD=		yes
+REPLACE_PERL+=		asciiquarium
+INSTALLATION_DIRS+=	bin
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/asciiquarium ${DESTDIR}${PREFIX}/bin
