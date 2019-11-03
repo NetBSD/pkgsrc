@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/08/11 13:22:21 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2019/11/03 11:45:47 rillig Exp $
 
 DISTNAME=	Net-OpenID-Common-1.20
 PKGNAME=	p5-${DISTNAME}
@@ -15,8 +15,8 @@ DEPENDS+=	p5-Crypt-DH-GMP>=0.00011:../../security/p5-Crypt-DH-GMP
 
 REPLACE_PERL=	lib/Net/OpenID/URIFetch.pm
 
-PERL5_PACKLIST=         auto/Net/OpenID/Common/.packlist
-USE_LANGUAGES=          # none
+PERL5_PACKLIST=		auto/Net/OpenID/Common/.packlist
+USE_LANGUAGES=		# none
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

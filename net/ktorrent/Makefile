@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2019/08/22 12:23:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.94 2019/11/03 11:45:38 rillig Exp $
 
 DISTNAME=	ktorrent-${KTORRENT_VER}
 PKGREVISION=	19
@@ -6,7 +6,7 @@ CATEGORIES=	net kde
 #MASTER_SITES=	http://ktorrent.pwsp.net/downloads/${KTORRENT_VER}/
 EXTRACT_SUFX=	.tar.bz2
 
-BUILD_DEPENDS+= automoc4>=0.9.87:../../devel/automoc4
+BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 
 .include "../../net/libktorrent/Makefile.version"
 
@@ -24,7 +24,7 @@ DEPENDS+=	oxygen-icons-[0-9]*:../../graphics/oxygen-icons
 CFLAGS+=		-DENABLE_KIO_MAGNET=1
 SCRDIR=			share/kde/apps/ktorrent/scripts
 
-CHECK_INTERPRETER_SKIP= ${SCRDIR}/auto_remove/auto_remove.py \
+CHECK_INTERPRETER_SKIP=	${SCRDIR}/auto_remove/auto_remove.py \
 			${SCRDIR}/auto_resume/auto_resume.py \
 			${SCRDIR}/email_notifications/email_notifications.py \
 			${SCRDIR}/tracker_groups/tracker_groups.py

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2019/08/11 13:22:16 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2019/11/03 11:45:47 rillig Exp $
 
 DISTNAME=	Net-Amazon-S3-0.85
 PKGNAME=	p5-${DISTNAME}
@@ -40,9 +40,9 @@ TEST_DEPENDS+=	p5-Test-LoadAllModules-[0-9]*:../../devel/p5-Test-LoadAllModules
 
 REPLACE_PERL=	bin/s3cl
 
-PERL5_PACKLIST= auto/Net/Amazon/S3/.packlist
+PERL5_PACKLIST=	auto/Net/Amazon/S3/.packlist
 
 post-install:
-		(cd ${DESTDIR}; ${FIND} . -name \*.pm \( -perm 0555  -or -perm 0755 \) -exec ${CHMOD} -x '{}' \; )
+	(cd ${DESTDIR}; ${FIND} . -name \*.pm \( -perm 0555  -or -perm 0755 \) -exec ${CHMOD} -x '{}' \; )
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

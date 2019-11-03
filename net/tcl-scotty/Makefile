@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2018/05/29 12:56:55 he Exp $
+# $NetBSD: Makefile,v 1.47 2019/11/03 11:45:54 rillig Exp $
 #
 
 DISTNAME=	scotty-${DIST_VERS}
@@ -20,11 +20,11 @@ DIST_VERS=	2.1.11
 CONFIGURE_DIRS=	unix
 BUILD_DIRS=	unix
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--with-tcl-config=${BUILDLINK_PREFIX.tcl}/lib	\
-		--enable-multicast				\
-		--enable-gdmo --without-tk-config
-CONFIGURE_ENV+=	TARGET=scotty
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-tcl-config=${BUILDLINK_PREFIX.tcl}/lib	\
+			--enable-multicast				\
+			--enable-gdmo --without-tk-config
+CONFIGURE_ENV+=		TARGET=scotty
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -35,7 +35,7 @@ USE_TOOLS+=	lex yacc
 
 PLIST_SUBST+=	MACHINE="${MACHINE}"
 
-INSTALL_TARGET= tnm-install install-man sinstall
+INSTALL_TARGET=	tnm-install install-man sinstall
 
 SPECIAL_PERMS+=	bin/ntping ${SETUID_ROOT_PERMS}
 SPECIAL_PERMS+=	bin/straps ${SETUID_ROOT_PERMS}

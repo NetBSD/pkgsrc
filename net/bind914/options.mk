@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2019/06/14 16:14:05 taca Exp $
+# $NetBSD: options.mk,v 1.3 2019/11/03 11:45:30 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bind914
 PKG_SUPPORTED_OPTIONS=	bind-dig-sigchase bind-xml-statistics-server
@@ -23,9 +23,9 @@ PKG_SUGGESTED_OPTIONS+=	threads
 .endif
 
 .if ${OPSYS} == "NetBSD"
-.if !empty(OS_VERSION:M[8-9].*)
+.  if !empty(OS_VERSION:M[8-9].*)
 PKG_SUGGESTED_OPTIONS+=	blacklist
-.endif
+.  endif
 .endif
 
 .include "../../mk/bsd.options.mk"

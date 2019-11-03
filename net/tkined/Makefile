@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2018/03/12 11:17:23 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2019/11/03 11:45:55 rillig Exp $
 #
 
 DISTNAME=	scotty-2.1.11
@@ -11,11 +11,11 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ibr.cs.tu-bs.de/projects/nm/tkined/welcome.html.orig
 COMMENT=	Graphical network discovery and monitoring tool based on scotty
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--with-tcl-config=${BUILDLINK_PREFIX.tcl}/lib	\
-		--with-tk-config=${BUILDLINK_PREFIX.tk}/lib	\
-		--enable-multicast --enable-gdmo
-CONFIGURE_ENV+=	TARGET=tkined
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-tcl-config=${BUILDLINK_PREFIX.tcl}/lib	\
+			--with-tk-config=${BUILDLINK_PREFIX.tk}/lib	\
+			--enable-multicast --enable-gdmo
+CONFIGURE_ENV+=		TARGET=tkined
 
 USE_LIBTOOL=	yes
 

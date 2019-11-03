@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2019/09/02 13:19:48 adam Exp $
+# $NetBSD: Makefile,v 1.56 2019/11/03 11:45:31 rillig Exp $
 
 .include "Makefile.common"
 
@@ -12,7 +12,7 @@ DEPENDS+=	${PYPKGPREFIX}-cursespanel-[0-9]*:../../devel/py-cursespanel
 
 USE_TOOLS+=	msgfmt xgettext msgmerge
 
-SUBST_CLASSES+=         sha
+SUBST_CLASSES+=		sha
 SUBST_MESSAGE.sha=	Fixing references to deprecated sha module.
 SUBST_STAGE.sha=	pre-configure
 SUBST_FILES.sha=	BitTorrent/ConvertedMetainfo.py

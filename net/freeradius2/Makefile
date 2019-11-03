@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2019/08/11 13:22:08 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2019/11/03 11:45:34 rillig Exp $
 
 DISTNAME=	freeradius-server-2.2.10
 PKGNAME=	${DISTNAME:S/-server//}
@@ -80,7 +80,7 @@ SUBST_MESSAGE.config=	Fixing configuration files.
 
 .include "options.mk"
 
-EGFILES=acct_users attrs attrs.access_reject attrs.accounting_response \
+EGFILES=	acct_users attrs attrs.access_reject attrs.accounting_response \
 	attrs.pre-proxy certs/README certs/Makefile certs/bootstrap \
 	certs/ca.cnf certs/client.cnf certs/server.cnf \
 	certs/xpextensions clients.conf dictionary eap.conf experimental.conf \
@@ -117,8 +117,8 @@ EGFILES=acct_users attrs attrs.access_reject attrs.accounting_response \
 	sql/postgresql/schema.sql \
 	sql/postgresql/update_radacct_group_trigger.sql \
 	sql/postgresql/voip-postpaid.conf sqlippool.conf templates.conf users
-EGDIRS=	certs modules sql sql/mssql sql/mysql sql/oracle \
-	sql/postgresql sites-available sites-enabled
+EGDIRS=		certs modules sql sql/mssql sql/mysql sql/oracle \
+		sql/postgresql sites-available sites-enabled
 
 .for f in ${EGFILES}
 CONF_FILES_PERMS+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f} \

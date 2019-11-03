@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2018/03/12 11:17:22 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2019/11/03 11:45:44 rillig Exp $
 
 DISTNAME=	ns-src-2.35
 PKGNAME=	ns-2.35
@@ -16,7 +16,7 @@ USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
 PTHREAD_OPTS+=	require
 # Perl is only needed if you want to run the validation tests.
-#USE_TOOLS+=		perl
+#USE_TOOLS+=	perl
 
 CONFIGURE_ARGS+=	LIBS="`${CONFIG_SHELL} -c '. ${TCLCONFIG_SH}; ${ECHO} $$TCL_LIBS'`"
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}

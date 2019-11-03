@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/08/22 12:23:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/03 11:45:36 rillig Exp $
 
 DISTNAME=	grive2-0.4.1
 PKGREVISION=	13
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/vitalif/Grive2
 COMMENT=	Independent open source implementation of Google Drive client
 LICENSE=	gnu-gpl-v2
 
-GITHUB_TAG=v${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config

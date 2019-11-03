@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2019/08/11 13:22:30 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2019/11/03 11:45:53 rillig Exp $
 #
 
 DISTNAME=	spread-src-3.17.3
@@ -11,13 +11,13 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.spread.org/
 COMMENT=	Group communication system providing a number of messaging services
 
-WRKSRC=		${WRKDIR}/${DISTNAME}
-USE_GCC_RUNTIME=yes
-USE_TOOLS+=	perl
-GNU_CONFIGURE=	YES
+WRKSRC=			${WRKDIR}/${DISTNAME}
+USE_GCC_RUNTIME=	yes
+USE_TOOLS+=		perl
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--includedir=${PREFIX:Q}/include/spread
 CONFIGURE_ARGS+=	--with-pid-dir=${RUNTIME_DIR:Q}
-MAKE_FLAGS+=	LD=${CC:Q}
+MAKE_FLAGS+=		LD=${CC:Q}
 
 BUILD_DEFS+=	SPREAD_DIR
 

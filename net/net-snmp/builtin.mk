@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2006/07/29 16:48:27 adam Exp $
+# $NetBSD: builtin.mk,v 1.2 2019/11/03 11:45:44 rillig Exp $
 
 BUILTIN_PKG:=	net-snmp
 
@@ -17,7 +17,7 @@ IS_BUILTIN.net-snmp=	no
 IS_BUILTIN.net-snmp=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.net-snmp
+MAKEVARS+=		IS_BUILTIN.net-snmp
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -35,7 +35,7 @@ BUILTIN_VERSION.net-snmp!=				\
 	' ${H_NETSNMP:Q}
 BUILTIN_PKG.net-snmp=	net-snmp-${BUILTIN_VERSION.net-snmp}
 .endif
-MAKEVARS+=	BUILTIN_PKG.net-snmp
+MAKEVARS+=		BUILTIN_PKG.net-snmp
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -62,4 +62,4 @@ USE_BUILTIN.net-snmp!=							\
 .    endif
 .  endif
 .endif
-MAKEVARS+=	USE_BUILTIN.net-snmp
+MAKEVARS+=		USE_BUILTIN.net-snmp

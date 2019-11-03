@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2017/01/19 18:52:19 agc Exp $
+# $NetBSD: Makefile,v 1.46 2019/11/03 11:45:33 rillig Exp $
 
 DISTNAME=	delegate9.9.1
 PKGNAME=	delegate-9.9.1
@@ -22,8 +22,8 @@ DELEGATE_MANAGER?=	root@localhost
 RCD_SCRIPTS=		delegated
 FILES_SUBST+=		ADMIN=${DELEGATE_MANAGER:Q}
 
-OWN_DIRS_PERMS+=${VARBASE}/spool/delegate/cache ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 1777
-OWN_DIRS_PERMS+=${VARBASE}/spool/delegate-nobody nobody nobody 755
+OWN_DIRS_PERMS+=	${VARBASE}/spool/delegate/cache ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 1777
+OWN_DIRS_PERMS+=	${VARBASE}/spool/delegate-nobody nobody nobody 755
 
 INSTALLATION_DIRS=	sbin share/doc/delegate
 

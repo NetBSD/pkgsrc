@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2014/02/02 15:56:29 rodent Exp $
+# $NetBSD: options.mk,v 1.2 2019/11/03 11:45:29 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.SDL2_net
 PKG_SUPPORTED_OPTIONS=	static tests
@@ -9,7 +9,7 @@ PKG_SUGGESTED_OPTIONS+=	static
 .if !empty(PKG_OPTIONS:Mstatic)
 CONFIGURE_ARGS+=	--enable-static=yes
 .else
-CONFIGURE_ARGS+=        --enable-static=no
+CONFIGURE_ARGS+=	--enable-static=no
 .endif
 
 .if !empty(PKG_OPTIONS:Mtests)

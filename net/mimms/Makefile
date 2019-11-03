@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/09/02 13:19:49 adam Exp $
+# $NetBSD: Makefile,v 1.13 2019/11/03 11:45:41 rillig Exp $
 
 DISTNAME=	mimms-3.2.1
 PKGREVISION=	1
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 # default is at lang/python/distutils.mk, but
 # drop the third digit from DISTNAME. Is it too tricky ?
-EGG_NAME?=       ${DISTNAME:C/-([^0-9])/_\1/gC/([0-9])\.([0-9])\.([0-9])/\1.\2/}
+EGG_NAME?=	${DISTNAME:C/-([^0-9])/_\1/gC/([0-9])\.([0-9])\.([0-9])/\1.\2/}
 
 USE_LANGUAGES=	# none
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 3.2

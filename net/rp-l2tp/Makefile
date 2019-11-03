@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/09/04 18:08:26 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/03 11:45:52 rillig Exp $
 #
 
 DISTNAME=	rp-l2tp-0.3
@@ -12,7 +12,7 @@ COMMENT=	User-space implementation of layer 2 tunnelling protocol
 
 NOT_FOR_PLATFORM+=	Interix-*-* # no userland protocol stack support
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 USE_TOOLS+=		gmake
 

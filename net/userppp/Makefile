@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/10/23 17:19:16 asau Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/03 11:45:57 rillig Exp $
 
 DISTNAME=		ppp-001107.src
 PKGNAME=		userppp-001107
@@ -17,14 +17,14 @@ MANCOMPRESSED_IF_MANZ=	YES
 
 PKG_SYSCONFSUBDIR=	ppp
 
-CFLAGS+=	-fno-strict-aliasing
+CFLAGS+=		-fno-strict-aliasing
 # fix build on -current for wrong is* arguments (char instead of unsigned char)
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
 SUBST_CLASSES+=		cfgdir
 SUBST_STAGE.cfgdir=	do-configure
 SUBST_FILES.cfgdir=	ppp/ppp.8 pppctl/pppctl.8
-SUBST_SED.cfgdir= 	-e "s,/etc/ppp,${PKG_SYSCONFDIR},"
+SUBST_SED.cfgdir=	-e "s,/etc/ppp,${PKG_SYSCONFDIR},"
 SUBST_SED.cfgdir+=	-e "s,/usr/share,${PREFIX}/share,"
 
 .include "../../mk/bsd.prefs.mk"

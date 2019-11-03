@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2018/03/12 11:17:24 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/03 11:45:57 rillig Exp $
 
 DISTNAME=	vnstat-1.14
 PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	http://humdi.net/vnstat/
-#DISTFILES=${DISTNAME}.tar.gz
+#DISTFILES=	${DISTNAME}.tar.gz
 
 MAINTAINER=	sborrill@NetBSD.org
 HOMEPAGE=	http://humdi.net/vnstat/
@@ -32,7 +32,7 @@ SUBST_FILES.fix-etcpath+=	man/vnstat.1 man/vnstatd.1
 SUBST_FILES.fix-etcpath+=	man/vnstati.1
 SUBST_SED.fix-etcpath=		-e 's,/etc/,${PKG_SYSCONFDIR}/,g'
 
-CONF_FILES= ${VNSTAT_EGDIR}/vnstat.conf ${VNSTAT_CONFIG}
+CONF_FILES=	${VNSTAT_EGDIR}/vnstat.conf ${VNSTAT_CONFIG}
 
 RCD_SCRIPTS=	vnstatd
 

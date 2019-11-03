@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.26 2019/08/11 13:22:30 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2019/11/03 11:45:54 rillig Exp $
 
-DISTNAME=	tigervnc-1.9.0
-PKGREVISION=	3
-CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GITHUB:=TigerVNC/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+DISTNAME=		tigervnc-1.9.0
+PKGREVISION=		3
+CATEGORIES=		net
+MASTER_SITES=		${MASTER_SITE_GITHUB:=TigerVNC/}
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 XORG_SERVER_FILE=	xorg-server-1.17.2
 SITES.${XORG_SERVER_FILE}.tar.bz2=	${MASTER_SITE_XORG:=xserver/}
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${XORG_SERVER_FILE}.tar.bz2
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${XORG_SERVER_FILE}.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tigervnc.org/
@@ -29,14 +29,14 @@ INSTALL_DIRS=	. unix/xserver/hw/vnc
 
 LDFLAGS+=	${BUILDLINK_LDADD.gettext}
 
-CONFIGURE_ENV+=	ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
-OVERRIDE_GNU_CONFIG_SCRIPTS= yes
-LIBTOOL_OVERRIDE=unix/xserver/libtool
+CONFIGURE_ENV+=			ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
+OVERRIDE_GNU_CONFIG_SCRIPTS=	yes
+LIBTOOL_OVERRIDE=		unix/xserver/libtool
 
 SUBST_CLASSES+=		hpath
 SUBST_STAGE.hpath=	pre-configure
 SUBST_MESSAGE.hpath=	fixing hardcoded paths
-SUBST_FILES.hpath=      unix/vncserver
+SUBST_FILES.hpath=	unix/vncserver
 SUBST_SED.hpath+=	-e 's|/usr/local/vnc/classes|${PREFIX}/share/vnc/classes|g'
 SUBST_VARS.hpath+=	PREFIX X11BASE
 

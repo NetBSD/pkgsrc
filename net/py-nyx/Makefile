@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/10/23 01:42:34 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/03 11:45:51 rillig Exp $
 
 .include "../../net/py-nyx/Makefile.common"
 
@@ -16,9 +16,9 @@ USE_LANGUAGES=	# none
 
 DEPENDS+=	${PYPKGPREFIX}-stem>=1.7.0:../../devel/py-stem
 
-REPLACE_PYTHON+=run_nyx
-REPLACE_PYTHON+=run_tests.py
-REPLACE_PYTHON+=setup.py
+REPLACE_PYTHON+=	run_nyx
+REPLACE_PYTHON+=	run_tests.py
+REPLACE_PYTHON+=	setup.py
 
 do-test:
 	cd ${WRKSRC} && ./run_tests.py

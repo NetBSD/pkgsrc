@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2011/10/06 08:48:00 dholland Exp $
+# $NetBSD: builtin.mk,v 1.2 2019/11/03 11:45:37 rillig Exp $
 
 BUILTIN_PKG:=	hesiod
 
@@ -19,7 +19,7 @@ IS_BUILTIN.hesiod=	no
 IS_BUILTIN.hesiod=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.hesiod
+MAKEVARS+=		IS_BUILTIN.hesiod
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -36,15 +36,15 @@ _BLTN_HESIOD_300!=	\
 	${GREP} -c hesiod_init ${H_HESIOD} || ${TRUE}
 
 .  if ${_BLTN_HESIOD_302} == "1"
-BUILTIN_VERSION.hesiod=		3.0.2
+BUILTIN_VERSION.hesiod=	3.0.2
 .  elif ${_BLTN_HESIOD_300} == "1"
-BUILTIN_VERSION.hesiod=		3.0.0
+BUILTIN_VERSION.hesiod=	3.0.0
 .  else
-BUILTIN_VERSION.hesiod=		2.0.0
+BUILTIN_VERSION.hesiod=	2.0.0
 .  endif
 BUILTIN_PKG.hesiod=	hesiod-${BUILTIN_VERSION.hesiod}
 .endif
-MAKEVARS+=	BUILTIN_PKG.hesiod
+MAKEVARS+=		BUILTIN_PKG.hesiod
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -71,4 +71,4 @@ USE_BUILTIN.hesiod!=							\
 .    endif
 .  endif  # PREFER.hesiod
 .endif
-MAKEVARS+=	USE_BUILTIN.hesiod
+MAKEVARS+=		USE_BUILTIN.hesiod

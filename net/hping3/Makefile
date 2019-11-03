@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/05/23 19:23:09 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2019/11/03 11:45:37 rillig Exp $
 #
 
 DISTNAME=		hping3-alpha-2
@@ -13,7 +13,7 @@ COMMENT=		Command-line oriented TCP/IP packet assembler/analyzer
 LICENSE=		gnu-gpl-v2 AND original-bsd
 
 SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=      pre-configure
+SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	Makefile.in configure
 SUBST_VARS.paths=	PREFIX
 
