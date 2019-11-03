@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2019/09/02 13:19:41 adam Exp $
+# $NetBSD: Makefile,v 1.36 2019/11/03 10:39:08 rillig Exp $
 
 DISTNAME=	Codeville-0.8.0
 PKGNAME=	codeville-0.8.0
@@ -11,8 +11,8 @@ HOMEPAGE=	http://codeville.org/
 COMMENT=	Distributed revision control system
 LICENSE=	modified-bsd
 
-REPLACE_PYTHON=		*.py
-REPLACE_PYTHON+=	*/*.py
+REPLACE_PYTHON=			*.py
+REPLACE_PYTHON+=		*/*.py
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.8.0
 
 BUILD_DEFS+=		VARBASE

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2019/09/02 13:19:36 adam Exp $
+# $NetBSD: Makefile,v 1.40 2019/11/03 10:39:09 rillig Exp $
 
 DISTNAME=	cvs2svn-2.3.0
 PKGREVISION=	3
@@ -13,12 +13,12 @@ DEPENDS+=	subversion-base-[0-9]*:../../devel/subversion-base
 
 CONFLICTS+=	py*-subversion<1.0.1
 
-PYDISTUTILSPKG=			yes
-REPLACE_PYTHON=		run-tests.py cvs2svn_rcsparse/run-tests.py \
-				cvs2svn_rcsparse/parse_rcs_file.py
+PYDISTUTILSPKG=	yes
+REPLACE_PYTHON=	run-tests.py cvs2svn_rcsparse/run-tests.py \
+			cvs2svn_rcsparse/parse_rcs_file.py
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 2.3.0
-#USE_TOOLS+=			gtar
-#EXTRACT_USING=			gtar
+#USE_TOOLS+=	gtar
+#EXTRACT_USING=	gtar
 
 # XXX cvs2svn depends on sort(1) with '-T' option. A dependency and a patch
 # to resort on GNU sort from coreutils may be required.

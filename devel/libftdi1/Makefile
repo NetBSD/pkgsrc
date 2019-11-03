@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/09/02 13:19:40 adam Exp $
+# $NetBSD: Makefile,v 1.34 2019/11/03 10:39:16 rillig Exp $
 
 DISTNAME=	libftdi1-1.1
 PKGREVISION=	15
@@ -19,10 +19,10 @@ USE_LANGUAGES=	c c++
 
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 1.0
 
-BUILD_DEPENDS+=libusb1-[0-9]*:../../devel/libusb1
+BUILD_DEPENDS+=		libusb1-[0-9]*:../../devel/libusb1
 # It is better off to have doxygen, but
 # clang segfaults while packaging print/luatex
-#BUILD_DEPENDS+=doxygen-[0-9]*:../../devel/doxygen
+#BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 
 PKGCONFIG_OVERRIDE+=	libftdi1.pc.in
 PKGCONFIG_OVERRIDE+=	libftdipp1.pc.in

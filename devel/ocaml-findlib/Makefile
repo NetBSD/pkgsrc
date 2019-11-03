@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2019/07/31 09:07:00 jaapb Exp $
+# $NetBSD: Makefile,v 1.46 2019/11/03 10:39:22 rillig Exp $
 
 DISTNAME=		findlib-1.8.1
 PKGNAME=		ocaml-${DISTNAME}
@@ -34,7 +34,7 @@ CONFIGURE_ARGS+=	-config ${PKG_SYSCONFDIR}/ocamlfind.conf
 CONFIGURE_ARGS+=	-sitelib ${PREFIX}/${OCAML_SITELIBDIR}
 CONFIGURE_ARGS+=	-no-camlp4
 
-BUILD_TARGET=		all
+BUILD_TARGET=	all
 .if ${OCAML_USE_OPT_COMPILER} == "yes"
 BUILD_TARGET+=	opt
 .endif
