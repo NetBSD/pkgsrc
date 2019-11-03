@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2019/09/02 13:19:44 adam Exp $
+# $NetBSD: Makefile,v 1.46 2019/11/03 17:04:25 rillig Exp $
 
 DISTNAME=	orca-2.32.1
 PKGREVISION=	2
@@ -23,15 +23,15 @@ DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 DEPENDS+=	gnome-speech>=0.4.25:../../audio/gnome-speech
 DEPENDS+=	gnome-mag>=0.16.2:../../x11/gnome-mag
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	intltool pkg-config gmake msgfmt
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		intltool pkg-config gmake msgfmt
 USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 PY_PATCHPLIST=	yes
 
-PYTHON_VERSIONS_ACCEPTED=	 27 # py-ORBit, py-gnome2, py-gtk2
+PYTHON_VERSIONS_ACCEPTED=	27 # py-ORBit, py-gnome2, py-gtk2
 
 .include "../../mk/bsd.prefs.mk"
 .if ${X11_TYPE} == "modular" || !exists(${X11BASE}/bin/xmodmap)

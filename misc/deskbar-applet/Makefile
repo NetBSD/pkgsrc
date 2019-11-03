@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.123 2019/09/02 13:19:44 adam Exp $
+# $NetBSD: Makefile,v 1.124 2019/11/03 17:04:20 rillig Exp $
 
 DISTNAME=	deskbar-applet-2.32.0
 PKGREVISION=	62
@@ -22,8 +22,8 @@ GCONF_SCHEMAS=		deskbar-applet.schemas
 
 PYTHON_VERSIONS_ACCEPTED=	27 # py-ORBit via py-gnome2, py-gtk2
 
-REPLACE_PYTHON=		deskbar/deskbar-applet.py
-PY_PATCHPLIST=			yes
+REPLACE_PYTHON=	deskbar/deskbar-applet.py
+PY_PATCHPLIST=	yes
 
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
 

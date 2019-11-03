@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2017/07/14 12:56:41 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2019/11/03 17:04:21 rillig Exp $
 
 DISTNAME=	fep
 PKGNAME=	fep-1.0
@@ -10,13 +10,13 @@ MAINTAINER=	nobu@psrc.isac.co.jp
 COMMENT=	General purpose front end for command line editing
 LICENSE=	fep-license
 
-RESTRICTED=	Do not redistribute for a fee.
-NO_SRC_ON_CDROM=${RESTRICTED}
-NO_BIN_ON_CDROM=${RESTRICTED}
+RESTRICTED=		Do not redistribute for a fee.
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
-WRKSRC=		${WRKDIR}
-MANCOMPRESSED=	yes
-INSTALLATION_DIRS+= bin ${PKGMANDIR}/man1
+WRKSRC=			${WRKDIR}
+MANCOMPRESSED=		yes
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 .include "../../mk/compiler.mk"
 
