@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2017/02/09 18:16:07 scole Exp $
+# $NetBSD: options.mk,v 1.3 2019/11/03 19:26:22 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squashfs
 PKG_SUPPORTED_OPTIONS=	zlib lz4 lzo xz xattr
@@ -60,9 +60,9 @@ BUILD_MAKE_FLAGS+=	XATTR_SUPPORT=0
 # if default compressor specified (e.g. "bmake COMP_DEFAULT=xz")
 # use that, else use gzip, else use first on list not including xattr
 .if empty(COMP_DEFAULT)
-.if !empty(PKG_OPTIONS:Mzlib)
+.  if !empty(PKG_OPTIONS:Mzlib)
 BUILD_MAKE_FLAGS+=	COMP_DEFAULT=gzip
-.else
+.  else
 BUILD_MAKE_FLAGS+=	COMP_DEFAULT=${SQUASH_COMPRESSORS:Nxattr:[1]}
-.endif
+.  endif
 .endif
