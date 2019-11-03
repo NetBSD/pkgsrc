@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.40 2019/10/24 14:39:37 taca Exp $
+# $NetBSD: gem.mk,v 1.41 2019/11/03 19:04:06 rillig Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -183,7 +183,7 @@ _RUBY_PRINT_PLIST_GEM+=	/${GEM_NAME:S/./[.]/g}[.](gem|gemspec)$$/ \
 	{ gsub(/${PKGVERSION_NOREV:S|/|\\/|g}[.]gem/, "$${PKGVERSION}.gem"); }
 .if !empty(GEM_EXTSDIR)
 _RUBY_PRINT_PLIST_GEM+=	/^${GEM_EXTSDIR:S|/|\\/|g}/ \
-		{ gsub(/${GEM_EXTSDIR:S|/|\\/|g}/, "$${GEM_EXTSDIR}"); \
+			{ gsub(/${GEM_EXTSDIR:S|/|\\/|g}/, "$${GEM_EXTSDIR}"); \
 			print; next; }
 .endif
 _RUBY_PRINT_PLIST_GEM+=	/^${GEM_LIBDIR:S|/|\\/|g}/ \
@@ -194,7 +194,7 @@ _RUBY_PRINT_PLIST_GEM+=	/^${GEM_HOME:S|/|\\/|g}/ \
 			{ gsub(/${GEM_HOME:S|/|\\/|g}/, "$${GEM_HOME}"); \
 			print; next; }
 _RUBY_PRINT_PLIST_GEM+=	/^${RUBY_GEM_BASE:S|/|\\/|g}/ \
-		{ gsub(/${RUBY_GEM_BASE:S|/|\\/|g}/, "$${RUBY_GEM_BASE}"); \
+			{ gsub(/${RUBY_GEM_BASE:S|/|\\/|g}/, "$${RUBY_GEM_BASE}"); \
 			print; next; }
 
 .include "../../lang/ruby/gem-extract.mk"
@@ -263,12 +263,12 @@ _RUBYGEM_OPTIONS+=	--no-document
 .endif
 .if !empty(CONFIGURE_ARGS) || !empty(RUBY_EXTCONF_ARGS)
 _RUBYGEM_OPTIONS+=	--
-.if !empty(RUBY_EXTCONF_ARGS)
+.  if !empty(RUBY_EXTCONF_ARGS)
 _RUBYGEM_OPTIONS+=	${RUBY_EXTCONF_ARGS}
-.endif
-.if !empty(CONFIGURE_ARGS)
+.  endif
+.  if !empty(CONFIGURE_ARGS)
 _RUBYGEM_OPTIONS+=	--build-args ${CONFIGURE_ARGS}
-.endif
+.  endif
 .endif
 
 RUBYGEM_INSTALL_ROOT_OPTION=	--install-root ${RUBYGEM_INSTALL_ROOT}
@@ -292,7 +292,7 @@ _gem-build-install-root-check:
 .PHONY: _gem-build-cleanbuild
 _gem-build-cleanbuild:
 	@${STEP_MSG} "Cleaning intermediate gem build files"
-.if !empty(GEM_CLEANBUILD)
+.  if !empty(GEM_CLEANBUILD)
 	${RUN} cd ${RUBYGEM_INSTALL_ROOT}${PREFIX}/${GEM_LIBDIR} &&	\
 	find . -print | sort -r |					\
 	while read file; do						\
@@ -312,8 +312,8 @@ _gem-build-cleanbuild:
 			rm -f $$file;					\
 		fi;							\
 	done
-.endif
-.if !empty(GEM_EXTSDIR) && !empty(GEM_CLEANBUILD_EXTENSIONS)
+.  endif
+.  if !empty(GEM_EXTSDIR) && !empty(GEM_CLEANBUILD_EXTENSIONS)
 	${RUN} \
 	if test ! -d ${RUBYGEM_INSTALL_ROOT}${PREFIX}/${GEM_EXTSDIR}; then \
 		:; \
@@ -324,7 +324,7 @@ _gem-build-cleanbuild:
 			rm -f $$f; \
 		done; \
 	fi
-.endif
+.  endif
 .endif
 
 ###

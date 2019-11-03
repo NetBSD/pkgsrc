@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2019/10/24 11:52:20 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/03 19:04:02 rillig Exp $
 
 DISTNAME=	libcxx-9.0.0.src
 PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
-MASTER_SITES=   http://releases.llvm.org/${PKGVERSION_NOREV}/
+MASTER_SITES=	http://releases.llvm.org/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

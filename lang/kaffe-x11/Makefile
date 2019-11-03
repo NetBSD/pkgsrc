@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.53 2019/07/21 22:25:14 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2019/11/03 19:04:02 rillig Exp $
 #
 
 .include "../../lang/kaffe/Makefile.common"
 
-PKGNAME=    	${DISTNAME:S/kaffe/kaffe-x11/}
+PKGNAME=	${DISTNAME:S/kaffe/kaffe-x11/}
 PKGREVISION=	37
 
-COMMENT+=   (AWT support through X11)
+COMMENT+=	(AWT support through X11)
 
-CONFIGURE_ARGS+=  --with-kaffe-x-awt
-CONFIGURE_ARGS+=  --enable-gtk-peer
-CONFIGURE_ARGS+=  --with-x
-CONFIGURE_ARGS+=  --without-esd
-CONFIGURE_ARGS+=  --disable-esdtest
+CONFIGURE_ARGS+=	--with-kaffe-x-awt
+CONFIGURE_ARGS+=	--enable-gtk-peer
+CONFIGURE_ARGS+=	--with-x
+CONFIGURE_ARGS+=	--without-esd
+CONFIGURE_ARGS+=	--disable-esdtest
 
 USE_TOOLS+=	pkg-config
 

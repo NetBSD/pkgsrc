@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2019/09/01 13:06:25 wiz Exp $
+# $NetBSD: Makefile,v 1.111 2019/11/03 19:04:08 rillig Exp $
 
 DISTNAME=	smalltalk-3.2.5
 PKGREVISION=	11
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--with-system-libffi=${BUILDLINK_PREFIX.libffi}/lib
 CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}/lib
 CONFIGURE_ARGS+=	--with-lispdir=${PREFIX}/share/emacs/site-lisp
 CONFIGURE_ARGS+=	--without-emacs
-#CONFIGURE_ENV+=		CFLAGS="-O2 -fsigned-char"
+#CONFIGURE_ENV+=	CFLAGS="-O2 -fsigned-char"
 
 IGNORE_LIBTOOLIZE=	lib/smalltalk/libc.la
 INFO_FILES=		YES

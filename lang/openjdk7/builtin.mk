@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2018/01/02 00:15:08 rillig Exp $
+# $NetBSD: builtin.mk,v 1.4 2019/11/03 19:04:04 rillig Exp $
 
 BUILTIN_PKG:=	openjdk7
 
@@ -19,7 +19,7 @@ IS_BUILTIN.openjdk7=	yes
 IS_BUILTIN.openjdk7=	no
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.openjdk7
+MAKEVARS+=		IS_BUILTIN.openjdk7
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -28,9 +28,9 @@ MAKEVARS+=	IS_BUILTIN.openjdk7
 .if !defined(BUILTIN_PKG.openjdk7) && \
     !empty(IS_BUILTIN.openjdk7:M[yY][eE][sS])
 BUILTIN_VERSION.openjdk7!=	${OJDK7} -version 2>&1 | ${SED} -Ee 's:^[^0-9]*([0-9._]+)$$:\1:' -e 's/_/./g' -e 's/([0-9]+)\.([0-9]+)\.([0-9]+)\.([0-9]+)/\1.\2.\4/'
-BUILTIN_PKG.openjdk7=	openjdk7-${BUILTIN_VERSION.openjdk7}
+BUILTIN_PKG.openjdk7=		openjdk7-${BUILTIN_VERSION.openjdk7}
 .endif
-MAKEVARS+=	BUILTIN_PKG.openjdk7
+MAKEVARS+=			BUILTIN_PKG.openjdk7
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -57,7 +57,7 @@ USE_BUILTIN.openjdk7!=							\
 .    endif
 .  endif
 .endif
-MAKEVARS+=	USE_BUILTIN.openjdk7
+MAKEVARS+=		USE_BUILTIN.openjdk7
 
 ###
 ### The section below only applies if we are not including this file

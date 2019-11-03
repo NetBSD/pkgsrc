@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/04/03 00:32:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.38 2019/11/03 19:04:08 rillig Exp $
 #
 
 DISTNAME=	spl-1.0pre3
@@ -23,7 +23,7 @@ SUBST_SED.prefix+=	-e 's,^ENABLE_OPENGL_SUPPORT.*,ENABLE_OPENGL_SUPPORT=0,g'
 SUBST_SED.prefix+=	-e 's,^  cgibin_libdir.*,  cgibin_libdir = ${PREFIX}/libexec/cgi-bin,g'
 
 #subst.mk does not correctly detect GNUmakefile as text file
-_SUBST_IS_TEXT_FILE=true
+_SUBST_IS_TEXT_FILE=	true
 
 MAKE_ENV+=	ENABLE_OPENGL_SUPPORT=0
 MAKE_FILE=	GNUmakefile

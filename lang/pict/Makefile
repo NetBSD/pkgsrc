@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.20 2018/11/12 16:10:24 jaapb Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/03 19:04:05 rillig Exp $
 
 DISTNAME=	pict-4.1
 PKGREVISION=	16
 CATEGORIES=	lang
 MASTER_SITES=	http://www.cis.upenn.edu/~bcpierce/papers/pict/pict-4.1/
 
-PATCH_SITES=	http://www.NetBSD.org/~dholland/patchkits/pict/
-PATCHFILES=	pict-jumbo-patch-20180316.gz
-PATCH_DIST_STRIP= -p1
+PATCH_SITES=		http://www.NetBSD.org/~dholland/patchkits/pict/
+PATCHFILES=		pict-jumbo-patch-20180316.gz
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	dholland@NetBSD.org
 HOMEPAGE=	http://www.cis.upenn.edu/~bcpierce/papers/pict/Html/Pict.html

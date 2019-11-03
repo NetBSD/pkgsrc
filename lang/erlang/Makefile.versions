@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.versions,v 1.44 2019/08/01 11:43:00 nia Exp $
+# $NetBSD: Makefile.versions,v 1.45 2019/11/03 19:03:57 rillig Exp $
 
 DIST_VERSION_MAJOR=		22
 DIST_VERSION_MINOR=		0
@@ -10,8 +10,8 @@ DIST_VERSION_PATCH=		7
 PLIST_SUBST+=	VERSION=${DIST_VERSION_MAJOR}
 
 .for name version in ${_VERSIONS}
-VERSION.${name}=${version}
-PLIST_SUBST+=	VERSION.${name}=${version}
+VERSION.${name}=	${version}
+PLIST_SUBST+=		VERSION.${name}=${version}
 .endfor
 
 # Generate PLIST
