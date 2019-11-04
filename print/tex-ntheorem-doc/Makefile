@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2019/09/25 01:45:47 mef Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/04 19:58:06 rillig Exp $
 
-DISTNAME=	ntheorem.doc
-PKGNAME=	tex-${DISTNAME}-1.31
-TEXLIVE_REV=	27609
+DISTNAME=		ntheorem.doc
+PKGNAME=		tex-${DISTNAME}-1.31
+TEXLIVE_REV=		27609
 TEXLIVE_USE_CTAN=	yes
 
 MAINTAINER=	jaapb@NetBSD.org

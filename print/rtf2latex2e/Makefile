@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/09/04 18:08:27 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/11/04 19:58:01 rillig Exp $
 #
 
 # fix install so it uses ${prefix}
@@ -14,7 +14,7 @@ COMMENT=	RTF to LaTeX2e converter
 
 # ImageMagick is an optional component
 
-WRKSRC=	${WRKDIR}/rtf2latex2eUnix-1.0fc1/
+WRKSRC=		${WRKDIR}/rtf2latex2eUnix-1.0fc1/
 BUILD_DIRS=	Unix
 CONFIGURE_DIRS=	Unix
 GNU_CONFIGURE=	yes
