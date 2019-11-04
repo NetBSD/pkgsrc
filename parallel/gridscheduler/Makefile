@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/08/11 13:22:34 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/04 19:18:09 rillig Exp $
 
 PKGNAME=	gridscheduler-2011.11.1
 PKGREVISION=	4
@@ -36,9 +36,9 @@ PKG_USERS_VARS+=	SGE_USER
 AIMK=	${SETENV} ${MAKE_ENV} tcsh -fb ${WRKSRC}/source/aimk
 
 CONFIG_GUESS_OVERRIDE=	source/3rdparty/qmake/config.guess \
-		source/3rdparty/qtcsh/config.guess
+			source/3rdparty/qtcsh/config.guess
 CONFIG_SUB_OVERRIDE=	source/3rdparty/qmake/config.sub \
-		source/3rdparty/qtcsh/config.sub
+			source/3rdparty/qtcsh/config.sub
 
 REPLACE_INTERPRETER+=	tclsh
 REPLACE.tclsh.old=	.*tclsh
