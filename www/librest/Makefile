@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/04/03 00:33:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.33 2019/11/04 22:09:56 rillig Exp $
 
 DISTNAME=	librest-0.6
 PKGREVISION=	28
@@ -18,7 +18,7 @@ WRKSRC=		${WRKDIR}/${PKGBASE}-${DISTNAME}
 PKGCONFIG_OVERRIDE+=	rest.pc.in gtk-doc.pc.in
 
 pre-configure:
-		(cd ${WRKSRC}; ./autogen.sh)
+	(cd ${WRKSRC}; ./autogen.sh)
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/gtk-doc/buildlink3.mk"

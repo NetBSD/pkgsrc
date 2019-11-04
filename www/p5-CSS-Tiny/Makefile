@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/08/11 13:24:28 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/04 22:09:59 rillig Exp $
 
 DISTNAME=	CSS-Tiny-1.20
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl 5 module to read/write .css files with as little code as possible
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/CSS/Tiny/.packlist
+PERL5_PACKLIST=	auto/CSS/Tiny/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

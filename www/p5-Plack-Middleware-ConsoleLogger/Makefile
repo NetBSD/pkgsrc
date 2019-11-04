@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/08/11 13:24:56 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/11/04 22:10:07 rillig Exp $
 
 DISTNAME=	Plack-Middleware-ConsoleLogger-0.05
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,8 @@ HOMEPAGE=	https://metacpan.org/release/Plack-Middleware-ConsoleLogger
 COMMENT=	Plack middleware to write logs to Firebug or Webkit Inspector
 LICENSE=	${PERL5_LICENSE}
 
-USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Plack/Middleware/ConsoleLogger/.packlist
+USE_LANGUAGES=		# empty
+PERL5_PACKLIST=		auto/Plack/Middleware/ConsoleLogger/.packlist
 PERL5_MODULE_TYPE=	Module::Build::Tiny
 
 BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/01/01 10:23:07 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/04 22:09:51 rillig Exp $
 
 DISTNAME=		mod_encoding-20021209
 PKGNAME=		${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
@@ -15,7 +15,7 @@ GNU_CONFIGURE=		yes
 
 DOC_DIR=		share/doc/${DISTNAME:C/-.*//}
 INSTALLATION_DIRS+=	lib/httpd ${DOC_DIR}
-PLIST_SUBST+=           DOC_DIR=${DOC_DIR}
+PLIST_SUBST+=		DOC_DIR=${DOC_DIR}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/${DOC_DIR}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/08/11 13:25:02 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/04 22:10:10 rillig Exp $
 
 DISTNAME=	Twiggy-0.1025
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	AnyEvent HTTP server for PSGI
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Twiggy/.packlist
+PERL5_PACKLIST=	auto/Twiggy/.packlist
 
 REPLACE_PERL+=	bin/twiggy
 

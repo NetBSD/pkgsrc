@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2019/05/11 06:48:43 taca Exp $
+# $NetBSD: Makefile,v 1.60 2019/11/04 22:09:53 rillig Exp $
 
 DISTNAME=	drupal-7.67
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -35,8 +35,8 @@ CONF_FILES=	share/examples/drupal/drupal.conf \
 		${DRUPAL}/sites/default/default.settings.php
 
 CONF_FILES_PERMS+=	share/examples/drupal/default.settings.php \
-		${DRUPAL}/sites/default/settings.php \
-		${WWW_USER} ${WWW_GROUP} 0640
+			${DRUPAL}/sites/default/settings.php \
+			${WWW_USER} ${WWW_GROUP} 0640
 
 REPLACE_INTERPRETER+=	php
 REPLACE.php.old=	.*php[^ ]*

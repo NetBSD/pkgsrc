@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/08/11 13:25:05 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/04 22:10:11 rillig Exp $
 
 DISTNAME=	WWW-Shorten-3.093
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl 5 module interface to URL shortening sites
 LICENSE=	artistic-2.0
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/WWW/Shorten/.packlist
+PERL5_PACKLIST=	auto/WWW/Shorten/.packlist
 
 DEPENDS+=	p5-Config-Auto-[0-9]*:../../devel/p5-Config-Auto
 DEPENDS+=	p5-URI>=1.27:../../www/p5-URI

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/07/01 15:48:53 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/04 22:09:58 rillig Exp $
 
 GITHUB_PROJECT=	ocaml-cohttp
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,7 +13,7 @@ LICENSE=	isc
 
 USE_LANGUAGES=	# none
 
-OCAML_USE_DUNE=	yes
+OCAML_USE_DUNE=		yes
 DUNE_BUILD_PACKAGES=	cohttp cohttp-top
 OPAM_INSTALL_FILES=	cohttp cohttp-top
 

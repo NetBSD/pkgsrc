@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/08/11 13:25:05 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/04 22:10:11 rillig Exp $
 
 DISTNAME=	WWW-Pastebin-RafbNet-Create-0.001
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/WWW-Pastebin-RafbNet-Create
 COMMENT=	Create new pastes on http://rafb.net/ from Perl
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/WWW/Pastebin/RafbNet/Create/.packlist
+PERL5_PACKLIST=	auto/WWW/Pastebin/RafbNet/Create/.packlist
 
 DEPENDS+=	p5-Class-Data-Accessor>=0.04001:../../devel/p5-Class-Data-Accessor
 DEPENDS+=	p5-URI>=1.35:../../www/p5-URI

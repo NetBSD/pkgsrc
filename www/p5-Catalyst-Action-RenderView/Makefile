@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/08/11 13:24:29 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/04 22:10:00 rillig Exp $
 
 DISTNAME=	Catalyst-Action-RenderView-0.16
 PKGNAME=	p5-${DISTNAME}
@@ -17,8 +17,8 @@ DEPENDS+=	p5-MRO-Compat-[0-9]*:../../devel/p5-MRO-Compat
 
 BUILD_DEPENDS+=	p5-HTTP-Request-AsCGI-[0-9]*:../../www/p5-HTTP-Request-AsCGI
 
-USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Catalyst/Action/RenderView/.packlist
+USE_LANGUAGES=		# empty
+PERL5_PACKLIST=		auto/Catalyst/Action/RenderView/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 .include "../../lang/perl5/module.mk"

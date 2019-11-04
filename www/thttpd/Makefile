@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2019/05/23 19:23:21 rillig Exp $
+# $NetBSD: Makefile,v 1.53 2019/11/04 22:10:15 rillig Exp $
 
 DISTNAME=	thttpd-2.29
 CATEGORIES=	www
@@ -19,11 +19,11 @@ SITES.${NETBSD_LOGO}=	http://www.NetBSD.org/images/logos/
 GNU_CONFIGURE=	yes
 
 # Note: this pkg auto-detects IPv6.
-BUILD_DEFS+=	IPV6_READY
+BUILD_DEFS+=		IPV6_READY
 # thttpd syslogs at level LOG_DAEMON by default
 # change this to your preferred syslog level
 THTTPD_LOG_FACILITY?=	LOG_DAEMON
-BUILD_DEFS+=	THTTPD_LOG_FACILITY
+BUILD_DEFS+=		THTTPD_LOG_FACILITY
 
 EGDIR=		${PREFIX}/share/examples
 CONF_FILES=	${EGDIR}/thttpd.conf ${PKG_SYSCONFDIR}/thttpd.conf

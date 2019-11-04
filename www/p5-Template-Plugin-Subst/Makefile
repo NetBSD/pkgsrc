@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/08/11 13:25:01 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/04 22:10:09 rillig Exp $
 
 DISTNAME=	Template-Plugin-Subst-0.02
 PKGNAME=	p5-${DISTNAME}
@@ -13,8 +13,8 @@ LICENSE=	2-clause-bsd
 
 DEPENDS+=	p5-Template-Toolkit>=2.0:../../www/p5-Template-Toolkit
 
-USE_LANGUAGES=	# empty
-PERL5_PACKLIST=	auto/Template/Plugin/Subst/.packlist
+USE_LANGUAGES=		# empty
+PERL5_PACKLIST=		auto/Template/Plugin/Subst/.packlist
 PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"

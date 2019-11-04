@@ -1,24 +1,24 @@
-# $NetBSD: options.mk,v 1.16 2012/11/04 21:50:53 wiz Exp $
+# $NetBSD: options.mk,v 1.17 2019/11/04 22:09:53 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.elinks
-PKG_SUPPORTED_OPTIONS+=	bittorrent nntp finger gopher
-PKG_SUPPORTED_OPTIONS+=	inet6 x11 elinks-exmode expat
-PKG_SUPPORTED_OPTIONS+= elinks-html-highlight elinks-root-exec
-PKG_SUPPORTED_OPTIONS+=	kerberos
-PKG_SUPPORTED_OPTIONS+=        python
-PKG_OPTIONS_GROUP.tls=	gnutls ssl
+PKG_OPTIONS_VAR=		PKG_OPTIONS.elinks
+PKG_SUPPORTED_OPTIONS+=		bittorrent nntp finger gopher
+PKG_SUPPORTED_OPTIONS+=		inet6 x11 elinks-exmode expat
+PKG_SUPPORTED_OPTIONS+=		elinks-html-highlight elinks-root-exec
+PKG_SUPPORTED_OPTIONS+=		kerberos
+PKG_SUPPORTED_OPTIONS+=		python
+PKG_OPTIONS_GROUP.tls=		gnutls ssl
 PKG_OPTIONS_GROUP.malloc=	boehm-gc elinks-fastmem
 PKG_OPTIONS_REQUIRED_GROUPS=	tls
 PKG_OPTIONS_OPTIONAL_GROUPS=	malloc
-PKG_SUGGESTED_OPTIONS=	ssl elinks-html-highlight elinks-exmode
-PKG_SUGGESTED_OPTIONS+=	expat boehm-gc inet6
+PKG_SUGGESTED_OPTIONS=		ssl elinks-html-highlight elinks-exmode
+PKG_SUGGESTED_OPTIONS+=		expat boehm-gc inet6
 
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Minet6)
-CONFIGURE_ARGS+= --enable-ipv6
+CONFIGURE_ARGS+=	--enable-ipv6
 .else
-CONFIGURE_ARGS+= --disable-ipv6
+CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 .if !empty(PKG_OPTIONS:Mx11)
@@ -63,7 +63,7 @@ CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 
 .include "../../security/gnutls/buildlink3.mk"
 
-CONFIGURE_ARGS+= --without-openssl
+CONFIGURE_ARGS+=	--without-openssl
 .endif
 
 # Requires fsplib, which is not currently in pkgsrc.

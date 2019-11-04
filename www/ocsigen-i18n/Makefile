@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/05/13 17:18:43 jaapb Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/04 22:09:58 rillig Exp $
 
 GITHUB_PROJECT=	ocsigen-i18n
 DISTNAME=	${GITHUB_PROJECT}-3.4.0
@@ -10,10 +10,10 @@ HOMEPAGE=	https://github.com/besport/ocsigen-i18n/
 COMMENT=	i18n package for Ocsigen
 LICENSE=	gnu-lgpl-v2.1
 
-USE_LANGUAGES=	# none
-USE_TOOLS=	gmake
-BUILD_TARGET=	build
-MAKE_ENV=	bindir=${DESTDIR}${PREFIX}/bin
+USE_LANGUAGES=		# none
+USE_TOOLS=		gmake
+BUILD_TARGET=		build
+MAKE_ENV=		bindir=${DESTDIR}${PREFIX}/bin
 INSTALLATION_DIRS+=	bin
 
 OCAML_USE_FINDLIB=	yes

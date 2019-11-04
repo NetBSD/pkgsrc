@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2019/08/22 12:23:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.35 2019/11/04 22:10:15 rillig Exp $
 #
 
 DISTNAME=	shibboleth-sp-2.5.5
@@ -13,7 +13,7 @@ LICENSE=	apache-2.0
 
 BUILD_DEFS+=	VARBASE
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-xmltooling=${PREFIX}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 

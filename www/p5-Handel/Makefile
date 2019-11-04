@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/08/11 13:24:48 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/11/04 22:10:06 rillig Exp $
 
 DISTNAME=	Handel-1.00014
 PKGNAME=	p5-${DISTNAME}
@@ -48,7 +48,7 @@ DEPENDS+=	p5-HTML-FillInForm>=0:../../www/p5-HTML-FillInForm
 # Skip AxKit Support
 
 USE_LANGUAGES=		# empty
-PERL5_PACKLIST= 	auto/Handel/.packlist
+PERL5_PACKLIST=		auto/Handel/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 .include "../../lang/perl5/module.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/08/11 13:24:30 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/04 22:10:01 rillig Exp $
 
 DISTNAME=	Catalyst-Engine-PSGI-0.14
 PKGNAME=	p5-${DISTNAME}
@@ -19,8 +19,8 @@ BUILD_DEPENDS+=	p5-Test-TCP-[0-9]*:../../net/p5-Test-TCP
 BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 BUILD_DEPENDS+=	p5-Plack-[0-9]*:../../www/p5-Plack
 
-USE_LANGUAGES=	# empty
-PERL5_PACKLIST=	auto/Catalyst/Engine/PSGI/.packlist
+USE_LANGUAGES=		# empty
+PERL5_PACKLIST=		auto/Catalyst/Engine/PSGI/.packlist
 PERL5_MODULE_TYPE=	Module::Build::Tiny
 
 .include "../../lang/perl5/module.mk"

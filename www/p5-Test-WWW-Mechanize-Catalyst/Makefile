@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/08/11 13:25:02 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/04 22:10:10 rillig Exp $
 
 DISTNAME=	Test-WWW-Mechanize-Catalyst-0.60
 PKGNAME=	p5-${DISTNAME}
@@ -25,7 +25,7 @@ BUILD_DEPENDS+=	p5-Catalyst-Plugin-Session-State-Cookie-[0-9]*:../../www/p5-Cata
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Test/WWW/Mechanize/Catalyst/.packlist
+PERL5_PACKLIST=	auto/Test/WWW/Mechanize/Catalyst/.packlist
 
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 

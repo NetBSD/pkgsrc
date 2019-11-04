@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2019/08/24 11:13:48 jaapb Exp $
+# $NetBSD: Makefile,v 1.37 2019/11/04 22:09:58 rillig Exp $
 #
 
 VERSION=	2.15.0
@@ -17,13 +17,13 @@ LICENSE=	gnu-lgpl-v2.1
 # Makefile:42: recipe for target 'ocsipersist.mli' failed
 MAKE_JOBS_SAFE=	no
 
-DEPENDS+=     ocaml-react-[0-9]*:../../devel/ocaml-react
-DEPENDS+=     ocaml-text-[0-9]*:../../textproc/ocaml-text
+DEPENDS+=	ocaml-react-[0-9]*:../../devel/ocaml-react
+DEPENDS+=	ocaml-text-[0-9]*:../../textproc/ocaml-text
 
-OCSIGEN_USER?=	${APACHE_USER}
-OCSIGEN_GROUP?=	${APACHE_GROUP}
-PKG_GROUPS=	${OCSIGEN_GROUP}
-PKG_USERS=	${OCSIGEN_USER}:${OCSIGEN_GROUP}
+OCSIGEN_USER?=		${APACHE_USER}
+OCSIGEN_GROUP?=		${APACHE_GROUP}
+PKG_GROUPS=		${OCSIGEN_GROUP}
+PKG_USERS=		${OCSIGEN_USER}:${OCSIGEN_GROUP}
 PKG_GROUPS_VARS+=	OCSIGEN_GROUP
 PKG_USERS_VARS+=	OCSIGEN_USER
 
@@ -59,8 +59,8 @@ OCAML_FINDLIB_DIRS=	ocsigenserver
 .include "../../mk/ocaml.mk"
 
 .if ${OCAML_USE_OPT_COMPILER} == "yes"
-CONFIGURE_ARGS+= 		--enable-natdynlink
-BUILDLINK_API_DEPENDS.ocaml+=   ocaml>=3.12.0
+CONFIGURE_ARGS+=		--enable-natdynlink
+BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.12.0
 .else
 CONFIGURE_ARGS+=		--disable-natdynlink
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/03/13 17:14:44 taca Exp $
+# $NetBSD: Makefile,v 1.10 2019/11/04 22:10:14 rillig Exp $
 
 DISTNAME=	jekyll-watch-2.0.0
 CATEGORIES=	www
@@ -10,7 +10,7 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-listen>=3.0<4:../../sysutils/ruby-listen
 
-OVERRIDE_GEMSPEC+=      listen>=3.0
+OVERRIDE_GEMSPEC+=	listen>=3.0
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

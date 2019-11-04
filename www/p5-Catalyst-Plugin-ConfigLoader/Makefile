@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/08/11 13:24:32 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2019/11/04 22:10:02 rillig Exp $
 
 DISTNAME=	Catalyst-Plugin-ConfigLoader-0.34
 PKGNAME=	p5-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	p5-Data-Visitor>=0.24:../../devel/p5-Data-Visitor
 DEPENDS+=	p5-MRO-Compat>=0.09:../../devel/p5-MRO-Compat
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Catalyst/Plugin/ConfigLoader/.packlist
+PERL5_PACKLIST=	auto/Catalyst/Plugin/ConfigLoader/.packlist
 
 EXTRACT_USING=	gtar
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/08/11 13:24:56 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/04 22:10:07 rillig Exp $
 
 DISTNAME=	Plack-Middleware-FixMissingBodyInRedirect-0.12
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Sets body for redirect response, if it's not already set
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Plack/Middleware/FixMissingBodyInRedirect/.packlist
+PERL5_PACKLIST=	auto/Plack/Middleware/FixMissingBodyInRedirect/.packlist
 
 DEPENDS+=	p5-Plack-[0-9]*:../../www/p5-Plack
 

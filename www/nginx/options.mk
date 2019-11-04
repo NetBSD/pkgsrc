@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.51 2019/08/15 08:06:29 adam Exp $
+# $NetBSD: options.mk,v 1.52 2019/11/04 22:09:57 rillig Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=		dav flv gtools inet6 luajit mail-proxy memcache naxsi \
@@ -16,15 +16,15 @@ PLIST_VARS+=		naxsi perl uwsgi
 
 # documentation says naxsi must be the first module
 .if !empty(PKG_OPTIONS:Mnaxsi)
-PLIST.naxsi=		yes
-CONFIGURE_ARGS+=	--add-module=../${NAXSI_DISTNAME}/naxsi_src
+PLIST.naxsi=			yes
+CONFIGURE_ARGS+=		--add-module=../${NAXSI_DISTNAME}/naxsi_src
 .endif
 .if !empty(PKG_OPTIONS:Mnaxsi) || make(makesum)
-NAXSI_VERSION=		0.56
-NAXSI_DISTNAME=		naxsi-${NAXSI_VERSION}
-NAXSI_DISTFILE=		${NAXSI_DISTNAME}.tar.gz
-SITES.${NAXSI_DISTFILE}=-https://github.com/nbs-system/naxsi/archive/${NAXSI_VERSION}.tar.gz
-DISTFILES+=		${NAXSI_DISTFILE}
+NAXSI_VERSION=			0.56
+NAXSI_DISTNAME=			naxsi-${NAXSI_VERSION}
+NAXSI_DISTFILE=			${NAXSI_DISTNAME}.tar.gz
+SITES.${NAXSI_DISTFILE}=	-https://github.com/nbs-system/naxsi/archive/${NAXSI_VERSION}.tar.gz
+DISTFILES+=			${NAXSI_DISTFILE}
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
@@ -108,69 +108,69 @@ DISTFILES+=		${LUA_DISTFILE}
 .endif
 
 .if !empty(PKG_OPTIONS:Mecho)
-CONFIGURE_ARGS+=	--add-module=../${ECHOMOD_DISTNAME}
+CONFIGURE_ARGS+=		--add-module=../${ECHOMOD_DISTNAME}
 .endif
 .if !empty(PKG_OPTIONS:Mecho) || make(makesum)
-ECHOMOD_VERSION=	0.61
-ECHOMOD_DISTNAME=	echo-nginx-module-${ECHOMOD_VERSION}
-ECHOMOD_DISTFILE=	${ECHOMOD_DISTNAME}.tar.gz
+ECHOMOD_VERSION=		0.61
+ECHOMOD_DISTNAME=		echo-nginx-module-${ECHOMOD_VERSION}
+ECHOMOD_DISTFILE=		${ECHOMOD_DISTNAME}.tar.gz
 SITES.${ECHOMOD_DISTFILE}=	-https://github.com/openresty/echo-nginx-module/archive/v${ECHOMOD_VERSION}.tar.gz
-DISTFILES+=		${ECHOMOD_DISTFILE}
+DISTFILES+=			${ECHOMOD_DISTFILE}
 .endif
 
 .if !empty(PKG_OPTIONS:Mset-misc)
-CONFIGURE_ARGS+=	--add-module=../${SETMISC_DISTNAME}
+CONFIGURE_ARGS+=		--add-module=../${SETMISC_DISTNAME}
 .endif
 .if !empty(PKG_OPTIONS:Mset-misc) || make(makesum)
-SETMISC_VERSION=	0.32
-SETMISC_DISTNAME=	set-misc-nginx-module-${SETMISC_VERSION}
-SETMISC_DISTFILE=	${SETMISC_DISTNAME}.tar.gz
+SETMISC_VERSION=		0.32
+SETMISC_DISTNAME=		set-misc-nginx-module-${SETMISC_VERSION}
+SETMISC_DISTFILE=		${SETMISC_DISTNAME}.tar.gz
 SITES.${SETMISC_DISTFILE}=	-https://github.com/openresty/set-misc-nginx-module/archive/v${SETMISC_VERSION}.tar.gz
-DISTFILES+=		${SETMISC_DISTFILE}
+DISTFILES+=			${SETMISC_DISTFILE}
 .endif
 
 .if !empty(PKG_OPTIONS:Marray-var)
-CONFIGURE_ARGS+=	--add-module=../${ARRAYVAR_DISTNAME}
+CONFIGURE_ARGS+=		--add-module=../${ARRAYVAR_DISTNAME}
 .endif
 .if !empty(PKG_OPTIONS:Marray-var) || make(makesum)
-ARRAYVAR_VERSION=	0.05
-ARRAYVAR_DISTNAME=	array-var-nginx-module-${ARRAYVAR_VERSION}
-ARRAYVAR_DISTFILE=	${ARRAYVAR_DISTNAME}.tar.gz
+ARRAYVAR_VERSION=		0.05
+ARRAYVAR_DISTNAME=		array-var-nginx-module-${ARRAYVAR_VERSION}
+ARRAYVAR_DISTFILE=		${ARRAYVAR_DISTNAME}.tar.gz
 SITES.${ARRAYVAR_DISTFILE}=	-https://github.com/openresty/array-var-nginx-module/archive/v${ARRAYVAR_VERSION}.tar.gz
-DISTFILES+=		${ARRAYVAR_DISTFILE}
+DISTFILES+=			${ARRAYVAR_DISTFILE}
 .endif
 
 .if !empty(PKG_OPTIONS:Mencrypted-session)
-CONFIGURE_ARGS+=	--add-module=../${ENCSESS_DISTNAME}
+CONFIGURE_ARGS+=		--add-module=../${ENCSESS_DISTNAME}
 .endif
 .if !empty(PKG_OPTIONS:Mencrypted-session) || make(makesum)
-ENCSESS_VERSION=	0.08
-ENCSESS_DISTNAME=	encrypted-session-nginx-module-${ENCSESS_VERSION}
-ENCSESS_DISTFILE=	${ENCSESS_DISTNAME}.tar.gz
+ENCSESS_VERSION=		0.08
+ENCSESS_DISTNAME=		encrypted-session-nginx-module-${ENCSESS_VERSION}
+ENCSESS_DISTFILE=		${ENCSESS_DISTNAME}.tar.gz
 SITES.${ENCSESS_DISTFILE}=	-https://github.com/openresty/encrypted-session-nginx-module/archive/v${ENCSESS_VERSION}.tar.gz
-DISTFILES+=		${ENCSESS_DISTFILE}
+DISTFILES+=			${ENCSESS_DISTFILE}
 .endif
 
 .if !empty(PKG_OPTIONS:Mform-input)
-CONFIGURE_ARGS+=	--add-module=../${FORMINPUT_DISTNAME}
+CONFIGURE_ARGS+=		--add-module=../${FORMINPUT_DISTNAME}
 .endif
 .if !empty(PKG_OPTIONS:Mform-input) || make(makesum)
-FORMINPUT_VERSION=	0.12
-FORMINPUT_DISTNAME=	form-input-nginx-module-${FORMINPUT_VERSION}
-FORMINPUT_DISTFILE=	${FORMINPUT_DISTNAME}.tar.gz
+FORMINPUT_VERSION=		0.12
+FORMINPUT_DISTNAME=		form-input-nginx-module-${FORMINPUT_VERSION}
+FORMINPUT_DISTFILE=		${FORMINPUT_DISTNAME}.tar.gz
 SITES.${FORMINPUT_DISTFILE}=	-https://github.com/calio/form-input-nginx-module/archive/v${FORMINPUT_VERSION}.tar.gz
-DISTFILES+=		${FORMINPUT_DISTFILE}
+DISTFILES+=			${FORMINPUT_DISTFILE}
 .endif
 
 .if !empty(PKG_OPTIONS:Mheaders-more)
-CONFIGURE_ARGS+=	--add-module=../${HEADMORE_DISTNAME}
+CONFIGURE_ARGS+=		--add-module=../${HEADMORE_DISTNAME}
 .endif
 .if !empty(PKG_OPTIONS:Mheaders-more) || make(makesum)
-HEADMORE_VERSION=	0.33
-HEADMORE_DISTNAME=	headers-more-nginx-module-${HEADMORE_VERSION}
-HEADMORE_DISTFILE=	${HEADMORE_DISTNAME}.tar.gz
+HEADMORE_VERSION=		0.33
+HEADMORE_DISTNAME=		headers-more-nginx-module-${HEADMORE_VERSION}
+HEADMORE_DISTFILE=		${HEADMORE_DISTNAME}.tar.gz
 SITES.${HEADMORE_DISTFILE}=	-https://github.com/openresty/headers-more-nginx-module/archive/v${HEADMORE_VERSION}.tar.gz
-DISTFILES+=		${HEADMORE_DISTFILE}
+DISTFILES+=			${HEADMORE_DISTFILE}
 .endif
 
 .if !empty(PKG_OPTIONS:Muwsgi)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.140 2019/08/11 13:24:53 wiz Exp $
+# $NetBSD: Makefile,v 1.141 2019/11/04 22:10:06 rillig Exp $
 #
 # When updating this package, please upload the distfile
 # since they disappear immediately when new releases happen,
@@ -16,7 +16,7 @@ COMMENT=	Perl web framework: The Web In A Box!
 LICENSE=	artistic-2.0
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Mojolicious/.packlist
+PERL5_PACKLIST=	auto/Mojolicious/.packlist
 
 REPLACE_PERL+=	script/*
 

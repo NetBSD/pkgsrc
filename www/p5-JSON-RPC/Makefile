@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/08/11 13:24:48 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2019/11/04 22:10:06 rillig Exp $
 
 DISTNAME=	JSON-RPC-1.06
 PKGNAME=	p5-${DISTNAME}
@@ -21,7 +21,7 @@ DEPENDS+=	p5-Plack-[0-9]*:../../www/p5-Plack
 DEPENDS+=	p5-Router-Simple-[0-9]*:../../www/p5-Router-Simple
 DEPENDS+=	p5-JSON-XS-[0-9]*:../../converters/p5-JSON-XS
 
-PERL5_PACKLIST=	auto/JSON/RPC/.packlist
+PERL5_PACKLIST=		auto/JSON/RPC/.packlist
 PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"

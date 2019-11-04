@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/01/17 15:13:20 kleink Exp $
+# $NetBSD: Makefile,v 1.10 2019/11/04 22:10:13 rillig Exp $
 
 DISTNAME=	webassets-0.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# empty
 
-REPLACE_PYTHON+=src/webassets/filter/rjsmin/rjsmin.py
+REPLACE_PYTHON+=	src/webassets/filter/rjsmin/rjsmin.py
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/05/13 12:17:11 jaapb Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/04 22:09:58 rillig Exp $
 
 GITHUB_PROJECT=	ocsigen-start
 DISTNAME=	${GITHUB_PROJECT}-1.7.0
@@ -25,16 +25,16 @@ MAKE_ENV+=	NATIVE=no
 
 DEPENDS+=	eliom>=6.4:../../www/eliom
 
-SUBST_CLASSES+=	fix-settings
+SUBST_CLASSES+=			fix-settings
 SUBST_STAGE.fix-settings=	pre-configure
-SUBST_FILES.fix-settings= template.distillery/Makefile.db
+SUBST_FILES.fix-settings=	template.distillery/Makefile.db
 SUBST_FILES.fix-settings+=	template.distillery/Makefile.options
-SUBST_SED.fix-settings=	-e 's,$$(shell opam config var lib),${PREFIX}/${OCAML_SITELIBDIR},'
+SUBST_SED.fix-settings=		-e 's,$$(shell opam config var lib),${PREFIX}/${OCAML_SITELIBDIR},'
 SUBST_SED.fix-settings+=	-e 's,$$(shell $$(OPAM) config var share),${PREFIX}/share,'
 SUBST_SED.fix-settings+=	-e '/USE_SASS/s,yes,no,'
 SUBST_SED.fix-settings+=	-e '/USE_NPM/s,yes,no,'
 
-SUBST_CLASSES+=	fix-md5
+SUBST_CLASSES+=		fix-md5
 SUBST_STAGE.fix-md5=	pre-configure
 SUBST_FILES.fix-md5=	template.distillery/Makefile.mobile
 SUBST_FILES.fix-md5+=	template.distillery/Makefile.os
