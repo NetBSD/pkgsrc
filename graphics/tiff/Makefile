@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.145 2019/07/17 09:25:45 nia Exp $
+# $NetBSD: Makefile,v 1.146 2019/11/04 01:11:38 gdt Exp $
 
-DISTNAME=	tiff-4.0.10
-PKGREVISION=	1
+DISTNAME=	tiff-4.1.0
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.osgeo.org/libtiff/
 
