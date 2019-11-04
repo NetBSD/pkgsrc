@@ -1,14 +1,14 @@
-# $NetBSD: options.mk,v 1.6 2018/04/13 13:15:00 jaapb Exp $
+# $NetBSD: options.mk,v 1.7 2019/11/04 22:09:58 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.ocsigen
-PKG_SUPPORTED_OPTIONS=	camlzip
+PKG_OPTIONS_VAR=		PKG_OPTIONS.ocsigen
+PKG_SUPPORTED_OPTIONS=		camlzip
 PKG_OPTIONS_NONEMPTY_SETS=	database
 PKG_OPTIONS_SET.database=	sqlite gdbm pgsql
-PKG_SUGGESTED_OPTIONS=	gdbm camlzip
+PKG_SUGGESTED_OPTIONS=		gdbm camlzip
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	sqlite
+PLIST_VARS+=		sqlite
 .if !empty(PKG_OPTIONS:Msqlite)
 DEPENDS+=		ocaml-sqlite3>=0.23.0:../../databases/ocaml-sqlite3
 CONFIGURE_ARGS+=	--with-sqlite
@@ -26,7 +26,7 @@ PLIST.dbm=		yes
 CONFIGURE_ARGS+=	--without-dbm
 .endif
 
-PLIST_VARS+=	camlzip
+PLIST_VARS+=		camlzip
 .if !empty(PKG_OPTIONS:Mcamlzip)
 DEPENDS+=		ocaml-zip-[0-9]*:../../archivers/ocaml-zip
 CONFIGURE_ARGS+=	--with-camlzip

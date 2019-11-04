@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/08/11 13:25:03 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/11/04 22:10:10 rillig Exp $
 
 DISTNAME=	URI-ws-0.03
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/URI-ws
 COMMENT=	WebSocket support for URI package
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=       p5-URI-[0-9]*:../../www/p5-URI
+DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 
 PERL5_PACKLIST=	auto/URI/ws/.packlist
 

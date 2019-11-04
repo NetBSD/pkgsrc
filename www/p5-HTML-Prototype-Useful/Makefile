@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/08/11 13:24:39 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/04 22:10:04 rillig Exp $
 
 DISTNAME=	HTML-Prototype-Useful-0.05
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ COMMENT=	Some useful additions for the Prototype library
 DEPENDS+=	p5-HTML-Prototype>=1.32:../../www/p5-HTML-Prototype
 
 PERL5_MODULE_TYPE=	Module::Build
-PERL5_PACKLIST=	auto/HTML/Prototype/Useful/.packlist
+PERL5_PACKLIST=		auto/HTML/Prototype/Useful/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

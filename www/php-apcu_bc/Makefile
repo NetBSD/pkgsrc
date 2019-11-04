@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2019/01/14 13:06:11 taca Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/04 22:10:11 rillig Exp $
 
 MODNAME=	apcu_bc
-PKGMODNAME= apc
+PKGMODNAME=	apc
 PECL_VERSION=	1.0.3
 CATEGORIES+=	sysutils
 
