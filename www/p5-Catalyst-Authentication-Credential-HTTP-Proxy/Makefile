@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/08/11 13:24:29 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/04 22:10:00 rillig Exp $
 
 DISTNAME=	Catalyst-Authentication-Credential-HTTP-Proxy-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -19,7 +19,7 @@ DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	p5-Test-MockObject-[0-9]*:../../devel/p5-Test-MockObject
 
-PERL5_PACKLIST= 	auto/Catalyst/Authentication/Credential/HTTP/Proxy/.packlist
+PERL5_PACKLIST=		auto/Catalyst/Authentication/Credential/HTTP/Proxy/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1

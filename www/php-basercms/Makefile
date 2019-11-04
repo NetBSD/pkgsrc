@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/12/17 15:56:32 taca Exp $
+# $NetBSD: Makefile,v 1.10 2019/11/04 22:10:11 rillig Exp $
 
 BASERVER=	3.0.16
 DISTNAME=	basercms-${BASERVER}
@@ -12,7 +12,7 @@ HOMEPAGE=	https://basercms.net/
 COMMENT=	Easy to use Content Management System for Japan/Japanese
 LICENSE=	mit
 
-DEPENDS+=       ${PHP_PKG_PREFIX}-mbstring-[0-9]*:../../converters/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring-[0-9]*:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-gd-[0-9]*:../../graphics/php-gd
 
 WRKSRC=			${WRKDIR}/basercms

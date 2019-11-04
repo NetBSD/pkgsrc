@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/08/11 13:25:05 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/04 22:10:10 rillig Exp $
 
 DISTNAME=	WWW-Mechanize-GZip-0.14
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl 5 module to fetch webpages with gzip-compression
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/WWW/Mechanize/GZip/.packlist
+PERL5_PACKLIST=	auto/WWW/Mechanize/GZip/.packlist
 
 DEPENDS+=	p5-Test-WWW-Mechanize-[0-9]*:../../www/p5-Test-WWW-Mechanize
 

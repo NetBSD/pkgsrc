@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/08/11 13:24:30 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/11/04 22:10:00 rillig Exp $
 
 DISTNAME=	Catalyst-Controller-FormBuilder-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -23,8 +23,8 @@ DEPENDS+=	p5-Tie-IxHash>=1.21:../../devel/p5-Tie-IxHash
 # Recommented
 DEPENDS+=	p5-Catalyst-View-TT>=0.23:../../www/p5-Catalyst-View-TT
 
-USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Catalyst/Controller/FormBuilder/.packlist
+USE_LANGUAGES=		# empty
+PERL5_PACKLIST=		auto/Catalyst/Controller/FormBuilder/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1

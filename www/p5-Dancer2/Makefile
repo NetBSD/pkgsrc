@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2019/08/31 10:34:05 wen Exp $
+# $NetBSD: Makefile,v 1.53 2019/11/04 22:10:03 rillig Exp $
 
 DISTNAME=	Dancer2-0.208001
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Lightweight yet powerful web application framework
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Dancer2/.packlist
+PERL5_PACKLIST=	auto/Dancer2/.packlist
 
 BUILD_DEPENDS+=	p5-Exporter-Tiny>=0:../../devel/p5-Exporter-Tiny
 BUILD_DEPENDS+=	p5-ExtUtils-MakeMaker>=7.12:../../devel/p5-ExtUtils-MakeMaker

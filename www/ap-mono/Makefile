@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2019/09/11 11:53:40 nia Exp $
+# $NetBSD: Makefile,v 1.43 2019/11/04 22:09:50 rillig Exp $
 
 DISTNAME=	mod_mono-3.12
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
@@ -15,11 +15,11 @@ APACHE_MODULE=		yes
 CONF_FILES=		${PREFIX}/share/examples/httpd/mod_mono.conf\
 			${PKG_SYSCONFDIR}/httpd/mod_mono.conf
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-apxs=${APXS:Q}
-USE_TOOLS+=	gmake pkg-config
-USE_LIBTOOL=	yes
-MAKE_JOBS_SAFE=	no
+USE_TOOLS+=		gmake pkg-config
+USE_LIBTOOL=		yes
+MAKE_JOBS_SAFE=		no
 
 .include "../../lang/mono/buildlink3.mk"
 .include "../../www/mono-xsp/buildlink3.mk"

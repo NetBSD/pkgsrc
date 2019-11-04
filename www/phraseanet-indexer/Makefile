@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/09/20 12:59:25 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/04 22:10:12 rillig Exp $
 
 .include "../../www/phraseanet/Makefile.common"
 PKGNAME=        phraseanet-indexer-${VERS}
@@ -9,7 +9,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/bin/src/phraseanet_indexer
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		aclocal autoconf automake
 GNU_CONFIGURE=		yes
-CFLAGS+=	-I${BUILDLINK_PREFIX.libxml2}/include/libxml2
+CFLAGS+=		-I${BUILDLINK_PREFIX.libxml2}/include/libxml2
 LIBS.SunOS+=		-lrt -lsocket
 
 

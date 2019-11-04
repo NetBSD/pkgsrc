@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.197 2019/09/18 14:17:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.198 2019/11/04 22:10:15 rillig Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
@@ -45,13 +45,13 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${PKGBASE}
 #BUILD_DEPENDS+=		yasm>=1.1.0:../../devel/yasm
 #.endif
 
-CHECK_PORTABILITY_SKIP+=mozilla/js/src/tests/update-test262.sh
-CHECK_PORTABILITY_SKIP+=mozilla/security/nss/tests/libpkix/libpkix.sh
+CHECK_PORTABILITY_SKIP+=	mozilla/js/src/tests/update-test262.sh
+CHECK_PORTABILITY_SKIP+=	mozilla/security/nss/tests/libpkix/libpkix.sh
 
-CHECK_INTERPRETER_SKIP+=lib/seamonkey-sdk/sdk/bin/header.py
-CHECK_INTERPRETER_SKIP+=lib/seamonkey-sdk/sdk/bin/typelib.py
-CHECK_INTERPRETER_SKIP+=lib/seamonkey-sdk/sdk/bin/xpidl.py
-CHECK_INTERPRETER_SKIP+=lib/seamonkey-sdk/sdk/bin/xpt.py
+CHECK_INTERPRETER_SKIP+=	lib/seamonkey-sdk/sdk/bin/header.py
+CHECK_INTERPRETER_SKIP+=	lib/seamonkey-sdk/sdk/bin/typelib.py
+CHECK_INTERPRETER_SKIP+=	lib/seamonkey-sdk/sdk/bin/xpidl.py
+CHECK_INTERPRETER_SKIP+=	lib/seamonkey-sdk/sdk/bin/xpt.py
 
 SUBST_CLASSES+=		sys-dic
 SUBST_STAGE.sys-dic=	pre-configure

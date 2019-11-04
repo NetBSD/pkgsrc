@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2019/08/11 13:25:08 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2019/11/04 22:10:15 rillig Exp $
 
 DISTNAME=	squid-3.5.28
 PKGREVISION=	2
@@ -41,15 +41,15 @@ MAKE_ENV+=		INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
 MAKE_ENV+=		PKG_PREFIX=${PREFIX} VARBASE=${VARBASE}
 REPLACE_PERL+=		helpers/ssl/cert_valid.pl tools/helper-mux.pl
 
-EGFILES=	src/mime.conf.default src/squid.conf.default \
-		errors/errorpage.css tools/cachemgr.conf
-EGDIR=		share/examples/squid
+EGFILES=		src/mime.conf.default src/squid.conf.default \
+			errors/errorpage.css tools/cachemgr.conf
+EGDIR=			share/examples/squid
 .for f in cachemgr.conf errorpage.css mime.conf squid.conf
-CONF_FILES+=	${PREFIX}/${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
+CONF_FILES+=		${PREFIX}/${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
-OWN_DIRS=	${SQUID_DATADIR}
-OWN_DIRS_PERMS+=${SQUID_DATADIR}/cache ${SQUID_USER} ${SQUID_GROUP} 0750 \
-		${SQUID_DATADIR}/logs ${SQUID_USER} ${SQUID_GROUP} 0750
+OWN_DIRS=		${SQUID_DATADIR}
+OWN_DIRS_PERMS+=	${SQUID_DATADIR}/cache ${SQUID_USER} ${SQUID_GROUP} 0750 \
+			${SQUID_DATADIR}/logs ${SQUID_USER} ${SQUID_GROUP} 0750
 
 .include "Makefile.common"
 .include "options.mk"

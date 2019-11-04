@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2019/09/02 13:20:02 adam Exp $
+# $NetBSD: Makefile,v 1.69 2019/11/04 22:09:52 rillig Exp $
 
 DISTNAME=	browser-bookmarks-menu-0.6
 PKGREVISION=	43
@@ -17,8 +17,8 @@ SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Fixing paths to installed files.
 SUBST_FILES.paths=	BrowserBookmarksMenu.server
-SUBST_SED.paths= -e 's|/usr/lib/browser-bookmarks-menu|${PREFIX}/libexec|g'
-SUBST_SED.paths+= -e 's|/usr/share|${PREFIX}/share|g'
+SUBST_SED.paths=	-e 's|/usr/lib/browser-bookmarks-menu|${PREFIX}/libexec|g'
+SUBST_SED.paths+=	-e 's|/usr/share|${PREFIX}/share|g'
 
 INSTALLATION_DIRS=	lib/bonobo/servers libexec
 

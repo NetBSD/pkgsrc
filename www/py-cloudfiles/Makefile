@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2019/09/02 13:20:01 adam Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/04 22:10:12 rillig Exp $
 
 DISTNAME=	python-cloudfiles-1.7.11
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-cloudfiles/}
 
-PYTHON_VERSIONS_ACCEPTED=	 27
+PYTHON_VERSIONS_ACCEPTED=	27
 
 MAINTAINER=	triaxx@NetBSD.org
 HOMEPAGE=	https://github.com/ncw/python-cloudfiles/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/08/11 13:24:36 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/11/04 22:10:03 rillig Exp $
 
 DISTNAME=	Dancer-Session-Cookie-0.30
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Encrypted cookie-based session backend for Dancer
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Dancer/Session/Cookie/.packlist
+PERL5_PACKLIST=	auto/Dancer/Session/Cookie/.packlist
 
 DEPENDS+=	p5-Crypt-CBC-[0-9]*:../../security/p5-Crypt-CBC
 DEPENDS+=	p5-Crypt-Rijndael-[0-9]*:../../security/p5-Crypt-Rijndael

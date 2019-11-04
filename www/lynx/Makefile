@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2019/06/22 11:37:13 nia Exp $
+# $NetBSD: Makefile,v 1.134 2019/11/04 22:09:57 rillig Exp $
 
 DISTNAME=	lynx2.8.9rel.1
 PKGNAME=	${DISTNAME:S/lynx/lynx-/:S/rel//}
@@ -15,12 +15,12 @@ LICENSE=	gnu-gpl-v2
 # problem with WWW/Library/Implementation
 MAKE_JOBS_SAFE=		no
 
-SUBDIR=			current
-USE_PKGLOCALEDIR=	yes
-GNU_CONFIGURE=		yes
-BROKEN_GETTEXT_DETECTION= yes
-INSTALL_TARGET=		install-full
-MAKE_FILE=		makefile
+SUBDIR=				current
+USE_PKGLOCALEDIR=		yes
+GNU_CONFIGURE=			yes
+BROKEN_GETTEXT_DETECTION=	yes
+INSTALL_TARGET=			install-full
+MAKE_FILE=			makefile
 
 CONFIGURE_ENV+=		GZIP=${TOOLS_GZIP_CMD:Q}
 CONFIGURE_ENV+=		UNZIP=${TOOLS_PATH.unzip:Q}

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2016/12/01 14:27:21 martin Exp $
+# $NetBSD: options.mk,v 1.3 2019/11/04 22:10:16 rillig Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.webkit-gtk
@@ -17,7 +17,7 @@ PLIST_VARS=	introspection
  && empty(MACHINE_PLATFORM:MNetBSD-*-sparc64) \
  && empty(MACHINE_PLATFORM:MNetBSD-*-sparc) \
  && empty(MACHINE_PLATFORM:MSunOS-*)
-PKG_SUGGESTED_OPTIONS+= webkit-jit
+PKG_SUGGESTED_OPTIONS+=	webkit-jit
 .endif
 
 .include "../../mk/bsd.options.mk"

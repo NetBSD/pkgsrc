@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2019/07/21 22:25:53 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2019/11/04 22:09:51 rillig Exp $
 #
 
 DISTNAME=	mod_dnssd-0.6
@@ -16,7 +16,7 @@ GNU_CONFIGURE=	yes
 USE_TOOLS=	pkg-config gmake
 USE_LIBTOOL=	yes
 
-CFLAGS.SunOS+=	-D__EXTENSIONS__	# may be needed for PATH_MAX
+CFLAGS.SunOS+=		-D__EXTENSIONS__	# may be needed for PATH_MAX
 CONFIGURE_ENV+=		APXS=${APXS:Q}
 CONFIGURE_ARGS+=	--disable-lynx
 

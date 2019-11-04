@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2017/09/29 12:40:28 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2019/11/04 22:09:54 rillig Exp $
 
 DISTNAME=	emacs-w3m-1.4.4
 PKGREVISION=	4
@@ -16,21 +16,21 @@ INFO_FILES=	YES
 
 DEPENDS+=	w3m{,-img}>=0.5.1nb2:../../www/w3m
 
-HAS_CONFIGURE=	yes
-CONFIGURE_ARGS+=--with-emacs=${EMACS_BIN:Q}
-CONFIGURE_ARGS+=--with-icondir=${ICONDIR}
-BUILD_TARGET=	default
-INSTALL_TARGET=	${INSTALL_TARGET.${EMACS_FLAVOR}}
-MAKE_FLAGS=	prefix=${DESTDIR}${PREFIX} ICONDIR=${DESTDIR}${ICONDIR}
-PLIST_SUBST+=	ETCDIR=${ETCDIR:Q}
+HAS_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-emacs=${EMACS_BIN:Q}
+CONFIGURE_ARGS+=	--with-icondir=${ICONDIR}
+BUILD_TARGET=		default
+INSTALL_TARGET=		${INSTALL_TARGET.${EMACS_FLAVOR}}
+MAKE_FLAGS=		prefix=${DESTDIR}${PREFIX} ICONDIR=${DESTDIR}${ICONDIR}
+PLIST_SUBST+=		ETCDIR=${ETCDIR:Q}
 
-SUBST_CLASSES+=	fix-icondir
+SUBST_CLASSES+=			fix-icondir
 SUBST_STAGE.fix-icondir=	pre-configure
 SUBST_FILES.fix-icondir=	Makefile.in w3m.el w3mhack.el
 SUBST_SED.fix-icondir=		-e 's|etc/images/w3m|etc/w3m|g'
 SUBST_SED.fix-icondir+=		-e 's|images/w3m|w3m|g'
 
-EMACS_BUILDLINK=# defined
+EMACS_BUILDLINK=		# defined
 EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20 \
 				xemacs215 xemacs215nox xemacs214 xemacs214nox
 

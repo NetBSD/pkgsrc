@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/08/11 13:24:54 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2019/11/04 22:10:06 rillig Exp $
 
 DISTNAME=	Net-HTTP-6.18
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ LICENSE=	${PERL5_LICENSE}
 BUILD_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Net/HTTP/.packlist
+PERL5_PACKLIST=	auto/Net/HTTP/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

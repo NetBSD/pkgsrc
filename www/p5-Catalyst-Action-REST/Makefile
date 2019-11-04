@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/08/11 13:24:28 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2019/11/04 22:09:59 rillig Exp $
 
 DISTNAME=	Catalyst-Action-REST-1.21
 PKGNAME=	p5-${DISTNAME}
@@ -29,7 +29,7 @@ DEPENDS+=	p5-libwww>=5.831:../../www/p5-libwww
 DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 
 USE_LANGUAGES=		# empty
-PERL5_PACKLIST= 	auto/Catalyst/Action/REST/.packlist
+PERL5_PACKLIST=		auto/Catalyst/Action/REST/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 .include "../../lang/perl5/module.mk"

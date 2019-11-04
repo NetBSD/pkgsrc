@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/08/11 13:24:43 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/04 22:10:05 rillig Exp $
 
 DISTNAME=	HTML-TreeBuilder-XPath-0.14
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl 5 module adding XPath support to HTML::TreeBuilder
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/HTML/TreeBuilder/XPath/.packlist
+PERL5_PACKLIST=	auto/HTML/TreeBuilder/XPath/.packlist
 
 DEPENDS+=	p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree
 DEPENDS+=	p5-XML-XPathEngine>=0.12:../../textproc/p5-XML-XPathEngine

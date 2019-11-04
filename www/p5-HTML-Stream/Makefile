@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/08/11 13:24:41 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/04 22:10:04 rillig Exp $
 
 DISTNAME=	HTML-Stream-1.60
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/HTML-Stream
 COMMENT=	Perl5 HTML output stream class, and some markup utilities
 
-PERL5_PACKLIST= auto/HTML/Stream/.packlist
+PERL5_PACKLIST=	auto/HTML/Stream/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
