@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/08/11 13:23:23 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/04 21:43:35 rillig Exp $
 
 DISTNAME=	docbook2odf-0.244
 PKGREVISION=	2
@@ -10,7 +10,7 @@ HOMEPAGE=	http://open.comsultia.com/docbook2odf
 COMMENT=	Convert DocBook documentation into ODF documents
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
-NO_BUILD=	yes
+NO_BUILD=		yes
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	${PREFIX}/share/applications
 INSTALLATION_DIRS+=	${PREFIX}/share/doc/${PKGBASE}
@@ -30,7 +30,7 @@ SUBST_STAGE.xsl_path=	pre-configure
 SUBST_FILES.xsl_path=	utils/docbook2odf
 SUBST_SED.xsl_path=	-e 's,/usr/share/docbook2odf/xsl,${PREFIX}/share/${PKGBASE}/xsl,g'
 
-REPLACE_PERL+=  utils/docbook2odf utils/maketests
+REPLACE_PERL+=	utils/docbook2odf utils/maketests
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/utils/docbook2odf ${DESTDIR}${PREFIX}/bin/docbook2odf

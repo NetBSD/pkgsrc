@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/11/27 16:46:05 jaapb Exp $
+# $NetBSD: Makefile,v 1.9 2019/11/04 21:43:39 rillig Exp $
 
 VERSION=	0.0.2
 GITHUB_PROJECT=	uchar
@@ -18,9 +18,9 @@ INSTALLATION_DIRS=	${OCAML_SITELIBDIR}/uchar
 .include "../../mk/ocaml.mk"
 
 .if ${OCAML_USE_OPT_COMPILER} == "yes"
-NATIVE= true
+NATIVE=	true
 .else
-NATIVE= false
+NATIVE=	false
 .endif
 
 do-build:

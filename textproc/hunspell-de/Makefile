@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/08/11 13:23:24 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2019/11/04 21:43:37 rillig Exp $
 
 DISTNAME=	igerman98-20161207
 PKGNAME=	${DISTNAME:S/igerman98/hunspell-de/}
@@ -17,9 +17,9 @@ DEPENDS+=	hunspell>=1.1.5:../../textproc/hunspell
 
 USE_LANGUAGES=	# none
 
-BUILD_TARGET=   hunspell-all
-USE_TOOLS+=     gmake perl sed
-REPLACE_PERL=   bin/clear_affix.pl bin/dic2iso.pl bin/grepl bin/lcfirst.pl \
+BUILD_TARGET=	hunspell-all
+USE_TOOLS+=	gmake perl sed
+REPLACE_PERL=	bin/clear_affix.pl bin/dic2iso.pl bin/grepl bin/lcfirst.pl \
 		bin/sq.pl bin/uniqflag.pl bin/unsq.pl bin/extractlines.pl \
 		bin/hunspell-optimize-roothelper.pl bin/myspellfixprefix.pl
 

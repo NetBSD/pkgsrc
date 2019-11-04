@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2017/01/19 18:52:27 agc Exp $
+# $NetBSD: Makefile,v 1.20 2019/11/04 21:43:37 rillig Exp $
 
 DISTNAME=	html2text-1.3.2a
 CATEGORIES=	textproc
@@ -17,13 +17,13 @@ HAS_CONFIGURE=		yes
 CONFIGURE_ENV+=		ECHO=${ECHO:Q}
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
-SUBST_CLASSES+=		configure
-SUBST_STAGE.configure=	pre-configure
-SUBST_MESSAGE.configure=Fixing 'configure' script
-SUBST_FILES.configure=	configure
-SUBST_SED.configure=	-e 's,^$$echo,$$echo -n,'
-SUBST_SED.configure+=	-e 's,\\c,,'
-SUBST_SED.configure+=	-e 's,$$CXX $$tmp_file.C,$$CXX $$LDFLAGS $$tmp_file.C,'
+SUBST_CLASSES+=			configure
+SUBST_STAGE.configure=		pre-configure
+SUBST_MESSAGE.configure=	Fixing 'configure' script
+SUBST_FILES.configure=		configure
+SUBST_SED.configure=		-e 's,^$$echo,$$echo -n,'
+SUBST_SED.configure+=		-e 's,\\c,,'
+SUBST_SED.configure+=		-e 's,$$CXX $$tmp_file.C,$$CXX $$LDFLAGS $$tmp_file.C,'
 
 post-build:
 	${GUNZIP_CMD} -d ${WRKSRC}/html2text.1.gz ${WRKSRC}/html2textrc.5.gz

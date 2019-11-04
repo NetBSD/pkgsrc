@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2015/03/14 07:55:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.28 2019/11/04 21:43:37 rillig Exp $
 #
 
 DISTNAME=	ispell-3.4.00
@@ -9,8 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ficus-www.cs.ucla.edu/geoff/ispell.html
 COMMENT=	Interactive spelling checker
 
-CONFLICTS+=	ispell-base-[0-9]*
-USE_TOOLS+=	gmake mktemp:run yacc
+CONFLICTS+=		ispell-base-[0-9]*
+USE_TOOLS+=		gmake mktemp:run yacc
 INSTALLATION_DIRS=	bin lib ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 MAKE_FLAGS+=	TMPDIR=${WRKDIR:Q}
@@ -24,9 +24,9 @@ CFLAGS+=	-DHAVE_INTTYPES_H
 
 
 .if ${OPSYS} == "SunOS"
-EXTRADICT=/usr/dict/words
+EXTRADICT=	/usr/dict/words
 .else
-EXTRADICT=/usr/share/dict/words
+EXTRADICT=	/usr/share/dict/words
 .endif
 
 .if !exists(${EXTRADICT})

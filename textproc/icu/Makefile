@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2019/05/13 14:55:05 martin Exp $
+# $NetBSD: Makefile,v 1.127 2019/11/04 21:43:37 rillig Exp $
 
 DISTNAME=	icu4c-64_2-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
@@ -93,12 +93,12 @@ PLIST_SUBST+=		MH_NAME=mh-qnx
 PLIST_SUBST+=		MH_NAME=mh-unknown
 .endif
 
-PKGCONFIG_OVERRIDE+=	config/icu-i18n.pc
-PKGCONFIG_OVERRIDE+=	config/icu-io.pc
-PKGCONFIG_OVERRIDE+=	config/icu-le.pc
-PKGCONFIG_OVERRIDE+=	config/icu-lx.pc
-PKGCONFIG_OVERRIDE+=	config/icu-uc.pc
-PKGCONFIG_OVERRIDE+=	config/icu.pc
+PKGCONFIG_OVERRIDE+=		config/icu-i18n.pc
+PKGCONFIG_OVERRIDE+=		config/icu-io.pc
+PKGCONFIG_OVERRIDE+=		config/icu-le.pc
+PKGCONFIG_OVERRIDE+=		config/icu-lx.pc
+PKGCONFIG_OVERRIDE+=		config/icu-uc.pc
+PKGCONFIG_OVERRIDE+=		config/icu.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 # work around ICU-20533 (build failure on big endian machines)

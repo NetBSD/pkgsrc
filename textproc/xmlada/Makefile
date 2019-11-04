@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/10/21 22:15:10 adam Exp $
+# $NetBSD: Makefile,v 1.25 2019/11/04 21:43:48 rillig Exp $
 
 DISTNAME=	xmlada-${XMLADA_VERS}
 PKGREVISION=	5
@@ -23,7 +23,7 @@ MAKE_JOBS_SAFE=		no
 #      it doesn't support the concept of DESTDIR.
 # "-Wl,-R" adds a second rpath string.
 # -Wl,-rpath is a better choice, but synonym -Wl,-R works on all BSD and SunOS
-SUBST_CLASSES+= 	rpath docs
+SUBST_CLASSES+=		rpath docs
 SUBST_STAGE.rpath=	pre-configure
 SUBST_MESSAGE.rpath=	Adjust rpaths of shared libraries
 SUBST_FILES.rpath=	sax/sax.gpr

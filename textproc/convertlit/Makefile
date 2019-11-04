@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/09/17 14:06:12 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2019/11/04 21:43:34 rillig Exp $
 #
 # In order to ensure compliance with U.S. and international law, please
 # do not modify this file to provide pointers to the source or homepage
@@ -24,13 +24,13 @@ USE_TOOLS+=		gmake
 SUBST_CLASSES+=		d2u
 SUBST_STAGE.d2u=	pre-configure
 SUBST_MESSAGE.d2u=	Stripping CRLF line ends.
-SUBST_FILES.d2u+=		*.h *.c */*.h */*.c */*/*.h */*/*.c
+SUBST_FILES.d2u+=	*.h *.c */*.h */*.c */*/*.h */*/*.c
 SUBST_FILTER_CMD.d2u=	${TR} -d '\r'
 
 SUBST_CLASSES+=		flags
 SUBST_STAGE.flags=	pre-configure
 SUBST_MESSAGE.flags=	Fixing CFLAGS and compiler invocation.
-SUBST_FILES.flags+=		clit18/Makefile
+SUBST_FILES.flags+=	clit18/Makefile
 SUBST_SED.flags+=	-e 's,^CFLAGS=.*,CFLAGS+=-funsigned-char -Wall -I ../lib -I ../lib/des -I .,'
 SUBST_SED.flags+=	-e 's,gcc -o clit ..  ../libtommath-0.30/libtommath.a,gcc $$(LDFLAGS) -o clit $$^ -ltommath,'
 

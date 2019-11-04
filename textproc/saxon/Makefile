@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2017/09/16 19:27:20 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/04 21:43:47 rillig Exp $
 
 DISTNAME=	SaxonHE9-5-0-1J
 PKGNAME=	${DISTNAME:tl:S/-/./g:S/he/-/1}
@@ -19,7 +19,7 @@ NO_BUILD=	yes
 
 USE_TOOLS+=	pax
 
-INSTALLATION_DIRS= lib/java
+INSTALLATION_DIRS=	lib/java
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/saxon9he.jar ${DESTDIR}${PREFIX}/lib/java/saxon.jar

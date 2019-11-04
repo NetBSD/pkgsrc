@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/08/11 13:23:22 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/04 21:43:34 rillig Exp $
 #
 
 DISTNAME=	cmigemo-default-src-20110227
@@ -17,11 +17,11 @@ LICENSE=	mit
 MAKE_JOBS_SAFE=	no
 
 # sync with inputmethod/skk-jisyo-cdb
-SKKJISYO_VERS=	201102
-JISYOFILE=	SKK-JISYO.L.${SKKJISYO_VERS}.bz2
+SKKJISYO_VERS=		201102
+JISYOFILE=		SKK-JISYO.L.${SKKJISYO_VERS}.bz2
 SITES.${SKKJISYO_FILE}=	${MASTER_SITE_FREEBSD_LOCAL:=matusita/skk-jisyo/}
 
-TOOL_DEPENDS+= nkf>=2.06:../../converters/nkf
+TOOL_DEPENDS+=	nkf>=2.06:../../converters/nkf
 
 HAS_CONFIGURE=	yes
 USE_TOOLS+=	perl gzip gmake
@@ -34,7 +34,7 @@ CONFIGURE_ENV+=		PROGRAM_ENCODEFILTER="nkf -x"
 CONFIGURE_ENV+=		PROGRAM_HTTP=${TRUE:Q}
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 
-SUBST_CLASSES+=	prefix
+SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-configure
 SUBST_FILES.prefix=	compile/config_default.mk compile/Make_gcc.mak compile/Make_sun.mak doc/README* tools/migemo.vim
 SUBST_SED.prefix=	-e 's,/usr/local,${PREFIX},g'

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/08/11 13:23:45 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/04 21:43:42 rillig Exp $
 
 DISTNAME=	Text-Microformat-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,8 @@ HOMEPAGE=	https://metacpan.org/release/Text-Microformat
 COMMENT=	Perl 5 Microformat parser
 LICENSE=	${PERL5_LICENSE}
 
-USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Text/Microformat/.packlist
+USE_LANGUAGES=		# empty
+PERL5_PACKLIST=		auto/Text/Microformat/.packlist
 PERL5_MODULE_TYPE=	Module::Build
 
 DEPENDS+=	p5-Class-Accessor>=0.25:../../devel/p5-Class-Accessor

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/08/11 13:23:57 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/04 21:43:44 rillig Exp $
 
 DISTNAME=	XML-TreeBuilder-5.4
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl 5 parser that builds a tree of XML::Element objects
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/XML/TreeBuilder/.packlist
+PERL5_PACKLIST=	auto/XML/TreeBuilder/.packlist
 
 DEPENDS+=	p5-HTML-Tree>=4.1:../../www/p5-HTML-Tree
 DEPENDS+=	p5-HTML-Tagset>=3.02:../../www/p5-HTML-Tagset

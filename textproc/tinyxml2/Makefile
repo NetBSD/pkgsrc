@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/05/11 14:29:30 mef Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/04 21:43:48 rillig Exp $
 
 DISTNAME=	tinyxml2-2.2.0
 CATEGORIES=	textproc
@@ -13,6 +13,6 @@ LICENSE=	zlib
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-PKGCONFIG_OVERRIDE=tinyxml2.pc.in
+PKGCONFIG_OVERRIDE=	tinyxml2.pc.in
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/08/05 09:55:00 taca Exp $
+# $NetBSD: Makefile,v 1.12 2019/11/04 21:43:47 rillig Exp $
 
 DISTNAME=	yard-0.9.20
 CATEGORIES=	ruby textproc
@@ -8,7 +8,7 @@ HOMEPAGE=	https://yardoc.org/
 COMMENT=	Documentation generation tool for the Ruby programming language
 LICENSE=	mit
 
-USE_LANGUAGES=	# none
+USE_LANGUAGES=		# none
 RUBYGEM_OPTIONS+=	--format-executable
 
 .include "../../lang/ruby/gem.mk"

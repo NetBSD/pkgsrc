@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/07/11 09:25:26 nia Exp $
+# $NetBSD: Makefile,v 1.20 2019/11/04 21:43:48 rillig Exp $
 #
 
 DISTNAME=	tokyodystopia-0.9.15
@@ -18,7 +18,7 @@ PKGCONFIG_OVERRIDE+=	tokyodystopia.pc.in
 TEST_TARGET=	check
 
 post-extract:
-		${RM} -f ${WRKSRC}/doc/index.html~
+	${RM} -f ${WRKSRC}/doc/index.html~
 
 BUILDLINK_API_DEPENDS.tokyocabinet+=	tokyocabinet>=1.4.29
 .include "../../databases/tokyocabinet/buildlink3.mk"

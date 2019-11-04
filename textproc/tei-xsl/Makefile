@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/25 06:57:03 asau Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/04 21:43:48 rillig Exp $
 #
 
 DISTNAME=	tei-xsl-5.14
@@ -20,7 +20,7 @@ DOCDIR=		${PREFIX}/share/doc/tei-xsl
 INSTALLATION_DIRS=	${TEIXSLDIR} ${DOCDIR}
 
 XML_ENTRIES=	rewriteURI http://www.tei-c.org/Stylesheets/ \
-                ${TEIXSLDIR}
+		${TEIXSLDIR}
 
 do-install:
 	cd ${WRKSRC} && ${CP} -R p4 p5 ${DESTDIR}${TEIXSLDIR}

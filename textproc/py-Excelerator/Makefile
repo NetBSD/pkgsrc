@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/09/02 13:20:11 adam Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/04 21:43:45 rillig Exp $
 
 DISTNAME=	pyexcelerator-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-Excelerator-${VERSION}
@@ -14,7 +14,7 @@ COMMENT=	Python library for generating Excel 97/2000/XP/2003 files
 
 USE_LANGUAGES=	#none
 
-PYTHON_VERSIONS_ACCEPTED=	 27
+PYTHON_VERSIONS_ACCEPTED=	27
 
 EGG_NAME=	pyExcelerator-${VERSION}
 

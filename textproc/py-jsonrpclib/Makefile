@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/09/02 13:20:12 adam Exp $
+# $NetBSD: Makefile,v 1.6 2019/11/04 21:43:46 rillig Exp $
 
 DISTNAME=	jsonrpclib-0.1.7
 PKGNAME=	${PYPKGPREFIX}-jsonrpclib-0.1.7
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED=	 27 # as of 0.1.7
+PYTHON_VERSIONS_ACCEPTED=	27 # as of 0.1.7
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2018/06/08 19:40:44 nros Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/04 21:43:46 rillig Exp $
 
 DISTNAME=	qore-xml-module-1.4.1
 CATEGORIES=	textproc
-MASTER_SITES=   ${MASTER_SITE_GITHUB:=qorelanguage/}
-EXTRACT_SUFX=   .tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=qorelanguage/}
+EXTRACT_SUFX=	.tar.bz2
 GITHUB_PROJECT=	module-xml
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
@@ -19,7 +19,7 @@ USE_LANGUAGES=	c c++11
 USE_TOOLS+=	gmake pax
 PTHREAD_OPTS+=	native
 
-CONFIGURE_ARGS+=--with-libsuffix=""
+CONFIGURE_ARGS+=	--with-libsuffix=""
 
 REPLACE_QORE=	bin/soaputil
 

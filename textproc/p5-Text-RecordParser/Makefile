@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/08/11 13:23:46 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2019/11/04 21:43:42 rillig Exp $
 #
 
 DISTNAME=	Text-RecordParser-1.6.5
@@ -30,7 +30,7 @@ DEPENDS+=	p5-Text-TabularDisplay>=1.22:../../textproc/p5-Text-TabularDisplay
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Text/RecordParser/.packlist
 
-USE_TOOLS+=perl
+USE_TOOLS+=	perl
 
 REPLACE_PERL+=		bin/tab2graph
 REPLACE_PERL+=		bin/tablify
