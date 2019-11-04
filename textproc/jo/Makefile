@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2019/09/07 14:05:44 fcambus Exp $
+# $NetBSD: Makefile,v 1.9 2019/11/04 09:24:22 fcambus Exp $
 
-DISTNAME=	jo-1.2
+DISTNAME=	jo-1.3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jpmens/}
 
