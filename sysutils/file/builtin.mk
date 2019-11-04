@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.7 2013/11/23 12:10:13 obache Exp $
+# $NetBSD: builtin.mk,v 1.8 2019/11/04 21:28:45 rillig Exp $
 
 BUILTIN_PKG:=	file
 
@@ -25,13 +25,13 @@ BUILTIN_CMD.file=	${BIN_FILE}
 BUILTIN_CMD.file=	file
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.file
+MAKEVARS+=		IS_BUILTIN.file
 
 .if !defined(BUILTIN_PKG.file) && !empty(IS_BUILTIN.file:M[yY][eE][sS])
 BUILTIN_VERSION.file!=	${BUILTIN_CMD.file} --version 2>&1 | ${GREP} 'file-' | ${SED} 's/file-//'
 BUILTIN_PKG.file=	file-${BUILTIN_VERSION.file}
 .endif
-MAKEVARS+=	BUILTIN_PKG.file
+MAKEVARS+=		BUILTIN_PKG.file
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -58,4 +58,4 @@ USE_BUILTIN.file!=							\
 .    endif
 .  endif  # PREFER.file
 .endif
-MAKEVARS+=	USE_BUILTIN.file
+MAKEVARS+=		USE_BUILTIN.file

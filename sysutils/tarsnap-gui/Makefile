@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/09/18 14:17:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.27 2019/11/04 21:28:52 rillig Exp $
 
 DISTNAME=	tarsnap-gui-1.0.2
 PKGREVISION=	2
@@ -13,8 +13,8 @@ LICENSE=	2-clause-bsd
 
 DEPENDS+=	tarsnap-[0-9]*:../../sysutils/tarsnap
 
-USE_LIBTOOL=	yes
-USE_LANGUAGES=	c++
+USE_LIBTOOL=		yes
+USE_LANGUAGES=		c++
 INSTALLATION_DIRS=	bin
 
 do-configure:

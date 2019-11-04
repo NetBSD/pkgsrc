@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.44 2018/11/25 20:20:57 spz Exp $
+# $NetBSD: Makefile.common,v 1.45 2019/11/04 21:28:40 rillig Exp $
 
 # used by sysutils/amanda-common/Makefile
 # used by sysutils/amanda-client/Makefile
@@ -56,7 +56,7 @@ SUBST_CLASSES+=		bool
 SUBST_MESSAGE.bool=	Fix SWIG messing with stdbool.h.
 SUBST_STAGE.bool=	pre-configure
 SUBST_FILES.bool=	perl/Amanda/*.c perl/Amanda/*/*.c
-SUBST_SED.bool=	-e '/undef bool/d'
+SUBST_SED.bool=		-e '/undef bool/d'
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		ac_cv_path_GZIP=${TOOLS_GZIP_CMD:Q}
@@ -106,10 +106,10 @@ build-perl:
 .endif
 
 .if defined(PERL5_MODS) && !empty(PERL5_MODS)
-INSTALLATION_DIRS+= ${PERL5_MODS:H:@_t_@${PERL5_SUB_INSTALLVENDORLIB}/${_t_}@}
+INSTALLATION_DIRS+=	${PERL5_MODS:H:@_t_@${PERL5_SUB_INSTALLVENDORLIB}/${_t_}@}
 .endif
 .if defined(PERL5_LIBS)  && !empty(PERL5_LIBS)
-INSTALLATION_DIRS+= ${PERL5_LIBS:@_t_@${PERL5_SUB_INSTALLVENDORLIB}/auto/Amanda/${_t_}@}
+INSTALLATION_DIRS+=	${PERL5_LIBS:@_t_@${PERL5_SUB_INSTALLVENDORLIB}/auto/Amanda/${_t_}@}
 .endif
 
 .PHONY: post-install-extra

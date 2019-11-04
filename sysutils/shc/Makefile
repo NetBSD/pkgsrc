@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/07/27 16:32:55 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/04 21:28:52 rillig Exp $
 #
 
 DISTNAME=		shc-3.8.9
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.datsi.fi.upm.es/~frosal/
 COMMENT=		Shell script to C compiler
-LICENSE=        	gnu-gpl-v2
+LICENSE=		gnu-gpl-v2
 
 MAKE_FILE=		makefile
 MAKE_FLAGS+=		CFLAGS=${CFLAGS:Q}

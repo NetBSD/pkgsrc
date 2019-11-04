@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2019/04/03 00:33:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.39 2019/11/04 21:28:42 rillig Exp $
 #
 
 DISTNAME=	burn-0.4.1
@@ -24,7 +24,7 @@ MAKE_JOBS_SAFE=	no
 MAKE_ENV+=	ADDITIONAL_CPPFLAGS=-D_POSIX_SOURCE
 MAKE_ENV+=	ADDITIONAL_LDFLAGS=-lutil
 
-FIX_GNUSTEP_INSTALLATION_DIR=	yes
+FIX_GNUSTEP_INSTALLATION_DIR=		yes
 SUBST_FILES.gnustep_installation_dir+=	Bundles/CDparanoia/GNUmakefile
 SUBST_FILES.gnustep_installation_dir+=	Bundles/CDrecord/GNUmakefile
 SUBST_FILES.gnustep_installation_dir+=	Bundles/MkIsoFs/GNUmakefile

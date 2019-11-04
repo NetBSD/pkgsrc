@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2019/07/21 22:25:44 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2019/11/04 21:28:46 rillig Exp $
 #
 
 DISTNAME=	gvfs-1.6.7
@@ -12,17 +12,17 @@ HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Userspace virtual filesystem
 LICENSE=	gnu-lgpl-v2
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	intltool gmake pkg-config msgfmt
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		intltool gmake pkg-config msgfmt
 CONFIGURE_ARGS+=	--enable-http
 CONFIGURE_ARGS+=	--disable-bash-completion
 
 .include "../../mk/bsd.prefs.mk"
 
-PKG_OPTIONS_VAR=        PKG_OPTIONS.gvfs
-PKG_SUPPORTED_OPTIONS+= avahi hal fuse samba
-PKG_SUGGESTED_OPTIONS+= samba
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gvfs
+PKG_SUPPORTED_OPTIONS+=	avahi hal fuse samba
+PKG_SUGGESTED_OPTIONS+=	samba
 PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
 
 # XXX fuse.bl3.mk will fail if we include it and fuse is not available

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2019/05/02 15:31:16 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.20 2019/11/04 21:28:43 rillig Exp $
 #
 # used by sysutils/coreutils/Makefile
 # used by misc/gnuls/Makefile
@@ -38,7 +38,7 @@ CONFIGURE_ENV+=		FORCE_UNSAFE_CONFIGURE=yes
 
 CONFIGURE_ENV.Interix+=	ac_list_mounted_fs=found
 
-CONFIGURE_ENV.DragonFly+= 	gl_cv_search_pthread_join=-lpthread
+CONFIGURE_ENV.DragonFly+=	gl_cv_search_pthread_join=-lpthread
 
 # Various tests rely on GCC's -O2 behaviour (e.g. -D__NO_INLINE__) and
 # without it we run into undefined symbol issues.
@@ -76,7 +76,7 @@ CONFIGURE_ARGS+=	--program-prefix=g
 #CONFIGURE_ARGS+=	--enable-install-program=su
 #.if ${OPSYS} == "NetBSD" ||  ${OPSYS} == "FreeBSD" || \
 #  ${OPSYS} == "OpenBSD"
-#MAKE_FLAGS+=	setuid_root_mode=a=rx
-#MESSAGE_SRC=	${.CURDIR}/MESSAGE.gsu
+#MAKE_FLAGS+=		setuid_root_mode=a=rx
+#MESSAGE_SRC=		${.CURDIR}/MESSAGE.gsu
 #MESSAGE_SUBST+=	OPSYS=${OPSYS:Q}
 #.endif
