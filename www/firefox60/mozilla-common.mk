@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.5 2019/06/13 14:16:37 nia Exp $
+# $NetBSD: mozilla-common.mk,v 1.6 2019/11/04 22:09:54 rillig Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -43,12 +43,12 @@ CXXFLAGS+=		-march=i586
 CXXFLAGS+=		-mstackrealign
 .endif
 
-CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
-CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
-CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}js/src/tests/update-test262.sh
-CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}intl/icu/source/configure
-CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}browser/components/loop/run-all-loop-tests.sh
-CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}browser/extensions/loop/run-all-loop-tests.sh
+CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
+CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
+CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}js/src/tests/update-test262.sh
+CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}intl/icu/source/configure
+CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}browser/components/loop/run-all-loop-tests.sh
+CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}browser/extensions/loop/run-all-loop-tests.sh
 
 CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk3
 .if ${OPSYS} != "SunOS"

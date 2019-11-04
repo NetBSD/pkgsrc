@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/06/05 15:35:29 taca Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/04 22:10:14 rillig Exp $
 
 DISTNAME=	rest-client-2.0.2
 CATEGORIES=	www
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/rest-client/rest-client
 COMMENT=	Simple HTTP and REST client for Ruby inspired by Sinatra
-LICENSE=        mit
+LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-readline>=${RUBY_VERSION}:../../devel/ruby-readline
 DEPENDS+=	${RUBY_PKGPREFIX}-mime-types>=3.0<4.0:../../mail/ruby-mime-types

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2019/09/21 07:31:43 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2019/11/04 22:09:55 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
@@ -39,12 +39,12 @@ CONFIGURE_ARGS+=	--disable-jemalloc
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mgcc)
-.if ${CC_VERSION:S/gcc-//:S/.//g} >= 480
+.  if ${CC_VERSION:S/gcc-//:S/.//g} >= 480
 # Modern gcc does not run any "tracking" passes when compiling with -O0,
 # which makes the generated debug info mostly useless. So explicitly
 # request them.
 O0TRACKING=-fvar-tracking-assignments -fvar-tracking
-.endif
+.  endif
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
@@ -54,15 +54,15 @@ CONFIGURE_ARGS+=	--enable-debug-js-modules
 CONFIGURE_ARGS+=	--disable-install-strip
 PLIST.debug=		yes
 .else
-.if !empty(PKG_OPTIONS:Mdebug-info)
+.  if !empty(PKG_OPTIONS:Mdebug-info)
 CONFIGURE_ARGS+=	--enable-debug-symbols
 CONFIGURE_ARGS+=	--enable-optimize=-O0
 CONFIGURE_ARGS+=	--disable-install-strip
-.else
+.  else
 CONFIGURE_ARGS+=	--disable-debug-symbols
 CONFIGURE_ARGS+=	--enable-optimize=-O2
 CONFIGURE_ARGS+=	--enable-install-strip
-.endif
+.  endif
 CONFIGURE_ARGS+=	--disable-debug
 .endif
 

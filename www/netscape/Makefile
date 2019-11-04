@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/10/28 06:30:23 asau Exp $
+# $NetBSD: Makefile,v 1.28 2019/11/04 22:09:57 rillig Exp $
 #
 
 DISTNAME=	netscape-20040123
@@ -12,14 +12,14 @@ COMMENT=	Open new window using netscape-like browser
 
 .include "../../mk/bsd.prefs.mk"
 
-DEPENDS+= ns-remote>=1.3:../../www/ns-remote
-DEPENDS+={${NETSCAPE_PREFERRED:C/:/,/g}}-[0-9]*:../../www/${NETSCAPE_PREFERRED:C/:.*//}
+DEPENDS+=	ns-remote>=1.3:../../www/ns-remote
+DEPENDS+=	{${NETSCAPE_PREFERRED:C/:/,/g}}-[0-9]*:../../www/${NETSCAPE_PREFERRED:C/:.*//}
 
-NETSCAPE_PREFERRED_DEFAULT=firefox:mozilla:firefox-bin:netscape7:communicator:navigator
+NETSCAPE_PREFERRED_DEFAULT=	firefox:mozilla:firefox-bin:netscape7:communicator:navigator
 .if defined(NS_PREFERRED)
-NETSCAPE_PREFERRED=${NS_PREFERRED}:${NETSCAPE_PREFERRED_DEFAULT}
+NETSCAPE_PREFERRED=		${NS_PREFERRED}:${NETSCAPE_PREFERRED_DEFAULT}
 .else
-NETSCAPE_PREFERRED=${NETSCAPE_PREFERRED_DEFAULT}
+NETSCAPE_PREFERRED=		${NETSCAPE_PREFERRED_DEFAULT}
 .endif
 
 WRKSRC=		${WRKDIR}

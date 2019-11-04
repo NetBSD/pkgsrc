@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.17 2017/01/04 14:49:38 roy Exp $
+# $NetBSD: options.mk,v 1.18 2019/11/04 22:09:57 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lynx
 PKG_SUPPORTED_OPTIONS=	inet6
@@ -57,5 +57,5 @@ CONFIGURE_ARGS+=	--with-socks
 ### IPv6 support
 ###
 .if !empty(PKG_OPTIONS:Minet6)
-CONFIGURE_ARGS+=       --enable-ipv6
+CONFIGURE_ARGS+=	--enable-ipv6
 .endif

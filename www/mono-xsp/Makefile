@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2019/09/11 11:53:40 nia Exp $
+# $NetBSD: Makefile,v 1.49 2019/11/04 22:09:57 rillig Exp $
 
 DISTNAME=	xsp-3.8
 PKGNAME=	mono-${DISTNAME}
@@ -24,11 +24,11 @@ SUBST_FILES.unwrap_mk=		unittests/Tests.XSP.Security/Makefile
 SUBST_SED.unwrap_mk=		-e 's,^MAKEINFO = .*,MAKEINFO = makeinfo,'
 SUBST_SED.unwrap_mk+=		-e 's,^PKG_CONFIG = .*,PKG_CONFIG = ${PREFIX}/bin/pkg-config,'
 
-SUBST_CLASSES+=         fix-mcs
-SUBST_STAGE.fix-mcs=    pre-configure
-SUBST_MESSAGE.fix-mcs=  Fix compiler name
-SUBST_FILES.fix-mcs=    configure
-SUBST_SED.fix-mcs=      -e 's,gmcs,mcs,'
+SUBST_CLASSES+=		fix-mcs
+SUBST_STAGE.fix-mcs=	pre-configure
+SUBST_MESSAGE.fix-mcs=	Fix compiler name
+SUBST_FILES.fix-mcs=	configure
+SUBST_SED.fix-mcs=	-e 's,gmcs,mcs,'
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../lang/mono/buildlink3.mk"

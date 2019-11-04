@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/08/11 13:24:16 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2019/11/04 22:09:50 rillig Exp $
 
 DISTNAME=	CGI-SpeedyCGI-2.22
 PKGNAME=	SpeedyCGI-2.22
@@ -12,7 +12,7 @@ COMMENT=	Speed up perl scripts by running them persistently
 
 MAKE_JOBS_SAFE=		no
 
-PERL5_PACKLIST= 	auto/CGI/SpeedyCGI/.packlist
+PERL5_PACKLIST=		auto/CGI/SpeedyCGI/.packlist
 
 # XXX Kick can down the road and hope the developer fixes this issue.
 MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
