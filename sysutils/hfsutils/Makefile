@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/08/16 20:21:14 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/11/04 21:28:46 rillig Exp $
 #
 
 DISTNAME=	hfsutils-3.2.6
@@ -13,8 +13,8 @@ COMMENT=	Command Line Interface HFS (not HFS+) disk access tools
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include/libhfs
 
-BUILD_TARGET=	all_cli
-INSTALL_TARGET=	install_cli
+BUILD_TARGET=		all_cli
+INSTALL_TARGET=		install_cli
 INSTALL_MAKE_FLAGS+=	BINDEST=${DESTDIR}${PREFIX}/bin \
 			MANDEST=${DESTDIR}${PREFIX}/${PKGMANDIR}
 

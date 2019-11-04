@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/12/24 09:49:03 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/04 21:28:45 rillig Exp $
 
 DISTNAME=	fscd-1.1
 PKGREVISION=	1
@@ -10,11 +10,11 @@ HOMEPAGE=	https://vcs.in-berlin.de/schrank21_fscd/index
 COMMENT=	FreeBSD service check daemon to monitor services
 LICENSE=	2-clause-bsd
 
-CPPFLAGS+=	-DSYSCONFDIR=\"${PKG_SYSCONFDIR}/\"
+CPPFLAGS+=		-DSYSCONFDIR=\"${PKG_SYSCONFDIR}/\"
 # Only for platforms with kqueue.
 ONLY_FOR_PLATFORM=	NetBSD-[2-9].*-* FreeBSD-[4-9].*-* OpenBSD-*-* DragonFly-*-* Darwin-*-*
 
-RCD_SCRIPTS=	fscd
+RCD_SCRIPTS=		fscd
 INSTALLATION_DIRS=	bin sbin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 
 .include "../../mk/compiler.mk"

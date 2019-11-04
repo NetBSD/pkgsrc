@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2019/08/11 13:23:13 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/11/04 21:28:50 rillig Exp $
 
 DISTNAME=	Monitoring-Plugin-0.40
-PKGNAME=    	p5-${DISTNAME}
-PKGREVISION=    	2
+PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	2
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/N/NI/NIERLEIN/
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/08/11 13:23:13 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/04 21:28:50 rillig Exp $
 
 DISTNAME=	Mac-AppleScript-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -17,7 +17,7 @@ ONLY_FOR_PLATFORM=	Darwin-*-*
 # upstream's Makefile.PL's OTHERFLAGS
 LDFLAGS+=	-framework AppleScriptKit -framework Carbon
 
-PERL5_PACKLIST= auto/Mac/AppleScript/.packlist
+PERL5_PACKLIST=	auto/Mac/AppleScript/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

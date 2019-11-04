@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2019/07/26 10:25:15 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2019/11/04 21:28:54 rillig Exp $
 
 UBOOT_TARGET=		bananapi-r2
 UBOOT_CONFIG=		mt7623n_bpir2_defconfig
 UBOOT_BIN=		bpi-r2-sdmmc.img u-boot.bin
 
-UBOOT_INSTALLBOOT_PLIST=installboot.plist
+UBOOT_INSTALLBOOT_PLIST=	installboot.plist
 
 PKGREVISION=		3
 
@@ -22,12 +22,12 @@ CHECK_PORTABILITY_SKIP+=	tools/imx8m_image.sh
 SDMMC_BOOT_IMG=		BPI-R2-HEAD440-0k.img
 DISTFILES+=		${SDMMC_BOOT_IMG}
 UBOOT_BIN+=		${SDMMC_BOOT_IMG}
-SITES.${SDMMC_BOOT_IMG}=${MASTER_SITE_GITHUB:=BPI-SINOVOIP/BPI-R2-bsp/raw/v1.2.1/mt-pack/mtk/bpi-r2/bin/}
+SITES.${SDMMC_BOOT_IMG}= ${MASTER_SITE_GITHUB:=BPI-SINOVOIP/BPI-R2-bsp/raw/v1.2.1/mt-pack/mtk/bpi-r2/bin/}
 
 # BRLYT-signature
 BRLYT_IMG=		BPI-R2-HEAD1-512b.img
 DISTFILES+=		${BRLYT_IMG}
-UBOOT_BIN+= 		${BRLYT_IMG}
+UBOOT_BIN+=		${BRLYT_IMG}
 SITES.${BRLYT_IMG}=	${MASTER_SITE_GITHUB:=BPI-SINOVOIP/BPI-R2-bsp/raw/v1.2.1/mt-pack/mtk/bpi-r2/bin/}
 
 # Preloader
