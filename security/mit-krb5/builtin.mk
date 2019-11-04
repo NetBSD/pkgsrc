@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.15 2019/05/06 08:20:32 wiz Exp $
+# $NetBSD: builtin.mk,v 1.16 2019/11/04 21:12:55 rillig Exp $
 
 BUILTIN_PKG:=	mit-krb5
 
@@ -31,7 +31,7 @@ IS_BUILTIN.mit-krb5=	no
 IS_BUILTIN.mit-krb5=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.mit-krb5
+MAKEVARS+=		IS_BUILTIN.mit-krb5
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -41,12 +41,12 @@ MAKEVARS+=	IS_BUILTIN.mit-krb5
     !empty(IS_BUILTIN.mit-krb5:M[yY][eE][sS])
 .  if empty(SH_KRB5_CONFIG:M__nonexistent__)
 BUILTIN_VERSION.mit-krb5!=	${SH_KRB5_CONFIG} --version | \
-		${SED} -e 's/.*release //' -e 's/-.*//' -e 's/).*//'
+				${SED} -e 's/.*release //' -e 's/-.*//' -e 's/).*//'
 .  endif
 BUILTIN_VERSION.mit-krb5?=	1.4.0
 BUILTIN_PKG.mit-krb5=		mit-krb5-${BUILTIN_VERSION.mit-krb5}
 .endif
-MAKEVARS+=	BUILTIN_PKG.mit-krb5
+MAKEVARS+=			BUILTIN_PKG.mit-krb5
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -73,7 +73,7 @@ USE_BUILTIN.mit-krb5!=							\
 .    endif
 .  endif
 .endif
-MAKEVARS+=	USE_BUILTIN.mit-krb5
+MAKEVARS+=		USE_BUILTIN.mit-krb5
 
 ###
 ### The section below only applies if we are not including this file

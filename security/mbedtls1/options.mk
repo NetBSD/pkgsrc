@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2016/06/16 09:21:11 fhajny Exp $
+# $NetBSD: options.mk,v 1.2 2019/11/04 21:12:55 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mbedtls
 PKG_SUPPORTED_OPTIONS=	mbedtls-tools tests zlib
@@ -21,13 +21,13 @@ CMAKE_ARGS+=		-DENABLE_PROGRAMS=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mtests)
-. if !empty(PKG_OPTIONS:Mmbedtls-tools)
-.  include "../../security/openssl/buildlink3.mk"
+.  if !empty(PKG_OPTIONS:Mmbedtls-tools)
+.    include "../../security/openssl/buildlink3.mk"
 CMAKE_ARGS+=		-DENABLE_TESTING=ON
 PLIST.tests=		yes
-. else
+.  else
 PKG_FAIL_REASON+=	"option tests needs option mbedtls-tools"
-. endif
+.  endif
 .else
 CMAKE_ARGS+=		-DENABLE_TESTING=OFF
 .endif

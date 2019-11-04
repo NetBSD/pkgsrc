@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2019/09/02 13:19:56 adam Exp $
+# $NetBSD: Makefile,v 1.52 2019/11/04 21:13:00 rillig Exp $
 
 DISTNAME=		prewikka-${VERSION}
 PKGNAME=		${PYPKGPREFIX}-prewikka-${VERSION}
@@ -21,10 +21,10 @@ USE_TOOLS+=		msgfmt
 
 .include "../../mk/bsd.prefs.mk"
 
-PYDISTUTILSPKG=		yes
-PYSETUP=		setup.py
+PYDISTUTILSPKG=	yes
+PYSETUP=	setup.py
 REPLACE_PYTHON=	scripts/prewikka-httpd
-PYTHON_VERSIONS_ACCEPTED=	 27 # py-cheetah
+PYTHON_VERSIONS_ACCEPTED= 27 # py-cheetah
 
 PREWIKKA_USER?=		prewikka
 PREWIKKA_GROUP?=	prewikka
@@ -53,7 +53,7 @@ FILES_SUBST+=	PREWIKKA_USER=${PREWIKKA_USER:Q}
 MAKE_ENV+=	EXAMPLEDIR=share/examples/${PKGBASE}
 
 INSTALLATION_DIRS+=	share/examples/${PKGBASE} sbin
-CONF_FILES+=	${PREFIX}/share/examples/${PKGBASE}/prewikka.conf ${PKG_SYSCONFDIR}/prewikka.conf
+CONF_FILES+=		${PREFIX}/share/examples/${PKGBASE}/prewikka.conf ${PKG_SYSCONFDIR}/prewikka.conf
 
 pre-patch:
 	cp ${FILESDIR}/runPrewikka.c ${WRKSRC}

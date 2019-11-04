@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/03/24 18:03:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/04 21:12:56 rillig Exp $
 
 DISTNAME=	p11-kit-0.23.15
 CATEGORIES=	security
@@ -37,9 +37,9 @@ PLIST_SUBST+=	DLEXT=${DLEXT:Q}
 
 PKGCONFIG_OVERRIDE+=	p11-kit/p11-kit-1.pc.in
 
-PKG_SYSCONFSUBDIR= pkcs11
-CONF_FILES+=	share/examples/p11-kit/pkcs11.conf.example \
-		${PKG_SYSCONFDIR}/pkcs11.conf
+PKG_SYSCONFSUBDIR=	pkcs11
+CONF_FILES+=		share/examples/p11-kit/pkcs11.conf.example \
+			${PKG_SYSCONFDIR}/pkcs11.conf
 
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../security/libtasn1/buildlink3.mk"

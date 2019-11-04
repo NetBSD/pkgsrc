@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/05/23 19:23:15 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2019/11/04 21:12:55 rillig Exp $
 #
 
 DISTNAME=	lynis-2.6.2
@@ -31,7 +31,7 @@ SUBST_MESSAGE.confdir=	Fixing conf path
 SUBST_FILES.confdir=	include/functions
 SUBST_SED.confdir=	-e "s,@CONFDIR@,${PKG_SYSCONFDIR},"
 
-WRKSRC=		${WRKDIR}/lynis
+WRKSRC=			${WRKDIR}/lynis
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man8
 INSTALLATION_DIRS+=	share/examples/lynis
 INSTALLATION_DIRS+=	lib/lynis/db lib/lynis/extras
@@ -44,10 +44,10 @@ BUILD_DEFS+=	VARBASE
 AUTO_MKDIRS=	yes
 
 PKG_SYSCONFSUBDIR=	lynis
-CONF_FILES+=	share/examples/lynis/default.prf \
-		${PKG_SYSCONFDIR}/default.prf
-CONF_FILES+=	share/examples/lynis/developer.prf \
-		${PKG_SYSCONFDIR}/developer.prf
+CONF_FILES+=		share/examples/lynis/default.prf \
+			${PKG_SYSCONFDIR}/default.prf
+CONF_FILES+=		share/examples/lynis/developer.prf \
+			${PKG_SYSCONFDIR}/developer.prf
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/lynis			\

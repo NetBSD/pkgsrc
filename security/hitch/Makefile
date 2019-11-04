@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/04/25 07:33:15 maya Exp $
+# $NetBSD: Makefile,v 1.11 2019/11/04 21:12:53 rillig Exp $
 
 DISTNAME=	hitch-1.5.0
 PKGREVISION=	1
@@ -33,7 +33,7 @@ HITCH_OCSP?=		${VARBASE}/db/hitch
 
 PKG_GROUPS+=		${HITCH_GROUP}
 PKG_USERS+=		${HITCH_USER}:${HITCH_GROUP}
-PKG_GECOS.${HITCH_USER}=hitch daemon user
+PKG_GECOS.${HITCH_USER}= hitch daemon user
 
 RCD_SCRIPTS=		hitch
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2018/07/31 12:39:34 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.14 2019/11/04 21:12:54 rillig Exp $
 #
 # used by security/lasso/Makefile
 # used by security/py-lasso/Makefile
@@ -12,14 +12,14 @@ HOMEPAGE=	http://lasso.entrouvert.org/
 COMMENT=	Liberty Alliance Single Sign On implementation
 LICENSE=	gnu-gpl-v2
 
-DISTINFO_FILE=          ${.CURDIR}/../../security/lasso/distinfo
-PATCHDIR=               ${.CURDIR}/../../security/lasso/patches
+DISTINFO_FILE=		${.CURDIR}/../../security/lasso/distinfo
+PATCHDIR=		${.CURDIR}/../../security/lasso/patches
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-sasl2=${PREFIX}
 CONFIGURE_ARGS+=	--with-zlib=${PREFIX}
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config perl
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config perl
 
 CFLAGS.NetBSD+=	-D_POSIX_C_SOURCE=199506
 

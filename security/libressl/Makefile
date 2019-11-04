@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/06/21 23:10:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2019/11/04 21:12:54 rillig Exp $
 
 DISTNAME=	libressl-2.7.4
 CATEGORIES=	security
@@ -26,10 +26,10 @@ CONFIGURE_ARGS+=	--with-openssldir=${PKG_SYSCONFDIR}
 
 INSTALLATION_DIRS+=	${EGDIR} lib
 
-EGDIR= 			${PREFIX}/libressl/share/examples/${PKGBASE}
-CONFS= 			cert.pem openssl.cnf x509v3.cnf
+EGDIR=			${PREFIX}/libressl/share/examples/${PKGBASE}
+CONFS=			cert.pem openssl.cnf x509v3.cnf
 .for f in ${CONFS}
-CONF_FILES+= 		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
+CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
 # Handle subprefix

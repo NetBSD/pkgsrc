@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/04/25 07:33:17 maya Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/04 21:13:03 rillig Exp $
 
 DISTNAME=	sshfp-1.1.3
 PKGREVISION=	5
@@ -12,9 +12,9 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 
-MANCOMPRESSED=			yes
-NO_BUILD=			yes
-REPLACE_PYTHON=		sshfp
+MANCOMPRESSED=	yes
+NO_BUILD=	yes
+REPLACE_PYTHON=	sshfp
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

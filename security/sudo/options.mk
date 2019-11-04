@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.22 2018/08/14 13:18:37 adam Exp $
+# $NetBSD: options.mk,v 1.23 2019/11/04 21:13:03 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.sudo
-PKG_SUPPORTED_OPTIONS=	ldap nls
-PKG_OPTIONS_OPTIONAL_GROUPS=auth
-PKG_OPTIONS_GROUP.auth=	kerberos pam skey
+PKG_OPTIONS_VAR=		PKG_OPTIONS.sudo
+PKG_SUPPORTED_OPTIONS=		ldap nls
+PKG_OPTIONS_OPTIONAL_GROUPS=	auth
+PKG_OPTIONS_GROUP.auth=		kerberos pam skey
 
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/skey.h)
 PKG_SUGGESTED_OPTIONS=	skey

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/07/22 01:36:14 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/04 21:12:59 rillig Exp $
 
 DISTNAME=	acme-tiny-4.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,9 +13,9 @@ LICENSE=	mit
 GITHUB_PROJECT=	acme-tiny
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
-NO_BUILD=	yes
-INSTALLATION_DIRS=bin share/doc/${PYPKGPREFIX}-acme-tiny
-PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
+NO_BUILD=		yes
+INSTALLATION_DIRS=	bin share/doc/${PYPKGPREFIX}-acme-tiny
+PLIST_SUBST+=		PYPKGPREFIX=${PYPKGPREFIX}
 
 REPLACE_PYTHON=	acme_tiny.py
 

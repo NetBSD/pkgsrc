@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/08/22 12:23:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.28 2019/11/04 21:12:52 rillig Exp $
 #
 
 PKGNAME=	dirb-1.9
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dirb.sourceforge.net/
 COMMENT=	Web Content Scanner
 
-WRKSRC=${WRKDIR}/dirb
+WRKSRC=	${WRKDIR}/dirb
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/09/03 09:22:58 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2019/11/04 21:12:55 rillig Exp $
 
 DISTNAME=	msudir-0.15
 CATEGORIES=	security
@@ -11,6 +11,6 @@ COMMENT=	Easy setuid script management
 
 MAKE_ENV+=	SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
-PKG_DESTDIR_SUPPORT=    destdir
+PKG_DESTDIR_SUPPORT=	destdir
 
 .include "../../mk/bsd.pkg.mk"

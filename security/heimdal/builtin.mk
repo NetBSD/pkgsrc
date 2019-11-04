@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.16 2019/09/12 21:07:01 rillig Exp $
+# $NetBSD: builtin.mk,v 1.17 2019/11/04 21:12:53 rillig Exp $
 
 BUILTIN_PKG:=	heimdal
 
@@ -21,7 +21,7 @@ IS_BUILTIN.heimdal=	no
 IS_BUILTIN.heimdal=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.heimdal
+MAKEVARS+=		IS_BUILTIN.heimdal
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -38,17 +38,17 @@ BUILTIN_VERSION.heimdal!=	${SH_KRB5_CONFIG} --version |		\
 # the version number of the software.  Match up heimdal versions with
 # OS versions for an approximate determination of the heimdal version.
 #
-_BLTN_HEIMDAL_VERSIONS=	0.6.3  0.6.2  0.6.1  0.6  0.5  0.4e  0.3f  0.3e
-_BLTN_HEIMDAL_0.6.3=	NetBSD-2.* NetBSD-[3-9]*-*
-_BLTN_HEIMDAL_0.6.2=	# empty
-_BLTN_HEIMDAL_0.6.1=	NetBSD-1.6[U-Z]-* NetBSD-1.6Z*-*
-_BLTN_HEIMDAL_0.6=	NetBSD-1.6[U-Z]-* NetBSD-1.6Z*-*
-_BLTN_HEIMDAL_0.5=	NetBSD-1.6[I-T]-*
-_BLTN_HEIMDAL_0.4e=	NetBSD-1.6[A-H]-*				\
+_BLTN_HEIMDAL_VERSIONS=		0.6.3  0.6.2  0.6.1  0.6  0.5  0.4e  0.3f  0.3e
+_BLTN_HEIMDAL_0.6.3=		NetBSD-2.* NetBSD-[3-9]*-*
+_BLTN_HEIMDAL_0.6.2=		# empty
+_BLTN_HEIMDAL_0.6.1=		NetBSD-1.6[U-Z]-* NetBSD-1.6Z*-*
+_BLTN_HEIMDAL_0.6=		NetBSD-1.6[U-Z]-* NetBSD-1.6Z*-*
+_BLTN_HEIMDAL_0.5=		NetBSD-1.6[I-T]-*
+_BLTN_HEIMDAL_0.4e=		NetBSD-1.6[A-H]-*				\
 			NetBSD-1.6-* NetBSD-1.6_*-* NetBSD-1.6.*-*	\
 			NetBSD-1.5[YZ]-* NetBSD-1.5Z*-*
-_BLTN_HEIMDAL_0.3f=	NetBSD-1.5X-*
-_BLTN_HEIMDAL_0.3e=	NetBSD-1.5[UVW]-*				\
+_BLTN_HEIMDAL_0.3f=		NetBSD-1.5X-*
+_BLTN_HEIMDAL_0.3e=		NetBSD-1.5[UVW]-*				\
 			NetBSD-1.5.*-*
 .    for _heimdal_version_ in ${_BLTN_HEIMDAL_VERSIONS}
 .      for _pattern_ in ${_BLTN_HEIMDAL_${_heimdal_version_}}
@@ -61,7 +61,7 @@ BUILTIN_VERSION.heimdal?=	0.2t
 .  endif
 BUILTIN_PKG.heimdal=		heimdal-${BUILTIN_VERSION.heimdal}
 .endif
-MAKEVARS+=	BUILTIN_PKG.heimdal
+MAKEVARS+=			BUILTIN_PKG.heimdal
 
 ###
 ### Determine whether we should use the built-in implementation if it

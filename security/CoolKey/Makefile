@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/08/16 20:45:44 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/04 21:12:51 rillig Exp $
 #
 
 DISTNAME=	coolkey-1.1.0
@@ -31,9 +31,9 @@ USE_TOOLS+=	gsed
 USE_LANGUAGES=	c c++
 AUTOCONF_REQD=	2.59
 
-CONFIGURE_ARGS+=        --sharedstatedir=${VARBASE:Q}
-CONFIGURE_ARGS+=        --localstatedir=${VARBASE:Q}
-CONFIGURE_ARGS+=        --sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sharedstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--disable-dependency-tracking
 
 PKGCONFIG_OVERRIDE+=	src/libckyapplet/libckyapplet.pc.in

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/07/20 22:46:49 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/04 21:12:56 rillig Exp $
 #
 
 DISTNAME=	openvas-plugins-1.0.5
@@ -29,9 +29,9 @@ NONFREE=	cisco_vpn_client_detect.nasl js.scob.trojan.nasl \
 
 post-extract:
 	@${MKDIR} ${WRKSRC}/bin
-.	for f in ${NONFREE}
-		@${RM} ${WRKSRC}/scripts/${f}
-.	endfor
+.for f in ${NONFREE}
+	@${RM} ${WRKSRC}/scripts/${f}
+.endfor
 
 .include "../../security/openvas-libraries/buildlink3.mk"
 .include "../../security/openvas-libnasl/buildlink3.mk"

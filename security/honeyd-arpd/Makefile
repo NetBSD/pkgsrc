@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2016/03/05 11:29:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.31 2019/11/04 21:12:53 rillig Exp $
 #
 
 DISTNAME=	arpd-0.2
@@ -15,7 +15,7 @@ RCD_SCRIPTS=	honeydarpd
 GNU_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/arpd
 
-CONFIGURE_ARGS+=    --with-libevent=${BUILDLINK_PREFIX.libevent}
+CONFIGURE_ARGS+=	--with-libevent=${BUILDLINK_PREFIX.libevent}
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
 

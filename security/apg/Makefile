@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/08/11 13:22:44 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2019/11/04 21:12:51 rillig Exp $
 #
 
 DISTNAME=	apg-2.3.0b
@@ -16,10 +16,10 @@ MAKE_ENV+=	FLAGS=${CFLAGS:M*:Q} INSTALL_PREFIX=${DESTDIR:Q}${PREFIX:Q}
 USE_TOOLS+=	perl:run
 REPLACE_PERL=	perl/apgcli.pl
 
-OPSYSVARS+=	APG_CS_CLIBS
+OPSYSVARS+=		APG_CS_CLIBS
 APG_CS_CLIBS.Linux+=	-lnsl
 APG_CS_CLIBS.SunOS+=	-lnsl -lsocket
-MAKE_ENV+=	APG_CS_CLIBS=${APG_CS_CLIBS:Q}
+MAKE_ENV+=		APG_CS_CLIBS=${APG_CS_CLIBS:Q}
 
 INSTALLATION_DIRS+=	bin sbin ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
 

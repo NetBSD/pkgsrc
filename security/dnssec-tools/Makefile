@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2019/08/11 13:22:45 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2019/11/04 21:12:52 rillig Exp $
 
 DISTNAME=	dnssec-tools-2.1
 PKGREVISION=	5
@@ -34,7 +34,7 @@ PERL5_PACKLIST+=	auto/Net/DNS/SEC/Tools/conf/.packlist
 PERL5_PACKLIST+=	auto/convertar/.packlist
 PERL5_PACKLIST+=	auto/dnssec-tools/.packlist
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-nsec3
 CONFIGURE_ARGS+=	--with-resolv-conf=${PKG_SYSCONFDIR}/dnssec-tools/resolv.conf
 CONFIGURE_ARGS+=	--with-root-hints=${PKG_SYSCONFDIR}/dnssec-tools/root.hints

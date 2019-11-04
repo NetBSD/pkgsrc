@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/09/02 13:19:54 adam Exp $
+# $NetBSD: Makefile,v 1.12 2019/11/04 21:13:03 rillig Exp $
 
 DISTNAME=	volatility-2.4
 PKGREVISION=	1
@@ -14,10 +14,10 @@ DEPENDS+=	${PYPKGPREFIX}-crypto-[0-9]*:../../security/py-crypto
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 DEPENDS+=	${PYPKGPREFIX}-distorm3-[0-9]*:../../devel/py-distorm3
 
-PYDISTUTILSPKG= yes
-REPLACE_PYTHON= tools/vtype_diff.py
+PYDISTUTILSPKG=	yes
+REPLACE_PYTHON=	tools/vtype_diff.py
 
-PYTHON_VERSIONS_ACCEPTED=	 27
+PYTHON_VERSIONS_ACCEPTED=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/application.mk"
