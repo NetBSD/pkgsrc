@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/25 06:56:55 asau Exp $
+# $NetBSD: Makefile,v 1.25 2019/11/04 21:43:47 rillig Exp $
 #
 
 DISTNAME=		RTF-1.10
@@ -31,11 +31,11 @@ SUBST_SED.rtf+=		-e 's|\(LOCALBINDIR =.*\)|\1/bin|'
 
 # turn this on when hacking or debugging the package
 #WARNFLAGS=		-O2 -Wall -Wextra -Wwrite-strings -Wmissing-prototypes
-#SUBST_CLASSES+= 	warn
+#SUBST_CLASSES+=	warn
 #SUBST_STAGE.warn=	pre-build
 #SUBST_MESSAGE.warn=	Enabling lots of warnings.
 #SUBST_FILES.warn=	Makefile */Makefile
-#SUBST_SED.warn= 	-e '/CDEBUGFLAGS/s/-O/${WARNFLAGS}/'
+#SUBST_SED.warn=	-e '/CDEBUGFLAGS/s/-O/${WARNFLAGS}/'
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/h/standard-names ${DESTDIR}${PREFIX}/lib/rtf-tools
