@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2019/10/09 09:38:10 nros Exp $
+# $NetBSD: Makefile.common,v 1.30 2019/11/04 21:12:52 rillig Exp $
 #
 # used by security/cyrus-sasl/Makefile
 # used by security/cy2-anonymous/Makefile
@@ -17,15 +17,15 @@
 # This Makefile fragment should be included _below_ any SASL_PLUGIN
 # definition and _above_ any CONFIGURE_ARGS definitions.
 
-DISTNAME=	cyrus-sasl-2.1.27
-DISTFILES=	${DISTNAME}-rc7${EXTRACT_SUFX}
-CATEGORIES=	security
-MASTER_SITES=	https://www.cyrusimap.org/releases/
-MASTER_SITES+=	ftp://ftp.cyrusimap.org/cyrus-sasl/
-#MASTER_SITES+=	ftp://ftp.cyrusimap.org/cyrus-sasl/OLD-VERSIONS/
-#PATCHFILES+=	cyrus-sasl-dedad73e5e7a75d01a5f3d5a6702ab8ccd2ff40d.patch.v2
+DISTNAME=		cyrus-sasl-2.1.27
+DISTFILES=		${DISTNAME}-rc7${EXTRACT_SUFX}
+CATEGORIES=		security
+MASTER_SITES=		https://www.cyrusimap.org/releases/
+MASTER_SITES+=		ftp://ftp.cyrusimap.org/cyrus-sasl/
+#MASTER_SITES+=		ftp://ftp.cyrusimap.org/cyrus-sasl/OLD-VERSIONS/
+#PATCHFILES+=		cyrus-sasl-dedad73e5e7a75d01a5f3d5a6702ab8ccd2ff40d.patch.v2
 #SITES.cyrus-sasl-dedad73e5e7a75d01a5f3d5a6702ab8ccd2ff40d.patch.v2= \
-#		-https://cgit.cyrus.foundation/cyrus-sasl/patch/?id=dedad73e5e7a75d01a5f3d5a6702ab8ccd2ff40d
+#			-https://cgit.cyrus.foundation/cyrus-sasl/patch/?id=dedad73e5e7a75d01a5f3d5a6702ab8ccd2ff40d
 #PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.37 2019/09/06 09:03:00 manu Exp $
+# $NetBSD: options.mk,v 1.38 2019/11/04 21:12:56 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openssh
 PKG_SUPPORTED_OPTIONS=	editline kerberos openssl pam legacymodsz
@@ -28,7 +28,7 @@ CONFIGURE_ENV+=		ac_cv_search_k_hasafs=no
 .endif
 
 .if !empty(PKG_OPTIONS:Mlegacymodsz)
-CONFIGURE_ARGS+=   CPPFLAGS="${CPPFLAGS} -DSSH_RSA_INSECURE_LEGACY_MIN_MOD_SZ=768"
+CONFIGURE_ARGS+=	CPPFLAGS="${CPPFLAGS} -DSSH_RSA_INSECURE_LEGACY_MIN_MOD_SZ=768"
 .endif
 
 #.if !empty(PKG_OPTIONS:Mhpn-patch)

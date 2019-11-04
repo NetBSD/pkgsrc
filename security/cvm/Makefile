@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/05/23 19:23:14 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2019/11/04 21:12:52 rillig Exp $
 #
 
 DISTNAME=		cvm-0.97
@@ -47,9 +47,9 @@ DJB_CONFIG_CMDS=							\
 .include "../../mk/bsd.prefs.mk"
 
 .if ${SHLIB_TYPE} == "dylib"
-CVM_LIB_EXT=dylib
+CVM_LIB_EXT=	dylib
 .else
-CVM_LIB_EXT=so
+CVM_LIB_EXT=	so
 .endif
 
 LDFLAGS.SunOS+=	-lsocket -lnsl

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2019/07/11 11:20:06 sevan Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/04 21:13:04 rillig Exp $
 
 DISTNAME=	yara-${VERSION}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=VirusTotal/}
 
-COMMENT=        Pattern matching swiss knife for malware researchers
+COMMENT=	Pattern matching swiss knife for malware researchers
 
 USE_TOOLS+=	pkg-config automake autoreconf
 USE_LIBTOOL=	yes

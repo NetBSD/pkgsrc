@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/04/03 00:33:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/04 21:12:53 rillig Exp $
 
 DISTNAME=	gpgmepp-15.12.2
 PKGREVISION=	13
@@ -11,7 +11,7 @@ HOMEPAGE=	https://projects.kde.org/gpgmepp
 COMMENT=	C++ bindings/wrapper for gpgme
 LICENSE=	gnu-lgpl-v2.1
 
-BUILD_DEPENDS+= extra-cmake-modules>=5.19.0:../../devel/extra-cmake-modules
+BUILD_DEPENDS+=	extra-cmake-modules>=5.19.0:../../devel/extra-cmake-modules
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++

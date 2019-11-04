@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2019/07/20 22:46:49 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2019/11/04 21:12:59 rillig Exp $
 #
 
 DISTNAME=		prelude-lml-0.9.15
@@ -66,7 +66,7 @@ CONF_FILES_PERMS+=	${EGDIR}/prelude-lml.conf ${PKG_SYSCONFDIR}/prelude-lml.conf 
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0644
 
 # From plugins/pcre/ruleset/Makefile.in
-ruleset_DATA = \
+ruleset_DATA =	\
 	apc-emu.rules           \
 	arbor.rules             \
 	arpwatch.rules          \
@@ -145,7 +145,7 @@ unsupported_ruleset_DATA = \
 	zywall.rules		\
 	zyxel.rules
 .  for f in ${unsupported_ruleset_DATA}
-CONF_FILES+=	${EGDIR}/ruleset/${f:Q} ${PKG_SYSCONFDIR}/ruleset/${f:Q}
+CONF_FILES+=		${EGDIR}/ruleset/${f:Q} ${PKG_SYSCONFDIR}/ruleset/${f:Q}
 .  endfor
 .endif
 

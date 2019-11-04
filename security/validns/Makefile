@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/07/09 06:38:57 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/04 21:13:03 rillig Exp $
 #
 
 DISTNAME=	validns-0.8
@@ -15,7 +15,7 @@ LICENSE=	2-clause-bsd
 
 #BUILD_DEPENDS+=	p5-Test-Command-Simple-[0-9]*:../../devel/p5-Test-Command-Simple
 
-#USE_TOOLS+=perl
+#USE_TOOLS+=	perl
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

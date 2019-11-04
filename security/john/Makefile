@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/05/23 19:23:14 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2019/11/04 21:12:54 rillig Exp $
 #
 
 DISTNAME=	john-1.8.0
@@ -25,47 +25,47 @@ JOHN_ARCH.sparc64=	sparcv9
 JOHN_ARCH.x86_64=	x86-64
 JOHN_CC.gcc=		gcc
 JOHN_CC.sunpro=		cc
-BUILD_TARGET=	solaris-${JOHN_ARCH.${MACHINE_ARCH}}-${JOHN_CC.${PKGSRC_COMPILER}}
+BUILD_TARGET=		solaris-${JOHN_ARCH.${MACHINE_ARCH}}-${JOHN_CC.${PKGSRC_COMPILER}}
 .elif ${OPSYS} == "NetBSD"
 .  if ${MACHINE_ARCH} == "i386"
-BUILD_TARGET=	openbsd-x86-any
+BUILD_TARGET=		openbsd-x86-any
 .  elif ${MACHINE_ARCH} == "x86_64"
-BUILD_TARGET=	openbsd-x86-64
+BUILD_TARGET=		openbsd-x86-64
 .  elif ${MACHINE_ARCH} == "sparc64"
-BUILD_TARGET=	netbsd-sparc64
+BUILD_TARGET=		netbsd-sparc64
 .  elif ${MACHINE_ARCH} == "sparc"
-BUILD_TARGET=	openbsd-sparc
+BUILD_TARGET=		openbsd-sparc
 .  elif ${MACHINE_ARCH} == "alpha"
-BUILD_TARGET=	openbsd-alpha
+BUILD_TARGET=		openbsd-alpha
 .  elif ${MACHINE_ARCH} == "powerpc"
-BUILD_TARGET=	openbsd-ppc32
+BUILD_TARGET=		openbsd-ppc32
 .  elif ${MACHINE_ARCH} == "powerpc64"
-BUILD_TARGET=	openbsd-ppc64
+BUILD_TARGET=		openbsd-ppc64
 .  elif ${MACHINE_ARCH} == "vax"
-BUILD_TARGET=	netbsd-vax
+BUILD_TARGET=		netbsd-vax
 .  else
-BUILD_TARGET=	generic
+BUILD_TARGET=		generic
 .  endif
 .elif ${OPSYS} == "OpenBSD"
 .  if ${MACHINE_ARCH} == "i386"
-BUILD_TARGET=	openbsd-x86-any
+BUILD_TARGET=		openbsd-x86-any
 .  elif ${MACHINE_ARCH} == "x86_64"
-BUILD_TARGET=	openbsd-x86-64
+BUILD_TARGET=		openbsd-x86-64
 .  elif ${MACHINE_ARCH} == "sparc64"
-BUILD_TARGET=	openbsd-sparc64
+BUILD_TARGET=		openbsd-sparc64
 .  elif ${MACHINE_ARCH} == "sparc"
-BUILD_TARGET=	openbsd-sparc
+BUILD_TARGET=		openbsd-sparc
 .  elif ${MACHINE_ARCH} == "alpha"
-BUILD_TARGET=	openbsd-alpha
+BUILD_TARGET=		openbsd-alpha
 .  elif ${MACHINE_ARCH} == "powerpc"
-BUILD_TARGET=	openbsd-ppc32
+BUILD_TARGET=		openbsd-ppc32
 .  elif ${MACHINE_ARCH} == "powerpc64"
-BUILD_TARGET=	openbsd-ppc64
+BUILD_TARGET=		openbsd-ppc64
 .  else
-BUILD_TARGET=	generic
+BUILD_TARGET=		generic
 .  endif
 .else
-BUILD_TARGET=	generic
+BUILD_TARGET=		generic
 .endif
 
 INSTALLATION_DIRS=	bin share/john

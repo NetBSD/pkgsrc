@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/11/04 21:57:11 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/04 21:12:59 rillig Exp $
 #
 
 DISTNAME=	pyDes-2.0.1
@@ -11,7 +11,7 @@ HOMEPAGE=	http://twhiteman.netfirms.com/pyDES/
 COMMENT=	DES implementation in python
 LICENSE=	public-domain
 
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,9 @@
-# $NetBSD: builtin.mk,v 1.43 2015/03/26 08:05:02 dholland Exp $
+# $NetBSD: builtin.mk,v 1.44 2019/11/04 21:12:56 rillig Exp $
 
 BUILTIN_PKG:=	openssl
 
-BUILTIN_FIND_LIBS:=		crypto des ssl
-BUILTIN_FIND_HEADERS_VAR:=	H_OPENSSLCONF H_OPENSSLV
+BUILTIN_FIND_LIBS:=			crypto des ssl
+BUILTIN_FIND_HEADERS_VAR:=		H_OPENSSLCONF H_OPENSSLV
 BUILTIN_FIND_HEADERS.H_OPENSSLCONF=	openssl/opensslconf.h
 BUILTIN_FIND_HEADERS.H_OPENSSLV=	openssl/opensslv.h
 
@@ -19,7 +19,7 @@ IS_BUILTIN.openssl=	no
 IS_BUILTIN.openssl=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.openssl
+MAKEVARS+=		IS_BUILTIN.openssl
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -57,8 +57,8 @@ BUILTIN_VERSION.openssl!=						\
 	' ${H_OPENSSLV}
 BUILTIN_PKG.openssl=	openssl-${BUILTIN_VERSION.openssl}
 .endif
-MAKEVARS+=	BUILTIN_PKG.openssl
-MAKEVARS+=	BUILTIN_VERSION.openssl
+MAKEVARS+=		BUILTIN_PKG.openssl
+MAKEVARS+=		BUILTIN_VERSION.openssl
 
 .if !defined(BUILTIN_OPENSSL_HAS_THREADS) && \
     !empty(IS_BUILTIN.openssl:M[yY][eE][sS]) && \
@@ -78,14 +78,14 @@ MAKEVARS+=	BUILTIN_OPENSSL_HAS_THREADS
 ###
 .if !defined(USE_BUILTIN.openssl)
 .  if ${PREFER.openssl} == "pkgsrc"
-USE_BUILTIN.openssl=	no
+USE_BUILTIN.openssl=		no
 .  else
-USE_BUILTIN.openssl=	${IS_BUILTIN.openssl}
+USE_BUILTIN.openssl=		${IS_BUILTIN.openssl}
 .    if defined(BUILTIN_PKG.openssl) && \
         !empty(IS_BUILTIN.openssl:M[yY][eE][sS])
-USE_BUILTIN.openssl=	yes
+USE_BUILTIN.openssl=		yes
 ### take care builtin check case, BUILDLINK_API_DEPENDS may not be defined yet.
-CHECK_BUILTIN.openssl?=	no
+CHECK_BUILTIN.openssl?=		no
 .      if !empty(CHECK_BUILTIN.openssl:M[yY][eE][sS])
 BUILDLINK_API_DEPENDS.openssl?=	openssl>=1.0.1c
 .      endif
@@ -104,12 +104,12 @@ USE_BUILTIN.openssl!=							\
 	defined(USE_FEATURES.openssl)
 .      if !empty(USE_FEATURES.openssl:Mthreads) && \
 	  !empty(BUILTIN_OPENSSL_HAS_THREADS:M[nN][oO])
-USE_BUILTIN.openssl=	no
+USE_BUILTIN.openssl=		no
 .      endif
 .    endif
 .  endif  # PREFER.openssl
 .endif
-MAKEVARS+=	USE_BUILTIN.openssl
+MAKEVARS+=			USE_BUILTIN.openssl
 
 ###
 ### The section below only applies if we are not including this file

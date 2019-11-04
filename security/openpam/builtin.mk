@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.10 2018/05/15 07:57:32 triaxx Exp $
+# $NetBSD: builtin.mk,v 1.11 2019/11/04 21:12:56 rillig Exp $
 
 BUILTIN_PKG:=	openpam
 
@@ -17,7 +17,7 @@ IS_BUILTIN.openpam=	no
 IS_BUILTIN.openpam=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.openpam
+MAKEVARS+=		IS_BUILTIN.openpam
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -31,7 +31,7 @@ BUILTIN_VERSION.openpam!=	\
 		${H_OPENPAM}
 BUILTIN_PKG.openpam=	openpam-${BUILTIN_VERSION.openpam}
 .endif
-MAKEVARS+=	BUILTIN_PKG.openpam
+MAKEVARS+=		BUILTIN_PKG.openpam
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -58,4 +58,4 @@ USE_BUILTIN.openpam!=							\
 .    endif
 .  endif  # PREFER.openpam
 .endif
-MAKEVARS+=	USE_BUILTIN.openpam
+MAKEVARS+=		USE_BUILTIN.openpam

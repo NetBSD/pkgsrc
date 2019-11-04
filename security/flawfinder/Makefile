@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/04/25 07:33:15 maya Exp $
+# $NetBSD: Makefile,v 1.27 2019/11/04 21:12:52 rillig Exp $
 
 DISTNAME=	flawfinder-1.31
 PKGREVISION=	1
@@ -11,7 +11,7 @@ COMMENT=	Python program to find flaws in C/C++ programs
 LICENSE=	gnu-gpl-v2
 
 NO_BUILD=		yes
-REPLACE_PYTHON=	flawfinder
+REPLACE_PYTHON=		flawfinder
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
