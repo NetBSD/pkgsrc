@@ -1,16 +1,16 @@
-# $NetBSD: options.mk,v 1.2 2015/11/25 12:53:09 jperkin Exp $
+# $NetBSD: options.mk,v 1.3 2019/11/04 19:57:58 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.cups
+PKG_OPTIONS_VAR=		PKG_OPTIONS.cups
 PKG_OPTIONS_REQUIRED_GROUPS=	pdftops
 PKG_OPTIONS_GROUP.pdftops=	ghostscript poppler
-PKG_SUPPORTED_OPTIONS=	acl dbus dnssd kerberos pam slp tcpwrappers
-PKG_SUGGESTED_OPTIONS=	dbus dnssd kerberos poppler slp
+PKG_SUPPORTED_OPTIONS=		acl dbus dnssd kerberos pam slp tcpwrappers
+PKG_SUGGESTED_OPTIONS=		dbus dnssd kerberos poppler slp
 PKG_OPTIONS_LEGACY_OPTS+=	xpdf:poppler gs:ghostscript
 
 # Neither DragonFly nor SunOS can build libusb1
 .if ${OPSYS} != "DragonFly" && ${OPSYS} != "SunOS"
-PKG_SUPPORTED_OPTIONS+= libusb
-PKG_SUGGESTED_OPTIONS+= libusb
+PKG_SUPPORTED_OPTIONS+=	libusb
+PKG_SUGGESTED_OPTIONS+=	libusb
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -43,7 +43,7 @@ CONFIGURE_ARGS+=	--disable-dnssd
 .endif
 
 .if !empty(PKG_OPTIONS:Mghostscript)
-USE_TOOLS+=	gs:run
+USE_TOOLS+=		gs:run
 CONFIGURE_ARGS+=	--with-pdftops=gs
 CONFIGURE_ENV+=		ac_cv_path_CUPS_GHOSTSCRIPT=${TOOLS_PATH.gs}
 .endif
@@ -76,7 +76,7 @@ MESSAGE_SRC=		${.CURDIR}/MESSAGE
 .endif
 
 .if !empty(PKG_OPTIONS:Mpoppler)
-DEPENDS+=	poppler-utils-[0-9]*:../../print/poppler-utils
+DEPENDS+=		poppler-utils-[0-9]*:../../print/poppler-utils
 CONFIGURE_ARGS+=	--with-pdftops=pdftops
 CONFIGURE_ENV+=		ac_cv_path_CUPS_PDFTOPS=${LOCALBASE}/bin/pdftops
 .endif
