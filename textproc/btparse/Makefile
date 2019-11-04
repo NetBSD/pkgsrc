@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/08/11 13:23:22 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2019/11/04 21:43:33 rillig Exp $
 #
 
 DISTNAME=	btparse-0.35
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.gerg.ca/software/btOOL/
 COMMENT=	BibTeX parsing library
 
 USE_TOOLS+=	perl pod2man
-USE_LIBTOOL=YES
+USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 
 PKGCONFIG_OVERRIDE+=	btparse.pc.in
