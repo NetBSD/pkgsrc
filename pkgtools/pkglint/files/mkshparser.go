@@ -80,6 +80,10 @@ func (lex *ShellLexer) Lex(lval *shyySymType) (ttype int) {
 
 	if trace.Tracing {
 		defer func() {
+			if ttype == 0 {
+				trace.Stepf("lex EOF because of a comment")
+				return
+			}
 			tname := shyyTokname(shyyTok2[ttype-shyyPrivate])
 			switch ttype {
 			case tkWORD, tkASSIGNMENT_WORD:
@@ -238,6 +242,10 @@ func (lex *ShellLexer) Lex(lval *shyySymType) (ttype int) {
 		ttype = tkASSIGNMENT_WORD
 		p := NewShTokenizer(dummyLine, token, false) // Just for converting the string to a ShToken
 		lval.Word = p.ShToken()
+	case hasPrefix(token, "#"):
+		// This doesn't work for multiline shell programs.
+		// Since pkglint only processes single lines, that's ok.
+		return 0
 	default:
 		ttype = tkWORD
 		p := NewShTokenizer(dummyLine, token, false) // Just for converting the string to a ShToken
