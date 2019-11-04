@@ -103,6 +103,92 @@ func (s *Suite) Test_CheckLinesOptionsMk__prefs(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
+func (s *Suite) Test_CheckLinesOptionsMk__variable_order(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpOption("option", "")
+	t.SetUpPackage("category/package",
+		".include \"options.mk\"")
+	t.CreateFileLines("mk/bsd.options.mk",
+		MkCvsID)
+	mklines := t.SetUpFileMkLines("category/package/options.mk",
+		MkCvsID,
+		"",
+		"PKG_SUPPORTED_OPTIONS=\toption",
+		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.package",
+		"",
+		".include \"../../mk/bsd.options.mk\"",
+		"",
+		".if ${PKG_OPTIONS:Moption}",
+		".endif")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	CheckLinesOptionsMk(mklines)
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/options.mk:3: " +
+			"Expected definition of PKG_OPTIONS_VAR.")
+}
+
+func (s *Suite) Test_CheckLinesOptionsMk__empty(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		".include \"options.mk\"")
+	mklines := t.SetUpFileMkLines("category/package/options.mk",
+		MkCvsID)
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	CheckLinesOptionsMk(mklines)
+
+	t.CheckOutputLines(
+		"ERROR: ~/category/package/options.mk: "+
+			"Each options.mk file must define PKG_OPTIONS_VAR.",
+		"ERROR: ~/category/package/options.mk: "+
+			"Each options.mk file must .include \"../../mk/bsd.options.mk\".")
+}
+
+func (s *Suite) Test_CheckLinesOptionsMk__conditionals(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpOption("option", "")
+	t.SetUpPackage("category/package",
+		".include \"../../mk/bsd.options.mk\"")
+	t.CreateFileLines("mk/bsd.options.mk",
+		MkCvsID)
+	t.Chdir("category/package")
+	mklines := t.SetUpFileMkLines("options.mk",
+		MkCvsID,
+		"",
+		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.package",
+		"PKG_SUPPORTED_OPTIONS=\toption",
+		"",
+		".include \"../../mk/bsd.options.mk\"",
+		"",
+		".if ${PKG_OPTIONS}", // typo: should be ${PKG_OPTIONS:Moption}
+		".endif",
+		"",
+		".if ${PKG_OPTIONS:Nnegative}", // :N instead of :M, is ignored
+		".endif",
+		"",
+		".if ${PKG_OPTIONS:Ncodec-*}",
+		".endif",
+		"",
+		".if ${PKG_OPTIONS:tl}", // doesn't make sense, just for branch coverage
+		".endif")
+	t.FinishSetUp()
+
+	CheckLinesOptionsMk(mklines)
+
+	t.CheckOutputLines(
+		// This warning comes from VarTypeCheck.PkgOption
+		"WARN: options.mk:11: Unknown option \"negative\".",
+		"WARN: options.mk:4: "+
+			"Option \"option\" should be handled below in an .if block.")
+}
+
 func (s *Suite) Test_CheckLinesOptionsMk(c *check.C) {
 	t := s.Init(c)
 
@@ -168,79 +254,6 @@ func (s *Suite) Test_CheckLinesOptionsMk(c *check.C) {
 	// TODO: There is no warning for the option "undeclared" since
 	//  the option lang-${l} sets declaredArbitrary. This in turn
 	//  disables possible wrong warnings, but a few too many.
-}
-
-// This test is provided for code coverage. Similarities to existing files are purely coincidental.
-func (s *Suite) Test_CheckLinesOptionsMk__edge_cases(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpCommandLine("-Wall,no-space")
-	t.SetUpVartypes()
-	t.SetUpOption("option1", "Description for option1")
-	t.CreateFileLines("mk/compiler.mk",
-		MkCvsID)
-	t.CreateFileLines("mk/bsd.options.mk",
-		MkCvsID)
-	t.DisableTracing()
-
-	mklines := t.SetUpFileMkLines("category/package/options.mk",
-		MkCvsID)
-
-	CheckLinesOptionsMk(mklines)
-
-	t.CheckOutputLines(
-		"ERROR: ~/category/package/options.mk: Each options.mk file must define PKG_OPTIONS_VAR.",
-		"ERROR: ~/category/package/options.mk: Each options.mk file must .include \"../../mk/bsd.options.mk\".")
-
-	mklines = t.SetUpFileMkLines("category/package/options.mk",
-		MkCvsID,
-		"PKG_SUPPORTED_OPTIONS=\toption1")
-
-	CheckLinesOptionsMk(mklines)
-
-	t.CheckOutputLines(
-		"WARN: ~/category/package/options.mk:2: "+
-			"Expected definition of PKG_OPTIONS_VAR.",
-		"ERROR: ~/category/package/options.mk: "+
-			"Each options.mk file must define PKG_OPTIONS_VAR.",
-		"ERROR: ~/category/package/options.mk: "+
-			"Each options.mk file must .include \"../../mk/bsd.options.mk\".",
-		"WARN: ~/category/package/options.mk:2: "+
-			"Option \"option1\" should be handled below in an .if block.")
-
-	mklines = t.SetUpFileMkLines("category/package/options.mk",
-		MkCvsID,
-		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.pkgbase",
-		"PKG_SUPPORTED_OPTIONS=\toption1",
-		".include \"../../mk/compiler.mk\"")
-
-	CheckLinesOptionsMk(mklines)
-
-	t.CheckOutputLines(
-		"ERROR: ~/category/package/options.mk: "+
-			"Each options.mk file must .include \"../../mk/bsd.options.mk\".",
-		"WARN: ~/category/package/options.mk:3: "+
-			"Option \"option1\" should be handled below in an .if block.")
-
-	mklines = t.SetUpFileMkLines("category/package/options.mk",
-		MkCvsID,
-		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.pkgbase",
-		"PKG_SUPPORTED_OPTIONS=\toption1",
-		".include \"../../mk/bsd.options.mk\"",
-		"",
-		".if !empty(PKG_OPTIONS:O:u:Moption1) "+
-			"|| !empty(PKG_OPTIONS:Noption1) "+
-			"|| !empty(PKG_OPTIONS:O) "+
-			"|| !empty(X11_TYPE) "+
-			"|| !empty(PKG_OPTIONS:M${X11_TYPE})",
-		".endif")
-
-	CheckLinesOptionsMk(mklines)
-
-	// Although technically this option is handled by the :Noption1 modifier,
-	// this is so unusual that the warning is justified.
-	t.CheckOutputLines(
-		"WARN: ~/category/package/options.mk:3: Option \"option1\" should be handled below in an .if block.")
 }
 
 // If there is no .include line after the declaration of the package-settable

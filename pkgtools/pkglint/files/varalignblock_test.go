@@ -118,6 +118,13 @@ func (vt *VaralignTester) checkTestName() {
 		name  string
 		width int
 	}
+	descriptorsString := func(ds []descriptor) string {
+		var strs []string
+		for _, d := range ds {
+			strs = append(strs, sprintf("%s%d", d.name, d.width))
+		}
+		return strings.Join(strs, "_")
+	}
 
 	var actual []descriptor
 	width := 0
@@ -195,6 +202,7 @@ func (vt *VaralignTester) checkTestName() {
 		expected = append(expected, descriptor{name, width})
 	}
 
+	vt.tester.CheckDeepEquals(descriptorsString(actual), descriptorsString(expected))
 	vt.tester.CheckDeepEquals(actual, expected)
 }
 
@@ -2002,6 +2010,38 @@ func (s *Suite) Test_VaralignBlock__lead_var_tab8_value_lead_var_tab16_value(c *
 	vt.Run()
 }
 
+// Before 19.3.6, pkglint would indent the last line in column 16.
+//
+// The value in the first line starts in column 16, which means that all
+// follow-up lines should also start in column 16 or further to the right.
+// Line 2 though is already quite long, and since its right margin is in
+// column 72, it may keep its lower-than-usual indentation of 8.
+// Line 3 is not that long, therefore the rule from line 2 doesn't apply
+// here, and it needs to be indented to column 16.
+//
+// Since the above result would look inconsistent, all follow-up lines
+// after a long line may be indented in column 8 as well.
+func (s *Suite) Test_VaralignBlock__var_tab_value63_space_cont_tab8_value71_space_cont_tab8_value(c *check.C) {
+	vt := NewVaralignTester(s, c)
+	vt.Input(
+		"PROGFILES=\t67890 234567890 234567890 234567890 234567890 2 \\",
+		"\t890 234567890 234567890 234567890 234567890 234567890 234567890 \\",
+		"\tvalue")
+	vt.Internals(
+		"10 16 64",
+		"   08 72",
+		"   08")
+	vt.Diagnostics(
+		nil...)
+	vt.Autofixes(
+		nil...)
+	vt.Fixed(
+		"PROGFILES=      67890 234567890 234567890 234567890 234567890 2 \\",
+		"        890 234567890 234567890 234567890 234567890 234567890 234567890 \\",
+		"        value")
+	vt.Run()
+}
+
 // Up to 2018-01-27, it could happen that some source code was logged
 // without a corresponding diagnostic. This was unintended and confusing.
 func (s *Suite) Test_VaralignBlock__fix_without_diagnostic(c *check.C) {
@@ -2212,6 +2252,24 @@ func (s *Suite) Test_VaralignBlock__mixed_indentation(c *check.C) {
 		"VAR1=   value1",
 		"VAR2=   value2 \\",
 		"                 value2 continued")
+	vt.Run()
+}
+
+func (s *Suite) Test_VaralignBlock__long_line_followed_by_short_line_with_small_indentation(c *check.C) {
+	vt := NewVaralignTester(s, c)
+	vt.Input(
+		"VAR.567890123456+=\t----30 -------40 -------50 -------60 -------70 234567 \\",
+		"\t\t--20 -------30")
+	vt.Internals(
+		"18 24 78",
+		"   16")
+	vt.Diagnostics(
+		"NOTE: Makefile:2: This continuation line should be indented with \"\\t\\t\\t\".")
+	vt.Autofixes(
+		"AUTOFIX: Makefile:2: Replacing \"\\t\\t\" with \"\\t\\t\\t\".")
+	vt.Fixed(
+		"VAR.567890123456+=      ----30 -------40 -------50 -------60 -------70 234567 \\",
+		"                        --20 -------30")
 	vt.Run()
 }
 

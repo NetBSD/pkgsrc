@@ -66,6 +66,9 @@ func (ck MkLineChecker) checkShellCommand() {
 
 	shellCommand := mkline.ShellCommand()
 	if G.Opts.WarnSpace && hasPrefix(mkline.Text, "\t\t") {
+		lexer := textproc.NewLexer(mkline.raw[0].textnl)
+		tabs := lexer.NextBytesFunc(func(b byte) bool { return b == '\t' })
+
 		fix := mkline.Autofix()
 		fix.Notef("Shell programs should be indented with a single tab.")
 		fix.Explain(
@@ -73,7 +76,12 @@ func (ck MkLineChecker) checkShellCommand() {
 			"Since every line of shell commands starts with a completely new shell environment,",
 			"there is no need to indent some of the commands,",
 			"or to use more horizontal space than necessary.")
-		fix.ReplaceRegex(`^\t\t+`, "\t", 1)
+
+		for i, raw := range mkline.Line.raw {
+			if hasPrefix(raw.textnl, tabs) {
+				fix.ReplaceAt(i, 0, tabs, "\t")
+			}
+		}
 		fix.Apply()
 	}
 
@@ -1422,6 +1430,13 @@ func (ck MkLineChecker) checkVartype(varname string, op MkOperator, value, comme
 
 	default:
 		words := mkline.ValueFields(value)
+		if len(words) > 1 && vartype.OnePerLine() {
+			mkline.Warnf("%s should only get one item per line.", varname)
+			mkline.Explain(
+				"Use the += operator to append each of the items.",
+				"",
+				"Or, enclose the words in quotes to group them.")
+		}
 		for _, word := range words {
 			ck.CheckVartypeBasic(varname, vartype.basicType, op, word, comment, vartype.Guessed())
 		}
