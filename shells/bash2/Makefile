@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2017/01/19 18:52:25 agc Exp $
+# $NetBSD: Makefile,v 1.92 2019/11/04 21:14:06 rillig Exp $
 #
 
 DISTNAME=	bash-2.05b
@@ -19,13 +19,13 @@ COMMENT=	The GNU Bourne Again Shell (version 2)
 
 CONFLICTS=	static-bash-[0-9]*
 
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-installed-readline
-USE_TOOLS+=		yacc
-MAKE_ENV+=		INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
-CPPFLAGS+=		-DDEFAULT_PATH_VALUE="\"/usr/bin:/bin:${LOCALBASE}/bin:/usr/local/bin\""
-TEST_TARGET=		test
-MAKE_JOBS_SAFE=		no
+GNU_CONFIGURE=			yes
+CONFIGURE_ARGS+=		--with-installed-readline
+USE_TOOLS+=			yacc
+MAKE_ENV+=			INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
+CPPFLAGS+=			-DDEFAULT_PATH_VALUE="\"/usr/bin:/bin:${LOCALBASE}/bin:/usr/local/bin\""
+TEST_TARGET=			test
+MAKE_JOBS_SAFE=			no
 BROKEN_GETTEXT_DETECTION=	yes
 
 PKG_SHELL=		bin/bash
@@ -44,7 +44,7 @@ PKG_SUGGESTED_OPTIONS=	multibyte
 ## Static link
 ##
 .if !empty(PKG_OPTIONS:Mstatic)
-CONFIGURE_ARGS+=	--enable-static-link
+CONFIGURE_ARGS+=		--enable-static-link
 BUILDLINK_DEPMETHOD.gettext=	build
 BUILDLINK_DEPMETHOD.readline=	build
 .endif
