@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:59:45 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/11/04 14:42:06 wen Exp $
 
-SHA1 (Locale-Maketext-Gettext-1.28.tar.gz) = 6c89bd772685b3c0653cde9a693602fe2f25575b
-RMD160 (Locale-Maketext-Gettext-1.28.tar.gz) = 7c66c4c67b64cd38f051cfd377f594be1d7eb4ce
-SHA512 (Locale-Maketext-Gettext-1.28.tar.gz) = 16795a82f252c79e285f6d0f7e87b9903994caf43f717bb8cce5b148d3559c41e5c7bd5312081a8a5bb435600efeee46992bca6f18407c88a5b496c6e37eb27a
-Size (Locale-Maketext-Gettext-1.28.tar.gz) = 55013 bytes
+SHA1 (Locale-Maketext-Gettext-1.30.tar.gz) = 591881293c326a3250cd0e7fce06f9eaf7fd2a39
+RMD160 (Locale-Maketext-Gettext-1.30.tar.gz) = 800bd3e85a7a367aa585c410d10d6d5b5ce77726
+SHA512 (Locale-Maketext-Gettext-1.30.tar.gz) = 714b0dac97271ebdefa025155a98ce6c3fea796ed627e4606a86bef96fcf38a3cff6292cf861bcb57c895569739d3ab2a36769838718d0cc45ecf8501e5538c1
+Size (Locale-Maketext-Gettext-1.30.tar.gz) = 55400 bytes
