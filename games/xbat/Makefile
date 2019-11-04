@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/01/14 17:34:02 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/04 17:47:30 rillig Exp $
 
 DISTNAME=	xev111
 PKGNAME=	xbat-1.11
@@ -47,7 +47,7 @@ MAKE_FLAGS+=	UNION=0
 .elif ${MACHINE_ENDIAN} == "little"
 MAKE_FLAGS+=	UNION=1
 .else
-BROKEN=		Unknown endianness
+BROKEN=		"Unknown endianness"
 .endif
 
 post-install:
