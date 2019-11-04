@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/08/22 12:23:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2019/11/04 21:43:38 rillig Exp $
 
 DISTNAME=		clucene-core-2.3.3.4
 PKGNAME=		lib${DISTNAME:S/-core-/-/}
@@ -13,11 +13,11 @@ LICENSE=		gnu-lgpl-v2.1 OR apache-2.0
 
 PKGCONFIG_OVERRIDE+=	libclucene-core.pc.in
 
-USE_LANGUAGES=		c c++
-USE_CMAKE=		yes
-CMAKE_ARGS+=		-DBUILD_CONTRIBS_LIB=ON
+USE_LANGUAGES=	c c++
+USE_CMAKE=	yes
+CMAKE_ARGS+=	-DBUILD_CONTRIBS_LIB=ON
 #BUILD_TARGET+=	clucene-contribs-lib
-USE_LIBTOOL=		yes
+USE_LIBTOOL=	yes
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

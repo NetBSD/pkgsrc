@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/08/11 13:23:58 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/04 21:43:44 rillig Exp $
 
 DISTNAME=	XML-XPathEngine-0.14
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl 5 re-usable XPath engine for DOM-like trees
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/XML/XPathEngine/.packlist
+PERL5_PACKLIST=	auto/XML/XPathEngine/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

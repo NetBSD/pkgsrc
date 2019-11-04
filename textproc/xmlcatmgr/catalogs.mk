@@ -1,4 +1,4 @@
-# $NetBSD: catalogs.mk,v 1.21 2015/11/25 12:53:42 jperkin Exp $
+# $NetBSD: catalogs.mk,v 1.22 2019/11/04 21:43:48 rillig Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # catalog files or DTDs.  It takes care of registering them into the right
@@ -47,11 +47,11 @@ XML_ENTRIES+=	nextCatalog ${PREFIX:=${c}} --
 # use pkginstall framework.
 #
 .if !empty(SGML_ENTRIES) || !empty(XML_ENTRIES)
-FILES_SUBST+=	XMLCATMGR=${XMLCATMGR:Q}
-FILES_SUBST+=	SGML_CATALOG="${LOCALBASE}/share/sgml/catalog"
-FILES_SUBST+=	XML_CATALOG="${LOCALBASE}/share/xml/catalog"
-FILES_SUBST+=	SGML_ENTRIES=${SGML_ENTRIES:Q}
-FILES_SUBST+=	XML_ENTRIES=${XML_ENTRIES:Q}
+FILES_SUBST+=		XMLCATMGR=${XMLCATMGR:Q}
+FILES_SUBST+=		SGML_CATALOG="${LOCALBASE}/share/sgml/catalog"
+FILES_SUBST+=		XML_CATALOG="${LOCALBASE}/share/xml/catalog"
+FILES_SUBST+=		SGML_ENTRIES=${SGML_ENTRIES:Q}
+FILES_SUBST+=		XML_ENTRIES=${XML_ENTRIES:Q}
 INSTALL_TEMPLATES+=	../../textproc/xmlcatmgr/files/install.tmpl
 DEINSTALL_TEMPLATES+=	../../textproc/xmlcatmgr/files/deinstall.tmpl
 .endif # !empty(SGML_ENTRIES) || !empty(XML_ENTRIES)

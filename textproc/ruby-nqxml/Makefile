@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/09/04 18:08:29 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/04 21:43:47 rillig Exp $
 #
 
 DISTNAME=	nqxml-1.1.3p1
@@ -12,18 +12,18 @@ HOMEPAGE=	https://sourceforge.net/projects/nqxml/
 COMMENT=	XML parser written in pure Ruby
 LICENSE=	ruby-license
 
-NO_BUILD=	yes
-USE_RUBY_INSTALL= yes
+NO_BUILD=		yes
+USE_RUBY_INSTALL=	yes
 
-DOC=		README
-EXAMPLES=	data.xml doc.xml dumpXML.rb parseTestStream.rb \
-		parseTestTree.rb printEntityClassNames.rb \
-		reverseTags.rb reverseText.rb write.rb \
-		write.rb writeManualDoc.rb writeParsedDoc.rb
-CONTRIB_LIB=	autodis_1.rb autodis_2.rb
-TESTS=		dispatchertester.rb oasis.rb streamingparsertester.rb test.rb \
-		testresource.rb tokenizertester.rb treeparsertester.rb \
-		writertester.rb
+DOC=			README
+EXAMPLES=		data.xml doc.xml dumpXML.rb parseTestStream.rb \
+			parseTestTree.rb printEntityClassNames.rb \
+			reverseTags.rb reverseText.rb write.rb \
+			write.rb writeManualDoc.rb writeParsedDoc.rb
+CONTRIB_LIB=		autodis_1.rb autodis_2.rb
+TESTS=			dispatchertester.rb oasis.rb streamingparsertester.rb test.rb \
+			testresource.rb tokenizertester.rb treeparsertester.rb \
+			writertester.rb
 REPLACE_RUBY_DIRS=	examples tests
 
 INSTALL_TARGET=		install \
