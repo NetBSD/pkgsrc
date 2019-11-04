@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/04/03 00:33:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/04 21:28:43 rillig Exp $
 #
 
 DISTNAME=	dbus-sharp-0.7.0
@@ -17,11 +17,11 @@ USE_LANGUAGES=	# none
 
 PKGCONFIG_OVERRIDE+=	dbus-sharp-1.0.pc.in
 
-SUBST_CLASSES+=         fix-mcs
-SUBST_STAGE.fix-mcs=    pre-configure
-SUBST_MESSAGE.fix-mcs=  Fix compiler name
-SUBST_FILES.fix-mcs=    configure
-SUBST_SED.fix-mcs=      -e 's,gmcs,mcs,'
+SUBST_CLASSES+=		fix-mcs
+SUBST_STAGE.fix-mcs=	pre-configure
+SUBST_MESSAGE.fix-mcs=	Fix compiler name
+SUBST_FILES.fix-mcs=	configure
+SUBST_SED.fix-mcs=	-e 's,gmcs,mcs,'
 
 .include "../../lang/mono/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

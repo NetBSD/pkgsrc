@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.14 2015/08/28 07:47:08 wiz Exp $
+# $NetBSD: options.mk,v 1.15 2019/11/04 21:28:48 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.mc
+PKG_OPTIONS_VAR=		PKG_OPTIONS.mc
 PKG_OPTIONS_REQUIRED_GROUPS=	screen
 PKG_OPTIONS_GROUP.screen=	ncurses slang
-PKG_SUPPORTED_OPTIONS=	mc-charset x11
-PKG_SUGGESTED_OPTIONS=	mc-charset slang
+PKG_SUPPORTED_OPTIONS=		mc-charset x11
+PKG_SUGGESTED_OPTIONS=		mc-charset slang
 
 .include "../../mk/bsd.options.mk"
 

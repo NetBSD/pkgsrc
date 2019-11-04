@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2019/07/21 22:24:11 wiz Exp $
+# $NetBSD: Makefile,v 1.122 2019/11/04 21:28:46 rillig Exp $
 
 PKGREVISION=		39
 
@@ -10,7 +10,7 @@ OWN_DIRS=		${PKG_SYSCONFDIR}/modules
 EGFILES+=		modules/default-modules.conf
 EGFILES+=		modules/ssl-modules.conf
 
-GCONF_SCHEMAS=		desktop_default_applications.schemas
+GCONF_SCHEMAS=	desktop_default_applications.schemas
 GCONF_SCHEMAS+=	desktop_gnome_url_handlers.schemas
 GCONF_SCHEMAS+=	system_dns_sd.schemas
 GCONF_SCHEMAS+=	system_http_proxy.schemas
