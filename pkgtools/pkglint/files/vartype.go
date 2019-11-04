@@ -38,6 +38,8 @@ const (
 	// describing why they are set. Typical examples are NOT_FOR_* variables.
 	NeedsRationale
 
+	OnePerLine
+
 	NoVartypeOptions = 0
 )
 
@@ -101,6 +103,7 @@ func (vt *Vartype) UserSettable() bool        { return vt.options&UserSettable !
 func (vt *Vartype) SystemProvided() bool      { return vt.options&SystemProvided != 0 }
 func (vt *Vartype) CommandLineProvided() bool { return vt.options&CommandLineProvided != 0 }
 func (vt *Vartype) NeedsRationale() bool      { return vt.options&NeedsRationale != 0 }
+func (vt *Vartype) OnePerLine() bool          { return vt.options&OnePerLine != 0 }
 
 func (vt *Vartype) EffectivePermissions(basename string) ACLPermissions {
 	for _, aclEntry := range vt.aclEntries {

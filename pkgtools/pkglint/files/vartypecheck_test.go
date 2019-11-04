@@ -1457,6 +1457,23 @@ func (s *Suite) Test_VartypeCheck_ShellCommands(c *check.C) {
 		"WARN: filename.mk:1: This shell command list should end with a semicolon.")
 }
 
+func (s *Suite) Test_VartypeCheck_ShellWord(c *check.C) {
+	t := s.Init(c)
+	t.SetUpVartypes()
+	vt := NewVartypeCheckTester(t, BtShellWord)
+
+	vt.Varname("PKG_FAIL_REASON")
+	vt.Values(
+		"The package does not work here.",
+		"\"Properly quoted reason.\"")
+
+	// At this level, there can be no warning for line 1 since each word
+	// is analyzed on its own.
+	//
+	// See Test_MkLineChecker_checkVartype__one_per_line.
+	vt.OutputEmpty()
+}
+
 func (s *Suite) Test_VartypeCheck_Stage(c *check.C) {
 	vt := NewVartypeCheckTester(s.Init(c), BtStage)
 

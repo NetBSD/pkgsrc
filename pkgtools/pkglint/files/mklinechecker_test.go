@@ -25,6 +25,38 @@ func (s *Suite) Test_MkLineChecker_checkEmptyContinuation(c *check.C) {
 		"WARN: ~/filename.mk:3: This line looks empty but continues the previous line.")
 }
 
+func (s *Suite) Test_MkLineChecker_checkShellCommand__indentation(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("-Wall", "--autofix")
+	mklines := t.SetUpFileMkLines("filename.mk",
+		MkCvsID,
+		"",
+		"do-install:",
+		"\t\techo 'unnecessarily indented'",
+		"\t\tfor var in 1 2 3; do \\",
+		"\t\t\techo \"$$var\"; \\",
+		"\t                echo \"spaces\"; \\",
+		"\t\tdone")
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"AUTOFIX: ~/filename.mk:4: Replacing \"\\t\\t\" with \"\\t\".",
+		"AUTOFIX: ~/filename.mk:5: Replacing \"\\t\\t\" with \"\\t\".",
+		"AUTOFIX: ~/filename.mk:6: Replacing \"\\t\\t\" with \"\\t\".",
+		"AUTOFIX: ~/filename.mk:8: Replacing \"\\t\\t\" with \"\\t\".")
+	t.CheckFileLinesDetab("filename.mk",
+		MkCvsID,
+		"",
+		"do-install:",
+		"        echo 'unnecessarily indented'",
+		"        for var in 1 2 3; do \\",
+		"                echo \"$$var\"; \\",
+		"                        echo \"spaces\"; \\", // not changed
+		"        done")
+}
+
 func (s *Suite) Test_MkLineChecker_checkVarassignLeft(c *check.C) {
 	t := s.Init(c)
 
@@ -722,6 +754,23 @@ func (s *Suite) Test_MkLineChecker_checkVartype__no_tracing(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: filename.mk:2: UNKNOWN is defined but not used.",
 		"WARN: filename.mk:3: CUR_DIR is defined but not used.")
+}
+
+func (s *Suite) Test_MkLineChecker_checkVartype__one_per_line(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+	mklines := t.NewMkLines("filename.mk",
+		MkCvsID,
+		"PKG_FAIL_REASON+=\tSeveral words are wrong.",
+		"PKG_FAIL_REASON+=\t\"Properly quoted\"",
+		"PKG_FAIL_REASON+=\t# none")
+	t.DisableTracing()
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"WARN: filename.mk:2: PKG_FAIL_REASON should only get one item per line.")
 }
 
 // Pkglint once interpreted all lists as consisting of shell tokens,
@@ -2535,7 +2584,8 @@ func (s *Suite) Test_MkLineChecker_CheckVaruse__build_defs(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"WARN: ~/options.mk:2: The user-defined variable VARBASE is used but not added to BUILD_DEFS.")
+		"WARN: ~/options.mk:2: The user-defined variable VARBASE is used but not added to BUILD_DEFS.",
+		"WARN: ~/options.mk:3: PKG_FAIL_REASON should only get one item per line.")
 }
 
 // The LOCALBASE variable may be defined and used in the infrastructure.
