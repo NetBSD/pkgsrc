@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2019/04/03 00:33:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2019/11/04 22:09:56 rillig Exp $
 
 DISTNAME=	rest-0.7.93
 PKGNAME=	${DISTNAME:S/rest/librest07/}
@@ -12,11 +12,11 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/Librest
 COMMENT=	Library for "RESTful" web services
 LICENSE=	gnu-lgpl-v2.1
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config gmake
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config gmake
 # see pkgsrc/security/mozilla-rootcerts
-CONFIGURE_ARGS+= --with-ca-certificates=/etc/ssl/certs/ca-certificates.crt
+CONFIGURE_ARGS+=	--with-ca-certificates=/etc/ssl/certs/ca-certificates.crt
 
 PKGCONFIG_OVERRIDE+=	rest.pc.in rest-extras.pc.in
 

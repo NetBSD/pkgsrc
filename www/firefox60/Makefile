@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/09/18 14:17:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.34 2019/11/04 22:09:54 rillig Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		60.7
@@ -52,10 +52,10 @@ SUBST_FILES.dfly_malloc_h+=	media/ffvpx/libavutil/mem.c
 .include "mozilla-common.mk"
 .include "options.mk"
 
-CHECK_INTERPRETER_SKIP+=lib/firefox-sdk/sdk/bin/header.py
-CHECK_INTERPRETER_SKIP+=lib/firefox-sdk/sdk/bin/typelib.py
-CHECK_INTERPRETER_SKIP+=lib/firefox-sdk/sdk/bin/xpidl.py
-CHECK_INTERPRETER_SKIP+=lib/firefox-sdk/sdk/bin/xpt.py
+CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/header.py
+CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/typelib.py
+CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/xpidl.py
+CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/xpt.py
 
 CHECK_WRKREF_SKIP+=	lib/${PKGBASE}/chrome/toolkit/content/global/buildconfig.html
 

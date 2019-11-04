@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/08/11 13:24:19 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/04 22:09:55 rillig Exp $
 #
 
 DISTNAME=	gallery-1.5.10
@@ -37,7 +37,7 @@ CONF_FILES_PERMS+=	${EGDIR}/.htaccess ${G1DIR}/.htaccess \
 MESSAGE_SUBST+=	G1DIR=${G1DIR}
 FILES_SUBST+=	G1DIR=${G1DIR}
 
-SUBST_CLASSES+=	paths
+SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKDIR}/gallery.conf
 SUBST_VARS.paths+=	G1DIR
 SUBST_STAGE.paths=	pre-configure
