@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2016/09/11 06:11:15 richard Exp $
+# $NetBSD: options.mk,v 1.3 2019/11/04 21:12:52 rillig Exp $
 #
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.cyrus-sasl
+PKG_OPTIONS_VAR=		PKG_OPTIONS.cyrus-sasl
 PKG_OPTIONS_REQUIRED_GROUPS=	database
 PKG_OPTIONS_GROUP.database=	ndbm bdb gdbm
 
@@ -12,7 +12,7 @@ PKG_SUGGESTED_OPTIONS+=	ndbm
 .  elif !empty(SASL_DBTYPE:Mberkeley)
 PKG_SUGGESTED_OPTIONS+=	bdb
 .  else
-PKG_FAIL_REASON+=			"Unknown SASL_DBTYPE: ${SASL_DBTYPE:Q}"
+PKG_FAIL_REASON+=	"Unknown SASL_DBTYPE: ${SASL_DBTYPE:Q}"
 .  endif
 .elif exists(/usr/include/ndbm.h) && ${OPSYS} != "Linux"
 PKG_SUGGESTED_OPTIONS+=	ndbm

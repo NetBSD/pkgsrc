@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/23 18:16:47 asau Exp $
+# $NetBSD: Makefile,v 1.6 2019/11/04 21:12:57 rillig Exp $
 #
 
 DISTNAME=	pakchois-0.4
@@ -20,8 +20,8 @@ PTHREAD_OPTS+=		require
 PKG_PTHREAD_FLAGS=	${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
 
 BROKEN_GETTEXT_DETECTION=	yes
-BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
-BUILDLINK_TRANSFORM+=	opt:-lpthread:${PKG_PTHREAD_FLAGS:M*}
+BUILDLINK_TRANSFORM+=		opt:-ldl:${BUILDLINK_LDADD.dl:M*}
+BUILDLINK_TRANSFORM+=		opt:-lpthread:${PKG_PTHREAD_FLAGS:M*}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
