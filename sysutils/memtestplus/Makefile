@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/02/09 09:13:24 maya Exp $
+# $NetBSD: Makefile,v 1.28 2019/11/04 17:47:31 rillig Exp $
 #
 
 # Note -- version number also in the do-install rule
@@ -35,7 +35,7 @@ SUBST_SED.delcr=	-e 's/.$$//g'
 .include "../../mk/compiler.mk"
 
 .if !empty(PKGSRC_COMPILER:Mclang)
-BROKEN+=	${PKGNAME} does not produce a working binary with clang
+BROKEN+=	"Does not produce a working binary with clang."
 .endif
 
 pre-configure:
