@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/05/12 03:18:33 markd Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/04 19:58:03 rillig Exp $
 
 DISTNAME=	context
 PKGNAME=	tex-${DISTNAME}-2019
@@ -21,12 +21,12 @@ DEPENDS+=	xetex>=0.9995.3nb1:../../print/xetex
 USE_TOOLS+=	sh:run
 
 CHECK_INTERPRETER_SKIP=	share/texmf-dist/scripts/context/ruby/*.rb
-REPLACE_SH=	bin/context bin/ctxtools bin/luatools
-REPLACE_TEXLUA=	bin/mtxrun \
-		texmf-dist/scripts/context/stubs/mswin/mtxrun.lua \
-		texmf-dist/scripts/context/stubs/mswin/luatools.lua \
-		texmf-dist/scripts/context/stubs/unix/mtxrun \
-		texmf-dist/scripts/context/stubs/unix/luatools
+REPLACE_SH=		bin/context bin/ctxtools bin/luatools
+REPLACE_TEXLUA=		bin/mtxrun \
+			texmf-dist/scripts/context/stubs/mswin/mtxrun.lua \
+			texmf-dist/scripts/context/stubs/mswin/luatools.lua \
+			texmf-dist/scripts/context/stubs/unix/mtxrun \
+			texmf-dist/scripts/context/stubs/unix/luatools
 
 TEX_FORMATS+=		"cont-en pdftex cont-usr.tex -8bit *cont-en.mkii\\ncont-en xetex cont-usr.tex -8bit *cont-en.mkii\\n"
 TEX_MAP_FILES+=		original-context-symbol.map
