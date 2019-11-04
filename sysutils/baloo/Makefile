@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/08/22 12:23:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/04 21:28:41 rillig Exp $
 
 DISTNAME=	baloo-${_KDE_VERSION}
 PKGREVISION=	17
@@ -14,9 +14,9 @@ USE_TOOLS+=	gmake
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=	polkit
+PLIST_VARS+=		polkit
 .if ${OPSYS} != "Darwin"
-PLIST.polkit=	yes
+PLIST.polkit=		yes
 INSTALLATION_DIRS+=	share/PolicyKit/policy
 .endif
 INSTALLATION_DIRS+=	share/dbus-1/interfaces share/dbus-1/system-services

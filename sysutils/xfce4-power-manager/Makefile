@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/08/17 19:15:37 gutteridge Exp $
+# $NetBSD: Makefile,v 1.12 2019/11/04 21:28:59 rillig Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -9,7 +9,7 @@ MASTER_SITES=	http://archive.xfce.org/src/apps/xfce4-power-manager/1.6/
 HOMEPAGE=	https://goodies.xfce.org/projects/applications/xfce4-power-manager
 COMMENT=	Xfce power manager
 
-CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFBASE}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 
 CONF_FILES=	share/examples/xfce4/autostart/xfce4-power-manager.desktop \
 		${PKG_SYSCONFDIR}/xdg/autostart/xfce4-power-manager.desktop

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2019/05/07 14:06:25 thorpej Exp $
+# $NetBSD: Makefile,v 1.11 2019/11/04 21:28:57 rillig Exp $
 
 UBOOT_TARGET=		pine64
 UBOOT_CONFIG=		pine64_plus_defconfig
 UBOOT_BIN=		u-boot-sunxi-with-spl.bin
 
-UBOOT_INSTALLBOOT_PLIST=installboot.plist
+UBOOT_INSTALLBOOT_PLIST=	installboot.plist
 
 PKGREVISION=		5
 

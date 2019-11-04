@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/05/21 10:55:52 hauke Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/04 21:28:53 rillig Exp $
 
 DISTNAME=	tsm-${PKGVER}
 PKGVER=		8.1.7.0
@@ -28,7 +28,7 @@ BUILD_DEFS+=		VARBASE
 # See the license agreements in {PREFIX}/emul/linux/opt/tivoli/tsm/license/
 RESTRICTED=		Redistribution of repackaged binaries not permitted
 NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_SRC_ON_FTP=  	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
@@ -67,10 +67,10 @@ TSMCLIENTSUBDIR=	opt/tivoli/tsm/client
 PRINT_PLIST_AWK+=	{ gsub(/^.+\.jar$$/, "$${PLIST.java}&"); }
 PRINT_PLIST_AWK+=	{ gsub(/^.+\/dsmj$$/, "$${PLIST.java}&"); }
 
-SUBST_CLASSES+=         paths
-SUBST_MESSAGE.paths=    Fixing hardcoded paths.
-SUBST_STAGE.paths=      pre-install
-SUBST_FILES.paths=      tsm_daily.sh
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	Fixing hardcoded paths.
+SUBST_STAGE.paths=	pre-install
+SUBST_FILES.paths=	tsm_daily.sh
 SUBST_SED.paths=	-e "s,%PKG_SYSCONFDIR%,${PKG_SYSCONFDIR},g"
 SUBST_SED.paths+=	-e "s,%PREFIX%,${PREFIX},g"
 SUBST_SED.paths+=	-e "s,%VARBASE%,${VARBASE},g"

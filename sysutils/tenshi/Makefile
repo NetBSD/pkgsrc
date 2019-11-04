@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/08/11 13:23:17 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/11/04 21:28:53 rillig Exp $
 #
 
 DISTNAME=	tenshi-0.15
@@ -19,7 +19,7 @@ BUILD_DEFS+=		VARBASE
 
 DEPENDS+=	p5-IO-BufferedSelect>=1.0:../../sysutils/p5-IO-BufferedSelect
 
-SUBST_CLASSES+= 	tenshi
+SUBST_CLASSES+=		tenshi
 SUBST_STAGE.tenshi=	pre-build
 SUBST_FILES.tenshi=	tenshi tenshi.conf tenshi.8
 SUBST_SED.tenshi=	-e 's,/etc/tenshi/tenshi.conf,${PKG_SYSCONFDIR}/tenshi.conf,g'

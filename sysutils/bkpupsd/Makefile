@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2017/09/10 14:13:15 joerg Exp $
+# $NetBSD: Makefile,v 1.36 2019/11/04 21:28:41 rillig Exp $
 #
 
 DISTNAME=	bkpupsd-2.2.1
@@ -19,7 +19,7 @@ INSTALLATION_DIRS=	libexec/bkpupsd sbin ${PKGMANDIR}/cat5 \
 			share/doc/bkpupsd share/examples/bkpupsd
 
 # Original program assumes BSD code base.
-ONLY_FOR_PLATFORM= NetBSD-*-*
+ONLY_FOR_PLATFORM=	NetBSD-*-*
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -32,7 +32,7 @@ MESSAGE_SUBST+=	DOCDIR=${DOCDIR}
 EGDIR=		${PREFIX}/share/examples/bkpupsd
 CONF_FILES=	${EGDIR}/upstab ${PKG_SYSCONFDIR}/upstab
 
-RCD_SCRIPTS=	bkpupsd
+RCD_SCRIPTS=		bkpupsd
 RCD_SCRIPT_SRC.bkpupsd=	# need to avoid automatic handling
 
 pre-install:

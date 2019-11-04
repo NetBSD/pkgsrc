@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2017/08/01 16:47:44 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/11/04 21:28:43 rillig Exp $
 #
 
 DISTNAME=	cpuburn_1_4
@@ -12,7 +12,7 @@ MAINTAINER=	abs@NetBSD.org
 #HOMEPAGE=	http://pages.sbcglobal.net/redelm/
 COMMENT=	CPU load testing utilities for Pentium pro and later
 
-ONLY_FOR_PLATFORM= *-*-i[3456]86
+ONLY_FOR_PLATFORM=	*-*-i[3456]86
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 

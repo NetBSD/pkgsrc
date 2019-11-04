@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2019/08/22 12:23:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.102 2019/11/04 21:28:47 rillig Exp $
 
 DISTNAME=		k3b-2.0.3a
 PKGREVISION=		24
@@ -17,7 +17,7 @@ DEPENDS+=		{cdrtools,cdrtools-ossdvd}-[0-9]*:../../sysutils/cdrtools
 USE_TOOLS+=		perl pkg-config gmake msgfmt
 USE_LANGUAGES=		c c++
 
-CMAKE_ARGS+=            -DK3B_BUILD_MUSE_DECODER_PLUGIN=OFF
+CMAKE_ARGS+=		-DK3B_BUILD_MUSE_DECODER_PLUGIN=OFF
 
 CONF_FILES=		${PREFIX}/share/examples/kde4-dbus/org.kde.kcontrol.k3bsetup.conf \
 			${PKG_SYSCONFBASE}/dbus-1/system.d/org.kde.kcontrol.k3bsetup.conf

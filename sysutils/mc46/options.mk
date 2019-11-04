@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.2 2013/10/25 06:53:33 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2019/11/04 21:28:48 rillig Exp $
 #
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.mc
+PKG_OPTIONS_VAR=		PKG_OPTIONS.mc
 PKG_OPTIONS_REQUIRED_GROUPS=	screen
 PKG_OPTIONS_GROUP.screen=	ncurses slang
-PKG_SUPPORTED_OPTIONS=	glib12 mc-charset mc-edit mc-samba mc-subshell mc-vfs x11
-PKG_SUGGESTED_OPTIONS=	mc-charset mc-edit mc-subshell mc-vfs slang
+PKG_SUPPORTED_OPTIONS=		glib12 mc-charset mc-edit mc-samba mc-subshell mc-vfs x11
+PKG_SUGGESTED_OPTIONS=		mc-charset mc-edit mc-subshell mc-vfs slang
 
 .include "../../mk/bsd.options.mk"
 

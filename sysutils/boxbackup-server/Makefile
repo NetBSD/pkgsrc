@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/08/11 13:23:03 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/04 21:28:41 rillig Exp $
 #
 
 DISTNAME=	boxbackup-0.11.1
@@ -30,7 +30,7 @@ INSTALLATION_DIRS+=	bin
 
 # for backtrace
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/execinfo.h)
-LIBS+=  -lexecinfo
+LIBS+=	-lexecinfo
 .endif
 
 do-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/11/24 07:55:28 triaxx Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/04 21:28:46 rillig Exp $
 
 DISTNAME=		grub-2.02
 PKGNAME=		${DISTNAME:S/grub/grub2/}
@@ -65,7 +65,7 @@ PLIST_SUBST+=		GRUB_PLATFORM=${GRUB_PLATFORM}
 # Unset ABI to prevent pkgsrc's gcc wrapper from messing with -m flags.
 #
 .if defined(ABI) && !empty(ABI)
-.undef ABI
+.  undef ABI
 .endif
 
 #

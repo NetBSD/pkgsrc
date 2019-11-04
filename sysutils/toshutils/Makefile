@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/23 19:51:27 asau Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/04 21:28:53 rillig Exp $
 #
 
 DISTNAME=	toshutils-991217
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.buzzard.me.uk/toshiba/
 COMMENT=	NetBSD port of the Toshiba(tm) Linux Utilities
 LICENSE=	gnu-gpl-v2
 
-ONLY_FOR_PLATFORM= *-*-i386
+ONLY_FOR_PLATFORM=	*-*-i386
 
 MAKE_JOBS_SAFE=	no
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/08/13 05:32:48 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/04 21:28:44 rillig Exp $
 
 DISTNAME=	di-4.47
 CATEGORIES=	sysutils
@@ -9,8 +9,8 @@ HOMEPAGE=	https://gentoo.com/di/
 COMMENT=	Alternative df command
 LICENSE=	zlib
 
-USE_LANGUAGES=	c
-USE_TOOLS+=	msgfmt
+USE_LANGUAGES=		c
+USE_TOOLS+=		msgfmt
 USE_PKGLOCALEDIR=	yes
 
 MAKE_ENV+=	prefix=${PREFIX} \

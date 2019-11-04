@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/09/06 06:50:52 kardel Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/04 21:28:47 rillig Exp $
 
 PKGNAME=		hytctl-1.0
 CATEGORIES=		sysutils
-ONLY_FOR_PLATFORM=      NetBSD-*-*
+ONLY_FOR_PLATFORM=	NetBSD-*-*
 
 MAINTAINER=		kardel@NetBSD.org
 COMMENT=		Admin tool to read/write HYT 221/271/939 device EEPROM values

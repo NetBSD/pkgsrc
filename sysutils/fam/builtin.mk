@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.5 2013/11/23 12:10:13 obache Exp $
+# $NetBSD: builtin.mk,v 1.6 2019/11/04 21:28:45 rillig Exp $
 
 BUILTIN_PKG:=	fam
 
@@ -44,4 +44,4 @@ USE_BUILTIN.fam!=							\
 .    endif
 .  endif  # PREFER.fam
 .endif
-MAKEVARS+=	USE_BUILTIN.fam
+MAKEVARS+=		USE_BUILTIN.fam

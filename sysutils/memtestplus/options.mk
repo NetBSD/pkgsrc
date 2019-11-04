@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2018/07/04 13:40:38 jperkin Exp $
+# $NetBSD: options.mk,v 1.8 2019/11/04 21:28:48 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.memtestplus
 PKG_SUPPORTED_OPTIONS=	iso serialconsole
@@ -14,9 +14,9 @@ PLIST.iso=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mserialconsole)
-SUBST_CLASSES+=		serialopt
-SUBST_STAGE.serialopt=	pre-configure
+SUBST_CLASSES+=			serialopt
+SUBST_STAGE.serialopt=		pre-configure
 SUBST_MESSAGE.serialopt=	Setting serial console option
-SUBST_FILES.serialopt=	config.h
-SUBST_SED.serialopt=	-e '/define.*SERIAL_CONSOLE_DEFAULT/s/0/1/'
+SUBST_FILES.serialopt=		config.h
+SUBST_SED.serialopt=		-e '/define.*SERIAL_CONSOLE_DEFAULT/s/0/1/'
 .endif

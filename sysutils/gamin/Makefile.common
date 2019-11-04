@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2017/07/30 22:47:55 wiz Exp $
+# $NetBSD: Makefile.common,v 1.9 2019/11/04 21:28:45 rillig Exp $
 #
 # used by sysutils/gamin/Makefile
 # used by sysutils/libgamin/Makefile
@@ -32,11 +32,11 @@ CONFIGURE_ARGS+=	CPPFLAGS="-D_NETBSD_SOURCE"
 PKG_SYSCONFSUBDIR=	gamin
 DOCDIR=			${PREFIX}/share/doc/gamin
 
-SUBST_CLASSES+=		sysconfdir
-SUBST_MESSAGE.sysconfdir=fixing up sysconfdir
-SUBST_STAGE.sysconfdir=	pre-configure
-SUBST_FILES.sysconfdir=	doc/config.html doc/gamin.html server/gam_conf.c
-SUBST_SED.sysconfdir=	-e "s,/etc/gamin/,${PKG_SYSCONFDIR}/,"
+SUBST_CLASSES+=			sysconfdir
+SUBST_MESSAGE.sysconfdir=	fixing up sysconfdir
+SUBST_STAGE.sysconfdir=		pre-configure
+SUBST_FILES.sysconfdir=		doc/config.html doc/gamin.html server/gam_conf.c
+SUBST_SED.sysconfdir=		-e "s,/etc/gamin/,${PKG_SYSCONFDIR}/,"
 
 DISTINFO_FILE=	${.CURDIR}/../../sysutils/gamin/distinfo
 PATCHDIR=	${.CURDIR}/../../sysutils/gamin/patches

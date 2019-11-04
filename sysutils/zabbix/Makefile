@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/08/22 12:23:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.28 2019/11/04 21:28:59 rillig Exp $
 
 PKGREVISION= 3
 .include "Makefile.common"
@@ -32,12 +32,12 @@ RCD_SCRIPTS=	zabbix_agentd zabbix_proxy zabbix_server
 
 INSTALLATION_DIRS+=	${EGDIR} share/zabbix
 
-SUBST_CLASSES+=		fix-paths
-SUBST_STAGE.fix-paths=	pre-configure
-SUBST_MESSAGE.fix-paths=Fixing absolute paths.
-SUBST_FILES.fix-paths=	conf/*.conf
-SUBST_FILES.fix-paths+=	man/*.man
-SUBST_SED.fix-paths=	-e 's,/usr/local/etc,${PKG_SYSCONFDIR},g'
+SUBST_CLASSES+=			fix-paths
+SUBST_STAGE.fix-paths=		pre-configure
+SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
+SUBST_FILES.fix-paths=		conf/*.conf
+SUBST_FILES.fix-paths+=		man/*.man
+SUBST_SED.fix-paths=		-e 's,/usr/local/etc,${PKG_SYSCONFDIR},g'
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -45,7 +45,7 @@ ZABBIX_GROUP?=		zabbix
 ZABBIX_USER?=		zabbix
 PKG_GROUPS+=		${ZABBIX_GROUP}
 PKG_USERS+=		${ZABBIX_USER}:${ZABBIX_GROUP}
-PKG_GECOS.${ZABBIX_USER}=Zabbix user
+PKG_GECOS.${ZABBIX_USER}= Zabbix user
 
 FILES_SUBST+=		ZABBIX_USER=${ZABBIX_USER}
 FILES_SUBST+=		ZABBIX_GROUP=${ZABBIX_GROUP}

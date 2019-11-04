@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/08/11 13:23:17 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2019/11/04 21:28:52 rillig Exp $
 #
 
 DISTNAME=		system-tools-backends-2.6.1
@@ -46,7 +46,7 @@ DEPENDS+=	p5-URI>=1.37:../../www/p5-URI
 REPLACE_PERL+=	SystemToolsBackends.pl.in
 REPLACE_PERL+=	Utils/*.pm
 
-SUBST_CLASSES+= 		gettext-package
+SUBST_CLASSES+=			gettext-package
 SUBST_STAGE.gettext-package=	post-configure
 SUBST_FILES.gettext-package=	po/Makefile
 SUBST_SED.gettext-package=	-e 's|@GETTEXT_PACKAGE@|system-tools-backends|g'

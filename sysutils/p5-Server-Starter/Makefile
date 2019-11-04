@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/08/11 13:23:14 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/04 21:28:50 rillig Exp $
 
 DISTNAME=	Server-Starter-0.34
 PKGNAME=	p5-${DISTNAME}
@@ -12,14 +12,14 @@ COMMENT=	Perl 5 superdaemon for hot-deploying server programs
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Server/Starter/.packlist
+PERL5_PACKLIST=	auto/Server/Starter/.packlist
 
 BUILD_DEPENDS+=	p5-Test-TCP>=0.11:../../net/p5-Test-TCP
 DEPENDS+=	p5-Proc-Wait3-[0-9]*:../../devel/p5-Proc-Wait3
 DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-Scope-Guard-[0-9]*:../../devel/p5-Scope-Guard
 
-PERL5_MODULE_TYPE= Module::Build
+PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

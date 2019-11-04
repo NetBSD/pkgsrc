@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/09/03 08:53:15 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/04 21:28:49 rillig Exp $
 #
 
 DISTNAME=	nvramtool-4.0-9989-gf2dfef0-08bda29
@@ -11,10 +11,10 @@ HOMEPAGE=	https://www.coreboot.org/Nvramtool
 COMMENT=	Coreboot CMOS NVRAM manipulation utility
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+= gmake
-USE_TOOLS+= date
+USE_TOOLS+=	gmake
+USE_TOOLS+=	date
 
-USE_LANGUAGES+= c
+USE_LANGUAGES+=	c
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -25,7 +25,7 @@ ONLY_FOR_PLATFORM+=	NetBSD-*-i386 NetBSD-*-x86_64
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
-BUILD_TARGET= nvramtool
+BUILD_TARGET=	nvramtool
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
 

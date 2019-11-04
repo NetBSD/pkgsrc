@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.6 2019/05/07 14:06:24 thorpej Exp $
+# $NetBSD: Makefile,v 1.7 2019/11/04 21:28:57 rillig Exp $
 
 UBOOT_TARGET=		orangepi-zero-plus
 UBOOT_CONFIG=		orangepi_zero_plus_defconfig
 UBOOT_BIN=		u-boot-sunxi-with-spl.bin
 
-UBOOT_INSTALLBOOT_PLIST=installboot.plist
+UBOOT_INSTALLBOOT_PLIST=	installboot.plist
 
 PKGREVISION=		5
 
 # Switch to EL1 before booting kernel (required for 32-bit support)
-PKG_DEFAULT_OPTIONS+=   el1
+PKG_DEFAULT_OPTIONS+=	el1
 
 post-extract:
 	${CP} ${PREFIX}/share/arm-trusted-firmware/sun50i_a64/bl31.bin ${WRKSRC}

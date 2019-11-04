@@ -1,4 +1,4 @@
-# $NetBSD: linux-dtb.mk,v 1.2 2017/05/31 13:24:31 jmcneill Exp $
+# $NetBSD: linux-dtb.mk,v 1.3 2019/11/04 21:28:44 rillig Exp $
 
 LK_VERSION=	4.11.3
 PKGNAME=	dtb-${DTB_ARCH}-${DTB_DEVICE}-${LK_VERSION}
@@ -17,8 +17,8 @@ LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE=	${.CURDIR}/../../sysutils/dtc/linux-distinfo
 
-GENERATE_PLIST=	cd ${DESTDIR}${PREFIX};
-GENERATE_PLIST+=${FIND} * -type f | ${SORT};
+GENERATE_PLIST=		cd ${DESTDIR}${PREFIX};
+GENERATE_PLIST+=	${FIND} * -type f | ${SORT};
 
 DTC=		${LOCALBASE}/bin/dtc
 DTS_DIR=	${WRKSRC}/arch/${DTB_ARCH}/boot/dts

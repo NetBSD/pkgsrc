@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/07/21 22:25:41 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/04 21:28:42 rillig Exp $
 
 # Makefile.common already includes python .mk files, so need to set this here
 PYTHON_VERSIONS_INCOMPATIBLE=	27
@@ -14,7 +14,7 @@ COMMENT=	Dropbox Caja extension
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 
-CONFIGURE_ARGS+= ac_cv_path_PYTHON3=${PYTHONBIN}
+CONFIGURE_ARGS+=	ac_cv_path_PYTHON3=${PYTHONBIN}
 
 REPLACE_PYTHON=	caja-dropbox.in rst2man.py
 

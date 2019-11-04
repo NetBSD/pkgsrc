@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/09/02 13:20:08 adam Exp $
+# $NetBSD: Makefile,v 1.11 2019/11/04 21:28:51 rillig Exp $
 
 PEFILE_VERSION=	1.2.10-139
 DISTNAME=	pefile-${PEFILE_VERSION}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/erocarrera/pefile
 COMMENT=	Python module to read and work with PE files
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_ACCEPTED=	 27
+PYTHON_VERSIONS_ACCEPTED=	27
 
 EGG_NAME=	pefile-${PEFILE_VERSION:S/-/.post/}
 

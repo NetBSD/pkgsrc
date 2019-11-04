@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2017/02/01 12:54:56 mef Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/04 21:28:58 rillig Exp $
 
 WBM_NAME=	cluster-useradmin
 
-WBM_DEPEND_MODULES=     useradmin
+WBM_DEPEND_MODULES=	useradmin
 
 COMMENT=	Webmin module to manage users & groups within a Webmin cluster
 

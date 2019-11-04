@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.135 2019/09/18 18:30:54 tnn Exp $
+# $NetBSD: Makefile,v 1.136 2019/11/04 21:28:48 rillig Exp $
 
 DISTNAME=		lsof_4.91
 PKGNAME=		${DISTNAME:S/_/-/}
@@ -43,19 +43,19 @@ INTERACTIVE_STAGE+=	test
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-REAL_GROUP=		${REAL_ROOT_GROUP}
+REAL_GROUP=			${REAL_ROOT_GROUP}
 .if ${OPSYS} == "NetBSD"
-REAL_GROUP=		kmem
-CONFIGURE_ENV+=		NETBSD_SYS="${NETBSDSRCDIR}/sys"
-CPPFLAGS+=		-D_KMEMUSER -D__NAMECACHE_PRIVATE
+REAL_GROUP=			kmem
+CONFIGURE_ENV+=			NETBSD_SYS="${NETBSDSRCDIR}/sys"
+CPPFLAGS+=			-D_KMEMUSER -D__NAMECACHE_PRIVATE
 .elif ${OPSYS} == "FreeBSD"
 BUILDLINK_PASSTHRU_DIRS+=	/usr/src/sys
 .elif ${OPSYS} == "SunOS"
-REAL_GROUP=		sys
-MAKE_ENV+=		CPPFLAGS=
-CONFIGURE_ENV+=		LSOF_RANLIB="/bin/true"
+REAL_GROUP=			sys
+MAKE_ENV+=			CPPFLAGS=
+CONFIGURE_ENV+=			LSOF_RANLIB="/bin/true"
 .endif
-INSTALLATION_DIRS+=	sbin ${PKGMANDIR}/man8 share/doc/lsof share/examples/lsof
+INSTALLATION_DIRS+=		sbin ${PKGMANDIR}/man8 share/doc/lsof share/examples/lsof
 
 post-extract:
 .if ${OPSYS} == "FreeBSD"
