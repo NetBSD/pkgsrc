@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2019/10/18 11:02:13 micha Exp $
+# $NetBSD: Makefile.common,v 1.16 2019/11/04 22:09:56 rillig Exp $
 #
 # used by www/htmldoc/Makefile
 # used by www/htmldoc-x11/Makefile
@@ -8,7 +8,7 @@ PKGNAME?=	${PKGNAME_BASE}-${VERSION}
 COMMENT?=	Converts HTML to indexed HTML, PDF and/or PostScript
 
 # Normal package Makefile contents follow.
-VERSION= 	1.9.7
+VERSION=	1.9.7
 PKGNAME_BASE=	htmldoc
 CATEGORIES=	www
 DIST_SUBDIR=	${PKGNAME_BASE}

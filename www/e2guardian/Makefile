@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/08/11 13:24:19 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2019/11/04 22:09:53 rillig Exp $
 
 DISTNAME=	e2guardian-5.1.1
 PKGREVISION=	2
@@ -41,7 +41,7 @@ PKG_SYSCONFSUBDIR=	e2guardian
 BUILD_DEFS+=		VARBASE
 
 OWN_DIRS_PERMS+=	${VARBASE}/log/e2guardian \
-                        ${E2G_USER} ${E2G_GROUP} 0755
+			${E2G_USER} ${E2G_GROUP} 0755
 
 CONFIGURE_ARGS+=	--with-proxyuser=${E2G_USER}
 CONFIGURE_ARGS+=	--with-proxygroup=${E2G_GROUP}
@@ -55,7 +55,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 
 .include "options.mk"
 
-CHECK_WRKREF_SKIP= 	sbin/e2guardian
+CHECK_WRKREF_SKIP=	sbin/e2guardian
 
 REPLACE_PERL+=		data/e2guardian.pl
 

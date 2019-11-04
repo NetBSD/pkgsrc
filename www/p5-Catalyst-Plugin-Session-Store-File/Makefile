@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/08/11 13:24:33 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/11/04 22:10:02 rillig Exp $
 
 DISTNAME=	Catalyst-Plugin-Session-Store-File-0.18
 PKGNAME=	p5-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	p5-Catalyst-Runtime>=5.7000:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-Class-Data-Inheritable>=0.04:../../devel/p5-Class-Data-Inheritable
 DEPENDS+=	p5-MRO-Compat>=0.10:../../devel/p5-MRO-Compat
 
-PERL5_PACKLIST= 	auto/Catalyst/Plugin/Session/Store/File/.packlist
+PERL5_PACKLIST=		auto/Catalyst/Plugin/Session/Store/File/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1

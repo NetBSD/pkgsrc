@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/08/11 13:25:05 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/04 22:10:11 rillig Exp $
 
 DISTNAME=	WWW-Pastebin-PastebinCom-Create-1.003
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Paste to <http://pastebin.com> from Perl
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/WWW/Pastebin/PastebinCom/Create/.packlist
+PERL5_PACKLIST=	auto/WWW/Pastebin/PastebinCom/Create/.packlist
 
 DEPENDS+=	p5-URI>=1.35:../../www/p5-URI
 # LWP::UserAgent 2.036 is really what is required

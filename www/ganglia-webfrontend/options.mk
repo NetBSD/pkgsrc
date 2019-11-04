@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2016/02/16 13:05:23 fhajny Exp $
+# $NetBSD: options.mk,v 1.2 2019/11/04 22:09:55 rillig Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ganglia-webfrontend
 
@@ -26,9 +26,9 @@ BUILD_DEFS+=		APACHE_USER APACHE_GROUP
 ###
 .if !empty(PKG_OPTIONS:Mnginx)
 DEPENDS+=	nginx-[0-9]*:../../www/nginx
-NGINX_USER?=		nginx
-NGINX_GROUP?=		nginx
-WWW_USER?=		${NGINX_USER}
-WWW_GROUP?=		${NGINX_USER}
-BUILD_DEFS+=		NGINX_USER NGINX_GROUP
+NGINX_USER?=	nginx
+NGINX_GROUP?=	nginx
+WWW_USER?=	${NGINX_USER}
+WWW_GROUP?=	${NGINX_USER}
+BUILD_DEFS+=	NGINX_USER NGINX_GROUP
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/09/02 13:20:04 adam Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/04 22:10:13 rillig Exp $
 
 DISTNAME=	twill-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-cssselect-[0-9]*:../../textproc/py-cssselect
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED=	 27 # setup fails for 1.8.0
+PYTHON_VERSIONS_ACCEPTED=	27 # setup fails for 1.8.0
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/twill-fork \

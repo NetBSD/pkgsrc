@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/08/11 13:24:25 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2019/11/04 22:09:59 rillig Exp $
 
 DISTNAME=	App-Nopaste-1.012
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl 5 module providing easy access to any pastebin
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/App/Nopaste/.packlist
+PERL5_PACKLIST=	auto/App/Nopaste/.packlist
 
 REPLACE_PERL+=	script/nopaste
 

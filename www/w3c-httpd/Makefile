@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2018/07/04 13:40:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.29 2019/11/04 22:10:16 rillig Exp $
 
 DISTNAME=	w3c-httpd-3.0A
 PKGREVISION=	1
@@ -16,7 +16,7 @@ BUILD_TARGET=	build-all
 # prevent conflict with directory All on non-case-sensitive file systems
 USE_TOOLS+=	csh
 
-OPSYSVARS+=	OSNAME
+OPSYSVARS+=		OSNAME
 OSNAME.Darwin=		darwin
 OSNAME.DragonFly=	freebsd
 OSNAME.FreeBSD=		freebsd
@@ -32,9 +32,9 @@ CFLAGS+=	${CPPFLAGS}
 SUBST_CLASSES+=		strcasestr
 SUBST_STAGE.strcasestr=	pre-configure
 SUBST_FILES.strcasestr=	Daemon/Implementation/HTWild.c \
-	Library/Implementation/HTString.c \
-	Library/Implementation/HTString.h \
-	Library/Implementation/HTString.h
+			Library/Implementation/HTString.c \
+			Library/Implementation/HTString.h \
+			Library/Implementation/HTString.h
 SUBST_SED.strcasestr=	-e 's,\([[:blank:]]\)\(strcasestr\),\1x\2,g'
 
 EGDIR=			${PREFIX}/share/examples/w3c-httpd

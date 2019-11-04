@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2017/09/04 18:01:04 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/04 22:10:14 rillig Exp $
 
 DISTNAME=	webunit-${VERSION}
 PKGREVISION=	3
@@ -10,8 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	HTTP unit testing framework for Ruby
 LICENSE=	gnu-gpl-v2 OR ruby-license
 
-DEPENDS+= ${RUBY_PKGPREFIX}-html-parser>=19990912p1:../../textproc/ruby-html-parser
-DEPENDS+= ${RUBY_PKGPREFIX}-htmlsplit>=1.0.2:../../www/ruby-htmlsplit
+DEPENDS+=	${RUBY_PKGPREFIX}-html-parser>=19990912p1:../../textproc/ruby-html-parser
+DEPENDS+=	${RUBY_PKGPREFIX}-htmlsplit>=1.0.2:../../www/ruby-htmlsplit
 
 USE_TOOLS=	pax
 USE_RUBY_SETUP=	yes

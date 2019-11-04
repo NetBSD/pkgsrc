@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2019/06/13 19:02:37 rjs Exp $
+# $NetBSD: options.mk,v 1.4 2019/11/04 22:09:54 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
@@ -20,7 +20,7 @@ PKG_SUGGESTED_OPTIONS+=	oss dbus
 .elif ${OPSYS} == "DragonFly"
 PKG_SUGGESTED_OPTIONS+=	oss dbus
 .else
-PKG_SUGGESTED_OPTIONS+= dbus pulseaudio
+PKG_SUGGESTED_OPTIONS+=	dbus pulseaudio
 .endif
 
 # On NetBSD/amd64 6.99.21 libxul.so is invalid when --enable-webrtc is set.
@@ -67,12 +67,12 @@ CONFIGURE_ARGS+=	--disable-jemalloc
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mgcc)
-.if ${CC_VERSION:S/gcc-//:S/.//g} >= 480
+.  if ${CC_VERSION:S/gcc-//:S/.//g} >= 480
 # Modern gcc does not run any "tracking" passes when compiling with -O0,
 # which makes the generated debug info mostly useless. So explicitly
 # request them.
 O0TRACKING=-fvar-tracking-assignments -fvar-tracking
-.endif
+.  endif
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
@@ -82,12 +82,12 @@ CONFIGURE_ARGS+=	--enable-debug-js-modules
 CONFIGURE_ARGS+=	--disable-install-strip
 PLIST.debug=		yes
 .else
-.if !empty(PKG_OPTIONS:Mdebug-info)
+.  if !empty(PKG_OPTIONS:Mdebug-info)
 CONFIGURE_ARGS+=	--enable-debug-symbols
 CONFIGURE_ARGS+=	--enable-optimize=-O0
-.else
+.  else
 CONFIGURE_ARGS+=	--disable-debug-symbols
-.endif
+.  endif
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--enable-optimize=-O2
 CONFIGURE_ARGS+=	--enable-install-strip
