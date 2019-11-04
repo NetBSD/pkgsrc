@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2017/08/16 20:45:43 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2019/11/04 19:57:59 rillig Exp $
 
 DISTNAME=	xdvik-${XDVIK_ORIGINAL_VERS}
 PKGNAME=	ja-vfxdvik-${XDVIK_ORIGINAL_VERS}.${XDVIK_JP_PATCH_VERS}
@@ -6,9 +6,9 @@ PKGREVISION=	20
 CATEGORIES=	japanese print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xdvi/} # not xdvik
 
-PATCH_SITES=	http://www.nn.iij4u.or.jp/~tutimura/tex/
-PATCHFILES=	${DISTNAME}-${XDVIK_JP_PATCH_VERS}.patch.gz
-PATCH_DIST_ARGS=-d ${WRKSRC} --quiet -E -p1
+PATCH_SITES=		http://www.nn.iij4u.or.jp/~tutimura/tex/
+PATCHFILES=		${DISTNAME}-${XDVIK_JP_PATCH_VERS}.patch.gz
+PATCH_DIST_ARGS=	-d ${WRKSRC} --quiet -E -p1
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 #HOMEPAGE=	http://www.nn.iij4u.or.jp/~tutimura/tex/xdvi.html
@@ -30,23 +30,23 @@ GNU_CONFIGURE=		YES
 LDFLAGS.DragonFly=	-lm
 LDFLAGS.SunOS+=		-lm
 
-CONFIGURE_ARGS+=--enable-local-texmf=${PREFIX}/share/texmf-dist \
-		--without-texinfo \
-		--without-dialog \
-		--disable-multiplatform \
-		--enable-ipc \
-		--with-epsfwin \
-		--with-hp2627win \
-		--with-mftalkwin \
-		--with-x11 \
-		--with-system-wwwlib \
-		--with-system-pnglib \
-		--with-system-t1lib \
-		--with-system-zlib \
-		--with-zlib-libdir=${BUILDLINK_PREFIX.zlib}/lib \
-		--with-zlib-include=${BUILDLINK_PREFIX.zlib}/include \
-		--enable-xdviprint=${PREFIX}/bin/vfxdviprint \
-		--enable-xdvietcdir=${PREFIX}/share/texmf-dist/vfxdvi
+CONFIGURE_ARGS+=	--enable-local-texmf=${PREFIX}/share/texmf-dist \
+			--without-texinfo \
+			--without-dialog \
+			--disable-multiplatform \
+			--enable-ipc \
+			--with-epsfwin \
+			--with-hp2627win \
+			--with-mftalkwin \
+			--with-x11 \
+			--with-system-wwwlib \
+			--with-system-pnglib \
+			--with-system-t1lib \
+			--with-system-zlib \
+			--with-zlib-libdir=${BUILDLINK_PREFIX.zlib}/lib \
+			--with-zlib-include=${BUILDLINK_PREFIX.zlib}/include \
+			--enable-xdviprint=${PREFIX}/bin/vfxdviprint \
+			--enable-xdvietcdir=${PREFIX}/share/texmf-dist/vfxdvi
 
 .include "../../mk/bsd.prefs.mk"
 .if defined(PAPERSIZE) && ${PAPERSIZE} == "A4"
@@ -54,7 +54,7 @@ CONFIGURE_ARGS+=--enable-a4
 .endif
 
 .if ${OPSYS} != "SunOS"
-CONFIGURE_ARGS+=--enable-auto-core
+CONFIGURE_ARGS+=	--enable-auto-core
 .else
 USE_BUILTIN.zlib=	no # force use pkgsrc zlib
 .endif
