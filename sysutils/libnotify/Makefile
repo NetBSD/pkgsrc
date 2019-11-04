@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2019/10/07 09:28:13 prlw1 Exp $
+# $NetBSD: Makefile,v 1.57 2019/11/04 21:28:47 rillig Exp $
 
 DISTNAME=	libnotify-0.7.8
 PKGREVISION=	1
@@ -16,9 +16,9 @@ SUPERSEDES+=	libnotify07-[0-9]*
 
 USE_TOOLS+=		gmake pkg-config
 
-PKGCONFIG_OVERRIDE=	output/meson-private/libnotify.pc
-PKGCONFIG_OVERRIDE_STAGE=pre-install
-MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/output/${PKGBASE}
+PKGCONFIG_OVERRIDE=		output/meson-private/libnotify.pc
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
+MAKE_ENV+=			LD_LIBRARY_PATH=${WRKSRC}/output/${PKGBASE}
 
 .include "options.mk"
 

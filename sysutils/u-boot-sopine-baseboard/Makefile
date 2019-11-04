@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2019/05/07 14:06:25 thorpej Exp $
+# $NetBSD: Makefile,v 1.7 2019/11/04 21:28:57 rillig Exp $
 
 UBOOT_TARGET=		sopine-baseboard
 UBOOT_CONFIG=		sopine_baseboard_defconfig
 UBOOT_BIN=		u-boot-sunxi-with-spl.bin
 UBOOT_ENV+=		DEVICE_TREE=sun50i-a64-sopine-baseboard
 
-UBOOT_INSTALLBOOT_PLIST=installboot.plist
+UBOOT_INSTALLBOOT_PLIST=	installboot.plist
 
 PKGREVISION=		5
 

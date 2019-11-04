@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/23 19:51:15 asau Exp $
+# $NetBSD: Makefile,v 1.12 2019/11/04 21:28:49 rillig Exp $
 #
 
 PKGNAME=		nvnet-20050620nb1
@@ -27,7 +27,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 INSTALLATION_DIRS=	lkm ${PKGMANDIR}/man4
 
-MESSAGE_SUBST+=  PREFIX=${PREFIX:Q}
+MESSAGE_SUBST+=	PREFIX=${PREFIX:Q}
 
 do-extract:
 	${TAR} -xzf ${DISTDIR}/nvnet-netbsd-src-20050620.tgz -C ${WRKDIR}
