@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/10/08 02:59:59 gutteridge Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/04 21:50:15 rillig Exp $
 
 VERSION=	0.75
 DISTNAME=	blackbox-${VERSION}
@@ -26,7 +26,7 @@ CXXFLAGS.Linux+=	-fpermissive
 
 CONFIGURE_ARGS+=	--enable-nls
 
-BROKEN_GETTEXT_DETECTION=yes
+BROKEN_GETTEXT_DETECTION=	yes
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/08/11 13:24:15 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/04 21:50:16 rillig Exp $
 #
 
 DISTNAME=	fvwm-themes-${THEM_VER}
@@ -30,7 +30,7 @@ REPLACE_PERL+=	themes/cde/modules/create-buttonbar-config
 #### 1 ####
 SUBST_CLASSES+=			Makefile
 SUBST_FILES.Makefile=		Makefile.am Makefile.in
-SUBST_SED.Makefile= 		-e 's|FT_DATADIR=@FT_DATADIR@|FT_DATADIR=${DESTDIR}@FT_DATADIR@|'
+SUBST_SED.Makefile=		-e 's|FT_DATADIR=@FT_DATADIR@|FT_DATADIR=${DESTDIR}@FT_DATADIR@|'
 SUBST_STAGE.Makefile=		pre-configure
 SUBST_MESSAGE.Makefile=		Modify shell script (Makefile)
 
@@ -48,8 +48,8 @@ SUBST_CLASSES+=			fvwm-menuapp
 SUBST_FILES.fvwm-menuapp=	bin/fvwm-themes-menuapp-destdir.in
 # -my $ftDir = "@FT_DATADIR@"
 # +my $ftDir = "${DESTDIR}@FT_DATADIR@"
-SUBST_SED.fvwm-menuapp= 	-e 's|$$userDir, $$ftDataDir|$$userDir, \"${DESTDIR}\".$$ftDataDir|'
-SUBST_SED.fvwm-menuapp= 	-e 's|my $$ftDir = "@FT_DATADIR@"|my $$ftDir = \"${DESTDIR}@FT_DATADIR@\"|'
+SUBST_SED.fvwm-menuapp=		-e 's|$$userDir, $$ftDataDir|$$userDir, \"${DESTDIR}\".$$ftDataDir|'
+SUBST_SED.fvwm-menuapp=		-e 's|my $$ftDir = "@FT_DATADIR@"|my $$ftDir = \"${DESTDIR}@FT_DATADIR@\"|'
 SUBST_STAGE.fvwm-menuapp=	pre-configure
 SUBST_MESSAGE.fvwm-menuapp=	Fixing FT_DATADIR (fvwm-themes-datadir)
 

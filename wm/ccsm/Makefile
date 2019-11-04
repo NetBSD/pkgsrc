@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/09/02 13:19:58 adam Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/04 21:50:15 rillig Exp $
 
 PKGVER=			0.8.4
 DISTNAME=		ccsm-${PKGVER}
@@ -19,7 +19,7 @@ USE_TOOLS+=		pkg-config gmake msgfmt intltool
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 REPLACE_PYTHON=		${WRKSRC}/setup.py ${WRKSRC}/ccm/*.py
-PYTHON_VERSIONS_ACCEPTED=	 27 # py-gtk2
+PYTHON_VERSIONS_ACCEPTED= 27 # py-gtk2
 
 MAKE_ENV+=	PYTHONBIN=${PYTHONBIN:Q}
 
