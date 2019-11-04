@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.226 2019/10/19 12:46:06 nia Exp $
+# $NetBSD: Makefile,v 1.227 2019/11/04 09:07:37 wiz Exp $
 
 DISTNAME=	calibre-3.40.1
 PKGREVISION=	7
@@ -90,6 +90,7 @@ MAKE_ENV+=		FC_LIB_DIR=${BUILDLINK_PREFIX.fontconfig}/lib
 MAKE_ENV+=		PODOFO_INC_DIR=${BUILDLINK_PREFIX.podofo}/include/podofo
 MAKE_ENV+=		PODOFO_LIB_DIR=${BUILDLINK_PREFIX.podofo}/lib
 MAKE_ENV+=		SIP_BIN=${BUILDLINK_PREFIX.py-sip}/bin/sip${PYVERSSUFFIX}
+MAKE_ENV+=		SIP_DIR=${BUILDLINK_PREFIX.py-sip}/share/sip${PYVERSSUFFIX}
 MAKE_ENV+=		LFLAGS=${LDFLAGS:Q}
 
 # Turn off x bits on non-executable files.
