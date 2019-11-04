@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/08/11 13:23:49 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2019/11/04 21:43:42 rillig Exp $
 
 DISTNAME=	Text-Xslate-v3.5.6
 PKGNAME=	p5-${DISTNAME:S/-v/-/}
@@ -22,9 +22,9 @@ DEPENDS+=	p5-File-Copy-Recursive>=0:../../sysutils/p5-File-Copy-Recursive
 DEPENDS+=	p5-Test-LeakTrace>=0:../../devel/p5-Test-LeakTrace
 DEPENDS+=	p5-Module-Build-XSUtil-[0-9]*:../../devel/p5-Module-Build-XSUtil
 
-PERL5_PACKLIST=	auto/Text/Xslate/.packlist
+PERL5_PACKLIST=		auto/Text/Xslate/.packlist
 PERL5_MODULE_TYPE=	Module::Build
-USE_LANGUAGES=	c
+USE_LANGUAGES=		c
 
 PERL5_MODULE_TYPE=	Module::Build
 

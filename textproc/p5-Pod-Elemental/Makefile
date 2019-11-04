@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/08/11 13:23:35 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/04 21:43:41 rillig Exp $
 
 DISTNAME=	Pod-Elemental-0.103004
 PKGNAME=	p5-${DISTNAME}
@@ -26,7 +26,7 @@ BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 BUILD_DEPENDS+=	p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
 BUILD_DEPENDS+=	p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
 # for make test
-BUILD_DEPENDS+=p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 PERL5_PACKLIST=		auto/Pod/Elemental/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/08/11 13:23:53 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2019/11/04 21:43:43 rillig Exp $
 
 DISTNAME=	XML-Filter-BufferText-1.01
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl5 module XML parser filter to put all characters() in one event
 
 DEPENDS+=	p5-XML-SAX>=0.04:../../textproc/p5-XML-SAX
 
-USE_LANGUAGES=		# empty
+USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/XML/Filter/BufferText/.packlist
 
 .include "../../lang/perl5/module.mk"
