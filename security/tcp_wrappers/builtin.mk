@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.9 2013/11/23 12:10:13 obache Exp $
+# $NetBSD: builtin.mk,v 1.10 2019/11/04 21:13:03 rillig Exp $
 
 BUILTIN_PKG:=	tcp_wrappers
 
@@ -20,7 +20,7 @@ IS_BUILTIN.tcp_wrappers=	no
 IS_BUILTIN.tcp_wrappers=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.tcp_wrappers
+MAKEVARS+=			IS_BUILTIN.tcp_wrappers
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -47,4 +47,4 @@ USE_BUILTIN.tcp_wrappers!=						\
 .    endif
 .  endif  # PREFER.tcp_wrappers
 .endif
-MAKEVARS+=	USE_BUILTIN.tcp_wrappers
+MAKEVARS+=			USE_BUILTIN.tcp_wrappers
