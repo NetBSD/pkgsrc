@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2018/11/10 21:14:53 maya Exp $
+@comment $NetBSD: PLIST,v 1.27 2019/11/04 01:11:38 gdt Exp $
 bin/fax2ps
 bin/fax2tiff
 bin/pal2rgb
@@ -235,3 +235,5 @@ share/doc/tiff/html/v4.0.6.html
 share/doc/tiff/html/v4.0.7.html
 share/doc/tiff/html/v4.0.8.html
 share/doc/tiff/html/v4.0.9.html
+share/doc/tiff/html/v4.0.10.html
+share/doc/tiff/html/v4.1.0.html
