@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/08/11 13:24:22 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/04 22:09:58 rillig Exp $
 
 DISTNAME=	AnyEvent-HTTP-2.24
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl 5 module providing simple but non-blocking HTTP/HTTPS client
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/AnyEvent/HTTP/.packlist
+PERL5_PACKLIST=	auto/AnyEvent/HTTP/.packlist
 
 DEPENDS+=	p5-AnyEvent>=5:../../devel/p5-AnyEvent
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/08/11 13:25:02 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/04 22:10:10 rillig Exp $
 
 DISTNAME=	Test-WWW-Mechanize-PSGI-0.38
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl 5 module to test PSGI programs using WWW::Mechanize
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Test/WWW/Mechanize/PSGI/.packlist
+PERL5_PACKLIST=	auto/Test/WWW/Mechanize/PSGI/.packlist
 
 DEPENDS+=	p5-Plack-[0-9]*:../../www/p5-Plack
 DEPENDS+=	p5-Test-WWW-Mechanize-[0-9]*:../../www/p5-Test-WWW-Mechanize

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/08/11 13:25:00 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/04 22:10:09 rillig Exp $
 
 DISTNAME=	Tatsumaki-0.1013
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl 5 non-blocking web framework based on Plack and AnyEvent
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Tatsumaki/.packlist
+PERL5_PACKLIST=	auto/Tatsumaki/.packlist
 
 BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 DEPENDS+=	p5-Any-Moose-[0-9]*:../../devel/p5-Any-Moose

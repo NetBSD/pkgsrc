@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/08/11 13:24:57 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2019/11/04 22:10:08 rillig Exp $
 
 DISTNAME=	Plack-Middleware-MethodOverride-0.20
 PKGNAME=	p5-${DISTNAME}
@@ -13,8 +13,8 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS=	p5-Plack>=0:../../www/p5-Plack
 
-PERL5_PACKLIST=         auto/Plack/Middleware/MethodOverride/.packlist
-USE_LANGUAGES=          # none
+PERL5_PACKLIST=		auto/Plack/Middleware/MethodOverride/.packlist
+USE_LANGUAGES=		# none
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/08/11 13:24:55 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/04 22:10:07 rillig Exp $
 
 DISTNAME=	Plack-Handler-AnyEvent-ReverseHTTP-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Reversehttp gateway for PSGI application
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Plack/Handler/AnyEvent/ReverseHTTP/.packlist
+PERL5_PACKLIST=	auto/Plack/Handler/AnyEvent/ReverseHTTP/.packlist
 
 DEPENDS+=	p5-AnyEvent-[0-9]*:../../devel/p5-AnyEvent
 DEPENDS+=	p5-AnyEvent-ReverseHTTP-[0-9]*:../../www/p5-AnyEvent-ReverseHTTP

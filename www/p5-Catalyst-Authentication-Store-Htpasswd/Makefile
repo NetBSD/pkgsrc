@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/08/11 13:24:29 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/04 22:10:00 rillig Exp $
 
 DISTNAME=	Catalyst-Authentication-Store-Htpasswd-1.006
 PKGNAME=	p5-${DISTNAME}
@@ -23,7 +23,7 @@ BUILD_DEPENDS+=	p5-Test-Simple>=1.001010:../../devel/p5-Test-Simple
 REPLACE_PERL+=	lib/Catalyst/Authentication/Store/*.pm
 REPLACE_PERL+=	lib/Catalyst/Authentication/Store/Htpasswd/*.pm
 
-PERL5_PACKLIST= 	auto/Catalyst/Authentication/Store/Htpasswd/.packlist
+PERL5_PACKLIST=		auto/Catalyst/Authentication/Store/Htpasswd/.packlist
 PERL5_MODULE_TYPE=	Module::Build::Tiny
 
 .include "../../lang/perl5/module.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2019/08/11 13:24:18 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2019/11/04 22:09:53 rillig Exp $
 
 DISTNAME=	dillo-3.0.5
 PKGREVISION=	5
@@ -19,11 +19,11 @@ REPLACE_PERL+=	dpid/dpidc dillo-install-hyphenation
 USE_TOOLS+=	perl:run wget:run
 
 PKG_SYSCONFSUBDIR=	dillo
-EGDIR=		${PREFIX}/share/examples/dillo
-CONF_FILES=	${EGDIR}/dillorc ${PKG_SYSCONFDIR}/dillorc
-CONF_FILES+=	${EGDIR}/dpidrc ${PKG_SYSCONFDIR}/dpidrc
-CONF_FILES+=	${EGDIR}/keysrc ${PKG_SYSCONFDIR}/keysrc
-CONF_FILES+=	${EGDIR}/domainrc ${PKG_SYSCONFDIR}/domainrc
+EGDIR=			${PREFIX}/share/examples/dillo
+CONF_FILES=		${EGDIR}/dillorc ${PKG_SYSCONFDIR}/dillorc
+CONF_FILES+=		${EGDIR}/dpidrc ${PKG_SYSCONFDIR}/dpidrc
+CONF_FILES+=		${EGDIR}/keysrc ${PKG_SYSCONFDIR}/keysrc
+CONF_FILES+=		${EGDIR}/domainrc ${PKG_SYSCONFDIR}/domainrc
 
 INSTALLATION_DIRS=	share/doc/dillo ${EGDIR}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/08/11 13:24:26 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/04 22:09:59 rillig Exp $
 
 DISTNAME=	CGI-Compile-0.22
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,8 @@ HOMEPAGE=	https://metacpan.org/release/CGI-Compile
 COMMENT=	Perl 5 module to compile .cgi scripts to a code reference
 LICENSE=	${PERL5_LICENSE}
 
-USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/CGI/Compile/.packlist
+USE_LANGUAGES=		# empty
+PERL5_PACKLIST=		auto/CGI/Compile/.packlist
 PERL5_MODULE_TYPE=	Module::Build::Tiny
 
 BUILD_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
