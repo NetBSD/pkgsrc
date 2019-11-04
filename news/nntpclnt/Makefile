@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2016/04/24 10:34:44 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2019/11/04 19:17:11 rillig Exp $
 
 DISTNAME=	nntpclnt-1.6.1
 PKGREVISION=	6
@@ -9,23 +9,23 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	NNTP client library and inews client posting program
 LICENSE=	nntpclnt-license
 
-RESTRICTED=	Do not sell, rent, trade, market, or use for monetary profit
+RESTRICTED=		Do not sell, rent, trade, market, or use for monetary profit
 # No permission granted for derivative works.
-NO_BIN_ON_FTP=	${RESTRICTED}
-NO_SRC_ON_CDROM=${RESTRICTED}
-NO_BIN_ON_CDROM=${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 CONFLICTS+=	inn-[0-9]*
 
-BUILD_TARGET=	inews
-PKG_GROUPS=	news
+BUILD_TARGET=		inews
+PKG_GROUPS=		news
 PKG_SYSCONFSUBDIR=	nntp
 
 PLIST_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIG_SH=	${FILESDIR}/config.${OPSYS}.sh
+CONFIG_SH=			${FILESDIR}/config.${OPSYS}.sh
 BROKEN_EXCEPT_ON_PLATFORM=	NetBSD-*-* DragonFly-*-* \
 				SunOS-*-* Linux-*-* Darwin-*-*
 
