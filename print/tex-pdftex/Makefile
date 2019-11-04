@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/01/27 11:04:53 markd Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/04 19:58:07 rillig Exp $
 
 DISTNAME=	pdftex
 PKGNAME=	tex-${DISTNAME}-2018
@@ -27,7 +27,7 @@ INSTALLATION_DIRS+=	bin
 
 TEX_FORMATS+=		"pdftex pdftex language.def -translate-file=cp227.tcx *pdfetex.ini\\netex pdftex language.def -translate-file=cp227.tcx *etex.ini\\npdfetex pdftex language.def -translate-file=cp227.tcx *pdfetex.ini\\n"
 
-TEX_MAP_FILES+= dummy-space.map
+TEX_MAP_FILES+=	dummy-space.map
 
 .include "../../print/texlive/package.mk"
 
