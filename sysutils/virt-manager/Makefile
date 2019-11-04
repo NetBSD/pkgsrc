@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2019/09/02 13:20:09 adam Exp $
+# $NetBSD: Makefile,v 1.40 2019/11/04 21:28:58 rillig Exp $
 
 DISTNAME=	virt-manager-0.9.4
 PKGREVISION=	27
@@ -18,7 +18,7 @@ DEPENDS+=	urlgrabber>=3.1.0:../../www/urlgrabber
 DEPENDS+=	${PYPKGPREFIX}-dbus>=1.1.1:../../sysutils/py-dbus
 DEPENDS+=	gtk-vnc>=0.5.1:../../net/gtk-vnc
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libvirt-package-names=libvirt
 
 USE_TOOLS+=		gmake intltool msgfmt

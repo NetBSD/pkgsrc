@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/08/11 13:23:09 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/04 21:28:48 rillig Exp $
 
 DISTNAME=		lilo-22.8.src
 PKGREVISION=		8
@@ -20,9 +20,9 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 # Don't force perl for extra tool -- maybe a MESSAGE?
 #USE_PERL5=		YES
 
-#BUILD_DEPENDS+=		dev86>=0.16.10:../../devel/dev86
+#BUILD_DEPENDS+=	dev86>=0.16.10:../../devel/dev86
 # bcc is old and doesn't have -v switch to indicate version
-#BUILD_DEPENDS+=		bcc>=95.3.12:../../devel/bcc
+#BUILD_DEPENDS+=	bcc>=95.3.12:../../devel/bcc
 BUILD_DEPENDS+=		bin86>=0.16.10:../../devel/bin86
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 

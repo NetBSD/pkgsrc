@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/23 19:50:58 asau Exp $
+# $NetBSD: Makefile,v 1.24 2019/11/04 21:28:44 rillig Exp $
 #
 
 DISTNAME=	depot-5.14
@@ -20,7 +20,7 @@ MAKE_ENV+=	CC=${CC:Q}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
-INSTALL_DIRS=	src/cmd man/man1 man/man5
+INSTALL_DIRS=		src/cmd man/man1 man/man5
 INSTALL_MAKE_FLAGS+=	BINDIR=${DESTDIR}${PREFIX}/bin
 INSTALL_MAKE_FLAGS+=	MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
 

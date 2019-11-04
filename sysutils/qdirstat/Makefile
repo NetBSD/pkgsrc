@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/08/27 22:28:50 markd Exp $
+# $NetBSD: Makefile,v 1.11 2019/11/04 21:28:51 rillig Exp $
 
 DISTNAME=	qdirstat-1.6
 CATEGORIES=	sysutils
@@ -14,7 +14,7 @@ USE_TOOLS+=	perl:run
 
 REPLACE_PERL+=	scripts/qdirstat-cache-writer
 
-#SUBST_CLASSES+=			filemanager
+#SUBST_CLASSES+=		filemanager
 #SUBST_STAGE.filemanager=	post-patch
 #SUBST_MESSAGE.filemanager=	Use dolphin not konqueror
 #SUBST_FILES.filemanager=	src/Cleanup.cpp
@@ -26,7 +26,7 @@ pre-configure:
 do-configure:
 	cd ${WRKSRC} && qmake
 
-INSTALLATION_DIRS= bin share/applications share/pixmaps
+INSTALLATION_DIRS=	bin share/applications share/pixmaps
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/qdirstat ${DESTDIR}${PREFIX}/bin/qdirstat
