@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2032 2019/08/18 21:58:51 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2033 2019/11/04 17:47:30 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -480,8 +480,9 @@ PKG_SKIP_REASON+= "${PKGNAME} is restricted:" \
 .  if defined(USE_X11) && (${X11_TYPE} == "native") && !exists(${X11BASE})
 PKG_FAIL_REASON+= "${PKGNAME} uses X11, but ${X11BASE} not found"
 .  endif
-.  if defined(BROKEN)
-PKG_FAIL_REASON+= "${PKGNAME} is marked as broken:" ${BROKEN:Q}
+.  if ${BROKEN:U:M*}
+PKG_FAIL_REASON+=	"${PKGNAME} is marked as broken:"
+PKG_FAIL_REASON+=	${BROKEN}
 .  endif
 
 .include "license.mk"

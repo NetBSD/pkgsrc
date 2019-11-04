@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/07/20 22:46:49 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/04 17:47:30 rillig Exp $
 
 DISTNAME=	openvas-libraries-2.0.0
 PKGREVISION=	13
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 # DragonFly-2.8.2 has dn_expand(3) in libc, and not have libresolv.
 BUILDLINK_TRANSFORM.DragonFly+=	rm:-lresolv
 
-BROKEN=		Does not build with gnutls-3.5 -- newer versions available.
+BROKEN=		"Does not build with gnutls-3.5 -- newer versions available."
 
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"

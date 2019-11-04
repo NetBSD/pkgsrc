@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/04/24 11:15:43 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/04 17:47:31 rillig Exp $
 #
 
 DISTNAME=	aspell-nb-0.50.1-0
@@ -16,7 +16,7 @@ HAS_CONFIGURE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 .if ${PKG_FORMAT} == "pkg" && ${OPSYS} == "Linux"
-BROKEN=	Can not be packaged on Linux
+BROKEN=	"Non-ASCII PLIST and thus problem with libarchive on glibc systems."
 .endif
 
 .include "../../textproc/aspell/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/11/02 22:37:52 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2019/11/04 17:47:30 rillig Exp $
 
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.corel.com/akdlm/6763/downloads/AfterShotPro/1/PF/
@@ -45,7 +45,7 @@ PKGNAME=	${DISTNAME:S/_i386/-1.1.0.30/}
 #DISTNAME=	AfterShotPro_amd64
 #PKGNAME=	${DISTNAME:S/_amd64/-1.1.0.30/}
 .else
-BROKEN=		Not supported for this emulation
+BROKEN=		"Not supported for this emulation"
 .endif
 
 do-extract: ${WRKDIR}
