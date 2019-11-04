@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2019/07/11 11:20:06 sevan Exp $
+# $NetBSD: Makefile.common,v 1.15 2019/11/04 21:28:52 rillig Exp $
 # used by sysutils/syslog-ng/Makefile
 # used by sysutils/syslog-ng/Makefile.module
 
@@ -53,7 +53,7 @@ SUBST_STAGE.unamepath=	post-configure
 SUBST_FILES.unamepath=	contrib/syslog2ng
 SUBST_VARS.unamepath=	UNAME
 
-PYTHON_VERSIONS_ACCEPTED=      27
+PYTHON_VERSIONS_ACCEPTED=	27
 
 REPLACE_AWK+=		contrib/syslog2ng
 REPLACE_PYTHON+=	lib/merge-grammar.py

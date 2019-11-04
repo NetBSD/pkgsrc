@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/08/30 13:23:10 bouyer Exp $
+# $NetBSD: Makefile,v 1.30 2019/11/04 21:28:59 rillig Exp $
 #
 VERSION=	4.8.5
 VERSION_IPXE=	827dd1bfee67daa683935ce65316f7e0f057fe1c
@@ -24,8 +24,8 @@ MASTER_SITES=		https://downloads.xenproject.org/release/xen/${VERSION}/
 DISTFILES=		${DISTNAME}.tar.gz
 
 XEN_EXTFILES=		http://xenbits.xensource.com/xen-extfiles/
-DISTFILES+=			${DIST_IPXE}
-SITES.${DIST_IPXE} +=		${XEN_EXTFILES}
+DISTFILES+=		${DIST_IPXE}
+SITES.${DIST_IPXE} +=	${XEN_EXTFILES}
 
 DISTFILES+=			${DIST_NEWLIB}
 SITES.${DIST_NEWLIB} +=		${XEN_EXTFILES}

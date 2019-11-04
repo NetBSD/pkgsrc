@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2019/05/07 14:06:25 thorpej Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/04 21:28:57 rillig Exp $
 
 UBOOT_VERSION=		2018.11rc3
 UBOOT_TARGET=		pinebook
 UBOOT_CONFIG=		pinebook_defconfig
 UBOOT_BIN=		u-boot-sunxi-with-spl.bin
 
-UBOOT_INSTALLBOOT_PLIST=installboot.plist
+UBOOT_INSTALLBOOT_PLIST=	installboot.plist
 
 # Use anarsoul's fork of mainline U-Boot with Pinebook support patched in
 MASTER_SITES=		${MASTER_SITE_GITHUB:=anarsoul/}
@@ -27,4 +27,4 @@ post-build:
 .include "../../sysutils/arm-trusted-firmware-sun50i_a64/buildlink3.mk"
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
 
-CHECK_PORTABILITY_SKIP+=tools/imx_cntr_image.sh
+CHECK_PORTABILITY_SKIP+=	tools/imx_cntr_image.sh
