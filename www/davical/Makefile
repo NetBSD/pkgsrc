@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2019/11/03 14:05:19 triaxx Exp $
+# $NetBSD: Makefile,v 1.40 2019/11/04 04:26:26 triaxx Exp $
 
 DISTNAME=	davical-${DAVICAL_VERSION}
 PKGNAME=	${PHP_PKG_PREFIX}-davical-${DAVICAL_VERSION}
@@ -85,7 +85,7 @@ SUBST_MESSAGE.conf-path=Fixing configuration path.
 SUBST_CLASSES+=		inc-path
 SUBST_STAGE.inc-path=	pre-configure
 SUBST_VARS.inc-path+=	PKG_SYSCONFDIR
-SUBST_FAWLDIRILES.inc-path=	davical.conf inc/always.php.in
+SUBST_FILES.inc-path=	davical.conf inc/always.php.in
 SUBST_FILES.inc-path+=	scripts/po/rebuild-translations.sh
 SUBST_FILES.inc-path+=	dba/create-database.sh
 SUBST_SED.inc-path+=	-e "s|@LIBAWLPATH@|${PREFIX}/${LIBAWLDIR}|g"
