@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2018/07/04 13:40:37 jperkin Exp $
+# $NetBSD: Makefile,v 1.59 2019/11/04 21:28:46 rillig Exp $
 
 DISTNAME=	grub-0.97
 PKGREVISION=	10
@@ -35,9 +35,9 @@ PLIST_VARS+=		netboot
 CONFIGURE_ARGS+=	--enable-diskless
 PLIST.netboot=		yes
 
-.for nic in ${GRUB_NETWORK_CARDS}
+.  for nic in ${GRUB_NETWORK_CARDS}
 CONFIGURE_ARGS+=	--enable-${nic}
-.endfor
+.  endfor
 
 post-install: grub-netboot-install
 .PHONY: grub-netboot-install

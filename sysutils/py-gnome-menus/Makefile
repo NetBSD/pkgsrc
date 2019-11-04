@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2019/09/02 13:20:08 adam Exp $
+# $NetBSD: Makefile,v 1.37 2019/11/04 21:28:51 rillig Exp $
 
 DISTNAME=	gnome-menus-2.30.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,10 +18,10 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes
 
-CONFIGURE_ARGS+=	--enable-python
-BUILD_DIRS=		python
-INSTALL_DIRS=		python
-PY_PATCHPLIST=		yes
+CONFIGURE_ARGS+=		--enable-python
+BUILD_DIRS=			python
+INSTALL_DIRS=			python
+PY_PATCHPLIST=			yes
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 2.30.5
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0

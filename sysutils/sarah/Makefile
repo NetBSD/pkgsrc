@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/08/11 13:23:16 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/04 21:28:52 rillig Exp $
 
 DISTNAME=	sarah-0.9.1b
 PKGREVISION=	7
@@ -15,7 +15,7 @@ NO_BUILD=	YES
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/sarah \
 			share/examples/sarah
-CONF_FILES+=	${PREFIX}/share/examples/sarah/sarah.conf.sample \
+CONF_FILES+=		${PREFIX}/share/examples/sarah/sarah.conf.sample \
 			${PKG_SYSCONFDIR}/sarah.conf
 
 post-patch:

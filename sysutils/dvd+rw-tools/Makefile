@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/10/23 19:50:59 asau Exp $
+# $NetBSD: Makefile,v 1.34 2019/11/04 21:28:44 rillig Exp $
 #
 
 DISTNAME=	dvd+rw-tools-7.1
@@ -20,8 +20,8 @@ USE_TOOLS+=	m4 gmake
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 # These are the only platforms listed in growisofs.c
-ONLY_FOR_PLATFORM=Linux-*-* OpenBSD-*-* NetBSD-*-* FreeBSD-*-* \
-	DragonFly-*-* SunOS-*-* HP-UX-*-* IRIX-*-*
+ONLY_FOR_PLATFORM=	Linux-*-* OpenBSD-*-* NetBSD-*-* FreeBSD-*-* \
+			DragonFly-*-* SunOS-*-* HP-UX-*-* IRIX-*-*
 
 LDFLAGS.NetBSD+=	-lrt # sem_* functions
 

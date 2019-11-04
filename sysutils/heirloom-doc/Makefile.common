@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2014/12/03 14:08:40 joerg Exp $
+# $NetBSD: Makefile.common,v 1.6 2019/11/04 21:28:46 rillig Exp $
 # used by archivers/heirloom-tar/Makefile
 # used by devel/heirloom-common/Makefile
 # used by devel/heirloom-getopt/Makefile
@@ -155,7 +155,7 @@ LCRYPT=
 .endif
 
 .if ${NEED_LIBCURSES:U0}
-LCURS=-lcurses
+LCURS=	-lcurses
 
 .  if ${OPSYS} == "NetBSD"
 CFLAGS+=	-DUSE_TERMCAP
