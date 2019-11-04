@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2019/08/11 13:22:33 wiz Exp $
+# $NetBSD: Makefile,v 1.129 2019/11/04 19:17:10 rillig Exp $
 
 DISTNAME=		inn-2.6.1
 PKGREVISION=		3
@@ -58,7 +58,7 @@ CONFIGURE_ENV+=		_PATH_SORT=${TOOLS_SORT}
 CONFIGURE_ENV+=		GZIP=${TOOLS_GZIP_CMD}
 USE_TOOLS+=		awk egrep gzip perl:run sed sh sort yacc
 
-LDFLAGS.SunOS+= -lsocket -lnsl
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 DEPENDS+=		p5-MIME-tools-[0-9]*:../../mail/p5-MIME-tools
 DEPENDS+=		p5-GD-[0-9]*:../../graphics/p5-GD
@@ -166,7 +166,7 @@ GCC_REQD+=		2.95.3
 
 .include "options.mk"
 
-TEST_TARGET=    tests
+TEST_TARGET=	tests
 
 pre-install:
 .for file in ${CFILES} active.minimal newsgroups.minimal
