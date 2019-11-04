@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4735 2019/11/04 00:28:32 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.4736 2019/11/04 01:11:46 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7530,3 +7530,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/php-baikal to 0.6.0 [triaxx 2019-11-03]
 	Updated net/youtube-dl to 20191029 [leot 2019-11-03]
 	Updated mail/rss2email to 3.11 [schmonz 2019-11-04]
+	Updated graphics/tiff to 4.1.0 [gdt 2019-11-04]
