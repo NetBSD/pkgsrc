@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/05/09 09:28:22 adam Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/04 19:58:00 rillig Exp $
 
 .include "../../print/poppler/Makefile.common"
 
@@ -11,19 +11,19 @@ CONFLICTS+=	poppler<0.4.5nb1
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/poppler-cpp.pc.cmake
 
 # Don't build the cairo graphics backend, required by glib.
-CMAKE_ARGS+=    -DENABLE_SPLASH=OFF
+CMAKE_ARGS+=	-DENABLE_SPLASH=OFF
 # Don't compile GTK+ test program.
-CMAKE_ARGS+=    -DBUILD_GTK_TESTS=OFF
+CMAKE_ARGS+=	-DBUILD_GTK_TESTS=OFF
 # Don't compile GLib wrapper which also needs gtk2
-CMAKE_ARGS+=    -DENABLE_GLIB=OFF
+CMAKE_ARGS+=	-DENABLE_GLIB=OFF
 # Don't build and install the tools
-CMAKE_ARGS+=    -DENABLE_UTILS=OFF
+CMAKE_ARGS+=	-DENABLE_UTILS=OFF
 # Compile poppler cpp wrapper.
-CMAKE_ARGS+=    -DENABLE_CPP=ON
+CMAKE_ARGS+=	-DENABLE_CPP=ON
 # Don't compile poppler qt5 wrapper.
-CMAKE_ARGS+=    -DENABLE_QT5=OFF
+CMAKE_ARGS+=	-DENABLE_QT5=OFF
 # Don't build libcurl based HTTP support. ## might want to include
-CMAKE_ARGS+=    -DENABLE_LIBCURL=OFF
+CMAKE_ARGS+=	-DENABLE_LIBCURL=OFF
 
 LDFLAGS.SunOS+=		-liconv
 

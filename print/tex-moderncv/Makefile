@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/11/18 09:37:49 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/04 19:58:06 rillig Exp $
 
 DISTNAME=	moderncv
 PKGNAME=	tex-${DISTNAME}-2.0.0
@@ -18,7 +18,7 @@ DEPENDS+=	tex-fancyhdr-[0-9]*:../../print/tex-fancyhdr
 DEPENDS+=	tex-fontawesome-[0-9]*:../../fonts/tex-fontawesome
 DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
 DEPENDS+=	tex-ifluatex-[0-9]*:../../print/tex-ifluatex
-DEPENDS+=       tex-ifxetex-[0-9]*:../../print/tex-ifxetex
+DEPENDS+=	tex-ifxetex-[0-9]*:../../print/tex-ifxetex
 DEPENDS+=	tex-l3packages-[0-9]*:../../devel/tex-l3packages
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-marvosym-[0-9]*:../../fonts/tex-marvosym
@@ -26,7 +26,7 @@ DEPENDS+=	tex-microtype-[0-9]*:../../print/tex-microtype
 DEPENDS+=	tex-pgf-[0-9]*:../../print/tex-pgf
 DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
 DEPENDS+=	tex-xcolor-[0-9]*:../../print/tex-xcolor
-DEPENDS+=       tex-xifthen-[0-9]*:../../devel/tex-xifthen
+DEPENDS+=	tex-xifthen-[0-9]*:../../devel/tex-xifthen
 
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

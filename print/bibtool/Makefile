@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/08/11 13:22:38 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/04 19:57:58 rillig Exp $
 
 DISTNAME=	BibTool-2.65
 PKGREVISION=	2
@@ -22,10 +22,10 @@ BUILD_DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 BUILD_DEPENDS+=	makeindexk-[0-9]*:../../textproc/makeindexk
 
 GNU_CONFIGURE=		yes
-MAKE_FILE=	makefile
+MAKE_FILE=		makefile
 #CONFIGURE_DIRS=	${WRKSRC} ${WRKSRC}/BibTcl
-WRKSRC=		${WRKDIR}/${PKGBASE}
-USE_TOOLS+=	perl
+WRKSRC=			${WRKDIR}/${PKGBASE}
+USE_TOOLS+=		perl
 
 REPLACE_INTERPRETER+=	tcl
 REPLACE.tcl.old=	/usr/local/bin/tclsh
@@ -38,7 +38,7 @@ EXAMPLEDIR=		${PREFIX}/share/examples/BibTool
 
 INSTALL_MAKE_FLAGS=	prefix=${DESTDIR}${PREFIX} \
 			MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
-INSTALL_TARGET=	install install.man
+INSTALL_TARGET=		install install.man
 INSTALLATION_DIRS=	${DOCDIR} ${EXAMPLEDIR}
 
 #pre-configure:

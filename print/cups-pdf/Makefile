@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/08/11 13:22:38 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/04 19:57:58 rillig Exp $
 
 COMMENT=		PDF backend for CUPS
 
@@ -16,13 +16,13 @@ DEPENDS+=		cups-base-[0-9]*:../../print/cups-base
 USE_TOOLS+=		perl:run
 REPLACE_PERL+=		contrib/cups-pdf-dispatch-0.1/cups-pdf-dispatch
 
-SUBST_CLASSES+=		fix-paths
-SUBST_STAGE.fix-paths=	pre-configure
-SUBST_MESSAGE.fix-paths=Fixing absolute paths
-SUBST_FILES.fix-paths=	src/cups-pdf.h extra/cups-pdf.conf
-SUBST_SED.fix-paths=	-e 's,CPCONFIG "/etc/,CPCONFIG "${PREFIX}/etc/,'
-SUBST_SED.fix-paths+=	-e 's,"/usr/bin/gs","${PREFIX}/bin/gs",'
-SUBST_SED.fix-paths+=	-e 's,\#GhostScript /usr/bin/gs,GhostScript ${PREFIX}/bin/gs,'
+SUBST_CLASSES+=			fix-paths
+SUBST_STAGE.fix-paths=		pre-configure
+SUBST_MESSAGE.fix-paths=	Fixing absolute paths
+SUBST_FILES.fix-paths=		src/cups-pdf.h extra/cups-pdf.conf
+SUBST_SED.fix-paths=		-e 's,CPCONFIG "/etc/,CPCONFIG "${PREFIX}/etc/,'
+SUBST_SED.fix-paths+=		-e 's,"/usr/bin/gs","${PREFIX}/bin/gs",'
+SUBST_SED.fix-paths+=		-e 's,\#GhostScript /usr/bin/gs,GhostScript ${PREFIX}/bin/gs,'
 
 CONF_FILES+=		${PREFIX}/share/examples/cups/cups-pdf.conf \
 			${PKG_SYSCONFDIR}/cups/cups-pdf.conf

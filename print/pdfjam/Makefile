@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/08 13:45:43 asau Exp $
+# $NetBSD: Makefile,v 1.11 2019/11/04 19:58:00 rillig Exp $
 #
 
 DISTNAME=	pdfjam_208
@@ -22,14 +22,14 @@ NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/pdfjam
 
 UTILS=		pdf180 pdf270 pdf90 pdfbook pdfflip pdfjam pdfjam-pocketmod \
-	pdfjam-slides3up pdfjam-slides6up pdfjoin pdfnup pdfpun
+		pdfjam-slides3up pdfjam-slides6up pdfjoin pdfnup pdfpun
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 .for _util in ${UTILS}
-		${INSTALL_SCRIPT} ${WRKSRC}/bin/${_util} ${DESTDIR}${PREFIX}/bin/${_util}
-		${INSTALL_MAN} ${WRKSRC}/man1/${_util}.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${_util}.1
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/${_util} ${DESTDIR}${PREFIX}/bin/${_util}
+	${INSTALL_MAN} ${WRKSRC}/man1/${_util}.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${_util}.1
 .endfor
 .undef ${_util}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2019/08/11 13:22:41 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2019/11/04 19:58:00 rillig Exp $
 
 DISTNAME=	Net-CUPS-0.64
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ USE_LANGUAGES=	c
 
 PERL5_PACKLIST=	auto/Net/CUPS/.packlist
 
-EXTRACT_USING= bsdtar
+EXTRACT_USING=	bsdtar
 
 BUILDLINK_DEPMETHOD.cups-filters= build # image.h
 .include "../../print/cups-filters/buildlink3.mk"

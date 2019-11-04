@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/08/11 13:22:40 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/04 19:58:00 rillig Exp $
 
 DISTNAME=	LaTeX-Encode-0.092.0
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/LaTeX-Encode
 COMMENT=	Encode characters for LaTeX formatting
 LICENSE=	gnu-gpl-v2 # OR artistic
 
-DEPENDS+=		p5-Readonly>=0:../../devel/p5-Readonly
+DEPENDS+=	p5-Readonly>=0:../../devel/p5-Readonly
 # TEST_DEPENDS
 BUILD_DEPENDS+=	p5-Carp-Always-[0-9]*:../../devel/p5-Carp-Always
 
