@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2018/10/09 15:12:38 abs Exp $
+# $NetBSD: Makefile,v 1.29 2019/11/04 21:28:58 rillig Exp $
 #
 
 DISTNAME=	vcdimager-2.0.1
@@ -10,17 +10,17 @@ HOMEPAGE=	http://www.gnu.org/software/vcdimager/
 COMMENT=	Mastering suite for Video CDs
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake pkg-config
-GNU_CONFIGURE=	YES
-USE_LIBTOOL=	YES
-INFO_FILES=	YES
-PKGCONFIG_OVERRIDE+= libvcdinfo.pc.in
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake pkg-config
+GNU_CONFIGURE=		YES
+USE_LIBTOOL=		YES
+INFO_FILES=		YES
+PKGCONFIG_OVERRIDE+=	libvcdinfo.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM+= rm:-Wl,--version-script=libvcdinfo.la.ver
+BUILDLINK_TRANSFORM+=	rm:-Wl,--version-script=libvcdinfo.la.ver
 .endif
 
 BUILDLINK_API_DEPENDS.libcdio+=	libcdio>=0.72

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2019/09/02 13:20:08 adam Exp $
+# $NetBSD: Makefile,v 1.49 2019/11/04 21:28:44 rillig Exp $
 
 DISTNAME=	duplicity-0.7.17
 PKGREVISION=	1
@@ -28,8 +28,8 @@ DEPENDS+=	${PYPKGPREFIX}-swiftclient-[0-9]*:../../www/py-swiftclient
 DEPENDS+=	${PYPKGPREFIX}-gdata-[0-9]*:../../www/py-gdata
 .include "../../net/librsync/buildlink3.mk"
 
-REPLACE_PYTHON+=	bin/duplicity \
-			bin/rdiffdir
+REPLACE_PYTHON+=		bin/duplicity \
+				bin/rdiffdir
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.6.22
 EGG_NAME=			${DISTNAME:S/09/9/}
 

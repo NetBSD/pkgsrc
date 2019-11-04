@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2017/09/07 07:52:43 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/11/04 21:28:40 rillig Exp $
 
 DISTNAME=	9base-6
 PKGREVISION=	2
@@ -25,10 +25,10 @@ PKG_SHELL=		bin/rc
 BUILDLINK_TRANSFORM+=	rm:-static
 .elif ${OPSYS} == "SunOS"
 BUILDLINK_TRANSFORM+=	rm:-static
-CFLAGS+=	-DPLAN9PORT
-LDFLAGS+=	-lsocket -lnsl
+CFLAGS+=		-DPLAN9PORT
+LDFLAGS+=		-lsocket -lnsl
 .else
-LDFLAGS+= -static
+LDFLAGS+=		-static
 .endif
 
 #XXX see http://gnats.netbsd.org/43228

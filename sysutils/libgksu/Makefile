@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2019/07/21 22:24:12 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2019/11/04 21:28:47 rillig Exp $
 
 DISTNAME=	libgksu-2.0.12
 PKGREVISION=	13
@@ -13,8 +13,8 @@ LICENSE=	gnu-lgpl-v2
 GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--disable-gtk-doc
-CONFIGURE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
-MAKE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
+CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
+MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake intltool pkg-config msgfmt

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2018/01/14 10:39:30 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2019/11/04 21:28:52 rillig Exp $
 
 DISTNAME=	skill-4.1.4
 CATEGORIES=	sysutils
@@ -9,7 +9,7 @@ MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.marjum.com/jeffware.html
 COMMENT=	Signal processes given user names, ttys, commands, or pids
 
-BROKEN_ON_PLATFORM+= Interix-*-* # currently no machdep support
+BROKEN_ON_PLATFORM+=	Interix-*-* # currently no machdep support
 
 MAKE_ENV.AIX+=		OSTYPE=aix-3
 MAKE_ENV.Darwin+=	OSTYPE=nbsd-44

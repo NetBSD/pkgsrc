@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2015/05/17 12:12:49 mef Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/04 21:28:51 rillig Exp $
 
 DISTNAME=	rmtrash-1.11
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PhrozenByte/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/PhrozenByte/rmtrash/
-COMMENT=	Put files into OS X' trash when deleting them
-LICENSE=	gnu-gpl-v3
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		https://github.com/PhrozenByte/rmtrash/
+COMMENT=		Put files into OS X' trash when deleting them
+LICENSE=		gnu-gpl-v3
 #' (to pair above single quote for some editors)
 USE_LANGUAGES=		# none
 USE_TOOLS+=		bash:run

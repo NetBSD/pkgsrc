@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/07/21 09:11:43 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/04 21:28:46 rillig Exp $
 
 DISTNAME=	gnuit-4.9.5
 PKGREVISION=	1
@@ -14,10 +14,10 @@ CONFLICTS=	git<=4.9.5nb1
 PREV_PKGPATH=	misc/git
 SUPERSEDES=	git<=4.9.5nb1
 
-GNU_CONFIGURE=	YES
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/gnuit
 CONFIGURE_ARGS+=	--disable-transition
-INFO_FILES=	YES
+INFO_FILES=		YES
 
 post-extract:
 	${CP} ${WRKSRC}/term/gnuitrc.ansi.in ${WRKSRC}/term/gnuitrc.cons25.in

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/04/25 07:33:21 maya Exp $
+# $NetBSD: Makefile,v 1.27 2019/11/04 21:28:53 rillig Exp $
 #
 
 DISTNAME=	tdir-1.71
@@ -11,7 +11,7 @@ COMMENT=	Display directories with files ordered by ending "extension"
 LICENSE=	tdir-license
 
 USE_TOOLS+=		gunzip
-REPLACE_PYTHON=	tdir
+REPLACE_PYTHON=		tdir
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/tdir
 
 do-install:

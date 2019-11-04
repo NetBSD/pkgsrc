@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/08/21 21:09:27 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/04 21:28:41 rillig Exp $
 
 ATTR_VERS=	2.4.47
 PKGNAME=	attr-${ATTR_VERS}
@@ -12,12 +12,12 @@ HOMEPAGE=	http://savannah.nongnu.org/projects/attr
 COMMENT=	Commands for Manipulating Filesystem Extended Attributes
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake msgfmt
-USE_LIBTOOL=	yes
-BUILD_TARGET=	default
-INSTALL_SH_OVERRIDE=no
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		gmake msgfmt
+USE_LIBTOOL=		yes
+BUILD_TARGET=		default
+INSTALL_SH_OVERRIDE=	no
 
 LDFLAGS.Darwin+=	-lintl
 LDFLAGS.NetBSD+=	-lintl

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2019/08/11 13:23:18 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2019/11/04 21:28:58 rillig Exp $
 
 PKGREVISION= 2
 .include "version.mk"
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=webadmin/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.webmin.com/
 COMMENT=	Perl web server and CGI for Unix system administration
-LICENSE=        modified-bsd
+LICENSE=	modified-bsd
 
 DEPENDS+=	p5-Net-SSLeay-[0-9]*:../../security/p5-Net-SSLeay
 

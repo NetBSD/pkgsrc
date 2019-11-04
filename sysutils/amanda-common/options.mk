@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2018/11/23 22:33:13 spz Exp $
+# $NetBSD: options.mk,v 1.15 2019/11/04 21:28:40 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.amanda
 # Common options.
@@ -32,17 +32,17 @@ CONFIGURE_ARGS+=	--without-ipv6
 .endif
 
 .if !empty(PKG_OPTIONS:Mamanda-bsdtar)
-CONFIGURE_ARGS+=        --with-bsdtar=/usr/bin/tar
+CONFIGURE_ARGS+=	--with-bsdtar=/usr/bin/tar
 .else
-CONFIGURE_ARGS+=        --without-bsdtar
+CONFIGURE_ARGS+=	--without-bsdtar
 .endif
 
 .if !empty(PKG_OPTIONS:Mamanda-fqdn)
-CONFIGURE_ARGS+=        --with-fqdn
+CONFIGURE_ARGS+=	--with-fqdn
 .endif
 
 .if !empty(PKG_OPTIONS:Mamanda-ssh)
-CONFIGURE_ARGS+=        --with-ssh-security
+CONFIGURE_ARGS+=	--with-ssh-security
 
 .  if !exists(/usr/bin/ssh)
 DEPENDS+=		openssh-[0-9]*:../../security/openssh

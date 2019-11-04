@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2018/09/23 18:27:03 taca Exp $
+# $NetBSD: Makefile,v 1.38 2019/11/04 21:28:51 rillig Exp $
 
 DISTNAME=		puppet-5.5.2
 CATEGORIES=		sysutils
@@ -53,17 +53,17 @@ CONF_FILES=		${EGDIR}/puppet.conf ${PKG_SYSCONFDIR}/puppet.conf
 ## Since these users are needed only for puppet server,
 ## puppet-server package should be created.
 #SUBST_CLASSES+=		user
-#SUBST_STAGE.user=	post-patch
-#SUBST_FILES.user=	lib/puppet/defaults.rb
+#SUBST_STAGE.user=		post-patch
+#SUBST_FILES.user=		lib/puppet/defaults.rb
 #SUBST_SED.user=		-e "s|@PUPPET_GROUP@|${PUPPET_GROUP}|g"
-#SUBST_SED.user+=	-e "s|@PUPPET_USER@|${PUPPET_USER}|g"
+#SUBST_SED.user+=		-e "s|@PUPPET_USER@|${PUPPET_USER}|g"
 #
 #PKG_GROUPS_VARS=		PUPPET_GROUP
-#PKG_USERS_VARS=			PUPPET_USER
+#PKG_USERS_VARS=		PUPPET_USER
 #
 #PKG_GROUPS=			${PUPPET_GROUP}
 #PKG_USERS=			${PUPPET_USER}:${PUPPET_GROUP}
-#PKG_GECOS.${PUPPET_USER}=       Puppet configuration management pseudo-user
+#PKG_GECOS.${PUPPET_USER}=	Puppet configuration management pseudo-user
 
 PLIST_SUBST+=		EGDIR=${EGDIR}
 PLIST_VARS+=		sunos

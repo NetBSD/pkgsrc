@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.2 2015/04/07 08:43:35 fhajny Exp $
+# $NetBSD: options.mk,v 1.3 2019/11/04 21:28:42 rillig Exp $
 #
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.cfengine3
+PKG_OPTIONS_VAR=		PKG_OPTIONS.cfengine3
 PKG_OPTIONS_REQUIRED_GROUPS=	db
-PKG_OPTIONS_GROUP.db=	qdbm tokyocabinet lmdb
-PKG_SUPPORTED_OPTIONS=	qdbm tokyocabinet mysql pgsql
-PKG_SUGGESTED_OPTIONS=	tokyocabinet
+PKG_OPTIONS_GROUP.db=		qdbm tokyocabinet lmdb
+PKG_SUPPORTED_OPTIONS=		qdbm tokyocabinet mysql pgsql
+PKG_SUGGESTED_OPTIONS=		tokyocabinet
 
 .include "../../mk/bsd.options.mk"
 

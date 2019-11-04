@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/02/27 06:23:39 martin Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/04 21:28:41 rillig Exp $
 
 VERSION=	2.0.20190222	# v2.0 is too old
 GITHUB_PROJECT=	arm-trusted-firmware
@@ -36,6 +36,6 @@ do-install:
 
 # XXX kludge. pkgsrc passes down run path flags in LDFLAGS assuming
 # gcc is used for linking, but here we call the linker directly.
-COMPILER_RPATH_FLAG=-R
+COMPILER_RPATH_FLAG=	-R
 
 .include "../../mk/bsd.pkg.mk"

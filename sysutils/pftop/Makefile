@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2017/09/03 08:37:00 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/04 21:28:50 rillig Exp $
 
 DISTNAME=	pftop-0.7
 PKGREVISION=	2
@@ -11,8 +11,8 @@ COMMENT=	Utility for real-time display of statistics for PF
 
 NO_CONFIGURE=	yes
 
-MAKE_ENV+=	OSLEVEL=${PF_VERSION:S/.//}
-CFLAGS+=	-I${PREFIX}/include
+MAKE_ENV+=		OSLEVEL=${PF_VERSION:S/.//}
+CFLAGS+=		-I${PREFIX}/include
 OSVERSION_SPECIFIC=	yes
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin

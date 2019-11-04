@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2019/11/04 17:47:31 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2019/11/04 21:28:48 rillig Exp $
 #
 
 # Note -- version number also in the do-install rule
-MAJVER=5
-MINVER=01
+MAJVER=	5
+MINVER=	01
 
 DISTNAME=		memtest86+-${MAJVER}.${MINVER}
 PKGNAME=		memtestplus-${MAJVER}.${MINVER}

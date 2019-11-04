@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/04/25 07:33:18 maya Exp $
+# $NetBSD: Makefile,v 1.7 2019/11/04 21:28:44 rillig Exp $
 
 DISTNAME=	dupeguru-src-4.0.3
 PKGNAME=	${DISTNAME:S/-src//}
@@ -21,13 +21,13 @@ DEPENDS+=	${PYPKGPREFIX}-Send2Trash-[0-9]*:../../sysutils/py-Send2Trash
 
 EXTRACT_USING=	bsdtar
 
-WRKSRC=		${WRKDIR}
-USE_LANGUAGES=	c
-USE_TOOLS=	gmake pax
+WRKSRC=			${WRKDIR}
+USE_LANGUAGES=		c
+USE_TOOLS=		gmake pax
 #MAKE_JOBS_SAFE=	no
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-REPLACE_PYTHON+=	qt/run_template.py
+REPLACE_PYTHON+=		qt/run_template.py
 
 INSTALLATION_DIRS=	bin share/applications share/dupeguru
 

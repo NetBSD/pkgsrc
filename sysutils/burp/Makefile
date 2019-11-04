@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/09/01 16:18:07 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/11/04 21:28:42 rillig Exp $
 
 DISTNAME=	burp-1.4.40
 PKGREVISION=	2
@@ -25,9 +25,9 @@ SUBST_FILES.dirs=	configs/server/burp.conf \
 			configs/CA/CA.cnf \
 			configs/CA/burp_ca \
 			manpages/*.8
-SUBST_SED.dirs=	-e 's,@LIBEXECDIR@,${PREFIX}/libexec/burp,' \
-		-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},' \
-		-e 's,@SBINDIR@,${PREFIX}/sbin,'
+SUBST_SED.dirs=		-e 's,@LIBEXECDIR@,${PREFIX}/libexec/burp,' \
+			-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},' \
+			-e 's,@SBINDIR@,${PREFIX}/sbin,'
 
 REPLACE_SH+=	configs/certs/CA/burp_ca \
 		configs/server/notify_script \

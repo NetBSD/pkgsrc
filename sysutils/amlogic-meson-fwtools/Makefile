@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/06/17 17:08:26 gdt Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/04 21:28:40 rillig Exp $
 
 # Version isn't super-meaningful; we're grabbing a collection of non-changing
 # tools from a variety of locations.
@@ -13,7 +13,7 @@ COMMENT=	Trusted Firmware packaging tools for the Amlogic Meson family of SoCs
 
 LICENSE=	amlogic-meson-fwtools-license
 
-RESTRICTED=	Redistribution not permitted - see licenses/amlogic-meson-fwtools
+RESTRICTED=		Redistribution not permitted - see licenses/amlogic-meson-fwtools
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
@@ -32,7 +32,7 @@ NO_BUILD=	yes
 #
 # Hardkernel-supplied firmware tools
 #
-ODROID=                 odroidc2-v2015.01
+ODROID=			odroidc2-v2015.01
 
 xFIPCREATE=		fip_create
 FIPCREATE=		${ODROID}-${xFIPCREATE}
@@ -40,10 +40,10 @@ DISTFILES+=		${FIPCREATE}
 SITES.${FIPCREATE}=	${MASTER_SITE_GITHUB:@url@ \
 	-${url}hardkernel/u-boot/raw/${ODROID}/fip/${xFIPCREATE} @}
 
-xAML_ENCRYPT_GXB=	aml_encrypt_gxb
-AML_ENCRYPT_GXB=	${ODROID}-${xAML_ENCRYPT_GXB}
-DISTFILES+=		${AML_ENCRYPT_GXB}
-SITES.${AML_ENCRYPT_GXB}=${MASTER_SITE_GITHUB:@url@ \
+xAML_ENCRYPT_GXB=		aml_encrypt_gxb
+AML_ENCRYPT_GXB=		${ODROID}-${xAML_ENCRYPT_GXB}
+DISTFILES+=			${AML_ENCRYPT_GXB}
+SITES.${AML_ENCRYPT_GXB}=	${MASTER_SITE_GITHUB:@url@ \
 	-${url}hardkernel/u-boot/raw/${ODROID}/fip/gxb/${xAML_ENCRYPT_GXB} @}
 
 #
@@ -51,10 +51,10 @@ SITES.${AML_ENCRYPT_GXB}=${MASTER_SITE_GITHUB:@url@ \
 #
 LIBRETECH=		libretech-cc
 
-xAML_ENCRYPT_GXL=	aml_encrypt_gxl
-AML_ENCRYPT_GXL=	${LIBRETECH}-${xAML_ENCRYPT_GXL}
-DISTFILES+=		${AML_ENCRYPT_GXL}
-SITES.${AML_ENCRYPT_GXL}=${MASTER_SITE_GITHUB:@url@ \
+xAML_ENCRYPT_GXL=		aml_encrypt_gxl
+AML_ENCRYPT_GXL=		${LIBRETECH}-${xAML_ENCRYPT_GXL}
+DISTFILES+=			${AML_ENCRYPT_GXL}
+SITES.${AML_ENCRYPT_GXL}=	${MASTER_SITE_GITHUB:@url@ \
 	-${url}BayLibre/u-boot/raw/${LIBRETECH}/fip/gxl/${xAML_ENCRYPT_GXL} @}
 
 INSTALLATION_DIRS+=	bin
