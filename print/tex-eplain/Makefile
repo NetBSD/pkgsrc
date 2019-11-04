@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/08/05 10:32:45 markd Exp $
+# $NetBSD: Makefile,v 1.7 2019/11/04 19:58:03 rillig Exp $
 
 DISTNAME=	eplain
 PKGNAME=	tex-${DISTNAME}-3.9
@@ -16,7 +16,7 @@ DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
 
 INSTALLATION_DIRS+=	bin
 
-TEX_FORMATS+=   "eplain pdftex language.dat -translate-file=cp227.tcx *eplain.ini\\n" 
+TEX_FORMATS+=	"eplain pdftex language.dat -translate-file=cp227.tcx *eplain.ini\\n" 
 
 .include "../../print/texlive/package.mk"
 
