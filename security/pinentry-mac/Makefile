@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2017/05/31 21:30:15 jym Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/04 21:12:58 rillig Exp $
 
-DISTNAME=	pinentry-mac-${PINENTRY_VERSION}
-MASTER_SITES=	${MASTER_SITE_GITHUB:=GPGTools/}
-PINENTRY_VERSION=0.9.4
-GITHUB_TAG=	v${PKGVERSION_NOREV}
-EXTRACT_SUFX=	.zip
-PKGREVISION=	1
+DISTNAME=		pinentry-mac-${PINENTRY_VERSION}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=GPGTools/}
+PINENTRY_VERSION=	0.9.4
+GITHUB_TAG=		v${PKGVERSION_NOREV}
+EXTRACT_SUFX=		.zip
+PKGREVISION=		1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/GPGTools/pinentry-mac/
@@ -13,8 +13,8 @@ COMMENT=	Application for entering PINs or Passphrases under Mac OS
 LICENSE=	gnu-gpl-v3
 CATEGORIES=	security
 
-ONLY_FOR_PLATFORM=Darwin-*-*
-USE_TOOLS=	pax
+ONLY_FOR_PLATFORM=	Darwin-*-*
+USE_TOOLS=		pax
 
 PINENTRY_APP_DIR=	${PREFIX}/libexec/${PINENTRY_APP_NAME}
 PINENTRY_APP_NAME=	pinentry-mac.app
@@ -22,11 +22,11 @@ INSTALLATION_DIRS=	bin
 
 FILES_SUBST+=	PINENTRY_APP_DIR=${PINENTRY_APP_DIR:Q}
 
-SUBST_CLASSES+=         pinentry-mac-sh
-SUBST_STAGE.pinentry-mac-sh=   pre-configure
-SUBST_FILES.pinentry-mac-sh+=  ${WRKDIR}/pinentry-mac.sh
-SUBST_VARS.pinentry-mac-sh+=   PINENTRY_APP_DIR
-SUBST_MESSAGE.pinentry-mac-sh= Set path to the pinentry-mac .app directory.
+SUBST_CLASSES+=			pinentry-mac-sh
+SUBST_STAGE.pinentry-mac-sh=	pre-configure
+SUBST_FILES.pinentry-mac-sh+=	${WRKDIR}/pinentry-mac.sh
+SUBST_VARS.pinentry-mac-sh+=	PINENTRY_APP_DIR
+SUBST_MESSAGE.pinentry-mac-sh=	Set path to the pinentry-mac .app directory.
 
 post-extract:
 	${CP} ${FILESDIR}/pinentry-mac.sh ${WRKDIR}

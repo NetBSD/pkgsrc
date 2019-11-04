@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/08/11 13:23:00 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/04 21:13:01 rillig Exp $
 #
 
 PKGREVISION=		2
@@ -9,7 +9,7 @@ CATEGORIES=		security net
 
 DISTNAME=		racoon2
 PKGNAME=		racoon2-20180701
-MASTER_SITES= 		${MASTER_SITE_GITHUB:=zoulasc/}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=zoulasc/}
 GITHUB_PROJECT=		racoon2
 GITHUB_TAG=		b2a193fc9875d1fb89c0a51690745379bc135fcf
 

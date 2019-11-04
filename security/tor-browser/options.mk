@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2019/06/14 17:22:21 nia Exp $
+# $NetBSD: options.mk,v 1.5 2019/11/04 21:13:03 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tor-browser
 PKG_SUPPORTED_OPTIONS+=	alsa debug debug-info mozilla-jemalloc pulseaudio
@@ -29,12 +29,12 @@ CONFIGURE_ARGS+=	--disable-jemalloc
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mgcc)
-.if ${CC_VERSION:S/gcc-//:S/.//g} >= 480
+.  if ${CC_VERSION:S/gcc-//:S/.//g} >= 480
 # Modern gcc does not run any "tracking" passes when compiling with -O0,
 # which makes the generated debug info mostly useless. So explicitly
 # request them.
 O0TRACKING=-fvar-tracking-assignments -fvar-tracking
-.endif
+.  endif
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
@@ -42,11 +42,11 @@ CONFIGURE_ARGS+=	--enable-debug="-g -O0 ${O0TRACKING}" --enable-debug-symbols --
 CONFIGURE_ARGS+=	--disable-install-strip
 PLIST.debug=		yes
 .else
-.if !empty(PKG_OPTIONS:Mdebug-info)
+.  if !empty(PKG_OPTIONS:Mdebug-info)
 CONFIGURE_ARGS+=	--enable-debug-symbols
-.else
+.  else
 CONFIGURE_ARGS+=	--disable-debug-symbols
-.endif
+.  endif
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--enable-optimize=-O2
 CONFIGURE_ARGS+=	--enable-install-strip

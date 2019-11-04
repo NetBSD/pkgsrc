@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2018/12/09 21:05:35 adam Exp $
+# $NetBSD: Makefile,v 1.76 2019/11/04 21:12:52 rillig Exp $
 
 COMMENT=	Simple Authentication and Security Layer
 
@@ -58,7 +58,7 @@ PKG_USERS_VARS+=	CYRUS_USER
 
 PKG_GROUPS=		${CYRUS_GROUP}
 PKG_USERS=		${CYRUS_USER}:${CYRUS_GROUP}
-PKG_SHELL.${CYRUS_USER}=${SH}
+PKG_SHELL.${CYRUS_USER}= ${SH}
 
 MESSAGE_SUBST+=		PLUGINDIR=${PLUGINDIR:Q}
 
