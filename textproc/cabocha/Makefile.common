@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2016/09/09 02:13:59 taca Exp $
+# $NetBSD: Makefile.common,v 1.12 2019/11/04 21:43:33 rillig Exp $
 # used by textproc/cabocha/Makefile
 # used by textproc/p5-cabocha/Makefile
 # used by textproc/py-cabocha/Makefile
@@ -21,6 +21,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://taku910.github.io/cabocha/
 LICENSE=	gnu-lgpl-v2.1 OR modified-bsd
 
-RESTRICTED=	Included model is not re-distributed without prior permission.
+RESTRICTED=		Included model is not re-distributed without prior permission.
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/08/11 13:23:57 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/04 21:43:44 rillig Exp $
 
 DISTNAME=	XML-TokeParser-0.05
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Simplified interface to XML::Parser
 
 DEPENDS+=	p5-XML-Parser>=2.44:../../textproc/p5-XML-Parser
 
-PERL5_PACKLIST= auto/XML/TokeParser/.packlist
+PERL5_PACKLIST=	auto/XML/TokeParser/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
