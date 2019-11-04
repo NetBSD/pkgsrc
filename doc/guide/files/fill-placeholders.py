@@ -1,5 +1,5 @@
 #! python
-# $NetBSD: fill-placeholders.py,v 1.1 2019/05/05 18:36:05 rillig Exp $
+# $NetBSD: fill-placeholders.py,v 1.2 2019/11/04 18:58:30 rillig Exp $
 
 """
 Fills in some sections of data that are determined directly from the
@@ -10,7 +10,7 @@ import filecmp
 import os
 import re
 import sys
-from typing import List, Match
+from typing import Callable, List, Match, Set
 from xml.sax.saxutils import escape as to_xml
 
 pkgsrcdir = os.environ['PKGSRCDIR']
@@ -38,7 +38,7 @@ def master_sites() -> str:
     sites = []
 
     for line in read_lines(f'{pkgsrcdir}/mk/fetch/sites.mk'):
-        m = re.match(r'^(MAS\w+)', line)
+        m = re.match(r'^(MASTER_SITE_\w+)', line)
         if m:
             sites.append(m[1])
 
@@ -50,7 +50,7 @@ def master_sites() -> str:
     return '\n'.join(out)
 
 
-def process(filename: str, placeholders: set):
+def process(filename: str, placeholders: Set[Callable[[], str]]):
     tmpl_filename = f'{filename}.tmpl'
     tmp_filename = f'{filename}.tmp'
     in_filename = tmpl_filename if os.path.isfile(tmpl_filename) else filename
