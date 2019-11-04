@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2018/03/12 11:17:33 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2019/11/04 21:28:45 rillig Exp $
 
 DISTNAME=	FSViewer.app-0.2.5
 PKGNAME=	FSViewer-0.2.5
@@ -6,8 +6,8 @@ PKGREVISION=	19
 CATEGORIES=	sysutils x11 windowmaker
 #MASTER_SITES=	#http://www.bayernline.de/~gscholz/linux/fsviewer/
 
-#PATCH_SITES=	#http://www.bayernline.de/~gscholz/linux/fsviewer/
-PATCHFILES=	FSViewer.app-0.2.5-WM-0.81.0.patch.gz
+#PATCH_SITES=		#http://www.bayernline.de/~gscholz/linux/fsviewer/
+PATCHFILES=		FSViewer.app-0.2.5-WM-0.81.0.patch.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	johnam@mail.kemper.org

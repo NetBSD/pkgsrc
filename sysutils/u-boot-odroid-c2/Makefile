@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2019/07/26 10:32:32 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2019/11/04 21:28:56 rillig Exp $
 
 UBOOT_TARGET=		odroid-c2
 UBOOT_CONFIG=		odroid-c2_defconfig
 UBOOT_BIN=		u-boot.gxbb
 
-UBOOT_INSTALLBOOT_PLIST=installboot.plist
+UBOOT_INSTALLBOOT_PLIST=	installboot.plist
 
 PKGREVISION=		3
 
