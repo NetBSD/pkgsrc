@@ -456,6 +456,7 @@ libmtp			Enable MTP via libmtp support.
 libnotify		Enable libnotify support.
 libofa			Enable Open Fingerprint Architecture library support.
 libofx			Enable OFX support.
+libpcap			Enable libpcap support.
 libsmi			Use libsmi for SMI MIB support.
 libsoup			Use libsoup for SOUP support.
 libspiff		Use libspiff for XML shareable playlist support.
