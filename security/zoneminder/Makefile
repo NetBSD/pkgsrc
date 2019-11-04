@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2019/08/11 13:23:02 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2019/11/04 21:13:04 rillig Exp $
 
 # See wip/zoneminder for a draft update to 1.29.0.
 PKGNAME=	${DISTNAME:S/ZoneMinder-/zoneminder-/}
@@ -17,7 +17,7 @@ COMMENT=	Video camera security and surveillance solution
 LICENSE=	gnu-gpl-v2
 
 # NetBSD tar: Invalid header, starting valid header search.
-EXTRACT_USING=  gtar
+EXTRACT_USING=	gtar
 
 DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 
@@ -138,7 +138,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql-[0-9]*:../../databases/php-pdo_mysql
 
 # \todo Somehow, this permission setup still fails.
 # This directory contains state, so use OWN_DIRS instead of MAKE_DIRS.
-ZM_CACHE=	${VARBASE}/cache/zoneminder
+ZM_CACHE=		${VARBASE}/cache/zoneminder
 OWN_DIRS_PERMS+=	${ZM_CACHE} ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 755
 OWN_DIRS_PERMS+=	${ZM_CACHE}/temp ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 OWN_DIRS_PERMS+=	${ZM_CACHE}/images ${REAL_ROOT_USER} ${APACHE_GROUP} 775
@@ -197,7 +197,7 @@ SUBST_CLASSES+=			script-path
 SUBST_MESSAGE.script-path=	Adjusting paths in scripts.
 SUBST_STAGE.script-path=	pre-configure
 SUBST_FILES.script-path=	${REPLACE_PERL} ${EXTRA_PERL}
-SUBST_SED.script-path=	-e "s|^\\([\$$]ENV{PATH} *= *'\\).*';\$$|\\1${PREFIX}/bin:/bin:/usr/bin';|g"
+SUBST_SED.script-path=		-e "s|^\\([\$$]ENV{PATH} *= *'\\).*';\$$|\\1${PREFIX}/bin:/bin:/usr/bin';|g"
 
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	pre-configure

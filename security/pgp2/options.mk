@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2005/12/01 20:18:29 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2019/11/04 21:12:58 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pgp2
 PKG_SUPPORTED_OPTIONS=	rsaref
@@ -27,11 +27,11 @@ RSAOBJS=	rsaglue1.o
 FIX_RPATH+=	RSALIBS
 
 .if ${MACHINE_ARCH} == "m68k"
-.if !empty(PKG_OPTIONS:Mm68060-optimized)
+.  if !empty(PKG_OPTIONS:Mm68060-optimized)
 OBJS_EXT=
 ASMFLAG=	-m68060 -DPORTABLE -DMPORTABLE
-.else
+.  else
 OBJS_EXT=	mc68020.o
 ASMFLAG=
-.endif
+.  endif
 .endif

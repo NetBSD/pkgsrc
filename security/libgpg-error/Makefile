@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2019/10/08 06:36:13 triaxx Exp $
+# $NetBSD: Makefile,v 1.74 2019/11/04 21:12:54 rillig Exp $
 
 DISTNAME=	libgpg-error-1.36
 PKGREVISION=	1
@@ -28,7 +28,7 @@ CONFIGURE_ENV+=		CC_FOR_BUILD=${CC:Q}\ ${CFLAGS:M*:Q}
 .endif
 
 .if !empty(MACHINE_PLATFORM:MDarwin-8.*-powerpc)
-CFLAGS+= 	-D__DARWIN_UNIX03
+CFLAGS+=	-D__DARWIN_UNIX03
 .endif
 
 .if !empty(MACHINE_PLATFORM:MSunOS-5.10-*)
