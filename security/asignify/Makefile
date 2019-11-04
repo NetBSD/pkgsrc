@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/07/30 22:32:21 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/04 21:12:51 rillig Exp $
 
 DISTNAME=	asignify-20150220
 CATEGORIES=	security
@@ -16,6 +16,6 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	automake
 
 pre-configure:
-		cd ${WRKSRC}; sh ./autogen.sh
+	cd ${WRKSRC}; sh ./autogen.sh
 
 .include "../../mk/bsd.pkg.mk"

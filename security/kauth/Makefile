@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/09/18 14:17:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2019/11/04 21:12:54 rillig Exp $
 
 DISTNAME=	kauth-${KF5VER}
 PKGREVISION=	1
@@ -9,7 +9,7 @@ COMMENT=	Abstraction to system policy and authentication features
 LICENSE=	gnu-lgpl-v2.1
 
 CONF_FILES+=	${PREFIX}/share/examples/kauth/org.kde.kf5auth.conf \
-                ${PKG_SYSCONFDIR}/dbus-1/system.d/org.kde.kf5auth.conf
+		${PKG_SYSCONFDIR}/dbus-1/system.d/org.kde.kf5auth.conf
 
 .include "../../meta-pkgs/kde/kf5.mk"
 

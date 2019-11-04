@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/09/02 13:19:54 adam Exp $
+# $NetBSD: Makefile,v 1.24 2019/11/04 21:12:59 rillig Exp $
 
 DISTNAME=	prelude-correlator-0.9.0-beta8
 PKGNAME=	prelude-correlator-${DISTNAME:S/-beta/beta/:C/.*-//}
@@ -12,14 +12,14 @@ COMMENT=	Intrusion event correlation engine
 
 BUILD_DEFS+=		VARBASE
 
-RCD_SCRIPTS=		preludecorrelator
+RCD_SCRIPTS=			preludecorrelator
 PRELUDE_CORRELATOR_PID_DIR=	${VARBASE}/run/prelude-correlator
-PRELUDE_USER?=		_prelude
-PRELUDE_GROUP?=		_prelude
-PRELUDE_HOME?=		${VARBASE}/db/prelude-correlator
-INSTALLATION_DIRS=	sbin
-OWN_DIRS=		${PKG_SYSCONFDIR}/prelude-correlator
-EGDIR=			${PREFIX}/share/examples
+PRELUDE_USER?=			_prelude
+PRELUDE_GROUP?=			_prelude
+PRELUDE_HOME?=			${VARBASE}/db/prelude-correlator
+INSTALLATION_DIRS=		sbin
+OWN_DIRS=			${PKG_SYSCONFDIR}/prelude-correlator
+EGDIR=				${PREFIX}/share/examples
 
 PKG_GROUPS_VARS+=	PRELUDE_GROUP
 PKG_USERS_VARS+=	PRELUDE_USER

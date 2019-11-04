@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/07/20 22:46:49 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/04 21:12:59 rillig Exp $
 #
 
 DISTNAME=	prelude-pflogger-0.9.0-rc2
@@ -48,9 +48,9 @@ SUBST_FILES.code=	run-prelude-pflogger.c
 SUBST_VARS.code=	PREFIX
 SUBST_VARS.code+=	PRELUDE_USER
 
-SUBST_CLASSES+=         make
-SUBST_STAGE.make=       pre-configure
-SUBST_FILES.make=       Makefile.am
+SUBST_CLASSES+=		make
+SUBST_STAGE.make=	pre-configure
+SUBST_FILES.make=	Makefile.am
 SUBST_VARS.make=	EGDIR
 
 RCD_SCRIPTS=		pflogger

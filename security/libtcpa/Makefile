@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/12/15 16:53:02 schmonz Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/04 21:12:55 rillig Exp $
 #
 
 DISTNAME=		tpm-1.1b
@@ -14,7 +14,7 @@ COMMENT=		TCPA libraries and test programs from IBM
 
 WRKSRC=			${WRKDIR}/TPM
 
-SITES.tcpa_man_20031210.tgz= http://www.citi.umich.edu/u/rwash/projects/trusted/
+SITES.tcpa_man_20031210.tgz=	http://www.citi.umich.edu/u/rwash/projects/trusted/
 
 BUILD_DIRS=		libtcpa examples
 INSTALLATION_DIRS=	bin lib ${PKGMANDIR}/man3 share/doc/${PKGBASE}

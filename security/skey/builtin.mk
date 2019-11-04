@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.5 2013/11/23 12:10:13 obache Exp $
+# $NetBSD: builtin.mk,v 1.6 2019/11/04 21:13:02 rillig Exp $
 
 BUILTIN_PKG:=	skey
 
@@ -17,7 +17,7 @@ IS_BUILTIN.skey=	no
 IS_BUILTIN.skey=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.skey
+MAKEVARS+=		IS_BUILTIN.skey
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -31,7 +31,7 @@ MAKEVARS+=	IS_BUILTIN.skey
 # XXX
 BUILTIN_PKG.skey=	skey-1.1.5
 .endif
-MAKEVARS+=	BUILTIN_PKG.skey
+MAKEVARS+=		BUILTIN_PKG.skey
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -58,4 +58,4 @@ USE_BUILTIN.skey!=							\
 .    endif
 .  endif  # PREFER.skey
 .endif
-MAKEVARS+=	USE_BUILTIN.skey
+MAKEVARS+=		USE_BUILTIN.skey

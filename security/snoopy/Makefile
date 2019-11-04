@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/09/09 09:28:40 nia Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/04 21:13:02 rillig Exp $
 
 DISTNAME=	snoopy-2.1.0
 CATEGORIES=	security
@@ -21,7 +21,7 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 CPPFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
 
 pre-configure:
-		set -e; cd ${WRKSRC}; \
-		aclocal; autoheader; automake -a --foreign -i; autoconf
+	set -e; cd ${WRKSRC}; \
+	aclocal; autoheader; automake -a --foreign -i; autoconf
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2019/04/25 07:33:16 maya Exp $
+# $NetBSD: Makefile,v 1.31 2019/11/04 21:12:57 rillig Exp $
 
 DISTNAME=	pcsc-lite-1.8.24
 PKGREVISION=	1
@@ -23,8 +23,8 @@ USE_LANGUAGES=	c c++
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=    spy
-#REPLACE_PYTHON=		src/spy/pcsc-spy
+PLIST_VARS+=		spy
+#REPLACE_PYTHON=	src/spy/pcsc-spy
 #.include "../../lang/python/application.mk"
 
 CONFIGURE_ARGS+=	--sharedstatedir=${VARBASE:Q}

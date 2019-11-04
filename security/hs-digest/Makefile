@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/08/18 21:18:48 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/04 21:12:53 rillig Exp $
 
 DISTNAME=	digest-0.0.1.2
-CATEGORIES= security
+CATEGORIES=	security
 
-MAINTAINER= zecrazytux@zecrazytux.net
+MAINTAINER=	zecrazytux@zecrazytux.net
 COMMENT=	Various cryptographic hashes for bytestrings; CRC32 and Adler32
 LICENSE=	modified-bsd
 

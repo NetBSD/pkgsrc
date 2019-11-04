@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.1 2012/06/16 22:00:23 dholland Exp $
+# $NetBSD: options.mk,v 1.2 2019/11/04 21:12:52 rillig Exp $
 
-PKG_OPTIONS_VAR=PKG_OPTIONS.gnome-keyring-sharp
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-keyring-sharp
 
 PKG_SUPPORTED_OPTIONS=	ndesk-dbus
 PKG_SUGGESTED_OPTIONS=	ndesk-dbus

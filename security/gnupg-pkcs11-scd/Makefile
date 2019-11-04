@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/07/20 22:46:47 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/04 21:12:52 rillig Exp $
 
 VERSION=	0.7.0
 DISTNAME=	gnupg-pkcs11-scd-${VERSION}
@@ -12,8 +12,8 @@ HOMEPAGE=	http://gnupg-pkcs11.sourceforge.net/
 COMMENT=	OpenSC smart card support for GnuPG
 LICENSE=	modified-bsd
 
-GNU_CONFIGURE=	yes
-USE_TOOLS+=     pkg-config
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		pkg-config
 LIBS.OperatingSystem+=	-ldl
 CONFIGURE_ARGS+=	--with-libgpg-error-prefix=${PREFIX}
 CONFIGURE_ARGS+=	--with-libassuan-prefix=${PREFIX}

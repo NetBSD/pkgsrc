@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/09/02 13:19:55 adam Exp $
+# $NetBSD: Makefile,v 1.33 2019/11/04 21:12:55 rillig Exp $
 
 DISTNAME=		Mixminion-0.0.8alpha3
 PKGNAME=		${DISTNAME:S/M/m/}
@@ -12,7 +12,7 @@ COMMENT=		Anonymous Type 3 remailer
 LICENSE=		mit
 
 REPLACE_PYTHON=	lib/mixminion/Main.py
-PYTHON_VERSIONS_ACCEPTED=   27 # not yet ported as of 0.0.8alpha3
+PYTHON_VERSIONS_ACCEPTED= 27 # not yet ported as of 0.0.8alpha3
 
 TEST_TARGET=		test
 
