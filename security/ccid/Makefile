@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/09/17 23:09:42 perseant Exp $
+# $NetBSD: Makefile,v 1.30 2019/11/04 21:12:52 rillig Exp $
 #
 
 DISTNAME=	ccid-1.4.27
@@ -30,8 +30,8 @@ USE_LANGUAGES=	c c++
 # PTHREAD vars.  Not yet reported upstream.
 PTHREAD_AUTO_VARS=	yes
 
-CONFIGURE_ARGS+=        --sharedstatedir=${VARBASE:Q}
-CONFIGURE_ARGS+=        --sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sharedstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 REPLACE_PERL=		src/convert_version.pl src/create_Info_plist.pl
 
