@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/12/02 07:06:20 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2019/11/04 21:14:06 rillig Exp $
 #
 # Note to packagers:
 # packages installing additional completion files should drop
@@ -9,7 +9,7 @@ DISTNAME=	bash-completion-2.8
 PKGREVISION=	1
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=scop/}
-GITHUB_RELEASE= ${PKGVERSION_NOREV}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
