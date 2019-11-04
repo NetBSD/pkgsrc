@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.2 2015/09/30 08:25:37 tnn Exp $
+# $NetBSD: options.mk,v 1.3 2019/11/04 19:17:11 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.suck
+PKG_OPTIONS_VAR=		PKG_OPTIONS.suck
 PKG_OPTIONS_OPTIONAL_GROUPS+=	socks
 PKG_OPTIONS_GROUP.socks=	socks4 dante
 
