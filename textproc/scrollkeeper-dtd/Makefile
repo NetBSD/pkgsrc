@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/11/04 21:43:47 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/04 21:45:55 rillig Exp $
 #
 
 DISTNAME=	scrollkeeper-omf.dtd
@@ -16,7 +16,7 @@ USE_LANGUAGES=		# none
 NO_BUILD=		yes
 INSTALLATION_DIRS=	share/xml
 XML_ENTRIES=		public "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" \
-		${PREFIX}/share/xml/scrollkeeper-omf.dtd
+			${PREFIX}/share/xml/scrollkeeper-omf.dtd
 
 do-install:
 	${INSTALL_DATA} ${DISTDIR}/scrollkeeper-omf.dtd \
