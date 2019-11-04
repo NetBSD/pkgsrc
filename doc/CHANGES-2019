@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4751 2019/11/04 15:49:04 taca Exp $
+$NetBSD: CHANGES-2019,v 1.4752 2019/11/04 17:33:34 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7547,3 +7547,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated misc/ruby-sprockets to 4.0.0 [taca 2019-11-04]
 	Updated net/ruby-net-telnet to 0.2.0 [taca 2019-11-04]
 	Updated print/ruby-pdf-reader to 2.2.1 [taca 2019-11-04]
+	Updated geography/gdal-lib to 2.4.3 [gdt 2019-11-04]
+	Updated geography/py-gdal to 2.4.3 [gdt 2019-11-04]
