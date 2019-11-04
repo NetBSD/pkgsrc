@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2017/05/20 11:50:09 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2019/11/04 21:50:15 rillig Exp $
 
 DISTNAME=		9wm-1.4.0
 PKGREVISION=		1
@@ -14,7 +14,7 @@ LICENSE=		mit
 
 USE_TOOLS=		gmake
 
-INSTALLATION_DIRS=      bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/9wm ${DESTDIR}${PREFIX}/bin

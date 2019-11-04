@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2019/07/21 22:25:52 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2019/11/04 21:50:16 rillig Exp $
 #
 
 DISTNAME=	OroboROX-0.9.8
@@ -23,7 +23,7 @@ USE_TOOLS+=		autoconf pax pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-xft --with-platform=${PLATFORM:Q}
 
-REPLACE_PYTHON=	Configure/OroboScheme/AppRun
+REPLACE_PYTHON=		Configure/OroboScheme/AppRun
 REPLACE_PYTHON+=	Configure/OroboScheme/AppInfo.py
 REPLACE_PYTHON+=	Configure/OroboScheme/Schemer.py
 REPLACE_PYTHON+=	Configure/Windows/AppRun
