@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/08/11 13:24:46 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/04 22:10:05 rillig Exp $
 
 DISTNAME=	HTTP-Server-EV-0.69
 PKGNAME=	p5-${DISTNAME}
@@ -21,7 +21,7 @@ BUILD_DEPENDS+=	p5-AnyEvent-HTTP-[0-9]*:../../www/p5-AnyEvent-HTTP
 BUILD_DEPENDS+=	p5-HTTP-Message-[0-9]*:../../www/p5-HTTP-Message
 
 EXTRACT_USING=	bsdtar
-PERL5_PACKLIST=		auto/HTTP/Server/EV/.packlist
+PERL5_PACKLIST=	auto/HTTP/Server/EV/.packlist
 
 .include "../../devel/p5-EV/buildlink3.mk"
 .include "../../lang/perl5/module.mk"

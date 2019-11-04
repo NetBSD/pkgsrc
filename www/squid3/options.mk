@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.24 2017/09/05 08:09:08 dholland Exp $
+# $NetBSD: options.mk,v 1.25 2019/11/04 22:10:15 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
-PKG_SUPPORTED_OPTIONS=	ecap inet6 snmp ssl squid-backend-aufs \
-		squid-backend-diskd squid-backend-rock squid-backend-ufs \
-		squid-carp squid-unlinkd squid-kerberos-helper \
-		squid-ldap-helper squid-pam-helper
+PKG_OPTIONS_VAR=		PKG_OPTIONS.squid
+PKG_SUPPORTED_OPTIONS=		ecap inet6 snmp ssl squid-backend-aufs \
+				squid-backend-diskd squid-backend-rock squid-backend-ufs \
+				squid-carp squid-unlinkd squid-kerberos-helper \
+				squid-ldap-helper squid-pam-helper
 PKG_OPTIONS_LEGACY_OPTS+=	diskd:squid-backend-diskd \
 	null:squid-backend-null ufs:squid-backend-ufs \
 	linux-netfilter:squid-netfilter ipf-transparent:squid-ipf \
@@ -20,7 +20,7 @@ PLIST_VARS+=	eacl_file_userip eacl_LDAP_group eacl_unix_group
 PLIST_VARS+=	ssl
 
 PKG_SUGGESTED_OPTIONS=	inet6 snmp ssl squid-backend-diskd squid-carp \
-		squid-pam-helper squid-unlinkd
+			squid-pam-helper squid-unlinkd
 
 .include "../../mk/bsd.prefs.mk"
 

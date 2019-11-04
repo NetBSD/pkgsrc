@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2019/08/11 13:24:55 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2019/11/04 22:10:07 rillig Exp $
 
 DISTNAME=	Plack-1.0047
 PKGNAME=	p5-${DISTNAME}
@@ -31,7 +31,7 @@ DEPENDS+=	p5-Cookie-Baker>=0.07:../../www/p5-Cookie-Baker
 DEPENDS+=	p5-HTTP-Headers-Fast>=0.18:../../www/p5-HTTP-Headers-Fast
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Plack/.packlist
+PERL5_PACKLIST=	auto/Plack/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/07/20 22:46:55 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2019/11/04 22:09:52 rillig Exp $
 
 DISTNAME=	aws-${AWS_VERSION}
 PKGNAME=	aws-demos-${AWS_VERSION}
@@ -31,7 +31,7 @@ MY_CONF_ENV+=		PATH=${PREFIX}/gcc5-aux/bin:${PATH}
 CONFIGURE_ARGS+=	LPATH=${BUILDLINK_PREFIX.openssl}/lib
 CONFIGURE_ARGS+=	ZPATH=${BUILDLINK_PREFIX.zlib}/lib
 
-SUBST_CLASSES+= 	lpath
+SUBST_CLASSES+=		lpath
 SUBST_STAGE.lpath=	pre-configure
 SUBST_MESSAGE.lpath=	Add library path for ldap
 SUBST_FILES.lpath=	demos/test_ldap/test_ldap.gpr

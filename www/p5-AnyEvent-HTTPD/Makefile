@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/08/11 13:24:22 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/04 22:09:59 rillig Exp $
 
 DISTNAME=	AnyEvent-HTTPD-0.93
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl 5 simple lightweight event based web (application) server
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/AnyEvent/HTTPD/.packlist
+PERL5_PACKLIST=	auto/AnyEvent/HTTPD/.packlist
 
 DEPENDS+=	p5-AnyEvent-[0-9]*:../../devel/p5-AnyEvent
 DEPENDS+=	p5-Object-Event-[0-9]*:../../devel/p5-Object-Event

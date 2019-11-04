@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/08/25 01:57:43 manu Exp $
+# $NetBSD: Makefile,v 1.13 2019/11/04 22:09:51 rillig Exp $
 
 DISTNAME=	tomcat-connectors-${JK_VERSION}-src
 PKGNAME=	${APACHE_PKG_PREFIX}-jk-${JK_VERSION}
@@ -28,9 +28,9 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/native
 APACHE_MODULE=	YES
 BUILD_DEFS+=	JK_ENABLE_JNI
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake
 OVERRIDE_DIRDEPTH=	3
 
 SUBST_CLASSES+=		jk-lt
@@ -49,7 +49,7 @@ SUBST_MESSAGE.jk-shlt=	Fixing libtool references in install script.
 CONFIGURE_ARGS+=	--with-apxs=${APXS:Q}
 
 .if defined(JK_ENABLE_JNI)
-USE_JAVA=	yes
+USE_JAVA=		yes
 CONFIGURE_ARGS+=	--enable-jni
 CONFIGURE_ARGS+=	--with-java-home=${JAVA_HOME:Q}
 SUBST_FILES.jk-lt+=	jni/Makefile
