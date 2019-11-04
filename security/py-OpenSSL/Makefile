@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2019/01/22 09:12:09 adam Exp $
+# $NetBSD: Makefile,v 1.53 2019/11/04 21:12:59 rillig Exp $
 
 DISTNAME=	pyOpenSSL-19.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -18,7 +18,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.0.1:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 # https://github.com/pyca/pyopenssl/issues/656
-PYSETUPTESTTARGET=      pytest
+PYSETUPTESTTARGET=	pytest
 
 .include "../../lang/python/egg.mk"
 .include "../../security/openssl/buildlink3.mk"

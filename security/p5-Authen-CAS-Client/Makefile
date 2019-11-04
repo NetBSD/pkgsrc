@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/08/11 13:22:49 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/04 21:12:56 rillig Exp $
 #
 
 DISTNAME=	Authen-CAS-Client-0.08
@@ -12,8 +12,8 @@ HOMEPAGE=	https://metacpan.org/release/Authen-CAS-Client
 COMMENT=	Perl 5 module providing an interface for JA-SIG's CAS
 LICENSE=	2-clause-bsd
 
-USE_LANGUAGES=	# empty
-PERL5_PACKLIST=	auto/Authen/CAS/Client/.packlist
+USE_LANGUAGES=		# empty
+PERL5_PACKLIST=		auto/Authen/CAS/Client/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 BUILD_DEPENDS+=	p5-Test-MockObject-[0-9]*:../../devel/p5-Test-MockObject

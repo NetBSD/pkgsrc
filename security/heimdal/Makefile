@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2019/10/21 16:21:44 wiz Exp $
+# $NetBSD: Makefile,v 1.134 2019/11/04 21:12:53 rillig Exp $
 
 DISTNAME=	heimdal-1.5.3
 PKGREVISION=	21
@@ -103,8 +103,8 @@ PLIST.hcrypto=		yes
 
 # Linux does not have include/vis.h and expected include/glob.h.
 .if ${OPSYS} == "Linux"
-PLIST.vis=	yes
-PLIST.glob=	yes
+PLIST.vis=		yes
+PLIST.glob=		yes
 # Without this I get undefined references to pthread_getspecific
 PTHREAD_AUTO_VARS=	yes
 .endif

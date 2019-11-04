@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2016/09/19 13:22:21 wiedi Exp $
+# $NetBSD: Makefile,v 1.13 2019/11/04 21:12:55 rillig Exp $
 #
 
 DISTNAME=	NeTraMet44
@@ -15,8 +15,8 @@ MAKE_JOBS_SAFE=	no
 
 GNU_CONFIGURE=	YES
 
-CONFIGURE_ARGS+=--without-x
-MAKE_ENV+=	PCAP_LIB=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libpcap}/lib
+CONFIGURE_ARGS+=	--without-x
+MAKE_ENV+=		PCAP_LIB=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libpcap}/lib
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 
 .include "../../net/libpcap/buildlink3.mk"
