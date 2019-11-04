@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/08/01 17:40:17 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/11/04 21:43:35 rillig Exp $
 
 DISTNAME=	epubpreflight-0.1.0
 CATEGORIES=	textproc
@@ -10,9 +10,9 @@ HOMEPAGE=	https://github.com/IDPF/epubcheck
 COMMENT=	Tool to validate IDPF EPUB files
 LICENSE=	modified-bsd AND mit
 
-WRKSRC=		${WRKDIR}
-USE_JAVA=	run
-INSTALLATION_DIRS=      bin libexec/epubpreflight/lib share/doc/epubpreflight
+WRKSRC=			${WRKDIR}
+USE_JAVA=		run
+INSTALLATION_DIRS=	bin libexec/epubpreflight/lib share/doc/epubpreflight
 
 do-build:
 	${ECHO} "#!/bin/sh" > ${WRKSRC}/epubpreflight

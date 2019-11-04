@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/08/11 13:23:36 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/04 21:43:41 rillig Exp $
 #
 
 DISTNAME=	Pod-Strip-1.02
@@ -13,7 +13,7 @@ COMMENT=	Perl5 module to remove POD from Perl code
 
 #DEPENDS+=	{perl>=5.9.3,p5-Pod-Simple>=3.0}:../../textproc/p5-Pod-Simple
 
-PERL5_PACKLIST=	auto/Pod/Strip/.packlist
+PERL5_PACKLIST=		auto/Pod/Strip/.packlist
 PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"

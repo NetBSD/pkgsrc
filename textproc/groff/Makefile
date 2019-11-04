@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2019/08/11 13:23:24 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2019/11/04 21:43:36 rillig Exp $
 
 DISTNAME=	groff-1.22.4
 PKGREVISION=	2
@@ -72,10 +72,10 @@ post-patch:
 # It also installs wrappers around the system macros for a variety of
 # other traditional macro packages, if those macros don't have an FSF
 # copyright.
-SYMLINK_FILES=	chem diffmk eqn grn indxbib lookbib neqn nroff pic refer \
+SYMLINK_FILES=		chem diffmk eqn grn indxbib lookbib neqn nroff pic refer \
 		soelim tbl troff
 SYMLINK_MANFILES=	chem.1 eqn.1 grn.1 indxbib.1 lookbib.1 neqn.1 nroff.1 \
-		pic.1 refer.1 soelim.1 tbl.1 troff.1
+			pic.1 refer.1 soelim.1 tbl.1 troff.1
 
 INSTALLATION_DIRS=	${PKGGNUDIR}bin ${PKGGNUDIR}${PKGMANDIR}/man1
 

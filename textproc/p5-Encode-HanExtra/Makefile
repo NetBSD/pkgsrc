@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/08/11 13:23:28 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/11/04 21:43:40 rillig Exp $
 
 DISTNAME=	Encode-HanExtra-0.23
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	mit
 
 # wants both Module::Install and Module::Build
 PERL5_MODULE_TYPE=	Module::Install
-BUILD_DEPENDS+=	p5-Module-Build-[0-9]*:../../devel/p5-Module-Build
+BUILD_DEPENDS+=		p5-Module-Build-[0-9]*:../../devel/p5-Module-Build
 #BUILD_DEPENDS+=	p5-Module-Install-[0-9]*:../../devel/p5-Module-Install
 
 PERL5_PACKLIST=		auto/Encode/HanExtra/.packlist

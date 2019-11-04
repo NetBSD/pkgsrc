@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/08/11 13:23:55 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/04 21:43:43 rillig Exp $
 
 DISTNAME=	XML-Rabbit-0.4.1
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl 5 module to consume XML with Moose and xpath queries
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/XML/Rabbit/.packlist
+PERL5_PACKLIST=	auto/XML/Rabbit/.packlist
 
 REPLACE_PERL+=	bin/*
 

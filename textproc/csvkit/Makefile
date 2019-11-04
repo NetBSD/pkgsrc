@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/04/25 07:33:23 maya Exp $
+# $NetBSD: Makefile,v 1.9 2019/11/04 21:43:34 rillig Exp $
 
 DISTNAME=	0.9.0
 PKGREVISION=	2
@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-openpyxl>=2.0.3:../../textproc/py-openpyxl
 DEPENDS+=	${PYPKGPREFIX}-jdcal>=0.9.3:../../time/py-jdcal
 DEPENDS+=	${PYPKGPREFIX}-simplejson>=3.6.3:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-six>=1.6.1:../../lang/py-six
-#DEPENDS+=		${PYPKGPREFIX}-tox>=1.3:../../*/py-tox
+#DEPENDS+=	${PYPKGPREFIX}-tox>=1.3:../../*/py-tox
 
 # csvkit publishes files like "0.9.0.tar.gz"
 DIST_SUBDIR=	${PKGNAME_NOREV}
