@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/11/12 16:10:27 jaapb Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/04 21:43:39 rillig Exp $
 #
 
 VERSION=	1.0.0
@@ -14,8 +14,8 @@ HOMEPAGE=	https://github.com/whitequark/ocaml-expat
 COMMENT=	OCaml bindings for the expat library
 LICENSE=	mit
 
-USE_TOOLS+=	gmake
-USE_LANGUAGES=	c
+USE_TOOLS+=		gmake
+USE_LANGUAGES=		c
 OCAML_USE_FINDLIB=	yes
 
 .include "../../mk/ocaml.mk"

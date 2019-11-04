@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/07/15 11:17:04 mef Exp $
+# $NetBSD: Makefile,v 1.6 2019/11/04 21:43:34 rillig Exp $
 
 VERSION=	0.4.0
 DISTNAME=	cwdiff-${VERSION}
@@ -16,7 +16,7 @@ NO_BUILD=	yes
 REPLACE_BASH=	cwdiff
 
 INSTALLATION_DIRS+=	share/examples/cwdiff/
-AUTO_MKDIRS=	yes
+AUTO_MKDIRS=		yes
 
 do-install:
 	(cd ${WRKSRC} ;\

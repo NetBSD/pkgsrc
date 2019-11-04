@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/09/02 13:20:13 adam Exp $
+# $NetBSD: Makefile,v 1.34 2019/11/04 21:43:34 rillig Exp $
 
 DISTNAME=	dblatex-0.3.10
 PKGREVISION=	2
@@ -43,7 +43,7 @@ USE_TOOLS+=	gmake
 
 .include "options.mk"
 
-REPLACE_PYTHON+=	scripts/dblatex lib/dbtexmf/dblatex/xetex/*.py
+REPLACE_PYTHON+=		scripts/dblatex lib/dbtexmf/dblatex/xetex/*.py
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.3.2
 
 SUBST_CLASSES+=		man

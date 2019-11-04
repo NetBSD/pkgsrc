@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/07/15 13:14:10 mef Exp $
+# $NetBSD: Makefile,v 1.7 2019/11/04 21:43:39 rillig Exp $
 
 DISTNAME=	mxml-2.10
 CATEGORIES=	textproc
@@ -13,8 +13,8 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
-PKGCONFIG_OVERRIDE+=	mxml.pc
-PKGCONFIG_OVERRIDE_STAGE=post-configure
+PKGCONFIG_OVERRIDE+=		mxml.pc
+PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 INSTALL_MAKE_FLAGS+=	BUILDROOT=${DESTDIR}
 

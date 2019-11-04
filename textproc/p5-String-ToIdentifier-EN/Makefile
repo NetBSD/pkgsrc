@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/08/11 13:23:39 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/04 21:43:41 rillig Exp $
 
 DISTNAME=		String-ToIdentifier-EN-0.12
 PKGNAME=		p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=		https://metacpan.org/release/String-ToIdentifier-EN
 COMMENT=		Convert Strings to English Program Identifiers
 LICENSE=		${PERL5_LICENSE}
 
-DEPENDS+= 		p5-Lingua-EN-Inflect-Phrase>=0.07:../../textproc/p5-Lingua-EN-Inflect-Phrase
+DEPENDS+=		p5-Lingua-EN-Inflect-Phrase>=0.07:../../textproc/p5-Lingua-EN-Inflect-Phrase
 DEPENDS+=		p5-Text-Unidecode>=0.04:../../textproc/p5-Text-Unidecode
 DEPENDS+=		p5-namespace-clean>=0.20:../../devel/p5-namespace-clean
 

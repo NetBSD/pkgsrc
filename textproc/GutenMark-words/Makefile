@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/25 06:55:38 asau Exp $
+# $NetBSD: Makefile,v 1.12 2019/11/04 21:43:33 rillig Exp $
 #
 
 DISTNAME=	GutenMark-words-20030107
@@ -10,13 +10,13 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sandroid.org/GutenMark/
 COMMENT=	Word lists for GutenMark
 
-WORDLISTS=	special.words.gz english.names.gz US.places.gz \
-		french.names.gz english.words.gz french.words.gz \
-		german2.words.gz german.words.gz latin.words.gz \
-		italian.words.gz spanish.words.gz NonUS.places.gz \
-		norwegian.words.gz gaelic.words.gz danish.words.gz \
-		swedish.words.gz finnish.words.gz nonenglish.words.gz
-SITES.GutenMark.cfg=http://www.sandroid.org/GutenMark/
+WORDLISTS=		special.words.gz english.names.gz US.places.gz \
+			french.names.gz english.words.gz french.words.gz \
+			german2.words.gz german.words.gz latin.words.gz \
+			italian.words.gz spanish.words.gz NonUS.places.gz \
+			norwegian.words.gz gaelic.words.gz danish.words.gz \
+			swedish.words.gz finnish.words.gz nonenglish.words.gz
+SITES.GutenMark.cfg=	http://www.sandroid.org/GutenMark/
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${DISTNAME}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/08/11 13:23:53 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/04 21:43:43 rillig Exp $
 
 DISTNAME=	XML-Filter-DOMFilter-LibXML-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	p5-XML-LibXML>=1.53:../../textproc/p5-XML-LibXML
 
 EXTRACT_USING=	gtar
 
-USE_LANGUAGES=		# empty
+USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/XML/Filter/DOMFilter/LibXML/.packlist
 
 .include "../../lang/perl5/module.mk"

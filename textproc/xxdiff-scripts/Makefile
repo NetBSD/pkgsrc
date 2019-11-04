@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/04/25 07:33:25 maya Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/04 21:43:49 rillig Exp $
 
 PKGREVISION= 1
 .include "../../textproc/xxdiff/Makefile.common"
@@ -11,13 +11,13 @@ DEPENDS+=	xxdiff-${XXDIFFVERSION}{,nb*}:../../textproc/xxdiff
 USE_TOOLS=	# empty
 
 #PYTHON_VERSIONS_INCOMPATIBLE=	# XXX unknown
-REPLACE_PYTHON+=	bin/svn-foreign
-REPLACE_PYTHON+=	bin/xx-cond-replace bin/xx-cvs-diff bin/xx-cvs-revcmp
-REPLACE_PYTHON+=	bin/xx-diff-proxy bin/xx-encrypted bin/xx-filter
-REPLACE_PYTHON+=	bin/xx-find-grep-sed bin/xx-hg-merge bin/xx-match
-REPLACE_PYTHON+=	bin/xx-p4-unmerge bin/xx-pyline bin/xx-rename
-REPLACE_PYTHON+=	bin/xx-sql-schemas bin/xx-svn-diff bin/xx-svn-resolve
-REPLACE_PYTHON+=	bin/xx-svn-review
+REPLACE_PYTHON+=		bin/svn-foreign
+REPLACE_PYTHON+=		bin/xx-cond-replace bin/xx-cvs-diff bin/xx-cvs-revcmp
+REPLACE_PYTHON+=		bin/xx-diff-proxy bin/xx-encrypted bin/xx-filter
+REPLACE_PYTHON+=		bin/xx-find-grep-sed bin/xx-hg-merge bin/xx-match
+REPLACE_PYTHON+=		bin/xx-p4-unmerge bin/xx-pyline bin/xx-rename
+REPLACE_PYTHON+=		bin/xx-sql-schemas bin/xx-svn-diff bin/xx-svn-resolve
+REPLACE_PYTHON+=		bin/xx-svn-review
 
 INSTALLATION_DIRS+=	${XXDIFFDOCDIR}
 
