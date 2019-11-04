@@ -1,13 +1,33 @@
-$NetBSD: patch-ab,v 1.2 2013/06/15 20:24:19 adam Exp $
+$NetBSD: patch-ab,v 1.3 2019/11/04 05:48:26 gutteridge Exp $
 
---- scapy/arch/unix.py.orig	2009-02-01 22:30:20 +0200
-+++ scapy/arch/unix.py	2009-06-09 14:33:21 +0300
-@@ -163,7 +163,7 @@ def read_routes6():
-             lspl = l.split()
-             d,nh,fl = lspl[:3]
-             dev = lspl[5+mtu_present+prio_present]
--        else:       # FREEBSD or DARWIN 
-+        else:       # FREEBSD or DARWIN or DRAGONFLY
-             d,nh,fl,dev = l.split()[:4]
-         if filter(lambda x: x[2] == dev, lifaddr) == []:
-             continue
+Add DragonFly support.
+
+--- scapy/arch/unix.py.orig	2019-08-04 16:12:30.000000000 +0000
++++ scapy/arch/unix.py
+@@ -14,7 +14,7 @@ import scapy.config
+ import scapy.utils
+ from scapy.arch import get_if_addr
+ from scapy.config import conf
+-from scapy.consts import FREEBSD, NETBSD, OPENBSD, SOLARIS, LOOPBACK_NAME
++from scapy.consts import FREEBSD, NETBSD, OPENBSD, SOLARIS, LOOPBACK_NAME, DRAGONFLY
+ from scapy.error import warning, log_interactive
+ from scapy.pton_ntop import inet_pton
+ from scapy.utils6 import in6_getscope, construct_source_candidate_set
+@@ -48,7 +48,7 @@ def read_routes():
+     """
+     if SOLARIS:
+         f = os.popen("netstat -rvn -f inet")
+-    elif FREEBSD:
++    elif FREEBSD or DRAGONFLY:
+         f = os.popen("netstat -rnW")  # -W to handle long interface names
+     else:
+         f = os.popen("netstat -rn -f inet")
+@@ -276,7 +276,7 @@ def read_routes6():
+             destination, next_hop, flags = splitted_line[:3]
+             dev = splitted_line[index]
+         else:
+-            # FREEBSD or DARWIN
++            # FREEBSD or DARWIN or DRAGONFLY
+             if len(splitted_line) < 4:
+                 warning("Not enough columns in route entry !")
+                 continue

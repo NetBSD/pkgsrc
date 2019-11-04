@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.9 2019/03/24 19:44:48 gutteridge Exp $
+$NetBSD: distinfo,v 1.10 2019/11/04 05:48:26 gutteridge Exp $
 
-SHA1 (scapy-2.3.2.tar.gz) = 30ee94f6490371dc60544206d286ae4881987151
-RMD160 (scapy-2.3.2.tar.gz) = f217e70d0806dfcc1ed1961a74f9de437c2b8bdd
-SHA512 (scapy-2.3.2.tar.gz) = 6b15e102708d1bd0ca0c910e2d82416cd172634409f93c506542a7dc6b69ddc9c9afef6ec07929f70cc0f8f4c455cdc84d9b35bc2c5b72f79dd7e6785306dc7a
-Size (scapy-2.3.2.tar.gz) = 1166056 bytes
-SHA1 (patch-aa) = 28357773231c1a55fffbe2ebf18ec2e5f63a2ae2
-SHA1 (patch-ab) = 12f7c4d0ae505d357692c05de658e393a0526ba1
-SHA1 (patch-ac) = d8ad1882d9b31e65dc3f7636e4caac9377805daf
-SHA1 (patch-ad) = f3647e471ba1168e054a5160d47fb0870243fb4b
-SHA1 (patch-af) = 3f570e78c6a30361a015b9f0e1cb5990166b49cf
+SHA1 (scapy-2.4.3.tar.gz) = 62dfd58a8e3799f083a157209b8b0902f53e76f0
+RMD160 (scapy-2.4.3.tar.gz) = fee72af411c6b42961feb6f46ad5ba7e8c0c426b
+SHA512 (scapy-2.4.3.tar.gz) = 48bf86ed851f4b15d4f3b1e2668f1516fff712b67d709963cb986076cfeec0724e20b400a75368309f3d99a45d7b1082fd049fbb67edef0ab5d838e2ae141e44
+Size (scapy-2.4.3.tar.gz) = 2969754 bytes
+SHA1 (patch-ab) = 09adbe98c2e129438833f1e1212c6ef276e197d0
+SHA1 (patch-ad) = bac7c72eff08608d4d73911a94bfc3125b8b53b6
+SHA1 (patch-scapy_arch_bpf_supersocket.py) = d1850020a54799155e8046de0994d7df821c6046
+SHA1 (patch-scapy_consts.py) = 3495fc2716b78bf0689f2eb8d1095c746d9700e3
