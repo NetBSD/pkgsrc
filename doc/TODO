@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19383 2019/11/04 04:33:40 ryoon Exp $
+$NetBSD: TODO,v 1.19384 2019/11/04 05:48:41 gutteridge Exp $
 
 Suggested new packages
 ======================
@@ -1198,7 +1198,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sablecc-3.7
 	o samba-4.11.2 [security release]
 	o sarg-2.2.5
-	o scapy-2.4.3
 	o scew-1.1.7
 	o scilab-5.5.2
 	o scm-5f2
