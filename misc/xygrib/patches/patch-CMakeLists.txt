@@ -1,8 +1,9 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2019/11/04 18:35:22 nros Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2019/11/04 18:53:13 nros Exp $
 
 * sanitze the names and dirs to search for libs and headers files
 * use PATH_SUFFIX fix to find openjpeg
 * install bins and data into the right directory
+* don't regenerate translations (no need for qttools dependecy)
 * don't install cmake files in the translation directory
 * install icon and desktop files
 * install hi-res maps
@@ -85,9 +86,20 @@ $NetBSD: patch-CMakeLists.txt,v 1.1 2019/11/04 18:35:22 nros Exp $
       REQUIRED
   )
  include_directories(${OPENJPEG_INCLUDE_DIR})
-@@ -222,8 +174,9 @@ set(PREFIX_PKGDATA ".")
+@@ -212,22 +164,18 @@ include_directories(${PNG_INCLUDE_DIR})
+ configure_file(cmake/Version.h.in ${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/include/Version.h)
+ include_directories(${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/include)
+ 
+-if(APPLE)
+-set(PREFIX_BIN ${PROJECT_NAME})
+-set(PREFIX_PKGDATA ${PROJECT_NAME})
+-endif()
+ if(WIN32)
+ set(PREFIX_BIN ".")
+ set(PREFIX_PKGDATA ".")
  endif()
- if(UNIX AND NOT APPLE)
+-if(UNIX AND NOT APPLE)
++if(UNIX)
  # This is not exactly a good idea on linux - the code should be changed so that the executable would go to /usr/local/bin and the data to /usr/local/share/XyGrib
 -set(PREFIX_BIN ${PROJECT_NAME})
 -set(PREFIX_PKGDATA ${PROJECT_NAME})
@@ -97,7 +109,11 @@ $NetBSD: patch-CMakeLists.txt,v 1.1 2019/11/04 18:35:22 nros Exp $
  endif()
  
  add_subdirectory(src)
-@@ -241,4 +194,14 @@ set_target_properties(${PROJECT_NAME} PR
+-add_subdirectory(data/tr)
+ 
+ # Installation
+ # macOS bundle parameters
+@@ -241,4 +189,14 @@ set_target_properties(${PROJECT_NAME} PR
  set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE_BUNDLE_VERSION "${XYGRIB_VERSION}")
  set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE_COPYRIGHT "${PROJECT_NAME} Authors")
  # Install data
