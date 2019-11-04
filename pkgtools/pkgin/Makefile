@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2019/09/24 12:57:22 jperkin Exp $
+# $NetBSD: Makefile,v 1.92 2019/11/04 08:39:04 wiz Exp $
 
 DISTNAME=		pkgin-0.13.0
 CATEGORIES=		pkgtools
@@ -37,6 +37,12 @@ USE_FEATURES=		nbcompat
 USE_TOOLS+=		nroff
 
 .include "../../mk/bsd.prefs.mk"
+
+# needed for gcc-8.x as of pkgin-0.13.0
+.if !empty(PKGSRC_COMPILER:Mgcc)
+CFLAGS+=		-Wno-stringop-overflow
+CFLAGS+=		-Wno-stringop-truncation
+.endif
 
 SUBST_CLASSES.NetBSD+=	osrel
 SUBST_STAGE.osrel=	pre-configure
