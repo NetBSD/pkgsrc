@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2013/04/24 10:06:52 sbd Exp $
+# $NetBSD: Makefile,v 1.60 2019/11/04 19:57:59 rillig Exp $
 
 DISTNAME=	magicfilter-1.2
 PKGREVISION=	8
@@ -19,14 +19,14 @@ DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 USE_TOOLS+=	gmake gs:run gzip
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	GHOSTSCRIPT=${TOOLS_PATH.gs}
-CONFIGURE_ENV+= GZIP=${TOOLS_GZIP_CMD:Q}
+CONFIGURE_ENV+=	GZIP=${TOOLS_GZIP_CMD:Q}
 
 FILTER_DIR=	libexec/magicfilter
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEFS+=	PAPERSIZE
-PAPERSIZE?=	A4
+BUILD_DEFS+=		PAPERSIZE
+PAPERSIZE?=		A4
 LOWER_PAPERSIZE_cmd=	${ECHO} ${PAPERSIZE} | ${TR} "[A-Z]" "[a-z]"
 LOWER_PAPERSIZE=	${LOWER_PAPERSIZE_cmd:sh}
 
