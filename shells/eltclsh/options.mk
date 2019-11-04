@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2008/08/22 07:44:00 obache Exp $
-PKG_OPTIONS_VAR=        PKG_OPTIONS.eltclsh
-PKG_SUPPORTED_OPTIONS=  tk
-PKG_SUGGESTED_OPTIONS=  tk
+# $NetBSD: options.mk,v 1.2 2019/11/04 21:14:06 rillig Exp $
+PKG_OPTIONS_VAR=	PKG_OPTIONS.eltclsh
+PKG_SUPPORTED_OPTIONS=	tk
+PKG_SUGGESTED_OPTIONS=	tk
 
 .include "../../mk/bsd.options.mk"
 
