@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/07/06 19:12:47 nia Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/04 17:47:31 rillig Exp $
 #
 
 DISTNAME=	aspell6-csb-0.02-0
@@ -17,7 +17,7 @@ USE_LANGUAGES=	# none
 
 .include "../../mk/bsd.prefs.mk"
 .if ${PKG_FORMAT} == "pkg" && ${OPSYS} == "Linux"
-BROKEN=	Non-ASCII PLIST and thus problem with libarchive on glibc systems.
+BROKEN=	"Non-ASCII PLIST and thus problem with libarchive on glibc systems."
 .endif
 
 .include "../../textproc/aspell/buildlink3.mk"
