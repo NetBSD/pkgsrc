@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.39 2019/03/22 15:31:11 gdt Exp $
+$NetBSD: distinfo,v 1.40 2019/11/04 17:33:18 gdt Exp $
 
-SHA1 (gdal-2.4.1.tar.gz) = cb5dec7fe1a6b6cae44f520724ef3e8ac290d8bd
-RMD160 (gdal-2.4.1.tar.gz) = cb46f21e808f67110f3198cb827822342b94a50c
-SHA512 (gdal-2.4.1.tar.gz) = b25e49f343986af6f37e0bec6dc3084cbcf1a0080da5cfd91d1a58c1d9ffd2ac355299d66534e63e89358cbb15ecd0f2ae934d91bbd2a3749889dadaf266e483
-Size (gdal-2.4.1.tar.gz) = 14546610 bytes
+SHA1 (gdal-2.4.3.tar.gz) = 82e9b40b78a3272377ca5bff0c2403020e517601
+RMD160 (gdal-2.4.3.tar.gz) = bacc4c800924c210cc75c7b4f623a80eefee3fac
+SHA512 (gdal-2.4.3.tar.gz) = e532ce86c92724300ab443c42dd8cec0e74e41411a54d30222f98faa10623b31e616eda44da8f406ed01f3fc3c72c76e8ceb80c1dff733f8efcaa2e2e18132f6
+Size (gdal-2.4.3.tar.gz) = 14726748 bytes
 SHA1 (patch-apps_gdalserver.cpp) = 4a2b8bac29582c8fc02920840ee498026d87acca
 SHA1 (patch-frmts_grib_degrib_degrib_myutil.c) = 0e046afa236d7e0d6186fe392cb2da05fa5b42c5
-SHA1 (patch-ogr_ogrlinestring.cpp) = f42faff9f40bcc554a6a8ffdab7d1ad79a03680a
 SHA1 (patch-ogr_ogrsf__frmts_geojson_libjson_GNUmakefile) = 6a5061b6dd8c3a4fa1ad7c10ddc0b815b41a637d
 SHA1 (patch-port_cpl__conv.cpp) = e0c9d2dac25bc6f69f0af13a2c86ab5f0f521445
