@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2019/10/06 12:12:05 nia Exp $
+# $NetBSD: Makefile,v 1.32 2019/11/04 21:50:16 rillig Exp $
 
 DISTNAME=	i3-4.17.1
 CATEGORIES=	wm
@@ -14,7 +14,7 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake bison lex yacc pkg-config perl:run
 USE_LANGUAGES=	c99
 
-CONFIGURE_ARGS+=--disable-builddir
+CONFIGURE_ARGS+=	--disable-builddir
 
 LDFLAGS.SunOS+=	-lgen -liconv -lsocket
 
