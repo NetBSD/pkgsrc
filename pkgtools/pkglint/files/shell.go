@@ -591,9 +591,6 @@ func (scc *SimpleCommandChecker) handleComment() bool {
 		defer trace.Call0()()
 	}
 
-	// FIXME: Research and explain how pkglint can ever interpret
-	//  a shell comment as a simple command. That just doesn't fit.
-
 	shellword := scc.strcmd.Name
 	if trace.Tracing {
 		defer trace.Call1(shellword)()
@@ -603,36 +600,26 @@ func (scc *SimpleCommandChecker) handleComment() bool {
 		return false
 	}
 
-	semicolon := contains(shellword, ";")
-	multiline := scc.mkline.IsMultiline()
-
-	if semicolon {
-		scc.mkline.Warnf("A shell comment should not contain semicolons.")
-		// TODO: Explain.
-		// TODO: Check whether the existing warnings are useful.
+	if !scc.mkline.IsMultiline() {
+		return false
 	}
 
-	if multiline {
-		scc.mkline.Warnf("A shell comment does not stop at the end of line.")
-	}
-
-	if semicolon || multiline {
-		scc.Explain(
-			"When a shell command is split into multiple lines that are",
-			"continued with a backslash, they will nevertheless be converted to",
-			"a single line before the shell sees them.",
-			"",
-			"This means that even if it looks as if the comment only spanned",
-			"one line in the Makefile, in fact it spans until the end of the whole",
-			"shell command.",
-			"",
-			"To insert a comment into shell code, you can write it like this:",
-			"",
-			"\t"+"${SHCOMMENT} \"The following command might fail; this is ok.\"",
-			"",
-			"Note that any special characters in the comment are still",
-			"interpreted by the shell.")
-	}
+	scc.mkline.Warnf("A shell comment does not stop at the end of line.")
+	scc.Explain(
+		"When a shell command is split into multiple lines that are",
+		"continued with a backslash, they will nevertheless be converted to",
+		"a single line before the shell sees them.",
+		"",
+		"This means that even if it looks as if the comment only spanned",
+		"one line in the Makefile, in fact it spans until the end of the whole",
+		"shell command.",
+		"",
+		"To insert a comment into shell code, you can write it like this:",
+		"",
+		"\t"+"${SHCOMMENT} \"The following command might fail; this is ok.\"",
+		"",
+		"Note that any special characters in the comment are still",
+		"interpreted by the shell.")
 	return true
 }
 
