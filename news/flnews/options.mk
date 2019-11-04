@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2019/01/21 12:03:41 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2019/11/04 19:17:10 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.flnews
 PKG_SUPPORTED_OPTIONS=	inet6 nls xdbe xdg-utils
@@ -21,12 +21,12 @@ FLNEWS_OPT_DISABLE_IP6=		1
 # nls: Optional support for National Language Support (NLS)
 # Requires an OS with X/Open XSI extension API (SUSv2) and the gencat utility
 # Note: Only locales with UTF-8, ISO-8859-1 or US-ASCII codeset are supported!
-PLIST_VARS+=	nls
+PLIST_VARS+=		nls
 .if !empty(PKG_OPTIONS:Mnls)
-PLIST.nls=	yes
-FLNEWS_OPT_DISABLE_NLS=		0
+PLIST.nls=		yes
+FLNEWS_OPT_DISABLE_NLS=	0
 .else
-FLNEWS_OPT_DISABLE_NLS=		1
+FLNEWS_OPT_DISABLE_NLS=	1
 .endif
 
 # xdbe: Optional support for X11 Double Buffer Extension (XDBE)
