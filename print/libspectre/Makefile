@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/07/21 22:24:10 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2019/11/04 19:57:59 rillig Exp $
 
 DISTNAME=	libspectre-0.2.8
 PKGREVISION=	10
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
-PKGCONFIG_OVERRIDE+=    libspectre.pc.in
+PKGCONFIG_OVERRIDE+=	libspectre.pc.in
 
 .include "../../print/ghostscript/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

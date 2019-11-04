@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2019/10/11 23:47:42 gdt Exp $
+# $NetBSD: Makefile,v 1.92 2019/11/04 19:57:59 rillig Exp $
 
 INSTALLVERSION=	5.3
 VERSION=	${INSTALLVERSION}.3
@@ -16,7 +16,7 @@ LICENSE=	gnu-gpl-v2
 
 PREV_PKGPATH=	print/gutenprint51-lib
 
-PLIST_SUBST+=	INSTALLVERSION=${INSTALLVERSION}
+PLIST_SUBST+=		INSTALLVERSION=${INSTALLVERSION}
 PRINT_PLIST_AWK+=	{ gsub("gutenprint/${INSTALLVERSION}", \
 				"gutenprint/$${INSTALLVERSION}") }
 PRINT_PLIST_AWK+=	{ gsub(".${INSTALLVERSION}$$", \
@@ -67,7 +67,7 @@ CONFIGURE_ARGS+=	--disable-translated-cups-ppds
 # escputil is a utility for Epson printers.  It should arguably be in
 # a split package, but it's small and useful so splitting isn't worth
 # the effort.
-CONFIGURE_ARGS+= --enable-escputil
+CONFIGURE_ARGS+=	--enable-escputil
 
 # test pattern generator.  Small, so let it be built.
 #CONFIGURE_ARGS+=	--enable-test

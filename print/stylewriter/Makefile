@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2017/09/04 18:00:59 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2019/11/04 19:58:01 rillig Exp $
 #
 
 DISTNAME=	stylewriter
@@ -14,13 +14,13 @@ COMMENT=	Apple StyleWriter driver for un*x
 DEPENDS+=	enscript>=1.6.3nb1:../../print/enscript
 
 USE_BSD_MAKEFILE=	yes
-USE_TOOLS+=	gs:run
-NO_CONFIGURE=	yes
+USE_TOOLS+=		gs:run
+NO_CONFIGURE=		yes
 
 INSTALLATION_DIRS=	sbin
 
 CWARNFLAGS.clang=	-Wno-error=pointer-sign
-MAKE_ENV+=	CWARNFLAGS.clang=${CWARNFLAGS.clang:Q}
+MAKE_ENV+=		CWARNFLAGS.clang=${CWARNFLAGS.clang:Q}
 
 PLIST_SRC=	${WRKDIR}/PLIST
 FILTER_DIR=	libexec/stylewriter

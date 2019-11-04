@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2018/07/04 13:40:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.36 2019/11/04 19:57:58 rillig Exp $
 
 DISTNAME=	apsfilter-7.2.8
 PKGREVISION=	1
@@ -22,15 +22,15 @@ WRKSRC=		${WRKDIR}/apsfilter
 HAS_CONFIGURE=	YES
 USE_TOOLS+=	awk:run sh:run gs:run bzip2:run gzip:run file:run tar
 
-CONFIGURE_ARGS+=--prefix=${PREFIX}
-CONFIGURE_ARGS+=--mandir=${PREFIX}/${PKGMANDIR}
-CONFIGURE_ARGS+=--with-shell=${SH:Q}
-CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFBASEDIR}
-CONFIGURE_ARGS+=--with-awk=${AWK:Q}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
+CONFIGURE_ARGS+=	--with-shell=${SH:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
+CONFIGURE_ARGS+=	--with-awk=${AWK:Q}
 
 PKG_SYSCONFSUBDIR=	apsfilter
-CONF_FILES=	${PREFIX}/share/apsfilter/template/apsfilterrc \
-		${PKG_SYSCONFDIR}/apsfilterrc
+CONF_FILES=		${PREFIX}/share/apsfilter/template/apsfilterrc \
+			${PKG_SYSCONFDIR}/apsfilterrc
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure

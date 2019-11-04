@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2019/08/11 13:22:39 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2019/11/04 19:57:58 rillig Exp $
 
 DISTNAME=	foomatic-filters-4.0.17
 PKGREVISION=	13
@@ -36,18 +36,18 @@ INSTALL_TARGET=	install-bin install-man
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mcups)
-DEPENDS+=	cups-base>=1.0:../../print/cups-base
-CUPS_FILTERDIR=	${LOCALBASE}/libexec/cups/filter
-CONFIGURE_ENV+=	CUPS_FILTERS=${CUPS_FILTERDIR}
-FILES_SUBST+=	CUPS_FILTERDIR=${CUPS_FILTERDIR}
+DEPENDS+=		cups-base>=1.0:../../print/cups-base
+CUPS_FILTERDIR=		${LOCALBASE}/libexec/cups/filter
+CONFIGURE_ENV+=		CUPS_FILTERS=${CUPS_FILTERDIR}
+FILES_SUBST+=		CUPS_FILTERDIR=${CUPS_FILTERDIR}
 DEINSTALL_TEMPLATES+=	${.CURDIR}/../../print/foomatic-filters-cups/DEINSTALL
 INSTALL_TEMPLATES+=	${.CURDIR}/../../print/foomatic-filters-cups/INSTALL
 .else
-TEXTTOPS_DEPENDS= {a2ps,enscript,mpage}-[0-9]*
-DEPENDS+=	${TEXTTOPS_DEPENDS}:../../print/mpage
-CONFIGURE_ENV+=	CUPS_CONFIG=/nonexistent
-CONFIGURE_ENV+=	CUPS_SERVERBIN=/nonexistent
-CONFIGURE_ENV+=	CUPS_FILTERS=/nonexistent
+TEXTTOPS_DEPENDS=	{a2ps,enscript,mpage}-[0-9]*
+DEPENDS+=		${TEXTTOPS_DEPENDS}:../../print/mpage
+CONFIGURE_ENV+=		CUPS_CONFIG=/nonexistent
+CONFIGURE_ENV+=		CUPS_SERVERBIN=/nonexistent
+CONFIGURE_ENV+=		CUPS_FILTERS=/nonexistent
 .endif
 
 EGDIR=		${PREFIX}/share/examples/foomatic
