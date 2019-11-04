@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4753 2019/11/04 18:44:38 rillig Exp $
+$NetBSD: CHANGES-2019,v 1.4754 2019/11/04 18:56:26 nros Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7550,3 +7550,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated geography/gdal-lib to 2.4.3 [gdt 2019-11-04]
 	Updated geography/py-gdal to 2.4.3 [gdt 2019-11-04]
 	Updated pkgtools/pkglint to 19.3.6 [rillig 2019-11-04]
+	Added misc/xygrib version 1.2.6.1 [nros 2019-11-04]
