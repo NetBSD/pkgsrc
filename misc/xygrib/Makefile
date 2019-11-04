@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/11/04 18:35:21 nros Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/04 18:53:13 nros Exp $
 
 GITHUB_PROJECT=	XyGrib
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -26,5 +26,4 @@ USE_CMAKE=	yes
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
