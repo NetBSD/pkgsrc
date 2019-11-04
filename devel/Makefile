@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2938 2019/11/02 13:23:05 mef Exp $
+# $NetBSD: Makefile,v 1.2939 2019/11/04 04:20:28 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2642,7 +2642,6 @@ SUBDIR+=	ruby-parseconfig
 SUBDIR+=	ruby-parser
 SUBDIR+=	ruby-parsetree
 SUBDIR+=	ruby-parslet
-SUBDIR+=	ruby-path
 SUBDIR+=	ruby-pathname2
 SUBDIR+=	ruby-pathutil
 SUBDIR+=	ruby-pkg-config
