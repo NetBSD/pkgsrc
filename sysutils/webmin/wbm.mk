@@ -1,4 +1,4 @@
-# $NetBSD: wbm.mk,v 1.13 2017/02/01 13:00:44 mef Exp $
+# $NetBSD: wbm.mk,v 1.14 2019/11/04 21:28:58 rillig Exp $
 #
 # Makefile fragment for Webmin modules
 #
@@ -19,24 +19,24 @@ LICENSE=	modified-bsd
 
 .include "version.mk"
 
-WBM_STD_MODULE?=YES
+WBM_STD_MODULE?=	YES
 
 .if defined(WBM_MOD_REV) && !empty(WBM_MOD_REV) || !empty(WBM_STD_MODULE:M[Nn][Oo])
-PKGNAME?=	wbm-${WBM_NAME}-${WBM_VERSION:S/0$/${WBM_MOD_REV}/}
-DISTNAME?=	${WBM_NAME}-${WBM_VERSION}-${WBM_MOD_REV}
-MASTER_SITES?=	http://www.webmin.com/updates/
-EXTRACT_SUFX?=	.wbm.gz
-EXTRACT_OPTS+=	-f tar
-WRKSRC?=	${WRKDIR}
-WBMSRC=		${WRKDIR}/${WBM_NAME}
+PKGNAME?=		wbm-${WBM_NAME}-${WBM_VERSION:S/0$/${WBM_MOD_REV}/}
+DISTNAME?=		${WBM_NAME}-${WBM_VERSION}-${WBM_MOD_REV}
+MASTER_SITES?=		http://www.webmin.com/updates/
+EXTRACT_SUFX?=		.wbm.gz
+EXTRACT_OPTS+=		-f tar
+WRKSRC?=		${WRKDIR}
+WBMSRC=			${WRKDIR}/${WBM_NAME}
 .else
-PKGNAME=	wbm-${WBM_NAME}-${WBM_VERSION}
-DISTNAME=	webmin-${WBM_VERSION}
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=webadmin/}
-WBMSRC=		${WRKSRC}/${WBM_NAME}
-EXTRACT_ELEMENTS=${DISTNAME}/${WBM_NAME}
+PKGNAME=		wbm-${WBM_NAME}-${WBM_VERSION}
+DISTNAME=		webmin-${WBM_VERSION}
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=webadmin/}
+WBMSRC=			${WRKSRC}/${WBM_NAME}
+EXTRACT_ELEMENTS=	${DISTNAME}/${WBM_NAME}
 .endif
-CATEGORIES+=	sysutils www
+CATEGORIES+=		sysutils www
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE?=	http://www.webmin.com/standard.html

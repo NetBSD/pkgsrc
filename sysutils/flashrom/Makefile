@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/07/11 17:04:04 nia Exp $
+# $NetBSD: Makefile,v 1.12 2019/11/04 21:28:45 rillig Exp $
 #
 
 DISTNAME=	flashrom-v1.1
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	jakllsch@NetBSD.org
 HOMEPAGE=	https://www.flashrom.org/
 COMMENT=	Universal (coreboot/LinuxBIOS) flash utility
-LICENSE=        gnu-gpl-v2
+LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake pkg-config
 
@@ -26,7 +26,7 @@ SUBST_FILES.pciutils=	Makefile
 SUBST_FILES.pciutils+=	hwaccess.h
 SUBST_MESSAGE.pciutils=	adjusting pciutils headers
 SUBST_STAGE.pciutils=	pre-configure
-SUBST_SED.pciutils+= -e 's,<pci/pci.h>,<pciutils/pci.h>,g'
+SUBST_SED.pciutils+=	-e 's,<pci/pci.h>,<pciutils/pci.h>,g'
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
 LDFLAGS+=	-lpci

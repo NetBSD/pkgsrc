@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/08/11 13:23:13 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/04 21:28:50 rillig Exp $
 
 DISTNAME=	SSH-Batch-0.030
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,8 @@ HOMEPAGE=	https://metacpan.org/release/SSH-Batch
 COMMENT=	Cluster operations based on parallel SSH, set and interval arithmetic
 LICENSE=	original-bsd
 
-USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/SSH/Batch/.packlist
+USE_LANGUAGES=		# empty
+PERL5_PACKLIST=		auto/SSH/Batch/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 REPLACE_PERL+=	bin/atnodes
