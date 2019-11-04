@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/08/11 13:24:47 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/04 22:10:05 rillig Exp $
 
 DISTNAME=	HTTP-Server-Simple-PSGI-0.16
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	PSGI handler for HTTP::Server::Simple
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/HTTP/Server/Simple/PSGI/.packlist
+PERL5_PACKLIST=	auto/HTTP/Server/Simple/PSGI/.packlist
 
 DEPENDS+=	p5-HTTP-Server-Simple>=0.42:../../www/p5-HTTP-Server-Simple
 

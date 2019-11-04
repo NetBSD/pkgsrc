@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2016/08/21 09:53:55 bsiegert Exp $
+# $NetBSD: options.mk,v 1.4 2019/11/04 22:10:16 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wwwoffle
 PKG_SUPPORTED_OPTIONS=	inet6 gnutls libgcrypt
@@ -7,7 +7,7 @@ PKG_SUGGESTED_OPTIONS=	inet6 gnutls libgcrypt
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Minet6)
-CONFIGURE_ARGS+= --with-ipv6
+CONFIGURE_ARGS+=	--with-ipv6
 .endif
 
 .if !empty(PKG_OPTIONS:Mgnutls)

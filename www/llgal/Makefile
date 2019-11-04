@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/08/11 13:24:21 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/04 22:09:57 rillig Exp $
 
 DISTNAME=	llgal-0.13.19
 PKGREVISION=	2
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 GITHUB_TAG=	llgal-${PKGVERSION_NOREV}
 
-USE_PKGLOCALEDIR=yes
+USE_PKGLOCALEDIR=	yes
 
 USE_LANGUAGES=	# none
 

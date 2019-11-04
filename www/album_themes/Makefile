@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/08/11 13:24:16 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/11/04 22:09:50 rillig Exp $
 #
 
 DISTNAME=	album_data
@@ -24,7 +24,7 @@ A_HTTPDIR=	share/httpd/htdocs/Album
 
 PLIST_SRC=		${WRKDIR}/PLIST
 
-MESSAGE_SUBST= A_DATADIR=${A_DATADIR} A_HTTPDIR=${A_HTTPDIR}
+MESSAGE_SUBST=	A_DATADIR=${A_DATADIR} A_HTTPDIR=${A_HTTPDIR}
 
 INSTALLATION_DIRS=	${A_DATADIR}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2017/09/03 08:53:17 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2019/11/04 22:10:15 rillig Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
@@ -31,11 +31,11 @@ REPLACE.php.old=	.*php[^ ]*
 REPLACE.php.new=	${PREFIX}/bin/php
 REPLACE_FILES.php=	typo3/cli_dispatch.phpsh
 
-REPLACE_BASH= typo3/sysext/core/Build/Scripts/xlfcheck.sh \
+REPLACE_BASH=	typo3/sysext/core/Build/Scripts/xlfcheck.sh \
 	typo3/sysext/core/Build/Scripts/splitFunctionalTests.sh \
 	typo3/sysext/core/Build/Scripts/update-static-composer.sh
 
-OWN_DIRS_PERMS+= ${TYPO3DIR}/${SITEDIR} ${REAL_ROOT_USER} ${APACHE_GROUP} 0770
+OWN_DIRS_PERMS+=	${TYPO3DIR}/${SITEDIR} ${REAL_ROOT_USER} ${APACHE_GROUP} 0770
 
 BUILD_DEFS+=	APACHE_GROUP
 
@@ -43,7 +43,7 @@ FILES_SUBST+=	SITEDIR=${SITEDIR} TYPO3DIR=${TYPO3DIR} TYPO3NAME=${TYPO3NAME}
 MESSAGE_SUBST+=	SITEDIR=${SITEDIR} TYPO3DIR=${TYPO3DIR} 
 PLIST_SUBST+=	SITEDIR=${SITEDIR} TYPO3DIR=${TYPO3DIR} TYPO3NAME=${TYPO3NAME}
 
-INSTALLATION_DIRS+= ${TYPO3DIR}/${TYPO3NAME}
+INSTALLATION_DIRS+=	${TYPO3DIR}/${TYPO3NAME}
 
 PRINT_PLIST_AWK+=	/^${TYPO3DIR:S|/|\\/|g}\/${TYPO3NAME}/ \
 			{ gsub(/${TYPO3DIR:S|/|\\/|g}\/${TYPO3NAME}/, \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/08/11 13:25:00 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/04 22:10:09 rillig Exp $
 
 DISTNAME=	Task-Catalyst-Tutorial-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -30,7 +30,7 @@ REPLACE_PERL+=	examples/MyApp/script/*.pl
 REPLACE_PERL+=	examples/MyApp/t/*.t
 
 USE_LANGUAGES=		# empty
-PERL5_PACKLIST= 	auto/Task/Catalyst/Tutorial/.packlist
+PERL5_PACKLIST=		auto/Task/Catalyst/Tutorial/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 .include "../../lang/perl5/module.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/09/11 12:01:54 tm Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/04 22:09:50 rillig Exp $
 #
 
 DISTNAME=	SOGo-4.0.8
@@ -11,11 +11,11 @@ COMMENT=	Groupware server supporting CalDAV, CardDAV and GroupDAV
 LICENSE=	gnu-gpl-v2
 
 HAS_CONFIGURE=	yes
-USE_TOOLS+=     bash gmake zip:run
+USE_TOOLS+=	bash gmake zip:run
 
 CONFIG_SHELL=	bash
-CONFIGURE_ARGS= --enable-debug --disable-strip
-MAKE_JOBS_SAFE=		no
+CONFIGURE_ARGS=	--enable-debug --disable-strip
+MAKE_JOBS_SAFE=	no
 
 SOGOUSER?=	sogo
 SOGOGROUP?=	sogo
@@ -24,18 +24,18 @@ SOGORUNDIR?=	${VARBASE}/sogo
 
 INSTALLATION_DIRS+=	share/examples/SOGo
 
-CONF_FILES+=	share/examples/SOGo/sogo-conf.sh \
-		${PKG_SYSCONFDIR}/sogo-conf.sh
-CONF_FILES+=	share/examples/SOGo/SOGo.conf \
-		${PKG_SYSCONFDIR}/SOGo.conf
-OWN_DIRS+=	${SOGOETCDIR}
-OWN_DIRS+=	${SOGORUNDIR}
+CONF_FILES+=		share/examples/SOGo/sogo-conf.sh \
+			${PKG_SYSCONFDIR}/sogo-conf.sh
+CONF_FILES+=		share/examples/SOGo/SOGo.conf \
+			${PKG_SYSCONFDIR}/SOGo.conf
+OWN_DIRS+=		${SOGOETCDIR}
+OWN_DIRS+=		${SOGORUNDIR}
 OWN_DIRS_PERMS+=	${SOGOETCDIR} ${SOGOUSER} ${SOGOGROUP} 0755
 OWN_DIRS_PERMS+=	${SOGORUNDIR} ${SOGOUSER} ${SOGOGROUP} 0755
-BUILD_DEFS+=	VARBASE
+BUILD_DEFS+=		VARBASE
 
-PKG_GROUPS+=	${SOGOGROUP}
-PKG_USERS+=	${SOGOUSER}:${SOGOGROUP}
+PKG_GROUPS+=		${SOGOGROUP}
+PKG_USERS+=		${SOGOUSER}:${SOGOGROUP}
 PKG_HOME.${SOGOUSER}=	${SOGOETCDIR}
 PKG_SHELL.${SOGOUSER}=	${SH}
 PKG_GECOS.${SOGOUSER}=	SOGo daemon user
@@ -47,11 +47,11 @@ FILES_SUBST+=	SOGOETCDIR=${SOGOETCDIR}
 FILES_SUBST+=	SOGOUSER=${SOGOUSER}
 RCD_SCRIPTS=	sogod
 
-SUBST_CLASSES+=         paths
-SUBST_MESSAGE.paths=    Fixing hardcoded paths.
-SUBST_STAGE.paths=      pre-configure
-SUBST_FILES.paths=      SoObjects/SOGo/SOGoSystemDefaults.m
-SUBST_SED.paths=        -e 's,/etc/sogo/,${PKG_SYSCONFDIR}/,g'
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	Fixing hardcoded paths.
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	SoObjects/SOGo/SOGoSystemDefaults.m
+SUBST_SED.paths=	-e 's,/etc/sogo/,${PKG_SYSCONFDIR}/,g'
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-pie
 

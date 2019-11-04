@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/01/28 14:33:52 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/04 22:10:16 rillig Exp $
 #
 
 DISTNAME=	z-push-${ZPUSH_VERSION}
@@ -66,11 +66,11 @@ SUBST_FILES.conf=	${WRKDIR}/z-push.conf
 SUBST_VARS.conf=	ZPUSHDIR
 SUBST_MESSAGE.conf=	Fixing Z-push directory path for apache configuration.
 
-SUBST_CLASSES+=		state-dir
-SUBST_STAGE.state-dir=	pre-configure
-SUBST_FILES.state-dir=	config.php
-SUBST_VARS.state-dir=	ZPUSHSTATEDIR
-SUBST_MESSAGE.state-dir=Fixing Z-push state directory path.
+SUBST_CLASSES+=			state-dir
+SUBST_STAGE.state-dir=		pre-configure
+SUBST_FILES.state-dir=		config.php
+SUBST_VARS.state-dir=		ZPUSHSTATEDIR
+SUBST_MESSAGE.state-dir=	Fixing Z-push state directory path.
 
 post-extract:
 	${CP} ${FILESDIR}/z-push.conf ${WRKDIR}/z-push.conf
@@ -87,9 +87,9 @@ do-install:
 
 	cd ${WRKSRC} && pax -rwpam . ${DESTDIR}${ZPUSHDIR}
 
-.	for f in INSTALL LICENSE
-		${MV} ${DESTDIR}${ZPUSHDIR}/${f} ${DESTDIR}${DOCDIR}
-.	endfor
+.for f in INSTALL LICENSE
+	${MV} ${DESTDIR}${ZPUSHDIR}/${f} ${DESTDIR}${DOCDIR}
+.endfor
 
 	${LN} -sf ${ZPUSHDIR}/z-push-top.php	\
 		${DESTDIR}${PREFIX}/bin/z-push-top

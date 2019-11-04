@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2019/10/04 02:39:29 wen Exp $
+# $NetBSD: Makefile,v 1.51 2019/11/04 22:10:02 rillig Exp $
 
 DISTNAME=	Catalyst-Runtime-5.90124
 PKGNAME=	p5-${DISTNAME}
@@ -51,11 +51,11 @@ DEPENDS+=	p5-Plack-Middleware-MethodOverride-[0-9]*:../../www/p5-Plack-Middlewar
 DEPENDS+=	p5-Plack-Middleware-RemoveRedundantBody-[0-9]*:../../www/p5-Plack-Middleware-RemoveRedundantBody
 DEPENDS+=	p5-PerlIO-utf8_strict>=0:../../devel/p5-PerlIO-utf8_strict
 
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+BUILD_DEPENDS+=		p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 #BUILD_DEPENDS+=	p5-Test-MockObject>=1.07:../../devel/p5-Test-MockObject
 
-#MAKE_ENV+=	PERL_EXTUTILS_AUTOINSTALL=--skipdeps
-PERL5_PACKLIST= auto/Catalyst/Runtime/.packlist
+#MAKE_ENV+=		PERL_EXTUTILS_AUTOINSTALL=--skipdeps
+PERL5_PACKLIST=		auto/Catalyst/Runtime/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 .include "../../lang/perl5/module.mk"

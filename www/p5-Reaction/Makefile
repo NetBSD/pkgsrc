@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/08/11 13:24:58 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/04 22:10:08 rillig Exp $
 
 DISTNAME=	Reaction-0.002005
 PKGNAME=	p5-Reaction-0.2.5
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/Reaction
 COMMENT=	Perl 5 extended MVC framework based on Catalyst
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Reaction/.packlist
+PERL5_PACKLIST=	auto/Reaction/.packlist
 
 REPLACE_PERL+=	script/moose_to_rclass.pl
 REPLACE_PERL+=	script/rclass_back_to_moose.pl

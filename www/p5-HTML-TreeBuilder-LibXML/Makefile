@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/08/11 13:24:42 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/11/04 22:10:04 rillig Exp $
 
 DISTNAME=	HTML-TreeBuilder-LibXML-0.26
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl 5 HTML::TreeBuilder and XPath compatible interface with libxml
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/HTML/TreeBuilder/LibXML/.packlist
+PERL5_PACKLIST=	auto/HTML/TreeBuilder/LibXML/.packlist
 
 PERL5_MODULE_TYPE=	Module::Build::Tiny
 

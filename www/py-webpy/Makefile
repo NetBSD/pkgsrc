@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/09/02 13:20:01 adam Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/04 22:10:14 rillig Exp $
 
 DISTNAME=	web.py-0.37
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	public-domain
 
 USE_LANGUAGES=	#none
 
-REPLACE_PYTHON+=	web/__init__.py web/utils.py
+REPLACE_PYTHON+=		web/__init__.py web/utils.py
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.37
 
 .include "../../lang/python/application.mk"

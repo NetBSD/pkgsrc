@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.49 2019/09/11 16:30:05 gutteridge Exp $
+# $NetBSD: options.mk,v 1.50 2019/11/04 22:09:54 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
@@ -44,15 +44,15 @@ CONFIGURE_ARGS+=	--enable-debug-js-modules
 CONFIGURE_ARGS+=	--disable-install-strip
 PLIST.debug=		yes
 .else
-.if !empty(PKG_OPTIONS:Mdebug-info)
+.  if !empty(PKG_OPTIONS:Mdebug-info)
 CONFIGURE_ARGS+=	--enable-debug-symbols
 CONFIGURE_ARGS+=	--enable-optimize=-O0
 CONFIGURE_ARGS+=	--disable-install-strip
-.else
+.  else
 CONFIGURE_ARGS+=	--disable-debug-symbols
 CONFIGURE_ARGS+=	--enable-optimize=-O2
 CONFIGURE_ARGS+=	--enable-install-strip
-.endif
+.  endif
 CONFIGURE_ARGS+=	--disable-debug
 .endif
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/08/11 13:24:39 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/11/04 22:10:04 rillig Exp $
 
 DISTNAME=	HTML-Lint-2.32
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl 5 module to check for HTML errors in a string or file
 LICENSE=	artistic-2.0
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/HTML/Lint/.packlist
+PERL5_PACKLIST=	auto/HTML/Lint/.packlist
 
 DEPENDS+=	p5-HTML-Parser>=3.47:../../www/p5-HTML-Parser
 DEPENDS+=	p5-HTML-Tagset>=3.03:../../www/p5-HTML-Tagset

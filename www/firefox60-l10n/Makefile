@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/06/21 16:39:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2019/11/04 22:09:54 rillig Exp $
 #
 
 FIREFOX_VER=	60.7.2esr
@@ -19,14 +19,14 @@ NO_BUILD=	yes
 
 INSTALLATION_DIRS=	lib/firefox60/browser/extensions
 
-FIREFOX_LOCALES=ach af an ar as ast az be bg bn-BD bn-IN br bs ca cs	\
-		cy da de dsb el en-GB en-ZA eo es-AR es-CL es-ES 	\
-		es-MX et eu fa ff fi fr fy-NL ga-IE gd gl gn gu-IN	\
-		he hi-IN hr hsb hu hy-AM id is it ja ka kab kk km kn ko	\
-		lij lt lv mai mk ml mr ms my nb-NO ne-NP nl nn-NO oc or	\
-		pa-IN pl en-US	\
-		pt-BR pt-PT rm ro ru si sk sl son sq sr sv-SE ta te th	\
-		tr uk uz vi xh zh-CN zh-TW
+FIREFOX_LOCALES=	ach af an ar as ast az be bg bn-BD bn-IN br bs ca cs	\
+			cy da de dsb el en-GB en-ZA eo es-AR es-CL es-ES 	\
+			es-MX et eu fa ff fi fr fy-NL ga-IE gd gl gn gu-IN	\
+			he hi-IN hr hsb hu hy-AM id is it ja ka kab kk km kn ko	\
+			lij lt lv mai mk ml mr ms my nb-NO ne-NP nl nn-NO oc or	\
+			pa-IN pl en-US	\
+			pt-BR pt-PT rm ro ru si sk sl son sq sr sv-SE ta te th	\
+			tr uk uz vi xh zh-CN zh-TW
 
 EXTENSIONS_DIR=		${PREFIX}/lib/firefox60/browser/extensions
 XPI_FILES=		${FIREFOX_LOCALES:=.xpi}

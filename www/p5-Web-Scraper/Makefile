@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/08/11 13:25:06 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/04 22:10:11 rillig Exp $
 
 DISTNAME=	Web-Scraper-0.38
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,8 @@ HOMEPAGE=	https://metacpan.org/release/Web-Scraper
 COMMENT=	Perl 5 Web Scraping Toolkit inspired by Scrapi
 LICENSE=	${PERL5_LICENSE}
 
-USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Web/Scraper/.packlist
+USE_LANGUAGES=		# empty
+PERL5_PACKLIST=		auto/Web/Scraper/.packlist
 PERL5_MODULE_TYPE=	Module::Build::Tiny
 
 DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser

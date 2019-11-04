@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2016/09/11 17:03:28 taca Exp $
+# $NetBSD: options.mk,v 1.5 2019/11/04 22:09:56 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.horde
 PKG_SUPPORTED_OPTIONS=	ldap pgsql mysql
@@ -24,6 +24,6 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=4.3.3:../../databases/php-pgsql
 ### Use MySQL for storing user details
 ###
 .if !empty(PKG_OPTIONS:Mmysql)
-DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.3:../../databases/php-mysql
+DEPENDS+=		${PHP_PKG_PREFIX}-mysql>=4.3.3:../../databases/php-mysql
 PHP_VERSIONS_ACCEPTED=	56
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/08/11 13:24:55 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/04 22:10:06 rillig Exp $
 
 DISTNAME=	PSGI-1.102
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/PSGI/.packlist
+PERL5_PACKLIST=	auto/PSGI/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

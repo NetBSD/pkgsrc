@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2014/05/09 22:45:15 marino Exp $
+# $NetBSD: options.mk,v 1.11 2019/11/04 22:09:51 rillig Exp $
 
 
 # xmlada is built-in (not optional) due to gprbuild dependency
@@ -9,11 +9,11 @@
 # should not be switched on per default even on systems which
 # support IPv6. For that reason, the option name is not "inet6".
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.aws
+PKG_OPTIONS_VAR=		PKG_OPTIONS.aws
 PKG_OPTIONS_OPTIONAL_GROUPS=	slayer
 PKG_OPTIONS_GROUP.slayer=	ssl gnutls
-PKG_SUPPORTED_OPTIONS=	ldap inet6 debug relocatable
-PKG_SUGGESTED_OPTIONS=	ssl
+PKG_SUPPORTED_OPTIONS=		ldap inet6 debug relocatable
+PKG_SUGGESTED_OPTIONS=		ssl
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
@@ -71,9 +71,9 @@ CONFIGURE_ARGS+= LDAP=true
 ##  IPv6 Support  ##
 ####################
 
-PLIST_VARS+= ipv6 noipv6
+PLIST_VARS+=		ipv6 noipv6
 .if !empty(PKG_OPTIONS:Mipv6)
-CONFIGURE_ARGS+= IPv6=true
+CONFIGURE_ARGS+=	IPv6=true
 .endif
 
 #####################
@@ -81,8 +81,8 @@ CONFIGURE_ARGS+= IPv6=true
 #####################
 
 .if !empty(PKG_OPTIONS:Mdebug)
-CONFIGURE_ARGS+= DEBUG=true
-DOTBUILD=debug
+CONFIGURE_ARGS+=	DEBUG=true
+DOTBUILD=		debug
 .endif
 
 ##############################
@@ -90,7 +90,7 @@ DOTBUILD=debug
 ##############################
 
 #.if !empty(PKG_OPTIONS:Mdisable-shared-rt)
-CONFIGURE_ARGS+= ENABLE_SHARED=false
+CONFIGURE_ARGS+=	ENABLE_SHARED=false
 #.endif
 
 ############################
@@ -98,5 +98,5 @@ CONFIGURE_ARGS+= ENABLE_SHARED=false
 ############################
 
 .if !empty(PKG_OPTIONS:Mrelocatable)
-CONFIGURE_ARGS+= DEFAULT_LIBRARY_TYPE=relocatable
+CONFIGURE_ARGS+=	DEFAULT_LIBRARY_TYPE=relocatable
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/10/03 23:55:40 wen Exp $
+# $NetBSD: Makefile,v 1.25 2019/11/04 22:09:59 rillig Exp $
 
 DISTNAME=	CGI-Simple-1.22
 PKGNAME=	p5-${DISTNAME}
@@ -14,8 +14,8 @@ DEPENDS+=	p5-IO-stringy-[0-9]*:../../devel/p5-IO-stringy
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
 
-USE_LANGUAGES=	# empty
-PERL5_PACKLIST=	auto/CGI/Simple/.packlist
+USE_LANGUAGES=		# empty
+PERL5_PACKLIST=		auto/CGI/Simple/.packlist
 PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"

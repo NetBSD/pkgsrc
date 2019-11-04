@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/08/11 13:24:59 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/11/04 22:10:09 rillig Exp $
 
 DISTNAME=	Session-Storage-Secure-0.011
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Encrypted, expiring, compressed, serialized session data with integrity
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Session/Storage/Secure/.packlist
+PERL5_PACKLIST=	auto/Session/Storage/Secure/.packlist
 
 DEPENDS+=	p5-Crypt-CBC>=0:../../security/p5-Crypt-CBC
 DEPENDS+=	p5-Crypt-Rijndael-[0-9]*:../../security/p5-Crypt-Rijndael

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/08/11 13:24:37 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/11/04 22:10:03 rillig Exp $
 
 DISTNAME=	File-Mork-0.4
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/SIMONW/File-Mork-0.3
 COMMENT=	Module to read Mozilla URL history files
 LICENSE=	${PERL5_LICENSE}
 
-PERL5_PACKLIST= auto/File/Mork/.packlist
+PERL5_PACKLIST=	auto/File/Mork/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/08/11 13:25:05 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/04 22:10:11 rillig Exp $
 
 DISTNAME=	WWW-RobotRules-6.02
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 CONFLICTS+=	p5-libwww<6.00
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/WWW/RobotRules/.packlist
+PERL5_PACKLIST=	auto/WWW/RobotRules/.packlist
 
 DEPENDS+=	p5-URI>=1.27:../../www/p5-URI
 

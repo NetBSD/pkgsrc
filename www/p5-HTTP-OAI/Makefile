@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/08/31 14:18:41 wen Exp $
+# $NetBSD: Makefile,v 1.20 2019/11/04 22:10:05 rillig Exp $
 
 DISTNAME=	HTTP-OAI-4.09
 PKGNAME=	p5-${DISTNAME}
@@ -15,8 +15,8 @@ DEPENDS+=	p5-XML-SAX>=0.96:../../textproc/p5-XML-SAX
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
-USE_LANGUAGES=	# empty
-PERL5_PACKLIST=	auto/HTTP/OAI/.packlist
+USE_LANGUAGES=		# empty
+PERL5_PACKLIST=		auto/HTTP/OAI/.packlist
 PERL5_MODULE_TYPE=	Module::Build::Tiny
 
 .include "../../lang/perl5/module.mk"

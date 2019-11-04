@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2018/04/21 13:38:07 wiz Exp $
+# $NetBSD: Makefile,v 1.108 2019/11/04 22:09:58 rillig Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION}-${OPERA_PKG_BUILD}.${OPERA_ARCH}.${EMUL_OPSYS}
 PKGNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
@@ -36,26 +36,26 @@ EMUL_MODULES.linux=	base x11 fontconfig
 EMUL_REQD=		suse>=11.3
 OPERA_ARCH.x86_64=	x86_64
 OPERA_OPSYS_SUBDIR=	linux
-.if !defined(EMUL_IS_NATIVE) && ${OPSYS} == "NetBSD"
+.  if !defined(EMUL_IS_NATIVE) && ${OPSYS} == "NetBSD"
 TOOLS_CREATE+=		md5
 TOOLS_SCRIPT.md5=	/usr/bin/md5 -n "$$2" | { read sum file; echo $$sum; }
-.endif
-.if ${EMUL_ARCH} == "x86_64"
+.  endif
+.  if ${EMUL_ARCH} == "x86_64"
 PLIST.ia32w=		yes
-.endif
+.  endif
 PLIST.linux=		yes
 
 .elif ${EMUL_OPSYS} == "freebsd"
-OPERA_ARCH.x86_64=	amd64
-OPERA_OPSYS_SUBDIR=	unix
+OPERA_ARCH.x86_64=		amd64
+OPERA_OPSYS_SUBDIR=		unix
 # XXX: TBD
 #.  if defined(EMUL_IS_NATIVE)
-#DEPENDS+=		{gtk2+-[0-9]*,kdelibs4-[0-9]*}:../../x11/gtk2
+#DEPENDS+=			{gtk2+-[0-9]*,kdelibs4-[0-9]*}:../../x11/gtk2
 #CHECK_SHLIBS_SUPPORTED=	no
 #.  endif
 .endif
-OPERA_ARCH=		${OPERA_ARCH.${EMUL_ARCH}:U${EMUL_ARCH}}
-OPERA_DIR=		${OPERA_OPSYS_SUBDIR}/${OPERA_PKG_VERSION_DIR}
+OPERA_ARCH=			${OPERA_ARCH.${EMUL_ARCH}:U${EMUL_ARCH}}
+OPERA_DIR=			${OPERA_OPSYS_SUBDIR}/${OPERA_PKG_VERSION_DIR}
 
 MANCOMPRESSED=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2019/08/11 13:24:36 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2019/11/04 22:10:03 rillig Exp $
 
 DISTNAME=	Dancer-1.3512
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl 5 lightweight yet powerful web application framework
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Dancer/.packlist
+PERL5_PACKLIST=	auto/Dancer/.packlist
 
 BUILD_DEPENDS+=	p5-CGI>=0:../../www/p5-CGI
 BUILD_DEPENDS+=	p5-Devel-Hide>=0:../../devel/p5-Devel-Hide

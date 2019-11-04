@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2019/09/02 13:20:02 adam Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/04 22:10:12 rillig Exp $
 
 DISTNAME=	graphite-web-0.9.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
-GITHUB_PROJECT= graphite-web
+GITHUB_PROJECT=	graphite-web
 MASTER_SITES=	${MASTER_SITE_GITHUB:=graphite-project/}
 
 MAINTAINER=	riz@NetBSD.org
@@ -28,8 +28,8 @@ BUILD_DEFS+=		VARBASE GRAPHITE_DIR
 
 REPLACE_SH+=		bin/build-index.sh
 
-OWN_DIRS_PERMS+= ${GRAPHITE_LOG_DIR} ${GRAPHITE_USER} ${GRAPHITE_GROUP} 0755
-OWN_DIRS_PERMS+= ${GRAPHITE_LOG_DIR}/webapp ${WWW_USER} ${GRAPHITE_GROUP} 0775
+OWN_DIRS_PERMS+=	${GRAPHITE_LOG_DIR} ${GRAPHITE_USER} ${GRAPHITE_GROUP} 0755
+OWN_DIRS_PERMS+=	${GRAPHITE_LOG_DIR}/webapp ${WWW_USER} ${GRAPHITE_GROUP} 0775
 
 SUBST_CLASSES+=		dirs
 SUBST_STAGE.dirs=	pre-configure
@@ -59,9 +59,9 @@ CONF_FILES+=		${GRAPHITE_EGDIR}/${file}.example	\
 			${PKG_SYSCONFDIR}/${file}
 .endfor
 
-PYSETUPINSTALLARGS=	--prefix=${PREFIX}			\
+PYSETUPINSTALLARGS=		--prefix=${PREFIX}			\
 			--install-lib=${PREFIX}/${PYSITELIB}
-PYTHON_VERSIONS_ACCEPTED=	 27 # py-django-tagging
+PYTHON_VERSIONS_ACCEPTED=	27 # py-django-tagging
 
 INSTALLATION_DIRS+=	share/examples/graphite
 

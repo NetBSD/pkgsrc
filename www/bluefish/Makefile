@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.143 2019/09/02 13:20:04 adam Exp $
+# $NetBSD: Makefile,v 1.144 2019/11/04 22:09:52 rillig Exp $
 
 DISTNAME=	bluefish-2.2.10
 PKGREVISION=	3
@@ -22,12 +22,12 @@ CONFIGURE_ARGS+=	--with-freedesktop_org-mime=${PREFIX:Q}/share/mime
 CONFIGURE_ENV+=		EXTERNAL_GREP=${TOOLS_GREP:Q}
 CONFIGURE_ENV+=		EXTERNAL_FIND=${TOOLS_FIND:Q}
 
-CHECK_WRKREF_SKIP+=	lib/bluefish/about.so
-REPLACE_PYTHON+=	data/lorem-ipsum-generator data/jsbeautify
-REPLACE_PYTHON+=	data/cssmin.py data/jsmin.py
-REPLACE_PYTHON+=	data/css_decompressor
-CHECK_INTERPRETER_SKIP+= share/bluefish/plugins/*/*.py
-CHECK_INTERPRETER_SKIP+= share/bluefish/plugins/*/*/*.py
+CHECK_WRKREF_SKIP+=		lib/bluefish/about.so
+REPLACE_PYTHON+=		data/lorem-ipsum-generator data/jsbeautify
+REPLACE_PYTHON+=		data/cssmin.py data/jsmin.py
+REPLACE_PYTHON+=		data/css_decompressor
+CHECK_INTERPRETER_SKIP+=	share/bluefish/plugins/*/*.py
+CHECK_INTERPRETER_SKIP+=	share/bluefish/plugins/*/*/*.py
 
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 2.2.4
 

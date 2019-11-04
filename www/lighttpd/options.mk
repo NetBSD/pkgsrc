@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.21 2019/05/29 10:01:28 nia Exp $
+# $NetBSD: options.mk,v 1.22 2019/11/04 22:09:57 rillig Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.lighttpd
-PKG_SUPPORTED_OPTIONS=	bzip2 fam gdbm inet6 ldap lua mysql ssl memcached geoip gssapi webdav
+PKG_OPTIONS_VAR=		PKG_OPTIONS.lighttpd
+PKG_SUPPORTED_OPTIONS=		bzip2 fam gdbm inet6 ldap lua mysql ssl memcached geoip gssapi webdav
 PKG_OPTIONS_LEGACY_OPTS+=	memcache:memcached
-PKG_SUGGESTED_OPTIONS=	inet6 ssl
+PKG_SUGGESTED_OPTIONS=		inet6 ssl
 
 .include "../../mk/bsd.options.mk"
 

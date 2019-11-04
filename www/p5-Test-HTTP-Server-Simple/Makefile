@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/08/11 13:25:02 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/04 22:10:10 rillig Exp $
 
 DISTNAME=	Test-HTTP-Server-Simple-0.11
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl 5 module providing Test::More functions for HTTP::Server::Simple
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Test/HTTP/Server/Simple/.packlist
+PERL5_PACKLIST=	auto/Test/HTTP/Server/Simple/.packlist
 
 DEPENDS+=	p5-HTTP-Server-Simple-[0-9]*:../../www/p5-HTTP-Server-Simple
 # This may be only a build dependency - No, it's not

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/08/11 13:24:44 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/04 22:10:05 rillig Exp $
 #
 
 DISTNAME=	HTTP-GHTTP-1.07
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/HTTP-GHTTP
 COMMENT=	Perl interface to the gnome ghttp library
 
-PERL5_PACKLIST= auto/HTTP/GHTTP/.packlist
+PERL5_PACKLIST=	auto/HTTP/GHTTP/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../www/libghttp/buildlink3.mk"

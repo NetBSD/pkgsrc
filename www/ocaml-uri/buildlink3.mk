@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2019/03/19 14:26:38 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2019/11/04 22:09:58 rillig Exp $
 
 BUILDLINK_TREE+=	ocaml-uri
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ocaml-uri
 OCAML_URI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-uri+=	ocaml-uri>=2.2.0
-BUILDLINK_PKGSRCDIR.ocaml-uri?=	../../www/ocaml-uri
+BUILDLINK_PKGSRCDIR.ocaml-uri?=		../../www/ocaml-uri
 
 .endif	# OCAML_URI_BUILDLINK3_MK
 

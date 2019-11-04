@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.37 2019/08/11 13:25:08 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2019/11/04 22:10:15 rillig Exp $
 
-DISTNAME=	squidGuard-1.4
-PKGREVISION=	15
-CATEGORIES=	www
-MASTER_SITES=	http://www.squidguard.org/Downloads/
-MASTER_SITES+=	http://www.squidguard.org/Downloads/Patches/1.4/
-DISTFILES=	${DEFAULT_DISTFILES} \
-		squidGuard-1.4-patch-20091015.tar.gz \
-		squidGuard-1.4-patch-20091019.tar.gz
+DISTNAME=		squidGuard-1.4
+PKGREVISION=		15
+CATEGORIES=		www
+MASTER_SITES=		http://www.squidguard.org/Downloads/
+MASTER_SITES+=		http://www.squidguard.org/Downloads/Patches/1.4/
+DISTFILES=		${DEFAULT_DISTFILES} \
+			squidGuard-1.4-patch-20091015.tar.gz \
+			squidGuard-1.4-patch-20091019.tar.gz
 # http://bugs.squid-cache.org/show_bug.cgi?id=3978
-PATCH_SITES=	-http://bugs.squid-cache.org/attachment.cgi?id=2988
-PATCHFILES=	squidGuard-1.4_upgrade.patch
+PATCH_SITES=		-http://bugs.squid-cache.org/attachment.cgi?id=2988
+PATCHFILES=		squidGuard-1.4_upgrade.patch
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

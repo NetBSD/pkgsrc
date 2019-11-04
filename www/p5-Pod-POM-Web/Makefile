@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/08/11 13:24:57 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2019/11/04 22:10:08 rillig Exp $
 
 DISTNAME=	Pod-POM-Web-1.23
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl 5 module providing a HTML Perldoc server
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=		# empty
-PERL5_PACKLIST= 	auto/Pod/POM/Web/.packlist
+PERL5_PACKLIST=		auto/Pod/POM/Web/.packlist
 PERL5_MODULE_TYPE=	Module::Build
 
 DEPENDS+=	p5-Alien-GvaScript>=1.21:../../www/p5-Alien-GvaScript
@@ -24,8 +24,8 @@ DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
 # recommends
-DEPENDS+=       p5-AnnoCPAN-Perldoc-[0-9]*:../../devel/p5-AnnoCPAN-Perldoc
-DEPENDS+=       p5-PPI-HTML-[0-9]*:../../textproc/p5-PPI-HTML
+DEPENDS+=	p5-AnnoCPAN-Perldoc-[0-9]*:../../devel/p5-AnnoCPAN-Perldoc
+DEPENDS+=	p5-PPI-HTML-[0-9]*:../../textproc/p5-PPI-HTML
 DEPENDS+=	p5-Search-Indexer>=0.75:../../textproc/p5-Search-Indexer
 
 .include "../../lang/perl5/module.mk"

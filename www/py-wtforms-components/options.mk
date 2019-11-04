@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2017/02/20 17:00:37 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2019/11/04 22:10:14 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-wtforms-components
 PKG_SUPPORTED_OPTIONS=	arrow babel color ipaddress password phone tests
@@ -43,7 +43,7 @@ DEPENDS+=	${PYPKGPREFIX}-pymysql-[0-9]*:../../databases/py-pymysql
 DEPENDS+=	${PYPKGPREFIX}-arrow>=0.3.4:../../time/py-arrow
 DEPENDS+=	${PYPKGPREFIX}-babel>=1.3:../../devel/py-babel
 DEPENDS+=	${PYPKGPREFIX}-colour>=0.0.4:../../textproc/py-colour
-DEPENDS+=       ${PYPKGPREFIX}-intervals>=0.2.4:../../math/py-intervals
+DEPENDS+=	${PYPKGPREFIX}-intervals>=0.2.4:../../math/py-intervals
 DEPENDS+=	${PYPKGPREFIX}-ipaddr-[0-9]*:../../devel/py-ipaddr
 DEPENDS+=	${PYPKGPREFIX}-passlib>=1.6<2.0:../../security/py-passlib
 DEPENDS+=	${PYPKGPREFIX}-phonenumbers>=5.9.2:../../textproc/py-phonenumbers

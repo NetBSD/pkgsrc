@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/05/07 14:26:06 hauke Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/04 22:10:12 rillig Exp $
 
 PYBLOXSOMVERS=	1.5.3
 DISTNAME=	pyblosxom-${PYBLOXSOMVERS}
@@ -17,9 +17,9 @@ DIST_SUBDIR=	${DISTNAME}	# upstream reissued tarball with no changes
 
 USE_LANGUAGES=	#none
 
-DOC_SUBDIR=     share/doc/pyblosxom
-DOCDIR=         ${PREFIX}/${DOC_SUBDIR}
-DOCFILES=       AUTHORS INSTALL LICENSE README.rst UPGRADE WHATSNEW
+DOC_SUBDIR=	share/doc/pyblosxom
+DOCDIR=		${PREFIX}/${DOC_SUBDIR}
+DOCFILES=	AUTHORS INSTALL LICENSE README.rst UPGRADE WHATSNEW
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 
@@ -27,7 +27,7 @@ INSTALLATION_DIRS=		${DOC_SUBDIR}
 
 REPLACE_PYTHON=			Pyblosxom/data/pyblosxom.cgi
 
-PYTHON_VERSIONS_ACCEPTED=	 27
+PYTHON_VERSIONS_ACCEPTED=	27
 
 pre-configure:
 	cd ${WRKSRC} && ${FIND} Pyblosxom -type f -name '*.orig' \
