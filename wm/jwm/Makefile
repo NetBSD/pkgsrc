@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2019/07/21 22:25:51 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2019/11/04 21:50:16 rillig Exp $
 
 DISTNAME=		jwm-2.3.7
 PKGREVISION=		6
@@ -37,7 +37,7 @@ SUBST_SED.icondir+=	-e 's|/usr/local/share|${PREFIX}/share|g'
 
 PKG_SYSCONFSUBDIR=	jwm
 EGDIR=			${PREFIX}/share/examples/jwm
-CONF_FILES=	${EGDIR}/system.jwmrc ${PKG_SYSCONFDIR}/system.jwmrc
+CONF_FILES=		${EGDIR}/system.jwmrc ${PKG_SYSCONFDIR}/system.jwmrc
 
 INSTALLATION_DIRS=	bin
 
