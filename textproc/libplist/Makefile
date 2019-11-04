@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/09/02 13:20:11 adam Exp $
+# $NetBSD: Makefile,v 1.23 2019/11/04 21:43:38 rillig Exp $
 
 DISTNAME=	libplist-1.12
 PKGREVISION=	1
@@ -17,9 +17,9 @@ USE_TOOLS+=	bash gmake pkg-config
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 
-PKGCONFIG_OVERRIDE+=	libplist++.pc.in
-PKGCONFIG_OVERRIDE+=	libplist.pc.in
-PY_PATCHPLIST=		yes
+PKGCONFIG_OVERRIDE+=		libplist++.pc.in
+PKGCONFIG_OVERRIDE+=		libplist.pc.in
+PY_PATCHPLIST=			yes
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 1.8
 
 .include "../../devel/py-cython/buildlink3.mk"

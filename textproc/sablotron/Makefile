@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2019/08/11 13:24:01 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2019/11/04 21:43:47 rillig Exp $
 
 DISTNAME=		Sablot-1.0.2
 PKGNAME=		${DISTNAME:S/Sablot/sablotron/}
@@ -12,7 +12,7 @@ COMMENT=		XML toolkit implementing XSLT, DOM, and XPath
 
 BUILD_DEPENDS+=		p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
-GNU_CONFIGURE=	YES
+GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake perl
 USE_LANGUAGES=		c c++03
 USE_LIBTOOL=		YES

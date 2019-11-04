@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/09/09 06:06:13 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/11/04 21:43:35 rillig Exp $
 
 DISTNAME=	muse-3.20
 PKGNAME=	${EMACS_PKGNAME_PREFIX}emacs-${DISTNAME}
@@ -15,7 +15,7 @@ USE_LANGUAGES=	# none
 USE_TOOLS+=	gmake makeinfo
 INFO_FILES=	yes
 
-MAKE_FLAGS+=	-I..
+MAKE_FLAGS+=		-I..
 INSTALLATION_DIRS=	share/doc/emacs-muse share/examples/emacs-muse
 
 pre-build:

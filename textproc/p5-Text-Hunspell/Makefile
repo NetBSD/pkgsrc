@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/08/11 13:23:44 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/11/04 21:43:42 rillig Exp $
 
 DISTNAME=	Text-Hunspell-2.14
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 BUILD_DEPENDS+=	p5-Alien-Hunspell-[0-9]*:../../textproc/p5-Alien-Hunspell
 
-USE_LANGUAGES=          c c++
+USE_LANGUAGES=		c c++
 
 PERL5_PACKLIST=	auto/Text/Hunspell/.packlist
 

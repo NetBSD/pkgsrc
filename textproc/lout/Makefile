@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2013/12/16 06:33:06 dholland Exp $
+# $NetBSD: Makefile,v 1.20 2019/11/04 21:43:38 rillig Exp $
 
 DISTNAME=	lout-3.40
 PKGREVISION=	1
@@ -10,9 +10,9 @@ HOMEPAGE=	http://savannah.nongnu.org/projects/lout
 COMMENT=	Basser Lout, a TeX/troff-like formatter with PostScript/PDF output
 LICENSE=	gnu-gpl-v3
 
-MAKE_FILE=	makefile
-NO_CONFIGURE=	yes
-INSTALL_TARGET=	allinstall
+MAKE_FILE=		makefile
+NO_CONFIGURE=		yes
+INSTALL_TARGET=		allinstall
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc
 
 .include "../../devel/zlib/buildlink3.mk"

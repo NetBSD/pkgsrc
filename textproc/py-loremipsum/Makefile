@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2016/08/20 07:19:51 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/04 21:43:46 rillig Exp $
 
-DISTNAME=       loremipsum-1.0.5
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	loremipsum-1.0.5
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/loremipsum/}
 

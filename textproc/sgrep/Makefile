@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/25 06:57:00 asau Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/04 21:43:48 rillig Exp $
 #
 
 DISTNAME=	sgrep-1.94a
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.cs.helsinki.fi/u/jjaakkol/sgrep.html
 COMMENT=	Tool for searching and indexing text, SGML,XML and HTML files
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 # only used for example files
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/examples/sgrep
 

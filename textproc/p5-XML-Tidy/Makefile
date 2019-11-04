@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/08/11 13:23:57 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/04 21:43:44 rillig Exp $
 #
 
 DISTNAME=	XML-Tidy-1.20
@@ -13,8 +13,8 @@ HOMEPAGE=	https://metacpan.org/release/XML-Tidy
 COMMENT=	Tidy indenting of XML documents
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=    	p5-XML-XPath-[0-9]*:../../textproc/p5-XML-XPath
-DEPENDS+=    	p5-Math-BaseCnv-[0-9]*:../../math/p5-Math-BaseCnv
+DEPENDS+=	p5-XML-XPath-[0-9]*:../../textproc/p5-XML-XPath
+DEPENDS+=	p5-Math-BaseCnv-[0-9]*:../../math/p5-Math-BaseCnv
 
 PERL5_PACKLIST=		auto/XML/Tidy/.packlist
 

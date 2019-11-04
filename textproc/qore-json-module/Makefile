@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.7 2018/06/08 19:53:30 nros Exp $
+# $NetBSD: Makefile,v 1.8 2019/11/04 21:43:46 rillig Exp $
 
 DISTNAME=	qore-json-module-1.7
 CATEGORIES=	textproc
-MASTER_SITES=   ${MASTER_SITE_GITHUB:=qorelanguage/}
-EXTRACT_SUFX=   .tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=qorelanguage/}
+EXTRACT_SUFX=	.tar.bz2
 GITHUB_PROJECT=	module-json
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 
 MAINTAINER=	nros@NetBSD.org
 COMMENT=	JSON module for Qore
-HOMEPAGE=       http://www.qore.org/
+HOMEPAGE=	http://www.qore.org/
 LICENSE=	gnu-lgpl-v2.1 OR mit
 
 GNU_CONFIGURE=	yes
@@ -19,7 +19,7 @@ USE_LANGUAGES=	c c++11
 USE_TOOLS+=	gmake pax
 PTHREAD_OPTS+=	native
 
-CONFIGURE_ARGS+=--with-libsuffix=""
+CONFIGURE_ARGS+=	--with-libsuffix=""
 
 #This is needed in order to comply the with MIT license and binary distribution
 #Install docs
