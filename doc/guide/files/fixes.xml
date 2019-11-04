@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.148 2019/05/20 18:14:24 leot Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.149 2019/11/04 18:47:27 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -2042,7 +2042,7 @@ PERL5_PACKLIST= auto/Pg/.packlist
   immediately. In this case, one can plainly mark a package as broken.  For
   this, one just sets the variable <varname>BROKEN</varname> to the
   reason why the package is broken (similar to the
-  <varname>RESTRICTED</varname> variable).  A user trying to build
+  <varname>PKG_FAIL_REASON</varname> variable).  A user trying to build
   the package will immediately be shown this message, and the build
   will not be even tried.</para>
   <para><varname>BROKEN</varname> packages are removed from pkgsrc in irregular
