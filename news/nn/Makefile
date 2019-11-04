@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2017/01/04 22:34:47 roy Exp $
+# $NetBSD: Makefile,v 1.50 2019/11/04 19:17:11 rillig Exp $
 
 DISTNAME=	nn-6.7.3
 PKGREVISION=	5
@@ -24,11 +24,11 @@ SFILE.*=	s-netbsd.h
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "i386"
-MFILE=		m-i80386.h
+MFILE=	m-i80386.h
 .elif ${MACHINE_ARCH} == "mipseb"
-MFILE=         m-mipsel.h
+MFILE=	m-mipsel.h
 .else
-MFILE=		m-${MACHINE_ARCH}.h
+MFILE=	m-${MACHINE_ARCH}.h
 .endif
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man8

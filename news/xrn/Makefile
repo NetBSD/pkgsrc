@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/11/10 20:03:40 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/04 19:17:11 rillig Exp $
 
 DISTNAME=	xrn-10.11
 CATEGORIES=	news
@@ -13,7 +13,7 @@ GNU_CONFIGURE=	yes
 # Note for gmake: Recent NetBSD make should work too, bmake-20150505 fails
 USE_TOOLS+=	gmake lex pkg-config yacc
 
-DOCDIR=		share/doc/xrn
+DOCDIR=			share/doc/xrn
 INSTALLATION_DIRS+=	${DOCDIR}
 INSTALLATION_DIRS+=	lib/X11/app-defaults
 

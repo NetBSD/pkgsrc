@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2010/04/13 21:18:00 spz Exp $
+# $NetBSD: options.mk,v 1.7 2019/11/04 19:17:10 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.inn
 PKG_SUPPORTED_OPTIONS=	inet6 perl python uucp
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+=	--enable-ipv6
 ###
 .if !empty(PKG_OPTIONS:Muucp)
 CONFIGURE_ARGS+=	--enable-uucp-rnews
-PKG_GROUPS+= uucp
+PKG_GROUPS+=		uucp
 .else
 CONFIGURE_ARGS+=	--disable-uucp-rnews
 .endif
