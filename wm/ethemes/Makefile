@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2015/09/12 16:54:03 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2019/11/04 21:50:16 rillig Exp $
 
 DISTNAME=	ethemes-0.1
 PKGREVISION=	3
@@ -24,7 +24,7 @@ E_DATADIR=	share/enlightenment/themes
 .include "../../mk/bsd.prefs.mk"
 
 E_THEMES?=	Absolute_E-DR16-199911060830.etheme \
-	ApplePlatinum-DR16-200001161300.etheme \
+		ApplePlatinum-DR16-200001161300.etheme \
 	BevelFree-DR16-199908221339.etheme Black-DR16-199911201455.etheme \
 	E-Tech_Hydro-DR16-199912241355.etheme Ebench-DR16-199911181110.etheme \
 	Evisio-Green-DR16-199908220707.etheme \
