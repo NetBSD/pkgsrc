@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/09/16 05:13:28 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/11/04 21:13:02 rillig Exp $
 
 DISTNAME=	scrypt-1.3.0
 CATEGORIES=	security
@@ -10,8 +10,8 @@ HOMEPAGE=	https://www.tarsnap.com/scrypt/
 COMMENT=	Encrypt and decrypt files
 LICENSE=	2-clause-bsd
 
-GNU_CONFIGURE=	yes
-TEST_TARGET=	test
+GNU_CONFIGURE=		yes
+TEST_TARGET=		test
 UNLIMIT_RESOURCES=	datasize
 
 .include "../../security/openssl/buildlink3.mk"
