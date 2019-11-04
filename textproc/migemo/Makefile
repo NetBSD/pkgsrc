@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2016/03/13 09:36:59 taca Exp $
+# $NetBSD: Makefile,v 1.10 2019/11/04 21:43:39 rillig Exp $
 
 .include "../../textproc/migemo/Makefile.common"
 
@@ -7,7 +7,7 @@ PKGREVISION=		2
 
 COMMENT=		Japanese text search tool/library
 
-LICENSE=        gnu-gpl-v2
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=		${RUBY_PKGPREFIX}-bsearch-[0-9]*:../../devel/ruby-bsearch
 DEPENDS+=		${RUBY_PKGPREFIX}-romkan-[0-9]*:../../converters/ruby-romkan

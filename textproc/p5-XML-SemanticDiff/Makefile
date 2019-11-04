@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/08/11 13:23:56 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2019/11/04 21:43:43 rillig Exp $
 
 DISTNAME=	XML-SemanticDiff-1.0007
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
-PERL5_PACKLIST=	auto/XML/SemanticDiff/.packlist
+PERL5_PACKLIST=		auto/XML/SemanticDiff/.packlist
 PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/09/02 13:20:13 adam Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/04 21:43:46 rillig Exp $
 
 DISTNAME=	queequeg-0.91
 PKGREVISION=	2
@@ -15,7 +15,7 @@ BUILD_DEPENDS+=	WordNet-[0-9]*:../../textproc/WordNet
 
 USE_LANGUAGES=	# none
 PY_PATCHPLIST=	yes
-PYTHON_VERSIONS_ACCEPTED=	 27 # py-cdb
+PYTHON_VERSIONS_ACCEPTED= 27 # py-cdb
 
 SUBST_CLASSES+=			fix-python
 SUBST_STAGE.fix-python=		pre-configure

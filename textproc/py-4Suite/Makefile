@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/09/02 13:20:11 adam Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/04 21:43:45 rillig Exp $
 
 VER=		1.0.2
 DISTNAME=	4Suite-XML-${VER}
@@ -24,7 +24,7 @@ SUBST_FILES.python+=	test/test.py
 SUBST_STAGE.python=	post-build
 SUBST_SED.python=	-e 's,\#![^ ]* python,\#! ${PYTHONBIN},'
 
-#PYTHON_SELF_CONFLICT=	yes
+#PYTHON_SELF_CONFLICT=		yes
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 1.0.2
 
 do-configure:
