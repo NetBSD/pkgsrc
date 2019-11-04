@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/08/11 13:23:02 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2019/11/04 21:14:07 rillig Exp $
 
 DISTNAME=	XML-XSH-1.8.2
 PKGNAME=	${DISTNAME:S/XML-XSH/xsh/}
@@ -19,7 +19,7 @@ DEPENDS+=	p5-XML-NodeFilter-[0-9]*:../../textproc/p5-XML-NodeFilter
 USE_TOOLS+=	gmake
 PKG_SHELL=	bin/xsh
 
-PERL5_PACKLIST= auto/XML/XSH/.packlist
+PERL5_PACKLIST=	auto/XML/XSH/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

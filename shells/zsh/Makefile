@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2019/03/16 14:01:45 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2019/11/04 21:14:07 rillig Exp $
 
 DISTNAME=	zsh-5.7.1
 PKGREVISION=	1
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--disable-gdbm
 CONFIGURE_ARGS+=	--enable-etcdir=${PKG_SYSCONFDIR:Q}
 
 # Ensure we can find initscr(3) otherwise the curses module will not be built.
-CONFIGURE_ARGS+=        --with-term-lib="${BUILDLINK_LIBNAME.curses} ${BUILDLINK_LIBNAME.terminfo}"
+CONFIGURE_ARGS+=	--with-term-lib="${BUILDLINK_LIBNAME.curses} ${BUILDLINK_LIBNAME.terminfo}"
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -43,11 +43,11 @@ CONFIGURE_ENV.NetBSD+=	zsh_cv_sys_dynamic_execsyms=yes
 
 INSTALLATION_DIRS+=	share/doc/zsh
 
-PLIST_VARS+=	xattr
+PLIST_VARS+=		xattr
 .if exists(/usr/include/sys/xattr.h) || \
     exists(/usr/include/${NATIVE_MACHINE_GNU_ARCH}-${LOWER_OPSYS}-gnu/sys/xattr.h) || \
     defined(OSX_SDK_PATH) && exists(${OSX_SDK_PATH}/usr/include/sys/xattr.h)
-PLIST.xattr=	yes
+PLIST.xattr=		yes
 .endif
 PRINT_PLIST_AWK+=	{if ($$0 ~ /attr.so/) {$$0 = "$${PLIST.xattr}" $$0;}}
 
