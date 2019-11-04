@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4747 2019/11/04 14:43:00 wen Exp $
+$NetBSD: CHANGES-2019,v 1.4748 2019/11/04 15:36:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7543,3 +7543,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/p5-Pod-Markdown to 3.200 [wen 2019-11-04]
 	Updated textproc/p5-PDF-Create to 1.46 [wen 2019-11-04]
 	Updated textproc/p5-Locale-Maketext-Gettext to 1.30 [wen 2019-11-04]
+	Updated misc/ruby-slop to 4.7.0 [taca 2019-11-04]
