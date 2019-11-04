@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/08/22 12:23:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.34 2019/11/04 22:09:58 rillig Exp $
 #
 
 DISTNAME=		ocurl-0.5.3
@@ -13,7 +13,7 @@ HOMEPAGE=		https://sourceforge.net/projects/ocurl/
 COMMENT=		OCaml bindings to the CURL library
 LICENSE=		mit
 
-MAKE_JOBS_SAFE=         no
+MAKE_JOBS_SAFE=		no
 
 USE_TOOLS=		gmake
 GNU_CONFIGURE=		yes

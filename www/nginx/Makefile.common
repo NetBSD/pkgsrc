@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2019/05/06 09:38:48 adam Exp $
+# $NetBSD: Makefile.common,v 1.16 2019/11/04 22:09:57 rillig Exp $
 # used by www/nginx/Makefile
 # used by www/nginx-devel/Makefile
 
@@ -29,9 +29,9 @@ PKG_GROUPS_VARS+=	NGINX_GROUP
 PKG_GROUPS=		${NGINX_GROUP}
 PKG_USERS=		${NGINX_USER}:${NGINX_GROUP}
 
-PKG_GECOS.${NGINX_USER}=NGINX server user
-PKG_HOME.${NGINX_USER}=	${NGINX_DATADIR}
-PKG_SHELL.${NGINX_USER}=${NOLOGIN}
+PKG_GECOS.${NGINX_USER}=	NGINX server user
+PKG_HOME.${NGINX_USER}=		${NGINX_DATADIR}
+PKG_SHELL.${NGINX_USER}=	${NOLOGIN}
 
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes

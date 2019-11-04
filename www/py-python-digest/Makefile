@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/09/02 13:20:02 adam Exp $
+# $NetBSD: Makefile,v 1.12 2019/11/04 22:10:13 rillig Exp $
 
 DISTNAME=	python-digest-1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED=	 27
+PYTHON_VERSIONS_ACCEPTED=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/08/11 13:24:58 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2019/11/04 22:10:08 rillig Exp $
 
 DISTNAME=	Rose-HTML-Objects-0.623
 PKGNAME=	p5-${DISTNAME}
@@ -29,7 +29,7 @@ DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 BUILD_DEPENDS+=	p5-Test-Memory-Cycle-[0-9]*:../../devel/p5-Test-Memory-Cycle
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST=		auto/Rose/HTML/Objects/.packlist
+PERL5_PACKLIST=	auto/Rose/HTML/Objects/.packlist
 
 post-extract:
 	${FIND} ${WRKSRC} -name "*.pm" -type f -exec ${CHMOD} -x {} \;

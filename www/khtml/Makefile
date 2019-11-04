@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/09/18 14:17:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.34 2019/11/04 22:09:56 rillig Exp $
 
 DISTNAME=	khtml-${KF5VER}
 PKGREVISION=	1
@@ -14,7 +14,7 @@ MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/${KF5VER:R}/portingAids/}
 USE_TOOLS+=	perl msgfmt
 
 # generation of kded.moc fails when ${PREFIX}/include in the moc include path
-SUBST_CLASSES+=	fix-moc
+SUBST_CLASSES+=		fix-moc
 SUBST_STAGE.fix-moc=	post-configure
 SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
 SUBST_FILES.fix-moc=	_KDE_build/src/CMakeFiles/khtmlpart_autogen.dir/AutogenInfo.cmake 

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2015/06/12 23:40:16 taca Exp $
+# $NetBSD: options.mk,v 1.4 2019/11/04 22:09:52 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.c-icap
 PKG_SUPPORTED_OPTIONS=	bdb clamav
@@ -20,9 +20,9 @@ CONFIGURE_ARGS+=	--without-bdb
 .if !empty(PKG_OPTIONS:Mclamav)
 PLIST.clamav=		yes
 CONFIGURE_ARGS+=	--with-clamav
-CONF_FILES+=	${EGDIR}/virus_scan.conf.default ${PKG_SYSCONFDIR}/virus_scan.conf
-CONF_FILES+=	${EGDIR}/clamd_mod.conf.default ${PKG_SYSCONFDIR}/clamd_mod.conf
-CONF_FILES+=	${EGDIR}/clamav_mod.conf.default ${PKG_SYSCONFDIR}/clamav_mod.conf
+CONF_FILES+=		${EGDIR}/virus_scan.conf.default ${PKG_SYSCONFDIR}/virus_scan.conf
+CONF_FILES+=		${EGDIR}/clamd_mod.conf.default ${PKG_SYSCONFDIR}/clamd_mod.conf
+CONF_FILES+=		${EGDIR}/clamav_mod.conf.default ${PKG_SYSCONFDIR}/clamav_mod.conf
 
 .  include "../../security/clamav/buildlink3.mk"
 .else

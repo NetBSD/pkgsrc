@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.19 2019/05/04 09:32:29 leot Exp $
+# $NetBSD: options.mk,v 1.20 2019/11/04 22:09:56 rillig Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ikiwiki
 PKG_SUPPORTED_OPTIONS=		cgi imagemagick l10n python w3m
@@ -16,9 +16,9 @@ DEPENDS+=	p5-DB_File-[0-9]*:../../databases/p5-DB_File
 .endif
 
 .if !empty(PKG_OPTIONS:Mcvs)
-. if !exists(/usr/bin/cvs)
+.  if !exists(/usr/bin/cvs)
 DEPENDS+=	cvs-[0-9]*:../../devel/scmcvs
-. endif
+.  endif
 DEPENDS+=	cvsps-[0-9]*:../../devel/cvsps
 DEPENDS+=	cvsweb-[0-9]*:../../www/cvsweb
 DEPENDS+=	p5-File-chdir-[0-9]*:../../devel/p5-File-chdir
@@ -61,8 +61,8 @@ SUBST_SED.l10n+=	-e 's|\(Locale::Po4a::Common\)|\1::Iff::PKG_OPTIONS|'
 .endif
 
 .if !empty(PKG_OPTIONS:Mpython)
-DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
-DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+DEPENDS+=		${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
+DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 .else
 PYTHON_FOR_BUILD_ONLY=	yes
 .endif

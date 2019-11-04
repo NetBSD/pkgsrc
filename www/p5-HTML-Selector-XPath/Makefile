@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/08/11 13:24:40 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/04 22:10:04 rillig Exp $
 
 DISTNAME=	HTML-Selector-XPath-0.25
 PKGNAME=	p5-${DISTNAME}
@@ -11,10 +11,10 @@ HOMEPAGE=	https://metacpan.org/release/HTML-Selector-XPath
 COMMENT=	Perl 5 CSS Selector to XPath compiler
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+= p5-Test-Base-[0-9]*:../../devel/p5-Test-Base
+BUILD_DEPENDS+=	p5-Test-Base-[0-9]*:../../devel/p5-Test-Base
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/HTML/Selector/XPath/.packlist
+PERL5_PACKLIST=	auto/HTML/Selector/XPath/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

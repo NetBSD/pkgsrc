@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/08/11 13:24:46 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/04 22:10:05 rillig Exp $
 
 DISTNAME=	HTTP-Parser-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl 5 module to parse HTTP request into HTTP::Request/Response object
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/HTTP/Parser/.packlist
+PERL5_PACKLIST=	auto/HTTP/Parser/.packlist
 
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
