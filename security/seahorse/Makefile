@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.153 2019/07/21 22:24:11 wiz Exp $
+# $NetBSD: Makefile,v 1.154 2019/11/04 21:13:02 rillig Exp $
 
 DISTNAME=	seahorse-2.32.0
 PKGREVISION=	56
@@ -12,14 +12,14 @@ COMMENT=	GnuPG front end and bonobo component for GNOME
 #LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.1 AND gnu-lgpl-v2
 
 .if exists(/usr/bin/ssh) && exists(/usr/bin/ssh-add) && exists(/usr/bin/ssh-keygen)
-SSH_PATH=/usr/bin/ssh
-SSH_ADD_PATH=/usr/bin/ssh-add
-SSH_KEYGEN_PATH=/usr/bin/ssh-keygen
+SSH_PATH=		/usr/bin/ssh
+SSH_ADD_PATH=		/usr/bin/ssh-add
+SSH_KEYGEN_PATH=	/usr/bin/ssh-keygen
 .else
 DEPENDS+=		{ssh{,6}-[0-9]*,openssh-[0-9]*}:../../security/openssh
-SSH_PATH=${PREFIX}/bin/ssh
-SSH_ADD_PATH=${PREFIX}/bin/ssh-add
-SSH_KEYGEN_PATH=${PREFIX}/ssh-keygen
+SSH_PATH=		${PREFIX}/bin/ssh
+SSH_ADD_PATH=		${PREFIX}/bin/ssh-add
+SSH_KEYGEN_PATH=	${PREFIX}/ssh-keygen
 .endif
 
 GNU_CONFIGURE=		yes
@@ -35,7 +35,7 @@ CONFIGURE_ENV+=		SSH_KEYGEN_PATH=${SSH_KEYGEN_PATH:Q}
 CONFIGURE_ENV+=		GNUPG=${GPGME_GPG}
 
 PKGCONFIG_OVERRIDE+=	libcryptui/cryptui.pc.in
-GCONF_SCHEMAS= 	seahorse.schemas
+GCONF_SCHEMAS=		seahorse.schemas
 
 # for PKCS11
 .include "../../security/gnome-keyring/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.242 2019/08/11 13:22:48 wiz Exp $
+# $NetBSD: Makefile,v 1.243 2019/11/04 21:12:56 rillig Exp $
 
 DISTNAME=	openssl-1.0.2s
 PKGREVISION=	1
@@ -85,7 +85,7 @@ _OS=			darwin
 _ARCH=			ppc
 .  else
 _ARCH=			${MACHINE_ARCH}
-.endif
+.  endif
 CONFIGURE_ARGS+=	${_OS}-${_ARCH}-cc
 
 SUBST_CLASSES+=		dl

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2017/09/04 18:01:00 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/04 21:13:02 rillig Exp $
 #
 
 DISTNAME=	smtpd-2.0
@@ -21,14 +21,14 @@ RCD_SCRIPTS=	smtpfwdd
 FILES_SUBST+=	SPOOL=${SPOOL:Q}
 
 # taken directly from the Makefile.
-CFLAGS.NetBSD+=	-DUSE_FLOCK -DUSE_MKSTEMP
+CFLAGS.NetBSD+=		-DUSE_FLOCK -DUSE_MKSTEMP
 CFLAGS.DragonFly+=	-DUSE_FLOCK -DUSE_MKSTEMP
-CFLAGS.SunOS+=	-DUSE_LOCKF -DNEEDS_FCNTL_H -DNEEDS_STRINGS_H -DBROKEN_SUN_INCLUDES
-CFLAGS.IRIX+=	-DGETOPT_EOF -DUSE_FLOCK -DNEEDS_FCNTL_H -DNEEDS_BSTRING_H -DIRIX_BROKEN_INCLUDES
-CFLAGS.AIX+=	-DGETOPT_EOF -DUSE_LOCKF -DNEEDS_FCNTL_H -DNEEDS_LOCKF_H -DNEEDS_STRINGS_H -DNEEDS_SELECT_H
-OPSYSVARS+=	LD_LIBS
-LD_LIBS.SunOS+=	-lnsl -lsocket -lresolv
-MAKE_ENV+=	LD_LIBS=${LD_LIBS:Q}
+CFLAGS.SunOS+=		-DUSE_LOCKF -DNEEDS_FCNTL_H -DNEEDS_STRINGS_H -DBROKEN_SUN_INCLUDES
+CFLAGS.IRIX+=		-DGETOPT_EOF -DUSE_FLOCK -DNEEDS_FCNTL_H -DNEEDS_BSTRING_H -DIRIX_BROKEN_INCLUDES
+CFLAGS.AIX+=		-DGETOPT_EOF -DUSE_LOCKF -DNEEDS_FCNTL_H -DNEEDS_LOCKF_H -DNEEDS_STRINGS_H -DNEEDS_SELECT_H
+OPSYSVARS+=		LD_LIBS
+LD_LIBS.SunOS+=		-lnsl -lsocket -lresolv
+MAKE_ENV+=		LD_LIBS=${LD_LIBS:Q}
 
 INSTALLATION_DIRS=	sbin share/doc/smtpd share/examples/smtpd
 OWN_DIRS=		${SPOOL}/etc
@@ -40,7 +40,7 @@ do-install:
 	    ${DESTDIR}${PREFIX}/share/doc/smtpd
 .for f in antirelay_check_rules_example antispam_check_rules.example \
 	    smtpd_check_rules.example
-		${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/examples/smtpd
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/examples/smtpd
 .endfor
 
 .include "../../devel/sysexits/buildlink3.mk"
