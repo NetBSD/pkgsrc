@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2019/06/07 11:26:20 tm Exp $
+# $NetBSD: options.mk,v 1.16 2019/11/04 22:09:51 rillig Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.apache
 PKG_SUPPORTED_OPTIONS=		apache-mpm-event apache-mpm-prefork apache-mpm-worker \
@@ -9,7 +9,7 @@ PKG_SUGGESTED_OPTIONS=		apache-mpm-event apache-mpm-prefork \
 .if ${OPSYS} == "SunOS" && !empty(OS_VERSION:M5.1[0-9])
 PKG_SUPPORTED_OPTIONS+=		privileges
 # Disabled until DTrace support is fully implemented/fixed
-#PKG_SUPPORTED_OPTIONS+=		dtrace
+#PKG_SUPPORTED_OPTIONS+=	dtrace
 .endif
 
 .include "../../mk/bsd.options.mk"

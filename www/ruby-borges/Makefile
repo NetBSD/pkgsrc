@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2017/09/04 18:01:04 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/11/04 22:10:14 rillig Exp $
 
 DISTNAME=	borges-1.1.0
 PKGREVISION=	2
@@ -22,11 +22,11 @@ BORGES_SHARE_DIR=	data/doc data/examples
 
 .if !empty(RUBY_SUFFIX)
 pre-configure:
-.for d in ${BORGES_SHARE_DIR}
+.  for d in ${BORGES_SHARE_DIR}
 	cd ${WRKSRC}; if [ -d ${d}/ruby ]; then \
 		 ${MV} -f ${d}/ruby ${d}/${RUBY_NAME}; \
 	fi
-.endfor
+.  endfor
 .endif
 
 .include "../../lang/ruby/modules.mk"

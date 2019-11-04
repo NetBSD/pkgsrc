@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/08/11 13:24:31 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/04 22:10:01 rillig Exp $
 
 DISTNAME=	Catalyst-Model-File-0.10
 PKGNAME=	p5-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	p5-MRO-Compat-[0-9]*:../../devel/p5-MRO-Compat
 DEPENDS+=	p5-Path-Class-[0-9]*:../../devel/p5-Path-Class
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Catalyst/Model/File/.packlist
+PERL5_PACKLIST=	auto/Catalyst/Model/File/.packlist
 
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 
