@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2019/11/03 11:45:43 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.16 2019/11/04 08:00:25 wiz Exp $
 
 DISTNAME=	check_spamd-1.6.0
 PKGNAME=	nagios-plugin-${DISTNAME:S/check_//1}
 PKGREVISION=	4
 CATEGORIES=	net mail
-MASTER_SITES=	${MASTER_SITE_BACKUP}
-	# http://exchange.nagios.org/components/com_mtree/
+MASTER_SITES=	# http://exchange.nagios.org/components/com_mtree/
 EXTRACT_SUFX=	.pl
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -40,4 +38,4 @@ do-install:
 	${INSTALL_SCRIPT} "${WRKDIR}/${DISTFILES}" \
 		"${DESTDIR}${PLUGIN_DIR}/check_spamd"
 
-#.include "../../mk/bsd.pkg.mk"
+.include "../../mk/bsd.pkg.mk"
