@@ -8642,7 +8642,7 @@ PERL5_PACKLIST= auto/Pg/.packlist
   immediately. In this case, one can plainly mark a package as broken.  For
   this, one just sets the variable <code class="varname">BROKEN</code> to the
   reason why the package is broken (similar to the
-  <code class="varname">RESTRICTED</code> variable).  A user trying to build
+  <code class="varname">PKG_FAIL_REASON</code> variable).  A user trying to build
   the package will immediately be shown this message, and the build
   will not be even tried.</p>
 <p><code class="varname">BROKEN</code> packages are removed from pkgsrc in irregular
@@ -9000,7 +9000,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm74689200"></a><dl>
+<a name="idm79055728"></a><dl>
 <dt>24.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9045,7 +9045,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm74688816"></a><p><b>24.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm79055344"></a><p><b>24.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9061,7 +9061,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm74693040"></a><p><b>24.2.</b></p>
+<a name="devfaq.make"></a><a name="idm79051248"></a><p><b>24.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9079,7 +9079,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm74696880"></a><p><b>24.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm79046896"></a><p><b>24.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9097,7 +9097,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm74700976"></a><p><b>24.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm79042672"></a><p><b>24.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9110,7 +9110,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm74698800"></a><p><b>24.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm79040496"></a><p><b>24.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9126,7 +9126,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm74703920"></a><p><b>24.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm79037296"></a><p><b>24.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="code">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9150,7 +9150,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm74717616"></a><p><b>24.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm79030512"></a><p><b>24.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9175,7 +9175,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm74722096"></a><p><b>24.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm79026672"></a><p><b>24.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9223,7 +9223,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm74727984"></a><p><b>24.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm79020144"></a><p><b>24.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
@@ -12228,152 +12228,148 @@ source packages</h2></div></div></div>
 <td>RUBY_BASERIDIR</td>
 </tr>
 <tr>
-<td>RUBY_BUILD_RDOC</td>
-<td>RUBY_BUILD_RI</td>
-</tr>
-<tr>
+<td>RUBY_BUILD_DOCUMENT</td>
 <td>RUBY_DLEXT</td>
+</tr>
+<tr>
 <td>RUBY_DOC</td>
-</tr>
-<tr>
 <td>RUBY_DYNAMIC_DIRS</td>
+</tr>
+<tr>
 <td>RUBY_EG</td>
-</tr>
-<tr>
 <td>RUBY_ENCODING_ARG</td>
+</tr>
+<tr>
 <td>RUBY_EXTCONF</td>
-</tr>
-<tr>
 <td>RUBY_EXTCONF_CHECK</td>
+</tr>
+<tr>
 <td>RUBY_EXTCONF_DEBUG</td>
-</tr>
-<tr>
 <td>RUBY_EXTCONF_MAKEFILE</td>
+</tr>
+<tr>
 <td>RUBY_GEM_BASE</td>
-</tr>
-<tr>
 <td>RUBY_INC</td>
+</tr>
+<tr>
 <td>RUBY_LIB</td>
-</tr>
-<tr>
 <td>RUBY_LIB_BASE</td>
+</tr>
+<tr>
 <td>RUBY_NAME</td>
-</tr>
-<tr>
 <td>RUBY_NOVERSION</td>
+</tr>
+<tr>
 <td>RUBY_PKGPREFIX</td>
-</tr>
-<tr>
 <td>RUBY_RAILS</td>
+</tr>
+<tr>
 <td>RUBY_RAILS42_VERSION</td>
-</tr>
-<tr>
 <td>RUBY_RAILS51_VERSION</td>
+</tr>
+<tr>
 <td>RUBY_RAILS52_VERSION</td>
-</tr>
-<tr>
 <td>RUBY_RAILS_ACCEPTED</td>
+</tr>
+<tr>
 <td>RUBY_RAILS_DEFAULT</td>
-</tr>
-<tr>
 <td>RUBY_RAILS_REQD</td>
+</tr>
+<tr>
 <td>RUBY_RAILS_STRICT_DEP</td>
-</tr>
-<tr>
 <td>RUBY_RIDIR</td>
+</tr>
+<tr>
 <td>RUBY_SETUP</td>
-</tr>
-<tr>
 <td>RUBY_SHLIB</td>
+</tr>
+<tr>
 <td>RUBY_SHLIBALIAS</td>
-</tr>
-<tr>
 <td>RUBY_SHLIBVER</td>
+</tr>
+<tr>
 <td>RUBY_SIMPLE_INSTALL</td>
-</tr>
-<tr>
 <td>RUBY_SITEARCHLIB</td>
+</tr>
+<tr>
 <td>RUBY_SITELIB</td>
-</tr>
-<tr>
 <td>RUBY_SITELIB_BASE</td>
+</tr>
+<tr>
 <td>RUBY_SITERIDIR</td>
-</tr>
-<tr>
 <td>RUBY_SLEXT</td>
+</tr>
+<tr>
 <td>RUBY_SRCDIR</td>
-</tr>
-<tr>
 <td>RUBY_STATICLIB</td>
+</tr>
+<tr>
 <td>RUBY_SUFFIX</td>
-</tr>
-<tr>
 <td>RUBY_SYSRIDIR</td>
+</tr>
+<tr>
 <td>RUBY_USE_PTHREAD</td>
-</tr>
-<tr>
 <td>RUBY_VENDORARCHLIB</td>
+</tr>
+<tr>
 <td>RUBY_VENDORLIB</td>
-</tr>
-<tr>
 <td>RUBY_VENDORLIB_BASE</td>
+</tr>
+<tr>
 <td>RUBY_VER</td>
-</tr>
-<tr>
 <td>RUBY_VERSION</td>
+</tr>
+<tr>
 <td>RUBY_VERSIONS_ACCEPTED</td>
-</tr>
-<tr>
 <td>RUBY_VERSION_DEFAULT</td>
+</tr>
+<tr>
 <td>RUBY_VERSION_REQD</td>
-</tr>
-<tr>
 <td>RUBY_VER_DIR</td>
+</tr>
+<tr>
 <td>RUN</td>
-</tr>
-<tr>
 <td>RUN_LDCONFIG</td>
+</tr>
+<tr>
 <td>SAWFISH_THEMES</td>
-</tr>
-<tr>
 <td>SCO</td>
+</tr>
+<tr>
 <td>SCREWS_GROUP</td>
-</tr>
-<tr>
 <td>SCREWS_USER</td>
+</tr>
+<tr>
 <td>SCRIPTS_ENV</td>
-</tr>
-<tr>
 <td>SCROLLKEEPER_DATADIR</td>
+</tr>
+<tr>
 <td>SCROLLKEEPER_REBUILDDB</td>
-</tr>
-<tr>
 <td>SCROLLKEEPER_UPDATEDB</td>
+</tr>
+<tr>
 <td>SDIST_PAWD</td>
-</tr>
-<tr>
 <td>SERIAL_DEVICES</td>
+</tr>
+<tr>
 <td>SETGIDGAME</td>
-</tr>
-<tr>
 <td>SETGID_GAMES_PERMS</td>
+</tr>
+<tr>
 <td>SETUID_ROOT_PERMS</td>
-</tr>
-<tr>
 <td>SH</td>
+</tr>
+<tr>
 <td>SHLIB</td>
-</tr>
-<tr>
 <td>SHORTNAME</td>
+</tr>
+<tr>
 <td>SIGN_PACKAGES</td>
-</tr>
-<tr>
 <td>SILC_CLIENT_WITH_PERL</td>
-<td>SITE_SPECIFIC_PKGS</td>
 </tr>
 <tr>
+<td>SITE_SPECIFIC_PKGS</td>
 <td>SKIP_DEPENDS</td>
-<td>SKIP_PORTABILITY_CHECK</td>
 </tr>
 <tr>
 <td>SMF_INSTANCES</td>
@@ -12820,32 +12816,36 @@ source packages</h2></div></div></div>
 <td>destdir</td>
 </tr>
 <tr>
+<td>disable</td>
 <td>distclean</td>
+</tr>
+<tr>
 <td>distinfo</td>
-</tr>
-<tr>
 <td>dl</td>
+</tr>
+<tr>
 <td>dlopen</td>
-</tr>
-<tr>
 <td>do-build</td>
+</tr>
+<tr>
 <td>do-buildlink</td>
-</tr>
-<tr>
 <td>do-clean</td>
+</tr>
+<tr>
 <td>do-configure-post-hook</td>
-</tr>
-<tr>
 <td>do-extract</td>
+</tr>
+<tr>
 <td>do-fetch</td>
-</tr>
-<tr>
 <td>do-install</td>
-<td>emul</td>
 </tr>
 <tr>
+<td>emul</td>
 <td>emulation</td>
+</tr>
+<tr>
 <td>emulator</td>
+<td>enable</td>
 </tr>
 <tr>
 <td>endian</td>
@@ -13148,92 +13148,96 @@ source packages</h2></div></div></div>
 <td>stage-install</td>
 </tr>
 <tr>
+<td>strict</td>
 <td>strip</td>
+</tr>
+<tr>
 <td>strnlen</td>
-</tr>
-<tr>
 <td>strong</td>
+</tr>
+<tr>
 <td>subst</td>
-</tr>
-<tr>
 <td>subversion</td>
+</tr>
+<tr>
 <td>sun</td>
-</tr>
-<tr>
 <td>sunpro</td>
+</tr>
+<tr>
 <td>sunwspro</td>
-</tr>
-<tr>
 <td>svn</td>
+</tr>
+<tr>
 <td>symlink</td>
-</tr>
-<tr>
 <td>test</td>
+</tr>
+<tr>
 <td>tex</td>
-</tr>
-<tr>
 <td>texlive</td>
+</tr>
+<tr>
 <td>tmp</td>
-</tr>
-<tr>
 <td>tool</td>
+</tr>
+<tr>
 <td>tools</td>
-</tr>
-<tr>
 <td>tools-libtool-m4-override</td>
+</tr>
+<tr>
 <td>type</td>
-</tr>
-<tr>
 <td>ulimit</td>
+</tr>
+<tr>
 <td>undefined</td>
-</tr>
-<tr>
 <td>undo-replace</td>
+</tr>
+<tr>
 <td>unlimit</td>
-</tr>
-<tr>
 <td>unprivileged</td>
+</tr>
+<tr>
 <td>unprivileged-install-hook</td>
-</tr>
-<tr>
 <td>unstripped</td>
+</tr>
+<tr>
 <td>update</td>
-</tr>
-<tr>
 <td>upload</td>
+</tr>
+<tr>
 <td>upload-distfiles</td>
-</tr>
-<tr>
 <td>usage</td>
+</tr>
+<tr>
 <td>use_tools</td>
-</tr>
-<tr>
 <td>user</td>
+</tr>
+<tr>
 <td>utimes</td>
-</tr>
-<tr>
 <td>vasprintf</td>
+</tr>
+<tr>
 <td>verbose</td>
-</tr>
-<tr>
 <td>vsnprintf</td>
+</tr>
+<tr>
 <td>warn</td>
-</tr>
-<tr>
 <td>warning</td>
+</tr>
+<tr>
 <td>warnings</td>
-</tr>
-<tr>
 <td>warnx</td>
+</tr>
+<tr>
 <td>weak</td>
-</tr>
-<tr>
 <td>work</td>
-<td>wrapper</td>
 </tr>
 <tr>
+<td>wrapper</td>
 <td>wrkdir</td>
+</tr>
+<tr>
 <td>yes</td>
+<td> </td>
 </tr>
 </table>
 </div>

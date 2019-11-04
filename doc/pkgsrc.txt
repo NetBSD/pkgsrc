@@ -7057,8 +7057,8 @@ is to regenerate it using make print-PLIST.
 In some cases one does not have the time to solve a problem immediately. In
 this case, one can plainly mark a package as broken. For this, one just sets
 the variable BROKEN to the reason why the package is broken (similar to the
-RESTRICTED variable). A user trying to build the package will immediately be
-shown this message, and the build will not be even tried.
+PKG_FAIL_REASON variable). A user trying to build the package will immediately
+be shown this message, and the build will not be even tried.
 
 BROKEN packages are removed from pkgsrc in irregular intervals.
 
@@ -8969,43 +8969,42 @@ RUBYGEM_NAME                     RUBYGEM_OPTIONS
 RUBY_ABI_VERSION                 RUBY_ARCH
 RUBY_ARCHINC                     RUBY_ARCHLIB
 RUBY_BASE                        RUBY_BASERIDIR
-RUBY_BUILD_RDOC                  RUBY_BUILD_RI
-RUBY_DLEXT                       RUBY_DOC
-RUBY_DYNAMIC_DIRS                RUBY_EG
-RUBY_ENCODING_ARG                RUBY_EXTCONF
-RUBY_EXTCONF_CHECK               RUBY_EXTCONF_DEBUG
-RUBY_EXTCONF_MAKEFILE            RUBY_GEM_BASE
-RUBY_INC                         RUBY_LIB
-RUBY_LIB_BASE                    RUBY_NAME
-RUBY_NOVERSION                   RUBY_PKGPREFIX
-RUBY_RAILS                       RUBY_RAILS42_VERSION
-RUBY_RAILS51_VERSION             RUBY_RAILS52_VERSION
-RUBY_RAILS_ACCEPTED              RUBY_RAILS_DEFAULT
-RUBY_RAILS_REQD                  RUBY_RAILS_STRICT_DEP
-RUBY_RIDIR                       RUBY_SETUP
-RUBY_SHLIB                       RUBY_SHLIBALIAS
-RUBY_SHLIBVER                    RUBY_SIMPLE_INSTALL
-RUBY_SITEARCHLIB                 RUBY_SITELIB
-RUBY_SITELIB_BASE                RUBY_SITERIDIR
-RUBY_SLEXT                       RUBY_SRCDIR
-RUBY_STATICLIB                   RUBY_SUFFIX
-RUBY_SYSRIDIR                    RUBY_USE_PTHREAD
-RUBY_VENDORARCHLIB               RUBY_VENDORLIB
-RUBY_VENDORLIB_BASE              RUBY_VER
-RUBY_VERSION                     RUBY_VERSIONS_ACCEPTED
-RUBY_VERSION_DEFAULT             RUBY_VERSION_REQD
-RUBY_VER_DIR                     RUN
-RUN_LDCONFIG                     SAWFISH_THEMES
-SCO                              SCREWS_GROUP
-SCREWS_USER                      SCRIPTS_ENV
-SCROLLKEEPER_DATADIR             SCROLLKEEPER_REBUILDDB
-SCROLLKEEPER_UPDATEDB            SDIST_PAWD
-SERIAL_DEVICES                   SETGIDGAME
-SETGID_GAMES_PERMS               SETUID_ROOT_PERMS
-SH                               SHLIB
-SHORTNAME                        SIGN_PACKAGES
-SILC_CLIENT_WITH_PERL            SITE_SPECIFIC_PKGS
-SKIP_DEPENDS                     SKIP_PORTABILITY_CHECK
+RUBY_BUILD_DOCUMENT              RUBY_DLEXT
+RUBY_DOC                         RUBY_DYNAMIC_DIRS
+RUBY_EG                          RUBY_ENCODING_ARG
+RUBY_EXTCONF                     RUBY_EXTCONF_CHECK
+RUBY_EXTCONF_DEBUG               RUBY_EXTCONF_MAKEFILE
+RUBY_GEM_BASE                    RUBY_INC
+RUBY_LIB                         RUBY_LIB_BASE
+RUBY_NAME                        RUBY_NOVERSION
+RUBY_PKGPREFIX                   RUBY_RAILS
+RUBY_RAILS42_VERSION             RUBY_RAILS51_VERSION
+RUBY_RAILS52_VERSION             RUBY_RAILS_ACCEPTED
+RUBY_RAILS_DEFAULT               RUBY_RAILS_REQD
+RUBY_RAILS_STRICT_DEP            RUBY_RIDIR
+RUBY_SETUP                       RUBY_SHLIB
+RUBY_SHLIBALIAS                  RUBY_SHLIBVER
+RUBY_SIMPLE_INSTALL              RUBY_SITEARCHLIB
+RUBY_SITELIB                     RUBY_SITELIB_BASE
+RUBY_SITERIDIR                   RUBY_SLEXT
+RUBY_SRCDIR                      RUBY_STATICLIB
+RUBY_SUFFIX                      RUBY_SYSRIDIR
+RUBY_USE_PTHREAD                 RUBY_VENDORARCHLIB
+RUBY_VENDORLIB                   RUBY_VENDORLIB_BASE
+RUBY_VER                         RUBY_VERSION
+RUBY_VERSIONS_ACCEPTED           RUBY_VERSION_DEFAULT
+RUBY_VERSION_REQD                RUBY_VER_DIR
+RUN                              RUN_LDCONFIG
+SAWFISH_THEMES                   SCO
+SCREWS_GROUP                     SCREWS_USER
+SCRIPTS_ENV                      SCROLLKEEPER_DATADIR
+SCROLLKEEPER_REBUILDDB           SCROLLKEEPER_UPDATEDB
+SDIST_PAWD                       SERIAL_DEVICES
+SETGIDGAME                       SETGID_GAMES_PERMS
+SETUID_ROOT_PERMS                SH
+SHLIB                            SHORTNAME
+SIGN_PACKAGES                    SILC_CLIENT_WITH_PERL
+SITE_SPECIFIC_PKGS               SKIP_DEPENDS
 SMF_INSTANCES                    SMF_MANIFEST
 SMF_METHODS                      SMF_METHOD_SHELL
 SMF_METHOD_SRC                   SMF_NAME
@@ -9117,13 +9116,14 @@ depend                           dependencies
 depends                          depends-checksum
 depends-fetch                    deps
 describe                         destdir
-distclean                        distinfo
-dl                               dlopen
-do-build                         do-buildlink
-do-clean                         do-configure-post-hook
-do-extract                       do-fetch
-do-install                       emul
-emulation                        emulator
+disable                          distclean
+distinfo                         dl
+dlopen                           do-build
+do-buildlink                     do-clean
+do-configure-post-hook           do-extract
+do-fetch                         do-install
+emul                             emulation
+emulator                         enable
 endian                           enomem
 err                              errx
 etc                              feature
@@ -9199,28 +9199,29 @@ show-subdir-var                  show-tools
 show-var                         show-vars
 snprintf                         ssp
 st_mode                          stage-install
-strip                            strnlen
-strong                           subst
-subversion                       sun
-sunpro                           sunwspro
-svn                              symlink
-test                             tex
-texlive                          tmp
-tool                             tools
-tools-libtool-m4-override        type
-ulimit                           undefined
-undo-replace                     unlimit
-unprivileged                     unprivileged-install-hook
-unstripped                       update
-upload                           upload-distfiles
-usage                            use_tools
-user                             utimes
-vasprintf                        verbose
-vsnprintf                        warn
-warning                          warnings
-warnx                            weak
-work                             wrapper
-wrkdir                           yes
+strict                           strip
+strnlen                          strong
+subst                            subversion
+sun                              sunpro
+sunwspro                         svn
+symlink                          test
+tex                              texlive
+tmp                              tool
+tools                            tools-libtool-m4-override
+type                             ulimit
+undefined                        undo-replace
+unlimit                          unprivileged
+unprivileged-install-hook        unstripped
+update                           upload
+upload-distfiles                 usage
+use_tools                        user
+utimes                           vasprintf
+verbose                          vsnprintf
+warn                             warning
+warnings                         warnx
+weak                             work
+wrapper                          wrkdir
+yes                               
 
 Appendix E. Editing guidelines for the pkgsrc guide
 
