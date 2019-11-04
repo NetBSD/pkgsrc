@@ -1,0 +1,115 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2019/11/04 18:35:22 nros Exp $
+
+* sanitze the names and dirs to search for libs and headers files
+* use PATH_SUFFIX fix to find openjpeg
+* install bins and data into the right directory
+* don't install cmake files in the translation directory
+* install icon and desktop files
+* install hi-res maps
+
+--- CMakeLists.txt.orig	2019-07-05 09:01:01.000000000 +0000
++++ CMakeLists.txt
+@@ -54,71 +54,23 @@ find_package(Qt5Xml CONFIG REQUIRED)
+ include_directories(${Qt5Xml_INCLUDE_DIRS})
+ 
+ find_library(LIBNOVA_LIBRARY
+-     NAMES "libnova.a" "libnova.so"
+-     PATHS
+-     $ENV{EXTERNLIBS}/lib
+-     ~/Library/Frameworks
+-     /Library/Frameworks
+-     /usr/local
+-     /usr
+-     /sw
+-     /opt/local
+-     /opt/csw
+-     /opt
+-     PATH_SUFFIXES lib lib64 lib/x86_64-linux-gnu lib/i386-linux-gnu lib/armhf-linux-gnu lib/arm64-linux-gnu
++     NAMES "nova" "libnova"
+      REQUIRED
+  )
+ find_path(LIBNOVA_INCLUDE_DIR
+-     NAMES "libnova/libnova.h" "libnova.h"
+-     PATHS
+-     $ENV{EXTERNLIBS}/include
+-     ~/Library/Frameworks/include
+-     /Library/Frameworks/include
+-     /usr/local/include
+-     /usr/include
+-     /sw/include # Fink
+-     /opt/local/include # DarwinPorts
+-     /opt/csw/include # Blastwave
+-     /opt/include
++     NAMES "libnova/libnova.h"
+      REQUIRED
+  )
+ include_directories(${LIBNOVA_INCLUDE_DIR})
+ 
+ #find_package(OpenJPEG REQUIRED)
+ find_library(OPENJPEG_LIBRARIES
+-#     NAMES "libopenjp2.a" "libopenjp2.so" "libopenjpeg.so.2" "libopenjp2.dll.a"
+-     NAMES "libopenjp2.so.7" "libopenjp2.so" "libopenjp2.a" "libopenjpeg.so.2" "libopenjp2.dll.a"
+-     PATHS
+-     $ENV{EXTERNLIBS}/lib
+-     ~/Library/Frameworks
+-     /Library/Frameworks
+-     /usr/local
+-     /usr
+-     /sw
+-     /opt/local
+-     /opt/csw
+-     /opt
+-     PATH_SUFFIXES lib lib64
++     NAMES "openjp2" "libopenjp2"
+      REQUIRED
+  )
+ find_path(OPENJPEG_INCLUDE_DIR
+      NAMES "openjpeg.h"
+-     PATHS
+-     $ENV{EXTERNLIBS}/include
+-     ~/Library/Frameworks/include
+-     /Library/Frameworks/include
+-     /usr/local/include
+-     /usr/local/include/openjpeg-2.3
+-     /usr/include/openjpeg-2.3
+-     /usr/local/include/openjpeg-2.1
+-     /usr/include/openjpeg-2.1
+-     /usr/local/include/openjpeg-2.2
+-     /usr/include/openjpeg-2.2
+-     /usr/include
+-     /sw/include # Fink
+-     /opt/local/include # DarwinPorts
+-     /opt/csw/include # Blastwave
+-     /opt/include
++     PATH_SUFFIXES openjpeg-2.3
+      REQUIRED
+  )
+ include_directories(${OPENJPEG_INCLUDE_DIR})
+@@ -222,8 +174,9 @@ set(PREFIX_PKGDATA ".")
+ endif()
+ if(UNIX AND NOT APPLE)
+ # This is not exactly a good idea on linux - the code should be changed so that the executable would go to /usr/local/bin and the data to /usr/local/share/XyGrib
+-set(PREFIX_BIN ${PROJECT_NAME})
+-set(PREFIX_PKGDATA ${PROJECT_NAME})
++include(GNUInstallDirs)
++set(PREFIX_BIN ${CMAKE_INSTALL_FULL_BINDIR})
++set(PREFIX_PKGDATA ${CMAKE_INSTALL_FULL_DATADIR}/openGribs/${PROJECT_NAME})
+ endif()
+ 
+ add_subdirectory(src)
+@@ -241,4 +194,14 @@ set_target_properties(${PROJECT_NAME} PR
+ set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE_BUNDLE_VERSION "${XYGRIB_VERSION}")
+ set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE_COPYRIGHT "${PROJECT_NAME} Authors")
+ # Install data
+-install(DIRECTORY data DESTINATION ${PREFIX_PKGDATA})
++install(DIRECTORY data DESTINATION ${PREFIX_PKGDATA}
++        PATTERN "CMakeFiles" EXCLUDE
++        PATTERN "CMakeLists.txt" EXCLUDE
++        PATTERN "Makefile" EXCLUDE
++        PATTERN "cmake_install.cmake" EXCLUDE
++        PATTERN "*.ts" EXCLUDE)
++install(FILES debian/xygrib.desktop
++        DESTINATION ${CMAKE_INSTALL_FULL_DATADIR}/applications)
++install(FILES debian/xygrib.png
++	DESTINATION ${CMAKE_INSTALL_FULL_DATADIR}/pixmaps)
++install(DIRECTORY ../data/ DESTINATION ${PREFIX_PKGDATA})

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.517 2019/10/30 14:43:46 kamil Exp $
+# $NetBSD: Makefile,v 1.518 2019/11/04 18:35:21 nros Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -377,6 +377,7 @@ SUBDIR+=	xorg-sgml-doctools
 SUBDIR+=	xrolodex
 SUBDIR+=	xtail
 SUBDIR+=	xtend
+SUBDIR+=	xygrib
 SUBDIR+=	yelp3
 SUBDIR+=	yrolo
 SUBDIR+=	zorro

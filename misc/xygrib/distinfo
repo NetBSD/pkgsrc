@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.1 2019/11/04 18:35:21 nros Exp $
+
+SHA1 (XyGrib-1.1.1/XyGrib-1.2.6.1.tar.gz) = 8e3431ed6a5ef114d77ac57029129a26a381f696
+RMD160 (XyGrib-1.1.1/XyGrib-1.2.6.1.tar.gz) = 876e8a53b492b2e2ea0572e5b0cd31a2c04f505a
+SHA512 (XyGrib-1.1.1/XyGrib-1.2.6.1.tar.gz) = 33c8a0fc6791dbe3342524555dc90362560fed08b4e2a624111167d92e2c71890dcb5bfe7e85d7df2ffc11a382ea5afa484cdab84c29935d4be2e673c76a371c
+Size (XyGrib-1.1.1/XyGrib-1.2.6.1.tar.gz) = 14704088 bytes
+SHA1 (XyGrib-1.1.1/XyGrib___High_Resolution_Maps.tar.gz) = 7849cd9361757ae89c48f0e74ce340c7faf15015
+RMD160 (XyGrib-1.1.1/XyGrib___High_Resolution_Maps.tar.gz) = a0c82dfc09db8cb466c7bc7d396e7a62cb77b4fd
+SHA512 (XyGrib-1.1.1/XyGrib___High_Resolution_Maps.tar.gz) = 42d1f938ade119ab73cb8da7b2fe4758a4288a869e8fbb2974c0f2fe8e4418af826a2cc0dbf282e0a30cf814fc3ea18dccda2ff6b6c2ab62e6d0e1ea1916c909
+Size (XyGrib-1.1.1/XyGrib___High_Resolution_Maps.tar.gz) = 103284692 bytes
+SHA1 (XyGrib-1.1.1/XyGrib___cities_files.tar.gz) = eb82eb192bb3d6d97ebb32a21fdf7737bb640f94
+RMD160 (XyGrib-1.1.1/XyGrib___cities_files.tar.gz) = 1c47e3af9884e1a927b1e717f938178f12a17fa8
+SHA512 (XyGrib-1.1.1/XyGrib___cities_files.tar.gz) = 6bb9362c87fec7633b0ad1fd3b8717408c0fffa36631db1d1a680928c724e8e49758c292cac164ad7a9773fd51a432d25628eecbaa1261f5f3c5ab6fc499fd01
+Size (XyGrib-1.1.1/XyGrib___cities_files.tar.gz) = 2487518 bytes
+SHA1 (patch-CMakeLists.txt) = 011146a46621b1948a6d1bfae1605d769beff4df
