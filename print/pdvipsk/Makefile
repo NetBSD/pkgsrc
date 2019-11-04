@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/06/16 20:47:58 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/04 19:58:00 rillig Exp $
 
 DISTNAME=	texlive-20091011-source
 PKGNAME=	pdvipsk-5.98pl1.7b
@@ -28,8 +28,8 @@ CONFIG_SUB_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.sub
 CFLAGS+=	-I${BUILDLINK_PREFIX.kpathsea}/lib
 
 CONFIGURE_ARGS+=	--with-system-kpathsea \
-		--with-kpathsea-includes=${BUILDLINK_PREFIX.kpathsea}/include \
-		--with-kpathsea-libdir=${BUILDLINK_PREFIX.kpathsea}/lib
+			--with-kpathsea-includes=${BUILDLINK_PREFIX.kpathsea}/include \
+			--with-kpathsea-libdir=${BUILDLINK_PREFIX.kpathsea}/lib
 
 INSTALLATION_DIRS+=	bin
 

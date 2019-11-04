@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2019/08/11 13:22:38 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2019/11/04 19:57:58 rillig Exp $
 #
 
 DISTNAME=		enscript-1.6.6
@@ -11,9 +11,9 @@ HOMEPAGE=		http://www.gnu.org/software/enscript/
 COMMENT=		ASCII-to-PostScript filter
 LICENSE=		gnu-gpl-v3
 
-GNU_CONFIGURE=		yes
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake lex:run perl:run xgettext
+GNU_CONFIGURE=			yes
+USE_PKGLOCALEDIR=		yes
+USE_TOOLS+=			gmake lex:run perl:run xgettext
 BROKEN_GETTEXT_DETECTION=	yes
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}

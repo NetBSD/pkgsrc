@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/05/31 11:40:18 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/04 19:58:07 rillig Exp $
 
 DISTNAME=	presentations-en.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2014
@@ -7,7 +7,7 @@ TEXLIVE_REV=	29803
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/presentations-en
-COMMENT=       	Examples from the book Presentations with LaTeX
+COMMENT=	Examples from the book Presentations with LaTeX
 LICENSE=	lppl-1.3c
 
 REPLACE_SH+=	doc/latex/presentations-en/runAll
