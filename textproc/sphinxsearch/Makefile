@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/05/23 19:23:18 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/04 21:43:48 rillig Exp $
 #
 
 DISTNAME=	sphinx-2.2.11-release
@@ -59,7 +59,7 @@ CONFIGURE_DIRS=		.
 CONFIGURE_DIRS+=	api/libsphinxclient
 
 CONFIGURE_ARGS+=	--with-libexpat
-CONFIGURE_ARGS+=        --with-iconv
+CONFIGURE_ARGS+=	--with-iconv
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
 

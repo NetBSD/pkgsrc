@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2018/11/22 14:56:07 nia Exp $
+# $NetBSD: options.mk,v 1.8 2019/11/04 21:43:35 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.enchant
 PKG_SUPPORTED_OPTIONS=	aspell enchant-zemberek hunspell ispell
@@ -33,7 +33,7 @@ PLIST.hunspell=		yes
 CONFIGURE_ARGS+=	--disable-myspell
 .endif
 
-PLIST_VARS+=            ispell
+PLIST_VARS+=		ispell
 .if !empty(PKG_OPTIONS:Mispell)
 CONFIGURE_ARGS+=	--enable-ispell
 PLIST.ispell=		yes

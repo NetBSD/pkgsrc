@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/09/16 19:53:51 alnsn Exp $
+# $NetBSD: Makefile,v 1.6 2019/11/04 21:43:33 rillig Exp $
 
 DISTNAME=	LDoc-1.4.6
 PKGNAME=	${DISTNAME:S/LDoc/${LUA_PKGPREFIX}-LDoc/}
@@ -28,7 +28,7 @@ FILES_SUBST+=		LUADOTVER=${_LUA_DOT_VERSION}
 
 INSTALLATION_DIRS+=	bin ${LUA_LDIR}
 
-WRKSRC=${WRKDIR}/${DISTNAME}
+WRKSRC=	${WRKDIR}/${DISTNAME}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/ldoc.lua \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/08/11 13:23:47 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/11/04 21:43:42 rillig Exp $
 
 DISTNAME=	Text-SimpleTable-AutoWidth-0.09
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	p5-Text-SimpleTable-[0-9]*:../../textproc/p5-Text-SimpleTable
 DEPENDS+=	p5-Moo-[0-9]*:../../devel/p5-Moo
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Text/SimpleTable/AutoWidth/.packlist
+PERL5_PACKLIST=	auto/Text/SimpleTable/AutoWidth/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

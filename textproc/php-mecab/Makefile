@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2016/11/27 14:55:30 taca Exp $
+# $NetBSD: Makefile,v 1.13 2019/11/04 21:43:44 rillig Exp $
 #
 
 PECL_DISTNAME=	${MODNAME}-${PECL_VERSION}
@@ -7,7 +7,7 @@ PECL_VERSION=	0.6.0
 PECL_LEGACY_VERSION_SCHEME=	yes
 PKGREVISION=	1
 CATEGORIES=	textproc japanese
-MASTER_SITES=   http://pecl.opendogs.org/get/
+MASTER_SITES=	http://pecl.opendogs.org/get/
 #EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	taca@NetBSD.org
