@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2015/02/28 23:46:35 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2019/11/04 21:50:15 rillig Exp $
 #
 
 DISTNAME=	amiwm0.20pl48
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.lysator.liu.se/~marcus/amiwm.html
 COMMENT=	X window manager with Amiga look and feel
 LICENSE=	amiwm-license
 
-RESTRICTED=	Distribution limited to non-commercial purposes, unmodified binaries only.
+RESTRICTED=		Distribution limited to non-commercial purposes, unmodified binaries only.
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
