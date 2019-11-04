@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19382 2019/11/03 11:04:08 wiz Exp $
+$NetBSD: TODO,v 1.19383 2019/11/04 04:33:40 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -665,7 +665,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glibmm-2.62.0
 	o gliv-1.9.7
 	o glom-1.14.2
-	o gmime-3.2.4
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.30.1
