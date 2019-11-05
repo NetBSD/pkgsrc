@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2019/07/08 07:41:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2019/11/05 07:46:47 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -178,6 +178,10 @@ ${PYSITELIB}/pylint_django/tests/input/func_noerror_views.pyo
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_wsgi.py
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_wsgi.pyc
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_wsgi.pyo
+${PYSITELIB}/pylint_django/tests/input/func_unused_arguments.py
+${PYSITELIB}/pylint_django/tests/input/func_unused_arguments.pyc
+${PYSITELIB}/pylint_django/tests/input/func_unused_arguments.pyo
+${PYSITELIB}/pylint_django/tests/input/func_unused_arguments.txt
 ${PYSITELIB}/pylint_django/tests/input/migrations/0001_noerror_initial.py
 ${PYSITELIB}/pylint_django/tests/input/migrations/0001_noerror_initial.pyc
 ${PYSITELIB}/pylint_django/tests/input/migrations/0001_noerror_initial.pyo
