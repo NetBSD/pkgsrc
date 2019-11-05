@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/09/02 09:40:15 adam Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/05 14:58:43 adam Exp $
 
 DISTNAME=	qt5-${QTVERSION}
 
@@ -21,12 +21,14 @@ DEPENDS+=	qt5-qtnetworkauth-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtnetworkauth
 DEPENDS+=	qt5-qtquickcontrols-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtquickcontrols
 DEPENDS+=	qt5-qtquickcontrols2-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtquickcontrols2
 DEPENDS+=	qt5-qtscript-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtscript
+DEPENDS+=	qt5-qtscxml-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtscxml
 DEPENDS+=	qt5-qtsensors-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtsensors
 DEPENDS+=	qt5-qtserialport-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtserialport
 DEPENDS+=	qt5-qtspeech-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtspeech
 DEPENDS+=	qt5-qtsvg-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtsvg
 DEPENDS+=	qt5-qttools-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qttools
 DEPENDS+=	qt5-qttranslations-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qttranslations
+DEPENDS+=	qt5-qtvirtualkeyboard-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtvirtualkeyboard
 DEPENDS+=	qt5-qtwebchannel-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtwebchannel
 DEPENDS+=	qt5-qtwebsockets-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtwebsockets
 DEPENDS+=	qt5-qtxmlpatterns-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtxmlpatterns
