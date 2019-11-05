@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2019/11/03 11:45:56 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/05 02:34:33 gdt Exp $
 
 # This package is "unison-2.51.x" because 2.51 is the standard
-# approach, and hence uses the bare name.
+# approach, and hence uses the bare name as the package name.  For the
+# same reason, it installs as "unison", rather than unison-X.Y.
 DISTNAME=	unison-2.51.2
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -43,17 +44,16 @@ MAKE_FLAGS+=	THREADS=true
 BUILD_TARGET=	buildexecutable
 
 INSTALLATION_DIRS=	bin
-INSTALLATION_DIRS+=	share/doc/unison-2.51
+INSTALLATION_DIRS+=	share/doc/unison
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/unison ${DESTDIR}${PREFIX}/bin/unison-2.51
-	${INSTALL_MAN} ${WRKSRC}/src/BUGS.txt ${DESTDIR}${PREFIX}/share/doc/unison-2.51
-	${INSTALL_MAN} ${WRKSRC}/src/CONTRIB ${DESTDIR}${PREFIX}/share/doc/unison-2.51
-	${INSTALL_MAN} ${WRKSRC}/src/COPYING ${DESTDIR}${PREFIX}/share/doc/unison-2.51
-	${INSTALL_MAN} ${WRKSRC}/src/NEWS ${DESTDIR}${PREFIX}/share/doc/unison-2.51
-	${INSTALL_MAN} ${WRKSRC}/src/README ${DESTDIR}${PREFIX}/share/doc/unison-2.51
-	${INSTALL_MAN} ${WRKSRC}/src/ROADMAP.txt ${DESTDIR}${PREFIX}/share/doc/unison-2.51
-	${INSTALL_MAN} ${WRKSRC}/src/TODO.txt ${DESTDIR}${PREFIX}/share/doc/unison-2.51
+	${INSTALL_MAN} ${WRKSRC}/src/BUGS.txt ${DESTDIR}${PREFIX}/share/doc/unison
+	${INSTALL_MAN} ${WRKSRC}/src/CONTRIB ${DESTDIR}${PREFIX}/share/doc/unison
+	${INSTALL_MAN} ${WRKSRC}/src/COPYING ${DESTDIR}${PREFIX}/share/doc/unison
+	${INSTALL_MAN} ${WRKSRC}/src/NEWS ${DESTDIR}${PREFIX}/share/doc/unison
+	${INSTALL_MAN} ${WRKSRC}/src/README ${DESTDIR}${PREFIX}/share/doc/unison
+	${INSTALL_MAN} ${WRKSRC}/src/ROADMAP.txt ${DESTDIR}${PREFIX}/share/doc/unison
+	${INSTALL_MAN} ${WRKSRC}/src/TODO.txt ${DESTDIR}${PREFIX}/share/doc/unison
 
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
