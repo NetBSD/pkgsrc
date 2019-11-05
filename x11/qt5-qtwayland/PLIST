@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/10/28 21:35:43 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/11/05 15:29:35 adam Exp $
 lib/pkgconfig/Qt5Wayland.pc
 qt5/bin/qtwaylandscanner
 qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qtwaylandclient-config_p.h
@@ -142,6 +142,7 @@ qt5/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwlreg
 qt5/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwlserverbufferintegration_p.h
 qt5/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwlserverbufferintegrationfactory_p.h
 qt5/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwlserverbufferintegrationplugin_p.h
+qt5/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwltexturesharingextension_p.h
 qt5/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/wayland-hardware-integration-server-protocol.h
 qt5/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/wayland-ivi-application-server-protocol.h
 qt5/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/wayland-qt-key-unstable-v1-server-protocol.h
@@ -285,14 +286,14 @@ qt5/lib/cmake/Qt5WaylandCompositor/Qt5WaylandCompositor_QWaylandXCompositeGlxCli
 qt5/lib/cmake/Qt5WaylandCompositor/Qt5WaylandCompositor_ShmServerBufferIntegrationPlugin.cmake
 qt5/lib/libQt5WaylandClient.prl
 qt5/lib/libQt5WaylandClient.so
+qt5/lib/libQt5WaylandClient.so.${PKGVERSION}
 qt5/lib/libQt5WaylandClient.so.5
 qt5/lib/libQt5WaylandClient.so.5.13
-qt5/lib/libQt5WaylandClient.so.${PKGVERSION}
 qt5/lib/libQt5WaylandCompositor.prl
 qt5/lib/libQt5WaylandCompositor.so
+qt5/lib/libQt5WaylandCompositor.so.${PKGVERSION}
 qt5/lib/libQt5WaylandCompositor.so.5
 qt5/lib/libQt5WaylandCompositor.so.5.13
-qt5/lib/libQt5WaylandCompositor.so.${PKGVERSION}
 qt5/lib/pkgconfig/Qt5WaylandClient.pc
 qt5/lib/pkgconfig/Qt5WaylandCompositor.pc
 qt5/mkspecs/modules/qt_lib_waylandclient.pri
