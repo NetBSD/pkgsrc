@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/10/28 21:35:43 nia Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/05 15:29:35 adam Exp $
 
 DISTNAME=	qtwayland-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtwayland-${QTVERSION}
@@ -17,8 +17,10 @@ SUBST_VARS.conf+=	PREFIX
 
 .include "../../x11/qt5-qtbase/Makefile.common"
 
+MAKE_ENV+=	QMAKE_WAYLAND_SCANNER=${PREFIX}/bin/wayland-scanner
+
 do-configure:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${QTPREFIX}/bin/qmake -o Makefile QMAKE_WAYLAND_SCANNER=${PREFIX}/bin/wayland-scanner
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${QTPREFIX}/bin/qmake -o Makefile
 
 post-install:
 .for i in Qt5Wayland.pc
@@ -28,6 +30,6 @@ post-install:
 
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../devel/wayland-protocols/buildlink3.mk"
-.include "../../x11/qt5-qtdeclarative/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
+.include "../../x11/qt5-qtdeclarative/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
