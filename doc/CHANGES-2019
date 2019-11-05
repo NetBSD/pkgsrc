@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4761 2019/11/05 08:59:40 pho Exp $
+$NetBSD: CHANGES-2019,v 1.4762 2019/11/05 09:15:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7563,3 +7563,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-typing-extensions to 3.7.4.1 [adam 2019-11-05]
 	Updated devel/py-flake8 to 3.7.9 [adam 2019-11-05]
 	Updated fonts/ricty-ttf to 4.1.1 [pho 2019-11-05]
+	Updated www/py-django-cors-headers to 3.1.1 [adam 2019-11-05]
+	Updated www/py-django-countries to 5.5 [adam 2019-11-05]
