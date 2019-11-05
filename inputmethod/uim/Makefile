@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.154 2019/11/01 16:21:11 nia Exp $
+# $NetBSD: Makefile,v 1.155 2019/11/05 17:13:10 ryoon Exp $
 
 .include "../../inputmethod/uim/Makefile.common"
 
@@ -9,6 +9,9 @@ CONFLICTS+=	uim-qt4-immodule-[0-9]*
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
+
+# Do not segfault uim-module-manager during build
+BUILDLINK_TRANSFORM+=	opt:-O2:-O1
 
 USE_TOOLS+=	gmake pkg-config
 USE_TOOLS+=	intltool msgfmt msgmerge xgettext
@@ -48,6 +51,8 @@ CONF_FILES+=		${EGDIR}/installed-modules.scm \
 
 PKG_SYSCONFSUBDIR=	uim
 INSTALLATION_DIRS+=	share/doc/uim
+
+NOT_PAX_MPROTECT_SAFE+=	bin/uim-module-manager
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/uim
