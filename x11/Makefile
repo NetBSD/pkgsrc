@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.860 2019/10/31 03:16:23 jnemeth Exp $
+# $NetBSD: Makefile,v 1.861 2019/11/05 14:58:43 adam Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -368,12 +368,14 @@ SUBDIR+=	qt5-qtnetworkauth
 SUBDIR+=	qt5-qtquickcontrols
 SUBDIR+=	qt5-qtquickcontrols2
 SUBDIR+=	qt5-qtscript
+SUBDIR+=	qt5-qtscxml
 SUBDIR+=	qt5-qtsensors
 SUBDIR+=	qt5-qtserialport
 SUBDIR+=	qt5-qtspeech
 SUBDIR+=	qt5-qtsvg
 SUBDIR+=	qt5-qttools
 SUBDIR+=	qt5-qttranslations
+SUBDIR+=	qt5-qtvirtualkeyboard
 SUBDIR+=	qt5-qtwayland
 SUBDIR+=	qt5-qtwebchannel
 SUBDIR+=	qt5-qtwebkit

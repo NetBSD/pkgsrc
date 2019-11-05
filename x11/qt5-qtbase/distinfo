@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.53 2019/09/16 19:24:53 adam Exp $
+$NetBSD: distinfo,v 1.54 2019/11/05 14:58:43 adam Exp $
 
-SHA1 (qtbase-everywhere-src-5.13.1.tar.xz) = 238b552da6a7fcf40de3eb9b39609b33783bd582
-RMD160 (qtbase-everywhere-src-5.13.1.tar.xz) = 5a76e072a919d856fdb1df096aad1799b00ae513
-SHA512 (qtbase-everywhere-src-5.13.1.tar.xz) = 86ab39eabb8867c4b038614341b7e49136f4ef898f06d4f1c899ddd2c2c271aa630bf63ad6abcf5c1f01659e6e5005f5da7dd83bb09a1484e15eb47e5274b9b3
-Size (qtbase-everywhere-src-5.13.1.tar.xz) = 48807960 bytes
+SHA1 (qtbase-everywhere-src-5.13.2.tar.xz) = 3e073387a08599641a154de758f729d47db8986f
+RMD160 (qtbase-everywhere-src-5.13.2.tar.xz) = 94749bf68e78cf3e3fa84a8df73910b501869293
+SHA512 (qtbase-everywhere-src-5.13.2.tar.xz) = b00ad017cc95876698615fd6e41c6ade366146c1f7057e1925bc1b72918f091aa39aa6bf0ea450fc6cd4d8f9810b228770d981dcb6cbe8ad30abb2c42804a204
+Size (qtbase-everywhere-src-5.13.2.tar.xz) = 48735704 bytes
 SHA1 (patch-configure) = f5019131cc4e6cd4e35242cc7b598fbf8f5f766b
 SHA1 (patch-mkspecs_features_qt__module.prf) = a04c4b1fe80250b6b3591f5486ac0fd3b5056c26
 SHA1 (patch-mkspecs_features_toolchain.prf) = 0cf13cb6e859dd6276954239b91953e557add515
