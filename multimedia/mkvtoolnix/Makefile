@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.137 2019/10/06 16:37:36 adam Exp $
+# $NetBSD: Makefile,v 1.138 2019/11/05 18:01:48 adam Exp $
 
-DISTNAME=	mkvtoolnix-38.0.0
+DISTNAME=	mkvtoolnix-39.0.0
 CATEGORIES=	multimedia
 MASTER_SITES=	https://mkvtoolnix.download/sources/
 EXTRACT_SUFX=	.tar.xz
@@ -14,7 +14,7 @@ BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 BUILD_DEPENDS+=	po4a-[0-9]*:../../textproc/po4a
 BUILD_DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
 
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c c++17
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt pkg-config
 GNU_CONFIGURE=		yes
