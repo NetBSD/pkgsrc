@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.155 2019/11/05 17:13:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.156 2019/11/05 17:28:37 ryoon Exp $
 
 .include "../../inputmethod/uim/Makefile.common"
 
@@ -51,8 +51,6 @@ CONF_FILES+=		${EGDIR}/installed-modules.scm \
 
 PKG_SYSCONFSUBDIR=	uim
 INSTALLATION_DIRS+=	share/doc/uim
-
-NOT_PAX_MPROTECT_SAFE+=	bin/uim-module-manager
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/uim
