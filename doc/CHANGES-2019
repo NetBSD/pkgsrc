@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4061.2.1 2019/11/05 02:22:14 gdt Exp $
+$NetBSD: CHANGES-2019,v 1.4061.2.2 2019/11/05 02:23:26 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -6624,4 +6624,3 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/fasttracker2 to 1.00 [fox 2019-09-30]
 	Updated mail/exim to 4.92.3 [wiedi 2019-09-30]
 	Updated mail/exim-html to 4.92.3 [wiedi 2019-09-30]
-	Removed net/unison2.48 [gdt 2019-11-05]
