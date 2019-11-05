@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2019/09/18 19:53:11 nia Exp $
+@comment $NetBSD: PLIST,v 1.26 2019/11/05 14:58:43 adam Exp $
 lib/pkgconfig/Qt5Concurrent.pc
 lib/pkgconfig/Qt5Core.pc
 lib/pkgconfig/Qt5DBus.pc
@@ -20,6 +20,7 @@ qt5/bin/qmake
 qt5/bin/qvkgen
 qt5/bin/rcc
 qt5/bin/syncqt.pl
+qt5/bin/tracegen
 qt5/bin/uic
 qt5/doc/config/exampleurl-qt3d.qdocconf
 qt5/doc/config/exampleurl-qtactiveqt.qdocconf

@@ -1,4 +1,25 @@
-@comment $NetBSD: PLIST,v 1.12 2019/09/16 19:24:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2019/11/05 14:58:44 adam Exp $
+qt5/doc/qtcmake.qch
+qt5/doc/qtcmake/cmake-command-reference.html
+qt5/doc/qtcmake/cmake-get-started.html
+qt5/doc/qtcmake/cmake-manual.html
+qt5/doc/qtcmake/cmake-variable-reference.html
+qt5/doc/qtcmake/images/arrow_bc.png
+qt5/doc/qtcmake/images/bgrContent.png
+qt5/doc/qtcmake/images/btn_next.png
+qt5/doc/qtcmake/images/btn_prev.png
+qt5/doc/qtcmake/images/bullet_dn.png
+qt5/doc/qtcmake/images/bullet_sq.png
+qt5/doc/qtcmake/images/home.png
+qt5/doc/qtcmake/images/ico_note.png
+qt5/doc/qtcmake/images/ico_note_attention.png
+qt5/doc/qtcmake/images/ico_out.png
+qt5/doc/qtcmake/images/logo.png
+qt5/doc/qtcmake/qtcmake.index
+qt5/doc/qtcmake/qtcmake.qhp
+qt5/doc/qtcmake/qtcmake.qhp.sha1
+qt5/doc/qtcmake/style/offline-simple.css
+qt5/doc/qtcmake/style/offline.css
 qt5/doc/qtdoc.qch
 qt5/doc/qtdoc/accelerators.html
 qt5/doc/qtdoc/accessibility.html
@@ -26,9 +47,6 @@ qt5/doc/qtdoc/bughowto.html
 qt5/doc/qtdoc/build-sources.html
 qt5/doc/qtdoc/classes.html
 qt5/doc/qtdoc/classesandfunctions.html
-qt5/doc/qtdoc/cmake-command-reference.html
-qt5/doc/qtdoc/cmake-manual.html
-qt5/doc/qtdoc/cmake-variable-reference.html
 qt5/doc/qtdoc/commerciallicense.html
 qt5/doc/qtdoc/configure-linux-device.html
 qt5/doc/qtdoc/configure-options.html
