@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4756 2019/11/05 02:24:15 gdt Exp $
+$NetBSD: CHANGES-2019,v 1.4757 2019/11/05 05:28:45 pho Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7553,3 +7553,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added misc/xygrib version 1.2.6.1 [nros 2019-11-04]
 	Updated net/scapy to 2.4.3nb1 [gutteridge 2019-11-05]
 	Removed net/unison2.48 [gdt 2019-11-05]
+	Updated fonts/migu-ttf to 20150712 [pho 2019-11-05]
