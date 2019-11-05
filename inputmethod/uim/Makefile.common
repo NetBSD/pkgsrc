@@ -1,9 +1,10 @@
-# $NetBSD: Makefile.common,v 1.14 2019/11/01 16:21:11 nia Exp $
+# $NetBSD: Makefile.common,v 1.15 2019/11/05 17:13:10 ryoon Exp $
 #
 # used by inputmethod/uim/Makefile
 # used by inputmethod/uim-elisp/Makefile
 
-DISTNAME=	uim-1.8.8
+UIM_VERSION=	1.8.8
+DISTNAME=	uim-${UIM_VERSION}
 CATEGORIES=	inputmethod
 MASTER_SITES=	${MASTER_SITE_GITHUB:=uim/}
 GITHUB_RELEASE=	${DISTNAME:S/^uim-//1}
