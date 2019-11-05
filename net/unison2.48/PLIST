@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2019/07/29 18:07:10 wiz Exp $
-bin/unison-2.48
-share/doc/unison-2.48/BUGS.txt
-share/doc/unison-2.48/CONTRIB
-share/doc/unison-2.48/COPYING
-share/doc/unison-2.48/NEWS
-share/doc/unison-2.48/README
-share/doc/unison-2.48/ROADMAP.txt
-share/doc/unison-2.48/TODO.txt
