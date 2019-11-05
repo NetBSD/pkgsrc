@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2019/11/05 02:34:33 gdt Exp $
+# $NetBSD: Makefile,v 1.20 2019/11/05 02:38:21 gdt Exp $
 
-# This package is "unison-2.51.x" because 2.51 is the standard
-# approach, and hence uses the bare name as the package name.  For the
-# same reason, it installs as "unison", rather than unison-X.Y.
+# Currently, 2.51.x is the standard approach, and thus this package
+# produces a "unison-2.51.x" package which installs a "unison" binary.
+# When the next unison branch is released, we will likely again have
+# multiple unison packages, with whichever is the standard approach
+# using the unversioned name.
 DISTNAME=	unison-2.51.2
 PKGREVISION=	15
 CATEGORIES=	net
