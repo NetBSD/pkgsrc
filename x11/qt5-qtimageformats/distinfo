@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2019/09/16 19:24:54 adam Exp $
+$NetBSD: distinfo,v 1.14 2019/11/05 14:58:44 adam Exp $
 
-SHA1 (qtimageformats-everywhere-src-5.13.1.tar.xz) = 23e77f6cd7ed9289c1fbf2fc0a736213d011ee85
-RMD160 (qtimageformats-everywhere-src-5.13.1.tar.xz) = a76d126fe0d58aae67d4c601578d41f0addd2543
-SHA512 (qtimageformats-everywhere-src-5.13.1.tar.xz) = 8a7ac126e7f88525ce490a13656608cee53db232f4af8a90783a2a2e8540fc0bfeed641d33cf41d3643e46439850f95da701b0d5215872e0882c38209da10144
-Size (qtimageformats-everywhere-src-5.13.1.tar.xz) = 1800152 bytes
+SHA1 (qtimageformats-everywhere-src-5.13.2.tar.xz) = b287e23ee6fa83fcb06c2934f3bf365fb1132ffd
+RMD160 (qtimageformats-everywhere-src-5.13.2.tar.xz) = b9118a89a786418f8227981674a3d1ce80b62713
+SHA512 (qtimageformats-everywhere-src-5.13.2.tar.xz) = e76d7efaeab81c4eaf0f41dad150ae6b36ef2246993d344e4611ed865d62a8ac93cca5f62a2c94a97bf16333344490b5a51ca8de1c7eeb460c9ae321f759f4e6
+Size (qtimageformats-everywhere-src-5.13.2.tar.xz) = 1803796 bytes
