@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2019/11/04 05:48:26 gutteridge Exp $
+$NetBSD: distinfo,v 1.11 2019/11/05 01:02:49 gutteridge Exp $
 
 SHA1 (scapy-2.4.3.tar.gz) = 62dfd58a8e3799f083a157209b8b0902f53e76f0
 RMD160 (scapy-2.4.3.tar.gz) = fee72af411c6b42961feb6f46ad5ba7e8c0c426b
@@ -8,3 +8,4 @@ SHA1 (patch-ab) = 09adbe98c2e129438833f1e1212c6ef276e197d0
 SHA1 (patch-ad) = bac7c72eff08608d4d73911a94bfc3125b8b53b6
 SHA1 (patch-scapy_arch_bpf_supersocket.py) = d1850020a54799155e8046de0994d7df821c6046
 SHA1 (patch-scapy_consts.py) = 3495fc2716b78bf0689f2eb8d1095c746d9700e3
+SHA1 (patch-scapy_tools_generate__ethertypes.py) = 1222be8736cadf5c6148cd7a24584177bb522446
