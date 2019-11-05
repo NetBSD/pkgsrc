@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2018/08/05 18:31:02 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/11/05 08:39:57 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PLIST.requires}${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/typing_extensions.py
 ${PYSITELIB}/typing_extensions.pyc
