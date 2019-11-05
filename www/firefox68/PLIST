@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/09/21 07:31:43 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/11/05 17:14:30 ryoon Exp $
 bin/firefox68
 lib/firefox68/actors/AudioPlaybackChild.jsm
 lib/firefox68/actors/AutoplayChild.jsm
@@ -1671,6 +1671,7 @@ lib/firefox68/browser/chrome/devtools/content/shared/splitview.css
 lib/firefox68/browser/chrome/devtools/content/shared/theme-switching.js
 lib/firefox68/browser/chrome/devtools/content/shared/vendor/d3.js
 lib/firefox68/browser/chrome/devtools/content/shared/vendor/dagre-d3.js
+lib/firefox68/browser/chrome/devtools/content/shared/webextension-fallback.html
 lib/firefox68/browser/chrome/devtools/content/shared/widgets/VariablesView.xul
 lib/firefox68/browser/chrome/devtools/content/shared/widgets/cubic-bezier.css
 lib/firefox68/browser/chrome/devtools/content/shared/widgets/filter-widget.css
@@ -2823,7 +2824,6 @@ lib/firefox68/browser/chrome/devtools/modules/devtools/client/shared/demangle.js
 lib/firefox68/browser/chrome/devtools/modules/devtools/client/shared/devices.js
 lib/firefox68/browser/chrome/devtools/modules/devtools/client/shared/enum.js
 lib/firefox68/browser/chrome/devtools/modules/devtools/client/shared/events.js
-lib/firefox68/browser/chrome/devtools/modules/devtools/client/shared/file-saver.js
 lib/firefox68/browser/chrome/devtools/modules/devtools/client/shared/focus.js
 lib/firefox68/browser/chrome/devtools/modules/devtools/client/shared/getjson.js
 lib/firefox68/browser/chrome/devtools/modules/devtools/client/shared/inplace-editor.js
@@ -4243,6 +4243,10 @@ lib/firefox68/browser/features/webcompat@mozilla.org/data/injections.js
 lib/firefox68/browser/features/webcompat@mozilla.org/data/ua_overrides.js
 lib/firefox68/browser/features/webcompat@mozilla.org/experiment-apis/aboutConfigPrefs.js
 lib/firefox68/browser/features/webcompat@mozilla.org/experiment-apis/aboutConfigPrefs.json
+lib/firefox68/browser/features/webcompat@mozilla.org/experiment-apis/experiments.js
+lib/firefox68/browser/features/webcompat@mozilla.org/experiment-apis/experiments.json
+lib/firefox68/browser/features/webcompat@mozilla.org/experiment-apis/sharedPreferences.js
+lib/firefox68/browser/features/webcompat@mozilla.org/experiment-apis/sharedPreferences.json
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug0000000-testbed-css-injection.css
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1305028-gaming.youtube.com-webkit-scrollbar.css
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1432935-breitbart.com-webkit-scrollbar.css
@@ -4252,13 +4256,27 @@ lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1526977-s
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1561371-mail.google.com-allow-horizontal-scrolling.css
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1567610-dns.google.com-moz-fit-content.css
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1568256-zertifikate.commerzbank.de-flex.css
+lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1568908-console.cloud.google.com-scrollbar-fix.css
+lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1570119-teamcoco.com-scrollbar-width.css
+lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1570328-developer-apple.com-transform-scale.css
+lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1574973-patch.com-dropdown-menu-fix.css
+lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1575000-apply.lloydsbank.co.uk-radio-buttons-fix.css
+lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1575011-holiday-weather.com-scrolling-fix.css
+lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1575017-dunkindonuts.com-flex-basis.css
+lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1577270-binance.com-calc-height-fix.css
+lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1577297-kitkat.com.au-slider-width-fix.css
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/js/bug0000000-testbed-js-injection.js
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/js/bug1452707-window.controllers-shim-ib.absa.co.za.js
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/js/bug1457335-histography.io-ua-change.js
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/js/bug1472075-bankofamerica.com-ua-change.js
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/js/bug1472081-election.gov.np-window.sidebar-shim.js
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/js/bug1482066-portalminasnet.com-window.sidebar-shim.js
+lib/firefox68/browser/features/webcompat@mozilla.org/injections/js/bug1570856-medium.com-menu-isTier1.js
+lib/firefox68/browser/features/webcompat@mozilla.org/injections/js/bug1577245-salesforce-communities-hide-unsupported.js
+lib/firefox68/browser/features/webcompat@mozilla.org/injections/js/bug1579159-m.tailieu.vn-pdfjs-worker-disable.js
 lib/firefox68/browser/features/webcompat@mozilla.org/lib/about_compat_broker.js
+lib/firefox68/browser/features/webcompat@mozilla.org/lib/custom_functions.js
+lib/firefox68/browser/features/webcompat@mozilla.org/lib/google.js
 lib/firefox68/browser/features/webcompat@mozilla.org/lib/injections.js
 lib/firefox68/browser/features/webcompat@mozilla.org/lib/module_shim.js
 lib/firefox68/browser/features/webcompat@mozilla.org/lib/ua_overrides.js
@@ -4364,6 +4382,7 @@ lib/firefox68/browser/modules/ProfileMigrator.jsm
 lib/firefox68/browser/modules/ReaderParent.jsm
 lib/firefox68/browser/modules/RemotePrompt.jsm
 lib/firefox68/browser/modules/Sanitizer.jsm
+lib/firefox68/browser/modules/ScreenshotChild.jsm
 lib/firefox68/browser/modules/SearchTelemetry.jsm
 lib/firefox68/browser/modules/SearchWidgetTracker.jsm
 lib/firefox68/browser/modules/SelectionChangedMenulist.jsm
@@ -5405,6 +5424,7 @@ lib/firefox68/modules/GMPExtractorWorker.js
 lib/firefox68/modules/GMPInstallManager.jsm
 lib/firefox68/modules/GMPUtils.jsm
 lib/firefox68/modules/Geometry.jsm
+lib/firefox68/modules/HiddenFrame.jsm
 lib/firefox68/modules/HTMLMenuBuilder.jsm
 lib/firefox68/modules/HealthPing.jsm
 lib/firefox68/modules/HelperAppDlg.jsm
