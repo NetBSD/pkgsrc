@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2019/11/03 18:19:32 triaxx Exp $
+# $NetBSD: Makefile,v 1.57 2019/11/05 19:16:31 rillig Exp $
 
 DISTNAME=	rspamd-2.1
 CATEGORIES=	mail
@@ -81,11 +81,13 @@ CONF_FILES+=	${EGDIR}/${file} ${PKG_SYSCONFDIR}/${file}
 ### Generate list of config files
 ###
 .PHONY: cfgfiles
-cfgfiles: do-extract
+cfgfiles:
+	${RUN} ${RECURSIVE_MAKE} extract
 	@${ECHO} "# \$$NetBSD\$$" > ${.CURDIR}/cfgfiles.mk
-	@${ECHO} "# Do not edit, regenerate post-extract using 'make cfgfiles'" >> ${.CURDIR}/cfgfiles.mk
-	@${ECHO} "CFGFILES= \\" >> ${.CURDIR}/cfgfiles.mk
-	cd ${WRKSRC}/conf && ${FIND} * -type f | ${SORT} | ${TR} '\n' ' ' >> ${.CURDIR}/cfgfiles.mk
+	@${ECHO} "# Do not edit, regenerate using 'make cfgfiles'" >> ${.CURDIR}/cfgfiles.mk
+	${RUN} cd ${WRKSRC}/conf && ${FIND} * -type f | ${SORT} \
+	| ${TR} '\n' ' ' | ${SED} 's, $$,,' \
+	| ${AWK} '{print("CFGFILES=\t" $$0)}' >> ${.CURDIR}/cfgfiles.mk
 	@${ECHO} >> ${.CURDIR}/cfgfiles.mk
 
 post-extract:
