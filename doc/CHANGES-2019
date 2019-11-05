@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4759 2019/11/05 08:13:26 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4760 2019/11/05 08:58:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7560,3 +7560,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-test-django to 3.6.0 [adam 2019-11-05]
 	Updated multimedia/py-m3u8 to 0.5.1 [adam 2019-11-05]
 	Updated textproc/py-html5-parser to 0.4.9 [adam 2019-11-05]
+	Updated devel/py-typing-extensions to 3.7.4.1 [adam 2019-11-05]
+	Updated devel/py-flake8 to 3.7.9 [adam 2019-11-05]
