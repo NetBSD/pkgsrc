@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.88 2019/11/02 13:12:35 ryoon Exp $
+$NetBSD: distinfo,v 1.89 2019/11/05 17:20:22 ryoon Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -228,7 +228,7 @@ SHA1 (patch-external_harfbuzz_UnpackedTarball__harfbuzz.mk) = 90e46a519fe587c5ac
 SHA1 (patch-external_mariadb-connector-c_UnpackedTarball__mariadb-connector-c.mk) = 01798842e3f573f627be31660195edbac802df89
 SHA1 (patch-external_mariadb-connector-c_netbsd.patch) = e20e0cc58153b865551a8dd2819fb141f20fcb8d
 SHA1 (patch-external_pdfium_UnpackedTarball__pdfium.mk) = e82cdef5c7636ca3340589cf1e258cc4555c8346
-SHA1 (patch-external_pdfium_pkgsrc.patch.1) = e40ad0abec8095a1598982e6ddf7752c9aa8d60f
+SHA1 (patch-external_pdfium_pkgsrc.patch.1) = a6cc25ff3e8b584c9f79024e2cdbd1315c308ec1
 SHA1 (patch-external_postgresql_ExternalProject__postgresql.mk) = 48e68ff43b971996f81985ee79d71f7b83cce428
 SHA1 (patch-i18npool_source_breakiterator_breakiterator_unicode.cxx) = 0a784bced0874b3ef7cc3b6ff19a865e0d64ce49
 SHA1 (patch-i18npool_source_collator_collator_unicode.cxx) = 853367cf9a4be70c5d0de44a82e6fadc70e40ea6
