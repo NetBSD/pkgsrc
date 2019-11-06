@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2019/11/06 13:44:38 he Exp $
+
+SHA1 (opendnssec-2.1.5.tar.gz) = 550ac98a9a1dca7d32015cf5ffd5fee7771ec2c7
+RMD160 (opendnssec-2.1.5.tar.gz) = 0aa55836d55023503c4746babc55f7bf88430232
+SHA512 (opendnssec-2.1.5.tar.gz) = 33d6764d7bd8d8d31f0f6290f3c5cacfc523419ac0984b9e0b17f5768d3d60b58f6a339cf8430e98d9386c0ce5c502d4a43429d697fbfc43a1fbba5acbb9b423
+Size (opendnssec-2.1.5.tar.gz) = 1118221 bytes
+SHA1 (patch-conf_Makefile.in) = 83fdf2650bfe63688b072dcb8019d44b62f6f016
