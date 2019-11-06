@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2019/07/21 22:25:13 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2019/11/06 11:27:00 szptvlfn Exp $
 #
 
 DISTNAME=		scim-uim-0.2.0
@@ -7,7 +7,7 @@ CATEGORIES=		inputmethod
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scim/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.scim-im.org/
+HOMEPAGE=		https://github.com/scim-im/scim
 COMMENT=		SCIM IMEngine module for UIM
 LICENSE=		gnu-gpl-v2
 
