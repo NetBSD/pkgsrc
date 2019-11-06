@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.93 2019/11/03 22:25:27 leot Exp $
+@comment $NetBSD: PLIST,v 1.94 2019/11/06 21:08:00 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -188,9 +188,6 @@ ${PYSITELIB}/youtube_dl/extractor/azmedien.pyo
 ${PYSITELIB}/youtube_dl/extractor/baidu.py
 ${PYSITELIB}/youtube_dl/extractor/baidu.pyc
 ${PYSITELIB}/youtube_dl/extractor/baidu.pyo
-${PYSITELIB}/youtube_dl/extractor/bambuser.py
-${PYSITELIB}/youtube_dl/extractor/bambuser.pyc
-${PYSITELIB}/youtube_dl/extractor/bambuser.pyo
 ${PYSITELIB}/youtube_dl/extractor/bandcamp.py
 ${PYSITELIB}/youtube_dl/extractor/bandcamp.pyc
 ${PYSITELIB}/youtube_dl/extractor/bandcamp.pyo
@@ -656,9 +653,6 @@ ${PYSITELIB}/youtube_dl/extractor/fivetv.pyo
 ${PYSITELIB}/youtube_dl/extractor/flickr.py
 ${PYSITELIB}/youtube_dl/extractor/flickr.pyc
 ${PYSITELIB}/youtube_dl/extractor/flickr.pyo
-${PYSITELIB}/youtube_dl/extractor/flipagram.py
-${PYSITELIB}/youtube_dl/extractor/flipagram.pyc
-${PYSITELIB}/youtube_dl/extractor/flipagram.pyo
 ${PYSITELIB}/youtube_dl/extractor/folketinget.py
 ${PYSITELIB}/youtube_dl/extractor/folketinget.pyc
 ${PYSITELIB}/youtube_dl/extractor/folketinget.pyo
@@ -725,9 +719,6 @@ ${PYSITELIB}/youtube_dl/extractor/gaia.pyo
 ${PYSITELIB}/youtube_dl/extractor/gameinformer.py
 ${PYSITELIB}/youtube_dl/extractor/gameinformer.pyc
 ${PYSITELIB}/youtube_dl/extractor/gameinformer.pyo
-${PYSITELIB}/youtube_dl/extractor/gameone.py
-${PYSITELIB}/youtube_dl/extractor/gameone.pyc
-${PYSITELIB}/youtube_dl/extractor/gameone.pyo
 ${PYSITELIB}/youtube_dl/extractor/gamespot.py
 ${PYSITELIB}/youtube_dl/extractor/gamespot.pyc
 ${PYSITELIB}/youtube_dl/extractor/gamespot.pyo
@@ -767,9 +758,6 @@ ${PYSITELIB}/youtube_dl/extractor/globo.pyo
 ${PYSITELIB}/youtube_dl/extractor/go.py
 ${PYSITELIB}/youtube_dl/extractor/go.pyc
 ${PYSITELIB}/youtube_dl/extractor/go.pyo
-${PYSITELIB}/youtube_dl/extractor/go90.py
-${PYSITELIB}/youtube_dl/extractor/go90.pyc
-${PYSITELIB}/youtube_dl/extractor/go90.pyo
 ${PYSITELIB}/youtube_dl/extractor/godtube.py
 ${PYSITELIB}/youtube_dl/extractor/godtube.pyc
 ${PYSITELIB}/youtube_dl/extractor/godtube.pyo
@@ -860,9 +848,6 @@ ${PYSITELIB}/youtube_dl/extractor/hungama.pyo
 ${PYSITELIB}/youtube_dl/extractor/hypem.py
 ${PYSITELIB}/youtube_dl/extractor/hypem.pyc
 ${PYSITELIB}/youtube_dl/extractor/hypem.pyo
-${PYSITELIB}/youtube_dl/extractor/iconosquare.py
-${PYSITELIB}/youtube_dl/extractor/iconosquare.pyc
-${PYSITELIB}/youtube_dl/extractor/iconosquare.pyo
 ${PYSITELIB}/youtube_dl/extractor/ign.py
 ${PYSITELIB}/youtube_dl/extractor/ign.pyc
 ${PYSITELIB}/youtube_dl/extractor/ign.pyo
@@ -953,9 +938,6 @@ ${PYSITELIB}/youtube_dl/extractor/karaoketv.pyo
 ${PYSITELIB}/youtube_dl/extractor/karrierevideos.py
 ${PYSITELIB}/youtube_dl/extractor/karrierevideos.pyc
 ${PYSITELIB}/youtube_dl/extractor/karrierevideos.pyo
-${PYSITELIB}/youtube_dl/extractor/keek.py
-${PYSITELIB}/youtube_dl/extractor/keek.pyc
-${PYSITELIB}/youtube_dl/extractor/keek.pyo
 ${PYSITELIB}/youtube_dl/extractor/keezmovies.py
 ${PYSITELIB}/youtube_dl/extractor/keezmovies.pyc
 ${PYSITELIB}/youtube_dl/extractor/keezmovies.pyo
@@ -1658,6 +1640,9 @@ ${PYSITELIB}/youtube_dl/extractor/screencastomatic.pyo
 ${PYSITELIB}/youtube_dl/extractor/scrippsnetworks.py
 ${PYSITELIB}/youtube_dl/extractor/scrippsnetworks.pyc
 ${PYSITELIB}/youtube_dl/extractor/scrippsnetworks.pyo
+${PYSITELIB}/youtube_dl/extractor/scte.py
+${PYSITELIB}/youtube_dl/extractor/scte.pyc
+${PYSITELIB}/youtube_dl/extractor/scte.pyo
 ${PYSITELIB}/youtube_dl/extractor/seeker.py
 ${PYSITELIB}/youtube_dl/extractor/seeker.pyc
 ${PYSITELIB}/youtube_dl/extractor/seeker.pyo
@@ -1991,6 +1976,9 @@ ${PYSITELIB}/youtube_dl/extractor/turner.pyo
 ${PYSITELIB}/youtube_dl/extractor/tv2.py
 ${PYSITELIB}/youtube_dl/extractor/tv2.pyc
 ${PYSITELIB}/youtube_dl/extractor/tv2.pyo
+${PYSITELIB}/youtube_dl/extractor/tv2dk.py
+${PYSITELIB}/youtube_dl/extractor/tv2dk.pyc
+${PYSITELIB}/youtube_dl/extractor/tv2dk.pyo
 ${PYSITELIB}/youtube_dl/extractor/tv2hu.py
 ${PYSITELIB}/youtube_dl/extractor/tv2hu.pyc
 ${PYSITELIB}/youtube_dl/extractor/tv2hu.pyo
