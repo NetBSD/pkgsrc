@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2019/07/21 22:25:13 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2019/11/06 11:26:59 szptvlfn Exp $
 #
 
 DISTNAME=		scim-m17n-0.2.3
@@ -7,7 +7,7 @@ CATEGORIES=		inputmethod
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scim/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.scim-im.org/
+HOMEPAGE=		https://github.com/scim-im/scim
 COMMENT=		SCIM IMEngine module for m17n-lib
 LICENSE=		gnu-gpl-v2
 
