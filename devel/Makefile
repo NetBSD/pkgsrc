@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2939 2019/11/04 04:20:28 taca Exp $
+# $NetBSD: Makefile,v 1.2940 2019/11/06 10:45:25 ng0 Exp $
 #
 
 COMMENT=	Development utilities
@@ -363,6 +363,7 @@ SUBDIR+=	gnustep-objc-lf2
 SUBDIR+=	go-afero
 SUBDIR+=	go-amber
 SUBDIR+=	go-appengine
+SUBDIR+=	go-argv
 SUBDIR+=	go-assert
 SUBDIR+=	go-blackfriday
 SUBDIR+=	go-buffruneio
