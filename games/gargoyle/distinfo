@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2019/11/06 19:05:08 yhardy Exp $
+$NetBSD: distinfo,v 1.3 2019/11/06 23:13:56 wiz Exp $
 
-SHA1 (2019.1.tar.gz) = 3423afe9e17fb5e703ec0789633db550ed0e4921
-RMD160 (2019.1.tar.gz) = 905477b0479bcd27fed95fdf704658463da417fd
-SHA512 (2019.1.tar.gz) = 59f32be9e5faa542e5d12a03466a92503f15023add1da5370645e15ef5b6c1eb2696456b0f9fcc924a5341b40cc98e9e7bcb1aec0ea05acfd66ccc412e39cbb7
-Size (2019.1.tar.gz) = 14702153 bytes
-SHA1 (patch-Jamrules) = 601ac16e4cffa01dc20ec1ad8c53e0446a1b7e8f
+SHA1 (gargoyle-2019.1.tar.gz) = 3423afe9e17fb5e703ec0789633db550ed0e4921
+RMD160 (gargoyle-2019.1.tar.gz) = 905477b0479bcd27fed95fdf704658463da417fd
+SHA512 (gargoyle-2019.1.tar.gz) = 59f32be9e5faa542e5d12a03466a92503f15023add1da5370645e15ef5b6c1eb2696456b0f9fcc924a5341b40cc98e9e7bcb1aec0ea05acfd66ccc412e39cbb7
+Size (gargoyle-2019.1.tar.gz) = 14702153 bytes
+SHA1 (patch-Jamrules) = 26376ab4c3ea7950caaf4c6eeb78dcfb78f27a73
 SHA1 (patch-terps_nitfol_nitfol.h) = 63e73928684260cd5ae9446604fbdd3d76f364c7
