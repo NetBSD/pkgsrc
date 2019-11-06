@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2940 2019/11/06 10:45:25 ng0 Exp $
+# $NetBSD: Makefile,v 1.2941 2019/11/06 10:56:14 ng0 Exp $
 #
 
 COMMENT=	Development utilities
@@ -367,6 +367,7 @@ SUBDIR+=	go-argv
 SUBDIR+=	go-assert
 SUBDIR+=	go-blackfriday
 SUBDIR+=	go-buffruneio
+SUBDIR+=	go-bytebufferpool
 SUBDIR+=	go-cast
 SUBDIR+=	go-check
 SUBDIR+=	go-cli
