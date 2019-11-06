@@ -1,0 +1,4 @@
+Go implementation of the 64-bit xxHash algorithm (XXH64).
+
+This implementation provides a fast pure-Go implementation
+and an even faster assembly implementation for amd64.
