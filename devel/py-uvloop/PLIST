@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/08/17 11:05:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/11/06 12:48:47 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -53,6 +53,7 @@ ${PYSITELIB}/uvloop/includes/consts.pxi
 ${PYSITELIB}/uvloop/includes/debug.h
 ${PYSITELIB}/uvloop/includes/debug.pxd
 ${PYSITELIB}/uvloop/includes/flowcontrol.pxd
+${PYSITELIB}/uvloop/includes/fork_handler.h
 ${PYSITELIB}/uvloop/includes/python.pxd
 ${PYSITELIB}/uvloop/includes/stdlib.pxi
 ${PYSITELIB}/uvloop/includes/system.pxd
