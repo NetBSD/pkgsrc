@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2941 2019/11/06 10:56:14 ng0 Exp $
+# $NetBSD: Makefile,v 1.2942 2019/11/06 11:08:13 ng0 Exp $
 #
 
 COMMENT=	Development utilities
@@ -376,6 +376,7 @@ SUBDIR+=	go-colorable
 SUBDIR+=	go-colortext
 SUBDIR+=	go-colour
 SUBDIR+=	go-consul-api
+SUBDIR+=	go-cpuid
 SUBDIR+=	go-debounce
 SUBDIR+=	go-ed25519
 SUBDIR+=	go-emoji
