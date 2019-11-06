@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.109 2019/08/11 13:23:25 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2019/11/06 13:23:45 wiz Exp $
 
-PKGREVISION= 1
 .include "Makefile.common"
 
 BUILD_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
@@ -20,7 +19,7 @@ TEST_TARGET=		check
 BUILDLINK_TRANSFORM.SunOS+=	opt:-Wl,./libxslt.syms:-Wl,./libxslt_solaris.syms
 
 .include "../../mk/bsd.prefs.mk"
-.if !empty(MACHINE_PLATFORM:MIRIX-5*)
+.if !empty(MACHINE_PLATFORM:MIRIX-5.*)
 CPPFLAGS+=	-Dsocklen_t=int
 .endif
 
