@@ -1,14 +1,15 @@
-$NetBSD: patch-configure,v 1.7 2019/05/22 09:00:48 leot Exp $
+$NetBSD: patch-configure,v 1.8 2019/11/06 09:17:29 leot Exp $
 
 - Builtin krb5-config in platforms such as solaris do not support
   the gssapi option, and need an explicit -lgss
 - On Darwin, do not append custom CFLAGS.
 - Do not strip debug flags.
 - Support Minix.
+- Avoid unportable `==' test(1) operator.
 
---- configure.orig	2019-03-25 21:03:50.000000000 +0000
+--- configure.orig	2019-11-06 06:38:18.000000000 +0000
 +++ configure
-@@ -3746,6 +3746,7 @@ $as_echo "$as_me: $xc_bad_var_msg librar
+@@ -3806,6 +3806,7 @@ $as_echo "$as_me: $xc_bad_var_msg librar
          ;;
      esac
    done
@@ -16,7 +17,7 @@ $NetBSD: patch-configure,v 1.7 2019/05/22 09:00:48 leot Exp $
    if test $xc_bad_var_cflags = yes; then
      { $as_echo "$as_me:${as_lineno-$LINENO}: using CFLAGS: $CFLAGS" >&5
  $as_echo "$as_me: using CFLAGS: $CFLAGS" >&6;}
-@@ -7881,7 +7882,7 @@ else
+@@ -7939,7 +7940,7 @@ else
      lt_cv_sys_max_cmd_len=8192;
      ;;
  
@@ -25,7 +26,7 @@ $NetBSD: patch-configure,v 1.7 2019/05/22 09:00:48 leot Exp $
      # This has been around since 386BSD, at least.  Likely further.
      if test -x /sbin/sysctl; then
        lt_cv_sys_max_cmd_len=`/sbin/sysctl -n kern.argmax`
-@@ -8347,12 +8348,8 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu 
+@@ -8405,12 +8406,8 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu 
    lt_cv_deplibs_check_method=pass_all
    ;;
  
@@ -40,7 +41,7 @@ $NetBSD: patch-configure,v 1.7 2019/05/22 09:00:48 leot Exp $
    ;;
  
  newos6*)
-@@ -12559,14 +12556,13 @@ _LT_EOF
+@@ -12617,14 +12614,13 @@ _LT_EOF
        fi
        ;;
  
@@ -62,7 +63,7 @@ $NetBSD: patch-configure,v 1.7 2019/05/22 09:00:48 leot Exp $
        ;;
  
      solaris*)
-@@ -13249,15 +13245,13 @@ $as_echo "$lt_cv_irix_exported_symbol" >
+@@ -13307,15 +13303,13 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        esac
        ;;
  
@@ -83,7 +84,7 @@ $NetBSD: patch-configure,v 1.7 2019/05/22 09:00:48 leot Exp $
        ;;
  
      newsos6)
-@@ -14363,6 +14357,18 @@ fi
+@@ -14421,6 +14415,18 @@ fi
    dynamic_linker='GNU/Linux ld.so'
    ;;
  
@@ -102,7 +103,7 @@ $NetBSD: patch-configure,v 1.7 2019/05/22 09:00:48 leot Exp $
  netbsdelf*-gnu)
    version_type=linux
    need_lib_prefix=no
-@@ -16931,7 +16937,7 @@ squeeze() {
+@@ -16989,7 +16995,7 @@ squeeze() {
  
  
        #
@@ -111,7 +112,7 @@ $NetBSD: patch-configure,v 1.7 2019/05/22 09:00:48 leot Exp $
      #
      if test "$compiler_id" = "GNU_C" ||
        test "$compiler_id" = "CLANG"; then
-@@ -17259,13 +17265,6 @@ $as_echo_n "checking if compiler accepts
+@@ -17317,13 +17323,6 @@ $as_echo_n "checking if compiler accepts
        tmp_options="$flags_dbg_off"
      fi
      #
@@ -125,7 +126,7 @@ $NetBSD: patch-configure,v 1.7 2019/05/22 09:00:48 leot Exp $
      squeeze CPPFLAGS
      squeeze CFLAGS
  
-@@ -18933,7 +18932,7 @@ $as_echo "no" >&6; }
+@@ -18991,7 +18990,7 @@ $as_echo "no" >&6; }
    tst_cflags="no"
    case $host_os in
      darwin*)
@@ -134,7 +135,7 @@ $NetBSD: patch-configure,v 1.7 2019/05/22 09:00:48 leot Exp $
        ;;
    esac
  
-@@ -21934,7 +21933,11 @@ $as_echo "yes" >&6; }
+@@ -21988,7 +21987,11 @@ $as_echo "yes" >&6; }
       if test -n "$host_alias" -a -f "$GSSAPI_ROOT/bin/$host_alias-krb5-config"; then
          GSSAPI_INCS=`$GSSAPI_ROOT/bin/$host_alias-krb5-config --cflags gssapi`
       elif test -f "$KRB5CONFIG"; then
@@ -147,7 +148,7 @@ $NetBSD: patch-configure,v 1.7 2019/05/22 09:00:48 leot Exp $
       elif test "$GSSAPI_ROOT" != "yes"; then
          GSSAPI_INCS="-I$GSSAPI_ROOT/include"
       fi
-@@ -22107,7 +22110,7 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
+@@ -22161,7 +22164,7 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
          LIBS="-lgss $LIBS"
          ;;
       *)
@@ -156,3 +157,21 @@ $NetBSD: patch-configure,v 1.7 2019/05/22 09:00:48 leot Exp $
          ;;
       esac
    fi
+@@ -42524,7 +42527,7 @@ $as_echo_n "checking whether ESNI suppor
+     ESNI_ENABLED=0
+   ESNI_SUPPORT=''
+ 
+-      if test "x$OPENSSL_ENABLED" == "x1"; then
++      if test "x$OPENSSL_ENABLED" = "x1"; then
+     for ac_func in SSL_get_esni_status
+ do :
+   ac_fn_c_check_func "$LINENO" "SSL_get_esni_status" "ac_cv_func_SSL_get_esni_status"
+@@ -42540,7 +42543,7 @@ done
+ 
+     fi
+ 
+-    if test "x$ESNI_ENABLED" == "x1"; then
++    if test "x$ESNI_ENABLED" = "x1"; then
+ 
+ $as_echo "#define USE_ESNI 1" >>confdefs.h
+ 
