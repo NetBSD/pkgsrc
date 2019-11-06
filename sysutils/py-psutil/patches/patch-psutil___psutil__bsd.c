@@ -1,25 +1,16 @@
-$NetBSD: patch-psutil___psutil__bsd.c,v 1.11 2019/06/29 18:00:49 wiz Exp $
+$NetBSD: patch-psutil___psutil__bsd.c,v 1.12 2019/11/06 15:48:23 adam Exp $
 
-Define proc_cwd on NetBSD >= 8.99.42.
+Optionally use SDEAD.
 
---- psutil/_psutil_bsd.c.orig	2019-06-11 04:04:44.000000000 +0000
+--- psutil/_psutil_bsd.c.orig	2019-10-21 06:43:32.000000000 +0000
 +++ psutil/_psutil_bsd.c
-@@ -921,6 +921,8 @@ PsutilMethods[] = {
- #if defined(PSUTIL_FREEBSD) || defined(PSUTIL_OPENBSD)
-     {"proc_connections", psutil_proc_connections, METH_VARARGS,
-      "Return connections opened by process"},
-+#endif
-+#if defined(PSUTIL_FREEBSD) || defined(PSUTIL_OPENBSD) || (defined(PSUTIL_NETBSD) && __NetBSD_Version__ >= 899004200)
-     {"proc_cwd", psutil_proc_cwd, METH_VARARGS,
-      "Return process current working directory."},
- #endif
-@@ -1071,7 +1073,9 @@ void init_psutil_bsd(void)
-     PyModule_AddIntConstant(module, "SSLEEP", LSSLEEP);
-     PyModule_AddIntConstant(module, "SSTOP", LSSTOP);
-     PyModule_AddIntConstant(module, "SZOMB", LSZOMB);
+@@ -1049,7 +1051,9 @@ static PyMethodDef mod_methods[] = {
+     if (PyModule_AddIntConstant(mod, "SSLEEP", LSSLEEP)) INITERR;
+     if (PyModule_AddIntConstant(mod, "SSTOP", LSSTOP)) INITERR;
+     if (PyModule_AddIntConstant(mod, "SZOMB", LSZOMB)) INITERR;
 +#if defined(LSDEAD)
-     PyModule_AddIntConstant(module, "SDEAD", LSDEAD);
+     if (PyModule_AddIntConstant(mod, "SDEAD", LSDEAD)) INITERR;
 +#endif
-     PyModule_AddIntConstant(module, "SONPROC", LSONPROC);
+     if (PyModule_AddIntConstant(mod, "SONPROC", LSONPROC)) INITERR;
      // unique to NetBSD
-     PyModule_AddIntConstant(module, "SSUSPENDED", LSSUSPENDED);
+     if (PyModule_AddIntConstant(mod, "SSUSPENDED", LSSUSPENDED)) INITERR;
