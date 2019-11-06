@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4805 2019/11/06 22:47:52 leot Exp $
+$NetBSD: CHANGES-2019,v 1.4806 2019/11/06 23:22:09 yhardy Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7647,3 +7647,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated time/py-dateutil to 2.8.1 [adam 2019-11-06]
 	Updated net/youtube-dl to 20191105 [leot 2019-11-06]
 	Updated www/webkit-gtk to 2.26.2 [leot 2019-11-06]
+	Updated graphics/jhead to 3.03 [yhardy 2019-11-06]
