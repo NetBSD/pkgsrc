@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2943 2019/11/06 12:15:25 ng0 Exp $
+# $NetBSD: Makefile,v 1.2944 2019/11/06 13:40:23 ng0 Exp $
 #
 
 COMMENT=	Development utilities
@@ -429,6 +429,7 @@ SUBDIR+=	go-sanitized_anchor_name
 SUBDIR+=	go-shellwords
 SUBDIR+=	go-shuffle
 SUBDIR+=	go-siphash
+SUBDIR+=	go-spew
 SUBDIR+=	go-sync
 SUBDIR+=	go-sys
 SUBDIR+=	go-termbox
