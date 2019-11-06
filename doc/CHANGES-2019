@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4796 2019/11/06 14:24:48 ng0 Exp $
+$NetBSD: CHANGES-2019,v 1.4797 2019/11/06 14:37:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7632,3 +7632,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/gdk-pixbuf2 to 2.40.0 [wiz 2019-11-06]
 	Updated graphics/gdk-pixbuf2-xlib to 2.40.0 [wiz 2019-11-06]
 	Updated lang/vala to 0.46.3 [wiz 2019-11-06]
+	Updated security/libssh to 0.91 [wiz 2019-11-06]
