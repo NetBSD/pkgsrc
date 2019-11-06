@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2010/04/13 16:14:03 drochner Exp $
+@comment $NetBSD: PLIST,v 1.41 2019/11/06 13:23:45 wiz Exp $
 bin/xslt-config
 bin/xsltproc
 include/libexslt/exslt.h
@@ -40,7 +40,6 @@ share/doc/libxslt/APIchunk1.html
 share/doc/libxslt/APIchunk10.html
 share/doc/libxslt/APIchunk11.html
 share/doc/libxslt/APIchunk12.html
-share/doc/libxslt/APIchunk13.html
 share/doc/libxslt/APIchunk2.html
 share/doc/libxslt/APIchunk3.html
 share/doc/libxslt/APIchunk4.html
