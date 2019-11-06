@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4801 2019/11/06 17:15:37 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4802 2019/11/06 17:32:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7641,3 +7641,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/grpc to 1.25.0 [adam 2019-11-06]
 	Updated net/py-grpcio to 1.25.0 [adam 2019-11-06]
 	Updated net/py-grpcio-tools to 1.25.0 [adam 2019-11-06]
+	Updated devel/py-cffi to 1.13.2 [adam 2019-11-06]
+	Updated devel/py-crayons to 0.3.0 [adam 2019-11-06]
