@@ -1,9 +1,11 @@
-$NetBSD: patch-install.py,v 1.3 2019/01/02 18:29:14 tnn Exp $
+$NetBSD: patch-install.py,v 1.4 2019/11/06 11:56:56 mrg Exp $
 
 python 3.x support
 
---- install.py.orig	2013-01-07 12:49:35.000000000 +0000
-+++ install.py
+don't fake-conflict with csound6.
+
+--- install.py.orig	2013-01-07 04:49:35.000000000 -0800
++++ install.py	2019-11-06 03:43:25.554498784 -0800
 @@ -3,7 +3,6 @@
  import sys
  import os
@@ -12,7 +14,7 @@ python 3.x support
  import time
  
  # get Python version
-@@ -28,13 +27,14 @@ exeFiles1 = ['csound', 'csound5gui', 'Cs
+@@ -28,13 +27,14 @@
               'scsort', 'extract', 'cs', 'csb64enc', 'makecsd', 'scot']
  
  exeFiles2 = ['brkpt', 'linseg', 'tabdes']
@@ -29,7 +31,7 @@ python 3.x support
  
  prefix = '/usr/local'
  instDir = '/'
-@@ -47,14 +47,14 @@ md5Name = 'csound5-%s.md5sums' % time.st
+@@ -47,14 +47,14 @@
  word64Suffix = ''
  
  def printUsage():
@@ -52,7 +54,7 @@ python 3.x support
  
  # parse command line options
  
-@@ -73,10 +73,10 @@ if sys.argv.__len__() > 1:
+@@ -73,10 +73,10 @@
              word64Suffix = '64'
          else:
              printUsage()
@@ -65,7 +67,7 @@ python 3.x support
  
  # concatenates a list of directory names,
  # and returns full path without a trailing '/'
-@@ -96,15 +96,15 @@ def concatPath(lst):
+@@ -96,15 +96,15 @@
      return s
  
  # frontends
@@ -86,7 +88,7 @@ python 3.x support
  # XMG files
  xmgDir      = concatPath([prefix, '/share/locale'])
  # documentation
-@@ -128,7 +128,7 @@ def runCmd(args):
+@@ -128,7 +128,7 @@
  
  def makeDir(dirName):
      try:
@@ -95,7 +97,7 @@ python 3.x support
      except:
          pass
  
-@@ -158,9 +158,9 @@ def installFile_(src, dst, perm, stripMo
+@@ -158,9 +158,9 @@
          err = runCmd(['strip', stripMode, fullName])
      if err == 0:
          addMD5(fullName, fileName)
@@ -107,7 +109,7 @@ python 3.x support
      return err
  
  def installFile(src, dst):
-@@ -195,9 +195,9 @@ def installLink(src, dst):
+@@ -195,9 +195,9 @@
              addMD5(concatPath([instDir, src]), linkName)
          else:
              addMD5(concatPath([instDir, linkName]), linkName)
@@ -119,9 +121,12 @@ python 3.x support
      return err
  
  def findFiles(dir, pat):
-@@ -220,28 +220,28 @@ makeDir(concatPath([binDir]))
+@@ -218,30 +218,30 @@
+ 
+ makeDir(concatPath([binDir]))
  installedBinaries = findFiles(concatPath([instDir, binDir]), '.+')
- if ('csound' in installedBinaries) or ('csound64' in installedBinaries):
+-if ('csound' in installedBinaries) or ('csound64' in installedBinaries):
++if ('csound5' in installedBinaries) or ('csound64' in installedBinaries):
      if 'uninstall-csound5' in installedBinaries:
 -        print ' *** WARNING: found an already existing installation of Csound'
 +        print(' *** WARNING: found an already existing installation of Csound')
@@ -157,7 +162,7 @@ python 3.x support
  for i in exeFiles1:
      if findFiles('.', i).__len__() > 0:
          err = installXFile('--strip-unneeded', i, binDir)
-@@ -253,7 +253,7 @@ for i in exeFiles2:
+@@ -253,7 +253,7 @@
  
  # copy libraries
  
@@ -166,7 +171,7 @@ python 3.x support
  libList = findFiles('.', 'libcsound\\.a')
  libList += findFiles('.', 'libcsound64\\.a')
  libList += findFiles('.', 'libcsound\\.so\\..+')
-@@ -280,7 +280,7 @@ for i in libList:
+@@ -280,7 +280,7 @@
  
  # copy plugin libraries
  
@@ -175,7 +180,7 @@ python 3.x support
  if not useDouble:
      pluginDir = pluginDir32
  else:
-@@ -297,13 +297,13 @@ for i in pluginList:
+@@ -297,13 +297,13 @@
  
  # copy header files
  
@@ -191,7 +196,7 @@ python 3.x support
  wrapperList = [['csnd\\.py', '0', pythonDir],
                 ['loris\\.py', '0', pythonDir],
                 ['CsoundVST\\.py', '0', pythonDir],
-@@ -327,7 +327,7 @@ for i in wrapperList:
+@@ -327,7 +327,7 @@
  
  # copy XMG files
  
@@ -200,7 +205,7 @@ python 3.x support
  xmgList = findFiles('.', '.+\\.xmg')
  if xmgList.__len__() > 0:
      err = installFiles(xmgList, xmgDir)
-@@ -341,34 +341,34 @@ else:
+@@ -341,34 +341,34 @@
      err = runCmd(['install', '-p', '-m', '0644', src, fileName])
      if err == 0:
          addMD5(fileName, fileName)
@@ -243,7 +248,7 @@ python 3.x support
      rawWaveFiles = []
      for fName in os.listdir('./Opcodes/stk/rawwaves'):
          if re.match('^.*\.raw$', fName) != None:
-@@ -397,11 +397,11 @@ try:
+@@ -397,11 +397,11 @@
  except:
      pdDir = ''
  if pdDir != '':
@@ -257,7 +262,7 @@ python 3.x support
          except:
              err = -1
      installErrors = installErrors or err
-@@ -409,7 +409,7 @@ if pdDir != '':
+@@ -409,7 +409,7 @@
  # copy VIM files if enabled
  
  if vimDir != '':
@@ -266,7 +271,7 @@ python 3.x support
      err = installXFile('', 'installer/misc/vim/cshelp', binDir)
      installErrors = installErrors or err
      err = installFile('installer/misc/vim/csound.vim',
-@@ -420,71 +420,31 @@ if vimDir != '':
+@@ -420,71 +420,31 @@
                            '%s/%s' % (vimDir, 'syntax'))
          installErrors = installErrors or err
  
