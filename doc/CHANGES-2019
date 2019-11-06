@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4775 2019/11/06 11:24:35 fox Exp $
+$NetBSD: CHANGES-2019,v 1.4776 2019/11/06 11:27:15 ng0 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7611,3 +7611,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/go-bytebufferpool to 1.0.0 [ng0 2019-11-06]
 	Updated devel/go-cpuid to 1.2.1 [ng0 2019-11-06]
 	Updated audio/din to 43.0.1 [fox 2019-11-06]
+	Updated security/go-xxhash to 2.1.0 [ng0 2019-11-06]
