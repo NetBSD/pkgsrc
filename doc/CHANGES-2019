@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4781 2019/11/06 12:31:00 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4782 2019/11/06 12:32:51 ng0 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7617,3 +7617,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/go-compress to 1.9.1 [ng0 2019-11-06]
 	Updated mail/neomutt to 20191102 [wiz 2019-11-06]
 	Updated devel/orc to 0.4.31 [wiz 2019-11-06]
+	Updated www/go-fasthttp to 1.6.0 [ng0 2019-11-06]
