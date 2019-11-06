@@ -1,18 +1,18 @@
-$NetBSD: patch-Jamrules,v 1.1 2017/07/29 06:25:39 wiz Exp $
+$NetBSD: patch-Jamrules,v 1.2 2019/11/06 23:13:56 wiz Exp $
 
 Turned on a static compile option (as no other apps use GARGLK at this time and made changes to the build file to support compiling on NetBSD. Also reported upstream in github. Issue #274
 
---- Jamrules.orig	2011-10-19 20:34:39.000000000 +0000
+--- Jamrules.orig	2019-11-03 19:03:20.000000000 +0000
 +++ Jamrules
 @@ -6,6 +6,7 @@ BUILD ?= RELEASE ;
  USESDL ?= yes ;
  USEBABEL ?= yes ;
- BUNDLEFONTS ?= yes ;
+ MAC_USEHOMEBREW ?= no ;
 +STATIC = yes ;
- 
- # jam -sGUILIB=EFL
- GUILIB ?= gtk+ ;
-@@ -100,6 +101,23 @@ switch $(OS)
+ MACOS_MIN_VER ?= 10.7 ;
+ BUNDLEFONTS ?= yes ;
+ USETTS ?= no ;
+@@ -139,6 +140,23 @@ switch $(PLATFORM)
          if $(STATIC) { LINKLIBS += $(GARGLKLIBS) ; }
          else      { SHRLINKLIBS += $(GARGLKLIBS) ; }
  
