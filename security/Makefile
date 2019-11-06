@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.716 2019/10/29 09:17:37 nia Exp $
+# $NetBSD: Makefile,v 1.717 2019/11/06 10:15:32 he Exp $
 #
 
 COMMENT=	Security tools
@@ -571,6 +571,7 @@ SUBDIR+=	snoopy
 SUBDIR+=	snortsnarf
 SUBDIR+=	snow
 SUBDIR+=	softhsm
+SUBDIR+=	softhsm2
 SUBDIR+=	spiped
 SUBDIR+=	sqlmap
 SUBDIR+=	srm
