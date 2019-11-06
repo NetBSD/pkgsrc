@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4803 2019/11/06 20:49:45 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4804 2019/11/06 21:08:16 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7645,3 +7645,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-crayons to 0.3.0 [adam 2019-11-06]
 	Updated devel/py-radon to 4.0.0 [adam 2019-11-06]
 	Updated time/py-dateutil to 2.8.1 [adam 2019-11-06]
+	Updated net/youtube-dl to 20191105 [leot 2019-11-06]
