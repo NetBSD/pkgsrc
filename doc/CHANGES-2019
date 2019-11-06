@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4778 2019/11/06 11:59:50 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4779 2019/11/06 12:15:45 ng0 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7614,3 +7614,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/go-xxhash to 2.1.0 [ng0 2019-11-06]
 	Updated net/go-tcplisten to 0.0.0.20161114 [ng0 2019-11-06]
 	Updated misc/khard to 0.15.1 [wiz 2019-11-06]
+	Updated devel/go-compress to 1.9.1 [ng0 2019-11-06]
