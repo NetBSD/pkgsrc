@@ -1,0 +1,46 @@
+$NetBSD: patch-conf_Makefile.in,v 1.1 2019/11/06 13:44:38 he Exp $
+
+Install configs in example config directory.
+
+--- conf/Makefile.in.orig	2017-08-10 12:03:23.000000000 +0000
++++ conf/Makefile.in
+@@ -390,6 +390,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ srcdir = @srcdir@
+ sysconfdir = @sysconfdir@/opendnssec
++EGDIR=@EGDIR@
+ target_alias = @target_alias@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+@@ -663,18 +664,19 @@ regress: $(RNG)
+ 		(echo "kasp.xml built")
+ 
+ install-data-hook:
+-	test -d ${DESTDIR}${sysconfdir} || ${INSTALL_DATA} -m 0775 -d @INSTALLATIONUSERARG@ @INSTALLATIONGROUPARG@ ${DESTDIR}${sysconfdir}
+-	test -f ${DESTDIR}${sysconfdir}/conf.xml || ( ${INSTALL_DATA} -m 0640 conf.xml @INSTALLATIONUSERARG@ @INSTALLATIONGROUPARG@ ${DESTDIR}${sysconfdir} ; if which >/dev/null xmlif ; then xmlif < ${DESTDIR}${sysconfdir}/conf.xml > ${DESTDIR}${sysconfdir}/conf.xml~ privdrop=@INSTALLATIONCOND@ ; else ${GREP} -v '^<?xmlif' < ${DESTDIR}${sysconfdir}/conf.xml > ${DESTDIR}${sysconfdir}/conf.xml~ ; fi ; cat < ${DESTDIR}${sysconfdir}/conf.xml~ > ${DESTDIR}${sysconfdir}/conf.xml ; rm ${DESTDIR}${sysconfdir}/conf.xml~ )
+-	${INSTALL_DATA} -m 640 conf.xml ${DESTDIR}${sysconfdir}/conf.xml.sample ; ${GREP} -v '^<?xmlif' < ${DESTDIR}${sysconfdir}/conf.xml.sample > ${DESTDIR}${sysconfdir}/conf.xml.sample~ ; cat < ${DESTDIR}${sysconfdir}/conf.xml.sample~ > ${DESTDIR}${sysconfdir}/conf.xml.sample ; rm ${DESTDIR}${sysconfdir}/conf.xml.sample~
+-	test -f ${DESTDIR}${sysconfdir}/addns.xml || \
+-		${INSTALL_DATA} @INSTALLATIONUSERARG@ @INSTALLATIONGROUPARG@ addns.xml ${DESTDIR}${sysconfdir}
+-	${INSTALL_DATA} addns.xml ${DESTDIR}${sysconfdir}/addns.xml.sample
+-	test -f ${DESTDIR}${sysconfdir}/zonelist.xml || \
+-		${INSTALL_DATA} @INSTALLATIONUSERARG@ @INSTALLATIONGROUPARG@ zonelist.xml ${DESTDIR}${sysconfdir}
+-	${INSTALL_DATA} zonelist.xml ${DESTDIR}${sysconfdir}/zonelist.xml.sample
+-	test -f ${DESTDIR}${sysconfdir}/kasp.xml || \
+-		${INSTALL_DATA} @INSTALLATIONUSERARG@ @INSTALLATIONGROUPARG@ kasp.xml ${DESTDIR}${sysconfdir}
+-	${INSTALL_DATA} kasp.xml ${DESTDIR}${sysconfdir}/kasp.xml.sample
++	test -d ${DESTDIR}${EGDIR} || mkdir -p ${DESTDIR}${EGDIR}
++	test -f ${DESTDIR}${EGDIR}/conf.xml || \
++		${INSTALL_DATA} -m 0640 conf.xml ${DESTDIR}${EGDIR}
++	${INSTALL_DATA} -m 640 conf.xml ${DESTDIR}${EGDIR}/conf.xml.sample
++	test -f ${DESTDIR}${EGDIR}/addns.xml || \
++		${INSTALL_DATA} addns.xml ${DESTDIR}${EGDIR}
++	${INSTALL_DATA} addns.xml ${DESTDIR}${EGDIR}/addns.xml.sample
++	test -f ${DESTDIR}${EGDIR}/zonelist.xml || \
++		${INSTALL_DATA} zonelist.xml ${DESTDIR}${EGDIR}
++	${INSTALL_DATA} zonelist.xml ${DESTDIR}${EGDIR}/zonelist.xml.sample
++	test -f ${DESTDIR}${EGDIR}/kasp.xml || \
++		${INSTALL_DATA} kasp.xml ${DESTDIR}${EGDIR}
++	${INSTALL_DATA} kasp.xml ${DESTDIR}${EGDIR}/kasp.xml.sample
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
