@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/11/06 12:32:28 ng0 Exp $
+
+SHA1 (go-fasthttp-1.6.0.tar.gz) = 7286338353a394809ba736da22209a0c4ac4f924
+RMD160 (go-fasthttp-1.6.0.tar.gz) = 11998675cc7f178089b9521144c2ad97d13c0882
+SHA512 (go-fasthttp-1.6.0.tar.gz) = c7e75f029f3ad770abd496c42dd051c86622375e408d71e452af7c106974e77f214760dbbd888ccaac6d1455b0538208869459149df135f7ef12985cd4c15c00
+Size (go-fasthttp-1.6.0.tar.gz) = 196720 bytes
