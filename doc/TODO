@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19393 2019/11/06 13:23:55 wiz Exp $
+$NetBSD: TODO,v 1.19394 2019/11/06 13:24:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -955,7 +955,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mailutis-2.2 [wip]
 	o maketool-0.8.4
 	o makeztxt-1.60
-	o mame-0.214
+	o mame-0.215
 	o manedit-1.2.1
 	o mapserver-7.0.1
 	o matchbox-panel-0.9.3
@@ -1293,7 +1293,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tomboy-1.10.2
 	o top-3.8beta1
 	o topgit-0.8
-	o tor-browser-8.5.5
+	o tor-browser-9.0
 	o totem-3.14.1
 	o totem-pl-parser-3.10.3
 	o tripwire-2.3.1 [see also pkg/22362]
@@ -1372,6 +1372,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xhippo-3.5
 	o xinput-1.6.3
 	o xjman-0.7
+	o xkbprint-1.0.5
 	o xkeyboard-config-2.28
 	o xli-2006.11.10
 	o xlockmore-5.55
