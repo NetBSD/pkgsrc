@@ -1,12 +1,12 @@
-$NetBSD: patch-src_Makefile.am,v 1.4 2019/09/14 16:08:32 fox Exp $
+$NetBSD: patch-src_Makefile.am,v 1.5 2019/11/06 11:23:25 fox Exp $
 
 Removed tcl8.6, asound and jack flags, this is now handled in the pkgsrc
 script.
 
---- src/Makefile.am.orig	2019-09-13 03:30:55.000000000 +0000
+--- src/Makefile.am.orig	2019-11-04 11:24:29.000000000 +0000
 +++ src/Makefile.am
 @@ -1,5 +1,5 @@
--AM_CXXFLAGS = -I ../include -I /usr/include/tcl8.6 -Wall -D_THREAD_SAFE -DHAVE_OPENGL -D__EVALUATION__ -D __SVG__ -D__GPL20__ -DPREFIX=\"@prefix@\"
+-AM_CXXFLAGS = -I ../include -I /usr/include/tcl8.6 -Wall -D_THREAD_SAFE -DHAVE_OPENGL -D__LICENSED__ -D __SVG__ -D__GPL20__ -DPREFIX=\"@prefix@\"
 -LIBS +=  -ltcl8.6 -lSDL -lGL -lpthread -lasound
 +AM_CXXFLAGS = -I ../include -Wall -D_THREAD_SAFE -DHAVE_OPENGL -D__EVALUATION__ -D __SVG__ -D__GPL20__ -DPREFIX=\"@prefix@\"
 +LIBS +=  -lSDL -lGL -lpthread
