@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2018/02/18 05:01:02 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2019/11/06 18:54:08 yhardy Exp $
 
-DISTNAME=	jhead-3.00
-PKGREVISION=	1
+DISTNAME=	jhead-3.03
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.sentex.net/~mwandel/jhead/
 
