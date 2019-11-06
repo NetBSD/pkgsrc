@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/07/21 21:11:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/11/06 11:59:38 wiz Exp $
 bin/khard-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -21,9 +21,14 @@ ${PYSITELIB}/khard/address_book.pyo
 ${PYSITELIB}/khard/carddav_object.py
 ${PYSITELIB}/khard/carddav_object.pyc
 ${PYSITELIB}/khard/carddav_object.pyo
+${PYSITELIB}/khard/cli.py
+${PYSITELIB}/khard/cli.pyc
+${PYSITELIB}/khard/cli.pyo
 ${PYSITELIB}/khard/config.py
 ${PYSITELIB}/khard/config.pyc
 ${PYSITELIB}/khard/config.pyo
+${PYSITELIB}/khard/data/config.spec
+${PYSITELIB}/khard/data/template.yaml
 ${PYSITELIB}/khard/helpers.py
 ${PYSITELIB}/khard/helpers.pyc
 ${PYSITELIB}/khard/helpers.pyo
