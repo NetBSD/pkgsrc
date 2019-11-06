@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4793 2019/11/06 13:53:03 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4794 2019/11/06 13:53:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7630,3 +7630,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/go-spew to 1.1.1 [ng0 2019-11-06]
 	Added security/opendnssec2 version 2.1.5 [he 2019-11-06]
 	Updated graphics/gdk-pixbuf2 to 2.40.0 [wiz 2019-11-06]
+	Updated graphics/gdk-pixbuf2-xlib to 2.40.0 [wiz 2019-11-06]
