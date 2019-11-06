@@ -1,0 +1,57 @@
+@comment $NetBSD: PLIST,v 1.1 2019/11/06 13:44:38 he Exp $
+bin/ods-hsmspeed
+bin/ods-hsmutil
+bin/ods-kasp2html
+bin/ods-kaspcheck
+lib/opendnssec/README.md
+lib/opendnssec/convert_mysql
+lib/opendnssec/convert_sqlite
+lib/opendnssec/find_problematic_zones.sql
+lib/opendnssec/mysql_convert.sql
+lib/opendnssec/schema.mysql
+lib/opendnssec/schema.sqlite
+lib/opendnssec/sqlite_convert.sql
+man/man1/ods-hsmspeed.1
+man/man1/ods-hsmutil.1
+man/man1/ods-kaspcheck.1
+man/man5/ods-kasp.5
+man/man5/ods-timing.5
+man/man7/opendnssec.7
+man/man8/ods-control.8
+man/man8/ods-enforcer-db-setup.8
+man/man8/ods-enforcer.8
+man/man8/ods-enforcerd.8
+man/man8/ods-signer.8
+man/man8/ods-signerd.8
+sbin/ods-control
+sbin/ods-enforcer
+sbin/ods-enforcer-db-setup
+sbin/ods-enforcerd
+sbin/ods-migrate
+sbin/ods-signer
+sbin/ods-signerd
+share/examples/opendnssec/addns.xml
+share/examples/opendnssec/addns.xml.sample
+share/examples/opendnssec/conf.xml
+share/examples/opendnssec/conf.xml.sample
+share/examples/opendnssec/kasp.xml
+share/examples/opendnssec/kasp.xml.sample
+share/examples/opendnssec/zonelist.xml
+share/examples/opendnssec/zonelist.xml.sample
+share/opendnssec/addns.rnc
+share/opendnssec/addns.rng
+share/opendnssec/conf.rnc
+share/opendnssec/conf.rng
+share/opendnssec/enforcerstate.rnc
+share/opendnssec/enforcerstate.rng
+share/opendnssec/kasp.rnc
+share/opendnssec/kasp.rng
+share/opendnssec/kasp2html.xsl
+share/opendnssec/signconf.rnc
+share/opendnssec/signconf.rng
+share/opendnssec/zonelist.rnc
+share/opendnssec/zonelist.rng
+@pkgdir share/doc/opendnssec
+@pkgdir lib/opendnssec/signer
+@pkgdir lib/opendnssec/kasp_auditor
+@pkgdir etc/opendnssec
