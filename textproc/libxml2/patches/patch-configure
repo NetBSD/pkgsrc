@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.1 2019/01/09 19:09:03 adam Exp $
+$NetBSD: patch-configure,v 1.2 2019/11/06 13:19:43 wiz Exp $
 
 Various configure fixes:
  * Add run-path to XML_LIBDIR
@@ -7,9 +7,9 @@ Various configure fixes:
  * Fix test for SAX
    Submitted as https://bugzilla.gnome.org/show_bug.cgi?id=766859
 
---- configure.orig	2017-11-02 20:16:48.000000000 +0000
+--- configure.orig	2019-10-30 19:14:22.000000000 +0000
 +++ configure
-@@ -15084,7 +15084,7 @@ fi
+@@ -14970,7 +14970,7 @@ fi
  fi
  
  
@@ -18,7 +18,7 @@ Various configure fixes:
  XML_INCLUDEDIR='-I${includedir}/libxml2'
  
  XML_CFLAGS=""
-@@ -15557,13 +15557,13 @@ else
+@@ -15443,13 +15443,13 @@ else
          if test "$with_threads" = "pthread" || test "$with_threads" = "" || test "$with_threads" = "yes" ; then
              ac_fn_c_check_header_mongrel "$LINENO" "pthread.h" "ac_cv_header_pthread_h" "$ac_includes_default"
  if test "x$ac_cv_header_pthread_h" = xyes; then :
@@ -35,7 +35,7 @@ Various configure fixes:
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-@@ -15595,7 +15595,7 @@ fi
+@@ -15481,7 +15481,7 @@ fi
  $as_echo "$ac_cv_lib_pthread_pthread_join" >&6; }
  if test "x$ac_cv_lib_pthread_pthread_join" = xyes; then :
  
@@ -44,7 +44,7 @@ Various configure fixes:
  
  $as_echo "#define HAVE_LIBPTHREAD /**/" >>confdefs.h
  
-@@ -15617,12 +15617,12 @@ fi
+@@ -15503,12 +15503,12 @@ fi
         *beos*) WITH_THREADS="1"
  	   THREAD_CFLAGS="$THREAD_CFLAGS -DHAVE_BEOS_THREADS"
         ;;
@@ -59,7 +59,7 @@ Various configure fixes:
  	           if expr ${GCC_MEDIUM} \> 2 \& ${GCC_MAJOR} = 3 > /dev/null
  		   then
  		       THREAD_LIBS=""
-@@ -15639,6 +15639,10 @@ fi
+@@ -15525,6 +15525,10 @@ fi
  	       fi
  	   fi
         ;;
@@ -70,7 +70,7 @@ Various configure fixes:
      esac
      if test "$WITH_THREADS" = "1" ; then
  	THREAD_CFLAGS="$THREAD_CFLAGS -D_REENTRANT"
-@@ -15909,7 +15913,7 @@ else
+@@ -15795,7 +15799,7 @@ else
      TEST_SAX=SAXtests
  fi
  
@@ -79,14 +79,3 @@ Various configure fixes:
    WITH_SAX1_SOURCES_TRUE=
    WITH_SAX1_SOURCES_FALSE='#'
  else
-@@ -16493,10 +16497,6 @@ case "$host" in
-  CPPFLAGS="$CPPFLAGS -DWIN32"
-  WIN32_EXTRA_LIBADD="-lws2_32"
-  WIN32_EXTRA_LDFLAGS="-no-undefined"
-- if test "${PYTHON}" != ""
-- then
--   WIN32_EXTRA_PYTHON_LIBADD="-L${pythondir}/../../libs -lpython$(echo ${PYTHON_VERSION} | tr -d .)"
-- fi
-  ;;
-  *-*-cygwin*)
-  CYGWIN_EXTRA_LDFLAGS="-no-undefined"
