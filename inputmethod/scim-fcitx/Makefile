@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/07/21 22:25:12 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2019/11/06 11:26:59 szptvlfn Exp $
 #
 
 DISTNAME=		scim-fcitx.3.1.1
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scim/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.scim-im.org/
+HOMEPAGE=		https://github.com/scim-im/scim
 COMMENT=		Fcitx ported to SCIM
 LICENSE=		gnu-gpl-v2
 

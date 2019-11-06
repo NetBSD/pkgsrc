@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2019/07/21 22:25:12 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2019/11/06 11:26:59 szptvlfn Exp $
 #
 
 DISTNAME=	scim-input-pad-0.1.3
@@ -7,7 +7,7 @@ CATEGORIES=	inputmethod
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scim/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.scim-im.org/
+HOMEPAGE=	https://github.com/scim-im/scim
 COMMENT=	SCIM onscreen input pad
 LICENSE=	gnu-gpl-v2
 
