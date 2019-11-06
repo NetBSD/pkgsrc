@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4787 2019/11/06 13:19:53 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4788 2019/11/06 13:23:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7624,3 +7624,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/py-cairo to 1.18.2 [wiz 2019-11-06]
 	Updated graphics/librsvg to 2.46.3 [wiz 2019-11-06]
 	Updated textproc/libxml2 to 2.9.10 [wiz 2019-11-06]
+	Updated textproc/libxslt to 1.1.34 [wiz 2019-11-06]
