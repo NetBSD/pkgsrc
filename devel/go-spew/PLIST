@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2019/11/06 13:40:23 ng0 Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/davecgh/go-spew/spew.a
+gopkg/src/github.com/davecgh/go-spew/LICENSE
+gopkg/src/github.com/davecgh/go-spew/README.md
+gopkg/src/github.com/davecgh/go-spew/cov_report.sh
+gopkg/src/github.com/davecgh/go-spew/spew/bypass.go
+gopkg/src/github.com/davecgh/go-spew/spew/bypasssafe.go
+gopkg/src/github.com/davecgh/go-spew/spew/common.go
+gopkg/src/github.com/davecgh/go-spew/spew/common_test.go
+gopkg/src/github.com/davecgh/go-spew/spew/config.go
+gopkg/src/github.com/davecgh/go-spew/spew/doc.go
+gopkg/src/github.com/davecgh/go-spew/spew/dump.go
+gopkg/src/github.com/davecgh/go-spew/spew/dump_test.go
+gopkg/src/github.com/davecgh/go-spew/spew/dumpcgo_test.go
+gopkg/src/github.com/davecgh/go-spew/spew/dumpnocgo_test.go
+gopkg/src/github.com/davecgh/go-spew/spew/example_test.go
+gopkg/src/github.com/davecgh/go-spew/spew/format.go
+gopkg/src/github.com/davecgh/go-spew/spew/format_test.go
+gopkg/src/github.com/davecgh/go-spew/spew/internal_test.go
+gopkg/src/github.com/davecgh/go-spew/spew/internalunsafe_test.go
+gopkg/src/github.com/davecgh/go-spew/spew/spew.go
+gopkg/src/github.com/davecgh/go-spew/spew/spew_test.go
+gopkg/src/github.com/davecgh/go-spew/spew/testdata/dumpcgo.go
+gopkg/src/github.com/davecgh/go-spew/test_coverage.txt
