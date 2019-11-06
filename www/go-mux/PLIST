@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2019/11/06 13:35:18 ng0 Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/gorilla/mux.a
+gopkg/src/github.com/gorilla/mux/AUTHORS
+gopkg/src/github.com/gorilla/mux/LICENSE
+gopkg/src/github.com/gorilla/mux/README.md
+gopkg/src/github.com/gorilla/mux/bench_test.go
+gopkg/src/github.com/gorilla/mux/context.go
+gopkg/src/github.com/gorilla/mux/context_test.go
+gopkg/src/github.com/gorilla/mux/doc.go
+gopkg/src/github.com/gorilla/mux/example_authentication_middleware_test.go
+gopkg/src/github.com/gorilla/mux/example_cors_method_middleware_test.go
+gopkg/src/github.com/gorilla/mux/example_route_test.go
+gopkg/src/github.com/gorilla/mux/go.mod
+gopkg/src/github.com/gorilla/mux/middleware.go
+gopkg/src/github.com/gorilla/mux/middleware_test.go
+gopkg/src/github.com/gorilla/mux/mux.go
+gopkg/src/github.com/gorilla/mux/mux_test.go
+gopkg/src/github.com/gorilla/mux/old_test.go
+gopkg/src/github.com/gorilla/mux/regexp.go
+gopkg/src/github.com/gorilla/mux/route.go
+gopkg/src/github.com/gorilla/mux/test_helpers.go
