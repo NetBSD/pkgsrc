@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2019/10/11 20:01:50 kamil Exp $
+# $NetBSD: Makefile,v 1.34 2019/11/06 15:48:23 adam Exp $
 
-DISTNAME=	psutil-5.6.3
+DISTNAME=	psutil-5.6.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/psutil/}
 
@@ -18,8 +17,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-ipaddress-[0-9]*:../../net/py-ipaddress
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 .endif
 
-REPLACE_PYTHON=	psutil/*py
-
 .include "../../mk/bsd.prefs.mk"
 
 # facilitate PLIST processing
@@ -31,6 +28,8 @@ PLIST_SUBST+=	SYSTEM=bsd
 PLIST_SUBST+=	SYSTEM=${OPSYS:tl}
 .endif
 
-.include "../../lang/python/application.mk"
+do-test:
+	cd ${WRKSRC} && ${PYTHONBIN} psutil/tests/__main__.py
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
