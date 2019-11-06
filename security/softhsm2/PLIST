@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2019/11/06 10:11:41 he Exp $
+bin/softhsm2-dump-db
+bin/softhsm2-dump-file
+bin/softhsm2-keyconv
+bin/softhsm2-migrate
+bin/softhsm2-util
+lib/softhsm/libsofthsm2.la
+man/man1/softhsm2-dump-db.1
+man/man1/softhsm2-dump-file.1
+man/man1/softhsm2-keyconv.1
+man/man1/softhsm2-migrate.1
+man/man1/softhsm2-util.1
+man/man5/softhsm2.conf.5
+share/examples/softhsm/softhsm2.conf
+@pkgdir etc
