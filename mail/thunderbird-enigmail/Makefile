@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2019/11/02 16:25:28 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/06 15:45:07 wiz Exp $
 
-DISTNAME=	enigmail-2.1.2
+DISTNAME=	enigmail-2.1.3
 PKGNAME=	thunderbird-${DISTNAME}
 CATEGORIES=	mail security
 MASTER_SITES=	http://www.enigmail.net/download/source/
@@ -36,7 +36,7 @@ WRKSRC=		${WRKDIR}/enigmail
 GNU_CONFIGURE=	yes
 
 ENIGMAILXPI=	enigmail-${PKGVERSION_NOREV}.xpi
-XPIFILE=	${WRKSRC}/build/${ENIGMAILXPI}
+XPIFILE=	${WRKSRC}/build-tb/${ENIGMAILXPI}
 
 # Build instructions: https://www.enigmail.net/download/build_instructions.php
 # Installation of extensions: http://kb.mozillazine.org/Installing_extensions
