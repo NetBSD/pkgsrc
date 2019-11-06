@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/11/06 12:15:25 ng0 Exp $
+
+SHA1 (go-compress-1.9.1.tar.gz) = 07732670a15d9f417208a699740e5abf578da8b8
+RMD160 (go-compress-1.9.1.tar.gz) = bc120ddbcbb6a29a1441b95cdc7e17895b0f8ef7
+SHA512 (go-compress-1.9.1.tar.gz) = ecae77b219a99fd5bc25a1862373e6e47a368e2b208f599f0e1036c0668bc850ebd7f0dcd8603ff205e3c6d648693a5fd76c79aa35abbf766d2d6b5d7b6886de
+Size (go-compress-1.9.1.tar.gz) = 15163355 bytes
