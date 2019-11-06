@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/11/06 10:56:14 ng0 Exp $
+
+SHA1 (go-bytebufferpool-1.0.0.tar.gz) = 27429ff5ce492f74caf300dcc1520f656c8a6ca8
+RMD160 (go-bytebufferpool-1.0.0.tar.gz) = 465f36e20a1f677e6fcfc5cfe670879d90a111dd
+SHA512 (go-bytebufferpool-1.0.0.tar.gz) = 241a561726adb230a6f158e9f39127993d45217ee788c0ba17ec554f71e7cc6a1a83a799d1fb0df29b449b3827ef6c9eb22b41664103e36dec9c7fb716adc21f
+Size (go-bytebufferpool-1.0.0.tar.gz) = 5025 bytes
