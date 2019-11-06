@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2019/11/06 13:44:38 he Exp $
+
+For latest information about configuring OpenDNSSEC, see:
+https://wiki.opendnssec.org/display/DOCS20
+
+If you are upgrading OpenDNSSEC from release 1.4, please see
+at the included lib/opendnssec/README.md file and the files in that directory.
+
+===========================================================================
