@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.181 2019/10/30 17:26:50 nia Exp $
+# $NetBSD: Makefile,v 1.182 2019/11/06 22:51:29 nia Exp $
 
 DISTNAME=	evolution-data-server-3.35.1
 CATEGORIES=	mail
@@ -17,6 +17,8 @@ USE_LANGUAGES=	c c++14
 
 # C++14
 GCC_REQD+=	5
+
+TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 CMAKE_ARGS+=	-DENABLE_GOA=OFF
 CMAKE_ARGS+=	-DWITH_LIBDB=OFF
