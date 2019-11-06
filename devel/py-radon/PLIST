@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/12/16 14:15:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/11/06 20:43:36 adam Exp $
 bin/radon-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -36,6 +36,9 @@ ${PYSITELIB}/radon/raw.pyo
 ${PYSITELIB}/radon/tests/__init__.py
 ${PYSITELIB}/radon/tests/__init__.pyc
 ${PYSITELIB}/radon/tests/__init__.pyo
+${PYSITELIB}/radon/tests/conftest.py
+${PYSITELIB}/radon/tests/conftest.pyc
+${PYSITELIB}/radon/tests/conftest.pyo
 ${PYSITELIB}/radon/tests/data/__init__.py
 ${PYSITELIB}/radon/tests/data/__init__.pyc
 ${PYSITELIB}/radon/tests/data/__init__.pyo
@@ -66,6 +69,9 @@ ${PYSITELIB}/radon/tests/test_complexity_visitor.pyo
 ${PYSITELIB}/radon/tests/test_halstead.py
 ${PYSITELIB}/radon/tests/test_halstead.pyc
 ${PYSITELIB}/radon/tests/test_halstead.pyo
+${PYSITELIB}/radon/tests/test_ipynb.py
+${PYSITELIB}/radon/tests/test_ipynb.pyc
+${PYSITELIB}/radon/tests/test_ipynb.pyo
 ${PYSITELIB}/radon/tests/test_other_metrics.py
 ${PYSITELIB}/radon/tests/test_other_metrics.pyc
 ${PYSITELIB}/radon/tests/test_other_metrics.pyo
