@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4779 2019/11/06 12:15:45 ng0 Exp $
+$NetBSD: CHANGES-2019,v 1.4780 2019/11/06 12:28:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7615,3 +7615,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/go-tcplisten to 0.0.0.20161114 [ng0 2019-11-06]
 	Updated misc/khard to 0.15.1 [wiz 2019-11-06]
 	Updated devel/go-compress to 1.9.1 [ng0 2019-11-06]
+	Updated mail/neomutt to 20191102 [wiz 2019-11-06]
