@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1276 2019/11/05 02:21:22 gdt Exp $
+# $NetBSD: Makefile,v 1.1277 2019/11/06 11:54:49 ng0 Exp $
 #
 
 COMMENT=	Networking tools
@@ -200,6 +200,7 @@ SUBDIR+=	go-framestream
 SUBDIR+=	go-grpc
 SUBDIR+=	go-net
 SUBDIR+=	go-ovh
+SUBDIR+=	go-tcplisten
 SUBDIR+=	go-websocket
 SUBDIR+=	gofish
 SUBDIR+=	gopher
