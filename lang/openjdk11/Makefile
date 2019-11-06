@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/11/03 19:04:04 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2019/11/06 22:55:54 wiz Exp $
 
 DISTNAME=	openjdk-jdk11u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk11-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
@@ -21,6 +21,10 @@ JAVA_WRAPPERS=	jar java javac javadoc javah javap jcmd jhat jps jstack \
 		keytool orbd policytool rmid rmiregistry servertool tnameserv
 
 BUILD_DEPENDS+=		mozilla-rootcerts>=1.0.20140820nb2:../../security/mozilla-rootcerts
+
+# not completely true, but too many jobs kill the build on NetBSD 9.99.x
+# see PR 54619
+MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=		yes
 USE_GNU_CONFIGURE_HOST=	no
