@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2019/10/10 12:04:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.28 2019/11/06 14:51:19 wiz Exp $
 bin/gtk-builder-tool
 bin/gtk-encode-symbolic-svg
 bin/gtk-launch
@@ -1019,7 +1019,6 @@ share/gtk-doc/html/gtk3/gtk-migrating-checklist.html
 share/gtk-doc/html/gtk3/gtk-migrating-smclient-GtkApplication.html
 share/gtk-doc/html/gtk3/gtk-migrating-theme-GtkStyleContext-engines.html
 share/gtk-doc/html/gtk3/gtk-migrating-unique-GtkApplication.html
-share/gtk-doc/html/gtk3/gtk-mir.html
 share/gtk-doc/html/gtk3/gtk-osx.html
 share/gtk-doc/html/gtk3/gtk-query-immodules-3.0.html
 share/gtk-doc/html/gtk3/gtk-query-settings.html
