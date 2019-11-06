@@ -1,0 +1,30 @@
+$NetBSD: patch-src_lib_common_Makefile.in,v 1.1 2019/11/06 10:11:41 he Exp $
+
+Install config in example directory.
+
+--- src/lib/common/Makefile.in.orig	2016-12-05 10:05:20.000000000 +0000
++++ src/lib/common/Makefile.in
+@@ -268,6 +268,7 @@ DUMPBIN = @DUMPBIN@
+ ECHO_C = @ECHO_C@
+ ECHO_N = @ECHO_N@
+ ECHO_T = @ECHO_T@
++EGDIR = @EGDIR@
+ EGREP = @EGREP@
+ EXEEXT = @EXEEXT@
+ FGREP = @FGREP@
+@@ -768,11 +769,10 @@ uninstall-man: uninstall-man5
+ 
+ 
+ install-data-hook:
+-	test -d ${DESTDIR}${sysconfdir} || \
+-		${INSTALL} -d ${DESTDIR}${sysconfdir}
+-	test -f ${DESTDIR}${sysconfdir}/softhsm2.conf || \
+-		${INSTALL_DATA} ${top_builddir}/src/lib/common/softhsm2.conf ${DESTDIR}${sysconfdir}
+-	${INSTALL_DATA} ${top_builddir}/src/lib/common/softhsm2.conf ${DESTDIR}${sysconfdir}/softhsm2.conf.sample
++	test -d ${DESTDIR}${EGDIR} || \
++		${INSTALL} -d ${DESTDIR}${EGDIR}
++	test -f ${DESTDIR}${EGDIR}/softhsm2.conf || \
++		${INSTALL_DATA} ${top_builddir}/src/lib/common/softhsm2.conf ${DESTDIR}${EGDIR}
+ 	test -d ${DESTDIR}${softhsmtokendir} || \
+ 		${INSTALL} -d -m 1777 ${DESTDIR}${softhsmtokendir}
+ 
