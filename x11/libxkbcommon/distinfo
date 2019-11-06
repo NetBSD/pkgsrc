@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2019/02/24 14:59:07 wiz Exp $
+$NetBSD: distinfo,v 1.17 2019/11/06 12:51:55 wiz Exp $
 
-SHA1 (libxkbcommon-0.8.4.tar.xz) = 0ce9df42239d451f61b2112c6ba8d0a1a0879009
-RMD160 (libxkbcommon-0.8.4.tar.xz) = c4f2a8fc8ce7f79d3265e6ee3ba86ccae98187af
-SHA512 (libxkbcommon-0.8.4.tar.xz) = dbd441d0d7d5ba4fb352d64d150d163d4cdcf8340059457c291dc1fc69d1606ff6589732cb41a7fcfe106af0192977b243d7d68c4d95b90ece7abb620df360e3
-Size (libxkbcommon-0.8.4.tar.xz) = 648592 bytes
+SHA1 (libxkbcommon-0.9.1.tar.xz) = 6685b3b98d1903e5e0ece1c234b9055fcb24701d
+RMD160 (libxkbcommon-0.9.1.tar.xz) = f3dc87a56b8f43e1a4ad73234760359e7e3e7c9e
+SHA512 (libxkbcommon-0.9.1.tar.xz) = 8d4551a06e7dd4936633f544409401dc33f8f1900adb5daa6403615c71f321d17212db739f89a5b3e393d729b3f33167691404849a25d5526b403fd9ec3e8878
+Size (libxkbcommon-0.9.1.tar.xz) = 376164 bytes
