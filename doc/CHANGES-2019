@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4795 2019/11/06 14:14:19 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4796 2019/11/06 14:24:48 ng0 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7607,17 +7607,17 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/py-six to 1.13.0 [adam 2019-11-06]
 	Updated devel/py-pyparsing to 2.4.4 [adam 2019-11-06]
 	Added security/softhsm2 version 2.5.0 [he 2019-11-06]
-	Updated devel/go-argv to 0.0.1 [ng0 2019-11-06]
-	Updated devel/go-bytebufferpool to 1.0.0 [ng0 2019-11-06]
-	Updated devel/go-cpuid to 1.2.1 [ng0 2019-11-06]
+	Added devel/go-argv 0.0.1 [ng0 2019-11-06]
+	Added devel/go-bytebufferpool 1.0.0 [ng0 2019-11-06]
+	Added devel/go-cpuid 1.2.1 [ng0 2019-11-06]
 	Updated audio/din to 43.0.1 [fox 2019-11-06]
-	Updated security/go-xxhash to 2.1.0 [ng0 2019-11-06]
-	Updated net/go-tcplisten to 0.0.0.20161114 [ng0 2019-11-06]
+	Added security/go-xxhash 2.1.0 [ng0 2019-11-06]
+	Added net/go-tcplisten 0.0.0.20161114 [ng0 2019-11-06]
 	Updated misc/khard to 0.15.1 [wiz 2019-11-06]
-	Updated devel/go-compress to 1.9.1 [ng0 2019-11-06]
+	Added devel/go-compress 1.9.1 [ng0 2019-11-06]
 	Updated mail/neomutt to 20191102 [wiz 2019-11-06]
 	Updated devel/orc to 0.4.31 [wiz 2019-11-06]
-	Updated www/go-fasthttp to 1.6.0 [ng0 2019-11-06]
+	Added www/go-fasthttp 1.6.0 [ng0 2019-11-06]
 	Updated devel/py-astroid to 2.3.2nb1 [adam 2019-11-06]
 	Updated devel/py-uvloop to 0.14.0 [adam 2019-11-06]
 	Updated x11/libxkbcommon to 0.9.1 [wiz 2019-11-06]
@@ -7626,8 +7626,8 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/libxml2 to 2.9.10 [wiz 2019-11-06]
 	Updated textproc/libxslt to 1.1.34 [wiz 2019-11-06]
 	Updated devel/pango to 1.44.7 [wiz 2019-11-06]
-	Updated www/go-mux to 1.7.3 [ng0 2019-11-06]
-	Updated devel/go-spew to 1.1.1 [ng0 2019-11-06]
+	Added www/go-mux 1.7.3 [ng0 2019-11-06]
+	Added devel/go-spew 1.1.1 [ng0 2019-11-06]
 	Added security/opendnssec2 version 2.1.5 [he 2019-11-06]
 	Updated graphics/gdk-pixbuf2 to 2.40.0 [wiz 2019-11-06]
 	Updated graphics/gdk-pixbuf2-xlib to 2.40.0 [wiz 2019-11-06]
