@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2944 2019/11/06 13:40:23 ng0 Exp $
+# $NetBSD: Makefile,v 1.2945 2019/11/07 13:23:35 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -711,6 +711,7 @@ SUBDIR+=	libsexy
 SUBDIR+=	libsexymm
 SUBDIR+=	libsigc++
 SUBDIR+=	libsigc++1
+SUBDIR+=	libsigc++3
 SUBDIR+=	libsigsegv
 SUBDIR+=	libslang
 SUBDIR+=	libslang2
