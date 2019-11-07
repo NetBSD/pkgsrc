@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4811 2019/11/07 13:01:43 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4812 2019/11/07 13:23:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7654,3 +7654,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/py-graphviz to 0.13.1 [adam 2019-11-07]
 	Updated print/poppler to 0.82.0 [wiz 2019-11-07]
 	Updated graphics/ImageMagick to 7.0.9.2 [wiz 2019-11-07]
+	Added devel/libsigc++3 version 3.0.0 [wiz 2019-11-07]
