@@ -1,0 +1,4 @@
+This module provides libxml2 for other modules to use. There was an
+already existing Alien::LibXML, but it uses the older
+Alien::Build::ModuleBuild and has not been actively maintained for a
+while.
