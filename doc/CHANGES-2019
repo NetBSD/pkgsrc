@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4809 2019/11/07 10:58:43 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4810 2019/11/07 12:05:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7652,3 +7652,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added textproc/p5-Alien-Libxml2 version 0.11 [he 2019-11-07]
 	Updated devel/py-astroid to 2.3.3 [adam 2019-11-07]
 	Updated graphics/py-graphviz to 0.13.1 [adam 2019-11-07]
+	Updated print/poppler to 0.82.0 [wiz 2019-11-07]
