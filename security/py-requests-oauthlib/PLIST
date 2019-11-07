@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/06/17 08:39:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/11/07 13:34:36 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -20,6 +20,9 @@ ${PYSITELIB}/requests_oauthlib/compliance_fixes/facebook.pyo
 ${PYSITELIB}/requests_oauthlib/compliance_fixes/fitbit.py
 ${PYSITELIB}/requests_oauthlib/compliance_fixes/fitbit.pyc
 ${PYSITELIB}/requests_oauthlib/compliance_fixes/fitbit.pyo
+${PYSITELIB}/requests_oauthlib/compliance_fixes/instagram.py
+${PYSITELIB}/requests_oauthlib/compliance_fixes/instagram.pyc
+${PYSITELIB}/requests_oauthlib/compliance_fixes/instagram.pyo
 ${PYSITELIB}/requests_oauthlib/compliance_fixes/linkedin.py
 ${PYSITELIB}/requests_oauthlib/compliance_fixes/linkedin.pyc
 ${PYSITELIB}/requests_oauthlib/compliance_fixes/linkedin.pyo
