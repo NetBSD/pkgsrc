@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2019/10/19 12:46:04 nia Exp $
+# $NetBSD: Makefile,v 1.24 2019/11/07 12:38:04 wiz Exp $
 
 DISTNAME=	pdf2svg-0.2.3
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dawbarton/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
