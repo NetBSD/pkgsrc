@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4807 2019/11/06 23:22:55 yhardy Exp $
+$NetBSD: CHANGES-2019,v 1.4808 2019/11/07 10:22:29 he Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7649,3 +7649,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/webkit-gtk to 2.26.2 [leot 2019-11-06]
 	Updated graphics/jhead to 3.03 [yhardy 2019-11-06]
 	Updated games/gargoyle to 2019.1 [yhardy 2019-11-06]
+	Added textproc/p5-Alien-Libxml2 version 0.11 [he 2019-11-07]
