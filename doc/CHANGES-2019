@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4827 2019/11/08 15:11:13 mef Exp $
+$NetBSD: CHANGES-2019,v 1.4828 2019/11/08 16:05:38 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7676,3 +7676,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/p5-Test-NiceDump version 1.0.1 [mef 2019-11-08]
 	Updated net/p5-Net-Stomp to 0.60 [mef 2019-11-08]
 	Updated net/p5-Test-TCP to 2.22 [mef 2019-11-08]
+	Updated www/R-curl to 4.2 [mef 2019-11-08]
