@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4821 2019/11/08 13:44:02 micha Exp $
+$NetBSD: CHANGES-2019,v 1.4822 2019/11/08 13:59:40 micha Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7668,3 +7668,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-flask-sqlalchemy to 2.4.1 [adam 2019-11-08]
 	Updated print/qpdfview to 0.4.18 [nia 2019-11-08]
 	Updated devel/smake to 1.3nb7 [micha 2019-11-08]
+	Updated archivers/star to 1.6.1nb3 [micha 2019-11-08]
