@@ -1,4 +1,4 @@
-$NetBSD: patch-bb,v 1.1 2006/11/14 13:16:00 wennmach Exp $
+$NetBSD: patch-bb,v 1.2 2019/11/08 03:09:22 kivinen Exp $
 
 Libtoolize.
 
@@ -18,7 +18,7 @@ Libtoolize.
  
  CFLAGS=	$(CC_OPT) $(WIN32) -I$(srcdir) -I$(NETCDF)/include @X_CFLAGS@ @CFLAGS@
 -XLIBS=@X_PRE_LIBS@ @X_LIBS@ -lXaw -lXt -lXmu -lXext -lX11 @X_EXTRA_LIBS@ -L.. -L$(libdir) -lgmt -lpsl -lnetcdf
-+XLIBS=@X_PRE_LIBS@ @X_LIBS@ -lXaw -lXt -lXmu -lXext -lX11 @X_EXTRA_LIBS@ ../libgmt.la ../libpsl.la $(CDF)
++XLIBS=@X_PRE_LIBS@ @X_LIBS@ -lXaw -lXt -lXmu -lXext -lX11 @X_EXTRA_LIBS@ ../libgmt.la ../libgmtpsl.la $(CDF)
  
  all:		@buildtarget@
  

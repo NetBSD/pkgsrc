@@ -1,4 +1,4 @@
-$NetBSD: patch-ba,v 1.2 2008/06/12 02:14:31 joerg Exp $
+$NetBSD: patch-ba,v 1.3 2019/11/08 03:09:22 kivinen Exp $
 
 Libtoolize.
 
@@ -91,7 +91,7 @@ Libtoolize.
 -$(MGD77PS):	$(MGD77PS_O) libmgd77.a $(GMTLIB)
 -		$(CC) $(CFLAGS) $(LDFLAGS) $@.o -L. -lmgd77 -L.. -L$(libdir) -lgmt -lgmtps -lpsl $(CDF) $(LIBS) -o $@
 +$(MGD77PS):	$(MGD77PS_O) libmgd77.la
-+		@$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) $@.o libmgd77.la ../libgmt.la ../libgmtps.la ../libpsl.la $(CDF) $(LIBS) -o $@
++		@$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) $@.o libmgd77.la ../libgmt.la ../libgmtps.la ../libgmtpsl.la $(CDF) $(LIBS) -o $@
  
  .c.o:
 -		$(CC) -c $(CFLAGS) $<

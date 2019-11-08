@@ -1,18 +1,21 @@
-$NetBSD: patch-aa,v 1.9 2008/06/12 02:14:31 joerg Exp $
+$NetBSD: patch-aa,v 1.10 2019/11/08 03:09:22 kivinen Exp $
 
 Libtoolize.
 
 --- src/Makefile.orig	2006-11-01 16:41:02.000000000 +0000
 +++ src/Makefile
-@@ -43,7 +43,7 @@ include makegmt.macros	# GMT-specific se
+@@ -43,9 +43,9 @@ include makegmt.macros	# GMT-specific se
  NETCDFLIB	= $(NETCDF)/lib
  NETCDFINC	= $(NETCDF)/include
  CFLAGS		= -I$(NETCDFINC) $(WIN32) $(CC_OPT) -DGMT_DEFAULT_PATH=\"$(GMT_DEFAULT_PATH)\" $(TRIANGLE_D)
 -CDF		= -L$(NETCDFLIB) -lnetcdf
 +CDF		= -Wl,-R$(NETCDFLIB) -L$(NETCDFLIB) -lnetcdf
  
- PS	= -lpsl
+-PS	= -lpsl
++PS	= -lgmtpsl
  GMT	= -lgmt
+ GMTPS	= -lgmtps
+ 
 @@ -151,38 +151,34 @@ gmt_notposix.h:	
  		./configure
  
@@ -28,7 +31,7 @@ Libtoolize.
  			mkdir -p $(libdir); \
  		fi
  		if [ ! $(libdir) = $(srcdir) ]; then \
- 			rm -f $(libdir)/libpsl.* $(libdir)/libgmt.* $(libdir)/libgmtps.*; \
+-			rm -f $(libdir)/libpsl.* $(libdir)/libgmt.* $(libdir)/libgmtps.*; \
 -			$(INSTALL) -m 444 libpsl.a $(libdir); \
 -			$(INSTALL) -m 444 libgmt.a $(libdir); \
 -			$(INSTALL) -m 444 libgmtps.a $(libdir); \
@@ -37,7 +40,8 @@ Libtoolize.
 -				$(INSTALL) -m 444 libgmt.$(SL) $(libdir); \
 -				$(INSTALL) -m 444 libgmtps.$(SL) $(libdir); \
 -			fi; \
-+			$(LIBTOOL) --mode=install $(INSTALL_DATA) libpsl.la $(libdir); \
++			rm -f $(libdir)/libgmtpsl.* $(libdir)/libgmt.* $(libdir)/libgmtps.*; \
++			$(LIBTOOL) --mode=install $(INSTALL_DATA) libgmtpsl.la $(libdir); \
 +			$(LIBTOOL) --mode=install $(INSTALL_DATA) libgmt.la $(libdir); \
 +			$(LIBTOOL) --mode=install $(INSTALL_DATA) libgmtps.la $(libdir); \
  		fi
@@ -65,6 +69,19 @@ Libtoolize.
  
  uninstall:
  		for i in $(ALLPROGS); do \
+@@ -190,9 +186,9 @@ uninstall:
+ 		done
+ 		\rm -f $(bindir)/GMT
+ 		if [ ! $(libdir) = $(srcdir) ]; then \
+-			\rm -f $(libdir)/libgmt.a $(libdir)/libpsl.a $(libdir)/libgmtps.a ; \
+-			if [ -f libpsl.$(SL) ]; then \
+-				\rm -f $(libdir)/libpsl.$(SL); \
++			\rm -f $(libdir)/libgmt.a $(libdir)/libgmtpsl.a $(libdir)/libgmtps.a ; \
++			if [ -f libgmtpsl.$(SL) ]; then \
++				\rm -f $(libdir)/libgmtpsl.$(SL); \
+ 				\rm -f $(libdir)/libgmt.$(SL); \
+ 				\rm -f $(libdir)/libgmtps.$(SL); \
+ 			fi; \
 @@ -207,13 +203,13 @@ uninstall:
  		fi
  
@@ -102,7 +119,7 @@ Libtoolize.
  
 -./libpsl.$(SL):	pslib.o
 -		$(LD) $(LD_OPT) $? -o $@
-+libpsl.la:	pslib.o
++libgmtpsl.la:	pslib.o
 +		@$(LIBTOOL) --mode=link $(CC) -o $@ pslib.lo $(LDFLAGS) -lm --version-info 0:0 -rpath $(PLAIN_LIBDIR)
  
 -./libgmt.$(SL):	$(LIB_O) $(TRIANGLE_O) $(ALPHA_SINCOS_O)
@@ -124,13 +141,13 @@ Libtoolize.
  $(PROGS):	$(GMTLIB) $(PROGS_O)
 -		$(CC) $(CFLAGS) $@.o -L. $(GMT) $(CDF) $(LIBS) $(LDFLAGS) -o $@
 +		@$(LIBTOOL) --mode=link $(CC) $(CPPFLAGS) $(CFLAGS) $@.o \
-+		 libgmt.la libpsl.la $(CDF) $(LIBS) $(LDFLAGS) -o $@
++		 libgmt.la libgmtpsl.la $(CDF) $(LIBS) $(LDFLAGS) -o $@
  		$(COMPRESS) $@$(EXE)
  
  $(PROGSPS):	$(GMTLIB) $(PROGSPS_O)
 -		$(CC) $(CFLAGS) $@.o -L. $(GMT) $(GMTPS) $(PS) $(CDF) $(LIBS) $(LDFLAGS) -o $@
 +		@$(LIBTOOL) --mode=link $(CC) $(CPPFLAGS) $(CFLAGS) $@.o \
-+                 libgmt.la libgmtps.la libpsl.la $(CDF) $(LIBS) $(LDFLAGS) -o $@
++                 libgmt.la libgmtps.la libgmtpsl.la $(CDF) $(LIBS) $(LDFLAGS) -o $@
  		$(COMPRESS) $@$(EXE)
  
  .c.o:
