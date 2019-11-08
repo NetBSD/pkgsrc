@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/08/21 12:59:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/11/08 13:13:45 adam Exp $
 bin/jupyter-nbconvert-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
@@ -317,6 +317,7 @@ ${PYSITELIB}/nbconvert/resources/style.min.css
 ${PYSITELIB}/nbconvert/templates/README.md
 ${PYSITELIB}/nbconvert/templates/asciidoc.tpl
 ${PYSITELIB}/nbconvert/templates/html/basic.tpl
+${PYSITELIB}/nbconvert/templates/html/celltags.tpl
 ${PYSITELIB}/nbconvert/templates/html/full.tpl
 ${PYSITELIB}/nbconvert/templates/html/mathjax.tpl
 ${PYSITELIB}/nbconvert/templates/html/slides_reveal.tpl
@@ -366,6 +367,7 @@ ${PYSITELIB}/nbconvert/tests/files/notebook2.ipynb
 ${PYSITELIB}/nbconvert/tests/files/notebook3_with_errors.ipynb
 ${PYSITELIB}/nbconvert/tests/files/notebook4_jpeg.ipynb
 ${PYSITELIB}/nbconvert/tests/files/notebook_jl.ipynb
+${PYSITELIB}/nbconvert/tests/files/notebook_tags.ipynb
 ${PYSITELIB}/nbconvert/tests/files/override.py
 ${PYSITELIB}/nbconvert/tests/files/override.pyc
 ${PYSITELIB}/nbconvert/tests/files/override.pyo
