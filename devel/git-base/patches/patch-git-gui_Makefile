@@ -1,6 +1,9 @@
-$NetBSD: patch-ah,v 1.1 2013/09/09 13:54:44 wiz Exp $
+$NetBSD: patch-git-gui_Makefile,v 1.1 2019/11/08 12:24:31 adam Exp $
 
---- git-gui/Makefile.orig	2010-12-16 02:52:11.000000000 +0000
+Fix installation.
+Do not build Git Gui.app on Darwin.
+
+--- git-gui/Makefile.orig	2019-11-04 05:07:07.000000000 +0000
 +++ git-gui/Makefile
 @@ -48,11 +48,11 @@ endif
  RM_RF     ?= rm -rf
@@ -32,12 +35,12 @@ $NetBSD: patch-ah,v 1.1 2013/09/09 13:54:44 wiz Exp $
  	INSTALL_A0 = src=
  	INSTALL_A1 = && echo '   ' INSTALL '   ' `basename "$$src"` && find "$$src" | cpio -pud
  
-@@ -105,7 +105,7 @@ endif
- 
+@@ -157,7 +157,7 @@ else
+ endif
  ifeq ($(uname_S),Darwin)
- 	TKFRAMEWORK = /Library/Frameworks/Tk.framework/Resources/Wish.app
--	ifeq ($(shell echo "$(uname_R)" | awk -F. '{if ($$1 >= 9) print "y"}')_$(shell test -d $(TKFRAMEWORK) || echo n),y_n)
-+	ifeq ($(shell echo "$(uname_R)" | awk -F. '{if ($$1 >= 8) print "y"}')_$(shell test -d $(TKFRAMEWORK) || echo n),y_n)
- 		TKFRAMEWORK = /System/Library/Frameworks/Tk.framework/Resources/Wish.app
- 		ifeq ($(shell test -d $(TKFRAMEWORK) || echo n),n)
- 			TKFRAMEWORK = /System/Library/Frameworks/Tk.framework/Resources/Wish\ Shell.app
+ 	ifeq ($(shell test -d $(TKFRAMEWORK) && echo y),y)
+-		GITGUI_MACOSXAPP := YesPlease
++		GITGUI_MACOSXAPP :=
+ 	endif
+ endif
+ ifneq (,$(findstring MINGW,$(uname_S)))

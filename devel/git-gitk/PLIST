@@ -1,12 +1,8 @@
-@comment $NetBSD: PLIST,v 1.8 2019/08/31 23:51:52 maya Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/11/08 12:24:31 adam Exp $
 bin/gitk
 libexec/git-core/git-citool
 libexec/git-core/git-gui
 libexec/git-core/git-gui--askpass
-${PLIST.macosx}share/git-gui/lib/Git Gui.app/Contents/Info.plist
-${PLIST.macosx}share/git-gui/lib/Git Gui.app/Contents/MacOS/Wish
-${PLIST.macosx}share/git-gui/lib/Git Gui.app/Contents/Resources/Scripts/AppMain.tcl
-${PLIST.macosx}share/git-gui/lib/Git Gui.app/Contents/Resources/git-gui.icns
 share/git-gui/lib/about.tcl
 share/git-gui/lib/blame.tcl
 share/git-gui/lib/branch.tcl
@@ -28,7 +24,6 @@ share/git-gui/lib/diff.tcl
 share/git-gui/lib/encoding.tcl
 share/git-gui/lib/error.tcl
 share/git-gui/lib/git-gui.ico
-${PLIST.macosx}share/git-gui/lib/git-gui.tcl
 share/git-gui/lib/index.tcl
 share/git-gui/lib/line.tcl
 share/git-gui/lib/logo.tcl
@@ -77,3 +72,4 @@ share/gitk/lib/msgs/pt_pt.msg
 share/gitk/lib/msgs/ru.msg
 share/gitk/lib/msgs/sv.msg
 share/gitk/lib/msgs/vi.msg
+share/gitk/lib/msgs/zh_cn.msg
