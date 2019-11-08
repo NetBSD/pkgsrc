@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2019/08/20 18:03:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.39 2019/11/08 09:44:17 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -228,6 +228,7 @@ share/mame/hash/ep64_cart.xml
 share/mame/hash/ep64_cass.xml
 share/mame/hash/ep64_flop.xml
 share/mame/hash/epson_cpm.xml
+share/mame/hash/evio.xml
 share/mame/hash/ews286_flop.xml
 share/mame/hash/exl100.xml
 share/mame/hash/famicom_cass.xml
@@ -251,20 +252,26 @@ share/mame/hash/gamepock.xml
 share/mame/hash/gba.xml
 share/mame/hash/gba_ereader.xml
 share/mame/hash/gbcolor.xml
-share/mame/hash/genius.xml
 share/mame/hash/ggm.xml
 share/mame/hash/gimix.xml
+share/mame/hash/gj4000.xml
 share/mame/hash/gjmovie.xml
+share/mame/hash/gjrstar.xml
 share/mame/hash/gl2000.xml
 share/mame/hash/gl6000sl.xml
 share/mame/hash/glcolor.xml
+share/mame/hash/glcx.xml
+share/mame/hash/gln.xml
+share/mame/hash/gls.xml
 share/mame/hash/gmaster.xml
 share/mame/hash/gp32.xml
+share/mame/hash/gtfore.xml
 share/mame/hash/guab.xml
 share/mame/hash/gx4000.xml
 share/mame/hash/h21.xml
 share/mame/hash/horizon.xml
 share/mame/hash/hp85_rom.xml
+share/mame/hash/hp9825b_rom.xml
 share/mame/hash/hp9835a_rom.xml
 share/mame/hash/hp9845a_rom.xml
 share/mame/hash/hp9845b_rom.xml
@@ -303,6 +310,7 @@ share/mame/hash/jakks_gamekey_sw.xml
 share/mame/hash/jb3000_flop.xml
 share/mame/hash/jpopira_jp.xml
 share/mame/hash/juicebox.xml
+share/mame/hash/juku.xml
 share/mame/hash/jupace_cass.xml
 share/mame/hash/k28m2.xml
 share/mame/hash/kayproii.xml
@@ -314,6 +322,7 @@ share/mame/hash/korvet_flop.xml
 share/mame/hash/lantutor.xml
 share/mame/hash/laser2001_cart.xml
 share/mame/hash/leapfrog_leappad_cart.xml
+share/mame/hash/leapfrog_ltleappad_cart.xml
 share/mame/hash/leapfrog_mfleappad_cart.xml
 share/mame/hash/leapster.xml
 share/mame/hash/lisa.xml
@@ -339,11 +348,16 @@ share/mame/hash/megadriv.xml
 share/mame/hash/megaduck.xml
 share/mame/hash/megapc.xml
 share/mame/hash/megatech.xml
-share/mame/hash/mephisto.xml
+share/mame/hash/mephisto_mm1.xml
+share/mame/hash/mephisto_mm2.xml
+share/mame/hash/mephisto_mm4.xml
+share/mame/hash/mephisto_mm5.xml
 share/mame/hash/microvision.xml
+share/mame/hash/midi_flop.xml
 share/mame/hash/mikro80.xml
 share/mame/hash/mikrosha_cart.xml
 share/mame/hash/mikrosha_cass.xml
+share/mame/hash/mindset_flop.xml
 share/mame/hash/misterx.xml
 share/mame/hash/mm1_flop.xml
 share/mame/hash/mo5_cart.xml
@@ -482,6 +496,7 @@ share/mame/hash/rwtrntcs.xml
 share/mame/hash/rx78.xml
 share/mame/hash/sage2.xml
 share/mame/hash/saitek_egr.xml
+share/mame/hash/saitek_kso.xml
 share/mame/hash/samcoupe_cass.xml
 share/mame/hash/samcoupe_flop.xml
 share/mame/hash/sat_cart.xml
@@ -519,9 +534,12 @@ share/mame/hash/spc1500_cass.xml
 share/mame/hash/special_cass.xml
 share/mame/hash/special_flop.xml
 share/mame/hash/specpls3_flop.xml
+share/mame/hash/spectrum_betadisc_flop.xml
 share/mame/hash/spectrum_cart.xml
 share/mame/hash/spectrum_cass.xml
 share/mame/hash/spectrum_flop_opus.xml
+share/mame/hash/spectrum_microdrive.xml
+share/mame/hash/spectrum_wafadrive.xml
 share/mame/hash/squale_cart.xml
 share/mame/hash/st_cart.xml
 share/mame/hash/st_flop.xml
@@ -595,6 +613,7 @@ share/mame/hash/vsmileb_cart.xml
 share/mame/hash/vsmilem_cart.xml
 share/mame/hash/vtech_storio_cart.xml
 share/mame/hash/vz_cass.xml
+share/mame/hash/vz_snap.xml
 share/mame/hash/wangpc.xml
 share/mame/hash/waveterm.xml
 share/mame/hash/wicat.xml
