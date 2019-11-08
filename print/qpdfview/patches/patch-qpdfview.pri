@@ -1,11 +1,11 @@
-$NetBSD: patch-qpdfview.pri,v 1.4 2016/04/22 09:35:00 nros Exp $
+$NetBSD: patch-qpdfview.pri,v 1.5 2019/11/08 13:38:48 nia Exp $
 
 * Set install places
 
---- qpdfview.pri.orig	2015-11-14 20:48:59.000000000 +0000
+--- qpdfview.pri.orig	2019-07-24 19:18:33.000000000 +0000
 +++ qpdfview.pri
 @@ -1,12 +1,12 @@
- isEmpty(APPLICATION_VERSION):APPLICATION_VERSION = 0.4.16
+ isEmpty(APPLICATION_VERSION):APPLICATION_VERSION = 0.4.18
  
 -isEmpty(TARGET_INSTALL_PATH):TARGET_INSTALL_PATH = /usr/bin
 -isEmpty(PLUGIN_INSTALL_PATH):PLUGIN_INSTALL_PATH = /usr/lib/qpdfview
