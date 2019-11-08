@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/11/08 14:50:23 mef Exp $
+
+SHA1 (Test-NiceDump-1.0.1.tar.gz) = eeaaaf9f83f24274662d4c341b7599e7bd783879
+RMD160 (Test-NiceDump-1.0.1.tar.gz) = 8cdc72020d861559fc3f66a69c01c7df9ca30417
+SHA512 (Test-NiceDump-1.0.1.tar.gz) = f439d3a4984b7e02794455a7b2e590da6dd97859c6da41045ed4b394fb66a996028eeba1214ec90aba3dc18174f0baa517d7b4ba2c724f7f592a79393fdcd5e4
+Size (Test-NiceDump-1.0.1.tar.gz) = 12332 bytes
