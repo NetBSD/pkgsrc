@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4816 2019/11/08 11:10:12 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4817 2019/11/08 12:25:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7661,3 +7661,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/py-xlsxwriter to 1.2.3 [adam 2019-11-08]
 	Updated emulators/mame to 0.215 [wiz 2019-11-08]
 	Updated audio/faad2 to 2.9.1 [nia 2019-11-08]
+	Updated devel/git to 2.24.0 [adam 2019-11-08]
