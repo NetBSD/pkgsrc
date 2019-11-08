@@ -1,9 +1,12 @@
-$NetBSD: distinfo,v 1.4 2016/03/13 01:02:44 tnn Exp $
+$NetBSD: distinfo,v 1.5 2019/11/08 17:11:12 tnn Exp $
 
-SHA1 (BackupPC-3.3.1.tar.gz) = b579d64ff2486395e8ca0a93ac964bd9d9e1a232
-RMD160 (BackupPC-3.3.1.tar.gz) = 3db4d6a54c9cde61fa434292b53f18ded73dbb83
-SHA512 (BackupPC-3.3.1.tar.gz) = b6bb9de3103c5062098d80755055b7461ae9133a4a46a66b3d0af89d081086571694db1898e7d85880defa15b030bad522812116ae5361c0fbde90b877d139c6
-Size (BackupPC-3.3.1.tar.gz) = 556461 bytes
-SHA1 (patch-configure.pl) = 4935ca9916b52918869adaac063768713c7e055b
-SHA1 (patch-lib_BackupPC_CGI_Browse.pm) = 8c6823712b9853ba424f23b871ccbd2b6124b6a3
-SHA1 (patch-lib_BackupPC_Lib.pm) = 39125a98486c2a9f8f53b26f2ac753ddbad566b9
+SHA1 (BackupPC-4.3.1.tar.gz) = ff27af8622701a4be367b9fd8223c32ebf86d3d0
+RMD160 (BackupPC-4.3.1.tar.gz) = 9285231af956d20d288cc3c22bdec69b6ecd7b60
+SHA512 (BackupPC-4.3.1.tar.gz) = acabc8d79779bfa599192af88938dbdbf7bf12e82564f3c25398cc4bc04207ea21494974bec20779433f0207fd82b17107c538437309950d619ca3a9856e721f
+Size (BackupPC-4.3.1.tar.gz) = 638366 bytes
+SHA1 (rsync-bpc-3.1.2.1.tar.gz) = 771005e68f1205e495f08c6d53d7965e39c611da
+RMD160 (rsync-bpc-3.1.2.1.tar.gz) = 7329f040e0f5a3e4b5409ca7ceeb1d610df81090
+SHA512 (rsync-bpc-3.1.2.1.tar.gz) = 347513b24582486281fd8a2e1c7dd621a0e912a76aa2d8d4d614ca6c1052148c3bbbfe4452d389e670e7da0aa7059202a28a3c76413503e59da660ff7b172128
+Size (rsync-bpc-3.1.2.1.tar.gz) = 867946 bytes
+SHA1 (patch-configure.pl) = 1c00cb8f87bbcfaf720ccead39e2050ba95db64d
+SHA1 (patch-rsync-bpc_lib_sysacls.c) = bae4f643e36e82b54e59049135028a8ecc992e7a
