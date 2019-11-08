@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2018/12/22 09:30:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2019/11/08 13:20:16 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -185,6 +185,9 @@ ${PYSITELIB}/flask_admin/form/rules.pyo
 ${PYSITELIB}/flask_admin/form/upload.py
 ${PYSITELIB}/flask_admin/form/upload.pyc
 ${PYSITELIB}/flask_admin/form/upload.pyo
+${PYSITELIB}/flask_admin/form/validators.py
+${PYSITELIB}/flask_admin/form/validators.pyc
+${PYSITELIB}/flask_admin/form/validators.pyo
 ${PYSITELIB}/flask_admin/form/widgets.py
 ${PYSITELIB}/flask_admin/form/widgets.pyc
 ${PYSITELIB}/flask_admin/form/widgets.pyo
@@ -235,6 +238,7 @@ ${PYSITELIB}/flask_admin/static/admin/js/bs3_modal.js
 ${PYSITELIB}/flask_admin/static/admin/js/details_filter.js
 ${PYSITELIB}/flask_admin/static/admin/js/filters.js
 ${PYSITELIB}/flask_admin/static/admin/js/form.js
+${PYSITELIB}/flask_admin/static/admin/js/helpers.js
 ${PYSITELIB}/flask_admin/static/admin/js/rediscli.js
 ${PYSITELIB}/flask_admin/static/bootstrap/bootstrap2/css/bootstrap-responsive.css
 ${PYSITELIB}/flask_admin/static/bootstrap/bootstrap2/css/bootstrap-responsive.min.css
