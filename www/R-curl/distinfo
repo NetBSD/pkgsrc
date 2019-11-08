@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/08/01 01:03:17 brook Exp $
+$NetBSD: distinfo,v 1.5 2019/11/08 16:05:26 mef Exp $
 
-SHA1 (R/curl_4.0.tar.gz) = 80667d270d99c8b497119fe3c294b868c89c17f5
-RMD160 (R/curl_4.0.tar.gz) = 2f20818bf9cc50d4a918ebb13b8c07c2be4ffe18
-SHA512 (R/curl_4.0.tar.gz) = c35d96727d8bc2b4d41e651edc337f63a44fd3c56dab09abc90ef7cf63b65c11e74fb8598d1a08cc1ce6671c6e75babddebbada7e2099929f306dff50c7a2c84
-Size (R/curl_4.0.tar.gz) = 379180 bytes
+SHA1 (R/curl_4.2.tar.gz) = 7cd619c02efd8325be1cf9d7c39ba93ac28eabc8
+RMD160 (R/curl_4.2.tar.gz) = abebc5f4974472c547e6ff4f6ab715f466fd92fb
+SHA512 (R/curl_4.2.tar.gz) = 81559e49f03d4a28ae3bc718e0801ab970fc236807ed7dfe7a41b871ee2c029dc28b50a0466ee542a7a2ed12d6916105fb8d5767ca3c376876f6ee44558aa9f7
+Size (R/curl_4.2.tar.gz) = 667901 bytes
