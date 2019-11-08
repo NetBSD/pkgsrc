@@ -1,15 +1,15 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2015/02/13 17:57:36 tnn Exp $
+$NetBSD: MESSAGE,v 1.2 2019/11/08 17:11:12 tnn Exp $
 
 Please refer to the documentation in
 
-	${PREFIX}/share/BackupPC/doc/BackupPC.html
+	${PREFIX}/share/BackupPC/share/doc/BackupPC/BackupPC.html
 
 for detailed installation instructions.
 
 If you are running Apache, then you can add the following line to httpd.conf:
 
-	Include ${PKG_SYSCONFDIR}/backuppc.conf
+	Include ${PKG_SYSCONFDIR}/BackupPC/backuppc.conf
 
 Follow the instructions in the above file, restart Apache and start
 the BackupPC daemon with the supplied rc.d script.
