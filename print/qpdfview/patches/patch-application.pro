@@ -1,9 +1,13 @@
-$NetBSD: patch-application.pro,v 1.1 2016/03/09 17:45:52 nros Exp $
+$NetBSD: patch-application.pro,v 1.2 2019/11/08 13:38:48 nia Exp $
+
 * install png icons (makes the icon visible in xfce)
+
 The reason .files and .path are not set within the for loop using 
-$${size} is that when done messages like
+$${size} is that when done messages like:
+
 WARNING: icon16.path is not defined: install target not created
 appear when the .pro file is processed and the icons won't be installed.
+
 --- application.pro.orig	2015-11-14 20:48:59.000000000 +0000
 +++ application.pro
 @@ -254,6 +254,13 @@ APPDATA_FILE = miscellaneous/qpdfview.ap
