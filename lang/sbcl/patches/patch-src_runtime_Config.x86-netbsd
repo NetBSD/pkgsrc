@@ -1,17 +1,18 @@
-$NetBSD: patch-src_runtime_Config.x86-netbsd,v 1.1 2019/10/12 09:47:40 he Exp $
+$NetBSD: patch-src_runtime_Config.x86-netbsd,v 1.2 2019/11/08 14:42:28 he Exp $
 
-Use Config.generic-netbsd.
+Use Config.generic-netbsd and override OS_SRC
+because Config.x86-bsd should be split into Config.x86-bsd and Config.bsd...
 
 --- src/runtime/Config.x86-netbsd.orig	2019-09-28 09:49:01.000000000 +0000
 +++ src/runtime/Config.x86-netbsd
-@@ -9,10 +9,11 @@
- # provided with absolutely no warranty. See the COPYING and CREDITS
+@@ -10,9 +10,11 @@
  # files for more information.
  
-+include Config.generic-netbsd
  include Config.x86-bsd
++include Config.generic-netbsd
  
 -ASSEM_SRC += ldso-stubs.S
++OS_SRC = bsd-os.c x86-bsd-os.c
  OS_SRC += undefineds.c
 +
  LINKFLAGS += -dynamic -export-dynamic
