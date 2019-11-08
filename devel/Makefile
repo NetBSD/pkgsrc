@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2945 2019/11/07 13:23:35 wiz Exp $
+# $NetBSD: Makefile,v 1.2946 2019/11/08 14:53:11 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -1822,6 +1822,7 @@ SUBDIR+=	p5-Test-More-Behaviour
 SUBDIR+=	p5-Test-More-UTF8
 SUBDIR+=	p5-Test-Most
 SUBDIR+=	p5-Test-Needs
+SUBDIR+=	p5-Test-NiceDump
 SUBDIR+=	p5-Test-NoTabs
 SUBDIR+=	p5-Test-NoWarnings
 SUBDIR+=	p5-Test-Object
