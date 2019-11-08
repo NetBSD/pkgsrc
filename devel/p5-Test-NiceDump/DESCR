@@ -1,0 +1,5 @@
+This module uses Data::Dump::Filtered and a set of sensible filters to dump
+test data in a more readable way.
+
+For example, DateTime objects get printed in the full ISO 8601 format, and
+DBIx::Class::Row objects get printed as hashes of their inflated columns.
