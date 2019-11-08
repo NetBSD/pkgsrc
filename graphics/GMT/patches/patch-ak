@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.6 2009/11/23 16:00:34 joerg Exp $
+$NetBSD: patch-ak,v 1.7 2019/11/08 03:09:22 kivinen Exp $
 
 Libtoolize.
 
@@ -24,7 +24,7 @@ Libtoolize.
 -grdraster:	grdraster.o $(GMTLIB)
 -		$(CC) $(CFLAGS) $(LDFLAGS) grdraster.o -L.. -L$(libdir) -lgmt $(CDF) $(LIBS) -o grdraster
 +grdraster:	grdraster.o
-+		@$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) grdraster.lo -L$(PLAIN_LIBDIR) ../libgmt.la ../libpsl.la $(CDF) $(LIBS) -o grdraster
++		@$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) grdraster.lo -L$(PLAIN_LIBDIR) ../libgmt.la ../libgmtpsl.la $(CDF) $(LIBS) -o grdraster
  
  spotless:	clean
  
