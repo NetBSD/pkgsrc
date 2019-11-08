@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/12/29 17:55:01 dholland Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/11/08 03:09:22 kivinen Exp $
 bin/GMT
 bin/backtracker
 bin/binlegs
@@ -162,7 +162,7 @@ lib/libgmt.la
 lib/libgmt_mgg.la
 lib/libgmtps.la
 lib/libmgd77.la
-lib/libpsl.la
+lib/libgmtpsl.la
 lib/libx2sys.la
 man/man1/GMT.1
 man/man1/backtracker.1

@@ -1,4 +1,4 @@
-$NetBSD: patch-at,v 1.8 2008/06/12 02:14:31 joerg Exp $
+$NetBSD: patch-at,v 1.9 2019/11/08 03:09:22 kivinen Exp $
 
 Libtoolize.
 
@@ -9,7 +9,7 @@ Libtoolize.
  
  CFLAGS	= $(CC_OPT) $(WIN32) -I$(srcdir) -I../mgg -I../mgd77 -I$(NETCDF)/include
 -ALLLIB	= -L../mgd77 -lmgd77 -L../mgg -lgmt_mgg -L.. -L$(libdir) -lgmt -lpsl -L$(NETCDF)/lib -lnetcdf $(LIBS)
-+ALLLIB	= ../mgd77/libmgd77.la ../mgg/libgmt_mgg.la ../libgmt.la ../libpsl.la -Wl,-R$(NETCDF)/lib -L$(NETCDF)/lib -lnetcdf $(LIBS)
++ALLLIB	= ../mgd77/libmgd77.la ../mgg/libgmt_mgg.la ../libgmt.la ../libgmtpsl.la -Wl,-R$(NETCDF)/lib -L$(NETCDF)/lib -lnetcdf $(LIBS)
  
  XSYSTEM_H	= x2sys.h
  XSYSTEM_C	= x2sys_init.c x2sys_put.c x2sys_get.c x2sys_binlist.c x2sys_datalist.c x2sys_cross.c
