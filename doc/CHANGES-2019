@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4825 2019/11/08 14:42:27 mef Exp $
+$NetBSD: CHANGES-2019,v 1.4826 2019/11/08 14:53:11 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7673,3 +7673,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated shells/bosh to 20191025 [micha 2019-11-08]
 	Updated shells/pbosh to 20191025 [micha 2019-11-08]
 	Updated net/p5-Net-Frame to 1.21 [mef 2019-11-08]
+	Added devel/p5-Test-NiceDump version 1.0.1 [mef 2019-11-08]
