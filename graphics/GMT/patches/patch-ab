@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.7 2008/06/12 02:14:31 joerg Exp $
+$NetBSD: patch-ab,v 1.8 2019/11/08 03:09:22 kivinen Exp $
 
 --- src/makegmt.macros.in.orig	2006-11-08 16:19:32.000000000 +0100
 +++ src/makegmt.macros.in	2006-11-08 16:20:29.000000000 +0100
@@ -25,4 +25,4 @@ $NetBSD: patch-ab,v 1.7 2008/06/12 02:14:31 joerg Exp $
  #-------------------------------------------------------------------------------
  #
 -GMTLIB	= @GMTLIB@
-+GMTLIB	= libpsl.la libgmt.la libgmtps.la
++GMTLIB	= libgmtpsl.la libgmt.la libgmtps.la
