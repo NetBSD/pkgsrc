@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2019/08/22 08:23:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2019/11/08 13:15:37 adam Exp $
 bin/jupyter-bundlerextension-${PYVERSSUFFIX}
 bin/jupyter-nbextension-${PYVERSSUFFIX}
 bin/jupyter-notebook-${PYVERSSUFFIX}
@@ -1345,6 +1345,7 @@ ${PYSITELIB}/notebook/static/components/codemirror/theme/bespin.css
 ${PYSITELIB}/notebook/static/components/codemirror/theme/blackboard.css
 ${PYSITELIB}/notebook/static/components/codemirror/theme/cobalt.css
 ${PYSITELIB}/notebook/static/components/codemirror/theme/colorforth.css
+${PYSITELIB}/notebook/static/components/codemirror/theme/darcula.css
 ${PYSITELIB}/notebook/static/components/codemirror/theme/dracula.css
 ${PYSITELIB}/notebook/static/components/codemirror/theme/duotone-dark.css
 ${PYSITELIB}/notebook/static/components/codemirror/theme/duotone-light.css
@@ -1367,6 +1368,7 @@ ${PYSITELIB}/notebook/static/components/codemirror/theme/monokai.css
 ${PYSITELIB}/notebook/static/components/codemirror/theme/neat.css
 ${PYSITELIB}/notebook/static/components/codemirror/theme/neo.css
 ${PYSITELIB}/notebook/static/components/codemirror/theme/night.css
+${PYSITELIB}/notebook/static/components/codemirror/theme/nord.css
 ${PYSITELIB}/notebook/static/components/codemirror/theme/oceanic-next.css
 ${PYSITELIB}/notebook/static/components/codemirror/theme/panda-syntax.css
 ${PYSITELIB}/notebook/static/components/codemirror/theme/paraiso-dark.css
@@ -1387,6 +1389,7 @@ ${PYSITELIB}/notebook/static/components/codemirror/theme/vibrant-ink.css
 ${PYSITELIB}/notebook/static/components/codemirror/theme/xq-dark.css
 ${PYSITELIB}/notebook/static/components/codemirror/theme/xq-light.css
 ${PYSITELIB}/notebook/static/components/codemirror/theme/yeti.css
+${PYSITELIB}/notebook/static/components/codemirror/theme/yonce.css
 ${PYSITELIB}/notebook/static/components/codemirror/theme/zenburn.css
 ${PYSITELIB}/notebook/static/components/create-react-class/index.js
 ${PYSITELIB}/notebook/static/components/es6-promise/promise.js
