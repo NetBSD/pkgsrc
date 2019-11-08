@@ -1,27 +1,38 @@
-# $NetBSD: Makefile,v 1.11 2019/11/04 21:28:41 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2019/11/08 17:11:12 tnn Exp $
 
-DISTNAME=	BackupPC-3.3.1
+DISTNAME=	BackupPC-4.3.1
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	8
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=backuppc/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=backuppc/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	http://backuppc.sourceforge.net/
 COMMENT=	Fast, agentless backup system supporting *NIX, Windows and OSX clients
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v3
+
+RSYNC_BPC=	rsync-bpc-3.1.2.1
+RSYNC_BPC_TGZ=	${RSYNC_BPC}.tar.gz
+DISTFILES=	${DEFAULT_DISTFILES}
+DISTFILES+=	${RSYNC_BPC_TGZ}
+SITES.${RSYNC_BPC_TGZ}=	${MASTER_SITE_GITHUB:=backuppc/}rsync-bpc/releases/download/${RSYNC_BPC:S/rsync-bpc-//}/
 
 DEPENDS+=	rsync-[0-9]*:../../net/rsync
 DEPENDS+=	samba-[0-9]*:../../net/samba
 DEPENDS+=	par2-[0-9]*:../../archivers/par2
-DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
+#DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
 DEPENDS+=	p5-CGI-[0-9]*:../../www/p5-CGI
 DEPENDS+=	p5-File-Listing-[0-9]*:../../devel/p5-File-Listing
-DEPENDS+=	p5-File-RsyncP-[0-9]*:../../net/p5-File-RsyncP
+DEPENDS+=	p5-BackupPC-XS-[0-9]*:../../sysutils/p5-BackupPC-XS
 
 HAS_CONFIGURE=	yes
-USE_LANGUAGES=	# none
+USE_LANGUAGES=	c
 USE_TOOLS+=	bzip2:run cat:run tar:run perl:run hostname:run gzip:run pax
+
+OVERRIDE_GNU_CONFIG_SCRIPTS=	yes
+CONFIG_GUESS_OVERRIDE=		../${RSYNC_BPC}/config.guess
+CONFIG_SUB_OVERRIDE=		../${RSYNC_BPC}/config.sub
+BUILD_DIRS=			../${RSYNC_BPC}
 
 CONFIG_SHELL=		${PERL5}
 CONFIGURE_SCRIPT=	configure.pl
@@ -50,6 +61,7 @@ CONFIGURE_ARGS+=	--bin-path rsync=${PREFIX}/bin/rsync
 CONFIGURE_ARGS+=	--bin-path nmblookup=${PREFIX}/bin/nmblookup
 CONFIGURE_ARGS+=	--bin-path smbclient=${PREFIX}/bin/smbclient
 CONFIGURE_ARGS+=	--bin-path par2=${PREFIX}/bin/par2
+CONFIGURE_ARGS+=	--bin-path rsync_bpc=${PREFIX}/bin/rsync_bpc
 
 .if exists(/usr/bin/ssh)
 CONFIGURE_ARGS+=	--bin-path ssh=/usr/bin/ssh
@@ -72,7 +84,7 @@ SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		post-configure
 SUBST_MESSAGE.fix-paths=	Substituting paths and usernames.
 SUBST_FILES.fix-paths=		${WRKSRC}/build/${PREFIX}/share/examples/BackupPC/config.pl
-SUBST_FILES.fix-paths+=		${WRKSRC}/build/${PREFIX}/share/BackupPC/doc/*
+SUBST_FILES.fix-paths+=		${WRKSRC}/build/${PREFIX}/share/BackupPC/share/doc/BackupPC/*
 SUBST_FILES.fix-paths+=		${WRKSRC}/build/${PREFIX}/share/BackupPC/lib/BackupPC/Lib.pm
 SUBST_FILES.fix-paths+=		${WRKSRC}/backuppc.conf
 SUBST_FILES.fix-paths+=		${WRKSRC}/cgiwrapper.c
@@ -106,13 +118,17 @@ post-extract:
 	cp ${FILESDIR}/backuppc.conf ${WRKSRC}/backuppc.conf
 	cp ${FILESDIR}/cgiwrapper.c ${WRKSRC}/cgiwrapper.c
 
-do-build:
+post-configure:
+	cd ${WRKDIR}/${RSYNC_BPC} && ${SETENV} ${CONFIGURE_ENV} ${SH} ./configure --prefix=${PREFIX} --with-included-popt
+
+post-build:
 	rm -rf ${WRKSRC}/build/${VARBASE}
 
-do-install:
+post-install:
 	cd ${WRKSRC}/build && pax -rw . ${DESTDIR}/
 	chmod +x ${DESTDIR}${PREFIX}/share/BackupPC/bin/*
 	${INSTALL_DATA} ${WRKSRC}/backuppc.conf ${DESTDIR}${PREFIX}/share/examples/BackupPC/backuppc.conf
 	${INSTALL_DATA} ${WRKSRC}/cgiwrapper.c ${DESTDIR}${PREFIX}/share/examples/BackupPC/cgiwrapper.c
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
