@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.28 2019/09/14 13:34:06 nia Exp $
+$NetBSD: distinfo,v 1.29 2019/11/08 11:10:01 nia Exp $
 
-SHA1 (faad2-2.9.0.tar.gz) = 0c39dd1362288f372211cdbc053748569a9cb2ea
-RMD160 (faad2-2.9.0.tar.gz) = 6a6576fb640daba2cb4754ade1d2b8834b8766e5
-SHA512 (faad2-2.9.0.tar.gz) = 1756b2672f9e438a56b11160ddc77fc721d85860eaa325a3ff01b51a2524baf4c1c61068a97cbc4e99d47e7643f10e1d6afb997eede3295b44551fe4661fb5dc
-Size (faad2-2.9.0.tar.gz) = 802390 bytes
+SHA1 (faad2-2.9.1.tar.gz) = 34923cd9868e1ee95a88eca3d4cad9a0cc133266
+RMD160 (faad2-2.9.1.tar.gz) = 77c2fcbfb99537485ed4bf3e1846547f0b15d9fd
+SHA512 (faad2-2.9.1.tar.gz) = 1015f5b49baebf6c9404cfcd7b9d524cc76a57abcd1a46bb851463ae5226bfd8b80155b661708f66548466422855cd7aeec5676463cd1346c5fb1dc0821621ce
+Size (faad2-2.9.1.tar.gz) = 802569 bytes
 SHA1 (patch-configure.ac) = ed9d4e9d611d27d4add86884996a8e7fc001bc90
 SHA1 (patch-frontend_Makefile.am) = 32c8bede5773b2cb97777951b1a18366b4e10e3d
 SHA1 (patch-frontend_getopt.c) = 3eaf3e8318887eca49e354696cad1bd2c5bf5504
