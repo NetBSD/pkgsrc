@@ -1,4 +1,4 @@
-$NetBSD: patch-src_runtime_run-program.c,v 1.1 2019/10/12 09:47:40 he Exp $
+$NetBSD: patch-src_runtime_run-program.c,v 1.2 2019/11/08 09:53:43 he Exp $
 
 Try to avoid doing the "open /dev/tty, TIOCNOTTY" dance.
 Instead, do as on OpenBSD.
@@ -10,7 +10,7 @@ Instead, do as on OpenBSD.
  #include <errno.h>
  
 -#ifdef LISP_FEATURE_OPENBSD
-+#if defined(LISP_FEATURE_OPENBSD) || defined(LISP_FETURE_NETBSD)
++#if defined(LISP_FEATURE_OPENBSD) || defined(LISP_FEATURE_NETBSD)
  #include <util.h>
  #endif
  
