@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4831 2019/11/09 11:48:45 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4832 2019/11/09 12:02:38 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7681,3 +7681,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/backuppc to 4.3.1 [tnn 2019-11-08]
 	Updated audio/ncmpc to 0.36 [nia 2019-11-09]
 	Updated audio/faac to 1.30 [nia 2019-11-09]
+	Updated shells/fish to 3.0.2 [nia 2019-11-09]
