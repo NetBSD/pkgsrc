@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/06/15 07:17:31 adam Exp $
+$NetBSD: distinfo,v 1.2 2019/11/09 21:46:58 adam Exp $
 
-SHA1 (uncertainties-3.1.1.tar.gz) = 4e2ddb827d0e0157025c5b362612dac9c1a5736b
-RMD160 (uncertainties-3.1.1.tar.gz) = 4c70c198dd08a92bf06f96008268c732a612403a
-SHA512 (uncertainties-3.1.1.tar.gz) = e584a458e41fdf255d000868efc4d5973f0bda752deff528f94e23a218a7ab043c818f694a9f7afba1a5259974738b25bfa2fe72fbf84fd166e3cb16e3d1974b
-Size (uncertainties-3.1.1.tar.gz) = 232231 bytes
+SHA1 (uncertainties-3.1.2.tar.gz) = 00734e0971ada59e914a00449e8856a2d5667227
+RMD160 (uncertainties-3.1.2.tar.gz) = dae79b55566e4f853def26b43e9ca9de6a55e0f3
+SHA512 (uncertainties-3.1.2.tar.gz) = 420fa4f58ac8dff17875029bc3dcd6539c638e8c8ffa5bcc273b486d05f0d1cc71b1db140a5098c1cd6472f93b6869303f57f48675296e859814197d899327bd
+Size (uncertainties-3.1.2.tar.gz) = 232577 bytes
