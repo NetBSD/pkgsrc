@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2019/08/22 12:22:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.47 2019/11/09 20:01:14 jperkin Exp $
 
 DISTNAME=	mongodb-src-r4.0.6
 PKGNAME=	${DISTNAME:S/src-r//}
@@ -50,7 +50,6 @@ PYTHON_VERSIONS_ACCEPTED=	27
 
 .include "../../mk/bsd.prefs.mk"
 
-GCC_REQD+=	5.3.0
 CPPFLAGS+=	-fno-jump-tables  # XXX: still needed?
 INCL_PATH+=	${BUILDLINK_PREFIX.mongo-c-driver}/include/libbson-1.0
 INCL_PATH+=	${BUILDLINK_PREFIX.mongo-c-driver}/include/libmongoc-1.0
