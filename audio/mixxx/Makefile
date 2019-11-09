@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/10/20 11:10:47 nia Exp $
+# $NetBSD: Makefile,v 1.9 2019/11/09 20:01:14 jperkin Exp $
 
 DISTNAME=	mixxx-2.2.2
 CATEGORIES=	audio
@@ -10,8 +10,6 @@ HOMEPAGE=	https://mixxx.org/
 COMMENT=	DJ mixing application
 LICENSE=	gnu-gpl-v2
 
-.include "../../mk/bsd.prefs.mk"
-
 USE_LANGUAGES=	c c++11
 USE_TOOLS+=	pkg-config
 
@@ -19,6 +17,8 @@ USE_TOOLS+=	pkg-config
 GCC_REQD+=	4.9
 
 PLIST_SRCS+=	PLIST
+
+.include "../../mk/bsd.prefs.mk"
 
 SCONS_ARGS+=	-j${MAKE_JOBS:U1}
 
