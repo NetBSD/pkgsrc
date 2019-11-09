@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.3 2019/09/02 18:20:50 schmonz Exp $
+$NetBSD: distinfo,v 1.4 2019/11/09 15:00:55 schmonz Exp $
 
-SHA1 (redo-0.41.tar.gz) = 937655c5c4b2f912185f8876d88185bf3d6b7217
-RMD160 (redo-0.41.tar.gz) = d3a22ef8ee7fda1b6899af035fb74322970afd9e
-SHA512 (redo-0.41.tar.gz) = 94e4414a2f8120e5d4a949461734ed69dc2f39edfb7929d2efff83041ac0b941e037359ccfafcb4eff760608274e32c579df56d58fdb67b13b8a26eb1945b0d0
-Size (redo-0.41.tar.gz) = 140167 bytes
-SHA1 (patch-bin_all.do) = 51f1b2e286879287a4a0b13064ca712be17ca6f4
+SHA1 (redo-0.42.tar.gz) = 86ccb48dd5356b6b2a595b270ca6ab845c9e51d1
+RMD160 (redo-0.42.tar.gz) = 176deeb21453759b315fc584c51078c8b26821d9
+SHA512 (redo-0.42.tar.gz) = 41b8417136f98d12edf3c62f027f2459ae3fb92f6c5464553d79c3a52344de57220a5c64b565118da0a99c1544eaa153a468ffcdcfbf7193c76c896bcd40e900
+Size (redo-0.42.tar.gz) = 194344 bytes
+SHA1 (patch-bin_all.do) = 761d24a832fa8067b6123fc02918460f579ffb5a
 SHA1 (patch-do) = 75b461b94d83f6145d161355aec59633bcad2c20
 SHA1 (patch-redo_sh.do) = d6223596c83744d19f23d0026a321fc89102569d
 SHA1 (patch-t_shelltest.od) = ca86299da6ae30b44a0e10cfe1a6ef30299dd0bc
