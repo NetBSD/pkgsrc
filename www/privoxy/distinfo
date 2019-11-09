@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.24 2018/01/07 15:08:50 leot Exp $
+$NetBSD: distinfo,v 1.25 2019/11/09 14:30:29 nia Exp $
 
-SHA1 (privoxy-3.0.26-stable-src.tar.gz) = b646624006225979f83453ba542e448667f45998
-RMD160 (privoxy-3.0.26-stable-src.tar.gz) = ae9ebff5f158090948066850a252dde78e94292a
-SHA512 (privoxy-3.0.26-stable-src.tar.gz) = e448305287d0451c761b76b8d8974ea1ec837b621bbb498a7ff16a54cb4d8f1f734efe2eef03235c01163bb40e225785065aad6ee265a31d90970ab98af11044
-Size (privoxy-3.0.26-stable-src.tar.gz) = 1741772 bytes
+SHA1 (privoxy-3.0.28-stable-src.tar.gz) = fa8f9f355a48afe94afcaef31c5404b2294c1043
+RMD160 (privoxy-3.0.28-stable-src.tar.gz) = a7bbc04eede729d1be74e776d74a51874b2595f1
+SHA512 (privoxy-3.0.28-stable-src.tar.gz) = 5d58024ae73d623a2b8fb2ac49e18f047dfe252c9441388f025cf888c0e4b11546b8796cfa559759ee137002b1b31b30ad28b356ae226836454f32591eb835fc
+Size (privoxy-3.0.28-stable-src.tar.gz) = 1753809 bytes
 SHA1 (patch-aa) = d5296d7440b92b76c28136453d098c617d4e439b
 SHA1 (patch-ab) = c54a5845ad76d36ea281697cce17237d1d2ee0bd
 SHA1 (patch-ac) = 2d1a1efc53b4cd017d3ce21080adf1bfcc5cc97c
