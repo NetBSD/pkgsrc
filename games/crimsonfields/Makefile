@@ -1,22 +1,18 @@
-# $NetBSD: Makefile,v 1.44 2018/07/18 00:06:16 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.45 2019/11/09 12:53:10 nia Exp $
 
-DISTNAME=		crimson-0.5.2
-PKGNAME=		${DISTNAME:S/crimson/crimsonfields/}
-PKGREVISION=		5
-CATEGORIES=		games
-MASTER_SITES=		http://crimson.seul.org/files/
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	crimson-0.5.3
+PKGNAME=	${DISTNAME:S/crimson/crimsonfields/}
+CATEGORIES=	games
+MASTER_SITES=	http://crimson.seul.org/files/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://crimson.seul.org/
-COMMENT=		Tactical war game in the tradition of Battle Isle
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://crimson.seul.org/
+COMMENT=	Tactical war game in the tradition of Battle Isle
+LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=		c c++03
-USE_TOOLS+=		gmake
-# not standard locale files
-#USE_PKGLOCALEDIR=	no
-GNU_CONFIGURE=		yes
+USE_LANGUAGES=	c c++03
+USE_TOOLS+=	gmake
+GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--enable-bi2cf
 CONFIGURE_ARGS+=	--enable-cf2bmp
