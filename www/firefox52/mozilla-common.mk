@@ -1,9 +1,12 @@
-# $NetBSD: mozilla-common.mk,v 1.4 2019/11/04 22:09:54 rillig Exp $
+# $NetBSD: mozilla-common.mk,v 1.5 2019/11/09 20:01:14 jperkin Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
 # used by www/firefox/Makefile
 # used by www/seamonkey/Makefile
+
+# GCC 4.6 is required to support nullptr.
+GCC_REQD+=		4.8
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -29,8 +32,6 @@ test:
 TOOLS_PLATFORM.tar=	${TOOLS_PATH.bsdtar}
 USE_TOOLS+=		bsdtar
 .endif
-# GCC 4.6 is required to support nullptr.
-GCC_REQD+=		4.8
 .if ${MACHINE_ARCH} == "i386"
 # Fix for PR pkg/48152.
 CXXFLAGS+=		-march=i586

@@ -1,8 +1,10 @@
-# $NetBSD: mozilla-common.mk,v 1.2 2019/11/04 22:09:55 rillig Exp $
+# $NetBSD: mozilla-common.mk,v 1.3 2019/11/09 20:01:15 jperkin Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
 # used by www/firefox/Makefile
+
+GCC_REQD+=		6.1
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -51,7 +53,6 @@ test:
 TOOLS_PLATFORM.tar=	${TOOLS_PATH.bsdtar}
 USE_TOOLS+=		bsdtar
 .endif
-GCC_REQD+=		6.1
 .if !empty(MACHINE_PLATFORM:MNetBSD-[0-7]**-*) || \
 	!empty(MACHINE_PLATFORM:MNetBSD-8.[0-8]*-*)
 USE_PKGSRC_GCC_RUNTIME=	yes
