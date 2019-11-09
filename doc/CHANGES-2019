@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4838 2019/11/09 13:07:44 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4839 2019/11/09 14:30:39 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7688,3 +7688,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated archivers/unshield to 1.4.3 [nia 2019-11-09]
 	Updated games/crimsonfields to 0.5.3 [nia 2019-11-09]
 	Updated emulators/stella to 6.0.1 [nia 2019-11-09]
+	Updated www/privoxy to 3.0.28 [nia 2019-11-09]
