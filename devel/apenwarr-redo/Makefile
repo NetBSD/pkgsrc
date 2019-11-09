@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2019/07/20 21:17:11 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/09 15:00:55 schmonz Exp $
 
-DISTNAME=	redo-0.41
+DISTNAME=	redo-0.42
 PKGNAME=	apenwarr-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	-https://codeload.github.com/apenwarr/redo/tar.gz/${DISTNAME}

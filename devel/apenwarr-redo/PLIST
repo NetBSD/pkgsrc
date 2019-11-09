@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2019/07/20 21:17:11 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/11/09 15:00:55 schmonz Exp $
 bin/redo
 bin/redo-always
 bin/redo-ifchange
 bin/redo-ifcreate
 bin/redo-log
 bin/redo-ood
-bin/redo-sh
 bin/redo-sources
 bin/redo-stamp
 bin/redo-targets
