@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2019/10/31 16:30:09 nia Exp $
+# $NetBSD: Makefile,v 1.122 2019/11/09 19:31:14 jperkin Exp $
 
 DISTNAME=	harfbuzz-2.6.4
 CATEGORIES=	fonts
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.freedesktop.org/wiki/Software/HarfBuzz/
 COMMENT=	OpenType text shaping engine
 LICENSE=	mit
+
+GCC_REQD+=		4.9
 
 .include "../../mk/bsd.prefs.mk"
 PLIST_VARS+=		graphite2
@@ -25,7 +27,6 @@ PLIST.graphite2=	yes
 .else
 CONFIGURE_ARGS+=	--with-graphite2=no
 .endif
-GCC_REQD+=		4.9
 
 PKGCONFIG_OVERRIDE+=	src/harfbuzz.pc.in
 PKGCONFIG_OVERRIDE+=	src/harfbuzz-icu.pc.in
