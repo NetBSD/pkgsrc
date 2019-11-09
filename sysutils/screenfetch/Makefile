@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/05/07 02:02:10 mef Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/09 12:42:04 nia Exp $
 
-DISTNAME=	screenFetch-3.8.0
+DISTNAME=	screenFetch-3.9.0
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KittyKatt/}

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/05/07 02:02:10 mef Exp $
+$NetBSD: distinfo,v 1.3 2019/11/09 12:42:04 nia Exp $
 
-SHA1 (screenFetch-3.8.0.tar.gz) = ff90280623398f7b7b7fa71e1440a146b3fe492a
-RMD160 (screenFetch-3.8.0.tar.gz) = 7d076271d36c5a495093395af56610913c0c562c
-SHA512 (screenFetch-3.8.0.tar.gz) = 903f42e3bfcd719c4d6b91d10e5678063e223c2baa58214c7e8dae9ea925852f9e2c07ad90148e02d87ce5f9af7b989e80e93c2f569cd579e6f4f7d5c49c62f2
-Size (screenFetch-3.8.0.tar.gz) = 71970 bytes
+SHA1 (screenFetch-3.9.0.tar.gz) = a4de9cf2ac4bf2c39adc867824c1470b99169794
+RMD160 (screenFetch-3.9.0.tar.gz) = ea460ab693ba521f154b404b9e1b9283969a8377
+SHA512 (screenFetch-3.9.0.tar.gz) = ff99dcf6f6276f54d88d05f6f6bdb82cd8c1e7e74befb60786993118c543550929090ba710142df7793112f7253dc415a031715bd6f85f2625260d281ffdc817
+Size (screenFetch-3.9.0.tar.gz) = 77670 bytes
