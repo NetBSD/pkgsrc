@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2019/11/02 16:25:21 rillig Exp $
+# $NetBSD: Makefile,v 1.103 2019/11/09 11:32:14 nia Exp $
 
 DISTNAME=	fetchmail-6.3.26
 PKGNAME=	${DISTNAME:S/fetchmail/fetchmailconf/}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fetchmail/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.fetchmail.info/
+HOMEPAGE=	https://www.fetchmail.info/
 COMMENT=	Configuration tool for fetchmail
 
 DEPENDS+=	${DISTNAME}{,nb*}:../../mail/fetchmail
