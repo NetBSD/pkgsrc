@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.211 2019/11/03 17:04:23 rillig Exp $
+# $NetBSD: Makefile,v 1.212 2019/11/09 20:01:14 jperkin Exp $
 
 VERREL=		6.3.3
 VERRC=		2
@@ -29,6 +29,8 @@ SUBST_MESSAGE.font-path=	Use pkgsrc fonts for PDF import
 SUBST_FILES.font-path+=		external/pdfium/pkgsrc.patch.1
 SUBST_VARS.font-path+=		X11BASE
 
+GCC_REQD+=	7
+
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(MACHINE_PLATFORM:MNetBSD*)
@@ -36,7 +38,6 @@ pre-build:
 	cd ${WRKSRC} && ${BUILD_MAKE_CMD} Executable_gengal && ${TOOLS_PLATFORM.paxctl} +m instdir/program/gengal.bin
 .endif
 
-GCC_REQD+=	7
 PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 CHECK_SHLIBS_SUPPORTED=	no
@@ -127,8 +128,6 @@ DISTFILES+=		${md2}
 .endfor
 
 .include "options.mk"
-
-.include "../../mk/bsd.prefs.mk"
 
 # tar: Invalid header, starting valid header search.
 EXTRACT_USING=		gtar
