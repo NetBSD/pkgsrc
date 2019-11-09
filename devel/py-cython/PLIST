@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2018/10/15 08:21:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2019/11/09 21:51:15 adam Exp $
 bin/cygdb-${PYVERSSUFFIX}
 bin/cython-${PYVERSSUFFIX}
 bin/cythonize-${PYVERSSUFFIX}
@@ -325,6 +325,7 @@ ${PYSITELIB}/Cython/Includes/cpython/long.pxd
 ${PYSITELIB}/Cython/Includes/cpython/longintrepr.pxd
 ${PYSITELIB}/Cython/Includes/cpython/mapping.pxd
 ${PYSITELIB}/Cython/Includes/cpython/mem.pxd
+${PYSITELIB}/Cython/Includes/cpython/memoryview.pxd
 ${PYSITELIB}/Cython/Includes/cpython/method.pxd
 ${PYSITELIB}/Cython/Includes/cpython/module.pxd
 ${PYSITELIB}/Cython/Includes/cpython/number.pxd
