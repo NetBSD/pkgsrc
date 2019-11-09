@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.189 2018/05/23 10:52:15 wiz Exp $
+# $NetBSD: Makefile,v 1.190 2019/11/09 11:32:14 nia Exp $
 
 # Note to updaters: mail/fetchmailconf reaches over here, make sure it builds.
 DISTNAME=	fetchmail-6.3.26
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fetchmail/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.fetchmail.info/
+HOMEPAGE=	https://www.fetchmail.info/
 COMMENT=	Batch mail retrieval/forwarding utility for pop2, pop3, apop, imap
 LICENSE=	gnu-gpl-v1 AND gnu-gpl-v2 AND modified-bsd AND public-domain AND gnu-lgpl-v2.1
 
