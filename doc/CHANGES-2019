@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4836 2019/11/09 12:47:21 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4837 2019/11/09 12:53:20 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7686,3 +7686,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/screenfetch to 3.9.0 [nia 2019-11-09]
 	Updated www/seamonkey-l10n to 2.49.5 [nia 2019-11-09]
 	Updated archivers/unshield to 1.4.3 [nia 2019-11-09]
+	Updated games/crimsonfields to 0.5.3 [nia 2019-11-09]
