@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.6 2019/11/04 22:09:54 rillig Exp $
+# $NetBSD: mozilla-common.mk,v 1.7 2019/11/09 20:01:15 jperkin Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -9,6 +9,8 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 USE_TOOLS+=		pkg-config perl gmake autoconf213 unzip zip
 USE_LANGUAGES+=		c99 c++
 UNLIMIT_RESOURCES+=	datasize
+
+GCC_REQD+=		4.9
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -35,7 +37,6 @@ test:
 TOOLS_PLATFORM.tar=	${TOOLS_PATH.bsdtar}
 USE_TOOLS+=		bsdtar
 .endif
-GCC_REQD+=		4.9
 .if ${MACHINE_ARCH} == "i386"
 # Fix for PR pkg/48152.
 CXXFLAGS+=		-march=i586
