@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4833 2019/11/09 12:33:38 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4834 2019/11/09 12:42:15 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7683,3 +7683,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/faac to 1.30 [nia 2019-11-09]
 	Updated shells/fish to 3.0.2 [nia 2019-11-09]
 	Updated print/podofo to 0.9.6 [nia 2019-11-09]
+	Updated sysutils/screenfetch to 3.9.0 [nia 2019-11-09]
