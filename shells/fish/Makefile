@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2019/04/25 07:33:17 maya Exp $
+# $NetBSD: Makefile,v 1.21 2019/11/09 12:02:29 nia Exp $
 
-DISTNAME=		fish-3.0.0
-PKGREVISION=		2
+DISTNAME=		fish-3.0.2
 CATEGORIES=		shells
 MASTER_SITES=		${MASTER_SITE_GITHUB:=fish-shell/}
 GITHUB_PROJECT=		fish-shell
@@ -19,8 +18,8 @@ USE_LANGUAGES+=		c c++03
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--without-xsel
 USE_TOOLS+=		gmake autoreconf autoconf automake
+USE_TOOLS+=		msgfmt
 
 EGDIR=			${PREFIX}/share/examples
 INSTALL_ENV+=		EGDIR=${EGDIR}

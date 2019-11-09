@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.14 2019/02/13 22:03:53 maya Exp $
+$NetBSD: distinfo,v 1.15 2019/11/09 12:02:29 nia Exp $
 
-SHA1 (fish-3.0.0.tar.gz) = 8fde79d1721e33a46bffe19b66d23b5adbfec3bf
-RMD160 (fish-3.0.0.tar.gz) = 497da118e30a756a6068fef4707844ed92618fa0
-SHA512 (fish-3.0.0.tar.gz) = 97efb67c34860794787b44c04fbb8ebc1b7a8c37da00e7f6d93daab6707f198a2e0455e956a3b1c6a0c1711fa2d0f024ba42a3f82fbb17e857c518a858bb2ffb
-Size (fish-3.0.0.tar.gz) = 6224375 bytes
+SHA1 (fish-3.0.2.tar.gz) = cfd7f12e671be3b49070adc360c22873c8288d1d
+RMD160 (fish-3.0.2.tar.gz) = 95ec9e8ed70c07dd2cb057c127a1a98e2bb78036
+SHA512 (fish-3.0.2.tar.gz) = d3a24f85d4ada891ec4f6b14733edb236ae67f34868b0c9115fa5ebae99202a747ee9aeec7c6b04702f9a608019d5964b9cdc9abc4e3edfd7aaa9335093d8881
+Size (fish-3.0.2.tar.gz) = 6229935 bytes
 SHA1 (patch-Makefile.in) = 279d0a77ae52470150f4293a10c26e269fd25cee
 SHA1 (patch-configure.ac) = 05bad922ce93d5624f8c98a210e473ad702fbe8d
 SHA1 (patch-share_functions_man.fish) = c31cf77efe66a26d24f31ae005838799bb70746e
