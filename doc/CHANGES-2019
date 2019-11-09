@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4840 2019/11/09 15:01:01 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.4841 2019/11/09 21:39:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7690,3 +7690,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated emulators/stella to 6.0.1 [nia 2019-11-09]
 	Updated www/privoxy to 3.0.28 [nia 2019-11-09]
 	Updated devel/apenwarr-redo to 0.42 [schmonz 2019-11-09]
+	Updated security/py-cryptodome to 3.9.1 [adam 2019-11-09]
+	Updated math/py-numexpr to 2.7.0 [adam 2019-11-09]
