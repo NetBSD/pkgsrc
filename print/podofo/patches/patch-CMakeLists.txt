@@ -1,45 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.3 2016/08/01 13:39:34 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.4 2019/11/09 12:33:29 nia Exp $
 
-Make LUA optional (PR/43054). Make sure man pages are installed
-at the right place.
-Dont look for CppUnit as we dont want to build tests.
+Install man pages to correct directory.
 
---- CMakeLists.txt.orig	2016-06-08 20:55:08.000000000 +0000
+--- CMakeLists.txt.orig	2018-07-08 10:33:27.000000000 +0000
 +++ CMakeLists.txt
-@@ -377,7 +377,7 @@ ENDIF(PNG_FOUND)
- 
- IF(NOT PODOFO_BUILD_LIB_ONLY)
- 
--FIND_PACKAGE(CppUnit)
-+# FIND_PACKAGE(CppUnit)
- 
- IF(CppUnit_FOUND)
-   MESSAGE("Found cppunit. Unit tests will be built.")
-@@ -426,7 +426,9 @@ ELSE(WANT_FONTCONFIG)
- ENDIF(WANT_FONTCONFIG)
- 
- IF(NOT PODOFO_BUILD_LIB_ONLY)
--FIND_PACKAGE(LUA)
-+IF(DEFINED LUA_ENABLED)
-+	FIND_PACKAGE(LUA)
-+ENDIF(DEFINED LUA_ENABLED)
- IF(LUA_FOUND)
- 	# If we have lua, we can build podofoimpose.
- 	MESSAGE("Lua found - PoDoFoImpose and PoDoFoColor will be built with Lua support")
-@@ -502,15 +504,16 @@ IF(FONTCONFIG_FOUND AND WANT_FONTCONFIG)
-   INCLUDE_DIRECTORIES(${FONTCONFIG_INCLUDE_DIR})
- ENDIF(FONTCONFIG_FOUND AND WANT_FONTCONFIG)
- 
--SET(PODOFO_LIB
--    podofo
--    ${PODOFO_LIB_DEPENDS}
--    )
-+IF(DEFINED PODOFO_BUILD_SHARED)
-+	SET(PODOFO_LIB podofo_shared ${PODOFO_LIB_DEPENDS})
-+ELSE(DEFINED PODOFO_BUILD_SHARED)
-+	SET(PODOFO_LIB podofo_static ${PODOFO_LIB_DEPENDS})
-+ENDIF(DEFINED PODOFO_BUILD_SHARED)
- 
+@@ -530,7 +530,7 @@ ENDIF(WIN32 OR PODOFO_BUILD_STATIC)
  #
  # Setup directories we will need
  #
