@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4830 2019/11/09 11:22:32 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4831 2019/11/09 11:48:45 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7680,3 +7680,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/p5-BackupPC-XS to 0.59 [tnn 2019-11-08]
 	Updated sysutils/backuppc to 4.3.1 [tnn 2019-11-08]
 	Updated audio/ncmpc to 0.36 [nia 2019-11-09]
+	Updated audio/faac to 1.30 [nia 2019-11-09]
