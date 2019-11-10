@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/08/11 13:21:24 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/10 14:17:38 nia Exp $
 
 DISTNAME=	mozjs-52.7.4
 PKGREVISION=	11
@@ -16,6 +16,9 @@ HAS_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config perl gmake autoconf213
 AUTOCONF_REQD=	2.13
+
+# ERROR: Only GCC 4.8 or newer is supported
+GCC_REQD+=	4.8
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--enable-readline
@@ -43,7 +46,6 @@ CXXFLAGS+=		-march=i586
 .elif ${MACHINE_ARCH} == "powerpc"
 # PowerPC doesn't have the necessary hardware-backed atomics, it needs
 # GCC's libatomic. Tested with GCC 4.8.5 and 7.3 on NetBSD 8.0/powerpc.
-GCC_REQD+=		4.8
 USE_PKGSRC_GCC=		yes
 USE_PKGSRC_GCC_RUNTIME=	yes
 .endif
