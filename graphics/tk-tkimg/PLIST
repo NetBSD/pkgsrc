@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2019/11/10 20:11:30 maya Exp $
+lib/Img1.3.9/Img.so
+lib/Img1.3.9/pkgIndex.tcl

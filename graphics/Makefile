@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.857 2019/10/28 10:43:57 kamil Exp $
+# $NetBSD: Makefile,v 1.858 2019/11/10 20:11:30 maya Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -758,6 +758,7 @@ SUBDIR+=	tex-xypic
 SUBDIR+=	tex-xypic-doc
 SUBDIR+=	tgif
 SUBDIR+=	tiff
+SUBDIR+=	tk-tkimg
 SUBDIR+=	tkpiechart
 SUBDIR+=	tuxpaint
 SUBDIR+=	tuxpaint-config

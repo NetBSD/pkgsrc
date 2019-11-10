@@ -1,0 +1,19 @@
+The IMG package by Jan Nijtmans provides the handling
+of several image formats beyond the standard formats in Tk.
+The formats supported by Img's are:
+    * BMP
+    * GIF (with transparency, but without LZW, due to patent restrictions)
+    * ico
+    * JPEG
+    * pcx
+    * pixmap
+    * PNG
+    * ppm
+    * postscript
+    * sgi
+    * sun
+    * tga
+    * TIFF
+    * window
+    * XBM
+    * XPM
