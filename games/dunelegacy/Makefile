@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/09/21 12:34:24 nia Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/10 21:12:51 nia Exp $
 
 DISTNAME=		dunelegacy-0.96.4-src
 PKGNAME=		${DISTNAME:S/-src//}
@@ -14,6 +14,8 @@ LICENSE=		gnu-gpl-v2
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 INSTALLATION_DIRS+=	share/applications
 INSTALLATION_DIRS+=	share/icons/hicolor/48x48/apps
