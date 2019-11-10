@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4848 2019/11/10 17:03:47 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4849 2019/11/10 18:07:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7702,3 +7702,11 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/sbcl to 1.5.7nb2 [he 2019-11-10]
 	Updated databases/ldb to 2.0.7 [adam 2019-11-10]
 	Updated net/samba4 to 4.11.2 [adam 2019-11-10]
+	Updated devel/go-thrift to 0.13.0 [adam 2019-11-10]
+	Updated devel/libthrift to 0.13.0 [adam 2019-11-10]
+	Updated devel/libthrift_c_glib to 0.13.0 [adam 2019-11-10]
+	Updated devel/lua-thrift to 0.13.0 [adam 2019-11-10]
+	Updated devel/p5-thrift to 0.13.0 [adam 2019-11-10]
+	Updated devel/py-thrift to 0.13.0 [adam 2019-11-10]
+	Updated devel/ruby-thrift to 0.13.0 [adam 2019-11-10]
+	Updated devel/thrift to 0.13.0 [adam 2019-11-10]
