@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4845 2019/11/10 14:24:10 mef Exp $
+$NetBSD: CHANGES-2019,v 1.4846 2019/11/10 14:48:00 ng0 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7698,3 +7698,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/prometheus to 2.13.1 [adam 2019-11-09]
 	Updated cad/gtkwave to 3.3.102 [mef 2019-11-10]
 	Updated cad/xcircuit to 3.10.13 [mef 2019-11-10]
+	Added databases/go-sqlite3 version 1.11.0 [ng0 2019-11-10]
