@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/09/03 20:27:02 adam Exp $
+# $NetBSD: Makefile,v 1.6 2019/11/10 21:17:18 nia Exp $
 
 DISTNAME=	widelands-build20
 PKGNAME=	widelands-20
@@ -13,6 +13,8 @@ COMMENT=	Fantasy real-time strategy game inspired by Settlers II
 LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
+USE_TOOLS+=	pkg-config
+USE_TOOLS+=	msgfmt msgmerge xgettext
 USE_LANGUAGES=	c c++11
 
 # C++11
