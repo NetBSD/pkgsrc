@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19404 2019/11/09 12:53:20 nia Exp $
+$NetBSD: TODO,v 1.19405 2019/11/10 13:28:14 mef Exp $
 
 Suggested new packages
 ======================
@@ -397,7 +397,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o YoSucker-81
 	o abcmidi-20170416
 	o admesh-0.98.2
-	o adms-2.3.5
+	o adms-2.3.6
 	o adocman-0.13
 	o adodb-5.20.7 [security]
 	o aegis-4.25
@@ -1121,6 +1121,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-cassa-1.11.0
 	o py-curl-7.43.0.3
 	o py-ephem3-3.7.6.0
+	o py-gds-1.4.2
 	o py-gnome-menus-3.8.0
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
