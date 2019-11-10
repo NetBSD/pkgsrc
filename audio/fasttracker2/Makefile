@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2019/10/22 10:04:48 fox Exp $
+# $NetBSD: Makefile,v 1.44 2019/11/10 11:32:58 nia Exp $
 
 DISTNAME=	ft2-clone-v${PKGVERSION_NOREV}-code
 PKGNAME=	fasttracker2-${DISTVERSION}
@@ -16,11 +16,11 @@ WRKSRC=		${WRKDIR}/ft2-clone-code
 USE_LANGUAGES=	c99 c++
 USE_CMAKE=	yes
 
+LDFLAGS+=	${BUILDLINK_LDADD.iconv}
+
 TOOL_DEPENDS+=	icoutils-[0-9]*:../../graphics/icoutils
 
 ICON_SIZES=	16 24 32 48 64 128 256
-
-LIBS.SunOS+=	-liconv
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/applications
