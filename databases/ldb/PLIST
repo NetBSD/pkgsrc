@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/20 19:06:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/11/10 16:58:06 adam Exp $
 bin/ldbadd
 bin/ldbdel
 bin/ldbedit
@@ -18,10 +18,10 @@ lib/ldb/libldb-tdb-err-map.so
 lib/ldb/libldb-tdb-int.so
 lib/libldb.so
 lib/libldb.so.${PKGVERSION}
-lib/libldb.so.1
+lib/libldb.so.2
 lib/libpyldb-util.so
 lib/libpyldb-util.so.${PKGVERSION}
-lib/libpyldb-util.so.1
+lib/libpyldb-util.so.2
 lib/pkgconfig/ldb.pc
 lib/pkgconfig/pyldb-util.pc
 ${PYSITELIB}/_ldb_text.py
