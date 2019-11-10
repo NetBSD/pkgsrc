@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/09/18 11:27:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/11/10 18:05:32 adam Exp $
 gopkg/pkg/${GO_PLATFORM}/github.com/apache/thrift/lib/go/thrift.a
 gopkg/src/github.com/apache/thrift/lib/go/thrift/application_exception.go
 gopkg/src/github.com/apache/thrift/lib/go/thrift/application_exception_test.go
@@ -18,6 +18,12 @@ gopkg/src/github.com/apache/thrift/lib/go/thrift/exception_test.go
 gopkg/src/github.com/apache/thrift/lib/go/thrift/field.go
 gopkg/src/github.com/apache/thrift/lib/go/thrift/framed_transport.go
 gopkg/src/github.com/apache/thrift/lib/go/thrift/framed_transport_test.go
+gopkg/src/github.com/apache/thrift/lib/go/thrift/header_context.go
+gopkg/src/github.com/apache/thrift/lib/go/thrift/header_context_test.go
+gopkg/src/github.com/apache/thrift/lib/go/thrift/header_protocol.go
+gopkg/src/github.com/apache/thrift/lib/go/thrift/header_protocol_test.go
+gopkg/src/github.com/apache/thrift/lib/go/thrift/header_transport.go
+gopkg/src/github.com/apache/thrift/lib/go/thrift/header_transport_test.go
 gopkg/src/github.com/apache/thrift/lib/go/thrift/http_client.go
 gopkg/src/github.com/apache/thrift/lib/go/thrift/http_client_test.go
 gopkg/src/github.com/apache/thrift/lib/go/thrift/http_transport.go
