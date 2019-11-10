@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/11/07 12:38:05 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/11/10 21:42:15 nia Exp $
 
 DISTNAME=	xournalpp-1.0.15
 PKGREVISION=	3
@@ -34,4 +34,6 @@ DEPENDS+=	tex-standalone-[0-9]*:../../print/tex-standalone
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk3/buildlink3.mk"
+.include "../../x11/libXi/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
