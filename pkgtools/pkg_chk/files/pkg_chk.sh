@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.75 2018/11/25 20:17:26 martin Exp $
+# $Id: pkg_chk.sh,v 1.76 2019/11/10 10:25:43 triaxx Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Make -g list user-installed packages first, followed by commented
@@ -271,7 +271,7 @@ extract_variables()
 	fi
     fi
     if [ -z "$PKGCHK_UPDATE_CONF" ];then
-	PKGCHK_UPDATE_CONF=$PKGSRCDIR/pkgchk_update-$(hostname).conf
+	PKGCHK_UPDATE_CONF=$PKGSRCDIR/pkgchk_update-$(uname -n).conf
     fi
     }
 
@@ -471,7 +471,7 @@ determine_tags()
 	extract_make_vars Makefile OPSYS OS_VERSION MACHINE_ARCH
     fi
 
-    TAGS="$(hostname | ${SED} -e 's,\..*,,'),$(hostname),$OPSYS-$OS_VERSION-$MACHINE_ARCH,$OPSYS-$OS_VERSION,$OPSYS-$MACHINE_ARCH,$OPSYS,$OS_VERSION,$MACHINE_ARCH"
+    TAGS="$(uname -n | ${SED} -e 's,\..*,,'),$(uname -n),$OPSYS-$OS_VERSION-$MACHINE_ARCH,$OPSYS-$OS_VERSION,$OPSYS-$MACHINE_ARCH,$OPSYS,$OS_VERSION,$MACHINE_ARCH"
     if [ -f /usr/X11R7/lib/libX11.a -o -f /usr/X11R6/lib/libX11.a ];then
 	TAGS="$TAGS,x11"
     fi
