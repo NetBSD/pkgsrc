@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/11/03 19:04:01 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/10 17:49:21 maya Exp $
 
 DISTNAME=	guile-2.2.6
 PKGNAME=	${DISTNAME:S/guile/guile22/}
@@ -57,8 +57,7 @@ SUBST_MESSAGE.tools=	Fixing path to pkg-config in installed file.
 
 OPSYSVARS+=		GUILE_LIBNAME
 GUILE_LIBNAME.Darwin=	a
-GUILE_LIBNAME.FreeBSD=	so.30
-GUILE_LIBNAME.*=	so.22.8.1
+GUILE_LIBNAME.*=	so.1.4.1
 
 PLIST_SUBST+=		GUILE_LIBNAME=${GUILE_LIBNAME}
 PRINT_PLIST_AWK+=	{gsub(/${GUILE_LIBNAME}/, "$${GUILE_LIBNAME}");}
