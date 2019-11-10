@@ -1,8 +1,8 @@
-$NetBSD: patch-libcli_dns_wscript__build,v 1.1 2019/06/28 17:13:51 jperkin Exp $
+$NetBSD: patch-libcli_dns_wscript__build,v 1.2 2019/11/10 17:01:58 adam Exp $
 
 Don't build resolvconftest on SunOS (lacks fmemopen).
 
---- libcli/dns/wscript_build.orig	2019-05-07 08:38:21.000000000 +0000
+--- libcli/dns/wscript_build.orig	2019-07-09 10:08:41.000000000 +0000
 +++ libcli/dns/wscript_build
 @@ -1,11 +1,14 @@
  #!/usr/bin/env python
@@ -19,4 +19,4 @@ Don't build resolvconftest on SunOS (lacks fmemopen).
 +  bld.SAMBA_BINARY('resolvconftest',
                    source='resolvconftest.c',
                    deps='clidns',
-                   install=False)
+                   enabled=bld.CONFIG_SET('HAVE_FMEMOPEN'),
