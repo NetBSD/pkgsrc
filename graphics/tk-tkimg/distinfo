@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2019/11/10 20:11:30 maya Exp $
+
+SHA1 (tkimg-1.3-2008-01-16.tar.gz) = 524d497c6b078906f131378d964cfa2fadbe2d46
+RMD160 (tkimg-1.3-2008-01-16.tar.gz) = 0cdfdd306a6b396591dd98567723c6a7e9a52350
+SHA512 (tkimg-1.3-2008-01-16.tar.gz) = 7746e94a8de7c4c2bc41cbe7d805669b4161fdecb656b825c44104bc78af6e4c3c9119bdfdde04feb76f4c8bde45e68f5176d5b114a4ef6c860d570046bc8ffb
+Size (tkimg-1.3-2008-01-16.tar.gz) = 363107 bytes
+SHA1 (patch-Makefile.in) = c757bb9a8517fe21d48d672bae9e7def08954bc0
+SHA1 (patch-tkimg.h) = e97be13c3d424fa56bfc1d1181efa1ca9cbca7d0
