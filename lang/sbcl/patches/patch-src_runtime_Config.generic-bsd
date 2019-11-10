@@ -1,10 +1,11 @@
-$NetBSD: patch-src_runtime_Config.generic-netbsd,v 1.2 2019/11/10 16:58:31 he Exp $
+$NetBSD: patch-src_runtime_Config.generic-bsd,v 1.1 2019/11/10 16:58:31 he Exp $
 
-Make a Config.generic-netbsd, put common NetBSD settings there.
+Collect common BSD settings here.
+Add to, not set variables.
 
---- src/runtime/Config.generic-netbsd.orig	2019-11-08 20:56:21.629373237 +0000
-+++ src/runtime/Config.generic-netbsd
-@@ -0,0 +1,22 @@
+--- src/runtime/Config.generic-bsd.orig	2019-11-08 20:59:57.163942965 +0100
++++ src/runtime/Config.generic-bsd	2019-11-08 21:01:16.038801843 +0100
+@@ -0,0 +1,16 @@
 +# -*- makefile -*- for the C-level run-time support for SBCL
 +
 +# This software is part of the SBCL system. See the README file for
@@ -16,14 +17,8 @@ Make a Config.generic-netbsd, put common NetBSD settings there.
 +# provided with absolutely no warranty. See the COPYING and CREDITS
 +# files for more information.
 +
-+OS_LIBS += -lutil
-+ASSEM_SRC += ldso-stubs.S
-+
-+ifdef LISP_FEATURE_SB_THREAD
-+  OS_LIBS += -lpthread -lrt
-+endif
++OS_SRC += bsd-os.c
 +
 +ifdef LISP_FEATURE_SB_CORE_COMPRESSION
 +  OS_LIBS += -lz
 +endif
-+
