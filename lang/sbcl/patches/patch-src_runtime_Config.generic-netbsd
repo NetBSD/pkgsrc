@@ -1,10 +1,10 @@
-$NetBSD: patch-src_runtime_Config.generic-netbsd,v 1.1 2019/10/12 09:47:40 he Exp $
+$NetBSD: patch-src_runtime_Config.generic-netbsd,v 1.2 2019/11/10 16:58:31 he Exp $
 
 Make a Config.generic-netbsd, put common NetBSD settings there.
 
---- src/runtime/Config.generic-netbsd.orig	2019-10-11 22:24:17.425396928 +0000
+--- src/runtime/Config.generic-netbsd.orig	2019-11-08 20:56:21.629373237 +0000
 +++ src/runtime/Config.generic-netbsd
-@@ -0,0 +1,23 @@
+@@ -0,0 +1,22 @@
 +# -*- makefile -*- for the C-level run-time support for SBCL
 +
 +# This software is part of the SBCL system. See the README file for
@@ -16,7 +16,6 @@ Make a Config.generic-netbsd, put common NetBSD settings there.
 +# provided with absolutely no warranty. See the COPYING and CREDITS
 +# files for more information.
 +
-+OS_SRC += bsd-os.c
 +OS_LIBS += -lutil
 +ASSEM_SRC += ldso-stubs.S
 +

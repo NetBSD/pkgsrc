@@ -1,13 +1,14 @@
-$NetBSD: patch-src_runtime_Config.ppc-netbsd,v 1.1 2019/10/12 09:47:40 he Exp $
+$NetBSD: patch-src_runtime_Config.ppc-netbsd,v 1.2 2019/11/10 16:58:31 he Exp $
 
 Use Config.generic-netbsd, don't override OS_LIBS, but add to it.
 
 --- src/runtime/Config.ppc-netbsd.orig	2019-09-28 09:49:01.000000000 +0000
 +++ src/runtime/Config.ppc-netbsd
-@@ -9,17 +9,15 @@
+@@ -9,17 +9,16 @@
  # provided with absolutely no warranty. See the COPYING and CREDITS
  # files for more information.
  
++include Config.generic-bsd
 +include Config.generic-netbsd
 +
  LINKFLAGS += -dynamic -export-dynamic

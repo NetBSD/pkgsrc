@@ -1,0 +1,27 @@
+$NetBSD: patch-src_runtime_Config.x86-64-bsd,v 1.1 2019/11/10 16:58:31 he Exp $
+
+Use newly created Config.generic-bsd.
+Add to, not set variables.
+
+--- src/runtime/Config.x86-64-bsd.orig	2019-09-28 09:49:01.000000000 +0000
++++ src/runtime/Config.x86-64-bsd
+@@ -10,14 +10,12 @@
+ # provided with absolutely no warranty. See the COPYING and CREDITS
+ # files for more information.
+ 
+-ASSEM_SRC = x86-64-assem.S
+-ARCH_SRC = x86-64-arch.c
++include Config.generic-bsd
+ 
+-OS_SRC = bsd-os.c x86-64-bsd-os.c
+-OS_LIBS = # -ldl
+-ifdef LISP_FEATURE_SB_CORE_COMPRESSION
+-  OS_LIBS += -lz
+-endif
++ASSEM_SRC += x86-64-assem.S
++ARCH_SRC += x86-64-arch.c
++
++OS_SRC += x86-64-bsd-os.c
+ 
+ CFLAGS += -fno-omit-frame-pointer
+ LINKFLAGS += -Wl,--export-dynamic
