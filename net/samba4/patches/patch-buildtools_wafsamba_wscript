@@ -1,12 +1,12 @@
-$NetBSD: patch-buildtools_wafsamba_wscript,v 1.2 2019/09/05 12:39:56 hauke Exp $
+$NetBSD: patch-buildtools_wafsamba_wscript,v 1.3 2019/11/10 17:01:58 adam Exp $
 
 Define _POSIX_PTHREAD_SEMANTICS on SunOS to pick up re-entrant functions.
 
---- buildtools/wafsamba/wscript.orig	2015-02-24 18:59:51.000000000 +0000
+--- buildtools/wafsamba/wscript.orig	2019-07-09 10:08:41.000000000 +0000
 +++ buildtools/wafsamba/wscript
-@@ -385,6 +385,10 @@ def configure(conf):
-     conf.DEFINE('_GNU_SOURCE', 1, add_to_cflags=True)
-     conf.DEFINE('_XOPEN_SOURCE_EXTENDED', 1, add_to_cflags=True)
+@@ -458,6 +458,10 @@ def configure(conf):
+     if conf.CHECK_CFLAGS(['-D__STDC_WANT_LIB_EXT1__=1']):
+         conf.ADD_CFLAGS('-D__STDC_WANT_LIB_EXT1__=1')
  
 +    # Use POSIX getpwnam_r and friends.
 +    if conf.env['SYSTEM_UNAME_SYSNAME'] == 'SunOS':
