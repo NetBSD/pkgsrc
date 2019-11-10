@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/08/22 12:23:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/10 21:15:40 nia Exp $
 
 DISTNAME=	manaplus-1.9.3.23
 PKGREVISION=	1
@@ -16,6 +16,8 @@ USE_TOOLS+=	pkg-config
 USE_TOOLS+=	msgfmt msgmerge xgettext
 USE_LANGUAGES=	c c++
 
+LDFLAGS+=	${BUILDLINK_LDADD.iconv}
+
 SUBST_CLASSES+=		eq
 SUBST_STAGE.eq=		pre-configure
 SUBST_MESSAGE.eq=	Fixing non-portable test operator usage
@@ -26,6 +28,7 @@ SUBST_SED.eq+=		-e 's|" == true|" = true|g'
 CONFIGURE_ARGS+=	--with-sdl2
 
 .include "../../audio/SDL2_mixer/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
