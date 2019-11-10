@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile.in,v 1.1 2019/11/10 20:11:30 maya Exp $
+
+Fix INSTALL_*.
+
+--- Makefile.in.orig	2005-01-10 23:31:59.000000000 +0000
++++ Makefile.in
+@@ -178,8 +178,8 @@ $(DESTDIR)$(pkglibdir):
+ 	mkdir -p $(DESTDIR)$(pkglibdir)
+ 
+ install-package: package $(DESTDIR)$(pkglibdir)
+-	$(INSTALL_DATA) $(PKG_LIB_FILE) $(DESTDIR)$(pkglibdir)/$(PKG_LIB_FILE)
+-	$(INSTALL_DATA) pkgIndex.tcl $(DESTDIR)$(pkglibdir)/$(pkgIndex.tcl)
++	$(BSD_INSTALL_LIB) $(PKG_LIB_FILE) $(DESTDIR)$(pkglibdir)/$(PKG_LIB_FILE)
++	$(BSD_INSTALL_DATA) pkgIndex.tcl $(DESTDIR)$(pkglibdir)/$(pkgIndex.tcl)
+ 
+ ## Maintain stuff section.
+ #
