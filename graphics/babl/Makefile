@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/11/02 14:05:08 nia Exp $
+# $NetBSD: Makefile,v 1.27 2019/11/10 11:19:50 nia Exp $
 
 DISTNAME=	babl-0.1.72
 CATEGORIES=	graphics
@@ -18,6 +18,8 @@ MESON_ARGS+=	-Denable-gir=false
 PKGCONFIG_OVERRIDE+=	babl.pc.in
 
 PYTHON_FOR_BUILD_ONLY=	tool
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script,babl.map
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
