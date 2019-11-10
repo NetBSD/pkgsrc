@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2019/08/03 06:54:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2019/11/10 17:01:58 adam Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/dumpmscat
@@ -13,7 +13,6 @@ bin/nmblookup
 bin/ntlm_auth
 bin/oLschema2ldif
 bin/pdbedit
-bin/pidl
 bin/profiles
 bin/regdiff
 bin/regpatch
@@ -35,6 +34,8 @@ bin/smbtorture
 bin/smbtree
 bin/testparm
 bin/wbinfo
+@pkgdir bind-dns
+@pkgdir etc/samba
 include/charset.h
 include/core/doserr.h
 include/core/error.h
@@ -155,7 +156,7 @@ lib/libsamba-hostconfig.so.0
 lib/libsamba-hostconfig.so.0.0.1
 lib/libsamba-passdb.so
 lib/libsamba-passdb.so.0
-lib/libsamba-passdb.so.0.27.2
+lib/libsamba-passdb.so.0.28.0
 lib/libsamba-policy.so
 lib/libsamba-policy.so.0
 lib/libsamba-policy.so.0.0.1
@@ -178,31 +179,6 @@ lib/libtevent-util.so.0.0.1
 lib/libwbclient.so
 lib/libwbclient.so.0
 lib/libwbclient.so.0.15
-${PERL5_SUB_INSTALLVENDORLIB}/Parse/Pidl.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Parse/Pidl/CUtil.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Parse/Pidl/Compat.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Parse/Pidl/Dump.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Parse/Pidl/Expr.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Parse/Pidl/IDL.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Parse/Pidl/NDR.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Parse/Pidl/ODL.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Parse/Pidl/Samba3/ClientNDR.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Parse/Pidl/Samba3/ServerNDR.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Parse/Pidl/Samba4.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Parse/Pidl/Samba4/COM/Header.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Parse/Pidl/Samba4/COM/Proxy.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Parse/Pidl/Samba4/COM/Stub.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Parse/Pidl/Samba4/Header.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Parse/Pidl/Samba4/NDR/Client.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Parse/Pidl/Samba4/NDR/Parser.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Parse/Pidl/Samba4/NDR/Server.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Parse/Pidl/Samba4/Python.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Parse/Pidl/Samba4/TDR.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Parse/Pidl/Samba4/Template.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Parse/Pidl/Typelist.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Parse/Pidl/Util.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Parse/Pidl/Wireshark/Conformance.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Parse/Pidl/Wireshark/NDR.pm
 lib/pkgconfig/dcerpc.pc
 lib/pkgconfig/dcerpc_samr.pc
 lib/pkgconfig/dcerpc_server.pc
@@ -314,6 +290,7 @@ ${PYSITELIB}/samba/netbios.so
 ${PYSITELIB}/samba/netcmd/__init__.py
 ${PYSITELIB}/samba/netcmd/common.py
 ${PYSITELIB}/samba/netcmd/computer.py
+${PYSITELIB}/samba/netcmd/contact.py
 ${PYSITELIB}/samba/netcmd/dbcheck.py
 ${PYSITELIB}/samba/netcmd/delegation.py
 ${PYSITELIB}/samba/netcmd/dns.py
@@ -362,7 +339,6 @@ ${PYSITELIB}/samba/schema.py
 ${PYSITELIB}/samba/sd_utils.py
 ${PYSITELIB}/samba/security.so
 ${PYSITELIB}/samba/sites.py
-${PYSITELIB}/samba/smb.so
 ${PYSITELIB}/samba/subnets.py
 ${PYSITELIB}/samba/subunit/__init__.py
 ${PYSITELIB}/samba/subunit/run.py
@@ -379,9 +355,11 @@ ${PYSITELIB}/samba/tests/auth_log_netlogon.py
 ${PYSITELIB}/samba/tests/auth_log_netlogon_bad_creds.py
 ${PYSITELIB}/samba/tests/auth_log_pass_change.py
 ${PYSITELIB}/samba/tests/auth_log_samlogon.py
+${PYSITELIB}/samba/tests/auth_log_winbind.py
 ${PYSITELIB}/samba/tests/blackbox/__init__.py
 ${PYSITELIB}/samba/tests/blackbox/bug13653.py
 ${PYSITELIB}/samba/tests/blackbox/check_output.py
+${PYSITELIB}/samba/tests/blackbox/downgradedatabase.py
 ${PYSITELIB}/samba/tests/blackbox/ndrdump.py
 ${PYSITELIB}/samba/tests/blackbox/netads_json.py
 ${PYSITELIB}/samba/tests/blackbox/samba_dnsupdate.py
@@ -414,7 +392,6 @@ ${PYSITELIB}/samba/tests/dckeytab.py
 ${PYSITELIB}/samba/tests/dns.py
 ${PYSITELIB}/samba/tests/dns_base.py
 ${PYSITELIB}/samba/tests/dns_forwarder.py
-${PYSITELIB}/samba/tests/dns_forwarder_helpers/dns_hub.py
 ${PYSITELIB}/samba/tests/dns_forwarder_helpers/server.py
 ${PYSITELIB}/samba/tests/dns_invalid.py
 ${PYSITELIB}/samba/tests/dns_tkey.py
@@ -488,18 +465,24 @@ ${PYSITELIB}/samba/tests/samba3sam.py
 ${PYSITELIB}/samba/tests/samba_tool/__init__.py
 ${PYSITELIB}/samba/tests/samba_tool/base.py
 ${PYSITELIB}/samba/tests/samba_tool/computer.py
+${PYSITELIB}/samba/tests/samba_tool/contact.py
 ${PYSITELIB}/samba/tests/samba_tool/demote.py
 ${PYSITELIB}/samba/tests/samba_tool/dnscmd.py
+${PYSITELIB}/samba/tests/samba_tool/drs_clone_dc_data_lmdb_size.py
+${PYSITELIB}/samba/tests/samba_tool/dsacl.py
 ${PYSITELIB}/samba/tests/samba_tool/forest.py
 ${PYSITELIB}/samba/tests/samba_tool/fsmo.py
 ${PYSITELIB}/samba/tests/samba_tool/gpo.py
 ${PYSITELIB}/samba/tests/samba_tool/group.py
 ${PYSITELIB}/samba/tests/samba_tool/help.py
 ${PYSITELIB}/samba/tests/samba_tool/join.py
+${PYSITELIB}/samba/tests/samba_tool/join_lmdb_size.py
 ${PYSITELIB}/samba/tests/samba_tool/ntacl.py
 ${PYSITELIB}/samba/tests/samba_tool/ou.py
 ${PYSITELIB}/samba/tests/samba_tool/passwordsettings.py
 ${PYSITELIB}/samba/tests/samba_tool/processes.py
+${PYSITELIB}/samba/tests/samba_tool/promote_dc_lmdb_size.py
+${PYSITELIB}/samba/tests/samba_tool/provision_lmdb_size.py
 ${PYSITELIB}/samba/tests/samba_tool/provision_password_check.py
 ${PYSITELIB}/samba/tests/samba_tool/rodc.py
 ${PYSITELIB}/samba/tests/samba_tool/schema.py
@@ -514,6 +497,7 @@ ${PYSITELIB}/samba/tests/samba_tool/visualize_drs.py
 ${PYSITELIB}/samba/tests/samdb.py
 ${PYSITELIB}/samba/tests/samdb_api.py
 ${PYSITELIB}/samba/tests/security.py
+${PYSITELIB}/samba/tests/segfault.py
 ${PYSITELIB}/samba/tests/smb.py
 ${PYSITELIB}/samba/tests/smbd_base.py
 ${PYSITELIB}/samba/tests/source.py
@@ -523,12 +507,12 @@ ${PYSITELIB}/samba/tests/tdb_util.py
 ${PYSITELIB}/samba/tests/upgrade.py
 ${PYSITELIB}/samba/tests/upgradeprovision.py
 ${PYSITELIB}/samba/tests/upgradeprovisionneeddc.py
+${PYSITELIB}/samba/tests/usage.py
 ${PYSITELIB}/samba/tests/xattr.py
 ${PYSITELIB}/samba/third_party/__init__.py
 ${PYSITELIB}/samba/upgrade.py
 ${PYSITELIB}/samba/upgradehelpers.py
 ${PYSITELIB}/samba/uptodateness.py
-${PYSITELIB}/samba/web_server/__init__.py
 ${PYSITELIB}/samba/werror.so
 ${PYSITELIB}/samba/xattr.py
 ${PYSITELIB}/samba/xattr_native.so
@@ -552,6 +536,7 @@ lib/samba/ldb/acl.${SOEXT}
 lib/samba/ldb/aclread.${SOEXT}
 lib/samba/ldb/anr.${SOEXT}
 lib/samba/ldb/audit_log.${SOEXT}
+lib/samba/ldb/count_attrs.${SOEXT}
 lib/samba/ldb/descriptor.${SOEXT}
 lib/samba/ldb/dirsync.${SOEXT}
 lib/samba/ldb/dns_notify.${SOEXT}
@@ -643,6 +628,7 @@ lib/samba/private/libflag-mapping-samba4.so
 lib/samba/private/libgenrand-samba4.so
 lib/samba/private/libgensec-samba4.so
 lib/samba/private/libgpext-samba4.so
+lib/samba/private/libgpo-samba4.so
 lib/samba/private/libgse-samba4.so
 lib/samba/private/libgssapi-samba4.so.2
 lib/samba/private/libgssapi-samba4.so.2.0.0
@@ -678,13 +664,13 @@ lib/samba/private/libndr-samba-samba4.so
 lib/samba/private/libndr-samba4.so
 lib/samba/private/libnet-keytab-samba4.so
 lib/samba/private/libnetif-samba4.so
-lib/samba/private/libnon-posix-acls-samba4.so
 lib/samba/private/libnpa-tstream-samba4.so
 lib/samba/private/libnss-info-samba4.so
 lib/samba/private/libpac-samba4.so
 lib/samba/private/libpopt-samba3-cmdline-samba4.so
 lib/samba/private/libpopt-samba3-samba4.so
 lib/samba/private/libposix-eadb-samba4.so
+lib/samba/private/libprinter-driver-samba4.so
 lib/samba/private/libprinting-migrate-samba4.so
 lib/samba/private/libprocess-model-samba4.so
 lib/samba/private/libregistry-samba4.so
@@ -742,7 +728,6 @@ lib/samba/service/ldap.${SOEXT}
 lib/samba/service/nbtd.${SOEXT}
 lib/samba/service/ntp_signd.${SOEXT}
 lib/samba/service/s3fs.${SOEXT}
-lib/samba/service/web.${SOEXT}
 lib/samba/service/winbindd.${SOEXT}
 lib/samba/service/wrepl.${SOEXT}
 lib/samba/vfs/acl_tdb.${SOEXT}
@@ -761,7 +746,6 @@ lib/samba/vfs/extd_audit.${SOEXT}
 lib/samba/vfs/fake_perms.${SOEXT}
 lib/samba/vfs/fruit.${SOEXT}
 lib/samba/vfs/full_audit.${SOEXT}
-lib/samba/vfs/glusterfs_fuse.${SOEXT}
 lib/samba/vfs/linux_xfs_sgid.${SOEXT}
 lib/samba/vfs/media_harmony.${SOEXT}
 lib/samba/vfs/netatalk.${SOEXT}
@@ -774,6 +758,7 @@ lib/samba/vfs/recycle.${SOEXT}
 lib/samba/vfs/shadow_copy.${SOEXT}
 lib/samba/vfs/shadow_copy2.${SOEXT}
 lib/samba/vfs/shell_snap.${SOEXT}
+lib/samba/vfs/snapper.${SOEXT}
 lib/samba/vfs/streams_depot.${SOEXT}
 lib/samba/vfs/streams_xattr.${SOEXT}
 lib/samba/vfs/syncops.${SOEXT}
@@ -793,7 +778,6 @@ man/man1/ndrdump.1
 man/man1/nmblookup.1
 man/man1/ntlm_auth.1
 man/man1/oLschema2ldif.1
-man/man1/pidl.1
 man/man1/profiles.1
 man/man1/regdiff.1
 man/man1/regpatch.1
@@ -813,11 +797,6 @@ man/man1/smbtree.1
 man/man1/testparm.1
 man/man1/vfstest.1
 man/man1/wbinfo.1
-man/man3/Parse::Pidl::Dump.3
-man/man3/Parse::Pidl::NDR.3
-man/man3/Parse::Pidl::Util.3
-man/man3/Parse::Pidl::Wireshark::Conformance.3
-man/man3/Parse::Pidl::Wireshark::NDR.3
 man/man5/lmhosts.5
 man/man5/pam_winbind.conf.5
 man/man5/smbgetrc.5
@@ -846,6 +825,7 @@ man/man8/samba-gpupdate.8
 man/man8/samba-regedit.8
 man/man8/samba-tool.8
 man/man8/samba.8
+man/man8/samba_downgrade_db.8
 man/man8/smbd.8
 man/man8/smbpasswd.8
 man/man8/smbspool.8
@@ -865,7 +845,6 @@ man/man8/vfs_extd_audit.8
 man/man8/vfs_fake_perms.8
 man/man8/vfs_fruit.8
 man/man8/vfs_full_audit.8
-man/man8/vfs_glusterfs_fuse.8
 man/man8/vfs_linux_xfs_sgid.8
 man/man8/vfs_media_harmony.8
 man/man8/vfs_netatalk.8
@@ -877,6 +856,7 @@ man/man8/vfs_recycle.8
 man/man8/vfs_shadow_copy.8
 man/man8/vfs_shadow_copy2.8
 man/man8/vfs_shell_snap.8
+man/man8/vfs_snapper.8
 man/man8/vfs_streams_depot.8
 man/man8/vfs_streams_xattr.8
 man/man8/vfs_syncops.8
@@ -892,6 +872,7 @@ sbin/nmbd
 sbin/samba
 sbin/samba-gpupdate
 sbin/samba_dnsupdate
+sbin/samba_downgrade_db
 sbin/samba_kcc
 sbin/samba_spnupdate
 sbin/samba_upgradedns
@@ -912,6 +893,7 @@ share/doc/samba/WinXP_PlainPassword.reg
 share/doc/samba/WindowsTerminalServer.reg
 share/examples/samba/adduser.sh
 share/examples/samba/deluser.sh
+@pkgdir share/examples/samba/pam_smbpass
 share/examples/samba/samba.schema
 share/examples/samba/smb.conf.default
 share/samba/setup/DB_CONFIG
@@ -1020,6 +1002,3 @@ share/samba/setup/share.ldif
 share/samba/setup/slapd.conf
 share/samba/setup/spn_update_list
 share/samba/setup/ypServ30.ldif
-@pkgdir share/examples/samba/pam_smbpass
-@pkgdir etc/samba
-@pkgdir bind-dns
