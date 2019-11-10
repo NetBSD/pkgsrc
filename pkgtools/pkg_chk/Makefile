@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2018/11/25 20:17:26 martin Exp $
+# $NetBSD: Makefile,v 1.90 2019/11/10 10:30:50 triaxx Exp $
 
 PKGNAME=	pkg_chk-2.0.11
 CATEGORIES=	pkgtools
@@ -15,6 +15,7 @@ USE_TOOLS+=	gzcat:run
 USE_TOOLS+=	gzip:run
 USE_TOOLS+=	bzcat:run
 NO_BUILD=	yes
+NO_CHECKSUM=	yes
 
 CONFLICTS=	pkgchk-[0-9]*
 
