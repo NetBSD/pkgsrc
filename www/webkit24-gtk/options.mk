@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2019/11/04 22:10:16 rillig Exp $
+# $NetBSD: options.mk,v 1.4 2019/11/10 21:44:38 nia Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.webkit-gtk
@@ -48,6 +48,7 @@ CONFIGURE_ARGS+=	--disable-debug \
 # TODO: should we split them in multiple options?
 #
 .if !empty(PKG_OPTIONS:Mopengl)
+.include "../../graphics/MesaLib/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-glx
 CONFIGURE_ARGS+=	--enable-webgl
 CONFIGURE_ARGS+=	--enable-accelerated-compositing
