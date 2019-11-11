@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.14 2019/11/11 14:32:43 ng0 Exp $
+# $NetBSD: options.mk,v 1.15 2019/11/11 16:26:43 ng0 Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.neomutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
 PKG_OPTIONS_GROUP.display=	curses ncurses ncursesw slang
 PKG_SUPPORTED_OPTIONS=		debug gpgme gssapi idn ssl smime sasl
-PKG_SUPPORTED_OPTIONS+=		tokyocabinet notmuch
+PKG_SUPPORTED_OPTIONS+=		tokyocabinet notmuch lua
 PKG_SUGGESTED_OPTIONS=		gpgme gssapi idn ncursesw sasl smime ssl
 PKG_SUGGESTED_OPTIONS+=		tokyocabinet notmuch
 
@@ -149,4 +149,17 @@ CONFIGURE_ARGS+=	--disable-gpgme
 CONFIGURE_ARGS+=	--notmuch
 .else
 CONFIGURE_ARGS+=	--disable-notmuch
+.endif
+
+###
+### lua support
+###
+.if !empty(PKG_OPTIONS:Mlua)
+.include "../../lang/lua/buildlink3.mk"
+.include "../../lang/lua/tool.mk"
+USE_TOOLS+=		lua
+CONFIGURE_ARGS+=	--lua
+CONFIGURE_ARGS+=	--with-lua=${BUILDLINK_PREFIX.lua}
+.else
+CONFIGURE_ARGS+=	--disable-lua
 .endif
