@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/08/27 21:25:45 markd Exp $
+$NetBSD: distinfo,v 1.6 2019/11/11 08:19:37 markd Exp $
 
-SHA1 (prison-5.61.0.tar.xz) = ac9ac4dc9a2b64fbc93f88fbd0dd0f9ff7172d4c
-RMD160 (prison-5.61.0.tar.xz) = d06048bd53345544356d8cdea4929c0036b22c47
-SHA512 (prison-5.61.0.tar.xz) = 5fd203abe85a94fc72b3f81146ba1ebb089bd09e062fe99c2d4bc7a66a3d870968f75bce9fd1e1f7c744e70596abd1020f9e352fe47735da71d2efde9a8e48b4
-Size (prison-5.61.0.tar.xz) = 42088 bytes
+SHA1 (prison-5.64.0.tar.xz) = ef3898183d004cc944ad03c5fe67b02e43356f33
+RMD160 (prison-5.64.0.tar.xz) = e7dfbd4719b867cf7e6e3bc7dbef763239eeee0a
+SHA512 (prison-5.64.0.tar.xz) = d8d19d9756d1b46a3fd1d94676730054c79fe01c6990f4ff059154d5ff6cbf20e357ae79784e4f1cc621352017dc3f3b56f309f9b5363bf6d0dab39912c6e930
+Size (prison-5.64.0.tar.xz) = 42116 bytes
