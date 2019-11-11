@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/08/27 20:45:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/11/11 08:19:36 markd Exp $
 bin/kiconfinder5
 include/KF5/KIconThemes/KIconButton
 include/KF5/KIconThemes/KIconDialog
@@ -22,6 +22,7 @@ lib/libKF5IconThemes.so
 lib/libKF5IconThemes.so.5
 lib/libKF5IconThemes.so.${PKGVERSION}
 qt5/mkspecs/modules/qt_KIconThemes.pri
+qt5/plugins/designer/kiconthemes5widgets.so
 qt5/plugins/iconengines/KIconEnginePlugin.so
 share/locale/af/LC_MESSAGES/kiconthemes5.mo
 share/locale/ar/LC_MESSAGES/kiconthemes5.mo
