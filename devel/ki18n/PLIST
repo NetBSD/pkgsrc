@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/08/27 20:44:28 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/11/11 07:57:09 markd Exp $
 include/KF5/KI18n/KLocalizedContext
 include/KF5/KI18n/KLocalizedString
 include/KF5/KI18n/KLocalizedTranslator
@@ -151,3 +151,4 @@ share/locale/xh/LC_MESSAGES/ki18n5.mo
 share/locale/zh_CN/LC_MESSAGES/ki18n5.mo
 share/locale/zh_HK/LC_MESSAGES/ki18n5.mo
 share/locale/zh_TW/LC_MESSAGES/ki18n5.mo
+share/qlogging-categories5/ki18n.categories

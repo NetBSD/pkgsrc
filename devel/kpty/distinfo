@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2019/08/27 21:07:44 markd Exp $
+$NetBSD: distinfo,v 1.8 2019/11/11 07:57:10 markd Exp $
 
-SHA1 (kpty-5.61.0.tar.xz) = 0bba58f4b7d45f8268fa080775b8f6eae4e2ff40
-RMD160 (kpty-5.61.0.tar.xz) = 9341417e8d3035f3ef80fd16bd887dc17e1e137d
-SHA512 (kpty-5.61.0.tar.xz) = dc2de79519411e765865ffa38c0a804dcc540f43ccc39bd37176ed3fefa8cbf2c5d1550758df0356d83d6523bd244e0d28d4515cf3b3d831295b977973d025c5
-Size (kpty-5.61.0.tar.xz) = 58272 bytes
+SHA1 (kpty-5.64.0.tar.xz) = ab8b850775dbf854d92100afca52d3732cfa4aee
+RMD160 (kpty-5.64.0.tar.xz) = 3a97888fb6715e317a4f65b8b26cd772c368b9f2
+SHA512 (kpty-5.64.0.tar.xz) = 2764bcfbde98041a2a8934e35c5cf34a81e68f6ade7a63ac0100c68411d3a52ff2b1f425d7cf9a38da5135fa424087bbf87170e0070d056aac44765c4849848d
+Size (kpty-5.64.0.tar.xz) = 58312 bytes
 SHA1 (patch-src_ConfigureCheck.cmake) = aa44e7b76545c450bc41265a8077877e9f69506b
 SHA1 (patch-src_kpty.cpp) = 2a5db5ad0f936766750b269f193de9e81ebde9a3
 SHA1 (patch-src_kptydevice.cpp) = 1c28c0dd04a87aba8e676685262ef8421ccdbb85

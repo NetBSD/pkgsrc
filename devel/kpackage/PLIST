@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/08/27 21:04:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/11/11 07:57:10 markd Exp $
 bin/kpackagetool5
 include/KF5/KPackage/KPackage/Package
 include/KF5/KPackage/KPackage/PackageLoader
@@ -57,6 +57,7 @@ share/locale/it/LC_MESSAGES/libkpackage5.mo
 share/locale/ja/LC_MESSAGES/libkpackage5.mo
 share/locale/ko/LC_MESSAGES/libkpackage5.mo
 share/locale/lt/LC_MESSAGES/libkpackage5.mo
+share/locale/ml/LC_MESSAGES/libkpackage5.mo
 share/locale/mr/LC_MESSAGES/libkpackage5.mo
 share/locale/nb/LC_MESSAGES/libkpackage5.mo
 share/locale/nds/LC_MESSAGES/libkpackage5.mo
@@ -75,6 +76,7 @@ share/locale/sr@ijekavian/LC_MESSAGES/libkpackage5.mo
 share/locale/sr@ijekavianlatin/LC_MESSAGES/libkpackage5.mo
 share/locale/sr@latin/LC_MESSAGES/libkpackage5.mo
 share/locale/sv/LC_MESSAGES/libkpackage5.mo
+share/locale/tg/LC_MESSAGES/libkpackage5.mo
 share/locale/tr/LC_MESSAGES/libkpackage5.mo
 share/locale/ug/LC_MESSAGES/libkpackage5.mo
 share/locale/uk/LC_MESSAGES/libkpackage5.mo

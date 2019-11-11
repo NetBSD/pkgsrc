@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/08/27 21:04:09 markd Exp $
+$NetBSD: distinfo,v 1.8 2019/11/11 07:57:10 markd Exp $
 
-SHA1 (kpackage-5.61.0.tar.xz) = 57751e95b4502ae9e5f43d9fa8210f83774a4c24
-RMD160 (kpackage-5.61.0.tar.xz) = 13a9f8098dd8867098a21e381a7dd0d5209ac560
-SHA512 (kpackage-5.61.0.tar.xz) = 59e2357811d8b41b01dcf0fff34b115ae45d8ee9f0e9c9132bf3d906db65173fee41c8ece44443b997ccb6088d36139ac5de3e7ae3201f26e30f00fd318273ee
-Size (kpackage-5.61.0.tar.xz) = 132400 bytes
+SHA1 (kpackage-5.64.0.tar.xz) = bd479735c7bc2aa575c03e268c448965c567faa4
+RMD160 (kpackage-5.64.0.tar.xz) = 3c459a5906cb271fe8b04c2b041c2178ad9e78ed
+SHA512 (kpackage-5.64.0.tar.xz) = 9715a6922e1063d6b0cb6b79f1258ed37c881a05c28771aa5b5abc2899a9545c5a8f264eb4bb74f41d8ff34282fe840ce2a9bd0e60bc8e9b2216efcc0d549028
+Size (kpackage-5.64.0.tar.xz) = 137852 bytes
