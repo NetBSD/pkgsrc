@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2019/08/27 20:25:31 markd Exp $
+$NetBSD: distinfo,v 1.8 2019/11/11 07:36:12 markd Exp $
 
-SHA1 (kcoreaddons-5.61.0.tar.xz) = 21a04fcddaa8f036e575d630b264ab8daf265916
-RMD160 (kcoreaddons-5.61.0.tar.xz) = e11f6b6695469946dbe841647a00d6272f22f1ee
-SHA512 (kcoreaddons-5.61.0.tar.xz) = fcabf9655753cddd56b3dc3a68e80b2223ca60e9d8401eb30abca9c94298e5e0e288b51933085b2c4f7e7c86f1e6c4a36b6c0dc031b3931d34e7ba67dcdb30f5
-Size (kcoreaddons-5.61.0.tar.xz) = 367972 bytes
+SHA1 (kcoreaddons-5.64.0.tar.xz) = 1008a735f1de2ce7513b334a112c049417933805
+RMD160 (kcoreaddons-5.64.0.tar.xz) = 6ce09ae38fadc57f4e2e28958246b9b2dfdc3a81
+SHA512 (kcoreaddons-5.64.0.tar.xz) = 4aa6b02539147d12ce55a8796d36dae3c5a89028210cf874462106cbb37940ddca46c85c448baf3dadfa29bbc4050dbf53de1b25812a9cd78791b3e77ee48c99
+Size (kcoreaddons-5.64.0.tar.xz) = 375660 bytes
 SHA1 (patch-src_lib_caching_kshareddatacache_p.h) = a3dff380dd98bbef3f9bbfe32f1e852b985b6306
