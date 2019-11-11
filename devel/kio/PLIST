@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/08/27 20:50:32 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/11/11 07:57:10 markd Exp $
 bin/kcookiejar5
 bin/ktelnetservice5
 bin/ktrash5
@@ -60,6 +60,7 @@ include/KF5/KIOCore/KSSLSettings
 include/KF5/KIOCore/KSambaShare
 include/KF5/KIOCore/KSambaShareData
 include/KF5/KIOCore/KSslCertificateManager
+include/KF5/KIOCore/KSslErrorUiData
 include/KF5/KIOCore/KTcpSocket
 include/KF5/KIOCore/KUrlAuthorized
 include/KF5/KIOCore/kacl.h
@@ -124,6 +125,7 @@ include/KF5/KIOCore/ksambashare.h
 include/KF5/KIOCore/ksambasharedata.h
 include/KF5/KIOCore/ksslcertificatemanager.h
 include/KF5/KIOCore/ksslcertificatemanager_p.h
+include/KF5/KIOCore/ksslerroruidata.h
 include/KF5/KIOCore/ksslsettings.h
 include/KF5/KIOCore/ktcpsocket.h
 include/KF5/KIOCore/kurlauthorized.h
@@ -271,7 +273,7 @@ lib/libKF5KIOWidgets.so.${PKGVERSION}
 libexec/kf5/kio_http_cache_cleaner
 libexec/kf5/kiod5
 libexec/kf5/kioexec
-libexec/kf5/kioslave
+libexec/kf5/kioslave5
 libexec/kf5/kpac_dhcp_helper
 man/ca/man8/kcookiejar5.8
 man/de/man8/kcookiejar5.8
@@ -288,6 +290,7 @@ qt5/mkspecs/modules/qt_KIOFileWidgets.pri
 qt5/mkspecs/modules/qt_KIOGui.pri
 qt5/mkspecs/modules/qt_KIOWidgets.pri
 qt5/mkspecs/modules/qt_KNTLM.pri
+qt5/plugins/designer/kio5widgets.so
 qt5/plugins/kcm_kio.so
 qt5/plugins/kcm_trash.so
 qt5/plugins/kcm_webshortcuts.so
