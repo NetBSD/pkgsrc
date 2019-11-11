@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2019/08/27 21:28:41 markd Exp $
+$NetBSD: distinfo,v 1.10 2019/11/11 08:55:57 markd Exp $
 
-SHA1 (solid-5.61.0.tar.xz) = ec8e7a4360d60e7a16be0b545d6637dcf792391e
-RMD160 (solid-5.61.0.tar.xz) = 8d07c2698ecfcf404a5f4d6c5a354a12a2dd339a
-SHA512 (solid-5.61.0.tar.xz) = 5a0aea44255a72ca3c92a8851d2ffe38eab9e68330787fc8ed9436d53da4aa5ffd2441efbf9ab41e5b5e1f4a5fd180aa1e80e3dfd5a843c944e0acd064ca1ceb
-Size (solid-5.61.0.tar.xz) = 260576 bytes
+SHA1 (solid-5.64.0.tar.xz) = fa9a50983e33f227d658a135e8e10e0d3253ef6a
+RMD160 (solid-5.64.0.tar.xz) = 11802be2b35ff0b5b30bff6630abba33f0ef7f83
+SHA512 (solid-5.64.0.tar.xz) = f1294431973799369afc541db24d33c7c75fd17cce4b843da9c17c782e0a8afd2ba0032e46119c036ddf943747af33c2aa96a1c318ed531c5842b38a1010f857
+Size (solid-5.64.0.tar.xz) = 264304 bytes

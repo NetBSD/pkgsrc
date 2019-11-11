@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2019/08/27 20:39:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/11/11 08:55:57 markd Exp $
 include/KF5/KFileMetaData/KFileMetaData/EmbeddedImageData
 include/KF5/KFileMetaData/KFileMetaData/ExtractionResult
 include/KF5/KFileMetaData/KFileMetaData/Extractor
@@ -77,6 +77,7 @@ share/locale/it/LC_MESSAGES/kfilemetadata5.mo
 share/locale/ja/LC_MESSAGES/kfilemetadata5.mo
 share/locale/ko/LC_MESSAGES/kfilemetadata5.mo
 share/locale/lt/LC_MESSAGES/kfilemetadata5.mo
+share/locale/ml/LC_MESSAGES/kfilemetadata5.mo
 share/locale/nb/LC_MESSAGES/kfilemetadata5.mo
 share/locale/nds/LC_MESSAGES/kfilemetadata5.mo
 share/locale/nl/LC_MESSAGES/kfilemetadata5.mo
@@ -94,6 +95,7 @@ share/locale/sr@ijekavian/LC_MESSAGES/kfilemetadata5.mo
 share/locale/sr@ijekavianlatin/LC_MESSAGES/kfilemetadata5.mo
 share/locale/sr@latin/LC_MESSAGES/kfilemetadata5.mo
 share/locale/sv/LC_MESSAGES/kfilemetadata5.mo
+share/locale/tg/LC_MESSAGES/kfilemetadata5.mo
 share/locale/tr/LC_MESSAGES/kfilemetadata5.mo
 share/locale/uk/LC_MESSAGES/kfilemetadata5.mo
 share/locale/zh_CN/LC_MESSAGES/kfilemetadata5.mo
