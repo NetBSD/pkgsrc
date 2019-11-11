@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/08/27 20:18:01 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/11/11 09:21:39 markd Exp $
 bin/preparetips5
 include/KF5/KConfigWidgets/KCModule
 include/KF5/KConfigWidgets/KCodecAction
@@ -52,6 +52,7 @@ man/ru/man1/preparetips5.1
 man/sv/man1/preparetips5.1
 man/uk/man1/preparetips5.1
 qt5/mkspecs/modules/qt_KConfigWidgets.pri
+qt5/plugins/designer/kconfigwidgets5widgets.so
 share/locale/af/LC_MESSAGES/kconfigwidgets5.mo
 share/locale/af/kf5_entry.desktop
 share/locale/ar/LC_MESSAGES/kconfigwidgets5.mo
