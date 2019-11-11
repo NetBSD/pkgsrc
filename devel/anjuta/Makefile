@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.148 2019/11/06 14:34:29 wiz Exp $
+# $NetBSD: Makefile,v 1.149 2019/11/11 10:36:37 nia Exp $
 
 DISTNAME=	anjuta-3.34.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/anjuta/3.34/}
 EXTRACT_SUFX=	.tar.xz
@@ -33,8 +33,8 @@ CONFIGURE_ARGS+=	--enable-introspection=no
 CONFIGURE_ARGS+=	--disable-plugin-subversion
 # devhelp3 unavailable in pkgsrc currently
 CONFIGURE_ARGS+=	--disable-plugin-devhelp
-# glade3 unavailable in pkgsrc currently
-CONFIGURE_ARGS+=	--disable-plugin-glade
+
+CONFIGURE_ARGS+=	--disable-plugin-vala
 
 CONFIGURE_ARGS+=	YACC="bison -y"
 
@@ -47,10 +47,10 @@ BUILDLINK_TRANSFORM+=	rm:-Werror=format=2
 .include "../../databases/libgda/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gdl/buildlink3.mk"
+.include "../../devel/glade/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
-.include "../../lang/vala/buildlink3.mk"
 .include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
