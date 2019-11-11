@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.92 2019/11/11 09:09:11 he Exp $
+$NetBSD: distinfo,v 1.93 2019/11/11 10:28:34 he Exp $
 
 SHA1 (rust-1.35.0-armv7-unknown-netbsd-eabihf.tar.gz) = 91517fa95f954427c627cf63eb7c518abd068f3e
 RMD160 (rust-1.35.0-armv7-unknown-netbsd-eabihf.tar.gz) = 06a3d922b27aac2deb570301542897a131b47cd0
@@ -114,7 +114,7 @@ SHA1 (patch-src_librustc__target_spec_solaris__base.rs) = 21db8af802edecb5e35ce7
 SHA1 (patch-src_librustc__target_spec_x86__64__sun__solaris.rs) = f6ad33b41906bbf83a1cbd0e2fe13a4da37266fa
 SHA1 (patch-src_libstd_build.rs) = 9cfa91a11a575d5fef6d3e208864745a24770850
 SHA1 (patch-src_libstd_sys_unix_thread.rs) = 2554f1a42afaa0ddce5053860f4dabecdf6c527a
-SHA1 (patch-src_libunwind_build.rs) = 33fe6fd2027cb7070424e9a30c05438586b5c6b7
+SHA1 (patch-src_libunwind_build.rs) = 723ded63580812f74d04c447f90925725ae9bfc9
 SHA1 (patch-src_llvm-project_llvm_CMakeLists.txt) = d49503d19c30a64d571eb7fa79e7aad7038cd427
 SHA1 (patch-src_llvm-project_llvm_cmake_modules_AddLLVM.cmake) = c5e74d0e8deb555881ec94920a637b53b744c866
 SHA1 (patch-src_llvm-project_llvm_include_llvm-c_DataTypes.h) = 7588a46aaa277ef04b33ac6d904b9d1d81579f2a
