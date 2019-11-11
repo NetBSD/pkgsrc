@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/08/27 21:32:20 markd Exp $
+$NetBSD: distinfo,v 1.8 2019/11/11 07:57:11 markd Exp $
 
-SHA1 (threadweaver-5.61.0.tar.xz) = b9e151270e2399d56413534afa57369351b071cb
-RMD160 (threadweaver-5.61.0.tar.xz) = bfce0e427ef45b6ecd1390b1f9ae5eaeb2ce8e46
-SHA512 (threadweaver-5.61.0.tar.xz) = dd8fa517034359fea711d7ad752ea85b712cfaec4e70ff3b77619f7691a15e9966761002c9e90d35d96cfe346eec8e7fe1df45a695b77522cf1b3c1ebe7acabc
-Size (threadweaver-5.61.0.tar.xz) = 1409292 bytes
+SHA1 (threadweaver-5.64.0.tar.xz) = 255f504c8ba677d91da3d7c5ba4f082bed703d19
+RMD160 (threadweaver-5.64.0.tar.xz) = e73903cb2715347430d2e5c3aa0a9b0291708b3d
+SHA512 (threadweaver-5.64.0.tar.xz) = 829110df93c46f6cee5e5592369bd44991eb4ba32750f3c1c4b4158f3cf8e7e3b336f5c71c6527d33188a9db95c79a2638fb5ebc9efd1114e8cce7ffaa2b724d
+Size (threadweaver-5.64.0.tar.xz) = 1409536 bytes
