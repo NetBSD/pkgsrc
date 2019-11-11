@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2019/09/15 17:55:09 nia Exp $
+@comment $NetBSD: PLIST,v 1.21 2019/11/11 10:36:37 nia Exp $
 bin/anjuta
 bin/anjuta-launcher
 bin/anjuta-tags
@@ -135,6 +135,7 @@ lib/anjuta/anjuta-devhelp.plugin
 lib/anjuta/anjuta-document-manager.plugin
 lib/anjuta/anjuta-file-wizard.plugin
 lib/anjuta/anjuta-gdb.plugin
+lib/anjuta/anjuta-glade.plugin
 lib/anjuta/anjuta-indentation-c-style.plugin
 lib/anjuta/anjuta-indentation-python-style.plugin
 lib/anjuta/anjuta-jhbuild.plugin
@@ -155,7 +156,6 @@ lib/anjuta/anjuta-snippets-manager.plugin
 lib/anjuta/anjuta-starter.plugin
 lib/anjuta/anjuta-terminal.plugin
 lib/anjuta/anjuta-tools.plugin
-lib/anjuta/anjuta-vala.plugin
 lib/anjuta/dir-project.plugin
 lib/anjuta/file-manager.plugin
 lib/anjuta/git.plugin
@@ -172,12 +172,12 @@ lib/anjuta/libanjuta-document-manager.la
 lib/anjuta/libanjuta-file-wizard.la
 lib/anjuta/libanjuta-gdb.la
 lib/anjuta/libanjuta-git.la
+lib/anjuta/libanjuta-glade.la
 lib/anjuta/libanjuta-indentation-c-style.la
 lib/anjuta/libanjuta-indentation-python-style.la
 lib/anjuta/libanjuta-jhbuild.la
 lib/anjuta/libanjuta-language-cpp-java.la
 lib/anjuta/libanjuta-language-support-python.la
-lib/anjuta/libanjuta-language-vala.la
 lib/anjuta/libanjuta-loader.la
 lib/anjuta/libanjuta-message-view.la
 lib/anjuta/libanjuta-parser-cxx.la
@@ -227,6 +227,7 @@ share/anjuta/glade/anjuta-editor-sourceview.ui
 share/anjuta/glade/anjuta-file-wizard.ui
 share/anjuta/glade/anjuta-gdb.ui
 share/anjuta/glade/anjuta-git.ui
+share/anjuta/glade/anjuta-glade.ui
 share/anjuta/glade/anjuta-indentation-c-style.ui
 share/anjuta/glade/anjuta-indentation-python-style.ui
 share/anjuta/glade/anjuta-language-cpp-java.ui
@@ -241,7 +242,6 @@ share/anjuta/glade/anjuta-run-program.ui
 share/anjuta/glade/anjuta-symbol-db.ui
 share/anjuta/glade/anjuta-terminal-plugin.ui
 share/anjuta/glade/anjuta-tools.ui
-share/anjuta/glade/anjuta-vala.ui
 share/anjuta/glade/applogo.png
 share/anjuta/glade/appwizard.png
 share/anjuta/glade/file-manager.ui
@@ -443,6 +443,7 @@ share/anjuta/ui/anjuta-devhelp-simple.ui
 share/anjuta/ui/anjuta-devhelp.ui
 share/anjuta/ui/anjuta-document-manager.xml
 share/anjuta/ui/anjuta-git.xml
+share/anjuta/ui/anjuta-glade.xml
 share/anjuta/ui/anjuta-indentation-c-style.xml
 share/anjuta/ui/anjuta-indentation-python-style.xml
 share/anjuta/ui/anjuta-language-javascript.xml
@@ -2253,6 +2254,14 @@ share/pixmaps/anjuta/anjuta-git-tasks-16.png
 share/pixmaps/anjuta/anjuta-git-tasks-24.png
 share/pixmaps/anjuta/anjuta-git-tasks-48.png
 share/pixmaps/anjuta/anjuta-git-tasks.svg
+share/pixmaps/anjuta/anjuta-glade-palette-16.png
+share/pixmaps/anjuta/anjuta-glade-palette-24.png
+share/pixmaps/anjuta/anjuta-glade-palette.svg
+share/pixmaps/anjuta/anjuta-glade-plugin-48.png
+share/pixmaps/anjuta/anjuta-glade-plugin.svg
+share/pixmaps/anjuta/anjuta-glade-widgets-16.png
+share/pixmaps/anjuta/anjuta-glade-widgets-24.png
+share/pixmaps/anjuta/anjuta-glade-widgets.svg
 share/pixmaps/anjuta/anjuta-go-history-next-16.png
 share/pixmaps/anjuta/anjuta-go-history-next-24.png
 share/pixmaps/anjuta/anjuta-go-history-prev-16.png
@@ -2320,7 +2329,6 @@ share/pixmaps/anjuta/anjuta-terminal-plugin-48.png
 share/pixmaps/anjuta/anjuta-terminal-plugin.svg
 share/pixmaps/anjuta/anjuta-tools-plugin-48.png
 share/pixmaps/anjuta/anjuta-tools-plugin.svg
-share/pixmaps/anjuta/anjuta-vala.png
 share/pixmaps/anjuta/anjuta-watch-16.png
 share/pixmaps/anjuta/anjuta-watch-24.png
 share/pixmaps/anjuta/anjuta-watch.svg
