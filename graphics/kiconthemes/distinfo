@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/08/27 20:45:27 markd Exp $
+$NetBSD: distinfo,v 1.8 2019/11/11 08:19:36 markd Exp $
 
-SHA1 (kiconthemes-5.61.0.tar.xz) = 06710b8a21bf54824f5f847411688f06ee5431e2
-RMD160 (kiconthemes-5.61.0.tar.xz) = 926b2def1b39bc1910d1d67185f94a0ebe0daac0
-SHA512 (kiconthemes-5.61.0.tar.xz) = dd8eb1dd9b3a7affac2d7963d71b81cb089c566e8d4fbe08a5ae37e7f13ec2c72c3216621f0fac6efa86fc937b4186189fa5c9b8419a871f0419dae38bce3c5b
-Size (kiconthemes-5.61.0.tar.xz) = 207148 bytes
+SHA1 (kiconthemes-5.64.0.tar.xz) = 850866c50e68f0fe6411426e35a59205a3b7f17c
+RMD160 (kiconthemes-5.64.0.tar.xz) = cbaa34e7de5d3de8c9b69743be0e4892eb25b8a1
+SHA512 (kiconthemes-5.64.0.tar.xz) = 4b58248b8a2ba026fff925fa4f67702cf7c9f4ae259fe99627bbc17783a97ef12b4feb91ac464a7efad82b3f52dbc23ecbfd9dddfd2657cae91ee546e332f835
+Size (kiconthemes-5.64.0.tar.xz) = 209432 bytes

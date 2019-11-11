@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/08/27 20:45:27 markd Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/11 08:19:36 markd Exp $
 
 DISTNAME=	kiconthemes-${KF5VER}
 CATEGORIES=	graphics
@@ -17,4 +17,5 @@ USE_TOOLS+=	msgmerge
 .include "../../x11/kitemviews/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
+.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
