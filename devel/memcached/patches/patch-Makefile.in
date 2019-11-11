@@ -1,15 +1,15 @@
-$NetBSD: patch-Makefile.in,v 1.6 2019/04/16 07:50:19 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.7 2019/11/11 17:29:50 adam Exp $
 
 List test prerequisite.
 
---- Makefile.in.orig	2019-04-16 04:51:15.000000000 +0000
+--- Makefile.in.orig	2019-11-11 09:22:25.000000000 +0000
 +++ Makefile.in
-@@ -1914,7 +1914,7 @@ memcached_debug_dtrace.o: $(memcached_de
+@@ -2015,7 +2015,7 @@ memcached_debug_dtrace.o: $(memcached_de
  @ENABLE_TLS_TRUE@	  echo "Set SSL_TEST=1 to enable TLS tests"; \
  @ENABLE_TLS_TRUE@	fi
  
 -test:	memcached-debug sizes testapp
 +test:	memcached-debug sizes testapp timedrun
- 	$(srcdir)/sizes
- 	$(srcdir)/testapp
+ 	$(builddir)/sizes
+ 	$(builddir)/testapp
  @ENABLE_TLS_TRUE@	@if test $(SSL_TEST)1 = 1; then \
