@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2019/10/24 11:40:00 tnn Exp $
+# $NetBSD: Makefile,v 1.48 2019/11/11 19:22:28 nia Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -23,7 +23,7 @@
 # version in BUILDLINK_API_DEPENDS, as there is no backwards compatibility
 
 DISTNAME=	llvm-9.0.0.src
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
 MASTER_SITES=	http://releases.llvm.org/${PKGVERSION_NOREV}/
