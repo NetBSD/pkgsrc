@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.93 2019/11/11 10:28:34 he Exp $
+$NetBSD: distinfo,v 1.94 2019/11/11 14:56:41 jperkin Exp $
 
 SHA1 (rust-1.35.0-armv7-unknown-netbsd-eabihf.tar.gz) = 91517fa95f954427c627cf63eb7c518abd068f3e
 RMD160 (rust-1.35.0-armv7-unknown-netbsd-eabihf.tar.gz) = 06a3d922b27aac2deb570301542897a131b47cd0
@@ -28,10 +28,6 @@ SHA1 (rust-1.37.0-x86_64-apple-darwin.tar.gz) = f3a69fb26eb4e7e5880f9a4217c8107c
 RMD160 (rust-1.37.0-x86_64-apple-darwin.tar.gz) = 91c94273dfdb277b38c6519f236c0c07e3b4099e
 SHA512 (rust-1.37.0-x86_64-apple-darwin.tar.gz) = 1d5fd005f86ecfc50518a142ceab0bac399c14efcbfae375d5ed13d6f1574f31af326e982ce5cc51b0cf9b4cab1cab749f290c07255ff0535a752ffa615a0c24
 Size (rust-1.37.0-x86_64-apple-darwin.tar.gz) = 258524721 bytes
-SHA1 (rust-1.37.0-x86_64-sun-solaris.tar.gz) = d6b9e6fe8d1d9654a3a24f70a1a92ea2a4bef9f4
-RMD160 (rust-1.37.0-x86_64-sun-solaris.tar.gz) = 53bb5fef7e0f9a26c5c09e07a3423ac02cf5a902
-SHA512 (rust-1.37.0-x86_64-sun-solaris.tar.gz) = 3f6aaf073fe7530f5f9ab5432eee2b492bc5b7294025b47e9d7e6b458cf51c92a42ee126591c21bb002176b3946fe26c939a10eeda1bc2251b1705f56cc928a9
-Size (rust-1.37.0-x86_64-sun-solaris.tar.gz) = 203767480 bytes
 SHA1 (rust-1.37.0-x86_64-unknown-freebsd.tar.gz) = 4b4aa024b9f1f73197f4c11920bc913e9514602f
 RMD160 (rust-1.37.0-x86_64-unknown-freebsd.tar.gz) = b3d56f372db3ba07407d188eb34d033149719ee1
 SHA512 (rust-1.37.0-x86_64-unknown-freebsd.tar.gz) = d924daba3612bc100ad9d38a0b2e8d1d80433c0d0023d02ce7f6024469efb8bc51a2e763b20f6850b3530186edf3d27da47bd8bf217001de258132a1ec715c32
@@ -52,6 +48,10 @@ SHA1 (rust-1.38.0-x86_64-unknown-netbsd.tar.gz) = 8dace3276e8be1ce9b0069170948e7
 RMD160 (rust-1.38.0-x86_64-unknown-netbsd.tar.gz) = e6614e4d4f22a4052e25eb91d68049509fb39098
 SHA512 (rust-1.38.0-x86_64-unknown-netbsd.tar.gz) = bd38a40356b85b2d1acc668f5cc6bfc4f9aedeeceda74de5244827af0d5ea87a9a40240299fe0c8344682f62e8b179ca2cf4adfc8527280c6a51e919e06110cc
 Size (rust-1.38.0-x86_64-unknown-netbsd.tar.gz) = 332473263 bytes
+SHA1 (rust-1.39.0-x86_64-sun-solaris.tar.gz) = a8fefd933cb4d8777382780153303fe24f812c16
+RMD160 (rust-1.39.0-x86_64-sun-solaris.tar.gz) = 6f95164db4462cfe9e0f21038695986aeabb8969
+SHA512 (rust-1.39.0-x86_64-sun-solaris.tar.gz) = ad4a702725efbffc50e4c908478cce2520d06214058e49257111533e88fb6d8e471da068d6b714c52b9b5dea2cb462351f6ee2d70d57fc7a90f3cad80540197e
+Size (rust-1.39.0-x86_64-sun-solaris.tar.gz) = 335196669 bytes
 SHA1 (rust-std-1.35.0-armv7-unknown-netbsd-eabihf.tar.gz) = b8a8913c95d9d7f8894cc5fbae7000d5cd5a8ca9
 RMD160 (rust-std-1.35.0-armv7-unknown-netbsd-eabihf.tar.gz) = 34753f2c4efe6bbec7044a1d417ef9f4586b50a0
 SHA512 (rust-std-1.35.0-armv7-unknown-netbsd-eabihf.tar.gz) = ea834d454c8d23101d654de3611f07782a676a08f581c501152da13c617be1b08d09a3b1c0b4af34ea79d11b5c15b5a1ece7da8395f4def950b2add245e38f2e
