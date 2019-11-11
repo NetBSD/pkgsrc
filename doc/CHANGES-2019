@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4857 2019/11/11 17:30:25 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4858 2019/11/11 20:37:01 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7795,3 +7795,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/py-xlsxwriter to 1.2.5 [adam 2019-11-11]
 	Updated databases/redis to 5.0.6 [adam 2019-11-11]
 	Updated devel/memcached to 1.5.20 [adam 2019-11-11]
+	Updated devel/bugzilla to 5.0.3nb3 [maya 2019-11-11]
