@@ -1,10 +1,12 @@
-$NetBSD: patch-aq,v 1.2 2011/02/23 10:20:26 adam Exp $
+$NetBSD: patch-aq,v 1.3 2019/11/11 22:03:01 maya Exp $
 
---- lib-src/enet/Makefile.in.orig	2006-12-13 22:51:46.000000000 +0100
+Do not install enet
+
+--- lib-src/enet/Makefile.in.orig	2014-12-20 18:58:33.000000000 +0000
 +++ lib-src/enet/Makefile.in
-@@ -557,7 +557,8 @@ installdirs-am:
+@@ -650,7 +650,8 @@ installdirs-am:
  	for dir in "$(DESTDIR)$(libdir)"; do \
- 	  test -z "$$dir" || $(mkdir_p) "$$dir"; \
+ 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
  	done
 -install: install-recursive
 +# pkgsrc: do not install any part of enet
