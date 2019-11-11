@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/04/25 20:36:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/11/11 06:38:05 markd Exp $
 share/ECM/cmake/ECMConfig.cmake
 share/ECM/cmake/ECMConfigVersion.cmake
 share/ECM/find-modules/ECMFindModuleHelpersStub.cmake
@@ -34,20 +34,24 @@ share/ECM/find-modules/rules_engine.py
 share/ECM/find-modules/run-sip.py
 share/ECM/find-modules/sip_generator.py
 share/ECM/kde-modules/KDECMakeSettings.cmake
+share/ECM/kde-modules/KDEClangFormat.cmake
 share/ECM/kde-modules/KDECompilerSettings.cmake
 share/ECM/kde-modules/KDEFrameworkCompilerSettings.cmake
 share/ECM/kde-modules/KDEInstallDirs.cmake
 share/ECM/kde-modules/KDEPackageAppTemplates.cmake
 share/ECM/kde-modules/appstreamtest.cmake
+share/ECM/kde-modules/clang-format.cmake
 share/ECM/kde-modules/prefix.sh.cmake
 share/ECM/modules/ECMAddAppIcon.cmake
 share/ECM/modules/ECMAddQch.cmake
+share/ECM/modules/ECMAddQtDesignerPlugin.cmake
 share/ECM/modules/ECMAddTests.cmake
 share/ECM/modules/ECMCoverageOption.cmake
 share/ECM/modules/ECMCreateQmFromPoFiles.cmake
 share/ECM/modules/ECMEnableSanitizers.cmake
 share/ECM/modules/ECMFindModuleHelpers.cmake
 share/ECM/modules/ECMFindQMLModule.cmake.in
+share/ECM/modules/ECMGenerateExportHeader.cmake
 share/ECM/modules/ECMGenerateHeaders.cmake
 share/ECM/modules/ECMGeneratePkgConfigFile.cmake
 share/ECM/modules/ECMGeneratePriFile.cmake
@@ -68,6 +72,7 @@ share/ECM/modules/ECMQtDeclareLoggingCategory.h.in
 share/ECM/modules/ECMQueryQmake.cmake
 share/ECM/modules/ECMSetupQtPluginMacroNames.cmake
 share/ECM/modules/ECMSetupVersion.cmake
+share/ECM/modules/ECMSourceVersionControl.cmake
 share/ECM/modules/ECMUninstallTarget.cmake
 share/ECM/modules/ECMUseFindModules.cmake
 share/ECM/modules/ECMVersionHeader.h.in
