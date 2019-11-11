@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/08/27 20:32:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/11/11 09:21:39 markd Exp $
 bin/kgendesignerplugin
 lib/cmake/KF5DesignerPlugin/KF5DesignerPluginConfig.cmake
 lib/cmake/KF5DesignerPlugin/KF5DesignerPluginConfigVersion.cmake
@@ -14,38 +14,6 @@ man/pt/man1/kgendesignerplugin.1
 man/pt_BR/man1/kgendesignerplugin.1
 man/sv/man1/kgendesignerplugin.1
 man/uk/man1/kgendesignerplugin.1
-qt5/plugins/designer/kf5widgets.so
-share/kf5/widgets/pics/k3iconview.png
-share/kf5/widgets/pics/k3listview.png
-share/kf5/widgets/pics/kactionselector.png
-share/kf5/widgets/pics/kactivelabel.png
-share/kf5/widgets/pics/kbusyindicatorwidget.png
-share/kf5/widgets/pics/kcharselect.png
-share/kf5/widgets/pics/kcmodule.png
-share/kf5/widgets/pics/kcolorbutton.png
-share/kf5/widgets/pics/kcolorcombo.png
-share/kf5/widgets/pics/kcombobox.png
-share/kf5/widgets/pics/kdatepicker.png
-share/kf5/widgets/pics/kdatetable.png
-share/kf5/widgets/pics/kdualcolorbutton.png
-share/kf5/widgets/pics/kfontcombo.png
-share/kf5/widgets/pics/kfontrequester.png
-share/kf5/widgets/pics/kgradientselector.png
-share/kf5/widgets/pics/khistorycombo.png
-share/kf5/widgets/pics/khsselector.png
-share/kf5/widgets/pics/kiconbutton.png
-share/kf5/widgets/pics/kkeybutton.png
-share/kf5/widgets/pics/kled.png
-share/kf5/widgets/pics/klineedit.png
-share/kf5/widgets/pics/klistbox.png
-share/kf5/widgets/pics/kpalettetable.png
-share/kf5/widgets/pics/kpasswordedit.png
-share/kf5/widgets/pics/kruler.png
-share/kf5/widgets/pics/ksqueezedtextlabel.png
-share/kf5/widgets/pics/ktextedit.png
-share/kf5/widgets/pics/kurlcomborequester.png
-share/kf5/widgets/pics/kurllabel.png
-share/kf5/widgets/pics/kurlrequester.png
 share/locale/af/LC_MESSAGES/kdesignerplugin5_qt.qm
 share/locale/ar/LC_MESSAGES/kdesignerplugin5_qt.qm
 share/locale/as/LC_MESSAGES/kdesignerplugin5_qt.qm

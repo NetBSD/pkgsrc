@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/04/25 21:17:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/11/11 09:21:40 markd Exp $
 include/KF5/KItemViews/KCategorizedSortFilterProxyModel
 include/KF5/KItemViews/KCategorizedView
 include/KF5/KItemViews/KCategoryDrawer
@@ -27,6 +27,7 @@ lib/libKF5ItemViews.so
 lib/libKF5ItemViews.so.5
 lib/libKF5ItemViews.so.${PKGVERSION}
 qt5/mkspecs/modules/qt_KItemViews.pri
+qt5/plugins/designer/kitemviews5widgets.so
 share/locale/af/LC_MESSAGES/kitemviews5_qt.qm
 share/locale/ar/LC_MESSAGES/kitemviews5_qt.qm
 share/locale/as/LC_MESSAGES/kitemviews5_qt.qm

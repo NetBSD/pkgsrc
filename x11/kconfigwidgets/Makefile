@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/11/03 09:14:09 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2019/11/11 09:21:39 markd Exp $
 
 DISTNAME=	kconfigwidgets-${KF5VER}
 CATEGORIES=	x11
@@ -23,4 +23,5 @@ REPLACE_PERL+=	src/preparetips5
 .include "../../x11/kguiaddons/buildlink3.mk"
 .include "../../x11/kwidgetsaddons/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
