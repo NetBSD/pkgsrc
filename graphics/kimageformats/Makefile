@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/04/25 20:53:51 markd Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/11 08:19:36 markd Exp $
 
 DISTNAME=	kimageformats-${KF5VER}
 CATEGORIES=	graphics
@@ -10,6 +10,9 @@ LICENSE=	gnu-lgpl-v2.1
 .include "../../meta-pkgs/kde/kf5.mk"
 
 USE_TOOLS+=	pkg-config
+
+# C++14 (openexr)
+GCC_REQD+=	6
 
 .include "../../archivers/karchive/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
