@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/08/27 20:59:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/11/11 08:40:02 markd Exp $
 include/KF5/KNewStuff3/KNS3/Button
 include/KF5/KNewStuff3/KNS3/DownloadDialog
 include/KF5/KNewStuff3/KNS3/DownloadManager
@@ -72,8 +72,25 @@ lib/libKF5NewStuffCore.so.${PKGVERSION}
 qt5/mkspecs/modules/qt_KNewStuff.pri
 qt5/mkspecs/modules/qt_KNewStuffCore.pri
 qt5/qml/org/kde/newstuff/libnewstuffqmlplugin.so
+qt5/qml/org/kde/newstuff/qml/Button.qml
+qt5/qml/org/kde/newstuff/qml/Dialog.qml
+qt5/qml/org/kde/newstuff/qml/DialogContent.qml
+qt5/qml/org/kde/newstuff/qml/DownloadItemsSheet.qml
+qt5/qml/org/kde/newstuff/qml/EntryDetails.qml
 qt5/qml/org/kde/newstuff/qml/NewStuffItem.qml
 qt5/qml/org/kde/newstuff/qml/NewStuffList.qml
+qt5/qml/org/kde/newstuff/qml/Page.qml
+qt5/qml/org/kde/newstuff/qml/QuestionAsker.qml
+qt5/qml/org/kde/newstuff/qml/private/ConditionalLoader.qml
+qt5/qml/org/kde/newstuff/qml/private/EntryCommentDelegate.qml
+qt5/qml/org/kde/newstuff/qml/private/EntryCommentsPage.qml
+qt5/qml/org/kde/newstuff/qml/private/EntryScreenshots.qml
+qt5/qml/org/kde/newstuff/qml/private/GridTileDelegate.qml
+qt5/qml/org/kde/newstuff/qml/private/Rating.qml
+qt5/qml/org/kde/newstuff/qml/private/Shadow.qml
+qt5/qml/org/kde/newstuff/qml/private/entrygriddelegates/BigPreviewDelegate.qml
+qt5/qml/org/kde/newstuff/qml/private/entrygriddelegates/ThumbDelegate.qml
+qt5/qml/org/kde/newstuff/qml/private/entrygriddelegates/TileDelegate.qml
 qt5/qml/org/kde/newstuff/qmldir
 share/kf5/kmoretools/presets-kmoretools/_README.md
 share/kf5/kmoretools/presets-kmoretools/angrysearch.desktop

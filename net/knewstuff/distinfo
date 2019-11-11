@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2019/08/27 20:59:20 markd Exp $
+$NetBSD: distinfo,v 1.10 2019/11/11 08:40:02 markd Exp $
 
-SHA1 (knewstuff-5.61.0.tar.xz) = 134ecdaa010694b5d0f4c77cd273137323e41276
-RMD160 (knewstuff-5.61.0.tar.xz) = b71a1de3c26da940e0a29b1781f6b5300c16abaf
-SHA512 (knewstuff-5.61.0.tar.xz) = 79f54404cd7bf1bac2a2ca9198851b5ffa8922ad9f3f58976fda7933fa8db13b0592944cdc9d85331f1677cfc12687a17625cb931cf25d155fae8ee71e26c00e
-Size (knewstuff-5.61.0.tar.xz) = 1011352 bytes
+SHA1 (knewstuff-5.64.0.tar.xz) = 3786eae53b69d87d6458d618d9de6544df0de0d7
+RMD160 (knewstuff-5.64.0.tar.xz) = 92a47bce753b2942a73d43303afe5f5cbec9a6b1
+SHA512 (knewstuff-5.64.0.tar.xz) = 2f566ea537e0ea777e34a9b1af32ce42c64d6661587432e37c8d76acca9bc43e566642bb33992200b442e183ec80347f5777514f0f11d495d2699056c6aab575
+Size (knewstuff-5.64.0.tar.xz) = 1067168 bytes

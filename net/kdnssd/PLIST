@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/04/25 20:58:00 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/11/11 08:40:01 markd Exp $
 include/KF5/KDNSSD/DNSSD/DomainBrowser
 include/KF5/KDNSSD/DNSSD/DomainModel
 include/KF5/KDNSSD/DNSSD/PublicService
@@ -28,6 +28,7 @@ qt5/mkspecs/modules/qt_KDNSSD.pri
 share/locale/af/LC_MESSAGES/kdnssd5_qt.qm
 share/locale/ar/LC_MESSAGES/kdnssd5_qt.qm
 share/locale/as/LC_MESSAGES/kdnssd5_qt.qm
+share/locale/ast/LC_MESSAGES/kdnssd5_qt.qm
 share/locale/be/LC_MESSAGES/kdnssd5_qt.qm
 share/locale/be@latin/LC_MESSAGES/kdnssd5_qt.qm
 share/locale/bg/LC_MESSAGES/kdnssd5_qt.qm
