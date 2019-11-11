@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2019/10/26 12:23:01 kamil Exp $
+# $NetBSD: Makefile,v 1.49 2019/11/11 10:11:17 nia Exp $
 
 GITHUB_PROJECT=	LibreCAD
 DISTNAME=	LibreCAD-2.2.0.rc1
@@ -11,6 +11,8 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://librecad.org/
 COMMENT=	Free Open Source personal CAD application
 LICENSE=	gnu-gpl-v2
+
+TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
 EXTRACT_USING=	bsdtar
 
