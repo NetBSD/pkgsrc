@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/08/27 21:16:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/11/11 07:57:11 markd Exp $
 include/KF5/KWayland/Client/appmenu.h
 include/KF5/KWayland/Client/blur.h
 include/KF5/KWayland/Client/buffer.h
@@ -70,6 +70,7 @@ include/KF5/KWayland/Server/idleinhibit_interface.h
 include/KF5/KWayland/Server/keyboard_interface.h
 include/KF5/KWayland/Server/keystate_interface.h
 include/KF5/KWayland/Server/kwaylandserver_export.h
+include/KF5/KWayland/Server/linuxdmabuf_v1_interface.h
 include/KF5/KWayland/Server/output_interface.h
 include/KF5/KWayland/Server/outputchangeset.h
 include/KF5/KWayland/Server/outputconfiguration_interface.h
