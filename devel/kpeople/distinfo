@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/08/27 21:05:59 markd Exp $
+$NetBSD: distinfo,v 1.8 2019/11/11 07:57:10 markd Exp $
 
-SHA1 (kpeople-5.61.0.tar.xz) = cae5c143a4776472f3c1bc404e1a678fb2afc033
-RMD160 (kpeople-5.61.0.tar.xz) = 834ecf48ea6c7a73077c29c8a5e3a628810bd683
-SHA512 (kpeople-5.61.0.tar.xz) = 2e2cfdbe46772da41ff8f6223c9d2aef5c9ef9ffa8e419b4280ec4485edd24853bcda443b9cc529c96bbeb0eed8db1def4068e82f7eab9076df364fbab0253e0
-Size (kpeople-5.61.0.tar.xz) = 60468 bytes
+SHA1 (kpeople-5.64.0.tar.xz) = 7fdb952519afaa604cff1cb585ed05dbeeb7e6d7
+RMD160 (kpeople-5.64.0.tar.xz) = 2e0c423e74ed08386fff6b0ca8da15fb6e447472
+SHA512 (kpeople-5.64.0.tar.xz) = d6f23d2d2b0d2d8a3acfcc74beca8848ecf64e013f0cb906f5a4d347b4220d7a3258e856e64441a06e4d5443b958d464832142ffd305f46a99b192001fd7527c
+Size (kpeople-5.64.0.tar.xz) = 62040 bytes
