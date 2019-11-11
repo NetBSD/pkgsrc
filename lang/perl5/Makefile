@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.257 2019/11/03 19:04:05 rillig Exp $
+# $NetBSD: Makefile,v 1.258 2019/11/11 21:32:12 maya Exp $
 
 .include "license.mk"
 .include "Makefile.common"
 
-PKGREVISION=	1
+PKGREVISION=	2
 
 COMMENT=	Practical Extraction and Report Language
 
