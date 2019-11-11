@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2019/08/27 20:39:06 markd Exp $
+$NetBSD: distinfo,v 1.8 2019/11/11 08:55:57 markd Exp $
 
-SHA1 (kfilemetadata-5.61.0.tar.xz) = 5b9480ec4a014a3ef252968f1de25786f62cf367
-RMD160 (kfilemetadata-5.61.0.tar.xz) = edadcaf23b3fb8dbd5ae432448c43b63a5e24a6f
-SHA512 (kfilemetadata-5.61.0.tar.xz) = 440e5215004451fbb982cb00f5d72d547af5e25a58c89a075f422f16295c6bb055f03abca6cbef60396d0e3a188788c7ebc7f5aca1c505702fddb9b6882f5e14
-Size (kfilemetadata-5.61.0.tar.xz) = 416760 bytes
+SHA1 (kfilemetadata-5.64.0.tar.xz) = f60ad410414929efd08f388c4ed98d79e0fc20de
+RMD160 (kfilemetadata-5.64.0.tar.xz) = 6588b90d3c059eaf0cb7f4b7597e8059d136becb
+SHA512 (kfilemetadata-5.64.0.tar.xz) = 3125cd4e316bb5dc07de87f14db07f53f7dbfc967f6f65cf78fa9e7aeaace78b3a487bd74226306a886f68ebc470e5d759d9f377523d9cc56d794982b627b2f6
+Size (kfilemetadata-5.64.0.tar.xz) = 420636 bytes
 SHA1 (patch-CMakeLists.txt) = 57d022aa86e532e9fe4185a2b5fc8b90b3e5e463
 SHA1 (patch-cmake_FindFFmpeg.cmake) = 94c7699d9a62b86f3c188ad162385bc3319b7753
