@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4860 2019/11/11 21:54:12 maya Exp $
+$NetBSD: CHANGES-2019,v 1.4861 2019/11/11 22:04:16 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7798,3 +7798,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/bugzilla to 5.0.3nb3 [maya 2019-11-11]
 	Updated lang/perl5 to 5.30.0nb2 [maya 2019-11-11]
 	Updated devel/bugzilla to 5.0.3nb4 [maya 2019-11-11]
+	Updated games/enigma to 1.21 [maya 2019-11-11]
