@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/08/27 21:24:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/11/11 09:21:40 markd Exp $
 bin/plasmapkg2
 include/KF5/Plasma/Applet
 include/KF5/Plasma/Containment
@@ -185,15 +185,23 @@ qt5/qml/org/kde/plasma/components.3/ComboBox.qml
 qt5/qml/org/kde/plasma/components.3/Container.qml
 qt5/qml/org/kde/plasma/components.3/Control.qml
 qt5/qml/org/kde/plasma/components.3/Dial.qml
+qt5/qml/org/kde/plasma/components.3/Dialog.qml
+qt5/qml/org/kde/plasma/components.3/DialogButtonBox.qml
+qt5/qml/org/kde/plasma/components.3/Drawer.qml
 qt5/qml/org/kde/plasma/components.3/Frame.qml
 qt5/qml/org/kde/plasma/components.3/GroupBox.qml
 qt5/qml/org/kde/plasma/components.3/ItemDelegate.qml
 qt5/qml/org/kde/plasma/components.3/Label.qml
+qt5/qml/org/kde/plasma/components.3/Menu.qml
+qt5/qml/org/kde/plasma/components.3/MenuItem.qml
+qt5/qml/org/kde/plasma/components.3/PageIndicator.qml
+qt5/qml/org/kde/plasma/components.3/Popup.qml
 qt5/qml/org/kde/plasma/components.3/ProgressBar.qml
 qt5/qml/org/kde/plasma/components.3/RadioButton.qml
 qt5/qml/org/kde/plasma/components.3/RadioDelegate.qml
 qt5/qml/org/kde/plasma/components.3/RadioIndicator.qml
 qt5/qml/org/kde/plasma/components.3/RangeSlider.qml
+qt5/qml/org/kde/plasma/components.3/RoundButton.qml
 qt5/qml/org/kde/plasma/components.3/ScrollBar.qml
 qt5/qml/org/kde/plasma/components.3/ScrollView.qml
 qt5/qml/org/kde/plasma/components.3/Slider.qml
@@ -329,6 +337,7 @@ share/locale/ko/LC_MESSAGES/libplasma5.mo
 share/locale/lt/LC_MESSAGES/libplasma5.mo
 share/locale/lt/LC_SCRIPTS/libplasma5/libplasma5.js
 share/locale/lt/LC_SCRIPTS/libplasma5/plasmoids.js
+share/locale/ml/LC_MESSAGES/libplasma5.mo
 share/locale/mr/LC_MESSAGES/libplasma5.mo
 share/locale/nb/LC_MESSAGES/libplasma5.mo
 share/locale/nds/LC_MESSAGES/libplasma5.mo
@@ -347,6 +356,7 @@ share/locale/sr@ijekavian/LC_MESSAGES/libplasma5.mo
 share/locale/sr@ijekavianlatin/LC_MESSAGES/libplasma5.mo
 share/locale/sr@latin/LC_MESSAGES/libplasma5.mo
 share/locale/sv/LC_MESSAGES/libplasma5.mo
+share/locale/tg/LC_MESSAGES/libplasma5.mo
 share/locale/tr/LC_MESSAGES/libplasma5.mo
 share/locale/ug/LC_MESSAGES/libplasma5.mo
 share/locale/uk/LC_MESSAGES/libplasma5.mo
@@ -628,3 +638,4 @@ share/plasma/desktoptheme/oxygen/widgets/viewitem.svgz
 share/plasma/services/dataengineservice.operations
 share/plasma/services/plasmoidservice.operations
 share/plasma/services/storage.operations
+share/qlogging-categories5/plasma-framework.categories
