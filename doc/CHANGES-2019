@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4856 2019/11/11 15:15:37 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4857 2019/11/11 17:30:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7793,3 +7793,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/neomutt to 20191111 [wiz 2019-11-11]
 	Updated devel/py-pyparsing to 2.4.5 [adam 2019-11-11]
 	Updated textproc/py-xlsxwriter to 1.2.5 [adam 2019-11-11]
+	Updated databases/redis to 5.0.6 [adam 2019-11-11]
+	Updated devel/memcached to 1.5.20 [adam 2019-11-11]
