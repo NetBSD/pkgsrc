@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.1 2019/11/11 22:03:01 maya Exp $
+
+Remove weird substituion that stomps netbsd's /bin/sh
+(XXX no idea what it is trying to do...)
+
+--- configure.orig	2014-12-19 21:26:52.000000000 +0000
++++ configure
+@@ -10732,7 +10732,7 @@ if test "x$MACOSX" = xyes; then
+   FREETYPE_PREFIX=`$PKG_CONFIG freetype2 --variable libdir`
+   PNG_PREFIX=`$PKG_CONFIG libpng --variable libdir`
+   XERCESC_PREFIX=`$PKG_CONFIG xerces-c --variable libdir`
+-  LIBS="-lz -lbz2 ${FREETYPE_PREFIX//\"/}/libfreetype.a ${PNG_PREFIX//\"/}/libpng.a ${XERCESC_PREFIX//\"/}/libxerces-c.a $LIBS_NOSDL"
++  LIBS="-lz -lbz2 ${FREETYPE_PREFIX}/libfreetype.a ${PNG_PREFIX}/libpng.a ${XERCESC_PREFIX}/libxerces-c.a $LIBS_NOSDL"
+ fi
+ 
+ if test "$MINGW32" = yes; then
