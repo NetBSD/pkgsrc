@@ -1,5 +1,7 @@
-$NetBSD: patch-netsurf_frontends_gtk_download.c,v 1.1 2019/09/18 20:21:39 nros Exp $
+$NetBSD: patch-netsurf_frontends_gtk_download.c,v 1.2 2019/11/11 10:33:30 nros Exp $
 * fix crash when downloading files (nullpointer dereference)
+* fixed upstream
+  http://source.netsurf-browser.org/netsurf.git/commit/frontends/gtk/download.c?id=1f0dc9dd6e014e0e5d4093fef53c41cd09854897
 --- netsurf/frontends/gtk/download.c.orig	2019-07-17 15:37:00.000000000 +0000
 +++ netsurf/frontends/gtk/download.c
 @@ -89,6 +89,8 @@ struct gui_download_window {
