@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/10/19 13:52:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2019/11/11 19:22:28 nia Exp $
 bin/FileCheck
 bin/bugpoint
 bin/count
@@ -1588,6 +1588,12 @@ ${PLIST.PowerPC}lib/libLLVMPowerPCDesc.a
 ${PLIST.PowerPC}lib/libLLVMPowerPCDisassembler.a
 ${PLIST.PowerPC}lib/libLLVMPowerPCInfo.a
 lib/libLLVMProfileData.a
+${PLIST.RISCV}lib/libLLVMRISCVAsmParser.a
+${PLIST.RISCV}lib/libLLVMRISCVCodeGen.a
+${PLIST.RISCV}lib/libLLVMRISCVDesc.a
+${PLIST.RISCV}lib/libLLVMRISCVDisassembler.a
+${PLIST.RISCV}lib/libLLVMRISCVInfo.a
+${PLIST.RISCV}lib/libLLVMRISCVUtils.a
 lib/libLLVMRemarks.a
 lib/libLLVMRuntimeDyld.a
 lib/libLLVMScalarOpts.a
