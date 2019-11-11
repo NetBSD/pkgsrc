@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2019/11/11 10:28:34 he Exp $
+# $NetBSD: Makefile,v 1.126 2019/11/11 14:56:41 jperkin Exp $
 
 DISTNAME=	rustc-1.39.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -183,7 +183,7 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 pre-build-fix:
 .endif
 .if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.37.0
+RUST_STAGE0_VER=	1.39.0
 RUST_ARCH:=		x86_64-sun-solaris
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 SITES.${RUST_STAGE0}=	https://us-east.manta.joyent.com/pkgsrc/public/pkg-bootstraps/
