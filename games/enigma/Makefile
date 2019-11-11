@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2018/03/12 20:51:30 bsiegert Exp $
+# $NetBSD: Makefile,v 1.37 2019/11/11 22:03:01 maya Exp $
 
-DISTNAME=	enigma-1.01-r1914
+DISTNAME=	enigma-1.21
 PKGNAME=	${DISTNAME:S/-r/./}
-PKGREVISION=	7
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enigma-game/}
 
@@ -32,6 +31,7 @@ BUILDLINK_API_DEPENDS.xerces-c+=	xerces-c>=2.7.0
 .include "../../devel/SDL_ttf/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
