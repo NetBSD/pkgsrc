@@ -1,14 +1,11 @@
-$NetBSD: distinfo,v 1.12 2015/11/03 20:56:48 agc Exp $
+$NetBSD: distinfo,v 1.13 2019/11/11 22:03:01 maya Exp $
 
-SHA1 (enigma-1.01-r1914.tar.gz) = f0c4b3e8fbbcc246044fbdf0ff474a005e9905a1
-RMD160 (enigma-1.01-r1914.tar.gz) = 205e11ecc87b3a46911782366043ce80079b9918
-SHA512 (enigma-1.01-r1914.tar.gz) = 8111e37134eba90dbf196ee7102c23421adc38bcbfe623fce3949dc3610a6751cbfb80accb81a499c5f7b81a255800e99bbcbfed1b0c9d1394dd3c0903f341ee
-Size (enigma-1.01-r1914.tar.gz) = 10902129 bytes
-SHA1 (patch-aa) = c0a337a1d1098815812e117f5ca49d9ed248a446
-SHA1 (patch-aq) = a58f97c78c4ee2a98c29b53265dbc5d2993cd8df
-SHA1 (patch-lib-src_enigma-core_IMG__SavePNG.c) = 7377498a9be1425cb7c683147b37ceb894a305c8
-SHA1 (patch-lib-src_enigma-core_ecl_alist.hh) = 15c0d90cecb60010f85074d28c907f4ba416a972
-SHA1 (patch-lib-src_enigma-core_ecl_dict.hh) = 64dfc60a4a805a4b1f3af8ca3726efd14d1d7cfd
-SHA1 (patch-lib-src_enigma-core_ecl_font.cc) = 132504419ed9b045f021dc3b2023116d57ab51e9
-SHA1 (patch-src_lua.cc) = fecb5ec31029b4850aee656df399650a0c124c6a
-SHA1 (patch-src_oxyd.cc) = e70a5b6049db22be42be438c08ccfed677907a20
+SHA1 (enigma-1.21.tar.gz) = 6ca021de7516308e353eefc52765b519e1558ee8
+RMD160 (enigma-1.21.tar.gz) = 7942dd2acc1e21cb40200a9ae767a4673c569a2a
+SHA512 (enigma-1.21.tar.gz) = 0cca56a193f0f416e0fde02caf2e30b61eef506b6c62e151ff575f5c130f1e2e778d77149007b114ebaeec3a3e793434328555cb5190954a0ae13ed6cee229f0
+Size (enigma-1.21.tar.gz) = 56409951 bytes
+SHA1 (patch-aq) = 53b3f2f69438cc205146e65de1a3712a0c913de9
+SHA1 (patch-configure) = 71ea33a539522b6688d367910fb792de3336dac4
+SHA1 (patch-src_Value.cc) = 957c20a510fbf69f54fa4537d2539489967af555
+SHA1 (patch-src_lev_Proxy.cc) = e010f40eb15cc8133a5d8e38eec98bf152bb1dd1
+SHA1 (patch-src_oxyd.cc) = 27873c54741b08ee28580cc34584cc2fd4a683ca
