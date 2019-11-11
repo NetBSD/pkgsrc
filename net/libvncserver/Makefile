@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/07/20 22:46:02 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2019/11/11 22:43:22 leot Exp $
 #
 
 DISTNAME=		libvncserver-LibVNCServer-0.9.12
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_GITHUB:=LibVNC/}
 GITHUB_PROJECT=		libvncserver
 GITHUB_TAG=		LibVNCServer-${PKGVERSION_NOREV}
 
-MAINTAINER=		pierrick@bs-network.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://libvnc.github.io/
 COMMENT=		Easy API to write one's own vnc server
 LICENSE=		gnu-gpl-v2
