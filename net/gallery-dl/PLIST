@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2019/09/08 20:16:13 leot Exp $
+@comment $NetBSD: PLIST,v 1.34 2019/11/11 05:24:23 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -57,9 +57,6 @@ ${PYSITELIB}/gallery_dl/extractor/4chan.pyo
 ${PYSITELIB}/gallery_dl/extractor/500px.py
 ${PYSITELIB}/gallery_dl/extractor/500px.pyc
 ${PYSITELIB}/gallery_dl/extractor/500px.pyo
-${PYSITELIB}/gallery_dl/extractor/8chan.py
-${PYSITELIB}/gallery_dl/extractor/8chan.pyc
-${PYSITELIB}/gallery_dl/extractor/8chan.pyo
 ${PYSITELIB}/gallery_dl/extractor/8muses.py
 ${PYSITELIB}/gallery_dl/extractor/8muses.pyc
 ${PYSITELIB}/gallery_dl/extractor/8muses.pyo
@@ -75,15 +72,15 @@ ${PYSITELIB}/gallery_dl/extractor/artstation.pyo
 ${PYSITELIB}/gallery_dl/extractor/behance.py
 ${PYSITELIB}/gallery_dl/extractor/behance.pyc
 ${PYSITELIB}/gallery_dl/extractor/behance.pyo
+${PYSITELIB}/gallery_dl/extractor/blogger.py
+${PYSITELIB}/gallery_dl/extractor/blogger.pyc
+${PYSITELIB}/gallery_dl/extractor/blogger.pyo
 ${PYSITELIB}/gallery_dl/extractor/bobx.py
 ${PYSITELIB}/gallery_dl/extractor/bobx.pyc
 ${PYSITELIB}/gallery_dl/extractor/bobx.pyo
 ${PYSITELIB}/gallery_dl/extractor/booru.py
 ${PYSITELIB}/gallery_dl/extractor/booru.pyc
 ${PYSITELIB}/gallery_dl/extractor/booru.pyo
-${PYSITELIB}/gallery_dl/extractor/chan.py
-${PYSITELIB}/gallery_dl/extractor/chan.pyc
-${PYSITELIB}/gallery_dl/extractor/chan.pyo
 ${PYSITELIB}/gallery_dl/extractor/common.py
 ${PYSITELIB}/gallery_dl/extractor/common.pyc
 ${PYSITELIB}/gallery_dl/extractor/common.pyo
@@ -183,6 +180,9 @@ ${PYSITELIB}/gallery_dl/extractor/imgur.pyo
 ${PYSITELIB}/gallery_dl/extractor/instagram.py
 ${PYSITELIB}/gallery_dl/extractor/instagram.pyc
 ${PYSITELIB}/gallery_dl/extractor/instagram.pyo
+${PYSITELIB}/gallery_dl/extractor/issuu.py
+${PYSITELIB}/gallery_dl/extractor/issuu.pyc
+${PYSITELIB}/gallery_dl/extractor/issuu.pyo
 ${PYSITELIB}/gallery_dl/extractor/keenspot.py
 ${PYSITELIB}/gallery_dl/extractor/keenspot.pyc
 ${PYSITELIB}/gallery_dl/extractor/keenspot.pyo
@@ -240,6 +240,9 @@ ${PYSITELIB}/gallery_dl/extractor/message.pyo
 ${PYSITELIB}/gallery_dl/extractor/myportfolio.py
 ${PYSITELIB}/gallery_dl/extractor/myportfolio.pyc
 ${PYSITELIB}/gallery_dl/extractor/myportfolio.pyo
+${PYSITELIB}/gallery_dl/extractor/naver.py
+${PYSITELIB}/gallery_dl/extractor/naver.pyc
+${PYSITELIB}/gallery_dl/extractor/naver.pyo
 ${PYSITELIB}/gallery_dl/extractor/newgrounds.py
 ${PYSITELIB}/gallery_dl/extractor/newgrounds.pyc
 ${PYSITELIB}/gallery_dl/extractor/newgrounds.pyo
@@ -252,6 +255,9 @@ ${PYSITELIB}/gallery_dl/extractor/nhentai.pyo
 ${PYSITELIB}/gallery_dl/extractor/nijie.py
 ${PYSITELIB}/gallery_dl/extractor/nijie.pyc
 ${PYSITELIB}/gallery_dl/extractor/nijie.pyo
+${PYSITELIB}/gallery_dl/extractor/nozomi.py
+${PYSITELIB}/gallery_dl/extractor/nozomi.pyc
+${PYSITELIB}/gallery_dl/extractor/nozomi.pyo
 ${PYSITELIB}/gallery_dl/extractor/nsfwalbum.py
 ${PYSITELIB}/gallery_dl/extractor/nsfwalbum.pyc
 ${PYSITELIB}/gallery_dl/extractor/nsfwalbum.pyo
@@ -428,4 +434,4 @@ ${PYSITELIB}/gallery_dl/version.pyc
 ${PYSITELIB}/gallery_dl/version.pyo
 man/man1/gallery-dl.1
 man/man5/gallery-dl.conf.5
-share/bash_completion.d/gallery-dl.bash_completion
+share/bash-completion/completions/gallery-dl
