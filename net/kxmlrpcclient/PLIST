@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/08/27 21:22:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/11/11 08:40:02 markd Exp $
 include/KF5/KXmlRpcClient/KXmlRpcClient/Client
 include/KF5/KXmlRpcClient/kxmlrpcclient/client.h
 include/KF5/KXmlRpcClient/kxmlrpcclient/kxmlrpcclient_export.h
@@ -44,6 +44,7 @@ share/locale/km/LC_MESSAGES/libkxmlrpcclient5.mo
 share/locale/ko/LC_MESSAGES/libkxmlrpcclient5.mo
 share/locale/lt/LC_MESSAGES/libkxmlrpcclient5.mo
 share/locale/lv/LC_MESSAGES/libkxmlrpcclient5.mo
+share/locale/ml/LC_MESSAGES/libkxmlrpcclient5.mo
 share/locale/mr/LC_MESSAGES/libkxmlrpcclient5.mo
 share/locale/nb/LC_MESSAGES/libkxmlrpcclient5.mo
 share/locale/nds/LC_MESSAGES/libkxmlrpcclient5.mo
@@ -64,6 +65,7 @@ share/locale/sr@ijekavian/LC_MESSAGES/libkxmlrpcclient5.mo
 share/locale/sr@ijekavianlatin/LC_MESSAGES/libkxmlrpcclient5.mo
 share/locale/sr@latin/LC_MESSAGES/libkxmlrpcclient5.mo
 share/locale/sv/LC_MESSAGES/libkxmlrpcclient5.mo
+share/locale/tg/LC_MESSAGES/libkxmlrpcclient5.mo
 share/locale/tr/LC_MESSAGES/libkxmlrpcclient5.mo
 share/locale/ug/LC_MESSAGES/libkxmlrpcclient5.mo
 share/locale/uk/LC_MESSAGES/libkxmlrpcclient5.mo
