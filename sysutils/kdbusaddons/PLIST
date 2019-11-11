@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/08/27 20:27:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/11/11 08:55:57 markd Exp $
 bin/kquitapp5
 include/KF5/KDBusAddons/KDBusConnectionPool
 include/KF5/KDBusAddons/KDBusInterProcessLock
@@ -45,6 +45,7 @@ share/locale/it/LC_MESSAGES/kdbusaddons5_qt.qm
 share/locale/ja/LC_MESSAGES/kdbusaddons5_qt.qm
 share/locale/ko/LC_MESSAGES/kdbusaddons5_qt.qm
 share/locale/lt/LC_MESSAGES/kdbusaddons5_qt.qm
+share/locale/ml/LC_MESSAGES/kdbusaddons5_qt.qm
 share/locale/nb/LC_MESSAGES/kdbusaddons5_qt.qm
 share/locale/nds/LC_MESSAGES/kdbusaddons5_qt.qm
 share/locale/nl/LC_MESSAGES/kdbusaddons5_qt.qm
@@ -63,6 +64,7 @@ share/locale/sr@ijekavian/LC_MESSAGES/kdbusaddons5_qt.qm
 share/locale/sr@ijekavianlatin/LC_MESSAGES/kdbusaddons5_qt.qm
 share/locale/sr@latin/LC_MESSAGES/kdbusaddons5_qt.qm
 share/locale/sv/LC_MESSAGES/kdbusaddons5_qt.qm
+share/locale/tg/LC_MESSAGES/kdbusaddons5_qt.qm
 share/locale/tr/LC_MESSAGES/kdbusaddons5_qt.qm
 share/locale/uk/LC_MESSAGES/kdbusaddons5_qt.qm
 share/locale/zh_CN/LC_MESSAGES/kdbusaddons5_qt.qm
