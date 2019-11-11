@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2019/11/06 12:28:47 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2019/11/11 14:32:42 ng0 Exp $
 
 DISTNAME=		neomutt-20191102
 CATEGORIES=		mail
@@ -18,7 +18,6 @@ BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 HAS_CONFIGURE=		yes
 EXTRACT_USING=		bsdtar
-CONFIGURE_ARGS+=	--notmuch
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 
@@ -41,5 +40,4 @@ CONFIGURE_ENV+=		SENDMAIL=/usr/sbin/sendmail
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../mail/notmuch/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
