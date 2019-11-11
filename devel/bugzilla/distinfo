@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.21 2019/11/11 20:36:04 maya Exp $
+$NetBSD: distinfo,v 1.22 2019/11/11 21:53:06 maya Exp $
 
 SHA1 (bugzilla-5.0.3.tar.gz) = 49b4b2b1b3086cb9b75f65138e702da71dc29c93
 RMD160 (bugzilla-5.0.3.tar.gz) = f48c7e903a9984d9bf95b969dba3b8d0b4ba4cb2
 SHA512 (bugzilla-5.0.3.tar.gz) = 82334533bd75a4a5eee5213826da916175ecf39cbfd1c4d820519f015257b02998a3acd881f8f52c1650d1140158c8aa839e374574a1fa862a6a4a1351748c46
 Size (bugzilla-5.0.3.tar.gz) = 4069689 bytes
 SHA1 (patch-Bugzilla_Install_Filesystem_pm) = 9ec49194210270be0a4af872765d29ec0544b189
-SHA1 (patch-Bugzilla_Util.pm) = d95ebe682b508660c5943f516c2be9541792f4fb

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2019/11/11 20:36:04 maya Exp $
+# $NetBSD: Makefile,v 1.53 2019/11/11 21:53:06 maya Exp $
 
 DISTNAME=	bugzilla-5.0.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=webtools/}
 
@@ -147,7 +147,6 @@ do-install:
 	pax -rw -pmp template		${DESTDIR}${BZDIR} ;\
 	)
 	${RM} ${DESTDIR}${BZDIR}/Bugzilla/Install/Filesystem.pm.orig
-	${RM} ${DESTDIR}${BZDIR}/Bugzilla/Util.pm.orig
 
 .include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
