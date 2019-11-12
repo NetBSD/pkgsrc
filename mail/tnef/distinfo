@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2017/06/20 00:34:21 tez Exp $
+$NetBSD: distinfo,v 1.20 2019/11/12 19:58:41 nros Exp $
 
-SHA1 (tnef-1.4.15.tar.gz) = ad198d406f7426e7fc386d2a958501eea640408b
-RMD160 (tnef-1.4.15.tar.gz) = 59bf8e2a2769c9cca2c11ebcdf11cea17cbb8008
-SHA512 (tnef-1.4.15.tar.gz) = 51a8c3abd99065fda59ab4129b1a6ca4d58919bfe1b8b10951787ddb007fac69a82d93b7d2a7f1799a9b04f531960f3e1bb7424bcb7cd831b1eb3fcdfad0e720
-Size (tnef-1.4.15.tar.gz) = 4650572 bytes
+SHA1 (tnef-1.4.18.tar.gz) = cb2673d0b844c4c37e73f52ee7cfda3e6cc3cd6f
+RMD160 (tnef-1.4.18.tar.gz) = e02bb30ae64b9a72a6489f8c5dcce57a53face46
+SHA512 (tnef-1.4.18.tar.gz) = bc53daaca9c260a804681c040d01f80bbd8b0d3597678c774975e988cdf83dad6b0d6c66b22e0d40ed2300efddef0bc663236ead4dfe687eb33af7f27dbb6000
+Size (tnef-1.4.18.tar.gz) = 4650361 bytes
