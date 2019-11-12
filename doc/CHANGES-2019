@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4870 2019/11/12 18:42:16 nros Exp $
+$NetBSD: CHANGES-2019,v 1.4871 2019/11/12 20:02:32 nros Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7814,3 +7814,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/ruby-regexp_parser version 1.6.0 [taca 2019-11-12]
 	Updated textproc/json2tsv to 0.4 [leot 2019-11-12]
 	Updated www/mini_httpd to 1.30 [nros 2019-11-12]
+	Updated mail/tnef to 1.4.18 [nros 2019-11-12]
