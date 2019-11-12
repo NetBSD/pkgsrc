@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2947 2019/11/12 15:21:59 taca Exp $
+# $NetBSD: Makefile,v 1.2948 2019/11/12 15:25:28 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2640,6 +2640,7 @@ SUBDIR+=	ruby-multi_test
 SUBDIR+=	ruby-mustache
 SUBDIR+=	ruby-native-package-installer
 SUBDIR+=	ruby-ncurses
+SUBDIR+=	ruby-necromancer
 SUBDIR+=	ruby-needle
 SUBDIR+=	ruby-nenv
 SUBDIR+=	ruby-octokit
