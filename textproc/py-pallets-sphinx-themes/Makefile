@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2019/10/21 22:01:05 adam Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/12 03:36:04 gutteridge Exp $
 
 DISTNAME=	Pallets-Sphinx-Themes-1.2.2
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pallets-Sphinx-Themes/}
@@ -13,6 +14,8 @@ LICENSE=	modified-bsd
 PYTHON_VERSIONED_DEPENDENCIES=	sphinx
 
 USE_LANGUAGES=	# none
+
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=0.12:../../devel/py-importlib-metadata
 
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"
