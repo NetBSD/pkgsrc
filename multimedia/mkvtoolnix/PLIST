@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2019/11/05 18:01:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/11/12 00:05:06 jperkin Exp $
 bin/mkvextract
 bin/mkvinfo
 bin/mkvmerge
@@ -7,7 +7,6 @@ man/bg/man1/mkvextract.1
 man/bg/man1/mkvinfo.1
 man/bg/man1/mkvmerge.1
 man/bg/man1/mkvpropedit.1
-man/bg/man1/mkvtoolnix-gui.1
 man/ca/man1/mkvextract.1
 man/ca/man1/mkvinfo.1
 man/ca/man1/mkvmerge.1
