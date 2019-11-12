@@ -1,1 +1,1 @@
-bin/oletool @PREFIX@/bin/oletool@RUBY_SUFFIX@
+bin/xlsopcodes @PREFIX@/bin/xlsopcodes${RUBY_SUFFIX}
