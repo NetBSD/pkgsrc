@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2946 2019/11/08 14:53:11 mef Exp $
+# $NetBSD: Makefile,v 1.2947 2019/11/12 15:21:59 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2572,6 +2572,7 @@ SUBDIR+=	ruby-dhaka
 SUBDIR+=	ruby-diva
 SUBDIR+=	ruby-docile
 SUBDIR+=	ruby-eet
+SUBDIR+=	ruby-equatable
 SUBDIR+=	ruby-eventmachine
 SUBDIR+=	ruby-extlib
 SUBDIR+=	ruby-facade
