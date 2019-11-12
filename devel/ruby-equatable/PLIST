@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2019/11/12 15:21:00 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/equatable.gemspec
+${GEM_LIBDIR}/examples/point.rb
+${GEM_LIBDIR}/lib/equatable.rb
+${GEM_LIBDIR}/lib/equatable/version.rb
+${GEM_LIBDIR}/spec/equatable/eql_spec.rb
+${GEM_LIBDIR}/spec/equatable/equal_spec.rb
+${GEM_LIBDIR}/spec/equatable/include_spec.rb
+${GEM_LIBDIR}/spec/equatable/subclass_spec.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/tasks/console.rake
+${GEM_LIBDIR}/tasks/coverage.rake
+${GEM_LIBDIR}/tasks/spec.rake
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
