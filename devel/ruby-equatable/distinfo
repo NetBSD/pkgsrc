@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/11/12 15:21:00 taca Exp $
+
+SHA1 (equatable-0.6.1.gem) = 98bd73e29193649abf462dc8ed9cfe084e23dab4
+RMD160 (equatable-0.6.1.gem) = d242f4682a1e5c781f620ae78d83837046824ca9
+SHA512 (equatable-0.6.1.gem) = 442a6c9afd31ec2c41f3802703515827cb8d100bea3932c1fadeb036bb96a045883050712f480ebe4f7ea9bda5dab335b0f0d9dcc90a42bf45ce6bcc504fe0d4
+Size (equatable-0.6.1.gem) = 10752 bytes
