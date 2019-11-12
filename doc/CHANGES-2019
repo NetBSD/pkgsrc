@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4865 2019/11/12 14:04:43 mef Exp $
+$NetBSD: CHANGES-2019,v 1.4866 2019/11/12 15:22:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7809,3 +7809,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/p5-Text-CSV_XS to 1.40 [mef 2019-11-12]
 	Updated textproc/p5-Text-Template to 1.58 [mef 2019-11-12]
 	Updated textproc/aha to 0.5 [mef 2019-11-12]
+	Added devel/ruby-equatable version 0.6.1 [taca 2019-11-12]
