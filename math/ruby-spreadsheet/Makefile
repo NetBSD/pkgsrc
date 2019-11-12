@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2019/11/02 15:13:58 taca Exp $
-#
+# $NetBSD: Makefile,v 1.52 2019/11/12 20:28:14 wiz Exp $
 
 DISTNAME=	spreadsheet-1.2.5
 CATEGORIES=	math
