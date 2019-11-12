@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.198 2019/11/04 22:10:15 rillig Exp $
+# $NetBSD: Makefile,v 1.199 2019/11/12 10:50:31 ng0 Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
@@ -11,6 +11,10 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.seamonkey-project.org/
 COMMENT=	Full-featured gecko-based browser
+# https://www.seamonkey-project.org/legal/ the
+# LICENSE is taking an educated guess after scanning
+# the code in addition to the license statement.
+LICENSE=	mpl-2.0 OR gnu-gpl-v3 OR gnu-lgpl-v3
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/.source//}
 MOZILLA_DIR=	mozilla/
