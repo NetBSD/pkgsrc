@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2019/11/11 14:56:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.127 2019/11/12 12:06:04 ryoon Exp $
 
 DISTNAME=	rustc-1.39.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -292,6 +292,7 @@ SUBST_STAGE.rpath=	pre-configure
 SUBST_FILES.rpath=	src/bootstrap/bin/rustc.rs
 SUBST_FILES.rpath+=	src/build_helper/lib.rs
 SUBST_FILES.rpath+=	src/librustc_codegen_ssa/back/linker.rs
+SUBST_FILES.rpath+=	src/bootstrap/builder.rs
 SUBST_VARS.rpath=	PREFIX
 
 post-extract:
