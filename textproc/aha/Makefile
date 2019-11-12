@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2017/05/23 10:56:16 mef Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/12 14:04:33 mef Exp $
 
-DISTNAME=	aha-0.4.10.6
+DISTNAME=	aha-0.5
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=theZiz/}
 
