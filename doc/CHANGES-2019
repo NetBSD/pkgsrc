@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4862 2019/11/12 03:36:12 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.4863 2019/11/12 12:32:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7800,3 +7800,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/bugzilla to 5.0.3nb4 [maya 2019-11-11]
 	Updated games/enigma to 1.21 [maya 2019-11-11]
 	Updated textproc/py-pallets-sphinx-themes to 1.2.2nb1 [gutteridge 2019-11-12]
+	Updated www/firefox to 70.0.1nb1 [ryoon 2019-11-12]
