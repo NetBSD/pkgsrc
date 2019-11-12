@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2019/10/21 21:55:04 adam Exp $
+# $NetBSD: options.mk,v 1.5 2019/11/12 12:51:01 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.notmuch
 PKG_SUPPORTED_OPTIONS=	notmuch-emacs doc
@@ -12,7 +12,7 @@ PKG_SUGGESTED_OPTIONS+=	doc
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 PLIST_VARS+=		emacs
 .if !empty(PKG_OPTIONS:Mnotmuch-emacs)
-BUILD_DEPENDS+=		emacs>=24.0:../../editors/emacs
+DEPENDS+=		emacs>=24.0:../../editors/emacs
 PLIST.emacs=		yes
 .else
 CONFIGURE_ARGS+=	--without-emacs
