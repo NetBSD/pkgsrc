@@ -1,0 +1,18 @@
+Necromancer
+
+> Conversion from one object type to another with a bit of black magic.
+
+Necromancer provides independent type conversion component for [TTY]
+(https://github.com/piotrmurach/tty) toolkit.
+
+## Motivation
+
+Conversion between Ruby core types frequently comes up in projects but is solved by half-baked solutions. This library aims to provide an independent and extensible API to support a robust and generic way to convert between core Ruby types.
+
+## Features
+
+* Simple and expressive API
+* Ability to specify own converters
+* Ability to compose conversions out of simpler ones
+* Support conversion of custom defined types
+* Ability to specify strict conversion mode

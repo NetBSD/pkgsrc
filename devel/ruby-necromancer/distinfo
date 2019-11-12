@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/11/12 15:24:44 taca Exp $
+
+SHA1 (necromancer-0.5.0.gem) = 5b3d7144e4a9d0810326e5405ad49c27b4f0599a
+RMD160 (necromancer-0.5.0.gem) = 79dda6a8649c1f7c572f70eb670130a667067d79
+SHA512 (necromancer-0.5.0.gem) = 582f566eec1bbf418d4466ba334e20a28b4e44c53ecdb41b62637e58b1a9337faf7af9c8af6a32ab9e49241ec1f5fde5f54d27d227e196478580c1c814e7c0ce
+Size (necromancer-0.5.0.gem) = 19968 bytes
