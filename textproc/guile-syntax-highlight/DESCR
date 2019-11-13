@@ -1,0 +1,4 @@
+Guile-syntax-highlight is a general-purpose syntax highlighting
+library for GNU Guile. It can parse code written in various
+programming languages into a simple s-expression that can be easily
+converted to HTML (via SXML) or any other format for rendering.
