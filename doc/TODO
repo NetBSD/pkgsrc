@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19425 2019/11/13 15:53:37 mef Exp $
+$NetBSD: TODO,v 1.19426 2019/11/13 16:38:42 nia Exp $
 
 Suggested new packages
 ======================
@@ -309,10 +309,6 @@ Suggested new packages
 	qBittorrent [pkgsrc-wip]
 	https://www.qbittorrent.org/
 	Bittorrent client, open source alternative to uTorrent
-
-	gemrb [pkgsrc-wip]
-	https://github.com/gemrb/gemrb
-	Reimplementation of Bioware's Infinity Engine used for playing Baldur's Gate
 
 	luakit [pkgsrc-wip]
 	https://luakit.github.io/
