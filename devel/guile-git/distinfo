@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/11/13 12:21:28 ng0 Exp $
+
+SHA1 (guile-git-0.2.0.tar.gz) = dae32132a20a1ff5be979b4cbed863c4a7c4062d
+RMD160 (guile-git-0.2.0.tar.gz) = 8c65b85e4668fd6d77942402e7bb1222163b5b0b
+SHA512 (guile-git-0.2.0.tar.gz) = b5267130516db995132ff5bb5a19a68ccb3483d8ba5dff1a886a8acf4ecb43adf033638e59032b7a244eb4e35f72def3f40d7d071395154416e08dd5be86edf3
+Size (guile-git-0.2.0.tar.gz) = 262570 bytes
