@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/06/14 15:13:35 adam Exp $
+$NetBSD: distinfo,v 1.4 2019/11/13 20:56:08 adam Exp $
 
-SHA1 (tables-3.5.2.tar.gz) = 293ae14497e50be2de9fcfa7250527395c613647
-RMD160 (tables-3.5.2.tar.gz) = 9e5aa9f3b270888c853eb5f30cd6461a362bb1c1
-SHA512 (tables-3.5.2.tar.gz) = 00b411d9d5b2e2793346709d0f702b8cdc5e117afd35be09c7f6739357fe621a6e1adcb1dcda5497a459b35b675d6c3d6a0c930f463ff6b921b7fcc35a79b3d9
-Size (tables-3.5.2.tar.gz) = 7825372 bytes
+SHA1 (tables-3.6.1.tar.gz) = 3f093c3dd5be7ec2aaa1263fa0957f5d67c48e52
+RMD160 (tables-3.6.1.tar.gz) = 05833282f4c44e48f6f39afada9cb2684aa3249a
+SHA512 (tables-3.6.1.tar.gz) = 7f018b70251095049bce9075be4e19f72efba9d39121a35c4521f634b1dd5b81ab6de47df3bb44ad6b8b2dbdbff4e6d0985ad1a7b2f13b44f920c0935e5830ff
+Size (tables-3.6.1.tar.gz) = 4641089 bytes
