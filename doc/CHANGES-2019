@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4874 2019/11/13 10:05:39 ng0 Exp $
+$NetBSD: CHANGES-2019,v 1.4875 2019/11/13 10:39:56 ng0 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7819,3 +7819,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/py-cryptodome to 3.9.3 [adam 2019-11-13]
 	Updated www/py-urllib3 to 1.25.7 [adam 2019-11-13]
 	Added shells/guile-gash version 0.1 [ng0 2019-11-13]
+	Added textproc/guile-json version 3.1.0 [ng0 2019-11-13]
