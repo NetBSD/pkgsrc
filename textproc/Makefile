@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1067 2019/11/13 10:36:19 ng0 Exp $
+# $NetBSD: Makefile,v 1.1068 2019/11/13 13:19:39 ng0 Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -239,6 +239,7 @@ SUBDIR+=	gtk-doc
 SUBDIR+=	gtkspell
 SUBDIR+=	gtkspell3
 SUBDIR+=	guile-json
+SUBDIR+=	guile-syntax-highlight
 SUBDIR+=	gutcheck
 SUBDIR+=	halibut
 SUBDIR+=	harmony
