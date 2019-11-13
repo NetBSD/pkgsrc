@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2019/11/04 21:28:43 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/13 15:26:22 wiz Exp $
 
-DISTNAME=	dbus-python-1.2.8
+DISTNAME=	dbus-python-1.2.12
 PKGNAME=	${DISTNAME:S/python/python-common/}
-PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus-python/
 
@@ -24,11 +23,12 @@ CONFIGURE_ARGS+=	--disable-html-docs --disable-api-docs
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-std=c9x
 
+INSTALLATION_DIRS+=	include/dbus-1.0/dbus
+INSTALLATION_DIRS+=	lib/pkgconfig
+
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/dbus-1.0/dbus
 	${INSTALL_DATA} ${WRKSRC}/include/dbus/dbus-python.h \
 		${DESTDIR}${PREFIX}/include/dbus-1.0/dbus
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/pkgconfig
 	${INSTALL_DATA} ${WRKSRC}/dbus-python.pc \
 		${DESTDIR}${PREFIX}/lib/pkgconfig
 
