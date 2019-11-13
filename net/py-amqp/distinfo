@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2019/09/02 09:55:50 adam Exp $
+$NetBSD: distinfo,v 1.20 2019/11/13 20:37:39 adam Exp $
 
-SHA1 (amqp-2.5.1.tar.gz) = 9f1550129de0b9af4764e01174d05830e449c92a
-RMD160 (amqp-2.5.1.tar.gz) = ce8c0bff55b5992a1a1d15a3d9e73c69ea700cc0
-SHA512 (amqp-2.5.1.tar.gz) = 0b68d1de0be4ff0015c79a375eaaa742c0cc1453ead11c68bb6e0e0d79f437432154060d0634100e5eb013e667e90e069d8a96dbbc9bb1df32fbc5bdc1686371
-Size (amqp-2.5.1.tar.gz) = 117673 bytes
+SHA1 (amqp-2.5.2.tar.gz) = 1aa2b2ab47fc700f901ec3f163e3c4a282fc5367
+RMD160 (amqp-2.5.2.tar.gz) = 8e1aa72f52aaa67fec9b4f107f4ba2c8336c46b8
+SHA512 (amqp-2.5.2.tar.gz) = c540ce39c06bb947e55b4afc56567d5fc5a82b65a2f7e2cc1f769f96da74f788d14e1e9c02852a259a4980c36a4524f07166686c0357f96219fd9f8612a6159a
+Size (amqp-2.5.2.tar.gz) = 117788 bytes
