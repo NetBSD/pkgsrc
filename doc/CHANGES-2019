@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4899 2019/11/13 15:26:31 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4900 2019/11/13 15:28:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7846,3 +7846,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/py-google-auth to 1.7.0 [wiz 2019-11-13]
 	Updated shells/zsh-autosuggestions to 0.6.3 [wiz 2019-11-13]
 	Updated sysutils/dbus-python-common to 1.2.12 [wiz 2019-11-13]
+	Updated sysutils/libpciaccess to 0.16 [wiz 2019-11-13]
