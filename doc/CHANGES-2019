@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4921 2019/11/13 22:07:11 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4922 2019/11/13 22:09:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7878,3 +7878,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/libX11 to 1.6.9 [wiz 2019-11-13]
 	Updated x11/libXt to 1.2.0 [wiz 2019-11-13]
 	Updated x11/xkeyboard-config to 2.28 [wiz 2019-11-13]
+	Updated x11/libXvMC to 1.0.12 [wiz 2019-11-13]
