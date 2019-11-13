@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2019/11/03 09:14:10 rillig Exp $
+# $NetBSD: Makefile,v 1.50 2019/11/13 21:59:51 wiz Exp $
 
-DISTNAME=		libX11-1.6.7
+DISTNAME=		libX11-1.6.9
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
@@ -20,6 +20,8 @@ PKGCONFIG_OVERRIDE+=	x11.pc.in
 CONFIGURE_ENV+=		FILE_MAN_SUFFIX=5
 
 CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
+# for reallocarray()
+CPPFLAGS.NetBSD+=	-D_OPENBSD_SOURCE
 
 .include "../../mk/pthread.buildlink3.mk"
 CPPFLAGS.OSF1+=		${PTHREAD_CFLAGS} # Required by compiler if including pthread.h
