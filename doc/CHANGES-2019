@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4910 2019/11/13 21:17:56 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4911 2019/11/13 21:23:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7866,3 +7866,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Moved security/py-argon2_cffi to security/py-argon2-cffi [adam 2019-11-13]
 	Updated security/py-argon2-cffi to 19.2.0 [adam 2019-11-13]
 	Updated textproc/gtk-doc to 1.32 [wiz 2019-11-13]
+	Updated textproc/po4a to 0.57 [wiz 2019-11-13]
