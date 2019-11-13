@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4913 2019/11/13 21:32:49 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4914 2019/11/13 21:38:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7869,3 +7869,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/po4a to 0.57 [wiz 2019-11-13]
 	Updated www/ap2-perl to 2.0.11 [wiz 2019-11-13]
 	Updated www/links to 2.20.2 [wiz 2019-11-13]
+	Updated devel/py-jaraco.functools to 2.0 [adam 2019-11-13]
+	Updated net/py-portend to 2.6 [adam 2019-11-13]
