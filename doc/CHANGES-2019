@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4883 2019/11/13 12:37:42 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4884 2019/11/13 12:46:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7828,3 +7828,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/guile-git version 0.2.0 [ng0 2019-11-13]
 	Updated devel/py-mercurial to 5.2 [wiz 2019-11-13]
 	Updated devel/apache-ant to 1.10.7 [wiz 2019-11-13]
+	Updated devel/gdl to 3.34.0 [wiz 2019-11-13]
