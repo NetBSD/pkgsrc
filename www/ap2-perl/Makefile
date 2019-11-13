@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.57 2019/08/11 13:17:50 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2019/11/13 21:29:25 wiz Exp $
 
-DISTNAME=	mod_perl-2.0.10
+DISTNAME=	mod_perl-2.0.11
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_APACHE:=perl/}
-PKGREVISION=	3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://perl.apache.org/
