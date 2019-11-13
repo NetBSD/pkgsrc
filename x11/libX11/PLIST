@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2018/08/21 19:29:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2019/11/13 21:59:51 wiz Exp $
 include/X11/ImUtil.h
 include/X11/XKBlib.h
 include/X11/Xcms.h
@@ -11,6 +11,7 @@ include/X11/Xregion.h
 include/X11/Xresource.h
 include/X11/Xutil.h
 include/X11/cursorfont.h
+include/X11/extensions/XKBgeom.h
 lib/libX11-xcb.la
 lib/libX11.la
 lib/pkgconfig/x11-xcb.pc
@@ -593,7 +594,7 @@ man/man3/XkbAllocGeomDoodads.3
 man/man3/XkbAllocGeomKeyAliases.3
 man/man3/XkbAllocGeomKeys.3
 man/man3/XkbAllocGeomOutlines.3
-man/man3/XkbAllocGeomOverlayKey.3
+man/man3/XkbAllocGeomOverlayKeys.3
 man/man3/XkbAllocGeomOverlayRows.3
 man/man3/XkbAllocGeomOverlays.3
 man/man3/XkbAllocGeomPoints.3
