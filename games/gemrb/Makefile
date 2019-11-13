@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/11/13 16:37:55 nia Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/13 17:03:58 nia Exp $
 
 DISTNAME=	gemrb-0.8.5
 CATEGORIES=	games
@@ -36,6 +36,7 @@ pre-configure:
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
