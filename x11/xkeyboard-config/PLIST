@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2018/06/17 08:14:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2019/11/13 22:07:02 wiz Exp $
 share/X11/xkb/compat/README
 share/X11/xkb/compat/accessx
 share/X11/xkb/compat/basic
@@ -83,6 +83,7 @@ share/X11/xkb/rules/xfree86.lst
 share/X11/xkb/rules/xfree86.xml
 share/X11/xkb/rules/xfree98
 share/X11/xkb/rules/xkb.dtd
+share/X11/xkb/rules/xkb.its
 share/X11/xkb/rules/xorg
 share/X11/xkb/rules/xorg.lst
 share/X11/xkb/rules/xorg.xml
@@ -318,6 +319,7 @@ share/locale/lt/LC_MESSAGES/xkeyboard-config.mo
 share/locale/nb/LC_MESSAGES/xkeyboard-config.mo
 share/locale/nl/LC_MESSAGES/xkeyboard-config.mo
 share/locale/pl/LC_MESSAGES/xkeyboard-config.mo
+share/locale/pt/LC_MESSAGES/xkeyboard-config.mo
 share/locale/pt_BR/LC_MESSAGES/xkeyboard-config.mo
 share/locale/ro/LC_MESSAGES/xkeyboard-config.mo
 share/locale/ru/LC_MESSAGES/xkeyboard-config.mo
