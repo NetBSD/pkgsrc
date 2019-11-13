@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4881 2019/11/13 12:22:12 ng0 Exp $
+$NetBSD: CHANGES-2019,v 1.4882 2019/11/13 12:26:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7826,3 +7826,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated math/gnumeric112 to 1.12.46 [wiz 2019-11-13]
 	Updated security/libssh to 0.92 [wiz 2019-11-13]
 	Added devel/guile-git version 0.2.0 [ng0 2019-11-13]
+	Updated devel/py-mercurial to 5.2 [wiz 2019-11-13]
