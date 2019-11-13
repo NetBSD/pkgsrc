@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/11/13 10:04:19 ng0 Exp $
+
+SHA1 (gash-0.1.tar.gz) = 806e42582feb0f4a769f7f56d04b78f11cc5b933
+RMD160 (gash-0.1.tar.gz) = 1cfc0db59584f4ada407c293b5509b88dd84566a
+SHA512 (gash-0.1.tar.gz) = 4f90d40eb434e3f735ef727aeeb55d88b1962b0e7d1f02f711961234934a62a40d8f8d8c1004fe8fc825c0b01fab520eaacba28bcf758452e3db3d66098c2c85
+Size (gash-0.1.tar.gz) = 321694 bytes

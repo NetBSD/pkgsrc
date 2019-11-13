@@ -1,0 +1,19 @@
+Gash is a POSIX-compatible shell written in Guile Scheme.  It provides
+both the shell interface, as well as a Guile library for parsing shell
+scripts.  Gash is designed to bootstrap Bash as part of the Guix
+bootstrap process. There are plans to develop Gash into a
+general-purpose shell and tool for building interfaces between Scheme
+and the shell.
+
+Features of the shell
+* Sophisticated enough to be used to build Bash.
+* Has a nice colorized prompt.
+* Includes all of the POSIX-specified "special" built-ins except for
+  `times'.
+* Includes about half of the POSIX-specified "regular" built-ins
+  (see `gash/built-ins.scm' for details).
+
+Features of the programming interface
+* Parses Shell scripts into an AST.
+* Provides a rudimentary interface for writing Shell-like Scheme
+  scripts.
