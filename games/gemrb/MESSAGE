@@ -1,12 +1,12 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2019/11/13 16:37:55 nia Exp $
+$NetBSD: MESSAGE,v 1.2 2019/11/13 19:40:48 nia Exp $
 
 To install the DRM-free version of Baldur's Gate:
 
 $ innoextract setup_baldurs_gate_2.0.0.20.exe
 $ mv app ~/BaldursGate
 $ mkdir ~/.gemrb
-$ mv ${PREFIX}/share/examples/gemrb/GemRB.cfg.sample ~/.gemrb/gemrb.cfg
+$ cp ${PREFIX}/share/examples/gemrb/GemRB.cfg.sample ~/.gemrb/gemrb.cfg
 
 Edit ~/.gemrb/gemrb.cfg and change the GamePath to ~/BaldursGate.
 
