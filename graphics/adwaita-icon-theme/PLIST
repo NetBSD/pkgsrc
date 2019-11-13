@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2019/10/21 09:11:23 nia Exp $
+@comment $NetBSD: PLIST,v 1.13 2019/11/13 15:19:04 wiz Exp $
 share/icons/Adwaita/16x16/devices/audio-headphones.png
 share/icons/Adwaita/16x16/devices/audio-headset.png
 share/icons/Adwaita/16x16/devices/computer.png
@@ -302,7 +302,6 @@ share/icons/Adwaita/16x16/legacy/user-idle.png
 share/icons/Adwaita/16x16/legacy/user-info.png
 share/icons/Adwaita/16x16/legacy/user-invisible.png
 share/icons/Adwaita/16x16/legacy/user-offline.png
-share/icons/Adwaita/16x16/legacy/user-trash-full.png
 share/icons/Adwaita/16x16/legacy/utilities-terminal.png
 share/icons/Adwaita/16x16/legacy/video-display.png
 share/icons/Adwaita/16x16/legacy/view-fullscreen.png
@@ -376,6 +375,7 @@ share/icons/Adwaita/16x16/places/user-trash.png
 share/icons/Adwaita/16x16/status/avatar-default.png
 share/icons/Adwaita/16x16/status/image-loading.png
 share/icons/Adwaita/16x16/status/image-missing.png
+share/icons/Adwaita/16x16/status/user-trash-full.png
 share/icons/Adwaita/22x22/devices/audio-headphones.png
 share/icons/Adwaita/22x22/devices/audio-headset.png
 share/icons/Adwaita/22x22/devices/computer.png
@@ -679,7 +679,6 @@ share/icons/Adwaita/22x22/legacy/user-idle.png
 share/icons/Adwaita/22x22/legacy/user-info.png
 share/icons/Adwaita/22x22/legacy/user-invisible.png
 share/icons/Adwaita/22x22/legacy/user-offline.png
-share/icons/Adwaita/22x22/legacy/user-trash-full.png
 share/icons/Adwaita/22x22/legacy/utilities-terminal.png
 share/icons/Adwaita/22x22/legacy/video-display.png
 share/icons/Adwaita/22x22/legacy/view-fullscreen.png
@@ -753,6 +752,7 @@ share/icons/Adwaita/22x22/places/user-trash.png
 share/icons/Adwaita/22x22/status/avatar-default.png
 share/icons/Adwaita/22x22/status/image-loading.png
 share/icons/Adwaita/22x22/status/image-missing.png
+share/icons/Adwaita/22x22/status/user-trash-full.png
 share/icons/Adwaita/24x24/devices/audio-headphones.png
 share/icons/Adwaita/24x24/devices/audio-headset.png
 share/icons/Adwaita/24x24/devices/computer.png
@@ -1042,7 +1042,6 @@ share/icons/Adwaita/24x24/legacy/user-idle.png
 share/icons/Adwaita/24x24/legacy/user-info.png
 share/icons/Adwaita/24x24/legacy/user-invisible.png
 share/icons/Adwaita/24x24/legacy/user-offline.png
-share/icons/Adwaita/24x24/legacy/user-trash-full.png
 share/icons/Adwaita/24x24/legacy/utilities-terminal.png
 share/icons/Adwaita/24x24/legacy/video-display.png
 share/icons/Adwaita/24x24/legacy/view-fullscreen.png
@@ -1116,6 +1115,7 @@ share/icons/Adwaita/24x24/places/user-trash.png
 share/icons/Adwaita/24x24/status/avatar-default.png
 share/icons/Adwaita/24x24/status/image-loading.png
 share/icons/Adwaita/24x24/status/image-missing.png
+share/icons/Adwaita/24x24/status/user-trash-full.png
 share/icons/Adwaita/256x256/legacy/ac-adapter.png
 share/icons/Adwaita/256x256/legacy/accessories-calculator.png
 share/icons/Adwaita/256x256/legacy/applets-screenshooter.png
@@ -1259,7 +1259,6 @@ share/icons/Adwaita/256x256/legacy/user-idle.png
 share/icons/Adwaita/256x256/legacy/user-info.png
 share/icons/Adwaita/256x256/legacy/user-invisible.png
 share/icons/Adwaita/256x256/legacy/user-offline.png
-share/icons/Adwaita/256x256/legacy/user-trash-full.png
 share/icons/Adwaita/256x256/legacy/video-display.png
 share/icons/Adwaita/256x256/legacy/view-refresh.png
 share/icons/Adwaita/256x256/legacy/web-browser.png
@@ -1268,7 +1267,9 @@ share/icons/Adwaita/256x256/mimetypes/application-x-firmware.png
 share/icons/Adwaita/256x256/mimetypes/x-package-repository.png
 share/icons/Adwaita/256x256/places/network-server.png
 share/icons/Adwaita/256x256/places/network-workgroup.png
+share/icons/Adwaita/256x256/places/start-here.png
 share/icons/Adwaita/256x256/places/user-trash.png
+share/icons/Adwaita/256x256/status/user-trash-full.png
 share/icons/Adwaita/32x32/devices/audio-headphones.png
 share/icons/Adwaita/32x32/devices/audio-headset.png
 share/icons/Adwaita/32x32/devices/computer.png
@@ -1568,7 +1569,6 @@ share/icons/Adwaita/32x32/legacy/user-idle.png
 share/icons/Adwaita/32x32/legacy/user-info.png
 share/icons/Adwaita/32x32/legacy/user-invisible.png
 share/icons/Adwaita/32x32/legacy/user-offline.png
-share/icons/Adwaita/32x32/legacy/user-trash-full.png
 share/icons/Adwaita/32x32/legacy/utilities-terminal.png
 share/icons/Adwaita/32x32/legacy/video-display.png
 share/icons/Adwaita/32x32/legacy/view-fullscreen.png
@@ -1642,6 +1642,7 @@ share/icons/Adwaita/32x32/places/user-trash.png
 share/icons/Adwaita/32x32/status/avatar-default.png
 share/icons/Adwaita/32x32/status/image-loading.png
 share/icons/Adwaita/32x32/status/image-missing.png
+share/icons/Adwaita/32x32/status/user-trash-full.png
 share/icons/Adwaita/48x48/devices/audio-headphones.png
 share/icons/Adwaita/48x48/devices/audio-headset.png
 share/icons/Adwaita/48x48/devices/computer.png
@@ -1942,7 +1943,6 @@ share/icons/Adwaita/48x48/legacy/user-idle.png
 share/icons/Adwaita/48x48/legacy/user-info.png
 share/icons/Adwaita/48x48/legacy/user-invisible.png
 share/icons/Adwaita/48x48/legacy/user-offline.png
-share/icons/Adwaita/48x48/legacy/user-trash-full.png
 share/icons/Adwaita/48x48/legacy/utilities-terminal.png
 share/icons/Adwaita/48x48/legacy/video-display.png
 share/icons/Adwaita/48x48/legacy/view-fullscreen.png
@@ -2016,6 +2016,7 @@ share/icons/Adwaita/48x48/places/user-trash.png
 share/icons/Adwaita/48x48/status/avatar-default.png
 share/icons/Adwaita/48x48/status/image-loading.png
 share/icons/Adwaita/48x48/status/image-missing.png
+share/icons/Adwaita/48x48/status/user-trash-full.png
 share/icons/Adwaita/512x512/devices/audio-headphones.png
 share/icons/Adwaita/512x512/devices/audio-headset.png
 share/icons/Adwaita/512x512/devices/audio-microphone.png
@@ -2102,6 +2103,7 @@ share/icons/Adwaita/8x8/emblems/emblem-unreadable.png
 share/icons/Adwaita/8x8/legacy/emblem-default.png
 share/icons/Adwaita/8x8/legacy/emblem-new.png
 share/icons/Adwaita/8x8/legacy/emblem-synchronizing.png
+share/icons/Adwaita/96x96/places/start-here.png
 share/icons/Adwaita/cursors/00008160000006810000408080010102
 share/icons/Adwaita/cursors/028006030e0e7ebffc7f7070c0600140
 share/icons/Adwaita/cursors/03b6e0fcb3499374a867c041f52298f0
@@ -2402,6 +2404,7 @@ share/icons/Adwaita/scalable/apps/preferences-system-devices-symbolic.svg
 share/icons/Adwaita/scalable/apps/preferences-system-network-proxy-symbolic.svg
 share/icons/Adwaita/scalable/apps/preferences-system-network-symbolic.svg
 share/icons/Adwaita/scalable/apps/preferences-system-notifications-symbolic.svg
+share/icons/Adwaita/scalable/apps/preferences-system-parental-controls-symbolic.svg
 share/icons/Adwaita/scalable/apps/preferences-system-privacy-symbolic.svg
 share/icons/Adwaita/scalable/apps/preferences-system-search-symbolic.svg
 share/icons/Adwaita/scalable/apps/preferences-system-sharing-symbolic.svg
@@ -2541,7 +2544,6 @@ share/icons/Adwaita/scalable/legacy/battery-good-charging-symbolic.svg
 share/icons/Adwaita/scalable/legacy/battery-good-symbolic.svg
 share/icons/Adwaita/scalable/legacy/battery-low-charging-symbolic.svg
 share/icons/Adwaita/scalable/legacy/battery-low-symbolic.svg
-share/icons/Adwaita/scalable/mail-attachment-symbolic.svg
 share/icons/Adwaita/scalable/mimetypes/application-certificate-symbolic.svg
 share/icons/Adwaita/scalable/mimetypes/application-rss+xml-symbolic.svg
 share/icons/Adwaita/scalable/mimetypes/application-x-addon-symbolic.svg
@@ -2657,6 +2659,7 @@ share/icons/Adwaita/scalable/status/microphone-sensitivity-high-symbolic.svg
 share/icons/Adwaita/scalable/status/microphone-sensitivity-low-symbolic.svg
 share/icons/Adwaita/scalable/status/microphone-sensitivity-medium-symbolic.svg
 share/icons/Adwaita/scalable/status/microphone-sensitivity-muted-symbolic.svg
+share/icons/Adwaita/scalable/status/network-cellular-2g-symbolic.svg
 share/icons/Adwaita/scalable/status/network-cellular-3g-symbolic.svg
 share/icons/Adwaita/scalable/status/network-cellular-4g-symbolic.svg
 share/icons/Adwaita/scalable/status/network-cellular-acquiring-symbolic.svg
