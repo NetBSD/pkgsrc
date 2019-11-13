@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2018/11/10 20:00:04 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2019/11/13 10:04:19 ng0 Exp $
 #
 
 COMMENT=	Shells
@@ -16,6 +16,7 @@ SUBDIR+=	es
 SUBDIR+=	esh
 SUBDIR+=	fish
 SUBDIR+=	git-sh
+SUBDIR+=	guile-gash
 SUBDIR+=	heirloom-sh
 SUBDIR+=	lshell
 SUBDIR+=	mksh
