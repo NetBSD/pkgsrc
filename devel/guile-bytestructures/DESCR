@@ -1,0 +1,5 @@
+guile-bytestructures is a library offering a system imitating the
+type system of the C programming language, to be used on bytevectors.
+C's type system works on raw memory, and Scheme ones work on
+bytevectors which are an abstraction over raw memory in Scheme.
+The system elevates types to first-class status.
