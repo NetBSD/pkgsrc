@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.467 2019/11/03 12:12:56 nia Exp $
+# $NetBSD: Makefile,v 1.468 2019/11/13 16:37:55 nia Exp $
 #
 
 COMMENT=	Games
@@ -148,6 +148,7 @@ SUBDIR+=	gate88
 SUBDIR+=	gbrainy
 SUBDIR+=	gcompris
 SUBDIR+=	gemdropx
+SUBDIR+=	gemrb
 SUBDIR+=	genecys-client
 SUBDIR+=	genecys-data
 SUBDIR+=	ggz-client-libs
