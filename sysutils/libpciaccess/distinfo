@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.36 2018/10/26 10:18:58 maya Exp $
+$NetBSD: distinfo,v 1.37 2019/11/13 15:28:17 wiz Exp $
 
-SHA1 (libpciaccess-0.14.tar.bz2) = f70a958bf4e744cb4ee93be64e9bc52ac05cdaeb
-RMD160 (libpciaccess-0.14.tar.bz2) = d095e06591cc38a2eac8cb81aa4813a42267146e
-SHA512 (libpciaccess-0.14.tar.bz2) = bf40214dfd22f2a223f7c948566e6eaa4bfed60116e71b3eb19f6fe7ab2c4546649eb0416c06d5983e476ea5e27de036936646eb5f800ea97763b6d1f1976f4b
-Size (libpciaccess-0.14.tar.bz2) = 361375 bytes
+SHA1 (libpciaccess-0.16.tar.bz2) = ffaa13f2df5f822da1089b55223b217c142ef919
+RMD160 (libpciaccess-0.16.tar.bz2) = 282070e213410b182eaa6f08877d79e7c07ed971
+SHA512 (libpciaccess-0.16.tar.bz2) = 2f250048a270dfc0823d4bdd613aa272c58a80eaafd922850f56c4b6f7a45a263ed4cf521b52b49f04484ea44ebefb7407d079aa058318a5751ffb181e38fed1
+Size (libpciaccess-0.16.tar.bz2) = 366603 bytes
 SHA1 (patch-src_common__interface.c) = cac11689864531fa4721e09374ead730bd1691a6
 SHA1 (patch-src_netbsd__pci.c) = 6f7ac3a3cad128756aed8e823af57e8737157d1b
 SHA1 (patch-src_solx__devfs.c) = 18bfd9899da30061199232ae2ebc5ead8d4d7a47
