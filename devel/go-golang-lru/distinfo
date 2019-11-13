@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/06/11 14:31:02 wiz Exp $
+$NetBSD: distinfo,v 1.3 2019/11/13 12:59:17 wiz Exp $
 
-SHA1 (golang-lru-0.5.1.tar.gz) = d285b0ea6fc1aff1dfee914ea9415c5cfaa62deb
-RMD160 (golang-lru-0.5.1.tar.gz) = dc3a1e408d6202173e1324dd14101b77ea0bae8c
-SHA512 (golang-lru-0.5.1.tar.gz) = c71c35fee10d34f2d075e589e9d4a770e8b48dd5b09946a3fab34337b3680f1fbc20de1cb8ce52aa205c79bbfb1194c44391d7fbe746e7c676969ba8930d827b
-Size (golang-lru-0.5.1.tar.gz) = 12982 bytes
+SHA1 (golang-lru-0.5.3.tar.gz) = 2d53ebcf581ec7e135eaaa686bfd2f3bfb425be1
+RMD160 (golang-lru-0.5.3.tar.gz) = ad7a8e8059e84ad030225bd88981b53aefd7b95c
+SHA512 (golang-lru-0.5.3.tar.gz) = 8775349e1c9df60a57a425f506ff53a1849aa4877a878583b59bc53f3e746f5b6c482ded9bed9182c68e1d12c5acc4bacebe7a6d41440234d4b40361bddb805d
+Size (golang-lru-0.5.3.tar.gz) = 13348 bytes
