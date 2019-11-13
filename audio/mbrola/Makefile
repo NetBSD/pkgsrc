@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2012/10/02 23:47:57 asau Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/13 19:20:19 maya Exp $
 
 DISTNAME=		mbr301h
 PKGNAME=		mbrola-301h
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		audio
 MASTER_SITES=		http://tcts.fpms.ac.be/synthesis/mbrola/bin/netbsd/
 EXTRACT_SUFX=		.zip
@@ -23,7 +23,7 @@ EMUL_MODULES.netbsd=	base
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/mbrola-netbsd-i386 \
+	${INSTALL_DATA} ${WRKSRC}/mbrola-netbsd-i386 \
 		${DESTDIR}${PREFIX}/bin/mbrola
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/mbrola
 	${INSTALL_DATA} ${WRKSRC}/readme.txt \
