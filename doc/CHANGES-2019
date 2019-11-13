@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4905 2019/11/13 19:21:47 maya Exp $
+$NetBSD: CHANGES-2019,v 1.4906 2019/11/13 20:39:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7852,3 +7852,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/viewres to 1.0.6 [mef 2019-11-13]
 	Added games/gemrb version 0.8.5 [nia 2019-11-13]
 	Updated audio/mbrola to 301hnb3 [maya 2019-11-13]
+	Updated security/py-trustme to 0.5.3 [adam 2019-11-13]
+	Updated net/py-smbc to 1.0.18 [adam 2019-11-13]
+	Updated net/py-amqp to 2.5.2 [adam 2019-11-13]
+	Updated net/py-kombu to 4.6.6 [adam 2019-11-13]
