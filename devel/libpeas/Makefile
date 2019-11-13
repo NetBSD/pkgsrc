@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2019/11/03 10:39:18 rillig Exp $
+# $NetBSD: Makefile,v 1.44 2019/11/13 14:28:05 wiz Exp $
 
-DISTNAME=	libpeas-1.20.0
-PKGREVISION=	7
+DISTNAME=	libpeas-1.24.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libpeas/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,30 +10,21 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/Libpeas
 COMMENT=	GObject-based plugins engine
 LICENSE=	gnu-lgpl-v2.1
 
-DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
+USE_TOOLS+=		intltool msgfmt pkg-config
 
-USE_LIBTOOL=		yes
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake intltool msgfmt pkg-config gsed
-GNU_CONFIGURE=		yes
+PKGCONFIG_OVERRIDE+=	output/meson-private/libpeas-gtk-1.0.pc
+PKGCONFIG_OVERRIDE+=	output/meson-private/libpeas-1.0.pc
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
-.include "../../lang/python/pyversion.mk"
-CONFIGURE_ARGS+=	--disable-python2
-CONFIGURE_ARGS+=	--disable-lua5.1 # looks for lua5.1.pc
-CONFIGURE_ARGS+=	--disable-luajit
-CONFIGURE_ENV+=		PYTHON3_CONFIG=${PYTHONCONFIG}
-
-PKGCONFIG_OVERRIDE+=	data/libpeas-gtk-1.0.pc.in
-PKGCONFIG_OVERRIDE+=	data/libpeas-1.0.pc.in
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/libpeas:${WRKSRC}/output/libpeas-gtk:${WRKSRC}/output/tests/libpeas/introspection
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.38.0
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=1.39.0
 .include "../../devel/gobject-introspection/buildlink3.mk"
-.include "../../devel/py-gobject3-common/buildlink3.mk"
+#.include "../../devel/py-gobject3-common/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../lang/python/extension.mk"
 .include "../../x11/gtk3/buildlink3.mk"
+.include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
