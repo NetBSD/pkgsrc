@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/11/13 13:19:39 ng0 Exp $
+
+SHA1 (guile-syntax-highlight-0.1.tar.gz) = 956356ba79705f49744dfa8a8bd95e8f1ba329f0
+RMD160 (guile-syntax-highlight-0.1.tar.gz) = 4124c3734cb3cfccab46664e4bed9273c96aaf10
+SHA512 (guile-syntax-highlight-0.1.tar.gz) = e3fabc9f2d1aafa407d3f725391d5dd4baf6e70ce88e57c86ec288ee713a1559c930aa635b81ba57f4ae619bae62093a290192eccfa5a6919a9e54c87757a7fa
+Size (guile-syntax-highlight-0.1.tar.gz) = 72649 bytes
