@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4915 2019/11/13 21:40:01 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4916 2019/11/13 21:41:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7872,3 +7872,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-jaraco.functools to 2.0 [adam 2019-11-13]
 	Updated net/py-portend to 2.6 [adam 2019-11-13]
 	Updated www/py-curl to 7.43.0.3 [wiz 2019-11-13]
+	Updated www/py-mechanize to 0.4.4 [wiz 2019-11-13]
