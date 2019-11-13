@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.78 2019/10/27 15:43:23 nia Exp $
+# $NetBSD: Makefile,v 1.79 2019/11/13 00:26:49 gdt Exp $
 #
 
 DISTNAME=		qcad-3.23.0.0
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		cad
 MASTER_SITES=		${MASTER_SITE_GITHUB:=qcad/}
 EXTRACT_USING=		bsdtar
@@ -26,6 +26,21 @@ SUBST_FILES.paths+=	shared.pri src/core/RS.cpp src/core/RSettings.cpp
 SUBST_FILES.paths+=	scripts/Help/ShowReadme/ShowReadme.js
 SUBST_FILES.paths+=	scripts/Widgets/LibraryBrowser/LibraryBrowser.js
 SUBST_VARS.paths=	PREFIX
+
+# Don't build intermediate libraries with the same name in debug mode
+# as in release mode. (Resolves regular libraries ending up in debug
+# mode, which breaks plugin loading.)
+# Reported on QCad Community Edition forum:
+#   https://qcad.org/rsforum/viewtopic.php?f=76&t=6708
+#
+SUBST_CLASSES+=         dbgmode
+SUBST_STAGE.dbgmode=    post-configure
+SUBST_MESSAGE.dbgmode=  Debug mode: lib*.so -> lib*_debug.so
+SUBST_FILES.dbgmode=    src/3rdparty/dxflib/Makefile.Debug
+SUBST_FILES.dbgmode+=   src/core/Makefile.Debug
+SUBST_FILES.dbgmode+=   src/entity/Makefile.Debug
+SUBST_FILES.dbgmode+=   src/operations/Makefile.Debug
+SUBST_SED.dbgmode=      -e 's,\(lib[dq]..*\)\(\.so\),\1_debug\2,g'
 
 .include "../../mk/bsd.prefs.mk"
 PLIST_VARS+=	glx egl
