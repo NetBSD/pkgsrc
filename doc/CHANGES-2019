@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4880 2019/11/13 11:49:18 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4881 2019/11/13 12:22:12 ng0 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7825,3 +7825,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/guile-bytestructures version 1.0.6 [ng0 2019-11-13]
 	Updated math/gnumeric112 to 1.12.46 [wiz 2019-11-13]
 	Updated security/libssh to 0.92 [wiz 2019-11-13]
+	Added devel/guile-git version 0.2.0 [ng0 2019-11-13]
