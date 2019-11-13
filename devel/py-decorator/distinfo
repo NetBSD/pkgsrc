@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2019/04/04 09:51:01 adam Exp $
+$NetBSD: distinfo,v 1.15 2019/11/13 20:44:29 adam Exp $
 
-SHA1 (decorator-4.4.0.tar.gz) = de59d002bcf83b16421e6ea6fe40256b5fccedad
-RMD160 (decorator-4.4.0.tar.gz) = 92f783db41a586cbdffcc8e07851f098bf24da29
-SHA512 (decorator-4.4.0.tar.gz) = 32c35c80581cb7fd0b2461d21c7eb14190294b2ccc9f92749b6bc74449f7d02a26281e9a2817f6f16871a6cddb7b02b8fae8119c22256fe43a6aaa31a7599dd5
-Size (decorator-4.4.0.tar.gz) = 34559 bytes
+SHA1 (decorator-4.4.1.tar.gz) = c25e6611e0d45913b7342c819500259d2e8b8ccf
+RMD160 (decorator-4.4.1.tar.gz) = 169cdd1d029a145a0c04f73db11979080b91d82c
+SHA512 (decorator-4.4.1.tar.gz) = 12378702246b212d5fe0153dc97cafdb2afd4779c51fd224385e3c3562e1a1e3439574aa7c37c8521fe5f86a5f0b4d4b3075e0407cc249f8fa4b341e1ebe06e0
+Size (decorator-4.4.1.tar.gz) = 33350 bytes
