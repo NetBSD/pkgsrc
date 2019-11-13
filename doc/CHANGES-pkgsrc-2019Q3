@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q3,v 1.1.2.9 2019/10/25 13:03:10 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q3,v 1.1.2.10 2019/11/13 21:22:03 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q3 branch:
 
@@ -53,4 +53,10 @@ lang/php73: security fix
 
 Pullup ticket #6077 - requested by taca
 lang/php71: security fix
+
+Pullup ticket #6078 - requested by nia
+misc/libreoffice: build fix
+
+Pullup ticket #6082 - requested by nia
+audio/faac: security fix
 
