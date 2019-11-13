@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2019/10/21 22:15:10 adam Exp $
+# $NetBSD: Makefile,v 1.24 2019/11/13 14:47:59 adam Exp $
 
-DISTNAME=	salt-2019.2.1
+DISTNAME=	salt-2019.2.2
 PKGNAME=	${DISTNAME:S/-/-docs-/}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/salt/}
@@ -28,7 +28,7 @@ INSTALLATION_DIRS=	${HTMLDIR}
 PYTHON_VERSIONS_ACCEPTED=	27
 
 do-install:
-	cd ${WRKSRC}/doc/_build/html && pax -rw -pp . ${DESTDIR}${PREFIX}/${HTMLDIR}
+	cd ${WRKSRC}/doc/_build/html && ${PAX} -rw -pp . ${DESTDIR}${PREFIX}/${HTMLDIR}
 	cd ${DESTDIR}${PREFIX} && ${FIND} ${HTMLDIR} -type f -print >>${PLIST_SRC}
 
 .include "../../lang/python/pyversion.mk"
