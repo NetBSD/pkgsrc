@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4877 2019/11/13 11:35:11 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4878 2019/11/13 11:44:43 ng0 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7822,3 +7822,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added textproc/guile-json version 3.1.0 [ng0 2019-11-13]
 	Updated net/dhcpcd to 8.1.2 [roy 2019-11-13]
 	Updated misc/goffice0.10 to 0.10.46 [wiz 2019-11-13]
+	Added devel/guile-bytestructures version 1.0.6 [ng0 2019-11-13]
