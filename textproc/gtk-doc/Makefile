@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.78 2019/08/22 12:23:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.79 2019/11/13 21:17:47 wiz Exp $
 
-DISTNAME=	gtk-doc-1.29
-PKGREVISION=	4
+DISTNAME=	gtk-doc-1.32
 CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-doc/${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.xz
@@ -21,7 +20,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	gtk-doc.pc.in
-CONFIGURE_ARGS+=	--with-highlight=source-highlight
 CONFIGURE_ARGS+=	--with-xml-catalog=${XML_DEFAULT_CATALOG:Q}
 USE_TOOLS+=		gmake pkg-config:run msgfmt
 
@@ -43,7 +41,6 @@ TEST_TARGET=	check
 # needed together with pkg-config by gtkdoc-depscan at runtime
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-.include "../../textproc/source-highlight/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../mk/bsd.pkg.mk"
