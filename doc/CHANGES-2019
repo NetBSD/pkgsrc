@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4892 2019/11/13 14:48:43 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4893 2019/11/13 15:01:27 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7838,3 +7838,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-backports.functools_lru_cache to 1.6.1 [wiz 2019-11-13]
 	Updated sysutils/salt to 2019.2.2 [adam 2019-11-13]
 	Updated sysutils/salt-docs to 2019.2.2 [adam 2019-11-13]
+	Updated sysutils/xenkernel411 to 4.11.2nb2 [bouyer 2019-11-13]
