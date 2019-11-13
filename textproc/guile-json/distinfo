@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/11/13 10:36:19 ng0 Exp $
+
+SHA1 (guile-json-3.1.0.tar.gz) = 26c1a093abf1a124d9d58a7a67d88f56b2109482
+RMD160 (guile-json-3.1.0.tar.gz) = 05e9ea88a72069bbc73454a93a20f11f2cd5b93b
+SHA512 (guile-json-3.1.0.tar.gz) = 4d3aeb6c1e4e7a556f5fe157db6397bd2eca95216bcc8dcd3e6b45cec7429d436b692976db2398de660401801ab72a501a3cf9126f213d1ffd023a592a1b3242
+Size (guile-json-3.1.0.tar.gz) = 119730 bytes
