@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2950 2019/11/13 11:43:54 ng0 Exp $
+# $NetBSD: Makefile,v 1.2951 2019/11/13 12:21:28 ng0 Exp $
 #
 
 COMMENT=	Development utilities
@@ -459,6 +459,7 @@ SUBDIR+=	gst-plugins1-pango
 SUBDIR+=	gtexinfo
 SUBDIR+=	gtl
 SUBDIR+=	guile-bytestructures
+SUBDIR+=	guile-git
 SUBDIR+=	guile-gnome
 SUBDIR+=	guile-lib
 SUBDIR+=	guile-slib
