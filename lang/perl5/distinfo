@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.160 2019/11/11 21:32:12 maya Exp $
+$NetBSD: distinfo,v 1.161 2019/11/14 09:56:56 adam Exp $
 
-SHA1 (perl-5.30.0.tar.xz) = cc8d1e08ffe4624c197a44d02855632725d39f8e
-RMD160 (perl-5.30.0.tar.xz) = 64ff4c65823122c337e18278585d71def1de9c5d
-SHA512 (perl-5.30.0.tar.xz) = 68a295eccd64debd9d6a10f0d5577f872a19ad8c2d702798f6b0f45b8c3af6ab3230768056e2131e9e2e2506d1035b27cfd627c845e32263fe448649c4b98ae9
-Size (perl-5.30.0.tar.xz) = 12419868 bytes
+SHA1 (perl-5.30.1.tar.xz) = 4bc190b6ac368f573e6a028f91430f831d40d30a
+RMD160 (perl-5.30.1.tar.xz) = 25eac756d0365c4ff961a31221fc4712b17a1cc0
+SHA512 (perl-5.30.1.tar.xz) = 8f3339efdcd1bb58fa58a90042181bef86bb09e4598c737e446ed43b56d2ab23d67eced5e36fb08fc61e076acfdb572a12e46a1277f5299a3f412054df0b88bf
+Size (perl-5.30.1.tar.xz) = 12367844 bytes
 SHA1 (patch-Configure) = 6000aafeb993fd096c9b1327302b510aa0d386bb
-SHA1 (patch-Makefile.SH) = 93cae9736ef94cdd9e5748f7e0a0183332c2f3b3
+SHA1 (patch-Makefile.SH) = 56203aea57c429a94760f039a978463b8859b0a9
 SHA1 (patch-Safe.pm) = bfeefb82d4cfe991e3a9a90cd87b894c9f4cc337
 SHA1 (patch-alignment_1) = b68c0916b271523922caa7f89edb165284e7b5f4
 SHA1 (patch-alignment_2) = cae8495c4a092e31da422bf5684481091ee2adf3
