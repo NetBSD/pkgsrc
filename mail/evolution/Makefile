@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.241 2019/10/30 17:27:33 nia Exp $
+# $NetBSD: Makefile,v 1.242 2019/11/14 22:53:49 nia Exp $
 
 DISTNAME=	evolution-3.34.1
 CATEGORIES=	mail
@@ -15,6 +15,8 @@ USE_TOOLS+=	pkg-config
 USE_TOOLS+=	intltool msgfmt msgmerge xgettext
 
 DEPENDS+=	highlight-[0-9]*:../../textproc/highlight
+
+TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/evolution
 
